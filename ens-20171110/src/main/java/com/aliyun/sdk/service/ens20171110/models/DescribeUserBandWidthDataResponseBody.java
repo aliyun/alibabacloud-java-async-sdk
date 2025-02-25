@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserBandWidthDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUserBandWidthDataResponseBody</p>
  */
 public class DescribeUserBandWidthDataResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("MonitorData")
+    @com.aliyun.core.annotation.NameInMap("MonitorData")
     private MonitorData monitorData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeUserBandWidthDataResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class DescribeUserBandWidthDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The returned service code. 0 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -70,7 +78,7 @@ public class DescribeUserBandWidthDataResponseBody extends TeaModel {
         }
 
         /**
-         * MonitorData.
+         * <p>The monitoring data.</p>
          */
         public Builder monitorData(MonitorData monitorData) {
             this.monitorData = monitorData;
@@ -78,7 +86,10 @@ public class DescribeUserBandWidthDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50373E71-7710-4620-8AAB-133CCE49451C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,20 +102,26 @@ public class DescribeUserBandWidthDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUserBandWidthDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUserBandWidthDataResponseBody</p>
+     */
     public static class BandWidthMonitorData extends TeaModel {
-        @NameInMap("DownBandWidth")
+        @com.aliyun.core.annotation.NameInMap("DownBandWidth")
         private Long downBandWidth;
 
-        @NameInMap("InternetRX")
+        @com.aliyun.core.annotation.NameInMap("InternetRX")
         private Long internetRX;
 
-        @NameInMap("InternetTX")
+        @com.aliyun.core.annotation.NameInMap("InternetTX")
         private Long internetTX;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("UpBandWidth")
+        @com.aliyun.core.annotation.NameInMap("UpBandWidth")
         private Long upBandWidth;
 
         private BandWidthMonitorData(Builder builder) {
@@ -166,7 +183,10 @@ public class DescribeUserBandWidthDataResponseBody extends TeaModel {
             private Long upBandWidth; 
 
             /**
-             * DownBandWidth.
+             * <p>The outbound bandwidth. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder downBandWidth(Long downBandWidth) {
                 this.downBandWidth = downBandWidth;
@@ -174,7 +194,10 @@ public class DescribeUserBandWidthDataResponseBody extends TeaModel {
             }
 
             /**
-             * InternetRX.
+             * <p>The Internet traffic to the instance. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder internetRX(Long internetRX) {
                 this.internetRX = internetRX;
@@ -182,7 +205,10 @@ public class DescribeUserBandWidthDataResponseBody extends TeaModel {
             }
 
             /**
-             * InternetTX.
+             * <p>The Internet traffic from the instance. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder internetTX(Long internetTX) {
                 this.internetTX = internetTX;
@@ -190,7 +216,10 @@ public class DescribeUserBandWidthDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * <p>The timestamp when the monitoring data was queried. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-10-12T05:45:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -198,7 +227,10 @@ public class DescribeUserBandWidthDataResponseBody extends TeaModel {
             }
 
             /**
-             * UpBandWidth.
+             * <p>The inbound bandwidth. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder upBandWidth(Long upBandWidth) {
                 this.upBandWidth = upBandWidth;
@@ -212,14 +244,20 @@ public class DescribeUserBandWidthDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeUserBandWidthDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUserBandWidthDataResponseBody</p>
+     */
     public static class MonitorData extends TeaModel {
-        @NameInMap("BandWidthMonitorData")
-        private java.util.List < BandWidthMonitorData> bandWidthMonitorData;
+        @com.aliyun.core.annotation.NameInMap("BandWidthMonitorData")
+        private java.util.List<BandWidthMonitorData> bandWidthMonitorData;
 
-        @NameInMap("MaxDownBandWidth")
+        @com.aliyun.core.annotation.NameInMap("MaxDownBandWidth")
         private String maxDownBandWidth;
 
-        @NameInMap("MaxUpBandWidth")
+        @com.aliyun.core.annotation.NameInMap("MaxUpBandWidth")
         private String maxUpBandWidth;
 
         private MonitorData(Builder builder) {
@@ -239,7 +277,7 @@ public class DescribeUserBandWidthDataResponseBody extends TeaModel {
         /**
          * @return bandWidthMonitorData
          */
-        public java.util.List < BandWidthMonitorData> getBandWidthMonitorData() {
+        public java.util.List<BandWidthMonitorData> getBandWidthMonitorData() {
             return this.bandWidthMonitorData;
         }
 
@@ -258,20 +296,23 @@ public class DescribeUserBandWidthDataResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < BandWidthMonitorData> bandWidthMonitorData; 
+            private java.util.List<BandWidthMonitorData> bandWidthMonitorData; 
             private String maxDownBandWidth; 
             private String maxUpBandWidth; 
 
             /**
-             * BandWidthMonitorData.
+             * <p>The bandwidth data.</p>
              */
-            public Builder bandWidthMonitorData(java.util.List < BandWidthMonitorData> bandWidthMonitorData) {
+            public Builder bandWidthMonitorData(java.util.List<BandWidthMonitorData> bandWidthMonitorData) {
                 this.bandWidthMonitorData = bandWidthMonitorData;
                 return this;
             }
 
             /**
-             * MaxDownBandWidth.
+             * <p>The maximum outbound bandwidth within the queried time range. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16817468</p>
              */
             public Builder maxDownBandWidth(String maxDownBandWidth) {
                 this.maxDownBandWidth = maxDownBandWidth;
@@ -279,7 +320,10 @@ public class DescribeUserBandWidthDataResponseBody extends TeaModel {
             }
 
             /**
-             * MaxUpBandWidth.
+             * <p>The maximum inbound bandwidth within the queried time range. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>231008</p>
              */
             public Builder maxUpBandWidth(String maxUpBandWidth) {
                 this.maxUpBandWidth = maxUpBandWidth;

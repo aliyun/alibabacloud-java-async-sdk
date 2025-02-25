@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AddImage  AddImageRequest
+     * @return AddImageResponse
+     */
     @Override
     public CompletableFuture<AddImageResponse> addImage(AddImageRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddImageLabels  AddImageLabelsRequest
+     * @return AddImageLabelsResponse
+     */
     @Override
     public CompletableFuture<AddImageLabelsResponse> addImageLabels(AddImageLabelsRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddMemberRole  AddMemberRoleRequest
+     * @return AddMemberRoleResponse
+     */
     @Override
     public CompletableFuture<AddMemberRoleResponse> addMemberRole(AddMemberRoleRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateCodeSource  CreateCodeSourceRequest
+     * @return CreateCodeSourceResponse
+     */
     @Override
     public CompletableFuture<CreateCodeSourceResponse> createCodeSource(CreateCodeSourceRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateDataset  CreateDatasetRequest
+     * @return CreateDatasetResponse
+     */
     @Override
     public CompletableFuture<CreateDatasetResponse> createDataset(CreateDatasetRequest request) {
         try {
@@ -109,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateDatasetLabels  CreateDatasetLabelsRequest
+     * @return CreateDatasetLabelsResponse
+     */
     @Override
     public CompletableFuture<CreateDatasetLabelsResponse> createDatasetLabels(CreateDatasetLabelsRequest request) {
         try {
@@ -123,6 +147,64 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateDatasetVersion  CreateDatasetVersionRequest
+     * @return CreateDatasetVersionResponse
+     */
+    @Override
+    public CompletableFuture<CreateDatasetVersionResponse> createDatasetVersion(CreateDatasetVersionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateDatasetVersion").setMethod(HttpMethod.POST).setPathRegex("/api/v1/datasets/{DatasetId}/versions").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateDatasetVersionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateDatasetVersionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateDatasetVersionLabels  CreateDatasetVersionLabelsRequest
+     * @return CreateDatasetVersionLabelsResponse
+     */
+    @Override
+    public CompletableFuture<CreateDatasetVersionLabelsResponse> createDatasetVersionLabels(CreateDatasetVersionLabelsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateDatasetVersionLabels").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/datasets/{DatasetId}/versions/{VersionName}/labels").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateDatasetVersionLabelsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateDatasetVersionLabelsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateExperiment  CreateExperimentRequest
+     * @return CreateExperimentResponse
+     */
+    @Override
+    public CompletableFuture<CreateExperimentResponse> createExperiment(CreateExperimentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateExperiment").setMethod(HttpMethod.POST).setPathRegex("/api/v1/experiments").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateExperimentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateExperimentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateMember  CreateMemberRequest
+     * @return CreateMemberResponse
+     */
     @Override
     public CompletableFuture<CreateMemberResponse> createMember(CreateMemberRequest request) {
         try {
@@ -137,6 +219,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateModel  CreateModelRequest
+     * @return CreateModelResponse
+     */
     @Override
     public CompletableFuture<CreateModelResponse> createModel(CreateModelRequest request) {
         try {
@@ -151,6 +237,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateModelLabels  CreateModelLabelsRequest
+     * @return CreateModelLabelsResponse
+     */
     @Override
     public CompletableFuture<CreateModelLabelsResponse> createModelLabels(CreateModelLabelsRequest request) {
         try {
@@ -165,6 +255,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateModelVersion  CreateModelVersionRequest
+     * @return CreateModelVersionResponse
+     */
     @Override
     public CompletableFuture<CreateModelVersionResponse> createModelVersion(CreateModelVersionRequest request) {
         try {
@@ -179,6 +273,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateModelVersionLabels  CreateModelVersionLabelsRequest
+     * @return CreateModelVersionLabelsResponse
+     */
     @Override
     public CompletableFuture<CreateModelVersionLabelsResponse> createModelVersionLabels(CreateModelVersionLabelsRequest request) {
         try {
@@ -193,6 +291,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateProductOrders  CreateProductOrdersRequest
+     * @return CreateProductOrdersResponse
+     */
     @Override
     public CompletableFuture<CreateProductOrdersResponse> createProductOrders(CreateProductOrdersRequest request) {
         try {
@@ -207,6 +309,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateRun  CreateRunRequest
+     * @return CreateRunResponse
+     */
+    @Override
+    public CompletableFuture<CreateRunResponse> createRun(CreateRunRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateRun").setMethod(HttpMethod.POST).setPathRegex("/api/v1/runs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateRunResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateRunResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateWorkspace  CreateWorkspaceRequest
+     * @return CreateWorkspaceResponse
+     */
     @Override
     public CompletableFuture<CreateWorkspaceResponse> createWorkspace(CreateWorkspaceRequest request) {
         try {
@@ -221,6 +345,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateWorkspaceResource  CreateWorkspaceResourceRequest
+     * @return CreateWorkspaceResourceResponse
+     */
     @Override
     public CompletableFuture<CreateWorkspaceResourceResponse> createWorkspaceResource(CreateWorkspaceResourceRequest request) {
         try {
@@ -235,6 +363,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteCodeSource  DeleteCodeSourceRequest
+     * @return DeleteCodeSourceResponse
+     */
     @Override
     public CompletableFuture<DeleteCodeSourceResponse> deleteCodeSource(DeleteCodeSourceRequest request) {
         try {
@@ -249,6 +381,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteDataset  DeleteDatasetRequest
+     * @return DeleteDatasetResponse
+     */
     @Override
     public CompletableFuture<DeleteDatasetResponse> deleteDataset(DeleteDatasetRequest request) {
         try {
@@ -263,6 +399,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteDatasetLabels  DeleteDatasetLabelsRequest
+     * @return DeleteDatasetLabelsResponse
+     */
     @Override
     public CompletableFuture<DeleteDatasetLabelsResponse> deleteDatasetLabels(DeleteDatasetLabelsRequest request) {
         try {
@@ -277,6 +417,82 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteDatasetVersion  DeleteDatasetVersionRequest
+     * @return DeleteDatasetVersionResponse
+     */
+    @Override
+    public CompletableFuture<DeleteDatasetVersionResponse> deleteDatasetVersion(DeleteDatasetVersionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteDatasetVersion").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/datasets/{DatasetId}/versions/{VersionName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteDatasetVersionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteDatasetVersionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteDatasetVersionLabels  DeleteDatasetVersionLabelsRequest
+     * @return DeleteDatasetVersionLabelsResponse
+     */
+    @Override
+    public CompletableFuture<DeleteDatasetVersionLabelsResponse> deleteDatasetVersionLabels(DeleteDatasetVersionLabelsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteDatasetVersionLabels").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/datasets/{DatasetId}/versions/{VersionName}/labels").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteDatasetVersionLabelsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteDatasetVersionLabelsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteExperiment  DeleteExperimentRequest
+     * @return DeleteExperimentResponse
+     */
+    @Override
+    public CompletableFuture<DeleteExperimentResponse> deleteExperiment(DeleteExperimentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteExperiment").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/experiments/{ExperimentId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteExperimentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteExperimentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteExperimentLabel  DeleteExperimentLabelRequest
+     * @return DeleteExperimentLabelResponse
+     */
+    @Override
+    public CompletableFuture<DeleteExperimentLabelResponse> deleteExperimentLabel(DeleteExperimentLabelRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteExperimentLabel").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/experiments/{ExperimentId}/labels/{Key}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteExperimentLabelResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteExperimentLabelResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteMembers  DeleteMembersRequest
+     * @return DeleteMembersResponse
+     */
     @Override
     public CompletableFuture<DeleteMembersResponse> deleteMembers(DeleteMembersRequest request) {
         try {
@@ -291,6 +507,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteModel  DeleteModelRequest
+     * @return DeleteModelResponse
+     */
     @Override
     public CompletableFuture<DeleteModelResponse> deleteModel(DeleteModelRequest request) {
         try {
@@ -305,6 +525,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteModelLabels  DeleteModelLabelsRequest
+     * @return DeleteModelLabelsResponse
+     */
     @Override
     public CompletableFuture<DeleteModelLabelsResponse> deleteModelLabels(DeleteModelLabelsRequest request) {
         try {
@@ -319,6 +543,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteModelVersion  DeleteModelVersionRequest
+     * @return DeleteModelVersionResponse
+     */
     @Override
     public CompletableFuture<DeleteModelVersionResponse> deleteModelVersion(DeleteModelVersionRequest request) {
         try {
@@ -333,6 +561,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteModelVersionLabels  DeleteModelVersionLabelsRequest
+     * @return DeleteModelVersionLabelsResponse
+     */
     @Override
     public CompletableFuture<DeleteModelVersionLabelsResponse> deleteModelVersionLabels(DeleteModelVersionLabelsRequest request) {
         try {
@@ -347,6 +579,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteRun  DeleteRunRequest
+     * @return DeleteRunResponse
+     */
+    @Override
+    public CompletableFuture<DeleteRunResponse> deleteRun(DeleteRunRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteRun").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/runs/{RunId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteRunResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteRunResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteRunLabel  DeleteRunLabelRequest
+     * @return DeleteRunLabelResponse
+     */
+    @Override
+    public CompletableFuture<DeleteRunLabelResponse> deleteRunLabel(DeleteRunLabelRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteRunLabel").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/runs/{RunId}/labels/{Key}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteRunLabelResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteRunLabelResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteWorkspace  DeleteWorkspaceRequest
+     * @return DeleteWorkspaceResponse
+     */
     @Override
     public CompletableFuture<DeleteWorkspaceResponse> deleteWorkspace(DeleteWorkspaceRequest request) {
         try {
@@ -361,6 +633,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteWorkspaceResource  DeleteWorkspaceResourceRequest
+     * @return DeleteWorkspaceResourceResponse
+     */
     @Override
     public CompletableFuture<DeleteWorkspaceResourceResponse> deleteWorkspaceResource(DeleteWorkspaceResourceRequest request) {
         try {
@@ -375,6 +651,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCodeSource  GetCodeSourceRequest
+     * @return GetCodeSourceResponse
+     */
     @Override
     public CompletableFuture<GetCodeSourceResponse> getCodeSource(GetCodeSourceRequest request) {
         try {
@@ -389,6 +669,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDataset  GetDatasetRequest
+     * @return GetDatasetResponse
+     */
     @Override
     public CompletableFuture<GetDatasetResponse> getDataset(GetDatasetRequest request) {
         try {
@@ -403,6 +687,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDatasetVersion  GetDatasetVersionRequest
+     * @return GetDatasetVersionResponse
+     */
+    @Override
+    public CompletableFuture<GetDatasetVersionResponse> getDatasetVersion(GetDatasetVersionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetDatasetVersion").setMethod(HttpMethod.GET).setPathRegex("/api/v1/datasets/{DatasetId}/versions/{VersionName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDatasetVersionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDatasetVersionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetDefaultWorkspace  GetDefaultWorkspaceRequest
+     * @return GetDefaultWorkspaceResponse
+     */
     @Override
     public CompletableFuture<GetDefaultWorkspaceResponse> getDefaultWorkspace(GetDefaultWorkspaceRequest request) {
         try {
@@ -417,6 +723,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetExperiment  GetExperimentRequest
+     * @return GetExperimentResponse
+     */
+    @Override
+    public CompletableFuture<GetExperimentResponse> getExperiment(GetExperimentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetExperiment").setMethod(HttpMethod.GET).setPathRegex("/api/v1/experiments/{ExperimentId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetExperimentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetExperimentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetImage  GetImageRequest
+     * @return GetImageResponse
+     */
     @Override
     public CompletableFuture<GetImageResponse> getImage(GetImageRequest request) {
         try {
@@ -431,6 +759,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetMember  GetMemberRequest
+     * @return GetMemberResponse
+     */
     @Override
     public CompletableFuture<GetMemberResponse> getMember(GetMemberRequest request) {
         try {
@@ -445,6 +777,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetModel  GetModelRequest
+     * @return GetModelResponse
+     */
     @Override
     public CompletableFuture<GetModelResponse> getModel(GetModelRequest request) {
         try {
@@ -459,6 +795,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetModelVersion  GetModelVersionRequest
+     * @return GetModelVersionResponse
+     */
     @Override
     public CompletableFuture<GetModelVersionResponse> getModelVersion(GetModelVersionRequest request) {
         try {
@@ -473,6 +813,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPermission  GetPermissionRequest
+     * @return GetPermissionResponse
+     */
     @Override
     public CompletableFuture<GetPermissionResponse> getPermission(GetPermissionRequest request) {
         try {
@@ -487,20 +831,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRun  GetRunRequest
+     * @return GetRunResponse
+     */
     @Override
-    public CompletableFuture<GetServiceTemplateResponse> getServiceTemplate(GetServiceTemplateRequest request) {
+    public CompletableFuture<GetRunResponse> getRun(GetRunRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetServiceTemplate").setMethod(HttpMethod.GET).setPathRegex("/api/v1/servicetemplates/{ServiceTemplateId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetServiceTemplateResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetRun").setMethod(HttpMethod.GET).setPathRegex("/api/v1/runs/{RunId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetRunResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<GetServiceTemplateResponse> future = new CompletableFuture<>();
+            CompletableFuture<GetRunResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
+    /**
+     * @param request the request parameters of GetWorkspace  GetWorkspaceRequest
+     * @return GetWorkspaceResponse
+     */
     @Override
     public CompletableFuture<GetWorkspaceResponse> getWorkspace(GetWorkspaceRequest request) {
         try {
@@ -515,6 +867,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCodeSources  ListCodeSourcesRequest
+     * @return ListCodeSourcesResponse
+     */
     @Override
     public CompletableFuture<ListCodeSourcesResponse> listCodeSources(ListCodeSourcesRequest request) {
         try {
@@ -529,6 +885,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDatasetVersions  ListDatasetVersionsRequest
+     * @return ListDatasetVersionsResponse
+     */
+    @Override
+    public CompletableFuture<ListDatasetVersionsResponse> listDatasetVersions(ListDatasetVersionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListDatasetVersions").setMethod(HttpMethod.GET).setPathRegex("/api/v1/datasets/{DatasetId}/versions").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListDatasetVersionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListDatasetVersionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListDatasets  ListDatasetsRequest
+     * @return ListDatasetsResponse
+     */
     @Override
     public CompletableFuture<ListDatasetsResponse> listDatasets(ListDatasetsRequest request) {
         try {
@@ -543,6 +921,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListExperiment  ListExperimentRequest
+     * @return ListExperimentResponse
+     */
+    @Override
+    public CompletableFuture<ListExperimentResponse> listExperiment(ListExperimentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListExperiment").setMethod(HttpMethod.GET).setPathRegex("/api/v1/experiments").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListExperimentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListExperimentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListImageLabels  ListImageLabelsRequest
+     * @return ListImageLabelsResponse
+     */
     @Override
     public CompletableFuture<ListImageLabelsResponse> listImageLabels(ListImageLabelsRequest request) {
         try {
@@ -557,6 +957,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListImages  ListImagesRequest
+     * @return ListImagesResponse
+     */
     @Override
     public CompletableFuture<ListImagesResponse> listImages(ListImagesRequest request) {
         try {
@@ -571,6 +975,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListMembers  ListMembersRequest
+     * @return ListMembersResponse
+     */
     @Override
     public CompletableFuture<ListMembersResponse> listMembers(ListMembersRequest request) {
         try {
@@ -585,6 +993,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListModelVersions  ListModelVersionsRequest
+     * @return ListModelVersionsResponse
+     */
     @Override
     public CompletableFuture<ListModelVersionsResponse> listModelVersions(ListModelVersionsRequest request) {
         try {
@@ -599,6 +1011,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListModels  ListModelsRequest
+     * @return ListModelsResponse
+     */
     @Override
     public CompletableFuture<ListModelsResponse> listModels(ListModelsRequest request) {
         try {
@@ -613,6 +1029,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPermissions  ListPermissionsRequest
+     * @return ListPermissionsResponse
+     */
     @Override
     public CompletableFuture<ListPermissionsResponse> listPermissions(ListPermissionsRequest request) {
         try {
@@ -627,6 +1047,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListProducts  ListProductsRequest
+     * @return ListProductsResponse
+     */
     @Override
     public CompletableFuture<ListProductsResponse> listProducts(ListProductsRequest request) {
         try {
@@ -641,6 +1065,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListQuotas  ListQuotasRequest
+     * @return ListQuotasResponse
+     */
     @Override
     public CompletableFuture<ListQuotasResponse> listQuotas(ListQuotasRequest request) {
         try {
@@ -655,6 +1083,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListResources  ListResourcesRequest
+     * @return ListResourcesResponse
+     */
     @Override
     public CompletableFuture<ListResourcesResponse> listResources(ListResourcesRequest request) {
         try {
@@ -669,20 +1101,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListRunMetrics  ListRunMetricsRequest
+     * @return ListRunMetricsResponse
+     */
     @Override
-    public CompletableFuture<ListServiceTemplatesResponse> listServiceTemplates(ListServiceTemplatesRequest request) {
+    public CompletableFuture<ListRunMetricsResponse> listRunMetrics(ListRunMetricsRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListServiceTemplates").setMethod(HttpMethod.GET).setPathRegex("/api/v1/servicetemplates").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListServiceTemplatesResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListRunMetrics").setMethod(HttpMethod.GET).setPathRegex("/api/v1/runs/{RunId}/metrics").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListRunMetricsResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<ListServiceTemplatesResponse> future = new CompletableFuture<>();
+            CompletableFuture<ListRunMetricsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
+    /**
+     * @param request the request parameters of ListRuns  ListRunsRequest
+     * @return ListRunsResponse
+     */
+    @Override
+    public CompletableFuture<ListRunsResponse> listRuns(ListRunsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListRuns").setMethod(HttpMethod.GET).setPathRegex("/api/v1/runs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListRunsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListRunsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListWorkspaceUsers  ListWorkspaceUsersRequest
+     * @return ListWorkspaceUsersResponse
+     */
     @Override
     public CompletableFuture<ListWorkspaceUsersResponse> listWorkspaceUsers(ListWorkspaceUsersRequest request) {
         try {
@@ -697,6 +1155,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListWorkspaces  ListWorkspacesRequest
+     * @return ListWorkspacesResponse
+     */
     @Override
     public CompletableFuture<ListWorkspacesResponse> listWorkspaces(ListWorkspacesRequest request) {
         try {
@@ -711,6 +1173,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of LogRunMetrics  LogRunMetricsRequest
+     * @return LogRunMetricsResponse
+     */
+    @Override
+    public CompletableFuture<LogRunMetricsResponse> logRunMetrics(LogRunMetricsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("LogRunMetrics").setMethod(HttpMethod.POST).setPathRegex("/api/v1/runs/{RunId}/metrics/action/log").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(LogRunMetricsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<LogRunMetricsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of PublishCodeSource  PublishCodeSourceRequest
+     * @return PublishCodeSourceResponse
+     */
     @Override
     public CompletableFuture<PublishCodeSourceResponse> publishCodeSource(PublishCodeSourceRequest request) {
         try {
@@ -725,6 +1209,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PublishDataset  PublishDatasetRequest
+     * @return PublishDatasetResponse
+     */
     @Override
     public CompletableFuture<PublishDatasetResponse> publishDataset(PublishDatasetRequest request) {
         try {
@@ -739,6 +1227,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PublishImage  PublishImageRequest
+     * @return PublishImageResponse
+     */
     @Override
     public CompletableFuture<PublishImageResponse> publishImage(PublishImageRequest request) {
         try {
@@ -753,6 +1245,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveImage  RemoveImageRequest
+     * @return RemoveImageResponse
+     */
     @Override
     public CompletableFuture<RemoveImageResponse> removeImage(RemoveImageRequest request) {
         try {
@@ -767,11 +1263,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveImageLabels  RemoveImageLabelsRequest
+     * @return RemoveImageLabelsResponse
+     */
     @Override
     public CompletableFuture<RemoveImageLabelsResponse> removeImageLabels(RemoveImageLabelsRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RemoveImageLabels").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/images/{ImageId}/labels/{LabelKeys}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RemoveImageLabels").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/images/{ImageId}/labels/{LabelKey}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RemoveImageLabelsResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -781,6 +1281,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveMemberRole  RemoveMemberRoleRequest
+     * @return RemoveMemberRoleResponse
+     */
     @Override
     public CompletableFuture<RemoveMemberRoleResponse> removeMemberRole(RemoveMemberRoleRequest request) {
         try {
@@ -795,6 +1299,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetExperimentLabels  SetExperimentLabelsRequest
+     * @return SetExperimentLabelsResponse
+     */
+    @Override
+    public CompletableFuture<SetExperimentLabelsResponse> setExperimentLabels(SetExperimentLabelsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SetExperimentLabels").setMethod(HttpMethod.POST).setPathRegex("/api/v1/experiments/{ExperimentId}/labels").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetExperimentLabelsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SetExperimentLabelsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateCodeSource  UpdateCodeSourceRequest
+     * @return UpdateCodeSourceResponse
+     */
+    @Override
+    public CompletableFuture<UpdateCodeSourceResponse> updateCodeSource(UpdateCodeSourceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateCodeSource").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/codesources/{CodeSourceId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateCodeSourceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateCodeSourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateDataset  UpdateDatasetRequest
+     * @return UpdateDatasetResponse
+     */
     @Override
     public CompletableFuture<UpdateDatasetResponse> updateDataset(UpdateDatasetRequest request) {
         try {
@@ -809,6 +1353,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateDatasetVersion  UpdateDatasetVersionRequest
+     * @return UpdateDatasetVersionResponse
+     */
+    @Override
+    public CompletableFuture<UpdateDatasetVersionResponse> updateDatasetVersion(UpdateDatasetVersionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateDatasetVersion").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/datasets/{DatasetId}/versions/{VersionName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateDatasetVersionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateDatasetVersionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateDefaultWorkspace  UpdateDefaultWorkspaceRequest
+     * @return UpdateDefaultWorkspaceResponse
+     */
     @Override
     public CompletableFuture<UpdateDefaultWorkspaceResponse> updateDefaultWorkspace(UpdateDefaultWorkspaceRequest request) {
         try {
@@ -823,6 +1389,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateExperiment  UpdateExperimentRequest
+     * @return UpdateExperimentResponse
+     */
+    @Override
+    public CompletableFuture<UpdateExperimentResponse> updateExperiment(UpdateExperimentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateExperiment").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/experiments/{ExperimentId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateExperimentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateExperimentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateModel  UpdateModelRequest
+     * @return UpdateModelResponse
+     */
     @Override
     public CompletableFuture<UpdateModelResponse> updateModel(UpdateModelRequest request) {
         try {
@@ -837,6 +1425,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateModelVersion  UpdateModelVersionRequest
+     * @return UpdateModelVersionResponse
+     */
     @Override
     public CompletableFuture<UpdateModelVersionResponse> updateModelVersion(UpdateModelVersionRequest request) {
         try {
@@ -851,6 +1443,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateRun  UpdateRunRequest
+     * @return UpdateRunResponse
+     */
+    @Override
+    public CompletableFuture<UpdateRunResponse> updateRun(UpdateRunRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateRun").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/runs/{RunId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateRunResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateRunResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateWorkspace  UpdateWorkspaceRequest
+     * @return UpdateWorkspaceResponse
+     */
     @Override
     public CompletableFuture<UpdateWorkspaceResponse> updateWorkspace(UpdateWorkspaceRequest request) {
         try {
@@ -865,6 +1479,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateWorkspaceResource  UpdateWorkspaceResourceRequest
+     * @return UpdateWorkspaceResourceResponse
+     */
     @Override
     public CompletableFuture<UpdateWorkspaceResourceResponse> updateWorkspaceResource(UpdateWorkspaceResourceRequest request) {
         try {

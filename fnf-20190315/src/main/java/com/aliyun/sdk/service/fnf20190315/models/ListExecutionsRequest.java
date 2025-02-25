@@ -30,10 +30,6 @@ public class ListExecutionsRequest extends Request {
     private String nextToken;
 
     @Query
-    @NameInMap("RequestId")
-    private String requestId;
-
-    @Query
     @NameInMap("StartedTimeBegin")
     private String startedTimeBegin;
 
@@ -51,7 +47,6 @@ public class ListExecutionsRequest extends Request {
         this.flowName = builder.flowName;
         this.limit = builder.limit;
         this.nextToken = builder.nextToken;
-        this.requestId = builder.requestId;
         this.startedTimeBegin = builder.startedTimeBegin;
         this.startedTimeEnd = builder.startedTimeEnd;
         this.status = builder.status;
@@ -99,13 +94,6 @@ public class ListExecutionsRequest extends Request {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return startedTimeBegin
      */
     public String getStartedTimeBegin() {
@@ -131,7 +119,6 @@ public class ListExecutionsRequest extends Request {
         private String flowName; 
         private Integer limit; 
         private String nextToken; 
-        private String requestId; 
         private String startedTimeBegin; 
         private String startedTimeEnd; 
         private String status; 
@@ -146,7 +133,6 @@ public class ListExecutionsRequest extends Request {
             this.flowName = request.flowName;
             this.limit = request.limit;
             this.nextToken = request.nextToken;
-            this.requestId = request.requestId;
             this.startedTimeBegin = request.startedTimeBegin;
             this.startedTimeEnd = request.startedTimeEnd;
             this.status = request.status;
@@ -162,7 +148,7 @@ public class ListExecutionsRequest extends Request {
         }
 
         /**
-         * The name of the flow. The name is unique within the region and cannot be modified after the flow is created. Configure this parameter based on the following rules:
+         * The name of the flow. The name must be unique within the region and cannot be modified after the flow is created. The name must meet the following conventions:
          * <p>
          * 
          * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
@@ -195,15 +181,6 @@ public class ListExecutionsRequest extends Request {
         }
 
         /**
-         * The request ID. If you specify this parameter, the system uses this value as the ID of the request. If you do not specify this parameter, the system generates a value at random.
-         */
-        public Builder requestId(String requestId) {
-            this.putQueryParameter("RequestId", requestId);
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
          * The beginning of the time range to query executions. Specify the value in the UTC RFC3339 format.
          */
         public Builder startedTimeBegin(String startedTimeBegin) {
@@ -222,9 +199,10 @@ public class ListExecutionsRequest extends Request {
         }
 
         /**
-         * The state of the execution that you want to filter. Valid values:
+         * The status of the execution that you want to filter. Valid values:
          * <p>
          * 
+         * *   **Starting**
          * *   **Running**
          * *   **Stopped**
          * *   **Succeeded**

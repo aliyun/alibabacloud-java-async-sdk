@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAuditLogRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAuditLogRecordsResponseBody</p>
  */
 public class DescribeAuditLogRecordsResponseBody extends TeaModel {
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private DescribeAuditLogRecordsResponseBody(Builder builder) {
@@ -98,7 +98,10 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-t4nj8619bz2w3****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -106,7 +109,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The queried SQL audit logs.
+         * <p>The queried SQL audit logs.</p>
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -114,7 +117,10 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +128,10 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +139,10 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8A564B7F-8C00-43C0-8EC5-919FBB70573</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -151,35 +166,41 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAuditLogRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAuditLogRecordsResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("ConnId")
+        @com.aliyun.core.annotation.NameInMap("ConnId")
         private String connId;
 
-        @NameInMap("DBName")
+        @com.aliyun.core.annotation.NameInMap("DBName")
         private String DBName;
 
-        @NameInMap("ExecuteTime")
+        @com.aliyun.core.annotation.NameInMap("ExecuteTime")
         private String executeTime;
 
-        @NameInMap("HostAddress")
+        @com.aliyun.core.annotation.NameInMap("HostAddress")
         private String hostAddress;
 
-        @NameInMap("ProcessID")
+        @com.aliyun.core.annotation.NameInMap("ProcessID")
         private String processID;
 
-        @NameInMap("SQLText")
+        @com.aliyun.core.annotation.NameInMap("SQLText")
         private String SQLText;
 
-        @NameInMap("SQLType")
+        @com.aliyun.core.annotation.NameInMap("SQLType")
         private String SQLType;
 
-        @NameInMap("Succeed")
+        @com.aliyun.core.annotation.NameInMap("Succeed")
         private String succeed;
 
-        @NameInMap("TotalTime")
+        @com.aliyun.core.annotation.NameInMap("TotalTime")
         private String totalTime;
 
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private String user;
 
         private Items(Builder builder) {
@@ -286,7 +307,10 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * This parameter is unavailable.
+             * <p>This parameter is unavailable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder connId(String connId) {
                 this.connId = connId;
@@ -294,7 +318,10 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database on which the SQL statement was executed.
+             * <p>The name of the database on which the SQL statement was executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adb_test</p>
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -302,7 +329,10 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the execution of the SQL statement. The time is displayed in the ISO 8601 standard in the yyyy-MM-dd HH:mm:ss format. The time must be in UTC.
+             * <p>The start time of the execution of the SQL statement. The time is displayed in the ISO 8601 standard in the yyyy-MM-dd HH:mm:ss format. The time must be in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-23 16:05:08</p>
              */
             public Builder executeTime(String executeTime) {
                 this.executeTime = executeTime;
@@ -310,7 +340,10 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address and port number of the client that is used to execute the SQL statement.
+             * <p>The IP address and port number of the client that is used to execute the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.104.XX.XX:43908</p>
              */
             public Builder hostAddress(String hostAddress) {
                 this.hostAddress = hostAddress;
@@ -318,7 +351,10 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The task ID.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>202106081752021720161662490345362390</p>
              */
             public Builder processID(String processID) {
                 this.processID = processID;
@@ -326,7 +362,10 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the SQL statement.
+             * <p>Details of the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT * FROM tb_courses</p>
              */
             public Builder SQLText(String SQLText) {
                 this.SQLText = SQLText;
@@ -334,7 +373,10 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the SQL statement.
+             * <p>The type of the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT</p>
              */
             public Builder SQLType(String SQLType) {
                 this.SQLType = SQLType;
@@ -342,11 +384,14 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the SQL statement was successfully executed. Valid values:
-             * <p>
+             * <p>Indicates whether the SQL statement was successfully executed. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder succeed(String succeed) {
                 this.succeed = succeed;
@@ -354,7 +399,10 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of time that is consumed to execute the SQL statement. Unit: milliseconds.
+             * <p>The amount of time that is consumed to execute the SQL statement. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>216</p>
              */
             public Builder totalTime(String totalTime) {
                 this.totalTime = totalTime;
@@ -362,7 +410,10 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the user who executed the SQL statement.
+             * <p>The name of the user who executed the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_user</p>
              */
             public Builder user(String user) {
                 this.user = user;

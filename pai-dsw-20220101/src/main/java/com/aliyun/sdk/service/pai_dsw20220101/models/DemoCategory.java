@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dsw20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DemoCategory} extends {@link TeaModel}
  *
  * <p>DemoCategory</p>
  */
 public class DemoCategory extends TeaModel {
-    @NameInMap("CategoryCode")
+    @com.aliyun.core.annotation.NameInMap("CategoryCode")
     private String categoryCode;
 
-    @NameInMap("CategoryName")
+    @com.aliyun.core.annotation.NameInMap("CategoryName")
     private String categoryName;
 
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.NameInMap("Order")
     private Long order;
 
-    @NameInMap("SubCategories")
-    private java.util.List < DemoCategory > subCategories;
+    @com.aliyun.core.annotation.NameInMap("SubCategories")
+    private java.util.List<DemoCategory> subCategories;
 
     private DemoCategory(Builder builder) {
         this.categoryCode = builder.categoryCode;
@@ -63,7 +68,7 @@ public class DemoCategory extends TeaModel {
     /**
      * @return subCategories
      */
-    public java.util.List < DemoCategory > getSubCategories() {
+    public java.util.List<DemoCategory> getSubCategories() {
         return this.subCategories;
     }
 
@@ -71,7 +76,7 @@ public class DemoCategory extends TeaModel {
         private String categoryCode; 
         private String categoryName; 
         private Long order; 
-        private java.util.List < DemoCategory > subCategories; 
+        private java.util.List<DemoCategory> subCategories; 
 
         /**
          * CategoryCode.
@@ -100,7 +105,7 @@ public class DemoCategory extends TeaModel {
         /**
          * SubCategories.
          */
-        public Builder subCategories(java.util.List < DemoCategory > subCategories) {
+        public Builder subCategories(java.util.List<DemoCategory> subCategories) {
             this.subCategories = subCategories;
             return this;
         }

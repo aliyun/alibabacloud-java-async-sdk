@@ -1,63 +1,63 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExecContainerCommandRequest} extends {@link RequestModel}
  *
  * <p>ExecContainerCommandRequest</p>
  */
 public class ExecContainerCommandRequest extends Request {
-    @Query
-    @NameInMap("Command")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Command")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String command;
 
-    @Query
-    @NameInMap("ContainerGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String containerGroupId;
 
-    @Query
-    @NameInMap("ContainerName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String containerName;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Stdin")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Stdin")
     private Boolean stdin;
 
-    @Query
-    @NameInMap("Sync")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sync")
     private Boolean sync;
 
-    @Query
-    @NameInMap("TTY")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TTY")
     private Boolean TTY;
 
     private ExecContainerCommandRequest(Builder builder) {
@@ -198,9 +198,11 @@ public class ExecContainerCommandRequest extends Request {
         } 
 
         /**
-         * The commands to run in the container. You can specify up to 20 commands. Each command can be up to 256 characters in length.\
-         * <p>
-         * The strings must be in the JSON format. Example: `["/bin/sh", "-c", "ls -a"]`.
+         * <p>The commands to run in the container. You can specify up to 20 commands. Each command can be up to 256 characters in length.<br>The strings must be in the JSON format. Example: <code>[&quot;/bin/sh&quot;, &quot;-c&quot;, &quot;ls -a&quot;]</code>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;/bin/sh&quot;, &quot;-c&quot;, &quot;ls -a&quot;]</p>
          */
         public Builder command(String command) {
             this.putQueryParameter("Command", command);
@@ -209,7 +211,11 @@ public class ExecContainerCommandRequest extends Request {
         }
 
         /**
-         * The ID of the elastic container instance.
+         * <p>The ID of the elastic container instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eci-2zebxkiifulhl****</p>
          */
         public Builder containerGroupId(String containerGroupId) {
             this.putQueryParameter("ContainerGroupId", containerGroupId);
@@ -218,7 +224,11 @@ public class ExecContainerCommandRequest extends Request {
         }
 
         /**
-         * The name of the container.
+         * <p>The name of the container.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nginx</p>
          */
         public Builder containerName(String containerName) {
             this.putQueryParameter("ContainerName", containerName);
@@ -245,7 +255,11 @@ public class ExecContainerCommandRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -272,7 +286,10 @@ public class ExecContainerCommandRequest extends Request {
         }
 
         /**
-         * Specifies whether to read the commands from standard input (stdin). Default value: true.
+         * <p>Specifies whether to read the commands from standard input (stdin). Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder stdin(Boolean stdin) {
             this.putQueryParameter("Stdin", stdin);
@@ -281,9 +298,10 @@ public class ExecContainerCommandRequest extends Request {
         }
 
         /**
-         * Specifies whether to run the command immediately and return the result. Default value: false.\
-         * <p>
-         * If you set this parameter to true, set the value of TTY to false.
+         * <p>Specifies whether to immediately run the command and synchronously return the result. Default value: false.<br>If this parameter is set to true, TTY must be set to false. Command cannot be set to <code>/bin/bash</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder sync(Boolean sync) {
             this.putQueryParameter("Sync", sync);
@@ -292,9 +310,10 @@ public class ExecContainerCommandRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable interaction. Default value: false.\
-         * <p>
-         * If the command is a /bin/bash command, set the value to true.
+         * <p>Specifies whether to enable interaction. Default value: false.<br>If the Command parameter is set to <code>/bin/bash</code>, set this parameter to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder TTY(Boolean TTY) {
             this.putQueryParameter("TTY", TTY);

@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePolicyInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribePolicyInstancesRequest</p>
  */
 public class DescribePolicyInstancesRequest extends Request {
-    @Path
-    @NameInMap("cluster_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("cluster_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("instance_name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("instance_name")
     private String instanceName;
 
-    @Query
-    @NameInMap("policy_name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("policy_name")
     private String policyName;
 
     private DescribePolicyInstancesRequest(Builder builder) {
@@ -83,7 +88,11 @@ public class DescribePolicyInstancesRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c8155823d057948c69a****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -92,7 +101,10 @@ public class DescribePolicyInstancesRequest extends Request {
         }
 
         /**
-         * The name of the policy instance that you want to query.
+         * <p>The name of the policy instance that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>allowed-repos-cz4s2</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("instance_name", instanceName);
@@ -101,7 +113,10 @@ public class DescribePolicyInstancesRequest extends Request {
         }
 
         /**
-         * The name of the policy that you want to query.
+         * <p>The name of the policy that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACKPSPCapabilities</p>
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("policy_name", policyName);

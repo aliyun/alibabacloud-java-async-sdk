@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ProductSaleInfoQuery} extends {@link TeaModel}
  *
  * <p>ProductSaleInfoQuery</p>
  */
 public class ProductSaleInfoQuery extends TeaModel {
-    @NameInMap("distributorShopId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("distributorShopId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String distributorShopId;
 
-    @NameInMap("divisionCode")
+    @com.aliyun.core.annotation.NameInMap("divisionCode")
     private String divisionCode;
 
     private ProductSaleInfoQuery(Builder builder) {
@@ -51,7 +56,10 @@ public class ProductSaleInfoQuery extends TeaModel {
         private String divisionCode; 
 
         /**
-         * distributorShopId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22000009</p>
          */
         public Builder distributorShopId(String distributorShopId) {
             this.distributorShopId = distributorShopId;

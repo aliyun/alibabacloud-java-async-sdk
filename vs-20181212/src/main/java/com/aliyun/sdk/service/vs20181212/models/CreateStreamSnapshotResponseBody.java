@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateStreamSnapshotResponseBody} extends {@link TeaModel}
  *
  * <p>CreateStreamSnapshotResponseBody</p>
  */
 public class CreateStreamSnapshotResponseBody extends TeaModel {
-    @NameInMap("Format")
+    @com.aliyun.core.annotation.NameInMap("Format")
     private String format;
 
-    @NameInMap("Height")
+    @com.aliyun.core.annotation.NameInMap("Height")
     private Long height;
 
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
 
-    @NameInMap("OssBucket")
+    @com.aliyun.core.annotation.NameInMap("OssBucket")
     private String ossBucket;
 
-    @NameInMap("OssEndpoint")
+    @com.aliyun.core.annotation.NameInMap("OssEndpoint")
     private String ossEndpoint;
 
-    @NameInMap("OssObject")
+    @com.aliyun.core.annotation.NameInMap("OssObject")
     private String ossObject;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Timestamp")
+    @com.aliyun.core.annotation.NameInMap("Timestamp")
     private Long timestamp;
 
-    @NameInMap("Url")
+    @com.aliyun.core.annotation.NameInMap("Url")
     private String url;
 
-    @NameInMap("Width")
+    @com.aliyun.core.annotation.NameInMap("Width")
     private Long width;
 
     private CreateStreamSnapshotResponseBody(Builder builder) {

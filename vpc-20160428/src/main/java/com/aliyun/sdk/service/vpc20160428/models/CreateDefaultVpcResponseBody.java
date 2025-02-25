@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDefaultVpcResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDefaultVpcResponseBody</p>
  */
 public class CreateDefaultVpcResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RouteTableId")
+    @com.aliyun.core.annotation.NameInMap("RouteTableId")
     private String routeTableId;
 
-    @NameInMap("VRouterId")
+    @com.aliyun.core.annotation.NameInMap("VRouterId")
     private String vRouterId;
 
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     private CreateDefaultVpcResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class CreateDefaultVpcResponseBody extends TeaModel {
         private String vpcId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,7 +90,10 @@ public class CreateDefaultVpcResponseBody extends TeaModel {
         }
 
         /**
-         * The route table ID that is automatically created by the system after you create a default VPC.
+         * <p>The route table ID that is automatically created by the system after you create a default VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-bp1q1uirugzb1x32m****</p>
          */
         public Builder routeTableId(String routeTableId) {
             this.routeTableId = routeTableId;
@@ -90,7 +101,10 @@ public class CreateDefaultVpcResponseBody extends TeaModel {
         }
 
         /**
-         * The vRouter ID that is automatically created by the system after you create a default VPC.
+         * <p>The vRouter ID that is automatically created by the system after you create a default VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vrt-bp1lhl0taikrteen8****</p>
          */
         public Builder vRouterId(String vRouterId) {
             this.vRouterId = vRouterId;
@@ -98,7 +112,10 @@ public class CreateDefaultVpcResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the default VPC.
+         * <p>The ID of the default VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp15zckdt37pq72zv****</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;

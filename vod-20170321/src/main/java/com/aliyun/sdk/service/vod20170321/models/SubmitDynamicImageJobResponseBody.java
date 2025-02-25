@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitDynamicImageJobResponseBody} extends {@link TeaModel}
  *
  * <p>SubmitDynamicImageJobResponseBody</p>
  */
 public class SubmitDynamicImageJobResponseBody extends TeaModel {
-    @NameInMap("DynamicImageJob")
+    @com.aliyun.core.annotation.NameInMap("DynamicImageJob")
     private DynamicImageJob dynamicImageJob;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SubmitDynamicImageJobResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class SubmitDynamicImageJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the animated image job.
+         * <p>The information about the animated image job.</p>
          */
         public Builder dynamicImageJob(DynamicImageJob dynamicImageJob) {
             this.dynamicImageJob = dynamicImageJob;
@@ -58,7 +63,10 @@ public class SubmitDynamicImageJobResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-74A6-BEF6-D7393642****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,8 +79,14 @@ public class SubmitDynamicImageJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitDynamicImageJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitDynamicImageJobResponseBody</p>
+     */
     public static class DynamicImageJob extends TeaModel {
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
         private DynamicImageJob(Builder builder) {
@@ -98,7 +112,10 @@ public class SubmitDynamicImageJobResponseBody extends TeaModel {
             private String jobId; 
 
             /**
-             * The ID of the animated image job.
+             * <p>The ID of the animated image job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ad90a501b1bfb72374ad0050746****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;

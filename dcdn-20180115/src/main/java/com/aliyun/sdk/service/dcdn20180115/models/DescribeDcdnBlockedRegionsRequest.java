@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnBlockedRegionsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnBlockedRegionsRequest</p>
  */
 public class DescribeDcdnBlockedRegionsRequest extends Request {
-    @Query
-    @NameInMap("Language")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Language")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String language;
 
     private DescribeDcdnBlockedRegionsRequest(Builder builder) {
@@ -55,7 +55,11 @@ public class DescribeDcdnBlockedRegionsRequest extends Request {
         } 
 
         /**
-         * The language. Valid values: zh, en, and jp.
+         * <p>The language. Valid values: zh, en, and jp.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);

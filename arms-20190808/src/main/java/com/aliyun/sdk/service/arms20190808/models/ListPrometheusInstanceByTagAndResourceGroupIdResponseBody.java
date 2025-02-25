@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPrometheusInstanceByTagAndResourceGroupIdResponseBody} extends {@link TeaModel}
  *
  * <p>ListPrometheusInstanceByTagAndResourceGroupIdResponseBody</p>
  */
 public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListPrometheusInstanceByTagAndResourceGroupIdResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         private String requestId; 
 
         /**
-         * The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.
+         * <p>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +90,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         }
 
         /**
-         * The struct returned.
+         * <p>The returned struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +98,10 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>message</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +109,10 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4789C3E9-A85A-524B-B97B-9D2B14BA06BC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,11 +125,17 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
 
     } 
 
+    /**
+     * 
+     * {@link ListPrometheusInstanceByTagAndResourceGroupIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPrometheusInstanceByTagAndResourceGroupIdResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tags(Builder builder) {
@@ -150,7 +170,10 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             private String tagValue; 
 
             /**
-             * The key of the tag.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ac-cus-tag-3</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -158,7 +181,10 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * The value of the tag.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asg-2vc8qq7x89o11rus9uvu</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -172,74 +198,80 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         } 
 
     }
+    /**
+     * 
+     * {@link ListPrometheusInstanceByTagAndResourceGroupIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPrometheusInstanceByTagAndResourceGroupIdResponseBody</p>
+     */
     public static class PrometheusInstances extends TeaModel {
-        @NameInMap("AuthToken")
+        @com.aliyun.core.annotation.NameInMap("AuthToken")
         private String authToken;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("ClusterType")
+        @com.aliyun.core.annotation.NameInMap("ClusterType")
         private String clusterType;
 
-        @NameInMap("GrafanaInstanceId")
+        @com.aliyun.core.annotation.NameInMap("GrafanaInstanceId")
         private String grafanaInstanceId;
 
-        @NameInMap("HttpApiInterUrl")
+        @com.aliyun.core.annotation.NameInMap("HttpApiInterUrl")
         private String httpApiInterUrl;
 
-        @NameInMap("HttpApiIntraUrl")
+        @com.aliyun.core.annotation.NameInMap("HttpApiIntraUrl")
         private String httpApiIntraUrl;
 
-        @NameInMap("PaymentType")
+        @com.aliyun.core.annotation.NameInMap("PaymentType")
         private String paymentType;
 
-        @NameInMap("PushGatewayInterUrl")
+        @com.aliyun.core.annotation.NameInMap("PushGatewayInterUrl")
         private String pushGatewayInterUrl;
 
-        @NameInMap("PushGatewayIntraUrl")
+        @com.aliyun.core.annotation.NameInMap("PushGatewayIntraUrl")
         private String pushGatewayIntraUrl;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RemoteReadInterUrl")
+        @com.aliyun.core.annotation.NameInMap("RemoteReadInterUrl")
         private String remoteReadInterUrl;
 
-        @NameInMap("RemoteReadIntraUrl")
+        @com.aliyun.core.annotation.NameInMap("RemoteReadIntraUrl")
         private String remoteReadIntraUrl;
 
-        @NameInMap("RemoteWriteInterUrl")
+        @com.aliyun.core.annotation.NameInMap("RemoteWriteInterUrl")
         private String remoteWriteInterUrl;
 
-        @NameInMap("RemoteWriteIntraUrl")
+        @com.aliyun.core.annotation.NameInMap("RemoteWriteIntraUrl")
         private String remoteWriteIntraUrl;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("SubClustersJson")
+        @com.aliyun.core.annotation.NameInMap("SubClustersJson")
         private String subClustersJson;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private PrometheusInstances(Builder builder) {
@@ -412,7 +444,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -457,13 +489,16 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             private String resourceType; 
             private String securityGroupId; 
             private String subClustersJson; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String userId; 
             private String vSwitchId; 
             private String vpcId; 
 
             /**
-             * AuthToken.
+             * <p>The authorization token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ad32dxxxx</p>
              */
             public Builder authToken(String authToken) {
                 this.authToken = authToken;
@@ -471,7 +506,10 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * The ID of the Prometheus instance.
+             * <p>The ID of the Prometheus instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c9d5dda1aeca64220853ace304baeb03d</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -479,7 +517,10 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * The name of the Prometheus instance.
+             * <p>The name of the Prometheus instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prom1</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -487,14 +528,18 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * The type of the cluster. Valid values: remote-write: Prometheus instance for remote write.
-             * <p>
+             * <p>The instance type. Valid values:</p>
+             * <ul>
+             * <li>remote-write: Prometheus instance for Remote Write</li>
+             * <li>ecs: Prometheus instances for ECS</li>
+             * <li>cloud-monitor: Prometheus instance for Alibaba Cloud services in the Chinese mainland</li>
+             * <li>cloud-product: Prometheus instance for Alibaba Cloud services outside the Chinese mainland</li>
+             * <li>global-view: global aggregation instance</li>
+             * <li>aliyun-cs: Prometheus instance for Container Service</li>
+             * </ul>
              * 
-             * *   ecs: Prometheus instances for ECS.
-             * *   cloud-monitor: Prometheus instance for Alibaba Cloud services in the Chinese mainland.
-             * *   cloud-product: Prometheus instance for Alibaba Cloud services outside China.
-             * *   global-view: Prometheus instance for GlobalView.
-             * *   aliyun-cs: Prometheus instance for Container Service.
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -502,7 +547,10 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * The ID of the Grafana workspace.
+             * <p>The ID of the Grafana workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>grafana-rnggfvhlcdl6m71l**</p>
              */
             public Builder grafanaInstanceId(String grafanaInstanceId) {
                 this.grafanaInstanceId = grafanaInstanceId;
@@ -510,7 +558,10 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * HttpApiInterUrl.
+             * <p>The public URL for the HTTP API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://cn-beijing.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/cn-beijing">http://cn-beijing.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/cn-beijing</a></p>
              */
             public Builder httpApiInterUrl(String httpApiInterUrl) {
                 this.httpApiInterUrl = httpApiInterUrl;
@@ -518,7 +569,10 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * HttpApiIntraUrl.
+             * <p>The internal URL for the HTTP API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://cn-beijing-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/cn-beijing">http://cn-beijing-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/cn-beijing</a></p>
              */
             public Builder httpApiIntraUrl(String httpApiIntraUrl) {
                 this.httpApiIntraUrl = httpApiIntraUrl;
@@ -526,11 +580,14 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * The billing method. Valid values:
-             * <p>
+             * <p>The billing method. Valid values:</p>
+             * <ul>
+             * <li>PREPAY: subscription</li>
+             * <li>POSTPAY: pay-as-you-go</li>
+             * </ul>
              * 
-             * *   PREPAY: subscription.
-             * *   POSTPAY: pay-as-you-go.
+             * <strong>example:</strong>
+             * <p>POSTPAY</p>
              */
             public Builder paymentType(String paymentType) {
                 this.paymentType = paymentType;
@@ -538,7 +595,10 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * PushGatewayInterUrl.
+             * <p>The public URL for Pushgateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v2">http://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v2</a></p>
              */
             public Builder pushGatewayInterUrl(String pushGatewayInterUrl) {
                 this.pushGatewayInterUrl = pushGatewayInterUrl;
@@ -546,7 +606,10 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * PushGatewayIntraUrl.
+             * <p>The internal URL for Pushgateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://cn-beijing-intranet.arms.aliyuncs.com/prometheus/xxx/api/v2">http://cn-beijing-intranet.arms.aliyuncs.com/prometheus/xxx/api/v2</a></p>
              */
             public Builder pushGatewayIntraUrl(String pushGatewayIntraUrl) {
                 this.pushGatewayIntraUrl = pushGatewayIntraUrl;
@@ -554,7 +617,10 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * The region ID of the Prometheus instance.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -562,7 +628,10 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * RemoteReadInterUrl.
+             * <p>The public URL for remote read.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://cn-beijing.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/api/v1/read">http://cn-beijing.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/api/v1/read</a></p>
              */
             public Builder remoteReadInterUrl(String remoteReadInterUrl) {
                 this.remoteReadInterUrl = remoteReadInterUrl;
@@ -570,7 +639,10 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * RemoteReadIntraUrl.
+             * <p>The internal URL for remote read.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://cn-beijing-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/api/v1/read">http://cn-beijing-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/api/v1/read</a></p>
              */
             public Builder remoteReadIntraUrl(String remoteReadIntraUrl) {
                 this.remoteReadIntraUrl = remoteReadIntraUrl;
@@ -578,7 +650,10 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * RemoteWriteInterUrl.
+             * <p>The public URL for remote write.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v3/write">http://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v3/write</a></p>
              */
             public Builder remoteWriteInterUrl(String remoteWriteInterUrl) {
                 this.remoteWriteInterUrl = remoteWriteInterUrl;
@@ -586,7 +661,10 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * RemoteWriteIntraUrl.
+             * <p>The internal URL for remote write.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://cn-beijing-intranet.arms.aliyuncs.com/prometheus/xxx/api/v3/write">http://cn-beijing-intranet.arms.aliyuncs.com/prometheus/xxx/api/v3/write</a></p>
              */
             public Builder remoteWriteIntraUrl(String remoteWriteIntraUrl) {
                 this.remoteWriteIntraUrl = remoteWriteIntraUrl;
@@ -594,7 +672,10 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * The ID of the resource group to which the Prometheus instance belongs.
+             * <p>The ID of the resource group to which the Prometheus instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmz7nocpeidcy</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -602,7 +683,10 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * 资源类型
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PROMETHEUS</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -610,7 +694,10 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * The ID of the security group.
+             * <p>The ID of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-f8zd1toc10wmbi1v5rom</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -618,7 +705,10 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * The child instances of the Prometheus instance for GlobalView instance. The value is a JSON string.
+             * <p>The child instances of the global aggregation instance. The value is a JSON string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[ { &quot;headers&quot;: {}, &quot;regionId&quot;: &quot;cn-hangzhou&quot;, &quot;sourceType&quot;: &quot;AlibabaPrometheus&quot;, &quot;extras&quot;: {}, &quot;clusterId&quot;: &quot;c39a1048921e04fceb039db2fb****&quot;, &quot;sourceName&quot;: &quot;arms-luyao-test&quot;, &quot;dataSource&quot;: &quot;&quot;, &quot;userId&quot;: &quot;167275301789****&quot; }, { &quot;headers&quot;: {}, &quot;regionId&quot;: &quot;cn-beijing&quot;, &quot;sourceType&quot;: &quot;AlibabaPrometheus&quot;, &quot;extras&quot;: {}, &quot;clusterId&quot;: &quot;c6b6485496d5b400abde22cb47b5****&quot;, &quot;sourceName&quot;: &quot;agent-321-test&quot;, &quot;dataSource&quot;: &quot;&quot;, &quot;userId&quot;: &quot;167275301789****&quot; }, { &quot;headers&quot;: {}, &quot;regionId&quot;: &quot;cn-zhangjiakou&quot;, &quot;sourceType&quot;: &quot;AlibabaPrometheus&quot;, &quot;extras&quot;: {}, &quot;clusterId&quot;: &quot;c261a4f3200c446659133f1ade78****&quot;, &quot;sourceName&quot;: &quot;zaifeng-cardinality-01&quot;, &quot;dataSource&quot;: &quot;&quot;, &quot;userId&quot;: &quot;167275301789****&quot; } ]</p>
              */
             public Builder subClustersJson(String subClustersJson) {
                 this.subClustersJson = subClustersJson;
@@ -626,15 +716,18 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * The tags.
+             * <p>The list of tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * The ID of the user.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1672753017899***</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -642,7 +735,10 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * The ID of the vSwitch.
+             * <p>The ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-f8z73vcja1tqnw90aav5a</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -650,7 +746,10 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * The ID of the virtual private cloud (VPC).
+             * <p>The ID of the virtual private cloud (VPC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-8vbtp1fsm8mir18l8rl0u</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -664,9 +763,15 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         } 
 
     }
+    /**
+     * 
+     * {@link ListPrometheusInstanceByTagAndResourceGroupIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPrometheusInstanceByTagAndResourceGroupIdResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("PrometheusInstances")
-        private java.util.List < PrometheusInstances> prometheusInstances;
+        @com.aliyun.core.annotation.NameInMap("PrometheusInstances")
+        private java.util.List<PrometheusInstances> prometheusInstances;
 
         private Data(Builder builder) {
             this.prometheusInstances = builder.prometheusInstances;
@@ -683,17 +788,17 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         /**
          * @return prometheusInstances
          */
-        public java.util.List < PrometheusInstances> getPrometheusInstances() {
+        public java.util.List<PrometheusInstances> getPrometheusInstances() {
             return this.prometheusInstances;
         }
 
         public static final class Builder {
-            private java.util.List < PrometheusInstances> prometheusInstances; 
+            private java.util.List<PrometheusInstances> prometheusInstances; 
 
             /**
-             * The queried Prometheus instances.
+             * <p>The queried Prometheus instances.</p>
              */
-            public Builder prometheusInstances(java.util.List < PrometheusInstances> prometheusInstances) {
+            public Builder prometheusInstances(java.util.List<PrometheusInstances> prometheusInstances) {
                 this.prometheusInstances = prometheusInstances;
                 return this;
             }

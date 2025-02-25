@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainExtensionAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainExtensionAttributeResponseBody</p>
  */
 public class DescribeDomainExtensionAttributeResponseBody extends TeaModel {
-    @NameInMap("Domain")
+    @com.aliyun.core.annotation.NameInMap("Domain")
     private String domain;
 
-    @NameInMap("DomainExtensionId")
+    @com.aliyun.core.annotation.NameInMap("DomainExtensionId")
     private String domainExtensionId;
 
-    @NameInMap("ListenerPort")
+    @com.aliyun.core.annotation.NameInMap("ListenerPort")
     private Integer listenerPort;
 
-    @NameInMap("LoadBalancerId")
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
     private String loadBalancerId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServerCertificateId")
+    @com.aliyun.core.annotation.NameInMap("ServerCertificateId")
     private String serverCertificateId;
 
     private DescribeDomainExtensionAttributeResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class DescribeDomainExtensionAttributeResponseBody extends TeaModel {
         private String serverCertificateId; 
 
         /**
-         * The domain name.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder domain(String domain) {
             this.domain = domain;
@@ -106,7 +114,10 @@ public class DescribeDomainExtensionAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the additional certificate.
+         * <p>The ID of the additional certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de-bp1rp7ta1****</p>
          */
         public Builder domainExtensionId(String domainExtensionId) {
             this.domainExtensionId = domainExtensionId;
@@ -114,7 +125,10 @@ public class DescribeDomainExtensionAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The frontend port of the HTTPS listener that is configured for the SLB instance. Valid values: **1** to **65535**.
+         * <p>The frontend port of the HTTPS listener that is configured for the SLB instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>443</p>
          */
         public Builder listenerPort(Integer listenerPort) {
             this.listenerPort = listenerPort;
@@ -122,7 +136,10 @@ public class DescribeDomainExtensionAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the SLB instance.
+         * <p>The ID of the SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp1o94dp5i6*****earr9g6d1l</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.loadBalancerId = loadBalancerId;
@@ -130,7 +147,10 @@ public class DescribeDomainExtensionAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48C1B671-C6DB-4DDE-9B30-10557E36CDE0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +158,10 @@ public class DescribeDomainExtensionAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the server certificate that is used by the domain name.
+         * <p>The ID of the server certificate used by the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>231579085529123_166f82******_1714763408_709981430</p>
          */
         public Builder serverCertificateId(String serverCertificateId) {
             this.serverCertificateId = serverCertificateId;

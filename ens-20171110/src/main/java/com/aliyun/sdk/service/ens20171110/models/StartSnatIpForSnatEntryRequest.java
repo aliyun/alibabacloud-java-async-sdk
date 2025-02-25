@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartSnatIpForSnatEntryRequest} extends {@link RequestModel}
  *
  * <p>StartSnatIpForSnatEntryRequest</p>
  */
 public class StartSnatIpForSnatEntryRequest extends Request {
-    @Query
-    @NameInMap("SnatEntryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnatEntryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String snatEntryId;
 
-    @Query
-    @NameInMap("SnatIp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnatIp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String snatIp;
 
     private StartSnatIpForSnatEntryRequest(Builder builder) {
@@ -70,7 +75,11 @@ public class StartSnatIpForSnatEntryRequest extends Request {
         } 
 
         /**
-         * SnatEntryId.
+         * <p>The ID of the SNAT entry.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>snat-5tfi6f8gds82mjmlofeym****</p>
          */
         public Builder snatEntryId(String snatEntryId) {
             this.putQueryParameter("SnatEntryId", snatEntryId);
@@ -79,7 +88,11 @@ public class StartSnatIpForSnatEntryRequest extends Request {
         }
 
         /**
-         * SnatIp.
+         * <p>The EIP specified in the SNAT entry.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>219.152.82.143</p>
          */
         public Builder snatIp(String snatIp) {
             this.putQueryParameter("SnatIp", snatIp);

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GrafanaWorkspaceVpcRegion} extends {@link TeaModel}
  *
  * <p>GrafanaWorkspaceVpcRegion</p>
  */
 public class GrafanaWorkspaceVpcRegion extends TeaModel {
-    @NameInMap("regionId")
+    @com.aliyun.core.annotation.NameInMap("regionId")
     private String regionId;
 
-    @NameInMap("regionName")
+    @com.aliyun.core.annotation.NameInMap("regionName")
     private String regionName;
 
     private GrafanaWorkspaceVpcRegion(Builder builder) {

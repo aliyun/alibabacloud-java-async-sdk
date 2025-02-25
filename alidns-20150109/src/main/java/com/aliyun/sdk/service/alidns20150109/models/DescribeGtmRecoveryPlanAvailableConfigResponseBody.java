@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGtmRecoveryPlanAvailableConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeGtmRecoveryPlanAvailableConfigResponseBody</p>
  */
 public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel {
-    @NameInMap("Instances")
+    @com.aliyun.core.annotation.NameInMap("Instances")
     private Instances instances;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeGtmRecoveryPlanAvailableConfigResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
         private String requestId; 
 
         /**
-         * The list of GTM instances involved in the disaster recovery plan.
+         * <p>The instances.</p>
          */
         public Builder instances(Instances instances) {
             this.instances = instances;
@@ -58,7 +63,10 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F8F8EF50-8B7F-4702-B294-97170A423403</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
 
     } 
 
+    /**
+     * 
+     * {@link DescribeGtmRecoveryPlanAvailableConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGtmRecoveryPlanAvailableConfigResponseBody</p>
+     */
     public static class AddrPool extends TeaModel {
-        @NameInMap("AddrPoolId")
+        @com.aliyun.core.annotation.NameInMap("AddrPoolId")
         private String addrPoolId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private AddrPool(Builder builder) {
@@ -110,7 +124,7 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
             private String name; 
 
             /**
-             * The ID of the address pool.
+             * <p>The address pool ID.</p>
              */
             public Builder addrPoolId(String addrPoolId) {
                 this.addrPoolId = addrPoolId;
@@ -118,7 +132,10 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
             }
 
             /**
-             * The name of the address pool.
+             * <p>The name of the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hra0i9</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -132,9 +149,15 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGtmRecoveryPlanAvailableConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGtmRecoveryPlanAvailableConfigResponseBody</p>
+     */
     public static class AddrPools extends TeaModel {
-        @NameInMap("AddrPool")
-        private java.util.List < AddrPool> addrPool;
+        @com.aliyun.core.annotation.NameInMap("AddrPool")
+        private java.util.List<AddrPool> addrPool;
 
         private AddrPools(Builder builder) {
             this.addrPool = builder.addrPool;
@@ -151,17 +174,17 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
         /**
          * @return addrPool
          */
-        public java.util.List < AddrPool> getAddrPool() {
+        public java.util.List<AddrPool> getAddrPool() {
             return this.addrPool;
         }
 
         public static final class Builder {
-            private java.util.List < AddrPool> addrPool; 
+            private java.util.List<AddrPool> addrPool; 
 
             /**
              * AddrPool.
              */
-            public Builder addrPool(java.util.List < AddrPool> addrPool) {
+            public Builder addrPool(java.util.List<AddrPool> addrPool) {
                 this.addrPool = addrPool;
                 return this;
             }
@@ -173,14 +196,20 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGtmRecoveryPlanAvailableConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGtmRecoveryPlanAvailableConfigResponseBody</p>
+     */
     public static class Instance extends TeaModel {
-        @NameInMap("AddrPools")
+        @com.aliyun.core.annotation.NameInMap("AddrPools")
         private AddrPools addrPools;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
         private Instance(Builder builder) {
@@ -224,7 +253,7 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
             private String instanceName; 
 
             /**
-             * The list of address pools for the GTM instance.
+             * <p>The address pools.</p>
              */
             public Builder addrPools(AddrPools addrPools) {
                 this.addrPools = addrPools;
@@ -232,7 +261,10 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
             }
 
             /**
-             * The ID of the GTM instance.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance-example</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -240,7 +272,10 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
             }
 
             /**
-             * The name of the GTM instance.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance-name-example</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -254,9 +289,15 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGtmRecoveryPlanAvailableConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGtmRecoveryPlanAvailableConfigResponseBody</p>
+     */
     public static class Instances extends TeaModel {
-        @NameInMap("Instance")
-        private java.util.List < Instance> instance;
+        @com.aliyun.core.annotation.NameInMap("Instance")
+        private java.util.List<Instance> instance;
 
         private Instances(Builder builder) {
             this.instance = builder.instance;
@@ -273,17 +314,17 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
         /**
          * @return instance
          */
-        public java.util.List < Instance> getInstance() {
+        public java.util.List<Instance> getInstance() {
             return this.instance;
         }
 
         public static final class Builder {
-            private java.util.List < Instance> instance; 
+            private java.util.List<Instance> instance; 
 
             /**
              * Instance.
              */
-            public Builder instance(java.util.List < Instance> instance) {
+            public Builder instance(java.util.List<Instance> instance) {
                 this.instance = instance;
                 return this;
             }

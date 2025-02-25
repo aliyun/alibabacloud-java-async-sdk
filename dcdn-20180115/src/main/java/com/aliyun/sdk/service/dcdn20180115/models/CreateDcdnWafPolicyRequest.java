@@ -1,35 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDcdnWafPolicyRequest} extends {@link RequestModel}
  *
  * <p>CreateDcdnWafPolicyRequest</p>
  */
 public class CreateDcdnWafPolicyRequest extends Request {
-    @Body
-    @NameInMap("DefenseScene")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DefenseScene")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String defenseScene;
 
-    @Body
-    @NameInMap("PolicyName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PolicyName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyName;
 
-    @Body
-    @NameInMap("PolicyStatus")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PolicyStatus")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyStatus;
 
-    @Body
-    @NameInMap("PolicyType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PolicyType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyType;
 
     private CreateDcdnWafPolicyRequest(Builder builder) {
@@ -100,15 +100,19 @@ public class CreateDcdnWafPolicyRequest extends Request {
         } 
 
         /**
-         * The type of the WAF protection policy. Valid values:
-         * <p>
+         * <p>The type of the WAF protection policy. Valid values:</p>
+         * <ul>
+         * <li>waf_group: basic web protection</li>
+         * <li>custom_acl: custom protection</li>
+         * <li>whitelist: IP address whitelist</li>
+         * <li>ip_blacklist: IP address blacklist</li>
+         * <li>region_block: region blacklist</li>
+         * <li>bot: bot management</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   waf_group: basic web protection
-         * *   custom_acl: custom protection
-         * *   whitelist: IP address whitelist
-         * *   ip_blacklist: IP address blacklist
-         * *   region_block: region blacklist
-         * *   bot: bot management
+         * <strong>example:</strong>
+         * <p>waf_group</p>
          */
         public Builder defenseScene(String defenseScene) {
             this.putBodyParameter("DefenseScene", defenseScene);
@@ -117,7 +121,11 @@ public class CreateDcdnWafPolicyRequest extends Request {
         }
 
         /**
-         * The name of the protection policy. The name can be up to 64 characters in length and can contain letters, digits, and underscores (\_).
+         * <p>The name of the protection policy. The name can be up to 64 characters in length and can contain letters, digits, and underscores (_).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>policy_test</p>
          */
         public Builder policyName(String policyName) {
             this.putBodyParameter("PolicyName", policyName);
@@ -126,11 +134,15 @@ public class CreateDcdnWafPolicyRequest extends Request {
         }
 
         /**
-         * The status of the protection policy. Valid values:
-         * <p>
+         * <p>The status of the protection policy. Valid values:</p>
+         * <ul>
+         * <li>on: The policy is enabled.</li>
+         * <li>off: The policy is disabled.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   on: The policy is enabled.
-         * *   off: The policy is disabled.
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder policyStatus(String policyStatus) {
             this.putBodyParameter("PolicyStatus", policyStatus);
@@ -139,11 +151,15 @@ public class CreateDcdnWafPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether to set the current policy as the default policy. Valid values:
-         * <p>
+         * <p>Specifies whether to set the current policy as the default policy. Valid values:</p>
+         * <ul>
+         * <li>default: sets the current policy as the default policy.</li>
+         * <li>custom: does not set the current policy as the default policy.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   default: sets the current policy as the default policy.
-         * *   custom: does not set the current policy as the default policy.
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder policyType(String policyType) {
             this.putBodyParameter("PolicyType", policyType);

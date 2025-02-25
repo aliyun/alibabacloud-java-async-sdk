@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeActiveOperationTasksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeActiveOperationTasksResponseBody</p>
  */
 public class DescribeActiveOperationTasksResponseBody extends TeaModel {
-    @NameInMap("Items")
-    private java.util.List < Items> items;
+    @com.aliyun.core.annotation.NameInMap("Items")
+    private java.util.List<Items> items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Long totalRecordCount;
 
     private DescribeActiveOperationTasksResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -79,7 +84,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         /**
          * Items.
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
@@ -131,86 +136,92 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeActiveOperationTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeActiveOperationTasksResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("AllowCancel")
+        @com.aliyun.core.annotation.NameInMap("AllowCancel")
         private String allowCancel;
 
-        @NameInMap("AllowChange")
+        @com.aliyun.core.annotation.NameInMap("AllowChange")
         private String allowChange;
 
-        @NameInMap("ChangeLevel")
+        @com.aliyun.core.annotation.NameInMap("ChangeLevel")
         private String changeLevel;
 
-        @NameInMap("ChangeLevelEn")
+        @com.aliyun.core.annotation.NameInMap("ChangeLevelEn")
         private String changeLevelEn;
 
-        @NameInMap("ChangeLevelZh")
+        @com.aliyun.core.annotation.NameInMap("ChangeLevelZh")
         private String changeLevelZh;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("CurrentAVZ")
+        @com.aliyun.core.annotation.NameInMap("CurrentAVZ")
         private String currentAVZ;
 
-        @NameInMap("DbType")
+        @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;
 
-        @NameInMap("DbVersion")
+        @com.aliyun.core.annotation.NameInMap("DbVersion")
         private String dbVersion;
 
-        @NameInMap("Deadline")
+        @com.aliyun.core.annotation.NameInMap("Deadline")
         private String deadline;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Impact")
+        @com.aliyun.core.annotation.NameInMap("Impact")
         private String impact;
 
-        @NameInMap("ImpactEn")
+        @com.aliyun.core.annotation.NameInMap("ImpactEn")
         private String impactEn;
 
-        @NameInMap("ImpactZh")
+        @com.aliyun.core.annotation.NameInMap("ImpactZh")
         private String impactZh;
 
-        @NameInMap("InsComment")
+        @com.aliyun.core.annotation.NameInMap("InsComment")
         private String insComment;
 
-        @NameInMap("InsName")
+        @com.aliyun.core.annotation.NameInMap("InsName")
         private String insName;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("PrepareInterval")
+        @com.aliyun.core.annotation.NameInMap("PrepareInterval")
         private String prepareInterval;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("ResultInfo")
+        @com.aliyun.core.annotation.NameInMap("ResultInfo")
         private String resultInfo;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Long status;
 
-        @NameInMap("SubInsNames")
-        private java.util.List < String > subInsNames;
+        @com.aliyun.core.annotation.NameInMap("SubInsNames")
+        private java.util.List<String> subInsNames;
 
-        @NameInMap("SwitchTime")
+        @com.aliyun.core.annotation.NameInMap("SwitchTime")
         private String switchTime;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
-        @NameInMap("TaskTypeEn")
+        @com.aliyun.core.annotation.NameInMap("TaskTypeEn")
         private String taskTypeEn;
 
-        @NameInMap("TaskTypeZh")
+        @com.aliyun.core.annotation.NameInMap("TaskTypeZh")
         private String taskTypeZh;
 
         private Items(Builder builder) {
@@ -408,7 +419,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         /**
          * @return subInsNames
          */
-        public java.util.List < String > getSubInsNames() {
+        public java.util.List<String> getSubInsNames() {
             return this.subInsNames;
         }
 
@@ -463,7 +474,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             private String resultInfo; 
             private String startTime; 
             private Long status; 
-            private java.util.List < String > subInsNames; 
+            private java.util.List<String> subInsNames; 
             private String switchTime; 
             private String taskType; 
             private String taskTypeEn; 
@@ -648,7 +659,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             /**
              * SubInsNames.
              */
-            public Builder subInsNames(java.util.List < String > subInsNames) {
+            public Builder subInsNames(java.util.List<String> subInsNames) {
                 this.subInsNames = subInsNames;
                 return this;
             }

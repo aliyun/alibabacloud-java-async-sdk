@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupPolicyRequest} extends {@link RequestModel}
  *
  * <p>DescribeBackupPolicyRequest</p>
  */
 public class DescribeBackupPolicyRequest extends Request {
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long id;
 
     private DescribeBackupPolicyRequest(Builder builder) {
@@ -55,10 +60,14 @@ public class DescribeBackupPolicyRequest extends Request {
         } 
 
         /**
-         * The ID of the anti-ransomware policy.
-         * <p>
+         * <p>The ID of the anti-ransomware policy.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> operation to query the IDs of anti-ransomware policies.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeBackupPolicies](~~DescribeBackupPolicies~~) operation to query the IDs of anti-ransomware policies.
+         * <strong>example:</strong>
+         * <p>51880</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

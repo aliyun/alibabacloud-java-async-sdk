@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteResourceResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteResourceResponseBody</p>
  */
 public class DeleteResourceResponseBody extends TeaModel {
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteResourceResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DeleteResourceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Resource [eas-r-asdasdasd] is deleted.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -58,7 +66,10 @@ public class DeleteResourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82-9624-EC2B1779848E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

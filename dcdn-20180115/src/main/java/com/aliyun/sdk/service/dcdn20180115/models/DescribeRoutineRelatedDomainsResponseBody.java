@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRoutineRelatedDomainsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRoutineRelatedDomainsResponseBody</p>
  */
 public class DescribeRoutineRelatedDomainsResponseBody extends TeaModel {
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private java.util.Map < String, ? > content;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeRoutineRelatedDomainsResponseBody(Builder builder) {
@@ -50,7 +50,14 @@ public class DescribeRoutineRelatedDomainsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Content.
+         * <p>The domain names associated with a routine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;Domains&quot;: [
+         *             &quot;xxx.com&quot;,
+         *             &quot;yyy.com&quot;,
+         *             ...
+         *         ]</p>
          */
         public Builder content(java.util.Map < String, ? > content) {
             this.content = content;
@@ -58,7 +65,10 @@ public class DescribeRoutineRelatedDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FC0E34AC-0239-44A7-AB0E-800DE522C8DA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAutoSnapshotPolicyRequest} extends {@link RequestModel}
  *
  * <p>DeleteAutoSnapshotPolicyRequest</p>
  */
 public class DeleteAutoSnapshotPolicyRequest extends Request {
-    @Query
-    @NameInMap("PolicyId")
-    @Validation(required = true)
-    private java.util.List < String > policyId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> policyId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private DeleteAutoSnapshotPolicyRequest(Builder builder) {
@@ -44,7 +49,7 @@ public class DeleteAutoSnapshotPolicyRequest extends Request {
     /**
      * @return policyId
      */
-    public java.util.List < String > getPolicyId() {
+    public java.util.List<String> getPolicyId() {
         return this.policyId;
     }
 
@@ -56,7 +61,7 @@ public class DeleteAutoSnapshotPolicyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteAutoSnapshotPolicyRequest, Builder> {
-        private java.util.List < String > policyId; 
+        private java.util.List<String> policyId; 
         private String regionId; 
 
         private Builder() {
@@ -70,19 +75,21 @@ public class DeleteAutoSnapshotPolicyRequest extends Request {
         } 
 
         /**
-         * The ID of the policy template that you want to manage.
-         * <p>
-         * 
-         * > You can call the [ListDefensePolicies](~~195814~~) operation to query the IDs of all policy templates.
+         * <p>The IDs of the automatic snapshot policies that you want to delete.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder policyId(java.util.List < String > policyId) {
+        public Builder policyId(java.util.List<String> policyId) {
             this.putQueryParameter("PolicyId", policyId);
             this.policyId = policyId;
             return this;
         }
 
         /**
-         * The ID of the region where the automatic snapshot policy is created.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

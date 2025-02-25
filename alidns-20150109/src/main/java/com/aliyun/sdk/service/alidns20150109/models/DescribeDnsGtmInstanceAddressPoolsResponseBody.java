@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDnsGtmInstanceAddressPoolsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDnsGtmInstanceAddressPoolsResponseBody</p>
  */
 public class DescribeDnsGtmInstanceAddressPoolsResponseBody extends TeaModel {
-    @NameInMap("AddrPools")
+    @com.aliyun.core.annotation.NameInMap("AddrPools")
     private AddrPools addrPools;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalItems")
+    @com.aliyun.core.annotation.NameInMap("TotalItems")
     private Integer totalItems;
 
-    @NameInMap("TotalPages")
+    @com.aliyun.core.annotation.NameInMap("TotalPages")
     private Integer totalPages;
 
     private DescribeDnsGtmInstanceAddressPoolsResponseBody(Builder builder) {
@@ -98,7 +103,7 @@ public class DescribeDnsGtmInstanceAddressPoolsResponseBody extends TeaModel {
         private Integer totalPages; 
 
         /**
-         * The returned address pools.
+         * <p>The returned address pools.</p>
          */
         public Builder addrPools(AddrPools addrPools) {
             this.addrPools = addrPools;
@@ -106,7 +111,10 @@ public class DescribeDnsGtmInstanceAddressPoolsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +122,10 @@ public class DescribeDnsGtmInstanceAddressPoolsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +133,10 @@ public class DescribeDnsGtmInstanceAddressPoolsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +144,10 @@ public class DescribeDnsGtmInstanceAddressPoolsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned on all pages.
+         * <p>The total number of entries returned on all pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalItems(Integer totalItems) {
             this.totalItems = totalItems;
@@ -138,7 +155,10 @@ public class DescribeDnsGtmInstanceAddressPoolsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of pages returned.
+         * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -151,38 +171,44 @@ public class DescribeDnsGtmInstanceAddressPoolsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDnsGtmInstanceAddressPoolsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmInstanceAddressPoolsResponseBody</p>
+     */
     public static class AddrPool extends TeaModel {
-        @NameInMap("AddrCount")
+        @com.aliyun.core.annotation.NameInMap("AddrCount")
         private Integer addrCount;
 
-        @NameInMap("AddrPoolId")
+        @com.aliyun.core.annotation.NameInMap("AddrPoolId")
         private String addrPoolId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
-        @NameInMap("LbaStrategy")
+        @com.aliyun.core.annotation.NameInMap("LbaStrategy")
         private String lbaStrategy;
 
-        @NameInMap("MonitorConfigId")
+        @com.aliyun.core.annotation.NameInMap("MonitorConfigId")
         private String monitorConfigId;
 
-        @NameInMap("MonitorStatus")
+        @com.aliyun.core.annotation.NameInMap("MonitorStatus")
         private String monitorStatus;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("UpdateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("UpdateTimestamp")
         private Long updateTimestamp;
 
         private AddrPool(Builder builder) {
@@ -298,7 +324,10 @@ public class DescribeDnsGtmInstanceAddressPoolsResponseBody extends TeaModel {
             private Long updateTimestamp; 
 
             /**
-             * The number of addresses in the address pool.
+             * <p>The number of addresses in the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder addrCount(Integer addrCount) {
                 this.addrCount = addrCount;
@@ -306,7 +335,10 @@ public class DescribeDnsGtmInstanceAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the address pool.
+             * <p>The ID of the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pool-1</p>
              */
             public Builder addrPoolId(String addrPoolId) {
                 this.addrPoolId = addrPoolId;
@@ -314,7 +346,10 @@ public class DescribeDnsGtmInstanceAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the address pool was created.
+             * <p>The time when the address pool was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-28T13:08Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -322,7 +357,10 @@ public class DescribeDnsGtmInstanceAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp that indicates when the address pool was created.
+             * <p>The timestamp that indicates when the address pool was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1527690629357</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -330,11 +368,14 @@ public class DescribeDnsGtmInstanceAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * The load balancing policy of the address pool. Valid values:
-             * <p>
+             * <p>The load balancing policy of the address pool. Valid values:</p>
+             * <ul>
+             * <li>ALL_RR: returns all addresses.</li>
+             * <li>RATIO: returns addresses by weight.</li>
+             * </ul>
              * 
-             * *   ALL_RR: returns all addresses.
-             * *   RATIO: returns addresses by weight.
+             * <strong>example:</strong>
+             * <p>all_rr</p>
              */
             public Builder lbaStrategy(String lbaStrategy) {
                 this.lbaStrategy = lbaStrategy;
@@ -342,7 +383,10 @@ public class DescribeDnsGtmInstanceAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the health check task.
+             * <p>The ID of the health check task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc123</p>
              */
             public Builder monitorConfigId(String monitorConfigId) {
                 this.monitorConfigId = monitorConfigId;
@@ -350,12 +394,15 @@ public class DescribeDnsGtmInstanceAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether health checks are configured. Valid values:
-             * <p>
+             * <p>Indicates whether health checks are configured. Valid values:</p>
+             * <ul>
+             * <li>OPEN: enabled</li>
+             * <li>CLOSE: disabled</li>
+             * <li>UNCONFIGURED: not configured</li>
+             * </ul>
              * 
-             * *   OPEN: enabled
-             * *   CLOSE: disabled
-             * *   UNCONFIGURED: not configured
+             * <strong>example:</strong>
+             * <p>open</p>
              */
             public Builder monitorStatus(String monitorStatus) {
                 this.monitorStatus = monitorStatus;
@@ -363,7 +410,10 @@ public class DescribeDnsGtmInstanceAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the address pool.
+             * <p>The name of the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testpool</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -371,12 +421,15 @@ public class DescribeDnsGtmInstanceAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the address pool. Valid values:
-             * <p>
+             * <p>The type of the address pool. Valid values:</p>
+             * <ul>
+             * <li>IPV4: IPv4 address</li>
+             * <li>IPV6: IPv6 address</li>
+             * <li>DOMAIN: domain name</li>
+             * </ul>
              * 
-             * *   IPV4: IPv4 address
-             * *   IPV6: IPv6 address
-             * *   DOMAIN: domain name
+             * <strong>example:</strong>
+             * <p>ipv4</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -384,7 +437,10 @@ public class DescribeDnsGtmInstanceAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the address pool was updated.
+             * <p>The time when the address pool was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-28T13:08Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -392,7 +448,10 @@ public class DescribeDnsGtmInstanceAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp that indicates when the address pool was updated.
+             * <p>The timestamp that indicates when the address pool was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1527690629357</p>
              */
             public Builder updateTimestamp(Long updateTimestamp) {
                 this.updateTimestamp = updateTimestamp;
@@ -406,9 +465,15 @@ public class DescribeDnsGtmInstanceAddressPoolsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmInstanceAddressPoolsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmInstanceAddressPoolsResponseBody</p>
+     */
     public static class AddrPools extends TeaModel {
-        @NameInMap("AddrPool")
-        private java.util.List < AddrPool> addrPool;
+        @com.aliyun.core.annotation.NameInMap("AddrPool")
+        private java.util.List<AddrPool> addrPool;
 
         private AddrPools(Builder builder) {
             this.addrPool = builder.addrPool;
@@ -425,17 +490,17 @@ public class DescribeDnsGtmInstanceAddressPoolsResponseBody extends TeaModel {
         /**
          * @return addrPool
          */
-        public java.util.List < AddrPool> getAddrPool() {
+        public java.util.List<AddrPool> getAddrPool() {
             return this.addrPool;
         }
 
         public static final class Builder {
-            private java.util.List < AddrPool> addrPool; 
+            private java.util.List<AddrPool> addrPool; 
 
             /**
              * AddrPool.
              */
-            public Builder addrPool(java.util.List < AddrPool> addrPool) {
+            public Builder addrPool(java.util.List<AddrPool> addrPool) {
                 this.addrPool = addrPool;
                 return this;
             }

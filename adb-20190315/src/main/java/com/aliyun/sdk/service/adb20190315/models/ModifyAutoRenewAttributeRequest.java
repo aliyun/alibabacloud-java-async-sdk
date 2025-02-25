@@ -1,53 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAutoRenewAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyAutoRenewAttributeRequest</p>
  */
 public class ModifyAutoRenewAttributeRequest extends Request {
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("Duration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Duration")
     private String duration;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PeriodUnit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeriodUnit")
     private String periodUnit;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("RenewalStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RenewalStatus")
     private String renewalStatus;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyAutoRenewAttributeRequest(Builder builder) {
@@ -168,10 +168,14 @@ public class ModifyAutoRenewAttributeRequest extends Request {
         } 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
-         * <p>
+         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.
+         * <strong>example:</strong>
+         * <p>am-bp1u389j9zjh5****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -180,13 +184,17 @@ public class ModifyAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The renewal duration. Default value: **1**.
-         * <p>
+         * <p>The renewal duration. Default value: <strong>1</strong>.</p>
+         * <ul>
+         * <li>Valid values when PeriodUnit is set to <strong>Month</strong>: 1 to 11. Data type: INTEGER.</li>
+         * <li>Valid values when PeriodUnit is set to <strong>Year</strong>: 1, 2, 3, and 5. Data type: INTEGER.</li>
+         * </ul>
+         * <blockquote>
+         * <p>Longer subscription durations offer more savings. Purchasing a cluster for one year is more cost-effective than purchasing the cluster for 10 or 11 months.</p>
+         * </blockquote>
          * 
-         * *   Valid values when PeriodUnit is set to **Month**: 1 to 11. Data type: INTEGER.
-         * *   Valid values when PeriodUnit is set to **Year**: 1, 2, 3, and 5. Data type: INTEGER.
-         * 
-         * > Longer subscription durations offer more savings. Purchasing a cluster for one year is more cost-effective than purchasing the cluster for 10 or 11 months.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder duration(String duration) {
             this.putQueryParameter("Duration", duration);
@@ -213,11 +221,14 @@ public class ModifyAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The unit of the renewal period. Default value: **Month**. Valid values:
-         * <p>
+         * <p>The unit of the renewal period. Default value: <strong>Month</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>Year</strong></li>
+         * <li><strong>Month</strong></li>
+         * </ul>
          * 
-         * *   **Year**
-         * *   **Month**
+         * <strong>example:</strong>
+         * <p>Year</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -226,10 +237,14 @@ public class ModifyAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the cluster.
-         * <p>
+         * <p>The region ID of the cluster.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -238,12 +253,15 @@ public class ModifyAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The renewal status of the cluster. Valid values:
-         * <p>
+         * <p>The renewal status of the cluster. Valid values:</p>
+         * <ul>
+         * <li><strong>AutoRenewal</strong>: The cluster is automatically renewed.</li>
+         * <li><strong>Normal</strong>: The cluster is manually renewed.</li>
+         * <li><strong>NotRenewal</strong>: The cluster is not renewed.</li>
+         * </ul>
          * 
-         * *   **AutoRenewal**: The cluster is automatically renewed.
-         * *   **Normal**: The cluster is manually renewed.
-         * *   **NotRenewal**: The cluster is not renewed.
+         * <strong>example:</strong>
+         * <p>AutoRenewal</p>
          */
         public Builder renewalStatus(String renewalStatus) {
             this.putQueryParameter("RenewalStatus", renewalStatus);

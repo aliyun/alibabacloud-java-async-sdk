@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyRuleStatusRequest} extends {@link RequestModel}
  *
  * <p>ModifyRuleStatusRequest</p>
  */
 public class ModifyRuleStatusRequest extends Request {
-    @Query
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @Query
-    @NameInMap("Ids")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ids")
     private String ids;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer status;
 
     private ModifyRuleStatusRequest(Builder builder) {
@@ -97,7 +102,13 @@ public class ModifyRuleStatusRequest extends Request {
         } 
 
         /**
-         * Id.
+         * <p>The ID of the sensitive data detection rule.</p>
+         * <blockquote>
+         * <p>You can query the ID of the sensitive data detection rule by calling the <strong>DescribeRules</strong> operation.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>12341</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -106,7 +117,13 @@ public class ModifyRuleStatusRequest extends Request {
         }
 
         /**
-         * Ids.
+         * <p>The ID of the sensitive data detection rule. Separate multiple IDs with commas (,).</p>
+         * <blockquote>
+         * <p>You can query the ID of the sensitive data detection rule by calling the <strong>DescribeRules</strong> operation.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2,3,4</p>
          */
         public Builder ids(String ids) {
             this.putQueryParameter("Ids", ids);
@@ -115,7 +132,14 @@ public class ModifyRuleStatusRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -124,7 +148,15 @@ public class ModifyRuleStatusRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>Specifies whether to enable or disable the sensitive data detection rule. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: disables the sensitive data detection rule.</li>
+         * <li><strong>1</strong>: enables the sensitive data detection rule.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFlowTopResourceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeFlowTopResourceResponseBody</p>
  */
 public class DescribeFlowTopResourceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RuleHitsTopResource")
-    private java.util.List < RuleHitsTopResource> ruleHitsTopResource;
+    @com.aliyun.core.annotation.NameInMap("RuleHitsTopResource")
+    private java.util.List<RuleHitsTopResource> ruleHitsTopResource;
 
     private DescribeFlowTopResourceResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class DescribeFlowTopResourceResponseBody extends TeaModel {
     /**
      * @return ruleHitsTopResource
      */
-    public java.util.List < RuleHitsTopResource> getRuleHitsTopResource() {
+    public java.util.List<RuleHitsTopResource> getRuleHitsTopResource() {
         return this.ruleHitsTopResource;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < RuleHitsTopResource> ruleHitsTopResource; 
+        private java.util.List<RuleHitsTopResource> ruleHitsTopResource; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8F0E0B9A-B518-5C6D-BEFC-A373DDE4F652</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class DescribeFlowTopResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The array of the top 10 protected objects that receive requests.
+         * <p>The array of the top 10 protected objects that receive requests.</p>
          */
-        public Builder ruleHitsTopResource(java.util.List < RuleHitsTopResource> ruleHitsTopResource) {
+        public Builder ruleHitsTopResource(java.util.List<RuleHitsTopResource> ruleHitsTopResource) {
             this.ruleHitsTopResource = ruleHitsTopResource;
             return this;
         }
@@ -71,11 +79,17 @@ public class DescribeFlowTopResourceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeFlowTopResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFlowTopResourceResponseBody</p>
+     */
     public static class RuleHitsTopResource extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("Resource")
+        @com.aliyun.core.annotation.NameInMap("Resource")
         private String resource;
 
         private RuleHitsTopResource(Builder builder) {
@@ -110,7 +124,10 @@ public class DescribeFlowTopResourceResponseBody extends TeaModel {
             private String resource; 
 
             /**
-             * The total number of requests received by the protected object in a specified time range.
+             * <p>The total number of requests received by the protected object in a specified time range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>181174784</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -118,7 +135,10 @@ public class DescribeFlowTopResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The protected object.
+             * <p>The protected object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
              */
             public Builder resource(String resource) {
                 this.resource = resource;

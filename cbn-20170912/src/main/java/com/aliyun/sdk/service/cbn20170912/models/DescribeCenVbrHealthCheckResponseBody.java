@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCenVbrHealthCheckResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCenVbrHealthCheckResponseBody</p>
  */
 public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("VbrHealthChecks")
+    @com.aliyun.core.annotation.NameInMap("VbrHealthChecks")
     private VbrHealthChecks vbrHealthChecks;
 
     private DescribeCenVbrHealthCheckResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
         private VbrHealthChecks vbrHealthChecks; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +102,10 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +113,10 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B8C9702E-304A-4E18-AC89-BE2D91C2C176</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +124,10 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +135,7 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
         }
 
         /**
-         * The health check configuration of the VBR.
+         * <p>The health check configuration of the VBR.</p>
          */
         public Builder vbrHealthChecks(VbrHealthChecks vbrHealthChecks) {
             this.vbrHealthChecks = vbrHealthChecks;
@@ -131,32 +148,38 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCenVbrHealthCheckResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenVbrHealthCheckResponseBody</p>
+     */
     public static class VbrHealthCheck extends TeaModel {
-        @NameInMap("CenId")
+        @com.aliyun.core.annotation.NameInMap("CenId")
         private String cenId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("HealthCheckInterval")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckInterval")
         private Integer healthCheckInterval;
 
-        @NameInMap("HealthCheckOnly")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckOnly")
         private Boolean healthCheckOnly;
 
-        @NameInMap("HealthCheckSourceIp")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckSourceIp")
         private String healthCheckSourceIp;
 
-        @NameInMap("HealthCheckTargetIp")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckTargetIp")
         private String healthCheckTargetIp;
 
-        @NameInMap("HealthyThreshold")
+        @com.aliyun.core.annotation.NameInMap("HealthyThreshold")
         private Integer healthyThreshold;
 
-        @NameInMap("VbrInstanceId")
+        @com.aliyun.core.annotation.NameInMap("VbrInstanceId")
         private String vbrInstanceId;
 
-        @NameInMap("VbrInstanceRegionId")
+        @com.aliyun.core.annotation.NameInMap("VbrInstanceRegionId")
         private String vbrInstanceRegionId;
 
         private VbrHealthCheck(Builder builder) {
@@ -254,7 +277,10 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
             private String vbrInstanceRegionId; 
 
             /**
-             * The ID of the CEN instance.
+             * <p>The ID of the CEN instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cen-6hpdgj7ni6pz1k****</p>
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -262,7 +288,10 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>healthcheck_description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -270,7 +299,10 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
             }
 
             /**
-             * The time interval at which probe packets are sent during the health check. Unit: seconds.
+             * <p>The time interval at which probe packets are sent during the health check. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder healthCheckInterval(Integer healthCheckInterval) {
                 this.healthCheckInterval = healthCheckInterval;
@@ -278,16 +310,20 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether probing is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether probing is enabled. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong>: Probing is enabled.</p>
+             * <pre><code>If you enable probing, the system does not switch to another route if the detected route is not reachable.
+             * </code></pre>
+             * </li>
+             * <li><p><strong>false</strong>: Probing is disabled.</p>
+             * <pre><code>  If probing is disabled and a redundant route is specified, the system switches to the redundant route when the detected route is not reachable.
+             * </code></pre>
+             * </li>
+             * </ul>
              * 
-             * *   **true**: yes
-             * 
-             *     If probing is enabled, the system does not switch to another route when the detected route is not reachable.
-             * 
-             * *   **false**: no
-             * 
-             *     If probing is disabled and a redundant route is specified, the system switches to the redundant route when the detected route is not reachable.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder healthCheckOnly(Boolean healthCheckOnly) {
                 this.healthCheckOnly = healthCheckOnly;
@@ -295,7 +331,10 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
             }
 
             /**
-             * The source IP address of the health check.
+             * <p>The source IP address of the health check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.XX.XX.1</p>
              */
             public Builder healthCheckSourceIp(String healthCheckSourceIp) {
                 this.healthCheckSourceIp = healthCheckSourceIp;
@@ -303,7 +342,10 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
             }
 
             /**
-             * The destination IP address of the health check.
+             * <p>The destination IP address of the health check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.XX.XX.1</p>
              */
             public Builder healthCheckTargetIp(String healthCheckTargetIp) {
                 this.healthCheckTargetIp = healthCheckTargetIp;
@@ -311,7 +353,10 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
             }
 
             /**
-             * The number of probe packets that are sent during the health check.
+             * <p>The number of probe packets that are sent during the health check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder healthyThreshold(Integer healthyThreshold) {
                 this.healthyThreshold = healthyThreshold;
@@ -319,7 +364,10 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VBR.
+             * <p>The VBR ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vbr-bp1kznorjeembsuhl****</p>
              */
             public Builder vbrInstanceId(String vbrInstanceId) {
                 this.vbrInstanceId = vbrInstanceId;
@@ -327,7 +375,10 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the VBR is deployed.
+             * <p>The ID of the region where the VBR is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder vbrInstanceRegionId(String vbrInstanceRegionId) {
                 this.vbrInstanceRegionId = vbrInstanceRegionId;
@@ -341,9 +392,15 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCenVbrHealthCheckResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenVbrHealthCheckResponseBody</p>
+     */
     public static class VbrHealthChecks extends TeaModel {
-        @NameInMap("VbrHealthCheck")
-        private java.util.List < VbrHealthCheck> vbrHealthCheck;
+        @com.aliyun.core.annotation.NameInMap("VbrHealthCheck")
+        private java.util.List<VbrHealthCheck> vbrHealthCheck;
 
         private VbrHealthChecks(Builder builder) {
             this.vbrHealthCheck = builder.vbrHealthCheck;
@@ -360,17 +417,17 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
         /**
          * @return vbrHealthCheck
          */
-        public java.util.List < VbrHealthCheck> getVbrHealthCheck() {
+        public java.util.List<VbrHealthCheck> getVbrHealthCheck() {
             return this.vbrHealthCheck;
         }
 
         public static final class Builder {
-            private java.util.List < VbrHealthCheck> vbrHealthCheck; 
+            private java.util.List<VbrHealthCheck> vbrHealthCheck; 
 
             /**
              * VbrHealthCheck.
              */
-            public Builder vbrHealthCheck(java.util.List < VbrHealthCheck> vbrHealthCheck) {
+            public Builder vbrHealthCheck(java.util.List<VbrHealthCheck> vbrHealthCheck) {
                 this.vbrHealthCheck = vbrHealthCheck;
                 return this;
             }

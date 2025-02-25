@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySecurityIpsRequest} extends {@link RequestModel}
  *
  * <p>ModifySecurityIpsRequest</p>
  */
 public class ModifySecurityIpsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("ModifyMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModifyMode")
     private String modifyMode;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityIpGroupAttribute")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityIpGroupAttribute")
     private String securityIpGroupAttribute;
 
-    @Query
-    @NameInMap("SecurityIpGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityIpGroupName")
     private String securityIpGroupName;
 
-    @Query
-    @NameInMap("SecurityIps")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityIps")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String securityIps;
 
     private ModifySecurityIpsRequest(Builder builder) {
@@ -191,7 +196,11 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * The ID of an instance.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp*****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -200,14 +209,16 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * The method of modification. Valid values:
-         * <p>
+         * <p>The method that is used to modify the IP address whitelist. Valid values:</p>
+         * <ul>
+         * <li><strong>Cover</strong>: overwrites the original IP address whitelist.</li>
+         * <li><strong>Append</strong>: appends data to the IP address whitelist.</li>
+         * <li><strong>Delete</strong>: deletes the IP address whitelist.</li>
+         * </ul>
+         * <p>Default value: <strong>Cover</strong>.</p>
          * 
-         * *   **Cover**: overwrites the whitelist.
-         * *   **Append**: appends data to the whitelist.
-         * *   **Delete**: deletes the whitelist.
-         * 
-         * The default value is **Cover**.
+         * <strong>example:</strong>
+         * <p>Append</p>
          */
         public Builder modifyMode(String modifyMode) {
             this.putQueryParameter("ModifyMode", modifyMode);
@@ -252,10 +263,11 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * The attributes of an IP address whitelist. It can contain a maximum of 120 characters in length and can contain uppercase letters, lowercase letters, and digits.
-         * <p>
+         * <p>The attribute of the IP address whitelist. It can contain a maximum of 120 characters in length and can contain uppercase letters, lowercase letters, and digits.</p>
+         * <p>This parameter is empty by default.</p>
          * 
-         * This parameter is empty by default.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder securityIpGroupAttribute(String securityIpGroupAttribute) {
             this.putQueryParameter("SecurityIpGroupAttribute", securityIpGroupAttribute);
@@ -264,7 +276,10 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * The name of the IP address whitelist to be modified. The default value is **default**.
+         * <p>The name of the IP address whitelist that you want to modify. Default value: <strong>default</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>allowserver</p>
          */
         public Builder securityIpGroupName(String securityIpGroupName) {
             this.putQueryParameter("SecurityIpGroupName", securityIpGroupName);
@@ -273,11 +288,15 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * The IP addresses in an IP address whitelist. Separate multiple IP addresses with commas (,). You can add a maximum of 1,000 different IP addresses to a whitelist. You can add IP addresses in one of the following two formats:
-         * <p>
+         * <p>The IP addresses in the IP address whitelist. Separate multiple IP addresses with commas (,). You can add a maximum of 1,000 different IP addresses to the IP address whitelist. The entries in the IP address whitelist must be in one of the following formats:</p>
+         * <ul>
+         * <li>IP addresses, such as 127.0.0.1.</li>
+         * <li>CIDR blocks, such as 127.0.0.1/24. In this example, 24 indicates that the prefix of each IP address in the IP address whitelist is 24 bits in length. You can replace 24 with a value within the range of 1 to 32.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   IP addresses. Example: 10.23.12.24.
-         * *   Classless Inter-Domain Routing (CIDR) blocks, such as 10.23.12.24/24, where 24 indicates that the prefix of the CIDR block is 24-bit long. You can replace 24 with a value within the range of 1 to 32.
+         * <strong>example:</strong>
+         * <p>127.0.0.1/24,127.0.0.1</p>
          */
         public Builder securityIps(String securityIps) {
             this.putQueryParameter("SecurityIps", securityIps);

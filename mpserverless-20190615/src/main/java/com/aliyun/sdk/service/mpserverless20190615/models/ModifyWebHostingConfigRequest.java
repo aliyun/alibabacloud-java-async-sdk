@@ -17,12 +17,12 @@ public class ModifyWebHostingConfigRequest extends Request {
     private String allowedIps;
 
     @Body
-    @NameInMap("ErrorPath")
-    private String errorPath;
+    @NameInMap("ErrorHttpStatus")
+    private String errorHttpStatus;
 
     @Body
-    @NameInMap("HistoryModePath")
-    private String historyModePath;
+    @NameInMap("ErrorPath")
+    private String errorPath;
 
     @Body
     @NameInMap("IndexPath")
@@ -37,8 +37,8 @@ public class ModifyWebHostingConfigRequest extends Request {
     private ModifyWebHostingConfigRequest(Builder builder) {
         super(builder);
         this.allowedIps = builder.allowedIps;
+        this.errorHttpStatus = builder.errorHttpStatus;
         this.errorPath = builder.errorPath;
-        this.historyModePath = builder.historyModePath;
         this.indexPath = builder.indexPath;
         this.spaceId = builder.spaceId;
     }
@@ -64,17 +64,17 @@ public class ModifyWebHostingConfigRequest extends Request {
     }
 
     /**
+     * @return errorHttpStatus
+     */
+    public String getErrorHttpStatus() {
+        return this.errorHttpStatus;
+    }
+
+    /**
      * @return errorPath
      */
     public String getErrorPath() {
         return this.errorPath;
-    }
-
-    /**
-     * @return historyModePath
-     */
-    public String getHistoryModePath() {
-        return this.historyModePath;
     }
 
     /**
@@ -93,8 +93,8 @@ public class ModifyWebHostingConfigRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyWebHostingConfigRequest, Builder> {
         private String allowedIps; 
+        private String errorHttpStatus; 
         private String errorPath; 
-        private String historyModePath; 
         private String indexPath; 
         private String spaceId; 
 
@@ -105,8 +105,8 @@ public class ModifyWebHostingConfigRequest extends Request {
         private Builder(ModifyWebHostingConfigRequest request) {
             super(request);
             this.allowedIps = request.allowedIps;
+            this.errorHttpStatus = request.errorHttpStatus;
             this.errorPath = request.errorPath;
-            this.historyModePath = request.historyModePath;
             this.indexPath = request.indexPath;
             this.spaceId = request.spaceId;
         } 
@@ -121,20 +121,20 @@ public class ModifyWebHostingConfigRequest extends Request {
         }
 
         /**
+         * ErrorHttpStatus.
+         */
+        public Builder errorHttpStatus(String errorHttpStatus) {
+            this.putBodyParameter("ErrorHttpStatus", errorHttpStatus);
+            this.errorHttpStatus = errorHttpStatus;
+            return this;
+        }
+
+        /**
          * ErrorPath.
          */
         public Builder errorPath(String errorPath) {
             this.putBodyParameter("ErrorPath", errorPath);
             this.errorPath = errorPath;
-            return this;
-        }
-
-        /**
-         * HistoryModePath.
-         */
-        public Builder historyModePath(String historyModePath) {
-            this.putBodyParameter("HistoryModePath", historyModePath);
-            this.historyModePath = historyModePath;
             return this;
         }
 

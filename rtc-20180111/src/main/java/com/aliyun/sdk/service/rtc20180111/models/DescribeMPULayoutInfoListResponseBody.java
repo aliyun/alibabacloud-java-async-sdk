@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMPULayoutInfoListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMPULayoutInfoListResponseBody</p>
  */
 public class DescribeMPULayoutInfoListResponseBody extends TeaModel {
-    @NameInMap("Layouts")
+    @com.aliyun.core.annotation.NameInMap("Layouts")
     private Layouts layouts;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalNum")
+    @com.aliyun.core.annotation.NameInMap("TotalNum")
     private Long totalNum;
 
-    @NameInMap("TotalPage")
+    @com.aliyun.core.annotation.NameInMap("TotalPage")
     private Long totalPage;
 
     private DescribeMPULayoutInfoListResponseBody(Builder builder) {
@@ -111,27 +116,33 @@ public class DescribeMPULayoutInfoListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMPULayoutInfoListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMPULayoutInfoListResponseBody</p>
+     */
     public static class Panes extends TeaModel {
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Float height;
 
-        @NameInMap("MajorPane")
+        @com.aliyun.core.annotation.NameInMap("MajorPane")
         private Integer majorPane;
 
-        @NameInMap("PaneId")
+        @com.aliyun.core.annotation.NameInMap("PaneId")
         private Integer paneId;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private Float width;
 
-        @NameInMap("X")
+        @com.aliyun.core.annotation.NameInMap("X")
         private Float x;
 
-        @NameInMap("Y")
+        @com.aliyun.core.annotation.NameInMap("Y")
         private Float y;
 
-        @NameInMap("ZOrder")
-        private Integer ZOrder;
+        @com.aliyun.core.annotation.NameInMap("ZOrder")
+        private Integer zOrder;
 
         private Panes(Builder builder) {
             this.height = builder.height;
@@ -140,7 +151,7 @@ public class DescribeMPULayoutInfoListResponseBody extends TeaModel {
             this.width = builder.width;
             this.x = builder.x;
             this.y = builder.y;
-            this.ZOrder = builder.ZOrder;
+            this.zOrder = builder.zOrder;
         }
 
         public static Builder builder() {
@@ -194,10 +205,10 @@ public class DescribeMPULayoutInfoListResponseBody extends TeaModel {
         }
 
         /**
-         * @return ZOrder
+         * @return zOrder
          */
         public Integer getZOrder() {
-            return this.ZOrder;
+            return this.zOrder;
         }
 
         public static final class Builder {
@@ -207,7 +218,7 @@ public class DescribeMPULayoutInfoListResponseBody extends TeaModel {
             private Float width; 
             private Float x; 
             private Float y; 
-            private Integer ZOrder; 
+            private Integer zOrder; 
 
             /**
              * Height.
@@ -260,8 +271,8 @@ public class DescribeMPULayoutInfoListResponseBody extends TeaModel {
             /**
              * ZOrder.
              */
-            public Builder ZOrder(Integer ZOrder) {
-                this.ZOrder = ZOrder;
+            public Builder zOrder(Integer zOrder) {
+                this.zOrder = zOrder;
                 return this;
             }
 
@@ -272,9 +283,15 @@ public class DescribeMPULayoutInfoListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMPULayoutInfoListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMPULayoutInfoListResponseBody</p>
+     */
     public static class LayoutPanes extends TeaModel {
-        @NameInMap("Panes")
-        private java.util.List < Panes> panes;
+        @com.aliyun.core.annotation.NameInMap("Panes")
+        private java.util.List<Panes> panes;
 
         private LayoutPanes(Builder builder) {
             this.panes = builder.panes;
@@ -291,17 +308,17 @@ public class DescribeMPULayoutInfoListResponseBody extends TeaModel {
         /**
          * @return panes
          */
-        public java.util.List < Panes> getPanes() {
+        public java.util.List<Panes> getPanes() {
             return this.panes;
         }
 
         public static final class Builder {
-            private java.util.List < Panes> panes; 
+            private java.util.List<Panes> panes; 
 
             /**
              * Panes.
              */
-            public Builder panes(java.util.List < Panes> panes) {
+            public Builder panes(java.util.List<Panes> panes) {
                 this.panes = panes;
                 return this;
             }
@@ -313,17 +330,23 @@ public class DescribeMPULayoutInfoListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMPULayoutInfoListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMPULayoutInfoListResponseBody</p>
+     */
     public static class Layout extends TeaModel {
-        @NameInMap("AudioMixCount")
+        @com.aliyun.core.annotation.NameInMap("AudioMixCount")
         private Integer audioMixCount;
 
-        @NameInMap("LayoutId")
+        @com.aliyun.core.annotation.NameInMap("LayoutId")
         private Long layoutId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Panes")
+        @com.aliyun.core.annotation.NameInMap("Panes")
         private LayoutPanes panes;
 
         private Layout(Builder builder) {
@@ -414,9 +437,15 @@ public class DescribeMPULayoutInfoListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMPULayoutInfoListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMPULayoutInfoListResponseBody</p>
+     */
     public static class Layouts extends TeaModel {
-        @NameInMap("Layout")
-        private java.util.List < Layout> layout;
+        @com.aliyun.core.annotation.NameInMap("Layout")
+        private java.util.List<Layout> layout;
 
         private Layouts(Builder builder) {
             this.layout = builder.layout;
@@ -433,17 +462,17 @@ public class DescribeMPULayoutInfoListResponseBody extends TeaModel {
         /**
          * @return layout
          */
-        public java.util.List < Layout> getLayout() {
+        public java.util.List<Layout> getLayout() {
             return this.layout;
         }
 
         public static final class Builder {
-            private java.util.List < Layout> layout; 
+            private java.util.List<Layout> layout; 
 
             /**
              * Layout.
              */
-            public Builder layout(java.util.List < Layout> layout) {
+            public Builder layout(java.util.List<Layout> layout) {
                 this.layout = layout;
                 return this;
             }

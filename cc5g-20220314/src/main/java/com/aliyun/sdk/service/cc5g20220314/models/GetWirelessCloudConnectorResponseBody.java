@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cc5g20220314.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,52 +11,52 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetWirelessCloudConnectorResponseBody</p>
  */
 public class GetWirelessCloudConnectorResponseBody extends TeaModel {
-    @NameInMap("BusinessType")
+    @com.aliyun.core.annotation.NameInMap("BusinessType")
     private String businessType;
 
-    @NameInMap("CardCount")
+    @com.aliyun.core.annotation.NameInMap("CardCount")
     private String cardCount;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("DataPackageId")
+    @com.aliyun.core.annotation.NameInMap("DataPackageId")
     private String dataPackageId;
 
-    @NameInMap("DataPackageType")
+    @com.aliyun.core.annotation.NameInMap("DataPackageType")
     private String dataPackageType;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("Features")
+    @com.aliyun.core.annotation.NameInMap("Features")
     private java.util.List < String > features;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("NetLinks")
+    @com.aliyun.core.annotation.NameInMap("NetLinks")
     private java.util.List < NetLinks> netLinks;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServiceType")
+    @com.aliyun.core.annotation.NameInMap("ServiceType")
     private String serviceType;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("UseCase")
+    @com.aliyun.core.annotation.NameInMap("UseCase")
     private String useCase;
 
-    @NameInMap("WirelessCloudConnectorGroupId")
+    @com.aliyun.core.annotation.NameInMap("WirelessCloudConnectorGroupId")
     private String wirelessCloudConnectorGroupId;
 
-    @NameInMap("WirelessCloudConnectorId")
+    @com.aliyun.core.annotation.NameInMap("WirelessCloudConnectorId")
     private String wirelessCloudConnectorId;
 
     private GetWirelessCloudConnectorResponseBody(Builder builder) {
@@ -282,7 +281,7 @@ public class GetWirelessCloudConnectorResponseBody extends TeaModel {
         }
 
         /**
-         * 数组，返回示例目录。
+         * NetLinks.
          */
         public Builder netLinks(java.util.List < NetLinks> netLinks) {
             this.netLinks = netLinks;
@@ -298,7 +297,7 @@ public class GetWirelessCloudConnectorResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -352,37 +351,40 @@ public class GetWirelessCloudConnectorResponseBody extends TeaModel {
     } 
 
     public static class NetLinks extends TeaModel {
-        @NameInMap("APN")
+        @com.aliyun.core.annotation.NameInMap("APN")
         private String APN;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GrantAliUid")
+        @com.aliyun.core.annotation.NameInMap("GrantAliUid")
         private String grantAliUid;
 
-        @NameInMap("ISP")
+        @com.aliyun.core.annotation.NameInMap("ISP")
         private String ISP;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NetLinkId")
+        @com.aliyun.core.annotation.NameInMap("NetLinkId")
         private String netLinkId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("VSwitchs")
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("VSwitchs")
         private java.util.List < String > vSwitchs;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private NetLinks(Builder builder) {
@@ -395,6 +397,7 @@ public class GetWirelessCloudConnectorResponseBody extends TeaModel {
             this.netLinkId = builder.netLinkId;
             this.regionId = builder.regionId;
             this.status = builder.status;
+            this.type = builder.type;
             this.vSwitchs = builder.vSwitchs;
             this.vpcId = builder.vpcId;
         }
@@ -471,6 +474,13 @@ public class GetWirelessCloudConnectorResponseBody extends TeaModel {
         }
 
         /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
          * @return vSwitchs
          */
         public java.util.List < String > getVSwitchs() {
@@ -494,6 +504,7 @@ public class GetWirelessCloudConnectorResponseBody extends TeaModel {
             private String netLinkId; 
             private String regionId; 
             private String status; 
+            private String type; 
             private java.util.List < String > vSwitchs; 
             private String vpcId; 
 
@@ -566,6 +577,14 @@ public class GetWirelessCloudConnectorResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
                 return this;
             }
 

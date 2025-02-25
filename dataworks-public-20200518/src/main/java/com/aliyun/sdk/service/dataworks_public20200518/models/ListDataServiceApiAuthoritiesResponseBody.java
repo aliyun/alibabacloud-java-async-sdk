@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDataServiceApiAuthoritiesResponseBody} extends {@link TeaModel}
  *
  * <p>ListDataServiceApiAuthoritiesResponseBody</p>
  */
 public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListDataServiceApiAuthoritiesResponseBody(Builder builder) {
@@ -98,7 +103,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The APIs on which other users are granted the access permissions.
+         * <p>The APIs on which other users are granted the access permissions.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +111,10 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +122,10 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +133,10 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +144,10 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,17 +171,23 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDataServiceApiAuthoritiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataServiceApiAuthoritiesResponseBody</p>
+     */
     public static class AuthorizationRecords extends TeaModel {
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("CreatorId")
+        @com.aliyun.core.annotation.NameInMap("CreatorId")
         private String creatorId;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
         private AuthorizationRecords(Builder builder) {
@@ -214,7 +240,10 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             private Long projectId; 
 
             /**
-             * The time when the access permissions on the API were granted to other users.
+             * <p>The time when the access permissions on the API were granted to other users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-23T00:21:01+0800</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -222,7 +251,10 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account used by the user who granted other users the access permissions on the API.
+             * <p>The ID of the Alibaba Cloud account used by the API owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -230,7 +262,10 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the validity period of the authorization.
+             * <p>The end time of the validity period of the authorization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-24T00:21:01+0800</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -238,7 +273,10 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace to which the access permissions on the API are granted.
+             * <p>The ID of the workspace to which the access permissions on the API are granted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10004</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -252,38 +290,44 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDataServiceApiAuthoritiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataServiceApiAuthoritiesResponseBody</p>
+     */
     public static class ApiAuthorizationList extends TeaModel {
-        @NameInMap("ApiId")
+        @com.aliyun.core.annotation.NameInMap("ApiId")
         private Long apiId;
 
-        @NameInMap("ApiName")
+        @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
 
-        @NameInMap("ApiPath")
+        @com.aliyun.core.annotation.NameInMap("ApiPath")
         private String apiPath;
 
-        @NameInMap("ApiStatus")
+        @com.aliyun.core.annotation.NameInMap("ApiStatus")
         private Integer apiStatus;
 
-        @NameInMap("AuthorizationRecords")
-        private java.util.List < AuthorizationRecords> authorizationRecords;
+        @com.aliyun.core.annotation.NameInMap("AuthorizationRecords")
+        private java.util.List<AuthorizationRecords> authorizationRecords;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("CreatorId")
+        @com.aliyun.core.annotation.NameInMap("CreatorId")
         private String creatorId;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private Long tenantId;
 
         private ApiAuthorizationList(Builder builder) {
@@ -339,7 +383,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         /**
          * @return authorizationRecords
          */
-        public java.util.List < AuthorizationRecords> getAuthorizationRecords() {
+        public java.util.List<AuthorizationRecords> getAuthorizationRecords() {
             return this.authorizationRecords;
         }
 
@@ -390,7 +434,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             private String apiName; 
             private String apiPath; 
             private Integer apiStatus; 
-            private java.util.List < AuthorizationRecords> authorizationRecords; 
+            private java.util.List<AuthorizationRecords> authorizationRecords; 
             private String createdTime; 
             private String creatorId; 
             private String groupId; 
@@ -399,7 +443,10 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             private Long tenantId; 
 
             /**
-             * The ID of the API.
+             * <p>The API ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10002</p>
              */
             public Builder apiId(Long apiId) {
                 this.apiId = apiId;
@@ -407,7 +454,10 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the API.
+             * <p>The name of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>My API name</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -415,7 +465,10 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the API.
+             * <p>The path of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/test/1</p>
              */
             public Builder apiPath(String apiPath) {
                 this.apiPath = apiPath;
@@ -423,7 +476,10 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the API. Valid values: 0 and 1. The value 0 indicates that the API is not published. The value 1 indicates that the API is published.
+             * <p>The status of the API. Valid values: 0 and 1. The value 0 indicates that the API is not published. The value 1 indicates that the API is published.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder apiStatus(Integer apiStatus) {
                 this.apiStatus = apiStatus;
@@ -431,15 +487,18 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             }
 
             /**
-             * The authorization records.
+             * <p>The authorization records.</p>
              */
-            public Builder authorizationRecords(java.util.List < AuthorizationRecords> authorizationRecords) {
+            public Builder authorizationRecords(java.util.List<AuthorizationRecords> authorizationRecords) {
                 this.authorizationRecords = authorizationRecords;
                 return this;
             }
 
             /**
-             * The time when the API was created.
+             * <p>The time when the API was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-23T00:21:01+0800</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -447,7 +506,10 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account used by the API owner.
+             * <p>The ID of the Alibaba Cloud account used by the API owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -455,7 +517,10 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the group.
+             * <p>The group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ab123</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -463,7 +528,10 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the API was last updated.
+             * <p>The time when the API was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-23T00:21:01+0800</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -471,7 +539,10 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -479,7 +550,10 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tenant.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10001</p>
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -493,17 +567,23 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDataServiceApiAuthoritiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataServiceApiAuthoritiesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ApiAuthorizationList")
-        private java.util.List < ApiAuthorizationList> apiAuthorizationList;
+        @com.aliyun.core.annotation.NameInMap("ApiAuthorizationList")
+        private java.util.List<ApiAuthorizationList> apiAuthorizationList;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {
@@ -524,7 +604,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         /**
          * @return apiAuthorizationList
          */
-        public java.util.List < ApiAuthorizationList> getApiAuthorizationList() {
+        public java.util.List<ApiAuthorizationList> getApiAuthorizationList() {
             return this.apiAuthorizationList;
         }
 
@@ -550,21 +630,24 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ApiAuthorizationList> apiAuthorizationList; 
+            private java.util.List<ApiAuthorizationList> apiAuthorizationList; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
 
             /**
-             * The APIs on which other users are granted the access permissions and the authorization records.
+             * <p>The APIs on which other users are granted the access permissions.</p>
              */
-            public Builder apiAuthorizationList(java.util.List < ApiAuthorizationList> apiAuthorizationList) {
+            public Builder apiAuthorizationList(java.util.List<ApiAuthorizationList> apiAuthorizationList) {
                 this.apiAuthorizationList = apiAuthorizationList;
                 return this;
             }
 
             /**
-             * The page number of the returned page. The value of this parameter is the same as that of the PageNumber parameter in the request.
+             * <p>The page number. The value of this parameter is the same as that of the PageNumber parameter in the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -572,7 +655,10 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: 10. Maximum value: 100.
+             * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -580,7 +666,10 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

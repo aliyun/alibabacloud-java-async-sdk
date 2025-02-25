@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMonitorGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateMonitorGroupRequest</p>
  */
 public class CreateMonitorGroupRequest extends Request {
-    @Query
-    @NameInMap("Auth")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Auth")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String auth;
 
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("RawMonitorGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RawMonitorGroupId")
     private Long rawMonitorGroupId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private CreateMonitorGroupRequest(Builder builder) {
@@ -98,7 +103,11 @@ public class CreateMonitorGroupRequest extends Request {
         } 
 
         /**
-         * Auth.
+         * <p>The caller authentication status of the API. Valid values: <strong>ok</strong>: The authentication is successful. <strong>mismatch</strong>: The request is redirected. <strong>servicenotfound</strong>: A request error occurred. <strong>Unknown</strong>: An unknown error occurred.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder auth(String auth) {
             this.putQueryParameter("Auth", auth);
@@ -107,7 +116,11 @@ public class CreateMonitorGroupRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * <p>The ID of the API group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6735211ab9094c818f32f27bc545b6c8</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -116,7 +129,10 @@ public class CreateMonitorGroupRequest extends Request {
         }
 
         /**
-         * RawMonitorGroupId.
+         * <p>The ID of the monitoring group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>166636221</p>
          */
         public Builder rawMonitorGroupId(Long rawMonitorGroupId) {
             this.putQueryParameter("RawMonitorGroupId", rawMonitorGroupId);

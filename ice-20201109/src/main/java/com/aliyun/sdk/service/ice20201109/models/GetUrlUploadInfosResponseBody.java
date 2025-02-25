@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUrlUploadInfosResponseBody} extends {@link TeaModel}
  *
  * <p>GetUrlUploadInfosResponseBody</p>
  */
 public class GetUrlUploadInfosResponseBody extends TeaModel {
-    @NameInMap("NonExists")
-    private java.util.List < String > nonExists;
+    @com.aliyun.core.annotation.NameInMap("NonExists")
+    private java.util.List<String> nonExists;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("URLUploadInfoList")
-    private java.util.List < URLUploadInfoList> URLUploadInfoList;
+    @com.aliyun.core.annotation.NameInMap("URLUploadInfoList")
+    private java.util.List<URLUploadInfoList> URLUploadInfoList;
 
     private GetUrlUploadInfosResponseBody(Builder builder) {
         this.nonExists = builder.nonExists;
@@ -38,7 +43,7 @@ public class GetUrlUploadInfosResponseBody extends TeaModel {
     /**
      * @return nonExists
      */
-    public java.util.List < String > getNonExists() {
+    public java.util.List<String> getNonExists() {
         return this.nonExists;
     }
 
@@ -52,25 +57,28 @@ public class GetUrlUploadInfosResponseBody extends TeaModel {
     /**
      * @return URLUploadInfoList
      */
-    public java.util.List < URLUploadInfoList> getURLUploadInfoList() {
+    public java.util.List<URLUploadInfoList> getURLUploadInfoList() {
         return this.URLUploadInfoList;
     }
 
     public static final class Builder {
-        private java.util.List < String > nonExists; 
+        private java.util.List<String> nonExists; 
         private String requestId; 
-        private java.util.List < URLUploadInfoList> URLUploadInfoList; 
+        private java.util.List<URLUploadInfoList> URLUploadInfoList; 
 
         /**
-         * NonExists.
+         * <p>The job IDs or upload URLs that do not exist.</p>
          */
-        public Builder nonExists(java.util.List < String > nonExists) {
+        public Builder nonExists(java.util.List<String> nonExists) {
             this.nonExists = nonExists;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,9 +86,9 @@ public class GetUrlUploadInfosResponseBody extends TeaModel {
         }
 
         /**
-         * URLUploadInfoList.
+         * <p>The details about URL-based upload jobs.</p>
          */
-        public Builder URLUploadInfoList(java.util.List < URLUploadInfoList> URLUploadInfoList) {
+        public Builder URLUploadInfoList(java.util.List<URLUploadInfoList> URLUploadInfoList) {
             this.URLUploadInfoList = URLUploadInfoList;
             return this;
         }
@@ -91,35 +99,41 @@ public class GetUrlUploadInfosResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetUrlUploadInfosResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUrlUploadInfosResponseBody</p>
+     */
     public static class URLUploadInfoList extends TeaModel {
-        @NameInMap("CompleteTime")
+        @com.aliyun.core.annotation.NameInMap("CompleteTime")
         private String completeTime;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("FileSize")
+        @com.aliyun.core.annotation.NameInMap("FileSize")
         private String fileSize;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UploadURL")
+        @com.aliyun.core.annotation.NameInMap("UploadURL")
         private String uploadURL;
 
-        @NameInMap("UserData")
+        @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
         private URLUploadInfoList(Builder builder) {
@@ -226,7 +240,10 @@ public class GetUrlUploadInfosResponseBody extends TeaModel {
             private String userData; 
 
             /**
-             * CompleteTime.
+             * <p>The time when the upload job was complete. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-26 21:47:37</p>
              */
             public Builder completeTime(String completeTime) {
                 this.completeTime = completeTime;
@@ -234,7 +251,10 @@ public class GetUrlUploadInfosResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The time when the upload job was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-07T10:03:37Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -242,7 +262,10 @@ public class GetUrlUploadInfosResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * <p>The error code returned if the upload job failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -250,7 +273,10 @@ public class GetUrlUploadInfosResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The error message returned if the upload job failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -258,7 +284,10 @@ public class GetUrlUploadInfosResponseBody extends TeaModel {
             }
 
             /**
-             * FileSize.
+             * <p>The file size. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>64610</p>
              */
             public Builder fileSize(String fileSize) {
                 this.fileSize = fileSize;
@@ -266,7 +295,10 @@ public class GetUrlUploadInfosResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The ID of the upload job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3829500c0fef429fa4ec1680b122d***</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -274,7 +306,10 @@ public class GetUrlUploadInfosResponseBody extends TeaModel {
             }
 
             /**
-             * MediaId.
+             * <p>The ID of the uploaded media file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5014ca70f08171ecbf940764a0fd6***</p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -282,7 +317,10 @@ public class GetUrlUploadInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the upload job. For more information about the valid values of the parameter, see the &quot;Status: the status of a URL-based upload job&quot; section of the <a href="https://help.aliyun.com/document_detail/52839.html">Basic data types</a> topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -290,7 +328,13 @@ public class GetUrlUploadInfosResponseBody extends TeaModel {
             }
 
             /**
-             * UploadURL.
+             * <p>The upload URL of the source file.</p>
+             * <blockquote>
+             * <p> A maximum of 100 URLs can be returned.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>http://****.mp4</p>
              */
             public Builder uploadURL(String uploadURL) {
                 this.uploadURL = uploadURL;
@@ -298,7 +342,10 @@ public class GetUrlUploadInfosResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * <p>The user data. The value is a JSON string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;MessageCallback&quot;:&quot;{&quot;CallbackURL&quot;:&quot;<a href="http://example.aliyundoc.com%22%7D">http://example.aliyundoc.com&quot;}</a>&quot;, &quot;Extend&quot;:&quot;{&quot;localId&quot;:&quot;***&quot;, &quot;test&quot;:&quot;www&quot;}&quot;}</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;

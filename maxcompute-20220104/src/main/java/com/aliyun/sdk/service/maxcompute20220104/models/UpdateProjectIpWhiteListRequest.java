@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateProjectIpWhiteListRequest} extends {@link RequestModel}
  *
  * <p>UpdateProjectIpWhiteListRequest</p>
  */
 public class UpdateProjectIpWhiteListRequest extends Request {
-    @Path
-    @NameInMap("projectName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("projectName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectName;
 
-    @Body
-    @NameInMap("body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
     private String body;
 
     private UpdateProjectIpWhiteListRequest(Builder builder) {
@@ -69,7 +74,11 @@ public class UpdateProjectIpWhiteListRequest extends Request {
         } 
 
         /**
-         * The name of the MaxCompute project.
+         * <p>The name of the MaxCompute project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps_project</p>
          */
         public Builder projectName(String projectName) {
             this.putPathParameter("projectName", projectName);
@@ -78,7 +87,10 @@ public class UpdateProjectIpWhiteListRequest extends Request {
         }
 
         /**
-         * The request body parameters.
+         * <p>The request body parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>json {&quot;ipWhiteList&quot;:{&quot;ipList&quot;: &quot;&quot;, // The IP address whitelists are of the STRING data type. Separate multiple IP address whitelists with commas (,). &quot;vpcIpList&quot;: &quot;&quot;, //} }</p>
          */
         public Builder body(String body) {
             this.putBodyParameter("body", body);

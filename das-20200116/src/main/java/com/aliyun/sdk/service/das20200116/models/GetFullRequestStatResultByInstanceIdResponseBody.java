@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFullRequestStatResultByInstanceIdResponseBody} extends {@link TeaModel}
  *
  * <p>GetFullRequestStatResultByInstanceIdResponseBody</p>
  */
 public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetFullRequestStatResultByInstanceIdResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,10 +110,13 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message that contains information such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request was successful, **Successful** is returned. If the request failed, an error message that contains information such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +124,10 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7172BECE-588A-5961-8126-C216E16B****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,11 +135,14 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,101 +155,107 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetFullRequestStatResultByInstanceIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFullRequestStatResultByInstanceIdResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("AvgExaminedRows")
+        @com.aliyun.core.annotation.NameInMap("AvgExaminedRows")
         private Double avgExaminedRows;
 
-        @NameInMap("AvgFetchRows")
+        @com.aliyun.core.annotation.NameInMap("AvgFetchRows")
         private Long avgFetchRows;
 
-        @NameInMap("AvgLockWaitTime")
+        @com.aliyun.core.annotation.NameInMap("AvgLockWaitTime")
         private Double avgLockWaitTime;
 
-        @NameInMap("AvgLogicalRead")
+        @com.aliyun.core.annotation.NameInMap("AvgLogicalRead")
         private Double avgLogicalRead;
 
-        @NameInMap("AvgPhysicalAsyncRead")
+        @com.aliyun.core.annotation.NameInMap("AvgPhysicalAsyncRead")
         private Long avgPhysicalAsyncRead;
 
-        @NameInMap("AvgPhysicalSyncRead")
+        @com.aliyun.core.annotation.NameInMap("AvgPhysicalSyncRead")
         private Long avgPhysicalSyncRead;
 
-        @NameInMap("AvgReturnedRows")
+        @com.aliyun.core.annotation.NameInMap("AvgReturnedRows")
         private Double avgReturnedRows;
 
-        @NameInMap("AvgRt")
+        @com.aliyun.core.annotation.NameInMap("AvgRt")
         private Double avgRt;
 
-        @NameInMap("AvgSqlCount")
+        @com.aliyun.core.annotation.NameInMap("AvgSqlCount")
         private Long avgSqlCount;
 
-        @NameInMap("AvgUpdatedRows")
+        @com.aliyun.core.annotation.NameInMap("AvgUpdatedRows")
         private Long avgUpdatedRows;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("CountRate")
+        @com.aliyun.core.annotation.NameInMap("CountRate")
         private Double countRate;
 
-        @NameInMap("Database")
+        @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
 
-        @NameInMap("ErrorCount")
+        @com.aliyun.core.annotation.NameInMap("ErrorCount")
         private Long errorCount;
 
-        @NameInMap("ExaminedRows")
+        @com.aliyun.core.annotation.NameInMap("ExaminedRows")
         private Long examinedRows;
 
-        @NameInMap("FetchRows")
+        @com.aliyun.core.annotation.NameInMap("FetchRows")
         private Long fetchRows;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("LockWaitTime")
+        @com.aliyun.core.annotation.NameInMap("LockWaitTime")
         private Double lockWaitTime;
 
-        @NameInMap("LogicalRead")
+        @com.aliyun.core.annotation.NameInMap("LogicalRead")
         private Long logicalRead;
 
-        @NameInMap("PhysicalAsyncRead")
+        @com.aliyun.core.annotation.NameInMap("PhysicalAsyncRead")
         private Long physicalAsyncRead;
 
-        @NameInMap("PhysicalSyncRead")
+        @com.aliyun.core.annotation.NameInMap("PhysicalSyncRead")
         private Long physicalSyncRead;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Long port;
 
-        @NameInMap("Psql")
+        @com.aliyun.core.annotation.NameInMap("Psql")
         private String psql;
 
-        @NameInMap("Rows")
+        @com.aliyun.core.annotation.NameInMap("Rows")
         private Long rows;
 
-        @NameInMap("RtGreaterThanOneSecondCount")
+        @com.aliyun.core.annotation.NameInMap("RtGreaterThanOneSecondCount")
         private Long rtGreaterThanOneSecondCount;
 
-        @NameInMap("RtRate")
+        @com.aliyun.core.annotation.NameInMap("RtRate")
         private Double rtRate;
 
-        @NameInMap("SqlCount")
+        @com.aliyun.core.annotation.NameInMap("SqlCount")
         private Long sqlCount;
 
-        @NameInMap("SqlId")
+        @com.aliyun.core.annotation.NameInMap("SqlId")
         private String sqlId;
 
-        @NameInMap("SumUpdatedRows")
+        @com.aliyun.core.annotation.NameInMap("SumUpdatedRows")
         private Long sumUpdatedRows;
 
-        @NameInMap("Tables")
-        private java.util.List < String > tables;
+        @com.aliyun.core.annotation.NameInMap("Tables")
+        private java.util.List<String> tables;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private Long version;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private List(Builder builder) {
@@ -484,7 +507,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
         /**
          * @return tables
          */
-        public java.util.List < String > getTables() {
+        public java.util.List<String> getTables() {
             return this.tables;
         }
 
@@ -532,15 +555,18 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             private Long sqlCount; 
             private String sqlId; 
             private Long sumUpdatedRows; 
-            private java.util.List < String > tables; 
+            private java.util.List<String> tables; 
             private Long version; 
             private String vpcId; 
 
             /**
-             * The average number of scanned rows.
-             * <p>
+             * <p>The average number of scanned rows.</p>
+             * <blockquote>
+             * <p>This parameter is returned only for ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and PolarDB for MySQL databases.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only for ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and PolarDB for MySQL databases.
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder avgExaminedRows(Double avgExaminedRows) {
                 this.avgExaminedRows = avgExaminedRows;
@@ -548,7 +574,10 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The average number of rows that are fetched by compute nodes from data nodes on the PolarDB-X 2.0 instance.
+             * <p>The average number of rows that are fetched by compute nodes from data nodes on the PolarDB-X 2.0 instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder avgFetchRows(Long avgFetchRows) {
                 this.avgFetchRows = avgFetchRows;
@@ -556,7 +585,10 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The average lock wait latency. Unit: seconds.
+             * <p>The average lock wait latency. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.00009589874265269765</p>
              */
             public Builder avgLockWaitTime(Double avgLockWaitTime) {
                 this.avgLockWaitTime = avgLockWaitTime;
@@ -564,7 +596,10 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The average number of logical reads.
+             * <p>The average number of logical reads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>654.4470327860251</p>
              */
             public Builder avgLogicalRead(Double avgLogicalRead) {
                 this.avgLogicalRead = avgLogicalRead;
@@ -572,7 +607,10 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The average number of physical asynchronous reads.
+             * <p>The average number of physical asynchronous reads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder avgPhysicalAsyncRead(Long avgPhysicalAsyncRead) {
                 this.avgPhysicalAsyncRead = avgPhysicalAsyncRead;
@@ -580,7 +618,10 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The average number of physical synchronous reads.
+             * <p>The average number of physical synchronous reads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder avgPhysicalSyncRead(Long avgPhysicalSyncRead) {
                 this.avgPhysicalSyncRead = avgPhysicalSyncRead;
@@ -588,7 +629,10 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The average number of returned rows.
+             * <p>The average number of returned rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder avgReturnedRows(Double avgReturnedRows) {
                 this.avgReturnedRows = avgReturnedRows;
@@ -596,7 +640,10 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The average execution duration.
+             * <p>The average execution duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.499</p>
              */
             public Builder avgRt(Double avgRt) {
                 this.avgRt = avgRt;
@@ -604,7 +651,10 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The average number of SQL statements.
+             * <p>The average number of SQL statements.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder avgSqlCount(Long avgSqlCount) {
                 this.avgSqlCount = avgSqlCount;
@@ -612,10 +662,13 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The average number of updated rows.
-             * <p>
+             * <p>The average number of updated rows.</p>
+             * <blockquote>
+             * <p>This parameter is returned only for ApsaraDB RDS for MySQL and PolarDB-X 2.0 databases.</p>
+             * </blockquote>
              * 
-             *  > This parameter is returned only for ApsaraDB RDS for MySQL and PolarDB-X 2.0 databases.
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder avgUpdatedRows(Long avgUpdatedRows) {
                 this.avgUpdatedRows = avgUpdatedRows;
@@ -623,7 +676,10 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of executions.
+             * <p>The total number of executions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -631,7 +687,10 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The percentage of the total number of executions.
+             * <p>The percentage of the total number of executions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0586</p>
              */
             public Builder countRate(Double countRate) {
                 this.countRate = countRate;
@@ -639,7 +698,10 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dbtest01</p>
              */
             public Builder database(String database) {
                 this.database = database;
@@ -647,7 +709,10 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The number of failed executions.
+             * <p>The number of failed executions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder errorCount(Long errorCount) {
                 this.errorCount = errorCount;
@@ -655,10 +720,13 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of scanned rows.
-             * <p>
+             * <p>The total number of scanned rows.</p>
+             * <blockquote>
+             * <p>This parameter is returned only for ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and PolarDB for MySQL databases.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only for ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and PolarDB for MySQL databases.
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder examinedRows(Long examinedRows) {
                 this.examinedRows = examinedRows;
@@ -666,7 +734,10 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows that are fetched by compute nodes from data nodes on the PolarDB-X 2.0 instance.
+             * <p>The number of rows that are fetched by compute nodes from data nodes on the PolarDB-X 2.0 instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder fetchRows(Long fetchRows) {
                 this.fetchRows = fetchRows;
@@ -674,7 +745,10 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the database instance.
+             * <p>The IP address of the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-uf6dyi58dm6****.mysql.rds.aliy****.com</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -682,7 +756,10 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The lock wait latency. Unit: seconds.
+             * <p>The lock wait latency. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1089.4177720290281</p>
              */
             public Builder lockWaitTime(Double lockWaitTime) {
                 this.lockWaitTime = lockWaitTime;
@@ -690,7 +767,10 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The number of logical reads.
+             * <p>The number of logical reads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7.434573266E9</p>
              */
             public Builder logicalRead(Long logicalRead) {
                 this.logicalRead = logicalRead;
@@ -698,7 +778,10 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The number of physical asynchronous reads.
+             * <p>The number of physical asynchronous reads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder physicalAsyncRead(Long physicalAsyncRead) {
                 this.physicalAsyncRead = physicalAsyncRead;
@@ -706,7 +789,10 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The number of physical synchronous reads.
+             * <p>The number of physical synchronous reads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder physicalSyncRead(Long physicalSyncRead) {
                 this.physicalSyncRead = physicalSyncRead;
@@ -714,7 +800,10 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The port number that is used to connect to the database instance.
+             * <p>The port number that is used to connect to the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(Long port) {
                 this.port = port;
@@ -722,7 +811,10 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL template.
+             * <p>The SQL template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select * from dbtest01 where ****</p>
              */
             public Builder psql(String psql) {
                 this.psql = psql;
@@ -730,7 +822,10 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of rows updated or returned by the compute nodes of the PolarDB-X 2.0 instance.
+             * <p>The total number of rows updated or returned by the compute nodes of the PolarDB-X 2.0 instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder rows(Long rows) {
                 this.rows = rows;
@@ -738,7 +833,10 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The number of SQL statements that take longer than 1 second to execute.
+             * <p>The number of SQL statements that take longer than 1 second to execute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder rtGreaterThanOneSecondCount(Long rtGreaterThanOneSecondCount) {
                 this.rtGreaterThanOneSecondCount = rtGreaterThanOneSecondCount;
@@ -746,7 +844,10 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The execution duration percentage.
+             * <p>The execution duration percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.499</p>
              */
             public Builder rtRate(Double rtRate) {
                 this.rtRate = rtRate;
@@ -754,7 +855,10 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The number of SQL statements.
+             * <p>The number of SQL statements.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder sqlCount(Long sqlCount) {
                 this.sqlCount = sqlCount;
@@ -762,7 +866,10 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL ID.
+             * <p>The SQL ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d71f82be1eef72bd105128204d2e****</p>
              */
             public Builder sqlId(String sqlId) {
                 this.sqlId = sqlId;
@@ -770,7 +877,10 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of updated rows.
+             * <p>The total number of updated rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder sumUpdatedRows(Long sumUpdatedRows) {
                 this.sumUpdatedRows = sumUpdatedRows;
@@ -778,15 +888,18 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The names of tables in the database.
+             * <p>The names of tables in the database.</p>
              */
-            public Builder tables(java.util.List < String > tables) {
+            public Builder tables(java.util.List<String> tables) {
                 this.tables = tables;
                 return this;
             }
 
             /**
-             * The version number.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(Long version) {
                 this.version = version;
@@ -794,7 +907,10 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The virtual private cloud (VPC) ID.
+             * <p>The virtual private cloud (VPC) ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2zentqj1sk4qmolci****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -808,11 +924,17 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetFullRequestStatResultByInstanceIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFullRequestStatResultByInstanceIdResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("List")
-        private java.util.List < List> list;
+        @com.aliyun.core.annotation.NameInMap("List")
+        private java.util.List<List> list;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private Result(Builder builder) {
@@ -831,7 +953,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -843,19 +965,22 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Long total; 
 
             /**
-             * The full request data.
+             * <p>The full request data.</p>
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder total(Long total) {
                 this.total = total;
@@ -869,23 +994,29 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetFullRequestStatResultByInstanceIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFullRequestStatResultByInstanceIdResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Fail")
+        @com.aliyun.core.annotation.NameInMap("Fail")
         private Boolean fail;
 
-        @NameInMap("IsFinish")
+        @com.aliyun.core.annotation.NameInMap("IsFinish")
         private Boolean isFinish;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private Result result;
 
-        @NameInMap("ResultId")
+        @com.aliyun.core.annotation.NameInMap("ResultId")
         private String resultId;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
         private Data(Builder builder) {
@@ -956,11 +1087,14 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             private Long timestamp; 
 
             /**
-             * Indicates whether the asynchronous request failed. Valid values:
-             * <p>
+             * <p>Indicates whether the asynchronous request failed. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder fail(Boolean fail) {
                 this.fail = fail;
@@ -968,11 +1102,14 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the asynchronous request was complete. Valid values:
-             * <p>
+             * <p>Indicates whether the asynchronous request was complete. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isFinish(Boolean isFinish) {
                 this.isFinish = isFinish;
@@ -980,7 +1117,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The returned full request data.
+             * <p>The returned full request data.</p>
              */
             public Builder result(Result result) {
                 this.result = result;
@@ -988,7 +1125,10 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The request ID.
+             * <p>The request ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9CB97BC4-6479-55D0-B9D0-EA925AFE****</p>
              */
             public Builder resultId(String resultId) {
                 this.resultId = resultId;
@@ -996,12 +1136,15 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the asynchronous request. Valid values:
-             * <p>
+             * <p>The state of the asynchronous request. Valid values:</p>
+             * <ul>
+             * <li><strong>RUNNING</strong></li>
+             * <li><strong>SUCCESS</strong></li>
+             * <li><strong>FAIL</strong></li>
+             * </ul>
              * 
-             * *   **RUNNING**
-             * *   **SUCCESS**
-             * *   **FAIL**
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -1009,7 +1152,10 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the asynchronous request was sent. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the asynchronous request was sent. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1645668213000</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;

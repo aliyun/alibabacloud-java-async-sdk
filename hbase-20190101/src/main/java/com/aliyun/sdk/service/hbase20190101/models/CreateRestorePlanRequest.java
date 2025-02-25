@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRestorePlanRequest} extends {@link RequestModel}
  *
  * <p>CreateRestorePlanRequest</p>
  */
 public class CreateRestorePlanRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("RestoreAllTable")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreAllTable")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean restoreAllTable;
 
-    @Query
-    @NameInMap("RestoreByCopy")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreByCopy")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean restoreByCopy;
 
-    @Query
-    @NameInMap("RestoreToDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreToDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String restoreToDate;
 
-    @Query
-    @NameInMap("Tables")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tables")
     private String tables;
 
-    @Query
-    @NameInMap("TargetClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetClusterId;
 
     private CreateRestorePlanRequest(Builder builder) {
@@ -129,7 +134,10 @@ public class CreateRestorePlanRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ld-bp150tns0sjxs****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -138,7 +146,10 @@ public class CreateRestorePlanRequest extends Request {
         }
 
         /**
-         * RestoreAllTable.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder restoreAllTable(Boolean restoreAllTable) {
             this.putQueryParameter("RestoreAllTable", restoreAllTable);
@@ -147,7 +158,10 @@ public class CreateRestorePlanRequest extends Request {
         }
 
         /**
-         * RestoreByCopy.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder restoreByCopy(Boolean restoreByCopy) {
             this.putQueryParameter("RestoreByCopy", restoreByCopy);
@@ -156,7 +170,10 @@ public class CreateRestorePlanRequest extends Request {
         }
 
         /**
-         * RestoreToDate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-05T05:49:42Z</p>
          */
         public Builder restoreToDate(String restoreToDate) {
             this.putQueryParameter("RestoreToDate", restoreToDate);
@@ -174,7 +191,10 @@ public class CreateRestorePlanRequest extends Request {
         }
 
         /**
-         * TargetClusterId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ld-bp169l540vc6c****</p>
          */
         public Builder targetClusterId(String targetClusterId) {
             this.putQueryParameter("TargetClusterId", targetClusterId);

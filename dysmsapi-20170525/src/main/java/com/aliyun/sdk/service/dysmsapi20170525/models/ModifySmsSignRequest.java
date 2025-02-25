@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySmsSignRequest} extends {@link RequestModel}
  *
  * <p>ModifySmsSignRequest</p>
  */
 public class ModifySmsSignRequest extends Request {
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Remark")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Remark")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String remark;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Body
-    @NameInMap("SignFileList")
-    @Validation(required = true)
-    private java.util.List < SignFileList> signFileList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SignFileList")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<SignFileList> signFileList;
 
-    @Query
-    @NameInMap("SignName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SignName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String signName;
 
-    @Query
-    @NameInMap("SignSource")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SignSource")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer signSource;
 
-    @Query
-    @NameInMap("SignType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SignType")
     private Integer signType;
 
     private ModifySmsSignRequest(Builder builder) {
@@ -104,7 +109,7 @@ public class ModifySmsSignRequest extends Request {
     /**
      * @return signFileList
      */
-    public java.util.List < SignFileList> getSignFileList() {
+    public java.util.List<SignFileList> getSignFileList() {
         return this.signFileList;
     }
 
@@ -134,7 +139,7 @@ public class ModifySmsSignRequest extends Request {
         private String remark; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < SignFileList> signFileList; 
+        private java.util.List<SignFileList> signFileList; 
         private String signName; 
         private Integer signSource; 
         private Integer signType; 
@@ -165,7 +170,14 @@ public class ModifySmsSignRequest extends Request {
         }
 
         /**
-         * Remark.
+         * <p>The scenario description of your released services. Provide the information of your services, such as a website URL, a domain name with an ICP filing, an app download URL, or the name of your WeChat official account or mini program. For sign-in scenarios, you must also provide an account and password for tests. A detailed description can improve the review efficiency of signatures and templates.</p>
+         * <blockquote>
+         * <p>The description can be up to 200 characters in length.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is the abbreviation of our company.</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -192,16 +204,21 @@ public class ModifySmsSignRequest extends Request {
         }
 
         /**
-         * SignFileList.
+         * <p>The list of signature files.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder signFileList(java.util.List < SignFileList> signFileList) {
+        public Builder signFileList(java.util.List<SignFileList> signFileList) {
             this.putBodyParameter("SignFileList", signFileList);
             this.signFileList = signFileList;
             return this;
         }
 
         /**
-         * SignName.
+         * <p>The signature.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun</p>
          */
         public Builder signName(String signName) {
             this.putQueryParameter("SignName", signName);
@@ -210,7 +227,19 @@ public class ModifySmsSignRequest extends Request {
         }
 
         /**
-         * SignSource.
+         * <p>The source of the signature. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: full name or abbreviation of an enterprise or institution.</li>
+         * <li><strong>1</strong>: full name or abbreviation of a website with Ministry of Industry and Information Technology (MIIT) filing.</li>
+         * <li><strong>2</strong>: full name or abbreviation of an app.</li>
+         * <li><strong>3</strong>: full name or abbreviation of a WeChat official account or applet.</li>
+         * <li><strong>4</strong>: full name or abbreviation of an e-commerce store.</li>
+         * <li><strong>5</strong>: full name or abbreviation of a trademark.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder signSource(Integer signSource) {
             this.putQueryParameter("SignSource", signSource);
@@ -219,7 +248,14 @@ public class ModifySmsSignRequest extends Request {
         }
 
         /**
-         * SignType.
+         * <p>The type of the signature. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: verification-code signature</li>
+         * <li><strong>1</strong>: general-purpose signature</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder signType(Integer signType) {
             this.putQueryParameter("SignType", signType);
@@ -234,13 +270,19 @@ public class ModifySmsSignRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifySmsSignRequest} extends {@link TeaModel}
+     *
+     * <p>ModifySmsSignRequest</p>
+     */
     public static class SignFileList extends TeaModel {
-        @NameInMap("FileContents")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("FileContents")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String fileContents;
 
-        @NameInMap("FileSuffix")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("FileSuffix")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String fileSuffix;
 
         private SignFileList(Builder builder) {
@@ -275,7 +317,12 @@ public class ModifySmsSignRequest extends Request {
             private String fileSuffix; 
 
             /**
-             * FileContents.
+             * <p>The base64-encoded string of the signed files. The size of the image cannot exceed 2 MB.</p>
+             * <p>In some scenarios, documents are required to prove your identity. For more information, see <a href="https://help.aliyun.com/document_detail/108076.html">Signature specifications</a>.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>R0lGODlhHAAmAKIHAKqqqsvLy0hISObm5vf394uLiwAA</p>
              */
             public Builder fileContents(String fileContents) {
                 this.fileContents = fileContents;
@@ -283,7 +330,15 @@ public class ModifySmsSignRequest extends Request {
             }
 
             /**
-             * FileSuffix.
+             * <p>The format of the documents. You can upload multiple images. JPG, PNG, GIF, and JPEG are supported.</p>
+             * <p>In some scenarios, documents are required to prove your identity. For more information, see <a href="https://help.aliyun.com/document_detail/108076.html">Signature specifications</a>.</p>
+             * <blockquote>
+             * <p>If the signature is used for other purposes or the signature source is an enterprise or public institution, you must upload some documents and an authorization letter. For more information, see <a href="https://help.aliyun.com/document_detail/108076.html">Documents</a> and <a href="https://help.aliyun.com/document_detail/56741.html">Letter of authorization</a>.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jpg</p>
              */
             public Builder fileSuffix(String fileSuffix) {
                 this.fileSuffix = fileSuffix;

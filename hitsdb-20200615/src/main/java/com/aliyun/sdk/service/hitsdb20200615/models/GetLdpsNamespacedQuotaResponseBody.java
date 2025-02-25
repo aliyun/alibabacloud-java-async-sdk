@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hitsdb20200615.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLdpsNamespacedQuotaResponseBody} extends {@link TeaModel}
  *
  * <p>GetLdpsNamespacedQuotaResponseBody</p>
  */
 public class GetLdpsNamespacedQuotaResponseBody extends TeaModel {
-    @NameInMap("NamespacedQuotas")
-    private java.util.List < NamespacedQuotas> namespacedQuotas;
+    @com.aliyun.core.annotation.NameInMap("NamespacedQuotas")
+    private java.util.List<NamespacedQuotas> namespacedQuotas;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetLdpsNamespacedQuotaResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class GetLdpsNamespacedQuotaResponseBody extends TeaModel {
     /**
      * @return namespacedQuotas
      */
-    public java.util.List < NamespacedQuotas> getNamespacedQuotas() {
+    public java.util.List<NamespacedQuotas> getNamespacedQuotas() {
         return this.namespacedQuotas;
     }
 
@@ -46,13 +51,13 @@ public class GetLdpsNamespacedQuotaResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < NamespacedQuotas> namespacedQuotas; 
+        private java.util.List<NamespacedQuotas> namespacedQuotas; 
         private String requestId; 
 
         /**
          * NamespacedQuotas.
          */
-        public Builder namespacedQuotas(java.util.List < NamespacedQuotas> namespacedQuotas) {
+        public Builder namespacedQuotas(java.util.List<NamespacedQuotas> namespacedQuotas) {
             this.namespacedQuotas = namespacedQuotas;
             return this;
         }
@@ -71,20 +76,26 @@ public class GetLdpsNamespacedQuotaResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetLdpsNamespacedQuotaResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLdpsNamespacedQuotaResponseBody</p>
+     */
     public static class NamespacedQuotas extends TeaModel {
-        @NameInMap("CpuAmount")
+        @com.aliyun.core.annotation.NameInMap("CpuAmount")
         private String cpuAmount;
 
-        @NameInMap("MemoryAmount")
+        @com.aliyun.core.annotation.NameInMap("MemoryAmount")
         private String memoryAmount;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("UsedCpu")
+        @com.aliyun.core.annotation.NameInMap("UsedCpu")
         private String usedCpu;
 
-        @NameInMap("UsedMemory")
+        @com.aliyun.core.annotation.NameInMap("UsedMemory")
         private String usedMemory;
 
         private NamespacedQuotas(Builder builder) {

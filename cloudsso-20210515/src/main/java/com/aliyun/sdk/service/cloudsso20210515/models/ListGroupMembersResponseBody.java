@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGroupMembersResponseBody} extends {@link TeaModel}
  *
  * <p>ListGroupMembersResponseBody</p>
  */
 public class ListGroupMembersResponseBody extends TeaModel {
-    @NameInMap("GroupMembers")
+    @com.aliyun.core.annotation.NameInMap("GroupMembers")
     private java.util.List < GroupMembers> groupMembers;
 
-    @NameInMap("IsTruncated")
+    @com.aliyun.core.annotation.NameInMap("IsTruncated")
     private Boolean isTruncated;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCounts")
+    @com.aliyun.core.annotation.NameInMap("TotalCounts")
     private Integer totalCounts;
 
     private ListGroupMembersResponseBody(Builder builder) {
@@ -98,7 +98,7 @@ public class ListGroupMembersResponseBody extends TeaModel {
         private Integer totalCounts; 
 
         /**
-         * The users in the group.
+         * <p>The users in the group.</p>
          */
         public Builder groupMembers(java.util.List < GroupMembers> groupMembers) {
             this.groupMembers = groupMembers;
@@ -106,11 +106,14 @@ public class ListGroupMembersResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the queried entries are truncated. Valid values:
-         * <p>
+         * <p>Indicates whether the queried entries are truncated. Valid values:</p>
+         * <ul>
+         * <li>true: The queried entries are truncated.</li>
+         * <li>false: The queried entries are not truncated.</li>
+         * </ul>
          * 
-         * *   true: The queried entries are truncated.
-         * *   false: The queried entries are not truncated.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -118,7 +121,10 @@ public class ListGroupMembersResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -126,10 +132,13 @@ public class ListGroupMembersResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is returned for the next page.
-         * <p>
+         * <p>The token that is returned for the next page.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when the value of <code>IsTruncated</code> is <code>true</code>.</p>
+         * </blockquote>
          * 
-         * >  This parameter is returned only when the value of `IsTruncated` is `true`.
+         * <strong>example:</strong>
+         * <p>K1c3o9K7pFxoTtxH1Nm7MMLb7zrDGvftYBQBPDVv7AD3a8yhRb3Mk8L9ivmN6bFSjfkZNTAg3h4****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -137,7 +146,10 @@ public class ListGroupMembersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BB759F84-2C64-5C36-B6C6-253172C5C370</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -145,7 +157,10 @@ public class ListGroupMembersResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCounts(Integer totalCounts) {
             this.totalCounts = totalCounts;
@@ -158,32 +173,38 @@ public class ListGroupMembersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListGroupMembersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGroupMembersResponseBody</p>
+     */
     public static class GroupMembers extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("JoinTime")
+        @com.aliyun.core.annotation.NameInMap("JoinTime")
         private String joinTime;
 
-        @NameInMap("ProvisionType")
+        @com.aliyun.core.annotation.NameInMap("ProvisionType")
         private String provisionType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private GroupMembers(Builder builder) {
@@ -281,7 +302,10 @@ public class ListGroupMembersResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The description of the user.
+             * <p>The description of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a user.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -289,7 +313,10 @@ public class ListGroupMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the user.
+             * <p>The display name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alice</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -297,7 +324,10 @@ public class ListGroupMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The email address of the user.
+             * <p>The email address of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:AliceLee@example.com">AliceLee@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -305,7 +335,10 @@ public class ListGroupMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the group.
+             * <p>The ID of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g-00jqzghi2n3o5hkh****</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -313,7 +346,10 @@ public class ListGroupMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the user was added to the user group.
+             * <p>The time when the user was added to the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-01T06:58:18Z</p>
              */
             public Builder joinTime(String joinTime) {
                 this.joinTime = joinTime;
@@ -321,11 +357,14 @@ public class ListGroupMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the user. Valid values:
-             * <p>
+             * <p>The type of the user. Valid values:</p>
+             * <ul>
+             * <li>Manual: The user is manually created.</li>
+             * <li>Synchronized: The user is synchronized from an external identity provider (IdP).</li>
+             * </ul>
              * 
-             * *   Manual: The user is manually created.
-             * *   Synchronized: The user is synchronized from an external identity provider (IdP).
+             * <strong>example:</strong>
+             * <p>Manual</p>
              */
             public Builder provisionType(String provisionType) {
                 this.provisionType = provisionType;
@@ -333,11 +372,14 @@ public class ListGroupMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the user. Valid values:
-             * <p>
+             * <p>The status of the user. Valid values:</p>
+             * <ul>
+             * <li>Enabled: The logon of the user is enabled.</li>
+             * <li>Disabled: The logon of the user is disabled.</li>
+             * </ul>
              * 
-             * *   Enabled: The logon of the user is enabled.
-             * *   Disabled: The logon of the user is disabled.
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -345,7 +387,10 @@ public class ListGroupMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>u-00q8wbq42wiltcrk****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -353,7 +398,10 @@ public class ListGroupMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the user.
+             * <p>The name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alice</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAntChainAccountWithKeyPairAutoCreationResponse</p>
  */
 public class CreateAntChainAccountWithKeyPairAutoCreationResponse extends Response {
-    @NameInMap("headers")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
-    @NameInMap("body")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("statusCode")
+    private Integer statusCode;
+
+    @com.aliyun.core.annotation.NameInMap("body")
     private CreateAntChainAccountWithKeyPairAutoCreationResponseBody body;
 
     private CreateAntChainAccountWithKeyPairAutoCreationResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +44,13 @@ public class CreateAntChainAccountWithKeyPairAutoCreationResponse extends Respon
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public CreateAntChainAccountWithKeyPairAutoCreationResponseBody getBody() {
@@ -52,6 +60,8 @@ public class CreateAntChainAccountWithKeyPairAutoCreationResponse extends Respon
     public interface Builder extends Response.Builder<CreateAntChainAccountWithKeyPairAutoCreationResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(CreateAntChainAccountWithKeyPairAutoCreationResponseBody body);
 
@@ -64,6 +74,7 @@ public class CreateAntChainAccountWithKeyPairAutoCreationResponse extends Respon
             extends Response.BuilderImpl<CreateAntChainAccountWithKeyPairAutoCreationResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private CreateAntChainAccountWithKeyPairAutoCreationResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +84,7 @@ public class CreateAntChainAccountWithKeyPairAutoCreationResponse extends Respon
         private BuilderImpl(CreateAntChainAccountWithKeyPairAutoCreationResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +94,15 @@ public class CreateAntChainAccountWithKeyPairAutoCreationResponse extends Respon
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

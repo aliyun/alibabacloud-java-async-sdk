@@ -1,71 +1,71 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceHistoryEventsRequest} extends {@link RequestModel}
  *
  * <p>ListInstanceHistoryEventsRequest</p>
  */
 public class ListInstanceHistoryEventsRequest extends Request {
-    @Body
-    @NameInMap("body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
     private java.util.List < ListInstanceHistoryEventsRequestBody> body;
 
-    @Query
-    @NameInMap("eventCreateEndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("eventCreateEndTime")
     private String eventCreateEndTime;
 
-    @Query
-    @NameInMap("eventCreateStartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("eventCreateStartTime")
     private String eventCreateStartTime;
 
-    @Query
-    @NameInMap("eventCycleStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("eventCycleStatus")
     private java.util.List < String > eventCycleStatus;
 
-    @Query
-    @NameInMap("eventExecuteEndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("eventExecuteEndTime")
     private String eventExecuteEndTime;
 
-    @Query
-    @NameInMap("eventExecuteStartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("eventExecuteStartTime")
     private String eventExecuteStartTime;
 
-    @Query
-    @NameInMap("eventFinashEndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("eventFinashEndTime")
     private String eventFinashEndTime;
 
-    @Query
-    @NameInMap("eventFinashStartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("eventFinashStartTime")
     private String eventFinashStartTime;
 
-    @Query
-    @NameInMap("eventLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("eventLevel")
     private java.util.List < String > eventLevel;
 
-    @Query
-    @NameInMap("eventType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("eventType")
     private java.util.List < String > eventType;
 
-    @Query
-    @NameInMap("instanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("instanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("nodeIP")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("nodeIP")
     private String nodeIP;
 
-    @Query
-    @NameInMap("page")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page")
     private Integer page;
 
-    @Query
-    @NameInMap("size")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("size")
     private Integer size;
 
     private ListInstanceHistoryEventsRequest(Builder builder) {
@@ -371,11 +371,17 @@ public class ListInstanceHistoryEventsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstanceHistoryEventsRequest} extends {@link TeaModel}
+     *
+     * <p>ListInstanceHistoryEventsRequest</p>
+     */
     public static class ListInstanceHistoryEventsRequestBody extends TeaModel {
-        @NameInMap("desc")
+        @com.aliyun.core.annotation.NameInMap("desc")
         private Boolean desc;
 
-        @NameInMap("sortField")
+        @com.aliyun.core.annotation.NameInMap("sortField")
         private String sortField;
 
         private ListInstanceHistoryEventsRequestBody(Builder builder) {

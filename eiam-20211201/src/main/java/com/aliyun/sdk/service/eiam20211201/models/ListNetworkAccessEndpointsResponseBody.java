@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNetworkAccessEndpointsResponseBody} extends {@link TeaModel}
  *
  * <p>ListNetworkAccessEndpointsResponseBody</p>
  */
 public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
-    @NameInMap("NetworkAccessEndpoints")
-    private java.util.List < NetworkAccessEndpoints> networkAccessEndpoints;
+    @com.aliyun.core.annotation.NameInMap("NetworkAccessEndpoints")
+    private java.util.List<NetworkAccessEndpoints> networkAccessEndpoints;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListNetworkAccessEndpointsResponseBody(Builder builder) {
@@ -42,7 +47,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
     /**
      * @return networkAccessEndpoints
      */
-    public java.util.List < NetworkAccessEndpoints> getNetworkAccessEndpoints() {
+    public java.util.List<NetworkAccessEndpoints> getNetworkAccessEndpoints() {
         return this.networkAccessEndpoints;
     }
 
@@ -68,7 +73,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < NetworkAccessEndpoints> networkAccessEndpoints; 
+        private java.util.List<NetworkAccessEndpoints> networkAccessEndpoints; 
         private String nextToken; 
         private String requestId; 
         private Long totalCount; 
@@ -76,13 +81,16 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         /**
          * NetworkAccessEndpoints.
          */
-        public Builder networkAccessEndpoints(java.util.List < NetworkAccessEndpoints> networkAccessEndpoints) {
+        public Builder networkAccessEndpoints(java.util.List<NetworkAccessEndpoints> networkAccessEndpoints) {
             this.networkAccessEndpoints = networkAccessEndpoints;
             return this;
         }
 
         /**
-         * 本次调用返回的查询凭证（Token）值，用于下一次翻页查询。
+         * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NTxxxexample</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -111,38 +119,44 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListNetworkAccessEndpointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNetworkAccessEndpointsResponseBody</p>
+     */
     public static class NetworkAccessEndpoints extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("NetworkAccessEndpointId")
+        @com.aliyun.core.annotation.NameInMap("NetworkAccessEndpointId")
         private String networkAccessEndpointId;
 
-        @NameInMap("NetworkAccessEndpointName")
+        @com.aliyun.core.annotation.NameInMap("NetworkAccessEndpointName")
         private String networkAccessEndpointName;
 
-        @NameInMap("NetworkAccessEndpointType")
+        @com.aliyun.core.annotation.NameInMap("NetworkAccessEndpointType")
         private String networkAccessEndpointType;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
-        @NameInMap("VSwitchIds")
-        private java.util.List < String > vSwitchIds;
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+        private java.util.List<String> vSwitchIds;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcRegionId")
+        @com.aliyun.core.annotation.NameInMap("VpcRegionId")
         private String vpcRegionId;
 
         private NetworkAccessEndpoints(Builder builder) {
@@ -226,7 +240,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         /**
          * @return vSwitchIds
          */
-        public java.util.List < String > getVSwitchIds() {
+        public java.util.List<String> getVSwitchIds() {
             return this.vSwitchIds;
         }
 
@@ -253,12 +267,15 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             private String securityGroupId; 
             private String status; 
             private Long updateTime; 
-            private java.util.List < String > vSwitchIds; 
+            private java.util.List<String> vSwitchIds; 
             private String vpcId; 
             private String vpcRegionId; 
 
             /**
-             * 专属网络端点创建时间，Unix时间戳格式，单位为毫秒。
+             * <p>专属网络端点创建时间，Unix时间戳格式，单位为毫秒。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649830226000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -266,7 +283,10 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * 实例ID。
+             * <p>实例ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -274,7 +294,10 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * 专属网络端点ID。
+             * <p>专属网络端点ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nae_examplexxx</p>
              */
             public Builder networkAccessEndpointId(String networkAccessEndpointId) {
                 this.networkAccessEndpointId = networkAccessEndpointId;
@@ -282,7 +305,10 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * 专属网络端点名称。
+             * <p>专属网络端点名称。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx业务VPC访问端点</p>
              */
             public Builder networkAccessEndpointName(String networkAccessEndpointName) {
                 this.networkAccessEndpointName = networkAccessEndpointName;
@@ -290,7 +316,10 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * 专属网络端点连接的类型。
+             * <p>专属网络端点连接的类型。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>private</p>
              */
             public Builder networkAccessEndpointType(String networkAccessEndpointType) {
                 this.networkAccessEndpointType = networkAccessEndpointType;
@@ -298,7 +327,10 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * 专属网络端点使用的安全组ID。
+             * <p>专属网络端点使用的安全组ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-examplexxx</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -306,7 +338,10 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * 专属网络端点状态。
+             * <p>专属网络端点状态。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -314,7 +349,10 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * 专属网络端点最近更新时间，Unix时间戳格式，单位为毫秒。
+             * <p>专属网络端点最近更新时间，Unix时间戳格式，单位为毫秒。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649830226000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -322,15 +360,21 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * 专属网络端点连接的指定vSwitch列表。
+             * <p>专属网络端点连接的指定vSwitch列表。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-examplexxx</p>
              */
-            public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
+            public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
                 return this;
             }
 
             /**
-             * 专属网络端点连接的VpcID。
+             * <p>专属网络端点连接的VpcID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-examplexxx</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -338,7 +382,10 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * 专属网络端点连接的Vpc所属地域。
+             * <p>专属网络端点连接的Vpc所属地域。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder vpcRegionId(String vpcRegionId) {
                 this.vpcRegionId = vpcRegionId;

@@ -1,29 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePhoneEncryptionPublicKeyRequest} extends {@link RequestModel}
  *
  * <p>UpdatePhoneEncryptionPublicKeyRequest</p>
  */
 public class UpdatePhoneEncryptionPublicKeyRequest extends Request {
-    @Body
-    @NameInMap("CustSpaceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustSpaceId")
     private String custSpaceId;
 
-    @Body
-    @NameInMap("EncryptionPublicKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EncryptionPublicKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String encryptionPublicKey;
 
-    @Body
-    @NameInMap("PhoneNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNumber;
 
     private UpdatePhoneEncryptionPublicKeyRequest(Builder builder) {
@@ -84,7 +84,10 @@ public class UpdatePhoneEncryptionPublicKeyRequest extends Request {
         } 
 
         /**
-         * CustSpaceId.
+         * <p>SpaceId/instanceId of ISV sub clients.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>399382882</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putBodyParameter("CustSpaceId", custSpaceId);
@@ -93,7 +96,19 @@ public class UpdatePhoneEncryptionPublicKeyRequest extends Request {
         }
 
         /**
-         * EncryptionPublicKey.
+         * <p>Encrypt the public key.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN PUBLIC KEY-----
+         * AAA
+         * BBB
+         * CCC
+         * DDD
+         * EEE
+         * FFF
+         * GGG
+         * -----END PUBLIC KEY-----</p>
          */
         public Builder encryptionPublicKey(String encryptionPublicKey) {
             this.putBodyParameter("EncryptionPublicKey", encryptionPublicKey);
@@ -102,7 +117,11 @@ public class UpdatePhoneEncryptionPublicKeyRequest extends Request {
         }
 
         /**
-         * PhoneNumber.
+         * <p>The phone number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86138000</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putBodyParameter("PhoneNumber", phoneNumber);

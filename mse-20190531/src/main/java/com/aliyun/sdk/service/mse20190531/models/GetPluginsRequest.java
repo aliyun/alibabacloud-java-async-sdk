@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPluginsRequest} extends {@link RequestModel}
  *
  * <p>GetPluginsRequest</p>
  */
 public class GetPluginsRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("Category")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Category")
     private Integer category;
 
-    @Query
-    @NameInMap("EnableOnly")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableOnly")
     private Boolean enableOnly;
 
-    @Query
-    @NameInMap("GatewayUniqueId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String gatewayUniqueId;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
     private GetPluginsRequest(Builder builder) {
@@ -111,10 +116,11 @@ public class GetPluginsRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <p>zh: Chinese en: English</p>
          * 
-         * zh: Chinese en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -123,15 +129,18 @@ public class GetPluginsRequest extends Request {
         }
 
         /**
-         * The type of the plug-in. Valid values:
-         * <p>
+         * <p>The type of the plug-in. Valid values:</p>
+         * <ul>
+         * <li>0: custom</li>
+         * <li>1: permission authorization</li>
+         * <li>2: security protection</li>
+         * <li>3: transmission protocol</li>
+         * <li>4: traffic control</li>
+         * <li>5: traffic observation</li>
+         * </ul>
          * 
-         * *   0: custom
-         * *   1: permission authorization
-         * *   2: security protection
-         * *   3: transmission protocol
-         * *   4: traffic control
-         * *   5: traffic observation
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder category(Integer category) {
             this.putQueryParameter("Category", category);
@@ -140,7 +149,10 @@ public class GetPluginsRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the plug-in.
+         * <p>Specifies whether to enable the plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableOnly(Boolean enableOnly) {
             this.putQueryParameter("EnableOnly", enableOnly);
@@ -149,7 +161,11 @@ public class GetPluginsRequest extends Request {
         }
 
         /**
-         * The ID of the gateway.
+         * <p>The ID of the gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-0adf3ad751284cc69fcf9669fba*****</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -158,7 +174,10 @@ public class GetPluginsRequest extends Request {
         }
 
         /**
-         * The name of the plug-in.
+         * <p>The name of the plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-auth</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

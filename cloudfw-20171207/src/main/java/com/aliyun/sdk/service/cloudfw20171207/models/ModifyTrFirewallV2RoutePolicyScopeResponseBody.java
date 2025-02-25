@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyTrFirewallV2RoutePolicyScopeResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyTrFirewallV2RoutePolicyScopeResponseBody</p>
  */
 public class ModifyTrFirewallV2RoutePolicyScopeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TrFirewallRoutePolicyId")
+    @com.aliyun.core.annotation.NameInMap("TrFirewallRoutePolicyId")
     private String trFirewallRoutePolicyId;
 
     private ModifyTrFirewallV2RoutePolicyScopeResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class ModifyTrFirewallV2RoutePolicyScopeResponseBody extends TeaModel {
         private String trFirewallRoutePolicyId; 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E7D4D635-0C70-5CEB-A609-851E94D51FBB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,10 @@ public class ModifyTrFirewallV2RoutePolicyScopeResponseBody extends TeaModel {
         }
 
         /**
-         * TrFirewallRoutePolicyId.
+         * <p>The ID of the routing policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>policy-4d724d0139df48f18091</p>
          */
         public Builder trFirewallRoutePolicyId(String trFirewallRoutePolicyId) {
             this.trFirewallRoutePolicyId = trFirewallRoutePolicyId;

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePluginSchemasResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePluginSchemasResponseBody</p>
  */
 public class DescribePluginSchemasResponseBody extends TeaModel {
-    @NameInMap("PluginSchemas")
+    @com.aliyun.core.annotation.NameInMap("PluginSchemas")
     private PluginSchemas pluginSchemas;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePluginSchemasResponseBody(Builder builder) {
@@ -71,20 +76,26 @@ public class DescribePluginSchemasResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePluginSchemasResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePluginSchemasResponseBody</p>
+     */
     public static class PluginSchema extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DocumentId")
+        @com.aliyun.core.annotation.NameInMap("DocumentId")
         private String documentId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("SupportClassic")
+        @com.aliyun.core.annotation.NameInMap("SupportClassic")
         private Boolean supportClassic;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private PluginSchema(Builder builder) {
@@ -192,9 +203,15 @@ public class DescribePluginSchemasResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePluginSchemasResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePluginSchemasResponseBody</p>
+     */
     public static class PluginSchemas extends TeaModel {
-        @NameInMap("PluginSchema")
-        private java.util.List < PluginSchema> pluginSchema;
+        @com.aliyun.core.annotation.NameInMap("PluginSchema")
+        private java.util.List<PluginSchema> pluginSchema;
 
         private PluginSchemas(Builder builder) {
             this.pluginSchema = builder.pluginSchema;
@@ -211,17 +228,17 @@ public class DescribePluginSchemasResponseBody extends TeaModel {
         /**
          * @return pluginSchema
          */
-        public java.util.List < PluginSchema> getPluginSchema() {
+        public java.util.List<PluginSchema> getPluginSchema() {
             return this.pluginSchema;
         }
 
         public static final class Builder {
-            private java.util.List < PluginSchema> pluginSchema; 
+            private java.util.List<PluginSchema> pluginSchema; 
 
             /**
              * PluginSchema.
              */
-            public Builder pluginSchema(java.util.List < PluginSchema> pluginSchema) {
+            public Builder pluginSchema(java.util.List<PluginSchema> pluginSchema) {
                 this.pluginSchema = pluginSchema;
                 return this;
             }

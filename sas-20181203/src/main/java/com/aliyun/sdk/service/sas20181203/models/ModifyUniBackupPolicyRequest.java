@@ -1,52 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyUniBackupPolicyRequest} extends {@link RequestModel}
  *
  * <p>ModifyUniBackupPolicyRequest</p>
  */
 public class ModifyUniBackupPolicyRequest extends Request {
-    @Query
-    @NameInMap("AccountName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountName")
     private String accountName;
 
-    @Query
-    @NameInMap("AccountPassword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountPassword")
     private String accountPassword;
 
-    @Query
-    @NameInMap("FullPlan")
-    private java.util.Map < String, ? > fullPlan;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FullPlan")
+    private java.util.Map<String, ?> fullPlan;
 
-    @Query
-    @NameInMap("IncPlan")
-    private java.util.Map < String, ? > incPlan;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncPlan")
+    private java.util.Map<String, ?> incPlan;
 
-    @Query
-    @NameInMap("PolicyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long policyId;
 
-    @Query
-    @NameInMap("PolicyName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyName")
     private String policyName;
 
-    @Query
-    @NameInMap("PolicyStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyStatus")
     private String policyStatus;
 
-    @Query
-    @NameInMap("Retention")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Retention")
     private Integer retention;
 
-    @Query
-    @NameInMap("SpeedLimiter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpeedLimiter")
     private Long speedLimiter;
 
     private ModifyUniBackupPolicyRequest(Builder builder) {
@@ -92,14 +97,14 @@ public class ModifyUniBackupPolicyRequest extends Request {
     /**
      * @return fullPlan
      */
-    public java.util.Map < String, ? > getFullPlan() {
+    public java.util.Map<String, ?> getFullPlan() {
         return this.fullPlan;
     }
 
     /**
      * @return incPlan
      */
-    public java.util.Map < String, ? > getIncPlan() {
+    public java.util.Map<String, ?> getIncPlan() {
         return this.incPlan;
     }
 
@@ -141,8 +146,8 @@ public class ModifyUniBackupPolicyRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyUniBackupPolicyRequest, Builder> {
         private String accountName; 
         private String accountPassword; 
-        private java.util.Map < String, ? > fullPlan; 
-        private java.util.Map < String, ? > incPlan; 
+        private java.util.Map<String, ?> fullPlan; 
+        private java.util.Map<String, ?> incPlan; 
         private Long policyId; 
         private String policyName; 
         private String policyStatus; 
@@ -167,7 +172,10 @@ public class ModifyUniBackupPolicyRequest extends Request {
         } 
 
         /**
-         * The name of the database account.
+         * <p>The name of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sa</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -176,7 +184,10 @@ public class ModifyUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The password of the database account.
+         * <p>The password of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sa@****</p>
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -185,15 +196,18 @@ public class ModifyUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The policy for full backup. The value of this parameter is a JSON string that contains the following fields:
-         * <p>
+         * <p>The policy for full backup. The value of this parameter is a JSON string that contains the following fields:</p>
+         * <ul>
+         * <li><strong>start</strong>: the start time of a backup task</li>
+         * <li><strong>interval</strong>: the interval of backup tasks</li>
+         * <li><strong>type</strong>: the unit of the interval</li>
+         * <li><strong>days</strong>: the days of a week on which a backup task is performed</li>
+         * </ul>
          * 
-         * *   **start**: the start time of a backup task
-         * *   **interval**: the interval of backup tasks
-         * *   **type**: the unit of the interval
-         * *   **days**: the days of a week on which a backup task is performed
+         * <strong>example:</strong>
+         * <p>{&quot;days&quot;:[4],&quot;interval&quot;:1,&quot;planType&quot;:&quot;weekly&quot;,&quot;startTime&quot;:&quot;22:00:00&quot;}</p>
          */
-        public Builder fullPlan(java.util.Map < String, ? > fullPlan) {
+        public Builder fullPlan(java.util.Map<String, ?> fullPlan) {
             String fullPlanShrink = shrink(fullPlan, "FullPlan", "json");
             this.putQueryParameter("FullPlan", fullPlanShrink);
             this.fullPlan = fullPlan;
@@ -201,15 +215,18 @@ public class ModifyUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The policy for incremental backup. The value of this parameter is a JSON string that contains the following fields:
-         * <p>
+         * <p>The policy for incremental backup. The value of this parameter is a JSON string that contains the following fields:</p>
+         * <ul>
+         * <li><strong>start</strong>: the start time of a backup task</li>
+         * <li><strong>interval</strong>: the interval of backup tasks</li>
+         * <li><strong>type</strong>: the unit of the interval</li>
+         * <li><strong>days</strong>: the days of a week on which a backup task is performed</li>
+         * </ul>
          * 
-         * *   **start**: the start time of a backup task
-         * *   **interval**: the interval of backup tasks
-         * *   **type**: the unit of the interval
-         * *   **days**: the days of a week on which a backup task is performed
+         * <strong>example:</strong>
+         * <p>{&quot;interval&quot;:1,&quot;planType&quot;:&quot;daily&quot;,&quot;startTime&quot;:&quot;23:30:00&quot;}</p>
          */
-        public Builder incPlan(java.util.Map < String, ? > incPlan) {
+        public Builder incPlan(java.util.Map<String, ?> incPlan) {
             String incPlanShrink = shrink(incPlan, "IncPlan", "json");
             this.putQueryParameter("IncPlan", incPlanShrink);
             this.incPlan = incPlan;
@@ -217,10 +234,14 @@ public class ModifyUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the anti-ransomware policy.
-         * <p>
+         * <p>The ID of the anti-ransomware policy.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeUniBackupPolicies~~">DescribeUniBackupPolicies</a> operation to query the IDs of anti-ransomware policies.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeUniBackupPolicies](~~DescribeUniBackupPolicies~~) operation to query the IDs of anti-ransomware policies.
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder policyId(Long policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -229,7 +250,10 @@ public class ModifyUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The name of the anti-ransomware policy.
+         * <p>The name of the anti-ransomware policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>databak</p>
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);
@@ -238,11 +262,14 @@ public class ModifyUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The status of the anti-ransomware policy. Valid values:
-         * <p>
+         * <p>The status of the anti-ransomware policy. Valid values:</p>
+         * <ul>
+         * <li><strong>enabled</strong></li>
+         * <li><strong>disabled</strong></li>
+         * </ul>
          * 
-         * *   **enabled**
-         * *   **disabled**
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder policyStatus(String policyStatus) {
             this.putQueryParameter("PolicyStatus", policyStatus);
@@ -251,7 +278,10 @@ public class ModifyUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The retention period of the backup snapshot.
+         * <p>The retention period of the backup snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder retention(Integer retention) {
             this.putQueryParameter("Retention", retention);
@@ -260,7 +290,10 @@ public class ModifyUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The maximum network bandwidth that is allowed during data backup. Unit: bytes.
+         * <p>The maximum network bandwidth that is allowed during data backup. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1048576</p>
          */
         public Builder speedLimiter(Long speedLimiter) {
             this.putQueryParameter("SpeedLimiter", speedLimiter);

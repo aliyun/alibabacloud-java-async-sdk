@@ -1,41 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEcsInstancesRequest} extends {@link RequestModel}
  *
  * <p>ListEcsInstancesRequest</p>
  */
 public class ListEcsInstancesRequest extends Request {
-    @Query
-    @NameInMap("ecsInstanceIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ecsInstanceIds")
     private String ecsInstanceIds;
 
-    @Query
-    @NameInMap("ecsInstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ecsInstanceName")
     private String ecsInstanceName;
 
-    @Query
-    @NameInMap("page")
-    @Validation(maximum = 200, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page")
+    @com.aliyun.core.annotation.Validation(maximum = 200, minimum = 1)
     private Integer page;
 
-    @Query
-    @NameInMap("size")
-    @Validation(maximum = 500, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("size")
+    @com.aliyun.core.annotation.Validation(maximum = 500, minimum = 1)
     private Integer size;
 
-    @Query
-    @NameInMap("tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("tags")
     private String tags;
 
-    @Query
-    @NameInMap("vpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("vpcId")
     private String vpcId;
 
     private ListEcsInstancesRequest(Builder builder) {
@@ -126,7 +126,10 @@ public class ListEcsInstancesRequest extends Request {
         } 
 
         /**
-         * test
+         * <p>test</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;i-bp13y63575oypr9d****&quot;,&quot;i-bp1gyhphjaj73jsr****&quot;]</p>
          */
         public Builder ecsInstanceIds(String ecsInstanceIds) {
             this.putQueryParameter("ecsInstanceIds", ecsInstanceIds);
@@ -135,7 +138,10 @@ public class ListEcsInstancesRequest extends Request {
         }
 
         /**
-         * \[{ "tagKey":"a","tagValue":"b"}]
+         * <p>[{ &quot;tagKey&quot;:&quot;a&quot;,&quot;tagValue&quot;:&quot;b&quot;}]</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder ecsInstanceName(String ecsInstanceName) {
             this.putQueryParameter("ecsInstanceName", ecsInstanceName);
@@ -144,7 +150,10 @@ public class ListEcsInstancesRequest extends Request {
         }
 
         /**
-         * 10
+         * <p>10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -153,7 +162,10 @@ public class ListEcsInstancesRequest extends Request {
         }
 
         /**
-         * \["i-bp13y63575oypr9d\*\*\*\*","i-bp1gyhphjaj73jsr\*\*\*\*"]
+         * <p>[&quot;i-bp13y63575oypr9d****&quot;,&quot;i-bp1gyhphjaj73jsr****&quot;]</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);
@@ -162,7 +174,10 @@ public class ListEcsInstancesRequest extends Request {
         }
 
         /**
-         * vpc-bp16k1dvzxtmagcva\*\*\*\*
+         * <p>vpc-bp16k1dvzxtmagcva****</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{ &quot;tagKey&quot;:&quot;a&quot;,&quot;tagValue&quot;:&quot;b&quot;}]</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("tags", tags);
@@ -171,7 +186,10 @@ public class ListEcsInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp16k1dvzxtmagcva****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("vpcId", vpcId);

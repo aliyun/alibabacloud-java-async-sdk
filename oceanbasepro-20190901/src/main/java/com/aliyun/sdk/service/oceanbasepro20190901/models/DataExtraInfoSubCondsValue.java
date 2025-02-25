@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DataExtraInfoSubCondsValue</p>
  */
 public class DataExtraInfoSubCondsValue extends TeaModel {
-    @NameInMap("TenantName")
+    @com.aliyun.core.annotation.NameInMap("TenantName")
     private String tenantName;
 
-    @NameInMap("Database")
+    @com.aliyun.core.annotation.NameInMap("Database")
     private String database;
 
-    @NameInMap("DestDatabase")
+    @com.aliyun.core.annotation.NameInMap("DestDatabase")
     private String destDatabase;
 
-    @NameInMap("TableName")
+    @com.aliyun.core.annotation.NameInMap("TableName")
     private String tableName;
 
-    @NameInMap("DestName")
+    @com.aliyun.core.annotation.NameInMap("DestName")
     private String destName;
 
-    @NameInMap("WhereClause")
+    @com.aliyun.core.annotation.NameInMap("WhereClause")
     private String whereClause;
 
-    @NameInMap("FilterColumns")
+    @com.aliyun.core.annotation.NameInMap("FilterColumns")
     private java.util.List < String > filterColumns;
 
-    @NameInMap("ShardColumns")
+    @com.aliyun.core.annotation.NameInMap("ShardColumns")
     private java.util.List < String > shardColumns;
 
-    @NameInMap("LogicTableId")
+    @com.aliyun.core.annotation.NameInMap("LogicTableId")
     private String logicTableId;
 
-    @NameInMap("SourceEndpointId")
+    @com.aliyun.core.annotation.NameInMap("SourceEndpointId")
     private String sourceEndpointId;
 
-    @NameInMap("SourceClientId")
+    @com.aliyun.core.annotation.NameInMap("SourceClientId")
     private String sourceClientId;
 
     private DataExtraInfoSubCondsValue(Builder builder) {

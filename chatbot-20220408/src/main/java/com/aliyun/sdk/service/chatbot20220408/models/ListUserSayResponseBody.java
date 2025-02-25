@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserSayResponseBody} extends {@link TeaModel}
  *
  * <p>ListUserSayResponseBody</p>
  */
 public class ListUserSayResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("UserSays")
+    @com.aliyun.core.annotation.NameInMap("UserSays")
     private java.util.List < UserSays> userSays;
 
     private ListUserSayResponseBody(Builder builder) {
@@ -131,14 +131,20 @@ public class ListUserSayResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUserSayResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserSayResponseBody</p>
+     */
     public static class SlotInfos extends TeaModel {
-        @NameInMap("EndIndex")
+        @com.aliyun.core.annotation.NameInMap("EndIndex")
         private Integer endIndex;
 
-        @NameInMap("SlotId")
+        @com.aliyun.core.annotation.NameInMap("SlotId")
         private String slotId;
 
-        @NameInMap("StartIndex")
+        @com.aliyun.core.annotation.NameInMap("StartIndex")
         private Integer startIndex;
 
         private SlotInfos(Builder builder) {
@@ -212,23 +218,29 @@ public class ListUserSayResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUserSayResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserSayResponseBody</p>
+     */
     public static class UserSays extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("IntentId")
+        @com.aliyun.core.annotation.NameInMap("IntentId")
         private Long intentId;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("SlotInfos")
+        @com.aliyun.core.annotation.NameInMap("SlotInfos")
         private java.util.List < SlotInfos> slotInfos;
 
-        @NameInMap("UserSayId")
+        @com.aliyun.core.annotation.NameInMap("UserSayId")
         private Long userSayId;
 
         private UserSays(Builder builder) {

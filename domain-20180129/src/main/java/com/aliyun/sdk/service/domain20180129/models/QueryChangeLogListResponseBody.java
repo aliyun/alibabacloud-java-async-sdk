@@ -1,42 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryChangeLogListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryChangeLogListResponseBody</p>
  */
 public class QueryChangeLogListResponseBody extends TeaModel {
-    @NameInMap("CurrentPageNum")
+    @com.aliyun.core.annotation.NameInMap("CurrentPageNum")
     private Integer currentPageNum;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("NextPage")
+    @com.aliyun.core.annotation.NameInMap("NextPage")
     private Boolean nextPage;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("PrePage")
+    @com.aliyun.core.annotation.NameInMap("PrePage")
     private Boolean prePage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultLimit")
+    @com.aliyun.core.annotation.NameInMap("ResultLimit")
     private Boolean resultLimit;
 
-    @NameInMap("TotalItemNum")
+    @com.aliyun.core.annotation.NameInMap("TotalItemNum")
     private Integer totalItemNum;
 
-    @NameInMap("TotalPageNum")
+    @com.aliyun.core.annotation.NameInMap("TotalPageNum")
     private Integer totalPageNum;
 
     private QueryChangeLogListResponseBody(Builder builder) {
@@ -211,23 +211,29 @@ public class QueryChangeLogListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryChangeLogListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryChangeLogListResponseBody</p>
+     */
     public static class ChangeLog extends TeaModel {
-        @NameInMap("Details")
+        @com.aliyun.core.annotation.NameInMap("Details")
         private String details;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("Operation")
+        @com.aliyun.core.annotation.NameInMap("Operation")
         private String operation;
 
-        @NameInMap("OperationIPAddress")
+        @com.aliyun.core.annotation.NameInMap("OperationIPAddress")
         private String operationIPAddress;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private String result;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
         private ChangeLog(Builder builder) {
@@ -352,8 +358,14 @@ public class QueryChangeLogListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryChangeLogListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryChangeLogListResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ChangeLog")
+        @com.aliyun.core.annotation.NameInMap("ChangeLog")
         private java.util.List < ChangeLog> changeLog;
 
         private Data(Builder builder) {

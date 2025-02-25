@@ -1,23 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVaultReplicationRegionsRequest} extends {@link RequestModel}
  *
  * <p>DescribeVaultReplicationRegionsRequest</p>
  */
 public class DescribeVaultReplicationRegionsRequest extends Request {
-    @Query
-    @NameInMap("Token")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Token")
     private String token;
 
-    @Query
-    @NameInMap("VaultId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultId")
+    @Deprecated
     private String vaultId;
 
     private DescribeVaultReplicationRegionsRequest(Builder builder) {
@@ -61,14 +67,17 @@ public class DescribeVaultReplicationRegionsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVaultReplicationRegionsRequest response) {
-            super(response);
-            this.token = response.token;
-            this.vaultId = response.vaultId;
+        private Builder(DescribeVaultReplicationRegionsRequest request) {
+            super(request);
+            this.token = request.token;
+            this.vaultId = request.vaultId;
         } 
 
         /**
-         * Token.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01W3ZZOQ</p>
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);
@@ -77,7 +86,10 @@ public class DescribeVaultReplicationRegionsRequest extends Request {
         }
 
         /**
-         * VaultId.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v-00030j3c******sn</p>
          */
         public Builder vaultId(String vaultId) {
             this.putQueryParameter("VaultId", vaultId);

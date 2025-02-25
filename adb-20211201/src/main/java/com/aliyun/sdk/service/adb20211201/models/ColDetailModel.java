@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ColDetailModel} extends {@link TeaModel}
  *
  * <p>ColDetailModel</p>
  */
 public class ColDetailModel extends TeaModel {
-    @NameInMap("ColumnName")
+    @com.aliyun.core.annotation.NameInMap("ColumnName")
     private String columnName;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("DistributeKey")
+    @com.aliyun.core.annotation.NameInMap("DistributeKey")
     private Boolean distributeKey;
 
-    @NameInMap("Nullable")
+    @com.aliyun.core.annotation.NameInMap("Nullable")
     private Boolean nullable;
 
-    @NameInMap("PartitionKey")
+    @com.aliyun.core.annotation.NameInMap("PartitionKey")
     private Boolean partitionKey;
 
-    @NameInMap("PrimaryKey")
+    @com.aliyun.core.annotation.NameInMap("PrimaryKey")
     private Boolean primaryKey;
 
-    @NameInMap("SchemaName")
+    @com.aliyun.core.annotation.NameInMap("SchemaName")
     private String schemaName;
 
-    @NameInMap("TableName")
+    @com.aliyun.core.annotation.NameInMap("TableName")
     private String tableName;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @NameInMap("UpdateTime")
+    @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
     private ColDetailModel(Builder builder) {

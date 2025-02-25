@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AssociateAdditionalCertificatesWithListenerRequest</p>
  */
 public class AssociateAdditionalCertificatesWithListenerRequest extends Request {
-    @Query
-    @NameInMap("AcceleratorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceleratorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String acceleratorId;
 
-    @Query
-    @NameInMap("Certificates")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Certificates")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Certificates> certificates;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("ListenerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String listenerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private AssociateAdditionalCertificatesWithListenerRequest(Builder builder) {
@@ -126,7 +125,7 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends Request 
          * The additional certificates.
          * <p>
          * 
-         * You can specify up to 10 certificate IDs in each request.
+         * You can specify up to 10 certificates in each request.
          */
         public Builder certificates(java.util.List < Certificates> certificates) {
             this.putQueryParameter("Certificates", certificates);
@@ -140,7 +139,7 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends Request 
          * 
          * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          * 
-         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -174,12 +173,12 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends Request 
     } 
 
     public static class Certificates extends TeaModel {
-        @NameInMap("Domain")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Domain")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String domain;
 
-        @NameInMap("Id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String id;
 
         private Certificates(Builder builder) {
@@ -214,7 +213,7 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends Request 
             private String id; 
 
             /**
-             * The domain name specified by the certificate. You can associate each domain name with only one additional certificate.
+             * The domain name that is specified by the certificate. You can associate each domain name with only one additional certificate.
              * <p>
              * 
              * You can specify up to 10 domain names in each request.
@@ -225,7 +224,7 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends Request 
             }
 
             /**
-             * The certificate ID. Only server certificates are supported.
+             * The ID of the certificate. Only server certificates are supported.
              * <p>
              * 
              * You can specify up to 10 certificate IDs in each request.

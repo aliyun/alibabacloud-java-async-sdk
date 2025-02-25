@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSqlConcurrencyControlKeywordsFromSqlTextResponseBody} extends {@link TeaModel}
  *
  * <p>GetSqlConcurrencyControlKeywordsFromSqlTextResponseBody</p>
  */
 public class GetSqlConcurrencyControlKeywordsFromSqlTextResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private GetSqlConcurrencyControlKeywordsFromSqlTextResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class GetSqlConcurrencyControlKeywordsFromSqlTextResponseBody extends Tea
         private String success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,10 @@ public class GetSqlConcurrencyControlKeywordsFromSqlTextResponseBody extends Tea
         }
 
         /**
-         * The throttling keyword string that was generated based on the SQL statement.
+         * <p>The throttling keyword string that was generated based on the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT<del>FROM</del>test<del>where</del>name</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -102,10 +113,13 @@ public class GetSqlConcurrencyControlKeywordsFromSqlTextResponseBody extends Tea
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +127,10 @@ public class GetSqlConcurrencyControlKeywordsFromSqlTextResponseBody extends Tea
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30A643F5-D7A6-55F5-AB75-DF501427****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,11 +138,14 @@ public class GetSqlConcurrencyControlKeywordsFromSqlTextResponseBody extends Tea
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

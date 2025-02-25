@@ -1,29 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteExecutionsRequest} extends {@link RequestModel}
  *
  * <p>DeleteExecutionsRequest</p>
  */
 public class DeleteExecutionsRequest extends Request {
-    @Query
-    @NameInMap("ExecutionIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExecutionIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String executionIds;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Force")
+    private Boolean force;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private DeleteExecutionsRequest(Builder builder) {
         super(builder);
         this.executionIds = builder.executionIds;
+        this.force = builder.force;
         this.regionId = builder.regionId;
     }
 
@@ -48,6 +58,13 @@ public class DeleteExecutionsRequest extends Request {
     }
 
     /**
+     * @return force
+     */
+    public Boolean getForce() {
+        return this.force;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -56,6 +73,7 @@ public class DeleteExecutionsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteExecutionsRequest, Builder> {
         private String executionIds; 
+        private Boolean force; 
         private String regionId; 
 
         private Builder() {
@@ -65,14 +83,17 @@ public class DeleteExecutionsRequest extends Request {
         private Builder(DeleteExecutionsRequest request) {
             super(request);
             this.executionIds = request.executionIds;
+            this.force = request.force;
             this.regionId = request.regionId;
         } 
 
         /**
-         * The execution IDs.
-         * <p>
+         * <p>The execution IDs.</p>
+         * <p>You can specify multiple execution IDs in a JSON array in the format of <code>[&quot;xxxxxxxxx&quot;, &quot;yyyyyyyyy&quot;, ... &quot;zzzzzzzzz&quot;]</code>. You can specify up to 100 execution IDs at a time. Separate multiple IDs with commas (,).</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can specify multiple execution IDs in a JSON array in the format of `["xxxxxxxxx", "yyyyyyyyy", ... "zzzzzzzzz"]`. You can specify up to 100 execution IDs at a time. Separate multiple IDs with commas (,).
+         * <strong>example:</strong>
+         * <p>[&quot;exec-xxx&quot;]</p>
          */
         public Builder executionIds(String executionIds) {
             this.putQueryParameter("ExecutionIds", executionIds);
@@ -81,7 +102,22 @@ public class DeleteExecutionsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>Whether to force delete the running task, the default value is false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder force(Boolean force) {
+            this.putQueryParameter("Force", force);
+            this.force = force;
+            return this;
+        }
+
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

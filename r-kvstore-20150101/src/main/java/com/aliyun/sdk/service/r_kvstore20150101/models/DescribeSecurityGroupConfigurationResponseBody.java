@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSecurityGroupConfigurationResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSecurityGroupConfigurationResponseBody</p>
  */
 public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeSecurityGroupConfigurationResponseBody(Builder builder) {
@@ -50,11 +50,7 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The network type of the security group. Valid values:
-         * <p>
-         * 
-         * *   **classic**: the classic network.
-         * *   **vpc**: the virtual private cloud (VPC).
+         * <p>The list of security groups.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -62,7 +58,10 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the security group.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>981C0D6A-D9DD-466C-92DA-F29DF755****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,14 +74,20 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSecurityGroupConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityGroupConfigurationResponseBody</p>
+     */
     public static class EcsSecurityGroupRelation extends TeaModel {
-        @NameInMap("NetType")
+        @com.aliyun.core.annotation.NameInMap("NetType")
         private String netType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
         private EcsSecurityGroupRelation(Builder builder) {
@@ -126,11 +131,14 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
             private String securityGroupId; 
 
             /**
-             * The network type of the ECS security group. Valid values:
-             * <p>
+             * <p>The network type of the security group. Valid values:</p>
+             * <ul>
+             * <li><strong>classic</strong>: the classic network.</li>
+             * <li><strong>vpc</strong>: the virtual private cloud (VPC).</li>
+             * </ul>
              * 
-             * *   **vpc**
-             * *   **classic**
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -138,7 +146,10 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * Queries the security groups that are included in the whitelist of an ApsaraDB for Redis instance.
+             * <p>The ID of the region where the instance is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -146,7 +157,10 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The operation that you want to perform. Set the value to **DescribeSecurityGroupConfiguration**.
+             * <p>The ID of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-bp14p9y07ns3gwq****</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -160,8 +174,14 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSecurityGroupConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityGroupConfigurationResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("EcsSecurityGroupRelation")
+        @com.aliyun.core.annotation.NameInMap("EcsSecurityGroupRelation")
         private java.util.List < EcsSecurityGroupRelation> ecsSecurityGroupRelation;
 
         private Items(Builder builder) {

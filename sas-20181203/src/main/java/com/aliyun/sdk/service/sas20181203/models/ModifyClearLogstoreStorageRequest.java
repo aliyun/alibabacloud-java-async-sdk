@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyClearLogstoreStorageRequest} extends {@link RequestModel}
  *
  * <p>ModifyClearLogstoreStorageRequest</p>
  */
 public class ModifyClearLogstoreStorageRequest extends Request {
-    @Query
-    @NameInMap("From")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("From")
     private String from;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("UserLogStore")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserLogStore")
     private String userLogStore;
 
-    @Query
-    @NameInMap("UserProject")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserProject")
     private String userProject;
 
     private ModifyClearLogstoreStorageRequest(Builder builder) {
@@ -96,7 +101,10 @@ public class ModifyClearLogstoreStorageRequest extends Request {
         } 
 
         /**
-         * From.
+         * <p>The ID of the request source. Set the value to <strong>sas</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas</p>
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -105,7 +113,14 @@ public class ModifyClearLogstoreStorageRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -114,7 +129,10 @@ public class ModifyClearLogstoreStorageRequest extends Request {
         }
 
         /**
-         * UserLogStore.
+         * <p>The name of the Logstore that stores logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas_sls_storage</p>
          */
         public Builder userLogStore(String userLogStore) {
             this.putQueryParameter("UserLogStore", userLogStore);
@@ -123,7 +141,10 @@ public class ModifyClearLogstoreStorageRequest extends Request {
         }
 
         /**
-         * UserProject.
+         * <p>The name of the project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas-log-1234(uid)-cn-hangzhou</p>
          */
         public Builder userProject(String userProject) {
             this.putQueryParameter("UserProject", userProject);

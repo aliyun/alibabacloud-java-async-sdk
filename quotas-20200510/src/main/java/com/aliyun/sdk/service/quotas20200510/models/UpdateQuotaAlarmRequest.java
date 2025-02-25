@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateQuotaAlarmRequest</p>
  */
 public class UpdateQuotaAlarmRequest extends Request {
-    @Body
-    @NameInMap("AlarmId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlarmId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String alarmId;
 
-    @Body
-    @NameInMap("AlarmName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlarmName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String alarmName;
 
-    @Body
-    @NameInMap("Threshold")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Threshold")
     private Float threshold;
 
-    @Body
-    @NameInMap("ThresholdPercent")
-    @Validation(maximum = 100, minimum = 50)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ThresholdPercent")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 50)
     private Float thresholdPercent;
 
-    @Body
-    @NameInMap("ThresholdType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ThresholdType")
     private String thresholdType;
 
-    @Body
-    @NameInMap("WebHook")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WebHook")
     private String webHook;
 
     private UpdateQuotaAlarmRequest(Builder builder) {
@@ -128,6 +127,9 @@ public class UpdateQuotaAlarmRequest extends Request {
 
         /**
          * The ID of the quota alert.
+         * <p>
+         * 
+         * >  You can call the [ListQuotaAlarms](~~440561~~) operation to obtain the ID of a quota alert.
          */
         public Builder alarmId(String alarmId) {
             this.putBodyParameter("AlarmId", alarmId);
@@ -137,6 +139,9 @@ public class UpdateQuotaAlarmRequest extends Request {
 
         /**
          * The name of the quota alert.
+         * <p>
+         * 
+         * >  You can call the [ListQuotaAlarms](~~440561~~) operation to obtain the name of a quota alert.
          */
         public Builder alarmName(String alarmName) {
             this.putBodyParameter("AlarmName", alarmName);
@@ -163,10 +168,10 @@ public class UpdateQuotaAlarmRequest extends Request {
          * The percentage of the alert threshold. Valid values:
          * <p>
          * 
-         * *   If you set the `ThresholdType` parameter to `used`, you will receive an alert notification when the used quota is greater than or equal to the preset percentage of the alert threshold. Value range: (50%, 100%].
-         * *   If you set the `ThresholdType` parameter to `usable`, you will receive an alert notification when the available quota is less than or equal to the preset percentage of the alert threshold. Value range: (0%, 50%].
+         * *   If you set `ThresholdType` to `used`, you receive an alert notification when the used quota is greater than or equal to the preset percentage of the alert threshold. Value range: (50%, 100%].
+         * *   If you set `ThresholdType` to `usable`, you receive an alert notification when the available quota is less than or equal to the preset percentage of the alert threshold. Value range: (0%, 50%].
          * 
-         * > You must set one of the Threshold and ThresholdPercent parameters.
+         * >  You must set one of Threshold and ThresholdPercent.
          */
         public Builder thresholdPercent(Float thresholdPercent) {
             this.putBodyParameter("ThresholdPercent", thresholdPercent);
@@ -178,7 +183,7 @@ public class UpdateQuotaAlarmRequest extends Request {
          * The type of the quota alert. Valid values:
          * <p>
          * 
-         * *   used: The alert is created for the used quota.
+         * *   used (default): The alert is created for the used quota.
          * *   usable: The alert is created for the available quota.
          */
         public Builder thresholdType(String thresholdType) {

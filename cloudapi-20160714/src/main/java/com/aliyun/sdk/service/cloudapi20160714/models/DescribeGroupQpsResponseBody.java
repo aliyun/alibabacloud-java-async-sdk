@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGroupQpsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeGroupQpsResponseBody</p>
  */
 public class DescribeGroupQpsResponseBody extends TeaModel {
-    @NameInMap("GroupQps")
+    @com.aliyun.core.annotation.NameInMap("GroupQps")
     private GroupQps groupQps;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeGroupQpsResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeGroupQpsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The number of requests directed to the API group.
+         * <p>The number of requests directed to the API group.</p>
          */
         public Builder groupQps(GroupQps groupQps) {
             this.groupQps = groupQps;
@@ -58,7 +63,10 @@ public class DescribeGroupQpsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D6E46F10-F26C-4AA0-BB69-FE2743D9AE62</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class DescribeGroupQpsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeGroupQpsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGroupQpsResponseBody</p>
+     */
     public static class MonitorItem extends TeaModel {
-        @NameInMap("ItemTime")
+        @com.aliyun.core.annotation.NameInMap("ItemTime")
         private String itemTime;
 
-        @NameInMap("ItemValue")
+        @com.aliyun.core.annotation.NameInMap("ItemValue")
         private String itemValue;
 
         private MonitorItem(Builder builder) {
@@ -110,7 +124,10 @@ public class DescribeGroupQpsResponseBody extends TeaModel {
             private String itemValue; 
 
             /**
-             * The point in time.
+             * <p>The point in time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-08-02T09:15:00Z</p>
              */
             public Builder itemTime(String itemTime) {
                 this.itemTime = itemTime;
@@ -118,7 +135,10 @@ public class DescribeGroupQpsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of requests at the specified point in time.
+             * <p>The number of requests at the specified point in time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17</p>
              */
             public Builder itemValue(String itemValue) {
                 this.itemValue = itemValue;
@@ -132,9 +152,15 @@ public class DescribeGroupQpsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGroupQpsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGroupQpsResponseBody</p>
+     */
     public static class GroupQps extends TeaModel {
-        @NameInMap("MonitorItem")
-        private java.util.List < MonitorItem> monitorItem;
+        @com.aliyun.core.annotation.NameInMap("MonitorItem")
+        private java.util.List<MonitorItem> monitorItem;
 
         private GroupQps(Builder builder) {
             this.monitorItem = builder.monitorItem;
@@ -151,17 +177,17 @@ public class DescribeGroupQpsResponseBody extends TeaModel {
         /**
          * @return monitorItem
          */
-        public java.util.List < MonitorItem> getMonitorItem() {
+        public java.util.List<MonitorItem> getMonitorItem() {
             return this.monitorItem;
         }
 
         public static final class Builder {
-            private java.util.List < MonitorItem> monitorItem; 
+            private java.util.List<MonitorItem> monitorItem; 
 
             /**
              * MonitorItem.
              */
-            public Builder monitorItem(java.util.List < MonitorItem> monitorItem) {
+            public Builder monitorItem(java.util.List<MonitorItem> monitorItem) {
                 this.monitorItem = monitorItem;
                 return this;
             }

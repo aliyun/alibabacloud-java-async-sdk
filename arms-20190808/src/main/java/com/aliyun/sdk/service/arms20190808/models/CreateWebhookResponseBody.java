@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateWebhookResponseBody} extends {@link TeaModel}
  *
  * <p>CreateWebhookResponseBody</p>
  */
 public class CreateWebhookResponseBody extends TeaModel {
-    @NameInMap("ContactId")
+    @com.aliyun.core.annotation.NameInMap("ContactId")
     private String contactId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateWebhookResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateWebhookResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the contact for webhook alerts.
+         * <p>The ID of the contact for webhook alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48716</p>
          */
         public Builder contactId(String contactId) {
             this.contactId = contactId;
@@ -58,7 +66,10 @@ public class CreateWebhookResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16AF921B-8187-489F-9913-43C808B4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

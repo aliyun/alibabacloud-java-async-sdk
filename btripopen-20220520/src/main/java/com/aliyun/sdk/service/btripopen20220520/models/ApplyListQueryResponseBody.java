@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyListQueryResponseBody} extends {@link TeaModel}
  *
  * <p>ApplyListQueryResponseBody</p>
  */
 public class ApplyListQueryResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module_list")
-    private java.util.List < ModuleList> moduleList;
+    @com.aliyun.core.annotation.NameInMap("module_list")
+    private java.util.List<ModuleList> moduleList;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private ApplyListQueryResponseBody(Builder builder) {
@@ -64,7 +69,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
     /**
      * @return moduleList
      */
-    public java.util.List < ModuleList> getModuleList() {
+    public java.util.List<ModuleList> getModuleList() {
         return this.moduleList;
     }
 
@@ -92,7 +97,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private String message; 
-        private java.util.List < ModuleList> moduleList; 
+        private java.util.List<ModuleList> moduleList; 
         private String requestId; 
         private Boolean success; 
         private String traceId; 
@@ -116,7 +121,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
         /**
          * module_list.
          */
-        public Builder moduleList(java.util.List < ModuleList> moduleList) {
+        public Builder moduleList(java.util.List<ModuleList> moduleList) {
             this.moduleList = moduleList;
             return this;
         }
@@ -151,26 +156,32 @@ public class ApplyListQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ApplyListQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ApplyListQueryResponseBody</p>
+     */
     public static class ApproverList extends TeaModel {
-        @NameInMap("note")
+        @com.aliyun.core.annotation.NameInMap("note")
         private String note;
 
-        @NameInMap("operate_time")
+        @com.aliyun.core.annotation.NameInMap("operate_time")
         private String operateTime;
 
-        @NameInMap("order")
+        @com.aliyun.core.annotation.NameInMap("order")
         private Integer order;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("status_desc")
+        @com.aliyun.core.annotation.NameInMap("status_desc")
         private String statusDesc;
 
-        @NameInMap("user_id")
+        @com.aliyun.core.annotation.NameInMap("user_id")
         private String userId;
 
-        @NameInMap("user_name")
+        @com.aliyun.core.annotation.NameInMap("user_name")
         private String userName;
 
         private ApproverList(Builder builder) {
@@ -312,11 +323,17 @@ public class ApplyListQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyListQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ApplyListQueryResponseBody</p>
+     */
     public static class CarRule extends TeaModel {
-        @NameInMap("scenario_template_id")
+        @com.aliyun.core.annotation.NameInMap("scenario_template_id")
         private String scenarioTemplateId;
 
-        @NameInMap("scenario_template_name")
+        @com.aliyun.core.annotation.NameInMap("scenario_template_name")
         private String scenarioTemplateName;
 
         private CarRule(Builder builder) {
@@ -373,11 +390,53 @@ public class ApplyListQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyListQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ApplyListQueryResponseBody</p>
+     */
     public static class ExternalTravelerList extends TeaModel {
-        @NameInMap("user_name")
+        @com.aliyun.core.annotation.NameInMap("attribute")
+        private String attribute;
+
+        @com.aliyun.core.annotation.NameInMap("cost_center_name")
+        private String costCenterName;
+
+        @com.aliyun.core.annotation.NameInMap("depart_id")
+        private String departId;
+
+        @com.aliyun.core.annotation.NameInMap("external_user_id")
+        private String externalUserId;
+
+        @com.aliyun.core.annotation.NameInMap("invoice_name")
+        private String invoiceName;
+
+        @com.aliyun.core.annotation.NameInMap("payment_department_name")
+        private String paymentDepartmentName;
+
+        @com.aliyun.core.annotation.NameInMap("project_code")
+        private String projectCode;
+
+        @com.aliyun.core.annotation.NameInMap("project_title")
+        private String projectTitle;
+
+        @com.aliyun.core.annotation.NameInMap("thirdpart_depart_id")
+        private String thirdpartDepartId;
+
+        @com.aliyun.core.annotation.NameInMap("user_name")
         private String userName;
 
         private ExternalTravelerList(Builder builder) {
+            this.attribute = builder.attribute;
+            this.costCenterName = builder.costCenterName;
+            this.departId = builder.departId;
+            this.externalUserId = builder.externalUserId;
+            this.invoiceName = builder.invoiceName;
+            this.paymentDepartmentName = builder.paymentDepartmentName;
+            this.projectCode = builder.projectCode;
+            this.projectTitle = builder.projectTitle;
+            this.thirdpartDepartId = builder.thirdpartDepartId;
             this.userName = builder.userName;
         }
 
@@ -390,6 +449,69 @@ public class ApplyListQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return attribute
+         */
+        public String getAttribute() {
+            return this.attribute;
+        }
+
+        /**
+         * @return costCenterName
+         */
+        public String getCostCenterName() {
+            return this.costCenterName;
+        }
+
+        /**
+         * @return departId
+         */
+        public String getDepartId() {
+            return this.departId;
+        }
+
+        /**
+         * @return externalUserId
+         */
+        public String getExternalUserId() {
+            return this.externalUserId;
+        }
+
+        /**
+         * @return invoiceName
+         */
+        public String getInvoiceName() {
+            return this.invoiceName;
+        }
+
+        /**
+         * @return paymentDepartmentName
+         */
+        public String getPaymentDepartmentName() {
+            return this.paymentDepartmentName;
+        }
+
+        /**
+         * @return projectCode
+         */
+        public String getProjectCode() {
+            return this.projectCode;
+        }
+
+        /**
+         * @return projectTitle
+         */
+        public String getProjectTitle() {
+            return this.projectTitle;
+        }
+
+        /**
+         * @return thirdpartDepartId
+         */
+        public String getThirdpartDepartId() {
+            return this.thirdpartDepartId;
+        }
+
+        /**
          * @return userName
          */
         public String getUserName() {
@@ -397,7 +519,88 @@ public class ApplyListQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String attribute; 
+            private String costCenterName; 
+            private String departId; 
+            private String externalUserId; 
+            private String invoiceName; 
+            private String paymentDepartmentName; 
+            private String projectCode; 
+            private String projectTitle; 
+            private String thirdpartDepartId; 
             private String userName; 
+
+            /**
+             * attribute.
+             */
+            public Builder attribute(String attribute) {
+                this.attribute = attribute;
+                return this;
+            }
+
+            /**
+             * cost_center_name.
+             */
+            public Builder costCenterName(String costCenterName) {
+                this.costCenterName = costCenterName;
+                return this;
+            }
+
+            /**
+             * depart_id.
+             */
+            public Builder departId(String departId) {
+                this.departId = departId;
+                return this;
+            }
+
+            /**
+             * external_user_id.
+             */
+            public Builder externalUserId(String externalUserId) {
+                this.externalUserId = externalUserId;
+                return this;
+            }
+
+            /**
+             * invoice_name.
+             */
+            public Builder invoiceName(String invoiceName) {
+                this.invoiceName = invoiceName;
+                return this;
+            }
+
+            /**
+             * payment_department_name.
+             */
+            public Builder paymentDepartmentName(String paymentDepartmentName) {
+                this.paymentDepartmentName = paymentDepartmentName;
+                return this;
+            }
+
+            /**
+             * project_code.
+             */
+            public Builder projectCode(String projectCode) {
+                this.projectCode = projectCode;
+                return this;
+            }
+
+            /**
+             * project_title.
+             */
+            public Builder projectTitle(String projectTitle) {
+                this.projectTitle = projectTitle;
+                return this;
+            }
+
+            /**
+             * thirdpart_depart_id.
+             */
+            public Builder thirdpartDepartId(String thirdpartDepartId) {
+                this.thirdpartDepartId = thirdpartDepartId;
+                return this;
+            }
 
             /**
              * user_name.
@@ -414,41 +617,53 @@ public class ApplyListQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyListQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ApplyListQueryResponseBody</p>
+     */
     public static class ItineraryList extends TeaModel {
-        @NameInMap("arr_city")
+        @com.aliyun.core.annotation.NameInMap("arr_city")
         private String arrCity;
 
-        @NameInMap("arr_date")
+        @com.aliyun.core.annotation.NameInMap("arr_date")
         private String arrDate;
 
-        @NameInMap("cost_center_name")
+        @com.aliyun.core.annotation.NameInMap("cost_center_name")
         private String costCenterName;
 
-        @NameInMap("dep_city")
+        @com.aliyun.core.annotation.NameInMap("dep_city")
         private String depCity;
 
-        @NameInMap("dep_date")
+        @com.aliyun.core.annotation.NameInMap("dep_date")
         private String depDate;
 
-        @NameInMap("invoice_name")
+        @com.aliyun.core.annotation.NameInMap("invoice_name")
         private String invoiceName;
 
-        @NameInMap("itinerary_id")
+        @com.aliyun.core.annotation.NameInMap("itinerary_id")
         private String itineraryId;
 
-        @NameInMap("project_code")
+        @com.aliyun.core.annotation.NameInMap("project_code")
         private String projectCode;
 
-        @NameInMap("project_title")
+        @com.aliyun.core.annotation.NameInMap("project_title")
         private String projectTitle;
 
-        @NameInMap("thirdpart_itinerary_id")
+        @com.aliyun.core.annotation.NameInMap("thirdpart_cost_center_id")
+        private String thirdpartCostCenterId;
+
+        @com.aliyun.core.annotation.NameInMap("thirdpart_invoice_id")
+        private String thirdpartInvoiceId;
+
+        @com.aliyun.core.annotation.NameInMap("thirdpart_itinerary_id")
         private String thirdpartItineraryId;
 
-        @NameInMap("traffic_type")
+        @com.aliyun.core.annotation.NameInMap("traffic_type")
         private Integer trafficType;
 
-        @NameInMap("trip_way")
+        @com.aliyun.core.annotation.NameInMap("trip_way")
         private Integer tripWay;
 
         private ItineraryList(Builder builder) {
@@ -461,6 +676,8 @@ public class ApplyListQueryResponseBody extends TeaModel {
             this.itineraryId = builder.itineraryId;
             this.projectCode = builder.projectCode;
             this.projectTitle = builder.projectTitle;
+            this.thirdpartCostCenterId = builder.thirdpartCostCenterId;
+            this.thirdpartInvoiceId = builder.thirdpartInvoiceId;
             this.thirdpartItineraryId = builder.thirdpartItineraryId;
             this.trafficType = builder.trafficType;
             this.tripWay = builder.tripWay;
@@ -538,6 +755,20 @@ public class ApplyListQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return thirdpartCostCenterId
+         */
+        public String getThirdpartCostCenterId() {
+            return this.thirdpartCostCenterId;
+        }
+
+        /**
+         * @return thirdpartInvoiceId
+         */
+        public String getThirdpartInvoiceId() {
+            return this.thirdpartInvoiceId;
+        }
+
+        /**
          * @return thirdpartItineraryId
          */
         public String getThirdpartItineraryId() {
@@ -568,6 +799,8 @@ public class ApplyListQueryResponseBody extends TeaModel {
             private String itineraryId; 
             private String projectCode; 
             private String projectTitle; 
+            private String thirdpartCostCenterId; 
+            private String thirdpartInvoiceId; 
             private String thirdpartItineraryId; 
             private Integer trafficType; 
             private Integer tripWay; 
@@ -645,6 +878,22 @@ public class ApplyListQueryResponseBody extends TeaModel {
             }
 
             /**
+             * thirdpart_cost_center_id.
+             */
+            public Builder thirdpartCostCenterId(String thirdpartCostCenterId) {
+                this.thirdpartCostCenterId = thirdpartCostCenterId;
+                return this;
+            }
+
+            /**
+             * thirdpart_invoice_id.
+             */
+            public Builder thirdpartInvoiceId(String thirdpartInvoiceId) {
+                this.thirdpartInvoiceId = thirdpartInvoiceId;
+                return this;
+            }
+
+            /**
              * thirdpart_itinerary_id.
              */
             public Builder thirdpartItineraryId(String thirdpartItineraryId) {
@@ -675,38 +924,50 @@ public class ApplyListQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyListQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ApplyListQueryResponseBody</p>
+     */
     public static class ItinerarySetList extends TeaModel {
-        @NameInMap("arr_date")
+        @com.aliyun.core.annotation.NameInMap("arr_date")
         private String arrDate;
 
-        @NameInMap("city_code_set")
+        @com.aliyun.core.annotation.NameInMap("city_code_set")
         private String cityCodeSet;
 
-        @NameInMap("city_set")
+        @com.aliyun.core.annotation.NameInMap("city_set")
         private String citySet;
 
-        @NameInMap("cost_center_name")
+        @com.aliyun.core.annotation.NameInMap("cost_center_name")
         private String costCenterName;
 
-        @NameInMap("dep_date")
+        @com.aliyun.core.annotation.NameInMap("dep_date")
         private String depDate;
 
-        @NameInMap("invoice_name")
+        @com.aliyun.core.annotation.NameInMap("invoice_name")
         private String invoiceName;
 
-        @NameInMap("itinerary_id")
+        @com.aliyun.core.annotation.NameInMap("itinerary_id")
         private String itineraryId;
 
-        @NameInMap("project_code")
+        @com.aliyun.core.annotation.NameInMap("project_code")
         private String projectCode;
 
-        @NameInMap("project_title")
+        @com.aliyun.core.annotation.NameInMap("project_title")
         private String projectTitle;
 
-        @NameInMap("thirdpart_itinerary_id")
+        @com.aliyun.core.annotation.NameInMap("thirdpart_cost_center_id")
+        private String thirdpartCostCenterId;
+
+        @com.aliyun.core.annotation.NameInMap("thirdpart_invoice_id")
+        private String thirdpartInvoiceId;
+
+        @com.aliyun.core.annotation.NameInMap("thirdpart_itinerary_id")
         private String thirdpartItineraryId;
 
-        @NameInMap("traffic_type")
+        @com.aliyun.core.annotation.NameInMap("traffic_type")
         private Integer trafficType;
 
         private ItinerarySetList(Builder builder) {
@@ -719,6 +980,8 @@ public class ApplyListQueryResponseBody extends TeaModel {
             this.itineraryId = builder.itineraryId;
             this.projectCode = builder.projectCode;
             this.projectTitle = builder.projectTitle;
+            this.thirdpartCostCenterId = builder.thirdpartCostCenterId;
+            this.thirdpartInvoiceId = builder.thirdpartInvoiceId;
             this.thirdpartItineraryId = builder.thirdpartItineraryId;
             this.trafficType = builder.trafficType;
         }
@@ -795,6 +1058,20 @@ public class ApplyListQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return thirdpartCostCenterId
+         */
+        public String getThirdpartCostCenterId() {
+            return this.thirdpartCostCenterId;
+        }
+
+        /**
+         * @return thirdpartInvoiceId
+         */
+        public String getThirdpartInvoiceId() {
+            return this.thirdpartInvoiceId;
+        }
+
+        /**
          * @return thirdpartItineraryId
          */
         public String getThirdpartItineraryId() {
@@ -818,6 +1095,8 @@ public class ApplyListQueryResponseBody extends TeaModel {
             private String itineraryId; 
             private String projectCode; 
             private String projectTitle; 
+            private String thirdpartCostCenterId; 
+            private String thirdpartInvoiceId; 
             private String thirdpartItineraryId; 
             private Integer trafficType; 
 
@@ -894,6 +1173,22 @@ public class ApplyListQueryResponseBody extends TeaModel {
             }
 
             /**
+             * thirdpart_cost_center_id.
+             */
+            public Builder thirdpartCostCenterId(String thirdpartCostCenterId) {
+                this.thirdpartCostCenterId = thirdpartCostCenterId;
+                return this;
+            }
+
+            /**
+             * thirdpart_invoice_id.
+             */
+            public Builder thirdpartInvoiceId(String thirdpartInvoiceId) {
+                this.thirdpartInvoiceId = thirdpartInvoiceId;
+                return this;
+            }
+
+            /**
              * thirdpart_itinerary_id.
              */
             public Builder thirdpartItineraryId(String thirdpartItineraryId) {
@@ -916,11 +1211,17 @@ public class ApplyListQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyListQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ApplyListQueryResponseBody</p>
+     */
     public static class CarCitySet extends TeaModel {
-        @NameInMap("city_code")
+        @com.aliyun.core.annotation.NameInMap("city_code")
         private String cityCode;
 
-        @NameInMap("city_name")
+        @com.aliyun.core.annotation.NameInMap("city_name")
         private String cityName;
 
         private CarCitySet(Builder builder) {
@@ -977,22 +1278,60 @@ public class ApplyListQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyListQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ApplyListQueryResponseBody</p>
+     */
     public static class TravelerList extends TeaModel {
-        @NameInMap("car_city_set")
-        private java.util.List < CarCitySet> carCitySet;
+        @com.aliyun.core.annotation.NameInMap("attribute")
+        private String attribute;
 
-        @NameInMap("job_no")
+        @com.aliyun.core.annotation.NameInMap("car_city_set")
+        private java.util.List<CarCitySet> carCitySet;
+
+        @com.aliyun.core.annotation.NameInMap("cost_center_name")
+        private String costCenterName;
+
+        @com.aliyun.core.annotation.NameInMap("depart_id")
+        private String departId;
+
+        @com.aliyun.core.annotation.NameInMap("invoice_name")
+        private String invoiceName;
+
+        @com.aliyun.core.annotation.NameInMap("job_no")
         private String jobNo;
 
-        @NameInMap("user_id")
+        @com.aliyun.core.annotation.NameInMap("payment_department_name")
+        private String paymentDepartmentName;
+
+        @com.aliyun.core.annotation.NameInMap("project_code")
+        private String projectCode;
+
+        @com.aliyun.core.annotation.NameInMap("project_title")
+        private String projectTitle;
+
+        @com.aliyun.core.annotation.NameInMap("thirdpart_depart_id")
+        private String thirdpartDepartId;
+
+        @com.aliyun.core.annotation.NameInMap("user_id")
         private String userId;
 
-        @NameInMap("user_name")
+        @com.aliyun.core.annotation.NameInMap("user_name")
         private String userName;
 
         private TravelerList(Builder builder) {
+            this.attribute = builder.attribute;
             this.carCitySet = builder.carCitySet;
+            this.costCenterName = builder.costCenterName;
+            this.departId = builder.departId;
+            this.invoiceName = builder.invoiceName;
             this.jobNo = builder.jobNo;
+            this.paymentDepartmentName = builder.paymentDepartmentName;
+            this.projectCode = builder.projectCode;
+            this.projectTitle = builder.projectTitle;
+            this.thirdpartDepartId = builder.thirdpartDepartId;
             this.userId = builder.userId;
             this.userName = builder.userName;
         }
@@ -1006,10 +1345,38 @@ public class ApplyListQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return attribute
+         */
+        public String getAttribute() {
+            return this.attribute;
+        }
+
+        /**
          * @return carCitySet
          */
-        public java.util.List < CarCitySet> getCarCitySet() {
+        public java.util.List<CarCitySet> getCarCitySet() {
             return this.carCitySet;
+        }
+
+        /**
+         * @return costCenterName
+         */
+        public String getCostCenterName() {
+            return this.costCenterName;
+        }
+
+        /**
+         * @return departId
+         */
+        public String getDepartId() {
+            return this.departId;
+        }
+
+        /**
+         * @return invoiceName
+         */
+        public String getInvoiceName() {
+            return this.invoiceName;
         }
 
         /**
@@ -1017,6 +1384,34 @@ public class ApplyListQueryResponseBody extends TeaModel {
          */
         public String getJobNo() {
             return this.jobNo;
+        }
+
+        /**
+         * @return paymentDepartmentName
+         */
+        public String getPaymentDepartmentName() {
+            return this.paymentDepartmentName;
+        }
+
+        /**
+         * @return projectCode
+         */
+        public String getProjectCode() {
+            return this.projectCode;
+        }
+
+        /**
+         * @return projectTitle
+         */
+        public String getProjectTitle() {
+            return this.projectTitle;
+        }
+
+        /**
+         * @return thirdpartDepartId
+         */
+        public String getThirdpartDepartId() {
+            return this.thirdpartDepartId;
         }
 
         /**
@@ -1034,16 +1429,56 @@ public class ApplyListQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < CarCitySet> carCitySet; 
+            private String attribute; 
+            private java.util.List<CarCitySet> carCitySet; 
+            private String costCenterName; 
+            private String departId; 
+            private String invoiceName; 
             private String jobNo; 
+            private String paymentDepartmentName; 
+            private String projectCode; 
+            private String projectTitle; 
+            private String thirdpartDepartId; 
             private String userId; 
             private String userName; 
 
             /**
+             * attribute.
+             */
+            public Builder attribute(String attribute) {
+                this.attribute = attribute;
+                return this;
+            }
+
+            /**
              * car_city_set.
              */
-            public Builder carCitySet(java.util.List < CarCitySet> carCitySet) {
+            public Builder carCitySet(java.util.List<CarCitySet> carCitySet) {
                 this.carCitySet = carCitySet;
+                return this;
+            }
+
+            /**
+             * cost_center_name.
+             */
+            public Builder costCenterName(String costCenterName) {
+                this.costCenterName = costCenterName;
+                return this;
+            }
+
+            /**
+             * depart_id.
+             */
+            public Builder departId(String departId) {
+                this.departId = departId;
+                return this;
+            }
+
+            /**
+             * invoice_name.
+             */
+            public Builder invoiceName(String invoiceName) {
+                this.invoiceName = invoiceName;
                 return this;
             }
 
@@ -1052,6 +1487,38 @@ public class ApplyListQueryResponseBody extends TeaModel {
              */
             public Builder jobNo(String jobNo) {
                 this.jobNo = jobNo;
+                return this;
+            }
+
+            /**
+             * payment_department_name.
+             */
+            public Builder paymentDepartmentName(String paymentDepartmentName) {
+                this.paymentDepartmentName = paymentDepartmentName;
+                return this;
+            }
+
+            /**
+             * project_code.
+             */
+            public Builder projectCode(String projectCode) {
+                this.projectCode = projectCode;
+                return this;
+            }
+
+            /**
+             * project_title.
+             */
+            public Builder projectTitle(String projectTitle) {
+                this.projectTitle = projectTitle;
+                return this;
+            }
+
+            /**
+             * thirdpart_depart_id.
+             */
+            public Builder thirdpartDepartId(String thirdpartDepartId) {
+                this.thirdpartDepartId = thirdpartDepartId;
                 return this;
             }
 
@@ -1078,89 +1545,101 @@ public class ApplyListQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyListQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ApplyListQueryResponseBody</p>
+     */
     public static class ModuleList extends TeaModel {
-        @NameInMap("apply_show_id")
+        @com.aliyun.core.annotation.NameInMap("apply_show_id")
         private String applyShowId;
 
-        @NameInMap("approver_list")
-        private java.util.List < ApproverList> approverList;
+        @com.aliyun.core.annotation.NameInMap("approver_list")
+        private java.util.List<ApproverList> approverList;
 
-        @NameInMap("car_rule")
+        @com.aliyun.core.annotation.NameInMap("car_rule")
         private CarRule carRule;
 
-        @NameInMap("corp_id")
+        @com.aliyun.core.annotation.NameInMap("corp_id")
         private String corpId;
 
-        @NameInMap("corp_name")
+        @com.aliyun.core.annotation.NameInMap("corp_name")
         private String corpName;
 
-        @NameInMap("depart_id")
+        @com.aliyun.core.annotation.NameInMap("depart_id")
         private String departId;
 
-        @NameInMap("depart_name")
+        @com.aliyun.core.annotation.NameInMap("depart_name")
         private String departName;
 
-        @NameInMap("external_traveler_list")
-        private java.util.List < ExternalTravelerList> externalTravelerList;
+        @com.aliyun.core.annotation.NameInMap("external_traveler_list")
+        private java.util.List<ExternalTravelerList> externalTravelerList;
 
-        @NameInMap("flow_code")
+        @com.aliyun.core.annotation.NameInMap("flow_code")
         private String flowCode;
 
-        @NameInMap("gmt_create")
+        @com.aliyun.core.annotation.NameInMap("gmt_create")
         private String gmtCreate;
 
-        @NameInMap("gmt_modified")
+        @com.aliyun.core.annotation.NameInMap("gmt_modified")
         private String gmtModified;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("itinerary_list")
-        private java.util.List < ItineraryList> itineraryList;
+        @com.aliyun.core.annotation.NameInMap("itinerary_list")
+        private java.util.List<ItineraryList> itineraryList;
 
-        @NameInMap("itinerary_rule")
+        @com.aliyun.core.annotation.NameInMap("itinerary_rule")
         private Integer itineraryRule;
 
-        @NameInMap("itinerary_set_list")
-        private java.util.List < ItinerarySetList> itinerarySetList;
+        @com.aliyun.core.annotation.NameInMap("itinerary_set_list")
+        private java.util.List<ItinerarySetList> itinerarySetList;
 
-        @NameInMap("job_no")
+        @com.aliyun.core.annotation.NameInMap("job_no")
         private String jobNo;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("payment_department_id")
+        private String paymentDepartmentId;
+
+        @com.aliyun.core.annotation.NameInMap("payment_department_name")
+        private String paymentDepartmentName;
+
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("status_desc")
+        @com.aliyun.core.annotation.NameInMap("status_desc")
         private String statusDesc;
 
-        @NameInMap("thirdpart_business_id")
+        @com.aliyun.core.annotation.NameInMap("thirdpart_business_id")
         private String thirdpartBusinessId;
 
-        @NameInMap("thirdpart_id")
+        @com.aliyun.core.annotation.NameInMap("thirdpart_id")
         private String thirdpartId;
 
-        @NameInMap("traveler_list")
-        private java.util.List < TravelerList> travelerList;
+        @com.aliyun.core.annotation.NameInMap("traveler_list")
+        private java.util.List<TravelerList> travelerList;
 
-        @NameInMap("trip_cause")
+        @com.aliyun.core.annotation.NameInMap("trip_cause")
         private String tripCause;
 
-        @NameInMap("trip_day")
+        @com.aliyun.core.annotation.NameInMap("trip_day")
         private Integer tripDay;
 
-        @NameInMap("trip_title")
+        @com.aliyun.core.annotation.NameInMap("trip_title")
         private String tripTitle;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private Integer type;
 
-        @NameInMap("union_no")
+        @com.aliyun.core.annotation.NameInMap("union_no")
         private String unionNo;
 
-        @NameInMap("user_id")
+        @com.aliyun.core.annotation.NameInMap("user_id")
         private String userId;
 
-        @NameInMap("user_name")
+        @com.aliyun.core.annotation.NameInMap("user_name")
         private String userName;
 
         private ModuleList(Builder builder) {
@@ -1180,6 +1659,8 @@ public class ApplyListQueryResponseBody extends TeaModel {
             this.itineraryRule = builder.itineraryRule;
             this.itinerarySetList = builder.itinerarySetList;
             this.jobNo = builder.jobNo;
+            this.paymentDepartmentId = builder.paymentDepartmentId;
+            this.paymentDepartmentName = builder.paymentDepartmentName;
             this.status = builder.status;
             this.statusDesc = builder.statusDesc;
             this.thirdpartBusinessId = builder.thirdpartBusinessId;
@@ -1212,7 +1693,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
         /**
          * @return approverList
          */
-        public java.util.List < ApproverList> getApproverList() {
+        public java.util.List<ApproverList> getApproverList() {
             return this.approverList;
         }
 
@@ -1254,7 +1735,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
         /**
          * @return externalTravelerList
          */
-        public java.util.List < ExternalTravelerList> getExternalTravelerList() {
+        public java.util.List<ExternalTravelerList> getExternalTravelerList() {
             return this.externalTravelerList;
         }
 
@@ -1289,7 +1770,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
         /**
          * @return itineraryList
          */
-        public java.util.List < ItineraryList> getItineraryList() {
+        public java.util.List<ItineraryList> getItineraryList() {
             return this.itineraryList;
         }
 
@@ -1303,7 +1784,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
         /**
          * @return itinerarySetList
          */
-        public java.util.List < ItinerarySetList> getItinerarySetList() {
+        public java.util.List<ItinerarySetList> getItinerarySetList() {
             return this.itinerarySetList;
         }
 
@@ -1312,6 +1793,20 @@ public class ApplyListQueryResponseBody extends TeaModel {
          */
         public String getJobNo() {
             return this.jobNo;
+        }
+
+        /**
+         * @return paymentDepartmentId
+         */
+        public String getPaymentDepartmentId() {
+            return this.paymentDepartmentId;
+        }
+
+        /**
+         * @return paymentDepartmentName
+         */
+        public String getPaymentDepartmentName() {
+            return this.paymentDepartmentName;
         }
 
         /**
@@ -1345,7 +1840,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
         /**
          * @return travelerList
          */
-        public java.util.List < TravelerList> getTravelerList() {
+        public java.util.List<TravelerList> getTravelerList() {
             return this.travelerList;
         }
 
@@ -1400,26 +1895,28 @@ public class ApplyListQueryResponseBody extends TeaModel {
 
         public static final class Builder {
             private String applyShowId; 
-            private java.util.List < ApproverList> approverList; 
+            private java.util.List<ApproverList> approverList; 
             private CarRule carRule; 
             private String corpId; 
             private String corpName; 
             private String departId; 
             private String departName; 
-            private java.util.List < ExternalTravelerList> externalTravelerList; 
+            private java.util.List<ExternalTravelerList> externalTravelerList; 
             private String flowCode; 
             private String gmtCreate; 
             private String gmtModified; 
             private Long id; 
-            private java.util.List < ItineraryList> itineraryList; 
+            private java.util.List<ItineraryList> itineraryList; 
             private Integer itineraryRule; 
-            private java.util.List < ItinerarySetList> itinerarySetList; 
+            private java.util.List<ItinerarySetList> itinerarySetList; 
             private String jobNo; 
+            private String paymentDepartmentId; 
+            private String paymentDepartmentName; 
             private Integer status; 
             private String statusDesc; 
             private String thirdpartBusinessId; 
             private String thirdpartId; 
-            private java.util.List < TravelerList> travelerList; 
+            private java.util.List<TravelerList> travelerList; 
             private String tripCause; 
             private Integer tripDay; 
             private String tripTitle; 
@@ -1439,7 +1936,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
             /**
              * approver_list.
              */
-            public Builder approverList(java.util.List < ApproverList> approverList) {
+            public Builder approverList(java.util.List<ApproverList> approverList) {
                 this.approverList = approverList;
                 return this;
             }
@@ -1487,7 +1984,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
             /**
              * external_traveler_list.
              */
-            public Builder externalTravelerList(java.util.List < ExternalTravelerList> externalTravelerList) {
+            public Builder externalTravelerList(java.util.List<ExternalTravelerList> externalTravelerList) {
                 this.externalTravelerList = externalTravelerList;
                 return this;
             }
@@ -1527,7 +2024,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
             /**
              * itinerary_list.
              */
-            public Builder itineraryList(java.util.List < ItineraryList> itineraryList) {
+            public Builder itineraryList(java.util.List<ItineraryList> itineraryList) {
                 this.itineraryList = itineraryList;
                 return this;
             }
@@ -1543,7 +2040,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
             /**
              * itinerary_set_list.
              */
-            public Builder itinerarySetList(java.util.List < ItinerarySetList> itinerarySetList) {
+            public Builder itinerarySetList(java.util.List<ItinerarySetList> itinerarySetList) {
                 this.itinerarySetList = itinerarySetList;
                 return this;
             }
@@ -1553,6 +2050,22 @@ public class ApplyListQueryResponseBody extends TeaModel {
              */
             public Builder jobNo(String jobNo) {
                 this.jobNo = jobNo;
+                return this;
+            }
+
+            /**
+             * payment_department_id.
+             */
+            public Builder paymentDepartmentId(String paymentDepartmentId) {
+                this.paymentDepartmentId = paymentDepartmentId;
+                return this;
+            }
+
+            /**
+             * payment_department_name.
+             */
+            public Builder paymentDepartmentName(String paymentDepartmentName) {
+                this.paymentDepartmentName = paymentDepartmentName;
                 return this;
             }
 
@@ -1591,7 +2104,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
             /**
              * traveler_list.
              */
-            public Builder travelerList(java.util.List < TravelerList> travelerList) {
+            public Builder travelerList(java.util.List<TravelerList> travelerList) {
                 this.travelerList = travelerList;
                 return this;
             }

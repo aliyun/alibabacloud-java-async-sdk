@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ProduceEditingProjectVideoResponseBody} extends {@link TeaModel}
  *
  * <p>ProduceEditingProjectVideoResponseBody</p>
  */
 public class ProduceEditingProjectVideoResponseBody extends TeaModel {
-    @NameInMap("MediaId")
+    @com.aliyun.core.annotation.NameInMap("MediaId")
     private String mediaId;
 
-    @NameInMap("ProjectId")
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
     private String projectId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ProduceEditingProjectVideoResponseBody(Builder builder) {
@@ -62,11 +67,16 @@ public class ProduceEditingProjectVideoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the produced video.
-         * <p>
+         * <p>The ID of the produced video.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is returned for each request.</li>
+         * <li>If a value is returned for this parameter, the video production task is being asynchronously processed.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > *   This parameter is returned for each request.
-         * > *   If a value is returned for this parameter, the video production task is being asynchronously processed.
+         * <strong>example:</strong>
+         * <p>006204a11bb386bb25491f95f****</p>
          */
         public Builder mediaId(String mediaId) {
             this.mediaId = mediaId;
@@ -74,7 +84,10 @@ public class ProduceEditingProjectVideoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the online editing project.
+         * <p>The ID of the online editing project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fb2101bf24b4cb318787dc****</p>
          */
         public Builder projectId(String projectId) {
             this.projectId = projectId;
@@ -82,7 +95,10 @@ public class ProduceEditingProjectVideoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4AF6-D7393642CA58****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,44 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSecretValueResponseBody</p>
  */
 public class GetSecretValueResponseBody extends TeaModel {
-    @NameInMap("AutomaticRotation")
+    @com.aliyun.core.annotation.NameInMap("AutomaticRotation")
     private String automaticRotation;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("ExtendedConfig")
+    @com.aliyun.core.annotation.NameInMap("ExtendedConfig")
     private String extendedConfig;
 
-    @NameInMap("LastRotationDate")
+    @com.aliyun.core.annotation.NameInMap("LastRotationDate")
     private String lastRotationDate;
 
-    @NameInMap("NextRotationDate")
+    @com.aliyun.core.annotation.NameInMap("NextRotationDate")
     private String nextRotationDate;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RotationInterval")
+    @com.aliyun.core.annotation.NameInMap("RotationInterval")
     private String rotationInterval;
 
-    @NameInMap("SecretData")
+    @com.aliyun.core.annotation.NameInMap("SecretData")
     private String secretData;
 
-    @NameInMap("SecretDataType")
+    @com.aliyun.core.annotation.NameInMap("SecretDataType")
     private String secretDataType;
 
-    @NameInMap("SecretName")
+    @com.aliyun.core.annotation.NameInMap("SecretName")
     private String secretName;
 
-    @NameInMap("SecretType")
+    @com.aliyun.core.annotation.NameInMap("SecretType")
     private String secretType;
 
-    @NameInMap("VersionId")
+    @com.aliyun.core.annotation.NameInMap("VersionId")
     private String versionId;
 
-    @NameInMap("VersionStages")
-    private VersionStages versionStages;
+    @com.aliyun.core.annotation.NameInMap("VersionStages")
+    private java.util.List < String > versionStages;
 
     private GetSecretValueResponseBody(Builder builder) {
         this.automaticRotation = builder.automaticRotation;
@@ -162,7 +161,7 @@ public class GetSecretValueResponseBody extends TeaModel {
     /**
      * @return versionStages
      */
-    public VersionStages getVersionStages() {
+    public java.util.List < String > getVersionStages() {
         return this.versionStages;
     }
 
@@ -179,7 +178,7 @@ public class GetSecretValueResponseBody extends TeaModel {
         private String secretName; 
         private String secretType; 
         private String versionId; 
-        private VersionStages versionStages; 
+        private java.util.List < String > versionStages; 
 
         /**
          * Indicates whether automatic rotation is enabled. Valid values:
@@ -323,7 +322,7 @@ public class GetSecretValueResponseBody extends TeaModel {
         /**
          * The stage labels that mark the secret versions.
          */
-        public Builder versionStages(VersionStages versionStages) {
+        public Builder versionStages(java.util.List < String > versionStages) {
             this.versionStages = versionStages;
             return this;
         }
@@ -334,45 +333,4 @@ public class GetSecretValueResponseBody extends TeaModel {
 
     } 
 
-    public static class VersionStages extends TeaModel {
-        @NameInMap("VersionStage")
-        private java.util.List < String > versionStage;
-
-        private VersionStages(Builder builder) {
-            this.versionStage = builder.versionStage;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static VersionStages create() {
-            return builder().build();
-        }
-
-        /**
-         * @return versionStage
-         */
-        public java.util.List < String > getVersionStage() {
-            return this.versionStage;
-        }
-
-        public static final class Builder {
-            private java.util.List < String > versionStage; 
-
-            /**
-             * VersionStage.
-             */
-            public Builder versionStage(java.util.List < String > versionStage) {
-                this.versionStage = versionStage;
-                return this;
-            }
-
-            public VersionStages build() {
-                return new VersionStages(this);
-            } 
-
-        } 
-
-    }
 }

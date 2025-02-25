@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLiveRecordJobResponseBody} extends {@link TeaModel}
  *
  * <p>GetLiveRecordJobResponseBody</p>
  */
 public class GetLiveRecordJobResponseBody extends TeaModel {
-    @NameInMap("RecordJob")
+    @com.aliyun.core.annotation.NameInMap("RecordJob")
     private RecordJob recordJob;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetLiveRecordJobResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 录制任务
+         * <p>The details of the recording job.</p>
          */
         public Builder recordJob(RecordJob recordJob) {
             this.recordJob = recordJob;
@@ -58,7 +63,10 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B57A046C-CE33-5FBB-B57A-D2B89ACF6907</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetLiveRecordJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLiveRecordJobResponseBody</p>
+     */
     public static class RecordOutput extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
-        @NameInMap("Endpoint")
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private RecordOutput(Builder builder) {
@@ -122,7 +136,10 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Bucket.
+             * <p>The bucket name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>imsbucket1</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -130,7 +147,10 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
             }
 
             /**
-             * Endpoint.
+             * <p>The endpoint of the storage service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-cn-shanghai.aliyuncs.com</p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -138,7 +158,15 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the storage address.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>vod</li>
+             * <li>oss</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>oss</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -152,11 +180,17 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetLiveRecordJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLiveRecordJobResponseBody</p>
+     */
     public static class StreamInput extends TeaModel {
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private StreamInput(Builder builder) {
@@ -191,7 +225,10 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * Type.
+             * <p>The type of the live stream. The value can only be rtmp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -199,7 +236,10 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The URL of the live stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp://example.com/app/stream</p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -213,32 +253,38 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetLiveRecordJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLiveRecordJobResponseBody</p>
+     */
     public static class RecordJob extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NotifyUrl")
+        @com.aliyun.core.annotation.NameInMap("NotifyUrl")
         private String notifyUrl;
 
-        @NameInMap("RecordOutput")
+        @com.aliyun.core.annotation.NameInMap("RecordOutput")
         private RecordOutput recordOutput;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StreamInput")
+        @com.aliyun.core.annotation.NameInMap("StreamInput")
         private StreamInput streamInput;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
         private RecordJob(Builder builder) {
@@ -336,7 +382,11 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
             private String templateName; 
 
             /**
-             * 代表创建时间的资源属性字段
+             * <p>The time when the job was created.</p>
+             * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-20T02:48:58Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -344,7 +394,10 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
             }
 
             /**
-             * 代表资源名称的资源属性字段
+             * <p>The ID of the recording job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ab0e3e76-1e9d-11ed-ba64-0c42a1b73d66</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -352,7 +405,7 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
             }
 
             /**
-             * 代表资源名称的资源属性字段
+             * <p>The name of the recording job.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -360,7 +413,10 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
             }
 
             /**
-             * 回调地址
+             * <p>The callback URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/imsnotify">https://example.com/imsnotify</a></p>
              */
             public Builder notifyUrl(String notifyUrl) {
                 this.notifyUrl = notifyUrl;
@@ -368,7 +424,7 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
             }
 
             /**
-             * RecordOutput.
+             * <p>The storage address of the recording.</p>
              */
             public Builder recordOutput(RecordOutput recordOutput) {
                 this.recordOutput = recordOutput;
@@ -376,7 +432,16 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
             }
 
             /**
-             * 代表资源名称的资源属性字段
+             * <p>The state of the recording job.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>paused: The job is paused.</li>
+             * <li>initial: The job is not started.</li>
+             * <li>started: The job is in progress.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>paused</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -384,7 +449,7 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
             }
 
             /**
-             * StreamInput.
+             * <p>The URL of the live stream.</p>
              */
             public Builder streamInput(StreamInput streamInput) {
                 this.streamInput = streamInput;
@@ -392,7 +457,10 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
             }
 
             /**
-             * 录制模板ID
+             * <p>The ID of the recording template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>69e1f9fe-1e97-11ed-ba64-0c42a1b73d66</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -400,7 +468,10 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
             }
 
             /**
-             * 录制模板ID
+             * <p>The name of the recording template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test template</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;

@@ -1,50 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOrUpdateWebhookContactRequest} extends {@link RequestModel}
  *
  * <p>CreateOrUpdateWebhookContactRequest</p>
  */
 public class CreateOrUpdateWebhookContactRequest extends Request {
-    @Body
-    @NameInMap("BizHeaders")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizHeaders")
     private String bizHeaders;
 
-    @Body
-    @NameInMap("BizParams")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizParams")
     private String bizParams;
 
-    @Body
-    @NameInMap("Body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Body")
     private String body;
 
-    @Body
-    @NameInMap("Method")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Method")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String method;
 
-    @Body
-    @NameInMap("RecoverBody")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RecoverBody")
     private String recoverBody;
 
-    @Body
-    @NameInMap("Url")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Url")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String url;
 
-    @Body
-    @NameInMap("WebhookId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WebhookId")
     private Long webhookId;
 
-    @Body
-    @NameInMap("WebhookName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WebhookName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String webhookName;
 
     private CreateOrUpdateWebhookContactRequest(Builder builder) {
@@ -155,7 +160,10 @@ public class CreateOrUpdateWebhookContactRequest extends Request {
         } 
 
         /**
-         * The HTTP request headers.
+         * <p>The HTTP request headers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;Content-Type&quot;:&quot;application/json;charset=utf-8&quot;}]</p>
          */
         public Builder bizHeaders(String bizHeaders) {
             this.putBodyParameter("BizHeaders", bizHeaders);
@@ -164,7 +172,10 @@ public class CreateOrUpdateWebhookContactRequest extends Request {
         }
 
         /**
-         * The parameters in the HTTP request.
+         * <p>The parameters in the HTTP request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;content&quot;:&quot;mike&quot;}]</p>
          */
         public Builder bizParams(String bizParams) {
             this.putBodyParameter("BizParams", bizParams);
@@ -173,7 +184,10 @@ public class CreateOrUpdateWebhookContactRequest extends Request {
         }
 
         /**
-         * The notification template that is sent when an alert is triggered. This parameter is required if the **Method** parameter is set to **Post**. You can use the `$content` placeholder to specify the notification content. The content cannot exceed 500 characters in length. For more information, see [Variable description of a notification template](~~251834~~).\\
+         * <p>The notification template that is sent when an alert is triggered. This parameter is required if the <strong>Method</strong> parameter is set to <strong>Post</strong>. You can use the <code>$content</code> placeholder to specify the notification content. The content cannot exceed 500 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/251834.html">Variable description of a notification template</a>.\</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;Alert name&quot;:&quot;{{ .commonLabels.alertname }}{{if .commonLabels.clustername }}&quot;, &quot;Cluster name&quot;:&quot;{{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}&quot;, &quot;Application name&quot;:&quot;{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}&quot;, &quot;Notification policy&quot;:&quot;{{ .dispatchRuleName }}&quot;, &quot;Alert time&quot;:&quot;{{ .startTime }}&quot;, &quot;Alert content&quot;:&quot;{{ for .alerts }} {{ .annotations.message }} {{ end }}&quot; }</p>
          */
         public Builder body(String body) {
             this.putBodyParameter("Body", body);
@@ -182,11 +196,15 @@ public class CreateOrUpdateWebhookContactRequest extends Request {
         }
 
         /**
-         * The HTTP request method.
-         * <p>
+         * <p>The HTTP request method.</p>
+         * <ul>
+         * <li>Post</li>
+         * <li>Get</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Post
-         * *   Get
+         * <strong>example:</strong>
+         * <p>Post</p>
          */
         public Builder method(String method) {
             this.putBodyParameter("Method", method);
@@ -195,7 +213,10 @@ public class CreateOrUpdateWebhookContactRequest extends Request {
         }
 
         /**
-         * The notification template that is sent when an alert is resolved. This parameter is required if the **Method** parameter is set to **Post**. You can use the `$content` placeholder to specify the notification content. The content cannot exceed 500 characters in length. For more information, see [Variable description of a notification template](~~251834~~).
+         * <p>The notification template that is sent when an alert is resolved. This parameter is required if the <strong>Method</strong> parameter is set to <strong>Post</strong>. You can use the <code>$content</code> placeholder to specify the notification content. The content cannot exceed 500 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/251834.html">Variable description of a notification template</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;Alert name&quot;:&quot;{{ .commonLabels.alertname }}{{if .commonLabels.clustername }}&quot;, &quot;Cluster name&quot;:&quot;{{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}&quot;, &quot;Application name&quot;:&quot;{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}&quot;, &quot;Notification policy&quot;:&quot;{{ .dispatchRuleName }}&quot;, &quot;Recovery time&quot;:&quot;{{ .endTime }}&quot;, &quot;Alert content&quot;:&quot;{{ for .alerts }} {{ .annotations.message }} {{ end }}&quot; }</p>
          */
         public Builder recoverBody(String recoverBody) {
             this.putBodyParameter("RecoverBody", recoverBody);
@@ -204,7 +225,11 @@ public class CreateOrUpdateWebhookContactRequest extends Request {
         }
 
         /**
-         * The URL of the HTTP request **method**.
+         * <p>The URL of the HTTP request <strong>method</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=e1a049121">https://oapi.dingtalk.com/robot/send?access_token=e1a049121</a>******</p>
          */
         public Builder url(String url) {
             this.putBodyParameter("Url", url);
@@ -213,11 +238,14 @@ public class CreateOrUpdateWebhookContactRequest extends Request {
         }
 
         /**
-         * The ID of the webhook alert contact.
-         * <p>
+         * <p>The ID of the webhook alert contact.</p>
+         * <ul>
+         * <li>If you do not specify this parameter, a new webhook alert contact is created.</li>
+         * <li>If you specify this parameter, the specified webhook alert contact is modified.</li>
+         * </ul>
          * 
-         * *   If you do not specify this parameter, a new webhook alert contact is created.
-         * * If you specify this parameter, the specified webhook alert contact is modified.
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder webhookId(Long webhookId) {
             this.putBodyParameter("WebhookId", webhookId);
@@ -226,7 +254,11 @@ public class CreateOrUpdateWebhookContactRequest extends Request {
         }
 
         /**
-         * The name of the webhook alert contact.
+         * <p>The name of the webhook alert contact.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Webhook alert</p>
          */
         public Builder webhookName(String webhookName) {
             this.putBodyParameter("WebhookName", webhookName);

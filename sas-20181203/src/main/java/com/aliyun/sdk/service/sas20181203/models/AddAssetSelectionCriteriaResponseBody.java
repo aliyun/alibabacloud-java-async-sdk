@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddAssetSelectionCriteriaResponseBody} extends {@link TeaModel}
  *
  * <p>AddAssetSelectionCriteriaResponseBody</p>
  */
 public class AddAssetSelectionCriteriaResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AddAssetSelectionCriteriaResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class AddAssetSelectionCriteriaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7BC55C8F-226E-5AF5-9A2C-2EC43864****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

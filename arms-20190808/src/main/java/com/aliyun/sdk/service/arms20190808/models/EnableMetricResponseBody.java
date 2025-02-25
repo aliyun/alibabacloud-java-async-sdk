@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableMetricResponseBody} extends {@link TeaModel}
  *
  * <p>EnableMetricResponseBody</p>
  */
 public class EnableMetricResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private EnableMetricResponseBody(Builder builder) {
@@ -86,13 +91,10 @@ public class EnableMetricResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code returned for the request. Valid values:
-         * <p>
+         * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
          * 
-         * *   2XX: The request is successful.
-         * *   3XX: A redirection message is returned.
-         * *   4XX: The request is invalid.
-         * *   5XX: A server error occurs.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -100,7 +102,10 @@ public class EnableMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The returned struct.
+         * <p>The returned struct.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -108,7 +113,10 @@ public class EnableMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -116,7 +124,10 @@ public class EnableMetricResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0231DA4B-3D11-5433-9376-3B5B46C7228D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -124,11 +135,10 @@ public class EnableMetricResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful.</p>
          * 
-         * *   `true`: The call was successful.
-         * *   `false`: The call failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

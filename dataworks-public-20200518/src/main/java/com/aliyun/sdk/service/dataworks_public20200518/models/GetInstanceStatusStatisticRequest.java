@@ -1,47 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceStatusStatisticRequest} extends {@link RequestModel}
  *
  * <p>GetInstanceStatusStatisticRequest</p>
  */
 public class GetInstanceStatusStatisticRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("BizDate")
-    @Validation(required = true, maxLength = 10, minLength = 10)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizDate")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 10, minLength = 10)
     private String bizDate;
 
-    @Body
-    @NameInMap("DagType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DagType")
     private String dagType;
 
-    @Body
-    @NameInMap("ProjectEnv")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectEnv")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectEnv;
 
-    @Body
-    @NameInMap("ProjectId")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Long projectId;
 
-    @Body
-    @NameInMap("SchedulerPeriod")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SchedulerPeriod")
     private String schedulerPeriod;
 
-    @Body
-    @NameInMap("SchedulerType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SchedulerType")
     private String schedulerType;
 
     private GetInstanceStatusStatisticRequest(Builder builder) {
@@ -142,7 +146,7 @@ public class GetInstanceStatusStatisticRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -151,7 +155,11 @@ public class GetInstanceStatusStatisticRequest extends Request {
         }
 
         /**
-         * The date on which the numbers of instances in different states are obtained. Specify the date in the yyyy-MM-dd format.
+         * <p>The date on which the numbers of instances in different states are obtained. Specify the date in the yyyy-MM-dd format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-01-01</p>
          */
         public Builder bizDate(String bizDate) {
             this.putBodyParameter("BizDate", bizDate);
@@ -160,13 +168,25 @@ public class GetInstanceStatusStatisticRequest extends Request {
         }
 
         /**
-         * The type of the directed acyclic graph (DAG). Valid values:
-         * <p>
+         * <p>The type of the directed acyclic graph (DAG). Valid values:</p>
+         * <ul>
+         * <li>MANUAL: DAG for a manually triggered workflow</li>
+         * <li>SMOKE_TEST: DAG for a smoke testing workflow</li>
+         * <li>SUPPLY_DATA: DAG for a data backfill instance</li>
+         * <li>BUSINESS_PROCESS_DAG: DAG for a one-time workflow</li>
+         * </ul>
+         * <!---->
          * 
-         * *   MANUAL: DAG for a manually triggered workflow
-         * *   SMOKE_TEST: DAG for a smoke testing workflow
-         * *   SUPPLY_DATA: DAG for a data backfill instance
-         * *   BUSINESS_PROCESS_DAG: DAG for a one-time workflow
+         * <ul>
+         * <li>DAILY</li>
+         * <li>MANUAL</li>
+         * <li>SMOKE_TEST</li>
+         * <li>SUPPLY_DATA</li>
+         * <li>BUSINESS_PROCESS_DAG</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MANUAL</p>
          */
         public Builder dagType(String dagType) {
             this.putBodyParameter("DagType", dagType);
@@ -175,7 +195,11 @@ public class GetInstanceStatusStatisticRequest extends Request {
         }
 
         /**
-         * The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment. The value DEV indicates the development environment.
+         * <p>The runtime environment. Valid values: PROD and DEV.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
@@ -184,7 +208,11 @@ public class GetInstanceStatusStatisticRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the workspace ID.
+         * <p>The DataWorks workspace ID. You can log on to the DataWorks console and go to the Workspace page to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -193,7 +221,17 @@ public class GetInstanceStatusStatisticRequest extends Request {
         }
 
         /**
-         * SchedulerPeriod.
+         * <p>The scheduling cycle. Valid values:</p>
+         * <ul>
+         * <li>MINUTE</li>
+         * <li>HOUR</li>
+         * <li>DAY</li>
+         * <li>WEEK</li>
+         * <li>MONTH</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DAY</p>
          */
         public Builder schedulerPeriod(String schedulerPeriod) {
             this.putBodyParameter("SchedulerPeriod", schedulerPeriod);
@@ -202,13 +240,16 @@ public class GetInstanceStatusStatisticRequest extends Request {
         }
 
         /**
-         * The scheduling type of the node. Valid values:
-         * <p>
+         * <p>The scheduling type of the node. Valid values:</p>
+         * <ul>
+         * <li>NORMAL: auto triggered node</li>
+         * <li>MANUAL: manually triggered node</li>
+         * <li>PAUSE: paused node</li>
+         * <li>SKIP: dry-run node</li>
+         * </ul>
          * 
-         * *   NORMAL: auto triggered node
-         * *   MANUAL: manually triggered node
-         * *   PAUSE: paused node
-         * *   SKIP: dry-run node
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder schedulerType(String schedulerType) {
             this.putBodyParameter("SchedulerType", schedulerType);

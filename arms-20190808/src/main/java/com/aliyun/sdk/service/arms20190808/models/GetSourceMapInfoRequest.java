@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSourceMapInfoRequest} extends {@link RequestModel}
  *
  * <p>GetSourceMapInfoRequest</p>
  */
 public class GetSourceMapInfoRequest extends Request {
-    @Query
-    @NameInMap("AscendingSequence")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AscendingSequence")
     private Boolean ascendingSequence;
 
-    @Query
-    @NameInMap("Edition")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Edition")
     private String edition;
 
-    @Query
-    @NameInMap("ID")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ID")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String id;
 
-    @Query
-    @NameInMap("Keyword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
-    @Query
-    @NameInMap("OrderField")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderField")
     private String orderField;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private GetSourceMapInfoRequest(Builder builder) {
@@ -125,7 +130,14 @@ public class GetSourceMapInfoRequest extends Request {
         } 
 
         /**
-         * AscendingSequence.
+         * <p>The order in which the files are sorted. Valid values:</p>
+         * <ul>
+         * <li>true: ascending order</li>
+         * <li>false: descending order</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ascendingSequence(Boolean ascendingSequence) {
             this.putQueryParameter("AscendingSequence", ascendingSequence);
@@ -134,7 +146,10 @@ public class GetSourceMapInfoRequest extends Request {
         }
 
         /**
-         * Edition.
+         * <p>The version of the SourceMap file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.0</p>
          */
         public Builder edition(String edition) {
             this.putQueryParameter("Edition", edition);
@@ -143,7 +158,8 @@ public class GetSourceMapInfoRequest extends Request {
         }
 
         /**
-         * ID.
+         * <p>The ID of the SourceMap file.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("ID", id);
@@ -152,7 +168,10 @@ public class GetSourceMapInfoRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The keyword in the file name. The files are searched by keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -161,7 +180,14 @@ public class GetSourceMapInfoRequest extends Request {
         }
 
         /**
-         * OrderField.
+         * <p>The criterion by which the files are sorted. Valid values:</p>
+         * <ul>
+         * <li>version: The files are sorted by version.</li>
+         * <li>uploadTime: The files are sorted by upload time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>version</p>
          */
         public Builder orderField(String orderField) {
             this.putQueryParameter("OrderField", orderField);
@@ -170,7 +196,10 @@ public class GetSourceMapInfoRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

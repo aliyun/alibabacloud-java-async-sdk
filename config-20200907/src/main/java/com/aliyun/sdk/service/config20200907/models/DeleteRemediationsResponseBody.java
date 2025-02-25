@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteRemediationsResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteRemediationsResponseBody</p>
  */
 public class DeleteRemediationsResponseBody extends TeaModel {
-    @NameInMap("RemediationDeleteResults")
-    private java.util.List < RemediationDeleteResults> remediationDeleteResults;
+    @com.aliyun.core.annotation.NameInMap("RemediationDeleteResults")
+    private java.util.List<RemediationDeleteResults> remediationDeleteResults;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteRemediationsResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DeleteRemediationsResponseBody extends TeaModel {
     /**
      * @return remediationDeleteResults
      */
-    public java.util.List < RemediationDeleteResults> getRemediationDeleteResults() {
+    public java.util.List<RemediationDeleteResults> getRemediationDeleteResults() {
         return this.remediationDeleteResults;
     }
 
@@ -46,19 +51,22 @@ public class DeleteRemediationsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < RemediationDeleteResults> remediationDeleteResults; 
+        private java.util.List<RemediationDeleteResults> remediationDeleteResults; 
         private String requestId; 
 
         /**
-         * The returned result.
+         * <p>The returned result.</p>
          */
-        public Builder remediationDeleteResults(java.util.List < RemediationDeleteResults> remediationDeleteResults) {
+        public Builder remediationDeleteResults(java.util.List<RemediationDeleteResults> remediationDeleteResults) {
             this.remediationDeleteResults = remediationDeleteResults;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4BE28FB1-616A-5586-82E4-F34FB2AF7441</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class DeleteRemediationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteRemediationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteRemediationsResponseBody</p>
+     */
     public static class RemediationDeleteResults extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("RemediationId")
+        @com.aliyun.core.annotation.NameInMap("RemediationId")
         private String remediationId;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private RemediationDeleteResults(Builder builder) {
@@ -122,11 +136,14 @@ public class DeleteRemediationsResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * The error code returned.
-             * <p>
+             * <p>The error code returned.</p>
+             * <ul>
+             * <li>If the remediation template is deleted, no error code is returned.</li>
+             * <li>If the remediation template fails to be deleted, an error code is returned. For more information about error codes, see <a href="https://error-center.alibabacloud.com/status/product/Config">Error codes</a>.</li>
+             * </ul>
              * 
-             * *   If the remediation template is deleted, no error code is returned.
-             * *   If the remediation template fails to be deleted, an error code is returned. For more information about error codes, see [Error codes](https://error-center.alibabacloud.com/status/product/Config).
+             * <strong>example:</strong>
+             * <p>RemediationConfigNotExist</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -134,7 +151,10 @@ public class DeleteRemediationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the remediation template.
+             * <p>The ID of the remediation template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crr-909ba2d4716700eb****</p>
              */
             public Builder remediationId(String remediationId) {
                 this.remediationId = remediationId;
@@ -142,11 +162,14 @@ public class DeleteRemediationsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the request was successful. Valid values:
-             * <p>
+             * <p>Indicates whether the request was successful. Valid values:</p>
+             * <ul>
+             * <li>true: The request was successful.</li>
+             * <li>false: The request failed.</li>
+             * </ul>
              * 
-             * *   true: The request was successful.
-             * *   false: The request failed.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeParameterTemplatesRequest} extends {@link RequestModel}
  *
  * <p>DescribeParameterTemplatesRequest</p>
  */
 public class DescribeParameterTemplatesRequest extends Request {
-    @Query
-    @NameInMap("Category")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Category")
     private String category;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("Engine")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String engine;
 
-    @Query
-    @NameInMap("EngineVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String engineVersion;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private DescribeParameterTemplatesRequest(Builder builder) {
@@ -182,12 +187,15 @@ public class DescribeParameterTemplatesRequest extends Request {
         } 
 
         /**
-         * The RDS edition of the instance. Valid values:
-         * <p>
+         * <p>The RDS edition of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Basic</strong>: RDS Basic Edition</li>
+         * <li><strong>HighAvailability</strong>: RDS High-availability Edition</li>
+         * <li><strong>Finance</strong>: RDS Enterprise Edition</li>
+         * </ul>
          * 
-         * *   **Basic**: RDS Basic Edition
-         * *   **HighAvailability**: RDS High-availability Edition
-         * *   **Finance**: RDS Enterprise Edition
+         * <strong>example:</strong>
+         * <p>Basic</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -196,7 +204,10 @@ public class DescribeParameterTemplatesRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -205,7 +216,10 @@ public class DescribeParameterTemplatesRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1imnm**********</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -214,13 +228,17 @@ public class DescribeParameterTemplatesRequest extends Request {
         }
 
         /**
-         * The database engine of the instance. Valid values:
-         * <p>
+         * <p>The database engine of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>mysql</strong>: MySQL</li>
+         * <li><strong>mssql</strong>: SQL Server</li>
+         * <li><strong>PostgreSQL</strong>: PostgreSQL</li>
+         * <li><strong>MariaDB</strong>: MariaDB</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **mysql**: MySQL
-         * *   **mssql**: SQL Server
-         * *   **PostgreSQL**: PostgreSQL
-         * *   **MariaDB**: MariaDB
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -229,13 +247,17 @@ public class DescribeParameterTemplatesRequest extends Request {
         }
 
         /**
-         * The version of the database engine. Valid values:
-         * <p>
+         * <p>The version of the database engine. Valid values:</p>
+         * <ul>
+         * <li>Valid values when you set the Engine parameter to mysql: <strong>5.5, 5.6, 5.7, and 8.0</strong>.</li>
+         * <li>Valid values when you set the Engine parameter to mssql: <strong>2008r2</strong>.</li>
+         * <li>Valid values when you set the Engine parameter to PostgreSQL: <strong>10.0, 11.0, 12.0, 13.0, 14.0, and 15.0</strong>.</li>
+         * <li>Valid values when you set the Engine parameter to MariaDB: <strong>10.3</strong>.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Valid values when you set the Engine parameter to mysql: **5.5, 5.6, 5.7, and 8.0**.
-         * *   Valid values when you set the Engine parameter to mssql: **2008r2**.
-         * *   Valid values when you set the Engine parameter to PostgreSQL: **10.0, 11.0, 12.0, 13.0, 14.0, and 15.0**.
-         * *   Valid values when you set the Engine parameter to MariaDB: **10.3**.
+         * <strong>example:</strong>
+         * <p>8.0</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -262,7 +284,10 @@ public class DescribeParameterTemplatesRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

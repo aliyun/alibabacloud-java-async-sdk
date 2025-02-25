@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServerGroupsRequest} extends {@link RequestModel}
  *
  * <p>ListServerGroupsRequest</p>
  */
 public class ListServerGroupsRequest extends Request {
-    @Body
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Body
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Body
-    @NameInMap("ServerGroupIds")
-    private java.util.List < String > serverGroupIds;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServerGroupIds")
+    private java.util.List<String> serverGroupIds;
 
-    @Body
-    @NameInMap("ServerGroupNames")
-    private java.util.List < String > serverGroupNames;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServerGroupNames")
+    private java.util.List<String> serverGroupNames;
 
-    @Body
-    @NameInMap("ServerGroupType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServerGroupType")
     private String serverGroupType;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Body
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     private ListServerGroupsRequest(Builder builder) {
@@ -105,14 +110,14 @@ public class ListServerGroupsRequest extends Request {
     /**
      * @return serverGroupIds
      */
-    public java.util.List < String > getServerGroupIds() {
+    public java.util.List<String> getServerGroupIds() {
         return this.serverGroupIds;
     }
 
     /**
      * @return serverGroupNames
      */
-    public java.util.List < String > getServerGroupNames() {
+    public java.util.List<String> getServerGroupNames() {
         return this.serverGroupNames;
     }
 
@@ -126,7 +131,7 @@ public class ListServerGroupsRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -142,10 +147,10 @@ public class ListServerGroupsRequest extends Request {
         private String nextToken; 
         private String regionId; 
         private String resourceGroupId; 
-        private java.util.List < String > serverGroupIds; 
-        private java.util.List < String > serverGroupNames; 
+        private java.util.List<String> serverGroupIds; 
+        private java.util.List<String> serverGroupNames; 
         private String serverGroupType; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String vpcId; 
 
         private Builder() {
@@ -166,7 +171,10 @@ public class ListServerGroupsRequest extends Request {
         } 
 
         /**
-         * The number of entries per page. Valid values: **1** to **100**. Default value: **20**.
+         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -175,11 +183,14 @@ public class ListServerGroupsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>You do not need to specify this parameter for the first request.</li>
+         * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+         * </ul>
          * 
-         * *   You do not need to specify this parameter for the first request.
-         * *   You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -188,10 +199,11 @@ public class ListServerGroupsRequest extends Request {
         }
 
         /**
-         * The region ID of the NLB instance.
-         * <p>
+         * <p>The region ID of the NLB instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeRegions](~~443657~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -200,7 +212,10 @@ public class ListServerGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the server group belongs.
+         * <p>The ID of the resource group to which the server group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-atstuj3rtop****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -209,29 +224,32 @@ public class ListServerGroupsRequest extends Request {
         }
 
         /**
-         * The server group ID. You can specify up to 20 server group IDs in each call.
+         * <p>The server group ID. You can specify up to 20 server group IDs in each call.</p>
          */
-        public Builder serverGroupIds(java.util.List < String > serverGroupIds) {
+        public Builder serverGroupIds(java.util.List<String> serverGroupIds) {
             this.putBodyParameter("ServerGroupIds", serverGroupIds);
             this.serverGroupIds = serverGroupIds;
             return this;
         }
 
         /**
-         * The names of the server groups to be queried. You can specify up to 20 names in each call.
+         * <p>The names of the server groups to be queried. You can specify up to 20 names in each call.</p>
          */
-        public Builder serverGroupNames(java.util.List < String > serverGroupNames) {
+        public Builder serverGroupNames(java.util.List<String> serverGroupNames) {
             this.putBodyParameter("ServerGroupNames", serverGroupNames);
             this.serverGroupNames = serverGroupNames;
             return this;
         }
 
         /**
-         * The type of server group. Valid values:
-         * <p>
+         * <p>The type of server group. Valid values:</p>
+         * <ul>
+         * <li><strong>Instance</strong> : allows you to add servers of the <strong>Ecs</strong>, <strong>Ens</strong>, and <strong>Eci</strong> types.</li>
+         * <li><strong>Ip</strong>: allows you to add servers by specifying IP addresses.</li>
+         * </ul>
          * 
-         * *   **Instance** : allows you to add servers of the **Ecs**, **Ens**, and **Eci** types.
-         * *   **Ip**: allows you to add servers by specifying IP addresses.
+         * <strong>example:</strong>
+         * <p>Instance</p>
          */
         public Builder serverGroupType(String serverGroupType) {
             this.putBodyParameter("ServerGroupType", serverGroupType);
@@ -240,16 +258,19 @@ public class ListServerGroupsRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) to which the server group belongs.
+         * <p>The ID of the virtual private cloud (VPC) to which the server group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp15zckdt37pq72zv****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putBodyParameter("VpcId", vpcId);
@@ -264,11 +285,17 @@ public class ListServerGroupsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListServerGroupsRequest} extends {@link TeaModel}
+     *
+     * <p>ListServerGroupsRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -303,10 +330,11 @@ public class ListServerGroupsRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag. You can specify up to 10 tag keys.
-             * <p>
+             * <p>The key of the tag. You can specify up to 10 tag keys.</p>
+             * <p>The tag key can be up to 64 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
              * 
-             * The tag key can be up to 64 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -314,10 +342,11 @@ public class ListServerGroupsRequest extends Request {
             }
 
             /**
-             * The value of the tag. You can specify up to 10 tag values.
-             * <p>
+             * <p>The value of the tag. You can specify up to 10 tag values.</p>
+             * <p>The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
              * 
-             * The tag value can be up to 128 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder value(String value) {
                 this.value = value;

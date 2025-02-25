@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20170622.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,53 +11,61 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BatchSendMailRequest</p>
  */
 public class BatchSendMailRequest extends Request {
-    @Query
-    @NameInMap("AccountName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountName;
 
-    @Query
-    @NameInMap("AddressType")
-    @Validation(required = true, maximum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddressType")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
     private Integer addressType;
 
-    @Query
-    @NameInMap("ClickTrace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClickTrace")
     private String clickTrace;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ReceiversName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReceiversName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String receiversName;
 
-    @Query
-    @NameInMap("ReplyAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReplyAddress")
     private String replyAddress;
 
-    @Query
-    @NameInMap("ReplyAddressAlias")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReplyAddressAlias")
     private String replyAddressAlias;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TagName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagName")
     private String tagName;
 
-    @Query
-    @NameInMap("TemplateName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UnSubscribeFilterLevel")
+    private String unSubscribeFilterLevel;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UnSubscribeLinkType")
+    private String unSubscribeLinkType;
 
     private BatchSendMailRequest(Builder builder) {
         super(builder);
@@ -73,6 +80,8 @@ public class BatchSendMailRequest extends Request {
         this.resourceOwnerId = builder.resourceOwnerId;
         this.tagName = builder.tagName;
         this.templateName = builder.templateName;
+        this.unSubscribeFilterLevel = builder.unSubscribeFilterLevel;
+        this.unSubscribeLinkType = builder.unSubscribeLinkType;
     }
 
     public static Builder builder() {
@@ -165,6 +174,20 @@ public class BatchSendMailRequest extends Request {
         return this.templateName;
     }
 
+    /**
+     * @return unSubscribeFilterLevel
+     */
+    public String getUnSubscribeFilterLevel() {
+        return this.unSubscribeFilterLevel;
+    }
+
+    /**
+     * @return unSubscribeLinkType
+     */
+    public String getUnSubscribeLinkType() {
+        return this.unSubscribeLinkType;
+    }
+
     public static final class Builder extends Request.Builder<BatchSendMailRequest, Builder> {
         private String accountName; 
         private Integer addressType; 
@@ -177,6 +200,8 @@ public class BatchSendMailRequest extends Request {
         private Long resourceOwnerId; 
         private String tagName; 
         private String templateName; 
+        private String unSubscribeFilterLevel; 
+        private String unSubscribeLinkType; 
 
         private Builder() {
             super();
@@ -195,6 +220,8 @@ public class BatchSendMailRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.tagName = request.tagName;
             this.templateName = request.templateName;
+            this.unSubscribeFilterLevel = request.unSubscribeFilterLevel;
+            this.unSubscribeLinkType = request.unSubscribeLinkType;
         } 
 
         /**
@@ -293,6 +320,24 @@ public class BatchSendMailRequest extends Request {
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
             this.templateName = templateName;
+            return this;
+        }
+
+        /**
+         * UnSubscribeFilterLevel.
+         */
+        public Builder unSubscribeFilterLevel(String unSubscribeFilterLevel) {
+            this.putQueryParameter("UnSubscribeFilterLevel", unSubscribeFilterLevel);
+            this.unSubscribeFilterLevel = unSubscribeFilterLevel;
+            return this;
+        }
+
+        /**
+         * UnSubscribeLinkType.
+         */
+        public Builder unSubscribeLinkType(String unSubscribeLinkType) {
+            this.putQueryParameter("UnSubscribeLinkType", unSubscribeLinkType);
+            this.unSubscribeLinkType = unSubscribeLinkType;
             return this;
         }
 

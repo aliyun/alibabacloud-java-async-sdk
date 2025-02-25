@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTrafficMarkingPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>CreateTrafficMarkingPolicyResponseBody</p>
  */
 public class CreateTrafficMarkingPolicyResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TrafficMarkingPolicyId")
+    @com.aliyun.core.annotation.NameInMap("TrafficMarkingPolicyId")
     private String trafficMarkingPolicyId;
 
     private CreateTrafficMarkingPolicyResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateTrafficMarkingPolicyResponseBody extends TeaModel {
         private String trafficMarkingPolicyId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0876E54E-3E36-5C31-89F0-9EE8A9266F9A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,10 @@ public class CreateTrafficMarkingPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the traffic marking policy.
+         * <p>The ID of the traffic marking policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tm-u9nxup5kww5po8****</p>
          */
         public Builder trafficMarkingPolicyId(String trafficMarkingPolicyId) {
             this.trafficMarkingPolicyId = trafficMarkingPolicyId;

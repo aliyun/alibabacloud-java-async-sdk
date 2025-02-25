@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelComponentUpgradeRequest} extends {@link RequestModel}
  *
  * <p>CancelComponentUpgradeRequest</p>
  */
 public class CancelComponentUpgradeRequest extends Request {
-    @Path
-    @NameInMap("clusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("clusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("componentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("componentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String componentId;
 
     private CancelComponentUpgradeRequest(Builder builder) {
@@ -70,7 +75,11 @@ public class CancelComponentUpgradeRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c82e6987e2961451182edacd74faf****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("clusterId", clusterId);
@@ -79,7 +88,11 @@ public class CancelComponentUpgradeRequest extends Request {
         }
 
         /**
-         * The component ID.
+         * <p>The component ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>metric-server</p>
          */
         public Builder componentId(String componentId) {
             this.putPathParameter("componentId", componentId);

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePurchasedApisResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePurchasedApisResponseBody</p>
  */
 public class DescribePurchasedApisResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("PurchasedApis")
+    @com.aliyun.core.annotation.NameInMap("PurchasedApis")
     private PurchasedApis purchasedApis;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribePurchasedApisResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DescribePurchasedApisResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +102,10 @@ public class DescribePurchasedApisResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on each page.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +113,7 @@ public class DescribePurchasedApisResponseBody extends TeaModel {
         }
 
         /**
-         * The monitoring information about API call delays. The returned information is an array consisting of purchased APIs.
+         * <p>The monitoring information about API call delays. The returned information is an array consisting of purchased APIs.</p>
          */
         public Builder purchasedApis(PurchasedApis purchasedApis) {
             this.purchasedApis = purchasedApis;
@@ -110,7 +121,10 @@ public class DescribePurchasedApisResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CE5722A6-AE78-4741-A9B0-6C817D360510</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribePurchasedApisResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,38 +148,44 @@ public class DescribePurchasedApisResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePurchasedApisResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePurchasedApisResponseBody</p>
+     */
     public static class PurchasedApi extends TeaModel {
-        @NameInMap("ApiId")
+        @com.aliyun.core.annotation.NameInMap("ApiId")
         private String apiId;
 
-        @NameInMap("ApiName")
+        @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
 
-        @NameInMap("DeployedTime")
+        @com.aliyun.core.annotation.NameInMap("DeployedTime")
         private String deployedTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("PurchasedTime")
+        @com.aliyun.core.annotation.NameInMap("PurchasedTime")
         private String purchasedTime;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("StageName")
+        @com.aliyun.core.annotation.NameInMap("StageName")
         private String stageName;
 
-        @NameInMap("Visibility")
+        @com.aliyun.core.annotation.NameInMap("Visibility")
         private String visibility;
 
         private PurchasedApi(Builder builder) {
@@ -278,7 +301,10 @@ public class DescribePurchasedApisResponseBody extends TeaModel {
             private String visibility; 
 
             /**
-             * The ID of the API.
+             * <p>The ID of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eb6e54c1576d41149746e8e69b0a0792</p>
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -286,7 +312,10 @@ public class DescribePurchasedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the API.
+             * <p>The name of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw_rado_tissot_</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -294,7 +323,10 @@ public class DescribePurchasedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The deployment time. Format: yyyy-mm-ddhh:mm:ss.
+             * <p>The deployment time. Format: yyyy-mm-ddhh:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-1113:57:38</p>
              */
             public Builder deployedTime(String deployedTime) {
                 this.deployedTime = deployedTime;
@@ -302,7 +334,10 @@ public class DescribePurchasedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the API.
+             * <p>The description of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -310,7 +345,10 @@ public class DescribePurchasedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the API group to which the API belongs. This ID is generated by the system and globally unique.
+             * <p>The ID of the API group to which the API belongs. This ID is generated by the system and globally unique.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3013a55c0c44483f984d26df27120513</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -318,7 +356,10 @@ public class DescribePurchasedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the API group.
+             * <p>The name of the API group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DMS_DEFAULT_GROUP_408589</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -326,7 +367,10 @@ public class DescribePurchasedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The last modification time (UTC) of the API.
+             * <p>The last modification time (UTC) of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-11T13:57:38+08:00</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -334,7 +378,10 @@ public class DescribePurchasedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the API was purchased.
+             * <p>The time when the API was purchased.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-11T13:57:38+08:00</p>
              */
             public Builder purchasedTime(String purchasedTime) {
                 this.purchasedTime = purchasedTime;
@@ -342,7 +389,10 @@ public class DescribePurchasedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the API is located.
+             * <p>The ID of the region in which the API is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -350,12 +400,15 @@ public class DescribePurchasedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the runtime environment. Valid values:
-             * <p>
+             * <p>The name of the runtime environment. Valid values:</p>
+             * <ul>
+             * <li><strong>RELEASE</strong></li>
+             * <li><strong>PRE</strong></li>
+             * <li><strong>TEST</strong></li>
+             * </ul>
              * 
-             * *   **RELEASE**
-             * *   **PRE**
-             * *   **TEST**
+             * <strong>example:</strong>
+             * <p>TEST</p>
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
@@ -363,11 +416,14 @@ public class DescribePurchasedApisResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the API is public. Valid values:
-             * <p>
+             * <p>Indicates whether the API is public. Valid values:</p>
+             * <ul>
+             * <li><strong>PUBLIC</strong></li>
+             * <li><strong>PRIVATE</strong></li>
+             * </ul>
              * 
-             * *   **PUBLIC**
-             * *   **PRIVATE**
+             * <strong>example:</strong>
+             * <p>PUBLIC</p>
              */
             public Builder visibility(String visibility) {
                 this.visibility = visibility;
@@ -381,9 +437,15 @@ public class DescribePurchasedApisResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePurchasedApisResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePurchasedApisResponseBody</p>
+     */
     public static class PurchasedApis extends TeaModel {
-        @NameInMap("PurchasedApi")
-        private java.util.List < PurchasedApi> purchasedApi;
+        @com.aliyun.core.annotation.NameInMap("PurchasedApi")
+        private java.util.List<PurchasedApi> purchasedApi;
 
         private PurchasedApis(Builder builder) {
             this.purchasedApi = builder.purchasedApi;
@@ -400,17 +462,17 @@ public class DescribePurchasedApisResponseBody extends TeaModel {
         /**
          * @return purchasedApi
          */
-        public java.util.List < PurchasedApi> getPurchasedApi() {
+        public java.util.List<PurchasedApi> getPurchasedApi() {
             return this.purchasedApi;
         }
 
         public static final class Builder {
-            private java.util.List < PurchasedApi> purchasedApi; 
+            private java.util.List<PurchasedApi> purchasedApi; 
 
             /**
              * PurchasedApi.
              */
-            public Builder purchasedApi(java.util.List < PurchasedApi> purchasedApi) {
+            public Builder purchasedApi(java.util.List<PurchasedApi> purchasedApi) {
                 this.purchasedApi = purchasedApi;
                 return this;
             }

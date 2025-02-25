@@ -1,46 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnReportRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnReportRequest</p>
  */
 public class DescribeDcdnReportRequest extends Request {
-    @Query
-    @NameInMap("Area")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Area")
     private String area;
 
-    @Query
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("HttpCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpCode")
     private String httpCode;
 
-    @Query
-    @NameInMap("IsOverseas")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsOverseas")
     private String isOverseas;
 
-    @Query
-    @NameInMap("ReportId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReportId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long reportId;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
     private DescribeDcdnReportRequest(Builder builder) {
@@ -141,11 +141,14 @@ public class DescribeDcdnReportRequest extends Request {
         } 
 
         /**
-         * The region. You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query regions.
-         * <p>
+         * <p>The region. You can call the <a href="https://help.aliyun.com/document_detail/207199.html">DescribeDcdnRegionAndIsp</a> operation to query regions.</p>
+         * <ul>
+         * <li>If you do not specify a region, data in all regions is queried.</li>
+         * <li>If you specify a region, data in the specified region is returned. You can specify one or more regions. Separate regions with commas (,).</li>
+         * </ul>
          * 
-         * *   If you do not specify a region, data in all regions is queried.
-         * *   If you specify a region, data in the specified region is returned. You can specify one or more regions. Separate regions with commas (,).
+         * <strong>example:</strong>
+         * <p>shanghai</p>
          */
         public Builder area(String area) {
             this.putQueryParameter("Area", area);
@@ -154,7 +157,10 @@ public class DescribeDcdnReportRequest extends Request {
         }
 
         /**
-         * The domain names that you want to query. Separate domain names with commas (,).
+         * <p>The domain names that you want to query. Separate domain names with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com,www.example.org">www.example.com,www.example.org</a></p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -163,7 +169,11 @@ public class DescribeDcdnReportRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-07-02T01:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -172,15 +182,17 @@ public class DescribeDcdnReportRequest extends Request {
         }
 
         /**
-         * The HTTP status code. Valid values:
-         * <p>
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: HTTP 2xx status codes</li>
+         * <li><strong>3xx</strong>: HTTP 3xx status codes</li>
+         * <li><strong>4xx</strong>: HTTP 4xx status codes</li>
+         * <li><strong>5xx</strong>: HTTP 5xx status codes</li>
+         * </ul>
+         * <p>If you do not specify an HTTP status code, data for all preceding HTTP status codes is queried.</p>
          * 
-         * *   **2xx**: HTTP 2xx status codes
-         * *   **3xx**: HTTP 3xx status codes
-         * *   **4xx**: HTTP 4xx status codes
-         * *   **5xx**: HTTP 5xx status codes
-         * 
-         * If you do not specify an HTTP status code, data for all preceding HTTP status codes is queried.
+         * <strong>example:</strong>
+         * <p>2xx</p>
          */
         public Builder httpCode(String httpCode) {
             this.putQueryParameter("HttpCode", httpCode);
@@ -189,11 +201,14 @@ public class DescribeDcdnReportRequest extends Request {
         }
 
         /**
-         * Specify whether the region is outside the Chinese mainland. Valid values:
-         * <p>
+         * <p>Specify whether the region is outside the Chinese mainland. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: outside the Chinese mainland</li>
+         * <li><strong>0</strong>: inside the Chinese mainland</li>
+         * </ul>
          * 
-         * *   **1**: outside the Chinese mainland
-         * *   **0**: inside the Chinese mainland
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder isOverseas(String isOverseas) {
             this.putQueryParameter("IsOverseas", isOverseas);
@@ -202,7 +217,11 @@ public class DescribeDcdnReportRequest extends Request {
         }
 
         /**
-         * The ID of the operations report that you want to query. You can enter only one ID in each call. You can call the [DescribeDcdnSubList](~~270075~~) operation to query report IDs.
+         * <p>The ID of the operations report that you want to query. You can enter only one ID in each call. You can call the <a href="https://help.aliyun.com/document_detail/270075.html">DescribeDcdnSubList</a> operation to query report IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder reportId(Long reportId) {
             this.putQueryParameter("ReportId", reportId);
@@ -211,7 +230,11 @@ public class DescribeDcdnReportRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-07-02T00:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

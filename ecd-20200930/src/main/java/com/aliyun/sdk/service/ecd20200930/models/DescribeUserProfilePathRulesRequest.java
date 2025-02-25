@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserProfilePathRulesRequest} extends {@link RequestModel}
  *
  * <p>DescribeUserProfilePathRulesRequest</p>
  */
 public class DescribeUserProfilePathRulesRequest extends Request {
-    @Query
-    @NameInMap("DesktopGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopGroupId")
     private String desktopGroupId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("RuleType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleType")
     private String ruleType;
 
     private DescribeUserProfilePathRulesRequest(Builder builder) {
@@ -83,7 +88,10 @@ public class DescribeUserProfilePathRulesRequest extends Request {
         } 
 
         /**
-         * The desktop group ID. This parameter is required when you set RuleType parameter to DesktopGroup.
+         * <p>The desktop group ID. This parameter is required when you set RuleType parameter to DesktopGroup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dg-2i8qxpv6t1a03****</p>
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -92,7 +100,11 @@ public class DescribeUserProfilePathRulesRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -101,26 +113,26 @@ public class DescribeUserProfilePathRulesRequest extends Request {
         }
 
         /**
-         * The rule type that you want to configure for the directory.
-         * <p>
+         * <p>The rule type that you want to configure for the directory.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>DesktopGroup</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   DesktopGroup
+         * <!-- -->
+         * </li>
+         * <li><p>Default</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   Default
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>DesktopGroup</p>
          */
         public Builder ruleType(String ruleType) {
             this.putQueryParameter("RuleType", ruleType);

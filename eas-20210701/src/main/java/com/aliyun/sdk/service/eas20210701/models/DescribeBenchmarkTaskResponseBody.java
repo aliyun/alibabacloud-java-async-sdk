@@ -1,54 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBenchmarkTaskResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBenchmarkTaskResponseBody</p>
  */
 public class DescribeBenchmarkTaskResponseBody extends TeaModel {
-    @NameInMap("AvailableAgent")
+    @com.aliyun.core.annotation.NameInMap("AvailableAgent")
     private Long availableAgent;
 
-    @NameInMap("CallerUid")
+    @com.aliyun.core.annotation.NameInMap("CallerUid")
     private String callerUid;
 
-    @NameInMap("DesiredAgent")
+    @com.aliyun.core.annotation.NameInMap("DesiredAgent")
     private Long desiredAgent;
 
-    @NameInMap("Endpoint")
+    @com.aliyun.core.annotation.NameInMap("Endpoint")
     private String endpoint;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("ParentUid")
+    @com.aliyun.core.annotation.NameInMap("ParentUid")
     private String parentUid;
 
-    @NameInMap("Reason")
+    @com.aliyun.core.annotation.NameInMap("Reason")
     private String reason;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServiceName")
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
-    @NameInMap("TaskName")
+    @com.aliyun.core.annotation.NameInMap("TaskName")
     private String taskName;
 
-    @NameInMap("Token")
+    @com.aliyun.core.annotation.NameInMap("Token")
     private String token;
 
     private DescribeBenchmarkTaskResponseBody(Builder builder) {
@@ -182,7 +187,10 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         private String token; 
 
         /**
-         * AvailableAgent.
+         * <p>The number of instances that you can test.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder availableAgent(Long availableAgent) {
             this.availableAgent = availableAgent;
@@ -190,7 +198,10 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 压测任务的状态。
+         * <p>The ID of the operation caller.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1640133467****</p>
          */
         public Builder callerUid(String callerUid) {
             this.callerUid = callerUid;
@@ -198,7 +209,10 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 预期的压测实例个数。
+         * <p>The number of instances that you want to test.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder desiredAgent(Long desiredAgent) {
             this.desiredAgent = desiredAgent;
@@ -206,7 +220,10 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Endpoint.
+         * <p>The endpoint of the service gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192342311234.pai-eas.cn-chengdu.aliyuncs.com</p>
          */
         public Builder endpoint(String endpoint) {
             this.endpoint = endpoint;
@@ -214,7 +231,10 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Benchmar task is Running</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -222,7 +242,10 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * ParentUid.
+         * <p>The ID of the Alibaba Cloud account that is used to call the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1029728669****</p>
          */
         public Builder parentUid(String parentUid) {
             this.parentUid = parentUid;
@@ -230,7 +253,10 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Reason.
+         * <p>The event or reason that causes the current state of the stress testing task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder reason(String reason) {
             this.reason = reason;
@@ -238,7 +264,10 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -246,7 +275,10 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 访问eas服务的鉴权token。
+         * <p>The name of the service that you want to test.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
@@ -254,7 +286,75 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The state of the stress testing task.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>Creating</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Starting</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>DeleteFailed</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Running</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Stopping</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Error</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Updating</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Deleting</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>CreateFailed</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -262,7 +362,10 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 压测任务ID。
+         * <p>The ID of the stress testing task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-b-gv4y86u****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -270,7 +373,10 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 当前压测任务状态产生的原因。
+         * <p>The name of the stress testing task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>benchmark-larec-test-ae70</p>
          */
         public Builder taskName(String taskName) {
             this.taskName = taskName;
@@ -278,7 +384,10 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 资源拥有者的UID。
+         * <p>The token for authentication when a stress testing task is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6062787a-9301****</p>
          */
         public Builder token(String token) {
             this.token = token;

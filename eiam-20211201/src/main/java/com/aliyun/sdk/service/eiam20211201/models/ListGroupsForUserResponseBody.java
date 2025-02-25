@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGroupsForUserResponseBody} extends {@link TeaModel}
  *
  * <p>ListGroupsForUserResponseBody</p>
  */
 public class ListGroupsForUserResponseBody extends TeaModel {
-    @NameInMap("Groups")
-    private java.util.List < Groups> groups;
+    @com.aliyun.core.annotation.NameInMap("Groups")
+    private java.util.List<Groups> groups;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListGroupsForUserResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ListGroupsForUserResponseBody extends TeaModel {
     /**
      * @return groups
      */
-    public java.util.List < Groups> getGroups() {
+    public java.util.List<Groups> getGroups() {
         return this.groups;
     }
 
@@ -57,20 +62,23 @@ public class ListGroupsForUserResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Groups> groups; 
+        private java.util.List<Groups> groups; 
         private String requestId; 
         private Long totalCount; 
 
         /**
-         * The queried account groups.
+         * <p>The queried account groups.</p>
          */
-        public Builder groups(java.util.List < Groups> groups) {
+        public Builder groups(java.util.List<Groups> groups) {
             this.groups = groups;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class ListGroupsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned. The maximum number of entries returned at a time depends on the value of PageSize.
+         * <p>The total number of entries returned. The maximum number of entries returned at a time depends on the value of PageSize.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -91,12 +102,26 @@ public class ListGroupsForUserResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListGroupsForUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGroupsForUserResponseBody</p>
+     */
     public static class Groups extends TeaModel {
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
+
+        @com.aliyun.core.annotation.NameInMap("GroupMemberRelationSourceId")
+        private String groupMemberRelationSourceId;
+
+        @com.aliyun.core.annotation.NameInMap("GroupMemberRelationSourceType")
+        private String groupMemberRelationSourceType;
 
         private Groups(Builder builder) {
             this.groupId = builder.groupId;
+            this.groupMemberRelationSourceId = builder.groupMemberRelationSourceId;
+            this.groupMemberRelationSourceType = builder.groupMemberRelationSourceType;
         }
 
         public static Builder builder() {
@@ -114,14 +139,55 @@ public class ListGroupsForUserResponseBody extends TeaModel {
             return this.groupId;
         }
 
+        /**
+         * @return groupMemberRelationSourceId
+         */
+        public String getGroupMemberRelationSourceId() {
+            return this.groupMemberRelationSourceId;
+        }
+
+        /**
+         * @return groupMemberRelationSourceType
+         */
+        public String getGroupMemberRelationSourceType() {
+            return this.groupMemberRelationSourceType;
+        }
+
         public static final class Builder {
             private String groupId; 
+            private String groupMemberRelationSourceId; 
+            private String groupMemberRelationSourceType; 
 
             /**
-             * The group ID.
+             * <p>The group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>group_d6sbsuumeta4h66ec3il7yxxxx</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
+                return this;
+            }
+
+            /**
+             * <p>Account membership source ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
+             */
+            public Builder groupMemberRelationSourceId(String groupMemberRelationSourceId) {
+                this.groupMemberRelationSourceId = groupMemberRelationSourceId;
+                return this;
+            }
+
+            /**
+             * <p>Account membership source type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>build_in</p>
+             */
+            public Builder groupMemberRelationSourceType(String groupMemberRelationSourceType) {
+                this.groupMemberRelationSourceType = groupMemberRelationSourceType;
                 return this;
             }
 

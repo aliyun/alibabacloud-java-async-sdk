@@ -1,53 +1,78 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateEnvironmentRequest} extends {@link RequestModel}
  *
  * <p>CreateEnvironmentRequest</p>
  */
 public class CreateEnvironmentRequest extends Request {
-    @Query
-    @NameInMap("AliyunLang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AliyunLang")
     private String aliyunLang;
 
-    @Query
-    @NameInMap("BindResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BindResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bindResourceId;
 
-    @Query
-    @NameInMap("EnvironmentName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnvironmentName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String environmentName;
 
-    @Query
-    @NameInMap("EnvironmentSubType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnvironmentSubType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String environmentSubType;
 
-    @Query
-    @NameInMap("EnvironmentType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnvironmentType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String environmentType;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FeePackage")
+    private String feePackage;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GrafanaWorkspaceId")
+    private String grafanaWorkspaceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InitEnvironment")
+    private Boolean initEnvironment;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ManagedType")
+    private String managedType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrometheusInstanceId")
+    private String prometheusInstanceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
 
     private CreateEnvironmentRequest(Builder builder) {
         super(builder);
@@ -56,6 +81,11 @@ public class CreateEnvironmentRequest extends Request {
         this.environmentName = builder.environmentName;
         this.environmentSubType = builder.environmentSubType;
         this.environmentType = builder.environmentType;
+        this.feePackage = builder.feePackage;
+        this.grafanaWorkspaceId = builder.grafanaWorkspaceId;
+        this.initEnvironment = builder.initEnvironment;
+        this.managedType = builder.managedType;
+        this.prometheusInstanceId = builder.prometheusInstanceId;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.tags = builder.tags;
@@ -110,6 +140,41 @@ public class CreateEnvironmentRequest extends Request {
     }
 
     /**
+     * @return feePackage
+     */
+    public String getFeePackage() {
+        return this.feePackage;
+    }
+
+    /**
+     * @return grafanaWorkspaceId
+     */
+    public String getGrafanaWorkspaceId() {
+        return this.grafanaWorkspaceId;
+    }
+
+    /**
+     * @return initEnvironment
+     */
+    public Boolean getInitEnvironment() {
+        return this.initEnvironment;
+    }
+
+    /**
+     * @return managedType
+     */
+    public String getManagedType() {
+        return this.managedType;
+    }
+
+    /**
+     * @return prometheusInstanceId
+     */
+    public String getPrometheusInstanceId() {
+        return this.prometheusInstanceId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -126,7 +191,7 @@ public class CreateEnvironmentRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -136,9 +201,14 @@ public class CreateEnvironmentRequest extends Request {
         private String environmentName; 
         private String environmentSubType; 
         private String environmentType; 
+        private String feePackage; 
+        private String grafanaWorkspaceId; 
+        private Boolean initEnvironment; 
+        private String managedType; 
+        private String prometheusInstanceId; 
         private String regionId; 
         private String resourceGroupId; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -151,13 +221,26 @@ public class CreateEnvironmentRequest extends Request {
             this.environmentName = request.environmentName;
             this.environmentSubType = request.environmentSubType;
             this.environmentType = request.environmentType;
+            this.feePackage = request.feePackage;
+            this.grafanaWorkspaceId = request.grafanaWorkspaceId;
+            this.initEnvironment = request.initEnvironment;
+            this.managedType = request.managedType;
+            this.prometheusInstanceId = request.prometheusInstanceId;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.tags = request.tags;
         } 
 
         /**
-         * The language. Valid values: zh and en. Default value: zh.
+         * <p>The language. Default value: zh.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>en: English</li>
+         * <li>zh: Chinese</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -166,7 +249,11 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * The ID of the resource associated with the environment, such as the ACK cluster ID or VPC ID.
+         * <p>The ID of the resource bound to the environment, such as the container ID or VPC ID. For a Cloud environment, specify the region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c6e9dec475dca4a50a188411d8cbxxx</p>
          */
         public Builder bindResourceId(String bindResourceId) {
             this.putQueryParameter("BindResourceId", bindResourceId);
@@ -175,7 +262,11 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * The name of the environment.
+         * <p>The name of the environment.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env1</p>
          */
         public Builder environmentName(String environmentName) {
             this.putQueryParameter("EnvironmentName", environmentName);
@@ -184,12 +275,16 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * The subtype of the environment. Valid values:
-         * <p>
+         * <p>The subtype of the environment. Valid values:</p>
+         * <ul>
+         * <li>CS: Container Service for Kubernetes (ACK) or Distributed Cloud Container Platform for Kubernetes (ACK One)</li>
+         * <li>ECS: ECS</li>
+         * <li>Cloud: cloud service</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   CS: Container Service for Kubernetes (ACK)
-         * *   ECS: ECS
-         * *   Cloud: cloud service
+         * <strong>example:</strong>
+         * <p>ECS, ACK, etc.</p>
          */
         public Builder environmentSubType(String environmentSubType) {
             this.putQueryParameter("EnvironmentSubType", environmentSubType);
@@ -198,12 +293,16 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * The type of the environment. Valid values:
-         * <p>
+         * <p>The type of the environment. Valid values:</p>
+         * <ul>
+         * <li>CS: Container Service</li>
+         * <li>ECS: Elastic Compute Service</li>
+         * <li>Cloud: cloud service</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   CS: Container Service
-         * *   ECS: Elastic Compute Service
-         * *   Cloud: cloud service
+         * <strong>example:</strong>
+         * <p>CS</p>
          */
         public Builder environmentType(String environmentType) {
             this.putQueryParameter("EnvironmentType", environmentType);
@@ -212,7 +311,80 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The payable resource plan.</p>
+         * <ul>
+         * <li>If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro. Default value: CS_Basic.</li>
+         * <li>Otherwise, leave the parameter empty.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CS_Basic</p>
+         */
+        public Builder feePackage(String feePackage) {
+            this.putQueryParameter("FeePackage", feePackage);
+            this.feePackage = feePackage;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the Grafana workspace associated with the environment. If this parameter is left empty, the default shared Grafana workspace is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>grafana-rnglkcdrntlhk0****</p>
+         */
+        public Builder grafanaWorkspaceId(String grafanaWorkspaceId) {
+            this.putQueryParameter("GrafanaWorkspaceId", grafanaWorkspaceId);
+            this.grafanaWorkspaceId = grafanaWorkspaceId;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to initialize the environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder initEnvironment(Boolean initEnvironment) {
+            this.putQueryParameter("InitEnvironment", initEnvironment);
+            this.initEnvironment = initEnvironment;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether agents or exporters are managed. Valid values:</p>
+         * <ul>
+         * <li>none: No. By default, no managed agents or exporters are provided for ACK clusters.</li>
+         * <li>agent: Agents are managed. By default, managed agents are provided for ASK clusters, ACS clusters, and ACK One clusters.</li>
+         * <li>agent-exporter: Agents and exporters are managed. By default, managed agents and exporters are provided for cloud services.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
+         */
+        public Builder managedType(String managedType) {
+            this.putQueryParameter("ManagedType", managedType);
+            this.managedType = managedType;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the Prometheus instance. If no Prometheus instance is created, call the InitEnvironment operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c6e9dec475dca4a50a188411d8cbxxx</p>
+         */
+        public Builder prometheusInstanceId(String prometheusInstanceId) {
+            this.putQueryParameter("PrometheusInstanceId", prometheusInstanceId);
+            this.prometheusInstanceId = prometheusInstanceId;
+            return this;
+        }
+
+        /**
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -221,7 +393,10 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxyexli2****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -230,9 +405,9 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * The tags to add to the instance.
+         * <p>The tags of the instance. You can specify this parameter to manage tags for the instance.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;
@@ -245,11 +420,17 @@ public class CreateEnvironmentRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateEnvironmentRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEnvironmentRequest</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -284,7 +465,10 @@ public class CreateEnvironmentRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -292,7 +476,10 @@ public class CreateEnvironmentRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

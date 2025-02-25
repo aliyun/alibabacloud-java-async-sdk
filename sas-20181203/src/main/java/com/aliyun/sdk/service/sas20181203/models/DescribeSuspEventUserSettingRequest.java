@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSuspEventUserSettingRequest} extends {@link RequestModel}
  *
  * <p>DescribeSuspEventUserSettingRequest</p>
  */
 public class DescribeSuspEventUserSettingRequest extends Request {
-    @Query
-    @NameInMap("From")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("From")
     private String from;
 
-    @Query
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Integer id;
 
-    @Query
-    @NameInMap("SourceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceIp")
     private String sourceIp;
 
     private DescribeSuspEventUserSettingRequest(Builder builder) {
@@ -82,7 +87,10 @@ public class DescribeSuspEventUserSettingRequest extends Request {
         } 
 
         /**
-         * The ID of the request source. Set the value to **sas**.
+         * <p>The ID of the request source. Set the value to <strong>sas</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas</p>
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -91,7 +99,10 @@ public class DescribeSuspEventUserSettingRequest extends Request {
         }
 
         /**
-         * The ID. You do not need to specify this parameter.
+         * <p>The ID. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder id(Integer id) {
             this.putQueryParameter("Id", id);
@@ -100,7 +111,10 @@ public class DescribeSuspEventUserSettingRequest extends Request {
         }
 
         /**
-         * The IP address of the request. You do not need to specify this parameter.
+         * <p>The IP address of the request. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

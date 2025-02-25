@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopLoadBalancerListenerRequest} extends {@link RequestModel}
  *
  * <p>StopLoadBalancerListenerRequest</p>
  */
 public class StopLoadBalancerListenerRequest extends Request {
-    @Query
-    @NameInMap("ListenerPort")
-    @Validation(required = true, maximum = 65535)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerPort")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 65535)
     private Integer listenerPort;
 
-    @Query
-    @NameInMap("ListenerProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerProtocol")
     private String listenerProtocol;
 
-    @Query
-    @NameInMap("LoadBalancerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loadBalancerId;
 
     private StopLoadBalancerListenerRequest(Builder builder) {
@@ -84,7 +89,11 @@ public class StopLoadBalancerListenerRequest extends Request {
         } 
 
         /**
-         * ListenerPort.
+         * <p>The listener port that you want to disable. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
@@ -93,7 +102,13 @@ public class StopLoadBalancerListenerRequest extends Request {
         }
 
         /**
-         * ListenerProtocol.
+         * <p>The frontend protocol that is used by the ELB instance.</p>
+         * <blockquote>
+         * <p> This parameter is required if the same port is used by listeners that use different protocols.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         public Builder listenerProtocol(String listenerProtocol) {
             this.putQueryParameter("ListenerProtocol", listenerProtocol);
@@ -102,7 +117,11 @@ public class StopLoadBalancerListenerRequest extends Request {
         }
 
         /**
-         * LoadBalancerId.
+         * <p>The ID of the ELB instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-5sc1s9zrui8lpb8u7cl4f****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);

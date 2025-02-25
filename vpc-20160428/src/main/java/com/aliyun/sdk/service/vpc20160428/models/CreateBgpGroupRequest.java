@@ -1,78 +1,83 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateBgpGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateBgpGroupRequest</p>
  */
 public class CreateBgpGroupRequest extends Request {
-    @Query
-    @NameInMap("AuthKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthKey")
     private String authKey;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("IpVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpVersion")
     private String ipVersion;
 
-    @Query
-    @NameInMap("IsFakeAsn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsFakeAsn")
     private Boolean isFakeAsn;
 
-    @Query
-    @NameInMap("LocalAsn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LocalAsn")
     private Long localAsn;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PeerAsn")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeerAsn")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long peerAsn;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RouteQuota")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteQuota")
     private Integer routeQuota;
 
-    @Query
-    @NameInMap("RouterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String routerId;
 
     private CreateBgpGroupRequest(Builder builder) {
@@ -253,7 +258,10 @@ public class CreateBgpGroupRequest extends Request {
         } 
 
         /**
-         * The authentication key of the BGP group.
+         * <p>The authentication key of the BGP group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>!PWZ2****</p>
          */
         public Builder authKey(String authKey) {
             this.putQueryParameter("AuthKey", authKey);
@@ -262,12 +270,14 @@ public class CreateBgpGroupRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -276,10 +286,11 @@ public class CreateBgpGroupRequest extends Request {
         }
 
         /**
-         * The description of the BGP group.
-         * <p>
+         * <p>The description of the BGP group.</p>
+         * <p>The description must be 2 to 256 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 2 to 256 characters in length. It must start with a letter and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>BGP</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -288,11 +299,14 @@ public class CreateBgpGroupRequest extends Request {
         }
 
         /**
-         * The IP version. Valid values:
-         * <p>
+         * <p>The IP version. Valid values:</p>
+         * <ul>
+         * <li><strong>IPv4</strong>: This is the default value.</li>
+         * <li><strong>IPv6</strong>: IPv6 is supported only if the VBR for which you want to create the BGP group has IPv6 enabled.</li>
+         * </ul>
          * 
-         * *   **IPv4**: This is the default value.
-         * *   **IPv6**: IPv6 is supported only if the VBR for which you want to create the BGP group has IPv6 enabled.
+         * <strong>example:</strong>
+         * <p>IPv4</p>
          */
         public Builder ipVersion(String ipVersion) {
             this.putQueryParameter("IpVersion", ipVersion);
@@ -301,13 +315,17 @@ public class CreateBgpGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to use a fake ASN. Valid values:
-         * <p>
+         * <p>Specifies whether to use a fake ASN. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong> (default)</li>
+         * <li><strong>true</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> A router that runs BGP typically belongs to only one AS. If you need to replace an existing AS with a new AS and you cannot immediately modify BGP configurations, you can use fake ASNs to ensure service continuity.</p>
+         * </blockquote>
          * 
-         * *   **false** (default)
-         * *   **true**
-         * 
-         * >  A router that runs BGP typically belongs to only one AS. If you need to replace an existing AS with a new AS and you cannot immediately modify BGP configurations, you can use fake ASNs to ensure service continuity.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isFakeAsn(Boolean isFakeAsn) {
             this.putQueryParameter("IsFakeAsn", isFakeAsn);
@@ -316,14 +334,18 @@ public class CreateBgpGroupRequest extends Request {
         }
 
         /**
-         * The custom ASN on the Alibaba Cloud side. Valid values:
-         * <p>
+         * <p>The custom ASN on the Alibaba Cloud side. Valid values:</p>
+         * <ul>
+         * <li><strong>45104</strong></li>
+         * <li><strong>64512~65534</strong></li>
+         * <li><strong>4200000000~4294967294</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> <strong>65025</strong> is reserved by Alibaba Cloud. By default, Alibaba Cloud uses <strong>45104</strong> as <strong>LocalAsn</strong>. If you use custom <strong>LocalAsn</strong> in multi-line access scenarios, loops in BGP may occur.</p>
+         * </blockquote>
          * 
-         * *   **45104**
-         * *   **64512~65534**
-         * *   **4200000000~4294967294**
-         * 
-         * >  **65025** is reserved by Alibaba Cloud. By default, Alibaba Cloud uses **45104** as **LocalAsn**. If you use custom **LocalAsn** in multi-line access scenarios, loops in BGP may occur.
+         * <strong>example:</strong>
+         * <p>45104</p>
          */
         public Builder localAsn(Long localAsn) {
             this.putQueryParameter("LocalAsn", localAsn);
@@ -332,10 +354,11 @@ public class CreateBgpGroupRequest extends Request {
         }
 
         /**
-         * The name of the BGP group.
-         * <p>
+         * <p>The name of the BGP group.</p>
+         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -362,7 +385,11 @@ public class CreateBgpGroupRequest extends Request {
         }
 
         /**
-         * The ASN of the gateway device in the data center.
+         * <p>The ASN of the gateway device in the data center.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1****</p>
          */
         public Builder peerAsn(Long peerAsn) {
             this.putQueryParameter("PeerAsn", peerAsn);
@@ -371,10 +398,12 @@ public class CreateBgpGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the VBR.
-         * <p>
+         * <p>The region ID of the VBR.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -401,7 +430,10 @@ public class CreateBgpGroupRequest extends Request {
         }
 
         /**
-         * The maximum number of routes supported by a BGP peer. Default value: **110**.
+         * <p>The maximum number of routes supported by a BGP peer. Default value: <strong>110</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110</p>
          */
         public Builder routeQuota(Integer routeQuota) {
             this.putQueryParameter("RouteQuota", routeQuota);
@@ -410,7 +442,11 @@ public class CreateBgpGroupRequest extends Request {
         }
 
         /**
-         * The ID of the VBR.
+         * <p>The ID of the VBR.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vbr-bp1ctxy813985gkuk****</p>
          */
         public Builder routerId(String routerId) {
             this.putQueryParameter("RouterId", routerId);

@@ -76,15 +76,15 @@ public class DescribeRdsCommodityRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRdsCommodityRequest response) {
-            super(response);
-            this.commodityCode = response.commodityCode;
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.orderType = response.orderType;
+        private Builder(DescribeRdsCommodityRequest request) {
+            super(request);
+            this.commodityCode = request.commodityCode;
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.orderType = request.orderType;
         } 
 
         /**
-         * CommodityCode.
+         * The commodity code of the service.
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);
@@ -93,7 +93,7 @@ public class DescribeRdsCommodityRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the PolarDB-X 1.0 instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -102,7 +102,7 @@ public class DescribeRdsCommodityRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * The type of the order.
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);

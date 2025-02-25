@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMediaMarksRequest} extends {@link RequestModel}
  *
  * <p>ListMediaMarksRequest</p>
  */
 public class ListMediaMarksRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("MediaId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaId")
     private String mediaId;
 
-    @Query
-    @NameInMap("MediaMarkIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaMarkIds")
     private String mediaMarkIds;
 
     private ListMediaMarksRequest(Builder builder) {
@@ -91,7 +96,10 @@ public class ListMediaMarksRequest extends Request {
         }
 
         /**
-         * MediaId.
+         * <p>The ID of the media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>411bed50018971edb60b0764a0ec6***</p>
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);
@@ -100,7 +108,10 @@ public class ListMediaMarksRequest extends Request {
         }
 
         /**
-         * MediaMarkIds.
+         * <p>The mark ID. You can specify multiple IDs separated with commas (,). This parameter is discontinued.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mark-f82d<em><strong><strong>4994b0915948ef7e16,mark-3d56d</strong></strong></em>4c8fa9ae2a1f9e5d2d60</p>
          */
         public Builder mediaMarkIds(String mediaMarkIds) {
             this.putQueryParameter("MediaMarkIds", mediaMarkIds);

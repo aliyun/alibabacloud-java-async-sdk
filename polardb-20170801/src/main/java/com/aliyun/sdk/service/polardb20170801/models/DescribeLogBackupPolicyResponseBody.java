@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLogBackupPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLogBackupPolicyResponseBody</p>
  */
 public class DescribeLogBackupPolicyResponseBody extends TeaModel {
-    @NameInMap("EnableBackupLog")
+    @com.aliyun.core.annotation.NameInMap("EnableBackupLog")
     private Integer enableBackupLog;
 
-    @NameInMap("LogBackupAnotherRegionRegion")
+    @com.aliyun.core.annotation.NameInMap("LogBackupAnotherRegionRegion")
     private String logBackupAnotherRegionRegion;
 
-    @NameInMap("LogBackupAnotherRegionRetentionPeriod")
+    @com.aliyun.core.annotation.NameInMap("LogBackupAnotherRegionRetentionPeriod")
     private String logBackupAnotherRegionRetentionPeriod;
 
-    @NameInMap("LogBackupRetentionPeriod")
+    @com.aliyun.core.annotation.NameInMap("LogBackupRetentionPeriod")
     private Integer logBackupRetentionPeriod;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeLogBackupPolicyResponseBody(Builder builder) {
@@ -86,11 +91,14 @@ public class DescribeLogBackupPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the log backup feature is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether the log backup feature is enabled. Valid values:</p>
+         * <ul>
+         * <li>0: The log backup feature is disabled.</li>
+         * <li>1: The log backup feature is enabled. By default, the log backup feature is enabled and cannot be disabled.</li>
+         * </ul>
          * 
-         * *   0: The log backup feature is disabled.
-         * *   1: The log backup feature is enabled. By default, the log backup feature is enabled and cannot be disabled.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder enableBackupLog(Integer enableBackupLog) {
             this.enableBackupLog = enableBackupLog;
@@ -98,7 +106,10 @@ public class DescribeLogBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The region in which you want to store cross-region log backups. For more information about regions that support the cross-region backup feature, see [Overview](~~72672~~).
+         * <p>The region in which you want to store cross-region log backups. For more information about regions that support the cross-region backup feature, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder logBackupAnotherRegionRegion(String logBackupAnotherRegionRegion) {
             this.logBackupAnotherRegionRegion = logBackupAnotherRegionRegion;
@@ -106,14 +117,18 @@ public class DescribeLogBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The retention period of cross-region log backups. Valid values:
-         * <p>
+         * <p>The retention period of cross-region log backups. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: The cross-region backup feature is disabled.</li>
+         * <li><strong>30 to 7300</strong>: Cross-region log backups are retained for 30 to 7,300 days.</li>
+         * <li><strong>-1</strong>: The log backups are permanently retained.</li>
+         * </ul>
+         * <blockquote>
+         * <p> When you create a cluster, the default value of this parameter is <strong>0</strong>.</p>
+         * </blockquote>
          * 
-         * *   **0**: The cross-region backup feature is disabled.
-         * *   **30 to 7300**: Cross-region log backups are retained for 30 to 7,300 days.
-         * *   **-1**: The log backups are permanently retained.
-         * 
-         * >  When you create a cluster, the default value of this parameter is **0**.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder logBackupAnotherRegionRetentionPeriod(String logBackupAnotherRegionRetentionPeriod) {
             this.logBackupAnotherRegionRetentionPeriod = logBackupAnotherRegionRetentionPeriod;
@@ -121,11 +136,14 @@ public class DescribeLogBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The retention period of the log backups. Valid values:
-         * <p>
+         * <p>The retention period of the log backups. Valid values:</p>
+         * <ul>
+         * <li>3 to 7300: The log backups are retained for 3 to 7,300 days.</li>
+         * <li>-1: The log backups are permanently retained.</li>
+         * </ul>
          * 
-         * *   3 to 7300: The log backups are retained for 3 to 7,300 days.
-         * *   \-1: The log backups are permanently retained.
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder logBackupRetentionPeriod(Integer logBackupRetentionPeriod) {
             this.logBackupRetentionPeriod = logBackupRetentionPeriod;
@@ -133,7 +151,10 @@ public class DescribeLogBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>62EE0051-102B-488D-9C79-D607B8******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

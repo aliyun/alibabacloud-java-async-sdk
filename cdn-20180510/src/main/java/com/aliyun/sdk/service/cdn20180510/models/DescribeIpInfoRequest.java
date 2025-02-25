@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIpInfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeIpInfoRequest</p>
  */
 public class DescribeIpInfoRequest extends Request {
-    @Query
-    @NameInMap("IP")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IP")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ip;
 
     private DescribeIpInfoRequest(Builder builder) {
@@ -55,7 +55,11 @@ public class DescribeIpInfoRequest extends Request {
         } 
 
         /**
-         * The IP address. You can specify only one IP address.
+         * <p>The IP address. You can specify only one IP address.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.1</p>
          */
         public Builder ip(String ip) {
             this.putQueryParameter("IP", ip);

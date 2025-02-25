@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstallCmsExporterRequest} extends {@link RequestModel}
  *
  * <p>InstallCmsExporterRequest</p>
  */
 public class InstallCmsExporterRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("CmsArgs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CmsArgs")
     private String cmsArgs;
 
-    @Query
-    @NameInMap("DirectArgs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectArgs")
     private String directArgs;
 
-    @Query
-    @NameInMap("EnableTag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableTag")
     private Boolean enableTag;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private InstallCmsExporterRequest(Builder builder) {
@@ -112,7 +117,11 @@ public class InstallCmsExporterRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc7a37ee31aea4ed1a059eff8034b****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -121,7 +130,10 @@ public class InstallCmsExporterRequest extends Request {
         }
 
         /**
-         * CmsArgs.
+         * <p>The cloud services that you want to monitor. The CmsArgs parameter is the startup parameter of the cms-exporter collector. Separate multiple cloud services with number signs (<code>#</code>).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hologres#cen</p>
          */
         public Builder cmsArgs(String cmsArgs) {
             this.putQueryParameter("CmsArgs", cmsArgs);
@@ -130,7 +142,10 @@ public class InstallCmsExporterRequest extends Request {
         }
 
         /**
-         * DirectArgs.
+         * <p>The recently monitored cloud services. Separate multiple cloud services with number signs (<code>#</code>).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hologres#cen</p>
          */
         public Builder directArgs(String directArgs) {
             this.putQueryParameter("DirectArgs", directArgs);
@@ -139,7 +154,10 @@ public class InstallCmsExporterRequest extends Request {
         }
 
         /**
-         * EnableTag.
+         * <p>Specifies whether to collect the aliyun tags attached to each cloud service. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableTag(Boolean enableTag) {
             this.putQueryParameter("EnableTag", enableTag);
@@ -148,7 +166,11 @@ public class InstallCmsExporterRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -1,33 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyLogMetaStatusRequest} extends {@link RequestModel}
  *
  * <p>ModifyLogMetaStatusRequest</p>
  */
 public class ModifyLogMetaStatusRequest extends Request {
-    @Query
-    @NameInMap("From")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("From")
     private String from;
 
-    @Query
-    @NameInMap("LogStore")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogStore")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String logStore;
 
-    @Query
-    @NameInMap("Project")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Project")
     private String project;
 
-    @Query
-    @NameInMap("Status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String status;
 
     private ModifyLogMetaStatusRequest(Builder builder) {
@@ -35,6 +44,7 @@ public class ModifyLogMetaStatusRequest extends Request {
         this.from = builder.from;
         this.logStore = builder.logStore;
         this.project = builder.project;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.status = builder.status;
     }
 
@@ -73,6 +83,13 @@ public class ModifyLogMetaStatusRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -83,6 +100,7 @@ public class ModifyLogMetaStatusRequest extends Request {
         private String from; 
         private String logStore; 
         private String project; 
+        private Long resourceDirectoryAccountId; 
         private String status; 
 
         private Builder() {
@@ -94,11 +112,15 @@ public class ModifyLogMetaStatusRequest extends Request {
             this.from = request.from;
             this.logStore = request.logStore;
             this.project = request.project;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.status = request.status;
         } 
 
         /**
-         * The ID of the request source. Set the value to **sas**.
+         * <p>The ID of the request source. Set the value to <strong>sas</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas</p>
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -107,10 +129,14 @@ public class ModifyLogMetaStatusRequest extends Request {
         }
 
         /**
-         * The name of the dedicated Logstore in which logs are stored.
-         * <p>
+         * <p>The name of the dedicated Logstore in which logs are stored.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeLogMeta~~">DescribeLogMeta</a> operation to query the names of Logstores.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeLogMeta](~~DescribeLogMeta~~) operation to query the names of Logstores.
+         * <strong>example:</strong>
+         * <p>aegis-log-login</p>
          */
         public Builder logStore(String logStore) {
             this.putQueryParameter("LogStore", logStore);
@@ -119,10 +145,13 @@ public class ModifyLogMetaStatusRequest extends Request {
         }
 
         /**
-         * The name of the project.
-         * <p>
+         * <p>The name of the project.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeLogMeta~~">DescribeLogMeta</a> operation to query the names of projects.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeLogMeta](~~DescribeLogMeta~~) operation to query the names of projects.
+         * <strong>example:</strong>
+         * <p>aegis-log</p>
          */
         public Builder project(String project) {
             this.putQueryParameter("Project", project);
@@ -131,11 +160,30 @@ public class ModifyLogMetaStatusRequest extends Request {
         }
 
         /**
-         * The status of the log analysis feature. Valid values:
-         * <p>
+         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+         * </blockquote>
          * 
-         * *   **enabled**
-         * *   **disabled**
+         * <strong>example:</strong>
+         * <p>1232428423234****</p>
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+            return this;
+        }
+
+        /**
+         * <p>The status of the log analysis feature. Valid values:</p>
+         * <ul>
+         * <li><strong>enabled</strong></li>
+         * <li><strong>disabled</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>disabled</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

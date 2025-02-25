@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link LockDBInstanceWriteResponseBody} extends {@link TeaModel}
  *
  * <p>LockDBInstanceWriteResponseBody</p>
  */
 public class LockDBInstanceWriteResponseBody extends TeaModel {
-    @NameInMap("DBInstanceName")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceName")
     private String DBInstanceName;
 
-    @NameInMap("LockReason")
+    @com.aliyun.core.annotation.NameInMap("LockReason")
     private String lockReason;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private Long taskId;
 
     private LockDBInstanceWriteResponseBody(Builder builder) {
@@ -74,7 +74,10 @@ public class LockDBInstanceWriteResponseBody extends TeaModel {
         private Long taskId; 
 
         /**
-         * DBInstanceName.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-2ev03avw0r0552***</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -82,7 +85,10 @@ public class LockDBInstanceWriteResponseBody extends TeaModel {
         }
 
         /**
-         * LockReason.
+         * <p>The reason why write operations on the instance are locked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lock reason</p>
          */
         public Builder lockReason(String lockReason) {
             this.lockReason = lockReason;
@@ -90,7 +96,10 @@ public class LockDBInstanceWriteResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2BE6E619-A657-42E3-AD2D-18F8428A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +107,10 @@ public class LockDBInstanceWriteResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21986****</p>
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;

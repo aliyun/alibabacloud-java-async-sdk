@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link EncryptConf} extends {@link TeaModel}
  *
  * <p>EncryptConf</p>
  */
 public class EncryptConf extends TeaModel {
-    @NameInMap("enable")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("enable")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean enable;
 
-    @NameInMap("encrypt_type")
+    @com.aliyun.core.annotation.NameInMap("encrypt_type")
     private String encryptType;
 
-    @NameInMap("user_cmk_info")
+    @com.aliyun.core.annotation.NameInMap("user_cmk_info")
     private EncryptUserCmkConf userCmkInfo;
 
     private EncryptConf(Builder builder) {
@@ -63,7 +68,7 @@ public class EncryptConf extends TeaModel {
         private EncryptUserCmkConf userCmkInfo; 
 
         /**
-         * enable.
+         * <p>This parameter is required.</p>
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;

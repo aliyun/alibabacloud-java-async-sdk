@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteInterceptionTargetRequest} extends {@link RequestModel}
  *
  * <p>DeleteInterceptionTargetRequest</p>
  */
 public class DeleteInterceptionTargetRequest extends Request {
-    @Query
-    @NameInMap("TargetIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetIds;
 
     private DeleteInterceptionTargetRequest(Builder builder) {
@@ -55,7 +60,11 @@ public class DeleteInterceptionTargetRequest extends Request {
         } 
 
         /**
-         * The IDs of the network objects that you want to remove. You can call the [ListInterceptionTargetPage](~~ListInterceptionTargetPage~~) operation to query the IDs of the network objects.
+         * <p>The IDs of the network objects that you want to remove. You can call the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to query the IDs of the network objects.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,11,111</p>
          */
         public Builder targetIds(String targetIds) {
             this.putQueryParameter("TargetIds", targetIds);

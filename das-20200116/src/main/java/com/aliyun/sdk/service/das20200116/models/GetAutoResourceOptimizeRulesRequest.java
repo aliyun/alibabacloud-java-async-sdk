@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAutoResourceOptimizeRulesRequest} extends {@link RequestModel}
  *
  * <p>GetAutoResourceOptimizeRulesRequest</p>
  */
 public class GetAutoResourceOptimizeRulesRequest extends Request {
-    @Query
-    @NameInMap("ConsoleContext")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConsoleContext")
     private String consoleContext;
 
-    @Query
-    @NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private String instanceIds;
 
     private GetAutoResourceOptimizeRulesRequest(Builder builder) {
@@ -68,7 +73,10 @@ public class GetAutoResourceOptimizeRulesRequest extends Request {
         } 
 
         /**
-         * The reserved parameter.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder consoleContext(String consoleContext) {
             this.putQueryParameter("ConsoleContext", consoleContext);
@@ -77,15 +85,20 @@ public class GetAutoResourceOptimizeRulesRequest extends Request {
         }
 
         /**
-         * The database instance IDs.
-         * <p>
+         * <p>The database instance IDs.</p>
+         * <ul>
+         * <li><p>Specify the parameter value as a JSON array, such as <code>[\&quot;Database account 1\&quot;,\&quot;Database account 2\&quot;]</code>. Separate database instance IDs with commas (,).</p>
+         * </li>
+         * <li><p>By default, if you leave this parameter empty, all database instances for which the automatic fragment recycling feature has been enabled within the current Alibaba Cloud account are returned. The following types of database instances are returned:</p>
+         * <ul>
+         * <li>Database instances for which the automatic fragment recycling feature is currently enabled.</li>
+         * <li>Database instances for which the automatic fragment recycling feature was once enabled but is currently disabled, including those for which DAS Enterprise Edition has been disabled but excluding those that have been released.</li>
+         * </ul>
+         * </li>
+         * </ul>
          * 
-         * *   Set this parameter to a JSON array that consists of multiple instance IDs. Separate instance IDs with commas (,). Example: `[\"Instance ID1\",\"Instance ID2\"]`.
-         * 
-         * *   By default, if you leave this parameter empty, all database instances for which the automatic fragment recycling feature has been enabled within the current Alibaba Cloud account are returned. The following types of database instances are returned:
-         * 
-         *     *   Database instances for which the automatic fragment recycling feature is currently enabled.
-         *     *   Database instances for which the automatic fragment recycling feature was once enabled but is currently disabled, including those for which DAS Professional Edition has been disabled but excluding those that have been released.
+         * <strong>example:</strong>
+         * <p>[&quot;rm-2ze8g2am97624****&quot;,&quot;rm-2vc54m2a6pd6p****&quot;,&quot;rm-2ze9xrhze0709****&quot;,&quot;rm-2ze8g2am97627****&quot;]</p>
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);

@@ -1,29 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateModelVersionLabelsRequest} extends {@link RequestModel}
  *
  * <p>CreateModelVersionLabelsRequest</p>
  */
 public class CreateModelVersionLabelsRequest extends Request {
-    @Path
-    @NameInMap("ModelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ModelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String modelId;
 
-    @Path
-    @NameInMap("VersionName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("VersionName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String versionName;
 
-    @Body
-    @NameInMap("Labels")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Labels")
     private java.util.List < Label > labels;
 
     private CreateModelVersionLabelsRequest(Builder builder) {
@@ -84,7 +84,10 @@ public class CreateModelVersionLabelsRequest extends Request {
         } 
 
         /**
-         * ModelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>model-rbvg5wzljz****ks92</p>
          */
         public Builder modelId(String modelId) {
             this.putPathParameter("ModelId", modelId);
@@ -93,7 +96,10 @@ public class CreateModelVersionLabelsRequest extends Request {
         }
 
         /**
-         * VersionName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.1.1</p>
          */
         public Builder versionName(String versionName) {
             this.putPathParameter("VersionName", versionName);

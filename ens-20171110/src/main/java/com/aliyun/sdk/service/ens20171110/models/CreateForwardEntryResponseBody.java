@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateForwardEntryResponseBody} extends {@link TeaModel}
  *
  * <p>CreateForwardEntryResponseBody</p>
  */
 public class CreateForwardEntryResponseBody extends TeaModel {
-    @NameInMap("ForwardEntryId")
+    @com.aliyun.core.annotation.NameInMap("ForwardEntryId")
     private String forwardEntryId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateForwardEntryResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateForwardEntryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ForwardEntryId.
+         * <p>The ID of the DNAT entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fwd-5tc07cw14metghn3siv4ak8do</p>
          */
         public Builder forwardEntryId(String forwardEntryId) {
             this.forwardEntryId = forwardEntryId;
@@ -58,7 +66,10 @@ public class CreateForwardEntryResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EF6D6FA4-DACA-5822-A981-81006271D263</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

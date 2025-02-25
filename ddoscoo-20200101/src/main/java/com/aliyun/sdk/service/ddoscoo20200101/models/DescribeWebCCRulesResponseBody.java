@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWebCCRulesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWebCCRulesResponseBody</p>
  */
 public class DescribeWebCCRulesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
-    @NameInMap("WebCCRules")
-    private java.util.List < WebCCRules> webCCRules;
+    @com.aliyun.core.annotation.NameInMap("WebCCRules")
+    private java.util.List<WebCCRules> webCCRules;
 
     private DescribeWebCCRulesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -52,17 +57,20 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
     /**
      * @return webCCRules
      */
-    public java.util.List < WebCCRules> getWebCCRules() {
+    public java.util.List<WebCCRules> getWebCCRules() {
         return this.webCCRules;
     }
 
     public static final class Builder {
         private String requestId; 
         private Long totalCount; 
-        private java.util.List < WebCCRules> webCCRules; 
+        private java.util.List<WebCCRules> webCCRules; 
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EAED912D-909E-45F0-AF74-AC0CCDCAE314</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +78,10 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned custom frequency control rules.
+         * <p>The total number of custom frequency control rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -78,9 +89,9 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the details of the custom frequency control rule.
+         * <p>The custom frequency control rule.</p>
          */
-        public Builder webCCRules(java.util.List < WebCCRules> webCCRules) {
+        public Builder webCCRules(java.util.List<WebCCRules> webCCRules) {
             this.webCCRules = webCCRules;
             return this;
         }
@@ -91,26 +102,32 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeWebCCRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWebCCRulesResponseBody</p>
+     */
     public static class WebCCRules extends TeaModel {
-        @NameInMap("Act")
+        @com.aliyun.core.annotation.NameInMap("Act")
         private String act;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("Interval")
+        @com.aliyun.core.annotation.NameInMap("Interval")
         private Integer interval;
 
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Ttl")
+        @com.aliyun.core.annotation.NameInMap("Ttl")
         private Integer ttl;
 
-        @NameInMap("Uri")
+        @com.aliyun.core.annotation.NameInMap("Uri")
         private String uri;
 
         private WebCCRules(Builder builder) {
@@ -190,11 +207,14 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
             private String uri; 
 
             /**
-             * The blocking type. Valid values:
-             * <p>
+             * <p>The action triggered if the rule is matched. Valid values:</p>
+             * <ul>
+             * <li><strong>close</strong>: The requests that match the rule are blocked.</li>
+             * <li><strong>captcha</strong>: Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) verification for the requests that match the rule is implemented.</li>
+             * </ul>
              * 
-             * *   **close**: blocks requests.
-             * *   **captcha**: enables Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) verification.
+             * <strong>example:</strong>
+             * <p>close</p>
              */
             public Builder act(String act) {
                 this.act = act;
@@ -202,7 +222,10 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of requests that are allowed from an individual IP address. Valid values: **2** to **2000**.
+             * <p>The number of requests that are allowed from a single IP address. Valid values: <strong>2</strong> to <strong>2000</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -210,7 +233,10 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The check intervals. Valid values: **5** to **10800**. Unit: seconds.
+             * <p>The check interval. Valid values: <strong>5</strong> to <strong>10800</strong>. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -218,11 +244,14 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The match mode. Valid values:
-             * <p>
+             * <p>The match mode. Valid values:</p>
+             * <ul>
+             * <li><strong>prefix</strong>: prefix match.</li>
+             * <li><strong>match</strong>: exact match.</li>
+             * </ul>
              * 
-             * *   **prefix**: prefix match
-             * *   **match**: exact match
+             * <strong>example:</strong>
+             * <p>prefix</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -230,7 +259,10 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the rule.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wq</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -238,7 +270,10 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The blocking duration. Valid values: **1** to **1440**. Unit: minutes.
+             * <p>The validity period. Valid values: <strong>1</strong> to <strong>1440</strong>. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder ttl(Integer ttl) {
                 this.ttl = ttl;
@@ -246,7 +281,10 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The check path.
+             * <p>The check path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/hello</p>
              */
             public Builder uri(String uri) {
                 this.uri = uri;

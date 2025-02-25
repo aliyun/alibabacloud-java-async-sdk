@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.httpdns20160201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResolveStatisticsRequest} extends {@link RequestModel}
  *
  * <p>GetResolveStatisticsRequest</p>
  */
 public class GetResolveStatisticsRequest extends Request {
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("Granularity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Granularity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String granularity;
 
-    @Query
-    @NameInMap("ProtocolName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProtocolName")
     private String protocolName;
 
-    @Query
-    @NameInMap("TimeSpan")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeSpan")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer timeSpan;
 
     private GetResolveStatisticsRequest(Builder builder) {
@@ -90,16 +95,19 @@ public class GetResolveStatisticsRequest extends Request {
             super();
         } 
 
-        private Builder(GetResolveStatisticsRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.granularity = response.granularity;
-            this.protocolName = response.protocolName;
-            this.timeSpan = response.timeSpan;
+        private Builder(GetResolveStatisticsRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.granularity = request.granularity;
+            this.protocolName = request.protocolName;
+            this.timeSpan = request.timeSpan;
         } 
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -108,7 +116,10 @@ public class GetResolveStatisticsRequest extends Request {
         }
 
         /**
-         * Granularity.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>month</p>
          */
         public Builder granularity(String granularity) {
             this.putQueryParameter("Granularity", granularity);
@@ -126,7 +137,10 @@ public class GetResolveStatisticsRequest extends Request {
         }
 
         /**
-         * TimeSpan.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder timeSpan(Integer timeSpan) {
             this.putQueryParameter("TimeSpan", timeSpan);

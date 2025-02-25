@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPluginForUuidRequest} extends {@link RequestModel}
  *
  * <p>ListPluginForUuidRequest</p>
  */
 public class ListPluginForUuidRequest extends Request {
-    @Query
-    @NameInMap("Types")
-    private java.util.List < String > types;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Types")
+    private java.util.List<String> types;
 
-    @Query
-    @NameInMap("Uuid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String uuid;
 
     private ListPluginForUuidRequest(Builder builder) {
@@ -43,7 +48,7 @@ public class ListPluginForUuidRequest extends Request {
     /**
      * @return types
      */
-    public java.util.List < String > getTypes() {
+    public java.util.List<String> getTypes() {
         return this.types;
     }
 
@@ -55,7 +60,7 @@ public class ListPluginForUuidRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListPluginForUuidRequest, Builder> {
-        private java.util.List < String > types; 
+        private java.util.List<String> types; 
         private String uuid; 
 
         private Builder() {
@@ -69,9 +74,9 @@ public class ListPluginForUuidRequest extends Request {
         } 
 
         /**
-         * The plug-in types.
+         * <p>The plug-in types.</p>
          */
-        public Builder types(java.util.List < String > types) {
+        public Builder types(java.util.List<String> types) {
             String typesShrink = shrink(types, "Types", "simple");
             this.putQueryParameter("Types", typesShrink);
             this.types = types;
@@ -79,10 +84,14 @@ public class ListPluginForUuidRequest extends Request {
         }
 
         /**
-         * The UUID of the server.
-         * <p>
+         * <p>The UUID of the server.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+         * <strong>example:</strong>
+         * <p>bdb7071f-129d-4ceb-af80-4cf70c4571c6</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

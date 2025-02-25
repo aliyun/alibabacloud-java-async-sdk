@@ -1,63 +1,73 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSecretParameterRequest} extends {@link RequestModel}
  *
  * <p>CreateSecretParameterRequest</p>
  */
 public class CreateSecretParameterRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Constraints")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Constraints")
     private String constraints;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DKMSInstanceId")
+    private String DKMSInstanceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("KeyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyId")
     private String keyId;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("Tags")
-    private java.util.Map < String, ? > tags;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.Map<String, ?> tags;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @Query
-    @NameInMap("Value")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Value")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String value;
 
     private CreateSecretParameterRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
         this.constraints = builder.constraints;
+        this.DKMSInstanceId = builder.DKMSInstanceId;
         this.description = builder.description;
         this.keyId = builder.keyId;
         this.name = builder.name;
@@ -93,6 +103,13 @@ public class CreateSecretParameterRequest extends Request {
      */
     public String getConstraints() {
         return this.constraints;
+    }
+
+    /**
+     * @return DKMSInstanceId
+     */
+    public String getDKMSInstanceId() {
+        return this.DKMSInstanceId;
     }
 
     /**
@@ -133,7 +150,7 @@ public class CreateSecretParameterRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.Map < String, ? > getTags() {
+    public java.util.Map<String, ?> getTags() {
         return this.tags;
     }
 
@@ -154,12 +171,13 @@ public class CreateSecretParameterRequest extends Request {
     public static final class Builder extends Request.Builder<CreateSecretParameterRequest, Builder> {
         private String clientToken; 
         private String constraints; 
+        private String DKMSInstanceId; 
         private String description; 
         private String keyId; 
         private String name; 
         private String regionId; 
         private String resourceGroupId; 
-        private java.util.Map < String, ? > tags; 
+        private java.util.Map<String, ?> tags; 
         private String type; 
         private String value; 
 
@@ -171,6 +189,7 @@ public class CreateSecretParameterRequest extends Request {
             super(request);
             this.clientToken = request.clientToken;
             this.constraints = request.constraints;
+            this.DKMSInstanceId = request.DKMSInstanceId;
             this.description = request.description;
             this.keyId = request.keyId;
             this.name = request.name;
@@ -182,7 +201,10 @@ public class CreateSecretParameterRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_). For more information, see "How to ensure idempotence".
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (_). For more information, see &quot;How to ensure idempotence&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -191,13 +213,16 @@ public class CreateSecretParameterRequest extends Request {
         }
 
         /**
-         * The constraints of the encryption parameter. By default, this parameter is null. Valid values:
-         * <p>
+         * <p>The constraints of the encryption parameter. By default, this parameter is null. Valid values:</p>
+         * <ul>
+         * <li>AllowedValues: The value that is allowed for the encryption parameter. It must be an array string.</li>
+         * <li>AllowedPattern: The pattern that is allowed for the encryption parameter. It must be a regular expression.</li>
+         * <li>MinLength: The minimum length of the encryption parameter.</li>
+         * <li>MaxLength: The maximum length of the encryption parameter.</li>
+         * </ul>
          * 
-         * *   AllowedValues: The value that is allowed for the encryption parameter. It must be an array string.
-         * *   AllowedPattern: The pattern that is allowed for the encryption parameter. It must be a regular expression.
-         * *   MinLength: The minimum length of the encryption parameter.
-         * *   MaxLength: The maximum length of the encryption parameter.
+         * <strong>example:</strong>
+         * <p>&quot;{&quot;&quot;AllowedValues&quot;:[&quot;secretparameter&quot;],&quot;AllowedPattern&quot;:&quot;secretparameter&quot;,&quot;MinLength&quot;:0,&quot;MaxLength&quot;:20}&quot;</p>
          */
         public Builder constraints(String constraints) {
             this.putQueryParameter("Constraints", constraints);
@@ -206,7 +231,22 @@ public class CreateSecretParameterRequest extends Request {
         }
 
         /**
-         * The description of the encryption parameter. The description must be 1 to 200 characters in length.
+         * <p>The instance ID of the KMS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kst-hzz****</p>
+         */
+        public Builder DKMSInstanceId(String DKMSInstanceId) {
+            this.putQueryParameter("DKMSInstanceId", DKMSInstanceId);
+            this.DKMSInstanceId = DKMSInstanceId;
+            return this;
+        }
+
+        /**
+         * <p>The description of the encryption parameter. The description must be 1 to 200 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SecretParameter</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -215,7 +255,10 @@ public class CreateSecretParameterRequest extends Request {
         }
 
         /**
-         * The key ID of Key Management Service (KMS) that is used to encrypt the parameter.
+         * <p>The key ID of Key Management Service (KMS) that is used to encrypt the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80e9409f-78fa-42ab-84bd-83f40c******</p>
          */
         public Builder keyId(String keyId) {
             this.putQueryParameter("KeyId", keyId);
@@ -224,7 +267,11 @@ public class CreateSecretParameterRequest extends Request {
         }
 
         /**
-         * The name of the parameter. The name must be 1 to 180 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_). It cannot start with ALIYUN, ACS, ALIBABA, ALICLOUD, or OOS.
+         * <p>The name of the parameter. The name must be 1 to 180 characters in length, and can contain letters, digits, hyphens (-), and underscores (_). It cannot start with ALIYUN, ACS, ALIBABA, ALICLOUD, or OOS.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySecretParameter</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -233,7 +280,10 @@ public class CreateSecretParameterRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -242,7 +292,10 @@ public class CreateSecretParameterRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxsn4m4******</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -251,9 +304,12 @@ public class CreateSecretParameterRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;k1&quot;: &quot;v1&quot;, &quot;k2&quot;: &quot;v2&quot;}</p>
          */
-        public Builder tags(java.util.Map < String, ? > tags) {
+        public Builder tags(java.util.Map<String, ?> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
@@ -261,7 +317,10 @@ public class CreateSecretParameterRequest extends Request {
         }
 
         /**
-         * The data type of the parameter. Set the value to Secret.
+         * <p>The type of the parameter. Set the value to Secret.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Secret</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -270,7 +329,11 @@ public class CreateSecretParameterRequest extends Request {
         }
 
         /**
-         * The value of the encryption parameter. The value must be 1 to 4096 characters in length.
+         * <p>The value of the encryption parameter. The value must be 1 to 4096 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SecretParameter</p>
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

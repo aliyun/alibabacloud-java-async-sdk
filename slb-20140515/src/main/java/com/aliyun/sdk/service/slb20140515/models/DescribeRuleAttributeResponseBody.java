@@ -1,84 +1,89 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRuleAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRuleAttributeResponseBody</p>
  */
 public class DescribeRuleAttributeResponseBody extends TeaModel {
-    @NameInMap("Cookie")
+    @com.aliyun.core.annotation.NameInMap("Cookie")
     private String cookie;
 
-    @NameInMap("CookieTimeout")
+    @com.aliyun.core.annotation.NameInMap("CookieTimeout")
     private Integer cookieTimeout;
 
-    @NameInMap("Domain")
+    @com.aliyun.core.annotation.NameInMap("Domain")
     private String domain;
 
-    @NameInMap("HealthCheck")
+    @com.aliyun.core.annotation.NameInMap("HealthCheck")
     private String healthCheck;
 
-    @NameInMap("HealthCheckConnectPort")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckConnectPort")
     private Integer healthCheckConnectPort;
 
-    @NameInMap("HealthCheckDomain")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckDomain")
     private String healthCheckDomain;
 
-    @NameInMap("HealthCheckHttpCode")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckHttpCode")
     private String healthCheckHttpCode;
 
-    @NameInMap("HealthCheckInterval")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckInterval")
     private Integer healthCheckInterval;
 
-    @NameInMap("HealthCheckTimeout")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckTimeout")
     private Integer healthCheckTimeout;
 
-    @NameInMap("HealthCheckURI")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckURI")
     private String healthCheckURI;
 
-    @NameInMap("HealthyThreshold")
+    @com.aliyun.core.annotation.NameInMap("HealthyThreshold")
     private Integer healthyThreshold;
 
-    @NameInMap("ListenerPort")
+    @com.aliyun.core.annotation.NameInMap("ListenerPort")
     private String listenerPort;
 
-    @NameInMap("ListenerSync")
+    @com.aliyun.core.annotation.NameInMap("ListenerSync")
     private String listenerSync;
 
-    @NameInMap("LoadBalancerId")
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
     private String loadBalancerId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RuleId")
+    @com.aliyun.core.annotation.NameInMap("RuleId")
     private String ruleId;
 
-    @NameInMap("RuleName")
+    @com.aliyun.core.annotation.NameInMap("RuleName")
     private String ruleName;
 
-    @NameInMap("Scheduler")
+    @com.aliyun.core.annotation.NameInMap("Scheduler")
     private String scheduler;
 
-    @NameInMap("StickySession")
+    @com.aliyun.core.annotation.NameInMap("StickySession")
     private String stickySession;
 
-    @NameInMap("StickySessionType")
+    @com.aliyun.core.annotation.NameInMap("StickySessionType")
     private String stickySessionType;
 
-    @NameInMap("UnhealthyThreshold")
+    @com.aliyun.core.annotation.NameInMap("UnhealthyThreshold")
     private Integer unhealthyThreshold;
 
-    @NameInMap("Url")
+    @com.aliyun.core.annotation.NameInMap("Url")
     private String url;
 
-    @NameInMap("VServerGroupId")
+    @com.aliyun.core.annotation.NameInMap("VServerGroupId")
     private String vServerGroupId;
 
     private DescribeRuleAttributeResponseBody(Builder builder) {
@@ -302,12 +307,12 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         private String vServerGroupId; 
 
         /**
-         * The cookie to be configured on the backend server.
-         * <p>
+         * <p>The cookie to be configured on the backend server.</p>
+         * <p>The cookie must be 1 to 200 characters in length and can contain ASCII letters and digits. It cannot contain commas (,), semicolons (;), or whitespace characters. It cannot start with a dollar sign ($).</p>
+         * <p>If you set the <strong>StickySession</strong> parameter to <strong>on</strong> and the <strong>StickySessionType</strong> parameter to <strong>server</strong>, this parameter is required.</p>
          * 
-         * The cookie must be 1 to 200 characters in length and can contain ASCII letters and digits. It cannot contain commas (,), semicolons (;), or whitespace characters. It cannot start with a dollar sign ($).
-         * 
-         * If you set the **StickySession** parameter to **on** and the **StickySessionType** parameter to **server**, this parameter is required.
+         * <strong>example:</strong>
+         * <p>wwe</p>
          */
         public Builder cookie(String cookie) {
             this.cookie = cookie;
@@ -315,12 +320,14 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The timeout period of a cookie.
-         * <p>
+         * <p>The timeout period of a cookie.</p>
+         * <p>Valid values: <strong>1 to 86400</strong>. Unit: seconds.</p>
+         * <blockquote>
+         * <p> If you set the <strong>StickySession</strong> parameter to <strong>on</strong> and the <strong>StickySessionType</strong> parameter to <strong>insert</strong>, this parameter is required.</p>
+         * </blockquote>
          * 
-         * Valid values: **1 to 86400**. Unit: seconds.
-         * 
-         * >  If you set the **StickySession** parameter to **on** and the **StickySessionType** parameter to **insert**, this parameter is required.
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder cookieTimeout(Integer cookieTimeout) {
             this.cookieTimeout = cookieTimeout;
@@ -328,7 +335,10 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The domain name that is configured in the forwarding rule.
+         * <p>The domain name that is configured in the forwarding rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.com</p>
          */
         public Builder domain(String domain) {
             this.domain = domain;
@@ -336,12 +346,14 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Specifies whether to enable health checks.
-         * <p>
+         * <p>Specifies whether to enable health checks.</p>
+         * <p>Valid values: <strong>on</strong> and <strong>off</strong>.</p>
+         * <blockquote>
+         * <p> If you set the <strong>ListenerSync</strong> parameter to <strong>off</strong>, this parameter is required. If you set the parameter to <strong>on</strong>, the configuration of the listener is used.</p>
+         * </blockquote>
          * 
-         * Valid values: **on** and **off**.
-         * 
-         * >  If you set the **ListenerSync** parameter to **off**, this parameter is required. If you set the parameter to **on**, the configuration of the listener is used.
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder healthCheck(String healthCheck) {
             this.healthCheck = healthCheck;
@@ -349,12 +361,14 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The port of the backend server that is used for health checks.
-         * <p>
+         * <p>The backend port that is used for health checks.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+         * <blockquote>
+         * <p> If you set the <strong>HealthCheck</strong> parameter to <strong>on</strong>, this parameter is required. If this parameter is empty but <strong>HealthCheck</strong> is set to <strong>on</strong>, the listener port is used for health checks.</p>
+         * </blockquote>
          * 
-         * Valid values: **1** to **65535**.
-         * 
-         * >  If you set the **HealthCheck** parameter to **on**, this parameter is required. If you left this parameter empty and the **HealthCheck** parameter is set to **on**, the backend port configuration of the listener is used by default.
+         * <strong>example:</strong>
+         * <p>23</p>
          */
         public Builder healthCheckConnectPort(Integer healthCheckConnectPort) {
             this.healthCheckConnectPort = healthCheckConnectPort;
@@ -362,13 +376,17 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The domain name that is used for health checks. Valid values:
-         * <p>
+         * <p>The domain name that is used for health checks. Valid values:</p>
+         * <ul>
+         * <li><strong>$_ip</strong>: The private IP address of the backend server. If the $_ip parameter is set or the HealthCheckDomain parameter is not set, SLB uses the private IP addresses of backend servers as the domain names for health checks.</li>
+         * <li><strong>domain</strong>: The domain name must be 1 to 80 characters in length. It can contain only letters, digits, periods (.),and hyphens (-).</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you set the <strong>HealthCheck</strong> parameter to <strong>on</strong>, this parameter is required.</p>
+         * </blockquote>
          * 
-         * *   **$\_ip**: The private IP address of the backend server. If the $\_ip parameter is set or the HealthCheckDomain parameter is not set, SLB uses the private IP addresses of backend servers as the domain names for health checks.
-         * *   **domain**: The domain name must be 1 to 80 characters in length. It can contain only letters, digits, periods (.),and hyphens (-).
-         * 
-         * >  If you set the **HealthCheck** parameter to **on**, this parameter is required.
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder healthCheckDomain(String healthCheckDomain) {
             this.healthCheckDomain = healthCheckDomain;
@@ -376,12 +394,14 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code that indicates a successful health check. Separate multiple HTTP status codes with commas (,). Default value: **http\_2xx**.
-         * <p>
+         * <p>The HTTP status code that indicates a successful health check. Separate multiple HTTP status codes with commas (,). Default value: <strong>http_2xx</strong>.</p>
+         * <p>Valid values: <strong>http_2xx</strong>, <strong>http_3xx</strong>, <strong>http_4xx</strong>, and <strong>http_5xx</strong>.</p>
+         * <blockquote>
+         * <p> If you set the <strong>HealthCheck</strong> parameter to <strong>on</strong>, this parameter is required.</p>
+         * </blockquote>
          * 
-         * Valid values: **http\_2xx**, **http\_3xx**, **http\_4xx**, and **http\_5xx**.
-         * 
-         * >  If you set the **HealthCheck** parameter to **on**, this parameter is required.
+         * <strong>example:</strong>
+         * <p>http_3xx</p>
          */
         public Builder healthCheckHttpCode(String healthCheckHttpCode) {
             this.healthCheckHttpCode = healthCheckHttpCode;
@@ -389,12 +409,14 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The time interval between two consecutive health checks.
-         * <p>
+         * <p>The time interval between two consecutive health checks.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>50</strong>. Unit: seconds.</p>
+         * <blockquote>
+         * <p> If you set the <strong>HealthCheck</strong> parameter to <strong>on</strong>, this parameter is required.</p>
+         * </blockquote>
          * 
-         * Valid values: **1** to **50**. Unit: seconds.
-         * 
-         * >  If you set the **HealthCheck** parameter to **on**, this parameter is required.
+         * <strong>example:</strong>
+         * <p>34</p>
          */
         public Builder healthCheckInterval(Integer healthCheckInterval) {
             this.healthCheckInterval = healthCheckInterval;
@@ -402,12 +424,14 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The timeout period of a health check response. If a backend ECS instance does not send an expected response within the specified period of time, the ECS instance is considered unhealthy.
-         * <p>
+         * <p>The timeout period of a health check response. If a backend ECS instance does not respond within the specified timeout period, the ECS instance fails the health check.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>300</strong>. Unit: seconds.</p>
+         * <blockquote>
+         * <p> If you set the <strong>HealthCheck</strong> parameter to <strong>on</strong>, this parameter is required.</p>
+         * </blockquote>
          * 
-         * Valid values: **1** to **300**. Unit: seconds.
-         * 
-         * >  If the value of the **HealthCHeckTimeout** parameter is smaller than that of the **HealthCheckInterval** parameter, the value of the **HealthCHeckTimeout** parameter is ignored and the value of the **HealthCheckInterval** parameter is regarded as the waiting period. If you set the **HealthCheck** parameter to **on**, this parameter is required.
+         * <strong>example:</strong>
+         * <p>34</p>
          */
         public Builder healthCheckTimeout(Integer healthCheckTimeout) {
             this.healthCheckTimeout = healthCheckTimeout;
@@ -415,10 +439,13 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The URI that is used for health checks.
-         * <p>
+         * <p>The URI that is used for health checks.</p>
+         * <blockquote>
+         * <p> If you set the <strong>HealthCheck</strong> parameter to <strong>on</strong>, this parameter is required.</p>
+         * </blockquote>
          * 
-         * >  If you set the **HealthCheck** parameter to **on**, this parameter is required.
+         * <strong>example:</strong>
+         * <p>10.21.22.1</p>
          */
         public Builder healthCheckURI(String healthCheckURI) {
             this.healthCheckURI = healthCheckURI;
@@ -426,12 +453,14 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The number of consecutive successful health checks that must occur before an unhealthy backend server is declared healthy. In this case, the health check state is changed from **fail** to **success**.
-         * <p>
+         * <p>The number of consecutive successful health checks that must occur before an unhealthy backend server is declared healthy. In this case, the health check state is changed from <strong>fail</strong> to <strong>success</strong>.</p>
+         * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
+         * <blockquote>
+         * <p> If you set the <strong>HealthCheck</strong> parameter to <strong>on</strong>, this parameter is required.</p>
+         * </blockquote>
          * 
-         * Valid values: **2** to **10**.
-         * 
-         * >  If you set the **HealthCheck** parameter to **on**, this parameter is required.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder healthyThreshold(Integer healthyThreshold) {
             this.healthyThreshold = healthyThreshold;
@@ -439,7 +468,10 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The listener port that is used by the SLB instance.
+         * <p>The listener port that is used by the SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         public Builder listenerPort(String listenerPort) {
             this.listenerPort = listenerPort;
@@ -447,13 +479,15 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the forwarding rule uses the scheduling algorithm, session persistence, and health check configurations of the listener.
-         * <p>
+         * <p>Indicates whether the forwarding rule uses the scheduling algorithm, session persistence, and health check configurations of the listener.</p>
+         * <p>Valid values: <strong>on</strong> and <strong>off</strong>.</p>
+         * <ul>
+         * <li><strong>off</strong>: does not use the configurations of the listener. You can customize health check and session persistence configurations for the forwarding rule.</li>
+         * <li><strong>on</strong>: uses the configurations of the listener.</li>
+         * </ul>
          * 
-         * Valid values: **on** and **off**.
-         * 
-         * *   **off**: does not use the configurations of the listener. You can customize health check and session persistence configurations for the forwarding rule.
-         * *   **on**: uses the configurations of the listener.
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder listenerSync(String listenerSync) {
             this.listenerSync = listenerSync;
@@ -461,7 +495,10 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the SLB instance.
+         * <p>The ID of the SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp1ca0zt07t934wxe****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.loadBalancerId = loadBalancerId;
@@ -469,7 +506,10 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9DEC9C28-AB05-4DDF-9A78-6B08EC9CE18C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -477,7 +517,10 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the forwarding rule.
+         * <p>The ID of the forwarding rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule-hfgnd*****</p>
          */
         public Builder ruleId(String ruleId) {
             this.ruleId = ruleId;
@@ -485,7 +528,10 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the forwarding rule.
+         * <p>The name of the forwarding rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Rule1</p>
          */
         public Builder ruleName(String ruleName) {
             this.ruleName = ruleName;
@@ -493,13 +539,17 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The scheduling algorithm. Valid values:
-         * <p>
+         * <p>The scheduling algorithm. Valid values:</p>
+         * <ul>
+         * <li><strong>wrr</strong> (default): Backend servers that have higher weights receive more requests than backend servers that have lower weights.</li>
+         * <li><strong>rr</strong>: Requests are distributed to backend servers in sequence.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you set the <strong>ListenerSync</strong> parameter to <strong>off</strong>, this parameter is required. If you set the parameter to <strong>on</strong>, the configuration of the listener is used.</p>
+         * </blockquote>
          * 
-         * *   **wrr** (default): Backend servers that have higher weights receive more requests than backend servers that have lower weights.
-         * *   **rr**: Requests are distributed to backend servers in sequence.
-         * 
-         * >  If you set the **ListenerSync** parameter to **off**, this parameter is required. If you set the parameter to **on**, the configuration of the listener is used.
+         * <strong>example:</strong>
+         * <p>wrr</p>
          */
         public Builder scheduler(String scheduler) {
             this.scheduler = scheduler;
@@ -507,12 +557,14 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether session persistence is enabled.
-         * <p>
+         * <p>Indicates whether session persistence is enabled.</p>
+         * <p>Valid values: <strong>on</strong> and <strong>off</strong>.</p>
+         * <blockquote>
+         * <p> If you set the <strong>ListenerSync</strong> parameter to <strong>off</strong>, this parameter is required. If you set the parameter to <strong>on</strong>, the configuration of the listener is used.</p>
+         * </blockquote>
          * 
-         * Valid values: **on** and **off**.
-         * 
-         * >  If you set the **ListenerSync** parameter to **off**, this parameter is required. If you set the parameter to **on**, the configuration of the listener is used.
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder stickySession(String stickySession) {
             this.stickySession = stickySession;
@@ -520,13 +572,17 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The method that is used to handle a cookie. Valid values:
-         * <p>
+         * <p>The method that is used to handle a cookie. Valid values:</p>
+         * <ul>
+         * <li><strong>insert</strong>: inserts a cookie into the response. SLB inserts a cookie (SERVERID) into the first HTTP or HTTPS response packet that is sent to a client. The next request from the client will contain this cookie, and the listener will distribute this request to the recorded backend server.</li>
+         * <li><strong>server</strong>: rewrites a cookie. When SLB detects a user-defined cookie, SLB overwrites the original cookie with the user-defined cookie. The next request from the client contains the user-defined cookie, and the listener distributes the request to the recorded backend server.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you set the <strong>StickySession</strong> parameter to <strong>on</strong>, this parameter is required.</p>
+         * </blockquote>
          * 
-         * *   **insert**: inserts a cookie into the response. SLB inserts a cookie (SERVERID) into the first HTTP or HTTPS response packet that is sent to a client. The next request from the client will contain this cookie, and the listener will distribute this request to the recorded backend server.
-         * *   **server**: rewrites a cookie. When SLB detects a user-defined cookie, SLB overwrites the original cookie with the user-defined cookie. The next request from the client contains the user-defined cookie, and the listener distributes the request to the recorded backend server.
-         * 
-         * >  If you set the **StickySession** parameter to **on**, this parameter is required.
+         * <strong>example:</strong>
+         * <p>insert</p>
          */
         public Builder stickySessionType(String stickySessionType) {
             this.stickySessionType = stickySessionType;
@@ -534,12 +590,14 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The number of consecutive failed health checks that must occur before a healthy backend server is declared unhealthy. In this case, the health check state is changed from **success** to **fail**.
-         * <p>
+         * <p>The number of consecutive failed health checks that must occur before a healthy backend server is declared unhealthy. In this case, the health check state is changed from <strong>success</strong> to <strong>fail</strong>.</p>
+         * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
+         * <blockquote>
+         * <p> If you set the <strong>HealthCheck</strong> parameter to <strong>on</strong>, this parameter is required.</p>
+         * </blockquote>
          * 
-         * Valid values: **2** to **10**.
-         * 
-         * >  If you set the **HealthCheck** parameter to **on**, this parameter is required.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             this.unhealthyThreshold = unhealthyThreshold;
@@ -547,7 +605,10 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The URL that is configured in the forwarding rule.
+         * <p>The URL that is configured in the forwarding rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/cache</p>
          */
         public Builder url(String url) {
             this.url = url;
@@ -555,7 +616,10 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the vServer group that is associated with the forwarding rule.
+         * <p>The ID of the vServer group that is associated with the forwarding rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rsp-cige6j****</p>
          */
         public Builder vServerGroupId(String vServerGroupId) {
             this.vServerGroupId = vServerGroupId;

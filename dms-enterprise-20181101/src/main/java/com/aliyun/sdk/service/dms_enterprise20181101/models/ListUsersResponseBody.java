@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUsersResponseBody} extends {@link TeaModel}
  *
  * <p>ListUsersResponseBody</p>
  */
 public class ListUsersResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
-    @NameInMap("UserList")
+    @com.aliyun.core.annotation.NameInMap("UserList")
     private UserList userList;
 
     private ListUsersResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class ListUsersResponseBody extends TeaModel {
         private UserList userList; 
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidTid</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +114,10 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specified parameter Tid is not valid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,7 +125,10 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69161997-6030-53BA-A333-DBEC83B732FF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,11 +136,14 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,7 +151,10 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -142,7 +162,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The details of users.
+         * <p>The details of users.</p>
          */
         public Builder userList(UserList userList) {
             this.userList = userList;
@@ -155,9 +175,15 @@ public class ListUsersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUsersResponseBody</p>
+     */
     public static class RoleIdList extends TeaModel {
-        @NameInMap("RoleIds")
-        private java.util.List < Integer > roleIds;
+        @com.aliyun.core.annotation.NameInMap("RoleIds")
+        private java.util.List<Integer> roleIds;
 
         private RoleIdList(Builder builder) {
             this.roleIds = builder.roleIds;
@@ -174,17 +200,17 @@ public class ListUsersResponseBody extends TeaModel {
         /**
          * @return roleIds
          */
-        public java.util.List < Integer > getRoleIds() {
+        public java.util.List<Integer> getRoleIds() {
             return this.roleIds;
         }
 
         public static final class Builder {
-            private java.util.List < Integer > roleIds; 
+            private java.util.List<Integer> roleIds; 
 
             /**
              * RoleIds.
              */
-            public Builder roleIds(java.util.List < Integer > roleIds) {
+            public Builder roleIds(java.util.List<Integer> roleIds) {
                 this.roleIds = roleIds;
                 return this;
             }
@@ -196,9 +222,15 @@ public class ListUsersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUsersResponseBody</p>
+     */
     public static class RoleNameList extends TeaModel {
-        @NameInMap("RoleNames")
-        private java.util.List < String > roleNames;
+        @com.aliyun.core.annotation.NameInMap("RoleNames")
+        private java.util.List<String> roleNames;
 
         private RoleNameList(Builder builder) {
             this.roleNames = builder.roleNames;
@@ -215,17 +247,17 @@ public class ListUsersResponseBody extends TeaModel {
         /**
          * @return roleNames
          */
-        public java.util.List < String > getRoleNames() {
+        public java.util.List<String> getRoleNames() {
             return this.roleNames;
         }
 
         public static final class Builder {
-            private java.util.List < String > roleNames; 
+            private java.util.List<String> roleNames; 
 
             /**
              * RoleNames.
              */
-            public Builder roleNames(java.util.List < String > roleNames) {
+            public Builder roleNames(java.util.List<String> roleNames) {
                 this.roleNames = roleNames;
                 return this;
             }
@@ -237,59 +269,65 @@ public class ListUsersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUsersResponseBody</p>
+     */
     public static class User extends TeaModel {
-        @NameInMap("CurExecuteCount")
+        @com.aliyun.core.annotation.NameInMap("CurExecuteCount")
         private Long curExecuteCount;
 
-        @NameInMap("CurResultCount")
+        @com.aliyun.core.annotation.NameInMap("CurResultCount")
         private Long curResultCount;
 
-        @NameInMap("DingRobot")
+        @com.aliyun.core.annotation.NameInMap("DingRobot")
         private String dingRobot;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("LastLoginTime")
+        @com.aliyun.core.annotation.NameInMap("LastLoginTime")
         private String lastLoginTime;
 
-        @NameInMap("MaxExecuteCount")
+        @com.aliyun.core.annotation.NameInMap("MaxExecuteCount")
         private Long maxExecuteCount;
 
-        @NameInMap("MaxResultCount")
+        @com.aliyun.core.annotation.NameInMap("MaxResultCount")
         private Long maxResultCount;
 
-        @NameInMap("Mobile")
+        @com.aliyun.core.annotation.NameInMap("Mobile")
         private String mobile;
 
-        @NameInMap("NickName")
+        @com.aliyun.core.annotation.NameInMap("NickName")
         private String nickName;
 
-        @NameInMap("NotificationMode")
+        @com.aliyun.core.annotation.NameInMap("NotificationMode")
         private String notificationMode;
 
-        @NameInMap("ParentUid")
+        @com.aliyun.core.annotation.NameInMap("ParentUid")
         private String parentUid;
 
-        @NameInMap("RoleIdList")
+        @com.aliyun.core.annotation.NameInMap("RoleIdList")
         private RoleIdList roleIdList;
 
-        @NameInMap("RoleNameList")
+        @com.aliyun.core.annotation.NameInMap("RoleNameList")
         private RoleNameList roleNameList;
 
-        @NameInMap("SignatureMethod")
+        @com.aliyun.core.annotation.NameInMap("SignatureMethod")
         private String signatureMethod;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Uid")
+        @com.aliyun.core.annotation.NameInMap("Uid")
         private String uid;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("Webhook")
+        @com.aliyun.core.annotation.NameInMap("Webhook")
         private String webhook;
 
         private User(Builder builder) {
@@ -468,7 +506,10 @@ public class ListUsersResponseBody extends TeaModel {
             private String webhook; 
 
             /**
-             * The number of queries that were performed on the current day.
+             * <p>The number of queries that were performed on the current day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder curExecuteCount(Long curExecuteCount) {
                 this.curExecuteCount = curExecuteCount;
@@ -476,7 +517,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows that were queried on the current day.
+             * <p>The number of rows that were queried on the current day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder curResultCount(Long curResultCount) {
                 this.curResultCount = curResultCount;
@@ -484,14 +528,18 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The DingTalk chatbot URL that is used to receive notifications.
-             * <p>
+             * <p>The DingTalk chatbot URL that is used to receive notifications.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p>The system returns this parameter if you have set a DingTalk chatbot URL in the console. To set a DingTalk chatbot URL in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to <strong>Notice</strong>.</p>
+             * </li>
+             * <li><p>The system does not return this parameter if you have not set a DingTalk chatbot URL.</p>
+             * </li>
+             * </ul>
              * 
-             * > 
-             * 
-             * *   The system returns this parameter if you have set a DingTalk chatbot URL in the console. To set a DingTalk chatbot URL in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.
-             * 
-             * *   The system does not return this parameter if you have not set a DingTalk chatbot URL.
+             * <strong>example:</strong>
+             * <p><a href="https://XXX.dingtalk.com/robot/send?access_token=9b7a4a562cbe7fcdea9962afac7b9d7b4504d564948083419750f9cafa78e4ef">https://XXX.dingtalk.com/robot/send?access_token=9b7a4a562cbe7fcdea9962afac7b9d7b4504d564948083419750f9cafa78e4ef</a></p>
              */
             public Builder dingRobot(String dingRobot) {
                 this.dingRobot = dingRobot;
@@ -499,14 +547,18 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The email address that is used to receive notifications.
-             * <p>
+             * <p>The email address that is used to receive notifications.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p>The system returns this parameter if you have set an email address in the console. To set an email address in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to <strong>Notice</strong>.</p>
+             * </li>
+             * <li><p>The system does not return this parameter if you have not set an email address.</p>
+             * </li>
+             * </ul>
              * 
-             * > 
-             * 
-             * *   The system returns this parameter if you have set an email address in the console. To set an email address in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.
-             * 
-             * *   The system does not return this parameter if you have not set an email address.
+             * <strong>example:</strong>
+             * <p><a href="mailto:username@example.com">username@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -514,7 +566,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the user last logged on to the console.
+             * <p>The time when the user last logged on to the console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-08 13:43:43</p>
              */
             public Builder lastLoginTime(String lastLoginTime) {
                 this.lastLoginTime = lastLoginTime;
@@ -522,7 +577,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of queries that can be performed on the current day.
+             * <p>The maximum number of queries that can be performed on the current day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder maxExecuteCount(Long maxExecuteCount) {
                 this.maxExecuteCount = maxExecuteCount;
@@ -530,7 +588,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of rows that can be queried on the current day.
+             * <p>The maximum number of rows that can be queried on the current day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50000</p>
              */
             public Builder maxResultCount(Long maxResultCount) {
                 this.maxResultCount = maxResultCount;
@@ -538,14 +599,18 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The mobile phone number of the user.
-             * <p>
+             * <p>The mobile phone number of the user.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p>The system returns this parameter if you have set a mobile phone number in the console. To set a mobile phone number in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to <strong>Notice</strong>.</p>
+             * </li>
+             * <li><p>The system does not return this parameter if you have not set a mobile phone number.</p>
+             * </li>
+             * </ul>
              * 
-             * > 
-             * 
-             * *   The system returns this parameter if you have set a mobile phone number in the console. To set a mobile phone number in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.
-             * 
-             * *   The system does not return this parameter if you have not set a mobile phone number.
+             * <strong>example:</strong>
+             * <p>1389999****</p>
              */
             public Builder mobile(String mobile) {
                 this.mobile = mobile;
@@ -553,7 +618,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The nickname of the user.
+             * <p>The nickname of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_NickName</p>
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -561,14 +629,17 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The notification method. The system returns one or more values. Valid values:
-             * <p>
+             * <p>The notification method. The system returns one or more values. Valid values:</p>
+             * <ul>
+             * <li><strong>SMS</strong>: text message</li>
+             * <li><strong>EMAIL</strong>: email.</li>
+             * <li><strong>DINGDING</strong>: DingTalk.</li>
+             * <li><strong>DINGROBOT</strong>: DingTalk chatbot.</li>
+             * <li><strong>WEBHOOK</strong>: webhook.</li>
+             * </ul>
              * 
-             * *   **SMS**: text message
-             * *   **EMAIL**: email.
-             * *   **DINGDING**: DingTalk.
-             * *   **DINGROBOT**: DingTalk chatbot.
-             * *   **WEBHOOK**: webhook.
+             * <strong>example:</strong>
+             * <p>DINGROBOT</p>
              */
             public Builder notificationMode(String notificationMode) {
                 this.notificationMode = notificationMode;
@@ -576,7 +647,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account of the user.
+             * <p>The ID of the Alibaba Cloud account of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>140692647406****</p>
              */
             public Builder parentUid(String parentUid) {
                 this.parentUid = parentUid;
@@ -584,7 +658,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the roles.
+             * <p>The IDs of the roles.</p>
              */
             public Builder roleIdList(RoleIdList roleIdList) {
                 this.roleIdList = roleIdList;
@@ -592,7 +666,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The names of roles.
+             * <p>The names of roles.</p>
              */
             public Builder roleNameList(RoleNameList roleNameList) {
                 this.roleNameList = roleNameList;
@@ -600,11 +674,14 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The signature method that is used to secure connections when a webhook URL is used. Valid values:
-             * <p>
+             * <p>The signature method that is used to secure connections when a webhook URL is used. Valid values:</p>
+             * <ul>
+             * <li><strong>NONE</strong>: no signature.</li>
+             * <li><strong>HMAC_SHA1</strong>: HMAC_SHA1.</li>
+             * </ul>
              * 
-             * *   **NONE**: no signature.
-             * *   **HMAC_SHA1**: HMAC_SHA1.
+             * <strong>example:</strong>
+             * <p>HMAC_SHA1</p>
              */
             public Builder signatureMethod(String signatureMethod) {
                 this.signatureMethod = signatureMethod;
@@ -612,12 +689,15 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the user. Valid values:
-             * <p>
+             * <p>The status of the user. Valid values:</p>
+             * <ul>
+             * <li><strong>NORMAL</strong>: The user is normal.</li>
+             * <li><strong>DISABLE</strong>: The user is disabled.</li>
+             * <li><strong>DELETE</strong>: The user is deleted.</li>
+             * </ul>
              * 
-             * *   **NORMAL**: The user is normal.
-             * *   **DISABLE**: The user is disabled.
-             * *   **DELETE**: The user is deleted.
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -625,7 +705,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>167382665015****</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -633,7 +716,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -641,14 +727,18 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The webhook URL that is used to receive notifications.
-             * <p>
+             * <p>The webhook URL that is used to receive notifications.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p>If you have set a webhook URL, DMS sends notifications to the specified URL.</p>
+             * </li>
+             * <li><p>The system does not return this parameter if you have not set a webhook URL.</p>
+             * </li>
+             * </ul>
              * 
-             * > 
-             * 
-             * *   If you have set a webhook URL, DMS sends notifications to the specified URL.
-             * 
-             * *   The system does not return this parameter if you have not set a webhook URL.
+             * <strong>example:</strong>
+             * <p><a href="http://dms-XXX.aliyun.com:8">http://dms-XXX.aliyun.com:8</a>***</p>
              */
             public Builder webhook(String webhook) {
                 this.webhook = webhook;
@@ -662,9 +752,15 @@ public class ListUsersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUsersResponseBody</p>
+     */
     public static class UserList extends TeaModel {
-        @NameInMap("User")
-        private java.util.List < User> user;
+        @com.aliyun.core.annotation.NameInMap("User")
+        private java.util.List<User> user;
 
         private UserList(Builder builder) {
             this.user = builder.user;
@@ -681,17 +777,17 @@ public class ListUsersResponseBody extends TeaModel {
         /**
          * @return user
          */
-        public java.util.List < User> getUser() {
+        public java.util.List<User> getUser() {
             return this.user;
         }
 
         public static final class Builder {
-            private java.util.List < User> user; 
+            private java.util.List<User> user; 
 
             /**
              * User.
              */
-            public Builder user(java.util.List < User> user) {
+            public Builder user(java.util.List<User> user) {
                 this.user = user;
                 return this;
             }

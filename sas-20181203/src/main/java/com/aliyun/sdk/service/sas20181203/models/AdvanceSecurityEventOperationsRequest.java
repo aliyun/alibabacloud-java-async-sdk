@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AdvanceSecurityEventOperationsRequest} extends {@link RequestModel}
  *
  * <p>AdvanceSecurityEventOperationsRequest</p>
  */
 public class AdvanceSecurityEventOperationsRequest extends Request {
-    @Query
-    @NameInMap("EventName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventName")
     private String eventName;
 
-    @Query
-    @NameInMap("EventType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventType")
     private String eventType;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RuleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
     private Integer ruleId;
 
     private AdvanceSecurityEventOperationsRequest(Builder builder) {
@@ -96,7 +101,10 @@ public class AdvanceSecurityEventOperationsRequest extends Request {
         } 
 
         /**
-         * The alert name.
+         * <p>The alert name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Execution of malicious script code</p>
          */
         public Builder eventName(String eventName) {
             this.putQueryParameter("EventName", eventName);
@@ -105,34 +113,36 @@ public class AdvanceSecurityEventOperationsRequest extends Request {
         }
 
         /**
-         * The alert event type. Valid values:
-         * <p>
+         * <p>The alert event type. Valid values:</p>
+         * <ul>
+         * <li>Suspicious process</li>
+         * <li>Webshell</li>
+         * <li>Unusual logon</li>
+         * <li>Exception</li>
+         * <li>Sensitive file tampering</li>
+         * <li>Malicious process (cloud threat detection)</li>
+         * <li>Unusual network connection</li>
+         * <li>Abnormal account</li>
+         * <li>Application intrusion event</li>
+         * <li>Cloud threat detection</li>
+         * <li>Precision defense</li>
+         * <li>Application whitelist</li>
+         * <li>Persistent webshell</li>
+         * <li>Web application threat detection</li>
+         * <li>Malicious script</li>
+         * <li>Threat intelligence</li>
+         * <li>Malicious network activity</li>
+         * <li>Cluster exception</li>
+         * <li>Webshell (on-premises threat detection)</li>
+         * <li>Vulnerability exploitation</li>
+         * <li>Malicious process (on-premises threat detection)</li>
+         * <li>Trusted exception</li>
+         * <li>Others</li>
+         * </ul>
+         * <p>For more information about alert types, see <a href="https://help.aliyun.com/document_detail/68388.html">Alerts</a>.</p>
          * 
-         * *   Suspicious process
-         * *   Webshell
-         * *   Unusual logon
-         * *   Exception
-         * *   Sensitive file tampering
-         * *   Malicious process (cloud threat detection)
-         * *   Unusual network connection
-         * *   Abnormal account
-         * *   Application intrusion event
-         * *   Cloud threat detection
-         * *   Precision defense
-         * *   Application whitelist
-         * *   Persistent webshell
-         * *   Web application threat detection
-         * *   Malicious script
-         * *   Threat intelligence
-         * *   Malicious network activity
-         * *   Cluster exception
-         * *   Webshell (on-premises threat detection)
-         * *   Vulnerability exploitation
-         * *   Malicious process (on-premises threat detection)
-         * *   Trusted exception
-         * *   Others
-         * 
-         * For more information about alert types, see [Alerts](~~68388~~).
+         * <strong>example:</strong>
+         * <p>Malicious script</p>
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -150,7 +160,10 @@ public class AdvanceSecurityEventOperationsRequest extends Request {
         }
 
         /**
-         * The rule ID.
+         * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder ruleId(Integer ruleId) {
             this.putQueryParameter("RuleId", ruleId);

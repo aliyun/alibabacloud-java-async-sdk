@@ -211,6 +211,127 @@ public class DescribeStoreConfigResponseBody extends TeaModel {
 
     } 
 
+    public static class SubscribeContents extends TeaModel {
+        @NameInMap("AtAll")
+        private Boolean atAll;
+
+        @NameInMap("AtMobileList")
+        private String atMobileList;
+
+        @NameInMap("Category")
+        private String category;
+
+        @NameInMap("Enable")
+        private Boolean enable;
+
+        @NameInMap("Threshold")
+        private String threshold;
+
+        private SubscribeContents(Builder builder) {
+            this.atAll = builder.atAll;
+            this.atMobileList = builder.atMobileList;
+            this.category = builder.category;
+            this.enable = builder.enable;
+            this.threshold = builder.threshold;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SubscribeContents create() {
+            return builder().build();
+        }
+
+        /**
+         * @return atAll
+         */
+        public Boolean getAtAll() {
+            return this.atAll;
+        }
+
+        /**
+         * @return atMobileList
+         */
+        public String getAtMobileList() {
+            return this.atMobileList;
+        }
+
+        /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
+        }
+
+        /**
+         * @return enable
+         */
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        /**
+         * @return threshold
+         */
+        public String getThreshold() {
+            return this.threshold;
+        }
+
+        public static final class Builder {
+            private Boolean atAll; 
+            private String atMobileList; 
+            private String category; 
+            private Boolean enable; 
+            private String threshold; 
+
+            /**
+             * AtAll.
+             */
+            public Builder atAll(Boolean atAll) {
+                this.atAll = atAll;
+                return this;
+            }
+
+            /**
+             * AtMobileList.
+             */
+            public Builder atMobileList(String atMobileList) {
+                this.atMobileList = atMobileList;
+                return this;
+            }
+
+            /**
+             * Category.
+             */
+            public Builder category(String category) {
+                this.category = category;
+                return this;
+            }
+
+            /**
+             * Enable.
+             */
+            public Builder enable(Boolean enable) {
+                this.enable = enable;
+                return this;
+            }
+
+            /**
+             * Threshold.
+             */
+            public Builder threshold(String threshold) {
+                this.threshold = threshold;
+                return this;
+            }
+
+            public SubscribeContents build() {
+                return new SubscribeContents(this);
+            } 
+
+        } 
+
+    }
     public static class StoreConfigInfo extends TeaModel {
         @NameInMap("EnableNotification")
         private Boolean enableNotification;
@@ -224,11 +345,15 @@ public class DescribeStoreConfigResponseBody extends TeaModel {
         @NameInMap("StoreId")
         private String storeId;
 
+        @NameInMap("SubscribeContents")
+        private java.util.List < SubscribeContents> subscribeContents;
+
         private StoreConfigInfo(Builder builder) {
             this.enableNotification = builder.enableNotification;
             this.notificationSilentTimes = builder.notificationSilentTimes;
             this.notificationWebHook = builder.notificationWebHook;
             this.storeId = builder.storeId;
+            this.subscribeContents = builder.subscribeContents;
         }
 
         public static Builder builder() {
@@ -267,11 +392,19 @@ public class DescribeStoreConfigResponseBody extends TeaModel {
             return this.storeId;
         }
 
+        /**
+         * @return subscribeContents
+         */
+        public java.util.List < SubscribeContents> getSubscribeContents() {
+            return this.subscribeContents;
+        }
+
         public static final class Builder {
             private Boolean enableNotification; 
             private String notificationSilentTimes; 
             private String notificationWebHook; 
             private String storeId; 
+            private java.util.List < SubscribeContents> subscribeContents; 
 
             /**
              * EnableNotification.
@@ -302,6 +435,14 @@ public class DescribeStoreConfigResponseBody extends TeaModel {
              */
             public Builder storeId(String storeId) {
                 this.storeId = storeId;
+                return this;
+            }
+
+            /**
+             * SubscribeContents.
+             */
+            public Builder subscribeContents(java.util.List < SubscribeContents> subscribeContents) {
+                this.subscribeContents = subscribeContents;
                 return this;
             }
 

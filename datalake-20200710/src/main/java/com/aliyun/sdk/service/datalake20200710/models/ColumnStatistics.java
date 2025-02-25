@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ColumnStatistics</p>
  */
 public class ColumnStatistics extends TeaModel {
-    @NameInMap("ColumnStatisticsDesc")
+    @com.aliyun.core.annotation.NameInMap("ColumnStatisticsDesc")
     private ColumnStatisticsDesc columnStatisticsDesc;
 
-    @NameInMap("ColumnStatisticsObjList")
+    @com.aliyun.core.annotation.NameInMap("ColumnStatisticsObjList")
     private java.util.List < ColumnStatisticsObj > columnStatisticsObjList;
 
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @NameInMap("IsStatsCompliant")
+    @com.aliyun.core.annotation.NameInMap("IsStatsCompliant")
     private Boolean isStatsCompliant;
 
     private ColumnStatistics(Builder builder) {

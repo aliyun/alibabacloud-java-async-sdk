@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLogConfigRequest} extends {@link RequestModel}
  *
  * <p>DescribeLogConfigRequest</p>
  */
 public class DescribeLogConfigRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("LogType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogType")
     private String logType;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private DescribeLogConfigRequest(Builder builder) {
@@ -91,7 +96,14 @@ public class DescribeLogConfigRequest extends Request {
         }
 
         /**
-         * LogType.
+         * <p>The log type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>PROVIDER</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PROVIDER</p>
          */
         public Builder logType(String logType) {
             this.putQueryParameter("LogType", logType);

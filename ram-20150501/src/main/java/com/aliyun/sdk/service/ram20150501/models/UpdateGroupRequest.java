@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGroupRequest} extends {@link RequestModel}
  *
  * <p>UpdateGroupRequest</p>
  */
 public class UpdateGroupRequest extends Request {
-    @Query
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
-    @Query
-    @NameInMap("NewComments")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewComments")
     private String newComments;
 
-    @Query
-    @NameInMap("NewGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewGroupName")
     private String newGroupName;
 
     private UpdateGroupRequest(Builder builder) {
@@ -74,15 +79,18 @@ public class UpdateGroupRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateGroupRequest response) {
-            super(response);
-            this.groupName = response.groupName;
-            this.newComments = response.newComments;
-            this.newGroupName = response.newGroupName;
+        private Builder(UpdateGroupRequest request) {
+            super(request);
+            this.groupName = request.groupName;
+            this.newComments = request.newComments;
+            this.newGroupName = request.newGroupName;
         } 
 
         /**
-         * GroupName.
+         * <p>The name of the RAM user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dev-Team</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -91,7 +99,11 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * NewComments.
+         * <p>The new description of the RAM user group.</p>
+         * <p>The comments must be 1 to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NewDev-Team</p>
          */
         public Builder newComments(String newComments) {
             this.putQueryParameter("NewComments", newComments);
@@ -100,7 +112,11 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * NewGroupName.
+         * <p>The new name of the RAM user group.</p>
+         * <p>The name must be 1 to 64 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NewDev-Team</p>
          */
         public Builder newGroupName(String newGroupName) {
             this.putQueryParameter("NewGroupName", newGroupName);

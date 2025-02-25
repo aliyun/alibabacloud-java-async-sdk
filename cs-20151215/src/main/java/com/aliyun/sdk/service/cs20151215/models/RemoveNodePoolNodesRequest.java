@@ -1,47 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveNodePoolNodesRequest} extends {@link RequestModel}
  *
  * <p>RemoveNodePoolNodesRequest</p>
  */
 public class RemoveNodePoolNodesRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("NodepoolId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("NodepoolId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodepoolId;
 
-    @Query
-    @NameInMap("drain_node")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("concurrency")
+    private Boolean concurrency;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("drain_node")
     private Boolean drainNode;
 
-    @Query
-    @NameInMap("instance_ids")
-    private java.util.List < String > instanceIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("instance_ids")
+    private java.util.List<String> instanceIds;
 
-    @Query
-    @NameInMap("nodes")
-    private java.util.List < String > nodes;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("nodes")
+    @Deprecated
+    private java.util.List<String> nodes;
 
-    @Query
-    @NameInMap("release_node")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("release_node")
     private Boolean releaseNode;
 
     private RemoveNodePoolNodesRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
         this.nodepoolId = builder.nodepoolId;
+        this.concurrency = builder.concurrency;
         this.drainNode = builder.drainNode;
         this.instanceIds = builder.instanceIds;
         this.nodes = builder.nodes;
@@ -76,6 +87,13 @@ public class RemoveNodePoolNodesRequest extends Request {
     }
 
     /**
+     * @return concurrency
+     */
+    public Boolean getConcurrency() {
+        return this.concurrency;
+    }
+
+    /**
      * @return drainNode
      */
     public Boolean getDrainNode() {
@@ -85,14 +103,14 @@ public class RemoveNodePoolNodesRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
     /**
      * @return nodes
      */
-    public java.util.List < String > getNodes() {
+    public java.util.List<String> getNodes() {
         return this.nodes;
     }
 
@@ -106,9 +124,10 @@ public class RemoveNodePoolNodesRequest extends Request {
     public static final class Builder extends Request.Builder<RemoveNodePoolNodesRequest, Builder> {
         private String clusterId; 
         private String nodepoolId; 
+        private Boolean concurrency; 
         private Boolean drainNode; 
-        private java.util.List < String > instanceIds; 
-        private java.util.List < String > nodes; 
+        private java.util.List<String> instanceIds; 
+        private java.util.List<String> nodes; 
         private Boolean releaseNode; 
 
         private Builder() {
@@ -119,6 +138,7 @@ public class RemoveNodePoolNodesRequest extends Request {
             super(request);
             this.clusterId = request.clusterId;
             this.nodepoolId = request.nodepoolId;
+            this.concurrency = request.concurrency;
             this.drainNode = request.drainNode;
             this.instanceIds = request.instanceIds;
             this.nodes = request.nodes;
@@ -126,7 +146,11 @@ public class RemoveNodePoolNodesRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c23421cfa74454bc8b37163fd19af****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -135,7 +159,11 @@ public class RemoveNodePoolNodesRequest extends Request {
         }
 
         /**
-         * The node pool ID.
+         * <p>The node pool ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np97de2cfb1ba042398dd8f5504c94****</p>
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putPathParameter("NodepoolId", nodepoolId);
@@ -144,11 +172,26 @@ public class RemoveNodePoolNodesRequest extends Request {
         }
 
         /**
-         * Specifies whether to drain the nodes that you want to remove. Valid values:
-         * <p>
+         * <p>Whether to remove concurrently.</p>
          * 
-         * *   true: drain the nodes that you want to remove.
-         * *   false: do not drain the nodes that you want to remove.
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder concurrency(Boolean concurrency) {
+            this.putQueryParameter("concurrency", concurrency);
+            this.concurrency = concurrency;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to drain the nodes that you want to remove. Valid values:</p>
+         * <ul>
+         * <li>true: drain the nodes that you want to remove.</li>
+         * <li>false: do not drain the nodes that you want to remove.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder drainNode(Boolean drainNode) {
             this.putQueryParameter("drain_node", drainNode);
@@ -157,9 +200,9 @@ public class RemoveNodePoolNodesRequest extends Request {
         }
 
         /**
-         * A list of instances that you want to remove.
+         * <p>A list of instances that you want to remove.</p>
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "instance_ids", "json");
             this.putQueryParameter("instance_ids", instanceIdsShrink);
             this.instanceIds = instanceIds;
@@ -167,9 +210,13 @@ public class RemoveNodePoolNodesRequest extends Request {
         }
 
         /**
-         * A list of nodes that you want to remove.
+         * <p>This parameter is deprecated.</p>
+         * <p>A list of nodes that you want to remove.</p>
+         * <blockquote>
+         * <p> This parameter is deprecated. Use instance_ids instead.</p>
+         * </blockquote>
          */
-        public Builder nodes(java.util.List < String > nodes) {
+        public Builder nodes(java.util.List<String> nodes) {
             String nodesShrink = shrink(nodes, "nodes", "json");
             this.putQueryParameter("nodes", nodesShrink);
             this.nodes = nodes;
@@ -177,11 +224,14 @@ public class RemoveNodePoolNodesRequest extends Request {
         }
 
         /**
-         * Specifies whether to release the nodes after they are removed. Valid values:
-         * <p>
+         * <p>Specifies whether to release the nodes after they are removed. Valid values:</p>
+         * <ul>
+         * <li>true: release the nodes after they are removed.</li>
+         * <li>false: do not release the nodes after they are removed.</li>
+         * </ul>
          * 
-         * *   true: release the nodes after they are removed.
-         * *   false: do not release the nodes after they are removed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder releaseNode(Boolean releaseNode) {
             this.putQueryParameter("release_node", releaseNode);

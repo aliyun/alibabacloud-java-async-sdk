@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitPreprocessJobsResponseBody} extends {@link TeaModel}
  *
  * <p>SubmitPreprocessJobsResponseBody</p>
  */
 public class SubmitPreprocessJobsResponseBody extends TeaModel {
-    @NameInMap("PreprocessJobs")
+    @com.aliyun.core.annotation.NameInMap("PreprocessJobs")
     private PreprocessJobs preprocessJobs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SubmitPreprocessJobsResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class SubmitPreprocessJobsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The job information.
+         * <p>The information about the job.</p>
          */
         public Builder preprocessJobs(PreprocessJobs preprocessJobs) {
             this.preprocessJobs = preprocessJobs;
@@ -58,7 +63,10 @@ public class SubmitPreprocessJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E4EBD2BF-5EB0-4476-8829-9D94E1B1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,8 +79,14 @@ public class SubmitPreprocessJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitPreprocessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitPreprocessJobsResponseBody</p>
+     */
     public static class PreprocessJob extends TeaModel {
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
         private PreprocessJob(Builder builder) {
@@ -98,7 +112,10 @@ public class SubmitPreprocessJobsResponseBody extends TeaModel {
             private String jobId; 
 
             /**
-             * The ID of the job.
+             * <p>The ID of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bb396607fd11fee9effbb99c4****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -112,9 +129,15 @@ public class SubmitPreprocessJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitPreprocessJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitPreprocessJobsResponseBody</p>
+     */
     public static class PreprocessJobs extends TeaModel {
-        @NameInMap("PreprocessJob")
-        private java.util.List < PreprocessJob> preprocessJob;
+        @com.aliyun.core.annotation.NameInMap("PreprocessJob")
+        private java.util.List<PreprocessJob> preprocessJob;
 
         private PreprocessJobs(Builder builder) {
             this.preprocessJob = builder.preprocessJob;
@@ -131,17 +154,17 @@ public class SubmitPreprocessJobsResponseBody extends TeaModel {
         /**
          * @return preprocessJob
          */
-        public java.util.List < PreprocessJob> getPreprocessJob() {
+        public java.util.List<PreprocessJob> getPreprocessJob() {
             return this.preprocessJob;
         }
 
         public static final class Builder {
-            private java.util.List < PreprocessJob> preprocessJob; 
+            private java.util.List<PreprocessJob> preprocessJob; 
 
             /**
              * PreprocessJob.
              */
-            public Builder preprocessJob(java.util.List < PreprocessJob> preprocessJob) {
+            public Builder preprocessJob(java.util.List<PreprocessJob> preprocessJob) {
                 this.preprocessJob = preprocessJob;
                 return this;
             }

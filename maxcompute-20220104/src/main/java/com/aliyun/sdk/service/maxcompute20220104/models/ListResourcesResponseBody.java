@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>ListResourcesResponseBody</p>
  */
 public class ListResourcesResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private ListResourcesResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class ListResourcesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class ListResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc3b4ae16685836687916212e7850</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,38 +79,44 @@ public class ListResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourcesResponseBody</p>
+     */
     public static class Resources extends TeaModel {
-        @NameInMap("comment")
+        @com.aliyun.core.annotation.NameInMap("comment")
         private String comment;
 
-        @NameInMap("contentMD5")
+        @com.aliyun.core.annotation.NameInMap("contentMD5")
         private String contentMD5;
 
-        @NameInMap("creationTime")
+        @com.aliyun.core.annotation.NameInMap("creationTime")
         private Long creationTime;
 
-        @NameInMap("displayName")
+        @com.aliyun.core.annotation.NameInMap("displayName")
         private String displayName;
 
-        @NameInMap("lastModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("lastModifiedTime")
         private Long lastModifiedTime;
 
-        @NameInMap("lastUpdator")
+        @com.aliyun.core.annotation.NameInMap("lastUpdator")
         private String lastUpdator;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("owner")
+        @com.aliyun.core.annotation.NameInMap("owner")
         private String owner;
 
-        @NameInMap("schema")
+        @com.aliyun.core.annotation.NameInMap("schema")
         private String schema;
 
-        @NameInMap("size")
+        @com.aliyun.core.annotation.NameInMap("size")
         private Long size;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Resources(Builder builder) {
@@ -218,7 +232,10 @@ public class ListResourcesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * comment.
+             * <p>The remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>file</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -226,7 +243,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * contentMD5.
+             * <p>The Base64-encoded 128-bit MD5 hash value of the HTTP request body.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MACiECZtnLiNkNS1v5****=1</p>
              */
             public Builder contentMD5(String contentMD5) {
                 this.contentMD5 = contentMD5;
@@ -234,7 +254,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the resource was created.
+             * <p>The time when the resource was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-29T03:34:09Z</p>
              */
             public Builder creationTime(Long creationTime) {
                 this.creationTime = creationTime;
@@ -242,7 +265,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * displayName.
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>res_1</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -250,7 +276,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * lastModifiedTime.
+             * <p>The time when the resource was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-04-18T06:15:05Z</p>
              */
             public Builder lastModifiedTime(Long lastModifiedTime) {
                 this.lastModifiedTime = lastModifiedTime;
@@ -258,7 +287,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * lastUpdator.
+             * <p>The user who updated the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN$<a href="mailto:xxx@test.aliyunid.com">xxx@test.aliyunid.com</a></p>
              */
             public Builder lastUpdator(String lastUpdator) {
                 this.lastUpdator = lastUpdator;
@@ -266,7 +298,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource.
+             * <p>The name of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>res_1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -274,7 +309,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The owner of the resource.
+             * <p>The owner of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1265860483008101</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -282,7 +320,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The schema of the resource.
+             * <p>The schema to which the resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>schemaA</p>
              */
             public Builder schema(String schema) {
                 this.schema = schema;
@@ -290,7 +331,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * size.
+             * <p>The size of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -298,7 +342,47 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource.
+             * <p>The resource type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>file</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>py</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>jar</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>volumefile</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>table</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- --></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>file</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -312,15 +396,21 @@ public class ListResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourcesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("marker")
+        @com.aliyun.core.annotation.NameInMap("marker")
         private String marker;
 
-        @NameInMap("maxItem")
+        @com.aliyun.core.annotation.NameInMap("maxItem")
         private Integer maxItem;
 
-        @NameInMap("resources")
-        private java.util.List < Resources> resources;
+        @com.aliyun.core.annotation.NameInMap("resources")
+        private java.util.List<Resources> resources;
 
         private Data(Builder builder) {
             this.marker = builder.marker;
@@ -353,17 +443,20 @@ public class ListResourcesResponseBody extends TeaModel {
         /**
          * @return resources
          */
-        public java.util.List < Resources> getResources() {
+        public java.util.List<Resources> getResources() {
             return this.resources;
         }
 
         public static final class Builder {
             private String marker; 
             private Integer maxItem; 
-            private java.util.List < Resources> resources; 
+            private java.util.List<Resources> resources; 
 
             /**
-             * Indicates the marker after which the returned list begins.
+             * <p>Indicates the marker after which the returned list begins.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZmN0X21vbnRoX3Rhb2Jhb19pbmRleCE=</p>
              */
             public Builder marker(String marker) {
                 this.marker = marker;
@@ -371,7 +464,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of entries returned per page.
+             * <p>The maximum number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxItem(Integer maxItem) {
                 this.maxItem = maxItem;
@@ -379,9 +475,9 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The list of resources.
+             * <p>The list of resources.</p>
              */
-            public Builder resources(java.util.List < Resources> resources) {
+            public Builder resources(java.util.List<Resources> resources) {
                 this.resources = resources;
                 return this;
             }

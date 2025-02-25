@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAuthorityTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>GetAuthorityTemplateResponseBody</p>
  */
 public class GetAuthorityTemplateResponseBody extends TeaModel {
-    @NameInMap("AuthorityTemplateView")
+    @com.aliyun.core.annotation.NameInMap("AuthorityTemplateView")
     private AuthorityTemplateView authorityTemplateView;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Tid")
+    @com.aliyun.core.annotation.NameInMap("Tid")
     private Long tid;
 
     private GetAuthorityTemplateResponseBody(Builder builder) {
@@ -98,7 +103,7 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
         private Long tid; 
 
         /**
-         * The details of the permission template.
+         * <p>The details of the permission template.</p>
          */
         public Builder authorityTemplateView(AuthorityTemplateView authorityTemplateView) {
             this.authorityTemplateView = authorityTemplateView;
@@ -106,7 +111,10 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +122,10 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +133,10 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,11 +144,14 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -142,7 +159,10 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the tenant.
+         * <p>The ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.tid = tid;
@@ -155,29 +175,35 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAuthorityTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAuthorityTemplateResponseBody</p>
+     */
     public static class AuthorityTemplateItem extends TeaModel {
-        @NameInMap("Attribute")
+        @com.aliyun.core.annotation.NameInMap("Attribute")
         private String attribute;
 
-        @NameInMap("DbId")
+        @com.aliyun.core.annotation.NameInMap("DbId")
         private Long dbId;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
 
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private Long itemId;
 
-        @NameInMap("ModifierId")
+        @com.aliyun.core.annotation.NameInMap("ModifierId")
         private Long modifierId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private Long templateId;
 
         private AuthorityTemplateItem(Builder builder) {
@@ -266,7 +292,12 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
             private Long templateId; 
 
             /**
-             * Other information. For example, you can add the logon permission on an instance to the permission template.
+             * <p>Other information. For example, you can add the logon permission on an instance to the permission template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;permissionTypes&quot;: [
+             *             &quot;LOGIN&quot;
+             *           ]</p>
              */
             public Builder attribute(String attribute) {
                 this.attribute = attribute;
@@ -274,7 +305,10 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the database.
+             * <p>The ID of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>43***</p>
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -282,7 +316,10 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>188****</p>
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -290,7 +327,10 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource.
+             * <p>The ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12***</p>
              */
             public Builder itemId(Long itemId) {
                 this.itemId = itemId;
@@ -298,7 +338,10 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user who modified the resource.
+             * <p>The ID of the user who modified the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51***</p>
              */
             public Builder modifierId(Long modifierId) {
                 this.modifierId = modifierId;
@@ -306,14 +349,17 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource. Valid values:
-             * <p>
+             * <p>The type of the resource. Valid values:</p>
+             * <ul>
+             * <li><strong>INSTANCE</strong>: instance</li>
+             * <li><strong>LOGIC_DB</strong>: logical database</li>
+             * <li><strong>META_DB</strong>: physical database</li>
+             * <li><strong>LOGIC_TABLE</strong>: logical table</li>
+             * <li><strong>SINGLE_TABLE</strong>: physical table</li>
+             * </ul>
              * 
-             * *   **INSTANCE**: instance
-             * *   **LOGIC_DB**: logical database
-             * *   **META_DB**: physical database
-             * *   **LOGIC_TABLE**: logical table
-             * *   **SINGLE_TABLE**: physical table
+             * <strong>example:</strong>
+             * <p>INSTANCE</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -321,7 +367,10 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ExampleTable</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -329,7 +378,10 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the permission template.
+             * <p>The ID of the permission template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1563</p>
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;
@@ -343,9 +395,15 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAuthorityTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAuthorityTemplateResponseBody</p>
+     */
     public static class AuthorityTemplateItemList extends TeaModel {
-        @NameInMap("AuthorityTemplateItem")
-        private java.util.List < AuthorityTemplateItem> authorityTemplateItem;
+        @com.aliyun.core.annotation.NameInMap("AuthorityTemplateItem")
+        private java.util.List<AuthorityTemplateItem> authorityTemplateItem;
 
         private AuthorityTemplateItemList(Builder builder) {
             this.authorityTemplateItem = builder.authorityTemplateItem;
@@ -362,17 +420,17 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
         /**
          * @return authorityTemplateItem
          */
-        public java.util.List < AuthorityTemplateItem> getAuthorityTemplateItem() {
+        public java.util.List<AuthorityTemplateItem> getAuthorityTemplateItem() {
             return this.authorityTemplateItem;
         }
 
         public static final class Builder {
-            private java.util.List < AuthorityTemplateItem> authorityTemplateItem; 
+            private java.util.List<AuthorityTemplateItem> authorityTemplateItem; 
 
             /**
              * AuthorityTemplateItem.
              */
-            public Builder authorityTemplateItem(java.util.List < AuthorityTemplateItem> authorityTemplateItem) {
+            public Builder authorityTemplateItem(java.util.List<AuthorityTemplateItem> authorityTemplateItem) {
                 this.authorityTemplateItem = authorityTemplateItem;
                 return this;
             }
@@ -384,23 +442,29 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAuthorityTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAuthorityTemplateResponseBody</p>
+     */
     public static class AuthorityTemplateView extends TeaModel {
-        @NameInMap("AuthorityTemplateItemList")
+        @com.aliyun.core.annotation.NameInMap("AuthorityTemplateItemList")
         private AuthorityTemplateItemList authorityTemplateItemList;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreatorId")
+        @com.aliyun.core.annotation.NameInMap("CreatorId")
         private Long creatorId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private Long templateId;
 
         private AuthorityTemplateView(Builder builder) {
@@ -471,7 +535,7 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
             private Long templateId; 
 
             /**
-             * The resource information in the permission template.
+             * <p>The resource information in the permission template.</p>
              */
             public Builder authorityTemplateItemList(AuthorityTemplateItemList authorityTemplateItemList) {
                 this.authorityTemplateItemList = authorityTemplateItemList;
@@ -479,7 +543,10 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the permission template was created. The time is in the yyyy-MM-DD HH:mm:ss format.
+             * <p>The time when the permission template was created. The time is in the yyyy-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-01-01 00:00:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -487,7 +554,10 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user who created the permission template.
+             * <p>The ID of the user who created the permission template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12***</p>
              */
             public Builder creatorId(Long creatorId) {
                 this.creatorId = creatorId;
@@ -495,7 +565,10 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the permission template.
+             * <p>The description of the permission template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This template is used for business testing.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -503,7 +576,10 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the permission template.
+             * <p>The name of the permission template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestTemplate</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -511,7 +587,10 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the permission template.
+             * <p>The ID of the permission template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1563</p>
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;

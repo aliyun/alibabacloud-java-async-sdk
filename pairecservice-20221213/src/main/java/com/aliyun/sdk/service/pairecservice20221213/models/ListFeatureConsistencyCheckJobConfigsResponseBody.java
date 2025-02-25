@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListFeatureConsistencyCheckJobConfigsResponseBody</p>
  */
 public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel {
-    @NameInMap("FeatureConsistencyCheckConfigs")
+    @com.aliyun.core.annotation.NameInMap("FeatureConsistencyCheckConfigs")
     private java.util.List < FeatureConsistencyCheckConfigs> featureConsistencyCheckConfigs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListFeatureConsistencyCheckJobConfigsResponseBody(Builder builder) {
@@ -92,109 +91,130 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
     } 
 
     public static class FeatureConsistencyCheckConfigs extends TeaModel {
-        @NameInMap("CompareFeature")
+        @com.aliyun.core.annotation.NameInMap("CompareFeature")
         private Boolean compareFeature;
 
-        @NameInMap("EasServiceName")
+        @com.aliyun.core.annotation.NameInMap("EasServiceName")
         private String easServiceName;
 
-        @NameInMap("EasyRecPackagePath")
+        @com.aliyun.core.annotation.NameInMap("EasyRecPackagePath")
         private String easyRecPackagePath;
 
-        @NameInMap("EasyRecVersion")
+        @com.aliyun.core.annotation.NameInMap("EasyRecVersion")
         private String easyRecVersion;
 
-        @NameInMap("FeatureConsistencyCheckJobConfigId")
+        @com.aliyun.core.annotation.NameInMap("FeatureConsistencyCheckJobConfigId")
         private String featureConsistencyCheckJobConfigId;
 
-        @NameInMap("FeatureDisplayExclude")
+        @com.aliyun.core.annotation.NameInMap("FeatureDisplayExclude")
         private String featureDisplayExclude;
 
-        @NameInMap("FeatureLandingResourceId")
+        @com.aliyun.core.annotation.NameInMap("FeatureLandingResourceId")
         private String featureLandingResourceId;
 
-        @NameInMap("FeatureLandingResourceUri")
+        @com.aliyun.core.annotation.NameInMap("FeatureLandingResourceUri")
         private String featureLandingResourceUri;
 
-        @NameInMap("FeaturePriority")
+        @com.aliyun.core.annotation.NameInMap("FeaturePriority")
         private String featurePriority;
 
-        @NameInMap("FgJarVersion")
+        @com.aliyun.core.annotation.NameInMap("FeatureStoreItemId")
+        private String featureStoreItemId;
+
+        @com.aliyun.core.annotation.NameInMap("FeatureStoreModelId")
+        private String featureStoreModelId;
+
+        @com.aliyun.core.annotation.NameInMap("FeatureStoreProjectId")
+        private String featureStoreProjectId;
+
+        @com.aliyun.core.annotation.NameInMap("FeatureStoreProjectName")
+        private String featureStoreProjectName;
+
+        @com.aliyun.core.annotation.NameInMap("FeatureStoreSeqFeatureView")
+        private String featureStoreSeqFeatureView;
+
+        @com.aliyun.core.annotation.NameInMap("FeatureStoreUserId")
+        private String featureStoreUserId;
+
+        @com.aliyun.core.annotation.NameInMap("FgJarVersion")
         private String fgJarVersion;
 
-        @NameInMap("FgJsonFileName")
+        @com.aliyun.core.annotation.NameInMap("FgJsonFileName")
         private String fgJsonFileName;
 
-        @NameInMap("GenerateZip")
+        @com.aliyun.core.annotation.NameInMap("GenerateZip")
         private Boolean generateZip;
 
-        @NameInMap("GmtCreateTime")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
 
-        @NameInMap("GmtModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
         private String gmtModifiedTime;
 
-        @NameInMap("ItemIdField")
+        @com.aliyun.core.annotation.NameInMap("ItemIdField")
         private String itemIdField;
 
-        @NameInMap("ItemTable")
+        @com.aliyun.core.annotation.NameInMap("ItemTable")
         private String itemTable;
 
-        @NameInMap("ItemTablePartitionField")
+        @com.aliyun.core.annotation.NameInMap("ItemTablePartitionField")
         private String itemTablePartitionField;
 
-        @NameInMap("ItemTablePartitionFieldFormat")
+        @com.aliyun.core.annotation.NameInMap("ItemTablePartitionFieldFormat")
         private String itemTablePartitionFieldFormat;
 
-        @NameInMap("LatestJobGmtSamplingEndTime")
+        @com.aliyun.core.annotation.NameInMap("LatestJobGmtSamplingEndTime")
         private String latestJobGmtSamplingEndTime;
 
-        @NameInMap("LatestJobGmtSamplingStartTime")
+        @com.aliyun.core.annotation.NameInMap("LatestJobGmtSamplingStartTime")
         private String latestJobGmtSamplingStartTime;
 
-        @NameInMap("LatestJobId")
+        @com.aliyun.core.annotation.NameInMap("LatestJobId")
         private String latestJobId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OssBucket")
+        @com.aliyun.core.annotation.NameInMap("OssBucket")
         private String ossBucket;
 
-        @NameInMap("OssResourceId")
+        @com.aliyun.core.annotation.NameInMap("OssResourceId")
         private String ossResourceId;
 
-        @NameInMap("SampleRate")
+        @com.aliyun.core.annotation.NameInMap("SampleRate")
         private String sampleRate;
 
-        @NameInMap("SceneId")
+        @com.aliyun.core.annotation.NameInMap("SceneId")
         private String sceneId;
 
-        @NameInMap("SceneName")
+        @com.aliyun.core.annotation.NameInMap("SceneName")
         private String sceneName;
 
-        @NameInMap("ServiceId")
+        @com.aliyun.core.annotation.NameInMap("ServiceId")
         private String serviceId;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UserIdField")
+        @com.aliyun.core.annotation.NameInMap("UseFeatureStore")
+        private String useFeatureStore;
+
+        @com.aliyun.core.annotation.NameInMap("UserIdField")
         private String userIdField;
 
-        @NameInMap("UserTable")
+        @com.aliyun.core.annotation.NameInMap("UserTable")
         private String userTable;
 
-        @NameInMap("UserTablePartitionField")
+        @com.aliyun.core.annotation.NameInMap("UserTablePartitionField")
         private String userTablePartitionField;
 
-        @NameInMap("UserTablePartitionFieldFormat")
+        @com.aliyun.core.annotation.NameInMap("UserTablePartitionFieldFormat")
         private String userTablePartitionFieldFormat;
 
-        @NameInMap("WorkflowName")
+        @com.aliyun.core.annotation.NameInMap("WorkflowName")
         private String workflowName;
 
         private FeatureConsistencyCheckConfigs(Builder builder) {
@@ -207,6 +227,12 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
             this.featureLandingResourceId = builder.featureLandingResourceId;
             this.featureLandingResourceUri = builder.featureLandingResourceUri;
             this.featurePriority = builder.featurePriority;
+            this.featureStoreItemId = builder.featureStoreItemId;
+            this.featureStoreModelId = builder.featureStoreModelId;
+            this.featureStoreProjectId = builder.featureStoreProjectId;
+            this.featureStoreProjectName = builder.featureStoreProjectName;
+            this.featureStoreSeqFeatureView = builder.featureStoreSeqFeatureView;
+            this.featureStoreUserId = builder.featureStoreUserId;
             this.fgJarVersion = builder.fgJarVersion;
             this.fgJsonFileName = builder.fgJsonFileName;
             this.generateZip = builder.generateZip;
@@ -228,6 +254,7 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
             this.serviceId = builder.serviceId;
             this.serviceName = builder.serviceName;
             this.status = builder.status;
+            this.useFeatureStore = builder.useFeatureStore;
             this.userIdField = builder.userIdField;
             this.userTable = builder.userTable;
             this.userTablePartitionField = builder.userTablePartitionField;
@@ -304,6 +331,48 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
          */
         public String getFeaturePriority() {
             return this.featurePriority;
+        }
+
+        /**
+         * @return featureStoreItemId
+         */
+        public String getFeatureStoreItemId() {
+            return this.featureStoreItemId;
+        }
+
+        /**
+         * @return featureStoreModelId
+         */
+        public String getFeatureStoreModelId() {
+            return this.featureStoreModelId;
+        }
+
+        /**
+         * @return featureStoreProjectId
+         */
+        public String getFeatureStoreProjectId() {
+            return this.featureStoreProjectId;
+        }
+
+        /**
+         * @return featureStoreProjectName
+         */
+        public String getFeatureStoreProjectName() {
+            return this.featureStoreProjectName;
+        }
+
+        /**
+         * @return featureStoreSeqFeatureView
+         */
+        public String getFeatureStoreSeqFeatureView() {
+            return this.featureStoreSeqFeatureView;
+        }
+
+        /**
+         * @return featureStoreUserId
+         */
+        public String getFeatureStoreUserId() {
+            return this.featureStoreUserId;
         }
 
         /**
@@ -454,6 +523,13 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         }
 
         /**
+         * @return useFeatureStore
+         */
+        public String getUseFeatureStore() {
+            return this.useFeatureStore;
+        }
+
+        /**
          * @return userIdField
          */
         public String getUserIdField() {
@@ -498,6 +574,12 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
             private String featureLandingResourceId; 
             private String featureLandingResourceUri; 
             private String featurePriority; 
+            private String featureStoreItemId; 
+            private String featureStoreModelId; 
+            private String featureStoreProjectId; 
+            private String featureStoreProjectName; 
+            private String featureStoreSeqFeatureView; 
+            private String featureStoreUserId; 
             private String fgJarVersion; 
             private String fgJsonFileName; 
             private Boolean generateZip; 
@@ -519,6 +601,7 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
             private String serviceId; 
             private String serviceName; 
             private String status; 
+            private String useFeatureStore; 
             private String userIdField; 
             private String userTable; 
             private String userTablePartitionField; 
@@ -594,6 +677,54 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
              */
             public Builder featurePriority(String featurePriority) {
                 this.featurePriority = featurePriority;
+                return this;
+            }
+
+            /**
+             * FeatureStoreItemId.
+             */
+            public Builder featureStoreItemId(String featureStoreItemId) {
+                this.featureStoreItemId = featureStoreItemId;
+                return this;
+            }
+
+            /**
+             * FeatureStoreModelId.
+             */
+            public Builder featureStoreModelId(String featureStoreModelId) {
+                this.featureStoreModelId = featureStoreModelId;
+                return this;
+            }
+
+            /**
+             * FeatureStoreProjectId.
+             */
+            public Builder featureStoreProjectId(String featureStoreProjectId) {
+                this.featureStoreProjectId = featureStoreProjectId;
+                return this;
+            }
+
+            /**
+             * FeatureStoreProjectName.
+             */
+            public Builder featureStoreProjectName(String featureStoreProjectName) {
+                this.featureStoreProjectName = featureStoreProjectName;
+                return this;
+            }
+
+            /**
+             * FeatureStoreSeqFeatureView.
+             */
+            public Builder featureStoreSeqFeatureView(String featureStoreSeqFeatureView) {
+                this.featureStoreSeqFeatureView = featureStoreSeqFeatureView;
+                return this;
+            }
+
+            /**
+             * FeatureStoreUserId.
+             */
+            public Builder featureStoreUserId(String featureStoreUserId) {
+                this.featureStoreUserId = featureStoreUserId;
                 return this;
             }
 
@@ -762,6 +893,14 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * UseFeatureStore.
+             */
+            public Builder useFeatureStore(String useFeatureStore) {
+                this.useFeatureStore = useFeatureStore;
                 return this;
             }
 

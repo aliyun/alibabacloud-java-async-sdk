@@ -98,7 +98,7 @@ public class DescribeTableListByTypeResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * List.
+         * Indicates the information about tables.
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -106,7 +106,7 @@ public class DescribeTableListByTypeResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * Indicates the page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +114,7 @@ public class DescribeTableListByTypeResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * Indicates the number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +122,7 @@ public class DescribeTableListByTypeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Indicates the unique ID of the request. If the request fails, provide this ID for technical support to troubleshoot the failure.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeTableListByTypeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +138,7 @@ public class DescribeTableListByTypeResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * Indicates the total number of returned tables.
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -190,7 +190,7 @@ public class DescribeTableListByTypeResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * Property.
+             * Indicates the property of a table.
              */
             public Builder property(String property) {
                 this.property = property;
@@ -198,7 +198,7 @@ public class DescribeTableListByTypeResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * Indicates the name of the table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

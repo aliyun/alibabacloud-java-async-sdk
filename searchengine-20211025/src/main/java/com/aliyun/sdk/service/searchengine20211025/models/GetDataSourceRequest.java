@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataSourceRequest} extends {@link RequestModel}
  *
  * <p>GetDataSourceRequest</p>
  */
 public class GetDataSourceRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
     private String instanceId;
 
-    @Path
-    @NameInMap("dataSourceName")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("dataSourceName")
     private String dataSourceName;
 
     private GetDataSourceRequest(Builder builder) {
@@ -68,10 +73,10 @@ public class GetDataSourceRequest extends Request {
         } 
 
         /**
-         * ### Sample requests
-         * <p>
+         * <p>The instance ID.</p>
          * 
-         * `GET /openapi/ha3/instances/ha3_instances_id/data-sources/my_data_source`
+         * <strong>example:</strong>
+         * <p>ha-cn-2r42ostoc01</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -80,36 +85,10 @@ public class GetDataSourceRequest extends Request {
         }
 
         /**
-         * ### Sample responses
-         * <p>
+         * <p>The name of the data source.</p>
          * 
-         *     {
-         *       "requestId": "0A6EB64B-B4C8-CF02-810F-E660812972FF",
-         *       "result": {
-         *         "name": "data_source_name",
-         *         "type": "odps",
-         *         "domain": "test",  // The data center of the data source that is deployed in offline mode    
-         *         "indexes": [
-         *           "index1",
-         *           "index2"
-         *         ],
-         *         "partitions": [
-         *           "ds=2020",
-         *           "ds=2021"
-         *         ],
-         *         "lastFulTime": 1628502036000,
-         *         "config":{
-         *           "accessKey": "xxx",
-         *           "accessSecret": "xxxs",
-         *           "project":"xxxx",
-         *           "table":"xxx",
-         *           "partition":"xxxx"
-         *         },
-         *         "autoBuildIndex": true,
-         *         "status": "new"	   // The state of the data source. new indicates that the data source is being created, publish indicates that the data source is normal, and trash indicates that the data source is being deleted.
-         *        
-         *       }
-         *     }
+         * <strong>example:</strong>
+         * <p>ha-cn-2r42ostoc01_people_info</p>
          */
         public Builder dataSourceName(String dataSourceName) {
             this.putPathParameter("dataSourceName", dataSourceName);

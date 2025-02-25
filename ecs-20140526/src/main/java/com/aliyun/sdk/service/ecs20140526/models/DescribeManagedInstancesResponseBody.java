@@ -1,34 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeManagedInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeManagedInstancesResponseBody</p>
  */
 public class DescribeManagedInstancesResponseBody extends TeaModel {
-    @NameInMap("Instances")
-    private java.util.List < Instances> instances;
+    @com.aliyun.core.annotation.NameInMap("Instances")
+    private java.util.List<Instances> instances;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeManagedInstancesResponseBody(Builder builder) {
         this.instances = builder.instances;
+        this.nextToken = builder.nextToken;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
@@ -46,8 +55,15 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
     /**
      * @return instances
      */
-    public java.util.List < Instances> getInstances() {
+    public java.util.List<Instances> getInstances() {
         return this.instances;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -79,22 +95,37 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Instances> instances; 
+        private java.util.List<Instances> instances; 
+        private String nextToken; 
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
 
         /**
-         * The queried managed instances.
+         * <p>The queried managed instances.</p>
          */
-        public Builder instances(java.util.List < Instances> instances) {
+        public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
             return this;
         }
 
         /**
-         * The page number.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2</p>
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +133,10 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +144,10 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>77115469-F2C5-4ECA-94F7-FA04F2FD****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +155,10 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of queried managed instances.
+         * <p>The total number of queried managed instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -131,11 +171,17 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeManagedInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeManagedInstancesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tags(Builder builder) {
@@ -170,12 +216,12 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The key of tag N of the managed instance. Valid values of N: 1 to 20. The tag key cannot be an empty string.
-             * <p>
+             * <p>The key of tag N of the managed instance. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
+             * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added are returned. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added are returned. To query more than 1,000 resources that have the specified tags, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+             * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
              * 
-             * If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
-             * 
-             * The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -183,10 +229,11 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of tag N of the managed instance. Valid values of N: 1 to 20. The tag value can be an empty string.
-             * <p>
+             * <p>The value of tag N of the managed instance. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -200,51 +247,60 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeManagedInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeManagedInstancesResponseBody</p>
+     */
     public static class Instances extends TeaModel {
-        @NameInMap("ActivationId")
+        @com.aliyun.core.annotation.NameInMap("ActivationId")
         private String activationId;
 
-        @NameInMap("AgentVersion")
+        @com.aliyun.core.annotation.NameInMap("AgentVersion")
         private String agentVersion;
 
-        @NameInMap("Connected")
+        @com.aliyun.core.annotation.NameInMap("Connected")
         private Boolean connected;
 
-        @NameInMap("Hostname")
+        @com.aliyun.core.annotation.NameInMap("Hostname")
         private String hostname;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IntranetIp")
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("InvocationCount")
+        @com.aliyun.core.annotation.NameInMap("InvocationCount")
         private Long invocationCount;
 
-        @NameInMap("LastInvokedTime")
+        @com.aliyun.core.annotation.NameInMap("LastInvokedTime")
         private String lastInvokedTime;
 
-        @NameInMap("MachineId")
+        @com.aliyun.core.annotation.NameInMap("MachineId")
         private String machineId;
 
-        @NameInMap("OsType")
+        @com.aliyun.core.annotation.NameInMap("OsType")
         private String osType;
 
-        @NameInMap("OsVersion")
+        @com.aliyun.core.annotation.NameInMap("OsVersion")
         private String osVersion;
 
-        @NameInMap("RegistrationTime")
+        @com.aliyun.core.annotation.NameInMap("RegistrationTime")
         private String registrationTime;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
         private Instances(Builder builder) {
             this.activationId = builder.activationId;
@@ -261,6 +317,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             this.osType = builder.osType;
             this.osVersion = builder.osVersion;
             this.registrationTime = builder.registrationTime;
+            this.resourceGroupId = builder.resourceGroupId;
             this.tags = builder.tags;
         }
 
@@ -371,9 +428,16 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -392,10 +456,14 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             private String osType; 
             private String osVersion; 
             private String registrationTime; 
-            private java.util.List < Tags> tags; 
+            private String resourceGroupId; 
+            private java.util.List<Tags> tags; 
 
             /**
-             * The ID of the activation code.
+             * <p>The ID of the activation code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3704F543-F768-43FA-9864-897F75B3****</p>
              */
             public Builder activationId(String activationId) {
                 this.activationId = activationId;
@@ -403,7 +471,10 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The version number of Cloud Assistant Agent.
+             * <p>The version number of Cloud Assistant Agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.2.0.102</p>
              */
             public Builder agentVersion(String agentVersion) {
                 this.agentVersion = agentVersion;
@@ -411,11 +482,14 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the managed instance is connected. Valid values:
-             * <p>
+             * <p>Indicates whether the managed instance is connected. Valid values:</p>
+             * <ul>
+             * <li>true: The managed instance is connected. You can manage the instance by using Cloud Assistant.</li>
+             * <li>false: The managed instance is not connected. The managed instance may be down or Cloud Assistant Agent may be incorrectly installed.</li>
+             * </ul>
              * 
-             * *   true: The managed instance is connected and you can manage the instance by using Cloud Assistant.
-             * *   false: The managed instance is not connected because the managed instance is down or because Cloud Assistant Agent is not installed correctly.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder connected(Boolean connected) {
                 this.connected = connected;
@@ -423,7 +497,10 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The hostname of the managed instance.
+             * <p>The hostname of the managed instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -431,7 +508,10 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the managed instance.
+             * <p>The ID of the managed instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mi-hz018jrc1o0****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -439,7 +519,10 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the managed instance.
+             * <p>The name of the managed instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>webAPP-linux-01</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -447,7 +530,10 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the managed instance.
+             * <p>The public IP address of the managed instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><code>40.65.**.**</code></p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -455,7 +541,10 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The internal IP address of the managed instance.
+             * <p>The internal IP address of the managed instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><code>10.0.**.**</code></p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -463,7 +552,10 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that Cloud Assistant tasks were executed on the managed instance.
+             * <p>The number of times that Cloud Assistant tasks were executed on the managed instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder invocationCount(Long invocationCount) {
                 this.invocationCount = invocationCount;
@@ -471,7 +563,10 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the Cloud Assistant task was last executed.
+             * <p>The time when the last Cloud Assistant task was executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-20T09:00:40Z</p>
              */
             public Builder lastInvokedTime(String lastInvokedTime) {
                 this.lastInvokedTime = lastInvokedTime;
@@ -479,7 +574,10 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The machine code of the managed instance.
+             * <p>The machine code of the managed instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e03231b37ab14e53b5795ad625fc****</p>
              */
             public Builder machineId(String machineId) {
                 this.machineId = machineId;
@@ -487,7 +585,10 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system type of the managed instance.
+             * <p>The operating system type of the managed instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Linux</p>
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -495,7 +596,10 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The version information of the operating system.
+             * <p>The version information of the operating system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Linux_#38~18.04.1-Ubuntu SMP Wed Jan 6 18:26:30 UTC 2021_x86_64</p>
              */
             public Builder osVersion(String osVersion) {
                 this.osVersion = osVersion;
@@ -503,7 +607,10 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the managed instance was registered.
+             * <p>The time when the managed instance was registered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-20T08:57:56Z</p>
              */
             public Builder registrationTime(String registrationTime) {
                 this.registrationTime = registrationTime;
@@ -511,9 +618,20 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the managed instance.
+             * <p>The ID of the resource group to which the managed instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-123******</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * <p>The tags of the managed instance.</p>
+             */
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMigrateTasksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMigrateTasksResponseBody</p>
  */
 public class DescribeMigrateTasksResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeMigrateTasksResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -106,7 +114,7 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the migration task.
+         * <p>The details of the migration task.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -114,7 +122,10 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +133,10 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -130,7 +144,10 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4E356DDF-6B83-45DB-99D5-4B1E8A0D286B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -151,29 +171,35 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMigrateTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMigrateTasksResponseBody</p>
+     */
     public static class MigrateTask extends TeaModel {
-        @NameInMap("BackupMode")
+        @com.aliyun.core.annotation.NameInMap("BackupMode")
         private String backupMode;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DBName")
+        @com.aliyun.core.annotation.NameInMap("DBName")
         private String DBName;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("IsDBReplaced")
+        @com.aliyun.core.annotation.NameInMap("IsDBReplaced")
         private String isDBReplaced;
 
-        @NameInMap("MigrateTaskId")
+        @com.aliyun.core.annotation.NameInMap("MigrateTaskId")
         private String migrateTaskId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private MigrateTask(Builder builder) {
@@ -262,11 +288,14 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The migration task type. Valid values:
-             * <p>
+             * <p>The migration task type. Valid values:</p>
+             * <ul>
+             * <li><strong>FULL</strong>: The migration task migrates full backup files that can be used to restore the full data of the instance.</li>
+             * <li><strong>UPDF</strong>: The migration task migrates incremental or log backup files that can be used to restore the incremental data of the instance.</li>
+             * </ul>
              * 
-             * *   **FULL**: The migration task migrates full backup files that can be used to restore the full data of the instance.
-             * *   **UPDF**: The migration task migrates incremental or log backup files that can be used to restore the incremental data of the instance.
+             * <strong>example:</strong>
+             * <p>FULL</p>
              */
             public Builder backupMode(String backupMode) {
                 this.backupMode = backupMode;
@@ -274,7 +303,10 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the migration task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the migration task was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-05-30T12:11:04Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -282,7 +314,10 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The database name.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testDB</p>
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -290,7 +325,10 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the migration task.
+             * <p>The description of the migration task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Api description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -298,7 +336,10 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the migration task was completed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the migration task was completed. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-05-30T13:11:04Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -306,7 +347,10 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the imported data overwrites the existing data.
+             * <p>Indicates whether the imported data overwrites the existing data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder isDBReplaced(String isDBReplaced) {
                 this.isDBReplaced = isDBReplaced;
@@ -314,7 +358,10 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The migration task ID.
+             * <p>The migration task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>564522545</p>
              */
             public Builder migrateTaskId(String migrateTaskId) {
                 this.migrateTaskId = migrateTaskId;
@@ -322,14 +369,17 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the migration task. Valid values:
-             * <p>
+             * <p>The status of the migration task. Valid values:</p>
+             * <ul>
+             * <li><strong>NoStart</strong>: The task is not started.</li>
+             * <li><strong>Running</strong>:The task is in progress.</li>
+             * <li><strong>Success</strong>: The task is successful.</li>
+             * <li><strong>Failed</strong>: The task failed.</li>
+             * <li><strong>Waiting</strong>: The task is waiting for an incremental backup file to be imported.</li>
+             * </ul>
              * 
-             * *   **NoStart**: The task is not started.
-             * *   **Running**:The task is in progress.
-             * *   **Success**: The task is successful.
-             * *   **Failed**: The task failed.
-             * *   **Waiting**: The task is waiting for an incremental backup file to be imported.
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -343,9 +393,15 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMigrateTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMigrateTasksResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("MigrateTask")
-        private java.util.List < MigrateTask> migrateTask;
+        @com.aliyun.core.annotation.NameInMap("MigrateTask")
+        private java.util.List<MigrateTask> migrateTask;
 
         private Items(Builder builder) {
             this.migrateTask = builder.migrateTask;
@@ -362,17 +418,17 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
         /**
          * @return migrateTask
          */
-        public java.util.List < MigrateTask> getMigrateTask() {
+        public java.util.List<MigrateTask> getMigrateTask() {
             return this.migrateTask;
         }
 
         public static final class Builder {
-            private java.util.List < MigrateTask> migrateTask; 
+            private java.util.List<MigrateTask> migrateTask; 
 
             /**
              * MigrateTask.
              */
-            public Builder migrateTask(java.util.List < MigrateTask> migrateTask) {
+            public Builder migrateTask(java.util.List<MigrateTask> migrateTask) {
                 this.migrateTask = migrateTask;
                 return this;
             }

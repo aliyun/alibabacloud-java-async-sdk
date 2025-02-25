@@ -1,36 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateHybridMonitorNamespaceRequest} extends {@link RequestModel}
  *
  * <p>CreateHybridMonitorNamespaceRequest</p>
  */
 public class CreateHybridMonitorNamespaceRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @Query
-    @NameInMap("NamespaceRegion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespaceRegion")
     private String namespaceRegion;
 
-    @Query
-    @NameInMap("NamespaceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespaceType")
     private String namespaceType;
 
-    @Query
-    @NameInMap("Spec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Spec")
     private String spec;
 
     private CreateHybridMonitorNamespaceRequest(Builder builder) {
@@ -111,7 +111,7 @@ public class CreateHybridMonitorNamespaceRequest extends Request {
         } 
 
         /**
-         * The description of the namespace.
+         * <p>The description of the namespace.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -120,10 +120,12 @@ public class CreateHybridMonitorNamespaceRequest extends Request {
         }
 
         /**
-         * The name of the namespace.
-         * <p>
+         * <p>The name of the namespace.</p>
+         * <p>The name can contain lowercase letters, digits, and hyphens (-).</p>
+         * <p>This parameter is required.</p>
          * 
-         * The name can contain lowercase letters, digits, and hyphens (-).
+         * <strong>example:</strong>
+         * <p>aliyun</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -132,7 +134,10 @@ public class CreateHybridMonitorNamespaceRequest extends Request {
         }
 
         /**
-         * NamespaceRegion.
+         * <p>The region where the metric data is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder namespaceRegion(String namespaceRegion) {
             this.putQueryParameter("NamespaceRegion", namespaceRegion);
@@ -141,7 +146,17 @@ public class CreateHybridMonitorNamespaceRequest extends Request {
         }
 
         /**
-         * NamespaceType.
+         * <p>The storage scheme of metric data. Valid values:</p>
+         * <ul>
+         * <li>m_prom_user: The metric data is stored in Simple Log Service.</li>
+         * <li>m_prom_pool: The metric data is stored in the private storage space provided by CloudMonitor.</li>
+         * </ul>
+         * <blockquote>
+         * <p> For more information about the storage schemes of metric data, see <a href="https://help.aliyun.com/document_detail/2594921.html">Data storage schemes for Hybrid Cloud Monitoring</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>m_prometheus</p>
          */
         public Builder namespaceType(String namespaceType) {
             this.putQueryParameter("NamespaceType", namespaceType);
@@ -150,17 +165,19 @@ public class CreateHybridMonitorNamespaceRequest extends Request {
         }
 
         /**
-         * The data retention period of the namespace. Valid values:
-         * <p>
+         * <p>The data retention period. Valid values:</p>
+         * <ul>
+         * <li>cms.s1.large (Retention Period 15 Days)</li>
+         * <li>cms.s1.xlarge (Retention Period 32 Days)</li>
+         * <li>cms.s1.2xlarge (Retention Period 63 Days)</li>
+         * <li>cms.s1.3xlarge (Retention Period 93 Days) (default)</li>
+         * <li>cms.s1.6xlarge (Retention Period 185 Days)</li>
+         * <li>cms.s1.12xlarge (Retention Period 367 Days)</li>
+         * </ul>
+         * <p>For information about the pricing for different retention periods, see the <strong>Pricing</strong> section in <a href="https://help.aliyun.com/document_detail/223532.html">Billing of the dashboard feature</a>.</p>
          * 
-         * *   cms.s1.large: 15 days
-         * *   cms.s1.xlarge: 32 days
-         * *   cms.s1.2xlarge: 63 days
-         * *   cms.s1.3xlarge (default value): 93 days
-         * *   cms.s1.6xlarge: 185 days
-         * *   cms.s1.12xlarge: 376 days
-         * 
-         * For information about the pricing for different retention periods, see the **Pricing** section in [Billing of the dashboard feature](~~223532~~).
+         * <strong>example:</strong>
+         * <p>cms.s1.3xlarge</p>
          */
         public Builder spec(String spec) {
             this.putQueryParameter("Spec", spec);

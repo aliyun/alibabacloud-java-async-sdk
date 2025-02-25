@@ -1,38 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutDcdnKvRequest} extends {@link RequestModel}
  *
  * <p>PutDcdnKvRequest</p>
  */
 public class PutDcdnKvRequest extends Request {
-    @Query
-    @NameInMap("Expiration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Expiration")
     private Long expiration;
 
-    @Query
-    @NameInMap("ExpirationTtl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExpirationTtl")
     private Long expirationTtl;
 
-    @Query
-    @NameInMap("Key")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Key")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String key;
 
-    @Query
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @Body
-    @NameInMap("Value")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Value")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String value;
 
     private PutDcdnKvRequest(Builder builder) {
@@ -113,7 +113,10 @@ public class PutDcdnKvRequest extends Request {
         } 
 
         /**
-         * The time when the key expires.Example: "1690081381".
+         * <p>The time when the key expires.Example: &quot;1690081381&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1690081381</p>
          */
         public Builder expiration(Long expiration) {
             this.putQueryParameter("Expiration", expiration);
@@ -122,7 +125,10 @@ public class PutDcdnKvRequest extends Request {
         }
 
         /**
-         * The time when the key expires.Example: "3600".
+         * <p>The time when the key expires.Example: &quot;3600&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder expirationTtl(Long expirationTtl) {
             this.putQueryParameter("ExpirationTtl", expirationTtl);
@@ -131,7 +137,11 @@ public class PutDcdnKvRequest extends Request {
         }
 
         /**
-         * The key. The key can be up to 512 characters in length, and cannot contain spaces.
+         * <p>The key. The key can be up to 512 characters in length, and cannot contain spaces.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key1</p>
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -140,7 +150,11 @@ public class PutDcdnKvRequest extends Request {
         }
 
         /**
-         * The name of the namespace.
+         * <p>The name of the namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ns1</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -149,7 +163,11 @@ public class PutDcdnKvRequest extends Request {
         }
 
         /**
-         * The value of the key. The maximum size is 2 MB (2 x 1000 x 1000 bytes).
+         * <p>The value of the key. The maximum size is 2 MB (2 x 1000 x 1000 bytes).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value1</p>
          */
         public Builder value(String value) {
             this.putBodyParameter("Value", value);

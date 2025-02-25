@@ -1,81 +1,86 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDemandsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDemandsRequest</p>
  */
 public class DescribeDemandsRequest extends Request {
-    @Query
-    @NameInMap("DemandId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DemandId")
     private String demandId;
 
-    @Query
-    @NameInMap("DemandStatus")
-    private java.util.List < String > demandStatus;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DemandStatus")
+    private java.util.List<String> demandStatus;
 
-    @Query
-    @NameInMap("DemandType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DemandType")
     private String demandType;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("InstanceChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
     private String instanceChargeType;
 
-    @Query
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
-    @Query
-    @NameInMap("InstanceTypeFamily")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceTypeFamily")
     private String instanceTypeFamily;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private DescribeDemandsRequest(Builder builder) {
@@ -121,7 +126,7 @@ public class DescribeDemandsRequest extends Request {
     /**
      * @return demandStatus
      */
-    public java.util.List < String > getDemandStatus() {
+    public java.util.List<String> getDemandStatus() {
         return this.demandStatus;
     }
 
@@ -212,7 +217,7 @@ public class DescribeDemandsRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -225,7 +230,7 @@ public class DescribeDemandsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeDemandsRequest, Builder> {
         private String demandId; 
-        private java.util.List < String > demandStatus; 
+        private java.util.List<String> demandStatus; 
         private String demandType; 
         private Boolean dryRun; 
         private String instanceChargeType; 
@@ -238,7 +243,7 @@ public class DescribeDemandsRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String zoneId; 
 
         private Builder() {
@@ -266,7 +271,10 @@ public class DescribeDemandsRequest extends Request {
         } 
 
         /**
-         * The ID of the filing ticket. If this parameter is specified, other optional request parameters are ignored.
+         * <p>The ID of the demand. If this parameter is specified, other optional request parameters are ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ed-bp11n21kq00sl71p****</p>
          */
         public Builder demandId(String demandId) {
             this.putQueryParameter("DemandId", demandId);
@@ -275,28 +283,34 @@ public class DescribeDemandsRequest extends Request {
         }
 
         /**
-         * The status of the filing ticket or resource consumption. Valid values:
-         * <p>
+         * <p>The status of the demand or filed resources. Valid values:</p>
+         * <ul>
+         * <li>Creating: The demand is being created.</li>
+         * <li>Active: The filed resources are being supplied.</li>
+         * <li>Expired: The demand has expired.</li>
+         * <li>Finished: The filed resources are consumed.</li>
+         * <li>Refused: The demand is rejected. To view the reason for rejection, see the <code>Comment</code> parameter in the response.</li>
+         * <li>Cancelled: The demand is canceled.</li>
+         * </ul>
          * 
-         * *   Creating: The filing ticket is being created.
-         * *   Active: The filed resources are being supplied.
-         * *   Expired: The filing ticket expires.
-         * *   Finished: The filed resources are consumed.
-         * *   Refused: The filing request is denied. To view the reason for denial, see the `Comment` parameter in the response.
-         * *   Cancelled: The filing request is canceled.
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
-        public Builder demandStatus(java.util.List < String > demandStatus) {
+        public Builder demandStatus(java.util.List<String> demandStatus) {
             this.putQueryParameter("DemandStatus", demandStatus);
             this.demandStatus = demandStatus;
             return this;
         }
 
         /**
-         * The source of the filed instance. Default value: System. Valid values:
-         * <p>
+         * <p>The source of the instance. Valid values:</p>
+         * <ul>
+         * <li>Custom: filed on your own.</li>
+         * <li>System (default): filed by Alibaba Cloud.</li>
+         * </ul>
          * 
-         * *   Custom: filed on your own.
-         * *   System: filed by Alibaba Cloud.
+         * <strong>example:</strong>
+         * <p>Custom</p>
          */
         public Builder demandType(String demandType) {
             this.putQueryParameter("DemandType", demandType);
@@ -305,11 +319,14 @@ public class DescribeDemandsRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. Default value: false. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values: Valid values:</p>
+         * <ul>
+         * <li>true: performs only a dry run. The system checks whether your AccessKey pair is valid, whether RAM users are granted required permissions, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</li>
+         * <li>false (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   true: performs a dry run. The system checks whether your AccessKey pair is valid, whether RAM users are granted required permissions, and whether the required parameters are set. If the request fails the dry run, the corresponding error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.
-         * *   false: performs a dry run and sends the request . If the request passes the dry run, a 2XX HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -318,11 +335,14 @@ public class DescribeDemandsRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Valid values:
-         * <p>
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li>PostPaid: pay-as-you-go.</li>
+         * <li>PrePaid: subscription.</li>
+         * </ul>
          * 
-         * *   PostPaid: pay-as-you-go
-         * *   PrePaid: subscription
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -331,7 +351,10 @@ public class DescribeDemandsRequest extends Request {
         }
 
         /**
-         * The instance type of the filed instance.
+         * <p>The instance type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g6.xlarge</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -340,7 +363,10 @@ public class DescribeDemandsRequest extends Request {
         }
 
         /**
-         * The instance family of the filed instance.
+         * <p>The instance family of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g6</p>
          */
         public Builder instanceTypeFamily(String instanceTypeFamily) {
             this.putQueryParameter("InstanceTypeFamily", instanceTypeFamily);
@@ -367,10 +393,11 @@ public class DescribeDemandsRequest extends Request {
         }
 
         /**
-         * The page number of the page to return. Pages start from page 1.
-         * <p>
+         * <p>The page number. Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -379,10 +406,11 @@ public class DescribeDemandsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100.
-         * <p>
+         * <p>The number of entries per page. Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -391,7 +419,11 @@ public class DescribeDemandsRequest extends Request {
         }
 
         /**
-         * The ID of the region for which to query resources. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+         * <p>The region ID of the resource. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -418,16 +450,19 @@ public class DescribeDemandsRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The ID of the zone for which to query resources. You can call the [DescribeZones](~~25610~~) operation to query the most recent list of zones.
+         * <p>The zone ID of the resource. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-g</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -442,11 +477,17 @@ public class DescribeDemandsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDemandsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeDemandsRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -481,7 +522,12 @@ public class DescribeDemandsRequest extends Request {
             private String value; 
 
             /**
-             * > This parameter is unavailable.
+             * <blockquote>
+             * <p>This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -489,7 +535,12 @@ public class DescribeDemandsRequest extends Request {
             }
 
             /**
-             * > This parameter is unavailable.
+             * <blockquote>
+             * <p>This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

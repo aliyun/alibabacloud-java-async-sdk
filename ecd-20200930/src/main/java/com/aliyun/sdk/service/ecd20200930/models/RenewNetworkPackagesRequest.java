@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenewNetworkPackagesRequest} extends {@link RequestModel}
  *
  * <p>RenewNetworkPackagesRequest</p>
  */
 public class RenewNetworkPackagesRequest extends Request {
-    @Query
-    @NameInMap("AutoPay")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
     private Boolean autoPay;
 
-    @Query
-    @NameInMap("NetworkPackageId")
-    @Validation(required = true)
-    private java.util.List < String > networkPackageId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkPackageId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> networkPackageId;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
-    @Query
-    @NameInMap("PeriodUnit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeriodUnit")
     private String periodUnit;
 
-    @Query
-    @NameInMap("PromotionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionId")
     private String promotionId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private RenewNetworkPackagesRequest(Builder builder) {
@@ -71,7 +76,7 @@ public class RenewNetworkPackagesRequest extends Request {
     /**
      * @return networkPackageId
      */
-    public java.util.List < String > getNetworkPackageId() {
+    public java.util.List<String> getNetworkPackageId() {
         return this.networkPackageId;
     }
 
@@ -105,7 +110,7 @@ public class RenewNetworkPackagesRequest extends Request {
 
     public static final class Builder extends Request.Builder<RenewNetworkPackagesRequest, Builder> {
         private Boolean autoPay; 
-        private java.util.List < String > networkPackageId; 
+        private java.util.List<String> networkPackageId; 
         private Integer period; 
         private String periodUnit; 
         private String promotionId; 
@@ -126,7 +131,28 @@ public class RenewNetworkPackagesRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * <p>Specifies whether to enable the automatic payment feature.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true (default): enables the auto-payment feature.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <p>Make sure that your account has sufficient balance. Otherwise, no order is generated.</p>
+         * <!-- -->
+         * </li>
+         * <li><p>false: disables the auto-payment feature. In this case, an order is generated but you need to make the payment manually.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <p>To make the payment, log on to the Elastic Desktop Service console, go to the Orders page, and find the order based on the order ID.</p>
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -135,16 +161,25 @@ public class RenewNetworkPackagesRequest extends Request {
         }
 
         /**
-         * NetworkPackageId.
+         * <p>The IDs of premium bandwidth plans. You can specify up to 100 IDs.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder networkPackageId(java.util.List < String > networkPackageId) {
+        public Builder networkPackageId(java.util.List<String> networkPackageId) {
             this.putQueryParameter("NetworkPackageId", networkPackageId);
             this.networkPackageId = networkPackageId;
             return this;
         }
 
         /**
-         * Period.
+         * <p>The subscription duration if you specify subscription as the new billing method for the cloud desktop. The unit of the value is specified by the <code>PeriodUnit</code> parameter. This parameter takes effect only when the <code>ChargeType</code> parameter is set to <code>PrePaid</code>.</p>
+         * <ul>
+         * <li>If the <code>PeriodUnit</code> parameter is set to <code>Week</code>, the valid value of the Period parameter is 1.</li>
+         * <li>If the <code>PeriodUnit</code> parameter is set to <code>Month</code>, the valid values of the Period parameter are 1, 2, 3, and 6.</li>
+         * <li>If the <code>PeriodUnit</code> parameter is set to <code>Year</code>, the valid values of the Period parameter are 1, 2, 3, 4, and 5.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -153,7 +188,15 @@ public class RenewNetworkPackagesRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * <p>The unit of the renewal duration specified by the Period parameter. Valid values:</p>
+         * <ul>
+         * <li>Month</li>
+         * <li>Year</li>
+         * </ul>
+         * <p>Default value: Month.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -162,7 +205,10 @@ public class RenewNetworkPackagesRequest extends Request {
         }
 
         /**
-         * PromotionId.
+         * <p>The promotion ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500038360030606</p>
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -171,7 +217,11 @@ public class RenewNetworkPackagesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

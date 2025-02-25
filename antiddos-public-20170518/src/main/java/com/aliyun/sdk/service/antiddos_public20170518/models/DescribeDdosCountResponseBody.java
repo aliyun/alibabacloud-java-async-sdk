@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.antiddos_public20170518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDdosCountResponseBody</p>
  */
 public class DescribeDdosCountResponseBody extends TeaModel {
-    @NameInMap("DdosCount")
+    @com.aliyun.core.annotation.NameInMap("DdosCount")
     private DdosCount ddosCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDdosCountResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class DescribeDdosCountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DdosCount.
+         * The number of assets that are under DDoS attacks.
          */
         public Builder ddosCount(DdosCount ddosCount) {
             this.ddosCount = ddosCount;
@@ -58,7 +57,7 @@ public class DescribeDdosCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,13 +71,13 @@ public class DescribeDdosCountResponseBody extends TeaModel {
     } 
 
     public static class DdosCount extends TeaModel {
-        @NameInMap("BlackholeCount")
+        @com.aliyun.core.annotation.NameInMap("BlackholeCount")
         private Integer blackholeCount;
 
-        @NameInMap("DefenseCount")
+        @com.aliyun.core.annotation.NameInMap("DefenseCount")
         private Integer defenseCount;
 
-        @NameInMap("InstacenCount")
+        @com.aliyun.core.annotation.NameInMap("InstacenCount")
         private Integer instacenCount;
 
         private DdosCount(Builder builder) {
@@ -122,7 +121,7 @@ public class DescribeDdosCountResponseBody extends TeaModel {
             private Integer instacenCount; 
 
             /**
-             * BlackholeCount.
+             * The number of assets for which blackhole filtering is triggered.
              */
             public Builder blackholeCount(Integer blackholeCount) {
                 this.blackholeCount = blackholeCount;
@@ -130,7 +129,7 @@ public class DescribeDdosCountResponseBody extends TeaModel {
             }
 
             /**
-             * DefenseCount.
+             * The number of assets for which traffic scrubbing is triggered.
              */
             public Builder defenseCount(Integer defenseCount) {
                 this.defenseCount = defenseCount;
@@ -138,7 +137,7 @@ public class DescribeDdosCountResponseBody extends TeaModel {
             }
 
             /**
-             * InstacenCount.
+             * The total number of assets.
              */
             public Builder instacenCount(Integer instacenCount) {
                 this.instacenCount = instacenCount;

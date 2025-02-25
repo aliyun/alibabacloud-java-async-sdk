@@ -62,7 +62,7 @@ public class TimeTriggerConfig extends TeaModel {
         private String payload; 
 
         /**
-         * cronExpression
+         * cronExpression.
          */
         public Builder cronExpression(String cronExpression) {
             this.cronExpression = cronExpression;
@@ -70,7 +70,7 @@ public class TimeTriggerConfig extends TeaModel {
         }
 
         /**
-         * enable
+         * enable.
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;
@@ -78,7 +78,7 @@ public class TimeTriggerConfig extends TeaModel {
         }
 
         /**
-         * payload
+         * payload.
          */
         public Builder payload(String payload) {
             this.payload = payload;

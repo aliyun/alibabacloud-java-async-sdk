@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListControlPolicyAttachmentsForTargetResponseBody} extends {@link TeaModel}
  *
  * <p>ListControlPolicyAttachmentsForTargetResponseBody</p>
  */
 public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel {
-    @NameInMap("ControlPolicyAttachments")
+    @com.aliyun.core.annotation.NameInMap("ControlPolicyAttachments")
     private ControlPolicyAttachments controlPolicyAttachments;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListControlPolicyAttachmentsForTargetResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
         private String requestId; 
 
         /**
-         * The information about the attached access control policies.
+         * <p>The information about the attached access control policies.</p>
          */
         public Builder controlPolicyAttachments(ControlPolicyAttachments controlPolicyAttachments) {
             this.controlPolicyAttachments = controlPolicyAttachments;
@@ -58,7 +63,10 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C276B600-7B7A-49E8-938C-E16CFA955A82</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,23 +79,29 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
 
     } 
 
+    /**
+     * 
+     * {@link ListControlPolicyAttachmentsForTargetResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListControlPolicyAttachmentsForTargetResponseBody</p>
+     */
     public static class ControlPolicyAttachment extends TeaModel {
-        @NameInMap("AttachDate")
+        @com.aliyun.core.annotation.NameInMap("AttachDate")
         private String attachDate;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EffectScope")
+        @com.aliyun.core.annotation.NameInMap("EffectScope")
         private String effectScope;
 
-        @NameInMap("PolicyId")
+        @com.aliyun.core.annotation.NameInMap("PolicyId")
         private String policyId;
 
-        @NameInMap("PolicyName")
+        @com.aliyun.core.annotation.NameInMap("PolicyName")
         private String policyName;
 
-        @NameInMap("PolicyType")
+        @com.aliyun.core.annotation.NameInMap("PolicyType")
         private String policyType;
 
         private ControlPolicyAttachment(Builder builder) {
@@ -158,7 +172,10 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
             private String policyType; 
 
             /**
-             * The time when the access control policy was attached.
+             * <p>The time when the access control policy was attached.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-19T02:56:24Z</p>
              */
             public Builder attachDate(String attachDate) {
                 this.attachDate = attachDate;
@@ -166,7 +183,10 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
             }
 
             /**
-             * The description of the access control policy.
+             * <p>The description of the access control policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ExampleControlPolicy</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -174,11 +194,14 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
             }
 
             /**
-             * The effective scope of the access control policy. Valid values:
-             * <p>
+             * <p>The effective scope of the access control policy. Valid values:</p>
+             * <ul>
+             * <li>All: The access control policy is in effect for Alibaba Cloud accounts, RAM users, and RAM roles.</li>
+             * <li>RAM: The access control policy is in effect only for RAM users and RAM roles.</li>
+             * </ul>
              * 
-             * *   All: The access control policy is in effect for Alibaba Cloud accounts, RAM users, and RAM roles.
-             * *   RAM: The access control policy is in effect only for RAM users and RAM roles.
+             * <strong>example:</strong>
+             * <p>RAM</p>
              */
             public Builder effectScope(String effectScope) {
                 this.effectScope = effectScope;
@@ -186,7 +209,10 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
             }
 
             /**
-             * The ID of the access control policy.
+             * <p>The ID of the access control policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cp-jExXAqIYkwHN****</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -194,7 +220,10 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
             }
 
             /**
-             * The name of the access control policy.
+             * <p>The name of the access control policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ExampleControlPolicy</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -202,11 +231,14 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
             }
 
             /**
-             * The type of the access control policy. Valid values:
-             * <p>
+             * <p>The type of the access control policy. Valid values:</p>
+             * <ul>
+             * <li>System: system access control policy</li>
+             * <li>Custom: custom access control policy</li>
+             * </ul>
              * 
-             * *   System: system access control policy
-             * *   Custom: custom access control policy
+             * <strong>example:</strong>
+             * <p>Custom</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -220,9 +252,15 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
         } 
 
     }
+    /**
+     * 
+     * {@link ListControlPolicyAttachmentsForTargetResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListControlPolicyAttachmentsForTargetResponseBody</p>
+     */
     public static class ControlPolicyAttachments extends TeaModel {
-        @NameInMap("ControlPolicyAttachment")
-        private java.util.List < ControlPolicyAttachment> controlPolicyAttachment;
+        @com.aliyun.core.annotation.NameInMap("ControlPolicyAttachment")
+        private java.util.List<ControlPolicyAttachment> controlPolicyAttachment;
 
         private ControlPolicyAttachments(Builder builder) {
             this.controlPolicyAttachment = builder.controlPolicyAttachment;
@@ -239,17 +277,17 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
         /**
          * @return controlPolicyAttachment
          */
-        public java.util.List < ControlPolicyAttachment> getControlPolicyAttachment() {
+        public java.util.List<ControlPolicyAttachment> getControlPolicyAttachment() {
             return this.controlPolicyAttachment;
         }
 
         public static final class Builder {
-            private java.util.List < ControlPolicyAttachment> controlPolicyAttachment; 
+            private java.util.List<ControlPolicyAttachment> controlPolicyAttachment; 
 
             /**
              * ControlPolicyAttachment.
              */
-            public Builder controlPolicyAttachment(java.util.List < ControlPolicyAttachment> controlPolicyAttachment) {
+            public Builder controlPolicyAttachment(java.util.List<ControlPolicyAttachment> controlPolicyAttachment) {
                 this.controlPolicyAttachment = controlPolicyAttachment;
                 return this;
             }

@@ -1,51 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataCheckTableDetailsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDataCheckTableDetailsResponseBody</p>
  */
 public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
-    @NameInMap("DiffTableCount")
+    @com.aliyun.core.annotation.NameInMap("DiffTableCount")
     private Long diffTableCount;
 
-    @NameInMap("DynamicCode")
+    @com.aliyun.core.annotation.NameInMap("DynamicCode")
     private String dynamicCode;
 
-    @NameInMap("DynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("DynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("FinishedCount")
+    @com.aliyun.core.annotation.NameInMap("FailedTableCount")
+    private Long failedTableCount;
+
+    @com.aliyun.core.annotation.NameInMap("FinishedCount")
     private Long finishedCount;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TableDetails")
-    private java.util.List < TableDetails> tableDetails;
+    @com.aliyun.core.annotation.NameInMap("TableDetails")
+    private java.util.List<TableDetails> tableDetails;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeDataCheckTableDetailsResponseBody(Builder builder) {
@@ -54,6 +62,7 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         this.dynamicMessage = builder.dynamicMessage;
         this.errCode = builder.errCode;
         this.errMessage = builder.errMessage;
+        this.failedTableCount = builder.failedTableCount;
         this.finishedCount = builder.finishedCount;
         this.httpStatusCode = builder.httpStatusCode;
         this.pageNumber = builder.pageNumber;
@@ -107,6 +116,13 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
     }
 
     /**
+     * @return failedTableCount
+     */
+    public Long getFailedTableCount() {
+        return this.failedTableCount;
+    }
+
+    /**
      * @return finishedCount
      */
     public Long getFinishedCount() {
@@ -144,7 +160,7 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
     /**
      * @return tableDetails
      */
-    public java.util.List < TableDetails> getTableDetails() {
+    public java.util.List<TableDetails> getTableDetails() {
         return this.tableDetails;
     }
 
@@ -161,16 +177,20 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         private String dynamicMessage; 
         private String errCode; 
         private String errMessage; 
+        private Long failedTableCount; 
         private Long finishedCount; 
         private Integer httpStatusCode; 
         private Integer pageNumber; 
         private String requestId; 
         private Boolean success; 
-        private java.util.List < TableDetails> tableDetails; 
+        private java.util.List<TableDetails> tableDetails; 
         private Long totalCount; 
 
         /**
-         * The number of tables that contain inconsistent data.
+         * <p>The number of tables that contain inconsistent data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder diffTableCount(Long diffTableCount) {
             this.diffTableCount = diffTableCount;
@@ -178,7 +198,10 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic error code. This parameter will be discontinued in the future.
+         * <p>The dynamic error code. This parameter will be discontinued in the future.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>403</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -186,10 +209,13 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.
-         * <p>
+         * <p>The dynamic part in the error message. This parameter is used to replace the **%s** variable in the <strong>ErrMessage</strong> parameter.</p>
+         * <blockquote>
+         * <p>For example, if the returned value of the <strong>ErrMessage</strong> parameter is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of the <strong>DynamicMessage</strong> parameter is <strong>Type</strong>, the specified <strong>Type</strong> parameter is invalid.</p>
+         * </blockquote>
          * 
-         * > For example, if the returned value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **Type**, the specified **Type** parameter is invalid.
+         * <strong>example:</strong>
+         * <p>Type</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -197,7 +223,10 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -205,7 +234,10 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Value of Input Parameter %s is not valid.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -213,7 +245,18 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of data rows that were verified.
+         * FailedTableCount.
+         */
+        public Builder failedTableCount(Long failedTableCount) {
+            this.failedTableCount = failedTableCount;
+            return this;
+        }
+
+        /**
+         * <p>The total number of data rows that were verified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder finishedCount(Long finishedCount) {
             this.finishedCount = finishedCount;
@@ -221,7 +264,10 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -229,7 +275,10 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -237,7 +286,10 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>621BB4F8-3016-4FAA-8D5A-5D3163CC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -245,7 +297,10 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -253,15 +308,18 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data verification result.
+         * <p>The details of data verification results.</p>
          */
-        public Builder tableDetails(java.util.List < TableDetails> tableDetails) {
+        public Builder tableDetails(java.util.List<TableDetails> tableDetails) {
             this.tableDetails = tableDetails;
             return this;
         }
 
         /**
-         * The total number of tables on which data verification was performed.
+         * <p>The total number of tables on which data verification was performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -274,38 +332,44 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDataCheckTableDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataCheckTableDetailsResponseBody</p>
+     */
     public static class TableDetails extends TeaModel {
-        @NameInMap("BootTime")
+        @com.aliyun.core.annotation.NameInMap("BootTime")
         private String bootTime;
 
-        @NameInMap("DiffCount")
+        @com.aliyun.core.annotation.NameInMap("DiffCount")
         private Long diffCount;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private Integer errorCode;
 
-        @NameInMap("FinishCount")
+        @com.aliyun.core.annotation.NameInMap("FinishCount")
         private Long finishCount;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("SourceDbName")
+        @com.aliyun.core.annotation.NameInMap("SourceDbName")
         private String sourceDbName;
 
-        @NameInMap("SourceTbName")
+        @com.aliyun.core.annotation.NameInMap("SourceTbName")
         private String sourceTbName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TargetDbName")
+        @com.aliyun.core.annotation.NameInMap("TargetDbName")
         private String targetDbName;
 
-        @NameInMap("TargetTbName")
+        @com.aliyun.core.annotation.NameInMap("TargetTbName")
         private String targetTbName;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private TableDetails(Builder builder) {
@@ -421,7 +485,10 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The time when data verification was performed.
+             * <p>The time when data verification was performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-01-18 11:26:59</p>
              */
             public Builder bootTime(String bootTime) {
                 this.bootTime = bootTime;
@@ -429,7 +496,10 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of data rows that contain inconsistent data.
+             * <p>The number of data rows that contain inconsistent data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder diffCount(Long diffCount) {
                 this.diffCount = diffCount;
@@ -437,13 +507,16 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * 任务运行出错时，返回报错信息的错误编码。
-             * <p>
+             * <p>The error code returned if the data verification task failed. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: The number of tables that do not contain primary keys exceeds the limit.</li>
+             * <li><strong>2</strong>: The number of data rows that contain inconsistent data exceeds 300.</li>
+             * <li><strong>3</strong>: One or more tables to be verified do not exist.</li>
+             * <li><strong>4</strong>: The SQL statements used for verifying data contain a syntax error.</li>
+             * </ul>
              * 
-             * - **1**：无主键表数量超过限制。
-             * - **2**：差异数据超过300行。
-             * - **3**：待查询的表不存在。
-             * - **4**：查询数据的SQL语法错误。
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder errorCode(Integer errorCode) {
                 this.errorCode = errorCode;
@@ -451,7 +524,10 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of data rows that were verified.
+             * <p>The number of data rows that were verified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder finishCount(Long finishCount) {
                 this.finishCount = finishCount;
@@ -459,7 +535,10 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The auto-increment primary key that is used to identify a data record in a verification result.
+             * <p>The auto-increment primary key that is used to identify the data in a verification result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>167401241974****</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -467,7 +546,10 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the source database.
+             * <p>The name of the source database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testdb</p>
              */
             public Builder sourceDbName(String sourceDbName) {
                 this.sourceDbName = sourceDbName;
@@ -475,7 +557,10 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the source table.
+             * <p>The name of the source table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>student</p>
              */
             public Builder sourceTbName(String sourceTbName) {
                 this.sourceTbName = sourceTbName;
@@ -483,13 +568,16 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the data verification result. Valid values:
-             * <p>
+             * <p>The status of data verification results. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The data verification task was complete.</li>
+             * <li><strong>2</strong>: The data verification task was being initialized.</li>
+             * <li><strong>3</strong>: The data verification task was in progress.</li>
+             * <li><strong>5</strong>: The data verification task failed.</li>
+             * </ul>
              * 
-             * *   **0**: The data verification task was complete.
-             * *   **2**: The data verification task was initialized.
-             * *   **3**: The data verification task was running.
-             * *   **5**: The data verification task failed.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -497,7 +585,10 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the destination database.
+             * <p>The name of the destination database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testdb</p>
              */
             public Builder targetDbName(String targetDbName) {
                 this.targetDbName = targetDbName;
@@ -505,7 +596,10 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the destination table.
+             * <p>The name of the destination table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>person</p>
              */
             public Builder targetTbName(String targetTbName) {
                 this.targetTbName = targetTbName;
@@ -513,7 +607,10 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of data rows.
+             * <p>The total number of data rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetApiProductsAuthoritiesRequest} extends {@link RequestModel}
  *
  * <p>SetApiProductsAuthoritiesRequest</p>
  */
 public class SetApiProductsAuthoritiesRequest extends Request {
-    @Query
-    @NameInMap("ApiProductIds")
-    @Validation(required = true)
-    private java.util.List < String > apiProductIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApiProductIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> apiProductIds;
 
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long appId;
 
-    @Query
-    @NameInMap("AuthValidTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthValidTime")
     private String authValidTime;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private SetApiProductsAuthoritiesRequest(Builder builder) {
@@ -59,7 +64,7 @@ public class SetApiProductsAuthoritiesRequest extends Request {
     /**
      * @return apiProductIds
      */
-    public java.util.List < String > getApiProductIds() {
+    public java.util.List<String> getApiProductIds() {
         return this.apiProductIds;
     }
 
@@ -92,7 +97,7 @@ public class SetApiProductsAuthoritiesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SetApiProductsAuthoritiesRequest, Builder> {
-        private java.util.List < String > apiProductIds; 
+        private java.util.List<String> apiProductIds; 
         private Long appId; 
         private String authValidTime; 
         private String description; 
@@ -112,9 +117,10 @@ public class SetApiProductsAuthoritiesRequest extends Request {
         } 
 
         /**
-         * ApiProductIds.
+         * <p>The API products.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder apiProductIds(java.util.List < String > apiProductIds) {
+        public Builder apiProductIds(java.util.List<String> apiProductIds) {
             String apiProductIdsShrink = shrink(apiProductIds, "ApiProductIds", "simple");
             this.putQueryParameter("ApiProductIds", apiProductIdsShrink);
             this.apiProductIds = apiProductIds;
@@ -122,7 +128,11 @@ public class SetApiProductsAuthoritiesRequest extends Request {
         }
 
         /**
-         * AppId.
+         * <p>The application ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111385984</p>
          */
         public Builder appId(Long appId) {
             this.putQueryParameter("AppId", appId);
@@ -131,7 +141,10 @@ public class SetApiProductsAuthoritiesRequest extends Request {
         }
 
         /**
-         * AuthValidTime.
+         * <p>授权有效时间的截止时间，请设置格林尼治标准时间(GMT), 如果为空，即为授权永久有效。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-12T03:07:37Z</p>
          */
         public Builder authValidTime(String authValidTime) {
             this.putQueryParameter("AuthValidTime", authValidTime);
@@ -140,7 +153,10 @@ public class SetApiProductsAuthoritiesRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The authorization description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);

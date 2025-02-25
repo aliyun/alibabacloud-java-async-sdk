@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSensitiveColumnsDetailResponseBody} extends {@link TeaModel}
  *
  * <p>ListSensitiveColumnsDetailResponseBody</p>
  */
 public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SensitiveColumnsDetailList")
+    @com.aliyun.core.annotation.NameInMap("SensitiveColumnsDetailList")
     private SensitiveColumnsDetailList sensitiveColumnsDetailList;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListSensitiveColumnsDetailResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +102,10 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +113,10 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7629888F-C9FB-4D16-A7D3-B443FE06FBD4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +124,7 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the sensitive field.
+         * <p>The details of the sensitive field.</p>
          */
         public Builder sensitiveColumnsDetailList(SensitiveColumnsDetailList sensitiveColumnsDetailList) {
             this.sensitiveColumnsDetailList = sensitiveColumnsDetailList;
@@ -118,11 +132,14 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * - **true**: The request was successful.
-         * - **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -135,35 +152,41 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSensitiveColumnsDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSensitiveColumnsDetailResponseBody</p>
+     */
     public static class SensitiveColumnsDetail extends TeaModel {
-        @NameInMap("ColumnDescription")
+        @com.aliyun.core.annotation.NameInMap("ColumnDescription")
         private String columnDescription;
 
-        @NameInMap("ColumnName")
+        @com.aliyun.core.annotation.NameInMap("ColumnName")
         private String columnName;
 
-        @NameInMap("ColumnType")
+        @com.aliyun.core.annotation.NameInMap("ColumnType")
         private String columnType;
 
-        @NameInMap("DbId")
+        @com.aliyun.core.annotation.NameInMap("DbId")
         private Long dbId;
 
-        @NameInMap("DbType")
+        @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;
 
-        @NameInMap("EnvType")
+        @com.aliyun.core.annotation.NameInMap("EnvType")
         private String envType;
 
-        @NameInMap("Logic")
+        @com.aliyun.core.annotation.NameInMap("Logic")
         private Boolean logic;
 
-        @NameInMap("SchemaName")
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
         private String schemaName;
 
-        @NameInMap("SearchName")
+        @com.aliyun.core.annotation.NameInMap("SearchName")
         private String searchName;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private SensitiveColumnsDetail(Builder builder) {
@@ -270,7 +293,10 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The description of the field.
+             * <p>The description of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder columnDescription(String columnDescription) {
                 this.columnDescription = columnDescription;
@@ -278,7 +304,10 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the field.
+             * <p>The name of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ColumnName_test</p>
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -286,7 +315,10 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The data type of the field.
+             * <p>The data type of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>varchar(32)</p>
              */
             public Builder columnType(String columnType) {
                 this.columnType = columnType;
@@ -294,7 +326,10 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the database.
+             * <p>The ID of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1860****</p>
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -302,7 +337,10 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the database.
+             * <p>The type of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -310,7 +348,10 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the environment to which the database belongs.
+             * <p>The type of the environment to which the database belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>product</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -318,11 +359,14 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the database is a logical database. Valid values:
-             * <p>
+             * <p>Indicates whether the database is a logical database. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The database is a logical database.</li>
+             * <li><strong>false</strong>: The database is not a logical database.</li>
+             * </ul>
              * 
-             * *   **true**: The database is a logical database.
-             * *   **false**: The database is not a logical database.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -330,7 +374,10 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SchemaName_test</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -338,7 +385,10 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name that is used to search for the database.
+             * <p>The name that is used to search for the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test@xxx:3306</p>
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;
@@ -346,7 +396,10 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -360,9 +413,15 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSensitiveColumnsDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSensitiveColumnsDetailResponseBody</p>
+     */
     public static class SensitiveColumnsDetailList extends TeaModel {
-        @NameInMap("SensitiveColumnsDetail")
-        private java.util.List < SensitiveColumnsDetail> sensitiveColumnsDetail;
+        @com.aliyun.core.annotation.NameInMap("SensitiveColumnsDetail")
+        private java.util.List<SensitiveColumnsDetail> sensitiveColumnsDetail;
 
         private SensitiveColumnsDetailList(Builder builder) {
             this.sensitiveColumnsDetail = builder.sensitiveColumnsDetail;
@@ -379,17 +438,17 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
         /**
          * @return sensitiveColumnsDetail
          */
-        public java.util.List < SensitiveColumnsDetail> getSensitiveColumnsDetail() {
+        public java.util.List<SensitiveColumnsDetail> getSensitiveColumnsDetail() {
             return this.sensitiveColumnsDetail;
         }
 
         public static final class Builder {
-            private java.util.List < SensitiveColumnsDetail> sensitiveColumnsDetail; 
+            private java.util.List<SensitiveColumnsDetail> sensitiveColumnsDetail; 
 
             /**
              * SensitiveColumnsDetail.
              */
-            public Builder sensitiveColumnsDetail(java.util.List < SensitiveColumnsDetail> sensitiveColumnsDetail) {
+            public Builder sensitiveColumnsDetail(java.util.List<SensitiveColumnsDetail> sensitiveColumnsDetail) {
                 this.sensitiveColumnsDetail = sensitiveColumnsDetail;
                 return this;
             }

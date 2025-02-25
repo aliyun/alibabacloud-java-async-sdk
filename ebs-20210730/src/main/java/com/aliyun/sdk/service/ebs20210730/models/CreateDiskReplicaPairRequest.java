@@ -1,86 +1,91 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDiskReplicaPairRequest} extends {@link RequestModel}
  *
  * <p>CreateDiskReplicaPairRequest</p>
  */
 public class CreateDiskReplicaPairRequest extends Request {
-    @Query
-    @NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
     private Long bandwidth;
 
-    @Query
-    @NameInMap("ChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DestinationDiskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationDiskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String destinationDiskId;
 
-    @Query
-    @NameInMap("DestinationRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String destinationRegionId;
 
-    @Query
-    @NameInMap("DestinationZoneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationZoneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String destinationZoneId;
 
-    @Query
-    @NameInMap("DiskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String diskId;
 
-    @Query
-    @NameInMap("PairName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PairName")
     private String pairName;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Long period;
 
-    @Query
-    @NameInMap("PeriodUnit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeriodUnit")
     private String periodUnit;
 
-    @Query
-    @NameInMap("RPO")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RPO")
     private Long RPO;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("SourceZoneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceZoneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceZoneId;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private CreateDiskReplicaPairRequest(Builder builder) {
         super(builder);
@@ -223,7 +228,7 @@ public class CreateDiskReplicaPairRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -243,7 +248,7 @@ public class CreateDiskReplicaPairRequest extends Request {
         private String regionId; 
         private String resourceGroupId; 
         private String sourceZoneId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -270,17 +275,18 @@ public class CreateDiskReplicaPairRequest extends Request {
         } 
 
         /**
-         * The bandwidth to use to asynchronously replicate data between the primary disk and secondary disk. Unit: Kbit/s. Valid values:
-         * <p>
+         * <p>The bandwidth to use to asynchronously replicate data between the primary disk and secondary disk. Unit: Kbit/s. Valid values:</p>
+         * <ul>
+         * <li>10240 : equal to 10 Mbit/s</li>
+         * <li>20480 : equal to 20 Mbit/s</li>
+         * <li>51200 : equal to 50 Mbit/s</li>
+         * <li>102400 : equal to 100 Mbit/s</li>
+         * </ul>
+         * <p>Default value: 10240.</p>
+         * <p>When you set the ChargeType parameter to POSTPAY, the Bandwidth parameter is automatically set to 0 and cannot be modified. The value 0 indicates that bandwidth is dynamically allocated based on the volume of data that is asynchronously replicated from the primary disk to the secondary disk.</p>
          * 
-         * *   10240 : equal to 10 Mbit/s
-         * *   20480 : equal to 20 Mbit/s
-         * *   51200 : equal to 50 Mbit/s
-         * *   102400 : equal to 100 Mbit/s
-         * 
-         * Default value: 10240.
-         * 
-         * When you set the ChargeType parameter to POSTPAY, the Bandwidth parameter is automatically set to 0 and cannot be modified. The value 0 indicates that bandwidth is dynamically allocated based on the volume of data that is asynchronously replicated from the primary disk to the secondary disk.
+         * <strong>example:</strong>
+         * <p>10240</p>
          */
         public Builder bandwidth(Long bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -289,13 +295,15 @@ public class CreateDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * The billing method of the replication pair. Valid values:
-         * <p>
+         * <p>The billing method of the replication pair. Valid values:</p>
+         * <ul>
+         * <li>PREPAY: subscription</li>
+         * <li>POSTPAY: pay-as-you-go</li>
+         * </ul>
+         * <p>Default value: POSTPAY.</p>
          * 
-         * *   PREPAY: subscription
-         * *   POSTPAY: pay-as-you-go
-         * 
-         * Default value: POSTPAY.
+         * <strong>example:</strong>
+         * <p>PREPAY</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -304,7 +312,10 @@ public class CreateDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -313,7 +324,10 @@ public class CreateDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * The description of the replication pair. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+         * <p>The description of the replication pair. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is description.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -322,7 +336,11 @@ public class CreateDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * The ID of the secondary disk.
+         * <p>The ID of the secondary disk.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-sa1f82p58p1tdw9g****</p>
          */
         public Builder destinationDiskId(String destinationDiskId) {
             this.putQueryParameter("DestinationDiskId", destinationDiskId);
@@ -331,7 +349,11 @@ public class CreateDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * The region ID of the secondary disk. You can call the [DescribeRegions](~~354276~~) operation to query the most recent list of regions in which async replication is supported.
+         * <p>The region ID of the secondary disk. You can call the <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> operation to query the most recent list of regions in which async replication is supported.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder destinationRegionId(String destinationRegionId) {
             this.putQueryParameter("DestinationRegionId", destinationRegionId);
@@ -340,7 +362,11 @@ public class CreateDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * The zone ID of the secondary disk.
+         * <p>The zone ID of the secondary disk.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai-e</p>
          */
         public Builder destinationZoneId(String destinationZoneId) {
             this.putQueryParameter("DestinationZoneId", destinationZoneId);
@@ -349,7 +375,11 @@ public class CreateDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * The ID of the primary disk.
+         * <p>The ID of the primary disk.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-iq80sgp4d0xbk24q****</p>
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -358,7 +388,10 @@ public class CreateDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * The name of the replication pair. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
+         * <p>The name of the replication pair. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestReplicaPair</p>
          */
         public Builder pairName(String pairName) {
             this.putQueryParameter("PairName", pairName);
@@ -367,11 +400,14 @@ public class CreateDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * The subscription duration of the replication pair. This parameter is required when the `ChargeType` parameter is set to PREPAY. The unit of the subscription duration is specified by the `PeriodUnit` parameter.
-         * <p>
+         * <p>The subscription duration of the replication pair. This parameter is required when the <code>ChargeType</code> parameter is set to PREPAY. The unit of the subscription duration is specified by the <code>PeriodUnit</code> parameter.</p>
+         * <ul>
+         * <li>Valid values when the <code>PeriodUnit</code> parameter is set to Week: 1, 2, 3, and 4.</li>
+         * <li>Valid values when the <code>PeriodUnit</code> parameter is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</li>
+         * </ul>
          * 
-         * *   Valid values when the `PeriodUnit` parameter is set to Week: 1, 2, 3, and 4.
-         * *   Valid values when the `PeriodUnit` parameter is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Long period) {
             this.putQueryParameter("Period", period);
@@ -380,13 +416,15 @@ public class CreateDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * The unit of the subscription duration of the replication pair. Valid values:
-         * <p>
+         * <p>The unit of the subscription duration of the replication pair. Valid values:</p>
+         * <ul>
+         * <li>Week.</li>
+         * <li>Month</li>
+         * </ul>
+         * <p>Default value: Month.</p>
          * 
-         * *   Week.
-         * *   Month
-         * 
-         * Default value: Month.
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -395,7 +433,10 @@ public class CreateDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * The recovery point objective (RPO) of the replication pair. Unit: seconds. Set the value to 900.
+         * <p>The recovery point objective (RPO) of the replication pair. Unit: seconds. Set the value to 900.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>900</p>
          */
         public Builder RPO(Long RPO) {
             this.putQueryParameter("RPO", RPO);
@@ -404,7 +445,11 @@ public class CreateDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * The ID of the region in which to create the replication pair.
+         * <p>The ID of the region in which to create the replication pair.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -413,7 +458,10 @@ public class CreateDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which to assign the replication group.
+         * <p>The ID of the resource group to which to assign the replication group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmvs****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -422,7 +470,11 @@ public class CreateDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * The zone ID of the primary disk.
+         * <p>The zone ID of the primary disk.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-f</p>
          */
         public Builder sourceZoneId(String sourceZoneId) {
             this.putQueryParameter("SourceZoneId", sourceZoneId);
@@ -431,9 +483,9 @@ public class CreateDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * The resource tags. You can specify up to 20 tags.
+         * <p>The resource tags. You can specify up to 20 tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -446,11 +498,17 @@ public class CreateDiskReplicaPairRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDiskReplicaPairRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDiskReplicaPairRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -485,7 +543,10 @@ public class CreateDiskReplicaPairRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `acs:` or `aliyun`.
+             * <p>The key of tag N to add to the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -493,7 +554,10 @@ public class CreateDiskReplicaPairRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with `acs:` or contain `http://` or `https://`.
+             * <p>The value of tag N to add to the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

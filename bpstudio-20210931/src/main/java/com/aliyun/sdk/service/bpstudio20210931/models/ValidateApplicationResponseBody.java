@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bpstudio20210931.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ValidateApplicationResponseBody} extends {@link TeaModel}
  *
  * <p>ValidateApplicationResponseBody</p>
  */
 public class ValidateApplicationResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ValidateApplicationResponseBody(Builder builder) {
@@ -74,7 +74,10 @@ public class ValidateApplicationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +85,10 @@ public class ValidateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The data of the application.
+         * <p>The data of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -90,7 +96,10 @@ public class ValidateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +107,10 @@ public class ValidateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A07FFDF2-78FA-1B48-9E38-88E833A93187</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

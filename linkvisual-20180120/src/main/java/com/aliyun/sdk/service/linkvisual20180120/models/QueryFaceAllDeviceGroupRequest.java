@@ -90,12 +90,12 @@ public class QueryFaceAllDeviceGroupRequest extends Request {
             super();
         } 
 
-        private Builder(QueryFaceAllDeviceGroupRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.isolationId = response.isolationId;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
+        private Builder(QueryFaceAllDeviceGroupRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.isolationId = request.isolationId;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
         } 
 
         /**

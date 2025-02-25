@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainResolveStatisticsSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainResolveStatisticsSummaryResponseBody</p>
  */
 public class DescribeDomainResolveStatisticsSummaryResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Statistics")
-    private java.util.List < Statistics> statistics;
+    @com.aliyun.core.annotation.NameInMap("Statistics")
+    private java.util.List<Statistics> statistics;
 
-    @NameInMap("TotalItems")
+    @com.aliyun.core.annotation.NameInMap("TotalItems")
     private Integer totalItems;
 
-    @NameInMap("TotalPages")
+    @com.aliyun.core.annotation.NameInMap("TotalPages")
     private Integer totalPages;
 
     private DescribeDomainResolveStatisticsSummaryResponseBody(Builder builder) {
@@ -71,7 +76,7 @@ public class DescribeDomainResolveStatisticsSummaryResponseBody extends TeaModel
     /**
      * @return statistics
      */
-    public java.util.List < Statistics> getStatistics() {
+    public java.util.List<Statistics> getStatistics() {
         return this.statistics;
     }
 
@@ -93,12 +98,15 @@ public class DescribeDomainResolveStatisticsSummaryResponseBody extends TeaModel
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < Statistics> statistics; 
+        private java.util.List<Statistics> statistics; 
         private Integer totalItems; 
         private Integer totalPages; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -106,7 +114,10 @@ public class DescribeDomainResolveStatisticsSummaryResponseBody extends TeaModel
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries per page. Maximum value: <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -114,7 +125,10 @@ public class DescribeDomainResolveStatisticsSummaryResponseBody extends TeaModel
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,15 +136,18 @@ public class DescribeDomainResolveStatisticsSummaryResponseBody extends TeaModel
         }
 
         /**
-         * The statistics.
+         * <p>The statistics.</p>
          */
-        public Builder statistics(java.util.List < Statistics> statistics) {
+        public Builder statistics(java.util.List<Statistics> statistics) {
             this.statistics = statistics;
             return this;
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalItems(Integer totalItems) {
             this.totalItems = totalItems;
@@ -138,7 +155,10 @@ public class DescribeDomainResolveStatisticsSummaryResponseBody extends TeaModel
         }
 
         /**
-         * The total number of pages returned.
+         * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -151,14 +171,20 @@ public class DescribeDomainResolveStatisticsSummaryResponseBody extends TeaModel
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainResolveStatisticsSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainResolveStatisticsSummaryResponseBody</p>
+     */
     public static class Statistics extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private String count;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("DomainType")
+        @com.aliyun.core.annotation.NameInMap("DomainType")
         private String domainType;
 
         private Statistics(Builder builder) {
@@ -202,7 +228,10 @@ public class DescribeDomainResolveStatisticsSummaryResponseBody extends TeaModel
             private String domainType; 
 
             /**
-             * The number of resolution requests.
+             * <p>The number of DNS requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>35509014</p>
              */
             public Builder count(String count) {
                 this.count = count;
@@ -210,7 +239,10 @@ public class DescribeDomainResolveStatisticsSummaryResponseBody extends TeaModel
             }
 
             /**
-             * The domain name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -218,7 +250,14 @@ public class DescribeDomainResolveStatisticsSummaryResponseBody extends TeaModel
             }
 
             /**
-             * The instance type. Valid values: PUBLIC and CACHE. PUBLIC indicates an authoritative domain name. CACHE indicates a cache-accelerated domain name.
+             * <p>The type of the domain name. Valid values:</p>
+             * <ul>
+             * <li>PUBLIC: hosted public domain name</li>
+             * <li>CACHE: cache-accelerated domain name</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CACHE</p>
              */
             public Builder domainType(String domainType) {
                 this.domainType = domainType;

@@ -1,49 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyActiveOperationTasksRequest} extends {@link RequestModel}
  *
  * <p>ModifyActiveOperationTasksRequest</p>
  */
 public class ModifyActiveOperationTasksRequest extends Request {
-    @Query
-    @NameInMap("Ids")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ids")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ids;
 
-    @Query
-    @NameInMap("ImmediateStart")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImmediateStart")
     private Integer immediateStart;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("SwitchTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SwitchTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String switchTime;
 
     private ModifyActiveOperationTasksRequest(Builder builder) {
@@ -154,10 +159,14 @@ public class ModifyActiveOperationTasksRequest extends Request {
         } 
 
         /**
-         * The O\&M task ID. Separate multiple IDs with commas (,).
-         * <p>
+         * <p>The O&amp;M task ID. Separate multiple IDs with commas (,).</p>
+         * <blockquote>
+         * <p> You can call the DescribeActiveOperationTask operation to query the O&amp;M task ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the DescribeActiveOperationTask operation to query the O\&M task ID.
+         * <strong>example:</strong>
+         * <p>11111,22222</p>
          */
         public Builder ids(String ids) {
             this.putQueryParameter("Ids", ids);
@@ -166,10 +175,22 @@ public class ModifyActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * Specifies whether to immediately start scheduling. The value 0 indicates that scheduling is not immediately started. This is the default value. The value 1 indicates that scheduling is immediately started. If you set this parameter to 0, SwitchTime takes effect. If you set this parameter to 1, SwitchTimer does not take effect. In this case, the start time of the task is set to the current time, and the system determines the switching time based on the start time.
-         * <p>
+         * <p>Specifies whether to immediately start scheduling. Valid values:</p>
+         * <ul>
+         * <li>0 (default): no</li>
+         * <li>1: yes</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If you set this parameter to 0, the SwitchTime parameter takes effect. If you set this parameter to 1, the SwitchTime parameter does not take effect. In this case, the start time of the task is the current time, and the system determines the switching time based on the start time.</p>
+         * </li>
+         * <li><p>Immediate scheduling specifies that the task enters the preparing state instead of being executed immediately. After the preparation is complete, the switchover is performed. You can call the DescribeActiveOperationTasks to query the preparation time that is returned for the PrepareInterval parameter.</p>
+         * </li>
+         * </ul>
          * 
-         * >  Immediate scheduling indicates that the task enters the preparing state instead of the immediate switchover. After the preparation is complete, the switchover is performed. You can call the DescribeActiveOperationTasks operation and obtain the preparation time from the value of the PrepareInterval response parameter.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder immediateStart(Integer immediateStart) {
             this.putQueryParameter("ImmediateStart", immediateStart);
@@ -223,10 +244,14 @@ public class ModifyActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * The scheduled switching time for the task. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         * <p>
+         * <p>The scheduled switching time that you want to specify. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p> The time that is specified by the SwitchTime parameter cannot be later than the time that is specified by the Deadline parameter. You can call the DescribeActiveOperationTasks operation to query the value of the Deadline parameter in the response.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The time that you specify cannot be later than the deadline of the O\&M task. You can call the DescribeActiveOperationTasks operation and obtain the deadline of the O\&M task from the value of the Deadline response parameter.
+         * <strong>example:</strong>
+         * <p>2019-10-17T18:50:00Z</p>
          */
         public Builder switchTime(String switchTime) {
             this.putQueryParameter("SwitchTime", switchTime);

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySwimmingLaneByIdResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySwimmingLaneByIdResponseBody</p>
  */
 public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QuerySwimmingLaneByIdResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details of the data.
+         * <p>The details of the data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{id:102,name:&quot;test&quot;}</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -94,7 +102,10 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +113,10 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request was successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +124,10 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69AD2AA7-DB47-449B-941B-B14409DF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +135,14 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -135,35 +155,41 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuerySwimmingLaneByIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySwimmingLaneByIdResponseBody</p>
+     */
     public static class RestItems extends TeaModel {
-        @NameInMap("cond")
+        @com.aliyun.core.annotation.NameInMap("cond")
         private String cond;
 
-        @NameInMap("datum")
+        @com.aliyun.core.annotation.NameInMap("datum")
         private String datum;
 
-        @NameInMap("divisor")
+        @com.aliyun.core.annotation.NameInMap("divisor")
         private Integer divisor;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("nameList")
-        private java.util.List < String > nameList;
+        @com.aliyun.core.annotation.NameInMap("nameList")
+        private java.util.List<String> nameList;
 
-        @NameInMap("operator")
+        @com.aliyun.core.annotation.NameInMap("operator")
         private String operator;
 
-        @NameInMap("rate")
+        @com.aliyun.core.annotation.NameInMap("rate")
         private Integer rate;
 
-        @NameInMap("remainder")
+        @com.aliyun.core.annotation.NameInMap("remainder")
         private Integer remainder;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private RestItems(Builder builder) {
@@ -218,7 +244,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         /**
          * @return nameList
          */
-        public java.util.List < String > getNameList() {
+        public java.util.List<String> getNameList() {
             return this.nameList;
         }
 
@@ -262,7 +288,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             private String datum; 
             private Integer divisor; 
             private String name; 
-            private java.util.List < String > nameList; 
+            private java.util.List<String> nameList; 
             private String operator; 
             private Integer rate; 
             private Integer remainder; 
@@ -304,7 +330,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             /**
              * nameList.
              */
-            public Builder nameList(java.util.List < String > nameList) {
+            public Builder nameList(java.util.List<String> nameList) {
                 this.nameList = nameList;
                 return this;
             }
@@ -356,18 +382,24 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySwimmingLaneByIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySwimmingLaneByIdResponseBody</p>
+     */
     public static class EntryRules extends TeaModel {
-        @NameInMap("condition")
+        @com.aliyun.core.annotation.NameInMap("condition")
         private String condition;
 
-        @NameInMap("path")
+        @com.aliyun.core.annotation.NameInMap("path")
         private String path;
 
-        @NameInMap("paths")
-        private java.util.List < String > paths;
+        @com.aliyun.core.annotation.NameInMap("paths")
+        private java.util.List<String> paths;
 
-        @NameInMap("restItems")
-        private java.util.List < RestItems> restItems;
+        @com.aliyun.core.annotation.NameInMap("restItems")
+        private java.util.List<RestItems> restItems;
 
         private EntryRules(Builder builder) {
             this.condition = builder.condition;
@@ -401,22 +433,22 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         /**
          * @return paths
          */
-        public java.util.List < String > getPaths() {
+        public java.util.List<String> getPaths() {
             return this.paths;
         }
 
         /**
          * @return restItems
          */
-        public java.util.List < RestItems> getRestItems() {
+        public java.util.List<RestItems> getRestItems() {
             return this.restItems;
         }
 
         public static final class Builder {
             private String condition; 
             private String path; 
-            private java.util.List < String > paths; 
-            private java.util.List < RestItems> restItems; 
+            private java.util.List<String> paths; 
+            private java.util.List<RestItems> restItems; 
 
             /**
              * condition.
@@ -437,7 +469,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             /**
              * paths.
              */
-            public Builder paths(java.util.List < String > paths) {
+            public Builder paths(java.util.List<String> paths) {
                 this.paths = paths;
                 return this;
             }
@@ -445,7 +477,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             /**
              * restItems.
              */
-            public Builder restItems(java.util.List < RestItems> restItems) {
+            public Builder restItems(java.util.List<RestItems> restItems) {
                 this.restItems = restItems;
                 return this;
             }
@@ -457,47 +489,57 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySwimmingLaneByIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySwimmingLaneByIdResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("enable")
+        @com.aliyun.core.annotation.NameInMap("PathIndependentPercentageEnable")
+        private Boolean pathIndependentPercentageEnable;
+
+        @com.aliyun.core.annotation.NameInMap("enable")
         private Boolean enable;
 
-        @NameInMap("enableRules")
+        @com.aliyun.core.annotation.NameInMap("enableRules")
         private Boolean enableRules;
 
-        @NameInMap("entryRule")
+        @com.aliyun.core.annotation.NameInMap("entryRule")
         private String entryRule;
 
-        @NameInMap("entryRules")
-        private java.util.List < EntryRules> entryRules;
+        @com.aliyun.core.annotation.NameInMap("entryRules")
+        private java.util.List<EntryRules> entryRules;
 
-        @NameInMap("gatewaySwimmingLaneRouteJson")
+        @com.aliyun.core.annotation.NameInMap("gatewaySwimmingLaneRouteJson")
         private String gatewaySwimmingLaneRouteJson;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private String gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private String gmtModified;
 
-        @NameInMap("groupId")
+        @com.aliyun.core.annotation.NameInMap("groupId")
         private Long groupId;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("regionId")
+        @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("tag")
+        @com.aliyun.core.annotation.NameInMap("tag")
         private String tag;
 
         private Data(Builder builder) {
+            this.pathIndependentPercentageEnable = builder.pathIndependentPercentageEnable;
             this.enable = builder.enable;
             this.enableRules = builder.enableRules;
             this.entryRule = builder.entryRule;
@@ -519,6 +561,13 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return pathIndependentPercentageEnable
+         */
+        public Boolean getPathIndependentPercentageEnable() {
+            return this.pathIndependentPercentageEnable;
         }
 
         /**
@@ -545,7 +594,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         /**
          * @return entryRules
          */
-        public java.util.List < EntryRules> getEntryRules() {
+        public java.util.List<EntryRules> getEntryRules() {
             return this.entryRules;
         }
 
@@ -613,10 +662,11 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean pathIndependentPercentageEnable; 
             private Boolean enable; 
             private Boolean enableRules; 
             private String entryRule; 
-            private java.util.List < EntryRules> entryRules; 
+            private java.util.List<EntryRules> entryRules; 
             private String gatewaySwimmingLaneRouteJson; 
             private String gmtCreate; 
             private String gmtModified; 
@@ -626,6 +676,14 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             private String regionId; 
             private Integer status; 
             private String tag; 
+
+            /**
+             * PathIndependentPercentageEnable.
+             */
+            public Builder pathIndependentPercentageEnable(Boolean pathIndependentPercentageEnable) {
+                this.pathIndependentPercentageEnable = pathIndependentPercentageEnable;
+                return this;
+            }
 
             /**
              * enable.
@@ -654,7 +712,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             /**
              * entryRules.
              */
-            public Builder entryRules(java.util.List < EntryRules> entryRules) {
+            public Builder entryRules(java.util.List<EntryRules> entryRules) {
                 this.entryRules = entryRules;
                 return this;
             }

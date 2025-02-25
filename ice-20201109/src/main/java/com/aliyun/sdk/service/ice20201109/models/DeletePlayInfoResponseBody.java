@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeletePlayInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DeletePlayInfoResponseBody</p>
  */
 public class DeletePlayInfoResponseBody extends TeaModel {
-    @NameInMap("ForbiddenList")
-    private java.util.List < String > forbiddenList;
+    @com.aliyun.core.annotation.NameInMap("ForbiddenList")
+    private java.util.List<String> forbiddenList;
 
-    @NameInMap("IgnoredList")
-    private java.util.List < String > ignoredList;
+    @com.aliyun.core.annotation.NameInMap("IgnoredList")
+    private java.util.List<String> ignoredList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeletePlayInfoResponseBody(Builder builder) {
@@ -38,14 +43,14 @@ public class DeletePlayInfoResponseBody extends TeaModel {
     /**
      * @return forbiddenList
      */
-    public java.util.List < String > getForbiddenList() {
+    public java.util.List<String> getForbiddenList() {
         return this.forbiddenList;
     }
 
     /**
      * @return ignoredList
      */
-    public java.util.List < String > getIgnoredList() {
+    public java.util.List<String> getIgnoredList() {
         return this.ignoredList;
     }
 
@@ -57,28 +62,31 @@ public class DeletePlayInfoResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > forbiddenList; 
-        private java.util.List < String > ignoredList; 
+        private java.util.List<String> forbiddenList; 
+        private java.util.List<String> ignoredList; 
         private String requestId; 
 
         /**
-         * ForbiddenList.
+         * <p>The URLs of the media streams that cannot be deleted. Generally, media streams cannot be deleted if you do not have the required permissions.</p>
          */
-        public Builder forbiddenList(java.util.List < String > forbiddenList) {
+        public Builder forbiddenList(java.util.List<String> forbiddenList) {
             this.forbiddenList = forbiddenList;
             return this;
         }
 
         /**
-         * IgnoredList.
+         * <p>The URLs of ignored media streams. An error occurred while obtaining such media assets because the IDs or URLs of the media assets do not exist.</p>
          */
-        public Builder ignoredList(java.util.List < String > ignoredList) {
+        public Builder ignoredList(java.util.List<String> ignoredList) {
             this.ignoredList = ignoredList;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

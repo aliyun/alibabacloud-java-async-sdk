@@ -1,54 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiagnosisSQLInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDiagnosisSQLInfoResponseBody</p>
  */
 public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
-    @NameInMap("Database")
+    @com.aliyun.core.annotation.NameInMap("Database")
     private String database;
 
-    @NameInMap("Duration")
+    @com.aliyun.core.annotation.NameInMap("Duration")
     private Integer duration;
 
-    @NameInMap("MaxOutputRows")
+    @com.aliyun.core.annotation.NameInMap("MaxOutputRows")
     private String maxOutputRows;
 
-    @NameInMap("QueryID")
+    @com.aliyun.core.annotation.NameInMap("QueryID")
     private String queryID;
 
-    @NameInMap("QueryPlan")
+    @com.aliyun.core.annotation.NameInMap("QueryPlan")
     private String queryPlan;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SQLStmt")
+    @com.aliyun.core.annotation.NameInMap("SQLStmt")
     private String SQLStmt;
 
-    @NameInMap("SessionID")
+    @com.aliyun.core.annotation.NameInMap("SessionID")
     private String sessionID;
 
-    @NameInMap("SortedMetrics")
+    @com.aliyun.core.annotation.NameInMap("SortedMetrics")
     private String sortedMetrics;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("TextPlan")
+    @com.aliyun.core.annotation.NameInMap("TextPlan")
     private String textPlan;
 
-    @NameInMap("User")
+    @com.aliyun.core.annotation.NameInMap("User")
     private String user;
 
     private DescribeDiagnosisSQLInfoResponseBody(Builder builder) {
@@ -182,7 +187,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         private String user; 
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adbtest</p>
          */
         public Builder database(String database) {
             this.database = database;
@@ -190,7 +198,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The execution duration of the query. Unit: seconds.
+         * <p>The execution duration of the query. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder duration(Integer duration) {
             this.duration = duration;
@@ -198,7 +209,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of output rows.
+         * <p>The maximum number of output rows.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxOutputRows(String maxOutputRows) {
             this.maxOutputRows = maxOutputRows;
@@ -206,7 +220,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The query ID.
+         * <p>The query ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>71403480878****</p>
          */
         public Builder queryID(String queryID) {
             this.queryID = queryID;
@@ -214,7 +231,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the operator.
+         * <p>The information about the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;children&quot;:********&quot;startTime&quot;:1660719602199}</p>
          */
         public Builder queryPlan(String queryPlan) {
             this.queryPlan = queryPlan;
@@ -222,7 +242,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>425AAA6A-63E0-1929-A1CE-3D9036CBC463</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,7 +253,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The SQL statement.
+         * <p>The SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select n_live_tup, n_live_tup + n_dead_tup, pg_relation_size(table_name), last_vacuum from pg_stat_user_tables where relid = table_name::regclass</p>
          */
         public Builder SQLStmt(String SQLStmt) {
             this.SQLStmt = SQLStmt;
@@ -238,7 +264,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the session that contains the query.
+         * <p>The ID of the session that contains the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>658****</p>
          */
         public Builder sessionID(String sessionID) {
             this.sessionID = sessionID;
@@ -246,7 +275,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The sequence of metrics.
+         * <p>The sequence of metrics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;costSort&quot;:******:&quot;Seq Scan-9&quot;,&quot;value&quot;:0.0}]}</p>
          */
         public Builder sortedMetrics(String sortedMetrics) {
             this.sortedMetrics = sortedMetrics;
@@ -254,7 +286,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The start time of the query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>The start time of the query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1660719602199</p>
          */
         public Builder startTime(Long startTime) {
             this.startTime = startTime;
@@ -262,11 +297,14 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The execution state of the query. Valid values:
-         * <p>
+         * <p>The execution state of the query. Valid values:</p>
+         * <ul>
+         * <li><strong>running</strong></li>
+         * <li><strong>finished</strong></li>
+         * </ul>
          * 
-         * *   **running**
-         * *   **finished**
+         * <strong>example:</strong>
+         * <p>finished</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -274,7 +312,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the execution plan.
+         * <p>The information about the execution plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder textPlan(String textPlan) {
             this.textPlan = textPlan;
@@ -282,7 +323,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The username.
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adbpguser</p>
          */
         public Builder user(String user) {
             this.user = user;

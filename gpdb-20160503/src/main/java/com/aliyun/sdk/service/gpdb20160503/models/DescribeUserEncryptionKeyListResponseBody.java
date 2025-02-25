@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserEncryptionKeyListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUserEncryptionKeyListResponseBody</p>
  */
 public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
-    @NameInMap("KmsKeys")
-    private java.util.List < KmsKeys> kmsKeys;
+    @com.aliyun.core.annotation.NameInMap("KmsKeys")
+    private java.util.List<KmsKeys> kmsKeys;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeUserEncryptionKeyListResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
     /**
      * @return kmsKeys
      */
-    public java.util.List < KmsKeys> getKmsKeys() {
+    public java.util.List<KmsKeys> getKmsKeys() {
         return this.kmsKeys;
     }
 
@@ -46,19 +51,22 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < KmsKeys> kmsKeys; 
+        private java.util.List<KmsKeys> kmsKeys; 
         private String requestId; 
 
         /**
-         * Details about the KMS keys.
+         * <p>Details about the KMS keys.</p>
          */
-        public Builder kmsKeys(java.util.List < KmsKeys> kmsKeys) {
+        public Builder kmsKeys(java.util.List<KmsKeys> kmsKeys) {
             this.kmsKeys = kmsKeys;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,8 +79,14 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUserEncryptionKeyListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUserEncryptionKeyListResponseBody</p>
+     */
     public static class KmsKeys extends TeaModel {
-        @NameInMap("KeyId")
+        @com.aliyun.core.annotation.NameInMap("KeyId")
         private String keyId;
 
         private KmsKeys(Builder builder) {
@@ -98,7 +112,10 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
             private String keyId; 
 
             /**
-             * The ID of the KMS key.
+             * <p>The ID of the KMS key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0b8b1825-fd99-418f-875e-e4dec1dd8715</p>
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;

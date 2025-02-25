@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstallCloudAssistantRequest} extends {@link RequestModel}
  *
  * <p>InstallCloudAssistantRequest</p>
  */
 public class InstallCloudAssistantRequest extends Request {
-    @Query
-    @NameInMap("InstanceIds")
-    @Validation(required = true)
-    private java.util.List < String > instanceIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> instanceIds;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private InstallCloudAssistantRequest(Builder builder) {
@@ -44,7 +49,7 @@ public class InstallCloudAssistantRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
@@ -56,7 +61,7 @@ public class InstallCloudAssistantRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<InstallCloudAssistantRequest, Builder> {
-        private java.util.List < String > instanceIds; 
+        private java.util.List<String> instanceIds; 
         private String regionId; 
 
         private Builder() {
@@ -70,9 +75,10 @@ public class InstallCloudAssistantRequest extends Request {
         } 
 
         /**
-         * The IDs of the simple application servers.
+         * <p>The IDs of the simple application servers.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
             this.putQueryParameter("InstanceIds", instanceIdsShrink);
             this.instanceIds = instanceIds;
@@ -80,7 +86,11 @@ public class InstallCloudAssistantRequest extends Request {
         }
 
         /**
-         * The region ID of the simple application servers. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
+         * <p>The region ID of the simple application servers. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -1,50 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Nodepool} extends {@link TeaModel}
  *
  * <p>Nodepool</p>
  */
 public class Nodepool extends TeaModel {
-    @NameInMap("auto_scaling")
+    @com.aliyun.core.annotation.NameInMap("auto_scaling")
     private AutoScaling autoScaling;
 
-    @NameInMap("count")
+    @com.aliyun.core.annotation.NameInMap("count")
     @Deprecated
     private Long count;
 
-    @NameInMap("interconnect_config")
+    @com.aliyun.core.annotation.NameInMap("interconnect_config")
     @Deprecated
     private InterconnectConfig interconnectConfig;
 
-    @NameInMap("interconnect_mode")
+    @com.aliyun.core.annotation.NameInMap("interconnect_mode")
     private String interconnectMode;
 
-    @NameInMap("kubernetes_config")
+    @com.aliyun.core.annotation.NameInMap("kubernetes_config")
     private KubernetesConfig kubernetesConfig;
 
-    @NameInMap("management")
+    @com.aliyun.core.annotation.NameInMap("management")
     private Management management;
 
-    @NameInMap("max_nodes")
+    @com.aliyun.core.annotation.NameInMap("max_nodes")
     private Long maxNodes;
 
-    @NameInMap("node_config")
+    @com.aliyun.core.annotation.NameInMap("node_config")
     private NodeConfig nodeConfig;
 
-    @NameInMap("nodepool_info")
+    @com.aliyun.core.annotation.NameInMap("nodepool_info")
     private NodepoolInfo nodepoolInfo;
 
-    @NameInMap("scaling_group")
+    @com.aliyun.core.annotation.NameInMap("scaling_group")
     private ScalingGroup scalingGroup;
 
-    @NameInMap("tee_config")
+    @com.aliyun.core.annotation.NameInMap("tee_config")
     private TeeConfig teeConfig;
 
     private Nodepool(Builder builder) {
@@ -253,32 +258,38 @@ public class Nodepool extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link Nodepool} extends {@link TeaModel}
+     *
+     * <p>Nodepool</p>
+     */
     public static class AutoScaling extends TeaModel {
-        @NameInMap("eip_bandwidth")
+        @com.aliyun.core.annotation.NameInMap("eip_bandwidth")
         @Deprecated
         private Long eipBandwidth;
 
-        @NameInMap("eip_internet_charge_type")
+        @com.aliyun.core.annotation.NameInMap("eip_internet_charge_type")
         @Deprecated
         private String eipInternetChargeType;
 
-        @NameInMap("enable")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("enable")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Boolean enable;
 
-        @NameInMap("is_bond_eip")
+        @com.aliyun.core.annotation.NameInMap("is_bond_eip")
         @Deprecated
         private Boolean isBondEip;
 
-        @NameInMap("max_instances")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("max_instances")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long maxInstances;
 
-        @NameInMap("min_instances")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("min_instances")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long minInstances;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private AutoScaling(Builder builder) {
@@ -374,7 +385,10 @@ public class Nodepool extends TeaModel {
             }
 
             /**
-             * enable.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -390,7 +404,10 @@ public class Nodepool extends TeaModel {
             }
 
             /**
-             * max_instances.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxInstances(Long maxInstances) {
                 this.maxInstances = maxInstances;
@@ -398,7 +415,10 @@ public class Nodepool extends TeaModel {
             }
 
             /**
-             * min_instances.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder minInstances(Long minInstances) {
                 this.minInstances = minInstances;
@@ -420,24 +440,30 @@ public class Nodepool extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Nodepool} extends {@link TeaModel}
+     *
+     * <p>Nodepool</p>
+     */
     public static class InterconnectConfig extends TeaModel {
-        @NameInMap("bandwidth")
+        @com.aliyun.core.annotation.NameInMap("bandwidth")
         @Deprecated
         private Long bandwidth;
 
-        @NameInMap("ccn_id")
+        @com.aliyun.core.annotation.NameInMap("ccn_id")
         @Deprecated
         private String ccnId;
 
-        @NameInMap("ccn_region_id")
+        @com.aliyun.core.annotation.NameInMap("ccn_region_id")
         @Deprecated
         private String ccnRegionId;
 
-        @NameInMap("cen_id")
+        @com.aliyun.core.annotation.NameInMap("cen_id")
         @Deprecated
         private String cenId;
 
-        @NameInMap("improved_period")
+        @com.aliyun.core.annotation.NameInMap("improved_period")
         @Deprecated
         private String improvedPeriod;
 
@@ -546,31 +572,37 @@ public class Nodepool extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Nodepool} extends {@link TeaModel}
+     *
+     * <p>Nodepool</p>
+     */
     public static class KubernetesConfig extends TeaModel {
-        @NameInMap("cms_enabled")
+        @com.aliyun.core.annotation.NameInMap("cms_enabled")
         private Boolean cmsEnabled;
 
-        @NameInMap("cpu_policy")
+        @com.aliyun.core.annotation.NameInMap("cpu_policy")
         private String cpuPolicy;
 
-        @NameInMap("labels")
-        private java.util.List < Tag > labels;
+        @com.aliyun.core.annotation.NameInMap("labels")
+        private java.util.List<Tag> labels;
 
-        @NameInMap("node_name_mode")
+        @com.aliyun.core.annotation.NameInMap("node_name_mode")
         private String nodeNameMode;
 
-        @NameInMap("runtime")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("runtime")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String runtime;
 
-        @NameInMap("runtime_version")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("runtime_version")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String runtimeVersion;
 
-        @NameInMap("taints")
-        private java.util.List < Taint > taints;
+        @com.aliyun.core.annotation.NameInMap("taints")
+        private java.util.List<Taint> taints;
 
-        @NameInMap("user_data")
+        @com.aliyun.core.annotation.NameInMap("user_data")
         private String userData;
 
         private KubernetesConfig(Builder builder) {
@@ -609,7 +641,7 @@ public class Nodepool extends TeaModel {
         /**
          * @return labels
          */
-        public java.util.List < Tag > getLabels() {
+        public java.util.List<Tag> getLabels() {
             return this.labels;
         }
 
@@ -637,7 +669,7 @@ public class Nodepool extends TeaModel {
         /**
          * @return taints
          */
-        public java.util.List < Taint > getTaints() {
+        public java.util.List<Taint> getTaints() {
             return this.taints;
         }
 
@@ -651,11 +683,11 @@ public class Nodepool extends TeaModel {
         public static final class Builder {
             private Boolean cmsEnabled; 
             private String cpuPolicy; 
-            private java.util.List < Tag > labels; 
+            private java.util.List<Tag> labels; 
             private String nodeNameMode; 
             private String runtime; 
             private String runtimeVersion; 
-            private java.util.List < Taint > taints; 
+            private java.util.List<Taint> taints; 
             private String userData; 
 
             /**
@@ -677,7 +709,7 @@ public class Nodepool extends TeaModel {
             /**
              * labels.
              */
-            public Builder labels(java.util.List < Tag > labels) {
+            public Builder labels(java.util.List<Tag> labels) {
                 this.labels = labels;
                 return this;
             }
@@ -691,7 +723,10 @@ public class Nodepool extends TeaModel {
             }
 
             /**
-             * runtime.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>docker</p>
              */
             public Builder runtime(String runtime) {
                 this.runtime = runtime;
@@ -699,7 +734,10 @@ public class Nodepool extends TeaModel {
             }
 
             /**
-             * runtime_version.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>19.03.5</p>
              */
             public Builder runtimeVersion(String runtimeVersion) {
                 this.runtimeVersion = runtimeVersion;
@@ -709,7 +747,7 @@ public class Nodepool extends TeaModel {
             /**
              * taints.
              */
-            public Builder taints(java.util.List < Taint > taints) {
+            public Builder taints(java.util.List<Taint> taints) {
                 this.taints = taints;
                 return this;
             }
@@ -729,8 +767,14 @@ public class Nodepool extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Nodepool} extends {@link TeaModel}
+     *
+     * <p>Nodepool</p>
+     */
     public static class AutoRepairPolicy extends TeaModel {
-        @NameInMap("restart_node")
+        @com.aliyun.core.annotation.NameInMap("restart_node")
         private Boolean restartNode;
 
         private AutoRepairPolicy(Builder builder) {
@@ -770,8 +814,14 @@ public class Nodepool extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Nodepool} extends {@link TeaModel}
+     *
+     * <p>Nodepool</p>
+     */
     public static class AutoUpgradePolicy extends TeaModel {
-        @NameInMap("auto_upgrade_kubelet")
+        @com.aliyun.core.annotation.NameInMap("auto_upgrade_kubelet")
         private Boolean autoUpgradeKubelet;
 
         private AutoUpgradePolicy(Builder builder) {
@@ -811,11 +861,17 @@ public class Nodepool extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Nodepool} extends {@link TeaModel}
+     *
+     * <p>Nodepool</p>
+     */
     public static class AutoVulFixPolicy extends TeaModel {
-        @NameInMap("restart_node")
+        @com.aliyun.core.annotation.NameInMap("restart_node")
         private Boolean restartNode;
 
-        @NameInMap("vul_level")
+        @com.aliyun.core.annotation.NameInMap("vul_level")
         private String vulLevel;
 
         private AutoVulFixPolicy(Builder builder) {
@@ -872,17 +928,23 @@ public class Nodepool extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Nodepool} extends {@link TeaModel}
+     *
+     * <p>Nodepool</p>
+     */
     public static class UpgradeConfig extends TeaModel {
-        @NameInMap("auto_upgrade")
+        @com.aliyun.core.annotation.NameInMap("auto_upgrade")
         private Boolean autoUpgrade;
 
-        @NameInMap("max_unavailable")
+        @com.aliyun.core.annotation.NameInMap("max_unavailable")
         private Long maxUnavailable;
 
-        @NameInMap("surge")
+        @com.aliyun.core.annotation.NameInMap("surge")
         private Long surge;
 
-        @NameInMap("surge_percentage")
+        @com.aliyun.core.annotation.NameInMap("surge_percentage")
         private Long surgePercentage;
 
         private UpgradeConfig(Builder builder) {
@@ -973,29 +1035,35 @@ public class Nodepool extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Nodepool} extends {@link TeaModel}
+     *
+     * <p>Nodepool</p>
+     */
     public static class Management extends TeaModel {
-        @NameInMap("auto_repair")
+        @com.aliyun.core.annotation.NameInMap("auto_repair")
         private Boolean autoRepair;
 
-        @NameInMap("auto_repair_policy")
+        @com.aliyun.core.annotation.NameInMap("auto_repair_policy")
         private AutoRepairPolicy autoRepairPolicy;
 
-        @NameInMap("auto_upgrade")
+        @com.aliyun.core.annotation.NameInMap("auto_upgrade")
         private Boolean autoUpgrade;
 
-        @NameInMap("auto_upgrade_policy")
+        @com.aliyun.core.annotation.NameInMap("auto_upgrade_policy")
         private AutoUpgradePolicy autoUpgradePolicy;
 
-        @NameInMap("auto_vul_fix")
+        @com.aliyun.core.annotation.NameInMap("auto_vul_fix")
         private Boolean autoVulFix;
 
-        @NameInMap("auto_vul_fix_policy")
+        @com.aliyun.core.annotation.NameInMap("auto_vul_fix_policy")
         private AutoVulFixPolicy autoVulFixPolicy;
 
-        @NameInMap("enable")
+        @com.aliyun.core.annotation.NameInMap("enable")
         private Boolean enable;
 
-        @NameInMap("upgrade_config")
+        @com.aliyun.core.annotation.NameInMap("upgrade_config")
         @Deprecated
         private UpgradeConfig upgradeConfig;
 
@@ -1133,7 +1201,10 @@ public class Nodepool extends TeaModel {
             }
 
             /**
-             * enable.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -1155,8 +1226,14 @@ public class Nodepool extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Nodepool} extends {@link TeaModel}
+     *
+     * <p>Nodepool</p>
+     */
     public static class NodeConfig extends TeaModel {
-        @NameInMap("kubelet_configuration")
+        @com.aliyun.core.annotation.NameInMap("kubelet_configuration")
         private KubeletConfig kubeletConfiguration;
 
         private NodeConfig(Builder builder) {
@@ -1196,15 +1273,21 @@ public class Nodepool extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Nodepool} extends {@link TeaModel}
+     *
+     * <p>Nodepool</p>
+     */
     public static class NodepoolInfo extends TeaModel {
-        @NameInMap("name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
-        @NameInMap("resource_group_id")
+        @com.aliyun.core.annotation.NameInMap("resource_group_id")
         private String resourceGroupId;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private NodepoolInfo(Builder builder) {
@@ -1248,7 +1331,10 @@ public class Nodepool extends TeaModel {
             private String type; 
 
             /**
-             * name.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>np-test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1278,11 +1364,17 @@ public class Nodepool extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Nodepool} extends {@link TeaModel}
+     *
+     * <p>Nodepool</p>
+     */
     public static class PrivatePoolOptions extends TeaModel {
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("match_criteria")
+        @com.aliyun.core.annotation.NameInMap("match_criteria")
         private String matchCriteria;
 
         private PrivatePoolOptions(Builder builder) {
@@ -1339,11 +1431,17 @@ public class Nodepool extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Nodepool} extends {@link TeaModel}
+     *
+     * <p>Nodepool</p>
+     */
     public static class SpotPriceLimit extends TeaModel {
-        @NameInMap("instance_type")
+        @com.aliyun.core.annotation.NameInMap("instance_type")
         private String instanceType;
 
-        @NameInMap("price_limit")
+        @com.aliyun.core.annotation.NameInMap("price_limit")
         private String priceLimit;
 
         private SpotPriceLimit(Builder builder) {
@@ -1400,11 +1498,17 @@ public class Nodepool extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Nodepool} extends {@link TeaModel}
+     *
+     * <p>Nodepool</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("key")
+        @com.aliyun.core.annotation.NameInMap("key")
         private String key;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private Tags(Builder builder) {
@@ -1461,133 +1565,142 @@ public class Nodepool extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Nodepool} extends {@link TeaModel}
+     *
+     * <p>Nodepool</p>
+     */
     public static class ScalingGroup extends TeaModel {
-        @NameInMap("auto_renew")
+        @com.aliyun.core.annotation.NameInMap("auto_renew")
         private Boolean autoRenew;
 
-        @NameInMap("auto_renew_period")
+        @com.aliyun.core.annotation.NameInMap("auto_renew_period")
         private Long autoRenewPeriod;
 
-        @NameInMap("compensate_with_on_demand")
+        @com.aliyun.core.annotation.NameInMap("compensate_with_on_demand")
         private Boolean compensateWithOnDemand;
 
-        @NameInMap("data_disks")
-        private java.util.List < DataDisk > dataDisks;
+        @com.aliyun.core.annotation.NameInMap("data_disks")
+        private java.util.List<DataDisk> dataDisks;
 
-        @NameInMap("deploymentset_id")
+        @com.aliyun.core.annotation.NameInMap("deploymentset_id")
         private String deploymentsetId;
 
-        @NameInMap("desired_size")
+        @com.aliyun.core.annotation.NameInMap("desired_size")
         private Long desiredSize;
 
-        @NameInMap("image_id")
+        @com.aliyun.core.annotation.NameInMap("image_id")
         private String imageId;
 
-        @NameInMap("image_type")
+        @com.aliyun.core.annotation.NameInMap("image_type")
         private String imageType;
 
-        @NameInMap("instance_charge_type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("instance_charge_type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String instanceChargeType;
 
-        @NameInMap("instance_types")
-        @Validation(required = true)
-        private java.util.List < String > instanceTypes;
+        @com.aliyun.core.annotation.NameInMap("instance_types")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List<String> instanceTypes;
 
-        @NameInMap("internet_charge_type")
+        @com.aliyun.core.annotation.NameInMap("internet_charge_type")
         private String internetChargeType;
 
-        @NameInMap("internet_max_bandwidth_out")
+        @com.aliyun.core.annotation.NameInMap("internet_max_bandwidth_out")
         private Long internetMaxBandwidthOut;
 
-        @NameInMap("key_pair")
+        @com.aliyun.core.annotation.NameInMap("key_pair")
         private String keyPair;
 
-        @NameInMap("login_as_non_root")
+        @com.aliyun.core.annotation.NameInMap("login_as_non_root")
         private Boolean loginAsNonRoot;
 
-        @NameInMap("login_password")
+        @com.aliyun.core.annotation.NameInMap("login_password")
         private String loginPassword;
 
-        @NameInMap("multi_az_policy")
+        @com.aliyun.core.annotation.NameInMap("multi_az_policy")
         private String multiAzPolicy;
 
-        @NameInMap("on_demand_base_capacity")
+        @com.aliyun.core.annotation.NameInMap("on_demand_base_capacity")
         private Long onDemandBaseCapacity;
 
-        @NameInMap("on_demand_percentage_above_base_capacity")
+        @com.aliyun.core.annotation.NameInMap("on_demand_percentage_above_base_capacity")
         private Long onDemandPercentageAboveBaseCapacity;
 
-        @NameInMap("period")
+        @com.aliyun.core.annotation.NameInMap("period")
         private Long period;
 
-        @NameInMap("period_unit")
+        @com.aliyun.core.annotation.NameInMap("period_unit")
         private String periodUnit;
 
-        @NameInMap("platform")
+        @com.aliyun.core.annotation.NameInMap("platform")
         @Deprecated
         private String platform;
 
-        @NameInMap("private_pool_options")
+        @com.aliyun.core.annotation.NameInMap("private_pool_options")
         private PrivatePoolOptions privatePoolOptions;
 
-        @NameInMap("rds_instances")
-        private java.util.List < String > rdsInstances;
+        @com.aliyun.core.annotation.NameInMap("ram_role_name")
+        private String ramRoleName;
 
-        @NameInMap("scaling_policy")
+        @com.aliyun.core.annotation.NameInMap("rds_instances")
+        private java.util.List<String> rdsInstances;
+
+        @com.aliyun.core.annotation.NameInMap("scaling_policy")
         private String scalingPolicy;
 
-        @NameInMap("security_group_id")
+        @com.aliyun.core.annotation.NameInMap("security_group_id")
         private String securityGroupId;
 
-        @NameInMap("security_group_ids")
-        private java.util.List < String > securityGroupIds;
+        @com.aliyun.core.annotation.NameInMap("security_group_ids")
+        private java.util.List<String> securityGroupIds;
 
-        @NameInMap("spot_instance_pools")
+        @com.aliyun.core.annotation.NameInMap("spot_instance_pools")
         private Long spotInstancePools;
 
-        @NameInMap("spot_instance_remedy")
+        @com.aliyun.core.annotation.NameInMap("spot_instance_remedy")
         private Boolean spotInstanceRemedy;
 
-        @NameInMap("spot_price_limit")
-        private java.util.List < SpotPriceLimit> spotPriceLimit;
+        @com.aliyun.core.annotation.NameInMap("spot_price_limit")
+        private java.util.List<SpotPriceLimit> spotPriceLimit;
 
-        @NameInMap("spot_strategy")
+        @com.aliyun.core.annotation.NameInMap("spot_strategy")
         private String spotStrategy;
 
-        @NameInMap("system_disk_bursting_enabled")
+        @com.aliyun.core.annotation.NameInMap("system_disk_bursting_enabled")
         private Boolean systemDiskBurstingEnabled;
 
-        @NameInMap("system_disk_categories")
-        private java.util.List < String > systemDiskCategories;
+        @com.aliyun.core.annotation.NameInMap("system_disk_categories")
+        private java.util.List<String> systemDiskCategories;
 
-        @NameInMap("system_disk_category")
+        @com.aliyun.core.annotation.NameInMap("system_disk_category")
         private String systemDiskCategory;
 
-        @NameInMap("system_disk_encrypt_algorithm")
+        @com.aliyun.core.annotation.NameInMap("system_disk_encrypt_algorithm")
         private String systemDiskEncryptAlgorithm;
 
-        @NameInMap("system_disk_encrypted")
+        @com.aliyun.core.annotation.NameInMap("system_disk_encrypted")
         private Boolean systemDiskEncrypted;
 
-        @NameInMap("system_disk_kms_key_id")
+        @com.aliyun.core.annotation.NameInMap("system_disk_kms_key_id")
         private String systemDiskKmsKeyId;
 
-        @NameInMap("system_disk_performance_level")
+        @com.aliyun.core.annotation.NameInMap("system_disk_performance_level")
         private String systemDiskPerformanceLevel;
 
-        @NameInMap("system_disk_provisioned_iops")
+        @com.aliyun.core.annotation.NameInMap("system_disk_provisioned_iops")
         private Long systemDiskProvisionedIops;
 
-        @NameInMap("system_disk_size")
+        @com.aliyun.core.annotation.NameInMap("system_disk_size")
         private Long systemDiskSize;
 
-        @NameInMap("tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("tags")
+        private java.util.List<Tags> tags;
 
-        @NameInMap("vswitch_ids")
-        @Validation(required = true)
-        private java.util.List < String > vswitchIds;
+        @com.aliyun.core.annotation.NameInMap("vswitch_ids")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List<String> vswitchIds;
 
         private ScalingGroup(Builder builder) {
             this.autoRenew = builder.autoRenew;
@@ -1612,6 +1725,7 @@ public class Nodepool extends TeaModel {
             this.periodUnit = builder.periodUnit;
             this.platform = builder.platform;
             this.privatePoolOptions = builder.privatePoolOptions;
+            this.ramRoleName = builder.ramRoleName;
             this.rdsInstances = builder.rdsInstances;
             this.scalingPolicy = builder.scalingPolicy;
             this.securityGroupId = builder.securityGroupId;
@@ -1665,7 +1779,7 @@ public class Nodepool extends TeaModel {
         /**
          * @return dataDisks
          */
-        public java.util.List < DataDisk > getDataDisks() {
+        public java.util.List<DataDisk> getDataDisks() {
             return this.dataDisks;
         }
 
@@ -1707,7 +1821,7 @@ public class Nodepool extends TeaModel {
         /**
          * @return instanceTypes
          */
-        public java.util.List < String > getInstanceTypes() {
+        public java.util.List<String> getInstanceTypes() {
             return this.instanceTypes;
         }
 
@@ -1796,9 +1910,16 @@ public class Nodepool extends TeaModel {
         }
 
         /**
+         * @return ramRoleName
+         */
+        public String getRamRoleName() {
+            return this.ramRoleName;
+        }
+
+        /**
          * @return rdsInstances
          */
-        public java.util.List < String > getRdsInstances() {
+        public java.util.List<String> getRdsInstances() {
             return this.rdsInstances;
         }
 
@@ -1819,7 +1940,7 @@ public class Nodepool extends TeaModel {
         /**
          * @return securityGroupIds
          */
-        public java.util.List < String > getSecurityGroupIds() {
+        public java.util.List<String> getSecurityGroupIds() {
             return this.securityGroupIds;
         }
 
@@ -1840,7 +1961,7 @@ public class Nodepool extends TeaModel {
         /**
          * @return spotPriceLimit
          */
-        public java.util.List < SpotPriceLimit> getSpotPriceLimit() {
+        public java.util.List<SpotPriceLimit> getSpotPriceLimit() {
             return this.spotPriceLimit;
         }
 
@@ -1861,7 +1982,7 @@ public class Nodepool extends TeaModel {
         /**
          * @return systemDiskCategories
          */
-        public java.util.List < String > getSystemDiskCategories() {
+        public java.util.List<String> getSystemDiskCategories() {
             return this.systemDiskCategories;
         }
 
@@ -1917,14 +2038,14 @@ public class Nodepool extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
         /**
          * @return vswitchIds
          */
-        public java.util.List < String > getVswitchIds() {
+        public java.util.List<String> getVswitchIds() {
             return this.vswitchIds;
         }
 
@@ -1932,13 +2053,13 @@ public class Nodepool extends TeaModel {
             private Boolean autoRenew; 
             private Long autoRenewPeriod; 
             private Boolean compensateWithOnDemand; 
-            private java.util.List < DataDisk > dataDisks; 
+            private java.util.List<DataDisk> dataDisks; 
             private String deploymentsetId; 
             private Long desiredSize; 
             private String imageId; 
             private String imageType; 
             private String instanceChargeType; 
-            private java.util.List < String > instanceTypes; 
+            private java.util.List<String> instanceTypes; 
             private String internetChargeType; 
             private Long internetMaxBandwidthOut; 
             private String keyPair; 
@@ -1951,16 +2072,17 @@ public class Nodepool extends TeaModel {
             private String periodUnit; 
             private String platform; 
             private PrivatePoolOptions privatePoolOptions; 
-            private java.util.List < String > rdsInstances; 
+            private String ramRoleName; 
+            private java.util.List<String> rdsInstances; 
             private String scalingPolicy; 
             private String securityGroupId; 
-            private java.util.List < String > securityGroupIds; 
+            private java.util.List<String> securityGroupIds; 
             private Long spotInstancePools; 
             private Boolean spotInstanceRemedy; 
-            private java.util.List < SpotPriceLimit> spotPriceLimit; 
+            private java.util.List<SpotPriceLimit> spotPriceLimit; 
             private String spotStrategy; 
             private Boolean systemDiskBurstingEnabled; 
-            private java.util.List < String > systemDiskCategories; 
+            private java.util.List<String> systemDiskCategories; 
             private String systemDiskCategory; 
             private String systemDiskEncryptAlgorithm; 
             private Boolean systemDiskEncrypted; 
@@ -1968,8 +2090,8 @@ public class Nodepool extends TeaModel {
             private String systemDiskPerformanceLevel; 
             private Long systemDiskProvisionedIops; 
             private Long systemDiskSize; 
-            private java.util.List < Tags> tags; 
-            private java.util.List < String > vswitchIds; 
+            private java.util.List<Tags> tags; 
+            private java.util.List<String> vswitchIds; 
 
             /**
              * auto_renew.
@@ -1998,7 +2120,7 @@ public class Nodepool extends TeaModel {
             /**
              * data_disks.
              */
-            public Builder dataDisks(java.util.List < DataDisk > dataDisks) {
+            public Builder dataDisks(java.util.List<DataDisk> dataDisks) {
                 this.dataDisks = dataDisks;
                 return this;
             }
@@ -2036,7 +2158,10 @@ public class Nodepool extends TeaModel {
             }
 
             /**
-             * instance_charge_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PostPaid</p>
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -2044,9 +2169,9 @@ public class Nodepool extends TeaModel {
             }
 
             /**
-             * instance_types.
+             * <p>This parameter is required.</p>
              */
-            public Builder instanceTypes(java.util.List < String > instanceTypes) {
+            public Builder instanceTypes(java.util.List<String> instanceTypes) {
                 this.instanceTypes = instanceTypes;
                 return this;
             }
@@ -2148,9 +2273,17 @@ public class Nodepool extends TeaModel {
             }
 
             /**
+             * ram_role_name.
+             */
+            public Builder ramRoleName(String ramRoleName) {
+                this.ramRoleName = ramRoleName;
+                return this;
+            }
+
+            /**
              * rds_instances.
              */
-            public Builder rdsInstances(java.util.List < String > rdsInstances) {
+            public Builder rdsInstances(java.util.List<String> rdsInstances) {
                 this.rdsInstances = rdsInstances;
                 return this;
             }
@@ -2174,7 +2307,7 @@ public class Nodepool extends TeaModel {
             /**
              * security_group_ids.
              */
-            public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
+            public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
                 return this;
             }
@@ -2198,7 +2331,7 @@ public class Nodepool extends TeaModel {
             /**
              * spot_price_limit.
              */
-            public Builder spotPriceLimit(java.util.List < SpotPriceLimit> spotPriceLimit) {
+            public Builder spotPriceLimit(java.util.List<SpotPriceLimit> spotPriceLimit) {
                 this.spotPriceLimit = spotPriceLimit;
                 return this;
             }
@@ -2222,7 +2355,7 @@ public class Nodepool extends TeaModel {
             /**
              * system_disk_categories.
              */
-            public Builder systemDiskCategories(java.util.List < String > systemDiskCategories) {
+            public Builder systemDiskCategories(java.util.List<String> systemDiskCategories) {
                 this.systemDiskCategories = systemDiskCategories;
                 return this;
             }
@@ -2286,15 +2419,15 @@ public class Nodepool extends TeaModel {
             /**
              * tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * vswitch_ids.
+             * <p>This parameter is required.</p>
              */
-            public Builder vswitchIds(java.util.List < String > vswitchIds) {
+            public Builder vswitchIds(java.util.List<String> vswitchIds) {
                 this.vswitchIds = vswitchIds;
                 return this;
             }
@@ -2306,9 +2439,15 @@ public class Nodepool extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Nodepool} extends {@link TeaModel}
+     *
+     * <p>Nodepool</p>
+     */
     public static class TeeConfig extends TeaModel {
-        @NameInMap("tee_enable")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("tee_enable")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Boolean teeEnable;
 
         private TeeConfig(Builder builder) {
@@ -2334,7 +2473,10 @@ public class Nodepool extends TeaModel {
             private Boolean teeEnable; 
 
             /**
-             * tee_enable.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder teeEnable(Boolean teeEnable) {
                 this.teeEnable = teeEnable;

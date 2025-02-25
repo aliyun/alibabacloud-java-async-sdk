@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInvocationResultsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInvocationResultsResponseBody</p>
  */
 public class DescribeInvocationResultsResponseBody extends TeaModel {
-    @NameInMap("Invocation")
+    @com.aliyun.core.annotation.NameInMap("Invocation")
     private Invocation invocation;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInvocationResultsResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The time when the command stopped being run on the instance. If you called the `StopInvocation` operation to manually stop the execution, the value is the time when you called the operation.
+         * <p>Details about the execution results.</p>
          */
         public Builder invocation(Invocation invocation) {
             this.invocation = invocation;
@@ -58,7 +63,10 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         }
 
         /**
-         * The size of the text that is truncated and discarded when the `Output` value exceeds 24 KB in size.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInvocationResultsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInvocationResultsResponseBody</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -110,7 +124,10 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key of the command task.
+             * <p>The tag key of the command task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>owner</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -118,7 +135,10 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the command task.
+             * <p>The tag value of the command task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhangsan</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -132,9 +152,15 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInvocationResultsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInvocationResultsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -151,17 +177,17 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -173,59 +199,71 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInvocationResultsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInvocationResultsResponseBody</p>
+     */
     public static class InvocationResult extends TeaModel {
-        @NameInMap("CommandId")
+        @com.aliyun.core.annotation.NameInMap("CommandId")
         private String commandId;
 
-        @NameInMap("ContainerId")
+        @com.aliyun.core.annotation.NameInMap("ContainerId")
         private String containerId;
 
-        @NameInMap("ContainerName")
+        @com.aliyun.core.annotation.NameInMap("ContainerName")
         private String containerName;
 
-        @NameInMap("Dropped")
+        @com.aliyun.core.annotation.NameInMap("Dropped")
         private Integer dropped;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorInfo")
+        @com.aliyun.core.annotation.NameInMap("ErrorInfo")
         private String errorInfo;
 
-        @NameInMap("ExitCode")
+        @com.aliyun.core.annotation.NameInMap("ExitCode")
         private Long exitCode;
 
-        @NameInMap("FinishedTime")
+        @com.aliyun.core.annotation.NameInMap("FinishedTime")
         private String finishedTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InvocationStatus")
+        @com.aliyun.core.annotation.NameInMap("InvocationStatus")
         private String invocationStatus;
 
-        @NameInMap("InvokeId")
+        @com.aliyun.core.annotation.NameInMap("InvokeId")
         private String invokeId;
 
-        @NameInMap("InvokeRecordStatus")
+        @com.aliyun.core.annotation.NameInMap("InvokeRecordStatus")
         private String invokeRecordStatus;
 
-        @NameInMap("Output")
+        @com.aliyun.core.annotation.NameInMap("Launcher")
+        private String launcher;
+
+        @com.aliyun.core.annotation.NameInMap("Output")
         private String output;
 
-        @NameInMap("Repeats")
+        @com.aliyun.core.annotation.NameInMap("Repeats")
         private Integer repeats;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("StopTime")
+        @com.aliyun.core.annotation.NameInMap("StopTime")
         private String stopTime;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("Username")
+        @com.aliyun.core.annotation.NameInMap("TerminationMode")
+        private String terminationMode;
+
+        @com.aliyun.core.annotation.NameInMap("Username")
         private String username;
 
         private InvocationResult(Builder builder) {
@@ -241,11 +279,13 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             this.invocationStatus = builder.invocationStatus;
             this.invokeId = builder.invokeId;
             this.invokeRecordStatus = builder.invokeRecordStatus;
+            this.launcher = builder.launcher;
             this.output = builder.output;
             this.repeats = builder.repeats;
             this.startTime = builder.startTime;
             this.stopTime = builder.stopTime;
             this.tags = builder.tags;
+            this.terminationMode = builder.terminationMode;
             this.username = builder.username;
         }
 
@@ -342,6 +382,13 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         }
 
         /**
+         * @return launcher
+         */
+        public String getLauncher() {
+            return this.launcher;
+        }
+
+        /**
          * @return output
          */
         public String getOutput() {
@@ -377,6 +424,13 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         }
 
         /**
+         * @return terminationMode
+         */
+        public String getTerminationMode() {
+            return this.terminationMode;
+        }
+
+        /**
          * @return username
          */
         public String getUsername() {
@@ -396,15 +450,20 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             private String invocationStatus; 
             private String invokeId; 
             private String invokeRecordStatus; 
+            private String launcher; 
             private String output; 
             private Integer repeats; 
             private String startTime; 
             private String stopTime; 
             private Tags tags; 
+            private String terminationMode; 
             private String username; 
 
             /**
-             * The ID of the request.
+             * <p>The command ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-hz0jdfwcsr****</p>
              */
             public Builder commandId(String commandId) {
                 this.commandId = commandId;
@@ -412,7 +471,10 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The container ID.
+             * <p>The container ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ab141ddfbacfe02d9dbc25966ed971536124527097398d419a6746873fea****</p>
              */
             public Builder containerId(String containerId) {
                 this.containerId = containerId;
@@ -420,7 +482,10 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the container.
+             * <p>The container name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-container</p>
              */
             public Builder containerName(String containerName) {
                 this.containerName = containerName;
@@ -428,7 +493,10 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the tag.
+             * <p>The size of the Output text that was truncated and discarded because the <code>Output</code> value exceeded 24 KB in size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dropped(Integer dropped) {
                 this.dropped = dropped;
@@ -436,7 +504,30 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the command execution.
+             * <p>The error code returned when the command failed to be sent or run. Valid values:</p>
+             * <ul>
+             * <li>If this parameter is empty, the command was run as expected.</li>
+             * <li>InstanceNotExists: The specified instance did not exist or was released.</li>
+             * <li>InstanceReleased: The instance was released while the command was being run.</li>
+             * <li>InstanceNotRunning: The instance was not running while the command was being run.</li>
+             * <li>CommandNotApplicable: The command was inapplicable to the specified instance.</li>
+             * <li>AccountNotExists: The username specified to run the command did not exist.</li>
+             * <li>DirectoryNotExists: The specified directory did not exist.</li>
+             * <li>BadCronExpression: The specified cron expression for the execution schedule was invalid.</li>
+             * <li>ClientNotRunning: Cloud Assistant Agent was not running.</li>
+             * <li>ClientNotResponse: Cloud Assistant Agent did not respond.</li>
+             * <li>ClientIsUpgrading: Cloud Assistant Agent was being upgraded.</li>
+             * <li>ClientNeedUpgrade: Cloud Assistant Agent needed to be upgraded.</li>
+             * <li>DeliveryTimeout: The request to send the command timed out.</li>
+             * <li>ExecutionTimeout: The execution timed out.</li>
+             * <li>ExecutionException: An exception occurred while the command was being run.</li>
+             * <li>ExecutionInterrupted: The execution was interrupted.</li>
+             * <li>ExitCodeNonzero: The execution was complete, but the exit code was not 0.</li>
+             * <li>SecurityGroupRuleDenied: Access to Cloud Assistant was denied by security group rules.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>InstanceNotExists</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -444,7 +535,30 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the container.
+             * <p>The error message returned when the command failed to be sent or run. Valid values:</p>
+             * <ul>
+             * <li>If this parameter is empty, the command was run as expected.</li>
+             * <li>The security group rules denied access to the aliyun service.</li>
+             * <li>The specified instance does not exist.</li>
+             * <li>The specified instance was released during task execution.</li>
+             * <li>The specified instance was not running during task execution.</li>
+             * <li>The OS type of the instance does not support the specified command type.</li>
+             * <li>The specified account does not exist.</li>
+             * <li>The specified directory does not exist.</li>
+             * <li>The cron expression is invalid.</li>
+             * <li>The aliyun service is not running on the instance.</li>
+             * <li>The aliyun service in the instance does not response.</li>
+             * <li>The aliyun service in the instance is upgrading during task execution.</li>
+             * <li>The aliyun service in the instance need to be upgraded to at least version to support the feature. indicates the earliest version that supports the feature. indicates the name of the feature.</li>
+             * <li>The command delivery has been timeout.</li>
+             * <li>The command execution has been timeout.</li>
+             * <li>The command execution got an exception.</li>
+             * <li>The command execution exit code is not zero.</li>
+             * <li>The specified instance was released during task execution.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>the specified instance does not exists</p>
              */
             public Builder errorInfo(String errorInfo) {
                 this.errorInfo = errorInfo;
@@ -452,26 +566,14 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned when the command is not successfully sent or run. Valid values:
-             * <p>
+             * <p>The exit code of the command task.</p>
+             * <ul>
+             * <li>For Linux instances, the value is the exit code of the shell command.</li>
+             * <li>For Windows instances, the value is the exit code of the batch or PowerShell command.</li>
+             * </ul>
              * 
-             * *   If this parameter is empty, the command is run normally.
-             * *   the specified instance does not exists: The specified instance does not exist is released.
-             * *   the instance has released when create task: The instance was released while the command was being run on the instance.
-             * *   the instance is not running when create task: The instance is not in the Running state while the command is being run.
-             * *   the command is not applicable: The command is not applicable to the specified instance.
-             * *   the specified account does not exists: The specified account does not exist.
-             * *   the specified directory does not exists: The specified directory does not exist.
-             * *   the cron job expression is invalid: The cron expression that specifies the execution time is invalid.
-             * *   the aliyun service is not running on the instance: The Cloud Assistance client is not running.
-             * *   the aliyun service in the instance does not response: The Cloud Assistant client is not responding.
-             * *   the aliyun service in the instance is upgrading now: The Cloud Assistant client is being upgraded.
-             * *   the aliyun service in the instance need upgrade: The Cloud Assistant client needs to be upgraded.
-             * *   the command delivery has been timeout: The request to send the command timed out.
-             * *   the command execution has been timeout: The command execution timed out.
-             * *   the command execution got an exception: An exception occurred while the command is being run.
-             * *   the command execution has been interrupted: The command execution was interrupted.
-             * *   the command execution exit code is not zero: The command execution is complete, but the exit code is not 0.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder exitCode(Long exitCode) {
                 this.exitCode = exitCode;
@@ -479,7 +581,10 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the command execution. You can call the [DescribeInvocations](~~64840~~) operation to query the execution IDs.
+             * <p>The time when the command task was completed. If the command task times out, the end time is equal to the start time of the command task specified by <code>StartTime</code> plus the timeout period specified by <code>Timeout</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-12-20T06:15:56Z</p>
              */
             public Builder finishedTime(String finishedTime) {
                 this.finishedTime = finishedTime;
@@ -487,12 +592,10 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The key of tag N of the command execution. Valid values of N: 1 to 20. The tag key cannot be an empty string.
-             * <p>
+             * <p>The instance ID.</p>
              * 
-             * If a single tag is specified to query resources, up to 1,000 resources with this tag can be returned. If multiple tags are specified to query resources, up to 1,000 resources with all these tags can be returned. To query more than 1,000 resources with specified tags, call the [ListTagResources](~~110425~~) operation.
-             * 
-             * The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>i-bp1i7gg30r52z2em****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -500,11 +603,48 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The exit code of the command execution.
-             * <p>
+             * <p>The execution status on a single instance. Valid values:</p>
+             * <ul>
+             * <li><p>Pending: The command is being verified or sent.</p>
+             * </li>
+             * <li><p>Invalid: The specified command type or parameter is invalid.</p>
+             * </li>
+             * <li><p>Aborted: The command failed to be sent to the instance. To send a command to an instance, make sure that the instance is in the Running state and the command can be sent to the instance within 1 minute.</p>
+             * </li>
+             * <li><p>Running: The command is being run on the instance.</p>
+             * </li>
+             * <li><p>Success:</p>
+             * <ul>
+             * <li>One-time task: The execution was complete, and the exit code was 0.</li>
+             * <li>Scheduled task: The last execution was complete, the exit code was 0, and the specified period ended.</li>
+             * </ul>
+             * </li>
+             * <li><p>Failed:</p>
+             * <ul>
+             * <li>One-time task: The execution was complete, but the exit code was not 0.</li>
+             * <li>Scheduled task: The last execution was complete, but the exit code was not 0. The specified period was about to end.</li>
+             * </ul>
+             * </li>
+             * <li><p>Error: The execution cannot proceed due to an exception.</p>
+             * </li>
+             * <li><p>Timeout: The execution timed out.</p>
+             * </li>
+             * <li><p>Cancelled: The execution was canceled before it started.</p>
+             * </li>
+             * <li><p>Stopping: The command task is being stopped.</p>
+             * </li>
+             * <li><p>Terminated: The execution was terminated before completion.</p>
+             * </li>
+             * <li><p>Scheduled:</p>
+             * <ul>
+             * <li>One-time task: The execution state can never be Scheduled.</li>
+             * <li>Scheduled task: The command is waiting to be run.</li>
+             * </ul>
+             * </li>
+             * </ul>
              * 
-             * *   For Linux instances, the value is the exit code of the shell command.
-             * *   For Windows instances, the value is the exit code of the batch or PowerShell command.
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder invocationStatus(String invocationStatus) {
                 this.invocationStatus = invocationStatus;
@@ -512,7 +652,10 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The command task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-hz0jdfwd9f****</p>
              */
             public Builder invokeId(String invokeId) {
                 this.invokeId = invokeId;
@@ -520,7 +663,40 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+             * <p>The execution status of the command. Valid values:</p>
+             * <ul>
+             * <li><p>Running:</p>
+             * <ul>
+             * <li>Scheduled task: Before you stop the scheduled execution of the command, the execution state is always Running.</li>
+             * <li>One-time task: If the command is being run on instances, the execution state is Running.</li>
+             * </ul>
+             * </li>
+             * <li><p>Finished:</p>
+             * <ul>
+             * <li>Scheduled task: The execution state can never be Finished.</li>
+             * <li>One-time task: The execution was complete on all instances, or the execution was stopped on some instances and was complete on the other instances.</li>
+             * </ul>
+             * </li>
+             * <li><p>Failed:</p>
+             * <ul>
+             * <li>Scheduled task: The execution state can never be Failed.</li>
+             * <li>One-time task: The execution failed on all instances.</li>
+             * </ul>
+             * </li>
+             * <li><p>PartialFailed:</p>
+             * <ul>
+             * <li>Scheduled task: The execution state can never be PartialFailed.</li>
+             * <li>One-time task: The execution failed on some instances.</li>
+             * </ul>
+             * </li>
+             * <li><p>Stopped: The task was stopped.</p>
+             * </li>
+             * <li><p>Stopping: The task is being stopped.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder invokeRecordStatus(String invokeRecordStatus) {
                 this.invokeRecordStatus = invokeRecordStatus;
@@ -528,41 +704,25 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The execution state on a single instance. Valid values:
-             * <p>
+             * <p>The launcher for script execution. The value cannot exceed 1 KB in length.</p>
              * 
-             * *   Pending: The command is being verified or sent.
+             * <strong>example:</strong>
+             * <p>python3 -u {{ACS::ScriptFileName|Ext(&quot;.py&quot;)}}</p>
+             */
+            public Builder launcher(String launcher) {
+                this.launcher = launcher;
+                return this;
+            }
+
+            /**
+             * <p>The command output.</p>
+             * <ul>
+             * <li>If ContentEncoding is set to PlainText in the request, the original command output is returned.</li>
+             * <li>If ContentEncoding is set to Base64 in the request, the Base64-encoded command output is returned.</li>
+             * </ul>
              * 
-             * *   Invalid: The specified command type or parameter is invalid.
-             * 
-             * *   Aborted: The command failed to be sent. To send a command to an instance, make sure that the instance is in the Running state and the command is sent to the instance within 1 minute.
-             * 
-             * *   Running: The command is being run on the instance.
-             * 
-             * *   Success:
-             * 
-             *     *   Command that is set to run only once: The execution is complete, and the exit code is 0.
-             *     *   Command that is set to run on a schedule: The last execution succeeds, the exit code is 0, and the specified cycle ends.
-             * 
-             * *   Failed:
-             * 
-             *     *   Command that is set to run only once: The execution is complete, but the exit code is not 0.
-             *     *   Command that is set to run on a schedule: The last execution is complete, the exit code is not 0, and the specified cycle is about to end.
-             * 
-             * *   Error: The execution cannot proceed due to an exception.
-             * 
-             * *   Timeout: The execution times out.
-             * 
-             * *   Cancelled: The execution is canceled, and the command is not run.
-             * 
-             * *   Stopping: The running command is being stopped.
-             * 
-             * *   Terminated: The command is terminated while it is being run.
-             * 
-             * *   Scheduled:
-             * 
-             *     *   Command that is set to run only once: The command is not applicable.
-             *     *   Command that is set to run on a schedule: The command is waiting to be run.
+             * <strong>example:</strong>
+             * <p>MTU6MzA6MDEK</p>
              */
             public Builder output(String output) {
                 this.output = output;
@@ -570,7 +730,14 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * <p>The number of times that the command was run on the instance.</p>
+             * <ul>
+             * <li>If the command is set to run only once, the value is 0 or 1.</li>
+             * <li>If the command is set to run on a schedule, the value is the number of times that the command has been run on the instance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder repeats(Integer repeats) {
                 this.repeats = repeats;
@@ -578,7 +745,10 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of the commands.
+             * <p>The time when the command started to be run on the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-12-20T06:15:55Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -586,13 +756,10 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The encoding method of the `Output` response parameter. Valid values:
-             * <p>
+             * <p>The time when the command task was stopped. If you call the <code>StopInvocation</code> operation to stop the command task, the value of this parameter is the time when the operation is called.</p>
              * 
-             * *   PlainText: returns the original command content and command output.
-             * *   Base64: returns the Base64-encoded command content and command output.
-             * 
-             * Default value: Base64.
+             * <strong>example:</strong>
+             * <p>2020-01-19T09:15:47Z</p>
              */
             public Builder stopTime(String stopTime) {
                 this.stopTime = stopTime;
@@ -600,7 +767,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the command task.
+             * <p>The tags of the command task.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -608,7 +775,25 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * Queries the execution results of one or more Cloud Assistant commands on an Elastic Compute Service (ECS) instance.
+             * <p>Indicates how the command task is stopped when a command execution is manually stopped or times out. Valid values:</p>
+             * <ul>
+             * <li>Process: The process of the command is stopped.</li>
+             * <li>ProcessTree: The process tree of the command is stopped. In this case, the process of the command and all subprocesses are stopped.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ProcessTree</p>
+             */
+            public Builder terminationMode(String terminationMode) {
+                this.terminationMode = terminationMode;
+                return this;
+            }
+
+            /**
+             * <p>The username used to run the command on the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root</p>
              */
             public Builder username(String username) {
                 this.username = username;
@@ -622,9 +807,15 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInvocationResultsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInvocationResultsResponseBody</p>
+     */
     public static class InvocationResults extends TeaModel {
-        @NameInMap("InvocationResult")
-        private java.util.List < InvocationResult> invocationResult;
+        @com.aliyun.core.annotation.NameInMap("InvocationResult")
+        private java.util.List<InvocationResult> invocationResult;
 
         private InvocationResults(Builder builder) {
             this.invocationResult = builder.invocationResult;
@@ -641,17 +832,17 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         /**
          * @return invocationResult
          */
-        public java.util.List < InvocationResult> getInvocationResult() {
+        public java.util.List<InvocationResult> getInvocationResult() {
             return this.invocationResult;
         }
 
         public static final class Builder {
-            private java.util.List < InvocationResult> invocationResult; 
+            private java.util.List<InvocationResult> invocationResult; 
 
             /**
              * InvocationResult.
              */
-            public Builder invocationResult(java.util.List < InvocationResult> invocationResult) {
+            public Builder invocationResult(java.util.List<InvocationResult> invocationResult) {
                 this.invocationResult = invocationResult;
                 return this;
             }
@@ -663,21 +854,31 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInvocationResultsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInvocationResultsResponseBody</p>
+     */
     public static class Invocation extends TeaModel {
-        @NameInMap("InvocationResults")
+        @com.aliyun.core.annotation.NameInMap("InvocationResults")
         private InvocationResults invocationResults;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
+        private String nextToken;
+
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Long pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Long pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private Invocation(Builder builder) {
             this.invocationResults = builder.invocationResults;
+            this.nextToken = builder.nextToken;
             this.pageNumber = builder.pageNumber;
             this.pageSize = builder.pageSize;
             this.totalCount = builder.totalCount;
@@ -696,6 +897,13 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
          */
         public InvocationResults getInvocationResults() {
             return this.invocationResults;
+        }
+
+        /**
+         * @return nextToken
+         */
+        public String getNextToken() {
+            return this.nextToken;
         }
 
         /**
@@ -721,12 +929,13 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
 
         public static final class Builder {
             private InvocationResults invocationResults; 
+            private String nextToken; 
             private Long pageNumber; 
             private Long pageSize; 
             private Long totalCount; 
 
             /**
-             * The tags to use for query.
+             * <p>The execution results.</p>
              */
             public Builder invocationResults(InvocationResults invocationResults) {
                 this.invocationResults = invocationResults;
@@ -734,15 +943,21 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The execution state of the command. Valid values:
-             * <p>
+             * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
              * 
-             * *   Running
-             * *   Finished
-             * *   Failed
-             * *   Stopped
+             * <strong>example:</strong>
+             * <p>AAAAAdDWBF2</p>
+             */
+            public Builder nextToken(String nextToken) {
+                this.nextToken = nextToken;
+                return this;
+            }
+
+            /**
+             * <p>The page number.</p>
              * 
-             * > To ensure compatibility, we recommend that you use the `InvocationStatus` parameter instead of the InvokeRecordStatus parameter.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -750,7 +965,10 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the tag.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -758,13 +976,10 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to return the results of historical scheduled executions. Valid values:
-             * <p>
+             * <p>The total number of the commands.</p>
              * 
-             * *   true: returns the results of historical scheduled executions. When this parameter is set to true, the `InvokeId` parameter must be set to the ID of a scheduled execution.
-             * *   false: does not return the results of historical scheduled executions.
-             * 
-             * Default value: false.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

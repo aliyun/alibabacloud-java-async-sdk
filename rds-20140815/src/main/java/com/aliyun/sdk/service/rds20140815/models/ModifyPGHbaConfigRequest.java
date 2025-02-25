@@ -1,50 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPGHbaConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifyPGHbaConfigRequest</p>
  */
 public class ModifyPGHbaConfigRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("HbaItem")
-    @Validation(required = true)
-    private java.util.List < HbaItem> hbaItem;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HbaItem")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<HbaItem> hbaItem;
 
-    @Query
-    @NameInMap("OpsType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpsType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String opsType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyPGHbaConfigRequest(Builder builder) {
@@ -89,7 +94,7 @@ public class ModifyPGHbaConfigRequest extends Request {
     /**
      * @return hbaItem
      */
-    public java.util.List < HbaItem> getHbaItem() {
+    public java.util.List<HbaItem> getHbaItem() {
         return this.hbaItem;
     }
 
@@ -131,7 +136,7 @@ public class ModifyPGHbaConfigRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyPGHbaConfigRequest, Builder> {
         private String clientToken; 
         private String DBInstanceId; 
-        private java.util.List < HbaItem> hbaItem; 
+        private java.util.List<HbaItem> hbaItem; 
         private String opsType; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -155,7 +160,10 @@ public class ModifyPGHbaConfigRequest extends Request {
         } 
 
         /**
-         * A reserved parameter. You do not need to specify this parameter.
+         * <p>A reserved parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -164,7 +172,11 @@ public class ModifyPGHbaConfigRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pgm-bp1lymyn1v3i****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -173,22 +185,27 @@ public class ModifyPGHbaConfigRequest extends Request {
         }
 
         /**
-         * An array that consists of the details of the AD domain services.
+         * <p>An array that consists of the details of the AD domain services.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder hbaItem(java.util.List < HbaItem> hbaItem) {
+        public Builder hbaItem(java.util.List<HbaItem> hbaItem) {
             this.putQueryParameter("HbaItem", hbaItem);
             this.hbaItem = hbaItem;
             return this;
         }
 
         /**
-         * The method that you use to modify the pg_hba.conf file. Valid values:
-         * <p>
+         * <p>The method that you use to modify the pg_hba.conf file. Valid values:</p>
+         * <ul>
+         * <li><strong>add</strong>: adds one or more records. If you use this method, make sure that the value of the PriorityId parameter for each new record is different from the value of the PriorityId parameter for any existing record.</li>
+         * <li><strong>delete</strong>: deletes one or more records. If you use this method, the record that corresponds to the specified value of the <strong>PriorityId</strong> parameter is deleted from the pg_hba.conf file.</li>
+         * <li><strong>modify</strong>: modifies one or more records. If you use this method, the record that corresponds to the specified value of the <strong>PriorityId</strong> parameter is modified.</li>
+         * <li><strong>update</strong>: overwrites the existing configuration in the pg_hba.conf file by using the new configuration.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **add**: adds one or more records. If you use this method, make sure that the value of the PriorityId parameter for each new record is different from the value of the PriorityId parameter for any existing record.
-         * *   **delete**: deletes one or more records. If you use this method, the record that corresponds to the specified value of the **PriorityId** parameter is deleted from the pg_hba.conf file.
-         * *   **modify**: modifies one or more records. If you use this method, the record that corresponds to the specified value of the **PriorityId** parameter is modified.
-         * *   **update**: overwrites the existing configuration in the pg_hba.conf file by using the new configuration.
+         * <strong>example:</strong>
+         * <p>add</p>
          */
         public Builder opsType(String opsType) {
             this.putQueryParameter("OpsType", opsType);
@@ -239,35 +256,41 @@ public class ModifyPGHbaConfigRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyPGHbaConfigRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyPGHbaConfigRequest</p>
+     */
     public static class HbaItem extends TeaModel {
-        @NameInMap("Address")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Address")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String address;
 
-        @NameInMap("Database")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Database")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String database;
 
-        @NameInMap("Mask")
+        @com.aliyun.core.annotation.NameInMap("Mask")
         private String mask;
 
-        @NameInMap("Method")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Method")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String method;
 
-        @NameInMap("Option")
+        @com.aliyun.core.annotation.NameInMap("Option")
         private String option;
 
-        @NameInMap("PriorityId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("PriorityId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer priorityId;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
-        @NameInMap("User")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("User")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String user;
 
         private HbaItem(Builder builder) {
@@ -356,7 +379,11 @@ public class ModifyPGHbaConfigRequest extends Request {
             private String user; 
 
             /**
-             * The IP addresses from which the specified users can access the specified databases. If you set this parameter to 0.0.0.0/0, the specified users are allowed to access the specified databases from all IP addresses.
+             * <p>The IP addresses from which the specified users can access the specified databases. If you set this parameter to 0.0.0.0/0, the specified users are allowed to access the specified databases from all IP addresses.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.0.0/0</p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -364,10 +391,12 @@ public class ModifyPGHbaConfigRequest extends Request {
             }
 
             /**
-             * The name of the database. If you set this parameter to all, the specified users are allowed to access all databases on the instance.
-             * <p>
+             * <p>The name of the database. If you set this parameter to all, the specified users are allowed to access all databases on the instance.</p>
+             * <p>If you specify multiple entries, separate the entries with commas (,).</p>
+             * <p>This parameter is required.</p>
              * 
-             * If you specify multiple entries, separate the entries with commas (,).
+             * <strong>example:</strong>
+             * <p>all</p>
              */
             public Builder database(String database) {
                 this.database = database;
@@ -375,7 +404,10 @@ public class ModifyPGHbaConfigRequest extends Request {
             }
 
             /**
-             * The mask of the IP address. If the value of the **Address** parameter is an IP address, you can use this parameter to specify the mask of the IP address.
+             * <p>The mask of the IP address. If the value of the <strong>Address</strong> parameter is an IP address, you can use this parameter to specify the mask of the IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder mask(String mask) {
                 this.mask = mask;
@@ -383,20 +415,24 @@ public class ModifyPGHbaConfigRequest extends Request {
             }
 
             /**
-             * The authentication method. Valid values:
-             * <p>
+             * <p>The authentication method. Valid values:</p>
+             * <ul>
+             * <li><strong>trust</strong></li>
+             * <li><strong>reject</strong></li>
+             * <li><strong>scram-sha-256</strong></li>
+             * <li><strong>md5</strong></li>
+             * <li><strong>password</strong></li>
+             * <li><strong>gss</strong></li>
+             * <li><strong>sspi</strong></li>
+             * <li><strong>ldap</strong></li>
+             * <li><strong>radius</strong></li>
+             * <li><strong>cert</strong></li>
+             * <li><strong>pam</strong></li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **trust**
-             * *   **reject**
-             * *   **scram-sha-256**
-             * *   **md5**
-             * *   **password**
-             * *   **gss**
-             * *   **sspi**
-             * *   **ldap**
-             * *   **radius**
-             * *   **cert**
-             * *   **pam**
+             * <strong>example:</strong>
+             * <p>ldap</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -404,7 +440,10 @@ public class ModifyPGHbaConfigRequest extends Request {
             }
 
             /**
-             * The options of the authentication method. In this topic, LDAP is used as an example. You must configure this parameter. For more information, see [Authentication Methods](https://www.postgresql.org/docs/11/auth-methods.html).
+             * <p>The options of the authentication method. In this topic, LDAP is used as an example. You must configure this parameter. For more information, see <a href="https://www.postgresql.org/docs/11/auth-methods.html">Authentication Methods</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ldapserver=The private IP address of the ECS instance ldapbasedn=&quot;CN=Users,DC=pgsqldomain,DC=net&quot; ldapbinddn=&quot;CN=The username of the administrator user of the AD domain controller, CN=Users,DC=pgsqldomain,DC=net&quot; ldapbindpasswd=&quot;The password of the administrator user of the AD domain controller&quot; ldapsearchattribute=&quot;sAMAccountName&quot;</p>
              */
             public Builder option(String option) {
                 this.option = option;
@@ -412,10 +451,12 @@ public class ModifyPGHbaConfigRequest extends Request {
             }
 
             /**
-             * The priority of the record. If you set this parameter to 0, the record has the highest priority. Valid values: 0 to 10000.
-             * <p>
+             * <p>The priority of the record. If you set this parameter to 0, the record has the highest priority. Valid values: 0 to 10000.</p>
+             * <p>This parameter is used to identify each record. When you add a record, the value of the PriorityId parameter for the new record must be different from the value of the PriorityId parameter of any existing record. When you modify or delete a record, you must also modify or delete the value of the PriorityId parameter for this record.</p>
+             * <p>This parameter is required.</p>
              * 
-             * This parameter is used to identify each record. When you add a record, the value of the PriorityId parameter for the new record must be different from the value of the PriorityId parameter of any existing record. When you modify or delete a record, you must also modify or delete the value of the PriorityId parameter for this record.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder priorityId(Integer priorityId) {
                 this.priorityId = priorityId;
@@ -423,16 +464,20 @@ public class ModifyPGHbaConfigRequest extends Request {
             }
 
             /**
-             * The connection type.
-             * <p>
+             * <p>The connection type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><strong>host</strong>: The record matches TCP/IP connections, including SSL connections and non-SSL connections.</li>
+             * <li><strong>hostssl</strong>: The record matches only TCP/IP connections that are established over SSL.</li>
+             * <li><strong>hostnossl</strong>: The record matches only TCP/IP connections that are not established over SSL connections.</li>
+             * </ul>
+             * <blockquote>
+             * <p> You can set this parameter to hostssl only when SSL encryption is enabled for the instance. For more information, see Configure SSL encryption for an ApsaraDB RDS for PostgreSQL instance.<a href="~~229518~~"></a></p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * Valid values:
-             * 
-             * *   **host**: The record matches TCP/IP connections, including SSL connections and non-SSL connections.
-             * *   **hostssl**: The record matches only TCP/IP connections that are established over SSL.
-             * *   **hostnossl**: The record matches only TCP/IP connections that are not established over SSL connections.
-             * 
-             * >  You can set this parameter to hostssl only when SSL encryption is enabled for the instance. For more information, see Configure SSL encryption for an ApsaraDB RDS for PostgreSQL instance.[](~~229518~~)
+             * <strong>example:</strong>
+             * <p>host</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -440,7 +485,11 @@ public class ModifyPGHbaConfigRequest extends Request {
             }
 
             /**
-             * The user who is allowed to access the specified databases. You must specify the user that is used to log on to the RDS instance. If you specify multiple entries, separate the entries with commas (,).
+             * <p>The user who is allowed to access the specified databases. You must specify the user that is used to log on to the RDS instance. If you specify multiple entries, separate the entries with commas (,).</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ldapuser</p>
              */
             public Builder user(String user) {
                 this.user = user;

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTimingSyntheticTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateTimingSyntheticTaskResponseBody</p>
  */
 public class CreateTimingSyntheticTaskResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateTimingSyntheticTaskResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class CreateTimingSyntheticTaskResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>The HTTP status code returned. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class CreateTimingSyntheticTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The struct returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,10 @@ public class CreateTimingSyntheticTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class CreateTimingSyntheticTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>53B5874D-EBC1-5567-B787-E4B7267F5CEB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class CreateTimingSyntheticTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,11 +148,17 @@ public class CreateTimingSyntheticTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateTimingSyntheticTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateTimingSyntheticTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
         private Data(Builder builder) {
@@ -170,7 +193,20 @@ public class CreateTimingSyntheticTaskResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * Status.
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li>INIT: The task is in the initial state.</li>
+             * <li>RELEASE: The task is being parsed.</li>
+             * <li>RUNNING: The task is running.</li>
+             * <li>STOP: The task is suspended.</li>
+             * <li>SYSTEM_STOP: The task is suspended by the system.</li>
+             * <li>CANCEL: The task is canceled.</li>
+             * <li>SYSTEM_CANCEL: The task is canceled by the system.</li>
+             * <li>DONE: The task is complete.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -178,7 +214,10 @@ public class CreateTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The ID of the synthetic monitoring task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5308a2691f59422c8c3b7aeccec9cd3b</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateWorkItemRequest} extends {@link RequestModel}
  *
  * <p>UpdateWorkItemRequest</p>
  */
 public class UpdateWorkItemRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Body
-    @NameInMap("fieldType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("fieldType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fieldType;
 
-    @Body
-    @NameInMap("identifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("identifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String identifier;
 
-    @Body
-    @NameInMap("propertyKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("propertyKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String propertyKey;
 
-    @Body
-    @NameInMap("propertyValue")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("propertyValue")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String propertyValue;
 
     private UpdateWorkItemRequest(Builder builder) {
@@ -115,7 +120,10 @@ public class UpdateWorkItemRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -124,7 +132,10 @@ public class UpdateWorkItemRequest extends Request {
         }
 
         /**
-         * fieldType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>subject</p>
          */
         public Builder fieldType(String fieldType) {
             this.putBodyParameter("fieldType", fieldType);
@@ -133,7 +144,10 @@ public class UpdateWorkItemRequest extends Request {
         }
 
         /**
-         * identifier.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e8b2xxxxxx2abdxxxxxxxx23</p>
          */
         public Builder identifier(String identifier) {
             this.putBodyParameter("identifier", identifier);
@@ -142,7 +156,10 @@ public class UpdateWorkItemRequest extends Request {
         }
 
         /**
-         * propertyKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>subject</p>
          */
         public Builder propertyKey(String propertyKey) {
             this.putBodyParameter("propertyKey", propertyKey);
@@ -151,7 +168,10 @@ public class UpdateWorkItemRequest extends Request {
         }
 
         /**
-         * propertyValue.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>newValue</p>
          */
         public Builder propertyValue(String propertyValue) {
             this.putBodyParameter("propertyValue", propertyValue);

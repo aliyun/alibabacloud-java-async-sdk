@@ -1,49 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListChangeSetsRequest} extends {@link RequestModel}
  *
  * <p>ListChangeSetsRequest</p>
  */
 public class ListChangeSetsRequest extends Request {
-    @Query
-    @NameInMap("ChangeSetId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChangeSetId")
     private String changeSetId;
 
-    @Query
-    @NameInMap("ChangeSetName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChangeSetName")
     private java.util.List < String > changeSetName;
 
-    @Query
-    @NameInMap("ExecutionStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExecutionStatus")
     private java.util.List < String > executionStatus;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("StackId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String stackId;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private java.util.List < String > status;
 
     private ListChangeSetsRequest(Builder builder) {
@@ -154,7 +154,10 @@ public class ListChangeSetsRequest extends Request {
         } 
 
         /**
-         * The ID of the change set. If detailed information about the change set is not required, you can use this parameter to replace the GetChangeSet operation.
+         * <p>The ID of the change set. If detailed information about the change set is not required, you can use this parameter to replace the GetChangeSet operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1f6521a4-05af-4975-afe9-bc4b45ad****</p>
          */
         public Builder changeSetId(String changeSetId) {
             this.putQueryParameter("ChangeSetId", changeSetId);
@@ -163,7 +166,10 @@ public class ListChangeSetsRequest extends Request {
         }
 
         /**
-         * The name of change set N. Maximum value of N: 5. You can use an asterisk (\*) as a wildcard for fuzzy search.
+         * <p>The name of change set N. Maximum value of N: 5. You can use an asterisk (*) as a wildcard for fuzzy search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyChangeSet</p>
          */
         public Builder changeSetName(java.util.List < String > changeSetName) {
             this.putQueryParameter("ChangeSetName", changeSetName);
@@ -172,15 +178,18 @@ public class ListChangeSetsRequest extends Request {
         }
 
         /**
-         * The execution status of change set N. Maximum value of N: 5. Valid values:
-         * <p>
+         * <p>The execution status of change set N. Maximum value of N: 5. Valid values:</p>
+         * <ul>
+         * <li>UNAVAILABLE</li>
+         * <li>AVAILABLE</li>
+         * <li>EXECUTE_IN_PROGRESS</li>
+         * <li>EXECUTE_COMPLETE</li>
+         * <li>EXECUTE_FAILED</li>
+         * <li>OBSOLETE</li>
+         * </ul>
          * 
-         * *   UNAVAILABLE
-         * *   AVAILABLE
-         * *   EXECUTE_IN_PROGRESS
-         * *   EXECUTE_COMPLETE
-         * *   EXECUTE_FAILED
-         * *   OBSOLETE
+         * <strong>example:</strong>
+         * <p>AVAILABLE</p>
          */
         public Builder executionStatus(java.util.List < String > executionStatus) {
             this.putQueryParameter("ExecutionStatus", executionStatus);
@@ -189,10 +198,10 @@ public class ListChangeSetsRequest extends Request {
         }
 
         /**
-         * The page number.\
-         * <p>
-         * Pages start from page 1.\
-         * Default value: 1.
+         * <p>The page number.<br>Pages start from page 1.<br>Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -201,10 +210,10 @@ public class ListChangeSetsRequest extends Request {
         }
 
         /**
-         * The number of entries per page.\
-         * <p>
-         * Valid values: 1 to 50.\
-         * Default value: 10.
+         * <p>The number of entries per page.<br>Valid values: 1 to 50.<br>Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -213,7 +222,11 @@ public class ListChangeSetsRequest extends Request {
         }
 
         /**
-         * The region ID of the change set. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * <p>The region ID of the change set. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -222,7 +235,11 @@ public class ListChangeSetsRequest extends Request {
         }
 
         /**
-         * The ID of the stack.
+         * <p>The ID of the stack.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</p>
          */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);
@@ -231,15 +248,18 @@ public class ListChangeSetsRequest extends Request {
         }
 
         /**
-         * The status of change set N. Maximum value of N: 5. Valid values:
-         * <p>
+         * <p>The status of change set N. Maximum value of N: 5. Valid values:</p>
+         * <ul>
+         * <li>CREATE_PENDING</li>
+         * <li>CREATE_IN_PROGRESS</li>
+         * <li>CREATE_COMPLETE</li>
+         * <li>CREATE_FAILED</li>
+         * <li>DELETE_FAILED</li>
+         * <li>DELETE_COMPLETE</li>
+         * </ul>
          * 
-         * *   CREATE_PENDING
-         * *   CREATE_IN_PROGRESS
-         * *   CREATE_COMPLETE
-         * *   CREATE_FAILED
-         * *   DELETE_FAILED
-         * *   DELETE_COMPLETE
+         * <strong>example:</strong>
+         * <p>CREATE_COMPLETE</p>
          */
         public Builder status(java.util.List < String > status) {
             this.putQueryParameter("Status", status);

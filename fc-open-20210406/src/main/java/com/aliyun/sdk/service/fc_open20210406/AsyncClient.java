@@ -5,6 +5,7 @@ import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.fc_open20210406.models.*;
 import com.aliyun.sdk.gateway.pop.Configuration;
 import com.aliyun.sdk.gateway.pop.auth.SignatureVersion;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -66,6 +67,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetFunctionResponse> getFunction(GetFunctionRequest request);
 
+    /**
+      * StatefulAsyncInvocation indicates whether the asynchronous task feature is enabled. If the value of StatefulAsyncInvocation is true, the asynchronous task feature is enabled. All asynchronous invocations change to asynchronous task mode.
+      *
+     */
     CompletableFuture<GetFunctionAsyncInvokeConfigResponse> getFunctionAsyncInvokeConfig(GetFunctionAsyncInvokeConfigRequest request);
 
     CompletableFuture<GetFunctionCodeResponse> getFunctionCode(GetFunctionCodeRequest request);
@@ -81,7 +86,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetServiceResponse> getService(GetServiceRequest request);
 
     /**
-      * The version or alias of the service to which the asynchronous task belongs.
+      * StatefulAsyncInvocation represents asynchronous tasks. Asynchronous tasks (StatefulAsyncInvocation) allow you to manage the states of asynchronous invocations. The asynchronous task feature is more suitable for task scenarios.
       *
      */
     CompletableFuture<GetStatefulAsyncInvocationResponse> getStatefulAsyncInvocation(GetStatefulAsyncInvocationRequest request);
@@ -96,13 +101,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListEventSourcesResponse> listEventSources(ListEventSourcesRequest request);
 
+    /**
+      * StatefulAsyncInvocation indicates whether the asynchronous task feature is enabled. If StatefulAsyncInvocation is set to true, the asynchronous task is enabled. All asynchronous invocations to the function corresponding to this configuration change to asynchronous task mode.
+      *
+     */
     CompletableFuture<ListFunctionAsyncInvokeConfigsResponse> listFunctionAsyncInvokeConfigs(ListFunctionAsyncInvokeConfigsRequest request);
 
     CompletableFuture<ListFunctionsResponse> listFunctions(ListFunctionsRequest request);
 
     /**
-      * The maximum number of resources to return. Valid values: \\[0,1000].
-      * The number of returned resources is less than or equal to the specified number.
+      * The ListInstances operation allows you to query available instances of a function.
+      * Available instances are instances that are processing requests or can be scheduled to process requests. Available instances queried by the ListInstances operation are the same as the active instances queried by using the InvokeFunction operation if values of `ServiceName`, `FunctionName`, and `Qualifier` are the same.
       *
      */
     CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request);
@@ -122,13 +131,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListServicesResponse> listServices(ListServicesRequest request);
 
     /**
-      * The metadata of the service and function to which the asynchronous task belongs.
+      * StatefulAsyncInvocation represents asynchronous tasks. Asynchronous tasks (StatefulAsyncInvocation) allow you to manage the states of asynchronous invocations. The asynchronous task feature is more suitable for task scenarios.
       *
      */
     CompletableFuture<ListStatefulAsyncInvocationFunctionsResponse> listStatefulAsyncInvocationFunctions(ListStatefulAsyncInvocationFunctionsRequest request);
 
     /**
-      * The name of the service to which the asynchronous task belongs.
+      * StatefulAsyncInvocation represents asynchronous tasks. Asynchronous tasks (StatefulAsyncInvocation) allow you to manage the states of asynchronous invocations. The asynchronous task feature is more suitable for task scenarios.
       *
      */
     CompletableFuture<ListStatefulAsyncInvocationsResponse> listStatefulAsyncInvocations(ListStatefulAsyncInvocationsRequest request);
@@ -142,7 +151,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PublishServiceVersionResponse> publishServiceVersion(PublishServiceVersionRequest request);
 
     /**
-      * The maximum validity period of messages.
+      * StatefulAsyncInvocation specifies the configurations of an asynchronous task. Asynchronous tasks (StatefulAsyncInvocation) allow you to manage the states of asynchronous invocations. The asynchronous task feature is more suitable for task scenarios.
       *
      */
     CompletableFuture<PutFunctionAsyncInvokeConfigResponse> putFunctionAsyncInvokeConfig(PutFunctionAsyncInvokeConfigRequest request);
@@ -158,7 +167,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ReleaseGPUInstanceResponse> releaseGPUInstance(ReleaseGPUInstanceRequest request);
 
     /**
-      * StatefulAsyncInvocation: asynchronous task. Asynchronous tasks allow you to manage the states on the basis of common asynchronous invocations, which is more suitable for task scenarios.
+      * StatefulAsyncInvocation represents asynchronous tasks. Asynchronous tasks (StatefulAsyncInvocation) allow you to manage the states of asynchronous invocations. The asynchronous task feature is more suitable for task scenarios.
       *
      */
     CompletableFuture<StopStatefulAsyncInvocationResponse> stopStatefulAsyncInvocation(StopStatefulAsyncInvocationRequest request);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSortScriptResponseBody</p>
  */
 public class CreateSortScriptResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
     private CreateSortScriptResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class CreateSortScriptResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +57,7 @@ public class CreateSortScriptResponseBody extends TeaModel {
         }
 
         /**
-         * 返回结果
+         * The response parameters.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -72,13 +71,13 @@ public class CreateSortScriptResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("scope")
+        @com.aliyun.core.annotation.NameInMap("scope")
         private String scope;
 
-        @NameInMap("scriptName")
+        @com.aliyun.core.annotation.NameInMap("scriptName")
         private String scriptName;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Result(Builder builder) {
@@ -122,7 +121,7 @@ public class CreateSortScriptResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * 脚本的作用范围
+             * The sort phase to which the script applies.
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -130,7 +129,7 @@ public class CreateSortScriptResponseBody extends TeaModel {
             }
 
             /**
-             * 脚本名称
+             * The script name.
              */
             public Builder scriptName(String scriptName) {
                 this.scriptName = scriptName;
@@ -138,7 +137,7 @@ public class CreateSortScriptResponseBody extends TeaModel {
             }
 
             /**
-             * 脚本的类型
+             * The script type.
              */
             public Builder type(String type) {
                 this.type = type;

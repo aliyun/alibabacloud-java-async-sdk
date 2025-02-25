@@ -1,75 +1,80 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeScheduleTasksRequest} extends {@link RequestModel}
  *
  * <p>DescribeScheduleTasksRequest</p>
  */
 public class DescribeScheduleTasksRequest extends Request {
-    @Query
-    @NameInMap("DBClusterDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterDescription")
     private String DBClusterDescription;
 
-    @Query
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @Query
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("PlannedEndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlannedEndTime")
     private String plannedEndTime;
 
-    @Query
-    @NameInMap("PlannedStartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlannedStartTime")
     private String plannedStartTime;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("TaskAction")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskAction")
     private String taskAction;
 
     private DescribeScheduleTasksRequest(Builder builder) {
@@ -250,7 +255,10 @@ public class DescribeScheduleTasksRequest extends Request {
         } 
 
         /**
-         * The description of the cluster.
+         * <p>The description of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb</p>
          */
         public Builder DBClusterDescription(String DBClusterDescription) {
             this.putQueryParameter("DBClusterDescription", DBClusterDescription);
@@ -259,14 +267,18 @@ public class DescribeScheduleTasksRequest extends Request {
         }
 
         /**
-         * The cluster ID.
-         * <p>
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the information of all PolarDB clusters that are deployed in a specific region, such as the cluster IDs.</p>
+         * </li>
+         * <li><p>If you do not specify this parameter, all scheduled tasks on your clusters are queried.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   You can call the [DescribeDBClusters](~~98094~~) operation to query the information of all PolarDB clusters that are deployed in a specific region, such as the cluster IDs.
-         * 
-         * *   If you do not specify this parameter, all scheduled tasks on your clusters are queried.
+         * <strong>example:</strong>
+         * <p>pc-**************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -275,10 +287,13 @@ public class DescribeScheduleTasksRequest extends Request {
         }
 
         /**
-         * The ID of the order.
-         * <p>
+         * <p>The ID of the order.</p>
+         * <blockquote>
+         * <p> The order ID can contain only digits.</p>
+         * </blockquote>
          * 
-         * >  The order ID can contain only digits.
+         * <strong>example:</strong>
+         * <p>20951253014****</p>
          */
         public Builder orderId(String orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -305,7 +320,10 @@ public class DescribeScheduleTasksRequest extends Request {
         }
 
         /**
-         * The page number of the page to return. Set this parameter to an integer that is greater than 0. Default value: **1**.
+         * <p>The page number of the page to return. Set this parameter to an integer that is greater than 0. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -314,7 +332,10 @@ public class DescribeScheduleTasksRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: 30.
+         * <p>The number of entries to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>. Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -323,7 +344,10 @@ public class DescribeScheduleTasksRequest extends Request {
         }
 
         /**
-         * The latest start time of the task that you specified when you created the scheduled task. The time is displayed in UTC.
+         * <p>The latest start time of the task that you specified when you created the scheduled task. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-28T12:30Z</p>
          */
         public Builder plannedEndTime(String plannedEndTime) {
             this.putQueryParameter("PlannedEndTime", plannedEndTime);
@@ -332,7 +356,10 @@ public class DescribeScheduleTasksRequest extends Request {
         }
 
         /**
-         * The earliest start time of the task that you specified when you created the scheduled task. The time is displayed in UTC.
+         * <p>The earliest start time of the task that you specified when you created the scheduled task. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-28T12:00Z</p>
          */
         public Builder plannedStartTime(String plannedStartTime) {
             this.putQueryParameter("PlannedStartTime", plannedStartTime);
@@ -341,14 +368,18 @@ public class DescribeScheduleTasksRequest extends Request {
         }
 
         /**
-         * The ID of the region.
-         * <p>
+         * <p>The ID of the region.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the region information of all clusters in a specific account.</p>
+         * </li>
+         * <li><p>If you do not specify this parameter, scheduled tasks on your clusters that are deployed in all regions are queried.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   You can call the [DescribeRegions](~~98041~~) operation to query the region information of all clusters in a specific account.
-         * 
-         * *   If you do not specify this parameter, scheduled tasks on your clusters that are deployed in all regions are queried.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -357,7 +388,10 @@ public class DescribeScheduleTasksRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-************</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -384,18 +418,22 @@ public class DescribeScheduleTasksRequest extends Request {
         }
 
         /**
-         * The state of the tasks that you want to query. Valid values:
-         * <p>
+         * <p>The state of the tasks that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>pending</strong>: The tasks are pending execution.</li>
+         * <li><strong>executing</strong>: The tasks are being executed.</li>
+         * <li><strong>failure</strong>: The tasks failed and need to be run again.</li>
+         * <li><strong>finish</strong>: The tasks are complete.</li>
+         * <li><strong>cancel</strong>: The tasks are canceled.</li>
+         * <li><strong>expired</strong>: The tasks are expired. The tasks are not started within the time periods that are specified to start the tasks.</li>
+         * <li><strong>rollback</strong>: The tasks are being rolled back.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you do not specify this parameter, all scheduled tasks in all states are queried.</p>
+         * </blockquote>
          * 
-         * *   **pending**: The tasks are pending execution.
-         * *   **executing**: The tasks are being executed.
-         * *   **failure**: The tasks failed and need to be run again.
-         * *   **finish**: The tasks are complete.
-         * *   **cancel**: The tasks are canceled.
-         * *   **expired**: The tasks are expired. The tasks are not started within the time periods that are specified to start the tasks.
-         * *   **rollback**: The tasks are being rolled back.
-         * 
-         * >  If you do not specify this parameter, all scheduled tasks in all states are queried.
+         * <strong>example:</strong>
+         * <p>finish</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -404,19 +442,24 @@ public class DescribeScheduleTasksRequest extends Request {
         }
 
         /**
-         * The type of scheduled tasks that you want to query. Valid values:
-         * <p>
+         * <p>The type of scheduled tasks that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>CreateDBNodes</strong></li>
+         * <li><strong>ModifyDBNodeClass</strong></li>
+         * <li><strong>UpgradeDBClusterVersion</strong></li>
+         * <li><strong>ModifyDBClusterPrimaryZone</strong></li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If you specify the <code>PlannedStartTime</code> parameter when you call the four preceding operations, the details of each task are returned. Otherwise, an empty string is returned for the <code>TimerInfos</code> parameter.</p>
+         * </li>
+         * <li><p>If you do not specify this parameter, all types of scheduled tasks on you clusters are queried.</p>
+         * </li>
+         * </ul>
          * 
-         * *   **CreateDBNodes**
-         * *   **ModifyDBNodeClass**
-         * *   **UpgradeDBClusterVersion**
-         * *   **ModifyDBClusterPrimaryZone**
-         * 
-         * > 
-         * 
-         * *   If you specify the `PlannedStartTime` parameter when you call the four preceding operations, the details of each task are returned. Otherwise, an empty string is returned for the `TimerInfos` parameter.
-         * 
-         * *   If you do not specify this parameter, all types of scheduled tasks on you clusters are queried.
+         * <strong>example:</strong>
+         * <p>CreateDBNodes</p>
          */
         public Builder taskAction(String taskAction) {
             this.putQueryParameter("TaskAction", taskAction);

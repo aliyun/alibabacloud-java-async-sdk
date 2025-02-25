@@ -1,3 +1,39 @@
+2024-12-30 Version: 1.1.19
+- Generated java-async 2022-01-01 for quickbi-public.
+
+2024-11-26 Version: 1.1.18
+- Generated java-async 2022-01-01 for quickbi-public.
+
+2024-10-10 Version: 1.1.17
+- Generated java-async 2022-01-01 for quickbi-public.
+
+2024-09-18 Version: 1.1.16
+- Generated java-async 2022-01-01 for quickbi-public.
+
+2024-08-07 Version: 1.1.15
+- Generated java-async 2022-01-01 for quickbi-public.
+
+2024-06-28 Version: 1.1.14
+- Generated java-async 2022-01-01 for quickbi-public.
+
+2024-06-27 Version: 1.1.13
+- Generated java-async 2022-01-01 for quickbi-public.
+
+2024-05-22 Version: 1.1.12
+- Generated java-async 2022-01-01 for quickbi-public.
+
+2024-05-21 Version: 1.1.11
+- Generated java-async 2022-01-01 for quickbi-public.
+
+2024-03-19 Version: 1.1.10
+- Generated java-async 2022-01-01 for quickbi-public.
+
+2024-03-19 Version: 1.1.9
+- Generated java-async 2022-01-01 for quickbi-public.
+
+2024-02-27 Version: 1.1.8
+- Generated java-async 2022-01-01 for quickbi-public.
+
 2023-10-24 Version: 1.1.7
 - Generated java-async 2022-01-01 for quickbi-public.
 

@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeChangeOrderResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeChangeOrderResponseBody</p>
  */
 public class DescribeChangeOrderResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TraceId")
+    @com.aliyun.core.annotation.NameInMap("TraceId")
     private String traceId;
 
     private DescribeChangeOrderResponseBody(Builder builder) {
@@ -110,13 +115,16 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * The HTTP status code. Valid values:
-         * <p>
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: indicates that the request was successful.</li>
+         * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
+         * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
+         * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+         * </ul>
          * 
-         * *   **2xx**: indicates that the request was successful.
-         * *   **3xx**: indicates that the request was redirected.
-         * *   **4xx**: indicates that the request was invalid.
-         * *   **5xx**: indicates that a server error occurred.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -124,7 +132,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the change order.
+         * <p>The details of the change order.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -132,11 +140,11 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
-         * <p>
-         * 
-         * *   The **ErrorCode** parameter is not returned when the request succeeds.
-         * *   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.
+         * <p>The error code.</p>
+         * <ul>
+         * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
+         * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
+         * </ul>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -144,7 +152,10 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -152,7 +163,10 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -160,11 +174,14 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the information of a change order was obtained. Valid values:
-         * <p>
+         * <p>Indicates whether the information of a change order was obtained. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The information was obtained.</li>
+         * <li><strong>false</strong>: The information could not be obtained.</li>
+         * </ul>
          * 
-         * *   **true**: The information was obtained.
-         * *   **false**: The information could not be obtained.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -172,7 +189,10 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the trace. It is used to query the details of a request.
+         * <p>The ID of the trace. It is used to query the details of a request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a98a02315955564772843261e****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -185,26 +205,32 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeChangeOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeChangeOrderResponseBody</p>
+     */
     public static class Pipelines extends TeaModel {
-        @NameInMap("BatchType")
+        @com.aliyun.core.annotation.NameInMap("BatchType")
         private Integer batchType;
 
-        @NameInMap("ParallelCount")
+        @com.aliyun.core.annotation.NameInMap("ParallelCount")
         private Integer parallelCount;
 
-        @NameInMap("PipelineId")
+        @com.aliyun.core.annotation.NameInMap("PipelineId")
         private String pipelineId;
 
-        @NameInMap("PipelineName")
+        @com.aliyun.core.annotation.NameInMap("PipelineName")
         private String pipelineName;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private Pipelines(Builder builder) {
@@ -284,7 +310,10 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * The batch type.
+             * <p>The batch type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder batchType(Integer batchType) {
                 this.batchType = batchType;
@@ -292,7 +321,10 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The number of parallel tasks in a batch.
+             * <p>The number of parallel tasks in a batch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder parallelCount(Integer parallelCount) {
                 this.parallelCount = parallelCount;
@@ -300,7 +332,10 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the batch.
+             * <p>The ID of the batch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0e4acf82-c9b1-4c1e-ac28-55776338****</p>
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;
@@ -308,7 +343,10 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the batch.
+             * <p>The name of the batch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Batch 1 Change</p>
              */
             public Builder pipelineName(String pipelineName) {
                 this.pipelineName = pipelineName;
@@ -316,7 +354,10 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the batch processing starts.
+             * <p>The time when the batch processing starts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1562831689704</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -324,19 +365,22 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the batch. Valid values:
-             * <p>
+             * <p>The status of the batch. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The batch is being prepared.</li>
+             * <li><strong>1</strong>: The batch is being processed.</li>
+             * <li><strong>2</strong>: The batch was processed.</li>
+             * <li><strong>3</strong>: The batch could not be processed.</li>
+             * <li><strong>6</strong>: The batch processing was terminated.</li>
+             * <li><strong>8</strong>: The execution process is pending. You must manually determine the release batch.</li>
+             * <li><strong>9</strong>: The execution process is pending. SAE will automatically determine the release batch.</li>
+             * <li><strong>10</strong>: The batch could not be processed due to a system exception.</li>
+             * <li><strong>11</strong>: The change order is pending approval.</li>
+             * <li><strong>12</strong>: The change order is approved and is pending execution.</li>
+             * </ul>
              * 
-             * *   **0**: The batch is being prepared.
-             * *   **1**: The batch is being processed.
-             * *   **2**: The batch was processed.
-             * *   **3**: The batch could not be processed.
-             * *   **6**: The batch processing was terminated.
-             * *   **8**: The execution process is pending. You must manually determine the release batch.
-             * *   **9**: The execution process is pending. SAE will automatically determine the release batch.
-             * *   **10**: The batch could not be processed due to a system exception.
-             * *   **11**: The change order is pending approval.
-             * *   **12**: The change order is approved and is pending execution.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -344,7 +388,10 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the batch information is last modified.
+             * <p>The time when the batch information is last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1562847178007</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -358,59 +405,65 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeChangeOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeChangeOrderResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("ApprovalId")
+        @com.aliyun.core.annotation.NameInMap("ApprovalId")
         private String approvalId;
 
-        @NameInMap("Auto")
+        @com.aliyun.core.annotation.NameInMap("Auto")
         private Boolean auto;
 
-        @NameInMap("BatchCount")
+        @com.aliyun.core.annotation.NameInMap("BatchCount")
         private Integer batchCount;
 
-        @NameInMap("BatchType")
+        @com.aliyun.core.annotation.NameInMap("BatchType")
         private String batchType;
 
-        @NameInMap("BatchWaitTime")
+        @com.aliyun.core.annotation.NameInMap("BatchWaitTime")
         private Integer batchWaitTime;
 
-        @NameInMap("ChangeOrderId")
+        @com.aliyun.core.annotation.NameInMap("ChangeOrderId")
         private String changeOrderId;
 
-        @NameInMap("CoType")
+        @com.aliyun.core.annotation.NameInMap("CoType")
         private String coType;
 
-        @NameInMap("CoTypeCode")
+        @com.aliyun.core.annotation.NameInMap("CoTypeCode")
         private String coTypeCode;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CurrentPipelineId")
+        @com.aliyun.core.annotation.NameInMap("CurrentPipelineId")
         private String currentPipelineId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Pipelines")
-        private java.util.List < Pipelines> pipelines;
+        @com.aliyun.core.annotation.NameInMap("Pipelines")
+        private java.util.List<Pipelines> pipelines;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("SubStatus")
+        @com.aliyun.core.annotation.NameInMap("SubStatus")
         private Integer subStatus;
 
-        @NameInMap("SupportRollback")
+        @com.aliyun.core.annotation.NameInMap("SupportRollback")
         private Boolean supportRollback;
 
         private Data(Builder builder) {
@@ -543,7 +596,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         /**
          * @return pipelines
          */
-        public java.util.List < Pipelines> getPipelines() {
+        public java.util.List<Pipelines> getPipelines() {
             return this.pipelines;
         }
 
@@ -583,13 +636,16 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             private String currentPipelineId; 
             private String description; 
             private String errorMessage; 
-            private java.util.List < Pipelines> pipelines; 
+            private java.util.List<Pipelines> pipelines; 
             private Integer status; 
             private Integer subStatus; 
             private Boolean supportRollback; 
 
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bbbbb-3fd370b2-3646-4ba6-91f9-9423e19ab0cd-*****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -597,7 +653,10 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app-test</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -605,7 +664,10 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The approval ID of the change order.
+             * <p>The approval ID of the change order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>67de0b39-a9d4-4c09-a170-cf438208****</p>
              */
             public Builder approvalId(String approvalId) {
                 this.approvalId = approvalId;
@@ -613,11 +675,14 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether SAE automatically determines the release batches. Valid values:
-             * <p>
+             * <p>Indicates whether SAE automatically determines the release batches. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: SAE automatically determines the release batches.</li>
+             * <li><strong>false</strong>: SAE does not automatically determine the release batches.</li>
+             * </ul>
              * 
-             * *   **true**: SAE automatically determines the release batches.
-             * *   **false**: SAE does not automatically determine the release batches.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder auto(Boolean auto) {
                 this.auto = auto;
@@ -625,7 +690,10 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The number of release batches.
+             * <p>The number of release batches.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder batchCount(Integer batchCount) {
                 this.batchCount = batchCount;
@@ -633,11 +701,14 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The mode in which the release batches are determined. Valid values:
-             * <p>
+             * <p>The mode in which the release batches are determined. Valid values:</p>
+             * <ul>
+             * <li><strong>auto</strong>: SAE automatically determines the release batches.</li>
+             * <li><strong>Manual</strong>: You must manually determine the release batches.</li>
+             * </ul>
              * 
-             * *   **auto**: SAE automatically determines the release batches.
-             * *   **Manual**: You must manually determine the release batches.
+             * <strong>example:</strong>
+             * <p>auto</p>
              */
             public Builder batchType(String batchType) {
                 this.batchType = batchType;
@@ -645,7 +716,10 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The interval between batches when SAE automatically determines the release batches in a phased release. Unit: minutes.
+             * <p>The interval between batches when SAE automatically determines the release batches in a phased release. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder batchWaitTime(Integer batchWaitTime) {
                 this.batchWaitTime = batchWaitTime;
@@ -653,7 +727,10 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the change order.
+             * <p>The ID of the change order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>765fa5c0-9ebb-4bb4-b383-1f885447**</p>
              */
             public Builder changeOrderId(String changeOrderId) {
                 this.changeOrderId = changeOrderId;
@@ -661,7 +738,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The description about the change type, which corresponds to the **CoTypeCode** parameter.
+             * <p>The description about the change type, which corresponds to the <strong>CoTypeCode</strong> parameter.</p>
              */
             public Builder coType(String coType) {
                 this.coType = coType;
@@ -669,29 +746,32 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the change type. Valid values:
-             * <p>
+             * <p>The code of the change type. Valid values:</p>
+             * <ul>
+             * <li><strong>CoBindSlb</strong>: associates the Server Load Balancer (SLB) instance with the application.</li>
+             * <li><strong>CoUnbindSlb</strong>: disassociates the SLB instance from the application.</li>
+             * <li><strong>CoCreateApp</strong>: creates the application.</li>
+             * <li><strong>CoDeleteApp</strong>: deletes the application.</li>
+             * <li><strong>CoDeploy</strong>: deploys the application.</li>
+             * <li><strong>CoRestartApplication</strong>: restarts the application.</li>
+             * <li><strong>CoRollback</strong>: rolls back the application.</li>
+             * <li><strong>CoScaleIn</strong>: scales in the application.</li>
+             * <li><strong>CoScaleOut</strong>: scales out the application.</li>
+             * <li><strong>CoStart</strong>: starts the application.</li>
+             * <li><strong>CoStop</strong>: stops the application.</li>
+             * <li><strong>CoRescaleApplicationVertically</strong>: modifies the instance specifications.</li>
+             * <li><strong>CoDeployHistroy</strong>: rolls back the application to a historical version.</li>
+             * <li><strong>CoBindNas</strong>: associates a network-attached storage (NAS) file system with the application.</li>
+             * <li><strong>CoUnbindNas</strong>: disassociates the NAS file system from the application.</li>
+             * <li><strong>CoBatchStartApplication</strong>: starts multiple applications concurrently.</li>
+             * <li><strong>CoBatchStopApplication</strong>: stops multiple applications concurrently.</li>
+             * <li><strong>CoRestartInstances</strong>: restarts the instances.</li>
+             * <li><strong>CoDeleteInstances</strong>: deletes the instances.</li>
+             * <li><strong>CoScaleInAppWithInstances</strong>: reduces the number of specified application instances.</li>
+             * </ul>
              * 
-             * *   **CoBindSlb**: associates the Server Load Balancer (SLB) instance with the application.
-             * *   **CoUnbindSlb**: disassociates the SLB instance from the application.
-             * *   **CoCreateApp**: creates the application.
-             * *   **CoDeleteApp**: deletes the application.
-             * *   **CoDeploy**: deploys the application.
-             * *   **CoRestartApplication**: restarts the application.
-             * *   **CoRollback**: rolls back the application.
-             * *   **CoScaleIn**: scales in the application.
-             * *   **CoScaleOut**: scales out the application.
-             * *   **CoStart**: starts the application.
-             * *   **CoStop**: stops the application.
-             * *   **CoRescaleApplicationVertically**: modifies the instance specifications.
-             * *   **CoDeployHistroy**: rolls back the application to a historical version.
-             * *   **CoBindNas**: associates a network-attached storage (NAS) file system with the application.
-             * *   **CoUnbindNas**: disassociates the NAS file system from the application.
-             * *   **CoBatchStartApplication**: starts multiple applications concurrently.
-             * *   **CoBatchStopApplication**: stops multiple applications concurrently.
-             * *   **CoRestartInstances**: restarts the instances.
-             * *   **CoDeleteInstances**: deletes the instances.
-             * *   **CoScaleInAppWithInstances**: reduces the number of specified application instances.
+             * <strong>example:</strong>
+             * <p>CoRestartInstances</p>
              */
             public Builder coTypeCode(String coTypeCode) {
                 this.coTypeCode = coTypeCode;
@@ -699,7 +779,10 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the change order was created.
+             * <p>The time when the change order was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-17 21:06:45</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -707,7 +790,10 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the current batch.
+             * <p>The ID of the current batch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0e4acf82-c9b1-4c1e-ac28-55776338****</p>
              */
             public Builder currentPipelineId(String currentPipelineId) {
                 this.currentPipelineId = currentPipelineId;
@@ -715,7 +801,10 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the change order.
+             * <p>The description of the change order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -723,7 +812,10 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The error message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -731,27 +823,30 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The batch information.
+             * <p>The batch information.</p>
              */
-            public Builder pipelines(java.util.List < Pipelines> pipelines) {
+            public Builder pipelines(java.util.List<Pipelines> pipelines) {
                 this.pipelines = pipelines;
                 return this;
             }
 
             /**
-             * The status of the change order. Valid values:
-             * <p>
+             * <p>The status of the change order. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The change order is being prepared.</li>
+             * <li><strong>1</strong>: The change order is being executed.</li>
+             * <li><strong>2</strong>: The change order was executed.</li>
+             * <li><strong>3</strong>: The change order could not be executed.</li>
+             * <li><strong>6</strong>: The change order was terminated.</li>
+             * <li><strong>8</strong>: The execution process is pending. You must manually determine the release batch.</li>
+             * <li><strong>9</strong>: The execution process is pending. SAE will automatically determine the release batches.</li>
+             * <li><strong>10</strong>: The execution failed due to a system exception.</li>
+             * <li><strong>11</strong>: The change order is pending approval.</li>
+             * <li><strong>12</strong>: The change order is approved and is pending execution.</li>
+             * </ul>
              * 
-             * *   **0**: The change order is being prepared.
-             * *   **1**: The change order is being executed.
-             * *   **2**: The change order was executed.
-             * *   **3**: The change order could not be executed.
-             * *   **6**: The change order was terminated.
-             * *   **8**: The execution process is pending. You must manually determine the release batch.
-             * *   **9**: The execution process is pending. SAE will automatically determine the release batches.
-             * *   **10**: The execution failed due to a system exception.
-             * *   **11**: The change order is pending approval.
-             * *   **12**: The change order is approved and is pending execution.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -759,11 +854,14 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The substatus of the change order. This parameter indicates whether an exception occurred while the change order was being executed. Valid values:
-             * <p>
+             * <p>The substatus of the change order. This parameter indicates whether an exception occurred while the change order was being executed. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: No exception occurred.</li>
+             * <li><strong>1</strong>: An exception occurred. For example, when an error occurred during a phased release, you must manually roll back the application. In this case, the change order cannot be completed, so the Status parameter is still displayed as &quot;1&quot;, which indicates that the change order is being executed. You can check the value of this parameter to determine whether an exception occurs.</li>
+             * </ul>
              * 
-             * *   **0**: No exception occurred.
-             * *   **1**: An exception occurred. For example, when an error occurred during a phased release, you must manually roll back the application. In this case, the change order cannot be completed, so the Status parameter is still displayed as "1", which indicates that the change order is being executed. You can check the value of this parameter to determine whether an exception occurs.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder subStatus(Integer subStatus) {
                 this.subStatus = subStatus;
@@ -771,11 +869,14 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the application can be rolled back. Valid values:
-             * <p>
+             * <p>Indicates whether the application can be rolled back. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The application can be rolled back.</li>
+             * <li><strong>false</strong>: The application cannot be rolled back.</li>
+             * </ul>
              * 
-             * *   **true**: The application can be rolled back.
-             * *   **false**: The application cannot be rolled back.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder supportRollback(Boolean supportRollback) {
                 this.supportRollback = supportRollback;

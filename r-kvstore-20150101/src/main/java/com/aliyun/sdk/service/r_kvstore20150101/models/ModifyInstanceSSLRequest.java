@@ -1,49 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceSSLRequest} extends {@link RequestModel}
  *
  * <p>ModifyInstanceSSLRequest</p>
  */
 public class ModifyInstanceSSLRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SSLEnabled")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SSLEnabled")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String SSLEnabled;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private ModifyInstanceSSLRequest(Builder builder) {
@@ -163,7 +163,11 @@ public class ModifyInstanceSSLRequest extends Request {
         }
 
         /**
-         * The ID of the task.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -208,12 +212,16 @@ public class ModifyInstanceSSLRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable TLS (SSL) encryption. Valid values:
-         * <p>
+         * <p>Modifies SSL encryption configurations. Valid values:</p>
+         * <ul>
+         * <li><strong>Disable</strong>: The SSL encryption is disabled.</li>
+         * <li><strong>Enable</strong>: The SSL encryption is enabled.</li>
+         * <li><strong>Update</strong>: The SSL certificate is updated.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Disable**: disables SSL encryption.
-         * *   **Enable**: enables SSL encryption.
-         * *   **Update**: updates the SSL certificate.
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         public Builder SSLEnabled(String SSLEnabled) {
             this.putQueryParameter("SSLEnabled", SSLEnabled);

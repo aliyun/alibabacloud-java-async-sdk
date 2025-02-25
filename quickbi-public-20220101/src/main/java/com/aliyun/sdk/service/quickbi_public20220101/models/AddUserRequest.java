@@ -1,48 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddUserRequest} extends {@link RequestModel}
  *
  * <p>AddUserRequest</p>
  */
 public class AddUserRequest extends Request {
-    @Query
-    @NameInMap("AccountName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountId")
+    private String accountId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountName;
 
-    @Query
-    @NameInMap("AdminUser")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdminUser")
     private Boolean adminUser;
 
-    @Query
-    @NameInMap("AuthAdminUser")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthAdminUser")
     private Boolean authAdminUser;
 
-    @Query
-    @NameInMap("NickName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NickName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nickName;
 
-    @Query
-    @NameInMap("UserType")
-    @Validation(required = true, maximum = 10, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleIds")
+    private String roleIds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserType")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 10, minimum = 1)
     private Integer userType;
 
     private AddUserRequest(Builder builder) {
         super(builder);
+        this.accountId = builder.accountId;
         this.accountName = builder.accountName;
         this.adminUser = builder.adminUser;
         this.authAdminUser = builder.authAdminUser;
         this.nickName = builder.nickName;
+        this.roleIds = builder.roleIds;
         this.userType = builder.userType;
     }
 
@@ -57,6 +70,13 @@ public class AddUserRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accountId
+     */
+    public String getAccountId() {
+        return this.accountId;
     }
 
     /**
@@ -88,6 +108,13 @@ public class AddUserRequest extends Request {
     }
 
     /**
+     * @return roleIds
+     */
+    public String getRoleIds() {
+        return this.roleIds;
+    }
+
+    /**
      * @return userType
      */
     public Integer getUserType() {
@@ -95,10 +122,12 @@ public class AddUserRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddUserRequest, Builder> {
+        private String accountId; 
         private String accountName; 
         private Boolean adminUser; 
         private Boolean authAdminUser; 
         private String nickName; 
+        private String roleIds; 
         private Integer userType; 
 
         private Builder() {
@@ -107,15 +136,29 @@ public class AddUserRequest extends Request {
 
         private Builder(AddUserRequest request) {
             super(request);
+            this.accountId = request.accountId;
             this.accountName = request.accountName;
             this.adminUser = request.adminUser;
             this.authAdminUser = request.authAdminUser;
             this.nickName = request.nickName;
+            this.roleIds = request.roleIds;
             this.userType = request.userType;
         } 
 
         /**
-         * AccountName.
+         * AccountId.
+         */
+        public Builder accountId(String accountId) {
+            this.putQueryParameter("AccountId", accountId);
+            this.accountId = accountId;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:xxxxxx@163.com">xxxxxx@163.com</a></p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -124,7 +167,10 @@ public class AddUserRequest extends Request {
         }
 
         /**
-         * Add organization members.
+         * <p>Add organization members.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder adminUser(Boolean adminUser) {
             this.putQueryParameter("AdminUser", adminUser);
@@ -142,7 +188,7 @@ public class AddUserRequest extends Request {
         }
 
         /**
-         * NickName.
+         * <p>This parameter is required.</p>
          */
         public Builder nickName(String nickName) {
             this.putQueryParameter("NickName", nickName);
@@ -151,7 +197,19 @@ public class AddUserRequest extends Request {
         }
 
         /**
-         * UserType.
+         * RoleIds.
+         */
+        public Builder roleIds(String roleIds) {
+            this.putBodyParameter("RoleIds", roleIds);
+            this.roleIds = roleIds;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder userType(Integer userType) {
             this.putQueryParameter("UserType", userType);

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DownloadDataTrackResultResponseBody} extends {@link TeaModel}
  *
  * <p>DownloadDataTrackResultResponseBody</p>
  */
 public class DownloadDataTrackResultResponseBody extends TeaModel {
-    @NameInMap("DownloadKeyId")
+    @com.aliyun.core.annotation.NameInMap("DownloadKeyId")
     private String downloadKeyId;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DownloadDataTrackResultResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DownloadDataTrackResultResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the download key, which is used to download the parsing result of the data tracking task.
+         * <p>The ID of the download key, which is used to download the parsing result of the data tracking task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e23dd7ec-a19f-4a69-8eb3-8ffd26e6****</p>
          */
         public Builder downloadKeyId(String downloadKeyId) {
             this.downloadKeyId = downloadKeyId;
@@ -94,7 +102,10 @@ public class DownloadDataTrackResultResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +113,10 @@ public class DownloadDataTrackResultResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +124,10 @@ public class DownloadDataTrackResultResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B43AD641-49C2-5299-9E06-1B37EC1B****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +135,14 @@ public class DownloadDataTrackResultResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

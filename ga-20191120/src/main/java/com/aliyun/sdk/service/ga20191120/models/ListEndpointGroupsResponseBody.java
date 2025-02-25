@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListEndpointGroupsResponseBody</p>
  */
 public class ListEndpointGroupsResponseBody extends TeaModel {
-    @NameInMap("EndpointGroups")
+    @com.aliyun.core.annotation.NameInMap("EndpointGroups")
     private java.util.List < EndpointGroups> endpointGroups;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListEndpointGroupsResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The configurations of the endpoint groups.
+         * The configurations of the endpoint group.
          */
         public Builder endpointGroups(java.util.List < EndpointGroups> endpointGroups) {
             this.endpointGroups = endpointGroups;
@@ -132,28 +131,28 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
     } 
 
     public static class EndpointConfigurations extends TeaModel {
-        @NameInMap("EnableClientIPPreservation")
+        @com.aliyun.core.annotation.NameInMap("EnableClientIPPreservation")
         private Boolean enableClientIPPreservation;
 
-        @NameInMap("Endpoint")
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
 
-        @NameInMap("EndpointId")
+        @com.aliyun.core.annotation.NameInMap("EndpointId")
         private String endpointId;
 
-        @NameInMap("ProbePort")
+        @com.aliyun.core.annotation.NameInMap("ProbePort")
         private Integer probePort;
 
-        @NameInMap("ProbeProtocol")
+        @com.aliyun.core.annotation.NameInMap("ProbeProtocol")
         private String probeProtocol;
 
-        @NameInMap("SubAddress")
+        @com.aliyun.core.annotation.NameInMap("SubAddress")
         private String subAddress;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private EndpointConfigurations(Builder builder) {
@@ -262,7 +261,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint ID.
+             * The ID of the endpoint.
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;
@@ -278,7 +277,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol that is used to monitor latency. Valid values:
+             * The protocol that is used to monitor latency.
              * <p>
              * 
              * *   **icmp**
@@ -290,7 +289,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 弹性网卡的私网IP地址。
+             * The private IP address of the ENI.
              */
             public Builder subAddress(String subAddress) {
                 this.subAddress = subAddress;
@@ -301,13 +300,15 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
              * The type of the endpoint. Valid values:
              * <p>
              * 
-             * *   **Domain**: a custom domain name
-             * *   **Ip**: a custom IP address
-             * *   **PublicIp**: a public IP address provided by Alibaba Cloud
-             * *   **ECS**: an Elastic Compute Service (ECS) instance
-             * *   **SLB**: a Server Load Balancer (SLB) instance
-             * *   **ALB**: an Application Load Balancer (ALB) instance
-             * *   **OSS**: an Object Storage Service (OSS) bucket
+             * *   **Domain:** a custom domain name.
+             * *   **Ip:** a custom IP address.
+             * *   **PublicIp:** a public IP address provided by Alibaba Cloud.
+             * *   **ECS:** an Elastic Compute Service (ECS) instance.
+             * *   **SLB:** a Classic Load Balancer (SLB) instance.
+             * *   **ALB:** an Application Load Balancer (ALB) instance.
+             * *   **OSS:** an Object Storage Service (OSS) bucket.
+             * *   **ENI:** an elastic network interface (ENI).
+             * *   **NLB:** a Network Load Balancer (NLB) instance.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -330,10 +331,10 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
 
     }
     public static class PortOverrides extends TeaModel {
-        @NameInMap("EndpointPort")
+        @com.aliyun.core.annotation.NameInMap("EndpointPort")
         private Integer endpointPort;
 
-        @NameInMap("ListenerPort")
+        @com.aliyun.core.annotation.NameInMap("ListenerPort")
         private Integer listenerPort;
 
         private PortOverrides(Builder builder) {
@@ -391,13 +392,13 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
 
     }
     public static class ServiceManagedInfos extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("ChildType")
+        @com.aliyun.core.annotation.NameInMap("ChildType")
         private String childType;
 
-        @NameInMap("IsManaged")
+        @com.aliyun.core.annotation.NameInMap("IsManaged")
         private Boolean isManaged;
 
         private ServiceManagedInfos(Builder builder) {
@@ -441,15 +442,15 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             private Boolean isManaged; 
 
             /**
-             * The name of the action on the managed instance. Valid values:
+             * The name of the action that was performed on the managed instance. Valid values:
              * <p>
              * 
-             * *   **Create**
-             * *   **Update**
-             * *   **Delete**
-             * *   **Associate**
-             * *   **UserUnmanaged**
-             * *   **CreateChild**
+             * *   **Create:** Create an instance.
+             * *   **Update:** Update the current instance.
+             * *   **Delete:** Delete the current instance.
+             * *   **Associate:** Reference the current instance.
+             * *   **UserUnmanaged:** Unmanage the instance.
+             * *   **CreateChild:** Create a child resource in the current instance.
              */
             public Builder action(String action) {
                 this.action = action;
@@ -460,15 +461,15 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
              * The type of the child resource. Valid values:
              * <p>
              * 
-             * *   **Listener**: listener
-             * *   **IpSet**: acceleration region
-             * *   **EndpointGroup**: endpoint group
-             * *   **ForwardingRule**: forwarding rule
-             * *   **Endpoint**: endpoint
-             * *   **EndpointGroupDestination**: protocol mapping of an endpoint group associated with a custom routing listener
-             * *   **EndpointPolicy**: traffic policy of an endpoint associated with a custom routing listener
+             * *   **Listener:** listener.
+             * *   **IpSet:** acceleration region.
+             * *   **EndpointGroup:** endpoint group.
+             * *   **ForwardingRule:** forwarding rule.
+             * *   **Endpoint:** endpoint.
+             * *   **EndpointGroupDestination:** the protocol mapping of an endpoint group associated with a custom routing listener.
+             * *   **EndpointPolicy:** the traffic policy of an endpoint associated with a custom routing listener.
              * 
-             * >  This parameter is valid only if **Action** is set to **CreateChild**.
+             * >  This parameter takes effect only if you set **Action** to **CreateChild**.
              */
             public Builder childType(String childType) {
                 this.childType = childType;
@@ -495,10 +496,10 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -533,7 +534,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * The tag key of the endpoint group.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -541,7 +542,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * The tag value of the endpoint group.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -556,79 +557,82 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
 
     }
     public static class EndpointGroups extends TeaModel {
-        @NameInMap("AcceleratorId")
+        @com.aliyun.core.annotation.NameInMap("AcceleratorId")
         private String acceleratorId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EndpointConfigurations")
+        @com.aliyun.core.annotation.NameInMap("EndpointConfigurations")
         private java.util.List < EndpointConfigurations> endpointConfigurations;
 
-        @NameInMap("EndpointGroupId")
+        @com.aliyun.core.annotation.NameInMap("EndpointGroupId")
         private String endpointGroupId;
 
-        @NameInMap("EndpointGroupIpList")
+        @com.aliyun.core.annotation.NameInMap("EndpointGroupIpList")
         private java.util.List < String > endpointGroupIpList;
 
-        @NameInMap("EndpointGroupRegion")
+        @com.aliyun.core.annotation.NameInMap("EndpointGroupRegion")
         private String endpointGroupRegion;
 
-        @NameInMap("EndpointGroupType")
+        @com.aliyun.core.annotation.NameInMap("EndpointGroupType")
         private String endpointGroupType;
 
-        @NameInMap("EndpointGroupUnconfirmedIpList")
+        @com.aliyun.core.annotation.NameInMap("EndpointGroupUnconfirmedIpList")
         private java.util.List < String > endpointGroupUnconfirmedIpList;
 
-        @NameInMap("EndpointRequestProtocol")
+        @com.aliyun.core.annotation.NameInMap("EndpointProtocolVersion")
+        private String endpointProtocolVersion;
+
+        @com.aliyun.core.annotation.NameInMap("EndpointRequestProtocol")
         private String endpointRequestProtocol;
 
-        @NameInMap("ForwardingRuleIds")
+        @com.aliyun.core.annotation.NameInMap("ForwardingRuleIds")
         private java.util.List < String > forwardingRuleIds;
 
-        @NameInMap("HealthCheckEnabled")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckEnabled")
         private Boolean healthCheckEnabled;
 
-        @NameInMap("HealthCheckIntervalSeconds")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckIntervalSeconds")
         private Integer healthCheckIntervalSeconds;
 
-        @NameInMap("HealthCheckPath")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckPath")
         private String healthCheckPath;
 
-        @NameInMap("HealthCheckPort")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckPort")
         private Integer healthCheckPort;
 
-        @NameInMap("HealthCheckProtocol")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckProtocol")
         private String healthCheckProtocol;
 
-        @NameInMap("ListenerId")
+        @com.aliyun.core.annotation.NameInMap("ListenerId")
         private String listenerId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PortOverrides")
+        @com.aliyun.core.annotation.NameInMap("PortOverrides")
         private java.util.List < PortOverrides> portOverrides;
 
-        @NameInMap("ServiceId")
+        @com.aliyun.core.annotation.NameInMap("ServiceId")
         private String serviceId;
 
-        @NameInMap("ServiceManaged")
+        @com.aliyun.core.annotation.NameInMap("ServiceManaged")
         private Boolean serviceManaged;
 
-        @NameInMap("ServiceManagedInfos")
+        @com.aliyun.core.annotation.NameInMap("ServiceManagedInfos")
         private java.util.List < ServiceManagedInfos> serviceManagedInfos;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("ThresholdCount")
+        @com.aliyun.core.annotation.NameInMap("ThresholdCount")
         private Integer thresholdCount;
 
-        @NameInMap("TrafficPercentage")
+        @com.aliyun.core.annotation.NameInMap("TrafficPercentage")
         private Integer trafficPercentage;
 
         private EndpointGroups(Builder builder) {
@@ -640,6 +644,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             this.endpointGroupRegion = builder.endpointGroupRegion;
             this.endpointGroupType = builder.endpointGroupType;
             this.endpointGroupUnconfirmedIpList = builder.endpointGroupUnconfirmedIpList;
+            this.endpointProtocolVersion = builder.endpointProtocolVersion;
             this.endpointRequestProtocol = builder.endpointRequestProtocol;
             this.forwardingRuleIds = builder.forwardingRuleIds;
             this.healthCheckEnabled = builder.healthCheckEnabled;
@@ -721,6 +726,13 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
          */
         public java.util.List < String > getEndpointGroupUnconfirmedIpList() {
             return this.endpointGroupUnconfirmedIpList;
+        }
+
+        /**
+         * @return endpointProtocolVersion
+         */
+        public String getEndpointProtocolVersion() {
+            return this.endpointProtocolVersion;
         }
 
         /**
@@ -851,6 +863,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             private String endpointGroupRegion; 
             private String endpointGroupType; 
             private java.util.List < String > endpointGroupUnconfirmedIpList; 
+            private String endpointProtocolVersion; 
             private String endpointRequestProtocol; 
             private java.util.List < String > forwardingRuleIds; 
             private Boolean healthCheckEnabled; 
@@ -870,7 +883,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             private Integer trafficPercentage; 
 
             /**
-             * The GA instance ID.
+             * The ID of the GA instance.
              */
             public Builder acceleratorId(String acceleratorId) {
                 this.acceleratorId = acceleratorId;
@@ -886,7 +899,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of the endpoints in the endpoint group.
+             * The configurations of endpoints in the endpoint group.
              */
             public Builder endpointConfigurations(java.util.List < EndpointConfigurations> endpointConfigurations) {
                 this.endpointConfigurations = endpointConfigurations;
@@ -894,7 +907,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint group ID.
+             * The ID of the endpoint group.
              */
             public Builder endpointGroupId(String endpointGroupId) {
                 this.endpointGroupId = endpointGroupId;
@@ -910,7 +923,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the endpoint group.
+             * The ID of the region where the endpoint group is created.
              */
             public Builder endpointGroupRegion(String endpointGroupRegion) {
                 this.endpointGroupRegion = endpointGroupRegion;
@@ -921,8 +934,8 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
              * The type of the endpoint group. Valid values:
              * <p>
              * 
-             * *   **default**
-             * *   **virtual**
+             * *   **default**: a default endpoint group
+             * *   **virtual:** a virtual endpoint group.
              */
             public Builder endpointGroupType(String endpointGroupType) {
                 this.endpointGroupType = endpointGroupType;
@@ -930,7 +943,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint group IP addresses to be confirmed. After the GA instance is upgraded, the IP addresses that are added to the endpoint group need to be confirmed.
+             * The endpoint group IP addresses to be confirmed after the GA instance is upgraded.
              */
             public Builder endpointGroupUnconfirmedIpList(java.util.List < String > endpointGroupUnconfirmedIpList) {
                 this.endpointGroupUnconfirmedIpList = endpointGroupUnconfirmedIpList;
@@ -938,7 +951,15 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol that is used by the backend service. Valid values:
+             * EndpointProtocolVersion.
+             */
+            public Builder endpointProtocolVersion(String endpointProtocolVersion) {
+                this.endpointProtocolVersion = endpointProtocolVersion;
+                return this;
+            }
+
+            /**
+             * The protocol that is used by the backend server.
              * <p>
              * 
              * *   **HTTP**
@@ -958,7 +979,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the health check feature is enabled. Valid values:
+             * Indicates whether the health check feature is enabled.
              * <p>
              * 
              * *   **true**
@@ -970,7 +991,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The interval at which health checks are performed. Unit: seconds.
+             * The interval at which you want to perform health checks. Unit: seconds.
              */
             public Builder healthCheckIntervalSeconds(Integer healthCheckIntervalSeconds) {
                 this.healthCheckIntervalSeconds = healthCheckIntervalSeconds;
@@ -978,7 +999,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The path based on which the system performs health checks.
+             * The path that is used for health checks.
              */
             public Builder healthCheckPath(String healthCheckPath) {
                 this.healthCheckPath = healthCheckPath;
@@ -997,9 +1018,9 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
              * The protocol over which health check requests are sent. Valid values:
              * <p>
              * 
-             * *   **tcp**
-             * *   **http**
-             * *   **https**
+             * *   **tcp** or **TCP**
+             * *   **http** or **HTTP**
+             * *   **https** or **HTTPS**
              */
             public Builder healthCheckProtocol(String healthCheckProtocol) {
                 this.healthCheckProtocol = healthCheckProtocol;
@@ -1007,7 +1028,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The listener ID.
+             * The ID of the listener.
              */
             public Builder listenerId(String listenerId) {
                 this.listenerId = listenerId;
@@ -1034,7 +1055,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
              * The service that manages the instance.
              * <p>
              * 
-             * >  This parameter is valid only if **ServiceManaged** is set to **True**.
+             * >  This parameter takes effect only if the value of **Service managed** is **true**.
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -1057,7 +1078,9 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
              * The actions that users can perform on the managed instance.
              * <p>
              * 
-             * >  This parameter is valid only if **ServiceManaged** is set to **True**.
+             * > 
+             * 
+             * *   This parameter takes effect only if the value of **ServiceManaged** is **true**.
              * 
              * *   Users can perform only specific actions on a managed instance.
              */
@@ -1070,10 +1093,10 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
              * The status of the endpoint group. Valid values:
              * <p>
              * 
-             * *   **init**
-             * *   **active**
-             * *   **updating**
-             * *   **deleteing**
+             * *   **init:** The endpoint group is being initialized.
+             * *   **active:** The endpoint group is running normally.
+             * *   **updating:**The endpoint group is being updated.
+             * *   **deleteing:** The endpoint group is being deleted.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -1081,7 +1104,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * The tag of the endpoint group.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -1097,7 +1120,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The weight of the endpoint group when the listener is associated with multiple endpoint groups.
+             * The value of the traffic distribution ratio. If a listener is associated with multiple endpoint groups, you can set this parameter to distribute different percentages of traffic to the endpoint groups.
              */
             public Builder trafficPercentage(Integer trafficPercentage) {
                 this.trafficPercentage = trafficPercentage;

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRolesResponseBody} extends {@link TeaModel}
  *
  * <p>ListRolesResponseBody</p>
  */
 public class ListRolesResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListRolesResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class ListRolesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -79,22 +84,22 @@ public class ListRolesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * data
+         * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * httpStatusCode
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -102,7 +107,7 @@ public class ListRolesResponseBody extends TeaModel {
         }
 
         /**
-         * message
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +115,7 @@ public class ListRolesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +123,7 @@ public class ListRolesResponseBody extends TeaModel {
         }
 
         /**
-         * success
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,29 +136,35 @@ public class ListRolesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRolesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRolesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("BuId")
+        @com.aliyun.core.annotation.NameInMap("BuId")
         private Long buId;
 
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("RoleGroupId")
+        @com.aliyun.core.annotation.NameInMap("RoleGroupId")
         private Long roleGroupId;
 
-        @NameInMap("RoleGroupName")
+        @com.aliyun.core.annotation.NameInMap("RoleGroupName")
         private String roleGroupName;
 
-        @NameInMap("RoleId")
+        @com.aliyun.core.annotation.NameInMap("RoleId")
         private Long roleId;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private Data(Builder builder) {
@@ -242,7 +253,7 @@ public class ListRolesResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * 租户id
+             * BuId.
              */
             public Builder buId(Long buId) {
                 this.buId = buId;
@@ -250,7 +261,7 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * 角色code
+             * Code.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -258,7 +269,7 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -266,7 +277,7 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * 角色描述
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -274,7 +285,7 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * 所属角色组id
+             * RoleGroupId.
              */
             public Builder roleGroupId(Long roleGroupId) {
                 this.roleGroupId = roleGroupId;
@@ -282,7 +293,7 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * 所属角色组名称
+             * RoleGroupName.
              */
             public Builder roleGroupName(String roleGroupName) {
                 this.roleGroupName = roleGroupName;
@@ -290,7 +301,7 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * 角色id
+             * RoleId.
              */
             public Builder roleId(Long roleId) {
                 this.roleId = roleId;
@@ -298,7 +309,7 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * 角色名称
+             * Title.
              */
             public Builder title(String title) {
                 this.title = title;

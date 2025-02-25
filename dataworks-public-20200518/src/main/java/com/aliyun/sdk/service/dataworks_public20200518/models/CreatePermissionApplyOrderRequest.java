@@ -1,57 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePermissionApplyOrderRequest} extends {@link RequestModel}
  *
  * <p>CreatePermissionApplyOrderRequest</p>
  */
 public class CreatePermissionApplyOrderRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ApplyObject")
-    @Validation(required = true)
-    private java.util.List < ApplyObject> applyObject;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplyObject")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<ApplyObject> applyObject;
 
-    @Query
-    @NameInMap("ApplyReason")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplyReason")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String applyReason;
 
-    @Query
-    @NameInMap("ApplyUserIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplyUserIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String applyUserIds;
 
-    @Query
-    @NameInMap("Deadline")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Deadline")
     private Long deadline;
 
-    @Query
-    @NameInMap("EngineType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineType")
     private String engineType;
 
-    @Query
-    @NameInMap("MaxComputeProjectName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxComputeProjectName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String maxComputeProjectName;
 
-    @Query
-    @NameInMap("OrderType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderType")
     private Integer orderType;
 
-    @Query
-    @NameInMap("WorkspaceId")
-    @Validation(required = true, maximum = 999999)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 999999)
     private Integer workspaceId;
 
     private CreatePermissionApplyOrderRequest(Builder builder) {
@@ -90,7 +94,7 @@ public class CreatePermissionApplyOrderRequest extends Request {
     /**
      * @return applyObject
      */
-    public java.util.List < ApplyObject> getApplyObject() {
+    public java.util.List<ApplyObject> getApplyObject() {
         return this.applyObject;
     }
 
@@ -145,7 +149,7 @@ public class CreatePermissionApplyOrderRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreatePermissionApplyOrderRequest, Builder> {
         private String regionId; 
-        private java.util.List < ApplyObject> applyObject; 
+        private java.util.List<ApplyObject> applyObject; 
         private String applyReason; 
         private String applyUserIds; 
         private Long deadline; 
@@ -172,7 +176,7 @@ public class CreatePermissionApplyOrderRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -181,16 +185,21 @@ public class CreatePermissionApplyOrderRequest extends Request {
         }
 
         /**
-         * ApplyObject.
+         * <p>The objects on which you want to request permissions.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder applyObject(java.util.List < ApplyObject> applyObject) {
+        public Builder applyObject(java.util.List<ApplyObject> applyObject) {
             this.putQueryParameter("ApplyObject", applyObject);
             this.applyObject = applyObject;
             return this;
         }
 
         /**
-         * The reason for your request. The administrator determines whether to approve the request based on the reason.
+         * <p>The reason for your request. The administrator determines whether to approve the request based on the reason.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>I need to use this table</p>
          */
         public Builder applyReason(String applyReason) {
             this.putQueryParameter("ApplyReason", applyReason);
@@ -199,7 +208,11 @@ public class CreatePermissionApplyOrderRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account for which you want to request permissions. If you want to request permissions for multiple Alibaba Cloud accounts, separate the IDs of the accounts with commas (,).
+         * <p>The ID of the Alibaba Cloud account for which you want to request permissions. If you want to request permissions for multiple Alibaba Cloud accounts, separate the IDs of the accounts with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>267842600408993176,267842600408993177</p>
          */
         public Builder applyUserIds(String applyUserIds) {
             this.putQueryParameter("ApplyUserIds", applyUserIds);
@@ -208,14 +221,10 @@ public class CreatePermissionApplyOrderRequest extends Request {
         }
 
         /**
-         * The expiration time of the permissions that you request. This value is a UNIX timestamp. If you do not specify a value for this parameter, January 1, 2065 is used as the expiration time.
-         * <p>
+         * <p>The expiration time of the permissions that you request. This value is a UNIX timestamp. The default value is January 1, 2065. If LabelSecurity is disabled for the MaxCompute project in which you want to request permissions on the fields of a table, or the security level of the fields is 0 or is lower than or equal to the security level of the Alibaba Cloud account for which you want to request permissions, you can request only permanent permissions. You can go to the Workspace Management page in the DataWorks console, click MaxCompute Management in the left-side navigation pane, and then check whether column-level access control is enabled. You can go to your DataWorks workspace, view the security level of the fields in Data Map, and then view the security level of the Alibaba Cloud account on the User Management page.</p>
          * 
-         * If LabelSecurity is disabled for the MaxCompute project in which you want to request permissions on the fields of a table, or the security level of the fields is 0 or is lower than or equal to the security level of the Alibaba Cloud account for which you want to request permissions, you can request only permanent permissions.
-         * 
-         * You can go to the Workspace Management page of the DataWorks console, click MaxCompute Management in the left-side navigation pane, and then check whether column-level access control is enabled.
-         * 
-         * You can go to your DataWorks workspace, view the security level of the fields in DataMap, and then view the security level of the Alibaba Cloud account on the User Management page.
+         * <strong>example:</strong>
+         * <p>1617115071885</p>
          */
         public Builder deadline(Long deadline) {
             this.putQueryParameter("Deadline", deadline);
@@ -224,7 +233,10 @@ public class CreatePermissionApplyOrderRequest extends Request {
         }
 
         /**
-         * The type of the compute engine instance in which you want to request permissions on the fields of a table. The parameter value is odps and cannot be changed. This value indicates that you can request permissions only on fields of tables in MaxCompute compute engine instances.
+         * <p>The type of the compute engine in which you want to request permissions on the fields of a table. The parameter value is odps and cannot be changed. This value indicates that you can request permissions only on fields of tables in the MaxCompute compute engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps</p>
          */
         public Builder engineType(String engineType) {
             this.putQueryParameter("EngineType", engineType);
@@ -233,7 +245,11 @@ public class CreatePermissionApplyOrderRequest extends Request {
         }
 
         /**
-         * The name of the MaxCompute project in which you request permissions on the fields of a table.
+         * <p>The name of the MaxCompute project in which you request permissions on the fields of a table.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aMaxcomputeProjectName</p>
          */
         public Builder maxComputeProjectName(String maxComputeProjectName) {
             this.putQueryParameter("MaxComputeProjectName", maxComputeProjectName);
@@ -242,7 +258,10 @@ public class CreatePermissionApplyOrderRequest extends Request {
         }
 
         /**
-         * The type of the permission request order. The parameter value is 1 and cannot be changed. This value indicates ACL-based authorization.
+         * <p>The type of the permission request order. The parameter value is 1 and cannot be changed. This value indicates ACL-based authorization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder orderType(Integer orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -251,7 +270,11 @@ public class CreatePermissionApplyOrderRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace that is associated with the MaxCompute project in which you want to request permissions on the fields of a table. You can go to the Workspace Management page in the DataWorks console to view the workspace ID.
+         * <p>The ID of the DataWorks workspace that is associated with the MaxCompute project in which you want to request permissions on the fields of a table. You can go to the SettingCenter page in the DataWorks console to view the workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder workspaceId(Integer workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);
@@ -266,9 +289,15 @@ public class CreatePermissionApplyOrderRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreatePermissionApplyOrderRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePermissionApplyOrderRequest</p>
+     */
     public static class ColumnMetaList extends TeaModel {
-        @NameInMap("Name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
         private ColumnMetaList(Builder builder) {
@@ -294,10 +323,11 @@ public class CreatePermissionApplyOrderRequest extends Request {
             private String name; 
 
             /**
-             * The name of the field on which you want to request permissions. If you want to request permissions on an entire table, enter the names of all fields in the table.
-             * <p>
+             * <p>The field on which you want to request permissions. If you want to request permissions on an entire table, enter all fields in the table. You can request permissions on specific fields of a table in a MaxCompute project only after LabelSecurity is enabled for this project. If LabelSecurity is disabled, you can request permissions only on an entire table.</p>
+             * <p>This parameter is required.</p>
              * 
-             * You can request permissions on specific fields of a table in a MaxCompute project only after LabelSecurity is enabled for this project. If LabelSecurity is disabled, you can request permissions only on an entire table.
+             * <strong>example:</strong>
+             * <p>aColumnName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -311,17 +341,23 @@ public class CreatePermissionApplyOrderRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreatePermissionApplyOrderRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePermissionApplyOrderRequest</p>
+     */
     public static class ApplyObject extends TeaModel {
-        @NameInMap("Actions")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Actions")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String actions;
 
-        @NameInMap("ColumnMetaList")
-        @Validation(required = true)
-        private java.util.List < ColumnMetaList> columnMetaList;
+        @com.aliyun.core.annotation.NameInMap("ColumnMetaList")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List<ColumnMetaList> columnMetaList;
 
-        @NameInMap("Name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
         private ApplyObject(Builder builder) {
@@ -348,7 +384,7 @@ public class CreatePermissionApplyOrderRequest extends Request {
         /**
          * @return columnMetaList
          */
-        public java.util.List < ColumnMetaList> getColumnMetaList() {
+        public java.util.List<ColumnMetaList> getColumnMetaList() {
             return this.columnMetaList;
         }
 
@@ -361,11 +397,15 @@ public class CreatePermissionApplyOrderRequest extends Request {
 
         public static final class Builder {
             private String actions; 
-            private java.util.List < ColumnMetaList> columnMetaList; 
+            private java.util.List<ColumnMetaList> columnMetaList; 
             private String name; 
 
             /**
-             * The permission that you want to request. If you want to request multiple permissions at the same time, separate them with commas (,). You can request only the following permissions: Select, Describe, Drop, Alter, Update, and Download.
+             * <p>The permission that you want to request. If you want to request multiple permissions at the same time, separate them with commas (,). You can request only the following permissions: Select, Describe, Drop, Alter, Update, and Download.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Select,Describe</p>
              */
             public Builder actions(String actions) {
                 this.actions = actions;
@@ -373,15 +413,20 @@ public class CreatePermissionApplyOrderRequest extends Request {
             }
 
             /**
-             * ColumnMetaList.
+             * <p>The fields on which you want to request permissions.</p>
+             * <p>This parameter is required.</p>
              */
-            public Builder columnMetaList(java.util.List < ColumnMetaList> columnMetaList) {
+            public Builder columnMetaList(java.util.List<ColumnMetaList> columnMetaList) {
                 this.columnMetaList = columnMetaList;
                 return this;
             }
 
             /**
-             * The name of the object on which you want to request permissions. You can request permissions only on MaxCompute tables. Set this parameter to the name of the table on which you want to request permissions.
+             * <p>The name of the object on which you want to request permissions. You can request permissions only on MaxCompute tables. Set this parameter to the name of the table on which you want to request permissions.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aTableName</p>
              */
             public Builder name(String name) {
                 this.name = name;

@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddRuleV4Request} extends {@link RequestModel}
  *
  * <p>AddRuleV4Request</p>
  */
 public class AddRuleV4Request extends Request {
-    @Query
-    @NameInMap("BaseMeAgentId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BaseMeAgentId")
     private Long baseMeAgentId;
 
-    @Body
-    @NameInMap("IsCopy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IsCopy")
     private Boolean isCopy;
 
-    @Body
-    @NameInMap("JsonStrForRule")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("JsonStrForRule")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jsonStrForRule;
 
     private AddRuleV4Request(Builder builder) {
@@ -83,7 +88,7 @@ public class AddRuleV4Request extends Request {
         } 
 
         /**
-         * baseMeAgentId
+         * <p>baseMeAgentId</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -101,7 +106,7 @@ public class AddRuleV4Request extends Request {
         }
 
         /**
-         * JsonStrForRule.
+         * <p>This parameter is required.</p>
          */
         public Builder jsonStrForRule(String jsonStrForRule) {
             this.putBodyParameter("JsonStrForRule", jsonStrForRule);

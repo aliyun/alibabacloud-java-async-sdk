@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.eventbridge.models.*;
  * <p>ListApiDestinationsResponseBody</p>
  */
 public class ListApiDestinationsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListApiDestinationsResponseBody(Builder builder) {
@@ -112,10 +111,10 @@ public class ListApiDestinationsResponseBody extends TeaModel {
     } 
 
     public static class HttpApiParameters extends TeaModel {
-        @NameInMap("Endpoint")
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
 
-        @NameInMap("Method")
+        @com.aliyun.core.annotation.NameInMap("Method")
         private String method;
 
         private HttpApiParameters(Builder builder) {
@@ -188,19 +187,19 @@ public class ListApiDestinationsResponseBody extends TeaModel {
 
     }
     public static class ApiDestinations extends TeaModel {
-        @NameInMap("ApiDestinationName")
+        @com.aliyun.core.annotation.NameInMap("ApiDestinationName")
         private String apiDestinationName;
 
-        @NameInMap("ConnectionName")
+        @com.aliyun.core.annotation.NameInMap("ConnectionName")
         private String connectionName;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("HttpApiParameters")
+        @com.aliyun.core.annotation.NameInMap("HttpApiParameters")
         private HttpApiParameters httpApiParameters;
 
         private ApiDestinations(Builder builder) {
@@ -309,16 +308,16 @@ public class ListApiDestinationsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("ApiDestinations")
+        @com.aliyun.core.annotation.NameInMap("ApiDestinations")
         private java.util.List < ApiDestinations> apiDestinations;
 
-        @NameInMap("MaxResults")
+        @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Float maxResults;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Float total;
 
         private Data(Builder builder) {

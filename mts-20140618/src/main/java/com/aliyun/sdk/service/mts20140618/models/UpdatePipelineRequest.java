@@ -1,58 +1,63 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePipelineRequest} extends {@link RequestModel}
  *
  * <p>UpdatePipelineRequest</p>
  */
 public class UpdatePipelineRequest extends Request {
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtendConfig")
+    private String extendConfig;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("NotifyConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NotifyConfig")
     private String notifyConfig;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PipelineId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PipelineId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pipelineId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Role")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Role")
     private String role;
 
-    @Query
-    @NameInMap("State")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("State")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String state;
 
     private UpdatePipelineRequest(Builder builder) {
         super(builder);
+        this.extendConfig = builder.extendConfig;
         this.name = builder.name;
         this.notifyConfig = builder.notifyConfig;
         this.ownerAccount = builder.ownerAccount;
@@ -75,6 +80,13 @@ public class UpdatePipelineRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return extendConfig
+     */
+    public String getExtendConfig() {
+        return this.extendConfig;
     }
 
     /**
@@ -141,6 +153,7 @@ public class UpdatePipelineRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdatePipelineRequest, Builder> {
+        private String extendConfig; 
         private String name; 
         private String notifyConfig; 
         private String ownerAccount; 
@@ -157,6 +170,7 @@ public class UpdatePipelineRequest extends Request {
 
         private Builder(UpdatePipelineRequest request) {
             super(request);
+            this.extendConfig = request.extendConfig;
             this.name = request.name;
             this.notifyConfig = request.notifyConfig;
             this.ownerAccount = request.ownerAccount;
@@ -169,7 +183,20 @@ public class UpdatePipelineRequest extends Request {
         } 
 
         /**
-         * Name.
+         * ExtendConfig.
+         */
+        public Builder extendConfig(String extendConfig) {
+            this.putQueryParameter("ExtendConfig", extendConfig);
+            this.extendConfig = extendConfig;
+            return this;
+        }
+
+        /**
+         * <p>The new name of the MPS queue. The value can contain letters, digits, and special characters such as hyphens (-) and can be up to 128 bytes in size. The value cannot start with a special character.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-pipeline-****</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -178,7 +205,10 @@ public class UpdatePipelineRequest extends Request {
         }
 
         /**
-         * NotifyConfig.
+         * <p>The Message Service (MNS) configuration, such as the information about the MNS queue or topic. For more information, see the &quot;NotifyConfig&quot; section of the <a href="https://help.aliyun.com/document_detail/29253.html">Parameter details</a> topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Topic&quot;:&quot;example-topic-****&quot;}</p>
          */
         public Builder notifyConfig(String notifyConfig) {
             this.putQueryParameter("NotifyConfig", notifyConfig);
@@ -205,7 +235,11 @@ public class UpdatePipelineRequest extends Request {
         }
 
         /**
-         * PipelineId.
+         * <p>The ID of the MPS queue that you want to update. To view the MPS queue ID, log on to the <strong>MPS console</strong> and choose <strong>Global Settings</strong> &gt; <strong>Pipelines</strong> in the left-side navigation pane.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d1ce4d3efcb549419193f50f1fcd****</p>
          */
         public Builder pipelineId(String pipelineId) {
             this.putQueryParameter("PipelineId", pipelineId);
@@ -232,7 +266,10 @@ public class UpdatePipelineRequest extends Request {
         }
 
         /**
-         * Role.
+         * <p>The role that is assigned to the current RAM user. To obtain the role, you can log on to the <strong>Resource Access Management (RAM) console</strong> and choose <strong>Identities</strong> &gt; <strong>Roles</strong> in the left-side navigation pane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunMTSDefaultRole</p>
          */
         public Builder role(String role) {
             this.putQueryParameter("Role", role);
@@ -241,7 +278,15 @@ public class UpdatePipelineRequest extends Request {
         }
 
         /**
-         * State.
+         * <p>The new state of the MPS queue.</p>
+         * <ul>
+         * <li><strong>Active</strong>: The MPS queue is active. Jobs in the MPS queue can be scheduled and run by MPS.</li>
+         * <li><strong>Paused</strong>: The MPS queue is paused. Jobs in the MPS queue cannot be scheduled or run by MPS, and all jobs remain in the Submitted state. Jobs that are running will not be affected.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Paused</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);

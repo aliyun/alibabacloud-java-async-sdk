@@ -168,18 +168,18 @@ public class DescribeFlowNodeInstanceLauncherLogRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeFlowNodeInstanceLauncherLogRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.length = response.length;
-            this.lines = response.lines;
-            this.nodeInstanceId = response.nodeInstanceId;
-            this.offset = response.offset;
-            this.projectId = response.projectId;
-            this.regionId = response.regionId;
-            this.reverse = response.reverse;
-            this.start = response.start;
-            this.startTime = response.startTime;
+        private Builder(DescribeFlowNodeInstanceLauncherLogRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.length = request.length;
+            this.lines = request.lines;
+            this.nodeInstanceId = request.nodeInstanceId;
+            this.offset = request.offset;
+            this.projectId = request.projectId;
+            this.regionId = request.regionId;
+            this.reverse = request.reverse;
+            this.start = request.start;
+            this.startTime = request.startTime;
         } 
 
         /**

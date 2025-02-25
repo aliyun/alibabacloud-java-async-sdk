@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeScopeUsersResponseBody</p>
  */
 public class DescribeScopeUsersResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeScopeUsersResponseBody(Builder builder) {
@@ -136,22 +135,30 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AliUid")
+        @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
 
-        @NameInMap("Domains")
+        @com.aliyun.core.annotation.NameInMap("CloudCode")
+        private String cloudCode;
+
+        @com.aliyun.core.annotation.NameInMap("Domains")
         private java.util.List < String > domains;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserId")
+        private String userId;
+
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private Data(Builder builder) {
             this.aliUid = builder.aliUid;
+            this.cloudCode = builder.cloudCode;
             this.domains = builder.domains;
             this.instanceId = builder.instanceId;
+            this.userId = builder.userId;
             this.userName = builder.userName;
         }
 
@@ -171,6 +178,13 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
         }
 
         /**
+         * @return cloudCode
+         */
+        public String getCloudCode() {
+            return this.cloudCode;
+        }
+
+        /**
          * @return domains
          */
         public java.util.List < String > getDomains() {
@@ -185,6 +199,13 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
         }
 
         /**
+         * @return userId
+         */
+        public String getUserId() {
+            return this.userId;
+        }
+
+        /**
          * @return userName
          */
         public String getUserName() {
@@ -193,8 +214,10 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long aliUid; 
+            private String cloudCode; 
             private java.util.List < String > domains; 
             private String instanceId; 
+            private String userId; 
             private String userName; 
 
             /**
@@ -202,6 +225,17 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
+                return this;
+            }
+
+            /**
+             * 云code。  取值：
+             * <p>
+             * - qcloud：腾讯云
+             * - hcloud：华为云
+             */
+            public Builder cloudCode(String cloudCode) {
+                this.cloudCode = cloudCode;
                 return this;
             }
 
@@ -218,6 +252,14 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * 多云用户ID。
+             */
+            public Builder userId(String userId) {
+                this.userId = userId;
                 return this;
             }
 

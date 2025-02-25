@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchCreateInstantSiteMonitorRequest} extends {@link RequestModel}
  *
  * <p>BatchCreateInstantSiteMonitorRequest</p>
  */
 public class BatchCreateInstantSiteMonitorRequest extends Request {
-    @Query
-    @NameInMap("TaskList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < TaskList> taskList;
 
     private BatchCreateInstantSiteMonitorRequest(Builder builder) {
@@ -55,7 +55,11 @@ public class BatchCreateInstantSiteMonitorRequest extends Request {
         } 
 
         /**
-         * TaskList.
+         * <p>The site monitoring tasks.</p>
+         * <blockquote>
+         * <p> You must create at least one site monitoring task. You must specify all of the <code>Address</code>, <code>TaskName</code>, and <code>TaskType</code> parameters in each request.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          */
         public Builder taskList(java.util.List < TaskList> taskList) {
             this.putQueryParameter("TaskList", taskList);
@@ -70,20 +74,26 @@ public class BatchCreateInstantSiteMonitorRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link BatchCreateInstantSiteMonitorRequest} extends {@link TeaModel}
+     *
+     * <p>BatchCreateInstantSiteMonitorRequest</p>
+     */
     public static class TaskList extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("IspCities")
+        @com.aliyun.core.annotation.NameInMap("IspCities")
         private String ispCities;
 
-        @NameInMap("OptionsJson")
+        @com.aliyun.core.annotation.NameInMap("OptionsJson")
         private String optionsJson;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
         private TaskList(Builder builder) {
@@ -145,10 +155,13 @@ public class BatchCreateInstantSiteMonitorRequest extends Request {
             private String taskType; 
 
             /**
-             * The URL or IP address that is monitored by the task.
-             * <p>
+             * <p>The URL or IP address that is monitored by the task.</p>
+             * <blockquote>
+             * <p> You must create at least one site monitoring task. You must specify all of the <code>Address</code>, <code>TaskName</code>, and <code>TaskType</code> parameters in each request.</p>
+             * </blockquote>
              * 
-             * >  You must create at least one site monitoring task. You must specify all of the `Address`, `TaskName`, and `TaskType` parameters in each request.
+             * <strong>example:</strong>
+             * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -156,12 +169,12 @@ public class BatchCreateInstantSiteMonitorRequest extends Request {
             }
 
             /**
-             * The detection points. If you leave this parameter empty, the system randomly selects three detection points.
-             * <p>
+             * <p>The detection points. If you leave this parameter empty, the system randomly selects three detection points.</p>
+             * <p>The value is a <code>JSON array</code>. Example: <code>{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}</code>. The values of the city field indicate Beijing, Hangzhou, and Qingdao.</p>
+             * <p>For information about how to obtain detection points, see <a href="https://help.aliyun.com/document_detail/115045.html">DescribeSiteMonitorISPCityList</a>.</p>
              * 
-             * The value is a `JSON array`. Example: `{"city":"546","isp":"465"},{"city":"572","isp":"465"},{"city":"738","isp":"465"}`. The values of the city field indicate Beijing, Hangzhou, and Qingdao.
-             * 
-             * For information about how to obtain detection points, see [DescribeSiteMonitorISPCityList](~~115045~~).
+             * <strong>example:</strong>
+             * <p>[{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}]</p>
              */
             public Builder ispCities(String ispCities) {
                 this.ispCities = ispCities;
@@ -169,7 +182,10 @@ public class BatchCreateInstantSiteMonitorRequest extends Request {
             }
 
             /**
-             * The extended options of the protocol that is used by the site monitoring task. The options vary based on the protocol.
+             * <p>The extended options of the protocol that is used by the site monitoring task. The options vary based on the protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;time_out&quot;:5000}</p>
              */
             public Builder optionsJson(String optionsJson) {
                 this.optionsJson = optionsJson;
@@ -177,12 +193,14 @@ public class BatchCreateInstantSiteMonitorRequest extends Request {
             }
 
             /**
-             * The name of the site monitoring task.
-             * <p>
+             * <p>The name of the site monitoring task.</p>
+             * <p>The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (_).</p>
+             * <blockquote>
+             * <p> You must create at least one site monitoring task. You must specify all of the <code>Address</code>, <code>TaskName</code>, and <code>TaskType</code> parameters in each request.</p>
+             * </blockquote>
              * 
-             * The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (\_).
-             * 
-             * >  You must create at least one site monitoring task. You must specify all of the `Address`, `TaskName`, and `TaskType` parameters in each request.
+             * <strong>example:</strong>
+             * <p>HangZhou_ECS1</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -190,12 +208,14 @@ public class BatchCreateInstantSiteMonitorRequest extends Request {
             }
 
             /**
-             * The type of the site monitoring task.
-             * <p>
+             * <p>The type of the site monitoring task.</p>
+             * <p>Valid values: HTTP, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.</p>
+             * <blockquote>
+             * <p> You must create at least one site monitoring task. You must specify all of the <code>Address</code>, <code>TaskName</code>, and <code>TaskType</code> parameters in each request.</p>
+             * </blockquote>
              * 
-             * Valid values: HTTP, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.
-             * 
-             * >  You must create at least one site monitoring task. You must specify all of the `Address`, `TaskName`, and `TaskType` parameters in each request.
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

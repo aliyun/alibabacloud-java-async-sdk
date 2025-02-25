@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInvocationsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInvocationsResponseBody</p>
  */
 public class DescribeInvocationsResponseBody extends TeaModel {
-    @NameInMap("Invocations")
-    private java.util.List < Invocations> invocations;
+    @com.aliyun.core.annotation.NameInMap("Invocations")
+    private java.util.List<Invocations> invocations;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeInvocationsResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
     /**
      * @return invocations
      */
-    public java.util.List < Invocations> getInvocations() {
+    public java.util.List<Invocations> getInvocations() {
         return this.invocations;
     }
 
@@ -79,22 +84,25 @@ public class DescribeInvocationsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Invocations> invocations; 
+        private java.util.List<Invocations> invocations; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * The command name.
+         * <p>The command name.</p>
          */
-        public Builder invocations(java.util.List < Invocations> invocations) {
+        public Builder invocations(java.util.List<Invocations> invocations) {
             this.invocations = invocations;
             return this;
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30637AD6-D977-4833-A54C-CC89483E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,30 +148,36 @@ public class DescribeInvocationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInvocationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInvocationsResponseBody</p>
+     */
     public static class Invocations extends TeaModel {
-        @NameInMap("CommandContent")
+        @com.aliyun.core.annotation.NameInMap("CommandContent")
         private String commandContent;
 
-        @NameInMap("CommandName")
+        @com.aliyun.core.annotation.NameInMap("CommandName")
         private String commandName;
 
-        @NameInMap("CommandType")
+        @com.aliyun.core.annotation.NameInMap("CommandType")
         private String commandType;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("InvocationStatus")
+        @com.aliyun.core.annotation.NameInMap("InvocationStatus")
         private String invocationStatus;
 
-        @NameInMap("InvokeId")
+        @com.aliyun.core.annotation.NameInMap("InvokeId")
         private String invokeId;
 
-        @NameInMap("InvokeStatus")
+        @com.aliyun.core.annotation.NameInMap("InvokeStatus")
         private String invokeStatus;
 
-        @NameInMap("Parameters")
-        private java.util.Map < String, ? > parameters;
+        @com.aliyun.core.annotation.NameInMap("Parameters")
+        private java.util.Map<String, ?> parameters;
 
         private Invocations(Builder builder) {
             this.commandContent = builder.commandContent;
@@ -227,7 +250,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         /**
          * @return parameters
          */
-        public java.util.Map < String, ? > getParameters() {
+        public java.util.Map<String, ?> getParameters() {
             return this.parameters;
         }
 
@@ -239,10 +262,13 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             private String invocationStatus; 
             private String invokeId; 
             private String invokeStatus; 
-            private java.util.Map < String, ? > parameters; 
+            private java.util.Map<String, ?> parameters; 
 
             /**
-             * The content of the command, which is Base64-encoded.
+             * <p>The content of the command, which is Base64-encoded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bHM=</p>
              */
             public Builder commandContent(String commandContent) {
                 this.commandContent = commandContent;
@@ -250,7 +276,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the command.
+             * <p>The name of the command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testname</p>
              */
             public Builder commandName(String commandName) {
                 this.commandName = commandName;
@@ -258,12 +287,15 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the command. Valid values:
-             * <p>
+             * <p>The type of the command. Valid values:</p>
+             * <ul>
+             * <li>RunBatScript: batch command (applicable to Windows instances).</li>
+             * <li>RunPowerShellScript: PowerShell command (applicable to Windows instances).</li>
+             * <li>RunShellScript: shell command (applicable to Linux instances).</li>
+             * </ul>
              * 
-             * *   RunBatScript: batch command (applicable to Windows instances).
-             * *   RunPowerShellScript: PowerShell command (applicable to Windows instances).
-             * *   RunShellScript: shell command (applicable to Linux instances).
+             * <strong>example:</strong>
+             * <p>RunShellScript</p>
              */
             public Builder commandType(String commandType) {
                 this.commandType = commandType;
@@ -271,7 +303,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the command was created.
+             * <p>The time when the command was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-11T06:37:16Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -279,20 +314,23 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the command. Valid values:
-             * <p>
+             * <p>The status of the command. Valid values:</p>
+             * <ul>
+             * <li>Pending: The command is being verified or sent.</li>
+             * <li>Invalid: The specified command type or parameter is invalid.</li>
+             * <li>Aborted: The command failed to be sent. To send a command to an instance, make sure that the instance is in the Running state and the command is sent to the instance within 1 minute.</li>
+             * <li>Running: The command is being run on the instance.</li>
+             * <li>Success: The command finishes running, and the exit code is 0.</li>
+             * <li>Failed: The command finishes running, but the exit code is not 0.</li>
+             * <li>Error: The running of the command cannot proceed due to an exception.</li>
+             * <li>Timeout: The running of the command times out.</li>
+             * <li>Cancelled: The running is canceled, and the command is not run.</li>
+             * <li>Stopping: The command that is running is being stopped.</li>
+             * <li>Terminated: The command is terminated while it is being run.</li>
+             * </ul>
              * 
-             * *   Pending: The command is being verified or sent.
-             * *   Invalid: The specified command type or parameter is invalid.
-             * *   Aborted: The command failed to be sent. To send a command to an instance, make sure that the instance is in the Running state and the command is sent to the instance within 1 minute.
-             * *   Running: The command is being run on the instance.
-             * *   Success: The command finishes running, and the exit code is 0.
-             * *   Failed: The command finishes running, but the exit code is not 0.
-             * *   Error: The running of the command cannot proceed due to an exception.
-             * *   Timeout: The running of the command times out.
-             * *   Cancelled: The running is canceled, and the command is not run.
-             * *   Stopping: The command that is running is being stopped.
-             * *   Terminated: The command is terminated while it is being run.
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder invocationStatus(String invocationStatus) {
                 this.invocationStatus = invocationStatus;
@@ -300,7 +338,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the command task.
+             * <p>The ID of the command task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-hz02p9545t6****</p>
              */
             public Builder invokeId(String invokeId) {
                 this.invokeId = invokeId;
@@ -308,13 +349,16 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the command. Valid values:
-             * <p>
+             * <p>The status of the command. Valid values:</p>
+             * <ul>
+             * <li>Running: The command is running.</li>
+             * <li>Finished: The command finishes running.</li>
+             * <li>Failed: The running of the command failed.</li>
+             * <li>Stopped: The running is stopped.</li>
+             * </ul>
              * 
-             * *   Running: The command is running.
-             * *   Finished: The command finishes running.
-             * *   Failed: The running of the command failed.
-             * *   Stopped: The running is stopped.
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder invokeStatus(String invokeStatus) {
                 this.invokeStatus = invokeStatus;
@@ -322,9 +366,12 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The custom parameters in the command. If no custom parameter exists in the command, the default value is {}.
+             * <p>The custom parameters in the command. If no custom parameter exists in the command, the default value is {}.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
-            public Builder parameters(java.util.Map < String, ? > parameters) {
+            public Builder parameters(java.util.Map<String, ?> parameters) {
                 this.parameters = parameters;
                 return this;
             }

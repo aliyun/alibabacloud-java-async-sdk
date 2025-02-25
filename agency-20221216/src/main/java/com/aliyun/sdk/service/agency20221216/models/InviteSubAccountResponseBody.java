@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InviteSubAccountResponseBody} extends {@link TeaModel}
  *
  * <p>InviteSubAccountResponseBody</p>
  */
 public class InviteSubAccountResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Results")
+    @com.aliyun.core.annotation.NameInMap("Results")
     private Results results;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private InviteSubAccountResponseBody(Builder builder) {
@@ -86,7 +91,12 @@ public class InviteSubAccountResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>Error Code: </br>
+         * • 200 OK</br>
+         * • 1109 System Error</br></p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +104,10 @@ public class InviteSubAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Message</br></p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +115,10 @@ public class InviteSubAccountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID, Alibaba Cloud will track errors with this ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +126,7 @@ public class InviteSubAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Results.
+         * <p>List of invitation sending results</p>
          */
         public Builder results(Results results) {
             this.results = results;
@@ -118,7 +134,10 @@ public class InviteSubAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Candidate Values: True/False, this value states if the current API calling action is successful. It does not guarantee the success of subsequent business operations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,14 +150,20 @@ public class InviteSubAccountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link InviteSubAccountResponseBody} extends {@link TeaModel}
+     *
+     * <p>InviteSubAccountResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("Days")
+        @com.aliyun.core.annotation.NameInMap("Days")
         private Integer days;
 
-        @NameInMap("InviteId")
+        @com.aliyun.core.annotation.NameInMap("InviteId")
         private Long inviteId;
 
-        @NameInMap("RegUrl")
+        @com.aliyun.core.annotation.NameInMap("RegUrl")
         private String regUrl;
 
         private Result(Builder builder) {
@@ -182,7 +207,10 @@ public class InviteSubAccountResponseBody extends TeaModel {
             private String regUrl; 
 
             /**
-             * Days.
+             * <p>Valid days of registration URL, count on daily basis.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder days(Integer days) {
                 this.days = days;
@@ -190,7 +218,10 @@ public class InviteSubAccountResponseBody extends TeaModel {
             }
 
             /**
-             * InviteId.
+             * <p>Invitation ID, The invitation status tracking code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder inviteId(Long inviteId) {
                 this.inviteId = inviteId;
@@ -198,7 +229,10 @@ public class InviteSubAccountResponseBody extends TeaModel {
             }
 
             /**
-             * RegUrl.
+             * <p>URL for Partner Customer Registration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://agency-intl.console.aliyun.com/customer/register?intl=true&fxinfo=-4uT%2FMWHnnUdvr5GXVd1AYK8luTnGgH3M7Y3lSCd5M1fxRwAkViTWtDJDpckh0HL">http://agency-intl.console.aliyun.com/customer/register?intl=true&amp;fxinfo=-4uT%2FMWHnnUdvr5GXVd1AYK8luTnGgH3M7Y3lSCd5M1fxRwAkViTWtDJDpckh0HL</a></p>
              */
             public Builder regUrl(String regUrl) {
                 this.regUrl = regUrl;
@@ -212,17 +246,23 @@ public class InviteSubAccountResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link InviteSubAccountResponseBody} extends {@link TeaModel}
+     *
+     * <p>InviteSubAccountResponseBody</p>
+     */
     public static class ResultsResult extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private Result result;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private ResultsResult(Builder builder) {
@@ -275,7 +315,10 @@ public class InviteSubAccountResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * Code.
+             * <p>Error Code, 200 OK</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -283,7 +326,10 @@ public class InviteSubAccountResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>Message, Notes of Code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -291,7 +337,7 @@ public class InviteSubAccountResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>Returning Message of Invitation Results</p>
              */
             public Builder result(Result result) {
                 this.result = result;
@@ -299,7 +345,10 @@ public class InviteSubAccountResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Always true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -313,9 +362,15 @@ public class InviteSubAccountResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link InviteSubAccountResponseBody} extends {@link TeaModel}
+     *
+     * <p>InviteSubAccountResponseBody</p>
+     */
     public static class Results extends TeaModel {
-        @NameInMap("Result")
-        private java.util.List < ResultsResult> result;
+        @com.aliyun.core.annotation.NameInMap("Result")
+        private java.util.List<ResultsResult> result;
 
         private Results(Builder builder) {
             this.result = builder.result;
@@ -332,17 +387,17 @@ public class InviteSubAccountResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.List < ResultsResult> getResult() {
+        public java.util.List<ResultsResult> getResult() {
             return this.result;
         }
 
         public static final class Builder {
-            private java.util.List < ResultsResult> result; 
+            private java.util.List<ResultsResult> result; 
 
             /**
-             * Result.
+             * <p>Returning Message of Invitation Results</p>
              */
-            public Builder result(java.util.List < ResultsResult> result) {
+            public Builder result(java.util.List<ResultsResult> result) {
                 this.result = result;
                 return this;
             }

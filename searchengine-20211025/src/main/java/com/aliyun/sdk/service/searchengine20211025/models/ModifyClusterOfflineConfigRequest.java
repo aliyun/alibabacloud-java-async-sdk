@@ -1,56 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyClusterOfflineConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifyClusterOfflineConfigRequest</p>
  */
 public class ModifyClusterOfflineConfigRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("buildMode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("buildMode")
     private String buildMode;
 
-    @Body
-    @NameInMap("config")
-    private java.util.Map < String, Integer > config;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("config")
+    private java.util.Map<String, Integer> config;
 
-    @Body
-    @NameInMap("dataSourceName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dataSourceName")
     private String dataSourceName;
 
-    @Body
-    @NameInMap("dataSourceType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dataSourceType")
     private String dataSourceType;
 
-    @Body
-    @NameInMap("dataTimeSec")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dataTimeSec")
     private Integer dataTimeSec;
 
-    @Body
-    @NameInMap("domain")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("domain")
     private String domain;
 
-    @Body
-    @NameInMap("generation")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("generation")
     private Long generation;
 
-    @Body
-    @NameInMap("partition")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("partition")
     private String partition;
 
-    @Body
-    @NameInMap("pushMode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("pushMode")
     private String pushMode;
 
     private ModifyClusterOfflineConfigRequest(Builder builder) {
@@ -97,7 +102,7 @@ public class ModifyClusterOfflineConfigRequest extends Request {
     /**
      * @return config
      */
-    public java.util.Map < String, Integer > getConfig() {
+    public java.util.Map<String, Integer> getConfig() {
         return this.config;
     }
 
@@ -153,7 +158,7 @@ public class ModifyClusterOfflineConfigRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyClusterOfflineConfigRequest, Builder> {
         private String instanceId; 
         private String buildMode; 
-        private java.util.Map < String, Integer > config; 
+        private java.util.Map<String, Integer> config; 
         private String dataSourceName; 
         private String dataSourceType; 
         private Integer dataTimeSec; 
@@ -181,7 +186,11 @@ public class ModifyClusterOfflineConfigRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-7mz2oy0bg01</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -190,7 +199,10 @@ public class ModifyClusterOfflineConfigRequest extends Request {
         }
 
         /**
-         * The reindexing method. Valid values: api: API data source. indexRecover: data recovery through indexing.
+         * <p>The reindexing method. Valid values: api: API data source. indexRecover: data recovery by using indexing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>indexRecover</p>
          */
         public Builder buildMode(String buildMode) {
             this.putBodyParameter("buildMode", buildMode);
@@ -199,16 +211,19 @@ public class ModifyClusterOfflineConfigRequest extends Request {
         }
 
         /**
-         * The configuration name, which is stored as a key.
+         * <p>The configuration name, which is stored as a key.</p>
          */
-        public Builder config(java.util.Map < String, Integer > config) {
+        public Builder config(java.util.Map<String, Integer> config) {
             this.putBodyParameter("config", config);
             this.config = config;
             return this;
         }
 
         /**
-         * dataSourceName.
+         * <p>The name of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder dataSourceName(String dataSourceName) {
             this.putBodyParameter("dataSourceName", dataSourceName);
@@ -217,7 +232,10 @@ public class ModifyClusterOfflineConfigRequest extends Request {
         }
 
         /**
-         * The type of the data source. Valid values: odps: MaxCompute. swift: Swift. unKnow: unknown type.
+         * <p>The type of the data source. Valid values: odps: MaxCompute. swift: Swift. unKnow: unknown type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>maxComputer</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putBodyParameter("dataSourceType", dataSourceType);
@@ -226,7 +244,10 @@ public class ModifyClusterOfflineConfigRequest extends Request {
         }
 
         /**
-         * This parameter is required if the API data source experiences full indexing.
+         * <p>This parameter is required when index building by using API data sources is triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1640867288</p>
          */
         public Builder dataTimeSec(Integer dataTimeSec) {
             this.putBodyParameter("dataTimeSec", dataTimeSec);
@@ -235,7 +256,10 @@ public class ModifyClusterOfflineConfigRequest extends Request {
         }
 
         /**
-         * The domain in which the data source is deployed.
+         * <p>The data center in which the data source is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc_hz_domain_1</p>
          */
         public Builder domain(String domain) {
             this.putBodyParameter("domain", domain);
@@ -244,7 +268,10 @@ public class ModifyClusterOfflineConfigRequest extends Request {
         }
 
         /**
-         * The ID of the backward data delivery.
+         * <p>The ID of the full index version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>160142641</p>
          */
         public Builder generation(Long generation) {
             this.putBodyParameter("generation", generation);
@@ -253,7 +280,10 @@ public class ModifyClusterOfflineConfigRequest extends Request {
         }
 
         /**
-         * This parameter is required if the MaxCompute data source experiences full indexing.
+         * <p>This parameter is required when index building for full data in a MaxCompute data source is triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20211202</p>
          */
         public Builder partition(String partition) {
             this.putBodyParameter("partition", partition);
@@ -262,7 +292,10 @@ public class ModifyClusterOfflineConfigRequest extends Request {
         }
 
         /**
-         * pushMode.
+         * <p>The push mode of the configuration. By default, only the configuration is pushed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PUSH_ONLY</p>
          */
         public Builder pushMode(String pushMode) {
             this.putBodyParameter("pushMode", pushMode);

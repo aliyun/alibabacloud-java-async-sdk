@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDatasetRequest} extends {@link RequestModel}
  *
  * <p>CreateDatasetRequest</p>
  */
 public class CreateDatasetRequest extends Request {
-    @Query
-    @NameInMap("DatasetName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatasetName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String datasetName;
 
-    @Query
-    @NameInMap("DatasetType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatasetType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String datasetType;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private CreateDatasetRequest(Builder builder) {
         super(builder);
@@ -75,7 +80,7 @@ public class CreateDatasetRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -83,7 +88,7 @@ public class CreateDatasetRequest extends Request {
         private String datasetName; 
         private String datasetType; 
         private String securityToken; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -98,7 +103,11 @@ public class CreateDatasetRequest extends Request {
         } 
 
         /**
-         * DatasetName.
+         * <p>The name of the dataset.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DatasetName</p>
          */
         public Builder datasetName(String datasetName) {
             this.putQueryParameter("DatasetName", datasetName);
@@ -107,7 +116,16 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * DatasetType.
+         * <p>The type of the dataset. Valid values:</p>
+         * <ul>
+         * <li>JWT_BLOCKING: a JSON Web Token (JWT) blacklist</li>
+         * <li>IP_WHITELIST_CIDR : an IP address whitelist</li>
+         * <li>PARAMETER_ACCESS : parameter-based access control</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JWT_BLOCKING</p>
          */
         public Builder datasetType(String datasetType) {
             this.putQueryParameter("DatasetType", datasetType);
@@ -125,9 +143,9 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tag of objects that match the rule. You can specify multiple tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -140,11 +158,17 @@ public class CreateDatasetRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDatasetRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDatasetRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -179,7 +203,10 @@ public class CreateDatasetRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -187,7 +214,10 @@ public class CreateDatasetRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder value(String value) {
                 this.value = value;

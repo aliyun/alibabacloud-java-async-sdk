@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVRoutersResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVRoutersResponseBody</p>
  */
 public class DescribeVRoutersResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("VRouters")
+    @com.aliyun.core.annotation.NameInMap("VRouters")
     private VRouters vRouters;
 
     private DescribeVRoutersResponseBody(Builder builder) {
@@ -131,9 +136,15 @@ public class DescribeVRoutersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVRoutersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVRoutersResponseBody</p>
+     */
     public static class RouteTableIds extends TeaModel {
-        @NameInMap("RouteTableId")
-        private java.util.List < String > routeTableId;
+        @com.aliyun.core.annotation.NameInMap("RouteTableId")
+        private java.util.List<String> routeTableId;
 
         private RouteTableIds(Builder builder) {
             this.routeTableId = builder.routeTableId;
@@ -150,17 +161,17 @@ public class DescribeVRoutersResponseBody extends TeaModel {
         /**
          * @return routeTableId
          */
-        public java.util.List < String > getRouteTableId() {
+        public java.util.List<String> getRouteTableId() {
             return this.routeTableId;
         }
 
         public static final class Builder {
-            private java.util.List < String > routeTableId; 
+            private java.util.List<String> routeTableId; 
 
             /**
              * RouteTableId.
              */
-            public Builder routeTableId(java.util.List < String > routeTableId) {
+            public Builder routeTableId(java.util.List<String> routeTableId) {
                 this.routeTableId = routeTableId;
                 return this;
             }
@@ -172,26 +183,32 @@ public class DescribeVRoutersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVRoutersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVRoutersResponseBody</p>
+     */
     public static class VRouter extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RouteTableIds")
+        @com.aliyun.core.annotation.NameInMap("RouteTableIds")
         private RouteTableIds routeTableIds;
 
-        @NameInMap("VRouterId")
+        @com.aliyun.core.annotation.NameInMap("VRouterId")
         private String vRouterId;
 
-        @NameInMap("VRouterName")
+        @com.aliyun.core.annotation.NameInMap("VRouterName")
         private String vRouterName;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private VRouter(Builder builder) {
@@ -333,9 +350,15 @@ public class DescribeVRoutersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVRoutersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVRoutersResponseBody</p>
+     */
     public static class VRouters extends TeaModel {
-        @NameInMap("VRouter")
-        private java.util.List < VRouter> vRouter;
+        @com.aliyun.core.annotation.NameInMap("VRouter")
+        private java.util.List<VRouter> vRouter;
 
         private VRouters(Builder builder) {
             this.vRouter = builder.vRouter;
@@ -352,17 +375,17 @@ public class DescribeVRoutersResponseBody extends TeaModel {
         /**
          * @return vRouter
          */
-        public java.util.List < VRouter> getVRouter() {
+        public java.util.List<VRouter> getVRouter() {
             return this.vRouter;
         }
 
         public static final class Builder {
-            private java.util.List < VRouter> vRouter; 
+            private java.util.List<VRouter> vRouter; 
 
             /**
              * VRouter.
              */
-            public Builder vRouter(java.util.List < VRouter> vRouter) {
+            public Builder vRouter(java.util.List<VRouter> vRouter) {
                 this.vRouter = vRouter;
                 return this;
             }

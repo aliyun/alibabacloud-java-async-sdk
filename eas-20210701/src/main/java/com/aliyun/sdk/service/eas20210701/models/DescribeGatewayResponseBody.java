@@ -1,85 +1,81 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGatewayResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeGatewayResponseBody</p>
  */
 public class DescribeGatewayResponseBody extends TeaModel {
-    @NameInMap("CallerUid")
-    private String callerUid;
-
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("ExternalClusterId")
+    @com.aliyun.core.annotation.NameInMap("ExternalClusterId")
     private String externalClusterId;
 
-    @NameInMap("GatewayId")
+    @com.aliyun.core.annotation.NameInMap("GatewayId")
     private String gatewayId;
 
-    @NameInMap("GatewayName")
+    @com.aliyun.core.annotation.NameInMap("GatewayName")
     private String gatewayName;
 
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
-    @NameInMap("InternetAclPolicyList")
-    private java.util.List < InternetAclPolicyList> internetAclPolicyList;
-
-    @NameInMap("InternetDomain")
+    @com.aliyun.core.annotation.NameInMap("InternetDomain")
     private String internetDomain;
 
-    @NameInMap("InternetEnabled")
+    @com.aliyun.core.annotation.NameInMap("InternetEnabled")
     private Boolean internetEnabled;
 
-    @NameInMap("IntranetDomain")
+    @com.aliyun.core.annotation.NameInMap("InternetStatus")
+    private String internetStatus;
+
+    @com.aliyun.core.annotation.NameInMap("IntranetDomain")
     private String intranetDomain;
 
-    @NameInMap("IntranetEnabled")
-    private Boolean intranetEnabled;
+    @com.aliyun.core.annotation.NameInMap("IsDefault")
+    private Boolean isDefault;
 
-    @NameInMap("IntranetLinkedVpcList")
-    private java.util.List < IntranetLinkedVpcList> intranetLinkedVpcList;
+    @com.aliyun.core.annotation.NameInMap("Replicas")
+    private Integer replicas;
 
-    @NameInMap("ParentUid")
-    private String parentUid;
-
-    @NameInMap("Region")
-    @Validation(required = true)
-    private String region;
-
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("SSLRedirectionEnabled")
+    private Boolean SSLRedirectionEnabled;
+
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("UpdateTime")
+    @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
     private DescribeGatewayResponseBody(Builder builder) {
-        this.callerUid = builder.callerUid;
         this.createTime = builder.createTime;
         this.externalClusterId = builder.externalClusterId;
         this.gatewayId = builder.gatewayId;
         this.gatewayName = builder.gatewayName;
         this.instanceType = builder.instanceType;
-        this.internetAclPolicyList = builder.internetAclPolicyList;
         this.internetDomain = builder.internetDomain;
         this.internetEnabled = builder.internetEnabled;
+        this.internetStatus = builder.internetStatus;
         this.intranetDomain = builder.intranetDomain;
-        this.intranetEnabled = builder.intranetEnabled;
-        this.intranetLinkedVpcList = builder.intranetLinkedVpcList;
-        this.parentUid = builder.parentUid;
-        this.region = builder.region;
+        this.isDefault = builder.isDefault;
+        this.replicas = builder.replicas;
         this.requestId = builder.requestId;
+        this.SSLRedirectionEnabled = builder.SSLRedirectionEnabled;
         this.status = builder.status;
         this.updateTime = builder.updateTime;
     }
@@ -90,13 +86,6 @@ public class DescribeGatewayResponseBody extends TeaModel {
 
     public static DescribeGatewayResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return callerUid
-     */
-    public String getCallerUid() {
-        return this.callerUid;
     }
 
     /**
@@ -135,13 +124,6 @@ public class DescribeGatewayResponseBody extends TeaModel {
     }
 
     /**
-     * @return internetAclPolicyList
-     */
-    public java.util.List < InternetAclPolicyList> getInternetAclPolicyList() {
-        return this.internetAclPolicyList;
-    }
-
-    /**
      * @return internetDomain
      */
     public String getInternetDomain() {
@@ -156,6 +138,13 @@ public class DescribeGatewayResponseBody extends TeaModel {
     }
 
     /**
+     * @return internetStatus
+     */
+    public String getInternetStatus() {
+        return this.internetStatus;
+    }
+
+    /**
      * @return intranetDomain
      */
     public String getIntranetDomain() {
@@ -163,31 +152,17 @@ public class DescribeGatewayResponseBody extends TeaModel {
     }
 
     /**
-     * @return intranetEnabled
+     * @return isDefault
      */
-    public Boolean getIntranetEnabled() {
-        return this.intranetEnabled;
+    public Boolean getIsDefault() {
+        return this.isDefault;
     }
 
     /**
-     * @return intranetLinkedVpcList
+     * @return replicas
      */
-    public java.util.List < IntranetLinkedVpcList> getIntranetLinkedVpcList() {
-        return this.intranetLinkedVpcList;
-    }
-
-    /**
-     * @return parentUid
-     */
-    public String getParentUid() {
-        return this.parentUid;
-    }
-
-    /**
-     * @return region
-     */
-    public String getRegion() {
-        return this.region;
+    public Integer getReplicas() {
+        return this.replicas;
     }
 
     /**
@@ -195,6 +170,13 @@ public class DescribeGatewayResponseBody extends TeaModel {
      */
     public String getRequestId() {
         return this.requestId;
+    }
+
+    /**
+     * @return SSLRedirectionEnabled
+     */
+    public Boolean getSSLRedirectionEnabled() {
+        return this.SSLRedirectionEnabled;
     }
 
     /**
@@ -212,34 +194,27 @@ public class DescribeGatewayResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String callerUid; 
         private String createTime; 
         private String externalClusterId; 
         private String gatewayId; 
         private String gatewayName; 
         private String instanceType; 
-        private java.util.List < InternetAclPolicyList> internetAclPolicyList; 
         private String internetDomain; 
         private Boolean internetEnabled; 
+        private String internetStatus; 
         private String intranetDomain; 
-        private Boolean intranetEnabled; 
-        private java.util.List < IntranetLinkedVpcList> intranetLinkedVpcList; 
-        private String parentUid; 
-        private String region; 
+        private Boolean isDefault; 
+        private Integer replicas; 
         private String requestId; 
+        private Boolean SSLRedirectionEnabled; 
         private String status; 
         private String updateTime; 
 
         /**
-         * CallerUid.
-         */
-        public Builder callerUid(String callerUid) {
-            this.callerUid = callerUid;
-            return this;
-        }
-
-        /**
-         * 网关创建时间
+         * <p>The time when the private gateway was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-05-19T14:19:42Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -247,7 +222,10 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * ExternalClusterId.
+         * <p>The ID of the self-managed cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c935eadf284c14c2da57a2a13ad6******</p>
          */
         public Builder externalClusterId(String externalClusterId) {
             this.externalClusterId = externalClusterId;
@@ -255,7 +233,10 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * 网关ID
+         * <p>The ID of the private gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-1uhcqmsc7x22******</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.gatewayId = gatewayId;
@@ -263,7 +244,10 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * GatewayName.
+         * <p>The alias of the private gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mygateway1</p>
          */
         public Builder gatewayName(String gatewayName) {
             this.gatewayName = gatewayName;
@@ -271,7 +255,17 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * 网关创建的实例种类
+         * <p>The instance type used by the private gateway.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>8c16g</li>
+         * <li>4c8g</li>
+         * <li>2c4g</li>
+         * <li>16c32g</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c6.4xlarge</p>
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;
@@ -279,15 +273,10 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * InternetAclPolicyList.
-         */
-        public Builder internetAclPolicyList(java.util.List < InternetAclPolicyList> internetAclPolicyList) {
-            this.internetAclPolicyList = internetAclPolicyList;
-            return this;
-        }
-
-        /**
-         * 网关内部域名
+         * <p>The public endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-1uhcqmsc7x22******-1801786532******.cn-hangzhou.pai-eas.aliyuncs.com</p>
          */
         public Builder internetDomain(String internetDomain) {
             this.internetDomain = internetDomain;
@@ -295,7 +284,10 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * InternetEnabled.
+         * <p>Indicates whether Internet access is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder internetEnabled(Boolean internetEnabled) {
             this.internetEnabled = internetEnabled;
@@ -303,7 +295,29 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * 网关外部域名
+         * <p>Indicates whether Internet access is enabled.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Creating: Internet access is being enabled.</li>
+         * <li>Failed: Internet access failed to be enabled or deleted.</li>
+         * <li>Running: Internet access is running.</li>
+         * <li>Deleted: Internet access is deleted.</li>
+         * <li>Deleting: Internet access is being deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
+        public Builder internetStatus(String internetStatus) {
+            this.internetStatus = internetStatus;
+            return this;
+        }
+
+        /**
+         * <p>The internal endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-1uhcqmsc7x22******-1801786532******-vpc.cn-hangzhou.pai-eas.aliyuncs.com</p>
          */
         public Builder intranetDomain(String intranetDomain) {
             this.intranetDomain = intranetDomain;
@@ -311,39 +325,32 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * IntranetEnabled.
+         * <p>Indicates whether it is the default private gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
-        public Builder intranetEnabled(Boolean intranetEnabled) {
-            this.intranetEnabled = intranetEnabled;
+        public Builder isDefault(Boolean isDefault) {
+            this.isDefault = isDefault;
             return this;
         }
 
         /**
-         * IntranetLinkedVpcList.
+         * <p>The number of nodes in the private gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
-        public Builder intranetLinkedVpcList(java.util.List < IntranetLinkedVpcList> intranetLinkedVpcList) {
-            this.intranetLinkedVpcList = intranetLinkedVpcList;
+        public Builder replicas(Integer replicas) {
+            this.replicas = replicas;
             return this;
         }
 
         /**
-         * 创建网关的用户ID
-         */
-        public Builder parentUid(String parentUid) {
-            this.parentUid = parentUid;
-            return this;
-        }
-
-        /**
-         * 网关所在地域
-         */
-        public Builder region(String region) {
-            this.region = region;
-            return this;
-        }
-
-        /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -351,7 +358,28 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * 网关现在的状态
+         * SSLRedirectionEnabled.
+         */
+        public Builder SSLRedirectionEnabled(Boolean SSLRedirectionEnabled) {
+            this.SSLRedirectionEnabled = SSLRedirectionEnabled;
+            return this;
+        }
+
+        /**
+         * <p>The status of the private gateway.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Creating</li>
+         * <li>Stopped</li>
+         * <li>Failed</li>
+         * <li>Running</li>
+         * <li>Deleted</li>
+         * <li>Deleting</li>
+         * <li>Waiting</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PrivateGatewayRunning</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -359,7 +387,10 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * 网关最后一次的更新时间
+         * <p>The time when the private gateway was updated. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-02-24T11:52:17Z</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -372,206 +403,4 @@ public class DescribeGatewayResponseBody extends TeaModel {
 
     } 
 
-    public static class InternetAclPolicyList extends TeaModel {
-        @NameInMap("Comment")
-        private String comment;
-
-        @NameInMap("Entry")
-        private String entry;
-
-        @NameInMap("Status")
-        private String status;
-
-        private InternetAclPolicyList(Builder builder) {
-            this.comment = builder.comment;
-            this.entry = builder.entry;
-            this.status = builder.status;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static InternetAclPolicyList create() {
-            return builder().build();
-        }
-
-        /**
-         * @return comment
-         */
-        public String getComment() {
-            return this.comment;
-        }
-
-        /**
-         * @return entry
-         */
-        public String getEntry() {
-            return this.entry;
-        }
-
-        /**
-         * @return status
-         */
-        public String getStatus() {
-            return this.status;
-        }
-
-        public static final class Builder {
-            private String comment; 
-            private String entry; 
-            private String status; 
-
-            /**
-             * Comment.
-             */
-            public Builder comment(String comment) {
-                this.comment = comment;
-                return this;
-            }
-
-            /**
-             * Entry.
-             */
-            public Builder entry(String entry) {
-                this.entry = entry;
-                return this;
-            }
-
-            /**
-             * 网关现在的状态
-             */
-            public Builder status(String status) {
-                this.status = status;
-                return this;
-            }
-
-            public InternetAclPolicyList build() {
-                return new InternetAclPolicyList(this);
-            } 
-
-        } 
-
-    }
-    public static class IntranetLinkedVpcList extends TeaModel {
-        @NameInMap("Ip")
-        private String ip;
-
-        @NameInMap("SecurityGroupId")
-        private String securityGroupId;
-
-        @NameInMap("Status")
-        private String status;
-
-        @NameInMap("VSwitchId")
-        private String vSwitchId;
-
-        @NameInMap("VpcId")
-        private String vpcId;
-
-        private IntranetLinkedVpcList(Builder builder) {
-            this.ip = builder.ip;
-            this.securityGroupId = builder.securityGroupId;
-            this.status = builder.status;
-            this.vSwitchId = builder.vSwitchId;
-            this.vpcId = builder.vpcId;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static IntranetLinkedVpcList create() {
-            return builder().build();
-        }
-
-        /**
-         * @return ip
-         */
-        public String getIp() {
-            return this.ip;
-        }
-
-        /**
-         * @return securityGroupId
-         */
-        public String getSecurityGroupId() {
-            return this.securityGroupId;
-        }
-
-        /**
-         * @return status
-         */
-        public String getStatus() {
-            return this.status;
-        }
-
-        /**
-         * @return vSwitchId
-         */
-        public String getVSwitchId() {
-            return this.vSwitchId;
-        }
-
-        /**
-         * @return vpcId
-         */
-        public String getVpcId() {
-            return this.vpcId;
-        }
-
-        public static final class Builder {
-            private String ip; 
-            private String securityGroupId; 
-            private String status; 
-            private String vSwitchId; 
-            private String vpcId; 
-
-            /**
-             * Ip.
-             */
-            public Builder ip(String ip) {
-                this.ip = ip;
-                return this;
-            }
-
-            /**
-             * SecurityGroupId.
-             */
-            public Builder securityGroupId(String securityGroupId) {
-                this.securityGroupId = securityGroupId;
-                return this;
-            }
-
-            /**
-             * 网关现在的状态
-             */
-            public Builder status(String status) {
-                this.status = status;
-                return this;
-            }
-
-            /**
-             * VSwitchId.
-             */
-            public Builder vSwitchId(String vSwitchId) {
-                this.vSwitchId = vSwitchId;
-                return this;
-            }
-
-            /**
-             * VpcId.
-             */
-            public Builder vpcId(String vpcId) {
-                this.vpcId = vpcId;
-                return this;
-            }
-
-            public IntranetLinkedVpcList build() {
-                return new IntranetLinkedVpcList(this);
-            } 
-
-        } 
-
-    }
 }

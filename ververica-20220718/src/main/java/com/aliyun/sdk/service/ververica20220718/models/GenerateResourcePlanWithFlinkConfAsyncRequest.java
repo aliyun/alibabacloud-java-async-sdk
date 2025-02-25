@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateResourcePlanWithFlinkConfAsyncRequest} extends {@link RequestModel}
  *
  * <p>GenerateResourcePlanWithFlinkConfAsyncRequest</p>
  */
 public class GenerateResourcePlanWithFlinkConfAsyncRequest extends Request {
-    @Path
-    @NameInMap("namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @Path
-    @NameInMap("deploymentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("deploymentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deploymentId;
 
-    @Body
-    @NameInMap("body")
-    private java.util.Map < String, ? > body;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
+    private java.util.Map<String, ?> body;
 
-    @Header
-    @NameInMap("workspace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("workspace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspace;
 
     private GenerateResourcePlanWithFlinkConfAsyncRequest(Builder builder) {
@@ -69,7 +74,7 @@ public class GenerateResourcePlanWithFlinkConfAsyncRequest extends Request {
     /**
      * @return body
      */
-    public java.util.Map < String, ? > getBody() {
+    public java.util.Map<String, ?> getBody() {
         return this.body;
     }
 
@@ -83,7 +88,7 @@ public class GenerateResourcePlanWithFlinkConfAsyncRequest extends Request {
     public static final class Builder extends Request.Builder<GenerateResourcePlanWithFlinkConfAsyncRequest, Builder> {
         private String namespace; 
         private String deploymentId; 
-        private java.util.Map < String, ? > body; 
+        private java.util.Map<String, ?> body; 
         private String workspace; 
 
         private Builder() {
@@ -99,7 +104,11 @@ public class GenerateResourcePlanWithFlinkConfAsyncRequest extends Request {
         } 
 
         /**
-         * namespace.
+         * <p>The name of the namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-namespace</p>
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -108,7 +117,11 @@ public class GenerateResourcePlanWithFlinkConfAsyncRequest extends Request {
         }
 
         /**
-         * deploymentId.
+         * <p>The deployment ID, which is the unique identifier of the deployment.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>737d0921-c5ac-47fc-9ba9-07a1e0b4****</p>
          */
         public Builder deploymentId(String deploymentId) {
             this.putPathParameter("deploymentId", deploymentId);
@@ -117,16 +130,20 @@ public class GenerateResourcePlanWithFlinkConfAsyncRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The Flink configuration that is used to generate a resource plan.</p>
          */
-        public Builder body(java.util.Map < String, ? > body) {
+        public Builder body(java.util.Map<String, ?> body) {
             this.putBodyParameter("body", body);
             this.body = body;
             return this;
         }
 
         /**
-         * workspace.
+         * <p>The workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a14bd5d90a****</p>
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

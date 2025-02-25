@@ -1,34 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePhoneMessageQrdlRequest} extends {@link RequestModel}
  *
  * <p>CreatePhoneMessageQrdlRequest</p>
  */
 public class CreatePhoneMessageQrdlRequest extends Request {
-    @Body
-    @NameInMap("CustSpaceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustSpaceId")
     private String custSpaceId;
 
-    @Body
-    @NameInMap("GenerateQrImage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GenerateQrImage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String generateQrImage;
 
-    @Body
-    @NameInMap("PhoneNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNumber;
 
-    @Body
-    @NameInMap("PrefilledMessage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PrefilledMessage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String prefilledMessage;
 
     private CreatePhoneMessageQrdlRequest(Builder builder) {
@@ -99,7 +99,10 @@ public class CreatePhoneMessageQrdlRequest extends Request {
         } 
 
         /**
-         * CustSpaceId.
+         * <p>The space ID of the RAM user within the independent software vendor (ISV) account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>838833</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putBodyParameter("CustSpaceId", custSpaceId);
@@ -108,7 +111,11 @@ public class CreatePhoneMessageQrdlRequest extends Request {
         }
 
         /**
-         * GenerateQrImage.
+         * <p>Produce QR code image format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PNG</p>
          */
         public Builder generateQrImage(String generateQrImage) {
             this.putBodyParameter("GenerateQrImage", generateQrImage);
@@ -117,7 +124,11 @@ public class CreatePhoneMessageQrdlRequest extends Request {
         }
 
         /**
-         * PhoneNumber.
+         * <p>The phone number. Add the country code before the phone number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>861380000</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putBodyParameter("PhoneNumber", phoneNumber);
@@ -126,7 +137,11 @@ public class CreatePhoneMessageQrdlRequest extends Request {
         }
 
         /**
-         * PrefilledMessage.
+         * <p>Message content.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hello</p>
          */
         public Builder prefilledMessage(String prefilledMessage) {
             this.putBodyParameter("PrefilledMessage", prefilledMessage);

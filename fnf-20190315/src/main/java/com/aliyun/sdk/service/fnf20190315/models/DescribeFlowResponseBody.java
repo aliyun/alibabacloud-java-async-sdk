@@ -154,7 +154,7 @@ public class DescribeFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The definition of the flow. The definition must comply with the Flow Definition Language (FDL) syntax.
+         * The flow definition, which follows the flow definition language (FDL) syntax standard. Considering compatibility, the system supports the two flow definition specifications.
          */
         public Builder definition(String definition) {
             this.definition = definition;
@@ -170,7 +170,7 @@ public class DescribeFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The execution mode or the enumeration type. Valid values: Express and Standard. The value Standard indicates an empty string.
+         * The execution mode or the enumeration type. Valid values: Express and Standard. A value of Standard indicates an empty string.
          */
         public Builder executionMode(String executionMode) {
             this.executionMode = executionMode;
@@ -210,7 +210,7 @@ public class DescribeFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The Alibaba Cloud Resource Name (ARN) of the RAM role.
+         * The Alibaba Cloud resource name (ARN) of the authorized role on which the execution of the flow relies. During the execution of the flow, CloudFlow assumes the role to call API operations of relevant services.
          */
         public Builder roleArn(String roleArn) {
             this.roleArn = roleArn;

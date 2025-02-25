@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLogConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLogConfigResponseBody</p>
  */
 public class DescribeLogConfigResponseBody extends TeaModel {
-    @NameInMap("LogInfos")
+    @com.aliyun.core.annotation.NameInMap("LogInfos")
     private LogInfos logInfos;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeLogConfigResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeLogConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * LogInfos.
+         * <p>Info of the log config.</p>
          */
         public Builder logInfos(LogInfos logInfos) {
             this.logInfos = logInfos;
@@ -58,7 +63,10 @@ public class DescribeLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E3BC2706-ABDB-5B64-A12F-08DFD9E3F339</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,17 +79,23 @@ public class DescribeLogConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLogConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLogConfigResponseBody</p>
+     */
     public static class LogInfo extends TeaModel {
-        @NameInMap("LogType")
+        @com.aliyun.core.annotation.NameInMap("LogType")
         private String logType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SlsLogStore")
+        @com.aliyun.core.annotation.NameInMap("SlsLogStore")
         private String slsLogStore;
 
-        @NameInMap("SlsProject")
+        @com.aliyun.core.annotation.NameInMap("SlsProject")
         private String slsProject;
 
         private LogInfo(Builder builder) {
@@ -134,7 +148,10 @@ public class DescribeLogConfigResponseBody extends TeaModel {
             private String slsProject; 
 
             /**
-             * LogType.
+             * <p>The log type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PROVIDER</p>
              */
             public Builder logType(String logType) {
                 this.logType = logType;
@@ -142,7 +159,10 @@ public class DescribeLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID of the Logstore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -150,7 +170,10 @@ public class DescribeLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SlsLogStore.
+             * <p>The name of the Logstore in Log Service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>slsstore</p>
              */
             public Builder slsLogStore(String slsLogStore) {
                 this.slsLogStore = slsLogStore;
@@ -158,7 +181,10 @@ public class DescribeLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SlsProject.
+             * <p>The name of the Log Service project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>slsproject</p>
              */
             public Builder slsProject(String slsProject) {
                 this.slsProject = slsProject;
@@ -172,9 +198,15 @@ public class DescribeLogConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLogConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLogConfigResponseBody</p>
+     */
     public static class LogInfos extends TeaModel {
-        @NameInMap("LogInfo")
-        private java.util.List < LogInfo> logInfo;
+        @com.aliyun.core.annotation.NameInMap("LogInfo")
+        private java.util.List<LogInfo> logInfo;
 
         private LogInfos(Builder builder) {
             this.logInfo = builder.logInfo;
@@ -191,17 +223,17 @@ public class DescribeLogConfigResponseBody extends TeaModel {
         /**
          * @return logInfo
          */
-        public java.util.List < LogInfo> getLogInfo() {
+        public java.util.List<LogInfo> getLogInfo() {
             return this.logInfo;
         }
 
         public static final class Builder {
-            private java.util.List < LogInfo> logInfo; 
+            private java.util.List<LogInfo> logInfo; 
 
             /**
              * LogInfo.
              */
-            public Builder logInfo(java.util.List < LogInfo> logInfo) {
+            public Builder logInfo(java.util.List<LogInfo> logInfo) {
                 this.logInfo = logInfo;
                 return this;
             }

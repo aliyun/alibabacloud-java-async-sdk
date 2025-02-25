@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
  *
  * <p>IntlFlightOtaItemDetailResponseBody</p>
  */
 public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private IntlFlightOtaItemDetailResponseBody(Builder builder) {
@@ -151,20 +156,26 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaItemDetailResponseBody</p>
+     */
     public static class AirlineInfo extends TeaModel {
-        @NameInMap("airline_chinese_name")
+        @com.aliyun.core.annotation.NameInMap("airline_chinese_name")
         private String airlineChineseName;
 
-        @NameInMap("airline_chinese_short_name")
+        @com.aliyun.core.annotation.NameInMap("airline_chinese_short_name")
         private String airlineChineseShortName;
 
-        @NameInMap("airline_code")
+        @com.aliyun.core.annotation.NameInMap("airline_code")
         private String airlineCode;
 
-        @NameInMap("airline_icon")
+        @com.aliyun.core.annotation.NameInMap("airline_icon")
         private String airlineIcon;
 
-        @NameInMap("cheap_flight")
+        @com.aliyun.core.annotation.NameInMap("cheap_flight")
         private Boolean cheapFlight;
 
         private AirlineInfo(Builder builder) {
@@ -272,17 +283,23 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaItemDetailResponseBody</p>
+     */
     public static class ArrAirportInfo extends TeaModel {
-        @NameInMap("airport_code")
+        @com.aliyun.core.annotation.NameInMap("airport_code")
         private String airportCode;
 
-        @NameInMap("airport_name")
+        @com.aliyun.core.annotation.NameInMap("airport_name")
         private String airportName;
 
-        @NameInMap("airport_short_name")
+        @com.aliyun.core.annotation.NameInMap("airport_short_name")
         private String airportShortName;
 
-        @NameInMap("terminal")
+        @com.aliyun.core.annotation.NameInMap("terminal")
         private String terminal;
 
         private ArrAirportInfo(Builder builder) {
@@ -373,17 +390,23 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaItemDetailResponseBody</p>
+     */
     public static class DepAirportInfo extends TeaModel {
-        @NameInMap("airport_code")
+        @com.aliyun.core.annotation.NameInMap("airport_code")
         private String airportCode;
 
-        @NameInMap("airport_name")
+        @com.aliyun.core.annotation.NameInMap("airport_name")
         private String airportName;
 
-        @NameInMap("airport_short_name")
+        @com.aliyun.core.annotation.NameInMap("airport_short_name")
         private String airportShortName;
 
-        @NameInMap("terminal")
+        @com.aliyun.core.annotation.NameInMap("terminal")
         private String terminal;
 
         private DepAirportInfo(Builder builder) {
@@ -474,20 +497,26 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaItemDetailResponseBody</p>
+     */
     public static class OperatingAirlineInfo extends TeaModel {
-        @NameInMap("airline_chinese_name")
+        @com.aliyun.core.annotation.NameInMap("airline_chinese_name")
         private String airlineChineseName;
 
-        @NameInMap("airline_chinese_short_name")
+        @com.aliyun.core.annotation.NameInMap("airline_chinese_short_name")
         private String airlineChineseShortName;
 
-        @NameInMap("airline_code")
+        @com.aliyun.core.annotation.NameInMap("airline_code")
         private String airlineCode;
 
-        @NameInMap("airline_icon")
+        @com.aliyun.core.annotation.NameInMap("airline_icon")
         private String airlineIcon;
 
-        @NameInMap("cheap_flight")
+        @com.aliyun.core.annotation.NameInMap("cheap_flight")
         private Boolean cheapFlight;
 
         private OperatingAirlineInfo(Builder builder) {
@@ -595,11 +624,17 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaItemDetailResponseBody</p>
+     */
     public static class FlightShareInfo extends TeaModel {
-        @NameInMap("operating_airline_info")
+        @com.aliyun.core.annotation.NameInMap("operating_airline_info")
         private OperatingAirlineInfo operatingAirlineInfo;
 
-        @NameInMap("operating_flight_no")
+        @com.aliyun.core.annotation.NameInMap("operating_flight_no")
         private String operatingFlightNo;
 
         private FlightShareInfo(Builder builder) {
@@ -656,35 +691,41 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaItemDetailResponseBody</p>
+     */
     public static class FlightStopInfo extends TeaModel {
-        @NameInMap("stop_airport")
+        @com.aliyun.core.annotation.NameInMap("stop_airport")
         private String stopAirport;
 
-        @NameInMap("stop_airport_name")
+        @com.aliyun.core.annotation.NameInMap("stop_airport_name")
         private String stopAirportName;
 
-        @NameInMap("stop_arr_term")
+        @com.aliyun.core.annotation.NameInMap("stop_arr_term")
         private String stopArrTerm;
 
-        @NameInMap("stop_arr_time")
+        @com.aliyun.core.annotation.NameInMap("stop_arr_time")
         private String stopArrTime;
 
-        @NameInMap("stop_city_code")
+        @com.aliyun.core.annotation.NameInMap("stop_city_code")
         private String stopCityCode;
 
-        @NameInMap("stop_city_name")
+        @com.aliyun.core.annotation.NameInMap("stop_city_name")
         private String stopCityName;
 
-        @NameInMap("stop_city_names")
-        private java.util.List < String > stopCityNames;
+        @com.aliyun.core.annotation.NameInMap("stop_city_names")
+        private java.util.List<String> stopCityNames;
 
-        @NameInMap("stop_dep_term")
+        @com.aliyun.core.annotation.NameInMap("stop_dep_term")
         private String stopDepTerm;
 
-        @NameInMap("stop_dep_time")
+        @com.aliyun.core.annotation.NameInMap("stop_dep_time")
         private String stopDepTime;
 
-        @NameInMap("stop_time")
+        @com.aliyun.core.annotation.NameInMap("stop_time")
         private String stopTime;
 
         private FlightStopInfo(Builder builder) {
@@ -753,7 +794,7 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         /**
          * @return stopCityNames
          */
-        public java.util.List < String > getStopCityNames() {
+        public java.util.List<String> getStopCityNames() {
             return this.stopCityNames;
         }
 
@@ -785,7 +826,7 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
             private String stopArrTime; 
             private String stopCityCode; 
             private String stopCityName; 
-            private java.util.List < String > stopCityNames; 
+            private java.util.List<String> stopCityNames; 
             private String stopDepTerm; 
             private String stopDepTime; 
             private String stopTime; 
@@ -841,7 +882,7 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
             /**
              * stop_city_names.
              */
-            public Builder stopCityNames(java.util.List < String > stopCityNames) {
+            public Builder stopCityNames(java.util.List<String> stopCityNames) {
                 this.stopCityNames = stopCityNames;
                 return this;
             }
@@ -877,11 +918,17 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaItemDetailResponseBody</p>
+     */
     public static class LuggageDirectInfo extends TeaModel {
-        @NameInMap("dep_city_luggage_direct")
+        @com.aliyun.core.annotation.NameInMap("dep_city_luggage_direct")
         private Integer depCityLuggageDirect;
 
-        @NameInMap("stop_city_luggage_direct")
+        @com.aliyun.core.annotation.NameInMap("stop_city_luggage_direct")
         private Integer stopCityLuggageDirect;
 
         private LuggageDirectInfo(Builder builder) {
@@ -938,18 +985,24 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaItemDetailResponseBody</p>
+     */
     public static class SegmentVisaRemark extends TeaModel {
-        @NameInMap("dep_city_visa_remark")
+        @com.aliyun.core.annotation.NameInMap("dep_city_visa_remark")
         private String depCityVisaRemark;
 
-        @NameInMap("dep_city_visa_type")
+        @com.aliyun.core.annotation.NameInMap("dep_city_visa_type")
         private Integer depCityVisaType;
 
-        @NameInMap("stop_city_visa_remarks")
-        private java.util.List < String > stopCityVisaRemarks;
+        @com.aliyun.core.annotation.NameInMap("stop_city_visa_remarks")
+        private java.util.List<String> stopCityVisaRemarks;
 
-        @NameInMap("stop_city_visa_types")
-        private java.util.List < Integer > stopCityVisaTypes;
+        @com.aliyun.core.annotation.NameInMap("stop_city_visa_types")
+        private java.util.List<Integer> stopCityVisaTypes;
 
         private SegmentVisaRemark(Builder builder) {
             this.depCityVisaRemark = builder.depCityVisaRemark;
@@ -983,22 +1036,22 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         /**
          * @return stopCityVisaRemarks
          */
-        public java.util.List < String > getStopCityVisaRemarks() {
+        public java.util.List<String> getStopCityVisaRemarks() {
             return this.stopCityVisaRemarks;
         }
 
         /**
          * @return stopCityVisaTypes
          */
-        public java.util.List < Integer > getStopCityVisaTypes() {
+        public java.util.List<Integer> getStopCityVisaTypes() {
             return this.stopCityVisaTypes;
         }
 
         public static final class Builder {
             private String depCityVisaRemark; 
             private Integer depCityVisaType; 
-            private java.util.List < String > stopCityVisaRemarks; 
-            private java.util.List < Integer > stopCityVisaTypes; 
+            private java.util.List<String> stopCityVisaRemarks; 
+            private java.util.List<Integer> stopCityVisaTypes; 
 
             /**
              * dep_city_visa_remark.
@@ -1019,7 +1072,7 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
             /**
              * stop_city_visa_remarks.
              */
-            public Builder stopCityVisaRemarks(java.util.List < String > stopCityVisaRemarks) {
+            public Builder stopCityVisaRemarks(java.util.List<String> stopCityVisaRemarks) {
                 this.stopCityVisaRemarks = stopCityVisaRemarks;
                 return this;
             }
@@ -1027,7 +1080,7 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
             /**
              * stop_city_visa_types.
              */
-            public Builder stopCityVisaTypes(java.util.List < Integer > stopCityVisaTypes) {
+            public Builder stopCityVisaTypes(java.util.List<Integer> stopCityVisaTypes) {
                 this.stopCityVisaTypes = stopCityVisaTypes;
                 return this;
             }
@@ -1039,98 +1092,104 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaItemDetailResponseBody</p>
+     */
     public static class FlightSegmentInfos extends TeaModel {
-        @NameInMap("airline_info")
+        @com.aliyun.core.annotation.NameInMap("airline_info")
         private AirlineInfo airlineInfo;
 
-        @NameInMap("arr_airport_info")
+        @com.aliyun.core.annotation.NameInMap("arr_airport_info")
         private ArrAirportInfo arrAirportInfo;
 
-        @NameInMap("arr_city_code")
+        @com.aliyun.core.annotation.NameInMap("arr_city_code")
         private String arrCityCode;
 
-        @NameInMap("arr_city_name")
+        @com.aliyun.core.annotation.NameInMap("arr_city_name")
         private String arrCityName;
 
-        @NameInMap("arr_time")
+        @com.aliyun.core.annotation.NameInMap("arr_time")
         private String arrTime;
 
-        @NameInMap("baggage_desc")
+        @com.aliyun.core.annotation.NameInMap("baggage_desc")
         private String baggageDesc;
 
-        @NameInMap("dep_airport_info")
+        @com.aliyun.core.annotation.NameInMap("dep_airport_info")
         private DepAirportInfo depAirportInfo;
 
-        @NameInMap("dep_city_code")
+        @com.aliyun.core.annotation.NameInMap("dep_city_code")
         private String depCityCode;
 
-        @NameInMap("dep_city_name")
+        @com.aliyun.core.annotation.NameInMap("dep_city_name")
         private String depCityName;
 
-        @NameInMap("dep_time")
+        @com.aliyun.core.annotation.NameInMap("dep_time")
         private String depTime;
 
-        @NameInMap("duration")
+        @com.aliyun.core.annotation.NameInMap("duration")
         private Integer duration;
 
-        @NameInMap("flight_no")
+        @com.aliyun.core.annotation.NameInMap("flight_no")
         private String flightNo;
 
-        @NameInMap("flight_share_info")
+        @com.aliyun.core.annotation.NameInMap("flight_share_info")
         private FlightShareInfo flightShareInfo;
 
-        @NameInMap("flight_size")
+        @com.aliyun.core.annotation.NameInMap("flight_size")
         private String flightSize;
 
-        @NameInMap("flight_stop_info")
+        @com.aliyun.core.annotation.NameInMap("flight_stop_info")
         private FlightStopInfo flightStopInfo;
 
-        @NameInMap("flight_type")
+        @com.aliyun.core.annotation.NameInMap("flight_type")
         private String flightType;
 
-        @NameInMap("luggage_direct_info")
+        @com.aliyun.core.annotation.NameInMap("luggage_direct_info")
         private LuggageDirectInfo luggageDirectInfo;
 
-        @NameInMap("manufacturer")
+        @com.aliyun.core.annotation.NameInMap("manufacturer")
         private String manufacturer;
 
-        @NameInMap("meal_desc")
+        @com.aliyun.core.annotation.NameInMap("meal_desc")
         private String mealDesc;
 
-        @NameInMap("on_time_rate")
+        @com.aliyun.core.annotation.NameInMap("on_time_rate")
         private String onTimeRate;
 
-        @NameInMap("one_more")
+        @com.aliyun.core.annotation.NameInMap("one_more")
         private Integer oneMore;
 
-        @NameInMap("one_more_show")
+        @com.aliyun.core.annotation.NameInMap("one_more_show")
         private String oneMoreShow;
 
-        @NameInMap("segment_index")
+        @com.aliyun.core.annotation.NameInMap("segment_index")
         private Integer segmentIndex;
 
-        @NameInMap("segment_key")
+        @com.aliyun.core.annotation.NameInMap("segment_key")
         private String segmentKey;
 
-        @NameInMap("segment_visa_remark")
+        @com.aliyun.core.annotation.NameInMap("segment_visa_remark")
         private SegmentVisaRemark segmentVisaRemark;
 
-        @NameInMap("share")
+        @com.aliyun.core.annotation.NameInMap("share")
         private Boolean share;
 
-        @NameInMap("short_flight_size")
+        @com.aliyun.core.annotation.NameInMap("short_flight_size")
         private String shortFlightSize;
 
-        @NameInMap("stop")
+        @com.aliyun.core.annotation.NameInMap("stop")
         private Boolean stop;
 
-        @NameInMap("total_time")
+        @com.aliyun.core.annotation.NameInMap("total_time")
         private String totalTime;
 
-        @NameInMap("transfer_time")
+        @com.aliyun.core.annotation.NameInMap("transfer_time")
         private String transferTime;
 
-        @NameInMap("transfer_time_number")
+        @com.aliyun.core.annotation.NameInMap("transfer_time_number")
         private Integer transferTimeNumber;
 
         private FlightSegmentInfos(Builder builder) {
@@ -1680,38 +1739,44 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaItemDetailResponseBody</p>
+     */
     public static class FlightJourneyInfos extends TeaModel {
-        @NameInMap("arr_city_code")
+        @com.aliyun.core.annotation.NameInMap("arr_city_code")
         private String arrCityCode;
 
-        @NameInMap("arr_city_name")
+        @com.aliyun.core.annotation.NameInMap("arr_city_name")
         private String arrCityName;
 
-        @NameInMap("arr_time")
+        @com.aliyun.core.annotation.NameInMap("arr_time")
         private String arrTime;
 
-        @NameInMap("dep_city_code")
+        @com.aliyun.core.annotation.NameInMap("dep_city_code")
         private String depCityCode;
 
-        @NameInMap("dep_city_name")
+        @com.aliyun.core.annotation.NameInMap("dep_city_name")
         private String depCityName;
 
-        @NameInMap("dep_time")
+        @com.aliyun.core.annotation.NameInMap("dep_time")
         private String depTime;
 
-        @NameInMap("duration")
+        @com.aliyun.core.annotation.NameInMap("duration")
         private Integer duration;
 
-        @NameInMap("extensions")
-        private java.util.Map < String, String > extensions;
+        @com.aliyun.core.annotation.NameInMap("extensions")
+        private java.util.Map<String, String> extensions;
 
-        @NameInMap("flight_segment_infos")
-        private java.util.List < FlightSegmentInfos> flightSegmentInfos;
+        @com.aliyun.core.annotation.NameInMap("flight_segment_infos")
+        private java.util.List<FlightSegmentInfos> flightSegmentInfos;
 
-        @NameInMap("journey_index")
+        @com.aliyun.core.annotation.NameInMap("journey_index")
         private Integer journeyIndex;
 
-        @NameInMap("transfer_time")
+        @com.aliyun.core.annotation.NameInMap("transfer_time")
         private Integer transferTime;
 
         private FlightJourneyInfos(Builder builder) {
@@ -1788,14 +1853,14 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         /**
          * @return extensions
          */
-        public java.util.Map < String, String > getExtensions() {
+        public java.util.Map<String, String> getExtensions() {
             return this.extensions;
         }
 
         /**
          * @return flightSegmentInfos
          */
-        public java.util.List < FlightSegmentInfos> getFlightSegmentInfos() {
+        public java.util.List<FlightSegmentInfos> getFlightSegmentInfos() {
             return this.flightSegmentInfos;
         }
 
@@ -1821,8 +1886,8 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
             private String depCityName; 
             private String depTime; 
             private Integer duration; 
-            private java.util.Map < String, String > extensions; 
-            private java.util.List < FlightSegmentInfos> flightSegmentInfos; 
+            private java.util.Map<String, String> extensions; 
+            private java.util.List<FlightSegmentInfos> flightSegmentInfos; 
             private Integer journeyIndex; 
             private Integer transferTime; 
 
@@ -1885,7 +1950,7 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
             /**
              * extensions.
              */
-            public Builder extensions(java.util.Map < String, String > extensions) {
+            public Builder extensions(java.util.Map<String, String> extensions) {
                 this.extensions = extensions;
                 return this;
             }
@@ -1893,7 +1958,7 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
             /**
              * flight_segment_infos.
              */
-            public Builder flightSegmentInfos(java.util.List < FlightSegmentInfos> flightSegmentInfos) {
+            public Builder flightSegmentInfos(java.util.List<FlightSegmentInfos> flightSegmentInfos) {
                 this.flightSegmentInfos = flightSegmentInfos;
                 return this;
             }
@@ -1921,11 +1986,17 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaItemDetailResponseBody</p>
+     */
     public static class FlightRuleInfo extends TeaModel {
-        @NameInMap("baggage_desc")
+        @com.aliyun.core.annotation.NameInMap("baggage_desc")
         private String baggageDesc;
 
-        @NameInMap("refund_change_rule_desc")
+        @com.aliyun.core.annotation.NameInMap("refund_change_rule_desc")
         private String refundChangeRuleDesc;
 
         private FlightRuleInfo(Builder builder) {
@@ -1982,11 +2053,17 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaItemDetailResponseBody</p>
+     */
     public static class SegmentPosition extends TeaModel {
-        @NameInMap("journey_index")
+        @com.aliyun.core.annotation.NameInMap("journey_index")
         private Integer journeyIndex;
 
-        @NameInMap("segment_index")
+        @com.aliyun.core.annotation.NameInMap("segment_index")
         private Integer segmentIndex;
 
         private SegmentPosition(Builder builder) {
@@ -2043,11 +2120,17 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaItemDetailResponseBody</p>
+     */
     public static class FlightRuleInfoList extends TeaModel {
-        @NameInMap("flight_rule_info")
+        @com.aliyun.core.annotation.NameInMap("flight_rule_info")
         private FlightRuleInfo flightRuleInfo;
 
-        @NameInMap("segment_position")
+        @com.aliyun.core.annotation.NameInMap("segment_position")
         private SegmentPosition segmentPosition;
 
         private FlightRuleInfoList(Builder builder) {
@@ -2104,14 +2187,20 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaItemDetailResponseBody</p>
+     */
     public static class BaggageRule extends TeaModel {
-        @NameInMap("baggage_digest")
+        @com.aliyun.core.annotation.NameInMap("baggage_digest")
         private String baggageDigest;
 
-        @NameInMap("baggage_info_map")
-        private java.util.Map < String, java.util.List<ModuleGroupItemSubItemsBaggageRuleBaggageInfoMapValue>> baggageInfoMap;
+        @com.aliyun.core.annotation.NameInMap("baggage_info_map")
+        private java.util.Map<String, java.util.List<ModuleGroupItemSubItemsBaggageRuleBaggageInfoMapValue>> baggageInfoMap;
 
-        @NameInMap("structured_baggage")
+        @com.aliyun.core.annotation.NameInMap("structured_baggage")
         private Boolean structuredBaggage;
 
         private BaggageRule(Builder builder) {
@@ -2138,7 +2227,7 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         /**
          * @return baggageInfoMap
          */
-        public java.util.Map < String, java.util.List<ModuleGroupItemSubItemsBaggageRuleBaggageInfoMapValue>> getBaggageInfoMap() {
+        public java.util.Map<String, java.util.List<ModuleGroupItemSubItemsBaggageRuleBaggageInfoMapValue>> getBaggageInfoMap() {
             return this.baggageInfoMap;
         }
 
@@ -2151,7 +2240,7 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private String baggageDigest; 
-            private java.util.Map < String, java.util.List<ModuleGroupItemSubItemsBaggageRuleBaggageInfoMapValue>> baggageInfoMap; 
+            private java.util.Map<String, java.util.List<ModuleGroupItemSubItemsBaggageRuleBaggageInfoMapValue>> baggageInfoMap; 
             private Boolean structuredBaggage; 
 
             /**
@@ -2165,7 +2254,7 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
             /**
              * baggage_info_map.
              */
-            public Builder baggageInfoMap(java.util.Map < String, java.util.List<ModuleGroupItemSubItemsBaggageRuleBaggageInfoMapValue>> baggageInfoMap) {
+            public Builder baggageInfoMap(java.util.Map<String, java.util.List<ModuleGroupItemSubItemsBaggageRuleBaggageInfoMapValue>> baggageInfoMap) {
                 this.baggageInfoMap = baggageInfoMap;
                 return this;
             }
@@ -2185,20 +2274,26 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaItemDetailResponseBody</p>
+     */
     public static class RefundChangeRule extends TeaModel {
-        @NameInMap("cancel_fee_ind")
+        @com.aliyun.core.annotation.NameInMap("cancel_fee_ind")
         private Boolean cancelFeeInd;
 
-        @NameInMap("change_fee_ind")
+        @com.aliyun.core.annotation.NameInMap("change_fee_ind")
         private Boolean changeFeeInd;
 
-        @NameInMap("offer_penalty_info_map")
-        private java.util.Map < String, java.util.List<ModuleGroupItemSubItemsRefundChangeRuleOfferPenaltyInfoMapValue>> offerPenaltyInfoMap;
+        @com.aliyun.core.annotation.NameInMap("offer_penalty_info_map")
+        private java.util.Map<String, java.util.List<ModuleGroupItemSubItemsRefundChangeRuleOfferPenaltyInfoMapValue>> offerPenaltyInfoMap;
 
-        @NameInMap("refund_change_digest")
+        @com.aliyun.core.annotation.NameInMap("refund_change_digest")
         private String refundChangeDigest;
 
-        @NameInMap("structured_refund")
+        @com.aliyun.core.annotation.NameInMap("structured_refund")
         private Boolean structuredRefund;
 
         private RefundChangeRule(Builder builder) {
@@ -2234,7 +2329,7 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         /**
          * @return offerPenaltyInfoMap
          */
-        public java.util.Map < String, java.util.List<ModuleGroupItemSubItemsRefundChangeRuleOfferPenaltyInfoMapValue>> getOfferPenaltyInfoMap() {
+        public java.util.Map<String, java.util.List<ModuleGroupItemSubItemsRefundChangeRuleOfferPenaltyInfoMapValue>> getOfferPenaltyInfoMap() {
             return this.offerPenaltyInfoMap;
         }
 
@@ -2255,7 +2350,7 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean cancelFeeInd; 
             private Boolean changeFeeInd; 
-            private java.util.Map < String, java.util.List<ModuleGroupItemSubItemsRefundChangeRuleOfferPenaltyInfoMapValue>> offerPenaltyInfoMap; 
+            private java.util.Map<String, java.util.List<ModuleGroupItemSubItemsRefundChangeRuleOfferPenaltyInfoMapValue>> offerPenaltyInfoMap; 
             private String refundChangeDigest; 
             private Boolean structuredRefund; 
 
@@ -2278,7 +2373,7 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
             /**
              * offer_penalty_info_map.
              */
-            public Builder offerPenaltyInfoMap(java.util.Map < String, java.util.List<ModuleGroupItemSubItemsRefundChangeRuleOfferPenaltyInfoMapValue>> offerPenaltyInfoMap) {
+            public Builder offerPenaltyInfoMap(java.util.Map<String, java.util.List<ModuleGroupItemSubItemsRefundChangeRuleOfferPenaltyInfoMapValue>> offerPenaltyInfoMap) {
                 this.offerPenaltyInfoMap = offerPenaltyInfoMap;
                 return this;
             }
@@ -2306,20 +2401,26 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaItemDetailResponseBody</p>
+     */
     public static class SubItems extends TeaModel {
-        @NameInMap("baggage_rule")
+        @com.aliyun.core.annotation.NameInMap("baggage_rule")
         private BaggageRule baggageRule;
 
-        @NameInMap("refund_change_rule")
+        @com.aliyun.core.annotation.NameInMap("refund_change_rule")
         private RefundChangeRule refundChangeRule;
 
-        @NameInMap("segment_keys")
-        private java.util.List < String > segmentKeys;
+        @com.aliyun.core.annotation.NameInMap("segment_keys")
+        private java.util.List<String> segmentKeys;
 
-        @NameInMap("shopping_item_map")
-        private java.util.Map < String, ModuleGroupItemSubItemsShoppingItemMapValue > shoppingItemMap;
+        @com.aliyun.core.annotation.NameInMap("shopping_item_map")
+        private java.util.Map<String, ModuleGroupItemSubItemsShoppingItemMapValue> shoppingItemMap;
 
-        @NameInMap("uniq_key")
+        @com.aliyun.core.annotation.NameInMap("uniq_key")
         private String uniqKey;
 
         private SubItems(Builder builder) {
@@ -2355,14 +2456,14 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         /**
          * @return segmentKeys
          */
-        public java.util.List < String > getSegmentKeys() {
+        public java.util.List<String> getSegmentKeys() {
             return this.segmentKeys;
         }
 
         /**
          * @return shoppingItemMap
          */
-        public java.util.Map < String, ModuleGroupItemSubItemsShoppingItemMapValue > getShoppingItemMap() {
+        public java.util.Map<String, ModuleGroupItemSubItemsShoppingItemMapValue> getShoppingItemMap() {
             return this.shoppingItemMap;
         }
 
@@ -2376,8 +2477,8 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         public static final class Builder {
             private BaggageRule baggageRule; 
             private RefundChangeRule refundChangeRule; 
-            private java.util.List < String > segmentKeys; 
-            private java.util.Map < String, ModuleGroupItemSubItemsShoppingItemMapValue > shoppingItemMap; 
+            private java.util.List<String> segmentKeys; 
+            private java.util.Map<String, ModuleGroupItemSubItemsShoppingItemMapValue> shoppingItemMap; 
             private String uniqKey; 
 
             /**
@@ -2399,7 +2500,7 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
             /**
              * segment_keys.
              */
-            public Builder segmentKeys(java.util.List < String > segmentKeys) {
+            public Builder segmentKeys(java.util.List<String> segmentKeys) {
                 this.segmentKeys = segmentKeys;
                 return this;
             }
@@ -2407,7 +2508,7 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
             /**
              * shopping_item_map.
              */
-            public Builder shoppingItemMap(java.util.Map < String, ModuleGroupItemSubItemsShoppingItemMapValue > shoppingItemMap) {
+            public Builder shoppingItemMap(java.util.Map<String, ModuleGroupItemSubItemsShoppingItemMapValue> shoppingItemMap) {
                 this.shoppingItemMap = shoppingItemMap;
                 return this;
             }
@@ -2427,29 +2528,39 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaItemDetailResponseBody</p>
+     */
     public static class GroupItem extends TeaModel {
-        @NameInMap("agreement_price_codes")
-        private java.util.List < String > agreementPriceCodes;
+        @com.aliyun.core.annotation.NameInMap("agreement_price_codes")
+        private java.util.List<String> agreementPriceCodes;
 
-        @NameInMap("flight_rule_info_list")
-        private java.util.List < FlightRuleInfoList> flightRuleInfoList;
+        @com.aliyun.core.annotation.NameInMap("flight_rule_info_list")
+        private java.util.List<FlightRuleInfoList> flightRuleInfoList;
 
-        @NameInMap("item_id")
+        @com.aliyun.core.annotation.NameInMap("item_id")
         private String itemId;
 
-        @NameInMap("shopping_item_map")
-        private java.util.Map < String, ModuleGroupItemShoppingItemMapValue > shoppingItemMap;
+        @com.aliyun.core.annotation.NameInMap("item_type")
+        private String itemType;
 
-        @NameInMap("sub_item_position_map")
-        private java.util.Map < String, java.util.List<ModuleGroupItemSubItemPositionMapValue>> subItemPositionMap;
+        @com.aliyun.core.annotation.NameInMap("shopping_item_map")
+        private java.util.Map<String, ModuleGroupItemShoppingItemMapValue> shoppingItemMap;
 
-        @NameInMap("sub_items")
-        private java.util.List < SubItems> subItems;
+        @com.aliyun.core.annotation.NameInMap("sub_item_position_map")
+        private java.util.Map<String, java.util.List<ModuleGroupItemSubItemPositionMapValue>> subItemPositionMap;
+
+        @com.aliyun.core.annotation.NameInMap("sub_items")
+        private java.util.List<SubItems> subItems;
 
         private GroupItem(Builder builder) {
             this.agreementPriceCodes = builder.agreementPriceCodes;
             this.flightRuleInfoList = builder.flightRuleInfoList;
             this.itemId = builder.itemId;
+            this.itemType = builder.itemType;
             this.shoppingItemMap = builder.shoppingItemMap;
             this.subItemPositionMap = builder.subItemPositionMap;
             this.subItems = builder.subItems;
@@ -2466,14 +2577,14 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         /**
          * @return agreementPriceCodes
          */
-        public java.util.List < String > getAgreementPriceCodes() {
+        public java.util.List<String> getAgreementPriceCodes() {
             return this.agreementPriceCodes;
         }
 
         /**
          * @return flightRuleInfoList
          */
-        public java.util.List < FlightRuleInfoList> getFlightRuleInfoList() {
+        public java.util.List<FlightRuleInfoList> getFlightRuleInfoList() {
             return this.flightRuleInfoList;
         }
 
@@ -2485,38 +2596,46 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return itemType
+         */
+        public String getItemType() {
+            return this.itemType;
+        }
+
+        /**
          * @return shoppingItemMap
          */
-        public java.util.Map < String, ModuleGroupItemShoppingItemMapValue > getShoppingItemMap() {
+        public java.util.Map<String, ModuleGroupItemShoppingItemMapValue> getShoppingItemMap() {
             return this.shoppingItemMap;
         }
 
         /**
          * @return subItemPositionMap
          */
-        public java.util.Map < String, java.util.List<ModuleGroupItemSubItemPositionMapValue>> getSubItemPositionMap() {
+        public java.util.Map<String, java.util.List<ModuleGroupItemSubItemPositionMapValue>> getSubItemPositionMap() {
             return this.subItemPositionMap;
         }
 
         /**
          * @return subItems
          */
-        public java.util.List < SubItems> getSubItems() {
+        public java.util.List<SubItems> getSubItems() {
             return this.subItems;
         }
 
         public static final class Builder {
-            private java.util.List < String > agreementPriceCodes; 
-            private java.util.List < FlightRuleInfoList> flightRuleInfoList; 
+            private java.util.List<String> agreementPriceCodes; 
+            private java.util.List<FlightRuleInfoList> flightRuleInfoList; 
             private String itemId; 
-            private java.util.Map < String, ModuleGroupItemShoppingItemMapValue > shoppingItemMap; 
-            private java.util.Map < String, java.util.List<ModuleGroupItemSubItemPositionMapValue>> subItemPositionMap; 
-            private java.util.List < SubItems> subItems; 
+            private String itemType; 
+            private java.util.Map<String, ModuleGroupItemShoppingItemMapValue> shoppingItemMap; 
+            private java.util.Map<String, java.util.List<ModuleGroupItemSubItemPositionMapValue>> subItemPositionMap; 
+            private java.util.List<SubItems> subItems; 
 
             /**
              * agreement_price_codes.
              */
-            public Builder agreementPriceCodes(java.util.List < String > agreementPriceCodes) {
+            public Builder agreementPriceCodes(java.util.List<String> agreementPriceCodes) {
                 this.agreementPriceCodes = agreementPriceCodes;
                 return this;
             }
@@ -2524,7 +2643,7 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
             /**
              * flight_rule_info_list.
              */
-            public Builder flightRuleInfoList(java.util.List < FlightRuleInfoList> flightRuleInfoList) {
+            public Builder flightRuleInfoList(java.util.List<FlightRuleInfoList> flightRuleInfoList) {
                 this.flightRuleInfoList = flightRuleInfoList;
                 return this;
             }
@@ -2538,9 +2657,17 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
             }
 
             /**
+             * item_type.
+             */
+            public Builder itemType(String itemType) {
+                this.itemType = itemType;
+                return this;
+            }
+
+            /**
              * shopping_item_map.
              */
-            public Builder shoppingItemMap(java.util.Map < String, ModuleGroupItemShoppingItemMapValue > shoppingItemMap) {
+            public Builder shoppingItemMap(java.util.Map<String, ModuleGroupItemShoppingItemMapValue> shoppingItemMap) {
                 this.shoppingItemMap = shoppingItemMap;
                 return this;
             }
@@ -2548,7 +2675,7 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
             /**
              * sub_item_position_map.
              */
-            public Builder subItemPositionMap(java.util.Map < String, java.util.List<ModuleGroupItemSubItemPositionMapValue>> subItemPositionMap) {
+            public Builder subItemPositionMap(java.util.Map<String, java.util.List<ModuleGroupItemSubItemPositionMapValue>> subItemPositionMap) {
                 this.subItemPositionMap = subItemPositionMap;
                 return this;
             }
@@ -2556,7 +2683,7 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
             /**
              * sub_items.
              */
-            public Builder subItems(java.util.List < SubItems> subItems) {
+            public Builder subItems(java.util.List<SubItems> subItems) {
                 this.subItems = subItems;
                 return this;
             }
@@ -2568,11 +2695,17 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaItemDetailResponseBody</p>
+     */
     public static class ShutterDocs extends TeaModel {
-        @NameInMap("contents")
-        private java.util.List < String > contents;
+        @com.aliyun.core.annotation.NameInMap("contents")
+        private java.util.List<String> contents;
 
-        @NameInMap("main_title")
+        @com.aliyun.core.annotation.NameInMap("main_title")
         private String mainTitle;
 
         private ShutterDocs(Builder builder) {
@@ -2591,7 +2724,7 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         /**
          * @return contents
          */
-        public java.util.List < String > getContents() {
+        public java.util.List<String> getContents() {
             return this.contents;
         }
 
@@ -2603,13 +2736,13 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > contents; 
+            private java.util.List<String> contents; 
             private String mainTitle; 
 
             /**
              * contents.
              */
-            public Builder contents(java.util.List < String > contents) {
+            public Builder contents(java.util.List<String> contents) {
                 this.contents = contents;
                 return this;
             }
@@ -2629,17 +2762,23 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOtaItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaItemDetailResponseBody</p>
+     */
     public static class Module extends TeaModel {
-        @NameInMap("flight_journey_infos")
-        private java.util.List < FlightJourneyInfos> flightJourneyInfos;
+        @com.aliyun.core.annotation.NameInMap("flight_journey_infos")
+        private java.util.List<FlightJourneyInfos> flightJourneyInfos;
 
-        @NameInMap("group_item")
+        @com.aliyun.core.annotation.NameInMap("group_item")
         private GroupItem groupItem;
 
-        @NameInMap("shutter_docs")
-        private java.util.List < ShutterDocs> shutterDocs;
+        @com.aliyun.core.annotation.NameInMap("shutter_docs")
+        private java.util.List<ShutterDocs> shutterDocs;
 
-        @NameInMap("trip_type")
+        @com.aliyun.core.annotation.NameInMap("trip_type")
         private Integer tripType;
 
         private Module(Builder builder) {
@@ -2660,7 +2799,7 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         /**
          * @return flightJourneyInfos
          */
-        public java.util.List < FlightJourneyInfos> getFlightJourneyInfos() {
+        public java.util.List<FlightJourneyInfos> getFlightJourneyInfos() {
             return this.flightJourneyInfos;
         }
 
@@ -2674,7 +2813,7 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         /**
          * @return shutterDocs
          */
-        public java.util.List < ShutterDocs> getShutterDocs() {
+        public java.util.List<ShutterDocs> getShutterDocs() {
             return this.shutterDocs;
         }
 
@@ -2686,15 +2825,15 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < FlightJourneyInfos> flightJourneyInfos; 
+            private java.util.List<FlightJourneyInfos> flightJourneyInfos; 
             private GroupItem groupItem; 
-            private java.util.List < ShutterDocs> shutterDocs; 
+            private java.util.List<ShutterDocs> shutterDocs; 
             private Integer tripType; 
 
             /**
              * flight_journey_infos.
              */
-            public Builder flightJourneyInfos(java.util.List < FlightJourneyInfos> flightJourneyInfos) {
+            public Builder flightJourneyInfos(java.util.List<FlightJourneyInfos> flightJourneyInfos) {
                 this.flightJourneyInfos = flightJourneyInfos;
                 return this;
             }
@@ -2710,7 +2849,7 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
             /**
              * shutter_docs.
              */
-            public Builder shutterDocs(java.util.List < ShutterDocs> shutterDocs) {
+            public Builder shutterDocs(java.util.List<ShutterDocs> shutterDocs) {
                 this.shutterDocs = shutterDocs;
                 return this;
             }

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePortFlowListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePortFlowListResponseBody</p>
  */
 public class DescribePortFlowListResponseBody extends TeaModel {
-    @NameInMap("PortFlowList")
-    private java.util.List < PortFlowList> portFlowList;
+    @com.aliyun.core.annotation.NameInMap("PortFlowList")
+    private java.util.List<PortFlowList> portFlowList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePortFlowListResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribePortFlowListResponseBody extends TeaModel {
     /**
      * @return portFlowList
      */
-    public java.util.List < PortFlowList> getPortFlowList() {
+    public java.util.List<PortFlowList> getPortFlowList() {
         return this.portFlowList;
     }
 
@@ -46,19 +51,22 @@ public class DescribePortFlowListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < PortFlowList> portFlowList; 
+        private java.util.List<PortFlowList> portFlowList; 
         private String requestId; 
 
         /**
-         * The returned traffic data.
+         * <p>The returned traffic data.</p>
          */
-        public Builder portFlowList(java.util.List < PortFlowList> portFlowList) {
+        public Builder portFlowList(java.util.List<PortFlowList> portFlowList) {
             this.portFlowList = portFlowList;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FFC77501-BDF8-4BC8-9BF5-B295FBC3189B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,56 +79,62 @@ public class DescribePortFlowListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePortFlowListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePortFlowListResponseBody</p>
+     */
     public static class PortFlowList extends TeaModel {
-        @NameInMap("AttackBps")
+        @com.aliyun.core.annotation.NameInMap("AttackBps")
         private Long attackBps;
 
-        @NameInMap("AttackPps")
+        @com.aliyun.core.annotation.NameInMap("AttackPps")
         private Long attackPps;
 
-        @NameInMap("InBps")
+        @com.aliyun.core.annotation.NameInMap("InBps")
         private Long inBps;
 
-        @NameInMap("InPps")
+        @com.aliyun.core.annotation.NameInMap("InPps")
         private Long inPps;
 
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private Long index;
 
-        @NameInMap("OutBps")
+        @com.aliyun.core.annotation.NameInMap("OutBps")
         private Long outBps;
 
-        @NameInMap("OutPps")
+        @com.aliyun.core.annotation.NameInMap("OutPps")
         private Long outPps;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("SlaBpsDropBps")
+        @com.aliyun.core.annotation.NameInMap("SlaBpsDropBps")
         private Long slaBpsDropBps;
 
-        @NameInMap("SlaBpsDropPps")
+        @com.aliyun.core.annotation.NameInMap("SlaBpsDropPps")
         private Long slaBpsDropPps;
 
-        @NameInMap("SlaConnDropBps")
+        @com.aliyun.core.annotation.NameInMap("SlaConnDropBps")
         private Long slaConnDropBps;
 
-        @NameInMap("SlaConnDropPps")
+        @com.aliyun.core.annotation.NameInMap("SlaConnDropPps")
         private Long slaConnDropPps;
 
-        @NameInMap("SlaCpsDropBps")
+        @com.aliyun.core.annotation.NameInMap("SlaCpsDropBps")
         private Long slaCpsDropBps;
 
-        @NameInMap("SlaCpsDropPps")
+        @com.aliyun.core.annotation.NameInMap("SlaCpsDropPps")
         private Long slaCpsDropPps;
 
-        @NameInMap("SlaPpsDropBps")
+        @com.aliyun.core.annotation.NameInMap("SlaPpsDropBps")
         private Long slaPpsDropBps;
 
-        @NameInMap("SlaPpsDropPps")
+        @com.aliyun.core.annotation.NameInMap("SlaPpsDropPps")
         private Long slaPpsDropPps;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private Long time;
 
         private PortFlowList(Builder builder) {
@@ -290,7 +304,10 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             private Long time; 
 
             /**
-             * The bandwidth of attack traffic. Unit: bit/s.
+             * <p>The bandwidth of attack traffic. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder attackBps(Long attackBps) {
                 this.attackBps = attackBps;
@@ -298,7 +315,10 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * The packet forwarding rate of attack traffic. Unit: pps.
+             * <p>The packet forwarding rate of attack traffic. Unit: pps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder attackPps(Long attackPps) {
                 this.attackPps = attackPps;
@@ -306,7 +326,10 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * The inbound bandwidth. Unit: bit/s.
+             * <p>The inbound bandwidth. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2176000</p>
              */
             public Builder inBps(Long inBps) {
                 this.inBps = inBps;
@@ -314,7 +337,10 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * The packet forwarding rate of inbound traffic. Unit: packets per second.
+             * <p>The packet forwarding rate of inbound traffic. Unit: packets per second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2934</p>
              */
             public Builder inPps(Long inPps) {
                 this.inPps = inPps;
@@ -322,7 +348,10 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * The index number of the returned data.
+             * <p>The index number of the returned data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder index(Long index) {
                 this.index = index;
@@ -330,7 +359,10 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * The outbound bandwidth. Unit: bit/s.
+             * <p>The outbound bandwidth. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4389</p>
              */
             public Builder outBps(Long outBps) {
                 this.outBps = outBps;
@@ -338,7 +370,10 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * The packet forwarding rate of outbound traffic. Unit: packets per second (pps).
+             * <p>The packet forwarding rate of outbound traffic. Unit: packets per second (pps).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder outPps(Long outPps) {
                 this.outPps = outPps;
@@ -346,17 +381,21 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * The source region of the traffic. Valid values:
-             * <p>
+             * <p>The source region of the traffic. Valid values:</p>
+             * <ul>
+             * <li><strong>cn</strong>: mainland China</li>
+             * <li><strong>alb-ap-northeast-1-gf-x</strong>: Japan (Tokyo)</li>
+             * <li><strong>alb-ap-southeast-gf-x</strong>: Singapore</li>
+             * <li><strong>alb-cn-hongkong-gf-x</strong>: Hong Kong (China)</li>
+             * <li><strong>alb-eu-central-1-gf-x</strong>: Germany (Frankfurt)</li>
+             * <li><strong>alb-us-west-1-gf-x</strong>: US (Silicon Valley)</li>
+             * </ul>
+             * <blockquote>
+             * <p>The values except <strong>cn</strong> are returned only when <strong>RegionId</strong> is set to <strong>ap-southeast-1</strong>.</p>
+             * </blockquote>
              * 
-             * *   **cn**: mainland China
-             * *   **alb-ap-northeast-1-gf-x**: Japan (Tokyo)
-             * *   **alb-ap-southeast-gf-x**: Singapore
-             * *   **alb-cn-hongkong-gf-x**: Hong Kong (China)
-             * *   **alb-eu-central-1-gf-x**: Germany (Frankfurt)
-             * *   **alb-us-west-1-gf-x**: US (Silicon Valley)
-             * 
-             * > The values except **cn** are returned only when **RegionId** is set to **ap-southeast-1**.
+             * <strong>example:</strong>
+             * <p>cn</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -428,7 +467,10 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the data was collected. The value is a UNIX timestamp. Unit: seconds.
+             * <p>The time when the data was collected. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1582992000</p>
              */
             public Builder time(Long time) {
                 this.time = time;

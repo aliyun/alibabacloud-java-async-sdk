@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateStandardGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateStandardGroupResponseBody</p>
  */
 public class CreateStandardGroupResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StandardGroup")
+    @com.aliyun.core.annotation.NameInMap("StandardGroup")
     private StandardGroup standardGroup;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateStandardGroupResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class CreateStandardGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the request fails.
+         * <p>The error code returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>403</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +102,10 @@ public class CreateStandardGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request fails.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +113,10 @@ public class CreateStandardGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34E01EDD-6A16-4CF0-9541-C644D1BE01AA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +124,7 @@ public class CreateStandardGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The created security rule set.
+         * <p>The information about the created security rule set.</p>
          */
         public Builder standardGroup(StandardGroup standardGroup) {
             this.standardGroup = standardGroup;
@@ -118,11 +132,14 @@ public class CreateStandardGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -135,25 +152,35 @@ public class CreateStandardGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateStandardGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateStandardGroupResponseBody</p>
+     */
     public static class StandardGroup extends TeaModel {
-        @NameInMap("DbType")
+        @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GroupMode")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
+        private Long groupId;
+
+        @com.aliyun.core.annotation.NameInMap("GroupMode")
         private String groupMode;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("LastMenderId")
+        @com.aliyun.core.annotation.NameInMap("LastMenderId")
         private Long lastMenderId;
 
         private StandardGroup(Builder builder) {
             this.dbType = builder.dbType;
             this.description = builder.description;
+            this.groupId = builder.groupId;
             this.groupMode = builder.groupMode;
             this.groupName = builder.groupName;
             this.lastMenderId = builder.lastMenderId;
@@ -182,6 +209,13 @@ public class CreateStandardGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return groupId
+         */
+        public Long getGroupId() {
+            return this.groupId;
+        }
+
+        /**
          * @return groupMode
          */
         public String getGroupMode() {
@@ -205,12 +239,16 @@ public class CreateStandardGroupResponseBody extends TeaModel {
         public static final class Builder {
             private String dbType; 
             private String description; 
+            private Long groupId; 
             private String groupMode; 
             private String groupName; 
             private Long lastMenderId; 
 
             /**
-             * The type of the database engine. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
+             * <p>The type of the database engine. For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/198106.html">DbType parameter</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -218,7 +256,10 @@ public class CreateStandardGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the security rule set.
+             * <p>The description of the security rule set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_rule</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -226,12 +267,26 @@ public class CreateStandardGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The control mode. Valid values:
-             * <p>
+             * <p>The security rule set ID.</p>
              * 
-             * *   **NONE_CONTROL**: Flexible Management
-             * *   **STABLE**: Stable Change
-             * *   **COMMON**: Security Collaboration
+             * <strong>example:</strong>
+             * <p>41****</p>
+             */
+            public Builder groupId(Long groupId) {
+                this.groupId = groupId;
+                return this;
+            }
+
+            /**
+             * <p>The control mode. Valid values:</p>
+             * <ul>
+             * <li><strong>NONE_CONTROL</strong>: Flexible Management</li>
+             * <li><strong>STABLE</strong>: Stable Change</li>
+             * <li><strong>COMMON</strong>: Security Collaboration</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>COMMON</p>
              */
             public Builder groupMode(String groupMode) {
                 this.groupMode = groupMode;
@@ -239,7 +294,10 @@ public class CreateStandardGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the security rule set.
+             * <p>The name of the security rule set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_group</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -247,7 +305,10 @@ public class CreateStandardGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user who creates the security rule set.
+             * <p>The ID of the user who creates the security rule set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51****</p>
              */
             public Builder lastMenderId(Long lastMenderId) {
                 this.lastMenderId = lastMenderId;

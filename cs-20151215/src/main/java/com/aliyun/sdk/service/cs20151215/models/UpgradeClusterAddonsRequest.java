@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeClusterAddonsRequest} extends {@link RequestModel}
  *
  * <p>UpgradeClusterAddonsRequest</p>
  */
 public class UpgradeClusterAddonsRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Body
-    @NameInMap("body")
-    private java.util.List < UpgradeClusterAddonsRequestBody> body;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
+    private java.util.List<UpgradeClusterAddonsRequestBody> body;
 
     private UpgradeClusterAddonsRequest(Builder builder) {
         super(builder);
@@ -50,13 +55,13 @@ public class UpgradeClusterAddonsRequest extends Request {
     /**
      * @return body
      */
-    public java.util.List < UpgradeClusterAddonsRequestBody> getBody() {
+    public java.util.List<UpgradeClusterAddonsRequestBody> getBody() {
         return this.body;
     }
 
     public static final class Builder extends Request.Builder<UpgradeClusterAddonsRequest, Builder> {
         private String clusterId; 
-        private java.util.List < UpgradeClusterAddonsRequestBody> body; 
+        private java.util.List<UpgradeClusterAddonsRequestBody> body; 
 
         private Builder() {
             super();
@@ -69,7 +74,11 @@ public class UpgradeClusterAddonsRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cf4299b79b3e34226abfdc80a4bda****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -78,9 +87,9 @@ public class UpgradeClusterAddonsRequest extends Request {
         }
 
         /**
-         * The request parameters.
+         * <p>The request parameters.</p>
          */
-        public Builder body(java.util.List < UpgradeClusterAddonsRequestBody> body) {
+        public Builder body(java.util.List<UpgradeClusterAddonsRequestBody> body) {
             this.putBodyParameter("body", body);
             this.body = body;
             return this;
@@ -93,22 +102,28 @@ public class UpgradeClusterAddonsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpgradeClusterAddonsRequest} extends {@link TeaModel}
+     *
+     * <p>UpgradeClusterAddonsRequest</p>
+     */
     public static class UpgradeClusterAddonsRequestBody extends TeaModel {
-        @NameInMap("component_name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("component_name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String componentName;
 
-        @NameInMap("config")
+        @com.aliyun.core.annotation.NameInMap("config")
         private String config;
 
-        @NameInMap("next_version")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("next_version")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String nextVersion;
 
-        @NameInMap("policy")
+        @com.aliyun.core.annotation.NameInMap("policy")
         private String policy;
 
-        @NameInMap("version")
+        @com.aliyun.core.annotation.NameInMap("version")
         private String version;
 
         private UpgradeClusterAddonsRequestBody(Builder builder) {
@@ -170,7 +185,11 @@ public class UpgradeClusterAddonsRequest extends Request {
             private String version; 
 
             /**
-             * The name of the component.
+             * <p>The name of the component.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>coredns</p>
              */
             public Builder componentName(String componentName) {
                 this.componentName = componentName;
@@ -178,7 +197,10 @@ public class UpgradeClusterAddonsRequest extends Request {
             }
 
             /**
-             * The custom component settings that you want to use. The value is a JSON string.
+             * <p>The custom component settings that you want to use. The value is a JSON string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;CpuRequest&quot;:&quot;800m&quot;}</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -186,7 +208,11 @@ public class UpgradeClusterAddonsRequest extends Request {
             }
 
             /**
-             * The version to which the component can be updated. You can call the `DescribeClusterAddonsVersion` operation to query the version to which the component can be updated.
+             * <p>The version to which the component can be updated. You can call the <code>DescribeClusterAddonsVersion</code> operation to query the version to which the component can be updated.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.6.7</p>
              */
             public Builder nextVersion(String nextVersion) {
                 this.nextVersion = nextVersion;
@@ -194,11 +220,14 @@ public class UpgradeClusterAddonsRequest extends Request {
             }
 
             /**
-             * The update policy. Valid values:
-             * <p>
+             * <p>The update policy. Valid values:</p>
+             * <ul>
+             * <li>overwrite</li>
+             * <li>canary</li>
+             * </ul>
              * 
-             * *   overwrite
-             * *   canary
+             * <strong>example:</strong>
+             * <p>canary</p>
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -206,7 +235,10 @@ public class UpgradeClusterAddonsRequest extends Request {
             }
 
             /**
-             * The current version of the component.
+             * <p>The current version of the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1.6.2</p>
              */
             public Builder version(String version) {
                 this.version = version;

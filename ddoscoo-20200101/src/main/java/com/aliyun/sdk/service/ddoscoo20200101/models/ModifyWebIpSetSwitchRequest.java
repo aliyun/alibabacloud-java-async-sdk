@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyWebIpSetSwitchRequest} extends {@link RequestModel}
  *
  * <p>ModifyWebIpSetSwitchRequest</p>
  */
 public class ModifyWebIpSetSwitchRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Config")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Config")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String config;
 
-    @Query
-    @NameInMap("Domain")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Domain")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domain;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private ModifyWebIpSetSwitchRequest(Builder builder) {
@@ -107,13 +112,16 @@ public class ModifyWebIpSetSwitchRequest extends Request {
         }
 
         /**
-         * The details of the Black Lists and White Lists (Domain Names) policy. This parameter is a JSON string. The string contains the following fields:
-         * <p>
+         * <p>The details of the Blacklist/Whitelist (Domain Names) feature. This parameter is a JSON string. The value consists of the following fields:</p>
+         * <p><strong>bwlist_enable</strong>: the status of the Blacklist/Whitelist (Domain Names) feature. This field is required and must be of the integer type. Valid values:</p>
+         * <ul>
+         * <li>0: turned off</li>
+         * <li>1: turned on</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Bwlist_Enable**: the status of the Black Lists and White Lists (Domain Names) policy. This field is required and must be of the integer type. Valid values:
-         * 
-         *     *   **0**: disabled
-         *     *   **1**: enabled
+         * <strong>example:</strong>
+         * <p>{&quot;BwlistEnable&quot;:1}</p>
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -122,10 +130,14 @@ public class ModifyWebIpSetSwitchRequest extends Request {
         }
 
         /**
-         * The domain name of the website.
-         * <p>
+         * <p>The domain name of the website.</p>
+         * <blockquote>
+         * <p>A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -134,7 +146,10 @@ public class ModifyWebIpSetSwitchRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
+         * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

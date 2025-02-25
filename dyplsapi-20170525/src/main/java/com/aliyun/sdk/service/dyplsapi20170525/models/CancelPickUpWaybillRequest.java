@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyplsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelPickUpWaybillRequest} extends {@link RequestModel}
  *
  * <p>CancelPickUpWaybillRequest</p>
  */
 public class CancelPickUpWaybillRequest extends Request {
-    @Query
-    @NameInMap("CancelDesc")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CancelDesc")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cancelDesc;
 
-    @Header
-    @NameInMap("Content-Type")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("Content-Type")
     private String contentType;
 
-    @Query
-    @NameInMap("OuterOrderCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OuterOrderCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String outerOrderCode;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private CancelPickUpWaybillRequest(Builder builder) {
@@ -126,7 +131,11 @@ public class CancelPickUpWaybillRequest extends Request {
         } 
 
         /**
-         * CancelDesc.
+         * <p>The cancellation reason.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;action&quot;:&quot;UPDATE_DESC&quot;,&quot;value&quot;:&quot;The courier is unable to pick up the package.&quot;}</p>
          */
         public Builder cancelDesc(String cancelDesc) {
             this.putQueryParameter("CancelDesc", cancelDesc);
@@ -135,7 +144,10 @@ public class CancelPickUpWaybillRequest extends Request {
         }
 
         /**
-         * Content-Type.
+         * <p>The content type of the HTTP request. This parameter is optional. If you specify this parameter, enter application/json;chatset=UTF-8.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>application/json;chatset=UTF-8</p>
          */
         public Builder contentType(String contentType) {
             this.putHeaderParameter("Content-Type", contentType);
@@ -144,7 +156,11 @@ public class CancelPickUpWaybillRequest extends Request {
         }
 
         /**
-         * OuterOrderCode.
+         * <p>The ID of the external order.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1145678823****</p>
          */
         public Builder outerOrderCode(String outerOrderCode) {
             this.putQueryParameter("OuterOrderCode", outerOrderCode);

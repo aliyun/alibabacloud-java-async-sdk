@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,72 +11,73 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateFabricConsortiumRequest</p>
  */
 public class CreateFabricConsortiumRequest extends Request {
-    @Body
-    @NameInMap("ChannelPolicy")
-    @Validation(required = true)
-    private String channelPolicy;
-
-    @Body
-    @NameInMap("ConsortiumDescription")
-    private String consortiumDescription;
-
-    @Body
-    @NameInMap("ConsortiumName")
-    @Validation(required = true)
-    private String consortiumName;
-
-    @Body
-    @NameInMap("Domain")
-    @Validation(required = true)
-    private String domain;
-
-    @Body
-    @NameInMap("Location")
-    @Validation(required = true)
-    private String location;
-
-    @Body
-    @NameInMap("OrdererType")
-    @Validation(required = true)
-    private String ordererType;
-
-    @Body
-    @NameInMap("OrderersCount")
-    private Integer orderersCount;
-
-    @Body
-    @NameInMap("Organization")
-    private java.util.List < Organization> organization;
-
-    @Body
-    @NameInMap("PaymentDuration")
-    @Validation(required = true)
-    private Integer paymentDuration;
-
-    @Body
-    @NameInMap("PaymentDurationUnit")
-    @Validation(required = true)
-    private String paymentDurationUnit;
-
-    @Body
-    @NameInMap("PeersCount")
-    private Integer peersCount;
-
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("SpecName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChannelPolicy")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String channelPolicy;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConsortiumDescription")
+    private String consortiumDescription;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConsortiumName")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String consortiumName;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Domain")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String domain;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Location")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String location;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OrdererType")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String ordererType;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OrderersCount")
+    private Integer orderersCount;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Organization")
+    private java.util.List < Organization> organization;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PaymentDuration")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private Integer paymentDuration;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PaymentDurationUnit")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String paymentDurationUnit;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PeersCount")
+    private Integer peersCount;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SpecName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String specName;
 
-    @Body
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private CreateFabricConsortiumRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.channelPolicy = builder.channelPolicy;
         this.consortiumDescription = builder.consortiumDescription;
         this.consortiumName = builder.consortiumName;
@@ -89,7 +89,6 @@ public class CreateFabricConsortiumRequest extends Request {
         this.paymentDuration = builder.paymentDuration;
         this.paymentDurationUnit = builder.paymentDurationUnit;
         this.peersCount = builder.peersCount;
-        this.regionId = builder.regionId;
         this.specName = builder.specName;
         this.zoneId = builder.zoneId;
     }
@@ -105,6 +104,13 @@ public class CreateFabricConsortiumRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -185,13 +191,6 @@ public class CreateFabricConsortiumRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return specName
      */
     public String getSpecName() {
@@ -206,6 +205,7 @@ public class CreateFabricConsortiumRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateFabricConsortiumRequest, Builder> {
+        private String regionId; 
         private String channelPolicy; 
         private String consortiumDescription; 
         private String consortiumName; 
@@ -217,7 +217,6 @@ public class CreateFabricConsortiumRequest extends Request {
         private Integer paymentDuration; 
         private String paymentDurationUnit; 
         private Integer peersCount; 
-        private String regionId; 
         private String specName; 
         private String zoneId; 
 
@@ -225,23 +224,32 @@ public class CreateFabricConsortiumRequest extends Request {
             super();
         } 
 
-        private Builder(CreateFabricConsortiumRequest response) {
-            super(response);
-            this.channelPolicy = response.channelPolicy;
-            this.consortiumDescription = response.consortiumDescription;
-            this.consortiumName = response.consortiumName;
-            this.domain = response.domain;
-            this.location = response.location;
-            this.ordererType = response.ordererType;
-            this.orderersCount = response.orderersCount;
-            this.organization = response.organization;
-            this.paymentDuration = response.paymentDuration;
-            this.paymentDurationUnit = response.paymentDurationUnit;
-            this.peersCount = response.peersCount;
-            this.regionId = response.regionId;
-            this.specName = response.specName;
-            this.zoneId = response.zoneId;
+        private Builder(CreateFabricConsortiumRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.channelPolicy = request.channelPolicy;
+            this.consortiumDescription = request.consortiumDescription;
+            this.consortiumName = request.consortiumName;
+            this.domain = request.domain;
+            this.location = request.location;
+            this.ordererType = request.ordererType;
+            this.orderersCount = request.orderersCount;
+            this.organization = request.organization;
+            this.paymentDuration = request.paymentDuration;
+            this.paymentDurationUnit = request.paymentDurationUnit;
+            this.peersCount = request.peersCount;
+            this.specName = request.specName;
+            this.zoneId = request.zoneId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ChannelPolicy.
@@ -343,15 +351,6 @@ public class CreateFabricConsortiumRequest extends Request {
         }
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
          * SpecName.
          */
         public Builder specName(String specName) {
@@ -377,7 +376,7 @@ public class CreateFabricConsortiumRequest extends Request {
     } 
 
     public static class Organization extends TeaModel {
-        @NameInMap("OrganizationId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationId")
         private String organizationId;
 
         private Organization(Builder builder) {

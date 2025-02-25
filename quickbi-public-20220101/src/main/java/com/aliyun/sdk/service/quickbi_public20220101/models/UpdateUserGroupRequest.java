@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateUserGroupRequest} extends {@link RequestModel}
  *
  * <p>UpdateUserGroupRequest</p>
  */
 public class UpdateUserGroupRequest extends Request {
-    @Query
-    @NameInMap("UserGroupDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserGroupDescription")
     private String userGroupDescription;
 
-    @Query
-    @NameInMap("UserGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userGroupId;
 
-    @Query
-    @NameInMap("UserGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserGroupName")
     private String userGroupName;
 
     private UpdateUserGroupRequest(Builder builder) {
@@ -83,11 +88,14 @@ public class UpdateUserGroupRequest extends Request {
         } 
 
         /**
-         * The description of the user group.
-         * <p>
+         * <p>The description of the user group.</p>
+         * <ul>
+         * <li>Format verification: Maximum length 255</li>
+         * <li>Special format verification: Chinese and English digits_ \ / | () ] [</li>
+         * </ul>
          * 
-         * *   Format verification: Maximum length 255
-         * *   Special format verification: Chinese and English digits\_ \ / | () ] \[
+         * <strong>example:</strong>
+         * <p>Description</p>
          */
         public Builder userGroupDescription(String userGroupDescription) {
             this.putQueryParameter("UserGroupDescription", userGroupDescription);
@@ -96,7 +104,11 @@ public class UpdateUserGroupRequest extends Request {
         }
 
         /**
-         * The ID of the user group.
+         * <p>The ID of the user group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f5eeb52e-d9c2-4a8b-80e3-47ab55c2****</p>
          */
         public Builder userGroupId(String userGroupId) {
             this.putQueryParameter("UserGroupId", userGroupId);
@@ -105,11 +117,14 @@ public class UpdateUserGroupRequest extends Request {
         }
 
         /**
-         * The name of the user group.
-         * <p>
+         * <p>The name of the user group.</p>
+         * <ul>
+         * <li>Format verification: Maximum length 255</li>
+         * <li>Special format verification: Chinese and English digits_ \ / | () ] [</li>
+         * </ul>
          * 
-         * *   Format verification: Maximum length 255
-         * *   Special format verification: Chinese and English digits\_ \ / | () ] \[
+         * <strong>example:</strong>
+         * <p>pop0001</p>
          */
         public Builder userGroupName(String userGroupName) {
             this.putQueryParameter("UserGroupName", userGroupName);

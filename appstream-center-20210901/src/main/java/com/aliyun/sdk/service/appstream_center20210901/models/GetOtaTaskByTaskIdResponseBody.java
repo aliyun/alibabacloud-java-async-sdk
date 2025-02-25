@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOtaTaskByTaskIdResponseBody} extends {@link TeaModel}
  *
  * <p>GetOtaTaskByTaskIdResponseBody</p>
  */
 public class GetOtaTaskByTaskIdResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("OtaVersion")
+    @com.aliyun.core.annotation.NameInMap("OtaVersion")
     private String otaVersion;
 
-    @NameInMap("ReleaseNote")
+    @com.aliyun.core.annotation.NameInMap("ReleaseNote")
     private String releaseNote;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskStartTime")
+    @com.aliyun.core.annotation.NameInMap("TaskStartTime")
     private String taskStartTime;
 
     private GetOtaTaskByTaskIdResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class GetOtaTaskByTaskIdResponseBody extends TeaModel {
         private String taskStartTime; 
 
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OtaTask.Running</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +114,10 @@ public class GetOtaTaskByTaskIdResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The task is running and cannot be sumitted.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -114,7 +125,10 @@ public class GetOtaTaskByTaskIdResponseBody extends TeaModel {
         }
 
         /**
-         * OtaVersion.
+         * <p>The OTA version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.1-R-20220708.110604</p>
          */
         public Builder otaVersion(String otaVersion) {
             this.otaVersion = otaVersion;
@@ -122,7 +136,7 @@ public class GetOtaTaskByTaskIdResponseBody extends TeaModel {
         }
 
         /**
-         * ReleaseNote.
+         * <p>The version description.</p>
          */
         public Builder releaseNote(String releaseNote) {
             this.releaseNote = releaseNote;
@@ -130,7 +144,10 @@ public class GetOtaTaskByTaskIdResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,11 @@ public class GetOtaTaskByTaskIdResponseBody extends TeaModel {
         }
 
         /**
-         * TaskStartTime.
+         * <p>The execution time of the OTA update task. The time follows the ISO 8601 standard.</p>
+         * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-04T14:36:00+08:00</p>
          */
         public Builder taskStartTime(String taskStartTime) {
             this.taskStartTime = taskStartTime;

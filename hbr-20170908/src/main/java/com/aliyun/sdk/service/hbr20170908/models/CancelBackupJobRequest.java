@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelBackupJobRequest} extends {@link RequestModel}
  *
  * <p>CancelBackupJobRequest</p>
  */
 public class CancelBackupJobRequest extends Request {
-    @Query
-    @NameInMap("JobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobId;
 
-    @Query
-    @NameInMap("VaultId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultId")
     private String vaultId;
 
     private CancelBackupJobRequest(Builder builder) {
@@ -62,14 +67,18 @@ public class CancelBackupJobRequest extends Request {
             super();
         } 
 
-        private Builder(CancelBackupJobRequest response) {
-            super(response);
-            this.jobId = response.jobId;
-            this.vaultId = response.vaultId;
+        private Builder(CancelBackupJobRequest request) {
+            super(request);
+            this.jobId = request.jobId;
+            this.vaultId = request.vaultId;
         } 
 
         /**
-         * JobId.
+         * <p>The ID of the backup job.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>j-******************************</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -78,7 +87,10 @@ public class CancelBackupJobRequest extends Request {
         }
 
         /**
-         * VaultId.
+         * <p>The ID of the backup vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v-*****************************</p>
          */
         public Builder vaultId(String vaultId) {
             this.putQueryParameter("VaultId", vaultId);

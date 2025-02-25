@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListApplicationsForUserResponseBody} extends {@link TeaModel}
  *
  * <p>ListApplicationsForUserResponseBody</p>
  */
 public class ListApplicationsForUserResponseBody extends TeaModel {
-    @NameInMap("Applications")
-    private java.util.List < Applications> applications;
+    @com.aliyun.core.annotation.NameInMap("Applications")
+    private java.util.List<Applications> applications;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListApplicationsForUserResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ListApplicationsForUserResponseBody extends TeaModel {
     /**
      * @return applications
      */
-    public java.util.List < Applications> getApplications() {
+    public java.util.List<Applications> getApplications() {
         return this.applications;
     }
 
@@ -57,20 +62,23 @@ public class ListApplicationsForUserResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Applications> applications; 
+        private java.util.List<Applications> applications; 
         private String requestId; 
         private Long totalCount; 
 
         /**
-         * The applications that the EIAM account can access.
+         * <p>The applications that the EIAM account can access.</p>
          */
-        public Builder applications(java.util.List < Applications> applications) {
+        public Builder applications(java.util.List<Applications> applications) {
             this.applications = applications;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class ListApplicationsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of the returned entries.
+         * <p>The total number of the returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -91,14 +102,20 @@ public class ListApplicationsForUserResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListApplicationsForUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationsForUserResponseBody</p>
+     */
     public static class Applications extends TeaModel {
-        @NameInMap("ApplicationId")
+        @com.aliyun.core.annotation.NameInMap("ApplicationId")
         private String applicationId;
 
-        @NameInMap("HasDirectAuthorization")
+        @com.aliyun.core.annotation.NameInMap("HasDirectAuthorization")
         private Boolean hasDirectAuthorization;
 
-        @NameInMap("HasInheritAuthorization")
+        @com.aliyun.core.annotation.NameInMap("HasInheritAuthorization")
         private Boolean hasInheritAuthorization;
 
         private Applications(Builder builder) {
@@ -142,7 +159,10 @@ public class ListApplicationsForUserResponseBody extends TeaModel {
             private Boolean hasInheritAuthorization; 
 
             /**
-             * The ID of the application that the EIAM account can access.
+             * <p>The ID of the application that the EIAM account can access.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -150,11 +170,14 @@ public class ListApplicationsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the EIAM account has direct permissions on the application. Valid values:
-             * <p>
+             * <p>Indicates whether the EIAM account has direct permissions on the application. Valid values:</p>
+             * <ul>
+             * <li>true: The EIAM account has direct permissions on the application.</li>
+             * <li>false: The EIAM account does not have direct permissions on the application.</li>
+             * </ul>
              * 
-             * *   true: The EIAM account has direct permissions on the application.
-             * *   false: The EIAM account does not have direct permissions on the application.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasDirectAuthorization(Boolean hasDirectAuthorization) {
                 this.hasDirectAuthorization = hasDirectAuthorization;
@@ -162,11 +185,14 @@ public class ListApplicationsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the EIAM account has inherited permissions on the application. Valid values:
-             * <p>
+             * <p>Indicates whether the EIAM account has inherited permissions on the application. Valid values:</p>
+             * <ul>
+             * <li>true: A parent organization or an organization to which the EIAM account belongs has direct permissions on the application.</li>
+             * <li>false: A parent organization or an organization to which the EIAM account belongs does not have direct permissions on the application.</li>
+             * </ul>
              * 
-             * *   true: A parent organization or an organization to which the EIAM account belongs has direct permissions on the application.
-             * *   false: A parent organization or an organization to which the EIAM account belongs does not have direct permissions on the application.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hasInheritAuthorization(Boolean hasInheritAuthorization) {
                 this.hasInheritAuthorization = hasInheritAuthorization;

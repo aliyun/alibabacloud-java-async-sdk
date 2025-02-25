@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImportOASTaskResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImportOASTaskResponseBody</p>
  */
 public class DescribeImportOASTaskResponseBody extends TeaModel {
-    @NameInMap("ApiResults")
+    @com.aliyun.core.annotation.NameInMap("ApiResults")
     private ApiResults apiResults;
 
-    @NameInMap("ModelResults")
+    @com.aliyun.core.annotation.NameInMap("ModelResults")
     private ModelResults modelResults;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskStatus")
+    @com.aliyun.core.annotation.NameInMap("TaskStatus")
     private String taskStatus;
 
     private DescribeImportOASTaskResponseBody(Builder builder) {
@@ -74,14 +79,14 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
         private String taskStatus; 
 
         /**
-         * The execution status of the subtask. Valid values:
-         * <p>
-         * 
-         * *   RUNNING
-         * *   WAIT
-         * *   OVER
-         * *   FAIL
-         * *   CANCEL
+         * <p>The execution status of the subtask. Valid values:</p>
+         * <ul>
+         * <li>RUNNING</li>
+         * <li>WAIT</li>
+         * <li>OVER</li>
+         * <li>FAIL</li>
+         * <li>CANCEL</li>
+         * </ul>
          */
         public Builder apiResults(ApiResults apiResults) {
             this.apiResults = apiResults;
@@ -89,14 +94,14 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The execution status of the subtask. Valid values:
-         * <p>
-         * 
-         * *   RUNNING
-         * *   WAIT
-         * *   OVER
-         * *   FAIL
-         * *   CANCEL
+         * <p>The execution status of the subtask. Valid values:</p>
+         * <ul>
+         * <li>RUNNING</li>
+         * <li>WAIT</li>
+         * <li>OVER</li>
+         * <li>FAIL</li>
+         * <li>CANCEL</li>
+         * </ul>
          */
         public Builder modelResults(ModelResults modelResults) {
             this.modelResults = modelResults;
@@ -104,7 +109,10 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CE5722A6-AE78-4741-A9B0-6C817D360510</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -112,11 +120,14 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the import task. Valid values:
-         * <p>
+         * <p>The status of the import task. Valid values:</p>
+         * <ul>
+         * <li>Running</li>
+         * <li>Finished</li>
+         * </ul>
          * 
-         * *   Running
-         * *   Finished
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         public Builder taskStatus(String taskStatus) {
             this.taskStatus = taskStatus;
@@ -129,29 +140,35 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImportOASTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImportOASTaskResponseBody</p>
+     */
     public static class ApiResult extends TeaModel {
-        @NameInMap("ApiId")
+        @com.aliyun.core.annotation.NameInMap("ApiId")
         private String apiId;
 
-        @NameInMap("ApiName")
+        @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("Method")
+        @com.aliyun.core.annotation.NameInMap("Method")
         private String method;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("UpdateStatus")
+        @com.aliyun.core.annotation.NameInMap("UpdateStatus")
         private String updateStatus;
 
         private ApiResult(Builder builder) {
@@ -240,7 +257,10 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
             private String updateStatus; 
 
             /**
-             * ApiId.
+             * <p>The API ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c5a0c2900ff746b789c007545be22fb8</p>
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -248,7 +268,10 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ApiName.
+             * <p>The API name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GetByCreatorIdUsingGET</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -256,7 +279,10 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The API description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>release data api 411055691505041</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -264,7 +290,10 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The cause of the failure if the API fails to be imported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Internal Error</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -272,7 +301,10 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * <p>The API group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>736508d885074167ba8fbce3bc95ea0b</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -280,7 +312,10 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Method.
+             * <p>The HTTP request HTTP method of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GET</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -288,7 +323,10 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * <p>The request path of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/creator/getByCreatorId</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -296,7 +334,17 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateStatus.
+             * <p>The execution status of the subtask. Valid values:</p>
+             * <ul>
+             * <li>RUNNING</li>
+             * <li>WAIT</li>
+             * <li>OVER</li>
+             * <li>FAIL</li>
+             * <li>CANCEL</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>WAIT</p>
              */
             public Builder updateStatus(String updateStatus) {
                 this.updateStatus = updateStatus;
@@ -310,9 +358,15 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImportOASTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImportOASTaskResponseBody</p>
+     */
     public static class ApiResults extends TeaModel {
-        @NameInMap("ApiResult")
-        private java.util.List < ApiResult> apiResult;
+        @com.aliyun.core.annotation.NameInMap("ApiResult")
+        private java.util.List<ApiResult> apiResult;
 
         private ApiResults(Builder builder) {
             this.apiResult = builder.apiResult;
@@ -329,17 +383,17 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
         /**
          * @return apiResult
          */
-        public java.util.List < ApiResult> getApiResult() {
+        public java.util.List<ApiResult> getApiResult() {
             return this.apiResult;
         }
 
         public static final class Builder {
-            private java.util.List < ApiResult> apiResult; 
+            private java.util.List<ApiResult> apiResult; 
 
             /**
              * ApiResult.
              */
-            public Builder apiResult(java.util.List < ApiResult> apiResult) {
+            public Builder apiResult(java.util.List<ApiResult> apiResult) {
                 this.apiResult = apiResult;
                 return this;
             }
@@ -351,20 +405,26 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImportOASTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImportOASTaskResponseBody</p>
+     */
     public static class ModelResult extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("ModelId")
+        @com.aliyun.core.annotation.NameInMap("ModelId")
         private String modelId;
 
-        @NameInMap("ModelName")
+        @com.aliyun.core.annotation.NameInMap("ModelName")
         private String modelName;
 
-        @NameInMap("UpdateStatus")
+        @com.aliyun.core.annotation.NameInMap("UpdateStatus")
         private String updateStatus;
 
         private ModelResult(Builder builder) {
@@ -426,7 +486,10 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
             private String updateStatus; 
 
             /**
-             * ErrorMessage.
+             * <p>The cause of the failure if the model fails to be imported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Internal Error</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -434,7 +497,10 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * <p>The API group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>736508d885074167ba8fbce3bc95ea0b</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -442,7 +508,10 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ModelId.
+             * <p>The ID of the imported model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6b48d724c921415486e190c494dd6bf8</p>
              */
             public Builder modelId(String modelId) {
                 this.modelId = modelId;
@@ -450,7 +519,10 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ModelName.
+             * <p>The model name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Pet</p>
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -458,7 +530,17 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateStatus.
+             * <p>The execution status of the subtask. Valid values:</p>
+             * <ul>
+             * <li>RUNNING</li>
+             * <li>WAIT</li>
+             * <li>OVER</li>
+             * <li>FAIL</li>
+             * <li>CANCEL</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>FAIL</p>
              */
             public Builder updateStatus(String updateStatus) {
                 this.updateStatus = updateStatus;
@@ -472,9 +554,15 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImportOASTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImportOASTaskResponseBody</p>
+     */
     public static class ModelResults extends TeaModel {
-        @NameInMap("ModelResult")
-        private java.util.List < ModelResult> modelResult;
+        @com.aliyun.core.annotation.NameInMap("ModelResult")
+        private java.util.List<ModelResult> modelResult;
 
         private ModelResults(Builder builder) {
             this.modelResult = builder.modelResult;
@@ -491,17 +579,17 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
         /**
          * @return modelResult
          */
-        public java.util.List < ModelResult> getModelResult() {
+        public java.util.List<ModelResult> getModelResult() {
             return this.modelResult;
         }
 
         public static final class Builder {
-            private java.util.List < ModelResult> modelResult; 
+            private java.util.List<ModelResult> modelResult; 
 
             /**
              * ModelResult.
              */
-            public Builder modelResult(java.util.List < ModelResult> modelResult) {
+            public Builder modelResult(java.util.List<ModelResult> modelResult) {
                 this.modelResult = modelResult;
                 return this;
             }

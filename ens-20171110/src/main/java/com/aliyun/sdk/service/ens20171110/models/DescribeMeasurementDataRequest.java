@@ -1,37 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMeasurementDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeMeasurementDataRequest</p>
  */
 public class DescribeMeasurementDataRequest extends Request {
-    @Query
-    @NameInMap("EndDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endDate;
 
-    @Query
-    @NameInMap("StartDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startDate;
-
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
 
     private DescribeMeasurementDataRequest(Builder builder) {
         super(builder);
         this.endDate = builder.endDate;
         this.startDate = builder.startDate;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -61,17 +60,9 @@ public class DescribeMeasurementDataRequest extends Request {
         return this.startDate;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<DescribeMeasurementDataRequest, Builder> {
         private String endDate; 
         private String startDate; 
-        private String version; 
 
         private Builder() {
             super();
@@ -81,11 +72,14 @@ public class DescribeMeasurementDataRequest extends Request {
             super(request);
             this.endDate = request.endDate;
             this.startDate = request.startDate;
-            this.version = request.version;
         } 
 
         /**
-         * EndDate.
+         * <p>The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-08-30T00:00:00Z</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -94,20 +88,15 @@ public class DescribeMeasurementDataRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-06-01T00:00:00Z</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
             this.startDate = startDate;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 

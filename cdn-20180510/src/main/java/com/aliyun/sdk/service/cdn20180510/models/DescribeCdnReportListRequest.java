@@ -1,19 +1,19 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnReportListRequest} extends {@link RequestModel}
  *
  * <p>DescribeCdnReportListRequest</p>
  */
 public class DescribeCdnReportListRequest extends Request {
-    @Query
-    @NameInMap("ReportId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReportId")
     private Long reportId;
 
     private DescribeCdnReportListRequest(Builder builder) {
@@ -54,7 +54,10 @@ public class DescribeCdnReportListRequest extends Request {
         } 
 
         /**
-         * The ID of the operations report that you want to query. If you do not specify an ID, all operations reports are queried.
+         * <p>The ID of the operations report that you want to query. If you do not specify an ID, all operations reports are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder reportId(Long reportId) {
             this.putQueryParameter("ReportId", reportId);

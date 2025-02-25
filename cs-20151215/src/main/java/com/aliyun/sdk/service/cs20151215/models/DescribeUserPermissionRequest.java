@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserPermissionRequest} extends {@link RequestModel}
  *
  * <p>DescribeUserPermissionRequest</p>
  */
 public class DescribeUserPermissionRequest extends Request {
-    @Path
-    @NameInMap("uid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("uid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String uid;
 
     private DescribeUserPermissionRequest(Builder builder) {
@@ -55,10 +60,14 @@ public class DescribeUserPermissionRequest extends Request {
         } 
 
         /**
-         * The ID of the RAM user or RAM role.
-         * <p>
+         * <p>The ID of the RAM user or RAM role.</p>
+         * <blockquote>
+         * <p> If you want to grant permissions to a RAM role, enter the ID of the RAM role.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  If you want to grant permissions to a RAM role, enter the ID of the RAM role.
+         * <strong>example:</strong>
+         * <p>21175****</p>
          */
         public Builder uid(String uid) {
             this.putPathParameter("uid", uid);

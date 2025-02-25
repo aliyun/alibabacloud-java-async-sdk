@@ -1,88 +1,93 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCapacityReservationRequest} extends {@link RequestModel}
  *
  * <p>CreateCapacityReservationRequest</p>
  */
 public class CreateCapacityReservationRequest extends Request {
-    @Query
-    @NameInMap("PrivatePoolOptions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivatePoolOptions")
     private PrivatePoolOptions privatePoolOptions;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("EndTimeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTimeType")
     private String endTimeType;
 
-    @Query
-    @NameInMap("InstanceAmount")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceAmount")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Integer instanceAmount;
 
-    @Query
-    @NameInMap("InstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Platform")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Platform")
     private String platform;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Query
-    @NameInMap("ZoneId")
-    @Validation(required = true)
-    private java.util.List < String > zoneId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> zoneId;
 
     private CreateCapacityReservationRequest(Builder builder) {
         super(builder);
@@ -226,14 +231,14 @@ public class CreateCapacityReservationRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     /**
      * @return zoneId
      */
-    public java.util.List < String > getZoneId() {
+    public java.util.List<String> getZoneId() {
         return this.zoneId;
     }
 
@@ -253,8 +258,8 @@ public class CreateCapacityReservationRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String startTime; 
-        private java.util.List < Tag> tag; 
-        private java.util.List < String > zoneId; 
+        private java.util.List<Tag> tag; 
+        private java.util.List<String> zoneId; 
 
         private Builder() {
             super();
@@ -291,7 +296,10 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The `token` can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <code>token</code> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -300,10 +308,11 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * The description of the capacity reservation. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
-         * <p>
+         * <p>The description of the capacity reservation. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>This parameter is empty by default.</p>
          * 
-         * This parameter is empty by default.
+         * <strong>example:</strong>
+         * <p>This is description.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -312,7 +321,10 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * The time when the capacity reservation expires. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC. For more information, see [ISO 8601](~~25696~~).
+         * <p>The time when the capacity reservation expires. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-30T06:32:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -321,11 +333,14 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * The release mode of the capacity reservation. Valid values:
-         * <p>
+         * <p>The release mode of the capacity reservation. Valid values:</p>
+         * <ul>
+         * <li>Limited: The capacity reservation is automatically released at a specified time. If you specify this parameter, you must specify the <code>EndTime</code> parameter.</li>
+         * <li>Unlimited: The capacity reservation is manually released. The capacity reservation can be released anytime.</li>
+         * </ul>
          * 
-         * *   Limited: The capacity reservation is automatically released at a specified time. If you specify this parameter, you must specify the `EndTime` parameter.
-         * *   Unlimited: The capacity reservation is manually released. The capacity reservation can be released anytime.
+         * <strong>example:</strong>
+         * <p>Unlimited</p>
          */
         public Builder endTimeType(String endTimeType) {
             this.putQueryParameter("EndTimeType", endTimeType);
@@ -334,7 +349,11 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * The total number of instances for which the capacity of an instance type is reserved.
+         * <p>The total number of instances for which the capacity of an instance type is reserved.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder instanceAmount(Integer instanceAmount) {
             this.putQueryParameter("InstanceAmount", instanceAmount);
@@ -343,7 +362,11 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * The instance type. You can create a capacity reservation to reserve the capacity of only one instance type. You can call the [DescribeInstanceTypes](~~25620~~) operation to query the instance types provided by ECS.
+         * <p>The instance type. You can create a capacity reservation to reserve the capacity of only one instance type. You can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the instance types provided by ECS.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g6.xlarge</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -370,15 +393,18 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * The operating system of the image used by the instance. This parameter corresponds to the `Platform` parameter of regional reserved instances. If the operating system of a capacity reservation matches the operating system of a regional reserved instance, you can apply the regional reserved instance to offset fees of the unused capacity of the capacity reservation. Valid values:
-         * <p>
+         * <p>The operating system of the image used by the instance. This parameter corresponds to the <code>Platform</code> parameter of regional reserved instances. If the operating system of a capacity reservation matches the operating system of a regional reserved instance, you can apply the regional reserved instance to offset fees of the unused capacity of the capacity reservation. Valid values:</p>
+         * <ul>
+         * <li>Windows: Windows Server operating system</li>
+         * <li>Linux: Linux and UNIX-like operating system</li>
+         * </ul>
+         * <p>Default value: Linux.</p>
+         * <blockquote>
+         * <p>This parameter is unavailable.</p>
+         * </blockquote>
          * 
-         * *   Windows: Windows Server operating system
-         * *   Linux: Linux and UNIX-like operating system
-         * 
-         * Default value: Linux.
-         * 
-         * > This parameter is unavailable.
+         * <strong>example:</strong>
+         * <p>Linux</p>
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -387,7 +413,11 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * The ID of the region in which to create the capacity reservation. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The ID of the region in which to create the capacity reservation. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -396,7 +426,10 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which you want to assign the capacity reservation.
+         * <p>The ID of the resource group to which you want to assign the capacity reservation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -423,10 +456,13 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * The mode in which the capacity reservation takes effect. You can call the CreateCapacityReservation operation to create only immediate capacity reservations.
-         * <p>
+         * <p>The mode in which the capacity reservation takes effect. You can call the CreateCapacityReservation operation to create only immediate capacity reservations.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the capacity reservation immediately takes effect.</p>
+         * </blockquote>
          * 
-         * > If you do not specify this parameter, the capacity reservation immediately takes effect.
+         * <strong>example:</strong>
+         * <p>2021-10-30T05:32:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -435,18 +471,22 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * The tags to add to the capacity reservation.
+         * <p>The tags to add to the capacity reservation.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The ID of the zone in which you want to create the capacity reservation. A capacity reservation can reserve resources within only one zone.
+         * <p>The ID of the zone in which you want to create the capacity reservation. A capacity reservation can reserve resources within only one zone.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
-        public Builder zoneId(java.util.List < String > zoneId) {
+        public Builder zoneId(java.util.List<String> zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
             this.zoneId = zoneId;
             return this;
@@ -459,11 +499,17 @@ public class CreateCapacityReservationRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateCapacityReservationRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCapacityReservationRequest</p>
+     */
     public static class PrivatePoolOptions extends TeaModel {
-        @NameInMap("MatchCriteria")
+        @com.aliyun.core.annotation.NameInMap("MatchCriteria")
         private String matchCriteria;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private PrivatePoolOptions(Builder builder) {
@@ -498,13 +544,15 @@ public class CreateCapacityReservationRequest extends Request {
             private String name; 
 
             /**
-             * The type of the private pool to generate after the capacity reservation takes effect. Valid values:
-             * <p>
+             * <p>The type of the private pool to generate after the capacity reservation takes effect. Valid values:</p>
+             * <ul>
+             * <li>Open: open private pool</li>
+             * <li>Target: targeted private pool</li>
+             * </ul>
+             * <p>Default value: Open.</p>
              * 
-             * *   Open: open private pool
-             * *   Target: targeted private pool
-             * 
-             * Default value: Open.
+             * <strong>example:</strong>
+             * <p>Open</p>
              */
             public Builder matchCriteria(String matchCriteria) {
                 this.matchCriteria = matchCriteria;
@@ -512,7 +560,10 @@ public class CreateCapacityReservationRequest extends Request {
             }
 
             /**
-             * The capacity reservation name. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+             * <p>The capacity reservation name. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crpTestName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -526,11 +577,17 @@ public class CreateCapacityReservationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateCapacityReservationRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCapacityReservationRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -565,7 +622,10 @@ public class CreateCapacityReservationRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the capacity reservation. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
+             * <p>The key of tag N to add to the capacity reservation. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -573,7 +633,10 @@ public class CreateCapacityReservationRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the capacity reservation. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:`.
+             * <p>The value of tag N to add to the capacity reservation. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

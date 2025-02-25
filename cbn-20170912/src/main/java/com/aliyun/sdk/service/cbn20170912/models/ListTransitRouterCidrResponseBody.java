@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTransitRouterCidrResponseBody} extends {@link TeaModel}
  *
  * <p>ListTransitRouterCidrResponseBody</p>
  */
 public class ListTransitRouterCidrResponseBody extends TeaModel {
-    @NameInMap("CidrLists")
-    private java.util.List < CidrLists> cidrLists;
+    @com.aliyun.core.annotation.NameInMap("CidrLists")
+    private java.util.List<CidrLists> cidrLists;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListTransitRouterCidrResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class ListTransitRouterCidrResponseBody extends TeaModel {
     /**
      * @return cidrLists
      */
-    public java.util.List < CidrLists> getCidrLists() {
+    public java.util.List<CidrLists> getCidrLists() {
         return this.cidrLists;
     }
 
@@ -46,19 +51,22 @@ public class ListTransitRouterCidrResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CidrLists> cidrLists; 
+        private java.util.List<CidrLists> cidrLists; 
         private String requestId; 
 
         /**
-         * The CIDR blocks of the transit router.
+         * <p>The information about the CIDR block.</p>
          */
-        public Builder cidrLists(java.util.List < CidrLists> cidrLists) {
+        public Builder cidrLists(java.util.List<CidrLists> cidrLists) {
             this.cidrLists = cidrLists;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0876E54E-3E36-5C31-89F0-9EE8A9266F9A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,26 +79,32 @@ public class ListTransitRouterCidrResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTransitRouterCidrResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTransitRouterCidrResponseBody</p>
+     */
     public static class CidrLists extends TeaModel {
-        @NameInMap("Cidr")
+        @com.aliyun.core.annotation.NameInMap("Cidr")
         private String cidr;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Family")
+        @com.aliyun.core.annotation.NameInMap("Family")
         private String family;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PublishCidrRoute")
+        @com.aliyun.core.annotation.NameInMap("PublishCidrRoute")
         private Boolean publishCidrRoute;
 
-        @NameInMap("TransitRouterCidrId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterCidrId")
         private String transitRouterCidrId;
 
-        @NameInMap("TransitRouterId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterId")
         private String transitRouterId;
 
         private CidrLists(Builder builder) {
@@ -170,7 +184,10 @@ public class ListTransitRouterCidrResponseBody extends TeaModel {
             private String transitRouterId; 
 
             /**
-             * The CIDR block of the transit router.
+             * <p>The CIDR block of the transit router.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.10.0/24</p>
              */
             public Builder cidr(String cidr) {
                 this.cidr = cidr;
@@ -178,7 +195,10 @@ public class ListTransitRouterCidrResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the CIDR block.
+             * <p>The description of the CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desctest</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -186,10 +206,11 @@ public class ListTransitRouterCidrResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the CIDR block.
-             * <p>
+             * <p>The type of the CIDR block.</p>
+             * <p>The value is <strong>IPv4</strong>, which indicates that the CIDR block is of the IPv4 type.</p>
              * 
-             * The value is set to **IPv4**, which indicates that the CIDR block is of the IPv4 type.
+             * <strong>example:</strong>
+             * <p>IPv4</p>
              */
             public Builder family(String family) {
                 this.family = family;
@@ -197,7 +218,10 @@ public class ListTransitRouterCidrResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the CIDR block.
+             * <p>The name of the CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nametest</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -205,18 +229,19 @@ public class ListTransitRouterCidrResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the system is allowed to automatically add a route to the route table of the transit router.
-             * <p>
+             * <p>Indicates whether the system is allowed to automatically add a route to the route table of the transit router. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong></p>
+             * <p>A value of <strong>true</strong> indicates that after you create a private VPN connection and enable route learning for the connection, the system automatically adds a blackhole route to the route table of the transit router to which the VPN connection is attached.</p>
+             * <p>The destination CIDR block of the blackhole route is the CIDR block of the transit router. The CIDR block of the transit router refers to the CIDR block from which gateway IP addresses are allocated to IPsec-VPN connections.</p>
+             * <p>The blackhole route is advertised only to the route table of the virtual border router (VBR) that is connected to the transit router.</p>
+             * </li>
+             * <li><p><strong>false</strong></p>
+             * </li>
+             * </ul>
              * 
-             * - **true**: yes.
-             * 
-             *      A value of true indicates that if you create a private VPN connection and add a route learning policy for the VPC connection, the system automatically adds the following route to the route table of the transit router that is in route learning relationship with the VPN connection:
-             *       
-             *     A blackhole route whose destination CIDR block is the CIDR block of the transit router. The CIDR block of the transit router refers to the CIDR block from which gateway IP addresses are allocated to IPsec-VPN connections. 
-             *           
-             *    The blackhole route is advertised only to the route tables of VBRs that are connected to the transit router. 
-             * 
-             * - **false**: no.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder publishCidrRoute(Boolean publishCidrRoute) {
                 this.publishCidrRoute = publishCidrRoute;
@@ -224,7 +249,10 @@ public class ListTransitRouterCidrResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the CIDR block.
+             * <p>The ID of the transit router CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cidr-0zv0q9crqpntzz****</p>
              */
             public Builder transitRouterCidrId(String transitRouterCidrId) {
                 this.transitRouterCidrId = transitRouterCidrId;
@@ -232,7 +260,10 @@ public class ListTransitRouterCidrResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the transit router.
+             * <p>The transit router ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tr-p0w3x8c9em72a40nw****</p>
              */
             public Builder transitRouterId(String transitRouterId) {
                 this.transitRouterId = transitRouterId;

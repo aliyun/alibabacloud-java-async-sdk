@@ -1,55 +1,60 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteRouteEntryRequest} extends {@link RequestModel}
  *
  * <p>DeleteRouteEntryRequest</p>
  */
 public class DeleteRouteEntryRequest extends Request {
-    @Query
-    @NameInMap("DestinationCidrBlock")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
     private String destinationCidrBlock;
 
-    @Query
-    @NameInMap("NextHopId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextHopId")
     private String nextHopId;
 
-    @Query
-    @NameInMap("NextHopList")
-    private java.util.List < NextHopList> nextHopList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextHopList")
+    private java.util.List<NextHopList> nextHopList;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RouteEntryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteEntryId")
     private String routeEntryId;
 
-    @Query
-    @NameInMap("RouteTableId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteTableId")
     private String routeTableId;
 
     private DeleteRouteEntryRequest(Builder builder) {
@@ -96,7 +101,7 @@ public class DeleteRouteEntryRequest extends Request {
     /**
      * @return nextHopList
      */
-    public java.util.List < NextHopList> getNextHopList() {
+    public java.util.List<NextHopList> getNextHopList() {
         return this.nextHopList;
     }
 
@@ -152,7 +157,7 @@ public class DeleteRouteEntryRequest extends Request {
     public static final class Builder extends Request.Builder<DeleteRouteEntryRequest, Builder> {
         private String destinationCidrBlock; 
         private String nextHopId; 
-        private java.util.List < NextHopList> nextHopList; 
+        private java.util.List<NextHopList> nextHopList; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -180,7 +185,10 @@ public class DeleteRouteEntryRequest extends Request {
         } 
 
         /**
-         * The destination CIDR block of the route entry. IPv4 and IPv6 CIDR blocks are supported.
+         * <p>The destination CIDR block of the route. Only IPv4 CIDR blocks, IPv6 CIDR blocks, and prefix lists are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.100.XX.XX/16</p>
          */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);
@@ -189,11 +197,14 @@ public class DeleteRouteEntryRequest extends Request {
         }
 
         /**
-         * The ID of the next hop.
-         * <p>
+         * <p>The ID of the next hop.</p>
+         * <ul>
+         * <li>To delete a route other than an equal-cost multi-path (ECMP) route, set the <strong>NextHopId</strong> parameter and ignore the <strong>NextHopList</strong> parameter.</li>
+         * <li>To delete an ECMP route, set the <strong>NextHopList</strong> parameter and ignore the <strong>NextHopId</strong> parameter.</li>
+         * </ul>
          * 
-         * *   To delete a route other than an equal-cost multi-path (ECMP) route, set the **NextHopId** parameter and ignore the **NextHopList** parameter.
-         * *   To delete an ECMP route, set the **NextHopList** parameter and ignore the **NextHopId** parameter.
+         * <strong>example:</strong>
+         * <p>ri-2zeo3xzyf38r4urzd****</p>
          */
         public Builder nextHopId(String nextHopId) {
             this.putQueryParameter("NextHopId", nextHopId);
@@ -202,9 +213,9 @@ public class DeleteRouteEntryRequest extends Request {
         }
 
         /**
-         * NextHopList.
+         * <p>The list of the next hop of the ECMP route.</p>
          */
-        public Builder nextHopList(java.util.List < NextHopList> nextHopList) {
+        public Builder nextHopList(java.util.List<NextHopList> nextHopList) {
             this.putQueryParameter("NextHopList", nextHopList);
             this.nextHopList = nextHopList;
             return this;
@@ -229,10 +240,11 @@ public class DeleteRouteEntryRequest extends Request {
         }
 
         /**
-         * The region ID of the route table.
-         * <p>
+         * <p>The region ID of the route table.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -259,7 +271,10 @@ public class DeleteRouteEntryRequest extends Request {
         }
 
         /**
-         * The ID of the route that you want to delete.
+         * <p>The ID of the route that you want to delete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rte-bp1mnnr2al0naomnpv****</p>
          */
         public Builder routeEntryId(String routeEntryId) {
             this.putQueryParameter("RouteEntryId", routeEntryId);
@@ -268,7 +283,10 @@ public class DeleteRouteEntryRequest extends Request {
         }
 
         /**
-         * The ID of the route table to which the route belongs.
+         * <p>The ID of the route table to which the route belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-2ze3jgygk9bmsj23s****</p>
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);
@@ -283,11 +301,17 @@ public class DeleteRouteEntryRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteRouteEntryRequest} extends {@link TeaModel}
+     *
+     * <p>DeleteRouteEntryRequest</p>
+     */
     public static class NextHopList extends TeaModel {
-        @NameInMap("NextHopId")
+        @com.aliyun.core.annotation.NameInMap("NextHopId")
         private String nextHopId;
 
-        @NameInMap("NextHopType")
+        @com.aliyun.core.annotation.NameInMap("NextHopType")
         private String nextHopType;
 
         private NextHopList(Builder builder) {
@@ -322,7 +346,10 @@ public class DeleteRouteEntryRequest extends Request {
             private String nextHopType; 
 
             /**
-             * The ID of the next hop that is configured for ECMP routing. You can specify information about at most 16 next hops.
+             * <p>The ID of the next hop that is configured for ECMP routing. You can specify information about at most 16 next hops.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ri-2zeo3xzyf38r43cd****</p>
              */
             public Builder nextHopId(String nextHopId) {
                 this.nextHopId = nextHopId;
@@ -330,7 +357,10 @@ public class DeleteRouteEntryRequest extends Request {
             }
 
             /**
-             * The type of the next hop that is configured for ECMP routing. Set the value to **RouterInterface**. You can specify information about at most 16 next hops.
+             * <p>The type of the next hop that is configured for ECMP routing. Set the value to <strong>RouterInterface</strong>. You can specify information about at most 16 next hops.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RouterInterface</p>
              */
             public Builder nextHopType(String nextHopType) {
                 this.nextHopType = nextHopType;

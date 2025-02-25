@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePluginTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePluginTemplatesResponseBody</p>
  */
 public class DescribePluginTemplatesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Templates")
+    @com.aliyun.core.annotation.NameInMap("Templates")
     private Templates templates;
 
     private DescribePluginTemplatesResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
         private Templates templates; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EF924FE4-2EDD-4CD3-89EC-34E4708574E7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The templates.
+         * <p>The templates.</p>
          */
         public Builder templates(Templates templates) {
             this.templates = templates;
@@ -71,20 +79,26 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePluginTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePluginTemplatesResponseBody</p>
+     */
     public static class Template extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DocumentAnchor")
+        @com.aliyun.core.annotation.NameInMap("DocumentAnchor")
         private String documentAnchor;
 
-        @NameInMap("DocumentId")
+        @com.aliyun.core.annotation.NameInMap("DocumentId")
         private String documentId;
 
-        @NameInMap("Sample")
+        @com.aliyun.core.annotation.NameInMap("Sample")
         private String sample;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private Template(Builder builder) {
@@ -146,7 +160,10 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * The description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>balabala</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -154,7 +171,10 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The document anchor point.
+             * <p>The document anchor point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>anchor</p>
              */
             public Builder documentAnchor(String documentAnchor) {
                 this.documentAnchor = documentAnchor;
@@ -162,7 +182,10 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the document.
+             * <p>The ID of the document.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>41079</p>
              */
             public Builder documentId(String documentId) {
                 this.documentId = documentId;
@@ -170,7 +193,10 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The sample.
+             * <p>The sample.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sample(String sample) {
                 this.sample = sample;
@@ -178,7 +204,10 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The title of the plug-in template title.
+             * <p>The title of the plug-in template title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>template title</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -192,9 +221,15 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePluginTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePluginTemplatesResponseBody</p>
+     */
     public static class Templates extends TeaModel {
-        @NameInMap("Template")
-        private java.util.List < Template> template;
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private java.util.List<Template> template;
 
         private Templates(Builder builder) {
             this.template = builder.template;
@@ -211,17 +246,17 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
         /**
          * @return template
          */
-        public java.util.List < Template> getTemplate() {
+        public java.util.List<Template> getTemplate() {
             return this.template;
         }
 
         public static final class Builder {
-            private java.util.List < Template> template; 
+            private java.util.List<Template> template; 
 
             /**
              * Template.
              */
-            public Builder template(java.util.List < Template> template) {
+            public Builder template(java.util.List<Template> template) {
                 this.template = template;
                 return this;
             }

@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSubCorpRequest} extends {@link RequestModel}
  *
  * <p>CreateSubCorpRequest</p>
  */
 public class CreateSubCorpRequest extends Request {
-    @Body
-    @NameInMap("outer_corp_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("outer_corp_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String outerCorpId;
 
-    @Body
-    @NameInMap("outer_corp_name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("outer_corp_name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String outerCorpName;
 
-    @Body
-    @NameInMap("user_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("user_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private CreateSubCorpRequest(Builder builder) {
@@ -99,7 +104,10 @@ public class CreateSubCorpRequest extends Request {
         } 
 
         /**
-         * outer_corp_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>corp123</p>
          */
         public Builder outerCorpId(String outerCorpId) {
             this.putBodyParameter("outer_corp_id", outerCorpId);
@@ -108,7 +116,7 @@ public class CreateSubCorpRequest extends Request {
         }
 
         /**
-         * outer_corp_name.
+         * <p>This parameter is required.</p>
          */
         public Builder outerCorpName(String outerCorpName) {
             this.putBodyParameter("outer_corp_name", outerCorpName);
@@ -117,7 +125,10 @@ public class CreateSubCorpRequest extends Request {
         }
 
         /**
-         * user_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("user_id", userId);

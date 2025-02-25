@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryIncidentTracingDetailRequest} extends {@link RequestModel}
  *
  * <p>QueryIncidentTracingDetailRequest</p>
  */
 public class QueryIncidentTracingDetailRequest extends Request {
-    @Body
-    @NameInMap("IncidentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IncidentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String incidentId;
 
     private QueryIncidentTracingDetailRequest(Builder builder) {
@@ -55,7 +60,14 @@ public class QueryIncidentTracingDetailRequest extends Request {
         } 
 
         /**
-         * IncidentId.
+         * <p>The ID of the event.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2621307.html">DescribeCloudSiemEvents</a> operation to query the IDs of events.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>184892fc5245b3ce8c3316434c94261f</p>
          */
         public Builder incidentId(String incidentId) {
             this.putBodyParameter("IncidentId", incidentId);

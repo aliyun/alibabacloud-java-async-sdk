@@ -1,37 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateEnsServiceRequest} extends {@link RequestModel}
  *
  * <p>CreateEnsServiceRequest</p>
  */
 public class CreateEnsServiceRequest extends Request {
-    @Query
-    @NameInMap("EnsServiceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnsServiceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ensServiceId;
 
-    @Query
-    @NameInMap("OrderType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String orderType;
-
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
 
     private CreateEnsServiceRequest(Builder builder) {
         super(builder);
         this.ensServiceId = builder.ensServiceId;
         this.orderType = builder.orderType;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -61,17 +60,9 @@ public class CreateEnsServiceRequest extends Request {
         return this.orderType;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<CreateEnsServiceRequest, Builder> {
         private String ensServiceId; 
         private String orderType; 
-        private String version; 
 
         private Builder() {
             super();
@@ -81,11 +72,14 @@ public class CreateEnsServiceRequest extends Request {
             super(request);
             this.ensServiceId = request.ensServiceId;
             this.orderType = request.orderType;
-            this.version = request.version;
         } 
 
         /**
-         * EnsServiceId.
+         * <p>The ID of the resource that you want to obtain. You can specify only one ID in a request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ens-20190806****</p>
          */
         public Builder ensServiceId(String ensServiceId) {
             this.putQueryParameter("EnsServiceId", ensServiceId);
@@ -94,20 +88,19 @@ public class CreateEnsServiceRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * <p>The operation to perform after you preview the created edge service. Valid values:</p>
+         * <ul>
+         * <li><strong>Buy</strong>: create</li>
+         * <li><strong>Upgrade</strong>: change</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Buy</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
             this.orderType = orderType;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 

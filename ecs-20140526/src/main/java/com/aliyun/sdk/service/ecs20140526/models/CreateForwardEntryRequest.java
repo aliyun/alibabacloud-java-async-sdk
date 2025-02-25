@@ -1,66 +1,71 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateForwardEntryRequest} extends {@link RequestModel}
  *
  * <p>CreateForwardEntryRequest</p>
  */
 public class CreateForwardEntryRequest extends Request {
-    @Query
-    @NameInMap("ExternalIp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExternalIp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String externalIp;
 
-    @Query
-    @NameInMap("ExternalPort")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExternalPort")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String externalPort;
 
-    @Query
-    @NameInMap("ForwardTableId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForwardTableId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String forwardTableId;
 
-    @Query
-    @NameInMap("InternalIp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternalIp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String internalIp;
 
-    @Query
-    @NameInMap("InternalPort")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternalPort")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String internalPort;
 
-    @Query
-    @NameInMap("IpProtocol")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpProtocol")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ipProtocol;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private CreateForwardEntryRequest(Builder builder) {
@@ -201,7 +206,7 @@ public class CreateForwardEntryRequest extends Request {
         } 
 
         /**
-         * ExternalIp.
+         * <p>This parameter is required.</p>
          */
         public Builder externalIp(String externalIp) {
             this.putQueryParameter("ExternalIp", externalIp);
@@ -210,7 +215,7 @@ public class CreateForwardEntryRequest extends Request {
         }
 
         /**
-         * ExternalPort.
+         * <p>This parameter is required.</p>
          */
         public Builder externalPort(String externalPort) {
             this.putQueryParameter("ExternalPort", externalPort);
@@ -219,7 +224,7 @@ public class CreateForwardEntryRequest extends Request {
         }
 
         /**
-         * ForwardTableId.
+         * <p>This parameter is required.</p>
          */
         public Builder forwardTableId(String forwardTableId) {
             this.putQueryParameter("ForwardTableId", forwardTableId);
@@ -228,7 +233,7 @@ public class CreateForwardEntryRequest extends Request {
         }
 
         /**
-         * InternalIp.
+         * <p>This parameter is required.</p>
          */
         public Builder internalIp(String internalIp) {
             this.putQueryParameter("InternalIp", internalIp);
@@ -237,7 +242,7 @@ public class CreateForwardEntryRequest extends Request {
         }
 
         /**
-         * InternalPort.
+         * <p>This parameter is required.</p>
          */
         public Builder internalPort(String internalPort) {
             this.putQueryParameter("InternalPort", internalPort);
@@ -246,7 +251,7 @@ public class CreateForwardEntryRequest extends Request {
         }
 
         /**
-         * IpProtocol.
+         * <p>This parameter is required.</p>
          */
         public Builder ipProtocol(String ipProtocol) {
             this.putQueryParameter("IpProtocol", ipProtocol);
@@ -273,7 +278,7 @@ public class CreateForwardEntryRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

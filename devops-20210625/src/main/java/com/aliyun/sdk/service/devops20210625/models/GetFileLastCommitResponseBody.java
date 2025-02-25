@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFileLastCommitResponseBody} extends {@link TeaModel}
  *
  * <p>GetFileLastCommitResponseBody</p>
  */
 public class GetFileLastCommitResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private GetFileLastCommitResponseBody(Builder builder) {
@@ -131,11 +136,17 @@ public class GetFileLastCommitResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetFileLastCommitResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFileLastCommitResponseBody</p>
+     */
     public static class Signature extends TeaModel {
-        @NameInMap("gpgKeyId")
+        @com.aliyun.core.annotation.NameInMap("gpgKeyId")
         private String gpgKeyId;
 
-        @NameInMap("verificationStatus")
+        @com.aliyun.core.annotation.NameInMap("verificationStatus")
         private String verificationStatus;
 
         private Signature(Builder builder) {
@@ -170,7 +181,10 @@ public class GetFileLastCommitResponseBody extends TeaModel {
             private String verificationStatus; 
 
             /**
-             * GPG密钥ID
+             * <p>GPG密钥ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34d2c47c7ce46a5c4639c5ffe208</p>
              */
             public Builder gpgKeyId(String gpgKeyId) {
                 this.gpgKeyId = gpgKeyId;
@@ -192,44 +206,50 @@ public class GetFileLastCommitResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetFileLastCommitResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFileLastCommitResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("authorDate")
+        @com.aliyun.core.annotation.NameInMap("authorDate")
         private String authorDate;
 
-        @NameInMap("authorEmail")
+        @com.aliyun.core.annotation.NameInMap("authorEmail")
         private String authorEmail;
 
-        @NameInMap("authorName")
+        @com.aliyun.core.annotation.NameInMap("authorName")
         private String authorName;
 
-        @NameInMap("committedDate")
+        @com.aliyun.core.annotation.NameInMap("committedDate")
         private String committedDate;
 
-        @NameInMap("committerEmail")
+        @com.aliyun.core.annotation.NameInMap("committerEmail")
         private String committerEmail;
 
-        @NameInMap("committerName")
+        @com.aliyun.core.annotation.NameInMap("committerName")
         private String committerName;
 
-        @NameInMap("createdAt")
+        @com.aliyun.core.annotation.NameInMap("createdAt")
         private String createdAt;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("message")
+        @com.aliyun.core.annotation.NameInMap("message")
         private String message;
 
-        @NameInMap("parentIds")
-        private java.util.List < String > parentIds;
+        @com.aliyun.core.annotation.NameInMap("parentIds")
+        private java.util.List<String> parentIds;
 
-        @NameInMap("shortId")
+        @com.aliyun.core.annotation.NameInMap("shortId")
         private String shortId;
 
-        @NameInMap("signature")
+        @com.aliyun.core.annotation.NameInMap("signature")
         private Signature signature;
 
-        @NameInMap("title")
+        @com.aliyun.core.annotation.NameInMap("title")
         private String title;
 
         private Result(Builder builder) {
@@ -322,7 +342,7 @@ public class GetFileLastCommitResponseBody extends TeaModel {
         /**
          * @return parentIds
          */
-        public java.util.List < String > getParentIds() {
+        public java.util.List<String> getParentIds() {
             return this.parentIds;
         }
 
@@ -357,7 +377,7 @@ public class GetFileLastCommitResponseBody extends TeaModel {
             private String createdAt; 
             private String id; 
             private String message; 
-            private java.util.List < String > parentIds; 
+            private java.util.List<String> parentIds; 
             private String shortId; 
             private Signature signature; 
             private String title; 
@@ -437,7 +457,7 @@ public class GetFileLastCommitResponseBody extends TeaModel {
             /**
              * parentIds.
              */
-            public Builder parentIds(java.util.List < String > parentIds) {
+            public Builder parentIds(java.util.List<String> parentIds) {
                 this.parentIds = parentIds;
                 return this;
             }

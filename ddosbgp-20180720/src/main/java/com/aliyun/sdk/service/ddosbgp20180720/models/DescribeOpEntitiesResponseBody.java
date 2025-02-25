@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOpEntitiesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeOpEntitiesResponseBody</p>
  */
 public class DescribeOpEntitiesResponseBody extends TeaModel {
-    @NameInMap("OpEntities")
+    @com.aliyun.core.annotation.NameInMap("OpEntities")
     private java.util.List < OpEntities> opEntities;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeOpEntitiesResponseBody(Builder builder) {
@@ -62,7 +62,7 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The ID of the request.
+         * <p>The details of the operation log.</p>
          */
         public Builder opEntities(java.util.List < OpEntities> opEntities) {
             this.opEntities = opEntities;
@@ -70,7 +70,10 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
         }
 
         /**
-         * The end time. Operation logs that were generated before this time are queried.**** This value is a UNIX timestamp. Unit: milliseconds.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52C8ECB0-0B1A-4E66-A31C-B6A855120E82</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,10 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the log was generated. This value is a UNIX timestamp. Unit: milliseconds.
+         * <p>The total number of operation logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -91,23 +97,29 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeOpEntitiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOpEntitiesResponseBody</p>
+     */
     public static class OpEntities extends TeaModel {
-        @NameInMap("EntityObject")
+        @com.aliyun.core.annotation.NameInMap("EntityObject")
         private String entityObject;
 
-        @NameInMap("EntityType")
+        @com.aliyun.core.annotation.NameInMap("EntityType")
         private Integer entityType;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("OpAccount")
+        @com.aliyun.core.annotation.NameInMap("OpAccount")
         private String opAccount;
 
-        @NameInMap("OpAction")
+        @com.aliyun.core.annotation.NameInMap("OpAction")
         private Integer opAction;
 
-        @NameInMap("OpDesc")
+        @com.aliyun.core.annotation.NameInMap("OpDesc")
         private String opDesc;
 
         private OpEntities(Builder builder) {
@@ -178,7 +190,10 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
             private String opDesc; 
 
             /**
-             * Queries the operation logs of an Anti-DDoS Origin instance.
+             * <p>The operation object, which is the ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddosbgp-cn-n6w1r7nz****</p>
              */
             public Builder entityObject(String entityObject) {
                 this.entityObject = entityObject;
@@ -186,10 +201,10 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).
-             * <p>
+             * <p>The type of the operation object. The value is fixed as <strong>1</strong>, which indicates Anti-DDoS Origin instances.</p>
              * 
-             * For more information about sample requests, see the **"Examples"** section of this topic.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder entityType(Integer entityType) {
                 this.entityType = entityType;
@@ -197,7 +212,10 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * WB01342967
+             * <p>The time when the log was generated. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1635818114000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -205,7 +223,13 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * OpAccount.
+             * <p>The ID of the Alibaba Cloud account that performs the operation.</p>
+             * <blockquote>
+             * <p>If the value is <strong>system</strong>, the operation is performed by Anti-DDoS Origin.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>171986973287****</p>
              */
             public Builder opAccount(String opAccount) {
                 this.opAccount = opAccount;
@@ -213,7 +237,18 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * DescribeOpEntities
+             * <p>The type of operation. Valid values:</p>
+             * <ul>
+             * <li><strong>3</strong>: indicates an operation to add an IP address to the Anti-DDoS Origin instance for protection.</li>
+             * <li><strong>4</strong>: indicates an operation to remove a protected IP address from the Anti-DDoS Origin instance.</li>
+             * <li><strong>5</strong>: indicates an operation to downgrade the Anti-DDoS Origin instance.</li>
+             * <li><strong>6</strong>: indicates an operation to deactivate blackhole filtering for an IP address.</li>
+             * <li><strong>7</strong>: indicates an operation to reset the number of times that you can deactivate blackhole filtering.</li>
+             * <li><strong>8</strong>: indicates an operation to enable burstable protection.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder opAction(Integer opAction) {
                 this.opAction = opAction;
@@ -221,7 +256,46 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * OpDesc.
+             * <p>The details of the operation. The value is a string that consists of a JSON struct. The JSON struct contains the following fields:</p>
+             * <ul>
+             * <li><p><strong>entity</strong>: the operation object. Data type: object. The fields that are included in the value of the <strong>entity</strong> parameter vary based on the value of the <strong>OpAction</strong> parameter. Valid values:</p>
+             * <ul>
+             * <li><p>If the value of the <strong>OpAction</strong> parameter is <strong>3</strong>, the value of the <strong>entity</strong> parameter consists of the following field:</p>
+             * <ul>
+             * <li><strong>ips</strong>: the public IP addresses that are protected by the Anti-DDoS Origin instance. Data type: array</li>
+             * </ul>
+             * </li>
+             * <li><p>If the value of the <strong>OpAction</strong> parameter is <strong>4</strong>, the value of the <strong>entity</strong> parameter consists of the following field:</p>
+             * <ul>
+             * <li><strong>ips</strong>: the public IP addresses that are no longer protected by the Anti-DDoS Origin instance. Data type: array.</li>
+             * </ul>
+             * </li>
+             * <li><p>If the value of the <strong>OpAction</strong> parameter is <strong>5</strong>, the value of the <strong>entity</strong> parameter consists of the following fields:</p>
+             * <ul>
+             * <li><strong>baseBandwidth</strong>: the basic protection bandwidth. Unit: Gbit/s. Data type: integer.</li>
+             * <li><strong>elasticBandwidth</strong>: the burstable protection bandwidth. Unit: Gbit/s. Data type: integer.</li>
+             * <li><strong>opSource</strong>: the source of the operation. The value is fixed as <strong>1</strong>, indicating that the operation is performed by Anti-DDoS Origin. Data type: integer.</li>
+             * </ul>
+             * </li>
+             * <li><p>If the value of the <strong>OpAction</strong> parameter is <strong>6</strong>, the value of the <strong>entity</strong> parameter consists of the following field:</p>
+             * <ul>
+             * <li><strong>ips</strong>: the public IP addresses for which to deactivate blackhole filtering. Data type: array.</li>
+             * </ul>
+             * </li>
+             * <li><p>If the value of the <strong>OpAction</strong> parameter is <strong>7</strong>, the <strong>entity</strong> parameter is not returned.</p>
+             * </li>
+             * <li><p>If the value of the <strong>OpAction</strong> parameter is <strong>8</strong>, the value of the <strong>entity</strong> parameter consists of the following fields:</p>
+             * <ul>
+             * <li><strong>baseBandwidth</strong>: the basic protection bandwidth. Unit: Gbit/s. Data type: integer.</li>
+             * <li><strong>elasticBandwidth</strong>: the burstable protection bandwidth. Unit: Gbit/s. Data type: integer.</li>
+             * </ul>
+             * </li>
+             * </ul>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;entity&quot;:{&quot;baseBandwidth&quot;:20,&quot;elasticBandwidth&quot;:20}}</p>
              */
             public Builder opDesc(String opDesc) {
                 this.opDesc = opDesc;

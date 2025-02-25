@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPodRiskResponseBody} extends {@link TeaModel}
  *
  * <p>ListPodRiskResponseBody</p>
  */
 public class ListPodRiskResponseBody extends TeaModel {
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("PodRiskList")
-    private java.util.List < PodRiskList> podRiskList;
+    @com.aliyun.core.annotation.NameInMap("PodRiskList")
+    private java.util.List<PodRiskList> podRiskList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListPodRiskResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class ListPodRiskResponseBody extends TeaModel {
     /**
      * @return podRiskList
      */
-    public java.util.List < PodRiskList> getPodRiskList() {
+    public java.util.List<PodRiskList> getPodRiskList() {
         return this.podRiskList;
     }
 
@@ -58,11 +63,11 @@ public class ListPodRiskResponseBody extends TeaModel {
 
     public static final class Builder {
         private PageInfo pageInfo; 
-        private java.util.List < PodRiskList> podRiskList; 
+        private java.util.List<PodRiskList> podRiskList; 
         private String requestId; 
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,15 +75,18 @@ public class ListPodRiskResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the risks.
+         * <p>An array that consists of the risks.</p>
          */
-        public Builder podRiskList(java.util.List < PodRiskList> podRiskList) {
+        public Builder podRiskList(java.util.List<PodRiskList> podRiskList) {
             this.podRiskList = podRiskList;
             return this;
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94254AD7-5026-5847-833B-403C2326BD6E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,17 +99,23 @@ public class ListPodRiskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPodRiskResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPodRiskResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -154,7 +168,10 @@ public class ListPodRiskResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -162,7 +179,10 @@ public class ListPodRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -170,7 +190,10 @@ public class ListPodRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2-</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -178,7 +201,10 @@ public class ListPodRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>29</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -192,38 +218,44 @@ public class ListPodRiskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPodRiskResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPodRiskResponseBody</p>
+     */
     public static class PodRiskList extends TeaModel {
-        @NameInMap("AlarmCount")
+        @com.aliyun.core.annotation.NameInMap("AlarmCount")
         private Integer alarmCount;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("HcCount")
+        @com.aliyun.core.annotation.NameInMap("HcCount")
         private Integer hcCount;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("Pod")
+        @com.aliyun.core.annotation.NameInMap("Pod")
         private String pod;
 
-        @NameInMap("PodIp")
+        @com.aliyun.core.annotation.NameInMap("PodIp")
         private String podIp;
 
-        @NameInMap("VulCount")
+        @com.aliyun.core.annotation.NameInMap("VulCount")
         private Integer vulCount;
 
         private PodRiskList(Builder builder) {
@@ -339,7 +371,10 @@ public class ListPodRiskResponseBody extends TeaModel {
             private Integer vulCount; 
 
             /**
-             * The number of alerts that are generated for the pod.
+             * <p>The number of alerts that are generated for the pod.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder alarmCount(Integer alarmCount) {
                 this.alarmCount = alarmCount;
@@ -347,7 +382,10 @@ public class ListPodRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the container cluster.
+             * <p>The ID of the container cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c1d903a628af043659a043af59d89****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -355,7 +393,10 @@ public class ListPodRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * <p>The name of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test66</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -363,7 +404,10 @@ public class ListPodRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp that indicates the time when the pod was created. Unit: milliseconds.
+             * <p>The timestamp that indicates the time when the pod was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1644283112720</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -371,7 +415,10 @@ public class ListPodRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The number of baseline risk items that are detected in the pod.
+             * <p>The number of baseline risk items that are detected in the pod.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder hcCount(Integer hcCount) {
                 this.hcCount = hcCount;
@@ -379,7 +426,10 @@ public class ListPodRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the node.
+             * <p>The instance ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-7yvdq597****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -387,7 +437,10 @@ public class ListPodRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace of the Kubernetes cluster.
+             * <p>The namespace of the Kubernetes cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kube-system</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -395,7 +448,10 @@ public class ListPodRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -403,7 +459,10 @@ public class ListPodRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the pod.
+             * <p>The name of the pod.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>expoit-xxx-b****</p>
              */
             public Builder pod(String pod) {
                 this.pod = pod;
@@ -411,7 +470,10 @@ public class ListPodRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the pod.
+             * <p>The IP address of the pod.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.0.XXX.XXX</p>
              */
             public Builder podIp(String podIp) {
                 this.podIp = podIp;
@@ -419,7 +481,10 @@ public class ListPodRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The number of vulnerabilities that are detected in the pod.
+             * <p>The number of vulnerabilities that are detected in the pod.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder vulCount(Integer vulCount) {
                 this.vulCount = vulCount;

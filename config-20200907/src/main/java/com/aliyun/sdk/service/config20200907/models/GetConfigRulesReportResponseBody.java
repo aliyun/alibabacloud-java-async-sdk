@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetConfigRulesReportResponseBody} extends {@link TeaModel}
  *
  * <p>GetConfigRulesReportResponseBody</p>
  */
 public class GetConfigRulesReportResponseBody extends TeaModel {
-    @NameInMap("ConfigRulesReport")
+    @com.aliyun.core.annotation.NameInMap("ConfigRulesReport")
     private ConfigRulesReport configRulesReport;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetConfigRulesReportResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetConfigRulesReportResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the compliance evaluation report.
+         * <p>The information about the compliance evaluation report.</p>
          */
         public Builder configRulesReport(ConfigRulesReport configRulesReport) {
             this.configRulesReport = configRulesReport;
@@ -58,7 +63,10 @@ public class GetConfigRulesReportResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6EC7AED1-172F-42AE-9C12-295BC2ADB751</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +79,26 @@ public class GetConfigRulesReportResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetConfigRulesReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConfigRulesReportResponseBody</p>
+     */
     public static class ConfigRulesReport extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
 
-        @NameInMap("ReportCreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("ReportCreateTimestamp")
         private Long reportCreateTimestamp;
 
-        @NameInMap("ReportId")
+        @com.aliyun.core.annotation.NameInMap("ReportId")
         private String reportId;
 
-        @NameInMap("ReportStatus")
+        @com.aliyun.core.annotation.NameInMap("ReportStatus")
         private String reportStatus;
 
-        @NameInMap("ReportUrl")
+        @com.aliyun.core.annotation.NameInMap("ReportUrl")
         private String reportUrl;
 
         private ConfigRulesReport(Builder builder) {
@@ -146,7 +160,10 @@ public class GetConfigRulesReportResponseBody extends TeaModel {
             private String reportUrl; 
 
             /**
-             * The ID of the Alibaba Cloud account to which the rules belong.
+             * <p>The ID of the Alibaba Cloud account to which the rules belong.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100931896542****</p>
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -154,7 +171,10 @@ public class GetConfigRulesReportResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the compliance evaluation report was generated. Unit: milliseconds.
+             * <p>The timestamp when the compliance evaluation report was generated. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1614687022000</p>
              */
             public Builder reportCreateTimestamp(Long reportCreateTimestamp) {
                 this.reportCreateTimestamp = reportCreateTimestamp;
@@ -162,7 +182,10 @@ public class GetConfigRulesReportResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the compliance evaluation report.
+             * <p>The ID of the compliance evaluation report.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crp-88176457e0d900c9****</p>
              */
             public Builder reportId(String reportId) {
                 this.reportId = reportId;
@@ -170,12 +193,15 @@ public class GetConfigRulesReportResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the compliance evaluation report. Valid values:
-             * <p>
+             * <p>The status of the compliance evaluation report. Valid values:</p>
+             * <ul>
+             * <li>NONE: The compliance evaluation report is not generated.</li>
+             * <li>CREATING: The compliance evaluation report is being generated.</li>
+             * <li>COMPLETE: The compliance evaluation report is generated.</li>
+             * </ul>
              * 
-             * *   NONE: The compliance evaluation report is not generated.
-             * *   CREATING: The compliance evaluation report is being generated.
-             * *   COMPLETE: The compliance evaluation report is generated.
+             * <strong>example:</strong>
+             * <p>CREATING</p>
              */
             public Builder reportStatus(String reportStatus) {
                 this.reportStatus = reportStatus;
@@ -183,7 +209,7 @@ public class GetConfigRulesReportResponseBody extends TeaModel {
             }
 
             /**
-             * The URL that is used to download the compliance evaluation report.
+             * <p>The URL that is used to download the compliance evaluation report.</p>
              */
             public Builder reportUrl(String reportUrl) {
                 this.reportUrl = reportUrl;

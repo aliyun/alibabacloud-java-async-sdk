@@ -1,46 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeChannelUsersResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeChannelUsersResponseBody</p>
  */
 public class DescribeChannelUsersResponseBody extends TeaModel {
-    @NameInMap("ChannelProfile")
+    @com.aliyun.core.annotation.NameInMap("ChannelProfile")
     private Integer channelProfile;
 
-    @NameInMap("CommTotalNum")
+    @com.aliyun.core.annotation.NameInMap("CommTotalNum")
     private Integer commTotalNum;
 
-    @NameInMap("InteractiveUserList")
-    private java.util.List < String > interactiveUserList;
+    @com.aliyun.core.annotation.NameInMap("InteractiveUserList")
+    private java.util.List<String> interactiveUserList;
 
-    @NameInMap("InteractiveUserNum")
+    @com.aliyun.core.annotation.NameInMap("InteractiveUserNum")
     private Integer interactiveUserNum;
 
-    @NameInMap("IsChannelExist")
+    @com.aliyun.core.annotation.NameInMap("IsChannelExist")
     private Boolean isChannelExist;
 
-    @NameInMap("LiveUserList")
-    private java.util.List < String > liveUserList;
+    @com.aliyun.core.annotation.NameInMap("LiveUserList")
+    private java.util.List<String> liveUserList;
 
-    @NameInMap("LiveUserNum")
+    @com.aliyun.core.annotation.NameInMap("LiveUserNum")
     private Integer liveUserNum;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Timestamp")
+    @com.aliyun.core.annotation.NameInMap("Timestamp")
     private Integer timestamp;
 
-    @NameInMap("UserList")
-    private java.util.List < String > userList;
+    @com.aliyun.core.annotation.NameInMap("UserList")
+    private java.util.List<String> userList;
 
     private DescribeChannelUsersResponseBody(Builder builder) {
         this.channelProfile = builder.channelProfile;
@@ -80,7 +85,7 @@ public class DescribeChannelUsersResponseBody extends TeaModel {
     /**
      * @return interactiveUserList
      */
-    public java.util.List < String > getInteractiveUserList() {
+    public java.util.List<String> getInteractiveUserList() {
         return this.interactiveUserList;
     }
 
@@ -101,7 +106,7 @@ public class DescribeChannelUsersResponseBody extends TeaModel {
     /**
      * @return liveUserList
      */
-    public java.util.List < String > getLiveUserList() {
+    public java.util.List<String> getLiveUserList() {
         return this.liveUserList;
     }
 
@@ -129,21 +134,21 @@ public class DescribeChannelUsersResponseBody extends TeaModel {
     /**
      * @return userList
      */
-    public java.util.List < String > getUserList() {
+    public java.util.List<String> getUserList() {
         return this.userList;
     }
 
     public static final class Builder {
         private Integer channelProfile; 
         private Integer commTotalNum; 
-        private java.util.List < String > interactiveUserList; 
+        private java.util.List<String> interactiveUserList; 
         private Integer interactiveUserNum; 
         private Boolean isChannelExist; 
-        private java.util.List < String > liveUserList; 
+        private java.util.List<String> liveUserList; 
         private Integer liveUserNum; 
         private String requestId; 
         private Integer timestamp; 
-        private java.util.List < String > userList; 
+        private java.util.List<String> userList; 
 
         /**
          * ChannelProfile.
@@ -164,7 +169,7 @@ public class DescribeChannelUsersResponseBody extends TeaModel {
         /**
          * InteractiveUserList.
          */
-        public Builder interactiveUserList(java.util.List < String > interactiveUserList) {
+        public Builder interactiveUserList(java.util.List<String> interactiveUserList) {
             this.interactiveUserList = interactiveUserList;
             return this;
         }
@@ -188,7 +193,7 @@ public class DescribeChannelUsersResponseBody extends TeaModel {
         /**
          * LiveUserList.
          */
-        public Builder liveUserList(java.util.List < String > liveUserList) {
+        public Builder liveUserList(java.util.List<String> liveUserList) {
             this.liveUserList = liveUserList;
             return this;
         }
@@ -220,7 +225,7 @@ public class DescribeChannelUsersResponseBody extends TeaModel {
         /**
          * UserList.
          */
-        public Builder userList(java.util.List < String > userList) {
+        public Builder userList(java.util.List<String> userList) {
             this.userList = userList;
             return this;
         }

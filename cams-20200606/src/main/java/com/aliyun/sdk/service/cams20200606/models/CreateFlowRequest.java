@@ -1,29 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFlowRequest} extends {@link RequestModel}
  *
  * <p>CreateFlowRequest</p>
  */
 public class CreateFlowRequest extends Request {
-    @Body
-    @NameInMap("Categories")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Categories")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > categories;
 
-    @Body
-    @NameInMap("CustSpaceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustSpaceId")
     private String custSpaceId;
 
-    @Body
-    @NameInMap("FlowName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FlowName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String flowName;
 
     private CreateFlowRequest(Builder builder) {
@@ -84,7 +84,8 @@ public class CreateFlowRequest extends Request {
         } 
 
         /**
-         * Categories.
+         * <p>The categories of the Flow.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder categories(java.util.List < String > categories) {
             String categoriesShrink = shrink(categories, "Categories", "json");
@@ -94,7 +95,10 @@ public class CreateFlowRequest extends Request {
         }
 
         /**
-         * CustSpaceId.
+         * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93994848</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putBodyParameter("CustSpaceId", custSpaceId);
@@ -103,7 +107,11 @@ public class CreateFlowRequest extends Request {
         }
 
         /**
-         * FlowName.
+         * <p>The name of the Flow.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flow_001</p>
          */
         public Builder flowName(String flowName) {
             this.putBodyParameter("FlowName", flowName);

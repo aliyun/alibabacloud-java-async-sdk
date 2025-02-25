@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResourceRenewPriceResponseBody} extends {@link TeaModel}
  *
  * <p>GetResourceRenewPriceResponseBody</p>
  */
 public class GetResourceRenewPriceResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetResourceRenewPriceResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>The price object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +79,26 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetResourceRenewPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourceRenewPriceResponseBody</p>
+     */
     public static class Promotions extends TeaModel {
-        @NameInMap("OptionCode")
+        @com.aliyun.core.annotation.NameInMap("OptionCode")
         private String optionCode;
 
-        @NameInMap("PromotionDesc")
+        @com.aliyun.core.annotation.NameInMap("PromotionDesc")
         private String promotionDesc;
 
-        @NameInMap("PromotionId")
+        @com.aliyun.core.annotation.NameInMap("PromotionId")
         private String promotionId;
 
-        @NameInMap("PromotionName")
+        @com.aliyun.core.annotation.NameInMap("PromotionName")
         private String promotionName;
 
-        @NameInMap("Selected")
+        @com.aliyun.core.annotation.NameInMap("Selected")
         private Boolean selected;
 
         private Promotions(Builder builder) {
@@ -146,7 +160,10 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
             private Boolean selected; 
 
             /**
-             * OptionCode.
+             * <p>The coupon code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>coupon****</p>
              */
             public Builder optionCode(String optionCode) {
                 this.optionCode = optionCode;
@@ -154,7 +171,7 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionDesc.
+             * <p>The coupon description.</p>
              */
             public Builder promotionDesc(String promotionDesc) {
                 this.promotionDesc = promotionDesc;
@@ -162,7 +179,10 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionId.
+             * <p>The coupon ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>139965*****</p>
              */
             public Builder promotionId(String promotionId) {
                 this.promotionId = promotionId;
@@ -170,7 +190,7 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionName.
+             * <p>The coupon name.</p>
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -178,7 +198,15 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Selected.
+             * <p>Indicates whether the coupon was used.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder selected(Boolean selected) {
                 this.selected = selected;
@@ -192,20 +220,26 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResourceRenewPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourceRenewPriceResponseBody</p>
+     */
     public static class Price extends TeaModel {
-        @NameInMap("Currency")
+        @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
-        @NameInMap("DiscountPrice")
+        @com.aliyun.core.annotation.NameInMap("DiscountPrice")
         private String discountPrice;
 
-        @NameInMap("OriginalPrice")
+        @com.aliyun.core.annotation.NameInMap("OriginalPrice")
         private String originalPrice;
 
-        @NameInMap("Promotions")
-        private java.util.List < Promotions> promotions;
+        @com.aliyun.core.annotation.NameInMap("Promotions")
+        private java.util.List<Promotions> promotions;
 
-        @NameInMap("TradePrice")
+        @com.aliyun.core.annotation.NameInMap("TradePrice")
         private String tradePrice;
 
         private Price(Builder builder) {
@@ -248,7 +282,7 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
         /**
          * @return promotions
          */
-        public java.util.List < Promotions> getPromotions() {
+        public java.util.List<Promotions> getPromotions() {
             return this.promotions;
         }
 
@@ -263,11 +297,14 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
             private String currency; 
             private String discountPrice; 
             private String originalPrice; 
-            private java.util.List < Promotions> promotions; 
+            private java.util.List<Promotions> promotions; 
             private String tradePrice; 
 
             /**
-             * Currency.
+             * <p>The currency type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -275,7 +312,10 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
             }
 
             /**
-             * DiscountPrice.
+             * <p>The discount. The actual price is calculated based on the following formula: Actual price = Original price - Discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder discountPrice(String discountPrice) {
                 this.discountPrice = discountPrice;
@@ -283,7 +323,10 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalPrice.
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder originalPrice(String originalPrice) {
                 this.originalPrice = originalPrice;
@@ -291,15 +334,18 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Promotions.
+             * <p>The coupon description.</p>
              */
-            public Builder promotions(java.util.List < Promotions> promotions) {
+            public Builder promotions(java.util.List<Promotions> promotions) {
                 this.promotions = promotions;
                 return this;
             }
 
             /**
-             * TradePrice.
+             * <p>The actual price. The actual price is calculated based on the following formula: Actual price = Original price - Discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder tradePrice(String tradePrice) {
                 this.tradePrice = tradePrice;
@@ -313,11 +359,17 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResourceRenewPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourceRenewPriceResponseBody</p>
+     */
     public static class Rules extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
         private Rules(Builder builder) {
@@ -352,7 +404,7 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
             private Long ruleId; 
 
             /**
-             * Description.
+             * <p>The description of the price calculation rule.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -360,7 +412,10 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * <p>The ID of the price calculation rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20002****</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -374,12 +429,18 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResourceRenewPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourceRenewPriceResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Price")
+        @com.aliyun.core.annotation.NameInMap("Price")
         private Price price;
 
-        @NameInMap("Rules")
-        private java.util.List < Rules> rules;
+        @com.aliyun.core.annotation.NameInMap("Rules")
+        private java.util.List<Rules> rules;
 
         private Data(Builder builder) {
             this.price = builder.price;
@@ -404,16 +465,16 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
         /**
          * @return rules
          */
-        public java.util.List < Rules> getRules() {
+        public java.util.List<Rules> getRules() {
             return this.rules;
         }
 
         public static final class Builder {
             private Price price; 
-            private java.util.List < Rules> rules; 
+            private java.util.List<Rules> rules; 
 
             /**
-             * Price.
+             * <p>The price details.</p>
              */
             public Builder price(Price price) {
                 this.price = price;
@@ -421,9 +482,9 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Rules.
+             * <p>The price calculation rules.</p>
              */
-            public Builder rules(java.util.List < Rules> rules) {
+            public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
                 return this;
             }

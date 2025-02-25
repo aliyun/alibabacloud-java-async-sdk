@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightPayOrderRequest} extends {@link RequestModel}
  *
  * <p>FlightPayOrderRequest</p>
  */
 public class FlightPayOrderRequest extends Request {
-    @Body
-    @NameInMap("corp_pay_price")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("corp_pay_price")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long corpPayPrice;
 
-    @Body
-    @NameInMap("dis_order_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dis_order_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String disOrderId;
 
-    @Body
-    @NameInMap("extra")
-    private java.util.Map < String, String > extra;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("extra")
+    private java.util.Map<String, String> extra;
 
-    @Body
-    @NameInMap("personal_pay_price")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("personal_pay_price")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long personalPayPrice;
 
-    @Body
-    @NameInMap("total_pay_price")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("total_pay_price")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long totalPayPrice;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private FlightPayOrderRequest(Builder builder) {
@@ -80,7 +85,7 @@ public class FlightPayOrderRequest extends Request {
     /**
      * @return extra
      */
-    public java.util.Map < String, String > getExtra() {
+    public java.util.Map<String, String> getExtra() {
         return this.extra;
     }
 
@@ -108,7 +113,7 @@ public class FlightPayOrderRequest extends Request {
     public static final class Builder extends Request.Builder<FlightPayOrderRequest, Builder> {
         private Long corpPayPrice; 
         private String disOrderId; 
-        private java.util.Map < String, String > extra; 
+        private java.util.Map<String, String> extra; 
         private Long personalPayPrice; 
         private Long totalPayPrice; 
         private String xAcsBtripCorpToken; 
@@ -128,7 +133,10 @@ public class FlightPayOrderRequest extends Request {
         } 
 
         /**
-         * corp_pay_price.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder corpPayPrice(Long corpPayPrice) {
             this.putBodyParameter("corp_pay_price", corpPayPrice);
@@ -137,7 +145,10 @@ public class FlightPayOrderRequest extends Request {
         }
 
         /**
-         * dis_order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dis123</p>
          */
         public Builder disOrderId(String disOrderId) {
             this.putBodyParameter("dis_order_id", disOrderId);
@@ -148,7 +159,7 @@ public class FlightPayOrderRequest extends Request {
         /**
          * extra.
          */
-        public Builder extra(java.util.Map < String, String > extra) {
+        public Builder extra(java.util.Map<String, String> extra) {
             String extraShrink = shrink(extra, "extra", "json");
             this.putBodyParameter("extra", extraShrink);
             this.extra = extra;
@@ -156,7 +167,10 @@ public class FlightPayOrderRequest extends Request {
         }
 
         /**
-         * personal_pay_price.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder personalPayPrice(Long personalPayPrice) {
             this.putBodyParameter("personal_pay_price", personalPayPrice);
@@ -165,7 +179,10 @@ public class FlightPayOrderRequest extends Request {
         }
 
         /**
-         * total_pay_price.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalPayPrice(Long totalPayPrice) {
             this.putBodyParameter("total_pay_price", totalPayPrice);

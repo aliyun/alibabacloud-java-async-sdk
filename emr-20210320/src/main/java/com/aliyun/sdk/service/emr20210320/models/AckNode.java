@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AckNode} extends {@link TeaModel}
  *
  * <p>AckNode</p>
  */
 public class AckNode extends TeaModel {
-    @NameInMap("NodeId")
+    @com.aliyun.core.annotation.NameInMap("NodeId")
     private String nodeId;
 
-    @NameInMap("NodeSelector")
+    @com.aliyun.core.annotation.NameInMap("NodeSelector")
     private AckNodeSelector nodeSelector;
 
     private AckNode(Builder builder) {
@@ -50,7 +55,10 @@ public class AckNode extends TeaModel {
         private AckNodeSelector nodeSelector; 
 
         /**
-         * 节点ID。
+         * <p>节点ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1cudc25w2bfwl5****</p>
          */
         public Builder nodeId(String nodeId) {
             this.nodeId = nodeId;
@@ -58,7 +66,7 @@ public class AckNode extends TeaModel {
         }
 
         /**
-         * ACK节点选择器。
+         * <p>ACK节点选择器。</p>
          */
         public Builder nodeSelector(AckNodeSelector nodeSelector) {
             this.nodeSelector = nodeSelector;

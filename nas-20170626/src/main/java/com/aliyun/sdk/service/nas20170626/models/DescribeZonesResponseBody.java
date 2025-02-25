@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeZonesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeZonesResponseBody</p>
  */
 public class DescribeZonesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Zones")
+    @com.aliyun.core.annotation.NameInMap("Zones")
     private Zones zones;
 
     private DescribeZonesResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DescribeZonesResponseBody extends TeaModel {
         private Zones zones; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A70BEE5D-76D3-49FB-B58F-1F398211****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * Zones.
+         * <p>The queried zones.</p>
          */
         public Builder zones(Zones zones) {
             this.zones = zones;
@@ -71,9 +79,15 @@ public class DescribeZonesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeZonesResponseBody</p>
+     */
     public static class Capacity extends TeaModel {
-        @NameInMap("Protocol")
-        private java.util.List < String > protocol;
+        @com.aliyun.core.annotation.NameInMap("Protocol")
+        private java.util.List<String> protocol;
 
         private Capacity(Builder builder) {
             this.protocol = builder.protocol;
@@ -90,17 +104,17 @@ public class DescribeZonesResponseBody extends TeaModel {
         /**
          * @return protocol
          */
-        public java.util.List < String > getProtocol() {
+        public java.util.List<String> getProtocol() {
             return this.protocol;
         }
 
         public static final class Builder {
-            private java.util.List < String > protocol; 
+            private java.util.List<String> protocol; 
 
             /**
              * Protocol.
              */
-            public Builder protocol(java.util.List < String > protocol) {
+            public Builder protocol(java.util.List<String> protocol) {
                 this.protocol = protocol;
                 return this;
             }
@@ -112,11 +126,17 @@ public class DescribeZonesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeZonesResponseBody</p>
+     */
     public static class InstanceType extends TeaModel {
-        @NameInMap("ProtocolType")
+        @com.aliyun.core.annotation.NameInMap("ProtocolType")
         private String protocolType;
 
-        @NameInMap("StorageType")
+        @com.aliyun.core.annotation.NameInMap("StorageType")
         private String storageType;
 
         private InstanceType(Builder builder) {
@@ -151,7 +171,18 @@ public class DescribeZonesResponseBody extends TeaModel {
             private String storageType; 
 
             /**
-             * ProtocolType.
+             * <p>The protocol type.</p>
+             * <ul>
+             * <li>If the FileSystemType parameter is set to standard, the protocol type is nfs or smb.</li>
+             * <li>If the FileSystemType parameter is set to extreme, the protocol type is nfs.</li>
+             * <li>If the FileSystemType parameter is set to cpfs, the protocol type is cpfs.</li>
+             * </ul>
+             * <blockquote>
+             * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>nfs</p>
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -159,7 +190,18 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * StorageType.
+             * <p>The storage type.</p>
+             * <ul>
+             * <li>If the FileSystemType parameter is set to standard, the storage type is Performance or Capacity.</li>
+             * <li>If the FileSystemType parameter is set to extreme, the storage type is standard or advance.</li>
+             * <li>If the FileSystemType parameter is set to cpfs, the storage type is advance_100 (100 MB/s/TiB baseline) or advance_200 (200 MB/s/TiB baseline).</li>
+             * </ul>
+             * <blockquote>
+             * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Capacity</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -173,9 +215,15 @@ public class DescribeZonesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeZonesResponseBody</p>
+     */
     public static class InstanceTypes extends TeaModel {
-        @NameInMap("InstanceType")
-        private java.util.List < InstanceType> instanceType;
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
+        private java.util.List<InstanceType> instanceType;
 
         private InstanceTypes(Builder builder) {
             this.instanceType = builder.instanceType;
@@ -192,17 +240,17 @@ public class DescribeZonesResponseBody extends TeaModel {
         /**
          * @return instanceType
          */
-        public java.util.List < InstanceType> getInstanceType() {
+        public java.util.List<InstanceType> getInstanceType() {
             return this.instanceType;
         }
 
         public static final class Builder {
-            private java.util.List < InstanceType> instanceType; 
+            private java.util.List<InstanceType> instanceType; 
 
             /**
              * InstanceType.
              */
-            public Builder instanceType(java.util.List < InstanceType> instanceType) {
+            public Builder instanceType(java.util.List<InstanceType> instanceType) {
                 this.instanceType = instanceType;
                 return this;
             }
@@ -214,9 +262,15 @@ public class DescribeZonesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeZonesResponseBody</p>
+     */
     public static class Performance extends TeaModel {
-        @NameInMap("Protocol")
-        private java.util.List < String > protocol;
+        @com.aliyun.core.annotation.NameInMap("Protocol")
+        private java.util.List<String> protocol;
 
         private Performance(Builder builder) {
             this.protocol = builder.protocol;
@@ -233,17 +287,17 @@ public class DescribeZonesResponseBody extends TeaModel {
         /**
          * @return protocol
          */
-        public java.util.List < String > getProtocol() {
+        public java.util.List<String> getProtocol() {
             return this.protocol;
         }
 
         public static final class Builder {
-            private java.util.List < String > protocol; 
+            private java.util.List<String> protocol; 
 
             /**
              * Protocol.
              */
-            public Builder protocol(java.util.List < String > protocol) {
+            public Builder protocol(java.util.List<String> protocol) {
                 this.protocol = protocol;
                 return this;
             }
@@ -255,17 +309,23 @@ public class DescribeZonesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeZonesResponseBody</p>
+     */
     public static class Zone extends TeaModel {
-        @NameInMap("Capacity")
+        @com.aliyun.core.annotation.NameInMap("Capacity")
         private Capacity capacity;
 
-        @NameInMap("InstanceTypes")
+        @com.aliyun.core.annotation.NameInMap("InstanceTypes")
         private InstanceTypes instanceTypes;
 
-        @NameInMap("Performance")
+        @com.aliyun.core.annotation.NameInMap("Performance")
         private Performance performance;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Zone(Builder builder) {
@@ -318,7 +378,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * Capacity.
+             * <p>This parameter is reserved. You can ignore this parameter.</p>
              */
             public Builder capacity(Capacity capacity) {
                 this.capacity = capacity;
@@ -326,7 +386,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceTypes.
+             * <p>The details about file system types.</p>
              */
             public Builder instanceTypes(InstanceTypes instanceTypes) {
                 this.instanceTypes = instanceTypes;
@@ -334,7 +394,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * Performance.
+             * <p>This parameter is reserved. You can ignore this parameter.</p>
              */
             public Builder performance(Performance performance) {
                 this.performance = performance;
@@ -342,7 +402,10 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-b</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -356,9 +419,15 @@ public class DescribeZonesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeZonesResponseBody</p>
+     */
     public static class Zones extends TeaModel {
-        @NameInMap("Zone")
-        private java.util.List < Zone> zone;
+        @com.aliyun.core.annotation.NameInMap("Zone")
+        private java.util.List<Zone> zone;
 
         private Zones(Builder builder) {
             this.zone = builder.zone;
@@ -375,17 +444,17 @@ public class DescribeZonesResponseBody extends TeaModel {
         /**
          * @return zone
          */
-        public java.util.List < Zone> getZone() {
+        public java.util.List<Zone> getZone() {
             return this.zone;
         }
 
         public static final class Builder {
-            private java.util.List < Zone> zone; 
+            private java.util.List<Zone> zone; 
 
             /**
              * Zone.
              */
-            public Builder zone(java.util.List < Zone> zone) {
+            public Builder zone(java.util.List<Zone> zone) {
                 this.zone = zone;
                 return this;
             }

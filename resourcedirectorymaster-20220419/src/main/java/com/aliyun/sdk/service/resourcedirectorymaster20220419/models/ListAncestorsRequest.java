@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAncestorsRequest} extends {@link RequestModel}
  *
  * <p>ListAncestorsRequest</p>
  */
 public class ListAncestorsRequest extends Request {
-    @Query
-    @NameInMap("ChildId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChildId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String childId;
 
     private ListAncestorsRequest(Builder builder) {
@@ -55,7 +60,11 @@ public class ListAncestorsRequest extends Request {
         } 
 
         /**
-         * The ID of the subfolder.
+         * <p>The ID of the subfolder.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fd-i1c9nr****</p>
          */
         public Builder childId(String childId) {
             this.putQueryParameter("ChildId", childId);

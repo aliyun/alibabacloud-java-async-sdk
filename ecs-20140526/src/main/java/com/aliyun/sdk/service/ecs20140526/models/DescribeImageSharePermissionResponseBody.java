@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageSharePermissionResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImageSharePermissionResponseBody</p>
  */
 public class DescribeImageSharePermissionResponseBody extends TeaModel {
-    @NameInMap("Accounts")
+    @com.aliyun.core.annotation.NameInMap("Accounts")
     private Accounts accounts;
 
-    @NameInMap("ImageId")
+    @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ShareGroups")
+    @com.aliyun.core.annotation.NameInMap("ShareGroups")
     private ShareGroups shareGroups;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeImageSharePermissionResponseBody(Builder builder) {
@@ -122,7 +127,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The Alibaba Cloud accounts.
+         * <p>The Alibaba Cloud accounts.</p>
          */
         public Builder accounts(Accounts accounts) {
             this.accounts = accounts;
@@ -130,7 +135,10 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the custom image.
+         * <p>The ID of the custom image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-bp1caf3yicx5jlfl****</p>
          */
         public Builder imageId(String imageId) {
             this.imageId = imageId;
@@ -138,7 +146,10 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -146,7 +157,10 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -154,7 +168,10 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the image.
+         * <p>The region ID of the custom image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -162,7 +179,10 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +190,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * The shared groups.
+         * <p>The shared groups.</p>
          */
         public Builder shareGroups(ShareGroups shareGroups) {
             this.shareGroups = shareGroups;
@@ -178,7 +198,10 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -191,11 +214,17 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImageSharePermissionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageSharePermissionResponseBody</p>
+     */
     public static class Account extends TeaModel {
-        @NameInMap("AliyunId")
+        @com.aliyun.core.annotation.NameInMap("AliyunId")
         private String aliyunId;
 
-        @NameInMap("SharedTime")
+        @com.aliyun.core.annotation.NameInMap("SharedTime")
         private String sharedTime;
 
         private Account(Builder builder) {
@@ -230,7 +259,10 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
             private String sharedTime; 
 
             /**
-             * The ID of the Alibaba Cloud account.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567890</p>
              */
             public Builder aliyunId(String aliyunId) {
                 this.aliyunId = aliyunId;
@@ -238,7 +270,10 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the image was shared. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.
+             * <p>The time when the image was shared. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-01-01T12:05:00Z</p>
              */
             public Builder sharedTime(String sharedTime) {
                 this.sharedTime = sharedTime;
@@ -252,9 +287,15 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImageSharePermissionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageSharePermissionResponseBody</p>
+     */
     public static class Accounts extends TeaModel {
-        @NameInMap("Account")
-        private java.util.List < Account> account;
+        @com.aliyun.core.annotation.NameInMap("Account")
+        private java.util.List<Account> account;
 
         private Accounts(Builder builder) {
             this.account = builder.account;
@@ -271,17 +312,17 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         /**
          * @return account
          */
-        public java.util.List < Account> getAccount() {
+        public java.util.List<Account> getAccount() {
             return this.account;
         }
 
         public static final class Builder {
-            private java.util.List < Account> account; 
+            private java.util.List<Account> account; 
 
             /**
              * Account.
              */
-            public Builder account(java.util.List < Account> account) {
+            public Builder account(java.util.List<Account> account) {
                 this.account = account;
                 return this;
             }
@@ -293,8 +334,14 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImageSharePermissionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageSharePermissionResponseBody</p>
+     */
     public static class ShareGroup extends TeaModel {
-        @NameInMap("Group")
+        @com.aliyun.core.annotation.NameInMap("Group")
         private String group;
 
         private ShareGroup(Builder builder) {
@@ -320,7 +367,10 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
             private String group; 
 
             /**
-             * The shared group.
+             * <p>The shared group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>all</p>
              */
             public Builder group(String group) {
                 this.group = group;
@@ -334,9 +384,15 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImageSharePermissionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageSharePermissionResponseBody</p>
+     */
     public static class ShareGroups extends TeaModel {
-        @NameInMap("ShareGroup")
-        private java.util.List < ShareGroup> shareGroup;
+        @com.aliyun.core.annotation.NameInMap("ShareGroup")
+        private java.util.List<ShareGroup> shareGroup;
 
         private ShareGroups(Builder builder) {
             this.shareGroup = builder.shareGroup;
@@ -353,17 +409,17 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         /**
          * @return shareGroup
          */
-        public java.util.List < ShareGroup> getShareGroup() {
+        public java.util.List<ShareGroup> getShareGroup() {
             return this.shareGroup;
         }
 
         public static final class Builder {
-            private java.util.List < ShareGroup> shareGroup; 
+            private java.util.List<ShareGroup> shareGroup; 
 
             /**
              * ShareGroup.
              */
-            public Builder shareGroup(java.util.List < ShareGroup> shareGroup) {
+            public Builder shareGroup(java.util.List<ShareGroup> shareGroup) {
                 this.shareGroup = shareGroup;
                 return this;
             }

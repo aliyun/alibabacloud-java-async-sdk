@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDirectoriesAndFilesRequest} extends {@link RequestModel}
  *
  * <p>ListDirectoriesAndFilesRequest</p>
  */
 public class ListDirectoriesAndFilesRequest extends Request {
-    @Query
-    @NameInMap("DirectoryOnly")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryOnly")
     private Boolean directoryOnly;
 
-    @Query
-    @NameInMap("FileSystemId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileSystemId;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 128, minimum = 10)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 128, minimum = 10)
     private Long maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("Path")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Path")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String path;
 
-    @Query
-    @NameInMap("StorageType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String storageType;
 
     private ListDirectoriesAndFilesRequest(Builder builder) {
@@ -117,18 +122,29 @@ public class ListDirectoriesAndFilesRequest extends Request {
             super();
         } 
 
-        private Builder(ListDirectoriesAndFilesRequest response) {
-            super(response);
-            this.directoryOnly = response.directoryOnly;
-            this.fileSystemId = response.fileSystemId;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.path = response.path;
-            this.storageType = response.storageType;
+        private Builder(ListDirectoriesAndFilesRequest request) {
+            super(request);
+            this.directoryOnly = request.directoryOnly;
+            this.fileSystemId = request.fileSystemId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.path = request.path;
+            this.storageType = request.storageType;
         } 
 
         /**
-         * DirectoryOnly.
+         * <p>Specifies whether to query only directories.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>false (default): queries both directories and files.</li>
+         * <li>true: queries only directories.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you set the StorageType parameter to All, you must set the DirectoryOnly parameter to true.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder directoryOnly(Boolean directoryOnly) {
             this.putQueryParameter("DirectoryOnly", directoryOnly);
@@ -137,7 +153,11 @@ public class ListDirectoriesAndFilesRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * <p>The ID of the file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31a8e4****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -146,7 +166,12 @@ public class ListDirectoriesAndFilesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of directories or files to include in the results of each query.</p>
+         * <p>Valid values: 10 to 128.</p>
+         * <p>Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -155,7 +180,10 @@ public class ListDirectoriesAndFilesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -164,7 +192,12 @@ public class ListDirectoriesAndFilesRequest extends Request {
         }
 
         /**
-         * Path.
+         * <p>The absolute path of the directory.</p>
+         * <p>The path must start with a forward slash (/) and must be a path that exists in the mount target.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/pathway/to/folder</p>
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -173,7 +206,19 @@ public class ListDirectoriesAndFilesRequest extends Request {
         }
 
         /**
-         * StorageType.
+         * <p>The storage class.</p>
+         * <ul>
+         * <li>InfrequentAccess: the Infrequent Access (IA) storage class.</li>
+         * <li>Archive: the Archive storage class.</li>
+         * <li>All: all stored data.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you set the StorageType parameter to All, you must set the DirectoryOnly parameter to true.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InfrequentAccess</p>
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);

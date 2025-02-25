@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PollUserStatusResponseBody} extends {@link TeaModel}
  *
  * <p>PollUserStatusResponseBody</p>
  */
 public class PollUserStatusResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Params")
-    private java.util.List < String > params;
+    @com.aliyun.core.annotation.NameInMap("Params")
+    private java.util.List<String> params;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private PollUserStatusResponseBody(Builder builder) {
@@ -78,7 +83,7 @@ public class PollUserStatusResponseBody extends TeaModel {
     /**
      * @return params
      */
-    public java.util.List < String > getParams() {
+    public java.util.List<String> getParams() {
         return this.params;
     }
 
@@ -94,7 +99,7 @@ public class PollUserStatusResponseBody extends TeaModel {
         private Data data; 
         private Integer httpStatusCode; 
         private String message; 
-        private java.util.List < String > params; 
+        private java.util.List<String> params; 
         private String requestId; 
 
         /**
@@ -132,7 +137,7 @@ public class PollUserStatusResponseBody extends TeaModel {
         /**
          * Params.
          */
-        public Builder params(java.util.List < String > params) {
+        public Builder params(java.util.List<String> params) {
             this.params = params;
             return this;
         }
@@ -151,50 +156,56 @@ public class PollUserStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PollUserStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>PollUserStatusResponseBody</p>
+     */
     public static class ChannelContexts extends TeaModel {
-        @NameInMap("CallType")
+        @com.aliyun.core.annotation.NameInMap("CallType")
         private String callType;
 
-        @NameInMap("ChannelFlags")
+        @com.aliyun.core.annotation.NameInMap("ChannelFlags")
         private String channelFlags;
 
-        @NameInMap("ChannelId")
+        @com.aliyun.core.annotation.NameInMap("ChannelId")
         private String channelId;
 
-        @NameInMap("ChannelState")
+        @com.aliyun.core.annotation.NameInMap("ChannelState")
         private String channelState;
 
-        @NameInMap("ChannelVariables")
+        @com.aliyun.core.annotation.NameInMap("ChannelVariables")
         private String channelVariables;
 
-        @NameInMap("Destination")
+        @com.aliyun.core.annotation.NameInMap("Destination")
         private String destination;
 
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private Integer index;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("Originator")
+        @com.aliyun.core.annotation.NameInMap("Originator")
         private String originator;
 
-        @NameInMap("ReleaseInitiator")
+        @com.aliyun.core.annotation.NameInMap("ReleaseInitiator")
         private String releaseInitiator;
 
-        @NameInMap("ReleaseReason")
+        @com.aliyun.core.annotation.NameInMap("ReleaseReason")
         private String releaseReason;
 
-        @NameInMap("SkillGroupId")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupId")
         private String skillGroupId;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
-        @NameInMap("UserExtension")
+        @com.aliyun.core.annotation.NameInMap("UserExtension")
         private String userExtension;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private ChannelContexts(Builder builder) {
@@ -472,20 +483,26 @@ public class PollUserStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PollUserStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>PollUserStatusResponseBody</p>
+     */
     public static class CallContext extends TeaModel {
-        @NameInMap("CallType")
+        @com.aliyun.core.annotation.NameInMap("CallType")
         private String callType;
 
-        @NameInMap("CallVariables")
+        @com.aliyun.core.annotation.NameInMap("CallVariables")
         private String callVariables;
 
-        @NameInMap("ChannelContexts")
-        private java.util.List < ChannelContexts> channelContexts;
+        @com.aliyun.core.annotation.NameInMap("ChannelContexts")
+        private java.util.List<ChannelContexts> channelContexts;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
         private CallContext(Builder builder) {
@@ -521,7 +538,7 @@ public class PollUserStatusResponseBody extends TeaModel {
         /**
          * @return channelContexts
          */
-        public java.util.List < ChannelContexts> getChannelContexts() {
+        public java.util.List<ChannelContexts> getChannelContexts() {
             return this.channelContexts;
         }
 
@@ -542,7 +559,7 @@ public class PollUserStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String callType; 
             private String callVariables; 
-            private java.util.List < ChannelContexts> channelContexts; 
+            private java.util.List<ChannelContexts> channelContexts; 
             private String instanceId; 
             private String jobId; 
 
@@ -565,7 +582,7 @@ public class PollUserStatusResponseBody extends TeaModel {
             /**
              * ChannelContexts.
              */
-            public Builder channelContexts(java.util.List < ChannelContexts> channelContexts) {
+            public Builder channelContexts(java.util.List<ChannelContexts> channelContexts) {
                 this.channelContexts = channelContexts;
                 return this;
             }
@@ -593,26 +610,32 @@ public class PollUserStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PollUserStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>PollUserStatusResponseBody</p>
+     */
     public static class Members extends TeaModel {
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private Integer index;
 
-        @NameInMap("ReleaseInitiator")
+        @com.aliyun.core.annotation.NameInMap("ReleaseInitiator")
         private String releaseInitiator;
 
-        @NameInMap("ReleaseReason")
+        @com.aliyun.core.annotation.NameInMap("ReleaseReason")
         private String releaseReason;
 
-        @NameInMap("SkillGroupId")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupId")
         private String skillGroupId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserType")
+        @com.aliyun.core.annotation.NameInMap("UserType")
         private String userType;
 
         private Members(Builder builder) {
@@ -754,21 +777,27 @@ public class PollUserStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PollUserStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>PollUserStatusResponseBody</p>
+     */
     public static class ChatContexts extends TeaModel {
-        @NameInMap("CallVariables")
+        @com.aliyun.core.annotation.NameInMap("CallVariables")
         private String callVariables;
 
-        @NameInMap("ChatType")
+        @com.aliyun.core.annotation.NameInMap("ChatType")
         private String chatType;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("Members")
-        private java.util.List < Members> members;
+        @com.aliyun.core.annotation.NameInMap("Members")
+        private java.util.List<Members> members;
 
         private ChatContexts(Builder builder) {
             this.callVariables = builder.callVariables;
@@ -817,7 +846,7 @@ public class PollUserStatusResponseBody extends TeaModel {
         /**
          * @return members
          */
-        public java.util.List < Members> getMembers() {
+        public java.util.List<Members> getMembers() {
             return this.members;
         }
 
@@ -826,7 +855,7 @@ public class PollUserStatusResponseBody extends TeaModel {
             private String chatType; 
             private String instanceId; 
             private String jobId; 
-            private java.util.List < Members> members; 
+            private java.util.List<Members> members; 
 
             /**
              * CallVariables.
@@ -863,7 +892,7 @@ public class PollUserStatusResponseBody extends TeaModel {
             /**
              * Members.
              */
-            public Builder members(java.util.List < Members> members) {
+            public Builder members(java.util.List<Members> members) {
                 this.members = members;
                 return this;
             }
@@ -875,14 +904,20 @@ public class PollUserStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PollUserStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>PollUserStatusResponseBody</p>
+     */
     public static class ParallelJobList extends TeaModel {
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
         private ParallelJobList(Builder builder) {
@@ -956,47 +991,53 @@ public class PollUserStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PollUserStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>PollUserStatusResponseBody</p>
+     */
     public static class UserContext extends TeaModel {
-        @NameInMap("BreakCode")
+        @com.aliyun.core.annotation.NameInMap("BreakCode")
         private String breakCode;
 
-        @NameInMap("DeviceId")
+        @com.aliyun.core.annotation.NameInMap("DeviceId")
         private String deviceId;
 
-        @NameInMap("Extension")
+        @com.aliyun.core.annotation.NameInMap("Extension")
         private String extension;
 
-        @NameInMap("Heartbeat")
+        @com.aliyun.core.annotation.NameInMap("Heartbeat")
         private Long heartbeat;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("Mobile")
+        @com.aliyun.core.annotation.NameInMap("Mobile")
         private String mobile;
 
-        @NameInMap("OutboundScenario")
+        @com.aliyun.core.annotation.NameInMap("OutboundScenario")
         private Boolean outboundScenario;
 
-        @NameInMap("ParallelJobList")
-        private java.util.List < ParallelJobList> parallelJobList;
+        @com.aliyun.core.annotation.NameInMap("ParallelJobList")
+        private java.util.List<ParallelJobList> parallelJobList;
 
-        @NameInMap("Reserved")
+        @com.aliyun.core.annotation.NameInMap("Reserved")
         private Long reserved;
 
-        @NameInMap("SignedSkillGroupIdList")
-        private java.util.List < String > signedSkillGroupIdList;
+        @com.aliyun.core.annotation.NameInMap("SignedSkillGroupIdList")
+        private java.util.List<String> signedSkillGroupIdList;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserState")
+        @com.aliyun.core.annotation.NameInMap("UserState")
         private String userState;
 
-        @NameInMap("WorkMode")
+        @com.aliyun.core.annotation.NameInMap("WorkMode")
         private String workMode;
 
         private UserContext(Builder builder) {
@@ -1083,7 +1124,7 @@ public class PollUserStatusResponseBody extends TeaModel {
         /**
          * @return parallelJobList
          */
-        public java.util.List < ParallelJobList> getParallelJobList() {
+        public java.util.List<ParallelJobList> getParallelJobList() {
             return this.parallelJobList;
         }
 
@@ -1097,7 +1138,7 @@ public class PollUserStatusResponseBody extends TeaModel {
         /**
          * @return signedSkillGroupIdList
          */
-        public java.util.List < String > getSignedSkillGroupIdList() {
+        public java.util.List<String> getSignedSkillGroupIdList() {
             return this.signedSkillGroupIdList;
         }
 
@@ -1131,9 +1172,9 @@ public class PollUserStatusResponseBody extends TeaModel {
             private String jobId; 
             private String mobile; 
             private Boolean outboundScenario; 
-            private java.util.List < ParallelJobList> parallelJobList; 
+            private java.util.List<ParallelJobList> parallelJobList; 
             private Long reserved; 
-            private java.util.List < String > signedSkillGroupIdList; 
+            private java.util.List<String> signedSkillGroupIdList; 
             private String userId; 
             private String userState; 
             private String workMode; 
@@ -1205,7 +1246,7 @@ public class PollUserStatusResponseBody extends TeaModel {
             /**
              * ParallelJobList.
              */
-            public Builder parallelJobList(java.util.List < ParallelJobList> parallelJobList) {
+            public Builder parallelJobList(java.util.List<ParallelJobList> parallelJobList) {
                 this.parallelJobList = parallelJobList;
                 return this;
             }
@@ -1221,7 +1262,7 @@ public class PollUserStatusResponseBody extends TeaModel {
             /**
              * SignedSkillGroupIdList.
              */
-            public Builder signedSkillGroupIdList(java.util.List < String > signedSkillGroupIdList) {
+            public Builder signedSkillGroupIdList(java.util.List<String> signedSkillGroupIdList) {
                 this.signedSkillGroupIdList = signedSkillGroupIdList;
                 return this;
             }
@@ -1257,17 +1298,23 @@ public class PollUserStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PollUserStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>PollUserStatusResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CallContext")
+        @com.aliyun.core.annotation.NameInMap("CallContext")
         private CallContext callContext;
 
-        @NameInMap("ChatContexts")
-        private java.util.List < ChatContexts> chatContexts;
+        @com.aliyun.core.annotation.NameInMap("ChatContexts")
+        private java.util.List<ChatContexts> chatContexts;
 
-        @NameInMap("ContextId")
+        @com.aliyun.core.annotation.NameInMap("ContextId")
         private Long contextId;
 
-        @NameInMap("UserContext")
+        @com.aliyun.core.annotation.NameInMap("UserContext")
         private UserContext userContext;
 
         private Data(Builder builder) {
@@ -1295,7 +1342,7 @@ public class PollUserStatusResponseBody extends TeaModel {
         /**
          * @return chatContexts
          */
-        public java.util.List < ChatContexts> getChatContexts() {
+        public java.util.List<ChatContexts> getChatContexts() {
             return this.chatContexts;
         }
 
@@ -1315,7 +1362,7 @@ public class PollUserStatusResponseBody extends TeaModel {
 
         public static final class Builder {
             private CallContext callContext; 
-            private java.util.List < ChatContexts> chatContexts; 
+            private java.util.List<ChatContexts> chatContexts; 
             private Long contextId; 
             private UserContext userContext; 
 
@@ -1330,7 +1377,7 @@ public class PollUserStatusResponseBody extends TeaModel {
             /**
              * ChatContexts.
              */
-            public Builder chatContexts(java.util.List < ChatContexts> chatContexts) {
+            public Builder chatContexts(java.util.List<ChatContexts> chatContexts) {
                 this.chatContexts = chatContexts;
                 return this;
             }

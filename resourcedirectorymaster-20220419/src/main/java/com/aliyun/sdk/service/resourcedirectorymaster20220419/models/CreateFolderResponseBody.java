@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFolderResponseBody} extends {@link TeaModel}
  *
  * <p>CreateFolderResponseBody</p>
  */
 public class CreateFolderResponseBody extends TeaModel {
-    @NameInMap("Folder")
+    @com.aliyun.core.annotation.NameInMap("Folder")
     private Folder folder;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateFolderResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class CreateFolderResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the folder.
+         * <p>The information about the folder.</p>
          */
         public Builder folder(Folder folder) {
             this.folder = folder;
@@ -58,7 +63,10 @@ public class CreateFolderResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C2CBCA30-C8DD-423E-B4AD-4FB694C9180C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,17 +79,23 @@ public class CreateFolderResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateFolderResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateFolderResponseBody</p>
+     */
     public static class Folder extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("FolderId")
+        @com.aliyun.core.annotation.NameInMap("FolderId")
         private String folderId;
 
-        @NameInMap("FolderName")
+        @com.aliyun.core.annotation.NameInMap("FolderName")
         private String folderName;
 
-        @NameInMap("ParentFolderId")
+        @com.aliyun.core.annotation.NameInMap("ParentFolderId")
         private String parentFolderId;
 
         private Folder(Builder builder) {
@@ -134,7 +148,10 @@ public class CreateFolderResponseBody extends TeaModel {
             private String parentFolderId; 
 
             /**
-             * The time when the folder was created.
+             * <p>The time when the folder was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-02-19T09:34:50.757Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -142,7 +159,10 @@ public class CreateFolderResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the folder.
+             * <p>The ID of the folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fd-u8B321****</p>
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -150,7 +170,10 @@ public class CreateFolderResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the folder.
+             * <p>The name of the folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rdFolder</p>
              */
             public Builder folderName(String folderName) {
                 this.folderName = folderName;
@@ -158,7 +181,10 @@ public class CreateFolderResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the parent folder.
+             * <p>The ID of the parent folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-b1****</p>
              */
             public Builder parentFolderId(String parentFolderId) {
                 this.parentFolderId = parentFolderId;

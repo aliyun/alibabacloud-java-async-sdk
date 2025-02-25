@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListServicesResponseBody</p>
  */
 public class ListServicesResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private java.util.List < Data> data;
 
-    @NameInMap("pageNumber")
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Long pageNumber;
 
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Long pageSize;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("totalCount")
+    @com.aliyun.core.annotation.NameInMap("totalCount")
     private Long totalCount;
 
     private ListServicesResponseBody(Builder builder) {
@@ -132,28 +131,28 @@ public class ListServicesResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("escalationPlanId")
+        @com.aliyun.core.annotation.NameInMap("escalationPlanId")
         private Long escalationPlanId;
 
-        @NameInMap("escalationPlanName")
+        @com.aliyun.core.annotation.NameInMap("escalationPlanName")
         private String escalationPlanName;
 
-        @NameInMap("isValid")
+        @com.aliyun.core.annotation.NameInMap("isValid")
         private Integer isValid;
 
-        @NameInMap("serviceDescription")
+        @com.aliyun.core.annotation.NameInMap("serviceDescription")
         private String serviceDescription;
 
-        @NameInMap("serviceGroupIdList")
+        @com.aliyun.core.annotation.NameInMap("serviceGroupIdList")
         private java.util.List < Long > serviceGroupIdList;
 
-        @NameInMap("serviceId")
+        @com.aliyun.core.annotation.NameInMap("serviceId")
         private Long serviceId;
 
-        @NameInMap("serviceName")
+        @com.aliyun.core.annotation.NameInMap("serviceName")
         private String serviceName;
 
-        @NameInMap("updateTime")
+        @com.aliyun.core.annotation.NameInMap("updateTime")
         private String updateTime;
 
         private Data(Builder builder) {

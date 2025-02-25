@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCloudAssetCriteriaResponseBody} extends {@link TeaModel}
  *
  * <p>GetCloudAssetCriteriaResponseBody</p>
  */
 public class GetCloudAssetCriteriaResponseBody extends TeaModel {
-    @NameInMap("CriteriaList")
-    private java.util.List < CriteriaList> criteriaList;
+    @com.aliyun.core.annotation.NameInMap("CriteriaList")
+    private java.util.List<CriteriaList> criteriaList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetCloudAssetCriteriaResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class GetCloudAssetCriteriaResponseBody extends TeaModel {
     /**
      * @return criteriaList
      */
-    public java.util.List < CriteriaList> getCriteriaList() {
+    public java.util.List<CriteriaList> getCriteriaList() {
         return this.criteriaList;
     }
 
@@ -46,19 +51,22 @@ public class GetCloudAssetCriteriaResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CriteriaList> criteriaList; 
+        private java.util.List<CriteriaList> criteriaList; 
         private String requestId; 
 
         /**
-         * An array consisting of the information about the filter conditions that are used to search for cloud assets.
+         * <p>An array consisting of the information about the filter conditions that are used to search for cloud assets.</p>
          */
-        public Builder criteriaList(java.util.List < CriteriaList> criteriaList) {
+        public Builder criteriaList(java.util.List<CriteriaList> criteriaList) {
             this.criteriaList = criteriaList;
             return this;
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24A20733-10A0-4AF6-BE6B-E3322413BB68</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,17 +79,23 @@ public class GetCloudAssetCriteriaResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCloudAssetCriteriaResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCloudAssetCriteriaResponseBody</p>
+     */
     public static class CriteriaList extends TeaModel {
-        @NameInMap("MultiValues")
+        @com.aliyun.core.annotation.NameInMap("MultiValues")
         private String multiValues;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Values")
+        @com.aliyun.core.annotation.NameInMap("Values")
         private String values;
 
         private CriteriaList(Builder builder) {
@@ -134,11 +148,14 @@ public class GetCloudAssetCriteriaResponseBody extends TeaModel {
             private String values; 
 
             /**
-             * The structured attribute values of the assets that match the keyword. The value of this parameter is in the JSON format and contains the following fields:
-             * <p>
+             * <p>The structured attribute values of the assets that match the keyword. The value of this parameter is in the JSON format and contains the following fields:</p>
+             * <ul>
+             * <li><strong>vendor</strong>: providers</li>
+             * <li><strong>regionIds</strong>: IDs of supported regions</li>
+             * </ul>
              * 
-             * *   **vendor**: providers
-             * *   **regionIds**: IDs of supported regions
+             * <strong>example:</strong>
+             * <p>[{&quot;vendor&quot;:0,&quot;regionIds&quot;:{&quot;default&quot;:[&quot;ap-southeast-1&quot;,&quot;ap-northeast-2&quot;,&quot;ap-southeast-3&quot;,&quot;ap-southeast-5&quot;,&quot;ap-southeast-7&quot;,&quot;me-central-1&quot;]}},{&quot;vendor&quot;:1,&quot;regionIds&quot;:{&quot;default&quot;:[&quot;outside-of-aliyun&quot;]}}]</p>
              */
             public Builder multiValues(String multiValues) {
                 this.multiValues = multiValues;
@@ -146,14 +163,17 @@ public class GetCloudAssetCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the filter condition. Valid values:
-             * <p>
+             * <p>The name of the filter condition. Valid values:</p>
+             * <ul>
+             * <li><strong>instanceId</strong>: the ID of the instance</li>
+             * <li><strong>instanceName</strong>: the name of an instance</li>
+             * <li><strong>internetIp</strong>: the public IP address</li>
+             * <li><strong>riskStatus</strong>: the risk status</li>
+             * <li><strong>vendorRegionId</strong>: the region ID by service provider</li>
+             * </ul>
              * 
-             * *   **instanceId**: the ID of the instance
-             * *   **instanceName**: the name of an instance
-             * *   **internetIp**: the public IP address
-             * *   **riskStatus**: the risk status
-             * *   **vendorRegionId**: the region ID by service provider
+             * <strong>example:</strong>
+             * <p>instanceId</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -161,11 +181,14 @@ public class GetCloudAssetCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the filter condition. Valid values:
-             * <p>
+             * <p>The type of the filter condition. Valid values:</p>
+             * <ul>
+             * <li><strong>input</strong>: The filter condition needs to be specified.</li>
+             * <li><strong>select</strong>: The filter condition is an option that can be selected from the drop-down list.</li>
+             * </ul>
              * 
-             * *   **input**: The filter condition needs to be specified.
-             * *   **select**: The filter condition is an option that can be selected from the drop-down list.
+             * <strong>example:</strong>
+             * <p>select</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -173,10 +196,13 @@ public class GetCloudAssetCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * The values of the search condition. This parameter is returned only if the value of **Type** is **select**.
-             * <p>
+             * <p>The values of the search condition. This parameter is returned only if the value of <strong>Type</strong> is <strong>select</strong>.</p>
+             * <blockquote>
+             * <p> If the value of <strong>Type</strong> is <strong>input</strong>, the value of this parameter is an empty string.</p>
+             * </blockquote>
              * 
-             * >  If the value of **Type** is **input**, the value of this parameter is an empty string.
+             * <strong>example:</strong>
+             * <p>fvt*</p>
              */
             public Builder values(String values) {
                 this.values = values;

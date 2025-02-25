@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDedicatedClusterInstanceListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDedicatedClusterInstanceListResponseBody</p>
  */
 public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
-    @NameInMap("Instances")
+    @com.aliyun.core.annotation.NameInMap("Instances")
     private java.util.List < Instances> instances;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDedicatedClusterInstanceListResponseBody(Builder builder) {
@@ -86,7 +86,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details of the instances.
+         * <p>Details of the instances.</p>
          */
         public Builder instances(java.util.List < Instances> instances) {
             this.instances = instances;
@@ -94,7 +94,10 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +105,10 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +116,10 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>712CCF2A-16BD-411B-93F7-E978BEF2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +127,10 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,29 +143,35 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDedicatedClusterInstanceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedClusterInstanceListResponseBody</p>
+     */
     public static class InstanceNodeList extends TeaModel {
-        @NameInMap("DedicatedHostName")
+        @com.aliyun.core.annotation.NameInMap("DedicatedHostName")
         private String dedicatedHostName;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Integer nodeId;
 
-        @NameInMap("NodeIp")
+        @com.aliyun.core.annotation.NameInMap("NodeIp")
         private String nodeIp;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private InstanceNodeList(Builder builder) {
@@ -242,7 +260,10 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The ID of the host in the dedicated cluster.
+             * <p>The ID of the host in the dedicated cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ch-bp13vf0y9gx3c****</p>
              */
             public Builder dedicatedHostName(String dedicatedHostName) {
                 this.dedicatedHostName = dedicatedHostName;
@@ -250,7 +271,10 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-bp1e7vl6ygf1yq****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -258,7 +282,10 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17921111</p>
              */
             public Builder nodeId(Integer nodeId) {
                 this.nodeId = nodeId;
@@ -266,7 +293,10 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the node.
+             * <p>The IP address of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.33.***</p>
              */
             public Builder nodeIp(String nodeIp) {
                 this.nodeIp = nodeIp;
@@ -274,12 +304,15 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The node type. Valid values:
-             * <p>
+             * <p>The node type. Valid values:</p>
+             * <ul>
+             * <li><strong>db</strong>: data node.</li>
+             * <li><strong>proxy</strong>: proxy node.</li>
+             * <li><strong>normal</strong>: regular node. This value is returned when the instance runs in the standard architecture.</li>
+             * </ul>
              * 
-             * *   **db**: data node.
-             * *   **proxy**: proxy node.
-             * *   **normal**: regular node. This value is returned when the instance runs in the standard architecture.
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -287,7 +320,10 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The port number that is used to connect to the node.
+             * <p>The port number that is used to connect to the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3001</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -295,11 +331,14 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The role of the node. Valid values:
-             * <p>
+             * <p>The role of the node. Valid values:</p>
+             * <ul>
+             * <li><strong>master</strong>: master node</li>
+             * <li><strong>slave</strong>: replica node</li>
+             * </ul>
              * 
-             * *   **master**: master node
-             * *   **slave**: replica node
+             * <strong>example:</strong>
+             * <p>master</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -307,7 +346,10 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID of the node.
+             * <p>The zone ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -321,77 +363,83 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDedicatedClusterInstanceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedClusterInstanceListResponseBody</p>
+     */
     public static class Instances extends TeaModel {
-        @NameInMap("BandWidth")
+        @com.aliyun.core.annotation.NameInMap("BandWidth")
         private Long bandWidth;
 
-        @NameInMap("CharacterType")
+        @com.aliyun.core.annotation.NameInMap("CharacterType")
         private String characterType;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("ConnectionDomain")
+        @com.aliyun.core.annotation.NameInMap("ConnectionDomain")
         private String connectionDomain;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CurrentBandWidth")
+        @com.aliyun.core.annotation.NameInMap("CurrentBandWidth")
         private Long currentBandWidth;
 
-        @NameInMap("CustomId")
+        @com.aliyun.core.annotation.NameInMap("CustomId")
         private String customId;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("EngineVersion")
+        @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private String engineVersion;
 
-        @NameInMap("InstanceClass")
+        @com.aliyun.core.annotation.NameInMap("InstanceClass")
         private String instanceClass;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InstanceNodeList")
+        @com.aliyun.core.annotation.NameInMap("InstanceNodeList")
         private java.util.List < InstanceNodeList> instanceNodeList;
 
-        @NameInMap("InstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("InstanceStatus")
         private String instanceStatus;
 
-        @NameInMap("MaintainEndTime")
+        @com.aliyun.core.annotation.NameInMap("MaintainEndTime")
         private String maintainEndTime;
 
-        @NameInMap("MaintainStartTime")
+        @com.aliyun.core.annotation.NameInMap("MaintainStartTime")
         private String maintainStartTime;
 
-        @NameInMap("ProxyCount")
+        @com.aliyun.core.annotation.NameInMap("ProxyCount")
         private Integer proxyCount;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ShardCount")
+        @com.aliyun.core.annotation.NameInMap("ShardCount")
         private Integer shardCount;
 
-        @NameInMap("StorageType")
+        @com.aliyun.core.annotation.NameInMap("StorageType")
         private String storageType;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VswitchId")
+        @com.aliyun.core.annotation.NameInMap("VswitchId")
         private String vswitchId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Instances(Builder builder) {
@@ -624,7 +672,10 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The default bandwidth of the instance. Unit: Mbit/s.
+             * <p>The default bandwidth of the instance. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24</p>
              */
             public Builder bandWidth(Long bandWidth) {
                 this.bandWidth = bandWidth;
@@ -632,11 +683,14 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The architecture of the instance. Valid values:
-             * <p>
+             * <p>The architecture of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>logic</strong>: cluster</li>
+             * <li><strong>normal</strong>: standard</li>
+             * </ul>
              * 
-             * *   **logic**: cluster
-             * *   **normal**: standard
+             * <strong>example:</strong>
+             * <p>logic</p>
              */
             public Builder characterType(String characterType) {
                 this.characterType = characterType;
@@ -644,7 +698,10 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the dedicated cluster.
+             * <p>The ID of the dedicated cluster to which the instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dhg-rx71fc5ndh9o****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -652,7 +709,10 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the dedicated cluster to which the instance belongs.
+             * <p>The name of the dedicated cluster to which the instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testname</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -660,7 +720,10 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The private endpoint of the instance.
+             * <p>The private endpoint of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-t4ncdi1dgi0ja8****.redis.hangzhou.rds.aliyuncs.com</p>
              */
             public Builder connectionDomain(String connectionDomain) {
                 this.connectionDomain = connectionDomain;
@@ -668,7 +731,10 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the instance was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-05-06T07:09:40Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -676,7 +742,10 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The current bandwidth of the instance, which consists of the default bandwidth and the additional bandwidth. Unit: Mbit/s.
+             * <p>The current bandwidth of the instance, which is the sum of the default bandwidth and any extra bandwidth that is purchased. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder currentBandWidth(Long currentBandWidth) {
                 this.currentBandWidth = currentBandWidth;
@@ -684,7 +753,10 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The custom ID that is used for instance internal maintenance.
+             * <p>An internal parameter used for the maintenance and management of instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4652****</p>
              */
             public Builder customId(String customId) {
                 this.customId = customId;
@@ -692,7 +764,10 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine of the instance. The return value is **Redis**.
+             * <p>The database engine. The return value is <strong>redis</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>redis</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -700,7 +775,10 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine version of the instance. The return value is **5.0**.
+             * <p>The database engine version of the instance. The return value is <strong>5.0</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.0</p>
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -708,7 +786,10 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the instance.
+             * <p>The instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>redis.cluster.sharding.common.ce</p>
              */
             public Builder instanceClass(String instanceClass) {
                 this.instanceClass = instanceClass;
@@ -716,7 +797,10 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-bp1e7vl6ygf1yq****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -724,7 +808,10 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testdb</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -732,7 +819,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the nodes.
+             * <p>The nodes.</p>
              */
             public Builder instanceNodeList(java.util.List < InstanceNodeList> instanceNodeList) {
                 this.instanceNodeList = instanceNodeList;
@@ -740,24 +827,27 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the instance. Valid values:
-             * <p>
+             * <p>The state of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal</strong>: The instance is normal.</li>
+             * <li><strong>Creating</strong>: The instance is being created.</li>
+             * <li><strong>Changing</strong>: The configurations of the instance are being changed.</li>
+             * <li><strong>Inactive</strong>: The instance is disabled.</li>
+             * <li><strong>Flushing</strong>: The instance is being released.</li>
+             * <li><strong>Released</strong>: The instance is released.</li>
+             * <li><strong>Transforming</strong>: The billing method of the instance is being changed.</li>
+             * <li><strong>Unavailable</strong>: The instance is unavailable.</li>
+             * <li><strong>Error</strong>: The instance failed to be created.</li>
+             * <li><strong>Migrating</strong>: The instance is being migrated.</li>
+             * <li><strong>BackupRecovering</strong>: The instance is being restored from a backup.</li>
+             * <li><strong>MinorVersionUpgrading</strong>: The minor version of the instance is being updated.</li>
+             * <li><strong>NetworkModifying</strong>: The network type of the instance is being changed.</li>
+             * <li><strong>SSLModifying</strong>: The SSL configurations of the instance are being changed.</li>
+             * <li><strong>MajorVersionUpgrading</strong>: The major version of the instance is being upgraded. The instance remains accessible during the upgrade.</li>
+             * </ul>
              * 
-             * *   **Normal**: The instance is normal.
-             * *   **Creating**: The instance is being created.
-             * *   **Changing**: The configurations of the instance are being changed.
-             * *   **Inactive**: The instance is disabled.
-             * *   **Flushing**: The instance is being released.
-             * *   **Released**: The instance is released.
-             * *   **Transforming**: The billing method of the instance is being changed.
-             * *   **Unavailable**: The instance is suspended.
-             * *   **Error**: The instance failed to be created.
-             * *   **Migrating**: The instance is being migrated.
-             * *   **BackupRecovering**: The instance is being restored from a backup.
-             * *   **MinorVersionUpgrading**: The minor version of the instance is being updated.
-             * *   **NetworkModifying**: The network type of the instance is being changed.
-             * *   **SSLModifying**: The SSL certificate of the instance is being changed.
-             * *   **MajorVersionUpgrading**: The major version of the instance is being upgraded. The instance remains accessible during the upgrade.
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder instanceStatus(String instanceStatus) {
                 this.instanceStatus = instanceStatus;
@@ -765,7 +855,10 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the maintenance window. The time is in the *HH:mm*Z format. The time is displayed in UTC.
+             * <p>The end time of the maintenance window. The time is in the <em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17:00Z</p>
              */
             public Builder maintainEndTime(String maintainEndTime) {
                 this.maintainEndTime = maintainEndTime;
@@ -773,7 +866,10 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the maintenance window. The time is in the *HH:mm*Z format. The time is displayed in UTC.
+             * <p>The start time of the maintenance window. The time is in the <em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16:00Z</p>
              */
             public Builder maintainStartTime(String maintainStartTime) {
                 this.maintainStartTime = maintainStartTime;
@@ -781,11 +877,18 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of proxy nodes.
-             * <p>
+             * <p>The number of proxy nodes.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p>If the return value is <strong>0</strong>, the proxy mode is disabled for the instance. If the return value is an integer greater than <strong>0</strong>, such as <strong>1</strong>, the proxy mode is enabled for the instance.</p>
+             * </li>
+             * <li><p>This parameter is returned only when the instance is a cluster instance. For more information about cluster instances, see <a href="https://help.aliyun.com/document_detail/52228.html">Cluster master-replica instances</a>.</p>
+             * </li>
+             * </ul>
              * 
-             * > *   If the return value is **0**, the proxy mode is disabled. If the return value is an integer that is greater than **0**, the proxy mode is enabled. This integer indicates the number of proxy nodes in the instance. For example, a value of **1** indicates that the instance has one proxy node.
-             * > *   This parameter is returned only when the instance is a [cluster instance](~~52228~~).
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder proxyCount(Integer proxyCount) {
                 this.proxyCount = proxyCount;
@@ -793,7 +896,10 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the instance.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -801,10 +907,13 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of shards.
-             * <p>
+             * <p>The number of shards.</p>
+             * <blockquote>
+             * <p> This parameter is returned only when the instance is a cluster instance. For more information about cluster instances, see <a href="https://help.aliyun.com/document_detail/52228.html">Cluster master-replica instances</a>.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only when the ApsaraDB for Redis instance is a [cluster instance](~~52228~~).
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder shardCount(Integer shardCount) {
                 this.shardCount = shardCount;
@@ -812,7 +921,10 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The storage type of the instance. The return value is LOCAL_SSD, which indicates [enhanced SSDs (ESSDs)](~~122389~~).
+             * <p>The storage type of the instance. The return value is LOCAL_SSD, which indicates <a href="https://help.aliyun.com/document_detail/122389.html">enhanced SSDs (ESSDs)</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LOCAL_SSD</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -820,7 +932,10 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-t4n2clc70t3hqwsrr****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -828,7 +943,10 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-t4nvrca24dczppq44****</p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -836,7 +954,10 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID of the instance.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-e</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

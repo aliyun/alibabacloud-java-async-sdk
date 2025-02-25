@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Features} extends {@link TeaModel}
  *
  * <p>Features</p>
  */
 public class Features extends TeaModel {
-    @NameInMap("Quota")
+    @com.aliyun.core.annotation.NameInMap("Quota")
     private Quota quota;
 
     private Features(Builder builder) {
@@ -51,8 +56,14 @@ public class Features extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link Features} extends {@link TeaModel}
+     *
+     * <p>Features</p>
+     */
     public static class Quota extends TeaModel {
-        @NameInMap("IsEnabled")
+        @com.aliyun.core.annotation.NameInMap("IsEnabled")
         private Boolean isEnabled;
 
         private Quota(Builder builder) {

@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelPricePullRequest} extends {@link RequestModel}
  *
  * <p>HotelPricePullRequest</p>
  */
 public class HotelPricePullRequest extends Request {
-    @Query
-    @NameInMap("btrip_user_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("btrip_user_id")
     private String btripUserId;
 
-    @Query
-    @NameInMap("check_in")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("check_in")
     private String checkIn;
 
-    @Query
-    @NameInMap("check_out")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("check_out")
     private String checkOut;
 
-    @Query
-    @NameInMap("city_code")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("city_code")
     private Integer cityCode;
 
-    @Query
-    @NameInMap("hotel_ids")
-    private java.util.List < String > hotelIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("hotel_ids")
+    private java.util.List<String> hotelIds;
 
-    @Query
-    @NameInMap("payment_type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("payment_type")
     private Integer paymentType;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private HotelPricePullRequest(Builder builder) {
@@ -95,7 +100,7 @@ public class HotelPricePullRequest extends Request {
     /**
      * @return hotelIds
      */
-    public java.util.List < String > getHotelIds() {
+    public java.util.List<String> getHotelIds() {
         return this.hotelIds;
     }
 
@@ -118,7 +123,7 @@ public class HotelPricePullRequest extends Request {
         private String checkIn; 
         private String checkOut; 
         private Integer cityCode; 
-        private java.util.List < String > hotelIds; 
+        private java.util.List<String> hotelIds; 
         private Integer paymentType; 
         private String xAcsBtripCorpToken; 
 
@@ -176,7 +181,7 @@ public class HotelPricePullRequest extends Request {
         /**
          * hotel_ids.
          */
-        public Builder hotelIds(java.util.List < String > hotelIds) {
+        public Builder hotelIds(java.util.List<String> hotelIds) {
             String hotelIdsShrink = shrink(hotelIds, "hotel_ids", "json");
             this.putQueryParameter("hotel_ids", hotelIdsShrink);
             this.hotelIds = hotelIds;

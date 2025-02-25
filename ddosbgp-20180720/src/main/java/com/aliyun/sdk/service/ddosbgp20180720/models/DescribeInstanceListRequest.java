@@ -1,69 +1,69 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceListRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceListRequest</p>
  */
 public class DescribeInstanceListRequest extends Request {
-    @Query
-    @NameInMap("InstanceIdList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIdList")
     private String instanceIdList;
 
-    @Query
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
-    @Query
-    @NameInMap("InstanceTypeList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceTypeList")
     private java.util.List < String > instanceTypeList;
 
-    @Query
-    @NameInMap("Ip")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ip")
     private String ip;
 
-    @Query
-    @NameInMap("IpVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpVersion")
     private String ipVersion;
 
-    @Query
-    @NameInMap("Orderby")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Orderby")
     private String orderby;
 
-    @Query
-    @NameInMap("Orderdire")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Orderdire")
     private String orderdire;
 
-    @Query
-    @NameInMap("PageNo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNo;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Remark")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
     private DescribeInstanceListRequest(Builder builder) {
@@ -224,7 +224,10 @@ public class DescribeInstanceListRequest extends Request {
         } 
 
         /**
-         * The IDs of the Anti-DDoS Origin instances to query. Specify the value is in the `["<Instance ID 1>","<Instance ID 2>",……]` format.
+         * <p>The IDs of the Anti-DDoS Origin instances to query. Specify the value is in the <code>[&quot;&lt;Instance ID 1&gt;&quot;,&quot;&lt;Instance ID 2&gt;&quot;,……]</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;ddosbgp-cn-oew1pjrk****&quot;]</p>
          */
         public Builder instanceIdList(String instanceIdList) {
             this.putQueryParameter("InstanceIdList", instanceIdList);
@@ -233,11 +236,14 @@ public class DescribeInstanceListRequest extends Request {
         }
 
         /**
-         * The mitigation plan of the Anti-DDoS Origin instance to query. Valid values:
-         * <p>
+         * <p>The mitigation plan of the Anti-DDoS Origin instance to query. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: the Professional mitigation plan</li>
+         * <li><strong>1</strong>: the Enterprise mitigation plan</li>
+         * </ul>
          * 
-         * *   **0**: the Professional mitigation plan
-         * *   **1**: the Enterprise mitigation plan
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -246,7 +252,7 @@ public class DescribeInstanceListRequest extends Request {
         }
 
         /**
-         * InstanceTypeList.
+         * <p>The mitigation plan of the Anti-DDoS Origin instance.</p>
          */
         public Builder instanceTypeList(java.util.List < String > instanceTypeList) {
             this.putQueryParameter("InstanceTypeList", instanceTypeList);
@@ -255,7 +261,10 @@ public class DescribeInstanceListRequest extends Request {
         }
 
         /**
-         * The IP address of the object that is protected by the Anti-DDoS Origin instance to query.
+         * <p>The IP address of the object that is protected by the Anti-DDoS Origin instance to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.89.XX.XX</p>
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -264,11 +273,14 @@ public class DescribeInstanceListRequest extends Request {
         }
 
         /**
-         * The protocol type of the IP address asset that is protected by the Anti-DDoS Origin instance to query. Valid values:
-         * <p>
+         * <p>The protocol type of the IP address asset that is protected by the Anti-DDoS Origin instance to query. Valid values:</p>
+         * <ul>
+         * <li><strong>Ipv4</strong>: IPv4</li>
+         * <li><strong>Ipv6</strong>: IPv6</li>
+         * </ul>
          * 
-         * *   **Ipv4**: IPv4
-         * *   **Ipv6**: IPv6
+         * <strong>example:</strong>
+         * <p>IPv4</p>
          */
         public Builder ipVersion(String ipVersion) {
             this.putQueryParameter("IpVersion", ipVersion);
@@ -277,10 +289,11 @@ public class DescribeInstanceListRequest extends Request {
         }
 
         /**
-         * The field that is used to sort the Anti-DDoS Origin instances. Set the value to **expireTime**, which indicates that the instances are sorted based on the expiration time.
-         * <p>
+         * <p>The field that is used to sort the Anti-DDoS Origin instances. Set the value to <strong>expireTime</strong>, which indicates that the instances are sorted based on the expiration time.</p>
+         * <p>You can set the <strong>Orderdire</strong> parameter to specify the sorting method.</p>
          * 
-         * You can set the **Orderdire** parameter to specify the sorting method.
+         * <strong>example:</strong>
+         * <p>expireTime</p>
          */
         public Builder orderby(String orderby) {
             this.putQueryParameter("Orderby", orderby);
@@ -289,11 +302,14 @@ public class DescribeInstanceListRequest extends Request {
         }
 
         /**
-         * The sorting method. Valid values:
-         * <p>
+         * <p>The sorting method. Valid values:</p>
+         * <ul>
+         * <li><strong>desc</strong>: the descending order. This is the default value.</li>
+         * <li><strong>asc</strong>: the ascending order.</li>
+         * </ul>
          * 
-         * *   **desc**: the descending order. This is the default value.
-         * *   **asc**: the ascending order.
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder orderdire(String orderdire) {
             this.putQueryParameter("Orderdire", orderdire);
@@ -302,7 +318,11 @@ public class DescribeInstanceListRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -311,7 +331,11 @@ public class DescribeInstanceListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -320,10 +344,13 @@ public class DescribeInstanceListRequest extends Request {
         }
 
         /**
-         * The ID of the region where the Anti-DDoS Origin instance to query resides.
-         * <p>
+         * <p>The ID of the region where the Anti-DDoS Origin instance to query resides.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -332,7 +359,10 @@ public class DescribeInstanceListRequest extends Request {
         }
 
         /**
-         * The remarks of the Anti-DDoS Origin instance to query. Fuzzy match is supported.
+         * <p>The remarks of the Anti-DDoS Origin instance to query. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -341,10 +371,11 @@ public class DescribeInstanceListRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.
-         * <p>
+         * <p>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.</p>
+         * <p>If you do not specify this parameter, the instance belongs to the default resource group.</p>
          * 
-         * If you do not specify this parameter, the instance belongs to the default resource group.
+         * <strong>example:</strong>
+         * <p>rg-acfm2pz25js****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -353,7 +384,7 @@ public class DescribeInstanceListRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags that are added to the Anti-DDoS Origin instance.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -368,11 +399,17 @@ public class DescribeInstanceListRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceListRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceListRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -407,7 +444,10 @@ public class DescribeInstanceListRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag that is added to the Anti-DDoS Origin instance to query.
+             * <p>The key of the tag that is added to the Anti-DDoS Origin instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -415,7 +455,10 @@ public class DescribeInstanceListRequest extends Request {
             }
 
             /**
-             * The value of the tag that is added to the Anti-DDoS Origin instance to query.
+             * <p>The value of the tag that is added to the Anti-DDoS Origin instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-value</p>
              */
             public Builder value(String value) {
                 this.value = value;

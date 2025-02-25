@@ -1,164 +1,187 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateReadOnlyDBInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreateReadOnlyDBInstanceRequest</p>
  */
 public class CreateReadOnlyDBInstanceRequest extends Request {
-    @Query
-    @NameInMap("AutoPay")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoCreateProxy")
+    private Boolean autoCreateProxy;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
     private Boolean autoPay;
 
-    @Query
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private String autoRenew;
 
-    @Query
-    @NameInMap("BpeEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoUseCoupon")
+    private Boolean autoUseCoupon;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BpeEnabled")
     private String bpeEnabled;
 
-    @Query
-    @NameInMap("BurstingEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BurstingEnabled")
     private Boolean burstingEnabled;
 
-    @Query
-    @NameInMap("Category")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Category")
     private String category;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DBInstanceClass")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceClass")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceClass;
 
-    @Query
-    @NameInMap("DBInstanceDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceDescription")
     private String DBInstanceDescription;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("DBInstanceStorage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceStorage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer DBInstanceStorage;
 
-    @Query
-    @NameInMap("DBInstanceStorageType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceStorageType")
     private String DBInstanceStorageType;
 
-    @Query
-    @NameInMap("DedicatedHostGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DedicatedHostGroupId")
     private String dedicatedHostGroupId;
 
-    @Query
-    @NameInMap("DeletionProtection")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeletionProtection")
     private Boolean deletionProtection;
 
-    @Query
-    @NameInMap("EngineVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String engineVersion;
 
-    @Query
-    @NameInMap("GdnInstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GdnInstanceName")
     private String gdnInstanceName;
 
-    @Query
-    @NameInMap("InstanceNetworkType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceNetworkType")
     private String instanceNetworkType;
 
-    @Query
-    @NameInMap("InstructionSetArch")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstructionSetArch")
     private String instructionSetArch;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IoAccelerationEnabled")
+    private String ioAccelerationEnabled;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PayType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PayType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String payType;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private String period;
 
-    @Query
-    @NameInMap("Port")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Port")
     private String port;
 
-    @Query
-    @NameInMap("PrivateIpAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
     private String privateIpAddress;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionCode")
+    private String promotionCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TargetDedicatedHostIdForMaster")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetDedicatedHostIdForMaster")
     private String targetDedicatedHostIdForMaster;
 
-    @Query
-    @NameInMap("TddlBizType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TddlBizType")
     private String tddlBizType;
 
-    @Query
-    @NameInMap("TddlRegionConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TddlRegionConfig")
     private String tddlRegionConfig;
 
-    @Query
-    @NameInMap("UsedTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UsedTime")
     private String usedTime;
 
-    @Query
-    @NameInMap("VPCId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VPCId")
     private String VPCId;
 
-    @Query
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @Query
-    @NameInMap("ZoneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String zoneId;
 
     private CreateReadOnlyDBInstanceRequest(Builder builder) {
         super(builder);
+        this.autoCreateProxy = builder.autoCreateProxy;
         this.autoPay = builder.autoPay;
         this.autoRenew = builder.autoRenew;
+        this.autoUseCoupon = builder.autoUseCoupon;
         this.bpeEnabled = builder.bpeEnabled;
         this.burstingEnabled = builder.burstingEnabled;
         this.category = builder.category;
@@ -174,12 +197,14 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         this.gdnInstanceName = builder.gdnInstanceName;
         this.instanceNetworkType = builder.instanceNetworkType;
         this.instructionSetArch = builder.instructionSetArch;
+        this.ioAccelerationEnabled = builder.ioAccelerationEnabled;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.payType = builder.payType;
         this.period = builder.period;
         this.port = builder.port;
         this.privateIpAddress = builder.privateIpAddress;
+        this.promotionCode = builder.promotionCode;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -207,6 +232,13 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
     }
 
     /**
+     * @return autoCreateProxy
+     */
+    public Boolean getAutoCreateProxy() {
+        return this.autoCreateProxy;
+    }
+
+    /**
      * @return autoPay
      */
     public Boolean getAutoPay() {
@@ -218,6 +250,13 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
      */
     public String getAutoRenew() {
         return this.autoRenew;
+    }
+
+    /**
+     * @return autoUseCoupon
+     */
+    public Boolean getAutoUseCoupon() {
+        return this.autoUseCoupon;
     }
 
     /**
@@ -326,6 +365,13 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
     }
 
     /**
+     * @return ioAccelerationEnabled
+     */
+    public String getIoAccelerationEnabled() {
+        return this.ioAccelerationEnabled;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -365,6 +411,13 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
      */
     public String getPrivateIpAddress() {
         return this.privateIpAddress;
+    }
+
+    /**
+     * @return promotionCode
+     */
+    public String getPromotionCode() {
+        return this.promotionCode;
     }
 
     /**
@@ -445,8 +498,10 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateReadOnlyDBInstanceRequest, Builder> {
+        private Boolean autoCreateProxy; 
         private Boolean autoPay; 
         private String autoRenew; 
+        private Boolean autoUseCoupon; 
         private String bpeEnabled; 
         private Boolean burstingEnabled; 
         private String category; 
@@ -462,12 +517,14 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         private String gdnInstanceName; 
         private String instanceNetworkType; 
         private String instructionSetArch; 
+        private String ioAccelerationEnabled; 
         private String ownerAccount; 
         private Long ownerId; 
         private String payType; 
         private String period; 
         private String port; 
         private String privateIpAddress; 
+        private String promotionCode; 
         private String regionId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
@@ -486,8 +543,10 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
 
         private Builder(CreateReadOnlyDBInstanceRequest request) {
             super(request);
+            this.autoCreateProxy = request.autoCreateProxy;
             this.autoPay = request.autoPay;
             this.autoRenew = request.autoRenew;
+            this.autoUseCoupon = request.autoUseCoupon;
             this.bpeEnabled = request.bpeEnabled;
             this.burstingEnabled = request.burstingEnabled;
             this.category = request.category;
@@ -503,12 +562,14 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
             this.gdnInstanceName = request.gdnInstanceName;
             this.instanceNetworkType = request.instanceNetworkType;
             this.instructionSetArch = request.instructionSetArch;
+            this.ioAccelerationEnabled = request.ioAccelerationEnabled;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.payType = request.payType;
             this.period = request.period;
             this.port = request.port;
             this.privateIpAddress = request.privateIpAddress;
+            this.promotionCode = request.promotionCode;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -523,13 +584,33 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable the automatic payment feature. Valid values:
-         * <p>
+         * <p>Specifies whether to automatically create database proxies. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: automatically creates database proxies. By default, general-purpose database proxies are created.</li>
+         * <li><strong>false</strong>: does not automatically create database proxies.</li>
+         * </ul>
          * 
-         * 1.  **true**: enables the feature. Make sure that your account balance is sufficient.
-         * 2.  **false**: disables the feature. An unpaid order is generated.
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder autoCreateProxy(Boolean autoCreateProxy) {
+            this.putQueryParameter("AutoCreateProxy", autoCreateProxy);
+            this.autoCreateProxy = autoCreateProxy;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to automatically complete the payment. Valid values:</p>
+         * <ol>
+         * <li><strong>true</strong>: automatically completes the payment. Make sure that your account balance is sufficient.</li>
+         * <li><strong>false</strong>: does not automatically complete the payment. An unpaid order is generated.</li>
+         * </ol>
+         * <blockquote>
+         * <p> Default value: true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.</p>
+         * </blockquote>
          * 
-         * >  Default value: true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -538,14 +619,20 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the auto-renewal feature for the read-only instance. If you set the PayType parameter to Prepaid, you must also specify this parameter. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the auto-renewal feature for the read-only instance. If you set the PayType parameter to Prepaid, you must also specify this parameter. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enables the feature.</li>
+         * <li><strong>false</strong>: disables the feature.</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>If you set the Period parameter to Month, the auto-renewal cycle is one month.</li>
+         * <li>If you set the Period parameter to Year, the auto-renewal cycle is one year.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * *   **true**: enables the feature.
-         * *   **false**: disables the feature.
-         * 
-         * > * If you set the Period parameter to Month, the auto-renewal cycle is one month.
-         * > * If you set the Period parameter to Year, the auto-renewal cycle is one year.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(String autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -554,7 +641,26 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * A reserved parameter. You do not need to specify this parameter.
+         * <p>Specifies whether to use a coupon. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: uses a coupon.</li>
+         * <li><strong>false</strong> (default): does not use a coupon.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder autoUseCoupon(Boolean autoUseCoupon) {
+            this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
+            this.autoUseCoupon = autoUseCoupon;
+            return this;
+        }
+
+        /**
+         * <p>A reserved parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder bpeEnabled(String bpeEnabled) {
             this.putQueryParameter("BpeEnabled", bpeEnabled);
@@ -563,7 +669,10 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * A reserved parameter. You do not need to specify this parameter.
+         * <p>An invalid parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder burstingEnabled(Boolean burstingEnabled) {
             this.putQueryParameter("BurstingEnabled", burstingEnabled);
@@ -572,14 +681,18 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * The RDS edition of the instance. Valid values:
-         * <p>
+         * <p>The RDS edition of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Basic</strong>: RDS Basic Edition</li>
+         * <li><strong>HighAvailability</strong> (default): RDS High-availability Edition</li>
+         * <li><strong>AlwaysOn</strong>: RDS Cluster Edition</li>
+         * </ul>
+         * <blockquote>
+         * <p> The read-only instances of the primary instance that run PostgreSQL and use cloud disks run RDS Basic Edition. Therefore, set this parameter to <strong>Basic</strong>.</p>
+         * </blockquote>
          * 
-         * *   **Basic**: RDS Basic Edition
-         * *   **HighAvailability** (default): RDS High-availability Edition
-         * *   **AlwaysOn**: RDS Cluster Edition
-         * 
-         * >  The read-only instances of the primary instance that run PostgreSQL and use cloud disks run RDS Basic Edition. Therefore, set this parameter to **Basic**.
+         * <strong>example:</strong>
+         * <p>HighAvailability</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -588,7 +701,10 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOC****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -597,7 +713,11 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * The instance type of the read-only instance. For more information, see [Read-only ApsaraDB RDS instance types](~~145759~~). We recommend that you specify an instance type whose specifications are higher than or equal to the specifications of the instance type of the primary instance. If the specifications of the read-only instance are lower than the specifications of the primary instance, the read-only instance may encounter issues such as high latency and heavy load.
+         * <p>The instance type of the read-only instance. For more information, see <a href="https://help.aliyun.com/document_detail/145759.html">Read-only instance types</a>. We recommend that you specify an instance type whose specifications are higher than or equal to the specifications of the instance type of the primary instance. If the specifications of the read-only instance are lower than the specifications of the primary instance, the read-only instance may encounter issues such as high latency and heavy load.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds.mys2.small</p>
          */
         public Builder DBInstanceClass(String DBInstanceClass) {
             this.putQueryParameter("DBInstanceClass", DBInstanceClass);
@@ -606,10 +726,13 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * The description of the read-only instance. The description must be 2 to 256 characters in length and can contain letters, digits, underscores (\_), and hyphens (-). The value must start with a letter
-         * <p>
+         * <p>The description of the read-only instance. The description must be 2 to 256 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The value must start with a letter</p>
+         * <blockquote>
+         * <p>The value cannot start with <a href="http://https://%E3%80%82">http:// or https://.</a></p>
+         * </blockquote>
          * 
-         * > The value cannot start with [http:// or https://.](http://https://。)
+         * <strong>example:</strong>
+         * <p>Test read-only instance</p>
          */
         public Builder DBInstanceDescription(String DBInstanceDescription) {
             this.putQueryParameter("DBInstanceDescription", DBInstanceDescription);
@@ -618,7 +741,11 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the primary instance. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance IDs.
+         * <p>The primary instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -627,7 +754,11 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * The storage capacity of the read-only instance. For more information, see the **Storage space** column in [Read-only instance types](~~145759~~). This value must be a multiple of 5 GB. Unit: GB.
+         * <p>The storage capacity of the read-only instance. The storage capacity of the read-only instance must be greater than or equal to that of the primary instance. For more information, see the <strong>Storage capacity</strong> column in <a href="https://help.aliyun.com/document_detail/145759.html">Read-only instance types</a>. This value must be a multiple of 5. Unit: GB.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder DBInstanceStorage(Integer DBInstanceStorage) {
             this.putQueryParameter("DBInstanceStorage", DBInstanceStorage);
@@ -636,17 +767,23 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * The storage type of the instance. Valid values:
-         * <p>
+         * <p>The storage type of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>local_ssd</strong>: local SSDs</li>
+         * <li><strong>cloud_ssd</strong>: standard SSDs</li>
+         * <li><strong>cloud_essd</strong>: enhanced SSDs (ESSDs) of performance level 1 (PL1)</li>
+         * <li><strong>cloud_essd2</strong>: ESSDs of PL2</li>
+         * <li><strong>cloud_essd3</strong>: ESSDs of PL3</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>If the primary instance runs MySQL with local disks, you must set this parameter to <strong>local_ssd</strong>. If the primary instance runs MySQL with cloud disks, you must set this parameter to cloud_ssd, cloud_essd, cloud_essd2, or cloud_essd3.</li>
+         * <li>If the primary instance runs SQL Server, you must set this parameter to cloud_ssd, cloud_essd, cloud_essd2, or cloud_essd3.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * *   **local_ssd**: local SSDs
-         * *   **cloud_ssd**: standard SSDs
-         * *   **cloud_essd**: enhanced SSDs (ESSDs) of performance level 1 (PL1)
-         * *   **cloud_essd2**: ESSDs of PL2
-         * *   **cloud_essd3**: ESSDs of PL3
-         * 
-         * > *   If the primary instance runs MySQL with local disks, you must set this parameter to **local_ssd**. If the primary instance runs MySQL with cloud disks, you must set this parameter to cloud_ssd, cloud_essd, cloud_essd2, or cloud_essd3.
-         * > *   If the primary instance runs SQL Server, you must set this parameter to cloud_ssd, cloud_essd, cloud_essd2, or cloud_essd3.
+         * <strong>example:</strong>
+         * <p>local_ssd</p>
          */
         public Builder DBInstanceStorageType(String DBInstanceStorageType) {
             this.putQueryParameter("DBInstanceStorageType", DBInstanceStorageType);
@@ -655,7 +792,10 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the dedicated cluster to which the read-only instance belongs. This parameter is valid when you create the read-only instance in a dedicated cluster.
+         * <p>The ID of the dedicated cluster to which the read-only instance belongs. This parameter is valid when you create the read-only instance in a dedicated cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dhg-4n****</p>
          */
         public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
             this.putQueryParameter("DedicatedHostGroupId", dedicatedHostGroupId);
@@ -664,13 +804,17 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the release protection feature for the read-only instance. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the release protection feature for the read-only instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
+         * <blockquote>
+         * <p> You can enable the release protection feature for the read-only instance only when you set the <strong>PayType</strong> parameter to <strong>Postpaid</strong>.</p>
+         * </blockquote>
          * 
-         * *   **true**: enables the feature.
-         * *   **false** (default): disables the feature.
-         * 
-         * >  You can enable the release protection feature for the read-only instance only when you set the **Billing Method** parameter to **Pay-As-You-Go**.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deletionProtection(Boolean deletionProtection) {
             this.putQueryParameter("DeletionProtection", deletionProtection);
@@ -679,12 +823,16 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * The version of the database engine. The read-only instance and the primary instance must run the same major engine version.
-         * <p>
+         * <p>The version of the database engine. The read-only instance and the primary instance must run the same major engine version.</p>
+         * <ul>
+         * <li>If the read-only instance runs MySQL, set this parameter to <strong>5.6</strong>, <strong>5.7</strong>, or <strong>8.0</strong>.</li>
+         * <li>If the read-only instance runs MySQL, set this parameter to <strong>2017_ent, 2019_ent, or 2022_ent</strong>.</li>
+         * <li>If the read-only instance runs PostgreSQL, set this parameter to <strong>10.0, 11.0, 12.0, 13.0, 14.0, or 15.0</strong>.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   If the read-only instance runs MySQL, set this parameter to **5.6**, **5.7**, or **8.0**.
-         * *   If the read-only instance runs MySQL, set this parameter to **2017\_ent, 2019\_ent, or 2022\_ent**.
-         * *   If the read-only instance runs PostgreSQL, set this parameter to **10.0, 11.0, 12.0, 13.0, 14.0, or 15.0**.
+         * <strong>example:</strong>
+         * <p>5.6</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -693,7 +841,10 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * A reserved parameter.
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder gdnInstanceName(String gdnInstanceName) {
             this.putQueryParameter("GdnInstanceName", gdnInstanceName);
@@ -702,15 +853,18 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * The network type of the read-only instance. Valid values:
-         * <p>
+         * <p>The network type of the read-only instance. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong></li>
+         * <li><strong>Classic</strong></li>
+         * </ul>
+         * <p>Default value: VPC. If you set this parameter to VPC, you must also specify the <strong>VPCId</strong> and <strong>VSwitchId</strong> parameters.</p>
+         * <blockquote>
+         * <p> The network type of the read-only instance can be different from the network type of the primary instance.</p>
+         * </blockquote>
          * 
-         * *   **VPC**
-         * *   **Classic**
-         * 
-         * Default value: VPC. If you set this parameter to VPC, you must also specify the **VPCId** and **VSwitchId** parameters.
-         * 
-         * > The network type of the read-only instance can be different from the network type of the primary instance.
+         * <strong>example:</strong>
+         * <p>Classic</p>
          */
         public Builder instanceNetworkType(String instanceNetworkType) {
             this.putQueryParameter("InstanceNetworkType", instanceNetworkType);
@@ -719,11 +873,26 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * A reserved parameter.
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder instructionSetArch(String instructionSetArch) {
             this.putQueryParameter("InstructionSetArch", instructionSetArch);
             this.instructionSetArch = instructionSetArch;
+            return this;
+        }
+
+        /**
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
+         */
+        public Builder ioAccelerationEnabled(String ioAccelerationEnabled) {
+            this.putQueryParameter("IoAccelerationEnabled", ioAccelerationEnabled);
+            this.ioAccelerationEnabled = ioAccelerationEnabled;
             return this;
         }
 
@@ -746,11 +915,15 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * The billing method of the read-only instance. Valid values:
-         * <p>
+         * <p>The billing method of the read-only instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Postpaid</strong>: pay-as-you-go</li>
+         * <li><strong>Prepaid</strong>: subscription</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Postpaid**: pay-as-you-go
-         * *   **Prepaid**: subscription
+         * <strong>example:</strong>
+         * <p>Postpaid</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -759,11 +932,14 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * The renewal cycle of the read-only instance. Valid values:
-         * <p>
+         * <p>The renewal cycle of the read-only instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Year</strong></li>
+         * <li><strong>Month</strong></li>
+         * </ul>
          * 
-         * *   **Year**
-         * *   **Month**
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -772,10 +948,11 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * The port that can be initialized when you create a read-only ApsaraDB RDS for MySQL instance.
-         * <p>
+         * <p>The port that can be initialized when you create a read-only ApsaraDB RDS for MySQL instance.</p>
+         * <p>Valid values: 1000 to 65534.</p>
          * 
-         * Valid values: 1000 to 65534.
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
@@ -784,7 +961,10 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * The private IP address of the read-only instance. The private IP address must be within the CIDR block that is supported by the specified vSwitch. The system assigns a private IP address to the read-only instance based on the values of the **VPCId** and **VSwitchId** parameters.
+         * <p>The private IP address of the read-only instance. The private IP address must be within the CIDR block that is supported by the specified vSwitch. The system assigns a private IP address to the read-only instance based on the values of the <strong>VPCId</strong> and <strong>VSwitchId</strong> parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.XX.XX</p>
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -793,7 +973,23 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * The region ID. The read-only instance and the primary instance must reside in the same region. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
+         * <p>The coupon code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>717446260784</p>
+         */
+        public Builder promotionCode(String promotionCode) {
+            this.putQueryParameter("PromotionCode", promotionCode);
+            this.promotionCode = promotionCode;
+            return this;
+        }
+
+        /**
+         * <p>The region ID. The read-only instance and the primary instance must reside in the same region. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -802,7 +998,10 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -829,7 +1028,10 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the host on which the primary instance resides. This parameter is valid when you create the read-only instance in a dedicated cluster.
+         * <p>The ID of the host on which the primary instance resides. This parameter is valid when you create the read-only instance in a dedicated cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp****</p>
          */
         public Builder targetDedicatedHostIdForMaster(String targetDedicatedHostIdForMaster) {
             this.putQueryParameter("TargetDedicatedHostIdForMaster", targetDedicatedHostIdForMaster);
@@ -838,7 +1040,10 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * A reserved parameter.
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder tddlBizType(String tddlBizType) {
             this.putQueryParameter("TddlBizType", tddlBizType);
@@ -847,7 +1052,10 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * A reserved parameter.
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder tddlRegionConfig(String tddlRegionConfig) {
             this.putQueryParameter("TddlRegionConfig", tddlRegionConfig);
@@ -856,13 +1064,17 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * The subscription duration of the read-only instance. Valid values:
-         * <p>
+         * <p>The subscription duration of the read-only instance. Valid values:</p>
+         * <ul>
+         * <li>If you set the <strong>Period</strong> parameter to <strong>Year</strong>, the value of the <strong>UsedTime</strong> parameter ranges from <strong>1</strong> to <strong>5</strong>.</li>
+         * <li>If you set the <strong>Period</strong> parameter to <strong>Month</strong>, the value of the <strong>UsedTime</strong> parameter ranges from <strong>1</strong> to <strong>9</strong>.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you set the <strong>PayType</strong> parameter to <strong>Prepaid</strong>, you must specify the UsedTime parameter.</p>
+         * </blockquote>
          * 
-         * *   If you set the **Period** parameter to **Year**, the value of the **UsedTime** parameter ranges from **1** to **5**.
-         * *   If you set the **Period** parameter to **Month**, the value of the **UsedTime** parameter ranges from **1** to **9**.
-         * 
-         * > If you set the **PayType** parameter to **Prepaid**, you must specify the UsedTime parameter.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder usedTime(String usedTime) {
             this.putQueryParameter("UsedTime", usedTime);
@@ -871,11 +1083,16 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * The virtual private cloud (VPC) ID of the read-only instance. If you leave the **InstanceNetworkType** parameter empty or set it to **VPC**, you must also specify this parameter.
-         * <p>
+         * <p>The virtual private cloud (VPC) ID of the read-only instance. If you leave the <strong>InstanceNetworkType</strong> parameter empty or set it to <strong>VPC</strong>, you must also specify this parameter.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If the primary instance uses local disks, the read-only instance and the primary instance can belong to the same VPC or different VPCs.</li>
+         * <li>If the primary instance uses cloud disks, the read-only instance and the primary instance must belong to the same VPC.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > * If the primary instance uses local disks, the read-only instance and the primary instance can belong to the same VPC or different VPCs.
-         * > * If the primary instance uses cloud disks, the read-only instance and the primary instance must belong to the same VPC.
+         * <strong>example:</strong>
+         * <p>vpc-uf6f7l4fg90****</p>
          */
         public Builder VPCId(String VPCId) {
             this.putQueryParameter("VPCId", VPCId);
@@ -884,7 +1101,10 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * The vSwitch ID of the read-only instance. If you leave the **InstanceNetworkType** parameter empty or set it to **VPC**, you must specify the VSwitchId parameter.
+         * <p>The vSwitch ID of the read-only instance. If you leave the <strong>InstanceNetworkType</strong> parameter empty or set it to <strong>VPC</strong>, you must specify the VSwitchId parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-uf6adz52c2p****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -893,7 +1113,16 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * The zone ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent zone list.
+         * <p>The zone ID. You can call the DescribeRegions operation to query the zone ID.</p>
+         * <ul>
+         * <li>If you use the single-zone deployment method, set this parameter to the ID of one zone. Example: <code>cn-hangzhou-b</code>.</li>
+         * <li>If you use the multi-zone deployment method, set this parameter to the IDs of multiple zones and separate the IDs with colons (:). Example: <code>cn-hangzhou-b:cn-hangzhou-c</code>.</li>
+         * <li>The number of zone IDs that you specify must be less than or equal to the number of nodes created for the read-only instance. If you create a read-only instance that runs RDS Basic Edition, only one node is provisioned. If you create a read-only instance that runs RDS High-availability Edition, one primary node and one secondary node are provisioned.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightOrderQueryResponseBody} extends {@link TeaModel}
  *
  * <p>FlightOrderQueryResponseBody</p>
  */
 public class FlightOrderQueryResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private FlightOrderQueryResponseBody(Builder builder) {
@@ -151,63 +156,109 @@ public class FlightOrderQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FlightOrderQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOrderQueryResponseBody</p>
+     */
     public static class FlightChangeTicketInfoList extends TeaModel {
-        @NameInMap("apply_id")
+        @com.aliyun.core.annotation.NameInMap("apply_id")
         private String applyId;
 
-        @NameInMap("arr_time")
+        @com.aliyun.core.annotation.NameInMap("arr_airport")
+        private String arrAirport;
+
+        @com.aliyun.core.annotation.NameInMap("arr_airport_code")
+        private String arrAirportCode;
+
+        @com.aliyun.core.annotation.NameInMap("arr_city")
+        private String arrCity;
+
+        @com.aliyun.core.annotation.NameInMap("arr_city_code")
+        private String arrCityCode;
+
+        @com.aliyun.core.annotation.NameInMap("arr_time")
         private String arrTime;
 
-        @NameInMap("change_cabin")
+        @com.aliyun.core.annotation.NameInMap("change_cabin")
         private String changeCabin;
 
-        @NameInMap("change_cabin_level")
+        @com.aliyun.core.annotation.NameInMap("change_cabin_level")
         private String changeCabinLevel;
 
-        @NameInMap("change_fee")
+        @com.aliyun.core.annotation.NameInMap("change_fee")
         private Double changeFee;
 
-        @NameInMap("change_flight_no")
+        @com.aliyun.core.annotation.NameInMap("change_flight_no")
         private String changeFlightNo;
 
-        @NameInMap("change_order_id")
+        @com.aliyun.core.annotation.NameInMap("change_order_id")
         private Long changeOrderId;
 
-        @NameInMap("change_reason")
+        @com.aliyun.core.annotation.NameInMap("change_reason")
         private String changeReason;
 
-        @NameInMap("change_type")
+        @com.aliyun.core.annotation.NameInMap("change_type")
         private Integer changeType;
 
-        @NameInMap("dep_time")
+        @com.aliyun.core.annotation.NameInMap("dep_airport")
+        private String depAirport;
+
+        @com.aliyun.core.annotation.NameInMap("dep_airport_code")
+        private String depAirportCode;
+
+        @com.aliyun.core.annotation.NameInMap("dep_city")
+        private String depCity;
+
+        @com.aliyun.core.annotation.NameInMap("dep_city_code")
+        private String depCityCode;
+
+        @com.aliyun.core.annotation.NameInMap("dep_time")
         private String depTime;
 
-        @NameInMap("gmt_create")
+        @com.aliyun.core.annotation.NameInMap("discount")
+        private String discount;
+
+        @com.aliyun.core.annotation.NameInMap("gmt_create")
         private String gmtCreate;
 
-        @NameInMap("gmt_modify")
+        @com.aliyun.core.annotation.NameInMap("gmt_modify")
         private String gmtModify;
 
-        @NameInMap("origin_ticket_no")
+        @com.aliyun.core.annotation.NameInMap("journey_index")
+        private Integer journeyIndex;
+
+        @com.aliyun.core.annotation.NameInMap("origin_ticket_no")
         private String originTicketNo;
 
-        @NameInMap("out_apply_id")
+        @com.aliyun.core.annotation.NameInMap("out_apply_id")
         private String outApplyId;
 
-        @NameInMap("ticket_no")
+        @com.aliyun.core.annotation.NameInMap("segment_index")
+        private Integer segmentIndex;
+
+        @com.aliyun.core.annotation.NameInMap("stop_city")
+        private String stopCity;
+
+        @com.aliyun.core.annotation.NameInMap("ticket_no")
         private String ticketNo;
 
-        @NameInMap("ticket_status")
+        @com.aliyun.core.annotation.NameInMap("ticket_status")
         private String ticketStatus;
 
-        @NameInMap("ticket_status_code")
+        @com.aliyun.core.annotation.NameInMap("ticket_status_code")
         private Integer ticketStatusCode;
 
-        @NameInMap("upgrade_fee")
+        @com.aliyun.core.annotation.NameInMap("upgrade_fee")
         private Double upgradeFee;
 
         private FlightChangeTicketInfoList(Builder builder) {
             this.applyId = builder.applyId;
+            this.arrAirport = builder.arrAirport;
+            this.arrAirportCode = builder.arrAirportCode;
+            this.arrCity = builder.arrCity;
+            this.arrCityCode = builder.arrCityCode;
             this.arrTime = builder.arrTime;
             this.changeCabin = builder.changeCabin;
             this.changeCabinLevel = builder.changeCabinLevel;
@@ -216,11 +267,19 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             this.changeOrderId = builder.changeOrderId;
             this.changeReason = builder.changeReason;
             this.changeType = builder.changeType;
+            this.depAirport = builder.depAirport;
+            this.depAirportCode = builder.depAirportCode;
+            this.depCity = builder.depCity;
+            this.depCityCode = builder.depCityCode;
             this.depTime = builder.depTime;
+            this.discount = builder.discount;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModify = builder.gmtModify;
+            this.journeyIndex = builder.journeyIndex;
             this.originTicketNo = builder.originTicketNo;
             this.outApplyId = builder.outApplyId;
+            this.segmentIndex = builder.segmentIndex;
+            this.stopCity = builder.stopCity;
             this.ticketNo = builder.ticketNo;
             this.ticketStatus = builder.ticketStatus;
             this.ticketStatusCode = builder.ticketStatusCode;
@@ -240,6 +299,34 @@ public class FlightOrderQueryResponseBody extends TeaModel {
          */
         public String getApplyId() {
             return this.applyId;
+        }
+
+        /**
+         * @return arrAirport
+         */
+        public String getArrAirport() {
+            return this.arrAirport;
+        }
+
+        /**
+         * @return arrAirportCode
+         */
+        public String getArrAirportCode() {
+            return this.arrAirportCode;
+        }
+
+        /**
+         * @return arrCity
+         */
+        public String getArrCity() {
+            return this.arrCity;
+        }
+
+        /**
+         * @return arrCityCode
+         */
+        public String getArrCityCode() {
+            return this.arrCityCode;
         }
 
         /**
@@ -299,10 +386,45 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return depAirport
+         */
+        public String getDepAirport() {
+            return this.depAirport;
+        }
+
+        /**
+         * @return depAirportCode
+         */
+        public String getDepAirportCode() {
+            return this.depAirportCode;
+        }
+
+        /**
+         * @return depCity
+         */
+        public String getDepCity() {
+            return this.depCity;
+        }
+
+        /**
+         * @return depCityCode
+         */
+        public String getDepCityCode() {
+            return this.depCityCode;
+        }
+
+        /**
          * @return depTime
          */
         public String getDepTime() {
             return this.depTime;
+        }
+
+        /**
+         * @return discount
+         */
+        public String getDiscount() {
+            return this.discount;
         }
 
         /**
@@ -320,6 +442,13 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return journeyIndex
+         */
+        public Integer getJourneyIndex() {
+            return this.journeyIndex;
+        }
+
+        /**
          * @return originTicketNo
          */
         public String getOriginTicketNo() {
@@ -331,6 +460,20 @@ public class FlightOrderQueryResponseBody extends TeaModel {
          */
         public String getOutApplyId() {
             return this.outApplyId;
+        }
+
+        /**
+         * @return segmentIndex
+         */
+        public Integer getSegmentIndex() {
+            return this.segmentIndex;
+        }
+
+        /**
+         * @return stopCity
+         */
+        public String getStopCity() {
+            return this.stopCity;
         }
 
         /**
@@ -363,6 +506,10 @@ public class FlightOrderQueryResponseBody extends TeaModel {
 
         public static final class Builder {
             private String applyId; 
+            private String arrAirport; 
+            private String arrAirportCode; 
+            private String arrCity; 
+            private String arrCityCode; 
             private String arrTime; 
             private String changeCabin; 
             private String changeCabinLevel; 
@@ -371,11 +518,19 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             private Long changeOrderId; 
             private String changeReason; 
             private Integer changeType; 
+            private String depAirport; 
+            private String depAirportCode; 
+            private String depCity; 
+            private String depCityCode; 
             private String depTime; 
+            private String discount; 
             private String gmtCreate; 
             private String gmtModify; 
+            private Integer journeyIndex; 
             private String originTicketNo; 
             private String outApplyId; 
+            private Integer segmentIndex; 
+            private String stopCity; 
             private String ticketNo; 
             private String ticketStatus; 
             private Integer ticketStatusCode; 
@@ -386,6 +541,38 @@ public class FlightOrderQueryResponseBody extends TeaModel {
              */
             public Builder applyId(String applyId) {
                 this.applyId = applyId;
+                return this;
+            }
+
+            /**
+             * arr_airport.
+             */
+            public Builder arrAirport(String arrAirport) {
+                this.arrAirport = arrAirport;
+                return this;
+            }
+
+            /**
+             * arr_airport_code.
+             */
+            public Builder arrAirportCode(String arrAirportCode) {
+                this.arrAirportCode = arrAirportCode;
+                return this;
+            }
+
+            /**
+             * arr_city.
+             */
+            public Builder arrCity(String arrCity) {
+                this.arrCity = arrCity;
+                return this;
+            }
+
+            /**
+             * arr_city_code.
+             */
+            public Builder arrCityCode(String arrCityCode) {
+                this.arrCityCode = arrCityCode;
                 return this;
             }
 
@@ -454,10 +641,50 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
+             * dep_airport.
+             */
+            public Builder depAirport(String depAirport) {
+                this.depAirport = depAirport;
+                return this;
+            }
+
+            /**
+             * dep_airport_code.
+             */
+            public Builder depAirportCode(String depAirportCode) {
+                this.depAirportCode = depAirportCode;
+                return this;
+            }
+
+            /**
+             * dep_city.
+             */
+            public Builder depCity(String depCity) {
+                this.depCity = depCity;
+                return this;
+            }
+
+            /**
+             * dep_city_code.
+             */
+            public Builder depCityCode(String depCityCode) {
+                this.depCityCode = depCityCode;
+                return this;
+            }
+
+            /**
              * dep_time.
              */
             public Builder depTime(String depTime) {
                 this.depTime = depTime;
+                return this;
+            }
+
+            /**
+             * discount.
+             */
+            public Builder discount(String discount) {
+                this.discount = discount;
                 return this;
             }
 
@@ -478,6 +705,14 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
+             * journey_index.
+             */
+            public Builder journeyIndex(Integer journeyIndex) {
+                this.journeyIndex = journeyIndex;
+                return this;
+            }
+
+            /**
              * origin_ticket_no.
              */
             public Builder originTicketNo(String originTicketNo) {
@@ -490,6 +725,22 @@ public class FlightOrderQueryResponseBody extends TeaModel {
              */
             public Builder outApplyId(String outApplyId) {
                 this.outApplyId = outApplyId;
+                return this;
+            }
+
+            /**
+             * segment_index.
+             */
+            public Builder segmentIndex(Integer segmentIndex) {
+                this.segmentIndex = segmentIndex;
+                return this;
+            }
+
+            /**
+             * stop_city.
+             */
+            public Builder stopCity(String stopCity) {
+                this.stopCity = stopCity;
                 return this;
             }
 
@@ -532,60 +783,81 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOrderQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOrderQueryResponseBody</p>
+     */
     public static class FlightInfoList extends TeaModel {
-        @NameInMap("airline_code")
+        @com.aliyun.core.annotation.NameInMap("airline_code")
         private String airlineCode;
 
-        @NameInMap("airline_name")
+        @com.aliyun.core.annotation.NameInMap("airline_name")
         private String airlineName;
 
-        @NameInMap("arr_airport_code")
+        @com.aliyun.core.annotation.NameInMap("arr_airport_code")
         private String arrAirportCode;
 
-        @NameInMap("arr_airport_name")
+        @com.aliyun.core.annotation.NameInMap("arr_airport_name")
         private String arrAirportName;
 
-        @NameInMap("arr_city_ad_code")
+        @com.aliyun.core.annotation.NameInMap("arr_city_ad_code")
         private String arrCityAdCode;
 
-        @NameInMap("arr_city_code")
+        @com.aliyun.core.annotation.NameInMap("arr_city_code")
         private String arrCityCode;
 
-        @NameInMap("arr_city_name")
+        @com.aliyun.core.annotation.NameInMap("arr_city_name")
         private String arrCityName;
 
-        @NameInMap("arr_time")
+        @com.aliyun.core.annotation.NameInMap("arr_terminal")
+        private String arrTerminal;
+
+        @com.aliyun.core.annotation.NameInMap("arr_time")
         private String arrTime;
 
-        @NameInMap("cabin")
+        @com.aliyun.core.annotation.NameInMap("cabin")
         private String cabin;
 
-        @NameInMap("cabin_level")
+        @com.aliyun.core.annotation.NameInMap("cabin_level")
         private String cabinLevel;
 
-        @NameInMap("dep_airport_code")
+        @com.aliyun.core.annotation.NameInMap("dep_airport_code")
         private String depAirportCode;
 
-        @NameInMap("dep_airport_name")
+        @com.aliyun.core.annotation.NameInMap("dep_airport_name")
         private String depAirportName;
 
-        @NameInMap("dep_city_ad_code")
+        @com.aliyun.core.annotation.NameInMap("dep_city_ad_code")
         private String depCityAdCode;
 
-        @NameInMap("dep_city_code")
+        @com.aliyun.core.annotation.NameInMap("dep_city_code")
         private String depCityCode;
 
-        @NameInMap("dep_city_name")
+        @com.aliyun.core.annotation.NameInMap("dep_city_name")
         private String depCityName;
 
-        @NameInMap("dep_time")
+        @com.aliyun.core.annotation.NameInMap("dep_terminal")
+        private String depTerminal;
+
+        @com.aliyun.core.annotation.NameInMap("dep_time")
         private String depTime;
 
-        @NameInMap("flight_mile")
+        @com.aliyun.core.annotation.NameInMap("flight_mile")
         private Integer flightMile;
 
-        @NameInMap("flight_no")
+        @com.aliyun.core.annotation.NameInMap("flight_no")
         private String flightNo;
+
+        @com.aliyun.core.annotation.NameInMap("journey_index")
+        private Integer journeyIndex;
+
+        @com.aliyun.core.annotation.NameInMap("segment_index")
+        private Integer segmentIndex;
+
+        @com.aliyun.core.annotation.NameInMap("stop_city")
+        private java.util.List<String> stopCity;
 
         private FlightInfoList(Builder builder) {
             this.airlineCode = builder.airlineCode;
@@ -595,6 +867,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             this.arrCityAdCode = builder.arrCityAdCode;
             this.arrCityCode = builder.arrCityCode;
             this.arrCityName = builder.arrCityName;
+            this.arrTerminal = builder.arrTerminal;
             this.arrTime = builder.arrTime;
             this.cabin = builder.cabin;
             this.cabinLevel = builder.cabinLevel;
@@ -603,9 +876,13 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             this.depCityAdCode = builder.depCityAdCode;
             this.depCityCode = builder.depCityCode;
             this.depCityName = builder.depCityName;
+            this.depTerminal = builder.depTerminal;
             this.depTime = builder.depTime;
             this.flightMile = builder.flightMile;
             this.flightNo = builder.flightNo;
+            this.journeyIndex = builder.journeyIndex;
+            this.segmentIndex = builder.segmentIndex;
+            this.stopCity = builder.stopCity;
         }
 
         public static Builder builder() {
@@ -666,6 +943,13 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return arrTerminal
+         */
+        public String getArrTerminal() {
+            return this.arrTerminal;
+        }
+
+        /**
          * @return arrTime
          */
         public String getArrTime() {
@@ -722,6 +1006,13 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return depTerminal
+         */
+        public String getDepTerminal() {
+            return this.depTerminal;
+        }
+
+        /**
          * @return depTime
          */
         public String getDepTime() {
@@ -742,6 +1033,27 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             return this.flightNo;
         }
 
+        /**
+         * @return journeyIndex
+         */
+        public Integer getJourneyIndex() {
+            return this.journeyIndex;
+        }
+
+        /**
+         * @return segmentIndex
+         */
+        public Integer getSegmentIndex() {
+            return this.segmentIndex;
+        }
+
+        /**
+         * @return stopCity
+         */
+        public java.util.List<String> getStopCity() {
+            return this.stopCity;
+        }
+
         public static final class Builder {
             private String airlineCode; 
             private String airlineName; 
@@ -750,6 +1062,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             private String arrCityAdCode; 
             private String arrCityCode; 
             private String arrCityName; 
+            private String arrTerminal; 
             private String arrTime; 
             private String cabin; 
             private String cabinLevel; 
@@ -758,9 +1071,13 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             private String depCityAdCode; 
             private String depCityCode; 
             private String depCityName; 
+            private String depTerminal; 
             private String depTime; 
             private Integer flightMile; 
             private String flightNo; 
+            private Integer journeyIndex; 
+            private Integer segmentIndex; 
+            private java.util.List<String> stopCity; 
 
             /**
              * airline_code.
@@ -815,6 +1132,14 @@ public class FlightOrderQueryResponseBody extends TeaModel {
              */
             public Builder arrCityName(String arrCityName) {
                 this.arrCityName = arrCityName;
+                return this;
+            }
+
+            /**
+             * arr_terminal.
+             */
+            public Builder arrTerminal(String arrTerminal) {
+                this.arrTerminal = arrTerminal;
                 return this;
             }
 
@@ -883,6 +1208,14 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
+             * dep_terminal.
+             */
+            public Builder depTerminal(String depTerminal) {
+                this.depTerminal = depTerminal;
+                return this;
+            }
+
+            /**
              * dep_time.
              */
             public Builder depTime(String depTime) {
@@ -906,6 +1239,30 @@ public class FlightOrderQueryResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * journey_index.
+             */
+            public Builder journeyIndex(Integer journeyIndex) {
+                this.journeyIndex = journeyIndex;
+                return this;
+            }
+
+            /**
+             * segment_index.
+             */
+            public Builder segmentIndex(Integer segmentIndex) {
+                this.segmentIndex = segmentIndex;
+                return this;
+            }
+
+            /**
+             * stop_city.
+             */
+            public Builder stopCity(java.util.List<String> stopCity) {
+                this.stopCity = stopCity;
+                return this;
+            }
+
             public FlightInfoList build() {
                 return new FlightInfoList(this);
             } 
@@ -913,43 +1270,101 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOrderQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOrderQueryResponseBody</p>
+     */
     public static class FlightRefundTicketInfoList extends TeaModel {
-        @NameInMap("apply_id")
+        @com.aliyun.core.annotation.NameInMap("apply_id")
         private String applyId;
 
-        @NameInMap("gmt_create")
+        @com.aliyun.core.annotation.NameInMap("arr_airport")
+        private String arrAirport;
+
+        @com.aliyun.core.annotation.NameInMap("arr_airport_code")
+        private String arrAirportCode;
+
+        @com.aliyun.core.annotation.NameInMap("arr_city")
+        private String arrCity;
+
+        @com.aliyun.core.annotation.NameInMap("arr_city_code")
+        private String arrCityCode;
+
+        @com.aliyun.core.annotation.NameInMap("company_refund_ticket_fee")
+        private Double companyRefundTicketFee;
+
+        @com.aliyun.core.annotation.NameInMap("dep_airport")
+        private String depAirport;
+
+        @com.aliyun.core.annotation.NameInMap("dep_airport_code")
+        private String depAirportCode;
+
+        @com.aliyun.core.annotation.NameInMap("dep_city")
+        private String depCity;
+
+        @com.aliyun.core.annotation.NameInMap("dep_city_code")
+        private String depCityCode;
+
+        @com.aliyun.core.annotation.NameInMap("flight_no")
+        private String flightNo;
+
+        @com.aliyun.core.annotation.NameInMap("gmt_create")
         private String gmtCreate;
 
-        @NameInMap("gmt_modify")
+        @com.aliyun.core.annotation.NameInMap("gmt_modify")
         private String gmtModify;
 
-        @NameInMap("out_apply_id")
+        @com.aliyun.core.annotation.NameInMap("journey_index")
+        private Integer journeyIndex;
+
+        @com.aliyun.core.annotation.NameInMap("out_apply_id")
         private String outApplyId;
 
-        @NameInMap("refund_order_id")
+        @com.aliyun.core.annotation.NameInMap("personal_refund_ticket_fee")
+        private Double personalRefundTicketFee;
+
+        @com.aliyun.core.annotation.NameInMap("refund_order_id")
         private Long refundOrderId;
 
-        @NameInMap("refund_reason")
+        @com.aliyun.core.annotation.NameInMap("refund_reason")
         private String refundReason;
 
-        @NameInMap("refund_ticket_fee")
+        @com.aliyun.core.annotation.NameInMap("refund_ticket_fee")
         private Double refundTicketFee;
 
-        @NameInMap("refund_type")
+        @com.aliyun.core.annotation.NameInMap("refund_type")
         private Integer refundType;
 
-        @NameInMap("ticket_no")
+        @com.aliyun.core.annotation.NameInMap("segment_index")
+        private Integer segmentIndex;
+
+        @com.aliyun.core.annotation.NameInMap("ticket_no")
         private String ticketNo;
 
         private FlightRefundTicketInfoList(Builder builder) {
             this.applyId = builder.applyId;
+            this.arrAirport = builder.arrAirport;
+            this.arrAirportCode = builder.arrAirportCode;
+            this.arrCity = builder.arrCity;
+            this.arrCityCode = builder.arrCityCode;
+            this.companyRefundTicketFee = builder.companyRefundTicketFee;
+            this.depAirport = builder.depAirport;
+            this.depAirportCode = builder.depAirportCode;
+            this.depCity = builder.depCity;
+            this.depCityCode = builder.depCityCode;
+            this.flightNo = builder.flightNo;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModify = builder.gmtModify;
+            this.journeyIndex = builder.journeyIndex;
             this.outApplyId = builder.outApplyId;
+            this.personalRefundTicketFee = builder.personalRefundTicketFee;
             this.refundOrderId = builder.refundOrderId;
             this.refundReason = builder.refundReason;
             this.refundTicketFee = builder.refundTicketFee;
             this.refundType = builder.refundType;
+            this.segmentIndex = builder.segmentIndex;
             this.ticketNo = builder.ticketNo;
         }
 
@@ -969,6 +1384,76 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return arrAirport
+         */
+        public String getArrAirport() {
+            return this.arrAirport;
+        }
+
+        /**
+         * @return arrAirportCode
+         */
+        public String getArrAirportCode() {
+            return this.arrAirportCode;
+        }
+
+        /**
+         * @return arrCity
+         */
+        public String getArrCity() {
+            return this.arrCity;
+        }
+
+        /**
+         * @return arrCityCode
+         */
+        public String getArrCityCode() {
+            return this.arrCityCode;
+        }
+
+        /**
+         * @return companyRefundTicketFee
+         */
+        public Double getCompanyRefundTicketFee() {
+            return this.companyRefundTicketFee;
+        }
+
+        /**
+         * @return depAirport
+         */
+        public String getDepAirport() {
+            return this.depAirport;
+        }
+
+        /**
+         * @return depAirportCode
+         */
+        public String getDepAirportCode() {
+            return this.depAirportCode;
+        }
+
+        /**
+         * @return depCity
+         */
+        public String getDepCity() {
+            return this.depCity;
+        }
+
+        /**
+         * @return depCityCode
+         */
+        public String getDepCityCode() {
+            return this.depCityCode;
+        }
+
+        /**
+         * @return flightNo
+         */
+        public String getFlightNo() {
+            return this.flightNo;
+        }
+
+        /**
          * @return gmtCreate
          */
         public String getGmtCreate() {
@@ -983,10 +1468,24 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return journeyIndex
+         */
+        public Integer getJourneyIndex() {
+            return this.journeyIndex;
+        }
+
+        /**
          * @return outApplyId
          */
         public String getOutApplyId() {
             return this.outApplyId;
+        }
+
+        /**
+         * @return personalRefundTicketFee
+         */
+        public Double getPersonalRefundTicketFee() {
+            return this.personalRefundTicketFee;
         }
 
         /**
@@ -1018,6 +1517,13 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return segmentIndex
+         */
+        public Integer getSegmentIndex() {
+            return this.segmentIndex;
+        }
+
+        /**
          * @return ticketNo
          */
         public String getTicketNo() {
@@ -1026,13 +1532,26 @@ public class FlightOrderQueryResponseBody extends TeaModel {
 
         public static final class Builder {
             private String applyId; 
+            private String arrAirport; 
+            private String arrAirportCode; 
+            private String arrCity; 
+            private String arrCityCode; 
+            private Double companyRefundTicketFee; 
+            private String depAirport; 
+            private String depAirportCode; 
+            private String depCity; 
+            private String depCityCode; 
+            private String flightNo; 
             private String gmtCreate; 
             private String gmtModify; 
+            private Integer journeyIndex; 
             private String outApplyId; 
+            private Double personalRefundTicketFee; 
             private Long refundOrderId; 
             private String refundReason; 
             private Double refundTicketFee; 
             private Integer refundType; 
+            private Integer segmentIndex; 
             private String ticketNo; 
 
             /**
@@ -1040,6 +1559,86 @@ public class FlightOrderQueryResponseBody extends TeaModel {
              */
             public Builder applyId(String applyId) {
                 this.applyId = applyId;
+                return this;
+            }
+
+            /**
+             * arr_airport.
+             */
+            public Builder arrAirport(String arrAirport) {
+                this.arrAirport = arrAirport;
+                return this;
+            }
+
+            /**
+             * arr_airport_code.
+             */
+            public Builder arrAirportCode(String arrAirportCode) {
+                this.arrAirportCode = arrAirportCode;
+                return this;
+            }
+
+            /**
+             * arr_city.
+             */
+            public Builder arrCity(String arrCity) {
+                this.arrCity = arrCity;
+                return this;
+            }
+
+            /**
+             * arr_city_code.
+             */
+            public Builder arrCityCode(String arrCityCode) {
+                this.arrCityCode = arrCityCode;
+                return this;
+            }
+
+            /**
+             * company_refund_ticket_fee.
+             */
+            public Builder companyRefundTicketFee(Double companyRefundTicketFee) {
+                this.companyRefundTicketFee = companyRefundTicketFee;
+                return this;
+            }
+
+            /**
+             * dep_airport.
+             */
+            public Builder depAirport(String depAirport) {
+                this.depAirport = depAirport;
+                return this;
+            }
+
+            /**
+             * dep_airport_code.
+             */
+            public Builder depAirportCode(String depAirportCode) {
+                this.depAirportCode = depAirportCode;
+                return this;
+            }
+
+            /**
+             * dep_city.
+             */
+            public Builder depCity(String depCity) {
+                this.depCity = depCity;
+                return this;
+            }
+
+            /**
+             * dep_city_code.
+             */
+            public Builder depCityCode(String depCityCode) {
+                this.depCityCode = depCityCode;
+                return this;
+            }
+
+            /**
+             * flight_no.
+             */
+            public Builder flightNo(String flightNo) {
+                this.flightNo = flightNo;
                 return this;
             }
 
@@ -1060,10 +1659,26 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
+             * journey_index.
+             */
+            public Builder journeyIndex(Integer journeyIndex) {
+                this.journeyIndex = journeyIndex;
+                return this;
+            }
+
+            /**
              * out_apply_id.
              */
             public Builder outApplyId(String outApplyId) {
                 this.outApplyId = outApplyId;
+                return this;
+            }
+
+            /**
+             * personal_refund_ticket_fee.
+             */
+            public Builder personalRefundTicketFee(Double personalRefundTicketFee) {
+                this.personalRefundTicketFee = personalRefundTicketFee;
                 return this;
             }
 
@@ -1100,6 +1715,14 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
+             * segment_index.
+             */
+            public Builder segmentIndex(Integer segmentIndex) {
+                this.segmentIndex = segmentIndex;
+                return this;
+            }
+
+            /**
              * ticket_no.
              */
             public Builder ticketNo(String ticketNo) {
@@ -1114,58 +1737,108 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOrderQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOrderQueryResponseBody</p>
+     */
     public static class FlightTicketInfoList extends TeaModel {
-        @NameInMap("build_price")
+        @com.aliyun.core.annotation.NameInMap("arr_airport")
+        private String arrAirport;
+
+        @com.aliyun.core.annotation.NameInMap("arr_airport_code")
+        private String arrAirportCode;
+
+        @com.aliyun.core.annotation.NameInMap("arr_city")
+        private String arrCity;
+
+        @com.aliyun.core.annotation.NameInMap("arr_city_code")
+        private String arrCityCode;
+
+        @com.aliyun.core.annotation.NameInMap("build_price")
         private Double buildPrice;
 
-        @NameInMap("changed")
+        @com.aliyun.core.annotation.NameInMap("changed")
         private Boolean changed;
 
-        @NameInMap("discount")
+        @com.aliyun.core.annotation.NameInMap("dep_airport")
+        private String depAirport;
+
+        @com.aliyun.core.annotation.NameInMap("dep_airport_code")
+        private String depAirportCode;
+
+        @com.aliyun.core.annotation.NameInMap("dep_city")
+        private String depCity;
+
+        @com.aliyun.core.annotation.NameInMap("dep_city_code")
+        private String depCityCode;
+
+        @com.aliyun.core.annotation.NameInMap("discount")
         private Integer discount;
 
-        @NameInMap("flight_no")
+        @com.aliyun.core.annotation.NameInMap("flight_no")
         private String flightNo;
 
-        @NameInMap("gmt_create")
+        @com.aliyun.core.annotation.NameInMap("gmt_create")
         private String gmtCreate;
 
-        @NameInMap("gmt_modify")
+        @com.aliyun.core.annotation.NameInMap("gmt_modify")
         private String gmtModify;
 
-        @NameInMap("oil_price")
+        @com.aliyun.core.annotation.NameInMap("journey_index")
+        private Integer journeyIndex;
+
+        @com.aliyun.core.annotation.NameInMap("oil_price")
         private Double oilPrice;
 
-        @NameInMap("pay_type")
+        @com.aliyun.core.annotation.NameInMap("pay_type")
         private Integer payType;
 
-        @NameInMap("settle_price")
+        @com.aliyun.core.annotation.NameInMap("personal_price")
+        private Double personalPrice;
+
+        @com.aliyun.core.annotation.NameInMap("segment_index")
+        private Integer segmentIndex;
+
+        @com.aliyun.core.annotation.NameInMap("settle_price")
         private Double settlePrice;
 
-        @NameInMap("ticket_no")
+        @com.aliyun.core.annotation.NameInMap("ticket_no")
         private String ticketNo;
 
-        @NameInMap("ticket_price")
+        @com.aliyun.core.annotation.NameInMap("ticket_price")
         private Double ticketPrice;
 
-        @NameInMap("ticket_status")
+        @com.aliyun.core.annotation.NameInMap("ticket_status")
         private String ticketStatus;
 
-        @NameInMap("ticket_status_code")
+        @com.aliyun.core.annotation.NameInMap("ticket_status_code")
         private Integer ticketStatusCode;
 
-        @NameInMap("user_id")
+        @com.aliyun.core.annotation.NameInMap("user_id")
         private String userId;
 
         private FlightTicketInfoList(Builder builder) {
+            this.arrAirport = builder.arrAirport;
+            this.arrAirportCode = builder.arrAirportCode;
+            this.arrCity = builder.arrCity;
+            this.arrCityCode = builder.arrCityCode;
             this.buildPrice = builder.buildPrice;
             this.changed = builder.changed;
+            this.depAirport = builder.depAirport;
+            this.depAirportCode = builder.depAirportCode;
+            this.depCity = builder.depCity;
+            this.depCityCode = builder.depCityCode;
             this.discount = builder.discount;
             this.flightNo = builder.flightNo;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModify = builder.gmtModify;
+            this.journeyIndex = builder.journeyIndex;
             this.oilPrice = builder.oilPrice;
             this.payType = builder.payType;
+            this.personalPrice = builder.personalPrice;
+            this.segmentIndex = builder.segmentIndex;
             this.settlePrice = builder.settlePrice;
             this.ticketNo = builder.ticketNo;
             this.ticketPrice = builder.ticketPrice;
@@ -1183,6 +1856,34 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return arrAirport
+         */
+        public String getArrAirport() {
+            return this.arrAirport;
+        }
+
+        /**
+         * @return arrAirportCode
+         */
+        public String getArrAirportCode() {
+            return this.arrAirportCode;
+        }
+
+        /**
+         * @return arrCity
+         */
+        public String getArrCity() {
+            return this.arrCity;
+        }
+
+        /**
+         * @return arrCityCode
+         */
+        public String getArrCityCode() {
+            return this.arrCityCode;
+        }
+
+        /**
          * @return buildPrice
          */
         public Double getBuildPrice() {
@@ -1194,6 +1895,34 @@ public class FlightOrderQueryResponseBody extends TeaModel {
          */
         public Boolean getChanged() {
             return this.changed;
+        }
+
+        /**
+         * @return depAirport
+         */
+        public String getDepAirport() {
+            return this.depAirport;
+        }
+
+        /**
+         * @return depAirportCode
+         */
+        public String getDepAirportCode() {
+            return this.depAirportCode;
+        }
+
+        /**
+         * @return depCity
+         */
+        public String getDepCity() {
+            return this.depCity;
+        }
+
+        /**
+         * @return depCityCode
+         */
+        public String getDepCityCode() {
+            return this.depCityCode;
         }
 
         /**
@@ -1225,6 +1954,13 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return journeyIndex
+         */
+        public Integer getJourneyIndex() {
+            return this.journeyIndex;
+        }
+
+        /**
          * @return oilPrice
          */
         public Double getOilPrice() {
@@ -1236,6 +1972,20 @@ public class FlightOrderQueryResponseBody extends TeaModel {
          */
         public Integer getPayType() {
             return this.payType;
+        }
+
+        /**
+         * @return personalPrice
+         */
+        public Double getPersonalPrice() {
+            return this.personalPrice;
+        }
+
+        /**
+         * @return segmentIndex
+         */
+        public Integer getSegmentIndex() {
+            return this.segmentIndex;
         }
 
         /**
@@ -1281,20 +2031,63 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String arrAirport; 
+            private String arrAirportCode; 
+            private String arrCity; 
+            private String arrCityCode; 
             private Double buildPrice; 
             private Boolean changed; 
+            private String depAirport; 
+            private String depAirportCode; 
+            private String depCity; 
+            private String depCityCode; 
             private Integer discount; 
             private String flightNo; 
             private String gmtCreate; 
             private String gmtModify; 
+            private Integer journeyIndex; 
             private Double oilPrice; 
             private Integer payType; 
+            private Double personalPrice; 
+            private Integer segmentIndex; 
             private Double settlePrice; 
             private String ticketNo; 
             private Double ticketPrice; 
             private String ticketStatus; 
             private Integer ticketStatusCode; 
             private String userId; 
+
+            /**
+             * arr_airport.
+             */
+            public Builder arrAirport(String arrAirport) {
+                this.arrAirport = arrAirport;
+                return this;
+            }
+
+            /**
+             * arr_airport_code.
+             */
+            public Builder arrAirportCode(String arrAirportCode) {
+                this.arrAirportCode = arrAirportCode;
+                return this;
+            }
+
+            /**
+             * arr_city.
+             */
+            public Builder arrCity(String arrCity) {
+                this.arrCity = arrCity;
+                return this;
+            }
+
+            /**
+             * arr_city_code.
+             */
+            public Builder arrCityCode(String arrCityCode) {
+                this.arrCityCode = arrCityCode;
+                return this;
+            }
 
             /**
              * build_price.
@@ -1309,6 +2102,38 @@ public class FlightOrderQueryResponseBody extends TeaModel {
              */
             public Builder changed(Boolean changed) {
                 this.changed = changed;
+                return this;
+            }
+
+            /**
+             * dep_airport.
+             */
+            public Builder depAirport(String depAirport) {
+                this.depAirport = depAirport;
+                return this;
+            }
+
+            /**
+             * dep_airport_code.
+             */
+            public Builder depAirportCode(String depAirportCode) {
+                this.depAirportCode = depAirportCode;
+                return this;
+            }
+
+            /**
+             * dep_city.
+             */
+            public Builder depCity(String depCity) {
+                this.depCity = depCity;
+                return this;
+            }
+
+            /**
+             * dep_city_code.
+             */
+            public Builder depCityCode(String depCityCode) {
+                this.depCityCode = depCityCode;
                 return this;
             }
 
@@ -1345,6 +2170,14 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
+             * journey_index.
+             */
+            public Builder journeyIndex(Integer journeyIndex) {
+                this.journeyIndex = journeyIndex;
+                return this;
+            }
+
+            /**
              * oil_price.
              */
             public Builder oilPrice(Double oilPrice) {
@@ -1357,6 +2190,22 @@ public class FlightOrderQueryResponseBody extends TeaModel {
              */
             public Builder payType(Integer payType) {
                 this.payType = payType;
+                return this;
+            }
+
+            /**
+             * personal_price.
+             */
+            public Builder personalPrice(Double personalPrice) {
+                this.personalPrice = personalPrice;
+                return this;
+            }
+
+            /**
+             * segment_index.
+             */
+            public Builder segmentIndex(Integer segmentIndex) {
+                this.segmentIndex = segmentIndex;
                 return this;
             }
 
@@ -1415,22 +2264,32 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOrderQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOrderQueryResponseBody</p>
+     */
     public static class InsuranceInfoList extends TeaModel {
-        @NameInMap("amount")
+        @com.aliyun.core.annotation.NameInMap("amount")
         private Double amount;
 
-        @NameInMap("insurance_no")
+        @com.aliyun.core.annotation.NameInMap("insurance_no")
         private String insuranceNo;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private InsuranceInfoList(Builder builder) {
             this.amount = builder.amount;
             this.insuranceNo = builder.insuranceNo;
+            this.name = builder.name;
             this.status = builder.status;
             this.type = builder.type;
         }
@@ -1458,6 +2317,13 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
          * @return status
          */
         public Integer getStatus() {
@@ -1474,6 +2340,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         public static final class Builder {
             private Double amount; 
             private String insuranceNo; 
+            private String name; 
             private Integer status; 
             private String type; 
 
@@ -1490,6 +2357,14 @@ public class FlightOrderQueryResponseBody extends TeaModel {
              */
             public Builder insuranceNo(String insuranceNo) {
                 this.insuranceNo = insuranceNo;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
                 return this;
             }
 
@@ -1516,11 +2391,17 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOrderQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOrderQueryResponseBody</p>
+     */
     public static class InvoiceInfo extends TeaModel {
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("title")
+        @com.aliyun.core.annotation.NameInMap("title")
         private String title;
 
         private InvoiceInfo(Builder builder) {
@@ -1577,62 +2458,74 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOrderQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOrderQueryResponseBody</p>
+     */
     public static class OrderBaseInfo extends TeaModel {
-        @NameInMap("apply_id")
+        @com.aliyun.core.annotation.NameInMap("apply_id")
         private String applyId;
 
-        @NameInMap("btrip_title")
+        @com.aliyun.core.annotation.NameInMap("btrip_title")
         private String btripTitle;
 
-        @NameInMap("contact_name")
+        @com.aliyun.core.annotation.NameInMap("contact_name")
         private String contactName;
 
-        @NameInMap("corp_id")
+        @com.aliyun.core.annotation.NameInMap("corp_id")
         private String corpId;
 
-        @NameInMap("corp_name")
+        @com.aliyun.core.annotation.NameInMap("corp_name")
         private String corpName;
 
-        @NameInMap("depart_id")
+        @com.aliyun.core.annotation.NameInMap("depart_id")
         private String departId;
 
-        @NameInMap("depart_name")
+        @com.aliyun.core.annotation.NameInMap("depart_name")
         private String departName;
 
-        @NameInMap("exceed_apply_id")
+        @com.aliyun.core.annotation.NameInMap("exceed_apply_id")
         private String exceedApplyId;
 
-        @NameInMap("exceed_third_part_apply_id")
+        @com.aliyun.core.annotation.NameInMap("exceed_third_part_apply_id")
         private String exceedThirdPartApplyId;
 
-        @NameInMap("gmt_create")
+        @com.aliyun.core.annotation.NameInMap("gmt_create")
         private String gmtCreate;
 
-        @NameInMap("gmt_modify")
+        @com.aliyun.core.annotation.NameInMap("gmt_modify")
         private String gmtModify;
 
-        @NameInMap("itinerary_id")
+        @com.aliyun.core.annotation.NameInMap("itinerary_id")
         private String itineraryId;
 
-        @NameInMap("order_id")
+        @com.aliyun.core.annotation.NameInMap("order_id")
         private Long orderId;
 
-        @NameInMap("order_status")
+        @com.aliyun.core.annotation.NameInMap("order_status")
         private Integer orderStatus;
 
-        @NameInMap("thirdpart_apply_id")
+        @com.aliyun.core.annotation.NameInMap("supplier")
+        private String supplier;
+
+        @com.aliyun.core.annotation.NameInMap("thirdpart_apply_id")
         private String thirdpartApplyId;
 
-        @NameInMap("thirdpart_corp_id")
+        @com.aliyun.core.annotation.NameInMap("thirdpart_business_id")
+        private String thirdpartBusinessId;
+
+        @com.aliyun.core.annotation.NameInMap("thirdpart_corp_id")
         private String thirdpartCorpId;
 
-        @NameInMap("thirdpart_itinerary_id")
+        @com.aliyun.core.annotation.NameInMap("thirdpart_itinerary_id")
         private String thirdpartItineraryId;
 
-        @NameInMap("trip_type")
+        @com.aliyun.core.annotation.NameInMap("trip_type")
         private Integer tripType;
 
-        @NameInMap("user_id")
+        @com.aliyun.core.annotation.NameInMap("user_id")
         private String userId;
 
         private OrderBaseInfo(Builder builder) {
@@ -1650,7 +2543,9 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             this.itineraryId = builder.itineraryId;
             this.orderId = builder.orderId;
             this.orderStatus = builder.orderStatus;
+            this.supplier = builder.supplier;
             this.thirdpartApplyId = builder.thirdpartApplyId;
+            this.thirdpartBusinessId = builder.thirdpartBusinessId;
             this.thirdpartCorpId = builder.thirdpartCorpId;
             this.thirdpartItineraryId = builder.thirdpartItineraryId;
             this.tripType = builder.tripType;
@@ -1764,10 +2659,24 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return supplier
+         */
+        public String getSupplier() {
+            return this.supplier;
+        }
+
+        /**
          * @return thirdpartApplyId
          */
         public String getThirdpartApplyId() {
             return this.thirdpartApplyId;
+        }
+
+        /**
+         * @return thirdpartBusinessId
+         */
+        public String getThirdpartBusinessId() {
+            return this.thirdpartBusinessId;
         }
 
         /**
@@ -1813,7 +2722,9 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             private String itineraryId; 
             private Long orderId; 
             private Integer orderStatus; 
+            private String supplier; 
             private String thirdpartApplyId; 
+            private String thirdpartBusinessId; 
             private String thirdpartCorpId; 
             private String thirdpartItineraryId; 
             private Integer tripType; 
@@ -1932,10 +2843,26 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
+             * supplier.
+             */
+            public Builder supplier(String supplier) {
+                this.supplier = supplier;
+                return this;
+            }
+
+            /**
              * thirdpart_apply_id.
              */
             public Builder thirdpartApplyId(String thirdpartApplyId) {
                 this.thirdpartApplyId = thirdpartApplyId;
+                return this;
+            }
+
+            /**
+             * thirdpart_business_id.
+             */
+            public Builder thirdpartBusinessId(String thirdpartBusinessId) {
+                this.thirdpartBusinessId = thirdpartBusinessId;
                 return this;
             }
 
@@ -1978,35 +2905,41 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOrderQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOrderQueryResponseBody</p>
+     */
     public static class PassengerInfoList extends TeaModel {
-        @NameInMap("cost_center_id")
+        @com.aliyun.core.annotation.NameInMap("cost_center_id")
         private Long costCenterId;
 
-        @NameInMap("cost_center_name")
+        @com.aliyun.core.annotation.NameInMap("cost_center_name")
         private String costCenterName;
 
-        @NameInMap("cost_center_number")
+        @com.aliyun.core.annotation.NameInMap("cost_center_number")
         private String costCenterNumber;
 
-        @NameInMap("project_code")
+        @com.aliyun.core.annotation.NameInMap("project_code")
         private String projectCode;
 
-        @NameInMap("project_id")
+        @com.aliyun.core.annotation.NameInMap("project_id")
         private Long projectId;
 
-        @NameInMap("project_title")
+        @com.aliyun.core.annotation.NameInMap("project_title")
         private String projectTitle;
 
-        @NameInMap("thirdpart_project_id")
+        @com.aliyun.core.annotation.NameInMap("thirdpart_project_id")
         private String thirdpartProjectId;
 
-        @NameInMap("user_id")
+        @com.aliyun.core.annotation.NameInMap("user_id")
         private String userId;
 
-        @NameInMap("user_name")
+        @com.aliyun.core.annotation.NameInMap("user_name")
         private String userName;
 
-        @NameInMap("user_type")
+        @com.aliyun.core.annotation.NameInMap("user_type")
         private Integer userType;
 
         private PassengerInfoList(Builder builder) {
@@ -2199,26 +3132,32 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOrderQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOrderQueryResponseBody</p>
+     */
     public static class PriceInfoList extends TeaModel {
-        @NameInMap("category_code")
+        @com.aliyun.core.annotation.NameInMap("category_code")
         private Integer categoryCode;
 
-        @NameInMap("gmt_create")
+        @com.aliyun.core.annotation.NameInMap("gmt_create")
         private String gmtCreate;
 
-        @NameInMap("passenger_name")
+        @com.aliyun.core.annotation.NameInMap("passenger_name")
         private String passengerName;
 
-        @NameInMap("pay_type")
+        @com.aliyun.core.annotation.NameInMap("pay_type")
         private Integer payType;
 
-        @NameInMap("price")
+        @com.aliyun.core.annotation.NameInMap("price")
         private Double price;
 
-        @NameInMap("trade_id")
+        @com.aliyun.core.annotation.NameInMap("trade_id")
         private String tradeId;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private Integer type;
 
         private PriceInfoList(Builder builder) {
@@ -2360,33 +3299,39 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightOrderQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightOrderQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
-        @NameInMap("flight_change_ticket_info_list")
-        private java.util.List < FlightChangeTicketInfoList> flightChangeTicketInfoList;
+        @com.aliyun.core.annotation.NameInMap("flight_change_ticket_info_list")
+        private java.util.List<FlightChangeTicketInfoList> flightChangeTicketInfoList;
 
-        @NameInMap("flight_info_list")
-        private java.util.List < FlightInfoList> flightInfoList;
+        @com.aliyun.core.annotation.NameInMap("flight_info_list")
+        private java.util.List<FlightInfoList> flightInfoList;
 
-        @NameInMap("flight_refund_ticket_info_list")
-        private java.util.List < FlightRefundTicketInfoList> flightRefundTicketInfoList;
+        @com.aliyun.core.annotation.NameInMap("flight_refund_ticket_info_list")
+        private java.util.List<FlightRefundTicketInfoList> flightRefundTicketInfoList;
 
-        @NameInMap("flight_ticket_info_list")
-        private java.util.List < FlightTicketInfoList> flightTicketInfoList;
+        @com.aliyun.core.annotation.NameInMap("flight_ticket_info_list")
+        private java.util.List<FlightTicketInfoList> flightTicketInfoList;
 
-        @NameInMap("insurance_info_list")
-        private java.util.List < InsuranceInfoList> insuranceInfoList;
+        @com.aliyun.core.annotation.NameInMap("insurance_info_list")
+        private java.util.List<InsuranceInfoList> insuranceInfoList;
 
-        @NameInMap("invoice_info")
+        @com.aliyun.core.annotation.NameInMap("invoice_info")
         private InvoiceInfo invoiceInfo;
 
-        @NameInMap("order_base_info")
+        @com.aliyun.core.annotation.NameInMap("order_base_info")
         private OrderBaseInfo orderBaseInfo;
 
-        @NameInMap("passenger_info_list")
-        private java.util.List < PassengerInfoList> passengerInfoList;
+        @com.aliyun.core.annotation.NameInMap("passenger_info_list")
+        private java.util.List<PassengerInfoList> passengerInfoList;
 
-        @NameInMap("price_info_list")
-        private java.util.List < PriceInfoList> priceInfoList;
+        @com.aliyun.core.annotation.NameInMap("price_info_list")
+        private java.util.List<PriceInfoList> priceInfoList;
 
         private Module(Builder builder) {
             this.flightChangeTicketInfoList = builder.flightChangeTicketInfoList;
@@ -2411,35 +3356,35 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         /**
          * @return flightChangeTicketInfoList
          */
-        public java.util.List < FlightChangeTicketInfoList> getFlightChangeTicketInfoList() {
+        public java.util.List<FlightChangeTicketInfoList> getFlightChangeTicketInfoList() {
             return this.flightChangeTicketInfoList;
         }
 
         /**
          * @return flightInfoList
          */
-        public java.util.List < FlightInfoList> getFlightInfoList() {
+        public java.util.List<FlightInfoList> getFlightInfoList() {
             return this.flightInfoList;
         }
 
         /**
          * @return flightRefundTicketInfoList
          */
-        public java.util.List < FlightRefundTicketInfoList> getFlightRefundTicketInfoList() {
+        public java.util.List<FlightRefundTicketInfoList> getFlightRefundTicketInfoList() {
             return this.flightRefundTicketInfoList;
         }
 
         /**
          * @return flightTicketInfoList
          */
-        public java.util.List < FlightTicketInfoList> getFlightTicketInfoList() {
+        public java.util.List<FlightTicketInfoList> getFlightTicketInfoList() {
             return this.flightTicketInfoList;
         }
 
         /**
          * @return insuranceInfoList
          */
-        public java.util.List < InsuranceInfoList> getInsuranceInfoList() {
+        public java.util.List<InsuranceInfoList> getInsuranceInfoList() {
             return this.insuranceInfoList;
         }
 
@@ -2460,32 +3405,32 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         /**
          * @return passengerInfoList
          */
-        public java.util.List < PassengerInfoList> getPassengerInfoList() {
+        public java.util.List<PassengerInfoList> getPassengerInfoList() {
             return this.passengerInfoList;
         }
 
         /**
          * @return priceInfoList
          */
-        public java.util.List < PriceInfoList> getPriceInfoList() {
+        public java.util.List<PriceInfoList> getPriceInfoList() {
             return this.priceInfoList;
         }
 
         public static final class Builder {
-            private java.util.List < FlightChangeTicketInfoList> flightChangeTicketInfoList; 
-            private java.util.List < FlightInfoList> flightInfoList; 
-            private java.util.List < FlightRefundTicketInfoList> flightRefundTicketInfoList; 
-            private java.util.List < FlightTicketInfoList> flightTicketInfoList; 
-            private java.util.List < InsuranceInfoList> insuranceInfoList; 
+            private java.util.List<FlightChangeTicketInfoList> flightChangeTicketInfoList; 
+            private java.util.List<FlightInfoList> flightInfoList; 
+            private java.util.List<FlightRefundTicketInfoList> flightRefundTicketInfoList; 
+            private java.util.List<FlightTicketInfoList> flightTicketInfoList; 
+            private java.util.List<InsuranceInfoList> insuranceInfoList; 
             private InvoiceInfo invoiceInfo; 
             private OrderBaseInfo orderBaseInfo; 
-            private java.util.List < PassengerInfoList> passengerInfoList; 
-            private java.util.List < PriceInfoList> priceInfoList; 
+            private java.util.List<PassengerInfoList> passengerInfoList; 
+            private java.util.List<PriceInfoList> priceInfoList; 
 
             /**
              * flight_change_ticket_info_list.
              */
-            public Builder flightChangeTicketInfoList(java.util.List < FlightChangeTicketInfoList> flightChangeTicketInfoList) {
+            public Builder flightChangeTicketInfoList(java.util.List<FlightChangeTicketInfoList> flightChangeTicketInfoList) {
                 this.flightChangeTicketInfoList = flightChangeTicketInfoList;
                 return this;
             }
@@ -2493,7 +3438,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             /**
              * flight_info_list.
              */
-            public Builder flightInfoList(java.util.List < FlightInfoList> flightInfoList) {
+            public Builder flightInfoList(java.util.List<FlightInfoList> flightInfoList) {
                 this.flightInfoList = flightInfoList;
                 return this;
             }
@@ -2501,7 +3446,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             /**
              * flight_refund_ticket_info_list.
              */
-            public Builder flightRefundTicketInfoList(java.util.List < FlightRefundTicketInfoList> flightRefundTicketInfoList) {
+            public Builder flightRefundTicketInfoList(java.util.List<FlightRefundTicketInfoList> flightRefundTicketInfoList) {
                 this.flightRefundTicketInfoList = flightRefundTicketInfoList;
                 return this;
             }
@@ -2509,7 +3454,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             /**
              * flight_ticket_info_list.
              */
-            public Builder flightTicketInfoList(java.util.List < FlightTicketInfoList> flightTicketInfoList) {
+            public Builder flightTicketInfoList(java.util.List<FlightTicketInfoList> flightTicketInfoList) {
                 this.flightTicketInfoList = flightTicketInfoList;
                 return this;
             }
@@ -2517,7 +3462,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             /**
              * insurance_info_list.
              */
-            public Builder insuranceInfoList(java.util.List < InsuranceInfoList> insuranceInfoList) {
+            public Builder insuranceInfoList(java.util.List<InsuranceInfoList> insuranceInfoList) {
                 this.insuranceInfoList = insuranceInfoList;
                 return this;
             }
@@ -2541,7 +3486,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             /**
              * passenger_info_list.
              */
-            public Builder passengerInfoList(java.util.List < PassengerInfoList> passengerInfoList) {
+            public Builder passengerInfoList(java.util.List<PassengerInfoList> passengerInfoList) {
                 this.passengerInfoList = passengerInfoList;
                 return this;
             }
@@ -2549,7 +3494,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             /**
              * price_info_list.
              */
-            public Builder priceInfoList(java.util.List < PriceInfoList> priceInfoList) {
+            public Builder priceInfoList(java.util.List<PriceInfoList> priceInfoList) {
                 this.priceInfoList = priceInfoList;
                 return this;
             }

@@ -1,54 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTaskInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTaskInfoResponseBody</p>
  */
 public class DescribeTaskInfoResponseBody extends TeaModel {
-    @NameInMap("cluster_id")
+    @com.aliyun.core.annotation.NameInMap("cluster_id")
     private String clusterId;
 
-    @NameInMap("created")
+    @com.aliyun.core.annotation.NameInMap("created")
     private String created;
 
-    @NameInMap("current_stage")
+    @com.aliyun.core.annotation.NameInMap("current_stage")
     private String currentStage;
 
-    @NameInMap("error")
+    @com.aliyun.core.annotation.NameInMap("error")
     private Error error;
 
-    @NameInMap("events")
-    private java.util.List < Events> events;
+    @com.aliyun.core.annotation.NameInMap("events")
+    private java.util.List<Events> events;
 
-    @NameInMap("parameters")
-    private java.util.Map < String, ? > parameters;
+    @com.aliyun.core.annotation.NameInMap("parameters")
+    private java.util.Map<String, ?> parameters;
 
-    @NameInMap("stages")
-    private java.util.List < Stages> stages;
+    @com.aliyun.core.annotation.NameInMap("stages")
+    private java.util.List<Stages> stages;
 
-    @NameInMap("state")
+    @com.aliyun.core.annotation.NameInMap("state")
     private String state;
 
-    @NameInMap("target")
+    @com.aliyun.core.annotation.NameInMap("target")
     private Target target;
 
-    @NameInMap("task_id")
+    @com.aliyun.core.annotation.NameInMap("task_id")
     private String taskId;
 
-    @NameInMap("task_result")
-    private java.util.List < TaskResult> taskResult;
+    @com.aliyun.core.annotation.NameInMap("task_result")
+    private java.util.List<TaskResult> taskResult;
 
-    @NameInMap("task_type")
+    @com.aliyun.core.annotation.NameInMap("task_type")
     private String taskType;
 
-    @NameInMap("updated")
+    @com.aliyun.core.annotation.NameInMap("updated")
     private String updated;
 
     private DescribeTaskInfoResponseBody(Builder builder) {
@@ -106,21 +111,21 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
     /**
      * @return events
      */
-    public java.util.List < Events> getEvents() {
+    public java.util.List<Events> getEvents() {
         return this.events;
     }
 
     /**
      * @return parameters
      */
-    public java.util.Map < String, ? > getParameters() {
+    public java.util.Map<String, ?> getParameters() {
         return this.parameters;
     }
 
     /**
      * @return stages
      */
-    public java.util.List < Stages> getStages() {
+    public java.util.List<Stages> getStages() {
         return this.stages;
     }
 
@@ -148,7 +153,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
     /**
      * @return taskResult
      */
-    public java.util.List < TaskResult> getTaskResult() {
+    public java.util.List<TaskResult> getTaskResult() {
         return this.taskResult;
     }
 
@@ -171,18 +176,21 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         private String created; 
         private String currentStage; 
         private Error error; 
-        private java.util.List < Events> events; 
-        private java.util.Map < String, ? > parameters; 
-        private java.util.List < Stages> stages; 
+        private java.util.List<Events> events; 
+        private java.util.Map<String, ?> parameters; 
+        private java.util.List<Stages> stages; 
         private String state; 
         private Target target; 
         private String taskId; 
-        private java.util.List < TaskResult> taskResult; 
+        private java.util.List<TaskResult> taskResult; 
         private String taskType; 
         private String updated; 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c78592bfe92244365b3c3ad47f1de****</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -190,7 +198,10 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the task was created.
+         * <p>The time when the task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-10T16:02:04+08:00</p>
          */
         public Builder created(String created) {
             this.created = created;
@@ -198,7 +209,10 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The current stage of the task.
+         * <p>The current stage of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DrainNodes</p>
          */
         public Builder currentStage(String currentStage) {
             this.currentStage = currentStage;
@@ -206,7 +220,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The error returned for the task.
+         * <p>The error returned for the task.</p>
          */
         public Builder error(Error error) {
             this.error = error;
@@ -214,36 +228,39 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The event generated by the task.
+         * <p>The event generated by the task.</p>
          */
-        public Builder events(java.util.List < Events> events) {
+        public Builder events(java.util.List<Events> events) {
             this.events = events;
             return this;
         }
 
         /**
-         * The task parameters.
+         * <p>The task parameters.</p>
          */
-        public Builder parameters(java.util.Map < String, ? > parameters) {
+        public Builder parameters(java.util.Map<String, ?> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         /**
-         * Detailed information about the stage of the task.
+         * <p>Detailed information about the stage of the task.</p>
          */
-        public Builder stages(java.util.List < Stages> stages) {
+        public Builder stages(java.util.List<Stages> stages) {
             this.stages = stages;
             return this;
         }
 
         /**
-         * The status of the task. Valid values:
-         * <p>
+         * <p>The status of the task. Valid values:</p>
+         * <ul>
+         * <li><code>running</code>: The task is running.</li>
+         * <li><code>failed</code>: The task failed.</li>
+         * <li><code>success</code>: The task is complete.</li>
+         * </ul>
          * 
-         * *   `running`: The task is running.
-         * *   `failed`: The task failed.
-         * *   `success`: The task is complete.
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         public Builder state(String state) {
             this.state = state;
@@ -251,7 +268,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The object of the task.
+         * <p>The object of the task.</p>
          */
         public Builder target(Target target) {
             this.target = target;
@@ -259,7 +276,10 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The task ID.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>T-5faa48fb31b6b8078d000006</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -267,15 +287,18 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The execution details of the task.
+         * <p>The execution details of the task.</p>
          */
-        public Builder taskResult(java.util.List < TaskResult> taskResult) {
+        public Builder taskResult(java.util.List<TaskResult> taskResult) {
             this.taskResult = taskResult;
             return this;
         }
 
         /**
-         * The task type. A value of `cluster_scaleout` indicates a scale-out task.
+         * <p>The task type. A value of <code>cluster_scaleout</code> indicates a scale-out task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster_scaleout</p>
          */
         public Builder taskType(String taskType) {
             this.taskType = taskType;
@@ -283,7 +306,10 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the task was updated.
+         * <p>The time when the task was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-10T16:03:06+08:00</p>
          */
         public Builder updated(String updated) {
             this.updated = updated;
@@ -296,11 +322,17 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTaskInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTaskInfoResponseBody</p>
+     */
     public static class Error extends TeaModel {
-        @NameInMap("code")
+        @com.aliyun.core.annotation.NameInMap("code")
         private String code;
 
-        @NameInMap("message")
+        @com.aliyun.core.annotation.NameInMap("message")
         private String message;
 
         private Error(Builder builder) {
@@ -335,7 +367,10 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * The error code returned.
+             * <p>The error code returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>400</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -343,7 +378,10 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned.
+             * <p>The error message returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>failed to xxx</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -357,23 +395,29 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTaskInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTaskInfoResponseBody</p>
+     */
     public static class Events extends TeaModel {
-        @NameInMap("action")
+        @com.aliyun.core.annotation.NameInMap("action")
         private String action;
 
-        @NameInMap("level")
+        @com.aliyun.core.annotation.NameInMap("level")
         private String level;
 
-        @NameInMap("message")
+        @com.aliyun.core.annotation.NameInMap("message")
         private String message;
 
-        @NameInMap("reason")
+        @com.aliyun.core.annotation.NameInMap("reason")
         private String reason;
 
-        @NameInMap("source")
+        @com.aliyun.core.annotation.NameInMap("source")
         private String source;
 
-        @NameInMap("timestamp")
+        @com.aliyun.core.annotation.NameInMap("timestamp")
         private String timestamp;
 
         private Events(Builder builder) {
@@ -444,7 +488,10 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             private String timestamp; 
 
             /**
-             * The action of the event.
+             * <p>The action of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>start</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -452,7 +499,10 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The severity level of the event.
+             * <p>The severity level of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -460,7 +510,10 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The message about the event.
+             * <p>The message about the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>start to xxx</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -468,7 +521,10 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The cause of the event.
+             * <p>The cause of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NodePoolUpgradeStart</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -476,7 +532,10 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the event.
+             * <p>The source of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACK</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -484,7 +543,10 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the event was generated.
+             * <p>The timestamp when the event was generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1669706229286</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -498,20 +560,26 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTaskInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTaskInfoResponseBody</p>
+     */
     public static class Stages extends TeaModel {
-        @NameInMap("end_time")
+        @com.aliyun.core.annotation.NameInMap("end_time")
         private String endTime;
 
-        @NameInMap("message")
+        @com.aliyun.core.annotation.NameInMap("message")
         private String message;
 
-        @NameInMap("outputs")
-        private java.util.Map < String, ? > outputs;
+        @com.aliyun.core.annotation.NameInMap("outputs")
+        private java.util.Map<String, ?> outputs;
 
-        @NameInMap("start_time")
+        @com.aliyun.core.annotation.NameInMap("start_time")
         private String startTime;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
         private Stages(Builder builder) {
@@ -547,7 +615,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         /**
          * @return outputs
          */
-        public java.util.Map < String, ? > getOutputs() {
+        public java.util.Map<String, ?> getOutputs() {
             return this.outputs;
         }
 
@@ -568,12 +636,15 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         public static final class Builder {
             private String endTime; 
             private String message; 
-            private java.util.Map < String, ? > outputs; 
+            private java.util.Map<String, ?> outputs; 
             private String startTime; 
             private String state; 
 
             /**
-             * The end time of the stage.
+             * <p>The end time of the stage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-15 23:00:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -581,7 +652,10 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The message about the stage.
+             * <p>The message about the stage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success to xxxxx</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -589,15 +663,18 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The output generated at the stage.
+             * <p>The output generated at the stage.</p>
              */
-            public Builder outputs(java.util.Map < String, ? > outputs) {
+            public Builder outputs(java.util.Map<String, ?> outputs) {
                 this.outputs = outputs;
                 return this;
             }
 
             /**
-             * The start time of the stage.
+             * <p>The start time of the stage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-15 23:00:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -605,7 +682,10 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the stage.
+             * <p>The status of the stage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -619,11 +699,17 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTaskInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTaskInfoResponseBody</p>
+     */
     public static class Target extends TeaModel {
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Target(Builder builder) {
@@ -658,7 +744,10 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The ID of the object.
+             * <p>The ID of the object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c78592bfe92244365b3c3ad47f1de****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -666,7 +755,10 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the object.
+             * <p>The type of the object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cluster</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -680,11 +772,17 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTaskInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTaskInfoResponseBody</p>
+     */
     public static class TaskResult extends TeaModel {
-        @NameInMap("data")
+        @com.aliyun.core.annotation.NameInMap("data")
         private String data;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
         private TaskResult(Builder builder) {
@@ -719,7 +817,10 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The resources that are managed by the task. For a scale-out task, the value of this parameter is the ID of the instance that is added by the task.
+             * <p>The resources that are managed by the task. For a scale-out task, the value of this parameter is the ID of the instance that is added by the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-xxx</p>
              */
             public Builder data(String data) {
                 this.data = data;
@@ -727,12 +828,15 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the scale-out task. Valid values:
-             * <p>
+             * <p>The status of the scale-out task. Valid values:</p>
+             * <ul>
+             * <li><code>success</code>: The scale-out task is successful.</li>
+             * <li><code>success</code>: The scale-out task failed.</li>
+             * <li><code>initial</code>: The scale-out task is being initialized.</li>
+             * </ul>
              * 
-             * *   `success`: The scale-out task is successful.
-             * *   `success`: The scale-out task failed.
-             * *   `initial`: The scale-out task is being initialized.
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;

@@ -1,68 +1,68 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateHostRequest} extends {@link RequestModel}
  *
  * <p>CreateHostRequest</p>
  */
 public class CreateHostRequest extends Request {
-    @Query
-    @NameInMap("ActiveAddressType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ActiveAddressType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String activeAddressType;
 
-    @Query
-    @NameInMap("Comment")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comment")
     private String comment;
 
-    @Query
-    @NameInMap("HostName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hostName;
 
-    @Query
-    @NameInMap("HostPrivateAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostPrivateAddress")
     private String hostPrivateAddress;
 
-    @Query
-    @NameInMap("HostPublicAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostPublicAddress")
     private String hostPublicAddress;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("InstanceRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceRegionId")
     private String instanceRegionId;
 
-    @Query
-    @NameInMap("NetworkDomainId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkDomainId")
     private String networkDomainId;
 
-    @Query
-    @NameInMap("OSType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OSType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String OSType;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Source")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String source;
 
-    @Query
-    @NameInMap("SourceInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceInstanceId")
     private String sourceInstanceId;
 
     private CreateHostRequest(Builder builder) {
@@ -213,11 +213,15 @@ public class CreateHostRequest extends Request {
         } 
 
         /**
-         * The endpoint type of the host that you want to create. Valid values:
-         * <p>
+         * <p>The endpoint type of the host that you want to create. Valid values:</p>
+         * <ul>
+         * <li><strong>Public</strong>: public endpoint</li>
+         * <li><strong>Private</strong>: internal endpoint</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Public**: public endpoint
-         * *   **Private**: internal endpoint
+         * <strong>example:</strong>
+         * <p>Public</p>
          */
         public Builder activeAddressType(String activeAddressType) {
             this.putQueryParameter("ActiveAddressType", activeAddressType);
@@ -226,7 +230,10 @@ public class CreateHostRequest extends Request {
         }
 
         /**
-         * The description of the host that you want to create. The value can be up to 500 characters in length.
+         * <p>The description of the host that you want to create. The value can be up to 500 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Local Host</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -235,7 +242,11 @@ public class CreateHostRequest extends Request {
         }
 
         /**
-         * The name of the host that you want to create. The name can be up to 128 characters in length.
+         * <p>The name of the host that you want to create. The name can be up to 128 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>host01</p>
          */
         public Builder hostName(String hostName) {
             this.putQueryParameter("HostName", hostName);
@@ -244,10 +255,13 @@ public class CreateHostRequest extends Request {
         }
 
         /**
-         * The internal endpoint of the host that you want to create. You can set this parameter to a domain name or an IP address.
-         * <p>
+         * <p>The internal endpoint of the host that you want to create. You can set this parameter to a domain name or an IP address.</p>
+         * <blockquote>
+         * <p>This parameter is required if the <strong>ActiveAddressType</strong> parameter is set to <strong>Private</strong>.</p>
+         * </blockquote>
          * 
-         * > This parameter is required if the **ActiveAddressType** parameter is set to **Private**.
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder hostPrivateAddress(String hostPrivateAddress) {
             this.putQueryParameter("HostPrivateAddress", hostPrivateAddress);
@@ -256,10 +270,13 @@ public class CreateHostRequest extends Request {
         }
 
         /**
-         * The public endpoint of the host that you want to create. You can set this parameter to a domain name or an IP address.
-         * <p>
+         * <p>The public endpoint of the host that you want to create. You can set this parameter to a domain name or an IP address.</p>
+         * <blockquote>
+         * <p>This parameter is required if the <strong>ActiveAddressType</strong> parameter is set to <strong>Public</strong>.</p>
+         * </blockquote>
          * 
-         * > This parameter is required if the **ActiveAddressType** parameter is set to **Public**.
+         * <strong>example:</strong>
+         * <p>172.16.XX.XX</p>
          */
         public Builder hostPublicAddress(String hostPublicAddress) {
             this.putQueryParameter("HostPublicAddress", hostPublicAddress);
@@ -268,10 +285,14 @@ public class CreateHostRequest extends Request {
         }
 
         /**
-         * The ID of the bastion host in which you want to create the host.
-         * <p>
+         * <p>The ID of the bastion host in which you want to create the host.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-st220aw****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -280,10 +301,13 @@ public class CreateHostRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the ECS instance or the host in an ApsaraDB MyBase dedicated cluster belongs.
-         * <p>
+         * <p>The ID of the region to which the ECS instance or the host in an ApsaraDB MyBase dedicated cluster belongs.</p>
+         * <blockquote>
+         * <p>This parameter is required if the <strong>Source</strong> parameter is set to <strong>Ecs</strong> or <strong>Rds</strong>.</p>
+         * </blockquote>
          * 
-         * > This parameter is required if the **Source** parameter is set to **Ecs** or **Rds**.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder instanceRegionId(String instanceRegionId) {
             this.putQueryParameter("InstanceRegionId", instanceRegionId);
@@ -292,7 +316,13 @@ public class CreateHostRequest extends Request {
         }
 
         /**
-         * NetworkDomainId.
+         * <p>The ID of the network domain to which the host to be imported belongs.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758827.html">ListNetworkDomains</a> operation to query the network domain ID.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder networkDomainId(String networkDomainId) {
             this.putQueryParameter("NetworkDomainId", networkDomainId);
@@ -301,11 +331,15 @@ public class CreateHostRequest extends Request {
         }
 
         /**
-         * The operating system of the host that you want to create. Valid values:
-         * <p>
+         * <p>The operating system of the host that you want to create. Valid values:</p>
+         * <ul>
+         * <li><strong>Linux</strong></li>
+         * <li><strong>Windows</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Linux**
-         * *   **Windows**
+         * <strong>example:</strong>
+         * <p>Linux</p>
          */
         public Builder OSType(String OSType) {
             this.putQueryParameter("OSType", OSType);
@@ -314,10 +348,13 @@ public class CreateHostRequest extends Request {
         }
 
         /**
-         * The region ID of the bastion host in which you want to create the host.
-         * <p>
+         * <p>The region ID of the bastion host to which you want to import the host.</p>
+         * <blockquote>
+         * <p>For information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
          * 
-         * > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -326,12 +363,16 @@ public class CreateHostRequest extends Request {
         }
 
         /**
-         * The source of the host that you want to create. Valid values:
-         * <p>
+         * <p>The source of the host that you want to create. Valid values:</p>
+         * <ul>
+         * <li><strong>Local</strong>: a host in a data center</li>
+         * <li><strong>Ecs</strong>: an Elastic Compute Service (ECS) instance</li>
+         * <li><strong>Rds</strong>: a host in an ApsaraDB MyBase dedicated cluster</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Local**: a host in a data center
-         * *   **Ecs**: an Elastic Compute Service (ECS) instance
-         * *   **Rds**: a host in an ApsaraDB MyBase dedicated cluster
+         * <strong>example:</strong>
+         * <p>Local</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -340,10 +381,13 @@ public class CreateHostRequest extends Request {
         }
 
         /**
-         * The ID of the ECS instance or the host in an ApsaraDB MyBase dedicated cluster.
-         * <p>
+         * <p>The ID of the ECS instance or the host in an ApsaraDB MyBase dedicated cluster.</p>
+         * <blockquote>
+         * <p>This parameter is required if the <strong>Source</strong> parameter is set to <strong>Ecs</strong> or <strong>Rds</strong>.</p>
+         * </blockquote>
          * 
-         * > This parameter is required if the **Source** parameter is set to **Ecs** or **Rds**.
+         * <strong>example:</strong>
+         * <p>i-dfabfda</p>
          */
         public Builder sourceInstanceId(String sourceInstanceId) {
             this.putQueryParameter("SourceInstanceId", sourceInstanceId);

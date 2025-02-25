@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAggregateConfigRulesResponseBody} extends {@link TeaModel}
  *
  * <p>ListAggregateConfigRulesResponseBody</p>
  */
 public class ListAggregateConfigRulesResponseBody extends TeaModel {
-    @NameInMap("ConfigRules")
+    @com.aliyun.core.annotation.NameInMap("ConfigRules")
     private ConfigRules configRules;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListAggregateConfigRulesResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The queried rules.
+         * <p>The queried rules.</p>
          */
         public Builder configRules(ConfigRules configRules) {
             this.configRules = configRules;
@@ -58,7 +63,10 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22EF8287-2C9A-4F1F-80A6-CEFA7612689D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAggregateConfigRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAggregateConfigRulesResponseBody</p>
+     */
     public static class Compliance extends TeaModel {
-        @NameInMap("ComplianceType")
+        @com.aliyun.core.annotation.NameInMap("ComplianceType")
         private String complianceType;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
         private Compliance(Builder builder) {
@@ -110,13 +124,16 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             private Integer count; 
 
             /**
-             * The compliance evaluation result. Valid values:
-             * <p>
+             * <p>The compliance evaluation result. Valid values:</p>
+             * <ul>
+             * <li>COMPLIANT: The resources are evaluated as compliant.</li>
+             * <li>NON_COMPLIANT: The resources are evaluated as non-compliant.</li>
+             * <li>NOT_APPLICABLE: The rule does not apply to the resources.</li>
+             * <li>INSUFFICIENT_DATA: No data is available.</li>
+             * </ul>
              * 
-             * *   COMPLIANT: The resource is evaluated as compliant.
-             * *   NON_COMPLIANT: The resource is evaluated as non-compliant.
-             * *   NOT_APPLICABLE: The rule does not apply to the resource.
-             * *   INSUFFICIENT_DATA: No resource data is available.
+             * <strong>example:</strong>
+             * <p>COMPLIANT</p>
              */
             public Builder complianceType(String complianceType) {
                 this.complianceType = complianceType;
@@ -124,7 +141,10 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of evaluated resources.
+             * <p>The number of evaluation resources that correspond to the summary result of the rule compliance evaluation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -138,26 +158,32 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAggregateConfigRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAggregateConfigRulesResponseBody</p>
+     */
     public static class CreateBy extends TeaModel {
-        @NameInMap("AggregatorId")
+        @com.aliyun.core.annotation.NameInMap("AggregatorId")
         private String aggregatorId;
 
-        @NameInMap("AggregatorName")
+        @com.aliyun.core.annotation.NameInMap("AggregatorName")
         private String aggregatorName;
 
-        @NameInMap("CompliancePackId")
+        @com.aliyun.core.annotation.NameInMap("CompliancePackId")
         private String compliancePackId;
 
-        @NameInMap("CompliancePackName")
+        @com.aliyun.core.annotation.NameInMap("CompliancePackName")
         private String compliancePackName;
 
-        @NameInMap("CreatorId")
+        @com.aliyun.core.annotation.NameInMap("CreatorId")
         private String creatorId;
 
-        @NameInMap("CreatorName")
+        @com.aliyun.core.annotation.NameInMap("CreatorName")
         private String creatorName;
 
-        @NameInMap("CreatorType")
+        @com.aliyun.core.annotation.NameInMap("CreatorType")
         private String creatorType;
 
         private CreateBy(Builder builder) {
@@ -237,7 +263,10 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             private String creatorType; 
 
             /**
-             * The ID of the account group.
+             * <p>The account group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ca-f632626622af0079****</p>
              */
             public Builder aggregatorId(String aggregatorId) {
                 this.aggregatorId = aggregatorId;
@@ -245,7 +274,10 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the account group.
+             * <p>The name of the account group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test_Group</p>
              */
             public Builder aggregatorName(String aggregatorName) {
                 this.aggregatorName = aggregatorName;
@@ -253,7 +285,10 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the compliance package.
+             * <p>The compliance package ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cp-fdc8626622af00f9****</p>
              */
             public Builder compliancePackId(String compliancePackId) {
                 this.compliancePackId = compliancePackId;
@@ -261,7 +296,10 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the compliance package.
+             * <p>The name of the compliance package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-pack-name</p>
              */
             public Builder compliancePackName(String compliancePackName) {
                 this.compliancePackName = compliancePackName;
@@ -269,7 +307,10 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the management account that was used to create the rule.
+             * <p>The ID of the management account that created the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100931896542****</p>
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -277,7 +318,10 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the management account that was used to create the rule.
+             * <p>The name of the management account that create the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alice</p>
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -285,7 +329,10 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the creator of the rule. Valid value: AGGREGATOR, which indicates an account group.
+             * <p>The type of the creator of the rule. The value is fixed to AGGREGATOR, which indicates an account group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AGGREGATOR</p>
              */
             public Builder creatorType(String creatorType) {
                 this.creatorType = creatorType;
@@ -299,11 +346,17 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAggregateConfigRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAggregateConfigRulesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -338,7 +391,10 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key of the rule.
+             * <p>The tag key of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -346,7 +402,10 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the rule.
+             * <p>The tag value of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -360,48 +419,54 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAggregateConfigRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAggregateConfigRulesResponseBody</p>
+     */
     public static class ConfigRuleList extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
 
-        @NameInMap("AutomationType")
+        @com.aliyun.core.annotation.NameInMap("AutomationType")
         private String automationType;
 
-        @NameInMap("Compliance")
+        @com.aliyun.core.annotation.NameInMap("Compliance")
         private Compliance compliance;
 
-        @NameInMap("ConfigRuleArn")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleArn")
         private String configRuleArn;
 
-        @NameInMap("ConfigRuleId")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleId")
         private String configRuleId;
 
-        @NameInMap("ConfigRuleName")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleName")
         private String configRuleName;
 
-        @NameInMap("ConfigRuleState")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleState")
         private String configRuleState;
 
-        @NameInMap("CreateBy")
+        @com.aliyun.core.annotation.NameInMap("CreateBy")
         private CreateBy createBy;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ResourceTypesScope")
+        @com.aliyun.core.annotation.NameInMap("ResourceTypesScope")
         private String resourceTypesScope;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private Integer riskLevel;
 
-        @NameInMap("SourceIdentifier")
+        @com.aliyun.core.annotation.NameInMap("SourceIdentifier")
         private String sourceIdentifier;
 
-        @NameInMap("SourceOwner")
+        @com.aliyun.core.annotation.NameInMap("SourceOwner")
         private String sourceOwner;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
         private ConfigRuleList(Builder builder) {
             this.accountId = builder.accountId;
@@ -522,7 +587,7 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -540,10 +605,13 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             private Integer riskLevel; 
             private String sourceIdentifier; 
             private String sourceOwner; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
 
             /**
-             * The ID of the management account to which the rule belongs.
+             * <p>The ID of the management account to which the rules belong.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100931896542****</p>
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -551,7 +619,10 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the remediation template. Valid value: OOS, which indicates Operation Orchestration Service.
+             * <p>The type of the remediation template. Only OOS is returned, which indicates CloudOps Orchestration Service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OOS</p>
              */
             public Builder automationType(String automationType) {
                 this.automationType = automationType;
@@ -559,7 +630,7 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The compliance evaluation result.
+             * <p>The compliance evaluation result.</p>
              */
             public Builder compliance(Compliance compliance) {
                 this.compliance = compliance;
@@ -567,7 +638,10 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ARN of the rule.
+             * <p>The ARN of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:config::100931896542****:rule/cr-fdc8626622af00f9****</p>
              */
             public Builder configRuleArn(String configRuleArn) {
                 this.configRuleArn = configRuleArn;
@@ -575,7 +649,10 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The rule ID.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cr-fdc8626622af00f9****</p>
              */
             public Builder configRuleId(String configRuleId) {
                 this.configRuleId = configRuleId;
@@ -583,7 +660,10 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The rule name.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-rule-name</p>
              */
             public Builder configRuleName(String configRuleName) {
                 this.configRuleName = configRuleName;
@@ -591,13 +671,16 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the rule. Valid values:
-             * <p>
+             * <p>The status of the rule. Valid values:</p>
+             * <ul>
+             * <li>ACTIVE: The rule is being used to monitor resource configurations.</li>
+             * <li>DELETING: The rule is being deleted.</li>
+             * <li>EVALUATING: The rule is triggered and is being used to monitor resource configurations.</li>
+             * <li>INACTIVE: The rule is disabled.</li>
+             * </ul>
              * 
-             * *   ACTIVE: The rule is enabled.
-             * *   DELETING: The rule is being deleted.
-             * *   EVALUATING: The rule is triggered and is being used to monitor resource configurations.
-             * *   INACTIVE: The rule is disabled.
+             * <strong>example:</strong>
+             * <p>ACTIVE</p>
              */
             public Builder configRuleState(String configRuleState) {
                 this.configRuleState = configRuleState;
@@ -605,7 +688,7 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the creation of the rule.
+             * <p>The information about the creation of the rule.</p>
              */
             public Builder createBy(CreateBy createBy) {
                 this.createBy = createBy;
@@ -613,7 +696,10 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the rule.
+             * <p>The description of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The description of the test rule.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -621,7 +707,10 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The types of resources evaluated by the rule. Multiple resource types are separated with commas (,).
+             * <p>The types of resources evaluated by the rule. Multiple resource types are separated with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS::EIP::EipAddress</p>
              */
             public Builder resourceTypesScope(String resourceTypesScope) {
                 this.resourceTypesScope = resourceTypesScope;
@@ -629,12 +718,15 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level of the resources that are not compliant with the rule. Valid values:
-             * <p>
+             * <p>The risk level of the resources that do not comply with the rule. Valid values:</p>
+             * <ul>
+             * <li>1: high</li>
+             * <li>2: medium</li>
+             * <li>3: low</li>
+             * </ul>
              * 
-             * *   1: high
-             * *   2: medium
-             * *   3: low
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;
@@ -642,11 +734,14 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule.
-             * <p>
+             * <p>The identifier of the rule.</p>
+             * <ul>
+             * <li>If the rule is a managed rule, the value of this parameter is the name of the managed rule.</li>
+             * <li>If the rule is a custom rule, the value of this parameter is the Alibaba Cloud Resource Name (ARN) of a function.</li>
+             * </ul>
              * 
-             * *   If the rule is a managed rule, the value of this parameter is the name of the managed rule.
-             * *   If the rule is a custom rule, the value of this parameter is the Alibaba Cloud Resource Name (ARN) of the relevant function in Function Compute.
+             * <strong>example:</strong>
+             * <p>eip-bandwidth-limit</p>
              */
             public Builder sourceIdentifier(String sourceIdentifier) {
                 this.sourceIdentifier = sourceIdentifier;
@@ -654,11 +749,14 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the rule. Valid values:
-             * <p>
+             * <p>The type of the rule. Valid values:</p>
+             * <ul>
+             * <li>CUSTOM_FC: a custom rule.</li>
+             * <li>ALIYUN: a managed rule.</li>
+             * </ul>
              * 
-             * *   CUSTOM_FC: custom rule
-             * *   ALIYUN: managed rule
+             * <strong>example:</strong>
+             * <p>ALIYUN</p>
              */
             public Builder sourceOwner(String sourceOwner) {
                 this.sourceOwner = sourceOwner;
@@ -666,9 +764,9 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the rule.
+             * <p>The tags of the rule.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -680,17 +778,23 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAggregateConfigRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAggregateConfigRulesResponseBody</p>
+     */
     public static class ConfigRules extends TeaModel {
-        @NameInMap("ConfigRuleList")
-        private java.util.List < ConfigRuleList> configRuleList;
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleList")
+        private java.util.List<ConfigRuleList> configRuleList;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private ConfigRules(Builder builder) {
@@ -711,7 +815,7 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
         /**
          * @return configRuleList
          */
-        public java.util.List < ConfigRuleList> getConfigRuleList() {
+        public java.util.List<ConfigRuleList> getConfigRuleList() {
             return this.configRuleList;
         }
 
@@ -737,21 +841,24 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ConfigRuleList> configRuleList; 
+            private java.util.List<ConfigRuleList> configRuleList; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Long totalCount; 
 
             /**
-             * The details of the rule.
+             * <p>The details of the rule.</p>
              */
-            public Builder configRuleList(java.util.List < ConfigRuleList> configRuleList) {
+            public Builder configRuleList(java.util.List<ConfigRuleList> configRuleList) {
                 this.configRuleList = configRuleList;
                 return this;
             }
 
             /**
-             * The number of the page returned.
+             * <p>The number of the page returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -759,7 +866,10 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -767,7 +877,10 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of rules.
+             * <p>The total number of rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

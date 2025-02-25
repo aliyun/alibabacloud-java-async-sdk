@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link ListLogtailPipelineConfigResponseBody} extends {@link TeaModel}
  *
  * <p>ListLogtailPipelineConfigResponseBody</p>
  */
 public class ListLogtailPipelineConfigResponseBody extends TeaModel {
-    @NameInMap("configs")
-    private java.util.List < String > configs;
+    @com.aliyun.core.annotation.NameInMap("configs")
+    private java.util.List<String> configs;
 
-    @NameInMap("count")
+    @com.aliyun.core.annotation.NameInMap("count")
     private Integer count;
 
-    @NameInMap("total")
+    @com.aliyun.core.annotation.NameInMap("total")
     private Integer total;
 
     private ListLogtailPipelineConfigResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ListLogtailPipelineConfigResponseBody extends TeaModel {
     /**
      * @return configs
      */
-    public java.util.List < String > getConfigs() {
+    public java.util.List<String> getConfigs() {
         return this.configs;
     }
 
@@ -57,20 +62,23 @@ public class ListLogtailPipelineConfigResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > configs; 
+        private java.util.List<String> configs; 
         private Integer count; 
         private Integer total; 
 
         /**
-         * configs.
+         * <p>The Logtail pipeline configurations that are returned on the current page.</p>
          */
-        public Builder configs(java.util.List < String > configs) {
+        public Builder configs(java.util.List<String> configs) {
             this.configs = configs;
             return this;
         }
 
         /**
-         * count.
+         * <p>The number of Logtail pipeline configurations that are returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -78,7 +86,10 @@ public class ListLogtailPipelineConfigResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of Logtail pipeline configurations in the current project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder total(Integer total) {
             this.total = total;

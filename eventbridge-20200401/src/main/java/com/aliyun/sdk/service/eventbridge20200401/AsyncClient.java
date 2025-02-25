@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.eventbridge20200401;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.eventbridge20200401.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -113,6 +114,14 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<EnableRuleResponse> enableRule(EnableRuleRequest request);
+
+    CompletableFuture<EventCenterCheckEnabledOnDefaultBusResponse> eventCenterCheckEnabledOnDefaultBus(EventCenterCheckEnabledOnDefaultBusRequest request);
+
+    CompletableFuture<EventCenterDisableOnDefaultBusResponse> eventCenterDisableOnDefaultBus(EventCenterDisableOnDefaultBusRequest request);
+
+    CompletableFuture<EventCenterEnableOnDefaultBusResponse> eventCenterEnableOnDefaultBus(EventCenterEnableOnDefaultBusRequest request);
+
+    CompletableFuture<EventCenterQueryEventsResponse> eventCenterQueryEvents(EventCenterQueryEventsRequest request);
 
     /**
       * You can call this API operation to query the information about an API destination.

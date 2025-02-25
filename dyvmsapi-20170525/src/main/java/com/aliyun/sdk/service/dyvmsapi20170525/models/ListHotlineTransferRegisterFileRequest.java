@@ -1,46 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHotlineTransferRegisterFileRequest} extends {@link RequestModel}
  *
  * <p>ListHotlineTransferRegisterFileRequest</p>
  */
 public class ListHotlineTransferRegisterFileRequest extends Request {
-    @Query
-    @NameInMap("HotlineNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HotlineNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hotlineNumber;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 1000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("QualificationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QualificationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String qualificationId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ListHotlineTransferRegisterFileRequest(Builder builder) {
@@ -129,19 +129,23 @@ public class ListHotlineTransferRegisterFileRequest extends Request {
             super();
         } 
 
-        private Builder(ListHotlineTransferRegisterFileRequest response) {
-            super(response);
-            this.hotlineNumber = response.hotlineNumber;
-            this.ownerId = response.ownerId;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.qualificationId = response.qualificationId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ListHotlineTransferRegisterFileRequest request) {
+            super(request);
+            this.hotlineNumber = request.hotlineNumber;
+            this.ownerId = request.ownerId;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.qualificationId = request.qualificationId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * HotlineNumber.
+         * <p>The China 400 number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400****</p>
          */
         public Builder hotlineNumber(String hotlineNumber) {
             this.putQueryParameter("HotlineNumber", hotlineNumber);
@@ -159,7 +163,10 @@ public class ListHotlineTransferRegisterFileRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -168,7 +175,10 @@ public class ListHotlineTransferRegisterFileRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: 1 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -177,7 +187,11 @@ public class ListHotlineTransferRegisterFileRequest extends Request {
         }
 
         /**
-         * QualificationId.
+         * <p>The qualification ID. You can call the <a href="https://help.aliyun.com/document_detail/393548.html">GetHotlineQualificationByOrder</a> operation to obtain the qualification ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000****</p>
          */
         public Builder qualificationId(String qualificationId) {
             this.putQueryParameter("QualificationId", qualificationId);

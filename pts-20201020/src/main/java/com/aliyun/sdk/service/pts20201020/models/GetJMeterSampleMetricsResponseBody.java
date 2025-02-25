@@ -122,7 +122,7 @@ public class GetJMeterSampleMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * 采样器聚合数据列表
+         * SampleMetricList.
          */
         public Builder sampleMetricList(java.util.List < String > sampleMetricList) {
             this.sampleMetricList = sampleMetricList;
@@ -130,7 +130,7 @@ public class GetJMeterSampleMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * 采样器列表，可根据该列表传递需要查询的采样器
+         * SamplerMap.
          */
         public Builder samplerMap(java.util.Map < String, ? > samplerMap) {
             this.samplerMap = samplerMap;

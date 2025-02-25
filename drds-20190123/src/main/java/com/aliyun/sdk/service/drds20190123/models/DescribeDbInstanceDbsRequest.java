@@ -102,17 +102,17 @@ public class DescribeDbInstanceDbsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDbInstanceDbsRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.dbInstType = response.dbInstType;
-            this.dbInstanceId = response.dbInstanceId;
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.password = response.password;
+        private Builder(DescribeDbInstanceDbsRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.dbInstType = request.dbInstType;
+            this.dbInstanceId = request.dbInstanceId;
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.password = request.password;
         } 
 
         /**
-         * AccountName.
+         * The name of the privileged account of the PolarDB-X 1.0 instance. You do not need to specify this parameter if you have no privileged account.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -121,7 +121,7 @@ public class DescribeDbInstanceDbsRequest extends Request {
         }
 
         /**
-         * DbInstType.
+         * The engine type of the storage-layer databases. Valid values: **POLARDB** and **RDS**.
          */
         public Builder dbInstType(String dbInstType) {
             this.putQueryParameter("DbInstType", dbInstType);
@@ -130,7 +130,7 @@ public class DescribeDbInstanceDbsRequest extends Request {
         }
 
         /**
-         * DbInstanceId.
+         * The ID of the instance in which the storage-layer databases are deployed.
          */
         public Builder dbInstanceId(String dbInstanceId) {
             this.putQueryParameter("DbInstanceId", dbInstanceId);
@@ -139,7 +139,7 @@ public class DescribeDbInstanceDbsRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the PolarDB-X 1.0 instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -148,7 +148,7 @@ public class DescribeDbInstanceDbsRequest extends Request {
         }
 
         /**
-         * Password.
+         * The password of the privileged account. You do not need to specify this parameter if you have no privileged account.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSecurityPreferenceResponseBody} extends {@link TeaModel}
  *
  * <p>GetSecurityPreferenceResponseBody</p>
  */
 public class GetSecurityPreferenceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecurityPreference")
+    @com.aliyun.core.annotation.NameInMap("SecurityPreference")
     private SecurityPreference securityPreference;
 
     private GetSecurityPreferenceResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         private SecurityPreference securityPreference; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30C9068D-FBAA-4998-9986-8A562FED0BC3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         }
 
         /**
-         * The details of security preferences.
+         * <p>The details of security preferences.</p>
          */
         public Builder securityPreference(SecurityPreference securityPreference) {
             this.securityPreference = securityPreference;
@@ -71,8 +79,14 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSecurityPreferenceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSecurityPreferenceResponseBody</p>
+     */
     public static class AccessKeyPreference extends TeaModel {
-        @NameInMap("AllowUserToManageAccessKeys")
+        @com.aliyun.core.annotation.NameInMap("AllowUserToManageAccessKeys")
         private Boolean allowUserToManageAccessKeys;
 
         private AccessKeyPreference(Builder builder) {
@@ -98,11 +112,14 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             private Boolean allowUserToManageAccessKeys; 
 
             /**
-             * Indicates whether RAM users can manage their AccessKey pairs. Valid values:
-             * <p>
+             * <p>Indicates whether RAM users can manage their AccessKey pairs. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder allowUserToManageAccessKeys(Boolean allowUserToManageAccessKeys) {
                 this.allowUserToManageAccessKeys = allowUserToManageAccessKeys;
@@ -116,27 +133,37 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSecurityPreferenceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSecurityPreferenceResponseBody</p>
+     */
     public static class LoginProfilePreference extends TeaModel {
-        @NameInMap("AllowUserToChangePassword")
+        @com.aliyun.core.annotation.NameInMap("AllowUserToChangePassword")
         private Boolean allowUserToChangePassword;
 
-        @NameInMap("EnableSaveMFATicket")
+        @com.aliyun.core.annotation.NameInMap("AllowUserToLoginWithPasskey")
+        private Boolean allowUserToLoginWithPasskey;
+
+        @com.aliyun.core.annotation.NameInMap("EnableSaveMFATicket")
         private Boolean enableSaveMFATicket;
 
-        @NameInMap("LoginNetworkMasks")
+        @com.aliyun.core.annotation.NameInMap("LoginNetworkMasks")
         private String loginNetworkMasks;
 
-        @NameInMap("LoginSessionDuration")
+        @com.aliyun.core.annotation.NameInMap("LoginSessionDuration")
         private Integer loginSessionDuration;
 
-        @NameInMap("MFAOperationForLogin")
+        @com.aliyun.core.annotation.NameInMap("MFAOperationForLogin")
         private String MFAOperationForLogin;
 
-        @NameInMap("OperationForRiskLogin")
+        @com.aliyun.core.annotation.NameInMap("OperationForRiskLogin")
         private String operationForRiskLogin;
 
         private LoginProfilePreference(Builder builder) {
             this.allowUserToChangePassword = builder.allowUserToChangePassword;
+            this.allowUserToLoginWithPasskey = builder.allowUserToLoginWithPasskey;
             this.enableSaveMFATicket = builder.enableSaveMFATicket;
             this.loginNetworkMasks = builder.loginNetworkMasks;
             this.loginSessionDuration = builder.loginSessionDuration;
@@ -157,6 +184,13 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
          */
         public Boolean getAllowUserToChangePassword() {
             return this.allowUserToChangePassword;
+        }
+
+        /**
+         * @return allowUserToLoginWithPasskey
+         */
+        public Boolean getAllowUserToLoginWithPasskey() {
+            return this.allowUserToLoginWithPasskey;
         }
 
         /**
@@ -196,6 +230,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean allowUserToChangePassword; 
+            private Boolean allowUserToLoginWithPasskey; 
             private Boolean enableSaveMFATicket; 
             private String loginNetworkMasks; 
             private Integer loginSessionDuration; 
@@ -203,11 +238,14 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             private String operationForRiskLogin; 
 
             /**
-             * Indicates whether RAM users can change their passwords. Valid values:
-             * <p>
+             * <p>Indicates whether RAM users can change their passwords. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder allowUserToChangePassword(Boolean allowUserToChangePassword) {
                 this.allowUserToChangePassword = allowUserToChangePassword;
@@ -215,11 +253,22 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether RAM users can remember the multi-factor authentication (MFA) devices for seven days. Valid values:
-             * <p>
+             * AllowUserToLoginWithPasskey.
+             */
+            public Builder allowUserToLoginWithPasskey(Boolean allowUserToLoginWithPasskey) {
+                this.allowUserToLoginWithPasskey = allowUserToLoginWithPasskey;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether RAM users can remember the multi-factor authentication (MFA) devices for seven days. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableSaveMFATicket(Boolean enableSaveMFATicket) {
                 this.enableSaveMFATicket = enableSaveMFATicket;
@@ -227,7 +276,10 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * The subnet mask.
+             * <p>The subnet mask.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.0.0/8</p>
              */
             public Builder loginNetworkMasks(String loginNetworkMasks) {
                 this.loginNetworkMasks = loginNetworkMasks;
@@ -235,7 +287,10 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * The validity period of the logon session of RAM users. Unit: hours.
+             * <p>The validity period of the logon session of RAM users. Unit: hours.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder loginSessionDuration(Integer loginSessionDuration) {
                 this.loginSessionDuration = loginSessionDuration;
@@ -243,12 +298,15 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether MFA is required for all RAM users when they log on to the Alibaba Cloud Management Console. Valid values:
-             * <p>
+             * <p>Indicates whether MFA is required for all RAM users when they log on to the Alibaba Cloud Management Console. Valid values:</p>
+             * <ul>
+             * <li>mandatory: MFA is required for all RAM users. If you use EnforceMFAForLogin, set the value to true.</li>
+             * <li>independent (default): User-specific settings are applied. If you use EnforceMFAForLogin, set the value to false.</li>
+             * <li>adaptive: MFA is required only for RAM users who initiated unusual logons.</li>
+             * </ul>
              * 
-             * *   mandatory: MFA is required for all RAM users. If you use EnforceMFAForLogin, set the value to true.
-             * *   independent (default): User-specific settings are applied. If you use EnforceMFAForLogin, set the value to false.
-             * *   adaptive: MFA is required only for RAM users who initiated unusual logons.
+             * <strong>example:</strong>
+             * <p>adaptive</p>
              */
             public Builder MFAOperationForLogin(String MFAOperationForLogin) {
                 this.MFAOperationForLogin = MFAOperationForLogin;
@@ -256,11 +314,14 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether to enable MFA for RAM users who initiated unusual logons. Valid values:
-             * <p>
+             * <p>Indicates whether to enable MFA for RAM users who initiated unusual logons. Valid values:</p>
+             * <ul>
+             * <li>autonomous (default): yes. MFA is prompted for RAM users who initiated unusual logons. However, the RAM users are allowed to skip MFA.</li>
+             * <li>enforceVerify: MFA is prompted for RAM users who initiated unusual logons and the RAM users cannot skip MFA.</li>
+             * </ul>
              * 
-             * *   autonomous (default): yes. MFA is prompted for RAM users who initiated unusual logons. However, the RAM users are allowed to skip MFA.
-             * *   enforceVerify: MFA is prompted for RAM users who initiated unusual logons and the RAM users cannot skip MFA.
+             * <strong>example:</strong>
+             * <p>autonomous</p>
              */
             public Builder operationForRiskLogin(String operationForRiskLogin) {
                 this.operationForRiskLogin = operationForRiskLogin;
@@ -274,8 +335,14 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSecurityPreferenceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSecurityPreferenceResponseBody</p>
+     */
     public static class MFAPreference extends TeaModel {
-        @NameInMap("AllowUserToManageMFADevices")
+        @com.aliyun.core.annotation.NameInMap("AllowUserToManageMFADevices")
         private Boolean allowUserToManageMFADevices;
 
         private MFAPreference(Builder builder) {
@@ -301,11 +368,14 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             private Boolean allowUserToManageMFADevices; 
 
             /**
-             * Indicates whether RAM users can manage their MFA devices. Valid values:
-             * <p>
+             * <p>Indicates whether RAM users can manage their MFA devices. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder allowUserToManageMFADevices(Boolean allowUserToManageMFADevices) {
                 this.allowUserToManageMFADevices = allowUserToManageMFADevices;
@@ -319,8 +389,81 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSecurityPreferenceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSecurityPreferenceResponseBody</p>
+     */
+    public static class MaxIdleDays extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MaxIdleDaysForAccessKeys")
+        private Integer maxIdleDaysForAccessKeys;
+
+        @com.aliyun.core.annotation.NameInMap("MaxIdleDaysForUsers")
+        private Integer maxIdleDaysForUsers;
+
+        private MaxIdleDays(Builder builder) {
+            this.maxIdleDaysForAccessKeys = builder.maxIdleDaysForAccessKeys;
+            this.maxIdleDaysForUsers = builder.maxIdleDaysForUsers;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MaxIdleDays create() {
+            return builder().build();
+        }
+
+        /**
+         * @return maxIdleDaysForAccessKeys
+         */
+        public Integer getMaxIdleDaysForAccessKeys() {
+            return this.maxIdleDaysForAccessKeys;
+        }
+
+        /**
+         * @return maxIdleDaysForUsers
+         */
+        public Integer getMaxIdleDaysForUsers() {
+            return this.maxIdleDaysForUsers;
+        }
+
+        public static final class Builder {
+            private Integer maxIdleDaysForAccessKeys; 
+            private Integer maxIdleDaysForUsers; 
+
+            /**
+             * MaxIdleDaysForAccessKeys.
+             */
+            public Builder maxIdleDaysForAccessKeys(Integer maxIdleDaysForAccessKeys) {
+                this.maxIdleDaysForAccessKeys = maxIdleDaysForAccessKeys;
+                return this;
+            }
+
+            /**
+             * MaxIdleDaysForUsers.
+             */
+            public Builder maxIdleDaysForUsers(Integer maxIdleDaysForUsers) {
+                this.maxIdleDaysForUsers = maxIdleDaysForUsers;
+                return this;
+            }
+
+            public MaxIdleDays build() {
+                return new MaxIdleDays(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetSecurityPreferenceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSecurityPreferenceResponseBody</p>
+     */
     public static class PersonalInfoPreference extends TeaModel {
-        @NameInMap("AllowUserToManagePersonalDingTalk")
+        @com.aliyun.core.annotation.NameInMap("AllowUserToManagePersonalDingTalk")
         private Boolean allowUserToManagePersonalDingTalk;
 
         private PersonalInfoPreference(Builder builder) {
@@ -346,11 +489,14 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             private Boolean allowUserToManagePersonalDingTalk; 
 
             /**
-             * Indicates whether RAM users can manage their personal DingTalk accounts, such as binding and unbinding of the accounts. Valid values:
-             * <p>
+             * <p>Indicates whether RAM users can manage their personal DingTalk accounts, such as binding and unbinding of the accounts. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder allowUserToManagePersonalDingTalk(Boolean allowUserToManagePersonalDingTalk) {
                 this.allowUserToManagePersonalDingTalk = allowUserToManagePersonalDingTalk;
@@ -364,9 +510,15 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSecurityPreferenceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSecurityPreferenceResponseBody</p>
+     */
     public static class VerificationPreference extends TeaModel {
-        @NameInMap("VerificationTypes")
-        private java.util.List < String > verificationTypes;
+        @com.aliyun.core.annotation.NameInMap("VerificationTypes")
+        private java.util.List<String> verificationTypes;
 
         private VerificationPreference(Builder builder) {
             this.verificationTypes = builder.verificationTypes;
@@ -383,17 +535,17 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         /**
          * @return verificationTypes
          */
-        public java.util.List < String > getVerificationTypes() {
+        public java.util.List<String> getVerificationTypes() {
             return this.verificationTypes;
         }
 
         public static final class Builder {
-            private java.util.List < String > verificationTypes; 
+            private java.util.List<String> verificationTypes; 
 
             /**
-             * The MFA methods.
+             * <p>The MFA methods.</p>
              */
-            public Builder verificationTypes(java.util.List < String > verificationTypes) {
+            public Builder verificationTypes(java.util.List<String> verificationTypes) {
                 this.verificationTypes = verificationTypes;
                 return this;
             }
@@ -405,26 +557,36 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSecurityPreferenceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSecurityPreferenceResponseBody</p>
+     */
     public static class SecurityPreference extends TeaModel {
-        @NameInMap("AccessKeyPreference")
+        @com.aliyun.core.annotation.NameInMap("AccessKeyPreference")
         private AccessKeyPreference accessKeyPreference;
 
-        @NameInMap("LoginProfilePreference")
+        @com.aliyun.core.annotation.NameInMap("LoginProfilePreference")
         private LoginProfilePreference loginProfilePreference;
 
-        @NameInMap("MFAPreference")
+        @com.aliyun.core.annotation.NameInMap("MFAPreference")
         private MFAPreference MFAPreference;
 
-        @NameInMap("PersonalInfoPreference")
+        @com.aliyun.core.annotation.NameInMap("MaxIdleDays")
+        private MaxIdleDays maxIdleDays;
+
+        @com.aliyun.core.annotation.NameInMap("PersonalInfoPreference")
         private PersonalInfoPreference personalInfoPreference;
 
-        @NameInMap("VerificationPreference")
+        @com.aliyun.core.annotation.NameInMap("VerificationPreference")
         private VerificationPreference verificationPreference;
 
         private SecurityPreference(Builder builder) {
             this.accessKeyPreference = builder.accessKeyPreference;
             this.loginProfilePreference = builder.loginProfilePreference;
             this.MFAPreference = builder.MFAPreference;
+            this.maxIdleDays = builder.maxIdleDays;
             this.personalInfoPreference = builder.personalInfoPreference;
             this.verificationPreference = builder.verificationPreference;
         }
@@ -459,6 +621,13 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxIdleDays
+         */
+        public MaxIdleDays getMaxIdleDays() {
+            return this.maxIdleDays;
+        }
+
+        /**
          * @return personalInfoPreference
          */
         public PersonalInfoPreference getPersonalInfoPreference() {
@@ -476,11 +645,12 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             private AccessKeyPreference accessKeyPreference; 
             private LoginProfilePreference loginProfilePreference; 
             private MFAPreference MFAPreference; 
+            private MaxIdleDays maxIdleDays; 
             private PersonalInfoPreference personalInfoPreference; 
             private VerificationPreference verificationPreference; 
 
             /**
-             * The AccessKey pair preference.
+             * <p>The AccessKey pair preference.</p>
              */
             public Builder accessKeyPreference(AccessKeyPreference accessKeyPreference) {
                 this.accessKeyPreference = accessKeyPreference;
@@ -488,7 +658,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * The logon preference.
+             * <p>The logon preference.</p>
              */
             public Builder loginProfilePreference(LoginProfilePreference loginProfilePreference) {
                 this.loginProfilePreference = loginProfilePreference;
@@ -496,7 +666,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * The MFA preference.
+             * <p>The MFA preference.</p>
              */
             public Builder MFAPreference(MFAPreference MFAPreference) {
                 this.MFAPreference = MFAPreference;
@@ -504,7 +674,15 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * The personal information preference.
+             * MaxIdleDays.
+             */
+            public Builder maxIdleDays(MaxIdleDays maxIdleDays) {
+                this.maxIdleDays = maxIdleDays;
+                return this;
+            }
+
+            /**
+             * <p>The personal information preference.</p>
              */
             public Builder personalInfoPreference(PersonalInfoPreference personalInfoPreference) {
                 this.personalInfoPreference = personalInfoPreference;
@@ -512,7 +690,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * The MFA method preference.
+             * <p>The MFA method preference.</p>
              */
             public Builder verificationPreference(VerificationPreference verificationPreference) {
                 this.verificationPreference = verificationPreference;

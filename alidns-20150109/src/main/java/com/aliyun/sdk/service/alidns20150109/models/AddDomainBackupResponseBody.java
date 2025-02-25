@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddDomainBackupResponseBody} extends {@link TeaModel}
  *
  * <p>AddDomainBackupResponseBody</p>
  */
 public class AddDomainBackupResponseBody extends TeaModel {
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("PeriodType")
+    @com.aliyun.core.annotation.NameInMap("PeriodType")
     private String periodType;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AddDomainBackupResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class AddDomainBackupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The domain name.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.aliyun.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -70,7 +78,10 @@ public class AddDomainBackupResponseBody extends TeaModel {
         }
 
         /**
-         * The backup cycle.
+         * <p>The backup cycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DAY</p>
          */
         public Builder periodType(String periodType) {
             this.periodType = periodType;
@@ -78,7 +89,10 @@ public class AddDomainBackupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FD552816-FCC8-4832-B4A2-2DA0C2BA1688</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

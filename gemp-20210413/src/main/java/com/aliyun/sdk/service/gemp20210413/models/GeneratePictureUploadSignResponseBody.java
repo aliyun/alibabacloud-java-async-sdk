@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GeneratePictureUploadSignResponseBody</p>
  */
 public class GeneratePictureUploadSignResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private GeneratePictureUploadSignResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class GeneratePictureUploadSignResponseBody extends TeaModel {
     } 
 
     public static class Files extends TeaModel {
-        @NameInMap("fileName")
+        @com.aliyun.core.annotation.NameInMap("fileName")
         private String fileName;
 
-        @NameInMap("fileSize")
+        @com.aliyun.core.annotation.NameInMap("fileSize")
         private Long fileSize;
 
-        @NameInMap("fileType")
+        @com.aliyun.core.annotation.NameInMap("fileType")
         private String fileType;
 
-        @NameInMap("key")
+        @com.aliyun.core.annotation.NameInMap("key")
         private String key;
 
         private Files(Builder builder) {
@@ -173,22 +172,22 @@ public class GeneratePictureUploadSignResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("accessKeyId")
+        @com.aliyun.core.annotation.NameInMap("accessKeyId")
         private String accessKeyId;
 
-        @NameInMap("bucketName")
+        @com.aliyun.core.annotation.NameInMap("bucketName")
         private String bucketName;
 
-        @NameInMap("files")
+        @com.aliyun.core.annotation.NameInMap("files")
         private java.util.List < Files> files;
 
-        @NameInMap("policy")
+        @com.aliyun.core.annotation.NameInMap("policy")
         private String policy;
 
-        @NameInMap("signature")
+        @com.aliyun.core.annotation.NameInMap("signature")
         private String signature;
 
-        @NameInMap("url")
+        @com.aliyun.core.annotation.NameInMap("url")
         private String url;
 
         private Data(Builder builder) {

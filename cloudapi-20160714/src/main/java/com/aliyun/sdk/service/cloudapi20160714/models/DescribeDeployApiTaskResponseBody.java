@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDeployApiTaskResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDeployApiTaskResponseBody</p>
  */
 public class DescribeDeployApiTaskResponseBody extends TeaModel {
-    @NameInMap("DeployedResults")
+    @com.aliyun.core.annotation.NameInMap("DeployedResults")
     private DeployedResults deployedResults;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDeployApiTaskResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeDeployApiTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DeployedResults.
+         * <p>The returned result.</p>
          */
         public Builder deployedResults(DeployedResults deployedResults) {
             this.deployedResults = deployedResults;
@@ -58,7 +63,10 @@ public class DescribeDeployApiTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CA4B3261-F14A-5E33-8608-F75A1DF27AD4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +79,26 @@ public class DescribeDeployApiTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDeployApiTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDeployApiTaskResponseBody</p>
+     */
     public static class DeployedResult extends TeaModel {
-        @NameInMap("ApiUid")
+        @com.aliyun.core.annotation.NameInMap("ApiUid")
         private String apiUid;
 
-        @NameInMap("DeployedStatus")
+        @com.aliyun.core.annotation.NameInMap("DeployedStatus")
         private String deployedStatus;
 
-        @NameInMap("ErrorMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("StageName")
+        @com.aliyun.core.annotation.NameInMap("StageName")
         private String stageName;
 
         private DeployedResult(Builder builder) {
@@ -146,7 +160,10 @@ public class DescribeDeployApiTaskResponseBody extends TeaModel {
             private String stageName; 
 
             /**
-             * ApiUid.
+             * <p>The ID of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0433c1cd84724923b7a4f9ca1cfc249c</p>
              */
             public Builder apiUid(String apiUid) {
                 this.apiUid = apiUid;
@@ -154,7 +171,10 @@ public class DescribeDeployApiTaskResponseBody extends TeaModel {
             }
 
             /**
-             * DeployedStatus.
+             * <p>The deployment status of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OVER</p>
              */
             public Builder deployedStatus(String deployedStatus) {
                 this.deployedStatus = deployedStatus;
@@ -162,7 +182,10 @@ public class DescribeDeployApiTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMsg.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success. Request Success.</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -170,7 +193,10 @@ public class DescribeDeployApiTaskResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * <p>The ID of the API group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e8da6f6346184da9a30d0dc1888b1f3b</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -178,7 +204,14 @@ public class DescribeDeployApiTaskResponseBody extends TeaModel {
             }
 
             /**
-             * StageName.
+             * <p>The runtime environment of the API. Valid values:</p>
+             * <ul>
+             * <li><strong>RELEASE</strong></li>
+             * <li><strong>TEST</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RELEASE</p>
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
@@ -192,9 +225,15 @@ public class DescribeDeployApiTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDeployApiTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDeployApiTaskResponseBody</p>
+     */
     public static class DeployedResults extends TeaModel {
-        @NameInMap("DeployedResult")
-        private java.util.List < DeployedResult> deployedResult;
+        @com.aliyun.core.annotation.NameInMap("DeployedResult")
+        private java.util.List<DeployedResult> deployedResult;
 
         private DeployedResults(Builder builder) {
             this.deployedResult = builder.deployedResult;
@@ -211,17 +250,17 @@ public class DescribeDeployApiTaskResponseBody extends TeaModel {
         /**
          * @return deployedResult
          */
-        public java.util.List < DeployedResult> getDeployedResult() {
+        public java.util.List<DeployedResult> getDeployedResult() {
             return this.deployedResult;
         }
 
         public static final class Builder {
-            private java.util.List < DeployedResult> deployedResult; 
+            private java.util.List<DeployedResult> deployedResult; 
 
             /**
              * DeployedResult.
              */
-            public Builder deployedResult(java.util.List < DeployedResult> deployedResult) {
+            public Builder deployedResult(java.util.List<DeployedResult> deployedResult) {
                 this.deployedResult = deployedResult;
                 return this;
             }

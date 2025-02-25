@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTaskErrorLogResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTaskErrorLogResponseBody</p>
  */
 public class DescribeTaskErrorLogResponseBody extends TeaModel {
-    @NameInMap("Logs")
-    private java.util.List < Logs> logs;
+    @com.aliyun.core.annotation.NameInMap("Logs")
+    private java.util.List<Logs> logs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeTaskErrorLogResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeTaskErrorLogResponseBody extends TeaModel {
     /**
      * @return logs
      */
-    public java.util.List < Logs> getLogs() {
+    public java.util.List<Logs> getLogs() {
         return this.logs;
     }
 
@@ -46,19 +51,22 @@ public class DescribeTaskErrorLogResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Logs> logs; 
+        private java.util.List<Logs> logs; 
         private String requestId; 
 
         /**
-         * An array that consists of the error logs.
+         * <p>An array that consists of the error logs.</p>
          */
-        public Builder logs(java.util.List < Logs> logs) {
+        public Builder logs(java.util.List<Logs> logs) {
             this.logs = logs;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F929E952-EBFC-56C3-BD35-BF8B59024C69</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,8 +79,14 @@ public class DescribeTaskErrorLogResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTaskErrorLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTaskErrorLogResponseBody</p>
+     */
     public static class Logs extends TeaModel {
-        @NameInMap("Text")
+        @com.aliyun.core.annotation.NameInMap("Text")
         private String text;
 
         private Logs(Builder builder) {
@@ -98,7 +112,10 @@ public class DescribeTaskErrorLogResponseBody extends TeaModel {
             private String text; 
 
             /**
-             * The text content of the log.
+             * <p>The text content of the log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mv: cannot move &quot;CentOS-Base.repo&quot; to &quot;CentOS-Base.repo.backup&quot;: Permission denied</p>
              */
             public Builder text(String text) {
                 this.text = text;

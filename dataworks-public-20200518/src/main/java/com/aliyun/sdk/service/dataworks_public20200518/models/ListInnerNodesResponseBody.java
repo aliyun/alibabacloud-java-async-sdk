@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInnerNodesResponseBody} extends {@link TeaModel}
  *
  * <p>ListInnerNodesResponseBody</p>
  */
 public class ListInnerNodesResponseBody extends TeaModel {
-    @NameInMap("Paging")
+    @com.aliyun.core.annotation.NameInMap("Paging")
     private Paging paging;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListInnerNodesResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class ListInnerNodesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The page number of the returned page.
+         * <p>The pagination information.</p>
          */
         public Builder paging(Paging paging) {
             this.paging = paging;
@@ -70,7 +75,10 @@ public class ListInnerNodesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E6F0DBDD-5AD****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class ListInnerNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The paging information.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -91,59 +102,65 @@ public class ListInnerNodesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInnerNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInnerNodesResponseBody</p>
+     */
     public static class Nodes extends TeaModel {
-        @NameInMap("BaselineId")
+        @com.aliyun.core.annotation.NameInMap("BaselineId")
         private Long baselineId;
 
-        @NameInMap("BusinessId")
+        @com.aliyun.core.annotation.NameInMap("BusinessId")
         private Long businessId;
 
-        @NameInMap("Connection")
+        @com.aliyun.core.annotation.NameInMap("Connection")
         private String connection;
 
-        @NameInMap("CronExpress")
+        @com.aliyun.core.annotation.NameInMap("CronExpress")
         private String cronExpress;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DqcDescription")
+        @com.aliyun.core.annotation.NameInMap("DqcDescription")
         private String dqcDescription;
 
-        @NameInMap("DqcType")
+        @com.aliyun.core.annotation.NameInMap("DqcType")
         private String dqcType;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
-        @NameInMap("ParamValues")
+        @com.aliyun.core.annotation.NameInMap("ParamValues")
         private String paramValues;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("ProgramType")
+        @com.aliyun.core.annotation.NameInMap("ProgramType")
         private String programType;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
-        @NameInMap("RepeatInterval")
+        @com.aliyun.core.annotation.NameInMap("RepeatInterval")
         private Long repeatInterval;
 
-        @NameInMap("Repeatability")
+        @com.aliyun.core.annotation.NameInMap("Repeatability")
         private Boolean repeatability;
 
-        @NameInMap("ResGroupName")
+        @com.aliyun.core.annotation.NameInMap("ResGroupName")
         private String resGroupName;
 
-        @NameInMap("SchedulerType")
+        @com.aliyun.core.annotation.NameInMap("SchedulerType")
         private String schedulerType;
 
         private Nodes(Builder builder) {
@@ -322,7 +339,10 @@ public class ListInnerNodesResponseBody extends TeaModel {
             private String schedulerType; 
 
             /**
-             * The description of the inner node.
+             * <p>The baseline ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder baselineId(Long baselineId) {
                 this.baselineId = baselineId;
@@ -330,7 +350,10 @@ public class ListInnerNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The table and partition filter expression in Data Quality that are associated with the inner node.
+             * <p>The workflow ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder businessId(Long businessId) {
                 this.businessId = businessId;
@@ -338,7 +361,10 @@ public class ListInnerNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The values of other parameters related to the inner node.
+             * <p>The connection string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps_first</p>
              */
             public Builder connection(String connection) {
                 this.connection = connection;
@@ -346,7 +372,10 @@ public class ListInnerNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the inner node.
+             * <p>The CRON expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00 00 00 * * ?</p>
              */
             public Builder cronExpress(String cronExpress) {
                 this.cronExpress = cronExpress;
@@ -354,7 +383,10 @@ public class ListInnerNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the inner node.
+             * <p>The description of the inner node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -362,7 +394,10 @@ public class ListInnerNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The cron expression.
+             * <p>The table and partition filter expression in Data Quality that are associated with the inner node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;projectName&quot;:&quot;ztjy_dim&quot;,&quot;tableName&quot;:&quot;dim_user_agent_manage_area_a&quot;,&quot;partition&quot;:&quot;ds\u003d$[yyyy-mm-dd-1]&quot;}]</p>
              */
             public Builder dqcDescription(String dqcDescription) {
                 this.dqcDescription = dqcDescription;
@@ -370,7 +405,10 @@ public class ListInnerNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the baseline with which the inner node is associated.
+             * <p>Indicates whether the inner node is associated with a monitoring rule in Data Quality. Valid values: 0 and 1. The value 0 indicates that the inner node is associated with a monitoring rule in Data Quality. The value 1 indicates that the inner node is not associated with a monitoring rule in Data Quality.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder dqcType(String dqcType) {
                 this.dqcType = dqcType;
@@ -378,7 +416,10 @@ public class ListInnerNodesResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The inner node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -386,7 +427,10 @@ public class ListInnerNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource group.
+             * <p>The name of the inner node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liux_test_n****</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -394,7 +438,10 @@ public class ListInnerNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The connection string.
+             * <p>The owner ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1933****36551</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -402,7 +449,10 @@ public class ListInnerNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the node is associated with Data Quality. Valid values: 0 and 1. The value 0 indicates that the node is associated with Data Quality. The value 1 indicates that the node is not associated with Data Quality.
+             * <p>The additional parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a=b</p>
              */
             public Builder paramValues(String paramValues) {
                 this.paramValues = paramValues;
@@ -410,7 +460,10 @@ public class ListInnerNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the owner of the inner node.
+             * <p>The priority of the inner node. Valid values: 1, 3, 5, 7, and 8.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -418,7 +471,10 @@ public class ListInnerNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the inner node. Valid values: 1, 3, 5, 7, and 8.
+             * <p>The type of the inner node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ODPS_SQL</p>
              */
             public Builder programType(String programType) {
                 this.programType = programType;
@@ -426,7 +482,10 @@ public class ListInnerNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the inner node.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -434,7 +493,10 @@ public class ListInnerNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the inner node can be rerun.
+             * <p>The interval at which the inner node is rerun after the inner node fails to run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder repeatInterval(Long repeatInterval) {
                 this.repeatInterval = repeatInterval;
@@ -442,7 +504,10 @@ public class ListInnerNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace.
+             * <p>Indicates whether the inner node can be rerun.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder repeatability(Boolean repeatability) {
                 this.repeatability = repeatability;
@@ -450,7 +515,10 @@ public class ListInnerNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workflow.
+             * <p>The name of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default Resource Group</p>
              */
             public Builder resGroupName(String resGroupName) {
                 this.resGroupName = resGroupName;
@@ -458,7 +526,16 @@ public class ListInnerNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The interval at which the inner node is rerun after the inner node fails to be run.
+             * <p>The scheduling type of the inner node. Valid values:</p>
+             * <ul>
+             * <li>NORMAL: The inner node is an auto triggered node.</li>
+             * <li>MANUAL: The inner node is a manually triggered node. The scheduling system does not run the node on a regular basis.</li>
+             * <li>PAUSE: The inner node is a paused node.</li>
+             * <li>SKIP: The inner node is a dry-run node. Dry-run nodes are started as scheduled, but the scheduling system sets the status of the nodes to successful when it starts to run them.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder schedulerType(String schedulerType) {
                 this.schedulerType = schedulerType;
@@ -472,17 +549,23 @@ public class ListInnerNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInnerNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInnerNodesResponseBody</p>
+     */
     public static class Paging extends TeaModel {
-        @NameInMap("Nodes")
-        private java.util.List < Nodes> nodes;
+        @com.aliyun.core.annotation.NameInMap("Nodes")
+        private java.util.List<Nodes> nodes;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Paging(Builder builder) {
@@ -503,7 +586,7 @@ public class ListInnerNodesResponseBody extends TeaModel {
         /**
          * @return nodes
          */
-        public java.util.List < Nodes> getNodes() {
+        public java.util.List<Nodes> getNodes() {
             return this.nodes;
         }
 
@@ -529,27 +612,24 @@ public class ListInnerNodesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Nodes> nodes; 
+            private java.util.List<Nodes> nodes; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
 
             /**
-             * The scheduling type of the inner node. Valid values:
-             * <p>
-             * 
-             * *   NORMAL: The inner node is an auto triggered node.
-             * *   MANUAL: The inner node is a manually triggered node. Manually triggered nodes cannot be automatically triggered.
-             * *   PAUSE: The inner node is a paused node.
-             * *   SKIP: The inner node is a dry-run node. Dry-run nodes are started as scheduled but the scheduling system sets the status of the nodes to succeeded when the scheduling system starts to run the nodes.
+             * <p>The list of inner nodes.</p>
              */
-            public Builder nodes(java.util.List < Nodes> nodes) {
+            public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
                 return this;
             }
 
             /**
-             * The number of entries returned per page. Default value: 10. Maximum value: 100.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -557,7 +637,10 @@ public class ListInnerNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of inner nodes returned.
+             * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -565,7 +648,10 @@ public class ListInnerNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The list of inner nodes.
+             * <p>The total number of inner nodes returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

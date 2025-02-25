@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccountAuthorityResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAccountAuthorityResponseBody</p>
  */
 public class DescribeAccountAuthorityResponseBody extends TeaModel {
-    @NameInMap("AccountName")
+    @com.aliyun.core.annotation.NameInMap("AccountName")
     private String accountName;
 
-    @NameInMap("AllowDatabases")
-    private java.util.List < String > allowDatabases;
+    @com.aliyun.core.annotation.NameInMap("AllowDatabases")
+    private java.util.List<String> allowDatabases;
 
-    @NameInMap("AllowDictionaries")
-    private java.util.List < String > allowDictionaries;
+    @com.aliyun.core.annotation.NameInMap("AllowDictionaries")
+    private java.util.List<String> allowDictionaries;
 
-    @NameInMap("DdlAuthority")
+    @com.aliyun.core.annotation.NameInMap("DdlAuthority")
     private Boolean ddlAuthority;
 
-    @NameInMap("DmlAuthority")
+    @com.aliyun.core.annotation.NameInMap("DmlAuthority")
     private String dmlAuthority;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalDatabases")
-    private java.util.List < String > totalDatabases;
+    @com.aliyun.core.annotation.NameInMap("TotalDatabases")
+    private java.util.List<String> totalDatabases;
 
-    @NameInMap("TotalDictionaries")
-    private java.util.List < String > totalDictionaries;
+    @com.aliyun.core.annotation.NameInMap("TotalDictionaries")
+    private java.util.List<String> totalDictionaries;
 
     private DescribeAccountAuthorityResponseBody(Builder builder) {
         this.accountName = builder.accountName;
@@ -65,14 +70,14 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
     /**
      * @return allowDatabases
      */
-    public java.util.List < String > getAllowDatabases() {
+    public java.util.List<String> getAllowDatabases() {
         return this.allowDatabases;
     }
 
     /**
      * @return allowDictionaries
      */
-    public java.util.List < String > getAllowDictionaries() {
+    public java.util.List<String> getAllowDictionaries() {
         return this.allowDictionaries;
     }
 
@@ -100,29 +105,32 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
     /**
      * @return totalDatabases
      */
-    public java.util.List < String > getTotalDatabases() {
+    public java.util.List<String> getTotalDatabases() {
         return this.totalDatabases;
     }
 
     /**
      * @return totalDictionaries
      */
-    public java.util.List < String > getTotalDictionaries() {
+    public java.util.List<String> getTotalDictionaries() {
         return this.totalDictionaries;
     }
 
     public static final class Builder {
         private String accountName; 
-        private java.util.List < String > allowDatabases; 
-        private java.util.List < String > allowDictionaries; 
+        private java.util.List<String> allowDatabases; 
+        private java.util.List<String> allowDictionaries; 
         private Boolean ddlAuthority; 
         private String dmlAuthority; 
         private String requestId; 
-        private java.util.List < String > totalDatabases; 
-        private java.util.List < String > totalDictionaries; 
+        private java.util.List<String> totalDatabases; 
+        private java.util.List<String> totalDictionaries; 
 
         /**
-         * AccountName.
+         * <p>The name of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder accountName(String accountName) {
             this.accountName = accountName;
@@ -130,23 +138,30 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         }
 
         /**
-         * AllowDatabases.
+         * <p>Databases to which permissions have been granted.</p>
          */
-        public Builder allowDatabases(java.util.List < String > allowDatabases) {
+        public Builder allowDatabases(java.util.List<String> allowDatabases) {
             this.allowDatabases = allowDatabases;
             return this;
         }
 
         /**
-         * AllowDictionaries.
+         * <p>Dictionaries to which permissions have been granted.</p>
          */
-        public Builder allowDictionaries(java.util.List < String > allowDictionaries) {
+        public Builder allowDictionaries(java.util.List<String> allowDictionaries) {
             this.allowDictionaries = allowDictionaries;
             return this;
         }
 
         /**
-         * DdlAuthority.
+         * <p>Indicates whether the database account has DDL permissions. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: has DDL permissions.</li>
+         * <li><strong>false</strong>: does not have DDL permissions.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ddlAuthority(Boolean ddlAuthority) {
             this.ddlAuthority = ddlAuthority;
@@ -154,7 +169,14 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         }
 
         /**
-         * DmlAuthority.
+         * <p>Indicates whether the database account has DML permissions. Valid values:</p>
+         * <ul>
+         * <li><strong>all</strong></li>
+         * <li><strong>readOnly,modify</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder dmlAuthority(String dmlAuthority) {
             this.dmlAuthority = dmlAuthority;
@@ -162,7 +184,10 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F5178C10-1407-4987-9133-DE4DC9119F75</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,17 +195,17 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         }
 
         /**
-         * TotalDatabases.
+         * <p>All databases.</p>
          */
-        public Builder totalDatabases(java.util.List < String > totalDatabases) {
+        public Builder totalDatabases(java.util.List<String> totalDatabases) {
             this.totalDatabases = totalDatabases;
             return this;
         }
 
         /**
-         * TotalDictionaries.
+         * <p>All dictionaries.</p>
          */
-        public Builder totalDictionaries(java.util.List < String > totalDictionaries) {
+        public Builder totalDictionaries(java.util.List<String> totalDictionaries) {
             this.totalDictionaries = totalDictionaries;
             return this;
         }

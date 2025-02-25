@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListIvrTrackingDetailsResponseBody} extends {@link TeaModel}
  *
  * <p>ListIvrTrackingDetailsResponseBody</p>
  */
 public class ListIvrTrackingDetailsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListIvrTrackingDetailsResponseBody(Builder builder) {
@@ -131,54 +136,60 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListIvrTrackingDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIvrTrackingDetailsResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("Callee")
+        @com.aliyun.core.annotation.NameInMap("Callee")
         private String callee;
 
-        @NameInMap("Caller")
+        @com.aliyun.core.annotation.NameInMap("Caller")
         private String caller;
 
-        @NameInMap("ChannelId")
+        @com.aliyun.core.annotation.NameInMap("ChannelId")
         private String channelId;
 
-        @NameInMap("ChannelVariables")
+        @com.aliyun.core.annotation.NameInMap("ChannelVariables")
         private String channelVariables;
 
-        @NameInMap("ContactId")
+        @com.aliyun.core.annotation.NameInMap("ContactId")
         private String contactId;
 
-        @NameInMap("EnterTime")
+        @com.aliyun.core.annotation.NameInMap("EnterTime")
         private Long enterTime;
 
-        @NameInMap("FlowId")
+        @com.aliyun.core.annotation.NameInMap("FlowId")
         private String flowId;
 
-        @NameInMap("FlowName")
+        @com.aliyun.core.annotation.NameInMap("FlowName")
         private String flowName;
 
-        @NameInMap("Instance")
+        @com.aliyun.core.annotation.NameInMap("Instance")
         private String instance;
 
-        @NameInMap("LeaveTime")
+        @com.aliyun.core.annotation.NameInMap("LeaveTime")
         private Long leaveTime;
 
-        @NameInMap("NodeExitCode")
+        @com.aliyun.core.annotation.NameInMap("NodeExitCode")
         private String nodeExitCode;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("NodeProperties")
-        private java.util.Map < String, ? > nodeProperties;
+        @com.aliyun.core.annotation.NameInMap("NodeProperties")
+        private java.util.Map<String, ?> nodeProperties;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
-        @NameInMap("NodeVariables")
-        private java.util.Map < String, ? > nodeVariables;
+        @com.aliyun.core.annotation.NameInMap("NodeVariables")
+        private java.util.Map<String, ?> nodeVariables;
 
         private List(Builder builder) {
             this.callee = builder.callee;
@@ -301,7 +312,7 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
         /**
          * @return nodeProperties
          */
-        public java.util.Map < String, ? > getNodeProperties() {
+        public java.util.Map<String, ?> getNodeProperties() {
             return this.nodeProperties;
         }
 
@@ -315,7 +326,7 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
         /**
          * @return nodeVariables
          */
-        public java.util.Map < String, ? > getNodeVariables() {
+        public java.util.Map<String, ?> getNodeVariables() {
             return this.nodeVariables;
         }
 
@@ -333,9 +344,9 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
             private String nodeExitCode; 
             private String nodeId; 
             private String nodeName; 
-            private java.util.Map < String, ? > nodeProperties; 
+            private java.util.Map<String, ?> nodeProperties; 
             private String nodeType; 
-            private java.util.Map < String, ? > nodeVariables; 
+            private java.util.Map<String, ?> nodeVariables; 
 
             /**
              * Callee.
@@ -444,7 +455,7 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
             /**
              * NodeProperties.
              */
-            public Builder nodeProperties(java.util.Map < String, ? > nodeProperties) {
+            public Builder nodeProperties(java.util.Map<String, ?> nodeProperties) {
                 this.nodeProperties = nodeProperties;
                 return this;
             }
@@ -460,7 +471,7 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
             /**
              * NodeVariables.
              */
-            public Builder nodeVariables(java.util.Map < String, ? > nodeVariables) {
+            public Builder nodeVariables(java.util.Map<String, ?> nodeVariables) {
                 this.nodeVariables = nodeVariables;
                 return this;
             }
@@ -472,17 +483,23 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListIvrTrackingDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIvrTrackingDetailsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("List")
-        private java.util.List < List> list;
+        @com.aliyun.core.annotation.NameInMap("List")
+        private java.util.List<List> list;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {
@@ -503,7 +520,7 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -529,7 +546,7 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -537,7 +554,7 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

@@ -1,67 +1,77 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCenInterRegionTrafficQosQueuesRequest} extends {@link RequestModel}
  *
  * <p>ListCenInterRegionTrafficQosQueuesRequest</p>
  */
 public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveBandwidthFilter")
+    private EffectiveBandwidthFilter effectiveBandwidthFilter;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TrafficQosPolicyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficQosPolicyId")
     private String trafficQosPolicyId;
 
-    @Query
-    @NameInMap("TrafficQosQueueDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficQosQueueDescription")
     private String trafficQosQueueDescription;
 
-    @Query
-    @NameInMap("TrafficQosQueueId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficQosQueueId")
     private String trafficQosQueueId;
 
-    @Query
-    @NameInMap("TrafficQosQueueName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficQosQueueName")
     private String trafficQosQueueName;
 
-    @Query
-    @NameInMap("TransitRouterAttachmentId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentId")
     private String transitRouterAttachmentId;
 
-    @Query
-    @NameInMap("TransitRouterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterId")
     private String transitRouterId;
 
     private ListCenInterRegionTrafficQosQueuesRequest(Builder builder) {
         super(builder);
+        this.effectiveBandwidthFilter = builder.effectiveBandwidthFilter;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.ownerAccount = builder.ownerAccount;
@@ -87,6 +97,13 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return effectiveBandwidthFilter
+     */
+    public EffectiveBandwidthFilter getEffectiveBandwidthFilter() {
+        return this.effectiveBandwidthFilter;
     }
 
     /**
@@ -174,6 +191,7 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListCenInterRegionTrafficQosQueuesRequest, Builder> {
+        private EffectiveBandwidthFilter effectiveBandwidthFilter; 
         private Integer maxResults; 
         private String nextToken; 
         private String ownerAccount; 
@@ -193,6 +211,7 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
 
         private Builder(ListCenInterRegionTrafficQosQueuesRequest request) {
             super(request);
+            this.effectiveBandwidthFilter = request.effectiveBandwidthFilter;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.ownerAccount = request.ownerAccount;
@@ -208,7 +227,19 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * <p>The filter works based on the actual bandwidth. Enter a positive integer. Unit: Mbit/s.</p>
+         */
+        public Builder effectiveBandwidthFilter(EffectiveBandwidthFilter effectiveBandwidthFilter) {
+            this.putQueryParameter("EffectiveBandwidthFilter", effectiveBandwidthFilter);
+            this.effectiveBandwidthFilter = effectiveBandwidthFilter;
+            return this;
+        }
+
+        /**
+         * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -217,7 +248,14 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2ca1ed1573cb****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -262,7 +300,10 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
         }
 
         /**
-         * TrafficQosPolicyId.
+         * <p>The ID of the QoS policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qos-rnghap5gc8155x****</p>
          */
         public Builder trafficQosPolicyId(String trafficQosPolicyId) {
             this.putQueryParameter("TrafficQosPolicyId", trafficQosPolicyId);
@@ -271,7 +312,11 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
         }
 
         /**
-         * TrafficQosQueueDescription.
+         * <p>The description of the QoS queue.</p>
+         * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qosQueueDescription</p>
          */
         public Builder trafficQosQueueDescription(String trafficQosQueueDescription) {
             this.putQueryParameter("TrafficQosQueueDescription", trafficQosQueueDescription);
@@ -280,7 +325,10 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
         }
 
         /**
-         * TrafficQosQueueId.
+         * <p>The ID of the queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qos-queue-siakjb2nn9gz5z****</p>
          */
         public Builder trafficQosQueueId(String trafficQosQueueId) {
             this.putQueryParameter("TrafficQosQueueId", trafficQosQueueId);
@@ -289,7 +337,11 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
         }
 
         /**
-         * TrafficQosQueueName.
+         * <p>The name of the QoS queue.</p>
+         * <p>The name must be 1 to 128 characters in length, and cannot start with http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qosQueueName</p>
          */
         public Builder trafficQosQueueName(String trafficQosQueueName) {
             this.putQueryParameter("TrafficQosQueueName", trafficQosQueueName);
@@ -298,7 +350,10 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
         }
 
         /**
-         * TransitRouterAttachmentId.
+         * <p>The ID of the inter-region connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-attach-a6p8voaodog5c0****</p>
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
@@ -307,7 +362,10 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
         }
 
         /**
-         * TransitRouterId.
+         * <p>The ID of the transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-bp1rmwxnk221e3fas****</p>
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);
@@ -322,4 +380,77 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListCenInterRegionTrafficQosQueuesRequest} extends {@link TeaModel}
+     *
+     * <p>ListCenInterRegionTrafficQosQueuesRequest</p>
+     */
+    public static class EffectiveBandwidthFilter extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Gte")
+        private Long gte;
+
+        @com.aliyun.core.annotation.NameInMap("Lte")
+        private Long lte;
+
+        private EffectiveBandwidthFilter(Builder builder) {
+            this.gte = builder.gte;
+            this.lte = builder.lte;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EffectiveBandwidthFilter create() {
+            return builder().build();
+        }
+
+        /**
+         * @return gte
+         */
+        public Long getGte() {
+            return this.gte;
+        }
+
+        /**
+         * @return lte
+         */
+        public Long getLte() {
+            return this.lte;
+        }
+
+        public static final class Builder {
+            private Long gte; 
+            private Long lte; 
+
+            /**
+             * <p>The actual bandwidth is equal to or larger than the specified value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
+             */
+            public Builder gte(Long gte) {
+                this.gte = gte;
+                return this;
+            }
+
+            /**
+             * <p>The actual bandwidth is equal to or smaller than the specified value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
+             */
+            public Builder lte(Long lte) {
+                this.lte = lte;
+                return this;
+            }
+
+            public EffectiveBandwidthFilter build() {
+                return new EffectiveBandwidthFilter(this);
+            } 
+
+        } 
+
+    }
 }

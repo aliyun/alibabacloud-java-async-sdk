@@ -1,73 +1,86 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSendFileResultsRequest} extends {@link RequestModel}
  *
  * <p>DescribeSendFileResultsRequest</p>
  */
 public class DescribeSendFileResultsRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("InvocationStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InvocationStatus")
     private String invocationStatus;
 
-    @Query
-    @NameInMap("InvokeId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InvokeId")
     private String invokeId;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private DescribeSendFileResultsRequest(Builder builder) {
         super(builder);
@@ -75,7 +88,9 @@ public class DescribeSendFileResultsRequest extends Request {
         this.instanceId = builder.instanceId;
         this.invocationStatus = builder.invocationStatus;
         this.invokeId = builder.invokeId;
+        this.maxResults = builder.maxResults;
         this.name = builder.name;
+        this.nextToken = builder.nextToken;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
@@ -129,10 +144,24 @@ public class DescribeSendFileResultsRequest extends Request {
     }
 
     /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
         return this.name;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -194,7 +223,7 @@ public class DescribeSendFileResultsRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -203,7 +232,9 @@ public class DescribeSendFileResultsRequest extends Request {
         private String instanceId; 
         private String invocationStatus; 
         private String invokeId; 
+        private Integer maxResults; 
         private String name; 
+        private String nextToken; 
         private String ownerAccount; 
         private Long ownerId; 
         private Long pageNumber; 
@@ -212,7 +243,7 @@ public class DescribeSendFileResultsRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -224,7 +255,9 @@ public class DescribeSendFileResultsRequest extends Request {
             this.instanceId = request.instanceId;
             this.invocationStatus = request.invocationStatus;
             this.invokeId = request.invokeId;
+            this.maxResults = request.maxResults;
             this.name = request.name;
+            this.nextToken = request.nextToken;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
@@ -246,7 +279,10 @@ public class DescribeSendFileResultsRequest extends Request {
         }
 
         /**
-         * The ID of the instance for which you want to query file sending records.
+         * <p>The ID of the instance for which you want to query file sending records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-hz0jdfwd9f****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -255,20 +291,17 @@ public class DescribeSendFileResultsRequest extends Request {
         }
 
         /**
-         * The overall sending state of the file. The overall sending state of the file depends on its sending state on all the destination instances. Valid values:
-         * <p>
+         * <p>The overall sending status of the file. The overall sending status of the file varies based on the sending status of the file on all destination instances. Valid values:</p>
+         * <ul>
+         * <li>Pending: The file is being verified or sent. If the sending state of the file on at least one instance is Pending, the overall sending state of the file is Pending.</li>
+         * <li>Running: The file is being sent to the instances. If the sending state of the file on at least one instance is Running, the overall sending state of the file is Running.</li>
+         * <li>Success: The file is sent. If the sending state of the file on all instances is Success, the overall sending state of the file is Success.</li>
+         * <li>Failed: The file fails to be sent. If the sending state of the file on all instances is Failed, the overall sending state of the file is Failed.</li>
+         * <li>PartialFailed: The file sending task succeeds on some instances and fails on other instances. If the sending state of the file is Success on some instances and is Failed on other instances, the overall sending state of the file is PartialFailed.</li>
+         * </ul>
          * 
-         * - Pending: The file is being verified or sent.
-         * - Invalid: The file is invalid.
-         * - Running: The file is being sent to the instances.
-         * - Aborted: The file failed to be sent to the instances. To send a file to an instance, make sure that the instance is in the Running state and the file can be sent within 1 minute.
-         * - Success: The file is sent.
-         * - Failed: The file failed to be created on the instances.
-         * - Error: An error occurs and interrupts the file sending task.
-         * - Timeout: The file sending task times out.
-         * - Cancelled: The file sending task is canceled.
-         * - Stopping: The file sending task is being stopped.
-         * - Terminated: The file sending task is terminated.
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder invocationStatus(String invocationStatus) {
             this.putQueryParameter("InvocationStatus", invocationStatus);
@@ -277,7 +310,10 @@ public class DescribeSendFileResultsRequest extends Request {
         }
 
         /**
-         * The ID of the file sending task.
+         * <p>The ID of the file sending task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f-hz0jdfwd9f****</p>
          */
         public Builder invokeId(String invokeId) {
             this.putQueryParameter("InvokeId", invokeId);
@@ -286,11 +322,40 @@ public class DescribeSendFileResultsRequest extends Request {
         }
 
         /**
-         * The name of the file whose sending records you want to query.
+         * <p>The maximum number of entries per page.</p>
+         * <p>Valid values: 1 to 50.</p>
+         * <p>Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * <p>The name of the file whose sending records you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.txt</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2</p>
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 
@@ -313,12 +378,12 @@ public class DescribeSendFileResultsRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <blockquote>
+         * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+         * </blockquote>
          * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -327,12 +392,12 @@ public class DescribeSendFileResultsRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <blockquote>
+         * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+         * </blockquote>
          * 
-         * Valid values: 1 to 50.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -341,7 +406,11 @@ public class DescribeSendFileResultsRequest extends Request {
         }
 
         /**
-         * The region ID of the ECS instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the ECS instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -350,7 +419,10 @@ public class DescribeSendFileResultsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. After you set this parameter, file sending results in the specified resource group are queried.
+         * <p>The ID of the resource group. After you set this parameter, file sending results in the specified resource group are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -377,9 +449,9 @@ public class DescribeSendFileResultsRequest extends Request {
         }
 
         /**
-         * The tags list.
+         * <p>The tags of the file sending task.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -392,11 +464,17 @@ public class DescribeSendFileResultsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSendFileResultsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeSendFileResultsRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -431,12 +509,12 @@ public class DescribeSendFileResultsRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the file sending task. Valid values of N: 1 to 20. The tag key cannot be an empty string.
-             * <p>
+             * <p>The key of tag N of the file sending task. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
+             * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all the tags added can be displayed in the response. To query more than 1,000 resources that have specified tags, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+             * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
              * 
-             * If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags, call the [ListTagResources](~~110425~~) operation.
-             * 
-             * The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -444,10 +522,11 @@ public class DescribeSendFileResultsRequest extends Request {
             }
 
             /**
-             * The value of tag N of the file sending task. Valid values of N: 1 to 20. The tag value can be an empty string.
-             * <p>
+             * <p>The value of tag N of the file sending task. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

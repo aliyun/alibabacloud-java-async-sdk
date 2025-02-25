@@ -1,39 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceTopologyRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBInstanceTopologyRequest</p>
  */
 public class DescribeDBInstanceTopologyRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceName;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinuteSimple")
+    private Boolean minuteSimple;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeDBInstanceTopologyRequest(Builder builder) {
         super(builder);
         this.DBInstanceName = builder.DBInstanceName;
         this.endTime = builder.endTime;
+        this.minuteSimple = builder.minuteSimple;
         this.regionId = builder.regionId;
         this.startTime = builder.startTime;
     }
@@ -66,6 +76,13 @@ public class DescribeDBInstanceTopologyRequest extends Request {
     }
 
     /**
+     * @return minuteSimple
+     */
+    public Boolean getMinuteSimple() {
+        return this.minuteSimple;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -82,6 +99,7 @@ public class DescribeDBInstanceTopologyRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeDBInstanceTopologyRequest, Builder> {
         private String DBInstanceName; 
         private String endTime; 
+        private Boolean minuteSimple; 
         private String regionId; 
         private String startTime; 
 
@@ -93,12 +111,16 @@ public class DescribeDBInstanceTopologyRequest extends Request {
             super(request);
             this.DBInstanceName = request.DBInstanceName;
             this.endTime = request.endTime;
+            this.minuteSimple = request.minuteSimple;
             this.regionId = request.regionId;
             this.startTime = request.startTime;
         } 
 
         /**
-         * DBInstanceName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-********</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -116,7 +138,19 @@ public class DescribeDBInstanceTopologyRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * MinuteSimple.
+         */
+        public Builder minuteSimple(Boolean minuteSimple) {
+            this.putQueryParameter("MinuteSimple", minuteSimple);
+            this.minuteSimple = minuteSimple;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySmarttagJobRequest} extends {@link RequestModel}
  *
  * <p>QuerySmarttagJobRequest</p>
  */
 public class QuerySmarttagJobRequest extends Request {
-    @Query
-    @NameInMap("JobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobId;
 
-    @Query
-    @NameInMap("Params")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Params")
     private String params;
 
     private QuerySmarttagJobRequest(Builder builder) {
@@ -69,7 +74,11 @@ public class QuerySmarttagJobRequest extends Request {
         } 
 
         /**
-         * JobId.
+         * <p>The ID of the smart tagging job that you want to query. You can obtain the job ID from the response parameters of the SubmitSmarttagJob operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>88c6ca184c0e47098a5b665e2****</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -78,7 +87,14 @@ public class QuerySmarttagJobRequest extends Request {
         }
 
         /**
-         * Params.
+         * <p>The extra parameters that you want to query in the request. The value is a JSON string. Example: {&quot;labelResultType&quot;:&quot;auto&quot;}. The value of labelResultType is of the STRING type. Valid values:</p>
+         * <ul>
+         * <li>auto: machine tagging</li>
+         * <li>hmi: tagging by human and machine</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;labelResultType&quot;:&quot;auto&quot;}</p>
          */
         public Builder params(String params) {
             this.putQueryParameter("Params", params);

@@ -1,28 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDesktopGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDesktopGroupResponseBody</p>
  */
 public class CreateDesktopGroupResponseBody extends TeaModel {
-    @NameInMap("DesktopGroupId")
+    @com.aliyun.core.annotation.NameInMap("DesktopGroupId")
     private String desktopGroupId;
 
-    @NameInMap("OrderIds")
-    private java.util.List < String > orderIds;
+    @com.aliyun.core.annotation.NameInMap("DesktopGroupIds")
+    private java.util.List<String> desktopGroupIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("OrderIds")
+    private java.util.List<String> orderIds;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateDesktopGroupResponseBody(Builder builder) {
         this.desktopGroupId = builder.desktopGroupId;
+        this.desktopGroupIds = builder.desktopGroupIds;
         this.orderIds = builder.orderIds;
         this.requestId = builder.requestId;
     }
@@ -43,9 +52,16 @@ public class CreateDesktopGroupResponseBody extends TeaModel {
     }
 
     /**
+     * @return desktopGroupIds
+     */
+    public java.util.List<String> getDesktopGroupIds() {
+        return this.desktopGroupIds;
+    }
+
+    /**
      * @return orderIds
      */
-    public java.util.List < String > getOrderIds() {
+    public java.util.List<String> getOrderIds() {
         return this.orderIds;
     }
 
@@ -58,11 +74,15 @@ public class CreateDesktopGroupResponseBody extends TeaModel {
 
     public static final class Builder {
         private String desktopGroupId; 
-        private java.util.List < String > orderIds; 
+        private java.util.List<String> desktopGroupIds; 
+        private java.util.List<String> orderIds; 
         private String requestId; 
 
         /**
-         * The ID of the desktop group.
+         * <p>The ID of the desktop group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dg-2i8qxpv6t1a03****</p>
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.desktopGroupId = desktopGroupId;
@@ -70,15 +90,26 @@ public class CreateDesktopGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The IDs of the orders.
+         * DesktopGroupIds.
          */
-        public Builder orderIds(java.util.List < String > orderIds) {
+        public Builder desktopGroupIds(java.util.List<String> desktopGroupIds) {
+            this.desktopGroupIds = desktopGroupIds;
+            return this;
+        }
+
+        /**
+         * <p>The IDs of the orders.</p>
+         */
+        public Builder orderIds(java.util.List<String> orderIds) {
             this.orderIds = orderIds;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3EB7FCEE-D731-4948-85A3-4B2C341CA983</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

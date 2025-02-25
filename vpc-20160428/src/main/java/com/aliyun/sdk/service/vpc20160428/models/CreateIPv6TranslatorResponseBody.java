@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateIPv6TranslatorResponseBody} extends {@link TeaModel}
  *
  * <p>CreateIPv6TranslatorResponseBody</p>
  */
 public class CreateIPv6TranslatorResponseBody extends TeaModel {
-    @NameInMap("Ipv6TranslatorId")
+    @com.aliyun.core.annotation.NameInMap("Ipv6TranslatorId")
     private String ipv6TranslatorId;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private Long orderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Spec")
+    @com.aliyun.core.annotation.NameInMap("Spec")
     private String spec;
 
     private CreateIPv6TranslatorResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class CreateIPv6TranslatorResponseBody extends TeaModel {
         private String spec; 
 
         /**
-         * The ID of the IPv6 Translation Service instance.
+         * <p>The ID of the IPv6 Translation Service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6trans-bp1i8ahxut1xxxx</p>
          */
         public Builder ipv6TranslatorId(String ipv6TranslatorId) {
             this.ipv6TranslatorId = ipv6TranslatorId;
@@ -94,7 +102,10 @@ public class CreateIPv6TranslatorResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the IPv6 Translation Service instance.
+         * <p>The name of the IPv6 Translation Service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_nat64gw</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -102,7 +113,10 @@ public class CreateIPv6TranslatorResponseBody extends TeaModel {
         }
 
         /**
-         * The order ID.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202303300940739</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -110,7 +124,10 @@ public class CreateIPv6TranslatorResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AE05898-06E5-4782-xxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +135,10 @@ public class CreateIPv6TranslatorResponseBody extends TeaModel {
         }
 
         /**
-         * The specification of the IPv6 Translation Service instance.
+         * <p>The specification of the IPv6 Translation Service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>small</p>
          */
         public Builder spec(String spec) {
             this.spec = spec;

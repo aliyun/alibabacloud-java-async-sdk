@@ -26,11 +26,16 @@ public class DescribeDrdsDBIpWhiteListRequest extends Request {
     @NameInMap("GroupName")
     private String groupName;
 
+    @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
     private DescribeDrdsDBIpWhiteListRequest(Builder builder) {
         super(builder);
         this.dbName = builder.dbName;
         this.drdsInstanceId = builder.drdsInstanceId;
         this.groupName = builder.groupName;
+        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -67,24 +72,33 @@ public class DescribeDrdsDBIpWhiteListRequest extends Request {
         return this.groupName;
     }
 
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeDrdsDBIpWhiteListRequest, Builder> {
         private String dbName; 
         private String drdsInstanceId; 
         private String groupName; 
+        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeDrdsDBIpWhiteListRequest response) {
-            super(response);
-            this.dbName = response.dbName;
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.groupName = response.groupName;
+        private Builder(DescribeDrdsDBIpWhiteListRequest request) {
+            super(request);
+            this.dbName = request.dbName;
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.groupName = request.groupName;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * DbName.
+         * The database name.
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -93,7 +107,7 @@ public class DescribeDrdsDBIpWhiteListRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The instance ID.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -102,11 +116,20 @@ public class DescribeDrdsDBIpWhiteListRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * The name of the whitelist group.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
             this.groupName = groupName;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

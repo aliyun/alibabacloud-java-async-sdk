@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnbindMFADeviceRequest} extends {@link RequestModel}
  *
  * <p>UnbindMFADeviceRequest</p>
  */
 public class UnbindMFADeviceRequest extends Request {
-    @Query
-    @NameInMap("UserName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserName")
     private String userName;
 
     private UnbindMFADeviceRequest(Builder builder) {
@@ -48,9 +53,9 @@ public class UnbindMFADeviceRequest extends Request {
             super();
         } 
 
-        private Builder(UnbindMFADeviceRequest response) {
-            super(response);
-            this.userName = response.userName;
+        private Builder(UnbindMFADeviceRequest request) {
+            super(request);
+            this.userName = request.userName;
         } 
 
         /**

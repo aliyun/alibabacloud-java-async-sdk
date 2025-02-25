@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProjectMembersResponseBody} extends {@link TeaModel}
  *
  * <p>ListProjectMembersResponseBody</p>
  */
 public class ListProjectMembersResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListProjectMembersResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The number of entries returned per page. Default value: 10. Maximum value: 100.
+         * <p>The returned results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class ListProjectMembersResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AFAE64E-D1BE-432B-A9****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,17 +79,23 @@ public class ListProjectMembersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListProjectMembersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectMembersResponseBody</p>
+     */
     public static class ProjectRoleList extends TeaModel {
-        @NameInMap("ProjectRoleCode")
+        @com.aliyun.core.annotation.NameInMap("ProjectRoleCode")
         private String projectRoleCode;
 
-        @NameInMap("ProjectRoleId")
+        @com.aliyun.core.annotation.NameInMap("ProjectRoleId")
         private Integer projectRoleId;
 
-        @NameInMap("ProjectRoleName")
+        @com.aliyun.core.annotation.NameInMap("ProjectRoleName")
         private String projectRoleName;
 
-        @NameInMap("ProjectRoleType")
+        @com.aliyun.core.annotation.NameInMap("ProjectRoleType")
         private String projectRoleType;
 
         private ProjectRoleList(Builder builder) {
@@ -134,7 +148,10 @@ public class ListProjectMembersResponseBody extends TeaModel {
             private String projectRoleType; 
 
             /**
-             * ProjectRoleCode.
+             * <p>The code of the role. DataWorks provides built-in roles and allows you to create custom roles based on your business requirements. For more information about roles, see <a href="https://help.aliyun.com/document_detail/295463.html">Overview of users, roles, and permissions</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>role_project_guest</p>
              */
             public Builder projectRoleCode(String projectRoleCode) {
                 this.projectRoleCode = projectRoleCode;
@@ -142,10 +159,10 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the role.
-             * <p>
+             * <p>The role ID.</p>
              * 
-             * DataWorks provides built-in roles and allows you to create custom roles based on your business requirements. For more information about roles, see [Overview of users, roles, and permissions](~~295463~~).
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder projectRoleId(Integer projectRoleId) {
                 this.projectRoleId = projectRoleId;
@@ -153,7 +170,10 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectRoleName.
+             * <p>The name of the role. DataWorks provides built-in roles and allows you to create custom roles based on your business requirements. For more information about roles, see <a href="https://help.aliyun.com/document_detail/295463.html">Overview of users, roles, and permissions</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder projectRoleName(String projectRoleName) {
                 this.projectRoleName = projectRoleName;
@@ -161,10 +181,14 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the role.
-             * <p>
+             * <p>The type of the role. Valid values:</p>
+             * <ul>
+             * <li>0: SYSTEM, which indicates that the role is a built-in role.</li>
+             * <li>2: USER_CUSTOM, which indicates that the role is a custom role.</li>
+             * </ul>
              * 
-             * DataWorks provides built-in roles and allows you to create custom roles based on your business requirements. For more information about roles, see [Overview of users, roles, and permissions](~~295463~~).
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder projectRoleType(String projectRoleType) {
                 this.projectRoleType = projectRoleType;
@@ -178,23 +202,29 @@ public class ListProjectMembersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectMembersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectMembersResponseBody</p>
+     */
     public static class ProjectMemberList extends TeaModel {
-        @NameInMap("Nick")
+        @com.aliyun.core.annotation.NameInMap("Nick")
         private String nick;
 
-        @NameInMap("ProjectMemberId")
+        @com.aliyun.core.annotation.NameInMap("ProjectMemberId")
         private String projectMemberId;
 
-        @NameInMap("ProjectMemberName")
+        @com.aliyun.core.annotation.NameInMap("ProjectMemberName")
         private String projectMemberName;
 
-        @NameInMap("ProjectMemberType")
+        @com.aliyun.core.annotation.NameInMap("ProjectMemberType")
         private String projectMemberType;
 
-        @NameInMap("ProjectRoleList")
-        private java.util.List < ProjectRoleList> projectRoleList;
+        @com.aliyun.core.annotation.NameInMap("ProjectRoleList")
+        private java.util.List<ProjectRoleList> projectRoleList;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ProjectMemberList(Builder builder) {
@@ -245,7 +275,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
         /**
          * @return projectRoleList
          */
-        public java.util.List < ProjectRoleList> getProjectRoleList() {
+        public java.util.List<ProjectRoleList> getProjectRoleList() {
             return this.projectRoleList;
         }
 
@@ -261,16 +291,14 @@ public class ListProjectMembersResponseBody extends TeaModel {
             private String projectMemberId; 
             private String projectMemberName; 
             private String projectMemberType; 
-            private java.util.List < ProjectRoleList> projectRoleList; 
+            private java.util.List<ProjectRoleList> projectRoleList; 
             private String status; 
 
             /**
-             * The type of the member. Valid values:
-             * <p>
+             * <p>The nickname of the member.</p>
              * 
-             * *   1: USER_ALIYUN, which indicates that the member is an Alibaba Cloud account.
-             * *   5: USER_UBACCOUNT, which indicates that the member is a RAM user.
-             * *   6: USER_STS_ROLE, which indicates that the member is a RAM role.
+             * <strong>example:</strong>
+             * <p>zhangsan</p>
              */
             public Builder nick(String nick) {
                 this.nick = nick;
@@ -278,7 +306,10 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the member.
+             * <p>The member ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>121</p>
              */
             public Builder projectMemberId(String projectMemberId) {
                 this.projectMemberId = projectMemberId;
@@ -286,7 +317,10 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The roles that are assigned to the member.
+             * <p>The name of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhangsan</p>
              */
             public Builder projectMemberName(String projectMemberName) {
                 this.projectMemberName = projectMemberName;
@@ -294,7 +328,15 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the role.
+             * <p>The type of the member. Valid values:</p>
+             * <ul>
+             * <li>1: USER_ALIYUN, which indicates that the member is an Alibaba Cloud account.</li>
+             * <li>5: USER_UBACCOUNT, which indicates that the member is a RAM user.</li>
+             * <li>6: USER_STS_ROLE, which indicates that the member is a RAM role.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder projectMemberType(String projectMemberType) {
                 this.projectMemberType = projectMemberType;
@@ -302,19 +344,23 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the role. Valid values:
-             * <p>
-             * 
-             * *   0: SYSTEM, which indicates that the role is a built-in role.
-             * *   2: USER_CUSTOM, which indicates that the role is a custom role.
+             * <p>The roles that are assigned to the member.</p>
              */
-            public Builder projectRoleList(java.util.List < ProjectRoleList> projectRoleList) {
+            public Builder projectRoleList(java.util.List<ProjectRoleList> projectRoleList) {
                 this.projectRoleList = projectRoleList;
                 return this;
             }
 
             /**
-             * The nickname of the member.
+             * <p>The status of the member. Valid values:</p>
+             * <ul>
+             * <li>0: NORMAL, which indicates that the member is in a normal state.</li>
+             * <li>1: FORBIDDEN, which indicates that the member is disabled.</li>
+             * <li>2: DELETED, which indicates that the member is deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -328,17 +374,23 @@ public class ListProjectMembersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectMembersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectMembersResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("ProjectMemberList")
-        private java.util.List < ProjectMemberList> projectMemberList;
+        @com.aliyun.core.annotation.NameInMap("ProjectMemberList")
+        private java.util.List<ProjectMemberList> projectMemberList;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {
@@ -373,7 +425,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
         /**
          * @return projectMemberList
          */
-        public java.util.List < ProjectMemberList> getProjectMemberList() {
+        public java.util.List<ProjectMemberList> getProjectMemberList() {
             return this.projectMemberList;
         }
 
@@ -387,11 +439,14 @@ public class ListProjectMembersResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageNumber; 
             private Integer pageSize; 
-            private java.util.List < ProjectMemberList> projectMemberList; 
+            private java.util.List<ProjectMemberList> projectMemberList; 
             private Integer totalCount; 
 
             /**
-             * The total number of entries returned.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -399,7 +454,10 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The information of members in the DataWorks workspace.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -407,20 +465,18 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the member.
+             * <p>The information about members in the DataWorks workspace.</p>
              */
-            public Builder projectMemberList(java.util.List < ProjectMemberList> projectMemberList) {
+            public Builder projectMemberList(java.util.List<ProjectMemberList> projectMemberList) {
                 this.projectMemberList = projectMemberList;
                 return this;
             }
 
             /**
-             * The status of the member. Valid values:
-             * <p>
+             * <p>The total number of entries returned.</p>
              * 
-             * *   0: NORMAL, which indicates that the member is in a normal state.
-             * *   1: FORBIDDEN, which indicates that the member is disabled.
-             * *   2: DELETED, which indicates that the member is deleted.
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

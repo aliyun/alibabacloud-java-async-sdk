@@ -1,25 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.push20160801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CompleteContinuouslyPushRequest} extends {@link RequestModel}
  *
  * <p>CompleteContinuouslyPushRequest</p>
  */
 public class CompleteContinuouslyPushRequest extends Request {
-    @Query
-    @NameInMap("AppKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long appKey;
 
-    @Query
-    @NameInMap("MessageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MessageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String messageId;
 
     private CompleteContinuouslyPushRequest(Builder builder) {
@@ -70,7 +70,10 @@ public class CompleteContinuouslyPushRequest extends Request {
         } 
 
         /**
-         * AppKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23267207</p>
          */
         public Builder appKey(Long appKey) {
             this.putQueryParameter("AppKey", appKey);
@@ -79,7 +82,10 @@ public class CompleteContinuouslyPushRequest extends Request {
         }
 
         /**
-         * MessageId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4010290149170430</p>
          */
         public Builder messageId(String messageId) {
             this.putQueryParameter("MessageId", messageId);

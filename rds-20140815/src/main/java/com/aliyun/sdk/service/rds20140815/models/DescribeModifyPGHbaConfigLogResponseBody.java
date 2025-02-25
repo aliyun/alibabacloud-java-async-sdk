@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeModifyPGHbaConfigLogResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeModifyPGHbaConfigLogResponseBody</p>
  */
 public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("HbaLogItems")
+    @com.aliyun.core.annotation.NameInMap("HbaLogItems")
     private HbaLogItems hbaLogItems;
 
-    @NameInMap("LogItemCount")
+    @com.aliyun.core.annotation.NameInMap("LogItemCount")
     private Integer logItemCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeModifyPGHbaConfigLogResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pgm-bp1lymyn1v3i****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -82,7 +90,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the modifications to the pg_hba.conf file.
+         * <p>An array that consists of the modifications to the pg_hba.conf file.</p>
          */
         public Builder hbaLogItems(HbaLogItems hbaLogItems) {
             this.hbaLogItems = hbaLogItems;
@@ -90,7 +98,10 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
         }
 
         /**
-         * The number of modification records.
+         * <p>The number of modification records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder logItemCount(Integer logItemCount) {
             this.logItemCount = logItemCount;
@@ -98,7 +109,10 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6D797E6B-E157-510C-A27F-6F9E6DA40633</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,29 +125,35 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeModifyPGHbaConfigLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeModifyPGHbaConfigLogResponseBody</p>
+     */
     public static class HbaItem extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("Database")
+        @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
 
-        @NameInMap("Mask")
+        @com.aliyun.core.annotation.NameInMap("Mask")
         private String mask;
 
-        @NameInMap("Method")
+        @com.aliyun.core.annotation.NameInMap("Method")
         private String method;
 
-        @NameInMap("Option")
+        @com.aliyun.core.annotation.NameInMap("Option")
         private String option;
 
-        @NameInMap("PriorityId")
+        @com.aliyun.core.annotation.NameInMap("PriorityId")
         private Integer priorityId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private String user;
 
         private HbaItem(Builder builder) {
@@ -222,7 +242,10 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * The IP address.
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.0.0/0</p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -230,7 +253,10 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>all</p>
              */
             public Builder database(String database) {
                 this.database = database;
@@ -238,7 +264,10 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * The mask of the IP address.
+             * <p>The mask of the IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder mask(String mask) {
                 this.mask = mask;
@@ -246,7 +275,10 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * The authentication method.
+             * <p>The authentication method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ldap</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -254,7 +286,10 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * The value of this parameter was set based on the value of the Method parameter.
+             * <p>The value of this parameter was set based on the value of the Method parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder option(String option) {
                 this.option = option;
@@ -262,7 +297,10 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * The priority.
+             * <p>The priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder priorityId(Integer priorityId) {
                 this.priorityId = priorityId;
@@ -270,7 +308,10 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * The connection type.
+             * <p>The connection type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>host</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -278,7 +319,10 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the account.
+             * <p>The username of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ldapuser</p>
              */
             public Builder user(String user) {
                 this.user = user;
@@ -292,9 +336,15 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeModifyPGHbaConfigLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeModifyPGHbaConfigLogResponseBody</p>
+     */
     public static class AfterHbaItems extends TeaModel {
-        @NameInMap("HbaItem")
-        private java.util.List < HbaItem> hbaItem;
+        @com.aliyun.core.annotation.NameInMap("HbaItem")
+        private java.util.List<HbaItem> hbaItem;
 
         private AfterHbaItems(Builder builder) {
             this.hbaItem = builder.hbaItem;
@@ -311,17 +361,17 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
         /**
          * @return hbaItem
          */
-        public java.util.List < HbaItem> getHbaItem() {
+        public java.util.List<HbaItem> getHbaItem() {
             return this.hbaItem;
         }
 
         public static final class Builder {
-            private java.util.List < HbaItem> hbaItem; 
+            private java.util.List<HbaItem> hbaItem; 
 
             /**
              * HbaItem.
              */
-            public Builder hbaItem(java.util.List < HbaItem> hbaItem) {
+            public Builder hbaItem(java.util.List<HbaItem> hbaItem) {
                 this.hbaItem = hbaItem;
                 return this;
             }
@@ -333,29 +383,35 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeModifyPGHbaConfigLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeModifyPGHbaConfigLogResponseBody</p>
+     */
     public static class BeforeHbaItemsHbaItem extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("Database")
+        @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
 
-        @NameInMap("Mask")
+        @com.aliyun.core.annotation.NameInMap("Mask")
         private String mask;
 
-        @NameInMap("Method")
+        @com.aliyun.core.annotation.NameInMap("Method")
         private String method;
 
-        @NameInMap("Option")
+        @com.aliyun.core.annotation.NameInMap("Option")
         private String option;
 
-        @NameInMap("PriorityId")
+        @com.aliyun.core.annotation.NameInMap("PriorityId")
         private Integer priorityId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private String user;
 
         private BeforeHbaItemsHbaItem(Builder builder) {
@@ -444,7 +500,10 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * The IP address.
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.0.0/0</p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -452,7 +511,10 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>all</p>
              */
             public Builder database(String database) {
                 this.database = database;
@@ -460,7 +522,10 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * The mask of the IP address.
+             * <p>The mask of the IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder mask(String mask) {
                 this.mask = mask;
@@ -468,7 +533,10 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * The authentication method.
+             * <p>The authentication method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>md5</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -476,7 +544,10 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * The value of this parameter varies based on the value of the Method parameter.
+             * <p>The value of this parameter varies based on the value of the Method parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder option(String option) {
                 this.option = option;
@@ -484,7 +555,10 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * The priority.
+             * <p>The priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder priorityId(Integer priorityId) {
                 this.priorityId = priorityId;
@@ -492,7 +566,10 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * The connection type.
+             * <p>The connection type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>host</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -500,7 +577,10 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the account.
+             * <p>The username of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>all</p>
              */
             public Builder user(String user) {
                 this.user = user;
@@ -514,9 +594,15 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeModifyPGHbaConfigLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeModifyPGHbaConfigLogResponseBody</p>
+     */
     public static class BeforeHbaItems extends TeaModel {
-        @NameInMap("HbaItem")
-        private java.util.List < BeforeHbaItemsHbaItem> hbaItem;
+        @com.aliyun.core.annotation.NameInMap("HbaItem")
+        private java.util.List<BeforeHbaItemsHbaItem> hbaItem;
 
         private BeforeHbaItems(Builder builder) {
             this.hbaItem = builder.hbaItem;
@@ -533,17 +619,17 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
         /**
          * @return hbaItem
          */
-        public java.util.List < BeforeHbaItemsHbaItem> getHbaItem() {
+        public java.util.List<BeforeHbaItemsHbaItem> getHbaItem() {
             return this.hbaItem;
         }
 
         public static final class Builder {
-            private java.util.List < BeforeHbaItemsHbaItem> hbaItem; 
+            private java.util.List<BeforeHbaItemsHbaItem> hbaItem; 
 
             /**
              * HbaItem.
              */
-            public Builder hbaItem(java.util.List < BeforeHbaItemsHbaItem> hbaItem) {
+            public Builder hbaItem(java.util.List<BeforeHbaItemsHbaItem> hbaItem) {
                 this.hbaItem = hbaItem;
                 return this;
             }
@@ -555,20 +641,26 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeModifyPGHbaConfigLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeModifyPGHbaConfigLogResponseBody</p>
+     */
     public static class HbaLogItem extends TeaModel {
-        @NameInMap("AfterHbaItems")
+        @com.aliyun.core.annotation.NameInMap("AfterHbaItems")
         private AfterHbaItems afterHbaItems;
 
-        @NameInMap("BeforeHbaItems")
+        @com.aliyun.core.annotation.NameInMap("BeforeHbaItems")
         private BeforeHbaItems beforeHbaItems;
 
-        @NameInMap("ModifyStatus")
+        @com.aliyun.core.annotation.NameInMap("ModifyStatus")
         private String modifyStatus;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("StatusReason")
+        @com.aliyun.core.annotation.NameInMap("StatusReason")
         private String statusReason;
 
         private HbaLogItem(Builder builder) {
@@ -630,7 +722,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             private String statusReason; 
 
             /**
-             * The configurations of the pg_hba.conf file after modification.
+             * <p>The configurations of the pg_hba.conf file after modification.</p>
              */
             public Builder afterHbaItems(AfterHbaItems afterHbaItems) {
                 this.afterHbaItems = afterHbaItems;
@@ -638,7 +730,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of the pg_hba.conf file before modification.
+             * <p>The configurations of the pg_hba.conf file before modification.</p>
              */
             public Builder beforeHbaItems(BeforeHbaItems beforeHbaItems) {
                 this.beforeHbaItems = beforeHbaItems;
@@ -646,12 +738,15 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the modification.
-             * <p>
+             * <p>The status of the modification.</p>
+             * <ul>
+             * <li><strong>success</strong>: The modification is successful.</li>
+             * <li><strong>failed</strong>: The modification failed.</li>
+             * <li><strong>setting</strong>: The modification is being applied.</li>
+             * </ul>
              * 
-             * *   **success**: The modification is successful.
-             * *   **failed**: The modification failed.
-             * *   **setting**: The modification is being applied.
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder modifyStatus(String modifyStatus) {
                 this.modifyStatus = modifyStatus;
@@ -659,7 +754,10 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the pg_hba.conf file was modified. The time is displayed in UTC.
+             * <p>The time when the pg_hba.conf file was modified. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-25T06:00:40Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -667,7 +765,10 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the modification failed.
+             * <p>The reason why the modification failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;
@@ -681,9 +782,15 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeModifyPGHbaConfigLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeModifyPGHbaConfigLogResponseBody</p>
+     */
     public static class HbaLogItems extends TeaModel {
-        @NameInMap("HbaLogItem")
-        private java.util.List < HbaLogItem> hbaLogItem;
+        @com.aliyun.core.annotation.NameInMap("HbaLogItem")
+        private java.util.List<HbaLogItem> hbaLogItem;
 
         private HbaLogItems(Builder builder) {
             this.hbaLogItem = builder.hbaLogItem;
@@ -700,17 +807,17 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
         /**
          * @return hbaLogItem
          */
-        public java.util.List < HbaLogItem> getHbaLogItem() {
+        public java.util.List<HbaLogItem> getHbaLogItem() {
             return this.hbaLogItem;
         }
 
         public static final class Builder {
-            private java.util.List < HbaLogItem> hbaLogItem; 
+            private java.util.List<HbaLogItem> hbaLogItem; 
 
             /**
              * HbaLogItem.
              */
-            public Builder hbaLogItem(java.util.List < HbaLogItem> hbaLogItem) {
+            public Builder hbaLogItem(java.util.List<HbaLogItem> hbaLogItem) {
                 this.hbaLogItem = hbaLogItem;
                 return this;
             }

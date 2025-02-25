@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQueryOptimizeSolutionResponseBody} extends {@link TeaModel}
  *
  * <p>GetQueryOptimizeSolutionResponseBody</p>
  */
 public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private GetQueryOptimizeSolutionResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,10 @@ public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30FF4E40-17F3-5A51-AB23-43F30D9B****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +132,14 @@ public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -135,17 +152,23 @@ public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetQueryOptimizeSolutionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetQueryOptimizeSolutionResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("Solution")
+        @com.aliyun.core.annotation.NameInMap("Solution")
         private String solution;
 
-        @NameInMap("SolutionExt")
+        @com.aliyun.core.annotation.NameInMap("SolutionExt")
         private String solutionExt;
 
         private List(Builder builder) {
@@ -198,11 +221,14 @@ public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
             private String solutionExt; 
 
             /**
-             * The severity level. Valid values:
-             * <p>
+             * <p>The severity level. Valid values:</p>
+             * <ul>
+             * <li><strong>INFO</strong></li>
+             * <li><strong>WARN</strong></li>
+             * </ul>
              * 
-             * * **INFO**
-             * * **WARN**
+             * <strong>example:</strong>
+             * <p>INFO</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -210,7 +236,10 @@ public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
             }
 
             /**
-             * The tag ID.
+             * <p>The tag ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LARGE_ROWS_EXAMINED</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -218,7 +247,10 @@ public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
             }
 
             /**
-             * The suggestion.
+             * <p>The suggestion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LARGE_ROWS_EXAMINED_SOLUTION</p>
              */
             public Builder solution(String solution) {
                 this.solution = solution;
@@ -226,7 +258,10 @@ public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
             }
 
             /**
-             * The reserved parameter.
+             * <p>The reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder solutionExt(String solutionExt) {
                 this.solutionExt = solutionExt;
@@ -240,20 +275,26 @@ public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetQueryOptimizeSolutionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetQueryOptimizeSolutionResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Extra")
+        @com.aliyun.core.annotation.NameInMap("Extra")
         private String extra;
 
-        @NameInMap("List")
-        private java.util.List < List> list;
+        @com.aliyun.core.annotation.NameInMap("List")
+        private java.util.List<List> list;
 
-        @NameInMap("PageNo")
+        @com.aliyun.core.annotation.NameInMap("PageNo")
         private Integer pageNo;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private Data(Builder builder) {
@@ -282,7 +323,7 @@ public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -309,13 +350,16 @@ public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
 
         public static final class Builder {
             private String extra; 
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer pageNo; 
             private Integer pageSize; 
             private Long total; 
 
             /**
-             * The reserved parameter.
+             * <p>The reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -323,15 +367,18 @@ public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
             }
 
             /**
-             * The optimization suggestions.
+             * <p>The optimization suggestions.</p>
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }
 
             /**
-             * The reserved parameter.
+             * <p>The reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder pageNo(Integer pageNo) {
                 this.pageNo = pageNo;
@@ -339,7 +386,10 @@ public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
             }
 
             /**
-             * The reserved parameter.
+             * <p>The reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -347,7 +397,10 @@ public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder total(Long total) {
                 this.total = total;

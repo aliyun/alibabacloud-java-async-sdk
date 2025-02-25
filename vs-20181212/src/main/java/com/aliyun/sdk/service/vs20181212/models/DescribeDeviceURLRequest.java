@@ -1,50 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDeviceURLRequest} extends {@link RequestModel}
  *
  * <p>DescribeDeviceURLRequest</p>
  */
 public class DescribeDeviceURLRequest extends Request {
-    @Query
-    @NameInMap("Auth")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Auth")
     private Boolean auth;
 
-    @Query
-    @NameInMap("Expire")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Expire")
     private Long expire;
 
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String id;
 
-    @Query
-    @NameInMap("Mode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mode")
     private String mode;
 
-    @Query
-    @NameInMap("OutProtocol")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutProtocol")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String outProtocol;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Stream")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Stream")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String stream;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private DescribeDeviceURLRequest(Builder builder) {
@@ -142,16 +147,16 @@ public class DescribeDeviceURLRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDeviceURLRequest response) {
-            super(response);
-            this.auth = response.auth;
-            this.expire = response.expire;
-            this.id = response.id;
-            this.mode = response.mode;
-            this.outProtocol = response.outProtocol;
-            this.ownerId = response.ownerId;
-            this.stream = response.stream;
-            this.type = response.type;
+        private Builder(DescribeDeviceURLRequest request) {
+            super(request);
+            this.auth = request.auth;
+            this.expire = request.expire;
+            this.id = request.id;
+            this.mode = request.mode;
+            this.outProtocol = request.outProtocol;
+            this.ownerId = request.ownerId;
+            this.stream = request.stream;
+            this.type = request.type;
         } 
 
         /**
@@ -173,7 +178,10 @@ public class DescribeDeviceURLRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>348*****380-cn-qingdao</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -191,7 +199,10 @@ public class DescribeDeviceURLRequest extends Request {
         }
 
         /**
-         * OutProtocol.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtmp</p>
          */
         public Builder outProtocol(String outProtocol) {
             this.putQueryParameter("OutProtocol", outProtocol);
@@ -209,7 +220,10 @@ public class DescribeDeviceURLRequest extends Request {
         }
 
         /**
-         * Stream.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>live001</p>
          */
         public Builder stream(String stream) {
             this.putQueryParameter("Stream", stream);

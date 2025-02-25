@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.onsmqtt20200420.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchQuerySessionByClientIdsResponseBody} extends {@link TeaModel}
  *
  * <p>BatchQuerySessionByClientIdsResponseBody</p>
  */
 public class BatchQuerySessionByClientIdsResponseBody extends TeaModel {
-    @NameInMap("OnlineStatusList")
-    private java.util.List < OnlineStatusList> onlineStatusList;
+    @com.aliyun.core.annotation.NameInMap("OnlineStatusList")
+    private java.util.List<OnlineStatusList> onlineStatusList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private BatchQuerySessionByClientIdsResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class BatchQuerySessionByClientIdsResponseBody extends TeaModel {
     /**
      * @return onlineStatusList
      */
-    public java.util.List < OnlineStatusList> getOnlineStatusList() {
+    public java.util.List<OnlineStatusList> getOnlineStatusList() {
         return this.onlineStatusList;
     }
 
@@ -46,19 +51,22 @@ public class BatchQuerySessionByClientIdsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < OnlineStatusList> onlineStatusList; 
+        private java.util.List<OnlineStatusList> onlineStatusList; 
         private String requestId; 
 
         /**
-         * OnlineStatusList.
+         * <p>The status list of all queried ApsaraMQ for MQTT clients.</p>
          */
-        public Builder onlineStatusList(java.util.List < OnlineStatusList> onlineStatusList) {
+        public Builder onlineStatusList(java.util.List<OnlineStatusList> onlineStatusList) {
             this.onlineStatusList = onlineStatusList;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. This parameter is a common parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>63309FDB-ED6C-46AE-B31C-A172FBA0****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class BatchQuerySessionByClientIdsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BatchQuerySessionByClientIdsResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchQuerySessionByClientIdsResponseBody</p>
+     */
     public static class OnlineStatusList extends TeaModel {
-        @NameInMap("ClientId")
+        @com.aliyun.core.annotation.NameInMap("ClientId")
         private String clientId;
 
-        @NameInMap("OnlineStatus")
+        @com.aliyun.core.annotation.NameInMap("OnlineStatus")
         private Boolean onlineStatus;
 
         private OnlineStatusList(Builder builder) {
@@ -110,7 +124,10 @@ public class BatchQuerySessionByClientIdsResponseBody extends TeaModel {
             private Boolean onlineStatus; 
 
             /**
-             * ClientId.
+             * <p>The ID of the ApsaraMQ for MQTT client. For more information about client IDs, see <a href="https://help.aliyun.com/document_detail/42420.html">Terms</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GID_test@0001</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -118,7 +135,14 @@ public class BatchQuerySessionByClientIdsResponseBody extends TeaModel {
             }
 
             /**
-             * OnlineStatus.
+             * <p>Indicates whether the ApsaraMQ for MQTT client is online. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder onlineStatus(Boolean onlineStatus) {
                 this.onlineStatus = onlineStatus;

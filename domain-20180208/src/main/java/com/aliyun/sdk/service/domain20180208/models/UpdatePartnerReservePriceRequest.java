@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePartnerReservePriceRequest} extends {@link RequestModel}
  *
  * <p>UpdatePartnerReservePriceRequest</p>
  */
 public class UpdatePartnerReservePriceRequest extends Request {
-    @Body
-    @NameInMap("BiddingId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BiddingId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer biddingId;
 
-    @Body
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Body
-    @NameInMap("PartnerType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PartnerType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String partnerType;
 
-    @Body
-    @NameInMap("ReservePrice")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ReservePrice")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Double reservePrice;
 
     private UpdatePartnerReservePriceRequest(Builder builder) {
@@ -100,7 +105,7 @@ public class UpdatePartnerReservePriceRequest extends Request {
         } 
 
         /**
-         * BiddingId.
+         * <p>This parameter is required.</p>
          */
         public Builder biddingId(Integer biddingId) {
             this.putBodyParameter("BiddingId", biddingId);
@@ -109,7 +114,7 @@ public class UpdatePartnerReservePriceRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
          */
         public Builder domainName(String domainName) {
             this.putBodyParameter("DomainName", domainName);
@@ -118,7 +123,7 @@ public class UpdatePartnerReservePriceRequest extends Request {
         }
 
         /**
-         * PartnerType.
+         * <p>This parameter is required.</p>
          */
         public Builder partnerType(String partnerType) {
             this.putBodyParameter("PartnerType", partnerType);
@@ -127,7 +132,7 @@ public class UpdatePartnerReservePriceRequest extends Request {
         }
 
         /**
-         * ReservePrice.
+         * <p>This parameter is required.</p>
          */
         public Builder reservePrice(Double reservePrice) {
             this.putBodyParameter("ReservePrice", reservePrice);

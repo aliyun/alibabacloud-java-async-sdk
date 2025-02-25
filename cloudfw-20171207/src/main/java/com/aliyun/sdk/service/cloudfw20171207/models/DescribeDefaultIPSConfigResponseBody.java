@@ -1,50 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDefaultIPSConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDefaultIPSConfigResponseBody</p>
  */
 public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
-    @NameInMap("AiRules")
-    private Integer aiRules;
-
-    @NameInMap("BasicRules")
+    @com.aliyun.core.annotation.NameInMap("BasicRules")
     private Integer basicRules;
 
-    @NameInMap("CtiRules")
+    @com.aliyun.core.annotation.NameInMap("CtiRules")
     private Integer ctiRules;
 
-    @NameInMap("EnableAllPatch")
-    private Integer enableAllPatch;
+    @com.aliyun.core.annotation.NameInMap("FreeTrailStatus")
+    private String freeTrailStatus;
 
-    @NameInMap("EnableDefault")
-    private Integer enableDefault;
+    @com.aliyun.core.annotation.NameInMap("MaxSdl")
+    private Long maxSdl;
 
-    @NameInMap("PatchRules")
+    @com.aliyun.core.annotation.NameInMap("PatchRules")
     private Integer patchRules;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RuleClass")
+    @com.aliyun.core.annotation.NameInMap("RuleClass")
     private Integer ruleClass;
 
-    @NameInMap("RunMode")
+    @com.aliyun.core.annotation.NameInMap("RunMode")
     private Integer runMode;
 
     private DescribeDefaultIPSConfigResponseBody(Builder builder) {
-        this.aiRules = builder.aiRules;
         this.basicRules = builder.basicRules;
         this.ctiRules = builder.ctiRules;
-        this.enableAllPatch = builder.enableAllPatch;
-        this.enableDefault = builder.enableDefault;
+        this.freeTrailStatus = builder.freeTrailStatus;
+        this.maxSdl = builder.maxSdl;
         this.patchRules = builder.patchRules;
         this.requestId = builder.requestId;
         this.ruleClass = builder.ruleClass;
@@ -57,13 +58,6 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
 
     public static DescribeDefaultIPSConfigResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return aiRules
-     */
-    public Integer getAiRules() {
-        return this.aiRules;
     }
 
     /**
@@ -81,17 +75,17 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
     }
 
     /**
-     * @return enableAllPatch
+     * @return freeTrailStatus
      */
-    public Integer getEnableAllPatch() {
-        return this.enableAllPatch;
+    public String getFreeTrailStatus() {
+        return this.freeTrailStatus;
     }
 
     /**
-     * @return enableDefault
+     * @return maxSdl
      */
-    public Integer getEnableDefault() {
-        return this.enableDefault;
+    public Long getMaxSdl() {
+        return this.maxSdl;
     }
 
     /**
@@ -123,26 +117,24 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Integer aiRules; 
         private Integer basicRules; 
         private Integer ctiRules; 
-        private Integer enableAllPatch; 
-        private Integer enableDefault; 
+        private String freeTrailStatus; 
+        private Long maxSdl; 
         private Integer patchRules; 
         private String requestId; 
         private Integer ruleClass; 
         private Integer runMode; 
 
         /**
-         * AiRules.
-         */
-        public Builder aiRules(Integer aiRules) {
-            this.aiRules = aiRules;
-            return this;
-        }
-
-        /**
-         * BasicRules.
+         * <p>Indicates whether basic protection is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder basicRules(Integer basicRules) {
             this.basicRules = basicRules;
@@ -150,7 +142,14 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * CtiRules.
+         * <p>Indicates whether threat intelligence is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder ctiRules(Integer ctiRules) {
             this.ctiRules = ctiRules;
@@ -158,23 +157,30 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * EnableAllPatch.
+         * FreeTrailStatus.
          */
-        public Builder enableAllPatch(Integer enableAllPatch) {
-            this.enableAllPatch = enableAllPatch;
+        public Builder freeTrailStatus(String freeTrailStatus) {
+            this.freeTrailStatus = freeTrailStatus;
             return this;
         }
 
         /**
-         * EnableDefault.
+         * MaxSdl.
          */
-        public Builder enableDefault(Integer enableDefault) {
-            this.enableDefault = enableDefault;
+        public Builder maxSdl(Long maxSdl) {
+            this.maxSdl = maxSdl;
             return this;
         }
 
         /**
-         * PatchRules.
+         * <p>Indicates whether virtual patching is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder patchRules(Integer patchRules) {
             this.patchRules = patchRules;
@@ -182,7 +188,10 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>133173B9-8010-5DF5-8B93-********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +199,15 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RuleClass.
+         * <p>The level of the rule group for the IPS. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: loose</li>
+         * <li><strong>2</strong>: medium</li>
+         * <li><strong>3</strong>: strict</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder ruleClass(Integer ruleClass) {
             this.ruleClass = ruleClass;
@@ -198,7 +215,14 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RunMode.
+         * <p>The mode of the IPS. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: block mode</li>
+         * <li><strong>0</strong>: monitor mode</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder runMode(Integer runMode) {
             this.runMode = runMode;

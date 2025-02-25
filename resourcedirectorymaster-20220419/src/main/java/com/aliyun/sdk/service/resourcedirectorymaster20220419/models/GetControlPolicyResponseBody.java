@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetControlPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>GetControlPolicyResponseBody</p>
  */
 public class GetControlPolicyResponseBody extends TeaModel {
-    @NameInMap("ControlPolicy")
+    @com.aliyun.core.annotation.NameInMap("ControlPolicy")
     private ControlPolicy controlPolicy;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetControlPolicyResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetControlPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the access control policy.
+         * <p>The details of the access control policy.</p>
          */
         public Builder controlPolicy(ControlPolicy controlPolicy) {
             this.controlPolicy = controlPolicy;
@@ -58,7 +63,10 @@ public class GetControlPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AB769936-CDFA-4D52-8CE2-A3581800044A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,32 +79,38 @@ public class GetControlPolicyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetControlPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetControlPolicyResponseBody</p>
+     */
     public static class ControlPolicy extends TeaModel {
-        @NameInMap("AttachmentCount")
+        @com.aliyun.core.annotation.NameInMap("AttachmentCount")
         private String attachmentCount;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EffectScope")
+        @com.aliyun.core.annotation.NameInMap("EffectScope")
         private String effectScope;
 
-        @NameInMap("PolicyDocument")
+        @com.aliyun.core.annotation.NameInMap("PolicyDocument")
         private String policyDocument;
 
-        @NameInMap("PolicyId")
+        @com.aliyun.core.annotation.NameInMap("PolicyId")
         private String policyId;
 
-        @NameInMap("PolicyName")
+        @com.aliyun.core.annotation.NameInMap("PolicyName")
         private String policyName;
 
-        @NameInMap("PolicyType")
+        @com.aliyun.core.annotation.NameInMap("PolicyType")
         private String policyType;
 
-        @NameInMap("UpdateDate")
+        @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
 
         private ControlPolicy(Builder builder) {
@@ -194,7 +208,10 @@ public class GetControlPolicyResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * The number of times that the access control policy is referenced.
+             * <p>The number of times that the access control policy is referenced.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder attachmentCount(String attachmentCount) {
                 this.attachmentCount = attachmentCount;
@@ -202,7 +219,10 @@ public class GetControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the access control policy was created.
+             * <p>The time when the access control policy was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-18T08:51:33Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -210,7 +230,10 @@ public class GetControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the access control policy.
+             * <p>The description of the access control policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ExampleControlPolicy</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -218,11 +241,14 @@ public class GetControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The effective scope of the access control policy. Valid values:
-             * <p>
+             * <p>The effective scope of the access control policy. Valid values:</p>
+             * <ul>
+             * <li>All: The access control policy is in effect for Alibaba Cloud accounts, RAM users, and RAM roles.</li>
+             * <li>RAM: The access control policy is in effect only for RAM users and RAM roles.</li>
+             * </ul>
              * 
-             * *   All: The access control policy is in effect for Alibaba Cloud accounts, RAM users, and RAM roles.
-             * *   RAM: The access control policy is in effect only for RAM users and RAM roles.
+             * <strong>example:</strong>
+             * <p>RAM</p>
              */
             public Builder effectScope(String effectScope) {
                 this.effectScope = effectScope;
@@ -230,7 +256,10 @@ public class GetControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The document of the access control policy.
+             * <p>The document of the access control policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Version&quot;:&quot;1&quot;,&quot;Statement&quot;:[{&quot;Effect&quot;:&quot;Deny&quot;,&quot;Action&quot;:[&quot;ram:UpdateRole&quot;,&quot;ram:DeleteRole&quot;,&quot;ram:AttachPolicyToRole&quot;,&quot;ram:DetachPolicyFromRole&quot;],&quot;Resource&quot;:&quot;acs:ram:<em>:</em>:role/ResourceDirectoryAccountAccessRole&quot;}]}</p>
              */
             public Builder policyDocument(String policyDocument) {
                 this.policyDocument = policyDocument;
@@ -238,7 +267,10 @@ public class GetControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the access control policy.
+             * <p>The ID of the access control policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cp-SImPt8GCEwiq****</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -246,7 +278,10 @@ public class GetControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the access control policy.
+             * <p>The name of the access control policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -254,11 +289,14 @@ public class GetControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the access control policy. Valid values:
-             * <p>
+             * <p>The type of the access control policy. Valid values:</p>
+             * <ul>
+             * <li>System: system access control policy</li>
+             * <li>Custom: custom access control policy</li>
+             * </ul>
              * 
-             * *   System: system access control policy
-             * *   Custom: custom access control policy
+             * <strong>example:</strong>
+             * <p>Custom</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -266,7 +304,10 @@ public class GetControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the access control policy was updated.
+             * <p>The time when the access control policy was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-18T08:51:33Z</p>
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

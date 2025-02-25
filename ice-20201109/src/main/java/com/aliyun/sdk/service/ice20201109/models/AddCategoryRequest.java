@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddCategoryRequest} extends {@link RequestModel}
  *
  * <p>AddCategoryRequest</p>
  */
 public class AddCategoryRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("CateName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CateName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cateName;
 
-    @Query
-    @NameInMap("ParentId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentId")
     private Long parentId;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private AddCategoryRequest(Builder builder) {
@@ -106,7 +111,12 @@ public class AddCategoryRequest extends Request {
         }
 
         /**
-         * CateName.
+         * <p>The category name.</p>
+         * <ul>
+         * <li>The value can be up to 64 bytes in length.</li>
+         * <li>The value must be encoded in UTF-8.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          */
         public Builder cateName(String cateName) {
             this.putQueryParameter("CateName", cateName);
@@ -115,7 +125,10 @@ public class AddCategoryRequest extends Request {
         }
 
         /**
-         * ParentId.
+         * <p>The ID of the parent category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder parentId(Long parentId) {
             this.putQueryParameter("ParentId", parentId);
@@ -124,7 +137,14 @@ public class AddCategoryRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The type of the category. Valid values:</p>
+         * <ul>
+         * <li>default: audio, video, and image files. This is the default value.</li>
+         * <li>material: short video materials.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

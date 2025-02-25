@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDBNodesResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDBNodesResponseBody</p>
  */
 public class CreateDBNodesResponseBody extends TeaModel {
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("DBNodeIds")
+    @com.aliyun.core.annotation.NameInMap("DBNodeIds")
     private DBNodeIds DBNodeIds;
 
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateDBNodesResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class CreateDBNodesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-***************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -82,7 +90,7 @@ public class CreateDBNodesResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the nodes.
+         * <p>Details about the nodes.</p>
          */
         public Builder DBNodeIds(DBNodeIds DBNodeIds) {
             this.DBNodeIds = DBNodeIds;
@@ -90,7 +98,10 @@ public class CreateDBNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order.
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2148126708*****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -98,7 +109,10 @@ public class CreateDBNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E053E730-5755-4AA9-AA9D-A47867******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,9 +125,15 @@ public class CreateDBNodesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDBNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateDBNodesResponseBody</p>
+     */
     public static class DBNodeIds extends TeaModel {
-        @NameInMap("DBNodeId")
-        private java.util.List < String > DBNodeId;
+        @com.aliyun.core.annotation.NameInMap("DBNodeId")
+        private java.util.List<String> DBNodeId;
 
         private DBNodeIds(Builder builder) {
             this.DBNodeId = builder.DBNodeId;
@@ -130,17 +150,17 @@ public class CreateDBNodesResponseBody extends TeaModel {
         /**
          * @return DBNodeId
          */
-        public java.util.List < String > getDBNodeId() {
+        public java.util.List<String> getDBNodeId() {
             return this.DBNodeId;
         }
 
         public static final class Builder {
-            private java.util.List < String > DBNodeId; 
+            private java.util.List<String> DBNodeId; 
 
             /**
              * DBNodeId.
              */
-            public Builder DBNodeId(java.util.List < String > DBNodeId) {
+            public Builder DBNodeId(java.util.List<String> DBNodeId) {
                 this.DBNodeId = DBNodeId;
                 return this;
             }

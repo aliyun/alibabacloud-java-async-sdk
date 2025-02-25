@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.market20151101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLicenseResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLicenseResponseBody</p>
  */
 public class DescribeLicenseResponseBody extends TeaModel {
-    @NameInMap("License")
+    @com.aliyun.core.annotation.NameInMap("License")
     private License license;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeLicenseResponseBody(Builder builder) {
@@ -71,11 +76,17 @@ public class DescribeLicenseResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLicenseResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLicenseResponseBody</p>
+     */
     public static class LicenseAttribute extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private LicenseAttribute(Builder builder) {
@@ -132,9 +143,15 @@ public class DescribeLicenseResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLicenseResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLicenseResponseBody</p>
+     */
     public static class ExtendArray extends TeaModel {
-        @NameInMap("LicenseAttribute")
-        private java.util.List < LicenseAttribute> licenseAttribute;
+        @com.aliyun.core.annotation.NameInMap("LicenseAttribute")
+        private java.util.List<LicenseAttribute> licenseAttribute;
 
         private ExtendArray(Builder builder) {
             this.licenseAttribute = builder.licenseAttribute;
@@ -151,17 +168,17 @@ public class DescribeLicenseResponseBody extends TeaModel {
         /**
          * @return licenseAttribute
          */
-        public java.util.List < LicenseAttribute> getLicenseAttribute() {
+        public java.util.List<LicenseAttribute> getLicenseAttribute() {
             return this.licenseAttribute;
         }
 
         public static final class Builder {
-            private java.util.List < LicenseAttribute> licenseAttribute; 
+            private java.util.List<LicenseAttribute> licenseAttribute; 
 
             /**
              * LicenseAttribute.
              */
-            public Builder licenseAttribute(java.util.List < LicenseAttribute> licenseAttribute) {
+            public Builder licenseAttribute(java.util.List<LicenseAttribute> licenseAttribute) {
                 this.licenseAttribute = licenseAttribute;
                 return this;
             }
@@ -173,17 +190,23 @@ public class DescribeLicenseResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLicenseResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLicenseResponseBody</p>
+     */
     public static class ExtendInfo extends TeaModel {
-        @NameInMap("AccountQuantity")
+        @com.aliyun.core.annotation.NameInMap("AccountQuantity")
         private Long accountQuantity;
 
-        @NameInMap("AliUid")
+        @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("Mobile")
+        @com.aliyun.core.annotation.NameInMap("Mobile")
         private String mobile;
 
         private ExtendInfo(Builder builder) {
@@ -274,41 +297,47 @@ public class DescribeLicenseResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLicenseResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLicenseResponseBody</p>
+     */
     public static class License extends TeaModel {
-        @NameInMap("ActivateTime")
+        @com.aliyun.core.annotation.NameInMap("ActivateTime")
         private String activateTime;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("ExtendArray")
+        @com.aliyun.core.annotation.NameInMap("ExtendArray")
         private ExtendArray extendArray;
 
-        @NameInMap("ExtendInfo")
+        @com.aliyun.core.annotation.NameInMap("ExtendInfo")
         private ExtendInfo extendInfo;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("LicenseCode")
+        @com.aliyun.core.annotation.NameInMap("LicenseCode")
         private String licenseCode;
 
-        @NameInMap("LicenseStatus")
+        @com.aliyun.core.annotation.NameInMap("LicenseStatus")
         private String licenseStatus;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("ProductName")
+        @com.aliyun.core.annotation.NameInMap("ProductName")
         private String productName;
 
-        @NameInMap("ProductSkuId")
+        @com.aliyun.core.annotation.NameInMap("ProductSkuId")
         private String productSkuId;
 
-        @NameInMap("SupplierName")
+        @com.aliyun.core.annotation.NameInMap("SupplierName")
         private String supplierName;
 
         private License(Builder builder) {

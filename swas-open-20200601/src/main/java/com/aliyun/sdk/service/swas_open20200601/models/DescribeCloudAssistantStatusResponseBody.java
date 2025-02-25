@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCloudAssistantStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCloudAssistantStatusResponseBody</p>
  */
 public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
-    @NameInMap("CloudAssistantStatus")
-    private java.util.List < CloudAssistantStatus> cloudAssistantStatus;
+    @com.aliyun.core.annotation.NameInMap("CloudAssistantStatus")
+    private java.util.List<CloudAssistantStatus> cloudAssistantStatus;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeCloudAssistantStatusResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
     /**
      * @return cloudAssistantStatus
      */
-    public java.util.List < CloudAssistantStatus> getCloudAssistantStatus() {
+    public java.util.List<CloudAssistantStatus> getCloudAssistantStatus() {
         return this.cloudAssistantStatus;
     }
 
@@ -79,27 +84,27 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CloudAssistantStatus> cloudAssistantStatus; 
+        private java.util.List<CloudAssistantStatus> cloudAssistantStatus; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * Indicates whether the Cloud Assistant client is installed on the server.
+         * <p>Indicates whether the Cloud Assistant client is installed on the server.</p>
          */
-        public Builder cloudAssistantStatus(java.util.List < CloudAssistantStatus> cloudAssistantStatus) {
+        public Builder cloudAssistantStatus(java.util.List<CloudAssistantStatus> cloudAssistantStatus) {
             this.cloudAssistantStatus = cloudAssistantStatus;
             return this;
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -107,12 +112,12 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Maximum value: 50.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Maximum value: 50.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -120,7 +125,10 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20758A-585D-4A41-A9B2-28DA8F4F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +136,10 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -141,11 +152,17 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCloudAssistantStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudAssistantStatusResponseBody</p>
+     */
     public static class CloudAssistantStatus extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Boolean status;
 
         private CloudAssistantStatus(Builder builder) {
@@ -180,7 +197,10 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
             private Boolean status; 
 
             /**
-             * The ID of the simple application server.
+             * <p>The ID of the simple application server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ace0706b2ac4454d984295a94213****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -188,7 +208,10 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Cloud Assistant client is installed on the server.
+             * <p>Indicates whether the Cloud Assistant client is installed on the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder status(Boolean status) {
                 this.status = status;

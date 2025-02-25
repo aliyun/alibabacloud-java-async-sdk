@@ -1,35 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link CreateRdsExternalStoreRequest} extends {@link RequestModel}
  *
  * <p>CreateRdsExternalStoreRequest</p>
  */
 public class CreateRdsExternalStoreRequest extends Request {
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("project")
     private String project;
 
-    @Body
-    @NameInMap("externalStoreName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("externalStoreName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String externalStoreName;
 
-    @Body
-    @NameInMap("parameter")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("parameter")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Parameter parameter;
 
-    @Body
-    @NameInMap("storeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("storeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String storeType;
 
     private CreateRdsExternalStoreRequest(Builder builder) {
@@ -100,7 +104,11 @@ public class CreateRdsExternalStoreRequest extends Request {
         } 
 
         /**
-         * The name of the project.
+         * <p>The name of the project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ali-test-project</p>
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -109,7 +117,11 @@ public class CreateRdsExternalStoreRequest extends Request {
         }
 
         /**
-         * The name of the external store. The name must be unique in a project and must be different from Logstore names.
+         * <p>The name of the external store. The name must be unique in a project and must be different from Logstore names.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds_store</p>
          */
         public Builder externalStoreName(String externalStoreName) {
             this.putBodyParameter("externalStoreName", externalStoreName);
@@ -118,7 +130,8 @@ public class CreateRdsExternalStoreRequest extends Request {
         }
 
         /**
-         * The parameter struct.
+         * <p>The parameter struct.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder parameter(Parameter parameter) {
             this.putBodyParameter("parameter", parameter);
@@ -127,7 +140,11 @@ public class CreateRdsExternalStoreRequest extends Request {
         }
 
         /**
-         * The storage type. Set the value to rds-vpc, which indicates an ApsaraDB RDS for MySQL database in a virtual private cloud (VPC).
+         * <p>The storage type. Set the value to rds-vpc, which indicates an ApsaraDB RDS for MySQL database in a virtual private cloud (VPC).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds-vpc</p>
          */
         public Builder storeType(String storeType) {
             this.putBodyParameter("storeType", storeType);
@@ -142,38 +159,44 @@ public class CreateRdsExternalStoreRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateRdsExternalStoreRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRdsExternalStoreRequest</p>
+     */
     public static class Parameter extends TeaModel {
-        @NameInMap("db")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("db")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String db;
 
-        @NameInMap("host")
+        @com.aliyun.core.annotation.NameInMap("host")
         private String host;
 
-        @NameInMap("instance-id")
+        @com.aliyun.core.annotation.NameInMap("instance-id")
         private String instanceId;
 
-        @NameInMap("password")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("password")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String password;
 
-        @NameInMap("port")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("port")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String port;
 
-        @NameInMap("region")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("region")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String region;
 
-        @NameInMap("table")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("table")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String table;
 
-        @NameInMap("username")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("username")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String username;
 
-        @NameInMap("vpc-id")
+        @com.aliyun.core.annotation.NameInMap("vpc-id")
         private String vpcId;
 
         private Parameter(Builder builder) {
@@ -271,7 +294,11 @@ public class CreateRdsExternalStoreRequest extends Request {
             private String vpcId; 
 
             /**
-             * The name of the database in the ApsaraDB RDS for MySQL instance.
+             * <p>The name of the database in the ApsaraDB RDS for MySQL instance.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>meta</p>
              */
             public Builder db(String db) {
                 this.db = db;
@@ -279,7 +306,10 @@ public class CreateRdsExternalStoreRequest extends Request {
             }
 
             /**
-             * The internal or public endpoint of the ApsaraDB RDS for MySQL instance.
+             * <p>The internal or public endpoint of the ApsaraDB RDS for MySQL instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -287,7 +317,10 @@ public class CreateRdsExternalStoreRequest extends Request {
             }
 
             /**
-             * The ID of the ApsaraDB RDS for MySQL instance.
+             * <p>The ID of the ApsaraDB RDS for MySQL instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1b6c719dfa08exf****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -295,7 +328,11 @@ public class CreateRdsExternalStoreRequest extends Request {
             }
 
             /**
-             * The password that is used to log on to the ApsaraDB RDS for MySQL instance.
+             * <p>The password that is used to log on to the ApsaraDB RDS for MySQL instance.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sfdsfldsfksfls****</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -303,7 +340,11 @@ public class CreateRdsExternalStoreRequest extends Request {
             }
 
             /**
-             * The internal or public port of the ApsaraDB RDS for MySQL instance.
+             * <p>The internal or public port of the ApsaraDB RDS for MySQL instance.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -311,7 +352,11 @@ public class CreateRdsExternalStoreRequest extends Request {
             }
 
             /**
-             * The region where the ApsaraDB RDS for MySQL instance resides. Valid values: cn-qingdao, cn-beijing, and cn-hangzhou.
+             * <p>The region where the ApsaraDB RDS for MySQL instance resides. Valid values: cn-qingdao, cn-beijing, and cn-hangzhou.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-qingdao</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -319,7 +364,11 @@ public class CreateRdsExternalStoreRequest extends Request {
             }
 
             /**
-             * The name of the database table in the ApsaraDB RDS for MySQL instance.
+             * <p>The name of the database table in the ApsaraDB RDS for MySQL instance.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>join_meta</p>
              */
             public Builder table(String table) {
                 this.table = table;
@@ -327,7 +376,11 @@ public class CreateRdsExternalStoreRequest extends Request {
             }
 
             /**
-             * The username that is used to log on to the ApsaraDB RDS for MySQL instance.
+             * <p>The username that is used to log on to the ApsaraDB RDS for MySQL instance.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root</p>
              */
             public Builder username(String username) {
                 this.username = username;
@@ -335,7 +388,10 @@ public class CreateRdsExternalStoreRequest extends Request {
             }
 
             /**
-             * The ID of the VPC to which the ApsaraDB RDS for MySQL instance belongs.
+             * <p>The ID of the VPC to which the ApsaraDB RDS for MySQL instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1aevy8sofi8mh1q****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

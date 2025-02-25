@@ -1,77 +1,82 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EditQualityProjectRequest} extends {@link RequestModel}
  *
  * <p>EditQualityProjectRequest</p>
  */
 public class EditQualityProjectRequest extends Request {
-    @Query
-    @NameInMap("AnalysisIds")
-    @Validation(required = true)
-    private java.util.List < Long > analysisIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AnalysisIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Long> analysisIds;
 
-    @Query
-    @NameInMap("ChannelTouchType")
-    @Validation(required = true)
-    private java.util.List < Integer > channelTouchType;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChannelTouchType")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Integer> channelTouchType;
 
-    @Query
-    @NameInMap("CheckFreqType")
-    @Validation(required = true, maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckFreqType")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
     private Integer checkFreqType;
 
-    @Query
-    @NameInMap("DepList")
-    @Validation()
-    private java.util.List < Long > depList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DepList")
+    @com.aliyun.core.annotation.Validation()
+    private java.util.List<Long> depList;
 
-    @Query
-    @NameInMap("GroupList")
-    @Validation()
-    private java.util.List < Long > groupList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupList")
+    @com.aliyun.core.annotation.Validation()
+    private java.util.List<Long> groupList;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("ProjectId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long projectId;
 
-    @Body
-    @NameInMap("ProjectName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectName;
 
-    @Query
-    @NameInMap("ProjectVersion")
-    @Validation(required = true, maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectVersion")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
     private Integer projectVersion;
 
-    @Query
-    @NameInMap("ScopeType")
-    @Validation(required = true, maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScopeType")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
     private Integer scopeType;
 
-    @Query
-    @NameInMap("ServicerList")
-    private java.util.List < String > servicerList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServicerList")
+    private java.util.List<String> servicerList;
 
-    @Query
-    @NameInMap("TimeRangeEnd")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeRangeEnd")
     private String timeRangeEnd;
 
-    @Query
-    @NameInMap("TimeRangeStart")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeRangeStart")
     private String timeRangeStart;
 
     private EditQualityProjectRequest(Builder builder) {
@@ -107,14 +112,14 @@ public class EditQualityProjectRequest extends Request {
     /**
      * @return analysisIds
      */
-    public java.util.List < Long > getAnalysisIds() {
+    public java.util.List<Long> getAnalysisIds() {
         return this.analysisIds;
     }
 
     /**
      * @return channelTouchType
      */
-    public java.util.List < Integer > getChannelTouchType() {
+    public java.util.List<Integer> getChannelTouchType() {
         return this.channelTouchType;
     }
 
@@ -128,14 +133,14 @@ public class EditQualityProjectRequest extends Request {
     /**
      * @return depList
      */
-    public java.util.List < Long > getDepList() {
+    public java.util.List<Long> getDepList() {
         return this.depList;
     }
 
     /**
      * @return groupList
      */
-    public java.util.List < Long > getGroupList() {
+    public java.util.List<Long> getGroupList() {
         return this.groupList;
     }
 
@@ -177,7 +182,7 @@ public class EditQualityProjectRequest extends Request {
     /**
      * @return servicerList
      */
-    public java.util.List < String > getServicerList() {
+    public java.util.List<String> getServicerList() {
         return this.servicerList;
     }
 
@@ -196,17 +201,17 @@ public class EditQualityProjectRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<EditQualityProjectRequest, Builder> {
-        private java.util.List < Long > analysisIds; 
-        private java.util.List < Integer > channelTouchType; 
+        private java.util.List<Long> analysisIds; 
+        private java.util.List<Integer> channelTouchType; 
         private Integer checkFreqType; 
-        private java.util.List < Long > depList; 
-        private java.util.List < Long > groupList; 
+        private java.util.List<Long> depList; 
+        private java.util.List<Long> groupList; 
         private String instanceId; 
         private Long projectId; 
         private String projectName; 
         private Integer projectVersion; 
         private Integer scopeType; 
-        private java.util.List < String > servicerList; 
+        private java.util.List<String> servicerList; 
         private String timeRangeEnd; 
         private String timeRangeStart; 
 
@@ -232,25 +237,25 @@ public class EditQualityProjectRequest extends Request {
         } 
 
         /**
-         * AnalysisIds.
+         * <p>This parameter is required.</p>
          */
-        public Builder analysisIds(java.util.List < Long > analysisIds) {
+        public Builder analysisIds(java.util.List<Long> analysisIds) {
             this.putQueryParameter("AnalysisIds", analysisIds);
             this.analysisIds = analysisIds;
             return this;
         }
 
         /**
-         * ChannelTouchType.
+         * <p>This parameter is required.</p>
          */
-        public Builder channelTouchType(java.util.List < Integer > channelTouchType) {
+        public Builder channelTouchType(java.util.List<Integer> channelTouchType) {
             this.putQueryParameter("ChannelTouchType", channelTouchType);
             this.channelTouchType = channelTouchType;
             return this;
         }
 
         /**
-         * CheckFreqType.
+         * <p>This parameter is required.</p>
          */
         public Builder checkFreqType(Integer checkFreqType) {
             this.putQueryParameter("CheckFreqType", checkFreqType);
@@ -261,7 +266,7 @@ public class EditQualityProjectRequest extends Request {
         /**
          * DepList.
          */
-        public Builder depList(java.util.List < Long > depList) {
+        public Builder depList(java.util.List<Long> depList) {
             this.putQueryParameter("DepList", depList);
             this.depList = depList;
             return this;
@@ -270,14 +275,14 @@ public class EditQualityProjectRequest extends Request {
         /**
          * GroupList.
          */
-        public Builder groupList(java.util.List < Long > groupList) {
+        public Builder groupList(java.util.List<Long> groupList) {
             this.putQueryParameter("GroupList", groupList);
             this.groupList = groupList;
             return this;
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -286,7 +291,7 @@ public class EditQualityProjectRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>This parameter is required.</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -295,7 +300,7 @@ public class EditQualityProjectRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>This parameter is required.</p>
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -304,7 +309,7 @@ public class EditQualityProjectRequest extends Request {
         }
 
         /**
-         * ProjectVersion.
+         * <p>This parameter is required.</p>
          */
         public Builder projectVersion(Integer projectVersion) {
             this.putQueryParameter("ProjectVersion", projectVersion);
@@ -313,7 +318,7 @@ public class EditQualityProjectRequest extends Request {
         }
 
         /**
-         * ScopeType.
+         * <p>This parameter is required.</p>
          */
         public Builder scopeType(Integer scopeType) {
             this.putQueryParameter("ScopeType", scopeType);
@@ -324,7 +329,7 @@ public class EditQualityProjectRequest extends Request {
         /**
          * ServicerList.
          */
-        public Builder servicerList(java.util.List < String > servicerList) {
+        public Builder servicerList(java.util.List<String> servicerList) {
             this.putQueryParameter("ServicerList", servicerList);
             this.servicerList = servicerList;
             return this;

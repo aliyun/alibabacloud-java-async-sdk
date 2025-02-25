@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bpstudio20210931.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetApplicationResponseBody} extends {@link TeaModel}
  *
  * <p>GetApplicationResponseBody</p>
  */
 public class GetApplicationResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetApplicationResponseBody(Builder builder) {
@@ -74,7 +74,10 @@ public class GetApplicationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The deployment result.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +85,7 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the application.
+         * <p>The details of the application.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,33 +93,10 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Possible application states:
-         * <p>
+         * <p>Reason for the request failure</p>
          * 
-         * *   Creating: The application is being created.
-         * *   Modified: The application has been modified.
-         * *   Verifying: The application is being verified.
-         * *   Verified_Failure: The application failed to pass the verification.
-         * *   Verified_Success: The application has passed the verification.
-         * *   Valuating: Fees are being calculated for the application.
-         * *   Valuating_Failure: Fees failed to be calculated for the application.
-         * *   Valuating_Success: Fees are calculated for the application.
-         * *   Deploying: The application is being deployed.
-         * *   Deployed_Failure: The application failed to be deployed.
-         * *   Partially_Deployed_Success: Some resources of the application are deployed.
-         * *   Deployed_Success: The application is deployed.
-         * *   Destroying: The application is being released.
-         * *   Delayed_Destroy: The application release is delayed.
-         * *   Destroyed_Failure: The application failed to be released.
-         * *   Partially_Destroyed_Success: Some resources of the application are released.
-         * *   Destroyed_Success: The application is released.
-         * *   Revised: The application architecture is adjusted.
-         * *   Verifying_In_Revision: The application resources are being verified during architecture adjustment.
-         * *   Verified_Failure_In_Revision: The application resources failed to pass the verification during architecture adjustment.
-         * *   Verified_Success_In_Revision: The application resources are verified during architecture adjustment.
-         * *   Valuating_In_Revision: Fees are being calculated for the application during architecture adjustment.
-         * *   Valuating_Failure_In_Revision: Fees failed to be calculated for the application during architecture adjustment.
-         * *   Valuating_Success_In_Revision: Fees are calculated for the application during architecture adjustment.
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -124,7 +104,10 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the application.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A07FFDF2-78FA-1B48-9E38-88E833A93187</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,26 +120,32 @@ public class GetApplicationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationResponseBody</p>
+     */
     public static class Checklist extends TeaModel {
-        @NameInMap("Lifecycle")
+        @com.aliyun.core.annotation.NameInMap("Lifecycle")
         private String lifecycle;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("ResourceCode")
+        @com.aliyun.core.annotation.NameInMap("ResourceCode")
         private String resourceCode;
 
-        @NameInMap("ResourceName")
+        @com.aliyun.core.annotation.NameInMap("ResourceName")
         private String resourceName;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private String result;
 
-        @NameInMap("Specification")
+        @com.aliyun.core.annotation.NameInMap("Specification")
         private String specification;
 
         private Checklist(Builder builder) {
@@ -236,7 +225,10 @@ public class GetApplicationResponseBody extends TeaModel {
             private String specification; 
 
             /**
-             * The message returned for verification.
+             * <p>The resource tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Create</p>
              */
             public Builder lifecycle(String lifecycle) {
                 this.lifecycle = lifecycle;
@@ -244,7 +236,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The verification results returned.
+             * <p>The region in which the instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -252,7 +247,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * <p>The message returned for verification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The ID of the region.</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -260,7 +258,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The error message that is returned when a price query fails.
+             * <p>The service code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder resourceCode(String resourceCode) {
                 this.resourceCode = resourceCode;
@@ -268,7 +269,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ECS instance sold out
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -276,7 +280,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The service code.
+             * <p>The verification result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Finish</p>
              */
             public Builder result(String result) {
                 this.result = result;
@@ -284,7 +291,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The verification result.
+             * <p>The resource specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.0/16</p>
              */
             public Builder specification(String specification) {
                 this.specification = specification;
@@ -298,47 +308,53 @@ public class GetApplicationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationResponseBody</p>
+     */
     public static class PriceList extends TeaModel {
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("Count")
-        private Long count;
+        @com.aliyun.core.annotation.NameInMap("Count")
+        private Integer count;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("Lifecycle")
+        @com.aliyun.core.annotation.NameInMap("Lifecycle")
         private String lifecycle;
 
-        @NameInMap("OnePrice")
-        private Float onePrice;
+        @com.aliyun.core.annotation.NameInMap("OnePrice")
+        private Double onePrice;
 
-        @NameInMap("OriginalPrice")
-        private Float originalPrice;
+        @com.aliyun.core.annotation.NameInMap("OriginalPrice")
+        private Double originalPrice;
 
-        @NameInMap("Period")
-        private Float period;
+        @com.aliyun.core.annotation.NameInMap("Period")
+        private Integer period;
 
-        @NameInMap("Price")
-        private Float price;
+        @com.aliyun.core.annotation.NameInMap("Price")
+        private Double price;
 
-        @NameInMap("PriceUnit")
+        @com.aliyun.core.annotation.NameInMap("PriceUnit")
         private String priceUnit;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("ResourceCode")
+        @com.aliyun.core.annotation.NameInMap("ResourceCode")
         private String resourceCode;
 
-        @NameInMap("Specification")
+        @com.aliyun.core.annotation.NameInMap("Specification")
         private String specification;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private PriceList(Builder builder) {
@@ -376,7 +392,7 @@ public class GetApplicationResponseBody extends TeaModel {
         /**
          * @return count
          */
-        public Long getCount() {
+        public Integer getCount() {
             return this.count;
         }
 
@@ -397,28 +413,28 @@ public class GetApplicationResponseBody extends TeaModel {
         /**
          * @return onePrice
          */
-        public Float getOnePrice() {
+        public Double getOnePrice() {
             return this.onePrice;
         }
 
         /**
          * @return originalPrice
          */
-        public Float getOriginalPrice() {
+        public Double getOriginalPrice() {
             return this.originalPrice;
         }
 
         /**
          * @return period
          */
-        public Float getPeriod() {
+        public Integer getPeriod() {
             return this.period;
         }
 
         /**
          * @return price
          */
-        public Float getPrice() {
+        public Double getPrice() {
             return this.price;
         }
 
@@ -466,13 +482,13 @@ public class GetApplicationResponseBody extends TeaModel {
 
         public static final class Builder {
             private String chargeType; 
-            private Long count; 
+            private Integer count; 
             private String instanceName; 
             private String lifecycle; 
-            private Float onePrice; 
-            private Float originalPrice; 
-            private Float period; 
-            private Float price; 
+            private Double onePrice; 
+            private Double originalPrice; 
+            private Integer period; 
+            private Double price; 
             private String priceUnit; 
             private String region; 
             private String remark; 
@@ -481,7 +497,10 @@ public class GetApplicationResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The price unit.
+             * <p>The billing method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PayAsYouGo</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -489,15 +508,21 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The original price.
+             * <p>The quantity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
-            public Builder count(Long count) {
+            public Builder count(Integer count) {
                 this.count = count;
                 return this;
             }
 
             /**
-             * The ID of the resource group to which the application belongs.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -505,7 +530,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>Resource Fill Labels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Create</p>
              */
             public Builder lifecycle(String lifecycle) {
                 this.lifecycle = lifecycle;
@@ -513,39 +541,54 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The service code.
+             * <p>The unit price of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.01</p>
              */
-            public Builder onePrice(Float onePrice) {
+            public Builder onePrice(Double onePrice) {
                 this.onePrice = onePrice;
                 return this;
             }
 
             /**
-             * The billing results.
+             * <p>The original price of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.570</p>
              */
-            public Builder originalPrice(Float originalPrice) {
+            public Builder originalPrice(Double originalPrice) {
                 this.originalPrice = originalPrice;
                 return this;
             }
 
             /**
-             * The name of the instance.
+             * <p>The service duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
-            public Builder period(Float period) {
+            public Builder period(Integer period) {
                 this.period = period;
                 return this;
             }
 
             /**
-             * The quantity.
+             * <p>The total price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.01</p>
              */
-            public Builder price(Float price) {
+            public Builder price(Double price) {
                 this.price = price;
                 return this;
             }
 
             /**
-             * The unit price.
+             * <p>Unit: USD per hour</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The service duration.</p>
              */
             public Builder priceUnit(String priceUnit) {
                 this.priceUnit = priceUnit;
@@ -553,7 +596,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * USD/Hour
+             * <p>The region in which the instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -561,7 +607,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type.
+             * <p>The error message that is returned when a price query fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.e3.large</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -569,7 +618,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the application was created.
+             * <p>Product code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder resourceCode(String resourceCode) {
                 this.resourceCode = resourceCode;
@@ -577,7 +629,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type. This parameter indicates the information about the instance type. For example, 192.168.0.0/16 may be returned for a virtual private cloud (VPC), ecs.g5.large may be returned for an Elastic Compute Service (ECS) instance, and slb.s1.small may be returned for a Server Load Balancer (SLB) instance. If the resource does not have a specific type, an empty value is returned.
+             * <p>The instance type. This parameter indicates the information about the instance type. For example, 192.168.0.0/16 may be returned for a Virtual Private Cloud (VPC) instance, ecs.g5.large may be returned for an Elastic Compute Service (ECS) instance, and slb.s1.small may be returned for a Server Load Balancer (SLB) instance. If the resource does not have a specific type, an empty value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The billing method.</p>
              */
             public Builder specification(String specification) {
                 this.specification = specification;
@@ -585,10 +640,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 创建类型：
-             * <p>
-             * </br>新建-1
-             * </br>导入-2
+             * <p>The creation mode. Valid values:<br>1: creates a new instance.<br>2: imports an instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -602,34 +657,44 @@ public class GetApplicationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationResponseBody</p>
+     */
     public static class ResourceList extends TeaModel {
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("Lifecycle")
+        @com.aliyun.core.annotation.NameInMap("Lifecycle")
         private String lifecycle;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("NodeLabel")
+        private String nodeLabel;
+
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("ResourceCode")
+        @com.aliyun.core.annotation.NameInMap("ResourceCode")
         private String resourceCode;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceName")
+        @com.aliyun.core.annotation.NameInMap("ResourceName")
         private String resourceName;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ResourceList(Builder builder) {
             this.chargeType = builder.chargeType;
             this.lifecycle = builder.lifecycle;
+            this.nodeLabel = builder.nodeLabel;
             this.remark = builder.remark;
             this.resourceCode = builder.resourceCode;
             this.resourceId = builder.resourceId;
@@ -658,6 +723,13 @@ public class GetApplicationResponseBody extends TeaModel {
          */
         public String getLifecycle() {
             return this.lifecycle;
+        }
+
+        /**
+         * @return nodeLabel
+         */
+        public String getNodeLabel() {
+            return this.nodeLabel;
         }
 
         /**
@@ -705,6 +777,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public static final class Builder {
             private String chargeType; 
             private String lifecycle; 
+            private String nodeLabel; 
             private String remark; 
             private String resourceCode; 
             private String resourceId; 
@@ -713,7 +786,10 @@ public class GetApplicationResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The service code.
+             * <p>The billing method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PayAsYouGo</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -721,7 +797,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method.
+             * <p>The resource tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Create</p>
              */
             public Builder lifecycle(String lifecycle) {
                 this.lifecycle = lifecycle;
@@ -729,7 +808,18 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * NodeLabel.
+             */
+            public Builder nodeLabel(String nodeLabel) {
+                this.nodeLabel = nodeLabel;
+                return this;
+            }
+
+            /**
+             * <p>The deployment result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;hostName&quot;:&quot;iZ2zehnzxqixu1pywsfbx1Z&quot;,&quot;memory&quot;:32768.0,&quot;creationTime&quot;:&quot;2021-09-28T11:23:46Z&quot;,&quot;instanceName&quot;:&quot;ecs&quot;,&quot;internetMaxBandwidthOut&quot;:0.0,&quot;description&quot;:&quot;&quot;,&quot;clusterId&quot;:&quot;&quot;,&quot;private_ip&quot;:&quot;192.168.0.247&quot;,&quot;instanceId&quot;:&quot;i-2zehnzxqixu1pywsfbx1&quot;,&quot;requestId&quot;:&quot;F1C64344-3723-51A0-855B-5F08B5634323&quot;,&quot;zoneId&quot;:&quot;cn-beijing-b&quot;,&quot;ioOptimized&quot;:&quot;optimized&quot;,&quot;id&quot;:&quot;i-2zehnzxqixu1pywsfbx1&quot;,&quot;instanceNetworkType&quot;:&quot;vpc&quot;,&quot;instanceChargeType&quot;:&quot;PostPaid&quot;,&quot;imageId&quot;:&quot;centos_8_4_x64_20G_alibase_20210824.vhd&quot;,&quot;serialNumber&quot;:&quot;cee246c4-38f3-4bf3-950b-c17e88ff6527&quot;,&quot;vlanId&quot;:&quot;&quot;,&quot;instanceType&quot;:&quot;ecs.e3.large&quot;,&quot;cpu&quot;:4.0,&quot;creditSpecification&quot;:&quot;&quot;,&quot;internetMaxBandwidthIn&quot;:-1.0,&quot;expiredTime&quot;:&quot;2099-12-31T15:59Z&quot;,&quot;internetChargeType&quot;:&quot;PayByTraffic&quot;,&quot;regionId&quot;:&quot;cn-beijing&quot;,&quot;refId&quot;:&quot;79224644_0&quot;,&quot;stoppedMode&quot;:&quot;Not-applicable&quot;,&quot;status&quot;:&quot;Running&quot;}</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -737,7 +827,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the application.
+             * <p>The service code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder resourceCode(String resourceCode) {
                 this.resourceCode = resourceCode;
@@ -745,7 +838,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The resource deployment result.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-2zehnzxqixu1pywsfbx1</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -753,7 +849,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The resources.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -761,7 +860,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * <p>The type of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -769,7 +871,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The resource tag.
+             * <p>The resource deployment result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Finish</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -783,47 +888,57 @@ public class GetApplicationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ApplicationId")
+        @com.aliyun.core.annotation.NameInMap("ApplicationId")
         private String applicationId;
 
-        @NameInMap("Checklist")
+        @com.aliyun.core.annotation.NameInMap("Checklist")
         private java.util.List < Checklist> checklist;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("DeployPercent")
+        private Double deployPercent;
+
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Error")
+        @com.aliyun.core.annotation.NameInMap("Error")
         private String error;
 
-        @NameInMap("ImageURL")
+        @com.aliyun.core.annotation.NameInMap("ImageURL")
         private String imageURL;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PriceList")
+        @com.aliyun.core.annotation.NameInMap("PriceList")
         private java.util.List < PriceList> priceList;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ResourceList")
+        @com.aliyun.core.annotation.NameInMap("ResourceList")
         private java.util.List < ResourceList> resourceList;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
         private Data(Builder builder) {
             this.applicationId = builder.applicationId;
             this.checklist = builder.checklist;
             this.createTime = builder.createTime;
+            this.deployPercent = builder.deployPercent;
             this.description = builder.description;
             this.error = builder.error;
             this.imageURL = builder.imageURL;
@@ -862,6 +977,13 @@ public class GetApplicationResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return deployPercent
+         */
+        public Double getDeployPercent() {
+            return this.deployPercent;
         }
 
         /**
@@ -931,6 +1053,7 @@ public class GetApplicationResponseBody extends TeaModel {
             private String applicationId; 
             private java.util.List < Checklist> checklist; 
             private String createTime; 
+            private Double deployPercent; 
             private String description; 
             private String error; 
             private String imageURL; 
@@ -942,7 +1065,10 @@ public class GetApplicationResponseBody extends TeaModel {
             private String templateId; 
 
             /**
-             * The description of the application.
+             * <p>App ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VVK605ZH00OA4MRT</p>
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -950,7 +1076,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The resource tag.
+             * <p>The resource tag.</p>
              */
             public Builder checklist(java.util.List < Checklist> checklist) {
                 this.checklist = checklist;
@@ -958,7 +1084,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the application topology image.
+             * <p>The time when the app was created</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-08-09 14:37:16</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -966,7 +1095,18 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The message returned for the request.
+             * DeployPercent.
+             */
+            public Builder deployPercent(Double deployPercent) {
+                this.deployPercent = deployPercent;
+                return this;
+            }
+
+            /**
+             * <p>Application description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>remark</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -974,7 +1114,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder error(String error) {
                 this.error = error;
@@ -982,7 +1125,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the image in the database.
+             * <p>The URL of the image in the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The details of the application.</p>
              */
             public Builder imageURL(String imageURL) {
                 this.imageURL = imageURL;
@@ -990,7 +1136,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the image in the database.
+             * <p>App name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1411182597819805/sr-8DWU4RUS49NIDII0.png</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -998,7 +1147,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The billing results.
+             * <p>The billing results.</p>
              */
             public Builder priceList(java.util.List < PriceList> priceList) {
                 this.priceList = priceList;
@@ -1006,7 +1155,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 1411182597819805/topo-MCEXDI5EL2OM10NY.json
+             * <p>The ID of the resource group to which the app belongs</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekzhfgmw4e6fwq</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1014,7 +1166,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The resource specification.
+             * <p>The resource specification.</p>
              */
             public Builder resourceList(java.util.List < ResourceList> resourceList) {
                 this.resourceList = resourceList;
@@ -1022,7 +1174,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Verification passed
+             * <p>Verification passed</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Deployed_Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1030,7 +1185,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * CADT application
+             * <p>The ID of the template associated with the application</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FYS9VZ535U20V7HT</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;

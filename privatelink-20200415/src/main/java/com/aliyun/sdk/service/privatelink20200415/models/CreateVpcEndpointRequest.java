@@ -1,86 +1,101 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.privatelink20200415.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVpcEndpointRequest} extends {@link RequestModel}
  *
  * <p>CreateVpcEndpointRequest</p>
  */
 public class CreateVpcEndpointRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddressIpVersion")
+    private String addressIpVersion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("EndpointDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointDescription")
     private String endpointDescription;
 
-    @Query
-    @NameInMap("EndpointName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointName")
     private String endpointName;
 
-    @Query
-    @NameInMap("EndpointType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointType")
     private String endpointType;
 
-    @Query
-    @NameInMap("ProtectedEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyDocument")
+    private String policyDocument;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProtectedEnabled")
     private Boolean protectedEnabled;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("SecurityGroupId")
-    private java.util.List < String > securityGroupId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+    private java.util.List<String> securityGroupId;
 
-    @Query
-    @NameInMap("ServiceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
     private String serviceId;
 
-    @Query
-    @NameInMap("ServiceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Query
-    @NameInMap("VpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
-    @Query
-    @NameInMap("Zone")
-    private java.util.List < Zone> zone;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Zone")
+    private java.util.List<Zone> zone;
 
-    @Query
-    @NameInMap("ZonePrivateIpAddressCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZonePrivateIpAddressCount")
     private Long zonePrivateIpAddressCount;
 
     private CreateVpcEndpointRequest(Builder builder) {
         super(builder);
+        this.addressIpVersion = builder.addressIpVersion;
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
         this.endpointDescription = builder.endpointDescription;
         this.endpointName = builder.endpointName;
         this.endpointType = builder.endpointType;
+        this.policyDocument = builder.policyDocument;
         this.protectedEnabled = builder.protectedEnabled;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
@@ -104,6 +119,13 @@ public class CreateVpcEndpointRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return addressIpVersion
+     */
+    public String getAddressIpVersion() {
+        return this.addressIpVersion;
     }
 
     /**
@@ -142,6 +164,13 @@ public class CreateVpcEndpointRequest extends Request {
     }
 
     /**
+     * @return policyDocument
+     */
+    public String getPolicyDocument() {
+        return this.policyDocument;
+    }
+
+    /**
      * @return protectedEnabled
      */
     public Boolean getProtectedEnabled() {
@@ -165,7 +194,7 @@ public class CreateVpcEndpointRequest extends Request {
     /**
      * @return securityGroupId
      */
-    public java.util.List < String > getSecurityGroupId() {
+    public java.util.List<String> getSecurityGroupId() {
         return this.securityGroupId;
     }
 
@@ -186,7 +215,7 @@ public class CreateVpcEndpointRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -200,7 +229,7 @@ public class CreateVpcEndpointRequest extends Request {
     /**
      * @return zone
      */
-    public java.util.List < Zone> getZone() {
+    public java.util.List<Zone> getZone() {
         return this.zone;
     }
 
@@ -212,20 +241,22 @@ public class CreateVpcEndpointRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateVpcEndpointRequest, Builder> {
+        private String addressIpVersion; 
         private String clientToken; 
         private Boolean dryRun; 
         private String endpointDescription; 
         private String endpointName; 
         private String endpointType; 
+        private String policyDocument; 
         private Boolean protectedEnabled; 
         private String regionId; 
         private String resourceGroupId; 
-        private java.util.List < String > securityGroupId; 
+        private java.util.List<String> securityGroupId; 
         private String serviceId; 
         private String serviceName; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String vpcId; 
-        private java.util.List < Zone> zone; 
+        private java.util.List<Zone> zone; 
         private Long zonePrivateIpAddressCount; 
 
         private Builder() {
@@ -234,11 +265,13 @@ public class CreateVpcEndpointRequest extends Request {
 
         private Builder(CreateVpcEndpointRequest request) {
             super(request);
+            this.addressIpVersion = request.addressIpVersion;
             this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
             this.endpointDescription = request.endpointDescription;
             this.endpointName = request.endpointName;
             this.endpointType = request.endpointType;
+            this.policyDocument = request.policyDocument;
             this.protectedEnabled = request.protectedEnabled;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
@@ -252,10 +285,20 @@ public class CreateVpcEndpointRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * AddressIpVersion.
+         */
+        public Builder addressIpVersion(String addressIpVersion) {
+            this.putQueryParameter("AddressIpVersion", addressIpVersion);
+            this.addressIpVersion = addressIpVersion;
+            return this;
+        }
+
+        /**
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -264,11 +307,14 @@ public class CreateVpcEndpointRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -277,10 +323,11 @@ public class CreateVpcEndpointRequest extends Request {
         }
 
         /**
-         * The description of the endpoint.
-         * <p>
+         * <p>The description of the endpoint.</p>
+         * <p>The description must be 2 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 2 to 256 characters in length, and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>This is my Endpoint.</p>
          */
         public Builder endpointDescription(String endpointDescription) {
             this.putQueryParameter("EndpointDescription", endpointDescription);
@@ -289,10 +336,11 @@ public class CreateVpcEndpointRequest extends Request {
         }
 
         /**
-         * The name of the endpoint.
-         * <p>
+         * <p>The name of the endpoint.</p>
+         * <p>The name must be 2 to 128 characters in length, and can contain digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain digits, underscores (\_), and hyphens (-). The name must start with a letter.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder endpointName(String endpointName) {
             this.putQueryParameter("EndpointName", endpointName);
@@ -301,10 +349,17 @@ public class CreateVpcEndpointRequest extends Request {
         }
 
         /**
-         * The type of the endpoint.
-         * <p>
+         * <p>The endpoint type. Valid values:</p>
+         * <ul>
+         * <li><strong>Interface</strong> You can specify an Application Load Balancer (ALB) instance, a Classic Load Balancer (CLB) instance, or a Network Load Balancer (NLB) instance.</li>
+         * <li><strong>Reverse</strong> You can specify a Virtual Private Cloud (VPC) NAT gateway.</li>
+         * </ul>
+         * <blockquote>
+         * <p> Services that support reverse endpoints are provided by Alibaba Cloud or Alibaba Cloud partners. To create such a service on your own, contact your account manager.</p>
+         * </blockquote>
          * 
-         * Set the value to **Interface**. Then, you can specify Application Load Balancer (ALB) and Classic Load Balancer (CLB) instances as service resources for the endpoint service.
+         * <strong>example:</strong>
+         * <p>Interface</p>
          */
         public Builder endpointType(String endpointType) {
             this.putQueryParameter("EndpointType", endpointType);
@@ -313,11 +368,23 @@ public class CreateVpcEndpointRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable user authentication. This parameter is available in Security Token Service (STS) mode. Valid values:
-         * <p>
+         * PolicyDocument.
+         */
+        public Builder policyDocument(String policyDocument) {
+            this.putQueryParameter("PolicyDocument", policyDocument);
+            this.policyDocument = policyDocument;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to enable user authentication. This parameter is available in Security Token Service (STS) mode. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enables user authentication. After user authentication is enabled, only the user who creates the endpoint can modify or delete the endpoint in STS mode.</li>
+         * <li><strong>false</strong> (default): disables user authentication.</li>
+         * </ul>
          * 
-         * *   **true**: enables user authentication. After user authentication is enabled, only the user who creates the endpoint can modify or delete the endpoint in STS mode.
-         * *   **false** (default): disables user authentication.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder protectedEnabled(Boolean protectedEnabled) {
             this.putQueryParameter("ProtectedEnabled", protectedEnabled);
@@ -326,10 +393,12 @@ public class CreateVpcEndpointRequest extends Request {
         }
 
         /**
-         * The region ID of the endpoint.
-         * <p>
+         * <p>The region ID of the endpoint.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-huhehaote</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -338,7 +407,10 @@ public class CreateVpcEndpointRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -347,19 +419,22 @@ public class CreateVpcEndpointRequest extends Request {
         }
 
         /**
-         * The ID of the security group that is associated with the endpoint ENI. The security group can be used to control data transfer between the VPC and the endpoint ENI.
-         * <p>
+         * <p>The IDs of security groups that are associated with the endpoint elastic network interface (ENI).</p>
          * 
-         * The endpoint can be associated with up to 10 security groups.
+         * <strong>example:</strong>
+         * <p>sg-hp33bw6ynvm2yb0e****</p>
          */
-        public Builder securityGroupId(java.util.List < String > securityGroupId) {
+        public Builder securityGroupId(java.util.List<String> securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
             this.securityGroupId = securityGroupId;
             return this;
         }
 
         /**
-         * The ID of the endpoint service with which the endpoint is associated.
+         * <p>The ID of the endpoint service with which the endpoint is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epsrv-hp3xdsq46ael67lo****</p>
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -368,7 +443,10 @@ public class CreateVpcEndpointRequest extends Request {
         }
 
         /**
-         * The name of the endpoint service with which the endpoint is associated.
+         * <p>The name of the endpoint service with which the endpoint is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.aliyuncs.privatelink.cn-huhehaote.epsrv-hp3vpx8yqxblby3i****</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -377,16 +455,20 @@ public class CreateVpcEndpointRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * <p>The tags to add to the resource.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) to which the endpoint belongs.
+         * <p>The ID of the virtual private cloud (VPC) to which the endpoint belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-hp356stwkxg3fn2xe****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -395,16 +477,19 @@ public class CreateVpcEndpointRequest extends Request {
         }
 
         /**
-         * The zones where the endpoint is deployed.
+         * <p>The zones where the endpoint is deployed.</p>
          */
-        public Builder zone(java.util.List < Zone> zone) {
+        public Builder zone(java.util.List<Zone> zone) {
             this.putQueryParameter("Zone", zone);
             this.zone = zone;
             return this;
         }
 
         /**
-         * The number of private IP addresses that are assigned to an elastic network interface (ENI) in each zone. Set the value to **1**.
+         * <p>The number of private IP addresses that are assigned to an elastic network interface (ENI) in each zone. Set the value to <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder zonePrivateIpAddressCount(Long zonePrivateIpAddressCount) {
             this.putQueryParameter("ZonePrivateIpAddressCount", zonePrivateIpAddressCount);
@@ -419,11 +504,17 @@ public class CreateVpcEndpointRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateVpcEndpointRequest} extends {@link TeaModel}
+     *
+     * <p>CreateVpcEndpointRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -458,7 +549,10 @@ public class CreateVpcEndpointRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag to add to the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -466,7 +560,10 @@ public class CreateVpcEndpointRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag to add to the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -480,17 +577,27 @@ public class CreateVpcEndpointRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateVpcEndpointRequest} extends {@link TeaModel}
+     *
+     * <p>CreateVpcEndpointRequest</p>
+     */
     public static class Zone extends TeaModel {
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("Ipv6Address")
+        private String ipv6Address;
+
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
-        @NameInMap("ip")
+        @com.aliyun.core.annotation.NameInMap("ip")
         private String ip;
 
         private Zone(Builder builder) {
+            this.ipv6Address = builder.ipv6Address;
             this.vSwitchId = builder.vSwitchId;
             this.zoneId = builder.zoneId;
             this.ip = builder.ip;
@@ -502,6 +609,13 @@ public class CreateVpcEndpointRequest extends Request {
 
         public static Zone create() {
             return builder().build();
+        }
+
+        /**
+         * @return ipv6Address
+         */
+        public String getIpv6Address() {
+            return this.ipv6Address;
         }
 
         /**
@@ -526,12 +640,24 @@ public class CreateVpcEndpointRequest extends Request {
         }
 
         public static final class Builder {
+            private String ipv6Address; 
             private String vSwitchId; 
             private String zoneId; 
             private String ip; 
 
             /**
-             * The ID of the vSwitch where you want to create the endpoint ENI in the zone. You can specify up to 10 vSwitch IDs.
+             * Ipv6Address.
+             */
+            public Builder ipv6Address(String ipv6Address) {
+                this.ipv6Address = ipv6Address;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the vSwitch where you want to create the endpoint ENI in the zone. You can specify up to 10 vSwitch IDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-hp3uf6045ljdhd5zr****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -539,10 +665,11 @@ public class CreateVpcEndpointRequest extends Request {
             }
 
             /**
-             * The ID of the zone in which the endpoint is deployed.
-             * <p>
+             * <p>The ID of the zone in which the endpoint is deployed.</p>
+             * <p>You can specify up to 10 zone IDs.</p>
              * 
-             * You can specify up to 10 zone IDs.
+             * <strong>example:</strong>
+             * <p>cn-huhehaote-b</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -550,10 +677,11 @@ public class CreateVpcEndpointRequest extends Request {
             }
 
             /**
-             * The IP address of the zone in which the endpoint is deployed.
-             * <p>
+             * <p>The IP address of the zone in which the endpoint is deployed.</p>
+             * <p>You can specify up to 10 IP addresses.</p>
              * 
-             * You can specify up to 10 IP addresses.
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;

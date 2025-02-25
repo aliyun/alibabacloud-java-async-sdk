@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListExecutionRiskyTasksResponseBody} extends {@link TeaModel}
  *
  * <p>ListExecutionRiskyTasksResponseBody</p>
  */
 public class ListExecutionRiskyTasksResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RiskyTasks")
-    private java.util.List < RiskyTasks> riskyTasks;
+    @com.aliyun.core.annotation.NameInMap("RiskyTasks")
+    private java.util.List<RiskyTasks> riskyTasks;
 
     private ListExecutionRiskyTasksResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class ListExecutionRiskyTasksResponseBody extends TeaModel {
     /**
      * @return riskyTasks
      */
-    public java.util.List < RiskyTasks> getRiskyTasks() {
+    public java.util.List<RiskyTasks> getRiskyTasks() {
         return this.riskyTasks;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < RiskyTasks> riskyTasks; 
+        private java.util.List<RiskyTasks> riskyTasks; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C04B668D-D2DD-4B40-B6E9-0E3C4F53D5B5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class ListExecutionRiskyTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The information about high-risk tasks.
+         * <p>The information about high-risk tasks.</p>
          */
-        public Builder riskyTasks(java.util.List < RiskyTasks> riskyTasks) {
+        public Builder riskyTasks(java.util.List<RiskyTasks> riskyTasks) {
             this.riskyTasks = riskyTasks;
             return this;
         }
@@ -71,18 +79,24 @@ public class ListExecutionRiskyTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListExecutionRiskyTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListExecutionRiskyTasksResponseBody</p>
+     */
     public static class RiskyTasks extends TeaModel {
-        @NameInMap("API")
+        @com.aliyun.core.annotation.NameInMap("API")
         private String API;
 
-        @NameInMap("Service")
+        @com.aliyun.core.annotation.NameInMap("Service")
         private String service;
 
-        @NameInMap("Task")
-        private java.util.List < String > task;
+        @com.aliyun.core.annotation.NameInMap("Task")
+        private java.util.List<String> task;
 
-        @NameInMap("Template")
-        private java.util.List < String > template;
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private java.util.List<String> template;
 
         private RiskyTasks(Builder builder) {
             this.API = builder.API;
@@ -116,25 +130,28 @@ public class ListExecutionRiskyTasksResponseBody extends TeaModel {
         /**
          * @return task
          */
-        public java.util.List < String > getTask() {
+        public java.util.List<String> getTask() {
             return this.task;
         }
 
         /**
          * @return template
          */
-        public java.util.List < String > getTemplate() {
+        public java.util.List<String> getTemplate() {
             return this.template;
         }
 
         public static final class Builder {
             private String API; 
             private String service; 
-            private java.util.List < String > task; 
-            private java.util.List < String > template; 
+            private java.util.List<String> task; 
+            private java.util.List<String> template; 
 
             /**
-             * The name of the operation that the high-risk task calls.
+             * <p>The name of the operation that the high-risk task calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DeleteInstance</p>
              */
             public Builder API(String API) {
                 this.API = API;
@@ -142,7 +159,10 @@ public class ListExecutionRiskyTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The cloud service in which the high-risk task runs.
+             * <p>The cloud service in which the high-risk task runs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS</p>
              */
             public Builder service(String service) {
                 this.service = service;
@@ -150,17 +170,17 @@ public class ListExecutionRiskyTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the high-risk task.
+             * <p>The details of the high-risk task.</p>
              */
-            public Builder task(java.util.List < String > task) {
+            public Builder task(java.util.List<String> task) {
                 this.task = task;
                 return this;
             }
 
             /**
-             * The details of templates to which the high-risk task belongs.
+             * <p>The details of templates to which the high-risk task belongs.</p>
              */
-            public Builder template(java.util.List < String > template) {
+            public Builder template(java.util.List<String> template) {
                 this.template = template;
                 return this;
             }

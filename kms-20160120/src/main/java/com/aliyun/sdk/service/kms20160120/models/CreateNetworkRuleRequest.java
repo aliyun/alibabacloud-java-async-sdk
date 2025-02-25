@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateNetworkRuleRequest</p>
  */
 public class CreateNetworkRuleRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("SourcePrivateIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourcePrivateIp")
     private String sourcePrivateIp;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private CreateNetworkRuleRequest(Builder builder) {
@@ -98,7 +97,7 @@ public class CreateNetworkRuleRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -107,7 +106,7 @@ public class CreateNetworkRuleRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the access control rule.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -116,7 +115,7 @@ public class CreateNetworkRuleRequest extends Request {
         }
 
         /**
-         * SourcePrivateIp.
+         * The private IP address or private CIDR block. Separate multiple items with commas (,).
          */
         public Builder sourcePrivateIp(String sourcePrivateIp) {
             this.putQueryParameter("SourcePrivateIp", sourcePrivateIp);
@@ -125,7 +124,10 @@ public class CreateNetworkRuleRequest extends Request {
         }
 
         /**
-         * Type.
+         * The network type.
+         * <p>
+         * 
+         * Only private IP addresses are supported. Set the value to Private.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

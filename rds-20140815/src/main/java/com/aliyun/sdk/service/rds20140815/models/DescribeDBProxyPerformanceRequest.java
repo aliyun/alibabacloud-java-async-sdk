@@ -1,60 +1,69 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBProxyPerformanceRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBProxyPerformanceRequest</p>
  */
 public class DescribeDBProxyPerformanceRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("DBProxyEngineType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBProxyEngineType")
     private String DBProxyEngineType;
 
-    @Query
-    @NameInMap("DBProxyInstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBProxyInstanceType")
     private String DBProxyInstanceType;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Dimension")
+    private String dimension;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("MetricsName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricsName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String metricsName;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
     private DescribeDBProxyPerformanceRequest(Builder builder) {
@@ -62,6 +71,7 @@ public class DescribeDBProxyPerformanceRequest extends Request {
         this.DBInstanceId = builder.DBInstanceId;
         this.DBProxyEngineType = builder.DBProxyEngineType;
         this.DBProxyInstanceType = builder.DBProxyInstanceType;
+        this.dimension = builder.dimension;
         this.endTime = builder.endTime;
         this.metricsName = builder.metricsName;
         this.ownerId = builder.ownerId;
@@ -103,6 +113,13 @@ public class DescribeDBProxyPerformanceRequest extends Request {
      */
     public String getDBProxyInstanceType() {
         return this.DBProxyInstanceType;
+    }
+
+    /**
+     * @return dimension
+     */
+    public String getDimension() {
+        return this.dimension;
     }
 
     /**
@@ -158,6 +175,7 @@ public class DescribeDBProxyPerformanceRequest extends Request {
         private String DBInstanceId; 
         private String DBProxyEngineType; 
         private String DBProxyInstanceType; 
+        private String dimension; 
         private String endTime; 
         private String metricsName; 
         private Long ownerId; 
@@ -175,6 +193,7 @@ public class DescribeDBProxyPerformanceRequest extends Request {
             this.DBInstanceId = request.DBInstanceId;
             this.DBProxyEngineType = request.DBProxyEngineType;
             this.DBProxyInstanceType = request.DBProxyInstanceType;
+            this.dimension = request.dimension;
             this.endTime = request.endTime;
             this.metricsName = request.metricsName;
             this.ownerId = request.ownerId;
@@ -185,7 +204,11 @@ public class DescribeDBProxyPerformanceRequest extends Request {
         } 
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-t4n3axxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -194,7 +217,10 @@ public class DescribeDBProxyPerformanceRequest extends Request {
         }
 
         /**
-         * A reserved parameter. You do not need to specify this parameter.
+         * <p>A reserved parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder DBProxyEngineType(String DBProxyEngineType) {
             this.putQueryParameter("DBProxyEngineType", DBProxyEngineType);
@@ -203,7 +229,14 @@ public class DescribeDBProxyPerformanceRequest extends Request {
         }
 
         /**
-         * The type of proxy that is enabled on the instance. Set the value to **DedicatedProxy**.
+         * <p>The type of the database proxy instance. Valid values:</p>
+         * <ul>
+         * <li>common: the general-purpose database proxy</li>
+         * <li>exclusive: the dedicated database proxy</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DedicatedProxy</p>
          */
         public Builder DBProxyInstanceType(String DBProxyInstanceType) {
             this.putQueryParameter("DBProxyInstanceType", DBProxyInstanceType);
@@ -212,7 +245,23 @@ public class DescribeDBProxyPerformanceRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * <p>Dimension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service</p>
+         */
+        public Builder dimension(String dimension) {
+            this.putQueryParameter("Dimension", dimension);
+            this.dimension = dimension;
+            return this;
+        }
+
+        /**
+         * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-09-21T18:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -221,22 +270,23 @@ public class DescribeDBProxyPerformanceRequest extends Request {
         }
 
         /**
-         * The performance metrics that you want to query.
-         * <p>
+         * <p>The performance metrics that you want to query.</p>
+         * <p>If the instance runs MySQL, you can query only the <strong>Maxscale_CpuUsage</strong> performance metric, which indicates the CPU utilization of the instance.</p>
+         * <p>If the instance runs PostgreSQL, you can query the following performance metrics:</p>
+         * <ul>
+         * <li><strong>Maxscale_TotalConns</strong>: the number of connections per second</li>
+         * <li><strong>Maxscale_CurrentConns</strong>: the number of connections that are established</li>
+         * <li><strong>Maxscale_DownFlows</strong>: outbound traffic</li>
+         * <li><strong>Maxscale_UpFlows</strong>: inbound traffic</li>
+         * <li><strong>Maxscale_QPS</strong>: QPS</li>
+         * <li><strong>Maxscale_MemUsage</strong>: memory usage</li>
+         * <li><strong>Maxscale_CpuUsage</strong>: CPU utilization</li>
+         * </ul>
+         * <p>If you want to query more than one performance metric, separate the performance metrics with commas (,). You can specify up to six performance metrics in a single request.</p>
+         * <p>This parameter is required.</p>
          * 
-         * If the instance runs MySQL, you can query only the **Maxscale_CpuUsage** performance metric, which indicates the CPU utilization of the instance.
-         * 
-         * If the instance runs PostgreSQL, you can query the following performance metrics:
-         * 
-         * *   **Maxscale_TotalConns**: the number of connections per second
-         * *   **Maxscale_CurrentConns**: the number of connections that are established
-         * *   **Maxscale_DownFlows**: outbound traffic
-         * *   **Maxscale_UpFlows**: inbound traffic
-         * *   **Maxscale_QPS**: QPS
-         * *   **Maxscale_MemUsage**: memory usage
-         * *   **Maxscale_CpuUsage**: CPU utilization
-         * 
-         * If you want to query more than one performance metric, separate the performance metrics with commas (,). You can specify up to six performance metrics in a single request.
+         * <strong>example:</strong>
+         * <p>Maxscale_CpuUsage</p>
          */
         public Builder metricsName(String metricsName) {
             this.putQueryParameter("MetricsName", metricsName);
@@ -254,7 +304,11 @@ public class DescribeDBProxyPerformanceRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -281,7 +335,11 @@ public class DescribeDBProxyPerformanceRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-09-19T01:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

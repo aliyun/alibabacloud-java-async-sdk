@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateServiceCredentialRequest} extends {@link RequestModel}
  *
  * <p>CreateServiceCredentialRequest</p>
  */
 public class CreateServiceCredentialRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Body
-    @NameInMap("name")
-    @Validation(required = true, maxLength = 100)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("name")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 100)
     private String name;
 
-    @Body
-    @NameInMap("password")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("password")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String password;
 
-    @Body
-    @NameInMap("scope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("scope")
     private String scope;
 
-    @Body
-    @NameInMap("type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
-    @Body
-    @NameInMap("username")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("username")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String username;
 
     private CreateServiceCredentialRequest(Builder builder) {
@@ -129,7 +134,10 @@ public class CreateServiceCredentialRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -138,7 +146,10 @@ public class CreateServiceCredentialRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三的Git证书</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -147,7 +158,10 @@ public class CreateServiceCredentialRequest extends Request {
         }
 
         /**
-         * password.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhangsan</p>
          */
         public Builder password(String password) {
             this.putBodyParameter("password", password);
@@ -165,7 +179,10 @@ public class CreateServiceCredentialRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>USERNAME_PASSWORD</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("type", type);
@@ -174,7 +191,10 @@ public class CreateServiceCredentialRequest extends Request {
         }
 
         /**
-         * username.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhangsan</p>
          */
         public Builder username(String username) {
             this.putBodyParameter("username", username);

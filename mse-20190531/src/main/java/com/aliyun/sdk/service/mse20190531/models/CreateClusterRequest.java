@@ -1,111 +1,116 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateClusterRequest} extends {@link RequestModel}
  *
  * <p>CreateClusterRequest</p>
  */
 public class CreateClusterRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("ChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
 
-    @Query
-    @NameInMap("ClusterSpecification")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterSpecification")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterSpecification;
 
-    @Query
-    @NameInMap("ClusterType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterType;
 
-    @Query
-    @NameInMap("ClusterVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterVersion;
 
-    @Query
-    @NameInMap("ConnectionType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectionType")
     private String connectionType;
 
-    @Query
-    @NameInMap("DiskType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskType")
     @Deprecated
     private String diskType;
 
-    @Query
-    @NameInMap("EipEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EipEnabled")
     private Boolean eipEnabled;
 
-    @Query
-    @NameInMap("InstanceCount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceCount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer instanceCount;
 
-    @Query
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @Query
-    @NameInMap("MseVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MseVersion")
     private String mseVersion;
 
-    @Query
-    @NameInMap("NetType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String netType;
 
-    @Query
-    @NameInMap("PrivateSlbSpecification")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateSlbSpecification")
     @Deprecated
     private String privateSlbSpecification;
 
-    @Query
-    @NameInMap("PubNetworkFlow")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PubNetworkFlow")
     private String pubNetworkFlow;
 
-    @Query
-    @NameInMap("PubSlbSpecification")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PubSlbSpecification")
     @Deprecated
     private String pubSlbSpecification;
 
-    @Query
-    @NameInMap("Region")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
-    @Query
-    @NameInMap("RequestPars")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestPars")
     private String requestPars;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("SecurityGroupType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupType")
     private String securityGroupType;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Query
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @Query
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     private CreateClusterRequest(Builder builder) {
@@ -283,7 +288,7 @@ public class CreateClusterRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -321,7 +326,7 @@ public class CreateClusterRequest extends Request {
         private String requestPars; 
         private String resourceGroupId; 
         private String securityGroupType; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String vSwitchId; 
         private String vpcId; 
 
@@ -356,11 +361,14 @@ public class CreateClusterRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -369,34 +377,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The billing method.
-         * <p>
+         * <p>The billing method. Valid values: PREPAY and POSTPAY.</p>
+         * <p>Ignore this parameter for serverless instances.</p>
          * 
-         * Valid values:
-         * 
-         * *   PREPAY
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     the subscription billing method
-         * 
-         *     <!-- -->
-         * 
-         * *   POSTPAY
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     the pay-as-you-go billing method
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>POSTPAY</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -405,21 +390,26 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The engine specifications. Valid values:
-         * <p>
+         * <p>The engine specifications. Valid values:</p>
+         * <p>[Professional Edition]</p>
+         * <ul>
+         * <li><code>MSE_SC_2_4_60_c</code>: 2 vCPUs and 4 GB of memory</li>
+         * <li><code>MSE_SC_1_2_60_c</code>: 1 vCPU and 2 GB of memory</li>
+         * <li><code>MSE_SC_4_8_60_c</code>: 4 vCPUs and 8 GB of memory</li>
+         * <li><code>MSE_SC_8_16_60_c</code>: 8 vCPUs and 16 GB of memory</li>
+         * <li><code>MSE_SC_16_32_60_c</code>: 16 vCPUs and 32 GB of memory</li>
+         * </ul>
+         * <p>[Developer Edition]</p>
+         * <ul>
+         * <li><code>MSE_SC_1_2_60_c</code>: 1 vCPU and 2 GB of memory</li>
+         * <li><code>MSE_SC_2_4_60_c</code>: 2 vCPUs and 4 GB of memory</li>
+         * </ul>
+         * <p>[Serverless Edition]</p>
+         * <p>Ignore this parameter or set this parameter to <code>MSE_SC_SERVERLESS</code>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * \[Professional Edition]
-         * 
-         * *   `MSE_SC_2_4_60_c`: 2 vCPUs and 4 GB of memory
-         * *   `MSE_SC_1_2_60_c`: 1 vCPU and 2 GB of memory
-         * *   `MSE_SC_4_8_60_c`: 4 vCPUs and 8 GB of memory
-         * *   `MSE_SC_8_16_60_c`: 8 vCPUs and 16 GB of memory
-         * *   `MSE_SC_16_32_60_c`: 16 vCPUs and 32 GB of memory
-         * 
-         * \[Developer Edition]
-         * 
-         * *   `MSE_SC_1_2_60_c`: 1 vCPU and 2 GB of memory
-         * *   `MSE_SC_2_4_60_c`: 2 vCPUs and 4 GB of memory
+         * <strong>example:</strong>
+         * <p>MSE_SC_2_4_60_c</p>
          */
         public Builder clusterSpecification(String clusterSpecification) {
             this.putQueryParameter("ClusterSpecification", clusterSpecification);
@@ -428,7 +418,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The type of the instance. Valid values: ZooKeeper and Nacos-Ans.
+         * <p>The type of the instance. Valid values: ZooKeeper and Nacos-Ans.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Nacos-Ans</p>
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -437,18 +431,26 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The engine version of the instance. Valid values:
-         * <p>
+         * <p>The engine version of the instance. Valid values:</p>
+         * <p>[Professional Edition]</p>
+         * <ul>
+         * <li><code>NACOS_2_0_0</code></li>
+         * <li><code>ZooKeeper_3_8_0</code></li>
+         * </ul>
+         * <p>[Developer Edition]</p>
+         * <ul>
+         * <li><code>NACOS_2_0_0</code></li>
+         * <li><code>ZooKeeper_3_8_0</code></li>
+         * </ul>
+         * <p>[Serverless Edition]</p>
+         * <ul>
+         * <li><code>NACOS_2_0_0</code></li>
+         * <li><code>ZooKeeper_3_8_0</code></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * \[Professional version]
-         * 
-         * *   `NACOS_2_0_0`: Nacos 2.0.0
-         * *   `ZooKeeper_3_8_0`: ZooKeeper 3.8.0
-         * 
-         * \[Developer Edition]
-         * 
-         * *   `NACOS_2_0_0`: Nacos 2.0.0
-         * *   `ZooKeeper_3_8_0`: ZooKeeper 3.8.0
+         * <strong>example:</strong>
+         * <p>NACOS_2_0_0</p>
          */
         public Builder clusterVersion(String clusterVersion) {
             this.putQueryParameter("ClusterVersion", clusterVersion);
@@ -457,11 +459,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The network connection type. Valid values:
-         * <p>
+         * <p>The network connection type. Valid values: <code>slb</code> or <code>single_eni</code>. For instances of the Developer Edition in some regions, only the value <code>single_eni</code> is supported.</p>
          * 
-         * *   slb
-         * *   eni
+         * <strong>example:</strong>
+         * <p>slb</p>
          */
         public Builder connectionType(String connectionType) {
             this.putQueryParameter("ConnectionType", connectionType);
@@ -470,11 +471,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The type of the disk. Valid values:
-         * <p>
+         * <p>This parameter is obsolete.</p>
          * 
-         * *   alicloud-disk-ssd
-         * *   alicloud-disk-essd-pl1
+         * <strong>example:</strong>
+         * <p>alicloud-disk-ssd</p>
          */
         public Builder diskType(String diskType) {
             this.putQueryParameter("DiskType", diskType);
@@ -483,7 +483,12 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Internet access (Elastic IP Address) if ConnectionType is set to `single_eni`.
+         * <p>Specifies whether to enable elastic IP addresses. This parameter is valid only if the ConnectionType parameter is set to <code>single_eni</code>.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          */
         public Builder eipEnabled(Boolean eipEnabled) {
             this.putQueryParameter("EipEnabled", eipEnabled);
@@ -492,16 +497,21 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The number of nodes in the instance. Valid values: 1 to 9.
-         * <p>
+         * <p>The number of nodes in the instance. Valid values: 1 to 9.</p>
+         * <p>[Professional Edition]</p>
+         * <ul>
+         * <li>The value must be greater than or equal to 3 and must be an odd number.</li>
+         * </ul>
+         * <p>[Developer Edition]</p>
+         * <ul>
+         * <li>The value must be 1.</li>
+         * </ul>
+         * <p>[Serverless Edition]</p>
+         * <p>Ignore this parameter.</p>
+         * <p>This parameter is required.</p>
          * 
-         * \[Professional Edition]
-         * 
-         * *   The number of nodes in an instance is greater than or equal to 3 and must be an odd number.
-         * 
-         * \[Developer Edition]
-         * 
-         * *   Only one node can be deployed for an instance.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder instanceCount(Integer instanceCount) {
             this.putQueryParameter("InstanceCount", instanceCount);
@@ -510,7 +520,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The name of the MSE instance.
+         * <p>The custom name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tanshuyingtest001</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -519,11 +532,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Configure this parameter unless otherwise specified. Valid values:
-         * <p>
+         * <p>Configure this parameter unless otherwise specified. Valid values:</p>
+         * <ul>
+         * <li><code>mse_pro</code>: Professional Edition</li>
+         * <li><code>mse_dev</code>: Developer Edition</li>
+         * <li><code>mse_dev</code>: Serverless Edition</li>
+         * </ul>
          * 
-         * *   `mse_pro`: Professional Edition
-         * *   `mse_dev`: Developer Edition.
+         * <strong>example:</strong>
+         * <p>mse_pro</p>
          */
         public Builder mseVersion(String mseVersion) {
             this.putQueryParameter("MseVersion", mseVersion);
@@ -532,11 +549,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The network type of the MSE instance. Valid values:
-         * <p>
+         * <p>The network type of the MSE instance. Valid values:</p>
+         * <ul>
+         * <li><code>privatenet</code>: VPC</li>
+         * <li><code>pubnet</code>: Internet</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   `privatenet`: VPC
-         * *   `pubnet`: Internet
+         * <strong>example:</strong>
+         * <p>privatenet</p>
          */
         public Builder netType(String netType) {
             this.putQueryParameter("NetType", netType);
@@ -545,11 +566,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The specifications of the internal-facing SLB instance. Valid values:
-         * <p>
+         * <p>This parameter is obsolete.</p>
          * 
-         * *   `slb.s1.small`
-         * *   `slb.s3.medium`
+         * <strong>example:</strong>
+         * <p>slb.s1.small</p>
          */
         public Builder privateSlbSpecification(String privateSlbSpecification) {
             this.putQueryParameter("PrivateSlbSpecification", privateSlbSpecification);
@@ -558,9 +578,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The public bandwidth. Unit: Mbit/s. This parameter is required.\
-         * <p>
-         * Valid values: 0 to 5000. A value of 0 indicates no access to the Internet.
+         * <p>This parameter is valid only if the ConnectionType parameter is set to <code>slb</code>. The value 0 indicates that the Server Load Balancer (SLB) instance is not connected over the Internet. A value greater than 1 indicates the fixed bandwidth that is used to access the SLB instance over the Internet. Unit: Mbit/s.</p>
+         * <p>Valid values: 0 to 5000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder pubNetworkFlow(String pubNetworkFlow) {
             this.putQueryParameter("PubNetworkFlow", pubNetworkFlow);
@@ -569,11 +591,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The specifications of the Internet-facing Server Load Balancer (SLB) instance. Valid values:
-         * <p>
+         * <p>This parameter is obsolete.</p>
          * 
-         * *   `slb.s1.small`
-         * *   `slb.s3.medium`
+         * <strong>example:</strong>
+         * <p>slb.s1.small</p>
          */
         public Builder pubSlbSpecification(String pubSlbSpecification) {
             this.putQueryParameter("PubSlbSpecification", pubSlbSpecification);
@@ -582,14 +603,17 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The region where the instance resides. Examples:
-         * <p>
+         * <p>The region where the instance resides. Examples:</p>
+         * <ul>
+         * <li><code>cn-hangzhou</code>: China (Hangzhou)</li>
+         * <li><code>cn-beijing</code>: China (Beijing)</li>
+         * <li><code>cn-shanghai</code>: China (Shanghai)</li>
+         * <li><code>cn-zhangjiakou</code>: China (Zhangjiakou)</li>
+         * <li><code>cn-shenzhen</code>: China (Shenzhen)</li>
+         * </ul>
          * 
-         * *   `cn-hangzhou`: China (Hangzhou)
-         * *   `cn-beijing`: China (Beijing)
-         * *   `cn-shanghai`: China (Shanghai)
-         * *   `cn-zhangjiakou`: China (Zhangjiakou)
-         * *   `cn-shenzhen`: China (Shenzhen)
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -598,7 +622,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The extended request parameters in the JSON format.
+         * <p>The extended request parameters in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);
@@ -607,7 +634,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. For the details of resource groups, see [View basic information of a resource group](~~457230~~).
+         * <p>The ID of the resource group. For the details of resource groups, see <a href="https://help.aliyun.com/document_detail/457230.html">View basic information of a resource group</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzcqmoay3dlyq</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -616,13 +646,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The type of the security group to which the instance belongs. This parameter is valid only when the ConnectionType parameter is set to `single_eni`.
-         * <p>
+         * <p>The type of the security group to which the instance belongs. This parameter is valid only if the ConnectionType parameter is set to <code>single_eni</code>.</p>
          * 
-         * Valid values:
-         * 
-         * *   enterprise
-         * *   normal
+         * <strong>example:</strong>
+         * <p>enterprise</p>
          */
         public Builder securityGroupType(String securityGroupType) {
             this.putQueryParameter("SecurityGroupType", securityGroupType);
@@ -631,16 +658,19 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The list of the tags that you want to add.
+         * <p>The tags to add to the resource. You can specify up to 20 tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The ID of the vSwitch.
+         * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp17opt4v18sto39k****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -649,7 +679,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC).
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1t50e045b5g7i3p****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -664,11 +697,17 @@ public class CreateClusterRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -703,7 +742,10 @@ public class CreateClusterRequest extends Request {
             private String value; 
 
             /**
-             * The key of a tag.
+             * <p>The key of tag N to add to the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -711,7 +753,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * The value of a tag.
+             * <p>The value of tag N to add to the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prd</p>
              */
             public Builder value(String value) {
                 this.value = value;

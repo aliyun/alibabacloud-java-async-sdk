@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUrlUploadInfosRequest} extends {@link RequestModel}
  *
  * <p>GetUrlUploadInfosRequest</p>
  */
 public class GetUrlUploadInfosRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("JobIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobIds")
     private String jobIds;
 
-    @Query
-    @NameInMap("UploadURLs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UploadURLs")
     private String uploadURLs;
 
     private GetUrlUploadInfosRequest(Builder builder) {
@@ -91,7 +96,17 @@ public class GetUrlUploadInfosRequest extends Request {
         }
 
         /**
-         * JobIds.
+         * <p>The IDs of the upload jobs. You can specify one or more job IDs. You can obtain the job IDs from the response parameter JobId of the <a href="https://help.aliyun.com/document_detail/86311.html">UploadMediaByURL</a> operation.</p>
+         * <ul>
+         * <li>You can specify a maximum of 10 job IDs.</li>
+         * <li>Separate the job IDs with commas (,).</li>
+         * </ul>
+         * <blockquote>
+         * <p> You must specify either JobIds or UploadURLs. If you specify both parameters, only the value of JobIds takes effect.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>df2ac80b481346daa1db6a7c40edc7f8</p>
          */
         public Builder jobIds(String jobIds) {
             this.putQueryParameter("JobIds", jobIds);
@@ -100,7 +115,20 @@ public class GetUrlUploadInfosRequest extends Request {
         }
 
         /**
-         * UploadURLs.
+         * <p>The upload URLs of the source files. You can specify a maximum of 10 URLs. Separate the URLs with commas (,).</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The URLs must be encoded.</p>
+         * </li>
+         * <li><p>If a media file is uploaded multiple times, we recommend that you specify the URL of the media file only once in this parameter.</p>
+         * </li>
+         * <li><p>You must specify either JobIds or UploadURLs. If you specify both parameters, only the value of JobIds takes effect.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://media.w3.org/2010/05/sintel/trailer.mp4">https://media.w3.org/2010/05/sintel/trailer.mp4</a></p>
          */
         public Builder uploadURLs(String uploadURLs) {
             this.putQueryParameter("UploadURLs", uploadURLs);

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCheckWarningsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCheckWarningsResponseBody</p>
  */
 public class DescribeCheckWarningsResponseBody extends TeaModel {
-    @NameInMap("CheckWarnings")
-    private java.util.List < CheckWarnings> checkWarnings;
+    @com.aliyun.core.annotation.NameInMap("CheckWarnings")
+    private java.util.List<CheckWarnings> checkWarnings;
 
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeCheckWarningsResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
     /**
      * @return checkWarnings
      */
-    public java.util.List < CheckWarnings> getCheckWarnings() {
+    public java.util.List<CheckWarnings> getCheckWarnings() {
         return this.checkWarnings;
     }
 
@@ -90,7 +95,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CheckWarnings> checkWarnings; 
+        private java.util.List<CheckWarnings> checkWarnings; 
         private Integer count; 
         private Integer currentPage; 
         private Integer pageSize; 
@@ -98,15 +103,18 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information about the check item.
+         * <p>The information about the check item.</p>
          */
-        public Builder checkWarnings(java.util.List < CheckWarnings> checkWarnings) {
+        public Builder checkWarnings(java.util.List<CheckWarnings> checkWarnings) {
             this.checkWarnings = checkWarnings;
             return this;
         }
 
         /**
-         * The number of entries returned on the current page.
+         * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -114,7 +122,10 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -122,7 +133,10 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page. Default value: **20**.
+         * <p>The number of entries returned per page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +144,10 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0DFCADBA-7065-42DA-AF17-6868B9C2A8CF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -151,41 +171,50 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCheckWarningsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCheckWarningsResponseBody</p>
+     */
     public static class CheckWarnings extends TeaModel {
-        @NameInMap("CheckId")
+        @com.aliyun.core.annotation.NameInMap("CheckId")
         private Long checkId;
 
-        @NameInMap("CheckWarningId")
+        @com.aliyun.core.annotation.NameInMap("CheckWarningId")
         private Long checkWarningId;
 
-        @NameInMap("ContainerId")
+        @com.aliyun.core.annotation.NameInMap("ContainerId")
         private String containerId;
 
-        @NameInMap("ContainerName")
+        @com.aliyun.core.annotation.NameInMap("ContainerName")
         private String containerName;
 
-        @NameInMap("ExecErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ExecErrorMessage")
         private String execErrorMessage;
 
-        @NameInMap("FixStatus")
+        @com.aliyun.core.annotation.NameInMap("FixStatus")
         private Integer fixStatus;
 
-        @NameInMap("Item")
+        @com.aliyun.core.annotation.NameInMap("Item")
         private String item;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("LastHandleTime")
+        private Long lastHandleTime;
+
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private CheckWarnings(Builder builder) {
@@ -196,6 +225,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             this.execErrorMessage = builder.execErrorMessage;
             this.fixStatus = builder.fixStatus;
             this.item = builder.item;
+            this.lastHandleTime = builder.lastHandleTime;
             this.level = builder.level;
             this.reason = builder.reason;
             this.status = builder.status;
@@ -261,6 +291,13 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         }
 
         /**
+         * @return lastHandleTime
+         */
+        public Long getLastHandleTime() {
+            return this.lastHandleTime;
+        }
+
+        /**
          * @return level
          */
         public String getLevel() {
@@ -303,6 +340,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             private String execErrorMessage; 
             private Integer fixStatus; 
             private String item; 
+            private Long lastHandleTime; 
             private String level; 
             private String reason; 
             private Integer status; 
@@ -310,7 +348,10 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The ID of the check item.
+             * <p>The ID of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2546</p>
              */
             public Builder checkId(Long checkId) {
                 this.checkId = checkId;
@@ -318,7 +359,10 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the alert that is triggered by the check item.
+             * <p>The ID of the alert that is generated for the baseline check result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>212251441</p>
              */
             public Builder checkWarningId(Long checkWarningId) {
                 this.checkWarningId = checkWarningId;
@@ -326,7 +370,10 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerId.
+             * <p>The ID of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8de456b00ff0a2009ee8ef7fc59fd0457fa44f20b8282af3e79c2a0e2492****</p>
              */
             public Builder containerId(String containerId) {
                 this.containerId = containerId;
@@ -334,7 +381,10 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerName.
+             * <p>The name of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/svn-host</p>
              */
             public Builder containerName(String containerName) {
                 this.containerName = containerName;
@@ -342,7 +392,10 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message in the check result.
+             * <p>The error message in the check result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ScriptKilledOfCpuHigh</p>
              */
             public Builder execErrorMessage(String execErrorMessage) {
                 this.execErrorMessage = execErrorMessage;
@@ -350,11 +403,14 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the fix is supported. Valid values:
-             * <p>
+             * <p>Indicates whether fixing is supported. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Fixing is not supported.</li>
+             * <li><strong>1</strong>: Fixing is supported.</li>
+             * </ul>
              * 
-             * *   **0**: The fix is not supported.
-             * *   **1**: The fix is supported.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder fixStatus(Integer fixStatus) {
                 this.fixStatus = fixStatus;
@@ -362,7 +418,10 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the check item.
+             * <p>The name of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>passwordExpire</p>
              */
             public Builder item(String item) {
                 this.item = item;
@@ -370,12 +429,26 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * The severity level of a risk item. Valid values:
-             * <p>
+             * <p>The timestamp of the latest processing of the check item risk of the machine. Unit: milliseconds.</p>
              * 
-             * *   **high**
-             * *   **medium**
-             * *   **low**
+             * <strong>example:</strong>
+             * <p>1694692471000</p>
+             */
+            public Builder lastHandleTime(Long lastHandleTime) {
+                this.lastHandleTime = lastHandleTime;
+                return this;
+            }
+
+            /**
+             * <p>The risk level of the risk item. Valid values:</p>
+             * <ul>
+             * <li><strong>high</strong></li>
+             * <li><strong>medium</strong></li>
+             * <li><strong>low</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -383,7 +456,10 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ignore</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -391,14 +467,17 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the check item. Valid values:
-             * <p>
+             * <p>The status of the check item. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: failed.</li>
+             * <li><strong>2</strong>: verifying.</li>
+             * <li><strong>3</strong>: passed.</li>
+             * <li><strong>5</strong>: expired.</li>
+             * <li><strong>6</strong>: ignored.</li>
+             * </ul>
              * 
-             * *   **1**: failed
-             * *   **2**: verifying
-             * *   **3**: passed
-             * *   **5**: expired
-             * *   **6**: ignored
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -406,7 +485,10 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the check item.
+             * <p>The type of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hc.check.type.identity_auth</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -414,7 +496,10 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server on which the baseline check is performed.
+             * <p>The ID of the server on which the baseline check is performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d42f938c-d962-48a0-90f9-****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

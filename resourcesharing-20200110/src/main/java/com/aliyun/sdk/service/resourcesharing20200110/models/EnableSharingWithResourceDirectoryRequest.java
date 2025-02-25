@@ -1,20 +1,19 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcesharing20200110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableSharingWithResourceDirectoryRequest} extends {@link RequestModel}
  *
  * <p>EnableSharingWithResourceDirectoryRequest</p>
  */
 public class EnableSharingWithResourceDirectoryRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private EnableSharingWithResourceDirectoryRequest(Builder builder) {
@@ -55,7 +54,7 @@ public class EnableSharingWithResourceDirectoryRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);

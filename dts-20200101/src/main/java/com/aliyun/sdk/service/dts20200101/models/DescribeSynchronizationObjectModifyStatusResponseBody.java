@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSynchronizationObjectModifyStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSynchronizationObjectModifyStatusResponseBody</p>
  */
 public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaModel {
-    @NameInMap("DataInitializationStatus")
+    @com.aliyun.core.annotation.NameInMap("DataInitializationStatus")
     private DataInitializationStatus dataInitializationStatus;
 
-    @NameInMap("DataSynchronizationStatus")
+    @com.aliyun.core.annotation.NameInMap("DataSynchronizationStatus")
     private DataSynchronizationStatus dataSynchronizationStatus;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("PrecheckStatus")
+    @com.aliyun.core.annotation.NameInMap("PrecheckStatus")
     private PrecheckStatus precheckStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("StructureInitializationStatus")
+    @com.aliyun.core.annotation.NameInMap("StructureInitializationStatus")
     private StructureInitializationStatus structureInitializationStatus;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private DescribeSynchronizationObjectModifyStatusResponseBody(Builder builder) {
@@ -146,7 +151,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
         private String success; 
 
         /**
-         * The status of full data synchronization.
+         * <p>The status of full data synchronization.</p>
          */
         public Builder dataInitializationStatus(DataInitializationStatus dataInitializationStatus) {
             this.dataInitializationStatus = dataInitializationStatus;
@@ -154,10 +159,10 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
         }
 
         /**
-         * The status of incremental data synchronization.
-         * <p>
-         * 
-         * >  This parameter and its sub-parameters will be removed in the future.
+         * <p>The status of incremental data synchronization.</p>
+         * <blockquote>
+         * <p> This parameter and its sub-parameters will be removed in the future.</p>
+         * </blockquote>
          */
         public Builder dataSynchronizationStatus(DataSynchronizationStatus dataSynchronizationStatus) {
             this.dataSynchronizationStatus = dataSynchronizationStatus;
@@ -165,7 +170,10 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
         }
 
         /**
-         * The error code returned if the call failed.
+         * <p>The error code returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -173,7 +181,10 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
         }
 
         /**
-         * The error message returned if the call failed.
+         * <p>The error message returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request processing has failed due to some unknown error.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -181,7 +192,10 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
         }
 
         /**
-         * The error message returned if the task failed to modify the objects to be synchronized.
+         * <p>The error message returned if the task failed to modify the objects to be synchronized.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DTS-070211: Connect Source DB failed. cause by [com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException:Could not create connection to database server. Attempted reconnect 3 times. Giving up.][com.mysql.jdbc.exceptions.jdbc4.CommunicationsException:Communications link failure\n\nThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.][java.net.ConnectException:Connection timed out (Connection timed out)] About more information in [<a href="https://yq.aliyun.com/articles/499178%5D">https://yq.aliyun.com/articles/499178]</a>.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -189,7 +203,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
         }
 
         /**
-         * The precheck status.
+         * <p>The precheck status.</p>
          */
         public Builder precheckStatus(PrecheckStatus precheckStatus) {
             this.precheckStatus = precheckStatus;
@@ -197,7 +211,10 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B38C644B-4395-4F6F-86E3-592F26BE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -205,15 +222,18 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
         }
 
         /**
-         * The status of the task that changes the objects to be synchronized. Valid values:
-         * <p>
+         * <p>The status of the task that changes the objects to be synchronized. Valid values:</p>
+         * <ul>
+         * <li><strong>NotStarted</strong>: The task is not started.</li>
+         * <li><strong>Prechecking</strong>: The task is being prechecked.</li>
+         * <li><strong>PrecheckFailed</strong>: The task failed to pass the precheck.</li>
+         * <li><strong>Migrating</strong>: The task is running.</li>
+         * <li><strong>Failed</strong>: The task failed.</li>
+         * <li><strong>Finished</strong>: The task is completed.</li>
+         * </ul>
          * 
-         * *   **NotStarted**: The task is not started.
-         * *   **Prechecking**: The task is being prechecked.
-         * *   **PrecheckFailed**: The task failed to pass the precheck.
-         * *   **Migrating**: The task is running.
-         * *   **Failed**: The task failed.
-         * *   **Finished**: The task is completed.
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -221,7 +241,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
         }
 
         /**
-         * The status of schema synchronization.
+         * <p>The status of schema synchronization.</p>
          */
         public Builder structureInitializationStatus(StructureInitializationStatus structureInitializationStatus) {
             this.structureInitializationStatus = structureInitializationStatus;
@@ -229,7 +249,10 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
         }
 
         /**
-         * Indicates whether the call was successful.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -242,17 +265,23 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSynchronizationObjectModifyStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSynchronizationObjectModifyStatusResponseBody</p>
+     */
     public static class DataInitializationStatus extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private DataInitializationStatus(Builder builder) {
@@ -305,7 +334,10 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             private String status; 
 
             /**
-             * The error message returned if full data synchronization failed.
+             * <p>The error message returned if full data synchronization failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>java.lang.NumberFormatException: For input string: &quot;&quot;</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -313,7 +345,10 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             }
 
             /**
-             * The progress of full data synchronization. Unit: %.
+             * <p>The progress of full data synchronization. Unit: %.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -321,7 +356,10 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             }
 
             /**
-             * The number of records that have been synchronized during full data synchronization.
+             * <p>The number of records that have been synchronized during full data synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>39754</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -329,13 +367,16 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             }
 
             /**
-             * The status of full data synchronization. Valid values:
-             * <p>
+             * <p>The status of full data synchronization. Valid values:</p>
+             * <ul>
+             * <li><strong>NotStarted</strong>: Full data synchronization is not started.</li>
+             * <li><strong>Migrating</strong>: Full data synchronization is in progress.</li>
+             * <li><strong>Failed</strong>: Full data synchronization failed.</li>
+             * <li><strong>Finished</strong>: Full data synchronization is completed.</li>
+             * </ul>
              * 
-             * *   **NotStarted**: Full data synchronization is not started.
-             * *   **Migrating**: Full data synchronization is in progress.
-             * *   **Failed**: Full data synchronization failed.
-             * *   **Finished**: Full data synchronization is completed.
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -349,17 +390,23 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSynchronizationObjectModifyStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSynchronizationObjectModifyStatusResponseBody</p>
+     */
     public static class DataSynchronizationStatus extends TeaModel {
-        @NameInMap("Delay")
+        @com.aliyun.core.annotation.NameInMap("Delay")
         private String delay;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private DataSynchronizationStatus(Builder builder) {
@@ -412,7 +459,10 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             private String status; 
 
             /**
-             * The synchronization latency, in seconds.
+             * <p>The synchronization latency, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder delay(String delay) {
                 this.delay = delay;
@@ -420,7 +470,10 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             }
 
             /**
-             * The error message returned if incremental data synchronization failed.
+             * <p>The error message returned if incremental data synchronization failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DTS-070211: Connect Source DB failed. cause by [com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException:Could not create connection to database server. Attempted reconnect 3 times. Giving up.][com.mysql.jdbc.exceptions.jdbc4.CommunicationsException:Communications link failure\n\nThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.][java.net.ConnectException:Connection timed out (Connection timed out)] About more information in [<a href="https://yq.aliyun.com/articles/499178%5D">https://yq.aliyun.com/articles/499178]</a>.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -428,7 +481,10 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             }
 
             /**
-             * The progress of incremental data synchronization. Unit: %.
+             * <p>The progress of incremental data synchronization. Unit: %.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -436,13 +492,16 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             }
 
             /**
-             * The status of incremental data synchronization. Valid values:
-             * <p>
+             * <p>The status of incremental data synchronization. Valid values:</p>
+             * <ul>
+             * <li><strong>NotStarted</strong>: Incremental data synchronization is not started.</li>
+             * <li><strong>Migrating</strong>: Incremental data synchronization is in progress.</li>
+             * <li><strong>Failed</strong>: Incremental data synchronization failed.</li>
+             * <li><strong>Finished</strong>: Incremental data synchronization is completed.</li>
+             * </ul>
              * 
-             * *   **NotStarted**: Incremental data synchronization is not started.
-             * *   **Migrating**: Incremental data synchronization is in progress.
-             * *   **Failed**: Incremental data synchronization failed.
-             * *   **Finished**: Incremental data synchronization is completed.
+             * <strong>example:</strong>
+             * <p>Migrating</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -456,17 +515,23 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSynchronizationObjectModifyStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSynchronizationObjectModifyStatusResponseBody</p>
+     */
     public static class Detail extends TeaModel {
-        @NameInMap("CheckStatus")
+        @com.aliyun.core.annotation.NameInMap("CheckStatus")
         private String checkStatus;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("ItemName")
+        @com.aliyun.core.annotation.NameInMap("ItemName")
         private String itemName;
 
-        @NameInMap("RepairMethod")
+        @com.aliyun.core.annotation.NameInMap("RepairMethod")
         private String repairMethod;
 
         private Detail(Builder builder) {
@@ -519,11 +584,14 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             private String repairMethod; 
 
             /**
-             * The precheck result. Valid values:
-             * <p>
+             * <p>The precheck result. Valid values:</p>
+             * <ul>
+             * <li>Success: The task passed the precheck.</li>
+             * <li>Failed: The task failed to pass the precheck.</li>
+             * </ul>
              * 
-             * *   Success: The task passed the precheck.
-             * *   Failed: The task failed to pass the precheck.
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder checkStatus(String checkStatus) {
                 this.checkStatus = checkStatus;
@@ -531,10 +599,13 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             }
 
             /**
-             * The error message returned if the task failed to pass the precheck.
-             * <p>
+             * <p>The error message returned if the task failed to pass the precheck.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if the return value of the <strong>CheckStatus</strong> parameter is <strong>Failed</strong>.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only if the return value of the **CheckStatus** parameter is **Failed**.
+             * <strong>example:</strong>
+             * <p>Original error: Access denied for user &quot;dtstest&quot;@&quot;100.104.xxx.xx&quot; (using password: YES)</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -542,7 +613,10 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             }
 
             /**
-             * The name of the precheck item.
+             * <p>The name of the precheck item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CHECK_CONN_SRC</p>
              */
             public Builder itemName(String itemName) {
                 this.itemName = itemName;
@@ -550,10 +624,13 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             }
 
             /**
-             * The method to fix the precheck failure.
-             * <p>
+             * <p>The method to fix the precheck failure.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if the return value of the <strong>CheckStatus</strong> parameter is Failed.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only if the return value of the **CheckStatus** parameter is Failed.
+             * <strong>example:</strong>
+             * <p>CHECK_ERROR_DEST_CONN_REPAIR2</p>
              */
             public Builder repairMethod(String repairMethod) {
                 this.repairMethod = repairMethod;
@@ -567,14 +644,20 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSynchronizationObjectModifyStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSynchronizationObjectModifyStatusResponseBody</p>
+     */
     public static class PrecheckStatus extends TeaModel {
-        @NameInMap("Detail")
-        private java.util.List < Detail> detail;
+        @com.aliyun.core.annotation.NameInMap("Detail")
+        private java.util.List<Detail> detail;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private PrecheckStatus(Builder builder) {
@@ -594,7 +677,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
         /**
          * @return detail
          */
-        public java.util.List < Detail> getDetail() {
+        public java.util.List<Detail> getDetail() {
             return this.detail;
         }
 
@@ -613,20 +696,23 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
         }
 
         public static final class Builder {
-            private java.util.List < Detail> detail; 
+            private java.util.List<Detail> detail; 
             private String percent; 
             private String status; 
 
             /**
-             * The result of each precheck item.
+             * <p>The result of each precheck item.</p>
              */
-            public Builder detail(java.util.List < Detail> detail) {
+            public Builder detail(java.util.List<Detail> detail) {
                 this.detail = detail;
                 return this;
             }
 
             /**
-             * The precheck progress. Unit: %.
+             * <p>The precheck progress. Unit: %.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -634,7 +720,10 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             }
 
             /**
-             * The precheck status.
+             * <p>The precheck status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -648,17 +737,23 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSynchronizationObjectModifyStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSynchronizationObjectModifyStatusResponseBody</p>
+     */
     public static class StructureInitializationStatus extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private StructureInitializationStatus(Builder builder) {
@@ -711,7 +806,10 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             private String status; 
 
             /**
-             * The error message returned if schema synchronization failed.
+             * <p>The error message returned if schema synchronization failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DTS-1020042 Execute sql error sql: Table &quot;customer&quot; already exists</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -719,7 +817,10 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             }
 
             /**
-             * The progress of schema synchronization. Unit: %.
+             * <p>The progress of schema synchronization. Unit: %.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -727,7 +828,10 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             }
 
             /**
-             * The number of tables whose schemas have been synchronized.
+             * <p>The number of tables whose schemas have been synchronized.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -735,13 +839,16 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             }
 
             /**
-             * The status of schema synchronization. Valid values:
-             * <p>
+             * <p>The status of schema synchronization. Valid values:</p>
+             * <ul>
+             * <li><strong>NotStarted</strong>: Schema synchronization is not started.</li>
+             * <li><strong>Migrating</strong>: Schema synchronization is in progress.</li>
+             * <li><strong>Failed</strong>: Schema synchronization failed.</li>
+             * <li><strong>Finished</strong>: Schema synchronization is completed.</li>
+             * </ul>
              * 
-             * *   **NotStarted**: Schema synchronization is not started.
-             * *   **Migrating**: Schema synchronization is in progress.
-             * *   **Failed**: Schema synchronization failed.
-             * *   **Finished**: Schema synchronization is completed.
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder status(String status) {
                 this.status = status;

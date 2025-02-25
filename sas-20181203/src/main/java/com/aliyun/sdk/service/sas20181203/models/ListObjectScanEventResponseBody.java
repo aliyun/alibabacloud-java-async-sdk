@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListObjectScanEventResponseBody} extends {@link TeaModel}
  *
  * <p>ListObjectScanEventResponseBody</p>
  */
 public class ListObjectScanEventResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListObjectScanEventResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ListObjectScanEventResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -57,20 +62,20 @@ public class ListObjectScanEventResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +83,10 @@ public class ListObjectScanEventResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7BC55C8F-226E-5AF5-9A2C-2EC43864****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,20 +99,26 @@ public class ListObjectScanEventResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListObjectScanEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListObjectScanEventResponseBody</p>
+     */
     public static class Details extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NameDisplay")
+        @com.aliyun.core.annotation.NameInMap("NameDisplay")
         private String nameDisplay;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        @NameInMap("ValueDisplay")
+        @com.aliyun.core.annotation.NameInMap("ValueDisplay")
         private String valueDisplay;
 
         private Details(Builder builder) {
@@ -166,7 +180,10 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             private String valueDisplay; 
 
             /**
-             * The name of the parameter in the file details.
+             * <p>The name of the parameter in the file details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DownloadUrl</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -174,7 +191,10 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the alert.
+             * <p>The display name of the alert.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DownloadUrl</p>
              */
             public Builder nameDisplay(String nameDisplay) {
                 this.nameDisplay = nameDisplay;
@@ -182,7 +202,10 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * The value type of the parameter in the file details.
+             * <p>The value type of the parameter in the file details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>html</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -190,7 +213,10 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the parameter.
+             * <p>The value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://gcx.cn-hangzhou.aliyuncs.com/">http://gcx.cn-hangzhou.aliyuncs.com/</a>****</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -198,7 +224,10 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the parameter.
+             * <p>The value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://gcx.cn-hangzhou.aliyuncs.com/">http://gcx.cn-hangzhou.aliyuncs.com/</a>****</p>
              */
             public Builder valueDisplay(String valueDisplay) {
                 this.valueDisplay = valueDisplay;
@@ -212,47 +241,56 @@ public class ListObjectScanEventResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListObjectScanEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListObjectScanEventResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("BucketName")
+        @com.aliyun.core.annotation.NameInMap("BucketName")
         private String bucketName;
 
-        @NameInMap("Details")
-        private java.util.List < Details> details;
+        @com.aliyun.core.annotation.NameInMap("Details")
+        private java.util.List<Details> details;
 
-        @NameInMap("DisplaySandboxResult")
+        @com.aliyun.core.annotation.NameInMap("DisplaySandboxResult")
         private String displaySandboxResult;
 
-        @NameInMap("EventId")
+        @com.aliyun.core.annotation.NameInMap("EventId")
         private Long eventId;
 
-        @NameInMap("EventName")
+        @com.aliyun.core.annotation.NameInMap("EventName")
         private String eventName;
 
-        @NameInMap("FilePath")
+        @com.aliyun.core.annotation.NameInMap("FilePath")
         private String filePath;
 
-        @NameInMap("FirstTime")
+        @com.aliyun.core.annotation.NameInMap("FirstTime")
         private Long firstTime;
 
-        @NameInMap("LastTime")
+        @com.aliyun.core.annotation.NameInMap("HasSubEvent")
+        private Boolean hasSubEvent;
+
+        @com.aliyun.core.annotation.NameInMap("LastTime")
         private Long lastTime;
 
-        @NameInMap("Md5")
+        @com.aliyun.core.annotation.NameInMap("Md5")
         private String md5;
 
-        @NameInMap("OssKey")
+        @com.aliyun.core.annotation.NameInMap("OssKey")
         private String ossKey;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
 
-        @NameInMap("Sha1")
+        @com.aliyun.core.annotation.NameInMap("Sha1")
         private String sha1;
 
-        @NameInMap("Sha256")
+        @com.aliyun.core.annotation.NameInMap("Sha256")
         private String sha256;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
         private Data(Builder builder) {
@@ -263,6 +301,7 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             this.eventName = builder.eventName;
             this.filePath = builder.filePath;
             this.firstTime = builder.firstTime;
+            this.hasSubEvent = builder.hasSubEvent;
             this.lastTime = builder.lastTime;
             this.md5 = builder.md5;
             this.ossKey = builder.ossKey;
@@ -290,7 +329,7 @@ public class ListObjectScanEventResponseBody extends TeaModel {
         /**
          * @return details
          */
-        public java.util.List < Details> getDetails() {
+        public java.util.List<Details> getDetails() {
             return this.details;
         }
 
@@ -327,6 +366,13 @@ public class ListObjectScanEventResponseBody extends TeaModel {
          */
         public Long getFirstTime() {
             return this.firstTime;
+        }
+
+        /**
+         * @return hasSubEvent
+         */
+        public Boolean getHasSubEvent() {
+            return this.hasSubEvent;
         }
 
         /**
@@ -380,12 +426,13 @@ public class ListObjectScanEventResponseBody extends TeaModel {
 
         public static final class Builder {
             private String bucketName; 
-            private java.util.List < Details> details; 
+            private java.util.List<Details> details; 
             private String displaySandboxResult; 
             private Long eventId; 
             private String eventName; 
             private String filePath; 
             private Long firstTime; 
+            private Boolean hasSubEvent; 
             private Long lastTime; 
             private String md5; 
             private String ossKey; 
@@ -395,7 +442,10 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             private String source; 
 
             /**
-             * The name of the OSS bucket.
+             * <p>The name of the OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hz-new01****</p>
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -403,19 +453,22 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the file.
+             * <p>The details of the file.</p>
              */
-            public Builder details(java.util.List < Details> details) {
+            public Builder details(java.util.List<Details> details) {
                 this.details = details;
                 return this;
             }
 
             /**
-             * Indicates whether the file can be detected by cloud sandbox. Valid values:
-             * <p>
+             * <p>Indicates whether the file can be detected by cloud sandbox. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder displaySandboxResult(String displaySandboxResult) {
                 this.displaySandboxResult = displaySandboxResult;
@@ -423,7 +476,10 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the alert.
+             * <p>The ID of the alert.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>911273</p>
              */
             public Builder eventId(Long eventId) {
                 this.eventId = eventId;
@@ -431,7 +487,10 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert.
+             * <p>The name of the alert.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WebShell</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -439,7 +498,10 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * The path to the file.
+             * <p>The path to the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/local****</p>
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
@@ -447,7 +509,10 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp at which the alert was first detected.
+             * <p>The timestamp at which the alert was first detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1694576692000</p>
              */
             public Builder firstTime(Long firstTime) {
                 this.firstTime = firstTime;
@@ -455,7 +520,25 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp at which the alert was last detected.
+             * <p>Indicates whether an alert is generated for the file extracted from the package. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder hasSubEvent(Boolean hasSubEvent) {
+                this.hasSubEvent = hasSubEvent;
+                return this;
+            }
+
+            /**
+             * <p>The timestamp at which the alert was last detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1694576692000</p>
              */
             public Builder lastTime(Long lastTime) {
                 this.lastTime = lastTime;
@@ -463,7 +546,10 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * The MD5 hash value of the file.
+             * <p>The MD5 hash value of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5b394b54ca632fe51c4ab4a6dbaf****</p>
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
@@ -471,7 +557,10 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the file that is stored in the OSS bucket.
+             * <p>The key of the file that is stored in the OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1/2023/07/21/10/18/16899059356518bcf6c64-a04e-492d-a421-4ae8b888****</p>
              */
             public Builder ossKey(String ossKey) {
                 this.ossKey = ossKey;
@@ -479,12 +568,15 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level of the alert. Valid values:
-             * <p>
+             * <p>The risk level of the alert. Valid values:</p>
+             * <ul>
+             * <li><strong>high</strong></li>
+             * <li><strong>medium</strong></li>
+             * <li><strong>low</strong></li>
+             * </ul>
              * 
-             * *   **high**
-             * *   **medium**
-             * *   **low**
+             * <strong>example:</strong>
+             * <p>medium</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -492,7 +584,10 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * The SHA-1 hash value of the file.
+             * <p>The SHA-1 hash value of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3c01bdbb26f358bab27f267924aa2c9a03fc****</p>
              */
             public Builder sha1(String sha1) {
                 this.sha1 = sha1;
@@ -500,7 +595,10 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * The SHA-256 hash value of the file.
+             * <p>The SHA-256 hash value of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3a6fed5fc11392b3ee9f81caf017b48640d7458766a8eb0382899a605b41****</p>
              */
             public Builder sha256(String sha256) {
                 this.sha256 = sha256;
@@ -508,11 +606,14 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * The method that is used to detect the malicious file. Valid values:
-             * <p>
+             * <p>The method that is used to detect the malicious file. Valid values:</p>
+             * <ul>
+             * <li><strong>API</strong>: uses API operations.</li>
+             * <li><strong>OSS</strong>: uses OSS file check.</li>
+             * </ul>
              * 
-             * *   **API**: uses API operations.
-             * *   **OSS**: uses OSS file check.
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -526,14 +627,20 @@ public class ListObjectScanEventResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListObjectScanEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListObjectScanEventResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -577,7 +684,10 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -585,7 +695,10 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -593,7 +706,10 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>253</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

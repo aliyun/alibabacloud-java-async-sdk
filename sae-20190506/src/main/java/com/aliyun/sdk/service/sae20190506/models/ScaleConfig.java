@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ScaleConfig} extends {@link TeaModel}
  *
  * <p>ScaleConfig</p>
  */
 public class ScaleConfig extends TeaModel {
-    @NameInMap("alwaysAllocateCPU")
+    @com.aliyun.core.annotation.NameInMap("alwaysAllocateCPU")
     private Boolean alwaysAllocateCPU;
 
-    @NameInMap("maximumInstanceCount")
+    @com.aliyun.core.annotation.NameInMap("maximumInstanceCount")
     private Long maximumInstanceCount;
 
-    @NameInMap("minimumInstanceCount")
+    @com.aliyun.core.annotation.NameInMap("minimumInstanceCount")
     private Long minimumInstanceCount;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private ScaleConfig(Builder builder) {

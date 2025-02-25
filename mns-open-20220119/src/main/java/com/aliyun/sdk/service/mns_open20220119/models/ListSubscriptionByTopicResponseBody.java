@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mns_open20220119.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSubscriptionByTopicResponseBody} extends {@link TeaModel}
  *
  * <p>ListSubscriptionByTopicResponseBody</p>
  */
 public class ListSubscriptionByTopicResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListSubscriptionByTopicResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -106,7 +114,7 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +122,10 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>operation success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +133,10 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>06273500-249F-5863-121D-74D51123****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +144,10 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The response status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -138,7 +155,10 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,46 +171,119 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSubscriptionByTopicResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSubscriptionByTopicResponseBody</p>
+     */
+    public static class DlqPolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DeadLetterTargetQueue")
+        private String deadLetterTargetQueue;
+
+        @com.aliyun.core.annotation.NameInMap("Enabled")
+        private Boolean enabled;
+
+        private DlqPolicy(Builder builder) {
+            this.deadLetterTargetQueue = builder.deadLetterTargetQueue;
+            this.enabled = builder.enabled;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DlqPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return deadLetterTargetQueue
+         */
+        public String getDeadLetterTargetQueue() {
+            return this.deadLetterTargetQueue;
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public static final class Builder {
+            private String deadLetterTargetQueue; 
+            private Boolean enabled; 
+
+            /**
+             * DeadLetterTargetQueue.
+             */
+            public Builder deadLetterTargetQueue(String deadLetterTargetQueue) {
+                this.deadLetterTargetQueue = deadLetterTargetQueue;
+                return this;
+            }
+
+            /**
+             * Enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            public DlqPolicy build() {
+                return new DlqPolicy(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListSubscriptionByTopicResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSubscriptionByTopicResponseBody</p>
+     */
     public static class PageData extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Endpoint")
+        @com.aliyun.core.annotation.NameInMap("DlqPolicy")
+        private DlqPolicy dlqPolicy;
+
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
 
-        @NameInMap("FilterTag")
+        @com.aliyun.core.annotation.NameInMap("FilterTag")
         private String filterTag;
 
-        @NameInMap("LastModifyTime")
+        @com.aliyun.core.annotation.NameInMap("LastModifyTime")
         private Long lastModifyTime;
 
-        @NameInMap("NotifyContentFormat")
+        @com.aliyun.core.annotation.NameInMap("NotifyContentFormat")
         private String notifyContentFormat;
 
-        @NameInMap("NotifyStrategy")
+        @com.aliyun.core.annotation.NameInMap("NotifyStrategy")
         private String notifyStrategy;
 
-        @NameInMap("SubscriptionName")
+        @com.aliyun.core.annotation.NameInMap("SubscriptionName")
         private String subscriptionName;
 
-        @NameInMap("SubscriptionURL")
-        private String subscriptionURL;
-
-        @NameInMap("TopicName")
+        @com.aliyun.core.annotation.NameInMap("TopicName")
         private String topicName;
 
-        @NameInMap("TopicOwner")
+        @com.aliyun.core.annotation.NameInMap("TopicOwner")
         private String topicOwner;
 
         private PageData(Builder builder) {
             this.createTime = builder.createTime;
+            this.dlqPolicy = builder.dlqPolicy;
             this.endpoint = builder.endpoint;
             this.filterTag = builder.filterTag;
             this.lastModifyTime = builder.lastModifyTime;
             this.notifyContentFormat = builder.notifyContentFormat;
             this.notifyStrategy = builder.notifyStrategy;
             this.subscriptionName = builder.subscriptionName;
-            this.subscriptionURL = builder.subscriptionURL;
             this.topicName = builder.topicName;
             this.topicOwner = builder.topicOwner;
         }
@@ -208,6 +301,13 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
          */
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return dlqPolicy
+         */
+        public DlqPolicy getDlqPolicy() {
+            return this.dlqPolicy;
         }
 
         /**
@@ -253,13 +353,6 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
         }
 
         /**
-         * @return subscriptionURL
-         */
-        public String getSubscriptionURL() {
-            return this.subscriptionURL;
-        }
-
-        /**
          * @return topicName
          */
         public String getTopicName() {
@@ -275,18 +368,21 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long createTime; 
+            private DlqPolicy dlqPolicy; 
             private String endpoint; 
             private String filterTag; 
             private Long lastModifyTime; 
             private String notifyContentFormat; 
             private String notifyStrategy; 
             private String subscriptionName; 
-            private String subscriptionURL; 
             private String topicName; 
             private String topicOwner; 
 
             /**
-             * CreateTime.
+             * <p>The time when the subscription was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1449554806</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -294,7 +390,18 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
             }
 
             /**
-             * Endpoint.
+             * DlqPolicy.
+             */
+            public Builder dlqPolicy(DlqPolicy dlqPolicy) {
+                this.dlqPolicy = dlqPolicy;
+                return this;
+            }
+
+            /**
+             * <p>The endpoint to which the messages are pushed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example.com">http://example.com</a></p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -302,7 +409,10 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
             }
 
             /**
-             * FilterTag.
+             * <p>The tag that is used to filter messages. Only the messages that are attached with the specified tag can be pushed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>important</p>
              */
             public Builder filterTag(String filterTag) {
                 this.filterTag = filterTag;
@@ -310,7 +420,10 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifyTime.
+             * <p>The time when the subscription was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1449554806</p>
              */
             public Builder lastModifyTime(Long lastModifyTime) {
                 this.lastModifyTime = lastModifyTime;
@@ -318,7 +431,15 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
             }
 
             /**
-             * NotifyContentFormat.
+             * <p>The content format of the messages that are pushed to the endpoint. Valid values:</p>
+             * <ul>
+             * <li>XML</li>
+             * <li>JSON</li>
+             * <li>SIMPLIFIED</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>XML</p>
              */
             public Builder notifyContentFormat(String notifyContentFormat) {
                 this.notifyContentFormat = notifyContentFormat;
@@ -326,7 +447,14 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
             }
 
             /**
-             * NotifyStrategy.
+             * <p>The retry policy that is applied if an error occurs when Message Service (MNS) pushes messages to the endpoint. Valid values:</p>
+             * <ul>
+             * <li>BACKOFF_RETRY</li>
+             * <li>EXPONENTIAL_DECAY_RETRY</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>BACKOFF_RETRY</p>
              */
             public Builder notifyStrategy(String notifyStrategy) {
                 this.notifyStrategy = notifyStrategy;
@@ -334,7 +462,10 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
             }
 
             /**
-             * SubscriptionName.
+             * <p>The name of the subscription.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySubscription</p>
              */
             public Builder subscriptionName(String subscriptionName) {
                 this.subscriptionName = subscriptionName;
@@ -342,15 +473,10 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
             }
 
             /**
-             * SubscriptionURL.
-             */
-            public Builder subscriptionURL(String subscriptionURL) {
-                this.subscriptionURL = subscriptionURL;
-                return this;
-            }
-
-            /**
-             * TopicName.
+             * <p>The name of the topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyTopic</p>
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;
@@ -358,7 +484,10 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
             }
 
             /**
-             * TopicOwner.
+             * <p>The Alibaba Cloud account ID of the topic owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456789098****</p>
              */
             public Builder topicOwner(String topicOwner) {
                 this.topicOwner = topicOwner;
@@ -372,23 +501,29 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSubscriptionByTopicResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSubscriptionByTopicResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("PageData")
-        private java.util.List < PageData> pageData;
+        @com.aliyun.core.annotation.NameInMap("PageData")
+        private java.util.List<PageData> pageData;
 
-        @NameInMap("PageNum")
+        @com.aliyun.core.annotation.NameInMap("PageNum")
         private Long pageNum;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Long pageSize;
 
-        @NameInMap("Pages")
+        @com.aliyun.core.annotation.NameInMap("Pages")
         private Long pages;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private Data(Builder builder) {
@@ -411,7 +546,7 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
         /**
          * @return pageData
          */
-        public java.util.List < PageData> getPageData() {
+        public java.util.List<PageData> getPageData() {
             return this.pageData;
         }
 
@@ -451,7 +586,7 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < PageData> pageData; 
+            private java.util.List<PageData> pageData; 
             private Long pageNum; 
             private Long pageSize; 
             private Long pages; 
@@ -459,15 +594,18 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * PageData.
+             * <p>The data returned on the current page.</p>
              */
-            public Builder pageData(java.util.List < PageData> pageData) {
+            public Builder pageData(java.util.List<PageData> pageData) {
                 this.pageData = pageData;
                 return this;
             }
 
             /**
-             * PageNum.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Long pageNum) {
                 this.pageNum = pageNum;
@@ -475,7 +613,10 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -483,7 +624,10 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
             }
 
             /**
-             * Pages.
+             * <p>The total number of pages returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder pages(Long pages) {
                 this.pages = pages;
@@ -491,7 +635,10 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The number of entries on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -499,7 +646,10 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>130</p>
              */
             public Builder total(Long total) {
                 this.total = total;

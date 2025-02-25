@@ -1,37 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchSetDcdnDomainConfigsRequest} extends {@link RequestModel}
  *
  * <p>BatchSetDcdnDomainConfigsRequest</p>
  */
 public class BatchSetDcdnDomainConfigsRequest extends Request {
-    @Query
-    @NameInMap("DomainNames")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainNames")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainNames;
 
-    @Query
-    @NameInMap("Functions")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Functions")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String functions;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private BatchSetDcdnDomainConfigsRequest(Builder builder) {
@@ -112,7 +112,11 @@ public class BatchSetDcdnDomainConfigsRequest extends Request {
         } 
 
         /**
-         * The accelerated domain names. Specify multiple accelerated domain names with commas (,).
+         * <p>The accelerated domain names. Specify multiple accelerated domain names with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com,example.org</p>
          */
         public Builder domainNames(String domainNames) {
             this.putQueryParameter("DomainNames", domainNames);
@@ -121,32 +125,37 @@ public class BatchSetDcdnDomainConfigsRequest extends Request {
         }
 
         /**
-         * The features that you want to configure. Format:
-         * <p>
+         * <p>The features that you want to configure. Format:</p>
+         * <ul>
+         * <li><p><strong>functionName</strong>: The name of the feature. Separate multiple values with commas (,). For more information, see <a href="https://help.aliyun.com/document_detail/410622.html">A list of features</a>.</p>
+         * </li>
+         * <li><p><strong>argName</strong>: The feature parameters for <strong>functionName</strong>.</p>
+         * </li>
+         * <li><p><strong>argValue</strong>: The parameter values set for <strong>functionName</strong>.</p>
+         * </li>
+         * <li><p><strong>parentid</strong>: the rule ID. This parameter is optional. You can use the <strong>condition</strong> rules engine to create a rule. For information, see <a href="https://help.aliyun.com/document_detail/388460.html">Feature settings for domain names</a>. A rule can identify parameters that are included in requests and filter requests based on the identified parameters. After you create a rule, a <a href="https://help.aliyun.com/document_detail/388994.html">configid</a> is generated. A configid can be used as parentId that is referenced by other features. This way, you can combine rules and features for flexible configurations.</p>
+         * </li>
+         * </ul>
+         * <p>If the <strong>parentId</strong> parameter is <strong>-1</strong>, the existing rules in the configurations are deleted.</p>
+         * <pre><code class="language-["> {
+         *    &quot;functionArgs&quot;: [
+         *     {
+         *      &quot;argName&quot;: &quot;Parameter A&quot;, 
+         *      &quot;argValue&quot;: Value of parameter A&quot;
+         *     }, 
+         *   {
+         *     &quot;argName&quot;: &quot;Parameter B&quot;, 
+         *     &quot;argValue&quot;: &quot;Value of Parameter B&quot;
+         *      }
+         *  ], 
+         *  &quot;functionName&quot;: &quot;Feature name&quot;
+         *     }
+         * ]```
+         * </code></pre>
+         * <p>This parameter is required.</p>
          * 
-         * > 
-         * 
-         * *   **functionName**: The name of the feature. Separate multiple values with commas (,). For more information, see [A list of features](~~410622~~).
-         * 
-         * *   **argName**: The feature parameters for **functionName**.
-         * 
-         * *   **argValue**: The parameter values set for **functionName**.
-         * 
-         *         [
-         *          {
-         *            "functionArgs": [
-         *             {
-         *              "argName": "Parameter A", 
-         *              "argValue": "Parameter value"
-         *             }, 
-         *           {
-         *             "argName": "Parameter B", 
-         *             "argValue": "Parameter value"
-         *              }
-         *          ], 
-         *          "functionName": "Feature name"
-         *             }
-         *         ]
+         * <strong>example:</strong>
+         * <p>[{&quot;functionArgs&quot;:[{&quot;argName&quot;:&quot;switch&quot;,&quot;argValue&quot;:&quot;on&quot;},{&quot;argName&quot;:&quot;region&quot;,&quot;argValue&quot;:&quot;*&quot;}],&quot;functionName&quot;:&quot;ipv6&quot;}]</p>
          */
         public Builder functions(String functions) {
             this.putQueryParameter("Functions", functions);

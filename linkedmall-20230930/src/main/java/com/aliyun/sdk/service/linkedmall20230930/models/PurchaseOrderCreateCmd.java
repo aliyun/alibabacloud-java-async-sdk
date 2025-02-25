@@ -1,34 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PurchaseOrderCreateCmd} extends {@link TeaModel}
  *
  * <p>PurchaseOrderCreateCmd</p>
  */
 public class PurchaseOrderCreateCmd extends TeaModel {
-    @NameInMap("buyerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("buyerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String buyerId;
 
-    @NameInMap("deliveryAddress")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("deliveryAddress")
+    @com.aliyun.core.annotation.Validation(required = true)
     private AddressInfo deliveryAddress;
 
-    @NameInMap("extInfo")
-    private java.util.Map < String, ? > extInfo;
+    @com.aliyun.core.annotation.NameInMap("extInfo")
+    private java.util.Map<String, ?> extInfo;
 
-    @NameInMap("outerPurchaseOrderId")
+    @com.aliyun.core.annotation.NameInMap("outerPurchaseOrderId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String outerPurchaseOrderId;
 
-    @NameInMap("productList")
-    @Validation(required = true)
-    private java.util.List < ProductDTO > productList;
+    @com.aliyun.core.annotation.NameInMap("productList")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<ProductDTO> productList;
 
     private PurchaseOrderCreateCmd(Builder builder) {
         this.buyerId = builder.buyerId;
@@ -63,7 +69,7 @@ public class PurchaseOrderCreateCmd extends TeaModel {
     /**
      * @return extInfo
      */
-    public java.util.Map < String, ? > getExtInfo() {
+    public java.util.Map<String, ?> getExtInfo() {
         return this.extInfo;
     }
 
@@ -77,19 +83,22 @@ public class PurchaseOrderCreateCmd extends TeaModel {
     /**
      * @return productList
      */
-    public java.util.List < ProductDTO > getProductList() {
+    public java.util.List<ProductDTO> getProductList() {
         return this.productList;
     }
 
     public static final class Builder {
         private String buyerId; 
         private AddressInfo deliveryAddress; 
-        private java.util.Map < String, ? > extInfo; 
+        private java.util.Map<String, ?> extInfo; 
         private String outerPurchaseOrderId; 
-        private java.util.List < ProductDTO > productList; 
+        private java.util.List<ProductDTO> productList; 
 
         /**
-         * buyerId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>buyer2138237</p>
          */
         public Builder buyerId(String buyerId) {
             this.buyerId = buyerId;
@@ -97,7 +106,7 @@ public class PurchaseOrderCreateCmd extends TeaModel {
         }
 
         /**
-         * deliveryAddress.
+         * <p>This parameter is required.</p>
          */
         public Builder deliveryAddress(AddressInfo deliveryAddress) {
             this.deliveryAddress = deliveryAddress;
@@ -107,13 +116,16 @@ public class PurchaseOrderCreateCmd extends TeaModel {
         /**
          * extInfo.
          */
-        public Builder extInfo(java.util.Map < String, ? > extInfo) {
+        public Builder extInfo(java.util.Map<String, ?> extInfo) {
             this.extInfo = extInfo;
             return this;
         }
 
         /**
-         * outerPurchaseOrderId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>outer123456</p>
          */
         public Builder outerPurchaseOrderId(String outerPurchaseOrderId) {
             this.outerPurchaseOrderId = outerPurchaseOrderId;
@@ -121,9 +133,9 @@ public class PurchaseOrderCreateCmd extends TeaModel {
         }
 
         /**
-         * productList.
+         * <p>This parameter is required.</p>
          */
-        public Builder productList(java.util.List < ProductDTO > productList) {
+        public Builder productList(java.util.List<ProductDTO> productList) {
             this.productList = productList;
             return this;
         }

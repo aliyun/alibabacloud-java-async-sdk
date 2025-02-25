@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListApplicationConfigsRequest} extends {@link RequestModel}
  *
  * <p>ListApplicationConfigsRequest</p>
  */
 public class ListApplicationConfigsRequest extends Request {
-    @Query
-    @NameInMap("ApplicationName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationName")
     private String applicationName;
 
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("ConfigFileName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigFileName")
     private String configFileName;
 
-    @Query
-    @NameInMap("ConfigItemKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigItemKey")
     private String configItemKey;
 
-    @Query
-    @NameInMap("ConfigItemValue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigItemValue")
     private String configItemValue;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("NodeGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeGroupId")
     private String nodeGroupId;
 
-    @Query
-    @NameInMap("NodeId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeId")
     private String nodeId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private ListApplicationConfigsRequest(Builder builder) {
@@ -182,7 +187,10 @@ public class ListApplicationConfigsRequest extends Request {
         } 
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HDFS</p>
          */
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("ApplicationName", applicationName);
@@ -191,7 +199,11 @@ public class ListApplicationConfigsRequest extends Request {
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-e6a9d46e9267****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -200,7 +212,10 @@ public class ListApplicationConfigsRequest extends Request {
         }
 
         /**
-         * The name of the configuration file.
+         * <p>The name of the configuration file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hdfs-site.xml</p>
          */
         public Builder configFileName(String configFileName) {
             this.putQueryParameter("ConfigFileName", configFileName);
@@ -209,7 +224,10 @@ public class ListApplicationConfigsRequest extends Request {
         }
 
         /**
-         * The name of the configuration item.
+         * <p>The name of the configuration item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dfs.replication</p>
          */
         public Builder configItemKey(String configItemKey) {
             this.putQueryParameter("ConfigItemKey", configItemKey);
@@ -218,7 +236,10 @@ public class ListApplicationConfigsRequest extends Request {
         }
 
         /**
-         * The value of the configuration item.
+         * <p>The value of the configuration item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder configItemValue(String configItemValue) {
             this.putQueryParameter("ConfigItemValue", configItemValue);
@@ -227,7 +248,10 @@ public class ListApplicationConfigsRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -236,7 +260,10 @@ public class ListApplicationConfigsRequest extends Request {
         }
 
         /**
-         * The page number of the next page returned.
+         * <p>The page number of the next page returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -245,7 +272,10 @@ public class ListApplicationConfigsRequest extends Request {
         }
 
         /**
-         * The ID of the node group.
+         * <p>The ID of the node group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ng-d555335ced5c****</p>
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.putQueryParameter("NodeGroupId", nodeGroupId);
@@ -254,7 +284,10 @@ public class ListApplicationConfigsRequest extends Request {
         }
 
         /**
-         * The node ID.
+         * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp10h9rezawz1i4o****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -263,7 +296,11 @@ public class ListApplicationConfigsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCustinsResourceRequest} extends {@link RequestModel}
  *
  * <p>ModifyCustinsResourceRequest</p>
  */
 public class ModifyCustinsResourceRequest extends Request {
-    @Query
-    @NameInMap("AdjustDeadline")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdjustDeadline")
     private String adjustDeadline;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("IncreaseRatio")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncreaseRatio")
     private String increaseRatio;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
-    @Query
-    @NameInMap("RestoreOriginalSpecification")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreOriginalSpecification")
     private String restoreOriginalSpecification;
 
-    @Query
-    @NameInMap("TargetValue")
-    @Validation(maximum = 999999)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetValue")
+    @com.aliyun.core.annotation.Validation(maximum = 999999)
     private Integer targetValue;
 
     private ModifyCustinsResourceRequest(Builder builder) {
@@ -140,7 +145,10 @@ public class ModifyCustinsResourceRequest extends Request {
         } 
 
         /**
-         * The deadline for the modification.
+         * <p>The deadline for the modification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-31 23:59:06</p>
          */
         public Builder adjustDeadline(String adjustDeadline) {
             this.putQueryParameter("AdjustDeadline", adjustDeadline);
@@ -149,7 +157,11 @@ public class ModifyCustinsResourceRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the [DescribeDBInstances](~~26232~~) operation to query the instance ID.
+         * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/26232.html">DescribeDBInstances</a> operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-j5ekvfeengm******</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -158,7 +170,10 @@ public class ModifyCustinsResourceRequest extends Request {
         }
 
         /**
-         * The increase rate in percentage.
+         * <p>The increase rate in percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder increaseRatio(String increaseRatio) {
             this.putQueryParameter("IncreaseRatio", increaseRatio);
@@ -176,7 +191,10 @@ public class ModifyCustinsResourceRequest extends Request {
         }
 
         /**
-         * The resource type.
+         * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Memory</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -185,7 +203,10 @@ public class ModifyCustinsResourceRequest extends Request {
         }
 
         /**
-         * The original value. This parameter must be specified when the **ResourceType** parameter is set to **instance**.
+         * <p>The original value. This parameter must be specified when the <strong>ResourceType</strong> parameter is set to <strong>instance</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder restoreOriginalSpecification(String restoreOriginalSpecification) {
             this.putQueryParameter("RestoreOriginalSpecification", restoreOriginalSpecification);
@@ -194,7 +215,10 @@ public class ModifyCustinsResourceRequest extends Request {
         }
 
         /**
-         * The target value. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule or PredictiveScalingRule. The value must be greater than 0 and can contain up to three decimal places.
+         * <p>The target value. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule or PredictiveScalingRule. The value must be greater than 0 and can contain up to three decimal places.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3000</p>
          */
         public Builder targetValue(Integer targetValue) {
             this.putQueryParameter("TargetValue", targetValue);

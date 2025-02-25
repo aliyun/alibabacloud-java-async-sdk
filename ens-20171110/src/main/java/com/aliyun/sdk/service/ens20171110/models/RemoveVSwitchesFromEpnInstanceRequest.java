@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveVSwitchesFromEpnInstanceRequest} extends {@link RequestModel}
  *
  * <p>RemoveVSwitchesFromEpnInstanceRequest</p>
  */
 public class RemoveVSwitchesFromEpnInstanceRequest extends Request {
-    @Query
-    @NameInMap("EPNInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EPNInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String EPNInstanceId;
 
-    @Query
-    @NameInMap("VSwitchesInfo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchesInfo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchesInfo;
 
     private RemoveVSwitchesFromEpnInstanceRequest(Builder builder) {
@@ -70,7 +75,11 @@ public class RemoveVSwitchesFromEpnInstanceRequest extends Request {
         } 
 
         /**
-         * EPNInstanceId.
+         * <p>The ID of theEPN instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epn-****</p>
          */
         public Builder EPNInstanceId(String EPNInstanceId) {
             this.putQueryParameter("EPNInstanceId", EPNInstanceId);
@@ -79,7 +88,11 @@ public class RemoveVSwitchesFromEpnInstanceRequest extends Request {
         }
 
         /**
-         * VSwitchesInfo.
+         * <p>The internal networking information that you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VSwitchesInfo=[{&quot;VSwitchId&quot;:&quot;vs-ixxxx&quot;},{&quot;VSwitchId&quot;:&quot;vs-ixxxx&quot;}]</p>
          */
         public Builder vSwitchesInfo(String vSwitchesInfo) {
             this.putQueryParameter("VSwitchesInfo", vSwitchesInfo);

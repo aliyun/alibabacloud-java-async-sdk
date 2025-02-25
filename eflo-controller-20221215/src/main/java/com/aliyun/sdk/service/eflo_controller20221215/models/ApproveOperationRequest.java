@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eflo_controller20221215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApproveOperationRequest} extends {@link RequestModel}
  *
  * <p>ApproveOperationRequest</p>
  */
 public class ApproveOperationRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("NodeId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeId")
     private String nodeId;
 
-    @Body
-    @NameInMap("OperationType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OperationType")
     private String operationType;
 
     private ApproveOperationRequest(Builder builder) {
@@ -91,7 +96,10 @@ public class ApproveOperationRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * <p>Node ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e01-cn-zvp2tgykr08</p>
          */
         public Builder nodeId(String nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -100,7 +108,10 @@ public class ApproveOperationRequest extends Request {
         }
 
         /**
-         * OperationType.
+         * <p>Operation Type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RepairMachine</p>
          */
         public Builder operationType(String operationType) {
             this.putBodyParameter("OperationType", operationType);

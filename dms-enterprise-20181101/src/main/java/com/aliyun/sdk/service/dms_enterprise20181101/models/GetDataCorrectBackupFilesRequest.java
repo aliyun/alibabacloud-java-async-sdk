@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataCorrectBackupFilesRequest} extends {@link RequestModel}
  *
  * <p>GetDataCorrectBackupFilesRequest</p>
  */
 public class GetDataCorrectBackupFilesRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ActionDetail")
-    private java.util.Map < String, ? > actionDetail;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ActionDetail")
+    private java.util.Map<String, ?> actionDetail;
 
-    @Query
-    @NameInMap("OrderId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long orderId;
 
-    @Query
-    @NameInMap("Tid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tid")
     private Long tid;
 
     private GetDataCorrectBackupFilesRequest(Builder builder) {
@@ -60,7 +65,7 @@ public class GetDataCorrectBackupFilesRequest extends Request {
     /**
      * @return actionDetail
      */
-    public java.util.Map < String, ? > getActionDetail() {
+    public java.util.Map<String, ?> getActionDetail() {
         return this.actionDetail;
     }
 
@@ -80,7 +85,7 @@ public class GetDataCorrectBackupFilesRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetDataCorrectBackupFilesRequest, Builder> {
         private String regionId; 
-        private java.util.Map < String, ? > actionDetail; 
+        private java.util.Map<String, ?> actionDetail; 
         private Long orderId; 
         private Long tid; 
 
@@ -106,9 +111,12 @@ public class GetDataCorrectBackupFilesRequest extends Request {
         }
 
         /**
-         * The parameters that are required to perform the operation. You do not need to specify this parameter.
+         * <p>The parameters that are required to perform the operation. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
-        public Builder actionDetail(java.util.Map < String, ? > actionDetail) {
+        public Builder actionDetail(java.util.Map<String, ?> actionDetail) {
             String actionDetailShrink = shrink(actionDetail, "ActionDetail", "json");
             this.putQueryParameter("ActionDetail", actionDetailShrink);
             this.actionDetail = actionDetail;
@@ -116,7 +124,11 @@ public class GetDataCorrectBackupFilesRequest extends Request {
         }
 
         /**
-         * The ID of the ticket. You can call the [ListOrders](~~144643~~) operation to obtain the ticket ID.
+         * <p>The ID of the ticket. You can call the <a href="https://help.aliyun.com/document_detail/144643.html">ListOrders</a> operation to obtain the ticket ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4200000</p>
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -125,7 +137,10 @@ public class GetDataCorrectBackupFilesRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

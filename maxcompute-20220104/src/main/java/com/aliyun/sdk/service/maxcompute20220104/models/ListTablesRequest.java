@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTablesRequest} extends {@link RequestModel}
  *
  * <p>ListTablesRequest</p>
  */
 public class ListTablesRequest extends Request {
-    @Path
-    @NameInMap("projectName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("projectName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectName;
 
-    @Query
-    @NameInMap("marker")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("marker")
     private String marker;
 
-    @Query
-    @NameInMap("maxItem")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("maxItem")
     private Integer maxItem;
 
-    @Query
-    @NameInMap("prefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("prefix")
     private String prefix;
 
-    @Query
-    @NameInMap("schemaName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("schemaName")
     private String schemaName;
 
-    @Query
-    @NameInMap("type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
     private ListTablesRequest(Builder builder) {
@@ -125,7 +130,11 @@ public class ListTablesRequest extends Request {
         } 
 
         /**
-         * The name of the MaxCompute project.
+         * <p>The name of the MaxCompute project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>projectA</p>
          */
         public Builder projectName(String projectName) {
             this.putPathParameter("projectName", projectName);
@@ -134,7 +143,10 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * Specifies the marker after which the returned list begins.
+         * <p>Specifies the marker after which the returned list begins.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Y29tbWlzc2lvbl9leHRlcm5hbF91cmdlXzFfd3Ih</p>
          */
         public Builder marker(String marker) {
             this.putQueryParameter("marker", marker);
@@ -143,7 +155,10 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return on each page.
+         * <p>The maximum number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxItem(Integer maxItem) {
             this.putQueryParameter("maxItem", maxItem);
@@ -152,7 +167,10 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * The names of the returned resources. The names must start with the value specified by the prefix parameter. If the prefix parameter is set to a, the names of the returned resources must start with a.
+         * <p>The names of the returned resources. The names must start with the value specified by the prefix parameter. If the prefix parameter is set to a, the names of the returned resources must start with a.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a</p>
          */
         public Builder prefix(String prefix) {
             this.putQueryParameter("prefix", prefix);
@@ -161,7 +179,10 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * schemaName.
+         * <p>The name of the schema.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder schemaName(String schemaName) {
             this.putQueryParameter("schemaName", schemaName);
@@ -170,7 +191,10 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * The type of the table.
+         * <p>The type of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAvailableBusiRegionsResponseBody</p>
  */
 public class ListAvailableBusiRegionsResponseBody extends TeaModel {
-    @NameInMap("Regions")
+    @com.aliyun.core.annotation.NameInMap("Regions")
     private java.util.List < Regions> regions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListAvailableBusiRegionsResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class ListAvailableBusiRegionsResponseBody extends TeaModel {
     } 
 
     public static class Regions extends TeaModel {
-        @NameInMap("ChinaMainland")
+        @com.aliyun.core.annotation.NameInMap("ChinaMainland")
         private Boolean chinaMainland;
 
-        @NameInMap("LocalName")
+        @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
 
-        @NameInMap("Pop")
+        @com.aliyun.core.annotation.NameInMap("Pop")
         private Boolean pop;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private Regions(Builder builder) {
@@ -146,7 +145,7 @@ public class ListAvailableBusiRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The region name.
+             * The name of the region.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -154,7 +153,7 @@ public class ListAvailableBusiRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the region is a point of presence (PoP) of Alibaba Cloud. Valid values:
+             * Indicates whether it is a point of presence (PoP) of Alibaba Cloud. Valid values:
              * <p>
              * 
              * *   **true**
@@ -166,7 +165,7 @@ public class ListAvailableBusiRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

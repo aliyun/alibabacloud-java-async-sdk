@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDISyncTaskResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateDISyncTaskResponseBody</p>
  */
 public class UpdateDISyncTaskResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private UpdateDISyncTaskResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class UpdateDISyncTaskResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The information that indicates whether the sync node was updated.
+         * <p>The information that indicates whether the data synchronization task is updated.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +75,10 @@ public class UpdateDISyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can locate logs and troubleshoot issues based on the ID.
+         * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1411515937635973****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,11 +86,14 @@ public class UpdateDISyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -95,11 +106,17 @@ public class UpdateDISyncTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateDISyncTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateDISyncTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Data(Builder builder) {
@@ -134,7 +151,10 @@ public class UpdateDISyncTaskResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The reason why the sync node failed to be updated. If the sync node was updated, this parameter is left empty.
+             * <p>The error message returned if the data synchronization task fails to be updated. If the data synchronization task is successfully updated, the value null is returned for this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ResourceGroup:[S_res_group_XXX] is invalid.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -142,11 +162,14 @@ public class UpdateDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the sync node was updated. Valid values:
-             * <p>
+             * <p>The update status of the data synchronization task. Valid values:</p>
+             * <ul>
+             * <li>success</li>
+             * <li>fail</li>
+             * </ul>
              * 
-             * *   success: The sync node was updated.
-             * *   fail: The sync node failed to be updated.
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;

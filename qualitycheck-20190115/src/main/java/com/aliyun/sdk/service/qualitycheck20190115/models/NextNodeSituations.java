@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link NextNodeSituations} extends {@link TeaModel}
  *
  * <p>NextNodeSituations</p>
  */
 public class NextNodeSituations extends TeaModel {
-    @NameInMap("ConditionGroup")
-    private java.util.List < ConditionGroup> conditionGroup;
+    @com.aliyun.core.annotation.NameInMap("ConditionGroup")
+    private java.util.List<ConditionGroup> conditionGroup;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private NextNodeSituations(Builder builder) {
@@ -34,7 +39,7 @@ public class NextNodeSituations extends TeaModel {
     /**
      * @return conditionGroup
      */
-    public java.util.List < ConditionGroup> getConditionGroup() {
+    public java.util.List<ConditionGroup> getConditionGroup() {
         return this.conditionGroup;
     }
 
@@ -46,13 +51,13 @@ public class NextNodeSituations extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ConditionGroup> conditionGroup; 
+        private java.util.List<ConditionGroup> conditionGroup; 
         private String type; 
 
         /**
          * ConditionGroup.
          */
-        public Builder conditionGroup(java.util.List < ConditionGroup> conditionGroup) {
+        public Builder conditionGroup(java.util.List<ConditionGroup> conditionGroup) {
             this.conditionGroup = conditionGroup;
             return this;
         }
@@ -71,11 +76,17 @@ public class NextNodeSituations extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link NextNodeSituations} extends {@link TeaModel}
+     *
+     * <p>NextNodeSituations</p>
+     */
     public static class ConditionGroup extends TeaModel {
-        @NameInMap("Conditions")
-        private java.util.List < JudgeNodeMetaDesc > conditions;
+        @com.aliyun.core.annotation.NameInMap("Conditions")
+        private java.util.List<JudgeNodeMetaDesc> conditions;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private ConditionGroup(Builder builder) {
@@ -94,7 +105,7 @@ public class NextNodeSituations extends TeaModel {
         /**
          * @return conditions
          */
-        public java.util.List < JudgeNodeMetaDesc > getConditions() {
+        public java.util.List<JudgeNodeMetaDesc> getConditions() {
             return this.conditions;
         }
 
@@ -106,13 +117,13 @@ public class NextNodeSituations extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < JudgeNodeMetaDesc > conditions; 
+            private java.util.List<JudgeNodeMetaDesc> conditions; 
             private String type; 
 
             /**
              * Conditions.
              */
-            public Builder conditions(java.util.List < JudgeNodeMetaDesc > conditions) {
+            public Builder conditions(java.util.List<JudgeNodeMetaDesc> conditions) {
                 this.conditions = conditions;
                 return this;
             }

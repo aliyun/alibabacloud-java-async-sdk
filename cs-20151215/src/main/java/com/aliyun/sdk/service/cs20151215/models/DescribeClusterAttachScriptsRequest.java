@@ -1,50 +1,60 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterAttachScriptsRequest} extends {@link RequestModel}
  *
  * <p>DescribeClusterAttachScriptsRequest</p>
  */
 public class DescribeClusterAttachScriptsRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Body
-    @NameInMap("arch")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("arch")
     private String arch;
 
-    @Body
-    @NameInMap("format_disk")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("expired")
+    private Long expired;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("format_disk")
     private Boolean formatDisk;
 
-    @Body
-    @NameInMap("keep_instance_name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("keep_instance_name")
     private Boolean keepInstanceName;
 
-    @Body
-    @NameInMap("nodepool_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("nodepool_id")
     private String nodepoolId;
 
-    @Body
-    @NameInMap("options")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("options")
     private String options;
 
-    @Body
-    @NameInMap("rds_instances")
-    private java.util.List < String > rdsInstances;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("rds_instances")
+    private java.util.List<String> rdsInstances;
 
     private DescribeClusterAttachScriptsRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
         this.arch = builder.arch;
+        this.expired = builder.expired;
         this.formatDisk = builder.formatDisk;
         this.keepInstanceName = builder.keepInstanceName;
         this.nodepoolId = builder.nodepoolId;
@@ -80,6 +90,13 @@ public class DescribeClusterAttachScriptsRequest extends Request {
     }
 
     /**
+     * @return expired
+     */
+    public Long getExpired() {
+        return this.expired;
+    }
+
+    /**
      * @return formatDisk
      */
     public Boolean getFormatDisk() {
@@ -110,18 +127,19 @@ public class DescribeClusterAttachScriptsRequest extends Request {
     /**
      * @return rdsInstances
      */
-    public java.util.List < String > getRdsInstances() {
+    public java.util.List<String> getRdsInstances() {
         return this.rdsInstances;
     }
 
     public static final class Builder extends Request.Builder<DescribeClusterAttachScriptsRequest, Builder> {
         private String clusterId; 
         private String arch; 
+        private Long expired; 
         private Boolean formatDisk; 
         private Boolean keepInstanceName; 
         private String nodepoolId; 
         private String options; 
-        private java.util.List < String > rdsInstances; 
+        private java.util.List<String> rdsInstances; 
 
         private Builder() {
             super();
@@ -131,6 +149,7 @@ public class DescribeClusterAttachScriptsRequest extends Request {
             super(request);
             this.clusterId = request.clusterId;
             this.arch = request.arch;
+            this.expired = request.expired;
             this.formatDisk = request.formatDisk;
             this.keepInstanceName = request.keepInstanceName;
             this.nodepoolId = request.nodepoolId;
@@ -139,7 +158,11 @@ public class DescribeClusterAttachScriptsRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ca375a93a30474552ad2a0ebe183e****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -148,12 +171,14 @@ public class DescribeClusterAttachScriptsRequest extends Request {
         }
 
         /**
-         * The CPU architecture of the node. Valid values: `amd64`, `arm`, and `arm64`.
-         * <p>
+         * <p>The CPU architecture of the node. Valid values: <code>amd64</code>, <code>arm</code>, and <code>arm64</code>.</p>
+         * <p>Default value: <code>amd64</code>.</p>
+         * <blockquote>
+         * <p> This parameter is required if you want to add the existing node to a Container Service for Kubernetes (ACK) Edge cluster.</p>
+         * </blockquote>
          * 
-         * Default value: `amd64`.
-         * 
-         * >  This parameter is required if you want to add the existing node to a Container Service for Kubernetes (ACK) Edge cluster.
+         * <strong>example:</strong>
+         * <p>amd64</p>
          */
         public Builder arch(String arch) {
             this.putBodyParameter("arch", arch);
@@ -162,18 +187,29 @@ public class DescribeClusterAttachScriptsRequest extends Request {
         }
 
         /**
-         * Specifies whether to mount data disks to an existing instance when you add the instance to the cluster. You can add data disks to store container data and images. Valid values:
-         * <p>
+         * expired.
+         */
+        public Builder expired(Long expired) {
+            this.putBodyParameter("expired", expired);
+            this.expired = expired;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to mount data disks to an existing instance when you add the instance to the cluster. You can add data disks to store container data and images. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: mounts data disks to the existing instance that you want to add. After a data disk is mounted, the original data on the disk is erased. Back up data before you mount a data disk.</li>
+         * <li><code>false</code>: does not mount data disks to the existing instance.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
+         * <p>How a data disk is mounted:</p>
+         * <ul>
+         * <li>If the Elastic Compute Service (ECS) instances are already mounted with data disks and the file system of the last data disk is not initialized, the system automatically formats this data disk to ext4 and mounts it to /var/lib/docker and /var/lib/kubelet.</li>
+         * <li>If no data disk is mounted to the ECS instance, the system does not purchase a new data disk.</li>
+         * </ul>
          * 
-         * *   `true`: mounts data disks to the existing instance that you want to add. After a data disk is mounted, the original data on the disk is erased. Back up data before you mount a data disk.
-         * *   `false`: does not mount data disks to the existing instance.
-         * 
-         * Default value: `false`.
-         * 
-         * How a data disk is mounted:
-         * 
-         * *   If the Elastic Compute Service (ECS) instances are already mounted with data disks and the file system of the last data disk is not initialized, the system automatically formats this data disk to ext4 and mounts it to /var/lib/docker and /var/lib/kubelet.
-         * *   If no data disk is mounted to the ECS instance, the system does not purchase a new data disk.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder formatDisk(Boolean formatDisk) {
             this.putBodyParameter("format_disk", formatDisk);
@@ -182,13 +218,15 @@ public class DescribeClusterAttachScriptsRequest extends Request {
         }
 
         /**
-         * Specifies whether to retain the name of the existing instance when it is added to the cluster. If you do not retain the instance name, the instance is named in the `worker-k8s-for-cs-<clusterid>` format. Valid values:
-         * <p>
+         * <p>Specifies whether to retain the name of the existing instance when it is added to the cluster. If you do not retain the instance name, the instance is named in the <code>worker-k8s-for-cs-&lt;clusterid&gt;</code> format. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: retains the instance name.</li>
+         * <li><code>false</code>: does not retain the instance name.</li>
+         * </ul>
+         * <p>Default value: <code>true</code>.</p>
          * 
-         * *   `true`: retains the instance name.
-         * *   `false`: does not retain the instance name.
-         * 
-         * Default value: `true`
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder keepInstanceName(Boolean keepInstanceName) {
             this.putBodyParameter("keep_instance_name", keepInstanceName);
@@ -197,10 +235,13 @@ public class DescribeClusterAttachScriptsRequest extends Request {
         }
 
         /**
-         * The ID of the node pool to which you want to add an existing node. This parameter allows you to add an existing node to a specified node pool.
-         * <p>
+         * <p>The ID of the node pool to which you want to add an existing node.</p>
+         * <blockquote>
+         * <p> If you do not specify a node pool ID, the node is added to a default node pool.</p>
+         * </blockquote>
          * 
-         * >  If you do not specify a node pool ID, the node is added to the default node pool.
+         * <strong>example:</strong>
+         * <p>np1c9229d9be2d432c93f77a88fca0****</p>
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putBodyParameter("nodepool_id", nodepoolId);
@@ -209,10 +250,13 @@ public class DescribeClusterAttachScriptsRequest extends Request {
         }
 
         /**
-         * The node configurations for the existing instance that you want to add as a node.
-         * <p>
+         * <p>The node configurations for the existing instance that you want to add as a node.</p>
+         * <blockquote>
+         * <p> This parameter is required if you want to add the existing node to an ACK Edge cluster.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required if you want to add the existing node to an ACK Edge cluster.
+         * <strong>example:</strong>
+         * <p>{&quot;enableIptables&quot;: true,&quot;manageRuntime&quot;: true,&quot;quiet&quot;: true,&quot;allowedClusterAddons&quot;: [&quot;kube-proxy&quot;,&quot;flannel&quot;,&quot;coredns&quot;]}</p>
          */
         public Builder options(String options) {
             this.putBodyParameter("options", options);
@@ -221,9 +265,9 @@ public class DescribeClusterAttachScriptsRequest extends Request {
         }
 
         /**
-         * After you specify the list of RDS instances, the ECS instances in the cluster are automatically added to the whitelist of the RDS instances.
+         * <p>The ApsaraDB RDS instances. If you specify a list of ApsaraDB RDS instances, ECS instances in the cluster are automatically added to the whitelist of the ApsaraDB RDS instances.</p>
          */
-        public Builder rdsInstances(java.util.List < String > rdsInstances) {
+        public Builder rdsInstances(java.util.List<String> rdsInstances) {
             this.putBodyParameter("rds_instances", rdsInstances);
             this.rdsInstances = rdsInstances;
             return this;

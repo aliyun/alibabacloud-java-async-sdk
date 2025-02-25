@@ -1,25 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbfs20200418.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDbfsAttachedEcsInstancesRequest} extends {@link RequestModel}
  *
  * <p>ListDbfsAttachedEcsInstancesRequest</p>
  */
 public class ListDbfsAttachedEcsInstancesRequest extends Request {
-    @Query
-    @NameInMap("FsId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FsId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fsId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private ListDbfsAttachedEcsInstancesRequest(Builder builder) {
@@ -70,7 +70,10 @@ public class ListDbfsAttachedEcsInstancesRequest extends Request {
         } 
 
         /**
-         * FsId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbfs-nUy1tb********BQ4X8Gpw</p>
          */
         public Builder fsId(String fsId) {
             this.putQueryParameter("FsId", fsId);
@@ -79,7 +82,10 @@ public class ListDbfsAttachedEcsInstancesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

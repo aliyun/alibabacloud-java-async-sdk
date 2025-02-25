@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCloudAssetInstancesRequest} extends {@link RequestModel}
  *
  * <p>ListCloudAssetInstancesRequest</p>
  */
 public class ListCloudAssetInstancesRequest extends Request {
-    @Query
-    @NameInMap("CloudAssetTypes")
-    private java.util.List < CloudAssetTypes> cloudAssetTypes;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CloudAssetTypes")
+    private java.util.List<CloudAssetTypes> cloudAssetTypes;
 
-    @Query
-    @NameInMap("Criteria")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Criteria")
     private String criteria;
 
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("LogicalExp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogicalExp")
     private String logicalExp;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private ListCloudAssetInstancesRequest(Builder builder) {
@@ -63,7 +68,7 @@ public class ListCloudAssetInstancesRequest extends Request {
     /**
      * @return cloudAssetTypes
      */
-    public java.util.List < CloudAssetTypes> getCloudAssetTypes() {
+    public java.util.List<CloudAssetTypes> getCloudAssetTypes() {
         return this.cloudAssetTypes;
     }
 
@@ -103,7 +108,7 @@ public class ListCloudAssetInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListCloudAssetInstancesRequest, Builder> {
-        private java.util.List < CloudAssetTypes> cloudAssetTypes; 
+        private java.util.List<CloudAssetTypes> cloudAssetTypes; 
         private String criteria; 
         private Integer currentPage; 
         private String logicalExp; 
@@ -125,28 +130,34 @@ public class ListCloudAssetInstancesRequest extends Request {
         } 
 
         /**
-         * The details of the cloud asset.
+         * <p>The details of the cloud asset.</p>
          */
-        public Builder cloudAssetTypes(java.util.List < CloudAssetTypes> cloudAssetTypes) {
+        public Builder cloudAssetTypes(java.util.List<CloudAssetTypes> cloudAssetTypes) {
             this.putQueryParameter("CloudAssetTypes", cloudAssetTypes);
             this.cloudAssetTypes = cloudAssetTypes;
             return this;
         }
 
         /**
-         * The search conditions for assets. The value of this parameter is in the JSON format and contains the following fields:
-         * <p>
+         * <p>The search conditions for assets. The value of this parameter is in the JSON format and contains the following fields:</p>
+         * <ul>
+         * <li><p><strong>name</strong>: the name of the search condition.</p>
+         * </li>
+         * <li><p><strong>value</strong>: the value of the search condition.</p>
+         * </li>
+         * <li><p><strong>logicalExp</strong>: the logical relation for multiple search conditions. Valid values:</p>
+         * <ul>
+         * <li><strong>OR</strong>: The search conditions use a logical <strong>OR</strong>.</li>
+         * <li><strong>AND</strong>: The search conditions use a logical <strong>AND</strong>.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>You can call the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation to query supported search conditions.</p>
+         * </blockquote>
          * 
-         * *   **name**: the name of the search condition.
-         * 
-         * *   **value**: the value of the search condition.
-         * 
-         * *   **logicalExp**: the logical relation for multiple search conditions. Valid values:
-         * 
-         *     *   **OR**: The search conditions use a logical **OR**.
-         *     *   **AND**: The search conditions use a logical **AND**.
-         * 
-         * > You can call the [GetCloudAssetCriteria](~~GetCloudAssetCriteria~~) operation to query supported search conditions.
+         * <strong>example:</strong>
+         * <p>[{&quot;name&quot;:&quot;internetIp&quot;,&quot;value&quot;:&quot;192.168&quot;,&quot;logicalExp&quot;:&quot;OR&quot;}]</p>
          */
         public Builder criteria(String criteria) {
             this.putQueryParameter("Criteria", criteria);
@@ -155,7 +166,10 @@ public class ListCloudAssetInstancesRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -164,11 +178,14 @@ public class ListCloudAssetInstancesRequest extends Request {
         }
 
         /**
-         * The logical relation for multiple search conditions. Valid values:
-         * <p>
+         * <p>The logical relation for multiple search conditions. Valid values:</p>
+         * <ul>
+         * <li><strong>OR</strong>: The search conditions use a logical <strong>OR</strong>.</li>
+         * <li><strong>AND</strong>: The search conditions use a logical <strong>AND</strong>.</li>
+         * </ul>
          * 
-         * *   **OR**: The search conditions use a logical **OR**.
-         * *   **AND**: The search conditions use a logical **AND**.
+         * <strong>example:</strong>
+         * <p>OR</p>
          */
         public Builder logicalExp(String logicalExp) {
             this.putQueryParameter("LogicalExp", logicalExp);
@@ -177,7 +194,10 @@ public class ListCloudAssetInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100. Default value: 20.
+         * <p>The number of entries to return on each page. Maximum value: 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -186,7 +206,10 @@ public class ListCloudAssetInstancesRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -201,14 +224,20 @@ public class ListCloudAssetInstancesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListCloudAssetInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>ListCloudAssetInstancesRequest</p>
+     */
     public static class CloudAssetTypes extends TeaModel {
-        @NameInMap("AssetSubType")
+        @com.aliyun.core.annotation.NameInMap("AssetSubType")
         private Integer assetSubType;
 
-        @NameInMap("AssetType")
+        @com.aliyun.core.annotation.NameInMap("AssetType")
         private Integer assetType;
 
-        @NameInMap("Vendor")
+        @com.aliyun.core.annotation.NameInMap("Vendor")
         private Integer vendor;
 
         private CloudAssetTypes(Builder builder) {
@@ -252,10 +281,11 @@ public class ListCloudAssetInstancesRequest extends Request {
             private Integer vendor; 
 
             /**
-             * The subtype of the cloud asset.
-             * <p>
+             * <p>The subtype of the cloud asset.</p>
+             * <p>You can call the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation to query the subtype of the cloud asset.</p>
              * 
-             * You can call the [GetCloudAssetCriteria](~~GetCloudAssetCriteria~~) operation to query the subtype of the cloud asset.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder assetSubType(Integer assetSubType) {
                 this.assetSubType = assetSubType;
@@ -263,10 +293,11 @@ public class ListCloudAssetInstancesRequest extends Request {
             }
 
             /**
-             * The type of the cloud asset.
-             * <p>
+             * <p>The type of the cloud asset.</p>
+             * <p>You can call the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation to query the cloud asset type.</p>
              * 
-             * You can call the [GetCloudAssetCriteria](~~GetCloudAssetCriteria~~) operation to query the cloud asset type.
+             * <strong>example:</strong>
+             * <p>18</p>
              */
             public Builder assetType(Integer assetType) {
                 this.assetType = assetType;
@@ -274,14 +305,17 @@ public class ListCloudAssetInstancesRequest extends Request {
             }
 
             /**
-             * The server type. Valid values:
-             * <p>
+             * <p>The server type. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: a cloud asset provided by Alibaba Cloud</li>
+             * <li><strong>1</strong>: a cloud asset outside Alibaba Cloud</li>
+             * <li><strong>2</strong>: a cloud asset in a data center</li>
+             * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, and <strong>7</strong>: a cloud asset provided by a third-party service provider</li>
+             * <li><strong>8</strong>: a lightweight cloud asset</li>
+             * </ul>
              * 
-             * *   **0**: a cloud asset provided by Alibaba Cloud
-             * *   **1**: a cloud asset outside Alibaba Cloud
-             * *   **2**: a cloud asset in a data center
-             * *   **3**, **4**, **5**, and **7**: a cloud asset provided by a third-party service provider
-             * *   **8**: a lightweight cloud asset
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder vendor(Integer vendor) {
                 this.vendor = vendor;

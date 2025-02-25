@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeJobResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeJobResponseBody</p>
  */
 public class DescribeJobResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TraceId")
+    @com.aliyun.core.annotation.NameInMap("TraceId")
     private String traceId;
 
     private DescribeJobResponseBody(Builder builder) {
@@ -110,13 +115,16 @@ public class DescribeJobResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * The HTTP status code. Valid values:
-         * <p>
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: The call was successful.</li>
+         * <li><strong>3xx</strong>: The call was redirected.</li>
+         * <li><strong>4xx</strong>: The call failed.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * </ul>
          * 
-         * *   **2xx**: The call was successful.
-         * *   **3xx**: The call was redirected.
-         * *   **4xx**: The call failed.
-         * *   **5xx**: A server error occurred.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -124,7 +132,7 @@ public class DescribeJobResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the application.
+         * <p>The information about the application.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -132,11 +140,14 @@ public class DescribeJobResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned. Take note of the following rules:
-         * <p>
+         * <p>The error code returned. Take note of the following rules:</p>
+         * <ul>
+         * <li>If the call is successful, <strong>ErrorCode</strong> is not returned.</li>
+         * <li>If the call fails, <strong>ErrorCode</strong> is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section in this topic.</li>
+         * </ul>
          * 
-         * *   If the call is successful, **ErrorCode** is not returned.
-         * *   If the call fails, **ErrorCode** is returned. For more information, see the "**Error codes**" section in this topic.
+         * <strong>example:</strong>
+         * <p>Null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -144,7 +155,10 @@ public class DescribeJobResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -152,7 +166,10 @@ public class DescribeJobResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01CF26C7-00A3-4AA6-BA76-7E95F2A3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -160,11 +177,14 @@ public class DescribeJobResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the configurations of an application were obtained. Valid values:
-         * <p>
+         * <p>Indicates whether the configurations of an application were obtained. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -172,7 +192,10 @@ public class DescribeJobResponseBody extends TeaModel {
         }
 
         /**
-         * The trace ID that is used to query the details of the request.
+         * <p>The trace ID that is used to query the details of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac1a0b2215622246421415014e****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -185,17 +208,23 @@ public class DescribeJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeJobResponseBody</p>
+     */
     public static class ConfigMapMountDesc extends TeaModel {
-        @NameInMap("ConfigMapId")
+        @com.aliyun.core.annotation.NameInMap("ConfigMapId")
         private Long configMapId;
 
-        @NameInMap("ConfigMapName")
+        @com.aliyun.core.annotation.NameInMap("ConfigMapName")
         private String configMapName;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("MountPath")
+        @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
 
         private ConfigMapMountDesc(Builder builder) {
@@ -248,7 +277,10 @@ public class DescribeJobResponseBody extends TeaModel {
             private String mountPath; 
 
             /**
-             * The ConfigMap ID.
+             * <p>The ConfigMap ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder configMapId(Long configMapId) {
                 this.configMapId = configMapId;
@@ -256,7 +288,10 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The ConfigMap name.
+             * <p>The ConfigMap name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder configMapName(String configMapName) {
                 this.configMapName = configMapName;
@@ -264,7 +299,10 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The key-value pair that is stored in the ConfigMap.
+             * <p>The key-value pair that is stored in the ConfigMap.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -272,7 +310,10 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The path on which the NAS file system is mounted.
+             * <p>The path on which the NAS file system is mounted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/tmp</p>
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -286,11 +327,17 @@ public class DescribeJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeJobResponseBody</p>
+     */
     public static class MountDesc extends TeaModel {
-        @NameInMap("MountPath")
+        @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
 
-        @NameInMap("NasPath")
+        @com.aliyun.core.annotation.NameInMap("NasPath")
         private String nasPath;
 
         private MountDesc(Builder builder) {
@@ -325,7 +372,10 @@ public class DescribeJobResponseBody extends TeaModel {
             private String nasPath; 
 
             /**
-             * The path on which the NAS file system is mounted.
+             * <p>The path on which the NAS file system is mounted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/tmp</p>
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -333,7 +383,10 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The directory in the NAS file system.
+             * <p>The directory in the NAS file system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder nasPath(String nasPath) {
                 this.nasPath = nasPath;
@@ -347,17 +400,23 @@ public class DescribeJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeJobResponseBody</p>
+     */
     public static class OssMountDescs extends TeaModel {
-        @NameInMap("bucketName")
+        @com.aliyun.core.annotation.NameInMap("bucketName")
         private String bucketName;
 
-        @NameInMap("bucketPath")
+        @com.aliyun.core.annotation.NameInMap("bucketPath")
         private String bucketPath;
 
-        @NameInMap("mountPath")
+        @com.aliyun.core.annotation.NameInMap("mountPath")
         private String mountPath;
 
-        @NameInMap("readOnly")
+        @com.aliyun.core.annotation.NameInMap("readOnly")
         private Boolean readOnly;
 
         private OssMountDescs(Builder builder) {
@@ -410,7 +469,10 @@ public class DescribeJobResponseBody extends TeaModel {
             private Boolean readOnly; 
 
             /**
-             * The bucket name.
+             * <p>The bucket name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-bucket</p>
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -418,7 +480,10 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The directory or object in OSS. If the specified directory or object does not exist, an error is returned.
+             * <p>The directory or object in OSS. If the specified directory or object does not exist, an error is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>data/user.data</p>
              */
             public Builder bucketPath(String bucketPath) {
                 this.bucketPath = bucketPath;
@@ -426,7 +491,10 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the container in SAE. The parameter value that you specified overwrites the original value. If the specified path does not exist, SAE automatically creates the path.
+             * <p>The path of the container in SAE. The parameter value that you specified overwrites the original value. If the specified path does not exist, SAE automatically creates the path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/data/user.data</p>
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -434,11 +502,14 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the application can use the container path to read data from or write data to resources in the directory of the OSS bucket. Valid values:
-             * <p>
+             * <p>Indicates whether the application can use the container path to read data from or write data to resources in the directory of the OSS bucket. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The application has the read-only permission.</li>
+             * <li><strong>false</strong>: The application has read and write permissions.</li>
+             * </ul>
              * 
-             * *   **true**: The application has the read-only permission.
-             * *   **false**: The application has read and write permissions.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -452,11 +523,17 @@ public class DescribeJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeJobResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -491,7 +568,10 @@ public class DescribeJobResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -499,7 +579,10 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -513,182 +596,188 @@ public class DescribeJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeJobResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AcrAssumeRoleArn")
+        @com.aliyun.core.annotation.NameInMap("AcrAssumeRoleArn")
         private String acrAssumeRoleArn;
 
-        @NameInMap("AcrInstanceId")
+        @com.aliyun.core.annotation.NameInMap("AcrInstanceId")
         private String acrInstanceId;
 
-        @NameInMap("AppDescription")
+        @com.aliyun.core.annotation.NameInMap("AppDescription")
         private String appDescription;
 
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("BackoffLimit")
+        @com.aliyun.core.annotation.NameInMap("BackoffLimit")
         private Long backoffLimit;
 
-        @NameInMap("Command")
+        @com.aliyun.core.annotation.NameInMap("Command")
         private String command;
 
-        @NameInMap("CommandArgs")
+        @com.aliyun.core.annotation.NameInMap("CommandArgs")
         private String commandArgs;
 
-        @NameInMap("ConcurrencyPolicy")
+        @com.aliyun.core.annotation.NameInMap("ConcurrencyPolicy")
         private String concurrencyPolicy;
 
-        @NameInMap("ConfigMapMountDesc")
-        private java.util.List < ConfigMapMountDesc> configMapMountDesc;
+        @com.aliyun.core.annotation.NameInMap("ConfigMapMountDesc")
+        private java.util.List<ConfigMapMountDesc> configMapMountDesc;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
-        @NameInMap("CustomHostAlias")
+        @com.aliyun.core.annotation.NameInMap("CustomHostAlias")
         private String customHostAlias;
 
-        @NameInMap("EdasContainerVersion")
+        @com.aliyun.core.annotation.NameInMap("EdasContainerVersion")
         private String edasContainerVersion;
 
-        @NameInMap("Envs")
+        @com.aliyun.core.annotation.NameInMap("Envs")
         private String envs;
 
-        @NameInMap("ImagePullSecrets")
+        @com.aliyun.core.annotation.NameInMap("ImagePullSecrets")
         private String imagePullSecrets;
 
-        @NameInMap("ImageUrl")
+        @com.aliyun.core.annotation.NameInMap("ImageUrl")
         private String imageUrl;
 
-        @NameInMap("JarStartArgs")
+        @com.aliyun.core.annotation.NameInMap("JarStartArgs")
         private String jarStartArgs;
 
-        @NameInMap("JarStartOptions")
+        @com.aliyun.core.annotation.NameInMap("JarStartOptions")
         private String jarStartOptions;
 
-        @NameInMap("Jdk")
+        @com.aliyun.core.annotation.NameInMap("Jdk")
         private String jdk;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Integer memory;
 
-        @NameInMap("MountDesc")
-        private java.util.List < MountDesc> mountDesc;
+        @com.aliyun.core.annotation.NameInMap("MountDesc")
+        private java.util.List<MountDesc> mountDesc;
 
-        @NameInMap("MountHost")
+        @com.aliyun.core.annotation.NameInMap("MountHost")
         private String mountHost;
 
-        @NameInMap("NamespaceId")
+        @com.aliyun.core.annotation.NameInMap("NamespaceId")
         private String namespaceId;
 
-        @NameInMap("NasConfigs")
+        @com.aliyun.core.annotation.NameInMap("NasConfigs")
         private String nasConfigs;
 
-        @NameInMap("NasId")
+        @com.aliyun.core.annotation.NameInMap("NasId")
         private String nasId;
 
-        @NameInMap("OssAkId")
+        @com.aliyun.core.annotation.NameInMap("OssAkId")
         private String ossAkId;
 
-        @NameInMap("OssAkSecret")
+        @com.aliyun.core.annotation.NameInMap("OssAkSecret")
         private String ossAkSecret;
 
-        @NameInMap("OssMountDescs")
-        private java.util.List < OssMountDescs> ossMountDescs;
+        @com.aliyun.core.annotation.NameInMap("OssMountDescs")
+        private java.util.List<OssMountDescs> ossMountDescs;
 
-        @NameInMap("PackageType")
+        @com.aliyun.core.annotation.NameInMap("PackageType")
         private String packageType;
 
-        @NameInMap("PackageUrl")
+        @com.aliyun.core.annotation.NameInMap("PackageUrl")
         private String packageUrl;
 
-        @NameInMap("PackageVersion")
+        @com.aliyun.core.annotation.NameInMap("PackageVersion")
         private String packageVersion;
 
-        @NameInMap("PhpConfig")
+        @com.aliyun.core.annotation.NameInMap("PhpConfig")
         private String phpConfig;
 
-        @NameInMap("PhpConfigLocation")
+        @com.aliyun.core.annotation.NameInMap("PhpConfigLocation")
         private String phpConfigLocation;
 
-        @NameInMap("PostStart")
+        @com.aliyun.core.annotation.NameInMap("PostStart")
         private String postStart;
 
-        @NameInMap("PreStop")
+        @com.aliyun.core.annotation.NameInMap("PreStop")
         private String preStop;
 
-        @NameInMap("ProgrammingLanguage")
+        @com.aliyun.core.annotation.NameInMap("ProgrammingLanguage")
         private String programmingLanguage;
 
-        @NameInMap("PublicWebHookUrls")
-        private java.util.List < String > publicWebHookUrls;
+        @com.aliyun.core.annotation.NameInMap("PublicWebHookUrls")
+        private java.util.List<String> publicWebHookUrls;
 
-        @NameInMap("Python")
+        @com.aliyun.core.annotation.NameInMap("Python")
         private String python;
 
-        @NameInMap("PythonModules")
+        @com.aliyun.core.annotation.NameInMap("PythonModules")
         private String pythonModules;
 
-        @NameInMap("RefAppId")
+        @com.aliyun.core.annotation.NameInMap("RefAppId")
         private String refAppId;
 
-        @NameInMap("RefedAppIds")
-        private java.util.List < String > refedAppIds;
+        @com.aliyun.core.annotation.NameInMap("RefedAppIds")
+        private java.util.List<String> refedAppIds;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Replicas")
+        @com.aliyun.core.annotation.NameInMap("Replicas")
         private Integer replicas;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("Slice")
+        @com.aliyun.core.annotation.NameInMap("Slice")
         private Boolean slice;
 
-        @NameInMap("SliceEnvs")
+        @com.aliyun.core.annotation.NameInMap("SliceEnvs")
         private String sliceEnvs;
 
-        @NameInMap("SlsConfigs")
+        @com.aliyun.core.annotation.NameInMap("SlsConfigs")
         private String slsConfigs;
 
-        @NameInMap("Suspend")
+        @com.aliyun.core.annotation.NameInMap("Suspend")
         private Boolean suspend;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
-        @NameInMap("TerminationGracePeriodSeconds")
+        @com.aliyun.core.annotation.NameInMap("TerminationGracePeriodSeconds")
         private Integer terminationGracePeriodSeconds;
 
-        @NameInMap("Timeout")
+        @com.aliyun.core.annotation.NameInMap("Timeout")
         private Long timeout;
 
-        @NameInMap("Timezone")
+        @com.aliyun.core.annotation.NameInMap("Timezone")
         private String timezone;
 
-        @NameInMap("TomcatConfig")
+        @com.aliyun.core.annotation.NameInMap("TomcatConfig")
         private String tomcatConfig;
 
-        @NameInMap("TriggerConfig")
+        @com.aliyun.core.annotation.NameInMap("TriggerConfig")
         private String triggerConfig;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcWebHookUrls")
-        private java.util.List < String > vpcWebHookUrls;
+        @com.aliyun.core.annotation.NameInMap("VpcWebHookUrls")
+        private java.util.List<String> vpcWebHookUrls;
 
-        @NameInMap("WarStartOptions")
+        @com.aliyun.core.annotation.NameInMap("WarStartOptions")
         private String warStartOptions;
 
-        @NameInMap("WebContainer")
+        @com.aliyun.core.annotation.NameInMap("WebContainer")
         private String webContainer;
 
         private Data(Builder builder) {
@@ -827,7 +916,7 @@ public class DescribeJobResponseBody extends TeaModel {
         /**
          * @return configMapMountDesc
          */
-        public java.util.List < ConfigMapMountDesc> getConfigMapMountDesc() {
+        public java.util.List<ConfigMapMountDesc> getConfigMapMountDesc() {
             return this.configMapMountDesc;
         }
 
@@ -904,7 +993,7 @@ public class DescribeJobResponseBody extends TeaModel {
         /**
          * @return mountDesc
          */
-        public java.util.List < MountDesc> getMountDesc() {
+        public java.util.List<MountDesc> getMountDesc() {
             return this.mountDesc;
         }
 
@@ -953,7 +1042,7 @@ public class DescribeJobResponseBody extends TeaModel {
         /**
          * @return ossMountDescs
          */
-        public java.util.List < OssMountDescs> getOssMountDescs() {
+        public java.util.List<OssMountDescs> getOssMountDescs() {
             return this.ossMountDescs;
         }
 
@@ -1016,7 +1105,7 @@ public class DescribeJobResponseBody extends TeaModel {
         /**
          * @return publicWebHookUrls
          */
-        public java.util.List < String > getPublicWebHookUrls() {
+        public java.util.List<String> getPublicWebHookUrls() {
             return this.publicWebHookUrls;
         }
 
@@ -1044,7 +1133,7 @@ public class DescribeJobResponseBody extends TeaModel {
         /**
          * @return refedAppIds
          */
-        public java.util.List < String > getRefedAppIds() {
+        public java.util.List<String> getRefedAppIds() {
             return this.refedAppIds;
         }
 
@@ -1100,7 +1189,7 @@ public class DescribeJobResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -1156,7 +1245,7 @@ public class DescribeJobResponseBody extends TeaModel {
         /**
          * @return vpcWebHookUrls
          */
-        public java.util.List < String > getVpcWebHookUrls() {
+        public java.util.List<String> getVpcWebHookUrls() {
             return this.vpcWebHookUrls;
         }
 
@@ -1184,7 +1273,7 @@ public class DescribeJobResponseBody extends TeaModel {
             private String command; 
             private String commandArgs; 
             private String concurrencyPolicy; 
-            private java.util.List < ConfigMapMountDesc> configMapMountDesc; 
+            private java.util.List<ConfigMapMountDesc> configMapMountDesc; 
             private Integer cpu; 
             private String customHostAlias; 
             private String edasContainerVersion; 
@@ -1195,14 +1284,14 @@ public class DescribeJobResponseBody extends TeaModel {
             private String jarStartOptions; 
             private String jdk; 
             private Integer memory; 
-            private java.util.List < MountDesc> mountDesc; 
+            private java.util.List<MountDesc> mountDesc; 
             private String mountHost; 
             private String namespaceId; 
             private String nasConfigs; 
             private String nasId; 
             private String ossAkId; 
             private String ossAkSecret; 
-            private java.util.List < OssMountDescs> ossMountDescs; 
+            private java.util.List<OssMountDescs> ossMountDescs; 
             private String packageType; 
             private String packageUrl; 
             private String packageVersion; 
@@ -1211,11 +1300,11 @@ public class DescribeJobResponseBody extends TeaModel {
             private String postStart; 
             private String preStop; 
             private String programmingLanguage; 
-            private java.util.List < String > publicWebHookUrls; 
+            private java.util.List<String> publicWebHookUrls; 
             private String python; 
             private String pythonModules; 
             private String refAppId; 
-            private java.util.List < String > refedAppIds; 
+            private java.util.List<String> refedAppIds; 
             private String regionId; 
             private Integer replicas; 
             private String securityGroupId; 
@@ -1223,7 +1312,7 @@ public class DescribeJobResponseBody extends TeaModel {
             private String sliceEnvs; 
             private String slsConfigs; 
             private Boolean suspend; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private Integer terminationGracePeriodSeconds; 
             private Long timeout; 
             private String timezone; 
@@ -1231,12 +1320,15 @@ public class DescribeJobResponseBody extends TeaModel {
             private String triggerConfig; 
             private String vSwitchId; 
             private String vpcId; 
-            private java.util.List < String > vpcWebHookUrls; 
+            private java.util.List<String> vpcWebHookUrls; 
             private String warStartOptions; 
             private String webContainer; 
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the RAM role that is used to pull images across accounts. For more information, see [Pull images across Alibaba Cloud accounts](~~190675~~) and [Grant permissions across Alibaba Cloud accounts by using a RAM role](~~223585~~).
+             * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role that is used to pull images across accounts. For more information, see <a href="https://help.aliyun.com/document_detail/190675.html">Pull images across Alibaba Cloud accounts</a> and <a href="https://help.aliyun.com/document_detail/223585.html">Grant permissions across Alibaba Cloud accounts by using a RAM role</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::123456789012****:role/adminrole</p>
              */
             public Builder acrAssumeRoleArn(String acrAssumeRoleArn) {
                 this.acrAssumeRoleArn = acrAssumeRoleArn;
@@ -1244,7 +1336,10 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Container Registry Enterprise Edition instance.
+             * <p>The ID of the Container Registry Enterprise Edition instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cri-xxxxxx</p>
              */
             public Builder acrInstanceId(String acrInstanceId) {
                 this.acrInstanceId = acrInstanceId;
@@ -1252,7 +1347,10 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the application.
+             * <p>The description of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sample application</p>
              */
             public Builder appDescription(String appDescription) {
                 this.appDescription = appDescription;
@@ -1260,7 +1358,10 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The application ID.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -1268,7 +1369,10 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The application name.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo-app</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -1276,7 +1380,10 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that the job was retried.
+             * <p>The number of times that the job was retried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder backoffLimit(Long backoffLimit) {
                 this.backoffLimit = backoffLimit;
@@ -1284,16 +1391,17 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The command that is used to start the image. The command must be an existing executable object in the container. Example:
-             * <p>
+             * <p>The command that is used to start the image. The command must be an existing executable object in the container. Example:</p>
+             * <pre><code>command:
+             *       - echo
+             *       - abc
+             *       - &gt;
+             *       - file0
+             * </code></pre>
+             * <p>In this example, the Command parameter is set to <code>Command=&quot;echo&quot;, CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>.</p>
              * 
-             *     command:
-             *           - echo
-             *           - abc
-             *           - >
-             *           - file0
-             * 
-             * In this example, the Command parameter is set to `Command="echo", CommandArgs=["abc", ">", "file0"]`.
+             * <strong>example:</strong>
+             * <p>echo</p>
              */
             public Builder command(String command) {
                 this.command = command;
@@ -1301,12 +1409,12 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The arguments of the image startup command. This parameter contains the arguments that are required for **Command**. Format:
-             * <p>
+             * <p>The arguments of the image startup command. This parameter contains the arguments that are required for <strong>Command</strong>. Format:</p>
+             * <p><code>[&quot;a&quot;,&quot;b&quot;]</code></p>
+             * <p>In the preceding <strong>Command</strong> example, the CommandArgs parameter is set to <code>CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>. The data type of <code>[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code> must be an array of strings in the JSON format. If this parameter does not exist in the Command parameter, you do not need to configure it.</p>
              * 
-             * `["a","b"]`
-             * 
-             * In the preceding **Command** example, the CommandArgs parameter is set to `CommandArgs=["abc", ">", "file0"]`. The data type of `["abc", ">", "file0"]` must be an array of strings in the JSON format. If this parameter does not exist in the Command parameter, you do not need to configure it.
+             * <strong>example:</strong>
+             * <p>[&quot;a&quot;,&quot;b&quot;]</p>
              */
             public Builder commandArgs(String commandArgs) {
                 this.commandArgs = commandArgs;
@@ -1314,12 +1422,15 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The concurrency policy of the job. Valid values:
-             * <p>
+             * <p>The concurrency policy of the job. Valid values:</p>
+             * <ul>
+             * <li><strong>Forbid</strong>: Concurrent running is prohibited. If the previous job is not completed, no new job is created.</li>
+             * <li><strong>Allow</strong>: Concurrent running is allowed.</li>
+             * <li><strong>Replace</strong>: If the previous job is not completed when the time to create a new job is reached, the new job replaces the previous job.</li>
+             * </ul>
              * 
-             * *   **Forbid**: Concurrent running is prohibited. If the previous job is not completed, no new job is created.
-             * *   **Allow**: Concurrent running is allowed.
-             * *   **Replace**: If the previous job is not completed when the time to create a new job is reached, the new job replaces the previous job.
+             * <strong>example:</strong>
+             * <p>Allow</p>
              */
             public Builder concurrencyPolicy(String concurrencyPolicy) {
                 this.concurrencyPolicy = concurrencyPolicy;
@@ -1327,24 +1438,27 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the ConfigMap.
+             * <p>The details of the ConfigMap.</p>
              */
-            public Builder configMapMountDesc(java.util.List < ConfigMapMountDesc> configMapMountDesc) {
+            public Builder configMapMountDesc(java.util.List<ConfigMapMountDesc> configMapMountDesc) {
                 this.configMapMountDesc = configMapMountDesc;
                 return this;
             }
 
             /**
-             * The CPU specifications required for each instance. Unit: millicore. This parameter cannot be set to 0. Valid values:
-             * <p>
+             * <p>The CPU specifications required for each instance. Unit: millicore. This parameter cannot be set to 0. Valid values:</p>
+             * <ul>
+             * <li><strong>500</strong></li>
+             * <li><strong>1000</strong></li>
+             * <li><strong>2000</strong></li>
+             * <li><strong>4000</strong></li>
+             * <li><strong>8000</strong></li>
+             * <li><strong>16000</strong></li>
+             * <li><strong>32000</strong></li>
+             * </ul>
              * 
-             * *   **500**
-             * *   **1000**
-             * *   **2000**
-             * *   **4000**
-             * *   **8000**
-             * *   **16000**
-             * *   **32000**
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -1352,11 +1466,14 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The custom mapping between the hostname and IP address in the container. Valid values:
-             * <p>
+             * <p>The custom mapping between the hostname and IP address in the container. Valid values:</p>
+             * <ul>
+             * <li><strong>hostName</strong>: the domain name or hostname.</li>
+             * <li><strong>ip</strong>: the IP address.</li>
+             * </ul>
              * 
-             * *   **hostName**: the domain name or hostname.
-             * *   **ip**: the IP address.
+             * <strong>example:</strong>
+             * <p>[{&quot;hostName&quot;:&quot;test.host.name&quot;,&quot;ip&quot;:&quot;0.0.0.0&quot;}]</p>
              */
             public Builder customHostAlias(String customHostAlias) {
                 this.customHostAlias = customHostAlias;
@@ -1364,7 +1481,10 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the container, such as Ali-Tomcat, in which an application developed based on High-speed Service Framework (HSF) is deployed.
+             * <p>The version of the container, such as Ali-Tomcat, in which an application developed based on High-speed Service Framework (HSF) is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.5.3</p>
              */
             public Builder edasContainerVersion(String edasContainerVersion) {
                 this.edasContainerVersion = edasContainerVersion;
@@ -1372,20 +1492,26 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The environment variables. You can configure custom environment variables or reference a ConfigMap. If you want to reference a ConfigMap, you must first create a ConfigMap. For more information, see [CreateConfigMap](~~176914~~). Valid values:
-             * <p>
+             * <p>The environment variables. You can configure custom environment variables or reference a ConfigMap. If you want to reference a ConfigMap, you must first create a ConfigMap. For more information, see <a href="https://help.aliyun.com/document_detail/176914.html">CreateConfigMap</a>. Valid values:</p>
+             * <ul>
+             * <li><p>Custom configuration</p>
+             * <ul>
+             * <li><strong>name</strong>: the name of the environment variable.</li>
+             * <li><strong>value</strong>: the value of the environment variable.</li>
+             * </ul>
+             * </li>
+             * <li><p>Reference a ConfigMap</p>
+             * <ul>
+             * <li><strong>name</strong>: the name of the environment variable. You can reference one or all keys. To reference all keys, specify <code>sae-sys-configmap-all-&lt;ConfigMap name&gt;</code>. Example: <code>sae-sys-configmap-all-test1</code>.</li>
+             * <li><strong>valueFrom</strong>: the reference of the environment variable. Set the value to <code>configMapRef</code>.</li>
+             * <li><strong>configMapId</strong>: the ID of the ConfigMap.</li>
+             * <li><strong>key</strong>: the key. If you want to reference all keys, you do not need to configure this parameter.</li>
+             * </ul>
+             * </li>
+             * </ul>
              * 
-             * *   Custom configuration
-             * 
-             *     *   **name**: the name of the environment variable.
-             *     *   **value**: the value of the environment variable.
-             * 
-             * *   Reference a ConfigMap
-             * 
-             *     *   **name**: the name of the environment variable. You can reference one or all keys. To reference all keys, specify `sae-sys-configmap-all-<ConfigMap name>`. Example: `sae-sys-configmap-all-test1`.
-             *     *   **valueFrom**: the reference of the environment variable. Set the value to `configMapRef`.
-             *     *   **configMapId**: the ID of the ConfigMap.
-             *     *   **key**: the key. If you want to reference all keys, you do not need to configure this parameter.
+             * <strong>example:</strong>
+             * <p>[{&quot;name&quot;:&quot;TEST_ENV_KEY&quot;,&quot;value&quot;:&quot;TEST_ENV_VAR&quot;}]</p>
              */
             public Builder envs(String envs) {
                 this.envs = envs;
@@ -1393,7 +1519,10 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the corresponding secret.
+             * <p>The ID of the corresponding secret.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder imagePullSecrets(String imagePullSecrets) {
                 this.imagePullSecrets = imagePullSecrets;
@@ -1401,7 +1530,10 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the image. This parameter is returned only if **PackageType** is set to **Image**.
+             * <p>The URL of the image. This parameter is returned only if <strong>PackageType</strong> is set to <strong>Image</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>docker.io/library/nginx:1.14.2</p>
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -1409,7 +1541,10 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The arguments in the JAR package. The arguments are used to start the application container. The default startup command is `$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS "$package_path" $JarStartArgs`.
+             * <p>The arguments in the JAR package. The arguments are used to start the application container. The default startup command is <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>start</p>
              */
             public Builder jarStartArgs(String jarStartArgs) {
                 this.jarStartArgs = jarStartArgs;
@@ -1417,7 +1552,10 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The option settings in the JAR package. The settings are used to start the application container. The default startup command is `$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS "$package_path" $JarStartArgs`.
+             * <p>The option settings in the JAR package. The settings are used to start the application container. The default startup command is <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-Dtest=true</p>
              */
             public Builder jarStartOptions(String jarStartOptions) {
                 this.jarStartOptions = jarStartOptions;
@@ -1425,17 +1563,19 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the Java Development Kit (JDK) on which the deployment package of the application depends. The following versions are supported:
-             * <p>
+             * <p>The version of the Java Development Kit (JDK) on which the deployment package of the application depends. The following versions are supported:</p>
+             * <ul>
+             * <li><strong>Open JDK 8</strong></li>
+             * <li><strong>Open JDK 7</strong></li>
+             * <li><strong>Dragonwell 11</strong></li>
+             * <li><strong>Dragonwell 8</strong></li>
+             * <li><strong>openjdk-8u191-jdk-alpine3.9</strong></li>
+             * <li><strong>openjdk-7u201-jdk-alpine3.9</strong></li>
+             * </ul>
+             * <p>This parameter is not returned if <strong>PackageType</strong> is set to <strong>Image</strong>.</p>
              * 
-             * *   **Open JDK 8**
-             * *   **Open JDK 7**
-             * *   **Dragonwell 11**
-             * *   **Dragonwell 8**
-             * *   **openjdk-8u191-jdk-alpine3.9**
-             * *   **openjdk-7u201-jdk-alpine3.9**
-             * 
-             * This parameter is not returned if **PackageType** is set to **Image**.
+             * <strong>example:</strong>
+             * <p>Open JDK 8</p>
              */
             public Builder jdk(String jdk) {
                 this.jdk = jdk;
@@ -1443,19 +1583,22 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The size of memory that is required by each instance. Unit: MB. This parameter cannot be set to 0. The values of this parameter correspond to the values of the Cpu parameter:
-             * <p>
+             * <p>The size of memory that is required by each instance. Unit: MB. This parameter cannot be set to 0. The values of this parameter correspond to the values of the Cpu parameter:</p>
+             * <ul>
+             * <li>This parameter is set to <strong>1024</strong> if the Cpu parameter is set to 500 or 1000.</li>
+             * <li>This parameter is set to <strong>2048</strong> if the Cpu parameter is set to 500, 1000, or 2000.</li>
+             * <li>This parameter is set to <strong>4096</strong> if the Cpu parameter is set to 1000, 2000, or 4000.</li>
+             * <li>This parameter is set to <strong>8192</strong> if the Cpu parameter is set to 2000, 4000, or 8000.</li>
+             * <li>This parameter is set to <strong>12288</strong> if the Cpu parameter is set to 12000.</li>
+             * <li>This parameter is set to <strong>16384</strong> if the Cpu parameter is set to 4000, 8000, or 16000.</li>
+             * <li>This parameter is set to <strong>24567</strong> if the Cpu parameter is set to 12000.</li>
+             * <li>This parameter is set to <strong>32768</strong> if the Cpu parameter is set to 16000.</li>
+             * <li>This parameter is set to <strong>65536</strong> if the Cpu parameter is set to 8000, 16000, or 32000.</li>
+             * <li>This parameter is set to <strong>131072</strong> if the Cpu parameter is set to 32000.</li>
+             * </ul>
              * 
-             * *   This parameter is set to **1024** if the Cpu parameter is set to 500 or 1000.
-             * *   This parameter is set to **2048** if the Cpu parameter is set to 500, 1000, or 2000.
-             * *   This parameter is set to **4096** if the Cpu parameter is set to 1000, 2000, or 4000.
-             * *   This parameter is set to **8192** if the Cpu parameter is set to 2000, 4000, or 8000.
-             * *   This parameter is set to **12288** if the Cpu parameter is set to 12000.
-             * *   This parameter is set to **16384** if the Cpu parameter is set to 4000, 8000, or 16000.
-             * *   This parameter is set to **24567** if the Cpu parameter is set to 12000.
-             * *   This parameter is set to **32768** if the Cpu parameter is set to 16000.
-             * *   This parameter is set to **65536** if the Cpu parameter is set to 8000, 16000, or 32000.
-             * *   This parameter is set to **131072** if the Cpu parameter is set to 32000.
+             * <strong>example:</strong>
+             * <p>2048</p>
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -1463,15 +1606,18 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the mounted NAS file system.
+             * <p>The details of the mounted NAS file system.</p>
              */
-            public Builder mountDesc(java.util.List < MountDesc> mountDesc) {
+            public Builder mountDesc(java.util.List<MountDesc> mountDesc) {
                 this.mountDesc = mountDesc;
                 return this;
             }
 
             /**
-             * The mount target of the NAS file system in the VPC in which the application is deployed. If you do not need to modify this configuration during the deployment, configure **MountHost** only in the first request. If you need to remove this configuration, leave **MountHost** empty in the request.
+             * <p>The mount target of the NAS file system in the VPC in which the application is deployed. If you do not need to modify this configuration during the deployment, configure <strong>MountHost</strong> only in the first request. If you need to remove this configuration, leave <strong>MountHost</strong> empty in the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder mountHost(String mountHost) {
                 this.mountHost = mountHost;
@@ -1479,7 +1625,10 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace ID.
+             * <p>The namespace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing:test</p>
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -1487,7 +1636,10 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations for mounting the NAS file system.
+             * <p>The configurations for mounting the NAS file system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;mountPath&quot;:&quot;/test1&quot;,&quot;readOnly&quot;:false,&quot;nasId&quot;:&quot;nasId1&quot;,&quot;mountDomain&quot;:&quot;nasId1.cn-shenzhen.nas.aliyuncs.com&quot;,&quot;nasPath&quot;:&quot;/test1&quot;},{&quot;nasId&quot;:&quot;nasId2&quot;,&quot;mountDomain&quot;:&quot;nasId2.cn-shenzhen.nas.aliyuncs.com&quot;,&quot;readOnly&quot;:false,&quot;nasPath&quot;:&quot;/test2&quot;,&quot;mountPath&quot;:&quot;/test2&quot;}]</p>
              */
             public Builder nasConfigs(String nasConfigs) {
                 this.nasConfigs = nasConfigs;
@@ -1495,7 +1647,10 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the NAS file system.
+             * <p>The ID of the NAS file system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AKSN89**</p>
              */
             public Builder nasId(String nasId) {
                 this.nasId = nasId;
@@ -1503,7 +1658,10 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The AccessKey ID that is used to read data from and write data to Object Storage Service (OSS).
+             * <p>The AccessKey ID that is used to read data from and write data to Object Storage Service (OSS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxxx</p>
              */
             public Builder ossAkId(String ossAkId) {
                 this.ossAkId = ossAkId;
@@ -1511,7 +1669,10 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The AccessKey secret that is used to read data from and write data to OSS.
+             * <p>The AccessKey secret that is used to read data from and write data to OSS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxxx</p>
              */
             public Builder ossAkSecret(String ossAkSecret) {
                 this.ossAkSecret = ossAkSecret;
@@ -1519,38 +1680,43 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The description of mounted OSS buckets.
+             * <p>The description of mounted OSS buckets.</p>
              */
-            public Builder ossMountDescs(java.util.List < OssMountDescs> ossMountDescs) {
+            public Builder ossMountDescs(java.util.List<OssMountDescs> ossMountDescs) {
                 this.ossMountDescs = ossMountDescs;
                 return this;
             }
 
             /**
-             * The type of the deployment package. Valid values:
-             * <p>
+             * <p>The type of the deployment package. Valid values:</p>
+             * <ul>
+             * <li><p>If you deploy the application by using a Java Archive (JAR) package, this parameter is set to <strong>FatJar</strong>, <strong>War</strong>, or <strong>Image</strong>.</p>
+             * </li>
+             * <li><p>If you deploy the application by using a PHP package, this parameter is set to one of the following values:</p>
+             * <ul>
+             * <li><strong>PhpZip</strong></li>
+             * <li><strong>IMAGE_PHP_5_4</strong></li>
+             * <li><strong>IMAGE_PHP_5_4_ALPINE</strong></li>
+             * <li><strong>IMAGE_PHP_5_5</strong></li>
+             * <li><strong>IMAGE_PHP_5_5_ALPINE</strong></li>
+             * <li><strong>IMAGE_PHP_5_6</strong></li>
+             * <li><strong>IMAGE_PHP_5_6_ALPINE</strong></li>
+             * <li><strong>IMAGE_PHP_7_0</strong></li>
+             * <li><strong>IMAGE_PHP_7_0_ALPINE</strong></li>
+             * <li><strong>IMAGE_PHP_7_1</strong></li>
+             * <li><strong>IMAGE_PHP_7_1_ALPINE</strong></li>
+             * <li><strong>IMAGE_PHP_7_2</strong></li>
+             * <li><strong>IMAGE_PHP_7_2_ALPINE</strong></li>
+             * <li><strong>IMAGE_PHP_7_3</strong></li>
+             * <li><strong>IMAGE_PHP_7_3_ALPINE</strong></li>
+             * </ul>
+             * </li>
+             * <li><p>If you deploy the application by using a Pythhon package, this parameter is set to <strong>PythonZip</strong> or <strong>Image</strong>.</p>
+             * </li>
+             * </ul>
              * 
-             * *   If you deploy the application by using a Java Archive (JAR) package, this parameter is set to **FatJar**, **War**, or **Image**.
-             * 
-             * *   If you deploy the application by using a PHP package, this parameter is set to one of the following values:
-             * 
-             *     *   **PhpZip**
-             *     *   **IMAGE_PHP\_5\_4**
-             *     *   **IMAGE_PHP\_5\_4\_ALPINE**
-             *     *   **IMAGE_PHP\_5\_5**
-             *     *   **IMAGE_PHP\_5\_5\_ALPINE**
-             *     *   **IMAGE_PHP\_5\_6**
-             *     *   **IMAGE_PHP\_5\_6\_ALPINE**
-             *     *   **IMAGE_PHP\_7\_0**
-             *     *   **IMAGE_PHP\_7\_0\_ALPINE**
-             *     *   **IMAGE_PHP\_7\_1**
-             *     *   **IMAGE_PHP\_7\_1\_ALPINE**
-             *     *   **IMAGE_PHP\_7\_2**
-             *     *   **IMAGE_PHP\_7\_2\_ALPINE**
-             *     *   **IMAGE_PHP\_7\_3**
-             *     *   **IMAGE_PHP\_7\_3\_ALPINE**
-             * 
-             * *   If you deploy the application by using a Pythhon package, this parameter is set to **PythonZip** or **Image**.
+             * <strong>example:</strong>
+             * <p>War</p>
              */
             public Builder packageType(String packageType) {
                 this.packageType = packageType;
@@ -1558,7 +1724,7 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the deployment package. This parameter is returned only if **PackageType** is set to **FatJar** or **War**.
+             * <p>The URL of the deployment package. This parameter is returned only if <strong>PackageType</strong> is set to <strong>FatJar</strong> or <strong>War</strong>.</p>
              */
             public Builder packageUrl(String packageUrl) {
                 this.packageUrl = packageUrl;
@@ -1566,7 +1732,10 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the deployment package. This parameter is required only if **PackageType** is set to **FatJar** or **War**.
+             * <p>The version of the deployment package. This parameter is required only if <strong>PackageType</strong> is set to <strong>FatJar</strong> or <strong>War</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder packageVersion(String packageVersion) {
                 this.packageVersion = packageVersion;
@@ -1574,7 +1743,10 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the PHP configuration file.
+             * <p>The details of the PHP configuration file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k1=v1</p>
              */
             public Builder phpConfig(String phpConfig) {
                 this.phpConfig = phpConfig;
@@ -1582,7 +1754,10 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The path on which the PHP configuration file for application startup is mounted. Make sure that the PHP server uses this configuration file during the startup.
+             * <p>The path on which the PHP configuration file for application startup is mounted. Make sure that the PHP server uses this configuration file during the startup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/local/etc/php/php.ini</p>
              */
             public Builder phpConfigLocation(String phpConfigLocation) {
                 this.phpConfigLocation = phpConfigLocation;
@@ -1590,7 +1765,10 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The script that is run immediately after the container is started. Example: `{"exec":{"command":\["cat","/etc/group"\]}}`
+             * <p>The script that is run immediately after the container is started. Example: <code>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;\]}}</code></p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</p>
              */
             public Builder postStart(String postStart) {
                 this.postStart = postStart;
@@ -1598,7 +1776,10 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The script that is run before the container is stopped. Example: `{"exec":{"command":\["cat","/etc/group"\]}}`
+             * <p>The script that is run before the container is stopped. Example: <code>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;\]}}</code></p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</p>
              */
             public Builder preStop(String preStop) {
                 this.preStop = preStop;
@@ -1606,13 +1787,16 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The programming language that is used to create the application. Valid values:
-             * <p>
+             * <p>The programming language that is used to create the application. Valid values:</p>
+             * <ul>
+             * <li><strong>java</strong>: Java</li>
+             * <li><strong>php</strong>: PHP</li>
+             * <li><strong>python</strong>: Python</li>
+             * <li><strong>other</strong>: other programming languages, such as C++, Go, .NET, and Node.js.</li>
+             * </ul>
              * 
-             * *   **java**: Java
-             * *   **php**: PHP
-             * *   **python**: Python
-             * *   **other**: other programming languages, such as C++, Go, .NET, and Node.js.
+             * <strong>example:</strong>
+             * <p>java</p>
              */
             public Builder programmingLanguage(String programmingLanguage) {
                 this.programmingLanguage = programmingLanguage;
@@ -1620,15 +1804,18 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The Internet request URLs of one-time jobs.
+             * <p>The Internet request URLs of one-time jobs.</p>
              */
-            public Builder publicWebHookUrls(java.util.List < String > publicWebHookUrls) {
+            public Builder publicWebHookUrls(java.util.List<String> publicWebHookUrls) {
                 this.publicWebHookUrls = publicWebHookUrls;
                 return this;
             }
 
             /**
-             * The Python environment. PYTHON 3.9.15 is supported.
+             * <p>The Python environment. PYTHON 3.9.15 is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PYTHON 3.9.15</p>
              */
             public Builder python(String python) {
                 this.python = python;
@@ -1636,7 +1823,10 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations for installing custom module dependencies. By default, the dependencies defined by the requirements.txt file in the root directory are installed. If no software package is configured, you can specify dependencies based on your business requirements.
+             * <p>The configurations for installing custom module dependencies. By default, the dependencies defined by the requirements.txt file in the root directory are installed. If no software package is configured, you can specify dependencies based on your business requirements.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Flask==2.0</p>
              */
             public Builder pythonModules(String pythonModules) {
                 this.pythonModules = pythonModules;
@@ -1644,7 +1834,10 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the job template that you reference.
+             * <p>The ID of the job template that you reference.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
              */
             public Builder refAppId(String refAppId) {
                 this.refAppId = refAppId;
@@ -1652,15 +1845,18 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the referenced job templates.
+             * <p>The IDs of the referenced job templates.</p>
              */
-            public Builder refedAppIds(java.util.List < String > refedAppIds) {
+            public Builder refedAppIds(java.util.List<String> refedAppIds) {
                 this.refedAppIds = refedAppIds;
                 return this;
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1668,7 +1864,10 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The number of application instances.
+             * <p>The number of application instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder replicas(Integer replicas) {
                 this.replicas = replicas;
@@ -1676,7 +1875,10 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security group.
+             * <p>The ID of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-wz969ngg2e49q5i4****</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -1684,7 +1886,10 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether job sharding is enabled.
+             * <p>Indicates whether job sharding is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder slice(Boolean slice) {
                 this.slice = slice;
@@ -1692,7 +1897,10 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters of job sharding.
+             * <p>The parameters of job sharding.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SliceEnvs</p>
              */
             public Builder sliceEnvs(String sliceEnvs) {
                 this.sliceEnvs = sliceEnvs;
@@ -1700,21 +1908,23 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The logging configurations of Log Service.
-             * <p>
+             * <p>The logging configurations of Log Service.</p>
+             * <ul>
+             * <li>To use Log Service resources that are automatically created by SAE, set this parameter to <code>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</code>.</li>
+             * <li>To use custom Log Service resources, set this parameter to <code>[{&quot;projectName&quot;:&quot;test-sls&quot;,&quot;logType&quot;:&quot;stdout&quot;,&quot;logDir&quot;:&quot;&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;},{&quot;projectName&quot;:&quot;test&quot;,&quot;logDir&quot;:&quot;/tmp/a.log&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;}]</code>.</li>
+             * </ul>
+             * <p>Parameter description:</p>
+             * <ul>
+             * <li><strong>projectName</strong>: the name of the Log Service project.</li>
+             * <li><strong>logDir</strong>: the path in which logs are stored.</li>
+             * <li><strong>logType</strong>: the log type. <strong>stdout</strong>: the standard output (stdout) log of the container. Only one stdout value for this parameter can be specified. If this parameter is not configured, file logs are collected.</li>
+             * <li><strong>logstoreName</strong>: the name of the Logstore in Log Service.</li>
+             * <li><strong>logtailName</strong>: the name of the Logtail in Log Service. If this parameter is not configured, a new Logtail is created.</li>
+             * </ul>
+             * <p>If you do not need to modify the logging configurations when you deploy the application, configure <strong>SlsConfigs</strong> only in the first request. If you no longer need to use Log Service, leave <strong>SlsConfigs</strong> empty in the request.</p>
              * 
-             * *   To use Log Service resources that are automatically created by SAE, set this parameter to `[{"logDir":"","logType":"stdout"},{"logDir":"/tmp/a.log"}]`.
-             * *   To use custom Log Service resources, set this parameter to `[{"projectName":"test-sls","logType":"stdout","logDir":"","logstoreName":"sae","logtailName":""},{"projectName":"test","logDir":"/tmp/a.log","logstoreName":"sae","logtailName":""}]`.
-             * 
-             * Parameter description:
-             * 
-             * *   **projectName**: the name of the Log Service project.
-             * *   **logDir**: the path in which logs are stored.
-             * *   **logType**: the log type. **stdout**: the standard output (stdout) log of the container. Only one stdout value for this parameter can be specified. If this parameter is not configured, file logs are collected.
-             * *   **logstoreName**: the name of the Logstore in Log Service.
-             * *   **logtailName**: the name of the Logtail in Log Service. If this parameter is not configured, a new Logtail is created.
-             * 
-             * If you do not need to modify the logging configurations when you deploy the application, configure **SlsConfigs** only in the first request. If you no longer need to use Log Service, leave **SlsConfigs** empty in the request.
+             * <strong>example:</strong>
+             * <p>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</p>
              */
             public Builder slsConfigs(String slsConfigs) {
                 this.slsConfigs = slsConfigs;
@@ -1722,7 +1932,10 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the job template is suspended.
+             * <p>Indicates whether the job template is suspended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder suspend(Boolean suspend) {
                 this.suspend = suspend;
@@ -1730,15 +1943,18 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>The tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * The timeout period for a graceful shutdown. Default value: 30. Unit: seconds. Valid values: 1 to 300.
+             * <p>The timeout period for a graceful shutdown. Default value: 30. Unit: seconds. Valid values: 1 to 300.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder terminationGracePeriodSeconds(Integer terminationGracePeriodSeconds) {
                 this.terminationGracePeriodSeconds = terminationGracePeriodSeconds;
@@ -1746,7 +1962,10 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period for the job. Unit: seconds.
+             * <p>The timeout period for the job. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder timeout(Long timeout) {
                 this.timeout = timeout;
@@ -1754,7 +1973,10 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The time zone. Default value: **Asia/Shanghai**.
+             * <p>The time zone. Default value: <strong>Asia/Shanghai</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Asia/Shanghai</p>
              */
             public Builder timezone(String timezone) {
                 this.timezone = timezone;
@@ -1762,14 +1984,17 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The Tomcat configuration. If you want to delete the configuration, set this parameter to {} or leave this parameter empty. Parameter description:
-             * <p>
+             * <p>The Tomcat configuration. If you want to delete the configuration, set this parameter to {} or leave this parameter empty. Parameter description:</p>
+             * <ul>
+             * <li><strong>port</strong>: the port number. Valid values: 1024 to 65535. The root permissions are required to perform operations on ports whose number is smaller than 1024. Enter a value that ranges from 1025 to 65535 because the container has only the admin permissions. If this parameter is not configured, the default value 8080 is used.</li>
+             * <li><strong>contextPath</strong>: the path. Default value: /. The value indicates the root directory.</li>
+             * <li><strong>maxThreads</strong>: the maximum number of connections in the connection pool. Default value: 400.</li>
+             * <li><strong>uriEncoding</strong>: the URI encoding scheme in the Tomcat container. Valid values: <strong>UTF-8</strong>, <strong>ISO-8859-1</strong>, <strong>GBK</strong>, and <strong>GB2312</strong>. If this parameter is not configured, the default value <strong>ISO-8859-1</strong> is used.</li>
+             * <li><strong>useBodyEncoding</strong>: indicates whether to use the encoding scheme that is specified by <strong>BodyEncoding for URL</strong>. Default value: <strong>true</strong>.</li>
+             * </ul>
              * 
-             * *   **port**: the port number. Valid values: 1024 to 65535. The root permissions are required to perform operations on ports whose number is smaller than 1024. Enter a value that ranges from 1025 to 65535 because the container has only the admin permissions. If this parameter is not configured, the default value 8080 is used.
-             * *   **contextPath**: the path. Default value: /. The value indicates the root directory.
-             * *   **maxThreads**: the maximum number of connections in the connection pool. Default value: 400.
-             * *   **uriEncoding**: the URI encoding scheme in the Tomcat container. Valid values: **UTF-8**, **ISO-8859-1**, **GBK**, and **GB2312**. If this parameter is not configured, the default value **ISO-8859-1** is used.
-             * *   **useBodyEncoding**: indicates whether to use the encoding scheme that is specified by **BodyEncoding for URL**. Default value: **true**.
+             * <strong>example:</strong>
+             * <p>{&quot;port&quot;:8080,&quot;contextPath&quot;:&quot;/&quot;,&quot;maxThreads&quot;:400,&quot;uriEncoding&quot;:&quot;ISO-8859-1&quot;,&quot;useBodyEncodingForUri&quot;:true}</p>
              */
             public Builder tomcatConfig(String tomcatConfig) {
                 this.tomcatConfig = tomcatConfig;
@@ -1785,7 +2010,10 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch ID.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-2ze559r1z1bpwqxwp****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -1793,7 +2021,10 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC).
+             * <p>The ID of the virtual private cloud (VPC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2ze0i263cnn311nvj****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -1801,15 +2032,18 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The internal request URLs for one-time jobs.
+             * <p>The internal request URLs for one-time jobs.</p>
              */
-            public Builder vpcWebHookUrls(java.util.List < String > vpcWebHookUrls) {
+            public Builder vpcWebHookUrls(java.util.List<String> vpcWebHookUrls) {
                 this.vpcWebHookUrls = vpcWebHookUrls;
                 return this;
             }
 
             /**
-             * The option settings in the WAR package. The settings are used to start the application container. The default startup command is `java $JAVA_OPTS $CATALINA_OPTS -Options org.apache.catalina.startup.Bootstrap "$@" start`.
+             * <p>The option settings in the WAR package. The settings are used to start the application container. The default startup command is <code>java $JAVA_OPTS $CATALINA_OPTS -Options org.apache.catalina.startup.Bootstrap &quot;$@&quot; start</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>custom-option</p>
              */
             public Builder warStartOptions(String warStartOptions) {
                 this.warStartOptions = warStartOptions;
@@ -1817,13 +2051,15 @@ public class DescribeJobResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the Tomcat container on which the deployment package depends. The following versions are supported:
-             * <p>
+             * <p>The version of the Tomcat container on which the deployment package depends. The following versions are supported:</p>
+             * <ul>
+             * <li><strong>apache-tomcat-7.0.91</strong></li>
+             * <li><strong>apache-tomcat-8.5.42</strong></li>
+             * </ul>
+             * <p>This parameter is not returned if <strong>PackageType</strong> is set to <strong>Image</strong>.</p>
              * 
-             * *   **apache-tomcat-7.0.91**
-             * *   **apache-tomcat-8.5.42**
-             * 
-             * This parameter is not returned if **PackageType** is set to **Image**.
+             * <strong>example:</strong>
+             * <p>apache-tomcat-7.0.91</p>
              */
             public Builder webContainer(String webContainer) {
                 this.webContainer = webContainer;

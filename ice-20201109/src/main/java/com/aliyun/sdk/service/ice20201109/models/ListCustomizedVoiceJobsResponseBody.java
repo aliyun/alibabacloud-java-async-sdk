@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCustomizedVoiceJobsResponseBody} extends {@link TeaModel}
  *
  * <p>ListCustomizedVoiceJobsResponseBody</p>
  */
 public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListCustomizedVoiceJobsResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +75,10 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values: true false</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -91,38 +102,44 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCustomizedVoiceJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomizedVoiceJobsResponseBody</p>
+     */
     public static class CustomizedVoiceJobList extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Gender")
+        @com.aliyun.core.annotation.NameInMap("Gender")
         private String gender;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Scenario")
+        @com.aliyun.core.annotation.NameInMap("Scenario")
         private String scenario;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("VoiceDesc")
+        @com.aliyun.core.annotation.NameInMap("VoiceDesc")
         private String voiceDesc;
 
-        @NameInMap("VoiceId")
+        @com.aliyun.core.annotation.NameInMap("VoiceId")
         private String voiceId;
 
-        @NameInMap("VoiceName")
+        @com.aliyun.core.annotation.NameInMap("VoiceName")
         private String voiceName;
 
         private CustomizedVoiceJobList(Builder builder) {
@@ -238,7 +255,13 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
             private String voiceName; 
 
             /**
-             * CreateTime.
+             * <ul>
+             * <li>The time when the job was created.</li>
+             * <li>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-04-01T06:23:59Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -246,7 +269,14 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Gender.
+             * <p>The gender. Valid values:</p>
+             * <ul>
+             * <li>female</li>
+             * <li>male</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>female</p>
              */
             public Builder gender(String gender) {
                 this.gender = gender;
@@ -254,7 +284,10 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the job was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-06-27T02:42:28Z</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -262,7 +295,10 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The ID of the human voice cloning job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2245ab99a7fd4116a4fd3f499b7a56c5</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -270,7 +306,7 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The returned message.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -278,7 +314,15 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Scenario.
+             * <p>The scenario. Valid values:</p>
+             * <ul>
+             * <li>story</li>
+             * <li>interaction</li>
+             * <li>navigation</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>story</p>
              */
             public Builder scenario(String scenario) {
                 this.scenario = scenario;
@@ -286,7 +330,18 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The job state. Valid values:</p>
+             * <ul>
+             * <li>Initialization</li>
+             * <li>AudioDetecting</li>
+             * <li>PreTraining</li>
+             * <li>Training</li>
+             * <li>Success</li>
+             * <li>Fail</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -294,7 +349,17 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <ul>
+             * <li><p>The voice type. Valid values:</p>
+             * <ul>
+             * <li>Basic</li>
+             * <li>Standard</li>
+             * </ul>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -302,7 +367,10 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
             }
 
             /**
-             * VoiceDesc.
+             * <p>The voice description.</p>
+             * <ul>
+             * <li>The description can be up to 256 characters in length.</li>
+             * </ul>
              */
             public Builder voiceDesc(String voiceDesc) {
                 this.voiceDesc = voiceDesc;
@@ -310,7 +378,10 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
             }
 
             /**
-             * VoiceId.
+             * <p>The voice ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xiaozhuan</p>
              */
             public Builder voiceId(String voiceId) {
                 this.voiceId = voiceId;
@@ -318,7 +389,10 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
             }
 
             /**
-             * VoiceName.
+             * <p>The voice name.</p>
+             * <ul>
+             * <li>The name can be up to 32 characters in length.</li>
+             * </ul>
              */
             public Builder voiceName(String voiceName) {
                 this.voiceName = voiceName;
@@ -332,11 +406,17 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCustomizedVoiceJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomizedVoiceJobsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CustomizedVoiceJobList")
-        private java.util.List < CustomizedVoiceJobList> customizedVoiceJobList;
+        @com.aliyun.core.annotation.NameInMap("CustomizedVoiceJobList")
+        private java.util.List<CustomizedVoiceJobList> customizedVoiceJobList;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {
@@ -355,7 +435,7 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
         /**
          * @return customizedVoiceJobList
          */
-        public java.util.List < CustomizedVoiceJobList> getCustomizedVoiceJobList() {
+        public java.util.List<CustomizedVoiceJobList> getCustomizedVoiceJobList() {
             return this.customizedVoiceJobList;
         }
 
@@ -367,19 +447,22 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < CustomizedVoiceJobList> customizedVoiceJobList; 
+            private java.util.List<CustomizedVoiceJobList> customizedVoiceJobList; 
             private Integer totalCount; 
 
             /**
-             * CustomizedVoiceJobList.
+             * <p>The queried human voice cloning jobs.</p>
              */
-            public Builder customizedVoiceJobList(java.util.List < CustomizedVoiceJobList> customizedVoiceJobList) {
+            public Builder customizedVoiceJobList(java.util.List<CustomizedVoiceJobList> customizedVoiceJobList) {
                 this.customizedVoiceJobList = customizedVoiceJobList;
                 return this;
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>271</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

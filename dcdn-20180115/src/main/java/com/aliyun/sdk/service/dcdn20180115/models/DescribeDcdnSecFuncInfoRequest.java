@@ -1,25 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnSecFuncInfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnSecFuncInfoRequest</p>
  */
 public class DescribeDcdnSecFuncInfoRequest extends Request {
-    @Query
-    @NameInMap("Lang")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String lang;
 
-    @Query
-    @NameInMap("SecFuncType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecFuncType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String secFuncType;
 
     private DescribeDcdnSecFuncInfoRequest(Builder builder) {
@@ -70,7 +70,11 @@ public class DescribeDcdnSecFuncInfoRequest extends Request {
         } 
 
         /**
-         * The language. Valid values: en and zh. Default value: en.
+         * <p>The language. Valid values: en and zh. Default value: en.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -79,7 +83,11 @@ public class DescribeDcdnSecFuncInfoRequest extends Request {
         }
 
         /**
-         * The type of the drop-down list. Valid values: RobotRuleName and RobotObject.
+         * <p>The type of the drop-down list. Valid values: RobotRuleName and RobotObject.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RobotRuleName</p>
          */
         public Builder secFuncType(String secFuncType) {
             this.putQueryParameter("SecFuncType", secFuncType);

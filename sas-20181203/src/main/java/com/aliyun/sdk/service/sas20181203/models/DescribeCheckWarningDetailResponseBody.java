@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCheckWarningDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCheckWarningDetailResponseBody</p>
  */
 public class DescribeCheckWarningDetailResponseBody extends TeaModel {
-    @NameInMap("Advice")
+    @com.aliyun.core.annotation.NameInMap("Advice")
     private String advice;
 
-    @NameInMap("CheckDetailAssetInfo")
-    private java.util.List < java.util.Map<String, String>> checkDetailAssetInfo;
+    @com.aliyun.core.annotation.NameInMap("CheckDetailAssetInfo")
+    private java.util.List<java.util.Map<String, String>> checkDetailAssetInfo;
 
-    @NameInMap("CheckDetailColumns")
-    private java.util.List < CheckDetailColumns> checkDetailColumns;
+    @com.aliyun.core.annotation.NameInMap("CheckDetailColumns")
+    private java.util.List<CheckDetailColumns> checkDetailColumns;
 
-    @NameInMap("CheckId")
+    @com.aliyun.core.annotation.NameInMap("CheckId")
     private Long checkId;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("Item")
+    @com.aliyun.core.annotation.NameInMap("Item")
     private String item;
 
-    @NameInMap("Level")
+    @com.aliyun.core.annotation.NameInMap("Level")
     private String level;
 
-    @NameInMap("Prompt")
+    @com.aliyun.core.annotation.NameInMap("Prompt")
     private String prompt;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private DescribeCheckWarningDetailResponseBody(Builder builder) {
@@ -73,14 +78,14 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
     /**
      * @return checkDetailAssetInfo
      */
-    public java.util.List < java.util.Map<String, String>> getCheckDetailAssetInfo() {
+    public java.util.List<java.util.Map<String, String>> getCheckDetailAssetInfo() {
         return this.checkDetailAssetInfo;
     }
 
     /**
      * @return checkDetailColumns
      */
-    public java.util.List < CheckDetailColumns> getCheckDetailColumns() {
+    public java.util.List<CheckDetailColumns> getCheckDetailColumns() {
         return this.checkDetailColumns;
     }
 
@@ -135,8 +140,8 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
 
     public static final class Builder {
         private String advice; 
-        private java.util.List < java.util.Map<String, String>> checkDetailAssetInfo; 
-        private java.util.List < CheckDetailColumns> checkDetailColumns; 
+        private java.util.List<java.util.Map<String, String>> checkDetailAssetInfo; 
+        private java.util.List<CheckDetailColumns> checkDetailColumns; 
         private Long checkId; 
         private String description; 
         private String item; 
@@ -146,7 +151,10 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         private String type; 
 
         /**
-         * The suggestion for the management of the risk item.
+         * <p>The suggestion for the management of the risk item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You can fix it in the following ways:↵1. To configure authentication for redis service, click the redis.conf Configure complex password in requirepass, and then restart redis.↵2. In redis configuration file redis.conf The configuration is as follows: bind 127.0.0.1, only allow local access, and then restart redis</p>
          */
         public Builder advice(String advice) {
             this.advice = advice;
@@ -154,23 +162,26 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         }
 
         /**
-         * List of asset details to check.
+         * <p>List of asset details to check.</p>
          */
-        public Builder checkDetailAssetInfo(java.util.List < java.util.Map<String, String>> checkDetailAssetInfo) {
+        public Builder checkDetailAssetInfo(java.util.List<java.util.Map<String, String>> checkDetailAssetInfo) {
             this.checkDetailAssetInfo = checkDetailAssetInfo;
             return this;
         }
 
         /**
-         * Detection content details.
+         * <p>Detection content details.</p>
          */
-        public Builder checkDetailColumns(java.util.List < CheckDetailColumns> checkDetailColumns) {
+        public Builder checkDetailColumns(java.util.List<CheckDetailColumns> checkDetailColumns) {
             this.checkDetailColumns = checkDetailColumns;
             return this;
         }
 
         /**
-         * The ID of the check item.
+         * <p>The ID of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>946</p>
          */
         public Builder checkId(Long checkId) {
             this.checkId = checkId;
@@ -178,7 +189,10 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information about the risk item.
+         * <p>The additional information about the risk item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The redis port is open to the outside world and there is no authentication option configured. In addition to directly obtaining all the information in the database, unauthorized users can also attack the system through unauthorized access vulnerability.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -186,7 +200,10 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the check item.
+         * <p>The name of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Redis unauthorized access</p>
          */
         public Builder item(String item) {
             this.item = item;
@@ -194,12 +211,15 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The risk level of the check item. Valid values:
-         * <p>
+         * <p>The risk level of the check item. Valid values:</p>
+         * <ul>
+         * <li><strong>high</strong>: The item is a high-risk item and is highlighted in red.</li>
+         * <li><strong>medium</strong>: The item is a medium-risk item and is highlighted in orange.</li>
+         * <li><strong>low</strong>: The item is a low-risk item and is highlighted in gray.</li>
+         * </ul>
          * 
-         * *   **high**: The item is a high-risk item and is highlighted in red.
-         * *   **medium**: The item is a medium-risk item and is highlighted in orange.
-         * *   **low**: The item is a low-risk item and is highlighted in gray.
+         * <strong>example:</strong>
+         * <p>high</p>
          */
         public Builder level(String level) {
             this.level = level;
@@ -207,7 +227,7 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The prompt for the risk item.
+         * <p>The prompt for the risk item.</p>
          */
         public Builder prompt(String prompt) {
             this.prompt = prompt;
@@ -215,7 +235,10 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BE120DAB-F4E7-4C53-ADC3-A97578ABF384</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -223,16 +246,19 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the check item. Valid values:
-         * <p>
+         * <p>The type of the check item. Valid values:</p>
+         * <ul>
+         * <li><strong>hc_exploit</strong>: unauthorized access</li>
+         * <li><strong>hc_djbh</strong>: classified protection compliance</li>
+         * <li><strong>hc_best_secruity</strong>: best security practice</li>
+         * <li><strong>hc_container</strong>: container security</li>
+         * <li><strong>hc_custom</strong>: custom baseline</li>
+         * <li><strong>cis</strong>: Center for Internet Security (CIS) compliance</li>
+         * <li><strong>weak_password</strong>: weak password</li>
+         * </ul>
          * 
-         * *   **hc_exploit**: unauthorized access
-         * *   **hc_djbh**: classified protection compliance
-         * *   **hc_best_secruity**: best security practice
-         * *   **hc_container**: container security
-         * *   **hc_custom**: custom baseline
-         * *   **cis**: Center for Internet Security (CIS) compliance
-         * *   **weak_password**: weak password
+         * <strong>example:</strong>
+         * <p>hc_exploit</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -245,14 +271,20 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCheckWarningDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCheckWarningDetailResponseBody</p>
+     */
     public static class Grids extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("ShowName")
+        @com.aliyun.core.annotation.NameInMap("ShowName")
         private String showName;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Grids(Builder builder) {
@@ -296,7 +328,10 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Key to detect content.
+             * <p>Key to detect content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Username</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -304,7 +339,10 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The detection content key corresponds to the display name.
+             * <p>The detection content key corresponds to the display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UserName</p>
              */
             public Builder showName(String showName) {
                 this.showName = showName;
@@ -312,10 +350,14 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Display type. Value:
-             * <p>
-             * - **grid**：Detection grid
-             * - **text**：text
+             * <p>Display type. Value:</p>
+             * <ul>
+             * <li><strong>grid</strong>: Detection grid</li>
+             * <li><strong>text</strong>: text</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -329,17 +371,23 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCheckWarningDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCheckWarningDetailResponseBody</p>
+     */
     public static class CheckDetailColumns extends TeaModel {
-        @NameInMap("Grids")
-        private java.util.List < Grids> grids;
+        @com.aliyun.core.annotation.NameInMap("Grids")
+        private java.util.List<Grids> grids;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("ShowName")
+        @com.aliyun.core.annotation.NameInMap("ShowName")
         private String showName;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private CheckDetailColumns(Builder builder) {
@@ -360,7 +408,7 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         /**
          * @return grids
          */
-        public java.util.List < Grids> getGrids() {
+        public java.util.List<Grids> getGrids() {
             return this.grids;
         }
 
@@ -386,21 +434,24 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Grids> grids; 
+            private java.util.List<Grids> grids; 
             private String key; 
             private String showName; 
             private String type; 
 
             /**
-             * Detection content list.
+             * <p>Detection content list.</p>
              */
-            public Builder grids(java.util.List < Grids> grids) {
+            public Builder grids(java.util.List<Grids> grids) {
                 this.grids = grids;
                 return this;
             }
 
             /**
-             * Key to detect content.
+             * <p>Key to detect content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Containername</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -408,7 +459,10 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The detection content key corresponds to the display name.
+             * <p>The detection content key corresponds to the display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ContainerName</p>
              */
             public Builder showName(String showName) {
                 this.showName = showName;
@@ -416,10 +470,14 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Display type. Value:
-             * <p>
-             * - **grid**：Detection grid
-             * - **text**：text
+             * <p>Display type. Value:</p>
+             * <ul>
+             * <li><strong>grid</strong>: Detection grid</li>
+             * <li><strong>text</strong>: text</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -1,64 +1,69 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateParameterGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateParameterGroupRequest</p>
  */
 public class CreateParameterGroupRequest extends Request {
-    @Query
-    @NameInMap("DBType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBType;
 
-    @Query
-    @NameInMap("DBVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBVersion;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ParameterGroupDesc")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParameterGroupDesc")
     private String parameterGroupDesc;
 
-    @Query
-    @NameInMap("ParameterGroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParameterGroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String parameterGroupName;
 
-    @Query
-    @NameInMap("Parameters")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Parameters")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String parameters;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private CreateParameterGroupRequest(Builder builder) {
@@ -199,7 +204,11 @@ public class CreateParameterGroupRequest extends Request {
         } 
 
         /**
-         * The type of the database engine. Only **MySQL** is supported.
+         * <p>The type of the database engine. Only <strong>MySQL</strong> is supported.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder DBType(String DBType) {
             this.putQueryParameter("DBType", DBType);
@@ -208,12 +217,16 @@ public class CreateParameterGroupRequest extends Request {
         }
 
         /**
-         * The version of the database engine. Valid values:
-         * <p>
+         * <p>The version of the database engine. Valid values:</p>
+         * <ul>
+         * <li><strong>5.6</strong></li>
+         * <li><strong>5.7</strong></li>
+         * <li><strong>8.0</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **5.6**
-         * *   **5.7**
-         * *   **8.0**
+         * <strong>example:</strong>
+         * <p>8.0</p>
          */
         public Builder DBVersion(String DBVersion) {
             this.putQueryParameter("DBVersion", DBVersion);
@@ -240,7 +253,10 @@ public class CreateParameterGroupRequest extends Request {
         }
 
         /**
-         * The description of the parameter template. It must be 0 to 199 characters in length.
+         * <p>The description of the parameter template. It must be 0 to 199 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_group</p>
          */
         public Builder parameterGroupDesc(String parameterGroupDesc) {
             this.putQueryParameter("ParameterGroupDesc", parameterGroupDesc);
@@ -249,11 +265,15 @@ public class CreateParameterGroupRequest extends Request {
         }
 
         /**
-         * The name of the parameter template. The name must meet the following requirements:
-         * <p>
+         * <p>The name of the parameter template. The name must meet the following requirements:</p>
+         * <ul>
+         * <li>It can contain letters, digits, and underscores (_). It must start with a letter and cannot end with an underscore.**</li>
+         * <li>It must be 8 to 64 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   It can contain letters, digits, and underscores (\_). It must start with a letter and cannot end with an underscore.**
-         * *   It must be 8 to 64 characters in length.
+         * <strong>example:</strong>
+         * <p>test_group</p>
          */
         public Builder parameterGroupName(String parameterGroupName) {
             this.putQueryParameter("ParameterGroupName", parameterGroupName);
@@ -262,10 +282,14 @@ public class CreateParameterGroupRequest extends Request {
         }
 
         /**
-         * The JSON string that consists of parameters and values. The parameter values are strings. Example: `{"wait_timeout":"86400","innodb_old_blocks_time":"1000"}`.
-         * <p>
+         * <p>The JSON string that consists of parameters and values. The parameter values are strings. Example: <code>{&quot;wait_timeout&quot;:&quot;86400&quot;,&quot;innodb_old_blocks_time&quot;:&quot;1000&quot;}</code>.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/207428.html">DescribeParameterTemplates</a> operation to query the details of all parameters in the cluster of a specified engine version, such as the parameter name and valid values.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeParameterTemplates](~~207428~~) operation to query the details of all parameters in the cluster of a specified engine version, such as the parameter name and valid values.
+         * <strong>example:</strong>
+         * <p>{&quot;wait_timeout&quot;:&quot;86400&quot;,&quot;innodb_old_blocks_time&quot;:&quot;1000&quot;}</p>
          */
         public Builder parameters(String parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -274,10 +298,14 @@ public class CreateParameterGroupRequest extends Request {
         }
 
         /**
-         * The region ID.
-         * <p>
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available regions.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeRegions](~~98041~~) operation to query available regions.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -286,7 +314,10 @@ public class CreateParameterGroupRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-**********</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

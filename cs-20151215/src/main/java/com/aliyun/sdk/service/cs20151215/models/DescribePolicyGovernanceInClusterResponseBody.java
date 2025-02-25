@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePolicyGovernanceInClusterResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePolicyGovernanceInClusterResponseBody</p>
  */
 public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
-    @NameInMap("admit_log")
+    @com.aliyun.core.annotation.NameInMap("admit_log")
     private AdmitLog admitLog;
 
-    @NameInMap("on_state")
-    private java.util.List < OnState> onState;
+    @com.aliyun.core.annotation.NameInMap("on_state")
+    private java.util.List<OnState> onState;
 
-    @NameInMap("totalViolations")
+    @com.aliyun.core.annotation.NameInMap("totalViolations")
     private TotalViolations totalViolations;
 
-    @NameInMap("violations")
+    @com.aliyun.core.annotation.NameInMap("violations")
     private Violations violations;
 
     private DescribePolicyGovernanceInClusterResponseBody(Builder builder) {
@@ -49,7 +54,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     /**
      * @return onState
      */
-    public java.util.List < OnState> getOnState() {
+    public java.util.List<OnState> getOnState() {
         return this.onState;
     }
 
@@ -69,12 +74,12 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
 
     public static final class Builder {
         private AdmitLog admitLog; 
-        private java.util.List < OnState> onState; 
+        private java.util.List<OnState> onState; 
         private TotalViolations totalViolations; 
         private Violations violations; 
 
         /**
-         * The audit logs of the policies in the cluster.
+         * <p>The audit logs of the policies in the cluster.</p>
          */
         public Builder admitLog(AdmitLog admitLog) {
             this.admitLog = admitLog;
@@ -82,15 +87,15 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the policies of different severity levels that are enabled for the cluster.
+         * <p>Details about the policies of different severity levels that are enabled for the cluster.</p>
          */
-        public Builder onState(java.util.List < OnState> onState) {
+        public Builder onState(java.util.List<OnState> onState) {
             this.onState = onState;
             return this;
         }
 
         /**
-         * Details about the blocking and alerting events that are triggered by policies of different severity levels.
+         * <p>Details about the blocking and alerting events that are triggered by policies of different severity levels.</p>
          */
         public Builder totalViolations(TotalViolations totalViolations) {
             this.totalViolations = totalViolations;
@@ -98,7 +103,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the blocking and alerting events that are triggered by different policies.
+         * <p>Details about the blocking and alerting events that are triggered by different policies.</p>
          */
         public Builder violations(Violations violations) {
             this.violations = violations;
@@ -111,23 +116,29 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePolicyGovernanceInClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePolicyGovernanceInClusterResponseBody</p>
+     */
     public static class Log extends TeaModel {
-        @NameInMap("cluster_id")
+        @com.aliyun.core.annotation.NameInMap("cluster_id")
         private String clusterId;
 
-        @NameInMap("constraint_kind")
+        @com.aliyun.core.annotation.NameInMap("constraint_kind")
         private String constraintKind;
 
-        @NameInMap("msg")
+        @com.aliyun.core.annotation.NameInMap("msg")
         private String msg;
 
-        @NameInMap("resource_kind")
+        @com.aliyun.core.annotation.NameInMap("resource_kind")
         private String resourceKind;
 
-        @NameInMap("resource_name")
+        @com.aliyun.core.annotation.NameInMap("resource_name")
         private String resourceName;
 
-        @NameInMap("resource_namespace")
+        @com.aliyun.core.annotation.NameInMap("resource_namespace")
         private String resourceNamespace;
 
         private Log(Builder builder) {
@@ -198,7 +209,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             private String resourceNamespace; 
 
             /**
-             * The cluster ID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c8155823d057948c69a****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -206,7 +220,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The policy type.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACKAllowedRepos</p>
              */
             public Builder constraintKind(String constraintKind) {
                 this.constraintKind = constraintKind;
@@ -214,7 +231,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The message that appears when an event is generated by a policy.
+             * <p>The message that appears when an event is generated by a policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d4hdhs*****</p>
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -222,7 +242,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Pod</p>
              */
             public Builder resourceKind(String resourceKind) {
                 this.resourceKind = resourceKind;
@@ -230,7 +253,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The resource name.
+             * <p>The resource name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nginx-deployment-basic2-84ccb74bfc-df22p</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -238,7 +264,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace to which the resource belongs.
+             * <p>The namespace to which the resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder resourceNamespace(String resourceNamespace) {
                 this.resourceNamespace = resourceNamespace;
@@ -252,14 +281,20 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePolicyGovernanceInClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePolicyGovernanceInClusterResponseBody</p>
+     */
     public static class AdmitLog extends TeaModel {
-        @NameInMap("count")
+        @com.aliyun.core.annotation.NameInMap("count")
         private Long count;
 
-        @NameInMap("log")
+        @com.aliyun.core.annotation.NameInMap("log")
         private Log log;
 
-        @NameInMap("progress")
+        @com.aliyun.core.annotation.NameInMap("progress")
         private String progress;
 
         private AdmitLog(Builder builder) {
@@ -303,7 +338,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             private String progress; 
 
             /**
-             * The number of audit log entries.
+             * <p>The number of audit log entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -311,7 +349,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The audit log content.
+             * <p>The audit log content.</p>
              */
             public Builder log(Log log) {
                 this.log = log;
@@ -319,11 +357,14 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the query. Valid values:
-             * <p>
+             * <p>The status of the query. Valid values:</p>
+             * <ul>
+             * <li><code>Complete</code>: The query succeeded and the complete query result is returned.</li>
+             * <li><code>Incomplete</code>: The query succeeded but the query result is incomplete. To obtain the complete query result, you must repeat the request.</li>
+             * </ul>
              * 
-             * *   `Complete`: The query succeeded and the complete query result is returned.
-             * *   `Incomplete`: The query succeeded but the query result is incomplete. To obtain the complete query result, you must repeat the request.
+             * <strong>example:</strong>
+             * <p>Complete</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -337,14 +378,20 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePolicyGovernanceInClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePolicyGovernanceInClusterResponseBody</p>
+     */
     public static class OnState extends TeaModel {
-        @NameInMap("enabled_count")
+        @com.aliyun.core.annotation.NameInMap("enabled_count")
         private Integer enabledCount;
 
-        @NameInMap("severity")
+        @com.aliyun.core.annotation.NameInMap("severity")
         private String severity;
 
-        @NameInMap("total")
+        @com.aliyun.core.annotation.NameInMap("total")
         private Integer total;
 
         private OnState(Builder builder) {
@@ -388,7 +435,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             private Integer total; 
 
             /**
-             * The number of policies that are enabled.
+             * <p>The number of policies that are enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder enabledCount(Integer enabledCount) {
                 this.enabledCount = enabledCount;
@@ -396,7 +446,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The severity level of the policy.
+             * <p>The severity level of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -404,7 +457,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of policies of the severity level.
+             * <p>The total number of policies of the severity level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder total(Integer total) {
                 this.total = total;
@@ -418,11 +474,17 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePolicyGovernanceInClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePolicyGovernanceInClusterResponseBody</p>
+     */
     public static class Deny extends TeaModel {
-        @NameInMap("severity")
+        @com.aliyun.core.annotation.NameInMap("severity")
         private String severity;
 
-        @NameInMap("violations")
+        @com.aliyun.core.annotation.NameInMap("violations")
         private Long violations;
 
         private Deny(Builder builder) {
@@ -457,7 +519,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             private Long violations; 
 
             /**
-             * The severity level of the policy.
+             * <p>The severity level of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -465,7 +530,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The number of blocking events that are triggered.
+             * <p>The number of blocking events that are triggered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder violations(Long violations) {
                 this.violations = violations;
@@ -479,11 +547,17 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePolicyGovernanceInClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePolicyGovernanceInClusterResponseBody</p>
+     */
     public static class Warn extends TeaModel {
-        @NameInMap("severity")
+        @com.aliyun.core.annotation.NameInMap("severity")
         private String severity;
 
-        @NameInMap("violations")
+        @com.aliyun.core.annotation.NameInMap("violations")
         private Long violations;
 
         private Warn(Builder builder) {
@@ -518,7 +592,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             private Long violations; 
 
             /**
-             * The severity level of the policy.
+             * <p>The severity level of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>low</p>
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -526,7 +603,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The number of alerting events that are triggered.
+             * <p>The number of alerting events that are triggered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder violations(Long violations) {
                 this.violations = violations;
@@ -540,11 +620,17 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePolicyGovernanceInClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePolicyGovernanceInClusterResponseBody</p>
+     */
     public static class TotalViolations extends TeaModel {
-        @NameInMap("deny")
+        @com.aliyun.core.annotation.NameInMap("deny")
         private Deny deny;
 
-        @NameInMap("warn")
+        @com.aliyun.core.annotation.NameInMap("warn")
         private Warn warn;
 
         private TotalViolations(Builder builder) {
@@ -579,7 +665,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             private Warn warn; 
 
             /**
-             * Details about the blocking events that are triggered by the policies of each severity level.
+             * <p>Details about the blocking events that are triggered by the policies of each severity level.</p>
              */
             public Builder deny(Deny deny) {
                 this.deny = deny;
@@ -587,7 +673,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the alerting events that are triggered by the policies of each severity level.
+             * <p>Details about the alerting events that are triggered by the policies of each severity level.</p>
              */
             public Builder warn(Warn warn) {
                 this.warn = warn;
@@ -601,17 +687,23 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePolicyGovernanceInClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePolicyGovernanceInClusterResponseBody</p>
+     */
     public static class ViolationsDeny extends TeaModel {
-        @NameInMap("policyDescription")
+        @com.aliyun.core.annotation.NameInMap("policyDescription")
         private String policyDescription;
 
-        @NameInMap("policyName")
+        @com.aliyun.core.annotation.NameInMap("policyName")
         private String policyName;
 
-        @NameInMap("severity")
+        @com.aliyun.core.annotation.NameInMap("severity")
         private String severity;
 
-        @NameInMap("violations")
+        @com.aliyun.core.annotation.NameInMap("violations")
         private Long violations;
 
         private ViolationsDeny(Builder builder) {
@@ -664,7 +756,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             private Long violations; 
 
             /**
-             * The policy description.
+             * <p>The policy description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Requires container images to begin with a repo string from a specified list.</p>
              */
             public Builder policyDescription(String policyDescription) {
                 this.policyDescription = policyDescription;
@@ -672,7 +767,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The policy name.
+             * <p>The policy name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>policy-gatekeeper-ackallowedrepos</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -680,7 +778,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The severity level of the policy.
+             * <p>The severity level of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -688,7 +789,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of blocking events that are triggered by the policy.
+             * <p>The total number of blocking events that are triggered by the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder violations(Long violations) {
                 this.violations = violations;
@@ -702,17 +806,23 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePolicyGovernanceInClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePolicyGovernanceInClusterResponseBody</p>
+     */
     public static class ViolationsWarn extends TeaModel {
-        @NameInMap("policyDescription")
+        @com.aliyun.core.annotation.NameInMap("policyDescription")
         private String policyDescription;
 
-        @NameInMap("policyName")
+        @com.aliyun.core.annotation.NameInMap("policyName")
         private String policyName;
 
-        @NameInMap("severity")
+        @com.aliyun.core.annotation.NameInMap("severity")
         private String severity;
 
-        @NameInMap("violations")
+        @com.aliyun.core.annotation.NameInMap("violations")
         private Long violations;
 
         private ViolationsWarn(Builder builder) {
@@ -765,7 +875,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             private Long violations; 
 
             /**
-             * The policy description.
+             * <p>The policy description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Controls Linux capabilities.</p>
              */
             public Builder policyDescription(String policyDescription) {
                 this.policyDescription = policyDescription;
@@ -773,7 +886,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The policy name.
+             * <p>The policy name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>policy-gatekeeper-ackpspcapabilities</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -781,7 +897,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The severity level of the policy.
+             * <p>The severity level of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -789,7 +908,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of alerting events that are triggered by the policy.
+             * <p>The total number of alerting events that are triggered by the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>81</p>
              */
             public Builder violations(Long violations) {
                 this.violations = violations;
@@ -803,11 +925,17 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePolicyGovernanceInClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePolicyGovernanceInClusterResponseBody</p>
+     */
     public static class Violations extends TeaModel {
-        @NameInMap("deny")
+        @com.aliyun.core.annotation.NameInMap("deny")
         private ViolationsDeny deny;
 
-        @NameInMap("warn")
+        @com.aliyun.core.annotation.NameInMap("warn")
         private ViolationsWarn warn;
 
         private Violations(Builder builder) {
@@ -842,7 +970,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             private ViolationsWarn warn; 
 
             /**
-             * Details about the blocking events that are triggered by each policy.
+             * <p>Details about the blocking events that are triggered by each policy.</p>
              */
             public Builder deny(ViolationsDeny deny) {
                 this.deny = deny;
@@ -850,7 +978,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the alerting events that are triggered by the policies of each severity level.
+             * <p>Details about the alerting events that are triggered by the policies of each severity level.</p>
              */
             public Builder warn(ViolationsWarn warn) {
                 this.warn = warn;

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMountTargetResponseBody} extends {@link TeaModel}
  *
  * <p>CreateMountTargetResponseBody</p>
  */
 public class CreateMountTargetResponseBody extends TeaModel {
-    @NameInMap("MountTargetDomain")
+    @com.aliyun.core.annotation.NameInMap("MountTargetDomain")
     private String mountTargetDomain;
 
-    @NameInMap("MountTargetExtra")
+    @com.aliyun.core.annotation.NameInMap("MountTargetExtra")
     private MountTargetExtra mountTargetExtra;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateMountTargetResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class CreateMountTargetResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MountTargetDomain.
+         * <p>The IPv4 domain name of the mount target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>174494b666-x****.cn-hangzhou.nas.aliyuncs.com</p>
          */
         public Builder mountTargetDomain(String mountTargetDomain) {
             this.mountTargetDomain = mountTargetDomain;
@@ -70,7 +78,7 @@ public class CreateMountTargetResponseBody extends TeaModel {
         }
 
         /**
-         * MountTargetExtra.
+         * <p>The information about the mount target.</p>
          */
         public Builder mountTargetExtra(MountTargetExtra mountTargetExtra) {
             this.mountTargetExtra = mountTargetExtra;
@@ -78,7 +86,10 @@ public class CreateMountTargetResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70EACC9C-D07A-4A34-ADA4-77506C42****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,8 +102,14 @@ public class CreateMountTargetResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateMountTargetResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateMountTargetResponseBody</p>
+     */
     public static class MountTargetExtra extends TeaModel {
-        @NameInMap("DualStackMountTargetDomain")
+        @com.aliyun.core.annotation.NameInMap("DualStackMountTargetDomain")
         private String dualStackMountTargetDomain;
 
         private MountTargetExtra(Builder builder) {
@@ -118,7 +135,10 @@ public class CreateMountTargetResponseBody extends TeaModel {
             private String dualStackMountTargetDomain; 
 
             /**
-             * DualStackMountTargetDomain.
+             * <p>The dual-stack (IPv4 and IPv6) domain name of the mount target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>174494b666-x****.dualstack.cn-hangzhou.nas.aliyuncs.com</p>
              */
             public Builder dualStackMountTargetDomain(String dualStackMountTargetDomain) {
                 this.dualStackMountTargetDomain = dualStackMountTargetDomain;

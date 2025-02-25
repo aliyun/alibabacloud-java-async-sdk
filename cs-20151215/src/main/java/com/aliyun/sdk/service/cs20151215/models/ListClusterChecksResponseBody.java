@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClusterChecksResponseBody} extends {@link TeaModel}
  *
  * <p>ListClusterChecksResponseBody</p>
  */
 public class ListClusterChecksResponseBody extends TeaModel {
-    @NameInMap("checks")
-    private java.util.List < Checks> checks;
+    @com.aliyun.core.annotation.NameInMap("checks")
+    private java.util.List<Checks> checks;
 
     private ListClusterChecksResponseBody(Builder builder) {
         this.checks = builder.checks;
@@ -30,17 +35,17 @@ public class ListClusterChecksResponseBody extends TeaModel {
     /**
      * @return checks
      */
-    public java.util.List < Checks> getChecks() {
+    public java.util.List<Checks> getChecks() {
         return this.checks;
     }
 
     public static final class Builder {
-        private java.util.List < Checks> checks; 
+        private java.util.List<Checks> checks; 
 
         /**
-         * checks.
+         * <p>The list of check items.</p>
          */
-        public Builder checks(java.util.List < Checks> checks) {
+        public Builder checks(java.util.List<Checks> checks) {
             this.checks = checks;
             return this;
         }
@@ -51,23 +56,29 @@ public class ListClusterChecksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListClusterChecksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClusterChecksResponseBody</p>
+     */
     public static class Checks extends TeaModel {
-        @NameInMap("check_id")
+        @com.aliyun.core.annotation.NameInMap("check_id")
         private String checkId;
 
-        @NameInMap("created_at")
+        @com.aliyun.core.annotation.NameInMap("created_at")
         private String createdAt;
 
-        @NameInMap("finished_at")
+        @com.aliyun.core.annotation.NameInMap("finished_at")
         private String finishedAt;
 
-        @NameInMap("message")
+        @com.aliyun.core.annotation.NameInMap("message")
         private String message;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Checks(Builder builder) {
@@ -138,7 +149,10 @@ public class ListClusterChecksResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * check_id.
+             * <p>The ID of the cluster check task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1697100584236600453-ce0da5a1d627e4e9e9f96cae8ad07****-clustercheck-lboto</p>
              */
             public Builder checkId(String checkId) {
                 this.checkId = checkId;
@@ -146,7 +160,10 @@ public class ListClusterChecksResponseBody extends TeaModel {
             }
 
             /**
-             * created_at.
+             * <p>The time when the cluster check task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-10-16T08:31:20.292030178Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -154,7 +171,10 @@ public class ListClusterChecksResponseBody extends TeaModel {
             }
 
             /**
-             * finished_at.
+             * <p>The time when the cluster check task was completed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-10-16T08:35:20.292030178Z</p>
              */
             public Builder finishedAt(String finishedAt) {
                 this.finishedAt = finishedAt;
@@ -162,7 +182,10 @@ public class ListClusterChecksResponseBody extends TeaModel {
             }
 
             /**
-             * message.
+             * <p>The message that indicates the status of the cluster check task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task succeed</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -170,7 +193,10 @@ public class ListClusterChecksResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The status of the cluster check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Succeeded</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -178,7 +204,10 @@ public class ListClusterChecksResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The check method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ClusterUpgrade</p>
              */
             public Builder type(String type) {
                 this.type = type;

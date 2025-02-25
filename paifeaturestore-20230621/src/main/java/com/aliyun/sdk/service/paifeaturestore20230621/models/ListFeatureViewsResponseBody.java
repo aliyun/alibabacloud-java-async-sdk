@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFeatureViewsResponseBody} extends {@link TeaModel}
  *
  * <p>ListFeatureViewsResponseBody</p>
  */
 public class ListFeatureViewsResponseBody extends TeaModel {
-    @NameInMap("FeatureViews")
-    private java.util.List < FeatureViews> featureViews;
+    @com.aliyun.core.annotation.NameInMap("FeatureViews")
+    private java.util.List<FeatureViews> featureViews;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListFeatureViewsResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ListFeatureViewsResponseBody extends TeaModel {
     /**
      * @return featureViews
      */
-    public java.util.List < FeatureViews> getFeatureViews() {
+    public java.util.List<FeatureViews> getFeatureViews() {
         return this.featureViews;
     }
 
@@ -57,14 +62,14 @@ public class ListFeatureViewsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < FeatureViews> featureViews; 
+        private java.util.List<FeatureViews> featureViews; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * FeatureViews.
          */
-        public Builder featureViews(java.util.List < FeatureViews> featureViews) {
+        public Builder featureViews(java.util.List<FeatureViews> featureViews) {
             this.featureViews = featureViews;
             return this;
         }
@@ -91,45 +96,54 @@ public class ListFeatureViewsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListFeatureViewsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFeatureViewsResponseBody</p>
+     */
     public static class FeatureViews extends TeaModel {
-        @NameInMap("FeatureEntityName")
+        @com.aliyun.core.annotation.NameInMap("FeatureEntityName")
         private String featureEntityName;
 
-        @NameInMap("FeatureViewId")
+        @com.aliyun.core.annotation.NameInMap("FeatureViewId")
         private String featureViewId;
 
-        @NameInMap("GmtCreateTime")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
 
-        @NameInMap("GmtModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
         private String gmtModifiedTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private String projectId;
 
-        @NameInMap("ProjectName")
+        @com.aliyun.core.annotation.NameInMap("ProjectName")
         private String projectName;
 
-        @NameInMap("RegisterDatasourceId")
+        @com.aliyun.core.annotation.NameInMap("RegisterDatasourceId")
         private String registerDatasourceId;
 
-        @NameInMap("RegisterDatasourceName")
+        @com.aliyun.core.annotation.NameInMap("RegisterDatasourceName")
         private String registerDatasourceName;
 
-        @NameInMap("RegisterTable")
+        @com.aliyun.core.annotation.NameInMap("RegisterTable")
         private String registerTable;
 
-        @NameInMap("TTL")
+        @com.aliyun.core.annotation.NameInMap("TTL")
         private Integer TTL;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
+
+        @com.aliyun.core.annotation.NameInMap("WriteToFeatureDB")
+        private Boolean writeToFeatureDB;
 
         private FeatureViews(Builder builder) {
             this.featureEntityName = builder.featureEntityName;
@@ -145,6 +159,7 @@ public class ListFeatureViewsResponseBody extends TeaModel {
             this.registerTable = builder.registerTable;
             this.TTL = builder.TTL;
             this.type = builder.type;
+            this.writeToFeatureDB = builder.writeToFeatureDB;
         }
 
         public static Builder builder() {
@@ -246,6 +261,13 @@ public class ListFeatureViewsResponseBody extends TeaModel {
             return this.type;
         }
 
+        /**
+         * @return writeToFeatureDB
+         */
+        public Boolean getWriteToFeatureDB() {
+            return this.writeToFeatureDB;
+        }
+
         public static final class Builder {
             private String featureEntityName; 
             private String featureViewId; 
@@ -260,6 +282,7 @@ public class ListFeatureViewsResponseBody extends TeaModel {
             private String registerTable; 
             private Integer TTL; 
             private String type; 
+            private Boolean writeToFeatureDB; 
 
             /**
              * FeatureEntityName.
@@ -362,6 +385,14 @@ public class ListFeatureViewsResponseBody extends TeaModel {
              */
             public Builder type(String type) {
                 this.type = type;
+                return this;
+            }
+
+            /**
+             * WriteToFeatureDB.
+             */
+            public Builder writeToFeatureDB(Boolean writeToFeatureDB) {
+                this.writeToFeatureDB = writeToFeatureDB;
                 return this;
             }
 

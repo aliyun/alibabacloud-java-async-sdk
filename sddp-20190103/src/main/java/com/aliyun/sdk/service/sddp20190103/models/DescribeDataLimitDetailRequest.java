@@ -1,32 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataLimitDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribeDataLimitDetailRequest</p>
  */
 public class DescribeDataLimitDetailRequest extends Request {
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FeatureType")
+    private Integer featureType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long id;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("NetworkType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkType")
     private Integer networkType;
 
     private DescribeDataLimitDetailRequest(Builder builder) {
         super(builder);
+        this.featureType = builder.featureType;
         this.id = builder.id;
         this.lang = builder.lang;
         this.networkType = builder.networkType;
@@ -43,6 +53,13 @@ public class DescribeDataLimitDetailRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return featureType
+     */
+    public Integer getFeatureType() {
+        return this.featureType;
     }
 
     /**
@@ -67,6 +84,7 @@ public class DescribeDataLimitDetailRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDataLimitDetailRequest, Builder> {
+        private Integer featureType; 
         private Long id; 
         private String lang; 
         private Integer networkType; 
@@ -77,13 +95,33 @@ public class DescribeDataLimitDetailRequest extends Request {
 
         private Builder(DescribeDataLimitDetailRequest request) {
             super(request);
+            this.featureType = request.featureType;
             this.id = request.id;
             this.lang = request.lang;
             this.networkType = request.networkType;
         } 
 
         /**
-         * Id.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder featureType(Integer featureType) {
+            this.putQueryParameter("FeatureType", featureType);
+            this.featureType = featureType;
+            return this;
+        }
+
+        /**
+         * <p>The unique ID of the data asset that you want to query.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeDataLimits~~">DescribeDataLimits</a> operation to query the ID of the data asset.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12300</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -92,7 +130,14 @@ public class DescribeDataLimitDetailRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Simplified Chinese.</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -101,7 +146,14 @@ public class DescribeDataLimitDetailRequest extends Request {
         }
 
         /**
-         * NetworkType.
+         * <p>The network type of the data asset that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: virtual private cloud (VPC)</li>
+         * <li><strong>2</strong>: classic network</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder networkType(Integer networkType) {
             this.putQueryParameter("NetworkType", networkType);

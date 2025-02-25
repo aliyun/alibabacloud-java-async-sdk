@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAuditRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAuditRecordsResponseBody</p>
  */
 public class DescribeAuditRecordsResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeAuditRecordsResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * An array that consists of the information of audit log entries.
+         * <p>An array that consists of the information of audit log entries.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -94,7 +99,10 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of entries on the current page.
+         * <p>The maximum number of entries on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -110,7 +121,10 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3278BEB8-503B-4E46-8F7E-D26E040C9769</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -131,32 +148,38 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAuditRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAuditRecordsResponseBody</p>
+     */
     public static class SQLRecord extends TeaModel {
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("DBName")
+        @com.aliyun.core.annotation.NameInMap("DBName")
         private String DBName;
 
-        @NameInMap("ExecuteTime")
+        @com.aliyun.core.annotation.NameInMap("ExecuteTime")
         private String executeTime;
 
-        @NameInMap("HostAddress")
+        @com.aliyun.core.annotation.NameInMap("HostAddress")
         private String hostAddress;
 
-        @NameInMap("ReturnRowCounts")
+        @com.aliyun.core.annotation.NameInMap("ReturnRowCounts")
         private Long returnRowCounts;
 
-        @NameInMap("Syntax")
+        @com.aliyun.core.annotation.NameInMap("Syntax")
         private String syntax;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
-        @NameInMap("ThreadID")
+        @com.aliyun.core.annotation.NameInMap("ThreadID")
         private String threadID;
 
-        @NameInMap("TotalExecutionTimes")
+        @com.aliyun.core.annotation.NameInMap("TotalExecutionTimes")
         private Long totalExecutionTimes;
 
         private SQLRecord(Builder builder) {
@@ -254,7 +277,10 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             private Long totalExecutionTimes; 
 
             /**
-             * The account of the database.
+             * <p>The account of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -262,7 +288,10 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test123</p>
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -270,7 +299,10 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the statement was executed. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the statement was executed. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-03-11T03:30:27Z</p>
              */
             public Builder executeTime(String executeTime) {
                 this.executeTime = executeTime;
@@ -278,7 +310,10 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses of the client.
+             * <p>The IP addresses of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11.xxx.xxx.xxx</p>
              */
             public Builder hostAddress(String hostAddress) {
                 this.hostAddress = hostAddress;
@@ -286,7 +321,10 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of SQL audit log entries that are returned.
+             * <p>The number of SQL audit log entries that are returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder returnRowCounts(Long returnRowCounts) {
                 this.returnRowCounts = returnRowCounts;
@@ -294,7 +332,10 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The statement that was executed.
+             * <p>The statement that was executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ &quot;atype&quot; : &quot;createCollection&quot;, &quot;param&quot; : { &quot;ns&quot; : &quot;123.test1&quot; }, &quot;result&quot;: &quot;OK&quot; }</p>
              */
             public Builder syntax(String syntax) {
                 this.syntax = syntax;
@@ -302,7 +343,10 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the collection.
+             * <p>The name of the collection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>C1</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -310,7 +354,10 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the thread.
+             * <p>The ID of the thread.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>140682188297984</p>
              */
             public Builder threadID(String threadID) {
                 this.threadID = threadID;
@@ -318,7 +365,10 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The execution time of the statement. Unit: microseconds.
+             * <p>The duration of the statement execution. Unit: microseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>700</p>
              */
             public Builder totalExecutionTimes(Long totalExecutionTimes) {
                 this.totalExecutionTimes = totalExecutionTimes;
@@ -332,9 +382,15 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAuditRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAuditRecordsResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("SQLRecord")
-        private java.util.List < SQLRecord> SQLRecord;
+        @com.aliyun.core.annotation.NameInMap("SQLRecord")
+        private java.util.List<SQLRecord> SQLRecord;
 
         private Items(Builder builder) {
             this.SQLRecord = builder.SQLRecord;
@@ -351,17 +407,17 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         /**
          * @return SQLRecord
          */
-        public java.util.List < SQLRecord> getSQLRecord() {
+        public java.util.List<SQLRecord> getSQLRecord() {
             return this.SQLRecord;
         }
 
         public static final class Builder {
-            private java.util.List < SQLRecord> SQLRecord; 
+            private java.util.List<SQLRecord> SQLRecord; 
 
             /**
              * SQLRecord.
              */
-            public Builder SQLRecord(java.util.List < SQLRecord> SQLRecord) {
+            public Builder SQLRecord(java.util.List<SQLRecord> SQLRecord) {
                 this.SQLRecord = SQLRecord;
                 return this;
             }

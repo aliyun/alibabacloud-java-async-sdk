@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeScalingActivityDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeScalingActivityDetailResponseBody</p>
  */
 public class DescribeScalingActivityDetailResponseBody extends TeaModel {
-    @NameInMap("Detail")
+    @com.aliyun.core.annotation.NameInMap("Detail")
     private String detail;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ScalingActivityId")
+    @com.aliyun.core.annotation.NameInMap("ScalingActivityId")
     private String scalingActivityId;
 
     private DescribeScalingActivityDetailResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class DescribeScalingActivityDetailResponseBody extends TeaModel {
         private String scalingActivityId; 
 
         /**
-         * Detail.
+         * <p>The details of the scaling activity. The result of a scaling activity is either successful or failed. If the scaling activity is rejected, no scaling activity details are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>new ECS instances &quot;i-bp16t2cgmiiymeqv****&quot; are created.</p>
          */
         public Builder detail(String detail) {
             this.detail = detail;
@@ -70,7 +78,10 @@ public class DescribeScalingActivityDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B13527BF-1FBD-4334-A512-20F5E9D3FB4D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +89,10 @@ public class DescribeScalingActivityDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ScalingActivityId.
+         * <p>The ID of the scaling activity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asa-bp1c9djwrgxjyk31****</p>
          */
         public Builder scalingActivityId(String scalingActivityId) {
             this.scalingActivityId = scalingActivityId;

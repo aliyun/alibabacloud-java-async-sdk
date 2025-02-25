@@ -1,54 +1,68 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAppInstanceGroupRequest} extends {@link RequestModel}
  *
  * <p>ListAppInstanceGroupRequest</p>
  */
 public class ListAppInstanceGroupRequest extends Request {
-    @Query
-    @NameInMap("AppCenterImageId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppCenterImageId")
     private String appCenterImageId;
 
-    @Query
-    @NameInMap("AppInstanceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppInstanceGroupId")
     private String appInstanceGroupId;
 
-    @Query
-    @NameInMap("AppInstanceGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppInstanceGroupName")
     private String appInstanceGroupName;
 
-    @Query
-    @NameInMap("BizRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizRegionId")
     private String bizRegionId;
 
-    @Query
-    @NameInMap("NodeInstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeInstanceType")
     private String nodeInstanceType;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
+    private String officeSiteId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ProductType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productType;
 
-    @Body
-    @NameInMap("Status")
-    private java.util.List < String > status;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @Deprecated
+    private String regionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private java.util.List<String> status;
 
     private ListAppInstanceGroupRequest(Builder builder) {
         super(builder);
@@ -57,9 +71,11 @@ public class ListAppInstanceGroupRequest extends Request {
         this.appInstanceGroupName = builder.appInstanceGroupName;
         this.bizRegionId = builder.bizRegionId;
         this.nodeInstanceType = builder.nodeInstanceType;
+        this.officeSiteId = builder.officeSiteId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.productType = builder.productType;
+        this.regionId = builder.regionId;
         this.status = builder.status;
     }
 
@@ -112,6 +128,13 @@ public class ListAppInstanceGroupRequest extends Request {
     }
 
     /**
+     * @return officeSiteId
+     */
+    public String getOfficeSiteId() {
+        return this.officeSiteId;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -133,9 +156,16 @@ public class ListAppInstanceGroupRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return status
      */
-    public java.util.List < String > getStatus() {
+    public java.util.List<String> getStatus() {
         return this.status;
     }
 
@@ -145,10 +175,12 @@ public class ListAppInstanceGroupRequest extends Request {
         private String appInstanceGroupName; 
         private String bizRegionId; 
         private String nodeInstanceType; 
+        private String officeSiteId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String productType; 
-        private java.util.List < String > status; 
+        private String regionId; 
+        private java.util.List<String> status; 
 
         private Builder() {
             super();
@@ -161,9 +193,11 @@ public class ListAppInstanceGroupRequest extends Request {
             this.appInstanceGroupName = request.appInstanceGroupName;
             this.bizRegionId = request.bizRegionId;
             this.nodeInstanceType = request.nodeInstanceType;
+            this.officeSiteId = request.officeSiteId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.productType = request.productType;
+            this.regionId = request.regionId;
             this.status = request.status;
         } 
 
@@ -195,7 +229,15 @@ public class ListAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * BizRegionId.
+         * <p>The ID of the region where the delivery group resides. For information about the supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>cn-shanghai: China (Shanghai)</li>
+         * <li>cn-hangzhou: China (Hangzhou)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder bizRegionId(String bizRegionId) {
             this.putQueryParameter("BizRegionId", bizRegionId);
@@ -204,11 +246,23 @@ public class ListAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * NodeInstanceType.
+         * <p>The ID of the resource specification that you purchase. You can call the <a href="~~ListNodeInstanceType~~">ListNodeInstanceType</a> operation to obtain the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>appstreaming.vgpu.4c8g.2g</p>
          */
         public Builder nodeInstanceType(String nodeInstanceType) {
             this.putQueryParameter("NodeInstanceType", nodeInstanceType);
             this.nodeInstanceType = nodeInstanceType;
+            return this;
+        }
+
+        /**
+         * OfficeSiteId.
+         */
+        public Builder officeSiteId(String officeSiteId) {
+            this.putQueryParameter("OfficeSiteId", officeSiteId);
+            this.officeSiteId = officeSiteId;
             return this;
         }
 
@@ -231,7 +285,10 @@ public class ListAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudApp</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -240,9 +297,21 @@ public class ListAppInstanceGroupRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
          * Status.
          */
-        public Builder status(java.util.List < String > status) {
+        public Builder status(java.util.List<String> status) {
             this.putBodyParameter("Status", status);
             this.status = status;
             return this;

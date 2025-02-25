@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePopApiResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePopApiResponseBody</p>
  */
 public class DescribePopApiResponseBody extends TeaModel {
-    @NameInMap("ApiName")
+    @com.aliyun.core.annotation.NameInMap("ApiName")
     private String apiName;
 
-    @NameInMap("OpenApiMetaList")
+    @com.aliyun.core.annotation.NameInMap("OpenApiMetaList")
     private java.util.List < OpenApiMetaList> openApiMetaList;
 
-    @NameInMap("PopCode")
+    @com.aliyun.core.annotation.NameInMap("PopCode")
     private String popCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Version")
+    @com.aliyun.core.annotation.NameInMap("Version")
     private String version;
 
     private DescribePopApiResponseBody(Builder builder) {
@@ -86,7 +86,10 @@ public class DescribePopApiResponseBody extends TeaModel {
         private String version; 
 
         /**
-         * ApiName.
+         * <p>The name of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AddAssetCleanConfig</p>
          */
         public Builder apiName(String apiName) {
             this.apiName = apiName;
@@ -94,7 +97,7 @@ public class DescribePopApiResponseBody extends TeaModel {
         }
 
         /**
-         * OpenApiMetaList.
+         * <p>The information about the API.</p>
          */
         public Builder openApiMetaList(java.util.List < OpenApiMetaList> openApiMetaList) {
             this.openApiMetaList = openApiMetaList;
@@ -102,7 +105,10 @@ public class DescribePopApiResponseBody extends TeaModel {
         }
 
         /**
-         * PopCode.
+         * <p>The POP code of the Alibaba Cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sas</p>
          */
         public Builder popCode(String popCode) {
             this.popCode = popCode;
@@ -110,7 +116,10 @@ public class DescribePopApiResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A01B0BA-CFC4-5813-9EB0-A5DA15FA95AE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +127,10 @@ public class DescribePopApiResponseBody extends TeaModel {
         }
 
         /**
-         * Version.
+         * <p>The version of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-09-10</p>
          */
         public Builder version(String version) {
             this.version = version;
@@ -131,20 +143,26 @@ public class DescribePopApiResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePopApiResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePopApiResponseBody</p>
+     */
     public static class OpenApiMetaList extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ExampleValue")
+        @com.aliyun.core.annotation.NameInMap("ExampleValue")
         private String exampleValue;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Required")
+        @com.aliyun.core.annotation.NameInMap("Required")
         private Boolean required;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private OpenApiMetaList(Builder builder) {
@@ -206,7 +224,10 @@ public class DescribePopApiResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Description.
+             * <p>The parameter description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo parameter</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -214,7 +235,10 @@ public class DescribePopApiResponseBody extends TeaModel {
             }
 
             /**
-             * ExampleValue.
+             * <p>The example value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12.xx.xx.xx</p>
              */
             public Builder exampleValue(String exampleValue) {
                 this.exampleValue = exampleValue;
@@ -222,7 +246,10 @@ public class DescribePopApiResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DescribePopApi</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -230,7 +257,14 @@ public class DescribePopApiResponseBody extends TeaModel {
             }
 
             /**
-             * Required.
+             * <p>Indicates whether the parameter is required.</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder required(Boolean required) {
                 this.required = required;
@@ -238,7 +272,16 @@ public class DescribePopApiResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The data type of the parameter field. Valid values:</p>
+             * <ul>
+             * <li><strong>string</strong></li>
+             * <li><strong>boolean</strong></li>
+             * <li><strong>integer</strong></li>
+             * <li><strong>long</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>string</p>
              */
             public Builder type(String type) {
                 this.type = type;

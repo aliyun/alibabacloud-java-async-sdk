@@ -1,31 +1,31 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CapacityPlanRequest} extends {@link RequestModel}
  *
  * <p>CapacityPlanRequest</p>
  */
 public class CapacityPlanRequest extends Request {
-    @Body
-    @NameInMap("complexQueryAvailable")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("complexQueryAvailable")
     private Boolean complexQueryAvailable;
 
-    @Body
-    @NameInMap("dataInfo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dataInfo")
     private java.util.List < DataInfo> dataInfo;
 
-    @Body
-    @NameInMap("metric")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("metric")
     private java.util.List < Metric> metric;
 
-    @Body
-    @NameInMap("usageScenario")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("usageScenario")
     private String usageScenario;
 
     private CapacityPlanRequest(Builder builder) {
@@ -96,7 +96,14 @@ public class CapacityPlanRequest extends Request {
         } 
 
         /**
-         * complexQueryAvailable.
+         * <p>Indicates whether there is a need for complex aggregation queries. Options:</p>
+         * <ul>
+         * <li>true: Yes</li>
+         * <li>false (default): No</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder complexQueryAvailable(Boolean complexQueryAvailable) {
             this.putBodyParameter("complexQueryAvailable", complexQueryAvailable);
@@ -105,7 +112,7 @@ public class CapacityPlanRequest extends Request {
         }
 
         /**
-         * dataInfo.
+         * <p>Disk usage status.</p>
          */
         public Builder dataInfo(java.util.List < DataInfo> dataInfo) {
             this.putBodyParameter("dataInfo", dataInfo);
@@ -114,7 +121,7 @@ public class CapacityPlanRequest extends Request {
         }
 
         /**
-         * metric.
+         * <p>Metrics information including disk usage, search and write operations, aggregation requests, etc.</p>
          */
         public Builder metric(java.util.List < Metric> metric) {
             this.putBodyParameter("metric", metric);
@@ -123,7 +130,17 @@ public class CapacityPlanRequest extends Request {
         }
 
         /**
-         * usageScenario.
+         * <p>Usage scenarios, options:</p>
+         * <ul>
+         * <li>general: General scenario</li>
+         * <li>analysisVisualization: Data analysis scenario</li>
+         * <li>dbAcceleration: Database acceleration scenario</li>
+         * <li>search: Search scenario</li>
+         * <li>log: Log scenario</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>general</p>
          */
         public Builder usageScenario(String usageScenario) {
             this.putBodyParameter("usageScenario", usageScenario);
@@ -138,20 +155,26 @@ public class CapacityPlanRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CapacityPlanRequest} extends {@link TeaModel}
+     *
+     * <p>CapacityPlanRequest</p>
+     */
     public static class DataInfo extends TeaModel {
-        @NameInMap("code")
+        @com.aliyun.core.annotation.NameInMap("code")
         private String code;
 
-        @NameInMap("size")
+        @com.aliyun.core.annotation.NameInMap("size")
         private Long size;
 
-        @NameInMap("totalCount")
+        @com.aliyun.core.annotation.NameInMap("totalCount")
         private Integer totalCount;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("unit")
+        @com.aliyun.core.annotation.NameInMap("unit")
         private String unit;
 
         private DataInfo(Builder builder) {
@@ -213,7 +236,18 @@ public class CapacityPlanRequest extends Request {
             private String unit; 
 
             /**
-             * code.
+             * <p>Disk data metric code. Options:</p>
+             * <ul>
+             * <li>totalRawData: Raw data information</li>
+             * <li>document: Data document information, estimated document count</li>
+             * <li>dailyIncrement: Daily data growth</li>
+             * <li>dailyIncrementDoc: Daily incremental document count</li>
+             * <li>retentionTime: Data retention period</li>
+             * <li>replica: Replica settings</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>totalRawData</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -221,7 +255,10 @@ public class CapacityPlanRequest extends Request {
             }
 
             /**
-             * size.
+             * <p>Disk usage metric value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -229,7 +266,10 @@ public class CapacityPlanRequest extends Request {
             }
 
             /**
-             * totalCount.
+             * <p>Total number of data entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -237,7 +277,14 @@ public class CapacityPlanRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>Disk data type. Options:</p>
+             * <ul>
+             * <li>hot: Hot data</li>
+             * <li>warm: Cold data</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>hot</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -245,7 +292,14 @@ public class CapacityPlanRequest extends Request {
             }
 
             /**
-             * unit.
+             * <p>Data or time unit. Options:</p>
+             * <ul>
+             * <li>Data units: MiB, GiB, TB, PB</li>
+             * <li>Time units: DAYS, WEEKS, MONTHS, YEARS</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>MiB</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -259,26 +313,32 @@ public class CapacityPlanRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CapacityPlanRequest} extends {@link TeaModel}
+     *
+     * <p>CapacityPlanRequest</p>
+     */
     public static class Metric extends TeaModel {
-        @NameInMap("averageQps")
+        @com.aliyun.core.annotation.NameInMap("averageQps")
         private Integer averageQps;
 
-        @NameInMap("code")
+        @com.aliyun.core.annotation.NameInMap("code")
         private String code;
 
-        @NameInMap("concurrent")
+        @com.aliyun.core.annotation.NameInMap("concurrent")
         private Long concurrent;
 
-        @NameInMap("peakQps")
+        @com.aliyun.core.annotation.NameInMap("peakQps")
         private Integer peakQps;
 
-        @NameInMap("responseTime")
+        @com.aliyun.core.annotation.NameInMap("responseTime")
         private Integer responseTime;
 
-        @NameInMap("throughput")
+        @com.aliyun.core.annotation.NameInMap("throughput")
         private Long throughput;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Metric(Builder builder) {
@@ -358,7 +418,10 @@ public class CapacityPlanRequest extends Request {
             private String type; 
 
             /**
-             * averageQps.
+             * <p>Average QPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder averageQps(Integer averageQps) {
                 this.averageQps = averageQps;
@@ -366,7 +429,14 @@ public class CapacityPlanRequest extends Request {
             }
 
             /**
-             * code.
+             * <p>Search or write metric code. Options:</p>
+             * <ul>
+             * <li>write: Write</li>
+             * <li>search: Search</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>write</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -374,7 +444,10 @@ public class CapacityPlanRequest extends Request {
             }
 
             /**
-             * concurrent.
+             * <p>Concurrent number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder concurrent(Long concurrent) {
                 this.concurrent = concurrent;
@@ -382,7 +455,10 @@ public class CapacityPlanRequest extends Request {
             }
 
             /**
-             * peakQps.
+             * <p>Peak QPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder peakQps(Integer peakQps) {
                 this.peakQps = peakQps;
@@ -390,7 +466,10 @@ public class CapacityPlanRequest extends Request {
             }
 
             /**
-             * responseTime.
+             * <p>Expected average response time, unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder responseTime(Integer responseTime) {
                 this.responseTime = responseTime;
@@ -398,7 +477,10 @@ public class CapacityPlanRequest extends Request {
             }
 
             /**
-             * throughput.
+             * <p>Throughput, unit: MB/S.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder throughput(Long throughput) {
                 this.throughput = throughput;
@@ -406,7 +488,14 @@ public class CapacityPlanRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>Search/write peak type. Options:</p>
+             * <ul>
+             * <li>common: Regular</li>
+             * <li>peak: Peak</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>common</p>
              */
             public Builder type(String type) {
                 this.type = type;

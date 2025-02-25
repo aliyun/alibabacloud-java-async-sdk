@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHoneypotEventFlowsResponseBody} extends {@link TeaModel}
  *
  * <p>ListHoneypotEventFlowsResponseBody</p>
  */
 public class ListHoneypotEventFlowsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HoneypotEventFlows")
-    private java.util.List < HoneypotEventFlows> honeypotEventFlows;
+    @com.aliyun.core.annotation.NameInMap("HoneypotEventFlows")
+    private java.util.List<HoneypotEventFlows> honeypotEventFlows;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListHoneypotEventFlowsResponseBody(Builder builder) {
@@ -61,7 +66,7 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
     /**
      * @return honeypotEventFlows
      */
-    public java.util.List < HoneypotEventFlows> getHoneypotEventFlows() {
+    public java.util.List<HoneypotEventFlows> getHoneypotEventFlows() {
         return this.honeypotEventFlows;
     }
 
@@ -102,7 +107,7 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < HoneypotEventFlows> honeypotEventFlows; 
+        private java.util.List<HoneypotEventFlows> honeypotEventFlows; 
         private Integer httpStatusCode; 
         private String message; 
         private PageInfo pageInfo; 
@@ -110,7 +115,10 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * <p>The status code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,15 +126,18 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
         }
 
         /**
-         * The attack timelines.
+         * <p>The attack timelines.</p>
          */
-        public Builder honeypotEventFlows(java.util.List < HoneypotEventFlows> honeypotEventFlows) {
+        public Builder honeypotEventFlows(java.util.List<HoneypotEventFlows> honeypotEventFlows) {
             this.honeypotEventFlows = honeypotEventFlows;
             return this;
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -134,7 +145,10 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +156,7 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -150,7 +164,10 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9F4E6157-9600-5588-86B9-38F09067****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,11 +175,14 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -175,71 +195,77 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListHoneypotEventFlowsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHoneypotEventFlowsResponseBody</p>
+     */
     public static class HoneypotEventFlows extends TeaModel {
-        @NameInMap("AgentId")
+        @com.aliyun.core.annotation.NameInMap("AgentId")
         private String agentId;
 
-        @NameInMap("AgentName")
+        @com.aliyun.core.annotation.NameInMap("AgentName")
         private String agentName;
 
-        @NameInMap("DockerId")
+        @com.aliyun.core.annotation.NameInMap("DockerId")
         private String dockerId;
 
-        @NameInMap("DstIp")
+        @com.aliyun.core.annotation.NameInMap("DstIp")
         private String dstIp;
 
-        @NameInMap("DstPort")
+        @com.aliyun.core.annotation.NameInMap("DstPort")
         private Integer dstPort;
 
-        @NameInMap("EventConnection")
+        @com.aliyun.core.annotation.NameInMap("EventConnection")
         private String eventConnection;
 
-        @NameInMap("Extra")
+        @com.aliyun.core.annotation.NameInMap("Extra")
         private String extra;
 
-        @NameInMap("Extra1")
+        @com.aliyun.core.annotation.NameInMap("Extra1")
         private String extra1;
 
-        @NameInMap("FileOssUrl")
+        @com.aliyun.core.annotation.NameInMap("FileOssUrl")
         private String fileOssUrl;
 
-        @NameInMap("FirstTime")
+        @com.aliyun.core.annotation.NameInMap("FirstTime")
         private Long firstTime;
 
-        @NameInMap("HoneypotEventId")
+        @com.aliyun.core.annotation.NameInMap("HoneypotEventId")
         private String honeypotEventId;
 
-        @NameInMap("HoneypotId")
+        @com.aliyun.core.annotation.NameInMap("HoneypotId")
         private String honeypotId;
 
-        @NameInMap("HoneypotName")
+        @com.aliyun.core.annotation.NameInMap("HoneypotName")
         private String honeypotName;
 
-        @NameInMap("LastTime")
+        @com.aliyun.core.annotation.NameInMap("LastTime")
         private Long lastTime;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
 
-        @NameInMap("SecurityEventId")
+        @com.aliyun.core.annotation.NameInMap("SecurityEventId")
         private Long securityEventId;
 
-        @NameInMap("SrcIp")
+        @com.aliyun.core.annotation.NameInMap("SrcIp")
         private String srcIp;
 
-        @NameInMap("SrcMac")
+        @com.aliyun.core.annotation.NameInMap("SrcMac")
         private String srcMac;
 
-        @NameInMap("SrcPort")
+        @com.aliyun.core.annotation.NameInMap("SrcPort")
         private Integer srcPort;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("TypeId")
+        @com.aliyun.core.annotation.NameInMap("TypeId")
         private String typeId;
 
-        @NameInMap("Uid")
+        @com.aliyun.core.annotation.NameInMap("Uid")
         private String uid;
 
         private HoneypotEventFlows(Builder builder) {
@@ -454,7 +480,10 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             private String uid; 
 
             /**
-             * The ID of the probe.
+             * <p>The ID of the probe.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d3c0dafa-5059-4eb0-8c28-7d40f58*****</p>
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
@@ -462,7 +491,10 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the probe.
+             * <p>The name of the probe.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hw-d***</p>
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
@@ -470,7 +502,10 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the container.
+             * <p>The ID of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eca09895****</p>
              */
             public Builder dockerId(String dockerId) {
                 this.dockerId = dockerId;
@@ -478,7 +513,10 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * The destination IP address.
+             * <p>The destination IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>112.126.205.***</p>
              */
             public Builder dstIp(String dstIp) {
                 this.dstIp = dstIp;
@@ -486,7 +524,10 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * The destination port.
+             * <p>The destination port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder dstPort(Integer dstPort) {
                 this.dstPort = dstPort;
@@ -494,7 +535,10 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the connection in the attack.
+             * <p>The UUID of the connection in the attack.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fd7f1ff4-0c4b-41cb-99ad-0724349d****</p>
              */
             public Builder eventConnection(String eventConnection) {
                 this.eventConnection = eventConnection;
@@ -502,7 +546,10 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * The extended information about the attack payload.
+             * <p>The extended information about the attack payload.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;payload&quot;:{&quot;format&quot;:&quot;line&quot;,&quot;name&quot;:{&quot;cn&quot;:&quot;payload&quot;,&quot;en&quot;:&quot;payload&quot;},&quot;value&quot;:&quot;&quot;},&quot;uid&quot;:{&quot;format&quot;:&quot;line&quot;,&quot;name&quot;:{&quot;cn&quot;:&quot;&quot;,&quot;en&quot;:&quot;&quot;},&quot;uid&quot;:&quot;5fa2ece9-aa08-4bbd-a272-5d27*********&quot;,&quot;value&quot;:&quot;&quot;}}</p>
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -510,7 +557,10 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * The extension information about the virtual private cloud (VPC).
+             * <p>The extension information about the virtual private cloud (VPC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;vpc_id&quot;:&quot;&quot;,&quot;vpc_dest_port&quot;:&quot;&quot;,&quot;vpc_dest_ip&quot;:&quot;&quot;}</p>
              */
             public Builder extra1(String extra1) {
                 this.extra1 = extra1;
@@ -518,7 +568,10 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * The Object Storage Service (OSS) URL of the file.
+             * <p>The Object Storage Service (OSS) URL of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://pop-test-file-upload.oss-cn-beijing.aliyuncs.com/5626_26331">https://pop-test-file-upload.oss-cn-beijing.aliyuncs.com/5626_26331</a>*****</p>
              */
             public Builder fileOssUrl(String fileOssUrl) {
                 this.fileOssUrl = fileOssUrl;
@@ -526,7 +579,10 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the intrusion event was first occurred.
+             * <p>The timestamp when the intrusion event was first occurred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1686621122000</p>
              */
             public Builder firstTime(Long firstTime) {
                 this.firstTime = firstTime;
@@ -534,7 +590,10 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the intrusion event. The value is a string.
+             * <p>The ID of the intrusion event. The value is a string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>19bec028-d98b-45c4-a4d9-cc3d593f****</p>
              */
             public Builder honeypotEventId(String honeypotEventId) {
                 this.honeypotEventId = honeypotEventId;
@@ -542,7 +601,10 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the honeypot.
+             * <p>The ID of the honeypot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>911df9d6fe20451c059edbcffa1d1c33452f6a71e59d4826da067af224*****</p>
              */
             public Builder honeypotId(String honeypotId) {
                 this.honeypotId = honeypotId;
@@ -550,7 +612,10 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the honeypot.
+             * <p>The name of the honeypot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hw-zhi*****</p>
              */
             public Builder honeypotName(String honeypotName) {
                 this.honeypotName = honeypotName;
@@ -558,7 +623,10 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the intrusion event was last occurred.
+             * <p>The timestamp when the intrusion event was last occurred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1686622222000</p>
              */
             public Builder lastTime(Long lastTime) {
                 this.lastTime = lastTime;
@@ -566,12 +634,15 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level. Valid values:
-             * <p>
+             * <p>The risk level. Valid values:</p>
+             * <ul>
+             * <li><strong>2</strong>: low</li>
+             * <li><strong>3</strong>: medium</li>
+             * <li><strong>4</strong>: high</li>
+             * </ul>
              * 
-             * *   **2**: low
-             * *   **3**: medium
-             * *   **4**: high
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -579,7 +650,10 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the intrusion event.
+             * <p>The ID of the intrusion event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>306527555</p>
              */
             public Builder securityEventId(Long securityEventId) {
                 this.securityEventId = securityEventId;
@@ -587,7 +661,10 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * The source IP address.
+             * <p>The source IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>121.41.48.***</p>
              */
             public Builder srcIp(String srcIp) {
                 this.srcIp = srcIp;
@@ -595,7 +672,10 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * The source media access control (MAC) address.
+             * <p>The source media access control (MAC) address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:0C:29:CA:<strong>:</strong></p>
              */
             public Builder srcMac(String srcMac) {
                 this.srcMac = srcMac;
@@ -603,7 +683,10 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * The source port number.
+             * <p>The source port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder srcPort(Integer srcPort) {
                 this.srcPort = srcPort;
@@ -611,12 +694,15 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * The handling status of the intrusion event. Valid values:
-             * <p>
+             * <p>The handling status of the intrusion event. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: pending handling</li>
+             * <li><strong>2</strong>: ignored</li>
+             * <li><strong>4</strong>: confirmed</li>
+             * </ul>
              * 
-             * *   **1**: pending handling
-             * *   **2**: ignored
-             * *   **4**: confirmed
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -624,7 +710,10 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the attack type.
+             * <p>The ID of the attack type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>web_access</p>
              */
             public Builder typeId(String typeId) {
                 this.typeId = typeId;
@@ -632,7 +721,10 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of an attack in the intrusion event.
+             * <p>The UUID of an attack in the intrusion event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5fa2ece9-aa08-4bbd-a272-5d27d1c6*****</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -646,17 +738,23 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHoneypotEventFlowsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHoneypotEventFlowsResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -709,7 +807,10 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -717,7 +818,10 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -725,7 +829,10 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -733,7 +840,10 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>78</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachApiProductRequest} extends {@link RequestModel}
  *
  * <p>AttachApiProductRequest</p>
  */
 public class AttachApiProductRequest extends Request {
-    @Query
-    @NameInMap("ApiProductId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApiProductId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String apiProductId;
 
-    @Query
-    @NameInMap("Apis")
-    @Validation(required = true)
-    private java.util.List < Apis> apis;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Apis")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Apis> apis;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private AttachApiProductRequest(Builder builder) {
@@ -56,7 +61,7 @@ public class AttachApiProductRequest extends Request {
     /**
      * @return apis
      */
-    public java.util.List < Apis> getApis() {
+    public java.util.List<Apis> getApis() {
         return this.apis;
     }
 
@@ -69,7 +74,7 @@ public class AttachApiProductRequest extends Request {
 
     public static final class Builder extends Request.Builder<AttachApiProductRequest, Builder> {
         private String apiProductId; 
-        private java.util.List < Apis> apis; 
+        private java.util.List<Apis> apis; 
         private String securityToken; 
 
         private Builder() {
@@ -84,7 +89,11 @@ public class AttachApiProductRequest extends Request {
         } 
 
         /**
-         * The ID of the API product.
+         * <p>The ID of the API product.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>117b7a64a8b3f064eaa4a47ac62aac5e</p>
          */
         public Builder apiProductId(String apiProductId) {
             this.putQueryParameter("ApiProductId", apiProductId);
@@ -93,9 +102,10 @@ public class AttachApiProductRequest extends Request {
         }
 
         /**
-         * The APIs to be attached.
+         * <p>The APIs to be attached.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder apis(java.util.List < Apis> apis) {
+        public Builder apis(java.util.List<Apis> apis) {
             this.putQueryParameter("Apis", apis);
             this.apis = apis;
             return this;
@@ -117,13 +127,19 @@ public class AttachApiProductRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AttachApiProductRequest} extends {@link TeaModel}
+     *
+     * <p>AttachApiProductRequest</p>
+     */
     public static class Apis extends TeaModel {
-        @NameInMap("ApiId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ApiId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String apiId;
 
-        @NameInMap("StageName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("StageName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String stageName;
 
         private Apis(Builder builder) {
@@ -158,7 +174,11 @@ public class AttachApiProductRequest extends Request {
             private String stageName; 
 
             /**
-             * The API ID.
+             * <p>The API ID.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>551877242a4b4f3a84a56b7c3570e4a7</p>
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -166,12 +186,16 @@ public class AttachApiProductRequest extends Request {
             }
 
             /**
-             * The environment. Valid values:
-             * <p>
+             * <p>The environment. Valid values:</p>
+             * <ul>
+             * <li><strong>RELEASE</strong>: the production environment</li>
+             * <li><strong>PRE</strong>: the staging environment</li>
+             * <li><strong>TEST</strong>: the test environment</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **RELEASE**: the production environment
-             * *   **PRE**: the staging environment
-             * *   **TEST**: the test environment
+             * <strong>example:</strong>
+             * <p>RELEASE</p>
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;

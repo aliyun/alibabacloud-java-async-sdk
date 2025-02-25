@@ -1,60 +1,71 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInternetTrafficTrendResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInternetTrafficTrendResponseBody</p>
  */
 public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
-    @NameInMap("AvgInBps")
+    @com.aliyun.core.annotation.NameInMap("AvgInBps")
     private Long avgInBps;
 
-    @NameInMap("AvgOutBps")
+    @com.aliyun.core.annotation.NameInMap("AvgOutBps")
     private Long avgOutBps;
 
-    @NameInMap("AvgSession")
+    @com.aliyun.core.annotation.NameInMap("AvgSession")
     private Long avgSession;
 
-    @NameInMap("AvgTotalBps")
+    @com.aliyun.core.annotation.NameInMap("AvgTotalBps")
     private Long avgTotalBps;
 
-    @NameInMap("DataList")
-    private java.util.List < DataList> dataList;
+    @com.aliyun.core.annotation.NameInMap("DataList")
+    private java.util.List<DataList> dataList;
 
-    @NameInMap("MaxBandwidthTime")
+    @com.aliyun.core.annotation.NameInMap("MaxBandwidthTime")
     private Long maxBandwidthTime;
 
-    @NameInMap("MaxInBps")
+    @com.aliyun.core.annotation.NameInMap("MaxDayExceedBytes")
+    private Long maxDayExceedBytes;
+
+    @com.aliyun.core.annotation.NameInMap("MaxInBps")
     private Long maxInBps;
 
-    @NameInMap("MaxOutBps")
+    @com.aliyun.core.annotation.NameInMap("MaxOutBps")
     private Long maxOutBps;
 
-    @NameInMap("MaxSession")
+    @com.aliyun.core.annotation.NameInMap("MaxSession")
     private Long maxSession;
 
-    @NameInMap("MaxTotalBps")
+    @com.aliyun.core.annotation.NameInMap("MaxTotalBps")
     private Long maxTotalBps;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalBytes")
+    @com.aliyun.core.annotation.NameInMap("TotalBytes")
     private Long totalBytes;
 
-    @NameInMap("TotalInBytes")
+    @com.aliyun.core.annotation.NameInMap("TotalExceedBytes")
+    private Long totalExceedBytes;
+
+    @com.aliyun.core.annotation.NameInMap("TotalInBytes")
     private Long totalInBytes;
 
-    @NameInMap("TotalOutBytes")
+    @com.aliyun.core.annotation.NameInMap("TotalOutBytes")
     private Long totalOutBytes;
 
-    @NameInMap("TotalSession")
+    @com.aliyun.core.annotation.NameInMap("TotalSession")
     private Long totalSession;
 
     private DescribeInternetTrafficTrendResponseBody(Builder builder) {
@@ -64,12 +75,14 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         this.avgTotalBps = builder.avgTotalBps;
         this.dataList = builder.dataList;
         this.maxBandwidthTime = builder.maxBandwidthTime;
+        this.maxDayExceedBytes = builder.maxDayExceedBytes;
         this.maxInBps = builder.maxInBps;
         this.maxOutBps = builder.maxOutBps;
         this.maxSession = builder.maxSession;
         this.maxTotalBps = builder.maxTotalBps;
         this.requestId = builder.requestId;
         this.totalBytes = builder.totalBytes;
+        this.totalExceedBytes = builder.totalExceedBytes;
         this.totalInBytes = builder.totalInBytes;
         this.totalOutBytes = builder.totalOutBytes;
         this.totalSession = builder.totalSession;
@@ -114,7 +127,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
     /**
      * @return dataList
      */
-    public java.util.List < DataList> getDataList() {
+    public java.util.List<DataList> getDataList() {
         return this.dataList;
     }
 
@@ -123,6 +136,13 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
      */
     public Long getMaxBandwidthTime() {
         return this.maxBandwidthTime;
+    }
+
+    /**
+     * @return maxDayExceedBytes
+     */
+    public Long getMaxDayExceedBytes() {
+        return this.maxDayExceedBytes;
     }
 
     /**
@@ -168,6 +188,13 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
     }
 
     /**
+     * @return totalExceedBytes
+     */
+    public Long getTotalExceedBytes() {
+        return this.totalExceedBytes;
+    }
+
+    /**
      * @return totalInBytes
      */
     public Long getTotalInBytes() {
@@ -193,20 +220,25 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         private Long avgOutBps; 
         private Long avgSession; 
         private Long avgTotalBps; 
-        private java.util.List < DataList> dataList; 
+        private java.util.List<DataList> dataList; 
         private Long maxBandwidthTime; 
+        private Long maxDayExceedBytes; 
         private Long maxInBps; 
         private Long maxOutBps; 
         private Long maxSession; 
         private Long maxTotalBps; 
         private String requestId; 
         private Long totalBytes; 
+        private Long totalExceedBytes; 
         private Long totalInBytes; 
         private Long totalOutBytes; 
         private Long totalSession; 
 
         /**
-         * The average inbound network throughput, which indicates the average number of bits that are sent inbound per second. Unit: bit/s.
+         * <p>The average inbound network throughput, which indicates the average number of bits that are sent inbound per second. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6114152</p>
          */
         public Builder avgInBps(Long avgInBps) {
             this.avgInBps = avgInBps;
@@ -214,7 +246,10 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * The average outbound network throughput, which indicates the average number of bits that are sent outbound per second. Unit: bit/s.
+         * <p>The average outbound network throughput, which indicates the average number of bits that are sent outbound per second. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70148993</p>
          */
         public Builder avgOutBps(Long avgOutBps) {
             this.avgOutBps = avgOutBps;
@@ -222,7 +257,10 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * The average number of requests.
+         * <p>The average number of requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79013</p>
          */
         public Builder avgSession(Long avgSession) {
             this.avgSession = avgSession;
@@ -230,7 +268,10 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * The total average inbound and outbound network throughput, which indicates the average number of bits that are sent inbound and outbound per second. Unit: bit/s.
+         * <p>The total average inbound and outbound network throughput, which indicates the average number of bits that are sent inbound and outbound per second. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2306</p>
          */
         public Builder avgTotalBps(Long avgTotalBps) {
             this.avgTotalBps = avgTotalBps;
@@ -238,15 +279,18 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * The statistics on traffic.
+         * <p>The statistics on traffic.</p>
          */
-        public Builder dataList(java.util.List < DataList> dataList) {
+        public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
             return this;
         }
 
         /**
-         * The timestamp generated when the bandwidth reaches the peak value. The value is a UNIX timestamp. Unit: seconds.
+         * <p>The timestamp generated when the bandwidth reaches the peak value. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1672736400</p>
          */
         public Builder maxBandwidthTime(Long maxBandwidthTime) {
             this.maxBandwidthTime = maxBandwidthTime;
@@ -254,7 +298,21 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum inbound network throughput, which indicates the maximum number of bits that are sent inbound per second. Unit: bit/s.
+         * <p>The maximum volume of excess traffic allowed per day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>873</p>
+         */
+        public Builder maxDayExceedBytes(Long maxDayExceedBytes) {
+            this.maxDayExceedBytes = maxDayExceedBytes;
+            return this;
+        }
+
+        /**
+         * <p>The maximum inbound network throughput, which indicates the maximum number of bits that are sent inbound per second. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10275643</p>
          */
         public Builder maxInBps(Long maxInBps) {
             this.maxInBps = maxInBps;
@@ -262,7 +320,10 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum outbound network throughput, which indicates the maximum number of bits that are sent outbound per second. Unit: bit/s.
+         * <p>The maximum outbound network throughput, which indicates the maximum number of bits that are sent outbound per second. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>395188</p>
          */
         public Builder maxOutBps(Long maxOutBps) {
             this.maxOutBps = maxOutBps;
@@ -270,7 +331,10 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * The number of requests during the peak hour of the network throughout.
+         * <p>The number of requests during the peak hour of the network throughout.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>931641</p>
          */
         public Builder maxSession(Long maxSession) {
             this.maxSession = maxSession;
@@ -278,7 +342,10 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * The total maximum inbound and outbound network throughput, which indicates the maximum number of bits that are sent inbound and outbound per second. Unit: bit/s.
+         * <p>The total maximum inbound and outbound network throughput, which indicates the maximum number of bits that are sent inbound and outbound per second. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89783147</p>
          */
         public Builder maxTotalBps(Long maxTotalBps) {
             this.maxTotalBps = maxTotalBps;
@@ -286,7 +353,10 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C7E837BE-0379-565E-B7B4-DE595C8D337C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -294,7 +364,10 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * The total inbound and outbound network throughput, which indicates the total number of bytes that are sent inbound and outbound. Unit: bytes.
+         * <p>The total inbound and outbound network throughput, which indicates the total number of bytes that are sent inbound and outbound. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>963227674958</p>
          */
         public Builder totalBytes(Long totalBytes) {
             this.totalBytes = totalBytes;
@@ -302,7 +375,21 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * The inbound network throughput, which indicates the total number of bytes that are sent inbound. Unit: bytes.
+         * <p>The total volume of excess traffic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4243873</p>
+         */
+        public Builder totalExceedBytes(Long totalExceedBytes) {
+            this.totalExceedBytes = totalExceedBytes;
+            return this;
+        }
+
+        /**
+         * <p>The inbound network throughput, which indicates the total number of bytes that are sent inbound. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>41536824243873</p>
          */
         public Builder totalInBytes(Long totalInBytes) {
             this.totalInBytes = totalInBytes;
@@ -310,7 +397,10 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * The outbound network throughput, which indicates the total number of bytes that are sent outbound. Unit: bytes.
+         * <p>The outbound network throughput, which indicates the total number of bytes that are sent outbound. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2660894567178</p>
          */
         public Builder totalOutBytes(Long totalOutBytes) {
             this.totalOutBytes = totalOutBytes;
@@ -318,7 +408,10 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of requests.
+         * <p>The total number of requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1061449</p>
          */
         public Builder totalSession(Long totalSession) {
             this.totalSession = totalSession;
@@ -331,35 +424,41 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInternetTrafficTrendResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInternetTrafficTrendResponseBody</p>
+     */
     public static class DataList extends TeaModel {
-        @NameInMap("InBps")
+        @com.aliyun.core.annotation.NameInMap("InBps")
         private Long inBps;
 
-        @NameInMap("InBytes")
+        @com.aliyun.core.annotation.NameInMap("InBytes")
         private Long inBytes;
 
-        @NameInMap("InPps")
+        @com.aliyun.core.annotation.NameInMap("InPps")
         private Long inPps;
 
-        @NameInMap("NewConn")
+        @com.aliyun.core.annotation.NameInMap("NewConn")
         private Long newConn;
 
-        @NameInMap("OutBps")
+        @com.aliyun.core.annotation.NameInMap("OutBps")
         private Long outBps;
 
-        @NameInMap("OutBytes")
+        @com.aliyun.core.annotation.NameInMap("OutBytes")
         private Long outBytes;
 
-        @NameInMap("OutPps")
+        @com.aliyun.core.annotation.NameInMap("OutPps")
         private Long outPps;
 
-        @NameInMap("SessionCount")
+        @com.aliyun.core.annotation.NameInMap("SessionCount")
         private Long sessionCount;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private Integer time;
 
-        @NameInMap("TotalBps")
+        @com.aliyun.core.annotation.NameInMap("TotalBps")
         private Long totalBps;
 
         private DataList(Builder builder) {
@@ -466,7 +565,10 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
             private Long totalBps; 
 
             /**
-             * The inbound network throughput, which indicates the number of bits that are sent inbound per second. Unit: bit/s.
+             * <p>The inbound network throughput, which indicates the number of bits that are sent inbound per second. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>187</p>
              */
             public Builder inBps(Long inBps) {
                 this.inBps = inBps;
@@ -474,7 +576,10 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The inbound network throughput, which indicates the total number of bytes that are sent inbound. Unit: bytes.
+             * <p>The inbound network throughput, which indicates the total number of bytes that are sent inbound. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>235</p>
              */
             public Builder inBytes(Long inBytes) {
                 this.inBytes = inBytes;
@@ -482,7 +587,10 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The inbound network throughput, which indicates the number of packets that are sent inbound per second. Unit: packets per second (pps).
+             * <p>The inbound network throughput, which indicates the number of packets that are sent inbound per second. Unit: packets per second (pps).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder inPps(Long inPps) {
                 this.inPps = inPps;
@@ -490,7 +598,10 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The number of new connections.
+             * <p>The number of new connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27</p>
              */
             public Builder newConn(Long newConn) {
                 this.newConn = newConn;
@@ -498,7 +609,10 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The outbound network throughput, which indicates the number of bits that are sent inbound per second. Unit: bit/s.
+             * <p>The outbound network throughput, which indicates the number of bits that are sent outbound per second. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>45</p>
              */
             public Builder outBps(Long outBps) {
                 this.outBps = outBps;
@@ -506,7 +620,10 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The outbound network throughput, which indicates the total number of bytes that are sent outbound. Unit: bytes.
+             * <p>The outbound network throughput, which indicates the total number of bytes that are sent outbound. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1123</p>
              */
             public Builder outBytes(Long outBytes) {
                 this.outBytes = outBytes;
@@ -514,7 +631,10 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The outbound network throughput, which indicates the number of packets that are sent outbound per second. Unit: pps.
+             * <p>The outbound network throughput, which indicates the number of packets that are sent outbound per second. Unit: pps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder outPps(Long outPps) {
                 this.outPps = outPps;
@@ -522,7 +642,10 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The number of requests.
+             * <p>The number of requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27</p>
              */
             public Builder sessionCount(Long sessionCount) {
                 this.sessionCount = sessionCount;
@@ -530,7 +653,11 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The time when traffic is generated. The value is a UNIX timestamp. Unit: seconds.
+             * <p>The time when traffic is generated. The value is a UNIX timestamp. Unit: seconds.</p>
+             * <p>If processing is not complete at this point in time, -1 is returned for all other fields.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1659405600</p>
              */
             public Builder time(Integer time) {
                 this.time = time;
@@ -538,7 +665,10 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The total inbound and outbound network throughput, which indicates the number of bits that are sent inbound per second. Unit: bit/s.
+             * <p>The total outbound and inbound network throughput, which indicates the total number of bits that are sent inbound and outbound per second. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>323</p>
              */
             public Builder totalBps(Long totalBps) {
                 this.totalBps = totalBps;

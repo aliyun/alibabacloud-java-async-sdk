@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLogstoreStorageResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLogstoreStorageResponseBody</p>
  */
 public class DescribeLogstoreStorageResponseBody extends TeaModel {
-    @NameInMap("Logstore")
+    @com.aliyun.core.annotation.NameInMap("Logstore")
     private String logstore;
 
-    @NameInMap("Preserve")
+    @com.aliyun.core.annotation.NameInMap("Preserve")
     private Long preserve;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Ttl")
+    @com.aliyun.core.annotation.NameInMap("Ttl")
     private Integer ttl;
 
-    @NameInMap("Used")
+    @com.aliyun.core.annotation.NameInMap("Used")
     private Long used;
 
-    @NameInMap("UserProject")
+    @com.aliyun.core.annotation.NameInMap("UserProject")
     private String userProject;
 
     private DescribeLogstoreStorageResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class DescribeLogstoreStorageResponseBody extends TeaModel {
         private String userProject; 
 
         /**
-         * The name of the dedicated Logstore that is used to store full logs of Security Center. The value is fixed as **sas-log**.
+         * <p>The name of the dedicated Logstore that is used to store full logs of Security Center. The value is fixed as <strong>sas-log</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas-log</p>
          */
         public Builder logstore(String logstore) {
             this.logstore = logstore;
@@ -106,7 +114,10 @@ public class DescribeLogstoreStorageResponseBody extends TeaModel {
         }
 
         /**
-         * The purchased log storage capacity, in GB.
+         * <p>The purchased log storage capacity, in GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12240</p>
          */
         public Builder preserve(Long preserve) {
             this.preserve = preserve;
@@ -114,7 +125,10 @@ public class DescribeLogstoreStorageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25EC270F-5783-4416-AD7C-1EDF063A039C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,10 +136,13 @@ public class DescribeLogstoreStorageResponseBody extends TeaModel {
         }
 
         /**
-         * The number of days during which logs can be retained. The value is fixed as **180**, which indicates that logs can be retained for 180 days.
-         * <p>
+         * <p>The number of days during which logs can be retained. The value is fixed as <strong>180</strong>, which indicates that logs can be retained for 180 days.</p>
+         * <blockquote>
+         * <p> You are not allowed to change the value of this parameter.</p>
+         * </blockquote>
          * 
-         * >  You are not allowed to change the value of this parameter.
+         * <strong>example:</strong>
+         * <p>180</p>
          */
         public Builder ttl(Integer ttl) {
             this.ttl = ttl;
@@ -133,7 +150,10 @@ public class DescribeLogstoreStorageResponseBody extends TeaModel {
         }
 
         /**
-         * The used log storage capacity, in GB.
+         * <p>The used log storage capacity, in GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>335</p>
          */
         public Builder used(Long used) {
             this.used = used;
@@ -141,7 +161,10 @@ public class DescribeLogstoreStorageResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the dedicated Project that is used to store full logs of Security Center.
+         * <p>The name of the dedicated Project that is used to store full logs of Security Center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas-log-XXXX-cn-hangzhou</p>
          */
         public Builder userProject(String userProject) {
             this.userProject = userProject;

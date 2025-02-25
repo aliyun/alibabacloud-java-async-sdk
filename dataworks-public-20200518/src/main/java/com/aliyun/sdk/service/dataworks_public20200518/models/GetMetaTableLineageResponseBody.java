@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMetaTableLineageResponseBody} extends {@link TeaModel}
  *
  * <p>GetMetaTableLineageResponseBody</p>
  */
 public class GetMetaTableLineageResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetMetaTableLineageResponseBody(Builder builder) {
@@ -98,7 +103,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the next page has more query results.
+         * <p>The business data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +111,10 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
         }
 
         /**
-         * The paging information.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ConnectionNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +122,10 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The connection does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +133,10 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +144,10 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1ec92159376</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
         }
 
         /**
-         * The business data.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,17 +171,23 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMetaTableLineageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMetaTableLineageResponseBody</p>
+     */
     public static class DataEntityList extends TeaModel {
-        @NameInMap("CreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
-        @NameInMap("DatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
-        @NameInMap("TableGuid")
+        @com.aliyun.core.annotation.NameInMap("TableGuid")
         private String tableGuid;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private DataEntityList(Builder builder) {
@@ -214,7 +240,10 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * CreateTimestamp.
+             * <p>The time when the table was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1638720736000</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -222,7 +251,10 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseName.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>db1</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -230,7 +262,10 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
             }
 
             /**
-             * TableGuid.
+             * <p>The unique identifier of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps.tt.name</p>
              */
             public Builder tableGuid(String tableGuid) {
                 this.tableGuid = tableGuid;
@@ -238,7 +273,10 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the metatable was created.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -252,14 +290,20 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMetaTableLineageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMetaTableLineageResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DataEntityList")
-        private java.util.List < DataEntityList> dataEntityList;
+        @com.aliyun.core.annotation.NameInMap("DataEntityList")
+        private java.util.List<DataEntityList> dataEntityList;
 
-        @NameInMap("HasNext")
+        @com.aliyun.core.annotation.NameInMap("HasNext")
         private Boolean hasNext;
 
-        @NameInMap("NextPrimaryKey")
+        @com.aliyun.core.annotation.NameInMap("NextPrimaryKey")
         private String nextPrimaryKey;
 
         private Data(Builder builder) {
@@ -279,7 +323,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
         /**
          * @return dataEntityList
          */
-        public java.util.List < DataEntityList> getDataEntityList() {
+        public java.util.List<DataEntityList> getDataEntityList() {
             return this.dataEntityList;
         }
 
@@ -298,20 +342,23 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DataEntityList> dataEntityList; 
+            private java.util.List<DataEntityList> dataEntityList; 
             private Boolean hasNext; 
             private String nextPrimaryKey; 
 
             /**
-             * The GUID of the metatable.
+             * <p>The information about the table.</p>
              */
-            public Builder dataEntityList(java.util.List < DataEntityList> dataEntityList) {
+            public Builder dataEntityList(java.util.List<DataEntityList> dataEntityList) {
                 this.dataEntityList = dataEntityList;
                 return this;
             }
 
             /**
-             * The name of the metatable.
+             * <p>Indicates whether the next page exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasNext(Boolean hasNext) {
                 this.hasNext = hasNext;
@@ -319,7 +366,10 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the metatable.
+             * <p>The logic of paging. If the value true is returned for the HasNext parameter and a value is returned for the NextPrimaryKey parameter in the response of the previous request, you must use the value of the NextPrimaryKey parameter for the next request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps | retail_e_commerce_2 | retail_e_commerce_2 | dws_ec_trd__cate_commodity_gmv_kpy_fy</p>
              */
             public Builder nextPrimaryKey(String nextPrimaryKey) {
                 this.nextPrimaryKey = nextPrimaryKey;

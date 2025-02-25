@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220302.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageResultExtRequest} extends {@link RequestModel}
  *
  * <p>DescribeImageResultExtRequest</p>
  */
 public class DescribeImageResultExtRequest extends Request {
-    @Body
-    @NameInMap("InfoType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InfoType")
     private String infoType;
 
-    @Body
-    @NameInMap("ReqId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ReqId")
     private String reqId;
 
     private DescribeImageResultExtRequest(Builder builder) {
@@ -68,7 +73,10 @@ public class DescribeImageResultExtRequest extends Request {
         } 
 
         /**
-         * InfoType.
+         * <p>The content of the information to be obtained. Multiple values are separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>customImage,textInImage</p>
          */
         public Builder infoType(String infoType) {
             this.putBodyParameter("InfoType", infoType);
@@ -77,7 +85,10 @@ public class DescribeImageResultExtRequest extends Request {
         }
 
         /**
-         * ReqId.
+         * <p>The reqId field returned by the Url Async Moderation API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>638EDDC65C82AB39319A9F60</p>
          */
         public Builder reqId(String reqId) {
             this.putBodyParameter("ReqId", reqId);

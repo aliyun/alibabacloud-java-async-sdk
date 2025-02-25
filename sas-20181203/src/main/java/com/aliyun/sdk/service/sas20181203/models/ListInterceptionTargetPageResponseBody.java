@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInterceptionTargetPageResponseBody} extends {@link TeaModel}
  *
  * <p>ListInterceptionTargetPageResponseBody</p>
  */
 public class ListInterceptionTargetPageResponseBody extends TeaModel {
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RuleTargetList")
-    private java.util.List < RuleTargetList> ruleTargetList;
+    @com.aliyun.core.annotation.NameInMap("RuleTargetList")
+    private java.util.List<RuleTargetList> ruleTargetList;
 
     private ListInterceptionTargetPageResponseBody(Builder builder) {
         this.pageInfo = builder.pageInfo;
@@ -52,17 +57,17 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
     /**
      * @return ruleTargetList
      */
-    public java.util.List < RuleTargetList> getRuleTargetList() {
+    public java.util.List<RuleTargetList> getRuleTargetList() {
         return this.ruleTargetList;
     }
 
     public static final class Builder {
         private PageInfo pageInfo; 
         private String requestId; 
-        private java.util.List < RuleTargetList> ruleTargetList; 
+        private java.util.List<RuleTargetList> ruleTargetList; 
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +75,10 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>028CF634-5268-5660-9575-48C9ED6B****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,9 +86,9 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the network objects.
+         * <p>An array that consists of the network objects.</p>
          */
-        public Builder ruleTargetList(java.util.List < RuleTargetList> ruleTargetList) {
+        public Builder ruleTargetList(java.util.List<RuleTargetList> ruleTargetList) {
             this.ruleTargetList = ruleTargetList;
             return this;
         }
@@ -91,14 +99,20 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInterceptionTargetPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInterceptionTargetPageResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -142,7 +156,10 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -150,7 +167,10 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -158,7 +178,10 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>45</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -172,35 +195,41 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInterceptionTargetPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInterceptionTargetPageResponseBody</p>
+     */
     public static class RuleTargetList extends TeaModel {
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("ImageList")
-        private java.util.List < String > imageList;
+        @com.aliyun.core.annotation.NameInMap("ImageList")
+        private java.util.List<String> imageList;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("RuleType")
+        @com.aliyun.core.annotation.NameInMap("RuleType")
         private String ruleType;
 
-        @NameInMap("TagList")
-        private java.util.List < String > tagList;
+        @com.aliyun.core.annotation.NameInMap("TagList")
+        private java.util.List<String> tagList;
 
-        @NameInMap("TargetId")
+        @com.aliyun.core.annotation.NameInMap("TargetId")
         private Long targetId;
 
-        @NameInMap("TargetName")
+        @com.aliyun.core.annotation.NameInMap("TargetName")
         private String targetName;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
         private RuleTargetList(Builder builder) {
@@ -248,7 +277,7 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
         /**
          * @return imageList
          */
-        public java.util.List < String > getImageList() {
+        public java.util.List<String> getImageList() {
             return this.imageList;
         }
 
@@ -269,7 +298,7 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
         /**
          * @return tagList
          */
-        public java.util.List < String > getTagList() {
+        public java.util.List<String> getTagList() {
             return this.tagList;
         }
 
@@ -298,16 +327,19 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             private String appName; 
             private String clusterId; 
             private String clusterName; 
-            private java.util.List < String > imageList; 
+            private java.util.List<String> imageList; 
             private String namespace; 
             private String ruleType; 
-            private java.util.List < String > tagList; 
+            private java.util.List<String> tagList; 
             private Long targetId; 
             private String targetName; 
             private String targetType; 
 
             /**
-             * The name of the application of the network object.
+             * <p>The name of the application of the network object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>frontend</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -315,7 +347,10 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the container cluster.
+             * <p>The ID of the container cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c3e2eae03eb064d2ebf940cd5e1b17****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -323,7 +358,10 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the container cluster.
+             * <p>The name of the container cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sas-test-cnnf</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -331,15 +369,18 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             }
 
             /**
-             * The images of the network object.
+             * <p>The images of the network object.</p>
              */
-            public Builder imageList(java.util.List < String > imageList) {
+            public Builder imageList(java.util.List<String> imageList) {
                 this.imageList = imageList;
                 return this;
             }
 
             /**
-             * The namespace to which the network object belongs.
+             * <p>The namespace to which the network object belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -347,10 +388,13 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the rule. Valid value:
-             * <p>
+             * <p>The type of the rule. Valid value:</p>
+             * <ul>
+             * <li>customize: custom rule</li>
+             * </ul>
              * 
-             * *   customize: custom rule
+             * <strong>example:</strong>
+             * <p>customize</p>
              */
             public Builder ruleType(String ruleType) {
                 this.ruleType = ruleType;
@@ -358,18 +402,21 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             }
 
             /**
-             * The tags specified for the network object.
+             * <p>The tags specified for the network object.</p>
              */
-            public Builder tagList(java.util.List < String > tagList) {
+            public Builder tagList(java.util.List<String> tagList) {
                 this.tagList = tagList;
                 return this;
             }
 
             /**
-             * The ID of the network object.
-             * <p>
+             * <p>The ID of the network object.</p>
+             * <blockquote>
+             * <p>You can call the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to query the IDs of network objects.</p>
+             * </blockquote>
              * 
-             * > You can call the [ListInterceptionTargetPage](~~ListInterceptionTargetPage~~) operation to query the IDs of network objects.
+             * <strong>example:</strong>
+             * <p>400914</p>
              */
             public Builder targetId(Long targetId) {
                 this.targetId = targetId;
@@ -377,7 +424,10 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the network object.
+             * <p>The name of the network object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>destination-test-obj-Na3cF</p>
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -385,10 +435,13 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the network object. Valid value:
-             * <p>
+             * <p>The type of the network object. Valid value:</p>
+             * <ul>
+             * <li>IMAGE</li>
+             * </ul>
              * 
-             * *   IMAGE
+             * <strong>example:</strong>
+             * <p>IMAGE</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

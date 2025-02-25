@@ -1,33 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpcFirewallDefaultIPSConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVpcFirewallDefaultIPSConfigResponseBody</p>
  */
 public class DescribeVpcFirewallDefaultIPSConfigResponseBody extends TeaModel {
-    @NameInMap("BasicRules")
+    @com.aliyun.core.annotation.NameInMap("BasicRules")
     private Integer basicRules;
 
-    @NameInMap("EnableAllPatch")
+    @com.aliyun.core.annotation.NameInMap("EnableAllPatch")
     private Integer enableAllPatch;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RunMode")
+    @com.aliyun.core.annotation.NameInMap("RuleClass")
+    private Integer ruleClass;
+
+    @com.aliyun.core.annotation.NameInMap("RunMode")
     private Integer runMode;
 
     private DescribeVpcFirewallDefaultIPSConfigResponseBody(Builder builder) {
         this.basicRules = builder.basicRules;
         this.enableAllPatch = builder.enableAllPatch;
         this.requestId = builder.requestId;
+        this.ruleClass = builder.ruleClass;
         this.runMode = builder.runMode;
     }
 
@@ -61,6 +70,13 @@ public class DescribeVpcFirewallDefaultIPSConfigResponseBody extends TeaModel {
     }
 
     /**
+     * @return ruleClass
+     */
+    public Integer getRuleClass() {
+        return this.ruleClass;
+    }
+
+    /**
      * @return runMode
      */
     public Integer getRunMode() {
@@ -71,14 +87,18 @@ public class DescribeVpcFirewallDefaultIPSConfigResponseBody extends TeaModel {
         private Integer basicRules; 
         private Integer enableAllPatch; 
         private String requestId; 
+        private Integer ruleClass; 
         private Integer runMode; 
 
         /**
-         * Indicates whether basic policies are enabled. Valid values:
-         * <p>
+         * <p>Indicates whether basic policies are enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
          * 
-         * *   **1**: yes
-         * *   **0**: no
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder basicRules(Integer basicRules) {
             this.basicRules = basicRules;
@@ -86,11 +106,14 @@ public class DescribeVpcFirewallDefaultIPSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether virtual patching is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether virtual patching is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
          * 
-         * *   **1**: yes
-         * *   **0**: no
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder enableAllPatch(Integer enableAllPatch) {
             this.enableAllPatch = enableAllPatch;
@@ -98,7 +121,10 @@ public class DescribeVpcFirewallDefaultIPSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>850A84D6-0DE4-4797-A1E8-00090125adf1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -106,11 +132,30 @@ public class DescribeVpcFirewallDefaultIPSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The mode of the intrusion prevention system (IPS). Valid values:
-         * <p>
+         * <p>The level of the rule group for the IPS. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: loose.</li>
+         * <li><strong>2</strong>: medium.</li>
+         * <li><strong>3</strong>: strict.</li>
+         * </ul>
          * 
-         * *   **1**: block mode
-         * *   **0**: monitor mode
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder ruleClass(Integer ruleClass) {
+            this.ruleClass = ruleClass;
+            return this;
+        }
+
+        /**
+         * <p>The mode of the intrusion prevention system (IPS). Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: block mode</li>
+         * <li><strong>0</strong>: monitor mode</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder runMode(Integer runMode) {
             this.runMode = runMode;

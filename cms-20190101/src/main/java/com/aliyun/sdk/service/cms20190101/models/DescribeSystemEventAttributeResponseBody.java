@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSystemEventAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSystemEventAttributeResponseBody</p>
  */
 public class DescribeSystemEventAttributeResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
-    @NameInMap("SystemEvents")
+    @com.aliyun.core.annotation.NameInMap("SystemEvents")
     private SystemEvents systemEvents;
 
     private DescribeSystemEventAttributeResponseBody(Builder builder) {
@@ -86,10 +86,13 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
         private SystemEvents systemEvents; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the call is successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the call is successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -97,7 +100,10 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned. If the call is successful, `success` is returned. If the call fails, an error message is returned.
+         * <p>The message that is returned. If the call is successful, <code>success</code> is returned. If the call fails, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -105,7 +111,10 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60912C8D-B340-4253-ADE7-61ACDFD25CFC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -113,7 +122,10 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful. Valid values: True: The call is successful. false: The call fails.
+         * <p>Indicates whether the call is successful. Valid values: True: The call is successful. false: The call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -121,7 +133,7 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the system event.
+         * <p>The details of the event.</p>
          */
         public Builder systemEvents(SystemEvents systemEvents) {
             this.systemEvents = systemEvents;
@@ -134,38 +146,44 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSystemEventAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSystemEventAttributeResponseBody</p>
+     */
     public static class SystemEvent extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Product")
+        @com.aliyun.core.annotation.NameInMap("Product")
         private String product;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private Long time;
 
         private SystemEvent(Builder builder) {
@@ -281,7 +299,10 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
             private Long time; 
 
             /**
-             * The details of the system event.
+             * <p>The details of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;product&quot;:&quot;CloudMonitor&quot;,&quot;content&quot;:&quot;{&quot;ipGroup&quot;:&quot;112.126.XX.XX,10.163.XX.XX&quot;,&quot;tianjimonVersion&quot;:&quot;1.2.22&quot;}&quot;,&quot;groupId&quot;:&quot;176,177,178,179,180,692,120812,1663836,96,2028302&quot;,&quot;time&quot;:&quot;1552209568000&quot;,&quot;resourceId&quot;:&quot;acs:ecs:cn-beijing:173651113438****:instance/i-25k35****&quot;,&quot;level&quot;:&quot;CRITICAL&quot;,&quot;status&quot;:&quot;stopped&quot;,&quot;instanceName&quot;:&quot;cmssiteprobebj-6&quot;,&quot;name&quot;:&quot;Agent_Status_Stopped&quot;,&quot;regionId&quot;:&quot;cn-beijing&quot;}]</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -289,7 +310,10 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application group.
+             * <p>The ID of the application group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -297,7 +321,10 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The event ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b936efc9-f621-4e8a-a6eb-076be40e****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -305,7 +332,10 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instanceId1</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -313,12 +343,15 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The level of the system event. Valid values:
-             * <p>
+             * <p>The level of the event. Valid values:</p>
+             * <ul>
+             * <li>CRITICAL</li>
+             * <li>WARN</li>
+             * <li>INFO</li>
+             * </ul>
              * 
-             * *   CRITICAL: critical
-             * *   WARN: warning
-             * *   INFO: information
+             * <strong>example:</strong>
+             * <p>WARN</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -326,7 +359,10 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the system event.
+             * <p>The event name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Agent_Status_Stopped</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -334,7 +370,10 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The abbreviation of the service name.
+             * <p>The abbreviation of the service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CloudMonitor</p>
              */
             public Builder product(String product) {
                 this.product = product;
@@ -342,7 +381,10 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -350,7 +392,10 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxx-1</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -358,7 +403,10 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the system event.
+             * <p>The status of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -366,10 +414,11 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the system event occurred.
-             * <p>
+             * <p>The time when the event occurred. The value is a timestamp.</p>
+             * <p>Unit: milliseconds.</p>
              * 
-             * Unit: milliseconds.
+             * <strong>example:</strong>
+             * <p>1552199984000</p>
              */
             public Builder time(Long time) {
                 this.time = time;
@@ -383,8 +432,14 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSystemEventAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSystemEventAttributeResponseBody</p>
+     */
     public static class SystemEvents extends TeaModel {
-        @NameInMap("SystemEvent")
+        @com.aliyun.core.annotation.NameInMap("SystemEvent")
         private java.util.List < SystemEvent> systemEvent;
 
         private SystemEvents(Builder builder) {

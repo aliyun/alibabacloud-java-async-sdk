@@ -1,64 +1,73 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFlowRuleRequest} extends {@link RequestModel}
  *
  * <p>CreateFlowRuleRequest</p>
  */
 public class CreateFlowRuleRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
-    @Query
-    @NameInMap("AppName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
-    @Query
-    @NameInMap("ControlBehavior")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ControlBehavior")
     private Integer controlBehavior;
 
-    @Query
-    @NameInMap("Enable")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Enable")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean enable;
 
-    @Query
-    @NameInMap("MaxQueueingTimeMs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LimitApp")
+    private String limitApp;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxQueueingTimeMs")
     private Integer maxQueueingTimeMs;
 
-    @Query
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Resource")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Resource")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resource;
 
-    @Query
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private Integer resourceType;
 
-    @Query
-    @NameInMap("Threshold")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Threshold")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer threshold;
 
     private CreateFlowRuleRequest(Builder builder) {
@@ -68,6 +77,7 @@ public class CreateFlowRuleRequest extends Request {
         this.appName = builder.appName;
         this.controlBehavior = builder.controlBehavior;
         this.enable = builder.enable;
+        this.limitApp = builder.limitApp;
         this.maxQueueingTimeMs = builder.maxQueueingTimeMs;
         this.namespace = builder.namespace;
         this.regionId = builder.regionId;
@@ -125,6 +135,13 @@ public class CreateFlowRuleRequest extends Request {
     }
 
     /**
+     * @return limitApp
+     */
+    public String getLimitApp() {
+        return this.limitApp;
+    }
+
+    /**
      * @return maxQueueingTimeMs
      */
     public Integer getMaxQueueingTimeMs() {
@@ -172,6 +189,7 @@ public class CreateFlowRuleRequest extends Request {
         private String appName; 
         private Integer controlBehavior; 
         private Boolean enable; 
+        private String limitApp; 
         private Integer maxQueueingTimeMs; 
         private String namespace; 
         private String regionId; 
@@ -190,6 +208,7 @@ public class CreateFlowRuleRequest extends Request {
             this.appName = request.appName;
             this.controlBehavior = request.controlBehavior;
             this.enable = request.enable;
+            this.limitApp = request.limitApp;
             this.maxQueueingTimeMs = request.maxQueueingTimeMs;
             this.namespace = request.namespace;
             this.regionId = request.regionId;
@@ -199,11 +218,14 @@ public class CreateFlowRuleRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -212,7 +234,10 @@ public class CreateFlowRuleRequest extends Request {
         }
 
         /**
-         * The application ID.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ib09eblv6p@c3df23522******</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -221,7 +246,11 @@ public class CreateFlowRuleRequest extends Request {
         }
 
         /**
-         * The application name.
+         * <p>The application name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-a</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -230,34 +259,15 @@ public class CreateFlowRuleRequest extends Request {
         }
 
         /**
-         * The throttling effect.
-         * <p>
+         * <p>The throttling effect.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>0: fast failure</li>
+         * <li>2: in queue</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   0
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     fast failure
-         * 
-         *     <!-- -->
-         * 
-         * *   2
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     in queue
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder controlBehavior(Integer controlBehavior) {
             this.putQueryParameter("ControlBehavior", controlBehavior);
@@ -266,26 +276,27 @@ public class CreateFlowRuleRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the rule.
-         * <p>
+         * <p>Specifies whether to enable the rule.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   true
+         * <!-- -->
+         * </li>
+         * <li><p>false</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         *     <!-- -->
-         * 
-         * *   false
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -294,7 +305,19 @@ public class CreateFlowRuleRequest extends Request {
         }
 
         /**
-         * The timeout period. Unit: milliseconds. This value is required if the ControlBehavior parameter is set to 2.
+         * LimitApp.
+         */
+        public Builder limitApp(String limitApp) {
+            this.putQueryParameter("LimitApp", limitApp);
+            this.limitApp = limitApp;
+            return this;
+        }
+
+        /**
+         * <p>The timeout period. Unit: milliseconds. This value is required if the ControlBehavior parameter is set to 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxQueueingTimeMs(Integer maxQueueingTimeMs) {
             this.putQueryParameter("MaxQueueingTimeMs", maxQueueingTimeMs);
@@ -303,7 +326,11 @@ public class CreateFlowRuleRequest extends Request {
         }
 
         /**
-         * The namespace.
+         * <p>The namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -312,7 +339,10 @@ public class CreateFlowRuleRequest extends Request {
         }
 
         /**
-         * The region in which the instance resides.
+         * <p>The region in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -321,7 +351,11 @@ public class CreateFlowRuleRequest extends Request {
         }
 
         /**
-         * The name of the API resource.
+         * <p>The name of the API resource.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/b</p>
          */
         public Builder resource(String resource) {
             this.putQueryParameter("Resource", resource);
@@ -339,7 +373,11 @@ public class CreateFlowRuleRequest extends Request {
         }
 
         /**
-         * The throttling threshold.
+         * <p>The throttling threshold.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder threshold(Integer threshold) {
             this.putQueryParameter("Threshold", threshold);

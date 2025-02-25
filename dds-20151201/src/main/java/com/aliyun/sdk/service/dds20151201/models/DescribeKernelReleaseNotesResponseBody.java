@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeKernelReleaseNotesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeKernelReleaseNotesResponseBody</p>
  */
 public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
-    @NameInMap("ReleaseNotes")
+    @com.aliyun.core.annotation.NameInMap("ReleaseNotes")
     private ReleaseNotes releaseNotes;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeKernelReleaseNotesResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of version release notes.
+         * <p>The list of the version release notes.</p>
          */
         public Builder releaseNotes(ReleaseNotes releaseNotes) {
             this.releaseNotes = releaseNotes;
@@ -58,7 +63,10 @@ public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F01D4DDA-CB72-4083-B399-AF4642294FE6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeKernelReleaseNotesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeKernelReleaseNotesResponseBody</p>
+     */
     public static class ReleaseNote extends TeaModel {
-        @NameInMap("KernelVersion")
+        @com.aliyun.core.annotation.NameInMap("KernelVersion")
         private String kernelVersion;
 
-        @NameInMap("ReleaseNote")
+        @com.aliyun.core.annotation.NameInMap("ReleaseNote")
         private String releaseNote;
 
         private ReleaseNote(Builder builder) {
@@ -110,7 +124,10 @@ public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
             private String releaseNote; 
 
             /**
-             * The version number.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mongodb_20180619_0.4.9</p>
              */
             public Builder kernelVersion(String kernelVersion) {
                 this.kernelVersion = kernelVersion;
@@ -118,7 +135,10 @@ public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
             }
 
             /**
-             * Publishes the log.
+             * <p>The release notes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test release note.</p>
              */
             public Builder releaseNote(String releaseNote) {
                 this.releaseNote = releaseNote;
@@ -132,9 +152,15 @@ public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeKernelReleaseNotesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeKernelReleaseNotesResponseBody</p>
+     */
     public static class ReleaseNotes extends TeaModel {
-        @NameInMap("ReleaseNote")
-        private java.util.List < ReleaseNote> releaseNote;
+        @com.aliyun.core.annotation.NameInMap("ReleaseNote")
+        private java.util.List<ReleaseNote> releaseNote;
 
         private ReleaseNotes(Builder builder) {
             this.releaseNote = builder.releaseNote;
@@ -151,17 +177,20 @@ public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
         /**
          * @return releaseNote
          */
-        public java.util.List < ReleaseNote> getReleaseNote() {
+        public java.util.List<ReleaseNote> getReleaseNote() {
             return this.releaseNote;
         }
 
         public static final class Builder {
-            private java.util.List < ReleaseNote> releaseNote; 
+            private java.util.List<ReleaseNote> releaseNote; 
 
             /**
-             * Publishes the log.
+             * <p>The release notes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test release note.</p>
              */
-            public Builder releaseNote(java.util.List < ReleaseNote> releaseNote) {
+            public Builder releaseNote(java.util.List<ReleaseNote> releaseNote) {
                 this.releaseNote = releaseNote;
                 return this;
             }

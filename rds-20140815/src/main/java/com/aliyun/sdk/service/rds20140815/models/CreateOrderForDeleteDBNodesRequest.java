@@ -1,80 +1,85 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOrderForDeleteDBNodesRequest} extends {@link RequestModel}
  *
  * <p>CreateOrderForDeleteDBNodesRequest</p>
  */
 public class CreateOrderForDeleteDBNodesRequest extends Request {
-    @Query
-    @NameInMap("AutoPay")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
     private Boolean autoPay;
 
-    @Query
-    @NameInMap("BusinessInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessInfo")
     private String businessInfo;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("CommodityCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommodityCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String commodityCode;
 
-    @Query
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("DBNodeId")
-    private java.util.List < String > DBNodeId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBNodeId")
+    private java.util.List<String> DBNodeId;
 
-    @Query
-    @NameInMap("EngineVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineVersion")
     private String engineVersion;
 
-    @Query
-    @NameInMap("NodeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeType")
     private String nodeType;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PromotionCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionCode")
     private String promotionCode;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Resource")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Resource")
     private String resource;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private CreateOrderForDeleteDBNodesRequest(Builder builder) {
@@ -148,7 +153,7 @@ public class CreateOrderForDeleteDBNodesRequest extends Request {
     /**
      * @return DBNodeId
      */
-    public java.util.List < String > getDBNodeId() {
+    public java.util.List<String> getDBNodeId() {
         return this.DBNodeId;
     }
 
@@ -228,7 +233,7 @@ public class CreateOrderForDeleteDBNodesRequest extends Request {
         private String clientToken; 
         private String commodityCode; 
         private String DBInstanceId; 
-        private java.util.List < String > DBNodeId; 
+        private java.util.List<String> DBNodeId; 
         private String engineVersion; 
         private String nodeType; 
         private Long ownerId; 
@@ -265,13 +270,17 @@ public class CreateOrderForDeleteDBNodesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to automatically complete the payment. Valid values:
-         * <p>
+         * <p>Specifies whether to automatically complete the payment. Valid values:</p>
+         * <ol>
+         * <li><strong>true</strong>: You must make sure that your account balance is sufficient.</li>
+         * <li><strong>false</strong>: An unpaid order is generated.</li>
+         * </ol>
+         * <blockquote>
+         * <p> Default value: true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.</p>
+         * </blockquote>
          * 
-         * 1.  **true**: You must make sure that your account balance is sufficient.
-         * 2.  **false**: An unpaid order is generated.
-         * 
-         * >  Default value: true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -280,7 +289,10 @@ public class CreateOrderForDeleteDBNodesRequest extends Request {
         }
 
         /**
-         * The additional business information about the instance.
+         * <p>The additional business information about the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;shopCartItemId&quot;:&quot;25******&quot;,&quot;produceDriver&quot;:&quot;NoOrder&quot;,&quot;aliyun_shopcart_order_source&quot;:&quot;fromShopcart&quot;,&quot;shopCartId&quot;:&quot;10190203suffix20230509******&quot;}</p>
          */
         public Builder businessInfo(String businessInfo) {
             this.putQueryParameter("BusinessInfo", businessInfo);
@@ -289,7 +301,10 @@ public class CreateOrderForDeleteDBNodesRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -298,17 +313,21 @@ public class CreateOrderForDeleteDBNodesRequest extends Request {
         }
 
         /**
-         * The commodity code. Valid values:
-         * <p>
+         * <p>The commodity code. Valid values:</p>
+         * <ul>
+         * <li><strong>bards</strong>: The instance is a pay-as-you-go primary instance.</li>
+         * <li><strong>rds</strong>: The instance is a subscription primary instance.</li>
+         * <li><strong>rords</strong>: The instance is a pay-as-you-go read-only instance.</li>
+         * <li><strong>rds_rordspre_public_cn</strong>: The instance is a subscription read-only instance.</li>
+         * <li><strong>bards_intl</strong>: The instance is a pay-as-you-go primary instance.</li>
+         * <li><strong>rds_intl</strong>: The instance is a subscription primary instance.</li>
+         * <li><strong>rords_intl</strong>: The instance is a pay-as-you-go read-only instance.</li>
+         * <li><strong>rds_rordspre_public_intl</strong>: The instance is a subscription read-only instance.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **bards**: The instance is a pay-as-you-go primary instance.
-         * *   **rds**: The instance is a subscription primary instance.
-         * *   **rords**: The instance is a pay-as-you-go read-only instance.
-         * *   **rds_rordspre_public_cn**: The instance is a subscription read-only instance.
-         * *   **bards_intl**: The instance is a pay-as-you-go primary instance.
-         * *   **rds_intl**: The instance is a subscription primary instance.
-         * *   **rords_intl**: The instance is a pay-as-you-go read-only instance.
-         * *   **rds_rordspre_public_intl**: The instance is a subscription read-only instance.
+         * <strong>example:</strong>
+         * <p>bards</p>
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);
@@ -317,7 +336,10 @@ public class CreateOrderForDeleteDBNodesRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+         * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> operation to query the ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-8vb******</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -326,9 +348,9 @@ public class CreateOrderForDeleteDBNodesRequest extends Request {
         }
 
         /**
-         * An array that consists of information about the ID of the node.
+         * <p>An array that consists of information about the ID of the node.</p>
          */
-        public Builder DBNodeId(java.util.List < String > DBNodeId) {
+        public Builder DBNodeId(java.util.List<String> DBNodeId) {
             String DBNodeIdShrink = shrink(DBNodeId, "DBNodeId", "json");
             this.putQueryParameter("DBNodeId", DBNodeIdShrink);
             this.DBNodeId = DBNodeId;
@@ -336,10 +358,11 @@ public class CreateOrderForDeleteDBNodesRequest extends Request {
         }
 
         /**
-         * The database engine version of the instance. Valid values:
-         * <p>
+         * <p>The database engine version of the instance. Valid values:</p>
+         * <p>Valid values if you set Engine to MySQL: <strong>5.5, 5.6, 5.7, and 8.0</strong></p>
          * 
-         * Valid values if you set Engine to MySQL: **5.5, 5.6, 5.7, and 8.0**
+         * <strong>example:</strong>
+         * <p>5.7</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -348,11 +371,14 @@ public class CreateOrderForDeleteDBNodesRequest extends Request {
         }
 
         /**
-         * The type of the database node. Valid values:
-         * <p>
+         * <p>The type of the database node. Valid values:</p>
+         * <ul>
+         * <li><strong>Master</strong>: the primary node</li>
+         * <li><strong>Slave</strong>: the secondary node</li>
+         * </ul>
          * 
-         * *   **Master**: the primary node
-         * *   **Slave**: the secondary node
+         * <strong>example:</strong>
+         * <p>Master</p>
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("NodeType", nodeType);
@@ -370,7 +396,10 @@ public class CreateOrderForDeleteDBNodesRequest extends Request {
         }
 
         /**
-         * The coupon code.
+         * <p>The coupon code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliwood-1688-mobile-promotion</p>
          */
         public Builder promotionCode(String promotionCode) {
             this.putQueryParameter("PromotionCode", promotionCode);
@@ -379,7 +408,10 @@ public class CreateOrderForDeleteDBNodesRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -388,7 +420,10 @@ public class CreateOrderForDeleteDBNodesRequest extends Request {
         }
 
         /**
-         * The resources.
+         * <p>The resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>buy</p>
          */
         public Builder resource(String resource) {
             this.putQueryParameter("Resource", resource);
@@ -397,7 +432,10 @@ public class CreateOrderForDeleteDBNodesRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -424,7 +462,10 @@ public class CreateOrderForDeleteDBNodesRequest extends Request {
         }
 
         /**
-         * The zone ID.
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-a</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EvaluatePreConfigRulesResponseBody} extends {@link TeaModel}
  *
  * <p>EvaluatePreConfigRulesResponseBody</p>
  */
 public class EvaluatePreConfigRulesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceEvaluations")
-    private java.util.List < ResourceEvaluations> resourceEvaluations;
+    @com.aliyun.core.annotation.NameInMap("ResourceEvaluations")
+    private java.util.List<ResourceEvaluations> resourceEvaluations;
 
     private EvaluatePreConfigRulesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class EvaluatePreConfigRulesResponseBody extends TeaModel {
     /**
      * @return resourceEvaluations
      */
-    public java.util.List < ResourceEvaluations> getResourceEvaluations() {
+    public java.util.List<ResourceEvaluations> getResourceEvaluations() {
         return this.resourceEvaluations;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < ResourceEvaluations> resourceEvaluations; 
+        private java.util.List<ResourceEvaluations> resourceEvaluations; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>129ECF1C-7897-1131-BD0F-4B588AC05400</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class EvaluatePreConfigRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the compliance evaluation result.
+         * <p>The details of the compliance evaluation result.</p>
          */
-        public Builder resourceEvaluations(java.util.List < ResourceEvaluations> resourceEvaluations) {
+        public Builder resourceEvaluations(java.util.List<ResourceEvaluations> resourceEvaluations) {
             this.resourceEvaluations = resourceEvaluations;
             return this;
         }
@@ -71,17 +79,23 @@ public class EvaluatePreConfigRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link EvaluatePreConfigRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>EvaluatePreConfigRulesResponseBody</p>
+     */
     public static class Rules extends TeaModel {
-        @NameInMap("Annotation")
+        @com.aliyun.core.annotation.NameInMap("Annotation")
         private String annotation;
 
-        @NameInMap("ComplianceType")
+        @com.aliyun.core.annotation.NameInMap("ComplianceType")
         private String complianceType;
 
-        @NameInMap("HelpUrl")
+        @com.aliyun.core.annotation.NameInMap("HelpUrl")
         private String helpUrl;
 
-        @NameInMap("Identifier")
+        @com.aliyun.core.annotation.NameInMap("Identifier")
         private String identifier;
 
         private Rules(Builder builder) {
@@ -134,7 +148,10 @@ public class EvaluatePreConfigRulesResponseBody extends TeaModel {
             private String identifier; 
 
             /**
-             * The reason why the resource was evaluated as incompliant.
+             * <p>The reason why the resource was evaluated as incompliant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;configuration&quot;:&quot;false&quot;,&quot;desiredValue&quot;:&quot;True&quot;,&quot;operator&quot;:&quot;StringEquals&quot;,&quot;property&quot;:&quot;$.DeletionProtection&quot;}</p>
              */
             public Builder annotation(String annotation) {
                 this.annotation = annotation;
@@ -142,12 +159,15 @@ public class EvaluatePreConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The compliance type of the resource that was evaluated by using the evaluation rule. Valid values:
-             * <p>
+             * <p>The compliance type of the resource that was evaluated by using the evaluation rule. Valid values:</p>
+             * <ul>
+             * <li>COMPLIANT: The resource was evaluated as compliant.</li>
+             * <li>NON_COMPLIANT: The resource was evaluated as incompliant.</li>
+             * <li>NOT_APPLICABLE: The evaluation rule does not apply to the resource.</li>
+             * </ul>
              * 
-             * *   COMPLIANT: The resource was evaluated as compliant.
-             * *   NON_COMPLIANT: The resource was evaluated as incompliant.
-             * *   NOT_APPLICABLE: The evaluation rule does not apply to the resource.
+             * <strong>example:</strong>
+             * <p>NON_COMPLIANT</p>
              */
             public Builder complianceType(String complianceType) {
                 this.complianceType = complianceType;
@@ -155,7 +175,10 @@ public class EvaluatePreConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the topic that describes how the managed rule remediates the incompliant configurations.
+             * <p>The URL of the topic that describes how the managed rule remediates the incompliant configurations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.aliyundoc.com">https://example.aliyundoc.com</a></p>
              */
             public Builder helpUrl(String helpUrl) {
                 this.helpUrl = helpUrl;
@@ -163,7 +186,10 @@ public class EvaluatePreConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the evaluation rule.
+             * <p>The identifier of the evaluation rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs-instance-deletion-protection-enabled</p>
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -177,15 +203,21 @@ public class EvaluatePreConfigRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link EvaluatePreConfigRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>EvaluatePreConfigRulesResponseBody</p>
+     */
     public static class ResourceEvaluations extends TeaModel {
-        @NameInMap("ResourceLogicalId")
+        @com.aliyun.core.annotation.NameInMap("ResourceLogicalId")
         private String resourceLogicalId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("Rules")
-        private java.util.List < Rules> rules;
+        @com.aliyun.core.annotation.NameInMap("Rules")
+        private java.util.List<Rules> rules;
 
         private ResourceEvaluations(Builder builder) {
             this.resourceLogicalId = builder.resourceLogicalId;
@@ -218,20 +250,23 @@ public class EvaluatePreConfigRulesResponseBody extends TeaModel {
         /**
          * @return rules
          */
-        public java.util.List < Rules> getRules() {
+        public java.util.List<Rules> getRules() {
             return this.rules;
         }
 
         public static final class Builder {
             private String resourceLogicalId; 
             private String resourceType; 
-            private java.util.List < Rules> rules; 
+            private java.util.List<Rules> rules; 
 
             /**
-             * The logical ID of the resource.
-             * <p>
+             * <p>The logical ID of the resource.</p>
+             * <blockquote>
+             * <p> If the ResourceLogicalId request parameter is left empty, the value of the ResourceLogicalId response parameter is generated based on the value of the <code>ResourceProperties</code> parameter.</p>
+             * </blockquote>
              * 
-             * >  If the ResourceLogicalId request parameter is left empty, the value of the ResourceLogicalId response parameter is generated based on the value of the `ResourceProperties` parameter.
+             * <strong>example:</strong>
+             * <p>ResourceLogicId-test</p>
              */
             public Builder resourceLogicalId(String resourceLogicalId) {
                 this.resourceLogicalId = resourceLogicalId;
@@ -239,7 +274,10 @@ public class EvaluatePreConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource.
+             * <p>The type of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS::ECS::Instance</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -247,9 +285,9 @@ public class EvaluatePreConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The evaluation rules.
+             * <p>The evaluation rules.</p>
              */
-            public Builder rules(java.util.List < Rules> rules) {
+            public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
                 return this;
             }

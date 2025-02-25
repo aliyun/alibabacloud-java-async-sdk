@@ -1,19 +1,19 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDiagnosticRequest} extends {@link RequestModel}
  *
  * <p>DeleteDiagnosticRequest</p>
  */
 public class DeleteDiagnosticRequest extends Request {
-    @Query
-    @NameInMap("ReportId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReportId")
     private String reportId;
 
     private DeleteDiagnosticRequest(Builder builder) {
@@ -54,7 +54,10 @@ public class DeleteDiagnosticRequest extends Request {
         } 
 
         /**
-         * ReportId.
+         * <p>The report ID. You can troubleshoot issues based on the report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dr-56a0e30bf9854b00****</p>
          */
         public Builder reportId(String reportId) {
             this.putQueryParameter("ReportId", reportId);

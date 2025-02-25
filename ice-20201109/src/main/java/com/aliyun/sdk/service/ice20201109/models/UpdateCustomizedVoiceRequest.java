@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateCustomizedVoiceRequest} extends {@link RequestModel}
  *
  * <p>UpdateCustomizedVoiceRequest</p>
  */
 public class UpdateCustomizedVoiceRequest extends Request {
-    @Query
-    @NameInMap("DemoAudioMediaId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DemoAudioMediaId")
     private String demoAudioMediaId;
 
-    @Query
-    @NameInMap("VoiceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VoiceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String voiceId;
 
     private UpdateCustomizedVoiceRequest(Builder builder) {
@@ -69,7 +74,10 @@ public class UpdateCustomizedVoiceRequest extends Request {
         } 
 
         /**
-         * DemoAudioMediaId.
+         * <p>The media asset ID of the sample audio file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>4d5e829d498aaf966b119348</strong></strong></p>
          */
         public Builder demoAudioMediaId(String demoAudioMediaId) {
             this.putQueryParameter("DemoAudioMediaId", demoAudioMediaId);
@@ -78,7 +86,11 @@ public class UpdateCustomizedVoiceRequest extends Request {
         }
 
         /**
-         * VoiceId.
+         * <p>The voice ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xiaozhuan</p>
          */
         public Builder voiceId(String voiceId) {
             this.putQueryParameter("VoiceId", voiceId);

@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSystemEventCountResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSystemEventCountResponseBody</p>
  */
 public class DescribeSystemEventCountResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
-    @NameInMap("SystemEventCounts")
+    @com.aliyun.core.annotation.NameInMap("SystemEventCounts")
     private SystemEventCounts systemEventCounts;
 
     private DescribeSystemEventCountResponseBody(Builder builder) {
@@ -86,10 +86,13 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
         private SystemEventCounts systemEventCounts; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status codes.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -97,7 +100,11 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * <p>If the request was successful, a success message is returned. If the request failed, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -105,7 +112,10 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C7A7B776-0ACE-5A93-9B07-DE8008D9CCDF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -113,11 +123,14 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -125,7 +138,7 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the system event.
+         * <p>The details of the system event.</p>
          */
         public Builder systemEventCounts(SystemEventCounts systemEventCounts) {
             this.systemEventCounts = systemEventCounts;
@@ -138,38 +151,44 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSystemEventCountResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSystemEventCountResponseBody</p>
+     */
     public static class SystemEventCount extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Num")
+        @com.aliyun.core.annotation.NameInMap("Num")
         private Long num;
 
-        @NameInMap("Product")
+        @com.aliyun.core.annotation.NameInMap("Product")
         private String product;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private Long time;
 
         private SystemEventCount(Builder builder) {
@@ -285,7 +304,7 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
             private Long time; 
 
             /**
-             * The description of the system event.
+             * <p>The description of the system event.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -293,7 +312,10 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application group.
+             * <p>The ID of the application group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17285****</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -301,7 +323,10 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS-test</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -309,12 +334,15 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * The level of the system event. Valid values:
-             * <p>
+             * <p>The level of the system event. Valid values:</p>
+             * <ul>
+             * <li>Critical</li>
+             * <li>Warn</li>
+             * <li>Info</li>
+             * </ul>
              * 
-             * *   Critical
-             * *   Warn
-             * *   Info
+             * <strong>example:</strong>
+             * <p>Info</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -322,7 +350,10 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the system event.
+             * <p>The name of the system event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Instance:StateChange</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -330,7 +361,10 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that the system event occurred.
+             * <p>The number of times that the system event has occurred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder num(Long num) {
                 this.num = num;
@@ -338,7 +372,10 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cloud service in which the system event occurred.
+             * <p>The name of the cloud service in which the system event occurred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS</p>
              */
             public Builder product(String product) {
                 this.product = product;
@@ -346,7 +383,10 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -354,7 +394,10 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-rj99xc6cptkk64ml****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -362,7 +405,10 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the system event.
+             * <p>The status of the system event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -370,7 +416,10 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the system event occurred. Unit: milliseconds.
+             * <p>The time when the system event occurred. The value is a timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1635993751000</p>
              */
             public Builder time(Long time) {
                 this.time = time;
@@ -384,8 +433,14 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSystemEventCountResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSystemEventCountResponseBody</p>
+     */
     public static class SystemEventCounts extends TeaModel {
-        @NameInMap("SystemEventCount")
+        @com.aliyun.core.annotation.NameInMap("SystemEventCount")
         private java.util.List < SystemEventCount> systemEventCount;
 
         private SystemEventCounts(Builder builder) {

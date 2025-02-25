@@ -91,16 +91,16 @@ public class ModifyRdsReadWeightRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyRdsReadWeightRequest response) {
-            super(response);
-            this.dbName = response.dbName;
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.instanceNames = response.instanceNames;
-            this.weights = response.weights;
+        private Builder(ModifyRdsReadWeightRequest request) {
+            super(request);
+            this.dbName = request.dbName;
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.instanceNames = request.instanceNames;
+            this.weights = request.weights;
         } 
 
         /**
-         * DbName.
+         * The name of the database.
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -109,7 +109,7 @@ public class ModifyRdsReadWeightRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the PolarDB-X 1.0 instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -118,7 +118,7 @@ public class ModifyRdsReadWeightRequest extends Request {
         }
 
         /**
-         * InstanceNames.
+         * The names of the ApsaraDB RDS for MySQL instances. Separate the names with commas (,).
          */
         public Builder instanceNames(String instanceNames) {
             this.putQueryParameter("InstanceNames", instanceNames);
@@ -127,7 +127,7 @@ public class ModifyRdsReadWeightRequest extends Request {
         }
 
         /**
-         * Weights.
+         * The weights of the ApsaraDB RDS for MySQL instances. Separate the weights with commas (,).
          */
         public Builder weights(String weights) {
             this.putQueryParameter("Weights", weights);

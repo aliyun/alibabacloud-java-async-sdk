@@ -1,3 +1,27 @@
+2025-01-20 Version: 1.0.8
+- Generated java-async 2020-09-07 for Config.
+
+2024-12-18 Version: 1.0.7
+- Generated java-async 2020-09-07 for Config.
+
+2024-08-29 Version: 1.0.6
+- Generated java-async 2020-09-07 for Config.
+
+2024-08-07 Version: 1.0.5
+- Generated java-async 2020-09-07 for Config.
+
+2024-08-01 Version: 1.0.4
+- Generated java-async 2020-09-07 for Config.
+
+2024-06-19 Version: 1.0.3
+- Generated java-async 2020-09-07 for Config.
+
+2024-06-12 Version: 1.0.2
+- Generated java-async 2020-09-07 for Config.
+
+2024-01-29 Version: 1.0.1
+- Generated java-async 2020-09-07 for Config.
+
 2023-11-06 Version: 1.0.0
 - Generated java-async 2020-09-07 for Config.
 

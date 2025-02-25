@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVpnAttachmentResponseBody} extends {@link TeaModel}
  *
  * <p>CreateVpnAttachmentResponseBody</p>
  */
 public class CreateVpnAttachmentResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private Long createTime;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("VpnConnectionId")
+    @com.aliyun.core.annotation.NameInMap("VpnConnectionId")
     private String vpnConnectionId;
 
     private CreateVpnAttachmentResponseBody(Builder builder) {
@@ -110,7 +115,10 @@ public class CreateVpnAttachmentResponseBody extends TeaModel {
         private String vpnConnectionId; 
 
         /**
-         * The status code returned by the current operation. **200** indicates that the operation is successful.
+         * <p>The status code returned by the current operation. <strong>200</strong> indicates that the operation is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,10 +126,11 @@ public class CreateVpnAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp generated when the IPsec-VPN connection was established. Unit: milliseconds.
-         * <p>
+         * <p>The timestamp generated when the IPsec-VPN connection was established. Unit: milliseconds.</p>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
          * 
-         * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+         * <strong>example:</strong>
+         * <p>1658201810000</p>
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -129,7 +138,10 @@ public class CreateVpnAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * The information returned by the current operation.
+         * <p>The information returned by the current operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -137,7 +149,10 @@ public class CreateVpnAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the IPsec-VPN connection.
+         * <p>The name of the IPsec-VPN connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nametest</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -145,7 +160,10 @@ public class CreateVpnAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>88187252-0E26-3C4D-9D1D-32A04454EBBA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -153,11 +171,14 @@ public class CreateVpnAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the current operation is successful.
-         * <p>
+         * <p>Indicates whether the current operation is successful.</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -165,7 +186,10 @@ public class CreateVpnAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the IPsec-VPN connection.
+         * <p>The ID of the IPsec-VPN connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vco-p0wb09rama8qwwgfn****</p>
          */
         public Builder vpnConnectionId(String vpnConnectionId) {
             this.vpnConnectionId = vpnConnectionId;

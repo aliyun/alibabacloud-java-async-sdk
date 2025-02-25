@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSupportedProductsResponseBody} extends {@link TeaModel}
  *
  * <p>ListSupportedProductsResponseBody</p>
  */
 public class ListSupportedProductsResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private String maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("Products")
-    private java.util.List < Products> products;
+    @com.aliyun.core.annotation.NameInMap("Products")
+    private java.util.List<Products> products;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListSupportedProductsResponseBody(Builder builder) {
@@ -56,7 +61,7 @@ public class ListSupportedProductsResponseBody extends TeaModel {
     /**
      * @return products
      */
-    public java.util.List < Products> getProducts() {
+    public java.util.List<Products> getProducts() {
         return this.products;
     }
 
@@ -70,11 +75,14 @@ public class ListSupportedProductsResponseBody extends TeaModel {
     public static final class Builder {
         private String maxResults; 
         private String nextToken; 
-        private java.util.List < Products> products; 
+        private java.util.List<Products> products; 
         private String requestId; 
 
         /**
-         * The maximum number of entries returned for a single request. Valid values: 1 to 500.
+         * <p>The maximum number of entries to return for a single request. Valid values: 1 to 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(String maxResults) {
             this.maxResults = maxResults;
@@ -82,7 +90,10 @@ public class ListSupportedProductsResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D3AjqMNSy0ls7zBNCf3a****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -90,15 +101,18 @@ public class ListSupportedProductsResponseBody extends TeaModel {
         }
 
         /**
-         * The cloud services that are supported by Cloud Config.
+         * <p>The cloud services that are supported by Cloud Config.</p>
          */
-        public Builder products(java.util.List < Products> products) {
+        public Builder products(java.util.List<Products> products) {
             this.products = products;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>610B0276-ABEE-57DF-9C13-C2324FADA9D7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,17 +125,23 @@ public class ListSupportedProductsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSupportedProductsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSupportedProductsResponseBody</p>
+     */
     public static class ResourceTypeList extends TeaModel {
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("TypeNameEn")
+        @com.aliyun.core.annotation.NameInMap("TypeNameEn")
         private String typeNameEn;
 
-        @NameInMap("TypeNameZh")
+        @com.aliyun.core.annotation.NameInMap("TypeNameZh")
         private String typeNameZh;
 
-        @NameInMap("TypePageLink")
+        @com.aliyun.core.annotation.NameInMap("TypePageLink")
         private String typePageLink;
 
         private ResourceTypeList(Builder builder) {
@@ -174,7 +194,10 @@ public class ListSupportedProductsResponseBody extends TeaModel {
             private String typePageLink; 
 
             /**
-             * The identifier of the resource type.
+             * <p>The identifier of the resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS::ECS::Instance</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -182,7 +205,10 @@ public class ListSupportedProductsResponseBody extends TeaModel {
             }
 
             /**
-             * The English name of the resource type.
+             * <p>The English name of the resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ecs Instance</p>
              */
             public Builder typeNameEn(String typeNameEn) {
                 this.typeNameEn = typeNameEn;
@@ -190,7 +216,10 @@ public class ListSupportedProductsResponseBody extends TeaModel {
             }
 
             /**
-             * The Chinese name of the resource type.
+             * <p>The Chinese name of the resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS实例</p>
              */
             public Builder typeNameZh(String typeNameZh) {
                 this.typeNameZh = typeNameZh;
@@ -198,7 +227,10 @@ public class ListSupportedProductsResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the resource type in the console.
+             * <p>The URL of the resource type in the console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://ecs.console.aliyun.com/#/server/@%7BResourceId%7D/detail?regionId=@%7BRegionId%7D">https://ecs.console.aliyun.com/#/server/@{ResourceId}/detail?regionId=@{RegionId}</a></p>
              */
             public Builder typePageLink(String typePageLink) {
                 this.typePageLink = typePageLink;
@@ -212,15 +244,21 @@ public class ListSupportedProductsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSupportedProductsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSupportedProductsResponseBody</p>
+     */
     public static class Products extends TeaModel {
-        @NameInMap("ProductNameEn")
+        @com.aliyun.core.annotation.NameInMap("ProductNameEn")
         private String productNameEn;
 
-        @NameInMap("ProductNameZh")
+        @com.aliyun.core.annotation.NameInMap("ProductNameZh")
         private String productNameZh;
 
-        @NameInMap("ResourceTypeList")
-        private java.util.List < ResourceTypeList> resourceTypeList;
+        @com.aliyun.core.annotation.NameInMap("ResourceTypeList")
+        private java.util.List<ResourceTypeList> resourceTypeList;
 
         private Products(Builder builder) {
             this.productNameEn = builder.productNameEn;
@@ -253,17 +291,20 @@ public class ListSupportedProductsResponseBody extends TeaModel {
         /**
          * @return resourceTypeList
          */
-        public java.util.List < ResourceTypeList> getResourceTypeList() {
+        public java.util.List<ResourceTypeList> getResourceTypeList() {
             return this.resourceTypeList;
         }
 
         public static final class Builder {
             private String productNameEn; 
             private String productNameZh; 
-            private java.util.List < ResourceTypeList> resourceTypeList; 
+            private java.util.List<ResourceTypeList> resourceTypeList; 
 
             /**
-             * The English name of the cloud service.
+             * <p>The English name of the Alibaba Cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Elastic Compute Service</p>
              */
             public Builder productNameEn(String productNameEn) {
                 this.productNameEn = productNameEn;
@@ -271,7 +312,10 @@ public class ListSupportedProductsResponseBody extends TeaModel {
             }
 
             /**
-             * The Chinese name of the cloud service.
+             * <p>The Chinese name of the Alibaba Cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>云服务器ECS</p>
              */
             public Builder productNameZh(String productNameZh) {
                 this.productNameZh = productNameZh;
@@ -279,9 +323,9 @@ public class ListSupportedProductsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource types that are supported by Cloud Config.
+             * <p>The resource types that are supported by Cloud Config.</p>
              */
-            public Builder resourceTypeList(java.util.List < ResourceTypeList> resourceTypeList) {
+            public Builder resourceTypeList(java.util.List<ResourceTypeList> resourceTypeList) {
                 this.resourceTypeList = resourceTypeList;
                 return this;
             }

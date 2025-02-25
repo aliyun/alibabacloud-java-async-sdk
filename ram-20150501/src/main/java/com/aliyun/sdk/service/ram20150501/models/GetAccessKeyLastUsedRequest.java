@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAccessKeyLastUsedRequest} extends {@link RequestModel}
  *
  * <p>GetAccessKeyLastUsedRequest</p>
  */
 public class GetAccessKeyLastUsedRequest extends Request {
-    @Query
-    @NameInMap("UserAccessKeyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserAccessKeyId")
     private String userAccessKeyId;
 
-    @Query
-    @NameInMap("UserName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserName")
     private String userName;
 
     private GetAccessKeyLastUsedRequest(Builder builder) {
@@ -61,10 +66,10 @@ public class GetAccessKeyLastUsedRequest extends Request {
             super();
         } 
 
-        private Builder(GetAccessKeyLastUsedRequest response) {
-            super(response);
-            this.userAccessKeyId = response.userAccessKeyId;
-            this.userName = response.userName;
+        private Builder(GetAccessKeyLastUsedRequest request) {
+            super(request);
+            this.userAccessKeyId = request.userAccessKeyId;
+            this.userName = request.userName;
         } 
 
         /**

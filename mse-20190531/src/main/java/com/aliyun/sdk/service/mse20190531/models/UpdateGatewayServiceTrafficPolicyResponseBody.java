@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGatewayServiceTrafficPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateGatewayServiceTrafficPolicyResponseBody</p>
  */
 public class UpdateGatewayServiceTrafficPolicyResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private GatewayService data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private UpdateGatewayServiceTrafficPolicyResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class UpdateGatewayServiceTrafficPolicyResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +114,10 @@ public class UpdateGatewayServiceTrafficPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data.
+         * <p>The details of the data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;GatewayUniqueId&quot;: &quot;gw-2b8ebd75dc554c37a4279ba9917379f2&quot;, &quot;Id&quot;: 417, &quot;GatewayTrafficPolicy&quot;: {&quot;LoadBalancerSettings&quot;: {&quot;LoadbalancerType&quot;: &quot;ROUND_ROBIN&quot;}, &quot;TlsSetting&quot;: {&quot;TlsMode&quot;: &quot;DISABLE&quot;}}}</p>
          */
         public Builder data(GatewayService data) {
             this.data = data;
@@ -114,7 +125,10 @@ public class UpdateGatewayServiceTrafficPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +136,10 @@ public class UpdateGatewayServiceTrafficPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request was successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +147,10 @@ public class UpdateGatewayServiceTrafficPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11A61389-F896-5231-A4FB-074D9E2E0055</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +158,14 @@ public class UpdateGatewayServiceTrafficPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
-         * <p>
+         * <p>Indicates whether the request was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

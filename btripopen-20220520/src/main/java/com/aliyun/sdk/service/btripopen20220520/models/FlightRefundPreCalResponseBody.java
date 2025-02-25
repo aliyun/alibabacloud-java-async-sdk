@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightRefundPreCalResponseBody} extends {@link TeaModel}
  *
  * <p>FlightRefundPreCalResponseBody</p>
  */
 public class FlightRefundPreCalResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private FlightRefundPreCalResponseBody(Builder builder) {
@@ -151,20 +156,26 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FlightRefundPreCalResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightRefundPreCalResponseBody</p>
+     */
     public static class MultiRefundCalList extends TeaModel {
-        @NameInMap("can_apply_refund")
+        @com.aliyun.core.annotation.NameInMap("can_apply_refund")
         private Boolean canApplyRefund;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("pre_refund_money")
+        @com.aliyun.core.annotation.NameInMap("pre_refund_money")
         private Long preRefundMoney;
 
-        @NameInMap("refund_fee")
+        @com.aliyun.core.annotation.NameInMap("refund_fee")
         private Long refundFee;
 
-        @NameInMap("user_id")
+        @com.aliyun.core.annotation.NameInMap("user_id")
         private String userId;
 
         private MultiRefundCalList(Builder builder) {
@@ -272,23 +283,29 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightRefundPreCalResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightRefundPreCalResponseBody</p>
+     */
     public static class ReturnReason extends TeaModel {
-        @NameInMap("extend_desc")
+        @com.aliyun.core.annotation.NameInMap("extend_desc")
         private String extendDesc;
 
-        @NameInMap("person")
+        @com.aliyun.core.annotation.NameInMap("person")
         private Integer person;
 
-        @NameInMap("reason_code")
+        @com.aliyun.core.annotation.NameInMap("reason_code")
         private Integer reasonCode;
 
-        @NameInMap("reason_show")
+        @com.aliyun.core.annotation.NameInMap("reason_show")
         private String reasonShow;
 
-        @NameInMap("reason_type")
+        @com.aliyun.core.annotation.NameInMap("reason_type")
         private Integer reasonType;
 
-        @NameInMap("volunteer")
+        @com.aliyun.core.annotation.NameInMap("volunteer")
         private Integer volunteer;
 
         private ReturnReason(Builder builder) {
@@ -413,29 +430,35 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightRefundPreCalResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightRefundPreCalResponseBody</p>
+     */
     public static class Module extends TeaModel {
-        @NameInMap("flight_change")
+        @com.aliyun.core.annotation.NameInMap("flight_change")
         private Boolean flightChange;
 
-        @NameInMap("item_unit_id")
+        @com.aliyun.core.annotation.NameInMap("item_unit_id")
         private String itemUnitId;
 
-        @NameInMap("multi_refund_cal_list")
-        private java.util.List < MultiRefundCalList> multiRefundCalList;
+        @com.aliyun.core.annotation.NameInMap("multi_refund_cal_list")
+        private java.util.List<MultiRefundCalList> multiRefundCalList;
 
-        @NameInMap("pre_refund_money")
+        @com.aliyun.core.annotation.NameInMap("pre_refund_money")
         private Long preRefundMoney;
 
-        @NameInMap("refund_fee")
+        @com.aliyun.core.annotation.NameInMap("refund_fee")
         private Long refundFee;
 
-        @NameInMap("return_reason")
-        private java.util.List < ReturnReason> returnReason;
+        @com.aliyun.core.annotation.NameInMap("return_reason")
+        private java.util.List<ReturnReason> returnReason;
 
-        @NameInMap("session_id")
+        @com.aliyun.core.annotation.NameInMap("session_id")
         private String sessionId;
 
-        @NameInMap("tips")
+        @com.aliyun.core.annotation.NameInMap("tips")
         private String tips;
 
         private Module(Builder builder) {
@@ -474,7 +497,7 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
         /**
          * @return multiRefundCalList
          */
-        public java.util.List < MultiRefundCalList> getMultiRefundCalList() {
+        public java.util.List<MultiRefundCalList> getMultiRefundCalList() {
             return this.multiRefundCalList;
         }
 
@@ -495,7 +518,7 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
         /**
          * @return returnReason
          */
-        public java.util.List < ReturnReason> getReturnReason() {
+        public java.util.List<ReturnReason> getReturnReason() {
             return this.returnReason;
         }
 
@@ -516,10 +539,10 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean flightChange; 
             private String itemUnitId; 
-            private java.util.List < MultiRefundCalList> multiRefundCalList; 
+            private java.util.List<MultiRefundCalList> multiRefundCalList; 
             private Long preRefundMoney; 
             private Long refundFee; 
-            private java.util.List < ReturnReason> returnReason; 
+            private java.util.List<ReturnReason> returnReason; 
             private String sessionId; 
             private String tips; 
 
@@ -542,7 +565,7 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
             /**
              * multi_refund_cal_list.
              */
-            public Builder multiRefundCalList(java.util.List < MultiRefundCalList> multiRefundCalList) {
+            public Builder multiRefundCalList(java.util.List<MultiRefundCalList> multiRefundCalList) {
                 this.multiRefundCalList = multiRefundCalList;
                 return this;
             }
@@ -566,7 +589,7 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
             /**
              * return_reason.
              */
-            public Builder returnReason(java.util.List < ReturnReason> returnReason) {
+            public Builder returnReason(java.util.List<ReturnReason> returnReason) {
                 this.returnReason = returnReason;
                 return this;
             }

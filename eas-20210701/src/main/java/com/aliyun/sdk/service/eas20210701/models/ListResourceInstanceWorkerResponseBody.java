@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourceInstanceWorkerResponseBody} extends {@link TeaModel}
  *
  * <p>ListResourceInstanceWorkerResponseBody</p>
  */
 public class ListResourceInstanceWorkerResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("Pods")
-    private java.util.List < ResourceInstanceWorker > pods;
+    @com.aliyun.core.annotation.NameInMap("Pods")
+    private java.util.List<ResourceInstanceWorker> pods;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListResourceInstanceWorkerResponseBody(Builder builder) {
@@ -60,7 +65,7 @@ public class ListResourceInstanceWorkerResponseBody extends TeaModel {
     /**
      * @return pods
      */
-    public java.util.List < ResourceInstanceWorker > getPods() {
+    public java.util.List<ResourceInstanceWorker> getPods() {
         return this.pods;
     }
 
@@ -81,12 +86,15 @@ public class ListResourceInstanceWorkerResponseBody extends TeaModel {
     public static final class Builder {
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < ResourceInstanceWorker > pods; 
+        private java.util.List<ResourceInstanceWorker> pods; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +102,10 @@ public class ListResourceInstanceWorkerResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,15 +113,18 @@ public class ListResourceInstanceWorkerResponseBody extends TeaModel {
         }
 
         /**
-         * Pods.
+         * <p>The workers.</p>
          */
-        public Builder pods(java.util.List < ResourceInstanceWorker > pods) {
+        public Builder pods(java.util.List<ResourceInstanceWorker> pods) {
             this.pods = pods;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class ListResourceInstanceWorkerResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

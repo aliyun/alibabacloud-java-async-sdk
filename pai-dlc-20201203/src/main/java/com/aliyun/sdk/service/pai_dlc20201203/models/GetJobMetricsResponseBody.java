@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetJobMetricsResponseBody} extends {@link TeaModel}
  *
  * <p>GetJobMetricsResponseBody</p>
  */
 public class GetJobMetricsResponseBody extends TeaModel {
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @NameInMap("PodMetrics")
-    private java.util.List < PodMetric > podMetrics;
+    @com.aliyun.core.annotation.NameInMap("PodMetrics")
+    private java.util.List<PodMetric> podMetrics;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetJobMetricsResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class GetJobMetricsResponseBody extends TeaModel {
     /**
      * @return podMetrics
      */
-    public java.util.List < PodMetric > getPodMetrics() {
+    public java.util.List<PodMetric> getPodMetrics() {
         return this.podMetrics;
     }
 
@@ -58,7 +63,7 @@ public class GetJobMetricsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String jobId; 
-        private java.util.List < PodMetric > podMetrics; 
+        private java.util.List<PodMetric> podMetrics; 
         private String requestId; 
 
         /**
@@ -72,7 +77,7 @@ public class GetJobMetricsResponseBody extends TeaModel {
         /**
          * PodMetrics.
          */
-        public Builder podMetrics(java.util.List < PodMetric > podMetrics) {
+        public Builder podMetrics(java.util.List<PodMetric> podMetrics) {
             this.podMetrics = podMetrics;
             return this;
         }

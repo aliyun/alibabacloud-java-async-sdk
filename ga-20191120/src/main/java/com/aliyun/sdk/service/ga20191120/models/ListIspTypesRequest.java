@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListIspTypesRequest</p>
  */
 public class ListIspTypesRequest extends Request {
-    @Query
-    @NameInMap("AcceleratorId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceleratorId")
     private String acceleratorId;
 
-    @Query
-    @NameInMap("AcceleratorType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceleratorType")
     private String acceleratorType;
 
-    @Query
-    @NameInMap("BusinessRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String businessRegionId;
 
     private ListIspTypesRequest(Builder builder) {
@@ -83,7 +82,7 @@ public class ListIspTypesRequest extends Request {
         } 
 
         /**
-         * AcceleratorId.
+         * The ID of the GA instance that you want to query.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);

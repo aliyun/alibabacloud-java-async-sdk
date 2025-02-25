@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIPv6TranslatorsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeIPv6TranslatorsResponseBody</p>
  */
 public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
-    @NameInMap("Ipv6Translators")
+    @com.aliyun.core.annotation.NameInMap("Ipv6Translators")
     private Ipv6Translators ipv6Translators;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeIPv6TranslatorsResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The list of IPv6 Translation Service instances.
+         * <p>The list of IPv6 Translation Service instances.</p>
          */
         public Builder ipv6Translators(Ipv6Translators ipv6Translators) {
             this.ipv6Translators = ipv6Translators;
@@ -94,7 +99,10 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54B48E3D-DF70-471B-AA93-08E683A1B45</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of returned entries.
+         * <p>The number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,9 +148,15 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeIPv6TranslatorsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIPv6TranslatorsResponseBody</p>
+     */
     public static class Ipv6TranslatorEntryIds extends TeaModel {
-        @NameInMap("Ipv6TranslatorEntryId")
-        private java.util.List < String > ipv6TranslatorEntryId;
+        @com.aliyun.core.annotation.NameInMap("Ipv6TranslatorEntryId")
+        private java.util.List<String> ipv6TranslatorEntryId;
 
         private Ipv6TranslatorEntryIds(Builder builder) {
             this.ipv6TranslatorEntryId = builder.ipv6TranslatorEntryId;
@@ -150,17 +173,17 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
         /**
          * @return ipv6TranslatorEntryId
          */
-        public java.util.List < String > getIpv6TranslatorEntryId() {
+        public java.util.List<String> getIpv6TranslatorEntryId() {
             return this.ipv6TranslatorEntryId;
         }
 
         public static final class Builder {
-            private java.util.List < String > ipv6TranslatorEntryId; 
+            private java.util.List<String> ipv6TranslatorEntryId; 
 
             /**
              * Ipv6TranslatorEntryId.
              */
-            public Builder ipv6TranslatorEntryId(java.util.List < String > ipv6TranslatorEntryId) {
+            public Builder ipv6TranslatorEntryId(java.util.List<String> ipv6TranslatorEntryId) {
                 this.ipv6TranslatorEntryId = ipv6TranslatorEntryId;
                 return this;
             }
@@ -172,50 +195,56 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIPv6TranslatorsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIPv6TranslatorsResponseBody</p>
+     */
     public static class Ipv6Translator extends TeaModel {
-        @NameInMap("AllocateIpv4Addr")
+        @com.aliyun.core.annotation.NameInMap("AllocateIpv4Addr")
         private String allocateIpv4Addr;
 
-        @NameInMap("AllocateIpv6Addr")
+        @com.aliyun.core.annotation.NameInMap("AllocateIpv6Addr")
         private String allocateIpv6Addr;
 
-        @NameInMap("AvailableBandwidth")
+        @com.aliyun.core.annotation.NameInMap("AvailableBandwidth")
         private String availableBandwidth;
 
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Integer bandwidth;
 
-        @NameInMap("BusinessStatus")
+        @com.aliyun.core.annotation.NameInMap("BusinessStatus")
         private String businessStatus;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("Ipv6TranslatorEntryIds")
+        @com.aliyun.core.annotation.NameInMap("Ipv6TranslatorEntryIds")
         private Ipv6TranslatorEntryIds ipv6TranslatorEntryIds;
 
-        @NameInMap("Ipv6TranslatorId")
+        @com.aliyun.core.annotation.NameInMap("Ipv6TranslatorId")
         private String ipv6TranslatorId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Spec")
+        @com.aliyun.core.annotation.NameInMap("Spec")
         private String spec;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Ipv6Translator(Builder builder) {
@@ -367,7 +396,10 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The IPv4 address allocated to the IPv6 Translation Service instance.
+             * <p>The IPv4 address allocated to the IPv6 Translation Service instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.99.XX.XX</p>
              */
             public Builder allocateIpv4Addr(String allocateIpv4Addr) {
                 this.allocateIpv4Addr = allocateIpv4Addr;
@@ -375,7 +407,10 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * The IPv6 address allocated to the IPv6 Translation Service instance.
+             * <p>The IPv6 address allocated to the IPv6 Translation Service instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2400:3200:1600::XXXX</p>
              */
             public Builder allocateIpv6Addr(String allocateIpv6Addr) {
                 this.allocateIpv6Addr = allocateIpv6Addr;
@@ -383,7 +418,10 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * The bandwidth of the IPv6 Translation Service instance.
+             * <p>The bandwidth of the IPv6 Translation Service instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder availableBandwidth(String availableBandwidth) {
                 this.availableBandwidth = availableBandwidth;
@@ -391,7 +429,10 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * The bandwidth of the IPv6 Translation Service instance. Unit: Mbit/s.
+             * <p>The bandwidth of the IPv6 Translation Service instance. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -399,11 +440,14 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * The business status of the IPv6 Translation Service instance. Valid values:
-             * <p>
+             * <p>The business status of the IPv6 Translation Service instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal</strong></li>
+             * <li><strong>FinancialLocked</strong></li>
+             * </ul>
              * 
-             * *   **Normal**
-             * *   **FinancialLocked**
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder businessStatus(String businessStatus) {
                 this.businessStatus = businessStatus;
@@ -411,7 +455,10 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the IPv6 Translation Service instance was created.
+             * <p>The timestamp when the IPv6 Translation Service instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1537151540000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -419,7 +466,10 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the IPv6 Translation Service instance.
+             * <p>The description of the IPv6 Translation Service instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>descriptionforinstance</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -427,7 +477,10 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when IPv6 Translation Service instance expires.
+             * <p>The timestamp when IPv6 Translation Service instance expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1539792000000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -435,7 +488,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of IPv6 mapping entries of the IPv6 Translation Service instance.
+             * <p>The IDs of IPv6 mapping entries of the IPv6 Translation Service instance.</p>
              */
             public Builder ipv6TranslatorEntryIds(Ipv6TranslatorEntryIds ipv6TranslatorEntryIds) {
                 this.ipv6TranslatorEntryIds = ipv6TranslatorEntryIds;
@@ -443,7 +496,10 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the IPv6 Translation Service instance.
+             * <p>The ID of the IPv6 Translation Service instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipv6trans-bp1858ys*****</p>
              */
             public Builder ipv6TranslatorId(String ipv6TranslatorId) {
                 this.ipv6TranslatorId = ipv6TranslatorId;
@@ -451,7 +507,10 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the IPv6 Translation Service instance.
+             * <p>The name of the IPv6 Translation Service instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -459,11 +518,14 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the IPv6 Translation Service instance.
-             * <p>
+             * <p>The billing method of the IPv6 Translation Service instance.</p>
+             * <ul>
+             * <li><strong>Prepay</strong>: subscription</li>
+             * <li><strong>Postpay</strong>: pay-as-you-go</li>
+             * </ul>
              * 
-             * *   **Prepay**: subscription
-             * *   **Postpay**: pay-as-you-go
+             * <strong>example:</strong>
+             * <p>Prepay</p>
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -471,7 +533,10 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * The region of the IPv6 Translation Service instance.
+             * <p>The region of the IPv6 Translation Service instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -479,7 +544,10 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * The specification of the IPv6 Translation Service instance.
+             * <p>The specification of the IPv6 Translation Service instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>small</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -487,7 +555,10 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the IPv6 Translation Service instance.
+             * <p>The status of the IPv6 Translation Service instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -501,9 +572,15 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIPv6TranslatorsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIPv6TranslatorsResponseBody</p>
+     */
     public static class Ipv6Translators extends TeaModel {
-        @NameInMap("Ipv6Translator")
-        private java.util.List < Ipv6Translator> ipv6Translator;
+        @com.aliyun.core.annotation.NameInMap("Ipv6Translator")
+        private java.util.List<Ipv6Translator> ipv6Translator;
 
         private Ipv6Translators(Builder builder) {
             this.ipv6Translator = builder.ipv6Translator;
@@ -520,17 +597,17 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
         /**
          * @return ipv6Translator
          */
-        public java.util.List < Ipv6Translator> getIpv6Translator() {
+        public java.util.List<Ipv6Translator> getIpv6Translator() {
             return this.ipv6Translator;
         }
 
         public static final class Builder {
-            private java.util.List < Ipv6Translator> ipv6Translator; 
+            private java.util.List<Ipv6Translator> ipv6Translator; 
 
             /**
              * Ipv6Translator.
              */
-            public Builder ipv6Translator(java.util.List < Ipv6Translator> ipv6Translator) {
+            public Builder ipv6Translator(java.util.List<Ipv6Translator> ipv6Translator) {
                 this.ipv6Translator = ipv6Translator;
                 return this;
             }

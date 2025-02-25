@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryUserOmsDataResponseBody} extends {@link TeaModel}
  *
  * <p>QueryUserOmsDataResponseBody</p>
  */
 public class QueryUserOmsDataResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryUserOmsDataResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,10 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful！</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,15 +148,21 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryUserOmsDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryUserOmsDataResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("HostId")
+        @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;
 
-        @NameInMap("Marker")
+        @com.aliyun.core.annotation.NameInMap("Marker")
         private String marker;
 
-        @NameInMap("OmsData")
-        private java.util.List < java.util.Map<String, ?>> omsData;
+        @com.aliyun.core.annotation.NameInMap("OmsData")
+        private java.util.List<java.util.Map<String, ?>> omsData;
 
         private Data(Builder builder) {
             this.hostId = builder.hostId;
@@ -172,17 +195,20 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
         /**
          * @return omsData
          */
-        public java.util.List < java.util.Map<String, ?>> getOmsData() {
+        public java.util.List<java.util.Map<String, ?>> getOmsData() {
             return this.omsData;
         }
 
         public static final class Builder {
             private String hostId; 
             private String marker; 
-            private java.util.List < java.util.Map<String, ?>> omsData; 
+            private java.util.List<java.util.Map<String, ?>> omsData; 
 
             /**
-             * The ID of the host.
+             * <p>The ID of the host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn</p>
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -190,7 +216,10 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates that the returned usage data starts from the next page. If no value is returned for this parameter or this parameter is not returned, no data can be queried.
+             * <p>Indicates that the returned usage data starts from the next page. If no value is returned for this parameter or this parameter is not returned, no data can be queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NextToken</p>
              */
             public Builder marker(String marker) {
                 this.marker = marker;
@@ -200,7 +229,7 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
             /**
              * OmsData.
              */
-            public Builder omsData(java.util.List < java.util.Map<String, ?>> omsData) {
+            public Builder omsData(java.util.List<java.util.Map<String, ?>> omsData) {
                 this.omsData = omsData;
                 return this;
             }

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAntChainBlockResponseBody</p>
  */
 public class DescribeAntChainBlockResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private DescribeAntChainBlockResponseBody(Builder builder) {
@@ -72,31 +71,31 @@ public class DescribeAntChainBlockResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("AntChainId")
+        @com.aliyun.core.annotation.NameInMap("AntChainId")
         private String antChainId;
 
-        @NameInMap("BlockHash")
+        @com.aliyun.core.annotation.NameInMap("BlockHash")
         private String blockHash;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Integer height;
 
-        @NameInMap("PreviousHash")
+        @com.aliyun.core.annotation.NameInMap("PreviousHash")
         private String previousHash;
 
-        @NameInMap("RootTxHash")
+        @com.aliyun.core.annotation.NameInMap("RootTxHash")
         private String rootTxHash;
 
-        @NameInMap("TransSummaryList")
+        @com.aliyun.core.annotation.NameInMap("TransSummaryList")
         private String transSummaryList;
 
-        @NameInMap("TransactionSize")
+        @com.aliyun.core.annotation.NameInMap("TransactionSize")
         private Integer transactionSize;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private Long version;
 
         private Result(Builder builder) {

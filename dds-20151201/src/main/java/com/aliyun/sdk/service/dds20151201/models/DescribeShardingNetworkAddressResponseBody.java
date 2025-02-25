@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeShardingNetworkAddressResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeShardingNetworkAddressResponseBody</p>
  */
 public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
-    @NameInMap("CompatibleConnections")
+    @com.aliyun.core.annotation.NameInMap("CompatibleConnections")
     private CompatibleConnections compatibleConnections;
 
-    @NameInMap("NetworkAddresses")
+    @com.aliyun.core.annotation.NameInMap("NetworkAddresses")
     private NetworkAddresses networkAddresses;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeShardingNetworkAddressResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the endpoints of DynamoDB instances.
+         * <p>The endpoints of DynamoDB-compatible instances.</p>
          */
         public Builder compatibleConnections(CompatibleConnections compatibleConnections) {
             this.compatibleConnections = compatibleConnections;
@@ -70,7 +75,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the endpoints of ApsaraDB for MongoDB instances.
+         * <p>The endpoints of the ApsaraDB for MongoDB sharded cluster instance.</p>
          */
         public Builder networkAddresses(NetworkAddresses networkAddresses) {
             this.networkAddresses = networkAddresses;
@@ -78,7 +83,10 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18D8AAFD-6BEB-420F-8164-810CB0C0AA39</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,26 +99,32 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeShardingNetworkAddressResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeShardingNetworkAddressResponseBody</p>
+     */
     public static class CompatibleConnection extends TeaModel {
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("IPAddress")
+        @com.aliyun.core.annotation.NameInMap("IPAddress")
         private String IPAddress;
 
-        @NameInMap("NetworkAddress")
+        @com.aliyun.core.annotation.NameInMap("NetworkAddress")
         private String networkAddress;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("VPCId")
+        @com.aliyun.core.annotation.NameInMap("VPCId")
         private String VPCId;
 
-        @NameInMap("VswitchId")
+        @com.aliyun.core.annotation.NameInMap("VswitchId")
         private String vswitchId;
 
         private CompatibleConnection(Builder builder) {
@@ -190,7 +204,10 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             private String vswitchId; 
 
             /**
-             * The remaining duration of the classic network address. Unit: seconds.
+             * <p>The remaining duration of the classic network endpoint. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2591963</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -198,7 +215,10 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the instance.
+             * <p>The IP address of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.140.xxx.xx</p>
              */
             public Builder IPAddress(String IPAddress) {
                 this.IPAddress = IPAddress;
@@ -206,7 +226,10 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the instance.
+             * <p>The endpoint of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dds-bpxxxxxxxxxxxxxx.mongodb.rds.aliyuncs.com</p>
              */
             public Builder networkAddress(String networkAddress) {
                 this.networkAddress = networkAddress;
@@ -214,12 +237,15 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The network type. Valid values:
-             * <p>
+             * <p>The network type of the instance.</p>
+             * <ul>
+             * <li><strong>VPC</strong>: virtual private cloud</li>
+             * <li><strong>Classic</strong>: classic network</li>
+             * <li><strong>Public</strong>: the Internet</li>
+             * </ul>
              * 
-             * *   **VPC**
-             * *   **Classic**
-             * *   **Public**: pubic endpoint
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -227,7 +253,10 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The port number.
+             * <p>The port that is used to connect to the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3717</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -235,10 +264,13 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
-             * <p>
+             * <p>The VPC ID of the instance.</p>
+             * <blockquote>
+             * <p> This parameter is returned when the network type is <strong>VPC</strong>.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned when the network type is **VPC**.
+             * <strong>example:</strong>
+             * <p>vpc-bpxxxxxxxx</p>
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;
@@ -246,10 +278,13 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch ID of the VPC.
-             * <p>
+             * <p>The ID of the vSwitch in the Virtual Private Cloud (VPC).</p>
+             * <blockquote>
+             * <p> This parameter is returned when the network type is <strong>VPC</strong>.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned when the network type is **VPC**.
+             * <strong>example:</strong>
+             * <p>vsw-bpxxxxxxxx</p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -263,9 +298,15 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeShardingNetworkAddressResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeShardingNetworkAddressResponseBody</p>
+     */
     public static class CompatibleConnections extends TeaModel {
-        @NameInMap("CompatibleConnection")
-        private java.util.List < CompatibleConnection> compatibleConnection;
+        @com.aliyun.core.annotation.NameInMap("CompatibleConnection")
+        private java.util.List<CompatibleConnection> compatibleConnection;
 
         private CompatibleConnections(Builder builder) {
             this.compatibleConnection = builder.compatibleConnection;
@@ -282,17 +323,17 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         /**
          * @return compatibleConnection
          */
-        public java.util.List < CompatibleConnection> getCompatibleConnection() {
+        public java.util.List<CompatibleConnection> getCompatibleConnection() {
             return this.compatibleConnection;
         }
 
         public static final class Builder {
-            private java.util.List < CompatibleConnection> compatibleConnection; 
+            private java.util.List<CompatibleConnection> compatibleConnection; 
 
             /**
              * CompatibleConnection.
              */
-            public Builder compatibleConnection(java.util.List < CompatibleConnection> compatibleConnection) {
+            public Builder compatibleConnection(java.util.List<CompatibleConnection> compatibleConnection) {
                 this.compatibleConnection = compatibleConnection;
                 return this;
             }
@@ -304,38 +345,51 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeShardingNetworkAddressResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeShardingNetworkAddressResponseBody</p>
+     */
     public static class NetworkAddress extends TeaModel {
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ConnectionType")
+        private String connectionType;
+
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("IPAddress")
+        @com.aliyun.core.annotation.NameInMap("IPAddress")
         private String IPAddress;
 
-        @NameInMap("NetworkAddress")
+        @com.aliyun.core.annotation.NameInMap("NetworkAddress")
         private String networkAddress;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("VPCId")
+        @com.aliyun.core.annotation.NameInMap("TxtRecord")
+        private String txtRecord;
+
+        @com.aliyun.core.annotation.NameInMap("VPCId")
         private String VPCId;
 
-        @NameInMap("VswitchId")
+        @com.aliyun.core.annotation.NameInMap("VswitchId")
         private String vswitchId;
 
         private NetworkAddress(Builder builder) {
+            this.connectionType = builder.connectionType;
             this.expiredTime = builder.expiredTime;
             this.IPAddress = builder.IPAddress;
             this.networkAddress = builder.networkAddress;
@@ -344,6 +398,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             this.nodeType = builder.nodeType;
             this.port = builder.port;
             this.role = builder.role;
+            this.txtRecord = builder.txtRecord;
             this.VPCId = builder.VPCId;
             this.vswitchId = builder.vswitchId;
         }
@@ -354,6 +409,13 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
 
         public static NetworkAddress create() {
             return builder().build();
+        }
+
+        /**
+         * @return connectionType
+         */
+        public String getConnectionType() {
+            return this.connectionType;
         }
 
         /**
@@ -413,6 +475,13 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         }
 
         /**
+         * @return txtRecord
+         */
+        public String getTxtRecord() {
+            return this.txtRecord;
+        }
+
+        /**
          * @return VPCId
          */
         public String getVPCId() {
@@ -427,6 +496,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String connectionType; 
             private String expiredTime; 
             private String IPAddress; 
             private String networkAddress; 
@@ -435,11 +505,30 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             private String nodeType; 
             private String port; 
             private String role; 
+            private String txtRecord; 
             private String VPCId; 
             private String vswitchId; 
 
             /**
-             * The remaining duration of the classic network address. Unit: seconds.
+             * <p>The public endpoint type. Valid values:</p>
+             * <ul>
+             * <li><strong>SRV</strong></li>
+             * <li><strong>Normal</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SRV</p>
+             */
+            public Builder connectionType(String connectionType) {
+                this.connectionType = connectionType;
+                return this;
+            }
+
+            /**
+             * <p>The remaining duration of the classic network endpoint. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2591963</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -447,7 +536,10 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the instance.
+             * <p>The IP address of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.140.xxx.xx</p>
              */
             public Builder IPAddress(String IPAddress) {
                 this.IPAddress = IPAddress;
@@ -455,7 +547,10 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the instance.
+             * <p>The connection string of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s-bpxxxxxxxx.mongodb.rds.aliyuncs.com</p>
              */
             public Builder networkAddress(String networkAddress) {
                 this.networkAddress = networkAddress;
@@ -463,12 +558,15 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The network type. Valid values:
-             * <p>
+             * <p>The network type of the instance.</p>
+             * <ul>
+             * <li><strong>VPC</strong>: virtual private cloud</li>
+             * <li><strong>Classic</strong>: classic network</li>
+             * <li><strong>Public</strong>: the Internet</li>
+             * </ul>
              * 
-             * - **VPC**
-             * - **Classic**
-             * - **Public**: pubic endpoint
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -476,7 +574,10 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the mongos.
+             * <p>The ID of the mongos node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s-bpxxxxxxxx</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -484,12 +585,15 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the node. Valid values:
-             * <p>
+             * <p>The type of the node. Valid values:</p>
+             * <ul>
+             * <li><strong>mongos</strong>: mongos node</li>
+             * <li><strong>shard</strong>: shard node</li>
+             * <li><strong>configserver</strong>: Configserver node</li>
+             * </ul>
              * 
-             * - **mongos**
-             * - **shard**
-             * - **configserver**
+             * <strong>example:</strong>
+             * <p>mongos</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -497,7 +601,10 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The port number.
+             * <p>The port that is used to connect to the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3717</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -505,11 +612,14 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The role of the node. Valid values:
-             * <p>
+             * <p>The role of the node. Valid values:</p>
+             * <ul>
+             * <li>Primary</li>
+             * <li>Secondary</li>
+             * </ul>
              * 
-             * - Primary
-             * - Secondary
+             * <strong>example:</strong>
+             * <p>Primary</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -517,10 +627,24 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
-             * <p>
+             * <p>Txt record which can be used to store MongoDB-related meta data, such as version, configuration parameters and etc. With the combination of txt record and other technology, for example SRV record, the MongoDB client can complete the complex service discovery and configuration passing.</p>
              * 
-             * >  This parameter is returned when the network type is **VPC**.
+             * <strong>example:</strong>
+             * <p>mongo.example.com. IN TXT &quot;config=replicaSet=myReplicaSet&quot;</p>
+             */
+            public Builder txtRecord(String txtRecord) {
+                this.txtRecord = txtRecord;
+                return this;
+            }
+
+            /**
+             * <p>The VPC ID of the instance.</p>
+             * <blockquote>
+             * <p> This parameter is returned when the network type is <strong>VPC</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bpxxxxxxxx</p>
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;
@@ -528,10 +652,13 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch ID of the VPC.
-             * <p>
+             * <p>The ID of the vSwitch in the VPC.</p>
+             * <blockquote>
+             * <p> This parameter is returned when the network type is <strong>VPC</strong>.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned when the network type is **VPC**.
+             * <strong>example:</strong>
+             * <p>vsw-bpxxxxxxxx</p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -545,9 +672,15 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeShardingNetworkAddressResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeShardingNetworkAddressResponseBody</p>
+     */
     public static class NetworkAddresses extends TeaModel {
-        @NameInMap("NetworkAddress")
-        private java.util.List < NetworkAddress> networkAddress;
+        @com.aliyun.core.annotation.NameInMap("NetworkAddress")
+        private java.util.List<NetworkAddress> networkAddress;
 
         private NetworkAddresses(Builder builder) {
             this.networkAddress = builder.networkAddress;
@@ -564,17 +697,20 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         /**
          * @return networkAddress
          */
-        public java.util.List < NetworkAddress> getNetworkAddress() {
+        public java.util.List<NetworkAddress> getNetworkAddress() {
             return this.networkAddress;
         }
 
         public static final class Builder {
-            private java.util.List < NetworkAddress> networkAddress; 
+            private java.util.List<NetworkAddress> networkAddress; 
 
             /**
-             * The endpoint of the instance.
+             * <p>The connection string of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s-bpxxxxxxxx.mongodb.rds.aliyuncs.com</p>
              */
-            public Builder networkAddress(java.util.List < NetworkAddress> networkAddress) {
+            public Builder networkAddress(java.util.List<NetworkAddress> networkAddress) {
                 this.networkAddress = networkAddress;
                 return this;
             }

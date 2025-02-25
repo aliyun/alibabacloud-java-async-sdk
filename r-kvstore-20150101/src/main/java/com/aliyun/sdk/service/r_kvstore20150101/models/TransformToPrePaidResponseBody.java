@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TransformToPrePaidResponseBody} extends {@link TeaModel}
  *
  * <p>TransformToPrePaidResponseBody</p>
  */
 public class TransformToPrePaidResponseBody extends TeaModel {
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private TransformToPrePaidResponseBody(Builder builder) {
@@ -62,11 +62,10 @@ public class TransformToPrePaidResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Specifies whether to enable auto-renewal. Default value: false. Valid values:
-         * <p>
+         * <p>The time when the instance expires after the billing method of the instance is changed from pay-as-you-go to subscription.</p>
          * 
-         * *   **true**: yes
-         * *   **false**: no. In this case, you can renew your instance in the ApsaraDB for Redis console. For more information, see [Manually renew an instance](~~26352~~).
+         * <strong>example:</strong>
+         * <p>2019-01-18T16:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -74,7 +73,10 @@ public class TransformToPrePaidResponseBody extends TeaModel {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **TransformToPrePaid**.
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111111111111111</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -82,7 +84,10 @@ public class TransformToPrePaidResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>426F1356-B6EF-4DAD-A1C3-DE53B9DAF586</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

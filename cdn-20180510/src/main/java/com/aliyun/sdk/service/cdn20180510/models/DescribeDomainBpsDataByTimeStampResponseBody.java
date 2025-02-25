@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainBpsDataByTimeStampResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainBpsDataByTimeStampResponseBody</p>
  */
 public class DescribeDomainBpsDataByTimeStampResponseBody extends TeaModel {
-    @NameInMap("BpsDataList")
+    @com.aliyun.core.annotation.NameInMap("BpsDataList")
     private BpsDataList bpsDataList;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TimeStamp")
+    @com.aliyun.core.annotation.NameInMap("TimeStamp")
     private String timeStamp;
 
     private DescribeDomainBpsDataByTimeStampResponseBody(Builder builder) {
@@ -74,7 +74,7 @@ public class DescribeDomainBpsDataByTimeStampResponseBody extends TeaModel {
         private String timeStamp; 
 
         /**
-         * A list of bandwidth values by ISP and region.
+         * <p>A list of bandwidth values by ISP and region.</p>
          */
         public Builder bpsDataList(BpsDataList bpsDataList) {
             this.bpsDataList = bpsDataList;
@@ -82,7 +82,10 @@ public class DescribeDomainBpsDataByTimeStampResponseBody extends TeaModel {
         }
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -90,7 +93,10 @@ public class DescribeDomainBpsDataByTimeStampResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +104,10 @@ public class DescribeDomainBpsDataByTimeStampResponseBody extends TeaModel {
         }
 
         /**
-         * The point in time.
+         * <p>The point in time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-11-30T05:40:00Z</p>
          */
         public Builder timeStamp(String timeStamp) {
             this.timeStamp = timeStamp;
@@ -111,17 +120,23 @@ public class DescribeDomainBpsDataByTimeStampResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainBpsDataByTimeStampResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainBpsDataByTimeStampResponseBody</p>
+     */
     public static class BpsDataModel extends TeaModel {
-        @NameInMap("Bps")
+        @com.aliyun.core.annotation.NameInMap("Bps")
         private Long bps;
 
-        @NameInMap("IspName")
+        @com.aliyun.core.annotation.NameInMap("IspName")
         private String ispName;
 
-        @NameInMap("LocationName")
+        @com.aliyun.core.annotation.NameInMap("LocationName")
         private String locationName;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private BpsDataModel(Builder builder) {
@@ -174,7 +189,10 @@ public class DescribeDomainBpsDataByTimeStampResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * The bandwidth value.
+             * <p>The bandwidth value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>52119553</p>
              */
             public Builder bps(Long bps) {
                 this.bps = bps;
@@ -182,7 +200,10 @@ public class DescribeDomainBpsDataByTimeStampResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the ISP.
+             * <p>The name of the ISP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>unicom</p>
              */
             public Builder ispName(String ispName) {
                 this.ispName = ispName;
@@ -190,7 +211,10 @@ public class DescribeDomainBpsDataByTimeStampResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the region.
+             * <p>The name of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Liaoning</p>
              */
             public Builder locationName(String locationName) {
                 this.locationName = locationName;
@@ -198,7 +222,10 @@ public class DescribeDomainBpsDataByTimeStampResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the data returned.
+             * <p>The timestamp of the data returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-11-30T05:40:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -212,8 +239,14 @@ public class DescribeDomainBpsDataByTimeStampResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainBpsDataByTimeStampResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainBpsDataByTimeStampResponseBody</p>
+     */
     public static class BpsDataList extends TeaModel {
-        @NameInMap("BpsDataModel")
+        @com.aliyun.core.annotation.NameInMap("BpsDataModel")
         private java.util.List < BpsDataModel> bpsDataModel;
 
         private BpsDataList(Builder builder) {

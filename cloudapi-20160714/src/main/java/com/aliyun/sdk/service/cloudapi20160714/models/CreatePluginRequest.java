@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePluginRequest} extends {@link RequestModel}
  *
  * <p>CreatePluginRequest</p>
  */
 public class CreatePluginRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("PluginData")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PluginData")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pluginData;
 
-    @Query
-    @NameInMap("PluginName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PluginName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pluginName;
 
-    @Query
-    @NameInMap("PluginType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PluginType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pluginType;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private CreatePluginRequest(Builder builder) {
         super(builder);
@@ -100,7 +105,7 @@ public class CreatePluginRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -110,7 +115,7 @@ public class CreatePluginRequest extends Request {
         private String pluginName; 
         private String pluginType; 
         private String securityToken; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -127,7 +132,10 @@ public class CreatePluginRequest extends Request {
         } 
 
         /**
-         * The description of the plug-in. The description can contain a maximum of 200 characters in length.
+         * <p>The description of the plug-in. The description can contain a maximum of 200 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>createPlugin</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -136,7 +144,11 @@ public class CreatePluginRequest extends Request {
         }
 
         /**
-         * The plug-in definition. Supported formats: JSON and YAML.
+         * <p>The plug-in definition. Supported formats: JSON and YAML.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Plugin definition</p>
          */
         public Builder pluginData(String pluginData) {
             this.putQueryParameter("PluginData", pluginData);
@@ -145,7 +157,11 @@ public class CreatePluginRequest extends Request {
         }
 
         /**
-         * The name of the plug-in. The name must be 4 to 50 characters in length and can contain letters, digits, and underscores (\_). However, it cannot start with an underscore.
+         * <p>The name of the plug-in. The name must be 4 to 50 characters in length and can contain letters, digits, and underscores (_). However, it cannot start with an underscore.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NewCors</p>
          */
         public Builder pluginName(String pluginName) {
             this.putQueryParameter("PluginName", pluginName);
@@ -154,15 +170,19 @@ public class CreatePluginRequest extends Request {
         }
 
         /**
-         * The type of the plug-in. Valid values:
-         * <p>
+         * <p>The type of the plug-in. Valid values:</p>
+         * <ul>
+         * <li><strong>ipControl: IP address-based access control</strong></li>
+         * <li><strong>trafficControl: throttling</strong></li>
+         * <li><strong>backendSignature: backend signature</strong></li>
+         * <li><strong>jwtAuth</strong> :JWT (OpenId Connect) authentication</li>
+         * <li><strong>cors</strong> :cross-origin resource sharing (CORS)</li>
+         * <li><strong>caching</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **ipControl: IP address-based access control**
-         * *   **trafficControl: throttling**
-         * *   **backendSignature: backend signature**
-         * *   **jwtAuth** :JWT (OpenId Connect) authentication
-         * *   **cors** :cross-origin resource sharing (CORS)
-         * *   **caching**
+         * <strong>example:</strong>
+         * <p>cors</p>
          */
         public Builder pluginType(String pluginType) {
             this.putQueryParameter("PluginType", pluginType);
@@ -180,9 +200,12 @@ public class CreatePluginRequest extends Request {
         }
 
         /**
-         * The tag of objects that match the rule. You can specify multiple tags.
+         * <p>The tag of objects that match the rule. You can specify multiple tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Key， Value</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -195,13 +218,19 @@ public class CreatePluginRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreatePluginRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePluginRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Key")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String key;
 
-        @NameInMap("Value")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Value")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String value;
 
         private Tag(Builder builder) {
@@ -236,10 +265,12 @@ public class CreatePluginRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
-             * <p>
+             * <p>The key of the tag.</p>
+             * <p>N can be an integer from 1 to 20.``</p>
+             * <p>This parameter is required.</p>
              * 
-             * N can be an integer from 1 to 20.``
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -247,10 +278,12 @@ public class CreatePluginRequest extends Request {
             }
 
             /**
-             * The value of the tag.
-             * <p>
+             * <p>The value of the tag.</p>
+             * <p>N can be an integer from 1 to 20.``</p>
+             * <p>This parameter is required.</p>
              * 
-             * N can be an integer from 1 to 20.``
+             * <strong>example:</strong>
+             * <p>&quot; &quot;</p>
              */
             public Builder value(String value) {
                 this.value = value;

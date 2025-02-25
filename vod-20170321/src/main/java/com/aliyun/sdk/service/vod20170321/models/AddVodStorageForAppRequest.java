@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddVodStorageForAppRequest} extends {@link RequestModel}
  *
  * <p>AddVodStorageForAppRequest</p>
  */
 public class AddVodStorageForAppRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("StorageLocation")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageLocation")
     private String storageLocation;
 
-    @Query
-    @NameInMap("StorageType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageType")
     private String storageType;
 
     private AddVodStorageForAppRequest(Builder builder) {
@@ -83,7 +88,11 @@ public class AddVodStorageForAppRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>The IDs of applications. You can obtain the application ID from the <code>AppId</code> parameter in the response to the <a href="~~CreateAppInfo~~">CreateAppInfo</a> or <a href="~~ListAppInfo~~">ListAppInfo</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -92,7 +101,10 @@ public class AddVodStorageForAppRequest extends Request {
         }
 
         /**
-         * StorageLocation.
+         * <p>The address of an Object Storage Service (OSS) bucket. This parameter does not take effect. You can call this operation to add only VOD buckets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>out-****.oss-cn-shanghai.aliyuncs.com</p>
          */
         public Builder storageLocation(String storageLocation) {
             this.putQueryParameter("StorageLocation", storageLocation);
@@ -101,7 +113,10 @@ public class AddVodStorageForAppRequest extends Request {
         }
 
         /**
-         * StorageType.
+         * <p>The storage class. Default value: <strong>vod_oss_bucket</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vod_oss_bucket</p>
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);

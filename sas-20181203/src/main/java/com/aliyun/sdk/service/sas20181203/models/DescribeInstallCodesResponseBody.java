@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstallCodesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstallCodesResponseBody</p>
  */
 public class DescribeInstallCodesResponseBody extends TeaModel {
-    @NameInMap("InstallCodes")
-    private java.util.List < InstallCodes> installCodes;
+    @com.aliyun.core.annotation.NameInMap("InstallCodes")
+    private java.util.List<InstallCodes> installCodes;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstallCodesResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
     /**
      * @return installCodes
      */
-    public java.util.List < InstallCodes> getInstallCodes() {
+    public java.util.List<InstallCodes> getInstallCodes() {
         return this.installCodes;
     }
 
@@ -46,19 +51,22 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstallCodes> installCodes; 
+        private java.util.List<InstallCodes> installCodes; 
         private String requestId; 
 
         /**
-         * The information about the installation commands.
+         * <p>The information about the installation commands.</p>
          */
-        public Builder installCodes(java.util.List < InstallCodes> installCodes) {
+        public Builder installCodes(java.util.List<InstallCodes> installCodes) {
             this.installCodes = installCodes;
             return this;
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C0D6119F-92EE-1276-B8B6-C81A7F9D57F5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,29 +79,38 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstallCodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstallCodesResponseBody</p>
+     */
     public static class InstallCodes extends TeaModel {
-        @NameInMap("CaptchaCode")
+        @com.aliyun.core.annotation.NameInMap("CaptchaCode")
         private String captchaCode;
 
-        @NameInMap("ExpiredDate")
+        @com.aliyun.core.annotation.NameInMap("ExpiredDate")
         private Long expiredDate;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private Long groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("OnlyImage")
+        @com.aliyun.core.annotation.NameInMap("OnlyImage")
         private Boolean onlyImage;
 
-        @NameInMap("Os")
+        @com.aliyun.core.annotation.NameInMap("Os")
         private String os;
 
-        @NameInMap("ProxyCluster")
+        @com.aliyun.core.annotation.NameInMap("PrivateLinkEndpointId")
+        private Long privateLinkEndpointId;
+
+        @com.aliyun.core.annotation.NameInMap("ProxyCluster")
         private String proxyCluster;
 
-        @NameInMap("VendorName")
+        @com.aliyun.core.annotation.NameInMap("VendorName")
         private String vendorName;
 
         private InstallCodes(Builder builder) {
@@ -103,6 +120,7 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
             this.groupName = builder.groupName;
             this.onlyImage = builder.onlyImage;
             this.os = builder.os;
+            this.privateLinkEndpointId = builder.privateLinkEndpointId;
             this.proxyCluster = builder.proxyCluster;
             this.vendorName = builder.vendorName;
         }
@@ -158,6 +176,13 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
         }
 
         /**
+         * @return privateLinkEndpointId
+         */
+        public Long getPrivateLinkEndpointId() {
+            return this.privateLinkEndpointId;
+        }
+
+        /**
          * @return proxyCluster
          */
         public String getProxyCluster() {
@@ -178,11 +203,15 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
             private String groupName; 
             private Boolean onlyImage; 
             private String os; 
+            private Long privateLinkEndpointId; 
             private String proxyCluster; 
             private String vendorName; 
 
             /**
-             * The verification code for you to manually install the Security Center agent.
+             * <p>The verification code for you to manually install the Security Center agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15v02r</p>
              */
             public Builder captchaCode(String captchaCode) {
                 this.captchaCode = captchaCode;
@@ -190,7 +219,10 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the commands used to install the Security Center agent expire. Unit: milliseconds.
+             * <p>The timestamp generated when the commands used to install the Security Center agent expire. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1637810007000</p>
              */
             public Builder expiredDate(Long expiredDate) {
                 this.expiredDate = expiredDate;
@@ -198,7 +230,10 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server group to which the server belongs.
+             * <p>The ID of the server group to which the server belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9165712</p>
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -206,7 +241,10 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server group to which the server belongs.
+             * <p>The name of the server group to which the server belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -214,11 +252,14 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether an image is used to install the Security Center agent. Valid values:
-             * <p>
+             * <p>Indicates whether an image is used to install the Security Center agent. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder onlyImage(Boolean onlyImage) {
                 this.onlyImage = onlyImage;
@@ -226,11 +267,14 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system of the server. Valid values:
-             * <p>
+             * <p>The operating system of the server. Valid values:</p>
+             * <ul>
+             * <li><strong>linux</strong></li>
+             * <li><strong>windows</strong></li>
+             * </ul>
              * 
-             * *   **linux**
-             * *   **windows**
+             * <strong>example:</strong>
+             * <p>linux</p>
              */
             public Builder os(String os) {
                 this.os = os;
@@ -238,7 +282,21 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the proxy cluster.
+             * <p>The ID of the PrivateLink endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
+             */
+            public Builder privateLinkEndpointId(Long privateLinkEndpointId) {
+                this.privateLinkEndpointId = privateLinkEndpointId;
+                return this;
+            }
+
+            /**
+             * <p>The name of the proxy cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>proxy_test</p>
              */
             public Builder proxyCluster(String proxyCluster) {
                 this.proxyCluster = proxyCluster;
@@ -246,7 +304,10 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server provider.
+             * <p>The name of the server provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN</p>
              */
             public Builder vendorName(String vendorName) {
                 this.vendorName = vendorName;

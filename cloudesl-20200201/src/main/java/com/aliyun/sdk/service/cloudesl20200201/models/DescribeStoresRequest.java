@@ -152,17 +152,17 @@ public class DescribeStoresRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeStoresRequest response) {
-            super(response);
-            this.extraParams = response.extraParams;
-            this.fromDate = response.fromDate;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.storeId = response.storeId;
-            this.storeName = response.storeName;
-            this.templateVersion = response.templateVersion;
-            this.toDate = response.toDate;
-            this.userStoreCode = response.userStoreCode;
+        private Builder(DescribeStoresRequest request) {
+            super(request);
+            this.extraParams = request.extraParams;
+            this.fromDate = request.fromDate;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.storeId = request.storeId;
+            this.storeName = request.storeName;
+            this.templateVersion = request.templateVersion;
+            this.toDate = request.toDate;
+            this.userStoreCode = request.userStoreCode;
         } 
 
         /**

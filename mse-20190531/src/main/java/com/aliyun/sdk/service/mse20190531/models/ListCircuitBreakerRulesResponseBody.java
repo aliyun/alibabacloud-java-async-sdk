@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCircuitBreakerRulesResponseBody} extends {@link TeaModel}
  *
  * <p>ListCircuitBreakerRulesResponseBody</p>
  */
 public class ListCircuitBreakerRulesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListCircuitBreakerRulesResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +114,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the rule.
+         * <p>The details of the rule.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +122,10 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +133,10 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +144,10 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4E9FDCFE-0738-493B-B801-82BDFBCB****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,56 +171,62 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCircuitBreakerRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCircuitBreakerRulesResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
 
-        @NameInMap("FallbackObject")
+        @com.aliyun.core.annotation.NameInMap("FallbackObject")
         private String fallbackObject;
 
-        @NameInMap("HalfOpenBaseAmountPerStep")
+        @com.aliyun.core.annotation.NameInMap("HalfOpenBaseAmountPerStep")
         private Integer halfOpenBaseAmountPerStep;
 
-        @NameInMap("HalfOpenRecoveryStepNum")
+        @com.aliyun.core.annotation.NameInMap("HalfOpenRecoveryStepNum")
         private Integer halfOpenRecoveryStepNum;
 
-        @NameInMap("MaxAllowedRtMs")
+        @com.aliyun.core.annotation.NameInMap("MaxAllowedRtMs")
         private Integer maxAllowedRtMs;
 
-        @NameInMap("MinRequestAmount")
+        @com.aliyun.core.annotation.NameInMap("MinRequestAmount")
         private Integer minRequestAmount;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Resource")
+        @com.aliyun.core.annotation.NameInMap("Resource")
         private String resource;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private Integer resourceType;
 
-        @NameInMap("RetryTimeoutMs")
+        @com.aliyun.core.annotation.NameInMap("RetryTimeoutMs")
         private Integer retryTimeoutMs;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
-        @NameInMap("StatIntervalMs")
+        @com.aliyun.core.annotation.NameInMap("StatIntervalMs")
         private Integer statIntervalMs;
 
-        @NameInMap("Strategy")
+        @com.aliyun.core.annotation.NameInMap("Strategy")
         private Integer strategy;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private Float threshold;
 
         private Result(Builder builder) {
@@ -370,7 +396,10 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             private Float threshold; 
 
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hkhon1po62@c3df23522bXXXXX</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -378,7 +407,10 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spring-cloud-a</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -386,7 +418,10 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the rule was enabled.
+             * <p>Indicates whether the rule was enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -394,7 +429,10 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The behavior that was bound to the rule.
+             * <p>The behavior that was bound to the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;{&quot;appName&quot;:&quot;spring-cloud-a&quot;,&quot;fallbackBehavior&quot;:{&quot;webFallbackMode&quot;:0,&quot;webRespContentType&quot;:0,&quot;webRespMessage&quot;:&quot;Blocked&quot;,&quot;webRespStatusCode&quot;:429},&quot;id&quot;:977,&quot;name&quot;:&quot;Fallback&quot;,&quot;namespace&quot;:&quot;default&quot;,&quot;resourceClassification&quot;:1}&quot;</p>
              */
             public Builder fallbackObject(String fallbackObject) {
                 this.fallbackObject = fallbackObject;
@@ -402,7 +440,10 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum number of requests that can be passed in each step after circuit breaking recovers.
+             * <p>The minimum number of requests that can be passed in each step after circuit breaking recovers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder halfOpenBaseAmountPerStep(Integer halfOpenBaseAmountPerStep) {
                 this.halfOpenBaseAmountPerStep = halfOpenBaseAmountPerStep;
@@ -410,7 +451,10 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of circuit breaking recovery steps.
+             * <p>The number of circuit breaking recovery steps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder halfOpenRecoveryStepNum(Integer halfOpenRecoveryStepNum) {
                 this.halfOpenRecoveryStepNum = halfOpenRecoveryStepNum;
@@ -418,7 +462,10 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum response time (RT). Unit: milliseconds. If the RT of a request is greater than the value of this parameter, a slow call is counted. If you set Strategy to 0, you must specify this parameter.
+             * <p>The maximum RT. Unit: milliseconds. If the RT of a request is greater than the value of this parameter, a slow call is counted. If you set Strategy to 0, you must specify this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder maxAllowedRtMs(Integer maxAllowedRtMs) {
                 this.maxAllowedRtMs = maxAllowedRtMs;
@@ -426,7 +473,10 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum number of requests to trigger circuit breaking. If the number of requests in the current time window is less than the value of this parameter, circuit breaking is not triggered even if the circuit breaking rule is met.
+             * <p>The minimum number of requests to trigger circuit breaking. If the number of requests in the current time window is less than the value of this parameter, circuit breaking is not triggered even if the circuit breaking rule is met.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder minRequestAmount(Integer minRequestAmount) {
                 this.minRequestAmount = minRequestAmount;
@@ -434,7 +484,10 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The microservice namespace to which the application belongs.
+             * <p>The microservice namespace to which the application belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -442,7 +495,10 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The region where the cluster resides.
+             * <p>The region in which the instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -450,7 +506,10 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the interface to which the rule is applicable. The interface name must be the same as the name on the interface details page in the console.
+             * <p>The name of the interface to which the rule is applicable. The interface name must be the same as the name on the interface details page in the console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/a</p>
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -466,7 +525,10 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The period in which circuit breaking is implemented. Unit: milliseconds. If circuit breaking is implemented on the requests for the route, the calls to all the requests for the route fail in the configured circuit breaking period.
+             * <p>The period in which circuit breaking is implemented. Unit: milliseconds. If circuit breaking is implemented on the requests for the route, the calls to all the requests for the route fail in the configured circuit breaking period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder retryTimeoutMs(Integer retryTimeoutMs) {
                 this.retryTimeoutMs = retryTimeoutMs;
@@ -474,7 +536,10 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule.
+             * <p>The ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -482,7 +547,10 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The length of the time window. Unit: milliseconds. The valid range is from 1 second to 120 minutes.
+             * <p>The length of the time window. Unit: milliseconds. The valid range is from 1 second to 120 minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20000</p>
              */
             public Builder statIntervalMs(Integer statIntervalMs) {
                 this.statIntervalMs = statIntervalMs;
@@ -490,34 +558,30 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The threshold type.
-             * <p>
+             * <p>The threshold type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>0</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <p>:</p>
+             * <!-- -->
              * 
-             * *   0
+             * <p>slow call proportion</p>
+             * <!-- -->
+             * </li>
+             * <li><p>1</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <p>:</p>
+             * <!-- -->
              * 
-             *     :
+             * <p>abnormal proportion</p>
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             *     slow call proportion
-             * 
-             *     <!-- -->
-             * 
-             * *   1
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     abnormal proportion
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder strategy(Integer strategy) {
                 this.strategy = strategy;
@@ -525,7 +589,10 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * A percentage threshold for triggering circuit breaking. Valid values: 0-1. These values represent 0% to 100%.
+             * <p>A percentage threshold for triggering circuit breaking. Valid values: 0-1. These values represent 0% to 100%.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.8</p>
              */
             public Builder threshold(Float threshold) {
                 this.threshold = threshold;
@@ -539,17 +606,23 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCircuitBreakerRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCircuitBreakerRulesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Result")
-        private java.util.List < Result> result;
+        @com.aliyun.core.annotation.NameInMap("Result")
+        private java.util.List<Result> result;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Integer totalSize;
 
         private Data(Builder builder) {
@@ -584,7 +657,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.List < Result> getResult() {
+        public java.util.List<Result> getResult() {
             return this.result;
         }
 
@@ -598,11 +671,14 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageNumber; 
             private Integer pageSize; 
-            private java.util.List < Result> result; 
+            private java.util.List<Result> result; 
             private Integer totalSize; 
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -610,7 +686,10 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -618,15 +697,18 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The returned result.
+             * <p>The returned result.</p>
              */
-            public Builder result(java.util.List < Result> result) {
+            public Builder result(java.util.List<Result> result) {
                 this.result = result;
                 return this;
             }
 
             /**
-             * The total number of pages.
+             * <p>The total number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

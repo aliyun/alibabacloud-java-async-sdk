@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnWafGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnWafGroupsResponseBody</p>
  */
 public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("WafGroups")
+    @com.aliyun.core.annotation.NameInMap("WafGroups")
     private java.util.List < WafGroups> wafGroups;
 
     private DescribeDcdnWafGroupsResponseBody(Builder builder) {
@@ -86,7 +86,10 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
         private java.util.List < WafGroups> wafGroups; 
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +97,10 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +108,10 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +119,10 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The number of WAF rule groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +130,7 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * WafGroups.
+         * <p>The list of WAF rule groups.</p>
          */
         public Builder wafGroups(java.util.List < WafGroups> wafGroups) {
             this.wafGroups = wafGroups;
@@ -131,14 +143,20 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnWafGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnWafGroupsResponseBody</p>
+     */
     public static class Policies extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Policies(Builder builder) {
@@ -182,7 +200,10 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Id.
+             * <p>The ID of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30000165</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -190,7 +211,10 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wasm-testmaster</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -198,7 +222,14 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the policy. Valid values:</p>
+             * <ul>
+             * <li><strong>custom</strong>: a custom policy</li>
+             * <li><strong>default</strong>: the default policy</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -212,26 +243,32 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnWafGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnWafGroupsResponseBody</p>
+     */
     public static class WafGroups extends TeaModel {
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Policies")
+        @com.aliyun.core.annotation.NameInMap("Policies")
         private java.util.List < Policies> policies;
 
-        @NameInMap("RuleCount")
+        @com.aliyun.core.annotation.NameInMap("RuleCount")
         private Integer ruleCount;
 
-        @NameInMap("Subscribe")
+        @com.aliyun.core.annotation.NameInMap("Subscribe")
         private String subscribe;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private Long templateId;
 
         private WafGroups(Builder builder) {
@@ -311,7 +348,10 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
             private Long templateId; 
 
             /**
-             * GmtModified.
+             * <p>The time when the WAF rule group was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-04-12 22:25:11</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -319,7 +359,10 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the custom WAF rule group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30000156</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -327,7 +370,10 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the WAF rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DCDN-test-operation-reports-1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -335,7 +381,7 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Policies.
+             * <p>The policy that is associated with the WAF rule group.</p>
              */
             public Builder policies(java.util.List < Policies> policies) {
                 this.policies = policies;
@@ -343,7 +389,10 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RuleCount.
+             * <p>The number of WAF rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>452</p>
              */
             public Builder ruleCount(Integer ruleCount) {
                 this.ruleCount = ruleCount;
@@ -351,7 +400,14 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Subscribe.
+             * <p>Indicates whether to enable subscription. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder subscribe(String subscribe) {
                 this.subscribe = subscribe;
@@ -359,7 +415,10 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The ID of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1012</p>
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;

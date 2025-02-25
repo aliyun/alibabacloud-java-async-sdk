@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExecutePlaybooksRequest} extends {@link RequestModel}
  *
  * <p>DescribeExecutePlaybooksRequest</p>
  */
 public class DescribeExecutePlaybooksRequest extends Request {
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InputMode")
+    private String inputMode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("ParamType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParamType")
     private String paramType;
 
-    @Query
-    @NameInMap("PlaybookName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlaybookName")
     private String playbookName;
 
-    @Query
-    @NameInMap("Uuid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuid")
     private String uuid;
 
     private DescribeExecutePlaybooksRequest(Builder builder) {
         super(builder);
+        this.inputMode = builder.inputMode;
         this.lang = builder.lang;
         this.paramType = builder.paramType;
         this.playbookName = builder.playbookName;
@@ -47,6 +52,13 @@ public class DescribeExecutePlaybooksRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return inputMode
+     */
+    public String getInputMode() {
+        return this.inputMode;
     }
 
     /**
@@ -78,6 +90,7 @@ public class DescribeExecutePlaybooksRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeExecutePlaybooksRequest, Builder> {
+        private String inputMode; 
         private String lang; 
         private String paramType; 
         private String playbookName; 
@@ -89,6 +102,7 @@ public class DescribeExecutePlaybooksRequest extends Request {
 
         private Builder(DescribeExecutePlaybooksRequest request) {
             super(request);
+            this.inputMode = request.inputMode;
             this.lang = request.lang;
             this.paramType = request.paramType;
             this.playbookName = request.playbookName;
@@ -96,7 +110,32 @@ public class DescribeExecutePlaybooksRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The entity type of the script input parameter. When you want to query multiple entity types, separate them with commas.</p>
+         * <ul>
+         * <li><strong>ip</strong>: IP entity.</li>
+         * <li><strong>file</strong>: file entity.</li>
+         * <li><strong>process</strong>: process entity.</li>
+         * <li><strong>incident</strong>: incident entity.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ip,file,process,host</p>
+         */
+        public Builder inputMode(String inputMode) {
+            this.putQueryParameter("InputMode", inputMode);
+            this.inputMode = inputMode;
+            return this;
+        }
+
+        /**
+         * <p>The language of the content within the request and the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -105,7 +144,16 @@ public class DescribeExecutePlaybooksRequest extends Request {
         }
 
         /**
-         * ParamType.
+         * <p>The input parameter type of the playbook.</p>
+         * <ul>
+         * <li><strong>template-ip</strong></li>
+         * <li><strong>template-file</strong></li>
+         * <li><strong>template-process</strong></li>
+         * <li><strong>custom</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         public Builder paramType(String paramType) {
             this.putQueryParameter("ParamType", paramType);
@@ -114,7 +162,10 @@ public class DescribeExecutePlaybooksRequest extends Request {
         }
 
         /**
-         * PlaybookName.
+         * <p>The playbook name. Fuzzy search is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo_test</p>
          */
         public Builder playbookName(String playbookName) {
             this.putQueryParameter("PlaybookName", playbookName);
@@ -123,7 +174,13 @@ public class DescribeExecutePlaybooksRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * <p>The playbook UUID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to query the playbook UUID.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>f916b93e-e814-459f-9662-xxxxxx</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

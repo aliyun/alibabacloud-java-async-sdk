@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetConsumerProgressResponseBody} extends {@link TeaModel}
  *
  * <p>GetConsumerProgressResponseBody</p>
  */
 public class GetConsumerProgressResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("ConsumerProgress")
+    @com.aliyun.core.annotation.NameInMap("ConsumerProgress")
     private ConsumerProgress consumerProgress;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetConsumerProgressResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
+         * <p>The returned HTTP status code. If the request is successful, 200 is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         }
 
         /**
-         * The consumption status of the consumer group.
+         * <p>The consumer progress of the consumer group.</p>
          */
         public Builder consumerProgress(ConsumerProgress consumerProgress) {
             this.consumerProgress = consumerProgress;
@@ -102,7 +110,10 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>operation success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>252820E1-A2E6-45F2-B4C9-1056B8CE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,23 +148,253 @@ public class GetConsumerProgressResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetConsumerProgressResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConsumerProgressResponseBody</p>
+     */
+    public static class RebalanceInfoList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Generation")
+        private Long generation;
+
+        @com.aliyun.core.annotation.NameInMap("GroupId")
+        private String groupId;
+
+        @com.aliyun.core.annotation.NameInMap("LastRebalanceTimestamp")
+        private Long lastRebalanceTimestamp;
+
+        @com.aliyun.core.annotation.NameInMap("Reason")
+        private String reason;
+
+        @com.aliyun.core.annotation.NameInMap("RebalanceSuccess")
+        private Boolean rebalanceSuccess;
+
+        @com.aliyun.core.annotation.NameInMap("RebalanceTimeConsuming")
+        private Long rebalanceTimeConsuming;
+
+        private RebalanceInfoList(Builder builder) {
+            this.generation = builder.generation;
+            this.groupId = builder.groupId;
+            this.lastRebalanceTimestamp = builder.lastRebalanceTimestamp;
+            this.reason = builder.reason;
+            this.rebalanceSuccess = builder.rebalanceSuccess;
+            this.rebalanceTimeConsuming = builder.rebalanceTimeConsuming;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RebalanceInfoList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return generation
+         */
+        public Long getGeneration() {
+            return this.generation;
+        }
+
+        /**
+         * @return groupId
+         */
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        /**
+         * @return lastRebalanceTimestamp
+         */
+        public Long getLastRebalanceTimestamp() {
+            return this.lastRebalanceTimestamp;
+        }
+
+        /**
+         * @return reason
+         */
+        public String getReason() {
+            return this.reason;
+        }
+
+        /**
+         * @return rebalanceSuccess
+         */
+        public Boolean getRebalanceSuccess() {
+            return this.rebalanceSuccess;
+        }
+
+        /**
+         * @return rebalanceTimeConsuming
+         */
+        public Long getRebalanceTimeConsuming() {
+            return this.rebalanceTimeConsuming;
+        }
+
+        public static final class Builder {
+            private Long generation; 
+            private String groupId; 
+            private Long lastRebalanceTimestamp; 
+            private String reason; 
+            private Boolean rebalanceSuccess; 
+            private Long rebalanceTimeConsuming; 
+
+            /**
+             * <p>The number of rebalances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
+             */
+            public Builder generation(Long generation) {
+                this.generation = generation;
+                return this;
+            }
+
+            /**
+             * <p>The group ID of the subscriber.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>falcon-uat</p>
+             */
+            public Builder groupId(String groupId) {
+                this.groupId = groupId;
+                return this;
+            }
+
+            /**
+             * <p>The time when the last rebalance occurred. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1709199270</p>
+             */
+            public Builder lastRebalanceTimestamp(Long lastRebalanceTimestamp) {
+                this.lastRebalanceTimestamp = lastRebalanceTimestamp;
+                return this;
+            }
+
+            /**
+             * <p>The cause of the rebalance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>removing member consumer-1-cd14eb9c-379b-4b8e-9bbd-76f147f8536f on LeaveGroup</p>
+             */
+            public Builder reason(String reason) {
+                this.reason = reason;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether new members are added to the consumer group in the rebalance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder rebalanceSuccess(Boolean rebalanceSuccess) {
+                this.rebalanceSuccess = rebalanceSuccess;
+                return this;
+            }
+
+            /**
+             * <p>The duration of the rebalance. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder rebalanceTimeConsuming(Long rebalanceTimeConsuming) {
+                this.rebalanceTimeConsuming = rebalanceTimeConsuming;
+                return this;
+            }
+
+            public RebalanceInfoList build() {
+                return new RebalanceInfoList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetConsumerProgressResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConsumerProgressResponseBody</p>
+     */
+    public static class ConsumerProgressRebalanceInfoList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("RebalanceInfoList")
+        private java.util.List<RebalanceInfoList> rebalanceInfoList;
+
+        private ConsumerProgressRebalanceInfoList(Builder builder) {
+            this.rebalanceInfoList = builder.rebalanceInfoList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ConsumerProgressRebalanceInfoList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return rebalanceInfoList
+         */
+        public java.util.List<RebalanceInfoList> getRebalanceInfoList() {
+            return this.rebalanceInfoList;
+        }
+
+        public static final class Builder {
+            private java.util.List<RebalanceInfoList> rebalanceInfoList; 
+
+            /**
+             * RebalanceInfoList.
+             */
+            public Builder rebalanceInfoList(java.util.List<RebalanceInfoList> rebalanceInfoList) {
+                this.rebalanceInfoList = rebalanceInfoList;
+                return this;
+            }
+
+            public ConsumerProgressRebalanceInfoList build() {
+                return new ConsumerProgressRebalanceInfoList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetConsumerProgressResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConsumerProgressResponseBody</p>
+     */
     public static class OffsetList extends TeaModel {
-        @NameInMap("BrokerOffset")
+        @com.aliyun.core.annotation.NameInMap("BrokerOffset")
         private Long brokerOffset;
 
-        @NameInMap("ConsumerOffset")
+        @com.aliyun.core.annotation.NameInMap("ClientId")
+        private String clientId;
+
+        @com.aliyun.core.annotation.NameInMap("ClientIp")
+        private String clientIp;
+
+        @com.aliyun.core.annotation.NameInMap("ConsumerOffset")
         private Long consumerOffset;
 
-        @NameInMap("LastTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LastTimestamp")
         private Long lastTimestamp;
 
-        @NameInMap("Partition")
+        @com.aliyun.core.annotation.NameInMap("MemberId")
+        private String memberId;
+
+        @com.aliyun.core.annotation.NameInMap("Partition")
         private Integer partition;
 
         private OffsetList(Builder builder) {
             this.brokerOffset = builder.brokerOffset;
+            this.clientId = builder.clientId;
+            this.clientIp = builder.clientIp;
             this.consumerOffset = builder.consumerOffset;
             this.lastTimestamp = builder.lastTimestamp;
+            this.memberId = builder.memberId;
             this.partition = builder.partition;
         }
 
@@ -167,6 +414,20 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         }
 
         /**
+         * @return clientId
+         */
+        public String getClientId() {
+            return this.clientId;
+        }
+
+        /**
+         * @return clientIp
+         */
+        public String getClientIp() {
+            return this.clientIp;
+        }
+
+        /**
          * @return consumerOffset
          */
         public Long getConsumerOffset() {
@@ -181,6 +442,13 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         }
 
         /**
+         * @return memberId
+         */
+        public String getMemberId() {
+            return this.memberId;
+        }
+
+        /**
          * @return partition
          */
         public Integer getPartition() {
@@ -189,12 +457,18 @@ public class GetConsumerProgressResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long brokerOffset; 
+            private String clientId; 
+            private String clientIp; 
             private Long consumerOffset; 
             private Long lastTimestamp; 
+            private String memberId; 
             private Integer partition; 
 
             /**
-             * The latest offset in the partition of the topic.
+             * <p>The latest offset in the partition of the topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder brokerOffset(Long brokerOffset) {
                 this.brokerOffset = brokerOffset;
@@ -202,7 +476,32 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * The consumer offset in the partition of the topic.
+             * <p>Client ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>client-id-KafkaConsumerDemo</p>
+             */
+            public Builder clientId(String clientId) {
+                this.clientId = clientId;
+                return this;
+            }
+
+            /**
+             * <p>The IP address of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.11.3</p>
+             */
+            public Builder clientIp(String clientIp) {
+                this.clientIp = clientIp;
+                return this;
+            }
+
+            /**
+             * <p>The consumer offset in the partition of the topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder consumerOffset(Long consumerOffset) {
                 this.consumerOffset = consumerOffset;
@@ -210,7 +509,10 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the last consumed message in the partition was generated.
+             * <p>The time when the last consumed message in the partition was generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1566874931649</p>
              */
             public Builder lastTimestamp(Long lastTimestamp) {
                 this.lastTimestamp = lastTimestamp;
@@ -218,7 +520,21 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the partition.
+             * <p>Member ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>client-id-KafkaConsumerDemo-70b64883-a911-4882-8084-598b958848b4</p>
+             */
+            public Builder memberId(String memberId) {
+                this.memberId = memberId;
+                return this;
+            }
+
+            /**
+             * <p>The partition ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder partition(Integer partition) {
                 this.partition = partition;
@@ -232,9 +548,15 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetConsumerProgressResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConsumerProgressResponseBody</p>
+     */
     public static class TopicListOffsetList extends TeaModel {
-        @NameInMap("OffsetList")
-        private java.util.List < OffsetList> offsetList;
+        @com.aliyun.core.annotation.NameInMap("OffsetList")
+        private java.util.List<OffsetList> offsetList;
 
         private TopicListOffsetList(Builder builder) {
             this.offsetList = builder.offsetList;
@@ -251,17 +573,17 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         /**
          * @return offsetList
          */
-        public java.util.List < OffsetList> getOffsetList() {
+        public java.util.List<OffsetList> getOffsetList() {
             return this.offsetList;
         }
 
         public static final class Builder {
-            private java.util.List < OffsetList> offsetList; 
+            private java.util.List<OffsetList> offsetList; 
 
             /**
              * OffsetList.
              */
-            public Builder offsetList(java.util.List < OffsetList> offsetList) {
+            public Builder offsetList(java.util.List<OffsetList> offsetList) {
                 this.offsetList = offsetList;
                 return this;
             }
@@ -273,17 +595,23 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetConsumerProgressResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConsumerProgressResponseBody</p>
+     */
     public static class TopicList extends TeaModel {
-        @NameInMap("LastTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LastTimestamp")
         private Long lastTimestamp;
 
-        @NameInMap("OffsetList")
+        @com.aliyun.core.annotation.NameInMap("OffsetList")
         private TopicListOffsetList offsetList;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
-        @NameInMap("TotalDiff")
+        @com.aliyun.core.annotation.NameInMap("TotalDiff")
         private Long totalDiff;
 
         private TopicList(Builder builder) {
@@ -336,7 +664,10 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             private Long totalDiff; 
 
             /**
-             * The time when the last consumed message in the topic was generated.
+             * <p>The time when the last consumed message in the topic was generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1566874931649</p>
              */
             public Builder lastTimestamp(Long lastTimestamp) {
                 this.lastTimestamp = lastTimestamp;
@@ -344,7 +675,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * The information about offsets in the topic.
+             * <p>The consumer offsets.</p>
              */
             public Builder offsetList(TopicListOffsetList offsetList) {
                 this.offsetList = offsetList;
@@ -352,7 +683,10 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the topic.
+             * <p>The topic name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kafka-test</p>
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -360,7 +694,10 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * The number of messages that were not consumed in the topic. This is also known as the number of accumulated messages in the topic.
+             * <p>The number of unconsumed messages in the topic to which the consumer group subscribes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalDiff(Long totalDiff) {
                 this.totalDiff = totalDiff;
@@ -374,9 +711,15 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetConsumerProgressResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConsumerProgressResponseBody</p>
+     */
     public static class ConsumerProgressTopicList extends TeaModel {
-        @NameInMap("TopicList")
-        private java.util.List < TopicList> topicList;
+        @com.aliyun.core.annotation.NameInMap("TopicList")
+        private java.util.List<TopicList> topicList;
 
         private ConsumerProgressTopicList(Builder builder) {
             this.topicList = builder.topicList;
@@ -393,17 +736,17 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         /**
          * @return topicList
          */
-        public java.util.List < TopicList> getTopicList() {
+        public java.util.List<TopicList> getTopicList() {
             return this.topicList;
         }
 
         public static final class Builder {
-            private java.util.List < TopicList> topicList; 
+            private java.util.List<TopicList> topicList; 
 
             /**
              * TopicList.
              */
-            public Builder topicList(java.util.List < TopicList> topicList) {
+            public Builder topicList(java.util.List<TopicList> topicList) {
                 this.topicList = topicList;
                 return this;
             }
@@ -415,18 +758,28 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetConsumerProgressResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConsumerProgressResponseBody</p>
+     */
     public static class ConsumerProgress extends TeaModel {
-        @NameInMap("LastTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LastTimestamp")
         private Long lastTimestamp;
 
-        @NameInMap("TopicList")
+        @com.aliyun.core.annotation.NameInMap("RebalanceInfoList")
+        private ConsumerProgressRebalanceInfoList rebalanceInfoList;
+
+        @com.aliyun.core.annotation.NameInMap("TopicList")
         private ConsumerProgressTopicList topicList;
 
-        @NameInMap("TotalDiff")
+        @com.aliyun.core.annotation.NameInMap("TotalDiff")
         private Long totalDiff;
 
         private ConsumerProgress(Builder builder) {
             this.lastTimestamp = builder.lastTimestamp;
+            this.rebalanceInfoList = builder.rebalanceInfoList;
             this.topicList = builder.topicList;
             this.totalDiff = builder.totalDiff;
         }
@@ -447,6 +800,13 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         }
 
         /**
+         * @return rebalanceInfoList
+         */
+        public ConsumerProgressRebalanceInfoList getRebalanceInfoList() {
+            return this.rebalanceInfoList;
+        }
+
+        /**
          * @return topicList
          */
         public ConsumerProgressTopicList getTopicList() {
@@ -462,11 +822,15 @@ public class GetConsumerProgressResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long lastTimestamp; 
+            private ConsumerProgressRebalanceInfoList rebalanceInfoList; 
             private ConsumerProgressTopicList topicList; 
             private Long totalDiff; 
 
             /**
-             * The time when the last message consumed by the consumer group was generated.
+             * <p>The time when the last message consumed by the consumer group was generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1566874931671</p>
              */
             public Builder lastTimestamp(Long lastTimestamp) {
                 this.lastTimestamp = lastTimestamp;
@@ -474,7 +838,15 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * The consumption progress of each topic to which the consumer group is subscribed.
+             * <p>The details of rebalances in the consumer group.</p>
+             */
+            public Builder rebalanceInfoList(ConsumerProgressRebalanceInfoList rebalanceInfoList) {
+                this.rebalanceInfoList = rebalanceInfoList;
+                return this;
+            }
+
+            /**
+             * <p>The consumer progress of each topic to which the consumer group subscribes.</p>
              */
             public Builder topicList(ConsumerProgressTopicList topicList) {
                 this.topicList = topicList;
@@ -482,7 +854,10 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * The number of messages that were not consumed in all topics. This is also known as the number of accumulated messages in all topics.
+             * <p>The total number of unconsumed messages in all topics to which the consumer group subscribes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalDiff(Long totalDiff) {
                 this.totalDiff = totalDiff;

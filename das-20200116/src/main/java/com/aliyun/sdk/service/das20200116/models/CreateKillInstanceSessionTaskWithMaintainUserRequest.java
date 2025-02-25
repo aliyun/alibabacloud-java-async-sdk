@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateKillInstanceSessionTaskWithMaintainUserRequest} extends {@link RequestModel}
  *
  * <p>CreateKillInstanceSessionTaskWithMaintainUserRequest</p>
  */
 public class CreateKillInstanceSessionTaskWithMaintainUserRequest extends Request {
-    @Query
-    @NameInMap("IgnoredUsers")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IgnoredUsers")
     private String ignoredUsers;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("KillAllSessions")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KillAllSessions")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean killAllSessions;
 
-    @Query
-    @NameInMap("NodeId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeId")
     private String nodeId;
 
-    @Query
-    @NameInMap("SessionIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SessionIds")
     private String sessionIds;
 
     private CreateKillInstanceSessionTaskWithMaintainUserRequest(Builder builder) {
@@ -121,7 +126,7 @@ public class CreateKillInstanceSessionTaskWithMaintainUserRequest extends Reques
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -130,7 +135,7 @@ public class CreateKillInstanceSessionTaskWithMaintainUserRequest extends Reques
         }
 
         /**
-         * KillAllSessions.
+         * <p>This parameter is required.</p>
          */
         public Builder killAllSessions(Boolean killAllSessions) {
             this.putQueryParameter("KillAllSessions", killAllSessions);

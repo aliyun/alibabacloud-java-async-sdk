@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,50 +11,50 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateEthereumNodeConfigurationRequest</p>
  */
 public class UpdateEthereumNodeConfigurationRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("IP")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IP")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ip;
 
-    @Body
-    @NameInMap("NodeId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodeId;
 
-    @Body
-    @NameInMap("NodePub")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodePub")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodePub;
 
-    @Body
-    @NameInMap("P2pPort")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("P2pPort")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer p2pPort;
 
-    @Body
-    @NameInMap("RaftPort")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RaftPort")
     private Integer raftPort;
 
-    @Body
-    @NameInMap("RpcPort")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RpcPort")
     private Integer rpcPort;
 
-    @Body
-    @NameInMap("TMPort")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TMPort")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer TMPort;
 
-    @Body
-    @NameInMap("TMPub")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TMPub")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String TMPub;
 
-    @Body
-    @NameInMap("WSPort")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WSPort")
     private Integer WSPort;
 
     private UpdateEthereumNodeConfigurationRequest(Builder builder) {

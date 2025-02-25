@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RevokeColumnPermissionResponseBody} extends {@link TeaModel}
  *
  * <p>RevokeColumnPermissionResponseBody</p>
  */
 public class RevokeColumnPermissionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RevokeSuccess")
+    @com.aliyun.core.annotation.NameInMap("RevokeSuccess")
     private Boolean revokeSuccess;
 
     private RevokeColumnPermissionResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class RevokeColumnPermissionResponseBody extends TeaModel {
         private Boolean revokeSuccess; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1ec92159376****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,10 @@ public class RevokeColumnPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>Indicates whether the permissions are revoked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder revokeSuccess(Boolean revokeSuccess) {
             this.revokeSuccess = revokeSuccess;

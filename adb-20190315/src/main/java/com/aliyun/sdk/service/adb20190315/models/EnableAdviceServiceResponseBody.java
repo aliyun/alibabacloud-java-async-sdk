@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableAdviceServiceResponseBody} extends {@link TeaModel}
  *
  * <p>EnableAdviceServiceResponseBody</p>
  */
 public class EnableAdviceServiceResponseBody extends TeaModel {
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private EnableAdviceServiceResponseBody(Builder builder) {
@@ -50,11 +50,14 @@ public class EnableAdviceServiceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The message returned for the operation. Valid values:
-         * <p>
+         * <p>The message returned for the operation. Valid values:</p>
+         * <ul>
+         * <li><strong>Success</strong> is returned if the operation is successful.</li>
+         * <li>An error message is returned if the operation fails.</li>
+         * </ul>
          * 
-         * *   **Success** is returned if the operation is successful.
-         * *   An error message is returned if the operation fails.
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -62,7 +65,10 @@ public class EnableAdviceServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E1745C03-7CCE-55CF-932E-08121AAFA6AF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

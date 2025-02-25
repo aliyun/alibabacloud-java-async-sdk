@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPfsSqlSummariesResponseBody} extends {@link TeaModel}
  *
  * <p>GetPfsSqlSummariesResponseBody</p>
  */
 public class GetPfsSqlSummariesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetPfsSqlSummariesResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,10 +110,13 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +124,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54F3DBAE-9420-511A-9C29-265E8C04****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,11 +135,14 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,194 +155,200 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPfsSqlSummariesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPfsSqlSummariesResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("AvgLatency")
+        @com.aliyun.core.annotation.NameInMap("AvgLatency")
         private Double avgLatency;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("CountRate")
+        @com.aliyun.core.annotation.NameInMap("CountRate")
         private Double countRate;
 
-        @NameInMap("CpuRate")
+        @com.aliyun.core.annotation.NameInMap("CpuRate")
         private Double cpuRate;
 
-        @NameInMap("CpuTime")
+        @com.aliyun.core.annotation.NameInMap("CpuTime")
         private Double cpuTime;
 
-        @NameInMap("DataReadTime")
+        @com.aliyun.core.annotation.NameInMap("DataReadTime")
         private Double dataReadTime;
 
-        @NameInMap("DataReads")
+        @com.aliyun.core.annotation.NameInMap("DataReads")
         private Integer dataReads;
 
-        @NameInMap("DataWriteTime")
+        @com.aliyun.core.annotation.NameInMap("DataWriteTime")
         private Double dataWriteTime;
 
-        @NameInMap("DataWrites")
+        @com.aliyun.core.annotation.NameInMap("DataWrites")
         private Integer dataWrites;
 
-        @NameInMap("Db")
+        @com.aliyun.core.annotation.NameInMap("Db")
         private String db;
 
-        @NameInMap("ElapsedTime")
+        @com.aliyun.core.annotation.NameInMap("ElapsedTime")
         private Double elapsedTime;
 
-        @NameInMap("ErrCount")
+        @com.aliyun.core.annotation.NameInMap("ErrCount")
         private Long errCount;
 
-        @NameInMap("FirstTime")
+        @com.aliyun.core.annotation.NameInMap("FirstTime")
         private Long firstTime;
 
-        @NameInMap("FullScan")
+        @com.aliyun.core.annotation.NameInMap("FullScan")
         private Boolean fullScan;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("LastTime")
+        @com.aliyun.core.annotation.NameInMap("LastTime")
         private Long lastTime;
 
-        @NameInMap("LockLatencyAvg")
+        @com.aliyun.core.annotation.NameInMap("LockLatencyAvg")
         private Double lockLatencyAvg;
 
-        @NameInMap("LogicId")
+        @com.aliyun.core.annotation.NameInMap("LogicId")
         private Long logicId;
 
-        @NameInMap("LogicReads")
+        @com.aliyun.core.annotation.NameInMap("LogicReads")
         private Long logicReads;
 
-        @NameInMap("MaxLatency")
+        @com.aliyun.core.annotation.NameInMap("MaxLatency")
         private Double maxLatency;
 
-        @NameInMap("MutexSpins")
+        @com.aliyun.core.annotation.NameInMap("MutexSpins")
         private Integer mutexSpins;
 
-        @NameInMap("MutexWaits")
+        @com.aliyun.core.annotation.NameInMap("MutexWaits")
         private Integer mutexWaits;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("PhysicalAsyncReads")
+        @com.aliyun.core.annotation.NameInMap("PhysicalAsyncReads")
         private Long physicalAsyncReads;
 
-        @NameInMap("PhysicalReads")
+        @com.aliyun.core.annotation.NameInMap("PhysicalReads")
         private Long physicalReads;
 
-        @NameInMap("Psql")
+        @com.aliyun.core.annotation.NameInMap("Psql")
         private String psql;
 
-        @NameInMap("RedoWrites")
+        @com.aliyun.core.annotation.NameInMap("RedoWrites")
         private Long redoWrites;
 
-        @NameInMap("RowsAffected")
+        @com.aliyun.core.annotation.NameInMap("RowsAffected")
         private Long rowsAffected;
 
-        @NameInMap("RowsAffectedAvg")
+        @com.aliyun.core.annotation.NameInMap("RowsAffectedAvg")
         private Double rowsAffectedAvg;
 
-        @NameInMap("RowsExamined")
+        @com.aliyun.core.annotation.NameInMap("RowsExamined")
         private Long rowsExamined;
 
-        @NameInMap("RowsExaminedAvg")
+        @com.aliyun.core.annotation.NameInMap("RowsExaminedAvg")
         private Double rowsExaminedAvg;
 
-        @NameInMap("RowsSendAvg")
+        @com.aliyun.core.annotation.NameInMap("RowsSendAvg")
         private Double rowsSendAvg;
 
-        @NameInMap("RowsSent")
+        @com.aliyun.core.annotation.NameInMap("RowsSent")
         private Long rowsSent;
 
-        @NameInMap("RowsSentAvg")
+        @com.aliyun.core.annotation.NameInMap("RowsSentAvg")
         private Double rowsSentAvg;
 
-        @NameInMap("RowsSorted")
+        @com.aliyun.core.annotation.NameInMap("RowsSorted")
         private Long rowsSorted;
 
-        @NameInMap("RtRate")
+        @com.aliyun.core.annotation.NameInMap("RtRate")
         private Double rtRate;
 
-        @NameInMap("RwlockOsWaits")
+        @com.aliyun.core.annotation.NameInMap("RwlockOsWaits")
         private Integer rwlockOsWaits;
 
-        @NameInMap("RwlockSpinRounds")
+        @com.aliyun.core.annotation.NameInMap("RwlockSpinRounds")
         private Integer rwlockSpinRounds;
 
-        @NameInMap("RwlockSpinWaits")
+        @com.aliyun.core.annotation.NameInMap("RwlockSpinWaits")
         private Integer rwlockSpinWaits;
 
-        @NameInMap("SelectFullJoinAvg")
+        @com.aliyun.core.annotation.NameInMap("SelectFullJoinAvg")
         private Double selectFullJoinAvg;
 
-        @NameInMap("SelectFullRangeJoinAvg")
+        @com.aliyun.core.annotation.NameInMap("SelectFullRangeJoinAvg")
         private Double selectFullRangeJoinAvg;
 
-        @NameInMap("SelectRangeAvg")
+        @com.aliyun.core.annotation.NameInMap("SelectRangeAvg")
         private Double selectRangeAvg;
 
-        @NameInMap("SelectScanAvg")
+        @com.aliyun.core.annotation.NameInMap("SelectScanAvg")
         private Double selectScanAvg;
 
-        @NameInMap("SemisyncDelayTime")
+        @com.aliyun.core.annotation.NameInMap("SemisyncDelayTime")
         private Double semisyncDelayTime;
 
-        @NameInMap("ServerLockTime")
+        @com.aliyun.core.annotation.NameInMap("ServerLockTime")
         private Double serverLockTime;
 
-        @NameInMap("SortMergePasses")
+        @com.aliyun.core.annotation.NameInMap("SortMergePasses")
         private Long sortMergePasses;
 
-        @NameInMap("SortRangeAvg")
+        @com.aliyun.core.annotation.NameInMap("SortRangeAvg")
         private Double sortRangeAvg;
 
-        @NameInMap("SortRowsAvg")
+        @com.aliyun.core.annotation.NameInMap("SortRowsAvg")
         private Double sortRowsAvg;
 
-        @NameInMap("SortScanAvg")
+        @com.aliyun.core.annotation.NameInMap("SortScanAvg")
         private Double sortScanAvg;
 
-        @NameInMap("SqlId")
+        @com.aliyun.core.annotation.NameInMap("SqlId")
         private String sqlId;
 
-        @NameInMap("SqlType")
+        @com.aliyun.core.annotation.NameInMap("SqlType")
         private String sqlType;
 
-        @NameInMap("Tables")
-        private java.util.List < String > tables;
+        @com.aliyun.core.annotation.NameInMap("Tables")
+        private java.util.List<String> tables;
 
-        @NameInMap("TimerWaitAvg")
+        @com.aliyun.core.annotation.NameInMap("TimerWaitAvg")
         private Double timerWaitAvg;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
-        @NameInMap("TmpDiskTables")
+        @com.aliyun.core.annotation.NameInMap("TmpDiskTables")
         private Long tmpDiskTables;
 
-        @NameInMap("TmpDiskTablesAvg")
+        @com.aliyun.core.annotation.NameInMap("TmpDiskTablesAvg")
         private Double tmpDiskTablesAvg;
 
-        @NameInMap("TmpTables")
+        @com.aliyun.core.annotation.NameInMap("TmpTables")
         private Long tmpTables;
 
-        @NameInMap("TmpTablesAvg")
+        @com.aliyun.core.annotation.NameInMap("TmpTablesAvg")
         private Double tmpTablesAvg;
 
-        @NameInMap("TotalLatency")
+        @com.aliyun.core.annotation.NameInMap("TotalLatency")
         private Double totalLatency;
 
-        @NameInMap("TransactionLockTime")
+        @com.aliyun.core.annotation.NameInMap("TransactionLockTime")
         private Double transactionLockTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("WarnCount")
+        @com.aliyun.core.annotation.NameInMap("WarnCount")
         private Long warnCount;
 
         private List(Builder builder) {
@@ -769,7 +792,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
         /**
          * @return tables
          */
-        public java.util.List < String > getTables() {
+        public java.util.List<String> getTables() {
             return this.tables;
         }
 
@@ -896,7 +919,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             private Double sortScanAvg; 
             private String sqlId; 
             private String sqlType; 
-            private java.util.List < String > tables; 
+            private java.util.List<String> tables; 
             private Double timerWaitAvg; 
             private Long timestamp; 
             private Long tmpDiskTables; 
@@ -909,7 +932,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             private Long warnCount; 
 
             /**
-             * The average execution latency. Unit: millisecond.
+             * <p>The average execution latency. Unit: millisecond.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1717</p>
              */
             public Builder avgLatency(Double avgLatency) {
                 this.avgLatency = avgLatency;
@@ -917,7 +943,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of executions.
+             * <p>The total number of executions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -925,7 +954,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The percentage of the number of executions.
+             * <p>The percentage of the number of executions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0586</p>
              */
             public Builder countRate(Double countRate) {
                 this.countRate = countRate;
@@ -933,7 +965,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The ratio of the CPU execution duration to the total execution duration of the SQL statement.
+             * <p>The ratio of the CPU execution duration to the total execution duration of the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder cpuRate(Double cpuRate) {
                 this.cpuRate = cpuRate;
@@ -941,7 +976,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The CPU execution duration. Unit: millisecond.
+             * <p>The CPU execution duration. Unit: millisecond.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder cpuTime(Double cpuTime) {
                 this.cpuTime = cpuTime;
@@ -949,7 +987,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The data read duration. Unit: millisecond.
+             * <p>The data read duration. Unit: millisecond.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dataReadTime(Double dataReadTime) {
                 this.dataReadTime = dataReadTime;
@@ -957,7 +998,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of nodes from which data can be read.
+             * <p>The number of nodes from which data can be read.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dataReads(Integer dataReads) {
                 this.dataReads = dataReads;
@@ -965,7 +1009,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The data write duration. Unit: millisecond.
+             * <p>The data write duration. Unit: millisecond.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dataWriteTime(Double dataWriteTime) {
                 this.dataWriteTime = dataWriteTime;
@@ -973,7 +1020,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of nodes to which data can be written.
+             * <p>The number of nodes to which data can be written.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dataWrites(Integer dataWrites) {
                 this.dataWrites = dataWrites;
@@ -981,7 +1031,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testDB</p>
              */
             public Builder db(String db) {
                 this.db = db;
@@ -989,7 +1042,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The execution duration. Unit: millisecond.
+             * <p>The execution duration. Unit: millisecond.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder elapsedTime(Double elapsedTime) {
                 this.elapsedTime = elapsedTime;
@@ -997,7 +1053,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of errors.
+             * <p>The number of errors.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder errCount(Long errCount) {
                 this.errCount = errCount;
@@ -1005,7 +1064,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the SQL statement was executed for the first time. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the SQL statement was executed for the first time. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1659308149000</p>
              */
             public Builder firstTime(Long firstTime) {
                 this.firstTime = firstTime;
@@ -1013,11 +1075,14 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether full table scan was enabled. Valid values:
-             * <p>
+             * <p>Indicates whether full table scan was enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * * **true**
-             * * **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder fullScan(Boolean fullScan) {
                 this.fullScan = fullScan;
@@ -1025,7 +1090,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The primary key ID.
+             * <p>The primary key ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26186357</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1033,7 +1101,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-2ze8g2am97624****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1041,7 +1112,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the SQL statement was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the SQL statement was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1661306520000</p>
              */
             public Builder lastTime(Long lastTime) {
                 this.lastTime = lastTime;
@@ -1049,7 +1123,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The average lock wait latency. Unit: millisecond.
+             * <p>The average lock wait latency. Unit: millisecond.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder lockLatencyAvg(Double lockLatencyAvg) {
                 this.lockLatencyAvg = lockLatencyAvg;
@@ -1057,7 +1134,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The logical database ID.
+             * <p>The logical database ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>58275984</p>
              */
             public Builder logicId(Long logicId) {
                 this.logicId = logicId;
@@ -1065,7 +1145,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of logical nodes.
+             * <p>The number of logical nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder logicReads(Long logicReads) {
                 this.logicReads = logicReads;
@@ -1073,7 +1156,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum execution latency. Unit: millisecond.
+             * <p>The maximum execution latency. Unit: millisecond.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36.233</p>
              */
             public Builder maxLatency(Double maxLatency) {
                 this.maxLatency = maxLatency;
@@ -1081,7 +1167,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of mutex spins.
+             * <p>The number of mutex spins.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder mutexSpins(Integer mutexSpins) {
                 this.mutexSpins = mutexSpins;
@@ -1089,7 +1178,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of mutex waits.
+             * <p>The number of mutex waits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder mutexWaits(Integer mutexWaits) {
                 this.mutexWaits = mutexWaits;
@@ -1097,10 +1189,13 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The node ID.
-             * <p>
+             * <p>The node ID.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if the database instance is an ApsaraDB RDS for MySQL Cluster Edition instance or a PolarDB for MySQL cluster.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only if the database instance is an ApsaraDB RDS for MySQL Cluster Edition instance or a PolarDB for MySQL cluster.
+             * <strong>example:</strong>
+             * <p>r-x****-db-0</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -1108,7 +1203,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of physical asynchronous nodes.
+             * <p>The number of physical asynchronous nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder physicalAsyncReads(Long physicalAsyncReads) {
                 this.physicalAsyncReads = physicalAsyncReads;
@@ -1116,7 +1214,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of physical nodes.
+             * <p>The number of physical nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder physicalReads(Long physicalReads) {
                 this.physicalReads = physicalReads;
@@ -1124,7 +1225,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL template.
+             * <p>The SQL template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select ?</p>
              */
             public Builder psql(String psql) {
                 this.psql = psql;
@@ -1132,7 +1236,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of redo nodes.
+             * <p>The number of redo nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder redoWrites(Long redoWrites) {
                 this.redoWrites = redoWrites;
@@ -1140,7 +1247,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows that are affected by the SQL statement.
+             * <p>The number of rows that are affected by the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder rowsAffected(Long rowsAffected) {
                 this.rowsAffected = rowsAffected;
@@ -1148,7 +1258,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The average number of rows affected by the SQL statement.
+             * <p>The average number of rows affected by the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder rowsAffectedAvg(Double rowsAffectedAvg) {
                 this.rowsAffectedAvg = rowsAffectedAvg;
@@ -1156,7 +1269,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of scanned rows.
+             * <p>The total number of scanned rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder rowsExamined(Long rowsExamined) {
                 this.rowsExamined = rowsExamined;
@@ -1164,7 +1280,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The average number of scanned rows.
+             * <p>The average number of scanned rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder rowsExaminedAvg(Double rowsExaminedAvg) {
                 this.rowsExaminedAvg = rowsExaminedAvg;
@@ -1172,7 +1291,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The average number of returned rows.
+             * <p>The average number of returned rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder rowsSendAvg(Double rowsSendAvg) {
                 this.rowsSendAvg = rowsSendAvg;
@@ -1180,7 +1302,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows returned by the SQL statement.
+             * <p>The number of rows returned by the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder rowsSent(Long rowsSent) {
                 this.rowsSent = rowsSent;
@@ -1188,7 +1313,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The average number of rows returned for the SQL statement.
+             * <p>The average number of rows returned for the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.52</p>
              */
             public Builder rowsSentAvg(Double rowsSentAvg) {
                 this.rowsSentAvg = rowsSentAvg;
@@ -1196,7 +1324,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of sorted rows.
+             * <p>The number of sorted rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder rowsSorted(Long rowsSorted) {
                 this.rowsSorted = rowsSorted;
@@ -1204,7 +1335,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The execution duration percentage.
+             * <p>The execution duration percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1384</p>
              */
             public Builder rtRate(Double rtRate) {
                 this.rtRate = rtRate;
@@ -1212,11 +1346,14 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether read/write splitting was enabled. Valid values:
-             * <p>
+             * <p>Indicates whether read/write splitting was enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>0:</strong> Read/write splitting was disabled.</li>
+             * <li><strong>1:</strong> Read/write splitting was enabled.</li>
+             * </ul>
              * 
-             * * **0:** Read/write splitting was disabled.
-             * * **1:** Read/write splitting was enabled.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder rwlockOsWaits(Integer rwlockOsWaits) {
                 this.rwlockOsWaits = rwlockOsWaits;
@@ -1224,7 +1361,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The read/write splitting parameters.
+             * <p>The read/write splitting parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder rwlockSpinRounds(Integer rwlockSpinRounds) {
                 this.rwlockSpinRounds = rwlockSpinRounds;
@@ -1232,11 +1372,14 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * Indices whether multi-index scanning was enabled. Valid values:
-             * <p>
+             * <p>Indices whether multi-index scanning was enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>0:</strong> Multi-index scanning was disabled.</li>
+             * <li><strong>1:</strong> Multi-index scanning was enabled.</li>
+             * </ul>
              * 
-             * * **0:** Multi-index scanning was disabled.
-             * * **1:** Multi-index scanning was enabled.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder rwlockSpinWaits(Integer rwlockSpinWaits) {
                 this.rwlockSpinWaits = rwlockSpinWaits;
@@ -1244,10 +1387,13 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The average number of joins that performed table scans without using indexes.
-             * <p>
+             * <p>The average number of joins that performed table scans without using indexes.</p>
+             * <blockquote>
+             * <p>If the value of this parameter is not 0, check the table indexes.</p>
+             * </blockquote>
              * 
-             * > If the value of this parameter is not 0, check the table indexes.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder selectFullJoinAvg(Double selectFullJoinAvg) {
                 this.selectFullJoinAvg = selectFullJoinAvg;
@@ -1255,7 +1401,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The average number of joins that selected a range.
+             * <p>The average number of joins that selected a range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder selectFullRangeJoinAvg(Double selectFullRangeJoinAvg) {
                 this.selectFullRangeJoinAvg = selectFullRangeJoinAvg;
@@ -1263,7 +1412,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The average selected range.
+             * <p>The average selected range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder selectRangeAvg(Double selectRangeAvg) {
                 this.selectRangeAvg = selectRangeAvg;
@@ -1271,7 +1423,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The average number of scanned rows.
+             * <p>The average number of scanned rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder selectScanAvg(Double selectScanAvg) {
                 this.selectScanAvg = selectScanAvg;
@@ -1279,7 +1434,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The semi-synchronous replication latency. Unit: millisecond.
+             * <p>The semi-synchronous replication latency. Unit: millisecond.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.12</p>
              */
             public Builder semisyncDelayTime(Double semisyncDelayTime) {
                 this.semisyncDelayTime = semisyncDelayTime;
@@ -1287,7 +1445,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of time consumed for locking the server. Unit: millisecond.
+             * <p>The amount of time consumed for locking the server. Unit: millisecond.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder serverLockTime(Double serverLockTime) {
                 this.serverLockTime = serverLockTime;
@@ -1295,7 +1456,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of merges that the sorting algorithm must perform.
+             * <p>The number of merges that the sorting algorithm must perform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder sortMergePasses(Long sortMergePasses) {
                 this.sortMergePasses = sortMergePasses;
@@ -1303,7 +1467,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The average number of sorts that were performed by using a range.
+             * <p>The average number of sorts that were performed by using a range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder sortRangeAvg(Double sortRangeAvg) {
                 this.sortRangeAvg = sortRangeAvg;
@@ -1311,7 +1478,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The average number of sorted rows.
+             * <p>The average number of sorted rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder sortRowsAvg(Double sortRowsAvg) {
                 this.sortRowsAvg = sortRowsAvg;
@@ -1319,7 +1489,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The average number of sorts that were performed during table scans.
+             * <p>The average number of sorts that were performed during table scans.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder sortScanAvg(Double sortScanAvg) {
                 this.sortScanAvg = sortScanAvg;
@@ -1327,7 +1500,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL template ID.
+             * <p>The SQL template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2e8147b5ca2dfc640dfd5e43d96a****</p>
              */
             public Builder sqlId(String sqlId) {
                 this.sqlId = sqlId;
@@ -1335,12 +1511,15 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the SQL statement. Valid values:
-             * <p>
+             * <p>The type of the SQL statement. Valid values:</p>
+             * <ul>
+             * <li><strong>SELECT</strong></li>
+             * <li><strong>UPDATE</strong></li>
+             * <li><strong>DELETE</strong></li>
+             * </ul>
              * 
-             * * **SELECT**
-             * * **UPDATE**
-             * * **DELETE**
+             * <strong>example:</strong>
+             * <p>SELECT</p>
              */
             public Builder sqlType(String sqlType) {
                 this.sqlType = sqlType;
@@ -1348,15 +1527,18 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The names of tables in the database.
+             * <p>The names of tables in the database.</p>
              */
-            public Builder tables(java.util.List < String > tables) {
+            public Builder tables(java.util.List<String> tables) {
                 this.tables = tables;
                 return this;
             }
 
             /**
-             * The reserved parameter.
+             * <p>The reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder timerWaitAvg(Double timerWaitAvg) {
                 this.timerWaitAvg = timerWaitAvg;
@@ -1364,7 +1546,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The data timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The data timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1643040000000</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -1372,7 +1557,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of on-disk temporary tables.
+             * <p>The number of on-disk temporary tables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder tmpDiskTables(Long tmpDiskTables) {
                 this.tmpDiskTables = tmpDiskTables;
@@ -1380,7 +1568,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The average number of on-disk temporary tables.
+             * <p>The average number of on-disk temporary tables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder tmpDiskTablesAvg(Double tmpDiskTablesAvg) {
                 this.tmpDiskTablesAvg = tmpDiskTablesAvg;
@@ -1388,7 +1579,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of temporary tables.
+             * <p>The number of temporary tables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder tmpTables(Long tmpTables) {
                 this.tmpTables = tmpTables;
@@ -1396,7 +1590,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The average number of temporary tables.
+             * <p>The average number of temporary tables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder tmpTablesAvg(Double tmpTablesAvg) {
                 this.tmpTablesAvg = tmpTablesAvg;
@@ -1404,7 +1601,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The execution latency. Unit: millisecond.
+             * <p>The execution latency. Unit: millisecond.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60913.256</p>
              */
             public Builder totalLatency(Double totalLatency) {
                 this.totalLatency = totalLatency;
@@ -1412,7 +1612,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of time consumed for locking the storage transaction. Unit: millisecond.
+             * <p>The amount of time consumed for locking the storage transaction. Unit: millisecond.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder transactionLockTime(Double transactionLockTime) {
                 this.transactionLockTime = transactionLockTime;
@@ -1420,7 +1623,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>196278346919****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -1428,7 +1634,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of warnings.
+             * <p>The number of warnings.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder warnCount(Long warnCount) {
                 this.warnCount = warnCount;
@@ -1442,20 +1651,26 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPfsSqlSummariesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPfsSqlSummariesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Extra")
+        @com.aliyun.core.annotation.NameInMap("Extra")
         private Object extra;
 
-        @NameInMap("List")
-        private java.util.List < List> list;
+        @com.aliyun.core.annotation.NameInMap("List")
+        private java.util.List<List> list;
 
-        @NameInMap("PageNo")
+        @com.aliyun.core.annotation.NameInMap("PageNo")
         private Long pageNo;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Long pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private Data(Builder builder) {
@@ -1484,7 +1699,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -1511,13 +1726,16 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
 
         public static final class Builder {
             private Object extra; 
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Long pageNo; 
             private Long pageSize; 
             private Long total; 
 
             /**
-             * The reserved parameter.
+             * <p>The reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder extra(Object extra) {
                 this.extra = extra;
@@ -1525,15 +1743,18 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The detailed information.
+             * <p>The details of the data returned.</p>
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNo(Long pageNo) {
                 this.pageNo = pageNo;
@@ -1541,7 +1762,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -1549,7 +1773,10 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>264</p>
              */
             public Builder total(Long total) {
                 this.total = total;

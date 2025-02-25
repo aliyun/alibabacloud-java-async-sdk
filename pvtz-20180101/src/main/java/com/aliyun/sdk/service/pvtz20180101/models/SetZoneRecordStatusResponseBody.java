@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetZoneRecordStatusResponseBody} extends {@link TeaModel}
  *
  * <p>SetZoneRecordStatusResponseBody</p>
  */
 public class SetZoneRecordStatusResponseBody extends TeaModel {
-    @NameInMap("RecordId")
+    @com.aliyun.core.annotation.NameInMap("RecordId")
     private Long recordId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private SetZoneRecordStatusResponseBody(Builder builder) {
@@ -62,7 +62,10 @@ public class SetZoneRecordStatusResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * RecordId.
+         * <p>The ID of the DNS record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>207541****</p>
          */
         public Builder recordId(Long recordId) {
             this.recordId = recordId;
@@ -70,7 +73,10 @@ public class SetZoneRecordStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39CB16E5-4180-49F2-A060-23C0ECEB80D9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +84,14 @@ public class SetZoneRecordStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The state of the DNS record. Valid values:</p>
+         * <ul>
+         * <li>ENABLE: The DNS record is enabled.</li>
+         * <li>DISABLE: The DNS record is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DISABLE</p>
          */
         public Builder status(String status) {
             this.status = status;

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateApplicationConfig} extends {@link TeaModel}
  *
  * <p>UpdateApplicationConfig</p>
  */
 public class UpdateApplicationConfig extends TeaModel {
-    @NameInMap("ConfigDescription")
+    @com.aliyun.core.annotation.NameInMap("ConfigDescription")
     private String configDescription;
 
-    @NameInMap("ConfigFileName")
+    @com.aliyun.core.annotation.NameInMap("ConfigFileName")
     private String configFileName;
 
-    @NameInMap("ConfigItemKey")
+    @com.aliyun.core.annotation.NameInMap("ConfigItemKey")
     private String configItemKey;
 
-    @NameInMap("ConfigItemValue")
+    @com.aliyun.core.annotation.NameInMap("ConfigItemValue")
     private String configItemValue;
 
     private UpdateApplicationConfig(Builder builder) {
@@ -74,7 +79,10 @@ public class UpdateApplicationConfig extends TeaModel {
         private String configItemValue; 
 
         /**
-         * 修改描述。
+         * <p>修改描述。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dfs.namenode.checkpoint.period</p>
          */
         public Builder configDescription(String configDescription) {
             this.configDescription = configDescription;
@@ -82,7 +90,10 @@ public class UpdateApplicationConfig extends TeaModel {
         }
 
         /**
-         * 应用配置文件名。
+         * <p>应用配置文件名。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hdfs-site.xml</p>
          */
         public Builder configFileName(String configFileName) {
             this.configFileName = configFileName;
@@ -90,7 +101,10 @@ public class UpdateApplicationConfig extends TeaModel {
         }
 
         /**
-         * 配置项键。
+         * <p>配置项键。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dfs.namenode.checkpoint.period</p>
          */
         public Builder configItemKey(String configItemKey) {
             this.configItemKey = configItemKey;
@@ -98,7 +112,10 @@ public class UpdateApplicationConfig extends TeaModel {
         }
 
         /**
-         * 配置项值。
+         * <p>配置项值。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600s</p>
          */
         public Builder configItemValue(String configItemValue) {
             this.configItemValue = configItemValue;

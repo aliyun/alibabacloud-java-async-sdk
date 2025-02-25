@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryTreeDataResponseBody} extends {@link TeaModel}
  *
  * <p>QueryTreeDataResponseBody</p>
  */
 public class QueryTreeDataResponseBody extends TeaModel {
-    @NameInMap("Playbooks")
+    @com.aliyun.core.annotation.NameInMap("Playbooks")
     private String playbooks;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryTreeDataResponseBody(Builder builder) {
@@ -50,7 +50,18 @@ public class QueryTreeDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Playbooks.
+         * <p>The returned information about the playbook. The value is a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *     {
+         *         &quot;playbook&quot;: {
+         *             &quot;active&quot;: false,
+         *             &quot;displayName&quot;: &quot;test_playbook&quot;,
+         *             &quot;playbookUuid&quot;: &quot;09a20455-3d3a-424c-a1df-xxxxxx&quot;
+         *         }
+         *     }
+         * ]</p>
          */
         public Builder playbooks(String playbooks) {
             this.playbooks = playbooks;
@@ -58,7 +69,10 @@ public class QueryTreeDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EF2ECA2D-D8E6-5021-BF5C-19DD6D52C5B2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

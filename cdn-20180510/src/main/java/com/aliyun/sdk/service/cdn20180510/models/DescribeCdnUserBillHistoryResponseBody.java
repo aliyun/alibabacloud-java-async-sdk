@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnUserBillHistoryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCdnUserBillHistoryResponseBody</p>
  */
 public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
-    @NameInMap("BillHistoryData")
+    @com.aliyun.core.annotation.NameInMap("BillHistoryData")
     private BillHistoryData billHistoryData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCdnUserBillHistoryResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The billing history returned.
+         * <p>The billing history returned.</p>
          */
         public Builder billHistoryData(BillHistoryData billHistoryData) {
             this.billHistoryData = billHistoryData;
@@ -58,7 +58,10 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ED61C6C3-8241-4187-AAA7-5157AE175CEC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +74,26 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCdnUserBillHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCdnUserBillHistoryResponseBody</p>
+     */
     public static class BillingDataItem extends TeaModel {
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Float bandwidth;
 
-        @NameInMap("CdnRegion")
+        @com.aliyun.core.annotation.NameInMap("CdnRegion")
         private String cdnRegion;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Float count;
 
-        @NameInMap("Flow")
+        @com.aliyun.core.annotation.NameInMap("Flow")
         private Float flow;
 
         private BillingDataItem(Builder builder) {
@@ -146,7 +155,10 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
             private Float flow; 
 
             /**
-             * The bandwidth. Unit: bit/s.
+             * <p>The bandwidth. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4041</p>
              */
             public Builder bandwidth(Float bandwidth) {
                 this.bandwidth = bandwidth;
@@ -154,18 +166,21 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The billable region. Valid values:
-             * <p>
+             * <p>The billable region. Valid values:</p>
+             * <ul>
+             * <li><strong>CN</strong>: Chinese mainland</li>
+             * <li><strong>OverSeas</strong>: outside the Chinese mainland</li>
+             * <li><strong>AP1</strong>: Asia Pacific 1</li>
+             * <li><strong>AP2</strong>: Asia Pacific 2</li>
+             * <li><strong>AP3</strong>: Asia Pacific 3</li>
+             * <li><strong>NA</strong>: North America</li>
+             * <li><strong>SA</strong>: South America</li>
+             * <li><strong>EU</strong>: Europe</li>
+             * <li><strong>MEAA</strong>: Middle East and Africa</li>
+             * </ul>
              * 
-             * *   **CN**: Chinese mainland
-             * *   **OverSeas**: outside the Chinese mainland
-             * *   **AP1**: Asia Pacific 1
-             * *   **AP2**: Asia Pacific 2
-             * *   **AP3**: Asia Pacific 3
-             * *   **NA**: North America
-             * *   **SA**: South America
-             * *   **EU**: Europe
-             * *   **MEAA**: Middle East and Africa
+             * <strong>example:</strong>
+             * <p>AP1</p>
              */
             public Builder cdnRegion(String cdnRegion) {
                 this.cdnRegion = cdnRegion;
@@ -173,12 +188,15 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method. Valid values:
-             * <p>
+             * <p>The billing method. Valid values:</p>
+             * <ul>
+             * <li><strong>StaticHttp</strong>: static HTTP requests</li>
+             * <li><strong>DynamicHttp</strong>: dynamic HTTP requests</li>
+             * <li><strong>DynamicHttps</strong>: dynamic HTTPS requests</li>
+             * </ul>
              * 
-             * *   **StaticHttp**: static HTTP requests
-             * *   **DynamicHttp**: dynamic HTTP requests
-             * *   **DynamicHttps**: dynamic HTTPS requests
+             * <strong>example:</strong>
+             * <p>DynamicHttp</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -186,7 +204,10 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of requests.
+             * <p>The number of requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>203601</p>
              */
             public Builder count(Float count) {
                 this.count = count;
@@ -194,7 +215,10 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of network traffic. Unit: bytes.
+             * <p>The amount of network traffic. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24567</p>
              */
             public Builder flow(Float flow) {
                 this.flow = flow;
@@ -208,8 +232,14 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCdnUserBillHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCdnUserBillHistoryResponseBody</p>
+     */
     public static class BillingData extends TeaModel {
-        @NameInMap("BillingDataItem")
+        @com.aliyun.core.annotation.NameInMap("BillingDataItem")
         private java.util.List < BillingDataItem> billingDataItem;
 
         private BillingData(Builder builder) {
@@ -249,17 +279,23 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCdnUserBillHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCdnUserBillHistoryResponseBody</p>
+     */
     public static class BillHistoryDataItem extends TeaModel {
-        @NameInMap("BillTime")
+        @com.aliyun.core.annotation.NameInMap("BillTime")
         private String billTime;
 
-        @NameInMap("BillType")
+        @com.aliyun.core.annotation.NameInMap("BillType")
         private String billType;
 
-        @NameInMap("BillingData")
+        @com.aliyun.core.annotation.NameInMap("BillingData")
         private BillingData billingData;
 
-        @NameInMap("Dimension")
+        @com.aliyun.core.annotation.NameInMap("Dimension")
         private String dimension;
 
         private BillHistoryDataItem(Builder builder) {
@@ -312,7 +348,10 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
             private String dimension; 
 
             /**
-             * The beginning of the time range that was queried.
+             * <p>The beginning of the time range that was queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-09-30T16:00:00Z</p>
              */
             public Builder billTime(String billTime) {
                 this.billTime = billTime;
@@ -320,7 +359,10 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The metering method.
+             * <p>The metering method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>month_4th_day_bandwidth</p>
              */
             public Builder billType(String billType) {
                 this.billType = billType;
@@ -328,7 +370,7 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The billable items.
+             * <p>The billable items.</p>
              */
             public Builder billingData(BillingData billingData) {
                 this.billingData = billingData;
@@ -336,7 +378,10 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The dimension.
+             * <p>The dimension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>flow</p>
              */
             public Builder dimension(String dimension) {
                 this.dimension = dimension;
@@ -350,8 +395,14 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCdnUserBillHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCdnUserBillHistoryResponseBody</p>
+     */
     public static class BillHistoryData extends TeaModel {
-        @NameInMap("BillHistoryDataItem")
+        @com.aliyun.core.annotation.NameInMap("BillHistoryDataItem")
         private java.util.List < BillHistoryDataItem> billHistoryDataItem;
 
         private BillHistoryData(Builder builder) {

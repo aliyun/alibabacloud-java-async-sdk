@@ -62,14 +62,14 @@ public class RollbackInstanceVersionRequest extends Request {
             super();
         } 
 
-        private Builder(RollbackInstanceVersionRequest response) {
-            super(response);
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.regionId = response.regionId;
+        private Builder(RollbackInstanceVersionRequest request) {
+            super(request);
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * DrdsInstanceId.
+         * The instance ID.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -78,7 +78,7 @@ public class RollbackInstanceVersionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

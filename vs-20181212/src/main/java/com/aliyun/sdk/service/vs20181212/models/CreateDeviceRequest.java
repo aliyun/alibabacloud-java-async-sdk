@@ -1,110 +1,120 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDeviceRequest} extends {@link RequestModel}
  *
  * <p>CreateDeviceRequest</p>
  */
 public class CreateDeviceRequest extends Request {
-    @Query
-    @NameInMap("AlarmMethod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlarmMethod")
     private String alarmMethod;
 
-    @Query
-    @NameInMap("AutoPos")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoDirectory")
+    private Boolean autoDirectory;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPos")
     private Boolean autoPos;
 
-    @Query
-    @NameInMap("AutoStart")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoStart")
     private Boolean autoStart;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @Query
-    @NameInMap("Dsn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Dsn")
     private String dsn;
 
-    @Query
-    @NameInMap("GbId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GbId")
     private String gbId;
 
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("Ip")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ip")
     private String ip;
 
-    @Query
-    @NameInMap("Latitude")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Latitude")
     private String latitude;
 
-    @Query
-    @NameInMap("Longitude")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Longitude")
     private String longitude;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Params")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Params")
     private String params;
 
-    @Query
-    @NameInMap("ParentId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentId")
     private String parentId;
 
-    @Query
-    @NameInMap("Password")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Password")
     private String password;
 
-    @Query
-    @NameInMap("Port")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Port")
     private Long port;
 
-    @Query
-    @NameInMap("PosInterval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PosInterval")
     private Long posInterval;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
-    @Query
-    @NameInMap("Url")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Url")
     private String url;
 
-    @Query
-    @NameInMap("Username")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Username")
     private String username;
 
-    @Query
-    @NameInMap("Vendor")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Vendor")
     private String vendor;
 
     private CreateDeviceRequest(Builder builder) {
         super(builder);
         this.alarmMethod = builder.alarmMethod;
+        this.autoDirectory = builder.autoDirectory;
         this.autoPos = builder.autoPos;
         this.autoStart = builder.autoStart;
         this.description = builder.description;
@@ -146,6 +156,13 @@ public class CreateDeviceRequest extends Request {
      */
     public String getAlarmMethod() {
         return this.alarmMethod;
+    }
+
+    /**
+     * @return autoDirectory
+     */
+    public Boolean getAutoDirectory() {
+        return this.autoDirectory;
     }
 
     /**
@@ -297,6 +314,7 @@ public class CreateDeviceRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateDeviceRequest, Builder> {
         private String alarmMethod; 
+        private Boolean autoDirectory; 
         private Boolean autoPos; 
         private Boolean autoStart; 
         private String description; 
@@ -323,30 +341,31 @@ public class CreateDeviceRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDeviceRequest response) {
-            super(response);
-            this.alarmMethod = response.alarmMethod;
-            this.autoPos = response.autoPos;
-            this.autoStart = response.autoStart;
-            this.description = response.description;
-            this.directoryId = response.directoryId;
-            this.dsn = response.dsn;
-            this.gbId = response.gbId;
-            this.groupId = response.groupId;
-            this.ip = response.ip;
-            this.latitude = response.latitude;
-            this.longitude = response.longitude;
-            this.name = response.name;
-            this.ownerId = response.ownerId;
-            this.params = response.params;
-            this.parentId = response.parentId;
-            this.password = response.password;
-            this.port = response.port;
-            this.posInterval = response.posInterval;
-            this.type = response.type;
-            this.url = response.url;
-            this.username = response.username;
-            this.vendor = response.vendor;
+        private Builder(CreateDeviceRequest request) {
+            super(request);
+            this.alarmMethod = request.alarmMethod;
+            this.autoDirectory = request.autoDirectory;
+            this.autoPos = request.autoPos;
+            this.autoStart = request.autoStart;
+            this.description = request.description;
+            this.directoryId = request.directoryId;
+            this.dsn = request.dsn;
+            this.gbId = request.gbId;
+            this.groupId = request.groupId;
+            this.ip = request.ip;
+            this.latitude = request.latitude;
+            this.longitude = request.longitude;
+            this.name = request.name;
+            this.ownerId = request.ownerId;
+            this.params = request.params;
+            this.parentId = request.parentId;
+            this.password = request.password;
+            this.port = request.port;
+            this.posInterval = request.posInterval;
+            this.type = request.type;
+            this.url = request.url;
+            this.username = request.username;
+            this.vendor = request.vendor;
         } 
 
         /**
@@ -355,6 +374,15 @@ public class CreateDeviceRequest extends Request {
         public Builder alarmMethod(String alarmMethod) {
             this.putQueryParameter("AlarmMethod", alarmMethod);
             this.alarmMethod = alarmMethod;
+            return this;
+        }
+
+        /**
+         * AutoDirectory.
+         */
+        public Builder autoDirectory(Boolean autoDirectory) {
+            this.putQueryParameter("AutoDirectory", autoDirectory);
+            this.autoDirectory = autoDirectory;
             return this;
         }
 
@@ -413,7 +441,10 @@ public class CreateDeviceRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>348*****174-cn-qingdao</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -512,7 +543,10 @@ public class CreateDeviceRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipc</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceDropPacketResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceDropPacketResponseBody</p>
  */
 public class DescribeInstanceDropPacketResponseBody extends TeaModel {
-    @NameInMap("InstanceDropPacket")
+    @com.aliyun.core.annotation.NameInMap("InstanceDropPacket")
     private InstanceDropPacket instanceDropPacket;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceDropPacketResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeInstanceDropPacketResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of dropped packets in the instance.
+         * <p>The list of dropped packets in the instance.</p>
          */
         public Builder instanceDropPacket(InstanceDropPacket instanceDropPacket) {
             this.instanceDropPacket = instanceDropPacket;
@@ -58,7 +63,10 @@ public class DescribeInstanceDropPacketResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ001</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class DescribeInstanceDropPacketResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceDropPacketResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceDropPacketResponseBody</p>
+     */
     public static class MonitorItem extends TeaModel {
-        @NameInMap("Item")
+        @com.aliyun.core.annotation.NameInMap("Item")
         private String item;
 
-        @NameInMap("ItemTime")
+        @com.aliyun.core.annotation.NameInMap("ItemTime")
         private String itemTime;
 
-        @NameInMap("ItemValue")
+        @com.aliyun.core.annotation.NameInMap("ItemValue")
         private String itemValue;
 
         private MonitorItem(Builder builder) {
@@ -122,11 +136,14 @@ public class DescribeInstanceDropPacketResponseBody extends TeaModel {
             private String itemValue; 
 
             /**
-             * The metric. Valid values:
-             * <p>
+             * <p>The metric. Valid values:</p>
+             * <ul>
+             * <li>InstanceDropPacketRX: the number of inbound packets dropped in the instance per second.</li>
+             * <li>InstanceDropPacketTX: the number of outbound packets dropped in the instance per second.</li>
+             * </ul>
              * 
-             * *   InstanceDropPacketRX: the number of inbound packets dropped in the instance per second.
-             * *   InstanceDropPacketTX: the number of outbound packets dropped in the instance per second.
+             * <strong>example:</strong>
+             * <p>InstanceDropPacketRX</p>
              */
             public Builder item(String item) {
                 this.item = item;
@@ -134,7 +151,10 @@ public class DescribeInstanceDropPacketResponseBody extends TeaModel {
             }
 
             /**
-             * The monitoring time. The time follows the ISO 8601 standard. Format: YYYY-MM-DDThh:mm:ssZ
+             * <p>The monitoring time. The time follows the ISO 8601 standard. Format: YYYY-MM-DDThh:mm:ssZ</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-06T04:00:36Z</p>
              */
             public Builder itemTime(String itemTime) {
                 this.itemTime = itemTime;
@@ -142,7 +162,10 @@ public class DescribeInstanceDropPacketResponseBody extends TeaModel {
             }
 
             /**
-             * The number of dropped packets in the instance.
+             * <p>The number of dropped packets in the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder itemValue(String itemValue) {
                 this.itemValue = itemValue;
@@ -156,9 +179,15 @@ public class DescribeInstanceDropPacketResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceDropPacketResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceDropPacketResponseBody</p>
+     */
     public static class InstanceDropPacket extends TeaModel {
-        @NameInMap("MonitorItem")
-        private java.util.List < MonitorItem> monitorItem;
+        @com.aliyun.core.annotation.NameInMap("MonitorItem")
+        private java.util.List<MonitorItem> monitorItem;
 
         private InstanceDropPacket(Builder builder) {
             this.monitorItem = builder.monitorItem;
@@ -175,17 +204,17 @@ public class DescribeInstanceDropPacketResponseBody extends TeaModel {
         /**
          * @return monitorItem
          */
-        public java.util.List < MonitorItem> getMonitorItem() {
+        public java.util.List<MonitorItem> getMonitorItem() {
             return this.monitorItem;
         }
 
         public static final class Builder {
-            private java.util.List < MonitorItem> monitorItem; 
+            private java.util.List<MonitorItem> monitorItem; 
 
             /**
              * MonitorItem.
              */
-            public Builder monitorItem(java.util.List < MonitorItem> monitorItem) {
+            public Builder monitorItem(java.util.List<MonitorItem> monitorItem) {
                 this.monitorItem = monitorItem;
                 return this;
             }

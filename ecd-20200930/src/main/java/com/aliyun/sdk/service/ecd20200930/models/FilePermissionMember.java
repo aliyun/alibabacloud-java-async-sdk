@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FilePermissionMember} extends {@link TeaModel}
  *
  * <p>FilePermissionMember</p>
  */
 public class FilePermissionMember extends TeaModel {
-    @NameInMap("CdsIdentity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("CdsIdentity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private CdsIdentity cdsIdentity;
 
-    @NameInMap("DisinheritSubGroup")
+    @com.aliyun.core.annotation.NameInMap("DisinheritSubGroup")
     private Boolean disinheritSubGroup;
 
-    @NameInMap("ExpireTime")
+    @com.aliyun.core.annotation.NameInMap("ExpireTime")
     private Long expireTime;
 
-    @NameInMap("RoleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("RoleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String roleId;
 
     private FilePermissionMember(Builder builder) {
@@ -76,7 +81,7 @@ public class FilePermissionMember extends TeaModel {
         private String roleId; 
 
         /**
-         * CdsIdentity.
+         * <p>This parameter is required.</p>
          */
         public Builder cdsIdentity(CdsIdentity cdsIdentity) {
             this.cdsIdentity = cdsIdentity;
@@ -100,7 +105,7 @@ public class FilePermissionMember extends TeaModel {
         }
 
         /**
-         * RoleId.
+         * <p>This parameter is required.</p>
          */
         public Builder roleId(String roleId) {
             this.roleId = roleId;
@@ -113,13 +118,19 @@ public class FilePermissionMember extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FilePermissionMember} extends {@link TeaModel}
+     *
+     * <p>FilePermissionMember</p>
+     */
     public static class CdsIdentity extends TeaModel {
-        @NameInMap("Id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String id;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private CdsIdentity(Builder builder) {
@@ -154,7 +165,7 @@ public class FilePermissionMember extends TeaModel {
             private String type; 
 
             /**
-             * Id.
+             * <p>This parameter is required.</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -162,7 +173,7 @@ public class FilePermissionMember extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRetcodeShareUrlResponseBody} extends {@link TeaModel}
  *
  * <p>GetRetcodeShareUrlResponseBody</p>
  */
 public class GetRetcodeShareUrlResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Url")
+    @com.aliyun.core.annotation.NameInMap("Url")
     private String url;
 
     private GetRetcodeShareUrlResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class GetRetcodeShareUrlResponseBody extends TeaModel {
         private String url; 
 
         /**
-         * Queries the logon-free URL of a Browser Monitoring application.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01FF8DD9-A09C-47A1-895A-B6E321******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,10 @@ public class GetRetcodeShareUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The logon-free URL of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://arms-daily.console.aliyun.com:8080/shareapi/retcode.json?login_arms_t3h_token=XXXxxx&action=RetcodeAction&eventSubmitDoGetData=1">http://arms-daily.console.aliyun.com:8080/shareapi/retcode.json?login_arms_t3h_token=XXXxxx&amp;action=RetcodeAction&amp;eventSubmitDoGetData=1</a></p>
          */
         public Builder url(String url) {
             this.url = url;

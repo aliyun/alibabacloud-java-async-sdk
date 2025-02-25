@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserConnectionRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUserConnectionRecordsResponseBody</p>
  */
 public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
-    @NameInMap("ConnectionRecords")
-    private java.util.List < ConnectionRecords> connectionRecords;
+    @com.aliyun.core.annotation.NameInMap("ConnectionRecords")
+    private java.util.List<ConnectionRecords> connectionRecords;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeUserConnectionRecordsResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
     /**
      * @return connectionRecords
      */
-    public java.util.List < ConnectionRecords> getConnectionRecords() {
+    public java.util.List<ConnectionRecords> getConnectionRecords() {
         return this.connectionRecords;
     }
 
@@ -57,20 +62,23 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ConnectionRecords> connectionRecords; 
+        private java.util.List<ConnectionRecords> connectionRecords; 
         private String nextToken; 
         private String requestId; 
 
         /**
-         * ConnectionRecords.
+         * <p>Details about connection records of the end user.</p>
          */
-        public Builder connectionRecords(java.util.List < ConnectionRecords> connectionRecords) {
+        public Builder connectionRecords(java.util.List<ConnectionRecords> connectionRecords) {
             this.connectionRecords = connectionRecords;
             return this;
         }
 
         /**
-         * NextToken.
+         * <p>The token that is used to start the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +86,10 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2CC66B0A-BA3B-5D87-BFBE-11AAAD7A8E03</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,23 +102,29 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUserConnectionRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUserConnectionRecordsResponseBody</p>
+     */
     public static class ConnectionRecords extends TeaModel {
-        @NameInMap("ConnectDuration")
+        @com.aliyun.core.annotation.NameInMap("ConnectDuration")
         private String connectDuration;
 
-        @NameInMap("ConnectEndTime")
+        @com.aliyun.core.annotation.NameInMap("ConnectEndTime")
         private String connectEndTime;
 
-        @NameInMap("ConnectStartTime")
+        @com.aliyun.core.annotation.NameInMap("ConnectStartTime")
         private String connectStartTime;
 
-        @NameInMap("ConnectionRecordId")
+        @com.aliyun.core.annotation.NameInMap("ConnectionRecordId")
         private String connectionRecordId;
 
-        @NameInMap("DesktopId")
+        @com.aliyun.core.annotation.NameInMap("DesktopId")
         private String desktopId;
 
-        @NameInMap("DesktopName")
+        @com.aliyun.core.annotation.NameInMap("DesktopName")
         private String desktopName;
 
         private ConnectionRecords(Builder builder) {
@@ -178,7 +195,10 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
             private String desktopName; 
 
             /**
-             * ConnectDuration.
+             * <p>The duration for which the end user is connected to the cloud computer. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3405035000</p>
              */
             public Builder connectDuration(String connectDuration) {
                 this.connectDuration = connectDuration;
@@ -186,7 +206,10 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectEndTime.
+             * <p>The time when the end user disconnected from the cloud computer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-02-27T20:03:13Z</p>
              */
             public Builder connectEndTime(String connectEndTime) {
                 this.connectEndTime = connectEndTime;
@@ -194,7 +217,10 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectStartTime.
+             * <p>The time when the end user connected to the cloud computer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-19T10:12:38Z</p>
              */
             public Builder connectStartTime(String connectStartTime) {
                 this.connectStartTime = connectStartTime;
@@ -202,7 +228,10 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectionRecordId.
+             * <p>The ID of the connection record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>528</p>
              */
             public Builder connectionRecordId(String connectionRecordId) {
                 this.connectionRecordId = connectionRecordId;
@@ -210,7 +239,10 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopId.
+             * <p>The ID of the cloud computer to which the end user connected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ud-2hawufy3uedi1****</p>
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -218,7 +250,10 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopName.
+             * <p>The name of the cloud computer to which the end user connected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testName</p>
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;

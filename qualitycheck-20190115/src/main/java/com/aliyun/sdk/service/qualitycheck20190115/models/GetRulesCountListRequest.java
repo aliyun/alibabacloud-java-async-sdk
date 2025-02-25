@@ -1,120 +1,125 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRulesCountListRequest} extends {@link RequestModel}
  *
  * <p>GetRulesCountListRequest</p>
  */
 public class GetRulesCountListRequest extends Request {
-    @Query
-    @NameInMap("BaseMeAgentId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BaseMeAgentId")
     private Long baseMeAgentId;
 
-    @Body
-    @NameInMap("BusinessName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BusinessName")
     private String businessName;
 
-    @Body
-    @NameInMap("BusinessRange")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BusinessRange")
     private Integer businessRange;
 
-    @Body
-    @NameInMap("CategoryName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CategoryName")
     private String categoryName;
 
-    @Body
-    @NameInMap("CountTotal")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CountTotal")
     private Boolean countTotal;
 
-    @Body
-    @NameInMap("CreateEmpid")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CreateEmpid")
     private String createEmpid;
 
-    @Body
-    @NameInMap("CreateUserId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CreateUserId")
     private Long createUserId;
 
-    @Body
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Body
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Body
-    @NameInMap("LastUpdateEmpid")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LastUpdateEmpid")
     private String lastUpdateEmpid;
 
-    @Body
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Body
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Body
-    @NameInMap("RequireInfos")
-    private java.util.List < String > requireInfos;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RequireInfos")
+    private java.util.List<String> requireInfos;
 
-    @Body
-    @NameInMap("Rid")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Rid")
     private Long rid;
 
-    @Body
-    @NameInMap("RuleIdOrRuleName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RuleIdOrRuleName")
     private String ruleIdOrRuleName;
 
-    @Body
-    @NameInMap("RuleScoreSingleType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RuleScoreSingleType")
     private Integer ruleScoreSingleType;
 
-    @Body
-    @NameInMap("RuleType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RuleType")
     private Integer ruleType;
 
-    @Body
-    @NameInMap("SchemeId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SchemeId")
     private Long schemeId;
 
-    @Body
-    @NameInMap("SourceType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceType")
     private Integer sourceType;
 
-    @Body
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @Body
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
-    @Body
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Type")
     private Integer type;
 
-    @Body
-    @NameInMap("TypeName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TypeName")
     private String typeName;
 
-    @Body
-    @NameInMap("UpdateEndTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UpdateEndTime")
     private String updateEndTime;
 
-    @Body
-    @NameInMap("UpdateStartTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UpdateStartTime")
     private String updateStartTime;
 
-    @Body
-    @NameInMap("UpdateUserId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UpdateUserId")
     private Long updateUserId;
 
     private GetRulesCountListRequest(Builder builder) {
@@ -247,7 +252,7 @@ public class GetRulesCountListRequest extends Request {
     /**
      * @return requireInfos
      */
-    public java.util.List < String > getRequireInfos() {
+    public java.util.List<String> getRequireInfos() {
         return this.requireInfos;
     }
 
@@ -355,7 +360,7 @@ public class GetRulesCountListRequest extends Request {
         private String lastUpdateEmpid; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < String > requireInfos; 
+        private java.util.List<String> requireInfos; 
         private Long rid; 
         private String ruleIdOrRuleName; 
         private Integer ruleScoreSingleType; 
@@ -405,7 +410,7 @@ public class GetRulesCountListRequest extends Request {
         } 
 
         /**
-         * baseMeAgentId
+         * <p>baseMeAgentId</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -515,7 +520,7 @@ public class GetRulesCountListRequest extends Request {
         /**
          * RequireInfos.
          */
-        public Builder requireInfos(java.util.List < String > requireInfos) {
+        public Builder requireInfos(java.util.List<String> requireInfos) {
             this.putBodyParameter("RequireInfos", requireInfos);
             this.requireInfos = requireInfos;
             return this;

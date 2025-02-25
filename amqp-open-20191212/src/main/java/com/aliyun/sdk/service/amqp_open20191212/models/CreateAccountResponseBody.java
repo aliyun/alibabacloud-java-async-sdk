@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.amqp_open20191212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAccountResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAccountResponseBody</p>
  */
 public class CreateAccountResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateAccountResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class CreateAccountResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class CreateAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,10 @@ public class CreateAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>operation success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class CreateAccountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>92385FD2-624A-48C9-8FB5-753F2AFA***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class CreateAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,23 +148,29 @@ public class CreateAccountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAccountResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateAccountResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AccessKey")
+        @com.aliyun.core.annotation.NameInMap("AccessKey")
         private String accessKey;
 
-        @NameInMap("CreateTimeStamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimeStamp")
         private Long createTimeStamp;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("MasterUId")
+        @com.aliyun.core.annotation.NameInMap("MasterUId")
         private Long masterUId;
 
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private Data(Builder builder) {
@@ -218,7 +241,10 @@ public class CreateAccountResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * AccessKey ID。
+             * <p>The AccessKey ID that is used to create the password.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LTAI5***********eRZtEJ6vfo</p>
              */
             public Builder accessKey(String accessKey) {
                 this.accessKey = accessKey;
@@ -226,7 +252,10 @@ public class CreateAccountResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTimeStamp.
+             * <p>The timestamp that indicates when the password was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1671175303522</p>
              */
             public Builder createTimeStamp(Long createTimeStamp) {
                 this.createTimeStamp = createTimeStamp;
@@ -234,7 +263,10 @@ public class CreateAccountResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the ApsaraMQ for RabbitMQ instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>amqp-cn-*********</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -242,7 +274,10 @@ public class CreateAccountResponseBody extends TeaModel {
             }
 
             /**
-             * MasterUId.
+             * <p>The Alibaba Cloud account ID or RAM user to which the AccessKey pair that is used to create the static username and password belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15657*********01</p>
              */
             public Builder masterUId(Long masterUId) {
                 this.masterUId = masterUId;
@@ -250,7 +285,10 @@ public class CreateAccountResponseBody extends TeaModel {
             }
 
             /**
-             * Password.
+             * <p>The created static password.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NEMxQTYzNjdDRTVDNDI1NUU5NjE3**************1MzNGODoxNjcxMTc1MzEzNTIy</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -258,7 +296,10 @@ public class CreateAccountResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The created static username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MjphbXFwLWNuLXVxbTJ6cjc2djAwMzpMVEFJNX*******ZNMWVSWnRFSjZ2Zm8=</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

@@ -1,34 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ComparePlaybooksRequest} extends {@link RequestModel}
  *
  * <p>ComparePlaybooksRequest</p>
  */
 public class ComparePlaybooksRequest extends Request {
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("NewPlaybookReleaseId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewPlaybookReleaseId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer newPlaybookReleaseId;
 
-    @Query
-    @NameInMap("OldPlaybookReleaseId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OldPlaybookReleaseId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer oldPlaybookReleaseId;
 
-    @Query
-    @NameInMap("PlaybookUuid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlaybookUuid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String playbookUuid;
 
     private ComparePlaybooksRequest(Builder builder) {
@@ -99,7 +99,14 @@ public class ComparePlaybooksRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -108,7 +115,14 @@ public class ComparePlaybooksRequest extends Request {
         }
 
         /**
-         * NewPlaybookReleaseId.
+         * <p>The UUID of the second version.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribePopApiVersionList~~">DescribePopApiVersionList</a> operation to query the UUIDs of versions.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sfdf2395-e814-459f-9662-xxxxx</p>
          */
         public Builder newPlaybookReleaseId(Integer newPlaybookReleaseId) {
             this.putQueryParameter("NewPlaybookReleaseId", newPlaybookReleaseId);
@@ -117,7 +131,14 @@ public class ComparePlaybooksRequest extends Request {
         }
 
         /**
-         * OldPlaybookReleaseId.
+         * <p>The UUID of the first version.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribePopApiVersionList~~">DescribePopApiVersionList</a> operation to query the UUIDs of versions.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sflk23423-e814-459f-9662-xxxxx</p>
          */
         public Builder oldPlaybookReleaseId(Integer oldPlaybookReleaseId) {
             this.putQueryParameter("OldPlaybookReleaseId", oldPlaybookReleaseId);
@@ -126,7 +147,14 @@ public class ComparePlaybooksRequest extends Request {
         }
 
         /**
-         * PlaybookUuid.
+         * <p>The UUID of the playbook.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a>operation to query the UUIDs of playbooks.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f916b93e-e814-459f-9662-xxxxx</p>
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putQueryParameter("PlaybookUuid", playbookUuid);

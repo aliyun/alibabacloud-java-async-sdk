@@ -1,83 +1,88 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateExpressCloudConnectionRequest} extends {@link RequestModel}
  *
  * <p>CreateExpressCloudConnectionRequest</p>
  */
 public class CreateExpressCloudConnectionRequest extends Request {
-    @Query
-    @NameInMap("Bandwidth")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer bandwidth;
 
-    @Query
-    @NameInMap("ContactMail")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactMail")
     private String contactMail;
 
-    @Query
-    @NameInMap("ContactTel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactTel")
     private String contactTel;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("IDCardNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IDCardNo")
     private String IDCardNo;
 
-    @Query
-    @NameInMap("IdcSP")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdcSP")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String idcSP;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PeerCity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeerCity")
     private String peerCity;
 
-    @Query
-    @NameInMap("PeerLocation")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeerLocation")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String peerLocation;
 
-    @Query
-    @NameInMap("PortType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PortType")
     private String portType;
 
-    @Query
-    @NameInMap("RedundantEccId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RedundantEccId")
     private String redundantEccId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private CreateExpressCloudConnectionRequest(Builder builder) {
@@ -268,10 +273,12 @@ public class CreateExpressCloudConnectionRequest extends Request {
         } 
 
         /**
-         * The bandwidth for ECC, which corresponds to the bandwidth for the underlying circuit.
-         * <p>
+         * <p>The bandwidth for ECC, which corresponds to the bandwidth for the underlying circuit.</p>
+         * <p>Unit: Mbit/s.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Unit: Mbit/s.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -280,7 +287,10 @@ public class CreateExpressCloudConnectionRequest extends Request {
         }
 
         /**
-         * The email address of the contact who applies for ECC.
+         * <p>The email address of the contact who applies for ECC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:XX@example.com">XX@example.com</a></p>
          */
         public Builder contactMail(String contactMail) {
             this.putQueryParameter("ContactMail", contactMail);
@@ -289,7 +299,10 @@ public class CreateExpressCloudConnectionRequest extends Request {
         }
 
         /**
-         * The phone number of the contact who applies for ECC.
+         * <p>The phone number of the contact who applies for ECC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>132*********</p>
          */
         public Builder contactTel(String contactTel) {
             this.putQueryParameter("ContactTel", contactTel);
@@ -298,10 +311,11 @@ public class CreateExpressCloudConnectionRequest extends Request {
         }
 
         /**
-         * The description of ECC.
-         * <p>
+         * <p>The description of ECC.</p>
+         * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>ECC</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -310,7 +324,10 @@ public class CreateExpressCloudConnectionRequest extends Request {
         }
 
         /**
-         * The ID card number of the contact who applies for ECC.
+         * <p>The ID card number of the contact who applies for ECC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32*****************</p>
          */
         public Builder IDCardNo(String IDCardNo) {
             this.putQueryParameter("IDCardNo", IDCardNo);
@@ -319,7 +336,11 @@ public class CreateExpressCloudConnectionRequest extends Request {
         }
 
         /**
-         * The Internet service provider (ISP) for the data center.
+         * <p>The Internet service provider (ISP) for the data center.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CU</p>
          */
         public Builder idcSP(String idcSP) {
             this.putQueryParameter("IdcSP", idcSP);
@@ -328,10 +349,11 @@ public class CreateExpressCloudConnectionRequest extends Request {
         }
 
         /**
-         * The name of the ECC instance.
-         * <p>
+         * <p>The name of the ECC instance.</p>
+         * <p>The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter but cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>doctest</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -358,7 +380,10 @@ public class CreateExpressCloudConnectionRequest extends Request {
         }
 
         /**
-         * The city where the data center is located.
+         * <p>The city where the data center is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hangzhou</p>
          */
         public Builder peerCity(String peerCity) {
             this.putQueryParameter("PeerCity", peerCity);
@@ -367,10 +392,14 @@ public class CreateExpressCloudConnectionRequest extends Request {
         }
 
         /**
-         * The geographical location of the data center.
-         * <p>
+         * <p>The geographical location of the data center.</p>
+         * <blockquote>
+         * <p>It must be accurate to house number-floor-room number-server rack number.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > It must be accurate to house number-floor-room number-server rack number.
+         * <strong>example:</strong>
+         * <p>**city**district/county**road**number**property or building name**building**floor**room number**server rack number**server rack name**device**port</p>
          */
         public Builder peerLocation(String peerLocation) {
             this.putQueryParameter("PeerLocation", peerLocation);
@@ -379,14 +408,17 @@ public class CreateExpressCloudConnectionRequest extends Request {
         }
 
         /**
-         * The port of the Express Connect circuit. Valid values:
-         * <p>
+         * <p>The port of the Express Connect circuit. Valid values:</p>
+         * <ul>
+         * <li>100Base-T</li>
+         * <li>1000Base-T</li>
+         * <li>1000Base-LX</li>
+         * <li>10GBase-T</li>
+         * <li>10GBase-LR</li>
+         * </ul>
          * 
-         * *   100Base-T
-         * *   1000Base-T
-         * *   1000Base-LX
-         * *   10GBase-T
-         * *   10GBase-LR
+         * <strong>example:</strong>
+         * <p>100Base-T</p>
          */
         public Builder portType(String portType) {
             this.putQueryParameter("PortType", portType);
@@ -395,7 +427,10 @@ public class CreateExpressCloudConnectionRequest extends Request {
         }
 
         /**
-         * The ID of the standby Express Connect circuit.
+         * <p>The ID of the standby Express Connect circuit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecc-d****</p>
          */
         public Builder redundantEccId(String redundantEccId) {
             this.putQueryParameter("RedundantEccId", redundantEccId);
@@ -404,7 +439,11 @@ public class CreateExpressCloudConnectionRequest extends Request {
         }
 
         /**
-         * The region ID of the ECC instance.
+         * <p>The region ID of the ECC instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

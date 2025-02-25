@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportCustomerQuotaRecordRequest} extends {@link RequestModel}
  *
  * <p>ExportCustomerQuotaRecordRequest</p>
  */
 public class ExportCustomerQuotaRecordRequest extends Request {
-    @Query
-    @NameInMap("EndDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endDate;
 
-    @Query
-    @NameInMap("EndUserPk")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndUserPk")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endUserPk;
 
-    @Query
-    @NameInMap("Language")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Language")
     private String language;
 
-    @Query
-    @NameInMap("OperationType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String operationType;
 
-    @Query
-    @NameInMap("StartDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startDate;
 
     private ExportCustomerQuotaRecordRequest(Builder builder) {
@@ -114,7 +119,11 @@ public class ExportCustomerQuotaRecordRequest extends Request {
         } 
 
         /**
-         * EndDate.
+         * <p>End Date Format:  yyyy-MM-dd</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-12-24</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -123,7 +132,11 @@ public class ExportCustomerQuotaRecordRequest extends Request {
         }
 
         /**
-         * EndUserPk.
+         * <p>Customer UID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5113766248601929</p>
          */
         public Builder endUserPk(Long endUserPk) {
             this.putQueryParameter("EndUserPk", endUserPk);
@@ -132,7 +145,13 @@ public class ExportCustomerQuotaRecordRequest extends Request {
         }
 
         /**
-         * Language.
+         * <p>Multilingual Parameters, the default language is English.</br>
+         * en: English</br>
+         * zh: Chinese</br>
+         * ja: Japanese </br></p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -141,7 +160,14 @@ public class ExportCustomerQuotaRecordRequest extends Request {
         }
 
         /**
-         * OperationType.
+         * <p>Operation Type Enum</br>
+         * all All types</br>
+         * quota_create Create quota</br>
+         * quota_amount_adjust Adjust the amount of quota</br></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder operationType(String operationType) {
             this.putQueryParameter("OperationType", operationType);
@@ -150,7 +176,11 @@ public class ExportCustomerQuotaRecordRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>Start Date Format:  yyyy-MM-dd</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-11-10</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);

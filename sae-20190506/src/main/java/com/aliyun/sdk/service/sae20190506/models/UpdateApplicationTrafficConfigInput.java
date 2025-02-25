@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateApplicationTrafficConfigInput} extends {@link TeaModel}
  *
  * <p>UpdateApplicationTrafficConfigInput</p>
  */
 public class UpdateApplicationTrafficConfigInput extends TeaModel {
-    @NameInMap("additionalVersionWeight")
-    private java.util.Map < String, Float > additionalVersionWeight;
+    @com.aliyun.core.annotation.NameInMap("additionalVersionWeight")
+    private java.util.Map<String, Float> additionalVersionWeight;
 
-    @NameInMap("resolvePolicy")
+    @com.aliyun.core.annotation.NameInMap("resolvePolicy")
     private String resolvePolicy;
 
-    @NameInMap("routePolicy")
+    @com.aliyun.core.annotation.NameInMap("routePolicy")
     private RoutePolicy routePolicy;
 
-    @NameInMap("versionId")
-    @Validation(maxLength = 10, minLength = 1)
+    @com.aliyun.core.annotation.NameInMap("versionId")
+    @com.aliyun.core.annotation.Validation(maxLength = 10, minLength = 1)
     private String versionId;
 
     private UpdateApplicationTrafficConfigInput(Builder builder) {
@@ -43,7 +48,7 @@ public class UpdateApplicationTrafficConfigInput extends TeaModel {
     /**
      * @return additionalVersionWeight
      */
-    public java.util.Map < String, Float > getAdditionalVersionWeight() {
+    public java.util.Map<String, Float> getAdditionalVersionWeight() {
         return this.additionalVersionWeight;
     }
 
@@ -69,7 +74,7 @@ public class UpdateApplicationTrafficConfigInput extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map < String, Float > additionalVersionWeight; 
+        private java.util.Map<String, Float> additionalVersionWeight; 
         private String resolvePolicy; 
         private RoutePolicy routePolicy; 
         private String versionId; 
@@ -77,7 +82,7 @@ public class UpdateApplicationTrafficConfigInput extends TeaModel {
         /**
          * additionalVersionWeight.
          */
-        public Builder additionalVersionWeight(java.util.Map < String, Float > additionalVersionWeight) {
+        public Builder additionalVersionWeight(java.util.Map<String, Float> additionalVersionWeight) {
             this.additionalVersionWeight = additionalVersionWeight;
             return this;
         }

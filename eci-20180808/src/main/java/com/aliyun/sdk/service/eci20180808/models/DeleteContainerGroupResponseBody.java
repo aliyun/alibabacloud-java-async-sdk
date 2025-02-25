@@ -1,18 +1,18 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteContainerGroupResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteContainerGroupResponseBody</p>
  */
 public class DeleteContainerGroupResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteContainerGroupResponseBody(Builder builder) {
@@ -38,7 +38,10 @@ public class DeleteContainerGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45D5B0AD-3B00-4A9B-9911-6D5303B06712</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

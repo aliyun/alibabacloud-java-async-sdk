@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListApplicationAccessPointsResponseBody</p>
  */
 public class ListApplicationAccessPointsResponseBody extends TeaModel {
-    @NameInMap("ApplicationAccessPoints")
+    @com.aliyun.core.annotation.NameInMap("ApplicationAccessPoints")
     private ApplicationAccessPoints applicationAccessPoints;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListApplicationAccessPointsResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class ListApplicationAccessPointsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * ApplicationAccessPoints.
+         * A list of AAPs.
          */
         public Builder applicationAccessPoints(ApplicationAccessPoints applicationAccessPoints) {
             this.applicationAccessPoints = applicationAccessPoints;
@@ -94,7 +93,7 @@ public class ListApplicationAccessPointsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +101,7 @@ public class ListApplicationAccessPointsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +109,7 @@ public class ListApplicationAccessPointsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +117,7 @@ public class ListApplicationAccessPointsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -132,10 +131,10 @@ public class ListApplicationAccessPointsResponseBody extends TeaModel {
     } 
 
     public static class ApplicationAccessPoint extends TeaModel {
-        @NameInMap("AuthenticationMethod")
+        @com.aliyun.core.annotation.NameInMap("AuthenticationMethod")
         private String authenticationMethod;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private ApplicationAccessPoint(Builder builder) {
@@ -170,7 +169,7 @@ public class ListApplicationAccessPointsResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * AuthenticationMethod.
+             * The authentication method.
              */
             public Builder authenticationMethod(String authenticationMethod) {
                 this.authenticationMethod = authenticationMethod;
@@ -178,7 +177,7 @@ public class ListApplicationAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the AAP.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -193,7 +192,7 @@ public class ListApplicationAccessPointsResponseBody extends TeaModel {
 
     }
     public static class ApplicationAccessPoints extends TeaModel {
-        @NameInMap("ApplicationAccessPoint")
+        @com.aliyun.core.annotation.NameInMap("ApplicationAccessPoint")
         private java.util.List < ApplicationAccessPoint> applicationAccessPoint;
 
         private ApplicationAccessPoints(Builder builder) {

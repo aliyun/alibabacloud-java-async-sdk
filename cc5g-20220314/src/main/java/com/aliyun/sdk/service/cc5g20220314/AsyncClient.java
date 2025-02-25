@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.cc5g20220314;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.cc5g20220314.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -58,6 +59,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetCardLockReasonResponse> getCardLockReason(GetCardLockReasonRequest request);
 
+    CompletableFuture<GetCreateCustomerInfomationResponse> getCreateCustomerInfomation(GetCreateCustomerInfomationRequest request);
+
     CompletableFuture<GetCreateCustomerInformationResponse> getCreateCustomerInformation(GetCreateCustomerInformationRequest request);
 
     CompletableFuture<GetDiagnoseResultForSingleCardResponse> getDiagnoseResultForSingleCard(GetDiagnoseResultForSingleCardRequest request);
@@ -66,11 +69,21 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GrantNetLinkResponse> grantNetLink(GrantNetLinkRequest request);
 
+    CompletableFuture<InnerLimitRateCardsResponse> innerLimitRateCards(InnerLimitRateCardsRequest request);
+
+    CompletableFuture<InnerStopCardsResponse> innerStopCards(InnerStopCardsRequest request);
+
     CompletableFuture<ListAPNsResponse> listAPNs(ListAPNsRequest request);
 
     CompletableFuture<ListAuthorizationRulesResponse> listAuthorizationRules(ListAuthorizationRulesRequest request);
 
     CompletableFuture<ListBatchOperateCardsTasksResponse> listBatchOperateCardsTasks(ListBatchOperateCardsTasksRequest request);
+
+    CompletableFuture<ListCardAreaLimitSupportAreaResponse> listCardAreaLimitSupportArea(ListCardAreaLimitSupportAreaRequest request);
+
+    CompletableFuture<ListCardDayUsagesResponse> listCardDayUsages(ListCardDayUsagesRequest request);
+
+    CompletableFuture<ListCardUsagesResponse> listCardUsages(ListCardUsagesRequest request);
 
     CompletableFuture<ListCardsResponse> listCards(ListCardsRequest request);
 
@@ -98,7 +111,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<OpenCc5gServiceResponse> openCc5gService(OpenCc5gServiceRequest request);
 
+    CompletableFuture<RebindCardsResponse> rebindCards(RebindCardsRequest request);
+
     CompletableFuture<RemoveWirelessCloudConnectorFromGroupResponse> removeWirelessCloudConnectorFromGroup(RemoveWirelessCloudConnectorFromGroupRequest request);
+
+    CompletableFuture<ResetAreaLimitCardsResponse> resetAreaLimitCards(ResetAreaLimitCardsRequest request);
 
     CompletableFuture<ResumeCardsResponse> resumeCards(ResumeCardsRequest request);
 

@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtrace20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTagKeyRequest} extends {@link RequestModel}
  *
  * <p>GetTagKeyRequest</p>
  */
 public class GetTagKeyRequest extends Request {
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ServiceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
 
-    @Query
-    @NameInMap("SpanName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpanName")
     private String spanName;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
     private GetTagKeyRequest(Builder builder) {
@@ -111,7 +116,13 @@ public class GetTagKeyRequest extends Request {
         } 
 
         /**
-         * The timestamp of the end time of the time range to query. The timestamp is accurate to milliseconds.
+         * <p>The end of the time range to query. The value is a timestamp that is accurate to milliseconds.</p>
+         * <blockquote>
+         * <p> The value of this parameter is of the LONG type. Precision loss may occur during serialization or deserialization. The value must be less than or equal to 9007199254740991.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1575622455686</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -120,7 +131,11 @@ public class GetTagKeyRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -129,7 +144,10 @@ public class GetTagKeyRequest extends Request {
         }
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>appTest</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -138,7 +156,10 @@ public class GetTagKeyRequest extends Request {
         }
 
         /**
-         * The name of the span.
+         * <p>The name of the span.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>createOrder</p>
          */
         public Builder spanName(String spanName) {
             this.putQueryParameter("SpanName", spanName);
@@ -147,7 +168,13 @@ public class GetTagKeyRequest extends Request {
         }
 
         /**
-         * The timestamp of the start time of the time range to query. The timestamp is accurate to milliseconds.
+         * <p>The beginning of the time range to query. The value is a timestamp that is accurate to milliseconds.</p>
+         * <blockquote>
+         * <p> The value of this parameter is of the LONG type. Precision loss may occur during serialization or deserialization. The value must be less than or equal to 9007199254740991.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1575561600000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

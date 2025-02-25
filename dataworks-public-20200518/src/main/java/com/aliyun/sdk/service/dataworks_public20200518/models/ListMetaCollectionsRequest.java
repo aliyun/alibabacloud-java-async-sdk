@@ -1,56 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMetaCollectionsRequest} extends {@link RequestModel}
  *
  * <p>ListMetaCollectionsRequest</p>
  */
 public class ListMetaCollectionsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Administrator")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Administrator")
     private String administrator;
 
-    @Query
-    @NameInMap("CollectionType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CollectionType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String collectionType;
 
-    @Query
-    @NameInMap("Creator")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Creator")
     private String creator;
 
-    @Query
-    @NameInMap("Follower")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Follower")
     private String follower;
 
-    @Query
-    @NameInMap("Keyword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OrderBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderBy")
     private String orderBy;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ParentQualifiedName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentQualifiedName")
     private String parentQualifiedName;
 
     private ListMetaCollectionsRequest(Builder builder) {
@@ -190,7 +195,10 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * The ID of the collection follower.
+         * <p>The ID of the collection administrator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1200759642363000</p>
          */
         public Builder administrator(String administrator) {
             this.putQueryParameter("Administrator", administrator);
@@ -199,7 +207,14 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * The ID of the collection creator.
+         * <ul>
+         * <li>ALBUM: data album </li>
+         * <li>ALBUM_CATEGORY: category in a data album</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALBUM</p>
          */
         public Builder collectionType(String collectionType) {
             this.putQueryParameter("CollectionType", collectionType);
@@ -208,7 +223,10 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * The ID of the collection administrator.
+         * <p>The ID of the collection creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1200759642363000</p>
          */
         public Builder creator(String creator) {
             this.putQueryParameter("Creator", creator);
@@ -217,7 +235,10 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
+         * <p>The ID of the collection follower.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1200759642363000</p>
          */
         public Builder follower(String follower) {
             this.putQueryParameter("Follower", follower);
@@ -226,7 +247,10 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * The name of the sorting field.
+         * <p>The keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -235,7 +259,10 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -244,10 +271,10 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * ALBUM: data album
-         * <p>
+         * <p>The name of the sorting field.</p>
          * 
-         * ALBUM_CATEGORY: category in a data album
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -256,7 +283,10 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * The keyword.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -265,7 +295,10 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * The paging information. This parameter specifies the start point of the query.
+         * <p>The unique identifier of the parent collection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Album.1234</p>
          */
         public Builder parentQualifiedName(String parentQualifiedName) {
             this.putQueryParameter("ParentQualifiedName", parentQualifiedName);

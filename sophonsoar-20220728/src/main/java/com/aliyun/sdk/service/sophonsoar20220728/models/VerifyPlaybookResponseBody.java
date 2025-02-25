@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyPlaybookResponseBody} extends {@link TeaModel}
  *
  * <p>VerifyPlaybookResponseBody</p>
  */
 public class VerifyPlaybookResponseBody extends TeaModel {
-    @NameInMap("CheckTaskInfos")
+    @com.aliyun.core.annotation.NameInMap("CheckTaskInfos")
     private java.util.List < CheckTaskInfos> checkTaskInfos;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private VerifyPlaybookResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class VerifyPlaybookResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CheckTaskInfos.
+         * <p>The result of the verification.</p>
          */
         public Builder checkTaskInfos(java.util.List < CheckTaskInfos> checkTaskInfos) {
             this.checkTaskInfos = checkTaskInfos;
@@ -58,7 +58,10 @@ public class VerifyPlaybookResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0DFC9403-54EB-5672-B690-9AA93C9EBB54</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +74,20 @@ public class VerifyPlaybookResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link VerifyPlaybookResponseBody} extends {@link TeaModel}
+     *
+     * <p>VerifyPlaybookResponseBody</p>
+     */
     public static class CheckTaskInfos extends TeaModel {
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private String detail;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
 
         private CheckTaskInfos(Builder builder) {
@@ -122,7 +131,10 @@ public class VerifyPlaybookResponseBody extends TeaModel {
             private String riskLevel; 
 
             /**
-             * Detail.
+             * <p>The error message returned when the playbook does not pass the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Node [python3_3] doesn&quot;t have the asset information</p>
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -130,7 +142,10 @@ public class VerifyPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * <p>The name of the node in the playbook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>python3_3</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -138,7 +153,15 @@ public class VerifyPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * <p>The severity level of the verification information. Valid values:</p>
+             * <ul>
+             * <li>warn: An issue may occur during playbook running.</li>
+             * <li>error: The playbook cannot be compiled.</li>
+             * <li>remind: The publishing and running of the playbook are not affected. We recommend that you optimize the playbook format.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>error</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;

@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link MLServiceParam} extends {@link TeaModel}
  *
  * <p>MLServiceParam</p>
  */
 public class MLServiceParam extends TeaModel {
-    @NameInMap("description")
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @NameInMap("model")
+    @com.aliyun.core.annotation.NameInMap("model")
     private Model model;
 
-    @NameInMap("name")
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @NameInMap("resource")
+    @com.aliyun.core.annotation.NameInMap("resource")
     private Resource resource;
 
-    @NameInMap("serviceType")
+    @com.aliyun.core.annotation.NameInMap("serviceType")
     private String serviceType;
 
-    @NameInMap("status")
+    @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
-    @NameInMap("updateTimestamp")
+    @com.aliyun.core.annotation.NameInMap("updateTimestamp")
     private Long updateTimestamp;
 
     private MLServiceParam(Builder builder) {
@@ -171,11 +176,17 @@ public class MLServiceParam extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link MLServiceParam} extends {@link TeaModel}
+     *
+     * <p>MLServiceParam</p>
+     */
     public static class Model extends TeaModel {
-        @NameInMap("modelResourceId")
+        @com.aliyun.core.annotation.NameInMap("modelResourceId")
         private String modelResourceId;
 
-        @NameInMap("modelResourceType")
+        @com.aliyun.core.annotation.NameInMap("modelResourceType")
         private String modelResourceType;
 
         private Model(Builder builder) {
@@ -232,17 +243,23 @@ public class MLServiceParam extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link MLServiceParam} extends {@link TeaModel}
+     *
+     * <p>MLServiceParam</p>
+     */
     public static class Resource extends TeaModel {
-        @NameInMap("cpuLimit")
+        @com.aliyun.core.annotation.NameInMap("cpuLimit")
         private Integer cpuLimit;
 
-        @NameInMap("gpu")
+        @com.aliyun.core.annotation.NameInMap("gpu")
         private Integer gpu;
 
-        @NameInMap("memoryLimit")
+        @com.aliyun.core.annotation.NameInMap("memoryLimit")
         private Integer memoryLimit;
 
-        @NameInMap("replica")
+        @com.aliyun.core.annotation.NameInMap("replica")
         private Integer replica;
 
         private Resource(Builder builder) {

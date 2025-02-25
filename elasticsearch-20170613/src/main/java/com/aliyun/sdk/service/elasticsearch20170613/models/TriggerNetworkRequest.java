@@ -1,39 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TriggerNetworkRequest} extends {@link RequestModel}
  *
  * <p>TriggerNetworkRequest</p>
  */
 public class TriggerNetworkRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("actionType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("actionType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String actionType;
 
-    @Body
-    @NameInMap("networkType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("networkType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String networkType;
 
-    @Body
-    @NameInMap("nodeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("nodeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodeType;
 
-    @Query
-    @NameInMap("clientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
     private TriggerNetworkRequest(Builder builder) {
@@ -114,7 +114,11 @@ public class TriggerNetworkRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-n6w1o1x0w001c****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -123,7 +127,10 @@ public class TriggerNetworkRequest extends Request {
         }
 
         /**
-         * actionType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OPEN</p>
          */
         public Builder actionType(String actionType) {
             this.putBodyParameter("actionType", actionType);
@@ -132,7 +139,10 @@ public class TriggerNetworkRequest extends Request {
         }
 
         /**
-         * networkType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
          */
         public Builder networkType(String networkType) {
             this.putBodyParameter("networkType", networkType);
@@ -141,7 +151,10 @@ public class TriggerNetworkRequest extends Request {
         }
 
         /**
-         * nodeType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KIBANA</p>
          */
         public Builder nodeType(String nodeType) {
             this.putBodyParameter("nodeType", nodeType);

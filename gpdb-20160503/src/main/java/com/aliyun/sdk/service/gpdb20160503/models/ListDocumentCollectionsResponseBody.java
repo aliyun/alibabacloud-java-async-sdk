@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDocumentCollectionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListDocumentCollectionsResponseBody</p>
  */
 public class ListDocumentCollectionsResponseBody extends TeaModel {
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private ListDocumentCollectionsResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * Count.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -94,7 +102,7 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The queried document collections.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -102,7 +110,10 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,14 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>success</strong></li>
+         * <li><strong>fail</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -131,26 +152,32 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDocumentCollectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDocumentCollectionsResponseBody</p>
+     */
     public static class CollectionList extends TeaModel {
-        @NameInMap("CollectionName")
+        @com.aliyun.core.annotation.NameInMap("CollectionName")
         private String collectionName;
 
-        @NameInMap("Dimension")
+        @com.aliyun.core.annotation.NameInMap("Dimension")
         private Integer dimension;
 
-        @NameInMap("EmbeddingModel")
+        @com.aliyun.core.annotation.NameInMap("EmbeddingModel")
         private String embeddingModel;
 
-        @NameInMap("FullTextRetrievalFields")
+        @com.aliyun.core.annotation.NameInMap("FullTextRetrievalFields")
         private String fullTextRetrievalFields;
 
-        @NameInMap("Metadata")
+        @com.aliyun.core.annotation.NameInMap("Metadata")
         private String metadata;
 
-        @NameInMap("Metrics")
+        @com.aliyun.core.annotation.NameInMap("Metrics")
         private String metrics;
 
-        @NameInMap("Parser")
+        @com.aliyun.core.annotation.NameInMap("Parser")
         private String parser;
 
         private CollectionList(Builder builder) {
@@ -230,7 +257,10 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
             private String parser; 
 
             /**
-             * CollectionName.
+             * <p>The name of the document collection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>document</p>
              */
             public Builder collectionName(String collectionName) {
                 this.collectionName = collectionName;
@@ -238,7 +268,10 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Dimension.
+             * <p>The number of vector dimensions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1536</p>
              */
             public Builder dimension(Integer dimension) {
                 this.dimension = dimension;
@@ -246,7 +279,10 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * EmbeddingModel.
+             * <p>The name of the vector algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text-embeddding-v1</p>
              */
             public Builder embeddingModel(String embeddingModel) {
                 this.embeddingModel = embeddingModel;
@@ -254,7 +290,10 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * FullTextRetrievalFields.
+             * <p>The fields that are used for full-text search. Multiple fields are separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>title</p>
              */
             public Builder fullTextRetrievalFields(String fullTextRetrievalFields) {
                 this.fullTextRetrievalFields = fullTextRetrievalFields;
@@ -262,7 +301,10 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Metadata.
+             * <p>The metadata.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;page&quot;: &quot;int&quot;, &quot;title&quot;: &quot;text&quot;}</p>
              */
             public Builder metadata(String metadata) {
                 this.metadata = metadata;
@@ -270,7 +312,10 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Metrics.
+             * <p>The vector similarity algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cosine</p>
              */
             public Builder metrics(String metrics) {
                 this.metrics = metrics;
@@ -278,7 +323,10 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Parser.
+             * <p>The analyzer that is used for full-text search.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zh_cn</p>
              */
             public Builder parser(String parser) {
                 this.parser = parser;
@@ -292,9 +340,15 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDocumentCollectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDocumentCollectionsResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("CollectionList")
-        private java.util.List < CollectionList> collectionList;
+        @com.aliyun.core.annotation.NameInMap("CollectionList")
+        private java.util.List<CollectionList> collectionList;
 
         private Items(Builder builder) {
             this.collectionList = builder.collectionList;
@@ -311,17 +365,17 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
         /**
          * @return collectionList
          */
-        public java.util.List < CollectionList> getCollectionList() {
+        public java.util.List<CollectionList> getCollectionList() {
             return this.collectionList;
         }
 
         public static final class Builder {
-            private java.util.List < CollectionList> collectionList; 
+            private java.util.List<CollectionList> collectionList; 
 
             /**
              * CollectionList.
              */
-            public Builder collectionList(java.util.List < CollectionList> collectionList) {
+            public Builder collectionList(java.util.List<CollectionList> collectionList) {
                 this.collectionList = collectionList;
                 return this;
             }

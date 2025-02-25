@@ -76,11 +76,11 @@ public class DescribeClusterBasicInfoRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeClusterBasicInfoRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.regionId = response.regionId;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeClusterBasicInfoRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.regionId = request.regionId;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Partition</p>
  */
 public class Partition extends TeaModel {
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private Integer createTime;
 
-    @NameInMap("DatabaseName")
+    @com.aliyun.core.annotation.NameInMap("DatabaseName")
     private String databaseName;
 
-    @NameInMap("LastAccessTime")
+    @com.aliyun.core.annotation.NameInMap("LastAccessTime")
     private Integer lastAccessTime;
 
-    @NameInMap("LastAnalyzedTime")
+    @com.aliyun.core.annotation.NameInMap("LastAnalyzedTime")
     private Integer lastAnalyzedTime;
 
-    @NameInMap("Parameters")
+    @com.aliyun.core.annotation.NameInMap("Parameters")
     private java.util.Map < String, String > parameters;
 
-    @NameInMap("Privileges")
+    @com.aliyun.core.annotation.NameInMap("Privileges")
     private PrincipalPrivilegeSet privileges;
 
-    @NameInMap("Sd")
+    @com.aliyun.core.annotation.NameInMap("Sd")
     private StorageDescriptor sd;
 
-    @NameInMap("TableName")
+    @com.aliyun.core.annotation.NameInMap("TableName")
     private String tableName;
 
-    @NameInMap("Values")
+    @com.aliyun.core.annotation.NameInMap("Values")
     private java.util.List < String > values;
 
     private Partition(Builder builder) {

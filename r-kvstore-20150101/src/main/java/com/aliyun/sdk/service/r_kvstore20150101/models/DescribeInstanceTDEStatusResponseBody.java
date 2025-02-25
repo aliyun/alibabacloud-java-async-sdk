@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceTDEStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceTDEStatusResponseBody</p>
  */
 public class DescribeInstanceTDEStatusResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TDEStatus")
+    @com.aliyun.core.annotation.NameInMap("TDEStatus")
     private String TDEStatus;
 
     private DescribeInstanceTDEStatusResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class DescribeInstanceTDEStatusResponseBody extends TeaModel {
         private String TDEStatus; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5D622714-AEDD-4609-9167-F5DDD3D1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,11 +61,14 @@ public class DescribeInstanceTDEStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether TDE is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether TDE is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: TDE is enabled.</li>
+         * <li><strong>Disable</strong>: TDE is disabled.</li>
+         * </ul>
          * 
-         * *   **Enabled**: TDE is enabled.
-         * *   **Disable**: TDE is disabled.
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder TDEStatus(String TDEStatus) {
             this.TDEStatus = TDEStatus;

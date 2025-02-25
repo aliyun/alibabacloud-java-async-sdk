@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPrepayInstanceSpecRequest} extends {@link RequestModel}
  *
  * <p>ModifyPrepayInstanceSpecRequest</p>
  */
 public class ModifyPrepayInstanceSpecRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
     private ModifyPrepayInstanceSpecRequest(Builder builder) {
@@ -68,7 +73,10 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance that you want to upgrade or downgrade.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4p****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -77,7 +85,10 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * <p>The updated configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ens.sn1.tiny</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);

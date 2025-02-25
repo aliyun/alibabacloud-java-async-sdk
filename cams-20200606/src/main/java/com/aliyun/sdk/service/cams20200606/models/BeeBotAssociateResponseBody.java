@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BeeBotAssociateResponseBody} extends {@link TeaModel}
  *
  * <p>BeeBotAssociateResponseBody</p>
  */
 public class BeeBotAssociateResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private BeeBotAssociateResponseBody(Builder builder) {
@@ -86,7 +86,10 @@ public class BeeBotAssociateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The access denied for detailed information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -94,7 +97,10 @@ public class BeeBotAssociateResponseBody extends TeaModel {
         }
 
         /**
-         * If OK is returned, the request is successful.
+         * <p>If OK is returned, the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -102,7 +108,7 @@ public class BeeBotAssociateResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -110,7 +116,10 @@ public class BeeBotAssociateResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -118,7 +127,10 @@ public class BeeBotAssociateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -131,11 +143,17 @@ public class BeeBotAssociateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BeeBotAssociateResponseBody} extends {@link TeaModel}
+     *
+     * <p>BeeBotAssociateResponseBody</p>
+     */
     public static class Associate extends TeaModel {
-        @NameInMap("Meta")
+        @com.aliyun.core.annotation.NameInMap("Meta")
         private String meta;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private Associate(Builder builder) {
@@ -170,7 +188,10 @@ public class BeeBotAssociateResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * The additional information.
+             * <p>The metadata.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder meta(String meta) {
                 this.meta = meta;
@@ -178,7 +199,10 @@ public class BeeBotAssociateResponseBody extends TeaModel {
             }
 
             /**
-             * The title of the associated question.
+             * <p>The title of the related question.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Policy on Withdrawal of Housing Provident Fund</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -192,14 +216,20 @@ public class BeeBotAssociateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BeeBotAssociateResponseBody} extends {@link TeaModel}
+     *
+     * <p>BeeBotAssociateResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Associate")
+        @com.aliyun.core.annotation.NameInMap("Associate")
         private java.util.List < Associate> associate;
 
-        @NameInMap("MessageId")
+        @com.aliyun.core.annotation.NameInMap("MessageId")
         private String messageId;
 
-        @NameInMap("SessionId")
+        @com.aliyun.core.annotation.NameInMap("SessionId")
         private String sessionId;
 
         private Data(Builder builder) {
@@ -243,7 +273,7 @@ public class BeeBotAssociateResponseBody extends TeaModel {
             private String sessionId; 
 
             /**
-             * The list of associated recommendations.
+             * <p>The list of associated recommendations.</p>
              */
             public Builder associate(java.util.List < Associate> associate) {
                 this.associate = associate;
@@ -251,7 +281,10 @@ public class BeeBotAssociateResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the response message.
+             * <p>The ID of the response message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1eb47d7a1706429081e90c83c62c2f00</p>
              */
             public Builder messageId(String messageId) {
                 this.messageId = messageId;
@@ -259,7 +292,10 @@ public class BeeBotAssociateResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the session.
+             * <p>The ID of the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>93f11165a2a24289a6f869760e8cb3f3</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;

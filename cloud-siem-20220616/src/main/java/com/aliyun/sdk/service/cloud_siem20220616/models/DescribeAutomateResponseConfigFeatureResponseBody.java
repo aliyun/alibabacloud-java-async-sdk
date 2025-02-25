@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAutomateResponseConfigFeatureResponseBody</p>
  */
 public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeAutomateResponseConfigFeatureResponseBody(Builder builder) {
@@ -136,10 +135,10 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
     } 
 
     public static class RightValueEnums extends TeaModel {
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        @NameInMap("ValueMds")
+        @com.aliyun.core.annotation.NameInMap("ValueMds")
         private String valueMds;
 
         private RightValueEnums(Builder builder) {
@@ -197,28 +196,28 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
 
     }
     public static class SupportOperators extends TeaModel {
-        @NameInMap("HasRightValue")
+        @com.aliyun.core.annotation.NameInMap("HasRightValue")
         private Boolean hasRightValue;
 
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private Integer index;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("OperatorDescCn")
+        @com.aliyun.core.annotation.NameInMap("OperatorDescCn")
         private String operatorDescCn;
 
-        @NameInMap("OperatorDescEn")
+        @com.aliyun.core.annotation.NameInMap("OperatorDescEn")
         private String operatorDescEn;
 
-        @NameInMap("OperatorName")
+        @com.aliyun.core.annotation.NameInMap("OperatorName")
         private String operatorName;
 
-        @NameInMap("SupportDataType")
+        @com.aliyun.core.annotation.NameInMap("SupportDataType")
         private String supportDataType;
 
-        @NameInMap("SupportTag")
+        @com.aliyun.core.annotation.NameInMap("SupportTag")
         private java.util.List < String > supportTag;
 
         private SupportOperators(Builder builder) {
@@ -351,7 +350,7 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             }
 
             /**
-             * The display name of the operator.
+             * The name of the operator.
              */
             public Builder operatorName(String operatorName) {
                 this.operatorName = operatorName;
@@ -359,7 +358,7 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             }
 
             /**
-             * The data types that are supported by the current operator. The data types are separated by commas (,).
+             * The data types that are supported by the operator. The data types are separated by commas (,).
              */
             public Builder supportDataType(String supportDataType) {
                 this.supportDataType = supportDataType;
@@ -367,7 +366,7 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             }
 
             /**
-             * The scenarios that are supported by the operator. Multiple scenarios are separated by commas (,), such as aggregation scenarios. This parameter is empty by default.
+             * The scenarios that are supported by the operator. Multiple scenarios are separated by commas (,), such as aggregation scenarios. By default, this parameter is empty.
              */
             public Builder supportTag(java.util.List < String > supportTag) {
                 this.supportTag = supportTag;
@@ -382,16 +381,16 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("DataType")
+        @com.aliyun.core.annotation.NameInMap("DataType")
         private String dataType;
 
-        @NameInMap("Feature")
+        @com.aliyun.core.annotation.NameInMap("Feature")
         private String feature;
 
-        @NameInMap("RightValueEnums")
+        @com.aliyun.core.annotation.NameInMap("RightValueEnums")
         private java.util.List < RightValueEnums> rightValueEnums;
 
-        @NameInMap("SupportOperators")
+        @com.aliyun.core.annotation.NameInMap("SupportOperators")
         private java.util.List < SupportOperators> supportOperators;
 
         private Data(Builder builder) {

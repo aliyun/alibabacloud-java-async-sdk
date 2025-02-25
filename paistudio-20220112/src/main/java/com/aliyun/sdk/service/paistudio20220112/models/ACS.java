@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ACS} extends {@link TeaModel}
  *
  * <p>ACS</p>
  */
 public class ACS extends TeaModel {
-    @NameInMap("ACSQuotaId")
+    @com.aliyun.core.annotation.NameInMap("ACSQuotaId")
     private String ACSQuotaId;
 
-    @NameInMap("AssociatedProducts")
-    private java.util.List < String > associatedProducts;
+    @com.aliyun.core.annotation.NameInMap("AssociatedProducts")
+    private java.util.List<String> associatedProducts;
 
     private ACS(Builder builder) {
         this.ACSQuotaId = builder.ACSQuotaId;
@@ -41,13 +46,13 @@ public class ACS extends TeaModel {
     /**
      * @return associatedProducts
      */
-    public java.util.List < String > getAssociatedProducts() {
+    public java.util.List<String> getAssociatedProducts() {
         return this.associatedProducts;
     }
 
     public static final class Builder {
         private String ACSQuotaId; 
-        private java.util.List < String > associatedProducts; 
+        private java.util.List<String> associatedProducts; 
 
         /**
          * ACSQuotaId.
@@ -60,7 +65,7 @@ public class ACS extends TeaModel {
         /**
          * AssociatedProducts.
          */
-        public Builder associatedProducts(java.util.List < String > associatedProducts) {
+        public Builder associatedProducts(java.util.List<String> associatedProducts) {
             this.associatedProducts = associatedProducts;
             return this;
         }

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListApplicationGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListApplicationGroupsResponseBody</p>
  */
 public class ListApplicationGroupsResponseBody extends TeaModel {
-    @NameInMap("ApplicationGroups")
-    private java.util.List < ApplicationGroups> applicationGroups;
+    @com.aliyun.core.annotation.NameInMap("ApplicationGroups")
+    private java.util.List<ApplicationGroups> applicationGroups;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListApplicationGroupsResponseBody(Builder builder) {
@@ -42,7 +47,7 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
     /**
      * @return applicationGroups
      */
-    public java.util.List < ApplicationGroups> getApplicationGroups() {
+    public java.util.List<ApplicationGroups> getApplicationGroups() {
         return this.applicationGroups;
     }
 
@@ -68,21 +73,24 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ApplicationGroups> applicationGroups; 
+        private java.util.List<ApplicationGroups> applicationGroups; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
 
         /**
-         * The details of the application group.
+         * <p>The details of the application group.</p>
          */
-        public Builder applicationGroups(java.util.List < ApplicationGroups> applicationGroups) {
+        public Builder applicationGroups(java.util.List<ApplicationGroups> applicationGroups) {
             this.applicationGroups = applicationGroups;
             return this;
         }
 
         /**
-         * The number of entries returned on each page.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -90,7 +98,12 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is used to retrieve the next page of results.
+         * <p>The token that is used to retrieve the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -98,7 +111,10 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69D97BF2-5DF2-544C-A650-36A474E17BC3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,41 +127,47 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListApplicationGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationGroupsResponseBody</p>
+     */
     public static class ApplicationGroups extends TeaModel {
-        @NameInMap("ApplicationName")
+        @com.aliyun.core.annotation.NameInMap("ApplicationName")
         private String applicationName;
 
-        @NameInMap("CmsGroupId")
+        @com.aliyun.core.annotation.NameInMap("CmsGroupId")
         private String cmsGroupId;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("DeployParameters")
+        @com.aliyun.core.annotation.NameInMap("DeployParameters")
         private String deployParameters;
 
-        @NameInMap("DeployRegionId")
+        @com.aliyun.core.annotation.NameInMap("DeployRegionId")
         private String deployRegionId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ImportTagKey")
+        @com.aliyun.core.annotation.NameInMap("ImportTagKey")
         private String importTagKey;
 
-        @NameInMap("ImportTagValue")
+        @com.aliyun.core.annotation.NameInMap("ImportTagValue")
         private String importTagValue;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusReason")
+        @com.aliyun.core.annotation.NameInMap("StatusReason")
         private String statusReason;
 
-        @NameInMap("UpdateDate")
+        @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
 
         private ApplicationGroups(Builder builder) {
@@ -270,7 +292,10 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyApplication</p>
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
@@ -278,7 +303,10 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application group in CloudMonitor.
+             * <p>The ID of the application group in CloudMonitor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345678</p>
              */
             public Builder cmsGroupId(String cmsGroupId) {
                 this.cmsGroupId = cmsGroupId;
@@ -286,7 +314,10 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the application group was created.
+             * <p>The time when the application group was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-07T10:28:25Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -294,7 +325,10 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration information of the application group.
+             * <p>The configuration information of the application group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{   &quot;TemplateURL&quot;: &quot;<a href="https://ros-template.oss-cn-zhangjiakou.aliyuncs.com/App_Management_Existing_Vpc_Ecs_Instance.json">https://ros-template.oss-cn-zhangjiakou.aliyuncs.com/App_Management_Existing_Vpc_Ecs_Instance.json</a>&quot;,   &quot;Parameters&quot;: {     &quot;ZoneId&quot;: &quot;cn-hangzhou-k&quot;,     &quot;ProjectName&quot;: &quot;test&quot;,     &quot;SystemDiskSize&quot;: 40,     &quot;InstanceChargeType&quot;: &quot;PostPaid&quot;,     &quot;SecurityGroupId&quot;: &quot;sg-bp1a4374akk63jl8tddy&quot;,     &quot;VSwitchId&quot;: &quot;vsw-bp1fcvc3zn0jrag86rrlm&quot;,     &quot;SystemDiskCategory&quot;: &quot;cloud_essd&quot;,     &quot;InstancePassword&quot;: &quot;******&quot;,     &quot;InternetChargeType&quot;: &quot;PayByTraffic&quot;,     &quot;InstanceCount&quot;: 1,     &quot;InternetMaxBandwidthOut&quot;: 0,     &quot;VpcId&quot;: &quot;vpc-bp1i99boyas8i8m9t3skp&quot;,     &quot;EcsImageId&quot;: &quot;centos_8_5_x64_20G_alibase_20211228.vhd&quot;,     &quot;DataDiskSize&quot;: 100,     &quot;EcsInstanceType&quot;: &quot;ecs.s6-c1m4.small&quot;,     &quot;DataDiskCategory&quot;: &quot;cloud_efficiency&quot;,     &quot;EnvironmentCommandId&quot;: &quot;c-hz028fc3g031gcg&quot;   },   &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,   &quot;StackName&quot;: &quot;stack-1645688523068-3no_AKhOJ&quot;,   &quot;DisableRollback&quot;: true }</p>
              */
             public Builder deployParameters(String deployParameters) {
                 this.deployParameters = deployParameters;
@@ -302,7 +336,10 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the related resources reside.
+             * <p>The ID of the region in which the related resources reside.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder deployRegionId(String deployRegionId) {
                 this.deployRegionId = deployRegionId;
@@ -310,7 +347,10 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the application group.
+             * <p>The description of the application group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ApplicationGroup</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -318,7 +358,10 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k1</p>
              */
             public Builder importTagKey(String importTagKey) {
                 this.importTagKey = importTagKey;
@@ -326,7 +369,10 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder importTagValue(String importTagValue) {
                 this.importTagValue = importTagValue;
@@ -334,7 +380,10 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application group.
+             * <p>The name of the application group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UpdateMyApplicationGroup</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -342,7 +391,10 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the application group.
+             * <p>The state of the application group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Created</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -350,7 +402,10 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The state information of the application group.
+             * <p>The state information of the application group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ApplicationGroup is Created.</p>
              */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;
@@ -358,7 +413,10 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the application group was updated.
+             * <p>The time when the application group was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-08T03:01:53Z</p>
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

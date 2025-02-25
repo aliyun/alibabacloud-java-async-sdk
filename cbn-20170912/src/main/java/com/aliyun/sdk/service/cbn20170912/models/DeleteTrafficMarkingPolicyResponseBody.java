@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteTrafficMarkingPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteTrafficMarkingPolicyResponseBody</p>
  */
 public class DeleteTrafficMarkingPolicyResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteTrafficMarkingPolicyResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class DeleteTrafficMarkingPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5F1F3A57-A753-572B-8F71-4F964398C566</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

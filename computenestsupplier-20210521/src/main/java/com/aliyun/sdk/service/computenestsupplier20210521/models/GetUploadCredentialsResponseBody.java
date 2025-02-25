@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUploadCredentialsResponseBody} extends {@link TeaModel}
  *
  * <p>GetUploadCredentialsResponseBody</p>
  */
 public class GetUploadCredentialsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetUploadCredentialsResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +114,7 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +122,10 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +133,10 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +144,10 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FCC3321E-D518-1BC4-861E-588E9D4DAFB7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. A value of true indicates the request was successful. A value of false indicates the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,26 +171,32 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetUploadCredentialsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUploadCredentialsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AccessKeyId")
+        @com.aliyun.core.annotation.NameInMap("AccessKeyId")
         private String accessKeyId;
 
-        @NameInMap("AccessKeySecret")
+        @com.aliyun.core.annotation.NameInMap("AccessKeySecret")
         private String accessKeySecret;
 
-        @NameInMap("BucketName")
+        @com.aliyun.core.annotation.NameInMap("BucketName")
         private String bucketName;
 
-        @NameInMap("ExpireDate")
+        @com.aliyun.core.annotation.NameInMap("ExpireDate")
         private String expireDate;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SecurityToken")
+        @com.aliyun.core.annotation.NameInMap("SecurityToken")
         private String securityToken;
 
         private Data(Builder builder) {
@@ -250,7 +276,10 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
             private String securityToken; 
 
             /**
-             * AccessKeyId.
+             * <p>The AccessKey ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STS.NUCe19W1FKaHAYAhe********</p>
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -258,7 +287,10 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * AccessKeySecret.
+             * <p>The AccessKey secret.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8LQGp59mY23pcXeTdcvSA1cUQZBeD92sFrXi********</p>
              */
             public Builder accessKeySecret(String accessKeySecret) {
                 this.accessKeySecret = accessKeySecret;
@@ -266,7 +298,10 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * BucketName.
+             * <p>The bucket name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service-info-private</p>
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -274,7 +309,10 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireDate.
+             * <p>The time when the AccessKey pair expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-18T12:27:59Z</p>
              */
             public Builder expireDate(String expireDate) {
                 this.expireDate = expireDate;
@@ -282,7 +320,10 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * Key.
+             * <p>The name of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>221514575922756034/cn-hangzhou/d57c62fbd508xxxxxxxx.json</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -290,7 +331,10 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -298,7 +342,10 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityToken.
+             * <p>The security token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CAISzQN1q6Ft5B2yfSjIr5b2LouNuu5n/KOjQ3/wjGUHYdlagYGdmzz2IH1Le3NrBO8esfgymGFU6v8dlo1dYLQeHhadQI5cs80HtFqLSNaE65LswPlZ2M2ISETPJzfV9pCK</p>
              */
             public Builder securityToken(String securityToken) {
                 this.securityToken = securityToken;

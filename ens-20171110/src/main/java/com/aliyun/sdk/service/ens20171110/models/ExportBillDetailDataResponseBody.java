@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportBillDetailDataResponseBody} extends {@link TeaModel}
  *
  * <p>ExportBillDetailDataResponseBody</p>
  */
 public class ExportBillDetailDataResponseBody extends TeaModel {
-    @NameInMap("FilePath")
+    @com.aliyun.core.annotation.NameInMap("FilePath")
     private String filePath;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ExportBillDetailDataResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class ExportBillDetailDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FilePath.
+         * <p>The download path of the exported file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://test-oss.com/image_01.jpeg">http://test-oss.com/image_01.jpeg</a></p>
          */
         public Builder filePath(String filePath) {
             this.filePath = filePath;
@@ -58,7 +66,10 @@ public class ExportBillDetailDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use the ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA05990-B90D-594F-8C8E-650AEEB94C5D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

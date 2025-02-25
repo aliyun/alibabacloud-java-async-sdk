@@ -90,12 +90,12 @@ public class ModifyResourcePoolSchedulerTypeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyResourcePoolSchedulerTypeRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.regionId = response.regionId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.schedulerType = response.schedulerType;
+        private Builder(ModifyResourcePoolSchedulerTypeRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.regionId = request.regionId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.schedulerType = request.schedulerType;
         } 
 
         /**

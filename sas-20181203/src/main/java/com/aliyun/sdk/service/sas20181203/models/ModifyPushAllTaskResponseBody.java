@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPushAllTaskResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyPushAllTaskResponseBody</p>
  */
 public class ModifyPushAllTaskResponseBody extends TeaModel {
-    @NameInMap("PushTaskRsp")
+    @com.aliyun.core.annotation.NameInMap("PushTaskRsp")
     private PushTaskRsp pushTaskRsp;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyPushAllTaskResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The results of security check tasks.
+         * <p>The results of security check tasks.</p>
          */
         public Builder pushTaskRsp(PushTaskRsp pushTaskRsp) {
             this.pushTaskRsp = pushTaskRsp;
@@ -58,7 +63,10 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91EB4AC7-7FEF-4C72-BE49-4414E459AEC2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,35 +79,41 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyPushAllTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyPushAllTaskResponseBody</p>
+     */
     public static class PushTaskResultList extends TeaModel {
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private Long groupId;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Online")
+        @com.aliyun.core.annotation.NameInMap("Online")
         private Boolean online;
 
-        @NameInMap("OsVersion")
+        @com.aliyun.core.annotation.NameInMap("OsVersion")
         private String osVersion;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private PushTaskResultList(Builder builder) {
@@ -206,7 +220,10 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The ID of the server group to which the server belongs.
+             * <p>The ID of the server group to which the server belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>226</p>
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -214,7 +231,10 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server.
+             * <p>The ID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-wz9f7wlklxqnvdk****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -222,7 +242,10 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
+             * <p>The name of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestInstance</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -230,7 +253,10 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the server.
+             * <p>The IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.XX.XX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -238,7 +264,10 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The message that describes the security check failure.
+             * <p>The message that describes the security check failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>successful</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -246,13 +275,17 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Security Center agent is online. Valid values:
-             * <p>
+             * <p>Indicates whether the Security Center agent is online. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
+             * <blockquote>
+             * <p> If the Security Center agent of the server is offline, Security Center does not protect the server.</p>
+             * </blockquote>
              * 
-             * *   **true**: yes
-             * *   **false**: no
-             * 
-             * >  If the Security Center agent of the server is offline, Security Center does not protect the server.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder online(Boolean online) {
                 this.online = online;
@@ -260,7 +293,10 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system version of the server.
+             * <p>The operating system version of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>linux</p>
              */
             public Builder osVersion(String osVersion) {
                 this.osVersion = osVersion;
@@ -268,7 +304,10 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The region in which the server resides.
+             * <p>The region in which the server resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -276,11 +315,14 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the security check task is successful. Valid values:
-             * <p>
+             * <p>Indicates whether the security check task is successful. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -288,7 +330,10 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * <p>The UUID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5493fe42-61f5-4627-9aa2-8c449bbe****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -302,9 +347,15 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyPushAllTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyPushAllTaskResponseBody</p>
+     */
     public static class PushTaskRsp extends TeaModel {
-        @NameInMap("PushTaskResultList")
-        private java.util.List < PushTaskResultList> pushTaskResultList;
+        @com.aliyun.core.annotation.NameInMap("PushTaskResultList")
+        private java.util.List<PushTaskResultList> pushTaskResultList;
 
         private PushTaskRsp(Builder builder) {
             this.pushTaskResultList = builder.pushTaskResultList;
@@ -321,17 +372,17 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
         /**
          * @return pushTaskResultList
          */
-        public java.util.List < PushTaskResultList> getPushTaskResultList() {
+        public java.util.List<PushTaskResultList> getPushTaskResultList() {
             return this.pushTaskResultList;
         }
 
         public static final class Builder {
-            private java.util.List < PushTaskResultList> pushTaskResultList; 
+            private java.util.List<PushTaskResultList> pushTaskResultList; 
 
             /**
-             * An array consisting of the servers on which security check tasks failed.
+             * <p>An array consisting of the servers on which security check tasks failed.</p>
              */
-            public Builder pushTaskResultList(java.util.List < PushTaskResultList> pushTaskResultList) {
+            public Builder pushTaskResultList(java.util.List<PushTaskResultList> pushTaskResultList) {
                 this.pushTaskResultList = pushTaskResultList;
                 return this;
             }

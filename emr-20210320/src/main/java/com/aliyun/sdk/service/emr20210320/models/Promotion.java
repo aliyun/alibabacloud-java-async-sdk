@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Promotion} extends {@link TeaModel}
  *
  * <p>Promotion</p>
  */
 public class Promotion extends TeaModel {
-    @NameInMap("ProductCode")
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
 
-    @NameInMap("PromotionDesc")
+    @com.aliyun.core.annotation.NameInMap("PromotionDesc")
     private String promotionDesc;
 
-    @NameInMap("PromotionName")
+    @com.aliyun.core.annotation.NameInMap("PromotionName")
     private String promotionName;
 
-    @NameInMap("PromotionOptionCode")
+    @com.aliyun.core.annotation.NameInMap("PromotionOptionCode")
     private String promotionOptionCode;
 
-    @NameInMap("PromotionOptionNo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("PromotionOptionNo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String promotionOptionNo;
 
     private Promotion(Builder builder) {
@@ -87,7 +92,10 @@ public class Promotion extends TeaModel {
         private String promotionOptionNo; 
 
         /**
-         * 产品码。
+         * <p>产品码。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder productCode(String productCode) {
             this.productCode = productCode;
@@ -95,7 +103,10 @@ public class Promotion extends TeaModel {
         }
 
         /**
-         * 优惠券描述。
+         * <p>优惠券描述。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5元优惠券（有效期至23年8月11日）</p>
          */
         public Builder promotionDesc(String promotionDesc) {
             this.promotionDesc = promotionDesc;
@@ -103,7 +114,10 @@ public class Promotion extends TeaModel {
         }
 
         /**
-         * 优惠券名称。
+         * <p>优惠券名称。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5元优惠券</p>
          */
         public Builder promotionName(String promotionName) {
             this.promotionName = promotionName;
@@ -111,7 +125,10 @@ public class Promotion extends TeaModel {
         }
 
         /**
-         * 优惠券码。
+         * <p>优惠券码。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>youhui_quan</p>
          */
         public Builder promotionOptionCode(String promotionOptionCode) {
             this.promotionOptionCode = promotionOptionCode;
@@ -119,7 +136,11 @@ public class Promotion extends TeaModel {
         }
 
         /**
-         * 优惠券号。
+         * <p>优惠券号。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABC123</p>
          */
         public Builder promotionOptionNo(String promotionOptionNo) {
             this.promotionOptionNo = promotionOptionNo;

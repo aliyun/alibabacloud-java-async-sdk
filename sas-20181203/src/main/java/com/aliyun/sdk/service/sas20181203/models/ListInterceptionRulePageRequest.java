@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInterceptionRulePageRequest} extends {@link RequestModel}
  *
  * <p>ListInterceptionRulePageRequest</p>
  */
 public class ListInterceptionRulePageRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("Criteria")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Criteria")
     private String criteria;
 
-    @Query
-    @NameInMap("CriteriaType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CriteriaType")
     private String criteriaType;
 
-    @Query
-    @NameInMap("CurrentPage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer currentPage;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
     private ListInterceptionRulePageRequest(Builder builder) {
@@ -113,7 +118,11 @@ public class ListInterceptionRulePageRequest extends Request {
         } 
 
         /**
-         * The ID of the container cluster.
+         * <p>The ID of the container cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc41de13ab5474210bc0ce772a009****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -122,7 +131,10 @@ public class ListInterceptionRulePageRequest extends Request {
         }
 
         /**
-         * The query condition.
+         * <p>The query condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder criteria(String criteria) {
             this.putQueryParameter("Criteria", criteria);
@@ -131,16 +143,19 @@ public class ListInterceptionRulePageRequest extends Request {
         }
 
         /**
-         * The type of the query condition. Valid values:
-         * <p>
+         * <p>The type of the query condition. Valid values:</p>
+         * <ul>
+         * <li><strong>ID</strong></li>
+         * <li><strong>RULE_NAME</strong></li>
+         * <li><strong>SRC_TARGET</strong></li>
+         * <li><strong>DST_TARGET</strong></li>
+         * <li><strong>DST_PORT</strong></li>
+         * <li><strong>RULE_SWITCH</strong></li>
+         * <li><strong>INTERCEPTOR_TYPE</strong></li>
+         * </ul>
          * 
-         * *   **ID**
-         * *   **RULE_NAME**
-         * *   **SRC_TARGET**
-         * *   **DST_TARGET**
-         * *   **DST_PORT**
-         * *   **RULE_SWITCH**
-         * *   **INTERCEPTOR_TYPE**
+         * <strong>example:</strong>
+         * <p>DST_PORT</p>
          */
         public Builder criteriaType(String criteriaType) {
             this.putQueryParameter("CriteriaType", criteriaType);
@@ -149,7 +164,11 @@ public class ListInterceptionRulePageRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -158,7 +177,11 @@ public class ListInterceptionRulePageRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

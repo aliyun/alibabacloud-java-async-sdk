@@ -1,61 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryBillRequest} extends {@link RequestModel}
  *
  * <p>QueryBillRequest</p>
  */
 public class QueryBillRequest extends Request {
-    @Query
-    @NameInMap("BillOwnerId")
-    @Validation()
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BillOwnerId")
+    @com.aliyun.core.annotation.Validation()
     private Long billOwnerId;
 
-    @Query
-    @NameInMap("BillingCycle")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BillingCycle")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String billingCycle;
 
-    @Query
-    @NameInMap("IsDisplayLocalCurrency")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsDisplayLocalCurrency")
     private Boolean isDisplayLocalCurrency;
 
-    @Query
-    @NameInMap("IsHideZeroCharge")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsHideZeroCharge")
     private Boolean isHideZeroCharge;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
 
-    @Query
-    @NameInMap("ProductType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductType")
     private String productType;
 
-    @Query
-    @NameInMap("SubscriptionType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscriptionType")
     private String subscriptionType;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private QueryBillRequest(Builder builder) {
@@ -196,7 +201,10 @@ public class QueryBillRequest extends Request {
         } 
 
         /**
-         * The ID of the member.
+         * <p>The ID of the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder billOwnerId(Long billOwnerId) {
             this.putQueryParameter("BillOwnerId", billOwnerId);
@@ -205,7 +213,11 @@ public class QueryBillRequest extends Request {
         }
 
         /**
-         * The billing cycle, in the YYYY-MM format.
+         * <p>The billing cycle, in the YYYY-MM format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-07</p>
          */
         public Builder billingCycle(String billingCycle) {
             this.putQueryParameter("BillingCycle", billingCycle);
@@ -214,7 +226,10 @@ public class QueryBillRequest extends Request {
         }
 
         /**
-         * Specifies whether to display local currency information in bills. The parameter will be discontinued.
+         * <p>Specifies whether to display local currency information in bills. The parameter will be discontinued.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isDisplayLocalCurrency(Boolean isDisplayLocalCurrency) {
             this.putQueryParameter("IsDisplayLocalCurrency", isDisplayLocalCurrency);
@@ -223,11 +238,14 @@ public class QueryBillRequest extends Request {
         }
 
         /**
-         * Specifies whether to filter out a bill whose pretax gross amount is 0. By default, a bill whose pretax gross amount is 0 is not filtered out. Valid values:
-         * <p>
+         * <p>Specifies whether to filter out a bill whose pretax gross amount is 0. By default, a bill whose pretax gross amount is 0 is not filtered out. Valid values:</p>
+         * <ul>
+         * <li>true: filters out a bill whose pretax gross amount is 0.</li>
+         * <li>false: does not filter out a bill whose pretax gross amount is 0.</li>
+         * </ul>
          * 
-         * *   true: filters out a bill whose pretax gross amount is 0.
-         * *   false: does not filter out a bill whose pretax gross amount is 0.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isHideZeroCharge(Boolean isHideZeroCharge) {
             this.putQueryParameter("IsHideZeroCharge", isHideZeroCharge);
@@ -245,7 +263,10 @@ public class QueryBillRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: 1.
+         * <p>The number of the page to return. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -254,7 +275,10 @@ public class QueryBillRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 20. Maximum value: 300.
+         * <p>The number of entries to return on each page. Default value: 20. Maximum value: 300.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -263,7 +287,10 @@ public class QueryBillRequest extends Request {
         }
 
         /**
-         * The code of the service.
+         * <p>The code of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -272,7 +299,10 @@ public class QueryBillRequest extends Request {
         }
 
         /**
-         * The type of the service.
+         * <p>The type of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -281,15 +311,15 @@ public class QueryBillRequest extends Request {
         }
 
         /**
-         * The billing method. Valid values:
-         * <p>
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>Subscription</li>
+         * <li>PayAsYouGo</li>
+         * </ul>
+         * <p>This parameter must be used together with the ProductCode parameter.</p>
          * 
-         * *   Subscription
-         * *   PayAsYouGo
-         * 
-         * **
-         * 
-         * ****This parameter must be used together with the ProductCode parameter.
+         * <strong>example:</strong>
+         * <p>Subscription</p>
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putQueryParameter("SubscriptionType", subscriptionType);
@@ -298,13 +328,16 @@ public class QueryBillRequest extends Request {
         }
 
         /**
-         * The type of the bill. Valid values:
-         * <p>
+         * <p>The type of the bill. Valid values:</p>
+         * <ul>
+         * <li>SubscriptionOrder</li>
+         * <li>PayAsYouGoBill</li>
+         * <li>Refund</li>
+         * <li>Adjustment</li>
+         * </ul>
          * 
-         * *   SubscriptionOrder
-         * *   PayAsYouGoBill
-         * *   Refund
-         * *   Adjustment
+         * <strong>example:</strong>
+         * <p>SubscriptionOrder</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

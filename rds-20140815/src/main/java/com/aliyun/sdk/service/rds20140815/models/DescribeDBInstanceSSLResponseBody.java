@@ -1,78 +1,83 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceSSLResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstanceSSLResponseBody</p>
  */
 public class DescribeDBInstanceSSLResponseBody extends TeaModel {
-    @NameInMap("ACL")
+    @com.aliyun.core.annotation.NameInMap("ACL")
     private String ACL;
 
-    @NameInMap("CAType")
+    @com.aliyun.core.annotation.NameInMap("CAType")
     private String CAType;
 
-    @NameInMap("ClientCACert")
+    @com.aliyun.core.annotation.NameInMap("ClientCACert")
     private String clientCACert;
 
-    @NameInMap("ClientCACertExpireTime")
+    @com.aliyun.core.annotation.NameInMap("ClientCACertExpireTime")
     private String clientCACertExpireTime;
 
-    @NameInMap("ClientCertRevocationList")
+    @com.aliyun.core.annotation.NameInMap("ClientCertRevocationList")
     private String clientCertRevocationList;
 
-    @NameInMap("ConnectionString")
+    @com.aliyun.core.annotation.NameInMap("ConnectionString")
     private String connectionString;
 
-    @NameInMap("ForceEncryption")
+    @com.aliyun.core.annotation.NameInMap("ForceEncryption")
     private String forceEncryption;
 
-    @NameInMap("LastModifyStatus")
+    @com.aliyun.core.annotation.NameInMap("LastModifyStatus")
     private String lastModifyStatus;
 
-    @NameInMap("ModifyStatusReason")
+    @com.aliyun.core.annotation.NameInMap("ModifyStatusReason")
     private String modifyStatusReason;
 
-    @NameInMap("ReplicationACL")
+    @com.aliyun.core.annotation.NameInMap("ReplicationACL")
     private String replicationACL;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RequireUpdate")
+    @com.aliyun.core.annotation.NameInMap("RequireUpdate")
     private String requireUpdate;
 
-    @NameInMap("RequireUpdateItem")
+    @com.aliyun.core.annotation.NameInMap("RequireUpdateItem")
     private String requireUpdateItem;
 
-    @NameInMap("RequireUpdateReason")
+    @com.aliyun.core.annotation.NameInMap("RequireUpdateReason")
     private String requireUpdateReason;
 
-    @NameInMap("SSLCreateTime")
+    @com.aliyun.core.annotation.NameInMap("SSLCreateTime")
     private String SSLCreateTime;
 
-    @NameInMap("SSLEnabled")
+    @com.aliyun.core.annotation.NameInMap("SSLEnabled")
     private String SSLEnabled;
 
-    @NameInMap("SSLExpireTime")
+    @com.aliyun.core.annotation.NameInMap("SSLExpireTime")
     private String SSLExpireTime;
 
-    @NameInMap("ServerCAUrl")
+    @com.aliyun.core.annotation.NameInMap("ServerCAUrl")
     private String serverCAUrl;
 
-    @NameInMap("ServerCert")
+    @com.aliyun.core.annotation.NameInMap("ServerCert")
     private String serverCert;
 
-    @NameInMap("ServerKey")
+    @com.aliyun.core.annotation.NameInMap("ServerKey")
     private String serverKey;
 
-    @NameInMap("TlsVersion")
+    @com.aliyun.core.annotation.NameInMap("TlsVersion")
     private String tlsVersion;
 
     private DescribeDBInstanceSSLResponseBody(Builder builder) {
@@ -278,13 +283,16 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         private String tlsVersion; 
 
         /**
-         * The method that is used to verify the identities of clients. This parameter is supported only when the instance runs PostgreSQL with cloud disks. Valid values:
-         * <p>
+         * <p>The method that is used to verify the identities of clients. This parameter is supported only when the instance runs PostgreSQL with cloud disks. Valid values:</p>
+         * <ul>
+         * <li><strong>cert</strong></li>
+         * <li><strong>prefer</strong></li>
+         * <li><strong>verify-ca</strong></li>
+         * <li><strong>verify-full</strong> (supported only when the instance runs PostgreSQL 12 or later)</li>
+         * </ul>
          * 
-         * *   **cert**
-         * *   **perfer**
-         * *   **verify-ca**
-         * *   **verify-full** (supported only when the instance runs PostgreSQL 12 or later)
+         * <strong>example:</strong>
+         * <p>cert</p>
          */
         public Builder ACL(String ACL) {
             this.ACL = ACL;
@@ -292,11 +300,14 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disks. Valid values:
-         * <p>
+         * <p>The type of the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disks. Valid values:</p>
+         * <ul>
+         * <li><strong>aliyun</strong>: a cloud certificate</li>
+         * <li><strong>custom</strong>: a custom certificate</li>
+         * </ul>
          * 
-         * *   **aliyun**: a cloud certificate
-         * *   **custom**: a custom certificate
+         * <strong>example:</strong>
+         * <p>aliyun</p>
          */
         public Builder CAType(String CAType) {
             this.CAType = CAType;
@@ -304,7 +315,10 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * The public key of the CA that issues client certificates. This parameter is supported only when the instance runs PostgreSQL with cloud disks.
+         * <p>The public key of the CA that issues client certificates. This parameter is supported only when the instance runs PostgreSQL with cloud disks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----MIID*****viXk=-----END CERTIFICATE-----</p>
          */
         public Builder clientCACert(String clientCACert) {
             this.clientCACert = clientCACert;
@@ -312,7 +326,12 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the public key of the CA that issues client certificates expires. This parameter is supported only when the instance runs PostgreSQL with cloud disks. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. This parameter is not supported now.
+         * <p>The time when the public key of the CA that issues client certificates expires. This parameter is supported only when the instance runs PostgreSQL with cloud disks. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. This parameter is not supported now.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder clientCACertExpireTime(String clientCACertExpireTime) {
             this.clientCACertExpireTime = clientCACertExpireTime;
@@ -320,7 +339,10 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * The certificate revocation list (CRL) that contains revoked client certificates. This parameter is supported only when the instance runs PostgreSQL with cloud disks.
+         * <p>The certificate revocation list (CRL) that contains revoked client certificates. This parameter is supported only when the instance runs PostgreSQL with cloud disks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN X509 CRL-----MIIB****19mg==-----END X509 CRL-----</p>
          */
         public Builder clientCertRevocationList(String clientCertRevocationList) {
             this.clientCertRevocationList = clientCertRevocationList;
@@ -328,7 +350,10 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * The endpoint that is protected by SSL encryption.
+         * <p>The endpoint that is protected by SSL encryption.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp162dfr55g47****.mysql.rds.aliyuncs.com</p>
          */
         public Builder connectionString(String connectionString) {
             this.connectionString = connectionString;
@@ -336,7 +361,14 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * ForceEncryption.
+         * <p>Indicates whether the forceful SSL encryption feature is enabled. This parameter is supported only for ApsaraDB RDS for SQL Server instances. For more information, see <a href="https://help.aliyun.com/document_detail/95715.html">Configure the SSL encryption feature</a>.</p>
+         * <ul>
+         * <li><strong>1</strong>: enabled</li>
+         * <li><strong>0</strong>: The feature is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder forceEncryption(String forceEncryption) {
             this.forceEncryption = forceEncryption;
@@ -344,12 +376,15 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the SSL link. This parameter is supported only when the instance runs PostgreSQL with cloud disks. Valid values:
-         * <p>
+         * <p>The status of the SSL link. This parameter is supported only when the instance runs PostgreSQL with cloud disks. Valid values:</p>
+         * <ul>
+         * <li><strong>success</strong></li>
+         * <li><strong>setting</strong></li>
+         * <li><strong>failed</strong></li>
+         * </ul>
          * 
-         * *   **success**
-         * *   **setting**
-         * *   **failed**
+         * <strong>example:</strong>
+         * <p>setting</p>
          */
         public Builder lastModifyStatus(String lastModifyStatus) {
             this.lastModifyStatus = lastModifyStatus;
@@ -357,7 +392,10 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * The reason why the SSL link stays in the current state. This parameter is supported only when the instance runs PostgreSQL with cloud disks.
+         * <p>The reason why the SSL link stays in the current state. This parameter is supported only when the instance runs PostgreSQL with cloud disks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Modify DB Instance SSL Config.</p>
          */
         public Builder modifyStatusReason(String modifyStatusReason) {
             this.modifyStatusReason = modifyStatusReason;
@@ -365,13 +403,16 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * The method that is used to verify the replication permission. This parameter is supported only when the instance runs PostgreSQL with cloud disks. Valid values:
-         * <p>
+         * <p>The method that is used to verify the replication permission. This parameter is supported only when the instance runs PostgreSQL with cloud disks. Valid values:</p>
+         * <ul>
+         * <li><strong>cert</strong></li>
+         * <li><strong>prefer</strong></li>
+         * <li><strong>verify-ca</strong></li>
+         * <li><strong>verify-full</strong> (supported only when the instance runs PostgreSQL 12 or later)</li>
+         * </ul>
          * 
-         * *   **cert**
-         * *   **perfer**
-         * *   **verify-ca**
-         * *   **verify-full** (supported only when the instance runs PostgreSQL 12 or later)
+         * <strong>example:</strong>
+         * <p>cert</p>
          */
         public Builder replicationACL(String replicationACL) {
             this.replicationACL = replicationACL;
@@ -379,7 +420,10 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7705151C-E242-55AF-9929-2A3C39D979D2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -387,18 +431,24 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the server certificate needs to be updated.
-         * <p>
+         * <p>Indicates whether the server certificate needs to be updated.</p>
+         * <ul>
+         * <li><p>Valid values for ApsaraDB RDS for MySQL instances and ApsaraDB RDS for SQL Server instances:</p>
+         * <ul>
+         * <li><strong>No</strong></li>
+         * <li><strong>Yes</strong></li>
+         * </ul>
+         * </li>
+         * <li><p>Valid values for ApsaraDB RDS for PostgreSQL instances:</p>
+         * <ul>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes</li>
+         * </ul>
+         * </li>
+         * </ul>
          * 
-         * *   Valid values for ApsaraDB RDS for MySQL instances and ApsaraDB RDS for SQL Server instances:
-         * 
-         *     *   **No**
-         *     *   **Yes**
-         * 
-         * *   Valid values for ApsaraDB RDS for PostgreSQL instances:
-         * 
-         *     *   **0**: no
-         *     *   **1**: yes
+         * <strong>example:</strong>
+         * <p>Yes</p>
          */
         public Builder requireUpdate(String requireUpdate) {
             this.requireUpdate = requireUpdate;
@@ -406,7 +456,12 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * The server certificate that needs to be updated. This parameter is supported only when the instance runs PostgreSQL with cloud disk.
+         * <p>The server certificate that needs to be updated. This parameter is supported only when the instance runs PostgreSQL with cloud disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder requireUpdateItem(String requireUpdateItem) {
             this.requireUpdateItem = requireUpdateItem;
@@ -414,7 +469,12 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * The reason why the server certificate needs to be updated. This parameter is supported only when the instance runs PostgreSQL with cloud disks.
+         * <p>The reason why the server certificate needs to be updated. This parameter is supported only when the instance runs PostgreSQL with cloud disks.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder requireUpdateReason(String requireUpdateReason) {
             this.requireUpdateReason = requireUpdateReason;
@@ -422,7 +482,12 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the server certificate was created. This parameter is supported only when the instance runs PostgreSQL with cloud disks. In addition, this parameter is valid only when the CAType parameter value is aliyun.
+         * <p>The time when the server certificate was created. This parameter is supported only when the instance runs PostgreSQL with cloud disks. In addition, this parameter is valid only when the CAType parameter value is aliyun.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder SSLCreateTime(String SSLCreateTime) {
             this.SSLCreateTime = SSLCreateTime;
@@ -430,18 +495,24 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether SSL encryption is enabled.
-         * <p>
+         * <p>Indicates whether SSL encryption is enabled.</p>
+         * <ul>
+         * <li><p>Valid values for ApsaraDB RDS for MySQL instances and ApsaraDB RDS for SQL Server instances:</p>
+         * <ul>
+         * <li><strong>Yes</strong></li>
+         * <li><strong>No</strong></li>
+         * </ul>
+         * </li>
+         * <li><p>Valid values for ApsaraDB RDS for PostgreSQL instances:</p>
+         * <ul>
+         * <li><strong>on</strong>: enabled</li>
+         * <li><strong>off</strong>: disabled</li>
+         * </ul>
+         * </li>
+         * </ul>
          * 
-         * *   Valid values for ApsaraDB RDS for MySQL instances and ApsaraDB RDS for SQL Server instances:
-         * 
-         *     *   **Yes**
-         *     *   **No**
-         * 
-         * *   Valid values for ApsaraDB RDS for PostgreSQL instances:
-         * 
-         *     *   **on**: enabled
-         *     *   **off**: disabled
+         * <strong>example:</strong>
+         * <p>Yes</p>
          */
         public Builder SSLEnabled(String SSLEnabled) {
             this.SSLEnabled = SSLEnabled;
@@ -449,7 +520,10 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the server certificate expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+         * <p>The time when the server certificate expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-10-11T08:16:43Z</p>
          */
         public Builder SSLExpireTime(String SSLExpireTime) {
             this.SSLExpireTime = SSLExpireTime;
@@ -457,7 +531,12 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * The URL of the certificate that is used to issue the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disk.
+         * <p>The URL of the certificate that is used to issue the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder serverCAUrl(String serverCAUrl) {
             this.serverCAUrl = serverCAUrl;
@@ -465,7 +544,10 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * The content of the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disks.
+         * <p>The content of the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----MIID*****QqEP-----END CERTIFICATE-----</p>
          */
         public Builder serverCert(String serverCert) {
             this.serverCert = serverCert;
@@ -473,7 +555,10 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * The private key of the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disks.
+         * <p>The private key of the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN PRIVATE KEY-----MIIE****ihfg==-----END PRIVATE KEY-----</p>
          */
         public Builder serverKey(String serverKey) {
             this.serverKey = serverKey;
@@ -481,7 +566,10 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * TlsVersion.
+         * <p>The minimum Transport Layer Security (TLS) version. Valid values: 1.0, 1.1, and 1.2. This parameter is supported only for ApsaraDB RDS for SQL Server instances. For more information, see <a href="https://help.aliyun.com/document_detail/95715.html">Configure the SSL encryption feature</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1</p>
          */
         public Builder tlsVersion(String tlsVersion) {
             this.tlsVersion = tlsVersion;

@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSecretParametersRequest} extends {@link RequestModel}
  *
  * <p>ListSecretParametersRequest</p>
  */
 public class ListSecretParametersRequest extends Request {
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 100, minimum = 10)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 10)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("Path")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Path")
     private String path;
 
-    @Query
-    @NameInMap("Recursive")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Recursive")
     private Boolean recursive;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("SortField")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortField")
     private String sortField;
 
-    @Query
-    @NameInMap("SortOrder")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortOrder")
     private String sortOrder;
 
-    @Query
-    @NameInMap("Tags")
-    private java.util.Map < String, ? > tags;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.Map<String, ?> tags;
 
     private ListSecretParametersRequest(Builder builder) {
         super(builder);
@@ -146,7 +151,7 @@ public class ListSecretParametersRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.Map < String, ? > getTags() {
+    public java.util.Map<String, ?> getTags() {
         return this.tags;
     }
 
@@ -160,7 +165,7 @@ public class ListSecretParametersRequest extends Request {
         private String resourceGroupId; 
         private String sortField; 
         private String sortOrder; 
-        private java.util.Map < String, ? > tags; 
+        private java.util.Map<String, ?> tags; 
 
         private Builder() {
             super();
@@ -181,7 +186,10 @@ public class ListSecretParametersRequest extends Request {
         } 
 
         /**
-         * The number of entries per page. Valid values: 10 to 100. Default value: 50.
+         * <p>The number of entries per page. Valid values: 10 to 100. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -190,7 +198,10 @@ public class ListSecretParametersRequest extends Request {
         }
 
         /**
-         * The name of the parameter. **You can enter a keyword to query parameter names in fuzzy match mode.
+         * <p>The name of the parameter. **You can enter a keyword to query parameter names in fuzzy match mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySecretParameter</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -199,7 +210,10 @@ public class ListSecretParametersRequest extends Request {
         }
 
         /**
-         * The token that is used to retrieve the next page of results.
+         * <p>The token that is used to retrieve the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sPH90GZOVGC6KPDUL0FIIbEtMQHq_19S6_4O_XqA</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -208,7 +222,10 @@ public class ListSecretParametersRequest extends Request {
         }
 
         /**
-         * The path of the parameter. For example, if the name of a parameter is /path/path1/Myparameter, the path of the parameter is /path/path1/.
+         * <p>The path of the parameter. For example, if the name of a parameter is /path/path1/Myparameter, the path of the parameter is /path/path1/.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/path1/path2/</p>
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -217,7 +234,10 @@ public class ListSecretParametersRequest extends Request {
         }
 
         /**
-         * Specifies whether to query parameters from all levels of directories in the specified path. Default value: false.
+         * <p>Specifies whether to query parameters from all levels of directories in the specified path. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder recursive(Boolean recursive) {
             this.putQueryParameter("Recursive", recursive);
@@ -226,7 +246,10 @@ public class ListSecretParametersRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -235,7 +258,10 @@ public class ListSecretParametersRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxsn4m4******</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -244,11 +270,14 @@ public class ListSecretParametersRequest extends Request {
         }
 
         /**
-         * The field used to sort the query results. Valid values:
-         * <p>
+         * <p>The field used to sort the query results. Valid values:</p>
+         * <ul>
+         * <li>Name</li>
+         * <li>CreatedDate</li>
+         * </ul>
          * 
-         * *   Name
-         * *   CreatedDate
+         * <strong>example:</strong>
+         * <p>Name</p>
          */
         public Builder sortField(String sortField) {
             this.putQueryParameter("SortField", sortField);
@@ -257,11 +286,14 @@ public class ListSecretParametersRequest extends Request {
         }
 
         /**
-         * The order in which the entries are sorted. Valid values:
-         * <p>
+         * <p>The order in which the entries are sorted. Valid values:</p>
+         * <ul>
+         * <li>Ascending</li>
+         * <li>Descending (Default)</li>
+         * </ul>
          * 
-         * *   Ascending
-         * *   Descending (Default)
+         * <strong>example:</strong>
+         * <p>Descending</p>
          */
         public Builder sortOrder(String sortOrder) {
             this.putQueryParameter("SortOrder", sortOrder);
@@ -270,9 +302,12 @@ public class ListSecretParametersRequest extends Request {
         }
 
         /**
-         * The tags of the parameter.
+         * <p>The tags of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;k1&quot;: &quot;v1&quot;, &quot;k2&quot;: &quot;v2&quot;}</p>
          */
-        public Builder tags(java.util.Map < String, ? > tags) {
+        public Builder tags(java.util.Map<String, ?> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;

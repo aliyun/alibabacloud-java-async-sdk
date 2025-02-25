@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListBindDataSourcesResponseBody</p>
  */
 public class ListBindDataSourcesResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListBindDataSourcesResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class ListBindDataSourcesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -58,7 +57,7 @@ public class ListBindDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,31 +71,31 @@ public class ListBindDataSourcesResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("CloudCode")
+        @com.aliyun.core.annotation.NameInMap("CloudCode")
         private String cloudCode;
 
-        @NameInMap("DataSourceInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DataSourceInstanceId")
         private String dataSourceInstanceId;
 
-        @NameInMap("DataSourceName")
+        @com.aliyun.core.annotation.NameInMap("DataSourceName")
         private String dataSourceName;
 
-        @NameInMap("DataSourceRemark")
+        @com.aliyun.core.annotation.NameInMap("DataSourceRemark")
         private String dataSourceRemark;
 
-        @NameInMap("DataSourceType")
+        @com.aliyun.core.annotation.NameInMap("DataSourceType")
         private String dataSourceType;
 
-        @NameInMap("LogCount")
+        @com.aliyun.core.annotation.NameInMap("LogCount")
         private Integer logCount;
 
-        @NameInMap("TaskCount")
+        @com.aliyun.core.annotation.NameInMap("TaskCount")
         private Integer taskCount;
 
         private Data(Builder builder) {
@@ -194,7 +193,7 @@ public class ListBindDataSourcesResponseBody extends TeaModel {
             private Integer taskCount; 
 
             /**
-             * AccountId.
+             * The ID of the cloud account.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -202,7 +201,7 @@ public class ListBindDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * AccountName.
+             * The username of the cloud account.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -210,7 +209,12 @@ public class ListBindDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * CloudCode.
+             * The code of the cloud service provider. Valid values:
+             * <p>
+             * 
+             * *   qcloud: Tencent Cloud
+             * *   aliyun: Alibaba Cloud
+             * *   hcloud: Huawei Cloud
              */
             public Builder cloudCode(String cloudCode) {
                 this.cloudCode = cloudCode;
@@ -218,7 +222,7 @@ public class ListBindDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceInstanceId.
+             * The ID of the data source. The ID is an MD5 hash value that is calculated by the threat analysis feature based on specific parameters.
              */
             public Builder dataSourceInstanceId(String dataSourceInstanceId) {
                 this.dataSourceInstanceId = dataSourceInstanceId;
@@ -226,7 +230,7 @@ public class ListBindDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceName.
+             * The name of the data source.
              */
             public Builder dataSourceName(String dataSourceName) {
                 this.dataSourceName = dataSourceName;
@@ -234,7 +238,7 @@ public class ListBindDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceRemark.
+             * The remarks on the data source.
              */
             public Builder dataSourceRemark(String dataSourceRemark) {
                 this.dataSourceRemark = dataSourceRemark;
@@ -242,7 +246,12 @@ public class ListBindDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceType.
+             * The type of the data source. Valid values:
+             * <p>
+             * 
+             * *   obs: Huawei Cloud Object Storage Service (OBS)
+             * *   wafApi: download API of Tencent Cloud Web Application Firewall (WAF)
+             * *   ckafka: Tencent Cloud Kafka (CKafka)
              */
             public Builder dataSourceType(String dataSourceType) {
                 this.dataSourceType = dataSourceType;
@@ -250,7 +259,7 @@ public class ListBindDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * LogCount.
+             * The number of logs that are added within the data source.
              */
             public Builder logCount(Integer logCount) {
                 this.logCount = logCount;
@@ -258,7 +267,7 @@ public class ListBindDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TaskCount.
+             * The number of existing tasks that are created to add logs within the data source.
              */
             public Builder taskCount(Integer taskCount) {
                 this.taskCount = taskCount;

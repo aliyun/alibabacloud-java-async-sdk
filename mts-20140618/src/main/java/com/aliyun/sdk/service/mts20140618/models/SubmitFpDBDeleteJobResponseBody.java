@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitFpDBDeleteJobResponseBody} extends {@link TeaModel}
  *
  * <p>SubmitFpDBDeleteJobResponseBody</p>
  */
 public class SubmitFpDBDeleteJobResponseBody extends TeaModel {
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SubmitFpDBDeleteJobResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class SubmitFpDBDeleteJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * JobId.
+         * <p>The ID of the job. We recommend that you keep this ID for subsequent operation calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d98459323c024947a104f6a50cbf****</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -58,7 +61,10 @@ public class SubmitFpDBDeleteJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4247B23C-26DE-529F-8D9F-FD6811AE979B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

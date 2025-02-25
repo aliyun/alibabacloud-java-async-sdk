@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAckOperatorRequest} extends {@link RequestModel}
  *
  * <p>DescribeAckOperatorRequest</p>
  */
 public class DescribeAckOperatorRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
     private DescribeAckOperatorRequest(Builder builder) {
@@ -55,7 +55,11 @@ public class DescribeAckOperatorRequest extends Request {
         } 
 
         /**
-         * The ID of the ACK cluster.
+         * <p>The ID of the ACK cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c79acd3fbf462423fb6450e513bb6****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);

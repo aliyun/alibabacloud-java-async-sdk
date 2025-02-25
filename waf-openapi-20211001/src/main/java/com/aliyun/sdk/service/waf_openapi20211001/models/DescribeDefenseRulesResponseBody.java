@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDefenseRulesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDefenseRulesResponseBody</p>
  */
 public class DescribeDefenseRulesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Rules")
-    private java.util.List < Rules> rules;
+    @com.aliyun.core.annotation.NameInMap("Rules")
+    private java.util.List<Rules> rules;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeDefenseRulesResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
     /**
      * @return rules
      */
-    public java.util.List < Rules> getRules() {
+    public java.util.List<Rules> getRules() {
         return this.rules;
     }
 
@@ -58,11 +63,14 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Rules> rules; 
+        private java.util.List<Rules> rules; 
         private Long totalCount; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80736FA5-FA87-55F6-AA69-C5477C6FE6D0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,15 +78,18 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
         }
 
         /**
-         * An array of protection rules.
+         * <p>An array of protection rules.</p>
          */
-        public Builder rules(java.util.List < Rules> rules) {
+        public Builder rules(java.util.List<Rules> rules) {
             this.rules = rules;
             return this;
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -91,29 +102,35 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDefenseRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDefenseRulesResponseBody</p>
+     */
     public static class Rules extends TeaModel {
-        @NameInMap("Config")
+        @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
 
-        @NameInMap("DefenseOrigin")
+        @com.aliyun.core.annotation.NameInMap("DefenseOrigin")
         private String defenseOrigin;
 
-        @NameInMap("DefenseScene")
+        @com.aliyun.core.annotation.NameInMap("DefenseScene")
         private String defenseScene;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private Long templateId;
 
         private Rules(Builder builder) {
@@ -202,7 +219,10 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
             private Long templateId; 
 
             /**
-             * The details of the protection rule. The value is a string that contains multiple parameters in the JSON format. For more information, see the "**Rule parameters**" section in the [CreateDefenseRule](~~CreateDefenseRule~~) topic.
+             * <p>The details of the protection rule. The value is a string that contains multiple parameters in the JSON format. For more information, see the &quot;<strong>Rule parameters</strong>&quot; section in the <a href="~~CreateDefenseRule~~">CreateDefenseRule</a> topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;policyId&quot;:1012,&quot;action&quot;:&quot;block&quot;}</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -210,11 +230,14 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The origin of the protection rule. Valid values:
-             * <p>
+             * <p>The origin of the protection rule. Valid values:</p>
+             * <ul>
+             * <li><strong>custom:</strong> The protection rule is created by the user.</li>
+             * <li><strong>system:</strong> The protection rule is automatically generated by the system.</li>
+             * </ul>
              * 
-             * *   **custom:** The protection rule is created by the user.
-             * *   **system:** The protection rule is automatically generated by the system.
+             * <strong>example:</strong>
+             * <p>custom</p>
              */
             public Builder defenseOrigin(String defenseOrigin) {
                 this.defenseOrigin = defenseOrigin;
@@ -222,7 +245,10 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The scenario in which the protection rule is used. For more information, see the description of the **DefenseScene** parameter in the [CreateDefenseRule](~~CreateDefenseRule~~) topic.
+             * <p>The scenario in which the protection rule is used. For more information, see the description of the <strong>DefenseScene</strong> parameter in the <a href="~~CreateDefenseRule~~">CreateDefenseRule</a> topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>waf_group</p>
              */
             public Builder defenseScene(String defenseScene) {
                 this.defenseScene = defenseScene;
@@ -230,7 +256,10 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The most recent time when the protection rule was modified.
+             * <p>The most recent time when the protection rule was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1665460629000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -238,7 +267,10 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the protection rule.
+             * <p>The ID of the protection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>42755</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -246,7 +278,10 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the protection rule.
+             * <p>The name of the protection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rules_41</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -254,11 +289,14 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the protection rule. Valid values:
-             * <p>
+             * <p>The status of the protection rule. Valid values:</p>
+             * <ul>
+             * <li><strong>0:</strong> disabled.</li>
+             * <li><strong>1:</strong> enabled.</li>
+             * </ul>
              * 
-             * *   **0:** disabled.
-             * *   **1:** enabled.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -266,7 +304,10 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the protection rule template.
+             * <p>The ID of the protection rule template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5673</p>
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;

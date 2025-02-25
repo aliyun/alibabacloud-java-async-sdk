@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHoneypotProbeRequest} extends {@link RequestModel}
  *
  * <p>ListHoneypotProbeRequest</p>
  */
 public class ListHoneypotProbeRequest extends Request {
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("DisplayName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
     private String displayName;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ProbeStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProbeStatus")
     private String probeStatus;
 
-    @Query
-    @NameInMap("ProbeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProbeType")
     private String probeType;
 
     private ListHoneypotProbeRequest(Builder builder) {
@@ -124,7 +129,10 @@ public class ListHoneypotProbeRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Pages start from page **1**. Default value: **1**.
+         * <p>The number of the page to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -133,7 +141,10 @@ public class ListHoneypotProbeRequest extends Request {
         }
 
         /**
-         * The name of the probe.
+         * <p>The name of the probe.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>probe-test</p>
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -142,11 +153,14 @@ public class ListHoneypotProbeRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -155,10 +169,13 @@ public class ListHoneypotProbeRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
-         * <p>
+         * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <blockquote>
+         * <p>We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
          * 
-         * > We recommend that you do not leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -167,19 +184,22 @@ public class ListHoneypotProbeRequest extends Request {
         }
 
         /**
-         * The status of the probe. Valid values:
-         * <p>
+         * <p>The status of the probe. Valid values:</p>
+         * <ul>
+         * <li><strong>installed</strong>: installed</li>
+         * <li><strong>install_failed</strong>: installation failed</li>
+         * <li><strong>online</strong>: online</li>
+         * <li><strong>offline</strong>: offline</li>
+         * <li><strong>unnormal</strong>: abnormal</li>
+         * <li><strong>unprobe</strong>: unauthorized</li>
+         * <li><strong>uninstalling</strong>: being uninstalled</li>
+         * <li><strong>uninstalled</strong>: uninstalled</li>
+         * <li><strong>uninstall_failed</strong>: uninstallation failed</li>
+         * <li><strong>not_exist</strong>: not installed</li>
+         * </ul>
          * 
-         * *   **installed**: installed
-         * *   **install_failed**: installation failed
-         * *   **online**: online
-         * *   **offline**: offline
-         * *   **unnormal**: abnormal
-         * *   **unprobe**: unauthorized
-         * *   **uninstalling**: being uninstalled
-         * *   **uninstalled**: uninstalled
-         * *   **uninstall_failed**: uninstallation failed
-         * *   **not_exist**: not installed
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         public Builder probeStatus(String probeStatus) {
             this.putQueryParameter("ProbeStatus", probeStatus);
@@ -188,11 +208,14 @@ public class ListHoneypotProbeRequest extends Request {
         }
 
         /**
-         * The type of the probe. Valid values:
-         * <p>
+         * <p>The type of the probe. Valid values:</p>
+         * <ul>
+         * <li><strong>host_probe</strong>: host probe</li>
+         * <li><strong>vpc_black_hole_probe</strong>: VPC probe</li>
+         * </ul>
          * 
-         * *   **host_probe**: host probe
-         * *   **vpc_black_hole_probe**: VPC probe
+         * <strong>example:</strong>
+         * <p>host_probe</p>
          */
         public Builder probeType(String probeType) {
             this.putQueryParameter("ProbeType", probeType);

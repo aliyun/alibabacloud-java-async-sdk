@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAvatarsRequest} extends {@link RequestModel}
  *
  * <p>ListAvatarsRequest</p>
  */
 public class ListAvatarsRequest extends Request {
-    @Query
-    @NameInMap("AvatarType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AvatarType")
     private String avatarType;
 
-    @Query
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100)
     private Integer pageSize;
 
     private ListAvatarsRequest(Builder builder) {
@@ -83,7 +88,13 @@ public class ListAvatarsRequest extends Request {
         } 
 
         /**
-         * AvatarType.
+         * <ul>
+         * <li>The type of the digital human.</li>
+         * <li>2DAvatar</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2DAvatar</p>
          */
         public Builder avatarType(String avatarType) {
             this.putQueryParameter("AvatarType", avatarType);
@@ -92,7 +103,13 @@ public class ListAvatarsRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <ul>
+         * <li>The page number.</li>
+         * <li>Default value: 1.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -101,7 +118,13 @@ public class ListAvatarsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <ul>
+         * <li>The number of entries per page.</li>
+         * <li>Default value: 10.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

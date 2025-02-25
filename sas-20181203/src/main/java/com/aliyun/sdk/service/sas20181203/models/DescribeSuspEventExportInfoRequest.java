@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSuspEventExportInfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeSuspEventExportInfoRequest</p>
  */
 public class DescribeSuspEventExportInfoRequest extends Request {
-    @Query
-    @NameInMap("ExportId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExportId")
     private Integer exportId;
 
     private DescribeSuspEventExportInfoRequest(Builder builder) {
@@ -54,10 +59,13 @@ public class DescribeSuspEventExportInfoRequest extends Request {
         } 
 
         /**
-         * The ID of the export task.
-         * <p>
+         * <p>The ID of the export task.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~ExportSuspEvents~~">ExportSuspEvents</a> operation to query the ID.</p>
+         * </blockquote>
          * 
-         * > You can call the [ExportSuspEvents](~~ExportSuspEvents~~) operation to query the ID.
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder exportId(Integer exportId) {
             this.putQueryParameter("ExportId", exportId);

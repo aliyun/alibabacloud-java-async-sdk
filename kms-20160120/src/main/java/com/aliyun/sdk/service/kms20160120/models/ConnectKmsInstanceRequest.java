@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ConnectKmsInstanceRequest</p>
  */
 public class ConnectKmsInstanceRequest extends Request {
-    @Query
-    @NameInMap("KMProvider")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KMProvider")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String KMProvider;
 
-    @Query
-    @NameInMap("KmsInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KmsInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String kmsInstanceId;
 
-    @Query
-    @NameInMap("VSwitchIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchIds;
 
-    @Query
-    @NameInMap("VpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
-    @Query
-    @NameInMap("ZoneIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String zoneIds;
 
     private ConnectKmsInstanceRequest(Builder builder) {
@@ -115,7 +114,7 @@ public class ConnectKmsInstanceRequest extends Request {
         } 
 
         /**
-         * KMProvider.
+         * The provider of the KMS instance. Set the value to Aliyun.
          */
         public Builder KMProvider(String KMProvider) {
             this.putQueryParameter("KMProvider", KMProvider);
@@ -124,7 +123,7 @@ public class ConnectKmsInstanceRequest extends Request {
         }
 
         /**
-         * KmsInstanceId.
+         * The ID of the KMS instance that you want to enable.
          */
         public Builder kmsInstanceId(String kmsInstanceId) {
             this.putQueryParameter("KmsInstanceId", kmsInstanceId);
@@ -133,7 +132,7 @@ public class ConnectKmsInstanceRequest extends Request {
         }
 
         /**
-         * VSwitchIds.
+         * The vSwitch in the two zones. The vSwitch must have at least one available IP address.
          */
         public Builder vSwitchIds(String vSwitchIds) {
             this.putQueryParameter("VSwitchIds", vSwitchIds);
@@ -142,7 +141,7 @@ public class ConnectKmsInstanceRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the virtual private cloud (VPC) that is associated with the KMS instance.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -151,7 +150,7 @@ public class ConnectKmsInstanceRequest extends Request {
         }
 
         /**
-         * ZoneIds.
+         * The two zones for the KMS instance. Dual-zone deployment improves service availability and disaster recovery capabilities.
          */
         public Builder zoneIds(String zoneIds) {
             this.putQueryParameter("ZoneIds", zoneIds);

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchTraceAppByPageResponseBody} extends {@link TeaModel}
  *
  * <p>SearchTraceAppByPageResponseBody</p>
  */
 public class SearchTraceAppByPageResponseBody extends TeaModel {
-    @NameInMap("PageBean")
+    @com.aliyun.core.annotation.NameInMap("PageBean")
     private PageBean pageBean;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SearchTraceAppByPageResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the array object.
+         * <p>The information about the array object.</p>
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -58,7 +63,10 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4B446DF2-3DDD-4B5B-8E3F-D5225120****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchTraceAppByPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchTraceAppByPageResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -110,7 +124,10 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -118,7 +135,10 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -132,41 +152,47 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchTraceAppByPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchTraceAppByPageResponseBody</p>
+     */
     public static class TraceApps extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private Long appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Labels")
-        private java.util.List < String > labels;
+        @com.aliyun.core.annotation.NameInMap("Labels")
+        private java.util.List<String> labels;
 
-        @NameInMap("Pid")
+        @com.aliyun.core.annotation.NameInMap("Pid")
         private String pid;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Show")
+        @com.aliyun.core.annotation.NameInMap("Show")
         private Boolean show;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private TraceApps(Builder builder) {
@@ -216,7 +242,7 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
         /**
          * @return labels
          */
-        public java.util.List < String > getLabels() {
+        public java.util.List<String> getLabels() {
             return this.labels;
         }
 
@@ -251,7 +277,7 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -280,18 +306,21 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             private Long appId; 
             private String appName; 
             private Long createTime; 
-            private java.util.List < String > labels; 
+            private java.util.List<String> labels; 
             private String pid; 
             private String regionId; 
             private String resourceGroupId; 
             private Boolean show; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String type; 
             private Long updateTime; 
             private String userId; 
 
             /**
-             * The application ID.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder appId(Long appId) {
                 this.appId = appId;
@@ -299,7 +328,10 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-app</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -307,7 +339,10 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the task was created.
+             * <p>The timestamp generated when the task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1531291867000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -315,15 +350,18 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The aliases of the application.
+             * <p>The aliases of the application.</p>
              */
-            public Builder labels(java.util.List < String > labels) {
+            public Builder labels(java.util.List<String> labels) {
                 this.labels = labels;
                 return this;
             }
 
             /**
-             * The process identifier (PID) of the application.
+             * <p>The process identifier (PID) of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>atc889zkcf@d8deedfa9bf****</p>
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -331,7 +369,10 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -339,7 +380,10 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The resource group ID.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmxyexli2****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -347,11 +391,14 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the application is displayed in the Application Real-Time Monitoring Service (ARMS) console. Valid values:
-             * <p>
+             * <p>Indicates whether the application is displayed in the Application Real-Time Monitoring Service (ARMS) console. Valid values:</p>
+             * <ul>
+             * <li><code>true</code>: yes</li>
+             * <li><code>false</code>: no</li>
+             * </ul>
              * 
-             * *   `true`: yes
-             * *   `false`: no
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder show(Boolean show) {
                 this.show = show;
@@ -359,19 +406,22 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * A list of tags.
+             * <p>A list of tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * The type of the monitoring task. Valid values:
-             * <p>
+             * <p>The type of the monitoring task. Valid values:</p>
+             * <ul>
+             * <li><code>TRACE</code>: Application Monitoring</li>
+             * <li><code>RETCODE</code>: Browser Monitoring</li>
+             * </ul>
              * 
-             * *   `TRACE`: Application Monitoring
-             * *   `RETCODE`: Browser Monitoring
+             * <strong>example:</strong>
+             * <p>TRACE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -379,7 +429,10 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the task information was updated.
+             * <p>The timestamp generated when the task information was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1531291867000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -387,7 +440,10 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>113197164949****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -401,18 +457,24 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchTraceAppByPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchTraceAppByPageResponseBody</p>
+     */
     public static class PageBean extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
-        @NameInMap("TraceApps")
-        private java.util.List < TraceApps> traceApps;
+        @com.aliyun.core.annotation.NameInMap("TraceApps")
+        private java.util.List<TraceApps> traceApps;
 
         private PageBean(Builder builder) {
             this.pageNumber = builder.pageNumber;
@@ -453,7 +515,7 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
         /**
          * @return traceApps
          */
-        public java.util.List < TraceApps> getTraceApps() {
+        public java.util.List<TraceApps> getTraceApps() {
             return this.traceApps;
         }
 
@@ -461,10 +523,13 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
-            private java.util.List < TraceApps> traceApps; 
+            private java.util.List<TraceApps> traceApps; 
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -472,7 +537,10 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -480,7 +548,10 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -488,9 +559,9 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the monitoring task.
+             * <p>The information about the monitoring task.</p>
              */
-            public Builder traceApps(java.util.List < TraceApps> traceApps) {
+            public Builder traceApps(java.util.List<TraceApps> traceApps) {
                 this.traceApps = traceApps;
                 return this;
             }

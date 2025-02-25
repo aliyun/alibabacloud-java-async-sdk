@@ -1,32 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLgfRequest} extends {@link RequestModel}
  *
  * <p>CreateLgfRequest</p>
  */
 public class CreateLgfRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AgentKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentKey")
     private String agentKey;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("LgfDefinition")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LgfDefinition")
     private LgfDefinition lgfDefinition;
 
     private CreateLgfRequest(Builder builder) {
@@ -115,7 +115,10 @@ public class CreateLgfRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chatbot-cn-yjzbyrEvqd</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -140,13 +143,19 @@ public class CreateLgfRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateLgfRequest} extends {@link TeaModel}
+     *
+     * <p>CreateLgfRequest</p>
+     */
     public static class LgfDefinition extends TeaModel {
-        @NameInMap("IntentId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("IntentId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long intentId;
 
-        @NameInMap("RuleText")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("RuleText")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String ruleText;
 
         private LgfDefinition(Builder builder) {
@@ -181,7 +190,10 @@ public class CreateLgfRequest extends Request {
             private String ruleText; 
 
             /**
-             * IntentId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4675678567</p>
              */
             public Builder intentId(Long intentId) {
                 this.intentId = intentId;
@@ -189,7 +201,7 @@ public class CreateLgfRequest extends Request {
             }
 
             /**
-             * RuleText.
+             * <p>This parameter is required.</p>
              */
             public Builder ruleText(String ruleText) {
                 this.ruleText = ruleText;

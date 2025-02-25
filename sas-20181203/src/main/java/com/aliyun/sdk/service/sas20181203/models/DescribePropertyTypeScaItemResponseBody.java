@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePropertyTypeScaItemResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePropertyTypeScaItemResponseBody</p>
  */
 public class DescribePropertyTypeScaItemResponseBody extends TeaModel {
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("PropertyTypeItems")
-    private java.util.List < PropertyTypeItems> propertyTypeItems;
+    @com.aliyun.core.annotation.NameInMap("PropertyTypeItems")
+    private java.util.List<PropertyTypeItems> propertyTypeItems;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePropertyTypeScaItemResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class DescribePropertyTypeScaItemResponseBody extends TeaModel {
     /**
      * @return propertyTypeItems
      */
-    public java.util.List < PropertyTypeItems> getPropertyTypeItems() {
+    public java.util.List<PropertyTypeItems> getPropertyTypeItems() {
         return this.propertyTypeItems;
     }
 
@@ -58,11 +63,11 @@ public class DescribePropertyTypeScaItemResponseBody extends TeaModel {
 
     public static final class Builder {
         private PageInfo pageInfo; 
-        private java.util.List < PropertyTypeItems> propertyTypeItems; 
+        private java.util.List<PropertyTypeItems> propertyTypeItems; 
         private String requestId; 
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,15 +75,18 @@ public class DescribePropertyTypeScaItemResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the middleware types.
+         * <p>An array that consists of the middleware types.</p>
          */
-        public Builder propertyTypeItems(java.util.List < PropertyTypeItems> propertyTypeItems) {
+        public Builder propertyTypeItems(java.util.List<PropertyTypeItems> propertyTypeItems) {
             this.propertyTypeItems = propertyTypeItems;
             return this;
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B7A839E8-70AE-591D-8D9E-C5419A22****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,17 +99,23 @@ public class DescribePropertyTypeScaItemResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePropertyTypeScaItemResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePropertyTypeScaItemResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -154,7 +168,10 @@ public class DescribePropertyTypeScaItemResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -162,7 +179,10 @@ public class DescribePropertyTypeScaItemResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -170,7 +190,10 @@ public class DescribePropertyTypeScaItemResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -178,7 +201,10 @@ public class DescribePropertyTypeScaItemResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>69</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -192,11 +218,17 @@ public class DescribePropertyTypeScaItemResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePropertyTypeScaItemResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePropertyTypeScaItemResponseBody</p>
+     */
     public static class PropertyTypeItems extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private PropertyTypeItems(Builder builder) {
@@ -231,7 +263,10 @@ public class DescribePropertyTypeScaItemResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The name of the middleware type.
+             * <p>The name of the middleware type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Docker Component</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -239,16 +274,19 @@ public class DescribePropertyTypeScaItemResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the middleware. Valid values:
-             * <p>
+             * <p>The type of the middleware. Valid values:</p>
+             * <ul>
+             * <li><strong>system_service</strong>: system service</li>
+             * <li><strong>software_library</strong>: software library</li>
+             * <li><strong>docker_component</strong>: container component</li>
+             * <li><strong>database</strong>: database</li>
+             * <li><strong>web_container</strong>: web container</li>
+             * <li><strong>jar</strong>: JAR package</li>
+             * <li><strong>web_framework</strong>: web framework</li>
+             * </ul>
              * 
-             * *   **system_service**: system service
-             * *   **software_library**: software library
-             * *   **docker_component**: container component
-             * *   **database**: database
-             * *   **web_container**: web container
-             * *   **jar**: JAR package
-             * *   **web_framework**: web framework
+             * <strong>example:</strong>
+             * <p>docker_component</p>
              */
             public Builder type(String type) {
                 this.type = type;

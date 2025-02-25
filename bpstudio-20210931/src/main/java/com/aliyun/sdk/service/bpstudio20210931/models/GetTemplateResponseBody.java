@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bpstudio20210931.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>GetTemplateResponseBody</p>
  */
 public class GetTemplateResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetTemplateResponseBody(Builder builder) {
@@ -74,7 +74,10 @@ public class GetTemplateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +85,7 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the template.
+         * <p>The details of the template.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +93,10 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The interface returns information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +104,10 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A07FFDF2-78FA-1B48-9E38-88E833A93187</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,23 +120,33 @@ public class GetTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTemplateResponseBody</p>
+     */
     public static class Variables extends TeaModel {
-        @NameInMap("Attribute")
+        @com.aliyun.core.annotation.NameInMap("Attribute")
         private String attribute;
 
-        @NameInMap("DataType")
+        @com.aliyun.core.annotation.NameInMap("DataType")
         private String dataType;
 
-        @NameInMap("DefaultValue")
+        @com.aliyun.core.annotation.NameInMap("DefaultValue")
         private String defaultValue;
 
-        @NameInMap("Variable")
+        @com.aliyun.core.annotation.NameInMap("Options")
+        private String options;
+
+        @com.aliyun.core.annotation.NameInMap("Variable")
         private String variable;
 
         private Variables(Builder builder) {
             this.attribute = builder.attribute;
             this.dataType = builder.dataType;
             this.defaultValue = builder.defaultValue;
+            this.options = builder.options;
             this.variable = builder.variable;
         }
 
@@ -161,6 +180,13 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
+         * @return options
+         */
+        public String getOptions() {
+            return this.options;
+        }
+
+        /**
          * @return variable
          */
         public String getVariable() {
@@ -171,10 +197,14 @@ public class GetTemplateResponseBody extends TeaModel {
             private String attribute; 
             private String dataType; 
             private String defaultValue; 
+            private String options; 
             private String variable; 
 
             /**
-             * Attribute.
+             * <p>The name of the variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance_name</p>
              */
             public Builder attribute(String attribute) {
                 this.attribute = attribute;
@@ -182,7 +212,10 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * DataType.
+             * <p>The type of the variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>String</p>
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -190,7 +223,10 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultValue.
+             * <p>The default value of the variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cadt-app-01</p>
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -198,7 +234,18 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Variable.
+             * Options.
+             */
+            public Builder options(String options) {
+                this.options = options;
+                return this;
+            }
+
+            /**
+             * <p>The value of the variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>${name}</p>
              */
             public Builder variable(String variable) {
                 this.variable = variable;
@@ -212,26 +259,32 @@ public class GetTemplateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTemplateResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ImageURL")
+        @com.aliyun.core.annotation.NameInMap("ImageURL")
         private String imageURL;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("Variables")
+        @com.aliyun.core.annotation.NameInMap("Variables")
         private java.util.List < Variables> variables;
 
         private Data(Builder builder) {
@@ -311,7 +364,10 @@ public class GetTemplateResponseBody extends TeaModel {
             private java.util.List < Variables> variables; 
 
             /**
-             * CreateTime.
+             * <p>The time when the template was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-09-22 17:08:31</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -319,7 +375,10 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>Template DescriptionD</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -327,7 +386,10 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ImageURL.
+             * <p>The path to the template schema image file</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bp-studio-template/sr-U37UD2YQCRJ75X5V.png</p>
              */
             public Builder imageURL(String imageURL) {
                 this.imageURL = imageURL;
@@ -335,7 +397,10 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the template</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cadt-template</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -343,7 +408,10 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekzhfgmw4e6fwq</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -351,7 +419,10 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>Template ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XFKR6WYRVS24S07R</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -359,7 +430,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Variables.
+             * <p>The details of the template variables.</p>
              */
             public Builder variables(java.util.List < Variables> variables) {
                 this.variables = variables;

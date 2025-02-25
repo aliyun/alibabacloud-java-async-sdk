@@ -1,56 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRoleZoneInfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeRoleZoneInfoRequest</p>
  */
 public class DescribeRoleZoneInfoRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("QueryType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryType")
     private Integer queryType;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private DescribeRoleZoneInfoRequest(Builder builder) {
@@ -190,7 +190,11 @@ public class DescribeRoleZoneInfoRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be an integer that is greater than **0** and less than or equal to the maximum value supported by the integer data type. Default value: **1**.
+         * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query instance IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-t4nlenc2p04uvb****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -217,7 +221,10 @@ public class DescribeRoleZoneInfoRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be an integer that is greater than **0**. Default value: **1**.
+         * <p>The number of the page to return. The value must be an integer that is greater than <strong>0</strong> and less than or equal to the maximum value supported by the integer data type. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -226,7 +233,10 @@ public class DescribeRoleZoneInfoRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **10**, **20**, and **50**. Default value: **10**.
+         * <p>The number of entries to return on each page. Valid values: <strong>10</strong>, <strong>20</strong>, and <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -235,16 +245,19 @@ public class DescribeRoleZoneInfoRequest extends Request {
         }
 
         /**
-         * The type of the node to query. Default value: 1. Valid values:
-         * <p>
+         * <p>The type of node to query. Default value: 1. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: proxy node</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is supported only for cluster and read/write splitting instances.</p>
+         * </blockquote>
+         * <ul>
+         * <li><strong>1</strong>: data node</li>
+         * </ul>
          * 
-         * *   **0**: proxy node
-         * 
-         *     **
-         * 
-         *     **Note**This parameter is supported only for cluster and read/write splitting instances.
-         * 
-         * *   **1**: data node
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder queryType(Integer queryType) {
             this.putQueryParameter("QueryType", queryType);

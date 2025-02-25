@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EdgeClusterAddEdgeMachineRequest} extends {@link RequestModel}
  *
  * <p>EdgeClusterAddEdgeMachineRequest</p>
  */
 public class EdgeClusterAddEdgeMachineRequest extends Request {
-    @Path
-    @NameInMap("clusterid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("clusterid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterid;
 
-    @Path
-    @NameInMap("edge_machineid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("edge_machineid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String edgeMachineid;
 
-    @Body
-    @NameInMap("expired")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("expired")
     private Long expired;
 
-    @Body
-    @NameInMap("nodepool_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("nodepool_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodepoolId;
 
-    @Body
-    @NameInMap("options")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("options")
     private String options;
 
     private EdgeClusterAddEdgeMachineRequest(Builder builder) {
@@ -113,7 +118,11 @@ public class EdgeClusterAddEdgeMachineRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c35607f52179f4472a0d9723e7595****</p>
          */
         public Builder clusterid(String clusterid) {
             this.putPathParameter("clusterid", clusterid);
@@ -122,7 +131,11 @@ public class EdgeClusterAddEdgeMachineRequest extends Request {
         }
 
         /**
-         * The ID of the cloud-native box.
+         * <p>The ID of the cloud-native box.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edge_machineid</p>
          */
         public Builder edgeMachineid(String edgeMachineid) {
             this.putPathParameter("edge_machineid", edgeMachineid);
@@ -131,7 +144,10 @@ public class EdgeClusterAddEdgeMachineRequest extends Request {
         }
 
         /**
-         * The timeout period of sessions. Unit: seconds.
+         * <p>The timeout period of sessions. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder expired(Long expired) {
             this.putBodyParameter("expired", expired);
@@ -140,7 +156,11 @@ public class EdgeClusterAddEdgeMachineRequest extends Request {
         }
 
         /**
-         * The node pool ID.
+         * <p>The node pool ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c26607f52179f4472a0d9723e7595****</p>
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putBodyParameter("nodepool_id", nodepoolId);
@@ -149,7 +169,10 @@ public class EdgeClusterAddEdgeMachineRequest extends Request {
         }
 
         /**
-         * The options that you want to configure.
+         * <p>The options that you want to configure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;{&quot;enableIptables&quot;:true,&quot;quiet&quot;:true,&quot;manageRuntime&quot;:true,&quot;allowedClusterAddons&quot;:[&quot;kube-proxy&quot;,&quot;flannel&quot;,&quot;coredns&quot;]}&quot;</p>
          */
         public Builder options(String options) {
             this.putBodyParameter("options", options);

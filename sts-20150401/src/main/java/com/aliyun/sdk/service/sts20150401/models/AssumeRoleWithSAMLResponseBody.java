@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sts20150401.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AssumeRoleWithSAMLResponseBody} extends {@link TeaModel}
  *
  * <p>AssumeRoleWithSAMLResponseBody</p>
  */
 public class AssumeRoleWithSAMLResponseBody extends TeaModel {
-    @NameInMap("AssumedRoleUser")
+    @com.aliyun.core.annotation.NameInMap("AssumedRoleUser")
     private AssumedRoleUser assumedRoleUser;
 
-    @NameInMap("Credentials")
+    @com.aliyun.core.annotation.NameInMap("Credentials")
     private Credentials credentials;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SAMLAssertionInfo")
+    @com.aliyun.core.annotation.NameInMap("SAMLAssertionInfo")
     private SAMLAssertionInfo SAMLAssertionInfo;
 
     private AssumeRoleWithSAMLResponseBody(Builder builder) {
@@ -74,7 +74,7 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
         private SAMLAssertionInfo SAMLAssertionInfo; 
 
         /**
-         * The temporary identity that you use to assume the RAM role.
+         * <p>The temporary identity that you use to assume the RAM role.</p>
          */
         public Builder assumedRoleUser(AssumedRoleUser assumedRoleUser) {
             this.assumedRoleUser = assumedRoleUser;
@@ -82,7 +82,7 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
         }
 
         /**
-         * The STS credentials.
+         * <p>The STS credentials.</p>
          */
         public Builder credentials(Credentials credentials) {
             this.credentials = credentials;
@@ -90,7 +90,10 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6894B13B-6D71-4EF5-88FA-F32781734A7F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +101,7 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
         }
 
         /**
-         * The information in the SAML assertion.
+         * <p>The information in the SAML assertion.</p>
          */
         public Builder SAMLAssertionInfo(SAMLAssertionInfo SAMLAssertionInfo) {
             this.SAMLAssertionInfo = SAMLAssertionInfo;
@@ -111,11 +114,17 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AssumeRoleWithSAMLResponseBody} extends {@link TeaModel}
+     *
+     * <p>AssumeRoleWithSAMLResponseBody</p>
+     */
     public static class AssumedRoleUser extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
-        @NameInMap("AssumedRoleId")
+        @com.aliyun.core.annotation.NameInMap("AssumedRoleId")
         private String assumedRoleId;
 
         private AssumedRoleUser(Builder builder) {
@@ -150,7 +159,10 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
             private String assumedRoleId; 
 
             /**
-             * The ARN of the temporary identity that you use to assume the RAM role.
+             * <p>The ARN of the temporary identity that you use to assume the RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:sts::123456789012****:assumed-role/AdminRole/alice</p>
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -158,7 +170,10 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the temporary identity that you use to assume the RAM role.
+             * <p>The ID of the temporary identity that you use to assume the RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34458433936495****:alice</p>
              */
             public Builder assumedRoleId(String assumedRoleId) {
                 this.assumedRoleId = assumedRoleId;
@@ -172,17 +187,23 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AssumeRoleWithSAMLResponseBody} extends {@link TeaModel}
+     *
+     * <p>AssumeRoleWithSAMLResponseBody</p>
+     */
     public static class Credentials extends TeaModel {
-        @NameInMap("AccessKeyId")
+        @com.aliyun.core.annotation.NameInMap("AccessKeyId")
         private String accessKeyId;
 
-        @NameInMap("AccessKeySecret")
+        @com.aliyun.core.annotation.NameInMap("AccessKeySecret")
         private String accessKeySecret;
 
-        @NameInMap("Expiration")
+        @com.aliyun.core.annotation.NameInMap("Expiration")
         private String expiration;
 
-        @NameInMap("SecurityToken")
+        @com.aliyun.core.annotation.NameInMap("SecurityToken")
         private String securityToken;
 
         private Credentials(Builder builder) {
@@ -235,7 +256,10 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
             private String securityToken; 
 
             /**
-             * The AccessKey ID.
+             * <p>The AccessKey ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STS.L4aBSCSJVMuKg5U1****</p>
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -243,7 +267,10 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
             }
 
             /**
-             * The AccessKey secret.
+             * <p>The AccessKey secret.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wyLTSmsyPGP1ohvvw8xYgB29dlGI8KMiH2pK****</p>
              */
             public Builder accessKeySecret(String accessKeySecret) {
                 this.accessKeySecret = accessKeySecret;
@@ -251,7 +278,10 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the STS token expires. The time is displayed in UTC.
+             * <p>The time when the STS token expires. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-04-09T11:52:19Z</p>
              */
             public Builder expiration(String expiration) {
                 this.expiration = expiration;
@@ -259,10 +289,13 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
             }
 
             /**
-             * The STS token.
-             * <p>
+             * <p>The STS token.</p>
+             * <blockquote>
+             * <p>Alibaba Cloud STS does not impose limits on the length of STS tokens. We strongly recommend that you do not specify a maximum length for STS tokens.</p>
+             * </blockquote>
              * 
-             * > Alibaba Cloud STS does not impose limits on the length of STS tokens. We strongly recommend that you do not specify a maximum length for STS tokens.
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder securityToken(String securityToken) {
                 this.securityToken = securityToken;
@@ -276,17 +309,23 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AssumeRoleWithSAMLResponseBody} extends {@link TeaModel}
+     *
+     * <p>AssumeRoleWithSAMLResponseBody</p>
+     */
     public static class SAMLAssertionInfo extends TeaModel {
-        @NameInMap("Issuer")
+        @com.aliyun.core.annotation.NameInMap("Issuer")
         private String issuer;
 
-        @NameInMap("Recipient")
+        @com.aliyun.core.annotation.NameInMap("Recipient")
         private String recipient;
 
-        @NameInMap("Subject")
+        @com.aliyun.core.annotation.NameInMap("Subject")
         private String subject;
 
-        @NameInMap("SubjectType")
+        @com.aliyun.core.annotation.NameInMap("SubjectType")
         private String subjectType;
 
         private SAMLAssertionInfo(Builder builder) {
@@ -339,7 +378,10 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
             private String subjectType; 
 
             /**
-             * The value in the `Issuer` element in the SAML assertion.
+             * <p>The value in the <code>Issuer</code> element in the SAML assertion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example.com/adfs/services/trust">http://example.com/adfs/services/trust</a></p>
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
@@ -347,7 +389,10 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
             }
 
             /**
-             * The `Recipient` attribute of the SubjectConfirmationData sub-element. SubjectConfirmationData is a sub-element of the `Subject` element in the SAML assertion.
+             * <p>The <code>Recipient</code> attribute of the SubjectConfirmationData sub-element. SubjectConfirmationData is a sub-element of the <code>Subject</code> element in the SAML assertion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://signin.aliyun.com/saml-role/SSO">https://signin.aliyun.com/saml-role/SSO</a></p>
              */
             public Builder recipient(String recipient) {
                 this.recipient = recipient;
@@ -355,7 +400,10 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
             }
 
             /**
-             * The value in the NameID sub-element of the `Subject` element in the SAML assertion.
+             * <p>The value in the NameID sub-element of the <code>Subject</code> element in the SAML assertion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:alice@example.com">alice@example.com</a></p>
              */
             public Builder subject(String subject) {
                 this.subject = subject;
@@ -363,7 +411,10 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
             }
 
             /**
-             * The Format attribute of the `NameID` element in the SAML assertion. If the Format attribute is prefixed with `urn:oasis:names:tc:SAML:2.0:nameid-format:`, the prefix is not included in the value of this parameter. For example, if the value of the Format attribute is urn:oasis:names:tc:SAML:2.0:nameid-format:persistent/transient, the value of this parameter is `persistent/transient`.
+             * <p>The Format attribute of the <code>NameID</code> element in the SAML assertion. If the Format attribute is prefixed with <code>urn:oasis:names:tc:SAML:2.0:nameid-format:</code>, the prefix is not included in the value of this parameter. For example, if the value of the Format attribute is urn:oasis:names:tc:SAML:2.0:nameid-format:persistent/transient, the value of this parameter is <code>persistent/transient</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>persistent</p>
              */
             public Builder subjectType(String subjectType) {
                 this.subjectType = subjectType;

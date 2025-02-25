@@ -62,14 +62,14 @@ public class CreateInstanceInternetAddressRequest extends Request {
             super();
         } 
 
-        private Builder(CreateInstanceInternetAddressRequest response) {
-            super(response);
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.regionId = response.regionId;
+        private Builder(CreateInstanceInternetAddressRequest request) {
+            super(request);
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * DrdsInstanceId.
+         * The ID of the DRDS instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -78,7 +78,7 @@ public class CreateInstanceInternetAddressRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the DRDS instance belongs.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

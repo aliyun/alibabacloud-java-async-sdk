@@ -683,7 +683,7 @@ public class AddNodesRequest extends Request {
         }
 
         /**
-         * DnsConfig.
+         * The information about Domain Name System (DNS) settings.
          */
         public Builder dnsConfig(String dnsConfig) {
             this.putQueryParameter("DnsConfig", dnsConfig);

@@ -1,36 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link UpdateOssExternalStoreRequest} extends {@link RequestModel}
  *
  * <p>UpdateOssExternalStoreRequest</p>
  */
 public class UpdateOssExternalStoreRequest extends Request {
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("project")
     private String project;
 
-    @Path
-    @Body
-    @NameInMap("externalStoreName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("externalStoreName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String externalStoreName;
 
-    @Body
-    @NameInMap("parameter")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("parameter")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Parameter parameter;
 
-    @Body
-    @NameInMap("storeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("storeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String storeType;
 
     private UpdateOssExternalStoreRequest(Builder builder) {
@@ -101,7 +105,11 @@ public class UpdateOssExternalStoreRequest extends Request {
         } 
 
         /**
-         * The name of the project.
+         * <p>The name of the project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ali-test-project</p>
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -110,7 +118,11 @@ public class UpdateOssExternalStoreRequest extends Request {
         }
 
         /**
-         * The name of the external store.
+         * <p>The name of the external store.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-oss-store</p>
          */
         public Builder externalStoreName(String externalStoreName) {
             this.putPathParameter("externalStoreName", externalStoreName);
@@ -120,7 +132,8 @@ public class UpdateOssExternalStoreRequest extends Request {
         }
 
         /**
-         * The parameters that are configured for the external store.
+         * <p>The parameters that are configured for the external store.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder parameter(Parameter parameter) {
             this.putBodyParameter("parameter", parameter);
@@ -129,7 +142,11 @@ public class UpdateOssExternalStoreRequest extends Request {
         }
 
         /**
-         * The type of the external store. Set the value to oss.
+         * <p>The type of the external store. Set the value to oss.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss</p>
          */
         public Builder storeType(String storeType) {
             this.putBodyParameter("storeType", storeType);
@@ -144,13 +161,19 @@ public class UpdateOssExternalStoreRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateOssExternalStoreRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateOssExternalStoreRequest</p>
+     */
     public static class Columns extends TeaModel {
-        @NameInMap("name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
-        @NameInMap("type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private Columns(Builder builder) {
@@ -185,7 +208,11 @@ public class UpdateOssExternalStoreRequest extends Request {
             private String type; 
 
             /**
-             * The key of the field.
+             * <p>The name of the field.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -193,7 +220,11 @@ public class UpdateOssExternalStoreRequest extends Request {
             }
 
             /**
-             * The type of the field.
+             * <p>The type of the field.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>varchar</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -207,30 +238,36 @@ public class UpdateOssExternalStoreRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateOssExternalStoreRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateOssExternalStoreRequest</p>
+     */
     public static class Parameter extends TeaModel {
-        @NameInMap("accessid")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("accessid")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String accessid;
 
-        @NameInMap("accesskey")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("accesskey")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String accesskey;
 
-        @NameInMap("bucket")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("bucket")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String bucket;
 
-        @NameInMap("columns")
-        @Validation(required = true)
-        private java.util.List < Columns> columns;
+        @com.aliyun.core.annotation.NameInMap("columns")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List<Columns> columns;
 
-        @NameInMap("endpoint")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("endpoint")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String endpoint;
 
-        @NameInMap("objects")
-        @Validation(required = true)
-        private java.util.List < String > objects;
+        @com.aliyun.core.annotation.NameInMap("objects")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List<String> objects;
 
         private Parameter(Builder builder) {
             this.accessid = builder.accessid;
@@ -273,7 +310,7 @@ public class UpdateOssExternalStoreRequest extends Request {
         /**
          * @return columns
          */
-        public java.util.List < Columns> getColumns() {
+        public java.util.List<Columns> getColumns() {
             return this.columns;
         }
 
@@ -287,7 +324,7 @@ public class UpdateOssExternalStoreRequest extends Request {
         /**
          * @return objects
          */
-        public java.util.List < String > getObjects() {
+        public java.util.List<String> getObjects() {
             return this.objects;
         }
 
@@ -295,12 +332,16 @@ public class UpdateOssExternalStoreRequest extends Request {
             private String accessid; 
             private String accesskey; 
             private String bucket; 
-            private java.util.List < Columns> columns; 
+            private java.util.List<Columns> columns; 
             private String endpoint; 
-            private java.util.List < String > objects; 
+            private java.util.List<String> objects; 
 
             /**
-             * The AccessKey ID of your account.
+             * <p>The AccessKey ID of your account.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LTAI5tFsHGGeYry*****1Sz</p>
              */
             public Builder accessid(String accessid) {
                 this.accessid = accessid;
@@ -308,7 +349,11 @@ public class UpdateOssExternalStoreRequest extends Request {
             }
 
             /**
-             * The AccessKey secret of your account.
+             * <p>The AccessKey secret of your account.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GyviCLDVHkHrOztdkxuE6******Rp6</p>
              */
             public Builder accesskey(String accesskey) {
                 this.accesskey = accesskey;
@@ -316,7 +361,11 @@ public class UpdateOssExternalStoreRequest extends Request {
             }
 
             /**
-             * The name of the OSS bucket.
+             * <p>The name of the OSS bucket.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-bucket</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -324,15 +373,20 @@ public class UpdateOssExternalStoreRequest extends Request {
             }
 
             /**
-             * The associated fields.
+             * <p>The fields that are associated to the external store.</p>
+             * <p>This parameter is required.</p>
              */
-            public Builder columns(java.util.List < Columns> columns) {
+            public Builder columns(java.util.List<Columns> columns) {
                 this.columns = columns;
                 return this;
             }
 
             /**
-             * The OSS endpoint.
+             * <p>The Object Storage Service (OSS) endpoint.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-cn-hangzhou.aliyuncs.com</p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -340,9 +394,10 @@ public class UpdateOssExternalStoreRequest extends Request {
             }
 
             /**
-             * The associated objects.
+             * <p>The names of the OSS objects that are associated to the external store.</p>
+             * <p>This parameter is required.</p>
              */
-            public Builder objects(java.util.List < String > objects) {
+            public Builder objects(java.util.List<String> objects) {
                 this.objects = objects;
                 return this;
             }

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateBasicEndpointsResponseBody</p>
  */
 public class CreateBasicEndpointsResponseBody extends TeaModel {
-    @NameInMap("EndpointGroupId")
+    @com.aliyun.core.annotation.NameInMap("EndpointGroupId")
     private String endpointGroupId;
 
-    @NameInMap("Endpoints")
+    @com.aliyun.core.annotation.NameInMap("Endpoints")
     private java.util.List < Endpoints> endpoints;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateBasicEndpointsResponseBody(Builder builder) {
@@ -92,16 +91,16 @@ public class CreateBasicEndpointsResponseBody extends TeaModel {
     } 
 
     public static class Endpoints extends TeaModel {
-        @NameInMap("EndpointAddress")
+        @com.aliyun.core.annotation.NameInMap("EndpointAddress")
         private String endpointAddress;
 
-        @NameInMap("EndpointId")
+        @com.aliyun.core.annotation.NameInMap("EndpointId")
         private String endpointId;
 
-        @NameInMap("EndpointSubAddress")
+        @com.aliyun.core.annotation.NameInMap("EndpointSubAddress")
         private String endpointSubAddress;
 
-        @NameInMap("EndpointType")
+        @com.aliyun.core.annotation.NameInMap("EndpointType")
         private String endpointType;
 
         private Endpoints(Builder builder) {

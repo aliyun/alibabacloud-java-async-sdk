@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRemindResponseBody} extends {@link TeaModel}
  *
  * <p>GetRemindResponseBody</p>
  */
 public class GetRemindResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetRemindResponseBody(Builder builder) {
@@ -98,7 +103,7 @@ public class GetRemindResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details of the custom alert rule.
+         * <p>The details of the custom alert rule.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +111,10 @@ public class GetRemindResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1031203110005</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +122,10 @@ public class GetRemindResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameters are invalid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +133,10 @@ public class GetRemindResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +144,10 @@ public class GetRemindResponseBody extends TeaModel {
         }
 
         /**
-         * The unique ID of the request. You can troubleshoot issues based on the ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFGH-IJKLMNOPQ</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class GetRemindResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,11 +171,17 @@ public class GetRemindResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRemindResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRemindResponseBody</p>
+     */
     public static class Baselines extends TeaModel {
-        @NameInMap("BaselineId")
+        @com.aliyun.core.annotation.NameInMap("BaselineId")
         private Long baselineId;
 
-        @NameInMap("BaselineName")
+        @com.aliyun.core.annotation.NameInMap("BaselineName")
         private String baselineName;
 
         private Baselines(Builder builder) {
@@ -190,7 +216,10 @@ public class GetRemindResponseBody extends TeaModel {
             private String baselineName; 
 
             /**
-             * The ID of the baseline.
+             * <p>The baseline ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder baselineId(Long baselineId) {
                 this.baselineId = baselineId;
@@ -198,7 +227,10 @@ public class GetRemindResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the baseline.
+             * <p>The name of the baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Baseline name</p>
              */
             public Builder baselineName(String baselineName) {
                 this.baselineName = baselineName;
@@ -212,11 +244,17 @@ public class GetRemindResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRemindResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRemindResponseBody</p>
+     */
     public static class BizProcesses extends TeaModel {
-        @NameInMap("BizId")
+        @com.aliyun.core.annotation.NameInMap("BizId")
         private Long bizId;
 
-        @NameInMap("BizProcessName")
+        @com.aliyun.core.annotation.NameInMap("BizProcessName")
         private String bizProcessName;
 
         private BizProcesses(Builder builder) {
@@ -251,7 +289,10 @@ public class GetRemindResponseBody extends TeaModel {
             private String bizProcessName; 
 
             /**
-             * The ID of the workflow.
+             * <p>The ID of the workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9527</p>
              */
             public Builder bizId(Long bizId) {
                 this.bizId = bizId;
@@ -259,7 +300,10 @@ public class GetRemindResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the workflow.
+             * <p>The name of the workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Business process name</p>
              */
             public Builder bizProcessName(String bizProcessName) {
                 this.bizProcessName = bizProcessName;
@@ -273,17 +317,23 @@ public class GetRemindResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRemindResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRemindResponseBody</p>
+     */
     public static class Nodes extends TeaModel {
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
         private Nodes(Builder builder) {
@@ -336,7 +386,10 @@ public class GetRemindResponseBody extends TeaModel {
             private Long projectId; 
 
             /**
-             * The ID of the node.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -344,7 +397,10 @@ public class GetRemindResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Node name</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -352,7 +408,10 @@ public class GetRemindResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account used by the owner of the node.
+             * <p>The ID of the Alibaba Cloud account used by the node owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9527951795****</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -360,7 +419,10 @@ public class GetRemindResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace to which the node belongs.
+             * <p>The ID of the workspace to which the node belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -374,8 +436,14 @@ public class GetRemindResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRemindResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRemindResponseBody</p>
+     */
     public static class Projects extends TeaModel {
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
         private Projects(Builder builder) {
@@ -401,7 +469,10 @@ public class GetRemindResponseBody extends TeaModel {
             private Long projectId; 
 
             /**
-             * The ID of the workspace.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -415,11 +486,92 @@ public class GetRemindResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRemindResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRemindResponseBody</p>
+     */
+    public static class Receivers extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AlertTargets")
+        private java.util.List<String> alertTargets;
+
+        @com.aliyun.core.annotation.NameInMap("AlertUnit")
+        private String alertUnit;
+
+        private Receivers(Builder builder) {
+            this.alertTargets = builder.alertTargets;
+            this.alertUnit = builder.alertUnit;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Receivers create() {
+            return builder().build();
+        }
+
+        /**
+         * @return alertTargets
+         */
+        public java.util.List<String> getAlertTargets() {
+            return this.alertTargets;
+        }
+
+        /**
+         * @return alertUnit
+         */
+        public String getAlertUnit() {
+            return this.alertUnit;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> alertTargets; 
+            private String alertUnit; 
+
+            /**
+             * <p>The alert recipient.</p>
+             */
+            public Builder alertTargets(java.util.List<String> alertTargets) {
+                this.alertTargets = alertTargets;
+                return this;
+            }
+
+            /**
+             * <p>The type of the alert recipient. For more information about alert recipients, see the Receivers parameter. Valid values:</p>
+             * <ul>
+             * <li>OWNER: indicate the task owner.</li>
+             * <li>OTHER: indicates specified personnel.</li>
+             * <li>SHIFT_SCHEDULE: indicates personnel in a shift schedule.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OWNER</p>
+             */
+            public Builder alertUnit(String alertUnit) {
+                this.alertUnit = alertUnit;
+                return this;
+            }
+
+            public Receivers build() {
+                return new Receivers(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetRemindResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRemindResponseBody</p>
+     */
     public static class Robots extends TeaModel {
-        @NameInMap("AtAll")
+        @com.aliyun.core.annotation.NameInMap("AtAll")
         private Boolean atAll;
 
-        @NameInMap("WebUrl")
+        @com.aliyun.core.annotation.NameInMap("WebUrl")
         private String webUrl;
 
         private Robots(Builder builder) {
@@ -454,7 +606,10 @@ public class GetRemindResponseBody extends TeaModel {
             private String webUrl; 
 
             /**
-             * Indicates whether all group members are notified when the alert notification is sent to a DingTalk group. Valid values: true and false.
+             * <p>Indicates whether all group members are notified when the alert notification is sent to a DingTalk group. Valid values: true and false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder atAll(Boolean atAll) {
                 this.atAll = atAll;
@@ -462,7 +617,10 @@ public class GetRemindResponseBody extends TeaModel {
             }
 
             /**
-             * The webhook URL of the DingTalk chatbot.
+             * <p>The webhook URL of the DingTalk chatbot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=">https://oapi.dingtalk.com/robot/send?access_token=</a>******************************</p>
              */
             public Builder webUrl(String webUrl) {
                 this.webUrl = webUrl;
@@ -476,72 +634,85 @@ public class GetRemindResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRemindResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRemindResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AlertInterval")
+        @com.aliyun.core.annotation.NameInMap("AlertInterval")
         private Integer alertInterval;
 
-        @NameInMap("AlertMethods")
-        private java.util.List < String > alertMethods;
+        @com.aliyun.core.annotation.NameInMap("AlertMethods")
+        private java.util.List<String> alertMethods;
 
-        @NameInMap("AlertTargets")
-        private java.util.List < String > alertTargets;
+        @com.aliyun.core.annotation.NameInMap("AlertTargets")
+        private java.util.List<String> alertTargets;
 
-        @NameInMap("AlertUnit")
+        @com.aliyun.core.annotation.NameInMap("AlertUnit")
         private String alertUnit;
 
-        @NameInMap("Baselines")
-        private java.util.List < Baselines> baselines;
+        @com.aliyun.core.annotation.NameInMap("AllowNodes")
+        private java.util.List<Long> allowNodes;
 
-        @NameInMap("BizProcesses")
-        private java.util.List < BizProcesses> bizProcesses;
+        @com.aliyun.core.annotation.NameInMap("Baselines")
+        private java.util.List<Baselines> baselines;
 
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("BizProcesses")
+        private java.util.List<BizProcesses> bizProcesses;
+
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private String detail;
 
-        @NameInMap("DndEnd")
+        @com.aliyun.core.annotation.NameInMap("DndEnd")
         private String dndEnd;
 
-        @NameInMap("DndStart")
+        @com.aliyun.core.annotation.NameInMap("DndStart")
         private String dndStart;
 
-        @NameInMap("Founder")
+        @com.aliyun.core.annotation.NameInMap("Founder")
         private String founder;
 
-        @NameInMap("MaxAlertTimes")
+        @com.aliyun.core.annotation.NameInMap("MaxAlertTimes")
         private Integer maxAlertTimes;
 
-        @NameInMap("Nodes")
-        private java.util.List < Nodes> nodes;
+        @com.aliyun.core.annotation.NameInMap("Nodes")
+        private java.util.List<Nodes> nodes;
 
-        @NameInMap("Projects")
-        private java.util.List < Projects> projects;
+        @com.aliyun.core.annotation.NameInMap("Projects")
+        private java.util.List<Projects> projects;
 
-        @NameInMap("RemindId")
+        @com.aliyun.core.annotation.NameInMap("Receivers")
+        private java.util.List<Receivers> receivers;
+
+        @com.aliyun.core.annotation.NameInMap("RemindId")
         private Long remindId;
 
-        @NameInMap("RemindName")
+        @com.aliyun.core.annotation.NameInMap("RemindName")
         private String remindName;
 
-        @NameInMap("RemindType")
+        @com.aliyun.core.annotation.NameInMap("RemindType")
         private String remindType;
 
-        @NameInMap("RemindUnit")
+        @com.aliyun.core.annotation.NameInMap("RemindUnit")
         private String remindUnit;
 
-        @NameInMap("Robots")
-        private java.util.List < Robots> robots;
+        @com.aliyun.core.annotation.NameInMap("Robots")
+        private java.util.List<Robots> robots;
 
-        @NameInMap("Useflag")
+        @com.aliyun.core.annotation.NameInMap("Useflag")
         private Boolean useflag;
 
-        @NameInMap("Webhooks")
-        private java.util.List < String > webhooks;
+        @com.aliyun.core.annotation.NameInMap("Webhooks")
+        private java.util.List<String> webhooks;
 
         private Data(Builder builder) {
             this.alertInterval = builder.alertInterval;
             this.alertMethods = builder.alertMethods;
             this.alertTargets = builder.alertTargets;
             this.alertUnit = builder.alertUnit;
+            this.allowNodes = builder.allowNodes;
             this.baselines = builder.baselines;
             this.bizProcesses = builder.bizProcesses;
             this.detail = builder.detail;
@@ -551,6 +722,7 @@ public class GetRemindResponseBody extends TeaModel {
             this.maxAlertTimes = builder.maxAlertTimes;
             this.nodes = builder.nodes;
             this.projects = builder.projects;
+            this.receivers = builder.receivers;
             this.remindId = builder.remindId;
             this.remindName = builder.remindName;
             this.remindType = builder.remindType;
@@ -578,14 +750,14 @@ public class GetRemindResponseBody extends TeaModel {
         /**
          * @return alertMethods
          */
-        public java.util.List < String > getAlertMethods() {
+        public java.util.List<String> getAlertMethods() {
             return this.alertMethods;
         }
 
         /**
          * @return alertTargets
          */
-        public java.util.List < String > getAlertTargets() {
+        public java.util.List<String> getAlertTargets() {
             return this.alertTargets;
         }
 
@@ -597,16 +769,23 @@ public class GetRemindResponseBody extends TeaModel {
         }
 
         /**
+         * @return allowNodes
+         */
+        public java.util.List<Long> getAllowNodes() {
+            return this.allowNodes;
+        }
+
+        /**
          * @return baselines
          */
-        public java.util.List < Baselines> getBaselines() {
+        public java.util.List<Baselines> getBaselines() {
             return this.baselines;
         }
 
         /**
          * @return bizProcesses
          */
-        public java.util.List < BizProcesses> getBizProcesses() {
+        public java.util.List<BizProcesses> getBizProcesses() {
             return this.bizProcesses;
         }
 
@@ -648,15 +827,22 @@ public class GetRemindResponseBody extends TeaModel {
         /**
          * @return nodes
          */
-        public java.util.List < Nodes> getNodes() {
+        public java.util.List<Nodes> getNodes() {
             return this.nodes;
         }
 
         /**
          * @return projects
          */
-        public java.util.List < Projects> getProjects() {
+        public java.util.List<Projects> getProjects() {
             return this.projects;
+        }
+
+        /**
+         * @return receivers
+         */
+        public java.util.List<Receivers> getReceivers() {
+            return this.receivers;
         }
 
         /**
@@ -690,7 +876,7 @@ public class GetRemindResponseBody extends TeaModel {
         /**
          * @return robots
          */
-        public java.util.List < Robots> getRobots() {
+        public java.util.List<Robots> getRobots() {
             return this.robots;
         }
 
@@ -704,34 +890,39 @@ public class GetRemindResponseBody extends TeaModel {
         /**
          * @return webhooks
          */
-        public java.util.List < String > getWebhooks() {
+        public java.util.List<String> getWebhooks() {
             return this.webhooks;
         }
 
         public static final class Builder {
             private Integer alertInterval; 
-            private java.util.List < String > alertMethods; 
-            private java.util.List < String > alertTargets; 
+            private java.util.List<String> alertMethods; 
+            private java.util.List<String> alertTargets; 
             private String alertUnit; 
-            private java.util.List < Baselines> baselines; 
-            private java.util.List < BizProcesses> bizProcesses; 
+            private java.util.List<Long> allowNodes; 
+            private java.util.List<Baselines> baselines; 
+            private java.util.List<BizProcesses> bizProcesses; 
             private String detail; 
             private String dndEnd; 
             private String dndStart; 
             private String founder; 
             private Integer maxAlertTimes; 
-            private java.util.List < Nodes> nodes; 
-            private java.util.List < Projects> projects; 
+            private java.util.List<Nodes> nodes; 
+            private java.util.List<Projects> projects; 
+            private java.util.List<Receivers> receivers; 
             private Long remindId; 
             private String remindName; 
             private String remindType; 
             private String remindUnit; 
-            private java.util.List < Robots> robots; 
+            private java.util.List<Robots> robots; 
             private Boolean useflag; 
-            private java.util.List < String > webhooks; 
+            private java.util.List<String> webhooks; 
 
             /**
-             * The minimum interval at which alerts are reported. Unit: seconds.
+             * <p>The minimum interval at which alerts are reported. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1800</p>
              */
             public Builder alertInterval(Integer alertInterval) {
                 this.alertInterval = alertInterval;
@@ -739,34 +930,31 @@ public class GetRemindResponseBody extends TeaModel {
             }
 
             /**
-             * The notification method. Valid values:
-             * <p>
-             * 
-             * *   MAIL: Alert notifications are sent by emails.
-             * 
-             * *   SMS: Alert notifications are sent by text messages.
-             * 
-             *     Alert notifications can be sent by text messages only in the Singapore (Singapore), Malaysia (Kuala Lumpur), and Germany (Frankfurt) regions.
-             * 
-             * *   Multiple notification methods are separated by commas (,).
+             * <p>The notification method.</p>
              */
-            public Builder alertMethods(java.util.List < String > alertMethods) {
+            public Builder alertMethods(java.util.List<String> alertMethods) {
                 this.alertMethods = alertMethods;
                 return this;
             }
 
             /**
-             * *   If the value of the AlertUnit parameter is OWNER, this parameter is left empty.
-             * <p>
-             * *   If the value of the AlertUnit parameter is OTHER, the ID of the Alibaba Cloud account used by the specified user is returned. Multiple IDs are separated by commas (,).
+             * <p>The description of the alert recipient. For more information about alert recipients, see the Receivers parameter.</p>
              */
-            public Builder alertTargets(java.util.List < String > alertTargets) {
+            public Builder alertTargets(java.util.List<String> alertTargets) {
                 this.alertTargets = alertTargets;
                 return this;
             }
 
             /**
-             * The recipient of the alert. Valid values: OWNER and OTHER. A value of OWNER indicates the node owner. A value of OTHER indicates a specified user.
+             * <p>The type of the alert recipient. For more information about alert recipient types, see the Receivers parameter. Valid values:</p>
+             * <ul>
+             * <li>OWNER: the task owner</li>
+             * <li>OTHER: specified personnel</li>
+             * <li>SHIFT_SCHEDULE: personnel in a shift schedule</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OWNER</p>
              */
             public Builder alertUnit(String alertUnit) {
                 this.alertUnit = alertUnit;
@@ -774,28 +962,40 @@ public class GetRemindResponseBody extends TeaModel {
             }
 
             /**
-             * The baselines to which the custom alert rule is applied. This parameter is returned if the value of the RemindUnit parameter is BASELINE.
+             * <p>The IDs of the nodes that are added to a whitelist.</p>
              */
-            public Builder baselines(java.util.List < Baselines> baselines) {
+            public Builder allowNodes(java.util.List<Long> allowNodes) {
+                this.allowNodes = allowNodes;
+                return this;
+            }
+
+            /**
+             * <p>The baselines to which the custom alert rule is applied. This parameter is returned if the value of the RemindUnit parameter is BASELINE.</p>
+             */
+            public Builder baselines(java.util.List<Baselines> baselines) {
                 this.baselines = baselines;
                 return this;
             }
 
             /**
-             * The workflows to which the custom alert rule is applied. This parameter is returned if the value of the RemindUnit parameter is BIZPROCESS.
+             * <p>The workflows to which the custom alert rule is applied. This parameter is returned if the value of the RemindUnit parameter is BIZPROCESS.</p>
              */
-            public Builder bizProcesses(java.util.List < BizProcesses> bizProcesses) {
+            public Builder bizProcesses(java.util.List<BizProcesses> bizProcesses) {
                 this.bizProcesses = bizProcesses;
                 return this;
             }
 
             /**
-             * *   If the value of the RemindType parameter is FINISHED, this parameter is left empty.
-             * <p>
-             * *   If the value of the RemindType parameter is UNFINISHED, the trigger conditions are returned as key-value pairs. Example: {"hour":23,"minu":59}. Valid values of hour: 0 to 47. Valid values of minu: 0 to 59.
-             * *   If the value of the RemindType parameter is ERROR, this parameter is left empty.
-             * *   If the value of the RemindType parameter is CYCLE_UNFINISHED, the trigger conditions are returned as key-value pairs. Example: {"1":"05:50","2":"06:50","3":"07:50","4":"08:50","5":"09:50","6":"10:50","7":"11:50","8":"12:50","9":"13:50","10":"14:50","11":"15:50","12":"16:50","13":"17:50","14":"18:50","15":"19:50","16":"20:50","17":"21:50","18":"22:50","19":"23:50","20":"24:50","21":"25:50"}. The key indicates the ID of the cycle. Valid values: 1 to 288. The value indicates the timeout period of the node that is run in the cycle. The value is in the hh:mm format. Valid values of hh: 0 to 47. Valid values of mm: 0 to 59.
-             * *   If the value of the RemindType parameter is TIMEOUT, the timeout period is returned. Unit: seconds. Example: 1800. This value indicates that an alert is reported if the node is run for more than 30 minutes.
+             * <ul>
+             * <li>If the value of the RemindType parameter is FINISHED, this parameter is left empty.</li>
+             * <li>If the value of the RemindType parameter is UNFINISHED, the trigger conditions are returned as key-value pairs. Example: {&quot;hour&quot;:23,&quot;minu&quot;:59}. Valid values of hour: [0,47]. Valid values of minu: [0,59].</li>
+             * <li>If the value of the RemindType parameter is ERROR, this parameter is left empty.</li>
+             * <li>If the value of the RemindType parameter is CYCLE_UNFINISHED, the trigger conditions are returned as key-value pairs. Example: {&quot;1&quot;:&quot;05:50&quot;,&quot;2&quot;:&quot;06:50&quot;,&quot;3&quot;:&quot;07:50&quot;,&quot;4&quot;:&quot;08:50&quot;,&quot;5&quot;:&quot;09:50&quot;,&quot;6&quot;:&quot;10:50&quot;,&quot;7&quot;:&quot;11:50&quot;,&quot;8&quot;:&quot;12:50&quot;,&quot;9&quot;:&quot;13:50&quot;,&quot;10&quot;:&quot;14:50&quot;,&quot;11&quot;:&quot;15:50&quot;,&quot;12&quot;:&quot;16:50&quot;,&quot;13&quot;:&quot;17:50&quot;,&quot;14&quot;:&quot;18:50&quot;,&quot;15&quot;:&quot;19:50&quot;,&quot;16&quot;:&quot;20:50&quot;,&quot;17&quot;:&quot;21:50&quot;,&quot;18&quot;:&quot;22:50&quot;,&quot;19&quot;:&quot;23:50&quot;,&quot;20&quot;:&quot;24:50&quot;,&quot;21&quot;:&quot;25:50&quot;}. The key indicates the ID of the cycle. Valid values: [1,288]. The value indicates the timeout period of the node that is running in the cycle. Specify the value in the hh:mm format. Valid values of hh: [0,47]. Valid values of mm: [0,59].</li>
+             * <li>If the value of the RemindType parameter is TIMEOUT, the timeout period is returned. Unit: seconds. Example: 1800. This value indicates that an alert is reported if the node has run for more than 30 minutes.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;hour&quot;:23,&quot;minu&quot;:59}</p>
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -803,7 +1003,10 @@ public class GetRemindResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the quiet hours. The value is in the hh:mm format. Valid values of hh: 0 to 23. Valid values of mm: 0 to 59.
+             * <p>The end time of the quiet hours. The value is in the hh:mm format. Valid values of hh: [0,23]. Valid values of mm: [0,59].</p>
+             * 
+             * <strong>example:</strong>
+             * <p>08:00</p>
              */
             public Builder dndEnd(String dndEnd) {
                 this.dndEnd = dndEnd;
@@ -811,7 +1014,10 @@ public class GetRemindResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the quiet hours. The value is in the hh:mm format. Valid values of hh: 0 to 23. Valid values of mm: 0 to 59.
+             * <p>The start time of the quiet hours. The value is in the hh:mm format. Valid values of hh: [0,23]. Valid values of mm: [0,59].</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00</p>
              */
             public Builder dndStart(String dndStart) {
                 this.dndStart = dndStart;
@@ -819,7 +1025,10 @@ public class GetRemindResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account used by the creator of the custom alert rule.
+             * <p>The ID of the Alibaba Cloud account used by the creator of the custom alert rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9527951795****</p>
              */
             public Builder founder(String founder) {
                 this.founder = founder;
@@ -827,7 +1036,10 @@ public class GetRemindResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of alerts.
+             * <p>The maximum number of alerts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder maxAlertTimes(Integer maxAlertTimes) {
                 this.maxAlertTimes = maxAlertTimes;
@@ -835,23 +1047,34 @@ public class GetRemindResponseBody extends TeaModel {
             }
 
             /**
-             * The nodes to which the custom alert rule is applied. This parameter is returned if the value of the RemindUnit parameter is NODE.
+             * <p>The nodes to which the custom alert rule is applied. This parameter is returned if the value of the RemindUnit parameter is NODE.</p>
              */
-            public Builder nodes(java.util.List < Nodes> nodes) {
+            public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
                 return this;
             }
 
             /**
-             * The workspaces to which the custom alert rule is applied. This parameter is returned if the value of the RemindUnit parameter is PROJECT.
+             * <p>The workspaces to which the custom alert rule is applied. This parameter is returned if the value of the RemindUnit parameter is PROJECT.</p>
              */
-            public Builder projects(java.util.List < Projects> projects) {
+            public Builder projects(java.util.List<Projects> projects) {
                 this.projects = projects;
                 return this;
             }
 
             /**
-             * The ID of the custom alert rule.
+             * <p>The information about the alert recipients.</p>
+             */
+            public Builder receivers(java.util.List<Receivers> receivers) {
+                this.receivers = receivers;
+                return this;
+            }
+
+            /**
+             * <p>The custom alert rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder remindId(Long remindId) {
                 this.remindId = remindId;
@@ -859,7 +1082,10 @@ public class GetRemindResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the custom alert rule.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Rule name</p>
              */
             public Builder remindName(String remindName) {
                 this.remindName = remindName;
@@ -867,7 +1093,10 @@ public class GetRemindResponseBody extends TeaModel {
             }
 
             /**
-             * The conditions that trigger an alert. Valid values: FINISHED, UNFINISHED, ERROR, CYCLE_UNFINISHED, and TIMEOUT. A value of FINISHED indicates that the node is run. A value of UNFINISHED indicates that the node is still running at the specified point in time. A value of ERROR indicates that an error occurs when the node is running. A value of CYCLE_UNFINISHED indicates that the node is still running in the specified cycle. A value of TIMEOUT indicates that the node times out.
+             * <p>The conditions that trigger an alert. Valid values: FINISHED, UNFINISHED, ERROR, CYCLE_UNFINISHED, and TIMEOUT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FINISHED</p>
              */
             public Builder remindType(String remindType) {
                 this.remindType = remindType;
@@ -875,7 +1104,10 @@ public class GetRemindResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the object to which the custom alert rule is applied. Valid values: NODE, BASELINE, PROJECT, and BIZPROCESS. A value of NODE indicates that the monitored object is a node. A value of BASELINE indicates that the monitored object is a baseline. A value of PROJECT indicates that the monitored object is a workspace. A value of BIZPROCESS indicates that the monitored object is a workflow.
+             * <p>The type of the object to which the custom alert rule is applied. Valid values: NODE, BASELINE, PROJECT, and BIZPROCESS. The value NODE indicates a node. The value BASELINE indicates a baseline. The value PROJECT indicates a workspace. The value BIZPROCESS indicates a workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NODE</p>
              */
             public Builder remindUnit(String remindUnit) {
                 this.remindUnit = remindUnit;
@@ -883,15 +1115,18 @@ public class GetRemindResponseBody extends TeaModel {
             }
 
             /**
-             * The webhook URLs of the DingTalk chatbots.
+             * <p>The webhook URLs of the DingTalk chatbots.</p>
              */
-            public Builder robots(java.util.List < Robots> robots) {
+            public Builder robots(java.util.List<Robots> robots) {
                 this.robots = robots;
                 return this;
             }
 
             /**
-             * Indicates whether the custom alert rule is enabled. Valid values: true and false.
+             * <p>Indicates whether the custom alert rule is enabled. Valid values: true and false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder useflag(Boolean useflag) {
                 this.useflag = useflag;
@@ -899,9 +1134,9 @@ public class GetRemindResponseBody extends TeaModel {
             }
 
             /**
-             * -
+             * <p>WebHook URL</p>
              */
-            public Builder webhooks(java.util.List < String > webhooks) {
+            public Builder webhooks(java.util.List<String> webhooks) {
                 this.webhooks = webhooks;
                 return this;
             }

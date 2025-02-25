@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20201002.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDirectoriesRequest} extends {@link RequestModel}
  *
  * <p>DescribeDirectoriesRequest</p>
  */
 public class DescribeDirectoriesRequest extends Request {
-    @Query
-    @NameInMap("ClientId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientId;
 
-    @Query
-    @NameInMap("DirectoryId")
-    private java.util.List < String > directoryId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
+    private java.util.List<String> directoryId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private DescribeDirectoriesRequest(Builder builder) {
@@ -56,7 +61,7 @@ public class DescribeDirectoriesRequest extends Request {
     /**
      * @return directoryId
      */
-    public java.util.List < String > getDirectoryId() {
+    public java.util.List<String> getDirectoryId() {
         return this.directoryId;
     }
 
@@ -69,7 +74,7 @@ public class DescribeDirectoriesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeDirectoriesRequest, Builder> {
         private String clientId; 
-        private java.util.List < String > directoryId; 
+        private java.util.List<String> directoryId; 
         private String regionId; 
 
         private Builder() {
@@ -84,7 +89,10 @@ public class DescribeDirectoriesRequest extends Request {
         } 
 
         /**
-         * ClientId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54c17e1d-2d72-4b87-aa33-25f3b3f2****</p>
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);
@@ -95,14 +103,17 @@ public class DescribeDirectoriesRequest extends Request {
         /**
          * DirectoryId.
          */
-        public Builder directoryId(java.util.List < String > directoryId) {
+        public Builder directoryId(java.util.List<String> directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
             this.directoryId = directoryId;
             return this;
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

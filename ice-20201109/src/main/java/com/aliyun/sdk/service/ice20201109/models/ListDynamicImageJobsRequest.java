@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDynamicImageJobsRequest} extends {@link RequestModel}
  *
  * <p>ListDynamicImageJobsRequest</p>
  */
 public class ListDynamicImageJobsRequest extends Request {
-    @Query
-    @NameInMap("EndOfCreateTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndOfCreateTime")
     private String endOfCreateTime;
 
-    @Query
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @Query
-    @NameInMap("NextPageToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextPageToken")
     private String nextPageToken;
 
-    @Query
-    @NameInMap("OrderBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderBy")
     private String orderBy;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("StartOfCreateTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartOfCreateTime")
     private String startOfCreateTime;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private ListDynamicImageJobsRequest(Builder builder) {
@@ -138,7 +143,10 @@ public class ListDynamicImageJobsRequest extends Request {
         } 
 
         /**
-         * EndOfCreateTime.
+         * <p>The end of the time range during which the jobs to be queried were created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-14T00:00:00Z</p>
          */
         public Builder endOfCreateTime(String endOfCreateTime) {
             this.putQueryParameter("EndOfCreateTime", endOfCreateTime);
@@ -147,7 +155,10 @@ public class ListDynamicImageJobsRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>cdb3e74639973036bc84</strong></strong></p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -156,7 +167,10 @@ public class ListDynamicImageJobsRequest extends Request {
         }
 
         /**
-         * NextPageToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cdb3e74639973036bc84</p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.putQueryParameter("NextPageToken", nextPageToken);
@@ -165,7 +179,14 @@ public class ListDynamicImageJobsRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * <p>The order that you use to sort the query results. Valid values:</p>
+         * <ol>
+         * <li>CreateTimeAsc: sorts the jobs by creation time in ascending order.</li>
+         * <li>CreateTimeDesc: sorts the jobs by creation time in descending order.</li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateTimeDesc</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -174,7 +195,10 @@ public class ListDynamicImageJobsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 20. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -183,7 +207,10 @@ public class ListDynamicImageJobsRequest extends Request {
         }
 
         /**
-         * StartOfCreateTime.
+         * <p>The beginning of the time range during which the jobs to be queried were created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-12T00:00:00Z</p>
          */
         public Builder startOfCreateTime(String startOfCreateTime) {
             this.putQueryParameter("StartOfCreateTime", startOfCreateTime);
@@ -192,7 +219,16 @@ public class ListDynamicImageJobsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The state of the job.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Init: The job is submitted.</li>
+         * <li>Success: The job is successful.</li>
+         * <li>Fail: The job failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

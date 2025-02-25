@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterUserKubeconfigRequest} extends {@link RequestModel}
  *
  * <p>DescribeClusterUserKubeconfigRequest</p>
  */
 public class DescribeClusterUserKubeconfigRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("PrivateIpAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
     private Boolean privateIpAddress;
 
-    @Query
-    @NameInMap("TemporaryDurationMinutes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemporaryDurationMinutes")
     private Long temporaryDurationMinutes;
 
     private DescribeClusterUserKubeconfigRequest(Builder builder) {
@@ -83,7 +88,11 @@ public class DescribeClusterUserKubeconfigRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c5b5e80b0b64a4bf6939d2d8fbbc5****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -92,13 +101,15 @@ public class DescribeClusterUserKubeconfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to obtain the kubeconfig file that is used to connect to the cluster over the internal network. Valid values:
-         * <p>
+         * <p>Specifies whether to obtain the kubeconfig file that is used to connect to the cluster over the internal network. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: obtains the kubeconfig file that is used to connect to the master instance over the internal network.</li>
+         * <li><code>false</code>: obtains the kubeconfig file that is used to connect to the master instance over the Internet.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: obtains the kubeconfig file that is used to connect to the master instance over the internal network.
-         * *   `false`: obtains the kubeconfig file that is used to connect to the master instance over the Internet.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder privateIpAddress(Boolean privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -107,10 +118,13 @@ public class DescribeClusterUserKubeconfigRequest extends Request {
         }
 
         /**
-         * The validity period of a temporary kubeconfig file. Unit: minutes. Valid values: 15 to 4320 (3 days).
-         * <p>
+         * <p>The validity period of a temporary kubeconfig file. Unit: minutes. Valid values: 15 to 4320 (3 days).</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system specifies a longer validity period. The validity period is returned in the <code>expiration</code> parameter.</p>
+         * </blockquote>
          * 
-         * >  If you do not specify this parameter, the system specifies a longer validity period. The validity period is returned in the `expiration` parameter.
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder temporaryDurationMinutes(Long temporaryDurationMinutes) {
             this.putQueryParameter("TemporaryDurationMinutes", temporaryDurationMinutes);

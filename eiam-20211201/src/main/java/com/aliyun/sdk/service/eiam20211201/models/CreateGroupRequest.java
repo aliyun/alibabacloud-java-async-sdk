@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateGroupRequest</p>
  */
 public class CreateGroupRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("GroupExternalId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupExternalId")
     private String groupExternalId;
 
-    @Query
-    @NameInMap("GroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupName;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String instanceId;
 
     private CreateGroupRequest(Builder builder) {
@@ -121,7 +126,10 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * The description of the group. The value can be up to 256 characters in length.
+         * <p>The description of the group. The value can be up to 256 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a test.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -130,7 +138,10 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * The external ID of the group, which can be used to associate the group with an external system. By default, the external ID is the group ID. The value can be up to 64 characters in length.
+         * <p>The external ID of the group, which can be used to associate the group with an external system. By default, the external ID is the group ID. The value can be up to 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group_d6sbsuumeta4h66ec3il7yxxxx</p>
          */
         public Builder groupExternalId(String groupExternalId) {
             this.putQueryParameter("GroupExternalId", groupExternalId);
@@ -139,7 +150,11 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * The name of the group. The name can be up to 64 characters in length.
+         * <p>The name of the group. The name can be up to 64 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name_test</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -148,7 +163,11 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

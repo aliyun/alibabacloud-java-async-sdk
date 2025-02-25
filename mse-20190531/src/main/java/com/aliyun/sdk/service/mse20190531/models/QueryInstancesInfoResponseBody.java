@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryInstancesInfoResponseBody} extends {@link TeaModel}
  *
  * <p>QueryInstancesInfoResponseBody</p>
  */
 public class QueryInstancesInfoResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("HttpCode")
+    @com.aliyun.core.annotation.NameInMap("HttpCode")
     private String httpCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryInstancesInfoResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -90,7 +95,7 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String errorCode; 
         private String httpCode; 
         private String message; 
@@ -98,15 +103,18 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details of the data.
+         * <p>The details of the data.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +122,10 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202</p>
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -122,11 +133,14 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned.
-         * <p>
+         * <p>The message that is returned.</p>
+         * <ul>
+         * <li>If the request is successful, a success message is returned.</li>
+         * <li>If the request fails, an error message is returned.</li>
+         * </ul>
          * 
-         * *   If the request is successful, a success message is returned.
-         * *   If the request fails, an error message is returned.
+         * <strong>example:</strong>
+         * <p>The request is successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -134,7 +148,10 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54973C90-F379-4372-9AA5-053A3F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,11 +159,14 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -159,35 +179,41 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryInstancesInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryInstancesInfoResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ClientPort")
+        @com.aliyun.core.annotation.NameInMap("ClientPort")
         private String clientPort;
 
-        @NameInMap("CreationTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreationTimestamp")
         private String creationTimestamp;
 
-        @NameInMap("HealthStatus")
+        @com.aliyun.core.annotation.NameInMap("HealthStatus")
         private String healthStatus;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("PodName")
+        @com.aliyun.core.annotation.NameInMap("PodName")
         private String podName;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("SingleTunnelVip")
+        @com.aliyun.core.annotation.NameInMap("SingleTunnelVip")
         private String singleTunnelVip;
 
-        @NameInMap("Zone")
+        @com.aliyun.core.annotation.NameInMap("Zone")
         private String zone;
 
-        @NameInMap("ZoneDistributed")
+        @com.aliyun.core.annotation.NameInMap("ZoneDistributed")
         private Boolean zoneDistributed;
 
         private Data(Builder builder) {
@@ -294,7 +320,10 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
             private Boolean zoneDistributed; 
 
             /**
-             * The enabled port.
+             * <p>The enabled port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8848</p>
              */
             public Builder clientPort(String clientPort) {
                 this.clientPort = clientPort;
@@ -302,7 +331,10 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-15T02:02:15Z</p>
              */
             public Builder creationTimestamp(String creationTimestamp) {
                 this.creationTimestamp = creationTimestamp;
@@ -310,7 +342,10 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * A reserved parameter.
+             * <p>A reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder healthStatus(String healthStatus) {
                 this.healthStatus = healthStatus;
@@ -318,7 +353,10 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address.
+             * <p>The public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120.55.71.x</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -326,7 +364,10 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the pod.
+             * <p>The IP address of the pod.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25.24.91.x</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -334,7 +375,10 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The pod name.
+             * <p>The pod name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mse-xxxxx-xxxxx-reg-center-0-1</p>
              */
             public Builder podName(String podName) {
                 this.podName = podName;
@@ -342,7 +386,10 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * A reserved parameter.
+             * <p>A reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -350,7 +397,10 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The internal IP address.
+             * <p>The internal IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.66.x</p>
              */
             public Builder singleTunnelVip(String singleTunnelVip) {
                 this.singleTunnelVip = singleTunnelVip;
@@ -358,7 +408,10 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-k</p>
              */
             public Builder zone(String zone) {
                 this.zone = zone;
@@ -366,7 +419,10 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether all pods in the cluster are distributed in the specified zones.
+             * <p>Indicates whether all pods in the cluster are distributed in the specified zones.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder zoneDistributed(Boolean zoneDistributed) {
                 this.zoneDistributed = zoneDistributed;

@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResizeDiskRequest} extends {@link RequestModel}
  *
  * <p>ResizeDiskRequest</p>
  */
 public class ResizeDiskRequest extends Request {
-    @Query
-    @NameInMap("DiskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String diskId;
 
-    @Query
-    @NameInMap("NewSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String newSize;
 
     private ResizeDiskRequest(Builder builder) {
@@ -70,7 +75,11 @@ public class ResizeDiskRequest extends Request {
         } 
 
         /**
-         * DiskId.
+         * <p>The ID of the disk that you want to resize.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-5tzm9wnhzlhjzcbtxo465****</p>
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -79,7 +88,11 @@ public class ResizeDiskRequest extends Request {
         }
 
         /**
-         * NewSize.
+         * <p>The size of the disk that you want to resize. Unit: GiB.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder newSize(String newSize) {
             this.putQueryParameter("NewSize", newSize);

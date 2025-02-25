@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetManagedPrometheusStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetManagedPrometheusStatusResponseBody</p>
  */
 public class GetManagedPrometheusStatusResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetManagedPrometheusStatusResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class GetManagedPrometheusStatusResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code or error code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,13 +102,16 @@ public class GetManagedPrometheusStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the Prometheus instance.
-         * <p>
+         * <p>The installation status of the Prometheus agent.</p>
+         * <ul>
+         * <li>Installing: The Prometheus agent is installed and no registration information is available.</li>
+         * <li>Succeed: The Prometheus agent is installed and registered.</li>
+         * <li>Failure: The Prometheus agent failed to be installed or registered.</li>
+         * <li>Unknown: The installation status of the Prometheus agent is unknown.</li>
+         * </ul>
          * 
-         * *   Installing: The Prometheus instance is created and the Prometheus agent has no registration information.
-         * *   Succeed: The Prometheus instance is created and the Prometheus agent is registered.
-         * *   Failure: The Prometheus instance failed to be created or the Prometheus agent failed to be registered.
-         * *   Unknown: No status of the Prometheus instance is available.
+         * <strong>example:</strong>
+         * <p>Installing</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -108,7 +119,10 @@ public class GetManagedPrometheusStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -116,7 +130,10 @@ public class GetManagedPrometheusStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F7781D4A-2818-41E7-B7BB-79D809E9****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -124,11 +141,14 @@ public class GetManagedPrometheusStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
          * 
-         * *   `true`
-         * *   `false`
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

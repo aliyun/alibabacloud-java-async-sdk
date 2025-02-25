@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateTenantApplicationRequest</p>
  */
 public class CreateTenantApplicationRequest extends Request {
-    @Body
-    @NameInMap("channel")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("channel")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String channel;
 
-    @Body
-    @NameInMap("clientToken")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("clientToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientToken;
 
     private CreateTenantApplicationRequest(Builder builder) {

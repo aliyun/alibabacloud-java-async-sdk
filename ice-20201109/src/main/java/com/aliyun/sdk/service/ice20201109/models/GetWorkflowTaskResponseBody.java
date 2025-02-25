@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetWorkflowTaskResponseBody} extends {@link TeaModel}
  *
  * <p>GetWorkflowTaskResponseBody</p>
  */
 public class GetWorkflowTaskResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("WorkflowTask")
+    @com.aliyun.core.annotation.NameInMap("WorkflowTask")
     private WorkflowTask workflowTask;
 
     private GetWorkflowTaskResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
         private WorkflowTask workflowTask; 
 
         /**
-         * Id of the request
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>0C-7870-15FE-B96F-8880BB</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
         }
 
         /**
-         * WorkflowTask.
+         * <p>The information about the workflow task.</p>
          */
         public Builder workflowTask(WorkflowTask workflowTask) {
             this.workflowTask = workflowTask;
@@ -71,23 +79,29 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetWorkflowTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWorkflowTaskResponseBody</p>
+     */
     public static class Workflow extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("WorkflowId")
+        @com.aliyun.core.annotation.NameInMap("WorkflowId")
         private String workflowId;
 
         private Workflow(Builder builder) {
@@ -158,7 +172,10 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
             private String workflowId; 
 
             /**
-             * CreateTime.
+             * <p>The time when the workflow was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-27T10:02:12Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -166,7 +183,10 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The time when the workflow was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-29T02:06:19Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -174,7 +194,7 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The workflow name.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -182,7 +202,15 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The workflow state.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Active</li>
+             * <li>Inactive</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -190,7 +218,16 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The workflow type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Customize: custom workflow.</li>
+             * <li>System: system workflow.</li>
+             * <li>Common: user-created workflow.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Common</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -198,7 +235,10 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowId.
+             * <p>The workflow ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong><strong>63dca94c609de02ac0d1</strong></strong></strong></p>
              */
             public Builder workflowId(String workflowId) {
                 this.workflowId = workflowId;
@@ -212,29 +252,35 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetWorkflowTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWorkflowTaskResponseBody</p>
+     */
     public static class WorkflowTask extends TeaModel {
-        @NameInMap("ActivityResults")
+        @com.aliyun.core.annotation.NameInMap("ActivityResults")
         private String activityResults;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TaskInput")
+        @com.aliyun.core.annotation.NameInMap("TaskInput")
         private String taskInput;
 
-        @NameInMap("UserData")
+        @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
-        @NameInMap("Workflow")
+        @com.aliyun.core.annotation.NameInMap("Workflow")
         private Workflow workflow;
 
         private WorkflowTask(Builder builder) {
@@ -323,7 +369,7 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
             private Workflow workflow; 
 
             /**
-             * ActivityResults.
+             * <p>The results for all nodes of the workflow task.</p>
              */
             public Builder activityResults(String activityResults) {
                 this.activityResults = activityResults;
@@ -331,7 +377,10 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the task was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-01-04T02:05:17Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -339,7 +388,10 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * <p>The time when the task was complete. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-01-04T02:06:19Z</p>
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -347,7 +399,18 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task state.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Init: The task is being initialized.</li>
+             * <li>Failed: The task failed.</li>
+             * <li>Canceled: The task is canceled.</li>
+             * <li>Processing: The task is in progress.</li>
+             * <li>Succeed: The task is successful.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Succeed</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -355,7 +418,10 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The ID of the workflow task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong><strong>4215e042b3966ca5441e</strong></strong></strong></p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -363,7 +429,13 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskInput.
+             * <p>The input of the workflow task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *       &quot;Type&quot;: &quot;Media&quot;,
+             *       &quot;Media&quot;: &quot;<strong><strong><strong>30706071edbfe290b488</strong></strong></strong>&quot;
+             * }</p>
              */
             public Builder taskInput(String taskInput) {
                 this.taskInput = taskInput;
@@ -371,7 +443,10 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * <p>The user-defined field that was specified when the workflow task was submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22%7D">http://xx.xx.xxx&quot;}</a></p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -379,7 +454,7 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Workflow.
+             * <p>The workflow Information.</p>
              */
             public Builder workflow(Workflow workflow) {
                 this.workflow = workflow;

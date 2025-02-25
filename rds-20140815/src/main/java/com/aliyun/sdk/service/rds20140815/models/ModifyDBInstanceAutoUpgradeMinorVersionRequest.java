@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceAutoUpgradeMinorVersionRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBInstanceAutoUpgradeMinorVersionRequest</p>
  */
 public class ModifyDBInstanceAutoUpgradeMinorVersionRequest extends Request {
-    @Query
-    @NameInMap("AutoUpgradeMinorVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoUpgradeMinorVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String autoUpgradeMinorVersion;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyDBInstanceAutoUpgradeMinorVersionRequest(Builder builder) {
@@ -126,11 +131,15 @@ public class ModifyDBInstanceAutoUpgradeMinorVersionRequest extends Request {
         } 
 
         /**
-         * The method that is used to update the minor engine version of the instance. Valid values:
-         * <p>
+         * <p>The method that is used to update the minor engine version of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Auto:</strong> automatic update.</li>
+         * <li><strong>Manual</strong>: manual update. ApsaraDB RDS automatically updates the current minor engine version of the instance only when the current minor engine version is phased out.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Auto:** automatic update.
-         * *   **Manual**: manual update. ApsaraDB RDS automatically updates the current minor engine version of the instance only when the current minor engine version is phased out.
+         * <strong>example:</strong>
+         * <p>Auto</p>
          */
         public Builder autoUpgradeMinorVersion(String autoUpgradeMinorVersion) {
             this.putQueryParameter("AutoUpgradeMinorVersion", autoUpgradeMinorVersion);
@@ -139,7 +148,10 @@ public class ModifyDBInstanceAutoUpgradeMinorVersionRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -148,7 +160,11 @@ public class ModifyDBInstanceAutoUpgradeMinorVersionRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

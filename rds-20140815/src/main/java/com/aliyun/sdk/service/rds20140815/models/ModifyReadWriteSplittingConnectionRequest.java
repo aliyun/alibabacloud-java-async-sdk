@@ -1,56 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyReadWriteSplittingConnectionRequest} extends {@link RequestModel}
  *
  * <p>ModifyReadWriteSplittingConnectionRequest</p>
  */
 public class ModifyReadWriteSplittingConnectionRequest extends Request {
-    @Query
-    @NameInMap("ConnectionStringPrefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectionStringPrefix")
     private String connectionStringPrefix;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("DistributionType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DistributionType")
     private String distributionType;
 
-    @Query
-    @NameInMap("MaxDelayTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxDelayTime")
     private String maxDelayTime;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Port")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Port")
     private String port;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Weight")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Weight")
     private String weight;
 
     private ModifyReadWriteSplittingConnectionRequest(Builder builder) {
@@ -181,10 +186,13 @@ public class ModifyReadWriteSplittingConnectionRequest extends Request {
         } 
 
         /**
-         * The prefix of the read/write splitting endpoint. The prefix must be unique. It can be up to 30 characters in length and can contain lowercase letters and hyphens (-). It must start with a lowercase letter.
-         * <p>
+         * <p>The prefix of the read/write splitting endpoint. The prefix must be unique. It can be up to 30 characters in length and can contain lowercase letters and hyphens (-). It must start with a lowercase letter.</p>
+         * <blockquote>
+         * <p>The default prefix consists of the name of the primary instance followed by the letters rw.</p>
+         * </blockquote>
          * 
-         * > The default prefix consists of the name of the primary instance followed by the letters rw.
+         * <strong>example:</strong>
+         * <p>rm-m5xxxxxxxxrw.mysql.rds.aliyuncs.com</p>
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -193,7 +201,11 @@ public class ModifyReadWriteSplittingConnectionRequest extends Request {
         }
 
         /**
-         * The ID of the primary instance. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The ID of the primary instance. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -202,13 +214,17 @@ public class ModifyReadWriteSplittingConnectionRequest extends Request {
         }
 
         /**
-         * The method that is used to assign read weights. Valid values:
-         * <p>
+         * <p>The method that is used to assign read weights. Valid values:</p>
+         * <ul>
+         * <li><strong>Standard</strong>: The system automatically assigns read weights to the primary and read-only instances based on the specifications of these instances.</li>
+         * <li><strong>Custom</strong>: You must manually assign a read weight to each instance.</li>
+         * </ul>
+         * <blockquote>
+         * <p>You must specify at least one of <strong>MaxDelayTime</strong> and <strong>DistributionType</strong>.</p>
+         * </blockquote>
          * 
-         * *   **Standard**: The system automatically assigns read weights to the primary and read-only instances based on the specifications of these instances.
-         * *   **Custom**: You must manually assign a read weight to each instance.
-         * 
-         * > You must specify at least one of **MaxDelayTime** and **DistributionType**.
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         public Builder distributionType(String distributionType) {
             this.putQueryParameter("DistributionType", distributionType);
@@ -217,11 +233,16 @@ public class ModifyReadWriteSplittingConnectionRequest extends Request {
         }
 
         /**
-         * The latency threshold that is allowed by the read/write splitting link. Unit: seconds. If the latency on a read-only instance exceeds the specified threshold, the system no longer routes read requests to the read-only instance. If you do not specify this parameter, the default value of this parameter is retained.
-         * <p>
+         * <p>The latency threshold that is allowed by the read/write splitting link. Unit: seconds. If the latency on a read-only instance exceeds the specified threshold, the system no longer routes read requests to the read-only instance. If you do not specify this parameter, the default value of this parameter is retained.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If the primary instance runs SQL Server 2017 on RDS Cluster Edition, the <strong>MaxDelayTime</strong> parameter is not supported.</li>
+         * <li>You must specify at least one of <strong>MaxDelayTime</strong> and <strong>DistributionType</strong>.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > *   If the primary instance runs SQL Server 2017 on RDS Cluster Edition, the **MaxDelayTime** parameter is not supported.
-         * > *   You must specify at least one of **MaxDelayTime** and **DistributionType**.
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder maxDelayTime(String maxDelayTime) {
             this.putQueryParameter("MaxDelayTime", maxDelayTime);
@@ -248,7 +269,10 @@ public class ModifyReadWriteSplittingConnectionRequest extends Request {
         }
 
         /**
-         * The port that is associated with the read/write splitting endpoint.
+         * <p>The port that is associated with the read/write splitting endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
@@ -275,17 +299,22 @@ public class ModifyReadWriteSplittingConnectionRequest extends Request {
         }
 
         /**
-         * The read weights of the primary instance and its read-only instances. A read weight must be a multiple of 100 and cannot exceed 10,000.
-         * <p>
+         * <p>The read weights of the primary instance and its read-only instances. A read weight must be a multiple of 100 and cannot exceed 10,000.</p>
+         * <ul>
+         * <li>For ApsaraDB RDS instances, the value of this parameter is in the following format: <code>{&quot;&lt;ID of the read-only instance &gt;&quot;:&lt;Weight&gt;,&quot;master&quot;:&lt;Weight&gt;,&quot;slave&quot;:&lt;Weight&gt;}</code>.</li>
+         * <li>For ApsaraDB MyBase instances, the value of this parameter is in the following format: <code>[{&quot;instanceName&quot;:&quot;&lt;ID of the primary instance&gt;&quot;,&quot;weight&quot;:&lt;Weight&gt;,&quot;role&quot;:&quot;master&quot;},{&quot;instanceName&quot;:&quot;&lt;ID of the primary instance&gt;&quot;,&quot;weight&quot;:&lt;Weight&gt;,&quot;role&quot;:&quot;slave&quot;},{&quot;instanceName&quot;:&quot;&lt;ID of the read-only instance&gt;&quot;,&quot;weight&quot;:&lt;Weight&gt;,&quot;role&quot;:&quot;master&quot;}]</code></li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter must be specified when <strong>DistributionType</strong> is set to <strong>Custom</strong>.</p>
+         * </li>
+         * <li><p>If <strong>DistributionType</strong> is set to <strong>Standard</strong>, this parameter is invalid.</p>
+         * </li>
+         * </ul>
          * 
-         * *   For ApsaraDB RDS instances, the value of this parameter is in the following format: `{"<ID of the read-only instance >":<Weight>,"master":<Weight>,"slave":<Weight>}`.
-         * *   For ApsaraDB MyBase instances, the value of this parameter is in the following format: `[{"instanceName":"<ID of the primary instance>","weight":<Weight>,"role":"master"},{"instanceName":"<ID of the primary instance>","weight":<Weight>,"role":"slave"},{"instanceName":"<ID of the read-only instance>","weight":<Weight>,"role":"master"}]`
-         * 
-         * > 
-         * 
-         * *   This parameter must be specified when **DistributionType** is set to **Custom**.
-         * 
-         * *   If **DistributionType** is set to **Standard**, this parameter is invalid.
+         * <strong>example:</strong>
+         * <p>{&quot;rm-bp1**********&quot;:800,&quot;master&quot;:400,&quot;slave&quot;:400}</p>
          */
         public Builder weight(String weight) {
             this.putQueryParameter("Weight", weight);

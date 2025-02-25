@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainNsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainNsResponseBody</p>
  */
 public class DescribeDomainNsResponseBody extends TeaModel {
-    @NameInMap("AllAliDns")
+    @com.aliyun.core.annotation.NameInMap("AllAliDns")
     private Boolean allAliDns;
 
-    @NameInMap("DetectFailedReasonCode")
+    @com.aliyun.core.annotation.NameInMap("DetectFailedReasonCode")
     private String detectFailedReasonCode;
 
-    @NameInMap("DnsServers")
+    @com.aliyun.core.annotation.NameInMap("DnsServers")
     private DnsServers dnsServers;
 
-    @NameInMap("ExpectDnsServers")
+    @com.aliyun.core.annotation.NameInMap("ExpectDnsServers")
     private ExpectDnsServers expectDnsServers;
 
-    @NameInMap("IncludeAliDns")
+    @com.aliyun.core.annotation.NameInMap("IncludeAliDns")
     private Boolean includeAliDns;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDomainNsResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class DescribeDomainNsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether all the name servers are Alibaba Cloud DNS servers.
+         * <p>Indicates whether all the name servers are Alibaba Cloud DNS servers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder allAliDns(Boolean allAliDns) {
             this.allAliDns = allAliDns;
@@ -106,7 +114,10 @@ public class DescribeDomainNsResponseBody extends TeaModel {
         }
 
         /**
-         * 检测失败原因编码
+         * <p>The cause code of the detection failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DnsCheck.Failed</p>
          */
         public Builder detectFailedReasonCode(String detectFailedReasonCode) {
             this.detectFailedReasonCode = detectFailedReasonCode;
@@ -114,7 +125,7 @@ public class DescribeDomainNsResponseBody extends TeaModel {
         }
 
         /**
-         * The DNS server names configured for the domain name.
+         * <p>The DNS server names configured for the domain name.</p>
          */
         public Builder dnsServers(DnsServers dnsServers) {
             this.dnsServers = dnsServers;
@@ -122,7 +133,7 @@ public class DescribeDomainNsResponseBody extends TeaModel {
         }
 
         /**
-         * The DNS server names assigned by Alibaba Cloud DNS.
+         * <p>The Domain Name System (DNS) server names assigned by Alibaba Cloud DNS.</p>
          */
         public Builder expectDnsServers(ExpectDnsServers expectDnsServers) {
             this.expectDnsServers = expectDnsServers;
@@ -130,7 +141,10 @@ public class DescribeDomainNsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the name servers include Alibaba Cloud DNS servers.
+         * <p>Indicates whether the name servers include Alibaba Cloud DNS servers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includeAliDns(Boolean includeAliDns) {
             this.includeAliDns = includeAliDns;
@@ -138,7 +152,10 @@ public class DescribeDomainNsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16C7DC7A-2FA7-4D14-8B12-88A2BB6373DB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,9 +168,15 @@ public class DescribeDomainNsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainNsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainNsResponseBody</p>
+     */
     public static class DnsServers extends TeaModel {
-        @NameInMap("DnsServer")
-        private java.util.List < String > dnsServer;
+        @com.aliyun.core.annotation.NameInMap("DnsServer")
+        private java.util.List<String> dnsServer;
 
         private DnsServers(Builder builder) {
             this.dnsServer = builder.dnsServer;
@@ -170,17 +193,17 @@ public class DescribeDomainNsResponseBody extends TeaModel {
         /**
          * @return dnsServer
          */
-        public java.util.List < String > getDnsServer() {
+        public java.util.List<String> getDnsServer() {
             return this.dnsServer;
         }
 
         public static final class Builder {
-            private java.util.List < String > dnsServer; 
+            private java.util.List<String> dnsServer; 
 
             /**
              * DnsServer.
              */
-            public Builder dnsServer(java.util.List < String > dnsServer) {
+            public Builder dnsServer(java.util.List<String> dnsServer) {
                 this.dnsServer = dnsServer;
                 return this;
             }
@@ -192,9 +215,15 @@ public class DescribeDomainNsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainNsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainNsResponseBody</p>
+     */
     public static class ExpectDnsServers extends TeaModel {
-        @NameInMap("ExpectDnsServer")
-        private java.util.List < String > expectDnsServer;
+        @com.aliyun.core.annotation.NameInMap("ExpectDnsServer")
+        private java.util.List<String> expectDnsServer;
 
         private ExpectDnsServers(Builder builder) {
             this.expectDnsServer = builder.expectDnsServer;
@@ -211,17 +240,17 @@ public class DescribeDomainNsResponseBody extends TeaModel {
         /**
          * @return expectDnsServer
          */
-        public java.util.List < String > getExpectDnsServer() {
+        public java.util.List<String> getExpectDnsServer() {
             return this.expectDnsServer;
         }
 
         public static final class Builder {
-            private java.util.List < String > expectDnsServer; 
+            private java.util.List<String> expectDnsServer; 
 
             /**
              * ExpectDnsServer.
              */
-            public Builder expectDnsServer(java.util.List < String > expectDnsServer) {
+            public Builder expectDnsServer(java.util.List<String> expectDnsServer) {
                 this.expectDnsServer = expectDnsServer;
                 return this;
             }

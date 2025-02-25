@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteUserProvisioningRequest} extends {@link RequestModel}
  *
  * <p>DeleteUserProvisioningRequest</p>
  */
 public class DeleteUserProvisioningRequest extends Request {
-    @Query
-    @NameInMap("DeletionStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeletionStrategy")
     private String deletionStrategy;
 
-    @Query
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @Query
-    @NameInMap("UserProvisioningId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserProvisioningId")
     private String userProvisioningId;
 
     private DeleteUserProvisioningRequest(Builder builder) {
@@ -82,7 +82,17 @@ public class DeleteUserProvisioningRequest extends Request {
         } 
 
         /**
-         * DeletionStrategy.
+         * <p>The deletion policy. The policy is used to manage synchronized users when you delete the RAM user provisioning. Valid values:</p>
+         * <ul>
+         * <li>Delete: When you delete the RAM user provisioning, the system deletes the synchronized users.</li>
+         * <li>Keep: When you delete the RAM user provisioning, the system retains the synchronized users.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the deletion policy that is configured when you create the RAM user provisioning is used.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Delete</p>
          */
         public Builder deletionStrategy(String deletionStrategy) {
             this.putQueryParameter("DeletionStrategy", deletionStrategy);
@@ -91,7 +101,10 @@ public class DeleteUserProvisioningRequest extends Request {
         }
 
         /**
-         * DirectoryId.
+         * <p>The ID of the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-003qew84****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -100,7 +113,10 @@ public class DeleteUserProvisioningRequest extends Request {
         }
 
         /**
-         * UserProvisioningId.
+         * <p>The ID of the RAM user provisioning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>up-002axzhapcbz6e63****</p>
          */
         public Builder userProvisioningId(String userProvisioningId) {
             this.putQueryParameter("UserProvisioningId", userProvisioningId);

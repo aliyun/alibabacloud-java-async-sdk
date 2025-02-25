@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesForExpressConnectResponseBody} extends {@link TeaModel}
  *
  * <p>ListTagResourcesForExpressConnectResponseBody</p>
  */
 public class ListTagResourcesForExpressConnectResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TagResources")
+    @com.aliyun.core.annotation.NameInMap("TagResources")
     private TagResources tagResources;
 
     private ListTagResourcesForExpressConnectResponseBody(Builder builder) {
@@ -62,11 +67,14 @@ public class ListTagResourcesForExpressConnectResponseBody extends TeaModel {
         private TagResources tagResources; 
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results.
-         * <p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value is returned for <strong>NextToken</strong>, the value can be used in the next request to retrieve a new page of results.</li>
+         * </ul>
          * 
-         * *   If **NextToken** is empty, no next page exists.
-         * *   If a value is returned for **NextToken**, the value can be used in the next request to retrieve a new page of results.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -74,7 +82,10 @@ public class ListTagResourcesForExpressConnectResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54B48E3D-DF70-471B-AA93-08E683A1B45</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,7 +93,7 @@ public class ListTagResourcesForExpressConnectResponseBody extends TeaModel {
         }
 
         /**
-         * The tags that are added to the resource.
+         * <p>The tags that are added to the resource.</p>
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -95,17 +106,23 @@ public class ListTagResourcesForExpressConnectResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagResourcesForExpressConnectResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesForExpressConnectResponseBody</p>
+     */
     public static class TagResource extends TeaModel {
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private TagResource(Builder builder) {
@@ -158,7 +175,10 @@ public class ListTagResourcesForExpressConnectResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The resource ID.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-bp16qjewdsunr41m1****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -166,12 +186,15 @@ public class ListTagResourcesForExpressConnectResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource. Valid values:
-             * <p>
+             * <p>The type of the resource. Valid values:</p>
+             * <ul>
+             * <li><strong>PHYSICALCONNECTION</strong>: Express Connect circuit.</li>
+             * <li><strong>VIRTUALBORDERROUTER</strong>: VBR.</li>
+             * <li><strong>ROUTERINTERFACE</strong>: router interface.</li>
+             * </ul>
              * 
-             * *   **PHYSICALCONNECTION**: Express Connect circuit.
-             * *   **VIRTUALBORDERROUTER**: VBR.
-             * *   **ROUTERINTERFACE**: router interface.
+             * <strong>example:</strong>
+             * <p>PHYSICALCONNECTION</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -179,7 +202,10 @@ public class ListTagResourcesForExpressConnectResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the tag that is added to the resource.
+             * <p>The key of the tag that is added to the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -187,7 +213,10 @@ public class ListTagResourcesForExpressConnectResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag that is added to the resource.
+             * <p>The value of the tag that is added to the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -201,9 +230,15 @@ public class ListTagResourcesForExpressConnectResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTagResourcesForExpressConnectResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesForExpressConnectResponseBody</p>
+     */
     public static class TagResources extends TeaModel {
-        @NameInMap("TagResource")
-        private java.util.List < TagResource> tagResource;
+        @com.aliyun.core.annotation.NameInMap("TagResource")
+        private java.util.List<TagResource> tagResource;
 
         private TagResources(Builder builder) {
             this.tagResource = builder.tagResource;
@@ -220,17 +255,17 @@ public class ListTagResourcesForExpressConnectResponseBody extends TeaModel {
         /**
          * @return tagResource
          */
-        public java.util.List < TagResource> getTagResource() {
+        public java.util.List<TagResource> getTagResource() {
             return this.tagResource;
         }
 
         public static final class Builder {
-            private java.util.List < TagResource> tagResource; 
+            private java.util.List<TagResource> tagResource; 
 
             /**
              * TagResource.
              */
-            public Builder tagResource(java.util.List < TagResource> tagResource) {
+            public Builder tagResource(java.util.List<TagResource> tagResource) {
                 this.tagResource = tagResource;
                 return this;
             }

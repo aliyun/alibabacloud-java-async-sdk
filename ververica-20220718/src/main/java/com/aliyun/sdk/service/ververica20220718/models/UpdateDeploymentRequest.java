@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDeploymentRequest} extends {@link RequestModel}
  *
  * <p>UpdateDeploymentRequest</p>
  */
 public class UpdateDeploymentRequest extends Request {
-    @Path
-    @NameInMap("namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @Path
-    @NameInMap("deploymentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("deploymentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deploymentId;
 
-    @Body
-    @NameInMap("body")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Deployment body;
 
-    @Header
-    @NameInMap("workspace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("workspace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspace;
 
     private UpdateDeploymentRequest(Builder builder) {
@@ -100,7 +105,11 @@ public class UpdateDeploymentRequest extends Request {
         } 
 
         /**
-         * namespace.
+         * <p>The name of the namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-namespace</p>
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -109,7 +118,11 @@ public class UpdateDeploymentRequest extends Request {
         }
 
         /**
-         * deploymentId.
+         * <p>The deployment ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58718c99-3b29-4c5e-93bb-c9fc4ec6****</p>
          */
         public Builder deploymentId(String deploymentId) {
             this.putPathParameter("deploymentId", deploymentId);
@@ -118,7 +131,8 @@ public class UpdateDeploymentRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The information about the deployment that you want to update.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder body(Deployment body) {
             this.putBodyParameter("body", body);
@@ -127,7 +141,11 @@ public class UpdateDeploymentRequest extends Request {
         }
 
         /**
-         * workspace.
+         * <p>The workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a14bd5d90a****</p>
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

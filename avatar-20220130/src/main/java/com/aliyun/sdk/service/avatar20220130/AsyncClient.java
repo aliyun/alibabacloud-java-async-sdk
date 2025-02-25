@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.avatar20220130;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.avatar20220130.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -24,7 +25,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ClientStartResponse> clientStart(ClientStartRequest request);
 
+    CompletableFuture<ClientUnbindDeviceResponse> clientUnbindDevice(ClientUnbindDeviceRequest request);
+
     CompletableFuture<CloseTimedResetOperateResponse> closeTimedResetOperate(CloseTimedResetOperateRequest request);
+
+    CompletableFuture<ConfirmAvatar2dTrainResponse> confirmAvatar2dTrain(ConfirmAvatar2dTrainRequest request);
 
     CompletableFuture<Create2dAvatarResponse> create2dAvatar(Create2dAvatarRequest request);
 

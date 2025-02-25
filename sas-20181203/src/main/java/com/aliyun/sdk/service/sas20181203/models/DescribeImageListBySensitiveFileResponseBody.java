@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageListBySensitiveFileResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImageListBySensitiveFileResponseBody</p>
  */
 public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("ImageInfos")
-    private java.util.List < ImageInfos> imageInfos;
+    @com.aliyun.core.annotation.NameInMap("ImageInfos")
+    private java.util.List<ImageInfos> imageInfos;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeImageListBySensitiveFileResponseBody(Builder builder) {
@@ -68,7 +73,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
     /**
      * @return imageInfos
      */
-    public java.util.List < ImageInfos> getImageInfos() {
+    public java.util.List<ImageInfos> getImageInfos() {
         return this.imageInfos;
     }
 
@@ -103,14 +108,17 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private Integer httpStatusCode; 
-        private java.util.List < ImageInfos> imageInfos; 
+        private java.util.List<ImageInfos> imageInfos; 
         private String message; 
         private PageInfo pageInfo; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +126,10 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -126,15 +137,18 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the images.
+         * <p>The information about the images.</p>
          */
-        public Builder imageInfos(java.util.List < ImageInfos> imageInfos) {
+        public Builder imageInfos(java.util.List<ImageInfos> imageInfos) {
             this.imageInfos = imageInfos;
             return this;
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +156,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -150,7 +164,10 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E0C5C07F-1576-509A-AE44-1C36B8445B37</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,10 +175,14 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * - **true**: The request was successful.
-         * - **false**: The request failed.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -174,38 +195,44 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImageListBySensitiveFileResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageListBySensitiveFileResponseBody</p>
+     */
     public static class ImageInfos extends TeaModel {
-        @NameInMap("Digest")
+        @com.aliyun.core.annotation.NameInMap("Digest")
         private String digest;
 
-        @NameInMap("FirstScanTime")
+        @com.aliyun.core.annotation.NameInMap("FirstScanTime")
         private Long firstScanTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("LastScanTime")
+        @com.aliyun.core.annotation.NameInMap("LastScanTime")
         private Long lastScanTime;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RepoName")
+        @com.aliyun.core.annotation.NameInMap("RepoName")
         private String repoName;
 
-        @NameInMap("RepoNamespace")
+        @com.aliyun.core.annotation.NameInMap("RepoNamespace")
         private String repoNamespace;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private ImageInfos(Builder builder) {
@@ -321,7 +348,10 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The image digest.
+             * <p>The image digest.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v005</p>
              */
             public Builder digest(String digest) {
                 this.digest = digest;
@@ -329,7 +359,10 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the first scan was performed. Unit: milliseconds.
+             * <p>The timestamp generated when the first scan was performed. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649814050000</p>
              */
             public Builder firstScanTime(Long firstScanTime) {
                 this.firstScanTime = firstScanTime;
@@ -337,7 +370,10 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             }
 
             /**
-             * The image instance ID.
+             * <p>The image instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cri-a595qp31knh9****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -345,7 +381,10 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the last scan was performed. Unit: milliseconds.
+             * <p>The timestamp when the last scan was performed. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649814050000</p>
              */
             public Builder lastScanTime(Long lastScanTime) {
                 this.lastScanTime = lastScanTime;
@@ -353,7 +392,10 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the image instance resides.
+             * <p>The ID of the region in which the image instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -361,7 +403,10 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             }
 
             /**
-             * The image repository name.
+             * <p>The image repository name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>opa-test</p>
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -369,7 +414,10 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace to which the image repository belongs.
+             * <p>The namespace to which the image repository belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>libssh2</p>
              */
             public Builder repoNamespace(String repoNamespace) {
                 this.repoNamespace = repoNamespace;
@@ -377,12 +425,15 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level. Valid values:
-             * <p>
+             * <p>The risk level. Valid values:</p>
+             * <ul>
+             * <li><strong>high</strong></li>
+             * <li><strong>medium</strong></li>
+             * <li><strong>low</strong></li>
+             * </ul>
              * 
-             * *   **high**
-             * *   **medium**
-             * *   **low**
+             * <strong>example:</strong>
+             * <p>low</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -390,12 +441,15 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             }
 
             /**
-             * The sensitive file status. Valid values:
-             * <p>
+             * <p>The sensitive file status. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: unhandled</li>
+             * <li><strong>1</strong>: ignored</li>
+             * <li><strong>2</strong>: false positive</li>
+             * </ul>
              * 
-             * *   **0**: unhandled
-             * *   **1**: ignored
-             * *   **2**: false positive
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -403,7 +457,10 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             }
 
             /**
-             * The tag that is added to the image.
+             * <p>The tag that is added to the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nuxeo6</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -411,7 +468,10 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             }
 
             /**
-             * The image UUID.
+             * <p>The image UUID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f58681174f944623345379e23b7b****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -425,20 +485,26 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImageListBySensitiveFileResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageListBySensitiveFileResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("LastRowKey")
+        @com.aliyun.core.annotation.NameInMap("LastRowKey")
         private String lastRowKey;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -500,7 +566,10 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -508,7 +577,10 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -516,7 +588,10 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the last data entry.
+             * <p>The key of the last data entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CAESGgoSChAKDGNvbXBsZXRlVGltZRABCgQiAggAGAAiQAoJAGYXFWIAAAAACjMDLgAAADFTNzMyZDMwMzAzMDM1Mzc3Njc4MzA2ODY5NmI2YTY1Nzg2NTcxNjE2NDc4NjE=</p>
              */
             public Builder lastRowKey(String lastRowKey) {
                 this.lastRowKey = lastRowKey;
@@ -524,7 +599,10 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: 20.
+             * <p>The number of entries returned per page. Default value: 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -532,7 +610,10 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>83</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

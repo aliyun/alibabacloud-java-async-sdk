@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FeatureViewConfigValuePartitionsValue} extends {@link TeaModel}
  *
  * <p>FeatureViewConfigValuePartitionsValue</p>
  */
 public class FeatureViewConfigValuePartitionsValue extends TeaModel {
-    @NameInMap("Value")
+    @com.aliyun.core.annotation.NameInMap("Value")
     private String value;
 
-    @NameInMap("Values")
-    private java.util.List < String > values;
+    @com.aliyun.core.annotation.NameInMap("Values")
+    private java.util.List<String> values;
 
-    @NameInMap("StartValue")
+    @com.aliyun.core.annotation.NameInMap("StartValue")
     private String startValue;
 
-    @NameInMap("EndValue")
+    @com.aliyun.core.annotation.NameInMap("EndValue")
     private String endValue;
 
     private FeatureViewConfigValuePartitionsValue(Builder builder) {
@@ -49,7 +54,7 @@ public class FeatureViewConfigValuePartitionsValue extends TeaModel {
     /**
      * @return values
      */
-    public java.util.List < String > getValues() {
+    public java.util.List<String> getValues() {
         return this.values;
     }
 
@@ -69,7 +74,7 @@ public class FeatureViewConfigValuePartitionsValue extends TeaModel {
 
     public static final class Builder {
         private String value; 
-        private java.util.List < String > values; 
+        private java.util.List<String> values; 
         private String startValue; 
         private String endValue; 
 
@@ -84,7 +89,7 @@ public class FeatureViewConfigValuePartitionsValue extends TeaModel {
         /**
          * Values.
          */
-        public Builder values(java.util.List < String > values) {
+        public Builder values(java.util.List<String> values) {
             this.values = values;
             return this;
         }

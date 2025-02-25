@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDISyncTaskResponseBody} extends {@link TeaModel}
  *
  * <p>GetDISyncTaskResponseBody</p>
  */
 public class GetDISyncTaskResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetDISyncTaskResponseBody(Builder builder) {
@@ -62,9 +67,7 @@ public class GetDISyncTaskResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * *   If the TaskType parameter is set to DI_REALTIME, the details of the real-time synchronization node are returned.
-         * <p>
-         * *   If the TaskType parameter is set to DI_SOLUTION, the value null is returned.
+         * <p>The returned results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -72,7 +75,10 @@ public class GetDISyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the real-time synchronization node or data synchronization solution.
+         * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1411515937635973****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -80,7 +86,14 @@ public class GetDISyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can query logs and troubleshoot issues based on the ID.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>True</li>
+         * <li>False</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -93,38 +106,478 @@ public class GetDISyncTaskResponseBody extends TeaModel {
 
     } 
 
-    public static class SolutionDetail extends TeaModel {
-        @NameInMap("CreatorName")
-        private String creatorName;
+    /**
+     * 
+     * {@link GetDISyncTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDISyncTaskResponseBody</p>
+     */
+    public static class AlarmRuleList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Aggregator")
+        private String aggregator;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Comparator")
+        private String comparator;
+
+        @com.aliyun.core.annotation.NameInMap("Duration")
+        private Long duration;
+
+        @com.aliyun.core.annotation.NameInMap("Level")
+        private String level;
+
+        @com.aliyun.core.annotation.NameInMap("Threshold")
+        private Long threshold;
+
+        private AlarmRuleList(Builder builder) {
+            this.aggregator = builder.aggregator;
+            this.comparator = builder.comparator;
+            this.duration = builder.duration;
+            this.level = builder.level;
+            this.threshold = builder.threshold;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AlarmRuleList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return aggregator
+         */
+        public String getAggregator() {
+            return this.aggregator;
+        }
+
+        /**
+         * @return comparator
+         */
+        public String getComparator() {
+            return this.comparator;
+        }
+
+        /**
+         * @return duration
+         */
+        public Long getDuration() {
+            return this.duration;
+        }
+
+        /**
+         * @return level
+         */
+        public String getLevel() {
+            return this.level;
+        }
+
+        /**
+         * @return threshold
+         */
+        public Long getThreshold() {
+            return this.threshold;
+        }
+
+        public static final class Builder {
+            private String aggregator; 
+            private String comparator; 
+            private Long duration; 
+            private String level; 
+            private Long threshold; 
+
+            /**
+             * <p>The calculation method of indicators,</p>
+             * <ul>
+             * <li>avg interval average</li>
+             * <li>max interval takes the maximum value</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>avg</p>
+             */
+            public Builder aggregator(String aggregator) {
+                this.aggregator = aggregator;
+                return this;
+            }
+
+            /**
+             * <p>Comparison method of comparison symbols, indicators and alarm rules</p>
+             * <ul>
+             * <li>&quot;=&quot;</li>
+             * <li>&quot;&lt;&quot;</li>
+             * <li>&quot;&gt;&quot;</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>=</p>
+             */
+            public Builder comparator(String comparator) {
+                this.comparator = comparator;
+                return this;
+            }
+
+            /**
+             * <p>Duration: How long does this condition last before an alarm is triggered, in minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
+             */
+            public Builder duration(Long duration) {
+                this.duration = duration;
+                return this;
+            }
+
+            /**
+             * <ul>
+             * <li>WARNING WARNING: alert</li>
+             * <li>CRITICAL CRITICAL: alarm</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>WARNING</p>
+             */
+            public Builder level(String level) {
+                this.level = level;
+                return this;
+            }
+
+            /**
+             * <p>Comparison threshold between metrics and alarm rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder threshold(Long threshold) {
+                this.threshold = threshold;
+                return this;
+            }
+
+            public AlarmRuleList build() {
+                return new AlarmRuleList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetDISyncTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDISyncTaskResponseBody</p>
+     */
+    public static class NotifyRule extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Critical")
+        private java.util.List<String> critical;
+
+        @com.aliyun.core.annotation.NameInMap("Interval")
+        private Long interval;
+
+        @com.aliyun.core.annotation.NameInMap("Warning")
+        private java.util.List<String> warning;
+
+        private NotifyRule(Builder builder) {
+            this.critical = builder.critical;
+            this.interval = builder.interval;
+            this.warning = builder.warning;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NotifyRule create() {
+            return builder().build();
+        }
+
+        /**
+         * @return critical
+         */
+        public java.util.List<String> getCritical() {
+            return this.critical;
+        }
+
+        /**
+         * @return interval
+         */
+        public Long getInterval() {
+            return this.interval;
+        }
+
+        /**
+         * @return warning
+         */
+        public java.util.List<String> getWarning() {
+            return this.warning;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> critical; 
+            private Long interval; 
+            private java.util.List<String> warning; 
+
+            /**
+             * <p>Critical-level alert notification list.</p>
+             */
+            public Builder critical(java.util.List<String> critical) {
+                this.critical = critical;
+                return this;
+            }
+
+            /**
+             * <p>Alarm interval, in minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
+             */
+            public Builder interval(Long interval) {
+                this.interval = interval;
+                return this;
+            }
+
+            /**
+             * <p>Warning-level alert notification list.</p>
+             */
+            public Builder warning(java.util.List<String> warning) {
+                this.warning = warning;
+                return this;
+            }
+
+            public NotifyRule build() {
+                return new NotifyRule(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetDISyncTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDISyncTaskResponseBody</p>
+     */
+    public static class AlarmList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AlarmRuleList")
+        private java.util.List<AlarmRuleList> alarmRuleList;
+
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("Enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Metric")
+        private String metric;
+
+        @com.aliyun.core.annotation.NameInMap("NotifyRule")
+        private NotifyRule notifyRule;
+
+        @com.aliyun.core.annotation.NameInMap("RuleName")
+        private String ruleName;
+
+        private AlarmList(Builder builder) {
+            this.alarmRuleList = builder.alarmRuleList;
+            this.description = builder.description;
+            this.enabled = builder.enabled;
+            this.id = builder.id;
+            this.metric = builder.metric;
+            this.notifyRule = builder.notifyRule;
+            this.ruleName = builder.ruleName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AlarmList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return alarmRuleList
+         */
+        public java.util.List<AlarmRuleList> getAlarmRuleList() {
+            return this.alarmRuleList;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
+        }
+
+        /**
+         * @return metric
+         */
+        public String getMetric() {
+            return this.metric;
+        }
+
+        /**
+         * @return notifyRule
+         */
+        public NotifyRule getNotifyRule() {
+            return this.notifyRule;
+        }
+
+        /**
+         * @return ruleName
+         */
+        public String getRuleName() {
+            return this.ruleName;
+        }
+
+        public static final class Builder {
+            private java.util.List<AlarmRuleList> alarmRuleList; 
+            private String description; 
+            private Boolean enabled; 
+            private Long id; 
+            private String metric; 
+            private NotifyRule notifyRule; 
+            private String ruleName; 
+
+            /**
+             * <p>Alarm Notification configuration array.</p>
+             */
+            public Builder alarmRuleList(java.util.List<AlarmRuleList> alarmRuleList) {
+                this.alarmRuleList = alarmRuleList;
+                return this;
+            }
+
+            /**
+             * <p>Alarm rule description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Description</p>
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * <p>Whether alarm rules are enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * <p>Alarm rule id.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>45242</p>
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * <p>Alarm Type:</p>
+             * <ul>
+             * <li>taskStatus: task status</li>
+             * <li>bizDelay: business latency</li>
+             * <li>taskFailoverCount: monitoring Failover</li>
+             * <li>ddlUnsupport: DDL is not supported</li>
+             * <li>ddlReport: DDL notifications</li>
+             * <li>totalDirtyRecordWriteInLines: dirty data</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>taskStatus</p>
+             */
+            public Builder metric(String metric) {
+                this.metric = metric;
+                return this;
+            }
+
+            /**
+             * <p>Alert notification rule array.</p>
+             */
+            public Builder notifyRule(NotifyRule notifyRule) {
+                this.notifyRule = notifyRule;
+                return this;
+            }
+
+            /**
+             * <p>Alarm rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Delay alert rule name 1</p>
+             */
+            public Builder ruleName(String ruleName) {
+                this.ruleName = ruleName;
+                return this;
+            }
+
+            public AlarmList build() {
+                return new AlarmList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetDISyncTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDISyncTaskResponseBody</p>
+     */
+    public static class SolutionDetail extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CreatorName")
+        private String creatorName;
+
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private Long id;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ProcessContent")
+        @com.aliyun.core.annotation.NameInMap("ProcessContent")
         private String processContent;
 
-        @NameInMap("ProcessExtra")
+        @com.aliyun.core.annotation.NameInMap("ProcessExtra")
         private String processExtra;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
-        @NameInMap("SourceType")
+        @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SubmitTime")
+        @com.aliyun.core.annotation.NameInMap("SubmitTime")
         private String submitTime;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private SolutionDetail(Builder builder) {
@@ -240,7 +693,10 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The ID of the project to which the data synchronization solution belongs.
+             * <p>The creator of the data synchronization solution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dataworks_di</p>
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -248,7 +704,10 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the data synchronization solution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -256,7 +715,10 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The additional parameters of the data synchronization solution.
+             * <p>The name of the data synchronization solution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>holo_20211206161025</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -264,7 +726,10 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the data synchronization solution.
+             * <p>The configuration details of the data synchronization solution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;holoDatasource&quot;:&quot;holo&quot;,&quot;offlineSyncConfig&quot;:{&quot;nodeNameRule&quot;:&quot;oneclick_holo_di_${db_table_name_src}<em>to</em>${db_table_name_dest}&quot;,&quot;resourceGroup&quot;:&quot;group_219193793999490&quot;},&quot;processRuleId&quot;:1007,&quot;readerConcurrent&quot;:10,&quot;realtimeSyncConfig&quot;:{&quot;content&quot;:{&quot;order&quot;:{&quot;hops&quot;:[{&quot;from&quot;:&quot;reader&quot;,&quot;to&quot;:&quot;writer&quot;}]},&quot;setting&quot;:{&quot;speed&quot;:{&quot;readerConcurrent&quot;:10}},&quot;steps&quot;:[{&quot;stepType&quot;:&quot;mysql&quot;,&quot;name&quot;:&quot;reader&quot;,&quot;category&quot;:&quot;reader&quot;,&quot;parameter&quot;:{&quot;connection&quot;:[{&quot;datasource&quot;:&quot;mm&quot;,&quot;datasourceType&quot;:&quot;mysql&quot;,&quot;table&quot;:[]}]}},{&quot;stepType&quot;:&quot;holo&quot;,&quot;name&quot;:&quot;writer&quot;,&quot;category&quot;:&quot;writer&quot;,&quot;parameter&quot;:{&quot;datasource&quot;:&quot;holo&quot;,&quot;writeMode&quot;:&quot;replay&quot;,&quot;datasourceSchema&quot;:&quot;public&quot;,&quot;tableMappingRule&quot;:{&quot;datasource&quot;:[{&quot;tableRule&quot;:[],&quot;srcDatasourceName&quot;:&quot;mm&quot;}]}}}]},&quot;extend&quot;:{&quot;mode&quot;:&quot;migration_holo&quot;,&quot;resourceGroup&quot;:&quot;group_219193793999490&quot;}},&quot;setting&quot;:{&quot;autoCreateWorkflow&quot;:true,&quot;userDefinedFileNameExpression&quot;:&quot;oneclick&quot;},&quot;srcType&quot;:&quot;mysql&quot;,&quot;tableMappingRuleFromRealtimeSyncConfig&quot;:{&quot;datasource&quot;:[{&quot;srcDatasourceName&quot;:&quot;mm&quot;,&quot;tableRule&quot;:[]}]}}</p>
              */
             public Builder processContent(String processContent) {
                 this.processContent = processContent;
@@ -272,7 +737,10 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the data synchronization solution was committed.
+             * <p>The additional parameters of the data synchronization solution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;processType&quot;:&quot;new&quot;,&quot;tableNum&quot;:300}</p>
              */
             public Builder processExtra(String processExtra) {
                 this.processExtra = processExtra;
@@ -280,7 +748,10 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the source of the data synchronization solution.
+             * <p>The ID of the project to which the data synchronization solution belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -288,7 +759,10 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration details of the data synchronization solution.
+             * <p>The type of the source of the data synchronization solution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -296,7 +770,10 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The creator of the data synchronization solution.
+             * <p>The start time of the data synchronization solution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-07 14:40:51</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -304,7 +781,22 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the data synchronization solution.
+             * <p>The status of the data synchronization solution. Valid values:</p>
+             * <ul>
+             * <li>0: successful</li>
+             * <li>1: not running</li>
+             * <li>2: running</li>
+             * <li>3: failed</li>
+             * <li>4: committed</li>
+             * <li>5: pending manual confirmation</li>
+             * <li>6: manually confirmed</li>
+             * <li>7: others</li>
+             * <li>8: waiting</li>
+             * <li>9: deleted</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -312,7 +804,10 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data synchronization solution.
+             * <p>The time when the data synchronization solution was committed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-07 14:40:51</p>
              */
             public Builder submitTime(String submitTime) {
                 this.submitTime = submitTime;
@@ -320,7 +815,10 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the data synchronization solution.
+             * <p>The type of the data synchronization solution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>holo</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -334,20 +832,30 @@ public class GetDISyncTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDISyncTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDISyncTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("AlarmList")
+        private java.util.List<AlarmList> alarmList;
+
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("SolutionDetail")
+        @com.aliyun.core.annotation.NameInMap("SolutionDetail")
         private SolutionDetail solutionDetail;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Data(Builder builder) {
+            this.alarmList = builder.alarmList;
             this.code = builder.code;
             this.message = builder.message;
             this.solutionDetail = builder.solutionDetail;
@@ -360,6 +868,13 @@ public class GetDISyncTaskResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return alarmList
+         */
+        public java.util.List<AlarmList> getAlarmList() {
+            return this.alarmList;
         }
 
         /**
@@ -391,18 +906,28 @@ public class GetDISyncTaskResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<AlarmList> alarmList; 
             private String code; 
             private String message; 
             private SolutionDetail solutionDetail; 
             private String status; 
 
             /**
-             * Indicates whether the details of the real-time synchronization node or data synchronization solution are obtained. Valid values:
-             * <p>
+             * <p>Array of alarm rules associated with real-time tasks.</p>
+             */
+            public Builder alarmList(java.util.List<AlarmList> alarmList) {
+                this.alarmList = alarmList;
+                return this;
+            }
+
+            /**
+             * <ul>
+             * <li>If the TaskType parameter is set to DI_REALTIME, the details of the real-time synchronization task are returned.</li>
+             * <li>If the TaskType parameter is set to DI_SOLUTION, the value null is returned.</li>
+             * </ul>
              * 
-             * success: The details are obtained.
-             * 
-             * fail: The details fail to be obtained.
+             * <strong>example:</strong>
+             * <p>{&quot;extend&quot;:{&quot;mode&quot;:&quot;wizard&quot;,&quot;resourceGroup&quot;:&quot;S_res_group_287114642182658_1560324290517&quot;},&quot;nodeDef&quot;:{},&quot;order&quot;:{&quot;hops&quot;:[{&quot;from&quot;:&quot;datahub_8htXSsfiS2vtZCVG&quot;,&quot;to&quot;:&quot;datahub_CRHBAyGfhSaLmv2f&quot;}]},&quot;setting&quot;:{&quot;errorLimit&quot;:{},&quot;jvmOption&quot;:&quot;&quot;},&quot;steps&quot;:[{&quot;stepType&quot;:&quot;datahub&quot;,&quot;category&quot;:&quot;writer&quot;,&quot;displayName&quot;:&quot;DataHub1&quot;,&quot;parameter&quot;:{&quot;batchSize&quot;:1000,&quot;datasource&quot;:&quot;datahub_cloud_dev_test&quot;,&quot;topic&quot;:&quot;dwd_tfc_opt_speed_rid_amap_rt&quot;},&quot;name&quot;:&quot;datahub_CRHBAyGfhSaLmv2f&quot;,&quot;gui&quot;:{&quot;x&quot;:262,&quot;y&quot;:325}},{&quot;stepType&quot;:&quot;datahub&quot;,&quot;displayName&quot;:&quot;DataHub2&quot;,&quot;parameter&quot;:{&quot;datasource&quot;:&quot;datahub_uric_test&quot;,&quot;topic&quot;:&quot;dwd_tfc_opt_speed_rid_amap_rt_330000&quot;,&quot;batchSize&quot;:1000},&quot;name&quot;:&quot;datahub_8htXSsfiS2vtZCVG&quot;,&quot;gui&quot;:{&quot;x&quot;:268,&quot;y&quot;:160.5},&quot;category&quot;:&quot;writer&quot;}]}</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -410,9 +935,11 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * *   If the TaskType parameter is set to DI_REALTIME, the value null is returned.
-             * <p>
-             * *   If the TaskType parameter is set to DI_SOLUTION, the details of the data synchronization solution task are returned.
+             * <p>The cause of the failure to obtain the details of the real-time synchronization task or data synchronization solution.</p>
+             * <p>If the details of the real-time synchronization task or data synchronization solution are obtained, the value null is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fileId:[100] is invalid.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -420,19 +947,10 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the data synchronization solution. Valid values:
-             * <p>
-             * 
-             * *   0: successful
-             * *   1: not running
-             * *   2: running
-             * *   3: failed
-             * *   4: committed
-             * *   5: pending manual confirmation
-             * *   6: manually confirmed
-             * *   7: others
-             * *   8: waiting
-             * *   9: deleted
+             * <ul>
+             * <li>If the TaskType parameter is set to DI_REALTIME, the value null is returned.</li>
+             * <li>If the TaskType parameter is set to DI_SOLUTION, the details of the data synchronization solution are returned.</li>
+             * </ul>
              */
             public Builder solutionDetail(SolutionDetail solutionDetail) {
                 this.solutionDetail = solutionDetail;
@@ -440,10 +958,11 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The cause of the failure to obtain the details of the real-time synchronization node or data synchronization solution.
-             * <p>
+             * <p>Indicates whether the details of the real-time synchronization task or data synchronization solution are obtained. Valid values:</p>
+             * <p>success: The details are obtained. fail: The details fail to be obtained.</p>
              * 
-             * If the details of the real-time synchronization node or data synchronization solution are obtained, the value null is returned.
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;

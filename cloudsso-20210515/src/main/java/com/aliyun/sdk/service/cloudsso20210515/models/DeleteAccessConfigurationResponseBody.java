@@ -1,18 +1,18 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAccessConfigurationResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteAccessConfigurationResponseBody</p>
  */
 public class DeleteAccessConfigurationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteAccessConfigurationResponseBody(Builder builder) {
@@ -38,7 +38,10 @@ public class DeleteAccessConfigurationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9B13E4EE-3853-5852-9165-597C32AD8FB7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

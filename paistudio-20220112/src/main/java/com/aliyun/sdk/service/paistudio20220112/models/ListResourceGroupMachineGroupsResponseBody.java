@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourceGroupMachineGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListResourceGroupMachineGroupsResponseBody</p>
  */
 public class ListResourceGroupMachineGroupsResponseBody extends TeaModel {
-    @NameInMap("MachineGroups")
-    private java.util.List < MachineGroup > machineGroups;
+    @com.aliyun.core.annotation.NameInMap("MachineGroups")
+    private java.util.List<MachineGroup> machineGroups;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private ListResourceGroupMachineGroupsResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ListResourceGroupMachineGroupsResponseBody extends TeaModel {
     /**
      * @return machineGroups
      */
-    public java.util.List < MachineGroup > getMachineGroups() {
+    public java.util.List<MachineGroup> getMachineGroups() {
         return this.machineGroups;
     }
 
@@ -57,14 +62,14 @@ public class ListResourceGroupMachineGroupsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < MachineGroup > machineGroups; 
+        private java.util.List<MachineGroup> machineGroups; 
         private String requestId; 
         private String totalCount; 
 
         /**
          * MachineGroups.
          */
-        public Builder machineGroups(java.util.List < MachineGroup > machineGroups) {
+        public Builder machineGroups(java.util.List<MachineGroup> machineGroups) {
             this.machineGroups = machineGroups;
             return this;
         }

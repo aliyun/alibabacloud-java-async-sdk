@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSlsIndexRequest} extends {@link RequestModel}
  *
  * <p>CreateSlsIndexRequest</p>
  */
 public class CreateSlsIndexRequest extends Request {
-    @NameInMap("logstore")
+    @com.aliyun.core.annotation.NameInMap("logstore")
     private String logstore;
 
-    @NameInMap("project")
+    @com.aliyun.core.annotation.NameInMap("project")
     private String project;
 
     private CreateSlsIndexRequest(Builder builder) {

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteUserKeyResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteUserKeyResponseBody</p>
  */
 public class DeleteUserKeyResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private DeleteUserKeyResponseBody(Builder builder) {
@@ -131,38 +136,44 @@ public class DeleteUserKeyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteUserKeyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteUserKeyResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("context")
+        @com.aliyun.core.annotation.NameInMap("context")
         private String context;
 
-        @NameInMap("createdAt")
+        @com.aliyun.core.annotation.NameInMap("createdAt")
         private String createdAt;
 
-        @NameInMap("expireTime")
+        @com.aliyun.core.annotation.NameInMap("expireTime")
         private String expireTime;
 
-        @NameInMap("fingerPrint")
+        @com.aliyun.core.annotation.NameInMap("fingerPrint")
         private String fingerPrint;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("keyScope")
+        @com.aliyun.core.annotation.NameInMap("keyScope")
         private String keyScope;
 
-        @NameInMap("lastUsedTime")
+        @com.aliyun.core.annotation.NameInMap("lastUsedTime")
         private String lastUsedTime;
 
-        @NameInMap("publicKey")
+        @com.aliyun.core.annotation.NameInMap("publicKey")
         private String publicKey;
 
-        @NameInMap("shaContext")
+        @com.aliyun.core.annotation.NameInMap("shaContext")
         private String shaContext;
 
-        @NameInMap("title")
+        @com.aliyun.core.annotation.NameInMap("title")
         private String title;
 
-        @NameInMap("updatedAt")
+        @com.aliyun.core.annotation.NameInMap("updatedAt")
         private String updatedAt;
 
         private Result(Builder builder) {

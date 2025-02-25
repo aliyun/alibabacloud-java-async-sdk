@@ -1,80 +1,85 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInvadeEventListRequest} extends {@link RequestModel}
  *
  * <p>DescribeInvadeEventListRequest</p>
  */
 public class DescribeInvadeEventListRequest extends Request {
-    @Query
-    @NameInMap("AssetsIP")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssetsIP")
     private String assetsIP;
 
-    @Query
-    @NameInMap("AssetsInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssetsInstanceId")
     private String assetsInstanceId;
 
-    @Query
-    @NameInMap("AssetsInstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssetsInstanceName")
     private String assetsInstanceName;
 
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private String currentPage;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("EventKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventKey")
     private String eventKey;
 
-    @Query
-    @NameInMap("EventName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventName")
     private String eventName;
 
-    @Query
-    @NameInMap("EventUuid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventUuid")
     private String eventUuid;
 
-    @Query
-    @NameInMap("IsIgnore")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsIgnore")
     private String isIgnore;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("MemberUid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MemberUid")
     private Long memberUid;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @Query
-    @NameInMap("ProcessStatusList")
-    private java.util.List < Integer > processStatusList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProcessStatusList")
+    private java.util.List<Integer> processStatusList;
 
-    @Query
-    @NameInMap("RiskLevel")
-    private java.util.List < Integer > riskLevel;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RiskLevel")
+    private java.util.List<Integer> riskLevel;
 
-    @Query
-    @NameInMap("SourceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceIp")
     @Deprecated
     private String sourceIp;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeInvadeEventListRequest(Builder builder) {
@@ -197,14 +202,14 @@ public class DescribeInvadeEventListRequest extends Request {
     /**
      * @return processStatusList
      */
-    public java.util.List < Integer > getProcessStatusList() {
+    public java.util.List<Integer> getProcessStatusList() {
         return this.processStatusList;
     }
 
     /**
      * @return riskLevel
      */
-    public java.util.List < Integer > getRiskLevel() {
+    public java.util.List<Integer> getRiskLevel() {
         return this.riskLevel;
     }
 
@@ -235,8 +240,8 @@ public class DescribeInvadeEventListRequest extends Request {
         private String lang; 
         private Long memberUid; 
         private String pageSize; 
-        private java.util.List < Integer > processStatusList; 
-        private java.util.List < Integer > riskLevel; 
+        private java.util.List<Integer> processStatusList; 
+        private java.util.List<Integer> riskLevel; 
         private String sourceIp; 
         private String startTime; 
 
@@ -265,7 +270,10 @@ public class DescribeInvadeEventListRequest extends Request {
         } 
 
         /**
-         * The IP address of the affected asset.
+         * <p>The IP address of the affected asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.XX.XX</p>
          */
         public Builder assetsIP(String assetsIP) {
             this.putQueryParameter("AssetsIP", assetsIP);
@@ -274,7 +282,10 @@ public class DescribeInvadeEventListRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ins_1321_asedb_****</p>
          */
         public Builder assetsInstanceId(String assetsInstanceId) {
             this.putQueryParameter("AssetsInstanceId", assetsInstanceId);
@@ -283,7 +294,10 @@ public class DescribeInvadeEventListRequest extends Request {
         }
 
         /**
-         * The name of the instance.
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS_test</p>
          */
         public Builder assetsInstanceName(String assetsInstanceName) {
             this.putQueryParameter("AssetsInstanceName", assetsInstanceName);
@@ -292,10 +306,11 @@ public class DescribeInvadeEventListRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
-         * <p>
+         * <p>The number of the page to return.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -304,7 +319,10 @@ public class DescribeInvadeEventListRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The value is a UNIX timestamp. Unit: seconds. If you do not specify this parameter, the query ends at the current time.
+         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds. If you do not specify this parameter, the query ends at the current time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1656837360</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -313,7 +331,10 @@ public class DescribeInvadeEventListRequest extends Request {
         }
 
         /**
-         * The ID of the breach awareness event.
+         * <p>The ID of the breach awareness event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69d189e2-ec17-4676-a2fe-02969234****</p>
          */
         public Builder eventKey(String eventKey) {
             this.putQueryParameter("EventKey", eventKey);
@@ -322,7 +343,10 @@ public class DescribeInvadeEventListRequest extends Request {
         }
 
         /**
-         * The name of the breach awareness event.
+         * <p>The name of the breach awareness event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>event_test</p>
          */
         public Builder eventName(String eventName) {
             this.putQueryParameter("EventName", eventName);
@@ -331,7 +355,10 @@ public class DescribeInvadeEventListRequest extends Request {
         }
 
         /**
-         * The UUID of the breach awareness event.
+         * <p>The UUID of the breach awareness event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fadd-dfdd-****</p>
          */
         public Builder eventUuid(String eventUuid) {
             this.putQueryParameter("EventUuid", eventUuid);
@@ -340,11 +367,14 @@ public class DescribeInvadeEventListRequest extends Request {
         }
 
         /**
-         * Specifies whether the breach awareness event is ignored. Valid values:
-         * <p>
+         * <p>Specifies whether the breach awareness event is ignored. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The breach awareness event is ignored.</li>
+         * <li><strong>false</strong>: The breach awareness event is not ignored.</li>
+         * </ul>
          * 
-         * *   **true**: The breach awareness event is ignored.
-         * *   **false**: The breach awareness event is not ignored.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isIgnore(String isIgnore) {
             this.putQueryParameter("IsIgnore", isIgnore);
@@ -353,11 +383,14 @@ public class DescribeInvadeEventListRequest extends Request {
         }
 
         /**
-         * The language of the content within the response. Valid values:
-         * <p>
+         * <p>The language of the content within the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -366,7 +399,10 @@ public class DescribeInvadeEventListRequest extends Request {
         }
 
         /**
-         * The ID of the member.
+         * <p>The ID of the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>135809047715****</p>
          */
         public Builder memberUid(Long memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -375,10 +411,11 @@ public class DescribeInvadeEventListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Default value: 6. Maximum value: 10.</p>
          * 
-         * Default value: 6. Maximum value: 10.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -387,25 +424,28 @@ public class DescribeInvadeEventListRequest extends Request {
         }
 
         /**
-         * The handling status of breach awareness events.
+         * <p>The handling status of breach awareness events.</p>
          */
-        public Builder processStatusList(java.util.List < Integer > processStatusList) {
+        public Builder processStatusList(java.util.List<Integer> processStatusList) {
             this.putQueryParameter("ProcessStatusList", processStatusList);
             this.processStatusList = processStatusList;
             return this;
         }
 
         /**
-         * The risk levels.
+         * <p>The risk levels.</p>
          */
-        public Builder riskLevel(java.util.List < Integer > riskLevel) {
+        public Builder riskLevel(java.util.List<Integer> riskLevel) {
             this.putQueryParameter("RiskLevel", riskLevel);
             this.riskLevel = riskLevel;
             return this;
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -414,7 +454,10 @@ public class DescribeInvadeEventListRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds. If you do not specify this parameter, the query starts from 30 days before the current time.
+         * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds. If you do not specify this parameter, the query starts from 30 days before the current time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1656750960</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

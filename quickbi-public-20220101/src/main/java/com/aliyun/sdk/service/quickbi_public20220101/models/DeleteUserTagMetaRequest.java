@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteUserTagMetaRequest} extends {@link RequestModel}
  *
  * <p>DeleteUserTagMetaRequest</p>
  */
 public class DeleteUserTagMetaRequest extends Request {
-    @Query
-    @NameInMap("TagId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tagId;
 
     private DeleteUserTagMetaRequest(Builder builder) {
@@ -55,7 +60,10 @@ public class DeleteUserTagMetaRequest extends Request {
         } 
 
         /**
-         * TagId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pop_001</p>
          */
         public Builder tagId(String tagId) {
             this.putQueryParameter("TagId", tagId);

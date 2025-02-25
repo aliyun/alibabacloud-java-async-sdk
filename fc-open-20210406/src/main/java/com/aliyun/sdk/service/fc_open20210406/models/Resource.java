@@ -50,7 +50,7 @@ public class Resource extends TeaModel {
         private java.util.Map < String, String > tags; 
 
         /**
-         * resourceArn
+         * resourceArn.
          */
         public Builder resourceArn(String resourceArn) {
             this.resourceArn = resourceArn;
@@ -58,7 +58,7 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * tags
+         * tags.
          */
         public Builder tags(java.util.Map < String, String > tags) {
             this.tags = tags;

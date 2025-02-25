@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPasswordComplexityConfigurationResponseBody} extends {@link TeaModel}
  *
  * <p>GetPasswordComplexityConfigurationResponseBody</p>
  */
 public class GetPasswordComplexityConfigurationResponseBody extends TeaModel {
-    @NameInMap("PasswordComplexityConfiguration")
+    @com.aliyun.core.annotation.NameInMap("PasswordComplexityConfiguration")
     private PasswordComplexityConfiguration passwordComplexityConfiguration;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetPasswordComplexityConfigurationResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetPasswordComplexityConfigurationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The password complexity configurations.
+         * <p>The password complexity configurations.</p>
          */
         public Builder passwordComplexityConfiguration(PasswordComplexityConfiguration passwordComplexityConfiguration) {
             this.passwordComplexityConfiguration = passwordComplexityConfiguration;
@@ -58,7 +63,10 @@ public class GetPasswordComplexityConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,8 +79,14 @@ public class GetPasswordComplexityConfigurationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPasswordComplexityConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPasswordComplexityConfigurationResponseBody</p>
+     */
     public static class PasswordComplexityRules extends TeaModel {
-        @NameInMap("PasswordCheckType")
+        @com.aliyun.core.annotation.NameInMap("PasswordCheckType")
         private String passwordCheckType;
 
         private PasswordComplexityRules(Builder builder) {
@@ -98,17 +112,20 @@ public class GetPasswordComplexityConfigurationResponseBody extends TeaModel {
             private String passwordCheckType; 
 
             /**
-             * The type of the password check. Valid values:
-             * <p>
+             * <p>The type of the password check. Valid values:</p>
+             * <ul>
+             * <li>inclusion_upper_case: The password must contain uppercase letters.</li>
+             * <li>inclusion_lower_case: The password must contain lowercase letters.</li>
+             * <li>inclusion_special_case: The password must contain one or more of the following special characters: @ % + \ / &quot; ! # $ ^ ? : , ( ) { } [ ] ~ - _ .</li>
+             * <li>inclusion_number: The password must contain digits.</li>
+             * <li>exclusion_username: The password cannot contain a username.</li>
+             * <li>exclusion_email: The password cannot contain an email prefix.</li>
+             * <li>exclusion_phone_number: The password cannot contain a mobile number.</li>
+             * <li>exclusion_display_name: The password cannot contain a display name.</li>
+             * </ul>
              * 
-             * *   inclusion_upper_case: The password must contain uppercase letters.
-             * *   inclusion_lower_case: The password must contain lowercase letters.
-             * *   inclusion_special_case: The password must contain one or more of the following special characters: @ % + \ / \" ! # $ ^ ? : , ( ) { } \[ ] ~ - \_ .
-             * *   inclusion_number: The password must contain digits.
-             * *   exclusion_username: The password cannot contain a username.
-             * *   exclusion_email: The password cannot contain an email prefix.
-             * *   exclusion_phone_number: The password cannot contain a mobile number.
-             * *   exclusion_display_name: The password cannot contain a display name.
+             * <strong>example:</strong>
+             * <p>inclusion_upper_case</p>
              */
             public Builder passwordCheckType(String passwordCheckType) {
                 this.passwordCheckType = passwordCheckType;
@@ -122,11 +139,17 @@ public class GetPasswordComplexityConfigurationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPasswordComplexityConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPasswordComplexityConfigurationResponseBody</p>
+     */
     public static class PasswordComplexityConfiguration extends TeaModel {
-        @NameInMap("PasswordComplexityRules")
-        private java.util.List < PasswordComplexityRules> passwordComplexityRules;
+        @com.aliyun.core.annotation.NameInMap("PasswordComplexityRules")
+        private java.util.List<PasswordComplexityRules> passwordComplexityRules;
 
-        @NameInMap("PasswordMinLength")
+        @com.aliyun.core.annotation.NameInMap("PasswordMinLength")
         private Integer passwordMinLength;
 
         private PasswordComplexityConfiguration(Builder builder) {
@@ -145,7 +168,7 @@ public class GetPasswordComplexityConfigurationResponseBody extends TeaModel {
         /**
          * @return passwordComplexityRules
          */
-        public java.util.List < PasswordComplexityRules> getPasswordComplexityRules() {
+        public java.util.List<PasswordComplexityRules> getPasswordComplexityRules() {
             return this.passwordComplexityRules;
         }
 
@@ -157,19 +180,22 @@ public class GetPasswordComplexityConfigurationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < PasswordComplexityRules> passwordComplexityRules; 
+            private java.util.List<PasswordComplexityRules> passwordComplexityRules; 
             private Integer passwordMinLength; 
 
             /**
-             * The password complexity rules.
+             * <p>The password complexity rules.</p>
              */
-            public Builder passwordComplexityRules(java.util.List < PasswordComplexityRules> passwordComplexityRules) {
+            public Builder passwordComplexityRules(java.util.List<PasswordComplexityRules> passwordComplexityRules) {
                 this.passwordComplexityRules = passwordComplexityRules;
                 return this;
             }
 
             /**
-             * The minimum number of characters in a password.
+             * <p>The minimum number of characters in a password.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder passwordMinLength(Integer passwordMinLength) {
                 this.passwordMinLength = passwordMinLength;

@@ -851,7 +851,7 @@ public class ListResourcePoolResponseBody extends TeaModel {
             }
 
             /**
-             * QualifiedName.
+             * QualifiedName。
              */
             public Builder qualifiedName(String qualifiedName) {
                 this.qualifiedName = qualifiedName;

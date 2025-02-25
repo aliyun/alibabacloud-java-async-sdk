@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOpenStoreUsageResponseBody} extends {@link TeaModel}
  *
  * <p>GetOpenStoreUsageResponseBody</p>
  */
 public class GetOpenStoreUsageResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private GetOpenStoreUsageResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class GetOpenStoreUsageResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E1DE2491-804F-4C86-BAB4-548DD70B****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class GetOpenStoreUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The current request result.
+         * <p>The current request result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -71,11 +74,17 @@ public class GetOpenStoreUsageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetOpenStoreUsageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOpenStoreUsageResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("currentUsage")
+        @com.aliyun.core.annotation.NameInMap("currentUsage")
         private Long currentUsage;
 
-        @NameInMap("lastDayUsage")
+        @com.aliyun.core.annotation.NameInMap("lastDayUsage")
         private Long lastDayUsage;
 
         private Result(Builder builder) {
@@ -110,7 +119,10 @@ public class GetOpenStoreUsageResponseBody extends TeaModel {
             private Long lastDayUsage; 
 
             /**
-             * The current OpenStore storage capacity (estimated value based on actual indexes). Unit: Byte.
+             * <p>The current OpenStore storage capacity (estimated value based on actual indexes). Unit: Byte.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>204800</p>
              */
             public Builder currentUsage(Long currentUsage) {
                 this.currentUsage = currentUsage;
@@ -118,7 +130,10 @@ public class GetOpenStoreUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The storage capacity of OpenStore yesterday. Unit: bytes.
+             * <p>The storage capacity of OpenStore yesterday. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>184320</p>
              */
             public Builder lastDayUsage(Long lastDayUsage) {
                 this.lastDayUsage = lastDayUsage;

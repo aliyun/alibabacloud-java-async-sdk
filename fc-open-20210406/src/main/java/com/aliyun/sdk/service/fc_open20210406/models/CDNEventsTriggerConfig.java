@@ -74,7 +74,7 @@ public class CDNEventsTriggerConfig extends TeaModel {
         private String notes; 
 
         /**
-         * eventName
+         * eventName.
          */
         public Builder eventName(String eventName) {
             this.eventName = eventName;
@@ -82,7 +82,7 @@ public class CDNEventsTriggerConfig extends TeaModel {
         }
 
         /**
-         * eventVersion
+         * eventVersion.
          */
         public Builder eventVersion(String eventVersion) {
             this.eventVersion = eventVersion;
@@ -90,7 +90,7 @@ public class CDNEventsTriggerConfig extends TeaModel {
         }
 
         /**
-         * filter
+         * filter.
          */
         public Builder filter(java.util.Map < String, java.util.List<String>> filter) {
             this.filter = filter;
@@ -98,7 +98,7 @@ public class CDNEventsTriggerConfig extends TeaModel {
         }
 
         /**
-         * notes
+         * notes.
          */
         public Builder notes(String notes) {
             this.notes = notes;

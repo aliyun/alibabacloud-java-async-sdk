@@ -1,108 +1,112 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDataServiceApiRequest} extends {@link RequestModel}
  *
  * <p>CreateDataServiceApiRequest</p>
  */
 public class CreateDataServiceApiRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("ApiDescription")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApiDescription")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String apiDescription;
 
-    @Body
-    @NameInMap("ApiMode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApiMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer apiMode;
 
-    @Body
-    @NameInMap("ApiName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApiName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String apiName;
 
-    @Body
-    @NameInMap("ApiPath")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApiPath")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String apiPath;
 
-    @Body
-    @NameInMap("FolderId")
-    @Validation()
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FolderId")
+    @com.aliyun.core.annotation.Validation()
     private Long folderId;
 
-    @Body
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Body
-    @NameInMap("ProjectId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long projectId;
 
-    @Body
-    @NameInMap("Protocols")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Protocols")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String protocols;
 
-    @Body
-    @NameInMap("RegistrationDetails")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegistrationDetails")
     private String registrationDetails;
 
-    @Body
-    @NameInMap("RequestContentType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RequestContentType")
     private Integer requestContentType;
 
-    @Body
-    @NameInMap("RequestMethod")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RequestMethod")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer requestMethod;
 
-    @Body
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private Long resourceGroupId;
 
-    @Body
-    @NameInMap("ResponseContentType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResponseContentType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer responseContentType;
 
-    @Body
-    @NameInMap("ScriptDetails")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ScriptDetails")
     private String scriptDetails;
 
-    @Body
-    @NameInMap("SqlMode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SqlMode")
     private Long sqlMode;
 
-    @Body
-    @NameInMap("TenantId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
     private Long tenantId;
 
-    @Body
-    @NameInMap("Timeout")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Timeout")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer timeout;
 
-    @Body
-    @NameInMap("VisibleRange")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VisibleRange")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer visibleRange;
 
-    @Body
-    @NameInMap("WizardDetails")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WizardDetails")
     private String wizardDetails;
 
     private CreateDataServiceApiRequest(Builder builder) {
@@ -333,7 +337,7 @@ public class CreateDataServiceApiRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -342,7 +346,11 @@ public class CreateDataServiceApiRequest extends Request {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The description of the API.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test API description</p>
          */
         public Builder apiDescription(String apiDescription) {
             this.putBodyParameter("ApiDescription", apiDescription);
@@ -351,7 +359,11 @@ public class CreateDataServiceApiRequest extends Request {
         }
 
         /**
-         * The format in which the response of the API request is returned. Valid values: 0 and 1. The value 0 indicates the JSON format. The value 1 indicates the XML format. APIs generated in wizard or script mode support the JSON format. APIs generated by registration support the JSON and XML formats.
+         * <p>The type of the API. Valid values: 0, 1, and 2. The value 0 indicates that the API is generated in wizard mode. The value 1 indicates that the API is generated in script mode. The value 2 indicates that the API is generated by registration.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder apiMode(Integer apiMode) {
             this.putBodyParameter("ApiMode", apiMode);
@@ -360,7 +372,11 @@ public class CreateDataServiceApiRequest extends Request {
         }
 
         /**
-         * The type of the API. Valid values: 0, 1, and 2. The value 0 indicates that the API is generated in wizard mode. The value 1 indicates that the API is generated in script mode. The value 2 indicates that the API is generated by registration.
+         * <p>The name of the API. The name must be 4 to 50 characters in length. The name can contain letters, digits, and underscores (_) and must start with a letter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test API name</p>
          */
         public Builder apiName(String apiName) {
             this.putBodyParameter("ApiName", apiName);
@@ -369,7 +385,11 @@ public class CreateDataServiceApiRequest extends Request {
         }
 
         /**
-         * The ID of the folder used to store the API. The ID of the root folder in a business process is 0. The ID of the folder created by a user must be greater than 0.
+         * <p>The path of the API. The path cannot exceed 200 characters in length. The path can contain letters, digits, underscores (_), and hyphens (-) and must start with a forward slash (/).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/test/1</p>
          */
         public Builder apiPath(String apiPath) {
             this.putBodyParameter("ApiPath", apiPath);
@@ -378,7 +398,10 @@ public class CreateDataServiceApiRequest extends Request {
         }
 
         /**
-         * The ID of the API.
+         * <p>The ID of the folder used to store the API. The ID of the root folder in a business process is 0. The ID of the folder created by a user must be greater than 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder folderId(Long folderId) {
             this.putBodyParameter("FolderId", folderId);
@@ -387,7 +410,11 @@ public class CreateDataServiceApiRequest extends Request {
         }
 
         /**
-         * The request method of the API. Valid values: 0, 1, 2, and 3. The value 0 indicates the GET method. The value 1 indicates the POST method. The value 2 indicates the PUT method. The value 3 indicates the DELETE method. APIs generated in wizard or script mode support the GET and POST methods. APIs generated by registration support the GET, POST, PUT, and DELETE methods.
+         * <p>The business process ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Business process ID</p>
          */
         public Builder groupId(String groupId) {
             this.putBodyParameter("GroupId", groupId);
@@ -396,7 +423,11 @@ public class CreateDataServiceApiRequest extends Request {
         }
 
         /**
-         * The ID of the business process.
+         * <p>The workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -405,7 +436,11 @@ public class CreateDataServiceApiRequest extends Request {
         }
 
         /**
-         * The details of the API generated in script mode. For more information, see the ScriptDetails parameter returned by the [GetDataServiceApi](~~174013~~) operation.
+         * <p>The protocol used by the API. Valid values: 0 and 1. The value 0 indicates HTTP. The value 1 indicates HTTPS. You can specify multiple protocols. Separate them with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0,1</p>
          */
         public Builder protocols(String protocols) {
             this.putBodyParameter("Protocols", protocols);
@@ -414,7 +449,10 @@ public class CreateDataServiceApiRequest extends Request {
         }
 
         /**
-         * The description of the API.
+         * <p>The details of the API generated by registration. For more information, see the registrationDetails parameter returned by the <a href="https://help.aliyun.com/document_detail/174013.html">GetDataServiceApi</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;failedResultSample&quot;:&quot;fail&quot;,&quot;registrationErrorCodes&quot;:[{&quot;errorCode&quot;:&quot;e1&quot;,&quot;errorMessage&quot;:&quot;msg1&quot;,&quot;errorSolution&quot;:&quot;sol1&quot;},{&quot;errorCode&quot;:&quot;e2&quot;,&quot;errorMessage&quot;:&quot;msg2&quot;,&quot;errorSolution&quot;:&quot;sol2&quot;}],&quot;registrationRequestParameters&quot;:[{&quot;columnName&quot;:&quot;&quot;,&quot;defaultValue&quot;:&quot;&quot;,&quot;exampleValue&quot;:&quot;&quot;,&quot;isRequiredParameter&quot;:true,&quot;parameterDataType&quot;:0,&quot;parameterDescription&quot;:&quot;&quot;,&quot;parameterName&quot;:&quot;id&quot;,&quot;parameterOperator&quot;:0,&quot;parameterPosition&quot;:1},{&quot;columnName&quot;:&quot;&quot;,&quot;defaultValue&quot;:&quot;xx&quot;,&quot;exampleValue&quot;:&quot;&quot;,&quot;isRequiredParameter&quot;:true,&quot;parameterDataType&quot;:0,&quot;parameterDescription&quot;:&quot;&quot;,&quot;parameterName&quot;:&quot;cc&quot;,&quot;parameterOperator&quot;:2,&quot;parameterPosition&quot;:2}],&quot;serviceContentType&quot;:1,&quot;serviceHost&quot;:&quot;<a href="http://www.baidu.com%22,%22servicePath%22:%22/%5Buid%5D%22,%22serviceRequestBodyDescription%22:%22body%22,%22successfulResultSample%22:%22success%22%7D">http://www.baidu.com&quot;,&quot;servicePath&quot;:&quot;/[uid]&quot;,&quot;serviceRequestBodyDescription&quot;:&quot;body&quot;,&quot;successfulResultSample&quot;:&quot;success&quot;}</a></p>
          */
         public Builder registrationDetails(String registrationDetails) {
             this.putBodyParameter("RegistrationDetails", registrationDetails);
@@ -423,7 +461,15 @@ public class CreateDataServiceApiRequest extends Request {
         }
 
         /**
-         * RequestContentType.
+         * <p>The format of the data to be requested. Valid values:</p>
+         * <ul>
+         * <li>0: XML format</li>
+         * <li>1: JSON format</li>
+         * <li>2: form format</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder requestContentType(Integer requestContentType) {
             this.putBodyParameter("RequestContentType", requestContentType);
@@ -432,7 +478,11 @@ public class CreateDataServiceApiRequest extends Request {
         }
 
         /**
-         * The timeout period of the API request. Unit: milliseconds. Valid values: (0,30000].
+         * <p>The request method of the API. Valid values: 0, 1, 2, and 3. The value 0 indicates the GET method. The value 1 indicates the POST method. The value 2 indicates the PUT method. The value 3 indicates the DELETE method. APIs generated in wizard or script mode support the GET and POST methods. APIs generated by registration support the GET, POST, PUT, and DELETE methods.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder requestMethod(Integer requestMethod) {
             this.putBodyParameter("RequestMethod", requestMethod);
@@ -441,7 +491,10 @@ public class CreateDataServiceApiRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the exclusive resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3242432423</p>
          */
         public Builder resourceGroupId(Long resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -450,11 +503,11 @@ public class CreateDataServiceApiRequest extends Request {
         }
 
         /**
-         * The scope in which the API is visible. Valid values:
-         * <p>
+         * <p>The format in which the response of the API request is returned. Valid values: 0 and 1. The value 0 indicates the JSON format. The value 1 indicates the XML format. APIs generated in wizard or script mode support the JSON format. APIs generated by registration support the JSON and XML formats.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   0: The API is visible to all members in the workspace.
-         * *   1: The API is visible only to its owner, and permissions on the API cannot be granted to other members.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder responseContentType(Integer responseContentType) {
             this.putBodyParameter("ResponseContentType", responseContentType);
@@ -463,7 +516,10 @@ public class CreateDataServiceApiRequest extends Request {
         }
 
         /**
-         * The path of the API. The path cannot exceed 200 characters in length. The path can contain letters, digits, underscores (\_), and hyphens (-) and must start with a forward slash (/).
+         * <p>The details of the API generated in script mode. For more information, see the scriptDetails parameter returned by the <a href="https://help.aliyun.com/document_detail/174013.html">GetDataServiceApi</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;isPagedResponse&quot;:false,&quot;script&quot;:&quot;select id as id1, name as name1 from person where id=${inputid}&quot;,&quot;scriptConnection&quot;:{&quot;connectionId&quot;:122786,&quot;tableName&quot;:&quot;person&quot;},&quot;scriptRequestParameters&quot;:[{&quot;defaultValue&quot;:&quot;&quot;,&quot;exampleValue&quot;:&quot;&quot;,&quot;isRequiredParameter&quot;:true,&quot;parameterDataType&quot;:0,&quot;parameterDescription&quot;:&quot;&quot;,&quot;parameterName&quot;:&quot;inputid&quot;,&quot;parameterOperator&quot;:0,&quot;parameterPosition&quot;:1}],&quot;scriptResponseParameters&quot;:[{&quot;exampleValue&quot;:&quot;&quot;,&quot;parameterDataType&quot;:0,&quot;parameterDescription&quot;:&quot;&quot;,&quot;parameterName&quot;:&quot;id1&quot;},{&quot;exampleValue&quot;:&quot;&quot;,&quot;parameterDataType&quot;:0,&quot;parameterDescription&quot;:&quot;&quot;,&quot;parameterName&quot;:&quot;name1&quot;}]}</p>
          */
         public Builder scriptDetails(String scriptDetails) {
             this.putBodyParameter("ScriptDetails", scriptDetails);
@@ -472,7 +528,13 @@ public class CreateDataServiceApiRequest extends Request {
         }
 
         /**
-         * SqlMode.
+         * <ul>
+         * <li>The SQL mode. Valid values: 0: The basic mode is used.</li>
+         * <li>1: Mybatis is used.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder sqlMode(Long sqlMode) {
             this.putBodyParameter("SqlMode", sqlMode);
@@ -481,7 +543,10 @@ public class CreateDataServiceApiRequest extends Request {
         }
 
         /**
-         * The name of the API. The name must be 4 to 50 characters in length. The name can contain letters, digits, and underscores (\_) and must start with a letter.
+         * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
          */
         public Builder tenantId(Long tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -490,7 +555,11 @@ public class CreateDataServiceApiRequest extends Request {
         }
 
         /**
-         * The protocol used by the API. Valid values: 0 and 1. The value 0 indicates HTTP. The value 1 indicates HTTPS. You can specify multiple protocols. Separate them with commas (,).
+         * <p>The timeout period of the API request. Unit: milliseconds. Valid values: (0,30000].</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder timeout(Integer timeout) {
             this.putBodyParameter("Timeout", timeout);
@@ -499,7 +568,11 @@ public class CreateDataServiceApiRequest extends Request {
         }
 
         /**
-         * The details of the API generated in wizard mode. For more information, see the WizardDetails parameter returned by the [GetDataServiceApi](~~174013~~) operation.
+         * <p>The scope in which the API is visible. Valid values: 0 and 1. The value 0 indicates that the API is visible to all members in the workspace. The value 1 indicates that the API is visible only to its owner.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder visibleRange(Integer visibleRange) {
             this.putBodyParameter("VisibleRange", visibleRange);
@@ -508,7 +581,10 @@ public class CreateDataServiceApiRequest extends Request {
         }
 
         /**
-         * The details of the API generated by registration. For more information, see the RegistrationDetails parameter returned by the [GetDataServiceApi](~~174013~~) operation.
+         * <p>The details of the API generated in wizard mode. For more information, see the WizardDetails parameter returned by the <a href="https://help.aliyun.com/document_detail/174013.html">GetDataServiceApi</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;isPagedResponse&quot;:true,&quot;wizardConnection&quot;:{&quot;connectionId&quot;:122786,&quot;tableName&quot;:&quot;person&quot;},&quot;wizardRequestParameters&quot;:[{&quot;columnName&quot;:&quot;id&quot;,&quot;defaultValue&quot;:&quot;&quot;,&quot;exampleValue&quot;:&quot;1&quot;,&quot;isRequiredParameter&quot;:true,&quot;parameterDataType&quot;:2,&quot;parameterDescription&quot;:&quot;&quot;,&quot;parameterName&quot;:&quot;id&quot;,&quot;parameterOperator&quot;:0,&quot;parameterPosition&quot;:0}],&quot;wizardResponseParameters&quot;:[{&quot;columnName&quot;:&quot;id&quot;,&quot;exampleValue&quot;:&quot;11&quot;,&quot;parameterDataType&quot;:2,&quot;parameterDescription&quot;:&quot;&quot;,&quot;parameterName&quot;:&quot;id&quot;}]}</p>
          */
         public Builder wizardDetails(String wizardDetails) {
             this.putBodyParameter("WizardDetails", wizardDetails);

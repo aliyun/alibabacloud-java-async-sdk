@@ -1,72 +1,76 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateUdfFileRequest} extends {@link RequestModel}
  *
  * <p>UpdateUdfFileRequest</p>
  */
 public class UpdateUdfFileRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("ClassName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClassName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String className;
 
-    @Body
-    @NameInMap("CmdDescription")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CmdDescription")
     private String cmdDescription;
 
-    @Body
-    @NameInMap("Example")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Example")
     private String example;
 
-    @Body
-    @NameInMap("FileFolderPath")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FileFolderPath")
     private String fileFolderPath;
 
-    @Body
-    @NameInMap("FileId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FileId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileId;
 
-    @Body
-    @NameInMap("FunctionType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FunctionType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String functionType;
 
-    @Body
-    @NameInMap("ParameterDescription")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ParameterDescription")
     private String parameterDescription;
 
-    @Body
-    @NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
     private Long projectId;
 
-    @Body
-    @NameInMap("ProjectIdentifier")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectIdentifier")
     private String projectIdentifier;
 
-    @Body
-    @NameInMap("Resources")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Resources")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resources;
 
-    @Body
-    @NameInMap("ReturnValue")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ReturnValue")
     private String returnValue;
 
-    @Body
-    @NameInMap("UdfDescription")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UdfDescription")
     private String udfDescription;
 
     private UpdateUdfFileRequest(Builder builder) {
@@ -227,7 +231,7 @@ public class UpdateUdfFileRequest extends Request {
         } 
 
         /**
-         * The region ID.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -236,7 +240,11 @@ public class UpdateUdfFileRequest extends Request {
         }
 
         /**
-         * The name of the class in which the function is defined. This parameter corresponds to the Class Name parameter in the Register Function section of the configuration tab of the function in the DataWorks console.
+         * <p>The name of the class in which the function is defined. This parameter corresponds to the Class Name parameter in the Register Function section of the configuration tab of the function in the DataWorks console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.alibaba.DataWorks.api.udf.StringConcat</p>
          */
         public Builder className(String className) {
             this.putBodyParameter("ClassName", className);
@@ -245,7 +253,10 @@ public class UpdateUdfFileRequest extends Request {
         }
 
         /**
-         * The syntax used for calling the function. This parameter corresponds to the Expression Syntax parameter in the Register Function section of the configuration tab of the function in the DataWorks console.
+         * <p>The syntax used for calling the function. This parameter corresponds to the Expression Syntax parameter in the Register Function section of the configuration tab of the function in the DataWorks console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>StringConcat(String... substrs)</p>
          */
         public Builder cmdDescription(String cmdDescription) {
             this.putBodyParameter("CmdDescription", cmdDescription);
@@ -254,7 +265,10 @@ public class UpdateUdfFileRequest extends Request {
         }
 
         /**
-         * The example for calling the function. This parameter corresponds to the Example parameter in the Register Function section of the configuration tab of the function in the DataWorks console.
+         * <p>The example for calling the function. This parameter corresponds to the Example parameter in the Register Function section of the configuration tab of the function in the DataWorks console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>StringConcat(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;)</p>
          */
         public Builder example(String example) {
             this.putBodyParameter("Example", example);
@@ -263,7 +277,10 @@ public class UpdateUdfFileRequest extends Request {
         }
 
         /**
-         * The path of the folder in which the function file is stored.
+         * <p>The path of the folder in which the function file is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Business_process/First_Business_Process/function/string_processing_function</p>
          */
         public Builder fileFolderPath(String fileFolderPath) {
             this.putBodyParameter("FileFolderPath", fileFolderPath);
@@ -272,7 +289,11 @@ public class UpdateUdfFileRequest extends Request {
         }
 
         /**
-         * The ID of the file.
+         * <p>The file ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000001</p>
          */
         public Builder fileId(String fileId) {
             this.putBodyParameter("FileId", fileId);
@@ -281,7 +302,11 @@ public class UpdateUdfFileRequest extends Request {
         }
 
         /**
-         * The type of the function. Valid values: MATH, AGGREGATE, STRING, DATE, ANALYTIC, and OTHER. This parameter corresponds to the Function Type parameter in the Register Function section of the configuration tab of the function in the DataWorks console.
+         * <p>The type of the function. Valid values: MATH, AGGREGATE, STRING, DATE, ANALYTIC, and OTHER. This parameter corresponds to the Function Type parameter in the Register Function section of the configuration tab of the function on the DataStudio page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING</p>
          */
         public Builder functionType(String functionType) {
             this.putBodyParameter("FunctionType", functionType);
@@ -290,7 +315,16 @@ public class UpdateUdfFileRequest extends Request {
         }
 
         /**
-         * The description of the input parameters of the function. This parameter corresponds to the Parameter Description parameter in the Register Function section of the configuration tab of the function in the DataWorks console.
+         * <p>The description of the input parameters of the function. This parameter corresponds to the Parameter Description parameter in the Register Function section of the configuration tab of the function on the DataStudio page.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>ALL_ALLOWD</li>
+         * <li>FAILURE_ALLOWED</li>
+         * <li>ALL_DENIED</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>List of strings to be connected</p>
          */
         public Builder parameterDescription(String parameterDescription) {
             this.putBodyParameter("ParameterDescription", parameterDescription);
@@ -299,7 +333,10 @@ public class UpdateUdfFileRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace. You can click the Workspace Manage icon in the upper-right corner of the DataStudio page to go to the Workspace Management page and view the workspace ID.
+         * <p>The ID of the DataWorks workspace. You can click the Workspace Manage icon in the upper-right corner of the DataStudio page to go to the Workspace Management page and view the workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -308,10 +345,11 @@ public class UpdateUdfFileRequest extends Request {
         }
 
         /**
-         * The unique identifier of the DataWorks workspace. You can click the identifier in the upper-left corner of the DataStudio page to switch to another workspace.
-         * <p>
+         * <p>The unique identifier of the DataWorks workspace. You can click the identifier in the upper-left corner of the DataStudio page to switch to another workspace.</p>
+         * <p>You must specify either this parameter or ProjectId to determine the DataWorks workspace to which the operation is applied.</p>
          * 
-         * You must specify either this parameter or ProjectId to determine the DataWorks workspace to which the operation is applied.
+         * <strong>example:</strong>
+         * <p>dw_project</p>
          */
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);
@@ -320,7 +358,11 @@ public class UpdateUdfFileRequest extends Request {
         }
 
         /**
-         * The names of the resources that are referenced by the function. This parameter corresponds to the Resources parameter in the Register Function section of the configuration tab of the function in the DataWorks console. Separate multiple resource names with commas (,).
+         * <p>The names of the resources that are referenced by the function. This parameter corresponds to the Resources parameter in the Register Function section of the configuration tab of the function in the DataWorks console. Separate multiple resource names with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>string-concat-1.0.0.jar,commons-lang-2.6.jar</p>
          */
         public Builder resources(String resources) {
             this.putBodyParameter("Resources", resources);
@@ -329,7 +371,10 @@ public class UpdateUdfFileRequest extends Request {
         }
 
         /**
-         * The description of the return value of the function. This parameter corresponds to the Return Value parameter in the Register Function section of the configuration tab of the function in the DataWorks console.
+         * <p>The description of the return value of the function. This parameter corresponds to the Return Value parameter in the Register Function section of the configuration tab of the function on the DataStudio page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>New strings generated by concatenating all strings before and after the input order</p>
          */
         public Builder returnValue(String returnValue) {
             this.putBodyParameter("ReturnValue", returnValue);
@@ -338,7 +383,10 @@ public class UpdateUdfFileRequest extends Request {
         }
 
         /**
-         * The description of the function. This parameter corresponds to the Description parameter in the Register Function section of the configuration tab of the function in the DataWorks console.
+         * <p>The description of the function. This parameter corresponds to the Description parameter in the Register Function section of the configuration tab of the function on the DataStudio page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Concatenate several strings to generate a new string</p>
          */
         public Builder udfDescription(String udfDescription) {
             this.putBodyParameter("UdfDescription", udfDescription);

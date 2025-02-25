@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNamespaceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeNamespaceResponseBody</p>
  */
 public class DescribeNamespaceResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @NameInMap("NamespaceInfo")
-    private java.util.Map < String, String > namespaceInfo;
+    @com.aliyun.core.annotation.NameInMap("NamespaceInfo")
+    private java.util.Map<String, String> namespaceInfo;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeNamespaceResponseBody(Builder builder) {
@@ -75,7 +80,7 @@ public class DescribeNamespaceResponseBody extends TeaModel {
     /**
      * @return namespaceInfo
      */
-    public java.util.Map < String, String > getNamespaceInfo() {
+    public java.util.Map<String, String> getNamespaceInfo() {
         return this.namespaceInfo;
     }
 
@@ -104,13 +109,16 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         private String DBInstanceId; 
         private String message; 
         private String namespace; 
-        private java.util.Map < String, String > namespaceInfo; 
+        private java.util.Map<String, String> namespaceInfo; 
         private String regionId; 
         private String requestId; 
         private String status; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -118,7 +126,10 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -126,7 +137,10 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the namespace.
+         * <p>The name of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mynamespace</p>
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
@@ -134,15 +148,18 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The queried namespace.
+         * <p>The queried namespace.</p>
          */
-        public Builder namespaceInfo(java.util.Map < String, String > namespaceInfo) {
+        public Builder namespaceInfo(java.util.Map<String, String> namespaceInfo) {
             this.namespaceInfo = namespaceInfo;
             return this;
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -150,7 +167,10 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,11 +178,14 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>success</strong></li>
+         * <li><strong>fail</strong></li>
+         * </ul>
          * 
-         * *   **success**
-         * *   **fail**
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder status(String status) {
             this.status = status;

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelMessageContactUpdateRequest} extends {@link RequestModel}
  *
  * <p>CancelMessageContactUpdateRequest</p>
  */
 public class CancelMessageContactUpdateRequest extends Request {
-    @Query
-    @NameInMap("ContactId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactId")
     private String contactId;
 
-    @Query
-    @NameInMap("EmailAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EmailAddress")
     private String emailAddress;
 
-    @Query
-    @NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
     private String phoneNumber;
 
     private CancelMessageContactUpdateRequest(Builder builder) {
@@ -82,7 +87,10 @@ public class CancelMessageContactUpdateRequest extends Request {
         } 
 
         /**
-         * The ID of the contact.
+         * <p>The ID of the contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-qL4HqKONzOM7****</p>
          */
         public Builder contactId(String contactId) {
             this.putQueryParameter("ContactId", contactId);
@@ -91,7 +99,10 @@ public class CancelMessageContactUpdateRequest extends Request {
         }
 
         /**
-         * The email address of the contact.
+         * <p>The email address of the contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>someone***@example.com</p>
          */
         public Builder emailAddress(String emailAddress) {
             this.putQueryParameter("EmailAddress", emailAddress);
@@ -100,10 +111,11 @@ public class CancelMessageContactUpdateRequest extends Request {
         }
 
         /**
-         * The mobile phone number of the contact.
-         * <p>
+         * <p>The mobile phone number of the contact.</p>
+         * <p>Specify the mobile phone number in the <code>&lt;Country code&gt;-&lt;Mobile phone number&gt;</code> format.</p>
          * 
-         * Specify the mobile phone number in the `<Country code>-<Mobile phone number>` format.
+         * <strong>example:</strong>
+         * <p>86-139****1234</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);

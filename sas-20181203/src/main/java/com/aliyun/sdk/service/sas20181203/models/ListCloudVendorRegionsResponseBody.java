@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCloudVendorRegionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListCloudVendorRegionsResponseBody</p>
  */
 public class ListCloudVendorRegionsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListCloudVendorRegionsResponseBody(Builder builder) {
@@ -68,7 +73,7 @@ public class ListCloudVendorRegionsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -103,14 +108,17 @@ public class ListCloudVendorRegionsResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private Integer count; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * The return code.
+         * <p>The return code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +126,10 @@ public class ListCloudVendorRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -126,15 +137,18 @@ public class ListCloudVendorRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The regions that the service provider supports.
+         * <p>The regions that the service provider supports.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -142,7 +156,10 @@ public class ListCloudVendorRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -150,7 +167,10 @@ public class ListCloudVendorRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C87EC6AD-4590-5546-9DF6-B8956579D***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,11 +178,14 @@ public class ListCloudVendorRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -175,17 +198,23 @@ public class ListCloudVendorRegionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCloudVendorRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCloudVendorRegionsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Area")
+        @com.aliyun.core.annotation.NameInMap("Area")
         private String area;
 
-        @NameInMap("Disable")
+        @com.aliyun.core.annotation.NameInMap("Disable")
         private Integer disable;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Selected")
+        @com.aliyun.core.annotation.NameInMap("Selected")
         private Integer selected;
 
         private Data(Builder builder) {
@@ -238,42 +267,45 @@ public class ListCloudVendorRegionsResponseBody extends TeaModel {
             private Integer selected; 
 
             /**
-             * The area to which the region belongs. The valid values vary based on the value of the Vendor parameter.
-             * <p>
+             * <p>The area to which the region belongs. The valid values vary based on the value of the Vendor parameter.</p>
+             * <ul>
+             * <li>Valid values if <strong>Vendor</strong> is set to Tencent:</li>
+             * <li><strong>cn</strong>: China</li>
+             * <li><strong>southeast_asia</strong>: Southeast Asia Pacific</li>
+             * <li><strong>northeast_asia</strong>: Northeast Asia Pacific</li>
+             * <li><strong>southern_asia</strong>: South Asia Pacific</li>
+             * <li><strong>north_America</strong>: North America</li>
+             * <li><strong>south_America</strong>: South America</li>
+             * <li><strong>western_America</strong>: Western United States</li>
+             * <li><strong>eastern_America</strong>: Eastern United States</li>
+             * <li><strong>european</strong>: Europe</li>
+             * <li>Valid values if <strong>Vendor</strong> is set to HUAWEICLOUD:</li>
+             * <li><strong>cn</strong>: China</li>
+             * <li><strong>africa</strong>: Africa</li>
+             * <li><strong>latin_america</strong>: Latin America</li>
+             * <li><strong>asia</strong>: Asia Pacific</li>
+             * <li>Valid values if <strong>Vendor</strong> is set to Azure:</li>
+             * <li><strong>middle_east</strong>: Middle East</li>
+             * <li><strong>south_america</strong>: South America</li>
+             * <li><strong>canada</strong>: Canada</li>
+             * <li><strong>asia-pacific</strong>: Asia Pacific</li>
+             * <li><strong>europe</strong>: Europe</li>
+             * <li><strong>africa</strong>: Africa</li>
+             * <li><strong>us</strong>: United States</li>
+             * <li><strong>other</strong>: other regions</li>
+             * <li>Valid values if <strong>Vendor</strong> is set to AWS:</li>
+             * <li><strong>cn</strong>: China</li>
+             * <li><strong>us</strong>: United States</li>
+             * <li><strong>eu</strong>: Europe</li>
+             * <li><strong>asia</strong>: Asia Pacific</li>
+             * <li><strong>south_america</strong>: South America</li>
+             * <li><strong>me</strong>: Middle East</li>
+             * <li><strong>ca</strong>: Canada</li>
+             * <li><strong>af</strong>: Africa</li>
+             * </ul>
              * 
-             * *   Valid values if **Vendor** is set to Tencent:
-             * *   **cn**: China
-             * *   **southeast_asia**: Southeast Asia Pacific
-             * *   **northeast_asia**: Northeast Asia Pacific
-             * *   **southern_asia**: South Asia Pacific
-             * *   **north_America**: North America
-             * *   **south_America**: South America
-             * *   **western_America**: Western United States
-             * *   **eastern_America**: Eastern United States
-             * *   **european**: Europe
-             * *   Valid values if **Vendor** is set to HUAWEICLOUD:
-             * *   **cn**: China
-             * *   **africa**: Africa
-             * *   **latin_america**: Latin America
-             * *   **asia**: Asia Pacific
-             * *   Valid values if **Vendor** is set to Azure:
-             * *   **middle_east**: Middle East
-             * *   **south_america**: South America
-             * *   **canada**: Canada
-             * *   **asia-pacific**: Asia Pacific
-             * *   **europe**: Europe
-             * *   **africa**: Africa
-             * *   **us**: United States
-             * *   **other**: other regions
-             * *   Valid values if **Vendor** is set to AWS:
-             * *   **cn**: China
-             * *   **us**: United States
-             * *   **eu**: Europe
-             * *   **asia**: Asia Pacific
-             * *   **south_america**: South America
-             * *   **me**: Middle East
-             * *   **ca**: Canada
-             * *   **af**: Africa
+             * <strong>example:</strong>
+             * <p>cn</p>
              */
             public Builder area(String area) {
                 this.area = area;
@@ -281,11 +313,14 @@ public class ListCloudVendorRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the region is configured as a synchronization region on another site. Valid values:
-             * <p>
+             * <p>Indicates whether the region is configured as a synchronization region on another site. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The region is not configured as a synchronization region on another site.</li>
+             * <li><strong>1</strong>: The region is configured as a synchronization region on another site.</li>
+             * </ul>
              * 
-             * *   **0**: The region is not configured as a synchronization region on another site.
-             * *   **1**: The region is configured as a synchronization region on another site.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder disable(Integer disable) {
                 this.disable = disable;
@@ -293,7 +328,10 @@ public class ListCloudVendorRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -301,11 +339,14 @@ public class ListCloudVendorRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the region is configured as a synchronization region on this site. Valid values:
-             * <p>
+             * <p>Indicates whether the region is configured as a synchronization region on this site. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The region is not configured as a synchronization region on this site.</li>
+             * <li><strong>1</strong>: The region is configured as a synchronization region on this site.</li>
+             * </ul>
              * 
-             * *   **0**: The region is configured as a synchronization region on this site.
-             * *   **1**: The region is configured as a synchronization region on this site.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder selected(Integer selected) {
                 this.selected = selected;

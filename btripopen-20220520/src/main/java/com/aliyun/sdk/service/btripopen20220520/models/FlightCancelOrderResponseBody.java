@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightCancelOrderResponseBody} extends {@link TeaModel}
  *
  * <p>FlightCancelOrderResponseBody</p>
  */
 public class FlightCancelOrderResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private FlightCancelOrderResponseBody(Builder builder) {
@@ -151,17 +156,23 @@ public class FlightCancelOrderResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FlightCancelOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightCancelOrderResponseBody</p>
+     */
     public static class Module extends TeaModel {
-        @NameInMap("cancel_time")
+        @com.aliyun.core.annotation.NameInMap("cancel_time")
         private String cancelTime;
 
-        @NameInMap("fail_code")
+        @com.aliyun.core.annotation.NameInMap("fail_code")
         private String failCode;
 
-        @NameInMap("fail_reason")
+        @com.aliyun.core.annotation.NameInMap("fail_reason")
         private String failReason;
 
-        @NameInMap("order_status")
+        @com.aliyun.core.annotation.NameInMap("order_status")
         private String orderStatus;
 
         private Module(Builder builder) {

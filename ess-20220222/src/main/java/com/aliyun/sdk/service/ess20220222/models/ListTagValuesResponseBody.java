@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagValuesResponseBody} extends {@link TeaModel}
  *
  * <p>ListTagValuesResponseBody</p>
  */
 public class ListTagValuesResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Values")
-    private java.util.List < String > values;
+    @com.aliyun.core.annotation.NameInMap("Values")
+    private java.util.List<String> values;
 
     private ListTagValuesResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -63,7 +68,7 @@ public class ListTagValuesResponseBody extends TeaModel {
     /**
      * @return values
      */
-    public java.util.List < String > getValues() {
+    public java.util.List<String> getValues() {
         return this.values;
     }
 
@@ -71,10 +76,13 @@ public class ListTagValuesResponseBody extends TeaModel {
         private String nextToken; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < String > values; 
+        private java.util.List<String> values; 
 
         /**
-         * The token that is returned for the next query.
+         * <p>The token that determines the start point of the next query. If this parameter is empty, all results are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -82,7 +90,10 @@ public class ListTagValuesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -90,7 +101,10 @@ public class ListTagValuesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AB444F46-1CFF-4B06-B8F0-B45D3158****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,9 +112,9 @@ public class ListTagValuesResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the tag values.
+         * <p>Details of the tag values.</p>
          */
-        public Builder values(java.util.List < String > values) {
+        public Builder values(java.util.List<String> values) {
             this.values = values;
             return this;
         }

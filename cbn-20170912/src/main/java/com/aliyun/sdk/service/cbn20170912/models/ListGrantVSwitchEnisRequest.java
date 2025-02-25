@@ -1,66 +1,71 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGrantVSwitchEnisRequest} extends {@link RequestModel}
  *
  * <p>ListGrantVSwitchEnisRequest</p>
  */
 public class ListGrantVSwitchEnisRequest extends Request {
-    @Query
-    @NameInMap("CenId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CenId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cenId;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Long maxResults;
 
-    @Query
-    @NameInMap("NetworkInterfaceId")
-    private java.util.List < String > networkInterfaceId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
+    private java.util.List<String> networkInterfaceId;
 
-    @Query
-    @NameInMap("NetworkInterfaceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfaceName")
     private String networkInterfaceName;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PrimaryIpAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrimaryIpAddress")
     private String primaryIpAddress;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("VSwitchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
 
-    @Query
-    @NameInMap("VpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
     private ListGrantVSwitchEnisRequest(Builder builder) {
@@ -109,7 +114,7 @@ public class ListGrantVSwitchEnisRequest extends Request {
     /**
      * @return networkInterfaceId
      */
-    public java.util.List < String > getNetworkInterfaceId() {
+    public java.util.List<String> getNetworkInterfaceId() {
         return this.networkInterfaceId;
     }
 
@@ -179,7 +184,7 @@ public class ListGrantVSwitchEnisRequest extends Request {
     public static final class Builder extends Request.Builder<ListGrantVSwitchEnisRequest, Builder> {
         private String cenId; 
         private Long maxResults; 
-        private java.util.List < String > networkInterfaceId; 
+        private java.util.List<String> networkInterfaceId; 
         private String networkInterfaceName; 
         private String nextToken; 
         private String ownerAccount; 
@@ -211,7 +216,11 @@ public class ListGrantVSwitchEnisRequest extends Request {
         } 
 
         /**
-         * The ID of the CEN instance to which the VPC is attached.
+         * <p>The ID of the CEN instance to which the VPC is attached.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-a7syd349kne38g****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -220,13 +229,15 @@ public class ListGrantVSwitchEnisRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 10 to 500.
-         * <p>
+         * <p>The number of entries to return on each page. Valid values: 10 to 500.</p>
+         * <p>Default value:</p>
+         * <ul>
+         * <li>If you do not specify a value, the default value is 20.</li>
+         * <li>If this parameter is set to a value greater than 500, the default value is 500.</li>
+         * </ul>
          * 
-         * Default value:
-         * 
-         * *   If you do not specify a value, the default value is 20.
-         * *   If this parameter is set to a value greater than 500, the default value is 500.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -235,16 +246,19 @@ public class ListGrantVSwitchEnisRequest extends Request {
         }
 
         /**
-         * The ID of ENI N. Valid values of N: 1 to 100.
+         * <p>The ID of ENI N. Valid values of N: 1 to 100.</p>
          */
-        public Builder networkInterfaceId(java.util.List < String > networkInterfaceId) {
+        public Builder networkInterfaceId(java.util.List<String> networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
         /**
-         * The name of the ENI.
+         * <p>The name of the ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-eni-name</p>
          */
         public Builder networkInterfaceName(String networkInterfaceName) {
             this.putQueryParameter("NetworkInterfaceName", networkInterfaceName);
@@ -253,7 +267,10 @@ public class ListGrantVSwitchEnisRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -280,7 +297,10 @@ public class ListGrantVSwitchEnisRequest extends Request {
         }
 
         /**
-         * The primary private IPv4 address of the ENI.
+         * <p>The primary private IPv4 address of the ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder primaryIpAddress(String primaryIpAddress) {
             this.putQueryParameter("PrimaryIpAddress", primaryIpAddress);
@@ -307,7 +327,11 @@ public class ListGrantVSwitchEnisRequest extends Request {
         }
 
         /**
-         * The ID of a vSwitch in the VPC. You can specify only one vSwitch in each call.
+         * <p>The ID of a vSwitch in the VPC. You can specify only one vSwitch in each call.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-p0w9s2ig1jnwgrbzl****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -316,7 +340,11 @@ public class ListGrantVSwitchEnisRequest extends Request {
         }
 
         /**
-         * The ID of the VPC.
+         * <p>The ID of the VPC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-p0w9alkte4w2htrqe****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

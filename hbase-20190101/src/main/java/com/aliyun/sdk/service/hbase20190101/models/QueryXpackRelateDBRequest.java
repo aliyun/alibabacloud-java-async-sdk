@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryXpackRelateDBRequest} extends {@link RequestModel}
  *
  * <p>QueryXpackRelateDBRequest</p>
  */
 public class QueryXpackRelateDBRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("HasSingleNode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HasSingleNode")
     private Boolean hasSingleNode;
 
-    @Query
-    @NameInMap("RelateDbType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelateDbType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String relateDbType;
 
     private QueryXpackRelateDBRequest(Builder builder) {
@@ -84,7 +89,10 @@ public class QueryXpackRelateDBRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-bp1qtz9rcbbt3p6ng</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -102,7 +110,10 @@ public class QueryXpackRelateDBRequest extends Request {
         }
 
         /**
-         * RelateDbType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hbase</p>
          */
         public Builder relateDbType(String relateDbType) {
             this.putQueryParameter("RelateDbType", relateDbType);

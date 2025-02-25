@@ -1,37 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link LeaveSecurityGroupRequest} extends {@link RequestModel}
  *
  * <p>LeaveSecurityGroupRequest</p>
  */
 public class LeaveSecurityGroupRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("SecurityGroupId")
-    @Validation(required = true)
-    private String securityGroupId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
+    private String networkInterfaceId;
 
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String securityGroupId;
 
     private LeaveSecurityGroupRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.networkInterfaceId = builder.networkInterfaceId;
         this.securityGroupId = builder.securityGroupId;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -55,23 +58,23 @@ public class LeaveSecurityGroupRequest extends Request {
     }
 
     /**
+     * @return networkInterfaceId
+     */
+    public String getNetworkInterfaceId() {
+        return this.networkInterfaceId;
+    }
+
+    /**
      * @return securityGroupId
      */
     public String getSecurityGroupId() {
         return this.securityGroupId;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<LeaveSecurityGroupRequest, Builder> {
         private String instanceId; 
+        private String networkInterfaceId; 
         private String securityGroupId; 
-        private String version; 
 
         private Builder() {
             super();
@@ -80,12 +83,15 @@ public class LeaveSecurityGroupRequest extends Request {
         private Builder(LeaveSecurityGroupRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.networkInterfaceId = request.networkInterfaceId;
             this.securityGroupId = request.securityGroupId;
-            this.version = request.version;
         } 
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4p****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -94,20 +100,27 @@ public class LeaveSecurityGroupRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
+         * <p>The ID of the ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-58z57orgmt6d1****</p>
          */
-        public Builder securityGroupId(String securityGroupId) {
-            this.putQueryParameter("SecurityGroupId", securityGroupId);
-            this.securityGroupId = securityGroupId;
+        public Builder networkInterfaceId(String networkInterfaceId) {
+            this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
+            this.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
         /**
-         * Version.
+         * <p>The ID of the security group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp67acfmxazb4p****</p>
          */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
+        public Builder securityGroupId(String securityGroupId) {
+            this.putQueryParameter("SecurityGroupId", securityGroupId);
+            this.securityGroupId = securityGroupId;
             return this;
         }
 

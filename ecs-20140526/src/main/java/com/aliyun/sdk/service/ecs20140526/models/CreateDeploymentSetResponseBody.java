@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDeploymentSetResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDeploymentSetResponseBody</p>
  */
 public class CreateDeploymentSetResponseBody extends TeaModel {
-    @NameInMap("DeploymentSetId")
+    @com.aliyun.core.annotation.NameInMap("DeploymentSetId")
     private String deploymentSetId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateDeploymentSetResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateDeploymentSetResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DeploymentSetId.
+         * <p>The ID of the deployment set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds-bp1frxuzdg87zh4pzq****</p>
          */
         public Builder deploymentSetId(String deploymentSetId) {
             this.deploymentSetId = deploymentSetId;
@@ -58,7 +66,10 @@ public class CreateDeploymentSetResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

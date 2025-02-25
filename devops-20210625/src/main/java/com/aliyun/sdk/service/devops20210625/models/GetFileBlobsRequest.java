@@ -1,47 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFileBlobsRequest} extends {@link RequestModel}
  *
  * <p>GetFileBlobsRequest</p>
  */
 public class GetFileBlobsRequest extends Request {
-    @Path
-    @NameInMap("repositoryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("repositoryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long repositoryId;
 
-    @Query
-    @NameInMap("accessToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("accessToken")
     private String accessToken;
 
-    @Query
-    @NameInMap("filePath")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("filePath")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String filePath;
 
-    @Query
-    @NameInMap("from")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("from")
     private Long from;
 
-    @Query
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Query
-    @NameInMap("ref")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ref")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ref;
 
-    @Query
-    @NameInMap("to")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("to")
     private Long to;
 
     private GetFileBlobsRequest(Builder builder) {
@@ -142,7 +147,10 @@ public class GetFileBlobsRequest extends Request {
         } 
 
         /**
-         * repositoryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2744800</p>
          */
         public Builder repositoryId(Long repositoryId) {
             this.putPathParameter("repositoryId", repositoryId);
@@ -160,7 +168,10 @@ public class GetFileBlobsRequest extends Request {
         }
 
         /**
-         * filePath.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>src/Test.java</p>
          */
         public Builder filePath(String filePath) {
             this.putQueryParameter("filePath", filePath);
@@ -178,7 +189,10 @@ public class GetFileBlobsRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60de7a6852743a5162b5f957</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);
@@ -187,7 +201,10 @@ public class GetFileBlobsRequest extends Request {
         }
 
         /**
-         * ref.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>master  / tag1.0 /  ecykhdd</p>
          */
         public Builder ref(String ref) {
             this.putQueryParameter("ref", ref);

@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateIDEEventResultRequest} extends {@link RequestModel}
  *
  * <p>UpdateIDEEventResultRequest</p>
  */
 public class UpdateIDEEventResultRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("CheckResult")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CheckResult")
     private String checkResult;
 
-    @Body
-    @NameInMap("CheckResultTip")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CheckResultTip")
     private String checkResultTip;
 
-    @Body
-    @NameInMap("ExtensionCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExtensionCode")
     private String extensionCode;
 
-    @Body
-    @NameInMap("MessageId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MessageId")
     private String messageId;
 
     private UpdateIDEEventResultRequest(Builder builder) {
@@ -119,7 +124,15 @@ public class UpdateIDEEventResultRequest extends Request {
         }
 
         /**
-         * The summary information of the check result. The information is displayed in DataStudio. If an alert is reported or the event fails the check, you can troubleshoot errors based on the information.
+         * <p>The check status of the extension point event. Valid values:</p>
+         * <ul>
+         * <li>OK: The event passes the check.</li>
+         * <li>FAIL: The event fails to pass the check. You must check and handle the reported error at the earliest opportunity to ensure that your program is run as expected.</li>
+         * <li>WARN: The event passes the check, but an alert is reported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder checkResult(String checkResult) {
             this.putBodyParameter("CheckResult", checkResult);
@@ -128,7 +141,10 @@ public class UpdateIDEEventResultRequest extends Request {
         }
 
         /**
-         * The ID of the request. You can troubleshoot errors based on the ID.
+         * <p>The summary information of the check result. The information is displayed in DataStudio. If an alert is reported or the event fails the check, you can troubleshoot errors based on the information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Succeeded</p>
          */
         public Builder checkResultTip(String checkResultTip) {
             this.putBodyParameter("CheckResultTip", checkResultTip);
@@ -137,12 +153,10 @@ public class UpdateIDEEventResultRequest extends Request {
         }
 
         /**
-         * The check status of the extension point event. Valid values:
-         * <p>
+         * <p>The unique identifier of the extension. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Extensions tab of the Open Platform page to view the identifier.</p>
          * 
-         * *   OK: The event passes the check.
-         * *   FAIL: The event fails to pass the check. You must check and handle the reported error at the earliest opportunity to ensure that your program is run as expected.
-         * *   WARN: The event passes the check, but an alert is reported.
+         * <strong>example:</strong>
+         * <p>8abcb91f-d266-4073-b907-2ed670378ed1</p>
          */
         public Builder extensionCode(String extensionCode) {
             this.putBodyParameter("ExtensionCode", extensionCode);
@@ -151,7 +165,10 @@ public class UpdateIDEEventResultRequest extends Request {
         }
 
         /**
-         * The ID of the extension. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Extensions tab of the Open Platform page to view the ID.
+         * <p>The message ID. You can obtain the ID from a received message when an extension point event is triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8abcb91f-d266-4073-b907-2ed670378ed1</p>
          */
         public Builder messageId(String messageId) {
             this.putBodyParameter("MessageId", messageId);

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMediaResourceIdResponseBody} extends {@link TeaModel}
  *
  * <p>GetMediaResourceIdResponseBody</p>
  */
 public class GetMediaResourceIdResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetMediaResourceIdResponseBody(Builder builder) {
@@ -74,7 +79,14 @@ public class GetMediaResourceIdResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * <ul>
+         * <li>If OK is returned, the request is successful.</li>
+         * <li>Other values indicate that the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +94,7 @@ public class GetMediaResourceIdResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +102,10 @@ public class GetMediaResourceIdResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F07CF237-F6E3-5F77-B91B-F9B7C5DE84AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +113,14 @@ public class GetMediaResourceIdResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -111,11 +133,17 @@ public class GetMediaResourceIdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMediaResourceIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaResourceIdResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ResUrlDownload")
+        @com.aliyun.core.annotation.NameInMap("ResUrlDownload")
         private String resUrlDownload;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private Long resourceId;
 
         private Data(Builder builder) {
@@ -150,7 +178,10 @@ public class GetMediaResourceIdResponseBody extends TeaModel {
             private Long resourceId; 
 
             /**
-             * ResUrlDownload.
+             * <p>The download URL of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://test-example.com/download.jpg">http://test-example.com/download.jpg</a></p>
              */
             public Builder resUrlDownload(String resUrlDownload) {
                 this.resUrlDownload = resUrlDownload;
@@ -158,7 +189,10 @@ public class GetMediaResourceIdResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SMS_14571****</p>
              */
             public Builder resourceId(Long resourceId) {
                 this.resourceId = resourceId;

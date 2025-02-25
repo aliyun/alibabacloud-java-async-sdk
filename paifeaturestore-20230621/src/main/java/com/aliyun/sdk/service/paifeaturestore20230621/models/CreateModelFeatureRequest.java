@@ -1,54 +1,64 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateModelFeatureRequest} extends {@link RequestModel}
  *
  * <p>CreateModelFeatureRequest</p>
  */
 public class CreateModelFeatureRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("Features")
-    @Validation(required = true)
-    private java.util.List < Features> features;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Features")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Features> features;
 
-    @Body
-    @NameInMap("LabelTableId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LabelPriorityLevel")
+    private Long labelPriorityLevel;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LabelTableId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String labelTableId;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("ProjectId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectId;
 
-    @Body
-    @NameInMap("SequenceFeatureViewIds")
-    private java.util.List < String > sequenceFeatureViewIds;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SequenceFeatureViewIds")
+    private java.util.List<String> sequenceFeatureViewIds;
 
     private CreateModelFeatureRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
         this.features = builder.features;
+        this.labelPriorityLevel = builder.labelPriorityLevel;
         this.labelTableId = builder.labelTableId;
         this.name = builder.name;
         this.projectId = builder.projectId;
@@ -85,8 +95,15 @@ public class CreateModelFeatureRequest extends Request {
     /**
      * @return features
      */
-    public java.util.List < Features> getFeatures() {
+    public java.util.List<Features> getFeatures() {
         return this.features;
+    }
+
+    /**
+     * @return labelPriorityLevel
+     */
+    public Long getLabelPriorityLevel() {
+        return this.labelPriorityLevel;
     }
 
     /**
@@ -113,18 +130,19 @@ public class CreateModelFeatureRequest extends Request {
     /**
      * @return sequenceFeatureViewIds
      */
-    public java.util.List < String > getSequenceFeatureViewIds() {
+    public java.util.List<String> getSequenceFeatureViewIds() {
         return this.sequenceFeatureViewIds;
     }
 
     public static final class Builder extends Request.Builder<CreateModelFeatureRequest, Builder> {
         private String instanceId; 
         private String regionId; 
-        private java.util.List < Features> features; 
+        private java.util.List<Features> features; 
+        private Long labelPriorityLevel; 
         private String labelTableId; 
         private String name; 
         private String projectId; 
-        private java.util.List < String > sequenceFeatureViewIds; 
+        private java.util.List<String> sequenceFeatureViewIds; 
 
         private Builder() {
             super();
@@ -135,6 +153,7 @@ public class CreateModelFeatureRequest extends Request {
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
             this.features = request.features;
+            this.labelPriorityLevel = request.labelPriorityLevel;
             this.labelTableId = request.labelTableId;
             this.name = request.name;
             this.projectId = request.projectId;
@@ -160,16 +179,28 @@ public class CreateModelFeatureRequest extends Request {
         }
 
         /**
-         * Features.
+         * <p>This parameter is required.</p>
          */
-        public Builder features(java.util.List < Features> features) {
+        public Builder features(java.util.List<Features> features) {
             this.putBodyParameter("Features", features);
             this.features = features;
             return this;
         }
 
         /**
-         * LabelTableId.
+         * LabelPriorityLevel.
+         */
+        public Builder labelPriorityLevel(Long labelPriorityLevel) {
+            this.putBodyParameter("LabelPriorityLevel", labelPriorityLevel);
+            this.labelPriorityLevel = labelPriorityLevel;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder labelTableId(String labelTableId) {
             this.putBodyParameter("LabelTableId", labelTableId);
@@ -178,7 +209,10 @@ public class CreateModelFeatureRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>model_feature_1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -187,7 +221,10 @@ public class CreateModelFeatureRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder projectId(String projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -198,7 +235,7 @@ public class CreateModelFeatureRequest extends Request {
         /**
          * SequenceFeatureViewIds.
          */
-        public Builder sequenceFeatureViewIds(java.util.List < String > sequenceFeatureViewIds) {
+        public Builder sequenceFeatureViewIds(java.util.List<String> sequenceFeatureViewIds) {
             this.putBodyParameter("SequenceFeatureViewIds", sequenceFeatureViewIds);
             this.sequenceFeatureViewIds = sequenceFeatureViewIds;
             return this;
@@ -211,20 +248,26 @@ public class CreateModelFeatureRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateModelFeatureRequest} extends {@link TeaModel}
+     *
+     * <p>CreateModelFeatureRequest</p>
+     */
     public static class Features extends TeaModel {
-        @NameInMap("AliasName")
+        @com.aliyun.core.annotation.NameInMap("AliasName")
         private String aliasName;
 
-        @NameInMap("FeatureViewId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("FeatureViewId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String featureViewId;
 
-        @NameInMap("Name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private Features(Builder builder) {
@@ -285,7 +328,10 @@ public class CreateModelFeatureRequest extends Request {
             }
 
             /**
-             * FeatureViewId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder featureViewId(String featureViewId) {
                 this.featureViewId = featureViewId;
@@ -293,7 +339,10 @@ public class CreateModelFeatureRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_id</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -301,7 +350,10 @@ public class CreateModelFeatureRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STRING</p>
              */
             public Builder type(String type) {
                 this.type = type;

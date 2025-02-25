@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link Logging} extends {@link TeaModel}
  *
  * <p>Logging</p>
  */
 public class Logging extends TeaModel {
-    @NameInMap("loggingDetails")
-    @Validation(required = true)
-    private java.util.List < LoggingDetails> loggingDetails;
+    @com.aliyun.core.annotation.NameInMap("loggingDetails")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<LoggingDetails> loggingDetails;
 
-    @NameInMap("loggingProject")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("loggingProject")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loggingProject;
 
     private Logging(Builder builder) {
@@ -36,7 +41,7 @@ public class Logging extends TeaModel {
     /**
      * @return loggingDetails
      */
-    public java.util.List < LoggingDetails> getLoggingDetails() {
+    public java.util.List<LoggingDetails> getLoggingDetails() {
         return this.loggingDetails;
     }
 
@@ -48,19 +53,22 @@ public class Logging extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < LoggingDetails> loggingDetails; 
+        private java.util.List<LoggingDetails> loggingDetails; 
         private String loggingProject; 
 
         /**
-         * loggingDetails.
+         * <p>This parameter is required.</p>
          */
-        public Builder loggingDetails(java.util.List < LoggingDetails> loggingDetails) {
+        public Builder loggingDetails(java.util.List<LoggingDetails> loggingDetails) {
             this.loggingDetails = loggingDetails;
             return this;
         }
 
         /**
-         * loggingProject.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-project</p>
          */
         public Builder loggingProject(String loggingProject) {
             this.loggingProject = loggingProject;
@@ -73,13 +81,19 @@ public class Logging extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link Logging} extends {@link TeaModel}
+     *
+     * <p>Logging</p>
+     */
     public static class LoggingDetails extends TeaModel {
-        @NameInMap("logstore")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("logstore")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String logstore;
 
-        @NameInMap("type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private LoggingDetails(Builder builder) {
@@ -114,7 +128,10 @@ public class Logging extends TeaModel {
             private String type; 
 
             /**
-             * logstore.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-logstore</p>
              */
             public Builder logstore(String logstore) {
                 this.logstore = logstore;
@@ -122,7 +139,10 @@ public class Logging extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>consumergroup_log</p>
              */
             public Builder type(String type) {
                 this.type = type;

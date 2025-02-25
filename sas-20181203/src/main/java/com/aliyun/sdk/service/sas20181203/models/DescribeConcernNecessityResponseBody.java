@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeConcernNecessityResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeConcernNecessityResponseBody</p>
  */
 public class DescribeConcernNecessityResponseBody extends TeaModel {
-    @NameInMap("ConcernNecessity")
-    private java.util.List < String > concernNecessity;
+    @com.aliyun.core.annotation.NameInMap("ConcernNecessity")
+    private java.util.List<String> concernNecessity;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeConcernNecessityResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeConcernNecessityResponseBody extends TeaModel {
     /**
      * @return concernNecessity
      */
-    public java.util.List < String > getConcernNecessity() {
+    public java.util.List<String> getConcernNecessity() {
         return this.concernNecessity;
     }
 
@@ -46,24 +51,27 @@ public class DescribeConcernNecessityResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > concernNecessity; 
+        private java.util.List<String> concernNecessity; 
         private String requestId; 
 
         /**
-         * The priorities to fix the vulnerabilities. Valid values:
-         * <p>
-         * 
-         * *   asap: high
-         * *   later: medium
-         * *   nntf: low
+         * <p>The priorities to fix the vulnerabilities. Valid values:</p>
+         * <ul>
+         * <li>asap: high</li>
+         * <li>later: medium</li>
+         * <li>nntf: low</li>
+         * </ul>
          */
-        public Builder concernNecessity(java.util.List < String > concernNecessity) {
+        public Builder concernNecessity(java.util.List<String> concernNecessity) {
             this.concernNecessity = concernNecessity;
             return this;
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECC6B3E3-D496-512D-B46D-E6996A6B63EE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

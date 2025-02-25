@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnHttpsDomainListRequest} extends {@link RequestModel}
  *
  * <p>DescribeCdnHttpsDomainListRequest</p>
  */
 public class DescribeCdnHttpsDomainListRequest extends Request {
-    @Query
-    @NameInMap("Keyword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
     private DescribeCdnHttpsDomainListRequest(Builder builder) {
@@ -82,7 +82,10 @@ public class DescribeCdnHttpsDomainListRequest extends Request {
         } 
 
         /**
-         * The keyword that is used to search for certificates.
+         * <p>The keyword that is used to search for certificates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -91,7 +94,10 @@ public class DescribeCdnHttpsDomainListRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Valid values: **1** to **100000**.
+         * <p>The number of the page to return. Valid values: <strong>1</strong> to <strong>100000</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -100,7 +106,10 @@ public class DescribeCdnHttpsDomainListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **20**.
+         * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

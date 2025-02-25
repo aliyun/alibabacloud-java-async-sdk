@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDBTopologyRequest} extends {@link RequestModel}
  *
  * <p>GetDBTopologyRequest</p>
  */
 public class GetDBTopologyRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("LogicDbId")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogicDbId")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Long logicDbId;
 
-    @Query
-    @NameInMap("Tid")
-    @Validation(minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tid")
+    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long tid;
 
     private GetDBTopologyRequest(Builder builder) {
@@ -93,10 +98,11 @@ public class GetDBTopologyRequest extends Request {
         }
 
         /**
-         * The ID of the logical database.
-         * <p>
+         * <p>The ID of the logical database. You can call the <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/listlogicdatabases">ListLogicDatabases</a> or <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/searchdatabase">SearchDatabase</a> operation to query the ID of the logical database.</p>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [ListLogicDatabases](~~141874~~) operation to query the ID of the logical database.
+         * <strong>example:</strong>
+         * <p>134***</p>
          */
         public Builder logicDbId(Long logicDbId) {
             this.putQueryParameter("LogicDbId", logicDbId);
@@ -105,10 +111,13 @@ public class GetDBTopologyRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p>To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a>.</p>
+         * </blockquote>
          * 
-         * > To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](~~181330~~).
+         * <strong>example:</strong>
+         * <p>43***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

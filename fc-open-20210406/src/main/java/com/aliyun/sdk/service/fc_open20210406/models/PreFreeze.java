@@ -50,7 +50,7 @@ public class PreFreeze extends TeaModel {
         private Integer timeout; 
 
         /**
-         * preFreeze handler name
+         * handler.
          */
         public Builder handler(String handler) {
             this.handler = handler;
@@ -58,7 +58,7 @@ public class PreFreeze extends TeaModel {
         }
 
         /**
-         * handler timeout
+         * timeout.
          */
         public Builder timeout(Integer timeout) {
             this.timeout = timeout;

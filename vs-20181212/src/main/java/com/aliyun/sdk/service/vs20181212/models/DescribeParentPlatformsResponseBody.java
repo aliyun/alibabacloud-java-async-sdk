@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeParentPlatformsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeParentPlatformsResponseBody</p>
  */
 public class DescribeParentPlatformsResponseBody extends TeaModel {
-    @NameInMap("PageCount")
+    @com.aliyun.core.annotation.NameInMap("PageCount")
     private Long pageCount;
 
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Long pageNum;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("Platforms")
-    private java.util.List < Platforms> platforms;
+    @com.aliyun.core.annotation.NameInMap("Platforms")
+    private java.util.List<Platforms> platforms;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeParentPlatformsResponseBody(Builder builder) {
@@ -71,7 +76,7 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
     /**
      * @return platforms
      */
-    public java.util.List < Platforms> getPlatforms() {
+    public java.util.List<Platforms> getPlatforms() {
         return this.platforms;
     }
 
@@ -93,7 +98,7 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
         private Long pageCount; 
         private Long pageNum; 
         private Long pageSize; 
-        private java.util.List < Platforms> platforms; 
+        private java.util.List<Platforms> platforms; 
         private String requestId; 
         private Long totalCount; 
 
@@ -124,7 +129,7 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
         /**
          * Platforms.
          */
-        public Builder platforms(java.util.List < Platforms> platforms) {
+        public Builder platforms(java.util.List<Platforms> platforms) {
             this.platforms = platforms;
             return this;
         }
@@ -151,53 +156,59 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeParentPlatformsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeParentPlatformsResponseBody</p>
+     */
     public static class Platforms extends TeaModel {
-        @NameInMap("AutoStart")
+        @com.aliyun.core.annotation.NameInMap("AutoStart")
         private Boolean autoStart;
 
-        @NameInMap("ClientAuth")
+        @com.aliyun.core.annotation.NameInMap("ClientAuth")
         private Boolean clientAuth;
 
-        @NameInMap("ClientGbId")
+        @com.aliyun.core.annotation.NameInMap("ClientGbId")
         private String clientGbId;
 
-        @NameInMap("ClientIp")
+        @com.aliyun.core.annotation.NameInMap("ClientIp")
         private String clientIp;
 
-        @NameInMap("ClientPassword")
+        @com.aliyun.core.annotation.NameInMap("ClientPassword")
         private String clientPassword;
 
-        @NameInMap("ClientPort")
+        @com.aliyun.core.annotation.NameInMap("ClientPort")
         private Long clientPort;
 
-        @NameInMap("ClientUsername")
+        @com.aliyun.core.annotation.NameInMap("ClientUsername")
         private String clientUsername;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GbId")
+        @com.aliyun.core.annotation.NameInMap("GbId")
         private String gbId;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Long port;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Platforms(Builder builder) {

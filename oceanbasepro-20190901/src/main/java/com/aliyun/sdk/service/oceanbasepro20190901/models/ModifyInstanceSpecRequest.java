@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,35 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyInstanceSpecRequest</p>
  */
 public class ModifyInstanceSpecRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("DiskSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DiskSize")
     private Long diskSize;
 
-    @Body
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DiskType")
+    private String diskType;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Body
-    @NameInMap("InstanceClass")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceClass")
     private String instanceClass;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UpgradeSpecNative")
+    private Boolean upgradeSpecNative;
 
     private ModifyInstanceSpecRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.diskSize = builder.diskSize;
+        this.diskType = builder.diskType;
         this.dryRun = builder.dryRun;
         this.instanceClass = builder.instanceClass;
         this.instanceId = builder.instanceId;
+        this.upgradeSpecNative = builder.upgradeSpecNative;
     }
 
     public static Builder builder() {
@@ -71,6 +79,13 @@ public class ModifyInstanceSpecRequest extends Request {
     }
 
     /**
+     * @return diskType
+     */
+    public String getDiskType() {
+        return this.diskType;
+    }
+
+    /**
      * @return dryRun
      */
     public Boolean getDryRun() {
@@ -91,12 +106,21 @@ public class ModifyInstanceSpecRequest extends Request {
         return this.instanceId;
     }
 
+    /**
+     * @return upgradeSpecNative
+     */
+    public Boolean getUpgradeSpecNative() {
+        return this.upgradeSpecNative;
+    }
+
     public static final class Builder extends Request.Builder<ModifyInstanceSpecRequest, Builder> {
         private String regionId; 
         private Long diskSize; 
+        private String diskType; 
         private Boolean dryRun; 
         private String instanceClass; 
         private String instanceId; 
+        private Boolean upgradeSpecNative; 
 
         private Builder() {
             super();
@@ -106,9 +130,11 @@ public class ModifyInstanceSpecRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.diskSize = request.diskSize;
+            this.diskType = request.diskType;
             this.dryRun = request.dryRun;
             this.instanceClass = request.instanceClass;
             this.instanceId = request.instanceId;
+            this.upgradeSpecNative = request.upgradeSpecNative;
         } 
 
         /**
@@ -121,7 +147,12 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * DiskSize.
+         * The size of the storage space, in GB. The required storage space varies based on the cluster specifications:
+         * <p>
+         * - 8C32G: 100 GB to 10 TB.
+         * - 14C70G: 200 GB to 10 TB.
+         * - 30C180G: 400 GB to 10 TB.
+         * - 62C400G: 800 GB to 10 TB. The preceding minimum storage space sizes are the default storage space sizes of the corresponding cluster specification plans.
          */
         public Builder diskSize(Long diskSize) {
             this.putBodyParameter("DiskSize", diskSize);
@@ -130,7 +161,19 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Disk type.
+         */
+        public Builder diskType(String diskType) {
+            this.putBodyParameter("DiskType", diskType);
+            this.diskType = diskType;
+            return this;
+        }
+
+        /**
+         * Specifies whether to perform only a dry run for the request. Default value: false. Valid values:
+         * <p>
+         * - true: Only a dry-run request is sent and the instance settings are not modified. If the dry run succeeds, DryRunResult=true is returned. If the dry run fails, an error code is returned.
+         * - false: If the DryRun parameter is set to false, no dry run is performed and the DryRunResult parameter returns false.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putBodyParameter("DryRun", dryRun);
@@ -139,7 +182,12 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * InstanceClass.
+         * The specifications of the cluster. You can specify one of the following four plans:
+         * <p>
+         * - 8C32GB: indicates 8 CPU cores and 32 GB of memory.
+         * - 14C70GB: indicates 14 CPU cores and 70 GB of memory. This is the default value.
+         * - 30C180GB: indicates 30 CPU cores and 180 GB of memory.
+         * - 62C400GB: indicates 62 CPU cores and 400 GB of memory.
          */
         public Builder instanceClass(String instanceClass) {
             this.putBodyParameter("InstanceClass", instanceClass);
@@ -148,11 +196,20 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * UpgradeSpecNative.
+         */
+        public Builder upgradeSpecNative(Boolean upgradeSpecNative) {
+            this.putBodyParameter("UpgradeSpecNative", upgradeSpecNative);
+            this.upgradeSpecNative = upgradeSpecNative;
             return this;
         }
 

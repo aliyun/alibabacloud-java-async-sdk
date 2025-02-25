@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSceneDefensePolicyRequest} extends {@link RequestModel}
  *
  * <p>CreateSceneDefensePolicyRequest</p>
  */
 public class CreateSceneDefensePolicyRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
-    @Query
-    @NameInMap("Template")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Template")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String template;
 
     private CreateSceneDefensePolicyRequest(Builder builder) {
@@ -123,7 +128,11 @@ public class CreateSceneDefensePolicyRequest extends Request {
         }
 
         /**
-         * The end time of the policy. This value is a UNIX timestamp. Units: milliseconds.
+         * <p>The end time of the policy. This value is a UNIX timestamp. Units: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1586016000000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -132,7 +141,11 @@ public class CreateSceneDefensePolicyRequest extends Request {
         }
 
         /**
-         * The name of the policy.
+         * <p>The name of the policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testpolicy</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -141,7 +154,11 @@ public class CreateSceneDefensePolicyRequest extends Request {
         }
 
         /**
-         * The start time of the policy. This value is a UNIX timestamp. Units: milliseconds.
+         * <p>The start time of the policy. This value is a UNIX timestamp. Units: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1585670400000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -150,11 +167,15 @@ public class CreateSceneDefensePolicyRequest extends Request {
         }
 
         /**
-         * The template of the policy. Valid values:
-         * <p>
+         * <p>The template of the policy. Valid values:</p>
+         * <ul>
+         * <li><strong>promotion</strong>: important activity</li>
+         * <li><strong>bypass</strong>: all traffic forwarded</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **promotion**: important activity
-         * *   **bypass**: all traffic forwarded
+         * <strong>example:</strong>
+         * <p>promotion</p>
          */
         public Builder template(String template) {
             this.putQueryParameter("Template", template);

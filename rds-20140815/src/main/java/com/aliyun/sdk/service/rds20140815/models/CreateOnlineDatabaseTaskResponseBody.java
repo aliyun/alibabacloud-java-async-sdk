@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOnlineDatabaseTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateOnlineDatabaseTaskResponseBody</p>
  */
 public class CreateOnlineDatabaseTaskResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateOnlineDatabaseTaskResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class CreateOnlineDatabaseTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1B2EBD14-36F6-4645-A3F9-DE19D321C18F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

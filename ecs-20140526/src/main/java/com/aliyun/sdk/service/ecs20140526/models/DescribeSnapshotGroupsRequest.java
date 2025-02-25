@@ -1,74 +1,79 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSnapshotGroupsRequest} extends {@link RequestModel}
  *
  * <p>DescribeSnapshotGroupsRequest</p>
  */
 public class DescribeSnapshotGroupsRequest extends Request {
-    @Query
-    @NameInMap("AdditionalAttributes")
-    private java.util.List < String > additionalAttributes;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdditionalAttributes")
+    private java.util.List<String> additionalAttributes;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 500, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 500, minimum = 1)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SnapshotGroupId")
-    private java.util.List < String > snapshotGroupId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotGroupId")
+    private java.util.List<String> snapshotGroupId;
 
-    @Query
-    @NameInMap("Status")
-    private java.util.List < String > status;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private java.util.List<String> status;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private DescribeSnapshotGroupsRequest(Builder builder) {
         super(builder);
@@ -104,7 +109,7 @@ public class DescribeSnapshotGroupsRequest extends Request {
     /**
      * @return additionalAttributes
      */
-    public java.util.List < String > getAdditionalAttributes() {
+    public java.util.List<String> getAdditionalAttributes() {
         return this.additionalAttributes;
     }
 
@@ -181,26 +186,26 @@ public class DescribeSnapshotGroupsRequest extends Request {
     /**
      * @return snapshotGroupId
      */
-    public java.util.List < String > getSnapshotGroupId() {
+    public java.util.List<String> getSnapshotGroupId() {
         return this.snapshotGroupId;
     }
 
     /**
      * @return status
      */
-    public java.util.List < String > getStatus() {
+    public java.util.List<String> getStatus() {
         return this.status;
     }
 
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<DescribeSnapshotGroupsRequest, Builder> {
-        private java.util.List < String > additionalAttributes; 
+        private java.util.List<String> additionalAttributes; 
         private String instanceId; 
         private Integer maxResults; 
         private String name; 
@@ -211,9 +216,9 @@ public class DescribeSnapshotGroupsRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < String > snapshotGroupId; 
-        private java.util.List < String > status; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<String> snapshotGroupId; 
+        private java.util.List<String> status; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -238,16 +243,22 @@ public class DescribeSnapshotGroupsRequest extends Request {
         } 
 
         /**
-         * This parameter is unavailable.
+         * <p>This parameter is not publicly available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hide</p>
          */
-        public Builder additionalAttributes(java.util.List < String > additionalAttributes) {
+        public Builder additionalAttributes(java.util.List<String> additionalAttributes) {
             this.putQueryParameter("AdditionalAttributes", additionalAttributes);
             this.additionalAttributes = additionalAttributes;
             return this;
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-j6ca469urv8ei629****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -256,12 +267,12 @@ public class DescribeSnapshotGroupsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Maximum value: 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -270,7 +281,10 @@ public class DescribeSnapshotGroupsRequest extends Request {
         }
 
         /**
-         * The name of the snapshot-consistent group.
+         * <p>The name of the snapshot-consistent group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -279,7 +293,10 @@ public class DescribeSnapshotGroupsRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the next query. Set the value to the NextToken value that is returned from the last call.
+         * <p>The token that determines the start point of the next query. Set the value to the NextToken value that is returned from the last call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -306,7 +323,11 @@ public class DescribeSnapshotGroupsRequest extends Request {
         }
 
         /**
-         * The region ID of the snapshot-consistent group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the snapshot-consistent group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -315,7 +336,10 @@ public class DescribeSnapshotGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the snapshot-consistent group belongs.
+         * <p>The ID of the resource group to which the snapshot-consistent group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -342,32 +366,38 @@ public class DescribeSnapshotGroupsRequest extends Request {
         }
 
         /**
-         * The ID of snapshot-consistent group N. Valid values of N: 1 to 10.
+         * <p>The ID of snapshot-consistent group N. Valid values of N: 1 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ssg-j6ciyh3k52qp7ovm****</p>
          */
-        public Builder snapshotGroupId(java.util.List < String > snapshotGroupId) {
+        public Builder snapshotGroupId(java.util.List<String> snapshotGroupId) {
             this.putQueryParameter("SnapshotGroupId", snapshotGroupId);
             this.snapshotGroupId = snapshotGroupId;
             return this;
         }
 
         /**
-         * The state of snapshot-consistent group N. Valid values of the second N: 1, 2, and 3. Valid values:
-         * <p>
+         * <p>The state of snapshot-consistent group N. Valid values of the second N: 1, 2, and 3. Valid values:</p>
+         * <ul>
+         * <li>progressing: The snapshot-consistent group is being created.</li>
+         * <li>accomplished: The snapshot-consistent group is created.</li>
+         * <li>failed: The snapshot-consistent group fails to be created.</li>
+         * </ul>
          * 
-         * *   progressing: The snapshot-consistent group is being created.
-         * *   accomplished: The snapshot-consistent group is created.
-         * *   failed: The snapshot-consistent group fails to be created.
+         * <strong>example:</strong>
+         * <p>accomplished</p>
          */
-        public Builder status(java.util.List < String > status) {
+        public Builder status(java.util.List<String> status) {
             this.putQueryParameter("Status", status);
             this.status = status;
             return this;
         }
 
         /**
-         * The tags of the snapshot-consistent group.
+         * <p>The tags of the snapshot-consistent group.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -380,11 +410,17 @@ public class DescribeSnapshotGroupsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSnapshotGroupsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeSnapshotGroupsRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -419,7 +455,10 @@ public class DescribeSnapshotGroupsRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the snapshot-consistent group. Valid values of N: 1 to 20.
+             * <p>The key of tag N of the snapshot-consistent group. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -427,7 +466,10 @@ public class DescribeSnapshotGroupsRequest extends Request {
             }
 
             /**
-             * The value of tag N of the snapshot-consistent group. Valid values of N: 1 to 20.
+             * <p>The value of tag N of the snapshot-consistent group. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

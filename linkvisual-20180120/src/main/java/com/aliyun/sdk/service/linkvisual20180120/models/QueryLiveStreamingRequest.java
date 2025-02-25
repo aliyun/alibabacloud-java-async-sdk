@@ -22,6 +22,10 @@ public class QueryLiveStreamingRequest extends Request {
     private String deviceName;
 
     @Query
+    @NameInMap("EnableStun")
+    private Boolean enableStun;
+
+    @Query
     @NameInMap("EncryptType")
     private Integer encryptType;
 
@@ -65,6 +69,7 @@ public class QueryLiveStreamingRequest extends Request {
         super(builder);
         this.cacheDuration = builder.cacheDuration;
         this.deviceName = builder.deviceName;
+        this.enableStun = builder.enableStun;
         this.encryptType = builder.encryptType;
         this.forceIFrame = builder.forceIFrame;
         this.iotId = builder.iotId;
@@ -102,6 +107,13 @@ public class QueryLiveStreamingRequest extends Request {
      */
     public String getDeviceName() {
         return this.deviceName;
+    }
+
+    /**
+     * @return enableStun
+     */
+    public Boolean getEnableStun() {
+        return this.enableStun;
     }
 
     /**
@@ -177,6 +189,7 @@ public class QueryLiveStreamingRequest extends Request {
     public static final class Builder extends Request.Builder<QueryLiveStreamingRequest, Builder> {
         private Integer cacheDuration; 
         private String deviceName; 
+        private Boolean enableStun; 
         private Integer encryptType; 
         private Boolean forceIFrame; 
         private String iotId; 
@@ -192,20 +205,21 @@ public class QueryLiveStreamingRequest extends Request {
             super();
         } 
 
-        private Builder(QueryLiveStreamingRequest response) {
-            super(response);
-            this.cacheDuration = response.cacheDuration;
-            this.deviceName = response.deviceName;
-            this.encryptType = response.encryptType;
-            this.forceIFrame = response.forceIFrame;
-            this.iotId = response.iotId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.playUnLimited = response.playUnLimited;
-            this.productKey = response.productKey;
-            this.scheme = response.scheme;
-            this.shouldEncrypt = response.shouldEncrypt;
-            this.streamType = response.streamType;
-            this.urlValidDuration = response.urlValidDuration;
+        private Builder(QueryLiveStreamingRequest request) {
+            super(request);
+            this.cacheDuration = request.cacheDuration;
+            this.deviceName = request.deviceName;
+            this.enableStun = request.enableStun;
+            this.encryptType = request.encryptType;
+            this.forceIFrame = request.forceIFrame;
+            this.iotId = request.iotId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.playUnLimited = request.playUnLimited;
+            this.productKey = request.productKey;
+            this.scheme = request.scheme;
+            this.shouldEncrypt = request.shouldEncrypt;
+            this.streamType = request.streamType;
+            this.urlValidDuration = request.urlValidDuration;
         } 
 
         /**
@@ -223,6 +237,15 @@ public class QueryLiveStreamingRequest extends Request {
         public Builder deviceName(String deviceName) {
             this.putQueryParameter("DeviceName", deviceName);
             this.deviceName = deviceName;
+            return this;
+        }
+
+        /**
+         * EnableStun.
+         */
+        public Builder enableStun(Boolean enableStun) {
+            this.putQueryParameter("EnableStun", enableStun);
+            this.enableStun = enableStun;
             return this;
         }
 

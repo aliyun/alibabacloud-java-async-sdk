@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceResponseBody</p>
  */
 public class DescribeInstanceResponseBody extends TeaModel {
-    @NameInMap("Details")
+    @com.aliyun.core.annotation.NameInMap("Details")
     private Details details;
 
-    @NameInMap("Edition")
+    @com.aliyun.core.annotation.NameInMap("Edition")
     private String edition;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @NameInMap("InDebt")
+    @com.aliyun.core.annotation.NameInMap("InDebt")
     private String inDebt;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("PayType")
+    @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
     private DescribeInstanceResponseBody(Builder builder) {
@@ -146,7 +151,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private Integer status; 
 
         /**
-         * The details of the WAF instance.
+         * <p>The details of the WAF instance.</p>
          */
         public Builder details(Details details) {
             this.details = details;
@@ -154,7 +159,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The edition of the WAF instance.
+         * <p>The edition of the WAF instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default_version</p>
          */
         public Builder edition(String edition) {
             this.edition = edition;
@@ -162,7 +170,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The expiration time of the WAF instance.
+         * <p>The expiration time of the WAF instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4809859200000</p>
          */
         public Builder endTime(Long endTime) {
             this.endTime = endTime;
@@ -170,11 +181,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the WAF instance has overdue payments. Valid values:
-         * <p>
+         * <p>Indicates whether the WAF instance has overdue payments. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: The WAF instance does not have overdue payments.</li>
+         * <li><strong>1</strong>: The WAF instance has overdue payments.</li>
+         * </ul>
          * 
-         * *   **0**: The WAF instance does not have overdue payments.
-         * *   **1**: The WAF instance has overdue payments.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder inDebt(String inDebt) {
             this.inDebt = inDebt;
@@ -182,7 +196,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the WAF instance.
+         * <p>The ID of the WAF instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf-cn-xxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -190,11 +207,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The billing method of the WAF instance. Valid values:
-         * <p>
+         * <p>The billing method of the WAF instance. Valid values:</p>
+         * <ul>
+         * <li><strong>POSTPAY:</strong> The WAF instance uses the pay-as-you-go billing method.</li>
+         * <li><strong>PREPAY:</strong> The WAF instance uses the subscription billing method.</li>
+         * </ul>
          * 
-         * *   **POSTPAY:** The WAF instance uses the pay-as-you-go billing method.
-         * *   **PREPAY:** The WAF instance uses the subscription billing method.
+         * <strong>example:</strong>
+         * <p>POSTPAY</p>
          */
         public Builder payType(String payType) {
             this.payType = payType;
@@ -202,11 +222,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The region where the WAF instance resides. Valid values:
-         * <p>
+         * <p>The region where the WAF instance resides. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou:</strong> the Chinese mainland</li>
+         * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+         * </ul>
          * 
-         * *   **cn-hangzhou:** the Chinese mainland
-         * *   **ap-southeast-1:** outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -214,7 +237,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66A98669-CC6E-4F3E-80A6-3014697B11AE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -222,7 +248,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The purchase time of the WAF instance. The time is in the UNIX timestamp format. The time is displayed in UTC. Unit: milliseconds.
+         * <p>The purchase time of the WAF instance. The time is in the UNIX timestamp format. The time is displayed in UTC. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1668496310000</p>
          */
         public Builder startTime(Long startTime) {
             this.startTime = startTime;
@@ -230,12 +259,15 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the WAF instance. Valid values:
-         * <p>
+         * <p>The status of the WAF instance. Valid values:</p>
+         * <ul>
+         * <li><strong>1:</strong> The WAF instance is in a normal state.</li>
+         * <li><strong>2:</strong> The WAF instance has expired.</li>
+         * <li><strong>3:</strong> The WAF instance has been released.</li>
+         * </ul>
          * 
-         * *   **1:** The WAF instance is in a normal state.
-         * *   **2:** The WAF instance has expired.
-         * *   **3:** The WAF instance has been released.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.status = status;
@@ -248,158 +280,164 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class Details extends TeaModel {
-        @NameInMap("AclRuleMaxIpCount")
+        @com.aliyun.core.annotation.NameInMap("AclRuleMaxIpCount")
         private Long aclRuleMaxIpCount;
 
-        @NameInMap("AntiScan")
+        @com.aliyun.core.annotation.NameInMap("AntiScan")
         private Boolean antiScan;
 
-        @NameInMap("AntiScanTemplateMaxCount")
+        @com.aliyun.core.annotation.NameInMap("AntiScanTemplateMaxCount")
         private Long antiScanTemplateMaxCount;
 
-        @NameInMap("BackendMaxCount")
+        @com.aliyun.core.annotation.NameInMap("BackendMaxCount")
         private Long backendMaxCount;
 
-        @NameInMap("BaseWafGroup")
+        @com.aliyun.core.annotation.NameInMap("BaseWafGroup")
         private Boolean baseWafGroup;
 
-        @NameInMap("BaseWafGroupRuleInTemplateMaxCount")
+        @com.aliyun.core.annotation.NameInMap("BaseWafGroupRuleInTemplateMaxCount")
         private Long baseWafGroupRuleInTemplateMaxCount;
 
-        @NameInMap("BaseWafGroupRuleTemplateMaxCount")
+        @com.aliyun.core.annotation.NameInMap("BaseWafGroupRuleTemplateMaxCount")
         private Long baseWafGroupRuleTemplateMaxCount;
 
-        @NameInMap("Bot")
+        @com.aliyun.core.annotation.NameInMap("Bot")
         private Boolean bot;
 
-        @NameInMap("BotApp")
+        @com.aliyun.core.annotation.NameInMap("BotApp")
         private String botApp;
 
-        @NameInMap("BotTemplateMaxCount")
+        @com.aliyun.core.annotation.NameInMap("BotTemplateMaxCount")
         private Long botTemplateMaxCount;
 
-        @NameInMap("BotWeb")
+        @com.aliyun.core.annotation.NameInMap("BotWeb")
         private String botWeb;
 
-        @NameInMap("CnameResourceMaxCount")
+        @com.aliyun.core.annotation.NameInMap("CnameResourceMaxCount")
         private Long cnameResourceMaxCount;
 
-        @NameInMap("CustomResponse")
+        @com.aliyun.core.annotation.NameInMap("CustomResponse")
         private Boolean customResponse;
 
-        @NameInMap("CustomResponseRuleInTemplateMaxCount")
+        @com.aliyun.core.annotation.NameInMap("CustomResponseRuleInTemplateMaxCount")
         private Long customResponseRuleInTemplateMaxCount;
 
-        @NameInMap("CustomResponseTemplateMaxCount")
+        @com.aliyun.core.annotation.NameInMap("CustomResponseTemplateMaxCount")
         private Long customResponseTemplateMaxCount;
 
-        @NameInMap("CustomRule")
+        @com.aliyun.core.annotation.NameInMap("CustomRule")
         private Boolean customRule;
 
-        @NameInMap("CustomRuleAction")
+        @com.aliyun.core.annotation.NameInMap("CustomRuleAction")
         private String customRuleAction;
 
-        @NameInMap("CustomRuleCondition")
+        @com.aliyun.core.annotation.NameInMap("CustomRuleCondition")
         private String customRuleCondition;
 
-        @NameInMap("CustomRuleInTemplateMaxCount")
+        @com.aliyun.core.annotation.NameInMap("CustomRuleInTemplateMaxCount")
         private Long customRuleInTemplateMaxCount;
 
-        @NameInMap("CustomRuleRatelimitor")
+        @com.aliyun.core.annotation.NameInMap("CustomRuleRatelimitor")
         private String customRuleRatelimitor;
 
-        @NameInMap("CustomRuleTemplateMaxCount")
+        @com.aliyun.core.annotation.NameInMap("CustomRuleTemplateMaxCount")
         private Long customRuleTemplateMaxCount;
 
-        @NameInMap("DefenseGroupMaxCount")
+        @com.aliyun.core.annotation.NameInMap("DefenseGroupMaxCount")
         private Long defenseGroupMaxCount;
 
-        @NameInMap("DefenseObjectInGroupMaxCount")
+        @com.aliyun.core.annotation.NameInMap("DefenseObjectInGroupMaxCount")
         private Long defenseObjectInGroupMaxCount;
 
-        @NameInMap("DefenseObjectInTemplateMaxCount")
+        @com.aliyun.core.annotation.NameInMap("DefenseObjectInTemplateMaxCount")
         private Long defenseObjectInTemplateMaxCount;
 
-        @NameInMap("DefenseObjectMaxCount")
+        @com.aliyun.core.annotation.NameInMap("DefenseObjectMaxCount")
         private Long defenseObjectMaxCount;
 
-        @NameInMap("Dlp")
+        @com.aliyun.core.annotation.NameInMap("Dlp")
         private Boolean dlp;
 
-        @NameInMap("DlpRuleInTemplateMaxCount")
+        @com.aliyun.core.annotation.NameInMap("DlpRuleInTemplateMaxCount")
         private Long dlpRuleInTemplateMaxCount;
 
-        @NameInMap("DlpTemplateMaxCount")
+        @com.aliyun.core.annotation.NameInMap("DlpTemplateMaxCount")
         private Long dlpTemplateMaxCount;
 
-        @NameInMap("ExclusiveIp")
+        @com.aliyun.core.annotation.NameInMap("ExclusiveIp")
         private Boolean exclusiveIp;
 
-        @NameInMap("Gslb")
+        @com.aliyun.core.annotation.NameInMap("Gslb")
         private Boolean gslb;
 
-        @NameInMap("HttpPorts")
+        @com.aliyun.core.annotation.NameInMap("HttpPorts")
         private String httpPorts;
 
-        @NameInMap("HttpsPorts")
+        @com.aliyun.core.annotation.NameInMap("HttpsPorts")
         private String httpsPorts;
 
-        @NameInMap("IpBlacklist")
+        @com.aliyun.core.annotation.NameInMap("IpBlacklist")
         private Boolean ipBlacklist;
 
-        @NameInMap("IpBlacklistIpInRuleMaxCount")
+        @com.aliyun.core.annotation.NameInMap("IpBlacklistIpInRuleMaxCount")
         private Long ipBlacklistIpInRuleMaxCount;
 
-        @NameInMap("IpBlacklistRuleInTemplateMaxCount")
+        @com.aliyun.core.annotation.NameInMap("IpBlacklistRuleInTemplateMaxCount")
         private Long ipBlacklistRuleInTemplateMaxCount;
 
-        @NameInMap("IpBlacklistTemplateMaxCount")
+        @com.aliyun.core.annotation.NameInMap("IpBlacklistTemplateMaxCount")
         private Long ipBlacklistTemplateMaxCount;
 
-        @NameInMap("Ipv6")
+        @com.aliyun.core.annotation.NameInMap("Ipv6")
         private Boolean ipv6;
 
-        @NameInMap("LogService")
+        @com.aliyun.core.annotation.NameInMap("LogService")
         private Boolean logService;
 
-        @NameInMap("MajorProtection")
+        @com.aliyun.core.annotation.NameInMap("MajorProtection")
         private Boolean majorProtection;
 
-        @NameInMap("MajorProtectionTemplateMaxCount")
+        @com.aliyun.core.annotation.NameInMap("MajorProtectionTemplateMaxCount")
         private Long majorProtectionTemplateMaxCount;
 
-        @NameInMap("Tamperproof")
+        @com.aliyun.core.annotation.NameInMap("Tamperproof")
         private Boolean tamperproof;
 
-        @NameInMap("TamperproofRuleInTemplateMaxCount")
+        @com.aliyun.core.annotation.NameInMap("TamperproofRuleInTemplateMaxCount")
         private Long tamperproofRuleInTemplateMaxCount;
 
-        @NameInMap("TamperproofTemplateMaxCount")
+        @com.aliyun.core.annotation.NameInMap("TamperproofTemplateMaxCount")
         private Long tamperproofTemplateMaxCount;
 
-        @NameInMap("VastIpBlacklistInFileMaxCount")
+        @com.aliyun.core.annotation.NameInMap("VastIpBlacklistInFileMaxCount")
         private Long vastIpBlacklistInFileMaxCount;
 
-        @NameInMap("VastIpBlacklistInOperationMaxCount")
+        @com.aliyun.core.annotation.NameInMap("VastIpBlacklistInOperationMaxCount")
         private Long vastIpBlacklistInOperationMaxCount;
 
-        @NameInMap("VastIpBlacklistMaxCount")
+        @com.aliyun.core.annotation.NameInMap("VastIpBlacklistMaxCount")
         private Long vastIpBlacklistMaxCount;
 
-        @NameInMap("Whitelist")
+        @com.aliyun.core.annotation.NameInMap("Whitelist")
         private Boolean whitelist;
 
-        @NameInMap("WhitelistLogical")
+        @com.aliyun.core.annotation.NameInMap("WhitelistLogical")
         private String whitelistLogical;
 
-        @NameInMap("WhitelistRuleCondition")
+        @com.aliyun.core.annotation.NameInMap("WhitelistRuleCondition")
         private String whitelistRuleCondition;
 
-        @NameInMap("WhitelistRuleInTemplateMaxCount")
+        @com.aliyun.core.annotation.NameInMap("WhitelistRuleInTemplateMaxCount")
         private Long whitelistRuleInTemplateMaxCount;
 
-        @NameInMap("WhitelistTemplateMaxCount")
+        @com.aliyun.core.annotation.NameInMap("WhitelistTemplateMaxCount")
         private Long whitelistTemplateMaxCount;
 
         private Details(Builder builder) {
@@ -875,7 +913,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Long whitelistTemplateMaxCount; 
 
             /**
-             * The maximum number of IP addresses that can be added to the match content of a match condition. For more information, see [Match conditions](~~374354~~).
+             * <p>The maximum number of IP addresses that can be added to the match content of a match condition. For more information, see <a href="https://help.aliyun.com/document_detail/374354.html">Match conditions</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder aclRuleMaxIpCount(Long aclRuleMaxIpCount) {
                 this.aclRuleMaxIpCount = aclRuleMaxIpCount;
@@ -883,11 +924,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the scan protection module is supported. Valid values:
-             * <p>
+             * <p>Indicates whether the scan protection module is supported. Valid values:</p>
+             * <ul>
+             * <li><strong>true:</strong> The scan protection module is supported.</li>
+             * <li><strong>false:</strong> The scan protection module is not supported.</li>
+             * </ul>
              * 
-             * *   **true:** The scan protection module is supported.
-             * *   **false:** The scan protection module is not supported.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder antiScan(Boolean antiScan) {
                 this.antiScan = antiScan;
@@ -895,7 +939,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of scan protection rule templates that can be configured.
+             * <p>The maximum number of scan protection rule templates that can be configured.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder antiScanTemplateMaxCount(Long antiScanTemplateMaxCount) {
                 this.antiScanTemplateMaxCount = antiScanTemplateMaxCount;
@@ -903,7 +950,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of back-to-origin IP addresses that can be configured.
+             * <p>The maximum number of back-to-origin IP addresses that can be configured.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder backendMaxCount(Long backendMaxCount) {
                 this.backendMaxCount = backendMaxCount;
@@ -911,11 +961,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the basic protection rule module is supported. Valid values:
-             * <p>
+             * <p>Indicates whether the basic protection rule module is supported. Valid values:</p>
+             * <ul>
+             * <li><strong>true:</strong> The basic protection rule module is supported.</li>
+             * <li><strong>false:</strong> The basic protection rule module is not supported.</li>
+             * </ul>
              * 
-             * *   **true:** The basic protection rule module is supported.
-             * *   **false:** The basic protection rule module is not supported.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder baseWafGroup(Boolean baseWafGroup) {
                 this.baseWafGroup = baseWafGroup;
@@ -923,7 +976,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of protection rules that can be included in a basic protection rule template.
+             * <p>The maximum number of protection rules that can be included in a basic protection rule template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder baseWafGroupRuleInTemplateMaxCount(Long baseWafGroupRuleInTemplateMaxCount) {
                 this.baseWafGroupRuleInTemplateMaxCount = baseWafGroupRuleInTemplateMaxCount;
@@ -931,7 +987,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of basic protection rule templates that can be configured.
+             * <p>The maximum number of basic protection rule templates that can be configured.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder baseWafGroupRuleTemplateMaxCount(Long baseWafGroupRuleTemplateMaxCount) {
                 this.baseWafGroupRuleTemplateMaxCount = baseWafGroupRuleTemplateMaxCount;
@@ -939,11 +998,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the bot management module is supported. Valid values:
-             * <p>
+             * <p>Indicates whether the bot management module is supported. Valid values:</p>
+             * <ul>
+             * <li><strong>true:</strong> The bot management module is supported.</li>
+             * <li><strong>false:</strong> The bot management module is not supported.</li>
+             * </ul>
              * 
-             * *   **true:** The bot management module is supported.
-             * *   **false:** The bot management module is not supported.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder bot(Boolean bot) {
                 this.bot = bot;
@@ -951,11 +1013,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether bot management for app protection is supported. Valid values:
-             * <p>
+             * <p>Indicates whether bot management for app protection is supported. Valid values:</p>
+             * <ul>
+             * <li><strong>true:</strong> Bot management for app protection is supported.</li>
+             * <li><strong>false:</strong> Bot management for app protection is not supported.</li>
+             * </ul>
              * 
-             * *   **true:** Bot management for app protection is supported.
-             * *   **false:** Bot management for app protection is not supported.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder botApp(String botApp) {
                 this.botApp = botApp;
@@ -963,7 +1028,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of bot management rule templates that can be configured.
+             * <p>The maximum number of bot management rule templates that can be configured.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder botTemplateMaxCount(Long botTemplateMaxCount) {
                 this.botTemplateMaxCount = botTemplateMaxCount;
@@ -971,11 +1039,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether bot management for website protection is supported. Valid values:
-             * <p>
+             * <p>Indicates whether bot management for website protection is supported. Valid values:</p>
+             * <ul>
+             * <li><strong>true:</strong> Bot management for website protection is supported.</li>
+             * <li><strong>false:</strong> Bot management for website protection is not supported.</li>
+             * </ul>
              * 
-             * *   **true:** Bot management for website protection is supported.
-             * *   **false:** Bot management for website protection is not supported.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder botWeb(String botWeb) {
                 this.botWeb = botWeb;
@@ -983,7 +1054,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of CNAMEs that can be added.
+             * <p>The maximum number of CNAMEs that can be added.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder cnameResourceMaxCount(Long cnameResourceMaxCount) {
                 this.cnameResourceMaxCount = cnameResourceMaxCount;
@@ -991,11 +1065,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the custom response module is supported. Valid values:
-             * <p>
+             * <p>Indicates whether the custom response module is supported. Valid values:</p>
+             * <ul>
+             * <li><strong>true:</strong> The custom response module is supported.</li>
+             * <li><strong>false:</strong> The custom response module is not supported.</li>
+             * </ul>
              * 
-             * *   **true:** The custom response module is supported.
-             * *   **false:** The custom response module is not supported.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder customResponse(Boolean customResponse) {
                 this.customResponse = customResponse;
@@ -1003,7 +1080,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of rules that can be included in a custom response rule template.
+             * <p>The maximum number of rules that can be included in a custom response rule template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder customResponseRuleInTemplateMaxCount(Long customResponseRuleInTemplateMaxCount) {
                 this.customResponseRuleInTemplateMaxCount = customResponseRuleInTemplateMaxCount;
@@ -1011,7 +1091,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of custom response rule templates that can be configured.
+             * <p>The maximum number of custom response rule templates that can be configured.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder customResponseTemplateMaxCount(Long customResponseTemplateMaxCount) {
                 this.customResponseTemplateMaxCount = customResponseTemplateMaxCount;
@@ -1019,11 +1102,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the custom rule module is supported. Valid values:
-             * <p>
+             * <p>Indicates whether the custom rule module is supported. Valid values:</p>
+             * <ul>
+             * <li><strong>true:</strong> The custom rule module is supported.</li>
+             * <li><strong>false:</strong> The custom rule module is not supported.</li>
+             * </ul>
              * 
-             * *   **true:** The custom rule module is supported.
-             * *   **false:** The custom rule module is not supported.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder customRule(Boolean customRule) {
                 this.customRule = customRule;
@@ -1031,7 +1117,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The action that can be included in a custom rule.
+             * <p>The action that can be included in a custom rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>block</p>
              */
             public Builder customRuleAction(String customRuleAction) {
                 this.customRuleAction = customRuleAction;
@@ -1039,7 +1128,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The match conditions that can be used in a custom rule. For more information, see **Match condition parameters** in the "**Parameters of custom rules (custom_acl)**" section in the [CreateDefenseRule](~~CreateDefenseRule~~) topic.
+             * <p>The match conditions that can be used in a custom rule. For more information, see <strong>Match condition parameters</strong> in the &quot;<strong>Parameters of custom rules (custom_acl)</strong>&quot; section in the <a href="~~CreateDefenseRule~~">CreateDefenseRule</a> topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>URL</p>
              */
             public Builder customRuleCondition(String customRuleCondition) {
                 this.customRuleCondition = customRuleCondition;
@@ -1047,7 +1139,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of rules that can be included in a custom rule template.
+             * <p>The maximum number of rules that can be included in a custom rule template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder customRuleInTemplateMaxCount(Long customRuleInTemplateMaxCount) {
                 this.customRuleInTemplateMaxCount = customRuleInTemplateMaxCount;
@@ -1055,7 +1150,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The statistical object for rate limiting in a custom rule.
+             * <p>The statistical object for rate limiting in a custom rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>header</p>
              */
             public Builder customRuleRatelimitor(String customRuleRatelimitor) {
                 this.customRuleRatelimitor = customRuleRatelimitor;
@@ -1063,7 +1161,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of custom rule templates that can be configured.
+             * <p>The maximum number of custom rule templates that can be configured.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder customRuleTemplateMaxCount(Long customRuleTemplateMaxCount) {
                 this.customRuleTemplateMaxCount = customRuleTemplateMaxCount;
@@ -1071,7 +1172,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of protected object groups that can be configured.
+             * <p>The maximum number of protected object groups that can be configured.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder defenseGroupMaxCount(Long defenseGroupMaxCount) {
                 this.defenseGroupMaxCount = defenseGroupMaxCount;
@@ -1079,7 +1183,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of protected objects that can be included in a protected object group.
+             * <p>The maximum number of protected objects that can be included in a protected object group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder defenseObjectInGroupMaxCount(Long defenseObjectInGroupMaxCount) {
                 this.defenseObjectInGroupMaxCount = defenseObjectInGroupMaxCount;
@@ -1087,7 +1194,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of protected objects to which a protection rule template can be applied.
+             * <p>The maximum number of protected objects to which a protection rule template can be applied.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder defenseObjectInTemplateMaxCount(Long defenseObjectInTemplateMaxCount) {
                 this.defenseObjectInTemplateMaxCount = defenseObjectInTemplateMaxCount;
@@ -1095,7 +1205,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of protected objects that can be configured.
+             * <p>The maximum number of protected objects that can be configured.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20,000</p>
              */
             public Builder defenseObjectMaxCount(Long defenseObjectMaxCount) {
                 this.defenseObjectMaxCount = defenseObjectMaxCount;
@@ -1103,11 +1216,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the data leakage prevention module is supported. Valid values:
-             * <p>
+             * <p>Indicates whether the data leakage prevention module is supported. Valid values:</p>
+             * <ul>
+             * <li><strong>true:</strong> The data leakage prevention module is supported.</li>
+             * <li><strong>false:</strong> The data leakage prevention module is not supported.</li>
+             * </ul>
              * 
-             * *   **true:** The data leakage prevention module is supported.
-             * *   **false:** The data leakage prevention module is not supported.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dlp(Boolean dlp) {
                 this.dlp = dlp;
@@ -1115,7 +1231,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of rules that can be included in a data leakage prevention rule template.
+             * <p>The maximum number of rules that can be included in a data leakage prevention rule template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder dlpRuleInTemplateMaxCount(Long dlpRuleInTemplateMaxCount) {
                 this.dlpRuleInTemplateMaxCount = dlpRuleInTemplateMaxCount;
@@ -1123,7 +1242,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of data leakage prevention rule templates that can be configured.
+             * <p>The maximum number of data leakage prevention rule templates that can be configured.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder dlpTemplateMaxCount(Long dlpTemplateMaxCount) {
                 this.dlpTemplateMaxCount = dlpTemplateMaxCount;
@@ -1131,11 +1253,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether exclusive IP addresses are supported. Valid values:
-             * <p>
+             * <p>Indicates whether exclusive IP addresses are supported. Valid values:</p>
+             * <ul>
+             * <li><strong>true:</strong> Exclusive IP addresses are supported.</li>
+             * <li><strong>false:</strong> Exclusive IP addresses are not supported.</li>
+             * </ul>
              * 
-             * *   **true:** Exclusive IP addresses are supported.
-             * *   **false:** Exclusive IP addresses are not supported.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder exclusiveIp(Boolean exclusiveIp) {
                 this.exclusiveIp = exclusiveIp;
@@ -1143,11 +1268,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether global server load balancing (GSLB) is supported. Valid values:
-             * <p>
+             * <p>Indicates whether global server load balancing (GSLB) is supported. Valid values:</p>
+             * <ul>
+             * <li><strong>true:</strong> GSLB is supported.</li>
+             * <li><strong>false:</strong> GSLB is not supported.</li>
+             * </ul>
              * 
-             * *   **true:** GSLB is supported.
-             * *   **false:** GSLB is not supported.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder gslb(Boolean gslb) {
                 this.gslb = gslb;
@@ -1155,7 +1283,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP port range that is supported. For more information, see [View supported ports](~~385578~~).
+             * <p>The HTTP port range that is supported. For more information, see <a href="https://help.aliyun.com/document_detail/385578.html">View supported ports</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder httpPorts(String httpPorts) {
                 this.httpPorts = httpPorts;
@@ -1163,7 +1294,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTPS port range that is supported. For more information, see [View supported ports](~~385578~~).
+             * <p>The HTTPS port range that is supported. For more information, see <a href="https://help.aliyun.com/document_detail/385578.html">View supported ports</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>443</p>
              */
             public Builder httpsPorts(String httpsPorts) {
                 this.httpsPorts = httpsPorts;
@@ -1171,11 +1305,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the IP address blacklist module is supported. Valid values:
-             * <p>
+             * <p>Indicates whether the IP address blacklist module is supported. Valid values:</p>
+             * <ul>
+             * <li><strong>true:</strong> The IP address blacklist module is supported.</li>
+             * <li><strong>false:</strong> The IP address blacklist module is not supported.</li>
+             * </ul>
              * 
-             * *   **true:** The IP address blacklist module is supported.
-             * *   **false:** The IP address blacklist module is not supported.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder ipBlacklist(Boolean ipBlacklist) {
                 this.ipBlacklist = ipBlacklist;
@@ -1183,7 +1320,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of IP addresses that can be added to an IP address blacklist rule.
+             * <p>The maximum number of IP addresses that can be added to an IP address blacklist rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder ipBlacklistIpInRuleMaxCount(Long ipBlacklistIpInRuleMaxCount) {
                 this.ipBlacklistIpInRuleMaxCount = ipBlacklistIpInRuleMaxCount;
@@ -1191,7 +1331,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of rules that can be included in an IP address blacklist rule template.
+             * <p>The maximum number of rules that can be included in an IP address blacklist rule template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder ipBlacklistRuleInTemplateMaxCount(Long ipBlacklistRuleInTemplateMaxCount) {
                 this.ipBlacklistRuleInTemplateMaxCount = ipBlacklistRuleInTemplateMaxCount;
@@ -1199,7 +1342,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of IP address blacklist rule templates that can be configured.
+             * <p>The maximum number of IP address blacklist rule templates that can be configured.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder ipBlacklistTemplateMaxCount(Long ipBlacklistTemplateMaxCount) {
                 this.ipBlacklistTemplateMaxCount = ipBlacklistTemplateMaxCount;
@@ -1207,11 +1353,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether IPv6 is supported. Valid values:
-             * <p>
+             * <p>Indicates whether IPv6 is supported. Valid values:</p>
+             * <ul>
+             * <li><strong>true:</strong> IPv6 is supported.</li>
+             * <li><strong>false:</strong> IPv6 is not supported.</li>
+             * </ul>
              * 
-             * *   **true:** IPv6 is supported.
-             * *   **false:** IPv6 is not supported.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder ipv6(Boolean ipv6) {
                 this.ipv6 = ipv6;
@@ -1219,11 +1368,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the log collection feature is supported. Valid values:
-             * <p>
+             * <p>Indicates whether the log collection feature is supported. Valid values:</p>
+             * <ul>
+             * <li><strong>true:</strong> The log collection feature is supported.</li>
+             * <li><strong>false:</strong> The log collection feature is not supported.</li>
+             * </ul>
              * 
-             * *   **true:** The log collection feature is supported.
-             * *   **false:** The log collection feature is not supported.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder logService(Boolean logService) {
                 this.logService = logService;
@@ -1231,11 +1383,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether major event protection is supported. Valid values:
-             * <p>
+             * <p>Indicates whether major event protection is supported. Valid values:</p>
+             * <ul>
+             * <li><strong>true:</strong> Major event protection is supported.</li>
+             * <li><strong>false:</strong> Major event protection is not supported.</li>
+             * </ul>
              * 
-             * *   **true:** Major event protection is supported.
-             * *   **false:** Major event protection is not supported.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder majorProtection(Boolean majorProtection) {
                 this.majorProtection = majorProtection;
@@ -1243,7 +1398,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of major event protection rule templates that can be configured.
+             * <p>The maximum number of major event protection rule templates that can be configured.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder majorProtectionTemplateMaxCount(Long majorProtectionTemplateMaxCount) {
                 this.majorProtectionTemplateMaxCount = majorProtectionTemplateMaxCount;
@@ -1251,11 +1409,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the website tamper-proofing module is supported. Valid values:
-             * <p>
+             * <p>Indicates whether the website tamper-proofing module is supported. Valid values:</p>
+             * <ul>
+             * <li><strong>true:</strong> The website tamper-proofing module is supported.</li>
+             * <li><strong>false:</strong> The website tamper-proofing module is not supported.</li>
+             * </ul>
              * 
-             * *   **true:** The website tamper-proofing module is supported.
-             * *   **false:** The website tamper-proofing module is not supported.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder tamperproof(Boolean tamperproof) {
                 this.tamperproof = tamperproof;
@@ -1263,7 +1424,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of rules that can be included in a website tamper-proofing rule template.
+             * <p>The maximum number of rules that can be included in a website tamper-proofing rule template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder tamperproofRuleInTemplateMaxCount(Long tamperproofRuleInTemplateMaxCount) {
                 this.tamperproofRuleInTemplateMaxCount = tamperproofRuleInTemplateMaxCount;
@@ -1271,7 +1435,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of website tamper-proofing rule templates that can be configured.
+             * <p>The maximum number of website tamper-proofing rule templates that can be configured.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder tamperproofTemplateMaxCount(Long tamperproofTemplateMaxCount) {
                 this.tamperproofTemplateMaxCount = tamperproofTemplateMaxCount;
@@ -1279,7 +1446,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of IP addresses or CIDR blocks that can be added to an IP address blacklist in a batch.
+             * <p>The maximum number of IP addresses or CIDR blocks that can be added to an IP address blacklist in a batch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2,000</p>
              */
             public Builder vastIpBlacklistInFileMaxCount(Long vastIpBlacklistInFileMaxCount) {
                 this.vastIpBlacklistInFileMaxCount = vastIpBlacklistInFileMaxCount;
@@ -1287,7 +1457,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of IP addresses or CIDR blocks that can be added to an IP address blacklist on a page.
+             * <p>The maximum number of IP addresses or CIDR blocks that can be added to an IP address blacklist on a page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder vastIpBlacklistInOperationMaxCount(Long vastIpBlacklistInOperationMaxCount) {
                 this.vastIpBlacklistInOperationMaxCount = vastIpBlacklistInOperationMaxCount;
@@ -1295,7 +1468,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of IP addresses or CIDR blocks that can be added to an IP address blacklist per Alibaba Cloud account.
+             * <p>The maximum number of IP addresses or CIDR blocks that can be added to an IP address blacklist per Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50,000</p>
              */
             public Builder vastIpBlacklistMaxCount(Long vastIpBlacklistMaxCount) {
                 this.vastIpBlacklistMaxCount = vastIpBlacklistMaxCount;
@@ -1303,11 +1479,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the whitelist module is supported. Valid values:
-             * <p>
+             * <p>Indicates whether the whitelist module is supported. Valid values:</p>
+             * <ul>
+             * <li><strong>true:</strong> The whitelist module is supported.</li>
+             * <li><strong>false:</strong> The whitelist module is not supported.</li>
+             * </ul>
              * 
-             * *   **true:** The whitelist module is supported.
-             * *   **false:** The whitelist module is not supported.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder whitelist(Boolean whitelist) {
                 this.whitelist = whitelist;
@@ -1315,7 +1494,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The logical operators that can be used in a whitelist rule. For more information, see **Match condition parameters** in the "**Parameters of whitelist rules (whitelist)**" section in the [CreateDefenseRule](~~CreateDefenseRule~~) topic.
+             * <p>The logical operators that can be used in a whitelist rule. For more information, see <strong>Match condition parameters</strong> in the &quot;<strong>Parameters of whitelist rules (whitelist)</strong>&quot; section in the <a href="~~CreateDefenseRule~~">CreateDefenseRule</a> topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>contain</p>
              */
             public Builder whitelistLogical(String whitelistLogical) {
                 this.whitelistLogical = whitelistLogical;
@@ -1323,7 +1505,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The match fields that can be used in a whitelist rule. For more information, see **Match condition parameters** in the "**Parameters of whitelist rules (whitelist)**" section in the [CreateDefenseRule](~~CreateDefenseRule~~) topic.
+             * <p>The match fields that can be used in a whitelist rule. For more information, see <strong>Match condition parameters</strong> in the &quot;<strong>Parameters of whitelist rules (whitelist)</strong>&quot; section in the <a href="~~CreateDefenseRule~~">CreateDefenseRule</a> topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>URL</p>
              */
             public Builder whitelistRuleCondition(String whitelistRuleCondition) {
                 this.whitelistRuleCondition = whitelistRuleCondition;
@@ -1331,7 +1516,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of rules that can be included in a whitelist rule template.
+             * <p>The maximum number of rules that can be included in a whitelist rule template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder whitelistRuleInTemplateMaxCount(Long whitelistRuleInTemplateMaxCount) {
                 this.whitelistRuleInTemplateMaxCount = whitelistRuleInTemplateMaxCount;
@@ -1339,7 +1527,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of whitelist rule templates that can be configured.
+             * <p>The maximum number of whitelist rule templates that can be configured.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder whitelistTemplateMaxCount(Long whitelistTemplateMaxCount) {
                 this.whitelistTemplateMaxCount = whitelistTemplateMaxCount;

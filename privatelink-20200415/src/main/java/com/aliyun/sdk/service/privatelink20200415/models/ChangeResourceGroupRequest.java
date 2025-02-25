@@ -1,37 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.privatelink20200415.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeResourceGroupRequest} extends {@link RequestModel}
  *
  * <p>ChangeResourceGroupRequest</p>
  */
 public class ChangeResourceGroupRequest extends Request {
-    @Query
-    @NameInMap("ResourceGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceId;
 
-    @Query
-    @NameInMap("ResourceRegionId")
-    @Validation(required = true)
-    private String resourceRegionId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    private String resourceType;
 
     private ChangeResourceGroupRequest(Builder builder) {
         super(builder);
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceId = builder.resourceId;
-        this.resourceRegionId = builder.resourceRegionId;
+        this.resourceType = builder.resourceType;
     }
 
     public static Builder builder() {
@@ -62,16 +66,16 @@ public class ChangeResourceGroupRequest extends Request {
     }
 
     /**
-     * @return resourceRegionId
+     * @return resourceType
      */
-    public String getResourceRegionId() {
-        return this.resourceRegionId;
+    public String getResourceType() {
+        return this.resourceType;
     }
 
     public static final class Builder extends Request.Builder<ChangeResourceGroupRequest, Builder> {
         private String resourceGroupId; 
         private String resourceId; 
-        private String resourceRegionId; 
+        private String resourceType; 
 
         private Builder() {
             super();
@@ -81,11 +85,15 @@ public class ChangeResourceGroupRequest extends Request {
             super(request);
             this.resourceGroupId = request.resourceGroupId;
             this.resourceId = request.resourceId;
-            this.resourceRegionId = request.resourceRegionId;
+            this.resourceType = request.resourceType;
         } 
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -94,7 +102,11 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The resource IDs. You can specify up to 50 resource IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ep-hp3i05294c2d2d****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -103,11 +115,18 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceRegionId.
+         * <p>The type of resource. Valid values:</p>
+         * <ul>
+         * <li><strong>VpcEndpoint</strong>: endpoint</li>
+         * <li><strong>VpcEndpointService</strong>: endpoint service</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VpcEndpoint</p>
          */
-        public Builder resourceRegionId(String resourceRegionId) {
-            this.putQueryParameter("ResourceRegionId", resourceRegionId);
-            this.resourceRegionId = resourceRegionId;
+        public Builder resourceType(String resourceType) {
+            this.putQueryParameter("ResourceType", resourceType);
+            this.resourceType = resourceType;
             return this;
         }
 

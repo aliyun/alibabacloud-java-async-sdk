@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,26 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PostCustomizeRuleTestRequest</p>
  */
 public class PostCustomizeRuleTestRequest extends Request {
-    @Body
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("SimulatedData")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleFor")
+    private Long roleFor;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleType")
+    private Integer roleType;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SimulatedData")
     private String simulatedData;
 
-    @Body
-    @NameInMap("TestType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TestType")
     private String testType;
 
     private PostCustomizeRuleTestRequest(Builder builder) {
         super(builder);
         this.id = builder.id;
         this.regionId = builder.regionId;
+        this.roleFor = builder.roleFor;
+        this.roleType = builder.roleType;
         this.simulatedData = builder.simulatedData;
         this.testType = builder.testType;
     }
@@ -64,6 +73,20 @@ public class PostCustomizeRuleTestRequest extends Request {
     }
 
     /**
+     * @return roleFor
+     */
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    /**
+     * @return roleType
+     */
+    public Integer getRoleType() {
+        return this.roleType;
+    }
+
+    /**
      * @return simulatedData
      */
     public String getSimulatedData() {
@@ -80,6 +103,8 @@ public class PostCustomizeRuleTestRequest extends Request {
     public static final class Builder extends Request.Builder<PostCustomizeRuleTestRequest, Builder> {
         private Long id; 
         private String regionId; 
+        private Long roleFor; 
+        private Integer roleType; 
         private String simulatedData; 
         private String testType; 
 
@@ -91,6 +116,8 @@ public class PostCustomizeRuleTestRequest extends Request {
             super(request);
             this.id = request.id;
             this.regionId = request.regionId;
+            this.roleFor = request.roleFor;
+            this.roleType = request.roleType;
             this.simulatedData = request.simulatedData;
             this.testType = request.testType;
         } 
@@ -118,7 +145,28 @@ public class PostCustomizeRuleTestRequest extends Request {
         }
 
         /**
-         * The simulation data for the testing. This parameter is available only when TestType is set to simulate.
+         * The ID of the account that you switch from the management account.
+         */
+        public Builder roleFor(Long roleFor) {
+            this.putBodyParameter("RoleFor", roleFor);
+            this.roleFor = roleFor;
+            return this;
+        }
+
+        /**
+         * The type of the view. Valid values:
+         * <p>
+         * - 0: the current Alibaba Cloud account
+         * - 1: the global account
+         */
+        public Builder roleType(Integer roleType) {
+            this.putBodyParameter("RoleType", roleType);
+            this.roleType = roleType;
+            return this;
+        }
+
+        /**
+         * The simulation data for the test. This parameter is available only when TestType is set to simulate.
          */
         public Builder simulatedData(String simulatedData) {
             this.putBodyParameter("SimulatedData", simulatedData);
@@ -127,7 +175,7 @@ public class PostCustomizeRuleTestRequest extends Request {
         }
 
         /**
-         * The testing type. Valid values:
+         * The test type. Valid values:
          * <p>
          * 
          * *   simulate: simulation data test

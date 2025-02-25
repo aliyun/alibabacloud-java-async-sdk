@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBandwidthLimitationResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBandwidthLimitationResponseBody</p>
  */
 public class DescribeBandwidthLimitationResponseBody extends TeaModel {
-    @NameInMap("Bandwidths")
+    @com.aliyun.core.annotation.NameInMap("Bandwidths")
     private Bandwidths bandwidths;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeBandwidthLimitationResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The maximum public bandwidth.
+         * <p>Details about the maximum public bandwidth.</p>
          */
         public Builder bandwidths(Bandwidths bandwidths) {
             this.bandwidths = bandwidths;
@@ -58,7 +63,10 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the maximum public bandwidth.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,17 +79,23 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBandwidthLimitationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBandwidthLimitationResponseBody</p>
+     */
     public static class Bandwidth extends TeaModel {
-        @NameInMap("InternetChargeType")
+        @com.aliyun.core.annotation.NameInMap("InternetChargeType")
         private String internetChargeType;
 
-        @NameInMap("Max")
+        @com.aliyun.core.annotation.NameInMap("Max")
         private Integer max;
 
-        @NameInMap("Min")
+        @com.aliyun.core.annotation.NameInMap("Min")
         private Integer min;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
         private Bandwidth(Builder builder) {
@@ -134,7 +148,14 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
             private String unit; 
 
             /**
-             * The minimum public bandwidth.
+             * <p>The billing method for network usage. Valid values:</p>
+             * <ul>
+             * <li>PayByBandwidth</li>
+             * <li>PayByTraffic</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PayByTraffic</p>
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -142,7 +163,10 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the public bandwidth.
+             * <p>The maximum public bandwidth.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder max(Integer max) {
                 this.max = max;
@@ -150,7 +174,10 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
             }
 
             /**
-             * DescribeBandwidthLimitation
+             * <p>The minimum public bandwidth.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder min(Integer min) {
                 this.min = min;
@@ -158,7 +185,10 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>The unit of the public bandwidth.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mbps</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -172,9 +202,15 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBandwidthLimitationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBandwidthLimitationResponseBody</p>
+     */
     public static class Bandwidths extends TeaModel {
-        @NameInMap("Bandwidth")
-        private java.util.List < Bandwidth> bandwidth;
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
+        private java.util.List<Bandwidth> bandwidth;
 
         private Bandwidths(Builder builder) {
             this.bandwidth = builder.bandwidth;
@@ -191,17 +227,17 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
         /**
          * @return bandwidth
          */
-        public java.util.List < Bandwidth> getBandwidth() {
+        public java.util.List<Bandwidth> getBandwidth() {
             return this.bandwidth;
         }
 
         public static final class Builder {
-            private java.util.List < Bandwidth> bandwidth; 
+            private java.util.List<Bandwidth> bandwidth; 
 
             /**
              * Bandwidth.
              */
-            public Builder bandwidth(java.util.List < Bandwidth> bandwidth) {
+            public Builder bandwidth(java.util.List<Bandwidth> bandwidth) {
                 this.bandwidth = bandwidth;
                 return this;
             }

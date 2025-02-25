@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAlgorithmVersionRequest} extends {@link RequestModel}
  *
  * <p>GetAlgorithmVersionRequest</p>
  */
 public class GetAlgorithmVersionRequest extends Request {
-    @Path
-    @NameInMap("AlgorithmId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("AlgorithmId")
     private String algorithmId;
 
-    @Path
-    @NameInMap("AlgorithmVersion")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("AlgorithmVersion")
     private String algorithmVersion;
 
     private GetAlgorithmVersionRequest(Builder builder) {

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSchemasResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSchemasResponseBody</p>
  */
 public class DescribeSchemasResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeSchemasResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeSchemasResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Items.
+         * <p>The information about the databases of the cluster.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -58,7 +63,10 @@ public class DescribeSchemasResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>05321590-BB65-4720-8CB6-8218E041CDD0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class DescribeSchemasResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSchemasResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSchemasResponseBody</p>
+     */
     public static class Schema extends TeaModel {
-        @NameInMap("DBClusterId")
+        @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
 
-        @NameInMap("SchemaName")
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
         private String schemaName;
 
         private Schema(Builder builder) {
@@ -110,7 +124,10 @@ public class DescribeSchemasResponseBody extends TeaModel {
             private String schemaName; 
 
             /**
-             * DBClusterId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-bp108z124a8o7****</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -118,7 +135,10 @@ public class DescribeSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>database</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -132,9 +152,15 @@ public class DescribeSchemasResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSchemasResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSchemasResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("Schema")
-        private java.util.List < Schema> schema;
+        @com.aliyun.core.annotation.NameInMap("Schema")
+        private java.util.List<Schema> schema;
 
         private Items(Builder builder) {
             this.schema = builder.schema;
@@ -151,17 +177,17 @@ public class DescribeSchemasResponseBody extends TeaModel {
         /**
          * @return schema
          */
-        public java.util.List < Schema> getSchema() {
+        public java.util.List<Schema> getSchema() {
             return this.schema;
         }
 
         public static final class Builder {
-            private java.util.List < Schema> schema; 
+            private java.util.List<Schema> schema; 
 
             /**
              * Schema.
              */
-            public Builder schema(java.util.List < Schema> schema) {
+            public Builder schema(java.util.List<Schema> schema) {
                 this.schema = schema;
                 return this;
             }

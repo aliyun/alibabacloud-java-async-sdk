@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OnsConsumerGetConnectionRequest} extends {@link RequestModel}
  *
  * <p>OnsConsumerGetConnectionRequest</p>
  */
 public class OnsConsumerGetConnectionRequest extends Request {
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
     private OnsConsumerGetConnectionRequest(Builder builder) {
@@ -69,7 +69,11 @@ public class OnsConsumerGetConnectionRequest extends Request {
         } 
 
         /**
-         * The ID of the consumer group whose client connection status you want to query.
+         * <p>The ID of the consumer group whose client connection status you want to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID_test_consumer_id</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -78,7 +82,10 @@ public class OnsConsumerGetConnectionRequest extends Request {
         }
 
         /**
-         * The ID of the instance to which the consumer group belongs.
+         * <p>The ID of the instance to which the consumer group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MQ_INST_111111111111_DOxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

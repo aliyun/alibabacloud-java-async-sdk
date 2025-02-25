@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OperateBatchDomainResponseBody} extends {@link TeaModel}
  *
  * <p>OperateBatchDomainResponseBody</p>
  */
 public class OperateBatchDomainResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private Long taskId;
 
     private OperateBatchDomainResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class OperateBatchDomainResponseBody extends TeaModel {
         private Long taskId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75446CC1-FC9A-4595-8D96-089D73D7A63D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,10 @@ public class OperateBatchDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>345345</p>
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;

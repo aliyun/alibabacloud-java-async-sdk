@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPrefixListsResponseBody} extends {@link TeaModel}
  *
  * <p>ListPrefixListsResponseBody</p>
  */
 public class ListPrefixListsResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Long maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("PrefixLists")
-    private java.util.List < PrefixLists> prefixLists;
+    @com.aliyun.core.annotation.NameInMap("PrefixLists")
+    private java.util.List<PrefixLists> prefixLists;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListPrefixListsResponseBody(Builder builder) {
@@ -60,7 +65,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
     /**
      * @return prefixLists
      */
-    public java.util.List < PrefixLists> getPrefixLists() {
+    public java.util.List<PrefixLists> getPrefixLists() {
         return this.prefixLists;
     }
 
@@ -81,12 +86,15 @@ public class ListPrefixListsResponseBody extends TeaModel {
     public static final class Builder {
         private Long maxResults; 
         private String nextToken; 
-        private java.util.List < PrefixLists> prefixLists; 
+        private java.util.List<PrefixLists> prefixLists; 
         private String requestId; 
         private Long totalCount; 
 
         /**
-         * The number of entries per page. Valid values: **1** to **100**. Default value: **20**.
+         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Long maxResults) {
             this.maxResults = maxResults;
@@ -94,11 +102,14 @@ public class ListPrefixListsResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value is returned for <strong>NextToken</strong>, the value indicates the token that is used for the next request to retrieve a new page of results.</li>
+         * </ul>
          * 
-         * *   If **NextToken** is empty, no next page exists.
-         * *   If a value is returned for **NextToken**, the value indicates the token that is used for the next request to retrieve a new page of results.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -106,15 +117,18 @@ public class ListPrefixListsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the prefix lists.
+         * <p>The information about the prefix lists.</p>
          */
-        public Builder prefixLists(java.util.List < PrefixLists> prefixLists) {
+        public Builder prefixLists(java.util.List<PrefixLists> prefixLists) {
             this.prefixLists = prefixLists;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DF72F7BB-5DFA-529C-887E-B0BB70D89C4F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +136,10 @@ public class ListPrefixListsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -135,11 +152,17 @@ public class ListPrefixListsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPrefixListsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPrefixListsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -174,7 +197,10 @@ public class ListPrefixListsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -182,7 +208,10 @@ public class ListPrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -196,51 +225,57 @@ public class ListPrefixListsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPrefixListsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPrefixListsResponseBody</p>
+     */
     public static class PrefixLists extends TeaModel {
-        @NameInMap("CidrBlocks")
-        private java.util.List < String > cidrBlocks;
+        @com.aliyun.core.annotation.NameInMap("CidrBlocks")
+        private java.util.List<String> cidrBlocks;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("IpVersion")
+        @com.aliyun.core.annotation.NameInMap("IpVersion")
         private String ipVersion;
 
-        @NameInMap("MaxEntries")
+        @com.aliyun.core.annotation.NameInMap("MaxEntries")
         private Integer maxEntries;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
-        @NameInMap("PrefixListDescription")
+        @com.aliyun.core.annotation.NameInMap("PrefixListDescription")
         private String prefixListDescription;
 
-        @NameInMap("PrefixListId")
+        @com.aliyun.core.annotation.NameInMap("PrefixListId")
         private String prefixListId;
 
-        @NameInMap("PrefixListName")
+        @com.aliyun.core.annotation.NameInMap("PrefixListName")
         private String prefixListName;
 
-        @NameInMap("PrefixListStatus")
+        @com.aliyun.core.annotation.NameInMap("PrefixListStatus")
         private String prefixListStatus;
 
-        @NameInMap("PrefixListType")
+        @com.aliyun.core.annotation.NameInMap("PrefixListType")
         private String prefixListType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ShareType")
+        @com.aliyun.core.annotation.NameInMap("ShareType")
         private String shareType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
         private PrefixLists(Builder builder) {
             this.cidrBlocks = builder.cidrBlocks;
@@ -271,7 +306,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
         /**
          * @return cidrBlocks
          */
-        public java.util.List < String > getCidrBlocks() {
+        public java.util.List<String> getCidrBlocks() {
             return this.cidrBlocks;
         }
 
@@ -369,12 +404,12 @@ public class ListPrefixListsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
         public static final class Builder {
-            private java.util.List < String > cidrBlocks; 
+            private java.util.List<String> cidrBlocks; 
             private String creationTime; 
             private String ipVersion; 
             private Integer maxEntries; 
@@ -388,18 +423,21 @@ public class ListPrefixListsResponseBody extends TeaModel {
             private String resourceGroupId; 
             private String shareType; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
 
             /**
-             * The CIDR block specified in the prefix list.
+             * <p>The CIDR block specified in the prefix list.</p>
              */
-            public Builder cidrBlocks(java.util.List < String > cidrBlocks) {
+            public Builder cidrBlocks(java.util.List<String> cidrBlocks) {
                 this.cidrBlocks = cidrBlocks;
                 return this;
             }
 
             /**
-             * The time when the prefix list was created.
+             * <p>The time when the prefix list was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-12T14:22:32Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -407,11 +445,14 @@ public class ListPrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP version of the prefix list. Valid values:
-             * <p>
+             * <p>The IP version of the prefix list. Valid values:</p>
+             * <ul>
+             * <li><strong>IPV4</strong></li>
+             * <li><strong>IPV6</strong></li>
+             * </ul>
              * 
-             * *   **IPV4**
-             * *   **IPV6**
+             * <strong>example:</strong>
+             * <p>IPV4</p>
              */
             public Builder ipVersion(String ipVersion) {
                 this.ipVersion = ipVersion;
@@ -419,7 +460,10 @@ public class ListPrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of CIDR blocks that you can specify in the prefix list.
+             * <p>The maximum number of CIDR blocks that you can specify in the prefix list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxEntries(Integer maxEntries) {
                 this.maxEntries = maxEntries;
@@ -427,7 +471,10 @@ public class ListPrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud account to which the prefix list belongs.
+             * <p>The Alibaba Cloud account to which the prefix list belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1210123456123456</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -435,7 +482,10 @@ public class ListPrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the prefix list.
+             * <p>The description of the prefix list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Created with oss service by system.</p>
              */
             public Builder prefixListDescription(String prefixListDescription) {
                 this.prefixListDescription = prefixListDescription;
@@ -443,7 +493,10 @@ public class ListPrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the prefix list.
+             * <p>The ID of the prefix list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pl-m5estsqsdqwg88hjf****</p>
              */
             public Builder prefixListId(String prefixListId) {
                 this.prefixListId = prefixListId;
@@ -451,7 +504,10 @@ public class ListPrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the prefix list.
+             * <p>The name of the prefix list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder prefixListName(String prefixListName) {
                 this.prefixListName = prefixListName;
@@ -459,14 +515,18 @@ public class ListPrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the prefix list. Valid values:
-             * <p>
+             * <p>The status of the prefix list. Valid values:</p>
+             * <ul>
+             * <li><strong>Created</strong></li>
+             * <li><strong>Deleted</strong></li>
+             * <li><strong>Modifying</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is the same as the <strong>Status</strong> parameter.</p>
+             * </blockquote>
              * 
-             * *   **Created**
-             * *   **Deleted**
-             * *   **Modifying**
-             * 
-             * >  This parameter is the same as the **Status** parameter.
+             * <strong>example:</strong>
+             * <p>Created</p>
              */
             public Builder prefixListStatus(String prefixListStatus) {
                 this.prefixListStatus = prefixListStatus;
@@ -474,7 +534,10 @@ public class ListPrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * PrefixListType.
+             * <p>The type of the prefix list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Custom</p>
              */
             public Builder prefixListType(String prefixListType) {
                 this.prefixListType = prefixListType;
@@ -482,7 +545,10 @@ public class ListPrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the prefix list.
+             * <p>The region ID of the prefix list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -490,7 +556,10 @@ public class ListPrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the prefix list belongs.
+             * <p>The ID of the resource group to which the prefix list belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-bp67acfmxazb4ph****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -498,11 +567,14 @@ public class ListPrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the prefix list is shared. Valid values:
-             * <p>
+             * <p>Indicates whether the prefix list is shared. Valid values:</p>
+             * <ul>
+             * <li><strong>Shared</strong>: The prefix list is shared.</li>
+             * <li>If an empty value is returned, the prefix list is not shared.</li>
+             * </ul>
              * 
-             * *   **Shared**: The prefix list is shared.
-             * *   If an empty value is returned, the prefix list is not shared.
+             * <strong>example:</strong>
+             * <p>Shared</p>
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;
@@ -510,12 +582,15 @@ public class ListPrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the prefix list. Valid values:
-             * <p>
+             * <p>The status of the prefix list. Valid values:</p>
+             * <ul>
+             * <li><strong>Created</strong></li>
+             * <li><strong>Deleted</strong></li>
+             * <li><strong>Modifying</strong></li>
+             * </ul>
              * 
-             * *   **Created**
-             * *   **Deleted**
-             * *   **Modifying**
+             * <strong>example:</strong>
+             * <p>Created</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -523,9 +598,9 @@ public class ListPrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>The tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

@@ -1,29 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.selectdb20230522.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopBEClusterResponseBody} extends {@link TeaModel}
  *
  * <p>StopBEClusterResponseBody</p>
  */
 public class StopBEClusterResponseBody extends TeaModel {
-    @NameInMap("Code")
-    private String code;
-
-    @NameInMap("Message")
-    private String message;
-
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private StopBEClusterResponseBody(Builder builder) {
-        this.code = builder.code;
-        this.message = builder.message;
         this.requestId = builder.requestId;
     }
 
@@ -36,20 +33,6 @@ public class StopBEClusterResponseBody extends TeaModel {
     }
 
     /**
-     * @return code
-     */
-    public String getCode() {
-        return this.code;
-    }
-
-    /**
-     * @return message
-     */
-    public String getMessage() {
-        return this.message;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -57,25 +40,7 @@ public class StopBEClusterResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String code; 
-        private String message; 
         private String requestId; 
-
-        /**
-         * Code.
-         */
-        public Builder code(String code) {
-            this.code = code;
-            return this;
-        }
-
-        /**
-         * Message.
-         */
-        public Builder message(String message) {
-            this.message = message;
-            return this;
-        }
 
         /**
          * RequestId.

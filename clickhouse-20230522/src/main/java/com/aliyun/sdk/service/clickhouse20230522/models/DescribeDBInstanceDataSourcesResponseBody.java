@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20230522.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceDataSourcesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstanceDataSourcesResponseBody</p>
  */
 public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBInstanceDataSourcesResponseBody(Builder builder) {
@@ -71,23 +76,29 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstanceDataSourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceDataSourcesResponseBody</p>
+     */
     public static class Columns extends TeaModel {
-        @NameInMap("ColumnName")
+        @com.aliyun.core.annotation.NameInMap("ColumnName")
         private String columnName;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("DBName")
+        @com.aliyun.core.annotation.NameInMap("DBName")
         private String DBName;
 
-        @NameInMap("PrimaryKey")
+        @com.aliyun.core.annotation.NameInMap("PrimaryKey")
         private String primaryKey;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Columns(Builder builder) {
@@ -212,18 +223,24 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceDataSourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceDataSourcesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Columns")
-        private java.util.List < Columns> columns;
+        @com.aliyun.core.annotation.NameInMap("Columns")
+        private java.util.List<Columns> columns;
 
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("Schemas")
+        @com.aliyun.core.annotation.NameInMap("Schemas")
         private String schemas;
 
-        @NameInMap("Tables")
-        private java.util.List < String > tables;
+        @com.aliyun.core.annotation.NameInMap("Tables")
+        private java.util.List<String> tables;
 
         private Data(Builder builder) {
             this.columns = builder.columns;
@@ -243,7 +260,7 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
         /**
          * @return columns
          */
-        public java.util.List < Columns> getColumns() {
+        public java.util.List<Columns> getColumns() {
             return this.columns;
         }
 
@@ -264,20 +281,20 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
         /**
          * @return tables
          */
-        public java.util.List < String > getTables() {
+        public java.util.List<String> getTables() {
             return this.tables;
         }
 
         public static final class Builder {
-            private java.util.List < Columns> columns; 
+            private java.util.List<Columns> columns; 
             private String DBInstanceId; 
             private String schemas; 
-            private java.util.List < String > tables; 
+            private java.util.List<String> tables; 
 
             /**
              * Columns.
              */
-            public Builder columns(java.util.List < Columns> columns) {
+            public Builder columns(java.util.List<Columns> columns) {
                 this.columns = columns;
                 return this;
             }
@@ -301,7 +318,7 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
             /**
              * Tables.
              */
-            public Builder tables(java.util.List < String > tables) {
+            public Builder tables(java.util.List<String> tables) {
                 this.tables = tables;
                 return this;
             }

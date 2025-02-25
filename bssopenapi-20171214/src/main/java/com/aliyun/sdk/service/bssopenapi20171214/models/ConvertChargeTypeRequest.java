@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConvertChargeTypeRequest} extends {@link RequestModel}
  *
  * <p>ConvertChargeTypeRequest</p>
  */
 public class ConvertChargeTypeRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
-    @Query
-    @NameInMap("ProductCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productCode;
 
-    @Query
-    @NameInMap("ProductType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductType")
     private String productType;
 
-    @Query
-    @NameInMap("SubscriptionType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscriptionType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subscriptionType;
 
     private ConvertChargeTypeRequest(Builder builder) {
@@ -127,7 +132,11 @@ public class ConvertChargeTypeRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-kasjgfjshgf</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -145,13 +154,16 @@ public class ConvertChargeTypeRequest extends Request {
         }
 
         /**
-         * The subscription duration. Unit: months. This parameter is required if you switch the billing method to subscription. Valid values:
-         * <p>
+         * <p>The subscription duration. Unit: months. This parameter is required if you switch the billing method to subscription. Valid values:</p>
+         * <ul>
+         * <li>1 to 9</li>
+         * <li>12</li>
+         * <li>24</li>
+         * <li>36</li>
+         * </ul>
          * 
-         * *   1 to 9
-         * *   12
-         * *   24
-         * *   36
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -160,7 +172,11 @@ public class ConvertChargeTypeRequest extends Request {
         }
 
         /**
-         * The code of the service to which the instance belongs.
+         * <p>The code of the service to which the instance belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -169,7 +185,10 @@ public class ConvertChargeTypeRequest extends Request {
         }
 
         /**
-         * The type of the service to which the instance belongs.
+         * <p>The type of the service to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -178,13 +197,18 @@ public class ConvertChargeTypeRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Valid values:
-         * <p>
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li>Subscription: subscription</li>
+         * <li>PayAsYouGo: pay-as-you-go</li>
+         * </ul>
+         * <blockquote>
+         * <p> After the call is successful, the billing method of the instance is switched.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   Subscription: subscription
-         * *   PayAsYouGo: pay-as-you-go
-         * 
-         * >  After the call is successful, the billing method of the instance is switched.
+         * <strong>example:</strong>
+         * <p>Subscription</p>
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putQueryParameter("SubscriptionType", subscriptionType);

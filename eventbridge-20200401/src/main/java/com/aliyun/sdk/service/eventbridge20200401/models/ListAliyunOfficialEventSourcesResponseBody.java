@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.eventbridge.models.*;
  * <p>ListAliyunOfficialEventSourcesResponseBody</p>
  */
 public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListAliyunOfficialEventSourcesResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned response code. The value Success indicates that the request is successful.
+         * The response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For a list of error codes, see Error codes.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +117,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the operation is successful. Valid values: true and false.
+         * Indicates whether the operation is successful. If the operation is successful, the value true is returned.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -132,16 +131,16 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
     } 
 
     public static class EventTypes extends TeaModel {
-        @NameInMap("EventSourceName")
+        @com.aliyun.core.annotation.NameInMap("EventSourceName")
         private String eventSourceName;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ShortName")
+        @com.aliyun.core.annotation.NameInMap("ShortName")
         private String shortName;
 
         private EventTypes(Builder builder) {
@@ -202,7 +201,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the group to which the queried event type belongs.
+             * The name of the group to which the event type belongs.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -210,7 +209,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The full name of the queried event type.
+             * The full name of the event type.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -218,7 +217,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The short name of the queried event type.
+             * The short name of the event type.
              */
             public Builder shortName(String shortName) {
                 this.shortName = shortName;
@@ -233,31 +232,31 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
 
     }
     public static class EventSourceList extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
-        @NameInMap("Ctime")
+        @com.aliyun.core.annotation.NameInMap("Ctime")
         private Float ctime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EventBusName")
+        @com.aliyun.core.annotation.NameInMap("EventBusName")
         private String eventBusName;
 
-        @NameInMap("EventTypes")
+        @com.aliyun.core.annotation.NameInMap("EventTypes")
         private java.util.List < EventTypes> eventTypes;
 
-        @NameInMap("FullName")
+        @com.aliyun.core.annotation.NameInMap("FullName")
         private String fullName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private EventSourceList(Builder builder) {
@@ -371,7 +370,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the queried event source.
+             * The description of the event source.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -379,7 +378,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the event source to which the queried event type belongs.
+             * The name of the event source to which the event type belongs.
              */
             public Builder eventBusName(String eventBusName) {
                 this.eventBusName = eventBusName;
@@ -387,7 +386,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The queried event types.
+             * The event types.
              */
             public Builder eventTypes(java.util.List < EventTypes> eventTypes) {
                 this.eventTypes = eventTypes;
@@ -395,7 +394,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * FullName.
+             * The full name of the event source.
              */
             public Builder fullName(String fullName) {
                 this.fullName = fullName;
@@ -403,7 +402,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the queried event source.
+             * The name of the event source.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -411,7 +410,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the queried event source. Valid value: Activated.
+             * The status of the event source. Valid value: Activated.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -419,7 +418,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the queried event source.
+             * The type of the event source.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -434,7 +433,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("EventSourceList")
+        @com.aliyun.core.annotation.NameInMap("EventSourceList")
         private java.util.List < EventSourceList> eventSourceList;
 
         private Data(Builder builder) {
@@ -460,7 +459,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
             private java.util.List < EventSourceList> eventSourceList; 
 
             /**
-             * The name of the event source to which the queried event type belongs.
+             * The event sources.
              */
             public Builder eventSourceList(java.util.List < EventSourceList> eventSourceList) {
                 this.eventSourceList = eventSourceList;

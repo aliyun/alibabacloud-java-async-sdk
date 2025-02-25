@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Database</p>
  */
 public class Database extends TeaModel {
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private Integer createTime;
 
-    @NameInMap("CreatedBy")
+    @com.aliyun.core.annotation.NameInMap("CreatedBy")
     private String createdBy;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("LocationUri")
+    @com.aliyun.core.annotation.NameInMap("LocationUri")
     private String locationUri;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("OwnerName")
+    @com.aliyun.core.annotation.NameInMap("OwnerName")
     private String ownerName;
 
-    @NameInMap("OwnerType")
+    @com.aliyun.core.annotation.NameInMap("OwnerType")
     private String ownerType;
 
-    @NameInMap("Parameters")
+    @com.aliyun.core.annotation.NameInMap("Parameters")
     private java.util.Map < String, String > parameters;
 
-    @NameInMap("Privileges")
+    @com.aliyun.core.annotation.NameInMap("Privileges")
     private PrincipalPrivilegeSet privileges;
 
-    @NameInMap("UpdateTime")
+    @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private Integer updateTime;
 
     private Database(Builder builder) {

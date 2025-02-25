@@ -140,16 +140,16 @@ public class QueryDevicePictureFileRequest extends Request {
             super();
         } 
 
-        private Builder(QueryDevicePictureFileRequest response) {
-            super(response);
-            this.captureId = response.captureId;
-            this.deviceName = response.deviceName;
-            this.expireTime = response.expireTime;
-            this.iotId = response.iotId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.pictureType = response.pictureType;
-            this.productKey = response.productKey;
-            this.thumbWidth = response.thumbWidth;
+        private Builder(QueryDevicePictureFileRequest request) {
+            super(request);
+            this.captureId = request.captureId;
+            this.deviceName = request.deviceName;
+            this.expireTime = request.expireTime;
+            this.iotId = request.iotId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.pictureType = request.pictureType;
+            this.productKey = request.productKey;
+            this.thumbWidth = request.thumbWidth;
         } 
 
         /**

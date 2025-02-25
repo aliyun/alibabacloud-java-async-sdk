@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPhoneEncryptionPublicKeyResponseBody} extends {@link TeaModel}
  *
  * <p>GetPhoneEncryptionPublicKeyResponseBody</p>
  */
 public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetPhoneEncryptionPublicKeyResponseBody(Builder builder) {
@@ -74,7 +74,14 @@ public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * <ul>
+         * <li>The value OK indicates that the request was successful.</li>
+         * <li>For more information about other response codes, see <a href="https://www.alibabacloud.com/help/zh/cams/latest/api-error-codes">Error codes</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +89,7 @@ public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +97,10 @@ public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error description information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +108,10 @@ public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request。
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,14 +124,20 @@ public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPhoneEncryptionPublicKeyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPhoneEncryptionPublicKeyResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("EncryptionPublicKey")
+        @com.aliyun.core.annotation.NameInMap("EncryptionPublicKey")
         private String encryptionPublicKey;
 
-        @NameInMap("EncryptionPublicKeyStatus")
+        @com.aliyun.core.annotation.NameInMap("EncryptionPublicKeyStatus")
         private String encryptionPublicKeyStatus;
 
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
         private Data(Builder builder) {
@@ -162,7 +181,18 @@ public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
             private String phoneNumber; 
 
             /**
-             * EncryptionPublicKey.
+             * <p>The public key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-----BEGIN PUBLIC KEY-----
+             * AAA
+             * BBB
+             * CCC
+             * DDD
+             * EEE
+             * FFF
+             * GGG
+             * -----END PUBLIC KEY-----</p>
              */
             public Builder encryptionPublicKey(String encryptionPublicKey) {
                 this.encryptionPublicKey = encryptionPublicKey;
@@ -170,7 +200,14 @@ public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
             }
 
             /**
-             * EncryptionPublicKeyStatus.
+             * <p>The validity state of the public key. Valid values:</p>
+             * <ul>
+             * <li>MISMATCH: The public key is invalid.</li>
+             * <li>VALID: The public key is valid.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>VALID</p>
              */
             public Builder encryptionPublicKeyStatus(String encryptionPublicKeyStatus) {
                 this.encryptionPublicKeyStatus = encryptionPublicKeyStatus;
@@ -178,7 +215,10 @@ public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneNumber.
+             * <p>The phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86138000**</p>
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;

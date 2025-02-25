@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePropertyCronDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePropertyCronDetailResponseBody</p>
  */
 public class DescribePropertyCronDetailResponseBody extends TeaModel {
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("Propertys")
-    private java.util.List < Propertys> propertys;
+    @com.aliyun.core.annotation.NameInMap("Propertys")
+    private java.util.List<Propertys> propertys;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePropertyCronDetailResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
     /**
      * @return propertys
      */
-    public java.util.List < Propertys> getPropertys() {
+    public java.util.List<Propertys> getPropertys() {
         return this.propertys;
     }
 
@@ -58,11 +63,11 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
 
     public static final class Builder {
         private PageInfo pageInfo; 
-        private java.util.List < Propertys> propertys; 
+        private java.util.List<Propertys> propertys; 
         private String requestId; 
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,15 +75,18 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the scheduled tasks.
+         * <p>The details of the scheduled tasks.</p>
          */
-        public Builder propertys(java.util.List < Propertys> propertys) {
+        public Builder propertys(java.util.List<Propertys> propertys) {
             this.propertys = propertys;
             return this;
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B0C4E12E-CCE1-109D-9E62-7B95CBBAEF8C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,17 +99,23 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePropertyCronDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePropertyCronDetailResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -154,7 +168,10 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -162,7 +179,10 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -170,7 +190,10 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: **10**.
+             * <p>The number of entries returned per page. Default value: <strong>10</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -178,7 +201,10 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -192,41 +218,47 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePropertyCronDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePropertyCronDetailResponseBody</p>
+     */
     public static class Propertys extends TeaModel {
-        @NameInMap("Cmd")
+        @com.aliyun.core.annotation.NameInMap("Cmd")
         private String cmd;
 
-        @NameInMap("CreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IntranetIp")
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("Md5")
+        @com.aliyun.core.annotation.NameInMap("Md5")
         private String md5;
 
-        @NameInMap("Period")
+        @com.aliyun.core.annotation.NameInMap("Period")
         private String period;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private String user;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private Propertys(Builder builder) {
@@ -351,7 +383,10 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The command that is used to run the scheduled task.
+             * <p>The command that is used to run the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/lib64/sa/sa1 1 1</p>
              */
             public Builder cmd(String cmd) {
                 this.cmd = cmd;
@@ -359,7 +394,10 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the last fingerprint collection. Unit: milliseconds.
+             * <p>The timestamp of the last fingerprint collection. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649149566000</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -367,7 +405,10 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server.
+             * <p>The ID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-hp35tftuh52wbp1g****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -375,7 +416,10 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
+             * <p>The name of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hc-host-****</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -383,7 +427,10 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the server.
+             * <p>The public IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -391,7 +438,10 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the server.
+             * <p>The private IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.104.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -399,7 +449,10 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses of the server.
+             * <p>The IP addresses of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -407,7 +460,10 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The MD5 hash value of the path to the scheduled task.
+             * <p>The MD5 hash value of the path to the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4cc8f97c2bf9cbabb2c2be2erqw****</p>
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
@@ -415,7 +471,7 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The interval at which the scheduled task is performed.
+             * <p>The interval at which the scheduled task is performed.</p>
              */
             public Builder period(String period) {
                 this.period = period;
@@ -423,7 +479,10 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The path to the scheduled task.
+             * <p>The path to the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/etc/cron.d/root</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -431,7 +490,10 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the account that runs the scheduled task.
+             * <p>The username of the account that runs the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root</p>
              */
             public Builder user(String user) {
                 this.user = user;
@@ -439,7 +501,10 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * <p>The UUID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>162eb349-c2d9-4f8b-805c-75b43d4c****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListStackOperationRisksResponseBody} extends {@link TeaModel}
  *
  * <p>ListStackOperationRisksResponseBody</p>
  */
 public class ListStackOperationRisksResponseBody extends TeaModel {
-    @NameInMap("MissingPolicyActions")
+    @com.aliyun.core.annotation.NameInMap("MissingPolicyActions")
     private java.util.List < String > missingPolicyActions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RiskResources")
+    @com.aliyun.core.annotation.NameInMap("RiskResources")
     private java.util.List < RiskResources> riskResources;
 
     private ListStackOperationRisksResponseBody(Builder builder) {
@@ -62,7 +62,7 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
         private java.util.List < RiskResources> riskResources; 
 
         /**
-         * The operations on which the permissions are not granted to the Alibaba Cloud account of the caller.
+         * <p>The operations on which the permissions are not granted to the Alibaba Cloud account of the caller.</p>
          */
         public Builder missingPolicyActions(java.util.List < String > missingPolicyActions) {
             this.missingPolicyActions = missingPolicyActions;
@@ -70,7 +70,10 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>72108E7A-E874-4A5E-B22C-A61E94AD12CD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,7 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
         }
 
         /**
-         * The resources that are at risk.
+         * <p>The resources that are at risk.</p>
          */
         public Builder riskResources(java.util.List < RiskResources> riskResources) {
             this.riskResources = riskResources;
@@ -91,29 +94,35 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListStackOperationRisksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListStackOperationRisksResponseBody</p>
+     */
     public static class RiskResources extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("LogicalResourceId")
+        @com.aliyun.core.annotation.NameInMap("LogicalResourceId")
         private String logicalResourceId;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("PhysicalResourceId")
+        @com.aliyun.core.annotation.NameInMap("PhysicalResourceId")
         private String physicalResourceId;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("RequestId")
+        @com.aliyun.core.annotation.NameInMap("RequestId")
         private String requestId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("RiskType")
+        @com.aliyun.core.annotation.NameInMap("RiskType")
         private String riskType;
 
         private RiskResources(Builder builder) {
@@ -202,10 +211,13 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
             private String riskType; 
 
             /**
-             * The error code that is returned when the risk detection fails.
-             * <p>
+             * <p>The error code that is returned when the risk detection fails.</p>
+             * <blockquote>
+             * <p> This parameter is not returned if the risk detection is successful.</p>
+             * </blockquote>
              * 
-             * >  This parameter is not returned if the risk detection is successful.
+             * <strong>example:</strong>
+             * <p>NoPermission</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -213,7 +225,10 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
             }
 
             /**
-             * The logical ID of the resource. The logical ID is the resource name that is defined in the template.
+             * <p>The logical ID of the resource. The logical ID is the resource name that is defined in the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySG</p>
              */
             public Builder logicalResourceId(String logicalResourceId) {
                 this.logicalResourceId = logicalResourceId;
@@ -221,10 +236,13 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
             }
 
             /**
-             * The error message that is returned when the risk detection fails.
-             * <p>
+             * <p>The error message that is returned when the risk detection fails.</p>
+             * <blockquote>
+             * <p> This parameter is not returned if the risk detection is successful.</p>
+             * </blockquote>
              * 
-             * >  This parameter is not returned if the risk detection is successful.
+             * <strong>example:</strong>
+             * <p>You are not authorized to complete this action.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -232,7 +250,10 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
             }
 
             /**
-             * The physical ID of the resource. The physical ID is the actual ID of the resource.
+             * <p>The physical ID of the resource. The physical ID is the actual ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-bp1dpioafqphedg9****</p>
              */
             public Builder physicalResourceId(String physicalResourceId) {
                 this.physicalResourceId = physicalResourceId;
@@ -240,7 +261,10 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
             }
 
             /**
-             * The cause of the risk.
+             * <p>The cause of the risk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>There are some ECS instances (i-bp18el96s4wq635e****) depending on the security group.</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -248,10 +272,13 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request when the risk detection fails.
-             * <p>
+             * <p>The ID of the request when the risk detection fails.</p>
+             * <blockquote>
+             * <p> This parameter is not returned if the risk detection is successful.</p>
+             * </blockquote>
              * 
-             * >  This parameter is not returned if the risk detection is successful.
+             * <strong>example:</strong>
+             * <p>DF4296CF-F45F-4845-A72B-BE617601DB25</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -259,7 +286,10 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource.
+             * <p>The type of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN::ECS::SecurityGroup</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -267,13 +297,16 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the risk. Valid values:
-             * <p>
+             * <p>The type of the risk. Valid values:</p>
+             * <ul>
+             * <li>Referenced: The resource is referenced by other resources.</li>
+             * <li>MaybeReferenced: The resource may be referenced by other resources.</li>
+             * <li>AdditionalRiskCheckRequired: An additional risk detection is required for a nested stack.</li>
+             * <li>OperationIgnored: The operation does not take effect for the resource.</li>
+             * </ul>
              * 
-             * *   Referenced: The resource is referenced by other resources.
-             * *   MaybeReferenced: The resource may be referenced by other resources.
-             * *   AdditionalRiskCheckRequired: An additional risk detection is required for a nested stack.
-             * *   OperationIgnored: The operation does not take effect for the resource.
+             * <strong>example:</strong>
+             * <p>Referenced</p>
              */
             public Builder riskType(String riskType) {
                 this.riskType = riskType;

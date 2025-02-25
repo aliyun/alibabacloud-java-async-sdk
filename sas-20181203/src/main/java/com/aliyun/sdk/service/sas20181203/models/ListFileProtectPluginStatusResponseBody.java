@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFileProtectPluginStatusResponseBody} extends {@link TeaModel}
  *
  * <p>ListFileProtectPluginStatusResponseBody</p>
  */
 public class ListFileProtectPluginStatusResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListFileProtectPluginStatusResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -57,20 +62,20 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
-         * The data returned if the call is successful.
+         * <p>The data returned if the call is successful.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +83,10 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60F289EC-BAA3-5DF1-8476-B3F05A14EBC2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,35 +99,44 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListFileProtectPluginStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFileProtectPluginStatusResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ClientVersion")
+        @com.aliyun.core.annotation.NameInMap("ClientVersion")
         private String clientVersion;
 
-        @NameInMap("InstallCode")
+        @com.aliyun.core.annotation.NameInMap("InstallCode")
         private String installCode;
 
-        @NameInMap("InstallMessage")
+        @com.aliyun.core.annotation.NameInMap("InstallMessage")
         private String installMessage;
 
-        @NameInMap("Installed")
+        @com.aliyun.core.annotation.NameInMap("Installed")
         private Boolean installed;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IntranetIp")
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("Online")
+        @com.aliyun.core.annotation.NameInMap("Online")
         private Boolean online;
 
-        @NameInMap("SupportFile")
+        @com.aliyun.core.annotation.NameInMap("Platform")
+        private String platform;
+
+        @com.aliyun.core.annotation.NameInMap("SupportFile")
         private Boolean supportFile;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private Data(Builder builder) {
@@ -131,6 +148,7 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
             this.internetIp = builder.internetIp;
             this.intranetIp = builder.intranetIp;
             this.online = builder.online;
+            this.platform = builder.platform;
             this.supportFile = builder.supportFile;
             this.uuid = builder.uuid;
         }
@@ -200,6 +218,13 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
         }
 
         /**
+         * @return platform
+         */
+        public String getPlatform() {
+            return this.platform;
+        }
+
+        /**
          * @return supportFile
          */
         public Boolean getSupportFile() {
@@ -222,11 +247,15 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
             private String internetIp; 
             private String intranetIp; 
             private Boolean online; 
+            private String platform; 
             private Boolean supportFile; 
             private String uuid; 
 
             /**
-             * The version of the Security Center agent.
+             * <p>The version of the Security Center agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00_41</p>
              */
             public Builder clientVersion(String clientVersion) {
                 this.clientVersion = clientVersion;
@@ -234,11 +263,14 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The returned code after you install the Security Center agent. Valid values:
-             * <p>
+             * <p>The returned code after you install the Security Center agent. Valid values:</p>
+             * <ol>
+             * <li>0: The installation is successful.</li>
+             * <li>-2: The kernel does not support the installation.</li>
+             * </ol>
              * 
-             * 1.  0: The installation is successful.
-             * 2.  \-2: The kernel does not support the installation.
+             * <strong>example:</strong>
+             * <p>-2</p>
              */
             public Builder installCode(String installCode) {
                 this.installCode = installCode;
@@ -246,7 +278,10 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The returned message after you install the Security Center agent.
+             * <p>The returned message after you install the Security Center agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>driver file not exist</p>
              */
             public Builder installMessage(String installMessage) {
                 this.installMessage = installMessage;
@@ -254,7 +289,10 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Security Center agent is installed.
+             * <p>Indicates whether the Security Center agent is installed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder installed(Boolean installed) {
                 this.installed = installed;
@@ -262,7 +300,10 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-wz92q7m5hsbgfhdss***</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -270,7 +311,10 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address that is associated with the instance.
+             * <p>The public IP address that is associated with the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -278,7 +322,10 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address that is associated with the instance.
+             * <p>The private IP address that is associated with the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.42.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -286,11 +333,14 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Security Center agent is online. Valid value:
-             * <p>
+             * <p>Indicates whether the Security Center agent is online. Valid value:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder online(Boolean online) {
                 this.online = online;
@@ -298,7 +348,25 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the core file monitoring file is supported.
+             * <p>The type of the operating system. Valid values:</p>
+             * <ul>
+             * <li><strong>windows</strong>: Windows</li>
+             * <li><strong>linux</strong>: Linux</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>linux</p>
+             */
+            public Builder platform(String platform) {
+                this.platform = platform;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether the core file monitoring file is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportFile(Boolean supportFile) {
                 this.supportFile = supportFile;
@@ -306,7 +374,10 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the asset.
+             * <p>The UUID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6690a46c-0edb-4663-a641-3629d1a9****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -320,14 +391,20 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListFileProtectPluginStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFileProtectPluginStatusResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -371,7 +448,10 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -379,7 +459,10 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -387,7 +470,10 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>149</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

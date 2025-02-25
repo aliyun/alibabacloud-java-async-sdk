@@ -281,6 +281,9 @@ public class DescribeBindersResponseBody extends TeaModel {
         @NameInMap("BindId")
         private String bindId;
 
+        @NameInMap("ContainerName")
+        private String containerName;
+
         @NameInMap("EslBarCode")
         private String eslBarCode;
 
@@ -342,6 +345,7 @@ public class DescribeBindersResponseBody extends TeaModel {
             this.actionPrice = builder.actionPrice;
             this.bePromotion = builder.bePromotion;
             this.bindId = builder.bindId;
+            this.containerName = builder.containerName;
             this.eslBarCode = builder.eslBarCode;
             this.eslConnectAp = builder.eslConnectAp;
             this.eslModel = builder.eslModel;
@@ -390,6 +394,13 @@ public class DescribeBindersResponseBody extends TeaModel {
          */
         public String getBindId() {
             return this.bindId;
+        }
+
+        /**
+         * @return containerName
+         */
+        public String getContainerName() {
+            return this.containerName;
         }
 
         /**
@@ -529,6 +540,7 @@ public class DescribeBindersResponseBody extends TeaModel {
             private String actionPrice; 
             private Boolean bePromotion; 
             private String bindId; 
+            private String containerName; 
             private String eslBarCode; 
             private String eslConnectAp; 
             private String eslModel; 
@@ -570,6 +582,14 @@ public class DescribeBindersResponseBody extends TeaModel {
              */
             public Builder bindId(String bindId) {
                 this.bindId = bindId;
+                return this;
+            }
+
+            /**
+             * ContainerName.
+             */
+            public Builder containerName(String containerName) {
+                this.containerName = containerName;
                 return this;
             }
 
@@ -694,7 +714,7 @@ public class DescribeBindersResponseBody extends TeaModel {
             }
 
             /**
-             * SkuId.
+             * SkuID。
              */
             public Builder skuId(String skuId) {
                 this.skuId = skuId;

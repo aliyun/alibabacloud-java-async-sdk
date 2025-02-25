@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetUserProfilePathRulesRequest} extends {@link RequestModel}
  *
  * <p>SetUserProfilePathRulesRequest</p>
  */
 public class SetUserProfilePathRulesRequest extends Request {
-    @Query
-    @NameInMap("DesktopGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopGroupId")
     private String desktopGroupId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("UserProfilePathRule")
-    private java.util.List < UserProfilePathRule> userProfilePathRule;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserProfilePathRule")
+    private java.util.List<UserProfilePathRule> userProfilePathRule;
 
-    @Query
-    @NameInMap("UserProfileRuleType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserProfileRuleType")
     private String userProfileRuleType;
 
     private SetUserProfilePathRulesRequest(Builder builder) {
@@ -67,7 +72,7 @@ public class SetUserProfilePathRulesRequest extends Request {
     /**
      * @return userProfilePathRule
      */
-    public java.util.List < UserProfilePathRule> getUserProfilePathRule() {
+    public java.util.List<UserProfilePathRule> getUserProfilePathRule() {
         return this.userProfilePathRule;
     }
 
@@ -81,7 +86,7 @@ public class SetUserProfilePathRulesRequest extends Request {
     public static final class Builder extends Request.Builder<SetUserProfilePathRulesRequest, Builder> {
         private String desktopGroupId; 
         private String regionId; 
-        private java.util.List < UserProfilePathRule> userProfilePathRule; 
+        private java.util.List<UserProfilePathRule> userProfilePathRule; 
         private String userProfileRuleType; 
 
         private Builder() {
@@ -97,7 +102,10 @@ public class SetUserProfilePathRulesRequest extends Request {
         } 
 
         /**
-         * The desktop group ID.
+         * <p>The desktop group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dg-2i8qxpv6t1a03****</p>
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -106,7 +114,11 @@ public class SetUserProfilePathRulesRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -115,9 +127,9 @@ public class SetUserProfilePathRulesRequest extends Request {
         }
 
         /**
-         * The directories that you want to configure in the blacklist and whitelist.
+         * <p>The directories that you want to configure in the blacklist and whitelist.</p>
          */
-        public Builder userProfilePathRule(java.util.List < UserProfilePathRule> userProfilePathRule) {
+        public Builder userProfilePathRule(java.util.List<UserProfilePathRule> userProfilePathRule) {
             String userProfilePathRuleShrink = shrink(userProfilePathRule, "UserProfilePathRule", "json");
             this.putQueryParameter("UserProfilePathRule", userProfilePathRuleShrink);
             this.userProfilePathRule = userProfilePathRule;
@@ -125,34 +137,33 @@ public class SetUserProfilePathRulesRequest extends Request {
         }
 
         /**
-         * The directory type that you want to configure.
-         * <p>
+         * <p>The directory type that you want to configure.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>Both_Default_DesktopGroup</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   Both_Default_DesktopGroup
+         * <!-- -->
+         * </li>
+         * <li><p>DesktopGroup</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>Default</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         * *   DesktopGroup
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   Default
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>DesktopGroup</p>
          */
         public Builder userProfileRuleType(String userProfileRuleType) {
             this.putQueryParameter("UserProfileRuleType", userProfileRuleType);
@@ -167,12 +178,18 @@ public class SetUserProfilePathRulesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SetUserProfilePathRulesRequest} extends {@link TeaModel}
+     *
+     * <p>SetUserProfilePathRulesRequest</p>
+     */
     public static class BlackPath extends TeaModel {
-        @NameInMap("Path")
-        @Validation(maxLength = 260)
+        @com.aliyun.core.annotation.NameInMap("Path")
+        @com.aliyun.core.annotation.Validation(maxLength = 260)
         private String path;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private BlackPath(Builder builder) {
@@ -207,7 +224,10 @@ public class SetUserProfilePathRulesRequest extends Request {
             private String type; 
 
             /**
-             * The blacklist path.
+             * <p>The blacklist path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AppLocal/Data</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -215,26 +235,26 @@ public class SetUserProfilePathRulesRequest extends Request {
             }
 
             /**
-             * The path type.
-             * <p>
+             * <p>The path type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>file</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   file
+             * <!-- -->
+             * </li>
+             * <li><p>folder</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   folder
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>folder</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -248,12 +268,18 @@ public class SetUserProfilePathRulesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SetUserProfilePathRulesRequest} extends {@link TeaModel}
+     *
+     * <p>SetUserProfilePathRulesRequest</p>
+     */
     public static class WhitePaths extends TeaModel {
-        @NameInMap("Path")
-        @Validation(maxLength = 260)
+        @com.aliyun.core.annotation.NameInMap("Path")
+        @com.aliyun.core.annotation.Validation(maxLength = 260)
         private String path;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private WhitePaths(Builder builder) {
@@ -288,7 +314,10 @@ public class SetUserProfilePathRulesRequest extends Request {
             private String type; 
 
             /**
-             * The whitelist path.
+             * <p>The whitelist path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>whitePath</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -296,26 +325,26 @@ public class SetUserProfilePathRulesRequest extends Request {
             }
 
             /**
-             * The path type.
-             * <p>
+             * <p>The path type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>file</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   file
+             * <!-- -->
+             * </li>
+             * <li><p>folder</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   folder
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>file</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -329,12 +358,18 @@ public class SetUserProfilePathRulesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SetUserProfilePathRulesRequest} extends {@link TeaModel}
+     *
+     * <p>SetUserProfilePathRulesRequest</p>
+     */
     public static class UserProfilePathRule extends TeaModel {
-        @NameInMap("BlackPath")
+        @com.aliyun.core.annotation.NameInMap("BlackPath")
         private BlackPath blackPath;
 
-        @NameInMap("WhitePaths")
-        private java.util.List < WhitePaths> whitePaths;
+        @com.aliyun.core.annotation.NameInMap("WhitePaths")
+        private java.util.List<WhitePaths> whitePaths;
 
         private UserProfilePathRule(Builder builder) {
             this.blackPath = builder.blackPath;
@@ -359,16 +394,16 @@ public class SetUserProfilePathRulesRequest extends Request {
         /**
          * @return whitePaths
          */
-        public java.util.List < WhitePaths> getWhitePaths() {
+        public java.util.List<WhitePaths> getWhitePaths() {
             return this.whitePaths;
         }
 
         public static final class Builder {
             private BlackPath blackPath; 
-            private java.util.List < WhitePaths> whitePaths; 
+            private java.util.List<WhitePaths> whitePaths; 
 
             /**
-             * The directory in the blacklist.
+             * <p>The directory in the blacklist.</p>
              */
             public Builder blackPath(BlackPath blackPath) {
                 this.blackPath = blackPath;
@@ -376,9 +411,9 @@ public class SetUserProfilePathRulesRequest extends Request {
             }
 
             /**
-             * The directories that you want to configure in the whitelist.
+             * <p>The directories that you want to configure in the whitelist.</p>
              */
-            public Builder whitePaths(java.util.List < WhitePaths> whitePaths) {
+            public Builder whitePaths(java.util.List<WhitePaths> whitePaths) {
                 this.whitePaths = whitePaths;
                 return this;
             }

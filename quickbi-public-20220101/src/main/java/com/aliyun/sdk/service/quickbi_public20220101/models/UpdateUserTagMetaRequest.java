@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateUserTagMetaRequest} extends {@link RequestModel}
  *
  * <p>UpdateUserTagMetaRequest</p>
  */
 public class UpdateUserTagMetaRequest extends Request {
-    @Query
-    @NameInMap("TagDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagDescription")
     private String tagDescription;
 
-    @Query
-    @NameInMap("TagId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tagId;
 
-    @Query
-    @NameInMap("TagName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tagName;
 
     private UpdateUserTagMetaRequest(Builder builder) {
@@ -93,7 +98,10 @@ public class UpdateUserTagMetaRequest extends Request {
         }
 
         /**
-         * TagId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e82f6c6c0333431bad0225b2f85e****</p>
          */
         public Builder tagId(String tagId) {
             this.putQueryParameter("TagId", tagId);
@@ -102,7 +110,7 @@ public class UpdateUserTagMetaRequest extends Request {
         }
 
         /**
-         * TagName.
+         * <p>This parameter is required.</p>
          */
         public Builder tagName(String tagName) {
             this.putQueryParameter("TagName", tagName);

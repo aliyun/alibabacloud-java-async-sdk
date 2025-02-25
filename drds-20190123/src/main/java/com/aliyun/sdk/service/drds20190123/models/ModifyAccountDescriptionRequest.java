@@ -77,15 +77,15 @@ public class ModifyAccountDescriptionRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyAccountDescriptionRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.description = response.description;
-            this.drdsInstanceId = response.drdsInstanceId;
+        private Builder(ModifyAccountDescriptionRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.description = request.description;
+            this.drdsInstanceId = request.drdsInstanceId;
         } 
 
         /**
-         * AccountName.
+         * The name of the member account.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -94,7 +94,7 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the account.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -103,7 +103,7 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the ApsaraDB RDS for PostgreSQL instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);

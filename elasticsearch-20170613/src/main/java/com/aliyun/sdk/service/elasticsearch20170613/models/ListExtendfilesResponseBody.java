@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListExtendfilesResponseBody} extends {@link TeaModel}
  *
  * <p>ListExtendfilesResponseBody</p>
  */
 public class ListExtendfilesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private ListExtendfilesResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class ListExtendfilesResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class ListExtendfilesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result.
+         * <p>The returned result.</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -71,17 +74,23 @@ public class ListExtendfilesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListExtendfilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListExtendfilesResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("filePath")
+        @com.aliyun.core.annotation.NameInMap("filePath")
         private String filePath;
 
-        @NameInMap("fileSize")
+        @com.aliyun.core.annotation.NameInMap("fileSize")
         private Long fileSize;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("sourceType")
+        @com.aliyun.core.annotation.NameInMap("sourceType")
         private String sourceType;
 
         private Result(Builder builder) {
@@ -134,7 +143,7 @@ public class ListExtendfilesResponseBody extends TeaModel {
             private String sourceType; 
 
             /**
-             * The path of the driver file.
+             * <p>The path of the driver file.</p>
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
@@ -142,7 +151,10 @@ public class ListExtendfilesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the driver file.
+             * <p>The size of the driver file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>968668</p>
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -150,7 +162,10 @@ public class ListExtendfilesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the driver file.
+             * <p>The name of the driver file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql-connector-java-5.1.35.jar</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -158,7 +173,10 @@ public class ListExtendfilesResponseBody extends TeaModel {
             }
 
             /**
-             * The source type.
+             * <p>The source type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ORIGIN</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;

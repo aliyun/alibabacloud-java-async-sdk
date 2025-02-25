@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDatabaseInstanceParametersResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDatabaseInstanceParametersResponseBody</p>
  */
 public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
-    @NameInMap("ConfigParameters")
-    private java.util.List < ConfigParameters> configParameters;
+    @com.aliyun.core.annotation.NameInMap("ConfigParameters")
+    private java.util.List<ConfigParameters> configParameters;
 
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @NameInMap("EngineVersion")
+    @com.aliyun.core.annotation.NameInMap("EngineVersion")
     private String engineVersion;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RunningParameters")
-    private java.util.List < RunningParameters> runningParameters;
+    @com.aliyun.core.annotation.NameInMap("RunningParameters")
+    private java.util.List<RunningParameters> runningParameters;
 
     private DescribeDatabaseInstanceParametersResponseBody(Builder builder) {
         this.configParameters = builder.configParameters;
@@ -46,7 +51,7 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
     /**
      * @return configParameters
      */
-    public java.util.List < ConfigParameters> getConfigParameters() {
+    public java.util.List<ConfigParameters> getConfigParameters() {
         return this.configParameters;
     }
 
@@ -74,30 +79,33 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
     /**
      * @return runningParameters
      */
-    public java.util.List < RunningParameters> getRunningParameters() {
+    public java.util.List<RunningParameters> getRunningParameters() {
         return this.runningParameters;
     }
 
     public static final class Builder {
-        private java.util.List < ConfigParameters> configParameters; 
+        private java.util.List<ConfigParameters> configParameters; 
         private String engine; 
         private String engineVersion; 
         private String requestId; 
-        private java.util.List < RunningParameters> runningParameters; 
+        private java.util.List<RunningParameters> runningParameters; 
 
         /**
-         * The range of ParameterValue.
-         * <p>
-         * 
-         * > The value of CheckingCode varies based on the value of ParameterName.
+         * <p>The range of ParameterValue.</p>
+         * <blockquote>
+         * <p>The value of CheckingCode varies based on the value of ParameterName.</p>
+         * </blockquote>
          */
-        public Builder configParameters(java.util.List < ConfigParameters> configParameters) {
+        public Builder configParameters(java.util.List<ConfigParameters> configParameters) {
             this.configParameters = configParameters;
             return this;
         }
 
         /**
-         * The database engine that the instance runs. The value must be MySQL.
+         * <p>The database engine that the instance runs. The value must be MySQL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -105,11 +113,14 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
         }
 
         /**
-         * The version of the database engine. Valid values:
-         * <p>
+         * <p>The version of the database engine. Valid values:</p>
+         * <ul>
+         * <li>5.7: MySQL 5.7.</li>
+         * <li>8.0: MySQL 8.0.</li>
+         * </ul>
          * 
-         * *   5.7: MySQL 5.7.
-         * *   8.0: MySQL 8.0.
+         * <strong>example:</strong>
+         * <p>5.5</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = engineVersion;
@@ -117,7 +128,10 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30637AD6-D977-4833-A54C-CC89483E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -125,12 +139,12 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
         }
 
         /**
-         * The range of ParameterValue.
-         * <p>
-         * 
-         * > The value of CheckingCode varies based on the value of ParameterName.
+         * <p>The range of ParameterValue.</p>
+         * <blockquote>
+         * <p>The value of CheckingCode varies based on the value of ParameterName.</p>
+         * </blockquote>
          */
-        public Builder runningParameters(java.util.List < RunningParameters> runningParameters) {
+        public Builder runningParameters(java.util.List<RunningParameters> runningParameters) {
             this.runningParameters = runningParameters;
             return this;
         }
@@ -141,23 +155,29 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDatabaseInstanceParametersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDatabaseInstanceParametersResponseBody</p>
+     */
     public static class ConfigParameters extends TeaModel {
-        @NameInMap("CheckingCode")
+        @com.aliyun.core.annotation.NameInMap("CheckingCode")
         private String checkingCode;
 
-        @NameInMap("ForceModify")
+        @com.aliyun.core.annotation.NameInMap("ForceModify")
         private String forceModify;
 
-        @NameInMap("ForceRestart")
+        @com.aliyun.core.annotation.NameInMap("ForceRestart")
         private String forceRestart;
 
-        @NameInMap("ParameterDescription")
+        @com.aliyun.core.annotation.NameInMap("ParameterDescription")
         private String parameterDescription;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
-        @NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
         private String parameterValue;
 
         private ConfigParameters(Builder builder) {
@@ -228,7 +248,10 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
             private String parameterValue; 
 
             /**
-             * CheckingCode.
+             * <p>The check code that indicates the valid values of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[1-65535]</p>
              */
             public Builder checkingCode(String checkingCode) {
                 this.checkingCode = checkingCode;
@@ -236,7 +259,16 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ForceModify.
+             * <p>Does it support modifying parameter values. Possible values:</p>
+             * <ul>
+             * <li><p>true:Support modifying parameter values.</p>
+             * </li>
+             * <li><p>false:Modifying parameter values is not supported.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder forceModify(String forceModify) {
                 this.forceModify = forceModify;
@@ -244,7 +276,15 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ForceRestart.
+             * <p>Specifies whether to forcibly restart the instance after parameters are modified. Valid values:</p>
+             * <ul>
+             * <li>true: forcibly restarts the instance. If a new parameter value takes effect only after the instance restarts, you must set this parameter to true. Otherwise, the new parameter value cannot take effect.</li>
+             * <li>false: does not forcibly restart the instance.</li>
+             * </ul>
+             * <p>Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder forceRestart(String forceRestart) {
                 this.forceRestart = forceRestart;
@@ -252,7 +292,10 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterDescription.
+             * <p>The description of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Auto-increment columns are incremented by this</p>
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -260,7 +303,10 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterName.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>auto_increment_increment</p>
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -268,7 +314,10 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterValue.
+             * <p>The value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -282,23 +331,29 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDatabaseInstanceParametersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDatabaseInstanceParametersResponseBody</p>
+     */
     public static class RunningParameters extends TeaModel {
-        @NameInMap("CheckingCode")
+        @com.aliyun.core.annotation.NameInMap("CheckingCode")
         private String checkingCode;
 
-        @NameInMap("ForceModify")
+        @com.aliyun.core.annotation.NameInMap("ForceModify")
         private String forceModify;
 
-        @NameInMap("ForceRestart")
+        @com.aliyun.core.annotation.NameInMap("ForceRestart")
         private String forceRestart;
 
-        @NameInMap("ParameterDescription")
+        @com.aliyun.core.annotation.NameInMap("ParameterDescription")
         private String parameterDescription;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
-        @NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
         private String parameterValue;
 
         private RunningParameters(Builder builder) {
@@ -369,7 +424,10 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
             private String parameterValue; 
 
             /**
-             * CheckingCode.
+             * <p>The check code that indicates the valid values of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[ON|OFF]</p>
              */
             public Builder checkingCode(String checkingCode) {
                 this.checkingCode = checkingCode;
@@ -377,7 +435,16 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ForceModify.
+             * <p>Does it support modifying parameter values. Possible values:</p>
+             * <ul>
+             * <li><p>true:Support modifying parameter values.</p>
+             * </li>
+             * <li><p>false:Modifying parameter values is not supported.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder forceModify(String forceModify) {
                 this.forceModify = forceModify;
@@ -385,7 +452,15 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ForceRestart.
+             * <p>Specifies whether to forcibly restart the instance after parameters are modified. Valid values:</p>
+             * <ul>
+             * <li>true: forcibly restarts the instance. If a new parameter value takes effect only after the instance restarts, you must set this parameter to true. Otherwise, the new parameter value cannot take effect.</li>
+             * <li>false: does not forcibly restart the instance.</li>
+             * </ul>
+             * <p>Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder forceRestart(String forceRestart) {
                 this.forceRestart = forceRestart;
@@ -393,7 +468,10 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterDescription.
+             * <p>The description of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>When this variable has a value of 1 (the default), the server automatically grants the EXECUTE and ALTER ROUTINE privileges to the creator of a stored routine, if the user cannot already execute and alter or drop the routine. (The ALTER ROUTINE privilege is required to drop the routine.) The server also automatically drops those privileges from the creator when the routine is dropped. If automatic_sp_privileges is 0, the server does not automatically add or drop these privileges.</p>
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -401,7 +479,10 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterName.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>autocommit</p>
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -409,7 +490,10 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterValue.
+             * <p>The value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ON</p>
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;

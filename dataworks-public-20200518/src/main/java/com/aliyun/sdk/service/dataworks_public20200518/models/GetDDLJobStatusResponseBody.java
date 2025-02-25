@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDDLJobStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetDDLJobStatusResponseBody</p>
  */
 public class GetDDLJobStatusResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetDDLJobStatusResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetDDLJobStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the task.
+         * <p>The details of the task.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class GetDDLJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,17 +79,23 @@ public class GetDDLJobStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDDLJobStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDDLJobStatusResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("NextTaskId")
+        @com.aliyun.core.annotation.NameInMap("NextTaskId")
         private String nextTaskId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
         private Data(Builder builder) {
@@ -134,7 +148,10 @@ public class GetDDLJobStatusResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * The content of the task.
+             * <p>The content of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -142,7 +159,10 @@ public class GetDDLJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ongoing task. If no value is returned for this parameter, all subtasks are complete.
+             * <p>The ID of the ongoing task. If no value is returned for this parameter, all subtasks are complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc1</p>
              */
             public Builder nextTaskId(String nextTaskId) {
                 this.nextTaskId = nextTaskId;
@@ -150,7 +170,10 @@ public class GetDDLJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task
+             * <p>The status of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -158,7 +181,10 @@ public class GetDDLJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

@@ -1,64 +1,74 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetPasswordExpirationConfigurationRequest} extends {@link RequestModel}
  *
  * <p>SetPasswordExpirationConfigurationRequest</p>
  */
 public class SetPasswordExpirationConfigurationRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveAuthenticationSourceIds")
+    private java.util.List<String> effectiveAuthenticationSourceIds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String instanceId;
 
-    @Query
-    @NameInMap("PasswordExpirationAction")
-    @Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordExpirationAction")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private String passwordExpirationAction;
 
-    @Query
-    @NameInMap("PasswordExpirationNotificationChannels")
-    @Validation(maxLength = 32)
-    private java.util.List < String > passwordExpirationNotificationChannels;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordExpirationNotificationChannels")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
+    private java.util.List<String> passwordExpirationNotificationChannels;
 
-    @Query
-    @NameInMap("PasswordExpirationNotificationDuration")
-    @Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordExpirationNotificationDuration")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private Integer passwordExpirationNotificationDuration;
 
-    @Query
-    @NameInMap("PasswordExpirationNotificationStatus")
-    @Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordExpirationNotificationStatus")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private String passwordExpirationNotificationStatus;
 
-    @Query
-    @NameInMap("PasswordExpirationStatus")
-    @Validation(required = true, maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordExpirationStatus")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 32)
     private String passwordExpirationStatus;
 
-    @Query
-    @NameInMap("PasswordForcedUpdateDuration")
-    @Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordForcedUpdateDuration")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private Integer passwordForcedUpdateDuration;
 
-    @Query
-    @NameInMap("PasswordValidMaxDay")
-    @Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordValidMaxDay")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private Integer passwordValidMaxDay;
 
     private SetPasswordExpirationConfigurationRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.effectiveAuthenticationSourceIds = builder.effectiveAuthenticationSourceIds;
         this.instanceId = builder.instanceId;
         this.passwordExpirationAction = builder.passwordExpirationAction;
         this.passwordExpirationNotificationChannels = builder.passwordExpirationNotificationChannels;
@@ -90,6 +100,13 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
     }
 
     /**
+     * @return effectiveAuthenticationSourceIds
+     */
+    public java.util.List<String> getEffectiveAuthenticationSourceIds() {
+        return this.effectiveAuthenticationSourceIds;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -106,7 +123,7 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
     /**
      * @return passwordExpirationNotificationChannels
      */
-    public java.util.List < String > getPasswordExpirationNotificationChannels() {
+    public java.util.List<String> getPasswordExpirationNotificationChannels() {
         return this.passwordExpirationNotificationChannels;
     }
 
@@ -147,9 +164,10 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
 
     public static final class Builder extends Request.Builder<SetPasswordExpirationConfigurationRequest, Builder> {
         private String regionId; 
+        private java.util.List<String> effectiveAuthenticationSourceIds; 
         private String instanceId; 
         private String passwordExpirationAction; 
-        private java.util.List < String > passwordExpirationNotificationChannels; 
+        private java.util.List<String> passwordExpirationNotificationChannels; 
         private Integer passwordExpirationNotificationDuration; 
         private String passwordExpirationNotificationStatus; 
         private String passwordExpirationStatus; 
@@ -163,6 +181,7 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
         private Builder(SetPasswordExpirationConfigurationRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.effectiveAuthenticationSourceIds = request.effectiveAuthenticationSourceIds;
             this.instanceId = request.instanceId;
             this.passwordExpirationAction = request.passwordExpirationAction;
             this.passwordExpirationNotificationChannels = request.passwordExpirationNotificationChannels;
@@ -183,7 +202,20 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * EffectiveAuthenticationSourceIds.
+         */
+        public Builder effectiveAuthenticationSourceIds(java.util.List<String> effectiveAuthenticationSourceIds) {
+            this.putQueryParameter("EffectiveAuthenticationSourceIds", effectiveAuthenticationSourceIds);
+            this.effectiveAuthenticationSourceIds = effectiveAuthenticationSourceIds;
+            return this;
+        }
+
+        /**
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -192,12 +224,15 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
         }
 
         /**
-         * The action to take upon password expiration. This parameter must be specified when PasswordExpirationStatus is set to enabled. Valid values:
-         * <p>
+         * <p>The action to take upon password expiration. This parameter must be specified when PasswordExpirationStatus is set to enabled. Valid values:</p>
+         * <ul>
+         * <li>forbid_login: Users cannot log on to IDaaS.</li>
+         * <li>force_update_password: Users must change the password.</li>
+         * <li>remind_update_password: IDaaS reminds users to change the password upon each logon.</li>
+         * </ul>
          * 
-         * *   forbid_login: Users cannot log on to IDaaS.
-         * *   force_update_password: Users must change the password.
-         * *   remind_update_password: IDaaS reminds users to change the password upon each logon.
+         * <strong>example:</strong>
+         * <p>force_update_password</p>
          */
         public Builder passwordExpirationAction(String passwordExpirationAction) {
             this.putQueryParameter("PasswordExpirationAction", passwordExpirationAction);
@@ -206,16 +241,22 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
         }
 
         /**
-         * The methods for receiving password expiration notifications. This parameter must be specified when PasswordExpirationNotificationStatus is set to enabled.
+         * <p>The methods for receiving password expiration notifications. This parameter must be specified when PasswordExpirationNotificationStatus is set to enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>login</p>
          */
-        public Builder passwordExpirationNotificationChannels(java.util.List < String > passwordExpirationNotificationChannels) {
+        public Builder passwordExpirationNotificationChannels(java.util.List<String> passwordExpirationNotificationChannels) {
             this.putQueryParameter("PasswordExpirationNotificationChannels", passwordExpirationNotificationChannels);
             this.passwordExpirationNotificationChannels = passwordExpirationNotificationChannels;
             return this;
         }
 
         /**
-         * The number of days before the expiration date during which password expiration notifications are sent. Unit: day. This parameter must be specified when PasswordExpirationNotificationStatus is set to enabled.
+         * <p>The number of days before the expiration date during which password expiration notifications are sent. Unit: day. This parameter must be specified when PasswordExpirationNotificationStatus is set to enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder passwordExpirationNotificationDuration(Integer passwordExpirationNotificationDuration) {
             this.putQueryParameter("PasswordExpirationNotificationDuration", passwordExpirationNotificationDuration);
@@ -224,11 +265,14 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the password expiration notification feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the password expiration notification feature. Valid values:</p>
+         * <ul>
+         * <li>enabled</li>
+         * <li>disabled</li>
+         * </ul>
          * 
-         * *   enabled
-         * *   disabled
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder passwordExpirationNotificationStatus(String passwordExpirationNotificationStatus) {
             this.putQueryParameter("PasswordExpirationNotificationStatus", passwordExpirationNotificationStatus);
@@ -237,11 +281,15 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the password expiration feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the password expiration feature. Valid values:</p>
+         * <ul>
+         * <li>enabled</li>
+         * <li>disabled</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   enabled
-         * *   disabled
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder passwordExpirationStatus(String passwordExpirationStatus) {
             this.putQueryParameter("PasswordExpirationStatus", passwordExpirationStatus);
@@ -250,7 +298,10 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
         }
 
         /**
-         * The number of days before which users must change the password to prevent password expiration. Unit: day. You must set this parameter to a value greater than the value of PasswordExpirationNotificationDuration.
+         * <p>The number of days before which users must change the password to prevent password expiration. Unit: day. You must set this parameter to a value greater than the value of PasswordExpirationNotificationDuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder passwordForcedUpdateDuration(Integer passwordForcedUpdateDuration) {
             this.putQueryParameter("PasswordForcedUpdateDuration", passwordForcedUpdateDuration);
@@ -259,7 +310,10 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
         }
 
         /**
-         * The validity period of a password. Unit: day. This parameter must be specified when PasswordExpirationStatus is set to enabled.
+         * <p>The validity period of a password. Unit: day. This parameter must be specified when PasswordExpirationStatus is set to enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>180</p>
          */
         public Builder passwordValidMaxDay(Integer passwordValidMaxDay) {
             this.putQueryParameter("PasswordValidMaxDay", passwordValidMaxDay);

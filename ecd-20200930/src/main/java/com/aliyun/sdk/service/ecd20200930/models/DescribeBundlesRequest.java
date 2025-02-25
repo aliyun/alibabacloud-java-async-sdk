@@ -1,97 +1,106 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBundlesRequest} extends {@link RequestModel}
  *
  * <p>DescribeBundlesRequest</p>
  */
 public class DescribeBundlesRequest extends Request {
-    @Query
-    @NameInMap("BundleId")
-    private java.util.List < String > bundleId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BundleId")
+    private java.util.List<String> bundleId;
 
-    @Query
-    @NameInMap("BundleType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BundleType")
     private String bundleType;
 
-    @Query
-    @NameInMap("CheckStock")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckStock")
     private Boolean checkStock;
 
-    @Query
-    @NameInMap("CpuCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CpuCount")
     private Integer cpuCount;
 
-    @Query
-    @NameInMap("DesktopTypeFamily")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopTypeFamily")
     private String desktopTypeFamily;
 
-    @Query
-    @NameInMap("FotaChannel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FotaChannel")
     private String fotaChannel;
 
-    @Query
-    @NameInMap("FromDesktopGroup")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FromDesktopGroup")
     private Boolean fromDesktopGroup;
 
-    @Query
-    @NameInMap("GpuCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GpuCount")
     private Float gpuCount;
 
-    @Query
-    @NameInMap("ImageId")
-    private java.util.List < String > imageId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GpuDriverType")
+    private String gpuDriverType;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 500)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
+    private java.util.List<String> imageId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 500)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("MemorySize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MemorySize")
     private Integer memorySize;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OsType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OsType")
     private String osType;
 
-    @Query
-    @NameInMap("ProtocolType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProtocolType")
     private String protocolType;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Scope")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scope")
     private String scope;
 
-    @Query
-    @NameInMap("SelectedBundle")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SelectedBundle")
     private Boolean selectedBundle;
 
-    @Query
-    @NameInMap("SessionType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SessionType")
     private String sessionType;
 
-    @Query
-    @NameInMap("SupportMultiSession")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SupportMultiSession")
     private Boolean supportMultiSession;
 
-    @Query
-    @NameInMap("VolumeEncryptionEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VolumeEncryptionEnabled")
     private Boolean volumeEncryptionEnabled;
 
     private DescribeBundlesRequest(Builder builder) {
@@ -104,6 +113,7 @@ public class DescribeBundlesRequest extends Request {
         this.fotaChannel = builder.fotaChannel;
         this.fromDesktopGroup = builder.fromDesktopGroup;
         this.gpuCount = builder.gpuCount;
+        this.gpuDriverType = builder.gpuDriverType;
         this.imageId = builder.imageId;
         this.maxResults = builder.maxResults;
         this.memorySize = builder.memorySize;
@@ -134,7 +144,7 @@ public class DescribeBundlesRequest extends Request {
     /**
      * @return bundleId
      */
-    public java.util.List < String > getBundleId() {
+    public java.util.List<String> getBundleId() {
         return this.bundleId;
     }
 
@@ -188,9 +198,16 @@ public class DescribeBundlesRequest extends Request {
     }
 
     /**
+     * @return gpuDriverType
+     */
+    public String getGpuDriverType() {
+        return this.gpuDriverType;
+    }
+
+    /**
      * @return imageId
      */
-    public java.util.List < String > getImageId() {
+    public java.util.List<String> getImageId() {
         return this.imageId;
     }
 
@@ -272,7 +289,7 @@ public class DescribeBundlesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeBundlesRequest, Builder> {
-        private java.util.List < String > bundleId; 
+        private java.util.List<String> bundleId; 
         private String bundleType; 
         private Boolean checkStock; 
         private Integer cpuCount; 
@@ -280,7 +297,8 @@ public class DescribeBundlesRequest extends Request {
         private String fotaChannel; 
         private Boolean fromDesktopGroup; 
         private Float gpuCount; 
-        private java.util.List < String > imageId; 
+        private String gpuDriverType; 
+        private java.util.List<String> imageId; 
         private Integer maxResults; 
         private Integer memorySize; 
         private String nextToken; 
@@ -307,6 +325,7 @@ public class DescribeBundlesRequest extends Request {
             this.fotaChannel = request.fotaChannel;
             this.fromDesktopGroup = request.fromDesktopGroup;
             this.gpuCount = request.gpuCount;
+            this.gpuDriverType = request.gpuDriverType;
             this.imageId = request.imageId;
             this.maxResults = request.maxResults;
             this.memorySize = request.memorySize;
@@ -322,16 +341,38 @@ public class DescribeBundlesRequest extends Request {
         } 
 
         /**
-         * BundleId.
+         * <p>The IDs of the cloud computer templates. You can specify 1 to 100 IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bundle_ecd_graphics.2xlarge_s15d15_win2019</p>
          */
-        public Builder bundleId(java.util.List < String > bundleId) {
+        public Builder bundleId(java.util.List<String> bundleId) {
             this.putQueryParameter("BundleId", bundleId);
             this.bundleId = bundleId;
             return this;
         }
 
         /**
-         * BundleType.
+         * <p>The type of the cloud computer template.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>SYSTEM: system template</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>CUSTOM: custom template</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM</p>
          */
         public Builder bundleType(String bundleType) {
             this.putQueryParameter("BundleType", bundleType);
@@ -340,7 +381,10 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * CheckStock.
+         * <p>Specifies whether to query the inventory status of the cloud computer instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder checkStock(Boolean checkStock) {
             this.putQueryParameter("CheckStock", checkStock);
@@ -349,7 +393,10 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * CpuCount.
+         * <p>The number of vCPUs contained in the cloud computer instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder cpuCount(Integer cpuCount) {
             this.putQueryParameter("CpuCount", cpuCount);
@@ -358,7 +405,16 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * DesktopTypeFamily.
+         * <p>The instance family of the cloud computers.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>eds.graphics: graphical instance families</li>
+         * <li>eds.hf: instance families with high clock speeds</li>
+         * <li>eds.general: general-purpose instance families</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>eds.general</p>
          */
         public Builder desktopTypeFamily(String desktopTypeFamily) {
             this.putQueryParameter("DesktopTypeFamily", desktopTypeFamily);
@@ -367,7 +423,10 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * FotaChannel.
+         * <p>This parameter is now in invitational preview and not publicly available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This parameter is now in invitational preview and unavailable.</p>
          */
         public Builder fotaChannel(String fotaChannel) {
             this.putQueryParameter("FotaChannel", fotaChannel);
@@ -376,7 +435,26 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * FromDesktopGroup.
+         * <p>Specifies whether the cloud computers in the template belong to a cloud computer pool.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>false</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder fromDesktopGroup(Boolean fromDesktopGroup) {
             this.putQueryParameter("FromDesktopGroup", fromDesktopGroup);
@@ -385,7 +463,10 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * GpuCount.
+         * <p>The number of GPUs contained in the cloud computer instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder gpuCount(Float gpuCount) {
             this.putQueryParameter("GpuCount", gpuCount);
@@ -394,16 +475,30 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * GpuDriverType.
          */
-        public Builder imageId(java.util.List < String > imageId) {
+        public Builder gpuDriverType(String gpuDriverType) {
+            this.putQueryParameter("GpuDriverType", gpuDriverType);
+            this.gpuDriverType = gpuDriverType;
+            return this;
+        }
+
+        /**
+         * <p>The image ID.</p>
+         */
+        public Builder imageId(java.util.List<String> imageId) {
             this.putQueryParameter("ImageId", imageId);
             this.imageId = imageId;
             return this;
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries to return on each page.</p>
+         * <p>Maximum value: 100.</p>
+         * <p>Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -412,7 +507,10 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * MemorySize.
+         * <p>The memory size of the cloud computer instance type. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder memorySize(Integer memorySize) {
             this.putQueryParameter("MemorySize", memorySize);
@@ -421,7 +519,10 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token that is used to start the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -430,7 +531,26 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * OsType.
+         * <p>The type of the OS.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>Linux</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Windows</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Windows</p>
          */
         public Builder osType(String osType) {
             this.putQueryParameter("OsType", osType);
@@ -439,7 +559,15 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * ProtocolType.
+         * <p>The protocol type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>HDX: High-definition Experience (HDX) protocol</li>
+         * <li>ASP: in-house Adaptive Streaming Protocol (ASP) (recommend)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ASP</p>
          */
         public Builder protocolType(String protocolType) {
             this.putQueryParameter("ProtocolType", protocolType);
@@ -448,7 +576,11 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -457,7 +589,10 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * Scope.
+         * <p>The scenario to use the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FastBuy</p>
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);
@@ -466,7 +601,10 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * SelectedBundle.
+         * <p>The desktop template that is selected based on specific criteria.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder selectedBundle(Boolean selectedBundle) {
             this.putQueryParameter("SelectedBundle", selectedBundle);
@@ -475,7 +613,15 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * SessionType.
+         * <p>The type of the session.</p>
+         * <p>Enumeration Value:</p>
+         * <ul>
+         * <li><strong>SingleSession</strong></li>
+         * <li><strong>MultipleSession</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SingleSession</p>
          */
         public Builder sessionType(String sessionType) {
             this.putQueryParameter("SessionType", sessionType);
@@ -484,7 +630,10 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * SupportMultiSession.
+         * <p>Specifies whether to return multi-session cloud computer templates. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder supportMultiSession(Boolean supportMultiSession) {
             this.putQueryParameter("SupportMultiSession", supportMultiSession);
@@ -493,7 +642,10 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * VolumeEncryptionEnabled.
+         * <p>Specifies whether to enable disk encryption.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder volumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
             this.putQueryParameter("VolumeEncryptionEnabled", volumeEncryptionEnabled);

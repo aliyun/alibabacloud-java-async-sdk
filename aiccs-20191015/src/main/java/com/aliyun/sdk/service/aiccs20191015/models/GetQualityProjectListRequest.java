@@ -1,47 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQualityProjectListRequest} extends {@link RequestModel}
  *
  * <p>GetQualityProjectListRequest</p>
  */
 public class GetQualityProjectListRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PageNo")
-    @Validation(maximum = 1000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
+    @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 1)
     private Integer pageNo;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ProjectId")
-    @Validation()
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation()
     private Long projectId;
 
-    @Query
-    @NameInMap("ProjectName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectName")
     private String projectName;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
-    @Query
-    @NameInMap("checkFreqType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("checkFreqType")
     private Long checkFreqType;
 
     private GetQualityProjectListRequest(Builder builder) {
@@ -142,7 +147,10 @@ public class GetQualityProjectListRequest extends Request {
         } 
 
         /**
-         * 实例ID
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -151,7 +159,7 @@ public class GetQualityProjectListRequest extends Request {
         }
 
         /**
-         * PageNo
+         * PageNo.
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -160,7 +168,7 @@ public class GetQualityProjectListRequest extends Request {
         }
 
         /**
-         * PageSize
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -169,7 +177,7 @@ public class GetQualityProjectListRequest extends Request {
         }
 
         /**
-         * 质检项ID
+         * ProjectId.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -178,7 +186,7 @@ public class GetQualityProjectListRequest extends Request {
         }
 
         /**
-         * 质检项名称
+         * ProjectName.
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -187,7 +195,7 @@ public class GetQualityProjectListRequest extends Request {
         }
 
         /**
-         * 质检项状态
+         * Status.
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -196,7 +204,7 @@ public class GetQualityProjectListRequest extends Request {
         }
 
         /**
-         * 质检频率
+         * checkFreqType.
          */
         public Builder checkFreqType(Long checkFreqType) {
             this.putQueryParameter("checkFreqType", checkFreqType);

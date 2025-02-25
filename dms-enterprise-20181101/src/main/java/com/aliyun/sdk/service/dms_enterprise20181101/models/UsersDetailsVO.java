@@ -1,54 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UsersDetailsVO} extends {@link TeaModel}
  *
  * <p>UsersDetailsVO</p>
  */
 public class UsersDetailsVO extends TeaModel {
-    @NameInMap("ApprovalSignatureBase64")
+    @com.aliyun.core.annotation.NameInMap("ApprovalSignatureBase64")
     private String approvalSignatureBase64;
 
-    @NameInMap("ApprovalSqlTemplate")
+    @com.aliyun.core.annotation.NameInMap("ApprovalSqlTemplate")
     private String approvalSqlTemplate;
 
-    @NameInMap("ApprovalStatus")
+    @com.aliyun.core.annotation.NameInMap("ApprovalStatus")
     private String approvalStatus;
 
-    @NameInMap("Creator")
+    @com.aliyun.core.annotation.NameInMap("Creator")
     private Integer creator;
 
-    @NameInMap("DataReady")
+    @com.aliyun.core.annotation.NameInMap("DataReady")
     private Integer dataReady;
 
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @NameInMap("Mekid")
+    @com.aliyun.core.annotation.NameInMap("Mekid")
     private Long mekid;
 
-    @NameInMap("PathPrefix")
+    @com.aliyun.core.annotation.NameInMap("PathPrefix")
     private String pathPrefix;
 
-    @NameInMap("ResultParty")
+    @com.aliyun.core.annotation.NameInMap("ResultParty")
     private Integer resultParty;
 
-    @NameInMap("Uid")
+    @com.aliyun.core.annotation.NameInMap("Uid")
     private String uid;
 
-    @NameInMap("UserConfirmed")
+    @com.aliyun.core.annotation.NameInMap("UserConfirmed")
     private Integer userConfirmed;
 
-    @NameInMap("UserName")
+    @com.aliyun.core.annotation.NameInMap("UserName")
     private String userName;
 
-    @NameInMap("UserPublicKeyPem")
+    @com.aliyun.core.annotation.NameInMap("UserPublicKeyPem")
     private String userPublicKeyPem;
 
     private UsersDetailsVO(Builder builder) {

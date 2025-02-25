@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyCheckInstanceResultResponseBody} extends {@link TeaModel}
  *
  * <p>VerifyCheckInstanceResultResponseBody</p>
  */
 public class VerifyCheckInstanceResultResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private VerifyCheckInstanceResultResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class VerifyCheckInstanceResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class VerifyCheckInstanceResultResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B869E3A0-1147-539D-9920-47580700****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,16 +79,26 @@ public class VerifyCheckInstanceResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link VerifyCheckInstanceResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>VerifyCheckInstanceResultResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("FailInstances")
-        private java.util.List < String > failInstances;
+        @com.aliyun.core.annotation.NameInMap("FailInstances")
+        private java.util.List<String> failInstances;
 
-        @NameInMap("OperateCode")
+        @com.aliyun.core.annotation.NameInMap("OperateCode")
         private String operateCode;
+
+        @com.aliyun.core.annotation.NameInMap("TaskId")
+        private String taskId;
 
         private Data(Builder builder) {
             this.failInstances = builder.failInstances;
             this.operateCode = builder.operateCode;
+            this.taskId = builder.taskId;
         }
 
         public static Builder builder() {
@@ -94,7 +112,7 @@ public class VerifyCheckInstanceResultResponseBody extends TeaModel {
         /**
          * @return failInstances
          */
-        public java.util.List < String > getFailInstances() {
+        public java.util.List<String> getFailInstances() {
             return this.failInstances;
         }
 
@@ -105,27 +123,49 @@ public class VerifyCheckInstanceResultResponseBody extends TeaModel {
             return this.operateCode;
         }
 
+        /**
+         * @return taskId
+         */
+        public String getTaskId() {
+            return this.taskId;
+        }
+
         public static final class Builder {
-            private java.util.List < String > failInstances; 
+            private java.util.List<String> failInstances; 
             private String operateCode; 
+            private String taskId; 
 
             /**
-             * An array consisting of instances that failed the check.
+             * <p>An array consisting of instances that failed the check.</p>
              */
-            public Builder failInstances(java.util.List < String > failInstances) {
+            public Builder failInstances(java.util.List<String> failInstances) {
                 this.failInstances = failInstances;
                 return this;
             }
 
             /**
-             * The operation code of the task that checks the configurations of cloud services. Valid values:
-             * <p>
+             * <p>The operation code of the task that checks the configurations of cloud services. Valid values:</p>
+             * <ul>
+             * <li><strong>Throttling</strong></li>
+             * <li><strong>ActionTrialUnauthorized</strong></li>
+             * </ul>
              * 
-             * *   **Throttling**
-             * *   **ActionTrialUnauthorized**
+             * <strong>example:</strong>
+             * <p>ActionTrialUnauthorized</p>
              */
             public Builder operateCode(String operateCode) {
                 this.operateCode = operateCode;
+                return this;
+            }
+
+            /**
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a410bb3-e68c217a-3368bc0-238c668***</p>
+             */
+            public Builder taskId(String taskId) {
+                this.taskId = taskId;
                 return this;
             }
 

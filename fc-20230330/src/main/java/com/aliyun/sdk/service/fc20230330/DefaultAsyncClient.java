@@ -40,8 +40,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 创建函数别名。
-      *
+     * @param request the request parameters of CreateAlias  CreateAliasRequest
+     * @return CreateAliasResponse
      */
     @Override
     public CompletableFuture<CreateAliasResponse> createAlias(CreateAliasRequest request) {
@@ -58,8 +58,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 创建自定义域名。
-      *
+     * <b>description</b> :
+     * <p>If you want to use a fixed domain name to access an application or function in a production environment of Function Compute, or to resolve the issue of forced downloads when accessing an HTTP trigger, you can bind a custom domain name to the application or function.</p>
+     * 
+     * @param request the request parameters of CreateCustomDomain  CreateCustomDomainRequest
+     * @return CreateCustomDomainResponse
      */
     @Override
     public CompletableFuture<CreateCustomDomainResponse> createCustomDomain(CreateCustomDomainRequest request) {
@@ -76,8 +79,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 创建函数。
-      *
+     * <b>description</b> :
+     * <p>Resources of Function Compute are scheduled and run based on functions. A function usually refers to a code snippet that is written by a user and can be independently executed to respond to events and requests.</p>
+     * 
+     * @param request the request parameters of CreateFunction  CreateFunctionRequest
+     * @return CreateFunctionResponse
      */
     @Override
     public CompletableFuture<CreateFunctionResponse> createFunction(CreateFunctionRequest request) {
@@ -94,8 +100,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 创建层版本。
-      *
+     * @param request the request parameters of CreateLayerVersion  CreateLayerVersionRequest
+     * @return CreateLayerVersionResponse
      */
     @Override
     public CompletableFuture<CreateLayerVersionResponse> createLayerVersion(CreateLayerVersionRequest request) {
@@ -112,8 +118,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 创建函数触发器。
-      *
+     * @param request the request parameters of CreateTrigger  CreateTriggerRequest
+     * @return CreateTriggerResponse
      */
     @Override
     public CompletableFuture<CreateTriggerResponse> createTrigger(CreateTriggerRequest request) {
@@ -130,8 +136,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 创建VPC绑定。
-      *
+     * @param request the request parameters of CreateVpcBinding  CreateVpcBindingRequest
+     * @return CreateVpcBindingResponse
      */
     @Override
     public CompletableFuture<CreateVpcBindingResponse> createVpcBinding(CreateVpcBindingRequest request) {
@@ -148,8 +154,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 删除函数别名。
-      *
+     * @param request the request parameters of DeleteAlias  DeleteAliasRequest
+     * @return DeleteAliasResponse
      */
     @Override
     public CompletableFuture<DeleteAliasResponse> deleteAlias(DeleteAliasRequest request) {
@@ -166,8 +172,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 删除函数异步调用配置。
-      *
+     * @param request the request parameters of DeleteAsyncInvokeConfig  DeleteAsyncInvokeConfigRequest
+     * @return DeleteAsyncInvokeConfigResponse
      */
     @Override
     public CompletableFuture<DeleteAsyncInvokeConfigResponse> deleteAsyncInvokeConfig(DeleteAsyncInvokeConfigRequest request) {
@@ -184,8 +190,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 删除函数并发度配置。
-      *
+     * @param request the request parameters of DeleteConcurrencyConfig  DeleteConcurrencyConfigRequest
+     * @return DeleteConcurrencyConfigResponse
      */
     @Override
     public CompletableFuture<DeleteConcurrencyConfigResponse> deleteConcurrencyConfig(DeleteConcurrencyConfigRequest request) {
@@ -202,8 +208,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 删除自定义域名。
-      *
+     * @param request the request parameters of DeleteCustomDomain  DeleteCustomDomainRequest
+     * @return DeleteCustomDomainResponse
      */
     @Override
     public CompletableFuture<DeleteCustomDomainResponse> deleteCustomDomain(DeleteCustomDomainRequest request) {
@@ -220,8 +226,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 删除函数。
-      *
+     * @param request the request parameters of DeleteFunction  DeleteFunctionRequest
+     * @return DeleteFunctionResponse
      */
     @Override
     public CompletableFuture<DeleteFunctionResponse> deleteFunction(DeleteFunctionRequest request) {
@@ -238,8 +244,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 删除函数版本。
-      *
+     * @param request the request parameters of DeleteFunctionVersion  DeleteFunctionVersionRequest
+     * @return DeleteFunctionVersionResponse
      */
     @Override
     public CompletableFuture<DeleteFunctionVersionResponse> deleteFunctionVersion(DeleteFunctionVersionRequest request) {
@@ -256,8 +262,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 删除层版本。
-      *
+     * @param request the request parameters of DeleteLayerVersion  DeleteLayerVersionRequest
+     * @return DeleteLayerVersionResponse
      */
     @Override
     public CompletableFuture<DeleteLayerVersionResponse> deleteLayerVersion(DeleteLayerVersionRequest request) {
@@ -274,8 +280,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 删除函数预留配置。
-      *
+     * @param request the request parameters of DeleteProvisionConfig  DeleteProvisionConfigRequest
+     * @return DeleteProvisionConfigResponse
      */
     @Override
     public CompletableFuture<DeleteProvisionConfigResponse> deleteProvisionConfig(DeleteProvisionConfigRequest request) {
@@ -292,8 +298,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 删除函数触发器。
-      *
+     * @param request the request parameters of DeleteTrigger  DeleteTriggerRequest
+     * @return DeleteTriggerResponse
      */
     @Override
     public CompletableFuture<DeleteTriggerResponse> deleteTrigger(DeleteTriggerRequest request) {
@@ -310,8 +316,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 删除VPC绑定。
-      *
+     * @param request the request parameters of DeleteVpcBinding  DeleteVpcBindingRequest
+     * @return DeleteVpcBindingResponse
      */
     @Override
     public CompletableFuture<DeleteVpcBindingResponse> deleteVpcBinding(DeleteVpcBindingRequest request) {
@@ -328,8 +334,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 获取函数别名信息。
-      *
+     * @param request the request parameters of GetAlias  GetAliasRequest
+     * @return GetAliasResponse
      */
     @Override
     public CompletableFuture<GetAliasResponse> getAlias(GetAliasRequest request) {
@@ -346,8 +352,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 获取函数异步调用配置。
-      *
+     * @param request the request parameters of GetAsyncInvokeConfig  GetAsyncInvokeConfigRequest
+     * @return GetAsyncInvokeConfigResponse
      */
     @Override
     public CompletableFuture<GetAsyncInvokeConfigResponse> getAsyncInvokeConfig(GetAsyncInvokeConfigRequest request) {
@@ -364,8 +370,26 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 获取函数并发度配置。
-      *
+     * @param request the request parameters of GetAsyncTask  GetAsyncTaskRequest
+     * @return GetAsyncTaskResponse
+     */
+    @Override
+    public CompletableFuture<GetAsyncTaskResponse> getAsyncTask(GetAsyncTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetAsyncTask").setMethod(HttpMethod.GET).setPathRegex("/2023-03-30/functions/{functionName}/async-tasks/{taskId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAsyncTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAsyncTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetConcurrencyConfig  GetConcurrencyConfigRequest
+     * @return GetConcurrencyConfigResponse
      */
     @Override
     public CompletableFuture<GetConcurrencyConfigResponse> getConcurrencyConfig(GetConcurrencyConfigRequest request) {
@@ -382,8 +406,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 获取自定义域名。
-      *
+     * @param request the request parameters of GetCustomDomain  GetCustomDomainRequest
+     * @return GetCustomDomainResponse
      */
     @Override
     public CompletableFuture<GetCustomDomainResponse> getCustomDomain(GetCustomDomainRequest request) {
@@ -400,8 +424,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 获取函数信息。
-      *
+     * @param request the request parameters of GetFunction  GetFunctionRequest
+     * @return GetFunctionResponse
      */
     @Override
     public CompletableFuture<GetFunctionResponse> getFunction(GetFunctionRequest request) {
@@ -418,8 +442,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 获取函数代码。
-      *
+     * @param request the request parameters of GetFunctionCode  GetFunctionCodeRequest
+     * @return GetFunctionCodeResponse
      */
     @Override
     public CompletableFuture<GetFunctionCodeResponse> getFunctionCode(GetFunctionCodeRequest request) {
@@ -436,8 +460,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 获取层版本。
-      *
+     * @param request the request parameters of GetLayerVersion  GetLayerVersionRequest
+     * @return GetLayerVersionResponse
      */
     @Override
     public CompletableFuture<GetLayerVersionResponse> getLayerVersion(GetLayerVersionRequest request) {
@@ -454,8 +478,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 根据资源标识获取层版本。
-      *
+     * @param request the request parameters of GetLayerVersionByArn  GetLayerVersionByArnRequest
+     * @return GetLayerVersionByArnResponse
      */
     @Override
     public CompletableFuture<GetLayerVersionByArnResponse> getLayerVersionByArn(GetLayerVersionByArnRequest request) {
@@ -472,8 +496,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 获取函数预留配置。
-      *
+     * @param request the request parameters of GetProvisionConfig  GetProvisionConfigRequest
+     * @return GetProvisionConfigResponse
      */
     @Override
     public CompletableFuture<GetProvisionConfigResponse> getProvisionConfig(GetProvisionConfigRequest request) {
@@ -490,26 +514,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 获取资源标签。
-      *
-     */
-    @Override
-    public CompletableFuture<GetResourceTagsResponse> getResourceTags(GetResourceTagsRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetResourceTags").setMethod(HttpMethod.GET).setPathRegex("/2023-03-30/tag").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetResourceTagsResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<GetResourceTagsResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-      * 获取函数触发器。
-      *
+     * @param request the request parameters of GetTrigger  GetTriggerRequest
+     * @return GetTriggerResponse
      */
     @Override
     public CompletableFuture<GetTriggerResponse> getTrigger(GetTriggerRequest request) {
@@ -526,8 +532,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 调用函数。
-      *
+     * @param request the request parameters of InvokeFunction  InvokeFunctionRequest
+     * @return InvokeFunctionResponse
      */
     @Override
     public CompletableFuture<InvokeFunctionResponse> invokeFunction(InvokeFunctionRequest request) {
@@ -573,8 +579,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 列出函数别名。
-      *
+     * @param request the request parameters of ListAliases  ListAliasesRequest
+     * @return ListAliasesResponse
      */
     @Override
     public CompletableFuture<ListAliasesResponse> listAliases(ListAliasesRequest request) {
@@ -591,8 +597,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 列出函数异步调用配置。
-      *
+     * @param request the request parameters of ListAsyncInvokeConfigs  ListAsyncInvokeConfigsRequest
+     * @return ListAsyncInvokeConfigsResponse
      */
     @Override
     public CompletableFuture<ListAsyncInvokeConfigsResponse> listAsyncInvokeConfigs(ListAsyncInvokeConfigsRequest request) {
@@ -609,8 +615,26 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 列出函数并发度配置。
-      *
+     * @param request the request parameters of ListAsyncTasks  ListAsyncTasksRequest
+     * @return ListAsyncTasksResponse
+     */
+    @Override
+    public CompletableFuture<ListAsyncTasksResponse> listAsyncTasks(ListAsyncTasksRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListAsyncTasks").setMethod(HttpMethod.GET).setPathRegex("/2023-03-30/functions/{functionName}/async-tasks").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAsyncTasksResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAsyncTasksResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListConcurrencyConfigs  ListConcurrencyConfigsRequest
+     * @return ListConcurrencyConfigsResponse
      */
     @Override
     public CompletableFuture<ListConcurrencyConfigsResponse> listConcurrencyConfigs(ListConcurrencyConfigsRequest request) {
@@ -627,8 +651,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 列出自定义域名。
-      *
+     * @param request the request parameters of ListCustomDomains  ListCustomDomainsRequest
+     * @return ListCustomDomainsResponse
      */
     @Override
     public CompletableFuture<ListCustomDomainsResponse> listCustomDomains(ListCustomDomainsRequest request) {
@@ -645,8 +669,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 列出函数版本。
-      *
+     * @param request the request parameters of ListFunctionVersions  ListFunctionVersionsRequest
+     * @return ListFunctionVersionsResponse
      */
     @Override
     public CompletableFuture<ListFunctionVersionsResponse> listFunctionVersions(ListFunctionVersionsRequest request) {
@@ -663,8 +687,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 列出函数。
-      *
+     * @param request the request parameters of ListFunctions  ListFunctionsRequest
+     * @return ListFunctionsResponse
      */
     @Override
     public CompletableFuture<ListFunctionsResponse> listFunctions(ListFunctionsRequest request) {
@@ -681,8 +705,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 列出函数实例。
-      *
+     * @param request the request parameters of ListInstances  ListInstancesRequest
+     * @return ListInstancesResponse
      */
     @Override
     public CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request) {
@@ -699,8 +723,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 列出层版本。
-      *
+     * @param request the request parameters of ListLayerVersions  ListLayerVersionsRequest
+     * @return ListLayerVersionsResponse
      */
     @Override
     public CompletableFuture<ListLayerVersionsResponse> listLayerVersions(ListLayerVersionsRequest request) {
@@ -717,8 +741,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 列出层。
-      *
+     * @param request the request parameters of ListLayers  ListLayersRequest
+     * @return ListLayersResponse
      */
     @Override
     public CompletableFuture<ListLayersResponse> listLayers(ListLayersRequest request) {
@@ -735,8 +759,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 列出函数预留配置。
-      *
+     * @param request the request parameters of ListProvisionConfigs  ListProvisionConfigsRequest
+     * @return ListProvisionConfigsResponse
      */
     @Override
     public CompletableFuture<ListProvisionConfigsResponse> listProvisionConfigs(ListProvisionConfigsRequest request) {
@@ -753,26 +777,26 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 列出具有标签的资源。
-      *
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
      */
     @Override
-    public CompletableFuture<ListTaggedResourcesResponse> listTaggedResources(ListTaggedResourcesRequest request) {
+    public CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListTaggedResources").setMethod(HttpMethod.GET).setPathRegex("/2023-03-30/tags").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListTaggedResourcesResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListTagResources").setMethod(HttpMethod.GET).setPathRegex("/2023-03-30/tags-v2").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListTagResourcesResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<ListTaggedResourcesResponse> future = new CompletableFuture<>();
+            CompletableFuture<ListTagResourcesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
     /**
-      * 列出函数触发器。
-      *
+     * @param request the request parameters of ListTriggers  ListTriggersRequest
+     * @return ListTriggersResponse
      */
     @Override
     public CompletableFuture<ListTriggersResponse> listTriggers(ListTriggersRequest request) {
@@ -789,8 +813,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 列出VPC绑定配置。
-      *
+     * @param request the request parameters of ListVpcBindings  ListVpcBindingsRequest
+     * @return ListVpcBindingsResponse
      */
     @Override
     public CompletableFuture<ListVpcBindingsResponse> listVpcBindings(ListVpcBindingsRequest request) {
@@ -807,8 +831,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 发布函数版本。
-      *
+     * @param request the request parameters of PublishFunctionVersion  PublishFunctionVersionRequest
+     * @return PublishFunctionVersionResponse
      */
     @Override
     public CompletableFuture<PublishFunctionVersionResponse> publishFunctionVersion(PublishFunctionVersionRequest request) {
@@ -825,8 +849,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 设置函数异步调用配置。
-      *
+     * @param request the request parameters of PutAsyncInvokeConfig  PutAsyncInvokeConfigRequest
+     * @return PutAsyncInvokeConfigResponse
      */
     @Override
     public CompletableFuture<PutAsyncInvokeConfigResponse> putAsyncInvokeConfig(PutAsyncInvokeConfigRequest request) {
@@ -843,8 +867,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 设置函数并发度配置。
-      *
+     * @param request the request parameters of PutConcurrencyConfig  PutConcurrencyConfigRequest
+     * @return PutConcurrencyConfigResponse
      */
     @Override
     public CompletableFuture<PutConcurrencyConfigResponse> putConcurrencyConfig(PutConcurrencyConfigRequest request) {
@@ -861,8 +885,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 设置层的访问权限。
-      *
+     * @param request the request parameters of PutLayerACL  PutLayerACLRequest
+     * @return PutLayerACLResponse
      */
     @Override
     public CompletableFuture<PutLayerACLResponse> putLayerACL(PutLayerACLRequest request) {
@@ -879,8 +903,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 设置函数预留配置。
-      *
+     * @param request the request parameters of PutProvisionConfig  PutProvisionConfigRequest
+     * @return PutProvisionConfigResponse
      */
     @Override
     public CompletableFuture<PutProvisionConfigResponse> putProvisionConfig(PutProvisionConfigRequest request) {
@@ -897,44 +921,65 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 设置资源标签。
-      *
+     * @param request the request parameters of StopAsyncTask  StopAsyncTaskRequest
+     * @return StopAsyncTaskResponse
      */
     @Override
-    public CompletableFuture<TagResourceResponse> tagResource(TagResourceRequest request) {
+    public CompletableFuture<StopAsyncTaskResponse> stopAsyncTask(StopAsyncTaskRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TagResource").setMethod(HttpMethod.POST).setPathRegex("/2023-03-30/tag").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TagResourceResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("StopAsyncTask").setMethod(HttpMethod.PUT).setPathRegex("/2023-03-30/functions/{functionName}/async-tasks/{taskId}/stop").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StopAsyncTaskResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<TagResourceResponse> future = new CompletableFuture<>();
+            CompletableFuture<StopAsyncTaskResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
     /**
-      * 删除资源标签。
-      *
+     * <b>description</b> :
+     * <p>Tags are used to identify resources. Tags allow you to categorize, search for, and aggregate resources that have the same characteristics from different dimensions. This facilitates resource management. For more information, see <a href="https://help.aliyun.com/document_detail/156983.html">Tag overview</a>.</p>
+     * 
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
      */
     @Override
-    public CompletableFuture<UntagResourceResponse> untagResource(UntagResourceRequest request) {
+    public CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UntagResource").setMethod(HttpMethod.DELETE).setPathRegex("/2023-03-30/tag").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UntagResourceResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TagResources").setMethod(HttpMethod.POST).setPathRegex("/2023-03-30/tags-v2").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TagResourcesResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<UntagResourceResponse> future = new CompletableFuture<>();
+            CompletableFuture<TagResourcesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
     /**
-      * 更新函数别名。
-      *
+     * @param request the request parameters of UntagResources  UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
+    @Override
+    public CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UntagResources").setMethod(HttpMethod.DELETE).setPathRegex("/2023-03-30/tags-v2").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UntagResourcesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UntagResourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateAlias  UpdateAliasRequest
+     * @return UpdateAliasResponse
      */
     @Override
     public CompletableFuture<UpdateAliasResponse> updateAlias(UpdateAliasRequest request) {
@@ -951,8 +996,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 更新自定义域名。
-      *
+     * @param request the request parameters of UpdateCustomDomain  UpdateCustomDomainRequest
+     * @return UpdateCustomDomainResponse
      */
     @Override
     public CompletableFuture<UpdateCustomDomainResponse> updateCustomDomain(UpdateCustomDomainRequest request) {
@@ -969,8 +1014,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 更新函数。
-      *
+     * @param request the request parameters of UpdateFunction  UpdateFunctionRequest
+     * @return UpdateFunctionResponse
      */
     @Override
     public CompletableFuture<UpdateFunctionResponse> updateFunction(UpdateFunctionRequest request) {
@@ -987,8 +1032,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 更新函数触发器。
-      *
+     * @param request the request parameters of UpdateTrigger  UpdateTriggerRequest
+     * @return UpdateTriggerResponse
      */
     @Override
     public CompletableFuture<UpdateTriggerResponse> updateTrigger(UpdateTriggerRequest request) {

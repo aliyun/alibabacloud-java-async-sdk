@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetIntegrationStateResponseBody} extends {@link TeaModel}
  *
  * <p>GetIntegrationStateResponseBody</p>
  */
 public class GetIntegrationStateResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("State")
+    @com.aliyun.core.annotation.NameInMap("State")
     private Boolean state;
 
     private GetIntegrationStateResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class GetIntegrationStateResponseBody extends TeaModel {
         private Boolean state; 
 
         /**
-         * 状态码。200为成功，其他状态码为异常。
+         * <p>Status code. 200 means success, other status codes are exceptions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +90,10 @@ public class GetIntegrationStateResponseBody extends TeaModel {
         }
 
         /**
-         * 返回结果的提示信息。
+         * <p>The prompt information of the returned result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +101,10 @@ public class GetIntegrationStateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A9C645C-C83F-4C9D-8CCB-29BEC9E1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +112,14 @@ public class GetIntegrationStateResponseBody extends TeaModel {
         }
 
         /**
-         * State.
+         * <p>The integration state of Prometheus dashboards and collection rules. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The Prometheus dashboards and collection rules that monitor the software are integrated.</li>
+         * <li><code>false</code>: The Prometheus dashboards and collection rules that monitor the software are not integrated.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder state(Boolean state) {
             this.state = state;

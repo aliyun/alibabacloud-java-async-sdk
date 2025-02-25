@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPoliciesForRoleRequest} extends {@link RequestModel}
  *
  * <p>ListPoliciesForRoleRequest</p>
  */
 public class ListPoliciesForRoleRequest extends Request {
-    @Query
-    @NameInMap("RoleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleName")
     private String roleName;
 
     private ListPoliciesForRoleRequest(Builder builder) {
@@ -48,13 +53,16 @@ public class ListPoliciesForRoleRequest extends Request {
             super();
         } 
 
-        private Builder(ListPoliciesForRoleRequest response) {
-            super(response);
-            this.roleName = response.roleName;
+        private Builder(ListPoliciesForRoleRequest request) {
+            super(request);
+            this.roleName = request.roleName;
         } 
 
         /**
-         * RoleName.
+         * <p>The name of the RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AdminRole</p>
          */
         public Builder roleName(String roleName) {
             this.putQueryParameter("RoleName", roleName);

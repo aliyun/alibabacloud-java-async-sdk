@@ -1,56 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetCenInterRegionBandwidthLimitRequest} extends {@link RequestModel}
  *
  * <p>SetCenInterRegionBandwidthLimitRequest</p>
  */
 public class SetCenInterRegionBandwidthLimitRequest extends Request {
-    @Query
-    @NameInMap("BandwidthLimit")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BandwidthLimit")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long bandwidthLimit;
 
-    @Query
-    @NameInMap("CenId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BandwidthType")
+    private String bandwidthType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CenId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cenId;
 
-    @Query
-    @NameInMap("LocalRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LocalRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String localRegionId;
 
-    @Query
-    @NameInMap("OppositeRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OppositeRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String oppositeRegionId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private SetCenInterRegionBandwidthLimitRequest(Builder builder) {
         super(builder);
         this.bandwidthLimit = builder.bandwidthLimit;
+        this.bandwidthType = builder.bandwidthType;
         this.cenId = builder.cenId;
         this.localRegionId = builder.localRegionId;
         this.oppositeRegionId = builder.oppositeRegionId;
@@ -78,6 +88,13 @@ public class SetCenInterRegionBandwidthLimitRequest extends Request {
      */
     public Long getBandwidthLimit() {
         return this.bandwidthLimit;
+    }
+
+    /**
+     * @return bandwidthType
+     */
+    public String getBandwidthType() {
+        return this.bandwidthType;
     }
 
     /**
@@ -131,6 +148,7 @@ public class SetCenInterRegionBandwidthLimitRequest extends Request {
 
     public static final class Builder extends Request.Builder<SetCenInterRegionBandwidthLimitRequest, Builder> {
         private Long bandwidthLimit; 
+        private String bandwidthType; 
         private String cenId; 
         private String localRegionId; 
         private String oppositeRegionId; 
@@ -146,6 +164,7 @@ public class SetCenInterRegionBandwidthLimitRequest extends Request {
         private Builder(SetCenInterRegionBandwidthLimitRequest request) {
             super(request);
             this.bandwidthLimit = request.bandwidthLimit;
+            this.bandwidthType = request.bandwidthType;
             this.cenId = request.cenId;
             this.localRegionId = request.localRegionId;
             this.oppositeRegionId = request.oppositeRegionId;
@@ -156,7 +175,11 @@ public class SetCenInterRegionBandwidthLimitRequest extends Request {
         } 
 
         /**
-         * BandwidthLimit.
+         * <p>The maximum bandwidth value of the inter-region connection. Unit: Mbit/s.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder bandwidthLimit(Long bandwidthLimit) {
             this.putQueryParameter("BandwidthLimit", bandwidthLimit);
@@ -165,7 +188,24 @@ public class SetCenInterRegionBandwidthLimitRequest extends Request {
         }
 
         /**
-         * CenId.
+         * <p>The bandwidth allocation method. Valid values:</p>
+         * <p><strong>BandwidthPackage</strong>: allocates bandwidth from a bandwidth plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BandwidthPackage</p>
+         */
+        public Builder bandwidthType(String bandwidthType) {
+            this.putQueryParameter("BandwidthType", bandwidthType);
+            this.bandwidthType = bandwidthType;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the CEN instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-7qthudw0ll6jmx****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -174,7 +214,12 @@ public class SetCenInterRegionBandwidthLimitRequest extends Request {
         }
 
         /**
-         * LocalRegionId.
+         * <p>The ID of the local region.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query regions where you can attach network instances to a CEN instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder localRegionId(String localRegionId) {
             this.putQueryParameter("LocalRegionId", localRegionId);
@@ -183,7 +228,11 @@ public class SetCenInterRegionBandwidthLimitRequest extends Request {
         }
 
         /**
-         * OppositeRegionId.
+         * <p>The ID of the peer region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>us-west-1</p>
          */
         public Builder oppositeRegionId(String oppositeRegionId) {
             this.putQueryParameter("OppositeRegionId", oppositeRegionId);

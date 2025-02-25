@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSynDbTablesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSynDbTablesResponseBody</p>
  */
 public class DescribeSynDbTablesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Tables")
-    private java.util.List < String > tables;
+    @com.aliyun.core.annotation.NameInMap("Tables")
+    private java.util.List<String> tables;
 
     private DescribeSynDbTablesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class DescribeSynDbTablesResponseBody extends TeaModel {
     /**
      * @return tables
      */
-    public java.util.List < String > getTables() {
+    public java.util.List<String> getTables() {
         return this.tables;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < String > tables; 
+        private java.util.List<String> tables; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>851D11EA-681C-5B38-A065-C3F90BBD49DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class DescribeSynDbTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Tables.
+         * <p>The queried tables.</p>
          */
-        public Builder tables(java.util.List < String > tables) {
+        public Builder tables(java.util.List<String> tables) {
             this.tables = tables;
             return this;
         }

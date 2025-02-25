@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSystemParametersResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSystemParametersResponseBody</p>
  */
 public class DescribeSystemParametersResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SystemParams")
+    @com.aliyun.core.annotation.NameInMap("SystemParams")
     private SystemParams systemParams;
 
     private DescribeSystemParametersResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
         private SystemParams systemParams; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0CCDF65E-6050-412D-AD68-FA3D9196836C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
         }
 
         /**
-         * The returned information about system parameters. It is an array that consists of SystemParam data.
+         * <p>The returned information about system parameters. It is an array that consists of SystemParam data.</p>
          */
         public Builder systemParams(SystemParams systemParams) {
             this.systemParams = systemParams;
@@ -71,17 +79,23 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSystemParametersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSystemParametersResponseBody</p>
+     */
     public static class SystemParamItem extends TeaModel {
-        @NameInMap("DemoValue")
+        @com.aliyun.core.annotation.NameInMap("DemoValue")
         private String demoValue;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ParamName")
+        @com.aliyun.core.annotation.NameInMap("ParamName")
         private String paramName;
 
-        @NameInMap("ParamType")
+        @com.aliyun.core.annotation.NameInMap("ParamType")
         private String paramType;
 
         private SystemParamItem(Builder builder) {
@@ -134,7 +148,10 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
             private String paramType; 
 
             /**
-             * Examples
+             * <p>Examples</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.1</p>
              */
             public Builder demoValue(String demoValue) {
                 this.demoValue = demoValue;
@@ -142,7 +159,10 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The description of a parameter.
+             * <p>The description of a parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Client IP Address</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -150,7 +170,10 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CaClientIp</p>
              */
             public Builder paramName(String paramName) {
                 this.paramName = paramName;
@@ -158,7 +181,10 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the parameter.
+             * <p>The type of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>string</p>
              */
             public Builder paramType(String paramType) {
                 this.paramType = paramType;
@@ -172,9 +198,15 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSystemParametersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSystemParametersResponseBody</p>
+     */
     public static class SystemParams extends TeaModel {
-        @NameInMap("SystemParamItem")
-        private java.util.List < SystemParamItem> systemParamItem;
+        @com.aliyun.core.annotation.NameInMap("SystemParamItem")
+        private java.util.List<SystemParamItem> systemParamItem;
 
         private SystemParams(Builder builder) {
             this.systemParamItem = builder.systemParamItem;
@@ -191,17 +223,17 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
         /**
          * @return systemParamItem
          */
-        public java.util.List < SystemParamItem> getSystemParamItem() {
+        public java.util.List<SystemParamItem> getSystemParamItem() {
             return this.systemParamItem;
         }
 
         public static final class Builder {
-            private java.util.List < SystemParamItem> systemParamItem; 
+            private java.util.List<SystemParamItem> systemParamItem; 
 
             /**
              * SystemParamItem.
              */
-            public Builder systemParamItem(java.util.List < SystemParamItem> systemParamItem) {
+            public Builder systemParamItem(java.util.List<SystemParamItem> systemParamItem) {
                 this.systemParamItem = systemParamItem;
                 return this;
             }

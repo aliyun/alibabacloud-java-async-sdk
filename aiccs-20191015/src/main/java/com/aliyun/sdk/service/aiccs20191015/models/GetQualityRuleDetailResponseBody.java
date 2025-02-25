@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQualityRuleDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetQualityRuleDetailResponseBody</p>
  */
 public class GetQualityRuleDetailResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetQualityRuleDetailResponseBody(Builder builder) {
@@ -131,23 +136,29 @@ public class GetQualityRuleDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetQualityRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetQualityRuleDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("KeyWords")
-        private java.util.List < String > keyWords;
+        @com.aliyun.core.annotation.NameInMap("KeyWords")
+        private java.util.List<String> keyWords;
 
-        @NameInMap("MatchType")
+        @com.aliyun.core.annotation.NameInMap("MatchType")
         private Integer matchType;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RuleCreateTime")
+        @com.aliyun.core.annotation.NameInMap("RuleCreateTime")
         private String ruleCreateTime;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
-        @NameInMap("RuleTag")
+        @com.aliyun.core.annotation.NameInMap("RuleTag")
         private Integer ruleTag;
 
         private Data(Builder builder) {
@@ -170,7 +181,7 @@ public class GetQualityRuleDetailResponseBody extends TeaModel {
         /**
          * @return keyWords
          */
-        public java.util.List < String > getKeyWords() {
+        public java.util.List<String> getKeyWords() {
             return this.keyWords;
         }
 
@@ -210,7 +221,7 @@ public class GetQualityRuleDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > keyWords; 
+            private java.util.List<String> keyWords; 
             private Integer matchType; 
             private String name; 
             private String ruleCreateTime; 
@@ -220,7 +231,7 @@ public class GetQualityRuleDetailResponseBody extends TeaModel {
             /**
              * KeyWords.
              */
-            public Builder keyWords(java.util.List < String > keyWords) {
+            public Builder keyWords(java.util.List<String> keyWords) {
                 this.keyWords = keyWords;
                 return this;
             }

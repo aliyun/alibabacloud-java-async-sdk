@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWarningMachinesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWarningMachinesResponseBody</p>
  */
 public class DescribeWarningMachinesResponseBody extends TeaModel {
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("WarningMachines")
-    private java.util.List < WarningMachines> warningMachines;
+    @com.aliyun.core.annotation.NameInMap("WarningMachines")
+    private java.util.List<WarningMachines> warningMachines;
 
     private DescribeWarningMachinesResponseBody(Builder builder) {
         this.count = builder.count;
@@ -85,7 +90,7 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
     /**
      * @return warningMachines
      */
-    public java.util.List < WarningMachines> getWarningMachines() {
+    public java.util.List<WarningMachines> getWarningMachines() {
         return this.warningMachines;
     }
 
@@ -95,10 +100,13 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < WarningMachines> warningMachines; 
+        private java.util.List<WarningMachines> warningMachines; 
 
         /**
-         * The number of entries returned on the current page.
+         * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -106,7 +114,10 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -114,7 +125,10 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page. Default value: **10**.
+         * <p>The number of entries returned per page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +136,10 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6E4CBE87-E887-5AF1-86D2-78EB4AA3E771</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +147,10 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -138,9 +158,9 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the servers.
+         * <p>The information about the servers.</p>
          */
-        public Builder warningMachines(java.util.List < WarningMachines> warningMachines) {
+        public Builder warningMachines(java.util.List<WarningMachines> warningMachines) {
             this.warningMachines = warningMachines;
             return this;
         }
@@ -151,53 +171,59 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeWarningMachinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWarningMachinesResponseBody</p>
+     */
     public static class WarningMachines extends TeaModel {
-        @NameInMap("AuthVersion")
+        @com.aliyun.core.annotation.NameInMap("AuthVersion")
         private Integer authVersion;
 
-        @NameInMap("Bind")
+        @com.aliyun.core.annotation.NameInMap("Bind")
         private Boolean bind;
 
-        @NameInMap("ContainerId")
+        @com.aliyun.core.annotation.NameInMap("ContainerId")
         private String containerId;
 
-        @NameInMap("ContainerName")
+        @com.aliyun.core.annotation.NameInMap("ContainerName")
         private String containerName;
 
-        @NameInMap("HighWarningCount")
+        @com.aliyun.core.annotation.NameInMap("HighWarningCount")
         private Integer highWarningCount;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IntranetIp")
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("LowWarningCount")
+        @com.aliyun.core.annotation.NameInMap("LowWarningCount")
         private Integer lowWarningCount;
 
-        @NameInMap("MediumWarningCount")
+        @com.aliyun.core.annotation.NameInMap("MediumWarningCount")
         private Integer mediumWarningCount;
 
-        @NameInMap("PassCount")
+        @com.aliyun.core.annotation.NameInMap("PassCount")
         private Integer passCount;
 
-        @NameInMap("PortOpen")
+        @com.aliyun.core.annotation.NameInMap("PortOpen")
         private Boolean portOpen;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private WarningMachines(Builder builder) {
@@ -358,15 +384,18 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The edition of Security Center that is authorized to protect the asset. Valid values:
-             * <p>
+             * <p>The edition of Security Center that is authorized to protect the asset. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Basic edition</li>
+             * <li><strong>6</strong>: Anti-virus edition</li>
+             * <li><strong>5</strong>: Advanced edition</li>
+             * <li><strong>3</strong>: Enterprise edition</li>
+             * <li><strong>7</strong>: Ultimate edition</li>
+             * <li><strong>10</strong>: Value-added Plan edition</li>
+             * </ul>
              * 
-             * *   **1**: Basic edition
-             * *   **6**: Anti-virus edition
-             * *   **5**: Advanced edition
-             * *   **3**: Enterprise edition
-             * *   **7**: Ultimate edition
-             * *   **10**: Value-added Plan edition
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder authVersion(Integer authVersion) {
                 this.authVersion = authVersion;
@@ -374,11 +403,14 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Security Center is authorized to protect the asset. Valid values:
-             * <p>
+             * <p>Indicates whether Security Center is authorized to protect the asset. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder bind(Boolean bind) {
                 this.bind = bind;
@@ -386,7 +418,10 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The container ID.
+             * <p>The container ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>48a6d9a92435a13ad573372c3f3c63b7e04d106458141df9f92155709d******</p>
              */
             public Builder containerId(String containerId) {
                 this.containerId = containerId;
@@ -394,7 +429,10 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the container.
+             * <p>The name of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>redis</p>
              */
             public Builder containerName(String containerName) {
                 this.containerName = containerName;
@@ -402,7 +440,10 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of **high-risk** items on the server.
+             * <p>The number of <strong>high-risk</strong> items on the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder highWarningCount(Integer highWarningCount) {
                 this.highWarningCount = highWarningCount;
@@ -410,7 +451,10 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The server ID.
+             * <p>The server ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-m5ee8b9nr3h30mhb****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -418,7 +462,10 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
+             * <p>The name of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oracle-win-00****</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -426,7 +473,10 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the server.
+             * <p>The public IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -434,7 +484,10 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the server.
+             * <p>The private IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -442,7 +495,10 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of **low-risk** items on the server.
+             * <p>The number of <strong>low-risk</strong> items on the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder lowWarningCount(Integer lowWarningCount) {
                 this.lowWarningCount = lowWarningCount;
@@ -450,7 +506,10 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of **medium-risk** items on the server.
+             * <p>The number of <strong>medium-risk</strong> items on the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder mediumWarningCount(Integer mediumWarningCount) {
                 this.mediumWarningCount = mediumWarningCount;
@@ -458,7 +517,10 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the check items that passed the baseline check on the server.
+             * <p>The number of the check items that passed the baseline check on the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder passCount(Integer passCount) {
                 this.passCount = passCount;
@@ -466,11 +528,14 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a port on the server is accessible over the Internet. Valid values:
-             * <p>
+             * <p>Indicates whether a port on the server is accessible over the Internet. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder portOpen(Boolean portOpen) {
                 this.portOpen = portOpen;
@@ -478,7 +543,10 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the server is deployed.
+             * <p>The ID of the region in which the server is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-qingdao</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -486,11 +554,14 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The verification status of the risk item after the risk item is fixed. Valid values:
-             * <p>
+             * <p>The verification status of the risk item after the risk item is fixed. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: complete</li>
+             * <li><strong>2</strong>: verifying</li>
+             * </ul>
              * 
-             * *   **1**: complete
-             * *   **2**: verifying
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -498,7 +569,10 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server on which the baseline check is performed.
+             * <p>The UUID of the server on which the baseline check is performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9888955c-0076-49da-bd9c-34f5492b****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

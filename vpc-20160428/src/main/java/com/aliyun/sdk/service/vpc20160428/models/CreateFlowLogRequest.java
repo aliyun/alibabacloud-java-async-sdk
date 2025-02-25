@@ -1,85 +1,96 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFlowLogRequest} extends {@link RequestModel}
  *
  * <p>CreateFlowLogRequest</p>
  */
 public class CreateFlowLogRequest extends Request {
-    @Query
-    @NameInMap("AggregationInterval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AggregationInterval")
     private Integer aggregationInterval;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("FlowLogName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FlowLogName")
     private String flowLogName;
 
-    @Query
-    @NameInMap("LogStoreName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpVersion")
+    private String ipVersion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogStoreName")
     private String logStoreName;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ProjectName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectName")
     private String projectName;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Query
-    @NameInMap("TrafficPath")
-    private java.util.List < String > trafficPath;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficAnalyzerId")
+    private String trafficAnalyzerId;
 
-    @Query
-    @NameInMap("TrafficType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficPath")
+    private java.util.List<String> trafficPath;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String trafficType;
 
     private CreateFlowLogRequest(Builder builder) {
@@ -87,6 +98,7 @@ public class CreateFlowLogRequest extends Request {
         this.aggregationInterval = builder.aggregationInterval;
         this.description = builder.description;
         this.flowLogName = builder.flowLogName;
+        this.ipVersion = builder.ipVersion;
         this.logStoreName = builder.logStoreName;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -98,6 +110,7 @@ public class CreateFlowLogRequest extends Request {
         this.resourceOwnerId = builder.resourceOwnerId;
         this.resourceType = builder.resourceType;
         this.tag = builder.tag;
+        this.trafficAnalyzerId = builder.trafficAnalyzerId;
         this.trafficPath = builder.trafficPath;
         this.trafficType = builder.trafficType;
     }
@@ -134,6 +147,13 @@ public class CreateFlowLogRequest extends Request {
      */
     public String getFlowLogName() {
         return this.flowLogName;
+    }
+
+    /**
+     * @return ipVersion
+     */
+    public String getIpVersion() {
+        return this.ipVersion;
     }
 
     /**
@@ -209,14 +229,21 @@ public class CreateFlowLogRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
+    }
+
+    /**
+     * @return trafficAnalyzerId
+     */
+    public String getTrafficAnalyzerId() {
+        return this.trafficAnalyzerId;
     }
 
     /**
      * @return trafficPath
      */
-    public java.util.List < String > getTrafficPath() {
+    public java.util.List<String> getTrafficPath() {
         return this.trafficPath;
     }
 
@@ -231,6 +258,7 @@ public class CreateFlowLogRequest extends Request {
         private Integer aggregationInterval; 
         private String description; 
         private String flowLogName; 
+        private String ipVersion; 
         private String logStoreName; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -241,8 +269,9 @@ public class CreateFlowLogRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String resourceType; 
-        private java.util.List < Tag> tag; 
-        private java.util.List < String > trafficPath; 
+        private java.util.List<Tag> tag; 
+        private String trafficAnalyzerId; 
+        private java.util.List<String> trafficPath; 
         private String trafficType; 
 
         private Builder() {
@@ -254,6 +283,7 @@ public class CreateFlowLogRequest extends Request {
             this.aggregationInterval = request.aggregationInterval;
             this.description = request.description;
             this.flowLogName = request.flowLogName;
+            this.ipVersion = request.ipVersion;
             this.logStoreName = request.logStoreName;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -265,12 +295,16 @@ public class CreateFlowLogRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.resourceType = request.resourceType;
             this.tag = request.tag;
+            this.trafficAnalyzerId = request.trafficAnalyzerId;
             this.trafficPath = request.trafficPath;
             this.trafficType = request.trafficType;
         } 
 
         /**
-         * The sampling interval of the flow log. Unit: seconds. Valid values: **1**, **5**, and **10** (default).
+         * <p>The sampling interval of the flow log. Unit: seconds. Valid values: <strong>1</strong>, <strong>5</strong>, and <strong>10</strong> (default).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder aggregationInterval(Integer aggregationInterval) {
             this.putQueryParameter("AggregationInterval", aggregationInterval);
@@ -279,10 +313,11 @@ public class CreateFlowLogRequest extends Request {
         }
 
         /**
-         * The description of the flow log.
-         * <p>
+         * <p>The description of the flow log.</p>
+         * <p>The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>This is my Flowlog.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -291,10 +326,11 @@ public class CreateFlowLogRequest extends Request {
         }
 
         /**
-         * The name of the flow log.
-         * <p>
+         * <p>The name of the flow log.</p>
+         * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>myFlowlog</p>
          */
         public Builder flowLogName(String flowLogName) {
             this.putQueryParameter("FlowLogName", flowLogName);
@@ -303,12 +339,24 @@ public class CreateFlowLogRequest extends Request {
         }
 
         /**
-         * The name of the Logstore that stores the captured traffic data.
-         * <p>
+         * IpVersion.
+         */
+        public Builder ipVersion(String ipVersion) {
+            this.putQueryParameter("IpVersion", ipVersion);
+            this.ipVersion = ipVersion;
+            return this;
+        }
+
+        /**
+         * <p>The name of the Logstore that stores the captured traffic data.</p>
+         * <ul>
+         * <li>The name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</li>
+         * <li>The name must start and end with a lowercase letter or a digit.</li>
+         * <li>The name must be 3 to 63 characters in length.</li>
+         * </ul>
          * 
-         * *   The name can contain only lowercase letters, digits, hyphens (-), and underscores (\_).
-         * *   The name must start and end with a lowercase letter or a digit.
-         * *   The name must be 3 to 63 characters in length.
+         * <strong>example:</strong>
+         * <p>FlowLogStore</p>
          */
         public Builder logStoreName(String logStoreName) {
             this.putQueryParameter("LogStoreName", logStoreName);
@@ -335,12 +383,15 @@ public class CreateFlowLogRequest extends Request {
         }
 
         /**
-         * The name of the project that stores the captured traffic data.
-         * <p>
+         * <p>The name of the project that stores the captured traffic data.</p>
+         * <ul>
+         * <li>The name can contain only lowercase letters, digits, and hyphens (-).</li>
+         * <li>The name must start and end with a lowercase letter or a digit.</li>
+         * <li>The name must be 3 to 63 characters in length.</li>
+         * </ul>
          * 
-         * *   The name can contain only lowercase letters, digits, and hyphens (-).
-         * *   The name must start and end with a lowercase letter or a digit.
-         * *   The name must be 3 to 63 characters in length.
+         * <strong>example:</strong>
+         * <p>FlowLogProject</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -349,7 +400,11 @@ public class CreateFlowLogRequest extends Request {
         }
 
         /**
-         * The ID of the region where you want to create the flow log. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <p>The ID of the region where you want to create the flow log. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -358,7 +413,10 @@ public class CreateFlowLogRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazdjdhd****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -367,7 +425,11 @@ public class CreateFlowLogRequest extends Request {
         }
 
         /**
-         * The ID of the resource whose traffic you want to capture.
+         * <p>The ID of the resource whose traffic you want to capture.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-askldfas****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -394,12 +456,16 @@ public class CreateFlowLogRequest extends Request {
         }
 
         /**
-         * The type of the resource whose traffic you want to capture. Valid values:
-         * <p>
+         * <p>The type of the resource whose traffic you want to capture. Valid values:</p>
+         * <ul>
+         * <li><strong>NetworkInterface</strong>: elastic network interface (ENI)</li>
+         * <li><strong>VSwitch</strong>: all ENIs in a vSwitch</li>
+         * <li><strong>VPC</strong>: all ENIs in a virtual private cloud (VPC)</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **NetworkInterface**: elastic network interface (ENI)
-         * *   **VSwitch**: all ENIs in a vSwitch
-         * *   **VPC**: all ENIs in a virtual private cloud (VPC)
+         * <strong>example:</strong>
+         * <p>NetworkInterface</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -408,30 +474,47 @@ public class CreateFlowLogRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tag of the resource.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * TrafficPath.
+         * TrafficAnalyzerId.
          */
-        public Builder trafficPath(java.util.List < String > trafficPath) {
+        public Builder trafficAnalyzerId(String trafficAnalyzerId) {
+            this.putQueryParameter("TrafficAnalyzerId", trafficAnalyzerId);
+            this.trafficAnalyzerId = trafficAnalyzerId;
+            return this;
+        }
+
+        /**
+         * <p>The scope of the traffic that you want to capture. Valid values:</p>
+         * <ul>
+         * <li><strong>all</strong>: all traffic.</li>
+         * <li><strong>internetGateway</strong>: Internet traffic.</li>
+         * </ul>
+         */
+        public Builder trafficPath(java.util.List<String> trafficPath) {
             this.putQueryParameter("TrafficPath", trafficPath);
             this.trafficPath = trafficPath;
             return this;
         }
 
         /**
-         * The type of traffic that you want to capture. Valid values:
-         * <p>
+         * <p>The type of traffic that you want to capture. Valid values:</p>
+         * <ul>
+         * <li><strong>All</strong>: all traffic</li>
+         * <li><strong>Allow</strong>: traffic that is allowed</li>
+         * <li><strong>Drop</strong>: traffic that is rejected</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **All**: all traffic
-         * *   **Allow**: traffic that is allowed
-         * *   **Drop**: traffic that is rejected
+         * <strong>example:</strong>
+         * <p>All</p>
          */
         public Builder trafficType(String trafficType) {
             this.putQueryParameter("TrafficType", trafficType);
@@ -446,11 +529,17 @@ public class CreateFlowLogRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateFlowLogRequest} extends {@link TeaModel}
+     *
+     * <p>CreateFlowLogRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -485,7 +574,11 @@ public class CreateFlowLogRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be at most 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -493,7 +586,11 @@ public class CreateFlowLogRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryOrdersResponseBody} extends {@link TeaModel}
  *
  * <p>QueryOrdersResponseBody</p>
  */
 public class QueryOrdersResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryOrdersResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class QueryOrdersResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class QueryOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,10 @@ public class QueryOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class QueryOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61293E7A-3406-4447-8620-EC88B0AA66AD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class QueryOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,56 +148,62 @@ public class QueryOrdersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryOrdersResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryOrdersResponseBody</p>
+     */
     public static class Order extends TeaModel {
-        @NameInMap("AfterTaxAmount")
+        @com.aliyun.core.annotation.NameInMap("AfterTaxAmount")
         private String afterTaxAmount;
 
-        @NameInMap("CommodityCode")
+        @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Currency")
+        @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
-        @NameInMap("OrderId")
+        @com.aliyun.core.annotation.NameInMap("OrderId")
         private String orderId;
 
-        @NameInMap("OrderType")
+        @com.aliyun.core.annotation.NameInMap("OrderType")
         private String orderType;
 
-        @NameInMap("PaymentCurrency")
+        @com.aliyun.core.annotation.NameInMap("PaymentCurrency")
         private String paymentCurrency;
 
-        @NameInMap("PaymentStatus")
+        @com.aliyun.core.annotation.NameInMap("PaymentStatus")
         private String paymentStatus;
 
-        @NameInMap("PaymentTime")
+        @com.aliyun.core.annotation.NameInMap("PaymentTime")
         private String paymentTime;
 
-        @NameInMap("PretaxAmount")
+        @com.aliyun.core.annotation.NameInMap("PretaxAmount")
         private String pretaxAmount;
 
-        @NameInMap("PretaxAmountLocal")
+        @com.aliyun.core.annotation.NameInMap("PretaxAmountLocal")
         private String pretaxAmountLocal;
 
-        @NameInMap("PretaxGrossAmount")
+        @com.aliyun.core.annotation.NameInMap("PretaxGrossAmount")
         private String pretaxGrossAmount;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("ProductType")
+        @com.aliyun.core.annotation.NameInMap("ProductType")
         private String productType;
 
-        @NameInMap("RelatedOrderId")
+        @com.aliyun.core.annotation.NameInMap("RelatedOrderId")
         private String relatedOrderId;
 
-        @NameInMap("SubscriptionType")
+        @com.aliyun.core.annotation.NameInMap("SubscriptionType")
         private String subscriptionType;
 
-        @NameInMap("Tax")
+        @com.aliyun.core.annotation.NameInMap("Tax")
         private String tax;
 
         private Order(Builder builder) {
@@ -350,7 +373,10 @@ public class QueryOrdersResponseBody extends TeaModel {
             private String tax; 
 
             /**
-             * The aftertax amount of the order.
+             * <p>The aftertax amount of the order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>66</p>
              */
             public Builder afterTaxAmount(String afterTaxAmount) {
                 this.afterTaxAmount = afterTaxAmount;
@@ -358,7 +384,10 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The service code.
+             * <p>The service code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -366,7 +395,10 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the order was created.
+             * <p>The time when the order was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-06-08T09:41:30Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -374,7 +406,10 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The currency.
+             * <p>The currency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -382,7 +417,10 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the order.
+             * <p>The ID of the order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34532532</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -390,13 +428,16 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the order. Valid values:
-             * <p>
+             * <p>The type of the order. Valid values:</p>
+             * <ul>
+             * <li>New: purchases an instance.</li>
+             * <li>Renew: renews an instance.</li>
+             * <li>Upgrade: upgrades the configurations of an instance.</li>
+             * <li>Refund: applies for a refund.</li>
+             * </ul>
              * 
-             * *   New: purchases an instance.
-             * *   Renew: renews an instance.
-             * *   Upgrade: upgrades the configurations of an instance.
-             * *   Refund: applies for a refund.
+             * <strong>example:</strong>
+             * <p>New</p>
              */
             public Builder orderType(String orderType) {
                 this.orderType = orderType;
@@ -404,7 +445,10 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The currency of payment.
+             * <p>The currency of payment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder paymentCurrency(String paymentCurrency) {
                 this.paymentCurrency = paymentCurrency;
@@ -412,14 +456,18 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The status of payment. Valid values for a non-refund order:
-             * <p>
+             * <p>The status of payment. Valid values for a non-refund order:</p>
+             * <ul>
+             * <li>Unpaid: The order is not paid.</li>
+             * <li>Paid: The order is paid.</li>
+             * <li>Cancelled: The order is canceled.</li>
+             * </ul>
+             * <blockquote>
+             * <p>: The value is NULL for a refund order.</p>
+             * </blockquote>
              * 
-             * *   Unpaid: The order is not paid.
-             * *   Paid: The order is paid.
-             * *   Cancelled: The order is canceled.
-             * 
-             * > : The value is NULL for a refund order.
+             * <strong>example:</strong>
+             * <p>Paid</p>
              */
             public Builder paymentStatus(String paymentStatus) {
                 this.paymentStatus = paymentStatus;
@@ -427,7 +475,10 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The time of payment.
+             * <p>The time of payment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-06-08T09:41:30Z</p>
              */
             public Builder paymentTime(String paymentTime) {
                 this.paymentTime = paymentTime;
@@ -435,7 +486,10 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The pretax amount of the order.
+             * <p>The pretax amount of the order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder pretaxAmount(String pretaxAmount) {
                 this.pretaxAmount = pretaxAmount;
@@ -443,7 +497,10 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The pretax amount of the order in local currency.
+             * <p>The pretax amount of the order in local currency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder pretaxAmountLocal(String pretaxAmountLocal) {
                 this.pretaxAmountLocal = pretaxAmountLocal;
@@ -451,7 +508,10 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The pretax gross amount of the order.
+             * <p>The pretax gross amount of the order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder pretaxGrossAmount(String pretaxGrossAmount) {
                 this.pretaxGrossAmount = pretaxGrossAmount;
@@ -459,7 +519,10 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the main service.
+             * <p>The code of the main service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -467,7 +530,10 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the main service.
+             * <p>The type of the main service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder productType(String productType) {
                 this.productType = productType;
@@ -475,7 +541,10 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the associated order.
+             * <p>The ID of the associated order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>234535345345342</p>
              */
             public Builder relatedOrderId(String relatedOrderId) {
                 this.relatedOrderId = relatedOrderId;
@@ -483,11 +552,14 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method. Valid values:
-             * <p>
+             * <p>The billing method. Valid values:</p>
+             * <ul>
+             * <li>Subscription: subscription</li>
+             * <li>PayAsYouGo: pay-as-you-go</li>
+             * </ul>
              * 
-             * *   Subscription: subscription
-             * *   PayAsYouGo: pay-as-you-go
+             * <strong>example:</strong>
+             * <p>PayAsYouGo</p>
              */
             public Builder subscriptionType(String subscriptionType) {
                 this.subscriptionType = subscriptionType;
@@ -495,7 +567,10 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The tax of the order.
+             * <p>The tax of the order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder tax(String tax) {
                 this.tax = tax;
@@ -509,9 +584,15 @@ public class QueryOrdersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryOrdersResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryOrdersResponseBody</p>
+     */
     public static class OrderList extends TeaModel {
-        @NameInMap("Order")
-        private java.util.List < Order> order;
+        @com.aliyun.core.annotation.NameInMap("Order")
+        private java.util.List<Order> order;
 
         private OrderList(Builder builder) {
             this.order = builder.order;
@@ -528,17 +609,17 @@ public class QueryOrdersResponseBody extends TeaModel {
         /**
          * @return order
          */
-        public java.util.List < Order> getOrder() {
+        public java.util.List<Order> getOrder() {
             return this.order;
         }
 
         public static final class Builder {
-            private java.util.List < Order> order; 
+            private java.util.List<Order> order; 
 
             /**
              * Order.
              */
-            public Builder order(java.util.List < Order> order) {
+            public Builder order(java.util.List<Order> order) {
                 this.order = order;
                 return this;
             }
@@ -550,20 +631,26 @@ public class QueryOrdersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryOrdersResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryOrdersResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("HostName")
+        @com.aliyun.core.annotation.NameInMap("HostName")
         private String hostName;
 
-        @NameInMap("OrderList")
+        @com.aliyun.core.annotation.NameInMap("OrderList")
         private OrderList orderList;
 
-        @NameInMap("PageNum")
+        @com.aliyun.core.annotation.NameInMap("PageNum")
         private Integer pageNum;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {
@@ -625,7 +712,10 @@ public class QueryOrdersResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The hostname.
+             * <p>The hostname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -633,7 +723,7 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The orders returned.
+             * <p>The orders returned.</p>
              */
             public Builder orderList(OrderList orderList) {
                 this.orderList = orderList;
@@ -641,7 +731,10 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -649,7 +742,10 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -657,7 +753,10 @@ public class QueryOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of returned entries.
+             * <p>The total number of returned entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

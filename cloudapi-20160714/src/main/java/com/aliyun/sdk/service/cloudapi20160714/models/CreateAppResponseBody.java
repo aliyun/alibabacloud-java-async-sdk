@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAppResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAppResponseBody</p>
  */
 public class CreateAppResponseBody extends TeaModel {
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private Long appId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TagStatus")
+    @com.aliyun.core.annotation.NameInMap("TagStatus")
     private Boolean tagStatus;
 
     private CreateAppResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class CreateAppResponseBody extends TeaModel {
         private Boolean tagStatus; 
 
         /**
-         * The unique ID of the application.
+         * <p>The unique ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20112314518278</p>
          */
         public Builder appId(Long appId) {
             this.appId = appId;
@@ -70,7 +78,10 @@ public class CreateAppResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BA20890E-75C7-41BC-9C8B-73276B58F550</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +89,10 @@ public class CreateAppResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the tag exists. If the value is **true**, the tag exists. If the value is **false**, the tag does not exist.
+         * <p>Indicates whether the tag exists. If the value is <strong>true</strong>, the tag exists. If the value is <strong>false</strong>, the tag does not exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder tagStatus(Boolean tagStatus) {
             this.tagStatus = tagStatus;

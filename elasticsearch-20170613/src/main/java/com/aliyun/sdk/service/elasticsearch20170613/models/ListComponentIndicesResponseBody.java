@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListComponentIndicesResponseBody} extends {@link TeaModel}
  *
  * <p>ListComponentIndicesResponseBody</p>
  */
 public class ListComponentIndicesResponseBody extends TeaModel {
-    @NameInMap("Headers")
+    @com.aliyun.core.annotation.NameInMap("Headers")
     private Headers headers;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private ListComponentIndicesResponseBody(Builder builder) {
@@ -91,8 +91,14 @@ public class ListComponentIndicesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListComponentIndicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListComponentIndicesResponseBody</p>
+     */
     public static class Headers extends TeaModel {
-        @NameInMap("X-Total-Count")
+        @com.aliyun.core.annotation.NameInMap("X-Total-Count")
         private Long xTotalCount;
 
         private Headers(Builder builder) {
@@ -132,8 +138,14 @@ public class ListComponentIndicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListComponentIndicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListComponentIndicesResponseBody</p>
+     */
     public static class Lifecycle extends TeaModel {
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private Lifecycle(Builder builder) {
@@ -173,11 +185,17 @@ public class ListComponentIndicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListComponentIndicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListComponentIndicesResponseBody</p>
+     */
     public static class Index extends TeaModel {
-        @NameInMap("codec")
+        @com.aliyun.core.annotation.NameInMap("codec")
         private String codec;
 
-        @NameInMap("lifecycle")
+        @com.aliyun.core.annotation.NameInMap("lifecycle")
         private Lifecycle lifecycle;
 
         private Index(Builder builder) {
@@ -234,8 +252,14 @@ public class ListComponentIndicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListComponentIndicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListComponentIndicesResponseBody</p>
+     */
     public static class Settings extends TeaModel {
-        @NameInMap("index")
+        @com.aliyun.core.annotation.NameInMap("index")
         private Index index;
 
         private Settings(Builder builder) {
@@ -275,8 +299,14 @@ public class ListComponentIndicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListComponentIndicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListComponentIndicesResponseBody</p>
+     */
     public static class Template extends TeaModel {
-        @NameInMap("settings")
+        @com.aliyun.core.annotation.NameInMap("settings")
         private Settings settings;
 
         private Template(Builder builder) {
@@ -316,14 +346,20 @@ public class ListComponentIndicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListComponentIndicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListComponentIndicesResponseBody</p>
+     */
     public static class Content extends TeaModel {
-        @NameInMap("_meta")
+        @com.aliyun.core.annotation.NameInMap("_meta")
         private java.util.Map < String, ? > meta;
 
-        @NameInMap("template")
+        @com.aliyun.core.annotation.NameInMap("template")
         private Template template;
 
-        @NameInMap("version")
+        @com.aliyun.core.annotation.NameInMap("version")
         private Long version;
 
         private Content(Builder builder) {
@@ -397,14 +433,20 @@ public class ListComponentIndicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListComponentIndicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListComponentIndicesResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("composed")
+        @com.aliyun.core.annotation.NameInMap("composed")
         private java.util.List < String > composed;
 
-        @NameInMap("content")
+        @com.aliyun.core.annotation.NameInMap("content")
         private Content content;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private Result(Builder builder) {

@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSoarRecordInOutputRequest} extends {@link RequestModel}
  *
  * <p>DescribeSoarRecordInOutputRequest</p>
  */
 public class DescribeSoarRecordInOutputRequest extends Request {
-    @Query
-    @NameInMap("ActionUuid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ActionUuid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String actionUuid;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
     private DescribeSoarRecordInOutputRequest(Builder builder) {
@@ -69,7 +69,14 @@ public class DescribeSoarRecordInOutputRequest extends Request {
         } 
 
         /**
-         * ActionUuid.
+         * <p>The UUID of the component action.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeSoarTaskAndActions~~">DescribeSoarTaskAndActions</a> operation to query the UUIDs of component actions.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0531ff66-dd05-4f24-84bf-xxxxxxxx</p>
          */
         public Builder actionUuid(String actionUuid) {
             this.putQueryParameter("ActionUuid", actionUuid);
@@ -78,7 +85,14 @@ public class DescribeSoarRecordInOutputRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the content within the request and the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

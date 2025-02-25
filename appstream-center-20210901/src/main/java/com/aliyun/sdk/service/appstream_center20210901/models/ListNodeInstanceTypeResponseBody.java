@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNodeInstanceTypeResponseBody} extends {@link TeaModel}
  *
  * <p>ListNodeInstanceTypeResponseBody</p>
  */
 public class ListNodeInstanceTypeResponseBody extends TeaModel {
-    @NameInMap("NodeInstanceTypeModels")
-    private java.util.List < NodeInstanceTypeModels> nodeInstanceTypeModels;
+    @com.aliyun.core.annotation.NameInMap("NodeInstanceTypeModels")
+    private java.util.List<NodeInstanceTypeModels> nodeInstanceTypeModels;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListNodeInstanceTypeResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
     /**
      * @return nodeInstanceTypeModels
      */
-    public java.util.List < NodeInstanceTypeModels> getNodeInstanceTypeModels() {
+    public java.util.List<NodeInstanceTypeModels> getNodeInstanceTypeModels() {
         return this.nodeInstanceTypeModels;
     }
 
@@ -79,22 +84,25 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < NodeInstanceTypeModels> nodeInstanceTypeModels; 
+        private java.util.List<NodeInstanceTypeModels> nodeInstanceTypeModels; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * NodeInstanceTypeModels.
+         * <p>The resource types.</p>
          */
-        public Builder nodeInstanceTypeModels(java.util.List < NodeInstanceTypeModels> nodeInstanceTypeModels) {
+        public Builder nodeInstanceTypeModels(java.util.List<NodeInstanceTypeModels> nodeInstanceTypeModels) {
             this.nodeInstanceTypeModels = nodeInstanceTypeModels;
             return this;
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,29 +148,35 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListNodeInstanceTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNodeInstanceTypeResponseBody</p>
+     */
     public static class NodeInstanceTypeModels extends TeaModel {
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private String cpu;
 
-        @NameInMap("Gpu")
+        @com.aliyun.core.annotation.NameInMap("Gpu")
         private String gpu;
 
-        @NameInMap("GpuMemory")
+        @com.aliyun.core.annotation.NameInMap("GpuMemory")
         private Long gpuMemory;
 
-        @NameInMap("MaxCapacity")
+        @com.aliyun.core.annotation.NameInMap("MaxCapacity")
         private Integer maxCapacity;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Long memory;
 
-        @NameInMap("NodeInstanceType")
+        @com.aliyun.core.annotation.NameInMap("NodeInstanceType")
         private String nodeInstanceType;
 
-        @NameInMap("NodeInstanceTypeFamily")
+        @com.aliyun.core.annotation.NameInMap("NodeInstanceTypeFamily")
         private String nodeInstanceTypeFamily;
 
-        @NameInMap("NodeTypeName")
+        @com.aliyun.core.annotation.NameInMap("NodeTypeName")
         private String nodeTypeName;
 
         private NodeInstanceTypeModels(Builder builder) {
@@ -242,7 +265,10 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
             private String nodeTypeName; 
 
             /**
-             * Cpu.
+             * <p>The number of vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
@@ -250,7 +276,10 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * Gpu.
+             * <p>The number of GPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder gpu(String gpu) {
                 this.gpu = gpu;
@@ -258,7 +287,10 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * 显卡内存大小，单位为MB。
+             * <p>The GPU size. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8192</p>
              */
             public Builder gpuMemory(Long gpuMemory) {
                 this.gpuMemory = gpuMemory;
@@ -266,14 +298,17 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * 最大并发会话数，即单个资源可同时连接的会话数。如果同时连接的会话数过多，可能导致应用的使用体验下降。取值范围因资源规格不同而不同。各资源规格对应的取值范围分别是：
-             * <p>
+             * <p>The maximum number of sessions to which a resource can connect at the same time. If a resource connects to a large number of sessions at the same time, user experience can be compromised. The value range varies based on the resource type. The following items describe the value ranges of different resource types:</p>
+             * <ul>
+             * <li>appstreaming.general.4c8g: 1 to 2</li>
+             * <li>appstreaming.general.8c16g: 1 to 4</li>
+             * <li>appstreaming.vgpu.8c16g.4g: 1 to 4</li>
+             * <li>appstreaming.vgpu.8c31g.16g: 1 to 4</li>
+             * <li>appstreaming.vgpu.14c93g.12g: 1 to 6</li>
+             * </ul>
              * 
-             * - appstreaming.general.4c8g：1\~2；
-             * - appstreaming.general.8c16g：1\~4；
-             * - appstreaming.vgpu.8c16g.4g：1\~4；
-             * - appstreaming.vgpu.8c31g.16g：1\~4；
-             * - appstreaming.vgpu.14c93g.12g：1\~6；
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder maxCapacity(Integer maxCapacity) {
                 this.maxCapacity = maxCapacity;
@@ -281,7 +316,10 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>The memory size. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8192</p>
              */
             public Builder memory(Long memory) {
                 this.memory = memory;
@@ -289,7 +327,10 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * NodeInstanceType.
+             * <p>The ID of the resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>appstreaming.vgpu.4c8g.2g</p>
              */
             public Builder nodeInstanceType(String nodeInstanceType) {
                 this.nodeInstanceType = nodeInstanceType;
@@ -297,7 +338,15 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * NodeInstanceTypeFamily.
+             * <p>The resource type family.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>appstreaming.general: WUYING - General</li>
+             * <li>appstreaming.vgpu: WUYING - Graphics</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>appstreaming.vgpu</p>
              */
             public Builder nodeInstanceTypeFamily(String nodeInstanceTypeFamily) {
                 this.nodeInstanceTypeFamily = nodeInstanceTypeFamily;
@@ -305,7 +354,10 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * 资源规格名称。
+             * <p>The name of the resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WUYING - General - 4 vCPUs 8 GB Memory</p>
              */
             public Builder nodeTypeName(String nodeTypeName) {
                 this.nodeTypeName = nodeTypeName;

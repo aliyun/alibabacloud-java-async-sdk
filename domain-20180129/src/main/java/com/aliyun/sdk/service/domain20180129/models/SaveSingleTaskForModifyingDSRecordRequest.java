@@ -1,48 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveSingleTaskForModifyingDSRecordRequest} extends {@link RequestModel}
  *
  * <p>SaveSingleTaskForModifyingDSRecordRequest</p>
  */
 public class SaveSingleTaskForModifyingDSRecordRequest extends Request {
-    @Query
-    @NameInMap("Algorithm")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Algorithm")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer algorithm;
 
-    @Query
-    @NameInMap("Digest")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Digest")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String digest;
 
-    @Query
-    @NameInMap("DigestType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DigestType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer digestType;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("KeyTag")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyTag")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer keyTag;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
     private SaveSingleTaskForModifyingDSRecordRequest(Builder builder) {
@@ -143,7 +143,10 @@ public class SaveSingleTaskForModifyingDSRecordRequest extends Request {
         } 
 
         /**
-         * Algorithm.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder algorithm(Integer algorithm) {
             this.putQueryParameter("Algorithm", algorithm);
@@ -152,7 +155,10 @@ public class SaveSingleTaskForModifyingDSRecordRequest extends Request {
         }
 
         /**
-         * Digest.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f58fa917424383934c7b0cf1a90f61d692745680fa06f5ecdbe0924e86de9598</p>
          */
         public Builder digest(String digest) {
             this.putQueryParameter("Digest", digest);
@@ -161,7 +167,10 @@ public class SaveSingleTaskForModifyingDSRecordRequest extends Request {
         }
 
         /**
-         * DigestType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder digestType(Integer digestType) {
             this.putQueryParameter("DigestType", digestType);
@@ -170,7 +179,10 @@ public class SaveSingleTaskForModifyingDSRecordRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -179,7 +191,10 @@ public class SaveSingleTaskForModifyingDSRecordRequest extends Request {
         }
 
         /**
-         * KeyTag.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder keyTag(Integer keyTag) {
             this.putQueryParameter("KeyTag", keyTag);

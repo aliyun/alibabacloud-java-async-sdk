@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFailoverTestJobsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeFailoverTestJobsResponseBody</p>
  */
 public class DescribeFailoverTestJobsResponseBody extends TeaModel {
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("FailoverTestJobList")
-    private java.util.List < FailoverTestJobList> failoverTestJobList;
+    @com.aliyun.core.annotation.NameInMap("FailoverTestJobList")
+    private java.util.List<FailoverTestJobList> failoverTestJobList;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeFailoverTestJobsResponseBody(Builder builder) {
@@ -57,7 +62,7 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
     /**
      * @return failoverTestJobList
      */
-    public java.util.List < FailoverTestJobList> getFailoverTestJobList() {
+    public java.util.List<FailoverTestJobList> getFailoverTestJobList() {
         return this.failoverTestJobList;
     }
 
@@ -91,14 +96,17 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer count; 
-        private java.util.List < FailoverTestJobList> failoverTestJobList; 
+        private java.util.List<FailoverTestJobList> failoverTestJobList; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * Count.
+         * <p>The number of entries on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -106,15 +114,18 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
         }
 
         /**
-         * FailoverTestJobList.
+         * <p>The list of failover tests.</p>
          */
-        public Builder failoverTestJobList(java.util.List < FailoverTestJobList> failoverTestJobList) {
+        public Builder failoverTestJobList(java.util.List<FailoverTestJobList> failoverTestJobList) {
             this.failoverTestJobList = failoverTestJobList;
             return this;
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +133,14 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If no value is returned for <strong>NextToken</strong>, no next queries are sent.</li>
+         * <li>If a value is returned for <strong>NextToken</strong>, the value is used to retrieve a new page of results.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +148,10 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +159,10 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -151,35 +175,41 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeFailoverTestJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFailoverTestJobsResponseBody</p>
+     */
     public static class FailoverTestJobList extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("JobDuration")
+        @com.aliyun.core.annotation.NameInMap("JobDuration")
         private String jobDuration;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("JobType")
+        @com.aliyun.core.annotation.NameInMap("JobType")
         private String jobType;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ResourceId")
-        private java.util.List < String > resourceId;
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
+        private java.util.List<String> resourceId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StopTime")
+        @com.aliyun.core.annotation.NameInMap("StopTime")
         private String stopTime;
 
         private FailoverTestJobList(Builder builder) {
@@ -241,7 +271,7 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
         /**
          * @return resourceId
          */
-        public java.util.List < String > getResourceId() {
+        public java.util.List<String> getResourceId() {
             return this.resourceId;
         }
 
@@ -279,14 +309,18 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
             private String jobId; 
             private String jobType; 
             private String name; 
-            private java.util.List < String > resourceId; 
+            private java.util.List<String> resourceId; 
             private String resourceType; 
             private String startTime; 
             private String status; 
             private String stopTime; 
 
             /**
-             * Description.
+             * <p>The description of the failover test.</p>
+             * <p>The description must be 0 to 256 characters in length and cannot start with **http:// <strong>or</strong> https://**.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -294,7 +328,10 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobDuration.
+             * <p>The duration of the failover test. Unit: minutes. Valid values: <strong>1 to 4320</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder jobDuration(String jobDuration) {
                 this.jobDuration = jobDuration;
@@ -302,7 +339,10 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The ID of the failover test.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ftj-xxxxxxxxx</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -310,7 +350,14 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobType.
+             * <p>Indicates whether the failover test is performed immediately. Valid values:</p>
+             * <ul>
+             * <li><strong>StartNow</strong></li>
+             * <li><strong>StartLater</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>StartNow</p>
              */
             public Builder jobType(String jobType) {
                 this.jobType = jobType;
@@ -318,7 +365,11 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the failover test.</p>
+             * <p>The name must be 0 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -326,15 +377,18 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The IDs of the failover test resources.</p>
              */
-            public Builder resourceId(java.util.List < String > resourceId) {
+            public Builder resourceId(java.util.List<String> resourceId) {
                 this.resourceId = resourceId;
                 return this;
             }
 
             /**
-             * ResourceType.
+             * <p>The type of the failover test resource. Only <strong>PHYSICALCONNECTION</strong> is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PHYSICALCONNECTION</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -342,7 +396,10 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The beginning of the fault drill task. The time must be in UTC. Specify the time in the ISO 8601 standard in <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-11-21T14:00:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -350,7 +407,17 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the failover test. Valid values:</p>
+             * <ul>
+             * <li><strong>Init</strong></li>
+             * <li><strong>Starting</strong></li>
+             * <li><strong>Testing</strong></li>
+             * <li><strong>Stopping</strong></li>
+             * <li><strong>Stopped</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Init</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -358,7 +425,10 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
             }
 
             /**
-             * StopTime.
+             * <p>The end of the fault drill task. The time must be in UTC. Specify the time in the ISO 8601 standard in <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-11-21T15:00:00Z</p>
              */
             public Builder stopTime(String stopTime) {
                 this.stopTime = stopTime;

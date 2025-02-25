@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPlansResponseBody} extends {@link TeaModel}
  *
  * <p>ListPlansResponseBody</p>
  */
 public class ListPlansResponseBody extends TeaModel {
-    @NameInMap("Plans")
-    private java.util.List < Plans> plans;
+    @com.aliyun.core.annotation.NameInMap("Plans")
+    private java.util.List<Plans> plans;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListPlansResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class ListPlansResponseBody extends TeaModel {
     /**
      * @return plans
      */
-    public java.util.List < Plans> getPlans() {
+    public java.util.List<Plans> getPlans() {
         return this.plans;
     }
 
@@ -46,19 +51,22 @@ public class ListPlansResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Plans> plans; 
+        private java.util.List<Plans> plans; 
         private String requestId; 
 
         /**
-         * The operating system types supported by the plan.
+         * <p>Details about the plans.</p>
          */
-        public Builder plans(java.util.List < Plans> plans) {
+        public Builder plans(java.util.List<Plans> plans) {
             this.plans = plans;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20758A-585D-4A41-A9B2-28DA8F4F534F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,35 +79,44 @@ public class ListPlansResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPlansResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPlansResponseBody</p>
+     */
     public static class Plans extends TeaModel {
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Integer bandwidth;
 
-        @NameInMap("Core")
+        @com.aliyun.core.annotation.NameInMap("Core")
         private Integer core;
 
-        @NameInMap("Currency")
+        @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
-        @NameInMap("DiskSize")
+        @com.aliyun.core.annotation.NameInMap("DiskSize")
         private Integer diskSize;
 
-        @NameInMap("DiskType")
+        @com.aliyun.core.annotation.NameInMap("DiskType")
         private String diskType;
 
-        @NameInMap("Flow")
+        @com.aliyun.core.annotation.NameInMap("Flow")
         private Integer flow;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Integer memory;
 
-        @NameInMap("OriginPrice")
+        @com.aliyun.core.annotation.NameInMap("OriginPrice")
         private Double originPrice;
 
-        @NameInMap("PlanId")
+        @com.aliyun.core.annotation.NameInMap("PlanId")
         private String planId;
 
-        @NameInMap("SupportPlatform")
+        @com.aliyun.core.annotation.NameInMap("PlanType")
+        private String planType;
+
+        @com.aliyun.core.annotation.NameInMap("SupportPlatform")
         private String supportPlatform;
 
         private Plans(Builder builder) {
@@ -112,6 +129,7 @@ public class ListPlansResponseBody extends TeaModel {
             this.memory = builder.memory;
             this.originPrice = builder.originPrice;
             this.planId = builder.planId;
+            this.planType = builder.planType;
             this.supportPlatform = builder.supportPlatform;
         }
 
@@ -187,6 +205,13 @@ public class ListPlansResponseBody extends TeaModel {
         }
 
         /**
+         * @return planType
+         */
+        public String getPlanType() {
+            return this.planType;
+        }
+
+        /**
          * @return supportPlatform
          */
         public String getSupportPlatform() {
@@ -203,10 +228,14 @@ public class ListPlansResponseBody extends TeaModel {
             private Integer memory; 
             private Double originPrice; 
             private String planId; 
+            private String planType; 
             private String supportPlatform; 
 
             /**
-             * The peak bandwidth. Unit: Mbit/s.
+             * <p>The peak bandwidth. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -214,7 +243,10 @@ public class ListPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The number of vCPUs.
+             * <p>The number of vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder core(Integer core) {
                 this.core = core;
@@ -222,13 +254,17 @@ public class ListPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the plan price. Valid values:
-             * <p>
+             * <p>The unit of the plan price. Valid values:</p>
+             * <ul>
+             * <li>CNY</li>
+             * <li>USD</li>
+             * </ul>
+             * <blockquote>
+             * <p> CNY is for the China site (aliyun.com). USD is for the international site (alibabacloud.com).</p>
+             * </blockquote>
              * 
-             * *   CNY
-             * *   USD
-             * 
-             * >  CNY is for the China site (aliyun.com). USD is for the international site (alibabacloud.com).
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -236,7 +272,10 @@ public class ListPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the disk. Unit: GB.
+             * <p>The size of the disk. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder diskSize(Integer diskSize) {
                 this.diskSize = diskSize;
@@ -244,11 +283,14 @@ public class ListPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the disk. Valid values:
-             * <p>
+             * <p>The category of the disk. Valid values:</p>
+             * <ul>
+             * <li>SSD: standard SSDs</li>
+             * <li>ESSD: enhanced SSDs</li>
+             * </ul>
              * 
-             * *   SSD: standard SSDs
-             * *   ESSD: enhanced SSDs
+             * <strong>example:</strong>
+             * <p>ESSD</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -256,7 +298,10 @@ public class ListPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The monthly data transfer quota. Unit: GB.
+             * <p>The monthly data transfer quota. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>400</p>
              */
             public Builder flow(Integer flow) {
                 this.flow = flow;
@@ -264,7 +309,10 @@ public class ListPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size. Unit: GB.
+             * <p>The memory size. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -272,7 +320,10 @@ public class ListPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The monthly price of the plan.
+             * <p>The monthly price of the plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder originPrice(Double originPrice) {
                 this.originPrice = originPrice;
@@ -280,7 +331,10 @@ public class ListPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the plan.
+             * <p>The ID of the plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>swas.s2.c2m1s40b3t04</p>
              */
             public Builder planId(String planId) {
                 this.planId = planId;
@@ -288,7 +342,18 @@ public class ListPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system types supported by the plan.
+             * PlanType.
+             */
+            public Builder planType(String planType) {
+                this.planType = planType;
+                return this;
+            }
+
+            /**
+             * <p>The operating system types supported by the plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;Linux&quot;,&quot;Windows&quot;]</p>
              */
             public Builder supportPlatform(String supportPlatform) {
                 this.supportPlatform = supportPlatform;

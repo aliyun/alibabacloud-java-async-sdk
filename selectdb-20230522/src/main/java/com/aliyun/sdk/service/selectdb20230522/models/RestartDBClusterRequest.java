@@ -1,41 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.selectdb20230522.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RestartDBClusterRequest} extends {@link RequestModel}
  *
  * <p>RestartDBClusterRequest</p>
  */
 public class RestartDBClusterRequest extends Request {
-    @Query
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Body
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParallelOperation")
+    private Boolean parallelOperation;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Body
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private RestartDBClusterRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
         this.DBInstanceId = builder.DBInstanceId;
+        this.parallelOperation = builder.parallelOperation;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -69,6 +82,13 @@ public class RestartDBClusterRequest extends Request {
     }
 
     /**
+     * @return parallelOperation
+     */
+    public Boolean getParallelOperation() {
+        return this.parallelOperation;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -92,6 +112,7 @@ public class RestartDBClusterRequest extends Request {
     public static final class Builder extends Request.Builder<RestartDBClusterRequest, Builder> {
         private String DBClusterId; 
         private String DBInstanceId; 
+        private Boolean parallelOperation; 
         private String regionId; 
         private String resourceGroupId; 
         private Long resourceOwnerId; 
@@ -104,13 +125,18 @@ public class RestartDBClusterRequest extends Request {
             super(request);
             this.DBClusterId = request.DBClusterId;
             this.DBInstanceId = request.DBInstanceId;
+            this.parallelOperation = request.parallelOperation;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb-cn-7213c8yvv09-be</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -119,7 +145,11 @@ public class RestartDBClusterRequest extends Request {
         }
 
         /**
-         * 代表资源一级ID的资源属性字段
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb-cn-7213cjv****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putBodyParameter("DBInstanceId", DBInstanceId);
@@ -128,7 +158,20 @@ public class RestartDBClusterRequest extends Request {
         }
 
         /**
-         * 地域
+         * ParallelOperation.
+         */
+        public Builder parallelOperation(Boolean parallelOperation) {
+            this.putQueryParameter("ParallelOperation", parallelOperation);
+            this.parallelOperation = parallelOperation;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the region in which the ApsaraDB for SelectDB instance resides.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -137,7 +180,10 @@ public class RestartDBClusterRequest extends Request {
         }
 
         /**
-         * 资源组id
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-4690g37929****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);

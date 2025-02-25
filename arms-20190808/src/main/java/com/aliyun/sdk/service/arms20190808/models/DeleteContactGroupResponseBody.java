@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteContactGroupResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteContactGroupResponseBody</p>
  */
 public class DeleteContactGroupResponseBody extends TeaModel {
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteContactGroupResponseBody(Builder builder) {
@@ -50,7 +55,14 @@ public class DeleteContactGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * IsSuccess.
+         * <p>Indicates whether the alert contact group was deleted. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -58,7 +70,10 @@ public class DeleteContactGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C21AB7CF-B7AF-410F-BD61-82D1567F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

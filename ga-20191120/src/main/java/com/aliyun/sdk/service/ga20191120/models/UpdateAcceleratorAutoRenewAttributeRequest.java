@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateAcceleratorAutoRenewAttributeRequest</p>
  */
 public class UpdateAcceleratorAutoRenewAttributeRequest extends Request {
-    @Query
-    @NameInMap("AcceleratorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceleratorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String acceleratorId;
 
-    @Query
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private Boolean autoRenew;
 
-    @Query
-    @NameInMap("AutoRenewDuration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenewDuration")
     private Integer autoRenewDuration;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("RenewalStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RenewalStatus")
     private String renewalStatus;
 
     private UpdateAcceleratorAutoRenewAttributeRequest(Builder builder) {
@@ -148,11 +147,13 @@ public class UpdateAcceleratorAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal for the GA instance. Default value: false. Valid values:
+         * Specifies whether to enable auto-renewal for the GA instance. Valid values:
          * <p>
          * 
-         * *   **true**: enables auto-renewal for the GA instance.
-         * *   **false**: does not enable auto-renewal for the GA instance.
+         * *   **true**
+         * *   **false** (default)
+         * 
+         * >  **AutoRenew** and **RenewalStatus** cannot be left empty at the same time.
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -161,12 +162,12 @@ public class UpdateAcceleratorAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The auto-renewal period. Unit: months.
+         * The auto-renewal duration. Unit: month.
          * <p>
          * 
          * Valid values: **1** to **12**.
          * 
-         * >  This parameter is required only if **AutoRenew** is set to **true**.
+         * >  This parameter takes effect only if you set **AutoRenew** to **true**.
          */
         public Builder autoRenewDuration(Integer autoRenewDuration) {
             this.putQueryParameter("AutoRenewDuration", autoRenewDuration);
@@ -178,9 +179,9 @@ public class UpdateAcceleratorAutoRenewAttributeRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate a token, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          * 
-         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -192,7 +193,7 @@ public class UpdateAcceleratorAutoRenewAttributeRequest extends Request {
          * The name of the GA instance.
          * <p>
          * 
-         * The name must be 2 to 128 characters in length and can contain digits, underscores (\_), and hyphens (-). It must start with a letter.
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -213,11 +214,15 @@ public class UpdateAcceleratorAutoRenewAttributeRequest extends Request {
          * Specifies how to renew the GA instance. Valid values:
          * <p>
          * 
-         * *   **AutoRenewal**: The GA instance is automatically renewed.
+         * *   **AutoRenewal**: The system automatically renews the GA instance.
          * *   **Normal**: You must manually renew the GA instance.
-         * *   **NotRenewal**: Choose this option if you do not want to renew the GA instance after the instance expires. The system sends only a non-renewal reminder three days before the expiration date. The system no longer sends notifications to remind you to renew the GA instance. You can change the value of this parameter from NotRenewal to **Normal** for a GA instance, and then manually renew the instance. You can also set the RenewalStatus parameter to **AutoRenewal**.
+         * *   **NotRenewal**: The GA instance is not renewed after the instance expires. The system sends only a non-renewal reminder three days before the expiration date. The system no longer reminds you to renew the GA instance. To renew a GA instance whose RenewalStatus is set to NotRenewal, change the value of RenewalStatus from NotRenewal to **Normal**, and then manually renew the instance. You can also set RenewalStatus to **AutoRenewal**.
          * 
-         * >  **RenewalStatus** takes precedence over **AutoRenew**. If you do not specify **RenewalStatus**, the **AutoRenew** parameter is used by default.
+         * > 
+         * 
+         * *   **AutoRenew** and **RenewalStatus** cannot be left empty at the same time.
+         * 
+         * *   **RenewalStatus** takes precedence over **AutoRenew**. By default, if you do not specify **RenewalStatus**, **AutoRenew** is used.
          */
         public Builder renewalStatus(String renewalStatus) {
             this.putQueryParameter("RenewalStatus", renewalStatus);

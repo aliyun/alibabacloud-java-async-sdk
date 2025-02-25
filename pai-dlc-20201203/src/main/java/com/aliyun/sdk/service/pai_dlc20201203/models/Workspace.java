@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Workspace} extends {@link TeaModel}
  *
  * <p>Workspace</p>
  */
 public class Workspace extends TeaModel {
-    @NameInMap("Creator")
+    @com.aliyun.core.annotation.NameInMap("Creator")
     private String creator;
 
-    @NameInMap("GmtCreateTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
-    @NameInMap("GmtModifyTime")
+    @com.aliyun.core.annotation.NameInMap("GmtModifyTime")
     private String gmtModifyTime;
 
-    @NameInMap("Members")
-    private java.util.List < Member > members;
+    @com.aliyun.core.annotation.NameInMap("Members")
+    private java.util.List<Member> members;
 
-    @NameInMap("Quotas")
-    private java.util.List < Quota > quotas;
+    @com.aliyun.core.annotation.NameInMap("Quotas")
+    private java.util.List<Quota> quotas;
 
-    @NameInMap("TotalResources")
+    @com.aliyun.core.annotation.NameInMap("TotalResources")
     private Resources totalResources;
 
-    @NameInMap("WorkspaceAdmins")
-    private java.util.List < Member > workspaceAdmins;
+    @com.aliyun.core.annotation.NameInMap("WorkspaceAdmins")
+    private java.util.List<Member> workspaceAdmins;
 
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
-    @NameInMap("WorkspaceName")
+    @com.aliyun.core.annotation.NameInMap("WorkspaceName")
     private String workspaceName;
 
     private Workspace(Builder builder) {
@@ -83,14 +88,14 @@ public class Workspace extends TeaModel {
     /**
      * @return members
      */
-    public java.util.List < Member > getMembers() {
+    public java.util.List<Member> getMembers() {
         return this.members;
     }
 
     /**
      * @return quotas
      */
-    public java.util.List < Quota > getQuotas() {
+    public java.util.List<Quota> getQuotas() {
         return this.quotas;
     }
 
@@ -104,7 +109,7 @@ public class Workspace extends TeaModel {
     /**
      * @return workspaceAdmins
      */
-    public java.util.List < Member > getWorkspaceAdmins() {
+    public java.util.List<Member> getWorkspaceAdmins() {
         return this.workspaceAdmins;
     }
 
@@ -126,10 +131,10 @@ public class Workspace extends TeaModel {
         private String creator; 
         private String gmtCreateTime; 
         private String gmtModifyTime; 
-        private java.util.List < Member > members; 
-        private java.util.List < Quota > quotas; 
+        private java.util.List<Member> members; 
+        private java.util.List<Quota> quotas; 
         private Resources totalResources; 
-        private java.util.List < Member > workspaceAdmins; 
+        private java.util.List<Member> workspaceAdmins; 
         private String workspaceId; 
         private String workspaceName; 
 
@@ -160,7 +165,7 @@ public class Workspace extends TeaModel {
         /**
          * Members.
          */
-        public Builder members(java.util.List < Member > members) {
+        public Builder members(java.util.List<Member> members) {
             this.members = members;
             return this;
         }
@@ -168,7 +173,7 @@ public class Workspace extends TeaModel {
         /**
          * Quotas.
          */
-        public Builder quotas(java.util.List < Quota > quotas) {
+        public Builder quotas(java.util.List<Quota> quotas) {
             this.quotas = quotas;
             return this;
         }
@@ -184,7 +189,7 @@ public class Workspace extends TeaModel {
         /**
          * WorkspaceAdmins.
          */
-        public Builder workspaceAdmins(java.util.List < Member > workspaceAdmins) {
+        public Builder workspaceAdmins(java.util.List<Member> workspaceAdmins) {
             this.workspaceAdmins = workspaceAdmins;
             return this;
         }

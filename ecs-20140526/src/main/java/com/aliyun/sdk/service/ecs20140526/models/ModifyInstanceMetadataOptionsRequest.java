@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceMetadataOptionsRequest} extends {@link RequestModel}
  *
  * <p>ModifyInstanceMetadataOptionsRequest</p>
  */
 public class ModifyInstanceMetadataOptionsRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("HttpEndpoint")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpEndpoint")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String httpEndpoint;
 
-    @Query
-    @NameInMap("HttpPutResponseHopLimit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpPutResponseHopLimit")
     private Integer httpPutResponseHopLimit;
 
-    @Query
-    @NameInMap("HttpTokens")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpTokens")
     private String httpTokens;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("InstanceMetadataTags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceMetadataTags")
     private String instanceMetadataTags;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyInstanceMetadataOptionsRequest(Builder builder) {
@@ -191,15 +196,19 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the access channel for instance metadata. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the access channel for instance metadata. Valid values:</p>
+         * <ul>
+         * <li>enabled</li>
+         * <li>disabled</li>
+         * </ul>
+         * <p>Default value: enabled.</p>
+         * <blockquote>
+         * <p> For information about instance metadata, see <a href="https://help.aliyun.com/document_detail/49122.html">Obtain instance metadata</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   enabled
-         * *   disabled
-         * 
-         * Default value: enabled.
-         * 
-         * > For more information about instance metadata, see [Overview of ECS instance metadata](~~49122~~).
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder httpEndpoint(String httpEndpoint) {
             this.putQueryParameter("HttpEndpoint", httpEndpoint);
@@ -208,7 +217,12 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
         }
 
         /**
-         * > This parameter is in invitational preview and is not publicly available.
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder httpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
             this.putQueryParameter("HttpPutResponseHopLimit", httpPutResponseHopLimit);
@@ -217,15 +231,18 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcefully use the security-enhanced mode (IMDSv2) to access instance metadata. Valid values:
-         * <p>
+         * <p>Specifies whether to forcefully use the security hardening mode (IMDSv2) to access instance metadata. Valid values:</p>
+         * <ul>
+         * <li>optional: does not forcefully use the security hardening mode (IMDSv2).</li>
+         * <li>required: forcefully uses the security hardening mode (IMDSv2). After you set this parameter to required, you cannot access instance metadata in normal mode.</li>
+         * </ul>
+         * <p>Default value: optional.</p>
+         * <blockquote>
+         * <p> For more information about modes of accessing instance metadata, see <a href="https://help.aliyun.com/document_detail/150575.html">Obtain instance metadata</a>.</p>
+         * </blockquote>
          * 
-         * *   optional: does not forcefully use the security-enhanced mode (IMDSv2).
-         * *   required: forcefully uses the security-enhanced mode (IMDSv2). After you set this parameter to required, you cannot access instance metadata in normal mode.
-         * 
-         * Default value: optional.
-         * 
-         * > For more information about the modes of accessing instance metadata, see [Access mode of instance metadata](~~150575~~).
+         * <strong>example:</strong>
+         * <p>optional</p>
          */
         public Builder httpTokens(String httpTokens) {
             this.putQueryParameter("HttpTokens", httpTokens);
@@ -234,7 +251,10 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxaz****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -243,7 +263,12 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
         }
 
         /**
-         * > This parameter is in invitational preview and is not publicly available.
+         * <blockquote>
+         * <p>This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder instanceMetadataTags(String instanceMetadataTags) {
             this.putQueryParameter("InstanceMetadataTags", instanceMetadataTags);
@@ -261,7 +286,11 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

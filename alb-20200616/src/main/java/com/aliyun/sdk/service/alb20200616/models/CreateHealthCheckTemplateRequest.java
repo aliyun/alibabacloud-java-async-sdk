@@ -1,76 +1,81 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateHealthCheckTemplateRequest} extends {@link RequestModel}
  *
  * <p>CreateHealthCheckTemplateRequest</p>
  */
 public class CreateHealthCheckTemplateRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("HealthCheckCodes")
-    private java.util.List < String > healthCheckCodes;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckCodes")
+    private java.util.List<String> healthCheckCodes;
 
-    @Query
-    @NameInMap("HealthCheckConnectPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckConnectPort")
     private Integer healthCheckConnectPort;
 
-    @Query
-    @NameInMap("HealthCheckHost")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckHost")
     private String healthCheckHost;
 
-    @Query
-    @NameInMap("HealthCheckHttpVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckHttpVersion")
     private String healthCheckHttpVersion;
 
-    @Query
-    @NameInMap("HealthCheckInterval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckInterval")
     private Integer healthCheckInterval;
 
-    @Query
-    @NameInMap("HealthCheckMethod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckMethod")
     private String healthCheckMethod;
 
-    @Query
-    @NameInMap("HealthCheckPath")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckPath")
     private String healthCheckPath;
 
-    @Query
-    @NameInMap("HealthCheckProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckProtocol")
     private String healthCheckProtocol;
 
-    @Query
-    @NameInMap("HealthCheckTemplateName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckTemplateName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String healthCheckTemplateName;
 
-    @Query
-    @NameInMap("HealthCheckTimeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckTimeout")
     private Integer healthCheckTimeout;
 
-    @Query
-    @NameInMap("HealthyThreshold")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthyThreshold")
     private Integer healthyThreshold;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Query
-    @NameInMap("UnhealthyThreshold")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UnhealthyThreshold")
     private Integer unhealthyThreshold;
 
     private CreateHealthCheckTemplateRequest(Builder builder) {
@@ -122,7 +127,7 @@ public class CreateHealthCheckTemplateRequest extends Request {
     /**
      * @return healthCheckCodes
      */
-    public java.util.List < String > getHealthCheckCodes() {
+    public java.util.List<String> getHealthCheckCodes() {
         return this.healthCheckCodes;
     }
 
@@ -199,7 +204,7 @@ public class CreateHealthCheckTemplateRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -213,7 +218,7 @@ public class CreateHealthCheckTemplateRequest extends Request {
     public static final class Builder extends Request.Builder<CreateHealthCheckTemplateRequest, Builder> {
         private String clientToken; 
         private Boolean dryRun; 
-        private java.util.List < String > healthCheckCodes; 
+        private java.util.List<String> healthCheckCodes; 
         private Integer healthCheckConnectPort; 
         private String healthCheckHost; 
         private String healthCheckHttpVersion; 
@@ -224,7 +229,7 @@ public class CreateHealthCheckTemplateRequest extends Request {
         private String healthCheckTemplateName; 
         private Integer healthCheckTimeout; 
         private Integer healthyThreshold; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private Integer unhealthyThreshold; 
 
         private Builder() {
@@ -251,12 +256,14 @@ public class CreateHealthCheckTemplateRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * > If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.
+         * <strong>example:</strong>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -265,11 +272,14 @@ public class CreateHealthCheckTemplateRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a <strong>2xx</strong> HTTP status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a **2xx** HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -278,26 +288,24 @@ public class CreateHealthCheckTemplateRequest extends Request {
         }
 
         /**
-         * The interval at which health checks are performed.
-         * <p>
+         * <p>The HTTP status codes that indicate a healthy backend server.</p>
          * 
-         * Valid values: **1 to 50**.
-         * 
-         * Default value: **2**.
+         * <strong>example:</strong>
+         * <p>5</p>
          */
-        public Builder healthCheckCodes(java.util.List < String > healthCheckCodes) {
+        public Builder healthCheckCodes(java.util.List<String> healthCheckCodes) {
             this.putQueryParameter("HealthCheckCodes", healthCheckCodes);
             this.healthCheckCodes = healthCheckCodes;
             return this;
         }
 
         /**
-         * The port that is used for health checks.
-         * <p>
+         * <p>The port that is used for health checks.</p>
+         * <p>Valid values: <strong>0 to 65535</strong>.</p>
+         * <p>Default value: <strong>0</strong>. If you set the value to 0, the port of a backend server is used for health checks.</p>
          * 
-         * Valid values: **0 to 65535**.
-         * 
-         * Default value: **0**. If you set the value to 0, the port of a backend server is used for health checks.
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder healthCheckConnectPort(Integer healthCheckConnectPort) {
             this.putQueryParameter("HealthCheckConnectPort", healthCheckConnectPort);
@@ -306,17 +314,17 @@ public class CreateHealthCheckTemplateRequest extends Request {
         }
 
         /**
-         * The domain name that you want to use for the health check.
-         * <p>
+         * <p>The domain name that is used for health checks. Valid values:</p>
+         * <ul>
+         * <li><strong>$SERVER_IP</strong>: the private IP addresses of backend servers. If an IP address is specified, or this parameter is not specified, the ALB instance uses the private IP addresses of backend servers as domain names for health checks.</li>
+         * <li><strong>domain</strong>: The domain name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), and hyphens (-).</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter takes effect only if <code>HealthCheckProtocol</code> is set to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
+         * </blockquote>
          * 
-         * Default value: **$SERVER_IP**. The domain name must be 1 to 80 characters in length. The domain name must meet the following requirements:
-         * 
-         * *   The domain name can contain lowercase letters, digits, hyphens (-), and periods (.).
-         * *   The domain name must contain at least one period (.) but cannot start or end with a period (.).
-         * *   The rightmost domain label can contain only letters but cannot contain digits or hyphens (-).
-         * *   Other fields cannot start or end with a hyphen (-).
-         * 
-         * This parameter is required only if the **HealthCheckProtocol** parameter is set to **HTTP**.
+         * <strong>example:</strong>
+         * <p>$_ip</p>
          */
         public Builder healthCheckHost(String healthCheckHost) {
             this.putQueryParameter("HealthCheckHost", healthCheckHost);
@@ -325,14 +333,15 @@ public class CreateHealthCheckTemplateRequest extends Request {
         }
 
         /**
-         * The HTTP version that is used for health checks.
-         * <p>
+         * <p>The HTTP version for health checks.</p>
+         * <p>Valid values: <strong>HTTP 1.0</strong> and <strong>HTTP 1.1</strong>.</p>
+         * <p>Default value: <strong>HTTP 1.1</strong>.</p>
+         * <blockquote>
+         * <p> This parameter is available only if <code>HealthCheckProtocol</code> is set to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
+         * </blockquote>
          * 
-         * Valid values: **HTTP 1.0** and **HTTP 1.1**.
-         * 
-         * Default value: **HTTP 1.1**.
-         * 
-         * > This parameter is valid only if the `HealthCheckProtocol` parameter is set to **HTTP**.
+         * <strong>example:</strong>
+         * <p>HTTP 1.0</p>
          */
         public Builder healthCheckHttpVersion(String healthCheckHttpVersion) {
             this.putQueryParameter("HealthCheckHttpVersion", healthCheckHttpVersion);
@@ -341,12 +350,12 @@ public class CreateHealthCheckTemplateRequest extends Request {
         }
 
         /**
-         * The interval at which health checks are performed.
-         * <p>
+         * <p>The interval at which health checks are performed.</p>
+         * <p>Valid values: <strong>1 to 50</strong>.</p>
+         * <p>Default value: <strong>2</strong>.</p>
          * 
-         * Valid values: **1 to 50**.
-         * 
-         * Default value: **2**.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder healthCheckInterval(Integer healthCheckInterval) {
             this.putQueryParameter("HealthCheckInterval", healthCheckInterval);
@@ -355,14 +364,18 @@ public class CreateHealthCheckTemplateRequest extends Request {
         }
 
         /**
-         * The method that you want to use for the health check. Valid values:
-         * <p>
+         * <p>The HTTP method that is used for health checks. Valid values:</p>
+         * <ul>
+         * <li><strong>HEAD</strong> (default): By default, HTTP and HTTPS health checks use the HEAD method.</li>
+         * <li><strong>POST</strong>: gRPC health checks use the POST method by default.</li>
+         * <li><strong>GET</strong>: If the length of a response exceeds 8 KB, the response is truncated. However, the health check result is not affected.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is available only if <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong>, <strong>HTTPS</strong>, or <strong>gRPC</strong>.</p>
+         * </blockquote>
          * 
-         * *   **HEAD**: By default, the ALB instance sends HEAD requests to a backend server to perform HTTP health checks.
-         * *   **POST**: gRPC health checks automatically use the POST method.
-         * *   **GET**: If the length of a response exceeds 8 KB, the response is truncated. However, the health check result is not affected.
-         * 
-         * > This parameter takes effect only when the **HealthCheckProtocol** parameter is set to **HTTP** or **gRPC**.
+         * <strong>example:</strong>
+         * <p>HEAD</p>
          */
         public Builder healthCheckMethod(String healthCheckMethod) {
             this.putQueryParameter("HealthCheckMethod", healthCheckMethod);
@@ -371,12 +384,14 @@ public class CreateHealthCheckTemplateRequest extends Request {
         }
 
         /**
-         * The URL that is used for health checks.
-         * <p>
+         * <p>The URL that is used for health checks.</p>
+         * <p>The URL must be 1 to 80 characters in length, and can contain letters, digits, the following special characters: - / . % ? # &amp;, and the following extended characters: <code>_ ; ~ ! ( ) * [ ] @ $ ^ : \&quot; , +</code>. The URL must start with a forward slash (/).</p>
+         * <blockquote>
+         * <p> This parameter is available only if <code>HealthCheckProtocol</code> is set to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
+         * </blockquote>
          * 
-         * It must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), percent signs (%), question marks (?), number signs (#), and ampersands (&). It can also contain the following extended characters: `_ ; ~ ! ( ) * [ ] @ $ ^ : \" , +`. The URL must start with a forward slash (/).
-         * 
-         * > This parameter is valid only if the `HealthCheckProtocol` parameter is set to **HTTP**.
+         * <strong>example:</strong>
+         * <p>/test/index.html</p>
          */
         public Builder healthCheckPath(String healthCheckPath) {
             this.putQueryParameter("HealthCheckPath", healthCheckPath);
@@ -385,12 +400,16 @@ public class CreateHealthCheckTemplateRequest extends Request {
         }
 
         /**
-         * The protocol that you want to use for health checks. Valid values:
-         * <p>
+         * <p>The protocol that is used for health checks. Valid values:</p>
+         * <ul>
+         * <li><strong>HTTP</strong> (default): HTTP health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers.</li>
+         * <li><strong>HTTPS</strong>: The ALB instance sends HEAD or GET requests, which simulate browser requests, to check whether the backend server is healthy. HTTPS supports encryption and provides higher security than HTTP.</li>
+         * <li><strong>TCP</strong>: TCP health checks send TCP SYN packets to a backend server to check whether the port of the backend server is reachable.</li>
+         * <li><strong>gRPC</strong>: gRPC health checks send POST or GET requests to a backend server to check whether the backend server is healthy.</li>
+         * </ul>
          * 
-         * *   **HTTP** (default): To perform HTTP health checks, ALB sends HEAD or GET requests to a backend server to check whether the backend server is healthy.
-         * *   **TCP**: To perform TCP health checks, ALB sends SYN packets to a backend server to check whether the port of the backend server is available to receive requests.
-         * *   **gRPC**: To perform gRPC health checks, ALB sends POST or GET requests to a backend server to check whether the backend server is healthy.
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder healthCheckProtocol(String healthCheckProtocol) {
             this.putQueryParameter("HealthCheckProtocol", healthCheckProtocol);
@@ -399,10 +418,12 @@ public class CreateHealthCheckTemplateRequest extends Request {
         }
 
         /**
-         * The name of the health check template.
-         * <p>
+         * <p>The name of the health check template.</p>
+         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+         * <strong>example:</strong>
+         * <p>HealthCheckTemplate1</p>
          */
         public Builder healthCheckTemplateName(String healthCheckTemplateName) {
             this.putQueryParameter("HealthCheckTemplateName", healthCheckTemplateName);
@@ -411,14 +432,12 @@ public class CreateHealthCheckTemplateRequest extends Request {
         }
 
         /**
-         * The timeout period of a health check. If a backend server does not respond within the specified timeout period, the backend server fails the health check.
-         * <p>
+         * <p>The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the backend server is declared unhealthy.</p>
+         * <p>Valid values: <strong>1 to 300</strong>. Unit: seconds.</p>
+         * <p>Default value: <strong>5</strong>.</p>
          * 
-         * Valid values: **1 to 300**.
-         * 
-         * Default value: **5**.
-         * 
-         * > If the value of the `HealthCheckTimeout` parameter is smaller than that of the `HealthCheckInterval` parameter, the timeout period specified by the `HealthCheckTimeout` parameter is ignored and the value of the `HealthCheckInterval` parameter is used as the timeout period.
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder healthCheckTimeout(Integer healthCheckTimeout) {
             this.putQueryParameter("HealthCheckTimeout", healthCheckTimeout);
@@ -427,12 +446,12 @@ public class CreateHealthCheckTemplateRequest extends Request {
         }
 
         /**
-         * The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from **fail** to **success**.
-         * <p>
+         * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from <strong>fail</strong> to <strong>success</strong>.</p>
+         * <p>Valid values: <strong>2 to 10</strong>.</p>
+         * <p>Default value: <strong>3</strong>.</p>
          * 
-         * Valid values: **2 to 10**.
-         * 
-         * Default value: **3**.
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder healthyThreshold(Integer healthyThreshold) {
             this.putQueryParameter("HealthyThreshold", healthyThreshold);
@@ -441,21 +460,21 @@ public class CreateHealthCheckTemplateRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from **success** to **fail**.
-         * <p>
+         * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from <strong>success</strong> to <strong>fail</strong>.</p>
+         * <p>Valid values: <strong>2 to 10</strong>.</p>
+         * <p>Default value: <strong>3</strong>.</p>
          * 
-         * Valid values: **2 to 10**.
-         * 
-         * Default value: **3**.
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             this.putQueryParameter("UnhealthyThreshold", unhealthyThreshold);
@@ -470,11 +489,17 @@ public class CreateHealthCheckTemplateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateHealthCheckTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>CreateHealthCheckTemplateRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -509,7 +534,10 @@ public class CreateHealthCheckTemplateRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -517,7 +545,10 @@ public class CreateHealthCheckTemplateRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>product</p>
              */
             public Builder value(String value) {
                 this.value = value;

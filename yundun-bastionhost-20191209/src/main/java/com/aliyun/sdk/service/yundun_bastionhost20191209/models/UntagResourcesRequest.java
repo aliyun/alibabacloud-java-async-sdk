@@ -1,38 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UntagResourcesRequest</p>
  */
 public class UntagResourcesRequest extends Request {
-    @Query
-    @NameInMap("All")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("All")
     private Boolean all;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > resourceId;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
-    @Query
-    @NameInMap("TagKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagKey")
     private java.util.List < String > tagKey;
 
     private UntagResourcesRequest(Builder builder) {
@@ -113,11 +113,14 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to delete all tags that are added to the bastion host.
-         * <p>
+         * <p>Specifies whether to delete all tags that are added to the bastion host.</p>
+         * <ul>
+         * <li>If you specify TagKey.N, the value of this parameter can only be <strong>false</strong>, which indicates that only a specified tag is deleted.</li>
+         * <li>If you do not specify TagKey.N and the value of this parameter is <strong>true</strong>, all tags are deleted. If you do not specify TagKey.N and the value of this parameter is <strong>false</strong>, no tags are deleted.</li>
+         * </ul>
          * 
-         * *   If you specify TagKey.N, the value of this parameter can only be **false**, which indicates that only a specified tag is deleted.
-         * *   If you do not specify TagKey.N and the value of this parameter is **true**, all tags are deleted. If you do not specify TagKey.N and the value of this parameter is **false**, no tags are deleted.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -126,10 +129,14 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID of the bastion host to query.
-         * <p>
+         * <p>The region ID of the bastion host to query.</p>
+         * <blockquote>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -138,12 +145,12 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * An array that consists of IDs of bastion hosts.
-         * <p>
-         * 
-         * Valid values: 1 to 20.
-         * 
-         * > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
+         * <p>An array that consists of IDs of bastion hosts.</p>
+         * <p>Valid values: 1 to 20.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -152,10 +159,12 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource.
-         * <p>
+         * <p>The type of the resource.</p>
+         * <p>Set the value to <strong>INSTANCE</strong>, which indicates that the resource is a bastion host.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Set the value to **INSTANCE**, which indicates that the resource is a bastion host.
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -164,10 +173,8 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The key of tag N.
-         * <p>
-         * 
-         * Valid values of N: 1 to 20.
+         * <p>The key of tag N.</p>
+         * <p>Valid values of N: 1 to 20.</p>
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

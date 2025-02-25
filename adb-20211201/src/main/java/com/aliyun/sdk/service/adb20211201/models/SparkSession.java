@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SparkSession} extends {@link TeaModel}
  *
  * <p>SparkSession</p>
  */
 public class SparkSession extends TeaModel {
-    @NameInMap("Active")
+    @com.aliyun.core.annotation.NameInMap("Active")
     private String active;
 
-    @NameInMap("AliyunUid")
+    @com.aliyun.core.annotation.NameInMap("AliyunUid")
     private Long aliyunUid;
 
-    @NameInMap("SessionId")
+    @com.aliyun.core.annotation.NameInMap("SessionId")
     private Long sessionId;
 
-    @NameInMap("State")
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
     private SparkSession(Builder builder) {

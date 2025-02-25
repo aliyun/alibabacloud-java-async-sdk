@@ -1,39 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Group} extends {@link TeaModel}
  *
  * <p>Group</p>
  */
 public class Group extends TeaModel {
-    @NameInMap("AccessToken")
+    @com.aliyun.core.annotation.NameInMap("AccessToken")
     private String accessToken;
 
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("InternetEndpoint")
+    @com.aliyun.core.annotation.NameInMap("InternetEndpoint")
     private String internetEndpoint;
 
-    @NameInMap("IntranetEndpoint")
+    @com.aliyun.core.annotation.NameInMap("IntranetEndpoint")
     private String intranetEndpoint;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("QueueService")
+    @com.aliyun.core.annotation.NameInMap("QueueService")
     private String queueService;
 
-    @NameInMap("UpdateTime")
+    @com.aliyun.core.annotation.NameInMap("TrafficMode")
+    private String trafficMode;
+
+    @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
     private Group(Builder builder) {
@@ -44,6 +52,7 @@ public class Group extends TeaModel {
         this.intranetEndpoint = builder.intranetEndpoint;
         this.name = builder.name;
         this.queueService = builder.queueService;
+        this.trafficMode = builder.trafficMode;
         this.updateTime = builder.updateTime;
     }
 
@@ -105,6 +114,13 @@ public class Group extends TeaModel {
     }
 
     /**
+     * @return trafficMode
+     */
+    public String getTrafficMode() {
+        return this.trafficMode;
+    }
+
+    /**
      * @return updateTime
      */
     public String getUpdateTime() {
@@ -119,6 +135,7 @@ public class Group extends TeaModel {
         private String intranetEndpoint; 
         private String name; 
         private String queueService; 
+        private String trafficMode; 
         private String updateTime; 
 
         /**
@@ -174,6 +191,14 @@ public class Group extends TeaModel {
          */
         public Builder queueService(String queueService) {
             this.queueService = queueService;
+            return this;
+        }
+
+        /**
+         * TrafficMode.
+         */
+        public Builder trafficMode(String trafficMode) {
+            this.trafficMode = trafficMode;
             return this;
         }
 

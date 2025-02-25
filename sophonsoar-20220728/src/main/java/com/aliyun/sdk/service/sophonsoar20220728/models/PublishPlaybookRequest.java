@@ -1,25 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PublishPlaybookRequest} extends {@link RequestModel}
  *
  * <p>PublishPlaybookRequest</p>
  */
 public class PublishPlaybookRequest extends Request {
-    @Body
-    @NameInMap("Description")
-    @Validation(maxLength = 128)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String description;
 
-    @Body
-    @NameInMap("PlaybookUuid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PlaybookUuid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String playbookUuid;
 
     private PublishPlaybookRequest(Builder builder) {
@@ -70,7 +70,10 @@ public class PublishPlaybookRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description of the released version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a waf processing playbook</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -79,7 +82,14 @@ public class PublishPlaybookRequest extends Request {
         }
 
         /**
-         * PlaybookUuid.
+         * <p>The playbook UUID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to query the playbook UUID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac343acc-1a61-4084-9a1c-xxxxxxx</p>
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putBodyParameter("PlaybookUuid", playbookUuid);

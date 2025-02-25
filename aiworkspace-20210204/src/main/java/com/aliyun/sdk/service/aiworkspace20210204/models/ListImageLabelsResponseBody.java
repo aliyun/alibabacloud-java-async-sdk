@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListImageLabelsResponseBody} extends {@link TeaModel}
  *
  * <p>ListImageLabelsResponseBody</p>
  */
 public class ListImageLabelsResponseBody extends TeaModel {
-    @NameInMap("Labels")
+    @com.aliyun.core.annotation.NameInMap("Labels")
     private java.util.List < Labels> labels;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListImageLabelsResponseBody(Builder builder) {
@@ -91,11 +91,17 @@ public class ListImageLabelsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListImageLabelsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListImageLabelsResponseBody</p>
+     */
     public static class Labels extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Labels(Builder builder) {

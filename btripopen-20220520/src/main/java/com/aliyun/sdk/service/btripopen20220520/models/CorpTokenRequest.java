@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CorpTokenRequest} extends {@link RequestModel}
  *
  * <p>CorpTokenRequest</p>
  */
 public class CorpTokenRequest extends Request {
-    @Query
-    @NameInMap("app_secret")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("app_secret")
     private String appSecret;
 
-    @Query
-    @NameInMap("corp_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("corp_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String corpId;
 
-    @Query
-    @NameInMap("type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer type;
 
-    @Header
-    @NameInMap("x-acs-btrip-access-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-access-token")
     private String xAcsBtripAccessToken;
 
     private CorpTokenRequest(Builder builder) {
@@ -107,7 +112,10 @@ public class CorpTokenRequest extends Request {
         }
 
         /**
-         * corp_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>open324dfsdafsgcxvxv</p>
          */
         public Builder corpId(String corpId) {
             this.putQueryParameter("corp_id", corpId);
@@ -116,7 +124,10 @@ public class CorpTokenRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder type(Integer type) {
             this.putQueryParameter("type", type);

@@ -1,50 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelImagePipelineExecutionRequest} extends {@link RequestModel}
  *
  * <p>CancelImagePipelineExecutionRequest</p>
  */
 public class CancelImagePipelineExecutionRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("ExecutionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExecutionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String executionId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TemplateTag")
-    private java.util.List < TemplateTag> templateTag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateTag")
+    private java.util.List<TemplateTag> templateTag;
 
     private CancelImagePipelineExecutionRequest(Builder builder) {
         super(builder);
@@ -123,7 +128,7 @@ public class CancelImagePipelineExecutionRequest extends Request {
     /**
      * @return templateTag
      */
-    public java.util.List < TemplateTag> getTemplateTag() {
+    public java.util.List<TemplateTag> getTemplateTag() {
         return this.templateTag;
     }
 
@@ -135,7 +140,7 @@ public class CancelImagePipelineExecutionRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < TemplateTag> templateTag; 
+        private java.util.List<TemplateTag> templateTag; 
 
         private Builder() {
             super();
@@ -163,7 +168,11 @@ public class CancelImagePipelineExecutionRequest extends Request {
         }
 
         /**
-         * The ID of the image build task.
+         * <p>The ID of the image building task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exec-5fb8facb8ed7427c****</p>
          */
         public Builder executionId(String executionId) {
             this.putQueryParameter("ExecutionId", executionId);
@@ -190,7 +199,11 @@ public class CancelImagePipelineExecutionRequest extends Request {
         }
 
         /**
-         * The region ID of the image build task. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -217,9 +230,11 @@ public class CancelImagePipelineExecutionRequest extends Request {
         }
 
         /**
-         * > This parameter is deprecated.
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
          */
-        public Builder templateTag(java.util.List < TemplateTag> templateTag) {
+        public Builder templateTag(java.util.List<TemplateTag> templateTag) {
             this.putQueryParameter("TemplateTag", templateTag);
             this.templateTag = templateTag;
             return this;
@@ -232,11 +247,17 @@ public class CancelImagePipelineExecutionRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CancelImagePipelineExecutionRequest} extends {@link TeaModel}
+     *
+     * <p>CancelImagePipelineExecutionRequest</p>
+     */
     public static class TemplateTag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private TemplateTag(Builder builder) {
@@ -271,7 +292,12 @@ public class CancelImagePipelineExecutionRequest extends Request {
             private String value; 
 
             /**
-             * >  This parameter is deprecated.
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -279,7 +305,12 @@ public class CancelImagePipelineExecutionRequest extends Request {
             }
 
             /**
-             * >  This parameter is deprecated.
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder value(String value) {
                 this.value = value;

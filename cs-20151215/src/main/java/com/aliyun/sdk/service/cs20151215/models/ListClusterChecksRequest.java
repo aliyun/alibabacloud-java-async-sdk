@@ -1,28 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClusterChecksRequest} extends {@link RequestModel}
  *
  * <p>ListClusterChecksRequest</p>
  */
 public class ListClusterChecksRequest extends Request {
-    @Path
-    @NameInMap("cluster_id")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("cluster_id")
     private String clusterId;
 
-    @Query
-    @NameInMap("type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("target")
+    private String target;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
     private ListClusterChecksRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
+        this.target = builder.target;
         this.type = builder.type;
     }
 
@@ -47,6 +57,13 @@ public class ListClusterChecksRequest extends Request {
     }
 
     /**
+     * @return target
+     */
+    public String getTarget() {
+        return this.target;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -55,6 +72,7 @@ public class ListClusterChecksRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListClusterChecksRequest, Builder> {
         private String clusterId; 
+        private String target; 
         private String type; 
 
         private Builder() {
@@ -64,11 +82,15 @@ public class ListClusterChecksRequest extends Request {
         private Builder(ListClusterChecksRequest request) {
             super(request);
             this.clusterId = request.clusterId;
+            this.target = request.target;
             this.type = request.type;
         } 
 
         /**
-         * cluster_id.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ce0da5a1d627e4e9e9f96cae8ad07****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -77,7 +99,22 @@ public class ListClusterChecksRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>The targets to check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-bp19ay6nnvd4cexxxx</p>
+         */
+        public Builder target(String target) {
+            this.putQueryParameter("target", target);
+            this.target = target;
+            return this;
+        }
+
+        /**
+         * <p>The check method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ClusterUpgrade</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

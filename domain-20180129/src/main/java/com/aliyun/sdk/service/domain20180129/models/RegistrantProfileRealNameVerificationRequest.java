@@ -1,43 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RegistrantProfileRealNameVerificationRequest} extends {@link RequestModel}
  *
  * <p>RegistrantProfileRealNameVerificationRequest</p>
  */
 public class RegistrantProfileRealNameVerificationRequest extends Request {
-    @Body
-    @NameInMap("IdentityCredential")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IdentityCredential")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String identityCredential;
 
-    @Query
-    @NameInMap("IdentityCredentialNo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdentityCredentialNo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String identityCredentialNo;
 
-    @Query
-    @NameInMap("IdentityCredentialType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdentityCredentialType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String identityCredentialType;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("RegistrantProfileID")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegistrantProfileID")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long registrantProfileID;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
     private RegistrantProfileRealNameVerificationRequest(Builder builder) {
@@ -128,7 +128,10 @@ public class RegistrantProfileRealNameVerificationRequest extends Request {
         } 
 
         /**
-         * IdentityCredential.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dGVzdA==</p>
          */
         public Builder identityCredential(String identityCredential) {
             this.putBodyParameter("IdentityCredential", identityCredential);
@@ -137,7 +140,10 @@ public class RegistrantProfileRealNameVerificationRequest extends Request {
         }
 
         /**
-         * IdentityCredentialNo.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43012512345678****</p>
          */
         public Builder identityCredentialNo(String identityCredentialNo) {
             this.putQueryParameter("IdentityCredentialNo", identityCredentialNo);
@@ -146,7 +152,10 @@ public class RegistrantProfileRealNameVerificationRequest extends Request {
         }
 
         /**
-         * IdentityCredentialType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SFZ</p>
          */
         public Builder identityCredentialType(String identityCredentialType) {
             this.putQueryParameter("IdentityCredentialType", identityCredentialType);
@@ -164,7 +173,10 @@ public class RegistrantProfileRealNameVerificationRequest extends Request {
         }
 
         /**
-         * RegistrantProfileID.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567</p>
          */
         public Builder registrantProfileID(Long registrantProfileID) {
             this.putQueryParameter("RegistrantProfileID", registrantProfileID);

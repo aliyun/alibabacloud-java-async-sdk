@@ -1,122 +1,127 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSnapshotsRequest} extends {@link RequestModel}
  *
  * <p>DescribeSnapshotsRequest</p>
  */
 public class DescribeSnapshotsRequest extends Request {
-    @Query
-    @NameInMap("Filter")
-    private java.util.List < Filter> filter;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
+    private java.util.List<Filter> filter;
 
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("Category")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Category")
     private String category;
 
-    @Query
-    @NameInMap("DiskId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskId")
     private String diskId;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("Encrypted")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Encrypted")
     private Boolean encrypted;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("KMSKeyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KMSKeyId")
     private String KMSKeyId;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SnapshotIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotIds")
     private String snapshotIds;
 
-    @Query
-    @NameInMap("SnapshotLinkId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotLinkId")
     private String snapshotLinkId;
 
-    @Query
-    @NameInMap("SnapshotName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotName")
     private String snapshotName;
 
-    @Query
-    @NameInMap("SnapshotType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotType")
     private String snapshotType;
 
-    @Query
-    @NameInMap("SourceDiskType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceDiskType")
     private String sourceDiskType;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Query
-    @NameInMap("Usage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Usage")
     private String usage;
 
     private DescribeSnapshotsRequest(Builder builder) {
@@ -165,7 +170,7 @@ public class DescribeSnapshotsRequest extends Request {
     /**
      * @return filter
      */
-    public java.util.List < Filter> getFilter() {
+    public java.util.List<Filter> getFilter() {
         return this.filter;
     }
 
@@ -333,7 +338,7 @@ public class DescribeSnapshotsRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -345,7 +350,7 @@ public class DescribeSnapshotsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeSnapshotsRequest, Builder> {
-        private java.util.List < Filter> filter; 
+        private java.util.List<Filter> filter; 
         private String sourceRegionId; 
         private String category; 
         private String diskId; 
@@ -369,7 +374,7 @@ public class DescribeSnapshotsRequest extends Request {
         private String snapshotType; 
         private String sourceDiskType; 
         private String status; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String usage; 
 
         private Builder() {
@@ -409,7 +414,7 @@ public class DescribeSnapshotsRequest extends Request {
         /**
          * Filter.
          */
-        public Builder filter(java.util.List < Filter> filter) {
+        public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
             return this;
@@ -425,18 +430,22 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The type of the snapshot. Valid values:
-         * <p>
+         * <p>The category of the snapshot. Valid values:</p>
+         * <ul>
+         * <li><p>Standard: standard snapshot.</p>
+         * </li>
+         * <li><p>Flash: local snapshot. This value will be deprecated. The local snapshot feature is replaced by the instant access feature. When you specify this parameter, take note of the following items:</p>
+         * <ul>
+         * <li>If you have used local snapshots before December 14, 2020, you can use this parameter.</li>
+         * <li>If you have not used local snapshots before December 14, 2020, you cannot use this parameter.</li>
+         * </ul>
+         * </li>
+         * <li><p>archive: archive snapshot.</p>
+         * </li>
+         * </ul>
          * 
-         * *   Standard: normal snapshot
-         * *   Flash: local snapshot
-         * 
-         * The local snapshot feature is replaced by the instant access feature. When you configure this parameter, take note of the following items:
-         * 
-         * *   If you have used local snapshots before December 14, 2020, you can use this parameter.
-         * *   If you have not used local snapshots before December 14, 2020, you cannot use this parameter.
-         * 
-         * > This parameter will be deprecated in the future. We recommend that you use other parameters to ensure future compatibility.
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -445,7 +454,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The disk ID.
+         * <p>The disk ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-bp67acfmxazb4p****</p>
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -454,11 +466,14 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li>true: performs only a dry run. The system checks your AccessKey pair, the permissions of the RAM user, and the required parameters. If the request passes the dry run, the DryRunOperation error code is returned. Otherwise, an error message is returned.</li>
+         * <li>false (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   true: performs only a dry run. The system checks your AccessKey pair, the permissions of the RAM user, and the required parameters. If the request passes the dry run, the DryRunOperation error code is returned. Otherwise, an error message is returned.
-         * *   false (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -467,7 +482,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * Specifies whether the snapshot is encrypted. Default value: false.
+         * <p>Specifies whether the snapshot is encrypted. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder encrypted(Boolean encrypted) {
             this.putQueryParameter("Encrypted", encrypted);
@@ -476,7 +494,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The ID of the instance whose cloud disk snapshots you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4p****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -485,7 +506,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The ID of the Key Management Service (KMS) key that is used for the data disk.
+         * <p>The ID of the Key Management Service (KMS) key that is used for the data disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
          */
         public Builder KMSKeyId(String KMSKeyId) {
             this.putQueryParameter("KMSKeyId", KMSKeyId);
@@ -494,10 +518,11 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries per page. Maximum value: 1 to 100.
-         * <p>
+         * <p>The maximum number of entries per page. Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -506,7 +531,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -533,10 +561,12 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1.
-         * <p>
+         * <blockquote>
+         * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+         * </blockquote>
          * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -545,10 +575,12 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 100.
-         * <p>
+         * <blockquote>
+         * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+         * </blockquote>
          * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -557,7 +589,11 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The region ID of the disk. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the disk. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -566,10 +602,13 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The resource group ID. If you configure this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
-         * <p>
+         * <p>The resource group ID. If you configure this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
+         * <blockquote>
+         * <p>Resources in the default resource group are displayed in the response regardless of whether you configure this parameter.</p>
+         * </blockquote>
          * 
-         * > Resources in the default resource group are displayed in the response regardless of whether you configure this parameter.
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -596,7 +635,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The IDs of snapshots. You can specify a JSON array that consists of up to 100 snapshot IDs. Separate the snapshot IDs with commas (,).
+         * <p>The IDs of snapshots. You can specify a JSON array that consists of up to 100 snapshot IDs. Separate the snapshot IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;s-bp67acfmxazb4p****&quot;, &quot;s-bp67acfmxazb5p****&quot;, … &quot;s-bp67acfmxazb6p****&quot;]</p>
          */
         public Builder snapshotIds(String snapshotIds) {
             this.putQueryParameter("SnapshotIds", snapshotIds);
@@ -605,7 +647,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The snapshot chain ID. You can specify a JSON array that contains up to 100 snapshot chain IDs. Separate the snapshot chain IDs with commas (,).
+         * <p>The snapshot chain ID. You can specify a JSON array that contains up to 100 snapshot chain IDs. Separate the snapshot chain IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;sl-bp1grgphbcc9brb5****&quot;, &quot;sl-bp1c4izumvq0i5bs****&quot;, … &quot;sl-bp1akk7isz866dds****&quot;]</p>
          */
         public Builder snapshotLinkId(String snapshotLinkId) {
             this.putQueryParameter("SnapshotLinkId", snapshotLinkId);
@@ -614,7 +659,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The name of the snapshot.
+         * <p>The name of the snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testSnapshotName</p>
          */
         public Builder snapshotName(String snapshotName) {
             this.putQueryParameter("SnapshotName", snapshotName);
@@ -623,12 +671,15 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The type of the snapshot. Valid values:
-         * <p>
+         * <p>The type of the snapshot. Valid values:</p>
+         * <ul>
+         * <li>auto: automatic snapshot</li>
+         * <li>user: manual snapshot</li>
+         * <li>all (default): all snapshot types</li>
+         * </ul>
          * 
-         * *   auto: automatic snapshot
-         * *   user: manual snapshot
-         * *   all (default): all snapshot types
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder snapshotType(String snapshotType) {
             this.putQueryParameter("SnapshotType", snapshotType);
@@ -637,13 +688,17 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The type of the source disk. Valid values:
-         * <p>
+         * <p>The source disk type of the snapshot. Valid values:</p>
+         * <ul>
+         * <li>system: system disk.</li>
+         * <li>data: data disk.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The value of this parameter is case-insensitive.</p>
+         * </blockquote>
          * 
-         * *   System: system disk
-         * *   data: data disk
-         * 
-         * > The value of this parameter is case-insensitive.
+         * <strong>example:</strong>
+         * <p>Data</p>
          */
         public Builder sourceDiskType(String sourceDiskType) {
             this.putQueryParameter("SourceDiskType", sourceDiskType);
@@ -652,13 +707,16 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The status of the snapshot. Valid values:
-         * <p>
+         * <p>The status of the snapshot. Valid values:</p>
+         * <ul>
+         * <li>progressing: The snapshot is being created.</li>
+         * <li>accomplished: The snapshot is created.</li>
+         * <li>failed: The snapshot fails to be created.</li>
+         * <li>all (default): This value indicates all snapshot states.</li>
+         * </ul>
          * 
-         * *   progressing: The snapshot is being created.
-         * *   accomplished: The snapshot is created.
-         * *   failed: The snapshot fails to be created.
-         * *   all (default): This value indicates all snapshot states.
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -667,22 +725,25 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags of the snapshot.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * Specifies whether the snapshot has been used to create custom images or disks. Valid values:
-         * <p>
+         * <p>Specifies whether the snapshot has been used to create custom images or disks. Valid values:</p>
+         * <ul>
+         * <li>image: The snapshot has been used to create custom images.</li>
+         * <li>disk: The snapshot has been used to create disks.</li>
+         * <li>image_disk: The snapshot has been used to create both custom images and data disks.</li>
+         * <li>none: The snapshot has not been used to create custom images or disks.</li>
+         * </ul>
          * 
-         * *   image: The snapshot has been used to create custom images.
-         * *   disk: The snapshot has been used to create disks.
-         * *   image_disk: The snapshot has been used to create both custom images and data disks.
-         * *   none: The snapshot has not been used to create custom images or disks.
+         * <strong>example:</strong>
+         * <p>none</p>
          */
         public Builder usage(String usage) {
             this.putQueryParameter("Usage", usage);
@@ -697,11 +758,17 @@ public class DescribeSnapshotsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSnapshotsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeSnapshotsRequest</p>
+     */
     public static class Filter extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Filter(Builder builder) {
@@ -736,7 +803,10 @@ public class DescribeSnapshotsRequest extends Request {
             private String value; 
 
             /**
-             * The key of filter 1 that is used to query resources. Set the value to `CreationStartTime`. You can specify a time by configuring both `Filter.1.Key` and `Filter.1.Value` to query resources that were created after the time.
+             * <p>The key of filter 1 that is used to query resources. Set the value to <code>CreationStartTime</code>. You can specify a time by configuring both <code>Filter.1.Key</code> and <code>Filter.1.Value</code> to query resources that were created after the time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CreationStartTime</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -744,7 +814,10 @@ public class DescribeSnapshotsRequest extends Request {
             }
 
             /**
-             * The value of filter 1 that is used to query resources. Set the value to a time. If you configure this parameter, you must also configure `Filter.1.Key`. Specify the time in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.
+             * <p>The value of filter 1 that is used to query resources. Set the value to a time. If you configure this parameter, you must also configure <code>Filter.1.Key</code>. Specify the time in the <code>yyyy-MM-ddTHH:mmZ</code> format. The time must be in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-12-13T17:00Z</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -758,11 +831,17 @@ public class DescribeSnapshotsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSnapshotsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeSnapshotsRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -797,10 +876,11 @@ public class DescribeSnapshotsRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the snapshot. Valid values of N: 1 to 20.
-             * <p>
+             * <p>The key of tag N of the snapshot. Valid values of N: 1 to 20</p>
+             * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added are returned. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added are returned. To query more than 1,000 resources with the specified tags, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
              * 
-             * Up to 1,000 resources that match the tags specified can be returned in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -808,7 +888,10 @@ public class DescribeSnapshotsRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the snapshot. Valid values of N: 1 to 20.
+             * <p>The value of tag N of the snapshot. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

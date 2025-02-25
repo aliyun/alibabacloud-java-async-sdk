@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeStoragePackagesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeStoragePackagesResponseBody</p>
  */
 public class DescribeStoragePackagesResponseBody extends TeaModel {
-    @NameInMap("Packages")
+    @com.aliyun.core.annotation.NameInMap("Packages")
     private Packages packages;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeStoragePackagesResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeStoragePackagesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Packages.
+         * <p>The list of storage plans.</p>
          */
         public Builder packages(Packages packages) {
             this.packages = packages;
@@ -94,7 +99,10 @@ public class DescribeStoragePackagesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeStoragePackagesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of storage plans returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeStoragePackagesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>035B3A3A-E514-4B41-B906-5D906CFB****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeStoragePackagesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The number of storage plans.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,26 +148,32 @@ public class DescribeStoragePackagesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeStoragePackagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeStoragePackagesResponseBody</p>
+     */
     public static class Package extends TeaModel {
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("FileSystemId")
+        @com.aliyun.core.annotation.NameInMap("FileSystemId")
         private String fileSystemId;
 
-        @NameInMap("PackageId")
+        @com.aliyun.core.annotation.NameInMap("PackageId")
         private String packageId;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StorageType")
+        @com.aliyun.core.annotation.NameInMap("StorageType")
         private String storageType;
 
         private Package(Builder builder) {
@@ -230,7 +253,10 @@ public class DescribeStoragePackagesResponseBody extends TeaModel {
             private String storageType; 
 
             /**
-             * ExpiredTime.
+             * <p>The end time of the validity period for the storage plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-01-05T16:00:00Z</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -238,7 +264,10 @@ public class DescribeStoragePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemId.
+             * <p>The ID of the file system that is bound to the storage plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>109c****66</p>
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -246,7 +275,10 @@ public class DescribeStoragePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * PackageId.
+             * <p>The ID of the storage plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>naspackage-@string(&quot;*****&quot;, *)-@string(&quot;*****&quot;, *)</p>
              */
             public Builder packageId(String packageId) {
                 this.packageId = packageId;
@@ -254,7 +286,11 @@ public class DescribeStoragePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The capacity of the storage plan.</p>
+             * <p>Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -262,7 +298,10 @@ public class DescribeStoragePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the validity period for the storage plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-12-05T01:40:56Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -270,7 +309,15 @@ public class DescribeStoragePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the storage plan.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>free: The storage plan is not bound to a file system. You can bind the storage plan to a file system of the same storage type.</li>
+             * <li>bound: The storage plan is bound to a file system.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>free</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -278,7 +325,15 @@ public class DescribeStoragePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * StorageType.
+             * <p>The type of the storage plan.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Performance</li>
+             * <li>Capacity</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Capacity</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -292,9 +347,15 @@ public class DescribeStoragePackagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeStoragePackagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeStoragePackagesResponseBody</p>
+     */
     public static class Packages extends TeaModel {
-        @NameInMap("Package")
-        private java.util.List < Package> _package;
+        @com.aliyun.core.annotation.NameInMap("Package")
+        private java.util.List<Package> _package;
 
         private Packages(Builder builder) {
             this._package = builder._package;
@@ -311,17 +372,17 @@ public class DescribeStoragePackagesResponseBody extends TeaModel {
         /**
          * @return _package
          */
-        public java.util.List < Package> get_package() {
+        public java.util.List<Package> get_package() {
             return this._package;
         }
 
         public static final class Builder {
-            private java.util.List < Package> _package; 
+            private java.util.List<Package> _package; 
 
             /**
              * Package.
              */
-            public Builder _package(java.util.List < Package> _package) {
+            public Builder _package(java.util.List<Package> _package) {
                 this._package = _package;
                 return this;
             }

@@ -1,90 +1,95 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCampaignRequest} extends {@link RequestModel}
  *
  * <p>CreateCampaignRequest</p>
  */
 public class CreateCampaignRequest extends Request {
-    @Query
-    @NameInMap("CallableTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallableTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String callableTime;
 
-    @Query
-    @NameInMap("CaseFileKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CaseFileKey")
     private String caseFileKey;
 
-    @Query
-    @NameInMap("CaseList")
-    private java.util.List < CaseList> caseList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CaseList")
+    private java.util.List<CaseList> caseList;
 
-    @Query
-    @NameInMap("ContactFlowId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactFlowId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String contactFlowId;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("ExecutingUntilTimeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExecutingUntilTimeout")
     private Boolean executingUntilTimeout;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("MaxAttemptCount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxAttemptCount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long maxAttemptCount;
 
-    @Query
-    @NameInMap("MinAttemptInterval")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinAttemptInterval")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long minAttemptInterval;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("QueueId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueueId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String queueId;
 
-    @Query
-    @NameInMap("Simulation")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Simulation")
     private Boolean simulation;
 
-    @Query
-    @NameInMap("SimulationParameters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SimulationParameters")
     private String simulationParameters;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
-    @Query
-    @NameInMap("StrategyParameters")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyParameters")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String strategyParameters;
 
-    @Query
-    @NameInMap("StrategyType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String strategyType;
 
     private CreateCampaignRequest(Builder builder) {
@@ -137,7 +142,7 @@ public class CreateCampaignRequest extends Request {
     /**
      * @return caseList
      */
-    public java.util.List < CaseList> getCaseList() {
+    public java.util.List<CaseList> getCaseList() {
         return this.caseList;
     }
 
@@ -235,7 +240,7 @@ public class CreateCampaignRequest extends Request {
     public static final class Builder extends Request.Builder<CreateCampaignRequest, Builder> {
         private String callableTime; 
         private String caseFileKey; 
-        private java.util.List < CaseList> caseList; 
+        private java.util.List<CaseList> caseList; 
         private String contactFlowId; 
         private String endTime; 
         private Boolean executingUntilTimeout; 
@@ -275,7 +280,10 @@ public class CreateCampaignRequest extends Request {
         } 
 
         /**
-         * CallableTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;beginTime&quot;:&quot;00:00:00&quot;,&quot;endTime&quot;:&quot;23:00:00&quot; }]</p>
          */
         public Builder callableTime(String callableTime) {
             this.putQueryParameter("CallableTime", callableTime);
@@ -295,7 +303,7 @@ public class CreateCampaignRequest extends Request {
         /**
          * CaseList.
          */
-        public Builder caseList(java.util.List < CaseList> caseList) {
+        public Builder caseList(java.util.List<CaseList> caseList) {
             String caseListShrink = shrink(caseList, "CaseList", "json");
             this.putQueryParameter("CaseList", caseListShrink);
             this.caseList = caseList;
@@ -303,7 +311,10 @@ public class CreateCampaignRequest extends Request {
         }
 
         /**
-         * ContactFlowId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c1f2bc75-422e-43c7-9c9d9d95633a</p>
          */
         public Builder contactFlowId(String contactFlowId) {
             this.putQueryParameter("ContactFlowId", contactFlowId);
@@ -312,7 +323,10 @@ public class CreateCampaignRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1634313600000</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -330,7 +344,10 @@ public class CreateCampaignRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -339,7 +356,10 @@ public class CreateCampaignRequest extends Request {
         }
 
         /**
-         * MaxAttemptCount.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder maxAttemptCount(Long maxAttemptCount) {
             this.putQueryParameter("MaxAttemptCount", maxAttemptCount);
@@ -348,7 +368,10 @@ public class CreateCampaignRequest extends Request {
         }
 
         /**
-         * MinAttemptInterval.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder minAttemptInterval(Long minAttemptInterval) {
             this.putQueryParameter("MinAttemptInterval", minAttemptInterval);
@@ -357,7 +380,10 @@ public class CreateCampaignRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-campaign</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -366,7 +392,10 @@ public class CreateCampaignRequest extends Request {
         }
 
         /**
-         * QueueId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>skillgroup@ccc-test</p>
          */
         public Builder queueId(String queueId) {
             this.putQueryParameter("QueueId", queueId);
@@ -393,7 +422,10 @@ public class CreateCampaignRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1634140800000</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -402,7 +434,10 @@ public class CreateCampaignRequest extends Request {
         }
 
         /**
-         * StrategyParameters.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ratio&quot;:1}</p>
          */
         public Builder strategyParameters(String strategyParameters) {
             this.putQueryParameter("StrategyParameters", strategyParameters);
@@ -411,7 +446,10 @@ public class CreateCampaignRequest extends Request {
         }
 
         /**
-         * StrategyType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PACING</p>
          */
         public Builder strategyType(String strategyType) {
             this.putQueryParameter("StrategyType", strategyType);
@@ -426,14 +464,20 @@ public class CreateCampaignRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateCampaignRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCampaignRequest</p>
+     */
     public static class CaseList extends TeaModel {
-        @NameInMap("CustomVariables")
+        @com.aliyun.core.annotation.NameInMap("CustomVariables")
         private String customVariables;
 
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
-        @NameInMap("ReferenceId")
+        @com.aliyun.core.annotation.NameInMap("ReferenceId")
         private String referenceId;
 
         private CaseList(Builder builder) {

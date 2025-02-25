@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHistoryTasksStatResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHistoryTasksStatResponseBody</p>
  */
 public class DescribeHistoryTasksStatResponseBody extends TeaModel {
-    @NameInMap("Items")
-    private java.util.List < Items> items;
+    @com.aliyun.core.annotation.NameInMap("Items")
+    private java.util.List<Items> items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeHistoryTasksStatResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -46,19 +51,22 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private String requestId; 
 
         /**
-         * Items.
+         * <p>The task objects.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FC724D23-XXXX-XXXX-ABB1-606C935AE7FD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHistoryTasksStatResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHistoryTasksStatResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Items(Builder builder) {
@@ -110,7 +124,19 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Status.
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li>Scheduled: The task is waiting to be executed.</li>
+             * <li>Running: The task is running.</li>
+             * <li>Succeed: The task is successful.</li>
+             * <li>Failed: The task failed.</li>
+             * <li>Cancelling: The task is being terminated.</li>
+             * <li>Canceled: The task has been terminated.</li>
+             * <li>Waiting: The task is waiting for scheduled time.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Succeed</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -118,7 +144,10 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The number of tasks in a specified state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

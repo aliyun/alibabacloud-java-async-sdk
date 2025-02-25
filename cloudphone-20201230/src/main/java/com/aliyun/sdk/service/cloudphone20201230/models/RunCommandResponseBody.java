@@ -50,7 +50,7 @@ public class RunCommandResponseBody extends TeaModel {
         private TaskId taskId; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class RunCommandResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The task IDs.
          */
         public Builder taskId(TaskId taskId) {
             this.taskId = taskId;
@@ -98,7 +98,7 @@ public class RunCommandResponseBody extends TeaModel {
             private java.util.List < String > taskId; 
 
             /**
-             * TaskId.
+             * The task IDs.
              */
             public Builder taskId(java.util.List < String > taskId) {
                 this.taskId = taskId;

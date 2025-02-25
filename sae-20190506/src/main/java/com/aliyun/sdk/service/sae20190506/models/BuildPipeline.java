@@ -1,44 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BuildPipeline} extends {@link TeaModel}
  *
  * <p>BuildPipeline</p>
  */
 public class BuildPipeline extends TeaModel {
-    @NameInMap("ApplicationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("ApplicationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String applicationId;
 
-    @NameInMap("ApplicationName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("ApplicationName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String applicationName;
 
-    @NameInMap("BuildConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("BuildConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private BuildConfig buildConfig;
 
-    @NameInMap("CodeConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("CodeConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private CodeConfig codeConfig;
 
-    @NameInMap("DeployConfig")
+    @com.aliyun.core.annotation.NameInMap("DeployConfig")
     private DeployConfig deployConfig;
 
-    @NameInMap("Enabled")
+    @com.aliyun.core.annotation.NameInMap("Enabled")
     private Boolean enabled;
 
-    @NameInMap("ImageConfig")
+    @com.aliyun.core.annotation.NameInMap("ImageConfig")
     private ImageConfig imageConfig;
 
-    @NameInMap("TriggerConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("PackageConfig")
+    private PackageConfig packageConfig;
+
+    @com.aliyun.core.annotation.NameInMap("TriggerConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private TriggerConfig triggerConfig;
 
     private BuildPipeline(Builder builder) {
@@ -49,6 +57,7 @@ public class BuildPipeline extends TeaModel {
         this.deployConfig = builder.deployConfig;
         this.enabled = builder.enabled;
         this.imageConfig = builder.imageConfig;
+        this.packageConfig = builder.packageConfig;
         this.triggerConfig = builder.triggerConfig;
     }
 
@@ -110,6 +119,13 @@ public class BuildPipeline extends TeaModel {
     }
 
     /**
+     * @return packageConfig
+     */
+    public PackageConfig getPackageConfig() {
+        return this.packageConfig;
+    }
+
+    /**
      * @return triggerConfig
      */
     public TriggerConfig getTriggerConfig() {
@@ -124,10 +140,11 @@ public class BuildPipeline extends TeaModel {
         private DeployConfig deployConfig; 
         private Boolean enabled; 
         private ImageConfig imageConfig; 
+        private PackageConfig packageConfig; 
         private TriggerConfig triggerConfig; 
 
         /**
-         * ApplicationId.
+         * <p>This parameter is required.</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -135,7 +152,7 @@ public class BuildPipeline extends TeaModel {
         }
 
         /**
-         * ApplicationName.
+         * <p>This parameter is required.</p>
          */
         public Builder applicationName(String applicationName) {
             this.applicationName = applicationName;
@@ -143,7 +160,7 @@ public class BuildPipeline extends TeaModel {
         }
 
         /**
-         * BuildConfig.
+         * <p>This parameter is required.</p>
          */
         public Builder buildConfig(BuildConfig buildConfig) {
             this.buildConfig = buildConfig;
@@ -151,7 +168,7 @@ public class BuildPipeline extends TeaModel {
         }
 
         /**
-         * CodeConfig.
+         * <p>This parameter is required.</p>
          */
         public Builder codeConfig(CodeConfig codeConfig) {
             this.codeConfig = codeConfig;
@@ -183,7 +200,15 @@ public class BuildPipeline extends TeaModel {
         }
 
         /**
-         * TriggerConfig.
+         * PackageConfig.
+         */
+        public Builder packageConfig(PackageConfig packageConfig) {
+            this.packageConfig = packageConfig;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
          */
         public Builder triggerConfig(TriggerConfig triggerConfig) {
             this.triggerConfig = triggerConfig;
@@ -196,21 +221,36 @@ public class BuildPipeline extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BuildPipeline} extends {@link TeaModel}
+     *
+     * <p>BuildPipeline</p>
+     */
     public static class BuildConfig extends TeaModel {
-        @NameInMap("BeforeBuildCommand")
+        @com.aliyun.core.annotation.NameInMap("BeforeBuildCommand")
         private String beforeBuildCommand;
 
-        @NameInMap("BuildType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("BuildType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String buildType;
 
-        @NameInMap("DockerfilePath")
+        @com.aliyun.core.annotation.NameInMap("DockerfilePath")
         private String dockerfilePath;
 
-        @NameInMap("RunCommand")
+        @com.aliyun.core.annotation.NameInMap("RunCommand")
         private String runCommand;
 
-        @NameInMap("WorkingDir")
+        @com.aliyun.core.annotation.NameInMap("RuntimeType")
+        private String runtimeType;
+
+        @com.aliyun.core.annotation.NameInMap("RuntimeVersion")
+        private String runtimeVersion;
+
+        @com.aliyun.core.annotation.NameInMap("TomcatConfig")
+        private TomcatConfig tomcatConfig;
+
+        @com.aliyun.core.annotation.NameInMap("WorkingDir")
         private String workingDir;
 
         private BuildConfig(Builder builder) {
@@ -218,6 +258,9 @@ public class BuildPipeline extends TeaModel {
             this.buildType = builder.buildType;
             this.dockerfilePath = builder.dockerfilePath;
             this.runCommand = builder.runCommand;
+            this.runtimeType = builder.runtimeType;
+            this.runtimeVersion = builder.runtimeVersion;
+            this.tomcatConfig = builder.tomcatConfig;
             this.workingDir = builder.workingDir;
         }
 
@@ -258,6 +301,27 @@ public class BuildPipeline extends TeaModel {
         }
 
         /**
+         * @return runtimeType
+         */
+        public String getRuntimeType() {
+            return this.runtimeType;
+        }
+
+        /**
+         * @return runtimeVersion
+         */
+        public String getRuntimeVersion() {
+            return this.runtimeVersion;
+        }
+
+        /**
+         * @return tomcatConfig
+         */
+        public TomcatConfig getTomcatConfig() {
+            return this.tomcatConfig;
+        }
+
+        /**
          * @return workingDir
          */
         public String getWorkingDir() {
@@ -269,6 +333,9 @@ public class BuildPipeline extends TeaModel {
             private String buildType; 
             private String dockerfilePath; 
             private String runCommand; 
+            private String runtimeType; 
+            private String runtimeVersion; 
+            private TomcatConfig tomcatConfig; 
             private String workingDir; 
 
             /**
@@ -280,7 +347,10 @@ public class BuildPipeline extends TeaModel {
             }
 
             /**
-             * BuildType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>buildpacks/dockerfile</p>
              */
             public Builder buildType(String buildType) {
                 this.buildType = buildType;
@@ -304,6 +374,30 @@ public class BuildPipeline extends TeaModel {
             }
 
             /**
+             * RuntimeType.
+             */
+            public Builder runtimeType(String runtimeType) {
+                this.runtimeType = runtimeType;
+                return this;
+            }
+
+            /**
+             * RuntimeVersion.
+             */
+            public Builder runtimeVersion(String runtimeVersion) {
+                this.runtimeVersion = runtimeVersion;
+                return this;
+            }
+
+            /**
+             * TomcatConfig.
+             */
+            public Builder tomcatConfig(TomcatConfig tomcatConfig) {
+                this.tomcatConfig = tomcatConfig;
+                return this;
+            }
+
+            /**
              * WorkingDir.
              */
             public Builder workingDir(String workingDir) {
@@ -318,31 +412,40 @@ public class BuildPipeline extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BuildPipeline} extends {@link TeaModel}
+     *
+     * <p>BuildPipeline</p>
+     */
     public static class CodeConfig extends TeaModel {
-        @NameInMap("AccountId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("AccountId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String accountId;
 
-        @NameInMap("BranchName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("BranchName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String branchName;
 
-        @NameInMap("CommitId")
+        @com.aliyun.core.annotation.NameInMap("CommitId")
         private String commitId;
 
-        @NameInMap("CommitUrl")
+        @com.aliyun.core.annotation.NameInMap("CommitUrl")
         private String commitUrl;
 
-        @NameInMap("Provider")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("OrganizationId")
+        private String organizationId;
+
+        @com.aliyun.core.annotation.NameInMap("Provider")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String provider;
 
-        @NameInMap("RepoFullName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("RepoFullName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String repoFullName;
 
-        @NameInMap("RepoId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("RepoId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String repoId;
 
         private CodeConfig(Builder builder) {
@@ -350,6 +453,7 @@ public class BuildPipeline extends TeaModel {
             this.branchName = builder.branchName;
             this.commitId = builder.commitId;
             this.commitUrl = builder.commitUrl;
+            this.organizationId = builder.organizationId;
             this.provider = builder.provider;
             this.repoFullName = builder.repoFullName;
             this.repoId = builder.repoId;
@@ -392,6 +496,13 @@ public class BuildPipeline extends TeaModel {
         }
 
         /**
+         * @return organizationId
+         */
+        public String getOrganizationId() {
+            return this.organizationId;
+        }
+
+        /**
          * @return provider
          */
         public String getProvider() {
@@ -417,12 +528,16 @@ public class BuildPipeline extends TeaModel {
             private String branchName; 
             private String commitId; 
             private String commitUrl; 
+            private String organizationId; 
             private String provider; 
             private String repoFullName; 
             private String repoId; 
 
             /**
-             * AccountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -430,7 +545,10 @@ public class BuildPipeline extends TeaModel {
             }
 
             /**
-             * BranchName.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>master</p>
              */
             public Builder branchName(String branchName) {
                 this.branchName = branchName;
@@ -454,7 +572,18 @@ public class BuildPipeline extends TeaModel {
             }
 
             /**
-             * Provider.
+             * OrganizationId.
+             */
+            public Builder organizationId(String organizationId) {
+                this.organizationId = organizationId;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>github/gitee/gitlab等</p>
              */
             public Builder provider(String provider) {
                 this.provider = provider;
@@ -462,7 +591,10 @@ public class BuildPipeline extends TeaModel {
             }
 
             /**
-             * RepoFullName.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sae-samples/java-maven-demo</p>
              */
             public Builder repoFullName(String repoFullName) {
                 this.repoFullName = repoFullName;
@@ -470,7 +602,10 @@ public class BuildPipeline extends TeaModel {
             }
 
             /**
-             * RepoId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3001</p>
              */
             public Builder repoId(String repoId) {
                 this.repoId = repoId;
@@ -484,16 +619,34 @@ public class BuildPipeline extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BuildPipeline} extends {@link TeaModel}
+     *
+     * <p>BuildPipeline</p>
+     */
     public static class DeployConfig extends TeaModel {
-        @NameInMap("MaximumInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("AlwaysAllocateCPU")
+        private Boolean alwaysAllocateCPU;
+
+        @com.aliyun.core.annotation.NameInMap("MaximumInstanceCount")
         private Integer maximumInstanceCount;
 
-        @NameInMap("MinimumInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("MinimumInstanceCount")
         private Integer minimumInstanceCount;
 
+        @com.aliyun.core.annotation.NameInMap("UpdateApplicationInput")
+        private String updateApplicationInput;
+
+        @com.aliyun.core.annotation.NameInMap("UpdateTraffic")
+        private Boolean updateTraffic;
+
         private DeployConfig(Builder builder) {
+            this.alwaysAllocateCPU = builder.alwaysAllocateCPU;
             this.maximumInstanceCount = builder.maximumInstanceCount;
             this.minimumInstanceCount = builder.minimumInstanceCount;
+            this.updateApplicationInput = builder.updateApplicationInput;
+            this.updateTraffic = builder.updateTraffic;
         }
 
         public static Builder builder() {
@@ -502,6 +655,13 @@ public class BuildPipeline extends TeaModel {
 
         public static DeployConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return alwaysAllocateCPU
+         */
+        public Boolean getAlwaysAllocateCPU() {
+            return this.alwaysAllocateCPU;
         }
 
         /**
@@ -518,9 +678,34 @@ public class BuildPipeline extends TeaModel {
             return this.minimumInstanceCount;
         }
 
+        /**
+         * @return updateApplicationInput
+         */
+        public String getUpdateApplicationInput() {
+            return this.updateApplicationInput;
+        }
+
+        /**
+         * @return updateTraffic
+         */
+        public Boolean getUpdateTraffic() {
+            return this.updateTraffic;
+        }
+
         public static final class Builder {
+            private Boolean alwaysAllocateCPU; 
             private Integer maximumInstanceCount; 
             private Integer minimumInstanceCount; 
+            private String updateApplicationInput; 
+            private Boolean updateTraffic; 
+
+            /**
+             * AlwaysAllocateCPU.
+             */
+            public Builder alwaysAllocateCPU(Boolean alwaysAllocateCPU) {
+                this.alwaysAllocateCPU = alwaysAllocateCPU;
+                return this;
+            }
 
             /**
              * MaximumInstanceCount.
@@ -538,6 +723,22 @@ public class BuildPipeline extends TeaModel {
                 return this;
             }
 
+            /**
+             * UpdateApplicationInput.
+             */
+            public Builder updateApplicationInput(String updateApplicationInput) {
+                this.updateApplicationInput = updateApplicationInput;
+                return this;
+            }
+
+            /**
+             * UpdateTraffic.
+             */
+            public Builder updateTraffic(Boolean updateTraffic) {
+                this.updateTraffic = updateTraffic;
+                return this;
+            }
+
             public DeployConfig build() {
                 return new DeployConfig(this);
             } 
@@ -545,14 +746,20 @@ public class BuildPipeline extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BuildPipeline} extends {@link TeaModel}
+     *
+     * <p>BuildPipeline</p>
+     */
     public static class ImageConfig extends TeaModel {
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("Repository")
+        @com.aliyun.core.annotation.NameInMap("Repository")
         private String repository;
 
         private ImageConfig(Builder builder) {
@@ -626,17 +833,133 @@ public class BuildPipeline extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BuildPipeline} extends {@link TeaModel}
+     *
+     * <p>BuildPipeline</p>
+     */
+    public static class PackageConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("PackageName")
+        private String packageName;
+
+        @com.aliyun.core.annotation.NameInMap("PackageType")
+        private String packageType;
+
+        @com.aliyun.core.annotation.NameInMap("PackageUrl")
+        private String packageUrl;
+
+        @com.aliyun.core.annotation.NameInMap("PackageVersion")
+        private String packageVersion;
+
+        private PackageConfig(Builder builder) {
+            this.packageName = builder.packageName;
+            this.packageType = builder.packageType;
+            this.packageUrl = builder.packageUrl;
+            this.packageVersion = builder.packageVersion;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PackageConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return packageName
+         */
+        public String getPackageName() {
+            return this.packageName;
+        }
+
+        /**
+         * @return packageType
+         */
+        public String getPackageType() {
+            return this.packageType;
+        }
+
+        /**
+         * @return packageUrl
+         */
+        public String getPackageUrl() {
+            return this.packageUrl;
+        }
+
+        /**
+         * @return packageVersion
+         */
+        public String getPackageVersion() {
+            return this.packageVersion;
+        }
+
+        public static final class Builder {
+            private String packageName; 
+            private String packageType; 
+            private String packageUrl; 
+            private String packageVersion; 
+
+            /**
+             * PackageName.
+             */
+            public Builder packageName(String packageName) {
+                this.packageName = packageName;
+                return this;
+            }
+
+            /**
+             * PackageType.
+             */
+            public Builder packageType(String packageType) {
+                this.packageType = packageType;
+                return this;
+            }
+
+            /**
+             * PackageUrl.
+             */
+            public Builder packageUrl(String packageUrl) {
+                this.packageUrl = packageUrl;
+                return this;
+            }
+
+            /**
+             * PackageVersion.
+             */
+            public Builder packageVersion(String packageVersion) {
+                this.packageVersion = packageVersion;
+                return this;
+            }
+
+            public PackageConfig build() {
+                return new PackageConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link BuildPipeline} extends {@link TeaModel}
+     *
+     * <p>BuildPipeline</p>
+     */
     public static class TriggerConfig extends TeaModel {
-        @NameInMap("BranchName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("BranchName")
         private String branchName;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TagName")
+        private String tagName;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private TriggerConfig(Builder builder) {
             this.branchName = builder.branchName;
+            this.tagName = builder.tagName;
             this.type = builder.type;
         }
 
@@ -656,6 +979,13 @@ public class BuildPipeline extends TeaModel {
         }
 
         /**
+         * @return tagName
+         */
+        public String getTagName() {
+            return this.tagName;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -664,10 +994,14 @@ public class BuildPipeline extends TeaModel {
 
         public static final class Builder {
             private String branchName; 
+            private String tagName; 
             private String type; 
 
             /**
-             * BranchName.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>master</p>
              */
             public Builder branchName(String branchName) {
                 this.branchName = branchName;
@@ -675,7 +1009,18 @@ public class BuildPipeline extends TeaModel {
             }
 
             /**
-             * Type.
+             * TagName.
+             */
+            public Builder tagName(String tagName) {
+                this.tagName = tagName;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PUSH</p>
              */
             public Builder type(String type) {
                 this.type = type;

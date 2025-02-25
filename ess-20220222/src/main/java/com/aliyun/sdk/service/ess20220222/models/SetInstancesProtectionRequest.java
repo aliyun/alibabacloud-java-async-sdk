@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetInstancesProtectionRequest} extends {@link RequestModel}
  *
  * <p>SetInstancesProtectionRequest</p>
  */
 public class SetInstancesProtectionRequest extends Request {
-    @Query
-    @NameInMap("InstanceIds")
-    @Validation(required = true)
-    private java.util.List < String > instanceIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> instanceIds;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ProtectedFromScaleIn")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProtectedFromScaleIn")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean protectedFromScaleIn;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ScalingGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scalingGroupId;
 
     private SetInstancesProtectionRequest(Builder builder) {
@@ -60,7 +65,7 @@ public class SetInstancesProtectionRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
@@ -93,7 +98,7 @@ public class SetInstancesProtectionRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SetInstancesProtectionRequest, Builder> {
-        private java.util.List < String > instanceIds; 
+        private java.util.List<String> instanceIds; 
         private Long ownerId; 
         private Boolean protectedFromScaleIn; 
         private String resourceOwnerAccount; 
@@ -113,9 +118,10 @@ public class SetInstancesProtectionRequest extends Request {
         } 
 
         /**
-         * The IDs of the ECS instances.
+         * <p>The IDs of the ECS instances.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
             this.instanceIds = instanceIds;
             return this;
@@ -131,11 +137,15 @@ public class SetInstancesProtectionRequest extends Request {
         }
 
         /**
-         * Specifies whether to put ECS instances into the Protected state. Auto Scaling does not remove ECS instances in the Protected state from scaling groups during scale-in activities.
-         * <p>
+         * <p>Specifies whether to protect ECS instances from being stopped or removed from the scaling group during scale-ins. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder protectedFromScaleIn(Boolean protectedFromScaleIn) {
             this.putQueryParameter("ProtectedFromScaleIn", protectedFromScaleIn);
@@ -153,7 +163,11 @@ public class SetInstancesProtectionRequest extends Request {
         }
 
         /**
-         * The ID of the scaling group.
+         * <p>The ID of the scaling group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp18p2yfxow2dloq****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);

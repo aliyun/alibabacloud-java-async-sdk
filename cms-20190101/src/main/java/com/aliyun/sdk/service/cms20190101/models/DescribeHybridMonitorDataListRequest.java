@@ -1,39 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHybridMonitorDataListRequest} extends {@link RequestModel}
  *
  * <p>DescribeHybridMonitorDataListRequest</p>
  */
 public class DescribeHybridMonitorDataListRequest extends Request {
-    @Query
-    @NameInMap("End")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("End")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long end;
 
-    @Query
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private String period;
 
-    @Query
-    @NameInMap("PromSQL")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromSQL")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String promSQL;
 
-    @Query
-    @NameInMap("Start")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Start")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long start;
 
     private DescribeHybridMonitorDataListRequest(Builder builder) {
@@ -114,10 +114,12 @@ public class DescribeHybridMonitorDataListRequest extends Request {
         } 
 
         /**
-         * The timestamp that specifies the end of the time range to query.
-         * <p>
+         * <p>The end of the time range to query.</p>
+         * <p>Unit: seconds.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Unit: seconds.
+         * <strong>example:</strong>
+         * <p>1653805225</p>
          */
         public Builder end(Long end) {
             this.putQueryParameter("End", end);
@@ -126,10 +128,12 @@ public class DescribeHybridMonitorDataListRequest extends Request {
         }
 
         /**
-         * The name of the namespace.
-         * <p>
+         * <p>The name of the namespace.</p>
+         * <p>For more information about how to query the names of namespaces, see <a href="https://help.aliyun.com/document_detail/428880.html">DescribeHybridMonitorNamespaceList</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](~~428880~~).
+         * <strong>example:</strong>
+         * <p>default-aliyun</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -138,10 +142,11 @@ public class DescribeHybridMonitorDataListRequest extends Request {
         }
 
         /**
-         * The interval at which monitoring data is collected.
-         * <p>
+         * <p>The statistical period of the monitoring data.</p>
+         * <p>Unit: seconds.</p>
          * 
-         * Unit: seconds.
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -150,10 +155,14 @@ public class DescribeHybridMonitorDataListRequest extends Request {
         }
 
         /**
-         * The name of the metric.
-         * <p>
+         * <p>The metric name.</p>
+         * <blockquote>
+         * <p> PromQL statements are supported.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  PromQL statements are supported.
+         * <strong>example:</strong>
+         * <p>AliyunEcs_cpu_total</p>
          */
         public Builder promSQL(String promSQL) {
             this.putQueryParameter("PromSQL", promSQL);
@@ -162,10 +171,12 @@ public class DescribeHybridMonitorDataListRequest extends Request {
         }
 
         /**
-         * The timestamp that specifies the beginning of the time range to query.
-         * <p>
+         * <p>The start of the time range to query.</p>
+         * <p>Unit: seconds.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Unit: seconds.
+         * <strong>example:</strong>
+         * <p>1653804865</p>
          */
         public Builder start(Long start) {
             this.putQueryParameter("Start", start);

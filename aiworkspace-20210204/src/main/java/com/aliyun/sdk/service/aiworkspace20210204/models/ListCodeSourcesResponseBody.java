@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCodeSourcesResponseBody} extends {@link TeaModel}
  *
  * <p>ListCodeSourcesResponseBody</p>
  */
 public class ListCodeSourcesResponseBody extends TeaModel {
-    @NameInMap("CodeSources")
+    @com.aliyun.core.annotation.NameInMap("CodeSources")
     private java.util.List < CodeSourceItem > codeSources;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListCodeSourcesResponseBody(Builder builder) {

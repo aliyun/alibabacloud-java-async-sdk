@@ -1,64 +1,69 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportClientEventsRequest} extends {@link RequestModel}
  *
  * <p>ExportClientEventsRequest</p>
  */
 public class ExportClientEventsRequest extends Request {
-    @Query
-    @NameInMap("DesktopId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopId")
     private String desktopId;
 
-    @Query
-    @NameInMap("DesktopName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopName")
     private String desktopName;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("EndUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndUserId")
     private String endUserId;
 
-    @Query
-    @NameInMap("EventType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventType")
     private String eventType;
 
-    @Query
-    @NameInMap("EventTypes")
-    private java.util.List < String > eventTypes;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventTypes")
+    private java.util.List<String> eventTypes;
 
-    @Query
-    @NameInMap("LangType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LangType")
     private String langType;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("OfficeSiteId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
     private String officeSiteId;
 
-    @Query
-    @NameInMap("OfficeSiteName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteName")
     private String officeSiteName;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private ExportClientEventsRequest(Builder builder) {
@@ -128,7 +133,7 @@ public class ExportClientEventsRequest extends Request {
     /**
      * @return eventTypes
      */
-    public java.util.List < String > getEventTypes() {
+    public java.util.List<String> getEventTypes() {
         return this.eventTypes;
     }
 
@@ -180,7 +185,7 @@ public class ExportClientEventsRequest extends Request {
         private String endTime; 
         private String endUserId; 
         private String eventType; 
-        private java.util.List < String > eventTypes; 
+        private java.util.List<String> eventTypes; 
         private String langType; 
         private Integer maxResults; 
         private String officeSiteId; 
@@ -209,7 +214,10 @@ public class ExportClientEventsRequest extends Request {
         } 
 
         /**
-         * DesktopId.
+         * <p>The ID of the cloud desktop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-gx2x1dhsmucyy****</p>
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -218,7 +226,10 @@ public class ExportClientEventsRequest extends Request {
         }
 
         /**
-         * DesktopName.
+         * <p>The name of the cloud desktop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         public Builder desktopName(String desktopName) {
             this.putQueryParameter("DesktopName", desktopName);
@@ -227,7 +238,11 @@ public class ExportClientEventsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
+         * <p>If you do not specify a value for this parameter, the current time is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-03-23T07:11:01Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -236,7 +251,10 @@ public class ExportClientEventsRequest extends Request {
         }
 
         /**
-         * EndUserId.
+         * <p>The ID of the endpoint user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user01</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -245,7 +263,20 @@ public class ExportClientEventsRequest extends Request {
         }
 
         /**
-         * EventType.
+         * <p>The type of event that you want to query. Valid values:</p>
+         * <ul>
+         * <li>DESKTOP_CONNECT: The desktop session is established.</li>
+         * <li>DESKTOP_DISCONNECT: The desktop session is disconnected.</li>
+         * <li>DESKTOP_REBOOT: The cloud desktop is restarted.</li>
+         * <li>CLIENT_AD_LOGIN: The AD user logs on to the client.</li>
+         * <li>GET_CONNECTION_TICKET: The request to connect to the cloud desktop is sent.</li>
+         * <li>DESKTOP_START: The cloud desktop is started.</li>
+         * <li>DESKTOP_STOP: The cloud desktop is stopped.</li>
+         * </ul>
+         * <p>If you do not specify a value for this parameter, events of all types are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CLIENT_LOGIN</p>
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -254,16 +285,24 @@ public class ExportClientEventsRequest extends Request {
         }
 
         /**
-         * EventTypes.
+         * <p>The types of event.</p>
          */
-        public Builder eventTypes(java.util.List < String > eventTypes) {
+        public Builder eventTypes(java.util.List<String> eventTypes) {
             this.putQueryParameter("EventTypes", eventTypes);
             this.eventTypes = eventTypes;
             return this;
         }
 
         /**
-         * LangType.
+         * <p>The language in which the cloud desktop is displayed in the console UI. You can export the list of cloud desktops in the specified language. Valid values:</p>
+         * <ul>
+         * <li><code>zh-CN</code>: Simplified Chinese</li>
+         * <li><code>en-GB</code>: English (United Kingdom)</li>
+         * </ul>
+         * <p>Default value: <code>zh-CN</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder langType(String langType) {
             this.putQueryParameter("LangType", langType);
@@ -272,7 +311,14 @@ public class ExportClientEventsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries to return on each page.</p>
+         * <ul>
+         * <li>Maximum value: 5000.</li>
+         * <li>Default value: 5000.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -281,7 +327,10 @@ public class ExportClientEventsRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * <p>The ID of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-363353****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -290,7 +339,10 @@ public class ExportClientEventsRequest extends Request {
         }
 
         /**
-         * OfficeSiteName.
+         * <p>The name of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder officeSiteName(String officeSiteName) {
             this.putQueryParameter("OfficeSiteName", officeSiteName);
@@ -299,7 +351,11 @@ public class ExportClientEventsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -308,7 +364,11 @@ public class ExportClientEventsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
+         * <p>If you do not specify a value for this parameter, all events that occurred before the point in time that you specify for <code>EndTime</code> are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-03-23T04:10:21Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

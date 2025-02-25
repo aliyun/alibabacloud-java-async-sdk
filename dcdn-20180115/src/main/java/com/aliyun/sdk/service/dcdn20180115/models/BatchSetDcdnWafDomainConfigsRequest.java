@@ -1,28 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchSetDcdnWafDomainConfigsRequest} extends {@link RequestModel}
  *
  * <p>BatchSetDcdnWafDomainConfigsRequest</p>
  */
 public class BatchSetDcdnWafDomainConfigsRequest extends Request {
-    @Body
-    @NameInMap("ClientIpTag")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientIpTag")
     private String clientIpTag;
 
-    @Body
-    @NameInMap("DefenseStatus")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DefenseStatus")
     private String defenseStatus;
 
-    @Body
-    @NameInMap("DomainNames")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DomainNames")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainNames;
 
     private BatchSetDcdnWafDomainConfigsRequest(Builder builder) {
@@ -83,7 +83,10 @@ public class BatchSetDcdnWafDomainConfigsRequest extends Request {
         } 
 
         /**
-         * Specifies the header that records the IP address to be obtained. If the default header is selected, the value of this parameter is empty. If a custom header is selected, the value of this parameter is the value specified by the user. Separate multiple values with commas (,). You can specify a maximum of five values.
+         * <p>Specifies the header that records the IP address to be obtained. If the default header is selected, the value of this parameter is empty. If a custom header is selected, the value of this parameter is the value specified by the user. Separate multiple values with commas (,). You can specify a maximum of five values.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>X-Forwarded-For</p>
          */
         public Builder clientIpTag(String clientIpTag) {
             this.putBodyParameter("ClientIpTag", clientIpTag);
@@ -92,12 +95,15 @@ public class BatchSetDcdnWafDomainConfigsRequest extends Request {
         }
 
         /**
-         * The protection status of the domain name. Valid values: on, off, and empty string.
-         * <p>
+         * <p>The protection status of the domain name. Valid values: on, off, and empty string.</p>
+         * <ul>
+         * <li>When you add a domain name, the value of this parameter is <strong>on</strong>, and the value of ClientIpTag takes effect, which is empty if the default header is selected and is the value specified by the user if a custom header is selected.</li>
+         * <li>When you delete a domain name, the value of this parameter is <strong>off</strong>, and the value of ClientIpTag does not take effect.</li>
+         * <li>When you only modify the value of ClientIpTag, the value of DefenseStatus is an empty string.</li>
+         * </ul>
          * 
-         * *   When you add a domain name, the value of this parameter is **on**, and the value of ClientIpTag takes effect, which is empty if the default header is selected and is the value specified by the user if a custom header is selected.
-         * *   When you delete a domain name, the value of this parameter is **off**, and the value of ClientIpTag does not take effect.
-         * *   When you only modify the value of ClientIpTag, the value of DefenseStatus is an empty string.
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder defenseStatus(String defenseStatus) {
             this.putBodyParameter("DefenseStatus", defenseStatus);
@@ -106,7 +112,11 @@ public class BatchSetDcdnWafDomainConfigsRequest extends Request {
         }
 
         /**
-         * The protected domain names for which you want to change the protection status. You can specify up to 50 domain names. Separate multiple domain names with commas (,).
+         * <p>The protected domain names for which you want to change the protection status. You can specify up to 50 domain names. Separate multiple domain names with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com,example2.com</p>
          */
         public Builder domainNames(String domainNames) {
             this.putBodyParameter("DomainNames", domainNames);

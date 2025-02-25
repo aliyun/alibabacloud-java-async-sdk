@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetServiceListResponseBody} extends {@link TeaModel}
  *
  * <p>GetServiceListResponseBody</p>
  */
 public class GetServiceListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetServiceListResponseBody(Builder builder) {
@@ -57,7 +62,7 @@ public class GetServiceListResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -91,14 +96,17 @@ public class GetServiceListResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,15 +114,18 @@ public class GetServiceListResponseBody extends TeaModel {
         }
 
         /**
-         * The data entries returned.
+         * <p>The data entries returned.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +133,10 @@ public class GetServiceListResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +144,10 @@ public class GetServiceListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx-xxx-xxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class GetServiceListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,23 +171,29 @@ public class GetServiceListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetServiceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceListResponseBody</p>
+     */
     public static class Methods extends TeaModel {
-        @NameInMap("MethodController")
+        @com.aliyun.core.annotation.NameInMap("MethodController")
         private String methodController;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ParameterTypes")
-        private java.util.List < String > parameterTypes;
+        @com.aliyun.core.annotation.NameInMap("ParameterTypes")
+        private java.util.List<String> parameterTypes;
 
-        @NameInMap("Paths")
-        private java.util.List < String > paths;
+        @com.aliyun.core.annotation.NameInMap("Paths")
+        private java.util.List<String> paths;
 
-        @NameInMap("RequestMethods")
-        private java.util.List < String > requestMethods;
+        @com.aliyun.core.annotation.NameInMap("RequestMethods")
+        private java.util.List<String> requestMethods;
 
-        @NameInMap("ReturnType")
+        @com.aliyun.core.annotation.NameInMap("ReturnType")
         private String returnType;
 
         private Methods(Builder builder) {
@@ -204,21 +230,21 @@ public class GetServiceListResponseBody extends TeaModel {
         /**
          * @return parameterTypes
          */
-        public java.util.List < String > getParameterTypes() {
+        public java.util.List<String> getParameterTypes() {
             return this.parameterTypes;
         }
 
         /**
          * @return paths
          */
-        public java.util.List < String > getPaths() {
+        public java.util.List<String> getPaths() {
             return this.paths;
         }
 
         /**
          * @return requestMethods
          */
-        public java.util.List < String > getRequestMethods() {
+        public java.util.List<String> getRequestMethods() {
             return this.requestMethods;
         }
 
@@ -232,13 +258,16 @@ public class GetServiceListResponseBody extends TeaModel {
         public static final class Builder {
             private String methodController; 
             private String name; 
-            private java.util.List < String > parameterTypes; 
-            private java.util.List < String > paths; 
-            private java.util.List < String > requestMethods; 
+            private java.util.List<String> parameterTypes; 
+            private java.util.List<String> paths; 
+            private java.util.List<String> requestMethods; 
             private String returnType; 
 
             /**
-             * The controller of the method.
+             * <p>The controller of the method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>com.alibaba.SayHelloController</p>
              */
             public Builder methodController(String methodController) {
                 this.methodController = methodController;
@@ -246,7 +275,10 @@ public class GetServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the method.
+             * <p>The name of the method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sayHello</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -254,31 +286,34 @@ public class GetServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * The data types of the parameters.
+             * <p>The data types of the parameters.</p>
              */
-            public Builder parameterTypes(java.util.List < String > parameterTypes) {
+            public Builder parameterTypes(java.util.List<String> parameterTypes) {
                 this.parameterTypes = parameterTypes;
                 return this;
             }
 
             /**
-             * The paths.
+             * <p>The paths.</p>
              */
-            public Builder paths(java.util.List < String > paths) {
+            public Builder paths(java.util.List<String> paths) {
                 this.paths = paths;
                 return this;
             }
 
             /**
-             * The methods.
+             * <p>The methods.</p>
              */
-            public Builder requestMethods(java.util.List < String > requestMethods) {
+            public Builder requestMethods(java.util.List<String> requestMethods) {
                 this.requestMethods = requestMethods;
                 return this;
             }
 
             /**
-             * The type of the return value.
+             * <p>The type of the return value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>int</p>
              */
             public Builder returnType(String returnType) {
                 this.returnType = returnType;
@@ -292,35 +327,41 @@ public class GetServiceListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetServiceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceListResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DubboApplicationName")
+        @com.aliyun.core.annotation.NameInMap("DubboApplicationName")
         private String dubboApplicationName;
 
-        @NameInMap("EdasAppName")
+        @com.aliyun.core.annotation.NameInMap("EdasAppName")
         private String edasAppName;
 
-        @NameInMap("Group")
+        @com.aliyun.core.annotation.NameInMap("Group")
         private String group;
 
-        @NameInMap("Metadata")
-        private java.util.Map < String, ? > metadata;
+        @com.aliyun.core.annotation.NameInMap("Metadata")
+        private java.util.Map<String, ?> metadata;
 
-        @NameInMap("Methods")
-        private java.util.List < Methods> methods;
+        @com.aliyun.core.annotation.NameInMap("Methods")
+        private java.util.List<Methods> methods;
 
-        @NameInMap("RegistryType")
+        @com.aliyun.core.annotation.NameInMap("RegistryType")
         private String registryType;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
-        @NameInMap("ServiceType")
+        @com.aliyun.core.annotation.NameInMap("ServiceType")
         private String serviceType;
 
-        @NameInMap("SpringApplicationName")
+        @com.aliyun.core.annotation.NameInMap("SpringApplicationName")
         private String springApplicationName;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private Data(Builder builder) {
@@ -368,14 +409,14 @@ public class GetServiceListResponseBody extends TeaModel {
         /**
          * @return metadata
          */
-        public java.util.Map < String, ? > getMetadata() {
+        public java.util.Map<String, ?> getMetadata() {
             return this.metadata;
         }
 
         /**
          * @return methods
          */
-        public java.util.List < Methods> getMethods() {
+        public java.util.List<Methods> getMethods() {
             return this.methods;
         }
 
@@ -418,8 +459,8 @@ public class GetServiceListResponseBody extends TeaModel {
             private String dubboApplicationName; 
             private String edasAppName; 
             private String group; 
-            private java.util.Map < String, ? > metadata; 
-            private java.util.List < Methods> methods; 
+            private java.util.Map<String, ?> metadata; 
+            private java.util.List<Methods> methods; 
             private String registryType; 
             private String serviceName; 
             private String serviceType; 
@@ -427,7 +468,10 @@ public class GetServiceListResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The name of the Dubbo application.
+             * <p>The name of the Dubbo application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dubbo-application</p>
              */
             public Builder dubboApplicationName(String dubboApplicationName) {
                 this.dubboApplicationName = dubboApplicationName;
@@ -435,7 +479,10 @@ public class GetServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder edasAppName(String edasAppName) {
                 this.edasAppName = edasAppName;
@@ -443,7 +490,10 @@ public class GetServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * The group.
+             * <p>The group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dubbo</p>
              */
             public Builder group(String group) {
                 this.group = group;
@@ -451,23 +501,29 @@ public class GetServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * The metadata.
+             * <p>The metadata.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
-            public Builder metadata(java.util.Map < String, ? > metadata) {
+            public Builder metadata(java.util.Map<String, ?> metadata) {
                 this.metadata = metadata;
                 return this;
             }
 
             /**
-             * The methods.
+             * <p>The methods.</p>
              */
-            public Builder methods(java.util.List < Methods> methods) {
+            public Builder methods(java.util.List<Methods> methods) {
                 this.methods = methods;
                 return this;
             }
 
             /**
-             * The type of the service registry.
+             * <p>The type of the service registry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nacos</p>
              */
             public Builder registryType(String registryType) {
                 this.registryType = registryType;
@@ -475,7 +531,10 @@ public class GetServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * <p>The name of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>com.alibaba.xxx</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -483,7 +542,10 @@ public class GetServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the service.
+             * <p>The type of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dubbo</p>
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
@@ -491,7 +553,10 @@ public class GetServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Spring application.
+             * <p>The name of the Spring application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spring-application</p>
              */
             public Builder springApplicationName(String springApplicationName) {
                 this.springApplicationName = springApplicationName;
@@ -499,7 +564,10 @@ public class GetServiceListResponseBody extends TeaModel {
             }
 
             /**
-             * The version information.
+             * <p>The version information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder version(String version) {
                 this.version = version;

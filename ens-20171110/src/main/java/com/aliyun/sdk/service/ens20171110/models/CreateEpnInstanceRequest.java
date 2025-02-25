@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateEpnInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreateEpnInstanceRequest</p>
  */
 public class CreateEpnInstanceRequest extends Request {
-    @Query
-    @NameInMap("EPNInstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EPNInstanceName")
     private String EPNInstanceName;
 
-    @Query
-    @NameInMap("EPNInstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EPNInstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String EPNInstanceType;
 
-    @Query
-    @NameInMap("InternetChargeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetChargeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String internetChargeType;
 
-    @Query
-    @NameInMap("InternetMaxBandwidthOut")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetMaxBandwidthOut")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer internetMaxBandwidthOut;
 
-    @Query
-    @NameInMap("NetworkingModel")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkingModel")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String networkingModel;
 
     private CreateEpnInstanceRequest(Builder builder) {
@@ -114,7 +119,10 @@ public class CreateEpnInstanceRequest extends Request {
         } 
 
         /**
-         * EPNInstanceName.
+         * <p>The name of the EPN instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test EPNInstanceName</p>
          */
         public Builder EPNInstanceName(String EPNInstanceName) {
             this.putQueryParameter("EPNInstanceName", EPNInstanceName);
@@ -123,7 +131,11 @@ public class CreateEpnInstanceRequest extends Request {
         }
 
         /**
-         * EPNInstanceType.
+         * <p>The type of the EPN instance. Set the value to <strong>EdgeToEdge</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EdgeToEdge</p>
          */
         public Builder EPNInstanceType(String EPNInstanceType) {
             this.putQueryParameter("EPNInstanceType", EPNInstanceType);
@@ -132,7 +144,18 @@ public class CreateEpnInstanceRequest extends Request {
         }
 
         /**
-         * InternetChargeType.
+         * <p>The billing method for network usage. Valid values:</p>
+         * <ul>
+         * <li><strong>BandwidthByDay</strong>: Pay by daily peak bandwidth.</li>
+         * <li><strong>95BandwidthByMonth</strong>: Pay by monthly 95th percentile bandwidth.</li>
+         * <li><strong>PayByBandwidth4thMonth</strong>: Pay by monthly fourth peak bandwidth.</li>
+         * <li><strong>PayByBandwidth</strong>: Pay by fixed bandwidth.</li>
+         * </ul>
+         * <p>You can specify only one metering method for network usage and cannot overwrite the existing metering method.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BandwidthByDay</p>
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -141,7 +164,11 @@ public class CreateEpnInstanceRequest extends Request {
         }
 
         /**
-         * InternetMaxBandwidthOut.
+         * <p>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 1 to 100.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
             this.putQueryParameter("InternetMaxBandwidthOut", internetMaxBandwidthOut);
@@ -150,7 +177,16 @@ public class CreateEpnInstanceRequest extends Request {
         }
 
         /**
-         * NetworkingModel.
+         * <p>The networking mode. Valid values:</p>
+         * <ul>
+         * <li><strong>SpeedUp</strong>: intelligent acceleration network (Internet)</li>
+         * <li><strong>Connection</strong>: internal network</li>
+         * <li><strong>SpeedUpAndConnection</strong>: intelligent acceleration network and internal network</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SpeedUp</p>
          */
         public Builder networkingModel(String networkingModel) {
             this.putQueryParameter("NetworkingModel", networkingModel);

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InsureOrderUrlDetailRequest} extends {@link RequestModel}
  *
  * <p>InsureOrderUrlDetailRequest</p>
  */
 public class InsureOrderUrlDetailRequest extends Request {
-    @Path
-    @NameInMap("ins_order_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ins_order_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String insOrderId;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private InsureOrderUrlDetailRequest(Builder builder) {
@@ -69,7 +74,10 @@ public class InsureOrderUrlDetailRequest extends Request {
         } 
 
         /**
-         * ins_order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000001</p>
          */
         public Builder insOrderId(String insOrderId) {
             this.putPathParameter("ins_order_id", insOrderId);

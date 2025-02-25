@@ -1,46 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveGlobalAccelerationInstanceIpRequest} extends {@link RequestModel}
  *
  * <p>RemoveGlobalAccelerationInstanceIpRequest</p>
  */
 public class RemoveGlobalAccelerationInstanceIpRequest extends Request {
-    @Query
-    @NameInMap("GlobalAccelerationInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GlobalAccelerationInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String globalAccelerationInstanceId;
 
-    @Query
-    @NameInMap("IpInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ipInstanceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private RemoveGlobalAccelerationInstanceIpRequest(Builder builder) {
@@ -141,7 +146,11 @@ public class RemoveGlobalAccelerationInstanceIpRequest extends Request {
         } 
 
         /**
-         * The ID of the shared-bandwidth instance.
+         * <p>The ID of the shared-bandwidth instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-m5ex47zwya1sejyni****</p>
          */
         public Builder globalAccelerationInstanceId(String globalAccelerationInstanceId) {
             this.putQueryParameter("GlobalAccelerationInstanceId", globalAccelerationInstanceId);
@@ -150,10 +159,12 @@ public class RemoveGlobalAccelerationInstanceIpRequest extends Request {
         }
 
         /**
-         * The ID of the EIP.
-         * <p>
+         * <p>The ID of the EIP.</p>
+         * <p>To query the EIP ID, call DescribeEipAddresses.</p>
+         * <p>This parameter is required.</p>
          * 
-         * To query the EIP ID, call DescribeEipAddresses.
+         * <strong>example:</strong>
+         * <p>eip-bp13e9i2qst4g6jzi****</p>
          */
         public Builder ipInstanceId(String ipInstanceId) {
             this.putQueryParameter("IpInstanceId", ipInstanceId);
@@ -180,10 +191,12 @@ public class RemoveGlobalAccelerationInstanceIpRequest extends Request {
         }
 
         /**
-         * The ID of the region where the shared-bandwidth instance is located.
-         * <p>
+         * <p>The ID of the region where the shared-bandwidth instance is located.</p>
+         * <p>To query the region ID, call DescribeRegions.</p>
+         * <p>This parameter is required.</p>
          * 
-         * To query the region ID, call DescribeRegions.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -1,26 +1,31 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EngineVersionMetadata} extends {@link TeaModel}
  *
  * <p>EngineVersionMetadata</p>
  */
 public class EngineVersionMetadata extends TeaModel {
-    @NameInMap("engineVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("engineVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String engineVersion;
 
-    @NameInMap("features")
+    @com.aliyun.core.annotation.NameInMap("features")
     private EngineVersionSupportedFeatures features;
 
-    @NameInMap("status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String status;
 
     private EngineVersionMetadata(Builder builder) {
@@ -64,7 +69,10 @@ public class EngineVersionMetadata extends TeaModel {
         private String status; 
 
         /**
-         * engineVersion.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vvr-6.0.0-flink-1.15</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = engineVersion;
@@ -80,7 +88,10 @@ public class EngineVersionMetadata extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STABLE</p>
          */
         public Builder status(String status) {
             this.status = status;

@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUniRestorePlanRequest} extends {@link RequestModel}
  *
  * <p>CreateUniRestorePlanRequest</p>
  */
 public class CreateUniRestorePlanRequest extends Request {
-    @Query
-    @NameInMap("Database")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Database")
     private String database;
 
-    @Query
-    @NameInMap("InstanceUuid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceUuid")
     private String instanceUuid;
 
-    @Query
-    @NameInMap("PolicyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long policyId;
 
-    @Query
-    @NameInMap("ResetScn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResetScn")
     private String resetScn;
 
-    @Query
-    @NameInMap("ResetTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResetTime")
     private String resetTime;
 
-    @Query
-    @NameInMap("RestoreInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreInfo")
     private String restoreInfo;
 
-    @Query
-    @NameInMap("TimePoint")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimePoint")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long timePoint;
 
     private CreateUniRestorePlanRequest(Builder builder) {
@@ -140,7 +145,10 @@ public class CreateUniRestorePlanRequest extends Request {
         } 
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qtc</p>
          */
         public Builder database(String database) {
             this.putQueryParameter("Database", database);
@@ -149,10 +157,13 @@ public class CreateUniRestorePlanRequest extends Request {
         }
 
         /**
-         * The UUID of the Hybrid Backup Recovery (HBR) agent that is used to restore the data of the database on your server.
-         * <p>
+         * <p>The UUID of the Hybrid Backup Recovery (HBR) agent that is used to restore the data of the database on your server.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeUniBackupDatabase~~">DescribeUniBackupDatabase</a> operation to query the UUID.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeUniBackupDatabase](~~DescribeUniBackupDatabase~~) operation to query the UUID.
+         * <strong>example:</strong>
+         * <p>ac457b30598d11ed800000163e02****</p>
          */
         public Builder instanceUuid(String instanceUuid) {
             this.putQueryParameter("InstanceUuid", instanceUuid);
@@ -161,10 +172,14 @@ public class CreateUniRestorePlanRequest extends Request {
         }
 
         /**
-         * The ID of the anti-ransomware policy.
-         * <p>
+         * <p>The ID of the anti-ransomware policy.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeUniBackupPolicies~~">DescribeUniBackupPolicies</a> operation to query the ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeUniBackupPolicies](~~DescribeUniBackupPolicies~~) operation to query the ID.
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder policyId(Long policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -173,10 +188,13 @@ public class CreateUniRestorePlanRequest extends Request {
         }
 
         /**
-         * The identifier of the point in time for restoration in the backup version that you want to use. The database is an Oracle database.****
-         * <p>
+         * <p>The identifier of the point in time for restoration in the backup version that you want to use. The database is an Oracle database.****</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeUniRecoverableList~~">DescribeUniRecoverableList</a> operation to query the value.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeUniRecoverableList](~~DescribeUniRecoverableList~~) operation to query the value.
+         * <strong>example:</strong>
+         * <p>925702.0</p>
          */
         public Builder resetScn(String resetScn) {
             this.putQueryParameter("ResetScn", resetScn);
@@ -185,10 +203,13 @@ public class CreateUniRestorePlanRequest extends Request {
         }
 
         /**
-         * The point in time for restoration in the backup version that you want to use. The database is an Oracle database.****
-         * <p>
+         * <p>The point in time for restoration in the backup version that you want to use. The database is an Oracle database.****</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeUniRecoverableList~~">DescribeUniRecoverableList</a> operation to query the value.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeUniRecoverableList](~~DescribeUniRecoverableList~~) operation to query the value.
+         * <strong>example:</strong>
+         * <p>2022-10-29 01:06:24</p>
          */
         public Builder resetTime(String resetTime) {
             this.putQueryParameter("ResetTime", resetTime);
@@ -197,13 +218,18 @@ public class CreateUniRestorePlanRequest extends Request {
         }
 
         /**
-         * The information about the database. This parameter is available when the database is a Microsoft SQL Server (MSSQL) database. The value is a JSON string. Valid values:
-         * <p>
+         * <p>The information about the database. This parameter is available when the database is a Microsoft SQL Server (MSSQL) database. The value is a JSON string. Valid values:</p>
+         * <ul>
+         * <li><strong>name</strong>: the name of the database</li>
+         * <li><strong>files</strong>: the path to the database files</li>
+         * </ul>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeUniRecoverableList~~">DescribeUniRecoverableList</a> operation to query the information.</p>
+         * </blockquote>
          * 
-         * *   **name**: the name of the database
-         * *   **files**: the path to the database files
-         * 
-         * >  You can call the [DescribeUniRecoverableList](~~DescribeUniRecoverableList~~) operation to query the information.
+         * <strong>example:</strong>
+         * <p>{&quot;files&quot;: {&quot;qtc&quot;:&quot;F:\database\qtc.mdf&quot;,&quot;qtc_log&quot;:&quot;F:\database\qtc_0.ldf&quot;},
+         * &quot;name&quot;:&quot;qtc&quot;}</p>
          */
         public Builder restoreInfo(String restoreInfo) {
             this.putQueryParameter("RestoreInfo", restoreInfo);
@@ -212,10 +238,14 @@ public class CreateUniRestorePlanRequest extends Request {
         }
 
         /**
-         * The point in time to which you want to restore data.
-         * <p>
+         * <p>The point in time to which you want to restore data.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeRestorePlans~~">DescribeRestorePlans</a> operation to query the point in time.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeRestorePlans](~~DescribeRestorePlans~~) operation to query the point in time.
+         * <strong>example:</strong>
+         * <p>1656957664000</p>
          */
         public Builder timePoint(Long timePoint) {
             this.putQueryParameter("TimePoint", timePoint);

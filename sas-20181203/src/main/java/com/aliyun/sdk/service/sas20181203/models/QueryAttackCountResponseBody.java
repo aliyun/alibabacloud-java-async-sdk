@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAttackCountResponseBody} extends {@link TeaModel}
  *
  * <p>QueryAttackCountResponseBody</p>
  */
 public class QueryAttackCountResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryAttackCountResponseBody(Builder builder) {
@@ -64,7 +69,7 @@ public class QueryAttackCountResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -92,13 +97,16 @@ public class QueryAttackCountResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private Integer count; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +114,10 @@ public class QueryAttackCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on the current page.
+         * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -114,15 +125,18 @@ public class QueryAttackCountResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the numbers of alert events in different attack phases.
+         * <p>An array that consists of the numbers of alert events in different attack phases.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +144,10 @@ public class QueryAttackCountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D4BE7D77-5B02-5126-A684-A73F6CD3XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +155,14 @@ public class QueryAttackCountResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether exceptions are handled. Valid values:
-         * <p>
+         * <p>Indicates whether exceptions are handled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -155,14 +175,20 @@ public class QueryAttackCountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryAttackCountResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAttackCountResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("EventCount")
+        @com.aliyun.core.annotation.NameInMap("EventCount")
         private Integer eventCount;
 
-        @NameInMap("TacticId")
+        @com.aliyun.core.annotation.NameInMap("TacticId")
         private String tacticId;
 
-        @NameInMap("TacticType")
+        @com.aliyun.core.annotation.NameInMap("TacticType")
         private String tacticType;
 
         private Data(Builder builder) {
@@ -206,7 +232,10 @@ public class QueryAttackCountResponseBody extends TeaModel {
             private String tacticType; 
 
             /**
-             * The number of times that the alert is triggered.
+             * <p>The number of times that the alert is triggered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>28</p>
              */
             public Builder eventCount(Integer eventCount) {
                 this.eventCount = eventCount;
@@ -214,7 +243,10 @@ public class QueryAttackCountResponseBody extends TeaModel {
             }
 
             /**
-             * The stage ID of the ATT\&CK attack.
+             * <p>The stage ID of the ATT&amp;CK attack.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TA0043</p>
              */
             public Builder tacticId(String tacticId) {
                 this.tacticId = tacticId;
@@ -222,7 +254,10 @@ public class QueryAttackCountResponseBody extends TeaModel {
             }
 
             /**
-             * The type of stage of the ATT\&CK attack.
+             * <p>The type of stage of the ATT&amp;CK attack.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Data collection</p>
              */
             public Builder tacticType(String tacticType) {
                 this.tacticType = tacticType;

@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTransitRouterVbrAttachmentsResponseBody} extends {@link TeaModel}
  *
  * <p>ListTransitRouterVbrAttachmentsResponseBody</p>
  */
 public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("TransitRouterAttachments")
-    private java.util.List < TransitRouterAttachments> transitRouterAttachments;
+    @com.aliyun.core.annotation.NameInMap("TransitRouterAttachments")
+    private java.util.List<TransitRouterAttachments> transitRouterAttachments;
 
     private ListTransitRouterVbrAttachmentsResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
@@ -74,7 +79,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
     /**
      * @return transitRouterAttachments
      */
-    public java.util.List < TransitRouterAttachments> getTransitRouterAttachments() {
+    public java.util.List<TransitRouterAttachments> getTransitRouterAttachments() {
         return this.transitRouterAttachments;
     }
 
@@ -83,10 +88,13 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < TransitRouterAttachments> transitRouterAttachments; 
+        private java.util.List<TransitRouterAttachments> transitRouterAttachments; 
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,7 +102,10 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.
+         * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dd20****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +113,10 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F42D9616-29EB-4E75-8CA8-9654D4E07501</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +124,10 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,9 +135,9 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The queried VBR connections.
+         * <p>A list of VBR connections.</p>
          */
-        public Builder transitRouterAttachments(java.util.List < TransitRouterAttachments> transitRouterAttachments) {
+        public Builder transitRouterAttachments(java.util.List<TransitRouterAttachments> transitRouterAttachments) {
             this.transitRouterAttachments = transitRouterAttachments;
             return this;
         }
@@ -131,11 +148,17 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTransitRouterVbrAttachmentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTransitRouterVbrAttachmentsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -170,7 +193,10 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -178,7 +204,10 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value_A1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -192,50 +221,60 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTransitRouterVbrAttachmentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTransitRouterVbrAttachmentsResponseBody</p>
+     */
     public static class TransitRouterAttachments extends TeaModel {
-        @NameInMap("AutoPublishRouteEnabled")
+        @com.aliyun.core.annotation.NameInMap("AutoPublishRouteEnabled")
         private Boolean autoPublishRouteEnabled;
 
-        @NameInMap("CenId")
+        @com.aliyun.core.annotation.NameInMap("CenId")
         private String cenId;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("OrderType")
+        private String orderType;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
-        @NameInMap("TransitRouterAttachmentDescription")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentDescription")
         private String transitRouterAttachmentDescription;
 
-        @NameInMap("TransitRouterAttachmentId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentId")
         private String transitRouterAttachmentId;
 
-        @NameInMap("TransitRouterAttachmentName")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentName")
         private String transitRouterAttachmentName;
 
-        @NameInMap("TransitRouterId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterId")
         private String transitRouterId;
 
-        @NameInMap("VbrId")
+        @com.aliyun.core.annotation.NameInMap("VbrId")
         private String vbrId;
 
-        @NameInMap("VbrOwnerId")
+        @com.aliyun.core.annotation.NameInMap("VbrOwnerId")
         private Long vbrOwnerId;
 
-        @NameInMap("VbrRegionId")
+        @com.aliyun.core.annotation.NameInMap("VbrRegionId")
         private String vbrRegionId;
 
         private TransitRouterAttachments(Builder builder) {
             this.autoPublishRouteEnabled = builder.autoPublishRouteEnabled;
             this.cenId = builder.cenId;
             this.creationTime = builder.creationTime;
+            this.orderType = builder.orderType;
             this.resourceType = builder.resourceType;
             this.status = builder.status;
             this.tags = builder.tags;
@@ -278,6 +317,13 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         }
 
         /**
+         * @return orderType
+         */
+        public String getOrderType() {
+            return this.orderType;
+        }
+
+        /**
          * @return resourceType
          */
         public String getResourceType() {
@@ -294,7 +340,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -351,9 +397,10 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
             private Boolean autoPublishRouteEnabled; 
             private String cenId; 
             private String creationTime; 
+            private String orderType; 
             private String resourceType; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String transitRouterAttachmentDescription; 
             private String transitRouterAttachmentId; 
             private String transitRouterAttachmentName; 
@@ -363,11 +410,14 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
             private String vbrRegionId; 
 
             /**
-             * Indicates whether the Enterprise Edition transit router automatically advertises routes to the VBR. Valid values:
-             * <p>
+             * <p>Indicates whether the Enterprise Edition transit router is allowed to automatically advertise routes to the VBR. Valid values:</p>
+             * <ul>
+             * <li><strong>false</strong> (default)</li>
+             * <li><strong>true</strong></li>
+             * </ul>
              * 
-             * *   **false** (default): no
-             * *   **true**: yes
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder autoPublishRouteEnabled(Boolean autoPublishRouteEnabled) {
                 this.autoPublishRouteEnabled = autoPublishRouteEnabled;
@@ -375,7 +425,10 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the CEN instance.
+             * <p>The ID of the CEN instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cen-j3jzhw1zpau2km****</p>
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -383,10 +436,11 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the VBR connection was established.
-             * <p>
+             * <p>The time when the VBR connection was created.</p>
+             * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
              * 
-             * The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.
+             * <strong>example:</strong>
+             * <p>2021-06-15T15:20Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -394,13 +448,31 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of resource to which the transit router is connected. Valid values:
-             * <p>
+             * <p>The entity that pays the fees of the network instance. Valid values:</p>
+             * <ul>
+             * <li><strong>PayByCenOwner</strong>: the Alibaba Cloud account that owns the CEN instance.</li>
+             * <li><strong>PayByResourceOwner</strong>: the Alibaba Cloud account that owns the network instance.</li>
+             * </ul>
              * 
-             * *   **VPC**: VPC
-             * *   **CCN**: Cloud Connect Network (CCN) instance
-             * *   **VBR**: VBR
-             * *   **TR**: transit router
+             * <strong>example:</strong>
+             * <p>PayByCenOwner</p>
+             */
+            public Builder orderType(String orderType) {
+                this.orderType = orderType;
+                return this;
+            }
+
+            /**
+             * <p>The type of resource to which the transit router is connected. Valid values:</p>
+             * <ul>
+             * <li><strong>VPC</strong></li>
+             * <li><strong>CCN</strong></li>
+             * <li><strong>VBR</strong></li>
+             * <li><strong>TR</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>VBR</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -408,13 +480,16 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the VBR connection. Valid values:
-             * <p>
+             * <p>The status of the VBR connection. Valid values:</p>
+             * <ul>
+             * <li><strong>Attached</strong></li>
+             * <li><strong>Attaching</strong></li>
+             * <li><strong>Detaching</strong></li>
+             * <li><strong>Detached</strong></li>
+             * </ul>
              * 
-             * *   **Attached**: The VBR connection is created on the transit router.
-             * *   **Attaching**: The VBR connection is being created on the transit router.
-             * *   **Detaching**: The VBR connection is being deleted from the transit router.
-             * *   **Detached**: The VBR connection is deleted from the transit router.
+             * <strong>example:</strong>
+             * <p>Attached</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -422,15 +497,18 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>A list of tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * The description of the VBR connection.
+             * <p>The description of the VBR connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testdesc</p>
              */
             public Builder transitRouterAttachmentDescription(String transitRouterAttachmentDescription) {
                 this.transitRouterAttachmentDescription = transitRouterAttachmentDescription;
@@ -438,7 +516,10 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VBR connection.
+             * <p>The ID of the VBR connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tr-attach-oyf70wfuorwx87****</p>
              */
             public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
                 this.transitRouterAttachmentId = transitRouterAttachmentId;
@@ -446,7 +527,10 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the VBR connection.
+             * <p>The name of the VBR connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testa</p>
              */
             public Builder transitRouterAttachmentName(String transitRouterAttachmentName) {
                 this.transitRouterAttachmentName = transitRouterAttachmentName;
@@ -454,7 +538,10 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Enterprise Edition transit router.
+             * <p>The description of the Enterprise Edition transit router.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tr-bp1su1ytdxtataupl****</p>
              */
             public Builder transitRouterId(String transitRouterId) {
                 this.transitRouterId = transitRouterId;
@@ -462,7 +549,10 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The VBR ID.
+             * <p>The VBR ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vbr-bp1svadp4lq38janc****</p>
              */
             public Builder vbrId(String vbrId) {
                 this.vbrId = vbrId;
@@ -470,7 +560,10 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the account to which the VBR belongs.
+             * <p>The ID of the Alibaba Cloud account to which the VBR belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1688111111111111</p>
              */
             public Builder vbrOwnerId(Long vbrOwnerId) {
                 this.vbrOwnerId = vbrOwnerId;
@@ -478,7 +571,10 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the VBR.
+             * <p>The region ID of the VBR.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder vbrRegionId(String vbrRegionId) {
                 this.vbrRegionId = vbrRegionId;

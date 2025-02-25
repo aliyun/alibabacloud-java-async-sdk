@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnSMCertificateListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCdnSMCertificateListResponseBody</p>
  */
 public class DescribeCdnSMCertificateListResponseBody extends TeaModel {
-    @NameInMap("CertificateListModel")
+    @com.aliyun.core.annotation.NameInMap("CertificateListModel")
     private CertificateListModel certificateListModel;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCdnSMCertificateListResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeCdnSMCertificateListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The type of the certificate information.
+         * <p>The type of the certificate information.</p>
          */
         public Builder certificateListModel(CertificateListModel certificateListModel) {
             this.certificateListModel = certificateListModel;
@@ -58,7 +58,10 @@ public class DescribeCdnSMCertificateListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC0E34AC-0239-44A7-AB0E-800DE522C8DC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,17 +74,23 @@ public class DescribeCdnSMCertificateListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCdnSMCertificateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCdnSMCertificateListResponseBody</p>
+     */
     public static class Cert extends TeaModel {
-        @NameInMap("CertIdentifier")
+        @com.aliyun.core.annotation.NameInMap("CertIdentifier")
         private String certIdentifier;
 
-        @NameInMap("CertName")
+        @com.aliyun.core.annotation.NameInMap("CertName")
         private String certName;
 
-        @NameInMap("Common")
+        @com.aliyun.core.annotation.NameInMap("Common")
         private String common;
 
-        @NameInMap("Issuer")
+        @com.aliyun.core.annotation.NameInMap("Issuer")
         private String issuer;
 
         private Cert(Builder builder) {
@@ -134,7 +143,10 @@ public class DescribeCdnSMCertificateListResponseBody extends TeaModel {
             private String issuer; 
 
             /**
-             * The ID of the certificate.
+             * <p>The ID of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yourCertldentifier</p>
              */
             public Builder certIdentifier(String certIdentifier) {
                 this.certIdentifier = certIdentifier;
@@ -142,7 +154,10 @@ public class DescribeCdnSMCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the certificate.
+             * <p>The name of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yourCertName</p>
              */
             public Builder certName(String certName) {
                 this.certName = certName;
@@ -150,7 +165,10 @@ public class DescribeCdnSMCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * The common name of the certificate.
+             * <p>The common name of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yourCertCommon</p>
              */
             public Builder common(String common) {
                 this.common = common;
@@ -158,7 +176,10 @@ public class DescribeCdnSMCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * The certificate authority (CA) that issued the certificate.
+             * <p>The certificate authority (CA) that issued the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yourCertIssuer</p>
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
@@ -172,8 +193,14 @@ public class DescribeCdnSMCertificateListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCdnSMCertificateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCdnSMCertificateListResponseBody</p>
+     */
     public static class CertList extends TeaModel {
-        @NameInMap("Cert")
+        @com.aliyun.core.annotation.NameInMap("Cert")
         private java.util.List < Cert> cert;
 
         private CertList(Builder builder) {
@@ -213,11 +240,17 @@ public class DescribeCdnSMCertificateListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCdnSMCertificateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCdnSMCertificateListResponseBody</p>
+     */
     public static class CertificateListModel extends TeaModel {
-        @NameInMap("CertList")
+        @com.aliyun.core.annotation.NameInMap("CertList")
         private CertList certList;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
         private CertificateListModel(Builder builder) {
@@ -252,7 +285,7 @@ public class DescribeCdnSMCertificateListResponseBody extends TeaModel {
             private Integer count; 
 
             /**
-             * The list of certificates.
+             * <p>The list of certificates.</p>
              */
             public Builder certList(CertList certList) {
                 this.certList = certList;
@@ -260,7 +293,10 @@ public class DescribeCdnSMCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of certificates that are returned.
+             * <p>The number of certificates that are returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Integer count) {
                 this.count = count;

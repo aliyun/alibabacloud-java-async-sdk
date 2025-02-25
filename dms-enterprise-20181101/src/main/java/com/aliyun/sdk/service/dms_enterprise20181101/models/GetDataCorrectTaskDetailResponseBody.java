@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataCorrectTaskDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetDataCorrectTaskDetailResponseBody</p>
  */
 public class GetDataCorrectTaskDetailResponseBody extends TeaModel {
-    @NameInMap("DataCorrectTaskDetail")
+    @com.aliyun.core.annotation.NameInMap("DataCorrectTaskDetail")
     private DataCorrectTaskDetail dataCorrectTaskDetail;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetDataCorrectTaskDetailResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class GetDataCorrectTaskDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details of the data change task.
+         * <p>The details of the data change task.</p>
          */
         public Builder dataCorrectTaskDetail(DataCorrectTaskDetail dataCorrectTaskDetail) {
             this.dataCorrectTaskDetail = dataCorrectTaskDetail;
@@ -94,7 +99,10 @@ public class GetDataCorrectTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +110,10 @@ public class GetDataCorrectTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +121,10 @@ public class GetDataCorrectTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B5FD0BC8-2D90-4478-B8EC-A0E92E0B1773</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class GetDataCorrectTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,17 +148,23 @@ public class GetDataCorrectTaskDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDataCorrectTaskDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataCorrectTaskDetailResponseBody</p>
+     */
     public static class DataCorrectTaskDetail extends TeaModel {
-        @NameInMap("ActualAffectRows")
+        @com.aliyun.core.annotation.NameInMap("ActualAffectRows")
         private Long actualAffectRows;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DBTaskGroupId")
+        @com.aliyun.core.annotation.NameInMap("DBTaskGroupId")
         private Long DBTaskGroupId;
 
-        @NameInMap("jobStatus")
+        @com.aliyun.core.annotation.NameInMap("jobStatus")
         private String jobStatus;
 
         private DataCorrectTaskDetail(Builder builder) {
@@ -194,7 +217,10 @@ public class GetDataCorrectTaskDetailResponseBody extends TeaModel {
             private String jobStatus; 
 
             /**
-             * The number of rows affected by the SQL statement.
+             * <p>The number of rows affected by the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder actualAffectRows(Long actualAffectRows) {
                 this.actualAffectRows = actualAffectRows;
@@ -202,7 +228,10 @@ public class GetDataCorrectTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task was created.
+             * <p>The time when the task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-05 15:08:55</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -210,7 +239,10 @@ public class GetDataCorrectTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the SQL task group.
+             * <p>The ID of the SQL task group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234235</p>
              */
             public Builder DBTaskGroupId(Long DBTaskGroupId) {
                 this.DBTaskGroupId = DBTaskGroupId;
@@ -218,17 +250,20 @@ public class GetDataCorrectTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the SQL task. Valid values:
-             * <p>
+             * <p>The state of the SQL task. Valid values:</p>
+             * <ul>
+             * <li><strong>INIT</strong>: The SQL task was initialized.</li>
+             * <li><strong>PENDING</strong>: The SQL task waited to be run.</li>
+             * <li><strong>BE_SCHEDULED</strong>: The SQL task waited to be scheduled.</li>
+             * <li><strong>FAIL</strong>: The SQL task failed.</li>
+             * <li><strong>SUCCESS</strong>: The SQL task was successful.</li>
+             * <li><strong>PAUSE</strong>: The SQL task was paused.</li>
+             * <li><strong>DELETE</strong>: The SQL task was deleted.</li>
+             * <li><strong>RUNNING</strong>: The SQL task was being run.</li>
+             * </ul>
              * 
-             * *   **INIT**: The SQL task was initialized.
-             * *   **PENDING**: The SQL task waited to be run.
-             * *   **BE_SCHEDULED**: The SQL task waited to be scheduled.
-             * *   **FAIL**: The SQL task failed.
-             * *   **SUCCESS**: The SQL task was successful.
-             * *   **PAUSE**: The SQL task was paused.
-             * *   **DELETE**: The SQL task was deleted.
-             * *   **RUNNING**: The SQL task was being run.
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder jobStatus(String jobStatus) {
                 this.jobStatus = jobStatus;

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApisByBackendResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeApisByBackendResponseBody</p>
  */
 public class DescribeApisByBackendResponseBody extends TeaModel {
-    @NameInMap("ApiInfoList")
+    @com.aliyun.core.annotation.NameInMap("ApiInfoList")
     private ApiInfoList apiInfoList;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeApisByBackendResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * ApiInfoList.
+         * <p>The information about the returned API list.</p>
          */
         public Builder apiInfoList(ApiInfoList apiInfoList) {
             this.apiInfoList = apiInfoList;
@@ -94,7 +99,10 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEB6EC62-B6C7-5082-A45A-45A204724AC2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,26 +148,32 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeApisByBackendResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApisByBackendResponseBody</p>
+     */
     public static class ApiInfo extends TeaModel {
-        @NameInMap("ApiId")
+        @com.aliyun.core.annotation.NameInMap("ApiId")
         private String apiId;
 
-        @NameInMap("ApiName")
+        @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("Method")
+        @com.aliyun.core.annotation.NameInMap("Method")
         private String method;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
         private ApiInfo(Builder builder) {
@@ -230,7 +253,10 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
             private String path; 
 
             /**
-             * ApiId.
+             * <p>The ID of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20bcdc9453524b78a8beb1f6de21edb7</p>
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -238,7 +264,10 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
             }
 
             /**
-             * ApiName.
+             * <p>The name of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testApi</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -246,7 +275,10 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -254,7 +286,10 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * <p>The ID of the API group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15bcdc9453524b7gs8beb1f6de21edb7</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -262,7 +297,10 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>The name of the API group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testApiGroup</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -270,7 +308,10 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
             }
 
             /**
-             * Method.
+             * <p>The request method of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GET</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -278,7 +319,10 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * <p>The request path of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/test</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -292,9 +336,15 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeApisByBackendResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApisByBackendResponseBody</p>
+     */
     public static class ApiInfoList extends TeaModel {
-        @NameInMap("ApiInfo")
-        private java.util.List < ApiInfo> apiInfo;
+        @com.aliyun.core.annotation.NameInMap("ApiInfo")
+        private java.util.List<ApiInfo> apiInfo;
 
         private ApiInfoList(Builder builder) {
             this.apiInfo = builder.apiInfo;
@@ -311,17 +361,17 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
         /**
          * @return apiInfo
          */
-        public java.util.List < ApiInfo> getApiInfo() {
+        public java.util.List<ApiInfo> getApiInfo() {
             return this.apiInfo;
         }
 
         public static final class Builder {
-            private java.util.List < ApiInfo> apiInfo; 
+            private java.util.List<ApiInfo> apiInfo; 
 
             /**
              * ApiInfo.
              */
-            public Builder apiInfo(java.util.List < ApiInfo> apiInfo) {
+            public Builder apiInfo(java.util.List<ApiInfo> apiInfo) {
                 this.apiInfo = apiInfo;
                 return this;
             }

@@ -1,63 +1,71 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLoadBalancerUDPListenerAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLoadBalancerUDPListenerAttributeResponseBody</p>
  */
 public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaModel {
-    @NameInMap("BackendServerPort")
+    @com.aliyun.core.annotation.NameInMap("BackendServerPort")
     private Integer backendServerPort;
 
-    @NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
     private Integer bandwidth;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("EipTransmit")
+    @com.aliyun.core.annotation.NameInMap("EipTransmit")
     private String eipTransmit;
 
-    @NameInMap("HealthCheck")
+    @com.aliyun.core.annotation.NameInMap("EstablishedTimeout")
+    private Integer establishedTimeout;
+
+    @com.aliyun.core.annotation.NameInMap("HealthCheck")
     private String healthCheck;
 
-    @NameInMap("HealthCheckConnectPort")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckConnectPort")
     private Integer healthCheckConnectPort;
 
-    @NameInMap("HealthCheckConnectTimeout")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckConnectTimeout")
     private Integer healthCheckConnectTimeout;
 
-    @NameInMap("HealthCheckExp")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckExp")
     private String healthCheckExp;
 
-    @NameInMap("HealthCheckInterval")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckInterval")
     private Integer healthCheckInterval;
 
-    @NameInMap("HealthCheckReq")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckReq")
     private String healthCheckReq;
 
-    @NameInMap("HealthyThreshold")
+    @com.aliyun.core.annotation.NameInMap("HealthyThreshold")
     private Integer healthyThreshold;
 
-    @NameInMap("ListenerPort")
+    @com.aliyun.core.annotation.NameInMap("ListenerPort")
     private Integer listenerPort;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Scheduler")
+    @com.aliyun.core.annotation.NameInMap("Scheduler")
     private String scheduler;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("UnhealthyThreshold")
+    @com.aliyun.core.annotation.NameInMap("UnhealthyThreshold")
     private Integer unhealthyThreshold;
 
     private DescribeLoadBalancerUDPListenerAttributeResponseBody(Builder builder) {
@@ -65,6 +73,7 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         this.bandwidth = builder.bandwidth;
         this.description = builder.description;
         this.eipTransmit = builder.eipTransmit;
+        this.establishedTimeout = builder.establishedTimeout;
         this.healthCheck = builder.healthCheck;
         this.healthCheckConnectPort = builder.healthCheckConnectPort;
         this.healthCheckConnectTimeout = builder.healthCheckConnectTimeout;
@@ -113,6 +122,13 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
      */
     public String getEipTransmit() {
         return this.eipTransmit;
+    }
+
+    /**
+     * @return establishedTimeout
+     */
+    public Integer getEstablishedTimeout() {
+        return this.establishedTimeout;
     }
 
     /**
@@ -204,6 +220,7 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         private Integer bandwidth; 
         private String description; 
         private String eipTransmit; 
+        private Integer establishedTimeout; 
         private String healthCheck; 
         private Integer healthCheckConnectPort; 
         private Integer healthCheckConnectTimeout; 
@@ -218,7 +235,10 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         private Integer unhealthyThreshold; 
 
         /**
-         * BackendServerPort.
+         * <p>The port used by the backend ELB server of the ELB instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         public Builder backendServerPort(Integer backendServerPort) {
             this.backendServerPort = backendServerPort;
@@ -226,7 +246,10 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * Bandwidth.
+         * <p>The peak bandwidth of the Edge Load Balancer (ELB) instance. The default value is -1, which indicates that the bandwidth is not limited.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder bandwidth(Integer bandwidth) {
             this.bandwidth = bandwidth;
@@ -234,7 +257,10 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * Description.
+         * <p>The name of the listener.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -242,7 +268,14 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * EipTransmit.
+         * <p>Indicates whether EIP pass-through is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong> (default)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder eipTransmit(String eipTransmit) {
             this.eipTransmit = eipTransmit;
@@ -250,7 +283,25 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * HealthCheck.
+         * <p>The timeout period of a connection. Valid values: <strong>10</strong> to <strong>900</strong>. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
+         */
+        public Builder establishedTimeout(Integer establishedTimeout) {
+            this.establishedTimeout = establishedTimeout;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to enable the health check feature. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder healthCheck(String healthCheck) {
             this.healthCheck = healthCheck;
@@ -258,7 +309,10 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * HealthCheckConnectPort.
+         * <p>The port that is used for health checks. Valid values: <strong>1</strong> to <strong>65535</strong>. If you leave this parameter empty, the port specified by BackendServerPort is used for health checks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8000</p>
          */
         public Builder healthCheckConnectPort(Integer healthCheckConnectPort) {
             this.healthCheckConnectPort = healthCheckConnectPort;
@@ -266,7 +320,23 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * HealthCheckConnectTimeout.
+         * <p>The timeout period for a health check response. If a backend server does not respond within the specified timeout period, the server fails the health check.</p>
+         * <ul>
+         * <li>Default value: 5.</li>
+         * <li>Valid values: <strong>1</strong> to <strong>300</strong>.</li>
+         * <li>Unit: seconds.</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter takes effect only if the HealthCheck parameter is set to on.</p>
+         * </li>
+         * <li><p>If the value of the HealthCheckTimeout property is smaller than the value of the HealthCheckInterval property, the timeout period specified by the HealthCheckTimeout property becomes invalid and the value of the HealthCheckInterval property is used as the timeout period.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder healthCheckConnectTimeout(Integer healthCheckConnectTimeout) {
             this.healthCheckConnectTimeout = healthCheckConnectTimeout;
@@ -274,7 +344,10 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * HealthCheckExp.
+         * <p>The response string for UDP listener health checks. The string can be up to 64 characters in length and can contain only letters and digits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder healthCheckExp(String healthCheckExp) {
             this.healthCheckExp = healthCheckExp;
@@ -282,7 +355,13 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * HealthCheckInterval.
+         * <p>The interval at which health checks are performed. Valid values: <strong>1</strong> to <strong>50</strong>. Unit: seconds.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only if you set HealthCheck to on.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder healthCheckInterval(Integer healthCheckInterval) {
             this.healthCheckInterval = healthCheckInterval;
@@ -290,7 +369,10 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * HealthCheckReq.
+         * <p>The request string for UDP listener health checks. The string can be up to 64 characters in length and can contain only letters and digits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hello</p>
          */
         public Builder healthCheckReq(String healthCheckReq) {
             this.healthCheckReq = healthCheckReq;
@@ -298,7 +380,13 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * HealthyThreshold.
+         * <p>The number of consecutive successful health checks that must occur before an unhealthy and inaccessible backend server is declared healthy and accessible. Valid values: <strong>2</strong> to <strong>10</strong>.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only if you set HealthCheck to on.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder healthyThreshold(Integer healthyThreshold) {
             this.healthyThreshold = healthyThreshold;
@@ -306,7 +394,10 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * ListenerPort.
+         * <p>The listener port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder listenerPort(Integer listenerPort) {
             this.listenerPort = listenerPort;
@@ -314,7 +405,10 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5D7597CF-1630-54EC-A945-624A33F2E7E8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -322,7 +416,18 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * Scheduler.
+         * <p>The routing algorithm. Valid values:</p>
+         * <ul>
+         * <li><strong>wrr</strong>: Backend servers with higher weights receive more requests than those with lower weights.</li>
+         * <li><strong>wlc</strong>: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections to a backend server. If two backend servers have the same weight, the backend server that has fewer connections receives more requests.</li>
+         * <li><strong>rr</strong>: Requests are distributed to backend servers in sequence.</li>
+         * <li><strong>sch</strong>: consistent hashing that is based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.</li>
+         * <li><strong>qch</strong>: consistent hashing that is based on QUIC connection IDs. Requests that contain the same QUIC connection ID are distributed to the same backend server.</li>
+         * <li><strong>iqch</strong>: consistent hashing that is based on specific three bytes of the iQUIC CIDs. Requests whose second to fourth bytes are the same are distributed to the same backend server.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>wrr</p>
          */
         public Builder scheduler(String scheduler) {
             this.scheduler = scheduler;
@@ -330,7 +435,17 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * Status.
+         * <p>The status of the listener. Valid values:</p>
+         * <ul>
+         * <li><strong>Running</strong></li>
+         * <li><strong>Stopped</strong></li>
+         * <li><strong>Starting</strong></li>
+         * <li><strong>Configuring</strong></li>
+         * <li><strong>Stopping</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Stopped</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -338,7 +453,13 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * UnhealthyThreshold.
+         * <p>The number of consecutive failed health checks that must occur before a healthy and accessible backend server is declared unhealthy and inaccessible. Valid values: <strong>2</strong> to <strong>10</strong>.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only if you set HealthCheck to on.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             this.unhealthyThreshold = unhealthyThreshold;

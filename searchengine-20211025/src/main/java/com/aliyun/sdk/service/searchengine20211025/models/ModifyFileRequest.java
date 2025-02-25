@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyFileRequest} extends {@link RequestModel}
  *
  * <p>ModifyFileRequest</p>
  */
 public class ModifyFileRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("indexName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("indexName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String indexName;
 
-    @Path
-    @NameInMap("versionName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("versionName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String versionName;
 
-    @Body
-    @NameInMap("content")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("content")
     private String content;
 
-    @Body
-    @NameInMap("partition")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("partition")
     private Integer partition;
 
-    @Query
-    @NameInMap("fileName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("fileName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileName;
 
     private ModifyFileRequest(Builder builder) {
@@ -128,7 +133,11 @@ public class ModifyFileRequest extends Request {
         } 
 
         /**
-         * The ID of the instance
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-i7m2ne76e02</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -137,7 +146,11 @@ public class ModifyFileRequest extends Request {
         }
 
         /**
-         * The name of the index
+         * <p>The index name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>automobile_vector</p>
          */
         public Builder indexName(String indexName) {
             this.putPathParameter("indexName", indexName);
@@ -146,7 +159,11 @@ public class ModifyFileRequest extends Request {
         }
 
         /**
-         * The name of the version
+         * <p>The version name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-tl32m2c4u01@ha-cn-tl32m2c4u01_00@bj_vpc_domain_1@automobile_vector@index_config_edit</p>
          */
         public Builder versionName(String versionName) {
             this.putPathParameter("versionName", versionName);
@@ -155,7 +172,10 @@ public class ModifyFileRequest extends Request {
         }
 
         /**
-         * The parameters in the request body
+         * <p>The file content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("content", content);
@@ -164,7 +184,10 @@ public class ModifyFileRequest extends Request {
         }
 
         /**
-         * auditing
+         * <p>The number of shards.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds=20220713</p>
          */
         public Builder partition(Integer partition) {
             this.putBodyParameter("partition", partition);
@@ -173,7 +196,11 @@ public class ModifyFileRequest extends Request {
         }
 
         /**
-         * ha-cn-tl32m2c4u01@ha-cn-tl32m2c4u01_00@bj_vpc_domain_1@automobile_vector@index_config_edit
+         * <p>The name of the file in the full path</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/schemas/generation_schema.json</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("fileName", fileName);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceSecurityConfigsResponseBody</p>
  */
 public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
-    @NameInMap("InstanceSecurityConfigs")
+    @com.aliyun.core.annotation.NameInMap("InstanceSecurityConfigs")
     private InstanceSecurityConfigs instanceSecurityConfigs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceSecurityConfigsResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceSecurityConfigs.
+         * The return result of the request.
          */
         public Builder instanceSecurityConfigs(InstanceSecurityConfigs instanceSecurityConfigs) {
             this.instanceSecurityConfigs = instanceSecurityConfigs;
@@ -58,7 +57,7 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,19 +71,19 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
     } 
 
     public static class SecurityConfigs extends TeaModel {
-        @NameInMap("ConfigDescription")
+        @com.aliyun.core.annotation.NameInMap("ConfigDescription")
         private String configDescription;
 
-        @NameInMap("ConfigGroup")
+        @com.aliyun.core.annotation.NameInMap("ConfigGroup")
         private String configGroup;
 
-        @NameInMap("ConfigName")
+        @com.aliyun.core.annotation.NameInMap("ConfigName")
         private String configName;
 
-        @NameInMap("Risk")
+        @com.aliyun.core.annotation.NameInMap("Risk")
         private Boolean risk;
 
-        @NameInMap("RiskDescription")
+        @com.aliyun.core.annotation.NameInMap("RiskDescription")
         private String riskDescription;
 
         private SecurityConfigs(Builder builder) {
@@ -146,7 +145,7 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             private String riskDescription; 
 
             /**
-             * ConfigDescription.
+             * The name of the check item.
              */
             public Builder configDescription(String configDescription) {
                 this.configDescription = configDescription;
@@ -154,7 +153,7 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigGroup.
+             * The group of the check.
              */
             public Builder configGroup(String configGroup) {
                 this.configGroup = configGroup;
@@ -162,7 +161,7 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigName.
+             * The name of the specific check item.
              */
             public Builder configName(String configName) {
                 this.configName = configName;
@@ -170,7 +169,7 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Risk.
+             * Specifies whether a risk is detected.
              */
             public Builder risk(Boolean risk) {
                 this.risk = risk;
@@ -178,7 +177,7 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskDescription.
+             * Security recommendations.
              */
             public Builder riskDescription(String riskDescription) {
                 this.riskDescription = riskDescription;
@@ -193,22 +192,22 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
 
     }
     public static class InstanceSecurityConfigs extends TeaModel {
-        @NameInMap("CheckId")
+        @com.aliyun.core.annotation.NameInMap("CheckId")
         private String checkId;
 
-        @NameInMap("CheckTime")
+        @com.aliyun.core.annotation.NameInMap("CheckTime")
         private String checkTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("SecurityConfigs")
+        @com.aliyun.core.annotation.NameInMap("SecurityConfigs")
         private java.util.List < SecurityConfigs> securityConfigs;
 
-        @NameInMap("TotalCheckCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCheckCount")
         private Integer totalCheckCount;
 
-        @NameInMap("TotalRiskCount")
+        @com.aliyun.core.annotation.NameInMap("TotalRiskCount")
         private Integer totalRiskCount;
 
         private InstanceSecurityConfigs(Builder builder) {
@@ -279,7 +278,7 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             private Integer totalRiskCount; 
 
             /**
-             * CheckId.
+             * The unique identifier of the check.
              */
             public Builder checkId(String checkId) {
                 this.checkId = checkId;
@@ -287,7 +286,7 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * CheckTime.
+             * The time when the check was performed.
              */
             public Builder checkTime(String checkTime) {
                 this.checkTime = checkTime;
@@ -295,7 +294,7 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the OceanBase cluster.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -303,7 +302,7 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityConfigs.
+             * The list of check items.
              */
             public Builder securityConfigs(java.util.List < SecurityConfigs> securityConfigs) {
                 this.securityConfigs = securityConfigs;
@@ -311,7 +310,7 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCheckCount.
+             * The total number of security check items for the cluster.
              */
             public Builder totalCheckCount(Integer totalCheckCount) {
                 this.totalCheckCount = totalCheckCount;
@@ -319,7 +318,7 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalRiskCount.
+             * The total number of detected cluster security risks.
              */
             public Builder totalRiskCount(Integer totalRiskCount) {
                 this.totalRiskCount = totalRiskCount;

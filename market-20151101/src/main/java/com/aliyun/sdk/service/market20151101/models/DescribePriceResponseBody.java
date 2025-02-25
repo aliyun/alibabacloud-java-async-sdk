@@ -1,54 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.market20151101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePriceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePriceResponseBody</p>
  */
 public class DescribePriceResponseBody extends TeaModel {
-    @NameInMap("Coupons")
+    @com.aliyun.core.annotation.NameInMap("Coupons")
     private Coupons coupons;
 
-    @NameInMap("Currency")
+    @com.aliyun.core.annotation.NameInMap("Currency")
     private String currency;
 
-    @NameInMap("Cuxiao")
+    @com.aliyun.core.annotation.NameInMap("Cuxiao")
     private Boolean cuxiao;
 
-    @NameInMap("Cycle")
+    @com.aliyun.core.annotation.NameInMap("Cycle")
     private String cycle;
 
-    @NameInMap("DiscountPrice")
+    @com.aliyun.core.annotation.NameInMap("DiscountPrice")
     private Float discountPrice;
 
-    @NameInMap("Duration")
+    @com.aliyun.core.annotation.NameInMap("Duration")
     private Integer duration;
 
-    @NameInMap("ExpressionCode")
+    @com.aliyun.core.annotation.NameInMap("ExpressionCode")
     private String expressionCode;
 
-    @NameInMap("ExpressionMessage")
+    @com.aliyun.core.annotation.NameInMap("ExpressionMessage")
     private String expressionMessage;
 
-    @NameInMap("InfoTitle")
+    @com.aliyun.core.annotation.NameInMap("InfoTitle")
     private String infoTitle;
 
-    @NameInMap("OriginalPrice")
+    @com.aliyun.core.annotation.NameInMap("OriginalPrice")
     private Float originalPrice;
 
-    @NameInMap("ProductCode")
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
 
-    @NameInMap("PromotionRules")
+    @com.aliyun.core.annotation.NameInMap("PromotionRules")
     private PromotionRules promotionRules;
 
-    @NameInMap("TradePrice")
+    @com.aliyun.core.annotation.NameInMap("TradePrice")
     private Float tradePrice;
 
     private DescribePriceResponseBody(Builder builder) {
@@ -291,23 +296,29 @@ public class DescribePriceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePriceResponseBody</p>
+     */
     public static class Coupon extends TeaModel {
-        @NameInMap("CanPromFee")
+        @com.aliyun.core.annotation.NameInMap("CanPromFee")
         private Float canPromFee;
 
-        @NameInMap("CouponDesc")
+        @com.aliyun.core.annotation.NameInMap("CouponDesc")
         private String couponDesc;
 
-        @NameInMap("CouponName")
+        @com.aliyun.core.annotation.NameInMap("CouponName")
         private String couponName;
 
-        @NameInMap("CouponOptionCode")
+        @com.aliyun.core.annotation.NameInMap("CouponOptionCode")
         private String couponOptionCode;
 
-        @NameInMap("CouponOptionNo")
+        @com.aliyun.core.annotation.NameInMap("CouponOptionNo")
         private String couponOptionNo;
 
-        @NameInMap("IsSelected")
+        @com.aliyun.core.annotation.NameInMap("IsSelected")
         private Boolean isSelected;
 
         private Coupon(Builder builder) {
@@ -432,9 +443,15 @@ public class DescribePriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePriceResponseBody</p>
+     */
     public static class Coupons extends TeaModel {
-        @NameInMap("Coupon")
-        private java.util.List < Coupon> coupon;
+        @com.aliyun.core.annotation.NameInMap("Coupon")
+        private java.util.List<Coupon> coupon;
 
         private Coupons(Builder builder) {
             this.coupon = builder.coupon;
@@ -451,17 +468,17 @@ public class DescribePriceResponseBody extends TeaModel {
         /**
          * @return coupon
          */
-        public java.util.List < Coupon> getCoupon() {
+        public java.util.List<Coupon> getCoupon() {
             return this.coupon;
         }
 
         public static final class Builder {
-            private java.util.List < Coupon> coupon; 
+            private java.util.List<Coupon> coupon; 
 
             /**
              * Coupon.
              */
-            public Builder coupon(java.util.List < Coupon> coupon) {
+            public Builder coupon(java.util.List<Coupon> coupon) {
                 this.coupon = coupon;
                 return this;
             }
@@ -473,14 +490,20 @@ public class DescribePriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePriceResponseBody</p>
+     */
     public static class PromotionRule extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private PromotionRule(Builder builder) {
@@ -554,9 +577,15 @@ public class DescribePriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePriceResponseBody</p>
+     */
     public static class PromotionRules extends TeaModel {
-        @NameInMap("PromotionRule")
-        private java.util.List < PromotionRule> promotionRule;
+        @com.aliyun.core.annotation.NameInMap("PromotionRule")
+        private java.util.List<PromotionRule> promotionRule;
 
         private PromotionRules(Builder builder) {
             this.promotionRule = builder.promotionRule;
@@ -573,17 +602,17 @@ public class DescribePriceResponseBody extends TeaModel {
         /**
          * @return promotionRule
          */
-        public java.util.List < PromotionRule> getPromotionRule() {
+        public java.util.List<PromotionRule> getPromotionRule() {
             return this.promotionRule;
         }
 
         public static final class Builder {
-            private java.util.List < PromotionRule> promotionRule; 
+            private java.util.List<PromotionRule> promotionRule; 
 
             /**
              * PromotionRule.
              */
-            public Builder promotionRule(java.util.List < PromotionRule> promotionRule) {
+            public Builder promotionRule(java.util.List<PromotionRule> promotionRule) {
                 this.promotionRule = promotionRule;
                 return this;
             }

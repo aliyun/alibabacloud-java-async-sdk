@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMetaCollectionEntitiesResponseBody} extends {@link TeaModel}
  *
  * <p>ListMetaCollectionEntitiesResponseBody</p>
  */
 public class ListMetaCollectionEntitiesResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListMetaCollectionEntitiesResponseBody(Builder builder) {
@@ -98,7 +103,7 @@ public class ListMetaCollectionEntitiesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The token that is used for the next query.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +111,10 @@ public class ListMetaCollectionEntitiesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Collection.NotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +122,10 @@ public class ListMetaCollectionEntitiesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameters are invalid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +133,10 @@ public class ListMetaCollectionEntitiesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,12 +144,10 @@ public class ListMetaCollectionEntitiesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
          * 
-         * true: The request was successful.
-         * 
-         * false: The request failed.
+         * <strong>example:</strong>
+         * <p>E25887B7-579C-54A5-9C4F-83A0DE367DD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -143,7 +155,12 @@ public class ListMetaCollectionEntitiesResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>true: The request was successful.</p>
+         * <p>false: The request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -156,11 +173,17 @@ public class ListMetaCollectionEntitiesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListMetaCollectionEntitiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMetaCollectionEntitiesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("EntityList")
-        private java.util.List < Entity > entityList;
+        @com.aliyun.core.annotation.NameInMap("EntityList")
+        private java.util.List<Entity> entityList;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
         private Data(Builder builder) {
@@ -179,7 +202,7 @@ public class ListMetaCollectionEntitiesResponseBody extends TeaModel {
         /**
          * @return entityList
          */
-        public java.util.List < Entity > getEntityList() {
+        public java.util.List<Entity> getEntityList() {
             return this.entityList;
         }
 
@@ -191,19 +214,22 @@ public class ListMetaCollectionEntitiesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Entity > entityList; 
+            private java.util.List<Entity> entityList; 
             private String nextToken; 
 
             /**
-             * The ID of the request. You can use the ID to query logs and troubleshoot issues.
+             * <p>The entities.</p>
              */
-            public Builder entityList(java.util.List < Entity > entityList) {
+            public Builder entityList(java.util.List<Entity> entityList) {
                 this.entityList = entityList;
                 return this;
             }
 
             /**
-             * The entities.
+             * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123344</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;

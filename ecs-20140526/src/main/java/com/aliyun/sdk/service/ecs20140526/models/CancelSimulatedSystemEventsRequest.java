@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelSimulatedSystemEventsRequest} extends {@link RequestModel}
  *
  * <p>CancelSimulatedSystemEventsRequest</p>
  */
 public class CancelSimulatedSystemEventsRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("EventId")
-    @Validation(required = true)
-    private java.util.List < String > eventId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> eventId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private CancelSimulatedSystemEventsRequest(Builder builder) {
@@ -76,7 +81,7 @@ public class CancelSimulatedSystemEventsRequest extends Request {
     /**
      * @return eventId
      */
-    public java.util.List < String > getEventId() {
+    public java.util.List<String> getEventId() {
         return this.eventId;
     }
 
@@ -117,7 +122,7 @@ public class CancelSimulatedSystemEventsRequest extends Request {
 
     public static final class Builder extends Request.Builder<CancelSimulatedSystemEventsRequest, Builder> {
         private String sourceRegionId; 
-        private java.util.List < String > eventId; 
+        private java.util.List<String> eventId; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -149,9 +154,13 @@ public class CancelSimulatedSystemEventsRequest extends Request {
         }
 
         /**
-         * The IDs of simulated system events. You can specify up to 100 event IDs in a single request.
+         * <p>The IDs of simulated system events. You can specify up to 100 event IDs in a single request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e-xhskHun1256****</p>
          */
-        public Builder eventId(java.util.List < String > eventId) {
+        public Builder eventId(java.util.List<String> eventId) {
             this.putQueryParameter("EventId", eventId);
             this.eventId = eventId;
             return this;
@@ -176,7 +185,11 @@ public class CancelSimulatedSystemEventsRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

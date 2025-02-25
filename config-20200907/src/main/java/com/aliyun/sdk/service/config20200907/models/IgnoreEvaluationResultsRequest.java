@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link IgnoreEvaluationResultsRequest} extends {@link RequestModel}
  *
  * <p>IgnoreEvaluationResultsRequest</p>
  */
 public class IgnoreEvaluationResultsRequest extends Request {
-    @Body
-    @NameInMap("ConfigRuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConfigRuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String configRuleId;
 
-    @Body
-    @NameInMap("IgnoreDate")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IgnoreDate")
     private String ignoreDate;
 
-    @Body
-    @NameInMap("Reason")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Reason")
     private String reason;
 
-    @Body
-    @NameInMap("Resources")
-    @Validation(required = true)
-    private java.util.List < Resources> resources;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Resources")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Resources> resources;
 
     private IgnoreEvaluationResultsRequest(Builder builder) {
         super(builder);
@@ -75,7 +80,7 @@ public class IgnoreEvaluationResultsRequest extends Request {
     /**
      * @return resources
      */
-    public java.util.List < Resources> getResources() {
+    public java.util.List<Resources> getResources() {
         return this.resources;
     }
 
@@ -83,7 +88,7 @@ public class IgnoreEvaluationResultsRequest extends Request {
         private String configRuleId; 
         private String ignoreDate; 
         private String reason; 
-        private java.util.List < Resources> resources; 
+        private java.util.List<Resources> resources; 
 
         private Builder() {
             super();
@@ -98,10 +103,12 @@ public class IgnoreEvaluationResultsRequest extends Request {
         } 
 
         /**
-         * The ID of the rule.
-         * <p>
+         * <p>The ID of the rule.</p>
+         * <p>For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of a rule, see [ListConfigRules](~~169607~~).
+         * <strong>example:</strong>
+         * <p>cr-7e72626622af0051****</p>
          */
         public Builder configRuleId(String configRuleId) {
             this.putBodyParameter("ConfigRuleId", configRuleId);
@@ -110,10 +117,13 @@ public class IgnoreEvaluationResultsRequest extends Request {
         }
 
         /**
-         * The date from which the system automatically re-evaluates the ignored incompliant resources.
-         * <p>
+         * <p>The date from which the system automatically re-evaluates the ignored incompliant resources.</p>
+         * <blockquote>
+         * <p> If you leave this parameter empty, the system does not automatically re-evaluate the ignored incompliant resources. You must manually re-evaluate the ignored incompliant resources.</p>
+         * </blockquote>
          * 
-         * >  If you leave this parameter empty, the system does not automatically re-evaluate the ignored incompliant resources. You must manually re-evaluate the ignored incompliant resources.
+         * <strong>example:</strong>
+         * <p>2022-06-01</p>
          */
         public Builder ignoreDate(String ignoreDate) {
             this.putBodyParameter("IgnoreDate", ignoreDate);
@@ -122,7 +132,10 @@ public class IgnoreEvaluationResultsRequest extends Request {
         }
 
         /**
-         * The reason why you want to ignore the resource.
+         * <p>The reason why you want to ignore the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test ignore.</p>
          */
         public Builder reason(String reason) {
             this.putBodyParameter("Reason", reason);
@@ -131,9 +144,10 @@ public class IgnoreEvaluationResultsRequest extends Request {
         }
 
         /**
-         * The resources to be ignored.
+         * <p>The resources to be ignored.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder resources(java.util.List < Resources> resources) {
+        public Builder resources(java.util.List<Resources> resources) {
             String resourcesShrink = shrink(resources, "Resources", "json");
             this.putBodyParameter("Resources", resourcesShrink);
             this.resources = resources;
@@ -147,21 +161,27 @@ public class IgnoreEvaluationResultsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link IgnoreEvaluationResultsRequest} extends {@link TeaModel}
+     *
+     * <p>IgnoreEvaluationResultsRequest</p>
+     */
     public static class Resources extends TeaModel {
-        @NameInMap("Region")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Region")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String region;
 
-        @NameInMap("ResourceAccountId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ResourceAccountId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long resourceAccountId;
 
-        @NameInMap("ResourceId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String resourceId;
 
-        @NameInMap("ResourceType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String resourceType;
 
         private Resources(Builder builder) {
@@ -214,10 +234,12 @@ public class IgnoreEvaluationResultsRequest extends Request {
             private String resourceType; 
 
             /**
-             * The ID of the region in which the resource resides.
-             * <p>
+             * <p>The ID of the region in which the resource resides.</p>
+             * <p>For more information about how to obtain the ID of the region in which a resource resides, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</p>
+             * <p>This parameter is required.</p>
              * 
-             * For more information about how to obtain the ID of the region in which a resource resides, see [ListDiscoveredResources](~~169620~~).
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -225,7 +247,11 @@ public class IgnoreEvaluationResultsRequest extends Request {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the resources belong.
+             * <p>The ID of the Alibaba Cloud account to which the resources belong.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100931896542****</p>
              */
             public Builder resourceAccountId(Long resourceAccountId) {
                 this.resourceAccountId = resourceAccountId;
@@ -233,10 +259,12 @@ public class IgnoreEvaluationResultsRequest extends Request {
             }
 
             /**
-             * The ID of the resource.
-             * <p>
+             * <p>The ID of the resource.</p>
+             * <p>For more information about how to obtain the ID of a resource, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</p>
+             * <p>This parameter is required.</p>
              * 
-             * For more information about how to obtain the ID of a resource, see [ListDiscoveredResources](~~169620~~).
+             * <strong>example:</strong>
+             * <p>lb-hp3a3b4ztyfm2plgm****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -244,10 +272,12 @@ public class IgnoreEvaluationResultsRequest extends Request {
             }
 
             /**
-             * The type of the resource.
-             * <p>
+             * <p>The type of the resource.</p>
+             * <p>For more information about how to obtain the type of a resource, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</p>
+             * <p>This parameter is required.</p>
              * 
-             * For more information about how to obtain the type of a resource, see [ListDiscoveredResources](~~169620~~).
+             * <strong>example:</strong>
+             * <p>ACS::SLB::LoadBalancer</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

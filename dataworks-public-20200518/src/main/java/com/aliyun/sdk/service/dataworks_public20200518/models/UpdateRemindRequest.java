@@ -1,95 +1,99 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateRemindRequest} extends {@link RequestModel}
  *
  * <p>UpdateRemindRequest</p>
  */
 public class UpdateRemindRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("AlertInterval")
-    @Validation(maximum = 1800, minimum = 1200)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertInterval")
+    @com.aliyun.core.annotation.Validation(maximum = 1800, minimum = 1200)
     private Integer alertInterval;
 
-    @Body
-    @NameInMap("AlertMethods")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertMethods")
     private String alertMethods;
 
-    @Body
-    @NameInMap("AlertTargets")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertTargets")
     private String alertTargets;
 
-    @Body
-    @NameInMap("AlertUnit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertUnit")
     private String alertUnit;
 
-    @Body
-    @NameInMap("BaselineIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BaselineIds")
     private String baselineIds;
 
-    @Body
-    @NameInMap("BizProcessIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizProcessIds")
     private String bizProcessIds;
 
-    @Body
-    @NameInMap("Detail")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Detail")
     private String detail;
 
-    @Body
-    @NameInMap("DndEnd")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DndEnd")
     private String dndEnd;
 
-    @Body
-    @NameInMap("MaxAlertTimes")
-    @Validation(maximum = 10, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxAlertTimes")
+    @com.aliyun.core.annotation.Validation(maximum = 10, minimum = 1)
     private Integer maxAlertTimes;
 
-    @Body
-    @NameInMap("NodeIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeIds")
     private String nodeIds;
 
-    @Body
-    @NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
     private Long projectId;
 
-    @Body
-    @NameInMap("RemindId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RemindId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long remindId;
 
-    @Body
-    @NameInMap("RemindName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RemindName")
     private String remindName;
 
-    @Body
-    @NameInMap("RemindType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RemindType")
     private String remindType;
 
-    @Body
-    @NameInMap("RemindUnit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RemindUnit")
     private String remindUnit;
 
-    @Body
-    @NameInMap("RobotUrls")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RobotUrls")
     private String robotUrls;
 
-    @Body
-    @NameInMap("UseFlag")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UseFlag")
     private Boolean useFlag;
 
-    @Body
-    @NameInMap("Webhooks")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Webhooks")
     private String webhooks;
 
     private UpdateRemindRequest(Builder builder) {
@@ -310,7 +314,7 @@ public class UpdateRemindRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -319,7 +323,10 @@ public class UpdateRemindRequest extends Request {
         }
 
         /**
-         * The recipient to whom alert notifications are sent. Valid values: OWNER and OTHER. The value OWNER indicates that alert notifications are sent to the object owner. The value OTHER indicates that alert notifications are sent to a specified user.
+         * <p>The intervals at which alert notifications are sent. Unit: seconds. Minimum value: 1200. Default value: 1800.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1800</p>
          */
         public Builder alertInterval(Integer alertInterval) {
             this.putBodyParameter("AlertInterval", alertInterval);
@@ -328,11 +335,18 @@ public class UpdateRemindRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the alert rule. Valid values:
-         * <p>
+         * <p>The notification method. Valid values:</p>
+         * <ul>
+         * <li>MAIL: Alert notifications are sent by email.</li>
+         * <li>SMS: Alert notifications are sent by text message.</li>
+         * <li>PHONE: Alert notifications are sent by phone call. You can use this notification method only in DataWorks Professional Edition or more advanced editions.</li>
+         * <li>DINGROBOTS: Alert notifications are sent by DingTalk message. You can use this notification method only if the RobotUrls parameter is configured.</li>
+         * <li>WEBHOOKS (WeCom or Lark chatbot): Alert notifications are sent by WeCom or Lark message. You can use this notification method only if the Webhooks parameter is configured.</li>
+         * </ul>
+         * <p>Multiple notification methods are separated by commas (,).</p>
          * 
-         * *   true: enables the alert rule.
-         * *   false: disables the alert rule.
+         * <strong>example:</strong>
+         * <p>SMS,MAIL</p>
          */
         public Builder alertMethods(String alertMethods) {
             this.putBodyParameter("AlertMethods", alertMethods);
@@ -341,10 +355,14 @@ public class UpdateRemindRequest extends Request {
         }
 
         /**
-         * The webhook URL of the DingTalk chatbot. You can specify multiple webhook URLs. Separate them with commas (,).
-         * <p>
+         * <p>The value format required by this parameter varies based on the value that you specify for the AlertUnit parameter. Take note of the following items:</p>
+         * <ul>
+         * <li>If the AlertUnit parameter is set to OWNER, leave this parameter empty.</li>
+         * <li>If the AlertUnit parameter is set to OTHER, set this parameter to the unique ID (UID) of the specified user. You can specify multiple UIDs. Separate them with commas (,). A maximum of 10 UIDs can be specified for receiving alert notifications.</li>
+         * </ul>
          * 
-         * If this parameter is set to undefined, the specified webhook URLs are cleared.
+         * <strong>example:</strong>
+         * <p>9527952795279527</p>
          */
         public Builder alertTargets(String alertTargets) {
             this.putBodyParameter("AlertTargets", alertTargets);
@@ -353,11 +371,10 @@ public class UpdateRemindRequest extends Request {
         }
 
         /**
-         * The value format required by this parameter varies based on the value that you specify for the AlertUnit parameter. Take note of the following items:
-         * <p>
+         * <p>The recipient to whom alert notifications are sent. Valid values: OWNER and OTHER. The value OWNER indicates that alert notifications are sent to the object owner. The value OTHER indicates that alert notifications are sent to a specified user.</p>
          * 
-         * *   If the AlertUnit parameter is set to OWNER, leave this parameter empty.
-         * *   If the AlertUnit parameter is set to OTHER, set this parameter to the unique ID (UID) of the specified user. You can specify multiple IDs. Separate them with commas (,). You can specify a maximum of 10 IDs.
+         * <strong>example:</strong>
+         * <p>OWNER</p>
          */
         public Builder alertUnit(String alertUnit) {
             this.putBodyParameter("AlertUnit", alertUnit);
@@ -366,10 +383,10 @@ public class UpdateRemindRequest extends Request {
         }
 
         /**
-         * The ID of the workflow to which the custom alert rule is applied.. An alert rule can monitor a maximum of five workflows. Separate multiple IDs with commas (,).
-         * <p>
+         * <p>The ID of the baseline to which the custom alert rule is applied. A maximum of 5 baselines can be specified for a custom alert rule. You can specify multiple IDs. Separate multiple IDs with commas (,). This parameter takes effect when you set the RemindUnit parameter to BASELINE.</p>
          * 
-         * This parameter takes effect when you set the RemindUnit parameter to BIZPROCESS.
+         * <strong>example:</strong>
+         * <p>1,2,3</p>
          */
         public Builder baselineIds(String baselineIds) {
             this.putBodyParameter("BaselineIds", baselineIds);
@@ -378,7 +395,10 @@ public class UpdateRemindRequest extends Request {
         }
 
         /**
-         * The maximum number of alerts. Valid values: 1 to 10. Default value: 3.
+         * <p>The ID of the workflow to which the custom alert rule is applied. A maximum of 5 workflows can be specified for a custom alert rule. You can specify multiple IDs. Separate multiple IDs with commas (,). This parameter takes effect when you set the RemindUnit parameter to BIZPROCESS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2,3</p>
          */
         public Builder bizProcessIds(String bizProcessIds) {
             this.putBodyParameter("BizProcessIds", bizProcessIds);
@@ -387,16 +407,17 @@ public class UpdateRemindRequest extends Request {
         }
 
         /**
-         * The notification method. Valid values:
-         * <p>
+         * <p>The details of the conditions that trigger an alert.</p>
+         * <ul>
+         * <li>If the RemindType parameter is set to FINISHED, leave this parameter empty.</li>
+         * <li>If the RemindType parameter is set to UNFINISHED, set this parameter to key-value pairs. Example: {&quot;hour&quot;:23,&quot;minu&quot;:59}. Valid values of hour: [0,47]. Valid values of minu: [0,59].</li>
+         * <li>If the RemindType parameter is set to ERROR, leave this parameter empty.</li>
+         * <li>If the RemindType parameter is set to CYCLE_UNFINISHED, set this parameter to key-value pairs in the JSON format. Example: {&quot;1&quot;:&quot;05:50&quot;,&quot;2&quot;:&quot;06:50&quot;,&quot;3&quot;:&quot;07:50&quot;,&quot;4&quot;:&quot;08:50&quot;,&quot;5&quot;:&quot;09:50&quot;,&quot;6&quot;:&quot;10:50&quot;,&quot;7&quot;:&quot;11:50&quot;,&quot;8&quot;:&quot;12:50&quot;,&quot;9&quot;:&quot;13:50&quot;,&quot;10&quot;:&quot;14:50&quot;,&quot;11&quot;:&quot;15:50&quot;,&quot;12&quot;:&quot;16:50&quot;,&quot;13&quot;:&quot;17:50&quot;,&quot;14&quot;:&quot;18:50&quot;,&quot;15&quot;:&quot;19:50&quot;,&quot;16&quot;:&quot;20:50&quot;,&quot;17&quot;:&quot;21:50&quot;,&quot;18&quot;:&quot;22:50&quot;,&quot;19&quot;:&quot;23:50&quot;,&quot;20&quot;:&quot;24:50&quot;,&quot;21&quot;:&quot;25:50&quot;}. A key in the JSON string indicates the sequence number of a cycle. Valid values of keys: 1 to 288. A value in the JSON string indicates the time in point when a monitored instance times out in the relevant cycle. Values must be in the format of hh:mm. Valid values of hh: [0,47]. Valid values of mm: [0,59].</li>
+         * <li>If the RemindType parameter is set to TIMEOUT, set this parameter to the timeout period. Unit: seconds. Example: 1800. This indicates that an alert notification is sent if the running duration of a monitored instance exceeds 30 minutes.</li>
+         * </ul>
          * 
-         * *   MAIL: Alert notifications are sent by emails.
-         * *   SMS: Alert notifications are sent by text messages.
-         * *   PHONE: Alert notifications are sent by phone calls. You can use this notification method only in DataWorks Professional Edition or more advanced editions.
-         * *   DINGROBOTS: Alert notifications are sent by DingTalk messages. You can use this notification method only if the RobotUrls parameter is configured.
-         * *   WEBHOOKS (WeCom or Lark chatbot): Alert notifications are sent by WeCom or Lark messages. If you want to use this notification method, you must configure the Webhooks parameter.
-         * 
-         * You can specify multiple notification methods. Separate the specified notification methods with commas (,).
+         * <strong>example:</strong>
+         * <p>{&quot;hour&quot;:23,&quot;minu&quot;:59}</p>
          */
         public Builder detail(String detail) {
             this.putBodyParameter("Detail", detail);
@@ -405,10 +426,10 @@ public class UpdateRemindRequest extends Request {
         }
 
         /**
-         * The ID of the node to which the custom alert rule is applied.. An alert rule can monitor a maximum of 50 nodes. Separate multiple IDs with commas (,).
-         * <p>
+         * <p>The end of the period during which no alert notifications are sent. Specify the time in the hh:mm format. Valid values of hh: [0,23]. Valid values of mm: [0,59].</p>
          * 
-         * This parameter takes effect when you set the RemindUnit parameter to NODE.
+         * <strong>example:</strong>
+         * <p>08:00</p>
          */
         public Builder dndEnd(String dndEnd) {
             this.putBodyParameter("DndEnd", dndEnd);
@@ -417,20 +438,10 @@ public class UpdateRemindRequest extends Request {
         }
 
         /**
-         * The details of the conditions that trigger an alert.
-         * <p>
+         * <p>The maximum number of alerts. Valid values: 1 to 10. Default value: 3.</p>
          * 
-         * *   If the RemindType parameter is set to FINISHED, leave this parameter empty.
-         * 
-         * *   If the RemindType parameter is set to UNFINISHED, set this parameter to key-value pairs. Example: {"hour":23,"minu":59}. Valid values of hour: 0 to 47. Valid values of minu: 0 to 59.
-         * 
-         * *   If the RemindType parameter is set to ERROR, leave this parameter empty.
-         * 
-         * *   If the RemindType parameter is set to CYCLE_UNFINISHED, set this parameter to key-value pairs in the JSON format. Example: {"1":"05:50","2":"06:50","3":"07:50","4":"08:50","5":"09:50","6":"10:50","7":"11:50","8":"12:50","9":"13:50","10":"14:50","11":"15:50","12":"16:50","13":"17:50","14":"18:50","15":"19:50","16":"20:50","17":"21:50","18":"22:50","19":"23:50","20":"24:50","21":"25:50"}.
-         * 
-         *     A key in the JSON string indicates the sequence number of a cycle. Valid values of keys: 1 to 288. A value in the JSON string indicates the time in point when a monitored instance times out in the relevant cycle. Values must be in the format of hh:mm. Valid values of hh: 0 to 47. Valid values of mm: 0 to 59.
-         * 
-         * *   If the RemindType parameter is set to TIMEOUT, set this parameter to the timeout period. Unit: seconds. Example: 1800. This indicates that an alert notification is sent if the duration of a monitored instance exceeds 30 minutes.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder maxAlertTimes(Integer maxAlertTimes) {
             this.putBodyParameter("MaxAlertTimes", maxAlertTimes);
@@ -439,10 +450,10 @@ public class UpdateRemindRequest extends Request {
         }
 
         /**
-         * The ID of the workspace to which the custom alert rule is applied.. Only one workspace can be specified for a custom alert rule.
-         * <p>
+         * <p>The ID of the node to which the custom alert rule is applied. A maximum of 50 nodes can be specified for a custom alert rule. You can specify multiple IDs. Separate multiple IDs with commas (,). This parameter takes effect when you set the RemindUnit parameter to NODE.</p>
          * 
-         * This parameter takes effect when you set the RemindUnit parameter to PROJECT.
+         * <strong>example:</strong>
+         * <p>1,2,3</p>
          */
         public Builder nodeIds(String nodeIds) {
             this.putBodyParameter("NodeIds", nodeIds);
@@ -451,16 +462,10 @@ public class UpdateRemindRequest extends Request {
         }
 
         /**
-         * The condition that triggers the alert rule. Valid values:
-         * <p>
+         * <p>The ID of the workspace to which the custom alert rule is applied. You can specify only one workspace for a custom alert rule. This parameter takes effect when you set the RemindUnit parameter to PROJECT.</p>
          * 
-         * *   FINISHED: The system monitors an instance when it starts to run and sends an alert notification after the running of the instance is complete.
-         * *   UNFINISHED: The system monitors an instance when it starts to run and sends an alert notification if the instance is still running at the specified point in time.
-         * *   ERROR: The system monitors an instance when it starts to run and sends an alert notification if an error occurs.
-         * *   CYCLE_UNFINISHED: The system sends an alert notification if a monitored instance is still running at the end of the specified cycle. In most cases, you can configure this trigger condition for node instances that are scheduled to run by hour.
-         * *   TIMEOUT: The system monitors an instance when it starts to run and sends an alert notification if the instance is still running after the specified period ends. In most cases, you can configure this trigger condition to monitor the duration of node instances.
-         * 
-         * For more information, see [Manage custom alert rules](~~138172~~).
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -469,7 +474,11 @@ public class UpdateRemindRequest extends Request {
         }
 
         /**
-         * The end of the period during which no alert notifications are sent. Specify the time in the hh:mm format. Valid values of hh: 0 to 23. Valid values of mm: 0 to 59.
+         * <p>The custom alert rule ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder remindId(Long remindId) {
             this.putBodyParameter("RemindId", remindId);
@@ -478,13 +487,10 @@ public class UpdateRemindRequest extends Request {
         }
 
         /**
-         * The type of the object to which the custom alert rule is applied.. Valid values:
-         * <p>
+         * <p>The name of the custom alert rule. The name cannot exceed 128 characters in length.</p>
          * 
-         * *   NODE: node
-         * *   BASELINE: baseline
-         * *   PROJECT: workspace
-         * *   BIZPROCESS: workflow
+         * <strong>example:</strong>
+         * <p>update_remindname</p>
          */
         public Builder remindName(String remindName) {
             this.putBodyParameter("RemindName", remindName);
@@ -493,7 +499,18 @@ public class UpdateRemindRequest extends Request {
         }
 
         /**
-         * The intervals at which alert notifications are sent. Unit: seconds. Minimum value: 1200. Default value: 1800.
+         * <p>The condition that triggers the alert rule. Valid values:</p>
+         * <ul>
+         * <li>FINISHED: The system monitors an instance when it starts to run and sends an alert notification after the running of the instance is complete.</li>
+         * <li>UNFINISHED: The system monitors an instance when it starts to run and sends an alert notification if the instance is still running at the specified point in time.</li>
+         * <li>ERROR: The system monitors an instance when it starts to run and sends an alert notification if an error occurs.</li>
+         * <li>CYCLE_UNFINISHED: The system sends an alert notification if a monitored instance is still running at the end of the specified cycle. In most cases, you can configure this trigger condition for node instances that are scheduled to run by hour.</li>
+         * <li>TIMEOUT: The system monitors an instance when it starts to run and sends an alert notification if the instance is still running after the specified period ends. In most cases, you can configure this trigger condition to monitor the running duration of node instances.</li>
+         * </ul>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/138172.html">Manage custom alert rules</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FINISHED</p>
          */
         public Builder remindType(String remindType) {
             this.putBodyParameter("RemindType", remindType);
@@ -502,10 +519,16 @@ public class UpdateRemindRequest extends Request {
         }
 
         /**
-         * The ID of the baseline to which the custom alert rule is applied.. An alert rule can monitor a maximum of five baselines. Separate multiple IDs with commas (,).
-         * <p>
+         * <p>The type of the object to which the custom alert rule is applied. Valid values:</p>
+         * <ul>
+         * <li>NODE</li>
+         * <li>BASELINE</li>
+         * <li>PROJECT</li>
+         * <li>BIZPROCESS</li>
+         * </ul>
          * 
-         * This parameter takes effect when you set the RemindUnit parameter to BASELINE.
+         * <strong>example:</strong>
+         * <p>NODE</p>
          */
         public Builder remindUnit(String remindUnit) {
             this.putBodyParameter("RemindUnit", remindUnit);
@@ -514,7 +537,10 @@ public class UpdateRemindRequest extends Request {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The webhook URL of the DingTalk chatbot. You can specify multiple webhook URLs. Separate multiple webhook URLs with commas (,). If this parameter is set to undefined, the specified webhook URLs are cleared.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=">https://oapi.dingtalk.com/robot/send?access_token=</a>******************************</p>
          */
         public Builder robotUrls(String robotUrls) {
             this.putBodyParameter("RobotUrls", robotUrls);
@@ -523,12 +549,14 @@ public class UpdateRemindRequest extends Request {
         }
 
         /**
-         * The webhook URL of the WeCom or Lark chatbot. You can specify multiple webhook URLs. Separate the specified webhook URLs with commas (,). The WEBHOOKS notification method must be specified for alertMethods. If this parameter is set to undefined, the specified webhook URLs are cleared.
-         * <p>
+         * <p>Specifies whether to enable the alert rule. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * Only DataWorks Enterprise Edition supports this parameter.
-         * 
-         * The webhook URL-based alerting feature is supported in the following regions: China (Shanghai), China (Chengdu), China (Zhangjiakou), China (Beijing), China (Hangzhou), China (Shenzhen), China (Hong Kong), Germany (Frankfurt), and Singapore.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder useFlag(Boolean useFlag) {
             this.putBodyParameter("UseFlag", useFlag);
@@ -537,7 +565,11 @@ public class UpdateRemindRequest extends Request {
         }
 
         /**
-         * Indicates whether the modification to the custom alert rule succeeds.
+         * <p>The webhook URL of the WeCom or Lark chatbot. You can specify multiple webhook URLs. Separate multiple webhook URLs with commas (,). The value of AlertMethods must include WEBHOOKS. If this parameter is set to undefined, the specified webhook URLs are cleared.</p>
+         * <p>Only DataWorks Enterprise Edition supports this parameter. The webhook URL-based alerting feature is supported in the following regions: China (Shanghai), China (Chengdu), China (Zhangjiakou), China (Beijing), China (Hangzhou), China (Shenzhen), China (Hong Kong), Germany (Frankfurt), and Singapore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://open.feishu.cn/open-apis/bot/v2/hook/">https://open.feishu.cn/open-apis/bot/v2/hook/</a>*******</p>
          */
         public Builder webhooks(String webhooks) {
             this.putBodyParameter("Webhooks", webhooks);

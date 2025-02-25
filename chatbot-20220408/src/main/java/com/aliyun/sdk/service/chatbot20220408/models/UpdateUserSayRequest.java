@@ -1,37 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateUserSayRequest} extends {@link RequestModel}
  *
  * <p>UpdateUserSayRequest</p>
  */
 public class UpdateUserSayRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AgentKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentKey")
     private String agentKey;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("UserSayDefinition")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserSayDefinition")
     private UserSayDefinition userSayDefinition;
 
-    @Query
-    @NameInMap("UserSayId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserSayId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long userSayId;
 
     private UpdateUserSayRequest(Builder builder) {
@@ -130,7 +130,10 @@ public class UpdateUserSayRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chatbot-cn-yjzbyrEvqd</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -149,7 +152,10 @@ public class UpdateUserSayRequest extends Request {
         }
 
         /**
-         * UserSayId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34512323</p>
          */
         public Builder userSayId(Long userSayId) {
             this.putQueryParameter("UserSayId", userSayId);
@@ -164,14 +170,20 @@ public class UpdateUserSayRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateUserSayRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateUserSayRequest</p>
+     */
     public static class SlotInfos extends TeaModel {
-        @NameInMap("EndIndex")
+        @com.aliyun.core.annotation.NameInMap("EndIndex")
         private Integer endIndex;
 
-        @NameInMap("SlotId")
+        @com.aliyun.core.annotation.NameInMap("SlotId")
         private String slotId;
 
-        @NameInMap("StartIndex")
+        @com.aliyun.core.annotation.NameInMap("StartIndex")
         private Integer startIndex;
 
         private SlotInfos(Builder builder) {
@@ -245,16 +257,22 @@ public class UpdateUserSayRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateUserSayRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateUserSayRequest</p>
+     */
     public static class UserSayDefinition extends TeaModel {
-        @NameInMap("Content")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Content")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String content;
 
-        @NameInMap("IntentId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("IntentId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long intentId;
 
-        @NameInMap("SlotInfos")
+        @com.aliyun.core.annotation.NameInMap("SlotInfos")
         private java.util.List < SlotInfos> slotInfos;
 
         private UserSayDefinition(Builder builder) {
@@ -298,7 +316,7 @@ public class UpdateUserSayRequest extends Request {
             private java.util.List < SlotInfos> slotInfos; 
 
             /**
-             * Content.
+             * <p>This parameter is required.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -306,7 +324,10 @@ public class UpdateUserSayRequest extends Request {
             }
 
             /**
-             * IntentId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder intentId(Long intentId) {
                 this.intentId = intentId;

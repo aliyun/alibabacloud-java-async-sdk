@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightCreateOrderResponseBody} extends {@link TeaModel}
  *
  * <p>FlightCreateOrderResponseBody</p>
  */
 public class FlightCreateOrderResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private FlightCreateOrderResponseBody(Builder builder) {
@@ -151,29 +156,35 @@ public class FlightCreateOrderResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FlightCreateOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightCreateOrderResponseBody</p>
+     */
     public static class Module extends TeaModel {
-        @NameInMap("alipay_trade_no")
+        @com.aliyun.core.annotation.NameInMap("alipay_trade_no")
         private String alipayTradeNo;
 
-        @NameInMap("btrip_order_id")
+        @com.aliyun.core.annotation.NameInMap("btrip_order_id")
         private Long btripOrderId;
 
-        @NameInMap("dis_order_id")
+        @com.aliyun.core.annotation.NameInMap("dis_order_id")
         private String disOrderId;
 
-        @NameInMap("last_pay_time")
+        @com.aliyun.core.annotation.NameInMap("last_pay_time")
         private String lastPayTime;
 
-        @NameInMap("order_status")
+        @com.aliyun.core.annotation.NameInMap("order_status")
         private Integer orderStatus;
 
-        @NameInMap("pay_status")
+        @com.aliyun.core.annotation.NameInMap("pay_status")
         private Integer payStatus;
 
-        @NameInMap("payment_price")
+        @com.aliyun.core.annotation.NameInMap("payment_price")
         private Long paymentPrice;
 
-        @NameInMap("total_price")
+        @com.aliyun.core.annotation.NameInMap("total_price")
         private Long totalPrice;
 
         private Module(Builder builder) {

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceStatusResponseBody</p>
  */
 public class DescribeInstanceStatusResponseBody extends TeaModel {
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("InstanceStatus")
+    @com.aliyun.core.annotation.NameInMap("InstanceStatus")
     private Integer instanceStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceStatusResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-6ja1y6p5****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -70,13 +78,16 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the instance. Valid values:
-         * <p>
+         * <p>The status of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: normal</li>
+         * <li><strong>2</strong>: expired</li>
+         * <li><strong>3</strong>: overdue</li>
+         * <li><strong>4</strong>: released</li>
+         * </ul>
          * 
-         * *   **1**: normal
-         * *   **2**: expired
-         * *   **3**: overdue
-         * *   **4**: released
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder instanceStatus(Integer instanceStatus) {
             this.instanceStatus = instanceStatus;
@@ -84,7 +95,10 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>112777CC-2AD6-46FC-A263-00B931406FCD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

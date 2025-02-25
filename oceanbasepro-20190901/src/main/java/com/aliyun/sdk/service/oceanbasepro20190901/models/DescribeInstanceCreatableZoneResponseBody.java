@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceCreatableZoneResponseBody</p>
  */
 public class DescribeInstanceCreatableZoneResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ZoneList")
+    @com.aliyun.core.annotation.NameInMap("ZoneList")
     private java.util.List < ZoneList> zoneList;
 
     private DescribeInstanceCreatableZoneResponseBody(Builder builder) {
@@ -74,10 +73,10 @@ public class DescribeInstanceCreatableZoneResponseBody extends TeaModel {
     } 
 
     public static class ZoneList extends TeaModel {
-        @NameInMap("IsInCluster")
+        @com.aliyun.core.annotation.NameInMap("IsInCluster")
         private Boolean isInCluster;
 
-        @NameInMap("Zone")
+        @com.aliyun.core.annotation.NameInMap("Zone")
         private String zone;
 
         private ZoneList(Builder builder) {

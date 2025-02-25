@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteHoneypotProbeRequest} extends {@link RequestModel}
  *
  * <p>DeleteHoneypotProbeRequest</p>
  */
 public class DeleteHoneypotProbeRequest extends Request {
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("ProbeId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProbeId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String probeId;
 
     private DeleteHoneypotProbeRequest(Builder builder) {
@@ -69,11 +74,14 @@ public class DeleteHoneypotProbeRequest extends Request {
         } 
 
         /**
-         * 设置请求和接收消息的语言类型，默认为**zh**。取值：
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
          * 
-         * - **zh**：中文
-         * - **en**：英文
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -82,10 +90,14 @@ public class DeleteHoneypotProbeRequest extends Request {
         }
 
         /**
-         * The ID of the probe.
-         * <p>
+         * <p>The ID of the probe.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~ListHoneypotProbe~~">ListHoneypotProbe</a> operation to query the IDs of probes.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [ListHoneypotProbe](~~ListHoneypotProbe~~) operation to query the IDs of probes.
+         * <strong>example:</strong>
+         * <p>95f0f79c-f7e9-4b09-a6e3-95a4cb6d****</p>
          */
         public Builder probeId(String probeId) {
             this.putQueryParameter("ProbeId", probeId);

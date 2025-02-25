@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>FileCnt</p>
  */
 public class FileCnt extends TeaModel {
-    @NameInMap("Large")
+    @com.aliyun.core.annotation.NameInMap("Large")
     private Long large;
 
-    @NameInMap("Middle")
+    @com.aliyun.core.annotation.NameInMap("Middle")
     private Long middle;
 
-    @NameInMap("Small")
+    @com.aliyun.core.annotation.NameInMap("Small")
     private Long small;
 
-    @NameInMap("Tiny")
+    @com.aliyun.core.annotation.NameInMap("Tiny")
     private Long tiny;
 
     private FileCnt(Builder builder) {

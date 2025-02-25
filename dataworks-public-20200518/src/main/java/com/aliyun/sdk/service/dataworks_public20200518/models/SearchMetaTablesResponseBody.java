@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchMetaTablesResponseBody} extends {@link TeaModel}
  *
  * <p>SearchMetaTablesResponseBody</p>
  */
 public class SearchMetaTablesResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private SearchMetaTablesResponseBody(Builder builder) {
@@ -98,7 +103,7 @@ public class SearchMetaTablesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The number of entries returned per page.
+         * <p>The search results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +111,10 @@ public class SearchMetaTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1031203110005</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +122,10 @@ public class SearchMetaTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameters are invalid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +133,10 @@ public class SearchMetaTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +144,10 @@ public class SearchMetaTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1ec92159376****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class SearchMetaTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The business data returned.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,38 +171,44 @@ public class SearchMetaTablesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchMetaTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchMetaTablesResponseBody</p>
+     */
     public static class DataEntityList extends TeaModel {
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("DatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
-        @NameInMap("EntityType")
+        @com.aliyun.core.annotation.NameInMap("EntityType")
         private Integer entityType;
 
-        @NameInMap("EnvType")
+        @com.aliyun.core.annotation.NameInMap("EnvType")
         private Integer envType;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
-        @NameInMap("ProjectName")
+        @com.aliyun.core.annotation.NameInMap("ProjectName")
         private String projectName;
 
-        @NameInMap("Schema")
+        @com.aliyun.core.annotation.NameInMap("Schema")
         private String schema;
 
-        @NameInMap("TableGuid")
+        @com.aliyun.core.annotation.NameInMap("TableGuid")
         private String tableGuid;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private Long tenantId;
 
         private DataEntityList(Builder builder) {
@@ -298,7 +324,10 @@ public class SearchMetaTablesResponseBody extends TeaModel {
             private Long tenantId; 
 
             /**
-             * The ID of the tenant.
+             * <p>The ID of the EMR cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -306,7 +335,10 @@ public class SearchMetaTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the workspace.
+             * <p>The name of the metadatabase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -314,7 +346,14 @@ public class SearchMetaTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace.
+             * <p>The type of the metatable. Valid values:</p>
+             * <ul>
+             * <li>0: table</li>
+             * <li>1: view</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder entityType(Integer entityType) {
                 this.entityType = entityType;
@@ -322,7 +361,14 @@ public class SearchMetaTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The schema information of the table. This parameter is returned only if you enable the table schema in MaxCompute.
+             * <p>The type of the environment. Valid values:</p>
+             * <ul>
+             * <li>1: production environment</li>
+             * <li>0: development environment</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder envType(Integer envType) {
                 this.envType = envType;
@@ -330,11 +376,10 @@ public class SearchMetaTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the environment. Valid values:
-             * <p>
+             * <p>The ID of the Alibaba Cloud account used by the workspace owner.</p>
              * 
-             * *   1: production environment
-             * *   0: development environment
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -342,7 +387,10 @@ public class SearchMetaTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account used by the workspace owner.
+             * <p>The ID of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>323</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -350,7 +398,10 @@ public class SearchMetaTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The GUID of the metatable.
+             * <p>The name of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -358,7 +409,10 @@ public class SearchMetaTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Schema.
+             * <p>The schema information of the table. You must configure this parameter if you enable the three-layer model of MaxCompute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder schema(String schema) {
                 this.schema = schema;
@@ -366,7 +420,10 @@ public class SearchMetaTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the EMR cluster.
+             * <p>The GUID of the metatable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps.engine_name.test_name</p>
              */
             public Builder tableGuid(String tableGuid) {
                 this.tableGuid = tableGuid;
@@ -374,11 +431,10 @@ public class SearchMetaTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the metatable. Valid values:
-             * <p>
+             * <p>The name of the metatable.</p>
              * 
-             * *   0: table
-             * *   1: view
+             * <strong>example:</strong>
+             * <p>test_name</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -386,7 +442,10 @@ public class SearchMetaTablesResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -400,17 +459,23 @@ public class SearchMetaTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchMetaTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchMetaTablesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DataEntityList")
-        private java.util.List < DataEntityList> dataEntityList;
+        @com.aliyun.core.annotation.NameInMap("DataEntityList")
+        private java.util.List<DataEntityList> dataEntityList;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private Data(Builder builder) {
@@ -431,7 +496,7 @@ public class SearchMetaTablesResponseBody extends TeaModel {
         /**
          * @return dataEntityList
          */
-        public java.util.List < DataEntityList> getDataEntityList() {
+        public java.util.List<DataEntityList> getDataEntityList() {
             return this.dataEntityList;
         }
 
@@ -457,21 +522,24 @@ public class SearchMetaTablesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DataEntityList> dataEntityList; 
+            private java.util.List<DataEntityList> dataEntityList; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Long totalCount; 
 
             /**
-             * The name of the metadatabase.
+             * <p>The list of metatables.</p>
              */
-            public Builder dataEntityList(java.util.List < DataEntityList> dataEntityList) {
+            public Builder dataEntityList(java.util.List<DataEntityList> dataEntityList) {
                 this.dataEntityList = dataEntityList;
                 return this;
             }
 
             /**
-             * The total number of metatables.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -479,7 +547,10 @@ public class SearchMetaTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The list of metatables.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -487,7 +558,10 @@ public class SearchMetaTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metatable.
+             * <p>The total number of metatables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

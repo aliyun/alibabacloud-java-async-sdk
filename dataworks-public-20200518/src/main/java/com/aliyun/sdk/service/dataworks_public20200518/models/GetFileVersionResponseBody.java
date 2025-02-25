@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFileVersionResponseBody} extends {@link TeaModel}
  *
  * <p>GetFileVersionResponseBody</p>
  */
 public class GetFileVersionResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetFileVersionResponseBody(Builder builder) {
@@ -98,7 +103,7 @@ public class GetFileVersionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details of the file version.
+         * <p>The details of the file version.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +111,10 @@ public class GetFileVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ConnectionNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +122,10 @@ public class GetFileVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The connection does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +133,10 @@ public class GetFileVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +144,10 @@ public class GetFileVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can troubleshoot issues based on the ID.
+         * <p>The ID of the request. You can troubleshoot issues based on the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class GetFileVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,44 +171,50 @@ public class GetFileVersionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetFileVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFileVersionResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ChangeType")
+        @com.aliyun.core.annotation.NameInMap("ChangeType")
         private String changeType;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("CommitTime")
+        @com.aliyun.core.annotation.NameInMap("CommitTime")
         private Long commitTime;
 
-        @NameInMap("CommitUser")
+        @com.aliyun.core.annotation.NameInMap("CommitUser")
         private String commitUser;
 
-        @NameInMap("FileContent")
+        @com.aliyun.core.annotation.NameInMap("FileContent")
         private String fileContent;
 
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("FilePropertyContent")
+        @com.aliyun.core.annotation.NameInMap("FilePropertyContent")
         private String filePropertyContent;
 
-        @NameInMap("FileVersion")
+        @com.aliyun.core.annotation.NameInMap("FileVersion")
         private Integer fileVersion;
 
-        @NameInMap("IsCurrentProd")
+        @com.aliyun.core.annotation.NameInMap("IsCurrentProd")
         private Boolean isCurrentProd;
 
-        @NameInMap("NodeContent")
+        @com.aliyun.core.annotation.NameInMap("NodeContent")
         private String nodeContent;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UseType")
+        @com.aliyun.core.annotation.NameInMap("UseType")
         private String useType;
 
         private Data(Builder builder) {
@@ -322,7 +348,10 @@ public class GetFileVersionResponseBody extends TeaModel {
             private String useType; 
 
             /**
-             * The change type of the file version. Valid values: CREATE, UPDATE, and DELETE.
+             * <p>The change type of the file version. Valid values: CREATE, UPDATE, and DELETE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UPDATE</p>
              */
             public Builder changeType(String changeType) {
                 this.changeType = changeType;
@@ -330,7 +359,10 @@ public class GetFileVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the file version.
+             * <p>The description of the file version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Second version submission</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -338,7 +370,10 @@ public class GetFileVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the version was generated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the version was generated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1593881265000</p>
              */
             public Builder commitTime(Long commitTime) {
                 this.commitTime = commitTime;
@@ -346,7 +381,10 @@ public class GetFileVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that is used to create the file version.
+             * <p>The ID of the Alibaba Cloud account that is used to create the file version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7384234****</p>
              */
             public Builder commitUser(String commitUser) {
                 this.commitUser = commitUser;
@@ -354,7 +392,10 @@ public class GetFileVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The file code.
+             * <p>The file code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SHOW TABLES;</p>
              */
             public Builder fileContent(String fileContent) {
                 this.fileContent = fileContent;
@@ -362,7 +403,10 @@ public class GetFileVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The file name.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ods_user_info_d</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -370,7 +414,10 @@ public class GetFileVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The basic information about the file.
+             * <p>The basic information about the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;fileName&quot;:&quot;ods_user_info_d&quot;,&quot;fileType&quot;:10}</p>
              */
             public Builder filePropertyContent(String filePropertyContent) {
                 this.filePropertyContent = filePropertyContent;
@@ -378,7 +425,10 @@ public class GetFileVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The file version.
+             * <p>The file version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder fileVersion(Integer fileVersion) {
                 this.fileVersion = fileVersion;
@@ -386,7 +436,10 @@ public class GetFileVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the version is the latest version in the production environment.
+             * <p>Indicates whether the version is the latest version in the production environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isCurrentProd(Boolean isCurrentProd) {
                 this.isCurrentProd = isCurrentProd;
@@ -394,7 +447,10 @@ public class GetFileVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The scheduling configurations of the node that corresponds to the file version.
+             * <p>The scheduling configurations of the node that corresponds to the file version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;cycleType&quot;:0,&quot;cronExpress&quot;:&quot;00 05 00 * * ?&quot;}</p>
              */
             public Builder nodeContent(String nodeContent) {
                 this.nodeContent = nodeContent;
@@ -402,7 +458,10 @@ public class GetFileVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node that corresponds to the file version.
+             * <p>The ID of the node that corresponds to the file version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3000001</p>
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -410,7 +469,10 @@ public class GetFileVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the file version. Valid values: COMMITTING, COMMITTED, CHECK_OK, PACKAGED, DEPLOYING, DEPLOYED, and CANCELLED. The value CHECK_OK is equivalent to the value COMMITTED.
+             * <p>The status of the file version. Valid values: COMMITTING, COMMITTED, CHECK_OK, PACKAGED, DEPLOYING, DEPLOYED, and CANCELLED. The value CHECK_OK is equivalent to the value COMMITTED.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>COMMITTED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -418,7 +480,10 @@ public class GetFileVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The functional module to which the file belongs. Valid values: NORMAL, MANUAL, MANUAL_BIZ, SKIP, ADHOCQUERY, and COMPONENT. The value NORMAL indicates DataStudio. The value MANUAL indicates a manually triggered node. The value MANUAL_BIZ indicates a manually triggered workflow. The value SKIP indicates a dry-run DataStudio node. The value ADHOCQUERY indicates an ad hoc query. The value COMPONENT indicates snippets.
+             * <p>The functional module to which the file belongs. Valid values: NORMAL, MANUAL, MANUAL_BIZ, SKIP, ADHOCQUERY, and COMPONENT. The value NORMAL indicates DataStudio. The value MANUAL indicates a manually triggered node. The value MANUAL_BIZ indicates a manually triggered workflow. The value SKIP indicates a dry-run DataStudio node. The value ADHOCQUERY indicates an ad hoc query. The value COMPONENT indicates snippets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder useType(String useType) {
                 this.useType = useType;

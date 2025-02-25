@@ -1,45 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListStackEventsRequest} extends {@link RequestModel}
  *
  * <p>ListStackEventsRequest</p>
  */
 public class ListStackEventsRequest extends Request {
-    @Query
-    @NameInMap("LogicalResourceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogicalResourceId")
     private java.util.List < String > logicalResourceId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private java.util.List < String > resourceType;
 
-    @Query
-    @NameInMap("StackId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String stackId;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private java.util.List < String > status;
 
     private ListStackEventsRequest(Builder builder) {
@@ -140,7 +140,10 @@ public class ListStackEventsRequest extends Request {
         } 
 
         /**
-         * The logical IDs of the resources.
+         * <p>The logical IDs of the resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WebServer</p>
          */
         public Builder logicalResourceId(java.util.List < String > logicalResourceId) {
             this.putQueryParameter("LogicalResourceId", logicalResourceId);
@@ -149,10 +152,10 @@ public class ListStackEventsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.\
-         * <p>
-         * Pages start from page 1.\
-         * Default value: 1.
+         * <p>The number of the page to return.<br>Pages start from page 1.<br>Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -161,10 +164,10 @@ public class ListStackEventsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.\
-         * <p>
-         * Maximum value: 50.\
-         * Default value: 10.
+         * <p>The number of entries to return on each page.<br>Maximum value: 50.<br>Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -173,7 +176,11 @@ public class ListStackEventsRequest extends Request {
         }
 
         /**
-         * The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * <p>The region ID of the stack. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -182,7 +189,10 @@ public class ListStackEventsRequest extends Request {
         }
 
         /**
-         * The resource types.
+         * <p>The resource types.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::ECS::Instance</p>
          */
         public Builder resourceType(java.util.List < String > resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -191,7 +201,11 @@ public class ListStackEventsRequest extends Request {
         }
 
         /**
-         * The stack ID.
+         * <p>The stack ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</p>
          */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);
@@ -200,7 +214,10 @@ public class ListStackEventsRequest extends Request {
         }
 
         /**
-         * The status of the resource.
+         * <p>The status of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE_IN_PROGRESS</p>
          */
         public Builder status(java.util.List < String > status) {
             this.putQueryParameter("Status", status);

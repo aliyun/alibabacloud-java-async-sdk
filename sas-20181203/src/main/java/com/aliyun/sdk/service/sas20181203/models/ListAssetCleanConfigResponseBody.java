@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAssetCleanConfigResponseBody} extends {@link TeaModel}
  *
  * <p>ListAssetCleanConfigResponseBody</p>
  */
 public class ListAssetCleanConfigResponseBody extends TeaModel {
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListAssetCleanConfigResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class ListAssetCleanConfigResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -58,11 +63,14 @@ public class ListAssetCleanConfigResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer count; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
 
         /**
-         * The number of cleanup configurations.
+         * <p>The number of cleanup configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -70,15 +78,18 @@ public class ListAssetCleanConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The asset cleanup configurations.
+         * <p>The asset cleanup configurations.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20456DD5-5CBF-5015-9173-12CA4246B***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,14 +102,20 @@ public class ListAssetCleanConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAssetCleanConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAssetCleanConfigResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CleanDays")
+        @com.aliyun.core.annotation.NameInMap("CleanDays")
         private Integer cleanDays;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
         private Data(Builder builder) {
@@ -142,7 +159,10 @@ public class ListAssetCleanConfigResponseBody extends TeaModel {
             private Integer type; 
 
             /**
-             * The number of days before hosts whose provider cannot be identified are automatically cleaned after they enter the offline state. Valid value: an integer that ranges from 1 to 30.
+             * <p>The number of days before hosts whose provider cannot be identified are automatically cleaned after they enter the offline state. Valid value: an integer that ranges from 1 to 30.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder cleanDays(Integer cleanDays) {
                 this.cleanDays = cleanDays;
@@ -150,11 +170,14 @@ public class ListAssetCleanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the configuration takes effect. Valid values:
-             * <p>
+             * <p>Indicates whether the configuration takes effect. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The configuration does not take effect.</li>
+             * <li><strong>1</strong>: The configuration takes effect.</li>
+             * </ul>
              * 
-             * *   **0**: The configuration does not take effect.
-             * *   **1**: The configuration takes effect.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -162,10 +185,13 @@ public class ListAssetCleanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The type of hosts that are cleaned.
-             * <p>
+             * <p>The type of hosts that are cleaned.</p>
+             * <ul>
+             * <li>The value is set to <strong>1</strong>, which indicates hosts whose provider cannot be identified.</li>
+             * </ul>
              * 
-             * *   The value is set to **1**, which indicates hosts whose provider cannot be identified.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(Integer type) {
                 this.type = type;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateBandwidthPackageResponseBody</p>
  */
 public class CreateBandwidthPackageResponseBody extends TeaModel {
-    @NameInMap("BandwidthPackageId")
+    @com.aliyun.core.annotation.NameInMap("BandwidthPackageId")
     private String bandwidthPackageId;
 
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateBandwidthPackageResponseBody(Builder builder) {
@@ -70,10 +69,12 @@ public class CreateBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order.
+         * The order ID.
          * <p>
          * 
          * If bills are not automatically paid, you must go to the Order Center to complete the payments.
+         * 
+         * This parameter is returned only if ChargeType is set to PREPAY. If AutoPay is set to false, you must go to the [Order Center](https://usercenter2-intl.aliyun.com/order/list) to complete the payment.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;

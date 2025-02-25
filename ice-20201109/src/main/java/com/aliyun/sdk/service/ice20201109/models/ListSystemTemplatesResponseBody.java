@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSystemTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>ListSystemTemplatesResponseBody</p>
  */
 public class ListSystemTemplatesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SystemTemplateList")
-    private java.util.List < SystemTemplateList> systemTemplateList;
+    @com.aliyun.core.annotation.NameInMap("SystemTemplateList")
+    private java.util.List<SystemTemplateList> systemTemplateList;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private ListSystemTemplatesResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
     /**
      * @return systemTemplateList
      */
-    public java.util.List < SystemTemplateList> getSystemTemplateList() {
+    public java.util.List<SystemTemplateList> getSystemTemplateList() {
         return this.systemTemplateList;
     }
 
@@ -58,11 +63,14 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SystemTemplateList> systemTemplateList; 
+        private java.util.List<SystemTemplateList> systemTemplateList; 
         private Integer total; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,15 +78,18 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * SystemTemplateList.
+         * <p>The queried templates.</p>
          */
-        public Builder systemTemplateList(java.util.List < SystemTemplateList> systemTemplateList) {
+        public Builder systemTemplateList(java.util.List<SystemTemplateList> systemTemplateList) {
             this.systemTemplateList = systemTemplateList;
             return this;
         }
 
         /**
-         * Total.
+         * <p>The total number of templates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -91,29 +102,35 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSystemTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSystemTemplatesResponseBody</p>
+     */
     public static class SystemTemplateList extends TeaModel {
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Subtype")
+        @com.aliyun.core.annotation.NameInMap("Subtype")
         private Integer subtype;
 
-        @NameInMap("SubtypeName")
+        @com.aliyun.core.annotation.NameInMap("SubtypeName")
         private String subtypeName;
 
-        @NameInMap("TemplateConfig")
+        @com.aliyun.core.annotation.NameInMap("TemplateConfig")
         private String templateConfig;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
-        @NameInMap("TypeName")
+        @com.aliyun.core.annotation.NameInMap("TypeName")
         private String typeName;
 
         private SystemTemplateList(Builder builder) {
@@ -202,7 +219,10 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
             private String typeName; 
 
             /**
-             * Status.
+             * <p>The template state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -210,7 +230,10 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Subtype.
+             * <p>The subtype ID of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder subtype(Integer subtype) {
                 this.subtype = subtype;
@@ -218,7 +241,10 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * SubtypeName.
+             * <p>The subtype name of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Remux</p>
              */
             public Builder subtypeName(String subtypeName) {
                 this.subtypeName = subtypeName;
@@ -226,7 +252,10 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateConfig.
+             * <p>The template parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Container&quot;:{&quot;Format&quot;:&quot;flv&quot;},&quot;Video&quot;:{},&quot;Audio&quot;:{}}</p>
              */
             public Builder templateConfig(String templateConfig) {
                 this.templateConfig = templateConfig;
@@ -234,7 +263,10 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S00000001-000000</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -242,7 +274,10 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * <p>The template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FLV-COPY</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -250,7 +285,10 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type ID of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -258,7 +296,10 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TypeName.
+             * <p>The type name of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TranscodeTemplate</p>
              */
             public Builder typeName(String typeName) {
                 this.typeName = typeName;

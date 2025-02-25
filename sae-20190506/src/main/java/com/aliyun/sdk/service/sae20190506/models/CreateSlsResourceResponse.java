@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSlsResourceResponse} extends {@link TeaModel}
  *
  * <p>CreateSlsResourceResponse</p>
  */
 public class CreateSlsResourceResponse extends Response {
-    @NameInMap("logStore")
+    @com.aliyun.core.annotation.NameInMap("logStore")
     private String logStore;
 
-    @NameInMap("project")
+    @com.aliyun.core.annotation.NameInMap("project")
     private String project;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private CreateSlsResourceResponse(BuilderImpl builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosdiversion20230701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryNetListRequest</p>
  */
 public class QueryNetListRequest extends Request {
-    @Query
-    @NameInMap("MainNet")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MainNet")
     private String mainNet;
 
-    @Query
-    @NameInMap("Mode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mode")
     private String mode;
 
-    @Query
-    @NameInMap("Net")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Net")
     private String net;
 
-    @Query
-    @NameInMap("Num")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Num")
     private Long num;
 
-    @Query
-    @NameInMap("Page")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Page")
     private Long page;
 
-    @Query
-    @NameInMap("SaleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SaleId")
     private String saleId;
 
     private QueryNetListRequest(Builder builder) {
@@ -124,7 +123,7 @@ public class QueryNetListRequest extends Request {
         } 
 
         /**
-         * MainNet.
+         * The primary CIDR block of the anti-DDoS diversion instance for which an extended CIDR block is configured. If no extended CIDR blocks are configured for the anti-DDoS diversion instance, leave this parameter empty.
          */
         public Builder mainNet(String mainNet) {
             this.putQueryParameter("MainNet", mainNet);
@@ -133,7 +132,11 @@ public class QueryNetListRequest extends Request {
         }
 
         /**
-         * Mode.
+         * The scheduling mode. Valid values:
+         * <p>
+         * 
+         * - manual: manual scheduling
+         * - netflow-auto: automatic scheduling
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
@@ -142,7 +145,11 @@ public class QueryNetListRequest extends Request {
         }
 
         /**
-         * Net.
+         * The CIDR block of the anti-DDoS diversion instance.
+         * <p>
+         * 
+         * 
+         * > If no extended CIDR blocks are configured for the anti-DDoS diversion instance, this parameter specifies the CIDR block of the instance. If an extended CIDR block is configured for the anti-DDoS diversion instance, this parameter specifies the extended CIDR block that is configured for the instance. If this parameter is specified, the MainNet parameter is required.
          */
         public Builder net(String net) {
             this.putQueryParameter("Net", net);
@@ -151,7 +158,7 @@ public class QueryNetListRequest extends Request {
         }
 
         /**
-         * Num.
+         * The number of entries per page. Default value: 100.
          */
         public Builder num(Long num) {
             this.putQueryParameter("Num", num);
@@ -160,7 +167,7 @@ public class QueryNetListRequest extends Request {
         }
 
         /**
-         * Page.
+         * The page number. Default value: 1
          */
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
@@ -169,7 +176,7 @@ public class QueryNetListRequest extends Request {
         }
 
         /**
-         * SaleId.
+         * The ID of the anti-DDoS diversion instance.
          */
         public Builder saleId(String saleId) {
             this.putQueryParameter("SaleId", saleId);

@@ -1,53 +1,67 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListConfigRulesRequest} extends {@link RequestModel}
  *
  * <p>ListConfigRulesRequest</p>
  */
 public class ListConfigRulesRequest extends Request {
-    @Query
-    @NameInMap("ComplianceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CompliancePackId")
+    private String compliancePackId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComplianceType")
     private String complianceType;
 
-    @Query
-    @NameInMap("ConfigRuleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigRuleName")
     private String configRuleName;
 
-    @Query
-    @NameInMap("ConfigRuleState")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigRuleState")
     private String configRuleState;
 
-    @Query
-    @NameInMap("Keyword")
-    @Validation(maxLength = 100)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keyword")
+    @com.aliyun.core.annotation.Validation(maxLength = 1000)
     private String keyword;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ResourceTypes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceTypes")
     private String resourceTypes;
 
-    @Query
-    @NameInMap("RiskLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RiskLevel")
     private Integer riskLevel;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private ListConfigRulesRequest(Builder builder) {
         super(builder);
+        this.compliancePackId = builder.compliancePackId;
         this.complianceType = builder.complianceType;
         this.configRuleName = builder.configRuleName;
         this.configRuleState = builder.configRuleState;
@@ -56,6 +70,7 @@ public class ListConfigRulesRequest extends Request {
         this.pageSize = builder.pageSize;
         this.resourceTypes = builder.resourceTypes;
         this.riskLevel = builder.riskLevel;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -69,6 +84,13 @@ public class ListConfigRulesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return compliancePackId
+     */
+    public String getCompliancePackId() {
+        return this.compliancePackId;
     }
 
     /**
@@ -127,7 +149,15 @@ public class ListConfigRulesRequest extends Request {
         return this.riskLevel;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List<Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<ListConfigRulesRequest, Builder> {
+        private String compliancePackId; 
         private String complianceType; 
         private String configRuleName; 
         private String configRuleState; 
@@ -136,6 +166,7 @@ public class ListConfigRulesRequest extends Request {
         private Integer pageSize; 
         private String resourceTypes; 
         private Integer riskLevel; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -143,6 +174,7 @@ public class ListConfigRulesRequest extends Request {
 
         private Builder(ListConfigRulesRequest request) {
             super(request);
+            this.compliancePackId = request.compliancePackId;
             this.complianceType = request.complianceType;
             this.configRuleName = request.configRuleName;
             this.configRuleState = request.configRuleState;
@@ -151,16 +183,36 @@ public class ListConfigRulesRequest extends Request {
             this.pageSize = request.pageSize;
             this.resourceTypes = request.resourceTypes;
             this.riskLevel = request.riskLevel;
+            this.tag = request.tag;
         } 
 
         /**
-         * The compliance evaluation result. Valid values:
-         * <p>
+         * <p>The compliance package ID.</p>
+         * <p>For more information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/606968.html">ListCompliancePacks</a>.</p>
+         * <blockquote>
+         * <p> You must configure either the <code>CompliancePackId</code> or <code>ConfigRuleId</code> parameter.</p>
+         * </blockquote>
          * 
-         * *   COMPLIANT: The resources are evaluated as compliant.
-         * *   NON_COMPLIANT: The resources are evaluated as non-compliant.
-         * *   NOT_APPLICABLE: The rule does not apply to the resources.
-         * *   INSUFFICIENT_DATA: No resource data is available.
+         * <strong>example:</strong>
+         * <p>cp-fe416457e0d90022****</p>
+         */
+        public Builder compliancePackId(String compliancePackId) {
+            this.putQueryParameter("CompliancePackId", compliancePackId);
+            this.compliancePackId = compliancePackId;
+            return this;
+        }
+
+        /**
+         * <p>The compliance evaluation result of the rule. Valid values:</p>
+         * <ul>
+         * <li>COMPLIANT: The resources are evaluated as compliant.</li>
+         * <li>NON_COMPLIANT: The resources are evaluated as non-compliant.</li>
+         * <li>NOT_APPLICABLE: The rule does not apply to the resources.</li>
+         * <li>INSUFFICIENT_DATA: No resource data is available.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLIANT</p>
          */
         public Builder complianceType(String complianceType) {
             this.putQueryParameter("ComplianceType", complianceType);
@@ -169,7 +221,10 @@ public class ListConfigRulesRequest extends Request {
         }
 
         /**
-         * The name of the rule.
+         * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-rule-name</p>
          */
         public Builder configRuleName(String configRuleName) {
             this.putQueryParameter("ConfigRuleName", configRuleName);
@@ -178,13 +233,16 @@ public class ListConfigRulesRequest extends Request {
         }
 
         /**
-         * The status of the rule. Valid values:
-         * <p>
+         * <p>The status of the rule. Valid values:</p>
+         * <ul>
+         * <li>ACTIVE: The rule is enabled.</li>
+         * <li>DELETING: The rule is being deleted.</li>
+         * <li>EVALUATING: The rule is being used to evaluate resource configurations.</li>
+         * <li>INACTIVE: The rule is disabled.</li>
+         * </ul>
          * 
-         * *   ACTIVE: The rule is enabled.
-         * *   DELETING: The rule is being deleted.
-         * *   EVALUATING: The rule is triggered and is being used to monitor resource configurations.
-         * *   INACTIVE: The rule is disabled.
+         * <strong>example:</strong>
+         * <p>ACTIVE</p>
          */
         public Builder configRuleState(String configRuleState) {
             this.putQueryParameter("ConfigRuleState", configRuleState);
@@ -193,10 +251,11 @@ public class ListConfigRulesRequest extends Request {
         }
 
         /**
-         * The query keyword.
-         * <p>
+         * <p>The query keyword.</p>
+         * <p>You can perform a fuzzy search by rule ID, rule name, rule description, or managed rule ID.</p>
          * 
-         * You can perform a fuzzy search by rule ID, rule name, rule description, or managed rule ID.
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -205,10 +264,11 @@ public class ListConfigRulesRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Page numbers start from 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -217,10 +277,11 @@ public class ListConfigRulesRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 100. A minimum of 1 entry can be returned per page. Default value: 10.</p>
          * 
-         * Valid values: 1 to 100. Minimum value: 1. Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -229,7 +290,10 @@ public class ListConfigRulesRequest extends Request {
         }
 
         /**
-         * The type of the resources to be evaluated based on the rule.
+         * <p>The type of the resources to be evaluated based on the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::ECS::Instance</p>
          */
         public Builder resourceTypes(String resourceTypes) {
             this.putQueryParameter("ResourceTypes", resourceTypes);
@@ -238,16 +302,30 @@ public class ListConfigRulesRequest extends Request {
         }
 
         /**
-         * The risk level of the resources that are not compliant with the rule. Valid values:
-         * <p>
+         * <p>The risk level of the resources that are not compliant with the rule. Valid values:</p>
+         * <ul>
+         * <li>1: high</li>
+         * <li>2: medium</li>
+         * <li>3: low</li>
+         * </ul>
          * 
-         * *   1: high
-         * *   2: medium
-         * *   3: low
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder riskLevel(Integer riskLevel) {
             this.putQueryParameter("RiskLevel", riskLevel);
             this.riskLevel = riskLevel;
+            return this;
+        }
+
+        /**
+         * <p>The tags of the resource.</p>
+         * <p>You can add up to 20 tags to a resource.</p>
+         */
+        public Builder tag(java.util.List<Tag> tag) {
+            String tagShrink = shrink(tag, "Tag", "json");
+            this.putQueryParameter("Tag", tagShrink);
+            this.tag = tag;
             return this;
         }
 
@@ -258,4 +336,80 @@ public class ListConfigRulesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListConfigRulesRequest} extends {@link TeaModel}
+     *
+     * <p>ListConfigRulesRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * <p>The tag key.</p>
+             * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>You can specify at most 20 tag keys.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-1</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The tag value must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value-1</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

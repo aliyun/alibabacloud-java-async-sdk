@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteRuleResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteRuleResponseBody</p>
  */
 public class DeleteRuleResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Messages")
+    @com.aliyun.core.annotation.NameInMap("Messages")
     private Messages messages;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DeleteRuleResponseBody(Builder builder) {
@@ -151,9 +156,15 @@ public class DeleteRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteRuleResponseBody</p>
+     */
     public static class Messages extends TeaModel {
-        @NameInMap("Message")
-        private java.util.List < String > message;
+        @com.aliyun.core.annotation.NameInMap("Message")
+        private java.util.List<String> message;
 
         private Messages(Builder builder) {
             this.message = builder.message;
@@ -170,17 +181,17 @@ public class DeleteRuleResponseBody extends TeaModel {
         /**
          * @return message
          */
-        public java.util.List < String > getMessage() {
+        public java.util.List<String> getMessage() {
             return this.message;
         }
 
         public static final class Builder {
-            private java.util.List < String > message; 
+            private java.util.List<String> message; 
 
             /**
              * Message.
              */
-            public Builder message(java.util.List < String > message) {
+            public Builder message(java.util.List<String> message) {
                 this.message = message;
                 return this;
             }

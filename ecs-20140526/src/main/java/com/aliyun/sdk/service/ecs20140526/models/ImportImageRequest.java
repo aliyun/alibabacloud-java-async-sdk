@@ -1,94 +1,118 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImportImageRequest} extends {@link RequestModel}
  *
  * <p>ImportImageRequest</p>
  */
 public class ImportImageRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("Architecture")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Architecture")
     private String architecture;
 
-    @Query
-    @NameInMap("BootMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BootMode")
     private String bootMode;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DetectionStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DetectionStrategy")
     private String detectionStrategy;
 
-    @Query
-    @NameInMap("DiskDeviceMapping")
-    private java.util.List < DiskDeviceMapping> diskDeviceMapping;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskDeviceMapping")
+    private java.util.List<DiskDeviceMapping> diskDeviceMapping;
 
-    @Query
-    @NameInMap("ImageName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Features")
+    private Features features;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageName")
     private String imageName;
 
-    @Query
-    @NameInMap("LicenseType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LicenseType")
     private String licenseType;
 
-    @Query
-    @NameInMap("OSType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OSType")
     private String OSType;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Platform")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Platform")
     private String platform;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RoleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleName")
     private String roleName;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageLocationArn")
+    private String storageLocationArn;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private ImportImageRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
         this.architecture = builder.architecture;
         this.bootMode = builder.bootMode;
+        this.clientToken = builder.clientToken;
         this.description = builder.description;
         this.detectionStrategy = builder.detectionStrategy;
         this.diskDeviceMapping = builder.diskDeviceMapping;
+        this.dryRun = builder.dryRun;
+        this.features = builder.features;
         this.imageName = builder.imageName;
         this.licenseType = builder.licenseType;
         this.OSType = builder.OSType;
@@ -99,6 +123,7 @@ public class ImportImageRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.roleName = builder.roleName;
+        this.storageLocationArn = builder.storageLocationArn;
         this.tag = builder.tag;
     }
 
@@ -137,6 +162,13 @@ public class ImportImageRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
@@ -153,8 +185,22 @@ public class ImportImageRequest extends Request {
     /**
      * @return diskDeviceMapping
      */
-    public java.util.List < DiskDeviceMapping> getDiskDeviceMapping() {
+    public java.util.List<DiskDeviceMapping> getDiskDeviceMapping() {
         return this.diskDeviceMapping;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
+     * @return features
+     */
+    public Features getFeatures() {
+        return this.features;
     }
 
     /**
@@ -228,9 +274,16 @@ public class ImportImageRequest extends Request {
     }
 
     /**
+     * @return storageLocationArn
+     */
+    public String getStorageLocationArn() {
+        return this.storageLocationArn;
+    }
+
+    /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -238,9 +291,12 @@ public class ImportImageRequest extends Request {
         private String sourceRegionId; 
         private String architecture; 
         private String bootMode; 
+        private String clientToken; 
         private String description; 
         private String detectionStrategy; 
-        private java.util.List < DiskDeviceMapping> diskDeviceMapping; 
+        private java.util.List<DiskDeviceMapping> diskDeviceMapping; 
+        private Boolean dryRun; 
+        private Features features; 
         private String imageName; 
         private String licenseType; 
         private String OSType; 
@@ -251,7 +307,8 @@ public class ImportImageRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String roleName; 
-        private java.util.List < Tag> tag; 
+        private String storageLocationArn; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -262,9 +319,12 @@ public class ImportImageRequest extends Request {
             this.sourceRegionId = request.sourceRegionId;
             this.architecture = request.architecture;
             this.bootMode = request.bootMode;
+            this.clientToken = request.clientToken;
             this.description = request.description;
             this.detectionStrategy = request.detectionStrategy;
             this.diskDeviceMapping = request.diskDeviceMapping;
+            this.dryRun = request.dryRun;
+            this.features = request.features;
             this.imageName = request.imageName;
             this.licenseType = request.licenseType;
             this.OSType = request.OSType;
@@ -275,6 +335,7 @@ public class ImportImageRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.roleName = request.roleName;
+            this.storageLocationArn = request.storageLocationArn;
             this.tag = request.tag;
         } 
 
@@ -288,14 +349,16 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * The system architecture. Valid values:
-         * <p>
+         * <p>The system architecture. Valid values:</p>
+         * <ul>
+         * <li>i386</li>
+         * <li>x86_64</li>
+         * <li>arm64</li>
+         * </ul>
+         * <p>Default value: x86_64.</p>
          * 
-         * *   i386
-         * *   x86\_64
-         * *   arm64
-         * 
-         * Default value: x86\_64.
+         * <strong>example:</strong>
+         * <p>x86_64</p>
          */
         public Builder architecture(String architecture) {
             this.putQueryParameter("Architecture", architecture);
@@ -304,15 +367,18 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * The boot mode of the image. Valid values:
-         * <p>
+         * <p>The boot mode of the image. Valid values:</p>
+         * <ul>
+         * <li>BIOS</li>
+         * <li>UEFI</li>
+         * </ul>
+         * <p>Default value: BIOS. If you set <code>Architecture</code> to arm64, set this parameter to UEFI.</p>
+         * <blockquote>
+         * <p>Make sure that you are aware of the boot modes supported by the specified image, as thehe modified boot mode needs to be supported by the image. This way, instances that use this image can start.</p>
+         * </blockquote>
          * 
-         * *   BIOS
-         * *   UEFI
-         * 
-         * Default value: BIOS. If you set `Architecture` to arm64, set this parameter to UEFI.
-         * 
-         * > Make sure that you are aware of the boot modes supported by the specified image, as thehe modified boot mode needs to be supported by the image. This way, instances that use this image can start.
+         * <strong>example:</strong>
+         * <p>BIOS</p>
          */
         public Builder bootMode(String bootMode) {
             this.putQueryParameter("BootMode", bootMode);
@@ -321,7 +387,19 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * The image description. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>The image description. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -330,28 +408,13 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * The mode that you want to use to check the source image. If you do not specify this parameter, the source image is not checked. Only Linux images can be checked. Set the value to Standard, which indicates standard check mode.
-         * <p>
+         * <p>The mode in which to check the image. If you do not specify this parameter, the image is not checked. Only the standard check mode is supported.</p>
+         * <blockquote>
+         * <p> This parameter is supported for most Linux and Windows operating system versions. For more information about image check items and operating system limits for image check, see <a href="https://help.aliyun.com/document_detail/439819.html">Overview</a> and <a href="https://help.aliyun.com/document_detail/475800.html">Operating system limits for image check</a>.</p>
+         * </blockquote>
          * 
-         * The following items are checked in standard check mode:
-         * 
-         * *   Virtio: whether the virtio driver is installed.
-         * *   Fstab: whether mounting configurations in the fstab file are correct.
-         * *   Grub: whether GRand Unified Bootloader (GRUB) configurations are correct.
-         * *   SystemImage: whether the image is valid. Do not import images that are empty or in the ISO format.
-         * *   CloudInit: whether cloud-init is installed.
-         * *   NVMe: whether the Non-Volatile Memory Express (NVMe) driver is installed.
-         * *   Selinux: whether SElinux is enabled.
-         * *   OnlineResizeFS: whether the root partition can be automatically resized.
-         * *   Dhcp: whether Dynamic Host Configuration Protocol (DHCP) is enabled for network interface controllers (NICs).
-         * *   RtcTimeMode: the RTC time mode.
-         * *   Platform: the platform. Examples: Linux and Windows.
-         * *   OSVersion: the operating system version. Example: Centos 7.9.
-         * *   Architecture: the architecture. Examples: ARM and x86\_64.
-         * *   BootMode: the boot mode. Examples: UEFI and Legacy.
-         * *   KernelVersion: the kernel version.
-         * *   CloudAssistant: whether the Cloud Assistant client is installed.
-         * *   SecurityCenterAgent: whether the Security Center agent is installed.
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         public Builder detectionStrategy(String detectionStrategy) {
             this.putQueryParameter("DetectionStrategy", detectionStrategy);
@@ -360,16 +423,45 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * The custom images.
+         * <p>The information of disks from which the custom images are created.</p>
          */
-        public Builder diskDeviceMapping(java.util.List < DiskDeviceMapping> diskDeviceMapping) {
+        public Builder diskDeviceMapping(java.util.List<DiskDeviceMapping> diskDeviceMapping) {
             this.putQueryParameter("DiskDeviceMapping", diskDeviceMapping);
             this.diskDeviceMapping = diskDeviceMapping;
             return this;
         }
 
         /**
-         * The name of the custom image. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`. It can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * <p>The attributes of the custom image.</p>
+         */
+        public Builder features(Features features) {
+            this.putQueryParameter("Features", features);
+            this.features = features;
+            return this;
+        }
+
+        /**
+         * <p>The image name. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>acs:</code> or <code>aliyun</code>. The name cannot contain <code>http://</code> or <code>https://</code>. The name can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ImageTestName</p>
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -378,14 +470,16 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * The type of the license used to activate the operating system after the image is imported. Valid values:
-         * <p>
+         * <p>The type of the license used to activate the operating system after the image is imported. Valid values:</p>
+         * <ul>
+         * <li>Auto: ECS checks the operating system of the image and allocates a license to the operating system. ECS first checks whether the operating system distribution specified by <code>Platform</code> has a license allocated through an official Alibaba Cloud channel. If yes, the allocated license is used. If no, the license that comes with the source operating system is used.</li>
+         * <li>Aliyun: The license allocated through an official Alibaba Cloud channel is used for the operating system distribution specified by <code>Platform</code>.</li>
+         * <li>BYOL: The license that comes with the source operating system is used. In this case, make sure that your license key is eligible for use in Alibaba Cloud.</li>
+         * </ul>
+         * <p>Default value: Auto.</p>
          * 
-         * *   Auto: ECS checks the operating system of the image and allocates a license to the operating system. ECS first checks whether the operating system distribution specified by `Platform` has a license allocated through an official Alibaba Cloud channel. If yes, the allocated license is used. If no, the license that comes with the source operating system is used.
-         * *   Aliyun: The license allocated through an official Alibaba Cloud channel is used for the operating system distribution specified by `Platform`.
-         * *   BYOL: The license that comes with the source operating system is used. In this case, make sure that your license key is eligible for use in Alibaba Cloud.
-         * 
-         * Default value: Auto.
+         * <strong>example:</strong>
+         * <p>Auto</p>
          */
         public Builder licenseType(String licenseType) {
             this.putQueryParameter("LicenseType", licenseType);
@@ -394,13 +488,15 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * The operating system platform. Valid values:
-         * <p>
+         * <p>The operating system platform. Valid values:</p>
+         * <ul>
+         * <li>windows</li>
+         * <li>linux</li>
+         * </ul>
+         * <p>Default value: linux.</p>
          * 
-         * *   windows
-         * *   linux
-         * 
-         * Default value: linux.
+         * <strong>example:</strong>
+         * <p>linux</p>
          */
         public Builder OSType(String OSType) {
             this.putQueryParameter("OSType", OSType);
@@ -418,34 +514,39 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * The operating system distribution. Valid values:
-         * <p>
+         * <p>The operating system distribution. Valid values:</p>
+         * <ul>
+         * <li>Aliyun</li>
+         * <li>Anolis</li>
+         * <li>CentOS</li>
+         * <li>Ubuntu</li>
+         * <li>CoreOS</li>
+         * <li>SUSE</li>
+         * <li>Debian</li>
+         * <li>OpenSUSE</li>
+         * <li>FreeBSD</li>
+         * <li>RedHat</li>
+         * <li>Kylin</li>
+         * <li>UOS</li>
+         * <li>Fedora</li>
+         * <li>Fedora CoreOS</li>
+         * <li>CentOS Stream</li>
+         * <li>AlmaLinux</li>
+         * <li>Rocky Linux</li>
+         * <li>Gentoo</li>
+         * <li>Customized Linux</li>
+         * <li>Others Linux</li>
+         * <li>Windows Server 2022</li>
+         * <li>Windows Server 2019</li>
+         * <li>Windows Server 2016</li>
+         * <li>Windows Server 2012</li>
+         * <li>Windows Server 2008</li>
+         * <li>Windows Server 2003</li>
+         * </ul>
+         * <p>Default value: Others Linux.</p>
          * 
-         * *   CentOS
-         * *   CentOS Stream
-         * *   Ubuntu
-         * *   SUSE
-         * *   openSUSE
-         * *   Debian
-         * *   CoreOS
-         * *   Aliyun
-         * *   Anolis
-         * *   AlmaLinux
-         * *   FreeBSD
-         * *   Fedora
-         * *   Rocky Linux
-         * *   UOS
-         * *   Kylin
-         * *   Others Linux
-         * *   Customized Linux
-         * *   Windows Server 2022
-         * *   Windows Server 2019
-         * *   Windows Server 2016
-         * *   Windows Server 2012
-         * *   Windows Server 2008
-         * *   Windows Server 2003
-         * 
-         * Default value: Others Linux.
+         * <strong>example:</strong>
+         * <p>Aliyun</p>
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -454,7 +555,11 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * The region ID of the source image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the source image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -463,7 +568,10 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which to assign the image.
+         * <p>The ID of the resource group to which to assign the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -490,7 +598,10 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * The name of the RAM role used to import the image.
+         * <p>The name of the RAM role used to import the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunECSImageImportDefaultRole</p>
          */
         public Builder roleName(String roleName) {
             this.putQueryParameter("RoleName", roleName);
@@ -499,9 +610,25 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * The image tags.
+         * <p>The Alibaba Cloud Resource Name (ARN) of the cloud box, which is used to uniquely identify a storage location in the cloud.</p>
+         * <blockquote>
+         * <p> Specify this parameter only if you import an image from OSS on CloudBox. Otherwise, you do not need to specify this parameter. For more information, see <a href="https://help.aliyun.com/document_detail/430190.html">What is OSS on CloudBox?</a></p>
+         * </blockquote>
+         * <p>The ARN must be in the following format: <code>arn:acs:cloudbox:{RegionId}:{AliUid}:cloudbox/{CloudBoxId}</code>. Replace <code>{RegionId}</code> with the region ID of the cloud box, <code>{AliUid}</code> with the ID of the Alibaba Cloud account to which the cloud box belongs, and <code>{CloudBoxId}</code> with the ID of the cloud box.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arn:acs:cloudbox:cn-hangzhou:123456:cloudbox/cb-xx***123</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder storageLocationArn(String storageLocationArn) {
+            this.putQueryParameter("StorageLocationArn", storageLocationArn);
+            this.storageLocationArn = storageLocationArn;
+            return this;
+        }
+
+        /**
+         * <p>The image tags.</p>
+         */
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -514,23 +641,29 @@ public class ImportImageRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ImportImageRequest} extends {@link TeaModel}
+     *
+     * <p>ImportImageRequest</p>
+     */
     public static class DiskDeviceMapping extends TeaModel {
-        @NameInMap("Device")
+        @com.aliyun.core.annotation.NameInMap("Device")
         private String device;
 
-        @NameInMap("DiskImSize")
+        @com.aliyun.core.annotation.NameInMap("DiskImSize")
         private Integer diskImSize;
 
-        @NameInMap("DiskImageSize")
+        @com.aliyun.core.annotation.NameInMap("DiskImageSize")
         private Integer diskImageSize;
 
-        @NameInMap("Format")
+        @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
 
-        @NameInMap("OSSBucket")
+        @com.aliyun.core.annotation.NameInMap("OSSBucket")
         private String OSSBucket;
 
-        @NameInMap("OSSObject")
+        @com.aliyun.core.annotation.NameInMap("OSSObject")
         private String OSSObject;
 
         private DiskDeviceMapping(Builder builder) {
@@ -601,10 +734,13 @@ public class ImportImageRequest extends Request {
             private String OSSObject; 
 
             /**
-             * The device name of disk N in the custom image.
-             * <p>
+             * <p>The device name of disk N in the custom image.</p>
+             * <blockquote>
+             * <p> This parameter will be removed in the future. We recommend that you do not use this parameter to ensure future compatibility.</p>
+             * </blockquote>
              * 
-             * > This parameter will be removed in the future. To ensure future compatibility, we recommend that you do not use this parameter.
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder device(String device) {
                 this.device = device;
@@ -612,10 +748,19 @@ public class ImportImageRequest extends Request {
             }
 
             /**
-             * The size of the custom image.
-             * <p>
+             * <p>The size of disk N in the custom image. Unit: GiB.</p>
+             * <p>You can use this parameter to specify the sizes of the system disk and data disks in the custom image. When you specify the size of the system disk, make sure that the specified size is greater than or equal to the size of the imported image file. Unit: GiB. Valid values:</p>
+             * <ul>
+             * <li>When the N value is 1, this parameter specifies the size of the system disk in the custom image. Valid values: 1 to 2048.</li>
+             * <li>When the N value is an integer in the range of 2 to 17, this parameter specifies the size of a data disk in the custom image. Valid values: 1 to 2048.</li>
+             * </ul>
+             * <p>After the image file is uploaded to an OSS bucket, you can view the size of the image file in the OSS bucket.</p>
+             * <blockquote>
+             * <p> This parameter will be removed in the future. We recommend that you use <code>DiskDeviceMapping.N.DiskImageSize</code> to ensure future compatibility.</p>
+             * </blockquote>
              * 
-             * > This parameter will be deprecated in the future. We recommend that you use the `DiskDeviceMapping.N.DiskImageSize` parameter to ensure future compatibility.
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder diskImSize(Integer diskImSize) {
                 this.diskImSize = diskImSize;
@@ -623,15 +768,16 @@ public class ImportImageRequest extends Request {
             }
 
             /**
-             * The size of disk N in the custom image after the image is imported.
-             * <p>
+             * <p>The size of disk N in the custom image after the image is imported.</p>
+             * <p>You can use this parameter to specify the sizes of the system disk and data disks in the custom image. When you specify the size of the system disk, make sure that the specified size is greater than or equal to the size of the imported image file. Unit: GiB. Valid values:</p>
+             * <ul>
+             * <li>When the N value is 1, this parameter specifies the size of the system disk in the custom image. Valid values: 1 to 2048.</li>
+             * <li>When the N value is an integer in the range of 2 to 17, this parameter specifies the size of a data disk in the custom image. Valid values: 1 to 2048.</li>
+             * </ul>
+             * <p>After the image file is uploaded to an OSS bucket, you can view the size of the image file in the OSS bucket.</p>
              * 
-             * You can use this parameter to specify the sizes of the system disk and data disks in the image. When you specify the size of the system disk, make sure that the specified size is greater than or equal to the size of the imported image file. Unit: GiB. Valid values:
-             * 
-             * *   When the N value is 1, this parameter specifies the size of the system disk in the image. Valid values: 5 to 500.
-             * *   When the value of N ranges from 2 to 17, this parameter specifies the size of the data disk in the custom image. Valid values: 5 to 2000.
-             * 
-             * After the image is uploaded to an OSS bucket, you can view the size of the image file in the OSS bucket.
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder diskImageSize(Integer diskImageSize) {
                 this.diskImageSize = diskImageSize;
@@ -639,14 +785,16 @@ public class ImportImageRequest extends Request {
             }
 
             /**
-             * The image format. Valid values:
-             * <p>
+             * <p>The image format. Valid values:</p>
+             * <ul>
+             * <li>RAW</li>
+             * <li>VHD</li>
+             * <li>QCOW2</li>
+             * </ul>
+             * <p>This parameter is empty by default, which indicates that the system checks the format of the image and uses the check result as the value of this parameter.</p>
              * 
-             * *   RAW
-             * *   VHD
-             * *   QCOW2
-             * 
-             * This parameter is empty by default, which indicates that the system checks the format of the image and uses the result as the value of this parameter.
+             * <strong>example:</strong>
+             * <p>QCOW2</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -654,10 +802,13 @@ public class ImportImageRequest extends Request {
             }
 
             /**
-             * The OSS bucket where the image is stored.
-             * <p>
+             * <p>The OSS bucket where the image file is stored.</p>
+             * <blockquote>
+             * <p> Before you import images for the first time, you must use RAM to authorize ECS to access your OSS buckets. If ECS is not authorized to access your OSS buckets, the <code>NoSetRoletoECSServiceAcount</code> error code is returned when you call the ImportImage operation. For more information, see the &quot;<strong>Usage notes</strong>&quot; section in this topic.</p>
+             * </blockquote>
              * 
-             * > If this is the first time that you import images to ECS, you must use RAM to authorize ECS to access your OSS buckets. Otherwise, the `NoSetRoletoECSServiceAcount` error code is returned. For more information, see the **Description** section of this topic.
+             * <strong>example:</strong>
+             * <p>ecsimageos</p>
              */
             public Builder OSSBucket(String OSSBucket) {
                 this.OSSBucket = OSSBucket;
@@ -665,7 +816,10 @@ public class ImportImageRequest extends Request {
             }
 
             /**
-             * The name (key) of the object that the uploaded image is stored as in the OSS bucket.
+             * <p>The name (key) of the object that the uploaded image is stored as in the OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CentOS_5.4_32.raw</p>
              */
             public Builder OSSObject(String OSSObject) {
                 this.OSSObject = OSSObject;
@@ -679,11 +833,91 @@ public class ImportImageRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ImportImageRequest} extends {@link TeaModel}
+     *
+     * <p>ImportImageRequest</p>
+     */
+    public static class Features extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ImdsSupport")
+        private String imdsSupport;
+
+        @com.aliyun.core.annotation.NameInMap("NvmeSupport")
+        private String nvmeSupport;
+
+        private Features(Builder builder) {
+            this.imdsSupport = builder.imdsSupport;
+            this.nvmeSupport = builder.nvmeSupport;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Features create() {
+            return builder().build();
+        }
+
+        /**
+         * @return imdsSupport
+         */
+        public String getImdsSupport() {
+            return this.imdsSupport;
+        }
+
+        /**
+         * @return nvmeSupport
+         */
+        public String getNvmeSupport() {
+            return this.nvmeSupport;
+        }
+
+        public static final class Builder {
+            private String imdsSupport; 
+            private String nvmeSupport; 
+
+            /**
+             * ImdsSupport.
+             */
+            public Builder imdsSupport(String imdsSupport) {
+                this.imdsSupport = imdsSupport;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether the image supports the Non-Volatile Memory Express (NVMe) protocol. Valid values:</p>
+             * <ul>
+             * <li>supported: The image supports the NVMe protocol. Instances created from the image also support the NVMe protocol.</li>
+             * <li>unsupported: The image does not support the NVMe protocol. Instances created from the image do not support the NVMe protocol.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>supported</p>
+             */
+            public Builder nvmeSupport(String nvmeSupport) {
+                this.nvmeSupport = nvmeSupport;
+                return this;
+            }
+
+            public Features build() {
+                return new Features(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ImportImageRequest} extends {@link TeaModel}
+     *
+     * <p>ImportImageRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -718,7 +952,10 @@ public class ImportImageRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the image. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
+             * <p>The key of tag N of the image. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -726,7 +963,10 @@ public class ImportImageRequest extends Request {
             }
 
             /**
-             * The value of tag N of the image. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:`.
+             * <p>The value of tag N of the image. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

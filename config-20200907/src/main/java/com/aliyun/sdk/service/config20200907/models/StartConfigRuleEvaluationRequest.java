@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartConfigRuleEvaluationRequest} extends {@link RequestModel}
  *
  * <p>StartConfigRuleEvaluationRequest</p>
  */
 public class StartConfigRuleEvaluationRequest extends Request {
-    @Query
-    @NameInMap("CompliancePackId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CompliancePackId")
     private String compliancePackId;
 
-    @Query
-    @NameInMap("ConfigRuleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigRuleId")
     private String configRuleId;
 
-    @Query
-    @NameInMap("RevertEvaluation")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RevertEvaluation")
     private Boolean revertEvaluation;
 
     private StartConfigRuleEvaluationRequest(Builder builder) {
@@ -82,12 +87,14 @@ public class StartConfigRuleEvaluationRequest extends Request {
         } 
 
         /**
-         * The ID of the compliance package.
-         * <p>
+         * <p>The compliance package ID.</p>
+         * <p>For more information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/606968.html">ListCompliancePacks</a>.</p>
+         * <blockquote>
+         * <p> You must configure either the <code>CompliancePackId</code> or <code>ConfigRuleId</code> parameter.</p>
+         * </blockquote>
          * 
-         * For more information about how to obtain the ID of a compliance package, see [ListCompliancePacks](~~606968~~).
-         * 
-         * >  You must set either the CompliancePackId or ConfigRuleId parameter.
+         * <strong>example:</strong>
+         * <p>cp-ac16626622af0053****</p>
          */
         public Builder compliancePackId(String compliancePackId) {
             this.putQueryParameter("CompliancePackId", compliancePackId);
@@ -96,10 +103,14 @@ public class StartConfigRuleEvaluationRequest extends Request {
         }
 
         /**
-         * The rule ID.
-         * <p>
+         * <p>The rule ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/609222.html">ListConfigRules</a> operation to obtain the rule ID.</p>
+         * <blockquote>
+         * <p> You must configure either the <code>CompliancePackId</code> or <code>ConfigRuleId</code> parameter.</p>
+         * </blockquote>
          * 
-         * For more information about how to obtain the ID of a rule, see [ListConfigRules](~~609222~~).
+         * <strong>example:</strong>
+         * <p>cr-9920626622af0035****</p>
          */
         public Builder configRuleId(String configRuleId) {
             this.putQueryParameter("ConfigRuleId", configRuleId);
@@ -108,11 +119,14 @@ public class StartConfigRuleEvaluationRequest extends Request {
         }
 
         /**
-         * Specifies whether to re-evaluate ignored non-compliant resources. Valid values:
-         * <p>
+         * <p>Specifies whether to re-evaluate the ignored non-compliant resource. Valid values:</p>
+         * <ul>
+         * <li>true: re-evaluates the ignored non-compliant resource based on the rule.</li>
+         * <li>false (default): does not re-evaluate the ignored non-compliant resource based on the rule.</li>
+         * </ul>
          * 
-         * *   true: re-evaluates ignored non-compliant resources based on the rule.
-         * *   false: continues to ignore non-compliant resources.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder revertEvaluation(Boolean revertEvaluation) {
             this.putQueryParameter("RevertEvaluation", revertEvaluation);

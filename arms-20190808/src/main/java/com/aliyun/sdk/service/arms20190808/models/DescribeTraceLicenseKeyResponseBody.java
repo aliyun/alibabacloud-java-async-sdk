@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTraceLicenseKeyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTraceLicenseKeyResponseBody</p>
  */
 public class DescribeTraceLicenseKeyResponseBody extends TeaModel {
-    @NameInMap("LicenseKey")
+    @com.aliyun.core.annotation.NameInMap("LicenseKey")
     private String licenseKey;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeTraceLicenseKeyResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DescribeTraceLicenseKeyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * LicenseKey.
+         * <p>The license key for the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b590lhguqs@3a75d95f218****</p>
          */
         public Builder licenseKey(String licenseKey) {
             this.licenseKey = licenseKey;
@@ -58,7 +66,10 @@ public class DescribeTraceLicenseKeyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>29053944-6FE5-4240-8927-10095ECE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

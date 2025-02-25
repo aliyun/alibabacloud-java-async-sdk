@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ExperimentReportValue</p>
  */
 public class ExperimentReportValue extends TeaModel {
-    @NameInMap("Baseline")
+    @com.aliyun.core.annotation.NameInMap("Baseline")
     private Boolean baseline;
 
-    @NameInMap("MetricResults")
+    @com.aliyun.core.annotation.NameInMap("MetricResults")
     private java.util.Map < String, java.util.Map<String, ?>> metricResults;
 
     private ExperimentReportValue(Builder builder) {

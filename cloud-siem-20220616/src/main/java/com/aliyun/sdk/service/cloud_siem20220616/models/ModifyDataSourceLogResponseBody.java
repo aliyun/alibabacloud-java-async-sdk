@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDataSourceLogResponseBody</p>
  */
 public class ModifyDataSourceLogResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyDataSourceLogResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class ModifyDataSourceLogResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +57,7 @@ public class ModifyDataSourceLogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,10 +71,10 @@ public class ModifyDataSourceLogResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("LogInstanceId")
+        @com.aliyun.core.annotation.NameInMap("LogInstanceId")
         private String logInstanceId;
 
         private Data(Builder builder) {
@@ -110,7 +109,7 @@ public class ModifyDataSourceLogResponseBody extends TeaModel {
             private String logInstanceId; 
 
             /**
-             * Count.
+             * The number of logs that are modified. The value 1 indicates that the modification is successful, and a value less than or equal to 0 indicates that the modification failed.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -118,7 +117,7 @@ public class ModifyDataSourceLogResponseBody extends TeaModel {
             }
 
             /**
-             * LogInstanceId.
+             * The ID of the log. The ID is an MD5 hash value that is calculated by the threat analysis feature based on specific parameters.
              */
             public Builder logInstanceId(String logInstanceId) {
                 this.logInstanceId = logInstanceId;

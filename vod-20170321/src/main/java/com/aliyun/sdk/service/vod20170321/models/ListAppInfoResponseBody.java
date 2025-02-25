@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAppInfoResponseBody} extends {@link TeaModel}
  *
  * <p>ListAppInfoResponseBody</p>
  */
 public class ListAppInfoResponseBody extends TeaModel {
-    @NameInMap("AppInfoList")
-    private java.util.List < AppInfoList> appInfoList;
+    @com.aliyun.core.annotation.NameInMap("AppInfoList")
+    private java.util.List<AppInfoList> appInfoList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private ListAppInfoResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ListAppInfoResponseBody extends TeaModel {
     /**
      * @return appInfoList
      */
-    public java.util.List < AppInfoList> getAppInfoList() {
+    public java.util.List<AppInfoList> getAppInfoList() {
         return this.appInfoList;
     }
 
@@ -57,20 +62,23 @@ public class ListAppInfoResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AppInfoList> appInfoList; 
+        private java.util.List<AppInfoList> appInfoList; 
         private String requestId; 
         private Integer total; 
 
         /**
-         * The details of each application.
+         * <p>The details of applications.</p>
          */
-        public Builder appInfoList(java.util.List < AppInfoList> appInfoList) {
+        public Builder appInfoList(java.util.List<AppInfoList> appInfoList) {
             this.appInfoList = appInfoList;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4A13-4D5C-D7393642****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class ListAppInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -91,26 +102,38 @@ public class ListAppInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAppInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAppInfoResponseBody</p>
+     */
     public static class AppInfoList extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ModificationTime")
+        @com.aliyun.core.annotation.NameInMap("ModificationTime")
         private String modificationTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
+        private String regionId;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private AppInfoList(Builder builder) {
@@ -119,6 +142,8 @@ public class ListAppInfoResponseBody extends TeaModel {
             this.creationTime = builder.creationTime;
             this.description = builder.description;
             this.modificationTime = builder.modificationTime;
+            this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.status = builder.status;
             this.type = builder.type;
         }
@@ -167,6 +192,20 @@ public class ListAppInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -186,11 +225,16 @@ public class ListAppInfoResponseBody extends TeaModel {
             private String creationTime; 
             private String description; 
             private String modificationTime; 
+            private String regionId; 
+            private String resourceGroupId; 
             private String status; 
             private String type; 
 
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app-****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -198,7 +242,10 @@ public class ListAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -206,7 +253,10 @@ public class ListAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the application was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the application was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-03-01T08:00:00Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -214,7 +264,10 @@ public class ListAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the application.
+             * <p>The description of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my first app.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -222,7 +275,10 @@ public class ListAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The last time when the application was modified. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
+             * <p>The last time when the application was modified. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-03-01T09:00:00Z</p>
              */
             public Builder modificationTime(String modificationTime) {
                 this.modificationTime = modificationTime;
@@ -230,11 +286,36 @@ public class ListAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the application. Valid values:
-             * <p>
+             * <p>地域。</p>
              * 
-             * *   **Normal**
-             * *   **Disable**
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekzko7fsuj****</p>
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * <p>The status of the application. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal</strong></li>
+             * <li><strong>Disable</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -242,11 +323,14 @@ public class ListAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the application. Valid values:
-             * <p>
+             * <p>The type of the application. Valid values:</p>
+             * <ul>
+             * <li><strong>System</strong></li>
+             * <li><strong>Custom</strong></li>
+             * </ul>
              * 
-             * *   **System**
-             * *   **Custom**
+             * <strong>example:</strong>
+             * <p>System</p>
              */
             public Builder type(String type) {
                 this.type = type;

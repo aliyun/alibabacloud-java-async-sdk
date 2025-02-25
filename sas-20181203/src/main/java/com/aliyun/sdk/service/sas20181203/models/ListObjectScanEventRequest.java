@@ -1,61 +1,70 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListObjectScanEventRequest} extends {@link RequestModel}
  *
  * <p>ListObjectScanEventRequest</p>
  */
 public class ListObjectScanEventRequest extends Request {
-    @Query
-    @NameInMap("BucketName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BucketName")
     private String bucketName;
 
-    @Query
-    @NameInMap("CurrentPage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer currentPage;
 
-    @Query
-    @NameInMap("EventName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventName")
     private String eventName;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Md5")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Md5")
     private String md5;
 
-    @Query
-    @NameInMap("OssKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssKey")
     private String ossKey;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RiskLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentEventId")
+    private Long parentEventId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RiskLevel")
     private String riskLevel;
 
-    @Query
-    @NameInMap("Source")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
 
-    @Query
-    @NameInMap("TimeEnd")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeEnd")
     private Long timeEnd;
 
-    @Query
-    @NameInMap("TimeStart")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeStart")
     private Long timeStart;
 
     private ListObjectScanEventRequest(Builder builder) {
@@ -67,6 +76,7 @@ public class ListObjectScanEventRequest extends Request {
         this.md5 = builder.md5;
         this.ossKey = builder.ossKey;
         this.pageSize = builder.pageSize;
+        this.parentEventId = builder.parentEventId;
         this.riskLevel = builder.riskLevel;
         this.source = builder.source;
         this.timeEnd = builder.timeEnd;
@@ -136,6 +146,13 @@ public class ListObjectScanEventRequest extends Request {
     }
 
     /**
+     * @return parentEventId
+     */
+    public Long getParentEventId() {
+        return this.parentEventId;
+    }
+
+    /**
      * @return riskLevel
      */
     public String getRiskLevel() {
@@ -171,6 +188,7 @@ public class ListObjectScanEventRequest extends Request {
         private String md5; 
         private String ossKey; 
         private Integer pageSize; 
+        private Long parentEventId; 
         private String riskLevel; 
         private String source; 
         private Long timeEnd; 
@@ -189,6 +207,7 @@ public class ListObjectScanEventRequest extends Request {
             this.md5 = request.md5;
             this.ossKey = request.ossKey;
             this.pageSize = request.pageSize;
+            this.parentEventId = request.parentEventId;
             this.riskLevel = request.riskLevel;
             this.source = request.source;
             this.timeEnd = request.timeEnd;
@@ -196,7 +215,10 @@ public class ListObjectScanEventRequest extends Request {
         } 
 
         /**
-         * The name of the OSS bucket.
+         * <p>The name of the OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ltrbuck****</p>
          */
         public Builder bucketName(String bucketName) {
             this.putQueryParameter("BucketName", bucketName);
@@ -205,7 +227,11 @@ public class ListObjectScanEventRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -214,7 +240,10 @@ public class ListObjectScanEventRequest extends Request {
         }
 
         /**
-         * The name of the alert.
+         * <p>The name of the alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WebShell</p>
          */
         public Builder eventName(String eventName) {
             this.putQueryParameter("EventName", eventName);
@@ -223,11 +252,14 @@ public class ListObjectScanEventRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -236,7 +268,10 @@ public class ListObjectScanEventRequest extends Request {
         }
 
         /**
-         * The MD5 hash value of the file.
+         * <p>The MD5 hash value of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0552c44e243abdea1729d4507bce****</p>
          */
         public Builder md5(String md5) {
             this.putQueryParameter("Md5", md5);
@@ -245,7 +280,10 @@ public class ListObjectScanEventRequest extends Request {
         }
 
         /**
-         * The key of the file that is stored in an OSS bucket.
+         * <p>The key of the file that is stored in an OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1/2022/06/23/15/41/16559701077444693a0c6-33b2-4cc2-a99f-9f38b8b8****</p>
          */
         public Builder ossKey(String ossKey) {
             this.putQueryParameter("OssKey", ossKey);
@@ -254,7 +292,11 @@ public class ListObjectScanEventRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -263,12 +305,27 @@ public class ListObjectScanEventRequest extends Request {
         }
 
         /**
-         * The risk level of the alert. Valid values:
-         * <p>
+         * <p>The ID of the alert that is generated for the package to which the subfile belongs.</p>
          * 
-         * *   **high**
-         * *   **medium**
-         * *   **low**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder parentEventId(Long parentEventId) {
+            this.putQueryParameter("ParentEventId", parentEventId);
+            this.parentEventId = parentEventId;
+            return this;
+        }
+
+        /**
+         * <p>The risk level of the alert. Valid values:</p>
+         * <ul>
+         * <li><strong>high</strong></li>
+         * <li><strong>medium</strong></li>
+         * <li><strong>low</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>low</p>
          */
         public Builder riskLevel(String riskLevel) {
             this.putQueryParameter("RiskLevel", riskLevel);
@@ -277,11 +334,14 @@ public class ListObjectScanEventRequest extends Request {
         }
 
         /**
-         * The method that is used to detect the malicious file. Valid values:
-         * <p>
+         * <p>The method that is used to detect the malicious file. Valid values:</p>
+         * <ul>
+         * <li><strong>API</strong>: uses API operations.</li>
+         * <li><strong>OSS</strong>: uses Object Storage Service (OSS) file check.</li>
+         * </ul>
          * 
-         * *   **API**: uses API operations.
-         * *   **OSS**: uses Object Storage Service (OSS) file check.
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -290,7 +350,10 @@ public class ListObjectScanEventRequest extends Request {
         }
 
         /**
-         * The end of the time range during which the exception is detected.
+         * <p>The end of the time range during which the exception is detected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1683862286000</p>
          */
         public Builder timeEnd(Long timeEnd) {
             this.putQueryParameter("TimeEnd", timeEnd);
@@ -299,7 +362,10 @@ public class ListObjectScanEventRequest extends Request {
         }
 
         /**
-         * The beginning of the time range during which the exception is detected.
+         * <p>The beginning of the time range during which the exception is detected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1683603086000</p>
          */
         public Builder timeStart(Long timeStart) {
             this.putQueryParameter("TimeStart", timeStart);

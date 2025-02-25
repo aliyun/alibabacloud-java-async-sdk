@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeContainerGroupPriceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeContainerGroupPriceResponseBody</p>
  */
 public class DescribeContainerGroupPriceResponseBody extends TeaModel {
-    @NameInMap("PriceInfo")
+    @com.aliyun.core.annotation.NameInMap("PriceInfo")
     private PriceInfo priceInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeContainerGroupPriceResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the prices and discount rules.
+         * <p>The information about the prices and discount rules.</p>
          */
         public Builder priceInfo(PriceInfo priceInfo) {
             this.priceInfo = priceInfo;
@@ -58,7 +58,10 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7A872585-33C7-4D69-AB8E-412E81EBA387</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +74,17 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeContainerGroupPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerGroupPriceResponseBody</p>
+     */
     public static class Rule extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
         private Rule(Builder builder) {
@@ -110,7 +119,10 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             private Long ruleId; 
 
             /**
-             * The description of the rule.
+             * <p>The description of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Receive a 15% discount on a 1-year subscription</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -118,7 +130,10 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The rule ID.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -132,8 +147,14 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeContainerGroupPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerGroupPriceResponseBody</p>
+     */
     public static class Rules extends TeaModel {
-        @NameInMap("Rule")
+        @com.aliyun.core.annotation.NameInMap("Rule")
         private java.util.List < Rule> rule;
 
         private Rules(Builder builder) {
@@ -173,20 +194,26 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeContainerGroupPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerGroupPriceResponseBody</p>
+     */
     public static class DetailInfo extends TeaModel {
-        @NameInMap("DiscountPrice")
+        @com.aliyun.core.annotation.NameInMap("DiscountPrice")
         private Float discountPrice;
 
-        @NameInMap("OriginalPrice")
+        @com.aliyun.core.annotation.NameInMap("OriginalPrice")
         private Float originalPrice;
 
-        @NameInMap("Resource")
+        @com.aliyun.core.annotation.NameInMap("Resource")
         private String resource;
 
-        @NameInMap("Rules")
+        @com.aliyun.core.annotation.NameInMap("Rules")
         private Rules rules;
 
-        @NameInMap("TradePrice")
+        @com.aliyun.core.annotation.NameInMap("TradePrice")
         private Float tradePrice;
 
         private DetailInfo(Builder builder) {
@@ -248,7 +275,10 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             private Float tradePrice; 
 
             /**
-             * The discount.
+             * <p>The discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -256,7 +286,10 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The original price.
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.000098</p>
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -264,7 +297,10 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource.
+             * <p>The name of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cpu</p>
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -272,7 +308,7 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the pricing rules.
+             * <p>Details about the pricing rules.</p>
              */
             public Builder rules(Rules rules) {
                 this.rules = rules;
@@ -280,7 +316,10 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The transaction price.
+             * <p>The transaction price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.000098</p>
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;
@@ -294,8 +333,14 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeContainerGroupPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerGroupPriceResponseBody</p>
+     */
     public static class DetailInfos extends TeaModel {
-        @NameInMap("DetailInfo")
+        @com.aliyun.core.annotation.NameInMap("DetailInfo")
         private java.util.List < DetailInfo> detailInfo;
 
         private DetailInfos(Builder builder) {
@@ -335,20 +380,26 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeContainerGroupPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerGroupPriceResponseBody</p>
+     */
     public static class Price extends TeaModel {
-        @NameInMap("Currency")
+        @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
-        @NameInMap("DetailInfos")
+        @com.aliyun.core.annotation.NameInMap("DetailInfos")
         private DetailInfos detailInfos;
 
-        @NameInMap("DiscountPrice")
+        @com.aliyun.core.annotation.NameInMap("DiscountPrice")
         private Float discountPrice;
 
-        @NameInMap("OriginalPrice")
+        @com.aliyun.core.annotation.NameInMap("OriginalPrice")
         private Float originalPrice;
 
-        @NameInMap("TradePrice")
+        @com.aliyun.core.annotation.NameInMap("TradePrice")
         private Float tradePrice;
 
         private Price(Builder builder) {
@@ -410,11 +461,14 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             private Float tradePrice; 
 
             /**
-             * The currency unit. Valid values:
-             * <p>
+             * <p>The currency unit. Valid values:</p>
+             * <ul>
+             * <li>CNY: This value only applies to the China site (aliyun.com).</li>
+             * <li>USD: This value only applies to the International site (alibabacloud.com).</li>
+             * </ul>
              * 
-             * *   CNY: This value only applies to the China site (aliyun.com).
-             * *   USD: This value only applies to the International site (alibabacloud.com).
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -422,7 +476,7 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the price.
+             * <p>The information about the price.</p>
              */
             public Builder detailInfos(DetailInfos detailInfos) {
                 this.detailInfos = detailInfos;
@@ -430,7 +484,10 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The discount.
+             * <p>The discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -438,7 +495,10 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The original price.
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.00012252</p>
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -446,7 +506,10 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The transaction price, which is equal to the original price minus the discount.
+             * <p>The transaction price, which is equal to the original price minus the discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.00012252</p>
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;
@@ -460,11 +523,17 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeContainerGroupPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerGroupPriceResponseBody</p>
+     */
     public static class RulesRule extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
         private RulesRule(Builder builder) {
@@ -499,7 +568,10 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             private Long ruleId; 
 
             /**
-             * The description of the promotion rule.
+             * <p>The description of the promotion rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Receive a 15% discount on a 1-year subscription</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -507,7 +579,10 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the promotion rule.
+             * <p>The ID of the promotion rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -521,8 +596,14 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeContainerGroupPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerGroupPriceResponseBody</p>
+     */
     public static class PriceInfoRules extends TeaModel {
-        @NameInMap("Rule")
+        @com.aliyun.core.annotation.NameInMap("Rule")
         private java.util.List < RulesRule> rule;
 
         private PriceInfoRules(Builder builder) {
@@ -562,17 +643,23 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeContainerGroupPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerGroupPriceResponseBody</p>
+     */
     public static class SpotPrice extends TeaModel {
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("OriginPrice")
+        @com.aliyun.core.annotation.NameInMap("OriginPrice")
         private Float originPrice;
 
-        @NameInMap("SpotPrice")
+        @com.aliyun.core.annotation.NameInMap("SpotPrice")
         private Float spotPrice;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private SpotPrice(Builder builder) {
@@ -625,7 +712,10 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The ECS instance type.
+             * <p>The ECS instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.c5.large</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -633,7 +723,10 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The original price.
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.622</p>
              */
             public Builder originPrice(Float originPrice) {
                 this.originPrice = originPrice;
@@ -641,7 +734,10 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The prices of preemptible elastic container instances.
+             * <p>The prices of preemptible elastic container instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.056</p>
              */
             public Builder spotPrice(Float spotPrice) {
                 this.spotPrice = spotPrice;
@@ -649,7 +745,10 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID of the instance.
+             * <p>The zone ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -663,8 +762,14 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeContainerGroupPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerGroupPriceResponseBody</p>
+     */
     public static class SpotPrices extends TeaModel {
-        @NameInMap("SpotPrice")
+        @com.aliyun.core.annotation.NameInMap("SpotPrice")
         private java.util.List < SpotPrice> spotPrice;
 
         private SpotPrices(Builder builder) {
@@ -690,7 +795,10 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             private java.util.List < SpotPrice> spotPrice; 
 
             /**
-             * The prices of preemptible elastic container instances.
+             * <p>The prices of preemptible elastic container instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.056</p>
              */
             public Builder spotPrice(java.util.List < SpotPrice> spotPrice) {
                 this.spotPrice = spotPrice;
@@ -704,14 +812,20 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeContainerGroupPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerGroupPriceResponseBody</p>
+     */
     public static class PriceInfo extends TeaModel {
-        @NameInMap("Price")
+        @com.aliyun.core.annotation.NameInMap("Price")
         private Price price;
 
-        @NameInMap("Rules")
+        @com.aliyun.core.annotation.NameInMap("Rules")
         private PriceInfoRules rules;
 
-        @NameInMap("SpotPrices")
+        @com.aliyun.core.annotation.NameInMap("SpotPrices")
         private SpotPrices spotPrices;
 
         private PriceInfo(Builder builder) {
@@ -755,7 +869,7 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             private SpotPrices spotPrices; 
 
             /**
-             * The price.
+             * <p>The price.</p>
              */
             public Builder price(Price price) {
                 this.price = price;
@@ -763,7 +877,7 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the promotion rules.
+             * <p>Details about the promotion rules.</p>
              */
             public Builder rules(PriceInfoRules rules) {
                 this.rules = rules;
@@ -771,7 +885,7 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the prices of preemptible elastic container instances.
+             * <p>The information about the prices of preemptible elastic container instances.</p>
              */
             public Builder spotPrices(SpotPrices spotPrices) {
                 this.spotPrices = spotPrices;

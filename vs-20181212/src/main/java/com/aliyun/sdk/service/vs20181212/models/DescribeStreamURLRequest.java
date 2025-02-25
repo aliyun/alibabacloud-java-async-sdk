@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeStreamURLRequest} extends {@link RequestModel}
  *
  * <p>DescribeStreamURLRequest</p>
  */
 public class DescribeStreamURLRequest extends Request {
-    @Query
-    @NameInMap("Auth")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Auth")
     private Boolean auth;
 
-    @Query
-    @NameInMap("AuthKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthKey")
     private String authKey;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @Query
-    @NameInMap("Expire")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Expire")
     private Long expire;
 
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String id;
 
-    @Query
-    @NameInMap("OutProtocol")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutProtocol")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String outProtocol;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
-    @Query
-    @NameInMap("Transcode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Transcode")
     private String transcode;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private DescribeStreamURLRequest(Builder builder) {
@@ -167,18 +172,18 @@ public class DescribeStreamURLRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeStreamURLRequest response) {
-            super(response);
-            this.auth = response.auth;
-            this.authKey = response.authKey;
-            this.endTime = response.endTime;
-            this.expire = response.expire;
-            this.id = response.id;
-            this.outProtocol = response.outProtocol;
-            this.ownerId = response.ownerId;
-            this.startTime = response.startTime;
-            this.transcode = response.transcode;
-            this.type = response.type;
+        private Builder(DescribeStreamURLRequest request) {
+            super(request);
+            this.auth = request.auth;
+            this.authKey = request.authKey;
+            this.endTime = request.endTime;
+            this.expire = request.expire;
+            this.id = request.id;
+            this.outProtocol = request.outProtocol;
+            this.ownerId = request.ownerId;
+            this.startTime = request.startTime;
+            this.transcode = request.transcode;
+            this.type = request.type;
         } 
 
         /**
@@ -218,7 +223,10 @@ public class DescribeStreamURLRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>323*****997-cn-qingdao</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -227,7 +235,10 @@ public class DescribeStreamURLRequest extends Request {
         }
 
         /**
-         * OutProtocol.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtmp</p>
          */
         public Builder outProtocol(String outProtocol) {
             this.putQueryParameter("OutProtocol", outProtocol);

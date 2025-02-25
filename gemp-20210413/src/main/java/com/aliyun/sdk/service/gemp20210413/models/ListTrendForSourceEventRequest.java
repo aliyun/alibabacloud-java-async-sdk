@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTrendForSourceEventRequest</p>
  */
 public class ListTrendForSourceEventRequest extends Request {
-    @Body
-    @NameInMap("endTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("endTime")
     private String endTime;
 
-    @Body
-    @NameInMap("instanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("instanceId")
     private Long instanceId;
 
-    @Body
-    @NameInMap("instanceType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("instanceType")
     private String instanceType;
 
-    @Body
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @Body
-    @NameInMap("startTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("startTime")
     private String startTime;
 
-    @Body
-    @NameInMap("timeUnit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("timeUnit")
     private Long timeUnit;
 
     private ListTrendForSourceEventRequest(Builder builder) {

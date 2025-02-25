@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSupportLinesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSupportLinesResponseBody</p>
  */
 public class DescribeSupportLinesResponseBody extends TeaModel {
-    @NameInMap("RecordLines")
+    @com.aliyun.core.annotation.NameInMap("RecordLines")
     private RecordLines recordLines;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeSupportLinesResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of Alibaba Cloud DNS lines.
+         * <p>The Alibaba Cloud DNS lines.</p>
          */
         public Builder recordLines(RecordLines recordLines) {
             this.recordLines = recordLines;
@@ -58,7 +63,7 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,17 +76,23 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSupportLinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSupportLinesResponseBody</p>
+     */
     public static class RecordLine extends TeaModel {
-        @NameInMap("FatherCode")
+        @com.aliyun.core.annotation.NameInMap("FatherCode")
         private String fatherCode;
 
-        @NameInMap("LineCode")
+        @com.aliyun.core.annotation.NameInMap("LineCode")
         private String lineCode;
 
-        @NameInMap("LineDisplayName")
+        @com.aliyun.core.annotation.NameInMap("LineDisplayName")
         private String lineDisplayName;
 
-        @NameInMap("LineName")
+        @com.aliyun.core.annotation.NameInMap("LineName")
         private String lineName;
 
         private RecordLine(Builder builder) {
@@ -134,7 +145,10 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
             private String lineName; 
 
             /**
-             * The code of the parent line. Leave it blank if there is no parent line.
+             * <p>The code of the parent line. Currently, no data is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>unicom</p>
              */
             public Builder fatherCode(String fatherCode) {
                 this.fatherCode = fatherCode;
@@ -142,7 +156,10 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the child line.
+             * <p>The code of the child line.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn_unicom_shanxi</p>
              */
             public Builder lineCode(String lineCode) {
                 this.lineCode = lineCode;
@@ -150,7 +167,10 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the parent line.
+             * <p>The display name of the line.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China Unicom</p>
              */
             public Builder lineDisplayName(String lineDisplayName) {
                 this.lineDisplayName = lineDisplayName;
@@ -158,7 +178,10 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the child line.
+             * <p>The name of the child line.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China Unicom_Shanxi</p>
              */
             public Builder lineName(String lineName) {
                 this.lineName = lineName;
@@ -172,9 +195,15 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSupportLinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSupportLinesResponseBody</p>
+     */
     public static class RecordLines extends TeaModel {
-        @NameInMap("RecordLine")
-        private java.util.List < RecordLine> recordLine;
+        @com.aliyun.core.annotation.NameInMap("RecordLine")
+        private java.util.List<RecordLine> recordLine;
 
         private RecordLines(Builder builder) {
             this.recordLine = builder.recordLine;
@@ -191,17 +220,17 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
         /**
          * @return recordLine
          */
-        public java.util.List < RecordLine> getRecordLine() {
+        public java.util.List<RecordLine> getRecordLine() {
             return this.recordLine;
         }
 
         public static final class Builder {
-            private java.util.List < RecordLine> recordLine; 
+            private java.util.List<RecordLine> recordLine; 
 
             /**
              * RecordLine.
              */
-            public Builder recordLine(java.util.List < RecordLine> recordLine) {
+            public Builder recordLine(java.util.List<RecordLine> recordLine) {
                 this.recordLine = recordLine;
                 return this;
             }

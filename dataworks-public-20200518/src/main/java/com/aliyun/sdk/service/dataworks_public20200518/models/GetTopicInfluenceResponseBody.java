@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTopicInfluenceResponseBody} extends {@link TeaModel}
  *
  * <p>GetTopicInfluenceResponseBody</p>
  */
 public class GetTopicInfluenceResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetTopicInfluenceResponseBody(Builder builder) {
@@ -98,7 +103,7 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * <p>The list of baseline instances affected by the event.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +111,10 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1031203110005</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +122,10 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameters are invalid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +133,10 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +144,10 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,32 +171,38 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTopicInfluenceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicInfluenceResponseBody</p>
+     */
     public static class Influences extends TeaModel {
-        @NameInMap("BaselineId")
+        @com.aliyun.core.annotation.NameInMap("BaselineId")
         private Long baselineId;
 
-        @NameInMap("BaselineName")
+        @com.aliyun.core.annotation.NameInMap("BaselineName")
         private String baselineName;
 
-        @NameInMap("Bizdate")
+        @com.aliyun.core.annotation.NameInMap("Bizdate")
         private Long bizdate;
 
-        @NameInMap("Buffer")
+        @com.aliyun.core.annotation.NameInMap("Buffer")
         private Long buffer;
 
-        @NameInMap("InGroupId")
+        @com.aliyun.core.annotation.NameInMap("InGroupId")
         private Integer inGroupId;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Influences(Builder builder) {
@@ -274,7 +300,10 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * BaselineId.
+             * <p>The ID of the baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder baselineId(Long baselineId) {
                 this.baselineId = baselineId;
@@ -282,7 +311,10 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
             }
 
             /**
-             * BaselineName.
+             * <p>The name of the baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Baseline name</p>
              */
             public Builder baselineName(String baselineName) {
                 this.baselineName = baselineName;
@@ -290,7 +322,10 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
             }
 
             /**
-             * Bizdate.
+             * <p>The data timestamp of the baseline instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1553356800000</p>
              */
             public Builder bizdate(Long bizdate) {
                 this.bizdate = bizdate;
@@ -298,7 +333,10 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
             }
 
             /**
-             * Buffer.
+             * <p>The margin of the baseline instance. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>360</p>
              */
             public Builder buffer(Long buffer) {
                 this.buffer = buffer;
@@ -306,7 +344,10 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
             }
 
             /**
-             * InGroupId.
+             * <p>The ID of the cycle of the baseline instance. For a baseline instance that is scheduled by day, the field value is 1. For a baseline instance that is scheduled by hour, the field value ranges from 1 to 24.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder inGroupId(Integer inGroupId) {
                 this.inGroupId = inGroupId;
@@ -314,7 +355,10 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The ID of the Alibaba Cloud account used by the baseline owner. Multiple IDs are separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>952795****</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -322,7 +366,10 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the baseline. Valid values: 1, 2, 5, 7, and 8.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -330,7 +377,10 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The ID of the workspace to which the baseline belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -338,7 +388,10 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the baseline. Valid values: ERROR, SAFE, DANGROUS, and OVER. The value ERROR indicates that no nodes are associated with the baseline, or all nodes associated with the baseline are suspended. The value SAFE indicates that nodes are run before the alert duration begins. The value DANGROUS indicates that nodes are still running after the alert duration ends but the committed time does not arrive. The value OVER indicates that nodes are still running after the committed time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SAFE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -352,11 +405,17 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTopicInfluenceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicInfluenceResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Influences")
-        private java.util.List < Influences> influences;
+        @com.aliyun.core.annotation.NameInMap("Influences")
+        private java.util.List<Influences> influences;
 
-        @NameInMap("TopicId")
+        @com.aliyun.core.annotation.NameInMap("TopicId")
         private Long topicId;
 
         private Data(Builder builder) {
@@ -375,7 +434,7 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
         /**
          * @return influences
          */
-        public java.util.List < Influences> getInfluences() {
+        public java.util.List<Influences> getInfluences() {
             return this.influences;
         }
 
@@ -387,19 +446,22 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Influences> influences; 
+            private java.util.List<Influences> influences; 
             private Long topicId; 
 
             /**
-             * Influences.
+             * <p>The list of affected baseline instances.</p>
              */
-            public Builder influences(java.util.List < Influences> influences) {
+            public Builder influences(java.util.List<Influences> influences) {
                 this.influences = influences;
                 return this;
             }
 
             /**
-             * TopicId.
+             * <p>The ID of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder topicId(Long topicId) {
                 this.topicId = topicId;

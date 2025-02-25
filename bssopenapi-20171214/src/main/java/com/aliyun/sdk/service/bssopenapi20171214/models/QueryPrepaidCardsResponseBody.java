@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryPrepaidCardsResponseBody} extends {@link TeaModel}
  *
  * <p>QueryPrepaidCardsResponseBody</p>
  */
 public class QueryPrepaidCardsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryPrepaidCardsResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,10 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7EA6C02D-06D0-4213-9C3B-E67910F7D1EB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,35 +148,41 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryPrepaidCardsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryPrepaidCardsResponseBody</p>
+     */
     public static class PrepaidCard extends TeaModel {
-        @NameInMap("ApplicableProducts")
+        @com.aliyun.core.annotation.NameInMap("ApplicableProducts")
         private String applicableProducts;
 
-        @NameInMap("ApplicableScenarios")
+        @com.aliyun.core.annotation.NameInMap("ApplicableScenarios")
         private String applicableScenarios;
 
-        @NameInMap("Balance")
+        @com.aliyun.core.annotation.NameInMap("Balance")
         private String balance;
 
-        @NameInMap("EffectiveTime")
+        @com.aliyun.core.annotation.NameInMap("EffectiveTime")
         private String effectiveTime;
 
-        @NameInMap("ExpiryTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiryTime")
         private String expiryTime;
 
-        @NameInMap("GrantedTime")
+        @com.aliyun.core.annotation.NameInMap("GrantedTime")
         private String grantedTime;
 
-        @NameInMap("NominalValue")
+        @com.aliyun.core.annotation.NameInMap("NominalValue")
         private String nominalValue;
 
-        @NameInMap("PrepaidCardId")
+        @com.aliyun.core.annotation.NameInMap("PrepaidCardId")
         private Long prepaidCardId;
 
-        @NameInMap("PrepaidCardNo")
+        @com.aliyun.core.annotation.NameInMap("PrepaidCardNo")
         private String prepaidCardNo;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private PrepaidCard(Builder builder) {
@@ -266,7 +289,10 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The services to which the prepaid card is applicable.
+             * <p>The services to which the prepaid card is applicable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>All Alibaba Cloud services</p>
              */
             public Builder applicableProducts(String applicableProducts) {
                 this.applicableProducts = applicableProducts;
@@ -274,7 +300,10 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             }
 
             /**
-             * The scenario to which the prepaid card is applicable.
+             * <p>The scenario to which the prepaid card is applicable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder applicableScenarios(String applicableScenarios) {
                 this.applicableScenarios = applicableScenarios;
@@ -282,7 +311,10 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             }
 
             /**
-             * The balance of the prepaid card.
+             * <p>The balance of the prepaid card.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.00</p>
              */
             public Builder balance(String balance) {
                 this.balance = balance;
@@ -290,7 +322,10 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the prepaid card took effect.
+             * <p>The time when the prepaid card took effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-08-03T01:39:11Z</p>
              */
             public Builder effectiveTime(String effectiveTime) {
                 this.effectiveTime = effectiveTime;
@@ -298,7 +333,10 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the prepaid card expired.
+             * <p>The time when the prepaid card expired.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-08-04T01:39:11Z</p>
              */
             public Builder expiryTime(String expiryTime) {
                 this.expiryTime = expiryTime;
@@ -306,7 +344,10 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the prepaid card was issued.
+             * <p>The time when the prepaid card was issued.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-08-03T01:39:11Z</p>
              */
             public Builder grantedTime(String grantedTime) {
                 this.grantedTime = grantedTime;
@@ -314,7 +355,10 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             }
 
             /**
-             * The nominal value of the prepaid card.
+             * <p>The nominal value of the prepaid card.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.00</p>
              */
             public Builder nominalValue(String nominalValue) {
                 this.nominalValue = nominalValue;
@@ -322,7 +366,10 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the prepaid card.
+             * <p>The ID of the prepaid card.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>213432432</p>
              */
             public Builder prepaidCardId(Long prepaidCardId) {
                 this.prepaidCardId = prepaidCardId;
@@ -330,7 +377,10 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the prepaid card.
+             * <p>The number of the prepaid card.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Q-7edaab979fc9</p>
              */
             public Builder prepaidCardNo(String prepaidCardNo) {
                 this.prepaidCardNo = prepaidCardNo;
@@ -338,12 +388,15 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the prepaid card. Valid values:
-             * <p>
+             * <p>The status of the prepaid card. Valid values:</p>
+             * <ul>
+             * <li>Available: The prepaid card is valid.</li>
+             * <li>Expired: The prepaid card expired.</li>
+             * <li>Cancelled: The prepaid card is invalid.</li>
+             * </ul>
              * 
-             * *   Available: The prepaid card is valid.
-             * *   Expired: The prepaid card expired.
-             * *   Cancelled: The prepaid card is invalid.
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -357,9 +410,15 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryPrepaidCardsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryPrepaidCardsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("PrepaidCard")
-        private java.util.List < PrepaidCard> prepaidCard;
+        @com.aliyun.core.annotation.NameInMap("PrepaidCard")
+        private java.util.List<PrepaidCard> prepaidCard;
 
         private Data(Builder builder) {
             this.prepaidCard = builder.prepaidCard;
@@ -376,17 +435,17 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
         /**
          * @return prepaidCard
          */
-        public java.util.List < PrepaidCard> getPrepaidCard() {
+        public java.util.List<PrepaidCard> getPrepaidCard() {
             return this.prepaidCard;
         }
 
         public static final class Builder {
-            private java.util.List < PrepaidCard> prepaidCard; 
+            private java.util.List<PrepaidCard> prepaidCard; 
 
             /**
              * PrepaidCard.
              */
-            public Builder prepaidCard(java.util.List < PrepaidCard> prepaidCard) {
+            public Builder prepaidCard(java.util.List<PrepaidCard> prepaidCard) {
                 this.prepaidCard = prepaidCard;
                 return this;
             }

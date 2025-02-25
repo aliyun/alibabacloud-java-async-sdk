@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddAITemplateRequest} extends {@link RequestModel}
  *
  * <p>AddAITemplateRequest</p>
  */
 public class AddAITemplateRequest extends Request {
-    @Query
-    @NameInMap("TemplateConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateConfig;
 
-    @Query
-    @NameInMap("TemplateName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateName;
 
-    @Query
-    @NameInMap("TemplateType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateType;
 
     private AddAITemplateRequest(Builder builder) {
@@ -85,7 +90,11 @@ public class AddAITemplateRequest extends Request {
         } 
 
         /**
-         * The detailed configurations of the AI template. The value must be a JSON string. For more information, see [AITemplateConfig](~~89863#title-vd3-499-o36~~).
+         * <p>The detailed configurations of the AI template. The value must be a JSON string. For more information, see <a href="~~89863#title-vd3-499-o36~~">AITemplateConfig</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;AuditItem&quot;:[&quot;terrorism&quot;,&quot;porn&quot;],&quot;AuditRange&quot;:[&quot;image-cover&quot;,&quot;text-title&quot;,&quot;video&quot;],&quot;AuditContent&quot;:[&quot;screen&quot;],&quot;AuditAutoBlock&quot;:&quot;yes&quot;}</p>
          */
         public Builder templateConfig(String templateConfig) {
             this.putQueryParameter("TemplateConfig", templateConfig);
@@ -94,7 +103,11 @@ public class AddAITemplateRequest extends Request {
         }
 
         /**
-         * The name of the AI template. The name can be up to 128 bytes in length.
+         * <p>The name of the AI template. The name can be up to 128 bytes in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AI-media-test</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -103,11 +116,15 @@ public class AddAITemplateRequest extends Request {
         }
 
         /**
-         * The type of the AI template. Valid values:
-         * <p>
+         * <p>The type of the AI template. Valid values:</p>
+         * <ul>
+         * <li><strong>AIMediaAudit</strong>: automated review</li>
+         * <li><strong>AIImage</strong>: smart thumbnail</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **AIMediaAudit**: automated review
-         * *   **AIImage**: smart thumbnail
+         * <strong>example:</strong>
+         * <p>AIMediaAudit</p>
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);

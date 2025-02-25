@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TableExtendedPrivilegesUserPrivilegesValue</p>
  */
 public class TableExtendedPrivilegesUserPrivilegesValue extends TeaModel {
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private Integer createTime;
 
-    @NameInMap("GrantOption")
+    @com.aliyun.core.annotation.NameInMap("GrantOption")
     private Boolean grantOption;
 
-    @NameInMap("Grantor")
+    @com.aliyun.core.annotation.NameInMap("Grantor")
     private String grantor;
 
-    @NameInMap("GrantorType")
+    @com.aliyun.core.annotation.NameInMap("GrantorType")
     private String grantorType;
 
-    @NameInMap("Privilege")
+    @com.aliyun.core.annotation.NameInMap("Privilege")
     private String privilege;
 
     private TableExtendedPrivilegesUserPrivilegesValue(Builder builder) {

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateEpnInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateEpnInstanceResponseBody</p>
  */
 public class CreateEpnInstanceResponseBody extends TeaModel {
-    @NameInMap("EPNInstanceId")
+    @com.aliyun.core.annotation.NameInMap("EPNInstanceId")
     private String EPNInstanceId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateEpnInstanceResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateEpnInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * EPNInstanceId.
+         * <p>The ID of the EPN instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epn-xxxxx</p>
          */
         public Builder EPNInstanceId(String EPNInstanceId) {
             this.EPNInstanceId = EPNInstanceId;
@@ -58,7 +66,10 @@ public class CreateEpnInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

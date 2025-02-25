@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWebAreaBlockConfigsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWebAreaBlockConfigsResponseBody</p>
  */
 public class DescribeWebAreaBlockConfigsResponseBody extends TeaModel {
-    @NameInMap("AreaBlockConfigs")
-    private java.util.List < AreaBlockConfigs> areaBlockConfigs;
+    @com.aliyun.core.annotation.NameInMap("AreaBlockConfigs")
+    private java.util.List<AreaBlockConfigs> areaBlockConfigs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeWebAreaBlockConfigsResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeWebAreaBlockConfigsResponseBody extends TeaModel {
     /**
      * @return areaBlockConfigs
      */
-    public java.util.List < AreaBlockConfigs> getAreaBlockConfigs() {
+    public java.util.List<AreaBlockConfigs> getAreaBlockConfigs() {
         return this.areaBlockConfigs;
     }
 
@@ -46,19 +51,22 @@ public class DescribeWebAreaBlockConfigsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AreaBlockConfigs> areaBlockConfigs; 
+        private java.util.List<AreaBlockConfigs> areaBlockConfigs; 
         private String requestId; 
 
         /**
-         * An array that consists of the configurations of the Location Blacklist (Domain Names) policy.
+         * <p>An array that consists of the configurations of the Location Blacklist (Domain Names) policy.</p>
          */
-        public Builder areaBlockConfigs(java.util.List < AreaBlockConfigs> areaBlockConfigs) {
+        public Builder areaBlockConfigs(java.util.List<AreaBlockConfigs> areaBlockConfigs) {
             this.areaBlockConfigs = areaBlockConfigs;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bcf28g5-d57c-11e7-9bs0-d89d6717dxbc</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class DescribeWebAreaBlockConfigsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeWebAreaBlockConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWebAreaBlockConfigsResponseBody</p>
+     */
     public static class RegionList extends TeaModel {
-        @NameInMap("Block")
+        @com.aliyun.core.annotation.NameInMap("Block")
         private Integer block;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
         private RegionList(Builder builder) {
@@ -110,11 +124,14 @@ public class DescribeWebAreaBlockConfigsResponseBody extends TeaModel {
             private String region; 
 
             /**
-             * Indicates whether the location is blocked. Valid values:
-             * <p>
+             * <p>Indicates whether the location is blocked. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: yes</li>
+             * <li><strong>1</strong>: no</li>
+             * </ul>
              * 
-             * *   **0**: yes
-             * *   **1**: no
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder block(Integer block) {
                 this.block = block;
@@ -122,7 +139,10 @@ public class DescribeWebAreaBlockConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the location.
+             * <p>The name of the location.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN-SHANGHAI</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -136,12 +156,18 @@ public class DescribeWebAreaBlockConfigsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeWebAreaBlockConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWebAreaBlockConfigsResponseBody</p>
+     */
     public static class AreaBlockConfigs extends TeaModel {
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("RegionList")
-        private java.util.List < RegionList> regionList;
+        @com.aliyun.core.annotation.NameInMap("RegionList")
+        private java.util.List<RegionList> regionList;
 
         private AreaBlockConfigs(Builder builder) {
             this.domain = builder.domain;
@@ -166,16 +192,19 @@ public class DescribeWebAreaBlockConfigsResponseBody extends TeaModel {
         /**
          * @return regionList
          */
-        public java.util.List < RegionList> getRegionList() {
+        public java.util.List<RegionList> getRegionList() {
             return this.regionList;
         }
 
         public static final class Builder {
             private String domain; 
-            private java.util.List < RegionList> regionList; 
+            private java.util.List<RegionList> regionList; 
 
             /**
-             * The domain name of the website.
+             * <p>The domain name of the website.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -183,9 +212,9 @@ public class DescribeWebAreaBlockConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of the blocked locations.
+             * <p>The configuration of the blocked locations.</p>
              */
-            public Builder regionList(java.util.List < RegionList> regionList) {
+            public Builder regionList(java.util.List<RegionList> regionList) {
                 this.regionList = regionList;
                 return this;
             }

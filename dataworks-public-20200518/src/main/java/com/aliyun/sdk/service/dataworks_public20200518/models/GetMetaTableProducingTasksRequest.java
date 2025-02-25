@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMetaTableProducingTasksRequest} extends {@link RequestModel}
  *
  * <p>GetMetaTableProducingTasksRequest</p>
  */
 public class GetMetaTableProducingTasksRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Query
-    @NameInMap("DataSourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataSourceType")
     private String dataSourceType;
 
-    @Query
-    @NameInMap("DbName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbName")
     private String dbName;
 
-    @Query
-    @NameInMap("SchemaName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SchemaName")
     private String schemaName;
 
-    @Query
-    @NameInMap("TableGuid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableGuid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tableGuid;
 
-    @Query
-    @NameInMap("TableName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableName")
     private String tableName;
 
     private GetMetaTableProducingTasksRequest(Builder builder) {
@@ -148,7 +153,10 @@ public class GetMetaTableProducingTasksRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * <p>The ID of the EMR cluster. This parameter takes effect only if the DataSourceType parameter is set to emr.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C-A_SAMPLE_CLUSTER_ID</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -157,7 +165,10 @@ public class GetMetaTableProducingTasksRequest extends Request {
         }
 
         /**
-         * DataSourceType.
+         * <p>The type of the metatable. Valid values: odps and emr. The value odps indicates that the metatable is a MaxCompute metatable. The value emr indicates that the metatable is an E-MapReduce (EMR) metatable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);
@@ -166,7 +177,10 @@ public class GetMetaTableProducingTasksRequest extends Request {
         }
 
         /**
-         * DbName.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -175,7 +189,10 @@ public class GetMetaTableProducingTasksRequest extends Request {
         }
 
         /**
-         * SchemaName.
+         * <p>The name of the schema.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myschema</p>
          */
         public Builder schemaName(String schemaName) {
             this.putQueryParameter("SchemaName", schemaName);
@@ -184,7 +201,11 @@ public class GetMetaTableProducingTasksRequest extends Request {
         }
 
         /**
-         * TableGuid.
+         * <p>The GUID of the MaxCompute metatable.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps.sample_project.sample_table</p>
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);
@@ -193,7 +214,10 @@ public class GetMetaTableProducingTasksRequest extends Request {
         }
 
         /**
-         * TableName.
+         * <p>The name of the metatable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sample_table</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);

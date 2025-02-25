@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitSyncMediaInfoJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitSyncMediaInfoJobRequest</p>
  */
 public class SubmitSyncMediaInfoJobRequest extends Request {
-    @Query
-    @NameInMap("Input")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Input")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Input input;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("ScheduleConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScheduleConfig")
     private ScheduleConfig scheduleConfig;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
     private SubmitSyncMediaInfoJobRequest(Builder builder) {
@@ -97,7 +102,8 @@ public class SubmitSyncMediaInfoJobRequest extends Request {
         } 
 
         /**
-         * Input.
+         * <p>The input of the job.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder input(Input input) {
             String inputShrink = shrink(input, "Input", "json");
@@ -107,7 +113,10 @@ public class SubmitSyncMediaInfoJobRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The job name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -116,7 +125,7 @@ public class SubmitSyncMediaInfoJobRequest extends Request {
         }
 
         /**
-         * ScheduleConfig.
+         * <p>The scheduling parameters. This parameter is optional.</p>
          */
         public Builder scheduleConfig(ScheduleConfig scheduleConfig) {
             String scheduleConfigShrink = shrink(scheduleConfig, "ScheduleConfig", "json");
@@ -126,7 +135,10 @@ public class SubmitSyncMediaInfoJobRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The user data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user-data</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -141,13 +153,19 @@ public class SubmitSyncMediaInfoJobRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitSyncMediaInfoJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitSyncMediaInfoJobRequest</p>
+     */
     public static class Input extends TeaModel {
-        @NameInMap("Media")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Media")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String media;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private Input(Builder builder) {
@@ -182,7 +200,20 @@ public class SubmitSyncMediaInfoJobRequest extends Request {
             private String type; 
 
             /**
-             * Media.
+             * <p>The media object.</p>
+             * <ul>
+             * <li>If Type is set to OSS, set this parameter to the URL of an OSS object. Both the OSS and HTTP protocols are supported.</li>
+             * </ul>
+             * <blockquote>
+             * <p> Before you use the OSS bucket in the URL, you must add the bucket on the <a href="https://help.aliyun.com/document_detail/609918.html">Storage Management</a> page of the Intelligent Media Services (IMS) console.</p>
+             * </blockquote>
+             * <ul>
+             * <li>If Type is set to Media, set this parameter to the ID of a media asset.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket/path/to/video.mp4</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -190,7 +221,15 @@ public class SubmitSyncMediaInfoJobRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The type of the media object.</p>
+             * <ul>
+             * <li>OSS: an Object Storage Service (OSS) object.</li>
+             * <li>Media: a media asset.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -204,11 +243,17 @@ public class SubmitSyncMediaInfoJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitSyncMediaInfoJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitSyncMediaInfoJobRequest</p>
+     */
     public static class ScheduleConfig extends TeaModel {
-        @NameInMap("PipelineId")
+        @com.aliyun.core.annotation.NameInMap("PipelineId")
         private String pipelineId;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
         private ScheduleConfig(Builder builder) {
@@ -243,7 +288,10 @@ public class SubmitSyncMediaInfoJobRequest extends Request {
             private Integer priority; 
 
             /**
-             * PipelineId.
+             * <p>The ID of the MPS queue to which the job was submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e37ebee5d98b4781897f6086e89f9c56</p>
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;
@@ -251,7 +299,10 @@ public class SubmitSyncMediaInfoJobRequest extends Request {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the job. Valid values: 1 to 10. The greater the value, the higher the priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;

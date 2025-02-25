@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDesktopHostNameRequest} extends {@link RequestModel}
  *
  * <p>ModifyDesktopHostNameRequest</p>
  */
 public class ModifyDesktopHostNameRequest extends Request {
-    @Query
-    @NameInMap("DesktopId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String desktopId;
 
-    @Query
-    @NameInMap("NewHostName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewHostName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String newHostName;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private ModifyDesktopHostNameRequest(Builder builder) {
@@ -85,7 +90,11 @@ public class ModifyDesktopHostNameRequest extends Request {
         } 
 
         /**
-         * DesktopId.
+         * <p>The ID of the cloud computer.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-gx2x1dhsmucyy****</p>
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -94,11 +103,15 @@ public class ModifyDesktopHostNameRequest extends Request {
         }
 
         /**
-         * The new hostname of the cloud desktop. The hostname must meet the following requirements:
-         * <p>
+         * <p>The new hostname of the cloud computer. The hostname must meet the following requirements:</p>
+         * <ul>
+         * <li>The hostname must be 2 to 15 characters in length.</li>
+         * <li>The hostname can contain only letters, digits, and hyphens (-). The hostname cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Must be 2 to 15 characters in length.
-         * *   Contain letters, digits, and hyphens (-). It cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.
+         * <strong>example:</strong>
+         * <p>NewName</p>
          */
         public Builder newHostName(String newHostName) {
             this.putQueryParameter("NewHostName", newHostName);
@@ -107,7 +120,11 @@ public class ModifyDesktopHostNameRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to ModifyDesktopHostName.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

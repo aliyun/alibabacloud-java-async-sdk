@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDcdnSLSRealTimeLogDeliveryResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDcdnSLSRealTimeLogDeliveryResponseBody</p>
  */
 public class CreateDcdnSLSRealTimeLogDeliveryResponseBody extends TeaModel {
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private Content content;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateDcdnSLSRealTimeLogDeliveryResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class CreateDcdnSLSRealTimeLogDeliveryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The configuration results of the domain name.
+         * <p>The configuration results of the domain name.</p>
          */
         public Builder content(Content content) {
             this.content = content;
@@ -58,7 +58,10 @@ public class CreateDcdnSLSRealTimeLogDeliveryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F32C57AA-7BF8-49AE-A2CC-9F42390F5A19</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,17 +74,23 @@ public class CreateDcdnSLSRealTimeLogDeliveryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDcdnSLSRealTimeLogDeliveryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateDcdnSLSRealTimeLogDeliveryResponseBody</p>
+     */
     public static class Domains extends TeaModel {
-        @NameInMap("Desc")
+        @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Domains(Builder builder) {
@@ -134,7 +143,10 @@ public class CreateDcdnSLSRealTimeLogDeliveryResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The description of the returned result.
+             * <p>The description of the returned result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ok</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -142,7 +154,10 @@ public class CreateDcdnSLSRealTimeLogDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name from which real-time logs were collected.
+             * <p>The domain name from which real-time logs were collected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -150,7 +165,10 @@ public class CreateDcdnSLSRealTimeLogDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * The region to which real-time logs were delivered.
+             * <p>The region to which real-time logs were delivered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -158,7 +176,10 @@ public class CreateDcdnSLSRealTimeLogDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * The status of real-time logs.
+             * <p>The status of real-time logs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -172,8 +193,14 @@ public class CreateDcdnSLSRealTimeLogDeliveryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateDcdnSLSRealTimeLogDeliveryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateDcdnSLSRealTimeLogDeliveryResponseBody</p>
+     */
     public static class Content extends TeaModel {
-        @NameInMap("Domains")
+        @com.aliyun.core.annotation.NameInMap("Domains")
         private java.util.List < Domains> domains;
 
         private Content(Builder builder) {

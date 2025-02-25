@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20201002.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOfficeSitesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeOfficeSitesResponseBody</p>
  */
 public class DescribeOfficeSitesResponseBody extends TeaModel {
-    @NameInMap("OfficeSites")
-    private java.util.List < OfficeSites> officeSites;
+    @com.aliyun.core.annotation.NameInMap("OfficeSites")
+    private java.util.List<OfficeSites> officeSites;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeOfficeSitesResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
     /**
      * @return officeSites
      */
-    public java.util.List < OfficeSites> getOfficeSites() {
+    public java.util.List<OfficeSites> getOfficeSites() {
         return this.officeSites;
     }
 
@@ -46,13 +51,13 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < OfficeSites> officeSites; 
+        private java.util.List<OfficeSites> officeSites; 
         private String requestId; 
 
         /**
          * OfficeSites.
          */
-        public Builder officeSites(java.util.List < OfficeSites> officeSites) {
+        public Builder officeSites(java.util.List<OfficeSites> officeSites) {
             this.officeSites = officeSites;
             return this;
         }
@@ -71,23 +76,29 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeOfficeSitesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOfficeSitesResponseBody</p>
+     */
     public static class OfficeSites extends TeaModel {
-        @NameInMap("DesktopAccessType")
+        @com.aliyun.core.annotation.NameInMap("DesktopAccessType")
         private String desktopAccessType;
 
-        @NameInMap("DesktopVpcEndpoint")
+        @com.aliyun.core.annotation.NameInMap("DesktopVpcEndpoint")
         private String desktopVpcEndpoint;
 
-        @NameInMap("OfficeSiteId")
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
         private String officeSiteId;
 
-        @NameInMap("OfficeSiteType")
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteType")
         private String officeSiteType;
 
-        @NameInMap("ProviderId")
+        @com.aliyun.core.annotation.NameInMap("ProviderId")
         private String providerId;
 
-        @NameInMap("SsoServiceUrl")
+        @com.aliyun.core.annotation.NameInMap("SsoServiceUrl")
         private String ssoServiceUrl;
 
         private OfficeSites(Builder builder) {

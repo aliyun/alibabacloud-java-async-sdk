@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateApplicationResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateApplicationResponseBody</p>
  */
 public class UpdateApplicationResponseBody extends TeaModel {
-    @NameInMap("Application")
+    @com.aliyun.core.annotation.NameInMap("Application")
     private Application application;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateApplicationResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the application.
+         * <p>The information about the application.</p>
          */
         public Builder application(Application application) {
             this.application = application;
@@ -58,7 +63,10 @@ public class UpdateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F1F00F41-D24C-5377-831B-C97F739CE1AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,23 +79,29 @@ public class UpdateApplicationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateApplicationResponseBody</p>
+     */
     public static class Application extends TeaModel {
-        @NameInMap("CreatedDate")
+        @com.aliyun.core.annotation.NameInMap("CreatedDate")
         private String createdDate;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Tags")
-        private java.util.Map < String, ? > tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.Map<String, ?> tags;
 
-        @NameInMap("UpdatedDate")
+        @com.aliyun.core.annotation.NameInMap("UpdatedDate")
         private String updatedDate;
 
         private Application(Builder builder) {
@@ -138,7 +152,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.Map < String, ? > getTags() {
+        public java.util.Map<String, ?> getTags() {
             return this.tags;
         }
 
@@ -154,11 +168,14 @@ public class UpdateApplicationResponseBody extends TeaModel {
             private String description; 
             private String name; 
             private String resourceGroupId; 
-            private java.util.Map < String, ? > tags; 
+            private java.util.Map<String, ?> tags; 
             private String updatedDate; 
 
             /**
-             * The time when the application was created.
+             * <p>The time when the application was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-07T09:17:46Z</p>
              */
             public Builder createdDate(String createdDate) {
                 this.createdDate = createdDate;
@@ -166,7 +183,10 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the application.
+             * <p>The description of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test application</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -174,7 +194,10 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The application name.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>My-Application</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -182,7 +205,10 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmxsn4m*****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -190,15 +216,21 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>The tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;k1&quot;:&quot;v1&quot;,&quot;k2&quot;:&quot;v2&quot;}</p>
              */
-            public Builder tags(java.util.Map < String, ? > tags) {
+            public Builder tags(java.util.Map<String, ?> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * The time when the application was updated.
+             * <p>The time when the application was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-07T10:17:46Z</p>
              */
             public Builder updatedDate(String updatedDate) {
                 this.updatedDate = updatedDate;

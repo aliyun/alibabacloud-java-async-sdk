@@ -1,37 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApplicationInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeApplicationInstancesRequest</p>
  */
 public class DescribeApplicationInstancesRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    private String instanceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Reverse")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Reverse")
     private Boolean reverse;
 
     private DescribeApplicationInstancesRequest(Builder builder) {
@@ -39,6 +48,7 @@ public class DescribeApplicationInstancesRequest extends Request {
         this.appId = builder.appId;
         this.currentPage = builder.currentPage;
         this.groupId = builder.groupId;
+        this.instanceId = builder.instanceId;
         this.pageSize = builder.pageSize;
         this.reverse = builder.reverse;
     }
@@ -78,6 +88,13 @@ public class DescribeApplicationInstancesRequest extends Request {
     }
 
     /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
      * @return pageSize
      */
     public Integer getPageSize() {
@@ -95,6 +112,7 @@ public class DescribeApplicationInstancesRequest extends Request {
         private String appId; 
         private Integer currentPage; 
         private String groupId; 
+        private String instanceId; 
         private Integer pageSize; 
         private Boolean reverse; 
 
@@ -107,12 +125,17 @@ public class DescribeApplicationInstancesRequest extends Request {
             this.appId = request.appId;
             this.currentPage = request.currentPage;
             this.groupId = request.groupId;
+            this.instanceId = request.instanceId;
             this.pageSize = request.pageSize;
             this.reverse = request.reverse;
         } 
 
         /**
-         * d700e680-aa4d-4ec1-afc2-6566b5ff\*\*\*\*
+         * <p>d700e680-aa4d-4ec1-afc2-6566b5ff****</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d700e680-aa4d-4ec1-afc2-6566b5ff****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -121,7 +144,10 @@ public class DescribeApplicationInstancesRequest extends Request {
         }
 
         /**
-         * 1
+         * <p>1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -130,7 +156,11 @@ public class DescribeApplicationInstancesRequest extends Request {
         }
 
         /**
-         * b2a8a925-477a-4ed7-b825-d5e22500\*\*\*\*
+         * <p>b2a8a925-477a-4ed7-b825-d5e22500****</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b2a8a925-477a-4ed7-b825-d5e22500****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -139,7 +169,19 @@ public class DescribeApplicationInstancesRequest extends Request {
         }
 
         /**
-         * 10
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * <p>10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -148,7 +190,10 @@ public class DescribeApplicationInstancesRequest extends Request {
         }
 
         /**
-         * true
+         * <p>true</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder reverse(Boolean reverse) {
             this.putQueryParameter("Reverse", reverse);

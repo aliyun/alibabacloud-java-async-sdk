@@ -1,56 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceMaintenanceAttributesRequest} extends {@link RequestModel}
  *
  * <p>ModifyInstanceMaintenanceAttributesRequest</p>
  */
 public class ModifyInstanceMaintenanceAttributesRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("ActionOnMaintenance")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ActionOnMaintenance")
     private String actionOnMaintenance;
 
-    @Query
-    @NameInMap("InstanceId")
-    private java.util.List < String > instanceId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    private java.util.List<String> instanceId;
 
-    @Query
-    @NameInMap("MaintenanceWindow")
-    private java.util.List < MaintenanceWindow> maintenanceWindow;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaintenanceWindow")
+    private java.util.List<MaintenanceWindow> maintenanceWindow;
 
-    @Query
-    @NameInMap("NotifyOnMaintenance")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NotifyOnMaintenance")
     private Boolean notifyOnMaintenance;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyInstanceMaintenanceAttributesRequest(Builder builder) {
@@ -97,14 +102,14 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
     /**
      * @return instanceId
      */
-    public java.util.List < String > getInstanceId() {
+    public java.util.List<String> getInstanceId() {
         return this.instanceId;
     }
 
     /**
      * @return maintenanceWindow
      */
-    public java.util.List < MaintenanceWindow> getMaintenanceWindow() {
+    public java.util.List<MaintenanceWindow> getMaintenanceWindow() {
         return this.maintenanceWindow;
     }
 
@@ -153,8 +158,8 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyInstanceMaintenanceAttributesRequest, Builder> {
         private String sourceRegionId; 
         private String actionOnMaintenance; 
-        private java.util.List < String > instanceId; 
-        private java.util.List < MaintenanceWindow> maintenanceWindow; 
+        private java.util.List<String> instanceId; 
+        private java.util.List<MaintenanceWindow> maintenanceWindow; 
         private Boolean notifyOnMaintenance; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -190,12 +195,15 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
         }
 
         /**
-         * The maintenance action. Valid values:
-         * <p>
+         * <p>The maintenance action. Valid values:</p>
+         * <ul>
+         * <li>Stop: stops the instance.</li>
+         * <li>AutoRecover: automatically recovers the instance.</li>
+         * <li>AutoRedeploy: redeploys the instance, which may damage the data disks attached to the instance.</li>
+         * </ul>
          * 
-         * *   Stop: stops the instance.
-         * *   AutoRecover: automatically recovers the instance.
-         * *   AutoRedeploy: redeploys the instance, which may damage the data disks attached to the instance.
+         * <strong>example:</strong>
+         * <p>AutoRecover</p>
          */
         public Builder actionOnMaintenance(String actionOnMaintenance) {
             this.putQueryParameter("ActionOnMaintenance", actionOnMaintenance);
@@ -204,31 +212,36 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
         }
 
         /**
-         * The ID of instance N. Valid values of N: 1 to 100.
+         * <p>The ID of instance N. Valid values of N: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4ph****</p>
          */
-        public Builder instanceId(java.util.List < String > instanceId) {
+        public Builder instanceId(java.util.List<String> instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
             return this;
         }
 
         /**
-         * The maintenance windows.
+         * <p>The maintenance windows.</p>
          */
-        public Builder maintenanceWindow(java.util.List < MaintenanceWindow> maintenanceWindow) {
+        public Builder maintenanceWindow(java.util.List<MaintenanceWindow> maintenanceWindow) {
             this.putQueryParameter("MaintenanceWindow", maintenanceWindow);
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
 
         /**
-         * Specifies whether to send an event notification before maintenance. Valid values:
-         * <p>
+         * <p>Specifies whether to send an event notification before maintenance. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder notifyOnMaintenance(Boolean notifyOnMaintenance) {
             this.putQueryParameter("NotifyOnMaintenance", notifyOnMaintenance);
@@ -255,7 +268,11 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -288,11 +305,17 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyInstanceMaintenanceAttributesRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyInstanceMaintenanceAttributesRequest</p>
+     */
     public static class MaintenanceWindow extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private MaintenanceWindow(Builder builder) {
@@ -327,7 +350,10 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
             private String startTime; 
 
             /**
-             * The end time of the maintenance window. The time must be on the hour. You must configure both StartTime and EndTime. The value of EndTime must be 1 to 23 hours later than the value of StartTime. Specify the time in the `HH:mm:ss` format. The time must be in UTC+8. Set the value of N to 1.
+             * <p>The end time of the maintenance window. The time must be on the hour. You must configure both StartTime and EndTime. The value of EndTime must be 1 to 23 hours later than the value of StartTime. Specify the time in the <code>HH:mm:ss</code> format. The time must be in UTC+8. Set the value of N to 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18:00:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -335,7 +361,10 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
             }
 
             /**
-             * The start time of the maintenance window. The time must be on the hour. You must configure both StartTime and EndTime. The value of EndTime must be 1 to 23 hours later than the value of StartTime. Specify the time in the `HH:mm:ss` format. The time must be in UTC+8. Set the value of N to 1.
+             * <p>The start time of the maintenance window. The time must be on the hour. You must configure both StartTime and EndTime. The value of EndTime must be 1 to 23 hours later than the value of StartTime. Specify the time in the <code>HH:mm:ss</code> format. The time must be in UTC+8. Set the value of N to 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>02:00:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

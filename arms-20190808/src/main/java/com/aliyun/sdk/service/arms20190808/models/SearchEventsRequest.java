@@ -1,56 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchEventsRequest} extends {@link RequestModel}
  *
  * <p>SearchEventsRequest</p>
  */
 public class SearchEventsRequest extends Request {
-    @Query
-    @NameInMap("AlertId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlertId")
     private Long alertId;
 
-    @Query
-    @NameInMap("AlertType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlertType")
     private Integer alertType;
 
-    @Query
-    @NameInMap("AppType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppType")
     private String appType;
 
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @Query
-    @NameInMap("IsTrigger")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsTrigger")
     private Integer isTrigger;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Pid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Pid")
     private String pid;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
     private SearchEventsRequest(Builder builder) {
@@ -181,7 +186,10 @@ public class SearchEventsRequest extends Request {
         } 
 
         /**
-         * The ID of the alert rule. You can call the SearchAlertRules operation and view the `Id` parameter in the response. For more information, see [SearchAlertRules](~~175825~~).
+         * <p>The ID of the alert rule. You can call the SearchAlertRules operation and view the <code>Id</code> parameter in the response. For more information, see <a href="https://help.aliyun.com/document_detail/175825.html">SearchAlertRules</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder alertId(Long alertId) {
             this.putQueryParameter("AlertId", alertId);
@@ -190,17 +198,20 @@ public class SearchEventsRequest extends Request {
         }
 
         /**
-         * The type of the alert rule. Valid values:
-         * <p>
+         * <p>The type of the alert rule. Valid values:</p>
+         * <ul>
+         * <li><code>1</code>: custom alert rules to monitor drill-down data sets</li>
+         * <li><code>3</code>: custom alert rules to monitor tiled data sets</li>
+         * <li><code>4</code>: alert rules to monitor the frontend, including the default frontend alert rules</li>
+         * <li><code>5</code>: alert rules to monitor applications, including the default application alert rules</li>
+         * <li><code>6</code>: the default frontend alert rules</li>
+         * <li><code>7</code>: the default application alert rules</li>
+         * <li><code>8</code>: Tracing Analysis alert rules</li>
+         * <li><code>101</code>: Prometheus alert rules</li>
+         * </ul>
          * 
-         * *   `1`: custom alert rules to monitor drill-down data sets
-         * *   `3`: custom alert rules to monitor tiled data sets
-         * *   `4`: alert rules to monitor the frontend, including the default frontend alert rules
-         * *   `5`: alert rules to monitor applications, including the default application alert rules
-         * *   `6`: the default frontend alert rules
-         * *   `7`: the default application alert rules
-         * *   `8`: Tracing Analysis alert rules
-         * *   `101`: Prometheus alert rules
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder alertType(Integer alertType) {
             this.putQueryParameter("AlertType", alertType);
@@ -209,11 +220,14 @@ public class SearchEventsRequest extends Request {
         }
 
         /**
-         * The type of the application that is associated with the alert rule. Valid values:
-         * <p>
+         * <p>The type of the application that is associated with the alert rule. Valid values:</p>
+         * <ul>
+         * <li><code>TRACE</code>: application monitoring</li>
+         * <li><code>RETCODE</code>: frontend monitoring</li>
+         * </ul>
          * 
-         * *   `TRACE`: application monitoring
-         * *   `RETCODE`: frontend monitoring
+         * <strong>example:</strong>
+         * <p>TRACE</p>
          */
         public Builder appType(String appType) {
             this.putQueryParameter("AppType", appType);
@@ -222,7 +236,10 @@ public class SearchEventsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: `1`.
+         * <p>The number of the page to return. Default value: <code>1</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -231,7 +248,10 @@ public class SearchEventsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify a UNIX timestamp of the LONG data type, in milliseconds. The default value is the current time.
+         * <p>The end of the time range to query. Specify a UNIX timestamp of the LONG data type, in milliseconds. The default value is the current time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1595568970000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -240,11 +260,14 @@ public class SearchEventsRequest extends Request {
         }
 
         /**
-         * Specifies whether the alert event is triggered. If you do not set this parameter, all alert events are queried. Valid values:
-         * <p>
+         * <p>Specifies whether the alert event is triggered. If you do not set this parameter, all alert events are queried. Valid values:</p>
+         * <ul>
+         * <li><code>1</code>: The event is triggered.</li>
+         * <li><code>0</code>: The event is not triggered.</li>
+         * </ul>
          * 
-         * *   `1`: The event is triggered.
-         * *   `0`: The event is not triggered.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder isTrigger(Integer isTrigger) {
             this.putQueryParameter("IsTrigger", isTrigger);
@@ -253,7 +276,10 @@ public class SearchEventsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: `10`.
+         * <p>The number of entries to return on each page. Default value: <code>10</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -262,7 +288,10 @@ public class SearchEventsRequest extends Request {
         }
 
         /**
-         * The process identifier (PID) of the application that is associated with the alert rule.
+         * <p>The process identifier (PID) of the application that is associated with the alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>atc889zkcf@d8deedfa9bf****</p>
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -271,7 +300,11 @@ public class SearchEventsRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -280,7 +313,10 @@ public class SearchEventsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify a UNIX timestamp of the LONG data type, in milliseconds. The default value is 10 minutes before the current time.
+         * <p>The beginning of the time range to query. Specify a UNIX timestamp of the LONG data type, in milliseconds. The default value is 10 minutes before the current time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1595565300000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

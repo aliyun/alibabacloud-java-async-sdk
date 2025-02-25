@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuotaListExportPagedResponseBody} extends {@link TeaModel}
  *
  * <p>QuotaListExportPagedResponseBody</p>
  */
 public class QuotaListExportPagedResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("Msg")
+    @com.aliyun.core.annotation.NameInMap("Msg")
     private String msg;
 
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private QuotaListExportPagedResponseBody(Builder builder) {
@@ -61,7 +66,7 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -102,7 +107,7 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String msg; 
         private Integer pageNo; 
         private Integer pageSize; 
@@ -110,7 +115,10 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * Code.
+         * <p>Status code of returning result, 200 means success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,15 +126,18 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Listed data of returning result</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * Msg.
+         * <p>Description of returning result</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -134,7 +145,10 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * <p>Current page number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -142,7 +156,10 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Record number on each page</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -150,7 +167,10 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>ID of the Request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210e876f16704666020714468dab35</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +178,10 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>Total volume</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -171,23 +194,29 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuotaListExportPagedResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuotaListExportPagedResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusCode")
+        @com.aliyun.core.annotation.NameInMap("StatusCode")
         private String statusCode;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private Data(Builder builder) {
@@ -258,7 +287,10 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * CreateTime.
+             * <p>Create Time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-12-21 21:31:57 UTC+8</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -266,7 +298,10 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>File Name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5113766248601929_quota_2023-06-22_2023-12-21_all_2023122121310057</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -274,7 +309,10 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>Notification Message</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -282,7 +320,10 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Display of Task Status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -290,7 +331,13 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
             }
 
             /**
-             * StatusCode.
+             * <p>Task Status Enum</br>
+             * 2: Exporting</br>
+             * 3: Export Success</br>
+             * -1: Export Fail</br></p>
+             * 
+             * <strong>example:</strong>
+             * <p>Export Success</p>
              */
             public Builder statusCode(String statusCode) {
                 this.statusCode = statusCode;
@@ -298,7 +345,10 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The link to download exported file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>//aliyun-eco-market-servic-singapore.oss-ap-southeast-1.aliyuncs.com/5113766248601929_quota_2023-06-22_2023-12-21_all_2023122121310057</p>
              */
             public Builder url(String url) {
                 this.url = url;

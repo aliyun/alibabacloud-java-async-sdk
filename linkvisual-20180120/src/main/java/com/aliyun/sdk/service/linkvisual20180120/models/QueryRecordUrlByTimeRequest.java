@@ -142,16 +142,16 @@ public class QueryRecordUrlByTimeRequest extends Request {
             super();
         } 
 
-        private Builder(QueryRecordUrlByTimeRequest response) {
-            super(response);
-            this.beginTime = response.beginTime;
-            this.deviceName = response.deviceName;
-            this.endTime = response.endTime;
-            this.iotId = response.iotId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
-            this.streamType = response.streamType;
-            this.urlValidDuration = response.urlValidDuration;
+        private Builder(QueryRecordUrlByTimeRequest request) {
+            super(request);
+            this.beginTime = request.beginTime;
+            this.deviceName = request.deviceName;
+            this.endTime = request.endTime;
+            this.iotId = request.iotId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
+            this.streamType = request.streamType;
+            this.urlValidDuration = request.urlValidDuration;
         } 
 
         /**

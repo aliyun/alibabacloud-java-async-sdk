@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnMarkMonitorAccountsRequest} extends {@link RequestModel}
  *
  * <p>UnMarkMonitorAccountsRequest</p>
  */
 public class UnMarkMonitorAccountsRequest extends Request {
-    @Query
-    @NameInMap("AccountIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountIds;
 
     private UnMarkMonitorAccountsRequest(Builder builder) {
@@ -55,7 +60,11 @@ public class UnMarkMonitorAccountsRequest extends Request {
         } 
 
         /**
-         * The IDs of the members.
+         * <p>The IDs of the members.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>125267953644XXXX,125807832682XXXX</p>
          */
         public Builder accountIds(String accountIds) {
             this.putQueryParameter("AccountIds", accountIds);

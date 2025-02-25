@@ -221,10 +221,14 @@ public class ListOpenJMeterScenesResponseBody extends TeaModel {
         @NameInMap("SceneName")
         private String sceneName;
 
+        @NameInMap("Status")
+        private String status;
+
         private JMeterScene(Builder builder) {
             this.durationStr = builder.durationStr;
             this.sceneId = builder.sceneId;
             this.sceneName = builder.sceneName;
+            this.status = builder.status;
         }
 
         public static Builder builder() {
@@ -256,13 +260,21 @@ public class ListOpenJMeterScenesResponseBody extends TeaModel {
             return this.sceneName;
         }
 
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
         public static final class Builder {
             private String durationStr; 
             private String sceneId; 
             private String sceneName; 
+            private String status; 
 
             /**
-             * 压测持续时间
+             * DurationStr.
              */
             public Builder durationStr(String durationStr) {
                 this.durationStr = durationStr;
@@ -270,7 +282,7 @@ public class ListOpenJMeterScenesResponseBody extends TeaModel {
             }
 
             /**
-             * 场景id
+             * SceneId.
              */
             public Builder sceneId(String sceneId) {
                 this.sceneId = sceneId;
@@ -278,10 +290,18 @@ public class ListOpenJMeterScenesResponseBody extends TeaModel {
             }
 
             /**
-             * 场景名
+             * SceneName.
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 

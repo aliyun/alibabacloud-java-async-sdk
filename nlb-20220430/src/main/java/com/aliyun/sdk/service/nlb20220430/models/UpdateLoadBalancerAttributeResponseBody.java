@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateLoadBalancerAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateLoadBalancerAttributeResponseBody</p>
  */
 public class UpdateLoadBalancerAttributeResponseBody extends TeaModel {
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateLoadBalancerAttributeResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class UpdateLoadBalancerAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the asynchronous task.
+         * <p>The ID of the asynchronous task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aab74cfa-3bc4-48fc-80fc-0101da5a****</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -58,7 +66,10 @@ public class UpdateLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7294679F-08DE-16D4-8E5D-1625685DC10B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

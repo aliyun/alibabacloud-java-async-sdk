@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteNetworkRuleResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteNetworkRuleResponseBody</p>
  */
 public class DeleteNetworkRuleResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteNetworkRuleResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class DeleteNetworkRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>49AD2F34-694A-4024-9B0E-DDCFC59CCC13</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

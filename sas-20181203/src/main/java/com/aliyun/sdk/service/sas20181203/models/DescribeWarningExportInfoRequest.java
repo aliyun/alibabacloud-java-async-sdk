@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWarningExportInfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeWarningExportInfoRequest</p>
  */
 public class DescribeWarningExportInfoRequest extends Request {
-    @Query
-    @NameInMap("ExportId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExportId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long exportId;
 
     private DescribeWarningExportInfoRequest(Builder builder) {
@@ -55,10 +60,14 @@ public class DescribeWarningExportInfoRequest extends Request {
         } 
 
         /**
-         * The ID of the export task.
-         * <p>
+         * <p>The ID of the export task.</p>
+         * <blockquote>
+         * <p> You can can call the <a href="~~ExportWarning~~">ExportWarning</a> operation to query the IDs of export tasks.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can can call the [ExportWarning](~~ExportWarning~~) operation to query the IDs of export tasks.
+         * <strong>example:</strong>
+         * <p>14356</p>
          */
         public Builder exportId(Long exportId) {
             this.putQueryParameter("ExportId", exportId);

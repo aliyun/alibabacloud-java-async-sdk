@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,58 +11,58 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BackflowFeatureConsistencyCheckJobDataRequest</p>
  */
 public class BackflowFeatureConsistencyCheckJobDataRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("FeatureConsistencyCheckJobConfigId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FeatureConsistencyCheckJobConfigId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String featureConsistencyCheckJobConfigId;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("ItemFeatures")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ItemFeatures")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String itemFeatures;
 
-    @Body
-    @NameInMap("LogItemId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LogItemId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String logItemId;
 
-    @Body
-    @NameInMap("LogRequestId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LogRequestId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String logRequestId;
 
-    @Body
-    @NameInMap("LogRequestTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LogRequestTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long logRequestTime;
 
-    @Body
-    @NameInMap("LogUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LogUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String logUserId;
 
-    @Body
-    @NameInMap("SceneName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SceneName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sceneName;
 
-    @Body
-    @NameInMap("Scores")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Scores")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scores;
 
-    @Body
-    @NameInMap("UserFeatures")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserFeatures")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userFeatures;
 
     private BackflowFeatureConsistencyCheckJobDataRequest(Builder builder) {

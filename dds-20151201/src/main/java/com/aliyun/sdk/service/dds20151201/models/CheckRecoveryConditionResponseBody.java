@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckRecoveryConditionResponseBody} extends {@link TeaModel}
  *
  * <p>CheckRecoveryConditionResponseBody</p>
  */
 public class CheckRecoveryConditionResponseBody extends TeaModel {
-    @NameInMap("DBInstanceName")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceName")
     private String DBInstanceName;
 
-    @NameInMap("IsValid")
+    @com.aliyun.core.annotation.NameInMap("IsValid")
     private Boolean isValid;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CheckRecoveryConditionResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class CheckRecoveryConditionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp1378****</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -70,7 +78,14 @@ public class CheckRecoveryConditionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance.
+         * <p>Indicates whether the data of the instance can be restored. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The data of the instance can be restored.</li>
+         * <li><strong>false</strong>: The data of the instance cannot be restored.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isValid(Boolean isValid) {
             this.isValid = isValid;
@@ -78,7 +93,10 @@ public class CheckRecoveryConditionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D563A3E7-6010-45FE-A0CD-9283414C9657</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

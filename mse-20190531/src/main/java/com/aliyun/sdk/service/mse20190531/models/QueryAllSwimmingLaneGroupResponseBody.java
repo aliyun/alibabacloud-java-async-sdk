@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAllSwimmingLaneGroupResponseBody} extends {@link TeaModel}
  *
  * <p>QueryAllSwimmingLaneGroupResponseBody</p>
  */
 public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("DynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("DynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryAllSwimmingLaneGroupResponseBody(Builder builder) {
@@ -65,7 +70,7 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -113,7 +118,7 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String dynamicMessage; 
         private String errorCode; 
         private Integer httpStatusCode; 
@@ -122,7 +127,10 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code. A value of 200 is returned if the request is successful.
+         * <p>The status code. A value of 200 is returned if the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -130,15 +138,21 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data.
+         * <p>The details of the data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{id:100,name:&quot;test&quot;}]</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The dynamic part in the error message.
+         * <p>The dynamic part in the error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameter is invalid.</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -146,7 +160,10 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -154,7 +171,10 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -162,11 +182,14 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <ul>
+         * <li>If the request is successful, a success message is returned.</li>
+         * <li>If the request fails, an error message is returned.</li>
+         * </ul>
          * 
-         * *   If the request is successful, a success message is returned.
-         * *   If the request fails, an error message is returned.
+         * <strong>example:</strong>
+         * <p>The request was successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -174,7 +197,10 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54973C90-F379-4372-9AA5-053A3F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,11 +208,14 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -199,47 +228,65 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryAllSwimmingLaneGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAllSwimmingLaneGroupResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AppIds")
+        @com.aliyun.core.annotation.NameInMap("AppIds")
         private String appIds;
 
-        @NameInMap("EntryApp")
+        @com.aliyun.core.annotation.NameInMap("CanaryModel")
+        private Integer canaryModel;
+
+        @com.aliyun.core.annotation.NameInMap("EntryApp")
         private String entryApp;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("MessageQueueFilterSide")
+        @com.aliyun.core.annotation.NameInMap("MessageQueueFilterSide")
         private String messageQueueFilterSide;
 
-        @NameInMap("MessageQueueGrayEnable")
+        @com.aliyun.core.annotation.NameInMap("MessageQueueGrayEnable")
         private Boolean messageQueueGrayEnable;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("RecordCanaryDetail")
+        @com.aliyun.core.annotation.NameInMap("Paths")
+        private String paths;
+
+        @com.aliyun.core.annotation.NameInMap("RecordCanaryDetail")
         private Boolean recordCanaryDetail;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("SwimVersion")
+        private Integer swimVersion;
+
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private Data(Builder builder) {
             this.appIds = builder.appIds;
+            this.canaryModel = builder.canaryModel;
             this.entryApp = builder.entryApp;
             this.id = builder.id;
             this.messageQueueFilterSide = builder.messageQueueFilterSide;
             this.messageQueueGrayEnable = builder.messageQueueGrayEnable;
             this.name = builder.name;
             this.namespace = builder.namespace;
+            this.paths = builder.paths;
             this.recordCanaryDetail = builder.recordCanaryDetail;
             this.region = builder.region;
+            this.swimVersion = builder.swimVersion;
             this.userId = builder.userId;
         }
 
@@ -256,6 +303,13 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
          */
         public String getAppIds() {
             return this.appIds;
+        }
+
+        /**
+         * @return canaryModel
+         */
+        public Integer getCanaryModel() {
+            return this.canaryModel;
         }
 
         /**
@@ -301,6 +355,13 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return paths
+         */
+        public String getPaths() {
+            return this.paths;
+        }
+
+        /**
          * @return recordCanaryDetail
          */
         public Boolean getRecordCanaryDetail() {
@@ -315,6 +376,13 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return swimVersion
+         */
+        public Integer getSwimVersion() {
+            return this.swimVersion;
+        }
+
+        /**
          * @return userId
          */
         public String getUserId() {
@@ -323,14 +391,17 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private String appIds; 
+            private Integer canaryModel; 
             private String entryApp; 
             private Long id; 
             private String messageQueueFilterSide; 
             private Boolean messageQueueGrayEnable; 
             private String name; 
             private String namespace; 
+            private String paths; 
             private Boolean recordCanaryDetail; 
             private String region; 
+            private Integer swimVersion; 
             private String userId; 
 
             /**
@@ -338,6 +409,14 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
              */
             public Builder appIds(String appIds) {
                 this.appIds = appIds;
+                return this;
+            }
+
+            /**
+             * CanaryModel.
+             */
+            public Builder canaryModel(Integer canaryModel) {
+                this.canaryModel = canaryModel;
                 return this;
             }
 
@@ -390,6 +469,14 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
             }
 
             /**
+             * Paths.
+             */
+            public Builder paths(String paths) {
+                this.paths = paths;
+                return this;
+            }
+
+            /**
              * RecordCanaryDetail.
              */
             public Builder recordCanaryDetail(Boolean recordCanaryDetail) {
@@ -402,6 +489,14 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
              */
             public Builder region(String region) {
                 this.region = region;
+                return this;
+            }
+
+            /**
+             * SwimVersion.
+             */
+            public Builder swimVersion(Integer swimVersion) {
+                this.swimVersion = swimVersion;
                 return this;
             }
 

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetNacosConfigResponseBody} extends {@link TeaModel}
  *
  * <p>GetNacosConfigResponseBody</p>
  */
 public class GetNacosConfigResponseBody extends TeaModel {
-    @NameInMap("Configuration")
+    @com.aliyun.core.annotation.NameInMap("Configuration")
     private Configuration configuration;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetNacosConfigResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The configuration information.
+         * <p>The configuration information.</p>
          */
         public Builder configuration(Configuration configuration) {
             this.configuration = configuration;
@@ -94,7 +99,10 @@ public class GetNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +110,10 @@ public class GetNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class GetNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4EAB48C-BB4B-5B8D-B33B-35D69606C5AD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +132,14 @@ public class GetNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -135,35 +152,151 @@ public class GetNacosConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetNacosConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetNacosConfigResponseBody</p>
+     */
+    public static class GrayVersions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Priority")
+        private Integer priority;
+
+        @com.aliyun.core.annotation.NameInMap("Rule")
+        private String rule;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private GrayVersions(Builder builder) {
+            this.name = builder.name;
+            this.priority = builder.priority;
+            this.rule = builder.rule;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static GrayVersions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return priority
+         */
+        public Integer getPriority() {
+            return this.priority;
+        }
+
+        /**
+         * @return rule
+         */
+        public String getRule() {
+            return this.rule;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private Integer priority; 
+            private String rule; 
+            private String type; 
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Priority.
+             */
+            public Builder priority(Integer priority) {
+                this.priority = priority;
+                return this;
+            }
+
+            /**
+             * Rule.
+             */
+            public Builder rule(String rule) {
+                this.rule = rule;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public GrayVersions build() {
+                return new GrayVersions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetNacosConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetNacosConfigResponseBody</p>
+     */
     public static class Configuration extends TeaModel {
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("BetaIps")
+        @com.aliyun.core.annotation.NameInMap("BetaIps")
         private String betaIps;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("DataId")
+        @com.aliyun.core.annotation.NameInMap("DataId")
         private String dataId;
 
-        @NameInMap("Desc")
+        @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
 
-        @NameInMap("EncryptedDataKey")
+        @com.aliyun.core.annotation.NameInMap("EncryptedDataKey")
         private String encryptedDataKey;
 
-        @NameInMap("Group")
+        @com.aliyun.core.annotation.NameInMap("GrayVersions")
+        private java.util.List<GrayVersions> grayVersions;
+
+        @com.aliyun.core.annotation.NameInMap("Group")
         private String group;
 
-        @NameInMap("Md5")
+        @com.aliyun.core.annotation.NameInMap("Md5")
         private String md5;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private String tags;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Configuration(Builder builder) {
@@ -173,6 +306,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
             this.dataId = builder.dataId;
             this.desc = builder.desc;
             this.encryptedDataKey = builder.encryptedDataKey;
+            this.grayVersions = builder.grayVersions;
             this.group = builder.group;
             this.md5 = builder.md5;
             this.tags = builder.tags;
@@ -230,6 +364,13 @@ public class GetNacosConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return grayVersions
+         */
+        public java.util.List<GrayVersions> getGrayVersions() {
+            return this.grayVersions;
+        }
+
+        /**
          * @return group
          */
         public String getGroup() {
@@ -264,13 +405,17 @@ public class GetNacosConfigResponseBody extends TeaModel {
             private String dataId; 
             private String desc; 
             private String encryptedDataKey; 
+            private java.util.List<GrayVersions> grayVersions; 
             private String group; 
             private String md5; 
             private String tags; 
             private String type; 
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -278,7 +423,10 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The list of IP addresses where the beta release of the configuration is performed.
+             * <p>The list of IP addresses where the beta release of the configuration is performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.XX.XX,2.2.XX.XX</p>
              */
             public Builder betaIps(String betaIps) {
                 this.betaIps = betaIps;
@@ -286,7 +434,10 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the configuration.
+             * <p>The content of the configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>log.level=error</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -294,7 +445,10 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the configuration.
+             * <p>The ID of the configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>log.yaml</p>
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -302,7 +456,10 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the configuration.
+             * <p>The description of the configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>For testing</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -310,7 +467,10 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The encryption key.
+             * <p>The encryption key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder encryptedDataKey(String encryptedDataKey) {
                 this.encryptedDataKey = encryptedDataKey;
@@ -318,7 +478,18 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the configuration group.
+             * GrayVersions.
+             */
+            public Builder grayVersions(java.util.List<GrayVersions> grayVersions) {
+                this.grayVersions = grayVersions;
+                return this;
+            }
+
+            /**
+             * <p>The name of the configuration group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder group(String group) {
                 this.group = group;
@@ -326,7 +497,10 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The message digest of the configuration.
+             * <p>The message digest of the configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123rfsdf3</p>
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
@@ -334,7 +508,10 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the configuration.
+             * <p>The tags of the configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>context</p>
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -342,7 +519,10 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The format of the configuration.
+             * <p>The format of the configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder type(String type) {
                 this.type = type;

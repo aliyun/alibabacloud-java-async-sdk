@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLogMonitorAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLogMonitorAttributeResponseBody</p>
  */
 public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("LogMonitor")
+    @com.aliyun.core.annotation.NameInMap("LogMonitor")
     private LogMonitor logMonitor;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeLogMonitorAttributeResponseBody(Builder builder) {
@@ -86,10 +86,13 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the call was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -97,7 +100,7 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the log monitoring metric.
+         * <p>The details of the log monitoring metric.</p>
          */
         public Builder logMonitor(LogMonitor logMonitor) {
             this.logMonitor = logMonitor;
@@ -105,7 +108,10 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message. If the call was successful, the value success is returned. If the call failed, an error message is returned.
+         * <p>The returned message. If the call was successful, the value success is returned. If the call failed, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +119,10 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C6718537-E673-4A58-8EE1-24B8B38C7AAE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,11 +130,14 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,20 +150,26 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLogMonitorAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLogMonitorAttributeResponseBody</p>
+     */
     public static class Aggregates extends TeaModel {
-        @NameInMap("Alias")
+        @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
 
-        @NameInMap("FieldName")
+        @com.aliyun.core.annotation.NameInMap("FieldName")
         private String fieldName;
 
-        @NameInMap("Function")
+        @com.aliyun.core.annotation.NameInMap("Function")
         private String function;
 
-        @NameInMap("Max")
+        @com.aliyun.core.annotation.NameInMap("Max")
         private String max;
 
-        @NameInMap("Min")
+        @com.aliyun.core.annotation.NameInMap("Min")
         private String min;
 
         private Aggregates(Builder builder) {
@@ -213,7 +231,10 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
             private String min; 
 
             /**
-             * The alias of the aggregate function.
+             * <p>The alias of the aggregate function.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HostName</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -221,7 +242,10 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the field in logs.
+             * <p>The name of the field in logs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hostName</p>
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
@@ -229,17 +253,20 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The function that is used to aggregate the monitoring data of logs within an aggregation period. Valid values:
-             * <p>
+             * <p>The function that is used to aggregate the monitoring data of logs within an aggregation period. Valid values:</p>
+             * <ul>
+             * <li>count: counts the number.</li>
+             * <li>sum: calculates the total value.</li>
+             * <li>avg: calculates the average value.</li>
+             * <li>max: selects the maximum value.</li>
+             * <li>min: selects the minimum value.</li>
+             * <li>countps: calculates the counted number of the specified field divided by the total number of seconds of the aggregation period.</li>
+             * <li>sumps: calculates the total value of the specified field divided by the total number of seconds of the aggregation period.</li>
+             * <li>distinct: counts the number of logs where the specified field appears within the aggregation period.</li>
+             * </ul>
              * 
-             * *   count: counts the number.
-             * *   sum: calculates the total value.
-             * *   avg: calculates the average value.
-             * *   max: selects the maximum value.
-             * *   min: selects the minimum value.
-             * *   countps: calculates the counted number of the specified field divided by the total number of seconds of the aggregation period.
-             * *   sumps: calculates the total value of the specified field divided by the total number of seconds of the aggregation period.
-             * *   distinct: counts the number of logs where the specified field appears within the aggregation period.
+             * <strong>example:</strong>
+             * <p>count</p>
              */
             public Builder function(String function) {
                 this.function = function;
@@ -247,7 +274,10 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum value.
+             * <p>The maximum value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder max(String max) {
                 this.max = max;
@@ -255,7 +285,10 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum value.
+             * <p>The minimum value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder min(String min) {
                 this.min = min;
@@ -269,14 +302,20 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLogMonitorAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLogMonitorAttributeResponseBody</p>
+     */
     public static class ValueFilter extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private ValueFilter(Builder builder) {
@@ -320,7 +359,10 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The name of the log field used for matching in the filter condition.
+             * <p>The name of the log field used for matching in the filter condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hostName</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -328,15 +370,18 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The method that is used to match the field value. Valid values:
-             * <p>
+             * <p>The method that is used to match the field value. Valid values:</p>
+             * <ul>
+             * <li><code>contain</code></li>
+             * <li><code>notContain</code></li>
+             * <li><code>&gt;</code>: greater than</li>
+             * <li><code>&lt;</code>: less than</li>
+             * <li><code>&gt;=</code>: greater than or equal to</li>
+             * <li><code>&lt;=</code>: less than or equal to</li>
+             * </ul>
              * 
-             * *   `contain`
-             * *   `notContain`
-             * *   `>`: greater than
-             * *   `<`: less than
-             * *   `>=`: greater than or equal to
-             * *   `<=`: less than or equal to
+             * <strong>example:</strong>
+             * <p>contain</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -344,7 +389,10 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The field value to be matched in the filter condition.
+             * <p>The field value to be matched in the filter condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>portal</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -358,44 +406,50 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLogMonitorAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLogMonitorAttributeResponseBody</p>
+     */
     public static class LogMonitor extends TeaModel {
-        @NameInMap("Aggregates")
+        @com.aliyun.core.annotation.NameInMap("Aggregates")
         private java.util.List < Aggregates> aggregates;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private Long groupId;
 
-        @NameInMap("Groupbys")
+        @com.aliyun.core.annotation.NameInMap("Groupbys")
         private java.util.List < String > groupbys;
 
-        @NameInMap("LogId")
+        @com.aliyun.core.annotation.NameInMap("LogId")
         private Long logId;
 
-        @NameInMap("MetricExpress")
+        @com.aliyun.core.annotation.NameInMap("MetricExpress")
         private String metricExpress;
 
-        @NameInMap("MetricName")
+        @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
 
-        @NameInMap("SlsLogstore")
+        @com.aliyun.core.annotation.NameInMap("SlsLogstore")
         private String slsLogstore;
 
-        @NameInMap("SlsProject")
+        @com.aliyun.core.annotation.NameInMap("SlsProject")
         private String slsProject;
 
-        @NameInMap("SlsRegionId")
+        @com.aliyun.core.annotation.NameInMap("SlsRegionId")
         private String slsRegionId;
 
-        @NameInMap("Tumblingwindows")
+        @com.aliyun.core.annotation.NameInMap("Tumblingwindows")
         private java.util.List < String > tumblingwindows;
 
-        @NameInMap("ValueFilter")
+        @com.aliyun.core.annotation.NameInMap("ValueFilter")
         private java.util.List < ValueFilter> valueFilter;
 
-        @NameInMap("ValueFilterRelation")
+        @com.aliyun.core.annotation.NameInMap("ValueFilterRelation")
         private String valueFilterRelation;
 
         private LogMonitor(Builder builder) {
@@ -529,7 +583,7 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
             private String valueFilterRelation; 
 
             /**
-             * The aggregate functions.
+             * <p>The aggregate functions.</p>
              */
             public Builder aggregates(java.util.List < Aggregates> aggregates) {
                 this.aggregates = aggregates;
@@ -537,10 +591,11 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the log monitoring metric was created.
-             * <p>
+             * <p>The time when the log monitoring metric was created.</p>
+             * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
              * 
-             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * <strong>example:</strong>
+             * <p>1547431398000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -548,7 +603,10 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application group.
+             * <p>The ID of the application group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -556,7 +614,7 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The dimension based on which the data is grouped. This parameter is equivalent to the GROUP BY clause in SQL statements. If no dimension is specified, all data is aggregated based on the aggregate function.
+             * <p>The dimension based on which the data is grouped. This parameter is equivalent to the GROUP BY clause in SQL statements. If no dimension is specified, all data is aggregated based on the aggregate function.</p>
              */
             public Builder groupbys(java.util.List < String > groupbys) {
                 this.groupbys = groupbys;
@@ -564,7 +622,10 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID returned by Log Service.
+             * <p>The ID returned by Log Service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder logId(Long logId) {
                 this.logId = logId;
@@ -572,10 +633,11 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The extended field. The extended field allows you to perform basic operations on the aggregation results.
-             * <p>
+             * <p>The extended field. The extended field allows you to perform basic operations on the aggregation results.</p>
+             * <p>Assume that you have calculated TotalNumber and 5XXNumber by aggregating the data. TotalNumber indicates the total number of HTTP requests, and 5XXNumber indicates the number of HTTP requests whose status code is greater than 499. You can calculate the server error rate by adding the following formula to the extended field: 5XXNumber/TotalNumber*100.</p>
              * 
-             * Assume that you have calculated TotalNumber and 5XXNumber by aggregating the data. TotalNumber indicates the total number of HTTP requests, and 5XXNumber indicates the number of HTTP requests whose status code is greater than 499. You can calculate the server error rate by adding the following formula to the extended field: 5XXNumber/TotalNumber\*100.
+             * <strong>example:</strong>
+             * <p>{&quot;extend&quot;:{&quot;errorPercent&quot;:&quot;5XXNumber/TotalNumber*100&quot;}}</p>
              */
             public Builder metricExpress(String metricExpress) {
                 this.metricExpress = metricExpress;
@@ -583,7 +645,10 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the log monitoring metric. For more information, see [Appendix 1: Metrics](~~163515~~).
+             * <p>The name of the log monitoring metric. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cpu_total</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -591,7 +656,10 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Log Service Logstore.
+             * <p>The name of the Log Service Logstore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-logstore</p>
              */
             public Builder slsLogstore(String slsLogstore) {
                 this.slsLogstore = slsLogstore;
@@ -599,7 +667,10 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Log Service project.
+             * <p>The name of the Log Service project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-project</p>
              */
             public Builder slsProject(String slsProject) {
                 this.slsProject = slsProject;
@@ -607,7 +678,10 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the Log Service Logstore resides.
+             * <p>The ID of the region where the Log Service Logstore resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder slsRegionId(String slsRegionId) {
                 this.slsRegionId = slsRegionId;
@@ -615,7 +689,7 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the tumbling window for calculation. Unit: seconds. The system performs an aggregation for each tumbling window.
+             * <p>The size of the tumbling window for calculation. Unit: seconds. The system performs an aggregation for each tumbling window.</p>
              */
             public Builder tumblingwindows(java.util.List < String > tumblingwindows) {
                 this.tumblingwindows = tumblingwindows;
@@ -623,10 +697,8 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The condition that is used to filter logs. The ValueFilter and ValueFilterRelation parameters are used in pair. The filter condition is equivalent to the WHERE clause in SQL statements.
-             * <p>
-             * 
-             * If no filter condition is specified, all logs are processed. Assume that logs contain the Level field, which may be set to Error. If you need to calculate the number of times that logs of the Error level appear every minute, you can set the filter condition to Level=Error and count the number of logs that meet this condition.
+             * <p>The condition that is used to filter logs. The ValueFilter and ValueFilterRelation parameters are used in pair. The filter condition is equivalent to the WHERE clause in SQL statements.</p>
+             * <p>If no filter condition is specified, all logs are processed. Assume that logs contain the Level field, which may be set to Error. If you need to calculate the number of times that logs of the Error level appear every minute, you can set the filter condition to Level=Error and count the number of logs that meet this condition.</p>
              */
             public Builder valueFilter(java.util.List < ValueFilter> valueFilter) {
                 this.valueFilter = valueFilter;
@@ -634,11 +706,14 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The logical operator that is used between log filter conditions. The ValueFilter and ValueFilterRelation parameters are used in pair. Valid values:
-             * <p>
+             * <p>The logical operator that is used between log filter conditions. The ValueFilter and ValueFilterRelation parameters are used in pair. Valid values:</p>
+             * <ul>
+             * <li>and</li>
+             * <li>or</li>
+             * </ul>
              * 
-             * *   and
-             * *   or
+             * <strong>example:</strong>
+             * <p>and</p>
              */
             public Builder valueFilterRelation(String valueFilterRelation) {
                 this.valueFilterRelation = valueFilterRelation;

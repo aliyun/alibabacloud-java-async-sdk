@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetClusterCheckItemWarningStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>GetClusterCheckItemWarningStatisticsResponseBody</p>
  */
 public class GetClusterCheckItemWarningStatisticsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetClusterCheckItemWarningStatisticsResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetClusterCheckItemWarningStatisticsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The statistics on risk items by risk level.
+         * <p>The statistics on risk items by risk level.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class GetClusterCheckItemWarningStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C2B285A3-3493-5C5F-A224-4CCE4BFC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class GetClusterCheckItemWarningStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetClusterCheckItemWarningStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterCheckItemWarningStatisticsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("HighWarningCount")
+        @com.aliyun.core.annotation.NameInMap("HighWarningCount")
         private Integer highWarningCount;
 
-        @NameInMap("LowWarningCount")
+        @com.aliyun.core.annotation.NameInMap("LowWarningCount")
         private Integer lowWarningCount;
 
-        @NameInMap("MediumWarningCount")
+        @com.aliyun.core.annotation.NameInMap("MediumWarningCount")
         private Integer mediumWarningCount;
 
         private Data(Builder builder) {
@@ -122,7 +136,10 @@ public class GetClusterCheckItemWarningStatisticsResponseBody extends TeaModel {
             private Integer mediumWarningCount; 
 
             /**
-             * The number of high-risk items.
+             * <p>The number of high-risk items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder highWarningCount(Integer highWarningCount) {
                 this.highWarningCount = highWarningCount;
@@ -130,7 +147,10 @@ public class GetClusterCheckItemWarningStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of low-risk items.
+             * <p>The number of low-risk items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder lowWarningCount(Integer lowWarningCount) {
                 this.lowWarningCount = lowWarningCount;
@@ -138,7 +158,10 @@ public class GetClusterCheckItemWarningStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of medium-risk items.
+             * <p>The number of medium-risk items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder mediumWarningCount(Integer mediumWarningCount) {
                 this.mediumWarningCount = mediumWarningCount;

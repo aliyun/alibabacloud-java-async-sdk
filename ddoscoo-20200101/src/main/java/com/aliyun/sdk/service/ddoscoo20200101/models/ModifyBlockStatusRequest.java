@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyBlockStatusRequest} extends {@link RequestModel}
  *
  * <p>ModifyBlockStatusRequest</p>
  */
 public class ModifyBlockStatusRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Duration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Duration")
     private Integer duration;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Lines")
-    @Validation(required = true)
-    private java.util.List < String > lines;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lines")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> lines;
 
-    @Query
-    @NameInMap("Status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String status;
 
     private ModifyBlockStatusRequest(Builder builder) {
@@ -81,7 +86,7 @@ public class ModifyBlockStatusRequest extends Request {
     /**
      * @return lines
      */
-    public java.util.List < String > getLines() {
+    public java.util.List<String> getLines() {
         return this.lines;
     }
 
@@ -96,7 +101,7 @@ public class ModifyBlockStatusRequest extends Request {
         private String regionId; 
         private Integer duration; 
         private String instanceId; 
-        private java.util.List < String > lines; 
+        private java.util.List<String> lines; 
         private String status; 
 
         private Builder() {
@@ -122,10 +127,13 @@ public class ModifyBlockStatusRequest extends Request {
         }
 
         /**
-         * The blocking period. Valid values: **15** to **43200**. Unit: minutes.
-         * <p>
+         * <p>The blocking period. Valid values: <strong>15</strong> to <strong>43200</strong>. Unit: minutes.</p>
+         * <blockquote>
+         * <p>If you set <strong>Status</strong> to <strong>do</strong>, you must also specify this parameter.</p>
+         * </blockquote>
          * 
-         * > If you set **Status** to **do**, you must also specify this parameter.
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -134,10 +142,14 @@ public class ModifyBlockStatusRequest extends Request {
         }
 
         /**
-         * The ID of the Anti-DDoS Pro instance to manage.
-         * <p>
+         * <p>The ID of the Anti-DDoS Proxy (Chinese Mainland) instance to manage.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all Anti-DDoS Proxy instances.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-mp91j1ao****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -146,20 +158,28 @@ public class ModifyBlockStatusRequest extends Request {
         }
 
         /**
-         * An array consisting of the Internet service provider (ISP) lines from which traffic is blocked.
+         * <p>An array consisting of the Internet service provider (ISP) lines from which traffic is blocked.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ct</p>
          */
-        public Builder lines(java.util.List < String > lines) {
+        public Builder lines(java.util.List<String> lines) {
             this.putQueryParameter("Lines", lines);
             this.lines = lines;
             return this;
         }
 
         /**
-         * Specifies the status of the Diversion from Origin Server policy. Valid values:
-         * <p>
+         * <p>Specifies the status of the Diversion from Origin Server policy. Valid values:</p>
+         * <ul>
+         * <li><strong>do</strong>: enables the policy.</li>
+         * <li><strong>undo</strong>: disables the policy.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **do**: enables the policy.
-         * *   **undo**: disables the policy.
+         * <strong>example:</strong>
+         * <p>do</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

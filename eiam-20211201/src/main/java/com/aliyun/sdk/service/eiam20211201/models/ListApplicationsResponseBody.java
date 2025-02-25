@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListApplicationsResponseBody} extends {@link TeaModel}
  *
  * <p>ListApplicationsResponseBody</p>
  */
 public class ListApplicationsResponseBody extends TeaModel {
-    @NameInMap("Applications")
-    private java.util.List < Applications> applications;
+    @com.aliyun.core.annotation.NameInMap("Applications")
+    private java.util.List<Applications> applications;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListApplicationsResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ListApplicationsResponseBody extends TeaModel {
     /**
      * @return applications
      */
-    public java.util.List < Applications> getApplications() {
+    public java.util.List<Applications> getApplications() {
         return this.applications;
     }
 
@@ -57,20 +62,23 @@ public class ListApplicationsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Applications> applications; 
+        private java.util.List<Applications> applications; 
         private String requestId; 
         private Long totalCount; 
 
         /**
-         * The details of the applications.
+         * <p>The details of the applications.</p>
          */
-        public Builder applications(java.util.List < Applications> applications) {
+        public Builder applications(java.util.List<Applications> applications) {
             this.applications = applications;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of the returned entries.
+         * <p>The total number of the returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -91,60 +102,82 @@ public class ListApplicationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListApplicationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationsResponseBody</p>
+     */
     public static class Applications extends TeaModel {
-        @NameInMap("ApplicationId")
+        @com.aliyun.core.annotation.NameInMap("ApplicationId")
         private String applicationId;
 
-        @NameInMap("ApplicationName")
+        @com.aliyun.core.annotation.NameInMap("ApplicationName")
         private String applicationName;
 
-        @NameInMap("ApplicationSourceType")
+        @com.aliyun.core.annotation.NameInMap("ApplicationSourceType")
         private String applicationSourceType;
 
-        @NameInMap("ClientId")
+        @com.aliyun.core.annotation.NameInMap("ApplicationTemplateId")
+        private String applicationTemplateId;
+
+        @com.aliyun.core.annotation.NameInMap("ClientId")
         private String clientId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Features")
+        @com.aliyun.core.annotation.NameInMap("Features")
         private String features;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("LogoUrl")
+        @com.aliyun.core.annotation.NameInMap("LogoUrl")
         private String logoUrl;
 
-        @NameInMap("ManagedServiceCode")
+        @com.aliyun.core.annotation.NameInMap("M2MClientStatus")
+        private String m2MClientStatus;
+
+        @com.aliyun.core.annotation.NameInMap("ManagedServiceCode")
         private String managedServiceCode;
 
-        @NameInMap("ServiceManaged")
+        @com.aliyun.core.annotation.NameInMap("ResourceServerIdentifier")
+        private String resourceServerIdentifier;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceServerStatus")
+        private String resourceServerStatus;
+
+        @com.aliyun.core.annotation.NameInMap("ServiceManaged")
         private Boolean serviceManaged;
 
-        @NameInMap("SsoType")
+        @com.aliyun.core.annotation.NameInMap("SsoType")
         private String ssoType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private Applications(Builder builder) {
             this.applicationId = builder.applicationId;
             this.applicationName = builder.applicationName;
             this.applicationSourceType = builder.applicationSourceType;
+            this.applicationTemplateId = builder.applicationTemplateId;
             this.clientId = builder.clientId;
             this.createTime = builder.createTime;
             this.description = builder.description;
             this.features = builder.features;
             this.instanceId = builder.instanceId;
             this.logoUrl = builder.logoUrl;
+            this.m2MClientStatus = builder.m2MClientStatus;
             this.managedServiceCode = builder.managedServiceCode;
+            this.resourceServerIdentifier = builder.resourceServerIdentifier;
+            this.resourceServerStatus = builder.resourceServerStatus;
             this.serviceManaged = builder.serviceManaged;
             this.ssoType = builder.ssoType;
             this.status = builder.status;
@@ -178,6 +211,13 @@ public class ListApplicationsResponseBody extends TeaModel {
          */
         public String getApplicationSourceType() {
             return this.applicationSourceType;
+        }
+
+        /**
+         * @return applicationTemplateId
+         */
+        public String getApplicationTemplateId() {
+            return this.applicationTemplateId;
         }
 
         /**
@@ -223,10 +263,31 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return m2MClientStatus
+         */
+        public String getM2MClientStatus() {
+            return this.m2MClientStatus;
+        }
+
+        /**
          * @return managedServiceCode
          */
         public String getManagedServiceCode() {
             return this.managedServiceCode;
+        }
+
+        /**
+         * @return resourceServerIdentifier
+         */
+        public String getResourceServerIdentifier() {
+            return this.resourceServerIdentifier;
+        }
+
+        /**
+         * @return resourceServerStatus
+         */
+        public String getResourceServerStatus() {
+            return this.resourceServerStatus;
         }
 
         /**
@@ -261,20 +322,27 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String applicationId; 
             private String applicationName; 
             private String applicationSourceType; 
+            private String applicationTemplateId; 
             private String clientId; 
             private Long createTime; 
             private String description; 
             private String features; 
             private String instanceId; 
             private String logoUrl; 
+            private String m2MClientStatus; 
             private String managedServiceCode; 
+            private String resourceServerIdentifier; 
+            private String resourceServerStatus; 
             private Boolean serviceManaged; 
             private String ssoType; 
             private String status; 
             private Long updateTime; 
 
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -282,7 +350,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SAML Application</p>
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
@@ -290,11 +361,14 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The origin of the application. Valid values:
-             * <p>
+             * <p>The origin of the application. Valid values:</p>
+             * <ul>
+             * <li>urn:alibaba:idaas:app:source:template: The application is created based on a template.</li>
+             * <li>urn:alibaba:idaas: The application is created based on the standard protocol.</li>
+             * </ul>
              * 
-             * *   urn:alibaba:idaas:app:source:template: The application is created based on a template.
-             * *   urn:alibaba:idaas: The application is created based on the standard protocol.
+             * <strong>example:</strong>
+             * <p>urn:alibaba:idaas:app:source:standard</p>
              */
             public Builder applicationSourceType(String applicationSourceType) {
                 this.applicationSourceType = applicationSourceType;
@@ -302,7 +376,18 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The client ID of the application.
+             * <p>应用模板ID</p>
+             */
+            public Builder applicationTemplateId(String applicationTemplateId) {
+                this.applicationTemplateId = applicationTemplateId;
+                return this;
+            }
+
+            /**
+             * <p>The client ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -310,7 +395,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the application was created. The value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The time when the application was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649830226000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -318,7 +406,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the application.
+             * <p>The description of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A single application. The code is pkces.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -326,12 +417,15 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The features that are supported by the application. The value is a JSON array. Valid values:
-             * <p>
+             * <p>The features that are supported by the application. The value is a JSON array. Valid values:</p>
+             * <ul>
+             * <li>sso: The application supports SSO.</li>
+             * <li>provision: The application supports account synchronization.</li>
+             * <li>api_invoke: The application supports custom APIs.</li>
+             * </ul>
              * 
-             * *   sso: The application supports SSO.
-             * *   provision: The application supports account synchronization.
-             * *   api_invoke: The application supports custom APIs.
+             * <strong>example:</strong>
+             * <p>[&quot;sso&quot;, &quot;provision&quot;]</p>
              */
             public Builder features(String features) {
                 this.features = features;
@@ -339,7 +433,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -347,7 +444,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the application icon.
+             * <p>The URL of the application icon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://img.alicdn.com/imgextra/i4/O1CN01lvYwpv1aGowQXDML9_!!6000000003303-0-tps-580-580.jpg">https://img.alicdn.com/imgextra/i4/O1CN01lvYwpv1aGowQXDML9_!!6000000003303-0-tps-580-580.jpg</a></p>
              */
             public Builder logoUrl(String logoUrl) {
                 this.logoUrl = logoUrl;
@@ -355,7 +455,18 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The service code of the cloud service that manages the application template.
+             * M2MClientStatus.
+             */
+            public Builder m2MClientStatus(String m2MClientStatus) {
+                this.m2MClientStatus = m2MClientStatus;
+                return this;
+            }
+
+            /**
+             * <p>The service code of the cloud service that manages the application template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rpa</p>
              */
             public Builder managedServiceCode(String managedServiceCode) {
                 this.managedServiceCode = managedServiceCode;
@@ -363,7 +474,26 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the application template is managed by a cloud service.
+             * ResourceServerIdentifier.
+             */
+            public Builder resourceServerIdentifier(String resourceServerIdentifier) {
+                this.resourceServerIdentifier = resourceServerIdentifier;
+                return this;
+            }
+
+            /**
+             * ResourceServerStatus.
+             */
+            public Builder resourceServerStatus(String resourceServerStatus) {
+                this.resourceServerStatus = resourceServerStatus;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether the application template is managed by a cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder serviceManaged(Boolean serviceManaged) {
                 this.serviceManaged = serviceManaged;
@@ -371,11 +501,14 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the single sign-on (SSO) protocol. Valid values:
-             * <p>
+             * <p>The type of the single sign-on (SSO) protocol. Valid values:</p>
+             * <ul>
+             * <li>saml2: the Security Assertion Markup Language (SAML) 2.0 protocol.</li>
+             * <li>oidc: the OpenID Connect (OIDC) protocol.</li>
+             * </ul>
              * 
-             * *   saml2: the Security Assertion Markup Language (SAML) 2.0 protocol.
-             * *   oidc: the OpenID Connect (OIDC) protocol.
+             * <strong>example:</strong>
+             * <p>saml2</p>
              */
             public Builder ssoType(String ssoType) {
                 this.ssoType = ssoType;
@@ -383,11 +516,14 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the application. Valid values:
-             * <p>
+             * <p>The status of the application. Valid values:</p>
+             * <ul>
+             * <li>Enabled: The application is enabled.</li>
+             * <li>Disabled: The application is disabled.</li>
+             * </ul>
              * 
-             * *   Enabled: The application is enabled.
-             * *   Disabled: The application is disabled.
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -395,7 +531,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the application was last updated. The value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The time when the application was last updated. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649830226000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

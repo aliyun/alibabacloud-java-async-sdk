@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExecuteBackupPlanRequest} extends {@link RequestModel}
  *
  * <p>ExecuteBackupPlanRequest</p>
  */
 public class ExecuteBackupPlanRequest extends Request {
-    @Query
-    @NameInMap("PlanId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlanId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String planId;
 
-    @Query
-    @NameInMap("RuleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
     private String ruleId;
 
-    @Query
-    @NameInMap("SourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceType")
     private String sourceType;
 
-    @Query
-    @NameInMap("VaultId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultId")
     private String vaultId;
 
     private ExecuteBackupPlanRequest(Builder builder) {
@@ -88,16 +93,20 @@ public class ExecuteBackupPlanRequest extends Request {
             super();
         } 
 
-        private Builder(ExecuteBackupPlanRequest response) {
-            super(response);
-            this.planId = response.planId;
-            this.ruleId = response.ruleId;
-            this.sourceType = response.sourceType;
-            this.vaultId = response.vaultId;
+        private Builder(ExecuteBackupPlanRequest request) {
+            super(request);
+            this.planId = request.planId;
+            this.ruleId = request.ruleId;
+            this.sourceType = request.sourceType;
+            this.vaultId = request.vaultId;
         } 
 
         /**
-         * PlanId.
+         * <p>The ID of the backup plan.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>plan-*********************</p>
          */
         public Builder planId(String planId) {
             this.putQueryParameter("PlanId", planId);
@@ -106,7 +115,10 @@ public class ExecuteBackupPlanRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * <p>The ID of the backup rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule-0002*****ux8</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -115,7 +127,15 @@ public class ExecuteBackupPlanRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * <p>The type of the data source. Valid values:</p>
+         * <ul>
+         * <li><strong>ECS_FILE</strong>: Elastic Compute Service (ECS) files</li>
+         * <li><strong>OSS</strong>: Object Storage Service (OSS) buckets</li>
+         * <li><strong>NAS</strong>: Apsara File Storage NAS (NAS) file systems</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS_FILE</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -124,7 +144,10 @@ public class ExecuteBackupPlanRequest extends Request {
         }
 
         /**
-         * VaultId.
+         * <p>The ID of the backup vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v-*********************</p>
          */
         public Builder vaultId(String vaultId) {
             this.putQueryParameter("VaultId", vaultId);

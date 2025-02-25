@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutContactRequest} extends {@link RequestModel}
  *
  * <p>PutContactRequest</p>
  */
 public class PutContactRequest extends Request {
-    @Query
-    @NameInMap("Channels")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Channels")
     private Channels channels;
 
-    @Query
-    @NameInMap("ContactName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String contactName;
 
-    @Query
-    @NameInMap("Describe")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Describe")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String describe;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
     private PutContactRequest(Builder builder) {
@@ -107,7 +107,11 @@ public class PutContactRequest extends Request {
         }
 
         /**
-         * The name of the alert contact.
+         * <p>The name of the alert contact.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         public Builder contactName(String contactName) {
             this.putQueryParameter("ContactName", contactName);
@@ -116,7 +120,11 @@ public class PutContactRequest extends Request {
         }
 
         /**
-         * The description of the alert contact.
+         * <p>The description of the alert contact.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS_Instance</p>
          */
         public Builder describe(String describe) {
             this.putQueryParameter("Describe", describe);
@@ -125,13 +133,17 @@ public class PutContactRequest extends Request {
         }
 
         /**
-         * The language in which the alert information is displayed. Valid values:
-         * <p>
+         * <p>The language in which the alert information is displayed. Valid values:</p>
+         * <ul>
+         * <li>zh-cn: simplified Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you do not specify a value for this parameter, Cloud Monitor identifies the language of the alert information based on the region of your Alibaba Cloud account.</p>
+         * </blockquote>
          * 
-         * *   zh-cn: simplified Chinese
-         * *   en: English
-         * 
-         * >  If you do not specify a value for this parameter, Cloud Monitor identifies the language of the alert information based on the region of your Alibaba Cloud account.
+         * <strong>example:</strong>
+         * <p>zh-cn</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -146,17 +158,23 @@ public class PutContactRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link PutContactRequest} extends {@link TeaModel}
+     *
+     * <p>PutContactRequest</p>
+     */
     public static class Channels extends TeaModel {
-        @NameInMap("AliIM")
+        @com.aliyun.core.annotation.NameInMap("AliIM")
         private String aliIM;
 
-        @NameInMap("DingWebHook")
+        @com.aliyun.core.annotation.NameInMap("DingWebHook")
         private String dingWebHook;
 
-        @NameInMap("Mail")
+        @com.aliyun.core.annotation.NameInMap("Mail")
         private String mail;
 
-        @NameInMap("SMS")
+        @com.aliyun.core.annotation.NameInMap("SMS")
         private String SMS;
 
         private Channels(Builder builder) {
@@ -209,10 +227,11 @@ public class PutContactRequest extends Request {
             private String SMS; 
 
             /**
-             * The TradeManager ID of the alert contact.
-             * <p>
+             * <p>The TradeManager ID of the alert contact.</p>
+             * <p>Specify at least one of the following alert notification targets: email address or webhook URL of the DingTalk chatbot.</p>
              * 
-             * Specify at least one of the following alert notification targets: email address or webhook URL of the DingTalk chatbot.
+             * <strong>example:</strong>
+             * <p>Jim</p>
              */
             public Builder aliIM(String aliIM) {
                 this.aliIM = aliIM;
@@ -220,10 +239,11 @@ public class PutContactRequest extends Request {
             }
 
             /**
-             * The webhook URL of the DingTalk chatbot.
-             * <p>
+             * <p>The webhook URL of the DingTalk chatbot.</p>
+             * <p>Specify at least one of the following alert notification targets: email address or webhook URL of the DingTalk chatbot.</p>
              * 
-             * Specify at least one of the following alert notification targets: email address or webhook URL of the DingTalk chatbot.
+             * <strong>example:</strong>
+             * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=7d49515e8ebf21106a80a9cc4bb3d247771305d52fb15d6201234565">https://oapi.dingtalk.com/robot/send?access_token=7d49515e8ebf21106a80a9cc4bb3d247771305d52fb15d6201234565</a>****</p>
              */
             public Builder dingWebHook(String dingWebHook) {
                 this.dingWebHook = dingWebHook;
@@ -231,10 +251,11 @@ public class PutContactRequest extends Request {
             }
 
             /**
-             * The email address of the alert contact. After you add or modify an email address, the recipient receives an email that contains an activation link. The system adds the recipient to the list of alert contacts only after the recipient activates the email address.
-             * <p>
+             * <p>The email address of the alert contact. After you add or modify an email address, the recipient receives an email that contains an activation link. The system adds the recipient to the list of alert contacts only after the recipient activates the email address.</p>
+             * <p>Specify at least one of the following alert notification targets: email address or webhook URL of the DingTalk chatbot.</p>
              * 
-             * Specify at least one of the following alert notification targets: email address or webhook URL of the DingTalk chatbot.
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@aliyun.com">test@aliyun.com</a></p>
              */
             public Builder mail(String mail) {
                 this.mail = mail;
@@ -242,10 +263,11 @@ public class PutContactRequest extends Request {
             }
 
             /**
-             * The phone number of the alert contact. After you add or modify a phone number, the recipient receives a text message that contains an activation link. The system adds the recipient to the list of alert contacts only after the recipient activates the phone number.
-             * <p>
+             * <p>The phone number of the alert contact. After you add or modify a phone number, the recipient receives a text message that contains an activation link. The system adds the recipient to the list of alert contacts only after the recipient activates the phone number.</p>
+             * <p>Specify at least one of the following alert notification targets: email address or webhook URL of the DingTalk chatbot.</p>
              * 
-             * Specify at least one of the following alert notification targets: email address or webhook URL of the DingTalk chatbot.
+             * <strong>example:</strong>
+             * <p>1333333****</p>
              */
             public Builder SMS(String SMS) {
                 this.SMS = SMS;

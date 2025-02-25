@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateKillInstanceSessionTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateKillInstanceSessionTaskResponseBody</p>
  */
 public class CreateKillInstanceSessionTaskResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateKillInstanceSessionTaskResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class CreateKillInstanceSessionTaskResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -94,10 +102,13 @@ public class CreateKillInstanceSessionTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task that terminated the sessions.
-         * <p>
+         * <p>The ID of the task that terminated the sessions.</p>
+         * <blockquote>
+         * <p> If the sessions of a PolarDB for MySQL cluster were terminated, <strong>NodeId</strong> is left empty, and <strong>KillAllSessions</strong> is set to <strong>true</strong>, the task IDs are returned based on the number of nodes. Example: [&quot;f77d535b45405bd462b21caa3ee8****&quot;, &quot;e93ab549abb081eb5dcd5396a29b****&quot;].</p>
+         * </blockquote>
          * 
-         * >  If the sessions of a PolarDB for MySQL cluster were terminated, **NodeId** is left empty, and **KillAllSessions** is set to **true**, the task IDs are returned based on the number of nodes. Example: \["f77d535b45405bd462b21caa3ee8\*\*\*\*", "e93ab549abb081eb5dcd5396a29b\*\*\*\*"].
+         * <strong>example:</strong>
+         * <p>f77d535b45405bd462b21caa3ee8****</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -105,10 +116,13 @@ public class CreateKillInstanceSessionTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -116,7 +130,10 @@ public class CreateKillInstanceSessionTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -124,11 +141,14 @@ public class CreateKillInstanceSessionTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

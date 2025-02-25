@@ -98,7 +98,7 @@ public class ListEnvsRequest extends Request {
         } 
 
         /**
-         * 环境ID
+         * EnvId.
          */
         public Builder envId(String envId) {
             this.putQueryParameter("EnvId", envId);
@@ -107,7 +107,7 @@ public class ListEnvsRequest extends Request {
         }
 
         /**
-         * 环境名
+         * EnvName.
          */
         public Builder envName(String envName) {
             this.putQueryParameter("EnvName", envName);

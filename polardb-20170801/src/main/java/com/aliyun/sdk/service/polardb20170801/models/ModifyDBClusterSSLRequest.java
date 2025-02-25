@@ -1,52 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBClusterSSLRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBClusterSSLRequest</p>
  */
 public class ModifyDBClusterSSLRequest extends Request {
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("DBEndpointId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBEndpointId")
     private String DBEndpointId;
 
-    @Query
-    @NameInMap("NetType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetType")
     private String netType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SSLAutoRotate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SSLAutoRotate")
     private String SSLAutoRotate;
 
-    @Query
-    @NameInMap("SSLEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SSLEnabled")
     private String SSLEnabled;
 
     private ModifyDBClusterSSLRequest(Builder builder) {
@@ -167,7 +172,11 @@ public class ModifyDBClusterSSLRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -176,15 +185,20 @@ public class ModifyDBClusterSSLRequest extends Request {
         }
 
         /**
-         * The ID of the endpoint.
-         * <p>
+         * <p>The ID of the endpoint.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter is required for PolarDB for MySQL clusters.</p>
+         * </li>
+         * <li><p>This parameter is not required for PolarDB for PostgreSQL or PolarDB for PostgreSQL (Compatible with Oracle) clusters. By default, SSL encryption is enabled for all endpoints of the clusters.</p>
+         * </li>
+         * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/2319159.html">DescribeDBClusterSSL</a> operation to view the details of the endpoint.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   This parameter is required for a PolarDB for MySQL cluster.
-         * 
-         * *   This parameter is not required for a PolarDB for Oracle or PolarDB for PostgreSQL cluster. By default, SSL encryption is enabled for all endpoints.
-         * *   You can call the [DescribeDBClusterSSL](~~153414~~) operation to view the details of the endpoint.
+         * <strong>example:</strong>
+         * <p>pe-******************</p>
          */
         public Builder DBEndpointId(String DBEndpointId) {
             this.putQueryParameter("DBEndpointId", DBEndpointId);
@@ -193,18 +207,23 @@ public class ModifyDBClusterSSLRequest extends Request {
         }
 
         /**
-         * The network type supported by the endpoint that is specified by **DBEndpointId**. Valid values:
-         * <p>
+         * <p>The network type supported by the endpoint that is specified by <strong>DBEndpointId</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>Public</strong></li>
+         * <li><strong>Private</strong></li>
+         * <li><strong>Inner</strong></li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter is required for a PolarDB for MySQL cluster.</p>
+         * </li>
+         * <li><p>This parameter is not required for a PolarDB for Oracle or PolarDB for PostgreSQL cluster. By default, SSL encryption is enabled for all endpoints.</p>
+         * </li>
+         * </ul>
          * 
-         * *   **Public**
-         * *   **Private**
-         * *   **Inner**
-         * 
-         * > 
-         * 
-         * *   This parameter is required for a PolarDB for MySQL cluster.
-         * 
-         * *   This parameter is not required for a PolarDB for Oracle or PolarDB for PostgreSQL cluster. By default, SSL encryption is enabled for all endpoints.
+         * <strong>example:</strong>
+         * <p>Public</p>
          */
         public Builder netType(String netType) {
             this.putQueryParameter("NetType", netType);
@@ -249,11 +268,14 @@ public class ModifyDBClusterSSLRequest extends Request {
         }
 
         /**
-         * Specifies whether automatic rotation of SSL certificates is enabled.
-         * <p>
+         * <p>Specifies whether automatic rotation of SSL certificates is enabled.</p>
+         * <ul>
+         * <li><strong>Enable</strong>: The feature is enabled.</li>
+         * <li><strong>Disable</strong>: The feature is disabled.</li>
+         * </ul>
          * 
-         * *   **Enable**: The feature is enabled.
-         * *   **Disable**: The feature is disabled.
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         public Builder SSLAutoRotate(String SSLAutoRotate) {
             this.putQueryParameter("SSLAutoRotate", SSLAutoRotate);
@@ -262,14 +284,18 @@ public class ModifyDBClusterSSLRequest extends Request {
         }
 
         /**
-         * The SSL encryption status. Valid values:
-         * <p>
+         * <p>The SSL encryption status. Valid values:</p>
+         * <ul>
+         * <li><strong>Disable</strong>: SSL encryption is disabled.</li>
+         * <li><strong>Enable</strong>: SSL encryption is enabled.</li>
+         * <li><strong>Update</strong>: The SSL certificate is updated.</li>
+         * </ul>
+         * <blockquote>
+         * <p>After you enable SSL encryption or update the SSL certificate, you must download and configure the certificate. For more information, see <a href="https://help.aliyun.com/document_detail/153182.html">Configure SSL encryption</a>.</p>
+         * </blockquote>
          * 
-         * *   **Disable**: SSL encryption is disabled.
-         * *   **Enable**: SSL encryption is enabled.
-         * *   **Update**: The SSL certificate is updated.
-         * 
-         * > After you enable SSL encryption or update the SSL certificate, you must download and configure the certificate. For more information, see [Configure SSL encryption](~~153182~~).
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         public Builder SSLEnabled(String SSLEnabled) {
             this.putQueryParameter("SSLEnabled", SSLEnabled);

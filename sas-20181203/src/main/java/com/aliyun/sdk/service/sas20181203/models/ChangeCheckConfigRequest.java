@@ -1,68 +1,77 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeCheckConfigRequest} extends {@link RequestModel}
  *
  * <p>ChangeCheckConfigRequest</p>
  */
 public class ChangeCheckConfigRequest extends Request {
-    @Query
-    @NameInMap("AddedCheck")
-    private java.util.List < AddedCheck> addedCheck;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddedCheck")
+    private java.util.List<AddedCheck> addedCheck;
 
-    @Query
-    @NameInMap("ConfigRequirementIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigRequirementIds")
     private ConfigRequirementIds configRequirementIds;
 
-    @Query
-    @NameInMap("ConfigStandardIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigStandardIds")
     private ConfigStandardIds configStandardIds;
 
-    @Query
-    @NameInMap("Configure")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Configure")
     private String configure;
 
-    @Query
-    @NameInMap("CycleDays")
-    private java.util.List < Integer > cycleDays;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CycleDays")
+    private java.util.List<Integer> cycleDays;
 
-    @Query
-    @NameInMap("EnableAddCheck")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableAddCheck")
     private Boolean enableAddCheck;
 
-    @Query
-    @NameInMap("EnableAutoCheck")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableAutoCheck")
     private Boolean enableAutoCheck;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Integer endTime;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("RemovedCheck")
-    private java.util.List < RemovedCheck> removedCheck;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RemovedCheck")
+    private java.util.List<RemovedCheck> removedCheck;
 
-    @Query
-    @NameInMap("StandardIds")
-    private java.util.List < Long > standardIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StandardIds")
+    private java.util.List<Long> standardIds;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Integer startTime;
 
-    @Query
-    @NameInMap("Vendors")
-    private java.util.List < String > vendors;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SystemConfig")
+    private Boolean systemConfig;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Vendors")
+    private java.util.List<String> vendors;
 
     private ChangeCheckConfigRequest(Builder builder) {
         super(builder);
@@ -78,6 +87,7 @@ public class ChangeCheckConfigRequest extends Request {
         this.removedCheck = builder.removedCheck;
         this.standardIds = builder.standardIds;
         this.startTime = builder.startTime;
+        this.systemConfig = builder.systemConfig;
         this.vendors = builder.vendors;
     }
 
@@ -97,7 +107,7 @@ public class ChangeCheckConfigRequest extends Request {
     /**
      * @return addedCheck
      */
-    public java.util.List < AddedCheck> getAddedCheck() {
+    public java.util.List<AddedCheck> getAddedCheck() {
         return this.addedCheck;
     }
 
@@ -125,7 +135,7 @@ public class ChangeCheckConfigRequest extends Request {
     /**
      * @return cycleDays
      */
-    public java.util.List < Integer > getCycleDays() {
+    public java.util.List<Integer> getCycleDays() {
         return this.cycleDays;
     }
 
@@ -160,14 +170,14 @@ public class ChangeCheckConfigRequest extends Request {
     /**
      * @return removedCheck
      */
-    public java.util.List < RemovedCheck> getRemovedCheck() {
+    public java.util.List<RemovedCheck> getRemovedCheck() {
         return this.removedCheck;
     }
 
     /**
      * @return standardIds
      */
-    public java.util.List < Long > getStandardIds() {
+    public java.util.List<Long> getStandardIds() {
         return this.standardIds;
     }
 
@@ -179,26 +189,34 @@ public class ChangeCheckConfigRequest extends Request {
     }
 
     /**
+     * @return systemConfig
+     */
+    public Boolean getSystemConfig() {
+        return this.systemConfig;
+    }
+
+    /**
      * @return vendors
      */
-    public java.util.List < String > getVendors() {
+    public java.util.List<String> getVendors() {
         return this.vendors;
     }
 
     public static final class Builder extends Request.Builder<ChangeCheckConfigRequest, Builder> {
-        private java.util.List < AddedCheck> addedCheck; 
+        private java.util.List<AddedCheck> addedCheck; 
         private ConfigRequirementIds configRequirementIds; 
         private ConfigStandardIds configStandardIds; 
         private String configure; 
-        private java.util.List < Integer > cycleDays; 
+        private java.util.List<Integer> cycleDays; 
         private Boolean enableAddCheck; 
         private Boolean enableAutoCheck; 
         private Integer endTime; 
         private String regionId; 
-        private java.util.List < RemovedCheck> removedCheck; 
-        private java.util.List < Long > standardIds; 
+        private java.util.List<RemovedCheck> removedCheck; 
+        private java.util.List<Long> standardIds; 
         private Integer startTime; 
-        private java.util.List < String > vendors; 
+        private Boolean systemConfig; 
+        private java.util.List<String> vendors; 
 
         private Builder() {
             super();
@@ -218,26 +236,27 @@ public class ChangeCheckConfigRequest extends Request {
             this.removedCheck = request.removedCheck;
             this.standardIds = request.standardIds;
             this.startTime = request.startTime;
+            this.systemConfig = request.systemConfig;
             this.vendors = request.vendors;
         } 
 
         /**
-         * The list of check items that you want to add to the policy.
-         * <p>
-         * 
-         * >  If the ConfigStandardIds or ConfigRequirementIds parameter is configured, this parameter does not take effect.
+         * <p>The list of check items that you want to add to the policy.</p>
+         * <blockquote>
+         * <p> If the ConfigStandardIds or ConfigRequirementIds parameter is configured, this parameter does not take effect.</p>
+         * </blockquote>
          */
-        public Builder addedCheck(java.util.List < AddedCheck> addedCheck) {
+        public Builder addedCheck(java.util.List<AddedCheck> addedCheck) {
             this.putQueryParameter("AddedCheck", addedCheck);
             this.addedCheck = addedCheck;
             return this;
         }
 
         /**
-         * The requirement IDs that you want to specify for the check policy.
-         * <p>
-         * 
-         * >  You can call the [ListCheckResult](~~ListCheckResult~~) operation to obtain the requirement ID. If the ConfigStandardIds parameter is configured, this parameter does not take effect.
+         * <p>The requirement IDs that you want to specify for the check policy.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain the requirement ID. If the ConfigStandardIds parameter is configured, this parameter does not take effect.</p>
+         * </blockquote>
          */
         public Builder configRequirementIds(ConfigRequirementIds configRequirementIds) {
             String configRequirementIdsShrink = shrink(configRequirementIds, "ConfigRequirementIds", "json");
@@ -247,10 +266,10 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * The standard IDs that you want to specify for the check policy.
-         * <p>
-         * 
-         * >  You can call the [ListCheckResult](~~ListCheckResult~~) operation to obtain the standard ID.
+         * <p>The standard IDs that you want to specify for the check policy.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain the standard ID.</p>
+         * </blockquote>
          */
         public Builder configStandardIds(ConfigStandardIds configStandardIds) {
             String configStandardIdsShrink = shrink(configStandardIds, "ConfigStandardIds", "json");
@@ -260,9 +279,13 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * The configuration of the check item. Valid values:
-         * <p>
-         * - **all**
+         * <p>The configuration of the check item. Valid value:</p>
+         * <ul>
+         * <li><strong>all</strong>: Add all check items.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder configure(String configure) {
             this.putQueryParameter("Configure", configure);
@@ -271,19 +294,23 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * The days in a week on which a check is performed.
+         * <p>The days in a week on which a check is performed.</p>
          */
-        public Builder cycleDays(java.util.List < Integer > cycleDays) {
+        public Builder cycleDays(java.util.List<Integer> cycleDays) {
             this.putQueryParameter("CycleDays", cycleDays);
             this.cycleDays = cycleDays;
             return this;
         }
 
         /**
-         * Specifies whether to check the new check items in the selected requirement item. Valid values:
-         * <p>
-         * - **true**
-         * - **false**
+         * <p>Specifies whether to check the new check items in the selected requirement item. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableAddCheck(Boolean enableAddCheck) {
             this.putQueryParameter("EnableAddCheck", enableAddCheck);
@@ -292,11 +319,14 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the automatic periodical check feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the automatic periodical check feature. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * - **true**
-         * - **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAutoCheck(Boolean enableAutoCheck) {
             this.putQueryParameter("EnableAutoCheck", enableAutoCheck);
@@ -305,13 +335,16 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * The end time of the check. The value specifies a point in time in a day. The time period that is specified by the start time and end time must be one of the following time periods:
-         * <p>
+         * <p>The end time of the check. The value specifies a point in time in a day. The time period that is specified by the start time and end time must be one of the following time periods:</p>
+         * <ul>
+         * <li><strong>00:00 to 06:00:</strong> If you set the StartTime parameter to 0, you must set the EndTime parameter to 6.</li>
+         * <li><strong>06:00 to 12:00</strong>: If you set the StartTime parameter to 6, you must set the EndTime parameter to 12.</li>
+         * <li><strong>12:00 to 18:00</strong>: If you set the StartTime parameter to 12, you must set the EndTime parameter to 18.</li>
+         * <li><strong>18:00 to 24:00:</strong> If you set the StartTime parameter to 18, you must set the EndTime parameter to 24.</li>
+         * </ul>
          * 
-         * *   **00:00 to 06:00:** If you set the StartTime parameter to 0, you must set the EndTime parameter to 6.
-         * *   **06:00 to 12:00**: If you set the StartTime parameter to 6, you must set the EndTime parameter to 12.
-         * *   **12:00 to 18:00**: If you set the StartTime parameter to 12, you must set the EndTime parameter to 18.
-         * *  **18:00 to 24:00:** If you set the StartTime parameter to 18, you must set the EndTime parameter to 24.
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder endTime(Integer endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -320,10 +353,13 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * The region ID of the bastion host to query.
-         * <p>
+         * <p>The region ID of the bastion host to query.</p>
+         * <blockquote>
+         * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
          * 
-         * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -332,28 +368,31 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * The list of the check items that you want to remove from the policy.
-         * <p>
-         * 
-         * >  If the ConfigStandardIds or ConfigRequirementIds parameter is configured, this parameter does not take effect.
+         * <p>The list of the check items that you want to remove from the policy.</p>
+         * <blockquote>
+         * <p> If the ConfigStandardIds or ConfigRequirementIds parameter is configured, this parameter does not take effect.</p>
+         * </blockquote>
          */
-        public Builder removedCheck(java.util.List < RemovedCheck> removedCheck) {
+        public Builder removedCheck(java.util.List<RemovedCheck> removedCheck) {
             this.putQueryParameter("RemovedCheck", removedCheck);
             this.removedCheck = removedCheck;
             return this;
         }
 
         /**
-         * An array that consists of the information about the check item.
+         * <p>An array that consists of the information about the check item.</p>
          */
-        public Builder standardIds(java.util.List < Long > standardIds) {
+        public Builder standardIds(java.util.List<Long> standardIds) {
             this.putQueryParameter("StandardIds", standardIds);
             this.standardIds = standardIds;
             return this;
         }
 
         /**
-         * The start time of the check. The value specifies a point in time in a day.
+         * <p>The start time of the check. The value specifies a point in time in a day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder startTime(Integer startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -362,9 +401,25 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * The service provider (SP) of the cloud asset.
+         * <p>Specifies whether to use the configuration automatically generated by the system. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
-        public Builder vendors(java.util.List < String > vendors) {
+        public Builder systemConfig(Boolean systemConfig) {
+            this.putQueryParameter("SystemConfig", systemConfig);
+            this.systemConfig = systemConfig;
+            return this;
+        }
+
+        /**
+         * <p>The cloud service providers.</p>
+         */
+        public Builder vendors(java.util.List<String> vendors) {
             this.putQueryParameter("Vendors", vendors);
             this.vendors = vendors;
             return this;
@@ -377,11 +432,17 @@ public class ChangeCheckConfigRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ChangeCheckConfigRequest} extends {@link TeaModel}
+     *
+     * <p>ChangeCheckConfigRequest</p>
+     */
     public static class AddedCheck extends TeaModel {
-        @NameInMap("CheckId")
+        @com.aliyun.core.annotation.NameInMap("CheckId")
         private Long checkId;
 
-        @NameInMap("SectionId")
+        @com.aliyun.core.annotation.NameInMap("SectionId")
         private Long sectionId;
 
         private AddedCheck(Builder builder) {
@@ -416,10 +477,13 @@ public class ChangeCheckConfigRequest extends Request {
             private Long sectionId; 
 
             /**
-             * The ID of the check item.
-             * <p>
+             * <p>The ID of the check item.</p>
+             * <blockquote>
+             * <p> You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain the ID of the check item.</p>
+             * </blockquote>
              * 
-             * >  You can call the [ListCheckResult](~~ListCheckResult~~) operation to obtain the ID of the check item.
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder checkId(Long checkId) {
                 this.checkId = checkId;
@@ -427,7 +491,10 @@ public class ChangeCheckConfigRequest extends Request {
             }
 
             /**
-             * The section ID of the check item.
+             * <p>The section ID of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>69</p>
              */
             public Builder sectionId(Long sectionId) {
                 this.sectionId = sectionId;
@@ -441,12 +508,18 @@ public class ChangeCheckConfigRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ChangeCheckConfigRequest} extends {@link TeaModel}
+     *
+     * <p>ChangeCheckConfigRequest</p>
+     */
     public static class ConfigRequirementIds extends TeaModel {
-        @NameInMap("AddIds")
-        private java.util.List < Long > addIds;
+        @com.aliyun.core.annotation.NameInMap("AddIds")
+        private java.util.List<Long> addIds;
 
-        @NameInMap("RemoveIds")
-        private java.util.List < Long > removeIds;
+        @com.aliyun.core.annotation.NameInMap("RemoveIds")
+        private java.util.List<Long> removeIds;
 
         private ConfigRequirementIds(Builder builder) {
             this.addIds = builder.addIds;
@@ -464,33 +537,33 @@ public class ChangeCheckConfigRequest extends Request {
         /**
          * @return addIds
          */
-        public java.util.List < Long > getAddIds() {
+        public java.util.List<Long> getAddIds() {
             return this.addIds;
         }
 
         /**
          * @return removeIds
          */
-        public java.util.List < Long > getRemoveIds() {
+        public java.util.List<Long> getRemoveIds() {
             return this.removeIds;
         }
 
         public static final class Builder {
-            private java.util.List < Long > addIds; 
-            private java.util.List < Long > removeIds; 
+            private java.util.List<Long> addIds; 
+            private java.util.List<Long> removeIds; 
 
             /**
-             * The requirement IDs that you want to add to the policy.
+             * <p>The requirement IDs that you want to add to the policy.</p>
              */
-            public Builder addIds(java.util.List < Long > addIds) {
+            public Builder addIds(java.util.List<Long> addIds) {
                 this.addIds = addIds;
                 return this;
             }
 
             /**
-             * The requirement IDs that you want to remove from the policy.
+             * <p>The requirement IDs that you want to remove from the policy.</p>
              */
-            public Builder removeIds(java.util.List < Long > removeIds) {
+            public Builder removeIds(java.util.List<Long> removeIds) {
                 this.removeIds = removeIds;
                 return this;
             }
@@ -502,12 +575,18 @@ public class ChangeCheckConfigRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ChangeCheckConfigRequest} extends {@link TeaModel}
+     *
+     * <p>ChangeCheckConfigRequest</p>
+     */
     public static class ConfigStandardIds extends TeaModel {
-        @NameInMap("AddIds")
-        private java.util.List < Long > addIds;
+        @com.aliyun.core.annotation.NameInMap("AddIds")
+        private java.util.List<Long> addIds;
 
-        @NameInMap("RemoveIds")
-        private java.util.List < Long > removeIds;
+        @com.aliyun.core.annotation.NameInMap("RemoveIds")
+        private java.util.List<Long> removeIds;
 
         private ConfigStandardIds(Builder builder) {
             this.addIds = builder.addIds;
@@ -525,33 +604,33 @@ public class ChangeCheckConfigRequest extends Request {
         /**
          * @return addIds
          */
-        public java.util.List < Long > getAddIds() {
+        public java.util.List<Long> getAddIds() {
             return this.addIds;
         }
 
         /**
          * @return removeIds
          */
-        public java.util.List < Long > getRemoveIds() {
+        public java.util.List<Long> getRemoveIds() {
             return this.removeIds;
         }
 
         public static final class Builder {
-            private java.util.List < Long > addIds; 
-            private java.util.List < Long > removeIds; 
+            private java.util.List<Long> addIds; 
+            private java.util.List<Long> removeIds; 
 
             /**
-             * The standard IDs that you want to add to the policy.
+             * <p>The standard IDs that you want to add to the policy.</p>
              */
-            public Builder addIds(java.util.List < Long > addIds) {
+            public Builder addIds(java.util.List<Long> addIds) {
                 this.addIds = addIds;
                 return this;
             }
 
             /**
-             * The standard IDs that you want to remove from the policy.
+             * <p>The standard IDs that you want to remove from the policy.</p>
              */
-            public Builder removeIds(java.util.List < Long > removeIds) {
+            public Builder removeIds(java.util.List<Long> removeIds) {
                 this.removeIds = removeIds;
                 return this;
             }
@@ -563,11 +642,17 @@ public class ChangeCheckConfigRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ChangeCheckConfigRequest} extends {@link TeaModel}
+     *
+     * <p>ChangeCheckConfigRequest</p>
+     */
     public static class RemovedCheck extends TeaModel {
-        @NameInMap("CheckId")
+        @com.aliyun.core.annotation.NameInMap("CheckId")
         private Long checkId;
 
-        @NameInMap("SectionId")
+        @com.aliyun.core.annotation.NameInMap("SectionId")
         private Long sectionId;
 
         private RemovedCheck(Builder builder) {
@@ -602,10 +687,13 @@ public class ChangeCheckConfigRequest extends Request {
             private Long sectionId; 
 
             /**
-             * The ID of the check item.
-             * <p>
+             * <p>The ID of the check item.</p>
+             * <blockquote>
+             * <p> You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain the ID of the check item.</p>
+             * </blockquote>
              * 
-             * >  You can call the [ListCheckResult](~~ListCheckResult~~) operation to obtain the ID of the check item.
+             * <strong>example:</strong>
+             * <p>19</p>
              */
             public Builder checkId(Long checkId) {
                 this.checkId = checkId;
@@ -613,7 +701,10 @@ public class ChangeCheckConfigRequest extends Request {
             }
 
             /**
-             * The section ID of the check item.
+             * <p>The section ID of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>69</p>
              */
             public Builder sectionId(Long sectionId) {
                 this.sectionId = sectionId;

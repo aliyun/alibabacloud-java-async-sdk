@@ -1,41 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hologram20220601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ScaleInstanceRequest} extends {@link RequestModel}
  *
  * <p>ScaleInstanceRequest</p>
  */
 public class ScaleInstanceRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("coldStorageSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("coldStorageSize")
     private Long coldStorageSize;
 
-    @Body
-    @NameInMap("cpu")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("cpu")
     private Long cpu;
 
-    @Body
-    @NameInMap("gatewayCount")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("enableServerlessComputing")
+    private Boolean enableServerlessComputing;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("gatewayCount")
     private Long gatewayCount;
 
-    @Body
-    @NameInMap("scaleType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("scaleType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scaleType;
 
-    @Body
-    @NameInMap("storageSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("storageSize")
     private Long storageSize;
 
     private ScaleInstanceRequest(Builder builder) {
@@ -43,6 +52,7 @@ public class ScaleInstanceRequest extends Request {
         this.instanceId = builder.instanceId;
         this.coldStorageSize = builder.coldStorageSize;
         this.cpu = builder.cpu;
+        this.enableServerlessComputing = builder.enableServerlessComputing;
         this.gatewayCount = builder.gatewayCount;
         this.scaleType = builder.scaleType;
         this.storageSize = builder.storageSize;
@@ -83,6 +93,13 @@ public class ScaleInstanceRequest extends Request {
     }
 
     /**
+     * @return enableServerlessComputing
+     */
+    public Boolean getEnableServerlessComputing() {
+        return this.enableServerlessComputing;
+    }
+
+    /**
      * @return gatewayCount
      */
     public Long getGatewayCount() {
@@ -107,6 +124,7 @@ public class ScaleInstanceRequest extends Request {
         private String instanceId; 
         private Long coldStorageSize; 
         private Long cpu; 
+        private Boolean enableServerlessComputing; 
         private Long gatewayCount; 
         private String scaleType; 
         private Long storageSize; 
@@ -120,13 +138,18 @@ public class ScaleInstanceRequest extends Request {
             this.instanceId = request.instanceId;
             this.coldStorageSize = request.coldStorageSize;
             this.cpu = request.cpu;
+            this.enableServerlessComputing = request.enableServerlessComputing;
             this.gatewayCount = request.gatewayCount;
             this.scaleType = request.scaleType;
             this.storageSize = request.storageSize;
         } 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgprecn-cn-xxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -135,10 +158,13 @@ public class ScaleInstanceRequest extends Request {
         }
 
         /**
-         * The infrequent access (IA) storage space of the instance. Unit: GB.
-         * <p>
+         * <p>The infrequent access (IA) storage space of the instance. Unit: GB.</p>
+         * <blockquote>
+         * <p>Ignore this parameter for pay-as-you-go instances.</p>
+         * </blockquote>
          * 
-         * > This parameter is invalid for pay-as-you-go instances.
+         * <strong>example:</strong>
+         * <p>1000G</p>
          */
         public Builder coldStorageSize(Long coldStorageSize) {
             this.putBodyParameter("coldStorageSize", coldStorageSize);
@@ -147,26 +173,31 @@ public class ScaleInstanceRequest extends Request {
         }
 
         /**
-         * The specifications of the instance. Valid values:
-         * <p>
+         * <p>The specifications of the instance. Valid values:</p>
+         * <ul>
+         * <li>8-core 32GB (number of compute nodes: 1)</li>
+         * <li>16-core 64GB (number of compute nodes: 1)</li>
+         * <li>32-core 128GB (number of compute nodes: 2)</li>
+         * <li>64-core 256GB (number of compute nodes: 4)</li>
+         * <li>96-core 384GB (number of compute nodes: 6)</li>
+         * <li>128-core 512GB (number of compute nodes: 8)</li>
+         * <li>Others</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>Set this parameter to the number of cores.</p>
+         * </li>
+         * <li><p>If you want to set this parameter to specifications with more than 1,024 compute units (CUs), you must submit a ticket.</p>
+         * </li>
+         * <li><p>This parameter is invalid for Hologres Shared Cluster instances.</p>
+         * </li>
+         * <li><p>The specifications of 8-core 32GB (number of compute nodes: 1) are for trial use only and cannot be used for production.</p>
+         * </li>
+         * </ul>
          * 
-         * *   8-core 32 GB (number of compute Nodes: 1)
-         * *   16-core 64 GB (number of compute nodes: 1)
-         * *   32-core 128 GB (number of compute nodes: 2)
-         * *   64-core 256 GB (number of compute nodes: 4)
-         * *   96-core 384 GB (number of compute nodes: 6)
-         * *   128-core 512 GB (number of compute nodes: 8)
-         * *   Others
-         * 
-         * > 
-         * 
-         * *   Set this parameter to the number of cores.
-         * 
-         * *   If you want to set this parameter to specifications with more than 1,024 compute units (CUs), you must submit a ticket.
-         * 
-         * *   This parameter is invalid for shared instances.
-         * 
-         * *   The specifications of 8-core 32 GB (number of compute nodes: 1) are for trial use only and cannot be used for production.
+         * <strong>example:</strong>
+         * <p>128</p>
          */
         public Builder cpu(Long cpu) {
             this.putBodyParameter("cpu", cpu);
@@ -175,7 +206,25 @@ public class ScaleInstanceRequest extends Request {
         }
 
         /**
-         * gatewayCount.
+         * <p>是否开启ServerlessComputing</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder enableServerlessComputing(Boolean enableServerlessComputing) {
+            this.putBodyParameter("enableServerlessComputing", enableServerlessComputing);
+            this.enableServerlessComputing = enableServerlessComputing;
+            return this;
+        }
+
+        /**
+         * <p>The number of gateways. Valid values: 2 to 50.</p>
+         * <blockquote>
+         * <p>This parameter is required only for virtual warehouse instances.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder gatewayCount(Long gatewayCount) {
             this.putBodyParameter("gatewayCount", gatewayCount);
@@ -184,17 +233,23 @@ public class ScaleInstanceRequest extends Request {
         }
 
         /**
-         * The specification change type. Valid values:
-         * <p>
+         * <p>The specification change type. Valid values:</p>
+         * <ul>
+         * <li>UPGRADE</li>
+         * <li>DOWNGRADE</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If you set this parameter to UPGRADE, the new specifications must be higher than the original specifications. You must configure at least one of the cpu, storageSize, and coldStorageSize parameters. If you leave a parameter empty, the related configuration remains unchanged.</p>
+         * </li>
+         * <li><p>If you set this parameter to DOWNGRADE, the new specifications must be lower than the original specifications. You must configure at least one of the cpu, storageSize, and coldStorageSize parameters. If you leave a parameter empty, the related configuration remains unchanged.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   UPGRADE
-         * *   DOWNGRADE
-         * 
-         * > 
-         * 
-         * *   If you set this parameter to UPGRADE, the new specifications must be higher than the original specifications. You must configure at least one of the cpu, storageSize, and coldStorageSize parameters. If you leave a parameter empty, the related configuration remains unchanged.
-         * 
-         * *   If you set this parameter to DOWNGRADE, the new specifications must be lower than the original specifications. You must configure at least one of the cpu, storageSize, and coldStorageSize parameters. If you leave a parameter empty, the related configuration remains unchanged.
+         * <strong>example:</strong>
+         * <p>UPGRADE</p>
          */
         public Builder scaleType(String scaleType) {
             this.putBodyParameter("scaleType", scaleType);
@@ -203,10 +258,13 @@ public class ScaleInstanceRequest extends Request {
         }
 
         /**
-         * The standard storage space of the instance. Unit: GB.
-         * <p>
+         * <p>The standard storage space of the instance. Unit: GB.</p>
+         * <blockquote>
+         * <p>Ignore this parameter for pay-as-you-go instances.</p>
+         * </blockquote>
          * 
-         * > This parameter is invalid for pay-as-you-go instances.
+         * <strong>example:</strong>
+         * <p>1000G</p>
          */
         public Builder storageSize(Long storageSize) {
             this.putBodyParameter("storageSize", storageSize);

@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OnsInstanceInServiceListRequest} extends {@link RequestModel}
  *
  * <p>OnsInstanceInServiceListRequest</p>
  */
 public class OnsInstanceInServiceListRequest extends Request {
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NeedResourceInfo")
+    private Boolean needResourceInfo;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
     private OnsInstanceInServiceListRequest(Builder builder) {
         super(builder);
+        this.needResourceInfo = builder.needResourceInfo;
         this.tag = builder.tag;
     }
 
@@ -35,6 +40,13 @@ public class OnsInstanceInServiceListRequest extends Request {
     }
 
     /**
+     * @return needResourceInfo
+     */
+    public Boolean getNeedResourceInfo() {
+        return this.needResourceInfo;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -42,6 +54,7 @@ public class OnsInstanceInServiceListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<OnsInstanceInServiceListRequest, Builder> {
+        private Boolean needResourceInfo; 
         private java.util.List < Tag> tag; 
 
         private Builder() {
@@ -50,11 +63,24 @@ public class OnsInstanceInServiceListRequest extends Request {
 
         private Builder(OnsInstanceInServiceListRequest request) {
             super(request);
+            this.needResourceInfo = request.needResourceInfo;
             this.tag = request.tag;
         } 
 
         /**
-         * The list of tags that are attached to the instance. A maximum of 20 tags can be included in a list.
+         * <p>Specifies whether you want the resource information to be returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder needResourceInfo(Boolean needResourceInfo) {
+            this.putQueryParameter("NeedResourceInfo", needResourceInfo);
+            this.needResourceInfo = needResourceInfo;
+            return this;
+        }
+
+        /**
+         * <p>The tags that you want to attach to the instance. You can attach up to 20 tags to the instance.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -69,13 +95,17 @@ public class OnsInstanceInServiceListRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link OnsInstanceInServiceListRequest} extends {@link TeaModel}
+     *
+     * <p>OnsInstanceInServiceListRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -110,11 +140,14 @@ public class OnsInstanceInServiceListRequest extends Request {
             private String value; 
 
             /**
-             * The key of a tag that is attached to the instances you want to query. This parameter is not required. If you configure this parameter, you must also configure the **Tag.N.Key** parameter.**** If you include the Key and Value parameters in a request, this operation queries only the instances that use the specified tags. If you do not include these parameters in a request, this operation queries all instances that you can access.
-             * <p>
+             * <p>The tag key. This parameter is not required. If you configure this parameter, you must also configure <strong>Value</strong>.**** If you configure Key and Value in a request, this operation queries only the instances that use the specified tags. If you do not configure these parameters in a request, this operation queries all instances that you can access.</p>
+             * <ul>
+             * <li>The value of this parameter cannot be an empty string.</li>
+             * <li>The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</li>
+             * </ul>
              * 
-             * *   The value of this parameter cannot be an empty string.
-             * *   The tag key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>CartService</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -122,11 +155,14 @@ public class OnsInstanceInServiceListRequest extends Request {
             }
 
             /**
-             * The value of a tag that is attached to the instances you want to query. This parameter is not required. If you configure this parameter, you must also configure the **Tag.N.Key** parameter.**** If you include the Key and Value parameters in a request, this operation queries only the instances that use the specified tags. If you do not include these parameters in a request, this operation queries all instances that you can access.
-             * <p>
+             * <p>The tag value. This parameter is not required. If you configure this parameter, you must also configure <strong>Key</strong>.**** If you configure Key and Value in a request, this operation queries only the instances that use the specified tags. If you do not configure these parameters in a request, this operation queries all instances that you can access.</p>
+             * <ul>
+             * <li>The value of this parameter can be an empty string.</li>
+             * <li>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code> or <code>aliyun</code>.</li>
+             * </ul>
              * 
-             * *   The value of this parameter can be an empty string.
-             * *   The tag key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>SericeA</p>
              */
             public Builder value(String value) {
                 this.value = value;

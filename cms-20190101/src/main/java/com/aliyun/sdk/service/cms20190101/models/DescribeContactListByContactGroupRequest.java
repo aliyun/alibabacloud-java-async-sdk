@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeContactListByContactGroupRequest} extends {@link RequestModel}
  *
  * <p>DescribeContactListByContactGroupRequest</p>
  */
 public class DescribeContactListByContactGroupRequest extends Request {
-    @Query
-    @NameInMap("ContactGroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactGroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String contactGroupName;
 
     private DescribeContactListByContactGroupRequest(Builder builder) {
@@ -55,7 +55,11 @@ public class DescribeContactListByContactGroupRequest extends Request {
         } 
 
         /**
-         * The name of the alert group.
+         * <p>The name of the alert contact group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudMonitor</p>
          */
         public Builder contactGroupName(String contactGroupName) {
             this.putQueryParameter("ContactGroupName", contactGroupName);

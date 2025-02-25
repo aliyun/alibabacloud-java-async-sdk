@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSourceMapRequest} extends {@link RequestModel}
  *
  * <p>DeleteSourceMapRequest</p>
  */
 public class DeleteSourceMapRequest extends Request {
-    @Query
-    @NameInMap("FidList")
-    @Validation(required = true)
-    private java.util.List < String > fidList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FidList")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> fidList;
 
-    @Query
-    @NameInMap("Pid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Pid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pid;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private DeleteSourceMapRequest(Builder builder) {
@@ -50,7 +55,7 @@ public class DeleteSourceMapRequest extends Request {
     /**
      * @return fidList
      */
-    public java.util.List < String > getFidList() {
+    public java.util.List<String> getFidList() {
         return this.fidList;
     }
 
@@ -69,7 +74,7 @@ public class DeleteSourceMapRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteSourceMapRequest, Builder> {
-        private java.util.List < String > fidList; 
+        private java.util.List<String> fidList; 
         private String pid; 
         private String regionId; 
 
@@ -85,9 +90,10 @@ public class DeleteSourceMapRequest extends Request {
         } 
 
         /**
-         * FidList.
+         * <p>The IDs of the SourceMap files.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder fidList(java.util.List < String > fidList) {
+        public Builder fidList(java.util.List<String> fidList) {
             String fidListShrink = shrink(fidList, "FidList", "json");
             this.putQueryParameter("FidList", fidListShrink);
             this.fidList = fidList;
@@ -95,7 +101,11 @@ public class DeleteSourceMapRequest extends Request {
         }
 
         /**
-         * Pid.
+         * <p>The process identifier (PID) of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>atc889zkcf@d8deedfa9bf****</p>
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -104,7 +114,11 @@ public class DeleteSourceMapRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

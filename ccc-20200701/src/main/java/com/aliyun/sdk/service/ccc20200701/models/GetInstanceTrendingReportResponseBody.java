@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceTrendingReportResponseBody} extends {@link TeaModel}
  *
  * <p>GetInstanceTrendingReportResponseBody</p>
  */
 public class GetInstanceTrendingReportResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetInstanceTrendingReportResponseBody(Builder builder) {
@@ -131,26 +136,32 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInstanceTrendingReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceTrendingReportResponseBody</p>
+     */
     public static class Inbound extends TeaModel {
-        @NameInMap("CallsAbandonedInIVR")
+        @com.aliyun.core.annotation.NameInMap("CallsAbandonedInIVR")
         private Long callsAbandonedInIVR;
 
-        @NameInMap("CallsAbandonedInQueue")
+        @com.aliyun.core.annotation.NameInMap("CallsAbandonedInQueue")
         private Long callsAbandonedInQueue;
 
-        @NameInMap("CallsAbandonedInRing")
+        @com.aliyun.core.annotation.NameInMap("CallsAbandonedInRing")
         private Long callsAbandonedInRing;
 
-        @NameInMap("CallsHandled")
+        @com.aliyun.core.annotation.NameInMap("CallsHandled")
         private Long callsHandled;
 
-        @NameInMap("CallsQueued")
+        @com.aliyun.core.annotation.NameInMap("CallsQueued")
         private Long callsQueued;
 
-        @NameInMap("StatsTime")
+        @com.aliyun.core.annotation.NameInMap("StatsTime")
         private Long statsTime;
 
-        @NameInMap("TotalCalls")
+        @com.aliyun.core.annotation.NameInMap("TotalCalls")
         private Long totalCalls;
 
         private Inbound(Builder builder) {
@@ -292,14 +303,20 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceTrendingReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceTrendingReportResponseBody</p>
+     */
     public static class Outbound extends TeaModel {
-        @NameInMap("CallsAnswered")
+        @com.aliyun.core.annotation.NameInMap("CallsAnswered")
         private Long callsAnswered;
 
-        @NameInMap("StatsTime")
+        @com.aliyun.core.annotation.NameInMap("StatsTime")
         private Long statsTime;
 
-        @NameInMap("TotalCalls")
+        @com.aliyun.core.annotation.NameInMap("TotalCalls")
         private Long totalCalls;
 
         private Outbound(Builder builder) {
@@ -373,11 +390,17 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceTrendingReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceTrendingReportResponseBody</p>
+     */
     public static class Overall extends TeaModel {
-        @NameInMap("MaxLoggedInAgents")
+        @com.aliyun.core.annotation.NameInMap("MaxLoggedInAgents")
         private Long maxLoggedInAgents;
 
-        @NameInMap("StatsTime")
+        @com.aliyun.core.annotation.NameInMap("StatsTime")
         private Long statsTime;
 
         private Overall(Builder builder) {
@@ -434,15 +457,21 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceTrendingReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceTrendingReportResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Inbound")
-        private java.util.List < Inbound> inbound;
+        @com.aliyun.core.annotation.NameInMap("Inbound")
+        private java.util.List<Inbound> inbound;
 
-        @NameInMap("Outbound")
-        private java.util.List < Outbound> outbound;
+        @com.aliyun.core.annotation.NameInMap("Outbound")
+        private java.util.List<Outbound> outbound;
 
-        @NameInMap("Overall")
-        private java.util.List < Overall> overall;
+        @com.aliyun.core.annotation.NameInMap("Overall")
+        private java.util.List<Overall> overall;
 
         private Data(Builder builder) {
             this.inbound = builder.inbound;
@@ -461,33 +490,33 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         /**
          * @return inbound
          */
-        public java.util.List < Inbound> getInbound() {
+        public java.util.List<Inbound> getInbound() {
             return this.inbound;
         }
 
         /**
          * @return outbound
          */
-        public java.util.List < Outbound> getOutbound() {
+        public java.util.List<Outbound> getOutbound() {
             return this.outbound;
         }
 
         /**
          * @return overall
          */
-        public java.util.List < Overall> getOverall() {
+        public java.util.List<Overall> getOverall() {
             return this.overall;
         }
 
         public static final class Builder {
-            private java.util.List < Inbound> inbound; 
-            private java.util.List < Outbound> outbound; 
-            private java.util.List < Overall> overall; 
+            private java.util.List<Inbound> inbound; 
+            private java.util.List<Outbound> outbound; 
+            private java.util.List<Overall> overall; 
 
             /**
              * Inbound.
              */
-            public Builder inbound(java.util.List < Inbound> inbound) {
+            public Builder inbound(java.util.List<Inbound> inbound) {
                 this.inbound = inbound;
                 return this;
             }
@@ -495,7 +524,7 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             /**
              * Outbound.
              */
-            public Builder outbound(java.util.List < Outbound> outbound) {
+            public Builder outbound(java.util.List<Outbound> outbound) {
                 this.outbound = outbound;
                 return this;
             }
@@ -503,7 +532,7 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             /**
              * Overall.
              */
-            public Builder overall(java.util.List < Overall> overall) {
+            public Builder overall(java.util.List<Overall> overall) {
                 this.overall = overall;
                 return this;
             }

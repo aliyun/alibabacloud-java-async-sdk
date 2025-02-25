@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClusterPluginInfoResponseBody} extends {@link TeaModel}
  *
  * <p>ListClusterPluginInfoResponseBody</p>
  */
 public class ListClusterPluginInfoResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListClusterPluginInfoResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -46,19 +51,22 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
 
         /**
-         * The information about the plug-in.
+         * <p>The information about the plug-in.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B48AB3C-84FC-424D-A01D-B9270EF46038</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,41 +79,47 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListClusterPluginInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClusterPluginInfoResponseBody</p>
+     */
     public static class NodePluginInfoList extends TeaModel {
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
 
-        @NameInMap("Installed")
+        @com.aliyun.core.annotation.NameInMap("Installed")
         private Boolean installed;
 
-        @NameInMap("MachineInternetIp")
+        @com.aliyun.core.annotation.NameInMap("MachineInternetIp")
         private String machineInternetIp;
 
-        @NameInMap("MachineIntranetIp")
+        @com.aliyun.core.annotation.NameInMap("MachineIntranetIp")
         private String machineIntranetIp;
 
-        @NameInMap("MachineName")
+        @com.aliyun.core.annotation.NameInMap("MachineName")
         private String machineName;
 
-        @NameInMap("MachineType")
+        @com.aliyun.core.annotation.NameInMap("MachineType")
         private Long machineType;
 
-        @NameInMap("Online")
+        @com.aliyun.core.annotation.NameInMap("Online")
         private Boolean online;
 
-        @NameInMap("PluginName")
+        @com.aliyun.core.annotation.NameInMap("PluginName")
         private String pluginName;
 
-        @NameInMap("PluginVersion")
+        @com.aliyun.core.annotation.NameInMap("PluginVersion")
         private String pluginVersion;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
         private NodePluginInfoList(Builder builder) {
@@ -230,7 +244,10 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * The error code returned.
+             * <p>The error code returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kenerl not support</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -238,7 +255,10 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned.
+             * <p>The error message returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kenerl not support</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -246,11 +266,14 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the plug-in is installed. Valid values:
-             * <p>
+             * <p>Indicates whether the plug-in is installed. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder installed(Boolean installed) {
                 this.installed = installed;
@@ -258,7 +281,10 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the server.
+             * <p>The public IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.100.XXX.XX</p>
              */
             public Builder machineInternetIp(String machineInternetIp) {
                 this.machineInternetIp = machineInternetIp;
@@ -266,7 +292,10 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the server.
+             * <p>The private IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.XXX.XXX.XX</p>
              */
             public Builder machineIntranetIp(String machineIntranetIp) {
                 this.machineIntranetIp = machineIntranetIp;
@@ -274,7 +303,10 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
+             * <p>The name of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>npznas05</p>
              */
             public Builder machineName(String machineName) {
                 this.machineName = machineName;
@@ -282,11 +314,14 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the instance. Valid values include:
-             * <p>
+             * <p>The type of the instance. Valid values include:</p>
+             * <ul>
+             * <li><strong>ecs</strong>: Elastic Compute Service (ECS) instance</li>
+             * <li><strong>slb</strong>: Server Load Balancer (SLB) instance</li>
+             * </ul>
              * 
-             * *   **ecs**: Elastic Compute Service (ECS) instance
-             * *   **slb**: Server Load Balancer (SLB) instance
+             * <strong>example:</strong>
+             * <p>ECS</p>
              */
             public Builder machineType(Long machineType) {
                 this.machineType = machineType;
@@ -294,13 +329,17 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Security Center agent is online. Valid values:
-             * <p>
+             * <p>Indicates whether the Security Center agent is online. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p> If the Security Center agent of the server is offline, Security Center does not protect the server.</p>
+             * </blockquote>
              * 
-             * *   **true**
-             * *   **false**
-             * 
-             * >  If the Security Center agent of the server is offline, Security Center does not protect the server.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder online(Boolean online) {
                 this.online = online;
@@ -308,7 +347,10 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the plug-in.
+             * <p>The name of the plug-in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alihips</p>
              */
             public Builder pluginName(String pluginName) {
                 this.pluginName = pluginName;
@@ -316,7 +358,10 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the plug-in.
+             * <p>The version of the plug-in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.3.1</p>
              */
             public Builder pluginVersion(String pluginVersion) {
                 this.pluginVersion = pluginVersion;
@@ -324,7 +369,10 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * <p>The UUID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bc563d2b-2a3d-411b-8bbe-d75b8d3c****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -332,7 +380,10 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the server.
+             * <p>The instance ID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tpp-cn-2r42njq4y001</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -346,18 +397,24 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListClusterPluginInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClusterPluginInfoResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("ClusterStatus")
+        @com.aliyun.core.annotation.NameInMap("ClusterStatus")
         private String clusterStatus;
 
-        @NameInMap("NodePluginInfoList")
-        private java.util.List < NodePluginInfoList> nodePluginInfoList;
+        @com.aliyun.core.annotation.NameInMap("NodePluginInfoList")
+        private java.util.List<NodePluginInfoList> nodePluginInfoList;
 
         private Data(Builder builder) {
             this.clusterId = builder.clusterId;
@@ -398,7 +455,7 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
         /**
          * @return nodePluginInfoList
          */
-        public java.util.List < NodePluginInfoList> getNodePluginInfoList() {
+        public java.util.List<NodePluginInfoList> getNodePluginInfoList() {
             return this.nodePluginInfoList;
         }
 
@@ -406,10 +463,13 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
             private String clusterId; 
             private String clusterName; 
             private String clusterStatus; 
-            private java.util.List < NodePluginInfoList> nodePluginInfoList; 
+            private java.util.List<NodePluginInfoList> nodePluginInfoList; 
 
             /**
-             * The ID of the cluster.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c8ca91e0907d94efaba7fb0827eb9****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -417,7 +477,10 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * <p>The name of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lmftest</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -425,12 +488,15 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the cluster. Valid values:
-             * <p>
+             * <p>The status of the cluster. Valid values:</p>
+             * <ul>
+             * <li>1: normal</li>
+             * <li>2: abnormal</li>
+             * <li>3: offline</li>
+             * </ul>
              * 
-             * *   1: normal
-             * *   2: abnormal
-             * *   3: offline
+             * <strong>example:</strong>
+             * <p>ABNORMAL</p>
              */
             public Builder clusterStatus(String clusterStatus) {
                 this.clusterStatus = clusterStatus;
@@ -438,9 +504,9 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The plug-ins.
+             * <p>The plug-ins.</p>
              */
-            public Builder nodePluginInfoList(java.util.List < NodePluginInfoList> nodePluginInfoList) {
+            public Builder nodePluginInfoList(java.util.List<NodePluginInfoList> nodePluginInfoList) {
                 this.nodePluginInfoList = nodePluginInfoList;
                 return this;
             }

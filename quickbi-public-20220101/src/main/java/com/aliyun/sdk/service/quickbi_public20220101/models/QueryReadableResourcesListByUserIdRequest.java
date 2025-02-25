@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryReadableResourcesListByUserIdRequest} extends {@link RequestModel}
  *
  * <p>QueryReadableResourcesListByUserIdRequest</p>
  */
 public class QueryReadableResourcesListByUserIdRequest extends Request {
-    @Query
-    @NameInMap("UserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
     private QueryReadableResourcesListByUserIdRequest(Builder builder) {
@@ -55,7 +60,11 @@ public class QueryReadableResourcesListByUserIdRequest extends Request {
         } 
 
         /**
-         * Quick BI the user ID.
+         * <p>Quick BI the user ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de4bc5f9429141cc8091cdd1c15b****</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

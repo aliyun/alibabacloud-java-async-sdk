@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePortAutoCcStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePortAutoCcStatusResponseBody</p>
  */
 public class DescribePortAutoCcStatusResponseBody extends TeaModel {
-    @NameInMap("PortAutoCcStatus")
-    private java.util.List < PortAutoCcStatus> portAutoCcStatus;
+    @com.aliyun.core.annotation.NameInMap("PortAutoCcStatus")
+    private java.util.List<PortAutoCcStatus> portAutoCcStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePortAutoCcStatusResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribePortAutoCcStatusResponseBody extends TeaModel {
     /**
      * @return portAutoCcStatus
      */
-    public java.util.List < PortAutoCcStatus> getPortAutoCcStatus() {
+    public java.util.List<PortAutoCcStatus> getPortAutoCcStatus() {
         return this.portAutoCcStatus;
     }
 
@@ -46,19 +51,22 @@ public class DescribePortAutoCcStatusResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < PortAutoCcStatus> portAutoCcStatus; 
+        private java.util.List<PortAutoCcStatus> portAutoCcStatus; 
         private String requestId; 
 
         /**
-         * An array that consists of the configurations of the Intelligent Protection policy.
+         * <p>An array that consists of the configurations of the Intelligent Protection policy.</p>
          */
-        public Builder portAutoCcStatus(java.util.List < PortAutoCcStatus> portAutoCcStatus) {
+        public Builder portAutoCcStatus(java.util.List<PortAutoCcStatus> portAutoCcStatus) {
             this.portAutoCcStatus = portAutoCcStatus;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BC3C6403-F248-4125-B2C9-8733ED94EA85</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,17 +79,23 @@ public class DescribePortAutoCcStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePortAutoCcStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePortAutoCcStatusResponseBody</p>
+     */
     public static class PortAutoCcStatus extends TeaModel {
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
-        @NameInMap("Switch")
+        @com.aliyun.core.annotation.NameInMap("Switch")
         private String _switch;
 
-        @NameInMap("WebMode")
+        @com.aliyun.core.annotation.NameInMap("WebMode")
         private String webMode;
 
-        @NameInMap("WebSwitch")
+        @com.aliyun.core.annotation.NameInMap("WebSwitch")
         private String webSwitch;
 
         private PortAutoCcStatus(Builder builder) {
@@ -134,12 +148,15 @@ public class DescribePortAutoCcStatusResponseBody extends TeaModel {
             private String webSwitch; 
 
             /**
-             * The mode of the Intelligent Protection policy. Valid values:
-             * <p>
+             * <p>The mode of the Intelligent Protection policy. Valid values:</p>
+             * <ul>
+             * <li><strong>normal</strong></li>
+             * <li><strong>loose</strong></li>
+             * <li><strong>strict</strong></li>
+             * </ul>
              * 
-             * *   **normal**
-             * *   **loose**
-             * *   **strict**
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -147,11 +164,14 @@ public class DescribePortAutoCcStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the Intelligent Protection policy. Valid values:
-             * <p>
+             * <p>The status of the Intelligent Protection policy. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong>: enabled</li>
+             * <li><strong>off</strong>: disabled</li>
+             * </ul>
              * 
-             * *   **on**: enabled
-             * *   **off**: disabled
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder _switch(String _switch) {
                 this._switch = _switch;
@@ -159,12 +179,15 @@ public class DescribePortAutoCcStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The protection mode for ports 80 and 443. Valid values:
-             * <p>
+             * <p>The protection mode for ports 80 and 443. Valid values:</p>
+             * <ul>
+             * <li><strong>normal</strong></li>
+             * <li><strong>loose</strong></li>
+             * <li><strong>strict</strong></li>
+             * </ul>
              * 
-             * *   **normal**
-             * *   **loose**
-             * *   **strict**
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder webMode(String webMode) {
                 this.webMode = webMode;
@@ -172,11 +195,14 @@ public class DescribePortAutoCcStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the Intelligent Protection policy for ports 80 and 443. Valid values:
-             * <p>
+             * <p>The status of the Intelligent Protection policy for ports 80 and 443. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong>: enabled</li>
+             * <li><strong>off</strong>: disabled</li>
+             * </ul>
              * 
-             * *   **on**: enabled
-             * *   **off**: disabled
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder webSwitch(String webSwitch) {
                 this.webSwitch = webSwitch;

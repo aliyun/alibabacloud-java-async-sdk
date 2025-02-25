@@ -1,46 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMonitorRequest} extends {@link RequestModel}
  *
  * <p>QueryMonitorRequest</p>
  */
 public class QueryMonitorRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("MonitorType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MonitorType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String monitorType;
 
-    @Query
-    @NameInMap("RequestPars")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestPars")
     private String requestPars;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
-    @Query
-    @NameInMap("Step")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Step")
     private Long step;
 
     private QueryMonitorRequest(Builder builder) {
@@ -141,11 +146,14 @@ public class QueryMonitorRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -154,7 +162,11 @@ public class QueryMonitorRequest extends Request {
         }
 
         /**
-         * The timestamp when the monitoring ends.
+         * <p>The timestamp when the monitoring ends.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1666678376</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -163,7 +175,10 @@ public class QueryMonitorRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-cn-****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -172,35 +187,38 @@ public class QueryMonitorRequest extends Request {
         }
 
         /**
-         * The metric type. The following metric types are supported:
-         * <p>
+         * <p>The metric type. The following metric types are supported:</p>
+         * <p>[Basic system metrics]</p>
+         * <ul>
+         * <li>cpuUsage</li>
+         * <li>memoryUsage</li>
+         * <li>diskUsage</li>
+         * <li>gcCount</li>
+         * <li>gcTime</li>
+         * </ul>
+         * <p>[Nacos registry]</p>
+         * <ul>
+         * <li>serviceCount</li>
+         * <li>writeCostTime</li>
+         * <li>readCostTime</li>
+         * <li>TPS regCenterTps</li>
+         * <li>QPS regCenterQps</li>
+         * </ul>
+         * <p>[Nacos configuration center]</p>
+         * <ul>
+         * <li>publish</li>
+         * <li>getConfig</li>
+         * </ul>
+         * <p>[zookeeper]</p>
+         * <ul>
+         * <li>TPS zk_TpsCount</li>
+         * <li>QPS zk_QpsCount</li>
+         * <li>zookeeper_AvgRequestLatency</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * \[Basic system metrics]
-         * 
-         * *   cpuUsage
-         * *   memoryUsage
-         * *   diskUsage
-         * *   gcCount
-         * *   gcTime
-         * 
-         * \[Nacos registry]
-         * 
-         * *   serviceCount
-         * *   writeCostTime
-         * *   readCostTime
-         * *   TPS regCenterTps
-         * *   QPS regCenterQps
-         * 
-         * \[Nacos configuration center]
-         * 
-         * *   publish
-         * *   getConfig
-         * 
-         * \[zookeeper]
-         * 
-         * *   TPS zk_TpsCount
-         * *   QPS zk_QpsCount
-         * *   zookeeper_AvgRequestLatency
+         * <strong>example:</strong>
+         * <p>regCenterQps</p>
          */
         public Builder monitorType(String monitorType) {
             this.putQueryParameter("MonitorType", monitorType);
@@ -209,7 +227,10 @@ public class QueryMonitorRequest extends Request {
         }
 
         /**
-         * The extended request parameters in the JSON format.
+         * <p>The extended request parameters in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);
@@ -218,7 +239,11 @@ public class QueryMonitorRequest extends Request {
         }
 
         /**
-         * The timestamp when the monitoring starts.
+         * <p>The timestamp when the monitoring starts.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1666678376</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -227,7 +252,10 @@ public class QueryMonitorRequest extends Request {
         }
 
         /**
-         * The interval between data points. Unit: seconds.
+         * <p>The interval between data points. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder step(Long step) {
             this.putQueryParameter("Step", step);

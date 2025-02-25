@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CheckFabricConsortiumDomainRequest</p>
  */
 public class CheckFabricConsortiumDomainRequest extends Request {
-    @Body
-    @NameInMap("DomainCode")
-    @Validation(required = true)
-    private String domainCode;
-
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DomainCode")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String domainCode;
 
     private CheckFabricConsortiumDomainRequest(Builder builder) {
         super(builder);
-        this.domainCode = builder.domainCode;
         this.regionId = builder.regionId;
+        this.domainCode = builder.domainCode;
     }
 
     public static Builder builder() {
@@ -41,41 +40,32 @@ public class CheckFabricConsortiumDomainRequest extends Request {
     }
 
     /**
-     * @return domainCode
-     */
-    public String getDomainCode() {
-        return this.domainCode;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return domainCode
+     */
+    public String getDomainCode() {
+        return this.domainCode;
+    }
+
     public static final class Builder extends Request.Builder<CheckFabricConsortiumDomainRequest, Builder> {
-        private String domainCode; 
         private String regionId; 
+        private String domainCode; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CheckFabricConsortiumDomainRequest response) {
-            super(response);
-            this.domainCode = response.domainCode;
-            this.regionId = response.regionId;
+        private Builder(CheckFabricConsortiumDomainRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.domainCode = request.domainCode;
         } 
-
-        /**
-         * DomainCode.
-         */
-        public Builder domainCode(String domainCode) {
-            this.putBodyParameter("DomainCode", domainCode);
-            this.domainCode = domainCode;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -83,6 +73,15 @@ public class CheckFabricConsortiumDomainRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * DomainCode.
+         */
+        public Builder domainCode(String domainCode) {
+            this.putBodyParameter("DomainCode", domainCode);
+            this.domainCode = domainCode;
             return this;
         }
 

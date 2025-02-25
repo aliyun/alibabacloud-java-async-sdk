@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetGatewayDomainDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetGatewayDomainDetailResponseBody</p>
  */
 public class GetGatewayDomainDetailResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetGatewayDomainDetailResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>403</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +114,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +122,10 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +133,10 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You are not authorized to perform this operation.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +144,10 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>88B83302-CD88-54D3-8DF2-208BFDC73F0D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +155,14 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -155,68 +175,74 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetGatewayDomainDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGatewayDomainDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AfterDate")
+        @com.aliyun.core.annotation.NameInMap("AfterDate")
         private Long afterDate;
 
-        @NameInMap("Algorithm")
+        @com.aliyun.core.annotation.NameInMap("Algorithm")
         private String algorithm;
 
-        @NameInMap("BeforeDate")
+        @com.aliyun.core.annotation.NameInMap("BeforeDate")
         private Long beforeDate;
 
-        @NameInMap("CertIdentifier")
+        @com.aliyun.core.annotation.NameInMap("CertIdentifier")
         private String certIdentifier;
 
-        @NameInMap("CertName")
+        @com.aliyun.core.annotation.NameInMap("CertName")
         private String certName;
 
-        @NameInMap("CommonName")
+        @com.aliyun.core.annotation.NameInMap("CommonName")
         private String commonName;
 
-        @NameInMap("GatewayId")
+        @com.aliyun.core.annotation.NameInMap("GatewayId")
         private Long gatewayId;
 
-        @NameInMap("GatewayUniqueId")
+        @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
         private String gatewayUniqueId;
 
-        @NameInMap("GmtAfter")
+        @com.aliyun.core.annotation.NameInMap("GmtAfter")
         private String gmtAfter;
 
-        @NameInMap("GmtBefore")
+        @com.aliyun.core.annotation.NameInMap("GmtBefore")
         private String gmtBefore;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Http2")
+        @com.aliyun.core.annotation.NameInMap("Http2")
         private String http2;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Issuer")
+        @com.aliyun.core.annotation.NameInMap("Issuer")
         private String issuer;
 
-        @NameInMap("MustHttps")
+        @com.aliyun.core.annotation.NameInMap("MustHttps")
         private Boolean mustHttps;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("Sans")
+        @com.aliyun.core.annotation.NameInMap("Sans")
         private String sans;
 
-        @NameInMap("TlsMax")
+        @com.aliyun.core.annotation.NameInMap("TlsMax")
         private String tlsMax;
 
-        @NameInMap("TlsMin")
+        @com.aliyun.core.annotation.NameInMap("TlsMin")
         private String tlsMin;
 
         private Data(Builder builder) {
@@ -422,7 +448,10 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             private String tlsMin; 
 
             /**
-             * The start time.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-04-01 02:35:12</p>
              */
             public Builder afterDate(Long afterDate) {
                 this.afterDate = afterDate;
@@ -430,7 +459,10 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The algorithm.
+             * <p>The algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RSA</p>
              */
             public Builder algorithm(String algorithm) {
                 this.algorithm = algorithm;
@@ -438,7 +470,10 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time.
+             * <p>The expiration time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-04-01 02:35:12</p>
              */
             public Builder beforeDate(Long beforeDate) {
                 this.beforeDate = beforeDate;
@@ -446,7 +481,10 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the certificate.
+             * <p>The ID of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>234-cn-hangzhou</p>
              */
             public Builder certIdentifier(String certIdentifier) {
                 this.certIdentifier = certIdentifier;
@@ -454,7 +492,10 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the certificate.
+             * <p>The name of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder certName(String certName) {
                 this.certName = certName;
@@ -462,7 +503,10 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The public domain name.
+             * <p>The public domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder commonName(String commonName) {
                 this.commonName = commonName;
@@ -470,7 +514,10 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the gateway.
+             * <p>The ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -478,7 +525,10 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the gateway.
+             * <p>The unique ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-7ea3da97b96543e19f6c597cd4a9****</p>
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -486,7 +536,10 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The start time.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-04-01 02:35:12</p>
              */
             public Builder gmtAfter(String gmtAfter) {
                 this.gmtAfter = gmtAfter;
@@ -494,7 +547,10 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time.
+             * <p>The expiration time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-04-01 02:35:12</p>
              */
             public Builder gmtBefore(String gmtBefore) {
                 this.gmtBefore = gmtBefore;
@@ -502,7 +558,10 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-07T10:07:57.000+0000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -510,7 +569,10 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The update time.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-07T10:07:57.000+0000</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -518,12 +580,15 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether `HTTP/2` is enabled.
-             * <p>
+             * <p>Indicates whether <code>HTTP/2</code> is enabled.</p>
+             * <ul>
+             * <li><code>open</code>: <code>HTTP/2</code> is enabled.</li>
+             * <li><code>close</code>: <code>HTTP/2</code> is disabled.</li>
+             * <li><code>globalConfig</code>: Global configurations are used.</li>
+             * </ul>
              * 
-             * *   `open`: `HTTP/2` is enabled.
-             * *   `close`: `HTTP/2` is disabled.
-             * *   `globalConfig`: Global configurations are used.
+             * <strong>example:</strong>
+             * <p>close</p>
              */
             public Builder http2(String http2) {
                 this.http2 = http2;
@@ -531,7 +596,10 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID.
+             * <p>The ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -539,7 +607,10 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The issuer.
+             * <p>The issuer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Istio</p>
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
@@ -547,7 +618,10 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether HTTPS is forcibly used.
+             * <p>Indicates whether HTTPS is forcibly used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder mustHttps(Boolean mustHttps) {
                 this.mustHttps = mustHttps;
@@ -555,7 +629,10 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.com</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -563,7 +640,10 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol of the gateway.
+             * <p>The protocol of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -571,7 +651,10 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the extended field.
+             * <p>The name of the extended field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.com</p>
              */
             public Builder sans(String sans) {
                 this.sans = sans;
@@ -579,7 +662,10 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum version of Transport Layer Security (TLS).
+             * <p>The maximum version of Transport Layer Security (TLS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TLS 1.3</p>
              */
             public Builder tlsMax(String tlsMax) {
                 this.tlsMax = tlsMax;
@@ -587,7 +673,10 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum version of TLS.
+             * <p>The minimum version of TLS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TLS 1.0</p>
              */
             public Builder tlsMin(String tlsMin) {
                 this.tlsMin = tlsMin;

@@ -1,37 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyNatFirewallControlPolicyPositionRequest} extends {@link RequestModel}
  *
  * <p>ModifyNatFirewallControlPolicyPositionRequest</p>
  */
 public class ModifyNatFirewallControlPolicyPositionRequest extends Request {
-    @Query
-    @NameInMap("AclUuid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclUuid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aclUuid;
 
-    @Query
-    @NameInMap("Direction")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Direction")
     private String direction;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("NatGatewayId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NatGatewayId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String natGatewayId;
 
-    @Query
-    @NameInMap("NewOrder")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewOrder")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer newOrder;
 
     private ModifyNatFirewallControlPolicyPositionRequest(Builder builder) {
@@ -112,7 +118,11 @@ public class ModifyNatFirewallControlPolicyPositionRequest extends Request {
         } 
 
         /**
-         * The UUID of the access control policy.
+         * <p>The UUID of the access control policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66961eea-e659-4225-84c9-9b6da76ec401</p>
          */
         public Builder aclUuid(String aclUuid) {
             this.putQueryParameter("AclUuid", aclUuid);
@@ -121,7 +131,13 @@ public class ModifyNatFirewallControlPolicyPositionRequest extends Request {
         }
 
         /**
-         * Direction.
+         * <p>The direction of the traffic to which the access control policy applies.</p>
+         * <ul>
+         * <li>Set the value to <strong>out</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>out</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -130,11 +146,14 @@ public class ModifyNatFirewallControlPolicyPositionRequest extends Request {
         }
 
         /**
-         * The language of the content within the response. Valid values:
-         * <p>
+         * <p>The language of the content within the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -143,7 +162,11 @@ public class ModifyNatFirewallControlPolicyPositionRequest extends Request {
         }
 
         /**
-         * The ID of the NAT gateway.
+         * <p>The ID of the NAT gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-xxxxxx</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -152,12 +175,15 @@ public class ModifyNatFirewallControlPolicyPositionRequest extends Request {
         }
 
         /**
-         * The new priority of the IPv4 access control policy. You must specify a numeric value for this parameter. The value 1 indicates the highest priority. A larger value indicates a lower priority.
-         * <p>
+         * <p>The new priority of the IPv4 access control policy. You must specify a numeric value for this parameter. The value 1 indicates the highest priority. A larger value indicates a lower priority.</p>
+         * <blockquote>
+         * <p>Make sure that the value of this parameter is within the priority range of existing IPv4 access control policies. Otherwise, an error occurs when you call this operation.</p>
+         * </blockquote>
+         * <p>Before you call this operation, we recommend that you call the DescribeNatFirewallPolicyPriorUsed operation to query the priority range of the IPv4 access control policies in the specified traffic direction.</p>
+         * <p>This parameter is required.</p>
          * 
-         * > Make sure that the value of this parameter is within the priority range of existing IPv4 access control policies. Otherwise, an error occurs when you call this operation.
-         * 
-         * Before you call this operation, we recommend that you call the DescribeNatFirewallPolicyPriorUsed operation to query the priority range of the IPv4 access control policies in the specified traffic direction.
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder newOrder(Integer newOrder) {
             this.putQueryParameter("NewOrder", newOrder);

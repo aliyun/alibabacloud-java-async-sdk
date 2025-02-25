@@ -62,7 +62,7 @@ public class CheckSqlAuditEnableStatusResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,11 @@ public class CheckSqlAuditEnableStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the SQL audit feature. Valid values:
+         * <p>
+         * 
+         * *   enabled: The SQL audit feature is enabled.
+         * *   disabled: The SQL audit feature is disabled.
          */
         public Builder status(String status) {
             this.status = status;
@@ -78,7 +82,7 @@ public class CheckSqlAuditEnableStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

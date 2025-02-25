@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSecurityIpsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSecurityIpsResponseBody</p>
  */
 public class DescribeSecurityIpsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecurityIpGroups")
+    @com.aliyun.core.annotation.NameInMap("SecurityIpGroups")
     private SecurityIpGroups securityIpGroups;
 
     private DescribeSecurityIpsResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         private SecurityIpGroups securityIpGroups; 
 
         /**
-         * The name of the whitelist.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EFC9161F-15E3-4A6E-8A99-C09916D1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The whitelists of the instance.</p>
          */
         public Builder securityIpGroups(SecurityIpGroups securityIpGroups) {
             this.securityIpGroups = securityIpGroups;
@@ -71,14 +74,20 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSecurityIpsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityIpsResponseBody</p>
+     */
     public static class SecurityIpGroup extends TeaModel {
-        @NameInMap("SecurityIpGroupAttribute")
+        @com.aliyun.core.annotation.NameInMap("SecurityIpGroupAttribute")
         private String securityIpGroupAttribute;
 
-        @NameInMap("SecurityIpGroupName")
+        @com.aliyun.core.annotation.NameInMap("SecurityIpGroupName")
         private String securityIpGroupName;
 
-        @NameInMap("SecurityIpList")
+        @com.aliyun.core.annotation.NameInMap("SecurityIpList")
         private String securityIpList;
 
         private SecurityIpGroup(Builder builder) {
@@ -122,7 +131,13 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
             private String securityIpList; 
 
             /**
-             * The operation that you want to perform. Set the value to **DescribeSecurityIps**.
+             * <p>The attribute of the whitelist. This parameter is empty by default.</p>
+             * <blockquote>
+             * <p> If the instance is authorized to use a service such as Database Autonomy Service (DAS), Data Management (DMS), or Data Transmission Service (DTS), this service automatically generates a <strong>hidden</strong> whitelist for the instance. This type of whitelists cannot be modified or deleted.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>hidden</p>
              */
             public Builder securityIpGroupAttribute(String securityIpGroupAttribute) {
                 this.securityIpGroupAttribute = securityIpGroupAttribute;
@@ -130,7 +145,10 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the security group.
+             * <p>The name of the whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder securityIpGroupName(String securityIpGroupName) {
                 this.securityIpGroupName = securityIpGroupName;
@@ -138,7 +156,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses in the whitelist.
+             * <p>The IP addresses in the whitelist. A maximum of 1,000 IP addresses can be specified in a whitelist.</p>
              */
             public Builder securityIpList(String securityIpList) {
                 this.securityIpList = securityIpList;
@@ -152,8 +170,14 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSecurityIpsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityIpsResponseBody</p>
+     */
     public static class SecurityIpGroups extends TeaModel {
-        @NameInMap("SecurityIpGroup")
+        @com.aliyun.core.annotation.NameInMap("SecurityIpGroup")
         private java.util.List < SecurityIpGroup> securityIpGroup;
 
         private SecurityIpGroups(Builder builder) {

@@ -1,49 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDBNodesRequest} extends {@link RequestModel}
  *
  * <p>DeleteDBNodesRequest</p>
  */
 public class DeleteDBNodesRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("DBNodeId")
-    @Validation(required = true)
-    private java.util.List < String > DBNodeId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBNodeId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> DBNodeId;
 
-    @Query
-    @NameInMap("DBNodeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBNodeType")
     private String DBNodeType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private DeleteDBNodesRequest(Builder builder) {
@@ -88,7 +93,7 @@ public class DeleteDBNodesRequest extends Request {
     /**
      * @return DBNodeId
      */
-    public java.util.List < String > getDBNodeId() {
+    public java.util.List<String> getDBNodeId() {
         return this.DBNodeId;
     }
 
@@ -130,7 +135,7 @@ public class DeleteDBNodesRequest extends Request {
     public static final class Builder extends Request.Builder<DeleteDBNodesRequest, Builder> {
         private String clientToken; 
         private String DBClusterId; 
-        private java.util.List < String > DBNodeId; 
+        private java.util.List<String> DBNodeId; 
         private String DBNodeType; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -154,7 +159,10 @@ public class DeleteDBNodesRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000170000591aed949d0f54a343f1a42***********</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -163,7 +171,11 @@ public class DeleteDBNodesRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-**************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -172,23 +184,37 @@ public class DeleteDBNodesRequest extends Request {
         }
 
         /**
-         * The IDs of the nodes.
-         * <p>
+         * <p>The IDs of the nodes.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/185342.html">DescribeDBClusters</a> operation to query the details of all clusters that belong to your Alibaba Cloud account, such as the cluster ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeDBClusters](~~185342~~) operation to query the details of all clusters that belong to your Alibaba Cloud account, such as the cluster ID.
+         * <strong>example:</strong>
+         * <p>pi-************</p>
          */
-        public Builder DBNodeId(java.util.List < String > DBNodeId) {
+        public Builder DBNodeId(java.util.List<String> DBNodeId) {
             this.putQueryParameter("DBNodeId", DBNodeId);
             this.DBNodeId = DBNodeId;
             return this;
         }
 
         /**
-         * The type of the node. Valid values:
-         * <p>
+         * <p>The node type. Valid values:</p>
+         * <ul>
+         * <li>RO</li>
+         * <li>STANDBY</li>
+         * <li>DLNode</li>
+         * </ul>
+         * <p>Enumerated values:</p>
+         * <ul>
+         * <li>DLNode: AI node</li>
+         * <li>STANDBY: standby node</li>
+         * <li>RO: read-only node</li>
+         * </ul>
          * 
-         * *   RO
-         * *   STANDBY
+         * <strong>example:</strong>
+         * <p>RO</p>
          */
         public Builder DBNodeType(String DBNodeType) {
             this.putQueryParameter("DBNodeType", DBNodeType);

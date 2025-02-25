@@ -1,45 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitASRJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitASRJobRequest</p>
  */
 public class SubmitASRJobRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Duration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Duration")
     private String duration;
 
-    @Query
-    @NameInMap("InputFile")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EditingConfig")
+    private String editingConfig;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InputFile")
     private String inputFile;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @Query
-    @NameInMap("Title")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Title")
     private String title;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
     private SubmitASRJobRequest(Builder builder) {
         super(builder);
         this.description = builder.description;
         this.duration = builder.duration;
+        this.editingConfig = builder.editingConfig;
         this.inputFile = builder.inputFile;
         this.startTime = builder.startTime;
         this.title = builder.title;
@@ -74,6 +84,13 @@ public class SubmitASRJobRequest extends Request {
     }
 
     /**
+     * @return editingConfig
+     */
+    public String getEditingConfig() {
+        return this.editingConfig;
+    }
+
+    /**
      * @return inputFile
      */
     public String getInputFile() {
@@ -104,6 +121,7 @@ public class SubmitASRJobRequest extends Request {
     public static final class Builder extends Request.Builder<SubmitASRJobRequest, Builder> {
         private String description; 
         private String duration; 
+        private String editingConfig; 
         private String inputFile; 
         private String startTime; 
         private String title; 
@@ -117,6 +135,7 @@ public class SubmitASRJobRequest extends Request {
             super(request);
             this.description = request.description;
             this.duration = request.duration;
+            this.editingConfig = request.editingConfig;
             this.inputFile = request.inputFile;
             this.startTime = request.startTime;
             this.title = request.title;
@@ -124,7 +143,10 @@ public class SubmitASRJobRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The job description, which can up to 128 bytes in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试描述</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -133,7 +155,10 @@ public class SubmitASRJobRequest extends Request {
         }
 
         /**
-         * Duration.
+         * <p>The speech duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:00:10</p>
          */
         public Builder duration(String duration) {
             this.putQueryParameter("Duration", duration);
@@ -142,7 +167,19 @@ public class SubmitASRJobRequest extends Request {
         }
 
         /**
-         * InputFile.
+         * EditingConfig.
+         */
+        public Builder editingConfig(String editingConfig) {
+            this.putQueryParameter("EditingConfig", editingConfig);
+            this.editingConfig = editingConfig;
+            return this;
+        }
+
+        /**
+         * <p>The input file. You can specify an Object Storage Service (OSS) URL or the ID of a media asset in the media asset library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4 或 <strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
          */
         public Builder inputFile(String inputFile) {
             this.putQueryParameter("InputFile", inputFile);
@@ -151,7 +188,10 @@ public class SubmitASRJobRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the speech to recognize.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:00:00</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -160,7 +200,10 @@ public class SubmitASRJobRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>The job title, which can be up to 128 bytes in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试标题</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);
@@ -169,7 +212,13 @@ public class SubmitASRJobRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The user-defined data in the JSON format. You can specify your business information, such as the business environment and job information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;user&quot;: &quot;data&quot;,
+         *       &quot;env&quot;: &quot;prod&quot;
+         * }</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

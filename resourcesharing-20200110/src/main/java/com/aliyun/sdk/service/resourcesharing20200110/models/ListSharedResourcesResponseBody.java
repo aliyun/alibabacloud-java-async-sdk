@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcesharing20200110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSharedResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>ListSharedResourcesResponseBody</p>
  */
 public class ListSharedResourcesResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SharedResources")
+    @com.aliyun.core.annotation.NameInMap("SharedResources")
     private java.util.List < SharedResources> sharedResources;
 
     private ListSharedResourcesResponseBody(Builder builder) {
@@ -62,7 +62,10 @@ public class ListSharedResourcesResponseBody extends TeaModel {
         private java.util.List < SharedResources> sharedResources; 
 
         /**
-         * The token that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.
+         * <p>The token that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TGlzdFJlc291cm****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +73,10 @@ public class ListSharedResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04677DCA-7C33-464B-8811-1B1DA3C3D197</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +84,7 @@ public class ListSharedResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the shared resources.
+         * <p>The information of the shared resources.</p>
          */
         public Builder sharedResources(java.util.List < SharedResources> sharedResources) {
             this.sharedResources = sharedResources;
@@ -91,26 +97,32 @@ public class ListSharedResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSharedResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSharedResourcesResponseBody</p>
+     */
     public static class SharedResources extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceShareId")
+        @com.aliyun.core.annotation.NameInMap("ResourceShareId")
         private String resourceShareId;
 
-        @NameInMap("ResourceStatus")
+        @com.aliyun.core.annotation.NameInMap("ResourceStatus")
         private String resourceStatus;
 
-        @NameInMap("ResourceStatusMessage")
+        @com.aliyun.core.annotation.NameInMap("ResourceStatusMessage")
         private String resourceStatusMessage;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private SharedResources(Builder builder) {
@@ -190,7 +202,10 @@ public class ListSharedResourcesResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The time when the shared resource was associated with the resource share.
+             * <p>The time when the shared resource was associated with the resource share.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-07T07:39:02.921Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -198,7 +213,10 @@ public class ListSharedResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the shared resource.
+             * <p>The ID of the shared resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1upw03qyz8n7us9****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -206,7 +224,10 @@ public class ListSharedResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource share.
+             * <p>The ID of the resource share.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rs-6GRmdD3X****</p>
              */
             public Builder resourceShareId(String resourceShareId) {
                 this.resourceShareId = resourceShareId;
@@ -214,15 +235,17 @@ public class ListSharedResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the shared resource. This parameter is returned only when you query the resources that other accounts share with you.
-             * <p>
+             * <p>The status of the shared resource. This parameter is returned only when you query the resources that other accounts share with you.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Available: The resource is available.</li>
+             * <li>ZonalResourceInaccessible: The resource is unavailable in the current zone.</li>
+             * <li>LimitExceeded: The resource is unavailable because the maximum number of resources that other accounts can share with you exceeds the upper limit.</li>
+             * <li>Unavailable: The resource is unavailable.</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   Available: The resource is available.
-             * *   ZonalResourceInaccessible: The resource is unavailable in the current zone.
-             * *   LimitExceeded: The resource is unavailable because the maximum number of resources that other accounts can share with you exceeds the upper limit.
-             * *   Unavailable: The resource is unavailable.
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder resourceStatus(String resourceStatus) {
                 this.resourceStatus = resourceStatus;
@@ -230,7 +253,10 @@ public class ListSharedResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The cause of the association failure.
+             * <p>The cause of the association failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The reason for the association failure.</p>
              */
             public Builder resourceStatusMessage(String resourceStatusMessage) {
                 this.resourceStatusMessage = resourceStatusMessage;
@@ -238,10 +264,11 @@ public class ListSharedResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the shared resource.
-             * <p>
+             * <p>The type of the shared resource.</p>
+             * <p>For more information about the types of resources that can be shared, see <a href="https://help.aliyun.com/document_detail/450526.html">Services that work with Resource Sharing</a>.</p>
              * 
-             * For more information about the types of resources that can be shared, see [Services that work with Resource Sharing](~~450526~~).
+             * <strong>example:</strong>
+             * <p>VSwitch</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -249,7 +276,10 @@ public class ListSharedResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the association of the shared resource was updated.
+             * <p>The time when the association of the shared resource was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-07T07:39:02.921Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteBundlesRequest} extends {@link RequestModel}
  *
  * <p>DeleteBundlesRequest</p>
  */
 public class DeleteBundlesRequest extends Request {
-    @Query
-    @NameInMap("BundleId")
-    @Validation(required = true)
-    private java.util.List < String > bundleId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BundleId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> bundleId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private DeleteBundlesRequest(Builder builder) {
@@ -44,7 +49,7 @@ public class DeleteBundlesRequest extends Request {
     /**
      * @return bundleId
      */
-    public java.util.List < String > getBundleId() {
+    public java.util.List<String> getBundleId() {
         return this.bundleId;
     }
 
@@ -56,7 +61,7 @@ public class DeleteBundlesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteBundlesRequest, Builder> {
-        private java.util.List < String > bundleId; 
+        private java.util.List<String> bundleId; 
         private String regionId; 
 
         private Builder() {
@@ -70,16 +75,24 @@ public class DeleteBundlesRequest extends Request {
         } 
 
         /**
-         * BundleId.
+         * <p>The IDs of the cloud computer templates. You can specify 1 to 100 IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b-cezrnfgecbich****</p>
          */
-        public Builder bundleId(java.util.List < String > bundleId) {
+        public Builder bundleId(java.util.List<String> bundleId) {
             this.putQueryParameter("BundleId", bundleId);
             this.bundleId = bundleId;
             return this;
         }
 
         /**
-         * DeleteBundles
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

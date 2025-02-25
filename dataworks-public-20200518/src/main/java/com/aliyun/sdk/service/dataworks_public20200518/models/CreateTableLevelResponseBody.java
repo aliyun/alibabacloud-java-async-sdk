@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTableLevelResponseBody} extends {@link TeaModel}
  *
  * <p>CreateTableLevelResponseBody</p>
  */
 public class CreateTableLevelResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("LevelId")
+    @com.aliyun.core.annotation.NameInMap("LevelId")
     private Long levelId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateTableLevelResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class CreateTableLevelResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the request is successful.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1031203110005</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +114,10 @@ public class CreateTableLevelResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameters are invalid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,7 +125,10 @@ public class CreateTableLevelResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +136,10 @@ public class CreateTableLevelResponseBody extends TeaModel {
         }
 
         /**
-         * LevelId.
+         * <p>The table level ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder levelId(Long levelId) {
             this.levelId = levelId;
@@ -130,7 +147,10 @@ public class CreateTableLevelResponseBody extends TeaModel {
         }
 
         /**
-         * 1AAE721C-F9EC-5923-BAFC-99802C4E0F21
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The error message returned.</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +158,10 @@ public class CreateTableLevelResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the table level.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

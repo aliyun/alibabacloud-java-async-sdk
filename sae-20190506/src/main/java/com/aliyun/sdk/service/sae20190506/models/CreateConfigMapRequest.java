@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateConfigMapRequest} extends {@link RequestModel}
  *
  * <p>CreateConfigMapRequest</p>
  */
 public class CreateConfigMapRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("NamespaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespaceId;
 
     private CreateConfigMapRequest(Builder builder) {
@@ -84,7 +89,12 @@ public class CreateConfigMapRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The key-value pairs of the ConfigMap in the JSON format. Format:</p>
+         * <p>{&quot;Data&quot;:&quot;{&quot;k1&quot;:&quot;v1&quot;, &quot;k2&quot;:&quot;v2&quot;}&quot;}</p>
+         * <p>k specifies a key and v specifies a value. For more information, see <a href="https://help.aliyun.com/document_detail/171326.html">Manage a Kubernetes ConfigMap</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-desc</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -93,7 +103,11 @@ public class CreateConfigMapRequest extends Request {
         }
 
         /**
-         * cn-hangzhou
+         * <p>The name of the ConfigMap. The name can contain digits, letters, and underscores (_). The name must start with a letter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -102,7 +116,11 @@ public class CreateConfigMapRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the namespace to which the ConfigMap instance belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);

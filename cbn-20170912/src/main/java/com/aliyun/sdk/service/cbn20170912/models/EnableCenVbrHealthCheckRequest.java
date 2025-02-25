@@ -1,78 +1,88 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableCenVbrHealthCheckRequest} extends {@link RequestModel}
  *
  * <p>EnableCenVbrHealthCheckRequest</p>
  */
 public class EnableCenVbrHealthCheckRequest extends Request {
-    @Query
-    @NameInMap("CenId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CenId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cenId;
 
-    @Query
-    @NameInMap("HealthCheckInterval")
-    @Validation(maximum = 3, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    private String description;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckInterval")
+    @com.aliyun.core.annotation.Validation(maximum = 3, minimum = 1)
     private Integer healthCheckInterval;
 
-    @Query
-    @NameInMap("HealthCheckOnly")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckOnly")
     private Boolean healthCheckOnly;
 
-    @Query
-    @NameInMap("HealthCheckSourceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckSourceIp")
     private String healthCheckSourceIp;
 
-    @Query
-    @NameInMap("HealthCheckTargetIp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckTargetIp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String healthCheckTargetIp;
 
-    @Query
-    @NameInMap("HealthyThreshold")
-    @Validation(maximum = 8, minimum = 3)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthyThreshold")
+    @com.aliyun.core.annotation.Validation(maximum = 8, minimum = 3)
     private Integer healthyThreshold;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("VbrInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VbrInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vbrInstanceId;
 
-    @Query
-    @NameInMap("VbrInstanceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VbrInstanceOwnerId")
     private Long vbrInstanceOwnerId;
 
-    @Query
-    @NameInMap("VbrInstanceRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VbrInstanceRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vbrInstanceRegionId;
 
     private EnableCenVbrHealthCheckRequest(Builder builder) {
         super(builder);
         this.cenId = builder.cenId;
+        this.description = builder.description;
         this.healthCheckInterval = builder.healthCheckInterval;
         this.healthCheckOnly = builder.healthCheckOnly;
         this.healthCheckSourceIp = builder.healthCheckSourceIp;
@@ -105,6 +115,13 @@ public class EnableCenVbrHealthCheckRequest extends Request {
      */
     public String getCenId() {
         return this.cenId;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
     }
 
     /**
@@ -193,6 +210,7 @@ public class EnableCenVbrHealthCheckRequest extends Request {
 
     public static final class Builder extends Request.Builder<EnableCenVbrHealthCheckRequest, Builder> {
         private String cenId; 
+        private String description; 
         private Integer healthCheckInterval; 
         private Boolean healthCheckOnly; 
         private String healthCheckSourceIp; 
@@ -213,6 +231,7 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         private Builder(EnableCenVbrHealthCheckRequest request) {
             super(request);
             this.cenId = request.cenId;
+            this.description = request.description;
             this.healthCheckInterval = request.healthCheckInterval;
             this.healthCheckOnly = request.healthCheckOnly;
             this.healthCheckSourceIp = request.healthCheckSourceIp;
@@ -228,7 +247,11 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         } 
 
         /**
-         * The ID of the Cloud Enterprise Network (CEN) instance.
+         * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-hahhfskfkseig****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -237,7 +260,23 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * The time interval at which probe packets are sent during a health check. Unit: seconds. Default value: **2**. Valid values: **2 to 3**.
+         * <p>The description of the health check.</p>
+         * <p>The description must be 1 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdesc</p>
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * <p>The time interval at which probe packets are sent during a health check. Unit: seconds. Default value: <strong>2</strong>. Valid values: <strong>2 to 3</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder healthCheckInterval(Integer healthCheckInterval) {
             this.putQueryParameter("HealthCheckInterval", healthCheckInterval);
@@ -246,18 +285,22 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable probing during the health check. Valid values:
-         * <p>
+         * <p>Specifies whether to enable probing during the health check. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: yes</p>
+         * <pre><code>If you enable probing, the system does not switch to another route if the detected route is not reachable. 
          * 
-         * *   **true**: yes
+         *   Make sure that a redundant route is available. Otherwise, network disconnections may occur. 
+         * </code></pre>
+         * </li>
+         * <li><p><strong>false</strong> (default): no</p>
+         * <pre><code>Probing is disabled by default. If a redundant route is specified, the system switches to the redundant route if the detected route is not reachable.
+         * </code></pre>
+         * </li>
+         * </ul>
          * 
-         *         If you enable probing, the system does not switch to another route if the detected route is not reachable. 
-         * 
-         *           Make sure that a redundant route is available. Otherwise, network disconnections may occur. 
-         * 
-         * *   **false** (default): no
-         * 
-         *         Probing is disabled by default. If a redundant route is specified, the system switches to the redundant route if the detected route is not reachable.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder healthCheckOnly(Boolean healthCheckOnly) {
             this.putQueryParameter("HealthCheckOnly", healthCheckOnly);
@@ -266,11 +309,14 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * The source IP address for the health check. You can set the source IP address in the following ways:
-         * <p>
+         * <p>The source IP address for the health check. You can set the source IP address in the following ways:</p>
+         * <ul>
+         * <li><strong>Automatic IP Address</strong> (recommended): The system automatically assigns an IP address from the 100.96.0.0/16 CIDR block.</li>
+         * <li><strong>Custom IP Address</strong>: You must specify an idle IP address from the 10.0.0.0/8, 192.168.0.0/16, or 172.16.0.0/12 CIDR block. The specified IP address cannot be the IP address of the VBR on the Alibaba Cloud side, the IP address of the VBR on the customer side, or other IP addresses with which the VBR communicates through the CEN instance.</li>
+         * </ul>
          * 
-         * *   **Automatic IP Address** (recommended): The system automatically assigns an IP address from the 100.96.0.0/16 CIDR block.
-         * *   **Custom IP Address**: You must specify an idle IP address from the 10.0.0.0/8, 192.168.0.0/16, or 172.16.0.0/12 CIDR block. The specified IP address cannot be the IP address of the VBR on the Alibaba Cloud side, the IP address of the VBR on the customer side, or other IP addresses with which the VBR communicates through the CEN instance.
+         * <strong>example:</strong>
+         * <p>192.XX.XX.1</p>
          */
         public Builder healthCheckSourceIp(String healthCheckSourceIp) {
             this.putQueryParameter("HealthCheckSourceIp", healthCheckSourceIp);
@@ -279,10 +325,12 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * The destination IP address for the health check.
-         * <p>
+         * <p>The destination IP address for the health check.</p>
+         * <p>Set the destination IP address to the IP address of the VBR on the customer side.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Set the destination IP address to the IP address of the VBR on the customer side.
+         * <strong>example:</strong>
+         * <p>10.XX.XX.1</p>
          */
         public Builder healthCheckTargetIp(String healthCheckTargetIp) {
             this.putQueryParameter("HealthCheckTargetIp", healthCheckTargetIp);
@@ -291,7 +339,10 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * The number of probe packets that are sent during a health check. Unit: packets. Valid values: **3 to 8**. Default value: **8**.
+         * <p>The number of probe packets that are sent during a health check. Unit: packets. Valid values: <strong>3 to 8</strong>. Default value: <strong>8</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder healthyThreshold(Integer healthyThreshold) {
             this.putQueryParameter("HealthyThreshold", healthyThreshold);
@@ -336,7 +387,11 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * The ID of the VBR.
+         * <p>The ID of the VBR.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vbr-wz95o9aylj181n5mzk****</p>
          */
         public Builder vbrInstanceId(String vbrInstanceId) {
             this.putQueryParameter("VbrInstanceId", vbrInstanceId);
@@ -345,10 +400,13 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the VBR belongs.
-         * <p>
+         * <p>The ID of the Alibaba Cloud account to which the VBR belongs.</p>
+         * <blockquote>
+         * <p>This parameter is required if the VBR and the CEN instance belong to different Alibaba Cloud accounts.</p>
+         * </blockquote>
          * 
-         * > This parameter is required if the VBR and the CEN instance belong to different Alibaba Cloud accounts.
+         * <strong>example:</strong>
+         * <p>1250123456123456</p>
          */
         public Builder vbrInstanceOwnerId(Long vbrInstanceOwnerId) {
             this.putQueryParameter("VbrInstanceOwnerId", vbrInstanceOwnerId);
@@ -357,10 +415,12 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * The ID of the region where the VBR is deployed.
-         * <p>
+         * <p>The ID of the region where the VBR is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder vbrInstanceRegionId(String vbrInstanceRegionId) {
             this.putQueryParameter("VbrInstanceRegionId", vbrInstanceRegionId);

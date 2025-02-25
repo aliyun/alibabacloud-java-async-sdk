@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetVideoPlayAuthResponseBody} extends {@link TeaModel}
  *
  * <p>GetVideoPlayAuthResponseBody</p>
  */
 public class GetVideoPlayAuthResponseBody extends TeaModel {
-    @NameInMap("PlayAuth")
+    @com.aliyun.core.annotation.NameInMap("PlayAuth")
     private String playAuth;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VideoMeta")
+    @com.aliyun.core.annotation.NameInMap("VideoMeta")
     private VideoMeta videoMeta;
 
     private GetVideoPlayAuthResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class GetVideoPlayAuthResponseBody extends TeaModel {
         private VideoMeta videoMeta; 
 
         /**
-         * The credential for media playback.
+         * <p>The credential for media playback.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sstyYuew6789000000xtt7TYUh****</p>
          */
         public Builder playAuth(String playAuth) {
             this.playAuth = playAuth;
@@ -70,7 +78,10 @@ public class GetVideoPlayAuthResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E4EBD2BF-5EB0-4476-8829-9D94E1B1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +89,7 @@ public class GetVideoPlayAuthResponseBody extends TeaModel {
         }
 
         /**
-         * The metadata of the media file.
+         * <p>The metadata of the audio or video file.</p>
          */
         public Builder videoMeta(VideoMeta videoMeta) {
             this.videoMeta = videoMeta;
@@ -91,20 +102,26 @@ public class GetVideoPlayAuthResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetVideoPlayAuthResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetVideoPlayAuthResponseBody</p>
+     */
     public static class VideoMeta extends TeaModel {
-        @NameInMap("CoverURL")
+        @com.aliyun.core.annotation.NameInMap("CoverURL")
         private String coverURL;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Float duration;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("VideoId")
+        @com.aliyun.core.annotation.NameInMap("VideoId")
         private String videoId;
 
         private VideoMeta(Builder builder) {
@@ -166,7 +183,10 @@ public class GetVideoPlayAuthResponseBody extends TeaModel {
             private String videoId; 
 
             /**
-             * The thumbnail URL of the media file.
+             * <p>The thumbnail URL of the media file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.aliyundoc.com/****.jpg">https://example.aliyundoc.com/****.jpg</a></p>
              */
             public Builder coverURL(String coverURL) {
                 this.coverURL = coverURL;
@@ -174,7 +194,10 @@ public class GetVideoPlayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of the media file. Unit: seconds.
+             * <p>The duration of the media file. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120.0</p>
              */
             public Builder duration(Float duration) {
                 this.duration = duration;
@@ -182,7 +205,10 @@ public class GetVideoPlayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the media file. For more information about the value range and description, see [Status: the status of a video](~~52839~~).
+             * <p>The status of the media file. For more information about the value range and description, see <a href="~~52839#title-vqg-8cz-7p8~~">Status: the status of a video</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -190,7 +216,10 @@ public class GetVideoPlayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * The title of the media file.
+             * <p>The title of the media file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VOD</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -198,7 +227,10 @@ public class GetVideoPlayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the media file.
+             * <p>The ID of the media file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dfde02284a5c46622a097adaf44a****</p>
              */
             public Builder videoId(String videoId) {
                 this.videoId = videoId;

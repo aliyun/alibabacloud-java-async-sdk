@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterVulsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeClusterVulsResponseBody</p>
  */
 public class DescribeClusterVulsResponseBody extends TeaModel {
-    @NameInMap("vul_records")
-    private java.util.List < VulRecords> vulRecords;
+    @com.aliyun.core.annotation.NameInMap("vul_records")
+    private java.util.List<VulRecords> vulRecords;
 
     private DescribeClusterVulsResponseBody(Builder builder) {
         this.vulRecords = builder.vulRecords;
@@ -30,17 +35,17 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
     /**
      * @return vulRecords
      */
-    public java.util.List < VulRecords> getVulRecords() {
+    public java.util.List<VulRecords> getVulRecords() {
         return this.vulRecords;
     }
 
     public static final class Builder {
-        private java.util.List < VulRecords> vulRecords; 
+        private java.util.List<VulRecords> vulRecords; 
 
         /**
-         * An array of vulnerabilities.
+         * <p>An array of vulnerabilities.</p>
          */
-        public Builder vulRecords(java.util.List < VulRecords> vulRecords) {
+        public Builder vulRecords(java.util.List<VulRecords> vulRecords) {
             this.vulRecords = vulRecords;
             return this;
         }
@@ -51,29 +56,35 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClusterVulsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterVulsResponseBody</p>
+     */
     public static class VulRecords extends TeaModel {
-        @NameInMap("cve_list")
-        private java.util.List < String > cveList;
+        @com.aliyun.core.annotation.NameInMap("cve_list")
+        private java.util.List<String> cveList;
 
-        @NameInMap("necessity")
+        @com.aliyun.core.annotation.NameInMap("necessity")
         private String necessity;
 
-        @NameInMap("node_count")
+        @com.aliyun.core.annotation.NameInMap("node_count")
         private Integer nodeCount;
 
-        @NameInMap("nodepool_id")
+        @com.aliyun.core.annotation.NameInMap("nodepool_id")
         private String nodepoolId;
 
-        @NameInMap("nodepool_name")
+        @com.aliyun.core.annotation.NameInMap("nodepool_name")
         private String nodepoolName;
 
-        @NameInMap("vul_alias_name")
+        @com.aliyun.core.annotation.NameInMap("vul_alias_name")
         private String vulAliasName;
 
-        @NameInMap("vul_name")
+        @com.aliyun.core.annotation.NameInMap("vul_name")
         private String vulName;
 
-        @NameInMap("vul_type")
+        @com.aliyun.core.annotation.NameInMap("vul_type")
         private String vulType;
 
         private VulRecords(Builder builder) {
@@ -98,7 +109,7 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
         /**
          * @return cveList
          */
-        public java.util.List < String > getCveList() {
+        public java.util.List<String> getCveList() {
             return this.cveList;
         }
 
@@ -152,7 +163,7 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > cveList; 
+            private java.util.List<String> cveList; 
             private String necessity; 
             private Integer nodeCount; 
             private String nodepoolId; 
@@ -162,54 +173,24 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
             private String vulType; 
 
             /**
-             * The CVE list.
+             * <p>The CVE list.</p>
              */
-            public Builder cveList(java.util.List < String > cveList) {
+            public Builder cveList(java.util.List<String> cveList) {
                 this.cveList = cveList;
                 return this;
             }
 
             /**
-             * The severity level of the vulnerability.
-             * <p>
+             * <p>The severity level of the vulnerability.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>nntf: low</li>
+             * <li>later: medium     </li>
+             * <li>asap: high</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   nntf
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     low
-             * 
-             *     <!-- -->
-             * 
-             * *   later
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     medium
-             * 
-             *     <!-- -->
-             * 
-             * *   asap
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     high
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>asap</p>
              */
             public Builder necessity(String necessity) {
                 this.necessity = necessity;
@@ -217,7 +198,10 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of nodes that have the vulnerability.
+             * <p>The number of nodes that have the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder nodeCount(Integer nodeCount) {
                 this.nodeCount = nodeCount;
@@ -225,7 +209,10 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
             }
 
             /**
-             * The node pool ID.
+             * <p>The node pool ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>np0156da1082b54fa987e32618dd45f5d3</p>
              */
             public Builder nodepoolId(String nodepoolId) {
                 this.nodepoolId = nodepoolId;
@@ -233,7 +220,10 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node pool.
+             * <p>The name of the node pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder nodepoolName(String nodepoolName) {
                 this.nodepoolName = nodepoolName;
@@ -241,7 +231,10 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the vulnerability.
+             * <p>The alias of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CVE-2022-xxxx:rsync Security vulnerabilities</p>
              */
             public Builder vulAliasName(String vulAliasName) {
                 this.vulAliasName = vulAliasName;
@@ -249,7 +242,10 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the vulnerability.
+             * <p>The name of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oval:com.redhat.rhsa:def:xxxxxxx</p>
              */
             public Builder vulName(String vulName) {
                 this.vulName = vulName;
@@ -257,82 +253,19 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of vulnerability.
-             * <p>
+             * <p>The type of vulnerability.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>app: application vulnerabilities</li>
+             * <li>sca: application vulnerabilities (software component analysis)</li>
+             * <li>cve: Linux vulnerabilities</li>
+             * <li>cms: Web-CMS vulnerabilities</li>
+             * <li>sys: Windows vulnerabilities</li>
+             * <li>emg:  emergency vulnerabilities</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   app
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     application vulnerabilities
-             * 
-             *     <!-- -->
-             * 
-             * *   sca
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     application vulnerabilities (software component analysis)
-             * 
-             *     <!-- -->
-             * 
-             * *   cve
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     Linux vulnerabilities
-             * 
-             *     <!-- -->
-             * 
-             * *   cms
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     Web-CMS vulnerabilities
-             * 
-             *     <!-- -->
-             * 
-             * *   sys
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     Windows vulnerabilities
-             * 
-             *     <!-- -->
-             * 
-             * *   emg
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     emergency vulnerabilities
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>cve</p>
              */
             public Builder vulType(String vulType) {
                 this.vulType = vulType;

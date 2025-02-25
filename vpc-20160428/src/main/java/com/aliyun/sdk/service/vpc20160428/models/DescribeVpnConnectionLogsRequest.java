@@ -1,65 +1,70 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpnConnectionLogsRequest} extends {@link RequestModel}
  *
  * <p>DescribeVpnConnectionLogsRequest</p>
  */
 public class DescribeVpnConnectionLogsRequest extends Request {
-    @Query
-    @NameInMap("From")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("From")
     private Integer from;
 
-    @Query
-    @NameInMap("MinutePeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinutePeriod")
     private Integer minutePeriod;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("To")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("To")
     private Integer to;
 
-    @Query
-    @NameInMap("TunnelId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TunnelId")
     private String tunnelId;
 
-    @Query
-    @NameInMap("VpnConnectionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpnConnectionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpnConnectionId;
 
     private DescribeVpnConnectionLogsRequest(Builder builder) {
@@ -210,10 +215,13 @@ public class DescribeVpnConnectionLogsRequest extends Request {
         } 
 
         /**
-         * The beginning of the time range to query. The value must be a UNIX timestamp. For example, 1671003744 specifies 15:42:24 (UTC+8) on December 14, 2022.
-         * <p>
+         * <p>The start time of the flow log. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <blockquote>
+         * <p> If you specify <strong>From</strong>, you must specify <strong>To</strong> or <strong>MinutePeriod</strong>.</p>
+         * </blockquote>
          * 
-         * >  If you specify **From**, you must also specify **To** or **MinutePeriod**.
+         * <strong>example:</strong>
+         * <p>1671003744</p>
          */
         public Builder from(Integer from) {
             this.putQueryParameter("From", from);
@@ -222,10 +230,13 @@ public class DescribeVpnConnectionLogsRequest extends Request {
         }
 
         /**
-         * The interval at which log data is queried. Valid values: **1** to **10**. Unit: minutes.
-         * <p>
+         * <p>The interval at which log data is collected. Valid values: <strong>1</strong> to <strong>10</strong>. Unit: minutes.</p>
+         * <blockquote>
+         * <p> If you do not specify <strong>From</strong> and <strong>To</strong>, you must specify <strong>MinutePeriod</strong>.</p>
+         * </blockquote>
          * 
-         * >  If both **From** and **To** are not specified, you must specify **MinutePeriod**.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder minutePeriod(Integer minutePeriod) {
             this.putQueryParameter("MinutePeriod", minutePeriod);
@@ -252,7 +263,10 @@ public class DescribeVpnConnectionLogsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -261,7 +275,10 @@ public class DescribeVpnConnectionLogsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.
+         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -270,10 +287,12 @@ public class DescribeVpnConnectionLogsRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the IPsec-VPN connection belongs.
-         * <p>
+         * <p>The region ID of the IPsec-VPN connection.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>eu-central-1</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -300,10 +319,13 @@ public class DescribeVpnConnectionLogsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The value must be a UNIX timestamp. For example, 1671004344 specifies 15:52:24 (UTC+8) on December 14, 2022.
-         * <p>
+         * <p>The end time of the flow log. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <blockquote>
+         * <p> If you specify <strong>To</strong>, you must specify <strong>From</strong> or <strong>MinutePeriod</strong>.</p>
+         * </blockquote>
          * 
-         * >  If you specify **To**, you must also specify **From** or **MinutePeriod**.
+         * <strong>example:</strong>
+         * <p>1671004344</p>
          */
         public Builder to(Integer to) {
             this.putQueryParameter("To", to);
@@ -312,7 +334,11 @@ public class DescribeVpnConnectionLogsRequest extends Request {
         }
 
         /**
-         * The tunnel ID of the IPsec-VPN connection. You can specify this parameter only for IPsec-VPN connections in dual-tunnel mode.
+         * <p>The ID of the IPsec-VPN connection.</p>
+         * <p>This parameter is available only for a dual-tunnel IPsec-VPN connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tun-opsqc4d97wni27****</p>
          */
         public Builder tunnelId(String tunnelId) {
             this.putQueryParameter("TunnelId", tunnelId);
@@ -321,7 +347,11 @@ public class DescribeVpnConnectionLogsRequest extends Request {
         }
 
         /**
-         * The ID of the IPsec-VPN connection.
+         * <p>The ID of the IPsec-VPN connection.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vco-m5evqnds4y459flt3****</p>
          */
         public Builder vpnConnectionId(String vpnConnectionId) {
             this.putQueryParameter("VpnConnectionId", vpnConnectionId);

@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceCatalogResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstanceCatalogResponseBody</p>
  */
 public class ListInstanceCatalogResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Vendors")
-    private java.util.List < Vendors> vendors;
+    @com.aliyun.core.annotation.NameInMap("Vendors")
+    private java.util.List<Vendors> vendors;
 
     private ListInstanceCatalogResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
     /**
      * @return vendors
      */
-    public java.util.List < Vendors> getVendors() {
+    public java.util.List<Vendors> getVendors() {
         return this.vendors;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Vendors> vendors; 
+        private java.util.List<Vendors> vendors; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0D42A83F-CE33-5F54-A5AE-05DA39F59E1B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the asset types by service provider.
+         * <p>An array that consists of the asset types by service provider.</p>
          */
-        public Builder vendors(java.util.List < Vendors> vendors) {
+        public Builder vendors(java.util.List<Vendors> vendors) {
             this.vendors = vendors;
             return this;
         }
@@ -71,8 +79,14 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstanceCatalogResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceCatalogResponseBody</p>
+     */
     public static class InstanceSubTypes extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private InstanceSubTypes(Builder builder) {
@@ -98,7 +112,10 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The name of the asset subtype.
+             * <p>The name of the asset subtype.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SECURITY_GROUP</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -112,11 +129,17 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstanceCatalogResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceCatalogResponseBody</p>
+     */
     public static class InstanceTypes extends TeaModel {
-        @NameInMap("InstanceSubTypes")
-        private java.util.List < InstanceSubTypes> instanceSubTypes;
+        @com.aliyun.core.annotation.NameInMap("InstanceSubTypes")
+        private java.util.List<InstanceSubTypes> instanceSubTypes;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private InstanceTypes(Builder builder) {
@@ -135,7 +158,7 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
         /**
          * @return instanceSubTypes
          */
-        public java.util.List < InstanceSubTypes> getInstanceSubTypes() {
+        public java.util.List<InstanceSubTypes> getInstanceSubTypes() {
             return this.instanceSubTypes;
         }
 
@@ -147,19 +170,22 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < InstanceSubTypes> instanceSubTypes; 
+            private java.util.List<InstanceSubTypes> instanceSubTypes; 
             private String name; 
 
             /**
-             * An array that consists of asset subtypes.
+             * <p>An array that consists of asset subtypes.</p>
              */
-            public Builder instanceSubTypes(java.util.List < InstanceSubTypes> instanceSubTypes) {
+            public Builder instanceSubTypes(java.util.List<InstanceSubTypes> instanceSubTypes) {
                 this.instanceSubTypes = instanceSubTypes;
                 return this;
             }
 
             /**
-             * The name of the asset type.
+             * <p>The name of the asset type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -173,11 +199,17 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstanceCatalogResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceCatalogResponseBody</p>
+     */
     public static class Vendors extends TeaModel {
-        @NameInMap("InstanceTypes")
-        private java.util.List < InstanceTypes> instanceTypes;
+        @com.aliyun.core.annotation.NameInMap("InstanceTypes")
+        private java.util.List<InstanceTypes> instanceTypes;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Vendors(Builder builder) {
@@ -196,7 +228,7 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
         /**
          * @return instanceTypes
          */
-        public java.util.List < InstanceTypes> getInstanceTypes() {
+        public java.util.List<InstanceTypes> getInstanceTypes() {
             return this.instanceTypes;
         }
 
@@ -208,19 +240,22 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < InstanceTypes> instanceTypes; 
+            private java.util.List<InstanceTypes> instanceTypes; 
             private String name; 
 
             /**
-             * An array that consists of asset types.
+             * <p>An array that consists of asset types.</p>
              */
-            public Builder instanceTypes(java.util.List < InstanceTypes> instanceTypes) {
+            public Builder instanceTypes(java.util.List<InstanceTypes> instanceTypes) {
                 this.instanceTypes = instanceTypes;
                 return this;
             }
 
             /**
-             * The name of the service provider.
+             * <p>The name of the service provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN</p>
              */
             public Builder name(String name) {
                 this.name = name;

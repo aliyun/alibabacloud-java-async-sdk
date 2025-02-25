@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.docmind_api20220711.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTableUnderstandingResultResponseBody} extends {@link TeaModel}
  *
  * <p>GetTableUnderstandingResultResponseBody</p>
  */
 public class GetTableUnderstandingResultResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Completed")
+    @com.aliyun.core.annotation.NameInMap("Completed")
     private Boolean completed;
 
-    @NameInMap("Data")
-    private java.util.Map < String, ? > data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.Map<String, ?> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private GetTableUnderstandingResultResponseBody(Builder builder) {
@@ -64,7 +69,7 @@ public class GetTableUnderstandingResultResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.Map < String, ? > getData() {
+    public java.util.Map<String, ?> getData() {
         return this.data;
     }
 
@@ -92,7 +97,7 @@ public class GetTableUnderstandingResultResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private Boolean completed; 
-        private java.util.Map < String, ? > data; 
+        private java.util.Map<String, ?> data; 
         private String message; 
         private String requestId; 
         private String status; 
@@ -116,7 +121,7 @@ public class GetTableUnderstandingResultResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.Map < String, ? > data) {
+        public Builder data(java.util.Map<String, ?> data) {
             this.data = data;
             return this;
         }

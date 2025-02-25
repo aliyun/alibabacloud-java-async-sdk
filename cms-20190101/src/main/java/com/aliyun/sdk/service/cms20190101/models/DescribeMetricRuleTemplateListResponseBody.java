@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMetricRuleTemplateListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMetricRuleTemplateListResponseBody</p>
  */
 public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Templates")
+    @com.aliyun.core.annotation.NameInMap("Templates")
     private Templates templates;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
 
     private DescribeMetricRuleTemplateListResponseBody(Builder builder) {
@@ -98,10 +98,13 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * The status code.
-         * <p>
+         * <p>The status code.</p>
+         * <blockquote>
+         * <p>The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * > The status code 200 indicates that the request was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -109,7 +112,10 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Request is not authorization.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,10 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>659401C0-6214-5C02-972A-CFA929D717B7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -125,11 +134,14 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -137,7 +149,7 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
         }
 
         /**
-         * The queried alert templates.
+         * <p>The queried alert templates.</p>
          */
         public Builder templates(Templates templates) {
             this.templates = templates;
@@ -145,7 +157,10 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -158,14 +173,20 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMetricRuleTemplateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMetricRuleTemplateListResponseBody</p>
+     */
     public static class ApplyHistory extends TeaModel {
-        @NameInMap("ApplyTime")
+        @com.aliyun.core.annotation.NameInMap("ApplyTime")
         private Long applyTime;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private Long groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
         private ApplyHistory(Builder builder) {
@@ -209,10 +230,11 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
             private String groupName; 
 
             /**
-             * The timestamp when the alert template was applied to the application group.
-             * <p>
+             * <p>The timestamp when the alert template was applied to the application group.</p>
+             * <p>Unit: milliseconds.</p>
              * 
-             * Unit: milliseconds.
+             * <strong>example:</strong>
+             * <p>1646055898000</p>
              */
             public Builder applyTime(Long applyTime) {
                 this.applyTime = applyTime;
@@ -220,7 +242,10 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application group.
+             * <p>The ID of the application group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3607****</p>
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -228,7 +253,10 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application group.
+             * <p>The name of the application group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS_Group</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -242,8 +270,14 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMetricRuleTemplateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMetricRuleTemplateListResponseBody</p>
+     */
     public static class ApplyHistories extends TeaModel {
-        @NameInMap("ApplyHistory")
+        @com.aliyun.core.annotation.NameInMap("ApplyHistory")
         private java.util.List < ApplyHistory> applyHistory;
 
         private ApplyHistories(Builder builder) {
@@ -283,26 +317,32 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMetricRuleTemplateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMetricRuleTemplateListResponseBody</p>
+     */
     public static class Template extends TeaModel {
-        @NameInMap("ApplyHistories")
+        @com.aliyun.core.annotation.NameInMap("ApplyHistories")
         private ApplyHistories applyHistories;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RestVersion")
+        @com.aliyun.core.annotation.NameInMap("RestVersion")
         private Long restVersion;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private Long templateId;
 
         private Template(Builder builder) {
@@ -382,7 +422,7 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
             private Long templateId; 
 
             /**
-             * The history of applying the alert templates to application groups.
+             * <p>The history of applying the alert templates to application groups.</p>
              */
             public Builder applyHistories(ApplyHistories applyHistories) {
                 this.applyHistories = applyHistories;
@@ -390,7 +430,7 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the alert template.
+             * <p>The description of the alert template.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -398,10 +438,11 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the alert template was created.
-             * <p>
+             * <p>The timestamp when the alert template was created.</p>
+             * <p>Unit: milliseconds.</p>
              * 
-             * Unit: milliseconds.
+             * <strong>example:</strong>
+             * <p>1646018798000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -409,10 +450,11 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the alert template was modified.
-             * <p>
+             * <p>The timestamp when the alert template was modified.</p>
+             * <p>Unit: milliseconds.</p>
              * 
-             * Unit: milliseconds.
+             * <strong>example:</strong>
+             * <p>1646054798000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -420,7 +462,10 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert template.
+             * <p>The name of the alert template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS_Template1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -428,10 +473,11 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the alert template.
-             * <p>
+             * <p>The version of the alert template.</p>
+             * <p>Default value: 0.</p>
              * 
-             * Default value: 0.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder restVersion(Long restVersion) {
                 this.restVersion = restVersion;
@@ -439,7 +485,10 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the alert template.
+             * <p>The ID of the alert template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70****</p>
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;
@@ -453,8 +502,14 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMetricRuleTemplateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMetricRuleTemplateListResponseBody</p>
+     */
     public static class Templates extends TeaModel {
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private java.util.List < Template> template;
 
         private Templates(Builder builder) {

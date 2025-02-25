@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIndexTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeIndexTemplateResponseBody</p>
  */
 public class DescribeIndexTemplateResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private DescribeIndexTemplateResponseBody(Builder builder) {
@@ -71,14 +71,20 @@ public class DescribeIndexTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeIndexTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIndexTemplateResponseBody</p>
+     */
     public static class Template extends TeaModel {
-        @NameInMap("aliases")
+        @com.aliyun.core.annotation.NameInMap("aliases")
         private String aliases;
 
-        @NameInMap("mappings")
+        @com.aliyun.core.annotation.NameInMap("mappings")
         private String mappings;
 
-        @NameInMap("settings")
+        @com.aliyun.core.annotation.NameInMap("settings")
         private String settings;
 
         private Template(Builder builder) {
@@ -152,23 +158,29 @@ public class DescribeIndexTemplateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIndexTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIndexTemplateResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("dataStream")
+        @com.aliyun.core.annotation.NameInMap("dataStream")
         private Boolean dataStream;
 
-        @NameInMap("ilmPolicy")
+        @com.aliyun.core.annotation.NameInMap("ilmPolicy")
         private String ilmPolicy;
 
-        @NameInMap("indexPatterns")
+        @com.aliyun.core.annotation.NameInMap("indexPatterns")
         private java.util.List < String > indexPatterns;
 
-        @NameInMap("indexTemplate")
+        @com.aliyun.core.annotation.NameInMap("indexTemplate")
         private String indexTemplate;
 
-        @NameInMap("priority")
+        @com.aliyun.core.annotation.NameInMap("priority")
         private Integer priority;
 
-        @NameInMap("template")
+        @com.aliyun.core.annotation.NameInMap("template")
         private Template template;
 
         private Result(Builder builder) {

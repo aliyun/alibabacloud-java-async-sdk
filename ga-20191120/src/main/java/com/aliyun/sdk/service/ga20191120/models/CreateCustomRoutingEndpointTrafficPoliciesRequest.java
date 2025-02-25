@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCustomRoutingEndpointTrafficPoliciesRequest</p>
  */
 public class CreateCustomRoutingEndpointTrafficPoliciesRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("EndpointId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endpointId;
 
-    @Query
-    @NameInMap("PolicyConfigurations")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyConfigurations")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < PolicyConfigurations> policyConfigurations;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private CreateCustomRoutingEndpointTrafficPoliciesRequest(Builder builder) {
@@ -113,10 +112,7 @@ public class CreateCustomRoutingEndpointTrafficPoliciesRequest extends Request {
         }
 
         /**
-         * The ID of the endpoint for which you want to create the traffic destinations.
-         * <p>
-         * 
-         * > This parameter is required.
+         * The ID of the endpoint for which you want to create traffic destinations.
          */
         public Builder endpointId(String endpointId) {
             this.putQueryParameter("EndpointId", endpointId);
@@ -153,10 +149,10 @@ public class CreateCustomRoutingEndpointTrafficPoliciesRequest extends Request {
     } 
 
     public static class PortRanges extends TeaModel {
-        @NameInMap("FromPort")
+        @com.aliyun.core.annotation.NameInMap("FromPort")
         private Integer fromPort;
 
-        @NameInMap("ToPort")
+        @com.aliyun.core.annotation.NameInMap("ToPort")
         private Integer toPort;
 
         private PortRanges(Builder builder) {
@@ -228,10 +224,10 @@ public class CreateCustomRoutingEndpointTrafficPoliciesRequest extends Request {
 
     }
     public static class PolicyConfigurations extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("PortRanges")
+        @com.aliyun.core.annotation.NameInMap("PortRanges")
         private java.util.List < PortRanges> portRanges;
 
         private PolicyConfigurations(Builder builder) {

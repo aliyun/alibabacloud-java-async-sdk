@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteParameterGroupResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteParameterGroupResponseBody</p>
  */
 public class DeleteParameterGroupResponseBody extends TeaModel {
-    @NameInMap("ParameterGroupId")
+    @com.aliyun.core.annotation.NameInMap("ParameterGroupId")
     private String parameterGroupId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteParameterGroupResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DeleteParameterGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the parameter template.
+         * <p>The ID of the parameter template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rpg-gfs****</p>
          */
         public Builder parameterGroupId(String parameterGroupId) {
             this.parameterGroupId = parameterGroupId;
@@ -58,7 +66,10 @@ public class DeleteParameterGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8AF26036-B254-4212-B8E4-EFBE818B7FD6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

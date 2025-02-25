@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePdnsUserInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePdnsUserInfoResponseBody</p>
  */
 public class DescribePdnsUserInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UserInfo")
+    @com.aliyun.core.annotation.NameInMap("UserInfo")
     private UserInfo userInfo;
 
     private DescribePdnsUserInfoResponseBody(Builder builder) {
@@ -71,27 +76,45 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePdnsUserInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePdnsUserInfoResponseBody</p>
+     */
     public static class UserInfo extends TeaModel {
-        @NameInMap("AvailableService")
+        @com.aliyun.core.annotation.NameInMap("AvailableAccessSecurityType")
+        private String availableAccessSecurityType;
+
+        @com.aliyun.core.annotation.NameInMap("AvailableService")
         private String availableService;
 
-        @NameInMap("PdnsId")
+        @com.aliyun.core.annotation.NameInMap("PdnsId")
         private Long pdnsId;
 
-        @NameInMap("ServiceType")
+        @com.aliyun.core.annotation.NameInMap("SecretKey")
+        private String secretKey;
+
+        @com.aliyun.core.annotation.NameInMap("ServiceType")
         private String serviceType;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("StoppedService")
+        @com.aliyun.core.annotation.NameInMap("StatisticSwitchStatus")
+        private String statisticSwitchStatus;
+
+        @com.aliyun.core.annotation.NameInMap("StoppedService")
         private String stoppedService;
 
         private UserInfo(Builder builder) {
+            this.availableAccessSecurityType = builder.availableAccessSecurityType;
             this.availableService = builder.availableService;
             this.pdnsId = builder.pdnsId;
+            this.secretKey = builder.secretKey;
             this.serviceType = builder.serviceType;
             this.state = builder.state;
+            this.statisticSwitchStatus = builder.statisticSwitchStatus;
             this.stoppedService = builder.stoppedService;
         }
 
@@ -101,6 +124,13 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
 
         public static UserInfo create() {
             return builder().build();
+        }
+
+        /**
+         * @return availableAccessSecurityType
+         */
+        public String getAvailableAccessSecurityType() {
+            return this.availableAccessSecurityType;
         }
 
         /**
@@ -118,6 +148,13 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return secretKey
+         */
+        public String getSecretKey() {
+            return this.secretKey;
+        }
+
+        /**
          * @return serviceType
          */
         public String getServiceType() {
@@ -132,6 +169,13 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return statisticSwitchStatus
+         */
+        public String getStatisticSwitchStatus() {
+            return this.statisticSwitchStatus;
+        }
+
+        /**
          * @return stoppedService
          */
         public String getStoppedService() {
@@ -139,11 +183,22 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String availableAccessSecurityType; 
             private String availableService; 
             private Long pdnsId; 
+            private String secretKey; 
             private String serviceType; 
             private String state; 
+            private String statisticSwitchStatus; 
             private String stoppedService; 
+
+            /**
+             * AvailableAccessSecurityType.
+             */
+            public Builder availableAccessSecurityType(String availableAccessSecurityType) {
+                this.availableAccessSecurityType = availableAccessSecurityType;
+                return this;
+            }
 
             /**
              * AvailableService.
@@ -162,6 +217,14 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
             }
 
             /**
+             * SecretKey.
+             */
+            public Builder secretKey(String secretKey) {
+                this.secretKey = secretKey;
+                return this;
+            }
+
+            /**
              * ServiceType.
              */
             public Builder serviceType(String serviceType) {
@@ -174,6 +237,14 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
              */
             public Builder state(String state) {
                 this.state = state;
+                return this;
+            }
+
+            /**
+             * StatisticSwitchStatus.
+             */
+            public Builder statisticSwitchStatus(String statisticSwitchStatus) {
+                this.statisticSwitchStatus = statisticSwitchStatus;
                 return this;
             }
 

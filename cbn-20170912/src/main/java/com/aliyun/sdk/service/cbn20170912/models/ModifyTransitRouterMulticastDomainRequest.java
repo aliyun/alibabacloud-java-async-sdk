@@ -1,58 +1,68 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyTransitRouterMulticastDomainRequest} extends {@link RequestModel}
  *
  * <p>ModifyTransitRouterMulticastDomainRequest</p>
  */
 public class ModifyTransitRouterMulticastDomainRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Options")
+    private Options options;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TransitRouterMulticastDomainDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterMulticastDomainDescription")
     private String transitRouterMulticastDomainDescription;
 
-    @Query
-    @NameInMap("TransitRouterMulticastDomainId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterMulticastDomainId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String transitRouterMulticastDomainId;
 
-    @Query
-    @NameInMap("TransitRouterMulticastDomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterMulticastDomainName")
     private String transitRouterMulticastDomainName;
 
     private ModifyTransitRouterMulticastDomainRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
+        this.options = builder.options;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -87,6 +97,13 @@ public class ModifyTransitRouterMulticastDomainRequest extends Request {
      */
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    /**
+     * @return options
+     */
+    public Options getOptions() {
+        return this.options;
     }
 
     /**
@@ -141,6 +158,7 @@ public class ModifyTransitRouterMulticastDomainRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyTransitRouterMulticastDomainRequest, Builder> {
         private String clientToken; 
         private Boolean dryRun; 
+        private Options options; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
@@ -157,6 +175,7 @@ public class ModifyTransitRouterMulticastDomainRequest extends Request {
             super(request);
             this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
+            this.options = request.options;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -167,10 +186,11 @@ public class ModifyTransitRouterMulticastDomainRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-4266****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -179,15 +199,27 @@ public class ModifyTransitRouterMulticastDomainRequest extends Request {
         }
 
         /**
-         * Specifies whether only to precheck the request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request.</li>
+         * </ul>
          * 
-         * *   **true**: prechecks the request but does not modify the name or description of the multicast domain. The system checks the required parameters, the request format, and the service limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
-         * *   **false** (default): sends the request. If the request passes the precheck, the name and description of the multicast domain are modified.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
             this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * Options.
+         */
+        public Builder options(Options options) {
+            this.putQueryParameter("Options", options);
+            this.options = options;
             return this;
         }
 
@@ -228,10 +260,11 @@ public class ModifyTransitRouterMulticastDomainRequest extends Request {
         }
 
         /**
-         * The new description of the multicast domain.
-         * <p>
+         * <p>The new description of the multicast domain.</p>
+         * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
          * 
-         * The description must be 0 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (\_), and hyphens (-).
+         * <strong>example:</strong>
+         * <p>desctest</p>
          */
         public Builder transitRouterMulticastDomainDescription(String transitRouterMulticastDomainDescription) {
             this.putQueryParameter("TransitRouterMulticastDomainDescription", transitRouterMulticastDomainDescription);
@@ -240,7 +273,11 @@ public class ModifyTransitRouterMulticastDomainRequest extends Request {
         }
 
         /**
-         * The ID of the multicast domain.
+         * <p>The ID of the multicast domain.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-mcast-domain-40cwj0rgzgdtam****</p>
          */
         public Builder transitRouterMulticastDomainId(String transitRouterMulticastDomainId) {
             this.putQueryParameter("TransitRouterMulticastDomainId", transitRouterMulticastDomainId);
@@ -249,10 +286,11 @@ public class ModifyTransitRouterMulticastDomainRequest extends Request {
         }
 
         /**
-         * The new name of the multicast domain.
-         * <p>
+         * <p>The new name of the multicast domain.</p>
+         * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
          * 
-         * The name must be 0 to 128 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (\_), and hyphens (-).
+         * <strong>example:</strong>
+         * <p>nametest</p>
          */
         public Builder transitRouterMulticastDomainName(String transitRouterMulticastDomainName) {
             this.putQueryParameter("TransitRouterMulticastDomainName", transitRouterMulticastDomainName);
@@ -267,4 +305,51 @@ public class ModifyTransitRouterMulticastDomainRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyTransitRouterMulticastDomainRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyTransitRouterMulticastDomainRequest</p>
+     */
+    public static class Options extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Igmpv2Support")
+        private String igmpv2Support;
+
+        private Options(Builder builder) {
+            this.igmpv2Support = builder.igmpv2Support;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Options create() {
+            return builder().build();
+        }
+
+        /**
+         * @return igmpv2Support
+         */
+        public String getIgmpv2Support() {
+            return this.igmpv2Support;
+        }
+
+        public static final class Builder {
+            private String igmpv2Support; 
+
+            /**
+             * Igmpv2Support.
+             */
+            public Builder igmpv2Support(String igmpv2Support) {
+                this.igmpv2Support = igmpv2Support;
+                return this;
+            }
+
+            public Options build() {
+                return new Options(this);
+            } 
+
+        } 
+
+    }
 }

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataShareInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDataShareInstancesResponseBody</p>
  */
 public class DescribeDataShareInstancesResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeDataShareInstancesResponseBody(Builder builder) {
@@ -86,13 +91,13 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The state of data sharing. Valid values:
-         * <p>
-         * 
-         * *   **opening**
-         * *   **opened**
-         * *   **closing**
-         * *   **closed**
+         * <p>The state of data sharing. Valid values:</p>
+         * <ul>
+         * <li><strong>opening</strong></li>
+         * <li><strong>opened</strong></li>
+         * <li><strong>closing</strong></li>
+         * <li><strong>closed</strong></li>
+         * </ul>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -100,7 +105,10 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -108,7 +116,10 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -116,7 +127,10 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4CAF581-2AC7-41AD-8940-D5**********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -124,7 +138,10 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -137,23 +154,29 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDataShareInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataShareInstancesResponseBody</p>
+     */
     public static class DBInstance extends TeaModel {
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("DBInstanceMode")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceMode")
         private String DBInstanceMode;
 
-        @NameInMap("DataShareStatus")
+        @com.aliyun.core.annotation.NameInMap("DataShareStatus")
         private String dataShareStatus;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private DBInstance(Builder builder) {
@@ -224,7 +247,10 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gp-bp***************</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -232,12 +258,15 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type of the instance. Valid values:
-             * <p>
+             * <p>The resource type of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Serverless</strong>: Serverless mode</li>
+             * <li><strong>StorageElasic</strong>: elastic storage mode</li>
+             * <li><strong>Classic</strong>: reserved storage mode</li>
+             * </ul>
              * 
-             * *   **Serverless**: Serverless mode
-             * *   **StorageElasic**: elastic storage mode
-             * *   **Classic**: reserved storage mode
+             * <strong>example:</strong>
+             * <p>Serverless</p>
              */
             public Builder DBInstanceMode(String DBInstanceMode) {
                 this.DBInstanceMode = DBInstanceMode;
@@ -245,13 +274,16 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of data sharing. Valid values:
-             * <p>
+             * <p>The state of data sharing. Valid values:</p>
+             * <ul>
+             * <li><strong>opening</strong>: Data sharing is being enabled.</li>
+             * <li><strong>opened</strong>: Data sharing is enabled.</li>
+             * <li><strong>closing</strong>: Data sharing is being disabled.</li>
+             * <li><strong>closed</strong>: Data sharing is disabled.</li>
+             * </ul>
              * 
-             * *   **opening**: Data sharing is being enabled.
-             * *   **opened**: Data sharing is enabled.
-             * *   **closing**: Data sharing is being disabled.
-             * *   **closed**: Data sharing is disabled.
+             * <strong>example:</strong>
+             * <p>opened</p>
              */
             public Builder dataShareStatus(String dataShareStatus) {
                 this.dataShareStatus = dataShareStatus;
@@ -259,7 +291,10 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the instance.
+             * <p>The description of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gp-bp***************</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -267,7 +302,10 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the instance.
+             * <p>The region ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -275,7 +313,10 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID of the instance.
+             * <p>The zone ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-j</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -289,9 +330,15 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataShareInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataShareInstancesResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("DBInstance")
-        private java.util.List < DBInstance> DBInstance;
+        @com.aliyun.core.annotation.NameInMap("DBInstance")
+        private java.util.List<DBInstance> DBInstance;
 
         private Items(Builder builder) {
             this.DBInstance = builder.DBInstance;
@@ -308,17 +355,17 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
         /**
          * @return DBInstance
          */
-        public java.util.List < DBInstance> getDBInstance() {
+        public java.util.List<DBInstance> getDBInstance() {
             return this.DBInstance;
         }
 
         public static final class Builder {
-            private java.util.List < DBInstance> DBInstance; 
+            private java.util.List<DBInstance> DBInstance; 
 
             /**
              * DBInstance.
              */
-            public Builder DBInstance(java.util.List < DBInstance> DBInstance) {
+            public Builder DBInstance(java.util.List<DBInstance> DBInstance) {
                 this.DBInstance = DBInstance;
                 return this;
             }

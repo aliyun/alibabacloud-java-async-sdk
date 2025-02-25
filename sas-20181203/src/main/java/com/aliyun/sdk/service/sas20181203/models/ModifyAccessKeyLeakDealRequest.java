@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAccessKeyLeakDealRequest} extends {@link RequestModel}
  *
  * <p>ModifyAccessKeyLeakDealRequest</p>
  */
 public class ModifyAccessKeyLeakDealRequest extends Request {
-    @Query
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @Query
-    @NameInMap("IdList")
-    private java.util.List < Long > idList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdList")
+    private java.util.List<Long> idList;
 
-    @Query
-    @NameInMap("Remark")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private ModifyAccessKeyLeakDealRequest(Builder builder) {
@@ -60,7 +65,7 @@ public class ModifyAccessKeyLeakDealRequest extends Request {
     /**
      * @return idList
      */
-    public java.util.List < Long > getIdList() {
+    public java.util.List<Long> getIdList() {
         return this.idList;
     }
 
@@ -80,7 +85,7 @@ public class ModifyAccessKeyLeakDealRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyAccessKeyLeakDealRequest, Builder> {
         private Long id; 
-        private java.util.List < Long > idList; 
+        private java.util.List<Long> idList; 
         private String remark; 
         private String type; 
 
@@ -97,10 +102,13 @@ public class ModifyAccessKeyLeakDealRequest extends Request {
         } 
 
         /**
-         * The ID of the AccessKey pair leak.
-         * <p>
+         * <p>The ID of the AccessKey pair leak.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeAccesskeyLeakList~~">DescribeAccesskeyLeakList</a> operation to query the ID. You must specify at least one of the Id and <strong>IdList</strong> parameters.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeAccesskeyLeakList](~~DescribeAccesskeyLeakList~~) operation to query the ID. You must specify at least one of the Id and **IdList** parameters.
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -109,16 +117,19 @@ public class ModifyAccessKeyLeakDealRequest extends Request {
         }
 
         /**
-         * The IDs of AccessKey pair leaks.
+         * <p>The IDs of AccessKey pair leaks.</p>
          */
-        public Builder idList(java.util.List < Long > idList) {
+        public Builder idList(java.util.List<Long> idList) {
             this.putQueryParameter("IdList", idList);
             this.idList = idList;
             return this;
         }
 
         /**
-         * The remarks that are added.
+         * <p>The remarks that are added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>disabled.</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -127,12 +138,16 @@ public class ModifyAccessKeyLeakDealRequest extends Request {
         }
 
         /**
-         * The method to handle the AccessKey pair leak. Valid values:
-         * <p>
+         * <p>The method to handle the AccessKey pair leak. Valid values:</p>
+         * <ul>
+         * <li><strong>manual</strong>: manually handle</li>
+         * <li><strong>disable</strong>: disable</li>
+         * <li><strong>add-whitelist</strong>: add to the whitelist</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **manual**: manually handle
-         * *   **disable**: disable
-         * *   **add-whitelist**: add to the whitelist
+         * <strong>example:</strong>
+         * <p>disable</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

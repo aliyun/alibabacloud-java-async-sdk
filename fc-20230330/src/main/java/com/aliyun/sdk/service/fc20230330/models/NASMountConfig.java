@@ -1,26 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link NASMountConfig} extends {@link TeaModel}
  *
  * <p>NASMountConfig</p>
  */
 public class NASMountConfig extends TeaModel {
-    @NameInMap("enableTLS")
+    @com.aliyun.core.annotation.NameInMap("enableTLS")
     private Boolean enableTLS;
 
-    @NameInMap("mountDir")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.NameInMap("mountDir")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String mountDir;
 
-    @NameInMap("serverAddr")
-    @Validation(maxLength = 128)
+    @com.aliyun.core.annotation.NameInMap("serverAddr")
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String serverAddr;
 
     private NASMountConfig(Builder builder) {

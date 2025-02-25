@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEnvCustomJobsRequest} extends {@link RequestModel}
  *
  * <p>ListEnvCustomJobsRequest</p>
  */
 public class ListEnvCustomJobsRequest extends Request {
-    @Query
-    @NameInMap("EncryptYaml")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptYaml")
     private Boolean encryptYaml;
 
-    @Query
-    @NameInMap("EnvironmentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnvironmentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String environmentId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private ListEnvCustomJobsRequest(Builder builder) {
@@ -84,7 +89,10 @@ public class ListEnvCustomJobsRequest extends Request {
         } 
 
         /**
-         * Specifies whether to return the encrypted YAML string.
+         * <p>Specifies whether to return the encrypted YAML string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder encryptYaml(Boolean encryptYaml) {
             this.putQueryParameter("EncryptYaml", encryptYaml);
@@ -93,7 +101,11 @@ public class ListEnvCustomJobsRequest extends Request {
         }
 
         /**
-         * The ID of the environment instance.
+         * <p>The ID of the environment instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxxxx</p>
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -102,7 +114,11 @@ public class ListEnvCustomJobsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

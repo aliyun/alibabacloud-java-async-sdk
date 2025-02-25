@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCrossRegionBackupsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCrossRegionBackupsResponseBody</p>
  */
 public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeCrossRegionBackupsResponseBody(Builder builder) {
@@ -122,7 +127,10 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The end of the time range to query.
+         * <p>The end of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-06-15T12:10:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -130,7 +138,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The cross-region data backup files.
+         * <p>The cross-region data backup files.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -138,10 +146,11 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number. Pages start from page 1.
-         * <p>
+         * <p>The page number. Pages start from page 1.</p>
+         * <p>Default value: <strong>1</strong>.</p>
          * 
-         * Default value: **1**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -149,7 +158,10 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of cross-region data backup files on the current page.
+         * <p>The number of cross-region data backup files on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -157,7 +169,10 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -165,7 +180,10 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60912B41-7579-4B5D-B289-8856030F0A6A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -173,7 +191,10 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The beginning of the time range to query.
+         * <p>The beginning of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-30T12:10:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -181,7 +202,10 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries that are returned.
+         * <p>The total number of entries that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -194,9 +218,15 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCrossRegionBackupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCrossRegionBackupsResponseBody</p>
+     */
     public static class RestoreRegions extends TeaModel {
-        @NameInMap("RestoreRegion")
-        private java.util.List < String > restoreRegion;
+        @com.aliyun.core.annotation.NameInMap("RestoreRegion")
+        private java.util.List<String> restoreRegion;
 
         private RestoreRegions(Builder builder) {
             this.restoreRegion = builder.restoreRegion;
@@ -213,17 +243,17 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
         /**
          * @return restoreRegion
          */
-        public java.util.List < String > getRestoreRegion() {
+        public java.util.List<String> getRestoreRegion() {
             return this.restoreRegion;
         }
 
         public static final class Builder {
-            private java.util.List < String > restoreRegion; 
+            private java.util.List<String> restoreRegion; 
 
             /**
              * RestoreRegion.
              */
-            public Builder restoreRegion(java.util.List < String > restoreRegion) {
+            public Builder restoreRegion(java.util.List<String> restoreRegion) {
                 this.restoreRegion = restoreRegion;
                 return this;
             }
@@ -235,62 +265,68 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCrossRegionBackupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCrossRegionBackupsResponseBody</p>
+     */
     public static class Item extends TeaModel {
-        @NameInMap("BackupEndTime")
+        @com.aliyun.core.annotation.NameInMap("BackupEndTime")
         private String backupEndTime;
 
-        @NameInMap("BackupMethod")
+        @com.aliyun.core.annotation.NameInMap("BackupMethod")
         private String backupMethod;
 
-        @NameInMap("BackupSetScale")
+        @com.aliyun.core.annotation.NameInMap("BackupSetScale")
         private Integer backupSetScale;
 
-        @NameInMap("BackupSetStatus")
+        @com.aliyun.core.annotation.NameInMap("BackupSetStatus")
         private Integer backupSetStatus;
 
-        @NameInMap("BackupStartTime")
+        @com.aliyun.core.annotation.NameInMap("BackupStartTime")
         private String backupStartTime;
 
-        @NameInMap("BackupType")
+        @com.aliyun.core.annotation.NameInMap("BackupType")
         private String backupType;
 
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("ConsistentTime")
+        @com.aliyun.core.annotation.NameInMap("ConsistentTime")
         private String consistentTime;
 
-        @NameInMap("CrossBackupDownloadLink")
+        @com.aliyun.core.annotation.NameInMap("CrossBackupDownloadLink")
         private String crossBackupDownloadLink;
 
-        @NameInMap("CrossBackupId")
+        @com.aliyun.core.annotation.NameInMap("CrossBackupId")
         private Integer crossBackupId;
 
-        @NameInMap("CrossBackupRegion")
+        @com.aliyun.core.annotation.NameInMap("CrossBackupRegion")
         private String crossBackupRegion;
 
-        @NameInMap("CrossBackupSetFile")
+        @com.aliyun.core.annotation.NameInMap("CrossBackupSetFile")
         private String crossBackupSetFile;
 
-        @NameInMap("CrossBackupSetLocation")
+        @com.aliyun.core.annotation.NameInMap("CrossBackupSetLocation")
         private String crossBackupSetLocation;
 
-        @NameInMap("CrossBackupSetSize")
+        @com.aliyun.core.annotation.NameInMap("CrossBackupSetSize")
         private Long crossBackupSetSize;
 
-        @NameInMap("DBInstanceStorageType")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceStorageType")
         private String DBInstanceStorageType;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("EngineVersion")
+        @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private String engineVersion;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Integer instanceId;
 
-        @NameInMap("RestoreRegions")
+        @com.aliyun.core.annotation.NameInMap("RestoreRegions")
         private RestoreRegions restoreRegions;
 
         private Item(Builder builder) {
@@ -478,7 +514,10 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             private RestoreRegions restoreRegions; 
 
             /**
-             * The time when the cross-region data backup file was generated.
+             * <p>The time when the cross-region data backup file was generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-06-15T12:10:00Z</p>
              */
             public Builder backupEndTime(String backupEndTime) {
                 this.backupEndTime = backupEndTime;
@@ -486,11 +525,14 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The method that is used to generate the cross-region data backup file. Valid values:
-             * <p>
+             * <p>The method that is used to generate the cross-region data backup file. Valid values:</p>
+             * <ul>
+             * <li><strong>L</strong>: logical backup</li>
+             * <li><strong>P</strong>: physical backup</li>
+             * </ul>
              * 
-             * *   **L**: logical backup
-             * *   **P**: physical backup
+             * <strong>example:</strong>
+             * <p>P</p>
              */
             public Builder backupMethod(String backupMethod) {
                 this.backupMethod = backupMethod;
@@ -498,11 +540,14 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The level at which the cross-region data backup file is generated.
-             * <p>
+             * <p>The level at which the cross-region data backup file is generated.</p>
+             * <ul>
+             * <li><strong>0</strong>: instance-level backup</li>
+             * <li><strong>1</strong>: database-level backup</li>
+             * </ul>
              * 
-             * *   **0**: instance-level backup
-             * *   **1**: database-level backup
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder backupSetScale(Integer backupSetScale) {
                 this.backupSetScale = backupSetScale;
@@ -510,11 +555,14 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the cross-region data backup. Valid values:
-             * <p>
+             * <p>The status of the cross-region data backup. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The cross-region data backup is successful.</li>
+             * <li><strong>1</strong>: The cross-region data backup failed.</li>
+             * </ul>
              * 
-             * *   **0**: The cross-region data backup is successful.
-             * *   **1**: The cross-region data backup failed.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder backupSetStatus(Integer backupSetStatus) {
                 this.backupSetStatus = backupSetStatus;
@@ -522,7 +570,10 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cross-region data backup started.
+             * <p>The time when the cross-region data backup started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-05-30T12:10:00Z</p>
              */
             public Builder backupStartTime(String backupStartTime) {
                 this.backupStartTime = backupStartTime;
@@ -530,11 +581,14 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the cross-region data backup. Valid values:
-             * <p>
+             * <p>The type of the cross-region data backup. Valid values:</p>
+             * <ul>
+             * <li><strong>F</strong>: full data backup</li>
+             * <li><strong>I</strong>: incremental data backup</li>
+             * </ul>
              * 
-             * *   **F**: full data backup
-             * *   **I**: incremental data backup
+             * <strong>example:</strong>
+             * <p>F</p>
              */
             public Builder backupType(String backupType) {
                 this.backupType = backupType;
@@ -542,12 +596,15 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The RDS edition of the instance. Valid values:
-             * <p>
+             * <p>The RDS edition of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Basic</strong>: RDS Basic Edition.</li>
+             * <li><strong>HighAvailability</strong>: RDS High-availability Edition.</li>
+             * <li><strong>Finance</strong>: RDS Enterprise Edition. This edition is available only for the China site (aliyun.com).</li>
+             * </ul>
              * 
-             * *   **Basic**: RDS Basic Edition
-             * *   **HighAvailability**: RDS High-availability Edition
-             * *   **Finance**: Enterprise Edition. This edition is supported only by the China site (aliyun.com).
+             * <strong>example:</strong>
+             * <p>HighAvailability</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -555,7 +612,10 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time that is indicated by the data in the cross-region data backup file.
+             * <p>The point in time that is indicated by the data in the cross-region data backup file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-06-12T05:44:46Z</p>
              */
             public Builder consistentTime(String consistentTime) {
                 this.consistentTime = consistentTime;
@@ -563,7 +623,10 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The external URL from which you can download the cross-region data backup file.
+             * <p>The external URL from which you can download the cross-region data backup file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://rdsddrbak-shanghai.oss-cn-shanghai.aliyuncs.com/xxxxx">http://rdsddrbak-shanghai.oss-cn-shanghai.aliyuncs.com/xxxxx</a></p>
              */
             public Builder crossBackupDownloadLink(String crossBackupDownloadLink) {
                 this.crossBackupDownloadLink = crossBackupDownloadLink;
@@ -571,7 +634,10 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cross-region data backup file.
+             * <p>The ID of the cross-region data backup file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14377</p>
              */
             public Builder crossBackupId(Integer crossBackupId) {
                 this.crossBackupId = crossBackupId;
@@ -579,7 +645,10 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the cross-region backup files of the instance are stored.
+             * <p>The ID of the region in which the cross-region backup files of the instance are stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder crossBackupRegion(String crossBackupRegion) {
                 this.crossBackupRegion = crossBackupRegion;
@@ -587,7 +656,10 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the compressed package that contains the cross-region data backup file.
+             * <p>The name of the compressed package that contains the cross-region data backup file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou_rm-xxxxx_hins81xxx_data_20190612134426_qp.xb</p>
              */
             public Builder crossBackupSetFile(String crossBackupSetFile) {
                 this.crossBackupSetFile = crossBackupSetFile;
@@ -595,7 +667,10 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The location where the cross-region data backup file is stored.
+             * <p>The location where the cross-region data backup file is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss</p>
              */
             public Builder crossBackupSetLocation(String crossBackupSetLocation) {
                 this.crossBackupSetLocation = crossBackupSetLocation;
@@ -603,7 +678,10 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the cross-region data backup file. Unit: bytes.
+             * <p>The size of the cross-region data backup file. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5312836</p>
              */
             public Builder crossBackupSetSize(Long crossBackupSetSize) {
                 this.crossBackupSetSize = crossBackupSetSize;
@@ -611,12 +689,15 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The storage type. Valid values:
-             * <p>
+             * <p>The storage type. Valid values:</p>
+             * <ul>
+             * <li><strong>local_ssd</strong>: local SSDs. This is the recommended storage type.</li>
+             * <li><strong>cloud_ssd</strong>: standard SSD.</li>
+             * <li><strong>cloud_essd</strong>: enhanced SSD (ESSD).</li>
+             * </ul>
              * 
-             * *   **local_ssd**: local SSD. This is the recommended storage type.
-             * *   **cloud_ssd**: standard SSD.
-             * *   **cloud_essd**: enhanced SSD (ESSD)
+             * <strong>example:</strong>
+             * <p>ssd</p>
              */
             public Builder DBInstanceStorageType(String DBInstanceStorageType) {
                 this.DBInstanceStorageType = DBInstanceStorageType;
@@ -624,7 +705,10 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine of the instance.
+             * <p>The database engine of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -632,7 +716,10 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine version of the instance.
+             * <p>The database engine version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.6</p>
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -640,7 +727,10 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance. This parameter is used to determine whether the instance that generates the cross-region data backup file is a primary or secondary instance.
+             * <p>The instance ID. This parameter is used to determine whether the instance that generates the cross-region data backup file is a primary or secondary instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8161055</p>
              */
             public Builder instanceId(Integer instanceId) {
                 this.instanceId = instanceId;
@@ -648,7 +738,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the regions to which the cross-region data backup file can be restored.
+             * <p>The regions to which the cross-region data backup file can be restored.</p>
              */
             public Builder restoreRegions(RestoreRegions restoreRegions) {
                 this.restoreRegions = restoreRegions;
@@ -662,9 +752,15 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCrossRegionBackupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCrossRegionBackupsResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("Item")
-        private java.util.List < Item> item;
+        @com.aliyun.core.annotation.NameInMap("Item")
+        private java.util.List<Item> item;
 
         private Items(Builder builder) {
             this.item = builder.item;
@@ -681,17 +777,17 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
         /**
          * @return item
          */
-        public java.util.List < Item> getItem() {
+        public java.util.List<Item> getItem() {
             return this.item;
         }
 
         public static final class Builder {
-            private java.util.List < Item> item; 
+            private java.util.List<Item> item; 
 
             /**
              * Item.
              */
-            public Builder item(java.util.List < Item> item) {
+            public Builder item(java.util.List<Item> item) {
                 this.item = item;
                 return this;
             }

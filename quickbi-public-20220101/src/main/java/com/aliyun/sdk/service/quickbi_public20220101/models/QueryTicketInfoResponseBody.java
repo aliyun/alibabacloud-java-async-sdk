@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryTicketInfoResponseBody} extends {@link TeaModel}
  *
  * <p>QueryTicketInfoResponseBody</p>
  */
 public class QueryTicketInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryTicketInfoResponseBody(Builder builder) {
@@ -91,38 +96,44 @@ public class QueryTicketInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryTicketInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTicketInfoResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("AccessTicket")
+        @com.aliyun.core.annotation.NameInMap("AccessTicket")
         private String accessTicket;
 
-        @NameInMap("CmptId")
+        @com.aliyun.core.annotation.NameInMap("CmptId")
         private String cmptId;
 
-        @NameInMap("GlobalParam")
+        @com.aliyun.core.annotation.NameInMap("GlobalParam")
         private String globalParam;
 
-        @NameInMap("InvalidTime")
+        @com.aliyun.core.annotation.NameInMap("InvalidTime")
         private String invalidTime;
 
-        @NameInMap("MaxTicketNum")
+        @com.aliyun.core.annotation.NameInMap("MaxTicketNum")
         private Integer maxTicketNum;
 
-        @NameInMap("OrganizationId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationId")
         private String organizationId;
 
-        @NameInMap("RegisterTime")
+        @com.aliyun.core.annotation.NameInMap("RegisterTime")
         private String registerTime;
 
-        @NameInMap("UsedTicketNum")
+        @com.aliyun.core.annotation.NameInMap("UsedTicketNum")
         private Integer usedTicketNum;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("WatermarkParam")
+        @com.aliyun.core.annotation.NameInMap("WatermarkParam")
         private String watermarkParam;
 
-        @NameInMap("WorksId")
+        @com.aliyun.core.annotation.NameInMap("WorksId")
         private String worksId;
 
         private Result(Builder builder) {

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSearchSourceCodeResponseBody} extends {@link TeaModel}
  *
  * <p>ListSearchSourceCodeResponseBody</p>
  */
 public class ListSearchSourceCodeResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
-    private java.util.List < Result> result;
+    @com.aliyun.core.annotation.NameInMap("result")
+    private java.util.List<Result> result;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("total")
+    @com.aliyun.core.annotation.NameInMap("total")
     private Long total;
 
     private ListSearchSourceCodeResponseBody(Builder builder) {
@@ -71,7 +76,7 @@ public class ListSearchSourceCodeResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -93,7 +98,7 @@ public class ListSearchSourceCodeResponseBody extends TeaModel {
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Boolean success; 
         private Long total; 
 
@@ -124,7 +129,7 @@ public class ListSearchSourceCodeResponseBody extends TeaModel {
         /**
          * result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -151,17 +156,23 @@ public class ListSearchSourceCodeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSearchSourceCodeResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSearchSourceCodeResponseBody</p>
+     */
     public static class HighlightTextMap extends TeaModel {
-        @NameInMap("clob")
+        @com.aliyun.core.annotation.NameInMap("clob")
         private String clob;
 
-        @NameInMap("fileName")
+        @com.aliyun.core.annotation.NameInMap("fileName")
         private String fileName;
 
-        @NameInMap("language")
+        @com.aliyun.core.annotation.NameInMap("language")
         private String language;
 
-        @NameInMap("organizationId")
+        @com.aliyun.core.annotation.NameInMap("organizationId")
         private String organizationId;
 
         private HighlightTextMap(Builder builder) {
@@ -252,26 +263,32 @@ public class ListSearchSourceCodeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSearchSourceCodeResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSearchSourceCodeResponseBody</p>
+     */
     public static class Source extends TeaModel {
-        @NameInMap("branch")
+        @com.aliyun.core.annotation.NameInMap("branch")
         private String branch;
 
-        @NameInMap("checkinDate")
+        @com.aliyun.core.annotation.NameInMap("checkinDate")
         private String checkinDate;
 
-        @NameInMap("fileName")
+        @com.aliyun.core.annotation.NameInMap("fileName")
         private String fileName;
 
-        @NameInMap("filePath")
+        @com.aliyun.core.annotation.NameInMap("filePath")
         private String filePath;
 
-        @NameInMap("language")
+        @com.aliyun.core.annotation.NameInMap("language")
         private String language;
 
-        @NameInMap("organizationId")
+        @com.aliyun.core.annotation.NameInMap("organizationId")
         private String organizationId;
 
-        @NameInMap("repoPath")
+        @com.aliyun.core.annotation.NameInMap("repoPath")
         private String repoPath;
 
         private Source(Builder builder) {
@@ -413,14 +430,20 @@ public class ListSearchSourceCodeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSearchSourceCodeResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSearchSourceCodeResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("docId")
+        @com.aliyun.core.annotation.NameInMap("docId")
         private String docId;
 
-        @NameInMap("highlightTextMap")
+        @com.aliyun.core.annotation.NameInMap("highlightTextMap")
         private HighlightTextMap highlightTextMap;
 
-        @NameInMap("source")
+        @com.aliyun.core.annotation.NameInMap("source")
         private Source source;
 
         private Result(Builder builder) {

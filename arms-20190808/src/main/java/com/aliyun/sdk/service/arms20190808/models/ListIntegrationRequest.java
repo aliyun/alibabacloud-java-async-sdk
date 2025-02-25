@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListIntegrationRequest} extends {@link RequestModel}
  *
  * <p>ListIntegrationRequest</p>
  */
 public class ListIntegrationRequest extends Request {
-    @Query
-    @NameInMap("IntegrationName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntegrationName")
     private String integrationName;
 
-    @Query
-    @NameInMap("IntegrationProductType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntegrationProductType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String integrationProductType;
 
-    @Query
-    @NameInMap("IsDetail")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsDetail")
     private Boolean isDetail;
 
-    @Query
-    @NameInMap("Page")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Page")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long page;
 
-    @Query
-    @NameInMap("Size")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Size")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long size;
 
     private ListIntegrationRequest(Builder builder) {
@@ -113,7 +118,10 @@ public class ListIntegrationRequest extends Request {
         } 
 
         /**
-         * IntegrationName.
+         * <p>The name of the alert integration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudMonitor integration</p>
          */
         public Builder integrationName(String integrationName) {
             this.putQueryParameter("IntegrationName", integrationName);
@@ -122,7 +130,15 @@ public class ListIntegrationRequest extends Request {
         }
 
         /**
-         * IntegrationProductType.
+         * <p>The type of the alert integration. Valid values:</p>
+         * <ul>
+         * <li>CLOUD_MONITOR: CloudMonitor</li>
+         * <li>LOG_SERVICE: Log Service</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CLOUD_MONITOR</p>
          */
         public Builder integrationProductType(String integrationProductType) {
             this.putQueryParameter("IntegrationProductType", integrationProductType);
@@ -131,7 +147,14 @@ public class ListIntegrationRequest extends Request {
         }
 
         /**
-         * IsDetail.
+         * <p>Specifies whether to display the details of each alert integration:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isDetail(Boolean isDetail) {
             this.putQueryParameter("IsDetail", isDetail);
@@ -140,7 +163,11 @@ public class ListIntegrationRequest extends Request {
         }
 
         /**
-         * Page.
+         * <p>The number of the page to return.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
@@ -149,7 +176,11 @@ public class ListIntegrationRequest extends Request {
         }
 
         /**
-         * Size.
+         * <p>The number of alert integrations to return on each page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder size(Long size) {
             this.putQueryParameter("Size", size);

@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelAutoSnapshotPolicyRequest} extends {@link RequestModel}
  *
  * <p>CancelAutoSnapshotPolicyRequest</p>
  */
 public class CancelAutoSnapshotPolicyRequest extends Request {
-    @Query
-    @NameInMap("FileSystemIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileSystemIds;
 
     private CancelAutoSnapshotPolicyRequest(Builder builder) {
@@ -49,13 +54,18 @@ public class CancelAutoSnapshotPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(CancelAutoSnapshotPolicyRequest response) {
-            super(response);
-            this.fileSystemIds = response.fileSystemIds;
+        private Builder(CancelAutoSnapshotPolicyRequest request) {
+            super(request);
+            this.fileSystemIds = request.fileSystemIds;
         } 
 
         /**
-         * FileSystemIds.
+         * <p>The IDs of file systems.</p>
+         * <p>You can specify a maximum of 100 file system IDs. If you want to remove automatic snapshot policies from multiple file systems, separate the file system IDs with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>extreme-233e6****,extreme-23vbp****,extreme-23vas****</p>
          */
         public Builder fileSystemIds(String fileSystemIds) {
             this.putQueryParameter("FileSystemIds", fileSystemIds);

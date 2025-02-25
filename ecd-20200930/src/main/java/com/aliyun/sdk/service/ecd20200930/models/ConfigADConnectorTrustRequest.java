@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfigADConnectorTrustRequest} extends {@link RequestModel}
  *
  * <p>ConfigADConnectorTrustRequest</p>
  */
 public class ConfigADConnectorTrustRequest extends Request {
-    @Query
-    @NameInMap("OfficeSiteId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String officeSiteId;
 
-    @Query
-    @NameInMap("RdsLicenseDomain")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RdsLicenseDomain")
     private Boolean rdsLicenseDomain;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("TrustKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrustKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String trustKey;
 
     private ConfigADConnectorTrustRequest(Builder builder) {
@@ -99,7 +104,11 @@ public class ConfigADConnectorTrustRequest extends Request {
         } 
 
         /**
-         * The ID of the AD workspace.
+         * <p>The ID of the enterprise AD office network.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-778418****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -108,7 +117,17 @@ public class ConfigADConnectorTrustRequest extends Request {
         }
 
         /**
-         * RdsLicenseDomain.
+         * <p>Specifies whether to configure a trust password for the Remote Desktop Services (RDS) License Domain of the enterprise AD office network.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true: configures a trust password for the RDS License Domain of the AD office network.</p>
+         * </li>
+         * <li><p>false: configures a trust password for a regular enterprise AD office network.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder rdsLicenseDomain(Boolean rdsLicenseDomain) {
             this.putQueryParameter("RdsLicenseDomain", rdsLicenseDomain);
@@ -117,7 +136,11 @@ public class ConfigADConnectorTrustRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -126,7 +149,11 @@ public class ConfigADConnectorTrustRequest extends Request {
         }
 
         /**
-         * The trust password. You can specify the password when you configure a trust relationship between the AD domain and the ecd.acs domain.
+         * <p>The trust password. You can specify the password when you configure a trust relationship between the AD domain and the ecd.acs domain.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>password123***</p>
          */
         public Builder trustKey(String trustKey) {
             this.putQueryParameter("TrustKey", trustKey);

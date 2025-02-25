@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTrainingJobLabelsRequest} extends {@link RequestModel}
  *
  * <p>UpdateTrainingJobLabelsRequest</p>
  */
 public class UpdateTrainingJobLabelsRequest extends Request {
-    @Path
-    @NameInMap("TrainingJobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("TrainingJobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String trainingJobId;
 
-    @Body
-    @NameInMap("Labels")
-    private java.util.List < Labels> labels;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Labels")
+    private java.util.List<Labels> labels;
 
     private UpdateTrainingJobLabelsRequest(Builder builder) {
         super(builder);
@@ -50,13 +55,13 @@ public class UpdateTrainingJobLabelsRequest extends Request {
     /**
      * @return labels
      */
-    public java.util.List < Labels> getLabels() {
+    public java.util.List<Labels> getLabels() {
         return this.labels;
     }
 
     public static final class Builder extends Request.Builder<UpdateTrainingJobLabelsRequest, Builder> {
         private String trainingJobId; 
-        private java.util.List < Labels> labels; 
+        private java.util.List<Labels> labels; 
 
         private Builder() {
             super();
@@ -69,7 +74,10 @@ public class UpdateTrainingJobLabelsRequest extends Request {
         } 
 
         /**
-         * TrainingJobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>train76rcaupa2cz</p>
          */
         public Builder trainingJobId(String trainingJobId) {
             this.putPathParameter("TrainingJobId", trainingJobId);
@@ -80,7 +88,7 @@ public class UpdateTrainingJobLabelsRequest extends Request {
         /**
          * Labels.
          */
-        public Builder labels(java.util.List < Labels> labels) {
+        public Builder labels(java.util.List<Labels> labels) {
             this.putBodyParameter("Labels", labels);
             this.labels = labels;
             return this;
@@ -93,11 +101,17 @@ public class UpdateTrainingJobLabelsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateTrainingJobLabelsRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTrainingJobLabelsRequest</p>
+     */
     public static class Labels extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Labels(Builder builder) {

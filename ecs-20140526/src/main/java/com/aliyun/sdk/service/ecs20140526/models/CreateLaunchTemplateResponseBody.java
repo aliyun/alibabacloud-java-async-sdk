@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLaunchTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>CreateLaunchTemplateResponseBody</p>
  */
 public class CreateLaunchTemplateResponseBody extends TeaModel {
-    @NameInMap("LaunchTemplateId")
+    @com.aliyun.core.annotation.NameInMap("LaunchTemplateId")
     private String launchTemplateId;
 
-    @NameInMap("LaunchTemplateVersionNumber")
+    @com.aliyun.core.annotation.NameInMap("LaunchTemplateVersionNumber")
     private Long launchTemplateVersionNumber;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateLaunchTemplateResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class CreateLaunchTemplateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the launch template.
+         * <p>The ID of the launch template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lt-m5eiaupmvm2op9d****</p>
          */
         public Builder launchTemplateId(String launchTemplateId) {
             this.launchTemplateId = launchTemplateId;
@@ -70,7 +78,10 @@ public class CreateLaunchTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * LaunchTemplateVersionNumber.
+         * <p>The version number of the launch template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder launchTemplateVersionNumber(Long launchTemplateVersionNumber) {
             this.launchTemplateVersionNumber = launchTemplateVersionNumber;
@@ -78,7 +89,10 @@ public class CreateLaunchTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

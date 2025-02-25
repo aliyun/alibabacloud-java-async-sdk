@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDiagnosticMetricSetResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDiagnosticMetricSetResponseBody</p>
  */
 public class CreateDiagnosticMetricSetResponseBody extends TeaModel {
-    @NameInMap("MetricSetId")
+    @com.aliyun.core.annotation.NameInMap("MetricSetId")
     private String metricSetId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateDiagnosticMetricSetResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateDiagnosticMetricSetResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MetricSetId.
+         * <p>The ID of the diagnostic metric set, which is the unique identifier of the set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dms-o7ymuutup5l*****</p>
          */
         public Builder metricSetId(String metricSetId) {
             this.metricSetId = metricSetId;
@@ -58,7 +66,10 @@ public class CreateDiagnosticMetricSetResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the diagnostic metric set, which is the unique identifier of the set.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

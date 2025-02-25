@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchAlertHistoriesRequest} extends {@link RequestModel}
  *
  * <p>SearchAlertHistoriesRequest</p>
  */
 public class SearchAlertHistoriesRequest extends Request {
-    @Query
-    @NameInMap("AlertId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlertId")
     private Long alertId;
 
-    @Query
-    @NameInMap("AlertType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlertType")
     private Integer alertType;
 
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
     private SearchAlertHistoriesRequest(Builder builder) {
@@ -139,7 +144,10 @@ public class SearchAlertHistoriesRequest extends Request {
         } 
 
         /**
-         * The ID of the alert rule. You can call the SearchAlertRules operation and view the `Id` parameter in the response. For more information, see [SearchAlertRules](~~175825~~).
+         * <p>The ID of the alert rule. You can call the SearchAlertRules operation and view the <code>Id</code> parameter in the response. For more information, see <a href="https://help.aliyun.com/document_detail/175825.html">SearchAlertRules</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder alertId(Long alertId) {
             this.putQueryParameter("AlertId", alertId);
@@ -148,17 +156,20 @@ public class SearchAlertHistoriesRequest extends Request {
         }
 
         /**
-         * The type of the alert rule. Valid values:
-         * <p>
+         * <p>The type of the alert rule. Valid values:</p>
+         * <ul>
+         * <li><code>1</code>: a custom alert rule that is used to monitor drill-down data sets</li>
+         * <li><code>3</code>: a custom alert rule that is used to monitor tiled data sets</li>
+         * <li><code>4</code>: an alert rule that is used to monitor web pages, including the default alert rule for browser monitoring</li>
+         * <li><code>5</code>: an alert rule that is used to monitor applications, including the default alert rule for application monitoring</li>
+         * <li><code>6</code>: the default alert rule for browser monitoring</li>
+         * <li><code>7</code>: the default alert rule for application monitoring</li>
+         * <li><code>8</code>: a Tracing Analysis alert rule</li>
+         * <li><code>101</code>: a Prometheus alert rule</li>
+         * </ul>
          * 
-         * *   `1`: a custom alert rule that is used to monitor drill-down data sets
-         * *   `3`: a custom alert rule that is used to monitor tiled data sets
-         * *   `4`: an alert rule that is used to monitor web pages, including the default alert rule for browser monitoring
-         * *   `5`: an alert rule that is used to monitor applications, including the default alert rule for application monitoring
-         * *   `6`: the default alert rule for browser monitoring
-         * *   `7`: the default alert rule for application monitoring
-         * *   `8`: a Tracing Analysis alert rule
-         * *   `101`: a Prometheus alert rule
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder alertType(Integer alertType) {
             this.putQueryParameter("AlertType", alertType);
@@ -167,7 +178,10 @@ public class SearchAlertHistoriesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: `1`.
+         * <p>The number of the page to return. Default value: <code>1</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -176,7 +190,10 @@ public class SearchAlertHistoriesRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The value is a UNIX timestamp of the LONG data type. Unit: milliseconds. The default value is the current time.
+         * <p>The end of the time range to query. The value is a UNIX timestamp of the LONG data type. Unit: milliseconds. The default value is the current time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1579499626000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -185,7 +202,10 @@ public class SearchAlertHistoriesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: `10`.
+         * <p>The number of entries to return on each page. Default value: <code>10</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -194,7 +214,11 @@ public class SearchAlertHistoriesRequest extends Request {
         }
 
         /**
-         * The ID of the region. Default value: `cn-hangzhou`.
+         * <p>The ID of the region. Default value: <code>cn-hangzhou</code>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -203,7 +227,10 @@ public class SearchAlertHistoriesRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The value is a UNIX timestamp of the LONG data type. Unit: milliseconds. The default value is 10 minutes before the current time.
+         * <p>The beginning of the time range to query. The value is a UNIX timestamp of the LONG data type. Unit: milliseconds. The default value is 10 minutes before the current time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1595568910000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

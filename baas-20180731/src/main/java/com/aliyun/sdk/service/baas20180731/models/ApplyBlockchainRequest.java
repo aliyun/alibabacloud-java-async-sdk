@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ApplyBlockchainRequest</p>
  */
 public class ApplyBlockchainRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("Account")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Account")
     private String account;
 
-    @Body
-    @NameInMap("AccountPubKey")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccountPubKey")
     private String accountPubKey;
 
-    @Body
-    @NameInMap("AccountRecoverPubKey")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccountRecoverPubKey")
     private String accountRecoverPubKey;
 
-    @Body
-    @NameInMap("Blockchain")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Blockchain")
     private String blockchain;
 
-    @Body
-    @NameInMap("UploadReq")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UploadReq")
     private String uploadReq;
 
     private ApplyBlockchainRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,41 +11,41 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAntChainContractContentRequest</p>
  */
 public class CreateAntChainContractContentRequest extends Request {
-    @Body
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Content")
     private String content;
 
-    @Body
-    @NameInMap("ContentName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ContentName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String contentName;
 
-    @Body
-    @NameInMap("IsDirectory")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IsDirectory")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean isDirectory;
 
-    @Body
-    @NameInMap("ParentContentId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ParentContentId")
     private String parentContentId;
 
-    @Body
-    @NameInMap("ProjectId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     private CreateAntChainContractContentRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.content = builder.content;
         this.contentName = builder.contentName;
         this.isDirectory = builder.isDirectory;
         this.parentContentId = builder.parentContentId;
         this.projectId = builder.projectId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -60,6 +59,13 @@ public class CreateAntChainContractContentRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -97,34 +103,36 @@ public class CreateAntChainContractContentRequest extends Request {
         return this.projectId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<CreateAntChainContractContentRequest, Builder> {
+        private String regionId; 
         private String content; 
         private String contentName; 
         private Boolean isDirectory; 
         private String parentContentId; 
         private String projectId; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateAntChainContractContentRequest response) {
-            super(response);
-            this.content = response.content;
-            this.contentName = response.contentName;
-            this.isDirectory = response.isDirectory;
-            this.parentContentId = response.parentContentId;
-            this.projectId = response.projectId;
-            this.regionId = response.regionId;
+        private Builder(CreateAntChainContractContentRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.content = request.content;
+            this.contentName = request.contentName;
+            this.isDirectory = request.isDirectory;
+            this.parentContentId = request.parentContentId;
+            this.projectId = request.projectId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Content.
@@ -168,15 +176,6 @@ public class CreateAntChainContractContentRequest extends Request {
         public Builder projectId(String projectId) {
             this.putBodyParameter("ProjectId", projectId);
             this.projectId = projectId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

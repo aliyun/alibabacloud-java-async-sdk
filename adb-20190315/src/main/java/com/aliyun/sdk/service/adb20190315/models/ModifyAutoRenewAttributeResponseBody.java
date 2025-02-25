@@ -1,18 +1,18 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAutoRenewAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyAutoRenewAttributeResponseBody</p>
  */
 public class ModifyAutoRenewAttributeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyAutoRenewAttributeResponseBody(Builder builder) {
@@ -38,7 +38,10 @@ public class ModifyAutoRenewAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4CE6DF97-AEA4-484F-906F-C407EE3770EB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

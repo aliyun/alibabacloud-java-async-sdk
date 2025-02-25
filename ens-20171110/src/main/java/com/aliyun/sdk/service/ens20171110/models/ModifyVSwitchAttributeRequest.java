@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyVSwitchAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyVSwitchAttributeRequest</p>
  */
 public class ModifyVSwitchAttributeRequest extends Request {
-    @Query
-    @NameInMap("Description")
-    @Validation(maxLength = 256, minLength = 2)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(maxLength = 256, minLength = 2)
     private String description;
 
-    @Query
-    @NameInMap("VSwitchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
 
-    @Query
-    @NameInMap("VSwitchName")
-    @Validation(maxLength = 128, minLength = 2)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchName")
+    @com.aliyun.core.annotation.Validation(maxLength = 128, minLength = 2)
     private String vSwitchName;
 
     private ModifyVSwitchAttributeRequest(Builder builder) {
@@ -85,7 +90,14 @@ public class ModifyVSwitchAttributeRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description of the vSwitch.</p>
+         * <ul>
+         * <li>The description must be 2 to 256 characters in length.</li>
+         * <li>The description cannot start with http:// or https://.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>this is my first network</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -94,7 +106,11 @@ public class ModifyVSwitchAttributeRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * <p>The ID of the vSwitch.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>n-****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -103,7 +119,14 @@ public class ModifyVSwitchAttributeRequest extends Request {
         }
 
         /**
-         * VSwitchName.
+         * <p>The name of the vSwitch.</p>
+         * <ul>
+         * <li>The name must be 2 to 128 characters in length.</li>
+         * <li>The name must start with a letter and cannot start with http:// or https://.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Test-switch</p>
          */
         public Builder vSwitchName(String vSwitchName) {
             this.putQueryParameter("VSwitchName", vSwitchName);

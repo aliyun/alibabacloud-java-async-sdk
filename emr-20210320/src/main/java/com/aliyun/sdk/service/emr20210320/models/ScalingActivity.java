@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ScalingActivity} extends {@link TeaModel}
  *
  * <p>ScalingActivity</p>
  */
 public class ScalingActivity extends TeaModel {
-    @NameInMap("Cause")
+    @com.aliyun.core.annotation.NameInMap("Cause")
     private String cause;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @NameInMap("EssScalingRuleId")
+    @com.aliyun.core.annotation.NameInMap("EssScalingRuleId")
     private String essScalingRuleId;
 
-    @NameInMap("ExpectNum")
+    @com.aliyun.core.annotation.NameInMap("ExpectNum")
     private Integer expectNum;
 
-    @NameInMap("HostGroupName")
+    @com.aliyun.core.annotation.NameInMap("HostGroupName")
     private String hostGroupName;
 
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
 
-    @NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private String instanceIds;
 
-    @NameInMap("ScalingGroupId")
+    @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
     private String scalingGroupId;
 
-    @NameInMap("ScalingRuleName")
+    @com.aliyun.core.annotation.NameInMap("ScalingRuleName")
     private String scalingRuleName;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("TotalCapacity")
+    @com.aliyun.core.annotation.NameInMap("TotalCapacity")
     private Integer totalCapacity;
 
-    @NameInMap("Transition")
+    @com.aliyun.core.annotation.NameInMap("Transition")
     private String transition;
 
     private ScalingActivity(Builder builder) {

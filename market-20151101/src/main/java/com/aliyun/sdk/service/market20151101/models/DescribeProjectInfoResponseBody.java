@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.market20151101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeProjectInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeProjectInfoResponseBody</p>
  */
 public class DescribeProjectInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeProjectInfoResponseBody(Builder builder) {
@@ -91,56 +96,62 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeProjectInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProjectInfoResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("CurrentStepNo")
+        @com.aliyun.core.annotation.NameInMap("CurrentStepNo")
         private Integer currentStepNo;
 
-        @NameInMap("CustomerAliUid")
+        @com.aliyun.core.annotation.NameInMap("CustomerAliUid")
         private Long customerAliUid;
 
-        @NameInMap("FinalStepNo")
+        @com.aliyun.core.annotation.NameInMap("FinalStepNo")
         private Integer finalStepNo;
 
-        @NameInMap("FinishType")
+        @com.aliyun.core.annotation.NameInMap("FinishType")
         private String finishType;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("GmtExpired")
+        @com.aliyun.core.annotation.NameInMap("GmtExpired")
         private Long gmtExpired;
 
-        @NameInMap("GmtFinished")
+        @com.aliyun.core.annotation.NameInMap("GmtFinished")
         private Long gmtFinished;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("OrderId")
+        @com.aliyun.core.annotation.NameInMap("OrderId")
         private Long orderId;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("ProductName")
+        @com.aliyun.core.annotation.NameInMap("ProductName")
         private String productName;
 
-        @NameInMap("ProductSkuCode")
+        @com.aliyun.core.annotation.NameInMap("ProductSkuCode")
         private String productSkuCode;
 
-        @NameInMap("ProductSkuName")
+        @com.aliyun.core.annotation.NameInMap("ProductSkuName")
         private String productSkuName;
 
-        @NameInMap("ProjectStatus")
+        @com.aliyun.core.annotation.NameInMap("ProjectStatus")
         private String projectStatus;
 
-        @NameInMap("SupplierAliUid")
+        @com.aliyun.core.annotation.NameInMap("SupplierAliUid")
         private Long supplierAliUid;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private Long templateId;
 
-        @NameInMap("TemplateType")
+        @com.aliyun.core.annotation.NameInMap("TemplateType")
         private String templateType;
 
         private Result(Builder builder) {

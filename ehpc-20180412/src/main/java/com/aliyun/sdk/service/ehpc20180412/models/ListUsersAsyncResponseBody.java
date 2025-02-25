@@ -110,7 +110,7 @@ public class ListUsersAsyncResponseBody extends TeaModel {
         private Users users; 
 
         /**
-         * AsyncId.
+         * The ID of the asynchronous task.
          */
         public Builder asyncId(String asyncId) {
             this.asyncId = asyncId;
@@ -118,7 +118,7 @@ public class ListUsersAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * AsyncStatus.
+         * The status of the asynchronous task.
          */
         public Builder asyncStatus(String asyncStatus) {
             this.asyncStatus = asyncStatus;
@@ -126,7 +126,7 @@ public class ListUsersAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The number of the page returned. Pages start from page 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -134,7 +134,7 @@ public class ListUsersAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -142,7 +142,7 @@ public class ListUsersAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +150,7 @@ public class ListUsersAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of users.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -158,7 +158,7 @@ public class ListUsersAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * Users.
+         * The list of users.
          */
         public Builder users(Users users) {
             this.users = users;
@@ -246,7 +246,7 @@ public class ListUsersAsyncResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * AddTime.
+             * The time when the user was created.
              */
             public Builder addTime(String addTime) {
                 this.addTime = addTime;
@@ -254,7 +254,7 @@ public class ListUsersAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * Group.
+             * The user groups.
              */
             public Builder group(String group) {
                 this.group = group;
@@ -262,7 +262,7 @@ public class ListUsersAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The user group ID.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -270,7 +270,7 @@ public class ListUsersAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The username of the account.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -278,7 +278,7 @@ public class ListUsersAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The user ID.
              */
             public Builder userId(String userId) {
                 this.userId = userId;

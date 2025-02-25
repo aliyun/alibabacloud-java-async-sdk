@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListApplicationConfigsResponseBody} extends {@link TeaModel}
  *
  * <p>ListApplicationConfigsResponseBody</p>
  */
 public class ListApplicationConfigsResponseBody extends TeaModel {
-    @NameInMap("ApplicationConfigs")
-    private java.util.List < ApplicationConfigs> applicationConfigs;
+    @com.aliyun.core.annotation.NameInMap("ApplicationConfigs")
+    private java.util.List<ApplicationConfigs> applicationConfigs;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListApplicationConfigsResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
     /**
      * @return applicationConfigs
      */
-    public java.util.List < ApplicationConfigs> getApplicationConfigs() {
+    public java.util.List<ApplicationConfigs> getApplicationConfigs() {
         return this.applicationConfigs;
     }
 
@@ -79,22 +84,25 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ApplicationConfigs> applicationConfigs; 
+        private java.util.List<ApplicationConfigs> applicationConfigs; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * The application configurations.
+         * <p>The application configurations.</p>
          */
-        public Builder applicationConfigs(java.util.List < ApplicationConfigs> applicationConfigs) {
+        public Builder applicationConfigs(java.util.List<ApplicationConfigs> applicationConfigs) {
             this.applicationConfigs = applicationConfigs;
             return this;
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +110,10 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the next page returned.
+         * <p>The page number of the next page returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +121,10 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9E3A7161-EB7B-172B-8D18-FFB06BA3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of pages.
+         * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,44 +148,50 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListApplicationConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationConfigsResponseBody</p>
+     */
     public static class ApplicationConfigs extends TeaModel {
-        @NameInMap("ApplicationName")
+        @com.aliyun.core.annotation.NameInMap("ApplicationName")
         private String applicationName;
 
-        @NameInMap("ConfigEffectState")
+        @com.aliyun.core.annotation.NameInMap("ConfigEffectState")
         private String configEffectState;
 
-        @NameInMap("ConfigFileName")
+        @com.aliyun.core.annotation.NameInMap("ConfigFileName")
         private String configFileName;
 
-        @NameInMap("ConfigItemKey")
+        @com.aliyun.core.annotation.NameInMap("ConfigItemKey")
         private String configItemKey;
 
-        @NameInMap("ConfigItemValue")
+        @com.aliyun.core.annotation.NameInMap("ConfigItemValue")
         private String configItemValue;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Custom")
+        @com.aliyun.core.annotation.NameInMap("Custom")
         private Boolean custom;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("InitValue")
+        @com.aliyun.core.annotation.NameInMap("InitValue")
         private String initValue;
 
-        @NameInMap("Modifier")
+        @com.aliyun.core.annotation.NameInMap("Modifier")
         private String modifier;
 
-        @NameInMap("NodeGroupId")
+        @com.aliyun.core.annotation.NameInMap("NodeGroupId")
         private String nodeGroupId;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private ApplicationConfigs(Builder builder) {
@@ -302,7 +325,10 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HDFS</p>
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
@@ -310,7 +336,10 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the configuration value.
+             * <p>The status of the configuration value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EFFECT</p>
              */
             public Builder configEffectState(String configEffectState) {
                 this.configEffectState = configEffectState;
@@ -318,7 +347,10 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the configuration file.
+             * <p>The name of the configuration file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hdfs-site.xml</p>
              */
             public Builder configFileName(String configFileName) {
                 this.configFileName = configFileName;
@@ -326,7 +358,10 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the configuration item.
+             * <p>The key of the configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dfs.replication</p>
              */
             public Builder configItemKey(String configItemKey) {
                 this.configItemKey = configItemKey;
@@ -334,7 +369,10 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the configuration item.
+             * <p>The value of the configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder configItemValue(String configItemValue) {
                 this.configItemValue = configItemValue;
@@ -342,7 +380,10 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the application was created.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1628589439114</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -350,7 +391,10 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the configurations are custom.
+             * <p>Indicates whether the configurations are custom.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder custom(Boolean custom) {
                 this.custom = custom;
@@ -358,7 +402,10 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dfs.replication description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -366,7 +413,10 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The initial value.
+             * <p>The initial value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder initValue(String initValue) {
                 this.initValue = initValue;
@@ -374,7 +424,10 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The person who modified the configurations.
+             * <p>The person who modified the configurations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>170906468757****</p>
              */
             public Builder modifier(String modifier) {
                 this.modifier = modifier;
@@ -382,7 +435,10 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node group.
+             * <p>The node group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ng-d555335ced5****</p>
              */
             public Builder nodeGroupId(String nodeGroupId) {
                 this.nodeGroupId = nodeGroupId;
@@ -390,7 +446,10 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The node ID.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp18y0ng3qqxog4mw****</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -398,7 +457,10 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the application was updated.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1628589439114</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

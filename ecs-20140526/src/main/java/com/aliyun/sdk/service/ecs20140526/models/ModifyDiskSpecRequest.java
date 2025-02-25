@@ -1,65 +1,75 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDiskSpecRequest} extends {@link RequestModel}
  *
  * <p>ModifyDiskSpecRequest</p>
  */
 public class ModifyDiskSpecRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("DiskCategory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationZoneId")
+    private String destinationZoneId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskCategory")
     private String diskCategory;
 
-    @Query
-    @NameInMap("DiskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String diskId;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PerformanceControlOptions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PerformanceControlOptions")
     private PerformanceControlOptions performanceControlOptions;
 
-    @Query
-    @NameInMap("PerformanceLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
     private String performanceLevel;
 
-    @Query
-    @NameInMap("ProvisionedIops")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProvisionedIops")
     private Long provisionedIops;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyDiskSpecRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
+        this.destinationZoneId = builder.destinationZoneId;
         this.diskCategory = builder.diskCategory;
         this.diskId = builder.diskId;
         this.dryRun = builder.dryRun;
@@ -90,6 +100,13 @@ public class ModifyDiskSpecRequest extends Request {
      */
     public String getSourceRegionId() {
         return this.sourceRegionId;
+    }
+
+    /**
+     * @return destinationZoneId
+     */
+    public String getDestinationZoneId() {
+        return this.destinationZoneId;
     }
 
     /**
@@ -164,6 +181,7 @@ public class ModifyDiskSpecRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyDiskSpecRequest, Builder> {
         private String sourceRegionId; 
+        private String destinationZoneId; 
         private String diskCategory; 
         private String diskId; 
         private Boolean dryRun; 
@@ -182,6 +200,7 @@ public class ModifyDiskSpecRequest extends Request {
         private Builder(ModifyDiskSpecRequest request) {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
+            this.destinationZoneId = request.destinationZoneId;
             this.diskCategory = request.diskCategory;
             this.diskId = request.diskId;
             this.dryRun = request.dryRun;
@@ -204,17 +223,36 @@ public class ModifyDiskSpecRequest extends Request {
         }
 
         /**
-         * The new category of the disk. Valid values:
-         * <p>
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
          * 
-         * *   cloud_essd: ESSD
-         * *   cloud_auto: ESSD AutoPL disk
-         * *   cloud_ssd: standard SSD
-         * *   cloud_efficiency: ultra disk
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-g</p>
+         */
+        public Builder destinationZoneId(String destinationZoneId) {
+            this.putQueryParameter("DestinationZoneId", destinationZoneId);
+            this.destinationZoneId = destinationZoneId;
+            return this;
+        }
+
+        /**
+         * <p>The new disk category of the cloud disk. Valid values:</p>
+         * <ul>
+         * <li>cloud_essd: ESSD</li>
+         * <li>cloud_auto: ESSD AutoPL disk</li>
+         * <li>cloud_ssd: standard SSD</li>
+         * <li>cloud_efficiency: utra disk</li>
+         * </ul>
+         * <p>This parameter is empty by default, which indicates that the disk category is not changed.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>The preceding values are listed in descending order of disk performance. Subscription disks cannot be downgraded.</li>
+         * </ul>
          * 
-         * This parameter is empty by default, which indicates that the disk category is not changed.
-         * 
-         * >  The preceding values are listed in descending order of disk performance. Subscription disks cannot be downgraded.
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
          */
         public Builder diskCategory(String diskCategory) {
             this.putQueryParameter("DiskCategory", diskCategory);
@@ -223,7 +261,11 @@ public class ModifyDiskSpecRequest extends Request {
         }
 
         /**
-         * The disk ID.
+         * <p>The disk ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-bp131n0q38u3a4zi****</p>
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -232,13 +274,15 @@ public class ModifyDiskSpecRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and insufficient ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and insufficient ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -265,7 +309,7 @@ public class ModifyDiskSpecRequest extends Request {
         }
 
         /**
-         * A collection of disk performance control parameters
+         * <p>The disk performance specifications.</p>
          */
         public Builder performanceControlOptions(PerformanceControlOptions performanceControlOptions) {
             this.putQueryParameter("PerformanceControlOptions", performanceControlOptions);
@@ -274,15 +318,17 @@ public class ModifyDiskSpecRequest extends Request {
         }
 
         /**
-         * The new performance level of the ESSD. Valid values:
-         * <p>
+         * <p>The new performance level of the ESSD. Valid values:</p>
+         * <ul>
+         * <li>PL0: An ESSD can deliver up to 10,000 random read/write IOPS.</li>
+         * <li>PL1: An ESSD can deliver up to 50,000 random read/write IOPS.</li>
+         * <li>PL2: An ESSD can deliver up to 100,000 random read/write IOPS.</li>
+         * <li>PL3: An ESSD delivers up to 1,000,000 random read/write IOPS.</li>
+         * </ul>
+         * <p>Default value: PL1.</p>
          * 
-         * *   PL0: An ESSD can deliver up to 10,000 random read/write IOPS.
-         * *   PL1: An ESSD can deliver up to 50,000 random read/write IOPS.
-         * *   PL2: An ESSD can deliver up to 100,000 random read/write IOPS.
-         * *   PL3: An ESSD delivers up to 1,000,000 random read/write IOPS.
-         * 
-         * Default value: PL1.
+         * <strong>example:</strong>
+         * <p>PL2</p>
          */
         public Builder performanceLevel(String performanceLevel) {
             this.putQueryParameter("PerformanceLevel", performanceLevel);
@@ -291,12 +337,14 @@ public class ModifyDiskSpecRequest extends Request {
         }
 
         /**
-         * The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}
-         * <p>
+         * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</p>
+         * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</p>
+         * <blockquote>
+         * <p> This parameter is available only if you set DiskCategory to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a> and <a href="https://help.aliyun.com/document_detail/413275.html">Modify the performance configurations of an ESSD AutoPL disk</a>.</p>
+         * </blockquote>
          * 
-         * Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}
-         * 
-         * >  This parameter is available only if the DiskCategory parameter is set to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).
+         * <strong>example:</strong>
+         * <p>50000</p>
          */
         public Builder provisionedIops(Long provisionedIops) {
             this.putQueryParameter("ProvisionedIops", provisionedIops);
@@ -329,14 +377,20 @@ public class ModifyDiskSpecRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyDiskSpecRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyDiskSpecRequest</p>
+     */
     public static class PerformanceControlOptions extends TeaModel {
-        @NameInMap("IOPS")
+        @com.aliyun.core.annotation.NameInMap("IOPS")
         private Integer IOPS;
 
-        @NameInMap("Recover")
+        @com.aliyun.core.annotation.NameInMap("Recover")
         private String recover;
 
-        @NameInMap("Throughput")
+        @com.aliyun.core.annotation.NameInMap("Throughput")
         private Integer throughput;
 
         private PerformanceControlOptions(Builder builder) {
@@ -380,12 +434,12 @@ public class ModifyDiskSpecRequest extends Request {
             private Integer throughput; 
 
             /**
-             * The new IOPS of the disk. You can modify the IOPS of only disks in dedicated block storage clusters.
-             * <p>
+             * <p>The new IOPS rate of the cloud disk. You can modify the IOPS rate of only cloud disks in dedicated block storage clusters.</p>
+             * <p>Valid values: 900 to maximum IOPS per cloud disk (with an increment of 100).</p>
+             * <p>For more information, see <a href="https://help.aliyun.com/document_detail/25382.html">Block storage performance</a>.</p>
              * 
-             * Valid values: 900 to maximum IOPS per disk (with an increment of 100).
-             * 
-             * For more information, see [EBS performance](~~25382~~).
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder IOPS(Integer IOPS) {
                 this.IOPS = IOPS;
@@ -393,12 +447,12 @@ public class ModifyDiskSpecRequest extends Request {
             }
 
             /**
-             * The new IOPS and throughput of the disk. This parameter is valid only when the disk is in a dedicated block storage cluster.
-             * <p>
+             * <p>Specifies whether to reset the IOPS rate and throughput of the cloud disk. This parameter takes effect only when the cloud disk belongs to a dedicated block storage cluster.</p>
+             * <p>After you specify this parameter, PerformanceControlOptions.IOPS and PerformanceControlOptions.Throughput do not take effect.</p>
+             * <p>Set the value to All, which indicates that the IOPS rate and throughput of the cloud disk are reset to the initial values.</p>
              * 
-             * After you specify this parameter, PerformanceControlOptions.IOPS and PerformanceControlOptions.Throughput do not take effect.
-             * 
-             * Set the value to All, which indicates that the IOPS and throughput of the disk is reset to the initial values.
+             * <strong>example:</strong>
+             * <p>All</p>
              */
             public Builder recover(String recover) {
                 this.recover = recover;
@@ -406,12 +460,12 @@ public class ModifyDiskSpecRequest extends Request {
             }
 
             /**
-             * The new throughput of the disk. You can modify the throughput of only disks in dedicated block storage clusters. Unit: MB/s.
-             * <p>
+             * <p>The new throughput of the cloud disk. You can change the throughput of only cloud disks in dedicated block storage clusters. Unit: MB/s.</p>
+             * <p>Valid values: 60 to maximum throughput per disk.</p>
+             * <p>For more information, see <a href="https://help.aliyun.com/document_detail/25382.html">Block storage performance</a>.</p>
              * 
-             * Valid values: 60 to maximum throughput per disk.
-             * 
-             * For more information, see [EBS performance](~~25382~~).
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder throughput(Integer throughput) {
                 this.throughput = throughput;

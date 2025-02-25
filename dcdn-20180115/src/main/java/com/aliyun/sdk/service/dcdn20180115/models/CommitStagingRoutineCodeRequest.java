@@ -1,25 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CommitStagingRoutineCodeRequest} extends {@link RequestModel}
  *
  * <p>CommitStagingRoutineCodeRequest</p>
  */
 public class CommitStagingRoutineCodeRequest extends Request {
-    @Body
-    @NameInMap("CodeDescription")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CodeDescription")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String codeDescription;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
     private CommitStagingRoutineCodeRequest(Builder builder) {
@@ -70,7 +70,11 @@ public class CommitStagingRoutineCodeRequest extends Request {
         } 
 
         /**
-         * The description of the code version.
+         * <p>The description of the code version.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hello World</p>
          */
         public Builder codeDescription(String codeDescription) {
             this.putBodyParameter("CodeDescription", codeDescription);
@@ -79,7 +83,11 @@ public class CommitStagingRoutineCodeRequest extends Request {
         }
 
         /**
-         * The name of the routine. The name must be unique among the routines that belong to the same Alibaba Cloud account.
+         * <p>The name of the routine. The name must be unique among the routines that belong to the same Alibaba Cloud account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

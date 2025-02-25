@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccessLogsDownloadAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAccessLogsDownloadAttributeResponseBody</p>
  */
 public class DescribeAccessLogsDownloadAttributeResponseBody extends TeaModel {
-    @NameInMap("LogsDownloadAttributes")
+    @com.aliyun.core.annotation.NameInMap("LogsDownloadAttributes")
     private LogsDownloadAttributes logsDownloadAttributes;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeAccessLogsDownloadAttributeResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeAccessLogsDownloadAttributeResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The configuration of the access log.
+         * <p>The configuration of the access log.</p>
          */
         public Builder logsDownloadAttributes(LogsDownloadAttributes logsDownloadAttributes) {
             this.logsDownloadAttributes = logsDownloadAttributes;
@@ -94,7 +99,10 @@ public class DescribeAccessLogsDownloadAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeAccessLogsDownloadAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeAccessLogsDownloadAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8B9DB03B-ED39-5DB8-9C9F-1ED5F548D61E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeAccessLogsDownloadAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,20 +148,26 @@ public class DescribeAccessLogsDownloadAttributeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAccessLogsDownloadAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccessLogsDownloadAttributeResponseBody</p>
+     */
     public static class LogsDownloadAttribute extends TeaModel {
-        @NameInMap("LoadBalancerId")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
         private String loadBalancerId;
 
-        @NameInMap("LogProject")
+        @com.aliyun.core.annotation.NameInMap("LogProject")
         private String logProject;
 
-        @NameInMap("LogStore")
+        @com.aliyun.core.annotation.NameInMap("LogStore")
         private String logStore;
 
-        @NameInMap("LogType")
+        @com.aliyun.core.annotation.NameInMap("LogType")
         private String logType;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
         private LogsDownloadAttribute(Builder builder) {
@@ -206,7 +229,10 @@ public class DescribeAccessLogsDownloadAttributeResponseBody extends TeaModel {
             private String region; 
 
             /**
-             * The CLB instance ID.
+             * <p>The CLB instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-bp1b6c719dfa08ex*****</p>
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -214,7 +240,10 @@ public class DescribeAccessLogsDownloadAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Log Service project.
+             * <p>The name of the Log Service project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-log-project</p>
              */
             public Builder logProject(String logProject) {
                 this.logProject = logProject;
@@ -222,7 +251,10 @@ public class DescribeAccessLogsDownloadAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Logstore.
+             * <p>The name of the Logstore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-log-store</p>
              */
             public Builder logStore(String logStore) {
                 this.logStore = logStore;
@@ -230,7 +262,10 @@ public class DescribeAccessLogsDownloadAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The type of access log. Only **layer7** is returned, which indicates Layer 7 access logs.
+             * <p>The type of access log. Only <strong>layer7</strong> is returned, which indicates Layer 7 access logs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>layer7</p>
              */
             public Builder logType(String logType) {
                 this.logType = logType;
@@ -238,7 +273,10 @@ public class DescribeAccessLogsDownloadAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the CLB instance.
+             * <p>The region ID of the CLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -252,9 +290,15 @@ public class DescribeAccessLogsDownloadAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAccessLogsDownloadAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccessLogsDownloadAttributeResponseBody</p>
+     */
     public static class LogsDownloadAttributes extends TeaModel {
-        @NameInMap("LogsDownloadAttribute")
-        private java.util.List < LogsDownloadAttribute> logsDownloadAttribute;
+        @com.aliyun.core.annotation.NameInMap("LogsDownloadAttribute")
+        private java.util.List<LogsDownloadAttribute> logsDownloadAttribute;
 
         private LogsDownloadAttributes(Builder builder) {
             this.logsDownloadAttribute = builder.logsDownloadAttribute;
@@ -271,17 +315,17 @@ public class DescribeAccessLogsDownloadAttributeResponseBody extends TeaModel {
         /**
          * @return logsDownloadAttribute
          */
-        public java.util.List < LogsDownloadAttribute> getLogsDownloadAttribute() {
+        public java.util.List<LogsDownloadAttribute> getLogsDownloadAttribute() {
             return this.logsDownloadAttribute;
         }
 
         public static final class Builder {
-            private java.util.List < LogsDownloadAttribute> logsDownloadAttribute; 
+            private java.util.List<LogsDownloadAttribute> logsDownloadAttribute; 
 
             /**
              * LogsDownloadAttribute.
              */
-            public Builder logsDownloadAttribute(java.util.List < LogsDownloadAttribute> logsDownloadAttribute) {
+            public Builder logsDownloadAttribute(java.util.List<LogsDownloadAttribute> logsDownloadAttribute) {
                 this.logsDownloadAttribute = logsDownloadAttribute;
                 return this;
             }

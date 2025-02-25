@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDisksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDisksResponseBody</p>
  */
 public class DescribeDisksResponseBody extends TeaModel {
-    @NameInMap("Disks")
+    @com.aliyun.core.annotation.NameInMap("Disks")
     private Disks disks;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDisksResponseBody(Builder builder) {
@@ -98,7 +103,7 @@ public class DescribeDisksResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The details of the cloud disks or local disks.
+         * <p>Details about the disks.</p>
          */
         public Builder disks(Disks disks) {
             this.disks = disks;
@@ -106,7 +111,10 @@ public class DescribeDisksResponseBody extends TeaModel {
         }
 
         /**
-         * The returned pagination token which can be used in the next request to retrieve a new page of results.
+         * <p>The returned pagination token which can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -114,7 +122,12 @@ public class DescribeDisksResponseBody extends TeaModel {
         }
 
         /**
-         * The returned page number.
+         * <blockquote>
+         * <p> This parameter will be removed in the future. We recommend that you use <code>NextToken</code> and <code>MaxResults</code> for a paged query.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +135,12 @@ public class DescribeDisksResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <blockquote>
+         * <p> This parameter will be removed in the future. We recommend that you use <code>NextToken</code> and <code>MaxResults</code> for a paged query.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +148,10 @@ public class DescribeDisksResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +159,10 @@ public class DescribeDisksResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -151,14 +175,20 @@ public class DescribeDisksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDisksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDisksResponseBody</p>
+     */
     public static class Attachment extends TeaModel {
-        @NameInMap("AttachedTime")
+        @com.aliyun.core.annotation.NameInMap("AttachedTime")
         private String attachedTime;
 
-        @NameInMap("Device")
+        @com.aliyun.core.annotation.NameInMap("Device")
         private String device;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
         private Attachment(Builder builder) {
@@ -202,7 +232,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * The time when the disk was attached, which is displayed in UTC.
+             * <p>The time when the disk was attached. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-07T06:08:56Z</p>
              */
             public Builder attachedTime(String attachedTime) {
                 this.attachedTime = attachedTime;
@@ -210,7 +243,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The device name.
+             * <p>The device name of the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/dev/xvda</p>
              */
             public Builder device(String device) {
                 this.device = device;
@@ -218,7 +254,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance to which the disk was attached.
+             * <p>The ID of the instance to which the disk is attached.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp67acfmxazb4q****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -232,9 +271,15 @@ public class DescribeDisksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDisksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDisksResponseBody</p>
+     */
     public static class Attachments extends TeaModel {
-        @NameInMap("Attachment")
-        private java.util.List < Attachment> attachment;
+        @com.aliyun.core.annotation.NameInMap("Attachment")
+        private java.util.List<Attachment> attachment;
 
         private Attachments(Builder builder) {
             this.attachment = builder.attachment;
@@ -251,17 +296,17 @@ public class DescribeDisksResponseBody extends TeaModel {
         /**
          * @return attachment
          */
-        public java.util.List < Attachment> getAttachment() {
+        public java.util.List<Attachment> getAttachment() {
             return this.attachment;
         }
 
         public static final class Builder {
-            private java.util.List < Attachment> attachment; 
+            private java.util.List<Attachment> attachment; 
 
             /**
              * Attachment.
              */
-            public Builder attachment(java.util.List < Attachment> attachment) {
+            public Builder attachment(java.util.List<Attachment> attachment) {
                 this.attachment = attachment;
                 return this;
             }
@@ -273,14 +318,20 @@ public class DescribeDisksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDisksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDisksResponseBody</p>
+     */
     public static class MountInstance extends TeaModel {
-        @NameInMap("AttachedTime")
+        @com.aliyun.core.annotation.NameInMap("AttachedTime")
         private String attachedTime;
 
-        @NameInMap("Device")
+        @com.aliyun.core.annotation.NameInMap("Device")
         private String device;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
         private MountInstance(Builder builder) {
@@ -324,7 +375,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * The time when the cloud disk was attached. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format and is displayed in UTC.
+             * <p>The time when the disk was attached. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-05T2340:00Z</p>
              */
             public Builder attachedTime(String attachedTime) {
                 this.attachedTime = attachedTime;
@@ -332,7 +386,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The mount point of the disk.
+             * <p>The mount point of the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/dev/xvda</p>
              */
             public Builder device(String device) {
                 this.device = device;
@@ -340,7 +397,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance to which the disk was attached.
+             * <p>The ID of the instance to which the disk is attached.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1j4i2jdf3owlhe****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -354,9 +414,15 @@ public class DescribeDisksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDisksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDisksResponseBody</p>
+     */
     public static class MountInstances extends TeaModel {
-        @NameInMap("MountInstance")
-        private java.util.List < MountInstance> mountInstance;
+        @com.aliyun.core.annotation.NameInMap("MountInstance")
+        private java.util.List<MountInstance> mountInstance;
 
         private MountInstances(Builder builder) {
             this.mountInstance = builder.mountInstance;
@@ -373,17 +439,17 @@ public class DescribeDisksResponseBody extends TeaModel {
         /**
          * @return mountInstance
          */
-        public java.util.List < MountInstance> getMountInstance() {
+        public java.util.List<MountInstance> getMountInstance() {
             return this.mountInstance;
         }
 
         public static final class Builder {
-            private java.util.List < MountInstance> mountInstance; 
+            private java.util.List<MountInstance> mountInstance; 
 
             /**
              * MountInstance.
              */
-            public Builder mountInstance(java.util.List < MountInstance> mountInstance) {
+            public Builder mountInstance(java.util.List<MountInstance> mountInstance) {
                 this.mountInstance = mountInstance;
                 return this;
             }
@@ -395,8 +461,14 @@ public class DescribeDisksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDisksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDisksResponseBody</p>
+     */
     public static class OperationLock extends TeaModel {
-        @NameInMap("LockReason")
+        @com.aliyun.core.annotation.NameInMap("LockReason")
         private String lockReason;
 
         private OperationLock(Builder builder) {
@@ -422,7 +494,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             private String lockReason; 
 
             /**
-             * The security reason why the disk is locked.
+             * <p>The reason why the disk was locked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>security</p>
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -436,9 +511,15 @@ public class DescribeDisksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDisksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDisksResponseBody</p>
+     */
     public static class OperationLocks extends TeaModel {
-        @NameInMap("OperationLock")
-        private java.util.List < OperationLock> operationLock;
+        @com.aliyun.core.annotation.NameInMap("OperationLock")
+        private java.util.List<OperationLock> operationLock;
 
         private OperationLocks(Builder builder) {
             this.operationLock = builder.operationLock;
@@ -455,17 +536,17 @@ public class DescribeDisksResponseBody extends TeaModel {
         /**
          * @return operationLock
          */
-        public java.util.List < OperationLock> getOperationLock() {
+        public java.util.List<OperationLock> getOperationLock() {
             return this.operationLock;
         }
 
         public static final class Builder {
-            private java.util.List < OperationLock> operationLock; 
+            private java.util.List<OperationLock> operationLock; 
 
             /**
              * OperationLock.
              */
-            public Builder operationLock(java.util.List < OperationLock> operationLock) {
+            public Builder operationLock(java.util.List<OperationLock> operationLock) {
                 this.operationLock = operationLock;
                 return this;
             }
@@ -477,11 +558,68 @@ public class DescribeDisksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDisksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDisksResponseBody</p>
+     */
+    public static class Placement extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ZoneIds")
+        private String zoneIds;
+
+        private Placement(Builder builder) {
+            this.zoneIds = builder.zoneIds;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Placement create() {
+            return builder().build();
+        }
+
+        /**
+         * @return zoneIds
+         */
+        public String getZoneIds() {
+            return this.zoneIds;
+        }
+
+        public static final class Builder {
+            private String zoneIds; 
+
+            /**
+             * <p>The IDs of the zones in which data is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-b
+             * cn-hangzhou-j</p>
+             */
+            public Builder zoneIds(String zoneIds) {
+                this.zoneIds = zoneIds;
+                return this;
+            }
+
+            public Placement build() {
+                return new Placement(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDisksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDisksResponseBody</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -516,7 +654,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key.
+             * <p>The tag key of the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -524,7 +665,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value of the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -538,9 +682,15 @@ public class DescribeDisksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDisksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDisksResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -557,17 +707,17 @@ public class DescribeDisksResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -579,143 +729,158 @@ public class DescribeDisksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDisksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDisksResponseBody</p>
+     */
     public static class Disk extends TeaModel {
-        @NameInMap("AttachedTime")
+        @com.aliyun.core.annotation.NameInMap("AttachedTime")
         private String attachedTime;
 
-        @NameInMap("Attachments")
+        @com.aliyun.core.annotation.NameInMap("Attachments")
         private Attachments attachments;
 
-        @NameInMap("AutoSnapshotPolicyId")
+        @com.aliyun.core.annotation.NameInMap("AutoSnapshotPolicyId")
         private String autoSnapshotPolicyId;
 
-        @NameInMap("BdfId")
+        @com.aliyun.core.annotation.NameInMap("BdfId")
         private String bdfId;
 
-        @NameInMap("BurstingEnabled")
+        @com.aliyun.core.annotation.NameInMap("BurstingEnabled")
         private Boolean burstingEnabled;
 
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DeleteAutoSnapshot")
+        @com.aliyun.core.annotation.NameInMap("DeleteAutoSnapshot")
         private Boolean deleteAutoSnapshot;
 
-        @NameInMap("DeleteWithInstance")
+        @com.aliyun.core.annotation.NameInMap("DeleteWithInstance")
         private Boolean deleteWithInstance;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DetachedTime")
+        @com.aliyun.core.annotation.NameInMap("DetachedTime")
         private String detachedTime;
 
-        @NameInMap("Device")
+        @com.aliyun.core.annotation.NameInMap("Device")
         private String device;
 
-        @NameInMap("DiskChargeType")
+        @com.aliyun.core.annotation.NameInMap("DiskChargeType")
         private String diskChargeType;
 
-        @NameInMap("DiskId")
+        @com.aliyun.core.annotation.NameInMap("DiskId")
         private String diskId;
 
-        @NameInMap("DiskName")
+        @com.aliyun.core.annotation.NameInMap("DiskName")
         private String diskName;
 
-        @NameInMap("EnableAutoSnapshot")
+        @com.aliyun.core.annotation.NameInMap("EnableAutoSnapshot")
         private Boolean enableAutoSnapshot;
 
-        @NameInMap("EnableAutomatedSnapshotPolicy")
+        @com.aliyun.core.annotation.NameInMap("EnableAutomatedSnapshotPolicy")
         private Boolean enableAutomatedSnapshotPolicy;
 
-        @NameInMap("Encrypted")
+        @com.aliyun.core.annotation.NameInMap("Encrypted")
         private Boolean encrypted;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("IOPS")
+        @com.aliyun.core.annotation.NameInMap("IOPS")
         private Integer IOPS;
 
-        @NameInMap("IOPSRead")
+        @com.aliyun.core.annotation.NameInMap("IOPSRead")
         private Integer IOPSRead;
 
-        @NameInMap("IOPSWrite")
+        @com.aliyun.core.annotation.NameInMap("IOPSWrite")
         private Integer IOPSWrite;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("KMSKeyId")
+        @com.aliyun.core.annotation.NameInMap("KMSKeyId")
         private String KMSKeyId;
 
-        @NameInMap("MountInstanceNum")
+        @com.aliyun.core.annotation.NameInMap("MountInstanceNum")
         private Integer mountInstanceNum;
 
-        @NameInMap("MountInstances")
+        @com.aliyun.core.annotation.NameInMap("MountInstances")
         private MountInstances mountInstances;
 
-        @NameInMap("MultiAttach")
+        @com.aliyun.core.annotation.NameInMap("MultiAttach")
         private String multiAttach;
 
-        @NameInMap("OperationLocks")
+        @com.aliyun.core.annotation.NameInMap("OperationLocks")
         private OperationLocks operationLocks;
 
-        @NameInMap("PerformanceLevel")
+        @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
         private String performanceLevel;
 
-        @NameInMap("Portable")
+        @com.aliyun.core.annotation.NameInMap("Placement")
+        private Placement placement;
+
+        @com.aliyun.core.annotation.NameInMap("Portable")
         private Boolean portable;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("ProvisionedIops")
+        @com.aliyun.core.annotation.NameInMap("ProvisionedIops")
         private Long provisionedIops;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SerialNumber")
+        @com.aliyun.core.annotation.NameInMap("SerialNumber")
         private String serialNumber;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
-        @NameInMap("SourceSnapshotId")
+        @com.aliyun.core.annotation.NameInMap("SourceSnapshotId")
         private String sourceSnapshotId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StorageClusterId")
+        @com.aliyun.core.annotation.NameInMap("StorageClusterId")
         private String storageClusterId;
 
-        @NameInMap("StorageSetId")
+        @com.aliyun.core.annotation.NameInMap("StorageSetId")
         private String storageSetId;
 
-        @NameInMap("StorageSetPartitionNumber")
+        @com.aliyun.core.annotation.NameInMap("StorageSetPartitionNumber")
         private Integer storageSetPartitionNumber;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("Throughput")
+        @com.aliyun.core.annotation.NameInMap("Throughput")
         private Integer throughput;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("ThroughputRead")
+        private Integer throughputRead;
+
+        @com.aliyun.core.annotation.NameInMap("ThroughputWrite")
+        private Integer throughputWrite;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Disk(Builder builder) {
@@ -749,6 +914,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             this.multiAttach = builder.multiAttach;
             this.operationLocks = builder.operationLocks;
             this.performanceLevel = builder.performanceLevel;
+            this.placement = builder.placement;
             this.portable = builder.portable;
             this.productCode = builder.productCode;
             this.provisionedIops = builder.provisionedIops;
@@ -763,6 +929,8 @@ public class DescribeDisksResponseBody extends TeaModel {
             this.storageSetPartitionNumber = builder.storageSetPartitionNumber;
             this.tags = builder.tags;
             this.throughput = builder.throughput;
+            this.throughputRead = builder.throughputRead;
+            this.throughputWrite = builder.throughputWrite;
             this.type = builder.type;
             this.zoneId = builder.zoneId;
         }
@@ -986,6 +1154,13 @@ public class DescribeDisksResponseBody extends TeaModel {
         }
 
         /**
+         * @return placement
+         */
+        public Placement getPlacement() {
+            return this.placement;
+        }
+
+        /**
          * @return portable
          */
         public Boolean getPortable() {
@@ -1084,6 +1259,20 @@ public class DescribeDisksResponseBody extends TeaModel {
         }
 
         /**
+         * @return throughputRead
+         */
+        public Integer getThroughputRead() {
+            return this.throughputRead;
+        }
+
+        /**
+         * @return throughputWrite
+         */
+        public Integer getThroughputWrite() {
+            return this.throughputWrite;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -1128,6 +1317,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             private String multiAttach; 
             private OperationLocks operationLocks; 
             private String performanceLevel; 
+            private Placement placement; 
             private Boolean portable; 
             private String productCode; 
             private Long provisionedIops; 
@@ -1142,11 +1332,16 @@ public class DescribeDisksResponseBody extends TeaModel {
             private Integer storageSetPartitionNumber; 
             private Tags tags; 
             private Integer throughput; 
+            private Integer throughputRead; 
+            private Integer throughputWrite; 
             private String type; 
             private String zoneId; 
 
             /**
-             * The time when the cloud disk was last attached. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.
+             * <p>The time when the disk was last attached. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-07T06:08:56Z</p>
              */
             public Builder attachedTime(String attachedTime) {
                 this.attachedTime = attachedTime;
@@ -1154,7 +1349,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The attachment information of the cloud disk. The value is an array that consists of the `Attachment` values. However, this value is not returned when you query Shared Block Storage devices.
+             * <p>The attachment information of the disk. The value is an array that consists of the <code>Attachment</code> values. This value is not returned when you query Shared Block Storage devices.</p>
              */
             public Builder attachments(Attachments attachments) {
                 this.attachments = attachments;
@@ -1162,7 +1357,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the automatic snapshot policy that is applied to the cloud disk.
+             * <p>The ID of the automatic snapshot policy that is applied to the cloud disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sp-bp67acfmxazb4p****</p>
              */
             public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
                 this.autoSnapshotPolicyId = autoSnapshotPolicyId;
@@ -1170,7 +1368,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is currently only available to select users and unavailable for general users.
+             * <p>This parameter is in invitational preview and is not publicly available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder bdfId(String bdfId) {
                 this.bdfId = bdfId;
@@ -1178,7 +1379,15 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is unavailable for public use.
+             * <p>Indicates whether the performance burst feature is enabled. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <p>This parameter is available only if you set <code>Category</code> to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder burstingEnabled(Boolean burstingEnabled) {
                 this.burstingEnabled = burstingEnabled;
@@ -1186,17 +1395,24 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The disk category. Valid values:
-             * <p>
+             * <p>The category of the disk. Valid values:</p>
+             * <ul>
+             * <li>cloud: basic disk</li>
+             * <li>cloud_efficiency: ultra disk</li>
+             * <li>cloud_ssd: standard SSD</li>
+             * <li>cloud_essd: ESSD</li>
+             * <li>cloud_auto: ESSD AutoPL disk</li>
+             * <li>local_ssd_pro: I/O-intensive local disk</li>
+             * <li>local_hdd_pro: throughput-intensive local disk</li>
+             * <li>cloud_essd_entry: ESSD Entry disk</li>
+             * <li>elastic_ephemeral_disk_standard: standard elastic ephemeral disk</li>
+             * <li>elastic_ephemeral_disk_premium: premium static ephemeral disk</li>
+             * <li>ephemeral: retired local disk</li>
+             * <li>ephemeral_ssd: retired local SSD</li>
+             * </ul>
              * 
-             * *   cloud: basic disk
-             * *   cloud_efficiency: ultra disk
-             * *   cloud_ssd: standard SSD
-             * *   cloud_essd: ESSD
-             * *   local_ssd_pro: I/O-intensive local disk
-             * *   local_hdd_pro: throughput-intensive local disk
-             * *   ephemeral: retired local disk
-             * *   ephemeral_ssd: retired local SSD
+             * <strong>example:</strong>
+             * <p>cloud_ssd</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -1204,7 +1420,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the disk was created.
+             * <p>The time when the disk was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-07T06:08:54Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -1212,13 +1431,15 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the automatic snapshots of the cloud disk are deleted after the disk is released. Valid values:
-             * <p>
+             * <p>Indicates whether the automatic snapshots of the cloud disk are deleted when the cloud disk is released. Valid values:</p>
+             * <ul>
+             * <li>true: The automatic snapshots of the cloud disk are deleted when the disk is released.</li>
+             * <li>false: The automatic snapshots of the cloud disk are retained when the disk is released.</li>
+             * </ul>
+             * <p>Snapshots that were created in the ECS console or by calling the <a href="https://help.aliyun.com/document_detail/25524.html">CreateSnapshot</a> operation are retained and not affected by this parameter.</p>
              * 
-             * *   true
-             * *   false
-             * 
-             * Snapshots that are created by calling the [CreateSnapshot](~~25524~~) operation or by using the Elastic Compute Service (ECS) console are retained and not affected by this parameter.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder deleteAutoSnapshot(Boolean deleteAutoSnapshot) {
                 this.deleteAutoSnapshot = deleteAutoSnapshot;
@@ -1226,11 +1447,14 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the cloud disk is released when its associated instance is released. Valid values:
-             * <p>
+             * <p>Indicates whether the disk is released when the instance to which the disk is attached is released. Valid values:</p>
+             * <ul>
+             * <li>true: The disk is released when the associated instance is released.</li>
+             * <li>false: The disk is retained when the associated instance is released.</li>
+             * </ul>
              * 
-             * *   true: The cloud disk is released when its associated instance is released.
-             * *   false: The cloud disk is retained when its associated instance is released.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder deleteWithInstance(Boolean deleteWithInstance) {
                 this.deleteWithInstance = deleteWithInstance;
@@ -1238,7 +1462,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The disk description.
+             * <p>The description of the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testDescription</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1246,7 +1473,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cloud disk was last detached.
+             * <p>The time when the disk was last detached.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-07T21:01:22Z</p>
              */
             public Builder detachedTime(String detachedTime) {
                 this.detachedTime = detachedTime;
@@ -1254,13 +1484,17 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The device name of the disk on its associated instance. Example: /dev/xvdb. Take note of the following items:
-             * <p>
+             * <p>The device name of the disk on the instance to which the disk is attached. Example: /dev/xvdb. Take note of the following items:</p>
+             * <ul>
+             * <li>This parameter has a value only when the <code>Status</code> value is <code>In_use</code> or <code>Detaching</code>.</li>
+             * <li>This parameter is empty for cloud disks for which the multi-attach feature is enabled. You can query the attachment information of the cloud disk based on the returned list of <code>Attachment</code> objects.</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+             * </blockquote>
              * 
-             * *   This parameter has a value only when the `Status` value is `In_use`.
-             * *   This parameter is empty for cloud disks that have the multi-attach feature enabled. You can query the attachment information of the cloud disk based on the `Attachment` values.
-             * 
-             * > This parameter will be removed in the future. To ensure future compatibility, we recommend that you do not use this parameter.
+             * <strong>example:</strong>
+             * <p>/dev/xvdb</p>
              */
             public Builder device(String device) {
                 this.device = device;
@@ -1268,11 +1502,14 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The disk billing method. Valid values:
-             * <p>
+             * <p>The billing method of the disk. Valid values:</p>
+             * <ul>
+             * <li>PrePaid: subscription</li>
+             * <li>PostPaid: pay-as-you-go</li>
+             * </ul>
              * 
-             * *   PrePaid: subscription
-             * *   PostPaid: pay-as-you-go
+             * <strong>example:</strong>
+             * <p>PrePaid</p>
              */
             public Builder diskChargeType(String diskChargeType) {
                 this.diskChargeType = diskChargeType;
@@ -1280,7 +1517,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The disk ID.
+             * <p>The ID of the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-bp18um4r4f2fve24****</p>
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -1288,7 +1528,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The disk name.
+             * <p>The name of the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testDiskName</p>
              */
             public Builder diskName(String diskName) {
                 this.diskName = diskName;
@@ -1296,7 +1539,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the automatic snapshot policy feature is enabled for the cloud disk.
+             * <p>Indicates whether the automatic snapshot policy feature is enabled for the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableAutoSnapshot(Boolean enableAutoSnapshot) {
                 this.enableAutoSnapshot = enableAutoSnapshot;
@@ -1304,7 +1550,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether an automatic snapshot policy is configured for the cloud disk.
+             * <p>Indicates whether an automatic snapshot policy is applied to the cloud disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableAutomatedSnapshotPolicy(Boolean enableAutomatedSnapshotPolicy) {
                 this.enableAutomatedSnapshotPolicy = enableAutomatedSnapshotPolicy;
@@ -1312,7 +1561,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the cloud disk is encrypted.
+             * <p>Indicates whether the cloud disk is encrypted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder encrypted(Boolean encrypted) {
                 this.encrypted = encrypted;
@@ -1320,7 +1572,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the subscription cloud disk expires.
+             * <p>The time when the subscription disk expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-07-07T16:00Z</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -1328,7 +1583,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of IOPS.
+             * <p>The maximum number of read and write operations per second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4000</p>
              */
             public Builder IOPS(Integer IOPS) {
                 this.IOPS = IOPS;
@@ -1336,7 +1594,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of read operations per second.
+             * <p>The maximum number of read operations per second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder IOPSRead(Integer IOPSRead) {
                 this.IOPSRead = IOPSRead;
@@ -1344,7 +1605,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of write operations per second.
+             * <p>The maximum number of write operations per second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder IOPSWrite(Integer IOPSWrite) {
                 this.IOPSWrite = IOPSWrite;
@@ -1352,7 +1616,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image that was used to create the instance. This parameter is empty unless the cloud disk is created from an image. The value of this parameter remains unchanged throughout the lifecycle of the cloud disk.
+             * <p>The ID of the image that was used to create the instance. This parameter is empty unless the cloud disk was created from an image. The value of this parameter remains unchanged throughout the lifecycle of the cloud disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-bp13aqm171qynt3u***</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -1360,11 +1627,14 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance to which the disk was attached. Take note of the following items:
-             * <p>
+             * <p>The ID of the instance to which the disk is attached. Take note of the following items:</p>
+             * <ul>
+             * <li>This parameter has a value only when the <code>Status</code> value is <code>In_use</code> or <code>Detaching</code>.</li>
+             * <li>This parameter is empty for cloud disks for which the multi-attach feature is enabled. You can query the attachment information of the cloud disk based on the returned <code>Attachment</code> objects.</li>
+             * </ul>
              * 
-             * *   This parameter has a value only when the `Status` value is `In_use`.
-             * *   This parameter is empty for cloud disks that have the multi-attach feature enabled. You can query the attachment information of the cloud disk based on the `Attachment` values.
+             * <strong>example:</strong>
+             * <p>i-bp67acfmxazb4q****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1372,7 +1642,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the KMS key that is used by the cloud disk.
+             * <p>The ID of the KMS key that is used for the cloud disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0e478b7a-4262-4802-b8cb-00d3fb408***</p>
              */
             public Builder KMSKeyId(String KMSKeyId) {
                 this.KMSKeyId = KMSKeyId;
@@ -1380,7 +1653,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances to which the Shared Block Storage device is attached.
+             * <p>The number of instances to which the Shared Block Storage device is attached.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder mountInstanceNum(Integer mountInstanceNum) {
                 this.mountInstanceNum = mountInstanceNum;
@@ -1388,7 +1664,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The attachment information of the Shared Block Storage device.
+             * <p>The attachment information of the Shared Block Storage device.</p>
              */
             public Builder mountInstances(MountInstances mountInstances) {
                 this.mountInstances = mountInstances;
@@ -1396,7 +1672,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the multi-attach feature is enabled for the cloud disk.
+             * <p>Indicates whether the multi-attach feature is enabled for the cloud disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Disabled</p>
              */
             public Builder multiAttach(String multiAttach) {
                 this.multiAttach = multiAttach;
@@ -1404,7 +1683,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The reasons why the disk is locked.
+             * <p>The reasons why the disk was locked.</p>
              */
             public Builder operationLocks(OperationLocks operationLocks) {
                 this.operationLocks = operationLocks;
@@ -1412,13 +1691,16 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The performance level of the enhanced SSD (ESSD). Valid values:
-             * <p>
+             * <p>The performance level of the ESSD. Valid values:</p>
+             * <ul>
+             * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
+             * <li>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
+             * <li>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</li>
+             * <li>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
+             * </ul>
              * 
-             * *   PL0: An ESSD can deliver up to 10,000 random read/write IOPS.
-             * *   PL1: An ESSD can deliver up to 50,000 random read/write IOPS.
-             * *   PL2: An ESSD can deliver up to 100,000 random read/write IOPS.
-             * *   PL3: An ESSD delivers up to 1,000,000 random read/write IOPS.
+             * <strong>example:</strong>
+             * <p>PL0</p>
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -1426,7 +1708,22 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the disk is removable.
+             * <p>The locations in which data is stored.</p>
+             * <p>This parameter is returned only if you specify <code>Placement</code> in the AdditionalAttributes.N request parameter.</p>
+             * <blockquote>
+             * <p> This parameter is valid only for Regional ESSDs (cloud_regional_disk_auto).</p>
+             * </blockquote>
+             */
+            public Builder placement(Placement placement) {
+                this.placement = placement;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether the disk is removable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder portable(Boolean portable) {
                 this.portable = portable;
@@ -1434,7 +1731,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The product code of the disk in Alibaba Cloud Marketplace.
+             * <p>The product code of the disk in Alibaba Cloud Marketplace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jxsc000204</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -1442,7 +1742,11 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is unavailable for public use.
+             * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × *Capacity - Baseline IOPS}. Baseline IOPS = min{1,800 + 50 × *Capacity, 50,000}</p>
+             * <p>This parameter is available only if you set <code>Category</code> to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40000</p>
              */
             public Builder provisionedIops(Long provisionedIops) {
                 this.provisionedIops = provisionedIops;
@@ -1450,7 +1754,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the disk.
+             * <p>The ID of the region to which the disk belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1458,7 +1765,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the disk belongs.
+             * <p>The ID of the resource group to which the disk belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-bp67acfmxazb4p****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1466,7 +1776,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The disk serial number.
+             * <p>The serial number of the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bp18um4r4f2fve2****</p>
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;
@@ -1474,7 +1787,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the disk. Unit: GiB.
+             * <p>The size of the disk. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -1482,10 +1798,11 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the snapshot that was used to create the cloud disk.
-             * <p>
+             * <p>The ID of the snapshot that was used to create the cloud disk.</p>
+             * <p>This parameter is empty unless the cloud disk was created from a snapshot. The value of this parameter remains unchanged throughout the lifecycle of the cloud disk.</p>
              * 
-             * This parameter is empty unless the cloud disk was created from a snapshot. The value of this parameter remains unchanged throughout the lifecycle of the cloud disk.
+             * <strong>example:</strong>
+             * <p>s-bp67acfmxazb4p****</p>
              */
             public Builder sourceSnapshotId(String sourceSnapshotId) {
                 this.sourceSnapshotId = sourceSnapshotId;
@@ -1493,15 +1810,18 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the cloud disk. Valid values:
-             * <p>
+             * <p>The status of the disk. Valid values:</p>
+             * <ul>
+             * <li>In_use</li>
+             * <li>Available</li>
+             * <li>Attaching</li>
+             * <li>Detaching</li>
+             * <li>Creating</li>
+             * <li>ReIniting</li>
+             * </ul>
              * 
-             * *   In_use
-             * *   Available
-             * *   Attaching
-             * *   Detaching
-             * *   Creating
-             * *   ReIniting
+             * <strong>example:</strong>
+             * <p>In_use</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1509,7 +1829,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the dedicated block storage cluster to which the cloud disk belongs. If your cloud disk belongs to the public block storage cluster, an empty value is returned.
+             * <p>The ID of the dedicated block storage cluster to which the cloud disk belongs. If your cloud disk belongs to the public block storage cluster, an empty value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dbsc-j5e1sf2vaf5he8m2****</p>
              */
             public Builder storageClusterId(String storageClusterId) {
                 this.storageClusterId = storageClusterId;
@@ -1517,7 +1840,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The storage set ID.
+             * <p>The ID of the storage set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ss-i-bp1j4i2jdf3owlhe****</p>
              */
             public Builder storageSetId(String storageSetId) {
                 this.storageSetId = storageSetId;
@@ -1525,7 +1851,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of partitions in the storage set.
+             * <p>The maximum number of partitions in the storage set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder storageSetPartitionNumber(Integer storageSetPartitionNumber) {
                 this.storageSetPartitionNumber = storageSetPartitionNumber;
@@ -1533,7 +1862,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the disk.
+             * <p>The tags of the disk.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -1541,7 +1870,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of data transferred per second. Unit: MB/s.
+             * <p>The amount of data that can be transferred per second. Unit: MB/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder throughput(Integer throughput) {
                 this.throughput = throughput;
@@ -1549,11 +1881,36 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The disk type. Valid values:
-             * <p>
+             * <p>The amount of data that can be read per second. Unit: MB/s.</p>
              * 
-             * *   system: system disk
-             * *   data: data disk
+             * <strong>example:</strong>
+             * <p>100</p>
+             */
+            public Builder throughputRead(Integer throughputRead) {
+                this.throughputRead = throughputRead;
+                return this;
+            }
+
+            /**
+             * <p>The amount of data that can be written per second. Unit: MB/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
+             */
+            public Builder throughputWrite(Integer throughputWrite) {
+                this.throughputWrite = throughputWrite;
+                return this;
+            }
+
+            /**
+             * <p>The type of the disk. Valid values:</p>
+             * <ul>
+             * <li>system: system disk</li>
+             * <li>data: data disk</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>system</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1561,7 +1918,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone to which the cloud disk or local disk belongs.
+             * <p>The ID of the zone to which the disk belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -1575,9 +1935,15 @@ public class DescribeDisksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDisksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDisksResponseBody</p>
+     */
     public static class Disks extends TeaModel {
-        @NameInMap("Disk")
-        private java.util.List < Disk> disk;
+        @com.aliyun.core.annotation.NameInMap("Disk")
+        private java.util.List<Disk> disk;
 
         private Disks(Builder builder) {
             this.disk = builder.disk;
@@ -1594,17 +1960,17 @@ public class DescribeDisksResponseBody extends TeaModel {
         /**
          * @return disk
          */
-        public java.util.List < Disk> getDisk() {
+        public java.util.List<Disk> getDisk() {
             return this.disk;
         }
 
         public static final class Builder {
-            private java.util.List < Disk> disk; 
+            private java.util.List<Disk> disk; 
 
             /**
              * Disk.
              */
-            public Builder disk(java.util.List < Disk> disk) {
+            public Builder disk(java.util.List<Disk> disk) {
                 this.disk = disk;
                 return this;
             }

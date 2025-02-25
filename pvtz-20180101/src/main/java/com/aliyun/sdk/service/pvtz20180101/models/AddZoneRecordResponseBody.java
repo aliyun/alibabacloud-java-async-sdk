@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddZoneRecordResponseBody} extends {@link TeaModel}
  *
  * <p>AddZoneRecordResponseBody</p>
  */
 public class AddZoneRecordResponseBody extends TeaModel {
-    @NameInMap("RecordId")
+    @com.aliyun.core.annotation.NameInMap("RecordId")
     private Long recordId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private AddZoneRecordResponseBody(Builder builder) {
@@ -62,7 +62,10 @@ public class AddZoneRecordResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RecordId.
+         * <p>The ID of the DNS record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>429570****</p>
          */
         public Builder recordId(Long recordId) {
             this.recordId = recordId;
@@ -70,7 +73,10 @@ public class AddZoneRecordResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B7AD377-7E86-44A8-B9A8-53E8666E72FE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +84,10 @@ public class AddZoneRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

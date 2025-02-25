@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetRetcodeShareStatusResponseBody} extends {@link TeaModel}
  *
  * <p>SetRetcodeShareStatusResponseBody</p>
  */
 public class SetRetcodeShareStatusResponseBody extends TeaModel {
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SetRetcodeShareStatusResponseBody(Builder builder) {
@@ -50,7 +55,14 @@ public class SetRetcodeShareStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the application. Log on to the ARMS console. In the left-side navigation pane, choose **Browser Monitoring** > **Browser Monitoring**. On the Browser Monitoring page, click the name of an application. The URL in the address bar contains the process ID (PID) of the application. The PID is indicated in the pid=xxx format. The PID is usually percent encoded as xxx%40xxx. You must modify this value to remove the percent encoding. For example, if the PID in the URL is xxx%4074xxx, you must replace %40 with the at sign (@) to obtain xxx@74xxx.
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The call is successful.</li>
+         * <li><code>false</code>: The call fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -58,11 +70,10 @@ public class SetRetcodeShareStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Specifies whether to turn on logon-free sharing. Valid values:
-         * <p>
+         * <p>The ID of the request.</p>
          * 
-         * *   `true`: turns on logon-free sharing.
-         * *   `false`: turns off logon-free sharing.
+         * <strong>example:</strong>
+         * <p>40B10E04-81E8-4643-970D-F1B38F2E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

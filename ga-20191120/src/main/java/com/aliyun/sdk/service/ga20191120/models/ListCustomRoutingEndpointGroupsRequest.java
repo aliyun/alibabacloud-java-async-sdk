@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,41 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCustomRoutingEndpointGroupsRequest</p>
  */
 public class ListCustomRoutingEndpointGroupsRequest extends Request {
-    @Query
-    @NameInMap("AcceleratorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceleratorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String acceleratorId;
 
-    @Query
-    @NameInMap("EndpointGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessLogSwitch")
+    private String accessLogSwitch;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointGroupId")
     private String endpointGroupId;
 
-    @Query
-    @NameInMap("ListenerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerId")
     private String listenerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private ListCustomRoutingEndpointGroupsRequest(Builder builder) {
         super(builder);
         this.acceleratorId = builder.acceleratorId;
+        this.accessLogSwitch = builder.accessLogSwitch;
         this.endpointGroupId = builder.endpointGroupId;
         this.listenerId = builder.listenerId;
         this.pageNumber = builder.pageNumber;
@@ -67,6 +71,13 @@ public class ListCustomRoutingEndpointGroupsRequest extends Request {
      */
     public String getAcceleratorId() {
         return this.acceleratorId;
+    }
+
+    /**
+     * @return accessLogSwitch
+     */
+    public String getAccessLogSwitch() {
+        return this.accessLogSwitch;
     }
 
     /**
@@ -106,6 +117,7 @@ public class ListCustomRoutingEndpointGroupsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListCustomRoutingEndpointGroupsRequest, Builder> {
         private String acceleratorId; 
+        private String accessLogSwitch; 
         private String endpointGroupId; 
         private String listenerId; 
         private Integer pageNumber; 
@@ -119,6 +131,7 @@ public class ListCustomRoutingEndpointGroupsRequest extends Request {
         private Builder(ListCustomRoutingEndpointGroupsRequest request) {
             super(request);
             this.acceleratorId = request.acceleratorId;
+            this.accessLogSwitch = request.accessLogSwitch;
             this.endpointGroupId = request.endpointGroupId;
             this.listenerId = request.listenerId;
             this.pageNumber = request.pageNumber;
@@ -132,6 +145,20 @@ public class ListCustomRoutingEndpointGroupsRequest extends Request {
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
             this.acceleratorId = acceleratorId;
+            return this;
+        }
+
+        /**
+         * Specifies whether the access log feature is enabled.
+         * <p>
+         * 
+         * You can set the parameter to **on**.
+         * 
+         * If you leave the parameter empty, all endpoint groups are returned.
+         */
+        public Builder accessLogSwitch(String accessLogSwitch) {
+            this.putQueryParameter("AccessLogSwitch", accessLogSwitch);
+            this.accessLogSwitch = accessLogSwitch;
             return this;
         }
 
@@ -154,7 +181,7 @@ public class ListCustomRoutingEndpointGroupsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The page number. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -163,7 +190,7 @@ public class ListCustomRoutingEndpointGroupsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+         * The number of entries per page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

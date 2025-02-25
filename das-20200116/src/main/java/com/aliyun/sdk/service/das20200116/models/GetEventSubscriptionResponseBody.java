@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetEventSubscriptionResponseBody} extends {@link TeaModel}
  *
  * <p>GetEventSubscriptionResponseBody</p>
  */
 public class GetEventSubscriptionResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private GetEventSubscriptionResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,10 +110,13 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +124,10 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,11 +135,14 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -138,17 +155,23 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetEventSubscriptionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEventSubscriptionResponseBody</p>
+     */
     public static class ContactGroups extends TeaModel {
-        @NameInMap("contacts")
+        @com.aliyun.core.annotation.NameInMap("contacts")
         private String contacts;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("userId")
+        @com.aliyun.core.annotation.NameInMap("userId")
         private String userId;
 
         private ContactGroups(Builder builder) {
@@ -201,7 +224,10 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * The members of the alert contact group.
+             * <p>The members of the alert contact group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;[&quot;Mr. Zhang&quot;,&quot;Ms. Wang&quot;,&quot;Mr. Li&quot;]&quot;</p>
              */
             public Builder contacts(String contacts) {
                 this.contacts = contacts;
@@ -209,7 +235,10 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the alert contact group.
+             * <p>The description of the alert contact group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default contact</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -217,7 +246,10 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert contact group.
+             * <p>The name of the alert contact group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mr. Zhang</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -225,7 +257,10 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1088760496****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -239,26 +274,32 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetEventSubscriptionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEventSubscriptionResponseBody</p>
+     */
     public static class Contacts extends TeaModel {
-        @NameInMap("dingtalkHook")
+        @com.aliyun.core.annotation.NameInMap("dingtalkHook")
         private String dingtalkHook;
 
-        @NameInMap("email")
+        @com.aliyun.core.annotation.NameInMap("email")
         private String email;
 
-        @NameInMap("groups")
-        private java.util.List < String > groups;
+        @com.aliyun.core.annotation.NameInMap("groups")
+        private java.util.List<String> groups;
 
-        @NameInMap("isCmsReduplicated")
+        @com.aliyun.core.annotation.NameInMap("isCmsReduplicated")
         private Boolean isCmsReduplicated;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("phone")
+        @com.aliyun.core.annotation.NameInMap("phone")
         private String phone;
 
-        @NameInMap("userId")
+        @com.aliyun.core.annotation.NameInMap("userId")
         private String userId;
 
         private Contacts(Builder builder) {
@@ -296,7 +337,7 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
         /**
          * @return groups
          */
-        public java.util.List < String > getGroups() {
+        public java.util.List<String> getGroups() {
             return this.groups;
         }
 
@@ -331,14 +372,17 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
         public static final class Builder {
             private String dingtalkHook; 
             private String email; 
-            private java.util.List < String > groups; 
+            private java.util.List<String> groups; 
             private Boolean isCmsReduplicated; 
             private String name; 
             private String phone; 
             private String userId; 
 
             /**
-             * The webhook URL of the DingTalk chatbot.
+             * <p>The webhook URL of the DingTalk chatbot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=68fa29a9eaf3ba9994f54fxxxc1aa9879700308f90e9c23ebfb3663642c9">https://oapi.dingtalk.com/robot/send?access_token=68fa29a9eaf3ba9994f54fxxxc1aa9879700308f90e9c23ebfb3663642c9</a>****</p>
              */
             public Builder dingtalkHook(String dingtalkHook) {
                 this.dingtalkHook = dingtalkHook;
@@ -346,7 +390,10 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * The email address of the alert contact.
+             * <p>The email address of the alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a***@example.net</p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -354,19 +401,22 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * The contact groups to which the alert contact belongs.
+             * <p>The contact groups to which the alert contact belongs.</p>
              */
-            public Builder groups(java.util.List < String > groups) {
+            public Builder groups(java.util.List<String> groups) {
                 this.groups = groups;
                 return this;
             }
 
             /**
-             * Indicates whether the alert contact name is the same as the contact name on CloudMonitor.
-             * <p>
+             * <p>Indicates whether the alert contact name is the same as the contact name on CloudMonitor.</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * * **true**
-             * * **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isCmsReduplicated(Boolean isCmsReduplicated) {
                 this.isCmsReduplicated = isCmsReduplicated;
@@ -374,7 +424,10 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert contact.
+             * <p>The name of the alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mr. Zhang</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -382,7 +435,10 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * The mobile number of the alert contact.
+             * <p>The mobile number of the alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1390000****</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -390,7 +446,10 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1088760496****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -404,53 +463,59 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetEventSubscriptionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEventSubscriptionResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("active")
+        @com.aliyun.core.annotation.NameInMap("active")
         private Integer active;
 
-        @NameInMap("channelType")
+        @com.aliyun.core.annotation.NameInMap("channelType")
         private String channelType;
 
-        @NameInMap("contactGroupName")
+        @com.aliyun.core.annotation.NameInMap("contactGroupName")
         private String contactGroupName;
 
-        @NameInMap("contactGroups")
-        private java.util.List < ContactGroups> contactGroups;
+        @com.aliyun.core.annotation.NameInMap("contactGroups")
+        private java.util.List<ContactGroups> contactGroups;
 
-        @NameInMap("contactName")
+        @com.aliyun.core.annotation.NameInMap("contactName")
         private String contactName;
 
-        @NameInMap("contacts")
-        private java.util.List < Contacts> contacts;
+        @com.aliyun.core.annotation.NameInMap("contacts")
+        private java.util.List<Contacts> contacts;
 
-        @NameInMap("eventContext")
+        @com.aliyun.core.annotation.NameInMap("eventContext")
         private String eventContext;
 
-        @NameInMap("eventSendGroup")
-        private java.util.List < String > eventSendGroup;
+        @com.aliyun.core.annotation.NameInMap("eventSendGroup")
+        private java.util.List<String> eventSendGroup;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private Long gmtModified;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
-        @NameInMap("lang")
+        @com.aliyun.core.annotation.NameInMap("lang")
         private String lang;
 
-        @NameInMap("level")
+        @com.aliyun.core.annotation.NameInMap("level")
         private String level;
 
-        @NameInMap("minInterval")
+        @com.aliyun.core.annotation.NameInMap("minInterval")
         private String minInterval;
 
-        @NameInMap("userId")
+        @com.aliyun.core.annotation.NameInMap("userId")
         private String userId;
 
         private Data(Builder builder) {
@@ -504,7 +569,7 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
         /**
          * @return contactGroups
          */
-        public java.util.List < ContactGroups> getContactGroups() {
+        public java.util.List<ContactGroups> getContactGroups() {
             return this.contactGroups;
         }
 
@@ -518,7 +583,7 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
         /**
          * @return contacts
          */
-        public java.util.List < Contacts> getContacts() {
+        public java.util.List<Contacts> getContacts() {
             return this.contacts;
         }
 
@@ -532,7 +597,7 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
         /**
          * @return eventSendGroup
          */
-        public java.util.List < String > getEventSendGroup() {
+        public java.util.List<String> getEventSendGroup() {
             return this.eventSendGroup;
         }
 
@@ -596,11 +661,11 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
             private Integer active; 
             private String channelType; 
             private String contactGroupName; 
-            private java.util.List < ContactGroups> contactGroups; 
+            private java.util.List<ContactGroups> contactGroups; 
             private String contactName; 
-            private java.util.List < Contacts> contacts; 
+            private java.util.List<Contacts> contacts; 
             private String eventContext; 
-            private java.util.List < String > eventSendGroup; 
+            private java.util.List<String> eventSendGroup; 
             private Long gmtCreate; 
             private Long gmtModified; 
             private Long id; 
@@ -611,11 +676,14 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * Indicates whether the event subscription feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the event subscription feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The event subscription feature is disabled.</li>
+             * <li><strong>1</strong>: The event subscription feature is enabled.</li>
+             * </ul>
              * 
-             * *   **0**: The event subscription feature is disabled.
-             * *   **1**: The event subscription feature is enabled.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder active(Integer active) {
                 this.active = active;
@@ -623,13 +691,16 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * The notification method. Valid values:
-             * <p>
+             * <p>The notification method. Valid values:</p>
+             * <ul>
+             * <li><strong>hdm_alarm_sms</strong>: text message.</li>
+             * <li><strong>dingtalk</strong>: DingTalk chatbot.</li>
+             * <li><strong>hdm_alarm_sms_and_email</strong>: text message and email.</li>
+             * <li><strong>hdm_alarm_sms,dingtalk</strong>: text message and DingTalk chatbot.</li>
+             * </ul>
              * 
-             * *   **hdm_alarm_sms**: text message.
-             * *   **dingtalk**: DingTalk chatbot.
-             * *   **hdm_alarm_sms_and_email**: text message and email.
-             * *   **hdm_alarm_sms,dingtalk**: text message and DingTalk chatbot.
+             * <strong>example:</strong>
+             * <p>hdm_alarm_sms,dingtalk</p>
              */
             public Builder channelType(String channelType) {
                 this.channelType = channelType;
@@ -637,7 +708,10 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the contact group that receives alert notifications. Multiple names are separated by commas (,).
+             * <p>The name of the contact group that receives alert notifications. Multiple names are separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default contact group</p>
              */
             public Builder contactGroupName(String contactGroupName) {
                 this.contactGroupName = contactGroupName;
@@ -645,15 +719,18 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * The alert contact groups.
+             * <p>The alert contact groups.</p>
              */
-            public Builder contactGroups(java.util.List < ContactGroups> contactGroups) {
+            public Builder contactGroups(java.util.List<ContactGroups> contactGroups) {
                 this.contactGroups = contactGroups;
                 return this;
             }
 
             /**
-             * The name of the subscriber who receives alert notifications. Multiple names are separated by commas (,).
+             * <p>The name of the subscriber who receives alert notifications. Multiple names are separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default contact</p>
              */
             public Builder contactName(String contactName) {
                 this.contactName = contactName;
@@ -661,15 +738,18 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID.
+             * <p>The user ID.</p>
              */
-            public Builder contacts(java.util.List < Contacts> contacts) {
+            public Builder contacts(java.util.List<Contacts> contacts) {
                 this.contacts = contacts;
                 return this;
             }
 
             /**
-             * The supported event scenarios. Only **AllContext** may be returned, which indicates that all scenarios are supported.
+             * <p>The supported event scenarios. Only <strong>AllContext</strong> may be returned, which indicates that all scenarios are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AllContext</p>
              */
             public Builder eventContext(String eventContext) {
                 this.eventContext = eventContext;
@@ -677,15 +757,18 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * The supported event scenarios in which event subscription can be sent.
+             * <p>The supported event scenarios in which event subscription can be sent.</p>
              */
-            public Builder eventSendGroup(java.util.List < String > eventSendGroup) {
+            public Builder eventSendGroup(java.util.List<String> eventSendGroup) {
                 this.eventSendGroup = eventSendGroup;
                 return this;
             }
 
             /**
-             * The time when event subscription was enabled. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when event subscription was enabled. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1633071840000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -693,7 +776,10 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the event subscription settings were most recently modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the event subscription settings were most recently modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1633071850000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -701,7 +787,10 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * The primary key ID of the database.
+             * <p>The primary key ID of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -709,7 +798,10 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-2ze8g2am97624****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -717,7 +809,10 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * The language of event notifications. Only **zh-CN** may be returned, which indicates that event notifications are sent in Chinese.
+             * <p>The language of event notifications. Only <strong>zh-CN</strong> may be returned, which indicates that event notifications are sent in Chinese.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zh_CN</p>
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -725,13 +820,16 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level of the events that trigger notifications. Valid values:
-             * <p>
+             * <p>The risk level of the events that trigger notifications. Valid values:</p>
+             * <ul>
+             * <li><strong>Notice</strong></li>
+             * <li><strong>Optimization</strong></li>
+             * <li><strong>Warn</strong></li>
+             * <li><strong>Critical</strong></li>
+             * </ul>
              * 
-             * *   **Notice**
-             * *   **Optimization**
-             * *   **Warn**
-             * *   **Critical**
+             * <strong>example:</strong>
+             * <p>Optimization</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -739,7 +837,10 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum interval between event notifications. Unit: seconds.
+             * <p>The minimum interval between event notifications. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder minInterval(String minInterval) {
                 this.minInterval = minInterval;
@@ -747,7 +848,10 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1088760496****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

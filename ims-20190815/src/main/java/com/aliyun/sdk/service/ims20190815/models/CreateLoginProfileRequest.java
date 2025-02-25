@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLoginProfileRequest} extends {@link RequestModel}
  *
  * <p>CreateLoginProfileRequest</p>
  */
 public class CreateLoginProfileRequest extends Request {
-    @Query
-    @NameInMap("MFABindRequired")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MFABindRequired")
     private Boolean MFABindRequired;
 
-    @Query
-    @NameInMap("Password")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Password")
     private String password;
 
-    @Query
-    @NameInMap("PasswordResetRequired")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordResetRequired")
     private Boolean passwordResetRequired;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("UserPrincipalName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserPrincipalName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userPrincipalName;
 
     private CreateLoginProfileRequest(Builder builder) {
@@ -111,11 +116,14 @@ public class CreateLoginProfileRequest extends Request {
         } 
 
         /**
-         * Specifies whether multi-factor authentication (MFA) must be enabled. Valid values:
-         * <p>
+         * <p>Specifies whether to forcefully enable multi-factor authentication (MFA) for the RAM user. Valid values:</p>
+         * <ul>
+         * <li>true: forcefully enables MFA for the RAM user. The RAM user must bind an MFA device upon the next logon.</li>
+         * <li>false (default): does not forcefully enable MFA for the RAM user.</li>
+         * </ul>
          * 
-         * *   true: MFA must be enabled. The RAM user must bind an MFA device at the next logon.
-         * *   false: MFA is not enabled. This is the default value.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder MFABindRequired(Boolean MFABindRequired) {
             this.putQueryParameter("MFABindRequired", MFABindRequired);
@@ -124,10 +132,11 @@ public class CreateLoginProfileRequest extends Request {
         }
 
         /**
-         * The password that is used to log on to the console.
-         * <p>
+         * <p>The password that the RAM user uses to log on to the console.</p>
+         * <p>The password must meet the complexity requirements.</p>
          * 
-         * The password must meet the complexity requirements.
+         * <strong>example:</strong>
+         * <p>mypassword</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -136,11 +145,14 @@ public class CreateLoginProfileRequest extends Request {
         }
 
         /**
-         * Specifies whether the RAM user must reset the password at the next logon. Default value: false. Valid values:
-         * <p>
+         * <p>Specifies whether the RAM user is required to reset the password upon the next logon. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false (default)</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder passwordResetRequired(Boolean passwordResetRequired) {
             this.putQueryParameter("PasswordResetRequired", passwordResetRequired);
@@ -149,11 +161,14 @@ public class CreateLoginProfileRequest extends Request {
         }
 
         /**
-         * The status of password-based logon. Valid values:
-         * <p>
+         * <p>Specifies whether to enable password-based logons to the console. Valid values:</p>
+         * <ul>
+         * <li>Active: Password-based logon is enabled. This is the default value.</li>
+         * <li>Inactive: Password-based logon is disabled.</li>
+         * </ul>
          * 
-         * *   Active: Password-based logon is enabled. This is the default value.
-         * *   Inactive: Password-based logon is disabled.
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -162,7 +177,11 @@ public class CreateLoginProfileRequest extends Request {
         }
 
         /**
-         * The logon name of the RAM user.
+         * <p>The logon name of the RAM user.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
          */
         public Builder userPrincipalName(String userPrincipalName) {
             this.putQueryParameter("UserPrincipalName", userPrincipalName);

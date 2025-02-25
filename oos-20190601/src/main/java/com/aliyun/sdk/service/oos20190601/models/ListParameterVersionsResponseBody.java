@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListParameterVersionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListParameterVersionsResponseBody</p>
  */
 public class ListParameterVersionsResponseBody extends TeaModel {
-    @NameInMap("CreatedBy")
+    @com.aliyun.core.annotation.NameInMap("CreatedBy")
     private String createdBy;
 
-    @NameInMap("CreatedDate")
+    @com.aliyun.core.annotation.NameInMap("CreatedDate")
     private String createdDate;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("ParameterVersions")
-    private java.util.List < ParameterVersions> parameterVersions;
+    @com.aliyun.core.annotation.NameInMap("ParameterVersions")
+    private java.util.List<ParameterVersions> parameterVersions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private ListParameterVersionsResponseBody(Builder builder) {
@@ -119,7 +124,7 @@ public class ListParameterVersionsResponseBody extends TeaModel {
     /**
      * @return parameterVersions
      */
-    public java.util.List < ParameterVersions> getParameterVersions() {
+    public java.util.List<ParameterVersions> getParameterVersions() {
         return this.parameterVersions;
     }
 
@@ -152,13 +157,16 @@ public class ListParameterVersionsResponseBody extends TeaModel {
         private Integer maxResults; 
         private String name; 
         private String nextToken; 
-        private java.util.List < ParameterVersions> parameterVersions; 
+        private java.util.List<ParameterVersions> parameterVersions; 
         private String requestId; 
         private Integer totalCount; 
         private String type; 
 
         /**
-         * The user who created the common parameter.
+         * <p>The user who created the common parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root(130900000)</p>
          */
         public Builder createdBy(String createdBy) {
             this.createdBy = createdBy;
@@ -166,7 +174,10 @@ public class ListParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the common parameter was created.
+         * <p>The time when the common parameter was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-07T11:37:29Z</p>
          */
         public Builder createdDate(String createdDate) {
             this.createdDate = createdDate;
@@ -174,7 +185,10 @@ public class ListParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the common parameter.
+         * <p>The description of the common parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>parameter-description</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -182,7 +196,10 @@ public class ListParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the common parameter.
+         * <p>The ID of the common parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p-a483b520e0axxxxxxxxx</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -190,7 +207,10 @@ public class ListParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -198,7 +218,10 @@ public class ListParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the common parameter.
+         * <p>The name of the common parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyParameter</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -206,7 +229,10 @@ public class ListParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination token that was used in the next request to retrieve a new page of results.
+         * <p>The pagination token that was used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctMTJDQzQ3NjFENDdB</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -214,15 +240,18 @@ public class ListParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the version of the common parameter.
+         * <p>The information about the version of the common parameter.</p>
          */
-        public Builder parameterVersions(java.util.List < ParameterVersions> parameterVersions) {
+        public Builder parameterVersions(java.util.List<ParameterVersions> parameterVersions) {
             this.parameterVersions = parameterVersions;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FD08D89D-B6C8-4AA2-A2B4-521D3F4A39FA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,7 +259,10 @@ public class ListParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -238,7 +270,10 @@ public class ListParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The data type of the common parameter.
+         * <p>The data type of the common parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>String</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -251,17 +286,23 @@ public class ListParameterVersionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListParameterVersionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListParameterVersionsResponseBody</p>
+     */
     public static class ParameterVersions extends TeaModel {
-        @NameInMap("ParameterVersion")
+        @com.aliyun.core.annotation.NameInMap("ParameterVersion")
         private Integer parameterVersion;
 
-        @NameInMap("UpdatedBy")
+        @com.aliyun.core.annotation.NameInMap("UpdatedBy")
         private String updatedBy;
 
-        @NameInMap("UpdatedDate")
+        @com.aliyun.core.annotation.NameInMap("UpdatedDate")
         private String updatedDate;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private ParameterVersions(Builder builder) {
@@ -314,7 +355,10 @@ public class ListParameterVersionsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The version number of the common parameter.
+             * <p>The version number of the common parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder parameterVersion(Integer parameterVersion) {
                 this.parameterVersion = parameterVersion;
@@ -322,7 +366,10 @@ public class ListParameterVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The user who updated the common parameter.
+             * <p>The user who updated the common parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root(130900000)</p>
              */
             public Builder updatedBy(String updatedBy) {
                 this.updatedBy = updatedBy;
@@ -330,7 +377,10 @@ public class ListParameterVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the common parameter was last updated.
+             * <p>The time when the common parameter was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-09-07T11:37:29Z</p>
              */
             public Builder updatedDate(String updatedDate) {
                 this.updatedDate = updatedDate;
@@ -338,7 +388,10 @@ public class ListParameterVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the common parameter.
+             * <p>The value of the common parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyParameter</p>
              */
             public Builder value(String value) {
                 this.value = value;

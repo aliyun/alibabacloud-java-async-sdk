@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDataSourcesResponseBody} extends {@link TeaModel}
  *
  * <p>ListDataSourcesResponseBody</p>
  */
 public class ListDataSourcesResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
-    private java.util.List < Result> result;
+    @com.aliyun.core.annotation.NameInMap("result")
+    private java.util.List<Result> result;
 
     private ListDataSourcesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,23 +46,19 @@ public class ListDataSourcesResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
 
         /**
-         * ## Method
-         * <p>
+         * <p>The ID of the request.</p>
          * 
-         * `GET`
-         * 
-         * ## URI
-         * 
-         * `/openapi/ha3/instances/{instanceId}/data-sources`
+         * <strong>example:</strong>
+         * <p>93A9E542-8CF8-5BA6-99AB-94C0FE520429</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -65,9 +66,9 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned results.
+         * <p>The results returned.</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -78,23 +79,29 @@ public class ListDataSourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDataSourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataSourcesResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("domain")
+        @com.aliyun.core.annotation.NameInMap("domain")
         private String domain;
 
-        @NameInMap("indexes")
-        private java.util.List < String > indexes;
+        @com.aliyun.core.annotation.NameInMap("indexes")
+        private java.util.List<String> indexes;
 
-        @NameInMap("lastFulTime")
+        @com.aliyun.core.annotation.NameInMap("lastFulTime")
         private Long lastFulTime;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Result(Builder builder) {
@@ -124,7 +131,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         /**
          * @return indexes
          */
-        public java.util.List < String > getIndexes() {
+        public java.util.List<String> getIndexes() {
             return this.indexes;
         }
 
@@ -158,14 +165,17 @@ public class ListDataSourcesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String domain; 
-            private java.util.List < String > indexes; 
+            private java.util.List<String> indexes; 
             private Long lastFulTime; 
             private String name; 
             private String status; 
             private String type; 
 
             /**
-             * The data sources deployed in offline mode.
+             * <p>The data center in which the data source is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -173,15 +183,18 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The indexes.
+             * <p>The indexes.</p>
              */
-            public Builder indexes(java.util.List < String > indexes) {
+            public Builder indexes(java.util.List<String> indexes) {
                 this.indexes = indexes;
                 return this;
             }
 
             /**
-             * The time when the full data of the data source was last queried.
+             * <p>The time when the full data of the data source was last queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1718787785</p>
              */
             public Builder lastFulTime(Long lastFulTime) {
                 this.lastFulTime = lastFulTime;
@@ -189,7 +202,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the data source.
+             * <p>The name of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>data_source_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -197,7 +213,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the data source.
+             * <p>The status of the data source. Valid values: new: The data source is being created. publish: The data source is in the normal state. trash: The data source is being deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>new</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -205,7 +224,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the data source.
+             * <p>The type of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps</p>
              */
             public Builder type(String type) {
                 this.type = type;

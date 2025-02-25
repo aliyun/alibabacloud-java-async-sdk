@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenewDBInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>RenewDBInstanceResponseBody</p>
  */
 public class RenewDBInstanceResponseBody extends TeaModel {
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private RenewDBInstanceResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class RenewDBInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the order.
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203317xxxxxxxx</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -58,7 +66,10 @@ public class RenewDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B118EF45-9633-4EE3-8405-42ED4373721B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

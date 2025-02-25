@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetExperimentGroupRequest</p>
  */
 public class GetExperimentGroupRequest extends Request {
-    @Path
-    @NameInMap("ExperimentGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ExperimentGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String experimentGroupId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private GetExperimentGroupRequest(Builder builder) {
         super(builder);
         this.experimentGroupId = builder.experimentGroupId;
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
     }
 
@@ -49,6 +53,13 @@ public class GetExperimentGroupRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -57,6 +68,7 @@ public class GetExperimentGroupRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetExperimentGroupRequest, Builder> {
         private String experimentGroupId; 
+        private String regionId; 
         private String instanceId; 
 
         private Builder() {
@@ -66,6 +78,7 @@ public class GetExperimentGroupRequest extends Request {
         private Builder(GetExperimentGroupRequest request) {
             super(request);
             this.experimentGroupId = request.experimentGroupId;
+            this.regionId = request.regionId;
             this.instanceId = request.instanceId;
         } 
 
@@ -75,6 +88,15 @@ public class GetExperimentGroupRequest extends Request {
         public Builder experimentGroupId(String experimentGroupId) {
             this.putPathParameter("ExperimentGroupId", experimentGroupId);
             this.experimentGroupId = experimentGroupId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPoliciesForRoleResponseBody} extends {@link TeaModel}
  *
  * <p>ListPoliciesForRoleResponseBody</p>
  */
 public class ListPoliciesForRoleResponseBody extends TeaModel {
-    @NameInMap("Policies")
+    @com.aliyun.core.annotation.NameInMap("Policies")
     private Policies policies;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListPoliciesForRoleResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class ListPoliciesForRoleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Policies.
+         * <p>The list of the policies that are attached to the RAM role.</p>
          */
         public Builder policies(Policies policies) {
             this.policies = policies;
@@ -58,7 +63,10 @@ public class ListPoliciesForRoleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7B8A4E7D-6CFF-471D-84DF-195A7A241ECB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +79,26 @@ public class ListPoliciesForRoleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPoliciesForRoleResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPoliciesForRoleResponseBody</p>
+     */
     public static class Policy extends TeaModel {
-        @NameInMap("AttachDate")
+        @com.aliyun.core.annotation.NameInMap("AttachDate")
         private String attachDate;
 
-        @NameInMap("DefaultVersion")
+        @com.aliyun.core.annotation.NameInMap("DefaultVersion")
         private String defaultVersion;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("PolicyName")
+        @com.aliyun.core.annotation.NameInMap("PolicyName")
         private String policyName;
 
-        @NameInMap("PolicyType")
+        @com.aliyun.core.annotation.NameInMap("PolicyType")
         private String policyType;
 
         private Policy(Builder builder) {
@@ -146,7 +160,10 @@ public class ListPoliciesForRoleResponseBody extends TeaModel {
             private String policyType; 
 
             /**
-             * AttachDate.
+             * <p>The time when the policy was attached to the RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-01-23T12:33:18Z</p>
              */
             public Builder attachDate(String attachDate) {
                 this.attachDate = attachDate;
@@ -154,7 +171,10 @@ public class ListPoliciesForRoleResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultVersion.
+             * <p>The default version of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder defaultVersion(String defaultVersion) {
                 this.defaultVersion = defaultVersion;
@@ -162,7 +182,10 @@ public class ListPoliciesForRoleResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS administrator</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -170,7 +193,10 @@ public class ListPoliciesForRoleResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyName.
+             * <p>The name of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS-Administrator</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -178,7 +204,10 @@ public class ListPoliciesForRoleResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The type of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Custom</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -192,9 +221,15 @@ public class ListPoliciesForRoleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPoliciesForRoleResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPoliciesForRoleResponseBody</p>
+     */
     public static class Policies extends TeaModel {
-        @NameInMap("Policy")
-        private java.util.List < Policy> policy;
+        @com.aliyun.core.annotation.NameInMap("Policy")
+        private java.util.List<Policy> policy;
 
         private Policies(Builder builder) {
             this.policy = builder.policy;
@@ -211,17 +246,17 @@ public class ListPoliciesForRoleResponseBody extends TeaModel {
         /**
          * @return policy
          */
-        public java.util.List < Policy> getPolicy() {
+        public java.util.List<Policy> getPolicy() {
             return this.policy;
         }
 
         public static final class Builder {
-            private java.util.List < Policy> policy; 
+            private java.util.List<Policy> policy; 
 
             /**
              * Policy.
              */
-            public Builder policy(java.util.List < Policy> policy) {
+            public Builder policy(java.util.List<Policy> policy) {
                 this.policy = policy;
                 return this;
             }

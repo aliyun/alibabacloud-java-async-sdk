@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListChatappTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>ListChatappTemplateResponseBody</p>
  */
 public class ListChatappTemplateResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("ListTemplate")
+    @com.aliyun.core.annotation.NameInMap("ListTemplate")
     private java.util.List < ListTemplate> listTemplate;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private ListChatappTemplateResponseBody(Builder builder) {
@@ -98,7 +98,10 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * 访问被拒绝详细信息。
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -106,11 +109,14 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
-         * <p>
+         * <p>The HTTP status code returned.</p>
+         * <ul>
+         * <li>A value of OK indicates that the call is successful.</li>
+         * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+         * </ul>
          * 
-         * *   A value of OK indicates that the call is successful.
-         * *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +124,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The message templates.
+         * <p>The list of the templates.</p>
          */
         public Builder listTemplate(java.util.List < ListTemplate> listTemplate) {
             this.listTemplate = listTemplate;
@@ -126,7 +132,10 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>User not authorized to operate on the specified resource.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -134,7 +143,10 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +154,10 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * 总记录条数。
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -155,32 +170,42 @@ public class ListChatappTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListChatappTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListChatappTemplateResponseBody</p>
+     */
     public static class ListTemplate extends TeaModel {
-        @NameInMap("AuditStatus")
+        @com.aliyun.core.annotation.NameInMap("AuditStatus")
         private String auditStatus;
 
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("Language")
+        @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("LastUpdateTime")
+        private Long lastUpdateTime;
+
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("TemplateCode")
+        @com.aliyun.core.annotation.NameInMap("TemplateCode")
         private String templateCode;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
-        @NameInMap("TemplateType")
+        @com.aliyun.core.annotation.NameInMap("TemplateType")
         private String templateType;
 
         private ListTemplate(Builder builder) {
             this.auditStatus = builder.auditStatus;
             this.category = builder.category;
             this.language = builder.language;
+            this.lastUpdateTime = builder.lastUpdateTime;
             this.reason = builder.reason;
             this.templateCode = builder.templateCode;
             this.templateName = builder.templateName;
@@ -217,6 +242,13 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
+         * @return lastUpdateTime
+         */
+        public Long getLastUpdateTime() {
+            return this.lastUpdateTime;
+        }
+
+        /**
          * @return reason
          */
         public String getReason() {
@@ -248,19 +280,23 @@ public class ListChatappTemplateResponseBody extends TeaModel {
             private String auditStatus; 
             private String category; 
             private String language; 
+            private Long lastUpdateTime; 
             private String reason; 
             private String templateCode; 
             private String templateName; 
             private String templateType; 
 
             /**
-             * The review status of the message template. Valid values:
-             * <p>
+             * <p>The review state of the message template. Valid values:</p>
+             * <ul>
+             * <li><strong>pass</strong>: The message template is approved.</li>
+             * <li><strong>fail</strong>: The message template is rejected.</li>
+             * <li><strong>auditing</strong>: The message template is being reviewed.</li>
+             * <li><strong>unaudit</strong>: The review is suspended.</li>
+             * </ul>
              * 
-             * *   **pass**: The message template is approved.
-             * *   **fail**: The message template is rejected.
-             * *   **auditing**: The message template is being reviewed.
-             * *   **unaudit**: The review is suspended.
+             * <strong>example:</strong>
+             * <p>pass</p>
              */
             public Builder auditStatus(String auditStatus) {
                 this.auditStatus = auditStatus;
@@ -268,12 +304,27 @@ public class ListChatappTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the message template. Valid values:
-             * <p>
+             * <p>The category of the WhatsApp template. Valid values:</p>
+             * <ul>
+             * <li><strong>UTILITY</strong>: utility template</li>
+             * <li><strong>MARKETING</strong>: marketing template</li>
+             * <li><strong>AUTHENTICATION</strong>: authentication template</li>
+             * </ul>
+             * <p>The category of the Viber template. Valid values:</p>
+             * <ul>
+             * <li><strong>text</strong>: template that contains only text</li>
+             * <li><strong>image</strong>: template that contains only an image</li>
+             * <li><strong>text_image_button</strong>: template that contains text, an image, and a button</li>
+             * <li><strong>text_button</strong>: template that contains text and a button</li>
+             * <li><strong>document</strong>: template that contains only a document</li>
+             * <li><strong>video</strong>: template that contains only a video</li>
+             * <li><strong>text_video</strong>: template that contains text and a video</li>
+             * <li><strong>text_video_button</strong>: template that contains text, a video, and a button</li>
+             * <li><strong>text_image</strong>: template that contains text and an image</li>
+             * </ul>
              * 
-             * *   **TRANSACTIONAL**: a transactional template
-             * *   **MARKETING**: a marketing template
-             * *   **OTP**: a one-time password template
+             * <strong>example:</strong>
+             * <p>TRANSACTIONAL</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -281,7 +332,10 @@ public class ListChatappTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The language that is used in the message template. For more information, see [Language codes](~~463420~~).
+             * <p>The language that is used in the message template. For more information, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>en</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -289,7 +343,21 @@ public class ListChatappTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * 模板审核被拒的原因
+             * <p>The time when the template was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1711006633000</p>
+             */
+            public Builder lastUpdateTime(Long lastUpdateTime) {
+                this.lastUpdateTime = lastUpdateTime;
+                return this;
+            }
+
+            /**
+             * <p>The reason for the review failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -297,7 +365,10 @@ public class ListChatappTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the message template.
+             * <p>The code of the message template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>744c4b5c79c9432497a075bdfca3****</p>
              */
             public Builder templateCode(String templateCode) {
                 this.templateCode = templateCode;
@@ -305,7 +376,10 @@ public class ListChatappTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the message template.
+             * <p>The name of the message template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hello_whatsapp</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -313,7 +387,10 @@ public class ListChatappTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the template. Valid values: WHATSAPP and VIBER.
+             * <p>The type of the template. Valid values: WHATSAPP and VIBER.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WHATSAPP</p>
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;

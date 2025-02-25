@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RollbackSuspEventQuaraFileRequest} extends {@link RequestModel}
  *
  * <p>RollbackSuspEventQuaraFileRequest</p>
  */
 public class RollbackSuspEventQuaraFileRequest extends Request {
-    @Query
-    @NameInMap("From")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("From")
     private String from;
 
-    @Query
-    @NameInMap("QuaraFileId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QuaraFileId")
     private Integer quaraFileId;
 
-    @Query
-    @NameInMap("SourceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceIp")
     private String sourceIp;
 
     private RollbackSuspEventQuaraFileRequest(Builder builder) {
@@ -82,7 +87,10 @@ public class RollbackSuspEventQuaraFileRequest extends Request {
         } 
 
         /**
-         * From.
+         * <p>The ID of the request source. Set the value to sas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas</p>
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -91,7 +99,13 @@ public class RollbackSuspEventQuaraFileRequest extends Request {
         }
 
         /**
-         * QuaraFileId.
+         * <p>The ID of the quarantined file.   </p>
+         * <blockquote>
+         * <p>If you do not configure this parameter, you cannot call the RollbackSuspEventQuaraFile operation to restore a quarantined file. You can call the <a href="~~DescribeSuspEventQuaraFiles~~">DescribeSuspEventQuaraFiles</a> operation to query the IDs of quarantined files.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3921797</p>
          */
         public Builder quaraFileId(Integer quaraFileId) {
             this.putQueryParameter("QuaraFileId", quaraFileId);
@@ -100,7 +114,10 @@ public class RollbackSuspEventQuaraFileRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.3.4</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

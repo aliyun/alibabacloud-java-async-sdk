@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataArchiveCountRequest} extends {@link RequestModel}
  *
  * <p>GetDataArchiveCountRequest</p>
  */
 public class GetDataArchiveCountRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("OrderResultType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderResultType")
     private String orderResultType;
 
-    @Query
-    @NameInMap("PluginType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PluginType")
     private String pluginType;
 
-    @Query
-    @NameInMap("SearchDateType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchDateType")
     private String searchDateType;
 
-    @Query
-    @NameInMap("Tid")
-    @Validation(minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tid")
+    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long tid;
 
     private GetDataArchiveCountRequest(Builder builder) {
@@ -120,7 +125,10 @@ public class GetDataArchiveCountRequest extends Request {
         }
 
         /**
-         * The type of the identity. Default value: AS_ADMIN.
+         * <p>The type of the identity. Default value: AS_ADMIN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AS_ADMIN</p>
          */
         public Builder orderResultType(String orderResultType) {
             this.putQueryParameter("OrderResultType", orderResultType);
@@ -129,7 +137,10 @@ public class GetDataArchiveCountRequest extends Request {
         }
 
         /**
-         * The plugin type. Default value: DATA_ARCHIVE.
+         * <p>The plugin type. Default value: DATA_ARCHIVE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DATA_ARCHIVE</p>
          */
         public Builder pluginType(String pluginType) {
             this.putQueryParameter("PluginType", pluginType);
@@ -138,7 +149,10 @@ public class GetDataArchiveCountRequest extends Request {
         }
 
         /**
-         * The time when the ticket is modified or created. The statistics of data archiving tickets are calculated based on the creation time.
+         * <p>The time when the ticket is modified or created. The statistics of data archiving tickets are calculated based on the creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE_TIME</p>
          */
         public Builder searchDateType(String searchDateType) {
             this.putQueryParameter("SearchDateType", searchDateType);
@@ -147,10 +161,13 @@ public class GetDataArchiveCountRequest extends Request {
         }
 
         /**
-         * The tenant ID.
-         * <p>
+         * <p>The tenant ID.</p>
+         * <blockquote>
+         * <p> To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a>.</p>
+         * </blockquote>
          * 
-         * >  To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](~~181330~~).
+         * <strong>example:</strong>
+         * <p>2****</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

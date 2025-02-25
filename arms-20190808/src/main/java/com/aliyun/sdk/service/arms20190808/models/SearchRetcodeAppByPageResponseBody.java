@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchRetcodeAppByPageResponseBody} extends {@link TeaModel}
  *
  * <p>SearchRetcodeAppByPageResponseBody</p>
  */
 public class SearchRetcodeAppByPageResponseBody extends TeaModel {
-    @NameInMap("PageBean")
+    @com.aliyun.core.annotation.NameInMap("PageBean")
     private PageBean pageBean;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SearchRetcodeAppByPageResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned page information.
+         * <p>The returned page information.</p>
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -58,7 +63,10 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>626037F5-FDEB-45B0-804C-B3C92797A64E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchRetcodeAppByPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchRetcodeAppByPageResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -110,7 +124,10 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -118,7 +135,10 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -132,41 +152,47 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchRetcodeAppByPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchRetcodeAppByPageResponseBody</p>
+     */
     public static class RetcodeApps extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private Long appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("NickName")
+        @com.aliyun.core.annotation.NameInMap("NickName")
         private String nickName;
 
-        @NameInMap("Pid")
+        @com.aliyun.core.annotation.NameInMap("Pid")
         private String pid;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("RetcodeAppType")
+        @com.aliyun.core.annotation.NameInMap("RetcodeAppType")
         private String retcodeAppType;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private RetcodeApps(Builder builder) {
@@ -251,7 +277,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -285,13 +311,16 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             private String regionId; 
             private String resourceGroupId; 
             private String retcodeAppType; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String type; 
             private Long updateTime; 
             private String userId; 
 
             /**
-             * The ID of the application. The parameter is an auto-increment parameter.
+             * <p>The ID of the application. The parameter is an auto-increment parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16064</p>
              */
             public Builder appId(Long appId) {
                 this.appId = appId;
@@ -299,7 +328,10 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a3</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -307,7 +339,10 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task was created.
+             * <p>The time when the task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1545363321000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -315,7 +350,10 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the application.
+             * <p>The alias of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c1</p>
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -323,7 +361,10 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The PID of the application.
+             * <p>The process identifier (PID) of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eb4zdose6v@9781be0f44d****</p>
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -331,7 +372,10 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -339,7 +383,10 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmxyexli2****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -347,15 +394,18 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the application. Valid values:
-             * <p>
+             * <p>The type of the application. Valid values:</p>
+             * <ul>
+             * <li><code>web</code>: web application</li>
+             * <li><code>weex</code>: Weex mobile app</li>
+             * <li><code>mini_dd</code>: DingTalk mini program</li>
+             * <li><code>mini_alipay</code>: Alipay mini program</li>
+             * <li><code>mini_wx</code>: WeChat mini program</li>
+             * <li><code>mini_common</code>: mini program on other platforms</li>
+             * </ul>
              * 
-             * *   `web`: web application
-             * *   `weex`: Weex mobile app
-             * *   `mini_dd`: DingTalk mini program
-             * *   `mini_alipay`: Alipay mini program
-             * *   `mini_wx`: WeChat mini program
-             * *   `mini_common`: mini program on other platforms
+             * <strong>example:</strong>
+             * <p>web</p>
              */
             public Builder retcodeAppType(String retcodeAppType) {
                 this.retcodeAppType = retcodeAppType;
@@ -363,19 +413,22 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>The tag.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * The type of the monitoring task. Valid values:
-             * <p>
+             * <p>The type of the monitoring task. Valid values:</p>
+             * <ul>
+             * <li><code>TRACE</code>: Application Monitoring</li>
+             * <li><code>RETCODE</code>: Browser Monitoring</li>
+             * </ul>
              * 
-             * *   `TRACE`: Application Monitoring
-             * *   `RETCODE`: Browser Monitoring
+             * <strong>example:</strong>
+             * <p>RETCODE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -383,7 +436,10 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task was updated.
+             * <p>The time when the task was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1545363321000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -391,7 +447,10 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12341234</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -405,17 +464,23 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchRetcodeAppByPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchRetcodeAppByPageResponseBody</p>
+     */
     public static class PageBean extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("RetcodeApps")
-        private java.util.List < RetcodeApps> retcodeApps;
+        @com.aliyun.core.annotation.NameInMap("RetcodeApps")
+        private java.util.List<RetcodeApps> retcodeApps;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageBean(Builder builder) {
@@ -450,7 +515,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
         /**
          * @return retcodeApps
          */
-        public java.util.List < RetcodeApps> getRetcodeApps() {
+        public java.util.List<RetcodeApps> getRetcodeApps() {
             return this.retcodeApps;
         }
 
@@ -464,11 +529,14 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageNumber; 
             private Integer pageSize; 
-            private java.util.List < RetcodeApps> retcodeApps; 
+            private java.util.List<RetcodeApps> retcodeApps; 
             private Integer totalCount; 
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -476,7 +544,10 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -484,15 +555,18 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The Browser Monitoring tasks that are returned.
+             * <p>The browser monitoring tasks that are returned.</p>
              */
-            public Builder retcodeApps(java.util.List < RetcodeApps> retcodeApps) {
+            public Builder retcodeApps(java.util.List<RetcodeApps> retcodeApps) {
                 this.retcodeApps = retcodeApps;
                 return this;
             }
 
             /**
-             * The total number of returned entries.
+             * <p>The total number of returned entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

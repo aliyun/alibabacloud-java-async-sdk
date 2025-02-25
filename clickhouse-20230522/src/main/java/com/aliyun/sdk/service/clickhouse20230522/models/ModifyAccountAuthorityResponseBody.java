@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20230522.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAccountAuthorityResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyAccountAuthorityResponseBody</p>
  */
 public class ModifyAccountAuthorityResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyAccountAuthorityResponseBody(Builder builder) {
@@ -71,11 +76,17 @@ public class ModifyAccountAuthorityResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyAccountAuthorityResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyAccountAuthorityResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Account")
+        @com.aliyun.core.annotation.NameInMap("Account")
         private String account;
 
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
         private Data(Builder builder) {

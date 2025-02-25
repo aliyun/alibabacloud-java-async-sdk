@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAvailableEngineVersionResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAvailableEngineVersionResponseBody</p>
  */
 public class DescribeAvailableEngineVersionResponseBody extends TeaModel {
-    @NameInMap("EngineVersions")
+    @com.aliyun.core.annotation.NameInMap("EngineVersions")
     private EngineVersions engineVersions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAvailableEngineVersionResponseBody(Builder builder) {
@@ -50,10 +55,10 @@ public class DescribeAvailableEngineVersionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of one or more engine versions to which an ApsaraDB for MongoDB instance can be upgraded.
-         * <p>
-         * 
-         * >  An empty string is returned if the latest version is being used.
+         * <p>The list of one or more engine versions to which an ApsaraDB for MongoDB instance can be upgraded.</p>
+         * <blockquote>
+         * <p> An empty string is returned if the latest version is being used.</p>
+         * </blockquote>
          */
         public Builder engineVersions(EngineVersions engineVersions) {
             this.engineVersions = engineVersions;
@@ -61,7 +66,10 @@ public class DescribeAvailableEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52507B6B-003B-47A3-A0A3-9FE992C7A243</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -74,9 +82,15 @@ public class DescribeAvailableEngineVersionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAvailableEngineVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableEngineVersionResponseBody</p>
+     */
     public static class EngineVersions extends TeaModel {
-        @NameInMap("EngineVersion")
-        private java.util.List < String > engineVersion;
+        @com.aliyun.core.annotation.NameInMap("EngineVersion")
+        private java.util.List<String> engineVersion;
 
         private EngineVersions(Builder builder) {
             this.engineVersion = builder.engineVersion;
@@ -93,17 +107,17 @@ public class DescribeAvailableEngineVersionResponseBody extends TeaModel {
         /**
          * @return engineVersion
          */
-        public java.util.List < String > getEngineVersion() {
+        public java.util.List<String> getEngineVersion() {
             return this.engineVersion;
         }
 
         public static final class Builder {
-            private java.util.List < String > engineVersion; 
+            private java.util.List<String> engineVersion; 
 
             /**
              * EngineVersion.
              */
-            public Builder engineVersion(java.util.List < String > engineVersion) {
+            public Builder engineVersion(java.util.List<String> engineVersion) {
                 this.engineVersion = engineVersion;
                 return this;
             }

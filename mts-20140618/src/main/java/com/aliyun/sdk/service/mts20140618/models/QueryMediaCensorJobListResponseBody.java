@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMediaCensorJobListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryMediaCensorJobListResponseBody</p>
  */
 public class QueryMediaCensorJobListResponseBody extends TeaModel {
-    @NameInMap("MediaCensorJobList")
+    @com.aliyun.core.annotation.NameInMap("MediaCensorJobList")
     private MediaCensorJobList mediaCensorJobList;
 
-    @NameInMap("NextPageToken")
+    @com.aliyun.core.annotation.NameInMap("NextPageToken")
     private String nextPageToken;
 
-    @NameInMap("NonExistIds")
+    @com.aliyun.core.annotation.NameInMap("NonExistIds")
     private NonExistIds nonExistIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryMediaCensorJobListResponseBody(Builder builder) {
@@ -74,7 +74,7 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MediaCensorJobList.
+         * <p>The content moderation jobs.</p>
          */
         public Builder mediaCensorJobList(MediaCensorJobList mediaCensorJobList) {
             this.mediaCensorJobList = mediaCensorJobList;
@@ -82,7 +82,10 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
         }
 
         /**
-         * NextPageToken.
+         * <p>The token that is used to retrieve the next page of the query results. The value is a UUID that contains 32 characters. If the returned query results cannot be displayed within one page, this parameter is returned. The value of this parameter is updated for each query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9b1a42bc6e8d46e6a1383b7e7f01****</p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.nextPageToken = nextPageToken;
@@ -90,7 +93,7 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
         }
 
         /**
-         * NonExistIds.
+         * <p>The IDs of the jobs that do not exist. This parameter is not returned if all specified jobs are found.</p>
          */
         public Builder nonExistIds(NonExistIds nonExistIds) {
             this.nonExistIds = nonExistIds;
@@ -98,7 +101,10 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D1D5C080-8E2F-5030-8AB4-13092F17631B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,17 +117,90 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
 
     } 
 
-    public static class BarrageCensorResult extends TeaModel {
-        @NameInMap("Label")
+    /**
+     * 
+     * {@link QueryMediaCensorJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaCensorJobListResponseBody</p>
+     */
+    public static class AudioCensorResult extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("Rate")
+        @com.aliyun.core.annotation.NameInMap("Suggestion")
+        private String suggestion;
+
+        private AudioCensorResult(Builder builder) {
+            this.label = builder.label;
+            this.suggestion = builder.suggestion;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AudioCensorResult create() {
+            return builder().build();
+        }
+
+        /**
+         * @return label
+         */
+        public String getLabel() {
+            return this.label;
+        }
+
+        /**
+         * @return suggestion
+         */
+        public String getSuggestion() {
+            return this.suggestion;
+        }
+
+        public static final class Builder {
+            private String label; 
+            private String suggestion; 
+
+            /**
+             * Label.
+             */
+            public Builder label(String label) {
+                this.label = label;
+                return this;
+            }
+
+            /**
+             * Suggestion.
+             */
+            public Builder suggestion(String suggestion) {
+                this.suggestion = suggestion;
+                return this;
+            }
+
+            public AudioCensorResult build() {
+                return new AudioCensorResult(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link QueryMediaCensorJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaCensorJobListResponseBody</p>
+     */
+    public static class BarrageCensorResult extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Label")
+        private String label;
+
+        @com.aliyun.core.annotation.NameInMap("Rate")
         private String rate;
 
-        @NameInMap("Scene")
+        @com.aliyun.core.annotation.NameInMap("Scene")
         private String scene;
 
-        @NameInMap("Suggestion")
+        @com.aliyun.core.annotation.NameInMap("Suggestion")
         private String suggestion;
 
         private BarrageCensorResult(Builder builder) {
@@ -174,7 +253,19 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             private String suggestion; 
 
             /**
-             * Label.
+             * <p>The labels of the moderation result. Separate multiple labels with commas (,). Valid values:</p>
+             * <ul>
+             * <li><strong>spam</strong>: spam</li>
+             * <li><strong>ad</strong>: ads</li>
+             * <li><strong>abuse</strong>: abuse</li>
+             * <li><strong>flood</strong>: excessive junk content</li>
+             * <li><strong>contraband</strong>: prohibited content</li>
+             * <li><strong>meaningless</strong>: meaningless content</li>
+             * <li><strong>normal</strong>: normal content</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -182,7 +273,10 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Rate.
+             * <p>The score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99.91</p>
              */
             public Builder rate(String rate) {
                 this.rate = rate;
@@ -190,7 +284,10 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Scene.
+             * <p>The moderation scenario. The value is <strong>antispam</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>antispam</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -198,7 +295,15 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Suggestion.
+             * <p>The recommended subsequent operation. Valid values:</p>
+             * <ul>
+             * <li><strong>pass</strong>: The content passes the moderation.</li>
+             * <li><strong>review</strong>: The content needs to be manually reviewed again.</li>
+             * <li><strong>block</strong>: The content needs to be blocked.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>pass</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -212,17 +317,23 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMediaCensorJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaCensorJobListResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("Rate")
+        @com.aliyun.core.annotation.NameInMap("Rate")
         private String rate;
 
-        @NameInMap("Scene")
+        @com.aliyun.core.annotation.NameInMap("Scene")
         private String scene;
 
-        @NameInMap("Suggestion")
+        @com.aliyun.core.annotation.NameInMap("Suggestion")
         private String suggestion;
 
         private Result(Builder builder) {
@@ -275,7 +386,68 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             private String suggestion; 
 
             /**
-             * Label.
+             * <p>The labels of the moderation result. Separate multiple labels with commas (,).</p>
+             * <ul>
+             * <li><p>Valid values in the pornographic content moderation scenario:</p>
+             * <ul>
+             * <li><strong>normal</strong>: normal content</li>
+             * <li><strong>sexy</strong>: sexy content</li>
+             * <li><strong>porn</strong>: pornographic content</li>
+             * </ul>
+             * </li>
+             * <li><p>Valid values in the terrorist content moderation scenario:</p>
+             * <ul>
+             * <li><strong>normal</strong>: normal content</li>
+             * <li><strong>bloody</strong>: bloody content</li>
+             * <li><strong>explosion</strong>: explosion and smoke</li>
+             * <li><strong>outfit</strong>: special costume</li>
+             * <li><strong>logo</strong>: special logo</li>
+             * <li><strong>weapon</strong>: weapon</li>
+             * <li><strong>politics</strong>: political content</li>
+             * <li><strong>violence</strong>: violence</li>
+             * <li><strong>crowd</strong>: crowd</li>
+             * <li><strong>parade</strong>: parade</li>
+             * <li><strong>carcrash</strong>: car accident</li>
+             * <li><strong>flag</strong>: flag</li>
+             * <li><strong>location</strong>: landmark</li>
+             * <li><strong>others</strong>: other content</li>
+             * </ul>
+             * </li>
+             * <li><p>Valid values in the ad moderation scenario:</p>
+             * <ul>
+             * <li><strong>normal</strong>: normal content</li>
+             * <li><strong>ad</strong>: other ads</li>
+             * <li><strong>politics</strong>: political content in text</li>
+             * <li><strong>porn</strong>: pornographic content in text</li>
+             * <li><strong>abuse</strong>: abuse in text</li>
+             * <li><strong>terrorism</strong>: terrorist content in text</li>
+             * <li><strong>contraband</strong>: prohibited content in text</li>
+             * <li><strong>spam</strong>: spam in text</li>
+             * <li><strong>npx</strong>: illegal ads</li>
+             * <li><strong>qrcode</strong>: QR code</li>
+             * <li><strong>programCode</strong>: mini program code</li>
+             * </ul>
+             * </li>
+             * <li><p>Valid values in the live moderation scenario:</p>
+             * <ul>
+             * <li><strong>normal</strong>: normal content</li>
+             * <li><strong>meaningless</strong>: meaningless content, such as a black or white screen</li>
+             * <li><strong>PIP</strong>: picture-in-picture</li>
+             * <li><strong>smoking</strong>: smoking</li>
+             * <li><strong>drivelive</strong>: live broadcasting in a running vehicle</li>
+             * </ul>
+             * </li>
+             * <li><p>Valid values in the logo moderation scenario:</p>
+             * <ul>
+             * <li><strong>normal</strong>: normal content</li>
+             * <li><strong>TV</strong>: controlled TV station logo</li>
+             * <li><strong>trademark</strong>: trademark</li>
+             * </ul>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -283,7 +455,10 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Rate.
+             * <p>The score. Valid values: 0 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder rate(String rate) {
                 this.rate = rate;
@@ -291,7 +466,17 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Scene.
+             * <p>The moderation scenario. Valid values:</p>
+             * <ul>
+             * <li><strong>porn</strong>: pornographic content moderation</li>
+             * <li><strong>terrorism</strong>: terrorist content moderation</li>
+             * <li><strong>ad</strong>: ad violation moderation</li>
+             * <li><strong>live</strong>: undesirable scene moderation</li>
+             * <li><strong>logo</strong>: special logo moderation</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>live</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -299,7 +484,18 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Suggestion.
+             * <p>The overall result of the job. Valid values:</p>
+             * <ul>
+             * <li><strong>pass</strong>: The content passes the moderation.</li>
+             * <li><strong>review</strong>: The content needs to be manually reviewed again.</li>
+             * <li><strong>block</strong>: The content needs to be blocked.</li>
+             * </ul>
+             * <blockquote>
+             * <p>If the moderation result of any type of the moderated content is review, the overall result is review. If the moderation result of any type of the moderated content is block, the overall result is block.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>pass</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -313,8 +509,14 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMediaCensorJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaCensorJobListResponseBody</p>
+     */
     public static class Results extends TeaModel {
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private java.util.List < Result> result;
 
         private Results(Builder builder) {
@@ -354,17 +556,23 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMediaCensorJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaCensorJobListResponseBody</p>
+     */
     public static class CoverImageCensorResult extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("Object")
+        @com.aliyun.core.annotation.NameInMap("Object")
         private String object;
 
-        @NameInMap("Results")
+        @com.aliyun.core.annotation.NameInMap("Results")
         private Results results;
 
         private CoverImageCensorResult(Builder builder) {
@@ -417,7 +625,10 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             private Results results; 
 
             /**
-             * Bucket.
+             * <p>The OSS bucket that stores the video thumbnail.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-Bucket-****</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -425,7 +636,10 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * <p>The OSS region in which the video thumbnail resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-cn-shanghai</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -433,7 +647,10 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Object.
+             * <p>The Object Storage Service (OSS) object that is used as the video thumbnail.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test/ai/censor/v2/vme-****.jpg</p>
              */
             public Builder object(String object) {
                 this.object = object;
@@ -441,7 +658,7 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Results.
+             * <p>The moderation results of the content moderation jobs.</p>
              */
             public Builder results(Results results) {
                 this.results = results;
@@ -455,8 +672,14 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMediaCensorJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaCensorJobListResponseBody</p>
+     */
     public static class CoverImageCensorResults extends TeaModel {
-        @NameInMap("CoverImageCensorResult")
+        @com.aliyun.core.annotation.NameInMap("CoverImageCensorResult")
         private java.util.List < CoverImageCensorResult> coverImageCensorResult;
 
         private CoverImageCensorResults(Builder builder) {
@@ -496,17 +719,23 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMediaCensorJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaCensorJobListResponseBody</p>
+     */
     public static class DescCensorResult extends TeaModel {
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("Rate")
+        @com.aliyun.core.annotation.NameInMap("Rate")
         private String rate;
 
-        @NameInMap("Scene")
+        @com.aliyun.core.annotation.NameInMap("Scene")
         private String scene;
 
-        @NameInMap("Suggestion")
+        @com.aliyun.core.annotation.NameInMap("Suggestion")
         private String suggestion;
 
         private DescCensorResult(Builder builder) {
@@ -559,7 +788,19 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             private String suggestion; 
 
             /**
-             * Label.
+             * <p>The labels of the moderation result. Separate multiple labels with commas (,). Valid values:</p>
+             * <ul>
+             * <li><strong>spam</strong>: spam</li>
+             * <li><strong>ad</strong>: ads</li>
+             * <li><strong>abuse</strong>: abuse</li>
+             * <li><strong>flood</strong>: excessive junk content</li>
+             * <li><strong>contraband</strong>: prohibited content</li>
+             * <li><strong>meaningless</strong>: meaningless content</li>
+             * <li><strong>normal</strong>: normal content</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ad</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -567,7 +808,10 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Rate.
+             * <p>The score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder rate(String rate) {
                 this.rate = rate;
@@ -575,7 +819,10 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Scene.
+             * <p>The moderation scenario. The value is <strong>antispam</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>antispam</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -583,7 +830,15 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Suggestion.
+             * <p>The recommended subsequent operation. Valid values:</p>
+             * <ul>
+             * <li><strong>pass</strong>: The content passes the moderation.</li>
+             * <li><strong>review</strong>: The content needs to be manually reviewed again.</li>
+             * <li><strong>block</strong>: The content needs to be blocked.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>pass</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -597,14 +852,20 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMediaCensorJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaCensorJobListResponseBody</p>
+     */
     public static class Input extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("Object")
+        @com.aliyun.core.annotation.NameInMap("Object")
         private String object;
 
         private Input(Builder builder) {
@@ -648,7 +909,10 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             private String object; 
 
             /**
-             * Bucket.
+             * <p>The name of the OSS bucket in which the input file is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bucket-test-in-****</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -656,7 +920,10 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * <p>The OSS region in which the input file resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-cn-shanghai</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -664,7 +931,10 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Object.
+             * <p>The name of the OSS object that is used as the input file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test/ai/censor/test-****.mp4</p>
              */
             public Builder object(String object) {
                 this.object = object;
@@ -678,17 +948,23 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMediaCensorJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaCensorJobListResponseBody</p>
+     */
     public static class TitleCensorResult extends TeaModel {
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("Rate")
+        @com.aliyun.core.annotation.NameInMap("Rate")
         private String rate;
 
-        @NameInMap("Scene")
+        @com.aliyun.core.annotation.NameInMap("Scene")
         private String scene;
 
-        @NameInMap("Suggestion")
+        @com.aliyun.core.annotation.NameInMap("Suggestion")
         private String suggestion;
 
         private TitleCensorResult(Builder builder) {
@@ -741,7 +1017,19 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             private String suggestion; 
 
             /**
-             * Label.
+             * <p>The labels of the moderation result. Separate multiple labels with commas (,).</p>
+             * <ul>
+             * <li><strong>normal</strong>: normal content</li>
+             * <li><strong>spam</strong>: spam</li>
+             * <li><strong>ad</strong>: ads</li>
+             * <li><strong>abuse</strong>: abuse content</li>
+             * <li><strong>flood</strong>: excessive junk content</li>
+             * <li><strong>contraband</strong>: prohibited content</li>
+             * <li><strong>meaningless</strong>: meaningless content</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>meaningless</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -749,7 +1037,10 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Rate.
+             * <p>The score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99.91</p>
              */
             public Builder rate(String rate) {
                 this.rate = rate;
@@ -757,7 +1048,10 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Scene.
+             * <p>The moderation scenario. The value is <strong>antispam</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>antispam</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -765,7 +1059,15 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Suggestion.
+             * <p>The recommended subsequent operation. Valid values:</p>
+             * <ul>
+             * <li><strong>pass</strong>: The content passes the moderation.</li>
+             * <li><strong>review</strong>: The content needs to be manually reviewed again.</li>
+             * <li><strong>block</strong>: The content needs to be blocked.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>block</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -779,17 +1081,23 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMediaCensorJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaCensorJobListResponseBody</p>
+     */
     public static class CensorResult extends TeaModel {
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("Rate")
+        @com.aliyun.core.annotation.NameInMap("Rate")
         private String rate;
 
-        @NameInMap("Scene")
+        @com.aliyun.core.annotation.NameInMap("Scene")
         private String scene;
 
-        @NameInMap("Suggestion")
+        @com.aliyun.core.annotation.NameInMap("Suggestion")
         private String suggestion;
 
         private CensorResult(Builder builder) {
@@ -842,7 +1150,68 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             private String suggestion; 
 
             /**
-             * Label.
+             * <p>The labels of the moderation result. Separate multiple labels with commas (,).</p>
+             * <ul>
+             * <li><p>Valid values in the pornographic content moderation scenario:</p>
+             * <ul>
+             * <li><strong>porn</strong>: pornographic content</li>
+             * <li><strong>sexy</strong>: sexy content</li>
+             * <li><strong>normal</strong>: normal content</li>
+             * </ul>
+             * </li>
+             * <li><p>Valid values in the terrorist content moderation scenario:</p>
+             * <ul>
+             * <li><strong>normal</strong>: normal content</li>
+             * <li><strong>bloody</strong>: bloody content</li>
+             * <li><strong>explosion</strong>: explosion and smoke</li>
+             * <li><strong>outfit</strong>: special costume</li>
+             * <li><strong>logo</strong>: special logo</li>
+             * <li><strong>weapon</strong>: weapon</li>
+             * <li><strong>politics</strong>: political content</li>
+             * <li><strong>violence</strong>: violence</li>
+             * <li><strong>crowd</strong>: crowd</li>
+             * <li><strong>parade</strong>: parade</li>
+             * <li><strong>carcrash</strong>: car accident</li>
+             * <li><strong>flag</strong>: flag</li>
+             * <li><strong>location</strong>: landmark</li>
+             * <li><strong>others</strong>: other content</li>
+             * </ul>
+             * </li>
+             * <li><p>Valid values in the ad moderation scenario:</p>
+             * <ul>
+             * <li><strong>normal</strong>: normal content</li>
+             * <li><strong>ad</strong>: other ads</li>
+             * <li><strong>politics</strong>: political content in text</li>
+             * <li><strong>porn</strong>: pornographic content in text</li>
+             * <li><strong>abuse</strong>: abuse in text</li>
+             * <li><strong>terrorism</strong>: terrorist content in text</li>
+             * <li><strong>contraband</strong>: prohibited content in text</li>
+             * <li><strong>spam</strong>: spam in text</li>
+             * <li><strong>npx</strong>: illegal ads</li>
+             * <li><strong>qrcode</strong>: QR code</li>
+             * <li><strong>programCode</strong>: mini program code</li>
+             * </ul>
+             * </li>
+             * <li><p>Valid values in the live moderation scenario:</p>
+             * <ul>
+             * <li><strong>normal</strong>: normal content</li>
+             * <li><strong>meaningless</strong>: meaningless content, such as a black or white screen</li>
+             * <li><strong>PIP</strong>: picture-in-picture</li>
+             * <li><strong>smoking</strong>: smoking</li>
+             * <li><strong>drivelive</strong>: live broadcasting in a running vehicle</li>
+             * </ul>
+             * </li>
+             * <li><p>Valid values in the logo moderation scenario:</p>
+             * <ul>
+             * <li><strong>normal</strong>: normal content</li>
+             * <li><strong>TV</strong>: controlled TV station logo</li>
+             * <li><strong>trademark</strong>: trademark</li>
+             * </ul>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>meaningless</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -850,7 +1219,10 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Rate.
+             * <p>The score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder rate(String rate) {
                 this.rate = rate;
@@ -858,7 +1230,17 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Scene.
+             * <p>The moderation scenario. Valid values:</p>
+             * <ul>
+             * <li><strong>porn</strong>: pornographic content moderation</li>
+             * <li><strong>terrorism</strong>: terrorist content moderation</li>
+             * <li><strong>ad</strong>: ad violation moderation</li>
+             * <li><strong>live</strong>: undesirable scene moderation</li>
+             * <li><strong>logo</strong>: special logo moderation</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>terrorism</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -866,7 +1248,15 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Suggestion.
+             * <p>The recommended subsequent operation. Valid values:</p>
+             * <ul>
+             * <li><strong>pass</strong>: The content passes the moderation.</li>
+             * <li><strong>review</strong>: The content needs to be manually reviewed again.</li>
+             * <li><strong>block</strong>: The content needs to be blocked.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>review</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -880,8 +1270,14 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMediaCensorJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaCensorJobListResponseBody</p>
+     */
     public static class CensorResults extends TeaModel {
-        @NameInMap("CensorResult")
+        @com.aliyun.core.annotation.NameInMap("CensorResult")
         private java.util.List < CensorResult> censorResult;
 
         private CensorResults(Builder builder) {
@@ -921,17 +1317,23 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMediaCensorJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaCensorJobListResponseBody</p>
+     */
     public static class CensorResultsCensorResult extends TeaModel {
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("Rate")
+        @com.aliyun.core.annotation.NameInMap("Rate")
         private String rate;
 
-        @NameInMap("Scene")
+        @com.aliyun.core.annotation.NameInMap("Scene")
         private String scene;
 
-        @NameInMap("Suggestion")
+        @com.aliyun.core.annotation.NameInMap("Suggestion")
         private String suggestion;
 
         private CensorResultsCensorResult(Builder builder) {
@@ -984,7 +1386,68 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             private String suggestion; 
 
             /**
-             * Label.
+             * <p>The labels of the moderation result. Separate multiple labels with commas (,). Valid values:</p>
+             * <ul>
+             * <li><p>Valid values in the pornographic content moderation scenario:</p>
+             * <ul>
+             * <li><strong>porn</strong>: pornographic content</li>
+             * <li><strong>sexy</strong>: sexy content</li>
+             * <li><strong>normal</strong>: normal content</li>
+             * </ul>
+             * </li>
+             * <li><p>Valid values in the terrorist content moderation scenario:</p>
+             * <ul>
+             * <li><strong>normal</strong>: normal content</li>
+             * <li><strong>bloody</strong>: bloody content</li>
+             * <li><strong>explosion</strong>: explosion and smoke</li>
+             * <li><strong>outfit</strong>: special costume</li>
+             * <li><strong>logo</strong>: special logo</li>
+             * <li><strong>weapon</strong>: weapon</li>
+             * <li><strong>politics</strong>: political content</li>
+             * <li><strong>violence</strong>: violence</li>
+             * <li><strong>crowd</strong>: crowd</li>
+             * <li><strong>parade</strong>: parade</li>
+             * <li><strong>carcrash</strong>: car accident</li>
+             * <li><strong>flag</strong>: flag</li>
+             * <li><strong>location</strong>: landmark</li>
+             * <li><strong>others</strong>: other content</li>
+             * </ul>
+             * </li>
+             * <li><p>Valid values in the ad moderation scenario:</p>
+             * <ul>
+             * <li><strong>normal</strong>: normal content</li>
+             * <li><strong>ad</strong>: other ads</li>
+             * <li><strong>politics</strong>: political content in text</li>
+             * <li><strong>porn</strong>: pornographic content in text</li>
+             * <li><strong>abuse</strong>: abuse in text</li>
+             * <li><strong>terrorism</strong>: terrorist content in text</li>
+             * <li><strong>contraband</strong>: prohibited content in text</li>
+             * <li><strong>spam</strong>: spam in text</li>
+             * <li><strong>npx</strong>: illegal ads</li>
+             * <li><strong>qrcode</strong>: QR code</li>
+             * <li><strong>programCode</strong>: mini program code</li>
+             * </ul>
+             * </li>
+             * <li><p>Valid values in the live moderation scenario:</p>
+             * <ul>
+             * <li><strong>normal</strong>: normal content</li>
+             * <li><strong>meaningless</strong>: meaningless content, such as a black or white screen</li>
+             * <li><strong>PIP</strong>: picture-in-picture</li>
+             * <li><strong>smoking</strong>: smoking</li>
+             * <li><strong>drivelive</strong>: live broadcasting in a running vehicle</li>
+             * </ul>
+             * </li>
+             * <li><p>Valid values in the logo moderation scenario:</p>
+             * <ul>
+             * <li><strong>normal</strong>: normal content</li>
+             * <li><strong>TV</strong>: controlled TV station logo</li>
+             * <li><strong>trademark</strong>: trademark</li>
+             * </ul>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -992,7 +1455,10 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Rate.
+             * <p>The score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99.99</p>
              */
             public Builder rate(String rate) {
                 this.rate = rate;
@@ -1000,7 +1466,17 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Scene.
+             * <p>The moderation scenario. Valid values:</p>
+             * <ul>
+             * <li><strong>porn</strong>: pornographic content moderation</li>
+             * <li><strong>terrorism</strong>: terrorist content moderation</li>
+             * <li><strong>ad</strong>: ad violation moderation</li>
+             * <li><strong>live</strong>: undesirable scene moderation</li>
+             * <li><strong>logo</strong>: special logo moderation</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>pron</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -1008,7 +1484,15 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Suggestion.
+             * <p>The recommended subsequent operation. Valid values:</p>
+             * <ul>
+             * <li><strong>pass</strong>: The content passes the moderation.</li>
+             * <li><strong>review</strong>: The content needs to be manually reviewed again.</li>
+             * <li><strong>block</strong>: The content needs to be blocked.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>block</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -1022,8 +1506,14 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMediaCensorJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaCensorJobListResponseBody</p>
+     */
     public static class VideoTimelineCensorResults extends TeaModel {
-        @NameInMap("CensorResult")
+        @com.aliyun.core.annotation.NameInMap("CensorResult")
         private java.util.List < CensorResultsCensorResult> censorResult;
 
         private VideoTimelineCensorResults(Builder builder) {
@@ -1063,14 +1553,20 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMediaCensorJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaCensorJobListResponseBody</p>
+     */
     public static class VideoTimeline extends TeaModel {
-        @NameInMap("CensorResults")
+        @com.aliyun.core.annotation.NameInMap("CensorResults")
         private VideoTimelineCensorResults censorResults;
 
-        @NameInMap("Object")
+        @com.aliyun.core.annotation.NameInMap("Object")
         private String object;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private String timestamp;
 
         private VideoTimeline(Builder builder) {
@@ -1114,7 +1610,7 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             private String timestamp; 
 
             /**
-             * CensorResults.
+             * <p>The moderation results that include information such as labels and scores.</p>
              */
             public Builder censorResults(VideoTimelineCensorResults censorResults) {
                 this.censorResults = censorResults;
@@ -1122,7 +1618,13 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Object.
+             * <p>The OSS object that is generated as the output snapshot.</p>
+             * <blockquote>
+             * <p>In the example, {Count} is a placeholder. The OSS objects that are generated as output snapshots are named <code>output00001-****.jpg, output00002-****.jpg</code>, and so on.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>output{Count}.jpg</p>
              */
             public Builder object(String object) {
                 this.object = object;
@@ -1130,7 +1632,10 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>The position in the video. Format: <code>hh:mm:ss[.SSS]</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:02:59.999</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -1144,8 +1649,14 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMediaCensorJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaCensorJobListResponseBody</p>
+     */
     public static class VideoTimelines extends TeaModel {
-        @NameInMap("VideoTimeline")
+        @com.aliyun.core.annotation.NameInMap("VideoTimeline")
         private java.util.List < VideoTimeline> videoTimeline;
 
         private VideoTimelines(Builder builder) {
@@ -1185,14 +1696,20 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMediaCensorJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaCensorJobListResponseBody</p>
+     */
     public static class VensorCensorResult extends TeaModel {
-        @NameInMap("CensorResults")
+        @com.aliyun.core.annotation.NameInMap("CensorResults")
         private CensorResults censorResults;
 
-        @NameInMap("NextPageToken")
+        @com.aliyun.core.annotation.NameInMap("NextPageToken")
         private String nextPageToken;
 
-        @NameInMap("VideoTimelines")
+        @com.aliyun.core.annotation.NameInMap("VideoTimelines")
         private VideoTimelines videoTimelines;
 
         private VensorCensorResult(Builder builder) {
@@ -1236,7 +1753,7 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             private VideoTimelines videoTimelines; 
 
             /**
-             * CensorResults.
+             * <p>A collection of the moderation results. The information includes the summary about various scenarios such as pornographic content and terrorist content.</p>
              */
             public Builder censorResults(CensorResults censorResults) {
                 this.censorResults = censorResults;
@@ -1244,7 +1761,10 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * NextPageToken.
+             * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ea04afcca7cd4e80b9ece8fbb251****</p>
              */
             public Builder nextPageToken(String nextPageToken) {
                 this.nextPageToken = nextPageToken;
@@ -1252,7 +1772,7 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * VideoTimelines.
+             * <p>The moderation results that are sorted in ascending order by time.</p>
              */
             public Builder videoTimelines(VideoTimelines videoTimelines) {
                 this.videoTimelines = videoTimelines;
@@ -1266,14 +1786,20 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMediaCensorJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaCensorJobListResponseBody</p>
+     */
     public static class OutputFile extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("Object")
+        @com.aliyun.core.annotation.NameInMap("Object")
         private String object;
 
         private OutputFile(Builder builder) {
@@ -1317,7 +1843,10 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             private String object; 
 
             /**
-             * Bucket.
+             * <p>The OSS bucket that stores the output snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-bucket-****</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -1325,7 +1854,10 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * <p>The OSS region in which the OSS bucket for storing the output snapshot resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-cn-shanghai</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -1333,7 +1865,13 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Object.
+             * <p>The one or more OSS objects that are generated as the output snapshots.</p>
+             * <blockquote>
+             * <p>In the example, {Count} is a placeholder. The OSS objects that are generated as output snapshots are named <code>output00001-****.jpg, output00002-****.jpg</code>, and so on.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>output{Count}.jpg</p>
              */
             public Builder object(String object) {
                 this.object = object;
@@ -1347,14 +1885,20 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMediaCensorJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaCensorJobListResponseBody</p>
+     */
     public static class VideoCensorConfig extends TeaModel {
-        @NameInMap("BizType")
+        @com.aliyun.core.annotation.NameInMap("BizType")
         private String bizType;
 
-        @NameInMap("OutputFile")
+        @com.aliyun.core.annotation.NameInMap("OutputFile")
         private OutputFile outputFile;
 
-        @NameInMap("VideoCensor")
+        @com.aliyun.core.annotation.NameInMap("VideoCensor")
         private String videoCensor;
 
         private VideoCensorConfig(Builder builder) {
@@ -1398,7 +1942,13 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             private String videoCensor; 
 
             /**
-             * BizType.
+             * <p>The moderation template. Default value: common. The default value indicates that the default template is used.</p>
+             * <blockquote>
+             * <p>If the moderation template is not specified, the default value common is returned. If a custom moderation template that is created by submitting a ticket is specified, a user ID is returned.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>common</p>
              */
             public Builder bizType(String bizType) {
                 this.bizType = bizType;
@@ -1406,7 +1956,7 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * OutputFile.
+             * <p>The information about output snapshots.</p>
              */
             public Builder outputFile(OutputFile outputFile) {
                 this.outputFile = outputFile;
@@ -1414,7 +1964,14 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * VideoCensor.
+             * <p>Indicates whether the video content needs to be moderated. Default value: true. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The video content needs to be moderated.</li>
+             * <li><strong>false</strong>: The video content does not need to be moderated.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder videoCensor(String videoCensor) {
                 this.videoCensor = videoCensor;
@@ -1428,56 +1985,66 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMediaCensorJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaCensorJobListResponseBody</p>
+     */
     public static class MediaCensorJob extends TeaModel {
-        @NameInMap("BarrageCensorResult")
+        @com.aliyun.core.annotation.NameInMap("AudioCensorResult")
+        private AudioCensorResult audioCensorResult;
+
+        @com.aliyun.core.annotation.NameInMap("BarrageCensorResult")
         private BarrageCensorResult barrageCensorResult;
 
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("CoverImageCensorResults")
+        @com.aliyun.core.annotation.NameInMap("CoverImageCensorResults")
         private CoverImageCensorResults coverImageCensorResults;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DescCensorResult")
+        @com.aliyun.core.annotation.NameInMap("DescCensorResult")
         private DescCensorResult descCensorResult;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("Input")
+        @com.aliyun.core.annotation.NameInMap("Input")
         private Input input;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("PipelineId")
+        @com.aliyun.core.annotation.NameInMap("PipelineId")
         private String pipelineId;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Suggestion")
+        @com.aliyun.core.annotation.NameInMap("Suggestion")
         private String suggestion;
 
-        @NameInMap("TitleCensorResult")
+        @com.aliyun.core.annotation.NameInMap("TitleCensorResult")
         private TitleCensorResult titleCensorResult;
 
-        @NameInMap("UserData")
+        @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
-        @NameInMap("VensorCensorResult")
+        @com.aliyun.core.annotation.NameInMap("VensorCensorResult")
         private VensorCensorResult vensorCensorResult;
 
-        @NameInMap("VideoCensorConfig")
+        @com.aliyun.core.annotation.NameInMap("VideoCensorConfig")
         private VideoCensorConfig videoCensorConfig;
 
         private MediaCensorJob(Builder builder) {
+            this.audioCensorResult = builder.audioCensorResult;
             this.barrageCensorResult = builder.barrageCensorResult;
             this.code = builder.code;
             this.coverImageCensorResults = builder.coverImageCensorResults;
@@ -1502,6 +2069,13 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
 
         public static MediaCensorJob create() {
             return builder().build();
+        }
+
+        /**
+         * @return audioCensorResult
+         */
+        public AudioCensorResult getAudioCensorResult() {
+            return this.audioCensorResult;
         }
 
         /**
@@ -1617,6 +2191,7 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private AudioCensorResult audioCensorResult; 
             private BarrageCensorResult barrageCensorResult; 
             private String code; 
             private CoverImageCensorResults coverImageCensorResults; 
@@ -1635,7 +2210,15 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             private VideoCensorConfig videoCensorConfig; 
 
             /**
-             * BarrageCensorResult.
+             * AudioCensorResult.
+             */
+            public Builder audioCensorResult(AudioCensorResult audioCensorResult) {
+                this.audioCensorResult = audioCensorResult;
+                return this;
+            }
+
+            /**
+             * <p>The moderation result of live comments.</p>
              */
             public Builder barrageCensorResult(BarrageCensorResult barrageCensorResult) {
                 this.barrageCensorResult = barrageCensorResult;
@@ -1643,7 +2226,10 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Code.
+             * <p>The error code returned if the job fails. This parameter is not returned if the job is successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InvalidParameter.ResourceNotFound</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -1651,7 +2237,7 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * CoverImageCensorResults.
+             * <p>The moderation results of thumbnails.</p>
              */
             public Builder coverImageCensorResults(CoverImageCensorResults coverImageCensorResults) {
                 this.coverImageCensorResults = coverImageCensorResults;
@@ -1659,7 +2245,10 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The time when the job was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-04T07:25:48Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -1667,7 +2256,7 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * DescCensorResult.
+             * <p>The moderation result of the description.</p>
              */
             public Builder descCensorResult(DescCensorResult descCensorResult) {
                 this.descCensorResult = descCensorResult;
@@ -1675,7 +2264,10 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * <p>The time when the job was completed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-04T07:25:48Z</p>
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -1683,7 +2275,7 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Input.
+             * <p>The information about the job input.</p>
              */
             public Builder input(Input input) {
                 this.input = input;
@@ -1691,7 +2283,10 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The ID of the content moderation job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f8f166eea7a44e9bb0a4aecf9543****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -1699,7 +2294,10 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error message returned if the job fails. This parameter is not returned if the job is successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The resource operated cannot be found</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -1707,7 +2305,10 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * PipelineId.
+             * <p>The ID of the MPS queue that is used to run the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c5b30b7c0d0e4a0abde1d5f9e751****</p>
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;
@@ -1715,7 +2316,10 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>The status of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -1723,7 +2327,15 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Suggestion.
+             * <p>The recommended subsequent operation. Valid values:</p>
+             * <ul>
+             * <li><strong>pass</strong>: The content passes the moderation.</li>
+             * <li><strong>review</strong>: The content needs to be manually reviewed again.</li>
+             * <li><strong>block</strong>: The content needs to be blocked.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>pass</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -1731,7 +2343,7 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * TitleCensorResult.
+             * <p>The moderation result of the title.</p>
              */
             public Builder titleCensorResult(TitleCensorResult titleCensorResult) {
                 this.titleCensorResult = titleCensorResult;
@@ -1739,7 +2351,10 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * <p>The custom data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example userdata ****</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -1747,7 +2362,7 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * VensorCensorResult.
+             * <p>The moderation results of the video.</p>
              */
             public Builder vensorCensorResult(VensorCensorResult vensorCensorResult) {
                 this.vensorCensorResult = vensorCensorResult;
@@ -1755,7 +2370,7 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             }
 
             /**
-             * VideoCensorConfig.
+             * <p>The video moderation configurations.</p>
              */
             public Builder videoCensorConfig(VideoCensorConfig videoCensorConfig) {
                 this.videoCensorConfig = videoCensorConfig;
@@ -1769,8 +2384,14 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMediaCensorJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaCensorJobListResponseBody</p>
+     */
     public static class MediaCensorJobList extends TeaModel {
-        @NameInMap("MediaCensorJob")
+        @com.aliyun.core.annotation.NameInMap("MediaCensorJob")
         private java.util.List < MediaCensorJob> mediaCensorJob;
 
         private MediaCensorJobList(Builder builder) {
@@ -1810,8 +2431,14 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMediaCensorJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaCensorJobListResponseBody</p>
+     */
     public static class NonExistIds extends TeaModel {
-        @NameInMap("String")
+        @com.aliyun.core.annotation.NameInMap("String")
         private java.util.List < String > string;
 
         private NonExistIds(Builder builder) {

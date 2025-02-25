@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProjectsRequest} extends {@link RequestModel}
  *
  * <p>ListProjectsRequest</p>
  */
 public class ListProjectsRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Query
-    @NameInMap("category")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("category")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String category;
 
-    @Query
-    @NameInMap("conditions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("conditions")
     private String conditions;
 
-    @Query
-    @NameInMap("extraConditions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("extraConditions")
     private String extraConditions;
 
-    @Query
-    @NameInMap("maxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("maxResults")
     private Long maxResults;
 
-    @Query
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("scope")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("scope")
     private String scope;
 
     private ListProjectsRequest(Builder builder) {
@@ -140,7 +145,10 @@ public class ListProjectsRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -149,7 +157,10 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * category.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Project</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("category", category);
@@ -158,7 +169,7 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * {"conditionGroups":[[]]}
+         * <p>{&quot;conditionGroups&quot;:[[]]}</p>
          */
         public Builder conditions(String conditions) {
             this.putQueryParameter("conditions", conditions);

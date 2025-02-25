@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,73 +11,73 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetQueryResultResponseBody</p>
  */
 public class GetQueryResultResponseBody extends TeaModel {
-    @NameInMap("Duration")
+    @com.aliyun.core.annotation.NameInMap("Duration")
     private Long duration;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("GmtCreate")
+    @com.aliyun.core.annotation.NameInMap("GmtCreate")
     private String gmtCreate;
 
-    @NameInMap("GmtModified")
+    @com.aliyun.core.annotation.NameInMap("GmtModified")
     private String gmtModified;
 
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
 
-    @NameInMap("JobCompleted")
+    @com.aliyun.core.annotation.NameInMap("JobCompleted")
     private Boolean jobCompleted;
 
-    @NameInMap("Logs")
+    @com.aliyun.core.annotation.NameInMap("Logs")
     private String logs;
 
-    @NameInMap("Owner")
+    @com.aliyun.core.annotation.NameInMap("Owner")
     private Long owner;
 
-    @NameInMap("Progress")
+    @com.aliyun.core.annotation.NameInMap("Progress")
     private Integer progress;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultTmpDb")
+    @com.aliyun.core.annotation.NameInMap("ResultTmpDb")
     private String resultTmpDb;
 
-    @NameInMap("ResultTmpTable")
+    @com.aliyun.core.annotation.NameInMap("ResultTmpTable")
     private String resultTmpTable;
 
-    @NameInMap("RowCount")
+    @com.aliyun.core.annotation.NameInMap("RowCount")
     private Integer rowCount;
 
-    @NameInMap("RowCountOverLimit")
+    @com.aliyun.core.annotation.NameInMap("RowCountOverLimit")
     private Boolean rowCountOverLimit;
 
-    @NameInMap("Rows")
+    @com.aliyun.core.annotation.NameInMap("Rows")
     private String rows;
 
-    @NameInMap("Schema")
+    @com.aliyun.core.annotation.NameInMap("Schema")
     private String schema;
 
-    @NameInMap("Sql")
+    @com.aliyun.core.annotation.NameInMap("Sql")
     private String sql;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalBytesProcessed")
+    @com.aliyun.core.annotation.NameInMap("TotalBytesProcessed")
     private Long totalBytesProcessed;
 
     private GetQueryResultResponseBody(Builder builder) {

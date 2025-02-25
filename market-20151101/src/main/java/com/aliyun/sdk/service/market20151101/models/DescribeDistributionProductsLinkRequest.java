@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.market20151101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDistributionProductsLinkRequest} extends {@link RequestModel}
  *
  * <p>DescribeDistributionProductsLinkRequest</p>
  */
 public class DescribeDistributionProductsLinkRequest extends Request {
-    @Query
-    @NameInMap("Codes")
-    @Validation(required = true)
-    private java.util.List < String > codes;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Codes")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> codes;
 
     private DescribeDistributionProductsLinkRequest(Builder builder) {
         super(builder);
@@ -38,12 +43,12 @@ public class DescribeDistributionProductsLinkRequest extends Request {
     /**
      * @return codes
      */
-    public java.util.List < String > getCodes() {
+    public java.util.List<String> getCodes() {
         return this.codes;
     }
 
     public static final class Builder extends Request.Builder<DescribeDistributionProductsLinkRequest, Builder> {
-        private java.util.List < String > codes; 
+        private java.util.List<String> codes; 
 
         private Builder() {
             super();
@@ -55,9 +60,9 @@ public class DescribeDistributionProductsLinkRequest extends Request {
         } 
 
         /**
-         * Codes.
+         * <p>This parameter is required.</p>
          */
-        public Builder codes(java.util.List < String > codes) {
+        public Builder codes(java.util.List<String> codes) {
             String codesShrink = shrink(codes, "Codes", "json");
             this.putQueryParameter("Codes", codesShrink);
             this.codes = codes;

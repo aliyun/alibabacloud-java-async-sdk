@@ -290,6 +290,9 @@ public class DescribeUserLogResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         private String gmtModified;
 
+        @NameInMap("I18nResultKey")
+        private String i18nResultKey;
+
         @NameInMap("ItemBarCode")
         private String itemBarCode;
 
@@ -336,6 +339,7 @@ public class DescribeUserLogResponseBody extends TeaModel {
             this.eslSignal = builder.eslSignal;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
+            this.i18nResultKey = builder.i18nResultKey;
             this.itemBarCode = builder.itemBarCode;
             this.itemId = builder.itemId;
             this.itemShortTitle = builder.itemShortTitle;
@@ -399,6 +403,13 @@ public class DescribeUserLogResponseBody extends TeaModel {
          */
         public String getGmtModified() {
             return this.gmtModified;
+        }
+
+        /**
+         * @return i18nResultKey
+         */
+        public String getI18nResultKey() {
+            return this.i18nResultKey;
         }
 
         /**
@@ -499,6 +510,7 @@ public class DescribeUserLogResponseBody extends TeaModel {
             private Integer eslSignal; 
             private String gmtCreate; 
             private String gmtModified; 
+            private String i18nResultKey; 
             private String itemBarCode; 
             private String itemId; 
             private String itemShortTitle; 
@@ -558,6 +570,14 @@ public class DescribeUserLogResponseBody extends TeaModel {
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
+                return this;
+            }
+
+            /**
+             * I18nResultKey.
+             */
+            public Builder i18nResultKey(String i18nResultKey) {
+                this.i18nResultKey = i18nResultKey;
                 return this;
             }
 

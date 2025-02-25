@@ -1,94 +1,99 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePhysicalConnectionRequest} extends {@link RequestModel}
  *
  * <p>CreatePhysicalConnectionRequest</p>
  */
 public class CreatePhysicalConnectionRequest extends Request {
-    @Query
-    @NameInMap("AccessPointId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessPointId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accessPointId;
 
-    @Query
-    @NameInMap("CircuitCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CircuitCode")
     private String circuitCode;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DeviceAdvancedCapacity")
-    private java.util.List < String > deviceAdvancedCapacity;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceAdvancedCapacity")
+    private java.util.List<String> deviceAdvancedCapacity;
 
-    @Query
-    @NameInMap("LineOperator")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LineOperator")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String lineOperator;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PeerLocation")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeerLocation")
     private String peerLocation;
 
-    @Query
-    @NameInMap("PortType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PortType")
     private String portType;
 
-    @Query
-    @NameInMap("RedundantPhysicalConnectionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RedundantPhysicalConnectionId")
     private String redundantPhysicalConnectionId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @Query
-    @NameInMap("bandwidth")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("bandwidth")
     private Integer bandwidth;
 
     private CreatePhysicalConnectionRequest(Builder builder) {
@@ -158,7 +163,7 @@ public class CreatePhysicalConnectionRequest extends Request {
     /**
      * @return deviceAdvancedCapacity
      */
-    public java.util.List < String > getDeviceAdvancedCapacity() {
+    public java.util.List<String> getDeviceAdvancedCapacity() {
         return this.deviceAdvancedCapacity;
     }
 
@@ -242,7 +247,7 @@ public class CreatePhysicalConnectionRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -265,7 +270,7 @@ public class CreatePhysicalConnectionRequest extends Request {
         private String circuitCode; 
         private String clientToken; 
         private String description; 
-        private java.util.List < String > deviceAdvancedCapacity; 
+        private java.util.List<String> deviceAdvancedCapacity; 
         private String lineOperator; 
         private String name; 
         private String ownerAccount; 
@@ -277,7 +282,7 @@ public class CreatePhysicalConnectionRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String type; 
         private Integer bandwidth; 
 
@@ -309,7 +314,11 @@ public class CreatePhysicalConnectionRequest extends Request {
         } 
 
         /**
-         * The access point ID of the Express Connect circuit.
+         * <p>The access point ID of the Express Connect circuit.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-cn-beijing-ft-A</p>
          */
         public Builder accessPointId(String accessPointId) {
             this.putQueryParameter("AccessPointId", accessPointId);
@@ -318,7 +327,10 @@ public class CreatePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * The circuit code of the Express Connect circuit. The circuit code is provided by the connectivity provider.
+         * <p>The circuit code of the Express Connect circuit. The circuit code is provided by the connectivity provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>longtel001</p>
          */
         public Builder circuitCode(String circuitCode) {
             this.putQueryParameter("CircuitCode", circuitCode);
@@ -327,12 +339,14 @@ public class CreatePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -341,10 +355,11 @@ public class CreatePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * The description of the Express Connect circuit.
-         * <p>
+         * <p>The description of the Express Connect circuit.</p>
+         * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -353,24 +368,28 @@ public class CreatePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * The advanced features of the device.
+         * <p>The advanced features of the device.</p>
          */
-        public Builder deviceAdvancedCapacity(java.util.List < String > deviceAdvancedCapacity) {
+        public Builder deviceAdvancedCapacity(java.util.List<String> deviceAdvancedCapacity) {
             this.putQueryParameter("DeviceAdvancedCapacity", deviceAdvancedCapacity);
             this.deviceAdvancedCapacity = deviceAdvancedCapacity;
             return this;
         }
 
         /**
-         * The connectivity provider of the Express Connect circuit. Valid values:
-         * <p>
+         * <p>The connectivity provider of the Express Connect circuit. Valid values:</p>
+         * <ul>
+         * <li><strong>CT</strong>: China Telecom.</li>
+         * <li><strong>CU</strong>: China Unicom.</li>
+         * <li><strong>CM</strong>: China Mobile.</li>
+         * <li><strong>CO</strong>: other connectivity providers in the Chinese mainland.</li>
+         * <li><strong>Equinix</strong>: Equinix.</li>
+         * <li><strong>Other</strong>: other connectivity providers outside the Chinese mainland.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **CT**: China Telecom.
-         * *   **CU**: China Unicom.
-         * *   **CM**: China Mobile.
-         * *   **CO**: other connectivity providers in the Chinese mainland.
-         * *   **Equinix**: Equinix.
-         * *   **Other**: other connectivity providers outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>CT</p>
          */
         public Builder lineOperator(String lineOperator) {
             this.putQueryParameter("LineOperator", lineOperator);
@@ -379,10 +398,11 @@ public class CreatePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * The name of the Express Connect circuit.
-         * <p>
+         * <p>The name of the Express Connect circuit.</p>
+         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -409,7 +429,10 @@ public class CreatePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * The geographical location of the data center.
+         * <p>The geographical location of the data center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder peerLocation(String peerLocation) {
             this.putQueryParameter("PeerLocation", peerLocation);
@@ -418,18 +441,22 @@ public class CreatePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * The port type. Valid values:
-         * <p>
+         * <p>The port type. Valid values:</p>
+         * <ul>
+         * <li><strong>100Base-T</strong>: 100 Mbit/s copper Ethernet port</li>
+         * <li><strong>1000Base-T</strong>: 1,000 Mbit/s copper Ethernet port</li>
+         * <li><strong>1000Base-LX</strong>: 1,000 Mbit/s single-mode optical port (10 km)</li>
+         * <li><strong>10GBase-T</strong>: 10,000 Mbit/s copper Ethernet port</li>
+         * <li><strong>10GBase-LR</strong>: 10,000 Mbit/s single-mode optical port (10 km)</li>
+         * <li><strong>40GBase-LR</strong>: 40,000 Mbit/s single-mode optical port</li>
+         * <li><strong>100GBase-LR</strong>: 100,000 Mbit/s single-mode optical port</li>
+         * </ul>
+         * <blockquote>
+         * <p> To use ports 40GBase-LR and 100GBase-LR, you must first contact your account manager.</p>
+         * </blockquote>
          * 
-         * *   **100Base-T**: 100 Mbit/s copper Ethernet port
-         * *   **1000Base-T**: 1,000 Mbit/s copper Ethernet port
-         * *   **1000Base-LX**: 1,000 Mbit/s single-mode optical port (10 km)
-         * *   **10GBase-T**: 10,000 Mbit/s copper Ethernet port
-         * *   **10GBase-LR**: 10,000 Mbit/s single-mode optical port (10 km)
-         * *   **40GBase-LR**: 40,000 Mbit/s single-mode optical port
-         * *   **100GBase-LR**: 100,000 Mbit/s single-mode optical port
-         * 
-         * >  To use ports 40GBase-LR and 100GBase-LR, you must first contact your account manager.
+         * <strong>example:</strong>
+         * <p>1000Base-T</p>
          */
         public Builder portType(String portType) {
             this.putQueryParameter("PortType", portType);
@@ -438,7 +465,10 @@ public class CreatePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * The ID of the redundant Express Connect circuit. The redundant Express Connect circuit must be in the **Allocated**, **Confirmed**, or **Enabled** state.
+         * <p>The ID of the redundant Express Connect circuit. The redundant Express Connect circuit must be in the <strong>Allocated</strong>, <strong>Confirmed</strong>, or <strong>Enabled</strong> state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-119mfjzm****</p>
          */
         public Builder redundantPhysicalConnectionId(String redundantPhysicalConnectionId) {
             this.putQueryParameter("RedundantPhysicalConnectionId", redundantPhysicalConnectionId);
@@ -447,10 +477,12 @@ public class CreatePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * The region ID of the Express Connect circuit.
-         * <p>
+         * <p>The region ID of the Express Connect circuit.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -459,7 +491,10 @@ public class CreatePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the Express Connect circuit belongs.
+         * <p>The ID of the resource group to which the Express Connect circuit belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmoiyermp****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -486,16 +521,19 @@ public class CreatePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * The tag list.
+         * <p>The tag list.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The type of Express Connect circuit. Default value: **VPC**.
+         * <p>The type of Express Connect circuit. Default value: <strong>VPC</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -504,10 +542,11 @@ public class CreatePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * The maximum bandwidth of the hosted connection. Unit: Mbit/s.
-         * <p>
+         * <p>The maximum bandwidth of the hosted connection. Unit: Mbit/s.</p>
+         * <p>Valid values: <strong>50</strong>, <strong>100</strong>, <strong>200</strong>, <strong>300</strong>, <strong>400</strong>, <strong>500</strong>, <strong>1000</strong>, <strong>2000</strong>, <strong>4000</strong>, <strong>5000</strong>, <strong>8000</strong>, and <strong>10000</strong>.</p>
          * 
-         * Valid values: **50**, **100**, **200**, **300**, **400**, **500**, **1000**, **2000**, **4000**, **5000**, **8000**, and **10000**.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("bandwidth", bandwidth);
@@ -522,11 +561,17 @@ public class CreatePhysicalConnectionRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreatePhysicalConnectionRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePhysicalConnectionRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -561,10 +606,11 @@ public class CreatePhysicalConnectionRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
-             * <p>
+             * <p>The key of tag to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
              * 
-             * The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -572,10 +618,11 @@ public class CreatePhysicalConnectionRequest extends Request {
             }
 
             /**
-             * The tag value to add to the resource. You can specify up to 20 tag values The tag value can be an empty string.
-             * <p>
+             * <p>The tag value to add to the resource. You can specify up to 20 tag values The tag value can be an empty string.</p>
+             * <p>The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
              * 
-             * The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

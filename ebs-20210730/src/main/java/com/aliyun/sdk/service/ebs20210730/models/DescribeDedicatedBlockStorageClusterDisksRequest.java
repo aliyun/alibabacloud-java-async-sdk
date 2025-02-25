@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDedicatedBlockStorageClusterDisksRequest} extends {@link RequestModel}
  *
  * <p>DescribeDedicatedBlockStorageClusterDisksRequest</p>
  */
 public class DescribeDedicatedBlockStorageClusterDisksRequest extends Request {
-    @Query
-    @NameInMap("DbscId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbscId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbscId;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Long maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private DescribeDedicatedBlockStorageClusterDisksRequest(Builder builder) {
@@ -98,7 +103,11 @@ public class DescribeDedicatedBlockStorageClusterDisksRequest extends Request {
         } 
 
         /**
-         * The ID of the dedicated block storage cluster.
+         * <p>The ID of the dedicated block storage cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbsc-cn-od43bf****</p>
          */
         public Builder dbscId(String dbscId) {
             this.putQueryParameter("DbscId", dbscId);
@@ -107,10 +116,11 @@ public class DescribeDedicatedBlockStorageClusterDisksRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return on each page. Maximum value: 500.
-         * <p>
+         * <p>The maximum number of entries to return on each page. Maximum value: 500.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -119,7 +129,10 @@ public class DescribeDedicatedBlockStorageClusterDisksRequest extends Request {
         }
 
         /**
-         * The query token. Set the value to the NextToken value returned in the previous call to the DescribeDedicatedBlockStorageClusterDisks operation. Leave this parameter empty the first time you call this operation.
+         * <p>The query token. Set the value to the NextToken value returned in the previous call to the DescribeDedicatedBlockStorageClusterDisks operation. Leave this parameter empty the first time you call this operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -128,7 +141,11 @@ public class DescribeDedicatedBlockStorageClusterDisksRequest extends Request {
         }
 
         /**
-         * The ID of the region where the dedicated block storage cluster resides. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The ID of the region where the dedicated block storage cluster resides. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-heyuan</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

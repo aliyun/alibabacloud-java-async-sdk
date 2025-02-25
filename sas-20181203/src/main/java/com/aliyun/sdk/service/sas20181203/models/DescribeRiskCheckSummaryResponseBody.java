@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRiskCheckSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRiskCheckSummaryResponseBody</p>
  */
 public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RiskCheckSummary")
+    @com.aliyun.core.annotation.NameInMap("RiskCheckSummary")
     private RiskCheckSummary riskCheckSummary;
 
     private DescribeRiskCheckSummaryResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
         private RiskCheckSummary riskCheckSummary; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>291B49F9-1685-4005-9D34-606B6F78740F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The summary information about the check results of cloud service configurations.
+         * <p>The summary information about the check results of cloud service configurations.</p>
          */
         public Builder riskCheckSummary(RiskCheckSummary riskCheckSummary) {
             this.riskCheckSummary = riskCheckSummary;
@@ -71,11 +79,17 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRiskCheckSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRiskCheckSummaryResponseBody</p>
+     */
     public static class CountByStatus extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private CountByStatus(Builder builder) {
@@ -110,7 +124,10 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The number of detected risk items.
+             * <p>The number of detected risk items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -118,11 +135,14 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the check item after the check is finished. Valid values:
-             * <p>
+             * <p>The status of the check item after the check is finished. Valid values:</p>
+             * <ul>
+             * <li><strong>pass</strong>: The check item passed the check, which indicates that the check item is normal.</li>
+             * <li><strong>failed</strong>: The check item failed the check, which indicates that risks are detected based on the check item.</li>
+             * </ul>
              * 
-             * *   **pass**: The check item passed the check, which indicates that the check item is normal.
-             * *   **failed**: The check item failed the check, which indicates that risks are detected based on the check item.
+             * <strong>example:</strong>
+             * <p>pass</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -136,23 +156,29 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRiskCheckSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRiskCheckSummaryResponseBody</p>
+     */
     public static class Groups extends TeaModel {
-        @NameInMap("CountByStatus")
-        private java.util.List < CountByStatus> countByStatus;
+        @com.aliyun.core.annotation.NameInMap("CountByStatus")
+        private java.util.List<CountByStatus> countByStatus;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("RemainingTime")
+        @com.aliyun.core.annotation.NameInMap("RemainingTime")
         private Integer remainingTime;
 
-        @NameInMap("Sort")
+        @com.aliyun.core.annotation.NameInMap("Sort")
         private Integer sort;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private Groups(Builder builder) {
@@ -175,7 +201,7 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
         /**
          * @return countByStatus
          */
-        public java.util.List < CountByStatus> getCountByStatus() {
+        public java.util.List<CountByStatus> getCountByStatus() {
             return this.countByStatus;
         }
 
@@ -215,7 +241,7 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < CountByStatus> countByStatus; 
+            private java.util.List<CountByStatus> countByStatus; 
             private Long id; 
             private Integer remainingTime; 
             private Integer sort; 
@@ -223,15 +249,18 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * An array that consists of the statistics about check results.
+             * <p>An array that consists of the statistics about check results.</p>
              */
-            public Builder countByStatus(java.util.List < CountByStatus> countByStatus) {
+            public Builder countByStatus(java.util.List<CountByStatus> countByStatus) {
                 this.countByStatus = countByStatus;
                 return this;
             }
 
             /**
-             * The ID of the check item type.
+             * <p>The ID of the check item type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -239,7 +268,10 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The remaining time before the check is complete.
+             * <p>The remaining time before the check is complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder remainingTime(Integer remainingTime) {
                 this.remainingTime = remainingTime;
@@ -247,7 +279,10 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The sequence number of the check item type in the **All Types** drop-down list in the Security Center console.
+             * <p>The sequence number of the check item type in the <strong>All Types</strong> drop-down list in the Security Center console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sort(Integer sort) {
                 this.sort = sort;
@@ -255,13 +290,16 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the check. Valid values:
-             * <p>
+             * <p>The status of the check. Valid values:</p>
+             * <ul>
+             * <li><strong>finish</strong>: The check is finished.</li>
+             * <li><strong>running</strong>: The check is in progress.</li>
+             * <li><strong>waiting</strong>: The check is pending.</li>
+             * <li><strong>notStart</strong>: The check is not started.</li>
+             * </ul>
              * 
-             * *   **finish**: The check is finished.
-             * *   **running**: The check is in progress.
-             * *   **waiting**: The check is pending.
-             * *   **notStart**: The check is not started.
+             * <strong>example:</strong>
+             * <p>finish</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -269,7 +307,10 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the check item type.
+             * <p>The name of the check item type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Identity authentication and permissions</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -283,11 +324,17 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRiskCheckSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRiskCheckSummaryResponseBody</p>
+     */
     public static class RiskLevelCount extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
         private RiskLevelCount(Builder builder) {
@@ -322,7 +369,10 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             private String key; 
 
             /**
-             * The number of check items at the specified risk level.
+             * <p>The number of check items at the specified risk level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -330,12 +380,15 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level of the check items. Valid values:
-             * <p>
+             * <p>The risk level of the check items. Valid values:</p>
+             * <ul>
+             * <li><strong>high</strong></li>
+             * <li><strong>medium</strong></li>
+             * <li><strong>low</strong></li>
+             * </ul>
              * 
-             * *   **high**
-             * *   **medium**
-             * *   **low**
+             * <strong>example:</strong>
+             * <p>medium</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -349,35 +402,41 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRiskCheckSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRiskCheckSummaryResponseBody</p>
+     */
     public static class RiskCheckSummary extends TeaModel {
-        @NameInMap("AffectedAssetCount")
+        @com.aliyun.core.annotation.NameInMap("AffectedAssetCount")
         private Integer affectedAssetCount;
 
-        @NameInMap("DisabledRiskCount")
+        @com.aliyun.core.annotation.NameInMap("DisabledRiskCount")
         private Integer disabledRiskCount;
 
-        @NameInMap("EnabledRiskCount")
+        @com.aliyun.core.annotation.NameInMap("EnabledRiskCount")
         private Integer enabledRiskCount;
 
-        @NameInMap("Groups")
-        private java.util.List < Groups> groups;
+        @com.aliyun.core.annotation.NameInMap("Groups")
+        private java.util.List<Groups> groups;
 
-        @NameInMap("ItemCount")
+        @com.aliyun.core.annotation.NameInMap("ItemCount")
         private Integer itemCount;
 
-        @NameInMap("PreviousCount")
+        @com.aliyun.core.annotation.NameInMap("PreviousCount")
         private Integer previousCount;
 
-        @NameInMap("PreviousTime")
+        @com.aliyun.core.annotation.NameInMap("PreviousTime")
         private Long previousTime;
 
-        @NameInMap("RiskCount")
+        @com.aliyun.core.annotation.NameInMap("RiskCount")
         private Integer riskCount;
 
-        @NameInMap("RiskLevelCount")
-        private java.util.List < RiskLevelCount> riskLevelCount;
+        @com.aliyun.core.annotation.NameInMap("RiskLevelCount")
+        private java.util.List<RiskLevelCount> riskLevelCount;
 
-        @NameInMap("RiskRate")
+        @com.aliyun.core.annotation.NameInMap("RiskRate")
         private Float riskRate;
 
         private RiskCheckSummary(Builder builder) {
@@ -425,7 +484,7 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
         /**
          * @return groups
          */
-        public java.util.List < Groups> getGroups() {
+        public java.util.List<Groups> getGroups() {
             return this.groups;
         }
 
@@ -460,7 +519,7 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
         /**
          * @return riskLevelCount
          */
-        public java.util.List < RiskLevelCount> getRiskLevelCount() {
+        public java.util.List<RiskLevelCount> getRiskLevelCount() {
             return this.riskLevelCount;
         }
 
@@ -475,16 +534,19 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             private Integer affectedAssetCount; 
             private Integer disabledRiskCount; 
             private Integer enabledRiskCount; 
-            private java.util.List < Groups> groups; 
+            private java.util.List<Groups> groups; 
             private Integer itemCount; 
             private Integer previousCount; 
             private Long previousTime; 
             private Integer riskCount; 
-            private java.util.List < RiskLevelCount> riskLevelCount; 
+            private java.util.List<RiskLevelCount> riskLevelCount; 
             private Float riskRate; 
 
             /**
-             * The number of affected assets.
+             * <p>The number of affected assets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder affectedAssetCount(Integer affectedAssetCount) {
                 this.affectedAssetCount = affectedAssetCount;
@@ -492,7 +554,10 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the check items that failed the check.
+             * <p>The number of the check items that failed the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder disabledRiskCount(Integer disabledRiskCount) {
                 this.disabledRiskCount = disabledRiskCount;
@@ -500,7 +565,10 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the check items that passed the check.
+             * <p>The number of the check items that passed the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder enabledRiskCount(Integer enabledRiskCount) {
                 this.enabledRiskCount = enabledRiskCount;
@@ -508,15 +576,18 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the statistics for each type of check item.
+             * <p>An array that consists of the statistics for each type of check item.</p>
              */
-            public Builder groups(java.util.List < Groups> groups) {
+            public Builder groups(java.util.List<Groups> groups) {
                 this.groups = groups;
                 return this;
             }
 
             /**
-             * The number of check items.
+             * <p>The number of check items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder itemCount(Integer itemCount) {
                 this.itemCount = itemCount;
@@ -524,7 +595,10 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of risk items detected in the last check.
+             * <p>The number of risk items detected in the last check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder previousCount(Integer previousCount) {
                 this.previousCount = previousCount;
@@ -532,7 +606,10 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the last check. Unit: milliseconds.
+             * <p>The timestamp of the last check. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1545012926000</p>
              */
             public Builder previousTime(Long previousTime) {
                 this.previousTime = previousTime;
@@ -540,7 +617,10 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of detected risk items.
+             * <p>The number of detected risk items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder riskCount(Integer riskCount) {
                 this.riskCount = riskCount;
@@ -548,15 +628,18 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the number of check items at each risk level.
+             * <p>An array that consists of the number of check items at each risk level.</p>
              */
-            public Builder riskLevelCount(java.util.List < RiskLevelCount> riskLevelCount) {
+            public Builder riskLevelCount(java.util.List<RiskLevelCount> riskLevelCount) {
                 this.riskLevelCount = riskLevelCount;
                 return this;
             }
 
             /**
-             * The proportion of risk items to all check items.
+             * <p>The proportion of risk items to all check items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.25</p>
              */
             public Builder riskRate(Float riskRate) {
                 this.riskRate = riskRate;

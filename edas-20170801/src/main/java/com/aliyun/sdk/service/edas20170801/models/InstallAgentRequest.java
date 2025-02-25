@@ -93,7 +93,7 @@ public class InstallAgentRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated.
+         * This parameter is discontinued.
          */
         public Builder doAsync(Boolean doAsync) {
             this.putQueryParameter("DoAsync", doAsync);

@@ -90,12 +90,12 @@ public class ListFlowClusterAllHostsRequest extends Request {
             super();
         } 
 
-        private Builder(ListFlowClusterAllHostsRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.projectId = response.projectId;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
+        private Builder(ListFlowClusterAllHostsRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.projectId = request.projectId;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**

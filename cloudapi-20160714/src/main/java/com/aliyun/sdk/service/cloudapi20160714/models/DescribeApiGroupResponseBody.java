@@ -1,114 +1,122 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApiGroupResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeApiGroupResponseBody</p>
  */
 public class DescribeApiGroupResponseBody extends TeaModel {
-    @NameInMap("BasePath")
+    @com.aliyun.core.annotation.NameInMap("BasePath")
     private String basePath;
 
-    @NameInMap("BillingStatus")
+    @com.aliyun.core.annotation.NameInMap("BillingStatus")
     private String billingStatus;
 
-    @NameInMap("CloudMarketCommodity")
+    @com.aliyun.core.annotation.NameInMap("CloudMarketCommodity")
     private Boolean cloudMarketCommodity;
 
-    @NameInMap("CmsMonitorGroup")
+    @com.aliyun.core.annotation.NameInMap("CmsMonitorGroup")
     private String cmsMonitorGroup;
 
-    @NameInMap("CompatibleFlags")
+    @com.aliyun.core.annotation.NameInMap("CompatibleFlags")
     private String compatibleFlags;
 
-    @NameInMap("CreatedTime")
+    @com.aliyun.core.annotation.NameInMap("CreatedTime")
     private String createdTime;
 
-    @NameInMap("CustomDomains")
+    @com.aliyun.core.annotation.NameInMap("CustomAppCodeConfig")
+    private String customAppCodeConfig;
+
+    @com.aliyun.core.annotation.NameInMap("CustomDomains")
     private CustomDomains customDomains;
 
-    @NameInMap("CustomTraceConfig")
+    @com.aliyun.core.annotation.NameInMap("CustomTraceConfig")
     private String customTraceConfig;
 
-    @NameInMap("CustomerConfigs")
+    @com.aliyun.core.annotation.NameInMap("CustomerConfigs")
     private String customerConfigs;
 
-    @NameInMap("DedicatedInstanceType")
+    @com.aliyun.core.annotation.NameInMap("DedicatedInstanceType")
     private String dedicatedInstanceType;
 
-    @NameInMap("DefaultDomain")
+    @com.aliyun.core.annotation.NameInMap("DefaultDomain")
     private String defaultDomain;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("DisableInnerDomain")
+    @com.aliyun.core.annotation.NameInMap("DisableInnerDomain")
     private Boolean disableInnerDomain;
 
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
-    @NameInMap("HttpsPolicy")
+    @com.aliyun.core.annotation.NameInMap("HttpsPolicy")
     private String httpsPolicy;
 
-    @NameInMap("IllegalStatus")
+    @com.aliyun.core.annotation.NameInMap("IllegalStatus")
     private String illegalStatus;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
-    @NameInMap("Ipv6Status")
+    @com.aliyun.core.annotation.NameInMap("Ipv6Status")
     private String ipv6Status;
 
-    @NameInMap("MigrationError")
+    @com.aliyun.core.annotation.NameInMap("MigrationError")
     private String migrationError;
 
-    @NameInMap("MigrationStatus")
+    @com.aliyun.core.annotation.NameInMap("MigrationStatus")
     private String migrationStatus;
 
-    @NameInMap("ModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("ModifiedTime")
     private String modifiedTime;
 
-    @NameInMap("PassthroughHeaders")
+    @com.aliyun.core.annotation.NameInMap("PassthroughHeaders")
     private String passthroughHeaders;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StageItems")
+    @com.aliyun.core.annotation.NameInMap("StageItems")
     private StageItems stageItems;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("SubDomain")
+    @com.aliyun.core.annotation.NameInMap("SubDomain")
     private String subDomain;
 
-    @NameInMap("TrafficLimit")
+    @com.aliyun.core.annotation.NameInMap("TrafficLimit")
     private Integer trafficLimit;
 
-    @NameInMap("UserLogConfig")
+    @com.aliyun.core.annotation.NameInMap("UserLogConfig")
     private String userLogConfig;
 
-    @NameInMap("VpcDomain")
+    @com.aliyun.core.annotation.NameInMap("VpcDomain")
     private String vpcDomain;
 
-    @NameInMap("VpcSlbIntranetDomain")
+    @com.aliyun.core.annotation.NameInMap("VpcSlbIntranetDomain")
     private String vpcSlbIntranetDomain;
 
     private DescribeApiGroupResponseBody(Builder builder) {
@@ -118,6 +126,7 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         this.cmsMonitorGroup = builder.cmsMonitorGroup;
         this.compatibleFlags = builder.compatibleFlags;
         this.createdTime = builder.createdTime;
+        this.customAppCodeConfig = builder.customAppCodeConfig;
         this.customDomains = builder.customDomains;
         this.customTraceConfig = builder.customTraceConfig;
         this.customerConfigs = builder.customerConfigs;
@@ -195,6 +204,13 @@ public class DescribeApiGroupResponseBody extends TeaModel {
      */
     public String getCreatedTime() {
         return this.createdTime;
+    }
+
+    /**
+     * @return customAppCodeConfig
+     */
+    public String getCustomAppCodeConfig() {
+        return this.customAppCodeConfig;
     }
 
     /**
@@ -393,6 +409,7 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         private String cmsMonitorGroup; 
         private String compatibleFlags; 
         private String createdTime; 
+        private String customAppCodeConfig; 
         private CustomDomains customDomains; 
         private String customTraceConfig; 
         private String customerConfigs; 
@@ -422,7 +439,10 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         private String vpcSlbIntranetDomain; 
 
         /**
-         * The root path of the API.
+         * <p>The root path of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/qqq</p>
          */
         public Builder basePath(String basePath) {
             this.basePath = basePath;
@@ -430,11 +450,14 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The billing status of the API group.
-         * <p>
+         * <p>The billing status of the API group.</p>
+         * <ul>
+         * <li><strong>NORMAL</strong>: The API group is normal.</li>
+         * <li><strong>LOCKED</strong>: The API group is locked due to overdue payments.</li>
+         * </ul>
          * 
-         * *   **NORMAL**: The API group is normal.
-         * *   **LOCKED**: The API group is locked due to overdue payments.
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder billingStatus(String billingStatus) {
             this.billingStatus = billingStatus;
@@ -442,7 +465,10 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The products on Alibaba Cloud Marketplace.
+         * <p>The products on Alibaba Cloud Marketplace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder cloudMarketCommodity(Boolean cloudMarketCommodity) {
             this.cloudMarketCommodity = cloudMarketCommodity;
@@ -450,7 +476,10 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The CloudMonitor application group.
+         * <p>The CloudMonitor application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>217008423</p>
          */
         public Builder cmsMonitorGroup(String cmsMonitorGroup) {
             this.cmsMonitorGroup = cmsMonitorGroup;
@@ -458,7 +487,10 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The list of associated tags. Separate multiple tags with commas (,).
+         * <p>The list of associated tags. Separate multiple tags with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>depart:dep1</p>
          */
         public Builder compatibleFlags(String compatibleFlags) {
             this.compatibleFlags = compatibleFlags;
@@ -466,7 +498,10 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The creation time (UTC) of the API group.
+         * <p>The creation time (UTC) of the API group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-08-01T06:53:02Z</p>
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -474,7 +509,18 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The custom domain name information.
+         * <p>The custom appcode configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;location&quot;:&quot;HEADER&quot;,&quot;name&quot;:&quot;myAppCodeHeader&quot;}</p>
+         */
+        public Builder customAppCodeConfig(String customAppCodeConfig) {
+            this.customAppCodeConfig = customAppCodeConfig;
+            return this;
+        }
+
+        /**
+         * <p>The details about the custom domain name.</p>
          */
         public Builder customDomains(CustomDomains customDomains) {
             this.customDomains = customDomains;
@@ -482,7 +528,10 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The custom trace configuration.
+         * <p>The custom trace configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;parameterLocation&quot;:&quot;HEADER&quot;,&quot;parameterName&quot;:&quot;traceId&quot;}</p>
          */
         public Builder customTraceConfig(String customTraceConfig) {
             this.customTraceConfig = customTraceConfig;
@@ -490,7 +539,10 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The list of custom configuration items.
+         * <p>The list of custom configuration items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>removeResponseServerHeader</p>
          */
         public Builder customerConfigs(String customerConfigs) {
             this.customerConfigs = customerConfigs;
@@ -498,7 +550,14 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * DedicatedInstanceType.
+         * <p>The type of exclusive instance where the group is located</p>
+         * <ul>
+         * <li>VPC fusion type exclusive instance: vpc_connect</li>
+         * <li>Traditional type exclusive instance: normal</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder dedicatedInstanceType(String dedicatedInstanceType) {
             this.dedicatedInstanceType = dedicatedInstanceType;
@@ -506,7 +565,10 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The default domain name.
+         * <p>The default domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mkt.api.gaore.com</p>
          */
         public Builder defaultDomain(String defaultDomain) {
             this.defaultDomain = defaultDomain;
@@ -514,7 +576,10 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the API group.
+         * <p>The description of the API group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>New weather informations.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -522,11 +587,14 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether access over the public second-level domain name is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether access over the public second-level domain name is enabled. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disableInnerDomain(Boolean disableInnerDomain) {
             this.disableInnerDomain = disableInnerDomain;
@@ -534,7 +602,10 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the API group. This ID is generated by the system and globally unique.
+         * <p>The ID of the API group. This ID is generated by the system and globally unique.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>523e8dc7bbe04613b5b1d726c2a7889d</p>
          */
         public Builder groupId(String groupId) {
             this.groupId = groupId;
@@ -542,7 +613,10 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the group to which the API belongs.
+         * <p>The name of the group to which the API belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NewWeather</p>
          */
         public Builder groupName(String groupName) {
             this.groupName = groupName;
@@ -550,7 +624,10 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTPS policy.
+         * <p>The HTTPS policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTPS2_TLS1_0</p>
          */
         public Builder httpsPolicy(String httpsPolicy) {
             this.httpsPolicy = httpsPolicy;
@@ -558,11 +635,14 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The validity status of the API group. Valid values:
-         * <p>
+         * <p>The validity status of the API group. Valid values:</p>
+         * <ul>
+         * <li><strong>NORMAL</strong>: The API group is normal.</li>
+         * <li><strong>LOCKED</strong>: The API group is locked because it is not valid.</li>
+         * </ul>
          * 
-         * *   **NORMAL**: The API group is normal.
-         * *   **LOCKED**: The API group is locked because it is not valid.
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder illegalStatus(String illegalStatus) {
             this.illegalStatus = illegalStatus;
@@ -570,7 +650,10 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apigateway-cn-v6419k43xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -578,12 +661,15 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the instance.
-         * <p>
+         * <p>The type of the instance.</p>
+         * <ul>
+         * <li>CLASSIC_SHARED: shared instance that uses the classic network configuration</li>
+         * <li>VPC_SHARED: shared instance that uses VPC</li>
+         * <li>VPC_DEDICATED: dedicated instance that uses VPC</li>
+         * </ul>
          * 
-         * *   CLASSIC_SHARED: shared instance that uses the classic network configuration
-         * *   VPC_SHARED: shared instance that uses VPC
-         * *   VPC_DEDICATED: dedicated instance that uses VPC
+         * <strong>example:</strong>
+         * <p>VPC_SHARED</p>
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;
@@ -591,7 +677,10 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The IPv6 status.
+         * <p>The IPv6 status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNBIND</p>
          */
         public Builder ipv6Status(String ipv6Status) {
             this.ipv6Status = ipv6Status;
@@ -599,7 +688,10 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * MigrationError.
+         * <p>The reason for the failure of the group migration instance task. When the value of the MigrationStatus parameter is Failed, it is not empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The current instance conflicts with the target instance.</p>
          */
         public Builder migrationError(String migrationError) {
             this.migrationError = migrationError;
@@ -607,7 +699,15 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * MigrationStatus.
+         * <p>Group migration instance task status</p>
+         * <ul>
+         * <li>Running</li>
+         * <li>Success</li>
+         * <li>Failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Fail</p>
          */
         public Builder migrationStatus(String migrationStatus) {
             this.migrationStatus = migrationStatus;
@@ -615,7 +715,10 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The last modification time (UTC) of the API group.
+         * <p>The last modification time (UTC) of the API group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-08-01T06:54:32Z</p>
          */
         public Builder modifiedTime(String modifiedTime) {
             this.modifiedTime = modifiedTime;
@@ -623,7 +726,10 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Specifies whether to pass headers.
+         * <p>Specifies whether to pass headers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eagleeye-rpcid,x-b3-traceid</p>
          */
         public Builder passthroughHeaders(String passthroughHeaders) {
             this.passthroughHeaders = passthroughHeaders;
@@ -631,7 +737,10 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The region to which the API group belongs.
+         * <p>The region to which the API group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -639,7 +748,10 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>03442A3D-3B7D-434C-8A95-A5FEB989B519</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -647,7 +759,7 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The runtime environment information.
+         * <p>The runtime environment information.</p>
          */
         public Builder stageItems(StageItems stageItems) {
             this.stageItems = stageItems;
@@ -655,11 +767,14 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the API group.
-         * <p>
+         * <p>The status of the API group.</p>
+         * <ul>
+         * <li><strong>NORMAL</strong>: The API group is normal.</li>
+         * <li><strong>DELETE</strong>: The API group is deleted.</li>
+         * </ul>
          * 
-         * *   **NORMAL**: The API group is normal.
-         * *   **DELETE**: The API group is deleted.
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -667,7 +782,10 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The second-level domain name automatically assigned to the API group.
+         * <p>The second-level domain name automatically assigned to the API group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27d50c0f2e54b359919923d908bb015-cn-hangzhou.alicloudapi.com</p>
          */
         public Builder subDomain(String subDomain) {
             this.subDomain = subDomain;
@@ -675,7 +793,10 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The upper QPS limit of the API group. The default value is 500. You can increase the upper limit by submitting an application.
+         * <p>The upper QPS limit of the API group. The default value is 500. You can increase the upper limit by submitting an application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder trafficLimit(Integer trafficLimit) {
             this.trafficLimit = trafficLimit;
@@ -683,7 +804,10 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The user log settings.
+         * <p>The user log settings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;requestBody&quot;:true,&quot;responseBody&quot;:true,&quot;queryString&quot;:&quot;test&quot;,&quot;requestHeaders&quot;:&quot;test&quot;,&quot;responseHeaders&quot;:&quot;test&quot;,&quot;jwtClaims&quot;:&quot;test&quot;}</p>
          */
         public Builder userLogConfig(String userLogConfig) {
             this.userLogConfig = userLogConfig;
@@ -691,7 +815,10 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The VPC domain name.
+         * <p>The VPC domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e4<em><em><strong>7151954</strong></em>acbd9f7</em>***1058a-ap-southeast-1-vpc.alicloudapi.com</p>
          */
         public Builder vpcDomain(String vpcDomain) {
             this.vpcDomain = vpcDomain;
@@ -699,7 +826,10 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The VPC SLB domain name.
+         * <p>The VPC SLB domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>257e9d450e924d00b976b0ecfb7184c2-cn-beijing-intranet.alicloudapi.com</p>
          */
         public Builder vpcSlbIntranetDomain(String vpcSlbIntranetDomain) {
             this.vpcSlbIntranetDomain = vpcSlbIntranetDomain;
@@ -712,50 +842,60 @@ public class DescribeApiGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeApiGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApiGroupResponseBody</p>
+     */
     public static class DomainItem extends TeaModel {
-        @NameInMap("BindStageName")
+        @com.aliyun.core.annotation.NameInMap("BindStageAlias")
+        private String bindStageAlias;
+
+        @com.aliyun.core.annotation.NameInMap("BindStageName")
         private String bindStageName;
 
-        @NameInMap("CertificateId")
+        @com.aliyun.core.annotation.NameInMap("CertificateId")
         private String certificateId;
 
-        @NameInMap("CertificateName")
+        @com.aliyun.core.annotation.NameInMap("CertificateName")
         private String certificateName;
 
-        @NameInMap("CertificateValidEnd")
+        @com.aliyun.core.annotation.NameInMap("CertificateValidEnd")
         private Long certificateValidEnd;
 
-        @NameInMap("CertificateValidStart")
+        @com.aliyun.core.annotation.NameInMap("CertificateValidStart")
         private Long certificateValidStart;
 
-        @NameInMap("CustomDomainType")
+        @com.aliyun.core.annotation.NameInMap("CustomDomainType")
         private String customDomainType;
 
-        @NameInMap("DomainBindingStatus")
+        @com.aliyun.core.annotation.NameInMap("DomainBindingStatus")
         private String domainBindingStatus;
 
-        @NameInMap("DomainCNAMEStatus")
+        @com.aliyun.core.annotation.NameInMap("DomainCNAMEStatus")
         private String domainCNAMEStatus;
 
-        @NameInMap("DomainLegalStatus")
+        @com.aliyun.core.annotation.NameInMap("DomainLegalStatus")
         private String domainLegalStatus;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("DomainRemark")
+        @com.aliyun.core.annotation.NameInMap("DomainRemark")
         private String domainRemark;
 
-        @NameInMap("DomainWebSocketStatus")
+        @com.aliyun.core.annotation.NameInMap("DomainWebSocketStatus")
         private String domainWebSocketStatus;
 
-        @NameInMap("IsHttpRedirectToHttps")
+        @com.aliyun.core.annotation.NameInMap("IsHttpRedirectToHttps")
         private Boolean isHttpRedirectToHttps;
 
-        @NameInMap("WildcardDomainPatterns")
+        @com.aliyun.core.annotation.NameInMap("WildcardDomainPatterns")
         private String wildcardDomainPatterns;
 
         private DomainItem(Builder builder) {
+            this.bindStageAlias = builder.bindStageAlias;
             this.bindStageName = builder.bindStageName;
             this.certificateId = builder.certificateId;
             this.certificateName = builder.certificateName;
@@ -778,6 +918,13 @@ public class DescribeApiGroupResponseBody extends TeaModel {
 
         public static DomainItem create() {
             return builder().build();
+        }
+
+        /**
+         * @return bindStageAlias
+         */
+        public String getBindStageAlias() {
+            return this.bindStageAlias;
         }
 
         /**
@@ -879,6 +1026,7 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String bindStageAlias; 
             private String bindStageName; 
             private String certificateId; 
             private String certificateName; 
@@ -895,7 +1043,21 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             private String wildcardDomainPatterns; 
 
             /**
-             * The environment in which the associated API group runs.
+             * <p>The alias of the associated environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TEST1</p>
+             */
+            public Builder bindStageAlias(String bindStageAlias) {
+                this.bindStageAlias = bindStageAlias;
+                return this;
+            }
+
+            /**
+             * <p>The environment in which the associated API group runs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TEST</p>
              */
             public Builder bindStageName(String bindStageName) {
                 this.bindStageName = bindStageName;
@@ -903,7 +1065,10 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the SSL certificate, which is automatically generated by the system.
+             * <p>The SSL certificate ID, which is automatically generated by the system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6EF60BEC-0242-43AF-BB20-270359FB54A7</p>
              */
             public Builder certificateId(String certificateId) {
                 this.certificateId = certificateId;
@@ -911,7 +1076,10 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The SSL certificate name.
+             * <p>The name of the SSL certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myCertificate</p>
              */
             public Builder certificateName(String certificateName) {
                 this.certificateName = certificateName;
@@ -919,7 +1087,10 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the certificate expires.
+             * <p>The time when the certificate expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2635123476000</p>
              */
             public Builder certificateValidEnd(Long certificateValidEnd) {
                 this.certificateValidEnd = certificateValidEnd;
@@ -927,7 +1098,10 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the certificate takes effect.
+             * <p>The time when the certificate takes effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1689043476000</p>
              */
             public Builder certificateValidStart(Long certificateValidStart) {
                 this.certificateValidStart = certificateValidStart;
@@ -935,7 +1109,10 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the custom domain name.
+             * <p>The type of the custom domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>intranet</p>
              */
             public Builder customDomainType(String customDomainType) {
                 this.customDomainType = customDomainType;
@@ -943,11 +1120,14 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The binding status of the custom domain name. Valid values:
-             * <p>
+             * <p>The binding status of the custom domain name. Valid values:</p>
+             * <ul>
+             * <li><strong>BINDING</strong>: The domain name is bound.</li>
+             * <li><strong>BOUND</strong>: The domain name is not bound.</li>
+             * </ul>
              * 
-             * *   **BINDING**: The domain name is bound.
-             * *   **BOUND**: The domain name is not bound.
+             * <strong>example:</strong>
+             * <p>BINDING</p>
              */
             public Builder domainBindingStatus(String domainBindingStatus) {
                 this.domainBindingStatus = domainBindingStatus;
@@ -955,11 +1135,14 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name resolution status. Valid values:
-             * <p>
+             * <p>The domain name resolution status. Valid values:</p>
+             * <ul>
+             * <li><strong>RESOLVED</strong></li>
+             * <li><strong>UNRESOLVED</strong></li>
+             * </ul>
              * 
-             * *   **RESOLVED**
-             * *   **UNRESOLVED**
+             * <strong>example:</strong>
+             * <p>RESOLVED</p>
              */
             public Builder domainCNAMEStatus(String domainCNAMEStatus) {
                 this.domainCNAMEStatus = domainCNAMEStatus;
@@ -967,11 +1150,14 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The validity status of the domain name. Valid values:
-             * <p>
+             * <p>The validity status of the domain name. Valid values:</p>
+             * <ul>
+             * <li><strong>NORMAL</strong>: The domain name is valid.</li>
+             * <li><strong>ABNORMAL</strong>: The domain name is invalid. This status affects API calls and needs to be rectified as soon as possible.</li>
+             * </ul>
              * 
-             * *   **NORMAL**: The domain name is valid.
-             * *   **ABNORMAL**: The domain name is invalid. This status affects API calls and must be resolved as soon as possible.
+             * <strong>example:</strong>
+             * <p>ABNORMAL</p>
              */
             public Builder domainLegalStatus(String domainLegalStatus) {
                 this.domainLegalStatus = domainLegalStatus;
@@ -979,7 +1165,10 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api.demo.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -987,7 +1176,10 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Remarks about the domain name, such as the cause of an exception.
+             * <p>Remarks about the domain name, such as the cause of an exception.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Indicates that the domain name does not have an ICP filing.</p>
              */
             public Builder domainRemark(String domainRemark) {
                 this.domainRemark = domainRemark;
@@ -995,7 +1187,10 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the domain name that uses the WebSocket feature.
+             * <p>The status of the domain that uses the WebSocket feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CLOSE</p>
              */
             public Builder domainWebSocketStatus(String domainWebSocketStatus) {
                 this.domainWebSocketStatus = domainWebSocketStatus;
@@ -1003,7 +1198,10 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether to redirect HTTP requests as HTTPS requests.
+             * <p>Indicates whether to redirect HTTP requests to HTTPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isHttpRedirectToHttps(Boolean isHttpRedirectToHttps) {
                 this.isHttpRedirectToHttps = isHttpRedirectToHttps;
@@ -1011,7 +1209,10 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The wildcard domain name mode.
+             * <p>The wildcard domain name mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;{test}.test.com&quot;]</p>
              */
             public Builder wildcardDomainPatterns(String wildcardDomainPatterns) {
                 this.wildcardDomainPatterns = wildcardDomainPatterns;
@@ -1025,9 +1226,15 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeApiGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApiGroupResponseBody</p>
+     */
     public static class CustomDomains extends TeaModel {
-        @NameInMap("DomainItem")
-        private java.util.List < DomainItem> domainItem;
+        @com.aliyun.core.annotation.NameInMap("DomainItem")
+        private java.util.List<DomainItem> domainItem;
 
         private CustomDomains(Builder builder) {
             this.domainItem = builder.domainItem;
@@ -1044,17 +1251,17 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         /**
          * @return domainItem
          */
-        public java.util.List < DomainItem> getDomainItem() {
+        public java.util.List<DomainItem> getDomainItem() {
             return this.domainItem;
         }
 
         public static final class Builder {
-            private java.util.List < DomainItem> domainItem; 
+            private java.util.List<DomainItem> domainItem; 
 
             /**
              * DomainItem.
              */
-            public Builder domainItem(java.util.List < DomainItem> domainItem) {
+            public Builder domainItem(java.util.List<DomainItem> domainItem) {
                 this.domainItem = domainItem;
                 return this;
             }
@@ -1066,14 +1273,20 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeApiGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApiGroupResponseBody</p>
+     */
     public static class StageInfo extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("StageId")
+        @com.aliyun.core.annotation.NameInMap("StageId")
         private String stageId;
 
-        @NameInMap("StageName")
+        @com.aliyun.core.annotation.NameInMap("StageName")
         private String stageName;
 
         private StageInfo(Builder builder) {
@@ -1117,7 +1330,10 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             private String stageName; 
 
             /**
-             * The environment description.
+             * <p>The environment description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MYTEST</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1125,7 +1341,10 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The environment ID.
+             * <p>The environment ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123e8dc7bbe01613b5b1d726c2a7888e</p>
              */
             public Builder stageId(String stageId) {
                 this.stageId = stageId;
@@ -1133,7 +1352,10 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The environment name.
+             * <p>The environment name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TEST</p>
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
@@ -1147,9 +1369,15 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeApiGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApiGroupResponseBody</p>
+     */
     public static class StageItems extends TeaModel {
-        @NameInMap("StageInfo")
-        private java.util.List < StageInfo> stageInfo;
+        @com.aliyun.core.annotation.NameInMap("StageInfo")
+        private java.util.List<StageInfo> stageInfo;
 
         private StageItems(Builder builder) {
             this.stageInfo = builder.stageInfo;
@@ -1166,17 +1394,17 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         /**
          * @return stageInfo
          */
-        public java.util.List < StageInfo> getStageInfo() {
+        public java.util.List<StageInfo> getStageInfo() {
             return this.stageInfo;
         }
 
         public static final class Builder {
-            private java.util.List < StageInfo> stageInfo; 
+            private java.util.List<StageInfo> stageInfo; 
 
             /**
              * StageInfo.
              */
-            public Builder stageInfo(java.util.List < StageInfo> stageInfo) {
+            public Builder stageInfo(java.util.List<StageInfo> stageInfo) {
                 this.stageInfo = stageInfo;
                 return this;
             }

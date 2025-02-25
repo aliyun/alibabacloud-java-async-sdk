@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDirectoryRequest} extends {@link RequestModel}
  *
  * <p>ModifyDirectoryRequest</p>
  */
 public class ModifyDirectoryRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String id;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
     private ModifyDirectoryRequest(Builder builder) {
@@ -88,12 +93,12 @@ public class ModifyDirectoryRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDirectoryRequest response) {
-            super(response);
-            this.description = response.description;
-            this.id = response.id;
-            this.name = response.name;
-            this.ownerId = response.ownerId;
+        private Builder(ModifyDirectoryRequest request) {
+            super(request);
+            this.description = request.description;
+            this.id = request.id;
+            this.name = request.name;
+            this.ownerId = request.ownerId;
         } 
 
         /**
@@ -106,7 +111,10 @@ public class ModifyDirectoryRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>399*****488-cn-qingdao</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

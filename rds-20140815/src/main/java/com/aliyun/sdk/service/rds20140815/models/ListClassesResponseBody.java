@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClassesResponseBody} extends {@link TeaModel}
  *
  * <p>ListClassesResponseBody</p>
  */
 public class ListClassesResponseBody extends TeaModel {
-    @NameInMap("Items")
-    private java.util.List < Items> items;
+    @com.aliyun.core.annotation.NameInMap("Items")
+    private java.util.List<Items> items;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListClassesResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ListClassesResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -57,20 +62,23 @@ public class ListClassesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private String regionId; 
         private String requestId; 
 
         /**
-         * The list of instance specifications.
+         * <p>The list of instance specifications.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -78,7 +86,10 @@ public class ListClassesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CF8D35BF-263D-4F7B-883A-1163B79A9EC6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,36 +102,48 @@ public class ListClassesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListClassesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClassesResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("ClassCode")
+        @com.aliyun.core.annotation.NameInMap("ClassCode")
         private String classCode;
 
-        @NameInMap("ClassGroup")
+        @com.aliyun.core.annotation.NameInMap("ClassGroup")
         private String classGroup;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private String cpu;
 
-        @NameInMap("EncryptedMemory")
+        @com.aliyun.core.annotation.NameInMap("EncryptedMemory")
         private String encryptedMemory;
 
-        @NameInMap("InstructionSetArch")
+        @com.aliyun.core.annotation.NameInMap("InstructionSetArch")
         private String instructionSetArch;
 
-        @NameInMap("MaxConnections")
+        @com.aliyun.core.annotation.NameInMap("MaxConnections")
         private String maxConnections;
 
-        @NameInMap("MaxIOMBPS")
+        @com.aliyun.core.annotation.NameInMap("MaxIOMBPS")
         private String maxIOMBPS;
 
-        @NameInMap("MaxIOPS")
+        @com.aliyun.core.annotation.NameInMap("MaxIOPS")
         private String maxIOPS;
 
-        @NameInMap("MemoryClass")
+        @com.aliyun.core.annotation.NameInMap("MemoryClass")
         private String memoryClass;
 
-        @NameInMap("ReferencePrice")
+        @com.aliyun.core.annotation.NameInMap("ReferencePrice")
         private String referencePrice;
+
+        @com.aliyun.core.annotation.NameInMap("category")
+        private String category;
+
+        @com.aliyun.core.annotation.NameInMap("storageType")
+        private String storageType;
 
         private Items(Builder builder) {
             this.classCode = builder.classCode;
@@ -133,6 +156,8 @@ public class ListClassesResponseBody extends TeaModel {
             this.maxIOPS = builder.maxIOPS;
             this.memoryClass = builder.memoryClass;
             this.referencePrice = builder.referencePrice;
+            this.category = builder.category;
+            this.storageType = builder.storageType;
         }
 
         public static Builder builder() {
@@ -213,6 +238,20 @@ public class ListClassesResponseBody extends TeaModel {
             return this.referencePrice;
         }
 
+        /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
+        }
+
+        /**
+         * @return storageType
+         */
+        public String getStorageType() {
+            return this.storageType;
+        }
+
         public static final class Builder {
             private String classCode; 
             private String classGroup; 
@@ -224,9 +263,14 @@ public class ListClassesResponseBody extends TeaModel {
             private String maxIOPS; 
             private String memoryClass; 
             private String referencePrice; 
+            private String category; 
+            private String storageType; 
 
             /**
-             * The code of the instance type. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~) and [Read-only ApsaraDB RDS instance types](~~145759~~).
+             * <p>The code of the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a> and <a href="https://help.aliyun.com/document_detail/145759.html">Read-only ApsaraDB RDS instance types</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql.n1.micro.1</p>
              */
             public Builder classCode(String classCode) {
                 this.classCode = classCode;
@@ -234,7 +278,10 @@ public class ListClassesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance family. For more information, see [Overview of instance families](~~57184~~).
+             * <p>The instance family. For more information, see <a href="https://help.aliyun.com/document_detail/57184.html">Overview of instance families</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>General</p>
              */
             public Builder classGroup(String classGroup) {
                 this.classGroup = classGroup;
@@ -242,7 +289,10 @@ public class ListClassesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of CPU cores that are supported by the instance type. Unit: cores.
+             * <p>The number of CPU cores that are supported by the instance type. Unit: cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
@@ -250,7 +300,10 @@ public class ListClassesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the encrypted memory that is supported by the security-enhanced instance type. Unit: GB.
+             * <p>The size of the encrypted memory that is supported by the security-enhanced instance type. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder encryptedMemory(String encryptedMemory) {
                 this.encryptedMemory = encryptedMemory;
@@ -258,11 +311,14 @@ public class ListClassesResponseBody extends TeaModel {
             }
 
             /**
-             * The architecture of the instance type. Valid values:
-             * <p>
+             * <p>The architecture of the instance type. Valid values:</p>
+             * <ul>
+             * <li>If the architecture of the instance type is <strong>x86</strong>, an empty string is returned by default.</li>
+             * <li>If the architecture of the instance type is <strong>ARM</strong>, <strong>arm</strong> is returned.</li>
+             * </ul>
              * 
-             * *   If the architecture of the instance type is **x86**, an empty string is returned by default.
-             * *   If the architecture of the instance type is **ARM**, **arm** is returned.
+             * <strong>example:</strong>
+             * <p>arm</p>
              */
             public Builder instructionSetArch(String instructionSetArch) {
                 this.instructionSetArch = instructionSetArch;
@@ -270,7 +326,10 @@ public class ListClassesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of connections that are supported by the instance type. Unit: connections.
+             * <p>The maximum number of connections that are supported by the instance type. Unit: connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder maxConnections(String maxConnections) {
                 this.maxConnections = maxConnections;
@@ -278,7 +337,10 @@ public class ListClassesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum I/O bandwidth that is supported by the instance type. Unit: Mbit/s.
+             * <p>The maximum I/O bandwidth that is supported by the instance type. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024Mbps</p>
              */
             public Builder maxIOMBPS(String maxIOMBPS) {
                 this.maxIOMBPS = maxIOMBPS;
@@ -286,7 +348,10 @@ public class ListClassesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum input/output operations per second (IOPS) that is supported by the instance type. Unit: operations per second.
+             * <p>The maximum input/output operations per second (IOPS) that is supported by the instance type. Unit: operations per second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder maxIOPS(String maxIOPS) {
                 this.maxIOPS = maxIOPS;
@@ -294,7 +359,10 @@ public class ListClassesResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size that is supported by the instance type. Unit: GB.
+             * <p>The memory size that is supported by the instance type. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1 GB (RDS Basic Edition)</p>
              */
             public Builder memoryClass(String memoryClass) {
                 this.memoryClass = memoryClass;
@@ -302,19 +370,62 @@ public class ListClassesResponseBody extends TeaModel {
             }
 
             /**
-             * The fee that you must pay for the instance type.
-             * <p>
+             * <p>The fee that you must pay for the instance type.</p>
+             * <ul>
+             * <li>Unit: cents (USD).</li>
+             * </ul>
+             * <blockquote>
+             * <ul>
+             * <li>If you set <strong>CommodityCode</strong> to a value that indicates the pay-as-you-go billing method, the ReferencePrice parameter specifies the hourly fee that you must pay.</li>
+             * <li>If you set <strong>CommodityCode</strong> to a value that indicates the subscription billing method, the ReferencePrice parameter specifies the monthly fee that you must pay.</li>
+             * </ul>
+             * </blockquote>
              * 
-             * *   Unit: cents (USD).
-             * 
-             * > 
-             * 
-             * *   If you set **CommodityCode** to a value that indicates the pay-as-you-go billing method, the ReferencePrice parameter specifies the hourly fee that you must pay.
-             * 
-             * *   If you set **CommodityCode** to a value that indicates the subscription billing method, the ReferencePrice parameter specifies the monthly fee that you must pay.
+             * <strong>example:</strong>
+             * <p>2500</p>
              */
             public Builder referencePrice(String referencePrice) {
                 this.referencePrice = referencePrice;
+                return this;
+            }
+
+            /**
+             * <p>The RDS edition of the instance. Valid values:</p>
+             * <ul>
+             * <li><p>Regular instance</p>
+             * <ul>
+             * <li><strong>Basic</strong>: RDS Basic Edition</li>
+             * <li><strong>HighAvailability</strong>: RDS High-availability Edition</li>
+             * <li><strong>cluster</strong>: RDS Cluster Edition for ApsaraDB RDS for MySQL or PostgreSQL</li>
+             * <li><strong>AlwaysOn</strong>: RDS Cluster Edition for ApsaraDB RDS for SQL Server</li>
+             * <li><strong>Finance</strong>: RDS Basic Edition for serverless instances</li>
+             * </ul>
+             * </li>
+             * <li><p>Serverless instance</p>
+             * <ul>
+             * <li><strong>serverless_basic</strong>: RDS Basic Edition for serverless instances. This edition is available only for instances that run MySQL and PostgreSQL.</li>
+             * <li><strong>serverless_standard</strong>: RDS High-availability Edition for serverless instances. This edition is available only for instances that run MySQL and PostgreSQL.</li>
+             * <li><strong>serverless_ha</strong>: RDS High-availability Edition for serverless instances. This edition is available only for instances that run SQL Server.</li>
+             * </ul>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Basic</p>
+             */
+            public Builder category(String category) {
+                this.category = category;
+                return this;
+            }
+
+            /**
+             * <p>The storage type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_essd</p>
+             */
+            public Builder storageType(String storageType) {
+                this.storageType = storageType;
                 return this;
             }
 

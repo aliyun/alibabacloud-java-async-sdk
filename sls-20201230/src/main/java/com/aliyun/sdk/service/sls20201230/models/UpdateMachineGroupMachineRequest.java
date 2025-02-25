@@ -1,35 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link UpdateMachineGroupMachineRequest} extends {@link RequestModel}
  *
  * <p>UpdateMachineGroupMachineRequest</p>
  */
 public class UpdateMachineGroupMachineRequest extends Request {
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("project")
     private String project;
 
-    @Path
-    @NameInMap("machineGroup")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("machineGroup")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String machineGroup;
 
-    @Query
-    @NameInMap("action")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("action")
     private String action;
 
-    @Body
-    @NameInMap("body")
-    @Validation(required = true)
-    private java.util.List < String > body;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> body;
 
     private UpdateMachineGroupMachineRequest(Builder builder) {
         super(builder);
@@ -76,7 +80,7 @@ public class UpdateMachineGroupMachineRequest extends Request {
     /**
      * @return body
      */
-    public java.util.List < String > getBody() {
+    public java.util.List<String> getBody() {
         return this.body;
     }
 
@@ -84,7 +88,7 @@ public class UpdateMachineGroupMachineRequest extends Request {
         private String project; 
         private String machineGroup; 
         private String action; 
-        private java.util.List < String > body; 
+        private java.util.List<String> body; 
 
         private Builder() {
             super();
@@ -99,7 +103,11 @@ public class UpdateMachineGroupMachineRequest extends Request {
         } 
 
         /**
-         * The name of the project.
+         * <p>The name of the project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ali-test-project</p>
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -108,7 +116,11 @@ public class UpdateMachineGroupMachineRequest extends Request {
         }
 
         /**
-         * The name of the machine group.
+         * <p>The name of the machine group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-group</p>
          */
         public Builder machineGroup(String machineGroup) {
             this.putPathParameter("machineGroup", machineGroup);
@@ -117,7 +129,10 @@ public class UpdateMachineGroupMachineRequest extends Request {
         }
 
         /**
-         * The operation on the machine. Valid values: add and delete. A value of add specifies to add the machine to the machine group. A value of delete specifies to remove the machine from the machine group.
+         * <p>The operation on the machine. Valid values: add and delete. A value of add specifies to add the machine to the machine group. A value of delete specifies to remove the machine from the machine group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>add</p>
          */
         public Builder action(String action) {
             this.putQueryParameter("action", action);
@@ -126,9 +141,10 @@ public class UpdateMachineGroupMachineRequest extends Request {
         }
 
         /**
-         * The machines to be added or removed.
+         * <p>The machines to be added or removed.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder body(java.util.List < String > body) {
+        public Builder body(java.util.List<String> body) {
             this.putBodyParameter("body", body);
             this.body = body;
             return this;

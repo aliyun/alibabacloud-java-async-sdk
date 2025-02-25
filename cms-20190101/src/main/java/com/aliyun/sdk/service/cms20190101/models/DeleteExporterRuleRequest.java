@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteExporterRuleRequest} extends {@link RequestModel}
  *
  * <p>DeleteExporterRuleRequest</p>
  */
 public class DeleteExporterRuleRequest extends Request {
-    @Query
-    @NameInMap("RuleName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleName;
 
     private DeleteExporterRuleRequest(Builder builder) {
@@ -55,7 +55,11 @@ public class DeleteExporterRuleRequest extends Request {
         } 
 
         /**
-         * The name of the data export rule.
+         * <p>The name of the data export rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myRuleName</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);

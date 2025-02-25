@@ -1,33 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResetSystemRequest} extends {@link RequestModel}
  *
  * <p>ResetSystemRequest</p>
  */
 public class ResetSystemRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("ImageId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoginCredentials")
+    private LoginCredentials loginCredentials;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private ResetSystemRequest(Builder builder) {
@@ -35,6 +44,7 @@ public class ResetSystemRequest extends Request {
         this.clientToken = builder.clientToken;
         this.imageId = builder.imageId;
         this.instanceId = builder.instanceId;
+        this.loginCredentials = builder.loginCredentials;
         this.regionId = builder.regionId;
     }
 
@@ -73,6 +83,13 @@ public class ResetSystemRequest extends Request {
     }
 
     /**
+     * @return loginCredentials
+     */
+    public LoginCredentials getLoginCredentials() {
+        return this.loginCredentials;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -83,6 +100,7 @@ public class ResetSystemRequest extends Request {
         private String clientToken; 
         private String imageId; 
         private String instanceId; 
+        private LoginCredentials loginCredentials; 
         private String regionId; 
 
         private Builder() {
@@ -94,11 +112,15 @@ public class ResetSystemRequest extends Request {
             this.clientToken = request.clientToken;
             this.imageId = request.imageId;
             this.instanceId = request.instanceId;
+            this.loginCredentials = request.loginCredentials;
             this.regionId = request.regionId;
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The value of **ClientToken** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that you want to use to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>token</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">Ensure idempotence</a></p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -107,7 +129,10 @@ public class ResetSystemRequest extends Request {
         }
 
         /**
-         * The ID of the image that is used to replace the image of the simple application server. If you do not specify this parameter, the current image of the simple application server is replaced by default.
+         * <p>The ID of the destination image. If you do not specify this parameter, the current image is reset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>794c230fd3e64ea19f83f4d7a0ad****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -116,7 +141,11 @@ public class ResetSystemRequest extends Request {
         }
 
         /**
-         * The ID of the simple application server.
+         * <p>The ID of the simple application server.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ace0706b2ac4454d984295a94213****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -125,7 +154,20 @@ public class ResetSystemRequest extends Request {
         }
 
         /**
-         * The region ID of the simple application server. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
+         * LoginCredentials.
+         */
+        public Builder loginCredentials(LoginCredentials loginCredentials) {
+            this.putQueryParameter("LoginCredentials", loginCredentials);
+            this.loginCredentials = loginCredentials;
+            return this;
+        }
+
+        /**
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -140,4 +182,71 @@ public class ResetSystemRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ResetSystemRequest} extends {@link TeaModel}
+     *
+     * <p>ResetSystemRequest</p>
+     */
+    public static class LoginCredentials extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("KeyPairName")
+        private String keyPairName;
+
+        @com.aliyun.core.annotation.NameInMap("Password")
+        private String password;
+
+        private LoginCredentials(Builder builder) {
+            this.keyPairName = builder.keyPairName;
+            this.password = builder.password;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LoginCredentials create() {
+            return builder().build();
+        }
+
+        /**
+         * @return keyPairName
+         */
+        public String getKeyPairName() {
+            return this.keyPairName;
+        }
+
+        /**
+         * @return password
+         */
+        public String getPassword() {
+            return this.password;
+        }
+
+        public static final class Builder {
+            private String keyPairName; 
+            private String password; 
+
+            /**
+             * KeyPairName.
+             */
+            public Builder keyPairName(String keyPairName) {
+                this.keyPairName = keyPairName;
+                return this;
+            }
+
+            /**
+             * Password.
+             */
+            public Builder password(String password) {
+                this.password = password;
+                return this;
+            }
+
+            public LoginCredentials build() {
+                return new LoginCredentials(this);
+            } 
+
+        } 
+
+    }
 }

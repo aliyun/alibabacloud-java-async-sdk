@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateBgpPeerResponseBody} extends {@link TeaModel}
  *
  * <p>CreateBgpPeerResponseBody</p>
  */
 public class CreateBgpPeerResponseBody extends TeaModel {
-    @NameInMap("BgpPeerId")
+    @com.aliyun.core.annotation.NameInMap("BgpPeerId")
     private String bgpPeerId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateBgpPeerResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateBgpPeerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the BGP peer.
+         * <p>The ID of the BGP peer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bgp-m5eoyp2mwegk8ce9v****</p>
          */
         public Builder bgpPeerId(String bgpPeerId) {
             this.bgpPeerId = bgpPeerId;
@@ -58,7 +66,10 @@ public class CreateBgpPeerResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D4B7649A-61BB-4C64-A586-1DFF1EDA6A42</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

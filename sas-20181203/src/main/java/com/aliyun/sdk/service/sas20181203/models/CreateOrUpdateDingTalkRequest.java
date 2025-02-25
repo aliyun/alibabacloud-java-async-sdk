@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOrUpdateDingTalkRequest} extends {@link RequestModel}
  *
  * <p>CreateOrUpdateDingTalkRequest</p>
  */
 public class CreateOrUpdateDingTalkRequest extends Request {
-    @Query
-    @NameInMap("ConfigList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigList")
     private String configList;
 
-    @Query
-    @NameInMap("DingTalkLang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DingTalkLang")
     private String dingTalkLang;
 
-    @Query
-    @NameInMap("GroupIdList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupIdList")
     private String groupIdList;
 
-    @Query
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @Query
-    @NameInMap("IntervalTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntervalTime")
     private Long intervalTime;
 
-    @Query
-    @NameInMap("RuleActionName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleActionName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleActionName;
 
-    @Query
-    @NameInMap("SendUrl")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SendUrl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sendUrl;
 
     private CreateOrUpdateDingTalkRequest(Builder builder) {
@@ -140,17 +145,23 @@ public class CreateOrUpdateDingTalkRequest extends Request {
         } 
 
         /**
-         * The alerts for which you want the chatbot to send notifications. The value is a JSON array that contains the following fields:
-         * <p>
+         * <p>The alerts for which you want the chatbot to send notifications. The value is a JSON array that contains the following fields:</p>
+         * <ul>
+         * <li><p><strong>type</strong>: the types of alerts. The valid values are listed in the &quot;Additional description of parameters&quot; section in this topic.</p>
+         * </li>
+         * <li><p><strong>configItemList</strong>: the list of check items. The value is a JSON array that contains the following fields:</p>
+         * <ul>
+         * <li><strong>key</strong>: the key of the check item.</li>
+         * <li><strong>valueList</strong>: the values of the check item. The value of valueList is a JSON array.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>For more information about the value of this parameter, see the &quot;Addition description of parameters&quot; section in this topic.</p>
+         * </blockquote>
          * 
-         * *   **type**: the types of alerts. The valid values are listed in the "Additional description of parameters" section in this topic.
-         * 
-         * *   **configItemList**: the list of check items. The value is a JSON array that contains the following fields:
-         * 
-         *     *   **key**: the key of the check item.
-         *     *   **valueList**: the values of the check item. The value of valueList is a JSON array.
-         * 
-         * > For more information about the value of this parameter, see the "Addition description of parameters" section in this topic.
+         * <strong>example:</strong>
+         * <p>[{&quot;type&quot;:&quot;sas_analysis_online-sas-operation-log-sas-event-suspicious&quot;,&quot;configItemList&quot;:[{&quot;key&quot;:&quot;item_level&quot;,&quot;valueList&quot;:[&quot;all&quot;]},{&quot;key&quot;:&quot;event_type&quot;,&quot;valueList&quot;:[&quot;all&quot;]}]}]</p>
          */
         public Builder configList(String configList) {
             this.putQueryParameter("ConfigList", configList);
@@ -159,11 +170,14 @@ public class CreateOrUpdateDingTalkRequest extends Request {
         }
 
         /**
-         * The language of the notifications. Valid values:
-         * <p>
+         * <p>The language of the notifications. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder dingTalkLang(String dingTalkLang) {
             this.putQueryParameter("DingTalkLang", dingTalkLang);
@@ -172,10 +186,13 @@ public class CreateOrUpdateDingTalkRequest extends Request {
         }
 
         /**
-         * The IDs of asset groups for which you want the chatbot to send notifications. The value is a JSON array.
-         * <p>
+         * <p>The IDs of asset groups for which you want the chatbot to send notifications. The value is a JSON array.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeGroupStruct~~">DescribeGroupStruct</a> operation to query the IDs of asset groups.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeGroupStruct](~~DescribeGroupStruct~~) operation to query the IDs of asset groups.
+         * <strong>example:</strong>
+         * <p>[&quot;10417151&quot;]</p>
          */
         public Builder groupIdList(String groupIdList) {
             this.putQueryParameter("GroupIdList", groupIdList);
@@ -184,10 +201,13 @@ public class CreateOrUpdateDingTalkRequest extends Request {
         }
 
         /**
-         * The ID of the chatbot.
-         * <p>
+         * <p>The ID of the chatbot.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://www.alibabacloud.com/help/en/security-center/developer-reference/api-sas-2018-12-03-describedingtalk/?spm=a2c63.p38356.0.0.681e4360Qd1eb1">DescribeDingTalk</a> operation to query the IDs of chatbots.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeDingTalk](https://www.alibabacloud.com/help/en/security-center/developer-reference/api-sas-2018-12-03-describedingtalk/?spm=a2c63.p38356.0.0.681e4360Qd1eb1) operation to query the IDs of chatbots.
+         * <strong>example:</strong>
+         * <p>1589</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -196,10 +216,13 @@ public class CreateOrUpdateDingTalkRequest extends Request {
         }
 
         /**
-         * The time interval at which the chatbot sends notifications.
-         * <p>
+         * <p>The time interval at which the chatbot sends notifications.</p>
+         * <blockquote>
+         * <p>The value <strong>0</strong> indicates unlimited.</p>
+         * </blockquote>
          * 
-         * > The value **0** indicates unlimited.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder intervalTime(Long intervalTime) {
             this.putQueryParameter("IntervalTime", intervalTime);
@@ -208,10 +231,14 @@ public class CreateOrUpdateDingTalkRequest extends Request {
         }
 
         /**
-         * The name of the chatbot.
-         * <p>
+         * <p>The name of the chatbot.</p>
+         * <blockquote>
+         * <p>The name of a chatbot must be 2 to 64 characters in length.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > The name of a chatbot must be 2 to 64 characters in length.
+         * <strong>example:</strong>
+         * <p>testNotify</p>
          */
         public Builder ruleActionName(String ruleActionName) {
             this.putQueryParameter("RuleActionName", ruleActionName);
@@ -220,7 +247,11 @@ public class CreateOrUpdateDingTalkRequest extends Request {
         }
 
         /**
-         * The webhook URL.
+         * <p>The webhook URL.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=XXX">https://oapi.dingtalk.com/robot/send?access_token=XXX</a></p>
          */
         public Builder sendUrl(String sendUrl) {
             this.putQueryParameter("SendUrl", sendUrl);

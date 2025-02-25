@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTestcaseListRequest} extends {@link RequestModel}
  *
  * <p>GetTestcaseListRequest</p>
  */
 public class GetTestcaseListRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Body
-    @NameInMap("conditions")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("conditions")
     private String conditions;
 
-    @Body
-    @NameInMap("directoryIdentifier")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("directoryIdentifier")
     private String directoryIdentifier;
 
-    @Body
-    @NameInMap("maxResult")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("maxResult")
     private String maxResult;
 
-    @Body
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @Body
-    @NameInMap("spaceIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("spaceIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String spaceIdentifier;
 
     private GetTestcaseListRequest(Builder builder) {
@@ -126,7 +131,10 @@ public class GetTestcaseListRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -171,7 +179,10 @@ public class GetTestcaseListRequest extends Request {
         }
 
         /**
-         * spaceIdentifier.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6d5984c7d92b23fa53d4743c37</p>
          */
         public Builder spaceIdentifier(String spaceIdentifier) {
             this.putBodyParameter("spaceIdentifier", spaceIdentifier);

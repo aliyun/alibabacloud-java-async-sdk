@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUsersResponseBody} extends {@link TeaModel}
  *
  * <p>ListUsersResponseBody</p>
  */
 public class ListUsersResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Params")
-    private java.util.List < String > params;
+    @com.aliyun.core.annotation.NameInMap("Params")
+    private java.util.List<String> params;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListUsersResponseBody(Builder builder) {
@@ -78,7 +83,7 @@ public class ListUsersResponseBody extends TeaModel {
     /**
      * @return params
      */
-    public java.util.List < String > getParams() {
+    public java.util.List<String> getParams() {
         return this.params;
     }
 
@@ -94,7 +99,7 @@ public class ListUsersResponseBody extends TeaModel {
         private Data data; 
         private Integer httpStatusCode; 
         private String message; 
-        private java.util.List < String > params; 
+        private java.util.List<String> params; 
         private String requestId; 
 
         /**
@@ -132,7 +137,7 @@ public class ListUsersResponseBody extends TeaModel {
         /**
          * Params.
          */
-        public Builder params(java.util.List < String > params) {
+        public Builder params(java.util.List<String> params) {
             this.params = params;
             return this;
         }
@@ -151,20 +156,26 @@ public class ListUsersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUsersResponseBody</p>
+     */
     public static class PersonalOutboundNumberList extends TeaModel {
-        @NameInMap("Active")
+        @com.aliyun.core.annotation.NameInMap("Active")
         private Boolean active;
 
-        @NameInMap("City")
+        @com.aliyun.core.annotation.NameInMap("City")
         private String city;
 
-        @NameInMap("Number")
+        @com.aliyun.core.annotation.NameInMap("Number")
         private String number;
 
-        @NameInMap("Province")
+        @com.aliyun.core.annotation.NameInMap("Province")
         private String province;
 
-        @NameInMap("Usage")
+        @com.aliyun.core.annotation.NameInMap("Usage")
         private String usage;
 
         private PersonalOutboundNumberList(Builder builder) {
@@ -272,14 +283,20 @@ public class ListUsersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUsersResponseBody</p>
+     */
     public static class SkillLevelList extends TeaModel {
-        @NameInMap("SkillGroupId")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupId")
         private String skillGroupId;
 
-        @NameInMap("SkillGroupName")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupName")
         private String skillGroupName;
 
-        @NameInMap("SkillLevel")
+        @com.aliyun.core.annotation.NameInMap("SkillLevel")
         private Integer skillLevel;
 
         private SkillLevelList(Builder builder) {
@@ -353,59 +370,65 @@ public class ListUsersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUsersResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("DeviceExt")
+        @com.aliyun.core.annotation.NameInMap("DeviceExt")
         private String deviceExt;
 
-        @NameInMap("DeviceId")
+        @com.aliyun.core.annotation.NameInMap("DeviceId")
         private String deviceId;
 
-        @NameInMap("DeviceState")
+        @com.aliyun.core.annotation.NameInMap("DeviceState")
         private String deviceState;
 
-        @NameInMap("DisplayId")
+        @com.aliyun.core.annotation.NameInMap("DisplayId")
         private String displayId;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("Extension")
+        @com.aliyun.core.annotation.NameInMap("Extension")
         private String extension;
 
-        @NameInMap("LoginName")
+        @com.aliyun.core.annotation.NameInMap("LoginName")
         private String loginName;
 
-        @NameInMap("Mobile")
+        @com.aliyun.core.annotation.NameInMap("Mobile")
         private String mobile;
 
-        @NameInMap("PersonalOutboundNumberList")
-        private java.util.List < PersonalOutboundNumberList> personalOutboundNumberList;
+        @com.aliyun.core.annotation.NameInMap("PersonalOutboundNumberList")
+        private java.util.List<PersonalOutboundNumberList> personalOutboundNumberList;
 
-        @NameInMap("Primary")
+        @com.aliyun.core.annotation.NameInMap("Primary")
         private Boolean primary;
 
-        @NameInMap("PrimaryAccount")
+        @com.aliyun.core.annotation.NameInMap("PrimaryAccount")
         private Boolean primaryAccount;
 
-        @NameInMap("RamId")
+        @com.aliyun.core.annotation.NameInMap("RamId")
         private Long ramId;
 
-        @NameInMap("RoleId")
+        @com.aliyun.core.annotation.NameInMap("RoleId")
         private String roleId;
 
-        @NameInMap("RoleName")
+        @com.aliyun.core.annotation.NameInMap("RoleName")
         private String roleName;
 
-        @NameInMap("SkillLevelList")
-        private java.util.List < SkillLevelList> skillLevelList;
+        @com.aliyun.core.annotation.NameInMap("SkillLevelList")
+        private java.util.List<SkillLevelList> skillLevelList;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("WorkMode")
+        @com.aliyun.core.annotation.NameInMap("WorkMode")
         private String workMode;
 
         private List(Builder builder) {
@@ -503,7 +526,7 @@ public class ListUsersResponseBody extends TeaModel {
         /**
          * @return personalOutboundNumberList
          */
-        public java.util.List < PersonalOutboundNumberList> getPersonalOutboundNumberList() {
+        public java.util.List<PersonalOutboundNumberList> getPersonalOutboundNumberList() {
             return this.personalOutboundNumberList;
         }
 
@@ -545,7 +568,7 @@ public class ListUsersResponseBody extends TeaModel {
         /**
          * @return skillLevelList
          */
-        public java.util.List < SkillLevelList> getSkillLevelList() {
+        public java.util.List<SkillLevelList> getSkillLevelList() {
             return this.skillLevelList;
         }
 
@@ -573,13 +596,13 @@ public class ListUsersResponseBody extends TeaModel {
             private String extension; 
             private String loginName; 
             private String mobile; 
-            private java.util.List < PersonalOutboundNumberList> personalOutboundNumberList; 
+            private java.util.List<PersonalOutboundNumberList> personalOutboundNumberList; 
             private Boolean primary; 
             private Boolean primaryAccount; 
             private Long ramId; 
             private String roleId; 
             private String roleName; 
-            private java.util.List < SkillLevelList> skillLevelList; 
+            private java.util.List<SkillLevelList> skillLevelList; 
             private String userId; 
             private String workMode; 
 
@@ -658,7 +681,7 @@ public class ListUsersResponseBody extends TeaModel {
             /**
              * PersonalOutboundNumberList.
              */
-            public Builder personalOutboundNumberList(java.util.List < PersonalOutboundNumberList> personalOutboundNumberList) {
+            public Builder personalOutboundNumberList(java.util.List<PersonalOutboundNumberList> personalOutboundNumberList) {
                 this.personalOutboundNumberList = personalOutboundNumberList;
                 return this;
             }
@@ -706,7 +729,7 @@ public class ListUsersResponseBody extends TeaModel {
             /**
              * SkillLevelList.
              */
-            public Builder skillLevelList(java.util.List < SkillLevelList> skillLevelList) {
+            public Builder skillLevelList(java.util.List<SkillLevelList> skillLevelList) {
                 this.skillLevelList = skillLevelList;
                 return this;
             }
@@ -734,17 +757,23 @@ public class ListUsersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUsersResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("List")
-        private java.util.List < List> list;
+        @com.aliyun.core.annotation.NameInMap("List")
+        private java.util.List<List> list;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {
@@ -765,7 +794,7 @@ public class ListUsersResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -791,7 +820,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -799,7 +828,7 @@ public class ListUsersResponseBody extends TeaModel {
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

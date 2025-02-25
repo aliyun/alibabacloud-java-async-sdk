@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImportSwaggerResponseBody} extends {@link TeaModel}
  *
  * <p>ImportSwaggerResponseBody</p>
  */
 public class ImportSwaggerResponseBody extends TeaModel {
-    @NameInMap("Failed")
+    @com.aliyun.core.annotation.NameInMap("Failed")
     private Failed failed;
 
-    @NameInMap("ModelFailed")
+    @com.aliyun.core.annotation.NameInMap("ModelFailed")
     private ModelFailed modelFailed;
 
-    @NameInMap("ModelSuccess")
+    @com.aliyun.core.annotation.NameInMap("ModelSuccess")
     private ModelSuccess modelSuccess;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Success success;
 
     private ImportSwaggerResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class ImportSwaggerResponseBody extends TeaModel {
         private Success success; 
 
         /**
-         * The APIs that failed to be created based on the Swagger-compliant data imported this time.
+         * <p>The APIs that failed to be created based on the Swagger-compliant data imported this time.</p>
          */
         public Builder failed(Failed failed) {
             this.failed = failed;
@@ -94,7 +99,7 @@ public class ImportSwaggerResponseBody extends TeaModel {
         }
 
         /**
-         * The models that failed to be imported based on the Swagger-compliant data imported this time.
+         * <p>The models that failed to be imported through the Swagger-compliant data this time.</p>
          */
         public Builder modelFailed(ModelFailed modelFailed) {
             this.modelFailed = modelFailed;
@@ -102,7 +107,7 @@ public class ImportSwaggerResponseBody extends TeaModel {
         }
 
         /**
-         * The models that were imported based on the Swagger-compliant data imported this time.
+         * <p>The models that were imported through the Swagger-compliant data this time.</p>
          */
         public Builder modelSuccess(ModelSuccess modelSuccess) {
             this.modelSuccess = modelSuccess;
@@ -110,7 +115,10 @@ public class ImportSwaggerResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>647CEF05-404C-4125-B3D7-44792EB77392</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +126,7 @@ public class ImportSwaggerResponseBody extends TeaModel {
         }
 
         /**
-         * The APIs that were created based on the Swagger-compliant data imported this time.
+         * <p>The APIs that are created based on the Swagger-compliant data imported this time.</p>
          */
         public Builder success(Success success) {
             this.success = success;
@@ -131,14 +139,20 @@ public class ImportSwaggerResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ImportSwaggerResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImportSwaggerResponseBody</p>
+     */
     public static class ApiImportSwaggerFailed extends TeaModel {
-        @NameInMap("ErrorMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
 
-        @NameInMap("HttpMethod")
+        @com.aliyun.core.annotation.NameInMap("HttpMethod")
         private String httpMethod;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
         private ApiImportSwaggerFailed(Builder builder) {
@@ -182,7 +196,10 @@ public class ImportSwaggerResponseBody extends TeaModel {
             private String path; 
 
             /**
-             * The error message returned.
+             * <p>The error message returned when the API is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api already exists : apiUid ===&gt; 8e274ec61cf6468e83b68371956831cb</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -190,7 +207,10 @@ public class ImportSwaggerResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP method of the API.
+             * <p>The HTTP method configured when the API is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>post</p>
              */
             public Builder httpMethod(String httpMethod) {
                 this.httpMethod = httpMethod;
@@ -198,7 +218,10 @@ public class ImportSwaggerResponseBody extends TeaModel {
             }
 
             /**
-             * The request path of the API.
+             * <p>The request path configured when the API is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/http/get/mapping</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -212,9 +235,15 @@ public class ImportSwaggerResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImportSwaggerResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImportSwaggerResponseBody</p>
+     */
     public static class Failed extends TeaModel {
-        @NameInMap("ApiImportSwaggerFailed")
-        private java.util.List < ApiImportSwaggerFailed> apiImportSwaggerFailed;
+        @com.aliyun.core.annotation.NameInMap("ApiImportSwaggerFailed")
+        private java.util.List<ApiImportSwaggerFailed> apiImportSwaggerFailed;
 
         private Failed(Builder builder) {
             this.apiImportSwaggerFailed = builder.apiImportSwaggerFailed;
@@ -231,17 +260,17 @@ public class ImportSwaggerResponseBody extends TeaModel {
         /**
          * @return apiImportSwaggerFailed
          */
-        public java.util.List < ApiImportSwaggerFailed> getApiImportSwaggerFailed() {
+        public java.util.List<ApiImportSwaggerFailed> getApiImportSwaggerFailed() {
             return this.apiImportSwaggerFailed;
         }
 
         public static final class Builder {
-            private java.util.List < ApiImportSwaggerFailed> apiImportSwaggerFailed; 
+            private java.util.List<ApiImportSwaggerFailed> apiImportSwaggerFailed; 
 
             /**
              * ApiImportSwaggerFailed.
              */
-            public Builder apiImportSwaggerFailed(java.util.List < ApiImportSwaggerFailed> apiImportSwaggerFailed) {
+            public Builder apiImportSwaggerFailed(java.util.List<ApiImportSwaggerFailed> apiImportSwaggerFailed) {
                 this.apiImportSwaggerFailed = apiImportSwaggerFailed;
                 return this;
             }
@@ -253,14 +282,20 @@ public class ImportSwaggerResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImportSwaggerResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImportSwaggerResponseBody</p>
+     */
     public static class ApiImportModelFailed extends TeaModel {
-        @NameInMap("ErrorMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("ModelName")
+        @com.aliyun.core.annotation.NameInMap("ModelName")
         private String modelName;
 
         private ApiImportModelFailed(Builder builder) {
@@ -304,7 +339,10 @@ public class ImportSwaggerResponseBody extends TeaModel {
             private String modelName; 
 
             /**
-             * The error message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>error msg</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -312,7 +350,10 @@ public class ImportSwaggerResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the API group.
+             * <p>The ID of the API group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36d4bcfaec1946e1870d90b2d7519710</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -320,7 +361,10 @@ public class ImportSwaggerResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the model.
+             * <p>The name of the model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Region</p>
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -334,9 +378,15 @@ public class ImportSwaggerResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImportSwaggerResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImportSwaggerResponseBody</p>
+     */
     public static class ModelFailed extends TeaModel {
-        @NameInMap("ApiImportModelFailed")
-        private java.util.List < ApiImportModelFailed> apiImportModelFailed;
+        @com.aliyun.core.annotation.NameInMap("ApiImportModelFailed")
+        private java.util.List<ApiImportModelFailed> apiImportModelFailed;
 
         private ModelFailed(Builder builder) {
             this.apiImportModelFailed = builder.apiImportModelFailed;
@@ -353,17 +403,17 @@ public class ImportSwaggerResponseBody extends TeaModel {
         /**
          * @return apiImportModelFailed
          */
-        public java.util.List < ApiImportModelFailed> getApiImportModelFailed() {
+        public java.util.List<ApiImportModelFailed> getApiImportModelFailed() {
             return this.apiImportModelFailed;
         }
 
         public static final class Builder {
-            private java.util.List < ApiImportModelFailed> apiImportModelFailed; 
+            private java.util.List<ApiImportModelFailed> apiImportModelFailed; 
 
             /**
              * ApiImportModelFailed.
              */
-            public Builder apiImportModelFailed(java.util.List < ApiImportModelFailed> apiImportModelFailed) {
+            public Builder apiImportModelFailed(java.util.List<ApiImportModelFailed> apiImportModelFailed) {
                 this.apiImportModelFailed = apiImportModelFailed;
                 return this;
             }
@@ -375,17 +425,23 @@ public class ImportSwaggerResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImportSwaggerResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImportSwaggerResponseBody</p>
+     */
     public static class ApiImportModelSuccess extends TeaModel {
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("ModelName")
+        @com.aliyun.core.annotation.NameInMap("ModelName")
         private String modelName;
 
-        @NameInMap("ModelOperation")
+        @com.aliyun.core.annotation.NameInMap("ModelOperation")
         private String modelOperation;
 
-        @NameInMap("ModelUid")
+        @com.aliyun.core.annotation.NameInMap("ModelUid")
         private String modelUid;
 
         private ApiImportModelSuccess(Builder builder) {
@@ -438,7 +494,10 @@ public class ImportSwaggerResponseBody extends TeaModel {
             private String modelUid; 
 
             /**
-             * The ID of the API group.
+             * <p>The ID of the API group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b2d552ed90ca435b86f7bf8d45414793</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -446,7 +505,10 @@ public class ImportSwaggerResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the model.
+             * <p>The name of the model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NewInstance</p>
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -454,7 +516,10 @@ public class ImportSwaggerResponseBody extends TeaModel {
             }
 
             /**
-             * The model operation.
+             * <p>The model operation</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CREATE</p>
              */
             public Builder modelOperation(String modelOperation) {
                 this.modelOperation = modelOperation;
@@ -462,7 +527,10 @@ public class ImportSwaggerResponseBody extends TeaModel {
             }
 
             /**
-             * The UID of the model.
+             * <p>The UID of the model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d4bcfaec1946e1870d</p>
              */
             public Builder modelUid(String modelUid) {
                 this.modelUid = modelUid;
@@ -476,9 +544,15 @@ public class ImportSwaggerResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImportSwaggerResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImportSwaggerResponseBody</p>
+     */
     public static class ModelSuccess extends TeaModel {
-        @NameInMap("ApiImportModelSuccess")
-        private java.util.List < ApiImportModelSuccess> apiImportModelSuccess;
+        @com.aliyun.core.annotation.NameInMap("ApiImportModelSuccess")
+        private java.util.List<ApiImportModelSuccess> apiImportModelSuccess;
 
         private ModelSuccess(Builder builder) {
             this.apiImportModelSuccess = builder.apiImportModelSuccess;
@@ -495,17 +569,17 @@ public class ImportSwaggerResponseBody extends TeaModel {
         /**
          * @return apiImportModelSuccess
          */
-        public java.util.List < ApiImportModelSuccess> getApiImportModelSuccess() {
+        public java.util.List<ApiImportModelSuccess> getApiImportModelSuccess() {
             return this.apiImportModelSuccess;
         }
 
         public static final class Builder {
-            private java.util.List < ApiImportModelSuccess> apiImportModelSuccess; 
+            private java.util.List<ApiImportModelSuccess> apiImportModelSuccess; 
 
             /**
              * ApiImportModelSuccess.
              */
-            public Builder apiImportModelSuccess(java.util.List < ApiImportModelSuccess> apiImportModelSuccess) {
+            public Builder apiImportModelSuccess(java.util.List<ApiImportModelSuccess> apiImportModelSuccess) {
                 this.apiImportModelSuccess = apiImportModelSuccess;
                 return this;
             }
@@ -517,17 +591,23 @@ public class ImportSwaggerResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImportSwaggerResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImportSwaggerResponseBody</p>
+     */
     public static class ApiImportSwaggerSuccess extends TeaModel {
-        @NameInMap("ApiOperation")
+        @com.aliyun.core.annotation.NameInMap("ApiOperation")
         private String apiOperation;
 
-        @NameInMap("ApiUid")
+        @com.aliyun.core.annotation.NameInMap("ApiUid")
         private String apiUid;
 
-        @NameInMap("HttpMethod")
+        @com.aliyun.core.annotation.NameInMap("HttpMethod")
         private String httpMethod;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
         private ApiImportSwaggerSuccess(Builder builder) {
@@ -580,7 +660,10 @@ public class ImportSwaggerResponseBody extends TeaModel {
             private String path; 
 
             /**
-             * Specifies that the operation is CREATE or MODIFY.
+             * <p>Specifies whether the operation is CREATE or MODIFY.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CREATE</p>
              */
             public Builder apiOperation(String apiOperation) {
                 this.apiOperation = apiOperation;
@@ -588,7 +671,10 @@ public class ImportSwaggerResponseBody extends TeaModel {
             }
 
             /**
-             * The UID of the imported API.
+             * <p>The UID of the successfully imported API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8e274ec61cf6468e83b68371956831cb</p>
              */
             public Builder apiUid(String apiUid) {
                 this.apiUid = apiUid;
@@ -596,7 +682,10 @@ public class ImportSwaggerResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP method of the API.
+             * <p>The HTTP method configured when the API is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>get</p>
              */
             public Builder httpMethod(String httpMethod) {
                 this.httpMethod = httpMethod;
@@ -604,7 +693,10 @@ public class ImportSwaggerResponseBody extends TeaModel {
             }
 
             /**
-             * The request path of the API.
+             * <p>The request path configured when the API is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/http/get/mapping</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -618,9 +710,15 @@ public class ImportSwaggerResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ImportSwaggerResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImportSwaggerResponseBody</p>
+     */
     public static class Success extends TeaModel {
-        @NameInMap("ApiImportSwaggerSuccess")
-        private java.util.List < ApiImportSwaggerSuccess> apiImportSwaggerSuccess;
+        @com.aliyun.core.annotation.NameInMap("ApiImportSwaggerSuccess")
+        private java.util.List<ApiImportSwaggerSuccess> apiImportSwaggerSuccess;
 
         private Success(Builder builder) {
             this.apiImportSwaggerSuccess = builder.apiImportSwaggerSuccess;
@@ -637,17 +735,17 @@ public class ImportSwaggerResponseBody extends TeaModel {
         /**
          * @return apiImportSwaggerSuccess
          */
-        public java.util.List < ApiImportSwaggerSuccess> getApiImportSwaggerSuccess() {
+        public java.util.List<ApiImportSwaggerSuccess> getApiImportSwaggerSuccess() {
             return this.apiImportSwaggerSuccess;
         }
 
         public static final class Builder {
-            private java.util.List < ApiImportSwaggerSuccess> apiImportSwaggerSuccess; 
+            private java.util.List<ApiImportSwaggerSuccess> apiImportSwaggerSuccess; 
 
             /**
              * ApiImportSwaggerSuccess.
              */
-            public Builder apiImportSwaggerSuccess(java.util.List < ApiImportSwaggerSuccess> apiImportSwaggerSuccess) {
+            public Builder apiImportSwaggerSuccess(java.util.List<ApiImportSwaggerSuccess> apiImportSwaggerSuccess) {
                 this.apiImportSwaggerSuccess = apiImportSwaggerSuccess;
                 return this;
             }

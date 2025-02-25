@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterAccessWhiteListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeClusterAccessWhiteListResponseBody</p>
  */
 public class DescribeClusterAccessWhiteListResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeClusterAccessWhiteListResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeClusterAccessWhiteListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The queried IP address whitelists.
+         * <p>The queried IP address whitelists.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -58,7 +63,10 @@ public class DescribeClusterAccessWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>370D09FD-442A-5225-AAD3-7362CAE39177</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class DescribeClusterAccessWhiteListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClusterAccessWhiteListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterAccessWhiteListResponseBody</p>
+     */
     public static class IPArray extends TeaModel {
-        @NameInMap("DBClusterIPArrayAttribute")
+        @com.aliyun.core.annotation.NameInMap("DBClusterIPArrayAttribute")
         private String DBClusterIPArrayAttribute;
 
-        @NameInMap("DBClusterIPArrayName")
+        @com.aliyun.core.annotation.NameInMap("DBClusterIPArrayName")
         private String DBClusterIPArrayName;
 
-        @NameInMap("SecurityIPList")
+        @com.aliyun.core.annotation.NameInMap("SecurityIPList")
         private String securityIPList;
 
         private IPArray(Builder builder) {
@@ -122,10 +136,13 @@ public class DescribeClusterAccessWhiteListResponseBody extends TeaModel {
             private String securityIPList; 
 
             /**
-             * The attribute of the whitelist.
-             * <p>
+             * <p>The attribute of the whitelist.</p>
+             * <blockquote>
+             * <p>Whitelists with the <strong>hidden</strong> attribute are not displayed in the console. Those whitelists are used to access Data Transmission Service (DTS) and PolarDB.</p>
+             * </blockquote>
              * 
-             * > Whitelists with the **hidden** attribute are not displayed in the console. Those whitelists are used to access Data Transmission Service (DTS) and PolarDB.
+             * <strong>example:</strong>
+             * <p>hidden</p>
              */
             public Builder DBClusterIPArrayAttribute(String DBClusterIPArrayAttribute) {
                 this.DBClusterIPArrayAttribute = DBClusterIPArrayAttribute;
@@ -133,10 +150,11 @@ public class DescribeClusterAccessWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the IP address whitelist.
-             * <p>
+             * <p>The name of the IP address whitelist.</p>
+             * <p>Each cluster supports up to 50 IP address whitelists.</p>
              * 
-             * Each cluster supports up to 50 IP address whitelists.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder DBClusterIPArrayName(String DBClusterIPArrayName) {
                 this.DBClusterIPArrayName = DBClusterIPArrayName;
@@ -144,7 +162,10 @@ public class DescribeClusterAccessWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses in the IP address whitelist. Up to 500 IP addresses can be returned. Multiple IP addresses are separated by commas (,).
+             * <p>The IP addresses in the IP address whitelist. Up to 500 IP addresses can be returned. Multiple IP addresses are separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.0.xx.xx</p>
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;
@@ -158,9 +179,15 @@ public class DescribeClusterAccessWhiteListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterAccessWhiteListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterAccessWhiteListResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("IPArray")
-        private java.util.List < IPArray> IPArray;
+        @com.aliyun.core.annotation.NameInMap("IPArray")
+        private java.util.List<IPArray> IPArray;
 
         private Items(Builder builder) {
             this.IPArray = builder.IPArray;
@@ -177,17 +204,17 @@ public class DescribeClusterAccessWhiteListResponseBody extends TeaModel {
         /**
          * @return IPArray
          */
-        public java.util.List < IPArray> getIPArray() {
+        public java.util.List<IPArray> getIPArray() {
             return this.IPArray;
         }
 
         public static final class Builder {
-            private java.util.List < IPArray> IPArray; 
+            private java.util.List<IPArray> IPArray; 
 
             /**
              * IPArray.
              */
-            public Builder IPArray(java.util.List < IPArray> IPArray) {
+            public Builder IPArray(java.util.List<IPArray> IPArray) {
                 this.IPArray = IPArray;
                 return this;
             }

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListVirtualMFADevicesResponseBody} extends {@link TeaModel}
  *
  * <p>ListVirtualMFADevicesResponseBody</p>
  */
 public class ListVirtualMFADevicesResponseBody extends TeaModel {
-    @NameInMap("IsTruncated")
+    @com.aliyun.core.annotation.NameInMap("IsTruncated")
     private Boolean isTruncated;
 
-    @NameInMap("Marker")
+    @com.aliyun.core.annotation.NameInMap("Marker")
     private String marker;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VirtualMFADevices")
+    @com.aliyun.core.annotation.NameInMap("VirtualMFADevices")
     private VirtualMFADevices virtualMFADevices;
 
     private ListVirtualMFADevicesResponseBody(Builder builder) {
@@ -74,11 +79,14 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
         private VirtualMFADevices virtualMFADevices; 
 
         /**
-         * Indicates whether the response is truncated. Valid values:
-         * <p>
+         * <p>Indicates whether the response is truncated. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -86,7 +94,13 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
         }
 
         /**
-         * The `marker`. This parameter is returned only if the value of `IsTruncated` is `true`. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when <code>IsTruncated</code> is <code>true</code>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>EXAMPLE</p>
          */
         public Builder marker(String marker) {
             this.marker = marker;
@@ -94,7 +108,10 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32272612-DF82-485E-8BA9-AFA4E0C3D0BA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -102,7 +119,7 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the MFA device.
+         * <p>The information about the MFA device.</p>
          */
         public Builder virtualMFADevices(VirtualMFADevices virtualMFADevices) {
             this.virtualMFADevices = virtualMFADevices;
@@ -115,14 +132,20 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListVirtualMFADevicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVirtualMFADevicesResponseBody</p>
+     */
     public static class User extends TeaModel {
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserPrincipalName")
+        @com.aliyun.core.annotation.NameInMap("UserPrincipalName")
         private String userPrincipalName;
 
         private User(Builder builder) {
@@ -166,7 +189,10 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
             private String userPrincipalName; 
 
             /**
-             * The display name of the RAM user.
+             * <p>The display name of the RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -174,7 +200,10 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the RAM user.
+             * <p>The ID of the RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20732900249392****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -182,7 +211,10 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
             }
 
             /**
-             * The logon name of the RAM user.
+             * <p>The logon name of the RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test@177242285274****.onaliyun.com</p>
              */
             public Builder userPrincipalName(String userPrincipalName) {
                 this.userPrincipalName = userPrincipalName;
@@ -196,14 +228,20 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListVirtualMFADevicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVirtualMFADevicesResponseBody</p>
+     */
     public static class VirtualMFADevice extends TeaModel {
-        @NameInMap("ActivateDate")
+        @com.aliyun.core.annotation.NameInMap("ActivateDate")
         private String activateDate;
 
-        @NameInMap("SerialNumber")
+        @com.aliyun.core.annotation.NameInMap("SerialNumber")
         private String serialNumber;
 
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private User user;
 
         private VirtualMFADevice(Builder builder) {
@@ -247,7 +285,10 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
             private User user; 
 
             /**
-             * The time when the MFA device was activated.
+             * <p>The time when the MFA device was activated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-16T06:02:09Z</p>
              */
             public Builder activateDate(String activateDate) {
                 this.activateDate = activateDate;
@@ -255,7 +296,10 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
             }
 
             /**
-             * The serial number of the MFA device.
+             * <p>The serial number of the MFA device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::177242285274****:mfa/test</p>
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;
@@ -263,7 +307,7 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
             }
 
             /**
-             * The information of the RAM user that has an MFA device bound.
+             * <p>The information of the RAM user that has an MFA device bound.</p>
              */
             public Builder user(User user) {
                 this.user = user;
@@ -277,9 +321,15 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListVirtualMFADevicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVirtualMFADevicesResponseBody</p>
+     */
     public static class VirtualMFADevices extends TeaModel {
-        @NameInMap("VirtualMFADevice")
-        private java.util.List < VirtualMFADevice> virtualMFADevice;
+        @com.aliyun.core.annotation.NameInMap("VirtualMFADevice")
+        private java.util.List<VirtualMFADevice> virtualMFADevice;
 
         private VirtualMFADevices(Builder builder) {
             this.virtualMFADevice = builder.virtualMFADevice;
@@ -296,17 +346,17 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
         /**
          * @return virtualMFADevice
          */
-        public java.util.List < VirtualMFADevice> getVirtualMFADevice() {
+        public java.util.List<VirtualMFADevice> getVirtualMFADevice() {
             return this.virtualMFADevice;
         }
 
         public static final class Builder {
-            private java.util.List < VirtualMFADevice> virtualMFADevice; 
+            private java.util.List<VirtualMFADevice> virtualMFADevice; 
 
             /**
              * VirtualMFADevice.
              */
-            public Builder virtualMFADevice(java.util.List < VirtualMFADevice> virtualMFADevice) {
+            public Builder virtualMFADevice(java.util.List<VirtualMFADevice> virtualMFADevice) {
                 this.virtualMFADevice = virtualMFADevice;
                 return this;
             }

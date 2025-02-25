@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAntChainTransactionStatisticsResponseBody</p>
  */
 public class DescribeAntChainTransactionStatisticsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private DescribeAntChainTransactionStatisticsResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribeAntChainTransactionStatisticsResponseBody extends TeaModel 
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("AntChainId")
+        @com.aliyun.core.annotation.NameInMap("AntChainId")
         private String antChainId;
 
-        @NameInMap("CreatTime")
+        @com.aliyun.core.annotation.NameInMap("CreatTime")
         private Long creatTime;
 
-        @NameInMap("Dt")
+        @com.aliyun.core.annotation.NameInMap("Dt")
         private String dt;
 
-        @NameInMap("LastSumBlockHeight")
+        @com.aliyun.core.annotation.NameInMap("LastSumBlockHeight")
         private Long lastSumBlockHeight;
 
-        @NameInMap("TransCount")
+        @com.aliyun.core.annotation.NameInMap("TransCount")
         private Long transCount;
 
         private Result(Builder builder) {

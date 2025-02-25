@@ -1,36 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dypnsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMobileRequest} extends {@link RequestModel}
  *
  * <p>GetMobileRequest</p>
  */
 public class GetMobileRequest extends Request {
-    @Query
-    @NameInMap("AccessToken")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accessToken;
 
-    @Query
-    @NameInMap("OutId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutId")
     private String outId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private GetMobileRequest(Builder builder) {
@@ -111,7 +111,11 @@ public class GetMobileRequest extends Request {
         } 
 
         /**
-         * AccessToken.
+         * <p>The logon token obtained by the SDK for your app.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dfafdafad5422****</p>
          */
         public Builder accessToken(String accessToken) {
             this.putQueryParameter("AccessToken", accessToken);
@@ -120,7 +124,10 @@ public class GetMobileRequest extends Request {
         }
 
         /**
-         * OutId.
+         * <p>The external ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22345****</p>
          */
         public Builder outId(String outId) {
             this.putQueryParameter("OutId", outId);

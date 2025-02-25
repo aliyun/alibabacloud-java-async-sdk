@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnDomainBpsDataByLayerResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnDomainBpsDataByLayerResponseBody</p>
  */
 public class DescribeDcdnDomainBpsDataByLayerResponseBody extends TeaModel {
-    @NameInMap("BpsDataInterval")
+    @com.aliyun.core.annotation.NameInMap("BpsDataInterval")
     private BpsDataInterval bpsDataInterval;
 
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDcdnDomainBpsDataByLayerResponseBody(Builder builder) {
@@ -62,7 +62,7 @@ public class DescribeDcdnDomainBpsDataByLayerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The bandwidth returned at each time interval.
+         * <p>The bandwidth returned at each time interval.</p>
          */
         public Builder bpsDataInterval(BpsDataInterval bpsDataInterval) {
             this.bpsDataInterval = bpsDataInterval;
@@ -70,7 +70,10 @@ public class DescribeDcdnDomainBpsDataByLayerResponseBody extends TeaModel {
         }
 
         /**
-         * The time interval between the data entries returned. Unit: seconds.
+         * <p>The time interval between the data entries returned. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -78,7 +81,10 @@ public class DescribeDcdnDomainBpsDataByLayerResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,26 +97,32 @@ public class DescribeDcdnDomainBpsDataByLayerResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnDomainBpsDataByLayerResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainBpsDataByLayerResponseBody</p>
+     */
     public static class DataModule extends TeaModel {
-        @NameInMap("DynamicTrafficValue")
+        @com.aliyun.core.annotation.NameInMap("DynamicTrafficValue")
         private String dynamicTrafficValue;
 
-        @NameInMap("DynamicValue")
+        @com.aliyun.core.annotation.NameInMap("DynamicValue")
         private String dynamicValue;
 
-        @NameInMap("StaticTrafficValue")
+        @com.aliyun.core.annotation.NameInMap("StaticTrafficValue")
         private String staticTrafficValue;
 
-        @NameInMap("StaticValue")
+        @com.aliyun.core.annotation.NameInMap("StaticValue")
         private String staticValue;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("TrafficValue")
+        @com.aliyun.core.annotation.NameInMap("TrafficValue")
         private String trafficValue;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private DataModule(Builder builder) {
@@ -190,7 +202,10 @@ public class DescribeDcdnDomainBpsDataByLayerResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The traffic that is used to deliver dynamic content. Unit: bytes.
+             * <p>The traffic that is used to deliver dynamic content. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder dynamicTrafficValue(String dynamicTrafficValue) {
                 this.dynamicTrafficValue = dynamicTrafficValue;
@@ -198,7 +213,10 @@ public class DescribeDcdnDomainBpsDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * The bandwidth that is used to deliver dynamic content. Unit: bit/s.
+             * <p>The bandwidth that is used to deliver dynamic content. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.34</p>
              */
             public Builder dynamicValue(String dynamicValue) {
                 this.dynamicValue = dynamicValue;
@@ -206,7 +224,10 @@ public class DescribeDcdnDomainBpsDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * The traffic that is used to deliver static content. Unit: bytes.
+             * <p>The traffic that is used to deliver static content. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>131</p>
              */
             public Builder staticTrafficValue(String staticTrafficValue) {
                 this.staticTrafficValue = staticTrafficValue;
@@ -214,7 +235,10 @@ public class DescribeDcdnDomainBpsDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * The bandwidth that is used to deliver static content. Unit: bit/s.
+             * <p>The bandwidth that is used to deliver static content. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.22</p>
              */
             public Builder staticValue(String staticValue) {
                 this.staticValue = staticValue;
@@ -222,7 +246,10 @@ public class DescribeDcdnDomainBpsDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the data returned.
+             * <p>The timestamp of the data returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-12-10T21:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -230,7 +257,10 @@ public class DescribeDcdnDomainBpsDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * The total traffic. Unit: bytes.
+             * <p>The total traffic. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>331</p>
              */
             public Builder trafficValue(String trafficValue) {
                 this.trafficValue = trafficValue;
@@ -238,7 +268,10 @@ public class DescribeDcdnDomainBpsDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * The total bandwidth. Unit: bit/s.
+             * <p>The total bandwidth. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.56</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -252,8 +285,14 @@ public class DescribeDcdnDomainBpsDataByLayerResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnDomainBpsDataByLayerResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainBpsDataByLayerResponseBody</p>
+     */
     public static class BpsDataInterval extends TeaModel {
-        @NameInMap("DataModule")
+        @com.aliyun.core.annotation.NameInMap("DataModule")
         private java.util.List < DataModule> dataModule;
 
         private BpsDataInterval(Builder builder) {

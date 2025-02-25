@@ -1,81 +1,90 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeElasticityAssurancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeElasticityAssurancesRequest</p>
  */
 public class DescribeElasticityAssurancesRequest extends Request {
-    @Query
-    @NameInMap("PrivatePoolOptions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivatePoolOptions")
     private PrivatePoolOptions privatePoolOptions;
 
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("InstanceChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
     private String instanceChargeType;
 
-    @Query
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Platform")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PackageType")
+    private String packageType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Platform")
     private String platform;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private DescribeElasticityAssurancesRequest(Builder builder) {
@@ -88,6 +97,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
         this.nextToken = builder.nextToken;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.packageType = builder.packageType;
         this.platform = builder.platform;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
@@ -168,6 +178,13 @@ public class DescribeElasticityAssurancesRequest extends Request {
     }
 
     /**
+     * @return packageType
+     */
+    public String getPackageType() {
+        return this.packageType;
+    }
+
+    /**
      * @return platform
      */
     public String getPlatform() {
@@ -212,7 +229,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -232,13 +249,14 @@ public class DescribeElasticityAssurancesRequest extends Request {
         private String nextToken; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String packageType; 
         private String platform; 
         private String regionId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String status; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String zoneId; 
 
         private Builder() {
@@ -255,6 +273,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
             this.nextToken = request.nextToken;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.packageType = request.packageType;
             this.platform = request.platform;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
@@ -284,10 +303,11 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Set the value to PostPaid. Only pay-as-you-go instances can be created by using elasticity assurances.
-         * <p>
+         * <p>The billing method of the instance. Set the value to PostPaid. Only pay-as-you-go instances can be created by using elasticity assurances.</p>
+         * <p>Default value: PostPaid.</p>
          * 
-         * Default value: PostPaid.
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -296,7 +316,10 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * The instance type.
+         * <p>The instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c6.large</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -305,12 +328,12 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * The maximum number of entries per page.
-         * <p>
+         * <p>The maximum number of entries per page.</p>
+         * <p>Maximum value: 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Maximum value: 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -319,7 +342,10 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <p>The pagination token that is used in the request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -346,7 +372,21 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * > This parameter is deprecated.
+         * PackageType.
+         */
+        public Builder packageType(String packageType) {
+            this.putQueryParameter("PackageType", packageType);
+            this.packageType = packageType;
+            return this;
+        }
+
+        /**
+         * <blockquote>
+         * <p>This parameter is deprecated.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -355,7 +395,11 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * The region ID of the elasticity assurances. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the elasticity assurances. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -364,10 +408,13 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. If you configure this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
-         * <p>
+         * <p>The ID of the resource group. If you configure this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
+         * <blockquote>
+         * <p>Resources in the default resource group are displayed in the response regardless of whether you configure this parameter.</p>
+         * </blockquote>
          * 
-         * > Resources in the default resource group are displayed in the response regardless of whether you configure this parameter.
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -394,16 +441,19 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * The status of the elasticity assurances. Valid values:
-         * <p>
+         * <p>The status of the elasticity assurance. Valid values:</p>
+         * <ul>
+         * <li>All: All states.</li>
+         * <li>Deactivated: The elasticity assurance is pending activation. This state is in invitational preview.</li>
+         * <li>Preparing: The elasticity assurance is being prepared.</li>
+         * <li>Prepared: The elasticity assurance is to take effect.</li>
+         * <li>Active: The elasticity assurance is in effect.</li>
+         * <li>Released: The elasticity assurance is released.</li>
+         * </ul>
+         * <p>Default value: Active.</p>
          * 
-         * *   All
-         * *   Preparing
-         * *   Prepared
-         * *   Active
-         * *   Released
-         * 
-         * Default value: Active.
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -412,16 +462,19 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The zone ID of the elasticity assurances.
+         * <p>The zone ID of the elasticity assurances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -436,8 +489,14 @@ public class DescribeElasticityAssurancesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeElasticityAssurancesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeElasticityAssurancesRequest</p>
+     */
     public static class PrivatePoolOptions extends TeaModel {
-        @NameInMap("Ids")
+        @com.aliyun.core.annotation.NameInMap("Ids")
         private String ids;
 
         private PrivatePoolOptions(Builder builder) {
@@ -463,7 +522,10 @@ public class DescribeElasticityAssurancesRequest extends Request {
             private String ids; 
 
             /**
-             * The IDs of the elasticity assurances. The value can be a JSON array that consists of up to 100 elasticity assurance IDs. Separate the IDs with commas (,).
+             * <p>The IDs of the elasticity assurances. The value can be a JSON array that consists of up to 100 elasticity assurance IDs. Separate the IDs with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;eap-bp67acfmxazb4****&quot;, &quot;eap-bp67acfmxazb5****&quot;]</p>
              */
             public Builder ids(String ids) {
                 this.ids = ids;
@@ -477,11 +539,17 @@ public class DescribeElasticityAssurancesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeElasticityAssurancesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeElasticityAssurancesRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -516,10 +584,11 @@ public class DescribeElasticityAssurancesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N. Valid values of N: 1 to 20.
-             * <p>
+             * <p>The key of tag N. Valid values of N: 1 to 20.</p>
+             * <p>If you specify a tag to query resources, up to 1,000 resources with this tag are returned in the response. If you specify multiple tags to query resources, up to 1,000 resources with all these tags are returned in the response. To query more than 1,000 resources that have specified tags added, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
              * 
-             * If you specify a tag to query resources, up to 1,000 resources with this tag are returned in the response. If you specify multiple tags to query resources, up to 1,000 resources with all these tags are returned in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -527,7 +596,10 @@ public class DescribeElasticityAssurancesRequest extends Request {
             }
 
             /**
-             * The value of tag N. Valid values of N: 1 to 20.
+             * <p>The value of tag N. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

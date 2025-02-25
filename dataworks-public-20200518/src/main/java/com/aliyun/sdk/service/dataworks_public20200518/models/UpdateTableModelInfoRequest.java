@@ -1,45 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTableModelInfoRequest} extends {@link RequestModel}
  *
  * <p>UpdateTableModelInfoRequest</p>
  */
 public class UpdateTableModelInfoRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("FirstLevelThemeId")
-    @Validation()
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirstLevelThemeId")
+    @com.aliyun.core.annotation.Validation()
     private Long firstLevelThemeId;
 
-    @Query
-    @NameInMap("LevelId")
-    @Validation()
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LevelId")
+    @com.aliyun.core.annotation.Validation()
     private Long levelId;
 
-    @Query
-    @NameInMap("LevelType")
-    @Validation(maximum = 2147483647)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LevelType")
+    @com.aliyun.core.annotation.Validation(maximum = 2147483647)
     private Integer levelType;
 
-    @Query
-    @NameInMap("SecondLevelThemeId")
-    @Validation()
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecondLevelThemeId")
+    @com.aliyun.core.annotation.Validation()
     private Long secondLevelThemeId;
 
-    @Query
-    @NameInMap("TableGuid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableGuid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tableGuid;
 
     private UpdateTableModelInfoRequest(Builder builder) {
@@ -130,7 +134,7 @@ public class UpdateTableModelInfoRequest extends Request {
         } 
 
         /**
-         * The ID of the region where the service is activated.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -139,7 +143,10 @@ public class UpdateTableModelInfoRequest extends Request {
         }
 
         /**
-         * The ID of the first-level table folder.
+         * <p>The ID of the first-level table folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101</p>
          */
         public Builder firstLevelThemeId(Long firstLevelThemeId) {
             this.putQueryParameter("FirstLevelThemeId", firstLevelThemeId);
@@ -148,7 +155,10 @@ public class UpdateTableModelInfoRequest extends Request {
         }
 
         /**
-         * The ID of the table level.
+         * <p>The table level ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101</p>
          */
         public Builder levelId(Long levelId) {
             this.putQueryParameter("LevelId", levelId);
@@ -157,7 +167,10 @@ public class UpdateTableModelInfoRequest extends Request {
         }
 
         /**
-         * The type of the table level. Valid values: 1 and 2. A value of 1 indicates the logical level. A value of 2 indicates the physical level.
+         * <p>The type of the table level. Valid values: 1 and 2. The value 1 indicates the logical level. The value 2 indicates the physical level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder levelType(Integer levelType) {
             this.putQueryParameter("LevelType", levelType);
@@ -166,7 +179,10 @@ public class UpdateTableModelInfoRequest extends Request {
         }
 
         /**
-         * The ID of the second-level table folder.
+         * <p>The ID of the second-level table folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101</p>
          */
         public Builder secondLevelThemeId(Long secondLevelThemeId) {
             this.putQueryParameter("SecondLevelThemeId", secondLevelThemeId);
@@ -175,7 +191,11 @@ public class UpdateTableModelInfoRequest extends Request {
         }
 
         /**
-         * The globally unique identifier (GUID) of the table. Specify the GUID in the format of odps.{projectName}.{tableName}.
+         * <p>The GUID of the table. Specify the GUID in the odps.{projectName}.{tableName} format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps.test.table1</p>
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);

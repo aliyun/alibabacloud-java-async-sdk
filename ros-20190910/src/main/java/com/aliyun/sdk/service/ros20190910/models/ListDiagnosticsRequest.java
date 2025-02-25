@@ -1,35 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDiagnosticsRequest} extends {@link RequestModel}
  *
  * <p>ListDiagnosticsRequest</p>
  */
 public class ListDiagnosticsRequest extends Request {
-    @Query
-    @NameInMap("DiagnosticKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiagnosticKey")
     private String diagnosticKey;
 
-    @Query
-    @NameInMap("DiagnosticProduct")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiagnosticProduct")
     private String diagnosticProduct;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private String maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private ListDiagnosticsRequest(Builder builder) {
@@ -110,7 +110,10 @@ public class ListDiagnosticsRequest extends Request {
         } 
 
         /**
-         * DiagnosticKey.
+         * <p>The keyword in the diagnosis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2829A772-B154-5A0A-B61B-DEE8A9EE8A5D</p>
          */
         public Builder diagnosticKey(String diagnosticKey) {
             this.putQueryParameter("DiagnosticKey", diagnosticKey);
@@ -119,7 +122,10 @@ public class ListDiagnosticsRequest extends Request {
         }
 
         /**
-         * DiagnosticProduct.
+         * <p>The product that is diagnosed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ros</p>
          */
         public Builder diagnosticProduct(String diagnosticProduct) {
             this.putQueryParameter("DiagnosticProduct", diagnosticProduct);
@@ -128,7 +134,12 @@ public class ListDiagnosticsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results to be returned in a single call when NextToken is used for the query.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(String maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -137,7 +148,10 @@ public class ListDiagnosticsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f01****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -146,7 +160,10 @@ public class ListDiagnosticsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The diagnosis status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Complete</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

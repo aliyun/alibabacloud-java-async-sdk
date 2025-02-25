@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHostAccountsResponseBody} extends {@link TeaModel}
  *
  * <p>ListHostAccountsResponseBody</p>
  */
 public class ListHostAccountsResponseBody extends TeaModel {
-    @NameInMap("HostAccounts")
+    @com.aliyun.core.annotation.NameInMap("HostAccounts")
     private java.util.List < HostAccounts> hostAccounts;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListHostAccountsResponseBody(Builder builder) {
@@ -62,7 +62,7 @@ public class ListHostAccountsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The ID of the host account.
+         * <p>An array that consists of the queried host accounts.</p>
          */
         public Builder hostAccounts(java.util.List < HostAccounts> hostAccounts) {
             this.hostAccounts = hostAccounts;
@@ -70,7 +70,10 @@ public class ListHostAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the queried host accounts.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,10 +81,10 @@ public class ListHostAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the bastion host in which you want to query accounts of the specified host.
-         * <p>
+         * <p>The total number of host accounts that are queried.</p>
          * 
-         * >  You can call the DescribeInstances operation to query the ID of the bastion host.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -94,29 +97,35 @@ public class ListHostAccountsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListHostAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHostAccountsResponseBody</p>
+     */
     public static class HostAccounts extends TeaModel {
-        @NameInMap("HasPassword")
+        @com.aliyun.core.annotation.NameInMap("HasPassword")
         private Boolean hasPassword;
 
-        @NameInMap("HostAccountId")
+        @com.aliyun.core.annotation.NameInMap("HostAccountId")
         private String hostAccountId;
 
-        @NameInMap("HostAccountName")
+        @com.aliyun.core.annotation.NameInMap("HostAccountName")
         private String hostAccountName;
 
-        @NameInMap("HostId")
+        @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;
 
-        @NameInMap("HostShareKeyId")
+        @com.aliyun.core.annotation.NameInMap("HostShareKeyId")
         private String hostShareKeyId;
 
-        @NameInMap("HostShareKeyName")
+        @com.aliyun.core.annotation.NameInMap("HostShareKeyName")
         private String hostShareKeyName;
 
-        @NameInMap("PrivateKeyFingerprint")
+        @com.aliyun.core.annotation.NameInMap("PrivateKeyFingerprint")
         private String privateKeyFingerprint;
 
-        @NameInMap("ProtocolName")
+        @com.aliyun.core.annotation.NameInMap("ProtocolName")
         private String protocolName;
 
         private HostAccounts(Builder builder) {
@@ -205,7 +214,15 @@ public class ListHostAccountsResponseBody extends TeaModel {
             private String protocolName; 
 
             /**
-             * The fingerprint of the private key for the host account.
+             * <p>Indicates whether a password is configured for the host account.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true: A password is configured for the host account.</li>
+             * <li>false: No passwords are configured for the host account.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasPassword(Boolean hasPassword) {
                 this.hasPassword = hasPassword;
@@ -213,7 +230,10 @@ public class ListHostAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * <p>The ID of the host account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder hostAccountId(String hostAccountId) {
                 this.hostAccountId = hostAccountId;
@@ -221,7 +241,10 @@ public class ListHostAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the shared key.
+             * <p>The name of the host account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder hostAccountName(String hostAccountName) {
                 this.hostAccountName = hostAccountName;
@@ -229,7 +252,10 @@ public class ListHostAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * HostId.
+             * <p>The ID of the host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -237,7 +263,10 @@ public class ListHostAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * HostShareKeyId.
+             * <p>The ID of the shared key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder hostShareKeyId(String hostShareKeyId) {
                 this.hostShareKeyId = hostShareKeyId;
@@ -245,7 +274,10 @@ public class ListHostAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * HostShareKeyName.
+             * <p>The name of the shared key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder hostShareKeyName(String hostShareKeyName) {
                 this.hostShareKeyName = hostShareKeyName;
@@ -253,13 +285,10 @@ public class ListHostAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol that is used by the host.
-             * <p>
+             * <p>The fingerprint of the private key for the host account.</p>
              * 
-             * Valid values:
-             * 
-             * *   SSH
-             * *   RDP
+             * <strong>example:</strong>
+             * <p>fe:ca:37:42:30:00:9d:95:e6:73:e5:b0:32:0a:<strong>:</strong></p>
              */
             public Builder privateKeyFingerprint(String privateKeyFingerprint) {
                 this.privateKeyFingerprint = privateKeyFingerprint;
@@ -267,7 +296,15 @@ public class ListHostAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the page to return. Default value: **1**.
+             * <p>The protocol that is used by the host.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>SSH</li>
+             * <li>RDP</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SSH</p>
              */
             public Builder protocolName(String protocolName) {
                 this.protocolName = protocolName;

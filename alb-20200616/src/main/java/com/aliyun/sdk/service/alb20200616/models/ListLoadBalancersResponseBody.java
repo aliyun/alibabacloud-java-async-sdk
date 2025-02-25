@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLoadBalancersResponseBody} extends {@link TeaModel}
  *
  * <p>ListLoadBalancersResponseBody</p>
  */
 public class ListLoadBalancersResponseBody extends TeaModel {
-    @NameInMap("LoadBalancers")
-    private java.util.List < LoadBalancers> loadBalancers;
+    @com.aliyun.core.annotation.NameInMap("LoadBalancers")
+    private java.util.List<LoadBalancers> loadBalancers;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListLoadBalancersResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class ListLoadBalancersResponseBody extends TeaModel {
     /**
      * @return loadBalancers
      */
-    public java.util.List < LoadBalancers> getLoadBalancers() {
+    public java.util.List<LoadBalancers> getLoadBalancers() {
         return this.loadBalancers;
     }
 
@@ -79,22 +84,25 @@ public class ListLoadBalancersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < LoadBalancers> loadBalancers; 
+        private java.util.List<LoadBalancers> loadBalancers; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * The list of ALB instances.
+         * <p>A list of ALB instances.</p>
          */
-        public Builder loadBalancers(java.util.List < LoadBalancers> loadBalancers) {
+        public Builder loadBalancers(java.util.List<LoadBalancers> loadBalancers) {
             this.loadBalancers = loadBalancers;
             return this;
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,11 +110,14 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value is returned for <strong>NextToken</strong>, the value is used to retrieve a new page of results.</li>
+         * </ul>
          * 
-         * *   If **NextToken** is empty, no next page exists.
-         * *   If a value is returned for **NextToken**, the value is used to retrieve a new page of results.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -114,7 +125,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>365F4154-92F6-4AE4-92F8-7FF34B540710</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +136,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -135,11 +152,17 @@ public class ListLoadBalancersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListLoadBalancersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLoadBalancersResponseBody</p>
+     */
     public static class AccessLogConfig extends TeaModel {
-        @NameInMap("LogProject")
+        @com.aliyun.core.annotation.NameInMap("LogProject")
         private String logProject;
 
-        @NameInMap("LogStore")
+        @com.aliyun.core.annotation.NameInMap("LogStore")
         private String logStore;
 
         private AccessLogConfig(Builder builder) {
@@ -174,7 +197,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             private String logStore; 
 
             /**
-             * The log project.
+             * <p>The Simple Log Service project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sls-setter</p>
              */
             public Builder logProject(String logProject) {
                 this.logProject = logProject;
@@ -182,7 +208,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The Logstore.
+             * <p>The Logstore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder logStore(String logStore) {
                 this.logStore = logStore;
@@ -196,11 +225,17 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLoadBalancersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLoadBalancersResponseBody</p>
+     */
     public static class DeletionProtectionConfig extends TeaModel {
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("EnabledTime")
+        @com.aliyun.core.annotation.NameInMap("EnabledTime")
         private String enabledTime;
 
         private DeletionProtectionConfig(Builder builder) {
@@ -235,11 +270,14 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             private String enabledTime; 
 
             /**
-             * Indicates whether deletion protection is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether deletion protection is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -247,7 +285,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when deletion protection is enabled.
+             * <p>The time when deletion protection is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-02T02:49:05Z</p>
              */
             public Builder enabledTime(String enabledTime) {
                 this.enabledTime = enabledTime;
@@ -261,8 +302,14 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLoadBalancersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLoadBalancersResponseBody</p>
+     */
     public static class LoadBalancerBillingConfig extends TeaModel {
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
         private LoadBalancerBillingConfig(Builder builder) {
@@ -288,10 +335,11 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             private String payType; 
 
             /**
-             * The billing method. Valid values:
-             * <p>
+             * <p>The billing method. Valid values:</p>
+             * <p>Only <strong>PostPay</strong> may be returned, which indicates the pay-as-you-go billing method.</p>
              * 
-             * Only **PostPay** may be returned, which indicates the pay-as-you-go billing method.
+             * <strong>example:</strong>
+             * <p>PostPay</p>
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -305,11 +353,17 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLoadBalancersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLoadBalancersResponseBody</p>
+     */
     public static class LoadBalancerOperationLocks extends TeaModel {
-        @NameInMap("LockReason")
+        @com.aliyun.core.annotation.NameInMap("LockReason")
         private String lockReason;
 
-        @NameInMap("LockType")
+        @com.aliyun.core.annotation.NameInMap("LockType")
         private String lockType;
 
         private LoadBalancerOperationLocks(Builder builder) {
@@ -344,7 +398,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             private String lockType; 
 
             /**
-             * The reason why the ALB instance is locked. This parameter is available only when **LoadBalancerBussinessStatus** is set to **Abnormal**.
+             * <p>The reason why the ALB instance is locked. This parameter is valid only if <strong>LoadBalancerBussinessStatus</strong> is set to <strong>Abnormal</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test LockReason</p>
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -352,13 +409,16 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The lock type. Valid values:
-             * <p>
+             * <p>The lock type. Valid values:</p>
+             * <ul>
+             * <li><strong>SecurityLocked</strong>: The ALB instance is locked due to security risks.</li>
+             * <li><strong>RelatedResourceLocked</strong>: The ALB instance is locked due to other resources associated with the ALB instance.</li>
+             * <li><strong>FinancialLocked</strong>: The ALB instance is locked due to overdue payments.</li>
+             * <li><strong>ResidualLocked</strong>: The ALB instance is locked because the associated resources have overdue payments and the resources are released.</li>
+             * </ul>
              * 
-             * *   **SecurityLocked**: The ALB instance is locked due to security reasons.
-             * *   **RelatedResourceLocked**: The ALB instance is locked due to association issues.
-             * *   **FinancialLocked**: The ALB instance is locked due to overdue payments.
-             * *   **ResidualLocked**: The ALB instance is locked because the associated resources have overdue payments and the resources are released.
+             * <strong>example:</strong>
+             * <p>FinancialLocked</p>
              */
             public Builder lockType(String lockType) {
                 this.lockType = lockType;
@@ -372,11 +432,17 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLoadBalancersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLoadBalancersResponseBody</p>
+     */
     public static class ModificationProtectionConfig extends TeaModel {
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ModificationProtectionConfig(Builder builder) {
@@ -411,12 +477,12 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The reason why deletion protection is enabled.
-             * <p>
+             * <p>The reason why the configuration read-only mode is enabled.</p>
+             * <p>The reason must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+             * <p>This parameter is available only if the <strong>ModificationProtectionStatus</strong> parameter is set to <strong>ConsoleProtection</strong>.</p>
              * 
-             * It must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter.
-             * 
-             * This parameter takes effect only when **ModificationProtectionStatus** is set to **ConsoleProtection**.
+             * <strong>example:</strong>
+             * <p>Test Reason</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -424,13 +490,17 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the configuration read-only mode is enabled for the ALB instance. Valid values:
-             * <p>
+             * <p>Indicates whether the configuration read-only mode is enabled for the ALB instance. Valid values:</p>
+             * <ul>
+             * <li><strong>NonProtection</strong>: Modification protection is disabled. In this case, you cannot set the ModificationProtectionReason parameter. If the ModificationProtectionReason parameter is specified, the value is cleared.</li>
+             * <li><strong>ConsoleProtection</strong>: Modification protection is enabled. In this case, you can set the ModificationProtectionReason parameter.</li>
+             * </ul>
+             * <blockquote>
+             * <p> If the value is <strong>ConsoleProtection</strong>, modification protection is enabled. You cannot modify the configurations of the ALB instance in the ALB console. However, you can call API operations to modify the configurations of the ALB instance.</p>
+             * </blockquote>
              * 
-             * *   **NonProtection**: The configuration read-only mode is disabled. In this case, you cannot specify ModificationProtectionReason. If you specify ModificationProtectionReason, the value of the parameter is cleared.
-             * *   **ConsoleProtection**: The configuration read-only mode is enabled. In this case, you can specify ModificationProtectionReason.
-             * 
-             * > If you set this parameter to **ConsoleProtection**, you cannot use the ALB console to modify instance configurations. However, you can call API operations to modify instance configurations.
+             * <strong>example:</strong>
+             * <p>ConsoleProtection</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -444,11 +514,17 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLoadBalancersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLoadBalancersResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -483,7 +559,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key of the ALB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KeyTest</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -491,7 +570,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value of the ALB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alueTest</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -505,65 +587,71 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLoadBalancersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLoadBalancersResponseBody</p>
+     */
     public static class LoadBalancers extends TeaModel {
-        @NameInMap("AccessLogConfig")
+        @com.aliyun.core.annotation.NameInMap("AccessLogConfig")
         private AccessLogConfig accessLogConfig;
 
-        @NameInMap("AddressAllocatedMode")
+        @com.aliyun.core.annotation.NameInMap("AddressAllocatedMode")
         private String addressAllocatedMode;
 
-        @NameInMap("AddressIpVersion")
+        @com.aliyun.core.annotation.NameInMap("AddressIpVersion")
         private String addressIpVersion;
 
-        @NameInMap("AddressType")
+        @com.aliyun.core.annotation.NameInMap("AddressType")
         private String addressType;
 
-        @NameInMap("BandwidthPackageId")
+        @com.aliyun.core.annotation.NameInMap("BandwidthPackageId")
         private String bandwidthPackageId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DNSName")
+        @com.aliyun.core.annotation.NameInMap("DNSName")
         private String DNSName;
 
-        @NameInMap("DeletionProtectionConfig")
+        @com.aliyun.core.annotation.NameInMap("DeletionProtectionConfig")
         private DeletionProtectionConfig deletionProtectionConfig;
 
-        @NameInMap("Ipv6AddressType")
+        @com.aliyun.core.annotation.NameInMap("Ipv6AddressType")
         private String ipv6AddressType;
 
-        @NameInMap("LoadBalancerBillingConfig")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerBillingConfig")
         private LoadBalancerBillingConfig loadBalancerBillingConfig;
 
-        @NameInMap("LoadBalancerBussinessStatus")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerBussinessStatus")
         private String loadBalancerBussinessStatus;
 
-        @NameInMap("LoadBalancerEdition")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerEdition")
         private String loadBalancerEdition;
 
-        @NameInMap("LoadBalancerId")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
         private String loadBalancerId;
 
-        @NameInMap("LoadBalancerName")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerName")
         private String loadBalancerName;
 
-        @NameInMap("LoadBalancerOperationLocks")
-        private java.util.List < LoadBalancerOperationLocks> loadBalancerOperationLocks;
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerOperationLocks")
+        private java.util.List<LoadBalancerOperationLocks> loadBalancerOperationLocks;
 
-        @NameInMap("LoadBalancerStatus")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerStatus")
         private String loadBalancerStatus;
 
-        @NameInMap("ModificationProtectionConfig")
+        @com.aliyun.core.annotation.NameInMap("ModificationProtectionConfig")
         private ModificationProtectionConfig modificationProtectionConfig;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private LoadBalancers(Builder builder) {
@@ -698,7 +786,7 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         /**
          * @return loadBalancerOperationLocks
          */
-        public java.util.List < LoadBalancerOperationLocks> getLoadBalancerOperationLocks() {
+        public java.util.List<LoadBalancerOperationLocks> getLoadBalancerOperationLocks() {
             return this.loadBalancerOperationLocks;
         }
 
@@ -726,7 +814,7 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -752,15 +840,15 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             private String loadBalancerEdition; 
             private String loadBalancerId; 
             private String loadBalancerName; 
-            private java.util.List < LoadBalancerOperationLocks> loadBalancerOperationLocks; 
+            private java.util.List<LoadBalancerOperationLocks> loadBalancerOperationLocks; 
             private String loadBalancerStatus; 
             private ModificationProtectionConfig modificationProtectionConfig; 
             private String resourceGroupId; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String vpcId; 
 
             /**
-             * The configuration of the access log.
+             * <p>The configurations of access logs.</p>
              */
             public Builder accessLogConfig(AccessLogConfig accessLogConfig) {
                 this.accessLogConfig = accessLogConfig;
@@ -768,11 +856,14 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The mode in which IP addresses are allocated. Valid values:
-             * <p>
+             * <p>The mode in which IP addresses are allocated. Valid values:</p>
+             * <ul>
+             * <li><strong>Fixed</strong>: The ALB instance uses a static IP address.</li>
+             * <li><strong>Dynamic</strong>: dynamically allocates an IP address to each zone of the ALB instance.</li>
+             * </ul>
              * 
-             * *   **Fixed**: allocates a static IP address to the ALB instance.
-             * *   **Dynamic**: dynamically allocates an IP address to each zone of the ALB instance.
+             * <strong>example:</strong>
+             * <p>Fixed</p>
              */
             public Builder addressAllocatedMode(String addressAllocatedMode) {
                 this.addressAllocatedMode = addressAllocatedMode;
@@ -780,11 +871,14 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The IP version. Valid values:
-             * <p>
+             * <p>The IP version. Valid values:</p>
+             * <ul>
+             * <li><strong>IPv4</strong></li>
+             * <li><strong>DualStack</strong></li>
+             * </ul>
              * 
-             * *   **IPv4**
-             * *   **DualStack**
+             * <strong>example:</strong>
+             * <p>DualStack</p>
              */
             public Builder addressIpVersion(String addressIpVersion) {
                 this.addressIpVersion = addressIpVersion;
@@ -792,11 +886,14 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of IP address that the ALB instance uses to provide services. Valid values:
-             * <p>
+             * <p>The type of IP address that the ALB instance uses to provide services. Valid values:</p>
+             * <ul>
+             * <li><strong>Internet</strong>: The ALB instance is assigned a public IP address. The domain name is resolved to the public IP address. The ALB instance is accessible over the Internet.</li>
+             * <li><strong>Intranet</strong>: The ALB instance is assigned only a private IP address. The domain name is resolved to the private IP address. The ALB instance is accessible only within the VPC of the ALB instance.</li>
+             * </ul>
              * 
-             * *   **Internet**: The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. Therefore, the ALB instance can be accessed over the Internet.
-             * *   **Intranet**: The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. In this case, the ALB instance can be accessed over the VPC where the ALB instance is deployed.
+             * <strong>example:</strong>
+             * <p>Intranet</p>
              */
             public Builder addressType(String addressType) {
                 this.addressType = addressType;
@@ -804,7 +901,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the EIP bandwidth plan that is associated with the NLB instance if the NLB instance uses a public IP address.
+             * <p>The ID of the Internet Shared Bandwidth instance that is associated with the Internet-facing ALB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cbwp-bp1vevu8h3ieh****</p>
              */
             public Builder bandwidthPackageId(String bandwidthPackageId) {
                 this.bandwidthPackageId = bandwidthPackageId;
@@ -812,7 +912,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the resource was created.
+             * <p>The time when the resource was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-02T02:49:05Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -820,7 +923,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name of the ALB instance.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alb-95qnr2itwu9orb****.cn-hangzhou.alb.aliyuncs.com</p>
              */
             public Builder DNSName(String DNSName) {
                 this.DNSName = DNSName;
@@ -828,7 +934,7 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of deletion protection.
+             * <p>The configuration of the deletion protection feature.</p>
              */
             public Builder deletionProtectionConfig(DeletionProtectionConfig deletionProtectionConfig) {
                 this.deletionProtectionConfig = deletionProtectionConfig;
@@ -836,11 +942,14 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of IPv6 address that is used by the ALB instance. Valid values:
-             * <p>
+             * <p>The type of IPv6 address used by the ALB instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Internet</strong> The ALB instance is assigned a public IP address. The domain name is resolved to the public IP address. The ALB instance is accessible over the Internet.</li>
+             * <li><strong>Intranet</strong> The ALB instance is assigned only a private IP address. The domain name is resolved to the private IP address. The ALB instance is accessible only within the VPC of the ALB instance.</li>
+             * </ul>
              * 
-             * *   **Internet**: The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. Therefore, the ALB instance can be accessed over the Internet.
-             * *   **Intranet**: The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. Therefore, the ALB instance can be accessed over the VPC in which the ALB instance is deployed.
+             * <strong>example:</strong>
+             * <p>Intranet</p>
              */
             public Builder ipv6AddressType(String ipv6AddressType) {
                 this.ipv6AddressType = ipv6AddressType;
@@ -848,7 +957,7 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of the billing method.
+             * <p>The billing information about the ALB instance.</p>
              */
             public Builder loadBalancerBillingConfig(LoadBalancerBillingConfig loadBalancerBillingConfig) {
                 this.loadBalancerBillingConfig = loadBalancerBillingConfig;
@@ -856,11 +965,14 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The business status of the ALB instance. Valid values:
-             * <p>
+             * <p>The status of the ALB instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Abnormal</strong></li>
+             * <li><strong>Normal</strong></li>
+             * </ul>
              * 
-             * *   **Abnormal**
-             * *   **Normal**
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder loadBalancerBussinessStatus(String loadBalancerBussinessStatus) {
                 this.loadBalancerBussinessStatus = loadBalancerBussinessStatus;
@@ -868,12 +980,15 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The edition of the ALB instance. Different editions have different limits and support different billing methods. Valid values:
-             * <p>
+             * <p>The edition of the ALB instance. The features and billing rules vary based on the edition. Valid values:</p>
+             * <ul>
+             * <li><strong>Basic</strong></li>
+             * <li><strong>Standard</strong></li>
+             * <li><strong>StandardWithWaf</strong></li>
+             * </ul>
              * 
-             * *   **Basic**: basic
-             * *   **Standard**: standard
-             * *   **StandardWithWaf**: WAF-enabled
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder loadBalancerEdition(String loadBalancerEdition) {
                 this.loadBalancerEdition = loadBalancerEdition;
@@ -881,7 +996,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ALB instance.
+             * <p>The ID of the ALB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alb-o9ulmq5hgn68jk****</p>
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -889,7 +1007,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the NLB instance.
+             * <p>The name of the ALB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alb-instance-test</p>
              */
             public Builder loadBalancerName(String loadBalancerName) {
                 this.loadBalancerName = loadBalancerName;
@@ -897,22 +1018,25 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of the operation lock.
+             * <p>The configuration of the operation lock.</p>
              */
-            public Builder loadBalancerOperationLocks(java.util.List < LoadBalancerOperationLocks> loadBalancerOperationLocks) {
+            public Builder loadBalancerOperationLocks(java.util.List<LoadBalancerOperationLocks> loadBalancerOperationLocks) {
                 this.loadBalancerOperationLocks = loadBalancerOperationLocks;
                 return this;
             }
 
             /**
-             * The status of the ALB instance. Valid values:
-             * <p>
+             * <p>The status of the ALB instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Inactive</strong>: The ALB instance is disabled. ALB instances in the Inactive state do not forward traffic.</li>
+             * <li><strong>Active</strong>: The ALB instance is running.</li>
+             * <li><strong>Provisioning</strong>: The ALB instance is being created.</li>
+             * <li><strong>Configuring</strong>: The ALB instance is being modified.</li>
+             * <li><strong>CreateFailed</strong>: The system failed to create the ALB instance.</li>
+             * </ul>
              * 
-             * *   **Inactive**: The ALB instance is disabled. The listeners do not forward traffic.
-             * *   **Active**: The ALB instance is running.
-             * *   **Provisioning**: The ALB instance is being created.
-             * *   **Configuring**: The ALB instance is being modified.
-             * *   **CreateFailed**: The system failed to create the ALB instance.
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder loadBalancerStatus(String loadBalancerStatus) {
                 this.loadBalancerStatus = loadBalancerStatus;
@@ -920,7 +1044,7 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration read-only mode.
+             * <p>The configuration of modification protection.</p>
              */
             public Builder modificationProtectionConfig(ModificationProtectionConfig modificationProtectionConfig) {
                 this.modificationProtectionConfig = modificationProtectionConfig;
@@ -928,7 +1052,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-atstuj3rtop****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -936,15 +1063,18 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The tags that are added to the instance.
+             * <p>The information about the tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * The ID of the VPC to which the ALB instance belongs.
+             * <p>The ID of the VPC in which the ALB instance is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1b49rqrybk45nio****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

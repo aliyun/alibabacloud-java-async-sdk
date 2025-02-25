@@ -1,29 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateFlowJSONAssetRequest} extends {@link RequestModel}
  *
  * <p>UpdateFlowJSONAssetRequest</p>
  */
 public class UpdateFlowJSONAssetRequest extends Request {
-    @Body
-    @NameInMap("CustSpaceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustSpaceId")
     private String custSpaceId;
 
-    @Body
-    @NameInMap("FilePath")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FilePath")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String filePath;
 
-    @Body
-    @NameInMap("FlowId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FlowId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String flowId;
 
     private UpdateFlowJSONAssetRequest(Builder builder) {
@@ -84,7 +84,10 @@ public class UpdateFlowJSONAssetRequest extends Request {
         } 
 
         /**
-         * CustSpaceId.
+         * <p>SpaceId/instance ID of ISV sub customer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9399393</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putBodyParameter("CustSpaceId", custSpaceId);
@@ -93,7 +96,11 @@ public class UpdateFlowJSONAssetRequest extends Request {
         }
 
         /**
-         * FilePath.
+         * <p>JSON file generated according to Facebook flow rules.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://aliyun/json.json">https://aliyun/json.json</a></p>
          */
         public Builder filePath(String filePath) {
             this.putBodyParameter("FilePath", filePath);
@@ -102,7 +109,11 @@ public class UpdateFlowJSONAssetRequest extends Request {
         }
 
         /**
-         * Flow ID。
+         * <p>The Flow ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flow_001</p>
          */
         public Builder flowId(String flowId) {
             this.putBodyParameter("FlowId", flowId);

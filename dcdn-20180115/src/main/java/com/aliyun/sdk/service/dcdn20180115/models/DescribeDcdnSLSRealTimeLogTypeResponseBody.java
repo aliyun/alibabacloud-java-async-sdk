@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnSLSRealTimeLogTypeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnSLSRealTimeLogTypeResponseBody</p>
  */
 public class DescribeDcdnSLSRealTimeLogTypeResponseBody extends TeaModel {
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private Content content;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDcdnSLSRealTimeLogTypeResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeDcdnSLSRealTimeLogTypeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Content.
+         * <p>The returned results.</p>
          */
         public Builder content(Content content) {
             this.content = content;
@@ -58,7 +58,10 @@ public class DescribeDcdnSLSRealTimeLogTypeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +74,17 @@ public class DescribeDcdnSLSRealTimeLogTypeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnSLSRealTimeLogTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnSLSRealTimeLogTypeResponseBody</p>
+     */
     public static class Business extends TeaModel {
-        @NameInMap("BusinessType")
+        @com.aliyun.core.annotation.NameInMap("BusinessType")
         private String businessType;
 
-        @NameInMap("Desc")
+        @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
 
         private Business(Builder builder) {
@@ -110,7 +119,15 @@ public class DescribeDcdnSLSRealTimeLogTypeResponseBody extends TeaModel {
             private String desc; 
 
             /**
-             * BusinessType.
+             * <p>The type of real-time logs. Valid values:</p>
+             * <ul>
+             * <li><strong>dcdn_log_access_l1</strong>: access logs.</li>
+             * <li><strong>dcdn_log_er</strong>: EdgeRoutine logs</li>
+             * <li><strong>dcdn_log_waf</strong>: WAF interception logs</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>dcdn_log_access_l1</p>
              */
             public Builder businessType(String businessType) {
                 this.businessType = businessType;
@@ -118,7 +135,10 @@ public class DescribeDcdnSLSRealTimeLogTypeResponseBody extends TeaModel {
             }
 
             /**
-             * Desc.
+             * <p>The description of the real-time log type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>product_U8JE</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -132,8 +152,14 @@ public class DescribeDcdnSLSRealTimeLogTypeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnSLSRealTimeLogTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnSLSRealTimeLogTypeResponseBody</p>
+     */
     public static class Content extends TeaModel {
-        @NameInMap("Business")
+        @com.aliyun.core.annotation.NameInMap("Business")
         private java.util.List < Business> business;
 
         private Content(Builder builder) {

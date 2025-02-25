@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUserSayResponseBody} extends {@link TeaModel}
  *
  * <p>CreateUserSayResponseBody</p>
  */
 public class CreateUserSayResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UserSayId")
+    @com.aliyun.core.annotation.NameInMap("UserSayId")
     private Long userSayId;
 
     private CreateUserSayResponseBody(Builder builder) {

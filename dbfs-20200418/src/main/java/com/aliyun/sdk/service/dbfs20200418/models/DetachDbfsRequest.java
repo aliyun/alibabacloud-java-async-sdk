@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbfs20200418.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachDbfsRequest} extends {@link RequestModel}
  *
  * <p>DetachDbfsRequest</p>
  */
 public class DetachDbfsRequest extends Request {
-    @Query
-    @NameInMap("ECSInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ECSInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ECSInstanceId;
 
-    @Query
-    @NameInMap("FsId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FsId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fsId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private DetachDbfsRequest(Builder builder) {
@@ -85,7 +85,10 @@ public class DetachDbfsRequest extends Request {
         } 
 
         /**
-         * ECSInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4ph***</p>
          */
         public Builder ECSInstanceId(String ECSInstanceId) {
             this.putQueryParameter("ECSInstanceId", ECSInstanceId);
@@ -94,7 +97,10 @@ public class DetachDbfsRequest extends Request {
         }
 
         /**
-         * FsId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-bp131n0q38u3a4zi*****</p>
          */
         public Builder fsId(String fsId) {
             this.putQueryParameter("FsId", fsId);
@@ -103,7 +109,10 @@ public class DetachDbfsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

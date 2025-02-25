@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDDosEventSrcIpResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDDosEventSrcIpResponseBody</p>
  */
 public class DescribeDDosEventSrcIpResponseBody extends TeaModel {
-    @NameInMap("Ips")
-    private java.util.List < Ips> ips;
+    @com.aliyun.core.annotation.NameInMap("Ips")
+    private java.util.List<Ips> ips;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDDosEventSrcIpResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeDDosEventSrcIpResponseBody extends TeaModel {
     /**
      * @return ips
      */
-    public java.util.List < Ips> getIps() {
+    public java.util.List<Ips> getIps() {
         return this.ips;
     }
 
@@ -46,19 +51,22 @@ public class DescribeDDosEventSrcIpResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Ips> ips; 
+        private java.util.List<Ips> ips; 
         private String requestId; 
 
         /**
-         * An array that consists of information about the source IP address of the volumetric attack.
+         * <p>An array that consists of information about the source IP address of the volumetric attack.</p>
          */
-        public Builder ips(java.util.List < Ips> ips) {
+        public Builder ips(java.util.List<Ips> ips) {
             this.ips = ips;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>38A0224E-FDBC-4733-A362-B391827FC1E9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class DescribeDDosEventSrcIpResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDDosEventSrcIpResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDDosEventSrcIpResponseBody</p>
+     */
     public static class Ips extends TeaModel {
-        @NameInMap("AreaId")
+        @com.aliyun.core.annotation.NameInMap("AreaId")
         private String areaId;
 
-        @NameInMap("Isp")
+        @com.aliyun.core.annotation.NameInMap("Isp")
         private String isp;
 
-        @NameInMap("SrcIp")
+        @com.aliyun.core.annotation.NameInMap("SrcIp")
         private String srcIp;
 
         private Ips(Builder builder) {
@@ -122,7 +136,10 @@ public class DescribeDDosEventSrcIpResponseBody extends TeaModel {
             private String srcIp; 
 
             /**
-             * The code or ID of the source region. For more information, see [Codes of administrative regions in China and codes of countries and areas](~~167926~~). For example, **110000** indicates Beijing, China, and **us** indicates the United States.
+             * <p>The code or ID of the source region. For more information, see <a href="https://help.aliyun.com/document_detail/167926.html">Codes of administrative regions in China and codes of countries and areas</a>. For example, <strong>110000</strong> indicates Beijing, China, and <strong>us</strong> indicates the United States.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>110000</p>
              */
             public Builder areaId(String areaId) {
                 this.areaId = areaId;
@@ -130,27 +147,30 @@ public class DescribeDDosEventSrcIpResponseBody extends TeaModel {
             }
 
             /**
-             * The Internet service provider (ISP) for the volumetric attack. Valid values:
-             * <p>
+             * <p>The Internet service provider (ISP) for the volumetric attack. Valid values:</p>
+             * <ul>
+             * <li><strong>100017</strong>: China Telecom</li>
+             * <li><strong>100026</strong>: China Unicom</li>
+             * <li><strong>100025</strong>: China Mobile</li>
+             * <li><strong>100027</strong>: China Education and Research Network</li>
+             * <li><strong>100020</strong>: China Mobile Tietong</li>
+             * <li><strong>1000143</strong>: Dr.Peng Telecom &amp; Media Group</li>
+             * <li><strong>100080</strong>: Beijing Gehua CATV Network</li>
+             * <li><strong>1000139</strong>: National Radio and Television Administration</li>
+             * <li><strong>100023</strong>: Oriental Cable Network</li>
+             * <li><strong>100063</strong>: Founder Broadband</li>
+             * <li><strong>1000337</strong>: China Internet Exchange</li>
+             * <li><strong>100021</strong>: 21Vianet Group</li>
+             * <li><strong>1000333</strong>: Wasu Media Holding</li>
+             * <li><strong>100093</strong>: Wangsu Science &amp; Technology</li>
+             * <li><strong>1000401</strong>: Tencent</li>
+             * <li><strong>100099</strong>: Baidu</li>
+             * <li><strong>1000323</strong>: Alibaba Cloud</li>
+             * <li><strong>100098</strong>: Alibaba</li>
+             * </ul>
              * 
-             * *   **100017**: China Telecom
-             * *   **100026**: China Unicom
-             * *   **100025**: China Mobile
-             * *   **100027**: China Education and Research Network
-             * *   **100020**: China Mobile Tietong
-             * *   **1000143**: Dr.Peng Telecom & Media Group
-             * *   **100080**: Beijing Gehua CATV Network
-             * *   **1000139**: National Radio and Television Administration
-             * *   **100023**: Oriental Cable Network
-             * *   **100063**: Founder Broadband
-             * *   **1000337**: China Internet Exchange
-             * *   **100021**: 21Vianet Group
-             * *   **1000333**: Wasu Media Holding
-             * *   **100093**: Wangsu Science & Technology
-             * *   **1000401**: Tencent
-             * *   **100099**: Baidu
-             * *   **1000323**: Alibaba Cloud
-             * *   **100098**: Alibaba
+             * <strong>example:</strong>
+             * <p>100026</p>
              */
             public Builder isp(String isp) {
                 this.isp = isp;
@@ -158,7 +178,10 @@ public class DescribeDDosEventSrcIpResponseBody extends TeaModel {
             }
 
             /**
-             * The source IP address of the volumetric attack.
+             * <p>The source IP address of the volumetric attack.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>218.<em><strong>.</strong></em>.24</p>
              */
             public Builder srcIp(String srcIp) {
                 this.srcIp = srcIp;

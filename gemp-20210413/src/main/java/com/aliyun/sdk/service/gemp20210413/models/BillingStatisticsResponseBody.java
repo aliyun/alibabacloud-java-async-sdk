@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BillingStatisticsResponseBody</p>
  */
 public class BillingStatisticsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
     private BillingStatisticsResponseBody(Builder builder) {
@@ -72,67 +71,67 @@ public class BillingStatisticsResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("appUserCount")
+        @com.aliyun.core.annotation.NameInMap("appUserCount")
         private Long appUserCount;
 
-        @NameInMap("appUserCountFree")
+        @com.aliyun.core.annotation.NameInMap("appUserCountFree")
         private Long appUserCountFree;
 
-        @NameInMap("emailSend")
+        @com.aliyun.core.annotation.NameInMap("emailSend")
         private Long emailSend;
 
-        @NameInMap("emailSendFree")
+        @com.aliyun.core.annotation.NameInMap("emailSendFree")
         private Long emailSendFree;
 
-        @NameInMap("escalationPlanCount")
+        @com.aliyun.core.annotation.NameInMap("escalationPlanCount")
         private Long escalationPlanCount;
 
-        @NameInMap("escalationPlanCountFree")
+        @com.aliyun.core.annotation.NameInMap("escalationPlanCountFree")
         private Long escalationPlanCountFree;
 
-        @NameInMap("eventReportApi")
+        @com.aliyun.core.annotation.NameInMap("eventReportApi")
         private Long eventReportApi;
 
-        @NameInMap("eventReportApiFree")
+        @com.aliyun.core.annotation.NameInMap("eventReportApiFree")
         private Long eventReportApiFree;
 
-        @NameInMap("hasScheduleServiceGroupCount")
+        @com.aliyun.core.annotation.NameInMap("hasScheduleServiceGroupCount")
         private Long hasScheduleServiceGroupCount;
 
-        @NameInMap("hasScheduleServiceGroupCountFree")
+        @com.aliyun.core.annotation.NameInMap("hasScheduleServiceGroupCountFree")
         private Long hasScheduleServiceGroupCountFree;
 
-        @NameInMap("imMsgSend")
+        @com.aliyun.core.annotation.NameInMap("imMsgSend")
         private Long imMsgSend;
 
-        @NameInMap("imMsgSendFree")
+        @com.aliyun.core.annotation.NameInMap("imMsgSendFree")
         private Long imMsgSendFree;
 
-        @NameInMap("ruleCount")
+        @com.aliyun.core.annotation.NameInMap("ruleCount")
         private Long ruleCount;
 
-        @NameInMap("ruleCountFree")
+        @com.aliyun.core.annotation.NameInMap("ruleCountFree")
         private Long ruleCountFree;
 
-        @NameInMap("smsSend")
+        @com.aliyun.core.annotation.NameInMap("smsSend")
         private Long smsSend;
 
-        @NameInMap("smsSendFree")
+        @com.aliyun.core.annotation.NameInMap("smsSendFree")
         private Long smsSendFree;
 
-        @NameInMap("subscriptionNotifyCount")
+        @com.aliyun.core.annotation.NameInMap("subscriptionNotifyCount")
         private Long subscriptionNotifyCount;
 
-        @NameInMap("subscriptionNotifyCountFree")
+        @com.aliyun.core.annotation.NameInMap("subscriptionNotifyCountFree")
         private Long subscriptionNotifyCountFree;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private Boolean type;
 
-        @NameInMap("voiceSend")
+        @com.aliyun.core.annotation.NameInMap("voiceSend")
         private Long voiceSend;
 
-        @NameInMap("voiceSendFree")
+        @com.aliyun.core.annotation.NameInMap("voiceSendFree")
         private Long voiceSendFree;
 
         private Data(Builder builder) {

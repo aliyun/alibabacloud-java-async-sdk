@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpcFirewallAclGroupListRequest} extends {@link RequestModel}
  *
  * <p>DescribeVpcFirewallAclGroupListRequest</p>
  */
 public class DescribeVpcFirewallAclGroupListRequest extends Request {
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private String currentPage;
 
-    @Query
-    @NameInMap("FirewallConfigureStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirewallConfigureStatus")
     private String firewallConfigureStatus;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
     private DescribeVpcFirewallAclGroupListRequest(Builder builder) {
@@ -96,7 +101,10 @@ public class DescribeVpcFirewallAclGroupListRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: 1.
+         * <p>The number of the page to return. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -105,12 +113,15 @@ public class DescribeVpcFirewallAclGroupListRequest extends Request {
         }
 
         /**
-         * Specifies whether VPC firewalls are configured. Valid values:
-         * <p>
+         * <p>Specifies whether VPC firewalls are configured. Valid values:</p>
+         * <ul>
+         * <li><strong>notconfigured</strong>: VPC firewalls are not configured.</li>
+         * <li><strong>configured</strong>: VPC firewalls are configured.</li>
+         * <li>If you do not specify this parameter, the access control policies of all VPC firewalls are queried.</li>
+         * </ul>
          * 
-         * *   **notconfigured**: VPC firewalls are not configured.
-         * *   **configured**: VPC firewalls are configured.
-         * *   If this parameter is left empty, all policy groups of access control policies are queried.
+         * <strong>example:</strong>
+         * <p>configured</p>
          */
         public Builder firewallConfigureStatus(String firewallConfigureStatus) {
             this.putQueryParameter("FirewallConfigureStatus", firewallConfigureStatus);
@@ -119,11 +130,14 @@ public class DescribeVpcFirewallAclGroupListRequest extends Request {
         }
 
         /**
-         * The language of the content within the response. Valid values:
-         * <p>
+         * <p>The language of the content within the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -132,7 +146,10 @@ public class DescribeVpcFirewallAclGroupListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 50.
+         * <p>The number of entries to return on each page. Maximum value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);

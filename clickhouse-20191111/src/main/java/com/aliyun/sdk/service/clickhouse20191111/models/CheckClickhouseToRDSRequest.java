@@ -1,79 +1,84 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckClickhouseToRDSRequest} extends {@link RequestModel}
  *
  * <p>CheckClickhouseToRDSRequest</p>
  */
 public class CheckClickhouseToRDSRequest extends Request {
-    @Query
-    @NameInMap("CkPassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CkPassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ckPassword;
 
-    @Query
-    @NameInMap("CkUserName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CkUserName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ckUserName;
 
-    @Query
-    @NameInMap("ClickhousePort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClickhousePort")
     private Long clickhousePort;
 
-    @Query
-    @NameInMap("DbClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbClusterId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RdsId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RdsId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String rdsId;
 
-    @Query
-    @NameInMap("RdsPassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RdsPassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String rdsPassword;
 
-    @Query
-    @NameInMap("RdsPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RdsPort")
     private Long rdsPort;
 
-    @Query
-    @NameInMap("RdsUserName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RdsUserName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String rdsUserName;
 
-    @Query
-    @NameInMap("RdsVpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RdsVpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String rdsVpcId;
 
-    @Query
-    @NameInMap("RdsVpcUrl")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RdsVpcUrl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String rdsVpcUrl;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private CheckClickhouseToRDSRequest(Builder builder) {
@@ -244,7 +249,11 @@ public class CheckClickhouseToRDSRequest extends Request {
         } 
 
         /**
-         * CkPassword.
+         * <p>The password of the account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456Aa</p>
          */
         public Builder ckPassword(String ckPassword) {
             this.putQueryParameter("CkPassword", ckPassword);
@@ -253,7 +262,11 @@ public class CheckClickhouseToRDSRequest extends Request {
         }
 
         /**
-         * CkUserName.
+         * <p>The account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user1</p>
          */
         public Builder ckUserName(String ckUserName) {
             this.putQueryParameter("CkUserName", ckUserName);
@@ -262,7 +275,10 @@ public class CheckClickhouseToRDSRequest extends Request {
         }
 
         /**
-         * ClickhousePort.
+         * <p>The port number of the ApsaraDB for ClickHouse cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8123</p>
          */
         public Builder clickhousePort(Long clickhousePort) {
             this.putQueryParameter("ClickhousePort", clickhousePort);
@@ -271,7 +287,11 @@ public class CheckClickhouseToRDSRequest extends Request {
         }
 
         /**
-         * DbClusterId.
+         * <p>The ID of the ApsaraDB for ClickHouse cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-2zeyy362b5sbm****</p>
          */
         public Builder dbClusterId(String dbClusterId) {
             this.putQueryParameter("DbClusterId", dbClusterId);
@@ -298,7 +318,11 @@ public class CheckClickhouseToRDSRequest extends Request {
         }
 
         /**
-         * RdsId.
+         * <p>The ID of the ApsaraDB RDS for MySQL instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp13v4bnwlu8j****</p>
          */
         public Builder rdsId(String rdsId) {
             this.putQueryParameter("RdsId", rdsId);
@@ -307,7 +331,11 @@ public class CheckClickhouseToRDSRequest extends Request {
         }
 
         /**
-         * RdsPassword.
+         * <p>The password of the account that is used to log on to the database in the ApsaraDB RDS for MySQL instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456Rr</p>
          */
         public Builder rdsPassword(String rdsPassword) {
             this.putQueryParameter("RdsPassword", rdsPassword);
@@ -316,7 +344,10 @@ public class CheckClickhouseToRDSRequest extends Request {
         }
 
         /**
-         * RdsPort.
+         * <p>The port number of the ApsaraDB RDS for MySQL instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         public Builder rdsPort(Long rdsPort) {
             this.putQueryParameter("RdsPort", rdsPort);
@@ -325,7 +356,11 @@ public class CheckClickhouseToRDSRequest extends Request {
         }
 
         /**
-         * RdsUserName.
+         * <p>The account that is used to log on to the database in the ApsaraDB RDS for MySQL instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user2</p>
          */
         public Builder rdsUserName(String rdsUserName) {
             this.putQueryParameter("RdsUserName", rdsUserName);
@@ -334,7 +369,11 @@ public class CheckClickhouseToRDSRequest extends Request {
         }
 
         /**
-         * RdsVpcId.
+         * <p>The ID of the VPC in which the ApsaraDB RDS for MySQL instance is deployed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-wz9mm0qka0winfl47****</p>
          */
         public Builder rdsVpcId(String rdsVpcId) {
             this.putQueryParameter("RdsVpcId", rdsVpcId);
@@ -343,7 +382,11 @@ public class CheckClickhouseToRDSRequest extends Request {
         }
 
         /**
-         * RdsVpcUrl.
+         * <p>The internal endpoint of the ApsaraDB RDS for MySQL instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp16t9h3999xb0a7****.mysql.rds.aliyuncs.com</p>
          */
         public Builder rdsVpcUrl(String rdsVpcUrl) {
             this.putQueryParameter("RdsVpcUrl", rdsVpcUrl);

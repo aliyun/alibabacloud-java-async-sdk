@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifySentenceResponseBody} extends {@link TeaModel}
  *
  * <p>VerifySentenceResponseBody</p>
  */
 public class VerifySentenceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("IncorrectWords")
+    @com.aliyun.core.annotation.NameInMap("IncorrectWords")
     private Integer incorrectWords;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SourceRole")
+    @com.aliyun.core.annotation.NameInMap("SourceRole")
     private Integer sourceRole;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TargetRole")
+    @com.aliyun.core.annotation.NameInMap("TargetRole")
     private Integer targetRole;
 
     private VerifySentenceResponseBody(Builder builder) {
@@ -191,9 +196,15 @@ public class VerifySentenceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link VerifySentenceResponseBody} extends {@link TeaModel}
+     *
+     * <p>VerifySentenceResponseBody</p>
+     */
     public static class Line extends TeaModel {
-        @NameInMap("Line")
-        private java.util.List < String > line;
+        @com.aliyun.core.annotation.NameInMap("Line")
+        private java.util.List<String> line;
 
         private Line(Builder builder) {
             this.line = builder.line;
@@ -210,17 +221,17 @@ public class VerifySentenceResponseBody extends TeaModel {
         /**
          * @return line
          */
-        public java.util.List < String > getLine() {
+        public java.util.List<String> getLine() {
             return this.line;
         }
 
         public static final class Builder {
-            private java.util.List < String > line; 
+            private java.util.List<String> line; 
 
             /**
              * Line.
              */
-            public Builder line(java.util.List < String > line) {
+            public Builder line(java.util.List<String> line) {
                 this.line = line;
                 return this;
             }
@@ -232,11 +243,17 @@ public class VerifySentenceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link VerifySentenceResponseBody} extends {@link TeaModel}
+     *
+     * <p>VerifySentenceResponseBody</p>
+     */
     public static class Source extends TeaModel {
-        @NameInMap("Line")
+        @com.aliyun.core.annotation.NameInMap("Line")
         private Line line;
 
-        @NameInMap("Position")
+        @com.aliyun.core.annotation.NameInMap("Position")
         private Integer position;
 
         private Source(Builder builder) {
@@ -293,9 +310,15 @@ public class VerifySentenceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link VerifySentenceResponseBody} extends {@link TeaModel}
+     *
+     * <p>VerifySentenceResponseBody</p>
+     */
     public static class TargetLine extends TeaModel {
-        @NameInMap("Line")
-        private java.util.List < String > line;
+        @com.aliyun.core.annotation.NameInMap("Line")
+        private java.util.List<String> line;
 
         private TargetLine(Builder builder) {
             this.line = builder.line;
@@ -312,17 +335,17 @@ public class VerifySentenceResponseBody extends TeaModel {
         /**
          * @return line
          */
-        public java.util.List < String > getLine() {
+        public java.util.List<String> getLine() {
             return this.line;
         }
 
         public static final class Builder {
-            private java.util.List < String > line; 
+            private java.util.List<String> line; 
 
             /**
              * Line.
              */
-            public Builder line(java.util.List < String > line) {
+            public Builder line(java.util.List<String> line) {
                 this.line = line;
                 return this;
             }
@@ -334,11 +357,17 @@ public class VerifySentenceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link VerifySentenceResponseBody} extends {@link TeaModel}
+     *
+     * <p>VerifySentenceResponseBody</p>
+     */
     public static class Target extends TeaModel {
-        @NameInMap("Line")
+        @com.aliyun.core.annotation.NameInMap("Line")
         private TargetLine line;
 
-        @NameInMap("Position")
+        @com.aliyun.core.annotation.NameInMap("Position")
         private Integer position;
 
         private Target(Builder builder) {
@@ -395,14 +424,20 @@ public class VerifySentenceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link VerifySentenceResponseBody} extends {@link TeaModel}
+     *
+     * <p>VerifySentenceResponseBody</p>
+     */
     public static class Delta extends TeaModel {
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private Source source;
 
-        @NameInMap("Target")
+        @com.aliyun.core.annotation.NameInMap("Target")
         private Target target;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Delta(Builder builder) {
@@ -476,9 +511,15 @@ public class VerifySentenceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link VerifySentenceResponseBody} extends {@link TeaModel}
+     *
+     * <p>VerifySentenceResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Delta")
-        private java.util.List < Delta> delta;
+        @com.aliyun.core.annotation.NameInMap("Delta")
+        private java.util.List<Delta> delta;
 
         private Data(Builder builder) {
             this.delta = builder.delta;
@@ -495,17 +536,17 @@ public class VerifySentenceResponseBody extends TeaModel {
         /**
          * @return delta
          */
-        public java.util.List < Delta> getDelta() {
+        public java.util.List<Delta> getDelta() {
             return this.delta;
         }
 
         public static final class Builder {
-            private java.util.List < Delta> delta; 
+            private java.util.List<Delta> delta; 
 
             /**
              * Delta.
              */
-            public Builder delta(java.util.List < Delta> delta) {
+            public Builder delta(java.util.List<Delta> delta) {
                 this.delta = delta;
                 return this;
             }

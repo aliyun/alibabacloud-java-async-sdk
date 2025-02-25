@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFreeLockCorrectOrderResponseBody} extends {@link TeaModel}
  *
  * <p>CreateFreeLockCorrectOrderResponseBody</p>
  */
 public class CreateFreeLockCorrectOrderResponseBody extends TeaModel {
-    @NameInMap("CreateOrderResult")
-    private java.util.List < Long > createOrderResult;
+    @com.aliyun.core.annotation.NameInMap("CreateOrderResult")
+    private java.util.List<Long> createOrderResult;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateFreeLockCorrectOrderResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class CreateFreeLockCorrectOrderResponseBody extends TeaModel {
     /**
      * @return createOrderResult
      */
-    public java.util.List < Long > getCreateOrderResult() {
+    public java.util.List<Long> getCreateOrderResult() {
         return this.createOrderResult;
     }
 
@@ -79,22 +84,25 @@ public class CreateFreeLockCorrectOrderResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Long > createOrderResult; 
+        private java.util.List<Long> createOrderResult; 
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * The ID of the ticket.
+         * <p>The ID of the ticket.</p>
          */
-        public Builder createOrderResult(java.util.List < Long > createOrderResult) {
+        public Builder createOrderResult(java.util.List<Long> createOrderResult) {
             this.createOrderResult = createOrderResult;
             return this;
         }
 
         /**
-         * The error code returned if the request fails.
+         * <p>The error code returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +110,10 @@ public class CreateFreeLockCorrectOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request fails.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +121,10 @@ public class CreateFreeLockCorrectOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +132,14 @@ public class CreateFreeLockCorrectOrderResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>false</strong>: The request fails.</li>
+         * </ul>
          * 
-         * *   **true**: The request is successful.
-         * *   **false**: The request fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

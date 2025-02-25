@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSecretParametersResponseBody} extends {@link TeaModel}
  *
  * <p>GetSecretParametersResponseBody</p>
  */
 public class GetSecretParametersResponseBody extends TeaModel {
-    @NameInMap("InvalidParameters")
-    private java.util.List < String > invalidParameters;
+    @com.aliyun.core.annotation.NameInMap("InvalidParameters")
+    private java.util.List<String> invalidParameters;
 
-    @NameInMap("Parameters")
-    private java.util.List < Parameters> parameters;
+    @com.aliyun.core.annotation.NameInMap("Parameters")
+    private java.util.List<Parameters> parameters;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetSecretParametersResponseBody(Builder builder) {
@@ -38,14 +43,14 @@ public class GetSecretParametersResponseBody extends TeaModel {
     /**
      * @return invalidParameters
      */
-    public java.util.List < String > getInvalidParameters() {
+    public java.util.List<String> getInvalidParameters() {
         return this.invalidParameters;
     }
 
     /**
      * @return parameters
      */
-    public java.util.List < Parameters> getParameters() {
+    public java.util.List<Parameters> getParameters() {
         return this.parameters;
     }
 
@@ -57,28 +62,31 @@ public class GetSecretParametersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > invalidParameters; 
-        private java.util.List < Parameters> parameters; 
+        private java.util.List<String> invalidParameters; 
+        private java.util.List<Parameters> parameters; 
         private String requestId; 
 
         /**
-         * Invalid encryption parameter.
+         * <p>Invalid encryption parameter.</p>
          */
-        public Builder invalidParameters(java.util.List < String > invalidParameters) {
+        public Builder invalidParameters(java.util.List<String> invalidParameters) {
             this.invalidParameters = invalidParameters;
             return this;
         }
 
         /**
-         * The information about the encryption parameter.
+         * <p>The information about the encryption parameter.</p>
          */
-        public Builder parameters(java.util.List < Parameters> parameters) {
+        public Builder parameters(java.util.List<Parameters> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5320F1D-92D9-44BB-A416-5FC525ED6D57</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,50 +99,56 @@ public class GetSecretParametersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSecretParametersResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSecretParametersResponseBody</p>
+     */
     public static class Parameters extends TeaModel {
-        @NameInMap("Constraints")
+        @com.aliyun.core.annotation.NameInMap("Constraints")
         private String constraints;
 
-        @NameInMap("CreatedBy")
+        @com.aliyun.core.annotation.NameInMap("CreatedBy")
         private String createdBy;
 
-        @NameInMap("CreatedDate")
+        @com.aliyun.core.annotation.NameInMap("CreatedDate")
         private String createdDate;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("KeyId")
+        @com.aliyun.core.annotation.NameInMap("KeyId")
         private String keyId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ParameterVersion")
+        @com.aliyun.core.annotation.NameInMap("ParameterVersion")
         private Integer parameterVersion;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ShareType")
+        @com.aliyun.core.annotation.NameInMap("ShareType")
         private String shareType;
 
-        @NameInMap("Tags")
-        private java.util.Map < String, ? > tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.Map<String, ?> tags;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UpdatedBy")
+        @com.aliyun.core.annotation.NameInMap("UpdatedBy")
         private String updatedBy;
 
-        @NameInMap("UpdatedDate")
+        @com.aliyun.core.annotation.NameInMap("UpdatedDate")
         private String updatedDate;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Parameters(Builder builder) {
@@ -236,7 +250,7 @@ public class GetSecretParametersResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.Map < String, ? > getTags() {
+        public java.util.Map<String, ?> getTags() {
             return this.tags;
         }
 
@@ -279,14 +293,17 @@ public class GetSecretParametersResponseBody extends TeaModel {
             private Integer parameterVersion; 
             private String resourceGroupId; 
             private String shareType; 
-            private java.util.Map < String, ? > tags; 
+            private java.util.Map<String, ?> tags; 
             private String type; 
             private String updatedBy; 
             private String updatedDate; 
             private String value; 
 
             /**
-             * The constraints of the encryption parameter.
+             * <p>The constraints of the encryption parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;AllowedValues&quot;: [&quot;test&quot;]}</p>
              */
             public Builder constraints(String constraints) {
                 this.constraints = constraints;
@@ -294,7 +311,10 @@ public class GetSecretParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The user who created the encryption parameter.
+             * <p>The user who created the encryption parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root(130900000)</p>
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -302,7 +322,10 @@ public class GetSecretParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the encryption parameter was created.
+             * <p>The time when the encryption parameter was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-22T03:11:13Z</p>
              */
             public Builder createdDate(String createdDate) {
                 this.createdDate = createdDate;
@@ -310,7 +333,10 @@ public class GetSecretParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the encryption parameter.
+             * <p>The description of the encryption parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>secretParameter</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -318,7 +344,10 @@ public class GetSecretParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the encryption parameter.
+             * <p>The ID of the encryption parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>p-7cdc0000000000000000</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -326,7 +355,10 @@ public class GetSecretParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the key.
+             * <p>The ID of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ssh-bp67acfmxazb4p****</p>
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;
@@ -334,7 +366,10 @@ public class GetSecretParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the encryption parameter.
+             * <p>The name of the encryption parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySecretParameter</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -342,7 +377,10 @@ public class GetSecretParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The version number of the encryption parameter.
+             * <p>The version number of the encryption parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder parameterVersion(Integer parameterVersion) {
                 this.parameterVersion = parameterVersion;
@@ -350,7 +388,10 @@ public class GetSecretParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmxsn4m4******</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -358,7 +399,10 @@ public class GetSecretParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The share type of the encryption parameter.
+             * <p>The share type of the encryption parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Private</p>
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;
@@ -366,15 +410,21 @@ public class GetSecretParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>The tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;k1&quot;: &quot;v1&quot;, &quot;k2&quot;: &quot;v2&quot;}</p>
              */
-            public Builder tags(java.util.Map < String, ? > tags) {
+            public Builder tags(java.util.Map<String, ?> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * The data type of the encryption parameter.
+             * <p>The data type of the encryption parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Secret</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -382,7 +432,10 @@ public class GetSecretParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The user who updated the encryption parameter.
+             * <p>The user who updated the encryption parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root(130900000)</p>
              */
             public Builder updatedBy(String updatedBy) {
                 this.updatedBy = updatedBy;
@@ -390,7 +443,10 @@ public class GetSecretParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the encryption parameter was updated.
+             * <p>The time when the encryption parameter was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-22T03:11:13Z</p>
              */
             public Builder updatedDate(String updatedDate) {
                 this.updatedDate = updatedDate;
@@ -398,7 +454,10 @@ public class GetSecretParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the encryption parameter.
+             * <p>The value of the encryption parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>secretParameter,secretParameter1</p>
              */
             public Builder value(String value) {
                 this.value = value;

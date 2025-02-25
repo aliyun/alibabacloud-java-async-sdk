@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddUserGroupMembersRequest} extends {@link RequestModel}
  *
  * <p>AddUserGroupMembersRequest</p>
  */
 public class AddUserGroupMembersRequest extends Request {
-    @Query
-    @NameInMap("UserGroupIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserGroupIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userGroupIds;
 
-    @Query
-    @NameInMap("UserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
     private AddUserGroupMembersRequest(Builder builder) {
@@ -70,7 +75,11 @@ public class AddUserGroupMembersRequest extends Request {
         } 
 
         /**
-         * The IDs of the user groups. Separate the IDs with commas (,). Example: aGroupId,bGroupId,cGroupIds
+         * <p>The IDs of the user groups. Separate the IDs with commas (,). Example: aGroupId,bGroupId,cGroupIds</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0d5fb19b-<strong><strong>-</strong></strong>-99da-1248fc27ca51</p>
          */
         public Builder userGroupIds(String userGroupIds) {
             this.putQueryParameter("UserGroupIds", userGroupIds);
@@ -79,7 +88,11 @@ public class AddUserGroupMembersRequest extends Request {
         }
 
         /**
-         * The user ID of the Quick BI.
+         * <p>The user ID of the Quick BI.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46e5****37a5</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

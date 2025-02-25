@@ -101,13 +101,13 @@ public class QueryDeviceEventRecordRequest extends Request {
             super();
         } 
 
-        private Builder(QueryDeviceEventRecordRequest response) {
-            super(response);
-            this.deviceName = response.deviceName;
-            this.eventId = response.eventId;
-            this.iotId = response.iotId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
+        private Builder(QueryDeviceEventRecordRequest request) {
+            super(request);
+            this.deviceName = request.deviceName;
+            this.eventId = request.eventId;
+            this.iotId = request.iotId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
         } 
 
         /**

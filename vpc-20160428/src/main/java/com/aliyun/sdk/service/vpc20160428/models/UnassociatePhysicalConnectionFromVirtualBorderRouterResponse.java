@@ -1,27 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnassociatePhysicalConnectionFromVirtualBorderRouterResponse} extends {@link TeaModel}
  *
  * <p>UnassociatePhysicalConnectionFromVirtualBorderRouterResponse</p>
  */
 public class UnassociatePhysicalConnectionFromVirtualBorderRouterResponse extends Response {
-    @NameInMap("headers")
-    @Validation(required = true)
-    private java.util.Map < String, String > headers;
+    @com.aliyun.core.annotation.NameInMap("headers")
+    private java.util.Map<String, String> headers;
 
-    @NameInMap("statusCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    @NameInMap("body")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("body")
     private UnassociatePhysicalConnectionFromVirtualBorderRouterResponseBody body;
 
     private UnassociatePhysicalConnectionFromVirtualBorderRouterResponse(BuilderImpl builder) {
@@ -43,7 +45,7 @@ public class UnassociatePhysicalConnectionFromVirtualBorderRouterResponse extend
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -63,7 +65,7 @@ public class UnassociatePhysicalConnectionFromVirtualBorderRouterResponse extend
 
     public interface Builder extends Response.Builder<UnassociatePhysicalConnectionFromVirtualBorderRouterResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
@@ -77,7 +79,7 @@ public class UnassociatePhysicalConnectionFromVirtualBorderRouterResponse extend
     private static final class BuilderImpl
             extends Response.BuilderImpl<UnassociatePhysicalConnectionFromVirtualBorderRouterResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
         private UnassociatePhysicalConnectionFromVirtualBorderRouterResponseBody body; 
 
@@ -96,7 +98,7 @@ public class UnassociatePhysicalConnectionFromVirtualBorderRouterResponse extend
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }

@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartSparkSQLEngineRequest} extends {@link RequestModel}
  *
  * <p>StartSparkSQLEngineRequest</p>
  */
 public class StartSparkSQLEngineRequest extends Request {
-    @Body
-    @NameInMap("Config")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Config")
     private String config;
 
-    @Body
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Body
-    @NameInMap("Jars")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Jars")
     private String jars;
 
-    @Body
-    @NameInMap("MaxExecutor")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxExecutor")
     private Long maxExecutor;
 
-    @Body
-    @NameInMap("MinExecutor")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MinExecutor")
     private Long minExecutor;
 
-    @Body
-    @NameInMap("ResourceGroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceGroupName;
 
-    @Body
-    @NameInMap("SlotNum")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SlotNum")
     private Long slotNum;
 
     private StartSparkSQLEngineRequest(Builder builder) {
@@ -140,7 +145,10 @@ public class StartSparkSQLEngineRequest extends Request {
         } 
 
         /**
-         * The configuration that is required to start the Spark SQL engine. Specify this value in the JSON format. For more information, see [Conf configuration parameters](~~471203~~).
+         * <p>The configuration that is required to start the Spark SQL engine. Specify this value in the JSON format. For more information, see <a href="https://help.aliyun.com/document_detail/471203.html">Conf configuration parameters</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;spark.shuffle.timeout&quot;: &quot;:0s&quot; }</p>
          */
         public Builder config(String config) {
             this.putBodyParameter("Config", config);
@@ -149,7 +157,11 @@ public class StartSparkSQLEngineRequest extends Request {
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-abcd****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putBodyParameter("DBClusterId", DBClusterId);
@@ -158,7 +170,10 @@ public class StartSparkSQLEngineRequest extends Request {
         }
 
         /**
-         * The Object Storage Service (OSS) paths of third-party JAR packages that are required to start the Spark SQL engine. Separate multiple OSS paths with commas (,).
+         * <p>The Object Storage Service (OSS) paths of third-party JAR packages that are required to start the Spark SQL engine. Separate multiple OSS paths with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://testBuckname/test.jar,oss://testBuckname/test2.jar</p>
          */
         public Builder jars(String jars) {
             this.putBodyParameter("Jars", jars);
@@ -167,7 +182,10 @@ public class StartSparkSQLEngineRequest extends Request {
         }
 
         /**
-         * The maximum number of executors that are required to execute SQL statements. Valid values: 1 to 2000. If this value exceeds the total number of executes that are supported by the resource group, the Spark SQL engine fails to be started.
+         * <p>The maximum number of executors that are required to execute SQL statements. Valid values: 1 to 2000. If this value exceeds the total number of executes that are supported by the resource group, the Spark SQL engine fails to be started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxExecutor(Long maxExecutor) {
             this.putBodyParameter("MaxExecutor", maxExecutor);
@@ -176,7 +194,10 @@ public class StartSparkSQLEngineRequest extends Request {
         }
 
         /**
-         * The minimum number of executors that are required to execute SQL statements. Valid values: 0 to 2000. A value of 0 indicates that no executors are permanent if no SQL statements are executed. If this value exceeds the total number of executes that are supported by the resource group, the Spark SQL engine fails to be started. The value must be less than the value of MaxExecutor.
+         * <p>The minimum number of executors that are required to execute SQL statements. Valid values: 0 to 2000. A value of 0 indicates that no executors are permanent if no SQL statements are executed. If this value exceeds the total number of executors that are supported by the resource group, the Spark SQL engine fails to be started. The value must be less than the value of MaxExecutor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder minExecutor(Long minExecutor) {
             this.putBodyParameter("MinExecutor", minExecutor);
@@ -185,7 +206,11 @@ public class StartSparkSQLEngineRequest extends Request {
         }
 
         /**
-         * The name of the resource group.
+         * <p>The name of the resource group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spark-rg-name</p>
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.putBodyParameter("ResourceGroupName", resourceGroupName);
@@ -194,7 +219,10 @@ public class StartSparkSQLEngineRequest extends Request {
         }
 
         /**
-         * The maximum number of slots that are required to maintain Spark sessions for executing SQL statements. Valid values: 1 to 500.
+         * <p>The maximum number of slots that are required to maintain Spark sessions for executing SQL statements. Valid values: 1 to 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder slotNum(Long slotNum) {
             this.putBodyParameter("SlotNum", slotNum);

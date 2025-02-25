@@ -128,15 +128,15 @@ public class QueryRecordUrlRequest extends Request {
             super();
         } 
 
-        private Builder(QueryRecordUrlRequest response) {
-            super(response);
-            this.deviceName = response.deviceName;
-            this.fileName = response.fileName;
-            this.iotId = response.iotId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
-            this.seekTime = response.seekTime;
-            this.urlValidDuration = response.urlValidDuration;
+        private Builder(QueryRecordUrlRequest request) {
+            super(request);
+            this.deviceName = request.deviceName;
+            this.fileName = request.fileName;
+            this.iotId = request.iotId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
+            this.seekTime = request.seekTime;
+            this.urlValidDuration = request.urlValidDuration;
         } 
 
         /**

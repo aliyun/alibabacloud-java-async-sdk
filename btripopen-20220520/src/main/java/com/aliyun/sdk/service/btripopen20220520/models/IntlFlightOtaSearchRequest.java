@@ -1,62 +1,71 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link IntlFlightOtaSearchRequest} extends {@link RequestModel}
  *
  * <p>IntlFlightOtaSearchRequest</p>
  */
 public class IntlFlightOtaSearchRequest extends Request {
-    @Query
-    @NameInMap("btrip_user_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("btrip_user_id")
     private String btripUserId;
 
-    @Query
-    @NameInMap("buyer_name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("buyer_name")
     private String buyerName;
 
-    @Query
-    @NameInMap("cabin_type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("cabin_type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer cabinType;
 
-    @Query
-    @NameInMap("direct_only")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("direct_only")
     private Boolean directOnly;
 
-    @Query
-    @NameInMap("isv_name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("isv_name")
     private String isvName;
 
-    @Query
-    @NameInMap("need_share_flight")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("language")
+    private String language;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("need_share_flight")
     private Boolean needShareFlight;
 
-    @Query
-    @NameInMap("search_journeys")
-    @Validation(required = true)
-    private java.util.List < SearchJourneys> searchJourneys;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("search_journeys")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<SearchJourneys> searchJourneys;
 
-    @Query
-    @NameInMap("search_passenger_list")
-    private java.util.List < SearchPassengerList> searchPassengerList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("search_passenger_list")
+    private java.util.List<SearchPassengerList> searchPassengerList;
 
-    @Query
-    @NameInMap("supplier_code")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("supplier_code")
     private String supplierCode;
 
-    @Query
-    @NameInMap("trip_type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("trip_type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer tripType;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private IntlFlightOtaSearchRequest(Builder builder) {
@@ -66,6 +75,7 @@ public class IntlFlightOtaSearchRequest extends Request {
         this.cabinType = builder.cabinType;
         this.directOnly = builder.directOnly;
         this.isvName = builder.isvName;
+        this.language = builder.language;
         this.needShareFlight = builder.needShareFlight;
         this.searchJourneys = builder.searchJourneys;
         this.searchPassengerList = builder.searchPassengerList;
@@ -123,6 +133,13 @@ public class IntlFlightOtaSearchRequest extends Request {
     }
 
     /**
+     * @return language
+     */
+    public String getLanguage() {
+        return this.language;
+    }
+
+    /**
      * @return needShareFlight
      */
     public Boolean getNeedShareFlight() {
@@ -132,14 +149,14 @@ public class IntlFlightOtaSearchRequest extends Request {
     /**
      * @return searchJourneys
      */
-    public java.util.List < SearchJourneys> getSearchJourneys() {
+    public java.util.List<SearchJourneys> getSearchJourneys() {
         return this.searchJourneys;
     }
 
     /**
      * @return searchPassengerList
      */
-    public java.util.List < SearchPassengerList> getSearchPassengerList() {
+    public java.util.List<SearchPassengerList> getSearchPassengerList() {
         return this.searchPassengerList;
     }
 
@@ -170,9 +187,10 @@ public class IntlFlightOtaSearchRequest extends Request {
         private Integer cabinType; 
         private Boolean directOnly; 
         private String isvName; 
+        private String language; 
         private Boolean needShareFlight; 
-        private java.util.List < SearchJourneys> searchJourneys; 
-        private java.util.List < SearchPassengerList> searchPassengerList; 
+        private java.util.List<SearchJourneys> searchJourneys; 
+        private java.util.List<SearchPassengerList> searchPassengerList; 
         private String supplierCode; 
         private Integer tripType; 
         private String xAcsBtripCorpToken; 
@@ -188,6 +206,7 @@ public class IntlFlightOtaSearchRequest extends Request {
             this.cabinType = request.cabinType;
             this.directOnly = request.directOnly;
             this.isvName = request.isvName;
+            this.language = request.language;
             this.needShareFlight = request.needShareFlight;
             this.searchJourneys = request.searchJourneys;
             this.searchPassengerList = request.searchPassengerList;
@@ -215,7 +234,10 @@ public class IntlFlightOtaSearchRequest extends Request {
         }
 
         /**
-         * cabin_type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder cabinType(Integer cabinType) {
             this.putQueryParameter("cabin_type", cabinType);
@@ -242,6 +264,15 @@ public class IntlFlightOtaSearchRequest extends Request {
         }
 
         /**
+         * language.
+         */
+        public Builder language(String language) {
+            this.putQueryParameter("language", language);
+            this.language = language;
+            return this;
+        }
+
+        /**
          * need_share_flight.
          */
         public Builder needShareFlight(Boolean needShareFlight) {
@@ -251,9 +282,9 @@ public class IntlFlightOtaSearchRequest extends Request {
         }
 
         /**
-         * search_journeys.
+         * <p>This parameter is required.</p>
          */
-        public Builder searchJourneys(java.util.List < SearchJourneys> searchJourneys) {
+        public Builder searchJourneys(java.util.List<SearchJourneys> searchJourneys) {
             String searchJourneysShrink = shrink(searchJourneys, "search_journeys", "json");
             this.putQueryParameter("search_journeys", searchJourneysShrink);
             this.searchJourneys = searchJourneys;
@@ -263,7 +294,7 @@ public class IntlFlightOtaSearchRequest extends Request {
         /**
          * search_passenger_list.
          */
-        public Builder searchPassengerList(java.util.List < SearchPassengerList> searchPassengerList) {
+        public Builder searchPassengerList(java.util.List<SearchPassengerList> searchPassengerList) {
             String searchPassengerListShrink = shrink(searchPassengerList, "search_passenger_list", "json");
             this.putQueryParameter("search_passenger_list", searchPassengerListShrink);
             this.searchPassengerList = searchPassengerList;
@@ -280,7 +311,10 @@ public class IntlFlightOtaSearchRequest extends Request {
         }
 
         /**
-         * trip_type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder tripType(Integer tripType) {
             this.putQueryParameter("trip_type", tripType);
@@ -304,33 +338,39 @@ public class IntlFlightOtaSearchRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link IntlFlightOtaSearchRequest} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaSearchRequest</p>
+     */
     public static class SelectedFlights extends TeaModel {
-        @NameInMap("arr_airport_code")
+        @com.aliyun.core.annotation.NameInMap("arr_airport_code")
         private String arrAirportCode;
 
-        @NameInMap("arr_city_code")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("arr_city_code")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String arrCityCode;
 
-        @NameInMap("cabin_type")
+        @com.aliyun.core.annotation.NameInMap("cabin_type")
         private Integer cabinType;
 
-        @NameInMap("dep_airport_code")
+        @com.aliyun.core.annotation.NameInMap("dep_airport_code")
         private String depAirportCode;
 
-        @NameInMap("dep_city_code")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("dep_city_code")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String depCityCode;
 
-        @NameInMap("flight_time")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("flight_time")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String flightTime;
 
-        @NameInMap("market_flight_no")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("market_flight_no")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String marketFlightNo;
 
-        @NameInMap("operate_flight_no")
+        @com.aliyun.core.annotation.NameInMap("operate_flight_no")
         private String operateFlightNo;
 
         private SelectedFlights(Builder builder) {
@@ -427,7 +467,10 @@ public class IntlFlightOtaSearchRequest extends Request {
             }
 
             /**
-             * arr_city_code.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NNG</p>
              */
             public Builder arrCityCode(String arrCityCode) {
                 this.arrCityCode = arrCityCode;
@@ -435,7 +478,10 @@ public class IntlFlightOtaSearchRequest extends Request {
             }
 
             /**
-             * cabin_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder cabinType(Integer cabinType) {
                 this.cabinType = cabinType;
@@ -451,7 +497,10 @@ public class IntlFlightOtaSearchRequest extends Request {
             }
 
             /**
-             * dep_city_code.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CTU</p>
              */
             public Builder depCityCode(String depCityCode) {
                 this.depCityCode = depCityCode;
@@ -459,7 +508,10 @@ public class IntlFlightOtaSearchRequest extends Request {
             }
 
             /**
-             * flight_time.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-08-15 12:00:00</p>
              */
             public Builder flightTime(String flightTime) {
                 this.flightTime = flightTime;
@@ -467,7 +519,10 @@ public class IntlFlightOtaSearchRequest extends Request {
             }
 
             /**
-             * market_flight_no.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KA5809</p>
              */
             public Builder marketFlightNo(String marketFlightNo) {
                 this.marketFlightNo = marketFlightNo;
@@ -489,22 +544,28 @@ public class IntlFlightOtaSearchRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOtaSearchRequest} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaSearchRequest</p>
+     */
     public static class SearchJourneys extends TeaModel {
-        @NameInMap("arr_city_code")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("arr_city_code")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String arrCityCode;
 
-        @NameInMap("dep_city_code")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("dep_city_code")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String depCityCode;
 
-        @NameInMap("dep_date")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("dep_date")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String depDate;
 
-        @NameInMap("selected_flights")
-        @Validation(required = true)
-        private java.util.List < SelectedFlights> selectedFlights;
+        @com.aliyun.core.annotation.NameInMap("selected_flights")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List<SelectedFlights> selectedFlights;
 
         private SearchJourneys(Builder builder) {
             this.arrCityCode = builder.arrCityCode;
@@ -545,7 +606,7 @@ public class IntlFlightOtaSearchRequest extends Request {
         /**
          * @return selectedFlights
          */
-        public java.util.List < SelectedFlights> getSelectedFlights() {
+        public java.util.List<SelectedFlights> getSelectedFlights() {
             return this.selectedFlights;
         }
 
@@ -553,10 +614,13 @@ public class IntlFlightOtaSearchRequest extends Request {
             private String arrCityCode; 
             private String depCityCode; 
             private String depDate; 
-            private java.util.List < SelectedFlights> selectedFlights; 
+            private java.util.List<SelectedFlights> selectedFlights; 
 
             /**
-             * arr_city_code.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZQZ</p>
              */
             public Builder arrCityCode(String arrCityCode) {
                 this.arrCityCode = arrCityCode;
@@ -564,7 +628,10 @@ public class IntlFlightOtaSearchRequest extends Request {
             }
 
             /**
-             * dep_city_code.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HGH</p>
              */
             public Builder depCityCode(String depCityCode) {
                 this.depCityCode = depCityCode;
@@ -572,7 +639,10 @@ public class IntlFlightOtaSearchRequest extends Request {
             }
 
             /**
-             * dep_date.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-08-15</p>
              */
             public Builder depDate(String depDate) {
                 this.depDate = depDate;
@@ -580,9 +650,9 @@ public class IntlFlightOtaSearchRequest extends Request {
             }
 
             /**
-             * selected_flights.
+             * <p>This parameter is required.</p>
              */
-            public Builder selectedFlights(java.util.List < SelectedFlights> selectedFlights) {
+            public Builder selectedFlights(java.util.List<SelectedFlights> selectedFlights) {
                 this.selectedFlights = selectedFlights;
                 return this;
             }
@@ -594,21 +664,27 @@ public class IntlFlightOtaSearchRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link IntlFlightOtaSearchRequest} extends {@link TeaModel}
+     *
+     * <p>IntlFlightOtaSearchRequest</p>
+     */
     public static class SearchPassengerList extends TeaModel {
-        @NameInMap("cert_no")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("cert_no")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String certNo;
 
-        @NameInMap("cert_type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("cert_type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer certType;
 
-        @NameInMap("full_name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("full_name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String fullName;
 
-        @NameInMap("type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer type;
 
         private SearchPassengerList(Builder builder) {
@@ -661,7 +737,10 @@ public class IntlFlightOtaSearchRequest extends Request {
             private Integer type; 
 
             /**
-             * cert_no.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13412341234</p>
              */
             public Builder certNo(String certNo) {
                 this.certNo = certNo;
@@ -669,7 +748,10 @@ public class IntlFlightOtaSearchRequest extends Request {
             }
 
             /**
-             * cert_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder certType(Integer certType) {
                 this.certType = certType;
@@ -677,7 +759,10 @@ public class IntlFlightOtaSearchRequest extends Request {
             }
 
             /**
-             * full_name.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZHANGSAN</p>
              */
             public Builder fullName(String fullName) {
                 this.fullName = fullName;
@@ -685,7 +770,10 @@ public class IntlFlightOtaSearchRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder type(Integer type) {
                 this.type = type;

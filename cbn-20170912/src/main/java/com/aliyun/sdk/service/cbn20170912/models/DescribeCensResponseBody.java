@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCensResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCensResponseBody</p>
  */
 public class DescribeCensResponseBody extends TeaModel {
-    @NameInMap("Cens")
+    @com.aliyun.core.annotation.NameInMap("Cens")
     private Cens cens;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeCensResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeCensResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information about the CEN instance.
+         * <p>The information about the CEN instance.</p>
          */
         public Builder cens(Cens cens) {
             this.cens = cens;
@@ -94,7 +99,10 @@ public class DescribeCensResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the page returned.
+         * <p>The number of the page returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeCensResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeCensResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2BFA6822-240E-4E27-B4C8-AA400EF7474D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeCensResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,9 +148,15 @@ public class DescribeCensResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCensResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCensResponseBody</p>
+     */
     public static class CenBandwidthPackageIds extends TeaModel {
-        @NameInMap("CenBandwidthPackageId")
-        private java.util.List < String > cenBandwidthPackageId;
+        @com.aliyun.core.annotation.NameInMap("CenBandwidthPackageId")
+        private java.util.List<String> cenBandwidthPackageId;
 
         private CenBandwidthPackageIds(Builder builder) {
             this.cenBandwidthPackageId = builder.cenBandwidthPackageId;
@@ -150,17 +173,17 @@ public class DescribeCensResponseBody extends TeaModel {
         /**
          * @return cenBandwidthPackageId
          */
-        public java.util.List < String > getCenBandwidthPackageId() {
+        public java.util.List<String> getCenBandwidthPackageId() {
             return this.cenBandwidthPackageId;
         }
 
         public static final class Builder {
-            private java.util.List < String > cenBandwidthPackageId; 
+            private java.util.List<String> cenBandwidthPackageId; 
 
             /**
              * CenBandwidthPackageId.
              */
-            public Builder cenBandwidthPackageId(java.util.List < String > cenBandwidthPackageId) {
+            public Builder cenBandwidthPackageId(java.util.List<String> cenBandwidthPackageId) {
                 this.cenBandwidthPackageId = cenBandwidthPackageId;
                 return this;
             }
@@ -172,11 +195,17 @@ public class DescribeCensResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCensResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCensResponseBody</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -211,7 +240,10 @@ public class DescribeCensResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tagtest</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -219,7 +251,10 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tagtest</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -233,9 +268,15 @@ public class DescribeCensResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCensResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCensResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -252,17 +293,17 @@ public class DescribeCensResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -274,35 +315,41 @@ public class DescribeCensResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCensResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCensResponseBody</p>
+     */
     public static class Cen extends TeaModel {
-        @NameInMap("CenBandwidthPackageIds")
+        @com.aliyun.core.annotation.NameInMap("CenBandwidthPackageIds")
         private CenBandwidthPackageIds cenBandwidthPackageIds;
 
-        @NameInMap("CenId")
+        @com.aliyun.core.annotation.NameInMap("CenId")
         private String cenId;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Ipv6Level")
+        @com.aliyun.core.annotation.NameInMap("Ipv6Level")
         private String ipv6Level;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ProtectionLevel")
+        @com.aliyun.core.annotation.NameInMap("ProtectionLevel")
         private String protectionLevel;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
         private Cen(Builder builder) {
@@ -409,7 +456,7 @@ public class DescribeCensResponseBody extends TeaModel {
             private Tags tags; 
 
             /**
-             * The IDs of the bandwidth plans that are associated with the CEN instance.
+             * <p>The IDs of the bandwidth plans that are associated with the CEN instance.</p>
              */
             public Builder cenBandwidthPackageIds(CenBandwidthPackageIds cenBandwidthPackageIds) {
                 this.cenBandwidthPackageIds = cenBandwidthPackageIds;
@@ -417,7 +464,10 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The CEN instance ID.
+             * <p>The CEN instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cen-0xyeagctz5sfg9****</p>
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -425,10 +475,11 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the CEN instance was created.
-             * <p>
+             * <p>The time when the CEN instance was created.</p>
+             * <p>The time follows the ISO8601 standard in the <code>YYYY-MM-DDThh:mmZ</code> format. The time is displayed in UTC.</p>
              * 
-             * The time follows the ISO8601 standard in the `YYYY-MM-DDThh:mmZ` format. The time is displayed in UTC.
+             * <strong>example:</strong>
+             * <p>2019-10-22T07:44Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -436,7 +487,10 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the CEN instance.
+             * <p>The description of the CEN instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desctest</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -444,11 +498,14 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether IPv6 is enabled for the CEN instance.
-             * <p>
+             * <p>Indicates whether IPv6 is enabled for the CEN instance.</p>
+             * <ul>
+             * <li><strong>ENABLE</strong></li>
+             * <li><strong>DISABLED</strong></li>
+             * </ul>
              * 
-             * *   **ENABLE**
-             * *   **DISABLED**
+             * <strong>example:</strong>
+             * <p>DISABLED</p>
              */
             public Builder ipv6Level(String ipv6Level) {
                 this.ipv6Level = ipv6Level;
@@ -456,7 +513,10 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The CEN instance name.
+             * <p>The CEN instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nametest</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -464,10 +524,11 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The level of CIDR block overlapping.
-             * <p>
+             * <p>The level of CIDR block overlapping.</p>
+             * <p><strong>REDUCED</strong>: Overlapped CIDR blocks are allowed. This value specifies that CIDR blocks can overlap but CIDR blocks cannot be duplicates.</p>
              * 
-             * **REDUCED**: Overlapped CIDR blocks are allowed. This value specifies that CIDR blocks can overlap but CIDR blocks cannot be duplicates.
+             * <strong>example:</strong>
+             * <p>REDUCED</p>
              */
             public Builder protectionLevel(String protectionLevel) {
                 this.protectionLevel = protectionLevel;
@@ -475,7 +536,10 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the CEN instance belongs.
+             * <p>The ID of the resource group to which the CEN instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfm3unpnuw****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -483,12 +547,15 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the CEN instance.
-             * <p>
+             * <p>The status of the CEN instance.</p>
+             * <ul>
+             * <li><strong>Creating</strong></li>
+             * <li><strong>Active</strong></li>
+             * <li><strong>Deleting</strong></li>
+             * </ul>
              * 
-             * *   **Creating**
-             * *   **Active**
-             * *   **Deleting**
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -496,7 +563,7 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the tags that are added to the CEN instance.
+             * <p>The IDs of the tags that are added to the CEN instance.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -510,9 +577,15 @@ public class DescribeCensResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCensResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCensResponseBody</p>
+     */
     public static class Cens extends TeaModel {
-        @NameInMap("Cen")
-        private java.util.List < Cen> cen;
+        @com.aliyun.core.annotation.NameInMap("Cen")
+        private java.util.List<Cen> cen;
 
         private Cens(Builder builder) {
             this.cen = builder.cen;
@@ -529,17 +602,17 @@ public class DescribeCensResponseBody extends TeaModel {
         /**
          * @return cen
          */
-        public java.util.List < Cen> getCen() {
+        public java.util.List<Cen> getCen() {
             return this.cen;
         }
 
         public static final class Builder {
-            private java.util.List < Cen> cen; 
+            private java.util.List<Cen> cen; 
 
             /**
              * Cen.
              */
-            public Builder cen(java.util.List < Cen> cen) {
+            public Builder cen(java.util.List<Cen> cen) {
                 this.cen = cen;
                 return this;
             }

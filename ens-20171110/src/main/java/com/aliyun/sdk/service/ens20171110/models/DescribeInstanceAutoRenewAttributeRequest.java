@@ -1,36 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceAutoRenewAttributeRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceAutoRenewAttributeRequest</p>
  */
 public class DescribeInstanceAutoRenewAttributeRequest extends Request {
-    @Query
-    @NameInMap("InstanceIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceIds;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
-
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
 
     private DescribeInstanceAutoRenewAttributeRequest(Builder builder) {
         super(builder);
         this.instanceIds = builder.instanceIds;
         this.ownerId = builder.ownerId;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -60,17 +59,9 @@ public class DescribeInstanceAutoRenewAttributeRequest extends Request {
         return this.ownerId;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<DescribeInstanceAutoRenewAttributeRequest, Builder> {
         private String instanceIds; 
         private Long ownerId; 
-        private String version; 
 
         private Builder() {
             super();
@@ -80,11 +71,14 @@ public class DescribeInstanceAutoRenewAttributeRequest extends Request {
             super(request);
             this.instanceIds = request.instanceIds;
             this.ownerId = request.ownerId;
-            this.version = request.version;
         } 
 
         /**
-         * InstanceIds.
+         * <p>The ID of an instance. Separate multiple IDs with semicolons (;).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-5ci7l7k1m9m2zmhp4iw3o****</p>
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -98,15 +92,6 @@ public class DescribeInstanceAutoRenewAttributeRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 

@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDownloadUrlRequest} extends {@link RequestModel}
  *
  * <p>CreateDownloadUrlRequest</p>
  */
 public class CreateDownloadUrlRequest extends Request {
-    @Query
-    @NameInMap("DownloadTaskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DownloadTaskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String downloadTaskId;
 
-    @Query
-    @NameInMap("FileId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileId;
 
     private CreateDownloadUrlRequest(Builder builder) {
@@ -70,7 +75,10 @@ public class CreateDownloadUrlRequest extends Request {
         } 
 
         /**
-         * DownloadTaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>073f092da0a847b9bf76eb88b5931c7a</p>
          */
         public Builder downloadTaskId(String downloadTaskId) {
             this.putQueryParameter("DownloadTaskId", downloadTaskId);
@@ -79,7 +87,10 @@ public class CreateDownloadUrlRequest extends Request {
         }
 
         /**
-         * FileId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22626c39603744f5a08d4d715315561a</p>
          */
         public Builder fileId(String fileId) {
             this.putQueryParameter("FileId", fileId);

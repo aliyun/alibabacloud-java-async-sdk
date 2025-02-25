@@ -1,24 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListConsumerGroupSubscriptionsRequest} extends {@link RequestModel}
  *
  * <p>ListConsumerGroupSubscriptionsRequest</p>
  */
 public class ListConsumerGroupSubscriptionsRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("consumerGroupId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("consumerGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String consumerGroupId;
 
     private ListConsumerGroupSubscriptionsRequest(Builder builder) {
@@ -69,7 +75,11 @@ public class ListConsumerGroupSubscriptionsRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The ID of the ApsaraMQ for RocketMQ instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq-cn-tl32wwz1r05</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -78,7 +88,12 @@ public class ListConsumerGroupSubscriptionsRequest extends Request {
         }
 
         /**
-         * The consumer group ID.
+         * <p>The ID of the consumer group whose subscriptions you want to query.</p>
+         * <p>If you do not configure this parameter, the subscriptions of all consumer groups on the specified instance are queried.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRINT_RETRY_CONSUMER</p>
          */
         public Builder consumerGroupId(String consumerGroupId) {
             this.putPathParameter("consumerGroupId", consumerGroupId);

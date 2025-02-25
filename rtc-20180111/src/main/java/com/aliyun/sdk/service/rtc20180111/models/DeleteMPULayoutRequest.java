@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMPULayoutRequest} extends {@link RequestModel}
  *
  * <p>DeleteMPULayoutRequest</p>
  */
 public class DeleteMPULayoutRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("LayoutId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LayoutId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long layoutId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
     private DeleteMPULayoutRequest(Builder builder) {
@@ -76,15 +81,18 @@ public class DeleteMPULayoutRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteMPULayoutRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.layoutId = response.layoutId;
-            this.ownerId = response.ownerId;
+        private Builder(DeleteMPULayoutRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.layoutId = request.layoutId;
+            this.ownerId = request.ownerId;
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourAppId</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -93,7 +101,10 @@ public class DeleteMPULayoutRequest extends Request {
         }
 
         /**
-         * LayoutId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder layoutId(Long layoutId) {
             this.putQueryParameter("LayoutId", layoutId);

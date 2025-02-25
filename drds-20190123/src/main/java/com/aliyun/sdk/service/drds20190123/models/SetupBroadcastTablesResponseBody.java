@@ -62,7 +62,7 @@ public class SetupBroadcastTablesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * Indicates whether the broadcast table is configured.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class SetupBroadcastTablesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class SetupBroadcastTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

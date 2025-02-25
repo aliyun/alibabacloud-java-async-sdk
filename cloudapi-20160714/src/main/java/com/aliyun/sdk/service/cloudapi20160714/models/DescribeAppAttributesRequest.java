@@ -1,61 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAppAttributesRequest} extends {@link RequestModel}
  *
  * <p>DescribeAppAttributesRequest</p>
  */
 public class DescribeAppAttributesRequest extends Request {
-    @Query
-    @NameInMap("AppCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppCode")
     private String appCode;
 
-    @Query
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private Long appId;
 
-    @Query
-    @NameInMap("AppKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppKey")
     private String appKey;
 
-    @Query
-    @NameInMap("AppName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
     private String appName;
 
-    @Query
-    @NameInMap("EnableTagAuth")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableTagAuth")
     private Boolean enableTagAuth;
 
-    @Query
-    @NameInMap("Extend")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Extend")
     private String extend;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("Sort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sort")
     private String sort;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private DescribeAppAttributesRequest(Builder builder) {
         super(builder);
@@ -158,7 +163,7 @@ public class DescribeAppAttributesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -173,7 +178,7 @@ public class DescribeAppAttributesRequest extends Request {
         private Integer pageSize; 
         private String securityToken; 
         private String sort; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -195,7 +200,10 @@ public class DescribeAppAttributesRequest extends Request {
         } 
 
         /**
-         * The AppCode of the app.
+         * <p>The AppCode of the app.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23552160</p>
          */
         public Builder appCode(String appCode) {
             this.putQueryParameter("AppCode", appCode);
@@ -204,7 +212,10 @@ public class DescribeAppAttributesRequest extends Request {
         }
 
         /**
-         * The ID of the app.
+         * <p>The ID of the app.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20112314518278</p>
          */
         public Builder appId(Long appId) {
             this.putQueryParameter("AppId", appId);
@@ -213,7 +224,10 @@ public class DescribeAppAttributesRequest extends Request {
         }
 
         /**
-         * The app key that is used to make an API call.
+         * <p>The app key that is used to make an API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203708622</p>
          */
         public Builder appKey(String appKey) {
             this.putQueryParameter("AppKey", appKey);
@@ -222,7 +236,10 @@ public class DescribeAppAttributesRequest extends Request {
         }
 
         /**
-         * The name of the app.
+         * <p>The name of the app.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testApp</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -231,7 +248,10 @@ public class DescribeAppAttributesRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable tag verification.
+         * <p>Specifies whether to enable tag verification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableTagAuth(Boolean enableTagAuth) {
             this.putQueryParameter("EnableTagAuth", enableTagAuth);
@@ -240,7 +260,10 @@ public class DescribeAppAttributesRequest extends Request {
         }
 
         /**
-         * The extended information.
+         * <p>扩展信息</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110243810311</p>
          */
         public Builder extend(String extend) {
             this.putQueryParameter("Extend", extend);
@@ -249,7 +272,10 @@ public class DescribeAppAttributesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -258,7 +284,10 @@ public class DescribeAppAttributesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100. Default value: 10.
+         * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -276,11 +305,14 @@ public class DescribeAppAttributesRequest extends Request {
         }
 
         /**
-         * The order. Valid values: asc and desc. Default value: desc.
-         * <p>
+         * <p>The order. Valid values: asc and desc. Default value: desc.</p>
+         * <ul>
+         * <li>asc: The apps are displayed in ascending order of modification time.</li>
+         * <li>desc: The apps are displayed in descending order of modification time.</li>
+         * </ul>
          * 
-         * *   asc: The apps are displayed in ascending order of modification time.
-         * *   desc: The apps are displayed in descending order of modification time.
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -289,9 +321,12 @@ public class DescribeAppAttributesRequest extends Request {
         }
 
         /**
-         * The tag of objects that match the rule. You can specify multiple tags.
+         * <p>The tag of objects that match the rule. You can specify multiple tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Key， Value</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -304,12 +339,18 @@ public class DescribeAppAttributesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAppAttributesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeAppAttributesRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Key")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -344,10 +385,12 @@ public class DescribeAppAttributesRequest extends Request {
             private String value; 
 
             /**
-             * The value of tag N.
-             * <p>
+             * <p>The key of the tag.</p>
+             * <p>N can be an integer from 1 to 20.``</p>
+             * <p>This parameter is required.</p>
              * 
-             * Valid values of n: `[1, 20]`.
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -355,10 +398,11 @@ public class DescribeAppAttributesRequest extends Request {
             }
 
             /**
-             * The key of tag N.
-             * <p>
+             * <p>The key of the tag.</p>
+             * <p>N can be an integer from 1 to 20.``</p>
              * 
-             * Valid values of n: `[1, 20]`.
+             * <strong>example:</strong>
+             * <p>&quot; &quot;</p>
              */
             public Builder value(String value) {
                 this.value = value;

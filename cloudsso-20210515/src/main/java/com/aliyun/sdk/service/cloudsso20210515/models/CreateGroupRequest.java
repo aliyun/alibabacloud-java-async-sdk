@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateGroupRequest</p>
  */
 public class CreateGroupRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @Query
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
     private CreateGroupRequest(Builder builder) {
@@ -82,10 +82,11 @@ public class CreateGroupRequest extends Request {
         } 
 
         /**
-         * The description of the group.
-         * <p>
+         * <p>The description of the group.</p>
+         * <p>The description can be up to 1,024 characters in length.</p>
          * 
-         * The description can be up to 1,024 characters in length.
+         * <strong>example:</strong>
+         * <p>This is a group.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -94,7 +95,10 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * The ID of the directory.
+         * <p>The ID of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -103,12 +107,12 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * The name of the group.
-         * <p>
+         * <p>The name of the group.</p>
+         * <p>The name can contain letters, digits, underscores (_), hyphens (-), and periods (.).</p>
+         * <p>The name can be up to 128 characters in length.</p>
          * 
-         * The name can contain letters, digits, underscores (\_), hyphens (-), and periods (.).
-         * 
-         * The name can be up to 128 characters in length.
+         * <strong>example:</strong>
+         * <p>TestGroup</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);

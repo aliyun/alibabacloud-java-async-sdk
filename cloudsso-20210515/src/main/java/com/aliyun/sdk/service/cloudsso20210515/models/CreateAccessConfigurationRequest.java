@@ -1,35 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAccessConfigurationRequest} extends {@link RequestModel}
  *
  * <p>CreateAccessConfigurationRequest</p>
  */
 public class CreateAccessConfigurationRequest extends Request {
-    @Query
-    @NameInMap("AccessConfigurationName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessConfigurationName")
     private String accessConfigurationName;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @Query
-    @NameInMap("RelayState")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelayState")
     private String relayState;
 
-    @Query
-    @NameInMap("SessionDuration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SessionDuration")
     private Integer sessionDuration;
 
     private CreateAccessConfigurationRequest(Builder builder) {
@@ -110,12 +110,12 @@ public class CreateAccessConfigurationRequest extends Request {
         } 
 
         /**
-         * The name of the access configuration.
-         * <p>
+         * <p>The name of the access configuration.</p>
+         * <p>The name can contain letters, digits, and hyphens (-).</p>
+         * <p>The name can be up to 32 characters in length.</p>
          * 
-         * The name can contain letters, digits, and hyphens (-).
-         * 
-         * The name can be up to 32 characters in length.
+         * <strong>example:</strong>
+         * <p>ECS-Admin</p>
          */
         public Builder accessConfigurationName(String accessConfigurationName) {
             this.putQueryParameter("AccessConfigurationName", accessConfigurationName);
@@ -124,10 +124,11 @@ public class CreateAccessConfigurationRequest extends Request {
         }
 
         /**
-         * The description of the access configuration.
-         * <p>
+         * <p>The description of the access configuration.</p>
+         * <p>The description can be up to 1,024 characters in length.</p>
          * 
-         * The description can be up to 1,024 characters in length.
+         * <strong>example:</strong>
+         * <p>This is an access configuration.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -136,7 +137,10 @@ public class CreateAccessConfigurationRequest extends Request {
         }
 
         /**
-         * The ID of the directory.
+         * <p>The ID of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -145,10 +149,11 @@ public class CreateAccessConfigurationRequest extends Request {
         }
 
         /**
-         * The initial web page that is displayed after a CloudSSO user accesses an account in your resource directory by using the access configuration.
-         * <p>
+         * <p>The initial web page that is displayed after a CloudSSO user accesses an account in your resource directory by using the access configuration.</p>
+         * <p>The web page must be a page of the Alibaba Cloud Management Console. By default, this parameter is empty, which indicates that the initial web page is the homepage of the Alibaba Cloud Management Console.</p>
          * 
-         * The web page must be a page of the Alibaba Cloud Management Console. By default, this parameter is empty, which indicates that the initial web page is the homepage of the Alibaba Cloud Management Console.
+         * <strong>example:</strong>
+         * <p><a href="https://cloudsso.console.aliyun.com">https://cloudsso.console.aliyun.com</a></p>
          */
         public Builder relayState(String relayState) {
             this.putQueryParameter("RelayState", relayState);
@@ -157,14 +162,13 @@ public class CreateAccessConfigurationRequest extends Request {
         }
 
         /**
-         * The duration of a session in which a CloudSSO user accesses an account in your resource directory by using the access configuration.
-         * <p>
+         * <p>The duration of a session in which a CloudSSO user accesses an account in your resource directory by using the access configuration.</p>
+         * <p>Unit: seconds.</p>
+         * <p>Valid values: 900 to 43200. The value 900 indicates 15 minutes. The value 43200 indicates 12 hours.</p>
+         * <p>Default value: 3600. The value indicates 1 hour.</p>
          * 
-         * Unit: seconds.
-         * 
-         * Valid values: 900 to 43200. The value 900 indicates 15 minutes. The value 43200 indicates 12 hours.
-         * 
-         * Default value: 3600. The value indicates 1 hour.
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder sessionDuration(Integer sessionDuration) {
             this.putQueryParameter("SessionDuration", sessionDuration);

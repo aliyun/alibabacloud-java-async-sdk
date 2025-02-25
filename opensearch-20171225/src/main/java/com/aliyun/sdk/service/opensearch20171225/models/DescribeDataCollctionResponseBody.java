@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDataCollctionResponseBody</p>
  */
 public class DescribeDataCollctionResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
     private DescribeDataCollctionResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,31 +71,31 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("created")
+        @com.aliyun.core.annotation.NameInMap("created")
         private Integer created;
 
-        @NameInMap("dataCollectionType")
+        @com.aliyun.core.annotation.NameInMap("dataCollectionType")
         private String dataCollectionType;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("industryName")
+        @com.aliyun.core.annotation.NameInMap("industryName")
         private String industryName;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("sundialId")
+        @com.aliyun.core.annotation.NameInMap("sundialId")
         private String sundialId;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("updated")
+        @com.aliyun.core.annotation.NameInMap("updated")
         private Integer updated;
 
         private Result(Builder builder) {
@@ -194,7 +193,7 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
             private Integer updated; 
 
             /**
-             * The time when the data collection task was created.
+             * The time when the task was created.
              */
             public Builder created(Integer created) {
                 this.created = created;
@@ -202,12 +201,12 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the data that is collected by the task. Valid values:
+             * The type of data collected. Valid values:
              * <p>
              * 
-             * *   behavior: behavioral data
-             * *   item_info: project data
-             * *   industry_specific: industry-specific data
+             * *   behavior: behavioral data.
+             * *   item_info: project information.
+             * *   industry_specific: industry-specific data.
              */
             public Builder dataCollectionType(String dataCollectionType) {
                 this.dataCollectionType = dataCollectionType;
@@ -223,7 +222,7 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
             }
 
             /**
-             * The industry to which the data collection task applies. Valid values:
+             * The industry name. Valid values:
              * <p>
              * 
              * *   general
@@ -243,13 +242,13 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the data collection task. Valid values:
+             * The status of the data collection feature. Valid values:
              * <p>
              * 
-             * *   0: disabled
-             * *   1: being enabled
-             * *   2: enabled
-             * *   3: failed to be enabled
+             * *   0: The feature is disabled.
+             * *   1: The feature is being enabled.
+             * *   2: The feature is enabled.
+             * *   3: The feature failed to be enabled.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -257,7 +256,7 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the sundial.
+             * The sundial ID.
              */
             public Builder sundialId(String sundialId) {
                 this.sundialId = sundialId;
@@ -265,16 +264,12 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the data source. Valid values:
+             * The type of the source from which data was collected. Valid values:
              * <p>
              * 
              * *   server
-             * 
              * *   web
-             * 
-             * *   app
-             * 
-             *     Note: Only server is supported.
+             * *   app Note: Only server is supported.
              */
             public Builder type(String type) {
                 this.type = type;

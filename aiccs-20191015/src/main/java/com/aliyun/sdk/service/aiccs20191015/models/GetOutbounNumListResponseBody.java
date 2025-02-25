@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOutbounNumListResponseBody} extends {@link TeaModel}
  *
  * <p>GetOutbounNumListResponseBody</p>
  */
 public class GetOutbounNumListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Long httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetOutbounNumListResponseBody(Builder builder) {
@@ -151,14 +156,20 @@ public class GetOutbounNumListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetOutbounNumListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOutbounNumListResponseBody</p>
+     */
     public static class Num extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Num(Builder builder) {
@@ -232,14 +243,20 @@ public class GetOutbounNumListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetOutbounNumListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOutbounNumListResponseBody</p>
+     */
     public static class NumGroup extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private NumGroup(Builder builder) {
@@ -313,12 +330,18 @@ public class GetOutbounNumListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetOutbounNumListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOutbounNumListResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Num")
-        private java.util.List < Num> num;
+        @com.aliyun.core.annotation.NameInMap("Num")
+        private java.util.List<Num> num;
 
-        @NameInMap("NumGroup")
-        private java.util.List < NumGroup> numGroup;
+        @com.aliyun.core.annotation.NameInMap("NumGroup")
+        private java.util.List<NumGroup> numGroup;
 
         private Data(Builder builder) {
             this.num = builder.num;
@@ -336,25 +359,25 @@ public class GetOutbounNumListResponseBody extends TeaModel {
         /**
          * @return num
          */
-        public java.util.List < Num> getNum() {
+        public java.util.List<Num> getNum() {
             return this.num;
         }
 
         /**
          * @return numGroup
          */
-        public java.util.List < NumGroup> getNumGroup() {
+        public java.util.List<NumGroup> getNumGroup() {
             return this.numGroup;
         }
 
         public static final class Builder {
-            private java.util.List < Num> num; 
-            private java.util.List < NumGroup> numGroup; 
+            private java.util.List<Num> num; 
+            private java.util.List<NumGroup> numGroup; 
 
             /**
              * Num.
              */
-            public Builder num(java.util.List < Num> num) {
+            public Builder num(java.util.List<Num> num) {
                 this.num = num;
                 return this;
             }
@@ -362,7 +385,7 @@ public class GetOutbounNumListResponseBody extends TeaModel {
             /**
              * NumGroup.
              */
-            public Builder numGroup(java.util.List < NumGroup> numGroup) {
+            public Builder numGroup(java.util.List<NumGroup> numGroup) {
                 this.numGroup = numGroup;
                 return this;
             }

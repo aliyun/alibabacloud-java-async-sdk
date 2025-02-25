@@ -1,54 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeResolverRuleResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeResolverRuleResponseBody</p>
  */
 public class DescribeResolverRuleResponseBody extends TeaModel {
-    @NameInMap("BindVpcs")
+    @com.aliyun.core.annotation.NameInMap("BindVpcs")
     private java.util.List < BindVpcs> bindVpcs;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("CreateTimestamp")
+    @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
     private Long createTimestamp;
 
-    @NameInMap("EndpointId")
+    @com.aliyun.core.annotation.NameInMap("EndpointId")
     private String endpointId;
 
-    @NameInMap("EndpointName")
+    @com.aliyun.core.annotation.NameInMap("EndpointName")
     private String endpointName;
 
-    @NameInMap("ForwardIps")
+    @com.aliyun.core.annotation.NameInMap("ForwardIps")
     private java.util.List < ForwardIps> forwardIps;
 
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @NameInMap("UpdateTime")
+    @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
-    @NameInMap("UpdateTimestamp")
+    @com.aliyun.core.annotation.NameInMap("UpdateTimestamp")
     private Long updateTimestamp;
 
-    @NameInMap("ZoneName")
+    @com.aliyun.core.annotation.NameInMap("ZoneName")
     private String zoneName;
 
     private DescribeResolverRuleResponseBody(Builder builder) {
@@ -182,7 +182,7 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
         private String zoneName; 
 
         /**
-         * BindVpcs.
+         * <p>The virtual private clouds (VPCs) that are associated with the forwarding rule.</p>
          */
         public Builder bindVpcs(java.util.List < BindVpcs> bindVpcs) {
             this.bindVpcs = bindVpcs;
@@ -190,7 +190,10 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The time when the forwarding rule was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-07-13 10:51:44</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -198,7 +201,10 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTimestamp.
+         * <p>The time when the forwarding rule was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1594608704000</p>
          */
         public Builder createTimestamp(Long createTimestamp) {
             this.createTimestamp = createTimestamp;
@@ -206,7 +212,10 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
         }
 
         /**
-         * EndpointId.
+         * <p>The endpoint ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hr****</p>
          */
         public Builder endpointId(String endpointId) {
             this.endpointId = endpointId;
@@ -214,7 +223,10 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
         }
 
         /**
-         * EndpointName.
+         * <p>The endpoint name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>endpoint-test</p>
          */
         public Builder endpointName(String endpointName) {
             this.endpointName = endpointName;
@@ -222,7 +234,7 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
         }
 
         /**
-         * ForwardIps.
+         * <p>The destination IP addresses.</p>
          */
         public Builder forwardIps(java.util.List < ForwardIps> forwardIps) {
             this.forwardIps = forwardIps;
@@ -230,7 +242,10 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The ID of the forwarding rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hr****</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -238,7 +253,10 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the forwarding rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>forward rule-test</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -246,7 +264,10 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13D5113B-7E34-407F-A9C1-D96CD2B04277</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -254,7 +275,11 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The type of the forwarding rule. Valid value:</p>
+         * <p>OUTBOUND: outbound forwarding rule. This type of rule forwards Domain Name System (DNS) requests to one or more external IP addresses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OUTBOUND</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -262,7 +287,10 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>The time when the forwarding rule was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-07-13 10:51:44</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -270,7 +298,10 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateTimestamp.
+         * <p>The time when the forwarding rule was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1594608704000</p>
          */
         public Builder updateTimestamp(Long updateTimestamp) {
             this.updateTimestamp = updateTimestamp;
@@ -278,7 +309,10 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
         }
 
         /**
-         * ZoneName.
+         * <p>The name of the forward zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder zoneName(String zoneName) {
             this.zoneName = zoneName;
@@ -291,23 +325,29 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeResolverRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResolverRuleResponseBody</p>
+     */
     public static class BindVpcs extends TeaModel {
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RegionName")
+        @com.aliyun.core.annotation.NameInMap("RegionName")
         private String regionName;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcName")
+        @com.aliyun.core.annotation.NameInMap("VpcName")
         private String vpcName;
 
-        @NameInMap("VpcType")
+        @com.aliyun.core.annotation.NameInMap("VpcType")
         private String vpcType;
 
-        @NameInMap("VpcUserId")
+        @com.aliyun.core.annotation.NameInMap("VpcUserId")
         private String vpcUserId;
 
         private BindVpcs(Builder builder) {
@@ -378,7 +418,10 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
             private String vpcUserId; 
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -386,7 +429,10 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RegionName.
+             * <p>The region name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hangzhou</p>
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;
@@ -394,7 +440,10 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Vpc ID
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-f8zvrvr1payllgz38****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -402,7 +451,10 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
             }
 
             /**
-             * VpcName.
+             * <p>The VPC name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-name-test</p>
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;
@@ -410,7 +462,14 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
             }
 
             /**
-             * VpcType.
+             * <p>The VPC type. Valid values:</p>
+             * <ul>
+             * <li>STANDARD: standard VPC</li>
+             * <li>EDS: Elastic Desktop Service (EDS) workspace VPC</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>STANDARD</p>
              */
             public Builder vpcType(String vpcType) {
                 this.vpcType = vpcType;
@@ -418,7 +477,10 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
             }
 
             /**
-             * VpcUserId.
+             * <p>The ID of the user to which the VPC belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32454****</p>
              */
             public Builder vpcUserId(String vpcUserId) {
                 this.vpcUserId = vpcUserId;
@@ -432,11 +494,17 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeResolverRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResolverRuleResponseBody</p>
+     */
     public static class ForwardIps extends TeaModel {
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
         private ForwardIps(Builder builder) {
@@ -471,7 +539,10 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
             private Integer port; 
 
             /**
-             * Ip.
+             * <p>The destination IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.XX.XX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -479,7 +550,10 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder port(Integer port) {
                 this.port = port;

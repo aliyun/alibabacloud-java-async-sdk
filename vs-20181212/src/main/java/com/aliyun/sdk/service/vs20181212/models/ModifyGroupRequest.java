@@ -1,64 +1,69 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyGroupRequest} extends {@link RequestModel}
  *
  * <p>ModifyGroupRequest</p>
  */
 public class ModifyGroupRequest extends Request {
-    @Query
-    @NameInMap("Callback")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Callback")
     private String callback;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Enabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Enabled")
     private Boolean enabled;
 
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String id;
 
-    @Query
-    @NameInMap("InProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InProtocol")
     private String inProtocol;
 
-    @Query
-    @NameInMap("LazyPull")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LazyPull")
     private Boolean lazyPull;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OutProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutProtocol")
     private String outProtocol;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PlayDomain")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlayDomain")
     private String playDomain;
 
-    @Query
-    @NameInMap("PushDomain")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PushDomain")
     private String pushDomain;
 
-    @Query
-    @NameInMap("Region")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
     private ModifyGroupRequest(Builder builder) {
@@ -192,20 +197,20 @@ public class ModifyGroupRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyGroupRequest response) {
-            super(response);
-            this.callback = response.callback;
-            this.description = response.description;
-            this.enabled = response.enabled;
-            this.id = response.id;
-            this.inProtocol = response.inProtocol;
-            this.lazyPull = response.lazyPull;
-            this.name = response.name;
-            this.outProtocol = response.outProtocol;
-            this.ownerId = response.ownerId;
-            this.playDomain = response.playDomain;
-            this.pushDomain = response.pushDomain;
-            this.region = response.region;
+        private Builder(ModifyGroupRequest request) {
+            super(request);
+            this.callback = request.callback;
+            this.description = request.description;
+            this.enabled = request.enabled;
+            this.id = request.id;
+            this.inProtocol = request.inProtocol;
+            this.lazyPull = request.lazyPull;
+            this.name = request.name;
+            this.outProtocol = request.outProtocol;
+            this.ownerId = request.ownerId;
+            this.playDomain = request.playDomain;
+            this.pushDomain = request.pushDomain;
+            this.region = request.region;
         } 
 
         /**
@@ -236,7 +241,10 @@ public class ModifyGroupRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32388487739092994-cn-qingdao</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

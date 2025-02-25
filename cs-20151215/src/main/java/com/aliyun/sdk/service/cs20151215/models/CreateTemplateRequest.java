@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTemplateRequest} extends {@link RequestModel}
  *
  * <p>CreateTemplateRequest</p>
  */
 public class CreateTemplateRequest extends Request {
-    @Body
-    @NameInMap("description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @Body
-    @NameInMap("name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("tags")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("tags")
     private String tags;
 
-    @Body
-    @NameInMap("template")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("template")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String template;
 
-    @Body
-    @NameInMap("template_type")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("template_type")
     private String templateType;
 
     private CreateTemplateRequest(Builder builder) {
@@ -112,7 +117,10 @@ public class CreateTemplateRequest extends Request {
         } 
 
         /**
-         * The description of the template.
+         * <p>The description of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is test</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -121,10 +129,12 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * The name of the orchestration template.
-         * <p>
+         * <p>The name of the orchestration template.</p>
+         * <p>The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). It cannot start with a hyphen (-).</p>
+         * <p>This parameter is required.</p>
          * 
-         * The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). It cannot start with a hyphen (-).
+         * <strong>example:</strong>
+         * <p>service-account-template</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -133,7 +143,10 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * The label of the template.
+         * <p>The label of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder tags(String tags) {
             this.putBodyParameter("tags", tags);
@@ -142,7 +155,11 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * The template content in the YAML format.
+         * <p>The template content in the YAML format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apiVersion: v1\nkind: ServiceAccount\nmetadata:\n  name: test-sa</p>
          */
         public Builder template(String template) {
             this.putBodyParameter("template", template);
@@ -151,15 +168,16 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * The type of template. You can set the parameter to a custom value.
-         * <p>
+         * <p>The type of template. You can set the parameter to a custom value.</p>
+         * <ul>
+         * <li>If the parameter is set to <code>kubernetes</code>, the template is displayed on the Templates page in the console.</li>
+         * <li>If you set the parameter to <code>compose</code>, the template is not displayed in the console.</li>
+         * </ul>
+         * <p>We recommend that you set the parameter to <code>kubernetes</code>.</p>
+         * <p>Default value: <code>compose</code>.</p>
          * 
-         * *   If the parameter is set to `kubernetes`, the template is displayed on the Templates page in the console.
-         * *   If you set the parameter to `compose`, the template is not displayed in the console.
-         * 
-         * We recommend that you set the parameter to `kubernetes`.
-         * 
-         * Default value: `compose`.
+         * <strong>example:</strong>
+         * <p>kubernetes</p>
          */
         public Builder templateType(String templateType) {
             this.putBodyParameter("template_type", templateType);

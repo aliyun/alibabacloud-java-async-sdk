@@ -1,48 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainCcActivityLogRequest} extends {@link RequestModel}
  *
  * <p>DescribeDomainCcActivityLogRequest</p>
  */
 public class DescribeDomainCcActivityLogRequest extends Request {
-    @Query
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100)
     private Long pageSize;
 
-    @Query
-    @NameInMap("RuleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleName")
     private String ruleName;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @Query
-    @NameInMap("TriggerObject")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TriggerObject")
     private String triggerObject;
 
-    @Query
-    @NameInMap("Value")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Value")
     private String value;
 
     private DescribeDomainCcActivityLogRequest(Builder builder) {
@@ -153,10 +153,11 @@ public class DescribeDomainCcActivityLogRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name. You can specify multiple domain names and separate them with commas (,).
-         * <p>
+         * <p>The accelerated domain name. You can specify multiple domain names and separate them with commas (,).</p>
+         * <p>If you do not specify this parameter, data of all accelerated domain names under your account is queried.</p>
          * 
-         * If you do not specify this parameter, data of all accelerated domain names under your account is queried.
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -165,10 +166,11 @@ public class DescribeDomainCcActivityLogRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         * <p>
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The end time must be later than the start time.</p>
          * 
-         * The end time must be later than the start time.
+         * <strong>example:</strong>
+         * <p>2018-12-10T21:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -177,7 +179,10 @@ public class DescribeDomainCcActivityLogRequest extends Request {
         }
 
         /**
-         * The page number of the page to return. Default value: **1**.
+         * <p>The page number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -186,7 +191,10 @@ public class DescribeDomainCcActivityLogRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **30**.
+         * <p>The number of entries to return on each page. Default value: <strong>30</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -195,13 +203,15 @@ public class DescribeDomainCcActivityLogRequest extends Request {
         }
 
         /**
-         * A custom rule name. Valid values:
-         * <p>
+         * <p>A custom rule name. Valid values:</p>
+         * <ul>
+         * <li>default_normal: rule for the normal mode</li>
+         * <li>default_attack: rule for the emergency mode</li>
+         * </ul>
+         * <p>If you leave this parameter empty, events that triggered rate limiting based on all rules are queried.</p>
          * 
-         * *   default_normal: rule for the normal mode
-         * *   default_attack: rule for the emergency mode
-         * 
-         * If you leave this parameter empty, events that triggered rate limiting based on all rules are queried.
+         * <strong>example:</strong>
+         * <p>test2</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -210,12 +220,12 @@ public class DescribeDomainCcActivityLogRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         * <p>
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The minimum time granularity of data collection is 5 minutes.</p>
+         * <p>If you leave this parameter empty, the data collected over the last 24 hours is queried.</p>
          * 
-         * The minimum time granularity of data collection is 5 minutes.
-         * 
-         * If you leave this parameter empty, the data collected over the last 24 hours is queried.
+         * <strong>example:</strong>
+         * <p>2018-12-10T20:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -224,10 +234,11 @@ public class DescribeDomainCcActivityLogRequest extends Request {
         }
 
         /**
-         * The trigger of rate limiting by which you want to query data.
-         * <p>
+         * <p>The trigger of rate limiting by which you want to query data.</p>
+         * <p>If you leave this parameter empty, all events that triggered rate limiting are queried.</p>
          * 
-         * If you leave this parameter empty, all events that triggered rate limiting are queried.
+         * <strong>example:</strong>
+         * <p>IP</p>
          */
         public Builder triggerObject(String triggerObject) {
             this.putQueryParameter("TriggerObject", triggerObject);
@@ -236,10 +247,11 @@ public class DescribeDomainCcActivityLogRequest extends Request {
         }
 
         /**
-         * The value of the trigger.
-         * <p>
+         * <p>The value of the trigger.</p>
+         * <p>If you leave this parameter empty, all events recorded for the trigger are queried.</p>
          * 
-         * If you leave this parameter empty, all events recorded for the trigger are queried.
+         * <strong>example:</strong>
+         * <p>1.2.3.4</p>
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

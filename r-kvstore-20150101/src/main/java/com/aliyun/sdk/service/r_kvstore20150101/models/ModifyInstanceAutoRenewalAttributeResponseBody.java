@@ -1,18 +1,18 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceAutoRenewalAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyInstanceAutoRenewalAttributeResponseBody</p>
  */
 public class ModifyInstanceAutoRenewalAttributeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyInstanceAutoRenewalAttributeResponseBody(Builder builder) {
@@ -38,7 +38,10 @@ public class ModifyInstanceAutoRenewalAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52D901ED-E0A5-42FB-B9DB-39C295C3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

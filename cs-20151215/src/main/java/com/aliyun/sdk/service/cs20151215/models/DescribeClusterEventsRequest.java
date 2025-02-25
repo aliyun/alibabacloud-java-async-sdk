@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterEventsRequest} extends {@link RequestModel}
  *
  * <p>DescribeClusterEventsRequest</p>
  */
 public class DescribeClusterEventsRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("page_number")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page_number")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("page_size")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page_size")
     private Long pageSize;
 
-    @Query
-    @NameInMap("task_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("task_id")
     private String taskId;
 
     private DescribeClusterEventsRequest(Builder builder) {
@@ -97,7 +102,11 @@ public class DescribeClusterEventsRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c82e6987e2961451182edacd74faf****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -106,7 +115,10 @@ public class DescribeClusterEventsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("page_number", pageNumber);
@@ -115,7 +127,10 @@ public class DescribeClusterEventsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 50. Default value: 50.
+         * <p>The number of entries per page. Valid values: 1 to 50. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("page_size", pageSize);
@@ -124,7 +139,10 @@ public class DescribeClusterEventsRequest extends Request {
         }
 
         /**
-         * The ID of the query task.
+         * <p>The ID of the query task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>T-xascadasd*****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("task_id", taskId);

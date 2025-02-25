@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCdnCertificateSigningRequestResponseBody} extends {@link TeaModel}
  *
  * <p>CreateCdnCertificateSigningRequestResponseBody</p>
  */
 public class CreateCdnCertificateSigningRequestResponseBody extends TeaModel {
-    @NameInMap("CommonName")
+    @com.aliyun.core.annotation.NameInMap("CommonName")
     private String commonName;
 
-    @NameInMap("Csr")
+    @com.aliyun.core.annotation.NameInMap("Csr")
     private String csr;
 
-    @NameInMap("PubMd5")
+    @com.aliyun.core.annotation.NameInMap("PubMd5")
     private String pubMd5;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateCdnCertificateSigningRequestResponseBody(Builder builder) {
@@ -74,7 +74,10 @@ public class CreateCdnCertificateSigningRequestResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The Common Name of the certificate.
+         * <p>The Common Name of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CommonName</p>
          */
         public Builder commonName(String commonName) {
             this.commonName = commonName;
@@ -82,7 +85,10 @@ public class CreateCdnCertificateSigningRequestResponseBody extends TeaModel {
         }
 
         /**
-         * The content of the CSR file.
+         * <p>The content of the CSR file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CSRName</p>
          */
         public Builder csr(String csr) {
             this.csr = csr;
@@ -90,7 +96,10 @@ public class CreateCdnCertificateSigningRequestResponseBody extends TeaModel {
         }
 
         /**
-         * The MD5 hash value of the certificate public key.
+         * <p>The MD5 hash value of the certificate public key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>629bf4fd8104eda171135bcb0f77****</p>
          */
         public Builder pubMd5(String pubMd5) {
             this.pubMd5 = pubMd5;
@@ -98,7 +107,10 @@ public class CreateCdnCertificateSigningRequestResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

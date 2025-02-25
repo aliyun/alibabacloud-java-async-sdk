@@ -1,65 +1,70 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceAmortizedCostByAmortizationPeriodDateRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceAmortizedCostByAmortizationPeriodDateRequest</p>
  */
 public class DescribeInstanceAmortizedCostByAmortizationPeriodDateRequest extends Request {
-    @Body
-    @NameInMap("AmortizationDateEnd")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AmortizationDateEnd")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String amortizationDateEnd;
 
-    @Body
-    @NameInMap("AmortizationDateStart")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AmortizationDateStart")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String amortizationDateStart;
 
-    @Body
-    @NameInMap("BillOwnerIdList")
-    private java.util.List < String > billOwnerIdList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BillOwnerIdList")
+    private java.util.List<String> billOwnerIdList;
 
-    @Body
-    @NameInMap("BillUserIdList")
-    private java.util.List < String > billUserIdList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BillUserIdList")
+    private java.util.List<String> billUserIdList;
 
-    @Body
-    @NameInMap("BillingCycle")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BillingCycle")
     private String billingCycle;
 
-    @Body
-    @NameInMap("CostUnitCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CostUnitCode")
     private String costUnitCode;
 
-    @Body
-    @NameInMap("InstanceIdList")
-    private java.util.List < String > instanceIdList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceIdList")
+    private java.util.List<String> instanceIdList;
 
-    @Body
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Body
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Body
-    @NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
 
-    @Body
-    @NameInMap("ProductDetail")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductDetail")
     private String productDetail;
 
-    @Body
-    @NameInMap("SubscriptionType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SubscriptionType")
     private String subscriptionType;
 
     private DescribeInstanceAmortizedCostByAmortizationPeriodDateRequest(Builder builder) {
@@ -108,14 +113,14 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodDateRequest extend
     /**
      * @return billOwnerIdList
      */
-    public java.util.List < String > getBillOwnerIdList() {
+    public java.util.List<String> getBillOwnerIdList() {
         return this.billOwnerIdList;
     }
 
     /**
      * @return billUserIdList
      */
-    public java.util.List < String > getBillUserIdList() {
+    public java.util.List<String> getBillUserIdList() {
         return this.billUserIdList;
     }
 
@@ -136,7 +141,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodDateRequest extend
     /**
      * @return instanceIdList
      */
-    public java.util.List < String > getInstanceIdList() {
+    public java.util.List<String> getInstanceIdList() {
         return this.instanceIdList;
     }
 
@@ -178,11 +183,11 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodDateRequest extend
     public static final class Builder extends Request.Builder<DescribeInstanceAmortizedCostByAmortizationPeriodDateRequest, Builder> {
         private String amortizationDateEnd; 
         private String amortizationDateStart; 
-        private java.util.List < String > billOwnerIdList; 
-        private java.util.List < String > billUserIdList; 
+        private java.util.List<String> billOwnerIdList; 
+        private java.util.List<String> billUserIdList; 
         private String billingCycle; 
         private String costUnitCode; 
-        private java.util.List < String > instanceIdList; 
+        private java.util.List<String> instanceIdList; 
         private Integer maxResults; 
         private String nextToken; 
         private String productCode; 
@@ -210,7 +215,10 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodDateRequest extend
         } 
 
         /**
-         * AmortizationDateEnd.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-10</p>
          */
         public Builder amortizationDateEnd(String amortizationDateEnd) {
             this.putBodyParameter("AmortizationDateEnd", amortizationDateEnd);
@@ -219,7 +227,10 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodDateRequest extend
         }
 
         /**
-         * AmortizationDateStart.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-10</p>
          */
         public Builder amortizationDateStart(String amortizationDateStart) {
             this.putBodyParameter("AmortizationDateStart", amortizationDateStart);
@@ -230,7 +241,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodDateRequest extend
         /**
          * BillOwnerIdList.
          */
-        public Builder billOwnerIdList(java.util.List < String > billOwnerIdList) {
+        public Builder billOwnerIdList(java.util.List<String> billOwnerIdList) {
             this.putBodyParameter("BillOwnerIdList", billOwnerIdList);
             this.billOwnerIdList = billOwnerIdList;
             return this;
@@ -239,7 +250,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodDateRequest extend
         /**
          * BillUserIdList.
          */
-        public Builder billUserIdList(java.util.List < String > billUserIdList) {
+        public Builder billUserIdList(java.util.List<String> billUserIdList) {
             this.putBodyParameter("BillUserIdList", billUserIdList);
             this.billUserIdList = billUserIdList;
             return this;
@@ -266,7 +277,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodDateRequest extend
         /**
          * InstanceIdList.
          */
-        public Builder instanceIdList(java.util.List < String > instanceIdList) {
+        public Builder instanceIdList(java.util.List<String> instanceIdList) {
             this.putBodyParameter("InstanceIdList", instanceIdList);
             this.instanceIdList = instanceIdList;
             return this;

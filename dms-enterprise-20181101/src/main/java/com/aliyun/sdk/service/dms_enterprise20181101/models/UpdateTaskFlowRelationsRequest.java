@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTaskFlowRelationsRequest} extends {@link RequestModel}
  *
  * <p>UpdateTaskFlowRelationsRequest</p>
  */
 public class UpdateTaskFlowRelationsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("DagId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DagId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long dagId;
 
-    @Query
-    @NameInMap("Edges")
-    private java.util.List < Edges> edges;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Edges")
+    private java.util.List<Edges> edges;
 
-    @Query
-    @NameInMap("Tid")
-    @Validation(minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tid")
+    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long tid;
 
     private UpdateTaskFlowRelationsRequest(Builder builder) {
@@ -68,7 +73,7 @@ public class UpdateTaskFlowRelationsRequest extends Request {
     /**
      * @return edges
      */
-    public java.util.List < Edges> getEdges() {
+    public java.util.List<Edges> getEdges() {
         return this.edges;
     }
 
@@ -82,7 +87,7 @@ public class UpdateTaskFlowRelationsRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateTaskFlowRelationsRequest, Builder> {
         private String regionId; 
         private Long dagId; 
-        private java.util.List < Edges> edges; 
+        private java.util.List<Edges> edges; 
         private Long tid; 
 
         private Builder() {
@@ -107,7 +112,11 @@ public class UpdateTaskFlowRelationsRequest extends Request {
         }
 
         /**
-         * The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.
+         * <p>The ID of the task flow. You can call the <a href="https://help.aliyun.com/document_detail/424565.html">ListTaskFlow</a> or <a href="https://help.aliyun.com/document_detail/426672.html">ListLhTaskFlowAndScenario</a> operation to query the task flow ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15***</p>
          */
         public Builder dagId(Long dagId) {
             this.putQueryParameter("DagId", dagId);
@@ -116,9 +125,9 @@ public class UpdateTaskFlowRelationsRequest extends Request {
         }
 
         /**
-         * The list of task flow edges to be updated.
+         * <p>The list of task flow edges to be updated.</p>
          */
-        public Builder edges(java.util.List < Edges> edges) {
+        public Builder edges(java.util.List<Edges> edges) {
             String edgesShrink = shrink(edges, "Edges", "json");
             this.putQueryParameter("Edges", edgesShrink);
             this.edges = edges;
@@ -126,10 +135,13 @@ public class UpdateTaskFlowRelationsRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p> To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a>.</p>
+         * </blockquote>
          * 
-         * >  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -144,14 +156,20 @@ public class UpdateTaskFlowRelationsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateTaskFlowRelationsRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTaskFlowRelationsRequest</p>
+     */
     public static class Edges extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("NodeEnd")
+        @com.aliyun.core.annotation.NameInMap("NodeEnd")
         private Long nodeEnd;
 
-        @NameInMap("NodeFrom")
+        @com.aliyun.core.annotation.NameInMap("NodeFrom")
         private Long nodeFrom;
 
         private Edges(Builder builder) {
@@ -195,7 +213,10 @@ public class UpdateTaskFlowRelationsRequest extends Request {
             private Long nodeFrom; 
 
             /**
-             * The ID of the task flow edge.
+             * <p>The ID of the task flow edge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24***</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -203,7 +224,10 @@ public class UpdateTaskFlowRelationsRequest extends Request {
             }
 
             /**
-             * The ID of the end node on the edge.
+             * <p>The ID of the end node on the edge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44***</p>
              */
             public Builder nodeEnd(Long nodeEnd) {
                 this.nodeEnd = nodeEnd;
@@ -211,7 +235,10 @@ public class UpdateTaskFlowRelationsRequest extends Request {
             }
 
             /**
-             * The ID of the start node on the edge.
+             * <p>The ID of the start node on the edge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44***</p>
              */
             public Builder nodeFrom(Long nodeFrom) {
                 this.nodeFrom = nodeFrom;

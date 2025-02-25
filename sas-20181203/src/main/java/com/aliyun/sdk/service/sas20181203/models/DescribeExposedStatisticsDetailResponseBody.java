@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExposedStatisticsDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeExposedStatisticsDetailResponseBody</p>
  */
 public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StatisticsDetails")
-    private java.util.List < StatisticsDetails> statisticsDetails;
+    @com.aliyun.core.annotation.NameInMap("StatisticsDetails")
+    private java.util.List<StatisticsDetails> statisticsDetails;
 
     private DescribeExposedStatisticsDetailResponseBody(Builder builder) {
         this.pageInfo = builder.pageInfo;
@@ -52,17 +57,17 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
     /**
      * @return statisticsDetails
      */
-    public java.util.List < StatisticsDetails> getStatisticsDetails() {
+    public java.util.List<StatisticsDetails> getStatisticsDetails() {
         return this.statisticsDetails;
     }
 
     public static final class Builder {
         private PageInfo pageInfo; 
         private String requestId; 
-        private java.util.List < StatisticsDetails> statisticsDetails; 
+        private java.util.List<StatisticsDetails> statisticsDetails; 
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +75,10 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7CBAFB3F-1ED7-4A23-986A-6F67F0466BD1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,9 +86,9 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
         }
 
         /**
-         * An array consisting of the gateway assets, ports, system components, or public IP addresses that are exposed on the Internet and are returned.
+         * <p>An array consisting of the gateway assets, ports, system components, or public IP addresses that are exposed on the Internet and are returned.</p>
          */
-        public Builder statisticsDetails(java.util.List < StatisticsDetails> statisticsDetails) {
+        public Builder statisticsDetails(java.util.List<StatisticsDetails> statisticsDetails) {
             this.statisticsDetails = statisticsDetails;
             return this;
         }
@@ -91,17 +99,23 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeExposedStatisticsDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeExposedStatisticsDetailResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -154,7 +168,10 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -162,7 +179,10 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -170,7 +190,10 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -178,7 +201,10 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -192,29 +218,35 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeExposedStatisticsDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeExposedStatisticsDetailResponseBody</p>
+     */
     public static class StatisticsDetails extends TeaModel {
-        @NameInMap("ExposedCount")
+        @com.aliyun.core.annotation.NameInMap("ExposedCount")
         private Integer exposedCount;
 
-        @NameInMap("ExposureComponent")
+        @com.aliyun.core.annotation.NameInMap("ExposureComponent")
         private String exposureComponent;
 
-        @NameInMap("ExposureIp")
+        @com.aliyun.core.annotation.NameInMap("ExposureIp")
         private String exposureIp;
 
-        @NameInMap("ExposurePort")
+        @com.aliyun.core.annotation.NameInMap("ExposurePort")
         private String exposurePort;
 
-        @NameInMap("ExposureType")
+        @com.aliyun.core.annotation.NameInMap("ExposureType")
         private String exposureType;
 
-        @NameInMap("ExposureTypeId")
+        @com.aliyun.core.annotation.NameInMap("ExposureTypeId")
         private String exposureTypeId;
 
-        @NameInMap("ExposureTypeInstanceName")
+        @com.aliyun.core.annotation.NameInMap("ExposureTypeInstanceName")
         private String exposureTypeInstanceName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private StatisticsDetails(Builder builder) {
@@ -303,7 +335,10 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * The total number of system vulnerabilities that are detected on your server and are exposed on the Internet.
+             * <p>The total number of system vulnerabilities that are detected on your server and are exposed on the Internet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder exposedCount(Integer exposedCount) {
                 this.exposedCount = exposedCount;
@@ -311,7 +346,10 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The system component that is exposed on the Internet.
+             * <p>The system component that is exposed on the Internet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tomcat</p>
              */
             public Builder exposureComponent(String exposureComponent) {
                 this.exposureComponent = exposureComponent;
@@ -319,7 +357,10 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address that is exposed on the Internet.
+             * <p>The public IP address that is exposed on the Internet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123.57.XX.XX</p>
              */
             public Builder exposureIp(String exposureIp) {
                 this.exposureIp = exposureIp;
@@ -327,7 +368,10 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The port that is exposed on the Internet.
+             * <p>The port that is exposed on the Internet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder exposurePort(String exposurePort) {
                 this.exposurePort = exposurePort;
@@ -335,13 +379,16 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The resource from which the asset is exposed. Valid values:
-             * <p>
+             * <p>The resource from which the asset is exposed. Valid values:</p>
+             * <ul>
+             * <li><strong>INTERNET_IP</strong>: the IP address of the Elastic Compute Service (ECS) instance</li>
+             * <li><strong>SLB</strong>: the public IP address of the SLB instance</li>
+             * <li><strong>EIP</strong>: the elastic IP address (EIP)</li>
+             * <li><strong>DNAT</strong>: the NAT gateway that connects to the Internet by using the DNAT feature</li>
+             * </ul>
              * 
-             * *   **INTERNET_IP**: the IP address of the Elastic Compute Service (ECS) instance
-             * *   **SLB**: the public IP address of the SLB instance
-             * *   **EIP**: the elastic IP address (EIP)
-             * *   **DNAT**: the NAT gateway that connects to the Internet by using the DNAT feature
+             * <strong>example:</strong>
+             * <p>SLB</p>
              */
             public Builder exposureType(String exposureType) {
                 this.exposureType = exposureType;
@@ -349,13 +396,16 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance to which the resource belongs. The valid values of this parameter vary based on the value of the ExposureType parameter.
-             * <p>
+             * <p>The ID of the instance to which the resource belongs. The valid values of this parameter vary based on the value of the ExposureType parameter.</p>
+             * <ul>
+             * <li>If the value of the <strong>ExposureType</strong> parameter is <strong>INTERNET_IP</strong>, the value of this parameter is an empty string.</li>
+             * <li>If the value of the <strong>ExposureType</strong> parameter is <strong>SLB</strong>, the value of this parameter is the ID of the Internet-facing SLB instance.</li>
+             * <li>If the value of the <strong>ExposureType</strong> parameter is <strong>EIP</strong>, the value of this parameter is the ID of the EIP.</li>
+             * <li>If the value of the <strong>ExposureType</strong> parameter is <strong>DNAT</strong>, the value of this parameter is the ID of the NAT gateway.</li>
+             * </ul>
              * 
-             * *   If the value of the **ExposureType** parameter is **INTERNET_IP**, the value of this parameter is an empty string.
-             * *   If the value of the **ExposureType** parameter is **SLB**, the value of this parameter is the ID of the Internet-facing SLB instance.
-             * *   If the value of the **ExposureType** parameter is **EIP**, the value of this parameter is the ID of the EIP.
-             * *   If the value of the **ExposureType** parameter is **DNAT**, the value of this parameter is the ID of the NAT gateway.
+             * <strong>example:</strong>
+             * <p>lb-2ze4rso39h4nczcqs****</p>
              */
             public Builder exposureTypeId(String exposureTypeId) {
                 this.exposureTypeId = exposureTypeId;
@@ -363,7 +413,10 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the gateway asset that is exposed on the Internet.
+             * <p>The name of the gateway asset that is exposed on the Internet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ngw-bp1vkbju8f3w87c9v****</p>
              */
             public Builder exposureTypeInstanceName(String exposureTypeInstanceName) {
                 this.exposureTypeInstanceName = exposureTypeInstanceName;
@@ -371,7 +424,10 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the asset.
+             * <p>The region ID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageInfoListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImageInfoListResponseBody</p>
  */
 public class DescribeImageInfoListResponseBody extends TeaModel {
-    @NameInMap("ImageInfos")
-    private java.util.List < ImageInfos> imageInfos;
+    @com.aliyun.core.annotation.NameInMap("ImageInfos")
+    private java.util.List<ImageInfos> imageInfos;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeImageInfoListResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
     /**
      * @return imageInfos
      */
-    public java.util.List < ImageInfos> getImageInfos() {
+    public java.util.List<ImageInfos> getImageInfos() {
         return this.imageInfos;
     }
 
@@ -46,19 +51,22 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ImageInfos> imageInfos; 
+        private java.util.List<ImageInfos> imageInfos; 
         private String requestId; 
 
         /**
-         * An array that consists of the information about images.
+         * <p>An array that consists of the information about images.</p>
          */
-        public Builder imageInfos(java.util.List < ImageInfos> imageInfos) {
+        public Builder imageInfos(java.util.List<ImageInfos> imageInfos) {
             this.imageInfos = imageInfos;
             return this;
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BC3B0DAE-CC0E-59E9-9383-6F060F22****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,71 +79,77 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImageInfoListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageInfoListResponseBody</p>
+     */
     public static class ImageInfos extends TeaModel {
-        @NameInMap("AlarmCount")
+        @com.aliyun.core.annotation.NameInMap("AlarmCount")
         private Integer alarmCount;
 
-        @NameInMap("AlarmStatus")
+        @com.aliyun.core.annotation.NameInMap("AlarmStatus")
         private String alarmStatus;
 
-        @NameInMap("Digest")
+        @com.aliyun.core.annotation.NameInMap("Digest")
         private String digest;
 
-        @NameInMap("Endpoints")
+        @com.aliyun.core.annotation.NameInMap("Endpoints")
         private String endpoints;
 
-        @NameInMap("ImageCreate")
+        @com.aliyun.core.annotation.NameInMap("ImageCreate")
         private Long imageCreate;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("ImageSize")
+        @com.aliyun.core.annotation.NameInMap("ImageSize")
         private Long imageSize;
 
-        @NameInMap("ImageUpdate")
+        @com.aliyun.core.annotation.NameInMap("ImageUpdate")
         private Long imageUpdate;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RegistryType")
+        @com.aliyun.core.annotation.NameInMap("RegistryType")
         private String registryType;
 
-        @NameInMap("RepoId")
+        @com.aliyun.core.annotation.NameInMap("RepoId")
         private String repoId;
 
-        @NameInMap("RepoName")
+        @com.aliyun.core.annotation.NameInMap("RepoName")
         private String repoName;
 
-        @NameInMap("RepoNamespace")
+        @com.aliyun.core.annotation.NameInMap("RepoNamespace")
         private String repoNamespace;
 
-        @NameInMap("RepoType")
+        @com.aliyun.core.annotation.NameInMap("RepoType")
         private String repoType;
 
-        @NameInMap("RiskStatus")
+        @com.aliyun.core.annotation.NameInMap("RiskStatus")
         private String riskStatus;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
-        @NameInMap("TagImmutable")
+        @com.aliyun.core.annotation.NameInMap("TagImmutable")
         private Integer tagImmutable;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
-        @NameInMap("VulCount")
+        @com.aliyun.core.annotation.NameInMap("VulCount")
         private Integer vulCount;
 
-        @NameInMap("VulStatus")
+        @com.aliyun.core.annotation.NameInMap("VulStatus")
         private String vulStatus;
 
         private ImageInfos(Builder builder) {
@@ -350,7 +364,10 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             private String vulStatus; 
 
             /**
-             * The number of alerts that are generated on the current pod, application, namespace, or cluster.
+             * <p>The number of alerts that are generated on the current pod, application, namespace, or cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder alarmCount(Integer alarmCount) {
                 this.alarmCount = alarmCount;
@@ -358,11 +375,14 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether alerts are generated on the asset. Valid values:
-             * <p>
+             * <p>Indicates whether alerts are generated on the asset. Valid values:</p>
+             * <ul>
+             * <li><strong>YES</strong></li>
+             * <li><strong>NO</strong></li>
+             * </ul>
              * 
-             * *   **YES**
-             * *   **NO**
+             * <strong>example:</strong>
+             * <p>YES</p>
              */
             public Builder alarmStatus(String alarmStatus) {
                 this.alarmStatus = alarmStatus;
@@ -370,7 +390,10 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * The digest value of the image.
+             * <p>The digest value of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a3521b04dfdd1361a24be6263f2983cf12ba910989f4d9f7324da7e1e89f****</p>
              */
             public Builder digest(String digest) {
                 this.digest = digest;
@@ -378,7 +401,10 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of Container Registry.
+             * <p>The endpoint of Container Registry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-x7</p>
              */
             public Builder endpoints(String endpoints) {
                 this.endpoints = endpoints;
@@ -386,7 +412,10 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the image was created.
+             * <p>The time when the image was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1636962328000</p>
              */
             public Builder imageCreate(Long imageCreate) {
                 this.imageCreate = imageCreate;
@@ -394,7 +423,10 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image.
+             * <p>The ID of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bb0175afea16138815a8900adeeb0315d88a83a2376eeffa14db1d693a15****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -402,7 +434,10 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the image.
+             * <p>The size of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>157408623</p>
              */
             public Builder imageSize(Long imageSize) {
                 this.imageSize = imageSize;
@@ -410,7 +445,10 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the image was updated.
+             * <p>The time when the image was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1636974116000</p>
              */
             public Builder imageUpdate(Long imageUpdate) {
                 this.imageUpdate = imageUpdate;
@@ -418,7 +456,10 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image instance.
+             * <p>The ID of the image instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-wz95abw6pa7y79ve****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -426,7 +467,10 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the image instance.
+             * <p>The region ID of the image instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -434,7 +478,10 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the registration.
+             * <p>The type of the registration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>harbor</p>
              */
             public Builder registryType(String registryType) {
                 this.registryType = registryType;
@@ -442,7 +489,10 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image repository.
+             * <p>The ID of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crr-5qk9v2rdt0s****</p>
              */
             public Builder repoId(String repoId) {
                 this.repoId = repoId;
@@ -450,7 +500,10 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image repository.
+             * <p>The name of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>opa-test</p>
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -458,7 +511,10 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace to which the image repository belongs.
+             * <p>The namespace to which the image repository belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>libssh2</p>
              */
             public Builder repoNamespace(String repoNamespace) {
                 this.repoNamespace = repoNamespace;
@@ -466,11 +522,14 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the image repository. Valid values:
-             * <p>
+             * <p>The type of the image repository. Valid values:</p>
+             * <ul>
+             * <li><code>PUBLIC</code></li>
+             * <li><code>PRIVATE</code></li>
+             * </ul>
              * 
-             * *   `PUBLIC`
-             * *   `PRIVATE`
+             * <strong>example:</strong>
+             * <p>PUBLIC</p>
              */
             public Builder repoType(String repoType) {
                 this.repoType = repoType;
@@ -478,11 +537,14 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the image is at risk. Valid values:
-             * <p>
+             * <p>Indicates whether the image is at risk. Valid values:</p>
+             * <ul>
+             * <li><strong>YES</strong></li>
+             * <li><strong>NO</strong></li>
+             * </ul>
              * 
-             * *   **YES**
-             * *   **NO**
+             * <strong>example:</strong>
+             * <p>YES</p>
              */
             public Builder riskStatus(String riskStatus) {
                 this.riskStatus = riskStatus;
@@ -490,7 +552,10 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the image.
+             * <p>The status of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -498,7 +563,10 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * The tag that is added to the image.
+             * <p>The tag that is added to the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -506,7 +574,10 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * The tag immutability.
+             * <p>The tag immutability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder tagImmutable(Integer tagImmutable) {
                 this.tagImmutable = tagImmutable;
@@ -514,7 +585,10 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * <p>The UUID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ff9ca084-7faa-4ab2-8728-69024755****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -522,7 +596,10 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of vulnerabilities in your assets.
+             * <p>The total number of vulnerabilities in your assets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder vulCount(Integer vulCount) {
                 this.vulCount = vulCount;
@@ -530,11 +607,14 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether vulnerabilities are detected on the asset. Valid values:
-             * <p>
+             * <p>Indicates whether vulnerabilities are detected on the asset. Valid values:</p>
+             * <ul>
+             * <li><strong>YES</strong></li>
+             * <li><strong>NO</strong></li>
+             * </ul>
              * 
-             * *   **YES**
-             * *   **NO**
+             * <strong>example:</strong>
+             * <p>YES</p>
              */
             public Builder vulStatus(String vulStatus) {
                 this.vulStatus = vulStatus;

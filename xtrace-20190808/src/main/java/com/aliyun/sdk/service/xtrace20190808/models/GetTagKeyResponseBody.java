@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtrace20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTagKeyResponseBody} extends {@link TeaModel}
  *
  * <p>GetTagKeyResponseBody</p>
  */
 public class GetTagKeyResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TagKeys")
+    @com.aliyun.core.annotation.NameInMap("TagKeys")
     private TagKeys tagKeys;
 
     private GetTagKeyResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class GetTagKeyResponseBody extends TeaModel {
         private TagKeys tagKeys; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1E2B6A4C-6B83-4062-8B6F-AEEC1F******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class GetTagKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The tag keys.
+         * <p>The tag keys.</p>
          */
         public Builder tagKeys(TagKeys tagKeys) {
             this.tagKeys = tagKeys;
@@ -71,9 +79,15 @@ public class GetTagKeyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTagKeyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTagKeyResponseBody</p>
+     */
     public static class TagKeys extends TeaModel {
-        @NameInMap("TagKey")
-        private java.util.List < String > tagKey;
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private java.util.List<String> tagKey;
 
         private TagKeys(Builder builder) {
             this.tagKey = builder.tagKey;
@@ -90,17 +104,17 @@ public class GetTagKeyResponseBody extends TeaModel {
         /**
          * @return tagKey
          */
-        public java.util.List < String > getTagKey() {
+        public java.util.List<String> getTagKey() {
             return this.tagKey;
         }
 
         public static final class Builder {
-            private java.util.List < String > tagKey; 
+            private java.util.List<String> tagKey; 
 
             /**
              * TagKey.
              */
-            public Builder tagKey(java.util.List < String > tagKey) {
+            public Builder tagKey(java.util.List<String> tagKey) {
                 this.tagKey = tagKey;
                 return this;
             }

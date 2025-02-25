@@ -14,7 +14,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListRepositoryRequest extends Request {
     @Host
     @NameInMap("RegionId")
-    @Validation(required = true)
     private String regionId;
 
     @Query
@@ -40,7 +39,6 @@ public class ListRepositoryRequest extends Request {
 
     @Query
     @NameInMap("RepoStatus")
-    @Validation(required = true)
     private String repoStatus;
 
     private ListRepositoryRequest(Builder builder) {

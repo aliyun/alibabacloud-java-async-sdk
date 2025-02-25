@@ -1,30 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link UpdateLogStoreMeteringModeRequest} extends {@link RequestModel}
  *
  * <p>UpdateLogStoreMeteringModeRequest</p>
  */
 public class UpdateLogStoreMeteringModeRequest extends Request {
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("project")
     private String project;
 
-    @Path
-    @NameInMap("logstore")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("logstore")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String logstore;
 
-    @Body
-    @NameInMap("meteringMode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("meteringMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String meteringMode;
 
     private UpdateLogStoreMeteringModeRequest(Builder builder) {
@@ -85,7 +89,11 @@ public class UpdateLogStoreMeteringModeRequest extends Request {
         } 
 
         /**
-         * project.
+         * <p>The name of the project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>projectName</p>
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -94,7 +102,11 @@ public class UpdateLogStoreMeteringModeRequest extends Request {
         }
 
         /**
-         * logstore.
+         * <p>The name of the Logstore.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>logstoreName</p>
          */
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);
@@ -103,7 +115,11 @@ public class UpdateLogStoreMeteringModeRequest extends Request {
         }
 
         /**
-         * meteringMode.
+         * <p>The billing mode. Valid values: ChargeByFunction and ChargeByDataIngest. Default value: ChargeByFunction. The value ChargeByFunction specifies the pay-by-feature billing mode. The value ChargeByDataIngest specifies the pay-by-ingested-data billing mode.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ChargeByFunction</p>
          */
         public Builder meteringMode(String meteringMode) {
             this.putBodyParameter("meteringMode", meteringMode);

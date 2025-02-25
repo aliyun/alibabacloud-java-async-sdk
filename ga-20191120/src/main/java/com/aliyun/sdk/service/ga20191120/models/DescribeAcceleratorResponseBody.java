@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,85 +11,85 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAcceleratorResponseBody</p>
  */
 public class DescribeAcceleratorResponseBody extends TeaModel {
-    @NameInMap("AcceleratorId")
+    @com.aliyun.core.annotation.NameInMap("AcceleratorId")
     private String acceleratorId;
 
-    @NameInMap("BandwidthBillingType")
+    @com.aliyun.core.annotation.NameInMap("BandwidthBillingType")
     private String bandwidthBillingType;
 
-    @NameInMap("BasicBandwidthPackage")
+    @com.aliyun.core.annotation.NameInMap("BasicBandwidthPackage")
     private BasicBandwidthPackage basicBandwidthPackage;
 
-    @NameInMap("CenId")
+    @com.aliyun.core.annotation.NameInMap("CenId")
     private String cenId;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private Long createTime;
 
-    @NameInMap("CrossBorderMode")
+    @com.aliyun.core.annotation.NameInMap("CrossBorderMode")
     private String crossBorderMode;
 
-    @NameInMap("CrossBorderStatus")
+    @com.aliyun.core.annotation.NameInMap("CrossBorderStatus")
     private Boolean crossBorderStatus;
 
-    @NameInMap("CrossDomainBandwidthPackage")
+    @com.aliyun.core.annotation.NameInMap("CrossDomainBandwidthPackage")
     private CrossDomainBandwidthPackage crossDomainBandwidthPackage;
 
-    @NameInMap("CrossPrivateState")
+    @com.aliyun.core.annotation.NameInMap("CrossPrivateState")
     private String crossPrivateState;
 
-    @NameInMap("DdosId")
+    @com.aliyun.core.annotation.NameInMap("DdosId")
     private String ddosId;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("DnsName")
+    @com.aliyun.core.annotation.NameInMap("DnsName")
     private String dnsName;
 
-    @NameInMap("ExpiredTime")
+    @com.aliyun.core.annotation.NameInMap("ExpiredTime")
     private Long expiredTime;
 
-    @NameInMap("InstanceChargeType")
+    @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
     private String instanceChargeType;
 
-    @NameInMap("IpSetConfig")
+    @com.aliyun.core.annotation.NameInMap("IpSetConfig")
     private IpSetConfig ipSetConfig;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("SecondDnsName")
+    @com.aliyun.core.annotation.NameInMap("SecondDnsName")
     private String secondDnsName;
 
-    @NameInMap("ServiceId")
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
     private String serviceId;
 
-    @NameInMap("ServiceManaged")
+    @com.aliyun.core.annotation.NameInMap("ServiceManaged")
     private Boolean serviceManaged;
 
-    @NameInMap("ServiceManagedInfos")
+    @com.aliyun.core.annotation.NameInMap("ServiceManagedInfos")
     private java.util.List < ServiceManagedInfos> serviceManagedInfos;
 
-    @NameInMap("Spec")
+    @com.aliyun.core.annotation.NameInMap("Spec")
     private String spec;
 
-    @NameInMap("State")
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List < Tags> tags;
 
-    @NameInMap("UpgradableStatus")
+    @com.aliyun.core.annotation.NameInMap("UpgradableStatus")
     private String upgradableStatus;
 
     private DescribeAcceleratorResponseBody(Builder builder) {
@@ -527,9 +526,10 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * 托管实例所属的服务方ID。
+         * The ID of the service that manages the GA instance.
          * <p>
-         * > 仅在**ServiceManaged**参数为**True**时有效。
+         * 
+         * >  This parameter is returned only if the value of **ServiceManaged** is **true**.
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;
@@ -537,12 +537,11 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * 是否为托管实例。取值：
+         * Indicates whether the GA instance is managed. Valid values:
          * <p>
          * 
-         * - **true**：是托管实例。
-         * 
-         * - **false**：不是托管实例。
+         * *   **true**
+         * *   **false**
          */
         public Builder serviceManaged(Boolean serviceManaged) {
             this.serviceManaged = serviceManaged;
@@ -550,10 +549,11 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * 用户在此托管实例下可执行的动作策略列表。
+         * The actions that you can perform on the managed instance.
          * <p>
-         * > 仅在**ServiceManaged**参数为**True**时有效。
-         * > - 当实例处于托管状态时，用户对实例的操作会受到限制，某些操作行为会被禁止。
+         * 
+         * >  * This parameter is returned only if the value of **ServiceManaged** is **true**.
+         * >*   You can perform only specific actions on a managed instance.
          */
         public Builder serviceManagedInfos(java.util.List < ServiceManagedInfos> serviceManagedInfos) {
             this.serviceManagedInfos = serviceManagedInfos;
@@ -635,13 +635,13 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
     } 
 
     public static class BasicBandwidthPackage extends TeaModel {
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Integer bandwidth;
 
-        @NameInMap("BandwidthType")
+        @com.aliyun.core.annotation.NameInMap("BandwidthType")
         private String bandwidthType;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
         private BasicBandwidthPackage(Builder builder) {
@@ -721,10 +721,10 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
 
     }
     public static class CrossDomainBandwidthPackage extends TeaModel {
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Integer bandwidth;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
         private CrossDomainBandwidthPackage(Builder builder) {
@@ -782,7 +782,7 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
 
     }
     public static class IpSetConfig extends TeaModel {
-        @NameInMap("AccessMode")
+        @com.aliyun.core.annotation.NameInMap("AccessMode")
         private String accessMode;
 
         private IpSetConfig(Builder builder) {
@@ -827,13 +827,13 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
 
     }
     public static class ServiceManagedInfos extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("ChildType")
+        @com.aliyun.core.annotation.NameInMap("ChildType")
         private String childType;
 
-        @NameInMap("IsManaged")
+        @com.aliyun.core.annotation.NameInMap("IsManaged")
         private Boolean isManaged;
 
         private ServiceManagedInfos(Builder builder) {
@@ -877,14 +877,15 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
             private Boolean isManaged; 
 
             /**
-             * 托管策略动作名称，取值：
+             * The name of the action performed on the managed instance. Valid values:
              * <p>
-             * - **Create**：创建实例。
-             * - **Update**：更新当前实例。
-             * - **Delete**：删除当前实例。
-             * - **Associate**：引用/被引用当前实例。
-             * - **UserUnmanaged**：用户解托管实例。
-             * - **CreateChild**：在当前实例下创建子资源。
+             * 
+             * *   **Create**
+             * *   **Update**
+             * *   **Delete**
+             * *   **Associate**
+             * *   **UserUnmanaged**
+             * *   **CreateChild**
              */
             public Builder action(String action) {
                 this.action = action;
@@ -892,24 +893,18 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
             }
 
             /**
-             * 子资源类型，取值：
+             * The type of the child resource. Valid values:
              * <p>
              * 
-             * - **Listener**：监听资源。
+             * *   **Listener**: a listener.
+             * *   **IpSet**: an acceleration region.
+             * *   **EndpointGroup**: an endpoint group.
+             * *   **ForwardingRule**: a forwarding rule.
+             * *   **Endpoint**: an endpoint.
+             * *   **EndpointGroupDestination**: a protocol mapping of an endpoint group associated with a custom routing listener.
+             * *   **EndpointPolicy**: a traffic policy of an endpoint associated with a custom routing listener.
              * 
-             * - **IpSet**：加速地域资源。
-             * 
-             * - **EndpointGroup**：终端节点组资源。
-             * 
-             * - **ForwardingRule**：转发策略资源。
-             * 
-             * - **Endpoint**：终端节点资源。
-             * 
-             * - **EndpointGroupDestination**：自定义路由监听下的终端节点组协议映射资源。
-             * 
-             * - **EndpointPolicy**：自定义路由监听下的终端节点通行策略资源。
-             * 
-             * > 仅在**Action**参数为**CreateChild**时有效。
+             * >  This parameter is returned only if the value of **Action** is **CreateChild**.
              */
             public Builder childType(String childType) {
                 this.childType = childType;
@@ -917,12 +912,11 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
             }
 
             /**
-             * 托管策略动作是否被托管，取值：
+             * Indicates whether the specified actions are managed. Valid values:
              * <p>
              * 
-             * - **true**：托管策略动作被托管，用户无权在托管实例下执行Action指定的操作。
-             * 
-             * - **false**：托管策略动作未被托管，用户可在托管实例下执行Action指定的操作。
+             * *   **true**: The specified actions are managed, and you cannot perform the specified actions on the managed instance.
+             * *   **false**: The specified actions are not managed, and you can perform the specified actions on the managed instance.
              */
             public Builder isManaged(Boolean isManaged) {
                 this.isManaged = isManaged;
@@ -937,10 +931,10 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {

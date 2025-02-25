@@ -1,54 +1,64 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRepositoriesRequest} extends {@link RequestModel}
  *
  * <p>ListRepositoriesRequest</p>
  */
 public class ListRepositoriesRequest extends Request {
-    @Query
-    @NameInMap("accessToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("accessToken")
     private String accessToken;
 
-    @Query
-    @NameInMap("archived")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("archived")
     private Boolean archived;
 
-    @Query
-    @NameInMap("orderBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("minAccessLevel")
+    private Integer minAccessLevel;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("orderBy")
     private String orderBy;
 
-    @Query
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Query
-    @NameInMap("page")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page")
     private Long page;
 
-    @Query
-    @NameInMap("perPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("perPage")
     private Long perPage;
 
-    @Query
-    @NameInMap("search")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("search")
     private String search;
 
-    @Query
-    @NameInMap("sort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("sort")
     private String sort;
 
     private ListRepositoriesRequest(Builder builder) {
         super(builder);
         this.accessToken = builder.accessToken;
         this.archived = builder.archived;
+        this.minAccessLevel = builder.minAccessLevel;
         this.orderBy = builder.orderBy;
         this.organizationId = builder.organizationId;
         this.page = builder.page;
@@ -82,6 +92,13 @@ public class ListRepositoriesRequest extends Request {
      */
     public Boolean getArchived() {
         return this.archived;
+    }
+
+    /**
+     * @return minAccessLevel
+     */
+    public Integer getMinAccessLevel() {
+        return this.minAccessLevel;
     }
 
     /**
@@ -129,6 +146,7 @@ public class ListRepositoriesRequest extends Request {
     public static final class Builder extends Request.Builder<ListRepositoriesRequest, Builder> {
         private String accessToken; 
         private Boolean archived; 
+        private Integer minAccessLevel; 
         private String orderBy; 
         private String organizationId; 
         private Long page; 
@@ -144,6 +162,7 @@ public class ListRepositoriesRequest extends Request {
             super(request);
             this.accessToken = request.accessToken;
             this.archived = request.archived;
+            this.minAccessLevel = request.minAccessLevel;
             this.orderBy = request.orderBy;
             this.organizationId = request.organizationId;
             this.page = request.page;
@@ -171,6 +190,15 @@ public class ListRepositoriesRequest extends Request {
         }
 
         /**
+         * minAccessLevel.
+         */
+        public Builder minAccessLevel(Integer minAccessLevel) {
+            this.putQueryParameter("minAccessLevel", minAccessLevel);
+            this.minAccessLevel = minAccessLevel;
+            return this;
+        }
+
+        /**
          * orderBy.
          */
         public Builder orderBy(String orderBy) {
@@ -180,7 +208,7 @@ public class ListRepositoriesRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);

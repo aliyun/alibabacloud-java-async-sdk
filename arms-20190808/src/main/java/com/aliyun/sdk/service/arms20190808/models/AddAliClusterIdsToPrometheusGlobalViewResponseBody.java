@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddAliClusterIdsToPrometheusGlobalViewResponseBody} extends {@link TeaModel}
  *
  * <p>AddAliClusterIdsToPrometheusGlobalViewResponseBody</p>
  */
 public class AddAliClusterIdsToPrometheusGlobalViewResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AddAliClusterIdsToPrometheusGlobalViewResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class AddAliClusterIdsToPrometheusGlobalViewResponseBody extends TeaModel
         private String requestId; 
 
         /**
-         * Code.
+         * <p>Status code. 200 is success, other status codes are exceptions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +90,7 @@ public class AddAliClusterIdsToPrometheusGlobalViewResponseBody extends TeaModel
         }
 
         /**
-         * The information about the array object.
+         * <p>The information about the array object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +98,10 @@ public class AddAliClusterIdsToPrometheusGlobalViewResponseBody extends TeaModel
         }
 
         /**
-         * Message.
+         * <p>Returns a hint message for the result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +109,10 @@ public class AddAliClusterIdsToPrometheusGlobalViewResponseBody extends TeaModel
         }
 
         /**
-         * The request ID. You can use the ID to query logs and troubleshoot issues.
+         * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F7781D4A-2818-41E7-B7BB-79D809E9****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,14 +125,20 @@ public class AddAliClusterIdsToPrometheusGlobalViewResponseBody extends TeaModel
 
     } 
 
+    /**
+     * 
+     * {@link AddAliClusterIdsToPrometheusGlobalViewResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddAliClusterIdsToPrometheusGlobalViewResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Info")
+        @com.aliyun.core.annotation.NameInMap("Info")
         private String info;
 
-        @NameInMap("Msg")
+        @com.aliyun.core.annotation.NameInMap("Msg")
         private String msg;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private Data(Builder builder) {
@@ -162,7 +182,10 @@ public class AddAliClusterIdsToPrometheusGlobalViewResponseBody extends TeaModel
             private Boolean success; 
 
             /**
-             * The Info-level information.
+             * <p>The Info-level information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{regionId: the region where the aggregation instance resides. globalViewClusterId: the ID of the aggregation instance. failedClusterIds: the ID of the cluster that failed to be added. A cluster may fail to be added because the specified cluster ID is invalid or the cluster is added across continents.}</p>
              */
             public Builder info(String info) {
                 this.info = info;
@@ -170,7 +193,10 @@ public class AddAliClusterIdsToPrometheusGlobalViewResponseBody extends TeaModel
             }
 
             /**
-             * The additional information.
+             * <p>The additional information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -178,11 +204,14 @@ public class AddAliClusterIdsToPrometheusGlobalViewResponseBody extends TeaModel
             }
 
             /**
-             * Indicates whether the request was successful.
-             * <p>
+             * <p>Indicates whether the request was successful.</p>
+             * <ul>
+             * <li><code>true</code>: The request was successful.</li>
+             * <li><code>false</code>: The request failed.</li>
+             * </ul>
              * 
-             * *   `true`: The request was successful.
-             * *   `false`: The request failed.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

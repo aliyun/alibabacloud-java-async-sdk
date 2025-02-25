@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEpnInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEpnInstancesResponseBody</p>
  */
 public class DescribeEpnInstancesResponseBody extends TeaModel {
-    @NameInMap("EPNInstances")
+    @com.aliyun.core.annotation.NameInMap("EPNInstances")
     private EPNInstances EPNInstances;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeEpnInstancesResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * EPNInstances.
+         * <p>Details of EPN instances.</p>
          */
         public Builder EPNInstances(EPNInstances EPNInstances) {
             this.EPNInstances = EPNInstances;
@@ -94,7 +99,10 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1707FC0-430C-423A-B624-284046B20399</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,35 +148,41 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEpnInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEpnInstancesResponseBody</p>
+     */
     public static class EPNInstance extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("EPNInstanceId")
+        @com.aliyun.core.annotation.NameInMap("EPNInstanceId")
         private String EPNInstanceId;
 
-        @NameInMap("EPNInstanceName")
+        @com.aliyun.core.annotation.NameInMap("EPNInstanceName")
         private String EPNInstanceName;
 
-        @NameInMap("EPNInstanceType")
+        @com.aliyun.core.annotation.NameInMap("EPNInstanceType")
         private String EPNInstanceType;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("InternetMaxBandwidthOut")
+        @com.aliyun.core.annotation.NameInMap("InternetMaxBandwidthOut")
         private Integer internetMaxBandwidthOut;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("NetworkingModel")
+        @com.aliyun.core.annotation.NameInMap("NetworkingModel")
         private String networkingModel;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private EPNInstance(Builder builder) {
@@ -266,7 +289,10 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * CreationTime.
+             * <p>The time when the instance was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-11-01T06:08:46Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -274,7 +300,10 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EPNInstanceId.
+             * <p>The ID of the EPN instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>epn****</p>
              */
             public Builder EPNInstanceId(String EPNInstanceId) {
                 this.EPNInstanceId = EPNInstanceId;
@@ -282,7 +311,10 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EPNInstanceName.
+             * <p>The name of the EPN instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ens_test_epn</p>
              */
             public Builder EPNInstanceName(String EPNInstanceName) {
                 this.EPNInstanceName = EPNInstanceName;
@@ -290,7 +322,10 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EPNInstanceType.
+             * <p>Set the value to EdgeToEdge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EdgeToEdge</p>
              */
             public Builder EPNInstanceType(String EPNInstanceType) {
                 this.EPNInstanceType = EPNInstanceType;
@@ -298,7 +333,10 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end of the time range during which the data was queried. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-11-01T06:08:46Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -306,7 +344,10 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InternetMaxBandwidthOut.
+             * <p>The inbound bandwidth. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
                 this.internetMaxBandwidthOut = internetMaxBandwidthOut;
@@ -314,7 +355,10 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The time when the instance was last modified. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-11-01T06:08:46Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -322,7 +366,15 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkingModel.
+             * <p>The networking mode. Valid values:</p>
+             * <ul>
+             * <li>SpeedUp: intelligent acceleration network (Internet)</li>
+             * <li>Connection: internal network</li>
+             * <li>SpeedUpAndConnection: intelligent acceleration network and internal network</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SpeedUp</p>
              */
             public Builder networkingModel(String networkingModel) {
                 this.networkingModel = networkingModel;
@@ -330,7 +382,10 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The beginning of the time range during which the data was queried. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-11-01T06:08:46Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -338,7 +393,15 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the instance. Valid values:</p>
+             * <ul>
+             * <li>Running</li>
+             * <li>Excuting</li>
+             * <li>Stopped</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -352,9 +415,15 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEpnInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEpnInstancesResponseBody</p>
+     */
     public static class EPNInstances extends TeaModel {
-        @NameInMap("EPNInstance")
-        private java.util.List < EPNInstance> EPNInstance;
+        @com.aliyun.core.annotation.NameInMap("EPNInstance")
+        private java.util.List<EPNInstance> EPNInstance;
 
         private EPNInstances(Builder builder) {
             this.EPNInstance = builder.EPNInstance;
@@ -371,17 +440,17 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
         /**
          * @return EPNInstance
          */
-        public java.util.List < EPNInstance> getEPNInstance() {
+        public java.util.List<EPNInstance> getEPNInstance() {
             return this.EPNInstance;
         }
 
         public static final class Builder {
-            private java.util.List < EPNInstance> EPNInstance; 
+            private java.util.List<EPNInstance> EPNInstance; 
 
             /**
              * EPNInstance.
              */
-            public Builder EPNInstance(java.util.List < EPNInstance> EPNInstance) {
+            public Builder EPNInstance(java.util.List<EPNInstance> EPNInstance) {
                 this.EPNInstance = EPNInstance;
                 return this;
             }

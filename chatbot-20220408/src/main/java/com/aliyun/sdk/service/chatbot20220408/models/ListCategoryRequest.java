@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCategoryRequest} extends {@link RequestModel}
  *
  * <p>ListCategoryRequest</p>
  */
 public class ListCategoryRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AgentKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentKey")
     private String agentKey;
 
-    @Body
-    @NameInMap("ParentCategoryId")
-    @Validation()
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("KnowledgeType")
+    private Integer knowledgeType;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ParentCategoryId")
+    @com.aliyun.core.annotation.Validation()
     private Long parentCategoryId;
 
     private ListCategoryRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
+        this.knowledgeType = builder.knowledgeType;
         this.parentCategoryId = builder.parentCategoryId;
     }
 
@@ -60,6 +65,13 @@ public class ListCategoryRequest extends Request {
     }
 
     /**
+     * @return knowledgeType
+     */
+    public Integer getKnowledgeType() {
+        return this.knowledgeType;
+    }
+
+    /**
      * @return parentCategoryId
      */
     public Long getParentCategoryId() {
@@ -69,6 +81,7 @@ public class ListCategoryRequest extends Request {
     public static final class Builder extends Request.Builder<ListCategoryRequest, Builder> {
         private String regionId; 
         private String agentKey; 
+        private Integer knowledgeType; 
         private Long parentCategoryId; 
 
         private Builder() {
@@ -79,6 +92,7 @@ public class ListCategoryRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.agentKey = request.agentKey;
+            this.knowledgeType = request.knowledgeType;
             this.parentCategoryId = request.parentCategoryId;
         } 
 
@@ -97,6 +111,15 @@ public class ListCategoryRequest extends Request {
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
             this.agentKey = agentKey;
+            return this;
+        }
+
+        /**
+         * KnowledgeType.
+         */
+        public Builder knowledgeType(Integer knowledgeType) {
+            this.putBodyParameter("KnowledgeType", knowledgeType);
+            this.knowledgeType = knowledgeType;
             return this;
         }
 

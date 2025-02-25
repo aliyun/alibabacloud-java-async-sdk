@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteNotificationPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteNotificationPolicyResponseBody</p>
  */
 public class DeleteNotificationPolicyResponseBody extends TeaModel {
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteNotificationPolicyResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DeleteNotificationPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -58,7 +66,10 @@ public class DeleteNotificationPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the notification policy.
+         * <p>The ID of the notification policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5EC8221-08F2-4C95-9AF1-49FD998C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

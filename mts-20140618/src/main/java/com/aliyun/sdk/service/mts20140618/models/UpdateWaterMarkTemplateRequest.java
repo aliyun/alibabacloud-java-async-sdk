@@ -1,46 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateWaterMarkTemplateRequest} extends {@link RequestModel}
  *
  * <p>UpdateWaterMarkTemplateRequest</p>
  */
 public class UpdateWaterMarkTemplateRequest extends Request {
-    @Query
-    @NameInMap("Config")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Config")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String config;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("WaterMarkTemplateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WaterMarkTemplateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String waterMarkTemplateId;
 
     private UpdateWaterMarkTemplateRequest(Builder builder) {
@@ -141,7 +141,11 @@ public class UpdateWaterMarkTemplateRequest extends Request {
         } 
 
         /**
-         * Config.
+         * <p>The updated configuration of the watermark template. The value is a JSON object. For more information, see <a href="https://help.aliyun.com/document_detail/29253.html">Parameter details</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Width&quot;:&quot;10&quot;,&quot;Height&quot;:&quot;30&quot;,&quot;Dx&quot;:&quot;10&quot;,&quot;Dy&quot;:&quot;5&quot;,&quot;Type&quot;:&quot;Image&quot;,&quot;Timeline&quot;:{&quot;Start&quot;:&quot;0&quot;,&quot;Duration&quot;:&quot;10&quot;}}</p>
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -150,7 +154,11 @@ public class UpdateWaterMarkTemplateRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The new name of the watermark template. The value can contain letters and digits and can be up to 128 bytes in size.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-watermark-****</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -195,7 +203,11 @@ public class UpdateWaterMarkTemplateRequest extends Request {
         }
 
         /**
-         * WaterMarkTemplateId.
+         * <p>The ID of the watermark template that you want to update. To obtain the ID of the watermark template, you can log on to the <strong>ApsaraVideo Media Processing (MPS) console</strong> and choose <strong>Global Settings</strong> &gt; <strong>Watermark Templates</strong> in the left-side navigation pane.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3780bd69b2b74540bc7b1096f564****</p>
          */
         public Builder waterMarkTemplateId(String waterMarkTemplateId) {
             this.putQueryParameter("WaterMarkTemplateId", waterMarkTemplateId);

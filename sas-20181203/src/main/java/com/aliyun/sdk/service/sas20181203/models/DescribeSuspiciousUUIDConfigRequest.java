@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSuspiciousUUIDConfigRequest} extends {@link RequestModel}
  *
  * <p>DescribeSuspiciousUUIDConfigRequest</p>
  */
 public class DescribeSuspiciousUUIDConfigRequest extends Request {
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private DescribeSuspiciousUUIDConfigRequest(Builder builder) {
@@ -55,14 +60,18 @@ public class DescribeSuspiciousUUIDConfigRequest extends Request {
         } 
 
         /**
-         * The type of proactive defense. Valid values:
-         * <p>
+         * <p>The type of proactive defense. Valid values:</p>
+         * <ul>
+         * <li><strong>auto_breaking</strong>: virus defense</li>
+         * <li><strong>ransomware_breaking</strong>: ransomware capture</li>
+         * <li><strong>webshell_cloud_breaking</strong>: webshell defense</li>
+         * <li><strong>alinet</strong>: malicious behavior defense</li>
+         * <li><strong>alisecguard</strong>: client protection</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **auto_breaking**: virus defense
-         * *   **ransomware_breaking**: ransomware capture
-         * *   **webshell\_cloud_breaking**: webshell defense
-         * *   **alinet**: malicious behavior defense
-         * *   **alisecguard**: client protection
+         * <strong>example:</strong>
+         * <p>alinet</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

@@ -1,25 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutConcurrencyConfigRequest} extends {@link RequestModel}
  *
  * <p>PutConcurrencyConfigRequest</p>
  */
 public class PutConcurrencyConfigRequest extends Request {
-    @Path
-    @NameInMap("functionName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("functionName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String functionName;
 
-    @Body
-    @NameInMap("body")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
+    @com.aliyun.core.annotation.Validation(required = true)
     private PutConcurrencyInput body;
 
     private PutConcurrencyConfigRequest(Builder builder) {
@@ -70,7 +70,11 @@ public class PutConcurrencyConfigRequest extends Request {
         } 
 
         /**
-         * The function name.
+         * <p>The function name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-func</p>
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -79,7 +83,8 @@ public class PutConcurrencyConfigRequest extends Request {
         }
 
         /**
-         * The concurrency configurations.
+         * <p>The concurrency configurations.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder body(PutConcurrencyInput body) {
             this.putBodyParameter("body", body);

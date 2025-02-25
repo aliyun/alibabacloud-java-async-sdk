@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceScreenshotResponseBody} extends {@link TeaModel}
  *
  * <p>GetInstanceScreenshotResponseBody</p>
  */
 public class GetInstanceScreenshotResponseBody extends TeaModel {
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Screenshot")
+    @com.aliyun.core.annotation.NameInMap("Screenshot")
     private String screenshot;
 
     private GetInstanceScreenshotResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class GetInstanceScreenshotResponseBody extends TeaModel {
         private String screenshot; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1gbz20g229bvu5****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -70,7 +78,10 @@ public class GetInstanceScreenshotResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +89,10 @@ public class GetInstanceScreenshotResponseBody extends TeaModel {
         }
 
         /**
-         * The Base64-encoded instance screenshot in the JPG format.
+         * <p>The Base64-encoded instance screenshot in the JPG format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iVBORw0KGgoA...AAABJRU5ErkJggg==</p>
          */
         public Builder screenshot(String screenshot) {
             this.screenshot = screenshot;

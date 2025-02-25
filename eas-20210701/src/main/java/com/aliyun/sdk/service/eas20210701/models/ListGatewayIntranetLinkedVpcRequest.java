@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGatewayIntranetLinkedVpcRequest} extends {@link RequestModel}
  *
  * <p>ListGatewayIntranetLinkedVpcRequest</p>
  */
 public class ListGatewayIntranetLinkedVpcRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Path
-    @NameInMap("GatewayId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("GatewayId")
     private String gatewayId;
 
     private ListGatewayIntranetLinkedVpcRequest(Builder builder) {
@@ -68,7 +73,10 @@ public class ListGatewayIntranetLinkedVpcRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The region ID of the private gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -77,7 +85,10 @@ public class ListGatewayIntranetLinkedVpcRequest extends Request {
         }
 
         /**
-         * GatewayId.
+         * <p>The private gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-1uhcqmsc7x22******</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putPathParameter("GatewayId", gatewayId);

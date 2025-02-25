@@ -1,29 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDefaultIPSConfigRequest} extends {@link RequestModel}
  *
  * <p>DescribeDefaultIPSConfigRequest</p>
  */
 public class DescribeDefaultIPSConfigRequest extends Request {
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
-
-    @Query
-    @NameInMap("SourceIp")
-    private String sourceIp;
 
     private DescribeDefaultIPSConfigRequest(Builder builder) {
         super(builder);
         this.lang = builder.lang;
-        this.sourceIp = builder.sourceIp;
     }
 
     public static Builder builder() {
@@ -46,16 +46,8 @@ public class DescribeDefaultIPSConfigRequest extends Request {
         return this.lang;
     }
 
-    /**
-     * @return sourceIp
-     */
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
     public static final class Builder extends Request.Builder<DescribeDefaultIPSConfigRequest, Builder> {
         private String lang; 
-        private String sourceIp; 
 
         private Builder() {
             super();
@@ -64,24 +56,21 @@ public class DescribeDefaultIPSConfigRequest extends Request {
         private Builder(DescribeDefaultIPSConfigRequest request) {
             super(request);
             this.lang = request.lang;
-            this.sourceIp = request.sourceIp;
         } 
 
         /**
-         * Lang.
+         * <p>The language of the content within the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default)</li>
+         * <li><strong>en</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
-            return this;
-        }
-
-        /**
-         * SourceIp.
-         */
-        public Builder sourceIp(String sourceIp) {
-            this.putQueryParameter("SourceIp", sourceIp);
-            this.sourceIp = sourceIp;
             return this;
         }
 

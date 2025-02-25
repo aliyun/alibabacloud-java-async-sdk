@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenewInstance} extends {@link TeaModel}
  *
  * <p>RenewInstance</p>
  */
 public class RenewInstance extends TeaModel {
-    @NameInMap("EmrRenewDuration")
+    @com.aliyun.core.annotation.NameInMap("EmrRenewDuration")
     private Integer emrRenewDuration;
 
-    @NameInMap("EmrRenewDurationUnit")
+    @com.aliyun.core.annotation.NameInMap("EmrRenewDurationUnit")
     private String emrRenewDurationUnit;
 
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @NameInMap("RenewDuration")
+    @com.aliyun.core.annotation.NameInMap("RenewDuration")
     private Integer renewDuration;
 
-    @NameInMap("RenewDurationUnit")
+    @com.aliyun.core.annotation.NameInMap("RenewDurationUnit")
     private String renewDurationUnit;
 
     private RenewInstance(Builder builder) {
@@ -87,7 +92,10 @@ public class RenewInstance extends TeaModel {
         private String renewDurationUnit; 
 
         /**
-         * emr实例续费时长。
+         * <p>emr实例续费时长。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder emrRenewDuration(Integer emrRenewDuration) {
             this.emrRenewDuration = emrRenewDuration;
@@ -95,7 +103,10 @@ public class RenewInstance extends TeaModel {
         }
 
         /**
-         * emr实例续费时长单位。
+         * <p>emr实例续费时长单位。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder emrRenewDurationUnit(String emrRenewDurationUnit) {
             this.emrRenewDurationUnit = emrRenewDurationUnit;
@@ -103,7 +114,11 @@ public class RenewInstance extends TeaModel {
         }
 
         /**
-         * 节点ID。
+         * <p>节点ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1cudc25w2bfwl5****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -111,7 +126,10 @@ public class RenewInstance extends TeaModel {
         }
 
         /**
-         * 续费时长。
+         * <p>续费时长。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder renewDuration(Integer renewDuration) {
             this.renewDuration = renewDuration;
@@ -119,7 +137,10 @@ public class RenewInstance extends TeaModel {
         }
 
         /**
-         * 付费时长单位。
+         * <p>付费时长单位。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder renewDurationUnit(String renewDurationUnit) {
             this.renewDurationUnit = renewDurationUnit;

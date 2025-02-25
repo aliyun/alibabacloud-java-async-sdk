@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateFlowTagRequest} extends {@link RequestModel}
  *
  * <p>UpdateFlowTagRequest</p>
  */
 public class UpdateFlowTagRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Path
-    @NameInMap("id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long id;
 
-    @Query
-    @NameInMap("color")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("color")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String color;
 
-    @Query
-    @NameInMap("flowTagGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("flowTagGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long flowTagGroupId;
 
-    @Query
-    @NameInMap("name")
-    @Validation(required = true, maxLength = 20)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("name")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 20)
     private String name;
 
     private UpdateFlowTagRequest(Builder builder) {
@@ -115,7 +120,10 @@ public class UpdateFlowTagRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -124,7 +132,10 @@ public class UpdateFlowTagRequest extends Request {
         }
 
         /**
-         * id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1111</p>
          */
         public Builder id(Long id) {
             this.putPathParameter("id", id);
@@ -133,7 +144,10 @@ public class UpdateFlowTagRequest extends Request {
         }
 
         /**
-         * color.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>#1F9AEF</p>
          */
         public Builder color(String color) {
             this.putQueryParameter("color", color);
@@ -142,7 +156,10 @@ public class UpdateFlowTagRequest extends Request {
         }
 
         /**
-         * flowTagGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder flowTagGroupId(Long flowTagGroupId) {
             this.putQueryParameter("flowTagGroupId", flowTagGroupId);
@@ -151,7 +168,7 @@ public class UpdateFlowTagRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);

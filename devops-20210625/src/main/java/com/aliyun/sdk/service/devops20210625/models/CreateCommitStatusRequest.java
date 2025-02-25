@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCommitStatusRequest} extends {@link RequestModel}
  *
  * <p>CreateCommitStatusRequest</p>
  */
 public class CreateCommitStatusRequest extends Request {
-    @Query
-    @NameInMap("accessToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("accessToken")
     private String accessToken;
 
-    @Body
-    @NameInMap("context")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("context")
     private String context;
 
-    @Body
-    @NameInMap("description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @Body
-    @NameInMap("state")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("state")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String state;
 
-    @Body
-    @NameInMap("targetUrl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("targetUrl")
     private String targetUrl;
 
-    @Query
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Query
-    @NameInMap("repositoryIdentity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("repositoryIdentity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String repositoryIdentity;
 
-    @Query
-    @NameInMap("sha")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("sha")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sha;
 
     private CreateCommitStatusRequest(Builder builder) {
@@ -183,7 +188,10 @@ public class CreateCommitStatusRequest extends Request {
         }
 
         /**
-         * state.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder state(String state) {
             this.putBodyParameter("state", state);
@@ -201,7 +209,10 @@ public class CreateCommitStatusRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);
@@ -210,7 +221,10 @@ public class CreateCommitStatusRequest extends Request {
         }
 
         /**
-         * repositoryIdentity.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2080972</p>
          */
         public Builder repositoryIdentity(String repositoryIdentity) {
             this.putQueryParameter("repositoryIdentity", repositoryIdentity);
@@ -219,7 +233,10 @@ public class CreateCommitStatusRequest extends Request {
         }
 
         /**
-         * sha.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e0c1a1299a2656bfc155650bbd2df5e628fa1f4c</p>
          */
         public Builder sha(String sha) {
             this.putQueryParameter("sha", sha);

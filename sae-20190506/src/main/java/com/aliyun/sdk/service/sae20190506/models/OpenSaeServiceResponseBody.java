@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OpenSaeServiceResponseBody} extends {@link TeaModel}
  *
  * <p>OpenSaeServiceResponseBody</p>
  */
 public class OpenSaeServiceResponseBody extends TeaModel {
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private OpenSaeServiceResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class OpenSaeServiceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the order.
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20485646575****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -58,7 +66,10 @@ public class OpenSaeServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>559B4247-C41C-4D9E-B866-B55D378B****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

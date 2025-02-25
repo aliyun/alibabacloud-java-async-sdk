@@ -1,78 +1,83 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUuidsByVulNamesRequest} extends {@link RequestModel}
  *
  * <p>DescribeUuidsByVulNamesRequest</p>
  */
 public class DescribeUuidsByVulNamesRequest extends Request {
-    @Query
-    @NameInMap("Dealed")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Dealed")
     private String dealed;
 
-    @Query
-    @NameInMap("FieldName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FieldName")
     private String fieldName;
 
-    @Query
-    @NameInMap("FieldValue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FieldValue")
     private String fieldValue;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private Long groupId;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Level")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Level")
     private String level;
 
-    @Query
-    @NameInMap("Necessity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Necessity")
     private String necessity;
 
-    @Query
-    @NameInMap("Remark")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
-    @Query
-    @NameInMap("SearchTags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchTags")
     private String searchTags;
 
-    @Query
-    @NameInMap("StatusList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StatusList")
     private String statusList;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private String tag;
 
-    @Query
-    @NameInMap("TargetType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetType")
     private String targetType;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
-    @Query
-    @NameInMap("VpcInstanceIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcInstanceIds")
     private String vpcInstanceIds;
 
-    @Query
-    @NameInMap("VulNames")
-    @Validation(required = true)
-    private java.util.List < String > vulNames;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VulNames")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> vulNames;
 
     private DescribeUuidsByVulNamesRequest(Builder builder) {
         super(builder);
@@ -207,7 +212,7 @@ public class DescribeUuidsByVulNamesRequest extends Request {
     /**
      * @return vulNames
      */
-    public java.util.List < String > getVulNames() {
+    public java.util.List<String> getVulNames() {
         return this.vulNames;
     }
 
@@ -226,7 +231,7 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         private String targetType; 
         private String type; 
         private String vpcInstanceIds; 
-        private java.util.List < String > vulNames; 
+        private java.util.List<String> vulNames; 
 
         private Builder() {
             super();
@@ -252,11 +257,14 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         } 
 
         /**
-         * Specifies whether the vulnerability is fixed. Valid values:
-         * <p>
+         * <p>Specifies whether the vulnerability is fixed. Valid values:</p>
+         * <ul>
+         * <li><strong>y</strong>: the vulnerability is fixed.</li>
+         * <li><strong>n</strong>: the vulnerability is not fixed.</li>
+         * </ul>
          * 
-         * *   **y**: the vulnerability is fixed.
-         * *   **n**: the vulnerability is not fixed.
+         * <strong>example:</strong>
+         * <p>n</p>
          */
         public Builder dealed(String dealed) {
             this.putQueryParameter("Dealed", dealed);
@@ -265,7 +273,10 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * The name of the search field that is used to query containers.
+         * <p>The name of the search field that is used to query containers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>namespace</p>
          */
         public Builder fieldName(String fieldName) {
             this.putQueryParameter("FieldName", fieldName);
@@ -274,7 +285,10 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * The value of the search field that is used to query containers.
+         * <p>The value of the search field that is used to query containers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cas-adad-qeqwe</p>
          */
         public Builder fieldValue(String fieldValue) {
             this.putQueryParameter("FieldValue", fieldValue);
@@ -283,7 +297,10 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * The ID of the asset group.
+         * <p>The ID of the asset group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11286014</p>
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -292,11 +309,14 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -305,12 +325,15 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * The severity of the vulnerability. Separate multiple severities with commas (,). Valid values:
-         * <p>
+         * <p>The severity of the vulnerability. Separate multiple severities with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>high</strong></li>
+         * <li><strong>medium</strong></li>
+         * <li><strong>low</strong></li>
+         * </ul>
          * 
-         * *   **high**
-         * *   **medium**
-         * *   **low**
+         * <strong>example:</strong>
+         * <p>high,low</p>
          */
         public Builder level(String level) {
             this.putQueryParameter("Level", level);
@@ -319,12 +342,15 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * The priority based on which the vulnerability is fixed. Separate multiple priorities with commas (,). Valid values:
-         * <p>
+         * <p>The priority based on which the vulnerability is fixed. Separate multiple priorities with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>asap</strong>: high</li>
+         * <li><strong>later</strong>: medium</li>
+         * <li><strong>nntf</strong>: low</li>
+         * </ul>
          * 
-         * *   **asap**: high
-         * *   **later**: medium
-         * *   **nntf**: low
+         * <strong>example:</strong>
+         * <p>asap,later,nntf</p>
          */
         public Builder necessity(String necessity) {
             this.putQueryParameter("Necessity", necessity);
@@ -333,7 +359,10 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * The remarks for the asset affected by the vulnerability. The value can be the private IP address, public IP address, or name of the asset. Fuzzy match is supported.
+         * <p>The remarks for the asset affected by the vulnerability. The value can be the private IP address, public IP address, or name of the asset. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.7.</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -342,7 +371,10 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * The tags that are used to search for the vulnerability.
+         * <p>The tags that are used to search for the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oval</p>
          */
         public Builder searchTags(String searchTags) {
             this.putQueryParameter("SearchTags", searchTags);
@@ -351,11 +383,14 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * The status of the vulnerability. Separate multiple states with commas (,). Valid values:
-         * <p>
+         * <p>The status of the vulnerability. Separate multiple states with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: unfixed</li>
+         * <li><strong>2</strong>: fix failed</li>
+         * </ul>
          * 
-         * *   **1**: unfixed
-         * *   **2**: fix failed
+         * <strong>example:</strong>
+         * <p>1,4</p>
          */
         public Builder statusList(String statusList) {
             this.putQueryParameter("StatusList", statusList);
@@ -364,7 +399,10 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * The tag of the vulnerability.
+         * <p>The tag of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oval</p>
          */
         public Builder tag(String tag) {
             this.putQueryParameter("Tag", tag);
@@ -373,11 +411,14 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * The type of the query condition. Valid values:
-         * <p>
+         * <p>The type of the query condition. Valid values:</p>
+         * <ul>
+         * <li><strong>containerId</strong>: the ID of the container</li>
+         * <li><strong>uuid</strong>: the ID of the asset</li>
+         * </ul>
          * 
-         * *   **containerId**: the ID of the container
-         * *   **uuid**: the ID of the asset
+         * <strong>example:</strong>
+         * <p>uuid</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);
@@ -386,11 +427,15 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * The type of the vulnerability. Valid values:
-         * <p>
+         * <p>The type of the vulnerability. Valid values:</p>
+         * <ul>
+         * <li><strong>cve</strong>: Linux software vulnerability</li>
+         * <li><strong>sys</strong>: Windows system vulnerability</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **cve**: Linux software vulnerability
-         * *   **sys**: Windows system vulnerability
+         * <strong>example:</strong>
+         * <p>cve</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -399,7 +444,10 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) in which the vulnerability is detected. Separate multiple IDs with commas (,).
+         * <p>The ID of the virtual private cloud (VPC) in which the vulnerability is detected. Separate multiple IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-uf6ssrvbrwe37ekw****,vpc-bp1aevy8sofi8mh1q****</p>
          */
         public Builder vpcInstanceIds(String vpcInstanceIds) {
             this.putQueryParameter("VpcInstanceIds", vpcInstanceIds);
@@ -408,12 +456,13 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * An array that consists of the names of vulnerabilities.
-         * <p>
-         * 
-         * >  You can call the [DescribeGroupedVul](~~DescribeGroupedVul~~) operation to obtain the names of vulnerabilities.
+         * <p>An array that consists of the names of vulnerabilities.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeGroupedVul~~">DescribeGroupedVul</a> operation to obtain the names of vulnerabilities.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          */
-        public Builder vulNames(java.util.List < String > vulNames) {
+        public Builder vulNames(java.util.List<String> vulNames) {
             this.putQueryParameter("VulNames", vulNames);
             this.vulNames = vulNames;
             return this;

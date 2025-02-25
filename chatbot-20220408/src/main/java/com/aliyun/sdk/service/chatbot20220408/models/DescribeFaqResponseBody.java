@@ -1,60 +1,60 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFaqResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeFaqResponseBody</p>
  */
 public class DescribeFaqResponseBody extends TeaModel {
-    @NameInMap("CategoryId")
+    @com.aliyun.core.annotation.NameInMap("CategoryId")
     private Long categoryId;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("CreateUserName")
+    @com.aliyun.core.annotation.NameInMap("CreateUserName")
     private String createUserName;
 
-    @NameInMap("EffectStatus")
+    @com.aliyun.core.annotation.NameInMap("EffectStatus")
     private Integer effectStatus;
 
-    @NameInMap("EndDate")
+    @com.aliyun.core.annotation.NameInMap("EndDate")
     private String endDate;
 
-    @NameInMap("KnowledgeId")
+    @com.aliyun.core.annotation.NameInMap("KnowledgeId")
     private Long knowledgeId;
 
-    @NameInMap("ModifyTime")
+    @com.aliyun.core.annotation.NameInMap("ModifyTime")
     private String modifyTime;
 
-    @NameInMap("ModifyUserName")
+    @com.aliyun.core.annotation.NameInMap("ModifyUserName")
     private String modifyUserName;
 
-    @NameInMap("Outlines")
+    @com.aliyun.core.annotation.NameInMap("Outlines")
     private java.util.List < Outlines> outlines;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SimQuestions")
+    @com.aliyun.core.annotation.NameInMap("SimQuestions")
     private java.util.List < SimQuestions> simQuestions;
 
-    @NameInMap("Solutions")
+    @com.aliyun.core.annotation.NameInMap("Solutions")
     private java.util.List < Solutions> solutions;
 
-    @NameInMap("StartDate")
+    @com.aliyun.core.annotation.NameInMap("StartDate")
     private String startDate;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
-    @NameInMap("Title")
+    @com.aliyun.core.annotation.NameInMap("Title")
     private String title;
 
     private DescribeFaqResponseBody(Builder builder) {
@@ -331,20 +331,26 @@ public class DescribeFaqResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeFaqResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFaqResponseBody</p>
+     */
     public static class Outlines extends TeaModel {
-        @NameInMap("ConnQuestionId")
+        @com.aliyun.core.annotation.NameInMap("ConnQuestionId")
         private Long connQuestionId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("OutlineId")
+        @com.aliyun.core.annotation.NameInMap("OutlineId")
         private Long outlineId;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private Outlines(Builder builder) {
@@ -452,17 +458,23 @@ public class DescribeFaqResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFaqResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFaqResponseBody</p>
+     */
     public static class SimQuestions extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("SimQuestionId")
+        @com.aliyun.core.annotation.NameInMap("SimQuestionId")
         private Long simQuestionId;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private SimQuestions(Builder builder) {
@@ -553,26 +565,32 @@ public class DescribeFaqResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFaqResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFaqResponseBody</p>
+     */
     public static class Solutions extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("ContentType")
+        @com.aliyun.core.annotation.NameInMap("ContentType")
         private Integer contentType;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("PerspectiveCodes")
+        @com.aliyun.core.annotation.NameInMap("PerspectiveCodes")
         private java.util.List < String > perspectiveCodes;
 
-        @NameInMap("PlainText")
+        @com.aliyun.core.annotation.NameInMap("PlainText")
         private String plainText;
 
-        @NameInMap("SolutionId")
+        @com.aliyun.core.annotation.NameInMap("SolutionId")
         private Long solutionId;
 
         private Solutions(Builder builder) {

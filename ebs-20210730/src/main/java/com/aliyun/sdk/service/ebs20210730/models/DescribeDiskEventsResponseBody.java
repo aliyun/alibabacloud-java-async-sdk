@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiskEventsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDiskEventsResponseBody</p>
  */
 public class DescribeDiskEventsResponseBody extends TeaModel {
-    @NameInMap("DiskEvents")
-    private java.util.List < DiskEvents> diskEvents;
+    @com.aliyun.core.annotation.NameInMap("DiskEvents")
+    private java.util.List<DiskEvents> diskEvents;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeDiskEventsResponseBody(Builder builder) {
@@ -42,7 +47,7 @@ public class DescribeDiskEventsResponseBody extends TeaModel {
     /**
      * @return diskEvents
      */
-    public java.util.List < DiskEvents> getDiskEvents() {
+    public java.util.List<DiskEvents> getDiskEvents() {
         return this.diskEvents;
     }
 
@@ -68,21 +73,24 @@ public class DescribeDiskEventsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DiskEvents> diskEvents; 
+        private java.util.List<DiskEvents> diskEvents; 
         private String nextToken; 
         private String requestId; 
         private Long totalCount; 
 
         /**
-         * The risk events of the disk.
+         * <p>The risk events of the disk.</p>
          */
-        public Builder diskEvents(java.util.List < DiskEvents> diskEvents) {
+        public Builder diskEvents(java.util.List<DiskEvents> diskEvents) {
             this.diskEvents = diskEvents;
             return this;
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -90,7 +98,10 @@ public class DescribeDiskEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +109,10 @@ public class DescribeDiskEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -111,26 +125,32 @@ public class DescribeDiskEventsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDiskEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDiskEventsResponseBody</p>
+     */
     public static class DiskEvents extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DiskId")
+        @com.aliyun.core.annotation.NameInMap("DiskId")
         private String diskId;
 
-        @NameInMap("RecommendAction")
+        @com.aliyun.core.annotation.NameInMap("RecommendAction")
         private String recommendAction;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private String timestamp;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private DiskEvents(Builder builder) {
@@ -210,7 +230,10 @@ public class DescribeDiskEventsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The description of the event.
+             * <p>The description of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -218,7 +241,10 @@ public class DescribeDiskEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the disk.
+             * <p>The ID of the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-bp1bq5g3dxxo1x4o****</p>
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -226,12 +252,15 @@ public class DescribeDiskEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The recommended action after the event occurred. Valid values:
-             * <p>
+             * <p>The recommended action after the event occurred. Valid values:</p>
+             * <ul>
+             * <li>Resize: resizes the disk.</li>
+             * <li>ModifyDiskSpec: changes the category of the disk.</li>
+             * <li>NoAction: performs no operation.</li>
+             * </ul>
              * 
-             * *   Resize: resizes the disk.
-             * *   ModifyDiskSpec: changes the category of the disk.
-             * *   NoAction: performs no operation.
+             * <strong>example:</strong>
+             * <p>NoAction</p>
              */
             public Builder recommendAction(String recommendAction) {
                 this.recommendAction = recommendAction;
@@ -239,7 +268,10 @@ public class DescribeDiskEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the disk.
+             * <p>The region ID of the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -247,11 +279,14 @@ public class DescribeDiskEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the event. Valid values:
-             * <p>
+             * <p>The state of the event. Valid values:</p>
+             * <ul>
+             * <li>Solved</li>
+             * <li>UnSolved</li>
+             * </ul>
              * 
-             * *   Solved
-             * *   UnSolved
+             * <strong>example:</strong>
+             * <p>Solved</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -259,7 +294,10 @@ public class DescribeDiskEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the event occurred. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The time when the event occurred. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-06-01T08:00:00Z</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -267,7 +305,10 @@ public class DescribeDiskEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the event. Only DataNeedProtect can be returned.
+             * <p>The type of the event. Only DataNeedProtect can be returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DataNeedProtect</p>
              */
             public Builder type(String type) {
                 this.type = type;

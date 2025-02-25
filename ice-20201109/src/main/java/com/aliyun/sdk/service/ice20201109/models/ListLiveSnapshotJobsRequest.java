@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLiveSnapshotJobsRequest} extends {@link RequestModel}
  *
  * <p>ListLiveSnapshotJobsRequest</p>
  */
 public class ListLiveSnapshotJobsRequest extends Request {
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SearchKeyWord")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchKeyWord")
     private String searchKeyWord;
 
-    @Query
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private ListLiveSnapshotJobsRequest(Builder builder) {
@@ -138,7 +143,14 @@ public class ListLiveSnapshotJobsRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <ul>
+         * <li>By default, EndTime is seven days later than StartTime.</li>
+         * <li>The time range specified by the StartTime and EndTime parameters cannot exceed 30 days.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-02-02T23:59:59Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -147,7 +159,10 @@ public class ListLiveSnapshotJobsRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Valid values: [1,n). Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -156,7 +171,10 @@ public class ListLiveSnapshotJobsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -165,7 +183,13 @@ public class ListLiveSnapshotJobsRequest extends Request {
         }
 
         /**
-         * SearchKeyWord.
+         * <p>The search keyword. You can use the job ID or name as the keyword to search for jobs. If you search for jobs by name, fuzzy match is supported.</p>
+         * <ul>
+         * <li>It cannot exceed 128 characters in length.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>a046-263c-3560-978a-fb287782</strong></strong></p>
          */
         public Builder searchKeyWord(String searchKeyWord) {
             this.putQueryParameter("SearchKeyWord", searchKeyWord);
@@ -174,7 +198,15 @@ public class ListLiveSnapshotJobsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sorting order. By default, the query results are sorted by creation time in descending order.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>asc: sorts the query results by creation time in ascending order.</li>
+         * <li>desc: sorts the query results by creation time in descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -183,7 +215,14 @@ public class ListLiveSnapshotJobsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <ul>
+         * <li>The default value is seven days ago.</li>
+         * <li>The time range specified by the StartTime and EndTime parameters cannot exceed 30 days.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-02-02T00:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -192,7 +231,13 @@ public class ListLiveSnapshotJobsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The job state filter. By default, all jobs are queried.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>init: The job is not started.</li>
+         * <li>paused: The job is paused.</li>
+         * <li>started: The job is in progress.</li>
+         * </ul>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

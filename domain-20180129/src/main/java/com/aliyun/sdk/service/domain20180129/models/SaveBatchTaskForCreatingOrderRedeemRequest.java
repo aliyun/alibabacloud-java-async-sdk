@@ -1,44 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveBatchTaskForCreatingOrderRedeemRequest} extends {@link RequestModel}
  *
  * <p>SaveBatchTaskForCreatingOrderRedeemRequest</p>
  */
 public class SaveBatchTaskForCreatingOrderRedeemRequest extends Request {
-    @Query
-    @NameInMap("CouponNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CouponNo")
     private String couponNo;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("OrderRedeemParam")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderRedeemParam")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < OrderRedeemParam> orderRedeemParam;
 
-    @Query
-    @NameInMap("PromotionNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionNo")
     private String promotionNo;
 
-    @Query
-    @NameInMap("UseCoupon")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseCoupon")
     private Boolean useCoupon;
 
-    @Query
-    @NameInMap("UsePromotion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UsePromotion")
     private Boolean usePromotion;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
     private SaveBatchTaskForCreatingOrderRedeemRequest(Builder builder) {
@@ -157,7 +157,7 @@ public class SaveBatchTaskForCreatingOrderRedeemRequest extends Request {
         }
 
         /**
-         * OrderRedeemParam.
+         * <p>This parameter is required.</p>
          */
         public Builder orderRedeemParam(java.util.List < OrderRedeemParam> orderRedeemParam) {
             this.putQueryParameter("OrderRedeemParam", orderRedeemParam);
@@ -208,11 +208,17 @@ public class SaveBatchTaskForCreatingOrderRedeemRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SaveBatchTaskForCreatingOrderRedeemRequest} extends {@link TeaModel}
+     *
+     * <p>SaveBatchTaskForCreatingOrderRedeemRequest</p>
+     */
     public static class OrderRedeemParam extends TeaModel {
-        @NameInMap("CurrentExpirationDate")
+        @com.aliyun.core.annotation.NameInMap("CurrentExpirationDate")
         private Long currentExpirationDate;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
         private OrderRedeemParam(Builder builder) {

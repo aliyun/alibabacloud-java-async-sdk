@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteTagWithUuidRequest} extends {@link RequestModel}
  *
  * <p>DeleteTagWithUuidRequest</p>
  */
 public class DeleteTagWithUuidRequest extends Request {
-    @Query
-    @NameInMap("TagName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tagName;
 
-    @Query
-    @NameInMap("UuidList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UuidList")
     private String uuidList;
 
     private DeleteTagWithUuidRequest(Builder builder) {
@@ -69,7 +74,11 @@ public class DeleteTagWithUuidRequest extends Request {
         } 
 
         /**
-         * The name of the tag.
+         * <p>The name of the tag.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder tagName(String tagName) {
             this.putQueryParameter("TagName", tagName);
@@ -78,10 +87,13 @@ public class DeleteTagWithUuidRequest extends Request {
         }
 
         /**
-         * The UUIDs of servers.
-         * <p>
+         * <p>The UUIDs of servers.</p>
+         * <blockquote>
+         * <p>If the UuidList parameter is specified, Security Center removes the tag only from the servers whose UUIDs are specified by UuidList. If the UuidList parameter is not specified, Security Center removes the tag from all servers.</p>
+         * </blockquote>
          * 
-         * > If the UuidList parameter is specified, Security Center removes the tag only from the servers whose UUIDs are specified by UuidList. If the UuidList parameter is not specified, Security Center removes the tag from all servers.
+         * <strong>example:</strong>
+         * <p>111-xx,aa-bb</p>
          */
         public Builder uuidList(String uuidList) {
             this.putQueryParameter("UuidList", uuidList);

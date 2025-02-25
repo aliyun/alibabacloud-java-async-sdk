@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightCancelOrderV2Request} extends {@link RequestModel}
  *
  * <p>FlightCancelOrderV2Request</p>
  */
 public class FlightCancelOrderV2Request extends Request {
-    @Query
-    @NameInMap("isv_name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("isv_name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String isvName;
 
-    @Query
-    @NameInMap("order_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("order_id")
     private String orderId;
 
-    @Query
-    @NameInMap("out_order_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("out_order_id")
     private String outOrderId;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private FlightCancelOrderV2Request(Builder builder) {
@@ -97,7 +102,7 @@ public class FlightCancelOrderV2Request extends Request {
         } 
 
         /**
-         * isv_name.
+         * <p>This parameter is required.</p>
          */
         public Builder isvName(String isvName) {
             this.putQueryParameter("isv_name", isvName);

@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TrafficConfig} extends {@link TeaModel}
  *
  * <p>TrafficConfig</p>
  */
 public class TrafficConfig extends TeaModel {
-    @NameInMap("additionalVersionWeight")
-    private java.util.Map < String, Float > additionalVersionWeight;
+    @com.aliyun.core.annotation.NameInMap("additionalVersionWeight")
+    private java.util.Map<String, Float> additionalVersionWeight;
 
-    @NameInMap("createdTime")
+    @com.aliyun.core.annotation.NameInMap("createdTime")
     private String createdTime;
 
-    @NameInMap("lastModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("lastModifiedTime")
     private String lastModifiedTime;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("resolvePolicy")
+    @com.aliyun.core.annotation.NameInMap("resolvePolicy")
     private String resolvePolicy;
 
-    @NameInMap("routePolicy")
+    @com.aliyun.core.annotation.NameInMap("routePolicy")
     private RoutePolicy routePolicy;
 
-    @NameInMap("versionId")
+    @com.aliyun.core.annotation.NameInMap("versionId")
     private String versionId;
 
     private TrafficConfig(Builder builder) {
@@ -54,7 +59,7 @@ public class TrafficConfig extends TeaModel {
     /**
      * @return additionalVersionWeight
      */
-    public java.util.Map < String, Float > getAdditionalVersionWeight() {
+    public java.util.Map<String, Float> getAdditionalVersionWeight() {
         return this.additionalVersionWeight;
     }
 
@@ -101,7 +106,7 @@ public class TrafficConfig extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map < String, Float > additionalVersionWeight; 
+        private java.util.Map<String, Float> additionalVersionWeight; 
         private String createdTime; 
         private String lastModifiedTime; 
         private String requestId; 
@@ -112,7 +117,7 @@ public class TrafficConfig extends TeaModel {
         /**
          * additionalVersionWeight.
          */
-        public Builder additionalVersionWeight(java.util.Map < String, Float > additionalVersionWeight) {
+        public Builder additionalVersionWeight(java.util.Map<String, Float> additionalVersionWeight) {
             this.additionalVersionWeight = additionalVersionWeight;
             return this;
         }

@@ -1,107 +1,112 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RelateDbForHBaseHaRequest} extends {@link RequestModel}
  *
  * <p>RelateDbForHBaseHaRequest</p>
  */
 public class RelateDbForHBaseHaRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("HaActive")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaActive")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String haActive;
 
-    @Query
-    @NameInMap("HaActiveClusterKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaActiveClusterKey")
     private String haActiveClusterKey;
 
-    @Query
-    @NameInMap("HaActiveDBType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaActiveDBType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String haActiveDBType;
 
-    @Query
-    @NameInMap("HaActiveHbaseFsDir")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaActiveHbaseFsDir")
     private String haActiveHbaseFsDir;
 
-    @Query
-    @NameInMap("HaActiveHdfsUri")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaActiveHdfsUri")
     private String haActiveHdfsUri;
 
-    @Query
-    @NameInMap("HaActivePassword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaActivePassword")
     private String haActivePassword;
 
-    @Query
-    @NameInMap("HaActiveUser")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaActiveUser")
     private String haActiveUser;
 
-    @Query
-    @NameInMap("HaActiveVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaActiveVersion")
     private String haActiveVersion;
 
-    @Query
-    @NameInMap("HaMigrateType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaMigrateType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String haMigrateType;
 
-    @Query
-    @NameInMap("HaStandby")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaStandby")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String haStandby;
 
-    @Query
-    @NameInMap("HaStandbyClusterKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaStandbyClusterKey")
     private String haStandbyClusterKey;
 
-    @Query
-    @NameInMap("HaStandbyDBType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaStandbyDBType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String haStandbyDBType;
 
-    @Query
-    @NameInMap("HaStandbyHbaseFsDir")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaStandbyHbaseFsDir")
     private String haStandbyHbaseFsDir;
 
-    @Query
-    @NameInMap("HaStandbyHdfsUri")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaStandbyHdfsUri")
     private String haStandbyHdfsUri;
 
-    @Query
-    @NameInMap("HaStandbyPassword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaStandbyPassword")
     private String haStandbyPassword;
 
-    @Query
-    @NameInMap("HaStandbyUser")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaStandbyUser")
     private String haStandbyUser;
 
-    @Query
-    @NameInMap("HaStandbyVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaStandbyVersion")
     private String haStandbyVersion;
 
-    @Query
-    @NameInMap("HaTables")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaTables")
     private String haTables;
 
-    @Query
-    @NameInMap("IsActiveStandard")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsActiveStandard")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean isActiveStandard;
 
-    @Query
-    @NameInMap("IsStandbyStandard")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsStandbyStandard")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean isStandbyStandard;
 
     private RelateDbForHBaseHaRequest(Builder builder) {
@@ -342,7 +347,10 @@ public class RelateDbForHBaseHaRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bds-t4nj9v2x85******</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -351,7 +359,10 @@ public class RelateDbForHBaseHaRequest extends Request {
         }
 
         /**
-         * HaActive.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hb-bp1w6krp539******</p>
          */
         public Builder haActive(String haActive) {
             this.putQueryParameter("HaActive", haActive);
@@ -369,7 +380,10 @@ public class RelateDbForHBaseHaRequest extends Request {
         }
 
         /**
-         * HaActiveDBType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hbase</p>
          */
         public Builder haActiveDBType(String haActiveDBType) {
             this.putQueryParameter("HaActiveDBType", haActiveDBType);
@@ -423,7 +437,10 @@ public class RelateDbForHBaseHaRequest extends Request {
         }
 
         /**
-         * HaMigrateType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CLUSTER</p>
          */
         public Builder haMigrateType(String haMigrateType) {
             this.putQueryParameter("HaMigrateType", haMigrateType);
@@ -432,7 +449,10 @@ public class RelateDbForHBaseHaRequest extends Request {
         }
 
         /**
-         * HaStandby.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hb-bp1bl7iqzka******</p>
          */
         public Builder haStandby(String haStandby) {
             this.putQueryParameter("HaStandby", haStandby);
@@ -450,7 +470,10 @@ public class RelateDbForHBaseHaRequest extends Request {
         }
 
         /**
-         * HaStandbyDBType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hbase</p>
          */
         public Builder haStandbyDBType(String haStandbyDBType) {
             this.putQueryParameter("HaStandbyDBType", haStandbyDBType);
@@ -513,7 +536,10 @@ public class RelateDbForHBaseHaRequest extends Request {
         }
 
         /**
-         * IsActiveStandard.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isActiveStandard(Boolean isActiveStandard) {
             this.putQueryParameter("IsActiveStandard", isActiveStandard);
@@ -522,7 +548,10 @@ public class RelateDbForHBaseHaRequest extends Request {
         }
 
         /**
-         * IsStandbyStandard.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isStandbyStandard(Boolean isStandbyStandard) {
             this.putQueryParameter("IsStandbyStandard", isStandbyStandard);

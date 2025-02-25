@@ -1,59 +1,74 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MigrateAvailableZoneRequest} extends {@link RequestModel}
  *
  * <p>MigrateAvailableZoneRequest</p>
  */
 public class MigrateAvailableZoneRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("EffectiveTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveTime")
     private String effectiveTime;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HiddenZoneId")
+    private String hiddenZoneId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Vswitch")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecondaryZoneId")
+    private String secondaryZoneId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Vswitch")
     private String vswitch;
 
-    @Query
-    @NameInMap("ZoneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String zoneId;
 
     private MigrateAvailableZoneRequest(Builder builder) {
         super(builder);
         this.DBInstanceId = builder.DBInstanceId;
         this.effectiveTime = builder.effectiveTime;
+        this.hiddenZoneId = builder.hiddenZoneId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.secondaryZoneId = builder.secondaryZoneId;
         this.vswitch = builder.vswitch;
         this.zoneId = builder.zoneId;
     }
@@ -86,6 +101,13 @@ public class MigrateAvailableZoneRequest extends Request {
     }
 
     /**
+     * @return hiddenZoneId
+     */
+    public String getHiddenZoneId() {
+        return this.hiddenZoneId;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -114,6 +136,13 @@ public class MigrateAvailableZoneRequest extends Request {
     }
 
     /**
+     * @return secondaryZoneId
+     */
+    public String getSecondaryZoneId() {
+        return this.secondaryZoneId;
+    }
+
+    /**
      * @return vswitch
      */
     public String getVswitch() {
@@ -130,10 +159,12 @@ public class MigrateAvailableZoneRequest extends Request {
     public static final class Builder extends Request.Builder<MigrateAvailableZoneRequest, Builder> {
         private String DBInstanceId; 
         private String effectiveTime; 
+        private String hiddenZoneId; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String secondaryZoneId; 
         private String vswitch; 
         private String zoneId; 
 
@@ -145,19 +176,25 @@ public class MigrateAvailableZoneRequest extends Request {
             super(request);
             this.DBInstanceId = request.DBInstanceId;
             this.effectiveTime = request.effectiveTime;
+            this.hiddenZoneId = request.hiddenZoneId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.secondaryZoneId = request.secondaryZoneId;
             this.vswitch = request.vswitch;
             this.zoneId = request.zoneId;
         } 
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The ID of the instance.</p>
+         * <blockquote>
+         * <p>If the instance is deployed in a VPC, you must specify the <strong>Vswitch</strong> parameter.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > If the instance is deployed in a VPC, you must specify the **Vswitch** parameter.
+         * <strong>example:</strong>
+         * <p>dds-bp1ece71ff2f****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -166,17 +203,31 @@ public class MigrateAvailableZoneRequest extends Request {
         }
 
         /**
-         * The time when the instance is migrated to the destination zone. Valid values:
-         * <p>
+         * <p>The time when the instance is migrated to the destination zone. Valid values:</p>
+         * <ul>
+         * <li><strong>Immediately</strong>: The instance is immediately migrated to the destination zone.</li>
+         * <li><strong>MaintainTime</strong>: The instance is migrated to the destination zone during the maintenance window of the instance.</li>
+         * </ul>
+         * <p>Default value: <strong>Immediately</strong>.</p>
          * 
-         * *   **Immediately**: The instance is immediately migrated to the destination zone.
-         * *   **MaintainTime**: The instance is migrated to the destination zone during the maintenance window of the instance.
-         * 
-         * Default value: **Immediately**.
+         * <strong>example:</strong>
+         * <p>Immediately</p>
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
             this.effectiveTime = effectiveTime;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the destination hidden zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai-n</p>
+         */
+        public Builder hiddenZoneId(String hiddenZoneId) {
+            this.putQueryParameter("HiddenZoneId", hiddenZoneId);
+            this.hiddenZoneId = hiddenZoneId;
             return this;
         }
 
@@ -217,10 +268,25 @@ public class MigrateAvailableZoneRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch in the destination zone.
-         * <p>
+         * <p>The ID of the destination secondary zone.</p>
          * 
-         * > If the instance is deployed in a VPC, you must specify this parameter.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
+         */
+        public Builder secondaryZoneId(String secondaryZoneId) {
+            this.putQueryParameter("SecondaryZoneId", secondaryZoneId);
+            this.secondaryZoneId = secondaryZoneId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the vSwitch in the destination zone.</p>
+         * <blockquote>
+         * <p>If the instance is deployed in a VPC, you must specify this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1buy0h9myt5i9e7****</p>
          */
         public Builder vswitch(String vswitch) {
             this.putQueryParameter("Vswitch", vswitch);
@@ -229,14 +295,19 @@ public class MigrateAvailableZoneRequest extends Request {
         }
 
         /**
-         * The ID of the destination zone.
-         * <p>
+         * <p>The ID of the destination zone.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The source zone and the destination zone belong to the same region.</p>
+         * </li>
+         * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the zone ID.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * > 
-         * 
-         * *   The source zone and the destination zone belong to the same region.
-         * 
-         * *   You can call the [DescribeRegions](~~61933~~) operation to query the zone ID.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetComplianceSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>GetComplianceSummaryResponseBody</p>
  */
 public class GetComplianceSummaryResponseBody extends TeaModel {
-    @NameInMap("ComplianceSummary")
+    @com.aliyun.core.annotation.NameInMap("ComplianceSummary")
     private ComplianceSummary complianceSummary;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetComplianceSummaryResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetComplianceSummaryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The summary of compliance statistics.
+         * <p>The summary of compliance statistics.</p>
          */
         public Builder complianceSummary(ComplianceSummary complianceSummary) {
             this.complianceSummary = complianceSummary;
@@ -58,7 +63,10 @@ public class GetComplianceSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CAEE6F34-DEDC-4BAA-AA8C-946D5D008737</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,17 +79,23 @@ public class GetComplianceSummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetComplianceSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetComplianceSummaryResponseBody</p>
+     */
     public static class ComplianceSummaryByConfigRule extends TeaModel {
-        @NameInMap("ComplianceSummaryTimestamp")
+        @com.aliyun.core.annotation.NameInMap("ComplianceSummaryTimestamp")
         private Long complianceSummaryTimestamp;
 
-        @NameInMap("CompliantCount")
+        @com.aliyun.core.annotation.NameInMap("CompliantCount")
         private Integer compliantCount;
 
-        @NameInMap("NonCompliantCount")
+        @com.aliyun.core.annotation.NameInMap("NonCompliantCount")
         private Integer nonCompliantCount;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private ComplianceSummaryByConfigRule(Builder builder) {
@@ -134,7 +148,10 @@ public class GetComplianceSummaryResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The time when the compliance summary was generated. Unit: milliseconds.
+             * <p>The time when the compliance summary was generated. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1589853712165</p>
              */
             public Builder complianceSummaryTimestamp(Long complianceSummaryTimestamp) {
                 this.complianceSummaryTimestamp = complianceSummaryTimestamp;
@@ -142,7 +159,10 @@ public class GetComplianceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rules evaluated as compliant.
+             * <p>The number of rules evaluated as compliant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder compliantCount(Integer compliantCount) {
                 this.compliantCount = compliantCount;
@@ -150,7 +170,10 @@ public class GetComplianceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rules evaluated as non-compliant.
+             * <p>The number of rules evaluated as non-compliant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder nonCompliantCount(Integer nonCompliantCount) {
                 this.nonCompliantCount = nonCompliantCount;
@@ -158,7 +181,10 @@ public class GetComplianceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of rules.
+             * <p>The total number of rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -172,17 +198,23 @@ public class GetComplianceSummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetComplianceSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetComplianceSummaryResponseBody</p>
+     */
     public static class ComplianceSummaryByResource extends TeaModel {
-        @NameInMap("ComplianceSummaryTimestamp")
+        @com.aliyun.core.annotation.NameInMap("ComplianceSummaryTimestamp")
         private Long complianceSummaryTimestamp;
 
-        @NameInMap("CompliantCount")
+        @com.aliyun.core.annotation.NameInMap("CompliantCount")
         private Integer compliantCount;
 
-        @NameInMap("NonCompliantCount")
+        @com.aliyun.core.annotation.NameInMap("NonCompliantCount")
         private Integer nonCompliantCount;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private ComplianceSummaryByResource(Builder builder) {
@@ -235,7 +267,10 @@ public class GetComplianceSummaryResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The time when the compliance summary was generated. Unit: milliseconds.
+             * <p>The time when the compliance summary was generated. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1589853712165</p>
              */
             public Builder complianceSummaryTimestamp(Long complianceSummaryTimestamp) {
                 this.complianceSummaryTimestamp = complianceSummaryTimestamp;
@@ -243,7 +278,10 @@ public class GetComplianceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of resources evaluated as compliant.
+             * <p>The number of resources evaluated as compliant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder compliantCount(Integer compliantCount) {
                 this.compliantCount = compliantCount;
@@ -251,7 +289,10 @@ public class GetComplianceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of resources evaluated as non-compliant.
+             * <p>The number of resources evaluated as non-compliant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder nonCompliantCount(Integer nonCompliantCount) {
                 this.nonCompliantCount = nonCompliantCount;
@@ -259,7 +300,10 @@ public class GetComplianceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of resources.
+             * <p>The total number of resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -273,11 +317,17 @@ public class GetComplianceSummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetComplianceSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetComplianceSummaryResponseBody</p>
+     */
     public static class ComplianceSummary extends TeaModel {
-        @NameInMap("ComplianceSummaryByConfigRule")
+        @com.aliyun.core.annotation.NameInMap("ComplianceSummaryByConfigRule")
         private ComplianceSummaryByConfigRule complianceSummaryByConfigRule;
 
-        @NameInMap("ComplianceSummaryByResource")
+        @com.aliyun.core.annotation.NameInMap("ComplianceSummaryByResource")
         private ComplianceSummaryByResource complianceSummaryByResource;
 
         private ComplianceSummary(Builder builder) {
@@ -312,7 +362,7 @@ public class GetComplianceSummaryResponseBody extends TeaModel {
             private ComplianceSummaryByResource complianceSummaryByResource; 
 
             /**
-             * The summary of compliance statistics from the rule dimension.
+             * <p>The summary of compliance statistics from the rule dimension.</p>
              */
             public Builder complianceSummaryByConfigRule(ComplianceSummaryByConfigRule complianceSummaryByConfigRule) {
                 this.complianceSummaryByConfigRule = complianceSummaryByConfigRule;
@@ -320,7 +370,7 @@ public class GetComplianceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The summary of compliance statistics from the resource dimension.
+             * <p>The summary of compliance statistics from the resource dimension.</p>
              */
             public Builder complianceSummaryByResource(ComplianceSummaryByResource complianceSummaryByResource) {
                 this.complianceSummaryByResource = complianceSummaryByResource;

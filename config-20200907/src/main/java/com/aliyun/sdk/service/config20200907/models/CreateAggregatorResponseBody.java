@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAggregatorResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAggregatorResponseBody</p>
  */
 public class CreateAggregatorResponseBody extends TeaModel {
-    @NameInMap("AggregatorId")
+    @com.aliyun.core.annotation.NameInMap("AggregatorId")
     private String aggregatorId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateAggregatorResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateAggregatorResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the account group.
+         * <p>The account group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ca-dacf86d8314e00eb****</p>
          */
         public Builder aggregatorId(String aggregatorId) {
             this.aggregatorId = aggregatorId;
@@ -58,7 +66,10 @@ public class CreateAggregatorResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8195B664-9565-4685-89AC-8B5F04B44B92</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

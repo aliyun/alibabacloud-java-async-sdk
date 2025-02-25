@@ -1,53 +1,63 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateApplicationRequest} extends {@link RequestModel}
  *
  * <p>CreateApplicationRequest</p>
  */
 public class CreateApplicationRequest extends Request {
-    @Query
-    @NameInMap("AlarmConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlarmConfig")
     private AlarmConfig alarmConfig;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationSource")
+    private String applicationSource;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ServiceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
     private String serviceId;
 
-    @Query
-    @NameInMap("Tags")
-    private java.util.Map < String, ? > tags;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.Map<String, ?> tags;
 
     private CreateApplicationRequest(Builder builder) {
         super(builder);
         this.alarmConfig = builder.alarmConfig;
+        this.applicationSource = builder.applicationSource;
         this.clientToken = builder.clientToken;
         this.description = builder.description;
         this.name = builder.name;
@@ -75,6 +85,13 @@ public class CreateApplicationRequest extends Request {
      */
     public AlarmConfig getAlarmConfig() {
         return this.alarmConfig;
+    }
+
+    /**
+     * @return applicationSource
+     */
+    public String getApplicationSource() {
+        return this.applicationSource;
     }
 
     /**
@@ -122,19 +139,20 @@ public class CreateApplicationRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.Map < String, ? > getTags() {
+    public java.util.Map<String, ?> getTags() {
         return this.tags;
     }
 
     public static final class Builder extends Request.Builder<CreateApplicationRequest, Builder> {
         private AlarmConfig alarmConfig; 
+        private String applicationSource; 
         private String clientToken; 
         private String description; 
         private String name; 
         private String regionId; 
         private String resourceGroupId; 
         private String serviceId; 
-        private java.util.Map < String, ? > tags; 
+        private java.util.Map<String, ?> tags; 
 
         private Builder() {
             super();
@@ -143,6 +161,7 @@ public class CreateApplicationRequest extends Request {
         private Builder(CreateApplicationRequest request) {
             super(request);
             this.alarmConfig = request.alarmConfig;
+            this.applicationSource = request.applicationSource;
             this.clientToken = request.clientToken;
             this.description = request.description;
             this.name = request.name;
@@ -153,7 +172,7 @@ public class CreateApplicationRequest extends Request {
         } 
 
         /**
-         * The configurations of application alerts.
+         * <p>The configurations of application alerts.</p>
          */
         public Builder alarmConfig(AlarmConfig alarmConfig) {
             String alarmConfigShrink = shrink(alarmConfig, "AlarmConfig", "json");
@@ -163,7 +182,22 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
+         * <p>The source of application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Platform&quot;:&quot;github&quot;,&quot;Owner&quot;:&quot;githubUser&quot;,&quot;RepoName&quot;:&quot;githubUser/repoName&quot;}</p>
+         */
+        public Builder applicationSource(String applicationSource) {
+            this.putQueryParameter("ApplicationSource", applicationSource);
+            this.applicationSource = applicationSource;
+            return this;
+        }
+
+        /**
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TF-CreateApplication-1647587475-84104b89-eba5-47a8-b2fd-807b8b7d</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -172,7 +206,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The description of the application.
+         * <p>The description of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>application</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -181,7 +218,11 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The application name.
+         * <p>The application name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyApplication</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -190,7 +231,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The region ID. Set the value to cn-hangzhou.
+         * <p>The region ID. Set the value to cn-hangzhou.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -199,7 +243,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxsn4m******</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -208,7 +255,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The ID of the service.
+         * <p>The ID of the Compute Nest service that corresponds to the application template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service-79538e30e44541b699d8</p>
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -217,9 +267,12 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;k1&quot;:&quot;v1&quot;,&quot;k2&quot;:&quot;v2&quot;}</p>
          */
-        public Builder tags(java.util.Map < String, ? > tags) {
+        public Builder tags(java.util.Map<String, ?> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
@@ -233,15 +286,21 @@ public class CreateApplicationRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateApplicationRequest} extends {@link TeaModel}
+     *
+     * <p>CreateApplicationRequest</p>
+     */
     public static class AlarmConfig extends TeaModel {
-        @NameInMap("ContactGroups")
-        private java.util.List < String > contactGroups;
+        @com.aliyun.core.annotation.NameInMap("ContactGroups")
+        private java.util.List<String> contactGroups;
 
-        @NameInMap("HealthCheckUrl")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckUrl")
         private String healthCheckUrl;
 
-        @NameInMap("TemplateIds")
-        private java.util.List < String > templateIds;
+        @com.aliyun.core.annotation.NameInMap("TemplateIds")
+        private java.util.List<String> templateIds;
 
         private AlarmConfig(Builder builder) {
             this.contactGroups = builder.contactGroups;
@@ -260,7 +319,7 @@ public class CreateApplicationRequest extends Request {
         /**
          * @return contactGroups
          */
-        public java.util.List < String > getContactGroups() {
+        public java.util.List<String> getContactGroups() {
             return this.contactGroups;
         }
 
@@ -274,25 +333,28 @@ public class CreateApplicationRequest extends Request {
         /**
          * @return templateIds
          */
-        public java.util.List < String > getTemplateIds() {
+        public java.util.List<String> getTemplateIds() {
             return this.templateIds;
         }
 
         public static final class Builder {
-            private java.util.List < String > contactGroups; 
+            private java.util.List<String> contactGroups; 
             private String healthCheckUrl; 
-            private java.util.List < String > templateIds; 
+            private java.util.List<String> templateIds; 
 
             /**
-             * The alert contact groups.
+             * <p>The alert contact groups.</p>
              */
-            public Builder contactGroups(java.util.List < String > contactGroups) {
+            public Builder contactGroups(java.util.List<String> contactGroups) {
                 this.contactGroups = contactGroups;
                 return this;
             }
 
             /**
-             * The health check URL of the application.
+             * <p>The health check URL of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/healthcheck/tcp50122</p>
              */
             public Builder healthCheckUrl(String healthCheckUrl) {
                 this.healthCheckUrl = healthCheckUrl;
@@ -300,9 +362,9 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * The alert templates.
+             * <p>The alert templates.</p>
              */
-            public Builder templateIds(java.util.List < String > templateIds) {
+            public Builder templateIds(java.util.List<String> templateIds) {
                 this.templateIds = templateIds;
                 return this;
             }

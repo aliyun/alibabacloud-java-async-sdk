@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTranscodeJobRequest} extends {@link RequestModel}
  *
  * <p>GetTranscodeJobRequest</p>
  */
 public class GetTranscodeJobRequest extends Request {
-    @Query
-    @NameInMap("ParentJobId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentJobId")
     private String parentJobId;
 
     private GetTranscodeJobRequest(Builder builder) {
@@ -54,7 +59,10 @@ public class GetTranscodeJobRequest extends Request {
         } 
 
         /**
-         * ParentJobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ab4802364a2e49208c99efab82dfa8e8</p>
          */
         public Builder parentJobId(String parentJobId) {
             this.putQueryParameter("ParentJobId", parentJobId);

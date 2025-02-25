@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartAggregateConfigRuleEvaluationResponseBody} extends {@link TeaModel}
  *
  * <p>StartAggregateConfigRuleEvaluationResponseBody</p>
  */
 public class StartAggregateConfigRuleEvaluationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Boolean result;
 
     private StartAggregateConfigRuleEvaluationResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class StartAggregateConfigRuleEvaluationResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABC0FFF8-0B44-40C6-8BBF-3A185EFDD212</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,11 +66,14 @@ public class StartAggregateConfigRuleEvaluationResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the involved resources were evaluated. Valid values:
-         * <p>
+         * <p>Indicates whether the involved resources were evaluated. Valid values:</p>
+         * <ul>
+         * <li>true: The involved resources were evaluated.</li>
+         * <li>false: The involved resources were not evaluated</li>
+         * </ul>
          * 
-         * *   true: The involved resources were evaluated.
-         * *   false: The involved resources were not evaluated
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

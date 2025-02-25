@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDeploymentResponseBody} extends {@link TeaModel}
  *
  * <p>GetDeploymentResponseBody</p>
  */
 public class GetDeploymentResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetDeploymentResponseBody(Builder builder) {
@@ -98,7 +103,7 @@ public class GetDeploymentResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The data about the deployment task.
+         * <p>The details of the deployment package.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +111,10 @@ public class GetDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ConnectionNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +122,10 @@ public class GetDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The connection does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +133,10 @@ public class GetDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +144,10 @@ public class GetDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can troubleshoot errors based on the ID.
+         * <p>The ID of the request. You can troubleshoot errors based on the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class GetDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,14 +171,20 @@ public class GetDeploymentResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDeploymentResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDeploymentResponseBody</p>
+     */
     public static class DeployedItems extends TeaModel {
-        @NameInMap("FileId")
+        @com.aliyun.core.annotation.NameInMap("FileId")
         private Long fileId;
 
-        @NameInMap("FileVersion")
+        @com.aliyun.core.annotation.NameInMap("FileVersion")
         private Long fileVersion;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private DeployedItems(Builder builder) {
@@ -202,7 +228,10 @@ public class GetDeploymentResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * FileId.
+             * <p>The file ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>507642378</p>
              */
             public Builder fileId(Long fileId) {
                 this.fileId = fileId;
@@ -210,7 +239,10 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * FileVersion.
+             * <p>The version of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder fileVersion(Long fileVersion) {
                 this.fileVersion = fileVersion;
@@ -218,7 +250,18 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <ul>
+             * <li>UNPUBLISHED(0): not published</li>
+             * <li>SUCCESS(1): Published</li>
+             * <li>ERROR(2): Publishing failed</li>
+             * <li>CLONED(3): successfully CLONED</li>
+             * <li>DEPLOY_ERROR(4): Publishing failed</li>
+             * <li>CLONING(5): CLONING</li>
+             * <li>REJECT(6): release rejected</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -232,35 +275,41 @@ public class GetDeploymentResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDeploymentResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDeploymentResponseBody</p>
+     */
     public static class Deployment extends TeaModel {
-        @NameInMap("CheckingStatus")
+        @com.aliyun.core.annotation.NameInMap("CheckingStatus")
         private Integer checkingStatus;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("CreatorId")
+        @com.aliyun.core.annotation.NameInMap("CreatorId")
         private String creatorId;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("ExecuteTime")
+        @com.aliyun.core.annotation.NameInMap("ExecuteTime")
         private Long executeTime;
 
-        @NameInMap("FromEnvironment")
+        @com.aliyun.core.annotation.NameInMap("FromEnvironment")
         private Integer fromEnvironment;
 
-        @NameInMap("HandlerId")
+        @com.aliyun.core.annotation.NameInMap("HandlerId")
         private String handlerId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("ToEnvironment")
+        @com.aliyun.core.annotation.NameInMap("ToEnvironment")
         private Integer toEnvironment;
 
         private Deployment(Builder builder) {
@@ -367,11 +416,14 @@ public class GetDeploymentResponseBody extends TeaModel {
             private Integer toEnvironment; 
 
             /**
-             * The check status of one or more files in the deployment task. If the value of the ToEnvironment parameter is 1, the files can be deployed to the production environment only when the value of the Status parameter is 1 and the CheckingStatus parameter is empty. Valid values:
-             * <p>
+             * <p>The check status of one or more files in the deployment task. If the value of the ToEnvironment parameter is 1, the files can be deployed to the production environment only when the value of the Status parameter is 1 and the CheckingStatus parameter is empty. Valid values:</p>
+             * <ul>
+             * <li>7: The file failed the check.</li>
+             * <li>8: The file is being checked.</li>
+             * </ul>
              * 
-             * *   7: The file failed the check.
-             * *   8: The file is being checked.
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder checkingStatus(Integer checkingStatus) {
                 this.checkingStatus = checkingStatus;
@@ -379,7 +431,10 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the deployment task was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the deployment task was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1593877765000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -387,7 +442,10 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account used by the user who created the deployment task.
+             * <p>The ID of the Alibaba Cloud account used by the user who created the deployment task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20030****</p>
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -395,7 +453,10 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * The error message that was returned when the deployment task failed. In this case, the value of the Status parameter is 2.
+             * <p>The error message that was returned when the deployment package failed. In this case, the value of the Status parameter is 2.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -403,7 +464,10 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the deployment task was run. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the deployment task was run. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1593877765000</p>
              */
             public Builder executeTime(Long executeTime) {
                 this.executeTime = executeTime;
@@ -411,7 +475,10 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * The environment in which the deployment task was run. Valid values: 0 and 1. A value of 0 indicates the on-premises environment. A value of 1 indicates the development environment.
+             * <p>The environment in which the deployment task was run. Valid values: 0 and 1. A value of 0 indicates the on-premises environment. A value of 1 indicates the development environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder fromEnvironment(Integer fromEnvironment) {
                 this.fromEnvironment = fromEnvironment;
@@ -419,7 +486,10 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account used by the user who ran the deployment task.
+             * <p>The ID of the Alibaba Cloud account used by the user who ran the deployment task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2003****</p>
              */
             public Builder handlerId(String handlerId) {
                 this.handlerId = handlerId;
@@ -427,7 +497,10 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the deployment task. The value is the same as the name of the specific deployment task that is displayed on the Release Package page in the Deploy module.
+             * <p>The name of the deployment task. The value is the same as the name of the specific deployment task that is displayed on the Release Package page in the Deploy module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ods_user_info_d-2020-07-04_20030****</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -435,7 +508,10 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the deployment task. Valid values: 0, 1, and 2. A value of 0 indicates that the task is ready. A value of 1 indicates that the task was successful. A value of 2 indicates that the task failed.
+             * <p>The status of the deployment task. Valid values: 0, 1, and 2. A value of 0 indicates that the task is ready. A value of 1 indicates that the task was successful. A value of 2 indicates that the task failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -443,7 +519,10 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * The environment to which the file was deployed. Valid values: 1 and 2. A value of 1 indicates the development environment. A value of 2 indicates the production environment.
+             * <p>The environment to which the file was deployed. Valid values: 1 and 2. A value of 1 indicates the development environment. A value of 2 indicates the production environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder toEnvironment(Integer toEnvironment) {
                 this.toEnvironment = toEnvironment;
@@ -457,11 +536,17 @@ public class GetDeploymentResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDeploymentResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDeploymentResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DeployedItems")
-        private java.util.List < DeployedItems> deployedItems;
+        @com.aliyun.core.annotation.NameInMap("DeployedItems")
+        private java.util.List<DeployedItems> deployedItems;
 
-        @NameInMap("Deployment")
+        @com.aliyun.core.annotation.NameInMap("Deployment")
         private Deployment deployment;
 
         private Data(Builder builder) {
@@ -480,7 +565,7 @@ public class GetDeploymentResponseBody extends TeaModel {
         /**
          * @return deployedItems
          */
-        public java.util.List < DeployedItems> getDeployedItems() {
+        public java.util.List<DeployedItems> getDeployedItems() {
             return this.deployedItems;
         }
 
@@ -492,19 +577,19 @@ public class GetDeploymentResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DeployedItems> deployedItems; 
+            private java.util.List<DeployedItems> deployedItems; 
             private Deployment deployment; 
 
             /**
-             * DeployedItems.
+             * <p>The deployed items.</p>
              */
-            public Builder deployedItems(java.util.List < DeployedItems> deployedItems) {
+            public Builder deployedItems(java.util.List<DeployedItems> deployedItems) {
                 this.deployedItems = deployedItems;
                 return this;
             }
 
             /**
-             * The details of the deployment task.
+             * <p>The details of the deployment package.</p>
              */
             public Builder deployment(Deployment deployment) {
                 this.deployment = deployment;

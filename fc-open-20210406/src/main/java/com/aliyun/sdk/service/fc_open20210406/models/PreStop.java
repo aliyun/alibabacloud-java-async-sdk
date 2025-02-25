@@ -50,7 +50,7 @@ public class PreStop extends TeaModel {
         private Integer timeout; 
 
         /**
-         * PreStop handler
+         * handler.
          */
         public Builder handler(String handler) {
             this.handler = handler;
@@ -58,7 +58,7 @@ public class PreStop extends TeaModel {
         }
 
         /**
-         * PreStop hander timeout
+         * timeout.
          */
         public Builder timeout(Integer timeout) {
             this.timeout = timeout;

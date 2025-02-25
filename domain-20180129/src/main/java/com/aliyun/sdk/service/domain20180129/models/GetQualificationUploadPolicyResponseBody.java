@@ -1,39 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQualificationUploadPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>GetQualificationUploadPolicyResponseBody</p>
  */
 public class GetQualificationUploadPolicyResponseBody extends TeaModel {
-    @NameInMap("Accessid")
+    @com.aliyun.core.annotation.NameInMap("Accessid")
     private String accessid;
 
-    @NameInMap("Dir")
+    @com.aliyun.core.annotation.NameInMap("Dir")
     private String dir;
 
-    @NameInMap("Expire")
+    @com.aliyun.core.annotation.NameInMap("Expire")
     private String expire;
 
-    @NameInMap("Host")
+    @com.aliyun.core.annotation.NameInMap("Host")
     private String host;
 
-    @NameInMap("Policy")
+    @com.aliyun.core.annotation.NameInMap("Policy")
     private String policy;
 
-    @NameInMap("Prefix")
+    @com.aliyun.core.annotation.NameInMap("Prefix")
     private String prefix;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Signature")
+    @com.aliyun.core.annotation.NameInMap("Signature")
     private String signature;
 
     private GetQualificationUploadPolicyResponseBody(Builder builder) {

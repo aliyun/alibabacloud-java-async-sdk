@@ -1,49 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWebRulesRequest} extends {@link RequestModel}
  *
  * <p>DescribeWebRulesRequest</p>
  */
 public class DescribeWebRulesRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Cname")
-    @Validation(maxLength = 128, minLength = 3)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Cname")
+    @com.aliyun.core.annotation.Validation(maxLength = 128, minLength = 3)
     private String cname;
 
-    @Query
-    @NameInMap("Domain")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Domain")
     private String domain;
 
-    @Query
-    @NameInMap("InstanceIds")
-    private java.util.List < String > instanceIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    private java.util.List<String> instanceIds;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("QueryDomainPattern")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryDomainPattern")
     private String queryDomainPattern;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private DescribeWebRulesRequest(Builder builder) {
@@ -95,7 +99,7 @@ public class DescribeWebRulesRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
@@ -131,7 +135,7 @@ public class DescribeWebRulesRequest extends Request {
         private String regionId; 
         private String cname; 
         private String domain; 
-        private java.util.List < String > instanceIds; 
+        private java.util.List<String> instanceIds; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String queryDomainPattern; 
@@ -163,7 +167,10 @@ public class DescribeWebRulesRequest extends Request {
         }
 
         /**
-         * Cname.
+         * <p>The CNAME address to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kzmk7b8tt351****.aliyunddos1014****</p>
          */
         public Builder cname(String cname) {
             this.putQueryParameter("Cname", cname);
@@ -172,7 +179,13 @@ public class DescribeWebRulesRequest extends Request {
         }
 
         /**
-         * Domain.
+         * <p>The domain name of the website to query.</p>
+         * <blockquote>
+         * <p>The domain must have been configured with website business forwarding rules. You can call <a href="~~DescribeDomains~~">DescribeDomains</a> to query all domains that have been configured with website business forwarding rules.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -181,16 +194,22 @@ public class DescribeWebRulesRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>The list of DDoS protection instance IDs to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-mp91j1ao****</p>
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
             this.instanceIds = instanceIds;
             return this;
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -199,7 +218,10 @@ public class DescribeWebRulesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -208,7 +230,14 @@ public class DescribeWebRulesRequest extends Request {
         }
 
         /**
-         * QueryDomainPattern.
+         * <p>The query matching pattern. Values:</p>
+         * <ul>
+         * <li><strong>fuzzy</strong> (default): Indicates fuzzy query.</li>
+         * <li><strong>exact</strong>: Indicates exact query.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>exact</p>
          */
         public Builder queryDomainPattern(String queryDomainPattern) {
             this.putQueryParameter("QueryDomainPattern", queryDomainPattern);
@@ -217,7 +246,11 @@ public class DescribeWebRulesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID of the DDoS protection instance in the resource management service.</p>
+         * <p>Not setting this parameter indicates the default resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm2pz25js****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

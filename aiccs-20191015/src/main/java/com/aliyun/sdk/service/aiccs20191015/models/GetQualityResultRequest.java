@@ -1,61 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQualityResultRequest} extends {@link RequestModel}
  *
  * <p>GetQualityResultRequest</p>
  */
 public class GetQualityResultRequest extends Request {
-    @Query
-    @NameInMap("ChannelType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChannelType")
     private String channelType;
 
-    @Query
-    @NameInMap("GroupIds")
-    private java.util.List < Long > groupIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupIds")
+    private java.util.List<Long> groupIds;
 
-    @Query
-    @NameInMap("HitStatus")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HitStatus")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer hitStatus;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PageNo")
-    @Validation(maximum = 1000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
+    @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 1)
     private Integer pageNo;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 1000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ProjectIds")
-    private java.util.List < Long > projectIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectIds")
+    private java.util.List<Long> projectIds;
 
-    @Query
-    @NameInMap("QualityRuleIds")
-    private java.util.List < Long > qualityRuleIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QualityRuleIds")
+    private java.util.List<Long> qualityRuleIds;
 
-    @Query
-    @NameInMap("TouchEndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TouchEndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String touchEndTime;
 
-    @Query
-    @NameInMap("TouchStartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TouchStartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String touchStartTime;
 
     private GetQualityResultRequest(Builder builder) {
@@ -95,7 +100,7 @@ public class GetQualityResultRequest extends Request {
     /**
      * @return groupIds
      */
-    public java.util.List < Long > getGroupIds() {
+    public java.util.List<Long> getGroupIds() {
         return this.groupIds;
     }
 
@@ -130,14 +135,14 @@ public class GetQualityResultRequest extends Request {
     /**
      * @return projectIds
      */
-    public java.util.List < Long > getProjectIds() {
+    public java.util.List<Long> getProjectIds() {
         return this.projectIds;
     }
 
     /**
      * @return qualityRuleIds
      */
-    public java.util.List < Long > getQualityRuleIds() {
+    public java.util.List<Long> getQualityRuleIds() {
         return this.qualityRuleIds;
     }
 
@@ -157,13 +162,13 @@ public class GetQualityResultRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetQualityResultRequest, Builder> {
         private String channelType; 
-        private java.util.List < Long > groupIds; 
+        private java.util.List<Long> groupIds; 
         private Integer hitStatus; 
         private String instanceId; 
         private Integer pageNo; 
         private Integer pageSize; 
-        private java.util.List < Long > projectIds; 
-        private java.util.List < Long > qualityRuleIds; 
+        private java.util.List<Long> projectIds; 
+        private java.util.List<Long> qualityRuleIds; 
         private String touchEndTime; 
         private String touchStartTime; 
 
@@ -197,7 +202,7 @@ public class GetQualityResultRequest extends Request {
         /**
          * GroupIds.
          */
-        public Builder groupIds(java.util.List < Long > groupIds) {
+        public Builder groupIds(java.util.List<Long> groupIds) {
             this.putQueryParameter("GroupIds", groupIds);
             this.groupIds = groupIds;
             return this;
@@ -213,7 +218,7 @@ public class GetQualityResultRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -242,7 +247,7 @@ public class GetQualityResultRequest extends Request {
         /**
          * ProjectIds.
          */
-        public Builder projectIds(java.util.List < Long > projectIds) {
+        public Builder projectIds(java.util.List<Long> projectIds) {
             this.putQueryParameter("ProjectIds", projectIds);
             this.projectIds = projectIds;
             return this;
@@ -251,14 +256,14 @@ public class GetQualityResultRequest extends Request {
         /**
          * QualityRuleIds.
          */
-        public Builder qualityRuleIds(java.util.List < Long > qualityRuleIds) {
+        public Builder qualityRuleIds(java.util.List<Long> qualityRuleIds) {
             this.putQueryParameter("QualityRuleIds", qualityRuleIds);
             this.qualityRuleIds = qualityRuleIds;
             return this;
         }
 
         /**
-         * TouchEndTime.
+         * <p>This parameter is required.</p>
          */
         public Builder touchEndTime(String touchEndTime) {
             this.putQueryParameter("TouchEndTime", touchEndTime);
@@ -267,7 +272,7 @@ public class GetQualityResultRequest extends Request {
         }
 
         /**
-         * TouchStartTime.
+         * <p>This parameter is required.</p>
          */
         public Builder touchStartTime(String touchStartTime) {
             this.putQueryParameter("TouchStartTime", touchStartTime);

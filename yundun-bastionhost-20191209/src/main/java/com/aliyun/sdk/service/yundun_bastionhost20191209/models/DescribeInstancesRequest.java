@@ -1,44 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstancesRequest</p>
  */
 public class DescribeInstancesRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private java.util.List < String > instanceId;
 
-    @Query
-    @NameInMap("InstanceStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceStatus")
     private String instanceStatus;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
     private DescribeInstancesRequest(Builder builder) {
@@ -139,7 +139,10 @@ public class DescribeInstancesRequest extends Request {
         } 
 
         /**
-         * An array that consists of the IDs of the bastion hosts.
+         * <p>An array that consists of the IDs of the bastion hosts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-78v1ghxxxxx</p>
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -148,16 +151,19 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The status of the bastion host. Valid values:
-         * <p>
+         * <p>The status of the bastion host. Valid values:</p>
+         * <ul>
+         * <li><strong>PENDING</strong>: The bastion host is not initialized.</li>
+         * <li><strong>CREATING</strong>: The bastion host is being created.</li>
+         * <li><strong>RUNNING</strong>: The bastion host is running.</li>
+         * <li><strong>EXPIRED</strong>: The bastion host expired.</li>
+         * <li><strong>CREATE_FAILED</strong>: The bastion host fails to be created.</li>
+         * <li><strong>UPGRADING</strong>: The configurations of the bastion host are being changed.</li>
+         * <li><strong>UPGRADE_FAILED</strong>: The configurations of the bastion host fail to be changed.</li>
+         * </ul>
          * 
-         * *   **PENDING**: The bastion host is not initialized.
-         * *   **CREATING**: The bastion host is being created.
-         * *   **RUNNING**: The bastion host is running.
-         * *   **EXPIRED**: The bastion host expired.
-         * *   **CREATE_FAILED**: The bastion host fails to be created.
-         * *   **UPGRADING**: The configurations of the bastion host are being changed.
-         * *   **UPGRADE_FAILED**: The configurations of the bastion host fail to be changed.
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder instanceStatus(String instanceStatus) {
             this.putQueryParameter("InstanceStatus", instanceStatus);
@@ -166,7 +172,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -175,7 +184,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**.
+         * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -184,7 +196,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The region ID of the bastion host.
+         * <p>The region ID of the bastion host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -193,7 +208,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the bastion host belongs.
+         * <p>The ID of the resource group to which the bastion host belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm26ougi****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -202,7 +220,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * An array consisting of the tags that are added to the bastion hosts.
+         * <p>An array consisting of the tags that are added to the bastion hosts.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -217,11 +235,17 @@ public class DescribeInstancesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -256,7 +280,10 @@ public class DescribeInstancesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -264,7 +291,10 @@ public class DescribeInstancesRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testapi</p>
              */
             public Builder value(String value) {
                 this.value = value;

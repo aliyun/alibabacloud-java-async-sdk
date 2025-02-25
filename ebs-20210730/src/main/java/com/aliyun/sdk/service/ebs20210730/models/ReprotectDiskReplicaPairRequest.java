@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReprotectDiskReplicaPairRequest} extends {@link RequestModel}
  *
  * <p>ReprotectDiskReplicaPairRequest</p>
  */
 public class ReprotectDiskReplicaPairRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ReplicaPairId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReplicaPairId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String replicaPairId;
 
-    @Query
-    @NameInMap("ReverseReplicate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReverseReplicate")
     private Boolean reverseReplicate;
 
     private ReprotectDiskReplicaPairRequest(Builder builder) {
@@ -98,7 +103,10 @@ public class ReprotectDiskReplicaPairRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -107,7 +115,14 @@ public class ReprotectDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the secondary disk in the replication pair. You can call the <a href="https://help.aliyun.com/document_detail/354206.html">DescribeDiskReplicaPairs</a> operation to query region IDs of secondary disks in replication pairs.</p>
+         * <blockquote>
+         * <p> The reverse replication feature must be enabled from the region where the secondary disk is located.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -116,7 +131,11 @@ public class ReprotectDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * ReplicaPairId.
+         * <p>The ID of the replication pair.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pair-cn-dsa****</p>
          */
         public Builder replicaPairId(String replicaPairId) {
             this.putQueryParameter("ReplicaPairId", replicaPairId);
@@ -125,7 +144,10 @@ public class ReprotectDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * 反向复制开关：false代表恢复原方向，true代表反向复制。默认值是true。
+         * <p>Specifies whether to enable the reverse replication sub-feature. Valid values: true and false. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder reverseReplicate(Boolean reverseReplicate) {
             this.putQueryParameter("ReverseReplicate", reverseReplicate);

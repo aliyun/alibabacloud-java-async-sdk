@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSchedulerRulesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSchedulerRulesResponseBody</p>
  */
 public class DescribeSchedulerRulesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SchedulerRules")
-    private java.util.List < SchedulerRules> schedulerRules;
+    @com.aliyun.core.annotation.NameInMap("SchedulerRules")
+    private java.util.List<SchedulerRules> schedulerRules;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private DescribeSchedulerRulesResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
     /**
      * @return schedulerRules
      */
-    public java.util.List < SchedulerRules> getSchedulerRules() {
+    public java.util.List<SchedulerRules> getSchedulerRules() {
         return this.schedulerRules;
     }
 
@@ -58,7 +63,7 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SchedulerRules> schedulerRules; 
+        private java.util.List<SchedulerRules> schedulerRules; 
         private String totalCount; 
 
         /**
@@ -72,7 +77,7 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
         /**
          * SchedulerRules.
          */
-        public Builder schedulerRules(java.util.List < SchedulerRules> schedulerRules) {
+        public Builder schedulerRules(java.util.List<SchedulerRules> schedulerRules) {
             this.schedulerRules = schedulerRules;
             return this;
         }
@@ -91,8 +96,14 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSchedulerRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSchedulerRulesResponseBody</p>
+     */
     public static class ParamData extends TeaModel {
-        @NameInMap("CloudInstanceId")
+        @com.aliyun.core.annotation.NameInMap("CloudInstanceId")
         private String cloudInstanceId;
 
         private ParamData(Builder builder) {
@@ -132,11 +143,17 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSchedulerRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSchedulerRulesResponseBody</p>
+     */
     public static class Param extends TeaModel {
-        @NameInMap("ParamData")
+        @com.aliyun.core.annotation.NameInMap("ParamData")
         private ParamData paramData;
 
-        @NameInMap("ParamType")
+        @com.aliyun.core.annotation.NameInMap("ParamType")
         private String paramType;
 
         private Param(Builder builder) {
@@ -193,29 +210,39 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSchedulerRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSchedulerRulesResponseBody</p>
+     */
     public static class Rules extends TeaModel {
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Line")
+        private String line;
+
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RestoreDelay")
+        @com.aliyun.core.annotation.NameInMap("RestoreDelay")
         private Integer restoreDelay;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        @NameInMap("ValueType")
+        @com.aliyun.core.annotation.NameInMap("ValueType")
         private Integer valueType;
 
         private Rules(Builder builder) {
+            this.line = builder.line;
             this.priority = builder.priority;
             this.regionId = builder.regionId;
             this.restoreDelay = builder.restoreDelay;
@@ -231,6 +258,13 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
 
         public static Rules create() {
             return builder().build();
+        }
+
+        /**
+         * @return line
+         */
+        public String getLine() {
+            return this.line;
         }
 
         /**
@@ -283,6 +317,7 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String line; 
             private Integer priority; 
             private String regionId; 
             private Integer restoreDelay; 
@@ -290,6 +325,14 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
             private String type; 
             private String value; 
             private Integer valueType; 
+
+            /**
+             * Line.
+             */
+            public Builder line(String line) {
+                this.line = line;
+                return this;
+            }
 
             /**
              * Priority.
@@ -354,21 +397,27 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSchedulerRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSchedulerRulesResponseBody</p>
+     */
     public static class SchedulerRules extends TeaModel {
-        @NameInMap("Cname")
+        @com.aliyun.core.annotation.NameInMap("Cname")
         private String cname;
 
-        @NameInMap("Param")
+        @com.aliyun.core.annotation.NameInMap("Param")
         private Param param;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("RuleType")
+        @com.aliyun.core.annotation.NameInMap("RuleType")
         private String ruleType;
 
-        @NameInMap("Rules")
-        private java.util.List < Rules> rules;
+        @com.aliyun.core.annotation.NameInMap("Rules")
+        private java.util.List<Rules> rules;
 
         private SchedulerRules(Builder builder) {
             this.cname = builder.cname;
@@ -417,7 +466,7 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
         /**
          * @return rules
          */
-        public java.util.List < Rules> getRules() {
+        public java.util.List<Rules> getRules() {
             return this.rules;
         }
 
@@ -426,7 +475,7 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
             private Param param; 
             private String ruleName; 
             private String ruleType; 
-            private java.util.List < Rules> rules; 
+            private java.util.List<Rules> rules; 
 
             /**
              * Cname.
@@ -463,7 +512,7 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
             /**
              * Rules.
              */
-            public Builder rules(java.util.List < Rules> rules) {
+            public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
                 return this;
             }

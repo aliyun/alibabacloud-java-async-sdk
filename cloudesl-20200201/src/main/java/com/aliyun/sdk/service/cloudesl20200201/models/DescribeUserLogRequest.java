@@ -205,21 +205,21 @@ public class DescribeUserLogRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeUserLogRequest response) {
-            super(response);
-            this.eslBarCode = response.eslBarCode;
-            this.extraParams = response.extraParams;
-            this.fromDate = response.fromDate;
-            this.itemBarCode = response.itemBarCode;
-            this.itemShortTitle = response.itemShortTitle;
-            this.logId = response.logId;
-            this.operationStatus = response.operationStatus;
-            this.operationType = response.operationType;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.storeId = response.storeId;
-            this.toDate = response.toDate;
-            this.userId = response.userId;
+        private Builder(DescribeUserLogRequest request) {
+            super(request);
+            this.eslBarCode = request.eslBarCode;
+            this.extraParams = request.extraParams;
+            this.fromDate = request.fromDate;
+            this.itemBarCode = request.itemBarCode;
+            this.itemShortTitle = request.itemShortTitle;
+            this.logId = request.logId;
+            this.operationStatus = request.operationStatus;
+            this.operationType = request.operationType;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.storeId = request.storeId;
+            this.toDate = request.toDate;
+            this.userId = request.userId;
         } 
 
         /**

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDatasourcesResponseBody} extends {@link TeaModel}
  *
  * <p>ListDatasourcesResponseBody</p>
  */
 public class ListDatasourcesResponseBody extends TeaModel {
-    @NameInMap("Datasources")
-    private java.util.List < Datasources> datasources;
+    @com.aliyun.core.annotation.NameInMap("Datasources")
+    private java.util.List<Datasources> datasources;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListDatasourcesResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ListDatasourcesResponseBody extends TeaModel {
     /**
      * @return datasources
      */
-    public java.util.List < Datasources> getDatasources() {
+    public java.util.List<Datasources> getDatasources() {
         return this.datasources;
     }
 
@@ -57,14 +62,14 @@ public class ListDatasourcesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Datasources> datasources; 
+        private java.util.List<Datasources> datasources; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * Datasources.
          */
-        public Builder datasources(java.util.List < Datasources> datasources) {
+        public Builder datasources(java.util.List<Datasources> datasources) {
             this.datasources = datasources;
             return this;
         }
@@ -91,29 +96,35 @@ public class ListDatasourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDatasourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDatasourcesResponseBody</p>
+     */
     public static class Datasources extends TeaModel {
-        @NameInMap("Config")
+        @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
 
-        @NameInMap("DatasourceId")
+        @com.aliyun.core.annotation.NameInMap("DatasourceId")
         private String datasourceId;
 
-        @NameInMap("GmtCreateTime")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
 
-        @NameInMap("GmtModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
         private String gmtModifiedTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Uri")
+        @com.aliyun.core.annotation.NameInMap("Uri")
         private String uri;
 
-        @NameInMap("WorkspaceId")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceId")
         private String workspaceId;
 
         private Datasources(Builder builder) {

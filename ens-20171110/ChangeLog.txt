@@ -1,3 +1,42 @@
+2024-12-25 Version: 4.0.7
+- Generated java-async 2017-11-10 for Ens.
+
+2024-12-10 Version: 4.0.6
+- Generated java-async 2017-11-10 for Ens.
+
+2024-12-02 Version: 4.0.5
+- Update SDK.
+
+2024-11-27 Version: 4.0.4
+- Generated java-async 2017-11-10 for Ens.
+
+2024-11-27 Version: 4.0.3
+- Generated java-async 2017-11-10 for Ens.
+
+2024-11-14 Version: 4.0.2
+- Generated java-async 2017-11-10 for Ens.
+
+2024-10-25 Version: 4.0.1
+- Generated java-async 2017-11-10 for Ens.
+
+2024-09-13 Version: 4.0.0
+- Generated java-async 2017-11-10 for Ens.
+
+2024-07-04 Version: 3.0.3
+- Generated java-async 2017-11-10 for Ens.
+
+2024-07-04 Version: 3.0.2
+- Generated java-async 2017-11-10 for Ens.
+
+2024-07-03 Version: 3.0.1
+- Generated java-async 2017-11-10 for Ens.
+
+2024-05-22 Version: 3.0.0
+- Generated java-async 2017-11-10 for Ens.
+
+2024-02-06 Version: 2.0.0
+- Generated java-async 2017-11-10 for Ens.
+
 2023-07-20 Version: 1.0.13
 - Support clouddisk API.
 

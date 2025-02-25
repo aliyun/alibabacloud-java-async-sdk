@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FixNodePoolVulsRequest} extends {@link RequestModel}
  *
  * <p>FixNodePoolVulsRequest</p>
  */
 public class FixNodePoolVulsRequest extends Request {
-    @Path
-    @NameInMap("cluster_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("cluster_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("nodepool_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("nodepool_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodepoolId;
 
-    @Body
-    @NameInMap("auto_restart")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("auto_restart")
     private Boolean autoRestart;
 
-    @Body
-    @NameInMap("nodes")
-    private java.util.List < String > nodes;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("nodes")
+    private java.util.List<String> nodes;
 
-    @Body
-    @NameInMap("rollout_policy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("rollout_policy")
     private RolloutPolicy rolloutPolicy;
 
-    @Body
-    @NameInMap("vuls")
-    private java.util.List < String > vuls;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("vuls")
+    private java.util.List<String> vuls;
 
     private FixNodePoolVulsRequest(Builder builder) {
         super(builder);
@@ -85,7 +90,7 @@ public class FixNodePoolVulsRequest extends Request {
     /**
      * @return nodes
      */
-    public java.util.List < String > getNodes() {
+    public java.util.List<String> getNodes() {
         return this.nodes;
     }
 
@@ -99,7 +104,7 @@ public class FixNodePoolVulsRequest extends Request {
     /**
      * @return vuls
      */
-    public java.util.List < String > getVuls() {
+    public java.util.List<String> getVuls() {
         return this.vuls;
     }
 
@@ -107,9 +112,9 @@ public class FixNodePoolVulsRequest extends Request {
         private String clusterId; 
         private String nodepoolId; 
         private Boolean autoRestart; 
-        private java.util.List < String > nodes; 
+        private java.util.List<String> nodes; 
         private RolloutPolicy rolloutPolicy; 
-        private java.util.List < String > vuls; 
+        private java.util.List<String> vuls; 
 
         private Builder() {
             super();
@@ -126,7 +131,11 @@ public class FixNodePoolVulsRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cf62854ac2130470897be7a27ed1f****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -135,7 +144,11 @@ public class FixNodePoolVulsRequest extends Request {
         }
 
         /**
-         * The node pool ID.
+         * <p>The node pool ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np31da1b38983f4511b490fc62108a****</p>
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putPathParameter("nodepool_id", nodepoolId);
@@ -144,7 +157,10 @@ public class FixNodePoolVulsRequest extends Request {
         }
 
         /**
-         * auto_restart.
+         * <p>Specifies whether to allow the nodes to restart.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRestart(Boolean autoRestart) {
             this.putBodyParameter("auto_restart", autoRestart);
@@ -153,16 +169,16 @@ public class FixNodePoolVulsRequest extends Request {
         }
 
         /**
-         * The names of the nodes to be patched.
+         * <p>The names of the nodes to be patched.</p>
          */
-        public Builder nodes(java.util.List < String > nodes) {
+        public Builder nodes(java.util.List<String> nodes) {
             this.putBodyParameter("nodes", nodes);
             this.nodes = nodes;
             return this;
         }
 
         /**
-         * The batch patching policy.
+         * <p>The batch patching policy.</p>
          */
         public Builder rolloutPolicy(RolloutPolicy rolloutPolicy) {
             this.putBodyParameter("rollout_policy", rolloutPolicy);
@@ -171,9 +187,9 @@ public class FixNodePoolVulsRequest extends Request {
         }
 
         /**
-         * The list of vulnerabilities.
+         * <p>The list of vulnerabilities.</p>
          */
-        public Builder vuls(java.util.List < String > vuls) {
+        public Builder vuls(java.util.List<String> vuls) {
             this.putBodyParameter("vuls", vuls);
             this.vuls = vuls;
             return this;
@@ -186,8 +202,14 @@ public class FixNodePoolVulsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link FixNodePoolVulsRequest} extends {@link TeaModel}
+     *
+     * <p>FixNodePoolVulsRequest</p>
+     */
     public static class RolloutPolicy extends TeaModel {
-        @NameInMap("max_parallelism")
+        @com.aliyun.core.annotation.NameInMap("max_parallelism")
         private Long maxParallelism;
 
         private RolloutPolicy(Builder builder) {
@@ -213,7 +235,10 @@ public class FixNodePoolVulsRequest extends Request {
             private Long maxParallelism; 
 
             /**
-             * The maximum number of nodes that can be patched in parallel. The minimum value is 1. The maximum value equals the number of nodes in the node pool.
+             * <p>The maximum concurrency for batch patching. Minimum value: 1. The maximum value equals the number of nodes in the node pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder maxParallelism(Long maxParallelism) {
                 this.maxParallelism = maxParallelism;

@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteOpaStrategyNewRequest} extends {@link RequestModel}
  *
  * <p>DeleteOpaStrategyNewRequest</p>
  */
 public class DeleteOpaStrategyNewRequest extends Request {
-    @Query
-    @NameInMap("StrategyIds")
-    private java.util.List < Long > strategyIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyIds")
+    private java.util.List<Long> strategyIds;
 
     private DeleteOpaStrategyNewRequest(Builder builder) {
         super(builder);
@@ -37,12 +42,12 @@ public class DeleteOpaStrategyNewRequest extends Request {
     /**
      * @return strategyIds
      */
-    public java.util.List < Long > getStrategyIds() {
+    public java.util.List<Long> getStrategyIds() {
         return this.strategyIds;
     }
 
     public static final class Builder extends Request.Builder<DeleteOpaStrategyNewRequest, Builder> {
-        private java.util.List < Long > strategyIds; 
+        private java.util.List<Long> strategyIds; 
 
         private Builder() {
             super();
@@ -54,9 +59,9 @@ public class DeleteOpaStrategyNewRequest extends Request {
         } 
 
         /**
-         * The IDs of rules.
+         * <p>The IDs of rules.</p>
          */
-        public Builder strategyIds(java.util.List < Long > strategyIds) {
+        public Builder strategyIds(java.util.List<Long> strategyIds) {
             this.putQueryParameter("StrategyIds", strategyIds);
             this.strategyIds = strategyIds;
             return this;

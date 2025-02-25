@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyplsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySubsIdResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySubsIdResponseBody</p>
  */
 public class QuerySubsIdResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubsId")
+    @com.aliyun.core.annotation.NameInMap("SubsId")
     private String subsId;
 
     private QuerySubsIdResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class QuerySubsIdResponseBody extends TeaModel {
         private String subsId; 
 
         /**
-         * Code.
+         * <p>The response code. The value OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +90,10 @@ public class QuerySubsIdResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +101,10 @@ public class QuerySubsIdResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E7F99446-8191-43C0-99B5-F58A6AEAD779</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +112,10 @@ public class QuerySubsIdResponseBody extends TeaModel {
         }
 
         /**
-         * SubsId.
+         * <p>The binding ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11111111****</p>
          */
         public Builder subsId(String subsId) {
             this.subsId = subsId;

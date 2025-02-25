@@ -1,48 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDiagnoseReportIdsRequest} extends {@link RequestModel}
  *
  * <p>ListDiagnoseReportIdsRequest</p>
  */
 public class ListDiagnoseReportIdsRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("endTime")
-    @Validation(required = true, maximum = 2000000000000D, minimum = 1000000000000D)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("endTime")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 2000000000000D, minimum = 1000000000000D)
     private Long endTime;
 
-    @Query
-    @NameInMap("lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("lang")
     private String lang;
 
-    @Query
-    @NameInMap("page")
-    @Validation(maximum = 200, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page")
+    @com.aliyun.core.annotation.Validation(maximum = 200, minimum = 1)
     private Integer page;
 
-    @Query
-    @NameInMap("size")
-    @Validation(maximum = 500, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("size")
+    @com.aliyun.core.annotation.Validation(maximum = 500, minimum = 1)
     private Integer size;
 
-    @Query
-    @NameInMap("startTime")
-    @Validation(required = true, maximum = 2000000000000D, minimum = 1000000000000D)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("startTime")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 2000000000000D, minimum = 1000000000000D)
     private Long startTime;
 
-    @Query
-    @NameInMap("trigger")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("trigger")
     private String trigger;
 
     private ListDiagnoseReportIdsRequest(Builder builder) {
@@ -143,7 +143,11 @@ public class ListDiagnoseReportIdsRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-n6w1qu7ei000p****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -152,7 +156,11 @@ public class ListDiagnoseReportIdsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The value must be a UNIX timestamp.
+         * <p>The end of the time range to query. The value must be a UNIX timestamp.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1595174399999</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("endTime", endTime);
@@ -161,7 +169,10 @@ public class ListDiagnoseReportIdsRequest extends Request {
         }
 
         /**
-         * The language of the reports.
+         * <p>The language of the reports.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spanish</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("lang", lang);
@@ -170,7 +181,10 @@ public class ListDiagnoseReportIdsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Valid values: 1 to 200. Default value: 1.
+         * <p>The number of the page to return. Valid values: 1 to 200. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -179,7 +193,10 @@ public class ListDiagnoseReportIdsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 1 to 500. Default value: 10.
+         * <p>The number of entries to return on each page. Valid values: 1 to 500. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);
@@ -188,7 +205,11 @@ public class ListDiagnoseReportIdsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The value must be a UNIX timestamp.
+         * <p>The beginning of the time range to query. The value must be a UNIX timestamp.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1595088000000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("startTime", startTime);
@@ -197,7 +218,10 @@ public class ListDiagnoseReportIdsRequest extends Request {
         }
 
         /**
-         * The method that is used to trigger health diagnostics. Valid values: SYSTEM, INNER, and USER.
+         * <p>The method that is used to trigger health diagnostics. Valid values: SYSTEM, INNER, and USER.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM</p>
          */
         public Builder trigger(String trigger) {
             this.putQueryParameter("trigger", trigger);

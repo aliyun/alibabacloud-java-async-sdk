@@ -1,28 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link GetCheckPointResponse} extends {@link TeaModel}
  *
  * <p>GetCheckPointResponse</p>
  */
 public class GetCheckPointResponse extends Response {
-    @NameInMap("headers")
-    @Validation(required = true)
-    private java.util.Map < String, String > headers;
+    @com.aliyun.core.annotation.NameInMap("headers")
+    private java.util.Map<String, String> headers;
 
-    @NameInMap("statusCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    @NameInMap("body")
-    @Validation(required = true)
-    private java.util.List < GetCheckPointResponseBody> body;
+    @com.aliyun.core.annotation.NameInMap("body")
+    private java.util.List<GetCheckPointResponseBody> body;
 
     private GetCheckPointResponse(BuilderImpl builder) {
         super(builder);
@@ -43,7 +45,7 @@ public class GetCheckPointResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -57,17 +59,17 @@ public class GetCheckPointResponse extends Response {
     /**
      * @return body
      */
-    public java.util.List < GetCheckPointResponseBody> getBody() {
+    public java.util.List<GetCheckPointResponseBody> getBody() {
         return this.body;
     }
 
     public interface Builder extends Response.Builder<GetCheckPointResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(java.util.List < GetCheckPointResponseBody> body);
+        Builder body(java.util.List<GetCheckPointResponseBody> body);
 
         @Override
         GetCheckPointResponse build();
@@ -77,9 +79,9 @@ public class GetCheckPointResponse extends Response {
     private static final class BuilderImpl
             extends Response.BuilderImpl<GetCheckPointResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private java.util.List < GetCheckPointResponseBody> body; 
+        private java.util.List<GetCheckPointResponseBody> body; 
 
         private BuilderImpl() {
             super();
@@ -96,7 +98,7 @@ public class GetCheckPointResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -114,7 +116,7 @@ public class GetCheckPointResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(java.util.List < GetCheckPointResponseBody> body) {
+        public Builder body(java.util.List<GetCheckPointResponseBody> body) {
             this.body = body;
             return this;
         }
@@ -126,17 +128,23 @@ public class GetCheckPointResponse extends Response {
 
     } 
 
+    /**
+     * 
+     * {@link GetCheckPointResponse} extends {@link TeaModel}
+     *
+     * <p>GetCheckPointResponse</p>
+     */
     public static class GetCheckPointResponseBody extends TeaModel {
-        @NameInMap("shard")
+        @com.aliyun.core.annotation.NameInMap("shard")
         private Integer shard;
 
-        @NameInMap("checkpoint")
+        @com.aliyun.core.annotation.NameInMap("checkpoint")
         private String checkpoint;
 
-        @NameInMap("updateTime")
+        @com.aliyun.core.annotation.NameInMap("updateTime")
         private Long updateTime;
 
-        @NameInMap("consumer")
+        @com.aliyun.core.annotation.NameInMap("consumer")
         private String consumer;
 
         private GetCheckPointResponseBody(Builder builder) {
@@ -189,7 +197,10 @@ public class GetCheckPointResponse extends Response {
             private String consumer; 
 
             /**
-             * The shard ID.
+             * <p>The shard ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder shard(Integer shard) {
                 this.shard = shard;
@@ -197,7 +208,10 @@ public class GetCheckPointResponse extends Response {
             }
 
             /**
-             * The value of the checkpoint.
+             * <p>The value of the checkpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MTUyNDE1NTM3OTM3MzkwODQ5Ng==</p>
              */
             public Builder checkpoint(String checkpoint) {
                 this.checkpoint = checkpoint;
@@ -205,7 +219,10 @@ public class GetCheckPointResponse extends Response {
             }
 
             /**
-             * The time when the checkpoint was last updated. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the checkpoint was last updated. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1524224984800922</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -213,7 +230,10 @@ public class GetCheckPointResponse extends Response {
             }
 
             /**
-             * The consumer at the checkpoint.
+             * <p>The consumer at the checkpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>consumer_1</p>
              */
             public Builder consumer(String consumer) {
                 this.consumer = consumer;

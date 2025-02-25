@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCloudDiskAvailableResourceInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCloudDiskAvailableResourceInfoResponseBody</p>
  */
 public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SupportResources")
+    @com.aliyun.core.annotation.NameInMap("SupportResources")
     private SupportResources supportResources;
 
     private DescribeCloudDiskAvailableResourceInfoResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
         private SupportResources supportResources; 
 
         /**
-         * Id of the request
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0AE4F26E-7527-569F-A987-E3CF269A3C11</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
         }
 
         /**
-         * SupportResources.
+         * <p>The specifications of resources that you can purchase.</p>
          */
         public Builder supportResources(SupportResources supportResources) {
             this.supportResources = supportResources;
@@ -71,26 +79,32 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCloudDiskAvailableResourceInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudDiskAvailableResourceInfoResponseBody</p>
+     */
     public static class SupportResource extends TeaModel {
-        @NameInMap("CanBuyCount")
+        @com.aliyun.core.annotation.NameInMap("CanBuyCount")
         private Long canBuyCount;
 
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("DefaultDiskSize")
+        @com.aliyun.core.annotation.NameInMap("DefaultDiskSize")
         private Long defaultDiskSize;
 
-        @NameInMap("DiskMaxSize")
+        @com.aliyun.core.annotation.NameInMap("DiskMaxSize")
         private Long diskMaxSize;
 
-        @NameInMap("DiskMinSize")
+        @com.aliyun.core.annotation.NameInMap("DiskMinSize")
         private Long diskMinSize;
 
-        @NameInMap("EnsRegionId")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
 
-        @NameInMap("EnsRegionName")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionName")
         private String ensRegionName;
 
         private SupportResource(Builder builder) {
@@ -170,7 +184,10 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
             private String ensRegionName; 
 
             /**
-             * CanBuyCount.
+             * <p>The number of disks that you can purchase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder canBuyCount(Long canBuyCount) {
                 this.canBuyCount = canBuyCount;
@@ -178,7 +195,16 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
             }
 
             /**
-             * Category.
+             * <p>The type of the disk.</p>
+             * <ul>
+             * <li>cloud_efficiency: ultra disk.</li>
+             * <li>cloud_ssd: all-flash disk.</li>
+             * <li>local_hdd: local HDD.</li>
+             * <li>local_ssd: local SSD.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_ssd</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -186,7 +212,10 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
             }
 
             /**
-             * DefaultDiskSize.
+             * <p>The default size of the disk. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder defaultDiskSize(Long defaultDiskSize) {
                 this.defaultDiskSize = defaultDiskSize;
@@ -194,7 +223,10 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
             }
 
             /**
-             * DiskMaxSize.
+             * <p>The maximum size of the disk. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder diskMaxSize(Long diskMaxSize) {
                 this.diskMaxSize = diskMaxSize;
@@ -202,7 +234,10 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
             }
 
             /**
-             * DiskMinSize.
+             * <p>The minimum size of the disk size. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder diskMinSize(Long diskMinSize) {
                 this.diskMinSize = diskMinSize;
@@ -210,7 +245,10 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
             }
 
             /**
-             * EnsRegionId.
+             * <p>The ID of the edge node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing-cmcc</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -218,7 +256,10 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
             }
 
             /**
-             * EnsRegionName.
+             * <p>The name of the task node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Beijing Mobile</p>
              */
             public Builder ensRegionName(String ensRegionName) {
                 this.ensRegionName = ensRegionName;
@@ -232,9 +273,15 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCloudDiskAvailableResourceInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudDiskAvailableResourceInfoResponseBody</p>
+     */
     public static class SupportResources extends TeaModel {
-        @NameInMap("SupportResource")
-        private java.util.List < SupportResource> supportResource;
+        @com.aliyun.core.annotation.NameInMap("SupportResource")
+        private java.util.List<SupportResource> supportResource;
 
         private SupportResources(Builder builder) {
             this.supportResource = builder.supportResource;
@@ -251,17 +298,17 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
         /**
          * @return supportResource
          */
-        public java.util.List < SupportResource> getSupportResource() {
+        public java.util.List<SupportResource> getSupportResource() {
             return this.supportResource;
         }
 
         public static final class Builder {
-            private java.util.List < SupportResource> supportResource; 
+            private java.util.List<SupportResource> supportResource; 
 
             /**
              * SupportResource.
              */
-            public Builder supportResource(java.util.List < SupportResource> supportResource) {
+            public Builder supportResource(java.util.List<SupportResource> supportResource) {
                 this.supportResource = supportResource;
                 return this;
             }

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Addon} extends {@link TeaModel}
  *
  * <p>Addon</p>
  */
 public class Addon extends TeaModel {
-    @NameInMap("config")
+    @com.aliyun.core.annotation.NameInMap("config")
     private String config;
 
-    @NameInMap("disabled")
+    @com.aliyun.core.annotation.NameInMap("disabled")
     private Boolean disabled;
 
-    @NameInMap("name")
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @NameInMap("version")
+    @com.aliyun.core.annotation.NameInMap("version")
     private String version;
 
     private Addon(Builder builder) {

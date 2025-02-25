@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCenAttachedChildInstanceAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCenAttachedChildInstanceAttributeResponseBody</p>
  */
 public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaModel {
-    @NameInMap("CenId")
+    @com.aliyun.core.annotation.NameInMap("CenId")
     private String cenId;
 
-    @NameInMap("ChildInstanceAttachTime")
+    @com.aliyun.core.annotation.NameInMap("ChildInstanceAttachTime")
     private String childInstanceAttachTime;
 
-    @NameInMap("ChildInstanceAttributes")
+    @com.aliyun.core.annotation.NameInMap("ChildInstanceAttributes")
     private ChildInstanceAttributes childInstanceAttributes;
 
-    @NameInMap("ChildInstanceId")
+    @com.aliyun.core.annotation.NameInMap("ChildInstanceId")
     private String childInstanceId;
 
-    @NameInMap("ChildInstanceName")
+    @com.aliyun.core.annotation.NameInMap("ChildInstanceName")
     private String childInstanceName;
 
-    @NameInMap("ChildInstanceOwnerId")
+    @com.aliyun.core.annotation.NameInMap("ChildInstanceOwnerId")
     private Long childInstanceOwnerId;
 
-    @NameInMap("ChildInstanceRegionId")
+    @com.aliyun.core.annotation.NameInMap("ChildInstanceRegionId")
     private String childInstanceRegionId;
 
-    @NameInMap("ChildInstanceType")
+    @com.aliyun.core.annotation.NameInMap("ChildInstanceType")
     private String childInstanceType;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeCenAttachedChildInstanceAttributeResponseBody(Builder builder) {
@@ -146,7 +151,10 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         private String status; 
 
         /**
-         * The ID of the CEN instance.
+         * <p>The ID of the CEN instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-5mv960yjhja0dh****</p>
          */
         public Builder cenId(String cenId) {
             this.cenId = cenId;
@@ -154,10 +162,11 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The time when the network instance was attached to the CEN instance.
-         * <p>
+         * <p>The time when the network instance was attached to the CEN instance.</p>
+         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.</p>
          * 
-         * The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.
+         * <strong>example:</strong>
+         * <p>2018-07-30T07:53Z</p>
          */
         public Builder childInstanceAttachTime(String childInstanceAttachTime) {
             this.childInstanceAttachTime = childInstanceAttachTime;
@@ -165,7 +174,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The details about the network instance.
+         * <p>The details about the network instance.</p>
          */
         public Builder childInstanceAttributes(ChildInstanceAttributes childInstanceAttributes) {
             this.childInstanceAttributes = childInstanceAttributes;
@@ -173,7 +182,10 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The ID of the network instance.
+         * <p>The ID of the network instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2zebdboka7d7t37vo****</p>
          */
         public Builder childInstanceId(String childInstanceId) {
             this.childInstanceId = childInstanceId;
@@ -181,7 +193,10 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The name of the network instance.
+         * <p>The name of the network instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>defaultvpc</p>
          */
         public Builder childInstanceName(String childInstanceName) {
             this.childInstanceName = childInstanceName;
@@ -189,7 +204,10 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the network instance belongs.
+         * <p>The ID of the Alibaba Cloud account to which the network instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1688000000000000</p>
          */
         public Builder childInstanceOwnerId(Long childInstanceOwnerId) {
             this.childInstanceOwnerId = childInstanceOwnerId;
@@ -197,7 +215,10 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The region ID of the network instance.
+         * <p>The region ID of the network instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder childInstanceRegionId(String childInstanceRegionId) {
             this.childInstanceRegionId = childInstanceRegionId;
@@ -205,12 +226,15 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The type of the network instance. Valid values:
-         * <p>
+         * <p>The type of the network instance. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong>: VPC</li>
+         * <li><strong>VBR</strong>: VBR</li>
+         * <li><strong>CCN</strong>: CCN instance</li>
+         * </ul>
          * 
-         * *   **VPC**: VPC
-         * *   **VBR**: VBR
-         * *   **CCN**: CCN instance
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder childInstanceType(String childInstanceType) {
             this.childInstanceType = childInstanceType;
@@ -218,7 +242,10 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ADD98358-D265-4060-87CB-A2427F5A8944</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -226,12 +253,15 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * Indicates whether the network instance is attached to the CEN instance.
-         * <p>
+         * <p>Indicates whether the network instance is attached to the CEN instance.</p>
+         * <ul>
+         * <li><strong>Attaching</strong>: The network instance is being attached to the CEN instance.</li>
+         * <li><strong>Attached</strong>: The network instance is attached to the CEN instance.</li>
+         * <li><strong>Detaching</strong>: The network instance is being detached from the CEN instance.</li>
+         * </ul>
          * 
-         * *   **Attaching**: The network instance is being attached to the CEN instance.
-         * *   **Attached**: The network instance is attached to the CEN instance.
-         * *   **Detaching**: The network instance is being detached from the CEN instance.
+         * <strong>example:</strong>
+         * <p>Attached</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -244,11 +274,17 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCenAttachedChildInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenAttachedChildInstanceAttributeResponseBody</p>
+     */
     public static class Ipv6CidrBlock extends TeaModel {
-        @NameInMap("Ipv6CidrBlock")
+        @com.aliyun.core.annotation.NameInMap("Ipv6CidrBlock")
         private String ipv6CidrBlock;
 
-        @NameInMap("Ipv6Isp")
+        @com.aliyun.core.annotation.NameInMap("Ipv6Isp")
         private String ipv6Isp;
 
         private Ipv6CidrBlock(Builder builder) {
@@ -283,7 +319,10 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
             private String ipv6Isp; 
 
             /**
-             * The IPv6 CIDR block of the VPC.
+             * <p>The IPv6 CIDR block of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2408:XXXX:0:6a::/56</p>
              */
             public Builder ipv6CidrBlock(String ipv6CidrBlock) {
                 this.ipv6CidrBlock = ipv6CidrBlock;
@@ -291,15 +330,19 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
             }
 
             /**
-             * The type of the IPv6 CIDR block of the VPC. Valid values:
-             * <p>
+             * <p>The type of the IPv6 CIDR block of the VPC. Valid values:</p>
+             * <ul>
+             * <li>BGP (default): Alibaba Cloud Border Gateway Protocol (BGP) IPv6</li>
+             * <li>ChinaMobile: China Mobile (single line)</li>
+             * <li>ChinaUnicom: China Unicom (single line)</li>
+             * <li>ChinaTelecom: China Telecom (single line)</li>
+             * </ul>
+             * <blockquote>
+             * <p> If you are on the whitelist of single-line bandwidth, you can set this parameter to ChinaTelecom, ChinaUnicom, or ChinaMobile.</p>
+             * </blockquote>
              * 
-             * *   BGP (default): Alibaba Cloud Border Gateway Protocol (BGP) IPv6
-             * *   ChinaMobile: China Mobile (single line)
-             * *   ChinaUnicom: China Unicom (single line)
-             * *   ChinaTelecom: China Telecom (single line)
-             * 
-             * >  If you are on the whitelist of single-line bandwidth, you can set this parameter to ChinaTelecom, ChinaUnicom, or ChinaMobile.
+             * <strong>example:</strong>
+             * <p>BGP</p>
              */
             public Builder ipv6Isp(String ipv6Isp) {
                 this.ipv6Isp = ipv6Isp;
@@ -313,9 +356,15 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCenAttachedChildInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenAttachedChildInstanceAttributeResponseBody</p>
+     */
     public static class Ipv6CidrBlocks extends TeaModel {
-        @NameInMap("ipv6CidrBlock")
-        private java.util.List < Ipv6CidrBlock> ipv6CidrBlock;
+        @com.aliyun.core.annotation.NameInMap("ipv6CidrBlock")
+        private java.util.List<Ipv6CidrBlock> ipv6CidrBlock;
 
         private Ipv6CidrBlocks(Builder builder) {
             this.ipv6CidrBlock = builder.ipv6CidrBlock;
@@ -332,17 +381,17 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         /**
          * @return ipv6CidrBlock
          */
-        public java.util.List < Ipv6CidrBlock> getIpv6CidrBlock() {
+        public java.util.List<Ipv6CidrBlock> getIpv6CidrBlock() {
             return this.ipv6CidrBlock;
         }
 
         public static final class Builder {
-            private java.util.List < Ipv6CidrBlock> ipv6CidrBlock; 
+            private java.util.List<Ipv6CidrBlock> ipv6CidrBlock; 
 
             /**
              * ipv6CidrBlock.
              */
-            public Builder ipv6CidrBlock(java.util.List < Ipv6CidrBlock> ipv6CidrBlock) {
+            public Builder ipv6CidrBlock(java.util.List<Ipv6CidrBlock> ipv6CidrBlock) {
                 this.ipv6CidrBlock = ipv6CidrBlock;
                 return this;
             }
@@ -354,9 +403,15 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCenAttachedChildInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenAttachedChildInstanceAttributeResponseBody</p>
+     */
     public static class SecondaryCidrBlocks extends TeaModel {
-        @NameInMap("secondaryCidrBlock")
-        private java.util.List < String > secondaryCidrBlock;
+        @com.aliyun.core.annotation.NameInMap("secondaryCidrBlock")
+        private java.util.List<String> secondaryCidrBlock;
 
         private SecondaryCidrBlocks(Builder builder) {
             this.secondaryCidrBlock = builder.secondaryCidrBlock;
@@ -373,17 +428,17 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         /**
          * @return secondaryCidrBlock
          */
-        public java.util.List < String > getSecondaryCidrBlock() {
+        public java.util.List<String> getSecondaryCidrBlock() {
             return this.secondaryCidrBlock;
         }
 
         public static final class Builder {
-            private java.util.List < String > secondaryCidrBlock; 
+            private java.util.List<String> secondaryCidrBlock; 
 
             /**
              * secondaryCidrBlock.
              */
-            public Builder secondaryCidrBlock(java.util.List < String > secondaryCidrBlock) {
+            public Builder secondaryCidrBlock(java.util.List<String> secondaryCidrBlock) {
                 this.secondaryCidrBlock = secondaryCidrBlock;
                 return this;
             }
@@ -395,17 +450,23 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCenAttachedChildInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenAttachedChildInstanceAttributeResponseBody</p>
+     */
     public static class ChildInstanceAttributes extends TeaModel {
-        @NameInMap("CidrBlock")
+        @com.aliyun.core.annotation.NameInMap("CidrBlock")
         private String cidrBlock;
 
-        @NameInMap("Ipv6CidrBlock")
+        @com.aliyun.core.annotation.NameInMap("Ipv6CidrBlock")
         private String ipv6CidrBlock;
 
-        @NameInMap("Ipv6CidrBlocks")
+        @com.aliyun.core.annotation.NameInMap("Ipv6CidrBlocks")
         private Ipv6CidrBlocks ipv6CidrBlocks;
 
-        @NameInMap("SecondaryCidrBlocks")
+        @com.aliyun.core.annotation.NameInMap("SecondaryCidrBlocks")
         private SecondaryCidrBlocks secondaryCidrBlocks;
 
         private ChildInstanceAttributes(Builder builder) {
@@ -458,7 +519,10 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
             private SecondaryCidrBlocks secondaryCidrBlocks; 
 
             /**
-             * The IPv4 CIDR block of the VPC.
+             * <p>The IPv4 CIDR block of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.0/16</p>
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -466,7 +530,10 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
             }
 
             /**
-             * The IPv6 CIDR block of the VPC.
+             * <p>The IPv6 CIDR block of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2408:XXXX:0:a600::/56</p>
              */
             public Builder ipv6CidrBlock(String ipv6CidrBlock) {
                 this.ipv6CidrBlock = ipv6CidrBlock;
@@ -474,7 +541,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
             }
 
             /**
-             * The IPv6 CIDR blocks of the VPC.
+             * <p>The IPv6 CIDR blocks of the VPC.</p>
              */
             public Builder ipv6CidrBlocks(Ipv6CidrBlocks ipv6CidrBlocks) {
                 this.ipv6CidrBlocks = ipv6CidrBlocks;
@@ -482,7 +549,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
             }
 
             /**
-             * The information about the VPC secondary CIDR block.
+             * <p>The information about the VPC secondary CIDR block.</p>
              */
             public Builder secondaryCidrBlocks(SecondaryCidrBlocks secondaryCidrBlocks) {
                 this.secondaryCidrBlocks = secondaryCidrBlocks;

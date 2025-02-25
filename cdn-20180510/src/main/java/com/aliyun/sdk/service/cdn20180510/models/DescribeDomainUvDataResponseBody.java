@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainUvDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainUvDataResponseBody</p>
  */
 public class DescribeDomainUvDataResponseBody extends TeaModel {
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("UvDataInterval")
+    @com.aliyun.core.annotation.NameInMap("UvDataInterval")
     private UvDataInterval uvDataInterval;
 
     private DescribeDomainUvDataResponseBody(Builder builder) {
@@ -98,7 +98,10 @@ public class DescribeDomainUvDataResponseBody extends TeaModel {
         private UvDataInterval uvDataInterval; 
 
         /**
-         * The time interval. Unit: seconds.
+         * <p>The time interval. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -106,7 +109,10 @@ public class DescribeDomainUvDataResponseBody extends TeaModel {
         }
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -114,7 +120,10 @@ public class DescribeDomainUvDataResponseBody extends TeaModel {
         }
 
         /**
-         * The end of the time range that was queried.
+         * <p>The end of the time range that was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-11-29T04:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -122,7 +131,10 @@ public class DescribeDomainUvDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E9D3257A-1B7C-414C-90C1-8D07AC47BCAC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +142,10 @@ public class DescribeDomainUvDataResponseBody extends TeaModel {
         }
 
         /**
-         * The beginning of the time range that was queried.
+         * <p>The beginning of the time range that was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-11-29T00:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -138,7 +153,7 @@ public class DescribeDomainUvDataResponseBody extends TeaModel {
         }
 
         /**
-         * The number of UVs at each interval.
+         * <p>The number of UVs at each interval.</p>
          */
         public Builder uvDataInterval(UvDataInterval uvDataInterval) {
             this.uvDataInterval = uvDataInterval;
@@ -151,11 +166,17 @@ public class DescribeDomainUvDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainUvDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainUvDataResponseBody</p>
+     */
     public static class UsageData extends TeaModel {
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private UsageData(Builder builder) {
@@ -190,7 +211,10 @@ public class DescribeDomainUvDataResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The timestamp of the returned data.
+             * <p>The timestamp of the returned data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-11-29T00:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -198,7 +222,10 @@ public class DescribeDomainUvDataResponseBody extends TeaModel {
             }
 
             /**
-             * The number of UVs.
+             * <p>The number of UVs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>318</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -212,8 +239,14 @@ public class DescribeDomainUvDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainUvDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainUvDataResponseBody</p>
+     */
     public static class UvDataInterval extends TeaModel {
-        @NameInMap("UsageData")
+        @com.aliyun.core.annotation.NameInMap("UsageData")
         private java.util.List < UsageData> usageData;
 
         private UvDataInterval(Builder builder) {

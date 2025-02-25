@@ -1,67 +1,75 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MachineGroup} extends {@link TeaModel}
  *
  * <p>MachineGroup</p>
  */
 public class MachineGroup extends TeaModel {
-    @NameInMap("CreatorID")
+    @com.aliyun.core.annotation.NameInMap("CreatorID")
     private String creatorID;
 
-    @NameInMap("DefaultDriver")
+    @com.aliyun.core.annotation.NameInMap("DefaultDriver")
     private String defaultDriver;
 
-    @NameInMap("EcsCount")
+    @com.aliyun.core.annotation.NameInMap("EcsCount")
     private Long ecsCount;
 
-    @NameInMap("EcsSpec")
+    @com.aliyun.core.annotation.NameInMap("EcsSpec")
     private String ecsSpec;
 
-    @NameInMap("GmtCreatedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreatedTime")
     private String gmtCreatedTime;
 
-    @NameInMap("GmtExpiredTime")
+    @com.aliyun.core.annotation.NameInMap("GmtExpiredTime")
     private String gmtExpiredTime;
 
-    @NameInMap("GmtModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
     private String gmtModifiedTime;
 
-    @NameInMap("GmtStartedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtStartedTime")
     private String gmtStartedTime;
 
-    @NameInMap("MachineGroupID")
+    @com.aliyun.core.annotation.NameInMap("MachineGroupID")
     private String machineGroupID;
 
-    @NameInMap("PaymentDuration")
+    @com.aliyun.core.annotation.NameInMap("OrderInstanceId")
+    private String orderInstanceId;
+
+    @com.aliyun.core.annotation.NameInMap("PaymentDuration")
     private String paymentDuration;
 
-    @NameInMap("PaymentDurationUnit")
+    @com.aliyun.core.annotation.NameInMap("PaymentDurationUnit")
     private String paymentDurationUnit;
 
-    @NameInMap("PaymentType")
+    @com.aliyun.core.annotation.NameInMap("PaymentType")
     private String paymentType;
 
-    @NameInMap("ReasonCode")
+    @com.aliyun.core.annotation.NameInMap("ReasonCode")
     private String reasonCode;
 
-    @NameInMap("ReasonMessage")
+    @com.aliyun.core.annotation.NameInMap("ReasonMessage")
     private String reasonMessage;
 
-    @NameInMap("ResourceGroupID")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupID")
     private String resourceGroupID;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("SupportedDrivers")
-    private java.util.List < String > supportedDrivers;
+    @com.aliyun.core.annotation.NameInMap("SupportedDrivers")
+    private java.util.List<String> supportedDrivers;
 
     private MachineGroup(Builder builder) {
         this.creatorID = builder.creatorID;
@@ -73,6 +81,7 @@ public class MachineGroup extends TeaModel {
         this.gmtModifiedTime = builder.gmtModifiedTime;
         this.gmtStartedTime = builder.gmtStartedTime;
         this.machineGroupID = builder.machineGroupID;
+        this.orderInstanceId = builder.orderInstanceId;
         this.paymentDuration = builder.paymentDuration;
         this.paymentDurationUnit = builder.paymentDurationUnit;
         this.paymentType = builder.paymentType;
@@ -155,6 +164,13 @@ public class MachineGroup extends TeaModel {
     }
 
     /**
+     * @return orderInstanceId
+     */
+    public String getOrderInstanceId() {
+        return this.orderInstanceId;
+    }
+
+    /**
      * @return paymentDuration
      */
     public String getPaymentDuration() {
@@ -206,7 +222,7 @@ public class MachineGroup extends TeaModel {
     /**
      * @return supportedDrivers
      */
-    public java.util.List < String > getSupportedDrivers() {
+    public java.util.List<String> getSupportedDrivers() {
         return this.supportedDrivers;
     }
 
@@ -220,6 +236,7 @@ public class MachineGroup extends TeaModel {
         private String gmtModifiedTime; 
         private String gmtStartedTime; 
         private String machineGroupID; 
+        private String orderInstanceId; 
         private String paymentDuration; 
         private String paymentDurationUnit; 
         private String paymentType; 
@@ -227,7 +244,7 @@ public class MachineGroup extends TeaModel {
         private String reasonMessage; 
         private String resourceGroupID; 
         private String status; 
-        private java.util.List < String > supportedDrivers; 
+        private java.util.List<String> supportedDrivers; 
 
         /**
          * CreatorID.
@@ -302,6 +319,14 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
+         * OrderInstanceId.
+         */
+        public Builder orderInstanceId(String orderInstanceId) {
+            this.orderInstanceId = orderInstanceId;
+            return this;
+        }
+
+        /**
          * PaymentDuration.
          */
         public Builder paymentDuration(String paymentDuration) {
@@ -360,7 +385,7 @@ public class MachineGroup extends TeaModel {
         /**
          * SupportedDrivers.
          */
-        public Builder supportedDrivers(java.util.List < String > supportedDrivers) {
+        public Builder supportedDrivers(java.util.List<String> supportedDrivers) {
             this.supportedDrivers = supportedDrivers;
             return this;
         }

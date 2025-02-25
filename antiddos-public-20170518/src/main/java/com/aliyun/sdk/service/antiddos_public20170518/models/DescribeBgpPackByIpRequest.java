@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.antiddos_public20170518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBgpPackByIpRequest</p>
  */
 public class DescribeBgpPackByIpRequest extends Request {
-    @Query
-    @NameInMap("DdosRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DdosRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ddosRegionId;
 
-    @Query
-    @NameInMap("Ip")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ip")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ip;
 
     private DescribeBgpPackByIpRequest(Builder builder) {
@@ -70,7 +69,10 @@ public class DescribeBgpPackByIpRequest extends Request {
         } 
 
         /**
-         * DdosRegionId.
+         * The region ID of the asset to query.
+         * <p>
+         * 
+         * > You can call the [DescribeRegions](~~353250~~) operation to query the most recent region list.
          */
         public Builder ddosRegionId(String ddosRegionId) {
             this.putQueryParameter("DdosRegionId", ddosRegionId);
@@ -79,7 +81,10 @@ public class DescribeBgpPackByIpRequest extends Request {
         }
 
         /**
-         * Ip.
+         * The IP address of the asset to query.
+         * <p>
+         * 
+         * > You can call the [DescribeInstance](~~354191~~) operation to query the IDs of ECS instances, SLB instances, and EIPs within the current Alibaba Cloud account.
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);

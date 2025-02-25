@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link Shard} extends {@link TeaModel}
  *
  * <p>Shard</p>
  */
 public class Shard extends TeaModel {
-    @NameInMap("createTime")
+    @com.aliyun.core.annotation.NameInMap("createTime")
     private Integer createTime;
 
-    @NameInMap("exclusiveEndKey")
+    @com.aliyun.core.annotation.NameInMap("exclusiveEndKey")
     private String exclusiveEndKey;
 
-    @NameInMap("inclusiveBeginKey")
+    @com.aliyun.core.annotation.NameInMap("inclusiveBeginKey")
     private String inclusiveBeginKey;
 
-    @NameInMap("shardID")
+    @com.aliyun.core.annotation.NameInMap("shardID")
     private Integer shardID;
 
-    @NameInMap("status")
+    @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
     private Shard(Builder builder) {

@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePopApiItemListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePopApiItemListResponseBody</p>
  */
 public class DescribePopApiItemListResponseBody extends TeaModel {
-    @NameInMap("Names")
+    @com.aliyun.core.annotation.NameInMap("Names")
     private java.util.List < String > names;
 
-    @NameInMap("PopCode")
+    @com.aliyun.core.annotation.NameInMap("PopCode")
     private String popCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
 
-    @NameInMap("Version")
+    @com.aliyun.core.annotation.NameInMap("Version")
     private String version;
 
     private DescribePopApiItemListResponseBody(Builder builder) {
@@ -86,7 +86,7 @@ public class DescribePopApiItemListResponseBody extends TeaModel {
         private String version; 
 
         /**
-         * Names.
+         * <p>The names of API operations.</p>
          */
         public Builder names(java.util.List < String > names) {
             this.names = names;
@@ -94,7 +94,10 @@ public class DescribePopApiItemListResponseBody extends TeaModel {
         }
 
         /**
-         * PopCode.
+         * <p>The POP code of the Alibaba Cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sas</p>
          */
         public Builder popCode(String popCode) {
             this.popCode = popCode;
@@ -102,7 +105,10 @@ public class DescribePopApiItemListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6336D603-7028-52DE-AD88-E34AA5248355</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +116,10 @@ public class DescribePopApiItemListResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -118,7 +127,10 @@ public class DescribePopApiItemListResponseBody extends TeaModel {
         }
 
         /**
-         * Version.
+         * <p>The version number of the API for the Alibaba Cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-12-03</p>
          */
         public Builder version(String version) {
             this.version = version;

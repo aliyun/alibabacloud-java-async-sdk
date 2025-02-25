@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateComponentIndexRequest} extends {@link RequestModel}
  *
  * <p>CreateComponentIndexRequest</p>
  */
 public class CreateComponentIndexRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("_meta")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("_meta")
     private java.util.Map < String, ? > meta;
 
-    @Body
-    @NameInMap("template")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("template")
     private Template template;
 
     private CreateComponentIndexRequest(Builder builder) {
@@ -98,7 +98,10 @@ public class CreateComponentIndexRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-tl329rbpc0001****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -107,7 +110,10 @@ public class CreateComponentIndexRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>template</p>
          */
         public Builder name(String name) {
             this.putPathParameter("name", name);
@@ -140,14 +146,20 @@ public class CreateComponentIndexRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateComponentIndexRequest} extends {@link TeaModel}
+     *
+     * <p>CreateComponentIndexRequest</p>
+     */
     public static class Template extends TeaModel {
-        @NameInMap("aliases")
+        @com.aliyun.core.annotation.NameInMap("aliases")
         private java.util.Map < String, ? > aliases;
 
-        @NameInMap("mappings")
+        @com.aliyun.core.annotation.NameInMap("mappings")
         private java.util.Map < String, ? > mappings;
 
-        @NameInMap("settings")
+        @com.aliyun.core.annotation.NameInMap("settings")
         private java.util.Map < String, ? > settings;
 
         private Template(Builder builder) {

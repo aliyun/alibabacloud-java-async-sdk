@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLiveTranscodeJobsResponseBody} extends {@link TeaModel}
  *
  * <p>ListLiveTranscodeJobsResponseBody</p>
  */
 public class ListLiveTranscodeJobsResponseBody extends TeaModel {
-    @NameInMap("JobList")
-    private java.util.List < JobList> jobList;
+    @com.aliyun.core.annotation.NameInMap("JobList")
+    private java.util.List<JobList> jobList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListLiveTranscodeJobsResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
     /**
      * @return jobList
      */
-    public java.util.List < JobList> getJobList() {
+    public java.util.List<JobList> getJobList() {
         return this.jobList;
     }
 
@@ -57,20 +62,23 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < JobList> jobList; 
+        private java.util.List<JobList> jobList; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * JobList.
+         * <p>The list of transcoding jobs.</p>
          */
-        public Builder jobList(java.util.List < JobList> jobList) {
+        public Builder jobList(java.util.List<JobList> jobList) {
             this.jobList = jobList;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -91,11 +102,17 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListLiveTranscodeJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLiveTranscodeJobsResponseBody</p>
+     */
     public static class StreamInfos extends TeaModel {
-        @NameInMap("OutputUrl")
+        @com.aliyun.core.annotation.NameInMap("OutputUrl")
         private String outputUrl;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private StreamInfos(Builder builder) {
@@ -130,7 +147,10 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * OutputUrl.
+             * <p>The URL of the output stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp://mydomain/app/mytranscode1</p>
              */
             public Builder outputUrl(String outputUrl) {
                 this.outputUrl = outputUrl;
@@ -138,7 +158,10 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the output stream protocol. Only the RTMP protocol is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -152,9 +175,15 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLiveTranscodeJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLiveTranscodeJobsResponseBody</p>
+     */
     public static class OutputStream extends TeaModel {
-        @NameInMap("StreamInfos")
-        private java.util.List < StreamInfos> streamInfos;
+        @com.aliyun.core.annotation.NameInMap("StreamInfos")
+        private java.util.List<StreamInfos> streamInfos;
 
         private OutputStream(Builder builder) {
             this.streamInfos = builder.streamInfos;
@@ -171,17 +200,17 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
         /**
          * @return streamInfos
          */
-        public java.util.List < StreamInfos> getStreamInfos() {
+        public java.util.List<StreamInfos> getStreamInfos() {
             return this.streamInfos;
         }
 
         public static final class Builder {
-            private java.util.List < StreamInfos> streamInfos; 
+            private java.util.List<StreamInfos> streamInfos; 
 
             /**
-             * StreamInfos.
+             * <p>The list of stream URLs.</p>
              */
-            public Builder streamInfos(java.util.List < StreamInfos> streamInfos) {
+            public Builder streamInfos(java.util.List<StreamInfos> streamInfos) {
                 this.streamInfos = streamInfos;
                 return this;
             }
@@ -193,11 +222,17 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLiveTranscodeJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLiveTranscodeJobsResponseBody</p>
+     */
     public static class StreamInput extends TeaModel {
-        @NameInMap("InputUrl")
+        @com.aliyun.core.annotation.NameInMap("InputUrl")
         private String inputUrl;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private StreamInput(Builder builder) {
@@ -232,7 +267,10 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * InputUrl.
+             * <p>The URL of the input stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp://mydomain/app/stream1</p>
              */
             public Builder inputUrl(String inputUrl) {
                 this.inputUrl = inputUrl;
@@ -240,7 +278,10 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the input stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -254,35 +295,41 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLiveTranscodeJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLiveTranscodeJobsResponseBody</p>
+     */
     public static class JobList extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OutputStream")
+        @com.aliyun.core.annotation.NameInMap("OutputStream")
         private OutputStream outputStream;
 
-        @NameInMap("StartMode")
+        @com.aliyun.core.annotation.NameInMap("StartMode")
         private Integer startMode;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("StreamInput")
+        @com.aliyun.core.annotation.NameInMap("StreamInput")
         private StreamInput streamInput;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
-        @NameInMap("TemplateType")
+        @com.aliyun.core.annotation.NameInMap("TemplateType")
         private String templateType;
 
         private JobList(Builder builder) {
@@ -389,7 +436,10 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             private String templateType; 
 
             /**
-             * CreateTime.
+             * <p>The time when the job was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-20T02:48:58Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -397,7 +447,10 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>a046-263c-3560-978a-fb287782</strong></strong></p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -405,7 +458,10 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the transcoding job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mytask</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -413,7 +469,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * OutputStream.
+             * <p>The information about the output stream.</p>
              */
             public Builder outputStream(OutputStream outputStream) {
                 this.outputStream = outputStream;
@@ -421,7 +477,10 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * StartMode.
+             * <p>The start mode of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder startMode(Integer startMode) {
                 this.startMode = startMode;
@@ -429,7 +488,10 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The state of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -437,7 +499,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * StreamInput.
+             * <p>The information about the input stream.</p>
              */
             public Builder streamInput(StreamInput streamInput) {
                 this.streamInput = streamInput;
@@ -445,7 +507,10 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The ID of the transcoding template used by the transcoding job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>a046-263c-3560-978a-fb287666</strong></strong></p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -453,7 +518,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * <p>The template name.</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -461,7 +526,10 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateType.
+             * <p>The type of the transcoding template used by the transcoding job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;

@@ -1,63 +1,68 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGtmAccessStrategyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeGtmAccessStrategyResponseBody</p>
  */
 public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
-    @NameInMap("AccessMode")
+    @com.aliyun.core.annotation.NameInMap("AccessMode")
     private String accessMode;
 
-    @NameInMap("AccessStatus")
+    @com.aliyun.core.annotation.NameInMap("AccessStatus")
     private String accessStatus;
 
-    @NameInMap("DefaultAddrPoolMonitorStatus")
+    @com.aliyun.core.annotation.NameInMap("DefaultAddrPoolMonitorStatus")
     private String defaultAddrPoolMonitorStatus;
 
-    @NameInMap("DefaultAddrPoolName")
+    @com.aliyun.core.annotation.NameInMap("DefaultAddrPoolName")
     private String defaultAddrPoolName;
 
-    @NameInMap("DefaultAddrPoolStatus")
+    @com.aliyun.core.annotation.NameInMap("DefaultAddrPoolStatus")
     private String defaultAddrPoolStatus;
 
-    @NameInMap("DefultAddrPoolId")
+    @com.aliyun.core.annotation.NameInMap("DefultAddrPoolId")
     private String defultAddrPoolId;
 
-    @NameInMap("FailoverAddrPoolId")
+    @com.aliyun.core.annotation.NameInMap("FailoverAddrPoolId")
     private String failoverAddrPoolId;
 
-    @NameInMap("FailoverAddrPoolMonitorStatus")
+    @com.aliyun.core.annotation.NameInMap("FailoverAddrPoolMonitorStatus")
     private String failoverAddrPoolMonitorStatus;
 
-    @NameInMap("FailoverAddrPoolName")
+    @com.aliyun.core.annotation.NameInMap("FailoverAddrPoolName")
     private String failoverAddrPoolName;
 
-    @NameInMap("FailoverAddrPoolStatus")
+    @com.aliyun.core.annotation.NameInMap("FailoverAddrPoolStatus")
     private String failoverAddrPoolStatus;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("Lines")
+    @com.aliyun.core.annotation.NameInMap("Lines")
     private Lines lines;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StrategyId")
+    @com.aliyun.core.annotation.NameInMap("StrategyId")
     private String strategyId;
 
-    @NameInMap("StrategyMode")
+    @com.aliyun.core.annotation.NameInMap("StrategyMode")
     private String strategyMode;
 
-    @NameInMap("StrategyName")
+    @com.aliyun.core.annotation.NameInMap("StrategyName")
     private String strategyName;
 
     private DescribeGtmAccessStrategyResponseBody(Builder builder) {
@@ -218,7 +223,10 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
         private String strategyName; 
 
         /**
-         * The access policy.
+         * <p>The access policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AUTO</p>
          */
         public Builder accessMode(String accessMode) {
             this.accessMode = accessMode;
@@ -226,11 +234,14 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The access status. Valid values:
-         * <p>
+         * <p>The access status. Valid values:</p>
+         * <ul>
+         * <li><strong>DEFAULT</strong>: Indicates normal when the default address pool is accessed.</li>
+         * <li><strong>FAILOVER</strong>: Indicates an exception when a failover address pool is accessed.</li>
+         * </ul>
          * 
-         * *   **DEFAULT**: Indicates normal when the default address pool is accessed.
-         * *   **FAILOVER**: Indicates an exception when a failover address pool is accessed.
+         * <strong>example:</strong>
+         * <p>DEFAULT</p>
          */
         public Builder accessStatus(String accessStatus) {
             this.accessStatus = accessStatus;
@@ -238,7 +249,10 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether health check is enabled for the default address pool.
+         * <p>Indicates whether health check is enabled for the default address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OPEN</p>
          */
         public Builder defaultAddrPoolMonitorStatus(String defaultAddrPoolMonitorStatus) {
             this.defaultAddrPoolMonitorStatus = defaultAddrPoolMonitorStatus;
@@ -246,7 +260,7 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the default address pool.
+         * <p>The name of the default address pool.</p>
          */
         public Builder defaultAddrPoolName(String defaultAddrPoolName) {
             this.defaultAddrPoolName = defaultAddrPoolName;
@@ -254,7 +268,10 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The availability status of the default address pool.
+         * <p>The availability status of the default address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AVAILABLE</p>
          */
         public Builder defaultAddrPoolStatus(String defaultAddrPoolStatus) {
             this.defaultAddrPoolStatus = defaultAddrPoolStatus;
@@ -262,7 +279,10 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the default address pool.
+         * <p>The ID of the default address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hra0i1</p>
          */
         public Builder defultAddrPoolId(String defultAddrPoolId) {
             this.defultAddrPoolId = defultAddrPoolId;
@@ -270,7 +290,10 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the failover address pool.
+         * <p>The ID of the failover address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hra0i2</p>
          */
         public Builder failoverAddrPoolId(String failoverAddrPoolId) {
             this.failoverAddrPoolId = failoverAddrPoolId;
@@ -278,7 +301,10 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether health check is enabled for the failover address pool.
+         * <p>Indicates whether health check is enabled for the failover address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OPEN</p>
          */
         public Builder failoverAddrPoolMonitorStatus(String failoverAddrPoolMonitorStatus) {
             this.failoverAddrPoolMonitorStatus = failoverAddrPoolMonitorStatus;
@@ -286,7 +312,7 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the failover address pool.
+         * <p>The name of the failover address pool.</p>
          */
         public Builder failoverAddrPoolName(String failoverAddrPoolName) {
             this.failoverAddrPoolName = failoverAddrPoolName;
@@ -294,7 +320,10 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The availability status of the failover address pool.
+         * <p>The availability status of the failover address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AVAILABLE</p>
          */
         public Builder failoverAddrPoolStatus(String failoverAddrPoolStatus) {
             this.failoverAddrPoolStatus = failoverAddrPoolStatus;
@@ -302,7 +331,10 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the GTM instance whose access policy details you want to query.
+         * <p>The ID of the GTM instance whose access policy details you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance1</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -310,7 +342,7 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The returned lines of access regions.
+         * <p>The returned lines of access regions.</p>
          */
         public Builder lines(Lines lines) {
             this.lines = lines;
@@ -318,7 +350,10 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BA1608CA-834C-4E63-8682-8AF0B11ED72D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -326,7 +361,10 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the access policy queried.
+         * <p>The ID of the access policy queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hra0hs</p>
          */
         public Builder strategyId(String strategyId) {
             this.strategyId = strategyId;
@@ -334,7 +372,10 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The mode of traffic scheduling.
+         * <p>The mode of traffic scheduling.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELF_DEFINED</p>
          */
         public Builder strategyMode(String strategyMode) {
             this.strategyMode = strategyMode;
@@ -342,7 +383,7 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the access policy queried.
+         * <p>The name of the access policy queried.</p>
          */
         public Builder strategyName(String strategyName) {
             this.strategyName = strategyName;
@@ -355,17 +396,23 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeGtmAccessStrategyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGtmAccessStrategyResponseBody</p>
+     */
     public static class Line extends TeaModel {
-        @NameInMap("GroupCode")
+        @com.aliyun.core.annotation.NameInMap("GroupCode")
         private String groupCode;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("LineCode")
+        @com.aliyun.core.annotation.NameInMap("LineCode")
         private String lineCode;
 
-        @NameInMap("LineName")
+        @com.aliyun.core.annotation.NameInMap("LineName")
         private String lineName;
 
         private Line(Builder builder) {
@@ -418,7 +465,10 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
             private String lineName; 
 
             /**
-             * The code of the access region group.
+             * <p>The code of the access region group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEFAULT</p>
              */
             public Builder groupCode(String groupCode) {
                 this.groupCode = groupCode;
@@ -426,7 +476,10 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the access region group.
+             * <p>The name of the access region group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Global</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -434,7 +487,10 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The code for the line of the access region.
+             * <p>The code for the line of the access region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder lineCode(String lineCode) {
                 this.lineCode = lineCode;
@@ -442,7 +498,10 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The name for the line of the access region.
+             * <p>The name for the line of the access region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Global</p>
              */
             public Builder lineName(String lineName) {
                 this.lineName = lineName;
@@ -456,9 +515,15 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGtmAccessStrategyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGtmAccessStrategyResponseBody</p>
+     */
     public static class Lines extends TeaModel {
-        @NameInMap("Line")
-        private java.util.List < Line> line;
+        @com.aliyun.core.annotation.NameInMap("Line")
+        private java.util.List<Line> line;
 
         private Lines(Builder builder) {
             this.line = builder.line;
@@ -475,17 +540,17 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
         /**
          * @return line
          */
-        public java.util.List < Line> getLine() {
+        public java.util.List<Line> getLine() {
             return this.line;
         }
 
         public static final class Builder {
-            private java.util.List < Line> line; 
+            private java.util.List<Line> line; 
 
             /**
              * Line.
              */
-            public Builder line(java.util.List < Line> line) {
+            public Builder line(java.util.List<Line> line) {
                 this.line = line;
                 return this;
             }

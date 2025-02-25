@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainRealTimeByteHitRateDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainRealTimeByteHitRateDataResponseBody</p>
  */
 public class DescribeDomainRealTimeByteHitRateDataResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDomainRealTimeByteHitRateDataResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeDomainRealTimeByteHitRateDataResponseBody extends TeaModel 
         private String requestId; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,10 @@ public class DescribeDomainRealTimeByteHitRateDataResponseBody extends TeaModel 
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70A26B11-3673-479C-AEA8-E03FC5D3496D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +74,17 @@ public class DescribeDomainRealTimeByteHitRateDataResponseBody extends TeaModel 
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainRealTimeByteHitRateDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainRealTimeByteHitRateDataResponseBody</p>
+     */
     public static class ByteHitRateDataModel extends TeaModel {
-        @NameInMap("ByteHitRate")
+        @com.aliyun.core.annotation.NameInMap("ByteHitRate")
         private Float byteHitRate;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private ByteHitRateDataModel(Builder builder) {
@@ -110,7 +119,10 @@ public class DescribeDomainRealTimeByteHitRateDataResponseBody extends TeaModel 
             private String timeStamp; 
 
             /**
-             * The byte hit ratio. The byte hit ratio is measured in percentage.
+             * <p>The byte hit ratio. The byte hit ratio is measured in percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.8956940476262277</p>
              */
             public Builder byteHitRate(Float byteHitRate) {
                 this.byteHitRate = byteHitRate;
@@ -118,7 +130,10 @@ public class DescribeDomainRealTimeByteHitRateDataResponseBody extends TeaModel 
             }
 
             /**
-             * The timestamp of the data returned. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The timestamp of the data returned. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-11-30T05:40:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -132,8 +147,14 @@ public class DescribeDomainRealTimeByteHitRateDataResponseBody extends TeaModel 
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainRealTimeByteHitRateDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainRealTimeByteHitRateDataResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ByteHitRateDataModel")
+        @com.aliyun.core.annotation.NameInMap("ByteHitRateDataModel")
         private java.util.List < ByteHitRateDataModel> byteHitRateDataModel;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alimt20181012.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDetectLanguageResponseBody</p>
  */
 public class GetDetectLanguageResponseBody extends TeaModel {
-    @NameInMap("DetectedLanguage")
+    @com.aliyun.core.annotation.NameInMap("DetectedLanguage")
     private String detectedLanguage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("LanguageProbabilities")
+    private String languageProbabilities;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetDetectLanguageResponseBody(Builder builder) {
         this.detectedLanguage = builder.detectedLanguage;
+        this.languageProbabilities = builder.languageProbabilities;
         this.requestId = builder.requestId;
     }
 
@@ -39,6 +42,13 @@ public class GetDetectLanguageResponseBody extends TeaModel {
     }
 
     /**
+     * @return languageProbabilities
+     */
+    public String getLanguageProbabilities() {
+        return this.languageProbabilities;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -47,6 +57,7 @@ public class GetDetectLanguageResponseBody extends TeaModel {
 
     public static final class Builder {
         private String detectedLanguage; 
+        private String languageProbabilities; 
         private String requestId; 
 
         /**
@@ -54,6 +65,14 @@ public class GetDetectLanguageResponseBody extends TeaModel {
          */
         public Builder detectedLanguage(String detectedLanguage) {
             this.detectedLanguage = detectedLanguage;
+            return this;
+        }
+
+        /**
+         * LanguageProbabilities.
+         */
+        public Builder languageProbabilities(String languageProbabilities) {
+            this.languageProbabilities = languageProbabilities;
             return this;
         }
 

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateBasicEndpointsRequest</p>
  */
 public class CreateBasicEndpointsRequest extends Request {
-    @Query
-    @NameInMap("AcceleratorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceleratorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String acceleratorId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("EndpointGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endpointGroupId;
 
-    @Query
-    @NameInMap("Endpoints")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Endpoints")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Endpoints> endpoints;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private CreateBasicEndpointsRequest(Builder builder) {
@@ -126,9 +125,9 @@ public class CreateBasicEndpointsRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          * 
-         * >  If you do not set this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The value of **RequestId** may be different for each API request.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -146,7 +145,7 @@ public class CreateBasicEndpointsRequest extends Request {
         }
 
         /**
-         * The endpoints in the endpoint group.
+         * The endpoints.
          */
         public Builder endpoints(java.util.List < Endpoints> endpoints) {
             this.putQueryParameter("Endpoints", endpoints);
@@ -171,22 +170,22 @@ public class CreateBasicEndpointsRequest extends Request {
     } 
 
     public static class Endpoints extends TeaModel {
-        @NameInMap("EndpointAddress")
+        @com.aliyun.core.annotation.NameInMap("EndpointAddress")
         private String endpointAddress;
 
-        @NameInMap("EndpointSubAddress")
+        @com.aliyun.core.annotation.NameInMap("EndpointSubAddress")
         private String endpointSubAddress;
 
-        @NameInMap("EndpointSubAddressType")
+        @com.aliyun.core.annotation.NameInMap("EndpointSubAddressType")
         private String endpointSubAddressType;
 
-        @NameInMap("EndpointType")
+        @com.aliyun.core.annotation.NameInMap("EndpointType")
         private String endpointType;
 
-        @NameInMap("EndpointZoneId")
+        @com.aliyun.core.annotation.NameInMap("EndpointZoneId")
         private String endpointZoneId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Endpoints(Builder builder) {
@@ -268,11 +267,11 @@ public class CreateBasicEndpointsRequest extends Request {
              * The secondary address of the endpoint.
              * <p>
              * 
-             * This parameter is required if the endpoint type is **ECS**, **ENI**, or **NLB**.
+             * This parameter is required only if you set the endpoint type to **ECS**, **ENI**, or **NLB**.
              * 
-             * *   If the endpoint type is **ECS**, you can set the **EndpointSubAddress** parameter to the secondary private IP address of the primary ENI. If the parameter is left empty, the primary private IP address of the primary ENI is used.
-             * *   If the endpoint type is **ENI**, you can set the **EndpointSubAddress** parameter to the secondary private IP address of the secondary ENI. If the parameter is left empty, the primary private IP address of the secondary ENI is used.
-             * *   This parameter is required if the endpoint type is **NLB**. **EndpointSubAddress** is the primary private IP address of the NLB backend server.
+             * *   If you set the endpoint type to **ECS**, you can set **EndpointSubAddress** to the secondary private IP address of the primary ENI. If you leave this parameter empty, the primary private IP address of the primary ENI is used.
+             * *   If you set the endpoint type to **ENI**, you can set **EndpointSubAddress** to the secondary private IP address of the secondary ENI. If you leave this parameter empty, the primary private IP address of the secondary ENI is used.
+             * *   If you set the endpoint type to **NLB**, you can set **EndpointSubAddress** to the primary private IP address of the NLB backend server.
              */
             public Builder endpointSubAddress(String endpointSubAddress) {
                 this.endpointSubAddress = endpointSubAddress;
@@ -283,10 +282,10 @@ public class CreateBasicEndpointsRequest extends Request {
              * The secondary address type of the endpoint. Valid values:
              * <p>
              * 
-             * *   **primary:** a primary private IP address.
-             * *   **secondary:** a secondary private IP address.
+             * *   **primary**: a primary private IP address.
+             * *   **secondary**: a secondary private IP address.
              * 
-             * This parameter is required if the endpoint type is **ECS**, **ENI**, or **NLB**. If the endpoint type is **NLB**, only **primary** is supported.
+             * This parameter is required only if you set the endpoint type to **ECS**, **ENI**, or **NLB**. If you set the endpoint type to **NLB**, only **primary** is supported.
              */
             public Builder endpointSubAddressType(String endpointSubAddressType) {
                 this.endpointSubAddressType = endpointSubAddressType;
@@ -297,10 +296,10 @@ public class CreateBasicEndpointsRequest extends Request {
              * The type of the endpoint. Valid values:
              * <p>
              * 
-             * *   **ENI:** elastic network interface (ENI).
-             * *   **SLB:** Classic Load Balancer (CLB) instance.
-             * *   **ECS:** Elastic Compute Service (ECS) instance.
-             * *   **NLB:** Network Load Balancer (NLB) instance.
+             * *   **ENI**: elastic network interface (ENI).
+             * *   **SLB**: Classic Load Balancer (CLB) instance.
+             * *   **ECS**: Elastic Compute Service (ECS) instance.
+             * *   **NLB**: Network Load Balancer (NLB) instance.
              * 
              * >  This parameter is required.
              */
@@ -313,7 +312,7 @@ public class CreateBasicEndpointsRequest extends Request {
              * The ID of the zone where the endpoint resides.
              * <p>
              * 
-             * This parameter is required only if the endpoint type is **NLB**.
+             * This parameter is required only if you set the endpoint type to **NLB**.
              */
             public Builder endpointZoneId(String endpointZoneId) {
                 this.endpointZoneId = endpointZoneId;
@@ -324,7 +323,7 @@ public class CreateBasicEndpointsRequest extends Request {
              * The name of the endpoint.
              * <p>
              * 
-             * The name must be 2 to 64 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
+             * The name must be 1 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter.
              */
             public Builder name(String name) {
                 this.name = name;

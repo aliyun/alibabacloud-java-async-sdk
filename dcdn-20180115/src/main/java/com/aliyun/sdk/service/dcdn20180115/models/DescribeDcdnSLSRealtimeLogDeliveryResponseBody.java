@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnSLSRealtimeLogDeliveryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnSLSRealtimeLogDeliveryResponseBody</p>
  */
 public class DescribeDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private Content content;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDcdnSLSRealtimeLogDeliveryResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The configuration results of the domain name.
+         * <p>The configuration results of the domain name.</p>
          */
         public Builder content(Content content) {
             this.content = content;
@@ -58,7 +58,10 @@ public class DescribeDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F32C57AA-7BF8-49AE-A2CC-9F42390F5A19</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,38 +74,44 @@ public class DescribeDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnSLSRealtimeLogDeliveryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnSLSRealtimeLogDeliveryResponseBody</p>
+     */
     public static class Content extends TeaModel {
-        @NameInMap("BusinessType")
+        @com.aliyun.core.annotation.NameInMap("BusinessType")
         private String businessType;
 
-        @NameInMap("DataCenter")
+        @com.aliyun.core.annotation.NameInMap("DataCenter")
         private String dataCenter;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("FieldName")
+        @com.aliyun.core.annotation.NameInMap("FieldName")
         private String fieldName;
 
-        @NameInMap("ProjectName")
+        @com.aliyun.core.annotation.NameInMap("ProjectName")
         private String projectName;
 
-        @NameInMap("SLSLogStore")
+        @com.aliyun.core.annotation.NameInMap("SLSLogStore")
         private String SLSLogStore;
 
-        @NameInMap("SLSProject")
+        @com.aliyun.core.annotation.NameInMap("SLSProject")
         private String SLSProject;
 
-        @NameInMap("SLSRegion")
+        @com.aliyun.core.annotation.NameInMap("SLSRegion")
         private String SLSRegion;
 
-        @NameInMap("SamplingRate")
+        @com.aliyun.core.annotation.NameInMap("SamplingRate")
         private String samplingRate;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Content(Builder builder) {
@@ -218,12 +227,15 @@ public class DescribeDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The type of the collected logs. Default value: cdn_log_access_l1. Valid values:
-             * <p>
+             * <p>The type of the collected logs. Default value: cdn_log_access_l1. Valid values:</p>
+             * <ul>
+             * <li><strong>cdn_log_access_l1</strong>: access logs of Dynamic Content Delivery Network (DCDN) points of presence (POPs)</li>
+             * <li><strong>cdn_log_origin</strong>: back-to-origin logs</li>
+             * <li><strong>cdn_log_er</strong>: EdgeRoutine logs</li>
+             * </ul>
              * 
-             * *   **cdn_log_access_l1**: access logs of Dynamic Content Delivery Network (DCDN) points of presence (POPs)
-             * *   **cdn_log_origin**: back-to-origin logs
-             * *   **cdn_log_er**: EdgeRoutine logs
+             * <strong>example:</strong>
+             * <p>cdn_log_access_l1</p>
              */
             public Builder businessType(String businessType) {
                 this.businessType = businessType;
@@ -231,7 +243,10 @@ public class DescribeDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * The region from which logs were collected.
+             * <p>The region from which logs were collected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn</p>
              */
             public Builder dataCenter(String dataCenter) {
                 this.dataCenter = dataCenter;
@@ -239,7 +254,10 @@ public class DescribeDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * The domain names from which logs were collected. You can specify one or more domain names. Separate multiple domain names with commas (,).
+             * <p>The domain names from which logs were collected. You can specify one or more domain names. Separate multiple domain names with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com,example.org</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -247,7 +265,10 @@ public class DescribeDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the field. For more information about fields in real-time log entries, see [Fields in a real-time log](~~324199~~).
+             * <p>The name of the field. For more information about fields in real-time log entries, see <a href="https://help.aliyun.com/document_detail/324199.html">Fields in a real-time log</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>field1,field2</p>
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
@@ -255,7 +276,10 @@ public class DescribeDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the project.
+             * <p>The name of the project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -263,7 +287,10 @@ public class DescribeDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Logstore.
+             * <p>The name of the Logstore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-cn</p>
              */
             public Builder SLSLogStore(String SLSLogStore) {
                 this.SLSLogStore = SLSLogStore;
@@ -271,7 +298,10 @@ public class DescribeDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the log file.
+             * <p>The name of the log file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-cn</p>
              */
             public Builder SLSProject(String SLSProject) {
                 this.SLSProject = SLSProject;
@@ -279,7 +309,10 @@ public class DescribeDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * The region to which logs were delivered.
+             * <p>The region to which logs were delivered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder SLSRegion(String SLSRegion) {
                 this.SLSRegion = SLSRegion;
@@ -287,7 +320,10 @@ public class DescribeDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * The sampling rate.
+             * <p>The sampling rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder samplingRate(String samplingRate) {
                 this.samplingRate = samplingRate;
@@ -295,11 +331,14 @@ public class DescribeDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * The status of real-time logs.
-             * <p>
+             * <p>The status of real-time logs.</p>
+             * <ul>
+             * <li><strong>success</strong></li>
+             * <li><strong>fail</strong></li>
+             * </ul>
              * 
-             * *   **success**
-             * *   **fail**
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -307,7 +346,10 @@ public class DescribeDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * The type of log delivery. Only **SLS_POST** is supported.
+             * <p>The type of log delivery. Only <strong>SLS_POST</strong> is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SLS_POST</p>
              */
             public Builder type(String type) {
                 this.type = type;

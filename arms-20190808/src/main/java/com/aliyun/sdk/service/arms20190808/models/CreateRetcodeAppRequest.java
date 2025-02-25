@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRetcodeAppRequest} extends {@link RequestModel}
  *
  * <p>CreateRetcodeAppRequest</p>
  */
 public class CreateRetcodeAppRequest extends Request {
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("RetcodeAppName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RetcodeAppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String retcodeAppName;
 
-    @Query
-    @NameInMap("RetcodeAppType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RetcodeAppType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String retcodeAppType;
 
-    @Query
-    @NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
 
     private CreateRetcodeAppRequest(Builder builder) {
         super(builder);
@@ -88,7 +93,7 @@ public class CreateRetcodeAppRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -97,7 +102,7 @@ public class CreateRetcodeAppRequest extends Request {
         private String resourceGroupId; 
         private String retcodeAppName; 
         private String retcodeAppType; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -113,7 +118,11 @@ public class CreateRetcodeAppRequest extends Request {
         } 
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -122,7 +131,10 @@ public class CreateRetcodeAppRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. You can obtain the resource group ID in the **Resource Management** console.
+         * <p>The ID of the resource group. You can obtain the resource group ID in the <strong>Resource Management</strong> console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxyexli2****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -131,7 +143,11 @@ public class CreateRetcodeAppRequest extends Request {
         }
 
         /**
-         * The name of the application that is monitored by Browser Monitoring.
+         * <p>The name of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SdkTest</p>
          */
         public Builder retcodeAppName(String retcodeAppName) {
             this.putQueryParameter("RetcodeAppName", retcodeAppName);
@@ -140,7 +156,19 @@ public class CreateRetcodeAppRequest extends Request {
         }
 
         /**
-         * The site type.
+         * <p>The type of the application. Valid values:</p>
+         * <ul>
+         * <li><code>web</code>: web application</li>
+         * <li><code>weex</code>: Weex mobile app</li>
+         * <li><code>mini_dd</code>: DingTalk mini program</li>
+         * <li><code>mini_alipay</code>: Alipay mini program</li>
+         * <li><code>mini_wx</code>: WeChat mini program</li>
+         * <li><code>mini_common</code>: mini program on other platforms</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mini_dd</p>
          */
         public Builder retcodeAppType(String retcodeAppType) {
             this.putQueryParameter("RetcodeAppType", retcodeAppType);
@@ -149,9 +177,9 @@ public class CreateRetcodeAppRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * <p>The tags that you want to add to the task.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;
@@ -164,11 +192,17 @@ public class CreateRetcodeAppRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateRetcodeAppRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRetcodeAppRequest</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -203,7 +237,10 @@ public class CreateRetcodeAppRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -211,7 +248,10 @@ public class CreateRetcodeAppRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDomainRecordStatusRequest} extends {@link RequestModel}
  *
  * <p>SetDomainRecordStatusRequest</p>
  */
 public class SetDomainRecordStatusRequest extends Request {
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("RecordId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecordId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String recordId;
 
-    @Query
-    @NameInMap("Status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String status;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
     private SetDomainRecordStatusRequest(Builder builder) {
@@ -98,7 +103,10 @@ public class SetDomainRecordStatusRequest extends Request {
         } 
 
         /**
-         * The language type.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -107,7 +115,11 @@ public class SetDomainRecordStatusRequest extends Request {
         }
 
         /**
-         * The ID of the DNS record.
+         * <p>The ID of the DNS record.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9999985</p>
          */
         public Builder recordId(String recordId) {
             this.putQueryParameter("RecordId", recordId);
@@ -116,11 +128,15 @@ public class SetDomainRecordStatusRequest extends Request {
         }
 
         /**
-         * The status of the DNS record. Valid values:
-         * <p>
+         * <p>The state of the DNS record. Valid values:</p>
+         * <ul>
+         * <li><strong>Enable</strong>: enables the DNS record.</li>
+         * <li><strong>Disable</strong>: disables the DNS record.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Enable**: enables resolution.
-         * *   **Disable**: suspends resolution.
+         * <strong>example:</strong>
+         * <p>Disable</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -129,7 +145,10 @@ public class SetDomainRecordStatusRequest extends Request {
         }
 
         /**
-         * The IP address of the client.
+         * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.2.0</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

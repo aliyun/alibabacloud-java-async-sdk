@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelLifecycleRetrieveJobRequest} extends {@link RequestModel}
  *
  * <p>CancelLifecycleRetrieveJobRequest</p>
  */
 public class CancelLifecycleRetrieveJobRequest extends Request {
-    @Query
-    @NameInMap("JobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobId;
 
     private CancelLifecycleRetrieveJobRequest(Builder builder) {
@@ -49,13 +54,17 @@ public class CancelLifecycleRetrieveJobRequest extends Request {
             super();
         } 
 
-        private Builder(CancelLifecycleRetrieveJobRequest response) {
-            super(response);
-            this.jobId = response.jobId;
+        private Builder(CancelLifecycleRetrieveJobRequest request) {
+            super(request);
+            this.jobId = request.jobId;
         } 
 
         /**
-         * JobId.
+         * <p>The ID of the data retrieval task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lrj-nfstest-ia-160****853-hshvw</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

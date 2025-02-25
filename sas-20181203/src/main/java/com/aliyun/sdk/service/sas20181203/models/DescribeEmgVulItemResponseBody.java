@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEmgVulItemResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEmgVulItemResponseBody</p>
  */
 public class DescribeEmgVulItemResponseBody extends TeaModel {
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("GroupedVulItems")
-    private java.util.List < GroupedVulItems> groupedVulItems;
+    @com.aliyun.core.annotation.NameInMap("GroupedVulItems")
+    private java.util.List<GroupedVulItems> groupedVulItems;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeEmgVulItemResponseBody(Builder builder) {
@@ -53,7 +58,7 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
     /**
      * @return groupedVulItems
      */
-    public java.util.List < GroupedVulItems> getGroupedVulItems() {
+    public java.util.List<GroupedVulItems> getGroupedVulItems() {
         return this.groupedVulItems;
     }
 
@@ -80,13 +85,16 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer currentPage; 
-        private java.util.List < GroupedVulItems> groupedVulItems; 
+        private java.util.List<GroupedVulItems> groupedVulItems; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page. Pages start from page **1**. Default value: **1**.
+         * <p>The page number of the returned page. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -94,15 +102,18 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the urgent vulnerabilities.
+         * <p>The information about the urgent vulnerabilities.</p>
          */
-        public Builder groupedVulItems(java.util.List < GroupedVulItems> groupedVulItems) {
+        public Builder groupedVulItems(java.util.List<GroupedVulItems> groupedVulItems) {
             this.groupedVulItems = groupedVulItems;
             return this;
         }
 
         /**
-         * The number of entries returned per page. Default value: **10**.
+         * <p>The number of entries returned per page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BC1868ED-A0E1-4D1C-BF7E-10DC0C34B3C3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of the urgent vulnerabilities returned.
+         * <p>The total number of the urgent vulnerabilities returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,35 +148,41 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEmgVulItemResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEmgVulItemResponseBody</p>
+     */
     public static class GroupedVulItems extends TeaModel {
-        @NameInMap("AliasName")
+        @com.aliyun.core.annotation.NameInMap("AliasName")
         private String aliasName;
 
-        @NameInMap("CheckType")
+        @com.aliyun.core.annotation.NameInMap("CheckType")
         private Integer checkType;
 
-        @NameInMap("GmtLastCheck")
+        @com.aliyun.core.annotation.NameInMap("GmtLastCheck")
         private Long gmtLastCheck;
 
-        @NameInMap("GmtPublish")
+        @com.aliyun.core.annotation.NameInMap("GmtPublish")
         private Long gmtPublish;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PendingCount")
+        @com.aliyun.core.annotation.NameInMap("PendingCount")
         private Integer pendingCount;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private Integer progress;
 
-        @NameInMap("RaspDefend")
+        @com.aliyun.core.annotation.NameInMap("RaspDefend")
         private Integer raspDefend;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private GroupedVulItems(Builder builder) {
@@ -266,7 +289,10 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The name of the urgent vulnerability.
+             * <p>The name of the urgent vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Changjietong T + SetupAccount/Upload.aspx file Upload vulnerability (CNVD-2022-60632)</p>
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -274,7 +300,10 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
             }
 
             /**
-             * The check method.
+             * <p>The check method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder checkType(Integer checkType) {
                 this.checkType = checkType;
@@ -282,7 +311,10 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the urgent vulnerability was last detected. Unit: milliseconds.
+             * <p>The timestamp when the urgent vulnerability was last detected. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1619286031000</p>
              */
             public Builder gmtLastCheck(Long gmtLastCheck) {
                 this.gmtLastCheck = gmtLastCheck;
@@ -290,7 +322,10 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the vulnerability was disclosed. Unit: milliseconds.
+             * <p>The timestamp when the vulnerability was disclosed. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1618887687000</p>
              */
             public Builder gmtPublish(Long gmtPublish) {
                 this.gmtPublish = gmtPublish;
@@ -298,7 +333,10 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the detection rule.
+             * <p>The name of the detection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>scan:AVD-2021-179344</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -306,7 +344,10 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
             }
 
             /**
-             * The number of unhandled urgent vulnerabilities.
+             * <p>The number of unhandled urgent vulnerabilities.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder pendingCount(Integer pendingCount) {
                 this.pendingCount = pendingCount;
@@ -314,10 +355,13 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the urgent vulnerability detection task. Valid values: 0 to 100.
-             * <p>
+             * <p>The progress of the urgent vulnerability detection task. Valid values: 0 to 100.</p>
+             * <blockquote>
+             * <p> This parameter takes effect only when an urgent vulnerability is being detected.</p>
+             * </blockquote>
              * 
-             * >  This parameter takes effect only when an urgent vulnerability is being detected.
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -325,13 +369,17 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the application protection feature is supported. Valid values:
-             * <p>
+             * <p>Indicates whether the application protection feature is supported. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: no</li>
+             * <li><strong>1</strong>: yes</li>
+             * </ul>
+             * <blockquote>
+             * <p> If this parameter is not returned, the application protection is not supported.</p>
+             * </blockquote>
              * 
-             * *   **0**: no
-             * *   **1**: yes
-             * 
-             * >  If this parameter is not returned, the application protection is not supported.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder raspDefend(Integer raspDefend) {
                 this.raspDefend = raspDefend;
@@ -339,12 +387,15 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
             }
 
             /**
-             * The detection status of the urgent vulnerability. Valid values:
-             * <p>
+             * <p>The detection status of the urgent vulnerability. Valid values:</p>
+             * <ul>
+             * <li><strong>10</strong>: The urgent vulnerability is not detected.</li>
+             * <li><strong>20</strong>: The urgent vulnerability is being detected.</li>
+             * <li><strong>30</strong>: The urgent vulnerability detection is complete.</li>
+             * </ul>
              * 
-             * *   **10**: The urgent vulnerability is not detected.
-             * *   **20**: The urgent vulnerability is being detected.
-             * *   **30**: The urgent vulnerability detection is complete.
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -352,11 +403,14 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
             }
 
             /**
-             * The method that is used to detect the urgent vulnerability. Valid values:
-             * <p>
+             * <p>The method that is used to detect the urgent vulnerability. Valid values:</p>
+             * <ul>
+             * <li><strong>python</strong>: The Version method is used. Security Center checks the software versions of your server to check whether disclosed vulnerabilities exist on your server.</li>
+             * <li><strong>scan</strong>: The Network Scan method is used. Security Center analyzes the access traffic to your server over the Internet to check whether vulnerabilities exist on your server.</li>
+             * </ul>
              * 
-             * *   **python**: The Version method is used. Security Center checks the software versions of your server to check whether disclosed vulnerabilities exist on your server.
-             * *   **scan**: The Network Scan method is used. Security Center analyzes the access traffic to your server over the Internet to check whether vulnerabilities exist on your server.
+             * <strong>example:</strong>
+             * <p>scan</p>
              */
             public Builder type(String type) {
                 this.type = type;

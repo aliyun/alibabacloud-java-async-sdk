@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceAutoRenewalAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceAutoRenewalAttributeResponseBody</p>
  */
 public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("ItemsNumbers")
+    @com.aliyun.core.annotation.NameInMap("ItemsNumbers")
     private Integer itemsNumbers;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceAutoRenewalAttributeResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about returned entries.
+         * <p>Details about returned entries.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -94,7 +99,10 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder itemsNumbers(Integer itemsNumbers) {
             this.itemsNumbers = itemsNumbers;
@@ -102,7 +110,10 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -110,7 +121,10 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries that were returned on the current page.
+         * <p>The number of entries that were returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -118,7 +132,10 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FAB5CB3B-DB9D-473A-9DF1-F57B6B9CB949</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -131,20 +148,26 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceAutoRenewalAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceAutoRenewalAttributeResponseBody</p>
+     */
     public static class Item extends TeaModel {
-        @NameInMap("AutoRenew")
+        @com.aliyun.core.annotation.NameInMap("AutoRenew")
         private String autoRenew;
 
-        @NameInMap("DBInstanceType")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceType")
         private String DBInstanceType;
 
-        @NameInMap("DbInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DbInstanceId")
         private String dbInstanceId;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private Item(Builder builder) {
@@ -206,11 +229,14 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * Indicates whether auto-renewal is enabled for the instance. Valid values:
-             * <p>
+             * <p>Indicates whether auto-renewal is enabled for the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Auto-renewal is enabled for the instance.</li>
+             * <li><strong>false</strong>: Auto-renewal is disabled for the instance.</li>
+             * </ul>
              * 
-             * *   **true**: Auto-renewal is enabled for the instance.
-             * *   **false**: Auto-renewal is disabled for the instance.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoRenew(String autoRenew) {
                 this.autoRenew = autoRenew;
@@ -218,11 +244,14 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the instance. Valid values:
-             * <p>
+             * <p>The category of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>replicate</strong>: the standalone or replica set instance</li>
+             * <li><strong>sharding</strong>: the sharded cluster instance</li>
+             * </ul>
              * 
-             * *   **replicate**: the standalone or replica set instance
-             * *   **sharding**: the sharded cluster instance
+             * <strong>example:</strong>
+             * <p>replicate</p>
              */
             public Builder DBInstanceType(String DBInstanceType) {
                 this.DBInstanceType = DBInstanceType;
@@ -230,7 +259,10 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dds-bp2568*****</p>
              */
             public Builder dbInstanceId(String dbInstanceId) {
                 this.dbInstanceId = dbInstanceId;
@@ -238,11 +270,16 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The auto-renewal period. Unit: months.
-             * <p>
+             * <p>The auto-renewal period. Unit: months.</p>
+             * <blockquote>
+             * <ul>
+             * <li>This parameter is ruturned only when the returned value of the <strong>AutoRenew</strong> parameter is <strong>true</strong>.</li>
+             * <li>You can call the <a href="https://help.aliyun.com/document_detail/145979.html">ModifyInstanceAutoRenewalAttribute</a> operation to modify the auto-renewal period.</li>
+             * </ul>
+             * </blockquote>
              * 
-             * > * This parameter is ruturned only when the returned value of the **AutoRenew** parameter is **true**.
-             * > * You can call the [ModifyInstanceAutoRenewalAttribute](~~145979~~) operation to modify the auto-renewal period.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -250,7 +287,10 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the instance.
+             * <p>The region ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -264,9 +304,15 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceAutoRenewalAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceAutoRenewalAttributeResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("Item")
-        private java.util.List < Item> item;
+        @com.aliyun.core.annotation.NameInMap("Item")
+        private java.util.List<Item> item;
 
         private Items(Builder builder) {
             this.item = builder.item;
@@ -283,17 +329,17 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
         /**
          * @return item
          */
-        public java.util.List < Item> getItem() {
+        public java.util.List<Item> getItem() {
             return this.item;
         }
 
         public static final class Builder {
-            private java.util.List < Item> item; 
+            private java.util.List<Item> item; 
 
             /**
              * Item.
              */
-            public Builder item(java.util.List < Item> item) {
+            public Builder item(java.util.List<Item> item) {
                 this.item = item;
                 return this;
             }

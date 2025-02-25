@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetChangeOrderMetricResponseBody} extends {@link TeaModel}
  *
  * <p>GetChangeOrderMetricResponseBody</p>
  */
 public class GetChangeOrderMetricResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetChangeOrderMetricResponseBody(Builder builder) {
@@ -53,7 +58,7 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -80,19 +85,22 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * The HTTP status code. The following limits are imposed on the ID:
-         * <p>
+         * <p>The HTTP status code. The following limits are imposed on the ID:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: The call was successful.</li>
+         * <li><strong>3xx</strong>: The call was redirected.</li>
+         * <li><strong>4xx</strong>: The call failed.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * </ul>
          * 
-         * *   **2xx**: The call was successful.
-         * *   **3xx**: The call was redirected.
-         * *   **4xx**: The call failed.
-         * *   **5xx**: A server error occurred.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -100,19 +108,22 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The details of applications.
+         * <p>The details of applications.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The additional information that is returned. The following limits are imposed on the ID:
-         * <p>
+         * <p>The additional information that is returned. The following limits are imposed on the ID:</p>
+         * <ul>
+         * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
+         * <li>An error code: If the call fails, an error code is returned.</li>
+         * </ul>
          * 
-         * *   success: If the call is successful, **success** is returned.
-         * *   An error code: If the call fails, an error code is returned.
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -120,7 +131,10 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3B763F98-0BA2-5C23-B6B8-558568D2C1C2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,11 +142,14 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the microservice list was obtained. The following limits are imposed on the ID:
-         * <p>
+         * <p>Indicates whether the microservice list was obtained. The following limits are imposed on the ID:</p>
+         * <ul>
+         * <li><strong>true</strong>: The namespaces were obtained.</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: The namespaces were obtained.
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -145,23 +162,29 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetChangeOrderMetricResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetChangeOrderMetricResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("Error")
+        @com.aliyun.core.annotation.NameInMap("Error")
         private Long error;
 
-        @NameInMap("ErrorPercent")
+        @com.aliyun.core.annotation.NameInMap("ErrorPercent")
         private Float errorPercent;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private Data(Builder builder) {
@@ -232,7 +255,10 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * The ID of the application.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -240,7 +266,10 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The number of abnormal change orders.
+             * <p>The number of abnormal change orders.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder error(Long error) {
                 this.error = error;
@@ -248,7 +277,10 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The percentage of change failures.
+             * <p>The percentage of change failures.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.25</p>
              */
             public Builder errorPercent(Float errorPercent) {
                 this.errorPercent = errorPercent;
@@ -256,7 +288,10 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -264,7 +299,10 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the namespace.
+             * <p>The namespace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -272,7 +310,10 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of change orders.
+             * <p>The total number of change orders.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder total(Long total) {
                 this.total = total;

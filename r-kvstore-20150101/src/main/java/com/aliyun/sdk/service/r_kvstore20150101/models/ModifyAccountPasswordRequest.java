@@ -1,60 +1,64 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAccountPasswordRequest} extends {@link RequestModel}
  *
  * <p>ModifyAccountPasswordRequest</p>
  */
 public class ModifyAccountPasswordRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AccountName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountName;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("NewAccountPassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewAccountPassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String newAccountPassword;
 
-    @Query
-    @NameInMap("OldAccountPassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OldAccountPassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String oldAccountPassword;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceBiz")
+    private String sourceBiz;
 
     private ModifyAccountPasswordRequest(Builder builder) {
         super(builder);
@@ -68,6 +72,7 @@ public class ModifyAccountPasswordRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
+        this.sourceBiz = builder.sourceBiz;
     }
 
     public static Builder builder() {
@@ -153,6 +158,13 @@ public class ModifyAccountPasswordRequest extends Request {
         return this.securityToken;
     }
 
+    /**
+     * @return sourceBiz
+     */
+    public String getSourceBiz() {
+        return this.sourceBiz;
+    }
+
     public static final class Builder extends Request.Builder<ModifyAccountPasswordRequest, Builder> {
         private String regionId; 
         private String accountName; 
@@ -164,6 +176,7 @@ public class ModifyAccountPasswordRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
+        private String sourceBiz; 
 
         private Builder() {
             super();
@@ -181,6 +194,7 @@ public class ModifyAccountPasswordRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityToken = request.securityToken;
+            this.sourceBiz = request.sourceBiz;
         } 
 
         /**
@@ -193,7 +207,11 @@ public class ModifyAccountPasswordRequest extends Request {
         }
 
         /**
-         * The username of the account for which you want to change the password. You can call the [DescribeAccounts](~~95802~~) operation to query the username of the account.
+         * <p>The username of the account for which you want to change the password. You can call the <a href="https://help.aliyun.com/document_detail/95802.html">DescribeAccounts</a> operation to query the username of the account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testaccount</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -202,7 +220,11 @@ public class ModifyAccountPasswordRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -211,7 +233,11 @@ public class ModifyAccountPasswordRequest extends Request {
         }
 
         /**
-         * The new password to be set for the account. The password must be 8 to 32 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and specific special characters. These special characters include `! @ # $ % ^ & * ( ) _ + - =`
+         * <p>The new password to be set for the account. The password must be 8 to 32 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and specific special characters. These special characters include <code>! @ # $ % ^ &amp; * ( ) _ + - =</code></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>newPassWd888****</p>
          */
         public Builder newAccountPassword(String newAccountPassword) {
             this.putQueryParameter("NewAccountPassword", newAccountPassword);
@@ -220,10 +246,14 @@ public class ModifyAccountPasswordRequest extends Request {
         }
 
         /**
-         * The current password of the account.
-         * <p>
+         * <p>The current password of the account.</p>
+         * <blockquote>
+         * <p>If you forget your password, you can call the <a href="https://help.aliyun.com/document_detail/95941.html">ResetAccountPassword</a> operation to reset your password.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > If you forget your password, you can call the [ResetAccountPassword](~~95941~~) operation to reset your password.
+         * <strong>example:</strong>
+         * <p>oldPassWd999****</p>
          */
         public Builder oldAccountPassword(String oldAccountPassword) {
             this.putQueryParameter("OldAccountPassword", oldAccountPassword);
@@ -273,6 +303,15 @@ public class ModifyAccountPasswordRequest extends Request {
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);
             this.securityToken = securityToken;
+            return this;
+        }
+
+        /**
+         * SourceBiz.
+         */
+        public Builder sourceBiz(String sourceBiz) {
+            this.putQueryParameter("SourceBiz", sourceBiz);
+            this.sourceBiz = sourceBiz;
             return this;
         }
 

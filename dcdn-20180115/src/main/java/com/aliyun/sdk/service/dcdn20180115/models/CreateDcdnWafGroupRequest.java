@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDcdnWafGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateDcdnWafGroupRequest</p>
  */
 public class CreateDcdnWafGroupRequest extends Request {
-    @Body
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Body
-    @NameInMap("Subscribe")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Subscribe")
     private String subscribe;
 
-    @Body
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private Long templateId;
 
     private CreateDcdnWafGroupRequest(Builder builder) {
@@ -82,7 +82,10 @@ public class CreateDcdnWafGroupRequest extends Request {
         } 
 
         /**
-         * Name.
+         * <p>The name of the WAF rule group. The name can be up to 128 characters in length. This parameter is required when you create a custom WAF rule group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -91,7 +94,15 @@ public class CreateDcdnWafGroupRequest extends Request {
         }
 
         /**
-         * Subscribe.
+         * <p>Specifies whether to enable subscription. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
+         * <p>When you replicate a custom rule group, do not specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder subscribe(String subscribe) {
             this.putBodyParameter("Subscribe", subscribe);
@@ -100,7 +111,10 @@ public class CreateDcdnWafGroupRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>The ID of the rule group to be replicated. This parameter is required when you replicate a custom WAF rule group. You can call the <a href="~~DescribeDcdnWafGroups~~">DescribeDcdnWafGroups</a> operation to query the ID of the rule group. If no template is used, set the value to 0 or do not specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder templateId(Long templateId) {
             this.putBodyParameter("TemplateId", templateId);

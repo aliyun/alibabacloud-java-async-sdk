@@ -1,30 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ComponentInstanceSelector} extends {@link TeaModel}
  *
  * <p>ComponentInstanceSelector</p>
  */
 public class ComponentInstanceSelector extends TeaModel {
-    @NameInMap("ApplicationName")
+    @com.aliyun.core.annotation.NameInMap("ActionScope")
+    @Deprecated
+    private String actionScope;
+
+    @com.aliyun.core.annotation.NameInMap("ApplicationName")
     private String applicationName;
 
-    @NameInMap("ComponentInstances")
-    private java.util.List < ComponentInstances> componentInstances;
+    @com.aliyun.core.annotation.NameInMap("ComponentInstances")
+    private java.util.List<ComponentInstances> componentInstances;
 
-    @NameInMap("Components")
-    private java.util.List < Components> components;
+    @com.aliyun.core.annotation.NameInMap("Components")
+    private java.util.List<Components> components;
 
-    @NameInMap("RunActionScope")
+    @com.aliyun.core.annotation.NameInMap("RunActionScope")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String runActionScope;
 
     private ComponentInstanceSelector(Builder builder) {
+        this.actionScope = builder.actionScope;
         this.applicationName = builder.applicationName;
         this.componentInstances = builder.componentInstances;
         this.components = builder.components;
@@ -40,6 +51,13 @@ public class ComponentInstanceSelector extends TeaModel {
     }
 
     /**
+     * @return actionScope
+     */
+    public String getActionScope() {
+        return this.actionScope;
+    }
+
+    /**
      * @return applicationName
      */
     public String getApplicationName() {
@@ -49,14 +67,14 @@ public class ComponentInstanceSelector extends TeaModel {
     /**
      * @return componentInstances
      */
-    public java.util.List < ComponentInstances> getComponentInstances() {
+    public java.util.List<ComponentInstances> getComponentInstances() {
         return this.componentInstances;
     }
 
     /**
      * @return components
      */
-    public java.util.List < Components> getComponents() {
+    public java.util.List<Components> getComponents() {
         return this.components;
     }
 
@@ -68,13 +86,25 @@ public class ComponentInstanceSelector extends TeaModel {
     }
 
     public static final class Builder {
+        private String actionScope; 
         private String applicationName; 
-        private java.util.List < ComponentInstances> componentInstances; 
-        private java.util.List < Components> components; 
+        private java.util.List<ComponentInstances> componentInstances; 
+        private java.util.List<Components> components; 
         private String runActionScope; 
 
         /**
-         * 应用名称。
+         * ActionScope.
+         */
+        public Builder actionScope(String actionScope) {
+            this.actionScope = actionScope;
+            return this;
+        }
+
+        /**
+         * <p>应用名称。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HDFS</p>
          */
         public Builder applicationName(String applicationName) {
             this.applicationName = applicationName;
@@ -82,25 +112,33 @@ public class ComponentInstanceSelector extends TeaModel {
         }
 
         /**
-         * 组件实例列表。actionScope为COPONENT_INSTANCE时使用。
+         * <p>组件实例列表。actionScope为COPONENT_INSTANCE时使用。</p>
          */
-        public Builder componentInstances(java.util.List < ComponentInstances> componentInstances) {
+        public Builder componentInstances(java.util.List<ComponentInstances> componentInstances) {
             this.componentInstances = componentInstances;
             return this;
         }
 
         /**
-         * 组件列表。
-         * <p>
-         * actionScope为COPONENT时使用。
+         * <p>组件列表。
+         * actionScope为COPONENT时使用。</p>
          */
-        public Builder components(java.util.List < Components> components) {
+        public Builder components(java.util.List<Components> components) {
             this.components = components;
             return this;
         }
 
         /**
-         * 执行范围。
+         * <p>动作执行范围。取值范围：</p>
+         * <ul>
+         * <li>APPLICATION：应用级别。</li>
+         * <li>COMPONENT：组件级别。</li>
+         * <li>COMPONENT_INSTANCE：组件实例级别。</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>APPLICATION</p>
          */
         public Builder runActionScope(String runActionScope) {
             this.runActionScope = runActionScope;
@@ -113,14 +151,20 @@ public class ComponentInstanceSelector extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ComponentInstanceSelector} extends {@link TeaModel}
+     *
+     * <p>ComponentInstanceSelector</p>
+     */
     public static class ComponentInstances extends TeaModel {
-        @NameInMap("ApplicationName")
+        @com.aliyun.core.annotation.NameInMap("ApplicationName")
         private String applicationName;
 
-        @NameInMap("ComponentName")
+        @com.aliyun.core.annotation.NameInMap("ComponentName")
         private String componentName;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
         private ComponentInstances(Builder builder) {
@@ -164,7 +208,10 @@ public class ComponentInstanceSelector extends TeaModel {
             private String nodeId; 
 
             /**
-             * 应用名称。
+             * <p>应用名称。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HDFS</p>
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
@@ -172,7 +219,10 @@ public class ComponentInstanceSelector extends TeaModel {
             }
 
             /**
-             * 组件名称。
+             * <p>组件名称。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DataNode</p>
              */
             public Builder componentName(String componentName) {
                 this.componentName = componentName;
@@ -180,7 +230,10 @@ public class ComponentInstanceSelector extends TeaModel {
             }
 
             /**
-             * 节点ID。
+             * <p>节点ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1cudc25w2bfwl5****</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -194,11 +247,17 @@ public class ComponentInstanceSelector extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ComponentInstanceSelector} extends {@link TeaModel}
+     *
+     * <p>ComponentInstanceSelector</p>
+     */
     public static class Components extends TeaModel {
-        @NameInMap("ApplicationName")
+        @com.aliyun.core.annotation.NameInMap("ApplicationName")
         private String applicationName;
 
-        @NameInMap("ComponentName")
+        @com.aliyun.core.annotation.NameInMap("ComponentName")
         private String componentName;
 
         private Components(Builder builder) {
@@ -233,7 +292,10 @@ public class ComponentInstanceSelector extends TeaModel {
             private String componentName; 
 
             /**
-             * 应用名称。
+             * <p>应用名称。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HDFS</p>
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
@@ -241,7 +303,10 @@ public class ComponentInstanceSelector extends TeaModel {
             }
 
             /**
-             * 组件名称。
+             * <p>组件名称。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DataNode</p>
              */
             public Builder componentName(String componentName) {
                 this.componentName = componentName;

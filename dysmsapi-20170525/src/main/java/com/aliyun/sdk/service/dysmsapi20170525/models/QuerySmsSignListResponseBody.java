@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySmsSignListResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySmsSignListResponseBody</p>
  */
 public class QuerySmsSignListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SmsSignList")
-    private java.util.List < SmsSignList> smsSignList;
+    @com.aliyun.core.annotation.NameInMap("SmsSignList")
+    private java.util.List<SmsSignList> smsSignList;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private QuerySmsSignListResponseBody(Builder builder) {
@@ -89,7 +94,7 @@ public class QuerySmsSignListResponseBody extends TeaModel {
     /**
      * @return smsSignList
      */
-    public java.util.List < SmsSignList> getSmsSignList() {
+    public java.util.List<SmsSignList> getSmsSignList() {
         return this.smsSignList;
     }
 
@@ -106,11 +111,18 @@ public class QuerySmsSignListResponseBody extends TeaModel {
         private String message; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < SmsSignList> smsSignList; 
+        private java.util.List<SmsSignList> smsSignList; 
         private Long totalCount; 
 
         /**
-         * Code.
+         * <p>The HTTP status code.</p>
+         * <ul>
+         * <li>The value OK indicates that the request was successful.</li>
+         * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +130,10 @@ public class QuerySmsSignListResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPage.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -126,7 +141,10 @@ public class QuerySmsSignListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -134,7 +152,10 @@ public class QuerySmsSignListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of signatures per page. Valid values: <strong>1 to 50</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -142,7 +163,10 @@ public class QuerySmsSignListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>819BE656-D2E0-4858-8B21-B2E47708****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,15 +174,18 @@ public class QuerySmsSignListResponseBody extends TeaModel {
         }
 
         /**
-         * SmsSignList.
+         * <p>The queried message signatures.</p>
          */
-        public Builder smsSignList(java.util.List < SmsSignList> smsSignList) {
+        public Builder smsSignList(java.util.List<SmsSignList> smsSignList) {
             this.smsSignList = smsSignList;
             return this;
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of signatures.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -171,14 +198,20 @@ public class QuerySmsSignListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuerySmsSignListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySmsSignListResponseBody</p>
+     */
     public static class Reason extends TeaModel {
-        @NameInMap("RejectDate")
+        @com.aliyun.core.annotation.NameInMap("RejectDate")
         private String rejectDate;
 
-        @NameInMap("RejectInfo")
+        @com.aliyun.core.annotation.NameInMap("RejectInfo")
         private String rejectInfo;
 
-        @NameInMap("RejectSubInfo")
+        @com.aliyun.core.annotation.NameInMap("RejectSubInfo")
         private String rejectSubInfo;
 
         private Reason(Builder builder) {
@@ -222,7 +255,10 @@ public class QuerySmsSignListResponseBody extends TeaModel {
             private String rejectSubInfo; 
 
             /**
-             * RejectDate.
+             * <p>The time when the signature was rejected. Format: yyyy-MM-dd HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-01-08 19:02:13</p>
              */
             public Builder rejectDate(String rejectDate) {
                 this.rejectDate = rejectDate;
@@ -230,7 +266,10 @@ public class QuerySmsSignListResponseBody extends TeaModel {
             }
 
             /**
-             * RejectInfo.
+             * <p>The reason why the signature was rejected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The document cannot verify the authenticity of the information. Please upload it again.</p>
              */
             public Builder rejectInfo(String rejectInfo) {
                 this.rejectInfo = rejectInfo;
@@ -238,7 +277,10 @@ public class QuerySmsSignListResponseBody extends TeaModel {
             }
 
             /**
-             * RejectSubInfo.
+             * <p>The remarks about the rejection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The document cannot verify the authenticity of the information. Please upload it again.</p>
              */
             public Builder rejectSubInfo(String rejectSubInfo) {
                 this.rejectSubInfo = rejectSubInfo;
@@ -252,23 +294,29 @@ public class QuerySmsSignListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySmsSignListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySmsSignListResponseBody</p>
+     */
     public static class SmsSignList extends TeaModel {
-        @NameInMap("AuditStatus")
+        @com.aliyun.core.annotation.NameInMap("AuditStatus")
         private String auditStatus;
 
-        @NameInMap("BusinessType")
+        @com.aliyun.core.annotation.NameInMap("BusinessType")
         private String businessType;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("OrderId")
+        @com.aliyun.core.annotation.NameInMap("OrderId")
         private String orderId;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private Reason reason;
 
-        @NameInMap("SignName")
+        @com.aliyun.core.annotation.NameInMap("SignName")
         private String signName;
 
         private SmsSignList(Builder builder) {
@@ -339,7 +387,16 @@ public class QuerySmsSignListResponseBody extends TeaModel {
             private String signName; 
 
             /**
-             * AuditStatus.
+             * <p>The approval status of the signature. Valid values:</p>
+             * <ul>
+             * <li><strong>AUDIT_STATE_INIT</strong>: The signature is pending approval.</li>
+             * <li><strong>AUDIT_STATE_PASS</strong>: The signature is approved.</li>
+             * <li><strong>AUDIT_STATE_NOT_PASS</strong>: The signature is rejected. You can view the reason in the Reason response parameter.</li>
+             * <li><strong>AUDIT_STATE_CANCEL</strong>: The approval is canceled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AUDIT_STATE_NOT_PASS</p>
              */
             public Builder auditStatus(String auditStatus) {
                 this.auditStatus = auditStatus;
@@ -347,7 +404,14 @@ public class QuerySmsSignListResponseBody extends TeaModel {
             }
 
             /**
-             * BusinessType.
+             * <p>The type of the signature scenario. The return value ends with &quot;type&quot;. Valid values:</p>
+             * <ul>
+             * <li>Verification code type</li>
+             * <li>General-purpose type</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Verification code type</p>
              */
             public Builder businessType(String businessType) {
                 this.businessType = businessType;
@@ -355,7 +419,10 @@ public class QuerySmsSignListResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * <p>The time when the signature was created. Format: yyyy-MM-dd HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-01-08 16:44:13</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -363,7 +430,10 @@ public class QuerySmsSignListResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * <p>The ticket ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>236****5</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -371,7 +441,11 @@ public class QuerySmsSignListResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * <p>The approval remarks.</p>
+             * <ul>
+             * <li>If the value of AuditStatus is <strong>AUDIT_STATE_PASS</strong> or <strong>AUDIT_STATE_INIT</strong>, the value of Reason is No Approval Remarks.</li>
+             * <li>If the value of AuditStatus is <strong>AUDIT_STATE_NOT_PASS</strong>, the reason why the signature is rejected is returned.</li>
+             * </ul>
              */
             public Builder reason(Reason reason) {
                 this.reason = reason;
@@ -379,7 +453,10 @@ public class QuerySmsSignListResponseBody extends TeaModel {
             }
 
             /**
-             * SignName.
+             * <p>The name of the signature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Aliyun</p>
              */
             public Builder signName(String signName) {
                 this.signName = signName;

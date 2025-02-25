@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitSparkLogAnalyzeTaskRequest} extends {@link RequestModel}
  *
  * <p>SubmitSparkLogAnalyzeTaskRequest</p>
  */
 public class SubmitSparkLogAnalyzeTaskRequest extends Request {
-    @Body
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
     private SubmitSparkLogAnalyzeTaskRequest(Builder builder) {
@@ -55,7 +60,11 @@ public class SubmitSparkLogAnalyzeTaskRequest extends Request {
         } 
 
         /**
-         * The ID of the Spark application.
+         * <p>The ID of the Spark application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s202301121553hzd9c6f7xxxx</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);

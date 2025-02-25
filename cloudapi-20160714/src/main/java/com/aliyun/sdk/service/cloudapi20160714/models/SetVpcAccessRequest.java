@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetVpcAccessRequest} extends {@link RequestModel}
  *
  * <p>SetVpcAccessRequest</p>
  */
 public class SetVpcAccessRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("Port")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Port")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer port;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Query
-    @NameInMap("VpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
-    @Query
-    @NameInMap("VpcTargetHostName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcTargetHostName")
     private String vpcTargetHostName;
 
     private SetVpcAccessRequest(Builder builder) {
@@ -111,7 +116,7 @@ public class SetVpcAccessRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -135,7 +140,7 @@ public class SetVpcAccessRequest extends Request {
         private String name; 
         private Integer port; 
         private String securityToken; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String vpcId; 
         private String vpcTargetHostName; 
 
@@ -156,7 +161,10 @@ public class SetVpcAccessRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description of the VPC</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -165,7 +173,11 @@ public class SetVpcAccessRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of an ECS or SLB instance in the VPC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-uf6bzcg1pr4oh5jjmxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -174,7 +186,11 @@ public class SetVpcAccessRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the authorization. The name must be unique.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -183,7 +199,11 @@ public class SetVpcAccessRequest extends Request {
         }
 
         /**
-         * Port.
+         * <p>The port number that corresponds to the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
@@ -201,16 +221,20 @@ public class SetVpcAccessRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tag of objects that match the rule. You can specify multiple tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the VPC. The VPC must be an available one that belongs to the same account as the API.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-uf657qec7lx42paw3qxxx</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -219,7 +243,10 @@ public class SetVpcAccessRequest extends Request {
         }
 
         /**
-         * VpcTargetHostName.
+         * <p>The host of the backend service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot.hu***ng.com</p>
          */
         public Builder vpcTargetHostName(String vpcTargetHostName) {
             this.putQueryParameter("VpcTargetHostName", vpcTargetHostName);
@@ -234,11 +261,17 @@ public class SetVpcAccessRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SetVpcAccessRequest} extends {@link TeaModel}
+     *
+     * <p>SetVpcAccessRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -273,7 +306,10 @@ public class SetVpcAccessRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -281,7 +317,10 @@ public class SetVpcAccessRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder value(String value) {
                 this.value = value;

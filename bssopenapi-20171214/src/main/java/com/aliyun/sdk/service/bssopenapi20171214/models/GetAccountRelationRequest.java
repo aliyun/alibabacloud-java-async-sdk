@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAccountRelationRequest} extends {@link RequestModel}
  *
  * <p>GetAccountRelationRequest</p>
  */
 public class GetAccountRelationRequest extends Request {
-    @Query
-    @NameInMap("RelationId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelationId")
     private Long relationId;
 
-    @Query
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetAccountRelationRequest(Builder builder) {
@@ -68,7 +73,10 @@ public class GetAccountRelationRequest extends Request {
         } 
 
         /**
-         * The ID of the financial relationship.
+         * <p>The ID of the financial relationship. Value returned by calling the AddAccountRelation operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder relationId(Long relationId) {
             this.putQueryParameter("RelationId", relationId);
@@ -77,7 +85,10 @@ public class GetAccountRelationRequest extends Request {
         }
 
         /**
-         * The unique ID of the request. The ID is used to mark a request and troubleshoot a problem.
+         * <p>The unique ID of the request. The ID is used to mark a request and troubleshoot a problem.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>requestId</p>
          */
         public Builder requestId(String requestId) {
             this.putQueryParameter("RequestId", requestId);

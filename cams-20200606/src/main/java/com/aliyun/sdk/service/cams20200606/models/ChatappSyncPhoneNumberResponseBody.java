@@ -1,31 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChatappSyncPhoneNumberResponseBody} extends {@link TeaModel}
  *
  * <p>ChatappSyncPhoneNumberResponseBody</p>
  */
 public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PhoneNumbers")
+    @com.aliyun.core.annotation.NameInMap("PhoneNumbers")
     private java.util.List < PhoneNumbers> phoneNumbers;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("Success")
+    private Boolean success;
 
     private ChatappSyncPhoneNumberResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
@@ -33,6 +36,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
         this.message = builder.message;
         this.phoneNumbers = builder.phoneNumbers;
         this.requestId = builder.requestId;
+        this.success = builder.success;
     }
 
     public static Builder builder() {
@@ -78,12 +82,20 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static final class Builder {
         private String accessDeniedDetail; 
         private String code; 
         private String message; 
         private java.util.List < PhoneNumbers> phoneNumbers; 
         private String requestId; 
+        private Boolean success; 
 
         /**
          * AccessDeniedDetail.
@@ -94,11 +106,14 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
-         * <p>
+         * <p>The HTTP status code returned.</p>
+         * <ul>
+         * <li>A value of OK indicates that the call is successful.</li>
+         * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+         * </ul>
          * 
-         * *   A value of OK indicates that the call is successful.
-         * *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +121,10 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -114,7 +132,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the phone numbers.
+         * <p>Details of the phone numbers.</p>
          */
         public Builder phoneNumbers(java.util.List < PhoneNumbers> phoneNumbers) {
             this.phoneNumbers = phoneNumbers;
@@ -122,10 +140,21 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Success.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
             return this;
         }
 
@@ -135,41 +164,47 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ChatappSyncPhoneNumberResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChatappSyncPhoneNumberResponseBody</p>
+     */
     public static class PhoneNumbers extends TeaModel {
-        @NameInMap("CodeVerificationStatus")
+        @com.aliyun.core.annotation.NameInMap("CodeVerificationStatus")
         private String codeVerificationStatus;
 
-        @NameInMap("MessagingLimitTier")
+        @com.aliyun.core.annotation.NameInMap("MessagingLimitTier")
         private String messagingLimitTier;
 
-        @NameInMap("NameStatus")
+        @com.aliyun.core.annotation.NameInMap("NameStatus")
         private String nameStatus;
 
-        @NameInMap("NewNameStatus")
+        @com.aliyun.core.annotation.NameInMap("NewNameStatus")
         private String newNameStatus;
 
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
-        @NameInMap("QualityRating")
+        @com.aliyun.core.annotation.NameInMap("QualityRating")
         private String qualityRating;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusCallbackUrl")
+        @com.aliyun.core.annotation.NameInMap("StatusCallbackUrl")
         private String statusCallbackUrl;
 
-        @NameInMap("StatusQueue")
+        @com.aliyun.core.annotation.NameInMap("StatusQueue")
         private String statusQueue;
 
-        @NameInMap("UpCallbackUrl")
+        @com.aliyun.core.annotation.NameInMap("UpCallbackUrl")
         private String upCallbackUrl;
 
-        @NameInMap("UpQueue")
+        @com.aliyun.core.annotation.NameInMap("UpQueue")
         private String upQueue;
 
-        @NameInMap("VerifiedName")
+        @com.aliyun.core.annotation.NameInMap("VerifiedName")
         private String verifiedName;
 
         private PhoneNumbers(Builder builder) {
@@ -294,7 +329,10 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             private String verifiedName; 
 
             /**
-             * The verification status.
+             * <p>The verification status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VERIFIED</p>
              */
             public Builder codeVerificationStatus(String codeVerificationStatus) {
                 this.codeVerificationStatus = codeVerificationStatus;
@@ -302,7 +340,10 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * The number of phone numbers to which messages can be sent in a day.
+             * <p>The number of phone numbers to which messages can be sent in a day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TIER_10</p>
              */
             public Builder messagingLimitTier(String messagingLimitTier) {
                 this.messagingLimitTier = messagingLimitTier;
@@ -310,7 +351,10 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * The review status of the business display name.
+             * <p>The review status of the business display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Approval</p>
              */
             public Builder nameStatus(String nameStatus) {
                 this.nameStatus = nameStatus;
@@ -318,7 +362,10 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * The review status of the new business display name.
+             * <p>The review status of the new business display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Approval</p>
              */
             public Builder newNameStatus(String newNameStatus) {
                 this.newNameStatus = newNameStatus;
@@ -326,7 +373,10 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * The phone number.
+             * <p>The phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8613800001234</p>
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -334,7 +384,10 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * The quality rating of the phone number. Valid values: GREEN, YELLOW, and RED.
+             * <p>The quality rating of the phone number. Valid values: GREEN, YELLOW, and RED.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GREEN</p>
              */
             public Builder qualityRating(String qualityRating) {
                 this.qualityRating = qualityRating;
@@ -342,7 +395,10 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the phone number.
+             * <p>The status of the phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PENDING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -350,7 +406,10 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * The callback URL to which status reports are sent by using HTTP callbacks.
+             * <p>The callback URL to which status reports are sent by using HTTP callbacks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.alibaba.com/status">https://www.alibaba.com/status</a></p>
              */
             public Builder statusCallbackUrl(String statusCallbackUrl) {
                 this.statusCallbackUrl = statusCallbackUrl;
@@ -358,7 +417,10 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * The status report queue.
+             * <p>The status report queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alicom-09399200-queue</p>
              */
             public Builder statusQueue(String statusQueue) {
                 this.statusQueue = statusQueue;
@@ -366,7 +428,10 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * The callback URL to which MO messages are sent by using HTTP callbacks.
+             * <p>The callback URL to which MO messages are sent by using HTTP callbacks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.alibaba.com/inbound">https://www.alibaba.com/inbound</a></p>
              */
             public Builder upCallbackUrl(String upCallbackUrl) {
                 this.upCallbackUrl = upCallbackUrl;
@@ -374,7 +439,10 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * The mobile originated (MO) message queue.
+             * <p>The mobile originated (MO) message queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alicom-09399200-queue</p>
              */
             public Builder upQueue(String upQueue) {
                 this.upQueue = upQueue;
@@ -382,7 +450,10 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the business to which the phone number belongs.
+             * <p>The display name of the business to which the phone number belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba</p>
              */
             public Builder verifiedName(String verifiedName) {
                 this.verifiedName = verifiedName;

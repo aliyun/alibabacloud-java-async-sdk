@@ -1,86 +1,111 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateServerGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateServerGroupRequest</p>
  */
 public class CreateServerGroupRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectionDrainConfig")
+    private ConnectionDrainConfig connectionDrainConfig;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossZoneEnabled")
+    private Boolean crossZoneEnabled;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("HealthCheckConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private HealthCheckConfig healthCheckConfig;
 
-    @Query
-    @NameInMap("Protocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6Enabled")
+    private Boolean ipv6Enabled;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Protocol")
     private String protocol;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("Scheduler")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scheduler")
     private String scheduler;
 
-    @Query
-    @NameInMap("ServerGroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerGroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serverGroupName;
 
-    @Query
-    @NameInMap("ServerGroupType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerGroupType")
     private String serverGroupType;
 
-    @Query
-    @NameInMap("ServiceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
 
-    @Query
-    @NameInMap("StickySessionConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SlowStartConfig")
+    private SlowStartConfig slowStartConfig;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StickySessionConfig")
     private StickySessionConfig stickySessionConfig;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Query
-    @NameInMap("UchConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UchConfig")
     private UchConfig uchConfig;
 
-    @Query
-    @NameInMap("UpstreamKeepaliveEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UpstreamKeepaliveEnabled")
     private Boolean upstreamKeepaliveEnabled;
 
-    @Query
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     private CreateServerGroupRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.connectionDrainConfig = builder.connectionDrainConfig;
+        this.crossZoneEnabled = builder.crossZoneEnabled;
         this.dryRun = builder.dryRun;
         this.healthCheckConfig = builder.healthCheckConfig;
+        this.ipv6Enabled = builder.ipv6Enabled;
         this.protocol = builder.protocol;
         this.resourceGroupId = builder.resourceGroupId;
         this.scheduler = builder.scheduler;
         this.serverGroupName = builder.serverGroupName;
         this.serverGroupType = builder.serverGroupType;
         this.serviceName = builder.serviceName;
+        this.slowStartConfig = builder.slowStartConfig;
         this.stickySessionConfig = builder.stickySessionConfig;
         this.tag = builder.tag;
         this.uchConfig = builder.uchConfig;
@@ -109,6 +134,20 @@ public class CreateServerGroupRequest extends Request {
     }
 
     /**
+     * @return connectionDrainConfig
+     */
+    public ConnectionDrainConfig getConnectionDrainConfig() {
+        return this.connectionDrainConfig;
+    }
+
+    /**
+     * @return crossZoneEnabled
+     */
+    public Boolean getCrossZoneEnabled() {
+        return this.crossZoneEnabled;
+    }
+
+    /**
      * @return dryRun
      */
     public Boolean getDryRun() {
@@ -120,6 +159,13 @@ public class CreateServerGroupRequest extends Request {
      */
     public HealthCheckConfig getHealthCheckConfig() {
         return this.healthCheckConfig;
+    }
+
+    /**
+     * @return ipv6Enabled
+     */
+    public Boolean getIpv6Enabled() {
+        return this.ipv6Enabled;
     }
 
     /**
@@ -165,6 +211,13 @@ public class CreateServerGroupRequest extends Request {
     }
 
     /**
+     * @return slowStartConfig
+     */
+    public SlowStartConfig getSlowStartConfig() {
+        return this.slowStartConfig;
+    }
+
+    /**
      * @return stickySessionConfig
      */
     public StickySessionConfig getStickySessionConfig() {
@@ -174,7 +227,7 @@ public class CreateServerGroupRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -201,16 +254,20 @@ public class CreateServerGroupRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateServerGroupRequest, Builder> {
         private String clientToken; 
+        private ConnectionDrainConfig connectionDrainConfig; 
+        private Boolean crossZoneEnabled; 
         private Boolean dryRun; 
         private HealthCheckConfig healthCheckConfig; 
+        private Boolean ipv6Enabled; 
         private String protocol; 
         private String resourceGroupId; 
         private String scheduler; 
         private String serverGroupName; 
         private String serverGroupType; 
         private String serviceName; 
+        private SlowStartConfig slowStartConfig; 
         private StickySessionConfig stickySessionConfig; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private UchConfig uchConfig; 
         private Boolean upstreamKeepaliveEnabled; 
         private String vpcId; 
@@ -222,14 +279,18 @@ public class CreateServerGroupRequest extends Request {
         private Builder(CreateServerGroupRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.connectionDrainConfig = request.connectionDrainConfig;
+            this.crossZoneEnabled = request.crossZoneEnabled;
             this.dryRun = request.dryRun;
             this.healthCheckConfig = request.healthCheckConfig;
+            this.ipv6Enabled = request.ipv6Enabled;
             this.protocol = request.protocol;
             this.resourceGroupId = request.resourceGroupId;
             this.scheduler = request.scheduler;
             this.serverGroupName = request.serverGroupName;
             this.serverGroupType = request.serverGroupType;
             this.serviceName = request.serviceName;
+            this.slowStartConfig = request.slowStartConfig;
             this.stickySessionConfig = request.stickySessionConfig;
             this.tag = request.tag;
             this.uchConfig = request.uchConfig;
@@ -238,12 +299,14 @@ public class CreateServerGroupRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -252,11 +315,56 @@ public class CreateServerGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>The configurations of connection draining.</p>
+         * <p>After connection draining is enabled, ALB maintains data transmission for a period of time after the backend server is removed or declared unhealthy.</p>
+         * <blockquote>
+         * <ul>
+         * <li>Basic ALB instances do not support connection draining. Standard and WAF-enabled ALB instances support connection draining.</li>
+         * <li>Server groups of the instance and IP types support connection draining. Server groups of the Function Compute type do not support connection draining.</li>
+         * </ul>
+         * </blockquote>
+         */
+        public Builder connectionDrainConfig(ConnectionDrainConfig connectionDrainConfig) {
+            this.putQueryParameter("ConnectionDrainConfig", connectionDrainConfig);
+            this.connectionDrainConfig = connectionDrainConfig;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to enable cross-zone load balancing. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong> (default)</li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>Basic ALB instances do not support server groups that have cross-zone load balancing disabled. Only Standard and WAF-enabled ALB instances support server groups that have cross-zone load balancing.</p>
+         * </li>
+         * <li><p>Cross-zone load balancing can be disabled for server groups of the server and IP type, but not for server groups of the Function Compute type.</p>
+         * </li>
+         * <li><p>When cross-zone load balancing is disabled, session persistence cannot be enabled.</p>
+         * </li>
+         * </ul>
          * 
-         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder crossZoneEnabled(Boolean crossZoneEnabled) {
+            this.putQueryParameter("CrossZoneEnabled", crossZoneEnabled);
+            this.crossZoneEnabled = crossZoneEnabled;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -265,7 +373,8 @@ public class CreateServerGroupRequest extends Request {
         }
 
         /**
-         * The configuration of health checks.
+         * <p>The configuration of the health check feature.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder healthCheckConfig(HealthCheckConfig healthCheckConfig) {
             this.putQueryParameter("HealthCheckConfig", healthCheckConfig);
@@ -274,14 +383,27 @@ public class CreateServerGroupRequest extends Request {
         }
 
         /**
-         * The backend protocol. Valid values:
-         * <p>
+         * Ipv6Enabled.
+         */
+        public Builder ipv6Enabled(Boolean ipv6Enabled) {
+            this.putQueryParameter("Ipv6Enabled", ipv6Enabled);
+            this.ipv6Enabled = ipv6Enabled;
+            return this;
+        }
+
+        /**
+         * <p>The backend protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>HTTP</strong>: allows you to associate an HTTPS, HTTP, or QUIC listener with the server group. This is the default value.</li>
+         * <li><strong>HTTPS</strong>: allows you to associate HTTPS listeners with backend servers.</li>
+         * <li><strong>gRPC</strong>: allows you to associate an HTTPS or QUIC listener with the server group.</li>
+         * </ul>
+         * <blockquote>
+         * <p> You do not need to specify a backend protocol if you set <strong>ServerGroupType</strong> to <strong>Fc</strong>.</p>
+         * </blockquote>
          * 
-         * *   **HTTP** (default): The server group can be associated with HTTPS, HTTP, and QUIC listeners.
-         * *   **HTTPS**: The server group can be associated with HTTPS listeners.
-         * *   **gRPC**: The server group can be associated with HTTPS and QUIC listeners.
-         * 
-         * > If the **ServerGroupType** parameter is set to **Fc**, you can set Protocol only to **HTTP**.
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder protocol(String protocol) {
             this.putQueryParameter("Protocol", protocol);
@@ -290,7 +412,10 @@ public class CreateServerGroupRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-atstuj3rtop****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -299,14 +424,18 @@ public class CreateServerGroupRequest extends Request {
         }
 
         /**
-         * The scheduling algorithm. Valid values:
-         * <p>
+         * <p>The scheduling algorithm. Valid values:</p>
+         * <ul>
+         * <li><strong>Wrr</strong> (default): The weighted round-robin algorithm is used. Backend servers that have higher weights receive more requests than those that have lower weights.</li>
+         * <li><strong>Wlc</strong>: The weighted least connections algorithm is used. Requests are distributed based on the weights and the number of connections to backend servers. If two backend servers have the same weight, the backend server that has fewer connections is expected to receive more requests.</li>
+         * <li><strong>Sch</strong>: The consistent hashing algorithm is used. Requests from the same source IP address are distributed to the same backend server.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter takes effect when the <strong>ServerGroupType</strong> parameter is set to <strong>Instance</strong> or <strong>Ip</strong>.</p>
+         * </blockquote>
          * 
-         * *   **Wrr** (default): The weighted round-robin algorithm is used. Backend servers that have higher weights receive more requests than those that have lower weights.
-         * *   **Wlc**: The weighted least connections algorithm is used. Requests are distributed based on the weights and the number of connections to backend servers. If two backend servers have the same weight, the backend server that has fewer connections is expected to receive more requests.
-         * *   **Sch**: The consistent hashing algorithm is used. Requests from the same source IP address are distributed to the same backend server.
-         * 
-         * > This parameter takes effect when the **ServerGroupType** parameter is set to **Instance** or **Ip**.
+         * <strong>example:</strong>
+         * <p>Wrr</p>
          */
         public Builder scheduler(String scheduler) {
             this.putQueryParameter("Scheduler", scheduler);
@@ -315,7 +444,11 @@ public class CreateServerGroupRequest extends Request {
         }
 
         /**
-         * The name of the server group. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+         * <p>The name of the server group. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-atstuj3rtoptyui****</p>
          */
         public Builder serverGroupName(String serverGroupName) {
             this.putQueryParameter("ServerGroupName", serverGroupName);
@@ -324,12 +457,15 @@ public class CreateServerGroupRequest extends Request {
         }
 
         /**
-         * The type of server group. Valid values:
-         * <p>
+         * <p>The type of server group. Valid values:</p>
+         * <ul>
+         * <li><strong>Instance</strong> (default): allows you to add servers by specifying <strong>Ecs</strong>, <strong>Eni</strong>, or <strong>Eci</strong>.</li>
+         * <li><strong>Ip</strong>: allows you to add servers by specifying IP addresses.</li>
+         * <li><strong>Fc</strong>: allows you to add servers by specifying functions of Function Compute.</li>
+         * </ul>
          * 
-         * *   **Instance** (default): allows you to add servers by specifying **Ecs**, **Ens**, or **Eci**.
-         * *   **Ip**: allows you to add servers by specifying IP addresses.
-         * *   **Fc**: allows you to add servers by specifying functions of Function Compute.
+         * <strong>example:</strong>
+         * <p>Instance</p>
          */
         public Builder serverGroupType(String serverGroupType) {
             this.putQueryParameter("ServerGroupType", serverGroupType);
@@ -338,7 +474,10 @@ public class CreateServerGroupRequest extends Request {
         }
 
         /**
-         * This parameter is available only if the ALB Ingress controller is used. In this case, set this parameter to the name of the `Kubernetes Service` that is associated with the server group.
+         * <p>This parameter is available only if the ALB Ingress controller is used. In this case, set this parameter to the name of the <code>Kubernetes Service</code> that is associated with the server group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -347,10 +486,29 @@ public class CreateServerGroupRequest extends Request {
         }
 
         /**
-         * The configuration of session persistence.
-         * <p>
-         * 
-         * > This parameter takes effect when the **ServerGroupType** parameter is set to **Instance** or **Ip**.
+         * <p>The configurations of slow starts.
+         * After slow starts are enabled, SLB prefetches data to newly added backend servers. Requests distributed to the backend servers gradually increase.</p>
+         * <blockquote>
+         * <ul>
+         * <li>Basic SLB instances do not support slow starts. Standard and WAF-enabled SLB instances support slow starts.</li>
+         * </ul>
+         * <ul>
+         * <li>Server groups of the server and IP types support slow starts. Server groups of the Function Compute type do not support slow starts.</li>
+         * <li>Slow start is supported only by the weighted round-robin scheduling algorithm.</li>
+         * </ul>
+         * </blockquote>
+         */
+        public Builder slowStartConfig(SlowStartConfig slowStartConfig) {
+            this.putQueryParameter("SlowStartConfig", slowStartConfig);
+            this.slowStartConfig = slowStartConfig;
+            return this;
+        }
+
+        /**
+         * <p>The configuration of session persistence.</p>
+         * <blockquote>
+         * <p> This parameter takes effect when the <strong>ServerGroupType</strong> parameter is set to <strong>Instance</strong> or <strong>Ip</strong>.</p>
+         * </blockquote>
          */
         public Builder stickySessionConfig(StickySessionConfig stickySessionConfig) {
             this.putQueryParameter("StickySessionConfig", stickySessionConfig);
@@ -359,16 +517,16 @@ public class CreateServerGroupRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tag.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The setting of consistent hashing based on URLs.
+         * <p>The configuration of consistent hashing based on URLs.</p>
          */
         public Builder uchConfig(UchConfig uchConfig) {
             this.putQueryParameter("UchConfig", uchConfig);
@@ -377,7 +535,10 @@ public class CreateServerGroupRequest extends Request {
         }
 
         /**
-         * UpstreamKeepaliveEnabled.
+         * <p>Specifies whether to enable persistent TCP connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder upstreamKeepaliveEnabled(Boolean upstreamKeepaliveEnabled) {
             this.putQueryParameter("UpstreamKeepaliveEnabled", upstreamKeepaliveEnabled);
@@ -386,10 +547,13 @@ public class CreateServerGroupRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC). You can add only backend servers that are deployed in the specified VPC to the server group.
-         * <p>
+         * <p>The ID of the virtual private cloud (VPC). You can add only servers that are deployed in the specified VPC to the server group.</p>
+         * <blockquote>
+         * <p> This parameter takes effect when the <strong>ServerGroupType</strong> parameter is set to <strong>Instance</strong> or <strong>Ip</strong>.</p>
+         * </blockquote>
          * 
-         * > This parameter takes effect when the **ServerGroupType** parameter is set to **Instance** or **Ip**.
+         * <strong>example:</strong>
+         * <p>vpc-bp15zckdt37pq72zv****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -404,47 +568,132 @@ public class CreateServerGroupRequest extends Request {
 
     } 
 
-    public static class HealthCheckConfig extends TeaModel {
-        @NameInMap("HealthCheckCodes")
-        private java.util.List < String > healthCheckCodes;
+    /**
+     * 
+     * {@link CreateServerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateServerGroupRequest</p>
+     */
+    public static class ConnectionDrainConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ConnectionDrainEnabled")
+        private Boolean connectionDrainEnabled;
 
-        @NameInMap("HealthCheckConnectPort")
-        @Validation(maximum = 65535)
+        @com.aliyun.core.annotation.NameInMap("ConnectionDrainTimeout")
+        private Integer connectionDrainTimeout;
+
+        private ConnectionDrainConfig(Builder builder) {
+            this.connectionDrainEnabled = builder.connectionDrainEnabled;
+            this.connectionDrainTimeout = builder.connectionDrainTimeout;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ConnectionDrainConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return connectionDrainEnabled
+         */
+        public Boolean getConnectionDrainEnabled() {
+            return this.connectionDrainEnabled;
+        }
+
+        /**
+         * @return connectionDrainTimeout
+         */
+        public Integer getConnectionDrainTimeout() {
+            return this.connectionDrainTimeout;
+        }
+
+        public static final class Builder {
+            private Boolean connectionDrainEnabled; 
+            private Integer connectionDrainTimeout; 
+
+            /**
+             * <p>Specifies whether to enable connection draining. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong> (default)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder connectionDrainEnabled(Boolean connectionDrainEnabled) {
+                this.connectionDrainEnabled = connectionDrainEnabled;
+                return this;
+            }
+
+            /**
+             * <p>The timeout period of connection draining.</p>
+             * <p>Valid values: <strong>0</strong> to <strong>900</strong>.</p>
+             * <p>Default value: <strong>300</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
+             */
+            public Builder connectionDrainTimeout(Integer connectionDrainTimeout) {
+                this.connectionDrainTimeout = connectionDrainTimeout;
+                return this;
+            }
+
+            public ConnectionDrainConfig build() {
+                return new ConnectionDrainConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateServerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateServerGroupRequest</p>
+     */
+    public static class HealthCheckConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("HealthCheckCodes")
+        private java.util.List<String> healthCheckCodes;
+
+        @com.aliyun.core.annotation.NameInMap("HealthCheckConnectPort")
+        @com.aliyun.core.annotation.Validation(maximum = 65535)
         private Integer healthCheckConnectPort;
 
-        @NameInMap("HealthCheckEnabled")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("HealthCheckEnabled")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Boolean healthCheckEnabled;
 
-        @NameInMap("HealthCheckHost")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckHost")
         private String healthCheckHost;
 
-        @NameInMap("HealthCheckHttpVersion")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckHttpVersion")
         private String healthCheckHttpVersion;
 
-        @NameInMap("HealthCheckInterval")
-        @Validation(maximum = 50, minimum = 1)
+        @com.aliyun.core.annotation.NameInMap("HealthCheckInterval")
+        @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
         private Integer healthCheckInterval;
 
-        @NameInMap("HealthCheckMethod")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckMethod")
         private String healthCheckMethod;
 
-        @NameInMap("HealthCheckPath")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckPath")
         private String healthCheckPath;
 
-        @NameInMap("HealthCheckProtocol")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckProtocol")
         private String healthCheckProtocol;
 
-        @NameInMap("HealthCheckTimeout")
-        @Validation(maximum = 300, minimum = 1)
+        @com.aliyun.core.annotation.NameInMap("HealthCheckTimeout")
+        @com.aliyun.core.annotation.Validation(maximum = 300, minimum = 1)
         private Integer healthCheckTimeout;
 
-        @NameInMap("HealthyThreshold")
-        @Validation(maximum = 10, minimum = 2)
+        @com.aliyun.core.annotation.NameInMap("HealthyThreshold")
+        @com.aliyun.core.annotation.Validation(maximum = 10, minimum = 2)
         private Integer healthyThreshold;
 
-        @NameInMap("UnhealthyThreshold")
-        @Validation(maximum = 10, minimum = 2)
+        @com.aliyun.core.annotation.NameInMap("UnhealthyThreshold")
+        @com.aliyun.core.annotation.Validation(maximum = 10, minimum = 2)
         private Integer unhealthyThreshold;
 
         private HealthCheckConfig(Builder builder) {
@@ -473,7 +722,7 @@ public class CreateServerGroupRequest extends Request {
         /**
          * @return healthCheckCodes
          */
-        public java.util.List < String > getHealthCheckCodes() {
+        public java.util.List<String> getHealthCheckCodes() {
             return this.healthCheckCodes;
         }
 
@@ -555,7 +804,7 @@ public class CreateServerGroupRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > healthCheckCodes; 
+            private java.util.List<String> healthCheckCodes; 
             private Integer healthCheckConnectPort; 
             private Boolean healthCheckEnabled; 
             private String healthCheckHost; 
@@ -569,20 +818,20 @@ public class CreateServerGroupRequest extends Request {
             private Integer unhealthyThreshold; 
 
             /**
-             * The HTTP status codes that are used to determine whether the backend server passes the health check.
+             * <p>The HTTP status codes that indicate healthy backend servers.</p>
              */
-            public Builder healthCheckCodes(java.util.List < String > healthCheckCodes) {
+            public Builder healthCheckCodes(java.util.List<String> healthCheckCodes) {
                 this.healthCheckCodes = healthCheckCodes;
                 return this;
             }
 
             /**
-             * The port that you want to use for health checks on backend servers.
-             * <p>
+             * <p>The backend port that is used for health checks.</p>
+             * <p>Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+             * <p>The default value is <strong>0</strong>, which specifies that the port of a backend server is used for health checks.</p>
              * 
-             * Valid values: **0** to **65535**.
-             * 
-             * Default value: **0**. If you set the value to 0, the port of a backend server is used for health checks.
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder healthCheckConnectPort(Integer healthCheckConnectPort) {
                 this.healthCheckConnectPort = healthCheckConnectPort;
@@ -590,13 +839,18 @@ public class CreateServerGroupRequest extends Request {
             }
 
             /**
-             * Indicates whether the health check feature is enabled. Valid values:
-             * <p>
+             * <p>Specifies whether to enable the health check feature. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p> If the <strong>ServerGroupType</strong> parameter is set to <strong>Instance</strong> or <strong>Ip</strong>, the health check feature is enabled by default. If the <strong>ServerGroupType</strong> parameter is set to <strong>Fc</strong>, the health check feature is disabled by default.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * *   **true**
-             * *   **false**
-             * 
-             * > If the **ServerGroupType** parameter is set to **Instance** or **Ip**, the health check feature is enabled by default. If the **ServerGroupType** parameter is set to **Fc**, the health check feature is disabled by default.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder healthCheckEnabled(Boolean healthCheckEnabled) {
                 this.healthCheckEnabled = healthCheckEnabled;
@@ -604,16 +858,26 @@ public class CreateServerGroupRequest extends Request {
             }
 
             /**
-             * The domain name that is used for health checks. The domain name must meet the following requirements:
-             * <p>
+             * <p>The domain name that is used for health checks.</p>
+             * <ul>
+             * <li><p><strong>Backend Server Internal IP</strong> (default): Use the internal IP address of backend servers as the health check domain name.</p>
+             * </li>
+             * <li><p><strong>Custom Domain Name</strong>: Enter a domain name.</p>
+             * <ul>
+             * <li>The domain name must be 1 to 80 characters in length.</li>
+             * <li>The domain name can contain lowercase letters, digits, hyphens (-), and periods (.).</li>
+             * <li>The domain name can contain at least one period (.) but cannot start or end with a period (.).</li>
+             * <li>The rightmost domain label of the domain name can contain only letters, and cannot contain digits or hyphens (-).</li>
+             * <li>The domain name cannot start or end with a hyphen (-).</li>
+             * </ul>
+             * </li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter takes effect only if <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong>, <strong>HTTPS</strong>, or <strong>gRPC</strong>.</p>
+             * </blockquote>
              * 
-             * *   The domain name must be 1 to 80 characters in length.
-             * *   The domain name can contain lowercase letters, digits, hyphens (-), and periods (.).
-             * *   It must contain at least one period (.) but cannot start or end with a period (.).
-             * *   The rightmost domain label of the domain name can contain only letters, and cannot contain digits or hyphens (-).
-             * *   The domain name cannot start or end with a hyphen (-).
-             * 
-             * > This parameter takes effect only when the **HealthCheckProtocol** parameter is set to **HTTP**.
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder healthCheckHost(String healthCheckHost) {
                 this.healthCheckHost = healthCheckHost;
@@ -621,10 +885,13 @@ public class CreateServerGroupRequest extends Request {
             }
 
             /**
-             * The HTTP version. Valid values: **HTTP1.0** and **HTTP1.1**. Default value: HTTP1.1.
-             * <p>
+             * <p>The version of the HTTP protocol. Valid values: <strong>HTTP1.0</strong> and <strong>HTTP1.1</strong>. Default value: HTTP1.1.</p>
+             * <blockquote>
+             * <p> This parameter takes effect only if <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
+             * </blockquote>
              * 
-             * > This parameter takes effect only when the **HealthCheckProtocol** parameter is set to **HTTP**.
+             * <strong>example:</strong>
+             * <p>HTTP1.1</p>
              */
             public Builder healthCheckHttpVersion(String healthCheckHttpVersion) {
                 this.healthCheckHttpVersion = healthCheckHttpVersion;
@@ -632,12 +899,12 @@ public class CreateServerGroupRequest extends Request {
             }
 
             /**
-             * The interval at which health checks are performed. Unit: seconds.
-             * <p>
+             * <p>The interval at which health checks are performed. Unit: seconds.</p>
+             * <p>Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+             * <p>Default value: <strong>2</strong>.</p>
              * 
-             * Valid values: **1** to **50**.
-             * 
-             * Default value: **2**.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder healthCheckInterval(Integer healthCheckInterval) {
                 this.healthCheckInterval = healthCheckInterval;
@@ -645,14 +912,18 @@ public class CreateServerGroupRequest extends Request {
             }
 
             /**
-             * The HTTP method that is used for health checks. Valid values:
-             * <p>
+             * <p>The HTTP method that is used for health checks. Valid values:</p>
+             * <ul>
+             * <li><strong>GET</strong>: If the length of a response exceeds 8 KB, the response is truncated. However, the health check result is not affected.</li>
+             * <li><strong>POST</strong>: By default, gRPC health checks use the POST method.</li>
+             * <li><strong>HEAD</strong> (default): By default, HTTP and HTTPS use the HEAD method.</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter takes effect only if <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong>, <strong>HTTPS</strong>, or <strong>gRPC</strong>.</p>
+             * </blockquote>
              * 
-             * *   **GET**: If the length of a response exceeds 8 KB, the response is truncated. However, the health check result is not affected.
-             * *   **POST**: gRPC health checks automatically use the POST method.
-             * *   **HEAD**: By default, HTTP health checks use the HEAD method.
-             * 
-             * > This parameter takes effect only when the **HealthCheckProtocol** parameter is set to **HTTP** or **gRPC**.
+             * <strong>example:</strong>
+             * <p>HEAD</p>
              */
             public Builder healthCheckMethod(String healthCheckMethod) {
                 this.healthCheckMethod = healthCheckMethod;
@@ -660,12 +931,14 @@ public class CreateServerGroupRequest extends Request {
             }
 
             /**
-             * The path that is used for health checks.
-             * <p>
+             * <p>The path that is used for health checks.</p>
+             * <p>The URL must be 1 to 80 characters in length, and can contain letters, digits, and the following special characters: <code>- / . % ? # &amp; =</code>. It can also contain the following extended characters: <code>_ ; ~ ! ( ) * [ ] @ $ ^ : \&quot; , +</code>. The URL must start with a forward slash (/).</p>
+             * <blockquote>
+             * <p> This parameter takes effect only if <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
+             * </blockquote>
              * 
-             * The path must be 1 to 80 characters in length and can contain only letters, digits, and the following special characters: `- / . % ? # & =`. It can also contain the following extended characters: `_ ; ~ ! ( ) * [ ] @ $ ^ : \" , +`. The URL must start with a forward slash (/).
-             * 
-             * > This parameter takes effect only when the **HealthCheckProtocol** parameter is set to **HTTP**.
+             * <strong>example:</strong>
+             * <p>/test/index.html</p>
              */
             public Builder healthCheckPath(String healthCheckPath) {
                 this.healthCheckPath = healthCheckPath;
@@ -673,12 +946,16 @@ public class CreateServerGroupRequest extends Request {
             }
 
             /**
-             * The protocol that is used for health checks. Valid values:
-             * <p>
+             * <p>The protocol that is used for health checks. Valid values:</p>
+             * <ul>
+             * <li><strong>HTTP</strong>: HTTP health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers.</li>
+             * <li><strong>HTTPS</strong>: HTTPS health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers. HTTPS provides higher security than HTTP because HTTPS supports data encryption.</li>
+             * <li><strong>TCP</strong>: TCP health checks send TCP SYN packets to a backend server to probe the availability of backend servers.</li>
+             * <li><strong>gRPC</strong>: gRPC health checks send POST or GET requests to a backend server to check whether the backend server is healthy.</li>
+             * </ul>
              * 
-             * *   **HTTP**: To perform HTTP health checks, Application Load Balancer (ALB) sends HEAD or GET requests to a backend server to check whether the backend server is healthy.
-             * *   **HTTPS**: To perform HTTPS health checks, ALB sends SYN packets to a backend server to check whether the port of the backend server is available to receive requests.
-             * *   **gRPC**: To perform gRPC health checks, ALB sends POST or GET requests to a backend server to check whether the backend server is healthy.
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder healthCheckProtocol(String healthCheckProtocol) {
                 this.healthCheckProtocol = healthCheckProtocol;
@@ -686,14 +963,12 @@ public class CreateServerGroupRequest extends Request {
             }
 
             /**
-             * Specify the timeout period of a health check response. If a backend server, such as an Elastic Compute Service (ECS) instance, does not return a health check response within the specified timeout period, the server fails the health check. Unit: seconds.
-             * <p>
+             * <p>The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the backend server is declared unhealthy. Unit: seconds.</p>
+             * <p>Valid values: <strong>1</strong> to <strong>300</strong>.</p>
+             * <p>Default value: <strong>5</strong>.</p>
              * 
-             * Valid values: **1** to **300**.
-             * 
-             * Default value: **5**.
-             * 
-             * > If the value of the **HealthCheckTimeout** parameter is smaller than that of the **HealthCheckInterval** parameter, the timeout period specified by the **HealthCheckTimeout** parameter is ignored and the value of the **HealthCheckInterval** parameter is used as the timeout period.
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder healthCheckTimeout(Integer healthCheckTimeout) {
                 this.healthCheckTimeout = healthCheckTimeout;
@@ -701,12 +976,12 @@ public class CreateServerGroupRequest extends Request {
             }
 
             /**
-             * The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from **fail** to **success**.
-             * <p>
+             * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health check status of the backend server changes from <strong>fail</strong> to <strong>success</strong>.</p>
+             * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
+             * <p>Default value: <strong>3</strong>.</p>
              * 
-             * Valid values: **2** to **10**.
-             * 
-             * Default value: **3**.
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder healthyThreshold(Integer healthyThreshold) {
                 this.healthyThreshold = healthyThreshold;
@@ -714,12 +989,12 @@ public class CreateServerGroupRequest extends Request {
             }
 
             /**
-             * The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from **success** to **fail**.
-             * <p>
+             * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health check status of the backend server changes from <strong>success</strong> to <strong>fail</strong>.</p>
+             * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
+             * <p>Default value: <strong>3</strong>.</p>
              * 
-             * Valid values: **2** to **10**.
-             * 
-             * Default value: **3**.
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder unhealthyThreshold(Integer unhealthyThreshold) {
                 this.unhealthyThreshold = unhealthyThreshold;
@@ -733,18 +1008,105 @@ public class CreateServerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateServerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateServerGroupRequest</p>
+     */
+    public static class SlowStartConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SlowStartDuration")
+        private Integer slowStartDuration;
+
+        @com.aliyun.core.annotation.NameInMap("SlowStartEnabled")
+        private Boolean slowStartEnabled;
+
+        private SlowStartConfig(Builder builder) {
+            this.slowStartDuration = builder.slowStartDuration;
+            this.slowStartEnabled = builder.slowStartEnabled;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SlowStartConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return slowStartDuration
+         */
+        public Integer getSlowStartDuration() {
+            return this.slowStartDuration;
+        }
+
+        /**
+         * @return slowStartEnabled
+         */
+        public Boolean getSlowStartEnabled() {
+            return this.slowStartEnabled;
+        }
+
+        public static final class Builder {
+            private Integer slowStartDuration; 
+            private Boolean slowStartEnabled; 
+
+            /**
+             * <p>The duration of a slow start.
+             * Valid values: 30 to 900.
+             * Default value: 30.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
+             */
+            public Builder slowStartDuration(Integer slowStartDuration) {
+                this.slowStartDuration = slowStartDuration;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether to enable slow starts. Valid values:</p>
+             * <ul>
+             * <li><p>true</p>
+             * </li>
+             * <li><p>false(default)</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder slowStartEnabled(Boolean slowStartEnabled) {
+                this.slowStartEnabled = slowStartEnabled;
+                return this;
+            }
+
+            public SlowStartConfig build() {
+                return new SlowStartConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateServerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateServerGroupRequest</p>
+     */
     public static class StickySessionConfig extends TeaModel {
-        @NameInMap("Cookie")
+        @com.aliyun.core.annotation.NameInMap("Cookie")
         private String cookie;
 
-        @NameInMap("CookieTimeout")
-        @Validation(maximum = 86400, minimum = 1)
+        @com.aliyun.core.annotation.NameInMap("CookieTimeout")
+        @com.aliyun.core.annotation.Validation(maximum = 86400, minimum = 1)
         private Integer cookieTimeout;
 
-        @NameInMap("StickySessionEnabled")
+        @com.aliyun.core.annotation.NameInMap("StickySessionEnabled")
         private Boolean stickySessionEnabled;
 
-        @NameInMap("StickySessionType")
+        @com.aliyun.core.annotation.NameInMap("StickySessionType")
         private String stickySessionType;
 
         private StickySessionConfig(Builder builder) {
@@ -797,12 +1159,14 @@ public class CreateServerGroupRequest extends Request {
             private String stickySessionType; 
 
             /**
-             * The cookie to be configured on the server.
-             * <p>
+             * <p>The cookie that you want to configure for the server.</p>
+             * <p>The cookie must be 1 to 200 characters in length, and can contain only ASCII letters and digits. It cannot contain commas (,), semicolons (;), or space characters. It cannot start with a dollar sign ($).</p>
+             * <blockquote>
+             * <p> This parameter takes effect only when <strong>StickySessionEnabled</strong> is set to <strong>true</strong> and <strong>StickySessionType</strong> is set to <strong>server</strong>.</p>
+             * </blockquote>
              * 
-             * The cookie must be 1 to 200 characters in length and can contain only ASCII characters and digits. It cannot contain commas (,), semicolons (;), or space characters. It cannot start with a dollar sign ($).
-             * 
-             * > This parameter takes effect when the **StickySessionEnabled** parameter is set to **true** and the **StickySessionType** parameter is set to **Server**.
+             * <strong>example:</strong>
+             * <p>B490B5EBF6F3CD402E515D22BCDA****</p>
              */
             public Builder cookie(String cookie) {
                 this.cookie = cookie;
@@ -810,14 +1174,15 @@ public class CreateServerGroupRequest extends Request {
             }
 
             /**
-             * The timeout period of a cookie. Unit: seconds.
-             * <p>
+             * <p>The maximum amount of time to wait before the session cookie expires. Unit: seconds.</p>
+             * <p>Valid values: <strong>1</strong> to <strong>86400</strong>.</p>
+             * <p>Default value: <strong>1000</strong>.</p>
+             * <blockquote>
+             * <p> This parameter takes effect only when <strong>StickySessionEnabled</strong> is set to <strong>true</strong> and <strong>StickySessionType</strong> is set to <strong>Insert</strong>.</p>
+             * </blockquote>
              * 
-             * Valid values: **1** to **86400**.
-             * 
-             * Default value: **1000**.
-             * 
-             * > This parameter takes effect only when the **StickySessionEnabled** parameter is set to **true** and the **StickySessionType** parameter is set to **Insert**.
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder cookieTimeout(Integer cookieTimeout) {
                 this.cookieTimeout = cookieTimeout;
@@ -825,13 +1190,17 @@ public class CreateServerGroupRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable session persistence. Valid values:
-             * <p>
+             * <p>Specifies whether to enable session persistence. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter takes effect when the <strong>ServerGroupType</strong> parameter is set to <strong>Instance</strong> or <strong>Ip</strong>.</p>
+             * </blockquote>
              * 
-             * *   **true**
-             * *   **false** (default)
-             * 
-             * > This parameter takes effect when the **ServerGroupType** parameter is set to **Instance** or **Ip**.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder stickySessionEnabled(Boolean stickySessionEnabled) {
                 this.stickySessionEnabled = stickySessionEnabled;
@@ -839,18 +1208,17 @@ public class CreateServerGroupRequest extends Request {
             }
 
             /**
-             * The method that is used to handle a cookie. Valid values:
-             * <p>
+             * <p>The method that is used to handle cookies. Valid values:</p>
+             * <ul>
+             * <li><strong>Insert</strong> (default value): inserts a cookie. The first time a client accesses SLB, SLB inserts the SERVERID cookie into the HTTP or HTTPS response packet. Subsequent requests from the client that carry this cookie are forwarded to the same backend server as the first request.</li>
+             * <li><strong>Server</strong>: rewrites a cookie. SLB rewrites the custom cookies in requests from a client. Subsequent requests from the client that carry the new cookie are forwarded to the same backend server as the first request.</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter takes effect when the <strong>StickySessionEnabled</strong> parameter is set to <strong>true</strong>.</p>
+             * </blockquote>
              * 
-             * *   **Insert** (default): inserts a cookie.
-             * 
-             * ALB inserts a session cookie (SERVERID) into the first HTTP or HTTPS response that is sent to a client. Subsequent requests to ALB carry this cookie, and ALB determines the destination servers of the requests based on the cookies.
-             * 
-             * *   **Server**: rewrites a cookie.
-             * 
-             * When ALB detects a user-defined cookie, it overwrites the original cookie with the user-defined cookie. Subsequent requests to ALB carry this user-defined cookie, and ALB determines the destination servers of the requests based on the cookies.
-             * 
-             * > This parameter takes effect when the **StickySessionEnabled** parameter is set to **true**.
+             * <strong>example:</strong>
+             * <p>Insert</p>
              */
             public Builder stickySessionType(String stickySessionType) {
                 this.stickySessionType = stickySessionType;
@@ -864,11 +1232,17 @@ public class CreateServerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateServerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateServerGroupRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -903,7 +1277,10 @@ public class CreateServerGroupRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key. The tag key can be up to 128 characters in length, and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -911,7 +1288,10 @@ public class CreateServerGroupRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value. The tag value can be up to 128 characters in length, and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>product</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -925,13 +1305,19 @@ public class CreateServerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateServerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateServerGroupRequest</p>
+     */
     public static class UchConfig extends TeaModel {
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
-        @NameInMap("Value")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Value")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String value;
 
         private UchConfig(Builder builder) {
@@ -966,7 +1352,11 @@ public class CreateServerGroupRequest extends Request {
             private String value; 
 
             /**
-             * Type
+             * <p>The type of the parameter.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>QueryString</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -974,7 +1364,11 @@ public class CreateServerGroupRequest extends Request {
             }
 
             /**
-             * The setting of consistent hashing.
+             * <p>The parameter value for consistent hashing.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder value(String value) {
                 this.value = value;

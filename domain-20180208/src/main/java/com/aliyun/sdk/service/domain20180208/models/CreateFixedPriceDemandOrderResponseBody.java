@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFixedPriceDemandOrderResponseBody} extends {@link TeaModel}
  *
  * <p>CreateFixedPriceDemandOrderResponseBody</p>
  */
 public class CreateFixedPriceDemandOrderResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Module")
+    @com.aliyun.core.annotation.NameInMap("Module")
     private Module module;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateFixedPriceDemandOrderResponseBody(Builder builder) {
@@ -131,14 +136,20 @@ public class CreateFixedPriceDemandOrderResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateFixedPriceDemandOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateFixedPriceDemandOrderResponseBody</p>
+     */
     public static class Module extends TeaModel {
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("OrderNo")
+        @com.aliyun.core.annotation.NameInMap("OrderNo")
         private String orderNo;
 
-        @NameInMap("Price")
+        @com.aliyun.core.annotation.NameInMap("Price")
         private Long price;
 
         private Module(Builder builder) {

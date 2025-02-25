@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddAliClusterIdsToPrometheusGlobalViewRequest} extends {@link RequestModel}
  *
  * <p>AddAliClusterIdsToPrometheusGlobalViewRequest</p>
  */
 public class AddAliClusterIdsToPrometheusGlobalViewRequest extends Request {
-    @Query
-    @NameInMap("ClusterIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterIds;
 
-    @Query
-    @NameInMap("GlobalViewClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GlobalViewClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String globalViewClusterId;
 
-    @Query
-    @NameInMap("GroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupName;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private AddAliClusterIdsToPrometheusGlobalViewRequest(Builder builder) {
@@ -100,7 +105,11 @@ public class AddAliClusterIdsToPrometheusGlobalViewRequest extends Request {
         } 
 
         /**
-         * The IDs of clusters. Separate multiple IDs with commas (,).
+         * <p>The IDs of clusters. Separate multiple IDs with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cd1d55bef19904324a20ed0ebb86caa5c,c5b48729918ab4745a24482ac29d0973a, c00a94896641449098bf24931e4166003, cd174485c09384060ba542bc1be1185a4</p>
          */
         public Builder clusterIds(String clusterIds) {
             this.putQueryParameter("ClusterIds", clusterIds);
@@ -109,7 +118,11 @@ public class AddAliClusterIdsToPrometheusGlobalViewRequest extends Request {
         }
 
         /**
-         * The ID of the global aggregation instance.
+         * <p>The ID of the global aggregation instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>global-v2-cn-1478326682034601-vss8pd0i</p>
          */
         public Builder globalViewClusterId(String globalViewClusterId) {
             this.putQueryParameter("GlobalViewClusterId", globalViewClusterId);
@@ -118,7 +131,11 @@ public class AddAliClusterIdsToPrometheusGlobalViewRequest extends Request {
         }
 
         /**
-         * The name of the global aggregation instance.
+         * <p>The name of the global aggregation instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zyGlobalView</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -127,7 +144,11 @@ public class AddAliClusterIdsToPrometheusGlobalViewRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

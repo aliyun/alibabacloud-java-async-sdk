@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CloseDBClusterMigrationRequest} extends {@link RequestModel}
  *
  * <p>CloseDBClusterMigrationRequest</p>
  */
 public class CloseDBClusterMigrationRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ContinueEnableBinlog")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContinueEnableBinlog")
     private Boolean continueEnableBinlog;
 
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private CloseDBClusterMigrationRequest(Builder builder) {
@@ -148,15 +153,18 @@ public class CloseDBClusterMigrationRequest extends Request {
         }
 
         /**
-         * Specifies whether to continue to enable binary logging. Valid values:
-         * <p>
+         * <p>Specifies whether to continue to enable binary logging. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: continues to enable binary logging.</li>
+         * <li><strong>false</strong>: disables binary logging.</li>
+         * </ul>
+         * <p>Default value: <strong>true</strong>.</p>
+         * <blockquote>
+         * <p>If binary logging is disabled, your PolarDB cluster is restarted.</p>
+         * </blockquote>
          * 
-         * *   **true**: continues to enable binary logging.
-         * *   **false**: disables binary logging.
-         * 
-         * Default value: **true**.
-         * 
-         * > If binary logging is disabled, your PolarDB cluster is restarted.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder continueEnableBinlog(Boolean continueEnableBinlog) {
             this.putQueryParameter("ContinueEnableBinlog", continueEnableBinlog);
@@ -165,7 +173,11 @@ public class CloseDBClusterMigrationRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-**************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

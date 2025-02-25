@@ -1,33 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.schedulerx220190430.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAppGroupResponseBody} extends {@link TeaModel}
  *
  * <p>GetAppGroupResponseBody</p>
  */
 public class GetAppGroupResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private AccessDeniedDetail accessDeniedDetail;
+
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetAppGroupResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -41,6 +45,13 @@ public class GetAppGroupResponseBody extends TeaModel {
 
     public static GetAppGroupResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public AccessDeniedDetail getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -79,6 +90,7 @@ public class GetAppGroupResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private AccessDeniedDetail accessDeniedDetail; 
         private Integer code; 
         private Data data; 
         private String message; 
@@ -86,7 +98,18 @@ public class GetAppGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
+
+        /**
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class GetAppGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The information about the application group.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,10 @@ public class GetAppGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The additional information that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app is not existed, groupId=xxxx, namesapce=xxxx</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +136,10 @@ public class GetAppGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39090022-1F3B-4797-8518-6B61095F1AF0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +147,14 @@ public class GetAppGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,31 +167,208 @@ public class GetAppGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAppGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAppGroupResponseBody</p>
+     */
+    public static class AccessDeniedDetail extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AuthAction")
+        private String authAction;
+
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalDisplayName")
+        private String authPrincipalDisplayName;
+
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalOwnerId")
+        private String authPrincipalOwnerId;
+
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalType")
+        private String authPrincipalType;
+
+        @com.aliyun.core.annotation.NameInMap("EncodedDiagnosticMessage")
+        private String encodedDiagnosticMessage;
+
+        @com.aliyun.core.annotation.NameInMap("NoPermissionType")
+        private String noPermissionType;
+
+        @com.aliyun.core.annotation.NameInMap("PolicyType")
+        private String policyType;
+
+        private AccessDeniedDetail(Builder builder) {
+            this.authAction = builder.authAction;
+            this.authPrincipalDisplayName = builder.authPrincipalDisplayName;
+            this.authPrincipalOwnerId = builder.authPrincipalOwnerId;
+            this.authPrincipalType = builder.authPrincipalType;
+            this.encodedDiagnosticMessage = builder.encodedDiagnosticMessage;
+            this.noPermissionType = builder.noPermissionType;
+            this.policyType = builder.policyType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AccessDeniedDetail create() {
+            return builder().build();
+        }
+
+        /**
+         * @return authAction
+         */
+        public String getAuthAction() {
+            return this.authAction;
+        }
+
+        /**
+         * @return authPrincipalDisplayName
+         */
+        public String getAuthPrincipalDisplayName() {
+            return this.authPrincipalDisplayName;
+        }
+
+        /**
+         * @return authPrincipalOwnerId
+         */
+        public String getAuthPrincipalOwnerId() {
+            return this.authPrincipalOwnerId;
+        }
+
+        /**
+         * @return authPrincipalType
+         */
+        public String getAuthPrincipalType() {
+            return this.authPrincipalType;
+        }
+
+        /**
+         * @return encodedDiagnosticMessage
+         */
+        public String getEncodedDiagnosticMessage() {
+            return this.encodedDiagnosticMessage;
+        }
+
+        /**
+         * @return noPermissionType
+         */
+        public String getNoPermissionType() {
+            return this.noPermissionType;
+        }
+
+        /**
+         * @return policyType
+         */
+        public String getPolicyType() {
+            return this.policyType;
+        }
+
+        public static final class Builder {
+            private String authAction; 
+            private String authPrincipalDisplayName; 
+            private String authPrincipalOwnerId; 
+            private String authPrincipalType; 
+            private String encodedDiagnosticMessage; 
+            private String noPermissionType; 
+            private String policyType; 
+
+            /**
+             * AuthAction.
+             */
+            public Builder authAction(String authAction) {
+                this.authAction = authAction;
+                return this;
+            }
+
+            /**
+             * AuthPrincipalDisplayName.
+             */
+            public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
+                this.authPrincipalDisplayName = authPrincipalDisplayName;
+                return this;
+            }
+
+            /**
+             * AuthPrincipalOwnerId.
+             */
+            public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
+                this.authPrincipalOwnerId = authPrincipalOwnerId;
+                return this;
+            }
+
+            /**
+             * AuthPrincipalType.
+             */
+            public Builder authPrincipalType(String authPrincipalType) {
+                this.authPrincipalType = authPrincipalType;
+                return this;
+            }
+
+            /**
+             * EncodedDiagnosticMessage.
+             */
+            public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
+                this.encodedDiagnosticMessage = encodedDiagnosticMessage;
+                return this;
+            }
+
+            /**
+             * NoPermissionType.
+             */
+            public Builder noPermissionType(String noPermissionType) {
+                this.noPermissionType = noPermissionType;
+                return this;
+            }
+
+            /**
+             * PolicyType.
+             */
+            public Builder policyType(String policyType) {
+                this.policyType = policyType;
+                return this;
+            }
+
+            public AccessDeniedDetail build() {
+                return new AccessDeniedDetail(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAppGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAppGroupResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AppKey")
+        @com.aliyun.core.annotation.NameInMap("AppKey")
         private String appKey;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("CurJobs")
+        @com.aliyun.core.annotation.NameInMap("AppVersion")
+        private String appVersion;
+
+        @com.aliyun.core.annotation.NameInMap("CurJobs")
         private Integer curJobs;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("MaxJobs")
+        @com.aliyun.core.annotation.NameInMap("MaxJobs")
         private Integer maxJobs;
 
-        @NameInMap("MonitorConfigJson")
+        @com.aliyun.core.annotation.NameInMap("MonitorConfigJson")
         private String monitorConfigJson;
 
         private Data(Builder builder) {
             this.appKey = builder.appKey;
             this.appName = builder.appName;
+            this.appVersion = builder.appVersion;
             this.curJobs = builder.curJobs;
             this.description = builder.description;
             this.groupId = builder.groupId;
@@ -183,6 +396,13 @@ public class GetAppGroupResponseBody extends TeaModel {
          */
         public String getAppName() {
             return this.appName;
+        }
+
+        /**
+         * @return appVersion
+         */
+        public String getAppVersion() {
+            return this.appVersion;
         }
 
         /**
@@ -223,6 +443,7 @@ public class GetAppGroupResponseBody extends TeaModel {
         public static final class Builder {
             private String appKey; 
             private String appName; 
+            private String appVersion; 
             private Integer curJobs; 
             private String description; 
             private String groupId; 
@@ -230,7 +451,10 @@ public class GetAppGroupResponseBody extends TeaModel {
             private String monitorConfigJson; 
 
             /**
-             * AppKey.
+             * <p>The AppKey of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>QI4lWMZ+xk1rNB67jFUhaw==</p>
              */
             public Builder appKey(String appKey) {
                 this.appKey = appKey;
@@ -238,7 +462,10 @@ public class GetAppGroupResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DocTest</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -246,7 +473,21 @@ public class GetAppGroupResponseBody extends TeaModel {
             }
 
             /**
-             * CurJobs.
+             * <p>The application version. 1: Basic version, 2: Professional version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
+             */
+            public Builder appVersion(String appVersion) {
+                this.appVersion = appVersion;
+                return this;
+            }
+
+            /**
+             * <p>The number of jobs that are configured for the application group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder curJobs(Integer curJobs) {
                 this.curJobs = curJobs;
@@ -254,7 +495,10 @@ public class GetAppGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -262,7 +506,10 @@ public class GetAppGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testSchedulerx.defaultGroup</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -270,7 +517,10 @@ public class GetAppGroupResponseBody extends TeaModel {
             }
 
             /**
-             * MaxJobs.
+             * <p>The maximum number of jobs that can be configured for the application group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder maxJobs(Integer maxJobs) {
                 this.maxJobs = maxJobs;
@@ -278,7 +528,10 @@ public class GetAppGroupResponseBody extends TeaModel {
             }
 
             /**
-             * MonitorConfigJson.
+             * <p>The configuration of the alert. The value is a JSON string. For more information, see <strong>the additional information about response parameters below this table.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;sendChannel&quot;:&quot;sms,mail,ding&quot;}</p>
              */
             public Builder monitorConfigJson(String monitorConfigJson) {
                 this.monitorConfigJson = monitorConfigJson;

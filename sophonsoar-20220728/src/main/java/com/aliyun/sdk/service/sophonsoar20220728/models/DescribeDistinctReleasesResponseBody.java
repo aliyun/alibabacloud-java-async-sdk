@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDistinctReleasesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDistinctReleasesResponseBody</p>
  */
 public class DescribeDistinctReleasesResponseBody extends TeaModel {
-    @NameInMap("Records")
+    @com.aliyun.core.annotation.NameInMap("Records")
     private java.util.List < Records> records;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDistinctReleasesResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeDistinctReleasesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Records.
+         * <p>The information about versions.</p>
          */
         public Builder records(java.util.List < Records> records) {
             this.records = records;
@@ -58,7 +58,10 @@ public class DescribeDistinctReleasesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>145CACF6-D276-5197-8549-CB1AD76E2AC8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,16 +74,26 @@ public class DescribeDistinctReleasesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDistinctReleasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDistinctReleasesResponseBody</p>
+     */
     public static class Records extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("TaskflowMd5")
+        @com.aliyun.core.annotation.NameInMap("TaskflowMd5")
         private String taskflowMd5;
+
+        @com.aliyun.core.annotation.NameInMap("TaskflowType")
+        private String taskflowType;
 
         private Records(Builder builder) {
             this.description = builder.description;
             this.taskflowMd5 = builder.taskflowMd5;
+            this.taskflowType = builder.taskflowType;
         }
 
         public static Builder builder() {
@@ -105,12 +118,23 @@ public class DescribeDistinctReleasesResponseBody extends TeaModel {
             return this.taskflowMd5;
         }
 
+        /**
+         * @return taskflowType
+         */
+        public String getTaskflowType() {
+            return this.taskflowType;
+        }
+
         public static final class Builder {
             private String description; 
             private String taskflowMd5; 
+            private String taskflowType; 
 
             /**
-             * Description.
+             * <p>The version description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo version</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -118,10 +142,28 @@ public class DescribeDistinctReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * TaskflowMd5.
+             * <p>The MD5 value of the version XML configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17cf53049bc8efa941207xxxxx</p>
              */
             public Builder taskflowMd5(String taskflowMd5) {
                 this.taskflowMd5 = taskflowMd5;
+                return this;
+            }
+
+            /**
+             * <p>The format of the playbook. Valid values:</p>
+             * <ul>
+             * <li><strong>xml</strong>: XML format.</li>
+             * <li><strong>x6</strong>: JSON format.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>x6</p>
+             */
+            public Builder taskflowType(String taskflowType) {
+                this.taskflowType = taskflowType;
                 return this;
             }
 

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAccountResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteAccountResponseBody</p>
  */
 public class DeleteAccountResponseBody extends TeaModel {
-    @NameInMap("DeletionType")
+    @com.aliyun.core.annotation.NameInMap("DeletionType")
     private String deletionType;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteAccountResponseBody(Builder builder) {
@@ -50,11 +55,14 @@ public class DeleteAccountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The type of the deletion. Valid values:
-         * <p>
+         * <p>The type of the deletion. Valid values:</p>
+         * <ul>
+         * <li>0: direct deletion. If the member does not have pay-as-you-go resources that are purchased within the previous 30 days, the system directly deletes the member.</li>
+         * <li>1: deletion with a silence period. If the member has pay-as-you-go resources that are purchased within the previous 30 days, the member enters a silence period. The system starts to delete the member until the silence period ends. For more information about the silence period, see <a href="https://help.aliyun.com/document_detail/446079.html">What is the silence period for member deletion?</a></li>
+         * </ul>
          * 
-         * *   0: direct deletion. If the member does not have pay-as-you-go resources that are purchased within the previous 30 days, the system directly deletes the member.
-         * *   1: deletion with a silence period. If the member has pay-as-you-go resources that are purchased within the previous 30 days, the member enters a silence period. The system starts to delete the member until the silence period ends. For more information about the silence period, see [What is the silence period for member deletion?](~~446079~~)
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder deletionType(String deletionType) {
             this.deletionType = deletionType;
@@ -62,7 +70,10 @@ public class DeleteAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>009429F8-C1C0-5872-B674-A6C2333B9647</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

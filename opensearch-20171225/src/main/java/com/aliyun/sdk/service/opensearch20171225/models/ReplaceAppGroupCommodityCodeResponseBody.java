@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ReplaceAppGroupCommodityCodeResponseBody</p>
  */
 public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
     private ReplaceAppGroupCommodityCodeResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
     } 
 
     public static class Quota extends TeaModel {
-        @NameInMap("computeResource")
+        @com.aliyun.core.annotation.NameInMap("computeResource")
         private Integer computeResource;
 
-        @NameInMap("docSize")
+        @com.aliyun.core.annotation.NameInMap("docSize")
         private Integer docSize;
 
-        @NameInMap("spec")
+        @com.aliyun.core.annotation.NameInMap("spec")
         private String spec;
 
         private Quota(Builder builder) {
@@ -153,79 +152,79 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("chargeType")
+        @com.aliyun.core.annotation.NameInMap("chargeType")
         private String chargeType;
 
-        @NameInMap("chargingWay")
+        @com.aliyun.core.annotation.NameInMap("chargingWay")
         private Integer chargingWay;
 
-        @NameInMap("commodityCode")
+        @com.aliyun.core.annotation.NameInMap("commodityCode")
         private String commodityCode;
 
-        @NameInMap("created")
+        @com.aliyun.core.annotation.NameInMap("created")
         private Integer created;
 
-        @NameInMap("currentVersion")
+        @com.aliyun.core.annotation.NameInMap("currentVersion")
         private String currentVersion;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("expireOn")
+        @com.aliyun.core.annotation.NameInMap("expireOn")
         private String expireOn;
 
-        @NameInMap("firstRankAlgoDeploymentId")
+        @com.aliyun.core.annotation.NameInMap("firstRankAlgoDeploymentId")
         private Integer firstRankAlgoDeploymentId;
 
-        @NameInMap("hasPendingQuotaReviewTask")
+        @com.aliyun.core.annotation.NameInMap("hasPendingQuotaReviewTask")
         private Integer hasPendingQuotaReviewTask;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
-        @NameInMap("lockMode")
+        @com.aliyun.core.annotation.NameInMap("lockMode")
         private String lockMode;
 
-        @NameInMap("lockedByExpiration")
+        @com.aliyun.core.annotation.NameInMap("lockedByExpiration")
         private Integer lockedByExpiration;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("pendingSecondRankAlgoDeploymentId")
+        @com.aliyun.core.annotation.NameInMap("pendingSecondRankAlgoDeploymentId")
         private Integer pendingSecondRankAlgoDeploymentId;
 
-        @NameInMap("processingOrderId")
+        @com.aliyun.core.annotation.NameInMap("processingOrderId")
         private String processingOrderId;
 
-        @NameInMap("produced")
+        @com.aliyun.core.annotation.NameInMap("produced")
         private Integer produced;
 
-        @NameInMap("projectId")
+        @com.aliyun.core.annotation.NameInMap("projectId")
         private String projectId;
 
-        @NameInMap("quota")
+        @com.aliyun.core.annotation.NameInMap("quota")
         private Quota quota;
 
-        @NameInMap("secondRankAlgoDeploymentId")
+        @com.aliyun.core.annotation.NameInMap("secondRankAlgoDeploymentId")
         private Integer secondRankAlgoDeploymentId;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("switchedTime")
+        @com.aliyun.core.annotation.NameInMap("switchedTime")
         private Integer switchedTime;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("updated")
+        @com.aliyun.core.annotation.NameInMap("updated")
         private Integer updated;
 
-        @NameInMap("versions")
+        @com.aliyun.core.annotation.NameInMap("versions")
         private java.util.List < String > versions;
 
         private Result(Builder builder) {

@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartBaselineSecurityCheckRequest} extends {@link RequestModel}
  *
  * <p>StartBaselineSecurityCheckRequest</p>
  */
 public class StartBaselineSecurityCheckRequest extends Request {
-    @Query
-    @NameInMap("ItemIds")
-    private java.util.List < Long > itemIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ItemIds")
+    private java.util.List<Long> itemIds;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SourceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceIp")
     private String sourceIp;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private StartBaselineSecurityCheckRequest(Builder builder) {
@@ -58,7 +63,7 @@ public class StartBaselineSecurityCheckRequest extends Request {
     /**
      * @return itemIds
      */
-    public java.util.List < Long > getItemIds() {
+    public java.util.List<Long> getItemIds() {
         return this.itemIds;
     }
 
@@ -91,7 +96,7 @@ public class StartBaselineSecurityCheckRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<StartBaselineSecurityCheckRequest, Builder> {
-        private java.util.List < Long > itemIds; 
+        private java.util.List<Long> itemIds; 
         private String lang; 
         private Long resourceOwnerId; 
         private String sourceIp; 
@@ -111,23 +116,26 @@ public class StartBaselineSecurityCheckRequest extends Request {
         } 
 
         /**
-         * The IDs of the check items.
-         * <p>
-         * 
-         * > To perform a check task on cloud service configurations, you must specify the ID of the check item. You can call the [DescribeRiskItemType](~~DescribeRiskItemType~~) operation to query the IDs of check items.
+         * <p>The IDs of the check items.</p>
+         * <blockquote>
+         * <p>To perform a check task on cloud service configurations, you must specify the ID of the check item. You can call the <a href="~~DescribeRiskItemType~~">DescribeRiskItemType</a> operation to query the IDs of check items.</p>
+         * </blockquote>
          */
-        public Builder itemIds(java.util.List < Long > itemIds) {
+        public Builder itemIds(java.util.List<Long> itemIds) {
             this.putQueryParameter("ItemIds", itemIds);
             this.itemIds = itemIds;
             return this;
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -145,7 +153,10 @@ public class StartBaselineSecurityCheckRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>106.11.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -154,11 +165,15 @@ public class StartBaselineSecurityCheckRequest extends Request {
         }
 
         /**
-         * The type of the check task. Valid values:
-         * <p>
+         * <p>The type of the check task. Valid values:</p>
+         * <ul>
+         * <li><strong>check</strong></li>
+         * <li><strong>verify</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **check**
-         * *   **verify**
+         * <strong>example:</strong>
+         * <p>verify</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

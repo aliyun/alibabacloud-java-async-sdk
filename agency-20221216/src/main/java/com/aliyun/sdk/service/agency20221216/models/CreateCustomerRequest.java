@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCustomerRequest} extends {@link RequestModel}
  *
  * <p>CreateCustomerRequest</p>
  */
 public class CreateCustomerRequest extends Request {
-    @Query
-    @NameInMap("CustomerName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomerName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String customerName;
 
-    @Query
-    @NameInMap("CustomerSource")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomerSource")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String customerSource;
 
-    @Query
-    @NameInMap("CustomerSubTrade")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomerSubTrade")
     private String customerSubTrade;
 
-    @Query
-    @NameInMap("CustomerTrade")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomerTrade")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String customerTrade;
 
-    @Query
-    @NameInMap("Nation")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Nation")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nation;
 
     private CreateCustomerRequest(Builder builder) {
@@ -114,7 +119,11 @@ public class CreateCustomerRequest extends Request {
         } 
 
         /**
-         * CustomerName.
+         * <p>Customer&quot;s name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DoorBell Marketing</p>
          */
         public Builder customerName(String customerName) {
             this.putQueryParameter("CustomerName", customerName);
@@ -123,7 +132,11 @@ public class CreateCustomerRequest extends Request {
         }
 
         /**
-         * CustomerSource.
+         * <p>The source/channel that allow client to connected with us. Please enumerate with Customer Source.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>website</p>
          */
         public Builder customerSource(String customerSource) {
             this.putQueryParameter("CustomerSource", customerSource);
@@ -132,7 +145,10 @@ public class CreateCustomerRequest extends Request {
         }
 
         /**
-         * CustomerSubTrade.
+         * <p>The sub-industry that Customer&quot;s business belongs to. Please enumerate with Customer Trade.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0101</p>
          */
         public Builder customerSubTrade(String customerSubTrade) {
             this.putQueryParameter("CustomerSubTrade", customerSubTrade);
@@ -141,7 +157,11 @@ public class CreateCustomerRequest extends Request {
         }
 
         /**
-         * CustomerTrade.
+         * <p>The industry that Customer&quot;s business belongs to. Please enumerate with Customer Trade.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01</p>
          */
         public Builder customerTrade(String customerTrade) {
             this.putQueryParameter("CustomerTrade", customerTrade);
@@ -150,7 +170,11 @@ public class CreateCustomerRequest extends Request {
         }
 
         /**
-         * Nation.
+         * <p>The region that Customer choose to launch the Cloud Service. Please use ListCountries to confirm the valid region list for current UID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AR</p>
          */
         public Builder nation(String nation) {
             this.putQueryParameter("Nation", nation);

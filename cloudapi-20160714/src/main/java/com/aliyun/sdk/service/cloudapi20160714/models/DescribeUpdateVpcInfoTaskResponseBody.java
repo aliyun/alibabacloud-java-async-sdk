@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUpdateVpcInfoTaskResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUpdateVpcInfoTaskResponseBody</p>
  */
 public class DescribeUpdateVpcInfoTaskResponseBody extends TeaModel {
-    @NameInMap("ApiUpdateVpcInfoResults")
+    @com.aliyun.core.annotation.NameInMap("ApiUpdateVpcInfoResults")
     private ApiUpdateVpcInfoResults apiUpdateVpcInfoResults;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeUpdateVpcInfoTaskResponseBody(Builder builder) {
@@ -71,29 +76,35 @@ public class DescribeUpdateVpcInfoTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUpdateVpcInfoTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUpdateVpcInfoTaskResponseBody</p>
+     */
     public static class ApiUpdateVpcInfoResult extends TeaModel {
-        @NameInMap("ApiName")
+        @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
 
-        @NameInMap("ApiUid")
+        @com.aliyun.core.annotation.NameInMap("ApiUid")
         private String apiUid;
 
-        @NameInMap("ErrorMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("StageId")
+        @com.aliyun.core.annotation.NameInMap("StageId")
         private String stageId;
 
-        @NameInMap("StageName")
+        @com.aliyun.core.annotation.NameInMap("StageName")
         private String stageName;
 
-        @NameInMap("UpdateStatus")
+        @com.aliyun.core.annotation.NameInMap("UpdateStatus")
         private String updateStatus;
 
         private ApiUpdateVpcInfoResult(Builder builder) {
@@ -252,9 +263,15 @@ public class DescribeUpdateVpcInfoTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeUpdateVpcInfoTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUpdateVpcInfoTaskResponseBody</p>
+     */
     public static class ApiUpdateVpcInfoResults extends TeaModel {
-        @NameInMap("ApiUpdateVpcInfoResult")
-        private java.util.List < ApiUpdateVpcInfoResult> apiUpdateVpcInfoResult;
+        @com.aliyun.core.annotation.NameInMap("ApiUpdateVpcInfoResult")
+        private java.util.List<ApiUpdateVpcInfoResult> apiUpdateVpcInfoResult;
 
         private ApiUpdateVpcInfoResults(Builder builder) {
             this.apiUpdateVpcInfoResult = builder.apiUpdateVpcInfoResult;
@@ -271,17 +288,17 @@ public class DescribeUpdateVpcInfoTaskResponseBody extends TeaModel {
         /**
          * @return apiUpdateVpcInfoResult
          */
-        public java.util.List < ApiUpdateVpcInfoResult> getApiUpdateVpcInfoResult() {
+        public java.util.List<ApiUpdateVpcInfoResult> getApiUpdateVpcInfoResult() {
             return this.apiUpdateVpcInfoResult;
         }
 
         public static final class Builder {
-            private java.util.List < ApiUpdateVpcInfoResult> apiUpdateVpcInfoResult; 
+            private java.util.List<ApiUpdateVpcInfoResult> apiUpdateVpcInfoResult; 
 
             /**
              * ApiUpdateVpcInfoResult.
              */
-            public Builder apiUpdateVpcInfoResult(java.util.List < ApiUpdateVpcInfoResult> apiUpdateVpcInfoResult) {
+            public Builder apiUpdateVpcInfoResult(java.util.List<ApiUpdateVpcInfoResult> apiUpdateVpcInfoResult) {
                 this.apiUpdateVpcInfoResult = apiUpdateVpcInfoResult;
                 return this;
             }

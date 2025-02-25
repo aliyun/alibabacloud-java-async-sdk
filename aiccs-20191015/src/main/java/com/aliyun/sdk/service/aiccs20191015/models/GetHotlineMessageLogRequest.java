@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHotlineMessageLogRequest} extends {@link RequestModel}
  *
  * <p>GetHotlineMessageLogRequest</p>
  */
 public class GetHotlineMessageLogRequest extends Request {
-    @Query
-    @NameInMap("Acid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Acid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String acid;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private GetHotlineMessageLogRequest(Builder builder) {
@@ -70,7 +75,10 @@ public class GetHotlineMessageLogRequest extends Request {
         } 
 
         /**
-         * 会话id
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100****2077</p>
          */
         public Builder acid(String acid) {
             this.putQueryParameter("Acid", acid);
@@ -79,7 +87,10 @@ public class GetHotlineMessageLogRequest extends Request {
         }
 
         /**
-         * 实例id
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre-cn-***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

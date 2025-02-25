@@ -1,64 +1,74 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link UpsertCollectionPolicyRequest} extends {@link RequestModel}
  *
  * <p>UpsertCollectionPolicyRequest</p>
  */
 public class UpsertCollectionPolicyRequest extends Request {
-    @Body
-    @NameInMap("attribute")
-    private Attribute attribute;
-
-    @Body
-    @NameInMap("centralizeConfig")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("centralizeConfig")
     private CentralizeConfig centralizeConfig;
 
-    @Body
-    @NameInMap("centralizeEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("centralizeEnabled")
     private Boolean centralizeEnabled;
 
-    @Body
-    @NameInMap("dataCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dataCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dataCode;
 
-    @Body
-    @NameInMap("enabled")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dataConfig")
+    private DataConfig dataConfig;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("enabled")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean enabled;
 
-    @Body
-    @NameInMap("policyConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("policyConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private PolicyConfig policyConfig;
 
-    @Body
-    @NameInMap("policyName")
-    @Validation(required = true, maxLength = 63, minLength = 3)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("policyName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 63, minLength = 3)
     private String policyName;
 
-    @Body
-    @NameInMap("productCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("productCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productCode;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("resourceDirectory")
+    private ResourceDirectory resourceDirectory;
 
     private UpsertCollectionPolicyRequest(Builder builder) {
         super(builder);
-        this.attribute = builder.attribute;
         this.centralizeConfig = builder.centralizeConfig;
         this.centralizeEnabled = builder.centralizeEnabled;
         this.dataCode = builder.dataCode;
+        this.dataConfig = builder.dataConfig;
         this.enabled = builder.enabled;
         this.policyConfig = builder.policyConfig;
         this.policyName = builder.policyName;
         this.productCode = builder.productCode;
+        this.resourceDirectory = builder.resourceDirectory;
     }
 
     public static Builder builder() {
@@ -72,13 +82,6 @@ public class UpsertCollectionPolicyRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return attribute
-     */
-    public Attribute getAttribute() {
-        return this.attribute;
     }
 
     /**
@@ -100,6 +103,13 @@ public class UpsertCollectionPolicyRequest extends Request {
      */
     public String getDataCode() {
         return this.dataCode;
+    }
+
+    /**
+     * @return dataConfig
+     */
+    public DataConfig getDataConfig() {
+        return this.dataConfig;
     }
 
     /**
@@ -130,15 +140,23 @@ public class UpsertCollectionPolicyRequest extends Request {
         return this.productCode;
     }
 
+    /**
+     * @return resourceDirectory
+     */
+    public ResourceDirectory getResourceDirectory() {
+        return this.resourceDirectory;
+    }
+
     public static final class Builder extends Request.Builder<UpsertCollectionPolicyRequest, Builder> {
-        private Attribute attribute; 
         private CentralizeConfig centralizeConfig; 
         private Boolean centralizeEnabled; 
         private String dataCode; 
+        private DataConfig dataConfig; 
         private Boolean enabled; 
         private PolicyConfig policyConfig; 
         private String policyName; 
         private String productCode; 
+        private ResourceDirectory resourceDirectory; 
 
         private Builder() {
             super();
@@ -146,24 +164,16 @@ public class UpsertCollectionPolicyRequest extends Request {
 
         private Builder(UpsertCollectionPolicyRequest request) {
             super(request);
-            this.attribute = request.attribute;
             this.centralizeConfig = request.centralizeConfig;
             this.centralizeEnabled = request.centralizeEnabled;
             this.dataCode = request.dataCode;
+            this.dataConfig = request.dataConfig;
             this.enabled = request.enabled;
             this.policyConfig = request.policyConfig;
             this.policyName = request.policyName;
             this.productCode = request.productCode;
+            this.resourceDirectory = request.resourceDirectory;
         } 
-
-        /**
-         * attribute.
-         */
-        public Builder attribute(Attribute attribute) {
-            this.putBodyParameter("attribute", attribute);
-            this.attribute = attribute;
-            return this;
-        }
 
         /**
          * centralizeConfig.
@@ -184,7 +194,10 @@ public class UpsertCollectionPolicyRequest extends Request {
         }
 
         /**
-         * dataCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>access_log</p>
          */
         public Builder dataCode(String dataCode) {
             this.putBodyParameter("dataCode", dataCode);
@@ -193,7 +206,19 @@ public class UpsertCollectionPolicyRequest extends Request {
         }
 
         /**
-         * enabled.
+         * dataConfig.
+         */
+        public Builder dataConfig(DataConfig dataConfig) {
+            this.putBodyParameter("dataConfig", dataConfig);
+            this.dataConfig = dataConfig;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.putBodyParameter("enabled", enabled);
@@ -202,7 +227,7 @@ public class UpsertCollectionPolicyRequest extends Request {
         }
 
         /**
-         * policyConfig.
+         * <p>This parameter is required.</p>
          */
         public Builder policyConfig(PolicyConfig policyConfig) {
             this.putBodyParameter("policyConfig", policyConfig);
@@ -211,7 +236,10 @@ public class UpsertCollectionPolicyRequest extends Request {
         }
 
         /**
-         * policyName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>your_log_policy</p>
          */
         public Builder policyName(String policyName) {
             this.putBodyParameter("policyName", policyName);
@@ -220,11 +248,23 @@ public class UpsertCollectionPolicyRequest extends Request {
         }
 
         /**
-         * productCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss</p>
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("productCode", productCode);
             this.productCode = productCode;
+            return this;
+        }
+
+        /**
+         * resourceDirectory.
+         */
+        public Builder resourceDirectory(ResourceDirectory resourceDirectory) {
+            this.putBodyParameter("resourceDirectory", resourceDirectory);
+            this.resourceDirectory = resourceDirectory;
             return this;
         }
 
@@ -235,78 +275,23 @@ public class UpsertCollectionPolicyRequest extends Request {
 
     } 
 
-    public static class Attribute extends TeaModel {
-        @NameInMap("app")
-        private String app;
-
-        @NameInMap("policyGroup")
-        private String policyGroup;
-
-        private Attribute(Builder builder) {
-            this.app = builder.app;
-            this.policyGroup = builder.policyGroup;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Attribute create() {
-            return builder().build();
-        }
-
-        /**
-         * @return app
-         */
-        public String getApp() {
-            return this.app;
-        }
-
-        /**
-         * @return policyGroup
-         */
-        public String getPolicyGroup() {
-            return this.policyGroup;
-        }
-
-        public static final class Builder {
-            private String app; 
-            private String policyGroup; 
-
-            /**
-             * app.
-             */
-            public Builder app(String app) {
-                this.app = app;
-                return this;
-            }
-
-            /**
-             * policyGroup.
-             */
-            public Builder policyGroup(String policyGroup) {
-                this.policyGroup = policyGroup;
-                return this;
-            }
-
-            public Attribute build() {
-                return new Attribute(this);
-            } 
-
-        } 
-
-    }
+    /**
+     * 
+     * {@link UpsertCollectionPolicyRequest} extends {@link TeaModel}
+     *
+     * <p>UpsertCollectionPolicyRequest</p>
+     */
     public static class CentralizeConfig extends TeaModel {
-        @NameInMap("destLogstore")
+        @com.aliyun.core.annotation.NameInMap("destLogstore")
         private String destLogstore;
 
-        @NameInMap("destProject")
+        @com.aliyun.core.annotation.NameInMap("destProject")
         private String destProject;
 
-        @NameInMap("destRegion")
+        @com.aliyun.core.annotation.NameInMap("destRegion")
         private String destRegion;
 
-        @NameInMap("destTTL")
+        @com.aliyun.core.annotation.NameInMap("destTTL")
         private Integer destTTL;
 
         private CentralizeConfig(Builder builder) {
@@ -397,19 +382,72 @@ public class UpsertCollectionPolicyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpsertCollectionPolicyRequest} extends {@link TeaModel}
+     *
+     * <p>UpsertCollectionPolicyRequest</p>
+     */
+    public static class DataConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("dataRegion")
+        private String dataRegion;
+
+        private DataConfig(Builder builder) {
+            this.dataRegion = builder.dataRegion;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DataConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dataRegion
+         */
+        public String getDataRegion() {
+            return this.dataRegion;
+        }
+
+        public static final class Builder {
+            private String dataRegion; 
+
+            /**
+             * dataRegion.
+             */
+            public Builder dataRegion(String dataRegion) {
+                this.dataRegion = dataRegion;
+                return this;
+            }
+
+            public DataConfig build() {
+                return new DataConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpsertCollectionPolicyRequest} extends {@link TeaModel}
+     *
+     * <p>UpsertCollectionPolicyRequest</p>
+     */
     public static class PolicyConfig extends TeaModel {
-        @NameInMap("instanceIds")
-        private java.util.List < String > instanceIds;
+        @com.aliyun.core.annotation.NameInMap("instanceIds")
+        private java.util.List<String> instanceIds;
 
-        @NameInMap("regions")
-        private java.util.List < String > regions;
+        @com.aliyun.core.annotation.NameInMap("regions")
+        private java.util.List<String> regions;
 
-        @NameInMap("resourceMode")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("resourceMode")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String resourceMode;
 
-        @NameInMap("resourceTags")
-        private java.util.Map < String, ? > resourceTags;
+        @com.aliyun.core.annotation.NameInMap("resourceTags")
+        private java.util.Map<String, ?> resourceTags;
 
         private PolicyConfig(Builder builder) {
             this.instanceIds = builder.instanceIds;
@@ -429,14 +467,14 @@ public class UpsertCollectionPolicyRequest extends Request {
         /**
          * @return instanceIds
          */
-        public java.util.List < String > getInstanceIds() {
+        public java.util.List<String> getInstanceIds() {
             return this.instanceIds;
         }
 
         /**
          * @return regions
          */
-        public java.util.List < String > getRegions() {
+        public java.util.List<String> getRegions() {
             return this.regions;
         }
 
@@ -450,20 +488,20 @@ public class UpsertCollectionPolicyRequest extends Request {
         /**
          * @return resourceTags
          */
-        public java.util.Map < String, ? > getResourceTags() {
+        public java.util.Map<String, ?> getResourceTags() {
             return this.resourceTags;
         }
 
         public static final class Builder {
-            private java.util.List < String > instanceIds; 
-            private java.util.List < String > regions; 
+            private java.util.List<String> instanceIds; 
+            private java.util.List<String> regions; 
             private String resourceMode; 
-            private java.util.Map < String, ? > resourceTags; 
+            private java.util.Map<String, ?> resourceTags; 
 
             /**
              * instanceIds.
              */
-            public Builder instanceIds(java.util.List < String > instanceIds) {
+            public Builder instanceIds(java.util.List<String> instanceIds) {
                 this.instanceIds = instanceIds;
                 return this;
             }
@@ -471,13 +509,16 @@ public class UpsertCollectionPolicyRequest extends Request {
             /**
              * regions.
              */
-            public Builder regions(java.util.List < String > regions) {
+            public Builder regions(java.util.List<String> regions) {
                 this.regions = regions;
                 return this;
             }
 
             /**
-             * resourceMode.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>all</p>
              */
             public Builder resourceMode(String resourceMode) {
                 this.resourceMode = resourceMode;
@@ -487,13 +528,80 @@ public class UpsertCollectionPolicyRequest extends Request {
             /**
              * resourceTags.
              */
-            public Builder resourceTags(java.util.Map < String, ? > resourceTags) {
+            public Builder resourceTags(java.util.Map<String, ?> resourceTags) {
                 this.resourceTags = resourceTags;
                 return this;
             }
 
             public PolicyConfig build() {
                 return new PolicyConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpsertCollectionPolicyRequest} extends {@link TeaModel}
+     *
+     * <p>UpsertCollectionPolicyRequest</p>
+     */
+    public static class ResourceDirectory extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("accountGroupType")
+        private String accountGroupType;
+
+        @com.aliyun.core.annotation.NameInMap("members")
+        private java.util.List<String> members;
+
+        private ResourceDirectory(Builder builder) {
+            this.accountGroupType = builder.accountGroupType;
+            this.members = builder.members;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceDirectory create() {
+            return builder().build();
+        }
+
+        /**
+         * @return accountGroupType
+         */
+        public String getAccountGroupType() {
+            return this.accountGroupType;
+        }
+
+        /**
+         * @return members
+         */
+        public java.util.List<String> getMembers() {
+            return this.members;
+        }
+
+        public static final class Builder {
+            private String accountGroupType; 
+            private java.util.List<String> members; 
+
+            /**
+             * accountGroupType.
+             */
+            public Builder accountGroupType(String accountGroupType) {
+                this.accountGroupType = accountGroupType;
+                return this;
+            }
+
+            /**
+             * members.
+             */
+            public Builder members(java.util.List<String> members) {
+                this.members = members;
+                return this;
+            }
+
+            public ResourceDirectory build() {
+                return new ResourceDirectory(this);
             } 
 
         } 

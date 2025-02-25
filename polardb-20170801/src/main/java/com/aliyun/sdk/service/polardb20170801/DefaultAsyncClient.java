@@ -33,16 +33,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.endpointMap = CommonUtil.buildMap(
             new TeaPair("cn-qingdao", "polardb.aliyuncs.com"),
             new TeaPair("cn-beijing", "polardb.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "polardb.aliyuncs.com"),
             new TeaPair("cn-hangzhou", "polardb.aliyuncs.com"),
             new TeaPair("cn-shanghai", "polardb.aliyuncs.com"),
             new TeaPair("cn-shenzhen", "polardb.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "polardb.aliyuncs.com"),
             new TeaPair("cn-hongkong", "polardb.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "polardb.aliyuncs.com"),
-            new TeaPair("us-west-1", "polardb.aliyuncs.com"),
-            new TeaPair("us-east-1", "polardb.aliyuncs.com"),
             new TeaPair("cn-hangzhou-finance", "polardb.aliyuncs.com"),
             new TeaPair("cn-shanghai-finance-1", "polardb.aliyuncs.com"),
             new TeaPair("cn-shenzhen-finance-1", "polardb.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "polardb.aliyuncs.com"),
             new TeaPair("ap-northeast-2-pop", "polardb.aliyuncs.com"),
             new TeaPair("cn-beijing-finance-1", "polardb.aliyuncs.com"),
             new TeaPair("cn-beijing-finance-pop", "polardb.aliyuncs.com"),
@@ -59,7 +59,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-hangzhou-test-306", "polardb.aliyuncs.com"),
             new TeaPair("cn-hongkong-finance-pop", "polardb.aliyuncs.com"),
             new TeaPair("cn-huhehaote-nebula-1", "polardb.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "polardb.aliyuncs.com"),
             new TeaPair("cn-qingdao-nebula", "polardb.aliyuncs.com"),
             new TeaPair("cn-shanghai-et15-b01", "polardb.aliyuncs.com"),
             new TeaPair("cn-shanghai-et2-b01", "polardb.aliyuncs.com"),
@@ -69,7 +68,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-shenzhen-st4-d01", "polardb.aliyuncs.com"),
             new TeaPair("cn-shenzhen-su18-b01", "polardb.aliyuncs.com"),
             new TeaPair("cn-wuhan", "polardb.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "polardb.aliyuncs.com"),
             new TeaPair("cn-yushanfang", "polardb.aliyuncs.com"),
             new TeaPair("cn-zhangbei", "polardb.aliyuncs.com"),
             new TeaPair("cn-zhangbei-na61-b01", "polardb.aliyuncs.com"),
@@ -86,6 +84,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of CancelActiveOperationTasks  CancelActiveOperationTasksRequest
+     * @return CancelActiveOperationTasksResponse
+     */
+    @Override
+    public CompletableFuture<CancelActiveOperationTasksResponse> cancelActiveOperationTasks(CancelActiveOperationTasksRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CancelActiveOperationTasks").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CancelActiveOperationTasksResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CancelActiveOperationTasksResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CancelScheduleTasks  CancelScheduleTasksRequest
+     * @return CancelScheduleTasksResponse
+     */
     @Override
     public CompletableFuture<CancelScheduleTasksResponse> cancelScheduleTasks(CancelScheduleTasksRequest request) {
         try {
@@ -100,6 +120,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckAccountName  CheckAccountNameRequest
+     * @return CheckAccountNameResponse
+     */
     @Override
     public CompletableFuture<CheckAccountNameResponse> checkAccountName(CheckAccountNameRequest request) {
         try {
@@ -114,6 +138,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckDBName  CheckDBNameRequest
+     * @return CheckDBNameResponse
+     */
     @Override
     public CompletableFuture<CheckDBNameResponse> checkDBName(CheckDBNameRequest request) {
         try {
@@ -128,6 +156,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckKMSAuthorized  CheckKMSAuthorizedRequest
+     * @return CheckKMSAuthorizedResponse
+     */
     @Override
     public CompletableFuture<CheckKMSAuthorizedResponse> checkKMSAuthorized(CheckKMSAuthorizedRequest request) {
         try {
@@ -142,6 +174,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckServiceLinkedRole  CheckServiceLinkedRoleRequest
+     * @return CheckServiceLinkedRoleResponse
+     */
     @Override
     public CompletableFuture<CheckServiceLinkedRoleResponse> checkServiceLinkedRole(CheckServiceLinkedRoleRequest request) {
         try {
@@ -156,6 +192,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CloseAITask  CloseAITaskRequest
+     * @return CloseAITaskResponse
+     */
     @Override
     public CompletableFuture<CloseAITaskResponse> closeAITask(CloseAITaskRequest request) {
         try {
@@ -171,10 +211,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   You can call this operation to cancel the migration task before data migration.
-      * *   You can call this operation to perform the migration task after data migration.
-      * > Before you call this operation, ensure that a one-click upgrade task has been created for the cluster. You can call the [CreateDBCluster](~~98169~~) operation to create an upgrade task. Set the **CreationOption** parameter to **MigrationFromRDS**. For more information, see [Create a PolarDB for MySQL cluster by using the Migration from RDS method](~~121582~~).
-      *
+     * <b>description</b> :
+     * <p>  You can call this operation to cancel the migration task before data migration.</p>
+     * <ul>
+     * <li>You can call this operation to perform the migration task after data migration.<blockquote>
+     * <p>Before you call this operation, ensure that a one-click upgrade task has been created for the cluster. You can call the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation to create an upgrade task. Set the <strong>CreationOption</strong> parameter to <strong>MigrationFromRDS</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/121582.html">Create a PolarDB for MySQL cluster by using the Migration from RDS method</a>.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of CloseDBClusterMigration  CloseDBClusterMigrationRequest
+     * @return CloseDBClusterMigrationResponse
      */
     @Override
     public CompletableFuture<CloseDBClusterMigrationResponse> closeDBClusterMigration(CloseDBClusterMigrationRequest request) {
@@ -190,6 +237,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateAccount  CreateAccountRequest
+     * @return CreateAccountResponse
+     */
     @Override
     public CompletableFuture<CreateAccountResponse> createAccount(CreateAccountRequest request) {
         try {
@@ -205,11 +256,35 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > 
-      * *   You can manually create up to three backups for each cluster.
-      * *   The `Exceeding the daily backup times of this DB cluster` error message indicates that three manual backups already exist in your cluster. You must delete existing backups before you call this operation to manually create backups. For more information about how to delete backups, see [Delete backups](~~98101~~).
-      * *   After you call this operation, a backup task is created in the backend. The task may be time-consuming if you want to back up large amounts of data.
-      *
+     * @param request the request parameters of CreateActivationCode  CreateActivationCodeRequest
+     * @return CreateActivationCodeResponse
+     */
+    @Override
+    public CompletableFuture<CreateActivationCodeResponse> createActivationCode(CreateActivationCodeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateActivationCode").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateActivationCodeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateActivationCodeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>You can manually create up to three backups for each cluster.</li>
+     * <li>The <code>Exceeding the daily backup times of this DB cluster</code> error message indicates that three manual backups already exist in your cluster. You must delete existing backups before you call this operation to manually create backups. For more information about how to delete backups, see <a href="https://help.aliyun.com/document_detail/98101.html">Delete backups</a>.</li>
+     * <li>After you call this operation, a backup task is created in the backend. The task may be time-consuming if you want to back up large amounts of data.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateBackup  CreateBackupRequest
+     * @return CreateBackupResponse
      */
     @Override
     public CompletableFuture<CreateBackupResponse> createBackup(CreateBackupRequest request) {
@@ -225,6 +300,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateColdStorageInstance  CreateColdStorageInstanceRequest
+     * @return CreateColdStorageInstanceResponse
+     */
     @Override
     public CompletableFuture<CreateColdStorageInstanceResponse> createColdStorageInstance(CreateColdStorageInstanceRequest request) {
         try {
@@ -239,6 +318,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateDBCluster  CreateDBClusterRequest
+     * @return CreateDBClusterResponse
+     */
     @Override
     public CompletableFuture<CreateDBClusterResponse> createDBCluster(CreateDBClusterRequest request) {
         try {
@@ -253,6 +336,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateDBClusterEndpoint  CreateDBClusterEndpointRequest
+     * @return CreateDBClusterEndpointResponse
+     */
     @Override
     public CompletableFuture<CreateDBClusterEndpointResponse> createDBClusterEndpoint(CreateDBClusterEndpointRequest request) {
         try {
@@ -268,8 +355,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > You can create a public endpoint for the primary endpoint, the default cluster endpoint, or a custom cluster endpoint.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can create a public endpoint for the primary endpoint, the default cluster endpoint, or a custom cluster endpoint.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of CreateDBEndpointAddress  CreateDBEndpointAddressRequest
+     * @return CreateDBEndpointAddressResponse
      */
     @Override
     public CompletableFuture<CreateDBEndpointAddressResponse> createDBEndpointAddress(CreateDBEndpointAddressRequest request) {
@@ -286,11 +378,18 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * A database link can be used to connect two PolarDB for PostgreSQL(Compatible with Oracle) clusters, or connect a PolarDB for PostgreSQL(Compatible with Oracle) cluster to a user-created PostgreSQL database that is hosted on an Elastic Compute Service (ECS) instance. You can use database links to query data across clusters.
-      * > *   You can create up to 10 database links for a cluster.
-      * > *   Each database link connects a source cluster and a destination cluster.
-      * > *   The source cluster and the destination cluster or the destination ECS instance must be located in the same region.
-      *
+     * <b>description</b> :
+     * <p>A database link can be used to connect two PolarDB for PostgreSQL(Compatible with Oracle) clusters, or connect a PolarDB for PostgreSQL(Compatible with Oracle) cluster to a user-created PostgreSQL database that is hosted on an Elastic Compute Service (ECS) instance. You can use database links to query data across clusters.</p>
+     * <blockquote>
+     * <ul>
+     * <li>You can create up to 10 database links for a cluster.</li>
+     * <li>Each database link connects a source cluster and a destination cluster.</li>
+     * <li>The source cluster and the destination cluster or the destination ECS instance must be located in the same region.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * @param request the request parameters of CreateDBLink  CreateDBLinkRequest
+     * @return CreateDBLinkResponse
      */
     @Override
     public CompletableFuture<CreateDBLinkResponse> createDBLink(CreateDBLinkRequest request) {
@@ -306,6 +405,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateDBNodes  CreateDBNodesRequest
+     * @return CreateDBNodesResponse
+     */
     @Override
     public CompletableFuture<CreateDBNodesResponse> createDBNodes(CreateDBNodesRequest request) {
         try {
@@ -321,10 +424,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, make sure that the following requirements are met:
-      * *   The cluster is in the Running state.
-      * *   The cluster is unlocked.
-      *
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that the following requirements are met:</p>
+     * <ul>
+     * <li>The cluster is in the Running state.</li>
+     * <li>The cluster is unlocked.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateDatabase  CreateDatabaseRequest
+     * @return CreateDatabaseResponse
      */
     @Override
     public CompletableFuture<CreateDatabaseResponse> createDatabase(CreateDatabaseRequest request) {
@@ -341,8 +449,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  A cluster belongs to only one GDN.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> A cluster belongs to only one GDN.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of CreateGlobalDatabaseNetwork  CreateGlobalDatabaseNetworkRequest
+     * @return CreateGlobalDatabaseNetworkResponse
      */
     @Override
     public CompletableFuture<CreateGlobalDatabaseNetworkResponse> createGlobalDatabaseNetwork(CreateGlobalDatabaseNetworkRequest request) {
@@ -358,6 +471,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateGlobalSecurityIPGroup  CreateGlobalSecurityIPGroupRequest
+     * @return CreateGlobalSecurityIPGroupResponse
+     */
     @Override
     public CompletableFuture<CreateGlobalSecurityIPGroupResponse> createGlobalSecurityIPGroup(CreateGlobalSecurityIPGroupRequest request) {
         try {
@@ -373,9 +490,32 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can use parameter templates to manage multiple parameters at a time and apply existing parameters to a PolarDB cluster. For more information, see [Use a parameter template](~~207009~~).
-      * > You can call this operation only on a PolarDB for MySQL cluster.
-      *
+     * @param request the request parameters of CreateOrGetVirtualLicenseOrder  CreateOrGetVirtualLicenseOrderRequest
+     * @return CreateOrGetVirtualLicenseOrderResponse
+     */
+    @Override
+    public CompletableFuture<CreateOrGetVirtualLicenseOrderResponse> createOrGetVirtualLicenseOrder(CreateOrGetVirtualLicenseOrderRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateOrGetVirtualLicenseOrder").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateOrGetVirtualLicenseOrderResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateOrGetVirtualLicenseOrderResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You can use parameter templates to manage multiple parameters at a time and apply existing parameters to a PolarDB cluster. For more information, see <a href="https://help.aliyun.com/document_detail/207009.html">Use a parameter template</a>.</p>
+     * <blockquote>
+     * <p>You can call this operation only on a PolarDB for MySQL cluster.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of CreateParameterGroup  CreateParameterGroupRequest
+     * @return CreateParameterGroupResponse
      */
     @Override
     public CompletableFuture<CreateParameterGroupResponse> createParameterGroup(CreateParameterGroupRequest request) {
@@ -391,6 +531,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateServiceLinkedRole  CreateServiceLinkedRoleRequest
+     * @return CreateServiceLinkedRoleResponse
+     */
     @Override
     public CompletableFuture<CreateServiceLinkedRoleResponse> createServiceLinkedRole(CreateServiceLinkedRoleRequest request) {
         try {
@@ -405,6 +549,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateStoragePlan  CreateStoragePlanRequest
+     * @return CreateStoragePlanResponse
+     */
     @Override
     public CompletableFuture<CreateStoragePlanResponse> createStoragePlan(CreateStoragePlanRequest request) {
         try {
@@ -420,8 +568,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > Before you call this operation, make sure that the cluster is in the Running state. Otherwise, the operation fails.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Before you call this operation, make sure that the cluster is in the Running state. Otherwise, the operation fails.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DeleteAccount  DeleteAccountRequest
+     * @return DeleteAccountResponse
      */
     @Override
     public CompletableFuture<DeleteAccountResponse> deleteAccount(DeleteAccountRequest request) {
@@ -438,12 +591,21 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, make sure that the cluster meets the following requirements:
-      * *   The cluster is in the Running state.
-      * *   The backup sets are in the Success state.
-      * > *   You can call the [DescribeBackups](~~98102~~) operation to query the status of backup sets.
-      * >*   After you delete the backup set file, the storage space that is occupied by the file is released. The released storage space is smaller than the size of the file because your snapshots share some data blocks
-      *
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that the cluster meets the following requirements:</p>
+     * <ul>
+     * <li>The cluster is in the Running state.</li>
+     * <li>The backup sets are in the Success state.<blockquote>
+     * <ul>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/98102.html">DescribeBackups</a> operation to query the status of backup sets.</li>
+     * <li>After you delete the backup set file, the storage space that is occupied by the file is released. The released storage space is smaller than the size of the file because your snapshots share some data blocks</li>
+     * </ul>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteBackup  DeleteBackupRequest
+     * @return DeleteBackupResponse
      */
     @Override
     public CompletableFuture<DeleteBackupResponse> deleteBackup(DeleteBackupRequest request) {
@@ -459,6 +621,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteDBCluster  DeleteDBClusterRequest
+     * @return DeleteDBClusterResponse
+     */
     @Override
     public CompletableFuture<DeleteDBClusterResponse> deleteDBCluster(DeleteDBClusterRequest request) {
         try {
@@ -473,6 +639,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteDBClusterEndpoint  DeleteDBClusterEndpointRequest
+     * @return DeleteDBClusterEndpointResponse
+     */
     @Override
     public CompletableFuture<DeleteDBClusterEndpointResponse> deleteDBClusterEndpoint(DeleteDBClusterEndpointRequest request) {
         try {
@@ -488,9 +658,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > *   You can delete a public-facing or classic network endpoint of the primary endpoint, the default cluster endpoint, or a custom cluster endpoint.
-      * > *   Classic network endpoints are supported only on the China site (aliyun.com). Therefore, you do not need to delete classic network endpoints on the International site (alibabacloud.com).
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>You can delete a public-facing or classic network endpoint of the primary endpoint, the default cluster endpoint, or a custom cluster endpoint.</li>
+     * <li>Classic network endpoints are supported only on the China site (aliyun.com). Therefore, you do not need to delete classic network endpoints on the International site (alibabacloud.com).</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DeleteDBEndpointAddress  DeleteDBEndpointAddressRequest
+     * @return DeleteDBEndpointAddressResponse
      */
     @Override
     public CompletableFuture<DeleteDBEndpointAddressResponse> deleteDBEndpointAddress(DeleteDBEndpointAddressRequest request) {
@@ -506,6 +683,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteDBLink  DeleteDBLinkRequest
+     * @return DeleteDBLinkResponse
+     */
     @Override
     public CompletableFuture<DeleteDBLinkResponse> deleteDBLink(DeleteDBLinkRequest request) {
         try {
@@ -520,6 +701,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteDBNodes  DeleteDBNodesRequest
+     * @return DeleteDBNodesResponse
+     */
     @Override
     public CompletableFuture<DeleteDBNodesResponse> deleteDBNodes(DeleteDBNodesRequest request) {
         try {
@@ -535,9 +720,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >- The cluster must be in the Running state and unlocked. Otherwise, the specified database cannot be deleted.
-      * >- The delete operation is performed in an asynchronous manner. A long period of time may be required to delete a large database. A success response for this operation only indicates that the request to delete the database is sent. You must query the database to check whether the database is deleted.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>The cluster must be in the Running state and unlocked. Otherwise, the specified database cannot be deleted.</li>
+     * <li>The delete operation is performed in an asynchronous manner. A long period of time may be required to delete a large database. A success response for this operation only indicates that the request to delete the database is sent. You must query the database to check whether the database is deleted.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DeleteDatabase  DeleteDatabaseRequest
+     * @return DeleteDatabaseResponse
      */
     @Override
     public CompletableFuture<DeleteDatabaseResponse> deleteDatabase(DeleteDatabaseRequest request) {
@@ -554,8 +746,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  You can delete a GDN only when the GDN includes only a primary cluster.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You can delete a GDN only when the GDN includes only a primary cluster.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DeleteGlobalDatabaseNetwork  DeleteGlobalDatabaseNetworkRequest
+     * @return DeleteGlobalDatabaseNetworkResponse
      */
     @Override
     public CompletableFuture<DeleteGlobalDatabaseNetworkResponse> deleteGlobalDatabaseNetwork(DeleteGlobalDatabaseNetworkRequest request) {
@@ -571,6 +768,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteGlobalSecurityIPGroup  DeleteGlobalSecurityIPGroupRequest
+     * @return DeleteGlobalSecurityIPGroupResponse
+     */
     @Override
     public CompletableFuture<DeleteGlobalSecurityIPGroupResponse> deleteGlobalSecurityIPGroup(DeleteGlobalSecurityIPGroupRequest request) {
         try {
@@ -585,6 +786,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteMaskingRules  DeleteMaskingRulesRequest
+     * @return DeleteMaskingRulesResponse
+     */
     @Override
     public CompletableFuture<DeleteMaskingRulesResponse> deleteMaskingRules(DeleteMaskingRulesRequest request) {
         try {
@@ -600,9 +805,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can use parameter templates to manage multiple parameters at a time and quickly apply existing parameters to a PolarDB cluster. For more information, see [Use a parameter template](~~207009~~).
-      * >  When you delete a parameter template, the parameter settings that are applied to PolarDB clusters are not affected.
-      *
+     * <b>description</b> :
+     * <p>You can use parameter templates to manage multiple parameters at a time and quickly apply existing parameters to a PolarDB cluster. For more information, see <a href="https://help.aliyun.com/document_detail/207009.html">Use a parameter template</a>.</p>
+     * <blockquote>
+     * <p> When you delete a parameter template, the parameter settings that are applied to PolarDB clusters are not affected.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DeleteParameterGroup  DeleteParameterGroupRequest
+     * @return DeleteParameterGroupResponse
      */
     @Override
     public CompletableFuture<DeleteParameterGroupResponse> deleteParameterGroup(DeleteParameterGroupRequest request) {
@@ -618,6 +828,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAITaskStatus  DescribeAITaskStatusRequest
+     * @return DescribeAITaskStatusResponse
+     */
     @Override
     public CompletableFuture<DescribeAITaskStatusResponse> describeAITaskStatus(DescribeAITaskStatusRequest request) {
         try {
@@ -632,6 +846,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAccounts  DescribeAccountsRequest
+     * @return DescribeAccountsResponse
+     */
     @Override
     public CompletableFuture<DescribeAccountsResponse> describeAccounts(DescribeAccountsRequest request) {
         try {
@@ -646,6 +864,64 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeActivationCodeDetails  DescribeActivationCodeDetailsRequest
+     * @return DescribeActivationCodeDetailsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeActivationCodeDetailsResponse> describeActivationCodeDetails(DescribeActivationCodeDetailsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeActivationCodeDetails").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeActivationCodeDetailsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeActivationCodeDetailsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeActivationCodes  DescribeActivationCodesRequest
+     * @return DescribeActivationCodesResponse
+     */
+    @Override
+    public CompletableFuture<DescribeActivationCodesResponse> describeActivationCodes(DescribeActivationCodesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeActivationCodes").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeActivationCodesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeActivationCodesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeActiveOperationTasks  DescribeActiveOperationTasksRequest
+     * @return DescribeActiveOperationTasksResponse
+     */
+    @Override
+    public CompletableFuture<DescribeActiveOperationTasksResponse> describeActiveOperationTasks(DescribeActiveOperationTasksRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeActiveOperationTasks").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeActiveOperationTasksResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeActiveOperationTasksResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeAutoRenewAttribute  DescribeAutoRenewAttributeRequest
+     * @return DescribeAutoRenewAttributeResponse
+     */
     @Override
     public CompletableFuture<DescribeAutoRenewAttributeResponse> describeAutoRenewAttribute(DescribeAutoRenewAttributeRequest request) {
         try {
@@ -660,6 +936,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeBackupLogs  DescribeBackupLogsRequest
+     * @return DescribeBackupLogsResponse
+     */
     @Override
     public CompletableFuture<DescribeBackupLogsResponse> describeBackupLogs(DescribeBackupLogsRequest request) {
         try {
@@ -674,6 +954,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeBackupPolicy  DescribeBackupPolicyRequest
+     * @return DescribeBackupPolicyResponse
+     */
     @Override
     public CompletableFuture<DescribeBackupPolicyResponse> describeBackupPolicy(DescribeBackupPolicyRequest request) {
         try {
@@ -688,6 +972,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeBackupTasks  DescribeBackupTasksRequest
+     * @return DescribeBackupTasksResponse
+     */
     @Override
     public CompletableFuture<DescribeBackupTasksResponse> describeBackupTasks(DescribeBackupTasksRequest request) {
         try {
@@ -702,6 +990,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeBackups  DescribeBackupsRequest
+     * @return DescribeBackupsResponse
+     */
     @Override
     public CompletableFuture<DescribeBackupsResponse> describeBackups(DescribeBackupsRequest request) {
         try {
@@ -716,6 +1008,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCharacterSetName  DescribeCharacterSetNameRequest
+     * @return DescribeCharacterSetNameResponse
+     */
     @Override
     public CompletableFuture<DescribeCharacterSetNameResponse> describeCharacterSetName(DescribeCharacterSetNameRequest request) {
         try {
@@ -730,6 +1026,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeClassList  DescribeClassListRequest
+     * @return DescribeClassListResponse
+     */
     @Override
     public CompletableFuture<DescribeClassListResponse> describeClassList(DescribeClassListRequest request) {
         try {
@@ -744,6 +1044,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDBClusterAccessWhitelist  DescribeDBClusterAccessWhitelistRequest
+     * @return DescribeDBClusterAccessWhitelistResponse
+     */
     @Override
     public CompletableFuture<DescribeDBClusterAccessWhitelistResponse> describeDBClusterAccessWhitelist(DescribeDBClusterAccessWhitelistRequest request) {
         try {
@@ -758,6 +1062,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDBClusterAttribute  DescribeDBClusterAttributeRequest
+     * @return DescribeDBClusterAttributeResponse
+     */
     @Override
     public CompletableFuture<DescribeDBClusterAttributeResponse> describeDBClusterAttribute(DescribeDBClusterAttributeRequest request) {
         try {
@@ -772,6 +1080,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDBClusterAuditLogCollector  DescribeDBClusterAuditLogCollectorRequest
+     * @return DescribeDBClusterAuditLogCollectorResponse
+     */
     @Override
     public CompletableFuture<DescribeDBClusterAuditLogCollectorResponse> describeDBClusterAuditLogCollector(DescribeDBClusterAuditLogCollectorRequest request) {
         try {
@@ -786,6 +1098,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDBClusterAvailableResources  DescribeDBClusterAvailableResourcesRequest
+     * @return DescribeDBClusterAvailableResourcesResponse
+     */
     @Override
     public CompletableFuture<DescribeDBClusterAvailableResourcesResponse> describeDBClusterAvailableResources(DescribeDBClusterAvailableResourcesRequest request) {
         try {
@@ -800,6 +1116,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDBClusterConnectivity  DescribeDBClusterConnectivityRequest
+     * @return DescribeDBClusterConnectivityResponse
+     */
     @Override
     public CompletableFuture<DescribeDBClusterConnectivityResponse> describeDBClusterConnectivity(DescribeDBClusterConnectivityRequest request) {
         try {
@@ -814,6 +1134,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDBClusterEndpoints  DescribeDBClusterEndpointsRequest
+     * @return DescribeDBClusterEndpointsResponse
+     */
     @Override
     public CompletableFuture<DescribeDBClusterEndpointsResponse> describeDBClusterEndpoints(DescribeDBClusterEndpointsRequest request) {
         try {
@@ -829,9 +1153,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   You can call this operation to query the status of data migration from an ApsaraDB RDS instance to a PolarDB cluster. For more information, see [Upgrade ApsaraDB RDS for MySQL to PolarDB for MySQL with one click](~~121582~~).
-      * *   Before you call this operation, make sure that a one-click upgrade task has been created for the cluster. You can call the [CreateDBCluster](~~98169~~) operation to create an upgrade task. Set the **CreationOption** parameter to **MigrationFromRDS**.
-      *
+     * <b>description</b> :
+     * <p>The ID of the request.</p>
+     * 
+     * @param request the request parameters of DescribeDBClusterMigration  DescribeDBClusterMigrationRequest
+     * @return DescribeDBClusterMigrationResponse
      */
     @Override
     public CompletableFuture<DescribeDBClusterMigrationResponse> describeDBClusterMigration(DescribeDBClusterMigrationRequest request) {
@@ -847,6 +1173,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDBClusterMonitor  DescribeDBClusterMonitorRequest
+     * @return DescribeDBClusterMonitorResponse
+     */
     @Override
     public CompletableFuture<DescribeDBClusterMonitorResponse> describeDBClusterMonitor(DescribeDBClusterMonitorRequest request) {
         try {
@@ -861,6 +1191,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDBClusterParameters  DescribeDBClusterParametersRequest
+     * @return DescribeDBClusterParametersResponse
+     */
     @Override
     public CompletableFuture<DescribeDBClusterParametersResponse> describeDBClusterParameters(DescribeDBClusterParametersRequest request) {
         try {
@@ -876,19 +1210,28 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   When the monitoring data is collected every 5 seconds:
-      *     *   If the query time range is less than or equal to 1 hour, the data is displayed at intervals of 5 seconds.
-      *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
-      *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
-      *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
-      *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
-      * *   When the monitoring data is collected every 60 seconds:
-      *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
-      *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
-      *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
-      *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
-      * >  By default, the monitoring data is collected once every 60 seconds. You can call the [ModifyDBClusterMonitor](~~159557~~) operation to set the data collection interval to every 5 seconds.
-      *
+     * <b>description</b> :
+     * <p>  When the monitoring data is collected every 5 seconds:
+     *     *   If the query time range is less than or equal to 1 hour, the data is displayed at intervals of 5 seconds.
+     *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
+     *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
+     *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
+     *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.</p>
+     * <ul>
+     * <li>When the monitoring data is collected every 60 seconds:<ul>
+     * <li>If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.</li>
+     * <li>If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.</li>
+     * <li>If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.</li>
+     * <li>When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.<blockquote>
+     * <p> By default, the monitoring data is collected once every 60 seconds. You can call the <a href="https://help.aliyun.com/document_detail/159557.html">ModifyDBClusterMonitor</a> operation to set the data collection interval to every 5 seconds.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeDBClusterPerformance  DescribeDBClusterPerformanceRequest
+     * @return DescribeDBClusterPerformanceResponse
      */
     @Override
     public CompletableFuture<DescribeDBClusterPerformanceResponse> describeDBClusterPerformance(DescribeDBClusterPerformanceRequest request) {
@@ -904,6 +1247,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDBClusterSSL  DescribeDBClusterSSLRequest
+     * @return DescribeDBClusterSSLResponse
+     */
     @Override
     public CompletableFuture<DescribeDBClusterSSLResponse> describeDBClusterSSL(DescribeDBClusterSSLRequest request) {
         try {
@@ -918,6 +1265,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDBClusterServerlessConf  DescribeDBClusterServerlessConfRequest
+     * @return DescribeDBClusterServerlessConfResponse
+     */
     @Override
     public CompletableFuture<DescribeDBClusterServerlessConfResponse> describeDBClusterServerlessConf(DescribeDBClusterServerlessConfRequest request) {
         try {
@@ -932,6 +1283,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDBClusterTDE  DescribeDBClusterTDERequest
+     * @return DescribeDBClusterTDEResponse
+     */
     @Override
     public CompletableFuture<DescribeDBClusterTDEResponse> describeDBClusterTDE(DescribeDBClusterTDERequest request) {
         try {
@@ -947,8 +1302,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > For more information, see [Engine versions](~~471239~~) and [PolarDB for MySQL](~~172561~~).
-      *
+     * @param request the request parameters of DescribeDBClusterVersion  DescribeDBClusterVersionRequest
+     * @return DescribeDBClusterVersionResponse
      */
     @Override
     public CompletableFuture<DescribeDBClusterVersionResponse> describeDBClusterVersion(DescribeDBClusterVersionRequest request) {
@@ -964,6 +1319,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDBClusters  DescribeDBClustersRequest
+     * @return DescribeDBClustersResponse
+     */
     @Override
     public CompletableFuture<DescribeDBClustersResponse> describeDBClusters(DescribeDBClustersRequest request) {
         try {
@@ -978,6 +1337,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDBClustersWithBackups  DescribeDBClustersWithBackupsRequest
+     * @return DescribeDBClustersWithBackupsResponse
+     */
     @Override
     public CompletableFuture<DescribeDBClustersWithBackupsResponse> describeDBClustersWithBackups(DescribeDBClustersWithBackupsRequest request) {
         try {
@@ -992,6 +1355,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDBInitializeVariable  DescribeDBInitializeVariableRequest
+     * @return DescribeDBInitializeVariableResponse
+     */
     @Override
     public CompletableFuture<DescribeDBInitializeVariableResponse> describeDBInitializeVariable(DescribeDBInitializeVariableRequest request) {
         try {
@@ -1007,8 +1374,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > You can query only the database links that use a PolarDB for Oracle cluster as the source.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can query only the database links that use a PolarDB for Oracle cluster as the source.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DescribeDBLinks  DescribeDBLinksRequest
+     * @return DescribeDBLinksResponse
      */
     @Override
     public CompletableFuture<DescribeDBLinksResponse> describeDBLinks(DescribeDBLinksRequest request) {
@@ -1025,19 +1397,28 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   When the monitoring data is collected every 5 seconds:
-      *     *   If the query time range is less than or equal to 1 hour, the data is displayed at intervals of 5 seconds.
-      *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
-      *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
-      *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
-      *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
-      * *   When the monitoring data is collected every 60 seconds:
-      *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
-      *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
-      *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
-      *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
-      * >  By default, the monitoring data is collected once every 60 seconds. You can call the [ModifyDBClusterMonitor](~~159557~~) operation to set the data collection interval to every 5 seconds.
-      *
+     * <b>description</b> :
+     * <p>  When the monitoring data is collected every 5 seconds:
+     *     *   If the query time range is less than or equal to 1 hour, the data is displayed at intervals of 5 seconds.
+     *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
+     *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
+     *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
+     *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.</p>
+     * <ul>
+     * <li>When the monitoring data is collected every 60 seconds:<ul>
+     * <li>If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.</li>
+     * <li>If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.</li>
+     * <li>If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.</li>
+     * <li>When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.<blockquote>
+     * <p> By default, the monitoring data is collected once every 60 seconds. You can call the <a href="https://help.aliyun.com/document_detail/159557.html">ModifyDBClusterMonitor</a> operation to set the data collection interval to every 5 seconds.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeDBNodePerformance  DescribeDBNodePerformanceRequest
+     * @return DescribeDBNodePerformanceResponse
      */
     @Override
     public CompletableFuture<DescribeDBNodePerformanceResponse> describeDBNodePerformance(DescribeDBNodePerformanceRequest request) {
@@ -1053,6 +1434,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDBNodesParameters  DescribeDBNodesParametersRequest
+     * @return DescribeDBNodesParametersResponse
+     */
     @Override
     public CompletableFuture<DescribeDBNodesParametersResponse> describeDBNodesParameters(DescribeDBNodesParametersRequest request) {
         try {
@@ -1068,8 +1453,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > This operation is applicable only to PolarDB for MySQL clusters.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This operation is applicable only to PolarDB for MySQL clusters.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DescribeDBProxyPerformance  DescribeDBProxyPerformanceRequest
+     * @return DescribeDBProxyPerformanceResponse
      */
     @Override
     public CompletableFuture<DescribeDBProxyPerformanceResponse> describeDBProxyPerformance(DescribeDBProxyPerformanceRequest request) {
@@ -1085,6 +1475,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDasConfig  DescribeDasConfigRequest
+     * @return DescribeDasConfigResponse
+     */
+    @Override
+    public CompletableFuture<DescribeDasConfigResponse> describeDasConfig(DescribeDasConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDasConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDasConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDasConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeDatabases  DescribeDatabasesRequest
+     * @return DescribeDatabasesResponse
+     */
     @Override
     public CompletableFuture<DescribeDatabasesResponse> describeDatabases(DescribeDatabasesRequest request) {
         try {
@@ -1100,9 +1512,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, make sure that the PolarDB cluster is in the **Released** state. You must also confirm that the **Retain All Backups Permanently** or **Retain Last Automatic Backup Permanently** backup retention policy takes effect after you release the cluster. If you delete all backup sets after the cluster is released, you cannot use this API operation to query the cluster.
-      * > You can call the [DescribeDBClusterAttribute](~~98181~~) operation to query the cluster status.
-      *
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that the PolarDB cluster is in the <strong>Released</strong> state. You must also confirm that the <strong>Retain All Backups Permanently</strong> or <strong>Retain Last Automatic Backup Permanently</strong> backup retention policy takes effect after you release the cluster. If you delete all backup sets after the cluster is released, you cannot use this API operation to query the cluster.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/98181.html">DescribeDBClusterAttribute</a> operation to query the cluster status.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DescribeDetachedBackups  DescribeDetachedBackupsRequest
+     * @return DescribeDetachedBackupsResponse
      */
     @Override
     public CompletableFuture<DescribeDetachedBackupsResponse> describeDetachedBackups(DescribeDetachedBackupsRequest request) {
@@ -1118,6 +1535,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeGlobalDatabaseNetwork  DescribeGlobalDatabaseNetworkRequest
+     * @return DescribeGlobalDatabaseNetworkResponse
+     */
     @Override
     public CompletableFuture<DescribeGlobalDatabaseNetworkResponse> describeGlobalDatabaseNetwork(DescribeGlobalDatabaseNetworkRequest request) {
         try {
@@ -1132,6 +1553,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeGlobalDatabaseNetworks  DescribeGlobalDatabaseNetworksRequest
+     * @return DescribeGlobalDatabaseNetworksResponse
+     */
     @Override
     public CompletableFuture<DescribeGlobalDatabaseNetworksResponse> describeGlobalDatabaseNetworks(DescribeGlobalDatabaseNetworksRequest request) {
         try {
@@ -1146,6 +1571,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeGlobalSecurityIPGroup  DescribeGlobalSecurityIPGroupRequest
+     * @return DescribeGlobalSecurityIPGroupResponse
+     */
     @Override
     public CompletableFuture<DescribeGlobalSecurityIPGroupResponse> describeGlobalSecurityIPGroup(DescribeGlobalSecurityIPGroupRequest request) {
         try {
@@ -1160,6 +1589,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeGlobalSecurityIPGroupRelation  DescribeGlobalSecurityIPGroupRelationRequest
+     * @return DescribeGlobalSecurityIPGroupRelationResponse
+     */
     @Override
     public CompletableFuture<DescribeGlobalSecurityIPGroupRelationResponse> describeGlobalSecurityIPGroupRelation(DescribeGlobalSecurityIPGroupRelationRequest request) {
         try {
@@ -1174,6 +1607,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeLicenseOrderDetails  DescribeLicenseOrderDetailsRequest
+     * @return DescribeLicenseOrderDetailsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeLicenseOrderDetailsResponse> describeLicenseOrderDetails(DescribeLicenseOrderDetailsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeLicenseOrderDetails").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeLicenseOrderDetailsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeLicenseOrderDetailsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeLicenseOrders  DescribeLicenseOrdersRequest
+     * @return DescribeLicenseOrdersResponse
+     */
+    @Override
+    public CompletableFuture<DescribeLicenseOrdersResponse> describeLicenseOrders(DescribeLicenseOrdersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeLicenseOrders").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeLicenseOrdersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeLicenseOrdersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeLogBackupPolicy  DescribeLogBackupPolicyRequest
+     * @return DescribeLogBackupPolicyResponse
+     */
     @Override
     public CompletableFuture<DescribeLogBackupPolicyResponse> describeLogBackupPolicy(DescribeLogBackupPolicyRequest request) {
         try {
@@ -1188,6 +1661,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeMaskingRules  DescribeMaskingRulesRequest
+     * @return DescribeMaskingRulesResponse
+     */
     @Override
     public CompletableFuture<DescribeMaskingRulesResponse> describeMaskingRules(DescribeMaskingRulesRequest request) {
         try {
@@ -1202,6 +1679,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeMetaList  DescribeMetaListRequest
+     * @return DescribeMetaListResponse
+     */
     @Override
     public CompletableFuture<DescribeMetaListResponse> describeMetaList(DescribeMetaListRequest request) {
         try {
@@ -1217,9 +1698,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can use parameter templates to manage multiple parameters at a time and apply existing parameters to a PolarDB cluster. For more information, see [Use a parameter template](~~207009~~).
-      * > This parameter is valid only for a PolarDB for MySQL cluster.
-      *
+     * <b>description</b> :
+     * <p>You can use parameter templates to manage multiple parameters at a time and apply existing parameters to a PolarDB cluster. For more information, see <a href="https://help.aliyun.com/document_detail/207009.html">Use a parameter template</a>.</p>
+     * <blockquote>
+     * <p>This parameter is valid only for a PolarDB for MySQL cluster.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DescribeParameterGroup  DescribeParameterGroupRequest
+     * @return DescribeParameterGroupResponse
      */
     @Override
     public CompletableFuture<DescribeParameterGroupResponse> describeParameterGroup(DescribeParameterGroupRequest request) {
@@ -1236,9 +1722,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can use parameter templates to manage multiple parameters at a time and apply existing parameters to a PolarDB cluster. For more information, see [Use a parameter template](~~207009~~).
-      * > This operation is applicable only to PolarDB for MySQL clusters.
-      *
+     * <b>description</b> :
+     * <p>You can use parameter templates to manage multiple parameters at a time and apply existing parameters to a PolarDB cluster. For more information, see <a href="https://help.aliyun.com/document_detail/207009.html">Use a parameter template</a>.</p>
+     * <blockquote>
+     * <p>This operation is applicable only to PolarDB for MySQL clusters.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DescribeParameterGroups  DescribeParameterGroupsRequest
+     * @return DescribeParameterGroupsResponse
      */
     @Override
     public CompletableFuture<DescribeParameterGroupsResponse> describeParameterGroups(DescribeParameterGroupsRequest request) {
@@ -1254,6 +1745,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeParameterTemplates  DescribeParameterTemplatesRequest
+     * @return DescribeParameterTemplatesResponse
+     */
     @Override
     public CompletableFuture<DescribeParameterTemplatesResponse> describeParameterTemplates(DescribeParameterTemplatesRequest request) {
         try {
@@ -1268,6 +1763,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePendingMaintenanceAction  DescribePendingMaintenanceActionRequest
+     * @return DescribePendingMaintenanceActionResponse
+     */
     @Override
     public CompletableFuture<DescribePendingMaintenanceActionResponse> describePendingMaintenanceAction(DescribePendingMaintenanceActionRequest request) {
         try {
@@ -1282,6 +1781,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePendingMaintenanceActions  DescribePendingMaintenanceActionsRequest
+     * @return DescribePendingMaintenanceActionsResponse
+     */
     @Override
     public CompletableFuture<DescribePendingMaintenanceActionsResponse> describePendingMaintenanceActions(DescribePendingMaintenanceActionsRequest request) {
         try {
@@ -1296,6 +1799,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePolarSQLCollectorPolicy  DescribePolarSQLCollectorPolicyRequest
+     * @return DescribePolarSQLCollectorPolicyResponse
+     */
     @Override
     public CompletableFuture<DescribePolarSQLCollectorPolicyResponse> describePolarSQLCollectorPolicy(DescribePolarSQLCollectorPolicyRequest request) {
         try {
@@ -1310,6 +1817,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     */
     @Override
     public CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request) {
         try {
@@ -1324,6 +1835,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeScheduleTasks  DescribeScheduleTasksRequest
+     * @return DescribeScheduleTasksResponse
+     */
     @Override
     public CompletableFuture<DescribeScheduleTasksResponse> describeScheduleTasks(DescribeScheduleTasksRequest request) {
         try {
@@ -1339,8 +1854,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > This operation is applicable only to PolarDB for MySQL clusters.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>Only PolarDB MySQL Edition clusters support calling this interface.</li>
+     * <li>Starting from September 1, 2024, due to the optimization of the SQL template algorithm, when calling this interface, the value of the SQLHash field will change. For more details, please refer to [Notice] Optimization of Slow SQL Template Algorithm (<del>2845725</del>).</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DescribeSlowLogRecords  DescribeSlowLogRecordsRequest
+     * @return DescribeSlowLogRecordsResponse
      */
     @Override
     public CompletableFuture<DescribeSlowLogRecordsResponse> describeSlowLogRecords(DescribeSlowLogRecordsRequest request) {
@@ -1357,8 +1880,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > This operation is applicable only to PolarDB for MySQL clusters.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This operation is applicable only to PolarDB for MySQL clusters.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DescribeSlowLogs  DescribeSlowLogsRequest
+     * @return DescribeSlowLogsResponse
      */
     @Override
     public CompletableFuture<DescribeSlowLogsResponse> describeSlowLogs(DescribeSlowLogsRequest request) {
@@ -1375,9 +1903,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   You can call this operation to view the details of a task that is generated by a specific API operation or in the console. The system calls the specific API operation when you perform an operation in the console. For example, you can view the details of the task when you call the [CreateDBCluster](~~98169~~) operation or [create a cluster](~~58769~~) in the console.
-      * *   You can view the details of tasks that are generated only when you call the [CreateDBCluster](~~98169~~) operation to create a cluster and `CreationOption` is not set to `CreateGdnStandby`.
-      *
+     * <b>description</b> :
+     * <p>  You can call this operation to view the details of a task that is generated by a specific API operation or in the PolarDB console. The system calls the specific API operation when you perform an operation in the PolarDB console. For example, you can view the details of the task when you call the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation or <a href="https://help.aliyun.com/document_detail/58769.html">create a cluster</a> in the PolarDB console.</p>
+     * <ul>
+     * <li>You can view the details of tasks that are generated only when you call the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation to create a cluster and <code>CreationOption</code> is not set to <code>CreateGdnStandby</code>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeTasks  DescribeTasksRequest
+     * @return DescribeTasksResponse
      */
     @Override
     public CompletableFuture<DescribeTasksResponse> describeTasks(DescribeTasksRequest request) {
@@ -1393,6 +1926,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeUserEncryptionKeyList  DescribeUserEncryptionKeyListRequest
+     * @return DescribeUserEncryptionKeyListResponse
+     */
     @Override
     public CompletableFuture<DescribeUserEncryptionKeyListResponse> describeUserEncryptionKeyList(DescribeUserEncryptionKeyListRequest request) {
         try {
@@ -1407,6 +1944,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVSwitches  DescribeVSwitchesRequest
+     * @return DescribeVSwitchesResponse
+     */
     @Override
     public CompletableFuture<DescribeVSwitchesResponse> describeVSwitches(DescribeVSwitchesRequest request) {
         try {
@@ -1421,6 +1962,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DisableDBClusterServerless  DisableDBClusterServerlessRequest
+     * @return DisableDBClusterServerlessResponse
+     */
     @Override
     public CompletableFuture<DisableDBClusterServerlessResponse> disableDBClusterServerless(DisableDBClusterServerlessRequest request) {
         try {
@@ -1435,6 +1980,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EnableDBClusterServerless  EnableDBClusterServerlessRequest
+     * @return EnableDBClusterServerlessResponse
+     */
     @Override
     public CompletableFuture<EnableDBClusterServerlessResponse> enableDBClusterServerless(EnableDBClusterServerlessRequest request) {
         try {
@@ -1449,6 +1998,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EnableFirewallRules  EnableFirewallRulesRequest
+     * @return EnableFirewallRulesResponse
+     */
     @Override
     public CompletableFuture<EnableFirewallRulesResponse> enableFirewallRules(EnableFirewallRulesRequest request) {
         try {
@@ -1463,6 +2016,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EvaluateRegionResource  EvaluateRegionResourceRequest
+     * @return EvaluateRegionResourceResponse
+     */
     @Override
     public CompletableFuture<EvaluateRegionResourceResponse> evaluateRegionResource(EvaluateRegionResourceRequest request) {
         try {
@@ -1477,6 +2034,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FailoverDBCluster  FailoverDBClusterRequest
+     * @return FailoverDBClusterResponse
+     */
     @Override
     public CompletableFuture<FailoverDBClusterResponse> failoverDBCluster(FailoverDBClusterRequest request) {
         try {
@@ -1492,12 +2053,19 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > *   An account can be authorized to access one or more databases.
-      * > *   If the specified account already has the access permissions on the specified databases, the operation returns a successful response.
-      * > *   Before you call this operation, make sure that the cluster is in the Running state. Otherwise, the operation fails.
-      * > *   You can call this operation only on a PolarDB for MySQL cluster.
-      * > *   By default, a privileged account for a cluster has all the permissions on the databases in the cluster.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>An account can be authorized to access one or more databases.</li>
+     * <li>If the specified account already has the access permissions on the specified databases, the operation returns a successful response.</li>
+     * <li>Before you call this operation, make sure that the cluster is in the Running state. Otherwise, the operation fails.</li>
+     * <li>You can call this operation only on a PolarDB for MySQL cluster.</li>
+     * <li>By default, a privileged account for a cluster has all the permissions on the databases in the cluster.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * @param request the request parameters of GrantAccountPrivilege  GrantAccountPrivilegeRequest
+     * @return GrantAccountPrivilegeResponse
      */
     @Override
     public CompletableFuture<GrantAccountPrivilegeResponse> grantAccountPrivilege(GrantAccountPrivilegeRequest request) {
@@ -1513,6 +2081,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
     @Override
     public CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request) {
         try {
@@ -1527,6 +2099,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ManuallyStartDBCluster  ManuallyStartDBClusterRequest
+     * @return ManuallyStartDBClusterResponse
+     */
     @Override
     public CompletableFuture<ManuallyStartDBClusterResponse> manuallyStartDBCluster(ManuallyStartDBClusterRequest request) {
         try {
@@ -1541,6 +2117,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyAccountDescription  ModifyAccountDescriptionRequest
+     * @return ModifyAccountDescriptionResponse
+     */
     @Override
     public CompletableFuture<ModifyAccountDescriptionResponse> modifyAccountDescription(ModifyAccountDescriptionRequest request) {
         try {
@@ -1555,6 +2135,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyAccountPassword  ModifyAccountPasswordRequest
+     * @return ModifyAccountPasswordResponse
+     */
     @Override
     public CompletableFuture<ModifyAccountPasswordResponse> modifyAccountPassword(ModifyAccountPasswordRequest request) {
         try {
@@ -1569,6 +2153,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyActiveOperationTasks  ModifyActiveOperationTasksRequest
+     * @return ModifyActiveOperationTasksResponse
+     */
+    @Override
+    public CompletableFuture<ModifyActiveOperationTasksResponse> modifyActiveOperationTasks(ModifyActiveOperationTasksRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyActiveOperationTasks").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyActiveOperationTasksResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyActiveOperationTasksResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyAutoRenewAttribute  ModifyAutoRenewAttributeRequest
+     * @return ModifyAutoRenewAttributeResponse
+     */
     @Override
     public CompletableFuture<ModifyAutoRenewAttributeResponse> modifyAutoRenewAttribute(ModifyAutoRenewAttributeRequest request) {
         try {
@@ -1584,8 +2190,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > You can also modify the automatic backup policy of a PolarDB cluster in the console. For more information, see [Backup settings](~~280422~~).
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can also modify the automatic backup policy of a PolarDB cluster in the console. For more information, see <a href="https://help.aliyun.com/document_detail/280422.html">Backup settings</a>.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of ModifyBackupPolicy  ModifyBackupPolicyRequest
+     * @return ModifyBackupPolicyResponse
      */
     @Override
     public CompletableFuture<ModifyBackupPolicyResponse> modifyBackupPolicy(ModifyBackupPolicyRequest request) {
@@ -1601,6 +2212,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDBCluster  ModifyDBClusterRequest
+     * @return ModifyDBClusterResponse
+     */
     @Override
     public CompletableFuture<ModifyDBClusterResponse> modifyDBCluster(ModifyDBClusterRequest request) {
         try {
@@ -1615,6 +2230,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDBClusterAccessWhitelist  ModifyDBClusterAccessWhitelistRequest
+     * @return ModifyDBClusterAccessWhitelistResponse
+     */
     @Override
     public CompletableFuture<ModifyDBClusterAccessWhitelistResponse> modifyDBClusterAccessWhitelist(ModifyDBClusterAccessWhitelistRequest request) {
         try {
@@ -1629,6 +2248,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDBClusterAndNodesParameters  ModifyDBClusterAndNodesParametersRequest
+     * @return ModifyDBClusterAndNodesParametersResponse
+     */
     @Override
     public CompletableFuture<ModifyDBClusterAndNodesParametersResponse> modifyDBClusterAndNodesParameters(ModifyDBClusterAndNodesParametersRequest request) {
         try {
@@ -1643,6 +2266,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDBClusterAuditLogCollector  ModifyDBClusterAuditLogCollectorRequest
+     * @return ModifyDBClusterAuditLogCollectorResponse
+     */
     @Override
     public CompletableFuture<ModifyDBClusterAuditLogCollectorResponse> modifyDBClusterAuditLogCollector(ModifyDBClusterAuditLogCollectorRequest request) {
         try {
@@ -1657,6 +2284,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDBClusterDeletion  ModifyDBClusterDeletionRequest
+     * @return ModifyDBClusterDeletionResponse
+     */
     @Override
     public CompletableFuture<ModifyDBClusterDeletionResponse> modifyDBClusterDeletion(ModifyDBClusterDeletionRequest request) {
         try {
@@ -1671,6 +2302,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDBClusterDescription  ModifyDBClusterDescriptionRequest
+     * @return ModifyDBClusterDescriptionResponse
+     */
     @Override
     public CompletableFuture<ModifyDBClusterDescriptionResponse> modifyDBClusterDescription(ModifyDBClusterDescriptionRequest request) {
         try {
@@ -1685,6 +2320,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDBClusterEndpoint  ModifyDBClusterEndpointRequest
+     * @return ModifyDBClusterEndpointResponse
+     */
     @Override
     public CompletableFuture<ModifyDBClusterEndpointResponse> modifyDBClusterEndpoint(ModifyDBClusterEndpointRequest request) {
         try {
@@ -1700,8 +2339,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  We recommend that you set the routine maintenance window to off-peak hours. Alibaba Cloud maintains your cluster within the specified maintenance window to minimize the negative impacts on your business.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> We recommend that you set the routine maintenance window to off-peak hours. Alibaba Cloud maintains your cluster within the specified maintenance window to minimize the negative impacts on your business.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of ModifyDBClusterMaintainTime  ModifyDBClusterMaintainTimeRequest
+     * @return ModifyDBClusterMaintainTimeResponse
      */
     @Override
     public CompletableFuture<ModifyDBClusterMaintainTimeResponse> modifyDBClusterMaintainTime(ModifyDBClusterMaintainTimeRequest request) {
@@ -1718,10 +2362,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   You can call this operation to switch the task that migrates data from ApsaraDB for RDS to PolarDB.
-      * *   You can call this operation to roll back the task that migrates data from ApsaraDB for RDS to PolarDB.
-      * > Before you call this operation, ensure that a one-click upgrade task has been created for the cluster. You can call the [CreateDBCluster](~~98169~~) operation to create an upgrade task. Set the **CreationOption** parameter to **MigrationFromRDS**. For more information, see [Create a PolarDB for MySQL cluster by using the Migration from RDS method](~~121582~~).
-      *
+     * <b>description</b> :
+     * <p>  You can call this operation to switch the task that migrates data from ApsaraDB for RDS to PolarDB.</p>
+     * <ul>
+     * <li>You can call this operation to roll back the task that migrates data from ApsaraDB for RDS to PolarDB.<blockquote>
+     * <p>Before you call this operation, ensure that a one-click upgrade task has been created for the cluster. You can call the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation to create an upgrade task. Set the <strong>CreationOption</strong> parameter to <strong>MigrationFromRDS</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/121582.html">Create a PolarDB for MySQL cluster by using the Migration from RDS method</a>.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyDBClusterMigration  ModifyDBClusterMigrationRequest
+     * @return ModifyDBClusterMigrationResponse
      */
     @Override
     public CompletableFuture<ModifyDBClusterMigrationResponse> modifyDBClusterMigration(ModifyDBClusterMigrationRequest request) {
@@ -1738,18 +2389,25 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   When the monitoring data is collected every 5 seconds:
-      *     *   If the query time range is less than or equal to 1 hour, the data is displayed at intervals of 5 seconds.
-      *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
-      *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
-      *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
-      *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
-      * *   When the monitoring data is collected every 60 seconds:
-      *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
-      *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
-      *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
-      *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
-      *
+     * <b>description</b> :
+     * <p>  When the monitoring data is collected every 5 seconds:
+     *     *   If the query time range is less than or equal to 1 hour, the data is displayed at intervals of 5 seconds.
+     *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
+     *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
+     *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
+     *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.</p>
+     * <ul>
+     * <li>When the monitoring data is collected every 60 seconds:<ul>
+     * <li>If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.</li>
+     * <li>If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.</li>
+     * <li>If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.</li>
+     * <li>When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyDBClusterMonitor  ModifyDBClusterMonitorRequest
+     * @return ModifyDBClusterMonitorResponse
      */
     @Override
     public CompletableFuture<ModifyDBClusterMonitorResponse> modifyDBClusterMonitor(ModifyDBClusterMonitorRequest request) {
@@ -1766,10 +2424,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * PolarDB supports the parameter template feature to centrally manage clusters. You can configure a number of parameters at a time by using a parameter template and apply the template to a PolarDB cluster. For more information, see [Use a parameter template](~~207009~~).
-      * **
-      * **Only PolarDB for MySQL clusters support parameter templates.
-      *
+     * <b>description</b> :
+     * <p>PolarDB supports the parameter template feature to centrally manage clusters. You can configure a number of parameters at a time by using a parameter template and apply the template to a PolarDB cluster. For more information, see <a href="https://help.aliyun.com/document_detail/207009.html">Use a parameter template</a>.
+     * **
+     * **Only PolarDB for MySQL clusters support parameter templates.</p>
+     * 
+     * @param request the request parameters of ModifyDBClusterParameters  ModifyDBClusterParametersRequest
+     * @return ModifyDBClusterParametersResponse
      */
     @Override
     public CompletableFuture<ModifyDBClusterParametersResponse> modifyDBClusterParameters(ModifyDBClusterParametersRequest request) {
@@ -1785,6 +2446,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDBClusterPrimaryZone  ModifyDBClusterPrimaryZoneRequest
+     * @return ModifyDBClusterPrimaryZoneResponse
+     */
     @Override
     public CompletableFuture<ModifyDBClusterPrimaryZoneResponse> modifyDBClusterPrimaryZone(ModifyDBClusterPrimaryZoneRequest request) {
         try {
@@ -1799,6 +2464,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDBClusterResourceGroup  ModifyDBClusterResourceGroupRequest
+     * @return ModifyDBClusterResourceGroupResponse
+     */
     @Override
     public CompletableFuture<ModifyDBClusterResourceGroupResponse> modifyDBClusterResourceGroup(ModifyDBClusterResourceGroupRequest request) {
         try {
@@ -1813,6 +2482,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDBClusterSSL  ModifyDBClusterSSLRequest
+     * @return ModifyDBClusterSSLResponse
+     */
     @Override
     public CompletableFuture<ModifyDBClusterSSLResponse> modifyDBClusterSSL(ModifyDBClusterSSLRequest request) {
         try {
@@ -1827,6 +2500,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDBClusterServerlessConf  ModifyDBClusterServerlessConfRequest
+     * @return ModifyDBClusterServerlessConfResponse
+     */
     @Override
     public CompletableFuture<ModifyDBClusterServerlessConfResponse> modifyDBClusterServerlessConf(ModifyDBClusterServerlessConfRequest request) {
         try {
@@ -1841,6 +2518,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDBClusterStoragePerformance  ModifyDBClusterStoragePerformanceRequest
+     * @return ModifyDBClusterStoragePerformanceResponse
+     */
+    @Override
+    public CompletableFuture<ModifyDBClusterStoragePerformanceResponse> modifyDBClusterStoragePerformance(ModifyDBClusterStoragePerformanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyDBClusterStoragePerformance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyDBClusterStoragePerformanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyDBClusterStoragePerformanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyDBClusterStorageSpace  ModifyDBClusterStorageSpaceRequest
+     * @return ModifyDBClusterStorageSpaceResponse
+     */
     @Override
     public CompletableFuture<ModifyDBClusterStorageSpaceResponse> modifyDBClusterStorageSpace(ModifyDBClusterStorageSpaceRequest request) {
         try {
@@ -1856,9 +2555,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > *   To perform this operation, you must activate KMS first. For more information, see [Purchase a dedicated KMS instance](~~153781~~).
-      * > *   After TDE is enabled, you cannot disable TDE.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>To perform this operation, you must activate KMS first. For more information, see <a href="https://help.aliyun.com/document_detail/153781.html">Purchase a dedicated KMS instance</a>.</li>
+     * <li>After TDE is enabled, you cannot disable TDE.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * @param request the request parameters of ModifyDBClusterTDE  ModifyDBClusterTDERequest
+     * @return ModifyDBClusterTDEResponse
      */
     @Override
     public CompletableFuture<ModifyDBClusterTDEResponse> modifyDBClusterTDE(ModifyDBClusterTDERequest request) {
@@ -1874,6 +2580,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDBDescription  ModifyDBDescriptionRequest
+     * @return ModifyDBDescriptionResponse
+     */
     @Override
     public CompletableFuture<ModifyDBDescriptionResponse> modifyDBDescription(ModifyDBDescriptionRequest request) {
         try {
@@ -1888,6 +2598,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDBEndpointAddress  ModifyDBEndpointAddressRequest
+     * @return ModifyDBEndpointAddressResponse
+     */
     @Override
     public CompletableFuture<ModifyDBEndpointAddressResponse> modifyDBEndpointAddress(ModifyDBEndpointAddressRequest request) {
         try {
@@ -1902,6 +2616,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDBNodeClass  ModifyDBNodeClassRequest
+     * @return ModifyDBNodeClassResponse
+     */
     @Override
     public CompletableFuture<ModifyDBNodeClassResponse> modifyDBNodeClass(ModifyDBNodeClassRequest request) {
         try {
@@ -1916,6 +2634,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDBNodeHotReplicaMode  ModifyDBNodeHotReplicaModeRequest
+     * @return ModifyDBNodeHotReplicaModeResponse
+     */
     @Override
     public CompletableFuture<ModifyDBNodeHotReplicaModeResponse> modifyDBNodeHotReplicaMode(ModifyDBNodeHotReplicaModeRequest request) {
         try {
@@ -1930,6 +2652,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDBNodesClass  ModifyDBNodesClassRequest
+     * @return ModifyDBNodesClassResponse
+     */
     @Override
     public CompletableFuture<ModifyDBNodesClassResponse> modifyDBNodesClass(ModifyDBNodesClassRequest request) {
         try {
@@ -1944,6 +2670,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDBNodesParameters  ModifyDBNodesParametersRequest
+     * @return ModifyDBNodesParametersResponse
+     */
     @Override
     public CompletableFuture<ModifyDBNodesParametersResponse> modifyDBNodesParameters(ModifyDBNodesParametersRequest request) {
         try {
@@ -1958,6 +2688,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyGlobalDatabaseNetwork  ModifyGlobalDatabaseNetworkRequest
+     * @return ModifyGlobalDatabaseNetworkResponse
+     */
     @Override
     public CompletableFuture<ModifyGlobalDatabaseNetworkResponse> modifyGlobalDatabaseNetwork(ModifyGlobalDatabaseNetworkRequest request) {
         try {
@@ -1972,6 +2706,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyGlobalSecurityIPGroup  ModifyGlobalSecurityIPGroupRequest
+     * @return ModifyGlobalSecurityIPGroupResponse
+     */
     @Override
     public CompletableFuture<ModifyGlobalSecurityIPGroupResponse> modifyGlobalSecurityIPGroup(ModifyGlobalSecurityIPGroupRequest request) {
         try {
@@ -1986,6 +2724,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyGlobalSecurityIPGroupName  ModifyGlobalSecurityIPGroupNameRequest
+     * @return ModifyGlobalSecurityIPGroupNameResponse
+     */
     @Override
     public CompletableFuture<ModifyGlobalSecurityIPGroupNameResponse> modifyGlobalSecurityIPGroupName(ModifyGlobalSecurityIPGroupNameRequest request) {
         try {
@@ -2000,6 +2742,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyGlobalSecurityIPGroupRelation  ModifyGlobalSecurityIPGroupRelationRequest
+     * @return ModifyGlobalSecurityIPGroupRelationResponse
+     */
     @Override
     public CompletableFuture<ModifyGlobalSecurityIPGroupRelationResponse> modifyGlobalSecurityIPGroupRelation(ModifyGlobalSecurityIPGroupRelationRequest request) {
         try {
@@ -2014,6 +2760,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyLogBackupPolicy  ModifyLogBackupPolicyRequest
+     * @return ModifyLogBackupPolicyResponse
+     */
     @Override
     public CompletableFuture<ModifyLogBackupPolicyResponse> modifyLogBackupPolicy(ModifyLogBackupPolicyRequest request) {
         try {
@@ -2028,6 +2778,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyMaskingRules  ModifyMaskingRulesRequest
+     * @return ModifyMaskingRulesResponse
+     */
     @Override
     public CompletableFuture<ModifyMaskingRulesResponse> modifyMaskingRules(ModifyMaskingRulesRequest request) {
         try {
@@ -2042,6 +2796,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyPendingMaintenanceAction  ModifyPendingMaintenanceActionRequest
+     * @return ModifyPendingMaintenanceActionResponse
+     */
     @Override
     public CompletableFuture<ModifyPendingMaintenanceActionResponse> modifyPendingMaintenanceAction(ModifyPendingMaintenanceActionRequest request) {
         try {
@@ -2056,6 +2814,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OpenAITask  OpenAITaskRequest
+     * @return OpenAITaskResponse
+     */
     @Override
     public CompletableFuture<OpenAITaskResponse> openAITask(OpenAITaskRequest request) {
         try {
@@ -2070,6 +2832,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RefreshDBClusterStorageUsage  RefreshDBClusterStorageUsageRequest
+     * @return RefreshDBClusterStorageUsageResponse
+     */
     @Override
     public CompletableFuture<RefreshDBClusterStorageUsageResponse> refreshDBClusterStorageUsage(RefreshDBClusterStorageUsageRequest request) {
         try {
@@ -2085,8 +2851,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  You cannot remove the primary cluster from a GDN.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You cannot remove the primary cluster from a GDN.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of RemoveDBClusterFromGDN  RemoveDBClusterFromGDNRequest
+     * @return RemoveDBClusterFromGDNResponse
      */
     @Override
     public CompletableFuture<RemoveDBClusterFromGDNResponse> removeDBClusterFromGDN(RemoveDBClusterFromGDNRequest request) {
@@ -2103,9 +2874,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >- Only PolarDB for MySQL clusters support this operation.
-      * >- If the privileged account of your cluster encounters exceptions, you can call this operation to reset the permissions. For example, the permissions are accidentally revoked.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>Only PolarDB for MySQL clusters support this operation.</li>
+     * <li>If the privileged account of your cluster encounters exceptions, you can call this operation to reset the permissions. For example, the permissions are accidentally revoked.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * @param request the request parameters of ResetAccount  ResetAccountRequest
+     * @return ResetAccountResponse
      */
     @Override
     public CompletableFuture<ResetAccountResponse> resetAccount(ResetAccountRequest request) {
@@ -2121,6 +2899,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ResetGlobalDatabaseNetwork  ResetGlobalDatabaseNetworkRequest
+     * @return ResetGlobalDatabaseNetworkResponse
+     */
     @Override
     public CompletableFuture<ResetGlobalDatabaseNetworkResponse> resetGlobalDatabaseNetwork(ResetGlobalDatabaseNetworkRequest request) {
         try {
@@ -2135,6 +2917,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RestartDBLink  RestartDBLinkRequest
+     * @return RestartDBLinkResponse
+     */
+    @Override
+    public CompletableFuture<RestartDBLinkResponse> restartDBLink(RestartDBLinkRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RestartDBLink").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RestartDBLinkResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RestartDBLinkResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RestartDBNode  RestartDBNodeRequest
+     * @return RestartDBNodeResponse
+     */
     @Override
     public CompletableFuture<RestartDBNodeResponse> restartDBNode(RestartDBNodeRequest request) {
         try {
@@ -2149,6 +2953,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RestoreTable  RestoreTableRequest
+     * @return RestoreTableResponse
+     */
     @Override
     public CompletableFuture<RestoreTableResponse> restoreTable(RestoreTableRequest request) {
         try {
@@ -2163,6 +2971,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RevokeAccountPrivilege  RevokeAccountPrivilegeRequest
+     * @return RevokeAccountPrivilegeResponse
+     */
     @Override
     public CompletableFuture<RevokeAccountPrivilegeResponse> revokeAccountPrivilege(RevokeAccountPrivilegeRequest request) {
         try {
@@ -2177,6 +2989,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SwitchOverGlobalDatabaseNetwork  SwitchOverGlobalDatabaseNetworkRequest
+     * @return SwitchOverGlobalDatabaseNetworkResponse
+     */
     @Override
     public CompletableFuture<SwitchOverGlobalDatabaseNetworkResponse> switchOverGlobalDatabaseNetwork(SwitchOverGlobalDatabaseNetworkRequest request) {
         try {
@@ -2191,6 +3007,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
     @Override
     public CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request) {
         try {
@@ -2205,6 +3025,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TempModifyDBNode  TempModifyDBNodeRequest
+     * @return TempModifyDBNodeResponse
+     */
     @Override
     public CompletableFuture<TempModifyDBNodeResponse> tempModifyDBNode(TempModifyDBNodeRequest request) {
         try {
@@ -2220,10 +3044,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > *   PolarDB clusters support the subscription and pay-as-you-go billing methods. You can change the billing method from subscription to pay-as-you-go or from pay-as-you-go to subscription based on your business requirements. For more information, see [Change the billing method from subscription to pay-as-you-go](~~172886~~) and [Change the billing method from pay-as-you-go to subscription](~~84076~~).
-      * >*   You cannot change the billing method from pay-as-you-go to subscription if your account balance is insufficient.
-      * >*   If you change the billing method from subscription to pay-as-you-go, the system automatically refunds the balance of the prepaid subscription fees.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>PolarDB clusters support the subscription and pay-as-you-go billing methods. You can change the billing method from subscription to pay-as-you-go or from pay-as-you-go to subscription based on your business requirements. For more information, see <a href="https://help.aliyun.com/document_detail/172886.html">Change the billing method from subscription to pay-as-you-go</a> and <a href="https://help.aliyun.com/document_detail/84076.html">Change the billing method from pay-as-you-go to subscription</a>.</li>
+     * <li>You cannot change the billing method from pay-as-you-go to subscription if your account balance is insufficient.</li>
+     * <li>If you change the billing method from subscription to pay-as-you-go, the system automatically refunds the balance of the prepaid subscription fees.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of TransformDBClusterPayType  TransformDBClusterPayTypeRequest
+     * @return TransformDBClusterPayTypeResponse
      */
     @Override
     public CompletableFuture<TransformDBClusterPayTypeResponse> transformDBClusterPayType(TransformDBClusterPayTypeRequest request) {
@@ -2239,6 +3070,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UntagResources  UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
     @Override
     public CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request) {
         try {
@@ -2254,28 +3089,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > You can upgrade only the revision version of a PolarDB for MySQL cluster. For example, you can upgrade the version 8.0.1.1.3 of a PolarDB for MySQL cluster to the version 8.0.1.1.4.
-      *
-     */
-    @Override
-    public CompletableFuture<UpgradeDBClusterMinorVersionResponse> upgradeDBClusterMinorVersion(UpgradeDBClusterMinorVersionRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpgradeDBClusterMinorVersion").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpgradeDBClusterMinorVersionResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<UpgradeDBClusterMinorVersionResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-      * > 
-      * *   You can update only the revision version of a PolarDB for MySQL cluster, for example, from 8.0.1.1.3 to 8.0.1.1.4.
-      * *   You can use only your Alibaba Cloud account to create scheduled tasks that update the kernel version of a PolarDB for MySQL cluster. RAM users are not authorized to update the kernel version of a PolarDB for MySQL cluster.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>You can update only the revision version of a PolarDB for MySQL cluster, for example, from 8.0.1.1.3 to 8.0.1.1.4.</li>
+     * <li>You can use only your Alibaba Cloud account to create scheduled tasks that update the kernel version of a PolarDB for MySQL cluster. RAM users are not authorized to update the kernel version of a PolarDB for MySQL cluster.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * @param request the request parameters of UpgradeDBClusterVersion  UpgradeDBClusterVersionRequest
+     * @return UpgradeDBClusterVersionResponse
      */
     @Override
     public CompletableFuture<UpgradeDBClusterVersionResponse> upgradeDBClusterVersion(UpgradeDBClusterVersionRequest request) {

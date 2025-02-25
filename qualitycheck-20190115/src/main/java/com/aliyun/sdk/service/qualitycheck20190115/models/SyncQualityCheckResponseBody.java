@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SyncQualityCheckResponseBody} extends {@link TeaModel}
  *
  * <p>SyncQualityCheckResponseBody</p>
  */
 public class SyncQualityCheckResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private SyncQualityCheckResponseBody(Builder builder) {
@@ -131,20 +136,26 @@ public class SyncQualityCheckResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SyncQualityCheckResponseBody} extends {@link TeaModel}
+     *
+     * <p>SyncQualityCheckResponseBody</p>
+     */
     public static class HitKeyWords extends TeaModel {
-        @NameInMap("Cid")
+        @com.aliyun.core.annotation.NameInMap("Cid")
         private Integer cid;
 
-        @NameInMap("From")
+        @com.aliyun.core.annotation.NameInMap("From")
         private Integer from;
 
-        @NameInMap("Pid")
+        @com.aliyun.core.annotation.NameInMap("Pid")
         private Integer pid;
 
-        @NameInMap("To")
+        @com.aliyun.core.annotation.NameInMap("To")
         private Integer to;
 
-        @NameInMap("Val")
+        @com.aliyun.core.annotation.NameInMap("Val")
         private String val;
 
         private HitKeyWords(Builder builder) {
@@ -252,29 +263,35 @@ public class SyncQualityCheckResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SyncQualityCheckResponseBody} extends {@link TeaModel}
+     *
+     * <p>SyncQualityCheckResponseBody</p>
+     */
     public static class Phrase extends TeaModel {
-        @NameInMap("Begin")
+        @com.aliyun.core.annotation.NameInMap("Begin")
         private Long begin;
 
-        @NameInMap("EmotionValue")
+        @com.aliyun.core.annotation.NameInMap("EmotionValue")
         private Integer emotionValue;
 
-        @NameInMap("End")
+        @com.aliyun.core.annotation.NameInMap("End")
         private Long end;
 
-        @NameInMap("Identity")
+        @com.aliyun.core.annotation.NameInMap("Identity")
         private String identity;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("SilenceDuration")
+        @com.aliyun.core.annotation.NameInMap("SilenceDuration")
         private Integer silenceDuration;
 
-        @NameInMap("SpeechRate")
+        @com.aliyun.core.annotation.NameInMap("SpeechRate")
         private Integer speechRate;
 
-        @NameInMap("Words")
+        @com.aliyun.core.annotation.NameInMap("Words")
         private String words;
 
         private Phrase(Builder builder) {
@@ -433,11 +450,17 @@ public class SyncQualityCheckResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SyncQualityCheckResponseBody} extends {@link TeaModel}
+     *
+     * <p>SyncQualityCheckResponseBody</p>
+     */
     public static class Hit extends TeaModel {
-        @NameInMap("HitKeyWords")
-        private java.util.List < HitKeyWords> hitKeyWords;
+        @com.aliyun.core.annotation.NameInMap("HitKeyWords")
+        private java.util.List<HitKeyWords> hitKeyWords;
 
-        @NameInMap("Phrase")
+        @com.aliyun.core.annotation.NameInMap("Phrase")
         private Phrase phrase;
 
         private Hit(Builder builder) {
@@ -456,7 +479,7 @@ public class SyncQualityCheckResponseBody extends TeaModel {
         /**
          * @return hitKeyWords
          */
-        public java.util.List < HitKeyWords> getHitKeyWords() {
+        public java.util.List<HitKeyWords> getHitKeyWords() {
             return this.hitKeyWords;
         }
 
@@ -468,13 +491,13 @@ public class SyncQualityCheckResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < HitKeyWords> hitKeyWords; 
+            private java.util.List<HitKeyWords> hitKeyWords; 
             private Phrase phrase; 
 
             /**
              * HitKeyWords.
              */
-            public Builder hitKeyWords(java.util.List < HitKeyWords> hitKeyWords) {
+            public Builder hitKeyWords(java.util.List<HitKeyWords> hitKeyWords) {
                 this.hitKeyWords = hitKeyWords;
                 return this;
             }
@@ -494,19 +517,196 @@ public class SyncQualityCheckResponseBody extends TeaModel {
         } 
 
     }
-    public static class Rules extends TeaModel {
-        @NameInMap("Hit")
-        private java.util.List < Hit> hit;
+    /**
+     * 
+     * {@link SyncQualityCheckResponseBody} extends {@link TeaModel}
+     *
+     * <p>SyncQualityCheckResponseBody</p>
+     */
+    public static class RuleInfoBase extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Comments")
+        private String comments;
 
-        @NameInMap("Rid")
+        @com.aliyun.core.annotation.NameInMap("Level")
+        private Integer level;
+
+        @com.aliyun.core.annotation.NameInMap("RuleCategoryName")
+        private String ruleCategoryName;
+
+        @com.aliyun.core.annotation.NameInMap("ScoreNum")
+        private Integer scoreNum;
+
+        @com.aliyun.core.annotation.NameInMap("ScoreNumType")
+        private Integer scoreNumType;
+
+        @com.aliyun.core.annotation.NameInMap("ScoreType")
+        private Integer scoreType;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private Integer type;
+
+        private RuleInfoBase(Builder builder) {
+            this.comments = builder.comments;
+            this.level = builder.level;
+            this.ruleCategoryName = builder.ruleCategoryName;
+            this.scoreNum = builder.scoreNum;
+            this.scoreNumType = builder.scoreNumType;
+            this.scoreType = builder.scoreType;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RuleInfoBase create() {
+            return builder().build();
+        }
+
+        /**
+         * @return comments
+         */
+        public String getComments() {
+            return this.comments;
+        }
+
+        /**
+         * @return level
+         */
+        public Integer getLevel() {
+            return this.level;
+        }
+
+        /**
+         * @return ruleCategoryName
+         */
+        public String getRuleCategoryName() {
+            return this.ruleCategoryName;
+        }
+
+        /**
+         * @return scoreNum
+         */
+        public Integer getScoreNum() {
+            return this.scoreNum;
+        }
+
+        /**
+         * @return scoreNumType
+         */
+        public Integer getScoreNumType() {
+            return this.scoreNumType;
+        }
+
+        /**
+         * @return scoreType
+         */
+        public Integer getScoreType() {
+            return this.scoreType;
+        }
+
+        /**
+         * @return type
+         */
+        public Integer getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String comments; 
+            private Integer level; 
+            private String ruleCategoryName; 
+            private Integer scoreNum; 
+            private Integer scoreNumType; 
+            private Integer scoreType; 
+            private Integer type; 
+
+            /**
+             * Comments.
+             */
+            public Builder comments(String comments) {
+                this.comments = comments;
+                return this;
+            }
+
+            /**
+             * Level.
+             */
+            public Builder level(Integer level) {
+                this.level = level;
+                return this;
+            }
+
+            /**
+             * RuleCategoryName.
+             */
+            public Builder ruleCategoryName(String ruleCategoryName) {
+                this.ruleCategoryName = ruleCategoryName;
+                return this;
+            }
+
+            /**
+             * ScoreNum.
+             */
+            public Builder scoreNum(Integer scoreNum) {
+                this.scoreNum = scoreNum;
+                return this;
+            }
+
+            /**
+             * ScoreNumType.
+             */
+            public Builder scoreNumType(Integer scoreNumType) {
+                this.scoreNumType = scoreNumType;
+                return this;
+            }
+
+            /**
+             * ScoreType.
+             */
+            public Builder scoreType(Integer scoreType) {
+                this.scoreType = scoreType;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(Integer type) {
+                this.type = type;
+                return this;
+            }
+
+            public RuleInfoBase build() {
+                return new RuleInfoBase(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link SyncQualityCheckResponseBody} extends {@link TeaModel}
+     *
+     * <p>SyncQualityCheckResponseBody</p>
+     */
+    public static class Rules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Hit")
+        private java.util.List<Hit> hit;
+
+        @com.aliyun.core.annotation.NameInMap("Rid")
         private String rid;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleInfoBase")
+        private RuleInfoBase ruleInfoBase;
+
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
         private Rules(Builder builder) {
             this.hit = builder.hit;
             this.rid = builder.rid;
+            this.ruleInfoBase = builder.ruleInfoBase;
             this.ruleName = builder.ruleName;
         }
 
@@ -521,7 +721,7 @@ public class SyncQualityCheckResponseBody extends TeaModel {
         /**
          * @return hit
          */
-        public java.util.List < Hit> getHit() {
+        public java.util.List<Hit> getHit() {
             return this.hit;
         }
 
@@ -533,6 +733,13 @@ public class SyncQualityCheckResponseBody extends TeaModel {
         }
 
         /**
+         * @return ruleInfoBase
+         */
+        public RuleInfoBase getRuleInfoBase() {
+            return this.ruleInfoBase;
+        }
+
+        /**
          * @return ruleName
          */
         public String getRuleName() {
@@ -540,14 +747,15 @@ public class SyncQualityCheckResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Hit> hit; 
+            private java.util.List<Hit> hit; 
             private String rid; 
+            private RuleInfoBase ruleInfoBase; 
             private String ruleName; 
 
             /**
              * Hit.
              */
-            public Builder hit(java.util.List < Hit> hit) {
+            public Builder hit(java.util.List<Hit> hit) {
                 this.hit = hit;
                 return this;
             }
@@ -557,6 +765,14 @@ public class SyncQualityCheckResponseBody extends TeaModel {
              */
             public Builder rid(String rid) {
                 this.rid = rid;
+                return this;
+            }
+
+            /**
+             * RuleInfoBase.
+             */
+            public Builder ruleInfoBase(RuleInfoBase ruleInfoBase) {
+                this.ruleInfoBase = ruleInfoBase;
                 return this;
             }
 
@@ -575,20 +791,26 @@ public class SyncQualityCheckResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SyncQualityCheckResponseBody} extends {@link TeaModel}
+     *
+     * <p>SyncQualityCheckResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("BeginTime")
+        @com.aliyun.core.annotation.NameInMap("BeginTime")
         private Long beginTime;
 
-        @NameInMap("Rules")
-        private java.util.List < Rules> rules;
+        @com.aliyun.core.annotation.NameInMap("Rules")
+        private java.util.List<Rules> rules;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private Integer score;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("Tid")
+        @com.aliyun.core.annotation.NameInMap("Tid")
         private String tid;
 
         private Data(Builder builder) {
@@ -617,7 +839,7 @@ public class SyncQualityCheckResponseBody extends TeaModel {
         /**
          * @return rules
          */
-        public java.util.List < Rules> getRules() {
+        public java.util.List<Rules> getRules() {
             return this.rules;
         }
 
@@ -644,7 +866,7 @@ public class SyncQualityCheckResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long beginTime; 
-            private java.util.List < Rules> rules; 
+            private java.util.List<Rules> rules; 
             private Integer score; 
             private String taskId; 
             private String tid; 
@@ -660,7 +882,7 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             /**
              * Rules.
              */
-            public Builder rules(java.util.List < Rules> rules) {
+            public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
                 return this;
             }

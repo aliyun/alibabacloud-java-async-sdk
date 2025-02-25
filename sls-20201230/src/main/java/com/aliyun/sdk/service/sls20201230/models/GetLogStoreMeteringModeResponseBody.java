@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link GetLogStoreMeteringModeResponseBody} extends {@link TeaModel}
  *
  * <p>GetLogStoreMeteringModeResponseBody</p>
  */
 public class GetLogStoreMeteringModeResponseBody extends TeaModel {
-    @NameInMap("meteringMode")
+    @com.aliyun.core.annotation.NameInMap("meteringMode")
     private String meteringMode;
 
     private GetLogStoreMeteringModeResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class GetLogStoreMeteringModeResponseBody extends TeaModel {
         private String meteringMode; 
 
         /**
-         * meteringMode.
+         * <p>The billing mode. Default value: ChargeByFunction. Valid values: ChargeByFunction and ChargeByDataIngest.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ChargeByFunction</p>
          */
         public Builder meteringMode(String meteringMode) {
             this.meteringMode = meteringMode;

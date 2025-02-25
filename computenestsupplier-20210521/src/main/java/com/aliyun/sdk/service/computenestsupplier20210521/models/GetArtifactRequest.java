@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetArtifactRequest} extends {@link RequestModel}
  *
  * <p>GetArtifactRequest</p>
  */
 public class GetArtifactRequest extends Request {
-    @Query
-    @NameInMap("ArtifactId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArtifactId")
     private String artifactId;
 
-    @Query
-    @NameInMap("ArtifactName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArtifactName")
     private String artifactName;
 
-    @Query
-    @NameInMap("ArtifactVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArtifactVersion")
     private String artifactVersion;
 
     private GetArtifactRequest(Builder builder) {
@@ -82,7 +87,10 @@ public class GetArtifactRequest extends Request {
         } 
 
         /**
-         * ArtifactId.
+         * <p>The ID of the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>artifact-eea08d1e2d3a43aexxxx</p>
          */
         public Builder artifactId(String artifactId) {
             this.putQueryParameter("ArtifactId", artifactId);
@@ -91,7 +99,10 @@ public class GetArtifactRequest extends Request {
         }
 
         /**
-         * ArtifactName.
+         * <p>The name of the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gpu-test</p>
          */
         public Builder artifactName(String artifactName) {
             this.putQueryParameter("ArtifactName", artifactName);
@@ -100,7 +111,10 @@ public class GetArtifactRequest extends Request {
         }
 
         /**
-         * ArtifactVersion.
+         * <p>The version of the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder artifactVersion(String artifactVersion) {
             this.putQueryParameter("ArtifactVersion", artifactVersion);

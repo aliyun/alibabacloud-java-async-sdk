@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplicationConfigFile} extends {@link TeaModel}
  *
  * <p>ApplicationConfigFile</p>
  */
 public class ApplicationConfigFile extends TeaModel {
-    @NameInMap("ApplicationName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("ApplicationName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String applicationName;
 
-    @NameInMap("ConfigFileName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("ConfigFileName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String configFileName;
 
     private ApplicationConfigFile(Builder builder) {
@@ -52,7 +57,11 @@ public class ApplicationConfigFile extends TeaModel {
         private String configFileName; 
 
         /**
-         * 应用名称。
+         * <p>应用名称。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HDFS</p>
          */
         public Builder applicationName(String applicationName) {
             this.applicationName = applicationName;
@@ -60,7 +69,11 @@ public class ApplicationConfigFile extends TeaModel {
         }
 
         /**
-         * 配置文件名称。
+         * <p>配置文件名称。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>core-site.xml</p>
          */
         public Builder configFileName(String configFileName) {
             this.configFileName = configFileName;

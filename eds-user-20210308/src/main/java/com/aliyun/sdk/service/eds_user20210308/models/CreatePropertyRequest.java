@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePropertyRequest} extends {@link RequestModel}
  *
  * <p>CreatePropertyRequest</p>
  */
 public class CreatePropertyRequest extends Request {
-    @Body
-    @NameInMap("PropertyKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PropertyKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String propertyKey;
 
-    @Body
-    @NameInMap("PropertyValues")
-    private java.util.List < String > propertyValues;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PropertyValues")
+    private java.util.List<String> propertyValues;
 
     private CreatePropertyRequest(Builder builder) {
         super(builder);
@@ -50,13 +55,13 @@ public class CreatePropertyRequest extends Request {
     /**
      * @return propertyValues
      */
-    public java.util.List < String > getPropertyValues() {
+    public java.util.List<String> getPropertyValues() {
         return this.propertyValues;
     }
 
     public static final class Builder extends Request.Builder<CreatePropertyRequest, Builder> {
         private String propertyKey; 
-        private java.util.List < String > propertyValues; 
+        private java.util.List<String> propertyValues; 
 
         private Builder() {
             super();
@@ -69,7 +74,11 @@ public class CreatePropertyRequest extends Request {
         } 
 
         /**
-         * PropertyKey.
+         * <p>The property name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>department</p>
          */
         public Builder propertyKey(String propertyKey) {
             this.putBodyParameter("PropertyKey", propertyKey);
@@ -78,9 +87,9 @@ public class CreatePropertyRequest extends Request {
         }
 
         /**
-         * PropertyValues.
+         * <p>The values of the property. You can specify up to 50 values for a property.</p>
          */
-        public Builder propertyValues(java.util.List < String > propertyValues) {
+        public Builder propertyValues(java.util.List<String> propertyValues) {
             this.putBodyParameter("PropertyValues", propertyValues);
             this.propertyValues = propertyValues;
             return this;

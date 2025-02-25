@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResourceCenterServiceStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetResourceCenterServiceStatusResponseBody</p>
  */
 public class GetResourceCenterServiceStatusResponseBody extends TeaModel {
-    @NameInMap("InitialStatus")
+    @com.aliyun.core.annotation.NameInMap("InitialStatus")
     private String initialStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServiceStatus")
+    @com.aliyun.core.annotation.NameInMap("ServiceStatus")
     private String serviceStatus;
 
     private GetResourceCenterServiceStatusResponseBody(Builder builder) {
@@ -62,11 +62,14 @@ public class GetResourceCenterServiceStatusResponseBody extends TeaModel {
         private String serviceStatus; 
 
         /**
-         * The initialization status of the service. Valid values:
-         * <p>
+         * <p>The initialization status of the service. Valid values:</p>
+         * <ul>
+         * <li>Pending: The service is being initialized.</li>
+         * <li>Finished: The service is initialized.</li>
+         * </ul>
          * 
-         * *   Pending: The service being initialized.
-         * *   Finished: The service is initialized.
+         * <strong>example:</strong>
+         * <p>Pending</p>
          */
         public Builder initialStatus(String initialStatus) {
             this.initialStatus = initialStatus;
@@ -74,7 +77,10 @@ public class GetResourceCenterServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AD5F848D-CCDC-5464-93E1-4BA50A4826DD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,11 +88,14 @@ public class GetResourceCenterServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the service. Valid values:
-         * <p>
+         * <p>The status of the service. Valid values:</p>
+         * <ul>
+         * <li>Enabled: The service is activated.</li>
+         * <li>Disabled: The service is deactivated.</li>
+         * </ul>
          * 
-         * *   Enabled: The service is activated.
-         * *   Disabled: The service is deactivated.
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder serviceStatus(String serviceStatus) {
             this.serviceStatus = serviceStatus;

@@ -1,37 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitOperationAuditInfoRequest} extends {@link RequestModel}
  *
  * <p>SubmitOperationAuditInfoRequest</p>
  */
 public class SubmitOperationAuditInfoRequest extends Request {
-    @Query
-    @NameInMap("AuditInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuditInfo")
     private String auditInfo;
 
-    @Query
-    @NameInMap("AuditType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuditType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer auditType;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
     private SubmitOperationAuditInfoRequest(Builder builder) {
@@ -121,7 +121,10 @@ public class SubmitOperationAuditInfoRequest extends Request {
         }
 
         /**
-         * AuditType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder auditType(Integer auditType) {
             this.putQueryParameter("AuditType", auditType);
@@ -130,7 +133,10 @@ public class SubmitOperationAuditInfoRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com,example.org</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

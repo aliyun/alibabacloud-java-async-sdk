@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PostCustomizeRuleResponseBody</p>
  */
 public class PostCustomizeRuleResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private PostCustomizeRuleResponseBody(Builder builder) {
@@ -136,76 +135,84 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AlertType")
+        @com.aliyun.core.annotation.NameInMap("AlertType")
         private String alertType;
 
-        @NameInMap("AlertTypeMds")
+        @com.aliyun.core.annotation.NameInMap("AlertTypeMds")
         private String alertTypeMds;
 
-        @NameInMap("Aliuid")
+        @com.aliyun.core.annotation.NameInMap("Aliuid")
         private Long aliuid;
 
-        @NameInMap("EventTransferExt")
+        @com.aliyun.core.annotation.NameInMap("AttCk")
+        private String attCk;
+
+        @com.aliyun.core.annotation.NameInMap("DataType")
+        private Integer dataType;
+
+        @com.aliyun.core.annotation.NameInMap("EventTransferExt")
         private String eventTransferExt;
 
-        @NameInMap("EventTransferSwitch")
+        @com.aliyun.core.annotation.NameInMap("EventTransferSwitch")
         private Integer eventTransferSwitch;
 
-        @NameInMap("EventTransferType")
+        @com.aliyun.core.annotation.NameInMap("EventTransferType")
         private String eventTransferType;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("LogSource")
+        @com.aliyun.core.annotation.NameInMap("LogSource")
         private String logSource;
 
-        @NameInMap("LogSourceMds")
+        @com.aliyun.core.annotation.NameInMap("LogSourceMds")
         private String logSourceMds;
 
-        @NameInMap("LogType")
+        @com.aliyun.core.annotation.NameInMap("LogType")
         private String logType;
 
-        @NameInMap("LogTypeMds")
+        @com.aliyun.core.annotation.NameInMap("LogTypeMds")
         private String logTypeMds;
 
-        @NameInMap("QueryCycle")
+        @com.aliyun.core.annotation.NameInMap("QueryCycle")
         private String queryCycle;
 
-        @NameInMap("RuleCondition")
+        @com.aliyun.core.annotation.NameInMap("RuleCondition")
         private String ruleCondition;
 
-        @NameInMap("RuleDesc")
+        @com.aliyun.core.annotation.NameInMap("RuleDesc")
         private String ruleDesc;
 
-        @NameInMap("RuleGroup")
+        @com.aliyun.core.annotation.NameInMap("RuleGroup")
         private String ruleGroup;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("RuleThreshold")
+        @com.aliyun.core.annotation.NameInMap("RuleThreshold")
         private String ruleThreshold;
 
-        @NameInMap("RuleType")
+        @com.aliyun.core.annotation.NameInMap("RuleType")
         private String ruleType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("ThreatLevel")
+        @com.aliyun.core.annotation.NameInMap("ThreatLevel")
         private String threatLevel;
 
         private Data(Builder builder) {
             this.alertType = builder.alertType;
             this.alertTypeMds = builder.alertTypeMds;
             this.aliuid = builder.aliuid;
+            this.attCk = builder.attCk;
+            this.dataType = builder.dataType;
             this.eventTransferExt = builder.eventTransferExt;
             this.eventTransferSwitch = builder.eventTransferSwitch;
             this.eventTransferType = builder.eventTransferType;
@@ -254,6 +261,20 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
          */
         public Long getAliuid() {
             return this.aliuid;
+        }
+
+        /**
+         * @return attCk
+         */
+        public String getAttCk() {
+            return this.attCk;
+        }
+
+        /**
+         * @return dataType
+         */
+        public Integer getDataType() {
+            return this.dataType;
         }
 
         /**
@@ -393,6 +414,8 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
             private String alertType; 
             private String alertTypeMds; 
             private Long aliuid; 
+            private String attCk; 
+            private Integer dataType; 
             private String eventTransferExt; 
             private Integer eventTransferSwitch; 
             private String eventTransferType; 
@@ -434,6 +457,22 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
              */
             public Builder aliuid(Long aliuid) {
                 this.aliuid = aliuid;
+                return this;
+            }
+
+            /**
+             * 告警附加字段attck
+             */
+            public Builder attCk(String attCk) {
+                this.attCk = attCk;
+                return this;
+            }
+
+            /**
+             * 自动化响应规则条件字段数据类型。
+             */
+            public Builder dataType(Integer dataType) {
+                this.dataType = dataType;
                 return this;
             }
 

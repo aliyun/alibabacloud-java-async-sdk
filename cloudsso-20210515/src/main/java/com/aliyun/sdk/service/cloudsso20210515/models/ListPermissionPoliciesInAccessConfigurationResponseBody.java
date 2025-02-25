@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPermissionPoliciesInAccessConfigurationResponseBody} extends {@link TeaModel}
  *
  * <p>ListPermissionPoliciesInAccessConfigurationResponseBody</p>
  */
 public class ListPermissionPoliciesInAccessConfigurationResponseBody extends TeaModel {
-    @NameInMap("PermissionPolicies")
+    @com.aliyun.core.annotation.NameInMap("PermissionPolicies")
     private java.util.List < PermissionPolicies> permissionPolicies;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCounts")
+    @com.aliyun.core.annotation.NameInMap("TotalCounts")
     private Integer totalCounts;
 
     private ListPermissionPoliciesInAccessConfigurationResponseBody(Builder builder) {
@@ -62,7 +62,7 @@ public class ListPermissionPoliciesInAccessConfigurationResponseBody extends Tea
         private Integer totalCounts; 
 
         /**
-         * The policies.
+         * <p>The policies.</p>
          */
         public Builder permissionPolicies(java.util.List < PermissionPolicies> permissionPolicies) {
             this.permissionPolicies = permissionPolicies;
@@ -70,7 +70,10 @@ public class ListPermissionPoliciesInAccessConfigurationResponseBody extends Tea
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3A5E771F-1F5A-5555-A64E-579748AAFD98</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,10 @@ public class ListPermissionPoliciesInAccessConfigurationResponseBody extends Tea
         }
 
         /**
-         * The total number of policies.
+         * <p>The total number of policies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCounts(Integer totalCounts) {
             this.totalCounts = totalCounts;
@@ -91,17 +97,23 @@ public class ListPermissionPoliciesInAccessConfigurationResponseBody extends Tea
 
     } 
 
+    /**
+     * 
+     * {@link ListPermissionPoliciesInAccessConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPermissionPoliciesInAccessConfigurationResponseBody</p>
+     */
     public static class PermissionPolicies extends TeaModel {
-        @NameInMap("AddTime")
+        @com.aliyun.core.annotation.NameInMap("AddTime")
         private String addTime;
 
-        @NameInMap("PermissionPolicyDocument")
+        @com.aliyun.core.annotation.NameInMap("PermissionPolicyDocument")
         private String permissionPolicyDocument;
 
-        @NameInMap("PermissionPolicyName")
+        @com.aliyun.core.annotation.NameInMap("PermissionPolicyName")
         private String permissionPolicyName;
 
-        @NameInMap("PermissionPolicyType")
+        @com.aliyun.core.annotation.NameInMap("PermissionPolicyType")
         private String permissionPolicyType;
 
         private PermissionPolicies(Builder builder) {
@@ -154,7 +166,10 @@ public class ListPermissionPoliciesInAccessConfigurationResponseBody extends Tea
             private String permissionPolicyType; 
 
             /**
-             * The time when the policy was created for the access configuration.
+             * <p>The time when the policy was created for the access configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-03T06:37:25Z</p>
              */
             public Builder addTime(String addTime) {
                 this.addTime = addTime;
@@ -162,10 +177,13 @@ public class ListPermissionPoliciesInAccessConfigurationResponseBody extends Tea
             }
 
             /**
-             * The configurations of the inline policy.
-             * <p>
+             * <p>The configurations of the inline policy.</p>
+             * <blockquote>
+             * <p> This parameter is returned only when the value of the PermissionPolicyType parameter is Inline.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only when the value of the PermissionPolicyType parameter is Inline.
+             * <strong>example:</strong>
+             * <p>{&quot;Statement&quot;: [{&quot;Action&quot;: &quot;<em>&quot;,&quot;Effect&quot;: &quot;Allow&quot;,&quot;Resource&quot;: &quot;</em>&quot;}],&quot;Version&quot;: &quot;1&quot;}</p>
              */
             public Builder permissionPolicyDocument(String permissionPolicyDocument) {
                 this.permissionPolicyDocument = permissionPolicyDocument;
@@ -173,7 +191,10 @@ public class ListPermissionPoliciesInAccessConfigurationResponseBody extends Tea
             }
 
             /**
-             * The name of the policy.
+             * <p>The name of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliyunECSFullAccess</p>
              */
             public Builder permissionPolicyName(String permissionPolicyName) {
                 this.permissionPolicyName = permissionPolicyName;
@@ -181,7 +202,10 @@ public class ListPermissionPoliciesInAccessConfigurationResponseBody extends Tea
             }
 
             /**
-             * The type of the policy.
+             * <p>The type of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>System</p>
              */
             public Builder permissionPolicyType(String permissionPolicyType) {
                 this.permissionPolicyType = permissionPolicyType;

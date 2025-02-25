@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyBackupPolicyRequest} extends {@link RequestModel}
  *
  * <p>ModifyBackupPolicyRequest</p>
  */
 public class ModifyBackupPolicyRequest extends Request {
-    @Query
-    @NameInMap("BackupRetentionPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupRetentionPeriod")
     private Integer backupRetentionPeriod;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("EnableRecoveryPoint")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableRecoveryPoint")
     private Boolean enableRecoveryPoint;
 
-    @Query
-    @NameInMap("PreferredBackupPeriod")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreferredBackupPeriod")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String preferredBackupPeriod;
 
-    @Query
-    @NameInMap("PreferredBackupTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreferredBackupTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String preferredBackupTime;
 
-    @Query
-    @NameInMap("RecoveryPointPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecoveryPointPeriod")
     private String recoveryPointPeriod;
 
     private ModifyBackupPolicyRequest(Builder builder) {
@@ -127,7 +132,10 @@ public class ModifyBackupPolicyRequest extends Request {
         } 
 
         /**
-         * The number of days for which data backup files are retained. Default value: 7. Maximum value: 7. Valid values: 1 to 7.
+         * <p>The number of days for which data backup files are retained. Default value: 7. Maximum value: 7. Valid values: 1 to 7.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder backupRetentionPeriod(Integer backupRetentionPeriod) {
             this.putQueryParameter("BackupRetentionPeriod", backupRetentionPeriod);
@@ -136,7 +144,11 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp***************</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -145,13 +157,15 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable automatic point-in-time backup.
-         * <p>
+         * <p>Specifies whether to enable automatic point-in-time backup.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: true.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: true.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableRecoveryPoint(Boolean enableRecoveryPoint) {
             this.putQueryParameter("EnableRecoveryPoint", enableRecoveryPoint);
@@ -160,16 +174,20 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * The cycle based on which you want to perform a backup. Separate multiple values with commas (,). Valid values:
-         * <p>
+         * <p>The cycle based on which backups are performed. If more than one day of the week is specified, the days of the week are separated by commas (,). Valid values:</p>
+         * <ul>
+         * <li>Monday</li>
+         * <li>Tuesday</li>
+         * <li>Wednesday</li>
+         * <li>Thursday</li>
+         * <li>Friday</li>
+         * <li>Saturday</li>
+         * <li>Sunday</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Monday
-         * *   Tuesday
-         * *   Wednesday
-         * *   Thursday
-         * *   Friday
-         * *   Saturday
-         * *   Sunday
+         * <strong>example:</strong>
+         * <p>Tuesday, Thursday, Saturday</p>
          */
         public Builder preferredBackupPeriod(String preferredBackupPeriod) {
             this.putQueryParameter("PreferredBackupPeriod", preferredBackupPeriod);
@@ -178,7 +196,11 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * The backup window. Specify the backup window in the HH:mmZ-HH:mmZ format. The backup window must be in UTC. Default value: 00:00-01:00.
+         * <p>The backup window. Specify the backup window in the HH:mmZ-HH:mmZ format. The backup window must be in UTC. Default value: 00:00-01:00.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15:00Z-16:00Z</p>
          */
         public Builder preferredBackupTime(String preferredBackupTime) {
             this.putQueryParameter("PreferredBackupTime", preferredBackupTime);
@@ -187,15 +209,17 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * The frequency of point-in-time backup.
-         * <p>
+         * <p>The frequency of point-in-time backup.</p>
+         * <ul>
+         * <li>1: per hour</li>
+         * <li>2: per 2 hours</li>
+         * <li>4: per 4 hours</li>
+         * <li>8: per 8 hours</li>
+         * </ul>
+         * <p>Default value: 8.</p>
          * 
-         * *   1: per hour
-         * *   2: per 2 hours
-         * *   4: per 4 hours
-         * *   8: per 8 hours
-         * 
-         * Default value: 8.
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder recoveryPointPeriod(String recoveryPointPeriod) {
             this.putQueryParameter("RecoveryPointPeriod", recoveryPointPeriod);

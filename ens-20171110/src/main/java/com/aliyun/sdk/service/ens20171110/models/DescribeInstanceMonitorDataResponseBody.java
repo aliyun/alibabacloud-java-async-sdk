@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceMonitorDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceMonitorDataResponseBody</p>
  */
 public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("MonitorData")
+    @com.aliyun.core.annotation.NameInMap("MonitorData")
     private MonitorData monitorData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceMonitorDataResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The returned service code. A value of 0 indicates that the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -70,7 +78,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * MonitorData.
+         * <p>The set of InstanceMonitorDataType data.</p>
          */
         public Builder monitorData(MonitorData monitorData) {
             this.monitorData = monitorData;
@@ -78,7 +86,10 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C8B26B44-0189-443E-9816-D951F59623A9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,14 +102,20 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceMonitorDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceMonitorDataResponseBody</p>
+     */
     public static class InstanceMonitorData extends TeaModel {
-        @NameInMap("CPU")
+        @com.aliyun.core.annotation.NameInMap("CPU")
         private String CPU;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private String memory;
 
         private InstanceMonitorData(Builder builder) {
@@ -142,7 +159,10 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             private String memory; 
 
             /**
-             * CPU.
+             * <p>The vCPU usage of the instance, which is raw data. For example, a value of 0.02 indicates that the usage is 2%.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.02</p>
              */
             public Builder CPU(String CPU) {
                 this.CPU = CPU;
@@ -150,7 +170,10 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yourInstance ID</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -158,7 +181,10 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>This parameter is not yet supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Not currently supported</p>
              */
             public Builder memory(String memory) {
                 this.memory = memory;
@@ -172,9 +198,15 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceMonitorDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceMonitorDataResponseBody</p>
+     */
     public static class MonitorData extends TeaModel {
-        @NameInMap("InstanceMonitorData")
-        private java.util.List < InstanceMonitorData> instanceMonitorData;
+        @com.aliyun.core.annotation.NameInMap("InstanceMonitorData")
+        private java.util.List<InstanceMonitorData> instanceMonitorData;
 
         private MonitorData(Builder builder) {
             this.instanceMonitorData = builder.instanceMonitorData;
@@ -191,17 +223,17 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
         /**
          * @return instanceMonitorData
          */
-        public java.util.List < InstanceMonitorData> getInstanceMonitorData() {
+        public java.util.List<InstanceMonitorData> getInstanceMonitorData() {
             return this.instanceMonitorData;
         }
 
         public static final class Builder {
-            private java.util.List < InstanceMonitorData> instanceMonitorData; 
+            private java.util.List<InstanceMonitorData> instanceMonitorData; 
 
             /**
              * InstanceMonitorData.
              */
-            public Builder instanceMonitorData(java.util.List < InstanceMonitorData> instanceMonitorData) {
+            public Builder instanceMonitorData(java.util.List<InstanceMonitorData> instanceMonitorData) {
                 this.instanceMonitorData = instanceMonitorData;
                 return this;
             }

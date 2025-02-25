@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnsNetLevelResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEnsNetLevelResponseBody</p>
  */
 public class DescribeEnsNetLevelResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("EnsNetLevels")
+    @com.aliyun.core.annotation.NameInMap("EnsNetLevels")
     private EnsNetLevels ensNetLevels;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeEnsNetLevelResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class DescribeEnsNetLevelResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The returned service code. A value of 0 indicates that the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -70,7 +78,7 @@ public class DescribeEnsNetLevelResponseBody extends TeaModel {
         }
 
         /**
-         * EnsNetLevels.
+         * <p>The network levels.</p>
          */
         public Builder ensNetLevels(EnsNetLevels ensNetLevels) {
             this.ensNetLevels = ensNetLevels;
@@ -78,7 +86,10 @@ public class DescribeEnsNetLevelResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86A6D421-A0C7-4C01-8648-47377CA6A2CE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,8 +102,14 @@ public class DescribeEnsNetLevelResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEnsNetLevelResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsNetLevelResponseBody</p>
+     */
     public static class EnsNetLevel extends TeaModel {
-        @NameInMap("EnsNetLevelCode")
+        @com.aliyun.core.annotation.NameInMap("EnsNetLevelCode")
         private String ensNetLevelCode;
 
         private EnsNetLevel(Builder builder) {
@@ -118,7 +135,15 @@ public class DescribeEnsNetLevelResponseBody extends TeaModel {
             private String ensNetLevelCode; 
 
             /**
-             * EnsNetLevelCode.
+             * <p>The network level. Valid values:</p>
+             * <ul>
+             * <li>Big: greater area.</li>
+             * <li>Middle: province.</li>
+             * <li>Small: city.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Big</p>
              */
             public Builder ensNetLevelCode(String ensNetLevelCode) {
                 this.ensNetLevelCode = ensNetLevelCode;
@@ -132,9 +157,15 @@ public class DescribeEnsNetLevelResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnsNetLevelResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsNetLevelResponseBody</p>
+     */
     public static class EnsNetLevels extends TeaModel {
-        @NameInMap("EnsNetLevel")
-        private java.util.List < EnsNetLevel> ensNetLevel;
+        @com.aliyun.core.annotation.NameInMap("EnsNetLevel")
+        private java.util.List<EnsNetLevel> ensNetLevel;
 
         private EnsNetLevels(Builder builder) {
             this.ensNetLevel = builder.ensNetLevel;
@@ -151,17 +182,17 @@ public class DescribeEnsNetLevelResponseBody extends TeaModel {
         /**
          * @return ensNetLevel
          */
-        public java.util.List < EnsNetLevel> getEnsNetLevel() {
+        public java.util.List<EnsNetLevel> getEnsNetLevel() {
             return this.ensNetLevel;
         }
 
         public static final class Builder {
-            private java.util.List < EnsNetLevel> ensNetLevel; 
+            private java.util.List<EnsNetLevel> ensNetLevel; 
 
             /**
              * EnsNetLevel.
              */
-            public Builder ensNetLevel(java.util.List < EnsNetLevel> ensNetLevel) {
+            public Builder ensNetLevel(java.util.List<EnsNetLevel> ensNetLevel) {
                 this.ensNetLevel = ensNetLevel;
                 return this;
             }

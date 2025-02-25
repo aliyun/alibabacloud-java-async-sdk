@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstanceActiveOpsTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateInstanceActiveOpsTaskResponseBody</p>
  */
 public class CreateInstanceActiveOpsTaskResponseBody extends TeaModel {
-    @NameInMap("InstanceActiveOpsTask")
+    @com.aliyun.core.annotation.NameInMap("InstanceActiveOpsTask")
     private InstanceActiveOpsTask instanceActiveOpsTask;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateInstanceActiveOpsTaskResponseBody(Builder builder) {

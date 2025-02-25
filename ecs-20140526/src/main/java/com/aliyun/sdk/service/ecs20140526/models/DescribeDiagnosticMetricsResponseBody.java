@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiagnosticMetricsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDiagnosticMetricsResponseBody</p>
  */
 public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
-    @NameInMap("Metrics")
-    private java.util.List < Metrics> metrics;
+    @com.aliyun.core.annotation.NameInMap("Metrics")
+    private java.util.List<Metrics> metrics;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDiagnosticMetricsResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
     /**
      * @return metrics
      */
-    public java.util.List < Metrics> getMetrics() {
+    public java.util.List<Metrics> getMetrics() {
         return this.metrics;
     }
 
@@ -57,20 +62,23 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Metrics> metrics; 
+        private java.util.List<Metrics> metrics; 
         private String nextToken; 
         private String requestId; 
 
         /**
-         * The ID of the diagnostic metric.
+         * <p>The diagnostic metrics.</p>
          */
-        public Builder metrics(java.util.List < Metrics> metrics) {
+        public Builder metrics(java.util.List<Metrics> metrics) {
             this.metrics = metrics;
             return this;
         }
 
         /**
-         * The list of diagnostic metrics.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +86,10 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * The query token returned in this call.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,26 +102,32 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDiagnosticMetricsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDiagnosticMetricsResponseBody</p>
+     */
     public static class Metrics extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GuestMetric")
+        @com.aliyun.core.annotation.NameInMap("GuestMetric")
         private Boolean guestMetric;
 
-        @NameInMap("MetricCategory")
+        @com.aliyun.core.annotation.NameInMap("MetricCategory")
         private String metricCategory;
 
-        @NameInMap("MetricId")
+        @com.aliyun.core.annotation.NameInMap("MetricId")
         private String metricId;
 
-        @NameInMap("MetricName")
+        @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("SupportedOperatingSystem")
+        @com.aliyun.core.annotation.NameInMap("SupportedOperatingSystem")
         private String supportedOperatingSystem;
 
         private Metrics(Builder builder) {
@@ -190,7 +207,10 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
             private String supportedOperatingSystem; 
 
             /**
-             * CPU diagnostic
+             * <p>The description of the diagnostic metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CPU diagnostic</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -198,12 +218,10 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system type supported by the diagnostic metric. Valid values:
-             * <p>
+             * <p>Indicates whether the diagnostic metric needs to be assessed by running a Cloud Assistant command in a guest operating system.</p>
              * 
-             * *   Windows
-             * *   Linux
-             * *   All: both Windows and Linux
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder guestMetric(Boolean guestMetric) {
                 this.guestMetric = guestMetric;
@@ -211,7 +229,10 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the diagnostic metric.
+             * <p>The category of the diagnostic metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CPU</p>
              */
             public Builder metricCategory(String metricCategory) {
                 this.metricCategory = metricCategory;
@@ -219,7 +240,10 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the diagnostic metric.
+             * <p>The ID of the diagnostic metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GuestOS.WinFirewall</p>
              */
             public Builder metricId(String metricId) {
                 this.metricId = metricId;
@@ -227,7 +251,10 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * CPU diagnostic
+             * <p>The name of the diagnostic metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CPU diagnostic</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -235,7 +262,10 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the diagnostic metric needs to be assessed by running a Cloud Assistant command in a guest operating system.
+             * <p>The resource type supported by the diagnostic metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -243,7 +273,15 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportedOperatingSystem.
+             * <p>The operating system type supported by the diagnostic metric. Valid values:</p>
+             * <ul>
+             * <li>Windows</li>
+             * <li>Linux</li>
+             * <li>All: Windows and Linux</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ALL</p>
              */
             public Builder supportedOperatingSystem(String supportedOperatingSystem) {
                 this.supportedOperatingSystem = supportedOperatingSystem;

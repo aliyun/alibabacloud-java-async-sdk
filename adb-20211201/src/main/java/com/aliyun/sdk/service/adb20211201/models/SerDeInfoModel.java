@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SerDeInfoModel} extends {@link TeaModel}
  *
  * <p>SerDeInfoModel</p>
  */
 public class SerDeInfoModel extends TeaModel {
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("Parameters")
-    private java.util.Map < String, String > parameters;
+    @com.aliyun.core.annotation.NameInMap("Parameters")
+    private java.util.Map<String, String> parameters;
 
-    @NameInMap("SerDeId")
+    @com.aliyun.core.annotation.NameInMap("SerDeId")
     private Long serDeId;
 
-    @NameInMap("SerializationLib")
+    @com.aliyun.core.annotation.NameInMap("SerializationLib")
     private String serializationLib;
 
     private SerDeInfoModel(Builder builder) {
@@ -49,7 +54,7 @@ public class SerDeInfoModel extends TeaModel {
     /**
      * @return parameters
      */
-    public java.util.Map < String, String > getParameters() {
+    public java.util.Map<String, String> getParameters() {
         return this.parameters;
     }
 
@@ -69,7 +74,7 @@ public class SerDeInfoModel extends TeaModel {
 
     public static final class Builder {
         private String name; 
-        private java.util.Map < String, String > parameters; 
+        private java.util.Map<String, String> parameters; 
         private Long serDeId; 
         private String serializationLib; 
 
@@ -84,7 +89,7 @@ public class SerDeInfoModel extends TeaModel {
         /**
          * Parameters.
          */
-        public Builder parameters(java.util.Map < String, String > parameters) {
+        public Builder parameters(java.util.Map<String, String> parameters) {
             this.parameters = parameters;
             return this;
         }

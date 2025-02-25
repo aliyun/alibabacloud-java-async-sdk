@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ImportKeyMaterialRequest</p>
  */
 public class ImportKeyMaterialRequest extends Request {
-    @Query
-    @NameInMap("EncryptedKeyMaterial")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptedKeyMaterial")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String encryptedKeyMaterial;
 
-    @Query
-    @NameInMap("ImportToken")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImportToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String importToken;
 
-    @Query
-    @NameInMap("KeyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String keyId;
 
-    @Query
-    @NameInMap("KeyMaterialExpireUnix")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyMaterialExpireUnix")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long keyMaterialExpireUnix;
 
     private ImportKeyMaterialRequest(Builder builder) {

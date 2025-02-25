@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.pts20201020;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.pts20201020.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -20,6 +21,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AdjustJMeterSceneSpeedResponse> adjustJMeterSceneSpeed(AdjustJMeterSceneSpeedRequest request);
 
+    CompletableFuture<AdjustPtsSceneSpeedResponse> adjustPtsSceneSpeed(AdjustPtsSceneSpeedRequest request);
+
     CompletableFuture<CreatePtsSceneResponse> createPtsScene(CreatePtsSceneRequest request);
 
     CompletableFuture<CreatePtsSceneBaseLineFromReportResponse> createPtsSceneBaseLineFromReport(CreatePtsSceneBaseLineFromReportRequest request);
@@ -34,6 +37,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetJMeterLogsResponse> getJMeterLogs(GetJMeterLogsRequest request);
 
+    CompletableFuture<GetJMeterReportDetailsResponse> getJMeterReportDetails(GetJMeterReportDetailsRequest request);
+
     CompletableFuture<GetJMeterSampleMetricsResponse> getJMeterSampleMetrics(GetJMeterSampleMetricsRequest request);
 
     CompletableFuture<GetJMeterSamplingLogsResponse> getJMeterSamplingLogs(GetJMeterSamplingLogsRequest request);
@@ -41,6 +46,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetJMeterSceneRunningDataResponse> getJMeterSceneRunningData(GetJMeterSceneRunningDataRequest request);
 
     CompletableFuture<GetOpenJMeterSceneResponse> getOpenJMeterScene(GetOpenJMeterSceneRequest request);
+
+    CompletableFuture<GetPtsDebugSampleLogsResponse> getPtsDebugSampleLogs(GetPtsDebugSampleLogsRequest request);
 
     CompletableFuture<GetPtsReportDetailsResponse> getPtsReportDetails(GetPtsReportDetailsRequest request);
 
@@ -65,6 +72,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListJMeterReportsResponse> listJMeterReports(ListJMeterReportsRequest request);
 
     CompletableFuture<ListOpenJMeterScenesResponse> listOpenJMeterScenes(ListOpenJMeterScenesRequest request);
+
+    CompletableFuture<ListPtsReportsResponse> listPtsReports(ListPtsReportsRequest request);
 
     CompletableFuture<ListPtsSceneResponse> listPtsScene(ListPtsSceneRequest request);
 

@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeregisterTransitRouterMulticastGroupMembersRequest} extends {@link RequestModel}
  *
  * <p>DeregisterTransitRouterMulticastGroupMembersRequest</p>
  */
 public class DeregisterTransitRouterMulticastGroupMembersRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("GroupIpAddress")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupIpAddress")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupIpAddress;
 
-    @Query
-    @NameInMap("NetworkInterfaceIds")
-    private java.util.List < String > networkInterfaceIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfaceIds")
+    private java.util.List<String> networkInterfaceIds;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PeerTransitRouterMulticastDomains")
-    private java.util.List < String > peerTransitRouterMulticastDomains;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeerTransitRouterMulticastDomains")
+    private java.util.List<String> peerTransitRouterMulticastDomains;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TransitRouterMulticastDomainId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterMulticastDomainId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String transitRouterMulticastDomainId;
 
     private DeregisterTransitRouterMulticastGroupMembersRequest(Builder builder) {
@@ -105,7 +110,7 @@ public class DeregisterTransitRouterMulticastGroupMembersRequest extends Request
     /**
      * @return networkInterfaceIds
      */
-    public java.util.List < String > getNetworkInterfaceIds() {
+    public java.util.List<String> getNetworkInterfaceIds() {
         return this.networkInterfaceIds;
     }
 
@@ -126,7 +131,7 @@ public class DeregisterTransitRouterMulticastGroupMembersRequest extends Request
     /**
      * @return peerTransitRouterMulticastDomains
      */
-    public java.util.List < String > getPeerTransitRouterMulticastDomains() {
+    public java.util.List<String> getPeerTransitRouterMulticastDomains() {
         return this.peerTransitRouterMulticastDomains;
     }
 
@@ -155,10 +160,10 @@ public class DeregisterTransitRouterMulticastGroupMembersRequest extends Request
         private String clientToken; 
         private Boolean dryRun; 
         private String groupIpAddress; 
-        private java.util.List < String > networkInterfaceIds; 
+        private java.util.List<String> networkInterfaceIds; 
         private String ownerAccount; 
         private Long ownerId; 
-        private java.util.List < String > peerTransitRouterMulticastDomains; 
+        private java.util.List<String> peerTransitRouterMulticastDomains; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String transitRouterMulticastDomainId; 
@@ -182,10 +187,11 @@ public class DeregisterTransitRouterMulticastGroupMembersRequest extends Request
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.</p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -194,11 +200,14 @@ public class DeregisterTransitRouterMulticastGroupMembersRequest extends Request
         }
 
         /**
-         * Specifies whether to perform a dry run. Valid values:
-         * <p>
+         * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request.</li>
+         * </ul>
          * 
-         * *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false** (default): preforms a dry run and sends the request.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -207,7 +216,11 @@ public class DeregisterTransitRouterMulticastGroupMembersRequest extends Request
         }
 
         /**
-         * The IP address of the multicast group to which the multicast members belong.
+         * <p>The IP address of the multicast group to which the multicast members belong.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>239.XX.XX.2</p>
          */
         public Builder groupIpAddress(String groupIpAddress) {
             this.putQueryParameter("GroupIpAddress", groupIpAddress);
@@ -216,9 +229,9 @@ public class DeregisterTransitRouterMulticastGroupMembersRequest extends Request
         }
 
         /**
-         * The IDs of elastic network interfaces (ENIs).
+         * <p>The IDs of elastic network interfaces (ENIs).</p>
          */
-        public Builder networkInterfaceIds(java.util.List < String > networkInterfaceIds) {
+        public Builder networkInterfaceIds(java.util.List<String> networkInterfaceIds) {
             this.putQueryParameter("NetworkInterfaceIds", networkInterfaceIds);
             this.networkInterfaceIds = networkInterfaceIds;
             return this;
@@ -243,9 +256,9 @@ public class DeregisterTransitRouterMulticastGroupMembersRequest extends Request
         }
 
         /**
-         * The ID of the multicast domain that is in a different region.
+         * <p>The ID of the multicast domain that is in a different region.</p>
          */
-        public Builder peerTransitRouterMulticastDomains(java.util.List < String > peerTransitRouterMulticastDomains) {
+        public Builder peerTransitRouterMulticastDomains(java.util.List<String> peerTransitRouterMulticastDomains) {
             this.putQueryParameter("PeerTransitRouterMulticastDomains", peerTransitRouterMulticastDomains);
             this.peerTransitRouterMulticastDomains = peerTransitRouterMulticastDomains;
             return this;
@@ -270,7 +283,11 @@ public class DeregisterTransitRouterMulticastGroupMembersRequest extends Request
         }
 
         /**
-         * The ID of the multicast domain to which the multicast members belong.
+         * <p>The ID of the multicast domain to which the multicast members belong.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-mcast-domain-91wpg6wbhchjeq****</p>
          */
         public Builder transitRouterMulticastDomainId(String transitRouterMulticastDomainId) {
             this.putQueryParameter("TransitRouterMulticastDomainId", transitRouterMulticastDomainId);

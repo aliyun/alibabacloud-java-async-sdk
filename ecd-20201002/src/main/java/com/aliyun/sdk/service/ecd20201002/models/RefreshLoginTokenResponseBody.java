@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20201002.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RefreshLoginTokenResponseBody} extends {@link TeaModel}
  *
  * <p>RefreshLoginTokenResponseBody</p>
  */
 public class RefreshLoginTokenResponseBody extends TeaModel {
-    @NameInMap("LoginToken")
+    @com.aliyun.core.annotation.NameInMap("LoginToken")
     private String loginToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private RefreshLoginTokenResponseBody(Builder builder) {

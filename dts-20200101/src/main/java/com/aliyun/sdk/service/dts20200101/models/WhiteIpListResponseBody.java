@@ -1,42 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link WhiteIpListResponseBody} extends {@link TeaModel}
  *
  * <p>WhiteIpListResponseBody</p>
  */
 public class WhiteIpListResponseBody extends TeaModel {
-    @NameInMap("DynamicCode")
+    @com.aliyun.core.annotation.NameInMap("DestIpList")
+    private String destIpList;
+
+    @com.aliyun.core.annotation.NameInMap("DynamicCode")
     private String dynamicCode;
 
-    @NameInMap("DynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("DynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("IpList")
+    @com.aliyun.core.annotation.NameInMap("IpList")
     private String ipList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("SrcIpList")
+    private String srcIpList;
+
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private WhiteIpListResponseBody(Builder builder) {
+        this.destIpList = builder.destIpList;
         this.dynamicCode = builder.dynamicCode;
         this.dynamicMessage = builder.dynamicMessage;
         this.errCode = builder.errCode;
@@ -44,6 +56,7 @@ public class WhiteIpListResponseBody extends TeaModel {
         this.httpStatusCode = builder.httpStatusCode;
         this.ipList = builder.ipList;
         this.requestId = builder.requestId;
+        this.srcIpList = builder.srcIpList;
         this.success = builder.success;
     }
 
@@ -53,6 +66,13 @@ public class WhiteIpListResponseBody extends TeaModel {
 
     public static WhiteIpListResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return destIpList
+     */
+    public String getDestIpList() {
+        return this.destIpList;
     }
 
     /**
@@ -105,6 +125,13 @@ public class WhiteIpListResponseBody extends TeaModel {
     }
 
     /**
+     * @return srcIpList
+     */
+    public String getSrcIpList() {
+        return this.srcIpList;
+    }
+
+    /**
      * @return success
      */
     public Boolean getSuccess() {
@@ -112,6 +139,7 @@ public class WhiteIpListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String destIpList; 
         private String dynamicCode; 
         private String dynamicMessage; 
         private String errCode; 
@@ -119,10 +147,25 @@ public class WhiteIpListResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String ipList; 
         private String requestId; 
+        private String srcIpList; 
         private Boolean success; 
 
         /**
-         * DynamicCode.
+         * <p>Target end adaptation to VPCNAT IP whitelist</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
+         */
+        public Builder destIpList(String destIpList) {
+            this.destIpList = destIpList;
+            return this;
+        }
+
+        /**
+         * <p>The dynamic error code. This parameter will be removed in the future.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>403</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -130,7 +173,10 @@ public class WhiteIpListResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic error code. This parameter will be removed in the future.
+         * <p>The dynamic error message. This parameter will be removed in the future.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Type</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -138,11 +184,10 @@ public class WhiteIpListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
-         * <p>
+         * <p>The error code returned if the call failed.</p>
          * 
-         * *   **true**: The call was successful.
-         * *   **false**: The call failed.
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -150,7 +195,10 @@ public class WhiteIpListResponseBody extends TeaModel {
         }
 
         /**
-         * The CIDR blocks of DTS servers. Multiple CIDR blocks are separated by commas (,).
+         * <p>The error message returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Value of Input Parameter %s is not valid.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -158,7 +206,10 @@ public class WhiteIpListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -166,7 +217,10 @@ public class WhiteIpListResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message. This parameter is used to replace **%s** in the **ErrMessage** parameter.
+         * <p>IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.151.12.0/24,47.102.181.0/24,47.101.109.0/24,120.55.129.0/24,11.115.103.0/24,47.102.234.0/24</p>
          */
         public Builder ipList(String ipList) {
             this.ipList = ipList;
@@ -174,7 +228,10 @@ public class WhiteIpListResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the call failed.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AD823BD3-1BA6-4117-A536-165CB280****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +239,21 @@ public class WhiteIpListResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the call failed.
+         * <p>Source adaptation to VPC NAT IP whitelist</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
+         */
+        public Builder srcIpList(String srcIpList) {
+            this.srcIpList = srcIpList;
+            return this;
+        }
+
+        /**
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

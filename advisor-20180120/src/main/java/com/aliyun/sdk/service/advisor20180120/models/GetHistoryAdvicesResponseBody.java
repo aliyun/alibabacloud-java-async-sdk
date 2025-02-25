@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.advisor20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHistoryAdvicesResponseBody} extends {@link TeaModel}
  *
  * <p>GetHistoryAdvicesResponseBody</p>
  */
 public class GetHistoryAdvicesResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetHistoryAdvicesResponseBody(Builder builder) {
@@ -71,29 +76,35 @@ public class GetHistoryAdvicesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetHistoryAdvicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHistoryAdvicesResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("CheckId")
+        @com.aliyun.core.annotation.NameInMap("CheckId")
         private String checkId;
 
-        @NameInMap("CheckName")
+        @com.aliyun.core.annotation.NameInMap("CheckName")
         private String checkName;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GmtCreated")
+        @com.aliyun.core.annotation.NameInMap("GmtCreated")
         private String gmtCreated;
 
-        @NameInMap("Product")
+        @com.aliyun.core.annotation.NameInMap("Product")
         private String product;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("Severity")
+        @com.aliyun.core.annotation.NameInMap("Severity")
         private Integer severity;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private Result(Builder builder) {
@@ -252,14 +263,20 @@ public class GetHistoryAdvicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetHistoryAdvicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHistoryAdvicesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("PageNo")
+        @com.aliyun.core.annotation.NameInMap("PageNo")
         private Integer pageNo;
 
-        @NameInMap("Result")
-        private java.util.List < Result> result;
+        @com.aliyun.core.annotation.NameInMap("Result")
+        private java.util.List<Result> result;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Data(Builder builder) {
@@ -286,7 +303,7 @@ public class GetHistoryAdvicesResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.List < Result> getResult() {
+        public java.util.List<Result> getResult() {
             return this.result;
         }
 
@@ -299,7 +316,7 @@ public class GetHistoryAdvicesResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer pageNo; 
-            private java.util.List < Result> result; 
+            private java.util.List<Result> result; 
             private Integer total; 
 
             /**
@@ -313,7 +330,7 @@ public class GetHistoryAdvicesResponseBody extends TeaModel {
             /**
              * Result.
              */
-            public Builder result(java.util.List < Result> result) {
+            public Builder result(java.util.List<Result> result) {
                 this.result = result;
                 return this;
             }

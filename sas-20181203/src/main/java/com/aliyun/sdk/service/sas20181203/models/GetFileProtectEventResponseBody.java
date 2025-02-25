@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFileProtectEventResponseBody} extends {@link TeaModel}
  *
  * <p>GetFileProtectEventResponseBody</p>
  */
 public class GetFileProtectEventResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetFileProtectEventResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetFileProtectEventResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the returned data.
+         * <p>The details of the returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class GetFileProtectEventResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B48AB3C-84FC-424D-A01D-B9270EF46038</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,59 +79,68 @@ public class GetFileProtectEventResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetFileProtectEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFileProtectEventResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AlertLevel")
+        @com.aliyun.core.annotation.NameInMap("AlertLevel")
         private Integer alertLevel;
 
-        @NameInMap("CmdLine")
+        @com.aliyun.core.annotation.NameInMap("CmdLine")
         private String cmdLine;
 
-        @NameInMap("FilePath")
+        @com.aliyun.core.annotation.NameInMap("FilePath")
         private String filePath;
 
-        @NameInMap("FilePermission")
+        @com.aliyun.core.annotation.NameInMap("FilePermission")
         private String filePermission;
 
-        @NameInMap("FirstTime")
+        @com.aliyun.core.annotation.NameInMap("FirstTime")
         private Long firstTime;
 
-        @NameInMap("HandleTime")
+        @com.aliyun.core.annotation.NameInMap("HandleTime")
         private Long handleTime;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IntranetIp")
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("LatestTime")
+        @com.aliyun.core.annotation.NameInMap("LatestTime")
         private Long latestTime;
 
-        @NameInMap("Operation")
+        @com.aliyun.core.annotation.NameInMap("Operation")
         private String operation;
 
-        @NameInMap("ProcPath")
+        @com.aliyun.core.annotation.NameInMap("Platform")
+        private String platform;
+
+        @com.aliyun.core.annotation.NameInMap("ProcPath")
         private String procPath;
 
-        @NameInMap("ProcessId")
+        @com.aliyun.core.annotation.NameInMap("ProcessId")
         private String processId;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private Data(Builder builder) {
@@ -139,6 +156,7 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             this.intranetIp = builder.intranetIp;
             this.latestTime = builder.latestTime;
             this.operation = builder.operation;
+            this.platform = builder.platform;
             this.procPath = builder.procPath;
             this.processId = builder.processId;
             this.remark = builder.remark;
@@ -240,6 +258,13 @@ public class GetFileProtectEventResponseBody extends TeaModel {
         }
 
         /**
+         * @return platform
+         */
+        public String getPlatform() {
+            return this.platform;
+        }
+
+        /**
          * @return procPath
          */
         public String getProcPath() {
@@ -294,6 +319,7 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             private String intranetIp; 
             private Long latestTime; 
             private String operation; 
+            private String platform; 
             private String procPath; 
             private String processId; 
             private String remark; 
@@ -302,13 +328,16 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The severity of alerts. Valid values:
-             * <p>
+             * <p>The severity of alerts. Valid values:</p>
+             * <ul>
+             * <li>0: does not generate alerts</li>
+             * <li>1: sends notifications</li>
+             * <li>2: suspicious</li>
+             * <li>3: high-risk</li>
+             * </ul>
              * 
-             * *   0: does not generate alerts
-             * *   1: sends notifications
-             * *   2: suspicious
-             * *   3: high-risk
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder alertLevel(Integer alertLevel) {
                 this.alertLevel = alertLevel;
@@ -316,7 +345,10 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The event command line.
+             * <p>The event command line.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;touch&quot;,&quot;/usr/local/aaaa&quot;]</p>
              */
             public Builder cmdLine(String cmdLine) {
                 this.cmdLine = cmdLine;
@@ -324,7 +356,10 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The path to the file.
+             * <p>The path to the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/local</p>
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
@@ -332,7 +367,10 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The permissions to run the process.
+             * <p>The permissions to run the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rwxr-xr-x</p>
              */
             public Builder filePermission(String filePermission) {
                 this.filePermission = filePermission;
@@ -340,7 +378,10 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp at which the event was first detected.
+             * <p>The timestamp at which the event was first detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1694576692000</p>
              */
             public Builder firstTime(Long firstTime) {
                 this.firstTime = firstTime;
@@ -348,7 +389,10 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the event was handled.
+             * <p>The time when the event was handled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1694576692000</p>
              */
             public Builder handleTime(Long handleTime) {
                 this.handleTime = handleTime;
@@ -356,7 +400,10 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the event.
+             * <p>The ID of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>55037</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -364,7 +411,10 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-wz92q7m5hsbgfhdss***</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -372,7 +422,10 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the associated instance.
+             * <p>The public IP address of the associated instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -380,7 +433,10 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the associated instance.
+             * <p>The private IP address of the associated instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.42.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -388,7 +444,10 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the event last occurred.
+             * <p>The time when the event last occurred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1694576692000</p>
              */
             public Builder latestTime(Long latestTime) {
                 this.latestTime = latestTime;
@@ -396,7 +455,10 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The operation that the process performed on the file.
+             * <p>The operation that the process performed on the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DELETE</p>
              */
             public Builder operation(String operation) {
                 this.operation = operation;
@@ -404,7 +466,25 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The path to the process.
+             * <p>The type of the operating system. Valid values:</p>
+             * <ul>
+             * <li><strong>windows</strong>: Windows</li>
+             * <li><strong>linux</strong>: Linux</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>linux</p>
+             */
+            public Builder platform(String platform) {
+                this.platform = platform;
+                return this;
+            }
+
+            /**
+             * <p>The path to the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/bin/bash33</p>
              */
             public Builder procPath(String procPath) {
                 this.procPath = procPath;
@@ -412,7 +492,10 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The process ID of the event.
+             * <p>The process ID of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3453</p>
              */
             public Builder processId(String processId) {
                 this.processId = processId;
@@ -420,7 +503,10 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks.
+             * <p>The remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;test&quot;]</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -428,7 +514,10 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the rule.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-000</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -436,12 +525,15 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the event. Valid values:
-             * <p>
+             * <p>The status of the event. Valid values:</p>
+             * <ul>
+             * <li>0: not handled</li>
+             * <li>1: handled</li>
+             * <li>2: added to the whitelist</li>
+             * </ul>
              * 
-             * *   0: not handled
-             * *   1: handled
-             * *   2: added to the whitelist
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -449,7 +541,10 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the asset.
+             * <p>The UUID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>49f1360f-62c8-4b48-a24c-5cc317656419</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

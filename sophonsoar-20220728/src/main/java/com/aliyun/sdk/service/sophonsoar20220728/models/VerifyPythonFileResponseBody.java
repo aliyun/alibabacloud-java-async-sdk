@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyPythonFileResponseBody} extends {@link TeaModel}
  *
  * <p>VerifyPythonFileResponseBody</p>
  */
 public class VerifyPythonFileResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Syntax")
+    @com.aliyun.core.annotation.NameInMap("Syntax")
     private java.util.List < Syntax> syntax;
 
     private VerifyPythonFileResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class VerifyPythonFileResponseBody extends TeaModel {
         private java.util.List < Syntax> syntax; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F72685FB-A6E6-5A9A-97F7-6DC1056E63CE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class VerifyPythonFileResponseBody extends TeaModel {
         }
 
         /**
-         * Syntax.
+         * <p>The verification result. If the parameter is left empty, the syntax of the code snippet is correct.</p>
          */
         public Builder syntax(java.util.List < Syntax> syntax) {
             this.syntax = syntax;
@@ -71,23 +74,29 @@ public class VerifyPythonFileResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link VerifyPythonFileResponseBody} extends {@link TeaModel}
+     *
+     * <p>VerifyPythonFileResponseBody</p>
+     */
     public static class Syntax extends TeaModel {
-        @NameInMap("EndColumn")
+        @com.aliyun.core.annotation.NameInMap("EndColumn")
         private Integer endColumn;
 
-        @NameInMap("EndLineNumber")
+        @com.aliyun.core.annotation.NameInMap("EndLineNumber")
         private Integer endLineNumber;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Severity")
+        @com.aliyun.core.annotation.NameInMap("Severity")
         private Integer severity;
 
-        @NameInMap("StartColumn")
+        @com.aliyun.core.annotation.NameInMap("StartColumn")
         private Integer startColumn;
 
-        @NameInMap("StartLineNumber")
+        @com.aliyun.core.annotation.NameInMap("StartLineNumber")
         private Integer startLineNumber;
 
         private Syntax(Builder builder) {
@@ -158,7 +167,10 @@ public class VerifyPythonFileResponseBody extends TeaModel {
             private Integer startLineNumber; 
 
             /**
-             * EndColumn.
+             * <p>The number that indicates the end column of the error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder endColumn(Integer endColumn) {
                 this.endColumn = endColumn;
@@ -166,7 +178,10 @@ public class VerifyPythonFileResponseBody extends TeaModel {
             }
 
             /**
-             * EndLineNumber.
+             * <p>The number that indicates the end line of the error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder endLineNumber(Integer endLineNumber) {
                 this.endLineNumber = endLineNumber;
@@ -174,7 +189,10 @@ public class VerifyPythonFileResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error message for the error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>undefined name &quot;ab&quot;</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -182,7 +200,14 @@ public class VerifyPythonFileResponseBody extends TeaModel {
             }
 
             /**
-             * Severity.
+             * <p>The severity level of the error code. Valid values:</p>
+             * <ul>
+             * <li>4: moderate</li>
+             * <li>8: serious</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder severity(Integer severity) {
                 this.severity = severity;
@@ -190,7 +215,10 @@ public class VerifyPythonFileResponseBody extends TeaModel {
             }
 
             /**
-             * StartColumn.
+             * <p>The number that indicates the start column of the error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder startColumn(Integer startColumn) {
                 this.startColumn = startColumn;
@@ -198,7 +226,10 @@ public class VerifyPythonFileResponseBody extends TeaModel {
             }
 
             /**
-             * StartLineNumber.
+             * <p>The number that indicates the start line of the error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder startLineNumber(Integer startLineNumber) {
                 this.startLineNumber = startLineNumber;

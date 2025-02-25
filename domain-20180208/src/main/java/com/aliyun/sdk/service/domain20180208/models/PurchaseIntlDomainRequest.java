@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PurchaseIntlDomainRequest} extends {@link RequestModel}
  *
  * <p>PurchaseIntlDomainRequest</p>
  */
 public class PurchaseIntlDomainRequest extends Request {
-    @Body
-    @NameInMap("AuctionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AuctionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String auctionId;
 
-    @Body
-    @NameInMap("Currency")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Currency")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String currency;
 
-    @Body
-    @NameInMap("Price")
-    @Validation(required = true, maximum = 99999999, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Price")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 99999999, minimum = 1)
     private Double price;
 
     private PurchaseIntlDomainRequest(Builder builder) {
@@ -85,7 +90,7 @@ public class PurchaseIntlDomainRequest extends Request {
         } 
 
         /**
-         * AuctionId.
+         * <p>This parameter is required.</p>
          */
         public Builder auctionId(String auctionId) {
             this.putBodyParameter("AuctionId", auctionId);
@@ -94,7 +99,7 @@ public class PurchaseIntlDomainRequest extends Request {
         }
 
         /**
-         * Currency.
+         * <p>This parameter is required.</p>
          */
         public Builder currency(String currency) {
             this.putBodyParameter("Currency", currency);
@@ -103,7 +108,7 @@ public class PurchaseIntlDomainRequest extends Request {
         }
 
         /**
-         * Price.
+         * <p>This parameter is required.</p>
          */
         public Builder price(Double price) {
             this.putBodyParameter("Price", price);

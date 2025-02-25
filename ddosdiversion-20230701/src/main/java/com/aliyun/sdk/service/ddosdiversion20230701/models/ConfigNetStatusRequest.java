@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosdiversion20230701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ConfigNetStatusRequest</p>
  */
 public class ConfigNetStatusRequest extends Request {
-    @Query
-    @NameInMap("Net")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Net")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String net;
 
-    @Query
-    @NameInMap("Regions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Regions")
     private java.util.List < String > regions;
 
-    @Query
-    @NameInMap("SaleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SaleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String saleId;
 
-    @Query
-    @NameInMap("Status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String status;
 
-    @Query
-    @NameInMap("SubNets")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubNets")
     private java.util.List < String > subNets;
 
     private ConfigNetStatusRequest(Builder builder) {
@@ -113,7 +112,7 @@ public class ConfigNetStatusRequest extends Request {
         } 
 
         /**
-         * Net.
+         * The CIDR block of the anti-DDoS diversion instance.
          */
         public Builder net(String net) {
             this.putQueryParameter("Net", net);
@@ -122,7 +121,10 @@ public class ConfigNetStatusRequest extends Request {
         }
 
         /**
-         * Regions.
+         * The regions in which the CIDR block needs to be advertised or withdrawn from advertising. If you leave this parameter empty, the CIDR blocks in all regions are configured.
+         * <p>
+         * 
+         * >  You can call the [QueryNetList](~~2639086~~) operation to obtain the regions of the CIDR blocks.
          */
         public Builder regions(java.util.List < String > regions) {
             this.putQueryParameter("Regions", regions);
@@ -131,7 +133,7 @@ public class ConfigNetStatusRequest extends Request {
         }
 
         /**
-         * SaleId.
+         * The ID of the anti-DDoS diversion instance.
          */
         public Builder saleId(String saleId) {
             this.putQueryParameter("SaleId", saleId);
@@ -140,7 +142,11 @@ public class ConfigNetStatusRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the CIDR block. Valid values:
+         * <p>
+         * 
+         * *   enable: advertises the CIDR block.
+         * *   disable: withdraws the advertising of the CIDR block.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -149,7 +155,7 @@ public class ConfigNetStatusRequest extends Request {
         }
 
         /**
-         * SubNets.
+         * The subnet CIDR blocks of the CIDR block.
          */
         public Builder subNets(java.util.List < String > subNets) {
             this.putQueryParameter("SubNets", subNets);

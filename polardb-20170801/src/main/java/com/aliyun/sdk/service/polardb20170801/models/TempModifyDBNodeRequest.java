@@ -1,60 +1,65 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TempModifyDBNodeRequest} extends {@link RequestModel}
  *
  * <p>TempModifyDBNodeRequest</p>
  */
 public class TempModifyDBNodeRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("DBNode")
-    @Validation(required = true)
-    private java.util.List < DBNode> DBNode;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBNode")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<DBNode> DBNode;
 
-    @Query
-    @NameInMap("ModifyType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModifyType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String modifyType;
 
-    @Query
-    @NameInMap("OperationType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String operationType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RestoreTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String restoreTime;
 
     private TempModifyDBNodeRequest(Builder builder) {
@@ -101,7 +106,7 @@ public class TempModifyDBNodeRequest extends Request {
     /**
      * @return DBNode
      */
-    public java.util.List < DBNode> getDBNode() {
+    public java.util.List<DBNode> getDBNode() {
         return this.DBNode;
     }
 
@@ -157,7 +162,7 @@ public class TempModifyDBNodeRequest extends Request {
     public static final class Builder extends Request.Builder<TempModifyDBNodeRequest, Builder> {
         private String clientToken; 
         private String DBClusterId; 
-        private java.util.List < DBNode> DBNode; 
+        private java.util.List<DBNode> DBNode; 
         private String modifyType; 
         private String operationType; 
         private String ownerAccount; 
@@ -185,7 +190,10 @@ public class TempModifyDBNodeRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000170000591aed949d0f5********************</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -194,7 +202,11 @@ public class TempModifyDBNodeRequest extends Request {
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-xxxxxxxxxx</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -203,16 +215,21 @@ public class TempModifyDBNodeRequest extends Request {
         }
 
         /**
-         * The information of the added node.
+         * <p>The information of the added node.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder DBNode(java.util.List < DBNode> DBNode) {
+        public Builder DBNode(java.util.List<DBNode> DBNode) {
             this.putQueryParameter("DBNode", DBNode);
             this.DBNode = DBNode;
             return this;
         }
 
         /**
-         * The type of configuration change. Set the value to **TempUpgrade**.
+         * <p>The type of configuration change. Set the value to <strong>TempUpgrade</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TempUpgrade</p>
          */
         public Builder modifyType(String modifyType) {
             this.putQueryParameter("ModifyType", modifyType);
@@ -221,11 +238,14 @@ public class TempModifyDBNodeRequest extends Request {
         }
 
         /**
-         * The type of operation performed on the cluster. Valid values:
-         * <p>
+         * <p>The operation type. Valid values:</p>
+         * <ul>
+         * <li><strong>Modify</strong>: temporarily upgrades the configuration of the cluster.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Add**: add one or more nodes to the cluster.
-         * *   **Modify**: temporarily upgrade the configuration of the cluster.
+         * <strong>example:</strong>
+         * <p>Modify</p>
          */
         public Builder operationType(String operationType) {
             this.putQueryParameter("OperationType", operationType);
@@ -270,10 +290,14 @@ public class TempModifyDBNodeRequest extends Request {
         }
 
         /**
-         * The rollback time of the configuration for the temporary upgrade. Specify the time in the ISO 8601 standard in the YYYY-MM-DD hh:mm:ss format.
-         * <p>
+         * <p>The rollback time of the configuration for the temporary upgrade. Specify the time in the ISO 8601 standard in the YYYY-MM-DD hh:mm:ss format.</p>
+         * <blockquote>
+         * <p> The rollback time cannot be 1 hour earlier than the current time and cannot be later than one day before the time when the cluster expires.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The rollback time cannot be 1 hour earlier than the current time and cannot be later than one day before the time when the cluster expires.
+         * <strong>example:</strong>
+         * <p>2021-09-23 18:16:00</p>
          */
         public Builder restoreTime(String restoreTime) {
             this.putQueryParameter("RestoreTime", restoreTime);
@@ -288,11 +312,17 @@ public class TempModifyDBNodeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TempModifyDBNodeRequest} extends {@link TeaModel}
+     *
+     * <p>TempModifyDBNodeRequest</p>
+     */
     public static class DBNode extends TeaModel {
-        @NameInMap("TargetClass")
+        @com.aliyun.core.annotation.NameInMap("TargetClass")
         private String targetClass;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private DBNode(Builder builder) {
@@ -327,10 +357,13 @@ public class TempModifyDBNodeRequest extends Request {
             private String zoneId; 
 
             /**
-             * The instance type of the added node. The instance type of the added node must be the same as the instance type of the original node.
-             * <p>
+             * <p>The instance type of the added node. The instance type of the added node must be the same as the instance type of the original node.</p>
+             * <blockquote>
+             * <p> You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to view the instance types of original nodes.</p>
+             * </blockquote>
              * 
-             * >  You can call the [DescribeDBClusters](~~98094~~) operation to view the instance types of original nodes.
+             * <strong>example:</strong>
+             * <p>polar.mysql.x4.medium</p>
              */
             public Builder targetClass(String targetClass) {
                 this.targetClass = targetClass;
@@ -338,7 +371,10 @@ public class TempModifyDBNodeRequest extends Request {
             }
 
             /**
-             * The ID of the zone in which the added node is deployed. The instance type of the added node must be the same as the instance type of the original node.
+             * <p>The ID of the zone in which the added node is deployed. The instance type of the added node must be the same as the instance type of the original node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

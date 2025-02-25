@@ -77,11 +77,11 @@ public class QueryPictureSearchDevicesRequest extends Request {
             super();
         } 
 
-        private Builder(QueryPictureSearchDevicesRequest response) {
-            super(response);
-            this.appInstanceId = response.appInstanceId;
-            this.currentPage = response.currentPage;
-            this.pageSize = response.pageSize;
+        private Builder(QueryPictureSearchDevicesRequest request) {
+            super(request);
+            this.appInstanceId = request.appInstanceId;
+            this.currentPage = request.currentPage;
+            this.pageSize = request.pageSize;
         } 
 
         /**

@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryFailReasonForDomainRealNameVerificationRequest} extends {@link RequestModel}
  *
  * <p>QueryFailReasonForDomainRealNameVerificationRequest</p>
  */
 public class QueryFailReasonForDomainRealNameVerificationRequest extends Request {
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("RealNameVerificationAction")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RealNameVerificationAction")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String realNameVerificationAction;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
     private QueryFailReasonForDomainRealNameVerificationRequest(Builder builder) {
@@ -98,7 +98,10 @@ public class QueryFailReasonForDomainRealNameVerificationRequest extends Request
         } 
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -116,7 +119,10 @@ public class QueryFailReasonForDomainRealNameVerificationRequest extends Request
         }
 
         /**
-         * RealNameVerificationAction.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTIVATE</p>
          */
         public Builder realNameVerificationAction(String realNameVerificationAction) {
             this.putQueryParameter("RealNameVerificationAction", realNameVerificationAction);

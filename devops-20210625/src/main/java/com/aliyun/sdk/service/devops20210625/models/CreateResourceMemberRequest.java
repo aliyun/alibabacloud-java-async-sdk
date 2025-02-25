@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateResourceMemberRequest} extends {@link RequestModel}
  *
  * <p>CreateResourceMemberRequest</p>
  */
 public class CreateResourceMemberRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Path
-    @NameInMap("resourceType")
-    @Validation(required = true, maximum = 999999999999999D, minimum = 1)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("resourceType")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 999999999999999D, minimum = 1)
     private String resourceType;
 
-    @Path
-    @NameInMap("resourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("resourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long resourceId;
 
-    @Body
-    @NameInMap("accountId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("accountId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountId;
 
-    @Body
-    @NameInMap("roleName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("roleName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String roleName;
 
     private CreateResourceMemberRequest(Builder builder) {
@@ -115,7 +120,10 @@ public class CreateResourceMemberRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -124,7 +132,10 @@ public class CreateResourceMemberRequest extends Request {
         }
 
         /**
-         * resourceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pipeline</p>
          */
         public Builder resourceType(String resourceType) {
             this.putPathParameter("resourceType", resourceType);
@@ -133,7 +144,10 @@ public class CreateResourceMemberRequest extends Request {
         }
 
         /**
-         * resourceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder resourceId(Long resourceId) {
             this.putPathParameter("resourceId", resourceId);
@@ -142,7 +156,10 @@ public class CreateResourceMemberRequest extends Request {
         }
 
         /**
-         * accountId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1111111111111</p>
          */
         public Builder accountId(String accountId) {
             this.putBodyParameter("accountId", accountId);
@@ -151,7 +168,10 @@ public class CreateResourceMemberRequest extends Request {
         }
 
         /**
-         * roleName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         public Builder roleName(String roleName) {
             this.putBodyParameter("roleName", roleName);

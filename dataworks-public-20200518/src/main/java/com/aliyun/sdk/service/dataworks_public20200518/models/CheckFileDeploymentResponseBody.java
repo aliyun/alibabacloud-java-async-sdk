@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckFileDeploymentResponseBody} extends {@link TeaModel}
  *
  * <p>CheckFileDeploymentResponseBody</p>
  */
 public class CheckFileDeploymentResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CheckFileDeploymentResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class CheckFileDeploymentResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request. You can use the ID to troubleshoot issues.
+         * <p>The request ID. You can use the ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86d5a5ac-0cc0-4c5f-a374-a15713b252ab</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

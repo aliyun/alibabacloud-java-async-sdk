@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUsersPasswordResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUsersPasswordResponseBody</p>
  */
 public class DescribeUsersPasswordResponseBody extends TeaModel {
-    @NameInMap("DesktopUsers")
-    private java.util.List < DesktopUsers> desktopUsers;
+    @com.aliyun.core.annotation.NameInMap("DesktopUsers")
+    private java.util.List<DesktopUsers> desktopUsers;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeUsersPasswordResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeUsersPasswordResponseBody extends TeaModel {
     /**
      * @return desktopUsers
      */
-    public java.util.List < DesktopUsers> getDesktopUsers() {
+    public java.util.List<DesktopUsers> getDesktopUsers() {
         return this.desktopUsers;
     }
 
@@ -46,19 +51,22 @@ public class DescribeUsersPasswordResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DesktopUsers> desktopUsers; 
+        private java.util.List<DesktopUsers> desktopUsers; 
         private String requestId; 
 
         /**
-         * The users that are associated with cloud desktop.
+         * <p>The authorized users of the cloud computer.</p>
          */
-        public Builder desktopUsers(java.util.List < DesktopUsers> desktopUsers) {
+        public Builder desktopUsers(java.util.List<DesktopUsers> desktopUsers) {
             this.desktopUsers = desktopUsers;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F7B4B17B-5C8A-514C-AA4D-F8090E3A63E9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class DescribeUsersPasswordResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUsersPasswordResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUsersPasswordResponseBody</p>
+     */
     public static class DesktopUsers extends TeaModel {
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
 
         private DesktopUsers(Builder builder) {
@@ -122,7 +136,10 @@ public class DescribeUsersPasswordResponseBody extends TeaModel {
             private String password; 
 
             /**
-             * The display name of the user.
+             * <p>The display name of the end user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alice_1365*****</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -130,7 +147,10 @@ public class DescribeUsersPasswordResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the end user.
+             * <p>The ID of the end user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alice</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -138,7 +158,10 @@ public class DescribeUsersPasswordResponseBody extends TeaModel {
             }
 
             /**
-             * The password of the user.
+             * <p>The password of the end user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tes123</p>
              */
             public Builder password(String password) {
                 this.password = password;

@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteUserVpcAuthorizationRequest} extends {@link RequestModel}
  *
  * <p>DeleteUserVpcAuthorizationRequest</p>
  */
 public class DeleteUserVpcAuthorizationRequest extends Request {
-    @Query
-    @NameInMap("AuthType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthType")
     private String authType;
 
-    @Query
-    @NameInMap("AuthorizedUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthorizedUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long authorizedUserId;
 
     private DeleteUserVpcAuthorizationRequest(Builder builder) {
@@ -69,7 +69,15 @@ public class DeleteUserVpcAuthorizationRequest extends Request {
         } 
 
         /**
-         * AuthType.
+         * <p>The authorization scope. Valid values:</p>
+         * <ul>
+         * <li>NORMAL: general authorization</li>
+         * <li>NORMAL: cloud service-related authorization</li>
+         * </ul>
+         * <p>Default value: NORMAL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder authType(String authType) {
             this.putQueryParameter("AuthType", authType);
@@ -78,7 +86,11 @@ public class DeleteUserVpcAuthorizationRequest extends Request {
         }
 
         /**
-         * AuthorizedUserId.
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>141339776561****</p>
          */
         public Builder authorizedUserId(Long authorizedUserId) {
             this.putQueryParameter("AuthorizedUserId", authorizedUserId);

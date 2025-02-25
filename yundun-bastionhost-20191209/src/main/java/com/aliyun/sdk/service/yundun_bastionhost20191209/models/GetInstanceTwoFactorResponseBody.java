@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceTwoFactorResponseBody} extends {@link TeaModel}
  *
  * <p>GetInstanceTwoFactorResponseBody</p>
  */
 public class GetInstanceTwoFactorResponseBody extends TeaModel {
-    @NameInMap("Config")
+    @com.aliyun.core.annotation.NameInMap("Config")
     private Config config;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetInstanceTwoFactorResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class GetInstanceTwoFactorResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The settings of two-factor authentication.
+         * <p>The settings of two-factor authentication.</p>
          */
         public Builder config(Config config) {
             this.config = config;
@@ -58,10 +58,10 @@ public class GetInstanceTwoFactorResponseBody extends TeaModel {
         }
 
         /**
-         * The duration within which two-factor authentication is not required after a local user passes two-factor authentication. Valid values: `0 to 168`. Unit: hours.
-         * <p>
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
          * 
-         * >  If 0 is returned, a local user must pass two-factor authentication every time the local user logs on to the bastion host.
+         * <strong>example:</strong>
+         * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -74,14 +74,20 @@ public class GetInstanceTwoFactorResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInstanceTwoFactorResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceTwoFactorResponseBody</p>
+     */
     public static class Config extends TeaModel {
-        @NameInMap("EnableTwoFactor")
+        @com.aliyun.core.annotation.NameInMap("EnableTwoFactor")
         private Boolean enableTwoFactor;
 
-        @NameInMap("SkipTwoFactorTime")
+        @com.aliyun.core.annotation.NameInMap("SkipTwoFactorTime")
         private Long skipTwoFactorTime;
 
-        @NameInMap("TwoFactorMethods")
+        @com.aliyun.core.annotation.NameInMap("TwoFactorMethods")
         private java.util.List < String > twoFactorMethods;
 
         private Config(Builder builder) {
@@ -125,7 +131,14 @@ public class GetInstanceTwoFactorResponseBody extends TeaModel {
             private java.util.List < String > twoFactorMethods; 
 
             /**
-             * Queries the settings of two-factor authentication on a bastion host.
+             * <p>Indicates whether two-factor authentication is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableTwoFactor(Boolean enableTwoFactor) {
                 this.enableTwoFactor = enableTwoFactor;
@@ -133,7 +146,13 @@ public class GetInstanceTwoFactorResponseBody extends TeaModel {
             }
 
             /**
-             * SkipTwoFactorTime.
+             * <p>The duration within which two-factor authentication is not required after a local user passes two-factor authentication. Valid values: <code>0 to 168</code>. Unit: hours.</p>
+             * <blockquote>
+             * <p>If 0 is returned, a local user must pass two-factor authentication every time the local user logs on to the bastion host.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder skipTwoFactorTime(Long skipTwoFactorTime) {
                 this.skipTwoFactorTime = skipTwoFactorTime;
@@ -141,7 +160,7 @@ public class GetInstanceTwoFactorResponseBody extends TeaModel {
             }
 
             /**
-             * TwoFactorMethods.
+             * <p>The two-factor authentication methods.</p>
              */
             public Builder twoFactorMethods(java.util.List < String > twoFactorMethods) {
                 this.twoFactorMethods = twoFactorMethods;

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DiskInfo} extends {@link TeaModel}
  *
  * <p>DiskInfo</p>
  */
 public class DiskInfo extends TeaModel {
-    @NameInMap("Category")
+    @com.aliyun.core.annotation.NameInMap("Category")
     private String category;
 
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("PerformanceLevel")
+    @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
     private String performanceLevel;
 
-    @NameInMap("Size")
+    @com.aliyun.core.annotation.NameInMap("Size")
     private Integer size;
 
     private DiskInfo(Builder builder) {

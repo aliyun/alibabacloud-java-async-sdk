@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnUserResourcePackageRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnUserResourcePackageRequest</p>
  */
 public class DescribeDcdnUserResourcePackageRequest extends Request {
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeDcdnUserResourcePackageRequest(Builder builder) {
@@ -100,12 +100,15 @@ public class DescribeDcdnUserResourcePackageRequest extends Request {
         }
 
         /**
-         * The status of the resource plan. Valid values:
-         * <p>
+         * <p>The status of the resource plan. Valid values:</p>
+         * <ul>
+         * <li><strong>valid</strong>: valid</li>
+         * <li><strong>closed</strong>: expired</li>
+         * <li>If you leave this parameter empty, all resource plans are queried.</li>
+         * </ul>
          * 
-         * *   **valid**: valid
-         * *   **closed**: expired
-         * *   If you leave this parameter empty, all resource plans are queried.
+         * <strong>example:</strong>
+         * <p>valid</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

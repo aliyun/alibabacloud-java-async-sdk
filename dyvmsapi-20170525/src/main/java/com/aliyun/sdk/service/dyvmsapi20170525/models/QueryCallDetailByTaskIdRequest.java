@@ -1,42 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryCallDetailByTaskIdRequest} extends {@link RequestModel}
  *
  * <p>QueryCallDetailByTaskIdRequest</p>
  */
 public class QueryCallDetailByTaskIdRequest extends Request {
-    @Query
-    @NameInMap("Callee")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Callee")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String callee;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("QueryDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long queryDate;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TaskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskId;
 
     private QueryCallDetailByTaskIdRequest(Builder builder) {
@@ -116,18 +116,22 @@ public class QueryCallDetailByTaskIdRequest extends Request {
             super();
         } 
 
-        private Builder(QueryCallDetailByTaskIdRequest response) {
-            super(response);
-            this.callee = response.callee;
-            this.ownerId = response.ownerId;
-            this.queryDate = response.queryDate;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.taskId = response.taskId;
+        private Builder(QueryCallDetailByTaskIdRequest request) {
+            super(request);
+            this.callee = request.callee;
+            this.ownerId = request.ownerId;
+            this.queryDate = request.queryDate;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.taskId = request.taskId;
         } 
 
         /**
-         * Callee.
+         * <p>The called number. You can view the outbound call records of only one called number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1390000****</p>
          */
         public Builder callee(String callee) {
             this.putQueryParameter("Callee", callee);
@@ -145,7 +149,11 @@ public class QueryCallDetailByTaskIdRequest extends Request {
         }
 
         /**
-         * QueryDate.
+         * <p>The start time of the outbound robocall task. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-09 09:02:03</p>
          */
         public Builder queryDate(Long queryDate) {
             this.putQueryParameter("QueryDate", queryDate);
@@ -172,7 +180,11 @@ public class QueryCallDetailByTaskIdRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The unique ID of the outbound robocall task. The task ID is returned after the outbound robocall task is successfully delivered. You can view the task ID on the <a href="https://dyvms.console.aliyun.com/job/list">Task Management</a> page of the Voice Messaging Service console, or call the <strong>BatchRobotSmartCall</strong> operation to obtain the <strong>task ID</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4001112222</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

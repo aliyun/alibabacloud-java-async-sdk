@@ -1,58 +1,63 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAuditPolicyRequest} extends {@link RequestModel}
  *
  * <p>ModifyAuditPolicyRequest</p>
  */
 public class ModifyAuditPolicyRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AuditLogSwitchSource")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuditLogSwitchSource")
     private String auditLogSwitchSource;
 
-    @Query
-    @NameInMap("AuditStatus")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuditStatus")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String auditStatus;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ServiceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceType")
     private String serviceType;
 
-    @Query
-    @NameInMap("StoragePeriod")
-    @Validation(maximum = 365, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StoragePeriod")
+    @com.aliyun.core.annotation.Validation(maximum = 365, minimum = 1)
     private Integer storagePeriod;
 
     private ModifyAuditPolicyRequest(Builder builder) {
@@ -192,7 +197,10 @@ public class ModifyAuditPolicyRequest extends Request {
         }
 
         /**
-         * The request source for the audit log feature. Set the value to **Console**.
+         * <p>The request source for the audit log feature. Set the value to <strong>Console</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Console</p>
          */
         public Builder auditLogSwitchSource(String auditLogSwitchSource) {
             this.putQueryParameter("AuditLogSwitchSource", auditLogSwitchSource);
@@ -201,11 +209,15 @@ public class ModifyAuditPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether the audit log feature is enabled. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the audit log feature. Valid values:</p>
+         * <ul>
+         * <li><strong>enable</strong></li>
+         * <li><strong>disabled</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **enable**
-         * *   **disabled**
+         * <strong>example:</strong>
+         * <p>enable</p>
          */
         public Builder auditStatus(String auditStatus) {
             this.putQueryParameter("AuditStatus", auditStatus);
@@ -214,7 +226,11 @@ public class ModifyAuditPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp1785659e3f****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -259,13 +275,17 @@ public class ModifyAuditPolicyRequest extends Request {
         }
 
         /**
-         * The type of the audit log feature. Valid values:
-         * <p>
+         * <p>The type of the audit log feature. Valid values:</p>
+         * <ul>
+         * <li><strong>Trail</strong>: free trial edition.</li>
+         * <li><strong>Standard</strong>: official edition.</li>
+         * </ul>
+         * <blockquote>
+         * <p>The default value is <strong>Trail</strong>. Starting from January 6, 2022, the official edition of the audit log feature has been launched in all regions, and the free trial edition of the feature can no longer be applied for. We recommend that you set this parameter to <strong>Standard</strong>.</p>
+         * </blockquote>
          * 
-         * *   **Trail**: the free trial edition
-         * *   **Standard**: the official edition
-         * 
-         * >  Default value: **Trial**. Starting from January 6, 2022, the official edition of the audit log feature has been launched in all regions, and new applications for the free trial edition have ended. We recommend that you set this parameter to **Standard**.
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         public Builder serviceType(String serviceType) {
             this.putQueryParameter("ServiceType", serviceType);
@@ -274,7 +294,10 @@ public class ModifyAuditPolicyRequest extends Request {
         }
 
         /**
-         * The log retention period. Valid values: 1 to 365 days. Default value: 30 days.
+         * <p>The log retention period. Valid values: 1 to 365 days. Default value: 30 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder storagePeriod(Integer storagePeriod) {
             this.putQueryParameter("StoragePeriod", storagePeriod);

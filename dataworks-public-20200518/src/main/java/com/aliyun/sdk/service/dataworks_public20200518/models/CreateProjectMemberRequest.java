@@ -1,38 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateProjectMemberRequest} extends {@link RequestModel}
  *
  * <p>CreateProjectMemberRequest</p>
  */
 public class CreateProjectMemberRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("ProjectId")
-    @Validation(required = true, maximum = 100000000)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100000000)
     private Long projectId;
 
-    @Query
-    @NameInMap("RoleCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleCode")
     private String roleCode;
 
-    @Query
-    @NameInMap("UserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
     private CreateProjectMemberRequest(Builder builder) {
@@ -113,7 +117,7 @@ public class CreateProjectMemberRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -122,7 +126,10 @@ public class CreateProjectMemberRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The client token that is used to ensure the idempotence of the request. We recommend that you set this parameter to a UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AFAE64E-D1BE-432B-A9****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -131,7 +138,11 @@ public class CreateProjectMemberRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. We recommend that you set this parameter to a UUID.
+         * <p>The DataWorks workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -140,7 +151,10 @@ public class CreateProjectMemberRequest extends Request {
         }
 
         /**
-         * RoleCode.
+         * <p>The code of the role. This parameter is optional. If you configure the RoleCode parameter, the user is assigned the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>role_project_guest</p>
          */
         public Builder roleCode(String roleCode) {
             this.putQueryParameter("RoleCode", roleCode);
@@ -149,7 +163,11 @@ public class CreateProjectMemberRequest extends Request {
         }
 
         /**
-         * The code of the role. This parameter is optional. If you specify the RoleCode parameter, the user is assigned the role.
+         * <p>The ID of the user to be added.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

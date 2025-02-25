@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteBenchmarkTaskRequest} extends {@link RequestModel}
  *
  * <p>DeleteBenchmarkTaskRequest</p>
  */
 public class DeleteBenchmarkTaskRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("TaskName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("TaskName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskName;
 
     private DeleteBenchmarkTaskRequest(Builder builder) {
@@ -70,7 +75,11 @@ public class DeleteBenchmarkTaskRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The ID of the region where the stress testing task is performed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -79,7 +88,11 @@ public class DeleteBenchmarkTaskRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * <p>The name of the stress testing task. For more information about how to query the name of a stress testing task, see <a href="https://help.aliyun.com/document_detail/432976.html">ListBenchmarkTask</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>benchmark-larec-test-2b11</p>
          */
         public Builder taskName(String taskName) {
             this.putPathParameter("TaskName", taskName);

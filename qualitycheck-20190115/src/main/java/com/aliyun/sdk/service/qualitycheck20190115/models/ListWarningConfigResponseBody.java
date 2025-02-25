@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWarningConfigResponseBody} extends {@link TeaModel}
  *
  * <p>ListWarningConfigResponseBody</p>
  */
 public class ListWarningConfigResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListWarningConfigResponseBody(Builder builder) {
@@ -131,11 +136,17 @@ public class ListWarningConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListWarningConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWarningConfigResponseBody</p>
+     */
     public static class Channel extends TeaModel {
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private Channel(Builder builder) {
@@ -192,9 +203,15 @@ public class ListWarningConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListWarningConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWarningConfigResponseBody</p>
+     */
     public static class Channels extends TeaModel {
-        @NameInMap("Channel")
-        private java.util.List < Channel> channel;
+        @com.aliyun.core.annotation.NameInMap("Channel")
+        private java.util.List<Channel> channel;
 
         private Channels(Builder builder) {
             this.channel = builder.channel;
@@ -211,17 +228,17 @@ public class ListWarningConfigResponseBody extends TeaModel {
         /**
          * @return channel
          */
-        public java.util.List < Channel> getChannel() {
+        public java.util.List<Channel> getChannel() {
             return this.channel;
         }
 
         public static final class Builder {
-            private java.util.List < Channel> channel; 
+            private java.util.List<Channel> channel; 
 
             /**
              * Channel.
              */
-            public Builder channel(java.util.List < Channel> channel) {
+            public Builder channel(java.util.List<Channel> channel) {
                 this.channel = channel;
                 return this;
             }
@@ -233,9 +250,15 @@ public class ListWarningConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListWarningConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWarningConfigResponseBody</p>
+     */
     public static class RidList extends TeaModel {
-        @NameInMap("RidList")
-        private java.util.List < String > ridList;
+        @com.aliyun.core.annotation.NameInMap("RidList")
+        private java.util.List<String> ridList;
 
         private RidList(Builder builder) {
             this.ridList = builder.ridList;
@@ -252,17 +275,17 @@ public class ListWarningConfigResponseBody extends TeaModel {
         /**
          * @return ridList
          */
-        public java.util.List < String > getRidList() {
+        public java.util.List<String> getRidList() {
             return this.ridList;
         }
 
         public static final class Builder {
-            private java.util.List < String > ridList; 
+            private java.util.List<String> ridList; 
 
             /**
              * RidList.
              */
-            public Builder ridList(java.util.List < String > ridList) {
+            public Builder ridList(java.util.List<String> ridList) {
                 this.ridList = ridList;
                 return this;
             }
@@ -274,11 +297,17 @@ public class ListWarningConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListWarningConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWarningConfigResponseBody</p>
+     */
     public static class WarningRule extends TeaModel {
-        @NameInMap("Rid")
+        @com.aliyun.core.annotation.NameInMap("Rid")
         private Long rid;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
         private WarningRule(Builder builder) {
@@ -335,9 +364,15 @@ public class ListWarningConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListWarningConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWarningConfigResponseBody</p>
+     */
     public static class RuleList extends TeaModel {
-        @NameInMap("WarningRule")
-        private java.util.List < WarningRule> warningRule;
+        @com.aliyun.core.annotation.NameInMap("WarningRule")
+        private java.util.List<WarningRule> warningRule;
 
         private RuleList(Builder builder) {
             this.warningRule = builder.warningRule;
@@ -354,17 +389,17 @@ public class ListWarningConfigResponseBody extends TeaModel {
         /**
          * @return warningRule
          */
-        public java.util.List < WarningRule> getWarningRule() {
+        public java.util.List<WarningRule> getWarningRule() {
             return this.warningRule;
         }
 
         public static final class Builder {
-            private java.util.List < WarningRule> warningRule; 
+            private java.util.List<WarningRule> warningRule; 
 
             /**
              * WarningRule.
              */
-            public Builder warningRule(java.util.List < WarningRule> warningRule) {
+            public Builder warningRule(java.util.List<WarningRule> warningRule) {
                 this.warningRule = warningRule;
                 return this;
             }
@@ -376,29 +411,35 @@ public class ListWarningConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListWarningConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWarningConfigResponseBody</p>
+     */
     public static class WarningConfigInfo extends TeaModel {
-        @NameInMap("Channels")
+        @com.aliyun.core.annotation.NameInMap("Channels")
         private Channels channels;
 
-        @NameInMap("ConfigId")
+        @com.aliyun.core.annotation.NameInMap("ConfigId")
         private Long configId;
 
-        @NameInMap("ConfigName")
+        @com.aliyun.core.annotation.NameInMap("ConfigName")
         private String configName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("RidList")
+        @com.aliyun.core.annotation.NameInMap("RidList")
         private RidList ridList;
 
-        @NameInMap("RuleList")
+        @com.aliyun.core.annotation.NameInMap("RuleList")
         private RuleList ruleList;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private WarningConfigInfo(Builder builder) {
@@ -557,9 +598,15 @@ public class ListWarningConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListWarningConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWarningConfigResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("WarningConfigInfo")
-        private java.util.List < WarningConfigInfo> warningConfigInfo;
+        @com.aliyun.core.annotation.NameInMap("WarningConfigInfo")
+        private java.util.List<WarningConfigInfo> warningConfigInfo;
 
         private Data(Builder builder) {
             this.warningConfigInfo = builder.warningConfigInfo;
@@ -576,17 +623,17 @@ public class ListWarningConfigResponseBody extends TeaModel {
         /**
          * @return warningConfigInfo
          */
-        public java.util.List < WarningConfigInfo> getWarningConfigInfo() {
+        public java.util.List<WarningConfigInfo> getWarningConfigInfo() {
             return this.warningConfigInfo;
         }
 
         public static final class Builder {
-            private java.util.List < WarningConfigInfo> warningConfigInfo; 
+            private java.util.List<WarningConfigInfo> warningConfigInfo; 
 
             /**
              * WarningConfigInfo.
              */
-            public Builder warningConfigInfo(java.util.List < WarningConfigInfo> warningConfigInfo) {
+            public Builder warningConfigInfo(java.util.List<WarningConfigInfo> warningConfigInfo) {
                 this.warningConfigInfo = warningConfigInfo;
                 return this;
             }

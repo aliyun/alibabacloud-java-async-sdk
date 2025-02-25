@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.selectdb20230522.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBInstanceAttributeRequest</p>
  */
 public class ModifyDBInstanceAttributeRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("InstanceAttributeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceAttributeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceAttributeType;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Value")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Value")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String value;
 
     private ModifyDBInstanceAttributeRequest(Builder builder) {
@@ -114,7 +119,11 @@ public class ModifyDBInstanceAttributeRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb-cn-7213cjv****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -123,7 +132,15 @@ public class ModifyDBInstanceAttributeRequest extends Request {
         }
 
         /**
-         * InstanceAttributeType.
+         * <p>The instance parameter to be modified. Valid values:</p>
+         * <ul>
+         * <li><strong>MaintainTime</strong>: Modify the maintenance window of the instance in the hh:mm-hh:mm format.</li>
+         * <li><strong>DBInstanceDescription</strong>: Modify the description of the instance.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DBInstanceDescription</p>
          */
         public Builder instanceAttributeType(String instanceAttributeType) {
             this.putQueryParameter("InstanceAttributeType", instanceAttributeType);
@@ -132,7 +149,11 @@ public class ModifyDBInstanceAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -150,7 +171,15 @@ public class ModifyDBInstanceAttributeRequest extends Request {
         }
 
         /**
-         * Value.
+         * <p>The new value of the instance parameter to be modified. Examples:</p>
+         * <ul>
+         * <li>If InstanceAttributeType is set to MaintainTime, you can set Value to 00:00-06:00.</li>
+         * <li>If InstanceAttributeType is set to DBInstanceDescription, you can set Value to testdb.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb01</p>
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

@@ -1,57 +1,72 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBClustersRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBClustersRequest</p>
  */
 public class DescribeDBClustersRequest extends Request {
-    @Query
-    @NameInMap("DBClusterDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterDescription")
     private String DBClusterDescription;
 
-    @Query
-    @NameInMap("DBClusterIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterIds")
     private String DBClusterIds;
 
-    @Query
-    @NameInMap("DBClusterStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterStatus")
     private String DBClusterStatus;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterVersion")
+    private String DBClusterVersion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductVersion")
+    private String productVersion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private DescribeDBClustersRequest(Builder builder) {
         super(builder);
         this.DBClusterDescription = builder.DBClusterDescription;
         this.DBClusterIds = builder.DBClusterIds;
         this.DBClusterStatus = builder.DBClusterStatus;
+        this.DBClusterVersion = builder.DBClusterVersion;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.productVersion = builder.productVersion;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.tag = builder.tag;
@@ -92,6 +107,13 @@ public class DescribeDBClustersRequest extends Request {
     }
 
     /**
+     * @return DBClusterVersion
+     */
+    public String getDBClusterVersion() {
+        return this.DBClusterVersion;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -103,6 +125,13 @@ public class DescribeDBClustersRequest extends Request {
      */
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    /**
+     * @return productVersion
+     */
+    public String getProductVersion() {
+        return this.productVersion;
     }
 
     /**
@@ -122,7 +151,7 @@ public class DescribeDBClustersRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -130,11 +159,13 @@ public class DescribeDBClustersRequest extends Request {
         private String DBClusterDescription; 
         private String DBClusterIds; 
         private String DBClusterStatus; 
+        private String DBClusterVersion; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String productVersion; 
         private String regionId; 
         private String resourceGroupId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -145,19 +176,24 @@ public class DescribeDBClustersRequest extends Request {
             this.DBClusterDescription = request.DBClusterDescription;
             this.DBClusterIds = request.DBClusterIds;
             this.DBClusterStatus = request.DBClusterStatus;
+            this.DBClusterVersion = request.DBClusterVersion;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.productVersion = request.productVersion;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.tag = request.tag;
         } 
 
         /**
-         * The description of the cluster.
-         * <p>
+         * <p>The description of the cluster.</p>
+         * <ul>
+         * <li>The description cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>The description must be 2 to 256 characters in length</li>
+         * </ul>
          * 
-         * *   The description cannot start with `http://` or `https://`.
-         * *   The description must be 2 to 256 characters in length
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder DBClusterDescription(String DBClusterDescription) {
             this.putQueryParameter("DBClusterDescription", DBClusterDescription);
@@ -166,10 +202,11 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
-         * <p>
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * <p>If you do not specify this parameter, the information about all clusters that reside in the region is returned.</p>
          * 
-         * If you do not specify this parameter, the information about all clusters that reside in the region is returned.
+         * <strong>example:</strong>
+         * <p>amv-bp1r053byu48p****</p>
          */
         public Builder DBClusterIds(String DBClusterIds) {
             this.putQueryParameter("DBClusterIds", DBClusterIds);
@@ -178,27 +215,33 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * The state of the cluster. Valid values:
-         * <p>
-         * 
-         * *   **Preparing**
-         * 
+         * <p>The state of the cluster. Valid values:</p>
+         * <ul>
+         * <li><strong>Preparing</strong></li>
+         * </ul>
          * <!---->
          * 
-         * *   **Creating**
-         * *   **Running**
-         * *   **Deleting**
-         * 
+         * <ul>
+         * <li><strong>Creating</strong></li>
+         * <li><strong>Running</strong></li>
+         * <li><strong>Deleting</strong></li>
+         * </ul>
          * <!---->
          * 
-         * *   **Restoring**
-         * 
+         * <ul>
+         * <li><strong>Restoring</strong></li>
+         * </ul>
          * <!---->
          * 
-         * *   **ClassChanging**
-         * *   **NetAddressCreating**
-         * *   **NetAddressDeleting**
-         * *   **NetAddressModifying**
+         * <ul>
+         * <li><strong>ClassChanging</strong></li>
+         * <li><strong>NetAddressCreating</strong></li>
+         * <li><strong>NetAddressDeleting</strong></li>
+         * <li><strong>NetAddressModifying</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder DBClusterStatus(String DBClusterStatus) {
             this.putQueryParameter("DBClusterStatus", DBClusterStatus);
@@ -207,7 +250,27 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: **1**.
+         * <p>The database engine version of the cluster. Valid values:</p>
+         * <ul>
+         * <li>3.0: Data Warehouse Edition.</li>
+         * <li>5.0 (default): Data Lakehouse Edition, Enterprise Edition, and Basic Edition.</li>
+         * <li>All: Data Warehouse Edition, Data Lakehouse Edition, Enterprise Edition, and Basic Edition.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>5.0</p>
+         */
+        public Builder DBClusterVersion(String DBClusterVersion) {
+            this.putQueryParameter("DBClusterVersion", DBClusterVersion);
+            this.DBClusterVersion = DBClusterVersion;
+            return this;
+        }
+
+        /**
+         * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -216,12 +279,15 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values:
-         * <p>
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong> (default)</li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
          * 
-         * *   **30** (default)
-         * *   **50**
-         * *   **100**
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -230,10 +296,31 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * The region ID of the cluster.
-         * <p>
+         * <p>The edition of the cluster. Valid values:</p>
+         * <ul>
+         * <li>EnterpriseVersion: Enterprise Edition.</li>
+         * <li>BasicVersion: Basic Edition.</li>
+         * </ul>
+         * <p>If you leave this parameter empty, the information about clusters of all editions is returned.</p>
          * 
-         * >  You can call the [DescribeRegions](~~454314~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>BasicVersion</p>
+         */
+        public Builder productVersion(String productVersion) {
+            this.putQueryParameter("ProductVersion", productVersion);
+            this.productVersion = productVersion;
+            return this;
+        }
+
+        /**
+         * <p>The region ID of the cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -242,7 +329,10 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * The resource group ID. If you do not specify this parameter, the information about all resource groups in the cluster is returned.
+         * <p>The resource group ID. If you do not specify this parameter, the information about all resource groups in the cluster is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-4690g37929****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -251,9 +341,9 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * The tags that are added to the cluster.
+         * <p>The tags that are added to the cluster.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -266,11 +356,17 @@ public class DescribeDBClustersRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBClustersRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClustersRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -305,7 +401,10 @@ public class DescribeDBClustersRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -313,7 +412,10 @@ public class DescribeDBClustersRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1</p>
              */
             public Builder value(String value) {
                 this.value = value;

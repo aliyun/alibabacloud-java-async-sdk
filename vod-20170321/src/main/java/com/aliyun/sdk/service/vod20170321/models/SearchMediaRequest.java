@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchMediaRequest} extends {@link RequestModel}
  *
  * <p>SearchMediaRequest</p>
  */
 public class SearchMediaRequest extends Request {
-    @Query
-    @NameInMap("Fields")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Fields")
     private String fields;
 
-    @Query
-    @NameInMap("Match")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Match")
     private String match;
 
-    @Query
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ScrollToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScrollToken")
     private String scrollToken;
 
-    @Query
-    @NameInMap("SearchType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchType")
     private String searchType;
 
-    @Query
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
     private SearchMediaRequest(Builder builder) {
@@ -138,10 +143,11 @@ public class SearchMediaRequest extends Request {
         } 
 
         /**
-         * The media asset fields to return in the query results.
-         * <p>
+         * <p>The media asset fields to return in the query results.</p>
+         * <p>By default, only the basic media asset fields are returned. You can specify additional media asset fields that need to be returned in the request. For more information, see the &quot;API examples&quot; section of the <a href="https://help.aliyun.com/document_detail/99179.html">Search for media asset information</a> topic.</p>
          * 
-         * By default, only the basic media asset fields are returned. You can specify additional media asset fields that need to be returned in the request. For more information, see the "API examples" section of the [Search for media asset information](~~99179~~) topic.
+         * <strong>example:</strong>
+         * <p>Title,CoverURL</p>
          */
         public Builder fields(String fields) {
             this.putQueryParameter("Fields", fields);
@@ -150,7 +156,10 @@ public class SearchMediaRequest extends Request {
         }
 
         /**
-         * The filter condition. For more information about the syntax, see [Protocol for media asset search](~~86991~~).
+         * <p>The filter condition. For more information about the syntax, see <a href="https://help.aliyun.com/document_detail/86991.html">Protocol for media asset search</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>field = value</p>
          */
         public Builder match(String match) {
             this.putQueryParameter("Match", match);
@@ -159,10 +168,13 @@ public class SearchMediaRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
-         * <p>
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <blockquote>
+         * <p>If the value of this parameter exceeds <strong>200</strong>, we recommend that you set the ScrollToken parameter as well.</p>
+         * </blockquote>
          * 
-         * > If the value of this parameter exceeds **200**, we recommend that you set the ScrollToken parameter as well.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -171,7 +183,10 @@ public class SearchMediaRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**. Maximum value: **100**.
+         * <p>The number of entries to return on each page. Default value: <strong>10</strong>. Maximum value: <strong>100</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -180,11 +195,14 @@ public class SearchMediaRequest extends Request {
         }
 
         /**
-         * The pagination identifier. The password must be 32 characters in length The first time you call this operation for each new search, you do not need to specify this parameter. The value of this parameter is returned each time data records that meet the specified filter condition are found. The value is used to record the current position of queried data. Record the returned parameter value and set this parameter according to the following requirements during the next search:
-         * <p>
+         * <p>The pagination identifier. The password must be 32 characters in length The first time you call this operation for each new search, you do not need to specify this parameter. The value of this parameter is returned each time data records that meet the specified filter condition are found. The value is used to record the current position of queried data. Record the returned parameter value and set this parameter according to the following requirements during the next search:</p>
+         * <ul>
+         * <li>If SearchType is set to <strong>video</strong> or <strong>audio</strong> and you need to traverse all data that meets the filter criteria, you must set the ScrollToken parameter.</li>
+         * <li>If the value of the PageNo parameter exceeds <strong>200</strong>, we recommend that you set this parameter to optimize search performance.</li>
+         * </ul>
          * 
-         * *   If SearchType is set to **video** or **audio** and you need to traverse all data that meets the filter criteria, you must set the ScrollToken parameter.
-         * *   If the value of the PageNo parameter exceeds **200**, we recommend that you set this parameter to optimize search performance.
+         * <strong>example:</strong>
+         * <p>24e0fba7188fae707e146esa54****</p>
          */
         public Builder scrollToken(String scrollToken) {
             this.putQueryParameter("ScrollToken", scrollToken);
@@ -193,15 +211,19 @@ public class SearchMediaRequest extends Request {
         }
 
         /**
-         * The type of the media asset that you want to query. Default value: video. Valid values:
-         * <p>
+         * <p>The type of the media asset that you want to query. Default value: video. Valid values:</p>
+         * <ul>
+         * <li><strong>video</strong></li>
+         * <li><strong>audio</strong></li>
+         * <li><strong>image</strong></li>
+         * <li><strong>attached</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>If this parameter is set to <strong>video</strong> or <strong>audio</strong> and you want to traverse all data that meets the filter criteria, you must set the ScrollToken parameter.</p>
+         * </blockquote>
          * 
-         * *   **video**
-         * *   **audio**
-         * *   **image**
-         * *   **attached**
-         * 
-         * > If this parameter is set to **video** or **audio** and you want to traverse all data that meets the filter criteria, you must set the ScrollToken parameter.
+         * <strong>example:</strong>
+         * <p>video</p>
          */
         public Builder searchType(String searchType) {
             this.putQueryParameter("SearchType", searchType);
@@ -210,15 +232,21 @@ public class SearchMediaRequest extends Request {
         }
 
         /**
-         * The sort field and order. Separate multiple values with commas (,). Default value: CreationTime:Desc. Valid values:
-         * <p>
+         * <p>The sort field and order. Separate multiple values with commas (,). Default value: CreationTime:Desc. Valid values:</p>
+         * <ul>
+         * <li><strong>CreationTime:Desc</strong>: The results are sorted in reverse chronological order based on the creation time.</li>
+         * <li><strong>CreationTime:Asc</strong>: The results are sorted in chronological order based on the creation time.</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>For more information about the sort field, see &quot;Sort field&quot; in the <a href="https://help.aliyun.com/document_detail/99179.html">Search for media asset information</a> topic.</li>
+         * <li>To obtain the first 5,000 data records that meet the specified filter criteria, you can specify a maximum of three sort fields.</li>
+         * <li>To obtain all the data records that meet the specified filter criteria, you can specify only one sort field.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * *   **CreationTime:Desc**: The results are sorted in reverse chronological order based on the creation time.
-         * *   **CreationTime:Asc**: The results are sorted in chronological order based on the creation time.
-         * 
-         * > * For more information about the sort field, see "Sort field" in the [Search for media asset information](~~99179~~) topic.
-         * > * To obtain the first 5,000 data records that meet the specified filter criteria, you can specify a maximum of three sort fields.
-         * > * To obtain all the data records that meet the specified filter criteria, you can specify only one sort field.
+         * <strong>example:</strong>
+         * <p>CreationTime:Desc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);

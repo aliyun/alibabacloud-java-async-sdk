@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AssociateResponseBody} extends {@link TeaModel}
  *
  * <p>AssociateResponseBody</p>
  */
 public class AssociateResponseBody extends TeaModel {
-    @NameInMap("Associate")
+    @com.aliyun.core.annotation.NameInMap("Associate")
     private java.util.List < Associate> associate;
 
-    @NameInMap("MessageId")
+    @com.aliyun.core.annotation.NameInMap("MessageId")
     private String messageId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SessionId")
+    @com.aliyun.core.annotation.NameInMap("SessionId")
     private String sessionId;
 
     private AssociateResponseBody(Builder builder) {
@@ -111,11 +111,17 @@ public class AssociateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AssociateResponseBody} extends {@link TeaModel}
+     *
+     * <p>AssociateResponseBody</p>
+     */
     public static class Associate extends TeaModel {
-        @NameInMap("Meta")
+        @com.aliyun.core.annotation.NameInMap("Meta")
         private String meta;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private Associate(Builder builder) {

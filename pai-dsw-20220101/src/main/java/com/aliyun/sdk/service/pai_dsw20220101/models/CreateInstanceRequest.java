@@ -1,88 +1,117 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dsw20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreateInstanceRequest</p>
  */
 public class CreateInstanceRequest extends Request {
-    @Body
-    @NameInMap("Accessibility")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Accessibility")
     private String accessibility;
 
-    @Body
-    @NameInMap("CloudDisks")
-    private java.util.List < CloudDisks> cloudDisks;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Affinity")
+    private Affinity affinity;
 
-    @Body
-    @NameInMap("Datasets")
-    private java.util.List < Datasets> datasets;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CloudDisks")
+    private java.util.List<CloudDisks> cloudDisks;
 
-    @Body
-    @NameInMap("EcsSpec")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CredentialConfig")
+    private CredentialConfig credentialConfig;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Datasets")
+    private java.util.List<Datasets> datasets;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Driver")
+    private String driver;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EcsSpec")
     private String ecsSpec;
 
-    @Body
-    @NameInMap("EnvironmentVariables")
-    private java.util.Map < String, String > environmentVariables;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnvironmentVariables")
+    private java.util.Map<String, String> environmentVariables;
 
-    @Body
-    @NameInMap("ImageId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ImageAuth")
+    private String imageAuth;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
-    @Body
-    @NameInMap("ImageUrl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ImageUrl")
     private String imageUrl;
 
-    @Body
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @Body
-    @NameInMap("Labels")
-    private java.util.List < Labels> labels;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Labels")
+    private java.util.List<Labels> labels;
 
-    @Body
-    @NameInMap("Priority")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Priority")
     private Long priority;
 
-    @Body
-    @NameInMap("RequestedResource")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RequestedResource")
     private RequestedResource requestedResource;
 
-    @Body
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
-    @Body
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
-    @Body
-    @NameInMap("UserVpc")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserVpc")
     private UserVpc userVpc;
 
-    @Body
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
-    @Body
-    @NameInMap("WorkspaceSource")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkspaceSource")
     private String workspaceSource;
 
     private CreateInstanceRequest(Builder builder) {
         super(builder);
         this.accessibility = builder.accessibility;
+        this.affinity = builder.affinity;
         this.cloudDisks = builder.cloudDisks;
+        this.credentialConfig = builder.credentialConfig;
         this.datasets = builder.datasets;
+        this.driver = builder.driver;
         this.ecsSpec = builder.ecsSpec;
         this.environmentVariables = builder.environmentVariables;
+        this.imageAuth = builder.imageAuth;
         this.imageId = builder.imageId;
         this.imageUrl = builder.imageUrl;
         this.instanceName = builder.instanceName;
@@ -90,6 +119,7 @@ public class CreateInstanceRequest extends Request {
         this.priority = builder.priority;
         this.requestedResource = builder.requestedResource;
         this.resourceId = builder.resourceId;
+        this.tag = builder.tag;
         this.userId = builder.userId;
         this.userVpc = builder.userVpc;
         this.workspaceId = builder.workspaceId;
@@ -117,17 +147,38 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
+     * @return affinity
+     */
+    public Affinity getAffinity() {
+        return this.affinity;
+    }
+
+    /**
      * @return cloudDisks
      */
-    public java.util.List < CloudDisks> getCloudDisks() {
+    public java.util.List<CloudDisks> getCloudDisks() {
         return this.cloudDisks;
+    }
+
+    /**
+     * @return credentialConfig
+     */
+    public CredentialConfig getCredentialConfig() {
+        return this.credentialConfig;
     }
 
     /**
      * @return datasets
      */
-    public java.util.List < Datasets> getDatasets() {
+    public java.util.List<Datasets> getDatasets() {
         return this.datasets;
+    }
+
+    /**
+     * @return driver
+     */
+    public String getDriver() {
+        return this.driver;
     }
 
     /**
@@ -140,8 +191,15 @@ public class CreateInstanceRequest extends Request {
     /**
      * @return environmentVariables
      */
-    public java.util.Map < String, String > getEnvironmentVariables() {
+    public java.util.Map<String, String> getEnvironmentVariables() {
         return this.environmentVariables;
+    }
+
+    /**
+     * @return imageAuth
+     */
+    public String getImageAuth() {
+        return this.imageAuth;
     }
 
     /**
@@ -168,7 +226,7 @@ public class CreateInstanceRequest extends Request {
     /**
      * @return labels
      */
-    public java.util.List < Labels> getLabels() {
+    public java.util.List<Labels> getLabels() {
         return this.labels;
     }
 
@@ -191,6 +249,13 @@ public class CreateInstanceRequest extends Request {
      */
     public String getResourceId() {
         return this.resourceId;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List<Tag> getTag() {
+        return this.tag;
     }
 
     /**
@@ -223,17 +288,22 @@ public class CreateInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateInstanceRequest, Builder> {
         private String accessibility; 
-        private java.util.List < CloudDisks> cloudDisks; 
-        private java.util.List < Datasets> datasets; 
+        private Affinity affinity; 
+        private java.util.List<CloudDisks> cloudDisks; 
+        private CredentialConfig credentialConfig; 
+        private java.util.List<Datasets> datasets; 
+        private String driver; 
         private String ecsSpec; 
-        private java.util.Map < String, String > environmentVariables; 
+        private java.util.Map<String, String> environmentVariables; 
+        private String imageAuth; 
         private String imageId; 
         private String imageUrl; 
         private String instanceName; 
-        private java.util.List < Labels> labels; 
+        private java.util.List<Labels> labels; 
         private Long priority; 
         private RequestedResource requestedResource; 
         private String resourceId; 
+        private java.util.List<Tag> tag; 
         private String userId; 
         private UserVpc userVpc; 
         private String workspaceId; 
@@ -246,10 +316,14 @@ public class CreateInstanceRequest extends Request {
         private Builder(CreateInstanceRequest request) {
             super(request);
             this.accessibility = request.accessibility;
+            this.affinity = request.affinity;
             this.cloudDisks = request.cloudDisks;
+            this.credentialConfig = request.credentialConfig;
             this.datasets = request.datasets;
+            this.driver = request.driver;
             this.ecsSpec = request.ecsSpec;
             this.environmentVariables = request.environmentVariables;
+            this.imageAuth = request.imageAuth;
             this.imageId = request.imageId;
             this.imageUrl = request.imageUrl;
             this.instanceName = request.instanceName;
@@ -257,6 +331,7 @@ public class CreateInstanceRequest extends Request {
             this.priority = request.priority;
             this.requestedResource = request.requestedResource;
             this.resourceId = request.resourceId;
+            this.tag = request.tag;
             this.userId = request.userId;
             this.userVpc = request.userVpc;
             this.workspaceId = request.workspaceId;
@@ -273,20 +348,47 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
+         * Affinity.
+         */
+        public Builder affinity(Affinity affinity) {
+            this.putBodyParameter("Affinity", affinity);
+            this.affinity = affinity;
+            return this;
+        }
+
+        /**
          * CloudDisks.
          */
-        public Builder cloudDisks(java.util.List < CloudDisks> cloudDisks) {
+        public Builder cloudDisks(java.util.List<CloudDisks> cloudDisks) {
             this.putBodyParameter("CloudDisks", cloudDisks);
             this.cloudDisks = cloudDisks;
             return this;
         }
 
         /**
+         * CredentialConfig.
+         */
+        public Builder credentialConfig(CredentialConfig credentialConfig) {
+            this.putBodyParameter("CredentialConfig", credentialConfig);
+            this.credentialConfig = credentialConfig;
+            return this;
+        }
+
+        /**
          * Datasets.
          */
-        public Builder datasets(java.util.List < Datasets> datasets) {
+        public Builder datasets(java.util.List<Datasets> datasets) {
             this.putBodyParameter("Datasets", datasets);
             this.datasets = datasets;
+            return this;
+        }
+
+        /**
+         * Driver.
+         */
+        public Builder driver(String driver) {
+            this.putBodyParameter("Driver", driver);
+            this.driver = driver;
             return this;
         }
 
@@ -302,9 +404,18 @@ public class CreateInstanceRequest extends Request {
         /**
          * EnvironmentVariables.
          */
-        public Builder environmentVariables(java.util.Map < String, String > environmentVariables) {
+        public Builder environmentVariables(java.util.Map<String, String> environmentVariables) {
             this.putBodyParameter("EnvironmentVariables", environmentVariables);
             this.environmentVariables = environmentVariables;
+            return this;
+        }
+
+        /**
+         * ImageAuth.
+         */
+        public Builder imageAuth(String imageAuth) {
+            this.putBodyParameter("ImageAuth", imageAuth);
+            this.imageAuth = imageAuth;
             return this;
         }
 
@@ -338,7 +449,7 @@ public class CreateInstanceRequest extends Request {
         /**
          * Labels.
          */
-        public Builder labels(java.util.List < Labels> labels) {
+        public Builder labels(java.util.List<Labels> labels) {
             this.putBodyParameter("Labels", labels);
             this.labels = labels;
             return this;
@@ -368,6 +479,15 @@ public class CreateInstanceRequest extends Request {
         public Builder resourceId(String resourceId) {
             this.putBodyParameter("ResourceId", resourceId);
             this.resourceId = resourceId;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List<Tag> tag) {
+            this.putBodyParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -414,23 +534,214 @@ public class CreateInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
+    public static class CPU extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Enable")
+        private Boolean enable;
+
+        private CPU(Builder builder) {
+            this.enable = builder.enable;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CPU create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enable
+         */
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        public static final class Builder {
+            private Boolean enable; 
+
+            /**
+             * Enable.
+             */
+            public Builder enable(Boolean enable) {
+                this.enable = enable;
+                return this;
+            }
+
+            public CPU build() {
+                return new CPU(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
+    public static class Affinity extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CPU")
+        private CPU CPU;
+
+        private Affinity(Builder builder) {
+            this.CPU = builder.CPU;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Affinity create() {
+            return builder().build();
+        }
+
+        /**
+         * @return CPU
+         */
+        public CPU getCPU() {
+            return this.CPU;
+        }
+
+        public static final class Builder {
+            private CPU CPU; 
+
+            /**
+             * CPU.
+             */
+            public Builder CPU(CPU CPU) {
+                this.CPU = CPU;
+                return this;
+            }
+
+            public Affinity build() {
+                return new Affinity(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
+    public static class Status extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Available")
+        private Long available;
+
+        @com.aliyun.core.annotation.NameInMap("Capacity")
+        private Long capacity;
+
+        @com.aliyun.core.annotation.NameInMap("Usage")
+        private Long usage;
+
+        private Status(Builder builder) {
+            this.available = builder.available;
+            this.capacity = builder.capacity;
+            this.usage = builder.usage;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Status create() {
+            return builder().build();
+        }
+
+        /**
+         * @return available
+         */
+        public Long getAvailable() {
+            return this.available;
+        }
+
+        /**
+         * @return capacity
+         */
+        public Long getCapacity() {
+            return this.capacity;
+        }
+
+        /**
+         * @return usage
+         */
+        public Long getUsage() {
+            return this.usage;
+        }
+
+        public static final class Builder {
+            private Long available; 
+            private Long capacity; 
+            private Long usage; 
+
+            /**
+             * Available.
+             */
+            public Builder available(Long available) {
+                this.available = available;
+                return this;
+            }
+
+            /**
+             * Capacity.
+             */
+            public Builder capacity(Long capacity) {
+                this.capacity = capacity;
+                return this;
+            }
+
+            /**
+             * Usage.
+             */
+            public Builder usage(Long usage) {
+                this.usage = usage;
+                return this;
+            }
+
+            public Status build() {
+                return new Status(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
     public static class CloudDisks extends TeaModel {
-        @NameInMap("Capacity")
+        @com.aliyun.core.annotation.NameInMap("Capacity")
         private String capacity;
 
-        @NameInMap("MountPath")
+        @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("SubType")
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private Status status;
+
+        @com.aliyun.core.annotation.NameInMap("SubType")
         private String subType;
 
         private CloudDisks(Builder builder) {
             this.capacity = builder.capacity;
             this.mountPath = builder.mountPath;
             this.path = builder.path;
+            this.status = builder.status;
             this.subType = builder.subType;
         }
 
@@ -464,6 +775,13 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
+         * @return status
+         */
+        public Status getStatus() {
+            return this.status;
+        }
+
+        /**
          * @return subType
          */
         public String getSubType() {
@@ -474,6 +792,7 @@ public class CreateInstanceRequest extends Request {
             private String capacity; 
             private String mountPath; 
             private String path; 
+            private Status status; 
             private String subType; 
 
             /**
@@ -501,6 +820,14 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
+             * Status.
+             */
+            public Builder status(Status status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
              * SubType.
              */
             public Builder subType(String subType) {
@@ -515,16 +842,35 @@ public class CreateInstanceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
     public static class Datasets extends TeaModel {
-        @NameInMap("DatasetId")
+        @com.aliyun.core.annotation.NameInMap("DatasetId")
         private String datasetId;
 
-        @NameInMap("MountPath")
+        @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
+
+        @com.aliyun.core.annotation.NameInMap("OptionType")
+        @Deprecated
+        private String optionType;
+
+        @com.aliyun.core.annotation.NameInMap("Options")
+        private String options;
+
+        @com.aliyun.core.annotation.NameInMap("Uri")
+        private String uri;
 
         private Datasets(Builder builder) {
             this.datasetId = builder.datasetId;
             this.mountPath = builder.mountPath;
+            this.optionType = builder.optionType;
+            this.options = builder.options;
+            this.uri = builder.uri;
         }
 
         public static Builder builder() {
@@ -549,9 +895,33 @@ public class CreateInstanceRequest extends Request {
             return this.mountPath;
         }
 
+        /**
+         * @return optionType
+         */
+        public String getOptionType() {
+            return this.optionType;
+        }
+
+        /**
+         * @return options
+         */
+        public String getOptions() {
+            return this.options;
+        }
+
+        /**
+         * @return uri
+         */
+        public String getUri() {
+            return this.uri;
+        }
+
         public static final class Builder {
             private String datasetId; 
             private String mountPath; 
+            private String optionType; 
+            private String options; 
+            private String uri; 
 
             /**
              * DatasetId.
@@ -569,6 +939,30 @@ public class CreateInstanceRequest extends Request {
                 return this;
             }
 
+            /**
+             * OptionType.
+             */
+            public Builder optionType(String optionType) {
+                this.optionType = optionType;
+                return this;
+            }
+
+            /**
+             * Options.
+             */
+            public Builder options(String options) {
+                this.options = options;
+                return this;
+            }
+
+            /**
+             * Uri.
+             */
+            public Builder uri(String uri) {
+                this.uri = uri;
+                return this;
+            }
+
             public Datasets build() {
                 return new Datasets(this);
             } 
@@ -576,11 +970,17 @@ public class CreateInstanceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
     public static class Labels extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Labels(Builder builder) {
@@ -637,20 +1037,26 @@ public class CreateInstanceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
     public static class RequestedResource extends TeaModel {
-        @NameInMap("CPU")
+        @com.aliyun.core.annotation.NameInMap("CPU")
         private String CPU;
 
-        @NameInMap("GPU")
+        @com.aliyun.core.annotation.NameInMap("GPU")
         private String GPU;
 
-        @NameInMap("GPUType")
+        @com.aliyun.core.annotation.NameInMap("GPUType")
         private String GPUType;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private String memory;
 
-        @NameInMap("SharedMemory")
+        @com.aliyun.core.annotation.NameInMap("SharedMemory")
         private String sharedMemory;
 
         private RequestedResource(Builder builder) {
@@ -758,25 +1164,102 @@ public class CreateInstanceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
     public static class UserVpc extends TeaModel {
-        @NameInMap("DefaultRoute")
+        @com.aliyun.core.annotation.NameInMap("DefaultRoute")
         private String defaultRoute;
 
-        @NameInMap("ExtendedCIDRs")
-        private java.util.List < String > extendedCIDRs;
+        @com.aliyun.core.annotation.NameInMap("ExtendedCIDRs")
+        private java.util.List<String> extendedCIDRs;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("ForwardInfos")
+        private java.util.List<ForwardInfo> forwardInfos;
+
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private UserVpc(Builder builder) {
             this.defaultRoute = builder.defaultRoute;
             this.extendedCIDRs = builder.extendedCIDRs;
+            this.forwardInfos = builder.forwardInfos;
             this.securityGroupId = builder.securityGroupId;
             this.vSwitchId = builder.vSwitchId;
             this.vpcId = builder.vpcId;
@@ -800,8 +1283,15 @@ public class CreateInstanceRequest extends Request {
         /**
          * @return extendedCIDRs
          */
-        public java.util.List < String > getExtendedCIDRs() {
+        public java.util.List<String> getExtendedCIDRs() {
             return this.extendedCIDRs;
+        }
+
+        /**
+         * @return forwardInfos
+         */
+        public java.util.List<ForwardInfo> getForwardInfos() {
+            return this.forwardInfos;
         }
 
         /**
@@ -827,7 +1317,8 @@ public class CreateInstanceRequest extends Request {
 
         public static final class Builder {
             private String defaultRoute; 
-            private java.util.List < String > extendedCIDRs; 
+            private java.util.List<String> extendedCIDRs; 
+            private java.util.List<ForwardInfo> forwardInfos; 
             private String securityGroupId; 
             private String vSwitchId; 
             private String vpcId; 
@@ -843,8 +1334,16 @@ public class CreateInstanceRequest extends Request {
             /**
              * ExtendedCIDRs.
              */
-            public Builder extendedCIDRs(java.util.List < String > extendedCIDRs) {
+            public Builder extendedCIDRs(java.util.List<String> extendedCIDRs) {
                 this.extendedCIDRs = extendedCIDRs;
+                return this;
+            }
+
+            /**
+             * ForwardInfos.
+             */
+            public Builder forwardInfos(java.util.List<ForwardInfo> forwardInfos) {
+                this.forwardInfos = forwardInfos;
                 return this;
             }
 

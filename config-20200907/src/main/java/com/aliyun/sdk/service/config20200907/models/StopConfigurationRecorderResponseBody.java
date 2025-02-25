@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopConfigurationRecorderResponseBody} extends {@link TeaModel}
  *
  * <p>StopConfigurationRecorderResponseBody</p>
  */
 public class StopConfigurationRecorderResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StopConfigurationRecorderResult")
+    @com.aliyun.core.annotation.NameInMap("StopConfigurationRecorderResult")
     private Boolean stopConfigurationRecorderResult;
 
     private StopConfigurationRecorderResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class StopConfigurationRecorderResponseBody extends TeaModel {
         private Boolean stopConfigurationRecorderResult; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AB2E892E-8A43-5B0F-8FE3-B53ADA53CB2D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,11 +66,14 @@ public class StopConfigurationRecorderResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder stopConfigurationRecorderResult(Boolean stopConfigurationRecorderResult) {
             this.stopConfigurationRecorderResult = stopConfigurationRecorderResult;

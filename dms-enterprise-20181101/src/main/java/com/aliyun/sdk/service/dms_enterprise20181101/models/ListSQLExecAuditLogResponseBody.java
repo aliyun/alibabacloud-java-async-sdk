@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSQLExecAuditLogResponseBody} extends {@link TeaModel}
  *
  * <p>ListSQLExecAuditLogResponseBody</p>
  */
 public class ListSQLExecAuditLogResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SQLExecAuditLogList")
+    @com.aliyun.core.annotation.NameInMap("SQLExecAuditLogList")
     private SQLExecAuditLogList SQLExecAuditLogList;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListSQLExecAuditLogResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MissingStartTime</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +114,10 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>StartTime is mandatory for this action.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,7 +125,10 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39BC9C86-95AE-58F2-9862-A7C3D896****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +136,7 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * The entries returned.
+         * <p>The entries returned.</p>
          */
         public Builder SQLExecAuditLogList(SQLExecAuditLogList SQLExecAuditLogList) {
             this.SQLExecAuditLogList = SQLExecAuditLogList;
@@ -130,11 +144,14 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -142,7 +159,10 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned.
+         * <p>The number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -155,47 +175,53 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSQLExecAuditLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSQLExecAuditLogResponseBody</p>
+     */
     public static class SQLExecAuditLog extends TeaModel {
-        @NameInMap("AffectRows")
+        @com.aliyun.core.annotation.NameInMap("AffectRows")
         private Long affectRows;
 
-        @NameInMap("DbId")
+        @com.aliyun.core.annotation.NameInMap("DbId")
         private Long dbId;
 
-        @NameInMap("ElapsedTime")
+        @com.aliyun.core.annotation.NameInMap("ElapsedTime")
         private Long elapsedTime;
 
-        @NameInMap("ExecState")
+        @com.aliyun.core.annotation.NameInMap("ExecState")
         private String execState;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("Logic")
+        @com.aliyun.core.annotation.NameInMap("Logic")
         private Boolean logic;
 
-        @NameInMap("OpTime")
+        @com.aliyun.core.annotation.NameInMap("OpTime")
         private String opTime;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("SQL")
+        @com.aliyun.core.annotation.NameInMap("SQL")
         private String SQL;
 
-        @NameInMap("SQLType")
+        @com.aliyun.core.annotation.NameInMap("SQLType")
         private String SQLType;
 
-        @NameInMap("SchemaName")
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
         private String schemaName;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private SQLExecAuditLog(Builder builder) {
@@ -338,7 +364,10 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The number of rows affected by the SQL statement. For example, if you execute an SQL statement to query data, the number of retrieved rows is returned.
+             * <p>The number of rows affected by the SQL statement. For example, if you execute an SQL statement to query data, the number of retrieved rows is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder affectRows(Long affectRows) {
                 this.affectRows = affectRows;
@@ -346,7 +375,10 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the database.
+             * <p>The ID of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2157****</p>
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -354,7 +386,10 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of time consumed by the execution of the SQL statement. Unit: milliseconds.
+             * <p>The amount of time consumed by the execution of the SQL statement. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18</p>
              */
             public Builder elapsedTime(Long elapsedTime) {
                 this.elapsedTime = elapsedTime;
@@ -362,14 +397,17 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The execution status of the SQL statement. Valid values:
-             * <p>
+             * <p>The execution status of the SQL statement. Valid values:</p>
+             * <ul>
+             * <li><strong>FAIL</strong>: The SQL statement fails to be executed.</li>
+             * <li><strong>NOEXE</strong>: The SQL statement has not been executed.</li>
+             * <li><strong>RUNNING</strong>: The SQL statement is being executed.</li>
+             * <li><strong>CANCEL</strong>: The execution of the SQL statement is canceled.</li>
+             * <li><strong>SUCCESS</strong>: The SQL statement is executed.</li>
+             * </ul>
              * 
-             * *   **FAIL**: The SQL statement fails to be executed.
-             * *   **NOEXE**: The SQL statement has not been executed.
-             * *   **RUNNING**: The SQL statement is being executed.
-             * *   **CANCEL**: The execution of the SQL statement is canceled.
-             * *   **SUCCESS**: The SQL statement is executed.
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder execState(String execState) {
                 this.execState = execState;
@@ -377,7 +415,10 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>185***</p>
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -385,10 +426,13 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
-             * <p>
+             * <p>The name of the database.</p>
+             * <blockquote>
+             * <p> If the SQL statement takes effect on an instance, the name of the instance is returned.</p>
+             * </blockquote>
              * 
-             * >  If the SQL statement takes effect on an instance, the name of the instance is returned.
+             * <strong>example:</strong>
+             * <p>polar123@pc-bp1h9tgq4st9g****.mysql.polardb.rds.aliyuncs.com:3306[polar_qw_test]</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -396,11 +440,14 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the database is a logical database. Valid values:
-             * <p>
+             * <p>Indicates whether the database is a logical database. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The database is a logical database.</li>
+             * <li><strong>false</strong>: The database is a physical database.</li>
+             * </ul>
              * 
-             * *   **true**: The database is a logical database.
-             * *   **false**: The database is a physical database.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -408,7 +455,10 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the operation specified by the SQL statement was performed on the instance or database.
+             * <p>The time when the operation specified by the SQL statement was performed on the instance or database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-08 11:04:27</p>
              */
             public Builder opTime(String opTime) {
                 this.opTime = opTime;
@@ -416,7 +466,10 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The comment on the SQL statement.
+             * <p>The comment on the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -424,7 +477,10 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement that was written.
+             * <p>The SQL statement that was written.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT * FROM <code>polar123</code>.<code>p_qw</code> ORDER BY <code>id</code> DESC</p>
              */
             public Builder SQL(String SQL) {
                 this.SQL = SQL;
@@ -432,15 +488,19 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the SQL statement. Valid values:
-             * <p>
+             * <p>The type of the SQL statement. Valid values:</p>
+             * <ul>
+             * <li><strong>SELECT</strong>: the SQL statement that is used to query data.</li>
+             * <li><strong>INSERT</strong>: the SQL statement that is used to insert data.</li>
+             * <li><strong>DELETE</strong>: the SQL statement that is used to delete data.</li>
+             * <li><strong>CREATE_TABLE</strong>: the SQL statement that is used to create tables.</li>
+             * </ul>
+             * <blockquote>
+             * <p> To view more types of SQL statements, log on to the DMS console and click Security and Specifications. In the left-side navigation pane, click <strong>Operation Audit</strong>. Then, you can view all supported types of SQL statements from the <strong>SQL type</strong> drop-down list.</p>
+             * </blockquote>
              * 
-             * *   **SELECT**: the SQL statement that is used to query data.
-             * *   **INSERT**: the SQL statement that is used to insert data.
-             * *   **DELETE**: the SQL statement that is used to delete data.
-             * *   **CREATE_TABLE**: the SQL statement that is used to create tables.
-             * 
-             * >  To view more types of SQL statements, log on to the DMS console and click Security and Specifications. In the left-side navigation pane, click **Operation Audit**. Then, you can view all supported types of SQL statements from the **SQL type** drop-down list.
+             * <strong>example:</strong>
+             * <p>SELECT</p>
              */
             public Builder SQLType(String SQLType) {
                 this.SQLType = SQLType;
@@ -448,7 +508,10 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polar123</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -456,7 +519,10 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user who wrote the SQL statement.
+             * <p>The ID of the user who wrote the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12****</p>
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -464,7 +530,10 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The nickname of the user who wrote the SQL statement.
+             * <p>The nickname of the user who wrote the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_UserName</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -478,9 +547,15 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSQLExecAuditLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSQLExecAuditLogResponseBody</p>
+     */
     public static class SQLExecAuditLogList extends TeaModel {
-        @NameInMap("SQLExecAuditLog")
-        private java.util.List < SQLExecAuditLog> SQLExecAuditLog;
+        @com.aliyun.core.annotation.NameInMap("SQLExecAuditLog")
+        private java.util.List<SQLExecAuditLog> SQLExecAuditLog;
 
         private SQLExecAuditLogList(Builder builder) {
             this.SQLExecAuditLog = builder.SQLExecAuditLog;
@@ -497,17 +572,17 @@ public class ListSQLExecAuditLogResponseBody extends TeaModel {
         /**
          * @return SQLExecAuditLog
          */
-        public java.util.List < SQLExecAuditLog> getSQLExecAuditLog() {
+        public java.util.List<SQLExecAuditLog> getSQLExecAuditLog() {
             return this.SQLExecAuditLog;
         }
 
         public static final class Builder {
-            private java.util.List < SQLExecAuditLog> SQLExecAuditLog; 
+            private java.util.List<SQLExecAuditLog> SQLExecAuditLog; 
 
             /**
              * SQLExecAuditLog.
              */
-            public Builder SQLExecAuditLog(java.util.List < SQLExecAuditLog> SQLExecAuditLog) {
+            public Builder SQLExecAuditLog(java.util.List<SQLExecAuditLog> SQLExecAuditLog) {
                 this.SQLExecAuditLog = SQLExecAuditLog;
                 return this;
             }

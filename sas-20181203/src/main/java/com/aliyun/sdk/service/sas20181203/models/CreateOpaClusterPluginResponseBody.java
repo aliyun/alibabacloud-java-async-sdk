@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOpaClusterPluginResponseBody} extends {@link TeaModel}
  *
  * <p>CreateOpaClusterPluginResponseBody</p>
  */
 public class CreateOpaClusterPluginResponseBody extends TeaModel {
-    @NameInMap("InstallStatus")
-    private java.util.List < InstallStatus> installStatus;
+    @com.aliyun.core.annotation.NameInMap("InstallStatus")
+    private java.util.List<InstallStatus> installStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateOpaClusterPluginResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class CreateOpaClusterPluginResponseBody extends TeaModel {
     /**
      * @return installStatus
      */
-    public java.util.List < InstallStatus> getInstallStatus() {
+    public java.util.List<InstallStatus> getInstallStatus() {
         return this.installStatus;
     }
 
@@ -46,19 +51,22 @@ public class CreateOpaClusterPluginResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstallStatus> installStatus; 
+        private java.util.List<InstallStatus> installStatus; 
         private String requestId; 
 
         /**
-         * The installation status of the components.
+         * <p>The installation status of the components.</p>
          */
-        public Builder installStatus(java.util.List < InstallStatus> installStatus) {
+        public Builder installStatus(java.util.List<InstallStatus> installStatus) {
             this.installStatus = installStatus;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D65AADFC-1D20-5A6A-8F6A-9FA53C0DC1F8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class CreateOpaClusterPluginResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateOpaClusterPluginResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateOpaClusterPluginResponseBody</p>
+     */
     public static class InstallStatus extends TeaModel {
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("InstallStatus")
+        @com.aliyun.core.annotation.NameInMap("InstallStatus")
         private Boolean installStatus;
 
         private InstallStatus(Builder builder) {
@@ -110,7 +124,10 @@ public class CreateOpaClusterPluginResponseBody extends TeaModel {
             private Boolean installStatus; 
 
             /**
-             * The cluster ID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c60b77fe62093480db6164a3c2fa****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -118,11 +135,14 @@ public class CreateOpaClusterPluginResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the component is installed. Valid values:
-             * <p>
+             * <p>Indicates whether the component is installed. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder installStatus(Boolean installStatus) {
                 this.installStatus = installStatus;

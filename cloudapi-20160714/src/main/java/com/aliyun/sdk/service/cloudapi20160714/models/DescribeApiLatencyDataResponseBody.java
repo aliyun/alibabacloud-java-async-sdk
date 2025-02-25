@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApiLatencyDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeApiLatencyDataResponseBody</p>
  */
 public class DescribeApiLatencyDataResponseBody extends TeaModel {
-    @NameInMap("CallLatencys")
+    @com.aliyun.core.annotation.NameInMap("CallLatencys")
     private CallLatencys callLatencys;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeApiLatencyDataResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeApiLatencyDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned information about API call latency. It is an array consisting of MonitorItem data.
+         * <p>The returned information about API call latency. It is an array consisting of MonitorItem data.</p>
          */
         public Builder callLatencys(CallLatencys callLatencys) {
             this.callLatencys = callLatencys;
@@ -58,7 +63,10 @@ public class DescribeApiLatencyDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ001</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class DescribeApiLatencyDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeApiLatencyDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApiLatencyDataResponseBody</p>
+     */
     public static class MonitorItem extends TeaModel {
-        @NameInMap("ItemTime")
+        @com.aliyun.core.annotation.NameInMap("ItemTime")
         private String itemTime;
 
-        @NameInMap("ItemValue")
+        @com.aliyun.core.annotation.NameInMap("ItemValue")
         private String itemValue;
 
         private MonitorItem(Builder builder) {
@@ -110,7 +124,10 @@ public class DescribeApiLatencyDataResponseBody extends TeaModel {
             private String itemValue; 
 
             /**
-             * The time of the monitoring metric. The time format follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ
+             * <p>The time of the monitoring metric. The time format follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-07-28T08:20:00Z</p>
              */
             public Builder itemTime(String itemTime) {
                 this.itemTime = itemTime;
@@ -118,7 +135,10 @@ public class DescribeApiLatencyDataResponseBody extends TeaModel {
             }
 
             /**
-             * The value corresponding to the monitoring metric.
+             * <p>The value corresponding to the monitoring metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder itemValue(String itemValue) {
                 this.itemValue = itemValue;
@@ -132,9 +152,15 @@ public class DescribeApiLatencyDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeApiLatencyDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApiLatencyDataResponseBody</p>
+     */
     public static class CallLatencys extends TeaModel {
-        @NameInMap("MonitorItem")
-        private java.util.List < MonitorItem> monitorItem;
+        @com.aliyun.core.annotation.NameInMap("MonitorItem")
+        private java.util.List<MonitorItem> monitorItem;
 
         private CallLatencys(Builder builder) {
             this.monitorItem = builder.monitorItem;
@@ -151,17 +177,17 @@ public class DescribeApiLatencyDataResponseBody extends TeaModel {
         /**
          * @return monitorItem
          */
-        public java.util.List < MonitorItem> getMonitorItem() {
+        public java.util.List<MonitorItem> getMonitorItem() {
             return this.monitorItem;
         }
 
         public static final class Builder {
-            private java.util.List < MonitorItem> monitorItem; 
+            private java.util.List<MonitorItem> monitorItem; 
 
             /**
              * MonitorItem.
              */
-            public Builder monitorItem(java.util.List < MonitorItem> monitorItem) {
+            public Builder monitorItem(java.util.List<MonitorItem> monitorItem) {
                 this.monitorItem = monitorItem;
                 return this;
             }

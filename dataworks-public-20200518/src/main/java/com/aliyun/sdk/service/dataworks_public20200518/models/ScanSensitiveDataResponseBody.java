@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ScanSensitiveDataResponseBody} extends {@link TeaModel}
  *
  * <p>ScanSensitiveDataResponseBody</p>
  */
 public class ScanSensitiveDataResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Sensitives")
-    private java.util.Map < String, ? > sensitives;
+    @com.aliyun.core.annotation.NameInMap("Sensitives")
+    private java.util.Map<String, ?> sensitives;
 
     private ScanSensitiveDataResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class ScanSensitiveDataResponseBody extends TeaModel {
     /**
      * @return sensitives
      */
-    public java.util.Map < String, ? > getSensitives() {
+    public java.util.Map<String, ?> getSensitives() {
         return this.sensitives;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.Map < String, ? > sensitives; 
+        private java.util.Map<String, ?> sensitives; 
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,15 +66,13 @@ public class ScanSensitiveDataResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the check.
-         * <p>
-         * 
-         * sensDatas indicates the rules that are used to check the sensitive data. sensDatas includes the following parameters:
-         * 
-         * *   hitCount: the number of times that the sensitive data hits the rule
-         * *   ruleName: the name of the rule
+         * <p>The check result. sensDatas indicates the rules that are used to check the sensitive data. sensDatas includes the following parameters:</p>
+         * <ul>
+         * <li>hitCount: the number of times that the sensitive data hits the rule.</li>
+         * <li>ruleName: the name of the rule.</li>
+         * </ul>
          */
-        public Builder sensitives(java.util.Map < String, ? > sensitives) {
+        public Builder sensitives(java.util.Map<String, ?> sensitives) {
             this.sensitives = sensitives;
             return this;
         }

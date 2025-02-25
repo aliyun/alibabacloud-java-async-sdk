@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeZonesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeZonesResponseBody</p>
  */
 public class DescribeZonesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Zones")
+    @com.aliyun.core.annotation.NameInMap("Zones")
     private Zones zones;
 
     private DescribeZonesResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class DescribeZonesResponseBody extends TeaModel {
         private Zones zones; 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1D42F072-72FE-4DC4-BB8E-64B1D298****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * The queried zones.
+         * <p>The queried zones.</p>
          */
         public Builder zones(Zones zones) {
             this.zones = zones;
@@ -71,23 +74,29 @@ public class DescribeZonesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeZonesResponseBody</p>
+     */
     public static class KVStoreZone extends TeaModel {
-        @NameInMap("Disabled")
+        @com.aliyun.core.annotation.NameInMap("Disabled")
         private Boolean disabled;
 
-        @NameInMap("IsRds")
+        @com.aliyun.core.annotation.NameInMap("IsRds")
         private Boolean isRds;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SwitchNetwork")
+        @com.aliyun.core.annotation.NameInMap("SwitchNetwork")
         private Boolean switchNetwork;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
-        @NameInMap("ZoneName")
+        @com.aliyun.core.annotation.NameInMap("ZoneName")
         private String zoneName;
 
         private KVStoreZone(Builder builder) {
@@ -158,11 +167,14 @@ public class DescribeZonesResponseBody extends TeaModel {
             private String zoneName; 
 
             /**
-             * Indicates whether ApsaraDB for Redis instances can be created in the current zone. Valid values:
-             * <p>
+             * <p>Indicates whether ApsaraDB for Redis instances can be created in the current zone. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: ApsaraDB for Redis instances cannot be created in the current zone.</li>
+             * <li><strong>false</strong>: ApsaraDB for Redis instances can be created in the current zone.</li>
+             * </ul>
              * 
-             * *   **true**: ApsaraDB for Redis instances cannot be created in the current zone.
-             * *   **false**: ApsaraDB for Redis instances can be created in the current zone.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder disabled(Boolean disabled) {
                 this.disabled = disabled;
@@ -170,7 +182,10 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the zone is managed by ApsaraDB RDS. The return value of this parameter is **true** in ApsaraDB for Redis.
+             * <p>Indicates whether the zone is managed by ApsaraDB RDS. The return value of this parameter is <strong>true</strong> in ApsaraDB for Redis.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isRds(Boolean isRds) {
                 this.isRds = isRds;
@@ -178,7 +193,10 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-huhehaote</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -186,11 +204,14 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the network type of the instance can be changed from the classic network to Virtual Private Cloud (VPC). Valid values:
-             * <p>
+             * <p>Indicates whether the network type of the instance can be changed from the classic network to Virtual Private Cloud (VPC). Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The network type of the instance can be changed from the classic network to VPC.</li>
+             * <li><strong>false</strong>: The network type of the instance cannot be changed from the classic network to VPC.</li>
+             * </ul>
              * 
-             * *   **true**: The network type of the instance can be changed from the classic network to VPC.
-             * *   **false**: The network type of the instance cannot be changed from the classic network to VPC.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder switchNetwork(Boolean switchNetwork) {
                 this.switchNetwork = switchNetwork;
@@ -198,7 +219,10 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone within the specified region.
+             * <p>The ID of the zone within the specified region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-huhehaote-b</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -206,7 +230,10 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the zone within the specified region.
+             * <p>The name of the zone within the specified region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hohhot Zone B</p>
              */
             public Builder zoneName(String zoneName) {
                 this.zoneName = zoneName;
@@ -220,8 +247,14 @@ public class DescribeZonesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeZonesResponseBody</p>
+     */
     public static class Zones extends TeaModel {
-        @NameInMap("KVStoreZone")
+        @com.aliyun.core.annotation.NameInMap("KVStoreZone")
         private java.util.List < KVStoreZone> KVStoreZone;
 
         private Zones(Builder builder) {

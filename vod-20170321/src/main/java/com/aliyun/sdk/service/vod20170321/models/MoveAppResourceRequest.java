@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MoveAppResourceRequest} extends {@link RequestModel}
  *
  * <p>MoveAppResourceRequest</p>
  */
 public class MoveAppResourceRequest extends Request {
-    @Query
-    @NameInMap("ResourceIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceIds;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
-    @Query
-    @NameInMap("TargetAppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetAppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetAppId;
 
     private MoveAppResourceRequest(Builder builder) {
@@ -85,7 +90,11 @@ public class MoveAppResourceRequest extends Request {
         } 
 
         /**
-         * The resource ID. You can specify a maximum of 20 IDs at a time. Separate multiple IDs with commas (,).
+         * <p>The resource ID. You can specify a maximum of 20 IDs at a time. Separate multiple IDs with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9afb4<strong><strong>06de180880e,f7bba</strong></strong>caa546cfe2ba</p>
          */
         public Builder resourceIds(String resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -94,12 +103,16 @@ public class MoveAppResourceRequest extends Request {
         }
 
         /**
-         * The resource type. Valid values:
-         * <p>
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li><strong>video</strong>: video files.</li>
+         * <li><strong>image</strong>: image files.</li>
+         * <li><strong>attached</strong>: auxiliary media assets.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **video**: video files.
-         * *   **image**: image files.
-         * *   **attached**: auxiliary media assets.
+         * <strong>example:</strong>
+         * <p>video</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -108,7 +121,11 @@ public class MoveAppResourceRequest extends Request {
         }
 
         /**
-         * The ID of the application to which resources are migrated. Default value: **app-1000000**. For more information, see [Use the multi-application service](~~113600~~).
+         * <p>The ID of the application to which resources are migrated. Default value: <strong>app-1000000</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Use the multi-application service</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-****</p>
          */
         public Builder targetAppId(String targetAppId) {
             this.putQueryParameter("TargetAppId", targetAppId);

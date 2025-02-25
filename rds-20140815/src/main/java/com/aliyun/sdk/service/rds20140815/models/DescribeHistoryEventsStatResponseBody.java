@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHistoryEventsStatResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHistoryEventsStatResponseBody</p>
  */
 public class DescribeHistoryEventsStatResponseBody extends TeaModel {
-    @NameInMap("Items")
-    private java.util.List < Items> items;
+    @com.aliyun.core.annotation.NameInMap("Items")
+    private java.util.List<Items> items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeHistoryEventsStatResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeHistoryEventsStatResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -46,19 +51,22 @@ public class DescribeHistoryEventsStatResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private String requestId; 
 
         /**
-         * The migration tasks.
+         * <p>The event.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E52666CC-330E-418A-8E5B-A19E3FB42D13</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class DescribeHistoryEventsStatResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHistoryEventsStatResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHistoryEventsStatResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("EventCategory")
+        @com.aliyun.core.annotation.NameInMap("EventCategory")
         private String eventCategory;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Items(Builder builder) {
@@ -110,7 +124,10 @@ public class DescribeHistoryEventsStatResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Event category.
+             * <p>The system event category. For more information, see <a href="https://help.aliyun.com/document_detail/129759.html">View the event history of an ApsaraDB RDS instance</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Exception</p>
              */
             public Builder eventCategory(String eventCategory) {
                 this.eventCategory = eventCategory;
@@ -118,7 +135,10 @@ public class DescribeHistoryEventsStatResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of tasks that meet these constraints without taking pagination into account.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>31</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

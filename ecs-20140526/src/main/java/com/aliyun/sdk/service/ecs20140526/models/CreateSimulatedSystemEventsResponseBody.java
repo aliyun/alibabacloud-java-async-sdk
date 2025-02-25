@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSimulatedSystemEventsResponseBody} extends {@link TeaModel}
  *
  * <p>CreateSimulatedSystemEventsResponseBody</p>
  */
 public class CreateSimulatedSystemEventsResponseBody extends TeaModel {
-    @NameInMap("EventIdSet")
+    @com.aliyun.core.annotation.NameInMap("EventIdSet")
     private EventIdSet eventIdSet;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateSimulatedSystemEventsResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class CreateSimulatedSystemEventsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The IDs of the simulated events.
+         * <p>The IDs of the simulated events.</p>
          */
         public Builder eventIdSet(EventIdSet eventIdSet) {
             this.eventIdSet = eventIdSet;
@@ -58,7 +63,10 @@ public class CreateSimulatedSystemEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,9 +79,15 @@ public class CreateSimulatedSystemEventsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateSimulatedSystemEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateSimulatedSystemEventsResponseBody</p>
+     */
     public static class EventIdSet extends TeaModel {
-        @NameInMap("EventId")
-        private java.util.List < String > eventId;
+        @com.aliyun.core.annotation.NameInMap("EventId")
+        private java.util.List<String> eventId;
 
         private EventIdSet(Builder builder) {
             this.eventId = builder.eventId;
@@ -90,17 +104,17 @@ public class CreateSimulatedSystemEventsResponseBody extends TeaModel {
         /**
          * @return eventId
          */
-        public java.util.List < String > getEventId() {
+        public java.util.List<String> getEventId() {
             return this.eventId;
         }
 
         public static final class Builder {
-            private java.util.List < String > eventId; 
+            private java.util.List<String> eventId; 
 
             /**
              * EventId.
              */
-            public Builder eventId(java.util.List < String > eventId) {
+            public Builder eventId(java.util.List<String> eventId) {
                 this.eventId = eventId;
                 return this;
             }

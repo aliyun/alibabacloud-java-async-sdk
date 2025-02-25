@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAlertContactRequest} extends {@link RequestModel}
  *
  * <p>UpdateAlertContactRequest</p>
  */
 public class UpdateAlertContactRequest extends Request {
-    @Query
-    @NameInMap("ContactId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long contactId;
 
-    @Query
-    @NameInMap("ContactName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactName")
     private String contactName;
 
-    @Query
-    @NameInMap("DingRobotWebhookUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DingRobotWebhookUrl")
     private String dingRobotWebhookUrl;
 
-    @Query
-    @NameInMap("Email")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Email")
     private String email;
 
-    @Query
-    @NameInMap("PhoneNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNum")
     private String phoneNum;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("SystemNoc")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SystemNoc")
     private Boolean systemNoc;
 
     private UpdateAlertContactRequest(Builder builder) {
@@ -140,7 +145,11 @@ public class UpdateAlertContactRequest extends Request {
         } 
 
         /**
-         * The ID of the alert contact to be updated. You can call the SearchAlertContact operation to query the contact ID. For more information, see [SearchAlertContact](~~130703~~).
+         * <p>The ID of the alert contact to be updated. You can call the SearchAlertContact operation to query the contact ID. For more information, see <a href="https://help.aliyun.com/document_detail/130703.html">SearchAlertContact</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder contactId(Long contactId) {
             this.putQueryParameter("ContactId", contactId);
@@ -149,7 +158,10 @@ public class UpdateAlertContactRequest extends Request {
         }
 
         /**
-         * The new name of the alert contact.
+         * <p>The new name of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>John Doe</p>
          */
         public Builder contactName(String contactName) {
             this.putQueryParameter("ContactName", contactName);
@@ -158,10 +170,13 @@ public class UpdateAlertContactRequest extends Request {
         }
 
         /**
-         * The new webhook URL of the DingTalk chatbot. For more information, see [Configure a DingTalk chatbot to send alert notifications](~~106247~~). You must specify at least one of the following parameters: PhoneNum, Email, and DingRobotWebhookUrl.
-         * <p>
+         * <p>The new webhook URL of the DingTalk chatbot. For more information, see <a href="https://help.aliyun.com/document_detail/106247.html">Configure a DingTalk chatbot to send alert notifications</a>. You must specify at least one of the following parameters: PhoneNum, Email, and DingRobotWebhookUrl.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the original parameter value is deleted. If you specify this parameter, the original parameter value is updated.</p>
+         * </blockquote>
          * 
-         * >  If you do not specify this parameter, the original parameter value is deleted. If you specify this parameter, the original parameter value is updated.
+         * <strong>example:</strong>
+         * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=91f2f6">https://oapi.dingtalk.com/robot/send?access_token=91f2f6</a>****</p>
          */
         public Builder dingRobotWebhookUrl(String dingRobotWebhookUrl) {
             this.putQueryParameter("DingRobotWebhookUrl", dingRobotWebhookUrl);
@@ -170,10 +185,13 @@ public class UpdateAlertContactRequest extends Request {
         }
 
         /**
-         * The new email address of the alert contact. You must specify at least one of the following parameters: PhoneNum, Email, and DingRobotWebhookUrl.
-         * <p>
+         * <p>The new email address of the alert contact. You must specify at least one of the following parameters: PhoneNum, Email, and DingRobotWebhookUrl.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the original parameter value is deleted. If you specify this parameter, the original parameter value is updated.</p>
+         * </blockquote>
          * 
-         * >  If you do not specify this parameter, the original parameter value is deleted. If you specify this parameter, the original parameter value is updated.
+         * <strong>example:</strong>
+         * <p><a href="mailto:someone@example.com">someone@example.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -182,10 +200,13 @@ public class UpdateAlertContactRequest extends Request {
         }
 
         /**
-         * The new mobile phone number of the alert contact. You must specify at least one of the following parameters: PhoneNum, Email, and DingRobotWebhookUrl.
-         * <p>
+         * <p>The new mobile phone number of the alert contact. You must specify at least one of the following parameters: PhoneNum, Email, and DingRobotWebhookUrl.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the original parameter value is deleted. If you specify this parameter, the original parameter value is updated.</p>
+         * </blockquote>
          * 
-         * >  If you do not specify this parameter, the original parameter value is deleted. If you specify this parameter, the original parameter value is updated.
+         * <strong>example:</strong>
+         * <p>1381111****</p>
          */
         public Builder phoneNum(String phoneNum) {
             this.putQueryParameter("PhoneNum", phoneNum);
@@ -194,7 +215,11 @@ public class UpdateAlertContactRequest extends Request {
         }
 
         /**
-         * The ID of the region. Set the value to `cn-hangzhou`.
+         * <p>The ID of the region. Set the value to <code>cn-hangzhou</code>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -203,11 +228,14 @@ public class UpdateAlertContactRequest extends Request {
         }
 
         /**
-         * Specifies whether the alert contact receives system notifications. Valid values:
-         * <p>
+         * <p>Specifies whether the alert contact receives system notifications. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The alert contact receives system notifications.</li>
+         * <li><code>false</code>: The alert contact does not receive system notifications.</li>
+         * </ul>
          * 
-         * *   `true`: The alert contact receives system notifications.
-         * *   `false`: The alert contact does not receive system notifications.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder systemNoc(Boolean systemNoc) {
             this.putQueryParameter("SystemNoc", systemNoc);

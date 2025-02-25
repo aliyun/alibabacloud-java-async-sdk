@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTemplatesRequest} extends {@link RequestModel}
  *
  * <p>ListTemplatesRequest</p>
  */
 public class ListTemplatesRequest extends Request {
-    @Query
-    @NameInMap("CreateSource")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateSource")
     private String createSource;
 
-    @Query
-    @NameInMap("Keyword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
-    @Query
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Long pageNo;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("SortType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortType")
     private String sortType;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private ListTemplatesRequest(Builder builder) {
@@ -138,7 +143,16 @@ public class ListTemplatesRequest extends Request {
         } 
 
         /**
-         * CreateSource.
+         * <p>The source from which the template was created.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>AliyunConsole</li>
+         * <li>WebSDK</li>
+         * <li>OpenAPI</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OpenAPI</p>
          */
         public Builder createSource(String createSource) {
             this.putQueryParameter("CreateSource", createSource);
@@ -147,7 +161,10 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The search keyword. You can use the template ID or title as the keyword to search for templates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -156,7 +173,10 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Long pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -165,7 +185,10 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 20. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -174,7 +197,15 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * SortType.
+         * <p>The sorting parameter. By default, the query results are sorted by creation time in descending order.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>CreationTime:Asc: sorted by creation time in ascending order.</li>
+         * <li>CreationTime:Desc: sorted by creation time in descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CreationTime:Desc</p>
          */
         public Builder sortType(String sortType) {
             this.putQueryParameter("SortType", sortType);
@@ -183,7 +214,19 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The template state.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>UploadFailed: Failed to upload the video.</li>
+         * <li>ProcessFailed: Failed to process the advanced template.</li>
+         * <li>Available: The template is available.</li>
+         * <li>Uploading: The video is being uploaded.</li>
+         * <li>Created: The template is created but not ready for use.</li>
+         * <li>Processing: The advanced template is being processed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -192,7 +235,15 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The template type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Timeline</li>
+         * <li>VETemplate</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Timeline</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

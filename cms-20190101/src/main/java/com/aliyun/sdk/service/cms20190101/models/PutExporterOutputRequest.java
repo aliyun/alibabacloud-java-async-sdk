@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutExporterOutputRequest} extends {@link RequestModel}
  *
  * <p>PutExporterOutputRequest</p>
  */
 public class PutExporterOutputRequest extends Request {
-    @Query
-    @NameInMap("ConfigJson")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigJson")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String configJson;
 
-    @Query
-    @NameInMap("Desc")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Desc")
     private String desc;
 
-    @Query
-    @NameInMap("DestName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String destName;
 
-    @Query
-    @NameInMap("DestType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestType")
     private String destType;
 
     private PutExporterOutputRequest(Builder builder) {
@@ -98,14 +98,18 @@ public class PutExporterOutputRequest extends Request {
         } 
 
         /**
-         * The configuration set for exporting monitoring data. It is a JSON object string. The string must include the following fields:
-         * <p>
+         * <p>The configuration set for exporting monitoring data. It is a JSON object string. The string must include the following fields:</p>
+         * <ul>
+         * <li>endpoint: the endpoint of Log Service.</li>
+         * <li>project: the Log Service project to which monitoring data is exported.</li>
+         * <li>logstore: the Log Service Logstore to which the monitoring data is exported.</li>
+         * <li>ak: the AccessKey ID.</li>
+         * <li>as: the AccessKey secret.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   endpoint: the endpoint of Log Service.
-         * *   project: the Log Service project to which monitoring data is exported.
-         * *   logstore: the Log Service Logstore to which the monitoring data is exported.
-         * *   ak: the AccessKey ID.
-         * *   as: the AccessKey secret.
+         * <strong>example:</strong>
+         * <p>{ &quot;endpoint&quot;: &quot;<a href="http://cn-qingdao-share.log.aliyuncs.com">http://cn-qingdao-share.log.aliyuncs.com</a>&quot;, &quot;project&quot;: &quot;exporter&quot;, &quot;logstore&quot;: &quot;exporter&quot;,&quot;ak&quot;: &quot;LTAIp*******&quot;, &quot;userId&quot;: &quot;17754********&quot;, &quot;as&quot;: &quot;TxHwuJ8yAb3AU******&quot;}</p>
          */
         public Builder configJson(String configJson) {
             this.putQueryParameter("ConfigJson", configJson);
@@ -114,7 +118,10 @@ public class PutExporterOutputRequest extends Request {
         }
 
         /**
-         * The description of the configuration set.
+         * <p>The description of the configuration set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Export CPU metrics</p>
          */
         public Builder desc(String desc) {
             this.putQueryParameter("Desc", desc);
@@ -123,7 +130,11 @@ public class PutExporterOutputRequest extends Request {
         }
 
         /**
-         * The name of the configuration set.
+         * <p>The name of the configuration set.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exporterConfig</p>
          */
         public Builder destName(String destName) {
             this.putQueryParameter("DestName", destName);
@@ -132,7 +143,10 @@ public class PutExporterOutputRequest extends Request {
         }
 
         /**
-         * The service to which the monitoring data is exported.
+         * <p>The service to which the monitoring data is exported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sls</p>
          */
         public Builder destType(String destType) {
             this.putQueryParameter("DestType", destType);

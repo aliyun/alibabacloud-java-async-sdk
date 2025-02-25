@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstancePerformanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstancePerformanceResponseBody</p>
  */
 public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @NameInMap("PerformanceKeys")
-    private java.util.List < String > performanceKeys;
+    @com.aliyun.core.annotation.NameInMap("PerformanceKeys")
+    private java.util.List<String> performanceKeys;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeDBInstancePerformanceResponseBody(Builder builder) {
@@ -71,7 +76,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     /**
      * @return performanceKeys
      */
-    public java.util.List < String > getPerformanceKeys() {
+    public java.util.List<String> getPerformanceKeys() {
         return this.performanceKeys;
     }
 
@@ -93,12 +98,15 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         private String DBInstanceId; 
         private String endTime; 
         private String engine; 
-        private java.util.List < String > performanceKeys; 
+        private java.util.List<String> performanceKeys; 
         private String requestId; 
         private String startTime; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -106,7 +114,10 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * The end time of the query.
+         * <p>The end time of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-09T03:47Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -114,7 +125,10 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * The database engine of the instance.
+         * <p>The database engine of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gpdb</p>
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -122,15 +136,18 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * The queried performance metrics.
+         * <p>The queried performance metrics.</p>
          */
-        public Builder performanceKeys(java.util.List < String > performanceKeys) {
+        public Builder performanceKeys(java.util.List<String> performanceKeys) {
             this.performanceKeys = performanceKeys;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5E85244A-AB47-46A3-A3AD-5F307DCB407E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * The start time of the query.
+         * <p>The start time of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-08T03:47Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;

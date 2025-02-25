@@ -1,34 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodStreamURLRequest} extends {@link RequestModel}
  *
  * <p>DescribeVodStreamURLRequest</p>
  */
 public class DescribeVodStreamURLRequest extends Request {
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("TxId")
-    private String txId;
-
-    @Query
-    @NameInMap("Url")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Url")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String url;
 
     private DescribeVodStreamURLRequest(Builder builder) {
         super(builder);
         this.ownerId = builder.ownerId;
-        this.txId = builder.txId;
         this.url = builder.url;
     }
 
@@ -53,13 +53,6 @@ public class DescribeVodStreamURLRequest extends Request {
     }
 
     /**
-     * @return txId
-     */
-    public String getTxId() {
-        return this.txId;
-    }
-
-    /**
      * @return url
      */
     public String getUrl() {
@@ -68,18 +61,16 @@ public class DescribeVodStreamURLRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeVodStreamURLRequest, Builder> {
         private Long ownerId; 
-        private String txId; 
         private String url; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeVodStreamURLRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.txId = response.txId;
-            this.url = response.url;
+        private Builder(DescribeVodStreamURLRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.url = request.url;
         } 
 
         /**
@@ -92,16 +83,10 @@ public class DescribeVodStreamURLRequest extends Request {
         }
 
         /**
-         * TxId.
-         */
-        public Builder txId(String txId) {
-            this.putQueryParameter("TxId", txId);
-            this.txId = txId;
-            return this;
-        }
-
-        /**
-         * Url.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxx/xxx.mp4">http://xxx/xxx.mp4</a></p>
          */
         public Builder url(String url) {
             this.putQueryParameter("Url", url);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cc5g20220314.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListZonesResponseBody</p>
  */
 public class ListZonesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Zones")
+    @com.aliyun.core.annotation.NameInMap("Zones")
     private java.util.List < Zones> zones;
 
     private ListZonesResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class ListZonesResponseBody extends TeaModel {
         private java.util.List < Zones> zones; 
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +57,7 @@ public class ListZonesResponseBody extends TeaModel {
         }
 
         /**
-         * 数组，返回示例目录。
+         * Zones.
          */
         public Builder zones(java.util.List < Zones> zones) {
             this.zones = zones;
@@ -72,10 +71,10 @@ public class ListZonesResponseBody extends TeaModel {
     } 
 
     public static class Zones extends TeaModel {
-        @NameInMap("LocalName")
+        @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Zones(Builder builder) {

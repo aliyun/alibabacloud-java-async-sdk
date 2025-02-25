@@ -1,39 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLogMonitorListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLogMonitorListResponseBody</p>
  */
 public class DescribeLogMonitorListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("LogMonitorList")
+    @com.aliyun.core.annotation.NameInMap("LogMonitorList")
     private java.util.List < LogMonitorList> logMonitorList;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
 
     private DescribeLogMonitorListResponseBody(Builder builder) {
@@ -122,10 +122,13 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the call was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -133,7 +136,7 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
         }
 
         /**
-         * The log monitoring metrics.
+         * <p>The log monitoring metrics.</p>
          */
         public Builder logMonitorList(java.util.List < LogMonitorList> logMonitorList) {
             this.logMonitorList = logMonitorList;
@@ -141,7 +144,10 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -149,7 +155,10 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the returned page.
+         * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -157,7 +166,10 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on each page.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -165,7 +177,10 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01E90080-4300-4FAA-B9AE-161956BC350D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -173,11 +188,14 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -185,7 +203,10 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of the returned entries.
+         * <p>The total number of the returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -198,14 +219,20 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLogMonitorListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLogMonitorListResponseBody</p>
+     */
     public static class ValueFilter extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private ValueFilter(Builder builder) {
@@ -249,7 +276,10 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The name of the log field used for matching in the filter condition.
+             * <p>The name of the log field used for matching in the filter condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hostName</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -257,15 +287,18 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * The method that is used to match the field value. Valid values:
-             * <p>
+             * <p>The method that is used to match the field value. Valid values:</p>
+             * <ul>
+             * <li>contain</li>
+             * <li>notContain</li>
+             * <li><code>&gt;</code>: greater than</li>
+             * <li><code>&lt;</code>: less than</li>
+             * <li><code>&gt;=</code>: greater than or equal to</li>
+             * <li><code>&lt;=</code>: less than or equal to</li>
+             * </ul>
              * 
-             * *   contain
-             * *   notContain
-             * *   `>`: greater than
-             * *   `<`: less than
-             * *   `>=`: greater than or equal to
-             * *   `<=`: less than or equal to
+             * <strong>example:</strong>
+             * <p>contain</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -273,7 +306,10 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * The field value to be matched in the filter condition.
+             * <p>The field value to be matched in the filter condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>portal</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -287,32 +323,38 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLogMonitorListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLogMonitorListResponseBody</p>
+     */
     public static class LogMonitorList extends TeaModel {
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private Long groupId;
 
-        @NameInMap("LogId")
+        @com.aliyun.core.annotation.NameInMap("LogId")
         private Long logId;
 
-        @NameInMap("MetricName")
+        @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
 
-        @NameInMap("SlsLogstore")
+        @com.aliyun.core.annotation.NameInMap("SlsLogstore")
         private String slsLogstore;
 
-        @NameInMap("SlsProject")
+        @com.aliyun.core.annotation.NameInMap("SlsProject")
         private String slsProject;
 
-        @NameInMap("SlsRegionId")
+        @com.aliyun.core.annotation.NameInMap("SlsRegionId")
         private String slsRegionId;
 
-        @NameInMap("ValueFilter")
+        @com.aliyun.core.annotation.NameInMap("ValueFilter")
         private java.util.List < ValueFilter> valueFilter;
 
-        @NameInMap("ValueFilterRelation")
+        @com.aliyun.core.annotation.NameInMap("ValueFilterRelation")
         private String valueFilterRelation;
 
         private LogMonitorList(Builder builder) {
@@ -410,10 +452,11 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
             private String valueFilterRelation; 
 
             /**
-             * The time when the log monitoring metric was created.
-             * <p>
+             * <p>The time when the log monitoring metric was created.</p>
+             * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
              * 
-             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * <strong>example:</strong>
+             * <p>1577766395000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -421,7 +464,10 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application group.
+             * <p>The ID of the application group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -429,7 +475,10 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID returned by Log Service.
+             * <p>The ID returned by Log Service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder logId(Long logId) {
                 this.logId = logId;
@@ -437,7 +486,10 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the log monitoring metric. For more information, see [Appendix 1: Metrics](~~163515~~).
+             * <p>The name of the log monitoring metric. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cpu_total</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -445,7 +497,10 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Log Service Logstore.
+             * <p>The name of the Log Service Logstore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testSlS****</p>
              */
             public Builder slsLogstore(String slsLogstore) {
                 this.slsLogstore = slsLogstore;
@@ -453,7 +508,10 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Log Service project.
+             * <p>The name of the Log Service project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sls-project-test****</p>
              */
             public Builder slsProject(String slsProject) {
                 this.slsProject = slsProject;
@@ -461,7 +519,10 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the Log Service Logstore resides.
+             * <p>The ID of the region where the Log Service Logstore resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder slsRegionId(String slsRegionId) {
                 this.slsRegionId = slsRegionId;
@@ -469,10 +530,8 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * The condition that is used to filter logs. The ValueFilter and ValueFilterRelation parameters are used in pair. The filter condition is equivalent to the WHERE clause in SQL statements.
-             * <p>
-             * 
-             * If no filter condition is specified, all logs are processed. Assume that logs contain the Level field, which may be set to Error. If you need to calculate the number of times that logs of the Error level appear every minute, you can set the filter condition to Level=Error and count the number of logs that meet this condition.
+             * <p>The condition that is used to filter logs. The ValueFilter and ValueFilterRelation parameters are used in pair. The filter condition is equivalent to the WHERE clause in SQL statements.</p>
+             * <p>If no filter condition is specified, all logs are processed. Assume that logs contain the Level field, which may be set to Error. If you need to calculate the number of times that logs of the Error level appear every minute, you can set the filter condition to Level=Error and count the number of logs that meet this condition.</p>
              */
             public Builder valueFilter(java.util.List < ValueFilter> valueFilter) {
                 this.valueFilter = valueFilter;
@@ -480,11 +539,14 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * The logical operator that is used between log filter conditions. The ValueFilter and ValueFilterRelation parameters are used in pair. Valid values:
-             * <p>
+             * <p>The logical operator that is used between log filter conditions. The ValueFilter and ValueFilterRelation parameters are used in pair. Valid values:</p>
+             * <ul>
+             * <li>and</li>
+             * <li>or</li>
+             * </ul>
              * 
-             * *   and
-             * *   or
+             * <strong>example:</strong>
+             * <p>and</p>
              */
             public Builder valueFilterRelation(String valueFilterRelation) {
                 this.valueFilterRelation = valueFilterRelation;

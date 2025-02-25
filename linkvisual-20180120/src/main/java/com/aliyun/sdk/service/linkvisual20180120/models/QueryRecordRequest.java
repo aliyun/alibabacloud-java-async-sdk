@@ -180,19 +180,19 @@ public class QueryRecordRequest extends Request {
             super();
         } 
 
-        private Builder(QueryRecordRequest response) {
-            super(response);
-            this.beginTime = response.beginTime;
-            this.currentPage = response.currentPage;
-            this.deviceName = response.deviceName;
-            this.endTime = response.endTime;
-            this.iotId = response.iotId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.needSnapshot = response.needSnapshot;
-            this.pageSize = response.pageSize;
-            this.productKey = response.productKey;
-            this.recordType = response.recordType;
-            this.streamType = response.streamType;
+        private Builder(QueryRecordRequest request) {
+            super(request);
+            this.beginTime = request.beginTime;
+            this.currentPage = request.currentPage;
+            this.deviceName = request.deviceName;
+            this.endTime = request.endTime;
+            this.iotId = request.iotId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.needSnapshot = request.needSnapshot;
+            this.pageSize = request.pageSize;
+            this.productKey = request.productKey;
+            this.recordType = request.recordType;
+            this.streamType = request.streamType;
         } 
 
         /**

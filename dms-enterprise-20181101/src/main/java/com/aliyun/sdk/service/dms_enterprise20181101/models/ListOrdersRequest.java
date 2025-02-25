@@ -1,59 +1,64 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOrdersRequest} extends {@link RequestModel}
  *
  * <p>ListOrdersRequest</p>
  */
 public class ListOrdersRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("OrderResultType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderResultType")
     private String orderResultType;
 
-    @Query
-    @NameInMap("OrderStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderStatus")
     private String orderStatus;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("PluginType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PluginType")
     private String pluginType;
 
-    @Query
-    @NameInMap("SearchContent")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchContent")
     private String searchContent;
 
-    @Query
-    @NameInMap("SearchDateType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchDateType")
     private String searchDateType;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @Query
-    @NameInMap("Tid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tid")
     private Long tid;
 
     private ListOrdersRequest(Builder builder) {
@@ -203,7 +208,10 @@ public class ListOrdersRequest extends Request {
         }
 
         /**
-         * The end of the time range to query.
+         * <p>The end of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-09 11:00:00</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -212,14 +220,17 @@ public class ListOrdersRequest extends Request {
         }
 
         /**
-         * The scope of the tickets that you want to query. Valid values:
-         * <p>
+         * <p>The scope of the tickets that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>AS_ADMIN</strong>: all tickets.</li>
+         * <li><strong>AS_COMMITTER</strong>: the tickets that are submitted by the current user.</li>
+         * <li><strong>AS_HANDLER</strong>: the tickets to be processed by the current user.</li>
+         * <li><strong>AS_OWNER</strong>: the tickets that are processed by the current user.</li>
+         * <li><strong>AS_Related</strong>: the tickets that are related to the current user.</li>
+         * </ul>
          * 
-         * *   **AS_ADMIN**: all tickets.
-         * *   **AS_COMMITTER**: the tickets that are submitted by the current user.
-         * *   **AS_HANDLER**: the tickets to be processed by the current user.
-         * *   **AS_OWNER**: the tickets that are processed by the current user.
-         * *   **AS_Related**: the tickets that are related to the current user.
+         * <strong>example:</strong>
+         * <p>AS_ADMIN</p>
          */
         public Builder orderResultType(String orderResultType) {
             this.putQueryParameter("OrderResultType", orderResultType);
@@ -228,12 +239,15 @@ public class ListOrdersRequest extends Request {
         }
 
         /**
-         * The status of the tickets that you want to query. Valid values:
-         * <p>
+         * <p>The status of the tickets that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>ALL</strong>: queries the tickets of all statuses.</li>
+         * <li><strong>FINISHED</strong>: queries the tickets that are completed.</li>
+         * <li><strong>RUNNING</strong>: queries the tickets that are being processed.</li>
+         * </ul>
          * 
-         * *   **ALL**: queries the tickets of all statuses.
-         * *   **FINISHED**: queries the tickets that are completed.
-         * *   **RUNNING**: queries the tickets that are being processed.
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder orderStatus(String orderStatus) {
             this.putQueryParameter("OrderStatus", orderStatus);
@@ -242,7 +256,10 @@ public class ListOrdersRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -251,7 +268,10 @@ public class ListOrdersRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -260,7 +280,10 @@ public class ListOrdersRequest extends Request {
         }
 
         /**
-         * The type of the tickets that you want to query. For more information, see [PluginType parameter](~~429109~~).
+         * <p>The type of the tickets that you want to query. For more information, see <a href="https://help.aliyun.com/document_detail/429109.html">PluginType parameter</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC_COMMON</p>
          */
         public Builder pluginType(String pluginType) {
             this.putQueryParameter("PluginType", pluginType);
@@ -269,7 +292,10 @@ public class ListOrdersRequest extends Request {
         }
 
         /**
-         * The keyword that is used to query tickets.
+         * <p>The keyword that is used to query tickets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder searchContent(String searchContent) {
             this.putQueryParameter("SearchContent", searchContent);
@@ -278,11 +304,14 @@ public class ListOrdersRequest extends Request {
         }
 
         /**
-         * The time condition based on which you want to query tickets. Valid values:
-         * <p>
+         * <p>The time condition based on which you want to query tickets. Valid values:</p>
+         * <ul>
+         * <li><strong>CREATE_TIME</strong>: the time when a ticket was created.</li>
+         * <li><strong>MODIFY_TIME</strong>: the time when a ticket was last modified.</li>
+         * </ul>
          * 
-         * *   **CREATE_TIME**: the time when a ticket was created.
-         * *   **MODIFY_TIME**: the time when a ticket was last modified.
+         * <strong>example:</strong>
+         * <p>CREATE_TIME</p>
          */
         public Builder searchDateType(String searchDateType) {
             this.putQueryParameter("SearchDateType", searchDateType);
@@ -291,7 +320,10 @@ public class ListOrdersRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query.
+         * <p>The beginning of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-08 11:00:00</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -300,7 +332,10 @@ public class ListOrdersRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3000</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

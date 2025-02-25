@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBgpGroupsRequest} extends {@link RequestModel}
  *
  * <p>DescribeBgpGroupsRequest</p>
  */
 public class DescribeBgpGroupsRequest extends Request {
-    @Query
-    @NameInMap("BgpGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BgpGroupId")
     private String bgpGroupId;
 
-    @Query
-    @NameInMap("IsDefault")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsDefault")
     private Boolean isDefault;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RouterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouterId")
     private String routerId;
 
     private DescribeBgpGroupsRequest(Builder builder) {
@@ -182,7 +187,10 @@ public class DescribeBgpGroupsRequest extends Request {
         } 
 
         /**
-         * The ID of the BGP group.
+         * <p>The ID of the BGP group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bgpg-bp1k25cyp26cllath****</p>
          */
         public Builder bgpGroupId(String bgpGroupId) {
             this.putQueryParameter("BgpGroupId", bgpGroupId);
@@ -191,11 +199,14 @@ public class DescribeBgpGroupsRequest extends Request {
         }
 
         /**
-         * Specifies whether the BGP group is the default one. Valid values:
-         * <p>
+         * <p>Specifies whether the BGP group is the default one. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong></li>
+         * <li><strong>true</strong></li>
+         * </ul>
          * 
-         * *   **false**
-         * *   **true**
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isDefault(Boolean isDefault) {
             this.putQueryParameter("IsDefault", isDefault);
@@ -222,7 +233,10 @@ public class DescribeBgpGroupsRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -231,7 +245,10 @@ public class DescribeBgpGroupsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. The maximum value is **50**. Default value: **10**.
+         * <p>The number of entries per page. The maximum value is <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -240,10 +257,12 @@ public class DescribeBgpGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the VBR is deployed.
-         * <p>
+         * <p>The ID of the region in which the VBR is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -270,7 +289,10 @@ public class DescribeBgpGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the virtual border router (VBR) that is associated with the BGP group.
+         * <p>The ID of the virtual border router (VBR) that is associated with the BGP group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vbr-bp1ctxy813985gkuk****</p>
          */
         public Builder routerId(String routerId) {
             this.putQueryParameter("RouterId", routerId);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,68 +11,68 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateOpenSingleDataRequest</p>
  */
 public class CreateOpenSingleDataRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Body
-    @NameInMap("AppMaxVersion")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppMaxVersion")
     private String appMaxVersion;
 
-    @Body
-    @NameInMap("AppMinVersion")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppMinVersion")
     private String appMinVersion;
 
-    @Body
-    @NameInMap("BizType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizType;
 
-    @Body
-    @NameInMap("CheckOnline")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CheckOnline")
     private Boolean checkOnline;
 
-    @Body
-    @NameInMap("ExtAttrStr")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExtAttrStr")
     private String extAttrStr;
 
-    @Body
-    @NameInMap("LinkToken")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LinkToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String linkToken;
 
-    @Body
-    @NameInMap("OsType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OsType")
     private String osType;
 
-    @Body
-    @NameInMap("Payload")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Payload")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String payload;
 
-    @Body
-    @NameInMap("ThirdMsgId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ThirdMsgId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String thirdMsgId;
 
-    @Body
-    @NameInMap("ValidTimeEnd")
-    @Validation(maximum = 99999999999999D)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ValidTimeEnd")
+    @com.aliyun.core.annotation.Validation(maximum = 99999999999999D)
     private Long validTimeEnd;
 
-    @Body
-    @NameInMap("ValidTimeStart")
-    @Validation(maximum = 99999999999999D)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ValidTimeStart")
+    @com.aliyun.core.annotation.Validation(maximum = 99999999999999D)
     private Long validTimeStart;
 
-    @Body
-    @NameInMap("WorkspaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
     private CreateOpenSingleDataRequest(Builder builder) {

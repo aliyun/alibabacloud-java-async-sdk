@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ProductProperty} extends {@link TeaModel}
  *
  * <p>ProductProperty</p>
  */
 public class ProductProperty extends TeaModel {
-    @NameInMap("text")
+    @com.aliyun.core.annotation.NameInMap("text")
     private String text;
 
-    @NameInMap("values")
-    private java.util.List < String > values;
+    @com.aliyun.core.annotation.NameInMap("values")
+    private java.util.List<String> values;
 
     private ProductProperty(Builder builder) {
         this.text = builder.text;
@@ -41,13 +46,13 @@ public class ProductProperty extends TeaModel {
     /**
      * @return values
      */
-    public java.util.List < String > getValues() {
+    public java.util.List<String> getValues() {
         return this.values;
     }
 
     public static final class Builder {
         private String text; 
-        private java.util.List < String > values; 
+        private java.util.List<String> values; 
 
         /**
          * text.
@@ -60,7 +65,7 @@ public class ProductProperty extends TeaModel {
         /**
          * values.
          */
-        public Builder values(java.util.List < String > values) {
+        public Builder values(java.util.List<String> values) {
             this.values = values;
             return this;
         }

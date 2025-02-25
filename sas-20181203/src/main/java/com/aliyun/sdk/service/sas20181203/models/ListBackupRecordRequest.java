@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListBackupRecordRequest} extends {@link RequestModel}
  *
  * <p>ListBackupRecordRequest</p>
  */
 public class ListBackupRecordRequest extends Request {
-    @Query
-    @NameInMap("BackupEndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupEndTime")
     private Long backupEndTime;
 
-    @Query
-    @NameInMap("BackupStartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupStartTime")
     private Long backupStartTime;
 
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("MachineRemark")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MachineRemark")
     private String machineRemark;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 200, minimum = 10)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 200, minimum = 10)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("StatusList")
-    private java.util.List < String > statusList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StatusList")
+    private java.util.List<String> statusList;
 
     private ListBackupRecordRequest(Builder builder) {
         super(builder);
@@ -98,7 +103,7 @@ public class ListBackupRecordRequest extends Request {
     /**
      * @return statusList
      */
-    public java.util.List < String > getStatusList() {
+    public java.util.List<String> getStatusList() {
         return this.statusList;
     }
 
@@ -108,7 +113,7 @@ public class ListBackupRecordRequest extends Request {
         private Integer currentPage; 
         private String machineRemark; 
         private Integer pageSize; 
-        private java.util.List < String > statusList; 
+        private java.util.List<String> statusList; 
 
         private Builder() {
             super();
@@ -125,7 +130,10 @@ public class ListBackupRecordRequest extends Request {
         } 
 
         /**
-         * The timestamp when the backup task ended. Unit: milliseconds.
+         * <p>The timestamp when the backup task ended. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1699600611000</p>
          */
         public Builder backupEndTime(Long backupEndTime) {
             this.putQueryParameter("BackupEndTime", backupEndTime);
@@ -134,7 +142,10 @@ public class ListBackupRecordRequest extends Request {
         }
 
         /**
-         * The timestamp when the backup task started. Unit: milliseconds.
+         * <p>The timestamp when the backup task started. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1699514211000</p>
          */
         public Builder backupStartTime(Long backupStartTime) {
             this.putQueryParameter("BackupStartTime", backupStartTime);
@@ -143,7 +154,10 @@ public class ListBackupRecordRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**. Pages start from page 1.
+         * <p>The page number. Default value: <strong>1</strong>. Pages start from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -152,7 +166,10 @@ public class ListBackupRecordRequest extends Request {
         }
 
         /**
-         * The information that you want to use to identify the servers protected by the anti-ransomware policy. You can enter the IP address or ID of a server.
+         * <p>The information that you want to use to identify the servers protected by the anti-ransomware policy. You can enter the IP address or ID of a server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder machineRemark(String machineRemark) {
             this.putQueryParameter("MachineRemark", machineRemark);
@@ -161,10 +178,13 @@ public class ListBackupRecordRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
-         * <p>
+         * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <blockquote>
+         * <p> We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
          * 
-         * >  We recommend that you do not leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -173,14 +193,14 @@ public class ListBackupRecordRequest extends Request {
         }
 
         /**
-         * The backup task status. Valid values:
-         * <p>
-         * 
-         * *   **BACKUP_COMPLETE**: The backup task is successful.
-         * *   **BACKUP_FAILED**: The backup task failed.
-         * *   **PARTIAL_COMPLETE**: The backup task is partially successful.
+         * <p>The backup task status. Valid values:</p>
+         * <ul>
+         * <li><strong>BACKUP_COMPLETE</strong>: The backup task is successful.</li>
+         * <li><strong>BACKUP_FAILED</strong>: The backup task failed.</li>
+         * <li><strong>PARTIAL_COMPLETE</strong>: The backup task is partially successful.</li>
+         * </ul>
          */
-        public Builder statusList(java.util.List < String > statusList) {
+        public Builder statusList(java.util.List<String> statusList) {
             this.putQueryParameter("StatusList", statusList);
             this.statusList = statusList;
             return this;

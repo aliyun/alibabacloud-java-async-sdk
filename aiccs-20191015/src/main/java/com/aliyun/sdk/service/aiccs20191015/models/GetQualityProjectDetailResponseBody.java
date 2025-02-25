@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQualityProjectDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetQualityProjectDetailResponseBody</p>
  */
 public class GetQualityProjectDetailResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private GetQualityProjectDetailResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +99,7 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Data
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +107,7 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Message
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +115,7 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +123,7 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success
+         * Success.
          */
         public Builder success(String success) {
             this.success = success;
@@ -131,41 +136,47 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetQualityProjectDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetQualityProjectDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CheckFreqType")
+        @com.aliyun.core.annotation.NameInMap("CheckFreqType")
         private Integer checkFreqType;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DepList")
-        private java.util.List < Long > depList;
+        @com.aliyun.core.annotation.NameInMap("DepList")
+        private java.util.List<Long> depList;
 
-        @NameInMap("GroupList")
-        private java.util.List < Long > groupList;
+        @com.aliyun.core.annotation.NameInMap("GroupList")
+        private java.util.List<Long> groupList;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("ProjectName")
+        @com.aliyun.core.annotation.NameInMap("ProjectName")
         private String projectName;
 
-        @NameInMap("QualityRuleIds")
-        private java.util.List < Long > qualityRuleIds;
+        @com.aliyun.core.annotation.NameInMap("QualityRuleIds")
+        private java.util.List<Long> qualityRuleIds;
 
-        @NameInMap("QualityType")
+        @com.aliyun.core.annotation.NameInMap("QualityType")
         private Integer qualityType;
 
-        @NameInMap("ServicerList")
-        private java.util.List < Long > servicerList;
+        @com.aliyun.core.annotation.NameInMap("ServicerList")
+        private java.util.List<Long> servicerList;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private Integer version;
 
         private Data(Builder builder) {
@@ -208,14 +219,14 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
         /**
          * @return depList
          */
-        public java.util.List < Long > getDepList() {
+        public java.util.List<Long> getDepList() {
             return this.depList;
         }
 
         /**
          * @return groupList
          */
-        public java.util.List < Long > getGroupList() {
+        public java.util.List<Long> getGroupList() {
             return this.groupList;
         }
 
@@ -243,7 +254,7 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
         /**
          * @return qualityRuleIds
          */
-        public java.util.List < Long > getQualityRuleIds() {
+        public java.util.List<Long> getQualityRuleIds() {
             return this.qualityRuleIds;
         }
 
@@ -257,7 +268,7 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
         /**
          * @return servicerList
          */
-        public java.util.List < Long > getServicerList() {
+        public java.util.List<Long> getServicerList() {
             return this.servicerList;
         }
 
@@ -278,19 +289,19 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
         public static final class Builder {
             private Integer checkFreqType; 
             private String createTime; 
-            private java.util.List < Long > depList; 
-            private java.util.List < Long > groupList; 
+            private java.util.List<Long> depList; 
+            private java.util.List<Long> groupList; 
             private Long id; 
             private String modifyTime; 
             private String projectName; 
-            private java.util.List < Long > qualityRuleIds; 
+            private java.util.List<Long> qualityRuleIds; 
             private Integer qualityType; 
-            private java.util.List < Long > servicerList; 
+            private java.util.List<Long> servicerList; 
             private Integer status; 
             private Integer version; 
 
             /**
-             * 质检周期
+             * CheckFreqType.
              */
             public Builder checkFreqType(Integer checkFreqType) {
                 this.checkFreqType = checkFreqType;
@@ -298,7 +309,7 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -306,23 +317,23 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 技能组分组
+             * DepList.
              */
-            public Builder depList(java.util.List < Long > depList) {
+            public Builder depList(java.util.List<Long> depList) {
                 this.depList = depList;
                 return this;
             }
 
             /**
-             * 技能组列表
+             * GroupList.
              */
-            public Builder groupList(java.util.List < Long > groupList) {
+            public Builder groupList(java.util.List<Long> groupList) {
                 this.groupList = groupList;
                 return this;
             }
 
             /**
-             * 质检任务ID
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -330,7 +341,7 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * ModifyTime.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -338,7 +349,7 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 质检任务名称
+             * ProjectName.
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -346,15 +357,15 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 质检规则ID
+             * QualityRuleIds.
              */
-            public Builder qualityRuleIds(java.util.List < Long > qualityRuleIds) {
+            public Builder qualityRuleIds(java.util.List<Long> qualityRuleIds) {
                 this.qualityRuleIds = qualityRuleIds;
                 return this;
             }
 
             /**
-             * 质检类型
+             * QualityType.
              */
             public Builder qualityType(Integer qualityType) {
                 this.qualityType = qualityType;
@@ -362,15 +373,15 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 坐席列表
+             * ServicerList.
              */
-            public Builder servicerList(java.util.List < Long > servicerList) {
+            public Builder servicerList(java.util.List<Long> servicerList) {
                 this.servicerList = servicerList;
                 return this;
             }
 
             /**
-             * 质检任务状态
+             * Status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -378,7 +389,7 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Version
+             * Version.
              */
             public Builder version(Integer version) {
                 this.version = version;

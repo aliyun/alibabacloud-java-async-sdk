@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListJobsResponseBody} extends {@link TeaModel}
  *
  * <p>ListJobsResponseBody</p>
  */
 public class ListJobsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalSize")
+    @com.aliyun.core.annotation.NameInMap("TotalSize")
     private Integer totalSize;
 
     private ListJobsResponseBody(Builder builder) {
@@ -134,13 +139,16 @@ public class ListJobsResponseBody extends TeaModel {
         private Integer totalSize; 
 
         /**
-         * The HTTP status code. Valid values:
-         * <p>
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: The call was successful.</li>
+         * <li><strong>3xx</strong>: The call was redirected.</li>
+         * <li><strong>4xx</strong>: The call failed.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * </ul>
          * 
-         * *   **2xx**: The call was successful.
-         * *   **3xx**: The call was redirected.
-         * *   **4xx**: The call failed.
-         * *   **5xx**: A server error occurred.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -148,7 +156,10 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -156,7 +167,7 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The job templates.
+         * <p>The job templates.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -164,11 +175,14 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned. Take note of the following rules:
-         * <p>
+         * <p>The error code returned. Take note of the following rules:</p>
+         * <ul>
+         * <li>If the call is successful, <strong>ErrorCode</strong> is not returned.</li>
+         * <li>If the call fails, <strong>ErrorCode</strong> is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section in this topic.</li>
+         * </ul>
          * 
-         * *   If the call is successful, **ErrorCode** is not returned.
-         * *   If the call fails, **ErrorCode** is returned. For more information, see the "**Error codes**" section in this topic.
+         * <strong>example:</strong>
+         * <p>Null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -176,7 +190,10 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -184,7 +201,10 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on each page.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -192,7 +212,10 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4D805CA-926D-41B1-8E63-7AD0C1ED****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -200,11 +223,14 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the applications were obtained. Valid values:
-         * <p>
+         * <p>Indicates whether the applications were obtained. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -212,7 +238,10 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of job templates.
+         * <p>The total number of job templates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalSize(Integer totalSize) {
             this.totalSize = totalSize;
@@ -225,11 +254,17 @@ public class ListJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListJobsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -264,7 +299,10 @@ public class ListJobsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -272,7 +310,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -286,59 +327,65 @@ public class ListJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListJobsResponseBody</p>
+     */
     public static class Applications extends TeaModel {
-        @NameInMap("Active")
+        @com.aliyun.core.annotation.NameInMap("Active")
         private Long active;
 
-        @NameInMap("AppDescription")
+        @com.aliyun.core.annotation.NameInMap("AppDescription")
         private String appDescription;
 
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("CompletionTime")
+        @com.aliyun.core.annotation.NameInMap("CompletionTime")
         private Long completionTime;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
-        @NameInMap("Failed")
+        @com.aliyun.core.annotation.NameInMap("Failed")
         private Long failed;
 
-        @NameInMap("LastChangeorderState")
+        @com.aliyun.core.annotation.NameInMap("LastChangeorderState")
         private String lastChangeorderState;
 
-        @NameInMap("LastJobState")
+        @com.aliyun.core.annotation.NameInMap("LastJobState")
         private String lastJobState;
 
-        @NameInMap("LastStartTime")
+        @com.aliyun.core.annotation.NameInMap("LastStartTime")
         private Long lastStartTime;
 
-        @NameInMap("Mem")
+        @com.aliyun.core.annotation.NameInMap("Mem")
         private Integer mem;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("NamespaceId")
+        @com.aliyun.core.annotation.NameInMap("NamespaceId")
         private String namespaceId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Succeeded")
+        @com.aliyun.core.annotation.NameInMap("Succeeded")
         private Long succeeded;
 
-        @NameInMap("Suspend")
+        @com.aliyun.core.annotation.NameInMap("Suspend")
         private Boolean suspend;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
-        @NameInMap("TriggerConfig")
+        @com.aliyun.core.annotation.NameInMap("TriggerConfig")
         private String triggerConfig;
 
         private Applications(Builder builder) {
@@ -485,7 +532,7 @@ public class ListJobsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -513,11 +560,14 @@ public class ListJobsResponseBody extends TeaModel {
             private String regionId; 
             private Long succeeded; 
             private Boolean suspend; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String triggerConfig; 
 
             /**
-             * The number of running instances.
+             * <p>The number of running instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder active(Long active) {
                 this.active = active;
@@ -525,7 +575,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the job template.
+             * <p>The description of the job template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description</p>
              */
             public Builder appDescription(String appDescription) {
                 this.appDescription = appDescription;
@@ -533,7 +586,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the job template.
+             * <p>The ID of the job template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f7730764-d88f-4b9a-8d8e-cd8efbfe****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -541,7 +597,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the job template.
+             * <p>The name of the job template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo-app</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -549,7 +608,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the job was last completed.
+             * <p>The time when the job was last completed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1657522839</p>
              */
             public Builder completionTime(Long completionTime) {
                 this.completionTime = completionTime;
@@ -565,7 +627,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances that failed to run.
+             * <p>The number of instances that failed to run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder failed(Long failed) {
                 this.failed = failed;
@@ -573,11 +638,14 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the latest change order was executed. Valid values:
-             * <p>
+             * <p>Indicates whether the latest change order was executed. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The latest change order failed to be executed.</li>
+             * <li><strong>1</strong>: The latest change order was executed.</li>
+             * </ul>
              * 
-             * *   **0**: The latest change order failed to be executed.
-             * *   **1**: The latest change order was executed.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder lastChangeorderState(String lastChangeorderState) {
                 this.lastChangeorderState = lastChangeorderState;
@@ -585,13 +653,16 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The running status of the latest job. Valid values:
-             * <p>
+             * <p>The running status of the latest job. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The job is not executed.</li>
+             * <li><strong>1</strong>: The job was executed.</li>
+             * <li><strong>2</strong>: The job failed to be executed.</li>
+             * <li><strong>3</strong>: The job is being executed.</li>
+             * </ul>
              * 
-             * *   **0**: The job is not executed.
-             * *   **1**: The job was executed.
-             * *   **2**: The job failed to be executed.
-             * *   **3**: The job is being executed.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder lastJobState(String lastJobState) {
                 this.lastJobState = lastJobState;
@@ -599,7 +670,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the job was last started.
+             * <p>The time when the job was last started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1657522800</p>
              */
             public Builder lastStartTime(Long lastStartTime) {
                 this.lastStartTime = lastStartTime;
@@ -615,7 +689,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The returned message.
+             * <p>The returned message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -623,7 +700,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace ID.
+             * <p>The namespace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing:demo</p>
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -631,7 +711,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -639,7 +722,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances that were successfully run.
+             * <p>The number of instances that were successfully run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder succeeded(Long succeeded) {
                 this.succeeded = succeeded;
@@ -647,7 +733,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the job template is suspended.
+             * <p>Indicates whether the job template is suspended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder suspend(Boolean suspend) {
                 this.suspend = suspend;
@@ -655,9 +744,9 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the job template.
+             * <p>The tag of the job template.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -677,17 +766,23 @@ public class ListJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListJobsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Applications")
-        private java.util.List < Applications> applications;
+        @com.aliyun.core.annotation.NameInMap("Applications")
+        private java.util.List<Applications> applications;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Integer totalSize;
 
         private Data(Builder builder) {
@@ -708,7 +803,7 @@ public class ListJobsResponseBody extends TeaModel {
         /**
          * @return applications
          */
-        public java.util.List < Applications> getApplications() {
+        public java.util.List<Applications> getApplications() {
             return this.applications;
         }
 
@@ -734,21 +829,24 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Applications> applications; 
+            private java.util.List<Applications> applications; 
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalSize; 
 
             /**
-             * The job templates.
+             * <p>The job templates.</p>
              */
-            public Builder applications(java.util.List < Applications> applications) {
+            public Builder applications(java.util.List<Applications> applications) {
                 this.applications = applications;
                 return this;
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -756,7 +854,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned on each page.
+             * <p>The number of entries returned on each page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -764,7 +865,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of job templates.
+             * <p>The total number of job templates.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

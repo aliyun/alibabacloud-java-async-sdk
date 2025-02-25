@@ -98,7 +98,7 @@ public class DescribeTablesResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * List.
+         * The list of returned tables.
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -106,7 +106,7 @@ public class DescribeTablesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The number of returned pages.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +114,7 @@ public class DescribeTablesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of tables returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +122,7 @@ public class DescribeTablesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +138,7 @@ public class DescribeTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * The total number of returned tables.
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -262,7 +262,7 @@ public class DescribeTablesResponseBody extends TeaModel {
             private String table; 
 
             /**
-             * AllowFullTableScan.
+             * Indicates whether full table scanning is allowed.
              */
             public Builder allowFullTableScan(Boolean allowFullTableScan) {
                 this.allowFullTableScan = allowFullTableScan;
@@ -270,7 +270,7 @@ public class DescribeTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Broadcast.
+             * Indicates whether the table is a replicated table.
              */
             public Builder broadcast(Boolean broadcast) {
                 this.broadcast = broadcast;
@@ -278,7 +278,11 @@ public class DescribeTablesResponseBody extends TeaModel {
             }
 
             /**
-             * DbInstType.
+             * The type of the PolarDB-X 1.0 instance. Valid values:
+             * <p>
+             * 
+             * *   0: The instance is a dedicated instance.
+             * *   1: The instance is a shard instance.
              */
             public Builder dbInstType(Integer dbInstType) {
                 this.dbInstType = dbInstType;
@@ -286,7 +290,7 @@ public class DescribeTablesResponseBody extends TeaModel {
             }
 
             /**
-             * IsLocked.
+             * Indicates whether the table is locked.
              */
             public Builder isLocked(Boolean isLocked) {
                 this.isLocked = isLocked;
@@ -294,7 +298,7 @@ public class DescribeTablesResponseBody extends TeaModel {
             }
 
             /**
-             * IsShard.
+             * Indicates whether the table is sharded.
              */
             public Builder isShard(Boolean isShard) {
                 this.isShard = isShard;
@@ -302,7 +306,7 @@ public class DescribeTablesResponseBody extends TeaModel {
             }
 
             /**
-             * ShardKey.
+             * The shard key of the table.
              */
             public Builder shardKey(String shardKey) {
                 this.shardKey = shardKey;
@@ -310,7 +314,11 @@ public class DescribeTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * Indicates whether sharding tasks are performed on the table. Valid values:
+             * <p>
+             * 
+             * *   0: No sharding task is performed on the table.
+             * *   1: Sharding tasks are performed on the table.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -318,7 +326,7 @@ public class DescribeTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Table.
+             * The name of the table.
              */
             public Builder table(String table) {
                 this.table = table;

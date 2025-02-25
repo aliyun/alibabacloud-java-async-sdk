@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20170622.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryReceiverByParamResponseBody</p>
  */
 public class QueryReceiverByParamResponseBody extends TeaModel {
-    @NameInMap("NextStart")
+    @com.aliyun.core.annotation.NameInMap("NextStart")
     private String nextStart;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
     private QueryReceiverByParamResponseBody(Builder builder) {
@@ -132,28 +131,28 @@ public class QueryReceiverByParamResponseBody extends TeaModel {
     } 
 
     public static class Receiver extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private String count;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Desc")
+        @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
 
-        @NameInMap("ReceiverId")
+        @com.aliyun.core.annotation.NameInMap("ReceiverId")
         private String receiverId;
 
-        @NameInMap("ReceiversAlias")
+        @com.aliyun.core.annotation.NameInMap("ReceiversAlias")
         private String receiversAlias;
 
-        @NameInMap("ReceiversName")
+        @com.aliyun.core.annotation.NameInMap("ReceiversName")
         private String receiversName;
 
-        @NameInMap("ReceiversStatus")
+        @com.aliyun.core.annotation.NameInMap("ReceiversStatus")
         private String receiversStatus;
 
-        @NameInMap("UtcCreateTime")
+        @com.aliyun.core.annotation.NameInMap("UtcCreateTime")
         private Long utcCreateTime;
 
         private Receiver(Builder builder) {
@@ -313,7 +312,7 @@ public class QueryReceiverByParamResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("receiver")
+        @com.aliyun.core.annotation.NameInMap("receiver")
         private java.util.List < Receiver> receiver;
 
         private Data(Builder builder) {

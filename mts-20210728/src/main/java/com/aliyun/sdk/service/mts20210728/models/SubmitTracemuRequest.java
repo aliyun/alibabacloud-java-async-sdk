@@ -27,6 +27,10 @@ public class SubmitTracemuRequest extends Request {
     private String output;
 
     @Body
+    @NameInMap("Params")
+    private String params;
+
+    @Body
     @NameInMap("Trace")
     @Validation(required = true)
     private String trace;
@@ -36,6 +40,7 @@ public class SubmitTracemuRequest extends Request {
         this.keyUri = builder.keyUri;
         this.mediaId = builder.mediaId;
         this.output = builder.output;
+        this.params = builder.params;
         this.trace = builder.trace;
     }
 
@@ -74,6 +79,13 @@ public class SubmitTracemuRequest extends Request {
     }
 
     /**
+     * @return params
+     */
+    public String getParams() {
+        return this.params;
+    }
+
+    /**
      * @return trace
      */
     public String getTrace() {
@@ -84,6 +96,7 @@ public class SubmitTracemuRequest extends Request {
         private String keyUri; 
         private String mediaId; 
         private String output; 
+        private String params; 
         private String trace; 
 
         private Builder() {
@@ -95,11 +108,12 @@ public class SubmitTracemuRequest extends Request {
             this.keyUri = request.keyUri;
             this.mediaId = request.mediaId;
             this.output = request.output;
+            this.params = request.params;
             this.trace = request.trace;
         } 
 
         /**
-         * 密钥服务器uri
+         * KeyUri.
          */
         public Builder keyUri(String keyUri) {
             this.putBodyParameter("KeyUri", keyUri);
@@ -108,7 +122,7 @@ public class SubmitTracemuRequest extends Request {
         }
 
         /**
-         * ab流处理后的媒体id
+         * MediaId.
          */
         public Builder mediaId(String mediaId) {
             this.putBodyParameter("MediaId", mediaId);
@@ -117,7 +131,7 @@ public class SubmitTracemuRequest extends Request {
         }
 
         /**
-         * m3u8文件输出oss地址
+         * Output.
          */
         public Builder output(String output) {
             this.putBodyParameter("Output", output);
@@ -126,7 +140,16 @@ public class SubmitTracemuRequest extends Request {
         }
 
         /**
-         * 溯源水印信息
+         * Params.
+         */
+        public Builder params(String params) {
+            this.putBodyParameter("Params", params);
+            this.params = params;
+            return this;
+        }
+
+        /**
+         * Trace.
          */
         public Builder trace(String trace) {
             this.putBodyParameter("Trace", trace);

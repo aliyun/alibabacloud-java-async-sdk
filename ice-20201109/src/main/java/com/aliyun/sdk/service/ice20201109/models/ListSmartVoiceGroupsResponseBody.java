@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSmartVoiceGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListSmartVoiceGroupsResponseBody</p>
  */
 public class ListSmartVoiceGroupsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VoiceGroups")
-    private java.util.List < VoiceGroups> voiceGroups;
+    @com.aliyun.core.annotation.NameInMap("VoiceGroups")
+    private java.util.List<VoiceGroups> voiceGroups;
 
     private ListSmartVoiceGroupsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
     /**
      * @return voiceGroups
      */
-    public java.util.List < VoiceGroups> getVoiceGroups() {
+    public java.util.List<VoiceGroups> getVoiceGroups() {
         return this.voiceGroups;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < VoiceGroups> voiceGroups; 
+        private java.util.List<VoiceGroups> voiceGroups; 
 
         /**
-         * Id of the request
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>627B30EB-1D0A-5C6D-8467-431626E0FA10</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * VoiceGroups.
+         * <p>The queried speaker groups.</p>
          */
-        public Builder voiceGroups(java.util.List < VoiceGroups> voiceGroups) {
+        public Builder voiceGroups(java.util.List<VoiceGroups> voiceGroups) {
             this.voiceGroups = voiceGroups;
             return this;
         }
@@ -71,32 +79,42 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSmartVoiceGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSmartVoiceGroupsResponseBody</p>
+     */
     public static class VoiceList extends TeaModel {
-        @NameInMap("Desc")
+        @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("SupportSampleRate")
+        private String supportSampleRate;
+
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
-        @NameInMap("Voice")
+        @com.aliyun.core.annotation.NameInMap("Voice")
         private String voice;
 
-        @NameInMap("VoiceType")
+        @com.aliyun.core.annotation.NameInMap("VoiceType")
         private String voiceType;
 
-        @NameInMap("VoiceUrl")
+        @com.aliyun.core.annotation.NameInMap("VoiceUrl")
         private String voiceUrl;
 
         private VoiceList(Builder builder) {
             this.desc = builder.desc;
             this.name = builder.name;
             this.remark = builder.remark;
+            this.supportSampleRate = builder.supportSampleRate;
             this.tag = builder.tag;
             this.voice = builder.voice;
             this.voiceType = builder.voiceType;
@@ -133,6 +151,13 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return supportSampleRate
+         */
+        public String getSupportSampleRate() {
+            return this.supportSampleRate;
+        }
+
+        /**
          * @return tag
          */
         public String getTag() {
@@ -164,13 +189,14 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
             private String desc; 
             private String name; 
             private String remark; 
+            private String supportSampleRate; 
             private String tag; 
             private String voice; 
             private String voiceType; 
             private String voiceUrl; 
 
             /**
-             * Desc.
+             * <p>The speaker description.</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -178,7 +204,7 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The speaker name.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -186,7 +212,7 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * <p>The remarks of the speaker.</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -194,7 +220,15 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * SupportSampleRate.
+             */
+            public Builder supportSampleRate(String supportSampleRate) {
+                this.supportSampleRate = supportSampleRate;
+                return this;
+            }
+
+            /**
+             * <p>The tag of the speaker type.</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -202,7 +236,10 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Voice.
+             * <p>The speaker ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhitian</p>
              */
             public Builder voice(String voice) {
                 this.voice = voice;
@@ -210,7 +247,17 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * VoiceType.
+             * <p>The speaker type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Male</li>
+             * <li>Female</li>
+             * <li>Boy</li>
+             * <li>Girl</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Female</p>
              */
             public Builder voiceType(String voiceType) {
                 this.voiceType = voiceType;
@@ -218,7 +265,10 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * VoiceUrl.
+             * <p>The URL of the sample audio file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>https://***.com/zhiqing.mp3</p>
              */
             public Builder voiceUrl(String voiceUrl) {
                 this.voiceUrl = voiceUrl;
@@ -232,12 +282,18 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSmartVoiceGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSmartVoiceGroupsResponseBody</p>
+     */
     public static class VoiceGroups extends TeaModel {
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("VoiceList")
-        private java.util.List < VoiceList> voiceList;
+        @com.aliyun.core.annotation.NameInMap("VoiceList")
+        private java.util.List<VoiceList> voiceList;
 
         private VoiceGroups(Builder builder) {
             this.type = builder.type;
@@ -262,16 +318,16 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
         /**
          * @return voiceList
          */
-        public java.util.List < VoiceList> getVoiceList() {
+        public java.util.List<VoiceList> getVoiceList() {
             return this.voiceList;
         }
 
         public static final class Builder {
             private String type; 
-            private java.util.List < VoiceList> voiceList; 
+            private java.util.List<VoiceList> voiceList; 
 
             /**
-             * Type.
+             * <p>The name of the speaker group.</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -279,9 +335,9 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * VoiceList.
+             * <p>The speakers.</p>
              */
-            public Builder voiceList(java.util.List < VoiceList> voiceList) {
+            public Builder voiceList(java.util.List<VoiceList> voiceList) {
                 this.voiceList = voiceList;
                 return this;
             }

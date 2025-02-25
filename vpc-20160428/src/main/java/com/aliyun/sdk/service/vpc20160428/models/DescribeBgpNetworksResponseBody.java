@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBgpNetworksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBgpNetworksResponseBody</p>
  */
 public class DescribeBgpNetworksResponseBody extends TeaModel {
-    @NameInMap("BgpNetworks")
+    @com.aliyun.core.annotation.NameInMap("BgpNetworks")
     private BgpNetworks bgpNetworks;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeBgpNetworksResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The BGP network.
+         * <p>The BGP network.</p>
          */
         public Builder bgpNetworks(BgpNetworks bgpNetworks) {
             this.bgpNetworks = bgpNetworks;
@@ -94,7 +99,10 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6F513A15-669F-419D-B511-08A85292059B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of advertised BGP networks.
+         * <p>The total number of advertised BGP networks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,17 +148,23 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBgpNetworksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBgpNetworksResponseBody</p>
+     */
     public static class BgpNetwork extends TeaModel {
-        @NameInMap("DstCidrBlock")
+        @com.aliyun.core.annotation.NameInMap("DstCidrBlock")
         private String dstCidrBlock;
 
-        @NameInMap("RouterId")
+        @com.aliyun.core.annotation.NameInMap("RouterId")
         private String routerId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private BgpNetwork(Builder builder) {
@@ -194,7 +217,10 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The CIDR block of the advertised BGP network.
+             * <p>The CIDR block of the advertised BGP network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.1.XX.XX/24</p>
              */
             public Builder dstCidrBlock(String dstCidrBlock) {
                 this.dstCidrBlock = dstCidrBlock;
@@ -202,7 +228,10 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VBR.
+             * <p>The ID of the VBR.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vrt-bp1lhl0taikrteen8****</p>
              */
             public Builder routerId(String routerId) {
                 this.routerId = routerId;
@@ -210,7 +239,10 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the advertised BGP network.
+             * <p>The status of the advertised BGP network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -218,7 +250,10 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC) in which the master instance resides.
+             * <p>The ID of the virtual private cloud (VPC) in which the master instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1qpo0kug3a2*****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -232,9 +267,15 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBgpNetworksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBgpNetworksResponseBody</p>
+     */
     public static class BgpNetworks extends TeaModel {
-        @NameInMap("BgpNetwork")
-        private java.util.List < BgpNetwork> bgpNetwork;
+        @com.aliyun.core.annotation.NameInMap("BgpNetwork")
+        private java.util.List<BgpNetwork> bgpNetwork;
 
         private BgpNetworks(Builder builder) {
             this.bgpNetwork = builder.bgpNetwork;
@@ -251,17 +292,17 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
         /**
          * @return bgpNetwork
          */
-        public java.util.List < BgpNetwork> getBgpNetwork() {
+        public java.util.List<BgpNetwork> getBgpNetwork() {
             return this.bgpNetwork;
         }
 
         public static final class Builder {
-            private java.util.List < BgpNetwork> bgpNetwork; 
+            private java.util.List<BgpNetwork> bgpNetwork; 
 
             /**
              * BgpNetwork.
              */
-            public Builder bgpNetwork(java.util.List < BgpNetwork> bgpNetwork) {
+            public Builder bgpNetwork(java.util.List<BgpNetwork> bgpNetwork) {
                 this.bgpNetwork = bgpNetwork;
                 return this;
             }

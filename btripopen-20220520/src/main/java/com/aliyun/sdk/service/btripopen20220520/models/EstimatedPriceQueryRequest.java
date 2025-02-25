@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EstimatedPriceQueryRequest} extends {@link RequestModel}
  *
  * <p>EstimatedPriceQueryRequest</p>
  */
 public class EstimatedPriceQueryRequest extends Request {
-    @Query
-    @NameInMap("arr_city")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("arr_city")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String arrCity;
 
-    @Query
-    @NameInMap("category")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("category")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String category;
 
-    @Query
-    @NameInMap("dep_city")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dep_city")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String depCity;
 
-    @Query
-    @NameInMap("end_time")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("end_time")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @Query
-    @NameInMap("itinerary_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("itinerary_id")
     private String itineraryId;
 
-    @Query
-    @NameInMap("start_time")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("start_time")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
-    @Query
-    @NameInMap("sub_corp_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("sub_corp_id")
     private String subCorpId;
 
-    @Query
-    @NameInMap("user_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("user_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
-    @Header
-    @NameInMap("x-acs-btrip-so-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-so-corp-token")
     private String xAcsBtripSoCorpToken;
 
     private EstimatedPriceQueryRequest(Builder builder) {
@@ -172,7 +177,7 @@ public class EstimatedPriceQueryRequest extends Request {
         } 
 
         /**
-         * arr_city.
+         * <p>This parameter is required.</p>
          */
         public Builder arrCity(String arrCity) {
             this.putQueryParameter("arr_city", arrCity);
@@ -181,7 +186,10 @@ public class EstimatedPriceQueryRequest extends Request {
         }
 
         /**
-         * category.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flight</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("category", category);
@@ -190,7 +198,7 @@ public class EstimatedPriceQueryRequest extends Request {
         }
 
         /**
-         * dep_city.
+         * <p>This parameter is required.</p>
          */
         public Builder depCity(String depCity) {
             this.putQueryParameter("dep_city", depCity);
@@ -199,7 +207,10 @@ public class EstimatedPriceQueryRequest extends Request {
         }
 
         /**
-         * end_time.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1670601600000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("end_time", endTime);
@@ -217,7 +228,10 @@ public class EstimatedPriceQueryRequest extends Request {
         }
 
         /**
-         * start_time.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1670428800000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("start_time", startTime);
@@ -235,7 +249,10 @@ public class EstimatedPriceQueryRequest extends Request {
         }
 
         /**
-         * user_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678910</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("user_id", userId);

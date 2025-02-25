@@ -1,53 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAggregateRemediationRequest} extends {@link RequestModel}
  *
  * <p>CreateAggregateRemediationRequest</p>
  */
 public class CreateAggregateRemediationRequest extends Request {
-    @Body
-    @NameInMap("AggregatorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AggregatorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aggregatorId;
 
-    @Body
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("ConfigRuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConfigRuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String configRuleId;
 
-    @Body
-    @NameInMap("InvokeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InvokeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String invokeType;
 
-    @Body
-    @NameInMap("Params")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Params")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String params;
 
-    @Body
-    @NameInMap("RemediationTemplateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RemediationTemplateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String remediationTemplateId;
 
-    @Body
-    @NameInMap("RemediationType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RemediationType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String remediationType;
 
-    @Body
-    @NameInMap("SourceType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceType")
     private String sourceType;
 
     private CreateAggregateRemediationRequest(Builder builder) {
@@ -158,10 +163,12 @@ public class CreateAggregateRemediationRequest extends Request {
         } 
 
         /**
-         * The ID of the account group.
-         * <p>
+         * <p>The ID of the account group.</p>
+         * <p>For more information about how to obtain the ID of the account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of the account group, see [ListAggregators](~~255797~~).
+         * <strong>example:</strong>
+         * <p>ca-6b4a626622af0012****</p>
          */
         public Builder aggregatorId(String aggregatorId) {
             this.putBodyParameter("AggregatorId", aggregatorId);
@@ -170,7 +177,10 @@ public class CreateAggregateRemediationRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The `token` can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <code>token</code> can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -179,10 +189,12 @@ public class CreateAggregateRemediationRequest extends Request {
         }
 
         /**
-         * The rule ID.
-         * <p>
+         * <p>The rule ID.</p>
+         * <p>For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
+         * <strong>example:</strong>
+         * <p>cr-6b7c626622af00b4****</p>
          */
         public Builder configRuleId(String configRuleId) {
             this.putBodyParameter("ConfigRuleId", configRuleId);
@@ -191,13 +203,17 @@ public class CreateAggregateRemediationRequest extends Request {
         }
 
         /**
-         * The execution mode of the remediation template. Valid values:
-         * <p>
+         * <p>The execution mode of the remediation template. Valid values:</p>
+         * <ul>
+         * <li>NON_EXECUTION: The remediation template is not executed.</li>
+         * <li>AUTO_EXECUTION: The remediation template is automatically executed.</li>
+         * <li>MANUAL_EXECUTION: The remediation template is manually executed.</li>
+         * <li>NOT_CONFIG: The execution mode is not specified.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   NON_EXECUTION: The remediation template is not executed.
-         * *   AUTO_EXECUTION: The remediation template is automatically executed.
-         * *   MANUAL_EXECUTION: The remediation template is manually executed.
-         * *   NOT_CONFIG: The execution mode is not specified.
+         * <strong>example:</strong>
+         * <p>MANUAL_EXECUTION</p>
          */
         public Builder invokeType(String invokeType) {
             this.putBodyParameter("InvokeType", invokeType);
@@ -206,10 +222,12 @@ public class CreateAggregateRemediationRequest extends Request {
         }
 
         /**
-         * The configuration of the remediation template.
-         * <p>
+         * <p>The configuration of the remediation template.</p>
+         * <p>For more information about how to obtain the configuration of the remediation template, see <a href="https://help.aliyun.com/document_detail/416781.html">ListRemediationTemplates</a>. You can view the <code>TemplateDefinition</code> response parameter to obtain the configuration of the remediation template.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the configuration of the remediation template, see [ListRemediationTemplates](~~416781~~). You can view the `TemplateDefinition` response parameter to obtain the configuration of the remediation template.
+         * <strong>example:</strong>
+         * <p>{&quot;bucketName&quot;: &quot;{resourceId}&quot;, &quot;regionId&quot;: &quot;{regionId}&quot;, &quot;permissionName&quot;: &quot;private&quot;}</p>
          */
         public Builder params(String params) {
             this.putBodyParameter("Params", params);
@@ -218,11 +236,15 @@ public class CreateAggregateRemediationRequest extends Request {
         }
 
         /**
-         * The ID of the remediation template.
-         * <p>
+         * <p>The ID of the remediation template.</p>
+         * <ul>
+         * <li>If you set the <code>RemediationType</code> parameter to <code>OOS</code>, set this parameter to the identifier of the relevant official remediation template, such as <code>ACS-OSS-PutBucketAcl</code>. For more information about how to obtain the remediation template identifier, see <a href="https://help.aliyun.com/document_detail/416781.html">ListRemediationTemplates</a>.</li>
+         * <li>If you set the <code>RemediationType</code> parameter to <code>FC</code>, set this parameter to the Alibaba Cloud Resource Name (ARN) of the relevant Function Compute resource, such as <code>acs:fc:cn-hangzhou:100931896542****:services/ConfigService.LATEST/functions/test-php</code>.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   If you set the `RemediationType` parameter to `OOS`, set this parameter to the identifier of the relevant official remediation template, such as `ACS-OSS-PutBucketAcl`. For more information about how to obtain the remediation template identifier, see [ListRemediationTemplates](~~416781~~).
-         * *   If you set the `RemediationType` parameter to `FC`, set this parameter to the Alibaba Cloud Resource Name (ARN) of the relevant Function Compute resource, such as `acs:fc:cn-hangzhou:100931896542****:services/ConfigService.LATEST/functions/test-php`.
+         * <strong>example:</strong>
+         * <p>ACS-OSS-PutBucketAcl</p>
          */
         public Builder remediationTemplateId(String remediationTemplateId) {
             this.putBodyParameter("RemediationTemplateId", remediationTemplateId);
@@ -231,11 +253,15 @@ public class CreateAggregateRemediationRequest extends Request {
         }
 
         /**
-         * The type of the remediation template. Valid values:
-         * <p>
+         * <p>The type of the remediation template. Valid values:</p>
+         * <ul>
+         * <li>OOS: stands for Operation Orchestration Service and indicates official remediation.</li>
+         * <li>FC: stands for Function Compute and indicates custom remediation.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   OOS: stands for Operation Orchestration Service and indicates official remediation.
-         * *   FC: stands for Function Compute and indicates custom remediation.
+         * <strong>example:</strong>
+         * <p>OOS</p>
          */
         public Builder remediationType(String remediationType) {
             this.putBodyParameter("RemediationType", remediationType);
@@ -244,12 +270,15 @@ public class CreateAggregateRemediationRequest extends Request {
         }
 
         /**
-         * The source of remediation template. Valid values:
-         * <p>
+         * <p>The source of remediation template. Valid values:</p>
+         * <ul>
+         * <li>ALIYUN (default): official template.</li>
+         * <li>CUSTOM: custom template.</li>
+         * <li>NONE: none.</li>
+         * </ul>
          * 
-         * *   ALIYUN (default): official template.
-         * *   CUSTOM: custom template.
-         * *   NONE: none.
+         * <strong>example:</strong>
+         * <p>ALIYUN</p>
          */
         public Builder sourceType(String sourceType) {
             this.putBodyParameter("SourceType", sourceType);

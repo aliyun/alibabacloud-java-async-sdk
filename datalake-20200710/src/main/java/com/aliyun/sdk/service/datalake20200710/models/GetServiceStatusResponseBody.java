@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetServiceStatusResponseBody</p>
  */
 public class GetServiceStatusResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetServiceStatusResponseBody(Builder builder) {
@@ -92,13 +91,13 @@ public class GetServiceStatusResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("HasRamPermissions")
+        @com.aliyun.core.annotation.NameInMap("HasRamPermissions")
         private Boolean hasRamPermissions;
 
-        @NameInMap("IsDlfServiceOpen")
+        @com.aliyun.core.annotation.NameInMap("IsDlfServiceOpen")
         private Boolean isDlfServiceOpen;
 
-        @NameInMap("IsOssOpen")
+        @com.aliyun.core.annotation.NameInMap("IsOssOpen")
         private Boolean isOssOpen;
 
         private Data(Builder builder) {

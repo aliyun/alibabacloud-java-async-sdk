@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAuctionsResponseBody} extends {@link TeaModel}
  *
  * <p>QueryAuctionsResponseBody</p>
  */
 public class QueryAuctionsResponseBody extends TeaModel {
-    @NameInMap("CurrentPageNum")
+    @com.aliyun.core.annotation.NameInMap("CurrentPageNum")
     private Integer currentPageNum;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalItemNum")
+    @com.aliyun.core.annotation.NameInMap("TotalItemNum")
     private Integer totalItemNum;
 
-    @NameInMap("TotalPageNum")
+    @com.aliyun.core.annotation.NameInMap("TotalPageNum")
     private Integer totalPageNum;
 
     private QueryAuctionsResponseBody(Builder builder) {
@@ -57,7 +62,7 @@ public class QueryAuctionsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -91,7 +96,7 @@ public class QueryAuctionsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer currentPageNum; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalItemNum; 
@@ -108,7 +113,7 @@ public class QueryAuctionsResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -151,80 +156,86 @@ public class QueryAuctionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryAuctionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAuctionsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AuctionEndTime")
+        @com.aliyun.core.annotation.NameInMap("AuctionEndTime")
         private Long auctionEndTime;
 
-        @NameInMap("AuctionId")
+        @com.aliyun.core.annotation.NameInMap("AuctionId")
         private String auctionId;
 
-        @NameInMap("BookEndTime")
+        @com.aliyun.core.annotation.NameInMap("BookEndTime")
         private Long bookEndTime;
 
-        @NameInMap("BookedPartner")
+        @com.aliyun.core.annotation.NameInMap("BookedPartner")
         private String bookedPartner;
 
-        @NameInMap("Currency")
+        @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
-        @NameInMap("DeliveryTime")
+        @com.aliyun.core.annotation.NameInMap("DeliveryTime")
         private Long deliveryTime;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("DomainType")
+        @com.aliyun.core.annotation.NameInMap("DomainType")
         private String domainType;
 
-        @NameInMap("FailCode")
+        @com.aliyun.core.annotation.NameInMap("FailCode")
         private String failCode;
 
-        @NameInMap("HighBid")
+        @com.aliyun.core.annotation.NameInMap("HighBid")
         private Float highBid;
 
-        @NameInMap("HighBidder")
+        @com.aliyun.core.annotation.NameInMap("HighBidder")
         private String highBidder;
 
-        @NameInMap("NextValidBid")
+        @com.aliyun.core.annotation.NameInMap("NextValidBid")
         private Float nextValidBid;
 
-        @NameInMap("PartnerType")
+        @com.aliyun.core.annotation.NameInMap("PartnerType")
         private String partnerType;
 
-        @NameInMap("PayEndTime")
+        @com.aliyun.core.annotation.NameInMap("PayEndTime")
         private Long payEndTime;
 
-        @NameInMap("PayPrice")
+        @com.aliyun.core.annotation.NameInMap("PayPrice")
         private Float payPrice;
 
-        @NameInMap("PayStatus")
+        @com.aliyun.core.annotation.NameInMap("PayStatus")
         private String payStatus;
 
-        @NameInMap("ProduceStatus")
+        @com.aliyun.core.annotation.NameInMap("ProduceStatus")
         private String produceStatus;
 
-        @NameInMap("ReserveMax")
+        @com.aliyun.core.annotation.NameInMap("ReserveMax")
         private Long reserveMax;
 
-        @NameInMap("ReserveMet")
+        @com.aliyun.core.annotation.NameInMap("ReserveMet")
         private Boolean reserveMet;
 
-        @NameInMap("ReserveMin")
+        @com.aliyun.core.annotation.NameInMap("ReserveMin")
         private Long reserveMin;
 
-        @NameInMap("ReservePrice")
+        @com.aliyun.core.annotation.NameInMap("ReservePrice")
         private Long reservePrice;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TransferInPrice")
+        @com.aliyun.core.annotation.NameInMap("TransferInPrice")
         private Float transferInPrice;
 
-        @NameInMap("YourCurrentBid")
+        @com.aliyun.core.annotation.NameInMap("YourCurrentBid")
         private Float yourCurrentBid;
 
-        @NameInMap("YourMaxBid")
+        @com.aliyun.core.annotation.NameInMap("YourMaxBid")
         private Float yourMaxBid;
 
         private Data(Builder builder) {

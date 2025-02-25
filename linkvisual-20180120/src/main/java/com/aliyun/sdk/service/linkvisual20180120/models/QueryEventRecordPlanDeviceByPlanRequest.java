@@ -75,11 +75,11 @@ public class QueryEventRecordPlanDeviceByPlanRequest extends Request {
             super();
         } 
 
-        private Builder(QueryEventRecordPlanDeviceByPlanRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.pageSize = response.pageSize;
-            this.planId = response.planId;
+        private Builder(QueryEventRecordPlanDeviceByPlanRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.pageSize = request.pageSize;
+            this.planId = request.planId;
         } 
 
         /**

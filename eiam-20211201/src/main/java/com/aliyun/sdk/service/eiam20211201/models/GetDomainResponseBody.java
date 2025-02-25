@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDomainResponseBody} extends {@link TeaModel}
  *
  * <p>GetDomainResponseBody</p>
  */
 public class GetDomainResponseBody extends TeaModel {
-    @NameInMap("Domain")
+    @com.aliyun.core.annotation.NameInMap("Domain")
     private Domain domain;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetDomainResponseBody(Builder builder) {
@@ -71,8 +76,14 @@ public class GetDomainResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDomainResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDomainResponseBody</p>
+     */
     public static class Filing extends TeaModel {
-        @NameInMap("IcpNumber")
+        @com.aliyun.core.annotation.NameInMap("IcpNumber")
         private String icpNumber;
 
         private Filing(Builder builder) {
@@ -98,7 +109,7 @@ public class GetDomainResponseBody extends TeaModel {
             private String icpNumber; 
 
             /**
-             * 域名关联的备案号, 长度最大限制64。
+             * <p>域名关联的备案号, 长度最大限制64。</p>
              */
             public Builder icpNumber(String icpNumber) {
                 this.icpNumber = icpNumber;
@@ -112,32 +123,38 @@ public class GetDomainResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDomainResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDomainResponseBody</p>
+     */
     public static class Domain extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("DefaultDomain")
+        @com.aliyun.core.annotation.NameInMap("DefaultDomain")
         private Boolean defaultDomain;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("DomainId")
+        @com.aliyun.core.annotation.NameInMap("DomainId")
         private String domainId;
 
-        @NameInMap("DomainType")
+        @com.aliyun.core.annotation.NameInMap("DomainType")
         private String domainType;
 
-        @NameInMap("Filing")
+        @com.aliyun.core.annotation.NameInMap("Filing")
         private Filing filing;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("LockMode")
+        @com.aliyun.core.annotation.NameInMap("LockMode")
         private String lockMode;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private Domain(Builder builder) {
@@ -235,7 +252,10 @@ public class GetDomainResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * 域名创建时间，Unix时间戳格式，单位为毫秒。
+             * <p>域名创建时间，Unix时间戳格式，单位为毫秒。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649830226000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -243,7 +263,10 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * 是否默认域名。true表示实例默认域名，false表示非默认域名
+             * <p>是否默认域名。true表示实例默认域名，false表示非默认域名</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder defaultDomain(Boolean defaultDomain) {
                 this.defaultDomain = defaultDomain;
@@ -251,7 +274,10 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * 域名。
+             * <p>域名。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>login.example.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -259,7 +285,10 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * 域名ID。
+             * <p>域名ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dm_examplexxxxx</p>
              */
             public Builder domainId(String domainId) {
                 this.domainId = domainId;
@@ -267,7 +296,10 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * 域名类型。枚举取值:system_init(系统初始化)、user_custom(用户自定义)。
+             * <p>域名类型。枚举取值:system_init(系统初始化)、user_custom(用户自定义)。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>system_init</p>
              */
             public Builder domainType(String domainType) {
                 this.domainType = domainType;
@@ -275,7 +307,7 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * 域名备案信息。
+             * <p>域名备案信息。</p>
              */
             public Builder filing(Filing filing) {
                 this.filing = filing;
@@ -283,7 +315,10 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * 实例ID。
+             * <p>实例ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -291,7 +326,10 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * 域名锁定状态。枚举取值:unlock(正常)、lockByLicense(因License限制不可用)。
+             * <p>域名锁定状态。枚举取值:unlock(正常)、lockByLicense(因License限制不可用)。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>unlock</p>
              */
             public Builder lockMode(String lockMode) {
                 this.lockMode = lockMode;
@@ -299,7 +337,10 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * 域名最近更新时间，Unix时间戳格式，单位为毫秒。
+             * <p>域名最近更新时间，Unix时间戳格式，单位为毫秒。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649830226000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

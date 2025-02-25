@@ -84,7 +84,7 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * The ID of the resource.
+         * The resource ID. You can specify up to 20 resource IDs.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -102,7 +102,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The tag keys of the resource.
+         * The key of the tag that you want to remove. You can specify at most 20 tag keys. The tag key cannot be an empty string.
+         * <p>
+         * 
+         * A tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain `http://` or `https://`.
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

@@ -1,64 +1,69 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateQualityProjectRequest} extends {@link RequestModel}
  *
  * <p>CreateQualityProjectRequest</p>
  */
 public class CreateQualityProjectRequest extends Request {
-    @Body
-    @NameInMap("AnalysisIds")
-    @Validation(required = true)
-    private java.util.List < Long > analysisIds;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AnalysisIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Long> analysisIds;
 
-    @Body
-    @NameInMap("ChannelTouchType")
-    private java.util.List < Integer > channelTouchType;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChannelTouchType")
+    private java.util.List<Integer> channelTouchType;
 
-    @Body
-    @NameInMap("CheckFreqType")
-    @Validation(required = true, maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CheckFreqType")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
     private Integer checkFreqType;
 
-    @Body
-    @NameInMap("DepList")
-    private java.util.List < Long > depList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DepList")
+    private java.util.List<Long> depList;
 
-    @Body
-    @NameInMap("GroupList")
-    private java.util.List < Long > groupList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GroupList")
+    private java.util.List<Long> groupList;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("ProjectName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectName;
 
-    @Body
-    @NameInMap("ScopeType")
-    @Validation(required = true, maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ScopeType")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
     private Integer scopeType;
 
-    @Body
-    @NameInMap("ServicerList")
-    private java.util.List < String > servicerList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServicerList")
+    private java.util.List<String> servicerList;
 
-    @Body
-    @NameInMap("TimeRangeEnd")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TimeRangeEnd")
     private String timeRangeEnd;
 
-    @Body
-    @NameInMap("TimeRangeStart")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TimeRangeStart")
     private String timeRangeStart;
 
     private CreateQualityProjectRequest(Builder builder) {
@@ -92,14 +97,14 @@ public class CreateQualityProjectRequest extends Request {
     /**
      * @return analysisIds
      */
-    public java.util.List < Long > getAnalysisIds() {
+    public java.util.List<Long> getAnalysisIds() {
         return this.analysisIds;
     }
 
     /**
      * @return channelTouchType
      */
-    public java.util.List < Integer > getChannelTouchType() {
+    public java.util.List<Integer> getChannelTouchType() {
         return this.channelTouchType;
     }
 
@@ -113,14 +118,14 @@ public class CreateQualityProjectRequest extends Request {
     /**
      * @return depList
      */
-    public java.util.List < Long > getDepList() {
+    public java.util.List<Long> getDepList() {
         return this.depList;
     }
 
     /**
      * @return groupList
      */
-    public java.util.List < Long > getGroupList() {
+    public java.util.List<Long> getGroupList() {
         return this.groupList;
     }
 
@@ -148,7 +153,7 @@ public class CreateQualityProjectRequest extends Request {
     /**
      * @return servicerList
      */
-    public java.util.List < String > getServicerList() {
+    public java.util.List<String> getServicerList() {
         return this.servicerList;
     }
 
@@ -167,15 +172,15 @@ public class CreateQualityProjectRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateQualityProjectRequest, Builder> {
-        private java.util.List < Long > analysisIds; 
-        private java.util.List < Integer > channelTouchType; 
+        private java.util.List<Long> analysisIds; 
+        private java.util.List<Integer> channelTouchType; 
         private Integer checkFreqType; 
-        private java.util.List < Long > depList; 
-        private java.util.List < Long > groupList; 
+        private java.util.List<Long> depList; 
+        private java.util.List<Long> groupList; 
         private String instanceId; 
         private String projectName; 
         private Integer scopeType; 
-        private java.util.List < String > servicerList; 
+        private java.util.List<String> servicerList; 
         private String timeRangeEnd; 
         private String timeRangeStart; 
 
@@ -199,9 +204,9 @@ public class CreateQualityProjectRequest extends Request {
         } 
 
         /**
-         * AnalysisIds.
+         * <p>This parameter is required.</p>
          */
-        public Builder analysisIds(java.util.List < Long > analysisIds) {
+        public Builder analysisIds(java.util.List<Long> analysisIds) {
             this.putBodyParameter("AnalysisIds", analysisIds);
             this.analysisIds = analysisIds;
             return this;
@@ -210,14 +215,14 @@ public class CreateQualityProjectRequest extends Request {
         /**
          * ChannelTouchType.
          */
-        public Builder channelTouchType(java.util.List < Integer > channelTouchType) {
+        public Builder channelTouchType(java.util.List<Integer> channelTouchType) {
             this.putBodyParameter("ChannelTouchType", channelTouchType);
             this.channelTouchType = channelTouchType;
             return this;
         }
 
         /**
-         * CheckFreqType.
+         * <p>This parameter is required.</p>
          */
         public Builder checkFreqType(Integer checkFreqType) {
             this.putBodyParameter("CheckFreqType", checkFreqType);
@@ -228,7 +233,7 @@ public class CreateQualityProjectRequest extends Request {
         /**
          * DepList.
          */
-        public Builder depList(java.util.List < Long > depList) {
+        public Builder depList(java.util.List<Long> depList) {
             this.putBodyParameter("DepList", depList);
             this.depList = depList;
             return this;
@@ -237,14 +242,14 @@ public class CreateQualityProjectRequest extends Request {
         /**
          * GroupList.
          */
-        public Builder groupList(java.util.List < Long > groupList) {
+        public Builder groupList(java.util.List<Long> groupList) {
             this.putBodyParameter("GroupList", groupList);
             this.groupList = groupList;
             return this;
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -253,7 +258,7 @@ public class CreateQualityProjectRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>This parameter is required.</p>
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -262,7 +267,7 @@ public class CreateQualityProjectRequest extends Request {
         }
 
         /**
-         * ScopeType.
+         * <p>This parameter is required.</p>
          */
         public Builder scopeType(Integer scopeType) {
             this.putBodyParameter("ScopeType", scopeType);
@@ -273,7 +278,7 @@ public class CreateQualityProjectRequest extends Request {
         /**
          * ServicerList.
          */
-        public Builder servicerList(java.util.List < String > servicerList) {
+        public Builder servicerList(java.util.List<String> servicerList) {
             this.putBodyParameter("ServicerList", servicerList);
             this.servicerList = servicerList;
             return this;

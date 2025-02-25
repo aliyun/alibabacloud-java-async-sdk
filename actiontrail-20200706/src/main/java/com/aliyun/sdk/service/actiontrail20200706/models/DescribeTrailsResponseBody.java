@@ -84,6 +84,12 @@ public class DescribeTrailsResponseBody extends TeaModel {
         @NameInMap("IsOrganizationTrail")
         private Boolean isOrganizationTrail;
 
+        @NameInMap("MaxComputeProjectArn")
+        private String maxComputeProjectArn;
+
+        @NameInMap("MaxComputeWriteRoleArn")
+        private String maxComputeWriteRoleArn;
+
         @NameInMap("Name")
         private String name;
 
@@ -134,6 +140,8 @@ public class DescribeTrailsResponseBody extends TeaModel {
             this.eventRW = builder.eventRW;
             this.homeRegion = builder.homeRegion;
             this.isOrganizationTrail = builder.isOrganizationTrail;
+            this.maxComputeProjectArn = builder.maxComputeProjectArn;
+            this.maxComputeWriteRoleArn = builder.maxComputeWriteRoleArn;
             this.name = builder.name;
             this.organizationId = builder.organizationId;
             this.ossBucketLocation = builder.ossBucketLocation;
@@ -185,6 +193,20 @@ public class DescribeTrailsResponseBody extends TeaModel {
          */
         public Boolean getIsOrganizationTrail() {
             return this.isOrganizationTrail;
+        }
+
+        /**
+         * @return maxComputeProjectArn
+         */
+        public String getMaxComputeProjectArn() {
+            return this.maxComputeProjectArn;
+        }
+
+        /**
+         * @return maxComputeWriteRoleArn
+         */
+        public String getMaxComputeWriteRoleArn() {
+            return this.maxComputeWriteRoleArn;
         }
 
         /**
@@ -297,6 +319,8 @@ public class DescribeTrailsResponseBody extends TeaModel {
             private String eventRW; 
             private String homeRegion; 
             private Boolean isOrganizationTrail; 
+            private String maxComputeProjectArn; 
+            private String maxComputeWriteRoleArn; 
             private String name; 
             private String organizationId; 
             private String ossBucketLocation; 
@@ -351,6 +375,22 @@ public class DescribeTrailsResponseBody extends TeaModel {
              */
             public Builder isOrganizationTrail(Boolean isOrganizationTrail) {
                 this.isOrganizationTrail = isOrganizationTrail;
+                return this;
+            }
+
+            /**
+             * MaxComputeProjectArn.
+             */
+            public Builder maxComputeProjectArn(String maxComputeProjectArn) {
+                this.maxComputeProjectArn = maxComputeProjectArn;
+                return this;
+            }
+
+            /**
+             * MaxComputeWriteRoleArn.
+             */
+            public Builder maxComputeWriteRoleArn(String maxComputeWriteRoleArn) {
+                this.maxComputeWriteRoleArn = maxComputeWriteRoleArn;
                 return this;
             }
 

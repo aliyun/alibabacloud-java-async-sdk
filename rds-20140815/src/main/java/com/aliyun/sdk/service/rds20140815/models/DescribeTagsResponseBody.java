@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTagsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTagsResponseBody</p>
  */
 public class DescribeTagsResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeTagsResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The tags that are added to the instance.
+         * <p>The tags that are added to the instance.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -58,7 +63,10 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,9 +79,15 @@ public class DescribeTagsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTagsResponseBody</p>
+     */
     public static class DBInstanceIds extends TeaModel {
-        @NameInMap("DBInstanceIds")
-        private java.util.List < String > DBInstanceIds;
+        @com.aliyun.core.annotation.NameInMap("DBInstanceIds")
+        private java.util.List<String> DBInstanceIds;
 
         private DBInstanceIds(Builder builder) {
             this.DBInstanceIds = builder.DBInstanceIds;
@@ -90,17 +104,17 @@ public class DescribeTagsResponseBody extends TeaModel {
         /**
          * @return DBInstanceIds
          */
-        public java.util.List < String > getDBInstanceIds() {
+        public java.util.List<String> getDBInstanceIds() {
             return this.DBInstanceIds;
         }
 
         public static final class Builder {
-            private java.util.List < String > DBInstanceIds; 
+            private java.util.List<String> DBInstanceIds; 
 
             /**
              * DBInstanceIds.
              */
-            public Builder DBInstanceIds(java.util.List < String > DBInstanceIds) {
+            public Builder DBInstanceIds(java.util.List<String> DBInstanceIds) {
                 this.DBInstanceIds = DBInstanceIds;
                 return this;
             }
@@ -112,14 +126,20 @@ public class DescribeTagsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTagsResponseBody</p>
+     */
     public static class TagInfos extends TeaModel {
-        @NameInMap("DBInstanceIds")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceIds")
         private DBInstanceIds DBInstanceIds;
 
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private TagInfos(Builder builder) {
@@ -163,7 +183,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The IDs of the instances to which the tag is added.
+             * <p>The IDs of the instances to which the tag is added.</p>
              */
             public Builder DBInstanceIds(DBInstanceIds DBInstanceIds) {
                 this.DBInstanceIds = DBInstanceIds;
@@ -171,7 +191,10 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -179,7 +202,10 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -193,9 +219,15 @@ public class DescribeTagsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTagsResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("TagInfos")
-        private java.util.List < TagInfos> tagInfos;
+        @com.aliyun.core.annotation.NameInMap("TagInfos")
+        private java.util.List<TagInfos> tagInfos;
 
         private Items(Builder builder) {
             this.tagInfos = builder.tagInfos;
@@ -212,17 +244,17 @@ public class DescribeTagsResponseBody extends TeaModel {
         /**
          * @return tagInfos
          */
-        public java.util.List < TagInfos> getTagInfos() {
+        public java.util.List<TagInfos> getTagInfos() {
             return this.tagInfos;
         }
 
         public static final class Builder {
-            private java.util.List < TagInfos> tagInfos; 
+            private java.util.List<TagInfos> tagInfos; 
 
             /**
              * TagInfos.
              */
-            public Builder tagInfos(java.util.List < TagInfos> tagInfos) {
+            public Builder tagInfos(java.util.List<TagInfos> tagInfos) {
                 this.tagInfos = tagInfos;
                 return this;
             }

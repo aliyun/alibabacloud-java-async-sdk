@@ -1,77 +1,82 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGlobalAccelerationInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeGlobalAccelerationInstancesRequest</p>
  */
 public class DescribeGlobalAccelerationInstancesRequest extends Request {
-    @Query
-    @NameInMap("BandwidthType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BandwidthType")
     private String bandwidthType;
 
-    @Query
-    @NameInMap("GlobalAccelerationInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GlobalAccelerationInstanceId")
     private String globalAccelerationInstanceId;
 
-    @Query
-    @NameInMap("IncludeReservationData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeReservationData")
     private Boolean includeReservationData;
 
-    @Query
-    @NameInMap("IpAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpAddress")
     private String ipAddress;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ServerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerId")
     private String serverId;
 
-    @Query
-    @NameInMap("ServiceLocation")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceLocation")
     private String serviceLocation;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeGlobalAccelerationInstancesRequest(Builder builder) {
@@ -252,11 +257,14 @@ public class DescribeGlobalAccelerationInstancesRequest extends Request {
         } 
 
         /**
-         * The bandwidth type of the GA instance. Valid values:
-         * <p>
+         * <p>The bandwidth type of the GA instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Sharing</strong></li>
+         * <li><strong>Exclusive</strong> (default)</li>
+         * </ul>
          * 
-         * *   **Sharing**
-         * *   **Exclusive** (default)
+         * <strong>example:</strong>
+         * <p>Exclusive</p>
          */
         public Builder bandwidthType(String bandwidthType) {
             this.putQueryParameter("BandwidthType", bandwidthType);
@@ -265,7 +273,10 @@ public class DescribeGlobalAccelerationInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the GA instance.
+         * <p>The ID of the GA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-234sljmxaz****</p>
          */
         public Builder globalAccelerationInstanceId(String globalAccelerationInstanceId) {
             this.putQueryParameter("GlobalAccelerationInstanceId", globalAccelerationInstanceId);
@@ -274,11 +285,14 @@ public class DescribeGlobalAccelerationInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to return information about pending orders. Valid values:
-         * <p>
+         * <p>Specifies whether to return information about pending orders. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong> (default)</li>
+         * <li><strong>true</strong></li>
+         * </ul>
          * 
-         * *   **false** (default)
-         * *   **true**
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includeReservationData(Boolean includeReservationData) {
             this.putQueryParameter("IncludeReservationData", includeReservationData);
@@ -287,7 +301,10 @@ public class DescribeGlobalAccelerationInstancesRequest extends Request {
         }
 
         /**
-         * The public IP address of the GA instance.
+         * <p>The public IP address of the GA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12.xx.xx.78</p>
          */
         public Builder ipAddress(String ipAddress) {
             this.putQueryParameter("IpAddress", ipAddress);
@@ -296,7 +313,10 @@ public class DescribeGlobalAccelerationInstancesRequest extends Request {
         }
 
         /**
-         * The name of the GA instance.
+         * <p>The name of the GA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GA-1</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -323,7 +343,10 @@ public class DescribeGlobalAccelerationInstancesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -332,7 +355,10 @@ public class DescribeGlobalAccelerationInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **100**. Default value: **10**.
+         * <p>The number of entries to return on each page. Maximum value: <strong>100</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -341,7 +367,11 @@ public class DescribeGlobalAccelerationInstancesRequest extends Request {
         }
 
         /**
-         * The region ID of the GA instance. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <p>The region ID of the GA instance. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -368,7 +398,10 @@ public class DescribeGlobalAccelerationInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the backend service instance.
+         * <p>The ID of the backend service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-sxjblddejj9x****</p>
          */
         public Builder serverId(String serverId) {
             this.putQueryParameter("ServerId", serverId);
@@ -377,13 +410,16 @@ public class DescribeGlobalAccelerationInstancesRequest extends Request {
         }
 
         /**
-         * The region of the backend service. Valid values:
-         * <p>
+         * <p>The region of the backend service. Valid values:</p>
+         * <ul>
+         * <li><strong>china-mainland</strong></li>
+         * <li><strong>north-america</strong></li>
+         * <li><strong>asia-pacific</strong></li>
+         * <li><strong>europe</strong></li>
+         * </ul>
          * 
-         * *   **china-mainland**
-         * *   **north-america**
-         * *   **asia-pacific**
-         * *   **europe**
+         * <strong>example:</strong>
+         * <p>china-mainland</p>
          */
         public Builder serviceLocation(String serviceLocation) {
             this.putQueryParameter("ServiceLocation", serviceLocation);
@@ -392,13 +428,16 @@ public class DescribeGlobalAccelerationInstancesRequest extends Request {
         }
 
         /**
-         * The status of the GA instance. Valid values:
-         * <p>
+         * <p>The status of the GA instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Available</strong></li>
+         * <li><strong>Inuse</strong></li>
+         * <li><strong>Associating</strong></li>
+         * <li><strong>Unassociating</strong></li>
+         * </ul>
          * 
-         * *   **Available**
-         * *   **Inuse**
-         * *   **Associating**
-         * *   **Unassociating**
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

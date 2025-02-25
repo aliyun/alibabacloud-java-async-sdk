@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20170622.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryReceiverDetailResponseBody</p>
  */
 public class QueryReceiverDetailResponseBody extends TeaModel {
-    @NameInMap("DataSchema")
+    @com.aliyun.core.annotation.NameInMap("DataSchema")
     private String dataSchema;
 
-    @NameInMap("NextStart")
+    @com.aliyun.core.annotation.NameInMap("NextStart")
     private String nextStart;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
     private QueryReceiverDetailResponseBody(Builder builder) {
@@ -132,16 +131,16 @@ public class QueryReceiverDetailResponseBody extends TeaModel {
     } 
 
     public static class Detail extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private String data;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("UtcCreateTime")
+        @com.aliyun.core.annotation.NameInMap("UtcCreateTime")
         private Long utcCreateTime;
 
         private Detail(Builder builder) {
@@ -233,7 +232,7 @@ public class QueryReceiverDetailResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("detail")
+        @com.aliyun.core.annotation.NameInMap("detail")
         private java.util.List < Detail> detail;
 
         private Data(Builder builder) {

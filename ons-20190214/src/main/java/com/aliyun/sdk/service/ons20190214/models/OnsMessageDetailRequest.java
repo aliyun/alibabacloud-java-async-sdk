@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OnsMessageDetailRequest} extends {@link RequestModel}
  *
  * <p>OnsMessageDetailRequest</p>
  */
 public class OnsMessageDetailRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("MsgId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MsgId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String msgId;
 
-    @Query
-    @NameInMap("Topic")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Topic")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String topic;
 
     private OnsMessageDetailRequest(Builder builder) {
@@ -85,7 +85,11 @@ public class OnsMessageDetailRequest extends Request {
         } 
 
         /**
-         * The ID of the Message Queue for Apache RocketMQ Instance.
+         * <p>The ID of the ApsaraMQ for RocketMQ Instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MQ_INST_184681981******_BXig0x6A</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -94,7 +98,11 @@ public class OnsMessageDetailRequest extends Request {
         }
 
         /**
-         * The ID of the message that you want to query.
+         * <p>The ID of the message that you want to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1E0578FE110F18B4AAC235C0******</p>
          */
         public Builder msgId(String msgId) {
             this.putQueryParameter("MsgId", msgId);
@@ -103,7 +111,11 @@ public class OnsMessageDetailRequest extends Request {
         }
 
         /**
-         * The name of the topic in which the message you want to query is stored.
+         * <p>The name of the topic in which the message you want to query is stored.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-mq_topic</p>
          */
         public Builder topic(String topic) {
             this.putQueryParameter("Topic", topic);

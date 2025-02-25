@@ -1,57 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCallTaskRequest} extends {@link RequestModel}
  *
  * <p>ListCallTaskRequest</p>
  */
 public class ListCallTaskRequest extends Request {
-    @Query
-    @NameInMap("BizType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizType")
     private String bizType;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation()
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation()
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation()
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation()
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
-    @Query
-    @NameInMap("TaskName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskName")
     private String taskName;
 
-    @Query
-    @NameInMap("TemplateName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
     private String templateName;
 
     private ListCallTaskRequest(Builder builder) {
@@ -167,22 +167,30 @@ public class ListCallTaskRequest extends Request {
             super();
         } 
 
-        private Builder(ListCallTaskRequest response) {
-            super(response);
-            this.bizType = response.bizType;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.status = response.status;
-            this.taskId = response.taskId;
-            this.taskName = response.taskName;
-            this.templateName = response.templateName;
+        private Builder(ListCallTaskRequest request) {
+            super(request);
+            this.bizType = request.bizType;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.status = request.status;
+            this.taskId = request.taskId;
+            this.taskName = request.taskName;
+            this.templateName = request.templateName;
         } 
 
         /**
-         * BizType.
+         * <p>The type of the task template. Valid values:</p>
+         * <ul>
+         * <li><strong>VMS_VOICE_TTS</strong>: the text-to-speech (TTS) notification template.</li>
+         * <li><strong>VMS_VOICE_CODE</strong>: the voice notification template.</li>
+         * <li><strong>VMS_TTS</strong>: the voice verification code template.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VMS_VOICE_CODE</p>
          */
         public Builder bizType(String bizType) {
             this.putQueryParameter("BizType", bizType);
@@ -200,7 +208,10 @@ public class ListCallTaskRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -209,7 +220,10 @@ public class ListCallTaskRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -236,7 +250,20 @@ public class ListCallTaskRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The task state. Valid values:</p>
+         * <ul>
+         * <li><strong>INIT</strong>: The task is in the initial state.</li>
+         * <li><strong>RELEASE</strong>: The task is being parsed.</li>
+         * <li><strong>RUNNING</strong>: The task is running.</li>
+         * <li><strong>STOP</strong>: The task is suspended.</li>
+         * <li><strong>SYSTEM_STOP</strong>: The task is suspended by the system.</li>
+         * <li><strong>CANCEL</strong>: The task is canceled.</li>
+         * <li><strong>SYSTEM_CANCEL</strong>: The task is canceled by the system.</li>
+         * <li><strong>DONE</strong>: The task is complete.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DONE</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -245,7 +272,10 @@ public class ListCallTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>151001****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -254,7 +284,10 @@ public class ListCallTaskRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * <p>The task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -263,7 +296,10 @@ public class ListCallTaskRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test Template</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);

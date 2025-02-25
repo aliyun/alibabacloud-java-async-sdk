@@ -94,6 +94,108 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * <b>description</b> :
+     * <p>Please ensure that before using this interface, you have fully understood the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/computing-pricing-1">Pricing and Charges</a>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/computing-pricing-1">Pricing and Charges</a> of MaxCompute Elastic Reserved CU.</p>
+     * 
+     * @param request the request parameters of ApplyComputeQuotaPlan  ApplyComputeQuotaPlanRequest
+     * @return ApplyComputeQuotaPlanResponse
+     */
+    @Override
+    public CompletableFuture<ApplyComputeQuotaPlanResponse> applyComputeQuotaPlan(ApplyComputeQuotaPlanRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ApplyComputeQuotaPlan").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/quotas/{nickname}/computeQuotaPlan/{planName}/apply").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ApplyComputeQuotaPlanResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ApplyComputeQuotaPlanResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Please ensure that before using this interface, you have fully understood the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/computing-pricing-1">Pricing and Charges</a>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/computing-pricing-1">Pricing and Charges</a> of MaxCompute Elastic Reserved CU.</p>
+     * 
+     * @param request the request parameters of CreateComputeQuotaPlan  CreateComputeQuotaPlanRequest
+     * @return CreateComputeQuotaPlanResponse
+     */
+    @Override
+    public CompletableFuture<CreateComputeQuotaPlanResponse> createComputeQuotaPlan(CreateComputeQuotaPlanRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateComputeQuotaPlan").setMethod(HttpMethod.POST).setPathRegex("/api/v1/quotas/{nickname}/computeQuotaPlan").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateComputeQuotaPlanResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateComputeQuotaPlanResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateMmsDataSource  CreateMmsDataSourceRequest
+     * @return CreateMmsDataSourceResponse
+     */
+    @Override
+    public CompletableFuture<CreateMmsDataSourceResponse> createMmsDataSource(CreateMmsDataSourceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateMmsDataSource").setMethod(HttpMethod.POST).setPathRegex("/api/v1/mms/datasources").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateMmsDataSourceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateMmsDataSourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateMmsFetchMetadataJob  CreateMmsFetchMetadataJobRequest
+     * @return CreateMmsFetchMetadataJobResponse
+     */
+    @Override
+    public CompletableFuture<CreateMmsFetchMetadataJobResponse> createMmsFetchMetadataJob(CreateMmsFetchMetadataJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateMmsFetchMetadataJob").setMethod(HttpMethod.POST).setPathRegex("/api/v1/mms/datasources/{sourceId}/scans").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateMmsFetchMetadataJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateMmsFetchMetadataJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateMmsJob  CreateMmsJobRequest
+     * @return CreateMmsJobResponse
+     */
+    @Override
+    public CompletableFuture<CreateMmsJobResponse> createMmsJob(CreateMmsJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateMmsJob").setMethod(HttpMethod.POST).setPathRegex("/api/v1/mms/datasources/{sourceId}/jobs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateMmsJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateMmsJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreatePackage  CreatePackageRequest
+     * @return CreatePackageResponse
+     */
     @Override
     public CompletableFuture<CreatePackageResponse> createPackage(CreatePackageRequest request) {
         try {
@@ -108,6 +210,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateProject  CreateProjectRequest
+     * @return CreateProjectResponse
+     */
     @Override
     public CompletableFuture<CreateProjectResponse> createProject(CreateProjectRequest request) {
         try {
@@ -122,6 +228,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateQuotaPlan  CreateQuotaPlanRequest
+     * @return CreateQuotaPlanResponse
+     */
     @Override
     public CompletableFuture<CreateQuotaPlanResponse> createQuotaPlan(CreateQuotaPlanRequest request) {
         try {
@@ -136,20 +246,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<CreateQuotaScheduleResponse> createQuotaSchedule(CreateQuotaScheduleRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateQuotaSchedule").setMethod(HttpMethod.POST).setPathRegex("/api/v1/quotas/{nickname}/schedule").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateQuotaScheduleResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CreateQuotaScheduleResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of CreateRole  CreateRoleRequest
+     * @return CreateRoleResponse
+     */
     @Override
     public CompletableFuture<CreateRoleResponse> createRole(CreateRoleRequest request) {
         try {
@@ -164,6 +264,64 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteComputeQuotaPlan  DeleteComputeQuotaPlanRequest
+     * @return DeleteComputeQuotaPlanResponse
+     */
+    @Override
+    public CompletableFuture<DeleteComputeQuotaPlanResponse> deleteComputeQuotaPlan(DeleteComputeQuotaPlanRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteComputeQuotaPlan").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/quotas/{nickname}/computeQuotaPlan/{planName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteComputeQuotaPlanResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteComputeQuotaPlanResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteMmsDataSource  DeleteMmsDataSourceRequest
+     * @return DeleteMmsDataSourceResponse
+     */
+    @Override
+    public CompletableFuture<DeleteMmsDataSourceResponse> deleteMmsDataSource(DeleteMmsDataSourceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteMmsDataSource").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/mms/datasources/{sourceId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteMmsDataSourceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteMmsDataSourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteMmsJob  DeleteMmsJobRequest
+     * @return DeleteMmsJobResponse
+     */
+    @Override
+    public CompletableFuture<DeleteMmsJobResponse> deleteMmsJob(DeleteMmsJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteMmsJob").setMethod(HttpMethod.POST).setPathRegex("/api/v1/mms/datasources/{sourceId}/jobs/{jobId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteMmsJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteMmsJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteQuotaPlan  DeleteQuotaPlanRequest
+     * @return DeleteQuotaPlanResponse
+     */
     @Override
     public CompletableFuture<DeleteQuotaPlanResponse> deleteQuotaPlan(DeleteQuotaPlanRequest request) {
         try {
@@ -178,6 +336,64 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetComputeEffectivePlan  GetComputeEffectivePlanRequest
+     * @return GetComputeEffectivePlanResponse
+     */
+    @Override
+    public CompletableFuture<GetComputeEffectivePlanResponse> getComputeEffectivePlan(GetComputeEffectivePlanRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetComputeEffectivePlan").setMethod(HttpMethod.GET).setPathRegex("/api/v1/quotas/{nickname}/computeEffectivePlan/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetComputeEffectivePlanResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetComputeEffectivePlanResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetComputeQuotaPlan  GetComputeQuotaPlanRequest
+     * @return GetComputeQuotaPlanResponse
+     */
+    @Override
+    public CompletableFuture<GetComputeQuotaPlanResponse> getComputeQuotaPlan(GetComputeQuotaPlanRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetComputeQuotaPlan").setMethod(HttpMethod.GET).setPathRegex("/api/v1/quotas/{nickname}/computeQuotaPlan/{planName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetComputeQuotaPlanResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetComputeQuotaPlanResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetComputeQuotaSchedule  GetComputeQuotaScheduleRequest
+     * @return GetComputeQuotaScheduleResponse
+     */
+    @Override
+    public CompletableFuture<GetComputeQuotaScheduleResponse> getComputeQuotaSchedule(GetComputeQuotaScheduleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetComputeQuotaSchedule").setMethod(HttpMethod.GET).setPathRegex("/api/v1/quotas/{nickname}/computeQuotaSchedule").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetComputeQuotaScheduleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetComputeQuotaScheduleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetJobResourceUsage  GetJobResourceUsageRequest
+     * @return GetJobResourceUsageResponse
+     */
     @Override
     public CompletableFuture<GetJobResourceUsageResponse> getJobResourceUsage(GetJobResourceUsageRequest request) {
         try {
@@ -192,6 +408,154 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetMmsAsyncTask  GetMmsAsyncTaskRequest
+     * @return GetMmsAsyncTaskResponse
+     */
+    @Override
+    public CompletableFuture<GetMmsAsyncTaskResponse> getMmsAsyncTask(GetMmsAsyncTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetMmsAsyncTask").setMethod(HttpMethod.GET).setPathRegex("/api/v1/mms/datasources/{sourceId}/asyncTasks/{asyncTaskId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetMmsAsyncTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetMmsAsyncTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetMmsDataSource  GetMmsDataSourceRequest
+     * @return GetMmsDataSourceResponse
+     */
+    @Override
+    public CompletableFuture<GetMmsDataSourceResponse> getMmsDataSource(GetMmsDataSourceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetMmsDataSource").setMethod(HttpMethod.GET).setPathRegex("/api/v1/mms/datasources/{sourceId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetMmsDataSourceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetMmsDataSourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetMmsDb  GetMmsDbRequest
+     * @return GetMmsDbResponse
+     */
+    @Override
+    public CompletableFuture<GetMmsDbResponse> getMmsDb(GetMmsDbRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetMmsDb").setMethod(HttpMethod.GET).setPathRegex("/api/v1/mms/datasources/{sourceId}/dbs/{dbId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetMmsDbResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetMmsDbResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetMmsFetchMetadataJob  GetMmsFetchMetadataJobRequest
+     * @return GetMmsFetchMetadataJobResponse
+     */
+    @Override
+    public CompletableFuture<GetMmsFetchMetadataJobResponse> getMmsFetchMetadataJob(GetMmsFetchMetadataJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetMmsFetchMetadataJob").setMethod(HttpMethod.GET).setPathRegex("/api/v1/mms/datasources/{sourceId}/scans/{scanId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetMmsFetchMetadataJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetMmsFetchMetadataJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetMmsJob  GetMmsJobRequest
+     * @return GetMmsJobResponse
+     */
+    @Override
+    public CompletableFuture<GetMmsJobResponse> getMmsJob(GetMmsJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetMmsJob").setMethod(HttpMethod.GET).setPathRegex("/api/v1/mms/datasources/{sourceId}/jobs/{jobId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetMmsJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetMmsJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetMmsPartition  GetMmsPartitionRequest
+     * @return GetMmsPartitionResponse
+     */
+    @Override
+    public CompletableFuture<GetMmsPartitionResponse> getMmsPartition(GetMmsPartitionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetMmsPartition").setMethod(HttpMethod.GET).setPathRegex("/api/v1/mms/datasources/{sourceId}/partitions/{partitionId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetMmsPartitionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetMmsPartitionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetMmsTable  GetMmsTableRequest
+     * @return GetMmsTableResponse
+     */
+    @Override
+    public CompletableFuture<GetMmsTableResponse> getMmsTable(GetMmsTableRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetMmsTable").setMethod(HttpMethod.GET).setPathRegex("/api/v1/mms/datasources/{sourceId}/tables/{tableId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetMmsTableResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetMmsTableResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetMmsTask  GetMmsTaskRequest
+     * @return GetMmsTaskResponse
+     */
+    @Override
+    public CompletableFuture<GetMmsTaskResponse> getMmsTask(GetMmsTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetMmsTask").setMethod(HttpMethod.GET).setPathRegex("/api/v1/mms/datasources/{sourceId}/tasks/{taskId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetMmsTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetMmsTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetPackage  GetPackageRequest
+     * @return GetPackageResponse
+     */
     @Override
     public CompletableFuture<GetPackageResponse> getPackage(GetPackageRequest request) {
         try {
@@ -206,6 +570,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetProject  GetProjectRequest
+     * @return GetProjectResponse
+     */
     @Override
     public CompletableFuture<GetProjectResponse> getProject(GetProjectRequest request) {
         try {
@@ -220,6 +588,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetQuota  GetQuotaRequest
+     * @return GetQuotaResponse
+     */
     @Override
     public CompletableFuture<GetQuotaResponse> getQuota(GetQuotaRequest request) {
         try {
@@ -234,6 +606,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetQuotaPlan  GetQuotaPlanRequest
+     * @return GetQuotaPlanResponse
+     */
     @Override
     public CompletableFuture<GetQuotaPlanResponse> getQuotaPlan(GetQuotaPlanRequest request) {
         try {
@@ -248,6 +624,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetQuotaSchedule  GetQuotaScheduleRequest
+     * @return GetQuotaScheduleResponse
+     */
     @Override
     public CompletableFuture<GetQuotaScheduleResponse> getQuotaSchedule(GetQuotaScheduleRequest request) {
         try {
@@ -262,6 +642,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetQuotaUsage  GetQuotaUsageRequest
+     * @return GetQuotaUsageResponse
+     */
+    @Override
+    public CompletableFuture<GetQuotaUsageResponse> getQuotaUsage(GetQuotaUsageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetQuotaUsage").setMethod(HttpMethod.GET).setPathRegex("/api/v1/quotas/{nickname}/usage").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetQuotaUsageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetQuotaUsageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetRoleAcl  GetRoleAclRequest
+     * @return GetRoleAclResponse
+     */
     @Override
     public CompletableFuture<GetRoleAclResponse> getRoleAcl(GetRoleAclRequest request) {
         try {
@@ -276,6 +678,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRoleAclOnObject  GetRoleAclOnObjectRequest
+     * @return GetRoleAclOnObjectResponse
+     */
     @Override
     public CompletableFuture<GetRoleAclOnObjectResponse> getRoleAclOnObject(GetRoleAclOnObjectRequest request) {
         try {
@@ -290,6 +696,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRolePolicy  GetRolePolicyRequest
+     * @return GetRolePolicyResponse
+     */
     @Override
     public CompletableFuture<GetRolePolicyResponse> getRolePolicy(GetRolePolicyRequest request) {
         try {
@@ -304,6 +714,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRunningJobs  GetRunningJobsRequest
+     * @return GetRunningJobsResponse
+     */
     @Override
     public CompletableFuture<GetRunningJobsResponse> getRunningJobs(GetRunningJobsRequest request) {
         try {
@@ -318,6 +732,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTableInfo  GetTableInfoRequest
+     * @return GetTableInfoResponse
+     */
+    @Override
+    public CompletableFuture<GetTableInfoResponse> getTableInfo(GetTableInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetTableInfo").setMethod(HttpMethod.GET).setPathRegex("/api/v1/projects/{projectName}/tables/{tableName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetTableInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetTableInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetTrustedProjects  GetTrustedProjectsRequest
+     * @return GetTrustedProjectsResponse
+     */
     @Override
     public CompletableFuture<GetTrustedProjectsResponse> getTrustedProjects(GetTrustedProjectsRequest request) {
         try {
@@ -332,6 +768,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of KillJobs  KillJobsRequest
+     * @return KillJobsResponse
+     */
     @Override
     public CompletableFuture<KillJobsResponse> killJobs(KillJobsRequest request) {
         try {
@@ -346,6 +786,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListComputeMetricsByInstance  ListComputeMetricsByInstanceRequest
+     * @return ListComputeMetricsByInstanceResponse
+     */
+    @Override
+    public CompletableFuture<ListComputeMetricsByInstanceResponse> listComputeMetricsByInstance(ListComputeMetricsByInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListComputeMetricsByInstance").setMethod(HttpMethod.POST).setPathRegex("/api/v1/computeMetrics/listByInstance").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListComputeMetricsByInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListComputeMetricsByInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListComputeQuotaPlan  ListComputeQuotaPlanRequest
+     * @return ListComputeQuotaPlanResponse
+     */
+    @Override
+    public CompletableFuture<ListComputeQuotaPlanResponse> listComputeQuotaPlan(ListComputeQuotaPlanRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListComputeQuotaPlan").setMethod(HttpMethod.GET).setPathRegex("/api/v1/quotas/{nickname}/computeQuotaPlan").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListComputeQuotaPlanResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListComputeQuotaPlanResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListFunctions  ListFunctionsRequest
+     * @return ListFunctionsResponse
+     */
     @Override
     public CompletableFuture<ListFunctionsResponse> listFunctions(ListFunctionsRequest request) {
         try {
@@ -360,6 +840,190 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListJobInfos  ListJobInfosRequest
+     * @return ListJobInfosResponse
+     */
+    @Override
+    public CompletableFuture<ListJobInfosResponse> listJobInfos(ListJobInfosRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListJobInfos").setMethod(HttpMethod.POST).setPathRegex("/api/v1/jobs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListJobInfosResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListJobInfosResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListJobMetric  ListJobMetricRequest
+     * @return ListJobMetricResponse
+     */
+    @Override
+    public CompletableFuture<ListJobMetricResponse> listJobMetric(ListJobMetricRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListJobMetric").setMethod(HttpMethod.POST).setPathRegex("/api/v1/jobs/metric").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListJobMetricResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListJobMetricResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListJobSnapshotInfos  ListJobSnapshotInfosRequest
+     * @return ListJobSnapshotInfosResponse
+     */
+    @Override
+    public CompletableFuture<ListJobSnapshotInfosResponse> listJobSnapshotInfos(ListJobSnapshotInfosRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListJobSnapshotInfos").setMethod(HttpMethod.POST).setPathRegex("/api/v1/jobs/snapshot").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListJobSnapshotInfosResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListJobSnapshotInfosResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListMmsDataSources  ListMmsDataSourcesRequest
+     * @return ListMmsDataSourcesResponse
+     */
+    @Override
+    public CompletableFuture<ListMmsDataSourcesResponse> listMmsDataSources(ListMmsDataSourcesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListMmsDataSources").setMethod(HttpMethod.GET).setPathRegex("/api/v1/mms/datasources").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListMmsDataSourcesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListMmsDataSourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListMmsDbs  ListMmsDbsRequest
+     * @return ListMmsDbsResponse
+     */
+    @Override
+    public CompletableFuture<ListMmsDbsResponse> listMmsDbs(ListMmsDbsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListMmsDbs").setMethod(HttpMethod.GET).setPathRegex("/api/v1/mms/datasources/{sourceId}/dbs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListMmsDbsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListMmsDbsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListMmsJobs  ListMmsJobsRequest
+     * @return ListMmsJobsResponse
+     */
+    @Override
+    public CompletableFuture<ListMmsJobsResponse> listMmsJobs(ListMmsJobsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListMmsJobs").setMethod(HttpMethod.GET).setPathRegex("/api/v1/mms/datasources/{sourceId}/jobs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListMmsJobsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListMmsJobsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListMmsPartitions  ListMmsPartitionsRequest
+     * @return ListMmsPartitionsResponse
+     */
+    @Override
+    public CompletableFuture<ListMmsPartitionsResponse> listMmsPartitions(ListMmsPartitionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListMmsPartitions").setMethod(HttpMethod.GET).setPathRegex("/api/v1/mms/datasources/{sourceId}/partitions").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListMmsPartitionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListMmsPartitionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListMmsTables  ListMmsTablesRequest
+     * @return ListMmsTablesResponse
+     */
+    @Override
+    public CompletableFuture<ListMmsTablesResponse> listMmsTables(ListMmsTablesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListMmsTables").setMethod(HttpMethod.GET).setPathRegex("/api/v1/mms/datasources/{sourceId}/tables").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListMmsTablesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListMmsTablesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListMmsTaskLogs  ListMmsTaskLogsRequest
+     * @return ListMmsTaskLogsResponse
+     */
+    @Override
+    public CompletableFuture<ListMmsTaskLogsResponse> listMmsTaskLogs(ListMmsTaskLogsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListMmsTaskLogs").setMethod(HttpMethod.GET).setPathRegex("/api/v1/mms/datasources/{sourceId}/tasks/{taskId}/logs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListMmsTaskLogsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListMmsTaskLogsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListMmsTasks  ListMmsTasksRequest
+     * @return ListMmsTasksResponse
+     */
+    @Override
+    public CompletableFuture<ListMmsTasksResponse> listMmsTasks(ListMmsTasksRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListMmsTasks").setMethod(HttpMethod.GET).setPathRegex("/api/v1/mms/datasources/{sourceId}/tasks").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListMmsTasksResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListMmsTasksResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListPackages  ListPackagesRequest
+     * @return ListPackagesResponse
+     */
     @Override
     public CompletableFuture<ListPackagesResponse> listPackages(ListPackagesRequest request) {
         try {
@@ -374,6 +1038,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListProjectUsers  ListProjectUsersRequest
+     * @return ListProjectUsersResponse
+     */
     @Override
     public CompletableFuture<ListProjectUsersResponse> listProjectUsers(ListProjectUsersRequest request) {
         try {
@@ -388,6 +1056,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListProjects  ListProjectsRequest
+     * @return ListProjectsResponse
+     */
     @Override
     public CompletableFuture<ListProjectsResponse> listProjects(ListProjectsRequest request) {
         try {
@@ -402,6 +1074,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListQuotas  ListQuotasRequest
+     * @return ListQuotasResponse
+     */
     @Override
     public CompletableFuture<ListQuotasResponse> listQuotas(ListQuotasRequest request) {
         try {
@@ -416,6 +1092,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListQuotasPlans  ListQuotasPlansRequest
+     * @return ListQuotasPlansResponse
+     */
     @Override
     public CompletableFuture<ListQuotasPlansResponse> listQuotasPlans(ListQuotasPlansRequest request) {
         try {
@@ -430,6 +1110,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListResources  ListResourcesRequest
+     * @return ListResourcesResponse
+     */
     @Override
     public CompletableFuture<ListResourcesResponse> listResources(ListResourcesRequest request) {
         try {
@@ -444,6 +1128,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListRoles  ListRolesRequest
+     * @return ListRolesResponse
+     */
     @Override
     public CompletableFuture<ListRolesResponse> listRoles(ListRolesRequest request) {
         try {
@@ -458,6 +1146,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListStoragePartitionsInfo  ListStoragePartitionsInfoRequest
+     * @return ListStoragePartitionsInfoResponse
+     */
+    @Override
+    public CompletableFuture<ListStoragePartitionsInfoResponse> listStoragePartitionsInfo(ListStoragePartitionsInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListStoragePartitionsInfo").setMethod(HttpMethod.GET).setPathRegex("/api/v1/observations/analysis/storage/projects/{project}/tables/{table}/partitionsInfo").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListStoragePartitionsInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListStoragePartitionsInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListStorageTablesInfo  ListStorageTablesInfoRequest
+     * @return ListStorageTablesInfoResponse
+     */
+    @Override
+    public CompletableFuture<ListStorageTablesInfoResponse> listStorageTablesInfo(ListStorageTablesInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListStorageTablesInfo").setMethod(HttpMethod.GET).setPathRegex("/api/v1/observations/analysis/storage/projects/{project}/tablesInfo").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListStorageTablesInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListStorageTablesInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListTables  ListTablesRequest
+     * @return ListTablesResponse
+     */
     @Override
     public CompletableFuture<ListTablesResponse> listTables(ListTablesRequest request) {
         try {
@@ -472,6 +1200,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTunnelQuotaTimer  ListTunnelQuotaTimerRequest
+     * @return ListTunnelQuotaTimerResponse
+     */
+    @Override
+    public CompletableFuture<ListTunnelQuotaTimerResponse> listTunnelQuotaTimer(ListTunnelQuotaTimerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListTunnelQuotaTimer").setMethod(HttpMethod.GET).setPathRegex("/api/v1/tunnel/{nickname}/timers").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListTunnelQuotaTimerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListTunnelQuotaTimerResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListUsers  ListUsersRequest
+     * @return ListUsersResponse
+     */
     @Override
     public CompletableFuture<ListUsersResponse> listUsers(ListUsersRequest request) {
         try {
@@ -486,6 +1236,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUsersByRole  ListUsersByRoleRequest
+     * @return ListUsersByRoleResponse
+     */
     @Override
     public CompletableFuture<ListUsersByRoleResponse> listUsersByRole(ListUsersByRoleRequest request) {
         try {
@@ -500,6 +1254,162 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryQuota  QueryQuotaRequest
+     * @return QueryQuotaResponse
+     */
+    @Override
+    public CompletableFuture<QueryQuotaResponse> queryQuota(QueryQuotaRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryQuota").setMethod(HttpMethod.GET).setPathRegex("/api/v1/quotas/{nickname}/query").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryQuotaResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryQuotaResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RetryMmsJob  RetryMmsJobRequest
+     * @return RetryMmsJobResponse
+     */
+    @Override
+    public CompletableFuture<RetryMmsJobResponse> retryMmsJob(RetryMmsJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RetryMmsJob").setMethod(HttpMethod.POST).setPathRegex("/api/v1/mms/datasources/{sourceId}/jobs/{jobId}/retry").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RetryMmsJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RetryMmsJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of StartMmsJob  StartMmsJobRequest
+     * @return StartMmsJobResponse
+     */
+    @Override
+    public CompletableFuture<StartMmsJobResponse> startMmsJob(StartMmsJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("StartMmsJob").setMethod(HttpMethod.POST).setPathRegex("/api/v1/mms/datasources/{sourceId}/jobs/{jobId}/start").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StartMmsJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StartMmsJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of StopMmsJob  StopMmsJobRequest
+     * @return StopMmsJobResponse
+     */
+    @Override
+    public CompletableFuture<StopMmsJobResponse> stopMmsJob(StopMmsJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("StopMmsJob").setMethod(HttpMethod.POST).setPathRegex("/api/v1/mms/datasources/{sourceId}/jobs/{jobId}/stop").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StopMmsJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StopMmsJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Please ensure that before using this interface, you have fully understood the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/computing-pricing-1">Pricing and Charges</a>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/computing-pricing-1">Pricing and Charges</a> of MaxCompute Elastic Reserved CU.</p>
+     * 
+     * @param request the request parameters of UpdateComputeQuotaPlan  UpdateComputeQuotaPlanRequest
+     * @return UpdateComputeQuotaPlanResponse
+     */
+    @Override
+    public CompletableFuture<UpdateComputeQuotaPlanResponse> updateComputeQuotaPlan(UpdateComputeQuotaPlanRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateComputeQuotaPlan").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/quotas/{nickname}/computeQuotaPlan").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateComputeQuotaPlanResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateComputeQuotaPlanResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Please ensure that before using this interface, you have fully understood the&lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/computing-pricing-1">Pricing and Billing</a>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/computing-pricing-1">Pricing and Billing</a> of MaxCompute Elastic Reserved CU.</p>
+     * 
+     * @param request the request parameters of UpdateComputeQuotaSchedule  UpdateComputeQuotaScheduleRequest
+     * @return UpdateComputeQuotaScheduleResponse
+     */
+    @Override
+    public CompletableFuture<UpdateComputeQuotaScheduleResponse> updateComputeQuotaSchedule(UpdateComputeQuotaScheduleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateComputeQuotaSchedule").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/quotas/{nickname}/computeQuotaSchedule").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateComputeQuotaScheduleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateComputeQuotaScheduleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateComputeSubQuota  UpdateComputeSubQuotaRequest
+     * @return UpdateComputeSubQuotaResponse
+     */
+    @Override
+    public CompletableFuture<UpdateComputeSubQuotaResponse> updateComputeSubQuota(UpdateComputeSubQuotaRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateComputeSubQuota").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/quotas/{nickname}/computeSubQuota").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateComputeSubQuotaResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateComputeSubQuotaResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateMmsDataSource  UpdateMmsDataSourceRequest
+     * @return UpdateMmsDataSourceResponse
+     */
+    @Override
+    public CompletableFuture<UpdateMmsDataSourceResponse> updateMmsDataSource(UpdateMmsDataSourceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateMmsDataSource").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/mms/datasources/{sourceId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateMmsDataSourceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateMmsDataSourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdatePackage  UpdatePackageRequest
+     * @return UpdatePackageResponse
+     */
     @Override
     public CompletableFuture<UpdatePackageResponse> updatePackage(UpdatePackageRequest request) {
         try {
@@ -514,6 +1424,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateProjectBasicMeta  UpdateProjectBasicMetaRequest
+     * @return UpdateProjectBasicMetaResponse
+     */
+    @Override
+    public CompletableFuture<UpdateProjectBasicMetaResponse> updateProjectBasicMeta(UpdateProjectBasicMetaRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateProjectBasicMeta").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/projects/{projectName}/meta").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateProjectBasicMetaResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateProjectBasicMetaResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateProjectDefaultQuota  UpdateProjectDefaultQuotaRequest
+     * @return UpdateProjectDefaultQuotaResponse
+     */
+    @Override
+    public CompletableFuture<UpdateProjectDefaultQuotaResponse> updateProjectDefaultQuota(UpdateProjectDefaultQuotaRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateProjectDefaultQuota").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/projects/{projectName}/quota").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateProjectDefaultQuotaResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateProjectDefaultQuotaResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateProjectIpWhiteList  UpdateProjectIpWhiteListRequest
+     * @return UpdateProjectIpWhiteListResponse
+     */
     @Override
     public CompletableFuture<UpdateProjectIpWhiteListResponse> updateProjectIpWhiteList(UpdateProjectIpWhiteListRequest request) {
         try {
@@ -528,20 +1478,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<UpdateQuotaResponse> updateQuota(UpdateQuotaRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateQuota").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/quotas/{nickname}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateQuotaResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<UpdateQuotaResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of UpdateQuotaPlan  UpdateQuotaPlanRequest
+     * @return UpdateQuotaPlanResponse
+     */
     @Override
     public CompletableFuture<UpdateQuotaPlanResponse> updateQuotaPlan(UpdateQuotaPlanRequest request) {
         try {
@@ -556,6 +1496,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateQuotaSchedule  UpdateQuotaScheduleRequest
+     * @return UpdateQuotaScheduleResponse
+     */
     @Override
     public CompletableFuture<UpdateQuotaScheduleResponse> updateQuotaSchedule(UpdateQuotaScheduleRequest request) {
         try {
@@ -565,6 +1509,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateQuotaScheduleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you are familiar with the <a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing and prices</a> of Tunnel quotas and elastically reserved computing resources.</p>
+     * 
+     * @param request the request parameters of UpdateTunnelQuotaTimer  UpdateTunnelQuotaTimerRequest
+     * @return UpdateTunnelQuotaTimerResponse
+     */
+    @Override
+    public CompletableFuture<UpdateTunnelQuotaTimerResponse> updateTunnelQuotaTimer(UpdateTunnelQuotaTimerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateTunnelQuotaTimer").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/tunnel/{nickname}/timers").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateTunnelQuotaTimerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateTunnelQuotaTimerResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

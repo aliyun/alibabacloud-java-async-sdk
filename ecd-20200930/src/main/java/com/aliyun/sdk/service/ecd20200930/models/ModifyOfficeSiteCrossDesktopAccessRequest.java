@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyOfficeSiteCrossDesktopAccessRequest} extends {@link RequestModel}
  *
  * <p>ModifyOfficeSiteCrossDesktopAccessRequest</p>
  */
 public class ModifyOfficeSiteCrossDesktopAccessRequest extends Request {
-    @Query
-    @NameInMap("EnableCrossDesktopAccess")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableCrossDesktopAccess")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean enableCrossDesktopAccess;
 
-    @Query
-    @NameInMap("OfficeSiteId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String officeSiteId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private ModifyOfficeSiteCrossDesktopAccessRequest(Builder builder) {
@@ -85,11 +90,11 @@ public class ModifyOfficeSiteCrossDesktopAccessRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable cross-desktop access for a workspace.
-         * <p>
+         * <p>Specifies whether to enable the communication between cloud computers in an office network. If you enable the communication between cloud computers in an office network, the cloud computers can access each other.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   true: enables cross-desktop access.
-         * *   false: disables cross-desktop access.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableCrossDesktopAccess(Boolean enableCrossDesktopAccess) {
             this.putQueryParameter("EnableCrossDesktopAccess", enableCrossDesktopAccess);
@@ -98,7 +103,11 @@ public class ModifyOfficeSiteCrossDesktopAccessRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * <p>The office network ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-068266****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -107,7 +116,11 @@ public class ModifyOfficeSiteCrossDesktopAccessRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

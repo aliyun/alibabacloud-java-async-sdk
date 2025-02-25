@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetServiceSettingsRequest} extends {@link RequestModel}
  *
  * <p>SetServiceSettingsRequest</p>
  */
 public class SetServiceSettingsRequest extends Request {
-    @Query
-    @NameInMap("DeliveryOssBucketName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeliveryOssBucketName")
     private String deliveryOssBucketName;
 
-    @Query
-    @NameInMap("DeliveryOssEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeliveryOssEnabled")
     private Boolean deliveryOssEnabled;
 
-    @Query
-    @NameInMap("DeliveryOssKeyPrefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeliveryOssKeyPrefix")
     private String deliveryOssKeyPrefix;
 
-    @Query
-    @NameInMap("DeliverySlsEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeliverySlsEnabled")
     private Boolean deliverySlsEnabled;
 
-    @Query
-    @NameInMap("DeliverySlsProjectName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeliverySlsProjectName")
     private String deliverySlsProjectName;
 
-    @Query
-    @NameInMap("RdcEnterpriseId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RdcEnterpriseId")
     private String rdcEnterpriseId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private SetServiceSettingsRequest(Builder builder) {
@@ -138,7 +143,10 @@ public class SetServiceSettingsRequest extends Request {
         } 
 
         /**
-         * The name of OSS bucket to deliver.
+         * <p>The name of OSS bucket to deliver.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OssBucketName</p>
          */
         public Builder deliveryOssBucketName(String deliveryOssBucketName) {
             this.putQueryParameter("DeliveryOssBucketName", deliveryOssBucketName);
@@ -147,7 +155,10 @@ public class SetServiceSettingsRequest extends Request {
         }
 
         /**
-         * Whether to enable OSS delivery.
+         * <p>Whether to enable OSS delivery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder deliveryOssEnabled(Boolean deliveryOssEnabled) {
             this.putQueryParameter("DeliveryOssEnabled", deliveryOssEnabled);
@@ -156,7 +167,10 @@ public class SetServiceSettingsRequest extends Request {
         }
 
         /**
-         * The key prefix of OSS to deliver.
+         * <p>The key prefix of OSS to deliver.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oos/execution</p>
          */
         public Builder deliveryOssKeyPrefix(String deliveryOssKeyPrefix) {
             this.putQueryParameter("DeliveryOssKeyPrefix", deliveryOssKeyPrefix);
@@ -165,7 +179,10 @@ public class SetServiceSettingsRequest extends Request {
         }
 
         /**
-         * Whether to enable SLS delivery.
+         * <p>Whether to enable SLS delivery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder deliverySlsEnabled(Boolean deliverySlsEnabled) {
             this.putQueryParameter("DeliverySlsEnabled", deliverySlsEnabled);
@@ -174,7 +191,10 @@ public class SetServiceSettingsRequest extends Request {
         }
 
         /**
-         * The name of SLS project to deliver.
+         * <p>The name of SLS project to deliver.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SlsProjectName</p>
          */
         public Builder deliverySlsProjectName(String deliverySlsProjectName) {
             this.putQueryParameter("DeliverySlsProjectName", deliverySlsProjectName);
@@ -183,7 +203,10 @@ public class SetServiceSettingsRequest extends Request {
         }
 
         /**
-         * The id of RDC Enterprise.
+         * <p>The id of RDC Enterprise.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RdcEnterpriseId</p>
          */
         public Builder rdcEnterpriseId(String rdcEnterpriseId) {
             this.putQueryParameter("RdcEnterpriseId", rdcEnterpriseId);
@@ -192,7 +215,10 @@ public class SetServiceSettingsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

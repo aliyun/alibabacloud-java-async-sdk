@@ -1,46 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TestDataServiceApiRequest} extends {@link RequestModel}
  *
  * <p>TestDataServiceApiRequest</p>
  */
 public class TestDataServiceApiRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ApiId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApiId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long apiId;
 
-    @Body
-    @NameInMap("BodyContent")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BodyContent")
     private String bodyContent;
 
-    @Body
-    @NameInMap("BodyParams")
-    private java.util.List < BodyParams> bodyParams;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BodyParams")
+    private java.util.List<BodyParams> bodyParams;
 
-    @Body
-    @NameInMap("HeadParams")
-    private java.util.List < HeadParams> headParams;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HeadParams")
+    private java.util.List<HeadParams> headParams;
 
-    @Body
-    @NameInMap("PathParams")
-    private java.util.List < PathParams> pathParams;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PathParams")
+    private java.util.List<PathParams> pathParams;
 
-    @Body
-    @NameInMap("QueryParam")
-    private java.util.List < QueryParam> queryParam;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QueryParam")
+    private java.util.List<QueryParam> queryParam;
 
     private TestDataServiceApiRequest(Builder builder) {
         super(builder);
@@ -90,28 +94,28 @@ public class TestDataServiceApiRequest extends Request {
     /**
      * @return bodyParams
      */
-    public java.util.List < BodyParams> getBodyParams() {
+    public java.util.List<BodyParams> getBodyParams() {
         return this.bodyParams;
     }
 
     /**
      * @return headParams
      */
-    public java.util.List < HeadParams> getHeadParams() {
+    public java.util.List<HeadParams> getHeadParams() {
         return this.headParams;
     }
 
     /**
      * @return pathParams
      */
-    public java.util.List < PathParams> getPathParams() {
+    public java.util.List<PathParams> getPathParams() {
         return this.pathParams;
     }
 
     /**
      * @return queryParam
      */
-    public java.util.List < QueryParam> getQueryParam() {
+    public java.util.List<QueryParam> getQueryParam() {
         return this.queryParam;
     }
 
@@ -119,10 +123,10 @@ public class TestDataServiceApiRequest extends Request {
         private String regionId; 
         private Long apiId; 
         private String bodyContent; 
-        private java.util.List < BodyParams> bodyParams; 
-        private java.util.List < HeadParams> headParams; 
-        private java.util.List < PathParams> pathParams; 
-        private java.util.List < QueryParam> queryParam; 
+        private java.util.List<BodyParams> bodyParams; 
+        private java.util.List<HeadParams> headParams; 
+        private java.util.List<PathParams> pathParams; 
+        private java.util.List<QueryParam> queryParam; 
 
         private Builder() {
             super();
@@ -140,7 +144,7 @@ public class TestDataServiceApiRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -149,7 +153,11 @@ public class TestDataServiceApiRequest extends Request {
         }
 
         /**
-         * The ID of the DataService Studio API on which the test is performed.
+         * <p>The ID of the DataService Studio API on which the test is performed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12343</p>
          */
         public Builder apiId(Long apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -158,7 +166,10 @@ public class TestDataServiceApiRequest extends Request {
         }
 
         /**
-         * The data of the request body.
+         * <p>The data of the request body.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;name&quot;:&quot;test&quot;}</p>
          */
         public Builder bodyContent(String bodyContent) {
             this.putBodyParameter("BodyContent", bodyContent);
@@ -167,36 +178,36 @@ public class TestDataServiceApiRequest extends Request {
         }
 
         /**
-         * The request parameters that are contained in the request body.
+         * <p>The request parameters that are contained in the request body.</p>
          */
-        public Builder bodyParams(java.util.List < BodyParams> bodyParams) {
+        public Builder bodyParams(java.util.List<BodyParams> bodyParams) {
             this.putBodyParameter("BodyParams", bodyParams);
             this.bodyParams = bodyParams;
             return this;
         }
 
         /**
-         * The request parameters that are contained in the request header.
+         * <p>The request parameters that are contained in the request header.</p>
          */
-        public Builder headParams(java.util.List < HeadParams> headParams) {
+        public Builder headParams(java.util.List<HeadParams> headParams) {
             this.putBodyParameter("HeadParams", headParams);
             this.headParams = headParams;
             return this;
         }
 
         /**
-         * The request parameters that are contained in the request path.
+         * <p>The request parameters that are contained in the request path.</p>
          */
-        public Builder pathParams(java.util.List < PathParams> pathParams) {
+        public Builder pathParams(java.util.List<PathParams> pathParams) {
             this.putBodyParameter("PathParams", pathParams);
             this.pathParams = pathParams;
             return this;
         }
 
         /**
-         * The request parameters that are contained in the query.
+         * <p>The request parameters that are contained in the query.</p>
          */
-        public Builder queryParam(java.util.List < QueryParam> queryParam) {
+        public Builder queryParam(java.util.List<QueryParam> queryParam) {
             this.putBodyParameter("QueryParam", queryParam);
             this.queryParam = queryParam;
             return this;
@@ -209,11 +220,17 @@ public class TestDataServiceApiRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TestDataServiceApiRequest} extends {@link TeaModel}
+     *
+     * <p>TestDataServiceApiRequest</p>
+     */
     public static class BodyParams extends TeaModel {
-        @NameInMap("ParamKey")
+        @com.aliyun.core.annotation.NameInMap("ParamKey")
         private String paramKey;
 
-        @NameInMap("ParamValue")
+        @com.aliyun.core.annotation.NameInMap("ParamValue")
         private String paramValue;
 
         private BodyParams(Builder builder) {
@@ -248,7 +265,10 @@ public class TestDataServiceApiRequest extends Request {
             private String paramValue; 
 
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder paramKey(String paramKey) {
                 this.paramKey = paramKey;
@@ -256,7 +276,10 @@ public class TestDataServiceApiRequest extends Request {
             }
 
             /**
-             * The value of the parameter.
+             * <p>The value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder paramValue(String paramValue) {
                 this.paramValue = paramValue;
@@ -270,11 +293,17 @@ public class TestDataServiceApiRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link TestDataServiceApiRequest} extends {@link TeaModel}
+     *
+     * <p>TestDataServiceApiRequest</p>
+     */
     public static class HeadParams extends TeaModel {
-        @NameInMap("ParamKey")
+        @com.aliyun.core.annotation.NameInMap("ParamKey")
         private String paramKey;
 
-        @NameInMap("ParamValue")
+        @com.aliyun.core.annotation.NameInMap("ParamValue")
         private String paramValue;
 
         private HeadParams(Builder builder) {
@@ -309,7 +338,10 @@ public class TestDataServiceApiRequest extends Request {
             private String paramValue; 
 
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>requestId</p>
              */
             public Builder paramKey(String paramKey) {
                 this.paramKey = paramKey;
@@ -317,7 +349,10 @@ public class TestDataServiceApiRequest extends Request {
             }
 
             /**
-             * The value of the parameter.
+             * <p>The value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abcd</p>
              */
             public Builder paramValue(String paramValue) {
                 this.paramValue = paramValue;
@@ -331,11 +366,17 @@ public class TestDataServiceApiRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link TestDataServiceApiRequest} extends {@link TeaModel}
+     *
+     * <p>TestDataServiceApiRequest</p>
+     */
     public static class PathParams extends TeaModel {
-        @NameInMap("ParamKey")
+        @com.aliyun.core.annotation.NameInMap("ParamKey")
         private String paramKey;
 
-        @NameInMap("ParamValue")
+        @com.aliyun.core.annotation.NameInMap("ParamValue")
         private String paramValue;
 
         private PathParams(Builder builder) {
@@ -370,7 +411,10 @@ public class TestDataServiceApiRequest extends Request {
             private String paramValue; 
 
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>path1</p>
              */
             public Builder paramKey(String paramKey) {
                 this.paramKey = paramKey;
@@ -378,7 +422,10 @@ public class TestDataServiceApiRequest extends Request {
             }
 
             /**
-             * The value of the parameter.
+             * <p>The value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api</p>
              */
             public Builder paramValue(String paramValue) {
                 this.paramValue = paramValue;
@@ -392,11 +439,17 @@ public class TestDataServiceApiRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link TestDataServiceApiRequest} extends {@link TeaModel}
+     *
+     * <p>TestDataServiceApiRequest</p>
+     */
     public static class QueryParam extends TeaModel {
-        @NameInMap("ParamKey")
+        @com.aliyun.core.annotation.NameInMap("ParamKey")
         private String paramKey;
 
-        @NameInMap("ParamValue")
+        @com.aliyun.core.annotation.NameInMap("ParamValue")
         private String paramValue;
 
         private QueryParam(Builder builder) {
@@ -431,7 +484,10 @@ public class TestDataServiceApiRequest extends Request {
             private String paramValue; 
 
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder paramKey(String paramKey) {
                 this.paramKey = paramKey;
@@ -439,7 +495,10 @@ public class TestDataServiceApiRequest extends Request {
             }
 
             /**
-             * The value of the parameter.
+             * <p>The value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder paramValue(String paramValue) {
                 this.paramValue = paramValue;

@@ -1,28 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetKubernetesTriggerResponse} extends {@link TeaModel}
  *
  * <p>GetKubernetesTriggerResponse</p>
  */
 public class GetKubernetesTriggerResponse extends Response {
-    @NameInMap("headers")
-    @Validation(required = true)
-    private java.util.Map < String, String > headers;
+    @com.aliyun.core.annotation.NameInMap("headers")
+    private java.util.Map<String, String> headers;
 
-    @NameInMap("statusCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    @NameInMap("body")
-    @Validation(required = true)
-    private java.util.List < GetKubernetesTriggerResponseBody> body;
+    @com.aliyun.core.annotation.NameInMap("body")
+    private java.util.List<GetKubernetesTriggerResponseBody> body;
 
     private GetKubernetesTriggerResponse(BuilderImpl builder) {
         super(builder);
@@ -43,7 +45,7 @@ public class GetKubernetesTriggerResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -57,17 +59,17 @@ public class GetKubernetesTriggerResponse extends Response {
     /**
      * @return body
      */
-    public java.util.List < GetKubernetesTriggerResponseBody> getBody() {
+    public java.util.List<GetKubernetesTriggerResponseBody> getBody() {
         return this.body;
     }
 
     public interface Builder extends Response.Builder<GetKubernetesTriggerResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(java.util.List < GetKubernetesTriggerResponseBody> body);
+        Builder body(java.util.List<GetKubernetesTriggerResponseBody> body);
 
         @Override
         GetKubernetesTriggerResponse build();
@@ -77,9 +79,9 @@ public class GetKubernetesTriggerResponse extends Response {
     private static final class BuilderImpl
             extends Response.BuilderImpl<GetKubernetesTriggerResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private java.util.List < GetKubernetesTriggerResponseBody> body; 
+        private java.util.List<GetKubernetesTriggerResponseBody> body; 
 
         private BuilderImpl() {
             super();
@@ -96,7 +98,7 @@ public class GetKubernetesTriggerResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -114,7 +116,7 @@ public class GetKubernetesTriggerResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(java.util.List < GetKubernetesTriggerResponseBody> body) {
+        public Builder body(java.util.List<GetKubernetesTriggerResponseBody> body) {
             this.body = body;
             return this;
         }
@@ -126,26 +128,32 @@ public class GetKubernetesTriggerResponse extends Response {
 
     } 
 
+    /**
+     * 
+     * {@link GetKubernetesTriggerResponse} extends {@link TeaModel}
+     *
+     * <p>GetKubernetesTriggerResponse</p>
+     */
     public static class GetKubernetesTriggerResponseBody extends TeaModel {
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("cluster_id")
+        @com.aliyun.core.annotation.NameInMap("cluster_id")
         private String clusterId;
 
-        @NameInMap("project_id")
+        @com.aliyun.core.annotation.NameInMap("project_id")
         private String projectId;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("action")
+        @com.aliyun.core.annotation.NameInMap("action")
         private String action;
 
-        @NameInMap("token")
+        @com.aliyun.core.annotation.NameInMap("token")
         private String token;
 
         private GetKubernetesTriggerResponseBody(Builder builder) {
@@ -225,7 +233,10 @@ public class GetKubernetesTriggerResponse extends Response {
             private String token; 
 
             /**
-             * The ID of the trigger.
+             * <p>The ID of the trigger.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -233,7 +244,10 @@ public class GetKubernetesTriggerResponse extends Response {
             }
 
             /**
-             * The name of the trigger.
+             * <p>The name of the trigger.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -241,7 +255,10 @@ public class GetKubernetesTriggerResponse extends Response {
             }
 
             /**
-             * The ID of the associated cluster.
+             * <p>The ID of the associated cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c259f563386444ebb8d7**</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -249,10 +266,11 @@ public class GetKubernetesTriggerResponse extends Response {
             }
 
             /**
-             * The name of the project.
-             * <p>
+             * <p>The name of the project.</p>
+             * <p>The name consists of the namespace where the application is deployed and the name of the application. The format is <code>${namespace}/${name}</code>. Example: default/test-app.</p>
              * 
-             * The name consists of the namespace where the application is deployed and the name of the application. The format is `${namespace}/${name}`. Example: default/test-app.
+             * <strong>example:</strong>
+             * <p>default/test-app</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -260,15 +278,16 @@ public class GetKubernetesTriggerResponse extends Response {
             }
 
             /**
-             * The type of trigger.
-             * <p>
+             * <p>The type of trigger.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><code>deployment</code>: performs actions on Deployments.</li>
+             * <li><code>application</code>: performs actions on applications that are deployed in Application Center.</li>
+             * </ul>
+             * <p>Default value: <code>deployment</code>.</p>
              * 
-             * Valid values:
-             * 
-             * *   `deployment`: performs actions on Deployments.
-             * *   `application`: performs actions on applications that are deployed in Application Center.
-             * 
-             * Default value: `deployment`.
+             * <strong>example:</strong>
+             * <p>deployment</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -276,10 +295,11 @@ public class GetKubernetesTriggerResponse extends Response {
             }
 
             /**
-             * The action that the trigger performs. The value is set to redeploy.
-             * <p>
+             * <p>The action that the trigger performs. The value is set to redeploy.</p>
+             * <p><code>redeploy</code>: redeploys the resource specified by project_id.</p>
              * 
-             * `redeploy`: redeploys the resource specified by project_id.
+             * <strong>example:</strong>
+             * <p>redeploy</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -287,7 +307,10 @@ public class GetKubernetesTriggerResponse extends Response {
             }
 
             /**
-             * Token
+             * <p>Token</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eyJhbGci***</p>
              */
             public Builder token(String token) {
                 this.token = token;

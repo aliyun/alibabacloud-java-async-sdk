@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DownloadFabricOrganizationSDKRequest</p>
  */
 public class DownloadFabricOrganizationSDKRequest extends Request {
-    @Body
-    @NameInMap("Location")
-    private String location;
-
-    @Query
-    @NameInMap("OrganizationId")
-    @Validation(required = true)
-    private String organizationId;
-
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Username")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Location")
+    private String location;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrganizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String organizationId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Username")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String username;
 
     private DownloadFabricOrganizationSDKRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.location = builder.location;
         this.organizationId = builder.organizationId;
-        this.regionId = builder.regionId;
         this.username = builder.username;
     }
 
@@ -52,6 +51,13 @@ public class DownloadFabricOrganizationSDKRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return location
      */
     public String getLocation() {
@@ -66,13 +72,6 @@ public class DownloadFabricOrganizationSDKRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return username
      */
     public String getUsername() {
@@ -80,22 +79,31 @@ public class DownloadFabricOrganizationSDKRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DownloadFabricOrganizationSDKRequest, Builder> {
+        private String regionId; 
         private String location; 
         private String organizationId; 
-        private String regionId; 
         private String username; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DownloadFabricOrganizationSDKRequest response) {
-            super(response);
-            this.location = response.location;
-            this.organizationId = response.organizationId;
-            this.regionId = response.regionId;
-            this.username = response.username;
+        private Builder(DownloadFabricOrganizationSDKRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.location = request.location;
+            this.organizationId = request.organizationId;
+            this.username = request.username;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Location.
@@ -112,15 +120,6 @@ public class DownloadFabricOrganizationSDKRequest extends Request {
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("OrganizationId", organizationId);
             this.organizationId = organizationId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -1,33 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateApplicationGroupRequest} extends {@link RequestModel}
  *
  * <p>UpdateApplicationGroupRequest</p>
  */
 public class UpdateApplicationGroupRequest extends Request {
-    @Query
-    @NameInMap("ApplicationName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String applicationName;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("NewName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewName")
     private String newName;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationName")
+    private String operationName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Parameters")
+    private java.util.Map<String, ?> parameters;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private UpdateApplicationGroupRequest(Builder builder) {
@@ -35,6 +48,8 @@ public class UpdateApplicationGroupRequest extends Request {
         this.applicationName = builder.applicationName;
         this.name = builder.name;
         this.newName = builder.newName;
+        this.operationName = builder.operationName;
+        this.parameters = builder.parameters;
         this.regionId = builder.regionId;
     }
 
@@ -73,6 +88,20 @@ public class UpdateApplicationGroupRequest extends Request {
     }
 
     /**
+     * @return operationName
+     */
+    public String getOperationName() {
+        return this.operationName;
+    }
+
+    /**
+     * @return parameters
+     */
+    public java.util.Map<String, ?> getParameters() {
+        return this.parameters;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -83,6 +112,8 @@ public class UpdateApplicationGroupRequest extends Request {
         private String applicationName; 
         private String name; 
         private String newName; 
+        private String operationName; 
+        private java.util.Map<String, ?> parameters; 
         private String regionId; 
 
         private Builder() {
@@ -94,11 +125,17 @@ public class UpdateApplicationGroupRequest extends Request {
             this.applicationName = request.applicationName;
             this.name = request.name;
             this.newName = request.newName;
+            this.operationName = request.operationName;
+            this.parameters = request.parameters;
             this.regionId = request.regionId;
         } 
 
         /**
-         * The application name.
+         * <p>The application name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyApplication</p>
          */
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("ApplicationName", applicationName);
@@ -107,7 +144,11 @@ public class UpdateApplicationGroupRequest extends Request {
         }
 
         /**
-         * The name of the application group.
+         * <p>The name of the application group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyApplicationGroup</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -116,7 +157,10 @@ public class UpdateApplicationGroupRequest extends Request {
         }
 
         /**
-         * The new name of the application group.
+         * <p>The new name of the application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UpdateMyApplicationGroup</p>
          */
         public Builder newName(String newName) {
             this.putQueryParameter("NewName", newName);
@@ -125,7 +169,35 @@ public class UpdateApplicationGroupRequest extends Request {
         }
 
         /**
-         * The region ID. Set the value to cn-hangzhou.
+         * <p>The name of the configuration update operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/business/v1/product/spus/{spu_id}</p>
+         */
+        public Builder operationName(String operationName) {
+            this.putQueryParameter("OperationName", operationName);
+            this.operationName = operationName;
+            return this;
+        }
+
+        /**
+         * <p>The JSON string that consists of a set of parameters. Default value: {}.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;username&quot;: &quot;xx&quot;}</p>
+         */
+        public Builder parameters(java.util.Map<String, ?> parameters) {
+            String parametersShrink = shrink(parameters, "Parameters", "json");
+            this.putQueryParameter("Parameters", parametersShrink);
+            this.parameters = parameters;
+            return this;
+        }
+
+        /**
+         * <p>The region ID. Set the value to cn-hangzhou.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

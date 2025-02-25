@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.httpdns20160201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResolveCountSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>GetResolveCountSummaryResponseBody</p>
  */
 public class GetResolveCountSummaryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResolveSummary")
+    @com.aliyun.core.annotation.NameInMap("ResolveSummary")
     private ResolveSummary resolveSummary;
 
     private GetResolveCountSummaryResponseBody(Builder builder) {
@@ -71,20 +76,30 @@ public class GetResolveCountSummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetResolveCountSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResolveCountSummaryResponseBody</p>
+     */
     public static class ResolveSummary extends TeaModel {
-        @NameInMap("Http")
+        @com.aliyun.core.annotation.NameInMap("Doh")
+        private Long doh;
+
+        @com.aliyun.core.annotation.NameInMap("Http")
         private Long http;
 
-        @NameInMap("Http6")
+        @com.aliyun.core.annotation.NameInMap("Http6")
         private Long http6;
 
-        @NameInMap("Https")
+        @com.aliyun.core.annotation.NameInMap("Https")
         private Long https;
 
-        @NameInMap("Https6")
+        @com.aliyun.core.annotation.NameInMap("Https6")
         private Long https6;
 
         private ResolveSummary(Builder builder) {
+            this.doh = builder.doh;
             this.http = builder.http;
             this.http6 = builder.http6;
             this.https = builder.https;
@@ -97,6 +112,13 @@ public class GetResolveCountSummaryResponseBody extends TeaModel {
 
         public static ResolveSummary create() {
             return builder().build();
+        }
+
+        /**
+         * @return doh
+         */
+        public Long getDoh() {
+            return this.doh;
         }
 
         /**
@@ -128,10 +150,19 @@ public class GetResolveCountSummaryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long doh; 
             private Long http; 
             private Long http6; 
             private Long https; 
             private Long https6; 
+
+            /**
+             * Doh.
+             */
+            public Builder doh(Long doh) {
+                this.doh = doh;
+                return this;
+            }
 
             /**
              * Http.

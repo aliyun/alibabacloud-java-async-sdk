@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeActiveMetricRuleListRequest} extends {@link RequestModel}
  *
  * <p>DescribeActiveMetricRuleListRequest</p>
  */
 public class DescribeActiveMetricRuleListRequest extends Request {
-    @Query
-    @NameInMap("Product")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Product")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String product;
 
     private DescribeActiveMetricRuleListRequest(Builder builder) {
@@ -55,20 +55,12 @@ public class DescribeActiveMetricRuleListRequest extends Request {
         } 
 
         /**
-         * The abbreviation of the service name. The following services support one-click alert:
-         * <p>
+         * <p>The abbreviation of the cloud service that supports initiative alert rules.</p>
+         * <p>For more information about how to obtain the name of a cloud service, see <a href="https://help.aliyun.com/document_detail/114930.html">DescribeProductsOfActiveMetricRule</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   ecs: Elastic Compute Service (ECS)
-         * *   rds: ApsaraDB for RDS
-         * *   slb: Server Load Balancer (SLB)
-         * *   redis_standard: ApsaraDB for Redis of the standard architecture
-         * *   redis_sharding: ApsaraDB for Redis of the cluster architecture
-         * *   redis_splitrw: ApsaraDB for Redis of the read/write splitting architecture
-         * *   mongodb: ApsaraDB for MongoDB of the replica set architecture
-         * *   mongodb_sharding: ApsaraDB for MongoDB of the sharded cluster architecture
-         * *   hbase: ApsaraDB for HBase
-         * *   elasticsearch: Elasticsearch
-         * *   opensearch: Open Search
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder product(String product) {
             this.putQueryParameter("Product", product);

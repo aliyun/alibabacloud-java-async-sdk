@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMainDomainNameRequest} extends {@link RequestModel}
  *
  * <p>GetMainDomainNameRequest</p>
  */
 public class GetMainDomainNameRequest extends Request {
-    @Query
-    @NameInMap("InputString")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InputString")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String inputString;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
     private GetMainDomainNameRequest(Builder builder) {
@@ -69,7 +74,11 @@ public class GetMainDomainNameRequest extends Request {
         } 
 
         /**
-         * The input string. The string can be up to 128 characters in length.
+         * <p>The string. The string can be up to 128 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder inputString(String inputString) {
             this.putQueryParameter("InputString", inputString);
@@ -78,7 +87,10 @@ public class GetMainDomainNameRequest extends Request {
         }
 
         /**
-         * The language type.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

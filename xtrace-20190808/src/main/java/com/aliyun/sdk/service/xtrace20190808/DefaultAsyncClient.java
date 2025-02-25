@@ -39,6 +39,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of CheckCommercialStatus  CheckCommercialStatusRequest
+     * @return CheckCommercialStatusResponse
+     */
+    @Override
+    public CompletableFuture<CheckCommercialStatusResponse> checkCommercialStatus(CheckCommercialStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CheckCommercialStatus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CheckCommercialStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CheckCommercialStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetTagKey  GetTagKeyRequest
+     * @return GetTagKeyResponse
+     */
     @Override
     public CompletableFuture<GetTagKeyResponse> getTagKey(GetTagKeyRequest request) {
         try {
@@ -53,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTagVal  GetTagValRequest
+     * @return GetTagValResponse
+     */
     @Override
     public CompletableFuture<GetTagValResponse> getTagVal(GetTagValRequest request) {
         try {
@@ -67,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTrace  GetTraceRequest
+     * @return GetTraceResponse
+     */
     @Override
     public CompletableFuture<GetTraceResponse> getTrace(GetTraceRequest request) {
         try {
@@ -81,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListIpOrHosts  ListIpOrHostsRequest
+     * @return ListIpOrHostsResponse
+     */
     @Override
     public CompletableFuture<ListIpOrHostsResponse> listIpOrHosts(ListIpOrHostsRequest request) {
         try {
@@ -95,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListServices  ListServicesRequest
+     * @return ListServicesResponse
+     */
     @Override
     public CompletableFuture<ListServicesResponse> listServices(ListServicesRequest request) {
         try {
@@ -109,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSpanNames  ListSpanNamesRequest
+     * @return ListSpanNamesResponse
+     */
     @Override
     public CompletableFuture<ListSpanNamesResponse> listSpanNames(ListSpanNamesRequest request) {
         try {
@@ -123,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OpenXtraceService  OpenXtraceServiceRequest
+     * @return OpenXtraceServiceResponse
+     */
     @Override
     public CompletableFuture<OpenXtraceServiceResponse> openXtraceService(OpenXtraceServiceRequest request) {
         try {
@@ -137,6 +183,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryMetric  QueryMetricRequest
+     * @return QueryMetricResponse
+     */
     @Override
     public CompletableFuture<QueryMetricResponse> queryMetric(QueryMetricRequest request) {
         try {
@@ -151,6 +201,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SearchTraces  SearchTracesRequest
+     * @return SearchTracesResponse
+     */
     @Override
     public CompletableFuture<SearchTracesResponse> searchTraces(SearchTracesRequest request) {
         try {

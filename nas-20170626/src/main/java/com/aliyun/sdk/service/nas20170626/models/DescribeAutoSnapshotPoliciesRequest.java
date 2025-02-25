@@ -1,33 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAutoSnapshotPoliciesRequest} extends {@link RequestModel}
  *
  * <p>DescribeAutoSnapshotPoliciesRequest</p>
  */
 public class DescribeAutoSnapshotPoliciesRequest extends Request {
-    @Query
-    @NameInMap("AutoSnapshotPolicyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoSnapshotPolicyId")
     private String autoSnapshotPolicyId;
 
-    @Query
-    @NameInMap("FileSystemType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemType")
     private String fileSystemType;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
     private DescribeAutoSnapshotPoliciesRequest(Builder builder) {
@@ -89,16 +93,19 @@ public class DescribeAutoSnapshotPoliciesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAutoSnapshotPoliciesRequest response) {
-            super(response);
-            this.autoSnapshotPolicyId = response.autoSnapshotPolicyId;
-            this.fileSystemType = response.fileSystemType;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(DescribeAutoSnapshotPoliciesRequest request) {
+            super(request);
+            this.autoSnapshotPolicyId = request.autoSnapshotPolicyId;
+            this.fileSystemType = request.fileSystemType;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**
-         * AutoSnapshotPolicyId.
+         * <p>The ID of the automatic snapshot policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sp-extreme-233e6****</p>
          */
         public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
             this.putQueryParameter("AutoSnapshotPolicyId", autoSnapshotPolicyId);
@@ -107,7 +114,11 @@ public class DescribeAutoSnapshotPoliciesRequest extends Request {
         }
 
         /**
-         * FileSystemType.
+         * <p>The type of the file system.</p>
+         * <p>Valid value: extreme, which indicates Extreme File Storage NAS (NAS) file systems.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>extreme</p>
          */
         public Builder fileSystemType(String fileSystemType) {
             this.putQueryParameter("FileSystemType", fileSystemType);
@@ -116,7 +127,11 @@ public class DescribeAutoSnapshotPoliciesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -125,7 +140,12 @@ public class DescribeAutoSnapshotPoliciesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

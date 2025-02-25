@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AssignPrivateIpAddressesResponseBody} extends {@link TeaModel}
  *
  * <p>AssignPrivateIpAddressesResponseBody</p>
  */
 public class AssignPrivateIpAddressesResponseBody extends TeaModel {
-    @NameInMap("AssignedPrivateIpAddressesSet")
+    @com.aliyun.core.annotation.NameInMap("AssignedPrivateIpAddressesSet")
     private AssignedPrivateIpAddressesSet assignedPrivateIpAddressesSet;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AssignPrivateIpAddressesResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about the ENI and the secondary private IP addresses that are assigned to the ENI.
+         * <p>Details about the ENI and the secondary private IP addresses that are assigned to the ENI.</p>
          */
         public Builder assignedPrivateIpAddressesSet(AssignedPrivateIpAddressesSet assignedPrivateIpAddressesSet) {
             this.assignedPrivateIpAddressesSet = assignedPrivateIpAddressesSet;
@@ -58,7 +63,10 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,9 +79,15 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AssignPrivateIpAddressesResponseBody} extends {@link TeaModel}
+     *
+     * <p>AssignPrivateIpAddressesResponseBody</p>
+     */
     public static class Ipv4PrefixSet extends TeaModel {
-        @NameInMap("Ipv4Prefixes")
-        private java.util.List < String > ipv4Prefixes;
+        @com.aliyun.core.annotation.NameInMap("Ipv4Prefixes")
+        private java.util.List<String> ipv4Prefixes;
 
         private Ipv4PrefixSet(Builder builder) {
             this.ipv4Prefixes = builder.ipv4Prefixes;
@@ -90,17 +104,17 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
         /**
          * @return ipv4Prefixes
          */
-        public java.util.List < String > getIpv4Prefixes() {
+        public java.util.List<String> getIpv4Prefixes() {
             return this.ipv4Prefixes;
         }
 
         public static final class Builder {
-            private java.util.List < String > ipv4Prefixes; 
+            private java.util.List<String> ipv4Prefixes; 
 
             /**
              * Ipv4Prefixes.
              */
-            public Builder ipv4Prefixes(java.util.List < String > ipv4Prefixes) {
+            public Builder ipv4Prefixes(java.util.List<String> ipv4Prefixes) {
                 this.ipv4Prefixes = ipv4Prefixes;
                 return this;
             }
@@ -112,9 +126,15 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AssignPrivateIpAddressesResponseBody} extends {@link TeaModel}
+     *
+     * <p>AssignPrivateIpAddressesResponseBody</p>
+     */
     public static class PrivateIpSet extends TeaModel {
-        @NameInMap("PrivateIpAddress")
-        private java.util.List < String > privateIpAddress;
+        @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
+        private java.util.List<String> privateIpAddress;
 
         private PrivateIpSet(Builder builder) {
             this.privateIpAddress = builder.privateIpAddress;
@@ -131,17 +151,17 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
         /**
          * @return privateIpAddress
          */
-        public java.util.List < String > getPrivateIpAddress() {
+        public java.util.List<String> getPrivateIpAddress() {
             return this.privateIpAddress;
         }
 
         public static final class Builder {
-            private java.util.List < String > privateIpAddress; 
+            private java.util.List<String> privateIpAddress; 
 
             /**
              * PrivateIpAddress.
              */
-            public Builder privateIpAddress(java.util.List < String > privateIpAddress) {
+            public Builder privateIpAddress(java.util.List<String> privateIpAddress) {
                 this.privateIpAddress = privateIpAddress;
                 return this;
             }
@@ -153,14 +173,20 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AssignPrivateIpAddressesResponseBody} extends {@link TeaModel}
+     *
+     * <p>AssignPrivateIpAddressesResponseBody</p>
+     */
     public static class AssignedPrivateIpAddressesSet extends TeaModel {
-        @NameInMap("Ipv4PrefixSet")
+        @com.aliyun.core.annotation.NameInMap("Ipv4PrefixSet")
         private Ipv4PrefixSet ipv4PrefixSet;
 
-        @NameInMap("NetworkInterfaceId")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
         private String networkInterfaceId;
 
-        @NameInMap("PrivateIpSet")
+        @com.aliyun.core.annotation.NameInMap("PrivateIpSet")
         private PrivateIpSet privateIpSet;
 
         private AssignedPrivateIpAddressesSet(Builder builder) {
@@ -204,7 +230,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
             private PrivateIpSet privateIpSet; 
 
             /**
-             * > 该参数正在邀测中，暂未开放使用。
+             * <p>Details about the assigned IPv4 prefixes.</p>
              */
             public Builder ipv4PrefixSet(Ipv4PrefixSet ipv4PrefixSet) {
                 this.ipv4PrefixSet = ipv4PrefixSet;
@@ -212,7 +238,10 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The ENI ID.
+             * <p>The ENI ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eni-bp125p95hhdhn3ot****</p>
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
@@ -220,7 +249,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The secondary private IP addresses that are assigned to the ENI.
+             * <p>The secondary private IP addresses that are assigned to the ENI.</p>
              */
             public Builder privateIpSet(PrivateIpSet privateIpSet) {
                 this.privateIpSet = privateIpSet;

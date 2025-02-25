@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetNodeConfigRequest} extends {@link RequestModel}
  *
  * <p>GetNodeConfigRequest</p>
  */
 public class GetNodeConfigRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("clusterName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("clusterName")
     private String clusterName;
 
-    @Query
-    @NameInMap("name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @Query
-    @NameInMap("type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
     private GetNodeConfigRequest(Builder builder) {
@@ -97,32 +102,11 @@ public class GetNodeConfigRequest extends Request {
         } 
 
         /**
-         * ### Sample responses
-         * <p>
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Success responses ﻿
-         * 
-         * ```java
-         * {
-         * ﻿
-         *   "requestId": "0A6EB64B-B4C8-CF02-810F-E660812972FF",
-         * ﻿
-         *   "result": {
-         * ﻿
-         *     "dataFragmentNumber":1,
-         * ﻿
-         *     "dataDuplicateNumber":1,
-         * ﻿
-         *     "minServicePercent":20,
-         * ﻿
-         *     "published":true,
-         * ﻿
-         *     "active": true  // Indicates whether the online configurations have taken effect.
-         * ﻿
-         *   }
-         * ﻿
-         * }
-         * ```
+         * <strong>example:</strong>
+         * <p>ha-cn-0ju2rewdi02</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -131,7 +115,10 @@ public class GetNodeConfigRequest extends Request {
         }
 
         /**
-         * clusterName.
+         * <p>The name of the cluster</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc_sh_domain_2</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("clusterName", clusterName);
@@ -140,7 +127,10 @@ public class GetNodeConfigRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The node name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-30174dhoz53_qrs</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -149,7 +139,16 @@ public class GetNodeConfigRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>The node type. Valid values:</p>
+         * <ul>
+         * <li>qrs: Query Result Searcher (QRS) worker</li>
+         * <li>search: Search worker</li>
+         * <li>index: index</li>
+         * <li>cluster: cluster</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>index</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

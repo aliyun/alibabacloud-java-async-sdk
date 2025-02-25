@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eais20190624.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachEaiRequest} extends {@link RequestModel}
  *
  * <p>AttachEaiRequest</p>
  */
 public class AttachEaiRequest extends Request {
-    @Query
-    @NameInMap("ClientInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientInstanceId;
 
-    @Query
-    @NameInMap("ElasticAcceleratedInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ElasticAcceleratedInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String elasticAcceleratedInstanceId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private AttachEaiRequest(Builder builder) {
@@ -85,7 +90,10 @@ public class AttachEaiRequest extends Request {
         } 
 
         /**
-         * ClientInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-wz93g6pyat2g7t7o****</p>
          */
         public Builder clientInstanceId(String clientInstanceId) {
             this.putQueryParameter("ClientInstanceId", clientInstanceId);
@@ -94,7 +102,10 @@ public class AttachEaiRequest extends Request {
         }
 
         /**
-         * ElasticAcceleratedInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eais-sz8t15a7gt7z7j7i****</p>
          */
         public Builder elasticAcceleratedInstanceId(String elasticAcceleratedInstanceId) {
             this.putQueryParameter("ElasticAcceleratedInstanceId", elasticAcceleratedInstanceId);
@@ -103,7 +114,10 @@ public class AttachEaiRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

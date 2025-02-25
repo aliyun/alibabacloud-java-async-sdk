@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFullRequestSampleByInstanceIdResponseBody} extends {@link TeaModel}
  *
  * <p>GetFullRequestSampleByInstanceIdResponseBody</p>
  */
 public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetFullRequestSampleByInstanceIdResponseBody(Builder builder) {
@@ -53,7 +58,7 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -80,13 +85,16 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
 
     public static final class Builder {
         private Long code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -94,18 +102,21 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message that contains information such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request was successful, **Successful** is returned. If the request failed, an error message that contains information such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +124,10 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0A74B755-98B7-59DB-8724-1321B394****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,11 +135,14 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,62 +155,68 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetFullRequestSampleByInstanceIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFullRequestSampleByInstanceIdResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Database")
+        @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
 
-        @NameInMap("Frows")
+        @com.aliyun.core.annotation.NameInMap("Frows")
         private Long frows;
 
-        @NameInMap("LockWaitTime")
+        @com.aliyun.core.annotation.NameInMap("LockWaitTime")
         private Double lockWaitTime;
 
-        @NameInMap("LogicalRead")
+        @com.aliyun.core.annotation.NameInMap("LogicalRead")
         private Double logicalRead;
 
-        @NameInMap("OriginHost")
+        @com.aliyun.core.annotation.NameInMap("OriginHost")
         private String originHost;
 
-        @NameInMap("PhysicalAsyncRead")
+        @com.aliyun.core.annotation.NameInMap("PhysicalAsyncRead")
         private Double physicalAsyncRead;
 
-        @NameInMap("PhysicalSyncRead")
+        @com.aliyun.core.annotation.NameInMap("PhysicalSyncRead")
         private Double physicalSyncRead;
 
-        @NameInMap("Rows")
+        @com.aliyun.core.annotation.NameInMap("Rows")
         private Long rows;
 
-        @NameInMap("RowsExamined")
+        @com.aliyun.core.annotation.NameInMap("RowsExamined")
         private Long rowsExamined;
 
-        @NameInMap("RowsReturned")
+        @com.aliyun.core.annotation.NameInMap("RowsReturned")
         private Long rowsReturned;
 
-        @NameInMap("Rt")
+        @com.aliyun.core.annotation.NameInMap("Rt")
         private Double rt;
 
-        @NameInMap("ScanRows")
+        @com.aliyun.core.annotation.NameInMap("ScanRows")
         private Long scanRows;
 
-        @NameInMap("Scnt")
+        @com.aliyun.core.annotation.NameInMap("Scnt")
         private Long scnt;
 
-        @NameInMap("Sql")
+        @com.aliyun.core.annotation.NameInMap("Sql")
         private String sql;
 
-        @NameInMap("SqlId")
+        @com.aliyun.core.annotation.NameInMap("SqlId")
         private String sqlId;
 
-        @NameInMap("SqlType")
+        @com.aliyun.core.annotation.NameInMap("SqlType")
         private String sqlType;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
-        @NameInMap("UpdateRows")
+        @com.aliyun.core.annotation.NameInMap("UpdateRows")
         private Long updateRows;
 
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private String user;
 
         private Data(Builder builder) {
@@ -381,7 +404,10 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dbtest</p>
              */
             public Builder database(String database) {
                 this.database = database;
@@ -389,7 +415,10 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows fetched by PolarDB-X 2.0 compute nodes.
+             * <p>The number of rows fetched by PolarDB-X 2.0 compute nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder frows(Long frows) {
                 this.frows = frows;
@@ -397,7 +426,10 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The lock wait duration. Unit: seconds.
+             * <p>The lock wait duration. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0137</p>
              */
             public Builder lockWaitTime(Double lockWaitTime) {
                 this.lockWaitTime = lockWaitTime;
@@ -405,7 +437,10 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The number of logical reads.
+             * <p>The number of logical reads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>165848</p>
              */
             public Builder logicalRead(Double logicalRead) {
                 this.logicalRead = logicalRead;
@@ -413,7 +448,10 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The source IP address.
+             * <p>The source IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.17.XX.XX</p>
              */
             public Builder originHost(String originHost) {
                 this.originHost = originHost;
@@ -421,7 +459,10 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The number of physical asynchronous reads.
+             * <p>The number of physical asynchronous reads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder physicalAsyncRead(Double physicalAsyncRead) {
                 this.physicalAsyncRead = physicalAsyncRead;
@@ -429,7 +470,10 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The number of physical synchronous reads.
+             * <p>The number of physical synchronous reads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder physicalSyncRead(Double physicalSyncRead) {
                 this.physicalSyncRead = physicalSyncRead;
@@ -437,7 +481,10 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows updated or returned on PolarDB-X 2.0 compute nodes.
+             * <p>The number of rows updated or returned on PolarDB-X 2.0 compute nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder rows(Long rows) {
                 this.rows = rows;
@@ -445,10 +492,13 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of scanned rows.
-             * <p>
+             * <p>The total number of scanned rows.</p>
+             * <blockquote>
+             * <p>This parameter is returned only for ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and PolarDB for MySQL databases.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only for ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and PolarDB for MySQL databases.
+             * <strong>example:</strong>
+             * <p>2048576</p>
              */
             public Builder rowsExamined(Long rowsExamined) {
                 this.rowsExamined = rowsExamined;
@@ -456,7 +506,10 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows returned by the SQL statement.
+             * <p>The number of rows returned by the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14</p>
              */
             public Builder rowsReturned(Long rowsReturned) {
                 this.rowsReturned = rowsReturned;
@@ -464,7 +517,10 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of time consumed to execute the SQL statement. Unit: seconds.
+             * <p>The amount of time consumed to execute the SQL statement. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.409789</p>
              */
             public Builder rt(Double rt) {
                 this.rt = rt;
@@ -472,7 +528,10 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The number of scanned rows.
+             * <p>The number of scanned rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder scanRows(Long scanRows) {
                 this.scanRows = scanRows;
@@ -480,7 +539,10 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The number of requests sent from PolarDB-X 2.0 compute nodes to data nodes.
+             * <p>The number of requests sent from PolarDB-X 2.0 compute nodes to data nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder scnt(Long scnt) {
                 this.scnt = scnt;
@@ -488,7 +550,10 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The sample SQL statement.
+             * <p>The sample SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select * from testdb01 where ****</p>
              */
             public Builder sql(String sql) {
                 this.sql = sql;
@@ -496,7 +561,10 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement ID.
+             * <p>The SQL statement ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>651b56fe9418d48edb8fdf0980ec****</p>
              */
             public Builder sqlId(String sqlId) {
                 this.sqlId = sqlId;
@@ -504,7 +572,10 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the SQL statement. Valid values: **SELECT**, **INSERT**, **UPDATE**, **DELETE**, **LOGIN**, **LOGOUT**, **MERGE**, **ALTER**, **CREATEINDEX**, **DROPINDEX**, **CREATE**, **DROP**, **SET**, **DESC**, **REPLACE**, **CALL**, **BEGIN**, **DESCRIBE**, **ROLLBACK**, **FLUSH**, **USE**, **SHOW**, **START**, **COMMIT**, and **RENAME**.
+             * <p>The type of the SQL statement. Valid values: <strong>SELECT</strong>, <strong>INSERT</strong>, <strong>UPDATE</strong>, <strong>DELETE</strong>, <strong>LOGIN</strong>, <strong>LOGOUT</strong>, <strong>MERGE</strong>, <strong>ALTER</strong>, <strong>CREATEINDEX</strong>, <strong>DROPINDEX</strong>, <strong>CREATE</strong>, <strong>DROP</strong>, <strong>SET</strong>, <strong>DESC</strong>, <strong>REPLACE</strong>, <strong>CALL</strong>, <strong>BEGIN</strong>, <strong>DESCRIBE</strong>, <strong>ROLLBACK</strong>, <strong>FLUSH</strong>, <strong>USE</strong>, <strong>SHOW</strong>, <strong>START</strong>, <strong>COMMIT</strong>, and <strong>RENAME</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT</p>
              */
             public Builder sqlType(String sqlType) {
                 this.sqlType = sqlType;
@@ -512,7 +583,10 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the SQL statement was executed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the SQL statement was executed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1660100753556</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -520,7 +594,10 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The number of updated rows.
+             * <p>The number of updated rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder updateRows(Long updateRows) {
                 this.updateRows = updateRows;
@@ -528,7 +605,10 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the user who executes the SQL statement.
+             * <p>The name of the user who executes the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testuser</p>
              */
             public Builder user(String user) {
                 this.user = user;

@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListKibanaPluginsResponseBody} extends {@link TeaModel}
  *
  * <p>ListKibanaPluginsResponseBody</p>
  */
 public class ListKibanaPluginsResponseBody extends TeaModel {
-    @NameInMap("Headers")
+    @com.aliyun.core.annotation.NameInMap("Headers")
     private Headers headers;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private ListKibanaPluginsResponseBody(Builder builder) {
@@ -62,7 +62,7 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The request header.
+         * <p>The request header.</p>
          */
         public Builder headers(Headers headers) {
             this.headers = headers;
@@ -70,7 +70,10 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11234B4A-34CE-473B-8E61-AD95702E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,7 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the plug-ins.
+         * <p>The information about the plug-ins.</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -91,8 +94,14 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListKibanaPluginsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListKibanaPluginsResponseBody</p>
+     */
     public static class Headers extends TeaModel {
-        @NameInMap("X-Total-Count")
+        @com.aliyun.core.annotation.NameInMap("X-Total-Count")
         private Integer xTotalCount;
 
         private Headers(Builder builder) {
@@ -118,7 +127,10 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
             private Integer xTotalCount; 
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder xTotalCount(Integer xTotalCount) {
                 this.xTotalCount = xTotalCount;
@@ -132,20 +144,26 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListKibanaPluginsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListKibanaPluginsResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("source")
+        @com.aliyun.core.annotation.NameInMap("source")
         private String source;
 
-        @NameInMap("specificationUrl")
+        @com.aliyun.core.annotation.NameInMap("specificationUrl")
         private String specificationUrl;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
         private Result(Builder builder) {
@@ -207,7 +225,10 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * The description of the plug-in.
+             * <p>The description of the plug-in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Customize DSL statements to query data.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -215,7 +236,10 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the plug-in.
+             * <p>The name of the plug-in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bsearch_querybuilder</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -223,7 +247,10 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the plug-in.
+             * <p>The source of the plug-in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEM</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -231,7 +258,10 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the introduction to the plug-in. The value null is supported.
+             * <p>The URL of the introduction to the plug-in. The value null is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://xxxx">https://xxxx</a></p>
              */
             public Builder specificationUrl(String specificationUrl) {
                 this.specificationUrl = specificationUrl;
@@ -239,7 +269,10 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The installation status of the plug-in.
+             * <p>The installation status of the plug-in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INSTALLED</p>
              */
             public Builder state(String state) {
                 this.state = state;

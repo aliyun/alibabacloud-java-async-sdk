@@ -1,33 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLifecycleRetrieveJobsRequest} extends {@link RequestModel}
  *
  * <p>ListLifecycleRetrieveJobsRequest</p>
  */
 public class ListLifecycleRetrieveJobsRequest extends Request {
-    @Query
-    @NameInMap("FileSystemId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
     private String fileSystemId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageType")
+    private String storageType;
 
     private ListLifecycleRetrieveJobsRequest(Builder builder) {
         super(builder);
@@ -35,6 +44,7 @@ public class ListLifecycleRetrieveJobsRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.status = builder.status;
+        this.storageType = builder.storageType;
     }
 
     public static Builder builder() {
@@ -78,26 +88,38 @@ public class ListLifecycleRetrieveJobsRequest extends Request {
         return this.status;
     }
 
+    /**
+     * @return storageType
+     */
+    public String getStorageType() {
+        return this.storageType;
+    }
+
     public static final class Builder extends Request.Builder<ListLifecycleRetrieveJobsRequest, Builder> {
         private String fileSystemId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String status; 
+        private String storageType; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListLifecycleRetrieveJobsRequest response) {
-            super(response);
-            this.fileSystemId = response.fileSystemId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.status = response.status;
+        private Builder(ListLifecycleRetrieveJobsRequest request) {
+            super(request);
+            this.fileSystemId = request.fileSystemId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.status = request.status;
+            this.storageType = request.storageType;
         } 
 
         /**
-         * FileSystemId.
+         * <p>The ID of the file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31a8e4****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -106,7 +128,11 @@ public class ListLifecycleRetrieveJobsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of the page to return.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -115,7 +141,12 @@ public class ListLifecycleRetrieveJobsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -124,11 +155,39 @@ public class ListLifecycleRetrieveJobsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the data retrieval task. Valid values:</p>
+         * <ul>
+         * <li>active: The task is running.</li>
+         * <li>canceled: The task is canceled.</li>
+         * <li>completed: The task is completed.</li>
+         * <li>failed: The task has failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>completed</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * <p>The storage class.</p>
+         * <ul>
+         * <li>InfrequentAccess: the Infrequent Access (IA) storage class.</li>
+         * <li>Archive: the Archive storage class.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If the StorageType parameter is not specified, data retrieval tasks of all types are returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>InfrequentAccess</p>
+         */
+        public Builder storageType(String storageType) {
+            this.putQueryParameter("StorageType", storageType);
+            this.storageType = storageType;
             return this;
         }
 

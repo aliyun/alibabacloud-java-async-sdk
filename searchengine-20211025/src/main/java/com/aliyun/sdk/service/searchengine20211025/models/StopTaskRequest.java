@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopTaskRequest} extends {@link RequestModel}
  *
  * <p>StopTaskRequest</p>
  */
 public class StopTaskRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("fsmId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("fsmId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fsmId;
 
     private StopTaskRequest(Builder builder) {
@@ -70,7 +75,11 @@ public class StopTaskRequest extends Request {
         } 
 
         /**
-         * The ID of the instance
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-7mz2nx41h01</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -79,7 +88,11 @@ public class StopTaskRequest extends Request {
         }
 
         /**
-         * The ID of the device that has stopped
+         * <p>The ID of the finite state machine (FSM).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tisplus_opensearch@datasource_flow_fsm@1865410598556969-ha-cn-0ju2rrogr01_test_api_2@sz_vpc_domain_1@null@MANUAL-ha-cn-0ju2rrogr01_test_api_2@1657511220772@165343</p>
          */
         public Builder fsmId(String fsmId) {
             this.putPathParameter("fsmId", fsmId);

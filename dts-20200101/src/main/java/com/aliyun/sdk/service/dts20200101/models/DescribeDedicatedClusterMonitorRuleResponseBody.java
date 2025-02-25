@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDedicatedClusterMonitorRuleResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDedicatedClusterMonitorRuleResponseBody</p>
  */
 public class DescribeDedicatedClusterMonitorRuleResponseBody extends TeaModel {
-    @NameInMap("CpuAlarmThreshold")
+    @com.aliyun.core.annotation.NameInMap("CpuAlarmThreshold")
     private String cpuAlarmThreshold;
 
-    @NameInMap("DedicatedClusterId")
+    @com.aliyun.core.annotation.NameInMap("DedicatedClusterId")
     private String dedicatedClusterId;
 
-    @NameInMap("DiskAlarmThreshold")
+    @com.aliyun.core.annotation.NameInMap("DiskAlarmThreshold")
     private String diskAlarmThreshold;
 
-    @NameInMap("DuAlarmThreshold")
+    @com.aliyun.core.annotation.NameInMap("DuAlarmThreshold")
     private String duAlarmThreshold;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private String httpStatusCode;
 
-    @NameInMap("MemAlarmThreshold")
+    @com.aliyun.core.annotation.NameInMap("MemAlarmThreshold")
     private String memAlarmThreshold;
 
-    @NameInMap("NoticeSwitch")
+    @com.aliyun.core.annotation.NameInMap("NoticeSwitch")
     private String noticeSwitch;
 
-    @NameInMap("Phones")
+    @com.aliyun.core.annotation.NameInMap("Phones")
     private String phones;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private DescribeDedicatedClusterMonitorRuleResponseBody(Builder builder) {

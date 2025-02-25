@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAntChainsV2ResponseBody</p>
  */
 public class DescribeAntChainsV2ResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private String httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("ResultCode")
+    @com.aliyun.core.annotation.NameInMap("ResultCode")
     private String resultCode;
 
-    @NameInMap("ResultMessage")
+    @com.aliyun.core.annotation.NameInMap("ResultMessage")
     private String resultMessage;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeAntChainsV2ResponseBody(Builder builder) {
@@ -192,58 +191,58 @@ public class DescribeAntChainsV2ResponseBody extends TeaModel {
     } 
 
     public static class AntChains extends TeaModel {
-        @NameInMap("AntChainId")
+        @com.aliyun.core.annotation.NameInMap("AntChainId")
         private String antChainId;
 
-        @NameInMap("AntChainName")
+        @com.aliyun.core.annotation.NameInMap("AntChainName")
         private String antChainName;
 
-        @NameInMap("ChainType")
+        @com.aliyun.core.annotation.NameInMap("ChainType")
         private String chainType;
 
-        @NameInMap("CipherSuit")
+        @com.aliyun.core.annotation.NameInMap("CipherSuit")
         private String cipherSuit;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private Long expireTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("IsAdmin")
+        @com.aliyun.core.annotation.NameInMap("IsAdmin")
         private Boolean isAdmin;
 
-        @NameInMap("MemberStatus")
+        @com.aliyun.core.annotation.NameInMap("MemberStatus")
         private String memberStatus;
 
-        @NameInMap("MerkleTreeSuit")
+        @com.aliyun.core.annotation.NameInMap("MerkleTreeSuit")
         private String merkleTreeSuit;
 
-        @NameInMap("MonitorStatus")
+        @com.aliyun.core.annotation.NameInMap("MonitorStatus")
         private Boolean monitorStatus;
 
-        @NameInMap("Network")
+        @com.aliyun.core.annotation.NameInMap("Network")
         private String network;
 
-        @NameInMap("NodeNum")
+        @com.aliyun.core.annotation.NameInMap("NodeNum")
         private Integer nodeNum;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceSize")
+        @com.aliyun.core.annotation.NameInMap("ResourceSize")
         private String resourceSize;
 
-        @NameInMap("RestStatus")
+        @com.aliyun.core.annotation.NameInMap("RestStatus")
         private String restStatus;
 
-        @NameInMap("TlsAlgo")
+        @com.aliyun.core.annotation.NameInMap("TlsAlgo")
         private String tlsAlgo;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private AntChains(Builder builder) {
@@ -573,13 +572,13 @@ public class DescribeAntChainsV2ResponseBody extends TeaModel {
 
     }
     public static class Pagination extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Pagination(Builder builder) {
@@ -654,13 +653,13 @@ public class DescribeAntChainsV2ResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("AntChains")
+        @com.aliyun.core.annotation.NameInMap("AntChains")
         private java.util.List < AntChains> antChains;
 
-        @NameInMap("IsExist")
+        @com.aliyun.core.annotation.NameInMap("IsExist")
         private Boolean isExist;
 
-        @NameInMap("Pagination")
+        @com.aliyun.core.annotation.NameInMap("Pagination")
         private Pagination pagination;
 
         private Result(Builder builder) {

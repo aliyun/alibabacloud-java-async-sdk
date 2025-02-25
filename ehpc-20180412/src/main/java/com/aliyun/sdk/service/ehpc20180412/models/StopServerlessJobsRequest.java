@@ -85,10 +85,7 @@ public class StopServerlessJobsRequest extends Request {
          * The serverless job IDs or subtask IDs (array jobs).
          * <p>
          * 
-         * > 
-         * 
          * *   If you specify the job ID of an array job, all subtasks under the array job are stopped.
-         * 
          * *   If you specify the ID of a subtask of an array job, only the subtask is stopped.
          */
         public Builder jobIds(java.util.List < String > jobIds) {

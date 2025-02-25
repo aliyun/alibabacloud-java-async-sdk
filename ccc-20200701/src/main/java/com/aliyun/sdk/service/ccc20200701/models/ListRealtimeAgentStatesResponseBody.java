@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRealtimeAgentStatesResponseBody} extends {@link TeaModel}
  *
  * <p>ListRealtimeAgentStatesResponseBody</p>
  */
 public class ListRealtimeAgentStatesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListRealtimeAgentStatesResponseBody(Builder builder) {
@@ -131,55 +136,65 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRealtimeAgentStatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRealtimeAgentStatesResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("AgentId")
+        @com.aliyun.core.annotation.NameInMap("AgentId")
         private String agentId;
 
-        @NameInMap("AgentName")
+        @com.aliyun.core.annotation.NameInMap("AgentName")
         private String agentName;
 
-        @NameInMap("CallType")
+        @com.aliyun.core.annotation.NameInMap("BreakCode")
+        private String breakCode;
+
+        @com.aliyun.core.annotation.NameInMap("CallType")
         private String callType;
 
-        @NameInMap("CounterParty")
+        @com.aliyun.core.annotation.NameInMap("CounterParty")
         private String counterParty;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
 
-        @NameInMap("Extension")
+        @com.aliyun.core.annotation.NameInMap("Extension")
         private String extension;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Mobile")
+        @com.aliyun.core.annotation.NameInMap("Mobile")
         private String mobile;
 
-        @NameInMap("OutboundScenario")
+        @com.aliyun.core.annotation.NameInMap("OutboundScenario")
         private Boolean outboundScenario;
 
-        @NameInMap("SkillGroupIdList")
-        private java.util.List < String > skillGroupIdList;
+        @com.aliyun.core.annotation.NameInMap("SkillGroupIdList")
+        private java.util.List<String> skillGroupIdList;
 
-        @NameInMap("SkillGroupNameList")
-        private java.util.List < String > skillGroupNameList;
+        @com.aliyun.core.annotation.NameInMap("SkillGroupNameList")
+        private java.util.List<String> skillGroupNameList;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("StateCode")
+        @com.aliyun.core.annotation.NameInMap("StateCode")
         private String stateCode;
 
-        @NameInMap("StateTime")
+        @com.aliyun.core.annotation.NameInMap("StateTime")
         private Long stateTime;
 
-        @NameInMap("WorkMode")
+        @com.aliyun.core.annotation.NameInMap("WorkMode")
         private String workMode;
 
         private List(Builder builder) {
             this.agentId = builder.agentId;
             this.agentName = builder.agentName;
+            this.breakCode = builder.breakCode;
             this.callType = builder.callType;
             this.counterParty = builder.counterParty;
             this.duration = builder.duration;
@@ -215,6 +230,13 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
          */
         public String getAgentName() {
             return this.agentName;
+        }
+
+        /**
+         * @return breakCode
+         */
+        public String getBreakCode() {
+            return this.breakCode;
         }
 
         /**
@@ -269,14 +291,14 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
         /**
          * @return skillGroupIdList
          */
-        public java.util.List < String > getSkillGroupIdList() {
+        public java.util.List<String> getSkillGroupIdList() {
             return this.skillGroupIdList;
         }
 
         /**
          * @return skillGroupNameList
          */
-        public java.util.List < String > getSkillGroupNameList() {
+        public java.util.List<String> getSkillGroupNameList() {
             return this.skillGroupNameList;
         }
 
@@ -311,6 +333,7 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
         public static final class Builder {
             private String agentId; 
             private String agentName; 
+            private String breakCode; 
             private String callType; 
             private String counterParty; 
             private Long duration; 
@@ -318,8 +341,8 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
             private String instanceId; 
             private String mobile; 
             private Boolean outboundScenario; 
-            private java.util.List < String > skillGroupIdList; 
-            private java.util.List < String > skillGroupNameList; 
+            private java.util.List<String> skillGroupIdList; 
+            private java.util.List<String> skillGroupNameList; 
             private String state; 
             private String stateCode; 
             private Long stateTime; 
@@ -338,6 +361,14 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
+                return this;
+            }
+
+            /**
+             * BreakCode.
+             */
+            public Builder breakCode(String breakCode) {
+                this.breakCode = breakCode;
                 return this;
             }
 
@@ -400,7 +431,7 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
             /**
              * SkillGroupIdList.
              */
-            public Builder skillGroupIdList(java.util.List < String > skillGroupIdList) {
+            public Builder skillGroupIdList(java.util.List<String> skillGroupIdList) {
                 this.skillGroupIdList = skillGroupIdList;
                 return this;
             }
@@ -408,7 +439,7 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
             /**
              * SkillGroupNameList.
              */
-            public Builder skillGroupNameList(java.util.List < String > skillGroupNameList) {
+            public Builder skillGroupNameList(java.util.List<String> skillGroupNameList) {
                 this.skillGroupNameList = skillGroupNameList;
                 return this;
             }
@@ -452,17 +483,23 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRealtimeAgentStatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRealtimeAgentStatesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("List")
-        private java.util.List < List> list;
+        @com.aliyun.core.annotation.NameInMap("List")
+        private java.util.List<List> list;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {
@@ -483,7 +520,7 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -509,7 +546,7 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -517,7 +554,7 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

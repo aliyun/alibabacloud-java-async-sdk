@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListConfigDeliveryChannelsRequest} extends {@link RequestModel}
  *
  * <p>ListConfigDeliveryChannelsRequest</p>
  */
 public class ListConfigDeliveryChannelsRequest extends Request {
-    @Query
-    @NameInMap("DeliveryChannelIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeliveryChannelIds")
     private String deliveryChannelIds;
 
     private ListConfigDeliveryChannelsRequest(Builder builder) {
@@ -54,7 +59,10 @@ public class ListConfigDeliveryChannelsRequest extends Request {
         } 
 
         /**
-         * The ID of the delivery channel. Separate multiple IDs with commas (,).
+         * <p>The ID of the delivery channel. Separate multiple IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cdc-d9106457e0d900b1****</p>
          */
         public Builder deliveryChannelIds(String deliveryChannelIds) {
             this.putQueryParameter("DeliveryChannelIds", deliveryChannelIds);

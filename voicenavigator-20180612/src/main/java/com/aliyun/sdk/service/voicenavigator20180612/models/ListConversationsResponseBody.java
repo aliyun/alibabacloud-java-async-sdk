@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListConversationsResponseBody} extends {@link TeaModel}
  *
  * <p>ListConversationsResponseBody</p>
  */
 public class ListConversationsResponseBody extends TeaModel {
-    @NameInMap("Conversations")
-    private java.util.List < Conversations> conversations;
+    @com.aliyun.core.annotation.NameInMap("Conversations")
+    private java.util.List<Conversations> conversations;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListConversationsResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class ListConversationsResponseBody extends TeaModel {
     /**
      * @return conversations
      */
-    public java.util.List < Conversations> getConversations() {
+    public java.util.List<Conversations> getConversations() {
         return this.conversations;
     }
 
@@ -79,7 +84,7 @@ public class ListConversationsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Conversations> conversations; 
+        private java.util.List<Conversations> conversations; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListConversationsResponseBody extends TeaModel {
         /**
          * Conversations.
          */
-        public Builder conversations(java.util.List < Conversations> conversations) {
+        public Builder conversations(java.util.List<Conversations> conversations) {
             this.conversations = conversations;
             return this;
         }
@@ -131,44 +136,58 @@ public class ListConversationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListConversationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListConversationsResponseBody</p>
+     */
     public static class Conversations extends TeaModel {
-        @NameInMap("CalledNumber")
+        @com.aliyun.core.annotation.NameInMap("CalledNumber")
         private String calledNumber;
 
-        @NameInMap("CallingNumber")
+        @com.aliyun.core.annotation.NameInMap("CallingNumber")
         private String callingNumber;
 
-        @NameInMap("ConversationId")
+        @com.aliyun.core.annotation.NameInMap("ConversationId")
         private String conversationId;
 
-        @NameInMap("EndReason")
+        @com.aliyun.core.annotation.NameInMap("DsReport")
+        private String dsReport;
+
+        @com.aliyun.core.annotation.NameInMap("DsReportTitles")
+        private java.util.List<String> dsReportTitles;
+
+        @com.aliyun.core.annotation.NameInMap("EndReason")
         private Integer endReason;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("HasLastPlaybackCompleted")
+        @com.aliyun.core.annotation.NameInMap("HasLastPlaybackCompleted")
         private Boolean hasLastPlaybackCompleted;
 
-        @NameInMap("HasToAgent")
+        @com.aliyun.core.annotation.NameInMap("HasToAgent")
         private Boolean hasToAgent;
 
-        @NameInMap("Rounds")
+        @com.aliyun.core.annotation.NameInMap("Rounds")
         private Integer rounds;
 
-        @NameInMap("SandBox")
+        @com.aliyun.core.annotation.NameInMap("SandBox")
         private Boolean sandBox;
 
-        @NameInMap("SkillGroup")
+        @com.aliyun.core.annotation.NameInMap("SkillGroup")
         private String skillGroup;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
         private Conversations(Builder builder) {
             this.calledNumber = builder.calledNumber;
             this.callingNumber = builder.callingNumber;
             this.conversationId = builder.conversationId;
+            this.dsReport = builder.dsReport;
+            this.dsReportTitles = builder.dsReportTitles;
             this.endReason = builder.endReason;
             this.endTime = builder.endTime;
             this.hasLastPlaybackCompleted = builder.hasLastPlaybackCompleted;
@@ -206,6 +225,20 @@ public class ListConversationsResponseBody extends TeaModel {
          */
         public String getConversationId() {
             return this.conversationId;
+        }
+
+        /**
+         * @return dsReport
+         */
+        public String getDsReport() {
+            return this.dsReport;
+        }
+
+        /**
+         * @return dsReportTitles
+         */
+        public java.util.List<String> getDsReportTitles() {
+            return this.dsReportTitles;
         }
 
         /**
@@ -268,6 +301,8 @@ public class ListConversationsResponseBody extends TeaModel {
             private String calledNumber; 
             private String callingNumber; 
             private String conversationId; 
+            private String dsReport; 
+            private java.util.List<String> dsReportTitles; 
             private Integer endReason; 
             private Long endTime; 
             private Boolean hasLastPlaybackCompleted; 
@@ -298,6 +333,22 @@ public class ListConversationsResponseBody extends TeaModel {
              */
             public Builder conversationId(String conversationId) {
                 this.conversationId = conversationId;
+                return this;
+            }
+
+            /**
+             * DsReport.
+             */
+            public Builder dsReport(String dsReport) {
+                this.dsReport = dsReport;
+                return this;
+            }
+
+            /**
+             * DsReportTitles.
+             */
+            public Builder dsReportTitles(java.util.List<String> dsReportTitles) {
+                this.dsReportTitles = dsReportTitles;
                 return this;
             }
 

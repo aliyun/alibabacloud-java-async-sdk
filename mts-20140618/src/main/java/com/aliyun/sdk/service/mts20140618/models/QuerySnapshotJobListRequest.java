@@ -1,60 +1,60 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySnapshotJobListRequest} extends {@link RequestModel}
  *
  * <p>QuerySnapshotJobListRequest</p>
  */
 public class QuerySnapshotJobListRequest extends Request {
-    @Query
-    @NameInMap("EndOfJobCreatedTimeRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndOfJobCreatedTimeRange")
     private String endOfJobCreatedTimeRange;
 
-    @Query
-    @NameInMap("MaximumPageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaximumPageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Long maximumPageSize;
 
-    @Query
-    @NameInMap("NextPageToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextPageToken")
     private String nextPageToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PipelineId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PipelineId")
     private String pipelineId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SnapshotJobIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotJobIds")
     private String snapshotJobIds;
 
-    @Query
-    @NameInMap("StartOfJobCreatedTimeRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartOfJobCreatedTimeRange")
     private String startOfJobCreatedTimeRange;
 
-    @Query
-    @NameInMap("State")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
     private QuerySnapshotJobListRequest(Builder builder) {
@@ -195,7 +195,10 @@ public class QuerySnapshotJobListRequest extends Request {
         } 
 
         /**
-         * EndOfJobCreatedTimeRange.
+         * <p>The snapshot configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2014-01-12T12:00:00Z</p>
          */
         public Builder endOfJobCreatedTimeRange(String endOfJobCreatedTimeRange) {
             this.putQueryParameter("EndOfJobCreatedTimeRange", endOfJobCreatedTimeRange);
@@ -204,7 +207,10 @@ public class QuerySnapshotJobListRequest extends Request {
         }
 
         /**
-         * MaximumPageSize.
+         * <p>The ID of the MPS queue to which the snapshot jobs that you want to query are submitted. To obtain the ID, you can log on to the <strong>MPS console</strong> and choose <strong>Global Settings</strong> &gt; <strong>Pipelines</strong> in the left-side navigation pane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder maximumPageSize(Long maximumPageSize) {
             this.putQueryParameter("MaximumPageSize", maximumPageSize);
@@ -213,7 +219,14 @@ public class QuerySnapshotJobListRequest extends Request {
         }
 
         /**
-         * NextPageToken.
+         * <p>The end of the time range within which the creation time of snapshot jobs to be queried is.</p>
+         * <ul>
+         * <li>Specify the time in the ISO 8601 standard in the</li>
+         * <li>YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cc6cbef8e8d5481ca536f5d2a466****</p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.putQueryParameter("NextPageToken", nextPageToken);
@@ -240,7 +253,10 @@ public class QuerySnapshotJobListRequest extends Request {
         }
 
         /**
-         * PipelineId.
+         * <p>The start time for taking snapshots. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b11c171cced04565b1f38f1ecc39****</p>
          */
         public Builder pipelineId(String pipelineId) {
             this.putQueryParameter("PipelineId", pipelineId);
@@ -267,7 +283,14 @@ public class QuerySnapshotJobListRequest extends Request {
         }
 
         /**
-         * SnapshotJobIds.
+         * <p>The beginning of the time range within which the creation time of snapshot jobs to be queried is.</p>
+         * <ul>
+         * <li>Specify the time in the ISO 8601 standard in the</li>
+         * <li>YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>72dfa5e679ab4be9a3ed9974c736****</p>
          */
         public Builder snapshotJobIds(String snapshotJobIds) {
             this.putQueryParameter("SnapshotJobIds", snapshotJobIds);
@@ -276,7 +299,10 @@ public class QuerySnapshotJobListRequest extends Request {
         }
 
         /**
-         * StartOfJobCreatedTimeRange.
+         * <p>The time when the job was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2014-01-10T12:00:00Z</p>
          */
         public Builder startOfJobCreatedTimeRange(String startOfJobCreatedTimeRange) {
             this.putQueryParameter("StartOfJobCreatedTimeRange", startOfJobCreatedTimeRange);
@@ -285,7 +311,10 @@ public class QuerySnapshotJobListRequest extends Request {
         }
 
         /**
-         * State.
+         * <p>The information about the snapshot jobs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Snapshoting</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);

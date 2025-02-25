@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDnsProductInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeDnsProductInstancesRequest</p>
  */
 public class DescribeDnsProductInstancesRequest extends Request {
-    @Query
-    @NameInMap("Direction")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Direction")
     private String direction;
 
-    @Query
-    @NameInMap("DomainType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainType")
     private String domainType;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("OrderBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderBy")
     private String orderBy;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 1000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 1)
     private Long pageSize;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
-    @Query
-    @NameInMap("VersionCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VersionCode")
     private String versionCode;
 
     private DescribeDnsProductInstancesRequest(Builder builder) {
@@ -153,7 +158,14 @@ public class DescribeDnsProductInstancesRequest extends Request {
         } 
 
         /**
-         * Direction.
+         * <p>The order in which you want to sort returned entries. Valid values:</p>
+         * <ul>
+         * <li>DESC: Returned entries are sorted in descending order. If this parameter is left empty, returned entries are sorted in descending order by default.</li>
+         * <li>ASC: Returned entries are sorted in ascending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -162,7 +174,14 @@ public class DescribeDnsProductInstancesRequest extends Request {
         }
 
         /**
-         * DomainType.
+         * <p>The type of the domain name. Valid values:</p>
+         * <ul>
+         * <li>PUBLIC (default): hosted public domain name</li>
+         * <li>CACHE: cached public domain name</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
          */
         public Builder domainType(String domainType) {
             this.putQueryParameter("DomainType", domainType);
@@ -171,7 +190,15 @@ public class DescribeDnsProductInstancesRequest extends Request {
         }
 
         /**
-         * The version code of the Alibaba Cloud DNS instance.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: en</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -180,7 +207,14 @@ public class DescribeDnsProductInstancesRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * <p>The method that is used to sort returned entries. Valid values:</p>
+         * <ul>
+         * <li>createDate: sorts returned entries by creation time. If this parameter is left empty, returned entries are sorted by creation time by default.</li>
+         * <li>expireDate: sorts returned entries by expiration time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>createDate</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -189,7 +223,10 @@ public class DescribeDnsProductInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of the page to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -198,7 +235,10 @@ public class DescribeDnsProductInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The number of entries to return on each page. Maximum value: <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -207,7 +247,10 @@ public class DescribeDnsProductInstancesRequest extends Request {
         }
 
         /**
-         * The total number of domain names.
+         * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.2.0</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);
@@ -216,7 +259,10 @@ public class DescribeDnsProductInstancesRequest extends Request {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The version code of the Alibaba Cloud DNS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>version1</p>
          */
         public Builder versionCode(String versionCode) {
             this.putQueryParameter("VersionCode", versionCode);

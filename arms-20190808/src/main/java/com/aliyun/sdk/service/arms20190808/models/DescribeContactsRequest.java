@@ -1,49 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeContactsRequest} extends {@link RequestModel}
  *
  * <p>DescribeContactsRequest</p>
  */
 public class DescribeContactsRequest extends Request {
-    @Query
-    @NameInMap("ContactIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactIds")
     private String contactIds;
 
-    @Query
-    @NameInMap("ContactName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactName")
     private String contactName;
 
-    @Query
-    @NameInMap("Email")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Email")
     private String email;
 
-    @Query
-    @NameInMap("Page")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Page")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long page;
 
-    @Query
-    @NameInMap("Phone")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Phone")
     private String phone;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Size")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Size")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long size;
 
-    @Query
-    @NameInMap("Verbose")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Verbose")
     private String verbose;
 
     private DescribeContactsRequest(Builder builder) {
@@ -154,7 +159,10 @@ public class DescribeContactsRequest extends Request {
         } 
 
         /**
-         * The ID of the alert contact that you want to query. Separate multiple contact IDs with spaces.
+         * <p>The ID of the alert contact that you want to query. Separate multiple contact IDs with spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123,321</p>
          */
         public Builder contactIds(String contactIds) {
             this.putQueryParameter("ContactIds", contactIds);
@@ -163,7 +171,10 @@ public class DescribeContactsRequest extends Request {
         }
 
         /**
-         * The name of the alert contact.
+         * <p>The name of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>John Doe</p>
          */
         public Builder contactName(String contactName) {
             this.putQueryParameter("ContactName", contactName);
@@ -172,7 +183,10 @@ public class DescribeContactsRequest extends Request {
         }
 
         /**
-         * The email address of the alert contact.
+         * <p>The email address of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:someone@example.com">someone@example.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -181,7 +195,11 @@ public class DescribeContactsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
@@ -190,7 +208,10 @@ public class DescribeContactsRequest extends Request {
         }
 
         /**
-         * The mobile number of the alert contact.
+         * <p>The mobile number of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1381111*****</p>
          */
         public Builder phone(String phone) {
             this.putQueryParameter("Phone", phone);
@@ -199,7 +220,10 @@ public class DescribeContactsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -208,7 +232,11 @@ public class DescribeContactsRequest extends Request {
         }
 
         /**
-         * The number of alert contacts to return on each page.
+         * <p>The number of alert contacts to return on each page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder size(Long size) {
             this.putQueryParameter("Size", size);
@@ -217,7 +245,10 @@ public class DescribeContactsRequest extends Request {
         }
 
         /**
-         * Specifies whether to return redundant information.
+         * <p>Specifies whether to return redundant information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder verbose(String verbose) {
             this.putQueryParameter("Verbose", verbose);

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyplsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BindBatchAxgResponseBody} extends {@link TeaModel}
  *
  * <p>BindBatchAxgResponseBody</p>
  */
 public class BindBatchAxgResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecretBindList")
+    @com.aliyun.core.annotation.NameInMap("SecretBindList")
     private SecretBindList secretBindList;
 
     private BindBatchAxgResponseBody(Builder builder) {
@@ -111,26 +116,32 @@ public class BindBatchAxgResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BindBatchAxgResponseBody} extends {@link TeaModel}
+     *
+     * <p>BindBatchAxgResponseBody</p>
+     */
     public static class SecretBind extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Extension")
+        @com.aliyun.core.annotation.NameInMap("Extension")
         private String extension;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("PhoneNoA")
+        @com.aliyun.core.annotation.NameInMap("PhoneNoA")
         private String phoneNoA;
 
-        @NameInMap("SecretNo")
+        @com.aliyun.core.annotation.NameInMap("SecretNo")
         private String secretNo;
 
-        @NameInMap("SubsId")
+        @com.aliyun.core.annotation.NameInMap("SubsId")
         private String subsId;
 
         private SecretBind(Builder builder) {
@@ -272,9 +283,15 @@ public class BindBatchAxgResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BindBatchAxgResponseBody} extends {@link TeaModel}
+     *
+     * <p>BindBatchAxgResponseBody</p>
+     */
     public static class SecretBindList extends TeaModel {
-        @NameInMap("SecretBind")
-        private java.util.List < SecretBind> secretBind;
+        @com.aliyun.core.annotation.NameInMap("SecretBind")
+        private java.util.List<SecretBind> secretBind;
 
         private SecretBindList(Builder builder) {
             this.secretBind = builder.secretBind;
@@ -291,17 +308,17 @@ public class BindBatchAxgResponseBody extends TeaModel {
         /**
          * @return secretBind
          */
-        public java.util.List < SecretBind> getSecretBind() {
+        public java.util.List<SecretBind> getSecretBind() {
             return this.secretBind;
         }
 
         public static final class Builder {
-            private java.util.List < SecretBind> secretBind; 
+            private java.util.List<SecretBind> secretBind; 
 
             /**
              * SecretBind.
              */
-            public Builder secretBind(java.util.List < SecretBind> secretBind) {
+            public Builder secretBind(java.util.List<SecretBind> secretBind) {
                 this.secretBind = secretBind;
                 return this;
             }

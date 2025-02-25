@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hologram20220601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateInstanceNetworkTypeRequest} extends {@link RequestModel}
  *
  * <p>UpdateInstanceNetworkTypeRequest</p>
  */
 public class UpdateInstanceNetworkTypeRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
     private String instanceId;
 
-    @Body
-    @NameInMap("anyTunnelToSingleTunnel")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("anyTunnelToSingleTunnel")
     private String anyTunnelToSingleTunnel;
 
-    @Body
-    @NameInMap("networkTypes")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("networkTypes")
     private String networkTypes;
 
-    @Body
-    @NameInMap("vSwitchId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("vSwitchId")
     private String vSwitchId;
 
-    @Body
-    @NameInMap("vpcId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("vpcId")
     private String vpcId;
 
-    @Body
-    @NameInMap("vpcOwnerId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("vpcOwnerId")
     private String vpcOwnerId;
 
-    @Body
-    @NameInMap("vpcRegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("vpcRegionId")
     private String vpcRegionId;
 
     private UpdateInstanceNetworkTypeRequest(Builder builder) {
@@ -138,7 +143,10 @@ public class UpdateInstanceNetworkTypeRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgprecn-cn-lbj35pw74002</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -147,26 +155,26 @@ public class UpdateInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * Specifies whether to change the network type from AnyTunnel to SingleTunnel. This parameter is invalid for new instances. For new instances, this parameter is set to null by default.
-         * <p>
+         * <p>Specifies whether to change the network type from AnyTunnel to SingleTunnel. This parameter is invalid for new instances. For new instances, this parameter is set to null by default.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>others/null</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   others/null
+         * <!-- -->
+         * </li>
+         * <li><p>true</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   true
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder anyTunnelToSingleTunnel(String anyTunnelToSingleTunnel) {
             this.putBodyParameter("anyTunnelToSingleTunnel", anyTunnelToSingleTunnel);
@@ -175,7 +183,10 @@ public class UpdateInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * A list of network types that you want to enable. The list of enabled network types is randomly ordered. For example, the Internet, internal network, and VPCSingleTunnel network types are enabled. If you want to disable the Internet type, set this parameter to Intranet,VPCSingleTunnel.
+         * <p>A list of network types that you want to enable. The list of enabled network types is randomly ordered. For example, the Internet, internal network, and VPCSingleTunnel network types are enabled. If you want to disable the Internet type, set this parameter to Intranet,VPCSingleTunnel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Internet,VPCSingleTunnel</p>
          */
         public Builder networkTypes(String networkTypes) {
             this.putBodyParameter("networkTypes", networkTypes);
@@ -184,7 +195,10 @@ public class UpdateInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * The vSwitch ID.
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-2vccsiymtqr9aavew0vo3</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putBodyParameter("vSwitchId", vSwitchId);
@@ -193,7 +207,10 @@ public class UpdateInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * The ID of the VPC to which the instance belongs.
+         * <p>The ID of the VPC to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-t4netc3y5etlondfb5ra7</p>
          */
         public Builder vpcId(String vpcId) {
             this.putBodyParameter("vpcId", vpcId);
@@ -202,7 +219,10 @@ public class UpdateInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * The owner ID of the VPC, which is the ID of the Alibaba Cloud account.
+         * <p>The owner ID of the VPC, which is the ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1999365732646672</p>
          */
         public Builder vpcOwnerId(String vpcOwnerId) {
             this.putBodyParameter("vpcOwnerId", vpcOwnerId);
@@ -211,7 +231,10 @@ public class UpdateInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * The region ID of the VPC.
+         * <p>The region ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder vpcRegionId(String vpcRegionId) {
             this.putBodyParameter("vpcRegionId", vpcRegionId);

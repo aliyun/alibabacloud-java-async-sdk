@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200630.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCAInstanceStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetCAInstanceStatusResponseBody</p>
  */
 public class GetCAInstanceStatusResponseBody extends TeaModel {
-    @NameInMap("InstanceStatusList")
-    private java.util.List < InstanceStatusList> instanceStatusList;
+    @com.aliyun.core.annotation.NameInMap("InstanceStatusList")
+    private java.util.List<InstanceStatusList> instanceStatusList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetCAInstanceStatusResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class GetCAInstanceStatusResponseBody extends TeaModel {
     /**
      * @return instanceStatusList
      */
-    public java.util.List < InstanceStatusList> getInstanceStatusList() {
+    public java.util.List<InstanceStatusList> getInstanceStatusList() {
         return this.instanceStatusList;
     }
 
@@ -46,19 +51,22 @@ public class GetCAInstanceStatusResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstanceStatusList> instanceStatusList; 
+        private java.util.List<InstanceStatusList> instanceStatusList; 
         private String requestId; 
 
         /**
-         * InstanceStatusList.
+         * <p>The status information of the private CA instance.</p>
          */
-        public Builder instanceStatusList(java.util.List < InstanceStatusList> instanceStatusList) {
+        public Builder instanceStatusList(java.util.List<InstanceStatusList> instanceStatusList) {
             this.instanceStatusList = instanceStatusList;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25589516-2A56-5159-AB88-4A1D9824E183</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,32 +79,38 @@ public class GetCAInstanceStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCAInstanceStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCAInstanceStatusResponseBody</p>
+     */
     public static class InstanceStatusList extends TeaModel {
-        @NameInMap("AfterTime")
+        @com.aliyun.core.annotation.NameInMap("AfterTime")
         private Long afterTime;
 
-        @NameInMap("BeforeTime")
+        @com.aliyun.core.annotation.NameInMap("BeforeTime")
         private Long beforeTime;
 
-        @NameInMap("CertIssuedCount")
+        @com.aliyun.core.annotation.NameInMap("CertIssuedCount")
         private Integer certIssuedCount;
 
-        @NameInMap("CertTotalCount")
+        @com.aliyun.core.annotation.NameInMap("CertTotalCount")
         private Integer certTotalCount;
 
-        @NameInMap("Identifier")
+        @com.aliyun.core.annotation.NameInMap("Identifier")
         private String identifier;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UseExpireTime")
+        @com.aliyun.core.annotation.NameInMap("UseExpireTime")
         private Long useExpireTime;
 
         private InstanceStatusList(Builder builder) {
@@ -194,7 +208,13 @@ public class GetCAInstanceStatusResponseBody extends TeaModel {
             private Long useExpireTime; 
 
             /**
-             * AfterTime.
+             * <p>The expiration date of the private CA certificate. This value is a UNIX timestamp. Unit: milliseconds.</p>
+             * <blockquote>
+             * <p> This parameter is returned only when the value of the <strong>Status</strong> parameter is <strong>USED</strong> or <strong>REVOKE</strong>. The value USED indicates that the private CA instance is enabled, and the value REVOKE indicates that the instance is revoked.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1792944000000</p>
              */
             public Builder afterTime(Long afterTime) {
                 this.afterTime = afterTime;
@@ -202,7 +222,13 @@ public class GetCAInstanceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * BeforeTime.
+             * <p>The issuance date of the private CA certificate. This value is a UNIX timestamp. Unit: milliseconds.</p>
+             * <blockquote>
+             * <p> This parameter is returned only when the value of the <strong>Status</strong> parameter is <strong>USED</strong> or <strong>REVOKE</strong>. The value USED indicates that the private CA instance is enabled, and the value REVOKE indicates that the instance is revoked.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1635177600000</p>
              */
             public Builder beforeTime(Long beforeTime) {
                 this.beforeTime = beforeTime;
@@ -210,7 +236,10 @@ public class GetCAInstanceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * CertIssuedCount.
+             * <p>The number of certificates that are issued by using the private CA instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder certIssuedCount(Integer certIssuedCount) {
                 this.certIssuedCount = certIssuedCount;
@@ -218,7 +247,12 @@ public class GetCAInstanceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * CertTotalCount.
+             * <p>The number of certificates that can be issued by using the private CA instance.</p>
+             * <p>For a private root CA instance whose <strong>Type</strong> is <strong>ROOT</strong>, this parameter indicates the number of intermediate CA certificates that can be issued.</p>
+             * <p>For a private intermediate CA instance whose <strong>Type</strong> is <strong>SUB_ROOT</strong>, this parameter indicates the total number of client certificates and server certificates that can be issued</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder certTotalCount(Integer certTotalCount) {
                 this.certTotalCount = certTotalCount;
@@ -226,7 +260,13 @@ public class GetCAInstanceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Identifier.
+             * <p>The unique identifier of the private CA certificate.</p>
+             * <blockquote>
+             * <p> This parameter is returned only when the value of the <strong>Status</strong> parameter is <strong>USED</strong> or <strong>REVOKE</strong>. The value USED indicates that the private CA instance is enabled, and the value REVOKE indicates that the instance is revoked.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>a7bb2dd212a2112128cd5cc9b753****</p>
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -234,7 +274,10 @@ public class GetCAInstanceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the private CA instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cas-member-0hmi****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -242,7 +285,16 @@ public class GetCAInstanceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the private CA instance. Valid values:</p>
+             * <ul>
+             * <li><strong>BUY</strong>: The private CA instance is purchased but is not enabled.</li>
+             * <li><strong>USED</strong>: The private CA instance is enabled.</li>
+             * <li><strong>REFUND</strong>: The private CA instance is refunded.</li>
+             * <li><strong>REVOKE</strong>: The private CA instance is revoked.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>USED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -250,7 +302,14 @@ public class GetCAInstanceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the private CA instance. Valid values:</p>
+             * <ul>
+             * <li><strong>ROOT</strong>: root CA instance</li>
+             * <li><strong>SUB_ROOT</strong>: intermediate CA instance</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ROOT</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -258,7 +317,13 @@ public class GetCAInstanceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * UseExpireTime.
+             * <p>The expiration date of the private CA instance. This value is a UNIX timestamp. Unit: milliseconds.</p>
+             * <blockquote>
+             * <p> This parameter corresponds to the duration that you select when you purchase the private CA instance. The duration indicates the subscription period of the Private Certificate Authority (PCA) service.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1637251200000</p>
              */
             public Builder useExpireTime(Long useExpireTime) {
                 this.useExpireTime = useExpireTime;

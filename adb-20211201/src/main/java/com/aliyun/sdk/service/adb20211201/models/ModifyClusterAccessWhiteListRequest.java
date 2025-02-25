@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyClusterAccessWhiteListRequest} extends {@link RequestModel}
  *
  * <p>ModifyClusterAccessWhiteListRequest</p>
  */
 public class ModifyClusterAccessWhiteListRequest extends Request {
-    @Query
-    @NameInMap("DBClusterIPArrayAttribute")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterIPArrayAttribute")
     private String DBClusterIPArrayAttribute;
 
-    @Query
-    @NameInMap("DBClusterIPArrayName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterIPArrayName")
     private String DBClusterIPArrayName;
 
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("ModifyMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModifyMode")
     private String modifyMode;
 
-    @Query
-    @NameInMap("SecurityIps")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityIps")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String securityIps;
 
     private ModifyClusterAccessWhiteListRequest(Builder builder) {
@@ -112,10 +117,13 @@ public class ModifyClusterAccessWhiteListRequest extends Request {
         } 
 
         /**
-         * The attribute of the IP address whitelist. By default, this parameter is empty.
-         * <p>
+         * <p>The attribute of the IP address whitelist. By default, this parameter is empty.</p>
+         * <blockquote>
+         * <p>Whitelists with the hidden attribute are not displayed in the console. Those whitelists are used to access Data Transmission Service (DTS) and PolarDB.</p>
+         * </blockquote>
          * 
-         * > Whitelists with the hidden attribute are not displayed in the console. Those whitelists are used to access Data Transmission Service (DTS) and PolarDB.
+         * <strong>example:</strong>
+         * <p>hidden</p>
          */
         public Builder DBClusterIPArrayAttribute(String DBClusterIPArrayAttribute) {
             this.putQueryParameter("DBClusterIPArrayAttribute", DBClusterIPArrayAttribute);
@@ -124,11 +132,14 @@ public class ModifyClusterAccessWhiteListRequest extends Request {
         }
 
         /**
-         * The name of the IP address whitelist. If you do not specify this parameter, the Default whitelist is modified.
-         * <p>
+         * <p>The name of the IP address whitelist. If you do not specify this parameter, the Default whitelist is modified.</p>
+         * <ul>
+         * <li>The whitelist name must be 2 to 32 characters in length. The name can contain lowercase letters, digits, and underscores (_). The name must start with a lowercase letter and end with a lowercase letter or a digit.</li>
+         * <li>Each cluster supports up to 50 IP address whitelists.</li>
+         * </ul>
          * 
-         * *   The whitelist name must be 2 to 32 characters in length. The name can contain lowercase letters, digits, and underscores (\_). The name must start with a lowercase letter and end with a lowercase letter or a digit.
-         * *   Each cluster supports up to 50 IP address whitelists.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder DBClusterIPArrayName(String DBClusterIPArrayName) {
             this.putQueryParameter("DBClusterIPArrayName", DBClusterIPArrayName);
@@ -137,7 +148,11 @@ public class ModifyClusterAccessWhiteListRequest extends Request {
         }
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-bp11q28kvl688****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -146,12 +161,15 @@ public class ModifyClusterAccessWhiteListRequest extends Request {
         }
 
         /**
-         * The method used to modify the IP address whitelist. Valid values:
-         * <p>
+         * <p>The method used to modify the IP address whitelist. Valid values:</p>
+         * <ul>
+         * <li><strong>Cover</strong> (default)</li>
+         * <li><strong>Append</strong></li>
+         * <li><strong>Delete</strong></li>
+         * </ul>
          * 
-         * *   **Cover** (default)
-         * *   **Append**
-         * *   **Delete**
+         * <strong>example:</strong>
+         * <p>Cover</p>
          */
         public Builder modifyMode(String modifyMode) {
             this.putQueryParameter("ModifyMode", modifyMode);
@@ -160,11 +178,15 @@ public class ModifyClusterAccessWhiteListRequest extends Request {
         }
 
         /**
-         * The IP addresses in an IP address whitelist of a cluster. Separate multiple IP addresses with commas (,). You can add a maximum of 500 different IP addresses to a whitelist. The entries in the IP address whitelist must be in one of the following formats:
-         * <p>
+         * <p>The IP addresses in an IP address whitelist of a cluster. Separate multiple IP addresses with commas (,). You can add a maximum of 500 different IP addresses to a whitelist. The entries in the IP address whitelist must be in one of the following formats:</p>
+         * <ul>
+         * <li>IP addresses, such as 10.23.XX.XX.</li>
+         * <li>CIDR blocks, such as 10.23.xx.xx/24. In this example, 24 indicates that the prefix of each IP address in the IP whitelist is 24 bits in length. You can replace 24 with a value within the range of 1 to 32.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   IP addresses, such as 10.23.XX.XX.
-         * *   CIDR blocks, such as 10.23.xx.xx/24. In this example, 24 indicates that the prefix of each IP address in the IP whitelist is 24 bits in length. You can replace 24 with a value within the range of 1 to 32.
+         * <strong>example:</strong>
+         * <p>10.23.xx.xx</p>
          */
         public Builder securityIps(String securityIps) {
             this.putQueryParameter("SecurityIps", securityIps);

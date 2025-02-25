@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.push20160801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckCertificateRequest} extends {@link RequestModel}
  *
  * <p>CheckCertificateRequest</p>
  */
 public class CheckCertificateRequest extends Request {
-    @Query
-    @NameInMap("AppKey")
-    @Validation(required = true, maximum = 1000000000)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppKey")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 1000000000)
     private Long appKey;
 
     private CheckCertificateRequest(Builder builder) {
@@ -55,7 +55,10 @@ public class CheckCertificateRequest extends Request {
         } 
 
         /**
-         * AppKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23267207</p>
          */
         public Builder appKey(Long appKey) {
             this.putQueryParameter("AppKey", appKey);

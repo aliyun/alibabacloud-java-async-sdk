@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInventoryEntriesRequest} extends {@link RequestModel}
  *
  * <p>ListInventoryEntriesRequest</p>
  */
 public class ListInventoryEntriesRequest extends Request {
-    @Query
-    @NameInMap("Filter")
-    private java.util.List < Filter> filter;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
+    private java.util.List<Filter> filter;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("TypeName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TypeName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String typeName;
 
     private ListInventoryEntriesRequest(Builder builder) {
@@ -65,7 +70,7 @@ public class ListInventoryEntriesRequest extends Request {
     /**
      * @return filter
      */
-    public java.util.List < Filter> getFilter() {
+    public java.util.List<Filter> getFilter() {
         return this.filter;
     }
 
@@ -105,7 +110,7 @@ public class ListInventoryEntriesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListInventoryEntriesRequest, Builder> {
-        private java.util.List < Filter> filter; 
+        private java.util.List<Filter> filter; 
         private String instanceId; 
         private Integer maxResults; 
         private String nextToken; 
@@ -127,16 +132,20 @@ public class ListInventoryEntriesRequest extends Request {
         } 
 
         /**
-         * The filter rules for the component.
+         * <p>The filter rules for the component.</p>
          */
-        public Builder filter(java.util.List < Filter> filter) {
+        public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
             return this;
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1cpoxxxwxxxxxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -145,7 +154,10 @@ public class ListInventoryEntriesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 100. Default value: 50.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -154,7 +166,10 @@ public class ListInventoryEntriesRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctMTJDQzA</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -163,7 +178,10 @@ public class ListInventoryEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the instance resides.
+         * <p>The ID of the region in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -172,17 +190,21 @@ public class ListInventoryEntriesRequest extends Request {
         }
 
         /**
-         * The name of the component. Valid values:
-         * <p>
+         * <p>The name of the component. Valid values:</p>
+         * <ul>
+         * <li>ACS:InstanceInformation</li>
+         * <li>ACS:Application</li>
+         * <li>ACS:File</li>
+         * <li>ACS:Network</li>
+         * <li>ACS:WindowsRole</li>
+         * <li>ACS:Service</li>
+         * <li>ACS:WindowsRegistry</li>
+         * <li>ACS:WindowsUpdate</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   ACS:InstanceInformation
-         * *   ACS:Application
-         * *   ACS:File
-         * *   ACS:Network
-         * *   ACS:WindowsRole
-         * *   ACS:Service
-         * *   ACS:WindowsRegistry
-         * *   ACS:WindowsUpdate
+         * <strong>example:</strong>
+         * <p>ACS:InstanceInformation</p>
          */
         public Builder typeName(String typeName) {
             this.putQueryParameter("TypeName", typeName);
@@ -197,15 +219,21 @@ public class ListInventoryEntriesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListInventoryEntriesRequest} extends {@link TeaModel}
+     *
+     * <p>ListInventoryEntriesRequest</p>
+     */
     public static class Filter extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("Value")
-        private java.util.List < String > value;
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private java.util.List<String> value;
 
         private Filter(Builder builder) {
             this.name = builder.name;
@@ -238,17 +266,20 @@ public class ListInventoryEntriesRequest extends Request {
         /**
          * @return value
          */
-        public java.util.List < String > getValue() {
+        public java.util.List<String> getValue() {
             return this.value;
         }
 
         public static final class Builder {
             private String name; 
             private String operator; 
-            private java.util.List < String > value; 
+            private java.util.List<String> value; 
 
             /**
-             * The name of the component property. Valid values of N: 1 to 5.
+             * <p>The name of the component property. Valid values of N: 1 to 5.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PlatformName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -256,14 +287,17 @@ public class ListInventoryEntriesRequest extends Request {
             }
 
             /**
-             * The comparison operator that is used to filter property values. Valid values of N: 1 to 5. Valid values:
-             * <p>
+             * <p>The comparison operator that is used to filter property values. Valid values of N: 1 to 5. Valid values:</p>
+             * <ul>
+             * <li>Equal</li>
+             * <li>NotEqual</li>
+             * <li>BeginWith</li>
+             * <li>LessThan</li>
+             * <li>GreaterThan</li>
+             * </ul>
              * 
-             * *   Equal
-             * *   NotEqual
-             * *   BeginWith
-             * *   LessThan
-             * *   GreaterThan
+             * <strong>example:</strong>
+             * <p>Equal</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -271,9 +305,12 @@ public class ListInventoryEntriesRequest extends Request {
             }
 
             /**
-             * The values of properties. Valid values of the first N: 1 to 5. Valid values of the second N: 1 to 20.
+             * <p>The values of properties. Valid values of the first N: 1 to 5. Valid values of the second N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
-            public Builder value(java.util.List < String > value) {
+            public Builder value(java.util.List<String> value) {
                 this.value = value;
                 return this;
             }

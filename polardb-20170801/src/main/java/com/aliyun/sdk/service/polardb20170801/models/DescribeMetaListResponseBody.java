@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMetaListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMetaListResponseBody</p>
  */
 public class DescribeMetaListResponseBody extends TeaModel {
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("Items")
-    private java.util.List < Items> items;
+    @com.aliyun.core.annotation.NameInMap("Items")
+    private java.util.List<Items> items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalPageCount")
+    @com.aliyun.core.annotation.NameInMap("TotalPageCount")
     private String totalPageCount;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private String totalRecordCount;
 
     private DescribeMetaListResponseBody(Builder builder) {
@@ -61,7 +66,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -102,7 +107,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
 
     public static final class Builder {
         private String DBClusterId; 
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private String pageNumber; 
         private String pageSize; 
         private String requestId; 
@@ -110,7 +115,10 @@ public class DescribeMetaListResponseBody extends TeaModel {
         private String totalRecordCount; 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-bp1s826a1up******</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -118,15 +126,18 @@ public class DescribeMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * The details of databases and tables that can be restored.
+         * <p>The details of databases and tables that can be restored.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
 
         /**
-         * The number of the returned page.
+         * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -134,7 +145,10 @@ public class DescribeMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -142,7 +156,10 @@ public class DescribeMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AA815DE7-B576-4B22-B33C-3FB31A******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +167,10 @@ public class DescribeMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned pages.
+         * <p>The total number of returned pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPageCount(String totalPageCount) {
             this.totalPageCount = totalPageCount;
@@ -158,7 +178,10 @@ public class DescribeMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalRecordCount(String totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -171,12 +194,18 @@ public class DescribeMetaListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMetaListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMetaListResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("Database")
+        @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
 
-        @NameInMap("Tables")
-        private java.util.List < String > tables;
+        @com.aliyun.core.annotation.NameInMap("Tables")
+        private java.util.List<String> tables;
 
         private Items(Builder builder) {
             this.database = builder.database;
@@ -201,16 +230,19 @@ public class DescribeMetaListResponseBody extends TeaModel {
         /**
          * @return tables
          */
-        public java.util.List < String > getTables() {
+        public java.util.List<String> getTables() {
             return this.tables;
         }
 
         public static final class Builder {
             private String database; 
-            private java.util.List < String > tables; 
+            private java.util.List<String> tables; 
 
             /**
-             * The name of the database that can be restored.
+             * <p>The name of the database that can be restored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_db</p>
              */
             public Builder database(String database) {
                 this.database = database;
@@ -218,9 +250,9 @@ public class DescribeMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table that can be restored.
+             * <p>The name of the table that can be restored.</p>
              */
-            public Builder tables(java.util.List < String > tables) {
+            public Builder tables(java.util.List<String> tables) {
                 this.tables = tables;
                 return this;
             }

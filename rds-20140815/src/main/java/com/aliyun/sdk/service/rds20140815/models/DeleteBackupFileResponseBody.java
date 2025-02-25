@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteBackupFileResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteBackupFileResponseBody</p>
  */
 public class DeleteBackupFileResponseBody extends TeaModel {
-    @NameInMap("DeletedBaksetIds")
+    @com.aliyun.core.annotation.NameInMap("DeletedBaksetIds")
     private DeletedBaksetIds deletedBaksetIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteBackupFileResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DeleteBackupFileResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the IDs of deleted backup sets.
+         * <p>An array that consists of the IDs of deleted backup sets.</p>
          */
         public Builder deletedBaksetIds(DeletedBaksetIds deletedBaksetIds) {
             this.deletedBaksetIds = deletedBaksetIds;
@@ -58,7 +63,10 @@ public class DeleteBackupFileResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C7B3A91C-0ACD-4948-ACAE-xxxxxxxD4069</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,9 +79,15 @@ public class DeleteBackupFileResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteBackupFileResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteBackupFileResponseBody</p>
+     */
     public static class DeletedBaksetIds extends TeaModel {
-        @NameInMap("DeletedBaksetIds")
-        private java.util.List < Integer > deletedBaksetIds;
+        @com.aliyun.core.annotation.NameInMap("DeletedBaksetIds")
+        private java.util.List<Integer> deletedBaksetIds;
 
         private DeletedBaksetIds(Builder builder) {
             this.deletedBaksetIds = builder.deletedBaksetIds;
@@ -90,17 +104,17 @@ public class DeleteBackupFileResponseBody extends TeaModel {
         /**
          * @return deletedBaksetIds
          */
-        public java.util.List < Integer > getDeletedBaksetIds() {
+        public java.util.List<Integer> getDeletedBaksetIds() {
             return this.deletedBaksetIds;
         }
 
         public static final class Builder {
-            private java.util.List < Integer > deletedBaksetIds; 
+            private java.util.List<Integer> deletedBaksetIds; 
 
             /**
-             * An array that consists of the IDs of deleted backup sets.
+             * <p>An array that consists of the IDs of deleted backup sets.</p>
              */
-            public Builder deletedBaksetIds(java.util.List < Integer > deletedBaksetIds) {
+            public Builder deletedBaksetIds(java.util.List<Integer> deletedBaksetIds) {
                 this.deletedBaksetIds = deletedBaksetIds;
                 return this;
             }

@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListApplicationsRequest} extends {@link RequestModel}
  *
  * <p>ListApplicationsRequest</p>
  */
 public class ListApplicationsRequest extends Request {
-    @Query
-    @NameInMap("ApplicationNames")
-    private java.util.List < String > applicationNames;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationNames")
+    private java.util.List<String> applicationNames;
 
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private ListApplicationsRequest(Builder builder) {
@@ -59,7 +64,7 @@ public class ListApplicationsRequest extends Request {
     /**
      * @return applicationNames
      */
-    public java.util.List < String > getApplicationNames() {
+    public java.util.List<String> getApplicationNames() {
         return this.applicationNames;
     }
 
@@ -92,7 +97,7 @@ public class ListApplicationsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListApplicationsRequest, Builder> {
-        private java.util.List < String > applicationNames; 
+        private java.util.List<String> applicationNames; 
         private String clusterId; 
         private Integer maxResults; 
         private String nextToken; 
@@ -112,16 +117,23 @@ public class ListApplicationsRequest extends Request {
         } 
 
         /**
-         * The application names.
+         * <p>The application names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b933c5aac8fe****</p>
          */
-        public Builder applicationNames(java.util.List < String > applicationNames) {
+        public Builder applicationNames(java.util.List<String> applicationNames) {
             this.putQueryParameter("ApplicationNames", applicationNames);
             this.applicationNames = applicationNames;
             return this;
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-e6a9d46e92675****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -130,7 +142,10 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * The total number of pages.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -139,7 +154,10 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * The page number of the next page returned.
+         * <p>The page number of the next page returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -148,7 +166,11 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

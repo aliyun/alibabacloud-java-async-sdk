@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DataProductListLogMapValue</p>
  */
 public class DataProductListLogMapValue extends TeaModel {
-    @NameInMap("LogCode")
+    @com.aliyun.core.annotation.NameInMap("LogCode")
     private String logCode;
 
-    @NameInMap("LogName")
+    @com.aliyun.core.annotation.NameInMap("LogName")
     private String logName;
 
-    @NameInMap("LogNameEn")
+    @com.aliyun.core.annotation.NameInMap("LogNameEn")
     private String logNameEn;
 
-    @NameInMap("LogNameKey")
+    @com.aliyun.core.annotation.NameInMap("LogNameKey")
     private String logNameKey;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Boolean status;
 
-    @NameInMap("CanOperateOrNot")
+    @com.aliyun.core.annotation.NameInMap("CanOperateOrNot")
     private Boolean canOperateOrNot;
 
-    @NameInMap("Topic")
+    @com.aliyun.core.annotation.NameInMap("Topic")
     private String topic;
 
-    @NameInMap("ExtraParameters")
+    @com.aliyun.core.annotation.NameInMap("ExtraParameters")
     private java.util.List < ExtraParameters> extraParameters;
 
     private DataProductListLogMapValue(Builder builder) {
@@ -200,10 +199,10 @@ public class DataProductListLogMapValue extends TeaModel {
     } 
 
     public static class ExtraParameters extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private ExtraParameters(Builder builder) {

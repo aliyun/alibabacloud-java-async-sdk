@@ -1,66 +1,71 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLoadBalancerListenersRequest} extends {@link RequestModel}
  *
  * <p>DescribeLoadBalancerListenersRequest</p>
  */
 public class DescribeLoadBalancerListenersRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("ListenerPort")
-    @Validation(maximum = 65535)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerPort")
+    @com.aliyun.core.annotation.Validation(maximum = 65535)
     private Integer listenerPort;
 
-    @Query
-    @NameInMap("ListenerProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerProtocol")
     private String listenerProtocol;
 
-    @Query
-    @NameInMap("LoadBalancerId")
-    private java.util.List < String > loadBalancerId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
+    private java.util.List<String> loadBalancerId;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 101)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 101)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private DescribeLoadBalancerListenersRequest(Builder builder) {
         super(builder);
@@ -115,7 +120,7 @@ public class DescribeLoadBalancerListenersRequest extends Request {
     /**
      * @return loadBalancerId
      */
-    public java.util.List < String > getLoadBalancerId() {
+    public java.util.List<String> getLoadBalancerId() {
         return this.loadBalancerId;
     }
 
@@ -171,7 +176,7 @@ public class DescribeLoadBalancerListenersRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -179,7 +184,7 @@ public class DescribeLoadBalancerListenersRequest extends Request {
         private String description; 
         private Integer listenerPort; 
         private String listenerProtocol; 
-        private java.util.List < String > loadBalancerId; 
+        private java.util.List<String> loadBalancerId; 
         private Integer maxResults; 
         private String nextToken; 
         private String ownerAccount; 
@@ -187,7 +192,7 @@ public class DescribeLoadBalancerListenersRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -210,7 +215,10 @@ public class DescribeLoadBalancerListenersRequest extends Request {
         } 
 
         /**
-         * The description of the listener.
+         * <p>The description of the listener.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTPS_443</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -219,7 +227,10 @@ public class DescribeLoadBalancerListenersRequest extends Request {
         }
 
         /**
-         * The frontend port that is used by the CLB instance.
+         * <p>The frontend port that is used by the CLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>443</p>
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
@@ -228,13 +239,16 @@ public class DescribeLoadBalancerListenersRequest extends Request {
         }
 
         /**
-         * The protocol used by the listener. Valid values:
-         * <p>
+         * <p>The protocol used by the listener. Valid values:</p>
+         * <ul>
+         * <li><strong>tcp</strong></li>
+         * <li><strong>udp</strong></li>
+         * <li><strong>http</strong></li>
+         * <li><strong>https</strong></li>
+         * </ul>
          * 
-         * *   **tcp**
-         * *   **udp**
-         * *   **http**
-         * *   **https**
+         * <strong>example:</strong>
+         * <p>http</p>
          */
         public Builder listenerProtocol(String listenerProtocol) {
             this.putQueryParameter("ListenerProtocol", listenerProtocol);
@@ -243,19 +257,23 @@ public class DescribeLoadBalancerListenersRequest extends Request {
         }
 
         /**
-         * The ID of the CLB instance. You can specify at most 10 IDs.
+         * <p>The ID of the CLB instance. You can specify at most 10 IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-123wrwer</p>
          */
-        public Builder loadBalancerId(java.util.List < String > loadBalancerId) {
+        public Builder loadBalancerId(java.util.List<String> loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
             this.loadBalancerId = loadBalancerId;
             return this;
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>100</strong>. If you do not specify this parameter, the default value <strong>20</strong> is used.</p>
          * 
-         * Valid values: **1** to **100**. If you do not specify this parameter, the default value **20** is used.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -264,11 +282,14 @@ public class DescribeLoadBalancerListenersRequest extends Request {
         }
 
         /**
-         * The token that is used for the next query. Valid values:
-         * <p>
+         * <p>The token that is used for the next query. Valid values:</p>
+         * <ul>
+         * <li>If this is your first query and no subsequent queries are to be sent, ignore this parameter.</li>
+         * <li>If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</li>
+         * </ul>
          * 
-         * *   If this is your first query and no subsequent queries are to be sent, ignore this parameter.
-         * *   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -295,12 +316,14 @@ public class DescribeLoadBalancerListenersRequest extends Request {
         }
 
         /**
-         * The ID of the region where the CLB instance is deployed.
-         * <p>
+         * <p>The ID of the region where the CLB instance is deployed.</p>
+         * <p>You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <blockquote>
+         * <p> If the endpoint of the selected region is slb.aliyuncs.com, the <code>RegionId</code> parameter is required.</p>
+         * </blockquote>
          * 
-         * You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.
-         * 
-         * >  If the endpoint of the selected region is slb.aliyuncs.com, the `RegionId` parameter is required.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -327,9 +350,9 @@ public class DescribeLoadBalancerListenersRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -342,11 +365,17 @@ public class DescribeLoadBalancerListenersRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLoadBalancerListenersRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeLoadBalancerListenersRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -381,10 +410,11 @@ public class DescribeLoadBalancerListenersRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.
-             * <p>
+             * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key must be 1 to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag key must be 1 to 64 characters in length and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -392,10 +422,11 @@ public class DescribeLoadBalancerListenersRequest extends Request {
             }
 
             /**
-             * The tag value. Valid values of N: **1 to 20**. The tag value can be an empty string.
-             * <p>
+             * <p>The tag value. Valid values of N: <strong>1 to 20</strong>. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. The tag value cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

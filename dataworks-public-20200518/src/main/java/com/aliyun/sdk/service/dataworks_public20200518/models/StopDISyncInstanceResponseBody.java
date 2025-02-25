@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopDISyncInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>StopDISyncInstanceResponseBody</p>
  */
 public class StopDISyncInstanceResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private StopDISyncInstanceResponseBody(Builder builder) {
@@ -62,11 +67,7 @@ public class StopDISyncInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the synchronization node is stopped. Valid values:
-         * <p>
-         * 
-         * *   success: The synchronization node is stopped.
-         * *   fail: The synchronization node fails to be stopped.
+         * <p>The information returned for the synchronization task.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -74,7 +75,10 @@ public class StopDISyncInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The information returned for the synchronization node.
+         * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1411515937635973****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,7 +86,14 @@ public class StopDISyncInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can locate logs and troubleshoot issues based on the ID.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -95,11 +106,17 @@ public class StopDISyncInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link StopDISyncInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>StopDISyncInstanceResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Data(Builder builder) {
@@ -134,7 +151,11 @@ public class StopDISyncInstanceResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Message.
+             * <p>The reason why the synchronization task fails to be stopped.</p>
+             * <p>If the synchronization task is stopped, the value null is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fileId:[100] is invalid.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -142,10 +163,14 @@ public class StopDISyncInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the synchronization node fails to be stopped.
-             * <p>
+             * <p>Indicates whether the synchronization task is stopped. Valid values:</p>
+             * <ul>
+             * <li>success</li>
+             * <li>fail</li>
+             * </ul>
              * 
-             * If the synchronization node is stopped, the value null is returned.
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;

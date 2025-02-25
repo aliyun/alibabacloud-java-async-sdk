@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetStructSyncExecSqlDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetStructSyncExecSqlDetailResponseBody</p>
  */
 public class GetStructSyncExecSqlDetailResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StructSyncExecSqlDetail")
+    @com.aliyun.core.annotation.NameInMap("StructSyncExecSqlDetail")
     private StructSyncExecSqlDetail structSyncExecSqlDetail;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetStructSyncExecSqlDetailResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class GetStructSyncExecSqlDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +102,10 @@ public class GetStructSyncExecSqlDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +113,10 @@ public class GetStructSyncExecSqlDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1810E635-A2D7-428B-BAA9-85DAEB9B1A77</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +124,7 @@ public class GetStructSyncExecSqlDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the SQL statements.
+         * <p>The details of the SQL statements.</p>
          */
         public Builder structSyncExecSqlDetail(StructSyncExecSqlDetail structSyncExecSqlDetail) {
             this.structSyncExecSqlDetail = structSyncExecSqlDetail;
@@ -118,7 +132,10 @@ public class GetStructSyncExecSqlDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,11 +148,17 @@ public class GetStructSyncExecSqlDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetStructSyncExecSqlDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetStructSyncExecSqlDetailResponseBody</p>
+     */
     public static class StructSyncExecSqlDetail extends TeaModel {
-        @NameInMap("ExecSql")
+        @com.aliyun.core.annotation.NameInMap("ExecSql")
         private String execSql;
 
-        @NameInMap("TotalSqlCount")
+        @com.aliyun.core.annotation.NameInMap("TotalSqlCount")
         private Long totalSqlCount;
 
         private StructSyncExecSqlDetail(Builder builder) {
@@ -170,7 +193,7 @@ public class GetStructSyncExecSqlDetailResponseBody extends TeaModel {
             private Long totalSqlCount; 
 
             /**
-             * The SQL statements that are executed.
+             * <p>The SQL statements that are executed.</p>
              */
             public Builder execSql(String execSql) {
                 this.execSql = execSql;
@@ -178,7 +201,10 @@ public class GetStructSyncExecSqlDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of SQL statements.
+             * <p>The total number of SQL statements.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalSqlCount(Long totalSqlCount) {
                 this.totalSqlCount = totalSqlCount;

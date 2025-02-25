@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAlgorithmVersionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAlgorithmVersionsResponseBody</p>
  */
 public class ListAlgorithmVersionsResponseBody extends TeaModel {
-    @NameInMap("AlgorithmVersions")
-    private java.util.List < AlgorithmVersions> algorithmVersions;
+    @com.aliyun.core.annotation.NameInMap("AlgorithmVersions")
+    private java.util.List<AlgorithmVersions> algorithmVersions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListAlgorithmVersionsResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ListAlgorithmVersionsResponseBody extends TeaModel {
     /**
      * @return algorithmVersions
      */
-    public java.util.List < AlgorithmVersions> getAlgorithmVersions() {
+    public java.util.List<AlgorithmVersions> getAlgorithmVersions() {
         return this.algorithmVersions;
     }
 
@@ -57,14 +62,14 @@ public class ListAlgorithmVersionsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AlgorithmVersions> algorithmVersions; 
+        private java.util.List<AlgorithmVersions> algorithmVersions; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * AlgorithmVersions.
          */
-        public Builder algorithmVersions(java.util.List < AlgorithmVersions> algorithmVersions) {
+        public Builder algorithmVersions(java.util.List<AlgorithmVersions> algorithmVersions) {
             this.algorithmVersions = algorithmVersions;
             return this;
         }
@@ -91,29 +96,35 @@ public class ListAlgorithmVersionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAlgorithmVersionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAlgorithmVersionsResponseBody</p>
+     */
     public static class AlgorithmVersions extends TeaModel {
-        @NameInMap("AlgorithmId")
+        @com.aliyun.core.annotation.NameInMap("AlgorithmId")
         private String algorithmId;
 
-        @NameInMap("AlgorithmName")
+        @com.aliyun.core.annotation.NameInMap("AlgorithmName")
         private String algorithmName;
 
-        @NameInMap("AlgorithmProvider")
+        @com.aliyun.core.annotation.NameInMap("AlgorithmProvider")
         private String algorithmProvider;
 
-        @NameInMap("AlgorithmVersion")
+        @com.aliyun.core.annotation.NameInMap("AlgorithmVersion")
         private String algorithmVersion;
 
-        @NameInMap("GmtCreateTime")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
 
-        @NameInMap("GmtModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
         private String gmtModifiedTime;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private AlgorithmVersions(Builder builder) {

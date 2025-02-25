@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPlaybookInputOutputRequest} extends {@link RequestModel}
  *
  * <p>ModifyPlaybookInputOutputRequest</p>
  */
 public class ModifyPlaybookInputOutputRequest extends Request {
-    @Body
-    @NameInMap("InputParams")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExeConfig")
+    private String exeConfig;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InputParams")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String inputParams;
 
-    @Body
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Body
-    @NameInMap("OutputParams")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OutputParams")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String outputParams;
 
-    @Body
-    @NameInMap("ParamType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ParamType")
     private String paramType;
 
-    @Body
-    @NameInMap("PlaybookUuid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PlaybookUuid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String playbookUuid;
 
     private ModifyPlaybookInputOutputRequest(Builder builder) {
         super(builder);
+        this.exeConfig = builder.exeConfig;
         this.inputParams = builder.inputParams;
         this.lang = builder.lang;
         this.outputParams = builder.outputParams;
@@ -55,6 +60,13 @@ public class ModifyPlaybookInputOutputRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return exeConfig
+     */
+    public String getExeConfig() {
+        return this.exeConfig;
     }
 
     /**
@@ -93,6 +105,7 @@ public class ModifyPlaybookInputOutputRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyPlaybookInputOutputRequest, Builder> {
+        private String exeConfig; 
         private String inputParams; 
         private String lang; 
         private String outputParams; 
@@ -105,6 +118,7 @@ public class ModifyPlaybookInputOutputRequest extends Request {
 
         private Builder(ModifyPlaybookInputOutputRequest request) {
             super(request);
+            this.exeConfig = request.exeConfig;
             this.inputParams = request.inputParams;
             this.lang = request.lang;
             this.outputParams = request.outputParams;
@@ -113,7 +127,30 @@ public class ModifyPlaybookInputOutputRequest extends Request {
         } 
 
         /**
-         * InputParams.
+         * <p>The executed mode of a playbook. The value is a JSON array.</p>
+         */
+        public Builder exeConfig(String exeConfig) {
+            this.putBodyParameter("ExeConfig", exeConfig);
+            this.exeConfig = exeConfig;
+            return this;
+        }
+
+        /**
+         * <p>The configuration of the input parameters. The value is a JSON array.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *     {
+         *         &quot;typeName&quot;: &quot;String&quot;,
+         *         &quot;dataClass&quot;: &quot;normal&quot;,
+         *         &quot;dataType&quot;: &quot;String&quot;,
+         *         &quot;description&quot;: &quot;period&quot;,
+         *         &quot;example&quot;: &quot;&quot;,
+         *         &quot;name&quot;: &quot;period&quot;,
+         *         &quot;required&quot;: false
+         *     }
+         * ]</p>
          */
         public Builder inputParams(String inputParams) {
             this.putBodyParameter("InputParams", inputParams);
@@ -122,7 +159,14 @@ public class ModifyPlaybookInputOutputRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the content within the request and response.</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -131,7 +175,11 @@ public class ModifyPlaybookInputOutputRequest extends Request {
         }
 
         /**
-         * OutputParams.
+         * <p>The configuration of the output parameters. This parameter is unavailable. Leave it empty.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder outputParams(String outputParams) {
             this.putBodyParameter("OutputParams", outputParams);
@@ -140,7 +188,16 @@ public class ModifyPlaybookInputOutputRequest extends Request {
         }
 
         /**
-         * ParamType.
+         * <p>The input parameter type.</p>
+         * <ul>
+         * <li><strong>template-ip</strong></li>
+         * <li><strong>template-file</strong></li>
+         * <li><strong>template-process</strong></li>
+         * <li><strong>custom</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         public Builder paramType(String paramType) {
             this.putBodyParameter("ParamType", paramType);
@@ -149,7 +206,14 @@ public class ModifyPlaybookInputOutputRequest extends Request {
         }
 
         /**
-         * PlaybookUuid.
+         * <p>The UUID of the playbook.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a>operation to query the playbook UUID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8baa6cff-319e-4ede-97bc-xxxxxxx</p>
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putBodyParameter("PlaybookUuid", playbookUuid);

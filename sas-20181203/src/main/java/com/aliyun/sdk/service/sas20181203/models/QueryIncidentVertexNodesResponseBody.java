@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryIncidentVertexNodesResponseBody} extends {@link TeaModel}
  *
  * <p>QueryIncidentVertexNodesResponseBody</p>
  */
 public class QueryIncidentVertexNodesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("VertexNodes")
+    @com.aliyun.core.annotation.NameInMap("VertexNodes")
     private VertexNodes vertexNodes;
 
     private QueryIncidentVertexNodesResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
         private VertexNodes vertexNodes; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACF97412-FD09-4D1F-994F-34DF12BREF20</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +78,14 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -78,7 +93,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
         }
 
         /**
-         * VertexNodes.
+         * <p>The results that are returned.</p>
          */
         public Builder vertexNodes(VertexNodes vertexNodes) {
             this.vertexNodes = vertexNodes;
@@ -91,56 +106,62 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryIncidentVertexNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryIncidentVertexNodesResponseBody</p>
+     */
     public static class EdgeList extends TeaModel {
-        @NameInMap("Aliuid")
+        @com.aliyun.core.annotation.NameInMap("Aliuid")
         private String aliuid;
 
-        @NameInMap("EndId")
+        @com.aliyun.core.annotation.NameInMap("EndId")
         private String endId;
 
-        @NameInMap("EndType")
+        @com.aliyun.core.annotation.NameInMap("EndType")
         private String endType;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Origin")
+        @com.aliyun.core.annotation.NameInMap("Origin")
         private String origin;
 
-        @NameInMap("Properties")
+        @com.aliyun.core.annotation.NameInMap("Properties")
         private String properties;
 
-        @NameInMap("Property")
-        private java.util.Map < String, ? > property;
+        @com.aliyun.core.annotation.NameInMap("Property")
+        private java.util.Map<String, ?> property;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("ShowType")
+        @com.aliyun.core.annotation.NameInMap("ShowType")
         private String showType;
 
-        @NameInMap("StartId")
+        @com.aliyun.core.annotation.NameInMap("StartId")
         private String startId;
 
-        @NameInMap("StartType")
+        @com.aliyun.core.annotation.NameInMap("StartType")
         private String startType;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("TypeName")
+        @com.aliyun.core.annotation.NameInMap("TypeName")
         private String typeName;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private EdgeList(Builder builder) {
@@ -216,7 +237,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
         /**
          * @return property
          */
-        public java.util.Map < String, ? > getProperty() {
+        public java.util.Map<String, ?> getProperty() {
             return this.property;
         }
 
@@ -297,7 +318,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             private String name; 
             private String origin; 
             private String properties; 
-            private java.util.Map < String, ? > property; 
+            private java.util.Map<String, ?> property; 
             private String ruleId; 
             private String showType; 
             private String startId; 
@@ -310,7 +331,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * Aliuid
+             * <p>The ID of the Alibaba Cloud account to which the edge belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20973951</p>
              */
             public Builder aliuid(String aliuid) {
                 this.aliuid = aliuid;
@@ -318,7 +342,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * EndId.
+             * <p>The ID of the end node for the edge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>64002</p>
              */
             public Builder endId(String endId) {
                 this.endId = endId;
@@ -326,7 +353,17 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * EndType.
+             * <p>The type of the end node for the edge. Valid values include but are not limited to:</p>
+             * <ul>
+             * <li><strong>process</strong></li>
+             * <li><strong>file</strong></li>
+             * <li><strong>alert</strong></li>
+             * <li><strong>ip</strong></li>
+             * <li><strong>domain</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>file</p>
              */
             public Builder endType(String endType) {
                 this.endType = endType;
@@ -334,7 +371,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the edge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jdk</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -342,7 +382,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Origin
+             * <p>The original name of the edge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>distribution</p>
              */
             public Builder origin(String origin) {
                 this.origin = origin;
@@ -350,7 +393,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Properties.
+             * <p>The properties of the edge. The value is in the text format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;bandWidth&quot;:&quot;7810048&quot;,&quot;internetIp&quot;:&quot;47.57.13.255&quot;,&quot;changeReason&quot;:&quot;MODIFY_SPEC&quot;,&quot;bindInstanceId&quot;:&quot;i-j6chvo01tle7qfnhewr3&quot;,&quot;bindType&quot;:&quot;EIP_ECS&quot;}</p>
              */
             public Builder properties(String properties) {
                 this.properties = properties;
@@ -358,15 +404,18 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Property.
+             * <p>The property of the edge.</p>
              */
-            public Builder property(java.util.Map < String, ? > property) {
+            public Builder property(java.util.Map<String, ?> property) {
                 this.property = property;
                 return this;
             }
 
             /**
-             * RuleId.
+             * <p>The ID of the rule based on which the edge was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>368</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -374,7 +423,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ShowType.
+             * <p>The display type of the edge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>type</p>
              */
             public Builder showType(String showType) {
                 this.showType = showType;
@@ -382,7 +434,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * StartId.
+             * <p>The ID of the start node for the edge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>52003</p>
              */
             public Builder startId(String startId) {
                 this.startId = startId;
@@ -390,7 +445,17 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * StartType.
+             * <p>The type of the start node for the edge. Valid values include but are not limited to:</p>
+             * <ul>
+             * <li><strong>process</strong></li>
+             * <li><strong>file</strong></li>
+             * <li><strong>alert</strong></li>
+             * <li><strong>ip</strong></li>
+             * <li><strong>domain</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>process</p>
              */
             public Builder startType(String startType) {
                 this.startType = startType;
@@ -398,7 +463,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The time when the edge was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-06 11:00:00</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -406,7 +474,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>The time when the edge was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1645168444</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -414,7 +485,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the edge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cve</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -422,7 +496,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * TypeName.
+             * <p>The type name of the edge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>weak_password</p>
              */
             public Builder typeName(String typeName) {
                 this.typeName = typeName;
@@ -430,7 +507,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the edge was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-16T07:20:33.000Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -438,7 +518,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * UUID
+             * <p>The UUID of the edge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>549237d6-86d1-47f6-9ffa-3f97da9e6b10</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -452,44 +535,50 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryIncidentVertexNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryIncidentVertexNodesResponseBody</p>
+     */
     public static class EntityTypeList extends TeaModel {
-        @NameInMap("CurrentVersionId")
+        @com.aliyun.core.annotation.NameInMap("CurrentVersionId")
         private String currentVersionId;
 
-        @NameInMap("DisplayColor")
+        @com.aliyun.core.annotation.NameInMap("DisplayColor")
         private String displayColor;
 
-        @NameInMap("DisplayIcon")
+        @com.aliyun.core.annotation.NameInMap("DisplayIcon")
         private String displayIcon;
 
-        @NameInMap("DisplayOrder")
+        @com.aliyun.core.annotation.NameInMap("DisplayOrder")
         private Integer displayOrder;
 
-        @NameInMap("DisplayTemplate")
+        @com.aliyun.core.annotation.NameInMap("DisplayTemplate")
         private String displayTemplate;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("IsVirtualNode")
+        @com.aliyun.core.annotation.NameInMap("IsVirtualNode")
         private Integer isVirtualNode;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("SyncId")
+        @com.aliyun.core.annotation.NameInMap("SyncId")
         private Integer syncId;
 
-        @NameInMap("TraceSuccessFlag")
+        @com.aliyun.core.annotation.NameInMap("TraceSuccessFlag")
         private Integer traceSuccessFlag;
 
         private EntityTypeList(Builder builder) {
@@ -623,7 +712,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             private Integer traceSuccessFlag; 
 
             /**
-             * CurrentVersionId.
+             * <p>The version of the entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>993</p>
              */
             public Builder currentVersionId(String currentVersionId) {
                 this.currentVersionId = currentVersionId;
@@ -631,7 +723,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayColor.
+             * <p>The display color of the entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>red</p>
              */
             public Builder displayColor(String displayColor) {
                 this.displayColor = displayColor;
@@ -639,7 +734,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayIcon.
+             * <p>The display icon of the entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://img.22222.com">http://img.22222.com</a></p>
              */
             public Builder displayIcon(String displayIcon) {
                 this.displayIcon = displayIcon;
@@ -647,7 +745,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayOrder.
+             * <p>The display order of the entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>01</p>
              */
             public Builder displayOrder(Integer displayOrder) {
                 this.displayOrder = displayOrder;
@@ -655,7 +756,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayTemplate.
+             * <p>The display template of the entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>template1</p>
              */
             public Builder displayTemplate(String displayTemplate) {
                 this.displayTemplate = displayTemplate;
@@ -663,7 +767,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the entity was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-23T10:50Z</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -671,7 +778,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the entity was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1623317089000</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -679,7 +789,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ID
+             * <p>The ID of the entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33926</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -687,7 +800,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * IsVirtualNode.
+             * <p>Indicates whether the entity is a virtual node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isVirtualNode(Integer isVirtualNode) {
                 this.isVirtualNode = isVirtualNode;
@@ -695,7 +811,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>auto-test-policy-name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -703,7 +822,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * <p>The namespace of the entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>78</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -711,7 +833,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * SyncId
+             * <p>The synchronization ID of the entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3212024a-1816-46d5-b286-e5d5780fd778</p>
              */
             public Builder syncId(Integer syncId) {
                 this.syncId = syncId;
@@ -719,7 +844,14 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * TraceSuccessFlag.
+             * <p>Indicates whether the entity is traced. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: The entity is traced.</li>
+             * <li><strong>0</strong>: The entity fails to be traced.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder traceSuccessFlag(Integer traceSuccessFlag) {
                 this.traceSuccessFlag = traceSuccessFlag;
@@ -733,41 +865,47 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryIncidentVertexNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryIncidentVertexNodesResponseBody</p>
+     */
     public static class RelationTypeList extends TeaModel {
-        @NameInMap("CurrentVersionId")
+        @com.aliyun.core.annotation.NameInMap("CurrentVersionId")
         private String currentVersionId;
 
-        @NameInMap("DIsplayIcon")
+        @com.aliyun.core.annotation.NameInMap("DIsplayIcon")
         private String dIsplayIcon;
 
-        @NameInMap("Directed")
+        @com.aliyun.core.annotation.NameInMap("Directed")
         private Integer directed;
 
-        @NameInMap("DisplayColor")
+        @com.aliyun.core.annotation.NameInMap("DisplayColor")
         private String displayColor;
 
-        @NameInMap("DisplayTemplate")
+        @com.aliyun.core.annotation.NameInMap("DisplayTemplate")
         private String displayTemplate;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("ShowType")
+        @com.aliyun.core.annotation.NameInMap("ShowType")
         private String showType;
 
-        @NameInMap("SyncId")
+        @com.aliyun.core.annotation.NameInMap("SyncId")
         private Integer syncId;
 
         private RelationTypeList(Builder builder) {
@@ -892,7 +1030,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             private Integer syncId; 
 
             /**
-             * CurrentVersionId.
+             * <p>The version of the relationship.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1487</p>
              */
             public Builder currentVersionId(String currentVersionId) {
                 this.currentVersionId = currentVersionId;
@@ -900,7 +1041,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ICON
+             * <p>The display icon of the relationship.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://img.33.com">http://img.33.com</a></p>
              */
             public Builder dIsplayIcon(String dIsplayIcon) {
                 this.dIsplayIcon = dIsplayIcon;
@@ -908,7 +1052,14 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Directed.
+             * <p>The direction of the relationship. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: forward.</li>
+             * <li><strong>0</strong>: reverse.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>in</p>
              */
             public Builder directed(Integer directed) {
                 this.directed = directed;
@@ -916,7 +1067,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayColor.
+             * <p>The display color of the relationship.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>red</p>
              */
             public Builder displayColor(String displayColor) {
                 this.displayColor = displayColor;
@@ -924,7 +1078,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayTemplate.
+             * <p>The display template of the relationship.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>template1</p>
              */
             public Builder displayTemplate(String displayTemplate) {
                 this.displayTemplate = displayTemplate;
@@ -932,7 +1089,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the relationship was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-02T10:20Z</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -940,7 +1100,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the relationship was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1637556498000</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -948,7 +1111,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ID
+             * <p>The ID of the relationship.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9350</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -956,7 +1122,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the relationship.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mongod</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -964,7 +1133,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * <p>The namespace of the relationship.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -972,7 +1144,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ShowType.
+             * <p>The display type of the relationship.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>type1</p>
              */
             public Builder showType(String showType) {
                 this.showType = showType;
@@ -980,7 +1155,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * SyncId
+             * <p>The synchronization ID of the relationship.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a45185c7-b1b8-4a49-b04a-d6bfa051ef0e</p>
              */
             public Builder syncId(Integer syncId) {
                 this.syncId = syncId;
@@ -994,11 +1172,17 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryIncidentVertexNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryIncidentVertexNodesResponseBody</p>
+     */
     public static class DisplayInfo extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private DisplayInfo(Builder builder) {
@@ -1033,7 +1217,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Name.
+             * <p>The display name of the property.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zabbix</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1041,7 +1228,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The display value of the property.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cs-nacos</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1055,14 +1245,20 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryIncidentVertexNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryIncidentVertexNodesResponseBody</p>
+     */
     public static class NeighborList extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("HasMore")
+        @com.aliyun.core.annotation.NameInMap("HasMore")
         private Boolean hasMore;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private NeighborList(Builder builder) {
@@ -1106,7 +1302,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Count.
+             * <p>The number of neighboring nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -1114,7 +1313,14 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * HasMore.
+             * <p>Indicates whether more neighboring nodes exist. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder hasMore(Boolean hasMore) {
                 this.hasMore = hasMore;
@@ -1122,7 +1328,17 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the neighboring node. Valid values include but are not limited to:</p>
+             * <ul>
+             * <li><strong>process</strong></li>
+             * <li><strong>file</strong></li>
+             * <li><strong>alert</strong></li>
+             * <li><strong>ip</strong></li>
+             * <li><strong>domain</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>elf</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1136,47 +1352,53 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryIncidentVertexNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryIncidentVertexNodesResponseBody</p>
+     */
     public static class VertexList extends TeaModel {
-        @NameInMap("Aliuid")
+        @com.aliyun.core.annotation.NameInMap("Aliuid")
         private String aliuid;
 
-        @NameInMap("DisplayInfo")
-        private java.util.List < DisplayInfo> displayInfo;
+        @com.aliyun.core.annotation.NameInMap("DisplayInfo")
+        private java.util.List<DisplayInfo> displayInfo;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Lang")
+        @com.aliyun.core.annotation.NameInMap("Lang")
         private String lang;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NeighborList")
-        private java.util.List < NeighborList> neighborList;
+        @com.aliyun.core.annotation.NameInMap("NeighborList")
+        private java.util.List<NeighborList> neighborList;
 
-        @NameInMap("Properties")
+        @com.aliyun.core.annotation.NameInMap("Properties")
         private String properties;
 
-        @NameInMap("Property")
-        private java.util.Map < String, ? > property;
+        @com.aliyun.core.annotation.NameInMap("Property")
+        private java.util.Map<String, ?> property;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private VertexList(Builder builder) {
@@ -1214,7 +1436,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
         /**
          * @return displayInfo
          */
-        public java.util.List < DisplayInfo> getDisplayInfo() {
+        public java.util.List<DisplayInfo> getDisplayInfo() {
             return this.displayInfo;
         }
 
@@ -1242,7 +1464,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
         /**
          * @return neighborList
          */
-        public java.util.List < NeighborList> getNeighborList() {
+        public java.util.List<NeighborList> getNeighborList() {
             return this.neighborList;
         }
 
@@ -1256,7 +1478,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
         /**
          * @return property
          */
-        public java.util.Map < String, ? > getProperty() {
+        public java.util.Map<String, ?> getProperty() {
             return this.property;
         }
 
@@ -1304,13 +1526,13 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String aliuid; 
-            private java.util.List < DisplayInfo> displayInfo; 
+            private java.util.List<DisplayInfo> displayInfo; 
             private String id; 
             private String lang; 
             private String name; 
-            private java.util.List < NeighborList> neighborList; 
+            private java.util.List<NeighborList> neighborList; 
             private String properties; 
-            private java.util.Map < String, ? > property; 
+            private java.util.Map<String, ?> property; 
             private String ruleId; 
             private String time; 
             private Long timestamp; 
@@ -1319,7 +1541,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * AliUid
+             * <p>The ID of the Alibaba Cloud account to which the node belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20973951</p>
              */
             public Builder aliuid(String aliuid) {
                 this.aliuid = aliuid;
@@ -1327,15 +1552,18 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayInfo.
+             * <p>The display information of the node.</p>
              */
-            public Builder displayInfo(java.util.List < DisplayInfo> displayInfo) {
+            public Builder displayInfo(java.util.List<DisplayInfo> displayInfo) {
                 this.displayInfo = displayInfo;
                 return this;
             }
 
             /**
-             * ID
+             * <p>The ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>225</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1343,7 +1571,14 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Lang.
+             * <p>The display language of the neighboring node. Valid values:</p>
+             * <ul>
+             * <li><strong>zh</strong>: Chinese.</li>
+             * <li><strong>en</strong>: English.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>zh</p>
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -1351,7 +1586,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zabbix</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1359,15 +1597,18 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * NeighborList.
+             * <p>The neighboring nodes of the node.</p>
              */
-            public Builder neighborList(java.util.List < NeighborList> neighborList) {
+            public Builder neighborList(java.util.List<NeighborList> neighborList) {
                 this.neighborList = neighborList;
                 return this;
             }
 
             /**
-             * Properties.
+             * <p>The properties of the node. The value is in the text format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;bandWidth&quot;:&quot;5120&quot;,&quot;internetIp&quot;:&quot;47.242.191.206&quot;,&quot;changeReason&quot;:&quot;EIP_BIND&quot;,&quot;bindInstanceId&quot;:&quot;eci-j6ci7lvci50rore7dkv8&quot;,&quot;bindType&quot;:&quot;EIP_ECS&quot;}</p>
              */
             public Builder properties(String properties) {
                 this.properties = properties;
@@ -1375,15 +1616,18 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Property.
+             * <p>The property of the node.</p>
              */
-            public Builder property(java.util.Map < String, ? > property) {
+            public Builder property(java.util.Map<String, ?> property) {
                 this.property = property;
                 return this;
             }
 
             /**
-             * RuleId.
+             * <p>The ID of the rule based on which the node was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>171</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -1391,7 +1635,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The time when the node was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1636081135</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -1399,7 +1646,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>The time when the node was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1645179073</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -1407,7 +1657,17 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the node. Valid values include but are not limited to:</p>
+             * <ul>
+             * <li><strong>process</strong></li>
+             * <li><strong>file</strong></li>
+             * <li><strong>alert</strong></li>
+             * <li><strong>ip</strong></li>
+             * <li><strong>domain</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>sys</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1415,7 +1675,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the node was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-16T07:20:33.000Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -1423,7 +1686,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * UUID
+             * <p>The UUID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>02ca8614-ecdb-44d3-b3d0-158655080e4f</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -1437,21 +1703,27 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryIncidentVertexNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryIncidentVertexNodesResponseBody</p>
+     */
     public static class VertexNodes extends TeaModel {
-        @NameInMap("EdgeList")
-        private java.util.List < EdgeList> edgeList;
+        @com.aliyun.core.annotation.NameInMap("EdgeList")
+        private java.util.List<EdgeList> edgeList;
 
-        @NameInMap("EntityTypeList")
-        private java.util.List < EntityTypeList> entityTypeList;
+        @com.aliyun.core.annotation.NameInMap("EntityTypeList")
+        private java.util.List<EntityTypeList> entityTypeList;
 
-        @NameInMap("Lang")
+        @com.aliyun.core.annotation.NameInMap("Lang")
         private String lang;
 
-        @NameInMap("RelationTypeList")
-        private java.util.List < RelationTypeList> relationTypeList;
+        @com.aliyun.core.annotation.NameInMap("RelationTypeList")
+        private java.util.List<RelationTypeList> relationTypeList;
 
-        @NameInMap("VertexList")
-        private java.util.List < VertexList> vertexList;
+        @com.aliyun.core.annotation.NameInMap("VertexList")
+        private java.util.List<VertexList> vertexList;
 
         private VertexNodes(Builder builder) {
             this.edgeList = builder.edgeList;
@@ -1472,14 +1744,14 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
         /**
          * @return edgeList
          */
-        public java.util.List < EdgeList> getEdgeList() {
+        public java.util.List<EdgeList> getEdgeList() {
             return this.edgeList;
         }
 
         /**
          * @return entityTypeList
          */
-        public java.util.List < EntityTypeList> getEntityTypeList() {
+        public java.util.List<EntityTypeList> getEntityTypeList() {
             return this.entityTypeList;
         }
 
@@ -1493,42 +1765,49 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
         /**
          * @return relationTypeList
          */
-        public java.util.List < RelationTypeList> getRelationTypeList() {
+        public java.util.List<RelationTypeList> getRelationTypeList() {
             return this.relationTypeList;
         }
 
         /**
          * @return vertexList
          */
-        public java.util.List < VertexList> getVertexList() {
+        public java.util.List<VertexList> getVertexList() {
             return this.vertexList;
         }
 
         public static final class Builder {
-            private java.util.List < EdgeList> edgeList; 
-            private java.util.List < EntityTypeList> entityTypeList; 
+            private java.util.List<EdgeList> edgeList; 
+            private java.util.List<EntityTypeList> entityTypeList; 
             private String lang; 
-            private java.util.List < RelationTypeList> relationTypeList; 
-            private java.util.List < VertexList> vertexList; 
+            private java.util.List<RelationTypeList> relationTypeList; 
+            private java.util.List<VertexList> vertexList; 
 
             /**
-             * EdgeList.
+             * <p>The edges that are returned.</p>
              */
-            public Builder edgeList(java.util.List < EdgeList> edgeList) {
+            public Builder edgeList(java.util.List<EdgeList> edgeList) {
                 this.edgeList = edgeList;
                 return this;
             }
 
             /**
-             * EntityTypeList.
+             * <p>The entities that are returned.</p>
              */
-            public Builder entityTypeList(java.util.List < EntityTypeList> entityTypeList) {
+            public Builder entityTypeList(java.util.List<EntityTypeList> entityTypeList) {
                 this.entityTypeList = entityTypeList;
                 return this;
             }
 
             /**
-             * Lang.
+             * <p>The language of the content within the request. Valid values:</p>
+             * <ul>
+             * <li><strong>zh</strong>: Chinese</li>
+             * <li><strong>en</strong>: English</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>zh</p>
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -1536,17 +1815,17 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * RelationTypeList.
+             * <p>The relationships that are returned.</p>
              */
-            public Builder relationTypeList(java.util.List < RelationTypeList> relationTypeList) {
+            public Builder relationTypeList(java.util.List<RelationTypeList> relationTypeList) {
                 this.relationTypeList = relationTypeList;
                 return this;
             }
 
             /**
-             * VertexList.
+             * <p>The information about the node.</p>
              */
-            public Builder vertexList(java.util.List < VertexList> vertexList) {
+            public Builder vertexList(java.util.List<VertexList> vertexList) {
                 this.vertexList = vertexList;
                 return this;
             }

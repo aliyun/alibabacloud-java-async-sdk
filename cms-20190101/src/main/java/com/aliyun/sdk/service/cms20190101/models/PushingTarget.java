@@ -1,49 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PushingTarget} extends {@link TeaModel}
  *
  * <p>PushingTarget</p>
  */
 public class PushingTarget extends TeaModel {
-    @NameInMap("Arn")
+    @com.aliyun.core.annotation.NameInMap("Arn")
     private String arn;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("HttpRequestTarget")
+    @com.aliyun.core.annotation.NameInMap("HttpRequestTarget")
     private HttpRequestTarget httpRequestTarget;
 
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @NameInMap("Range")
+    @com.aliyun.core.annotation.NameInMap("Range")
     private String range;
 
-    @NameInMap("TemplateUuid")
+    @com.aliyun.core.annotation.NameInMap("TemplateUuid")
     private String templateUuid;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @NameInMap("UpdateTime")
+    @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
-    @NameInMap("Uuid")
+    @com.aliyun.core.annotation.NameInMap("Uuid")
     private String uuid;
 
     private PushingTarget(Builder builder) {
@@ -191,7 +191,7 @@ public class PushingTarget extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -252,11 +252,17 @@ public class PushingTarget extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PushingTarget} extends {@link TeaModel}
+     *
+     * <p>PushingTarget</p>
+     */
     public static class Headers extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Headers(Builder builder) {
@@ -313,20 +319,26 @@ public class PushingTarget extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PushingTarget} extends {@link TeaModel}
+     *
+     * <p>PushingTarget</p>
+     */
     public static class HttpRequestTarget extends TeaModel {
-        @NameInMap("ContentType")
+        @com.aliyun.core.annotation.NameInMap("ContentType")
         private String contentType;
 
-        @NameInMap("EncryptString")
+        @com.aliyun.core.annotation.NameInMap("EncryptString")
         private String encryptString;
 
-        @NameInMap("Headers")
+        @com.aliyun.core.annotation.NameInMap("Headers")
         private java.util.List < Headers> headers;
 
-        @NameInMap("Method")
+        @com.aliyun.core.annotation.NameInMap("Method")
         private String method;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private HttpRequestTarget(Builder builder) {

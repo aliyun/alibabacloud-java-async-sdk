@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePrometheusAlertRuleResponseBody} extends {@link TeaModel}
  *
  * <p>UpdatePrometheusAlertRuleResponseBody</p>
  */
 public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PrometheusAlertRule")
+    @com.aliyun.core.annotation.NameInMap("PrometheusAlertRule")
     private PrometheusAlertRule prometheusAlertRule;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private UpdatePrometheusAlertRuleResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -94,7 +102,10 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -118,7 +129,14 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,11 +149,17 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdatePrometheusAlertRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdatePrometheusAlertRuleResponseBody</p>
+     */
     public static class Annotations extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Annotations(Builder builder) {
@@ -192,11 +216,17 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdatePrometheusAlertRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdatePrometheusAlertRuleResponseBody</p>
+     */
     public static class Labels extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Labels(Builder builder) {
@@ -253,41 +283,47 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdatePrometheusAlertRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdatePrometheusAlertRuleResponseBody</p>
+     */
     public static class PrometheusAlertRule extends TeaModel {
-        @NameInMap("AlertId")
+        @com.aliyun.core.annotation.NameInMap("AlertId")
         private Long alertId;
 
-        @NameInMap("AlertName")
+        @com.aliyun.core.annotation.NameInMap("AlertName")
         private String alertName;
 
-        @NameInMap("Annotations")
-        private java.util.List < Annotations> annotations;
+        @com.aliyun.core.annotation.NameInMap("Annotations")
+        private java.util.List<Annotations> annotations;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("DispatchRuleId")
+        @com.aliyun.core.annotation.NameInMap("DispatchRuleId")
         private Long dispatchRuleId;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("Expression")
+        @com.aliyun.core.annotation.NameInMap("Expression")
         private String expression;
 
-        @NameInMap("Labels")
-        private java.util.List < Labels> labels;
+        @com.aliyun.core.annotation.NameInMap("Labels")
+        private java.util.List<Labels> labels;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("NotifyType")
+        @com.aliyun.core.annotation.NameInMap("NotifyType")
         private String notifyType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private PrometheusAlertRule(Builder builder) {
@@ -330,7 +366,7 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
         /**
          * @return annotations
          */
-        public java.util.List < Annotations> getAnnotations() {
+        public java.util.List<Annotations> getAnnotations() {
             return this.annotations;
         }
 
@@ -365,7 +401,7 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
         /**
          * @return labels
          */
-        public java.util.List < Labels> getLabels() {
+        public java.util.List<Labels> getLabels() {
             return this.labels;
         }
 
@@ -400,12 +436,12 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
         public static final class Builder {
             private Long alertId; 
             private String alertName; 
-            private java.util.List < Annotations> annotations; 
+            private java.util.List<Annotations> annotations; 
             private String clusterId; 
             private Long dispatchRuleId; 
             private String duration; 
             private String expression; 
-            private java.util.List < Labels> labels; 
+            private java.util.List<Labels> labels; 
             private String message; 
             private String notifyType; 
             private Integer status; 
@@ -430,7 +466,7 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
             /**
              * Annotations.
              */
-            public Builder annotations(java.util.List < Annotations> annotations) {
+            public Builder annotations(java.util.List<Annotations> annotations) {
                 this.annotations = annotations;
                 return this;
             }
@@ -470,13 +506,16 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
             /**
              * Labels.
              */
-            public Builder labels(java.util.List < Labels> labels) {
+            public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;
                 return this;
             }
 
             /**
-             * Message.
+             * <p>The returned message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder message(String message) {
                 this.message = message;

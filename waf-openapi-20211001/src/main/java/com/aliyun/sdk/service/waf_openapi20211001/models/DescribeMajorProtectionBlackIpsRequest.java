@@ -1,52 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMajorProtectionBlackIpsRequest} extends {@link RequestModel}
  *
  * <p>DescribeMajorProtectionBlackIpsRequest</p>
  */
 public class DescribeMajorProtectionBlackIpsRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("IpLike")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpLike")
     private String ipLike;
 
-    @Query
-    @NameInMap("OrderBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderBy")
     private String orderBy;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceManagerResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceManagerResourceGroupId")
     private String resourceManagerResourceGroupId;
 
-    @Query
-    @NameInMap("RuleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
     private Long ruleId;
 
-    @Query
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private Long templateId;
 
     private DescribeMajorProtectionBlackIpsRequest(Builder builder) {
@@ -167,10 +172,14 @@ public class DescribeMajorProtectionBlackIpsRequest extends Request {
         } 
 
         /**
-         * The ID of the WAF instance.
-         * <p>
+         * <p>The ID of the WAF instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
+         * <strong>example:</strong>
+         * <p>waf_cdnsdf3****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -179,7 +188,10 @@ public class DescribeMajorProtectionBlackIpsRequest extends Request {
         }
 
         /**
-         * The IP address that you want to query. You can specify this parameter to query an IP address in the IP address blacklist for major event protection by using fuzzy matching.
+         * <p>The IP address that you want to query. You can specify this parameter to query an IP address in the IP address blacklist for major event protection by using fuzzy matching.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
          */
         public Builder ipLike(String ipLike) {
             this.putQueryParameter("IpLike", ipLike);
@@ -188,13 +200,16 @@ public class DescribeMajorProtectionBlackIpsRequest extends Request {
         }
 
         /**
-         * The method that you want to use to sort the IP addresses **in descending order**. Valid values:
-         * <p>
+         * <p>The method that you want to use to sort the IP addresses <strong>in descending order</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>gmtModified:</strong> sorts the IP addresses by most recent modification time.</li>
+         * <li><strong>ip:</strong> sorts the IP addresses by IP address.</li>
+         * <li><strong>templateId:</strong> sorts the IP addresses by template ID.</li>
+         * <li><strong>id:</strong> sorts the IP addresses by primary key.</li>
+         * </ul>
          * 
-         * *   **gmtModified:** sorts the IP addresses by most recent modification time.
-         * *   **ip:** sorts the IP addresses by IP address.
-         * *   **templateId:** sorts the IP addresses by template ID.
-         * *   **id:** sorts the IP addresses by primary key.
+         * <strong>example:</strong>
+         * <p>gmtModified</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -203,7 +218,10 @@ public class DescribeMajorProtectionBlackIpsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -212,7 +230,10 @@ public class DescribeMajorProtectionBlackIpsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**.
+         * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -221,11 +242,14 @@ public class DescribeMajorProtectionBlackIpsRequest extends Request {
         }
 
         /**
-         * The region where the WAF instance resides. Valid values:
-         * <p>
+         * <p>The region where the WAF instance resides. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
+         * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+         * </ul>
          * 
-         * *   **cn-hangzhou:** the Chinese mainland.
-         * *   **ap-southeast-1:** outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -234,7 +258,10 @@ public class DescribeMajorProtectionBlackIpsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -243,7 +270,10 @@ public class DescribeMajorProtectionBlackIpsRequest extends Request {
         }
 
         /**
-         * The ID of the IP address blacklist rule for major event protection.
+         * <p>The ID of the IP address blacklist rule for major event protection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20013199</p>
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -252,7 +282,10 @@ public class DescribeMajorProtectionBlackIpsRequest extends Request {
         }
 
         /**
-         * The ID of the rule template for major event protection.
+         * <p>The ID of the rule template for major event protection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5673</p>
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);

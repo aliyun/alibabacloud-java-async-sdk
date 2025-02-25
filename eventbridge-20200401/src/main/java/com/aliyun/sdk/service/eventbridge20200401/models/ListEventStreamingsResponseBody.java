@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.eventbridge.models.*;
  * <p>ListEventStreamingsResponseBody</p>
  */
 public class ListEventStreamingsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListEventStreamingsResponseBody(Builder builder) {
@@ -137,10 +136,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
     } 
 
     public static class BatchWindow extends TeaModel {
-        @NameInMap("CountBasedWindow")
+        @com.aliyun.core.annotation.NameInMap("CountBasedWindow")
         private Integer countBasedWindow;
 
-        @NameInMap("TimeBasedWindow")
+        @com.aliyun.core.annotation.NameInMap("TimeBasedWindow")
         private Integer timeBasedWindow;
 
         private BatchWindow(Builder builder) {
@@ -175,7 +174,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private Integer timeBasedWindow; 
 
             /**
-             * CountBasedWindow.
+             * The maximum number of events that are allowed in the batch window. When this threshold is reached, data in the window is pushed to the downstream service. If multiple batch windows exist, data is pushed if triggering conditions are met in one of the windows.
              */
             public Builder countBasedWindow(Integer countBasedWindow) {
                 this.countBasedWindow = countBasedWindow;
@@ -183,7 +182,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * TimeBasedWindow.
+             * The maximum period of time during which events are allowed in the batch window. Unit: seconds. When this threshold is reached, data in the window is pushed to the downstream service. If multiple batch windows exist, data is pushed if triggering conditions are met in one of the windows.
              */
             public Builder timeBasedWindow(Integer timeBasedWindow) {
                 this.timeBasedWindow = timeBasedWindow;
@@ -198,7 +197,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class DeadLetterQueue extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
         private DeadLetterQueue(Builder builder) {
@@ -224,7 +223,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private String arn; 
 
             /**
-             * Arn.
+             * The Alibaba Cloud Resource Name (ARN) of the dead-letter queue.
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -238,14 +237,400 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         } 
 
     }
+    public static class KafkaLogParameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
+        private String endpoint;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        private String instanceId;
+
+        @com.aliyun.core.annotation.NameInMap("Topic")
+        private String topic;
+
+        private KafkaLogParameters(Builder builder) {
+            this.endpoint = builder.endpoint;
+            this.instanceId = builder.instanceId;
+            this.topic = builder.topic;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static KafkaLogParameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endpoint
+         */
+        public String getEndpoint() {
+            return this.endpoint;
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        /**
+         * @return topic
+         */
+        public String getTopic() {
+            return this.topic;
+        }
+
+        public static final class Builder {
+            private String endpoint; 
+            private String instanceId; 
+            private String topic; 
+
+            /**
+             * Endpoint.
+             */
+            public Builder endpoint(String endpoint) {
+                this.endpoint = endpoint;
+                return this;
+            }
+
+            /**
+             * InstanceId.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * Topic.
+             */
+            public Builder topic(String topic) {
+                this.topic = topic;
+                return this;
+            }
+
+            public KafkaLogParameters build() {
+                return new KafkaLogParameters(this);
+            } 
+
+        } 
+
+    }
+    public static class SLSLogParameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("LogstoreName")
+        private String logstoreName;
+
+        @com.aliyun.core.annotation.NameInMap("ProjectName")
+        private String projectName;
+
+        private SLSLogParameters(Builder builder) {
+            this.logstoreName = builder.logstoreName;
+            this.projectName = builder.projectName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SLSLogParameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return logstoreName
+         */
+        public String getLogstoreName() {
+            return this.logstoreName;
+        }
+
+        /**
+         * @return projectName
+         */
+        public String getProjectName() {
+            return this.projectName;
+        }
+
+        public static final class Builder {
+            private String logstoreName; 
+            private String projectName; 
+
+            /**
+             * LogstoreName.
+             */
+            public Builder logstoreName(String logstoreName) {
+                this.logstoreName = logstoreName;
+                return this;
+            }
+
+            /**
+             * ProjectName.
+             */
+            public Builder projectName(String projectName) {
+                this.projectName = projectName;
+                return this;
+            }
+
+            public SLSLogParameters build() {
+                return new SLSLogParameters(this);
+            } 
+
+        } 
+
+    }
+    public static class LogDelivery extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("KafkaLogParameters")
+        private java.util.List < KafkaLogParameters> kafkaLogParameters;
+
+        @com.aliyun.core.annotation.NameInMap("SLSLogParameters")
+        private java.util.List < SLSLogParameters> SLSLogParameters;
+
+        private LogDelivery(Builder builder) {
+            this.kafkaLogParameters = builder.kafkaLogParameters;
+            this.SLSLogParameters = builder.SLSLogParameters;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LogDelivery create() {
+            return builder().build();
+        }
+
+        /**
+         * @return kafkaLogParameters
+         */
+        public java.util.List < KafkaLogParameters> getKafkaLogParameters() {
+            return this.kafkaLogParameters;
+        }
+
+        /**
+         * @return SLSLogParameters
+         */
+        public java.util.List < SLSLogParameters> getSLSLogParameters() {
+            return this.SLSLogParameters;
+        }
+
+        public static final class Builder {
+            private java.util.List < KafkaLogParameters> kafkaLogParameters; 
+            private java.util.List < SLSLogParameters> SLSLogParameters; 
+
+            /**
+             * KafkaLogParameters.
+             */
+            public Builder kafkaLogParameters(java.util.List < KafkaLogParameters> kafkaLogParameters) {
+                this.kafkaLogParameters = kafkaLogParameters;
+                return this;
+            }
+
+            /**
+             * SLSLogParameters.
+             */
+            public Builder SLSLogParameters(java.util.List < SLSLogParameters> SLSLogParameters) {
+                this.SLSLogParameters = SLSLogParameters;
+                return this;
+            }
+
+            public LogDelivery build() {
+                return new LogDelivery(this);
+            } 
+
+        } 
+
+    }
+    public static class Network extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+        private String securityGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+        private java.util.List < String > vSwitchIds;
+
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private String vpcId;
+
+        private Network(Builder builder) {
+            this.securityGroupId = builder.securityGroupId;
+            this.vSwitchIds = builder.vSwitchIds;
+            this.vpcId = builder.vpcId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Network create() {
+            return builder().build();
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
+         * @return vSwitchIds
+         */
+        public java.util.List < String > getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public static final class Builder {
+            private String securityGroupId; 
+            private java.util.List < String > vSwitchIds; 
+            private String vpcId; 
+
+            /**
+             * SecurityGroupId.
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * VSwitchIds.
+             */
+            public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
+                this.vSwitchIds = vSwitchIds;
+                return this;
+            }
+
+            /**
+             * VpcId.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            public Network build() {
+                return new Network(this);
+            } 
+
+        } 
+
+    }
+    public static class Resources extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private Integer value;
+
+        private Resources(Builder builder) {
+            this.type = builder.type;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Resources create() {
+            return builder().build();
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return value
+         */
+        public Integer getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String type; 
+            private Integer value; 
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(Integer value) {
+                this.value = value;
+                return this;
+            }
+
+            public Resources build() {
+                return new Resources(this);
+            } 
+
+        } 
+
+    }
+    public static class ResourceSpec extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Resources")
+        private java.util.List < Resources> resources;
+
+        private ResourceSpec(Builder builder) {
+            this.resources = builder.resources;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceSpec create() {
+            return builder().build();
+        }
+
+        /**
+         * @return resources
+         */
+        public java.util.List < Resources> getResources() {
+            return this.resources;
+        }
+
+        public static final class Builder {
+            private java.util.List < Resources> resources; 
+
+            /**
+             * Resources.
+             */
+            public Builder resources(java.util.List < Resources> resources) {
+                this.resources = resources;
+                return this;
+            }
+
+            public ResourceSpec build() {
+                return new ResourceSpec(this);
+            } 
+
+        } 
+
+    }
     public static class RetryStrategy extends TeaModel {
-        @NameInMap("MaximumEventAgeInSeconds")
+        @com.aliyun.core.annotation.NameInMap("MaximumEventAgeInSeconds")
         private Float maximumEventAgeInSeconds;
 
-        @NameInMap("MaximumRetryAttempts")
+        @com.aliyun.core.annotation.NameInMap("MaximumRetryAttempts")
         private Float maximumRetryAttempts;
 
-        @NameInMap("PushRetryStrategy")
+        @com.aliyun.core.annotation.NameInMap("PushRetryStrategy")
         private String pushRetryStrategy;
 
         private RetryStrategy(Builder builder) {
@@ -289,7 +674,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private String pushRetryStrategy; 
 
             /**
-             * MaximumEventAgeInSeconds.
+             * The maximum timeout period for a retry.
              */
             public Builder maximumEventAgeInSeconds(Float maximumEventAgeInSeconds) {
                 this.maximumEventAgeInSeconds = maximumEventAgeInSeconds;
@@ -297,7 +682,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * MaximumRetryAttempts.
+             * The maximum number of retries.
              */
             public Builder maximumRetryAttempts(Float maximumRetryAttempts) {
                 this.maximumRetryAttempts = maximumRetryAttempts;
@@ -305,7 +690,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * PushRetryStrategy.
+             * Valid values: BACKOFFRETRY and EXPONENTIALDECAY_RETRY.
              */
             public Builder pushRetryStrategy(String pushRetryStrategy) {
                 this.pushRetryStrategy = pushRetryStrategy;
@@ -319,28 +704,251 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         } 
 
     }
+    public static class Metadata extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private Integer value;
+
+        private Metadata(Builder builder) {
+            this.type = builder.type;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Metadata create() {
+            return builder().build();
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return value
+         */
+        public Integer getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String type; 
+            private Integer value; 
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(Integer value) {
+                this.value = value;
+                return this;
+            }
+
+            public Metadata build() {
+                return new Metadata(this);
+            } 
+
+        } 
+
+    }
+    public static class Triggers extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Metadata")
+        private Metadata metadata;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private Triggers(Builder builder) {
+            this.metadata = builder.metadata;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Triggers create() {
+            return builder().build();
+        }
+
+        /**
+         * @return metadata
+         */
+        public Metadata getMetadata() {
+            return this.metadata;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private Metadata metadata; 
+            private String type; 
+
+            /**
+             * Metadata.
+             */
+            public Builder metadata(Metadata metadata) {
+                this.metadata = metadata;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Triggers build() {
+                return new Triggers(this);
+            } 
+
+        } 
+
+    }
+    public static class ScaledObject extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MaxReplicaCount")
+        private Integer maxReplicaCount;
+
+        @com.aliyun.core.annotation.NameInMap("MinReplicaCount")
+        private Integer minReplicaCount;
+
+        @com.aliyun.core.annotation.NameInMap("Triggers")
+        private java.util.List < Triggers> triggers;
+
+        private ScaledObject(Builder builder) {
+            this.maxReplicaCount = builder.maxReplicaCount;
+            this.minReplicaCount = builder.minReplicaCount;
+            this.triggers = builder.triggers;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ScaledObject create() {
+            return builder().build();
+        }
+
+        /**
+         * @return maxReplicaCount
+         */
+        public Integer getMaxReplicaCount() {
+            return this.maxReplicaCount;
+        }
+
+        /**
+         * @return minReplicaCount
+         */
+        public Integer getMinReplicaCount() {
+            return this.minReplicaCount;
+        }
+
+        /**
+         * @return triggers
+         */
+        public java.util.List < Triggers> getTriggers() {
+            return this.triggers;
+        }
+
+        public static final class Builder {
+            private Integer maxReplicaCount; 
+            private Integer minReplicaCount; 
+            private java.util.List < Triggers> triggers; 
+
+            /**
+             * MaxReplicaCount.
+             */
+            public Builder maxReplicaCount(Integer maxReplicaCount) {
+                this.maxReplicaCount = maxReplicaCount;
+                return this;
+            }
+
+            /**
+             * MinReplicaCount.
+             */
+            public Builder minReplicaCount(Integer minReplicaCount) {
+                this.minReplicaCount = minReplicaCount;
+                return this;
+            }
+
+            /**
+             * Triggers.
+             */
+            public Builder triggers(java.util.List < Triggers> triggers) {
+                this.triggers = triggers;
+                return this;
+            }
+
+            public ScaledObject build() {
+                return new ScaledObject(this);
+            } 
+
+        } 
+
+    }
     public static class RunOptions extends TeaModel {
-        @NameInMap("BatchWindow")
+        @com.aliyun.core.annotation.NameInMap("BatchWindow")
         private BatchWindow batchWindow;
 
-        @NameInMap("DeadLetterQueue")
+        @com.aliyun.core.annotation.NameInMap("DeadLetterQueue")
         private DeadLetterQueue deadLetterQueue;
 
-        @NameInMap("ErrorsTolerance")
+        @com.aliyun.core.annotation.NameInMap("ErrorsTolerance")
         private String errorsTolerance;
 
-        @NameInMap("MaximumTasks")
+        @com.aliyun.core.annotation.NameInMap("LogDelivery")
+        private LogDelivery logDelivery;
+
+        @com.aliyun.core.annotation.NameInMap("MaximumTasks")
         private Integer maximumTasks;
 
-        @NameInMap("RetryStrategy")
+        @com.aliyun.core.annotation.NameInMap("Network")
+        private Network network;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceSpec")
+        private ResourceSpec resourceSpec;
+
+        @com.aliyun.core.annotation.NameInMap("RetryStrategy")
         private RetryStrategy retryStrategy;
+
+        @com.aliyun.core.annotation.NameInMap("RoleName")
+        private String roleName;
+
+        @com.aliyun.core.annotation.NameInMap("ScaledObject")
+        private ScaledObject scaledObject;
 
         private RunOptions(Builder builder) {
             this.batchWindow = builder.batchWindow;
             this.deadLetterQueue = builder.deadLetterQueue;
             this.errorsTolerance = builder.errorsTolerance;
+            this.logDelivery = builder.logDelivery;
             this.maximumTasks = builder.maximumTasks;
+            this.network = builder.network;
+            this.resourceSpec = builder.resourceSpec;
             this.retryStrategy = builder.retryStrategy;
+            this.roleName = builder.roleName;
+            this.scaledObject = builder.scaledObject;
         }
 
         public static Builder builder() {
@@ -373,10 +981,31 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         }
 
         /**
+         * @return logDelivery
+         */
+        public LogDelivery getLogDelivery() {
+            return this.logDelivery;
+        }
+
+        /**
          * @return maximumTasks
          */
         public Integer getMaximumTasks() {
             return this.maximumTasks;
+        }
+
+        /**
+         * @return network
+         */
+        public Network getNetwork() {
+            return this.network;
+        }
+
+        /**
+         * @return resourceSpec
+         */
+        public ResourceSpec getResourceSpec() {
+            return this.resourceSpec;
         }
 
         /**
@@ -386,15 +1015,34 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             return this.retryStrategy;
         }
 
+        /**
+         * @return roleName
+         */
+        public String getRoleName() {
+            return this.roleName;
+        }
+
+        /**
+         * @return scaledObject
+         */
+        public ScaledObject getScaledObject() {
+            return this.scaledObject;
+        }
+
         public static final class Builder {
             private BatchWindow batchWindow; 
             private DeadLetterQueue deadLetterQueue; 
             private String errorsTolerance; 
+            private LogDelivery logDelivery; 
             private Integer maximumTasks; 
+            private Network network; 
+            private ResourceSpec resourceSpec; 
             private RetryStrategy retryStrategy; 
+            private String roleName; 
+            private ScaledObject scaledObject; 
 
             /**
-             * BatchWindow.
+             * The batch window.
              */
             public Builder batchWindow(BatchWindow batchWindow) {
                 this.batchWindow = batchWindow;
@@ -402,7 +1050,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * DeadLetterQueue.
+             * Indicates whether dead-letter queues are enabled. By default, dead-letter queues are disabled. Messages that fail to be pushed are discarded after the maximum number of retries that is specified by the retry policy is reached.
              */
             public Builder deadLetterQueue(DeadLetterQueue deadLetterQueue) {
                 this.deadLetterQueue = deadLetterQueue;
@@ -410,7 +1058,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorsTolerance.
+             * The exception tolerance policy. Valid values: NONE and ALL.
              */
             public Builder errorsTolerance(String errorsTolerance) {
                 this.errorsTolerance = errorsTolerance;
@@ -418,7 +1066,15 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * MaximumTasks.
+             * LogDelivery.
+             */
+            public Builder logDelivery(LogDelivery logDelivery) {
+                this.logDelivery = logDelivery;
+                return this;
+            }
+
+            /**
+             * The number of concurrent threads.
              */
             public Builder maximumTasks(Integer maximumTasks) {
                 this.maximumTasks = maximumTasks;
@@ -426,10 +1082,42 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * RetryStrategy.
+             * Network.
+             */
+            public Builder network(Network network) {
+                this.network = network;
+                return this;
+            }
+
+            /**
+             * ResourceSpec.
+             */
+            public Builder resourceSpec(ResourceSpec resourceSpec) {
+                this.resourceSpec = resourceSpec;
+                return this;
+            }
+
+            /**
+             * The retry policy that is used if events fail to be pushed.
              */
             public Builder retryStrategy(RetryStrategy retryStrategy) {
                 this.retryStrategy = retryStrategy;
+                return this;
+            }
+
+            /**
+             * RoleName.
+             */
+            public Builder roleName(String roleName) {
+                this.roleName = roleName;
+                return this;
+            }
+
+            /**
+             * ScaledObject.
+             */
+            public Builder scaledObject(ScaledObject scaledObject) {
+                this.scaledObject = scaledObject;
                 return this;
             }
 
@@ -440,17 +1128,200 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         } 
 
     }
-    public static class SinkFcParametersBody extends TeaModel {
-        @NameInMap("Form")
+    public static class ConnectorParameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Config")
+        private java.util.Map < String, ? > config;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        private ConnectorParameters(Builder builder) {
+            this.config = builder.config;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ConnectorParameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return config
+         */
+        public java.util.Map < String, ? > getConfig() {
+            return this.config;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private java.util.Map < String, ? > config; 
+            private String name; 
+
+            /**
+             * Config.
+             */
+            public Builder config(java.util.Map < String, ? > config) {
+                this.config = config;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public ConnectorParameters build() {
+                return new ConnectorParameters(this);
+            } 
+
+        } 
+
+    }
+    public static class SinkCustomizedKafkaConnectorParameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ConnectorPackageUrl")
+        private String connectorPackageUrl;
+
+        @com.aliyun.core.annotation.NameInMap("ConnectorParameters")
+        private ConnectorParameters connectorParameters;
+
+        @com.aliyun.core.annotation.NameInMap("WorkerParameters")
+        private java.util.Map < String, ? > workerParameters;
+
+        private SinkCustomizedKafkaConnectorParameters(Builder builder) {
+            this.connectorPackageUrl = builder.connectorPackageUrl;
+            this.connectorParameters = builder.connectorParameters;
+            this.workerParameters = builder.workerParameters;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SinkCustomizedKafkaConnectorParameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return connectorPackageUrl
+         */
+        public String getConnectorPackageUrl() {
+            return this.connectorPackageUrl;
+        }
+
+        /**
+         * @return connectorParameters
+         */
+        public ConnectorParameters getConnectorParameters() {
+            return this.connectorParameters;
+        }
+
+        /**
+         * @return workerParameters
+         */
+        public java.util.Map < String, ? > getWorkerParameters() {
+            return this.workerParameters;
+        }
+
+        public static final class Builder {
+            private String connectorPackageUrl; 
+            private ConnectorParameters connectorParameters; 
+            private java.util.Map < String, ? > workerParameters; 
+
+            /**
+             * ConnectorPackageUrl.
+             */
+            public Builder connectorPackageUrl(String connectorPackageUrl) {
+                this.connectorPackageUrl = connectorPackageUrl;
+                return this;
+            }
+
+            /**
+             * ConnectorParameters.
+             */
+            public Builder connectorParameters(ConnectorParameters connectorParameters) {
+                this.connectorParameters = connectorParameters;
+                return this;
+            }
+
+            /**
+             * WorkerParameters.
+             */
+            public Builder workerParameters(java.util.Map < String, ? > workerParameters) {
+                this.workerParameters = workerParameters;
+                return this;
+            }
+
+            public SinkCustomizedKafkaConnectorParameters build() {
+                return new SinkCustomizedKafkaConnectorParameters(this);
+            } 
+
+        } 
+
+    }
+    public static class SinkCustomizedKafkaParameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        private String instanceId;
+
+        private SinkCustomizedKafkaParameters(Builder builder) {
+            this.instanceId = builder.instanceId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SinkCustomizedKafkaParameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public static final class Builder {
+            private String instanceId; 
+
+            /**
+             * InstanceId.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            public SinkCustomizedKafkaParameters build() {
+                return new SinkCustomizedKafkaParameters(this);
+            } 
+
+        } 
+
+    }
+    public static class DashVectorSchemaParameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        private SinkFcParametersBody(Builder builder) {
+        private DashVectorSchemaParameters(Builder builder) {
             this.form = builder.form;
             this.template = builder.template;
             this.value = builder.value;
@@ -460,7 +1331,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static SinkFcParametersBody create() {
+        public static DashVectorSchemaParameters create() {
             return builder().build();
         }
 
@@ -514,24 +1385,24 @@ public class ListEventStreamingsResponseBody extends TeaModel {
                 return this;
             }
 
-            public SinkFcParametersBody build() {
-                return new SinkFcParametersBody(this);
+            public DashVectorSchemaParameters build() {
+                return new DashVectorSchemaParameters(this);
             } 
 
         } 
 
     }
-    public static class Concurrency extends TeaModel {
-        @NameInMap("Form")
+    public static class Partition extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        private Concurrency(Builder builder) {
+        private Partition(Builder builder) {
             this.form = builder.form;
             this.template = builder.template;
             this.value = builder.value;
@@ -541,7 +1412,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Concurrency create() {
+        public static Partition create() {
             return builder().build();
         }
 
@@ -595,24 +1466,24 @@ public class ListEventStreamingsResponseBody extends TeaModel {
                 return this;
             }
 
-            public Concurrency build() {
-                return new Concurrency(this);
+            public Partition build() {
+                return new Partition(this);
             } 
 
         } 
 
     }
-    public static class FunctionName extends TeaModel {
-        @NameInMap("Form")
+    public static class PrimaryKeyId extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        private FunctionName(Builder builder) {
+        private PrimaryKeyId(Builder builder) {
             this.form = builder.form;
             this.template = builder.template;
             this.value = builder.value;
@@ -622,7 +1493,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static FunctionName create() {
+        public static PrimaryKeyId create() {
             return builder().build();
         }
 
@@ -676,24 +1547,24 @@ public class ListEventStreamingsResponseBody extends TeaModel {
                 return this;
             }
 
-            public FunctionName build() {
-                return new FunctionName(this);
+            public PrimaryKeyId build() {
+                return new PrimaryKeyId(this);
             } 
 
         } 
 
     }
-    public static class InvocationType extends TeaModel {
-        @NameInMap("Form")
+    public static class Vector extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        private InvocationType(Builder builder) {
+        private Vector(Builder builder) {
             this.form = builder.form;
             this.template = builder.template;
             this.value = builder.value;
@@ -703,7 +1574,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static InvocationType create() {
+        public static Vector create() {
             return builder().build();
         }
 
@@ -757,24 +1628,225 @@ public class ListEventStreamingsResponseBody extends TeaModel {
                 return this;
             }
 
-            public InvocationType build() {
-                return new InvocationType(this);
+            public Vector build() {
+                return new Vector(this);
             } 
 
         } 
 
     }
-    public static class Qualifier extends TeaModel {
-        @NameInMap("Form")
+    public static class SinkDashVectorParameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ApiKey")
+        private String apiKey;
+
+        @com.aliyun.core.annotation.NameInMap("Collection")
+        private String collection;
+
+        @com.aliyun.core.annotation.NameInMap("DashVectorSchemaParameters")
+        private DashVectorSchemaParameters dashVectorSchemaParameters;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        private String instanceId;
+
+        @com.aliyun.core.annotation.NameInMap("Network")
+        private String network;
+
+        @com.aliyun.core.annotation.NameInMap("Operation")
+        private String operation;
+
+        @com.aliyun.core.annotation.NameInMap("Partition")
+        private Partition partition;
+
+        @com.aliyun.core.annotation.NameInMap("PrimaryKeyId")
+        private PrimaryKeyId primaryKeyId;
+
+        @com.aliyun.core.annotation.NameInMap("Vector")
+        private Vector vector;
+
+        private SinkDashVectorParameters(Builder builder) {
+            this.apiKey = builder.apiKey;
+            this.collection = builder.collection;
+            this.dashVectorSchemaParameters = builder.dashVectorSchemaParameters;
+            this.instanceId = builder.instanceId;
+            this.network = builder.network;
+            this.operation = builder.operation;
+            this.partition = builder.partition;
+            this.primaryKeyId = builder.primaryKeyId;
+            this.vector = builder.vector;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SinkDashVectorParameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return apiKey
+         */
+        public String getApiKey() {
+            return this.apiKey;
+        }
+
+        /**
+         * @return collection
+         */
+        public String getCollection() {
+            return this.collection;
+        }
+
+        /**
+         * @return dashVectorSchemaParameters
+         */
+        public DashVectorSchemaParameters getDashVectorSchemaParameters() {
+            return this.dashVectorSchemaParameters;
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        /**
+         * @return network
+         */
+        public String getNetwork() {
+            return this.network;
+        }
+
+        /**
+         * @return operation
+         */
+        public String getOperation() {
+            return this.operation;
+        }
+
+        /**
+         * @return partition
+         */
+        public Partition getPartition() {
+            return this.partition;
+        }
+
+        /**
+         * @return primaryKeyId
+         */
+        public PrimaryKeyId getPrimaryKeyId() {
+            return this.primaryKeyId;
+        }
+
+        /**
+         * @return vector
+         */
+        public Vector getVector() {
+            return this.vector;
+        }
+
+        public static final class Builder {
+            private String apiKey; 
+            private String collection; 
+            private DashVectorSchemaParameters dashVectorSchemaParameters; 
+            private String instanceId; 
+            private String network; 
+            private String operation; 
+            private Partition partition; 
+            private PrimaryKeyId primaryKeyId; 
+            private Vector vector; 
+
+            /**
+             * ApiKey.
+             */
+            public Builder apiKey(String apiKey) {
+                this.apiKey = apiKey;
+                return this;
+            }
+
+            /**
+             * Collection.
+             */
+            public Builder collection(String collection) {
+                this.collection = collection;
+                return this;
+            }
+
+            /**
+             * DashVectorSchemaParameters.
+             */
+            public Builder dashVectorSchemaParameters(DashVectorSchemaParameters dashVectorSchemaParameters) {
+                this.dashVectorSchemaParameters = dashVectorSchemaParameters;
+                return this;
+            }
+
+            /**
+             * InstanceId.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * Network.
+             */
+            public Builder network(String network) {
+                this.network = network;
+                return this;
+            }
+
+            /**
+             * Operation.
+             */
+            public Builder operation(String operation) {
+                this.operation = operation;
+                return this;
+            }
+
+            /**
+             * Partition.
+             */
+            public Builder partition(Partition partition) {
+                this.partition = partition;
+                return this;
+            }
+
+            /**
+             * PrimaryKeyId.
+             */
+            public Builder primaryKeyId(PrimaryKeyId primaryKeyId) {
+                this.primaryKeyId = primaryKeyId;
+                return this;
+            }
+
+            /**
+             * Vector.
+             */
+            public Builder vector(Vector vector) {
+                this.vector = vector;
+                return this;
+            }
+
+            public SinkDashVectorParameters build() {
+                return new SinkDashVectorParameters(this);
+            } 
+
+        } 
+
+    }
+    public static class SinkDataHubParametersBody extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        private Qualifier(Builder builder) {
+        private SinkDataHubParametersBody(Builder builder) {
             this.form = builder.form;
             this.template = builder.template;
             this.value = builder.value;
@@ -784,7 +1856,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Qualifier create() {
+        public static SinkDataHubParametersBody create() {
             return builder().build();
         }
 
@@ -838,24 +1910,24 @@ public class ListEventStreamingsResponseBody extends TeaModel {
                 return this;
             }
 
-            public Qualifier build() {
-                return new Qualifier(this);
+            public SinkDataHubParametersBody build() {
+                return new SinkDataHubParametersBody(this);
             } 
 
         } 
 
     }
-    public static class ServiceName extends TeaModel {
-        @NameInMap("Form")
+    public static class Project extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        private ServiceName(Builder builder) {
+        private Project(Builder builder) {
             this.form = builder.form;
             this.template = builder.template;
             this.value = builder.value;
@@ -865,7 +1937,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static ServiceName create() {
+        public static Project create() {
             return builder().build();
         }
 
@@ -919,405 +1991,21 @@ public class ListEventStreamingsResponseBody extends TeaModel {
                 return this;
             }
 
-            public ServiceName build() {
-                return new ServiceName(this);
-            } 
-
-        } 
-
-    }
-    public static class SinkFcParameters extends TeaModel {
-        @NameInMap("Body")
-        private SinkFcParametersBody body;
-
-        @NameInMap("Concurrency")
-        private Concurrency concurrency;
-
-        @NameInMap("FunctionName")
-        private FunctionName functionName;
-
-        @NameInMap("InvocationType")
-        private InvocationType invocationType;
-
-        @NameInMap("Qualifier")
-        private Qualifier qualifier;
-
-        @NameInMap("ServiceName")
-        private ServiceName serviceName;
-
-        private SinkFcParameters(Builder builder) {
-            this.body = builder.body;
-            this.concurrency = builder.concurrency;
-            this.functionName = builder.functionName;
-            this.invocationType = builder.invocationType;
-            this.qualifier = builder.qualifier;
-            this.serviceName = builder.serviceName;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static SinkFcParameters create() {
-            return builder().build();
-        }
-
-        /**
-         * @return body
-         */
-        public SinkFcParametersBody getBody() {
-            return this.body;
-        }
-
-        /**
-         * @return concurrency
-         */
-        public Concurrency getConcurrency() {
-            return this.concurrency;
-        }
-
-        /**
-         * @return functionName
-         */
-        public FunctionName getFunctionName() {
-            return this.functionName;
-        }
-
-        /**
-         * @return invocationType
-         */
-        public InvocationType getInvocationType() {
-            return this.invocationType;
-        }
-
-        /**
-         * @return qualifier
-         */
-        public Qualifier getQualifier() {
-            return this.qualifier;
-        }
-
-        /**
-         * @return serviceName
-         */
-        public ServiceName getServiceName() {
-            return this.serviceName;
-        }
-
-        public static final class Builder {
-            private SinkFcParametersBody body; 
-            private Concurrency concurrency; 
-            private FunctionName functionName; 
-            private InvocationType invocationType; 
-            private Qualifier qualifier; 
-            private ServiceName serviceName; 
-
-            /**
-             * Body.
-             */
-            public Builder body(SinkFcParametersBody body) {
-                this.body = body;
-                return this;
-            }
-
-            /**
-             * Concurrency.
-             */
-            public Builder concurrency(Concurrency concurrency) {
-                this.concurrency = concurrency;
-                return this;
-            }
-
-            /**
-             * FunctionName.
-             */
-            public Builder functionName(FunctionName functionName) {
-                this.functionName = functionName;
-                return this;
-            }
-
-            /**
-             * InvocationType.
-             */
-            public Builder invocationType(InvocationType invocationType) {
-                this.invocationType = invocationType;
-                return this;
-            }
-
-            /**
-             * Qualifier.
-             */
-            public Builder qualifier(Qualifier qualifier) {
-                this.qualifier = qualifier;
-                return this;
-            }
-
-            /**
-             * ServiceName.
-             */
-            public Builder serviceName(ServiceName serviceName) {
-                this.serviceName = serviceName;
-                return this;
-            }
-
-            public SinkFcParameters build() {
-                return new SinkFcParameters(this);
-            } 
-
-        } 
-
-    }
-    public static class ExecutionName extends TeaModel {
-        @NameInMap("Form")
-        private String form;
-
-        @NameInMap("Template")
-        private String template;
-
-        @NameInMap("Value")
-        private String value;
-
-        private ExecutionName(Builder builder) {
-            this.form = builder.form;
-            this.template = builder.template;
-            this.value = builder.value;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static ExecutionName create() {
-            return builder().build();
-        }
-
-        /**
-         * @return form
-         */
-        public String getForm() {
-            return this.form;
-        }
-
-        /**
-         * @return template
-         */
-        public String getTemplate() {
-            return this.template;
-        }
-
-        /**
-         * @return value
-         */
-        public String getValue() {
-            return this.value;
-        }
-
-        public static final class Builder {
-            private String form; 
-            private String template; 
-            private String value; 
-
-            /**
-             * Form.
-             */
-            public Builder form(String form) {
-                this.form = form;
-                return this;
-            }
-
-            /**
-             * Template.
-             */
-            public Builder template(String template) {
-                this.template = template;
-                return this;
-            }
-
-            /**
-             * Value.
-             */
-            public Builder value(String value) {
-                this.value = value;
-                return this;
-            }
-
-            public ExecutionName build() {
-                return new ExecutionName(this);
-            } 
-
-        } 
-
-    }
-    public static class FlowName extends TeaModel {
-        @NameInMap("Form")
-        private String form;
-
-        @NameInMap("Template")
-        private String template;
-
-        @NameInMap("Value")
-        private String value;
-
-        private FlowName(Builder builder) {
-            this.form = builder.form;
-            this.template = builder.template;
-            this.value = builder.value;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static FlowName create() {
-            return builder().build();
-        }
-
-        /**
-         * @return form
-         */
-        public String getForm() {
-            return this.form;
-        }
-
-        /**
-         * @return template
-         */
-        public String getTemplate() {
-            return this.template;
-        }
-
-        /**
-         * @return value
-         */
-        public String getValue() {
-            return this.value;
-        }
-
-        public static final class Builder {
-            private String form; 
-            private String template; 
-            private String value; 
-
-            /**
-             * Form.
-             */
-            public Builder form(String form) {
-                this.form = form;
-                return this;
-            }
-
-            /**
-             * Template.
-             */
-            public Builder template(String template) {
-                this.template = template;
-                return this;
-            }
-
-            /**
-             * Value.
-             */
-            public Builder value(String value) {
-                this.value = value;
-                return this;
-            }
-
-            public FlowName build() {
-                return new FlowName(this);
-            } 
-
-        } 
-
-    }
-    public static class Input extends TeaModel {
-        @NameInMap("Form")
-        private String form;
-
-        @NameInMap("Template")
-        private String template;
-
-        @NameInMap("Value")
-        private String value;
-
-        private Input(Builder builder) {
-            this.form = builder.form;
-            this.template = builder.template;
-            this.value = builder.value;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Input create() {
-            return builder().build();
-        }
-
-        /**
-         * @return form
-         */
-        public String getForm() {
-            return this.form;
-        }
-
-        /**
-         * @return template
-         */
-        public String getTemplate() {
-            return this.template;
-        }
-
-        /**
-         * @return value
-         */
-        public String getValue() {
-            return this.value;
-        }
-
-        public static final class Builder {
-            private String form; 
-            private String template; 
-            private String value; 
-
-            /**
-             * Form.
-             */
-            public Builder form(String form) {
-                this.form = form;
-                return this;
-            }
-
-            /**
-             * Template.
-             */
-            public Builder template(String template) {
-                this.template = template;
-                return this;
-            }
-
-            /**
-             * Value.
-             */
-            public Builder value(String value) {
-                this.value = value;
-                return this;
-            }
-
-            public Input build() {
-                return new Input(this);
+            public Project build() {
+                return new Project(this);
             } 
 
         } 
 
     }
     public static class RoleName extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private RoleName(Builder builder) {
@@ -1391,358 +2079,14 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         } 
 
     }
-    public static class SinkFnfParameters extends TeaModel {
-        @NameInMap("ExecutionName")
-        private ExecutionName executionName;
-
-        @NameInMap("FlowName")
-        private FlowName flowName;
-
-        @NameInMap("Input")
-        private Input input;
-
-        @NameInMap("RoleName")
-        private RoleName roleName;
-
-        private SinkFnfParameters(Builder builder) {
-            this.executionName = builder.executionName;
-            this.flowName = builder.flowName;
-            this.input = builder.input;
-            this.roleName = builder.roleName;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static SinkFnfParameters create() {
-            return builder().build();
-        }
-
-        /**
-         * @return executionName
-         */
-        public ExecutionName getExecutionName() {
-            return this.executionName;
-        }
-
-        /**
-         * @return flowName
-         */
-        public FlowName getFlowName() {
-            return this.flowName;
-        }
-
-        /**
-         * @return input
-         */
-        public Input getInput() {
-            return this.input;
-        }
-
-        /**
-         * @return roleName
-         */
-        public RoleName getRoleName() {
-            return this.roleName;
-        }
-
-        public static final class Builder {
-            private ExecutionName executionName; 
-            private FlowName flowName; 
-            private Input input; 
-            private RoleName roleName; 
-
-            /**
-             * ExecutionName.
-             */
-            public Builder executionName(ExecutionName executionName) {
-                this.executionName = executionName;
-                return this;
-            }
-
-            /**
-             * FlowName.
-             */
-            public Builder flowName(FlowName flowName) {
-                this.flowName = flowName;
-                return this;
-            }
-
-            /**
-             * Input.
-             */
-            public Builder input(Input input) {
-                this.input = input;
-                return this;
-            }
-
-            /**
-             * RoleName.
-             */
-            public Builder roleName(RoleName roleName) {
-                this.roleName = roleName;
-                return this;
-            }
-
-            public SinkFnfParameters build() {
-                return new SinkFnfParameters(this);
-            } 
-
-        } 
-
-    }
-    public static class Acks extends TeaModel {
-        @NameInMap("Form")
-        private String form;
-
-        @NameInMap("Template")
-        private String template;
-
-        @NameInMap("Value")
-        private String value;
-
-        private Acks(Builder builder) {
-            this.form = builder.form;
-            this.template = builder.template;
-            this.value = builder.value;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Acks create() {
-            return builder().build();
-        }
-
-        /**
-         * @return form
-         */
-        public String getForm() {
-            return this.form;
-        }
-
-        /**
-         * @return template
-         */
-        public String getTemplate() {
-            return this.template;
-        }
-
-        /**
-         * @return value
-         */
-        public String getValue() {
-            return this.value;
-        }
-
-        public static final class Builder {
-            private String form; 
-            private String template; 
-            private String value; 
-
-            /**
-             * Form.
-             */
-            public Builder form(String form) {
-                this.form = form;
-                return this;
-            }
-
-            /**
-             * Template.
-             */
-            public Builder template(String template) {
-                this.template = template;
-                return this;
-            }
-
-            /**
-             * Value.
-             */
-            public Builder value(String value) {
-                this.value = value;
-                return this;
-            }
-
-            public Acks build() {
-                return new Acks(this);
-            } 
-
-        } 
-
-    }
-    public static class InstanceId extends TeaModel {
-        @NameInMap("Form")
-        private String form;
-
-        @NameInMap("Template")
-        private String template;
-
-        @NameInMap("Value")
-        private String value;
-
-        private InstanceId(Builder builder) {
-            this.form = builder.form;
-            this.template = builder.template;
-            this.value = builder.value;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static InstanceId create() {
-            return builder().build();
-        }
-
-        /**
-         * @return form
-         */
-        public String getForm() {
-            return this.form;
-        }
-
-        /**
-         * @return template
-         */
-        public String getTemplate() {
-            return this.template;
-        }
-
-        /**
-         * @return value
-         */
-        public String getValue() {
-            return this.value;
-        }
-
-        public static final class Builder {
-            private String form; 
-            private String template; 
-            private String value; 
-
-            /**
-             * Form.
-             */
-            public Builder form(String form) {
-                this.form = form;
-                return this;
-            }
-
-            /**
-             * Template.
-             */
-            public Builder template(String template) {
-                this.template = template;
-                return this;
-            }
-
-            /**
-             * Value.
-             */
-            public Builder value(String value) {
-                this.value = value;
-                return this;
-            }
-
-            public InstanceId build() {
-                return new InstanceId(this);
-            } 
-
-        } 
-
-    }
-    public static class Key extends TeaModel {
-        @NameInMap("Form")
-        private String form;
-
-        @NameInMap("Template")
-        private String template;
-
-        @NameInMap("Value")
-        private String value;
-
-        private Key(Builder builder) {
-            this.form = builder.form;
-            this.template = builder.template;
-            this.value = builder.value;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Key create() {
-            return builder().build();
-        }
-
-        /**
-         * @return form
-         */
-        public String getForm() {
-            return this.form;
-        }
-
-        /**
-         * @return template
-         */
-        public String getTemplate() {
-            return this.template;
-        }
-
-        /**
-         * @return value
-         */
-        public String getValue() {
-            return this.value;
-        }
-
-        public static final class Builder {
-            private String form; 
-            private String template; 
-            private String value; 
-
-            /**
-             * Form.
-             */
-            public Builder form(String form) {
-                this.form = form;
-                return this;
-            }
-
-            /**
-             * Template.
-             */
-            public Builder template(String template) {
-                this.template = template;
-                return this;
-            }
-
-            /**
-             * Value.
-             */
-            public Builder value(String value) {
-                this.value = value;
-                return this;
-            }
-
-            public Key build() {
-                return new Key(this);
-            } 
-
-        } 
-
-    }
     public static class Topic extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Topic(Builder builder) {
@@ -1816,14 +2160,1706 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         } 
 
     }
-    public static class Value extends TeaModel {
-        @NameInMap("Form")
+    public static class TopicSchema extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private TopicSchema(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TopicSchema create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * Form.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * Template.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public TopicSchema build() {
+                return new TopicSchema(this);
+            } 
+
+        } 
+
+    }
+    public static class TopicType extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private TopicType(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TopicType create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * Form.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * Template.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public TopicType build() {
+                return new TopicType(this);
+            } 
+
+        } 
+
+    }
+    public static class SinkDataHubParameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Body")
+        private SinkDataHubParametersBody body;
+
+        @com.aliyun.core.annotation.NameInMap("Project")
+        private Project project;
+
+        @com.aliyun.core.annotation.NameInMap("RoleName")
+        private RoleName roleName;
+
+        @com.aliyun.core.annotation.NameInMap("Topic")
+        private Topic topic;
+
+        @com.aliyun.core.annotation.NameInMap("TopicSchema")
+        private TopicSchema topicSchema;
+
+        @com.aliyun.core.annotation.NameInMap("TopicType")
+        private TopicType topicType;
+
+        private SinkDataHubParameters(Builder builder) {
+            this.body = builder.body;
+            this.project = builder.project;
+            this.roleName = builder.roleName;
+            this.topic = builder.topic;
+            this.topicSchema = builder.topicSchema;
+            this.topicType = builder.topicType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SinkDataHubParameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return body
+         */
+        public SinkDataHubParametersBody getBody() {
+            return this.body;
+        }
+
+        /**
+         * @return project
+         */
+        public Project getProject() {
+            return this.project;
+        }
+
+        /**
+         * @return roleName
+         */
+        public RoleName getRoleName() {
+            return this.roleName;
+        }
+
+        /**
+         * @return topic
+         */
+        public Topic getTopic() {
+            return this.topic;
+        }
+
+        /**
+         * @return topicSchema
+         */
+        public TopicSchema getTopicSchema() {
+            return this.topicSchema;
+        }
+
+        /**
+         * @return topicType
+         */
+        public TopicType getTopicType() {
+            return this.topicType;
+        }
+
+        public static final class Builder {
+            private SinkDataHubParametersBody body; 
+            private Project project; 
+            private RoleName roleName; 
+            private Topic topic; 
+            private TopicSchema topicSchema; 
+            private TopicType topicType; 
+
+            /**
+             * Body.
+             */
+            public Builder body(SinkDataHubParametersBody body) {
+                this.body = body;
+                return this;
+            }
+
+            /**
+             * Project.
+             */
+            public Builder project(Project project) {
+                this.project = project;
+                return this;
+            }
+
+            /**
+             * RoleName.
+             */
+            public Builder roleName(RoleName roleName) {
+                this.roleName = roleName;
+                return this;
+            }
+
+            /**
+             * Topic.
+             */
+            public Builder topic(Topic topic) {
+                this.topic = topic;
+                return this;
+            }
+
+            /**
+             * TopicSchema.
+             */
+            public Builder topicSchema(TopicSchema topicSchema) {
+                this.topicSchema = topicSchema;
+                return this;
+            }
+
+            /**
+             * TopicType.
+             */
+            public Builder topicType(TopicType topicType) {
+                this.topicType = topicType;
+                return this;
+            }
+
+            public SinkDataHubParameters build() {
+                return new SinkDataHubParameters(this);
+            } 
+
+        } 
+
+    }
+    public static class SinkFcParametersBody extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private SinkFcParametersBody(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SinkFcParametersBody create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * The template based on which events are transformed.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The value before transformation.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public SinkFcParametersBody build() {
+                return new SinkFcParametersBody(this);
+            } 
+
+        } 
+
+    }
+    public static class Concurrency extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Concurrency(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Concurrency create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * None
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The delivery concurrency. Minimum value: 1.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Concurrency build() {
+                return new Concurrency(this);
+            } 
+
+        } 
+
+    }
+    public static class FunctionName extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private FunctionName(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FunctionName create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * None
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The function name.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public FunctionName build() {
+                return new FunctionName(this);
+            } 
+
+        } 
+
+    }
+    public static class InvocationType extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private InvocationType(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InvocationType create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * None
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The invocation mode. Valid values:
+             * <p>
+             * 
+             * *   Sync: the synchronous mode
+             * *   Async: the asynchronous mode
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public InvocationType build() {
+                return new InvocationType(this);
+            } 
+
+        } 
+
+    }
+    public static class Qualifier extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Qualifier(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Qualifier create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * None
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The alias of the service to which the function belongs.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Qualifier build() {
+                return new Qualifier(this);
+            } 
+
+        } 
+
+    }
+    public static class ServiceName extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private ServiceName(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ServiceName create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * None
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The service name.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public ServiceName build() {
+                return new ServiceName(this);
+            } 
+
+        } 
+
+    }
+    public static class SinkFcParameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Body")
+        private SinkFcParametersBody body;
+
+        @com.aliyun.core.annotation.NameInMap("Concurrency")
+        private Concurrency concurrency;
+
+        @com.aliyun.core.annotation.NameInMap("FunctionName")
+        private FunctionName functionName;
+
+        @com.aliyun.core.annotation.NameInMap("InvocationType")
+        private InvocationType invocationType;
+
+        @com.aliyun.core.annotation.NameInMap("Qualifier")
+        private Qualifier qualifier;
+
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
+        private ServiceName serviceName;
+
+        private SinkFcParameters(Builder builder) {
+            this.body = builder.body;
+            this.concurrency = builder.concurrency;
+            this.functionName = builder.functionName;
+            this.invocationType = builder.invocationType;
+            this.qualifier = builder.qualifier;
+            this.serviceName = builder.serviceName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SinkFcParameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return body
+         */
+        public SinkFcParametersBody getBody() {
+            return this.body;
+        }
+
+        /**
+         * @return concurrency
+         */
+        public Concurrency getConcurrency() {
+            return this.concurrency;
+        }
+
+        /**
+         * @return functionName
+         */
+        public FunctionName getFunctionName() {
+            return this.functionName;
+        }
+
+        /**
+         * @return invocationType
+         */
+        public InvocationType getInvocationType() {
+            return this.invocationType;
+        }
+
+        /**
+         * @return qualifier
+         */
+        public Qualifier getQualifier() {
+            return this.qualifier;
+        }
+
+        /**
+         * @return serviceName
+         */
+        public ServiceName getServiceName() {
+            return this.serviceName;
+        }
+
+        public static final class Builder {
+            private SinkFcParametersBody body; 
+            private Concurrency concurrency; 
+            private FunctionName functionName; 
+            private InvocationType invocationType; 
+            private Qualifier qualifier; 
+            private ServiceName serviceName; 
+
+            /**
+             * The message body that is delivered to Function Compute.
+             */
+            public Builder body(SinkFcParametersBody body) {
+                this.body = body;
+                return this;
+            }
+
+            /**
+             * The delivery concurrency. Minimum value: 1.
+             */
+            public Builder concurrency(Concurrency concurrency) {
+                this.concurrency = concurrency;
+                return this;
+            }
+
+            /**
+             * The function name.
+             */
+            public Builder functionName(FunctionName functionName) {
+                this.functionName = functionName;
+                return this;
+            }
+
+            /**
+             * The invocation mode. Valid values:
+             * <p>
+             * 
+             * *   Sync: the synchronous mode
+             * *   Async: the asynchronous mode
+             */
+            public Builder invocationType(InvocationType invocationType) {
+                this.invocationType = invocationType;
+                return this;
+            }
+
+            /**
+             * The alias of the service to which the function belongs.
+             */
+            public Builder qualifier(Qualifier qualifier) {
+                this.qualifier = qualifier;
+                return this;
+            }
+
+            /**
+             * The service name.
+             */
+            public Builder serviceName(ServiceName serviceName) {
+                this.serviceName = serviceName;
+                return this;
+            }
+
+            public SinkFcParameters build() {
+                return new SinkFcParameters(this);
+            } 
+
+        } 
+
+    }
+    public static class ExecutionName extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private ExecutionName(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExecutionName create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * The template based on which events are transformed.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The execution name.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public ExecutionName build() {
+                return new ExecutionName(this);
+            } 
+
+        } 
+
+    }
+    public static class FlowName extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private FlowName(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FlowName create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * The template based on which events are transformed.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The flow name.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public FlowName build() {
+                return new FlowName(this);
+            } 
+
+        } 
+
+    }
+    public static class Input extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Input(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Input create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * The template based on which events are transformed.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The input information of the execution.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Input build() {
+                return new Input(this);
+            } 
+
+        } 
+
+    }
+    public static class SinkFnfParametersRoleName extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private SinkFnfParametersRoleName(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SinkFnfParametersRoleName create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * The template based on which events are transformed.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The role name.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public SinkFnfParametersRoleName build() {
+                return new SinkFnfParametersRoleName(this);
+            } 
+
+        } 
+
+    }
+    public static class SinkFnfParameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ExecutionName")
+        private ExecutionName executionName;
+
+        @com.aliyun.core.annotation.NameInMap("FlowName")
+        private FlowName flowName;
+
+        @com.aliyun.core.annotation.NameInMap("Input")
+        private Input input;
+
+        @com.aliyun.core.annotation.NameInMap("RoleName")
+        private SinkFnfParametersRoleName roleName;
+
+        private SinkFnfParameters(Builder builder) {
+            this.executionName = builder.executionName;
+            this.flowName = builder.flowName;
+            this.input = builder.input;
+            this.roleName = builder.roleName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SinkFnfParameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return executionName
+         */
+        public ExecutionName getExecutionName() {
+            return this.executionName;
+        }
+
+        /**
+         * @return flowName
+         */
+        public FlowName getFlowName() {
+            return this.flowName;
+        }
+
+        /**
+         * @return input
+         */
+        public Input getInput() {
+            return this.input;
+        }
+
+        /**
+         * @return roleName
+         */
+        public SinkFnfParametersRoleName getRoleName() {
+            return this.roleName;
+        }
+
+        public static final class Builder {
+            private ExecutionName executionName; 
+            private FlowName flowName; 
+            private Input input; 
+            private SinkFnfParametersRoleName roleName; 
+
+            /**
+             * The execution name.
+             */
+            public Builder executionName(ExecutionName executionName) {
+                this.executionName = executionName;
+                return this;
+            }
+
+            /**
+             * The flow name.
+             */
+            public Builder flowName(FlowName flowName) {
+                this.flowName = flowName;
+                return this;
+            }
+
+            /**
+             * The input information of the execution.
+             */
+            public Builder input(Input input) {
+                this.input = input;
+                return this;
+            }
+
+            /**
+             * The role name.
+             */
+            public Builder roleName(SinkFnfParametersRoleName roleName) {
+                this.roleName = roleName;
+                return this;
+            }
+
+            public SinkFnfParameters build() {
+                return new SinkFnfParameters(this);
+            } 
+
+        } 
+
+    }
+    public static class Acks extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Acks(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Acks create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * None
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The ACK mode.
+             * <p>
+             * 
+             * *   If this parameter is set to 0, no response is returned from the broker. In this mode, the performance is high, but the risk of data loss is also high.
+             * *   If this parameter is set to 1, a response is returned when data is written to the leader. In this mode, the performance and the risk of data loss are moderate. Data loss may occur if a failure occurs on the leader.
+             * *   If this parameter is set to all, a response is returned when data is written to the leader and synchronized to the followers. In this mode, the performance is low, but the risk of data loss is also low. Data loss occurs if the leader and the followers fail at the same time.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Acks build() {
+                return new Acks(this);
+            } 
+
+        } 
+
+    }
+    public static class InstanceId extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private InstanceId(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InstanceId create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * None
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The ID of the Message Queue for Apache Kafka instance.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public InstanceId build() {
+                return new InstanceId(this);
+            } 
+
+        } 
+
+    }
+    public static class Key extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Key(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Key create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * None
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The message key.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Key build() {
+                return new Key(this);
+            } 
+
+        } 
+
+    }
+    public static class SinkKafkaParametersTopic extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private SinkKafkaParametersTopic(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SinkKafkaParametersTopic create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * None
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The topic name.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public SinkKafkaParametersTopic build() {
+                return new SinkKafkaParametersTopic(this);
+            } 
+
+        } 
+
+    }
+    public static class Value extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Value(Builder builder) {
@@ -1867,7 +3903,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Form.
+             * The method that is used to transform events.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -1875,7 +3911,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Template.
+             * The template based on which events are transformed.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -1883,7 +3919,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value before transformation.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1898,19 +3934,19 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SinkKafkaParameters extends TeaModel {
-        @NameInMap("Acks")
+        @com.aliyun.core.annotation.NameInMap("Acks")
         private Acks acks;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private InstanceId instanceId;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private Key key;
 
-        @NameInMap("Topic")
-        private Topic topic;
+        @com.aliyun.core.annotation.NameInMap("Topic")
+        private SinkKafkaParametersTopic topic;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Value value;
 
         private SinkKafkaParameters(Builder builder) {
@@ -1953,7 +3989,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         /**
          * @return topic
          */
-        public Topic getTopic() {
+        public SinkKafkaParametersTopic getTopic() {
             return this.topic;
         }
 
@@ -1968,11 +4004,16 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private Acks acks; 
             private InstanceId instanceId; 
             private Key key; 
-            private Topic topic; 
+            private SinkKafkaParametersTopic topic; 
             private Value value; 
 
             /**
-             * Acks.
+             * The acknowledgment (ACK) mode.
+             * <p>
+             * 
+             * *   If this parameter is set to 0, no response is returned from the broker. In this mode, the performance is high, but the risk of data loss is also high.
+             * *   If this parameter is set to 1, a response is returned when data is written to the leader. In this mode, the performance and the risk of data loss are moderate. Data loss may occur if a failure occurs on the leader.
+             * *   If this parameter is set to all, a response is returned when data is written to the leader and synchronized to the followers. In this mode, the performance is low, but the risk of data loss is also low. Data loss occurs if the leader and the followers fail at the same time.
              */
             public Builder acks(Acks acks) {
                 this.acks = acks;
@@ -1980,7 +4021,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the Message Queue for Apache Kafka instance.
              */
             public Builder instanceId(InstanceId instanceId) {
                 this.instanceId = instanceId;
@@ -1988,7 +4029,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Key.
+             * The message key.
              */
             public Builder key(Key key) {
                 this.key = key;
@@ -1996,15 +4037,15 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Topic.
+             * The topic name.
              */
-            public Builder topic(Topic topic) {
+            public Builder topic(SinkKafkaParametersTopic topic) {
                 this.topic = topic;
                 return this;
             }
 
             /**
-             * Value.
+             * The message body.
              */
             public Builder value(Value value) {
                 this.value = value;
@@ -2019,13 +4060,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SinkMNSParametersBody extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SinkMNSParametersBody(Builder builder) {
@@ -2069,7 +4110,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Form.
+             * The method that is used to transform events.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -2077,7 +4118,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Template.
+             * The template based on which events are transformed.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -2085,7 +4126,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value before transformation.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2100,13 +4141,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class IsBase64Encode extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private IsBase64Encode(Builder builder) {
@@ -2150,7 +4191,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Form.
+             * The method that is used to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -2158,7 +4199,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Template.
+             * None
              */
             public Builder template(String template) {
                 this.template = template;
@@ -2166,7 +4207,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * Indicates that Base64 encoding is enabled.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2181,13 +4222,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class QueueName extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private QueueName(Builder builder) {
@@ -2231,7 +4272,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Form.
+             * The method that is used to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -2239,7 +4280,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Template.
+             * None
              */
             public Builder template(String template) {
                 this.template = template;
@@ -2247,7 +4288,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The name of the MNS queue.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2262,13 +4303,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SinkMNSParameters extends TeaModel {
-        @NameInMap("Body")
+        @com.aliyun.core.annotation.NameInMap("Body")
         private SinkMNSParametersBody body;
 
-        @NameInMap("IsBase64Encode")
+        @com.aliyun.core.annotation.NameInMap("IsBase64Encode")
         private IsBase64Encode isBase64Encode;
 
-        @NameInMap("QueueName")
+        @com.aliyun.core.annotation.NameInMap("QueueName")
         private QueueName queueName;
 
         private SinkMNSParameters(Builder builder) {
@@ -2312,7 +4353,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private QueueName queueName; 
 
             /**
-             * Body.
+             * The message body.
              */
             public Builder body(SinkMNSParametersBody body) {
                 this.body = body;
@@ -2320,7 +4361,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * IsBase64Encode.
+             * Indicates whether Base64 encoding is enabled.
              */
             public Builder isBase64Encode(IsBase64Encode isBase64Encode) {
                 this.isBase64Encode = isBase64Encode;
@@ -2328,7 +4369,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * QueueName.
+             * The name of the MNS queue.
              */
             public Builder queueName(QueueName queueName) {
                 this.queueName = queueName;
@@ -2343,13 +4384,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SinkRabbitMQParametersBody extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SinkRabbitMQParametersBody(Builder builder) {
@@ -2393,7 +4434,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Form.
+             * The method that is used to transform events.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -2401,7 +4442,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Template.
+             * The template based on which events are transformed.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -2409,7 +4450,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value before transformation.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2424,13 +4465,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class Exchange extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Exchange(Builder builder) {
@@ -2474,7 +4515,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Form.
+             * The method that is used to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -2482,7 +4523,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Template.
+             * None
              */
             public Builder template(String template) {
                 this.template = template;
@@ -2490,7 +4531,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The name of the exchange on the Message Queue for RabbitMQ instance.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2505,13 +4546,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SinkRabbitMQParametersInstanceId extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SinkRabbitMQParametersInstanceId(Builder builder) {
@@ -2555,7 +4596,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Form.
+             * The method that is used to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -2563,7 +4604,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Template.
+             * None
              */
             public Builder template(String template) {
                 this.template = template;
@@ -2571,7 +4612,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The ID of the Message Queue for RabbitMQ instance.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2586,13 +4627,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class MessageId extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private MessageId(Builder builder) {
@@ -2636,7 +4677,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Form.
+             * The method that is used to transform events.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -2644,7 +4685,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Template.
+             * The template based on which events are transformed.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -2652,7 +4693,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value before transformation.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2667,13 +4708,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class Properties extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Properties(Builder builder) {
@@ -2717,7 +4758,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Form.
+             * The method that is used to transform events.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -2725,7 +4766,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Template.
+             * The template based on which events are transformed.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -2733,7 +4774,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value before transformation.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2748,13 +4789,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SinkRabbitMQParametersQueueName extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SinkRabbitMQParametersQueueName(Builder builder) {
@@ -2798,7 +4839,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Form.
+             * The method that is used to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -2806,7 +4847,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Template.
+             * None
              */
             public Builder template(String template) {
                 this.template = template;
@@ -2814,7 +4855,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The name of the queue on the Message Queue for RabbitMQ instance.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2829,13 +4870,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class RoutingKey extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private RoutingKey(Builder builder) {
@@ -2879,7 +4920,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Form.
+             * The method that is used to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -2887,7 +4928,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Template.
+             * None
              */
             public Builder template(String template) {
                 this.template = template;
@@ -2895,7 +4936,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The rule that is used to route messages.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2910,13 +4951,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class TargetType extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private TargetType(Builder builder) {
@@ -2960,7 +5001,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Form.
+             * The method that is used to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -2968,7 +5009,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Template.
+             * None
              */
             public Builder template(String template) {
                 this.template = template;
@@ -2976,7 +5017,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The type of the resource to which events are delivered. Valid values: Exchange and Queue.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2991,13 +5032,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class VirtualHostName extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private VirtualHostName(Builder builder) {
@@ -3041,7 +5082,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Form.
+             * The method that is used to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -3049,7 +5090,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Template.
+             * None
              */
             public Builder template(String template) {
                 this.template = template;
@@ -3057,7 +5098,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The name of the vhost of the Message Queue for RabbitMQ instance.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -3072,31 +5113,31 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SinkRabbitMQParameters extends TeaModel {
-        @NameInMap("Body")
+        @com.aliyun.core.annotation.NameInMap("Body")
         private SinkRabbitMQParametersBody body;
 
-        @NameInMap("Exchange")
+        @com.aliyun.core.annotation.NameInMap("Exchange")
         private Exchange exchange;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private SinkRabbitMQParametersInstanceId instanceId;
 
-        @NameInMap("MessageId")
+        @com.aliyun.core.annotation.NameInMap("MessageId")
         private MessageId messageId;
 
-        @NameInMap("Properties")
+        @com.aliyun.core.annotation.NameInMap("Properties")
         private Properties properties;
 
-        @NameInMap("QueueName")
+        @com.aliyun.core.annotation.NameInMap("QueueName")
         private SinkRabbitMQParametersQueueName queueName;
 
-        @NameInMap("RoutingKey")
+        @com.aliyun.core.annotation.NameInMap("RoutingKey")
         private RoutingKey routingKey;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private TargetType targetType;
 
-        @NameInMap("VirtualHostName")
+        @com.aliyun.core.annotation.NameInMap("VirtualHostName")
         private VirtualHostName virtualHostName;
 
         private SinkRabbitMQParameters(Builder builder) {
@@ -3194,7 +5235,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private VirtualHostName virtualHostName; 
 
             /**
-             * Body.
+             * The message body.
              */
             public Builder body(SinkRabbitMQParametersBody body) {
                 this.body = body;
@@ -3202,7 +5243,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Exchange.
+             * The exchange to which events are delivered. This parameter is returned only if TargetType is set to Exchange.
              */
             public Builder exchange(Exchange exchange) {
                 this.exchange = exchange;
@@ -3210,7 +5251,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the Message Queue for RabbitMQ instance.
              */
             public Builder instanceId(SinkRabbitMQParametersInstanceId instanceId) {
                 this.instanceId = instanceId;
@@ -3218,7 +5259,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * MessageId.
+             * The message ID.
              */
             public Builder messageId(MessageId messageId) {
                 this.messageId = messageId;
@@ -3226,7 +5267,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Properties.
+             * The attributes that are used to filter messages.
              */
             public Builder properties(Properties properties) {
                 this.properties = properties;
@@ -3234,7 +5275,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * QueueName.
+             * The queue to which events are delivered. This parameter is returned only if TargetType is set to Queue.
              */
             public Builder queueName(SinkRabbitMQParametersQueueName queueName) {
                 this.queueName = queueName;
@@ -3242,7 +5283,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * RoutingKey.
+             * The rule that is used to route messages. This parameter is returned only if TargetType is set to Exchange.
              */
             public Builder routingKey(RoutingKey routingKey) {
                 this.routingKey = routingKey;
@@ -3250,7 +5291,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * The type of the resource to which events are delivered.
              */
             public Builder targetType(TargetType targetType) {
                 this.targetType = targetType;
@@ -3258,7 +5299,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * VirtualHostName.
+             * The name of the vhost of the Message Queue for RabbitMQ instance.
              */
             public Builder virtualHostName(VirtualHostName virtualHostName) {
                 this.virtualHostName = virtualHostName;
@@ -3273,13 +5314,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SinkRocketMQParametersBody extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SinkRocketMQParametersBody(Builder builder) {
@@ -3323,7 +5364,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Form.
+             * The method that is used to transform events.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -3331,7 +5372,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Template.
+             * The template based on which events are transformed.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -3339,7 +5380,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value before transformation.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -3353,14 +5394,95 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         } 
 
     }
-    public static class SinkRocketMQParametersInstanceId extends TeaModel {
-        @NameInMap("Form")
+    public static class InstanceEndpoint extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private InstanceEndpoint(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InstanceEndpoint create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * The template based on which events are transformed.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The value before transformation.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public InstanceEndpoint build() {
+                return new InstanceEndpoint(this);
+            } 
+
+        } 
+
+    }
+    public static class SinkRocketMQParametersInstanceId extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SinkRocketMQParametersInstanceId(Builder builder) {
@@ -3404,7 +5526,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Form.
+             * The method that is used to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -3412,7 +5534,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Template.
+             * None
              */
             public Builder template(String template) {
                 this.template = template;
@@ -3420,7 +5542,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The ID of the Message Queue for Apache RocketMQ instance.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -3434,14 +5556,257 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         } 
 
     }
-    public static class Keys extends TeaModel {
-        @NameInMap("Form")
+    public static class InstancePassword extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private InstancePassword(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InstancePassword create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * None
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The ID of the Message Queue for Apache RocketMQ instance.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public InstancePassword build() {
+                return new InstancePassword(this);
+            } 
+
+        } 
+
+    }
+    public static class InstanceType extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private InstanceType(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InstanceType create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * None
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The ID of the Message Queue for Apache RocketMQ instance.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public InstanceType build() {
+                return new InstanceType(this);
+            } 
+
+        } 
+
+    }
+    public static class InstanceUsername extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private InstanceUsername(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InstanceUsername create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * None
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The ID of the Message Queue for Apache RocketMQ instance.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public InstanceUsername build() {
+                return new InstanceUsername(this);
+            } 
+
+        } 
+
+    }
+    public static class Keys extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Keys(Builder builder) {
@@ -3485,7 +5850,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Form.
+             * The method that is used to transform events.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -3493,7 +5858,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Template.
+             * The template based on which events are transformed.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -3501,7 +5866,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value before transformation.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -3515,14 +5880,95 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         } 
 
     }
-    public static class SinkRocketMQParametersProperties extends TeaModel {
-        @NameInMap("Form")
+    public static class SinkRocketMQParametersNetwork extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private SinkRocketMQParametersNetwork(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SinkRocketMQParametersNetwork create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * The template based on which events are transformed.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The value before transformation.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public SinkRocketMQParametersNetwork build() {
+                return new SinkRocketMQParametersNetwork(this);
+            } 
+
+        } 
+
+    }
+    public static class SinkRocketMQParametersProperties extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SinkRocketMQParametersProperties(Builder builder) {
@@ -3566,7 +6012,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Form.
+             * The method that is used to transform events.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -3574,7 +6020,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Template.
+             * The template based on which events are transformed.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -3582,7 +6028,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value before transformation.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -3596,14 +6042,95 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         } 
 
     }
-    public static class Tags extends TeaModel {
-        @NameInMap("Form")
+    public static class SecurityGroupId extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private SecurityGroupId(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SecurityGroupId create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * The template based on which events are transformed.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The value before transformation.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public SecurityGroupId build() {
+                return new SecurityGroupId(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -3647,7 +6174,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Form.
+             * The method that is used to transform events.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -3655,7 +6182,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Template.
+             * The template based on which events are transformed.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -3663,7 +6190,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value before transformation.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -3678,13 +6205,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SinkRocketMQParametersTopic extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SinkRocketMQParametersTopic(Builder builder) {
@@ -3728,7 +6255,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Form.
+             * The method that is used to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -3736,7 +6263,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Template.
+             * None
              */
             public Builder template(String template) {
                 this.template = template;
@@ -3744,7 +6271,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The name of the topic on the Message Queue for Apache RocketMQ instance.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -3758,32 +6285,226 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         } 
 
     }
+    public static class VSwitchIds extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private VSwitchIds(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VSwitchIds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * None
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The name of the topic on the Message Queue for Apache RocketMQ instance.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public VSwitchIds build() {
+                return new VSwitchIds(this);
+            } 
+
+        } 
+
+    }
+    public static class VpcId extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private VpcId(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VpcId create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * None
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The name of the topic on the Message Queue for Apache RocketMQ instance.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public VpcId build() {
+                return new VpcId(this);
+            } 
+
+        } 
+
+    }
     public static class SinkRocketMQParameters extends TeaModel {
-        @NameInMap("Body")
+        @com.aliyun.core.annotation.NameInMap("Body")
         private SinkRocketMQParametersBody body;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceEndpoint")
+        private InstanceEndpoint instanceEndpoint;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private SinkRocketMQParametersInstanceId instanceId;
 
-        @NameInMap("Keys")
+        @com.aliyun.core.annotation.NameInMap("InstancePassword")
+        private InstancePassword instancePassword;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
+        private InstanceType instanceType;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceUsername")
+        private InstanceUsername instanceUsername;
+
+        @com.aliyun.core.annotation.NameInMap("Keys")
         private Keys keys;
 
-        @NameInMap("Properties")
+        @com.aliyun.core.annotation.NameInMap("Network")
+        private SinkRocketMQParametersNetwork network;
+
+        @com.aliyun.core.annotation.NameInMap("Properties")
         private SinkRocketMQParametersProperties properties;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+        private SecurityGroupId securityGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private SinkRocketMQParametersTopic topic;
+
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+        private VSwitchIds vSwitchIds;
+
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private VpcId vpcId;
 
         private SinkRocketMQParameters(Builder builder) {
             this.body = builder.body;
+            this.instanceEndpoint = builder.instanceEndpoint;
             this.instanceId = builder.instanceId;
+            this.instancePassword = builder.instancePassword;
+            this.instanceType = builder.instanceType;
+            this.instanceUsername = builder.instanceUsername;
             this.keys = builder.keys;
+            this.network = builder.network;
             this.properties = builder.properties;
+            this.securityGroupId = builder.securityGroupId;
             this.tags = builder.tags;
             this.topic = builder.topic;
+            this.vSwitchIds = builder.vSwitchIds;
+            this.vpcId = builder.vpcId;
         }
 
         public static Builder builder() {
@@ -3802,10 +6523,38 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceEndpoint
+         */
+        public InstanceEndpoint getInstanceEndpoint() {
+            return this.instanceEndpoint;
+        }
+
+        /**
          * @return instanceId
          */
         public SinkRocketMQParametersInstanceId getInstanceId() {
             return this.instanceId;
+        }
+
+        /**
+         * @return instancePassword
+         */
+        public InstancePassword getInstancePassword() {
+            return this.instancePassword;
+        }
+
+        /**
+         * @return instanceType
+         */
+        public InstanceType getInstanceType() {
+            return this.instanceType;
+        }
+
+        /**
+         * @return instanceUsername
+         */
+        public InstanceUsername getInstanceUsername() {
+            return this.instanceUsername;
         }
 
         /**
@@ -3816,10 +6565,24 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         }
 
         /**
+         * @return network
+         */
+        public SinkRocketMQParametersNetwork getNetwork() {
+            return this.network;
+        }
+
+        /**
          * @return properties
          */
         public SinkRocketMQParametersProperties getProperties() {
             return this.properties;
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public SecurityGroupId getSecurityGroupId() {
+            return this.securityGroupId;
         }
 
         /**
@@ -3836,16 +6599,38 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             return this.topic;
         }
 
+        /**
+         * @return vSwitchIds
+         */
+        public VSwitchIds getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public VpcId getVpcId() {
+            return this.vpcId;
+        }
+
         public static final class Builder {
             private SinkRocketMQParametersBody body; 
+            private InstanceEndpoint instanceEndpoint; 
             private SinkRocketMQParametersInstanceId instanceId; 
+            private InstancePassword instancePassword; 
+            private InstanceType instanceType; 
+            private InstanceUsername instanceUsername; 
             private Keys keys; 
+            private SinkRocketMQParametersNetwork network; 
             private SinkRocketMQParametersProperties properties; 
+            private SecurityGroupId securityGroupId; 
             private Tags tags; 
             private SinkRocketMQParametersTopic topic; 
+            private VSwitchIds vSwitchIds; 
+            private VpcId vpcId; 
 
             /**
-             * Body.
+             * The message body.
              */
             public Builder body(SinkRocketMQParametersBody body) {
                 this.body = body;
@@ -3853,7 +6638,15 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * InstanceEndpoint.
+             */
+            public Builder instanceEndpoint(InstanceEndpoint instanceEndpoint) {
+                this.instanceEndpoint = instanceEndpoint;
+                return this;
+            }
+
+            /**
+             * The parameters that are returned if Message Queue for Apache RocketMQ is specified as the event target.
              */
             public Builder instanceId(SinkRocketMQParametersInstanceId instanceId) {
                 this.instanceId = instanceId;
@@ -3861,7 +6654,31 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Keys.
+             * InstancePassword.
+             */
+            public Builder instancePassword(InstancePassword instancePassword) {
+                this.instancePassword = instancePassword;
+                return this;
+            }
+
+            /**
+             * InstanceType.
+             */
+            public Builder instanceType(InstanceType instanceType) {
+                this.instanceType = instanceType;
+                return this;
+            }
+
+            /**
+             * InstanceUsername.
+             */
+            public Builder instanceUsername(InstanceUsername instanceUsername) {
+                this.instanceUsername = instanceUsername;
+                return this;
+            }
+
+            /**
+             * The keys that are used to filter messages.
              */
             public Builder keys(Keys keys) {
                 this.keys = keys;
@@ -3869,7 +6686,15 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Properties.
+             * Network.
+             */
+            public Builder network(SinkRocketMQParametersNetwork network) {
+                this.network = network;
+                return this;
+            }
+
+            /**
+             * The attributes that are used to filter messages.
              */
             public Builder properties(SinkRocketMQParametersProperties properties) {
                 this.properties = properties;
@@ -3877,7 +6702,15 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * SecurityGroupId.
+             */
+            public Builder securityGroupId(SecurityGroupId securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * The tags that are used to filter messages.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -3885,10 +6718,26 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Topic.
+             * The name of the topic on the Message Queue for Apache RocketMQ instance.
              */
             public Builder topic(SinkRocketMQParametersTopic topic) {
                 this.topic = topic;
+                return this;
+            }
+
+            /**
+             * VSwitchIds.
+             */
+            public Builder vSwitchIds(VSwitchIds vSwitchIds) {
+                this.vSwitchIds = vSwitchIds;
+                return this;
+            }
+
+            /**
+             * VpcId.
+             */
+            public Builder vpcId(VpcId vpcId) {
+                this.vpcId = vpcId;
                 return this;
             }
 
@@ -3900,13 +6749,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SinkSLSParametersBody extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SinkSLSParametersBody(Builder builder) {
@@ -3950,7 +6799,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Form.
+             * The method that is used to transform events.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -3958,7 +6807,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Template.
+             * The template based on which events are transformed.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -3966,7 +6815,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value before transformation.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -3980,14 +6829,176 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         } 
 
     }
-    public static class LogStore extends TeaModel {
-        @NameInMap("Form")
+    public static class ContentSchema extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private ContentSchema(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ContentSchema create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * The template based on which events are transformed.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The value before transformation.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public ContentSchema build() {
+                return new ContentSchema(this);
+            } 
+
+        } 
+
+    }
+    public static class ContentType extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private ContentType(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ContentType create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * The template based on which events are transformed.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The value before transformation.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public ContentType build() {
+                return new ContentType(this);
+            } 
+
+        } 
+
+    }
+    public static class LogStore extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private LogStore(Builder builder) {
@@ -4031,7 +7042,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Form.
+             * The method that is used to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -4039,7 +7050,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Template.
+             * None
              */
             public Builder template(String template) {
                 this.template = template;
@@ -4047,7 +7058,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The Log Service Logstore.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -4061,17 +7072,17 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         } 
 
     }
-    public static class Project extends TeaModel {
-        @NameInMap("Form")
+    public static class SinkSLSParametersProject extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        private Project(Builder builder) {
+        private SinkSLSParametersProject(Builder builder) {
             this.form = builder.form;
             this.template = builder.template;
             this.value = builder.value;
@@ -4081,7 +7092,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Project create() {
+        public static SinkSLSParametersProject create() {
             return builder().build();
         }
 
@@ -4112,7 +7123,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Form.
+             * The method that is used to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -4120,7 +7131,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Template.
+             * None
              */
             public Builder template(String template) {
                 this.template = template;
@@ -4128,28 +7139,28 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The Log Service project.
              */
             public Builder value(String value) {
                 this.value = value;
                 return this;
             }
 
-            public Project build() {
-                return new Project(this);
+            public SinkSLSParametersProject build() {
+                return new SinkSLSParametersProject(this);
             } 
 
         } 
 
     }
     public static class SinkSLSParametersRoleName extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SinkSLSParametersRoleName(Builder builder) {
@@ -4193,7 +7204,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Form.
+             * The method that is used to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -4201,7 +7212,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Template.
+             * None
              */
             public Builder template(String template) {
                 this.template = template;
@@ -4209,7 +7220,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The role name. If you want to authorize EventBridge to use this role to read logs in Log Service, you must select Alibaba Cloud Service for Selected Trusted Entity and EventBridge for Select Trusted Service when you create the role in the RAM console.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -4224,13 +7235,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SinkSLSParametersTopic extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SinkSLSParametersTopic(Builder builder) {
@@ -4274,7 +7285,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Form.
+             * The method that is used to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -4282,7 +7293,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Template.
+             * None
              */
             public Builder template(String template) {
                 this.template = template;
@@ -4290,7 +7301,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The name of the topic in which logs are stored. The topic corresponds to the topic reserved field in Log Service.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -4305,23 +7316,31 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SinkSLSParameters extends TeaModel {
-        @NameInMap("Body")
+        @com.aliyun.core.annotation.NameInMap("Body")
         private SinkSLSParametersBody body;
 
-        @NameInMap("LogStore")
+        @com.aliyun.core.annotation.NameInMap("ContentSchema")
+        private ContentSchema contentSchema;
+
+        @com.aliyun.core.annotation.NameInMap("ContentType")
+        private ContentType contentType;
+
+        @com.aliyun.core.annotation.NameInMap("LogStore")
         private LogStore logStore;
 
-        @NameInMap("Project")
-        private Project project;
+        @com.aliyun.core.annotation.NameInMap("Project")
+        private SinkSLSParametersProject project;
 
-        @NameInMap("RoleName")
+        @com.aliyun.core.annotation.NameInMap("RoleName")
         private SinkSLSParametersRoleName roleName;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private SinkSLSParametersTopic topic;
 
         private SinkSLSParameters(Builder builder) {
             this.body = builder.body;
+            this.contentSchema = builder.contentSchema;
+            this.contentType = builder.contentType;
             this.logStore = builder.logStore;
             this.project = builder.project;
             this.roleName = builder.roleName;
@@ -4344,6 +7363,20 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         }
 
         /**
+         * @return contentSchema
+         */
+        public ContentSchema getContentSchema() {
+            return this.contentSchema;
+        }
+
+        /**
+         * @return contentType
+         */
+        public ContentType getContentType() {
+            return this.contentType;
+        }
+
+        /**
          * @return logStore
          */
         public LogStore getLogStore() {
@@ -4353,7 +7386,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         /**
          * @return project
          */
-        public Project getProject() {
+        public SinkSLSParametersProject getProject() {
             return this.project;
         }
 
@@ -4373,13 +7406,15 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
         public static final class Builder {
             private SinkSLSParametersBody body; 
+            private ContentSchema contentSchema; 
+            private ContentType contentType; 
             private LogStore logStore; 
-            private Project project; 
+            private SinkSLSParametersProject project; 
             private SinkSLSParametersRoleName roleName; 
             private SinkSLSParametersTopic topic; 
 
             /**
-             * Body.
+             * The message body that is delivered to Log Service.
              */
             public Builder body(SinkSLSParametersBody body) {
                 this.body = body;
@@ -4387,7 +7422,23 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * LogStore.
+             * ContentSchema.
+             */
+            public Builder contentSchema(ContentSchema contentSchema) {
+                this.contentSchema = contentSchema;
+                return this;
+            }
+
+            /**
+             * ContentType.
+             */
+            public Builder contentType(ContentType contentType) {
+                this.contentType = contentType;
+                return this;
+            }
+
+            /**
+             * The Log Service Logstore.
              */
             public Builder logStore(LogStore logStore) {
                 this.logStore = logStore;
@@ -4395,15 +7446,15 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Project.
+             * The Log Service project.
              */
-            public Builder project(Project project) {
+            public Builder project(SinkSLSParametersProject project) {
                 this.project = project;
                 return this;
             }
 
             /**
-             * RoleName.
+             * The role name. If you want to authorize EventBridge to use this role to read logs in Log Service, you must select Alibaba Cloud Service for Selected Trusted Entity and EventBridge for Select Trusted Service when you create the role in the RAM console.
              */
             public Builder roleName(SinkSLSParametersRoleName roleName) {
                 this.roleName = roleName;
@@ -4411,7 +7462,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Topic.
+             * The name of the topic in which logs are stored. The topic corresponds to the topic reserved field in Log Service.
              */
             public Builder topic(SinkSLSParametersTopic topic) {
                 this.topic = topic;
@@ -4426,28 +7477,44 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class Sink extends TeaModel {
-        @NameInMap("SinkFcParameters")
+        @com.aliyun.core.annotation.NameInMap("SinkCustomizedKafkaConnectorParameters")
+        private SinkCustomizedKafkaConnectorParameters sinkCustomizedKafkaConnectorParameters;
+
+        @com.aliyun.core.annotation.NameInMap("SinkCustomizedKafkaParameters")
+        private SinkCustomizedKafkaParameters sinkCustomizedKafkaParameters;
+
+        @com.aliyun.core.annotation.NameInMap("SinkDashVectorParameters")
+        private SinkDashVectorParameters sinkDashVectorParameters;
+
+        @com.aliyun.core.annotation.NameInMap("SinkDataHubParameters")
+        private SinkDataHubParameters sinkDataHubParameters;
+
+        @com.aliyun.core.annotation.NameInMap("SinkFcParameters")
         private SinkFcParameters sinkFcParameters;
 
-        @NameInMap("SinkFnfParameters")
+        @com.aliyun.core.annotation.NameInMap("SinkFnfParameters")
         private SinkFnfParameters sinkFnfParameters;
 
-        @NameInMap("SinkKafkaParameters")
+        @com.aliyun.core.annotation.NameInMap("SinkKafkaParameters")
         private SinkKafkaParameters sinkKafkaParameters;
 
-        @NameInMap("SinkMNSParameters")
+        @com.aliyun.core.annotation.NameInMap("SinkMNSParameters")
         private SinkMNSParameters sinkMNSParameters;
 
-        @NameInMap("SinkRabbitMQParameters")
+        @com.aliyun.core.annotation.NameInMap("SinkRabbitMQParameters")
         private SinkRabbitMQParameters sinkRabbitMQParameters;
 
-        @NameInMap("SinkRocketMQParameters")
+        @com.aliyun.core.annotation.NameInMap("SinkRocketMQParameters")
         private SinkRocketMQParameters sinkRocketMQParameters;
 
-        @NameInMap("SinkSLSParameters")
+        @com.aliyun.core.annotation.NameInMap("SinkSLSParameters")
         private SinkSLSParameters sinkSLSParameters;
 
         private Sink(Builder builder) {
+            this.sinkCustomizedKafkaConnectorParameters = builder.sinkCustomizedKafkaConnectorParameters;
+            this.sinkCustomizedKafkaParameters = builder.sinkCustomizedKafkaParameters;
+            this.sinkDashVectorParameters = builder.sinkDashVectorParameters;
+            this.sinkDataHubParameters = builder.sinkDataHubParameters;
             this.sinkFcParameters = builder.sinkFcParameters;
             this.sinkFnfParameters = builder.sinkFnfParameters;
             this.sinkKafkaParameters = builder.sinkKafkaParameters;
@@ -4463,6 +7530,34 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
         public static Sink create() {
             return builder().build();
+        }
+
+        /**
+         * @return sinkCustomizedKafkaConnectorParameters
+         */
+        public SinkCustomizedKafkaConnectorParameters getSinkCustomizedKafkaConnectorParameters() {
+            return this.sinkCustomizedKafkaConnectorParameters;
+        }
+
+        /**
+         * @return sinkCustomizedKafkaParameters
+         */
+        public SinkCustomizedKafkaParameters getSinkCustomizedKafkaParameters() {
+            return this.sinkCustomizedKafkaParameters;
+        }
+
+        /**
+         * @return sinkDashVectorParameters
+         */
+        public SinkDashVectorParameters getSinkDashVectorParameters() {
+            return this.sinkDashVectorParameters;
+        }
+
+        /**
+         * @return sinkDataHubParameters
+         */
+        public SinkDataHubParameters getSinkDataHubParameters() {
+            return this.sinkDataHubParameters;
         }
 
         /**
@@ -4515,6 +7610,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private SinkCustomizedKafkaConnectorParameters sinkCustomizedKafkaConnectorParameters; 
+            private SinkCustomizedKafkaParameters sinkCustomizedKafkaParameters; 
+            private SinkDashVectorParameters sinkDashVectorParameters; 
+            private SinkDataHubParameters sinkDataHubParameters; 
             private SinkFcParameters sinkFcParameters; 
             private SinkFnfParameters sinkFnfParameters; 
             private SinkKafkaParameters sinkKafkaParameters; 
@@ -4524,7 +7623,39 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private SinkSLSParameters sinkSLSParameters; 
 
             /**
-             * SinkFcParameters.
+             * SinkCustomizedKafkaConnectorParameters.
+             */
+            public Builder sinkCustomizedKafkaConnectorParameters(SinkCustomizedKafkaConnectorParameters sinkCustomizedKafkaConnectorParameters) {
+                this.sinkCustomizedKafkaConnectorParameters = sinkCustomizedKafkaConnectorParameters;
+                return this;
+            }
+
+            /**
+             * SinkCustomizedKafkaParameters.
+             */
+            public Builder sinkCustomizedKafkaParameters(SinkCustomizedKafkaParameters sinkCustomizedKafkaParameters) {
+                this.sinkCustomizedKafkaParameters = sinkCustomizedKafkaParameters;
+                return this;
+            }
+
+            /**
+             * SinkDashVectorParameters.
+             */
+            public Builder sinkDashVectorParameters(SinkDashVectorParameters sinkDashVectorParameters) {
+                this.sinkDashVectorParameters = sinkDashVectorParameters;
+                return this;
+            }
+
+            /**
+             * SinkDataHubParameters.
+             */
+            public Builder sinkDataHubParameters(SinkDataHubParameters sinkDataHubParameters) {
+                this.sinkDataHubParameters = sinkDataHubParameters;
+                return this;
+            }
+
+            /**
+             * The parameters that are returned if Function Compute is specified as the event target.
              */
             public Builder sinkFcParameters(SinkFcParameters sinkFcParameters) {
                 this.sinkFcParameters = sinkFcParameters;
@@ -4532,7 +7663,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * SinkFnfParameters.
+             * The parameters that are returned if Serverless Workflow is specified as the event target.
              */
             public Builder sinkFnfParameters(SinkFnfParameters sinkFnfParameters) {
                 this.sinkFnfParameters = sinkFnfParameters;
@@ -4540,7 +7671,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * SinkKafkaParameters.
+             * The parameters that are returned if Message Queue for Apache Kafka is specified as the event target.
              */
             public Builder sinkKafkaParameters(SinkKafkaParameters sinkKafkaParameters) {
                 this.sinkKafkaParameters = sinkKafkaParameters;
@@ -4548,7 +7679,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * SinkMNSParameters.
+             * The parameters that are returned if MNS is specified as the event target.
              */
             public Builder sinkMNSParameters(SinkMNSParameters sinkMNSParameters) {
                 this.sinkMNSParameters = sinkMNSParameters;
@@ -4556,7 +7687,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * SinkRabbitMQParameters.
+             * The parameters that are returned if Message Queue for RabbitMQ is specified as the event target.
              */
             public Builder sinkRabbitMQParameters(SinkRabbitMQParameters sinkRabbitMQParameters) {
                 this.sinkRabbitMQParameters = sinkRabbitMQParameters;
@@ -4586,26 +7717,490 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         } 
 
     }
-    public static class SourceDTSParameters extends TeaModel {
-        @NameInMap("BrokerUrl")
-        private String brokerUrl;
+    public static class SourceApacheKafkaParameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Bootstraps")
+        private String bootstraps;
 
-        @NameInMap("InitCheckPoint")
-        private String initCheckPoint;
+        @com.aliyun.core.annotation.NameInMap("ConsumerGroup")
+        private String consumerGroup;
 
-        @NameInMap("Password")
-        private String password;
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
+        private String networkType;
 
-        @NameInMap("Sid")
-        private String sid;
+        @com.aliyun.core.annotation.NameInMap("OffsetReset")
+        private String offsetReset;
 
-        @NameInMap("TaskId")
-        private String taskId;
+        @com.aliyun.core.annotation.NameInMap("SaslMechanism")
+        private String saslMechanism;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("SaslPassword")
+        private String saslPassword;
+
+        @com.aliyun.core.annotation.NameInMap("SaslUser")
+        private String saslUser;
+
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+        private String securityGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("SecurityProtocol")
+        private String securityProtocol;
+
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
-        @NameInMap("Username")
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+        private String vSwitchIds;
+
+        @com.aliyun.core.annotation.NameInMap("ValueDataType")
+        private String valueDataType;
+
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private String vpcId;
+
+        private SourceApacheKafkaParameters(Builder builder) {
+            this.bootstraps = builder.bootstraps;
+            this.consumerGroup = builder.consumerGroup;
+            this.networkType = builder.networkType;
+            this.offsetReset = builder.offsetReset;
+            this.saslMechanism = builder.saslMechanism;
+            this.saslPassword = builder.saslPassword;
+            this.saslUser = builder.saslUser;
+            this.securityGroupId = builder.securityGroupId;
+            this.securityProtocol = builder.securityProtocol;
+            this.topic = builder.topic;
+            this.vSwitchIds = builder.vSwitchIds;
+            this.valueDataType = builder.valueDataType;
+            this.vpcId = builder.vpcId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SourceApacheKafkaParameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bootstraps
+         */
+        public String getBootstraps() {
+            return this.bootstraps;
+        }
+
+        /**
+         * @return consumerGroup
+         */
+        public String getConsumerGroup() {
+            return this.consumerGroup;
+        }
+
+        /**
+         * @return networkType
+         */
+        public String getNetworkType() {
+            return this.networkType;
+        }
+
+        /**
+         * @return offsetReset
+         */
+        public String getOffsetReset() {
+            return this.offsetReset;
+        }
+
+        /**
+         * @return saslMechanism
+         */
+        public String getSaslMechanism() {
+            return this.saslMechanism;
+        }
+
+        /**
+         * @return saslPassword
+         */
+        public String getSaslPassword() {
+            return this.saslPassword;
+        }
+
+        /**
+         * @return saslUser
+         */
+        public String getSaslUser() {
+            return this.saslUser;
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
+         * @return securityProtocol
+         */
+        public String getSecurityProtocol() {
+            return this.securityProtocol;
+        }
+
+        /**
+         * @return topic
+         */
+        public String getTopic() {
+            return this.topic;
+        }
+
+        /**
+         * @return vSwitchIds
+         */
+        public String getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        /**
+         * @return valueDataType
+         */
+        public String getValueDataType() {
+            return this.valueDataType;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public static final class Builder {
+            private String bootstraps; 
+            private String consumerGroup; 
+            private String networkType; 
+            private String offsetReset; 
+            private String saslMechanism; 
+            private String saslPassword; 
+            private String saslUser; 
+            private String securityGroupId; 
+            private String securityProtocol; 
+            private String topic; 
+            private String vSwitchIds; 
+            private String valueDataType; 
+            private String vpcId; 
+
+            /**
+             * Bootstraps.
+             */
+            public Builder bootstraps(String bootstraps) {
+                this.bootstraps = bootstraps;
+                return this;
+            }
+
+            /**
+             * ConsumerGroup.
+             */
+            public Builder consumerGroup(String consumerGroup) {
+                this.consumerGroup = consumerGroup;
+                return this;
+            }
+
+            /**
+             * NetworkType.
+             */
+            public Builder networkType(String networkType) {
+                this.networkType = networkType;
+                return this;
+            }
+
+            /**
+             * OffsetReset.
+             */
+            public Builder offsetReset(String offsetReset) {
+                this.offsetReset = offsetReset;
+                return this;
+            }
+
+            /**
+             * SaslMechanism.
+             */
+            public Builder saslMechanism(String saslMechanism) {
+                this.saslMechanism = saslMechanism;
+                return this;
+            }
+
+            /**
+             * SaslPassword.
+             */
+            public Builder saslPassword(String saslPassword) {
+                this.saslPassword = saslPassword;
+                return this;
+            }
+
+            /**
+             * SaslUser.
+             */
+            public Builder saslUser(String saslUser) {
+                this.saslUser = saslUser;
+                return this;
+            }
+
+            /**
+             * SecurityGroupId.
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * SecurityProtocol.
+             */
+            public Builder securityProtocol(String securityProtocol) {
+                this.securityProtocol = securityProtocol;
+                return this;
+            }
+
+            /**
+             * The name of the topic in which logs are stored. The topic corresponds to the topic reserved field in Log Service.
+             */
+            public Builder topic(String topic) {
+                this.topic = topic;
+                return this;
+            }
+
+            /**
+             * VSwitchIds.
+             */
+            public Builder vSwitchIds(String vSwitchIds) {
+                this.vSwitchIds = vSwitchIds;
+                return this;
+            }
+
+            /**
+             * ValueDataType.
+             */
+            public Builder valueDataType(String valueDataType) {
+                this.valueDataType = valueDataType;
+                return this;
+            }
+
+            /**
+             * VpcId.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            public SourceApacheKafkaParameters build() {
+                return new SourceApacheKafkaParameters(this);
+            } 
+
+        } 
+
+    }
+    public static class SourceCustomizedKafkaConnectorParametersConnectorParameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Config")
+        private java.util.Map < String, ? > config;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        private SourceCustomizedKafkaConnectorParametersConnectorParameters(Builder builder) {
+            this.config = builder.config;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SourceCustomizedKafkaConnectorParametersConnectorParameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return config
+         */
+        public java.util.Map < String, ? > getConfig() {
+            return this.config;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private java.util.Map < String, ? > config; 
+            private String name; 
+
+            /**
+             * Config.
+             */
+            public Builder config(java.util.Map < String, ? > config) {
+                this.config = config;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public SourceCustomizedKafkaConnectorParametersConnectorParameters build() {
+                return new SourceCustomizedKafkaConnectorParametersConnectorParameters(this);
+            } 
+
+        } 
+
+    }
+    public static class SourceCustomizedKafkaConnectorParameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ConnectorPackageUrl")
+        private String connectorPackageUrl;
+
+        @com.aliyun.core.annotation.NameInMap("ConnectorParameters")
+        private SourceCustomizedKafkaConnectorParametersConnectorParameters connectorParameters;
+
+        @com.aliyun.core.annotation.NameInMap("WorkerParameters")
+        private java.util.Map < String, ? > workerParameters;
+
+        private SourceCustomizedKafkaConnectorParameters(Builder builder) {
+            this.connectorPackageUrl = builder.connectorPackageUrl;
+            this.connectorParameters = builder.connectorParameters;
+            this.workerParameters = builder.workerParameters;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SourceCustomizedKafkaConnectorParameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return connectorPackageUrl
+         */
+        public String getConnectorPackageUrl() {
+            return this.connectorPackageUrl;
+        }
+
+        /**
+         * @return connectorParameters
+         */
+        public SourceCustomizedKafkaConnectorParametersConnectorParameters getConnectorParameters() {
+            return this.connectorParameters;
+        }
+
+        /**
+         * @return workerParameters
+         */
+        public java.util.Map < String, ? > getWorkerParameters() {
+            return this.workerParameters;
+        }
+
+        public static final class Builder {
+            private String connectorPackageUrl; 
+            private SourceCustomizedKafkaConnectorParametersConnectorParameters connectorParameters; 
+            private java.util.Map < String, ? > workerParameters; 
+
+            /**
+             * ConnectorPackageUrl.
+             */
+            public Builder connectorPackageUrl(String connectorPackageUrl) {
+                this.connectorPackageUrl = connectorPackageUrl;
+                return this;
+            }
+
+            /**
+             * ConnectorParameters.
+             */
+            public Builder connectorParameters(SourceCustomizedKafkaConnectorParametersConnectorParameters connectorParameters) {
+                this.connectorParameters = connectorParameters;
+                return this;
+            }
+
+            /**
+             * WorkerParameters.
+             */
+            public Builder workerParameters(java.util.Map < String, ? > workerParameters) {
+                this.workerParameters = workerParameters;
+                return this;
+            }
+
+            public SourceCustomizedKafkaConnectorParameters build() {
+                return new SourceCustomizedKafkaConnectorParameters(this);
+            } 
+
+        } 
+
+    }
+    public static class SourceCustomizedKafkaParameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        private String instanceId;
+
+        private SourceCustomizedKafkaParameters(Builder builder) {
+            this.instanceId = builder.instanceId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SourceCustomizedKafkaParameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public static final class Builder {
+            private String instanceId; 
+
+            /**
+             * The parameters that are returned if Message Queue for Apache RocketMQ is specified as the event target.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            public SourceCustomizedKafkaParameters build() {
+                return new SourceCustomizedKafkaParameters(this);
+            } 
+
+        } 
+
+    }
+    public static class SourceDTSParameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BrokerUrl")
+        private String brokerUrl;
+
+        @com.aliyun.core.annotation.NameInMap("InitCheckPoint")
+        private String initCheckPoint;
+
+        @com.aliyun.core.annotation.NameInMap("Password")
+        private String password;
+
+        @com.aliyun.core.annotation.NameInMap("Sid")
+        private String sid;
+
+        @com.aliyun.core.annotation.NameInMap("TaskId")
+        private String taskId;
+
+        @com.aliyun.core.annotation.NameInMap("Topic")
+        private String topic;
+
+        @com.aliyun.core.annotation.NameInMap("Username")
         private String username;
 
         private SourceDTSParameters(Builder builder) {
@@ -4685,7 +8280,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private String username; 
 
             /**
-             * BrokerUrl.
+             * The URL and port number of the change tracking instance.
              */
             public Builder brokerUrl(String brokerUrl) {
                 this.brokerUrl = brokerUrl;
@@ -4693,7 +8288,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * InitCheckPoint.
+             * The consumer offset. It is the timestamp that indicates when the SDK client consumes the first data record.
              */
             public Builder initCheckPoint(String initCheckPoint) {
                 this.initCheckPoint = initCheckPoint;
@@ -4701,7 +8296,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Password.
+             * The consumer group password.
              */
             public Builder password(String password) {
                 this.password = password;
@@ -4709,7 +8304,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Sid.
+             * The consumer group ID.
              */
             public Builder sid(String sid) {
                 this.sid = sid;
@@ -4717,7 +8312,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The task ID.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -4725,7 +8320,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Topic.
+             * The name of the tracked topic on the change tracking instance.
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -4733,7 +8328,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Username.
+             * The consumer group username.
              */
             public Builder username(String username) {
                 this.username = username;
@@ -4748,31 +8343,34 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SourceKafkaParameters extends TeaModel {
-        @NameInMap("ConsumerGroup")
+        @com.aliyun.core.annotation.NameInMap("ConsumerGroup")
         private String consumerGroup;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Network")
+        @com.aliyun.core.annotation.NameInMap("Network")
         private String network;
 
-        @NameInMap("OffsetReset")
+        @com.aliyun.core.annotation.NameInMap("OffsetReset")
         private String offsetReset;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
-        @NameInMap("VSwitchIds")
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
         private String vSwitchIds;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("ValueDataType")
+        private String valueDataType;
+
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private SourceKafkaParameters(Builder builder) {
@@ -4784,6 +8382,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             this.securityGroupId = builder.securityGroupId;
             this.topic = builder.topic;
             this.vSwitchIds = builder.vSwitchIds;
+            this.valueDataType = builder.valueDataType;
             this.vpcId = builder.vpcId;
         }
 
@@ -4852,6 +8451,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         }
 
         /**
+         * @return valueDataType
+         */
+        public String getValueDataType() {
+            return this.valueDataType;
+        }
+
+        /**
          * @return vpcId
          */
         public String getVpcId() {
@@ -4867,10 +8473,11 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private String securityGroupId; 
             private String topic; 
             private String vSwitchIds; 
+            private String valueDataType; 
             private String vpcId; 
 
             /**
-             * ConsumerGroup.
+             * The ID of the consumer group that subscribes to the topic.
              */
             public Builder consumerGroup(String consumerGroup) {
                 this.consumerGroup = consumerGroup;
@@ -4878,7 +8485,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the Message Queue for Apache Kafka instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -4886,7 +8493,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Network.
+             * The network type. Valid values: Default and PublicNetwork. Default value: Default. The value PublicNetwork indicates a VPC.
              */
             public Builder network(String network) {
                 this.network = network;
@@ -4894,7 +8501,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * OffsetReset.
+             * The offset.
              */
             public Builder offsetReset(String offsetReset) {
                 this.offsetReset = offsetReset;
@@ -4902,7 +8509,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region where the Message Queue for Apache Kafka instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -4910,7 +8517,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * The security group ID.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -4918,7 +8525,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Topic.
+             * The name of the topic on the Message Queue for Apache Kafka instance.
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -4926,7 +8533,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchIds.
+             * The vSwitch ID.
              */
             public Builder vSwitchIds(String vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -4934,7 +8541,15 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * ValueDataType.
+             */
+            public Builder valueDataType(String valueDataType) {
+                this.valueDataType = valueDataType;
+                return this;
+            }
+
+            /**
+             * The VPC ID.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -4949,13 +8564,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SourceMNSParameters extends TeaModel {
-        @NameInMap("IsBase64Decode")
+        @com.aliyun.core.annotation.NameInMap("IsBase64Decode")
         private Boolean isBase64Decode;
 
-        @NameInMap("QueueName")
+        @com.aliyun.core.annotation.NameInMap("QueueName")
         private String queueName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private SourceMNSParameters(Builder builder) {
@@ -4999,7 +8614,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * IsBase64Decode.
+             * Indicates whether Base64 encoding is enabled.
              */
             public Builder isBase64Decode(Boolean isBase64Decode) {
                 this.isBase64Decode = isBase64Decode;
@@ -5007,7 +8622,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * QueueName.
+             * The name of the MNS queue.
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -5015,7 +8630,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region where the MNS queue resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -5030,16 +8645,20 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SourceMQTTParameters extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("BodyDataType")
+        private String bodyDataType;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
         private SourceMQTTParameters(Builder builder) {
+            this.bodyDataType = builder.bodyDataType;
             this.instanceId = builder.instanceId;
             this.regionId = builder.regionId;
             this.topic = builder.topic;
@@ -5051,6 +8670,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
         public static SourceMQTTParameters create() {
             return builder().build();
+        }
+
+        /**
+         * @return bodyDataType
+         */
+        public String getBodyDataType() {
+            return this.bodyDataType;
         }
 
         /**
@@ -5075,12 +8701,21 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String bodyDataType; 
             private String instanceId; 
             private String regionId; 
             private String topic; 
 
             /**
-             * InstanceId.
+             * BodyDataType.
+             */
+            public Builder bodyDataType(String bodyDataType) {
+                this.bodyDataType = bodyDataType;
+                return this;
+            }
+
+            /**
+             * The ID of the Message Queue for MQTT instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -5088,7 +8723,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region where the Message Queue for MQTT instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -5096,7 +8731,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Topic.
+             * The name of the topic on the Message Queue for MQTT instance.
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -5110,17 +8745,118 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         } 
 
     }
-    public static class SourceRabbitMQParameters extends TeaModel {
-        @NameInMap("InstanceId")
-        private String instanceId;
+    public static class SourcePrometheusParameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
+        private String clusterId;
 
-        @NameInMap("QueueName")
-        private String queueName;
+        @com.aliyun.core.annotation.NameInMap("DataType")
+        private String dataType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("Labels")
+        private String labels;
+
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("VirtualHostName")
+        private SourcePrometheusParameters(Builder builder) {
+            this.clusterId = builder.clusterId;
+            this.dataType = builder.dataType;
+            this.labels = builder.labels;
+            this.regionId = builder.regionId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SourcePrometheusParameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return clusterId
+         */
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        /**
+         * @return dataType
+         */
+        public String getDataType() {
+            return this.dataType;
+        }
+
+        /**
+         * @return labels
+         */
+        public String getLabels() {
+            return this.labels;
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public static final class Builder {
+            private String clusterId; 
+            private String dataType; 
+            private String labels; 
+            private String regionId; 
+
+            /**
+             * ClusterId.
+             */
+            public Builder clusterId(String clusterId) {
+                this.clusterId = clusterId;
+                return this;
+            }
+
+            /**
+             * DataType.
+             */
+            public Builder dataType(String dataType) {
+                this.dataType = dataType;
+                return this;
+            }
+
+            /**
+             * Labels.
+             */
+            public Builder labels(String labels) {
+                this.labels = labels;
+                return this;
+            }
+
+            /**
+             * The ID of the region where the Message Queue for MQTT instance resides.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            public SourcePrometheusParameters build() {
+                return new SourcePrometheusParameters(this);
+            } 
+
+        } 
+
+    }
+    public static class SourceRabbitMQParameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        private String instanceId;
+
+        @com.aliyun.core.annotation.NameInMap("QueueName")
+        private String queueName;
+
+        @com.aliyun.core.annotation.NameInMap("RegionId")
+        private String regionId;
+
+        @com.aliyun.core.annotation.NameInMap("VirtualHostName")
         private String virtualHostName;
 
         private SourceRabbitMQParameters(Builder builder) {
@@ -5173,7 +8909,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private String virtualHostName; 
 
             /**
-             * InstanceId.
+             * The ID of the Message Queue for RabbitMQ instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -5181,7 +8917,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * QueueName.
+             * The name of the queue on the Message Queue for RabbitMQ instance.
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -5189,7 +8925,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region where the Message Queue for RabbitMQ instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -5197,7 +8933,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * VirtualHostName.
+             * The name of the vhost of the Message Queue for RabbitMQ instance.
              */
             public Builder virtualHostName(String virtualHostName) {
                 this.virtualHostName = virtualHostName;
@@ -5212,56 +8948,80 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SourceRocketMQParameters extends TeaModel {
-        @NameInMap("AuthType")
+        @com.aliyun.core.annotation.NameInMap("AuthType")
         private String authType;
 
-        @NameInMap("GroupID")
+        @com.aliyun.core.annotation.NameInMap("BodyDataType")
+        private String bodyDataType;
+
+        @com.aliyun.core.annotation.NameInMap("FilterSql")
+        private String filterSql;
+
+        @com.aliyun.core.annotation.NameInMap("FilterType")
+        private String filterType;
+
+        @com.aliyun.core.annotation.NameInMap("GroupID")
         private String groupID;
 
-        @NameInMap("InstanceEndpoint")
+        @com.aliyun.core.annotation.NameInMap("InstanceEndpoint")
         private String instanceEndpoint;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceNetwork")
+        @com.aliyun.core.annotation.NameInMap("InstanceNetwork")
         private String instanceNetwork;
 
-        @NameInMap("InstancePassword")
+        @com.aliyun.core.annotation.NameInMap("InstancePassword")
         private String instancePassword;
 
-        @NameInMap("InstanceSecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("InstanceSecurityGroupId")
         private String instanceSecurityGroupId;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("InstanceUsername")
+        @com.aliyun.core.annotation.NameInMap("InstanceUsername")
         private String instanceUsername;
 
-        @NameInMap("InstanceVSwitchIds")
+        @com.aliyun.core.annotation.NameInMap("InstanceVSwitchIds")
         private String instanceVSwitchIds;
 
-        @NameInMap("InstanceVpcId")
+        @com.aliyun.core.annotation.NameInMap("InstanceVpcId")
         private String instanceVpcId;
 
-        @NameInMap("Offset")
+        @com.aliyun.core.annotation.NameInMap("Network")
+        private String network;
+
+        @com.aliyun.core.annotation.NameInMap("Offset")
         private String offset;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+        private String securityGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
+
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+        private String vSwitchIds;
+
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private String vpcId;
 
         private SourceRocketMQParameters(Builder builder) {
             this.authType = builder.authType;
+            this.bodyDataType = builder.bodyDataType;
+            this.filterSql = builder.filterSql;
+            this.filterType = builder.filterType;
             this.groupID = builder.groupID;
             this.instanceEndpoint = builder.instanceEndpoint;
             this.instanceId = builder.instanceId;
@@ -5272,11 +9032,15 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             this.instanceUsername = builder.instanceUsername;
             this.instanceVSwitchIds = builder.instanceVSwitchIds;
             this.instanceVpcId = builder.instanceVpcId;
+            this.network = builder.network;
             this.offset = builder.offset;
             this.regionId = builder.regionId;
+            this.securityGroupId = builder.securityGroupId;
             this.tag = builder.tag;
             this.timestamp = builder.timestamp;
             this.topic = builder.topic;
+            this.vSwitchIds = builder.vSwitchIds;
+            this.vpcId = builder.vpcId;
         }
 
         public static Builder builder() {
@@ -5292,6 +9056,27 @@ public class ListEventStreamingsResponseBody extends TeaModel {
          */
         public String getAuthType() {
             return this.authType;
+        }
+
+        /**
+         * @return bodyDataType
+         */
+        public String getBodyDataType() {
+            return this.bodyDataType;
+        }
+
+        /**
+         * @return filterSql
+         */
+        public String getFilterSql() {
+            return this.filterSql;
+        }
+
+        /**
+         * @return filterType
+         */
+        public String getFilterType() {
+            return this.filterType;
         }
 
         /**
@@ -5365,6 +9150,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         }
 
         /**
+         * @return network
+         */
+        public String getNetwork() {
+            return this.network;
+        }
+
+        /**
          * @return offset
          */
         public String getOffset() {
@@ -5376,6 +9168,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
          */
         public String getRegionId() {
             return this.regionId;
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
         }
 
         /**
@@ -5399,8 +9198,25 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             return this.topic;
         }
 
+        /**
+         * @return vSwitchIds
+         */
+        public String getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
         public static final class Builder {
             private String authType; 
+            private String bodyDataType; 
+            private String filterSql; 
+            private String filterType; 
             private String groupID; 
             private String instanceEndpoint; 
             private String instanceId; 
@@ -5411,14 +9227,18 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private String instanceUsername; 
             private String instanceVSwitchIds; 
             private String instanceVpcId; 
+            private String network; 
             private String offset; 
             private String regionId; 
+            private String securityGroupId; 
             private String tag; 
             private Long timestamp; 
             private String topic; 
+            private String vSwitchIds; 
+            private String vpcId; 
 
             /**
-             * AuthType.
+             * The authentication method.
              */
             public Builder authType(String authType) {
                 this.authType = authType;
@@ -5426,7 +9246,31 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupID.
+             * BodyDataType.
+             */
+            public Builder bodyDataType(String bodyDataType) {
+                this.bodyDataType = bodyDataType;
+                return this;
+            }
+
+            /**
+             * FilterSql.
+             */
+            public Builder filterSql(String filterSql) {
+                this.filterSql = filterSql;
+                return this;
+            }
+
+            /**
+             * FilterType.
+             */
+            public Builder filterType(String filterType) {
+                this.filterType = filterType;
+                return this;
+            }
+
+            /**
+             * The ID of the group on the Message Queue for Apache RocketMQ instance.
              */
             public Builder groupID(String groupID) {
                 this.groupID = groupID;
@@ -5434,7 +9278,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceEndpoint.
+             * The instance endpoint.
              */
             public Builder instanceEndpoint(String instanceEndpoint) {
                 this.instanceEndpoint = instanceEndpoint;
@@ -5442,7 +9286,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the Message Queue for Apache RocketMQ instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -5450,7 +9294,11 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceNetwork.
+             * The network type of the instance. Valid values:
+             * <p>
+             * 
+             * *   PublicNetwork
+             * *   PrivateNetwork
              */
             public Builder instanceNetwork(String instanceNetwork) {
                 this.instanceNetwork = instanceNetwork;
@@ -5458,7 +9306,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * InstancePassword.
+             * The instance password.
              */
             public Builder instancePassword(String instancePassword) {
                 this.instancePassword = instancePassword;
@@ -5466,7 +9314,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceSecurityGroupId.
+             * The security group ID of the instance.
              */
             public Builder instanceSecurityGroupId(String instanceSecurityGroupId) {
                 this.instanceSecurityGroupId = instanceSecurityGroupId;
@@ -5474,7 +9322,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The instance type.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -5482,7 +9330,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceUsername.
+             * The instance username.
              */
             public Builder instanceUsername(String instanceUsername) {
                 this.instanceUsername = instanceUsername;
@@ -5490,7 +9338,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceVSwitchIds.
+             * The vSwitch ID of the instance.
              */
             public Builder instanceVSwitchIds(String instanceVSwitchIds) {
                 this.instanceVSwitchIds = instanceVSwitchIds;
@@ -5498,7 +9346,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceVpcId.
+             * The virtual private cloud (VPC) ID.
              */
             public Builder instanceVpcId(String instanceVpcId) {
                 this.instanceVpcId = instanceVpcId;
@@ -5506,7 +9354,15 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Offset.
+             * The network type. Valid values: Default and PublicNetwork. Default value: Default. The value PublicNetwork indicates a VPC.
+             */
+            public Builder network(String network) {
+                this.network = network;
+                return this;
+            }
+
+            /**
+             * The consumer offset of the message. Valid values: CONSUMEFROMLASTOFFSET: Messages are consumed from the latest offset. CONSUMEFROMFIRSTOFFSET: Messages are consumed from the earliest offset. CONSUMEFROMTIMESTAMP: Messages are consumed from the offset at the specified point in time.
              */
             public Builder offset(String offset) {
                 this.offset = offset;
@@ -5514,7 +9370,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region where the Message Queue for Apache RocketMQ instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -5522,7 +9378,15 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * The security group ID.
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * The tag that is used to filter messages.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -5530,7 +9394,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * The timestamp that indicates the time from which messages are consumed. This parameter is valid only if you set Offset to CONSUMEFROMTIMESTAMP.
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -5538,10 +9402,26 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Topic.
+             * The topic in which messages are stored.
              */
             public Builder topic(String topic) {
                 this.topic = topic;
+                return this;
+            }
+
+            /**
+             * The vSwitch ID.
+             */
+            public Builder vSwitchIds(String vSwitchIds) {
+                this.vSwitchIds = vSwitchIds;
+                return this;
+            }
+
+            /**
+             * The VPC ID.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
                 return this;
             }
 
@@ -5553,19 +9433,19 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SourceSLSParameters extends TeaModel {
-        @NameInMap("ConsumePosition")
+        @com.aliyun.core.annotation.NameInMap("ConsumePosition")
         private String consumePosition;
 
-        @NameInMap("ConsumerGroup")
+        @com.aliyun.core.annotation.NameInMap("ConsumerGroup")
         private String consumerGroup;
 
-        @NameInMap("LogStore")
+        @com.aliyun.core.annotation.NameInMap("LogStore")
         private String logStore;
 
-        @NameInMap("Project")
+        @com.aliyun.core.annotation.NameInMap("Project")
         private String project;
 
-        @NameInMap("RoleName")
+        @com.aliyun.core.annotation.NameInMap("RoleName")
         private String roleName;
 
         private SourceSLSParameters(Builder builder) {
@@ -5627,7 +9507,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private String roleName; 
 
             /**
-             * ConsumePosition.
+             * The consumer offset. The value begin indicates the earliest offset, and the value end indicates the latest offset. You can also specify a time in seconds to start message consumption.
              */
             public Builder consumePosition(String consumePosition) {
                 this.consumePosition = consumePosition;
@@ -5635,7 +9515,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumerGroup.
+             * The ID of the consumer group that subscribes to the topic.
              */
             public Builder consumerGroup(String consumerGroup) {
                 this.consumerGroup = consumerGroup;
@@ -5643,7 +9523,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * LogStore.
+             * The Log Service Logstore.
              */
             public Builder logStore(String logStore) {
                 this.logStore = logStore;
@@ -5651,7 +9531,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Project.
+             * The Log Service project.
              */
             public Builder project(String project) {
                 this.project = project;
@@ -5659,7 +9539,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * The role name. If you want to authorize EventBridge to use this role to read logs in Log Service, you must select Alibaba Cloud Service for Selected Trusted Entity and EventBridge for Select Trusted Service when you create the role in the Resource Access Management (RAM) console.
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -5674,32 +9554,48 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class Source extends TeaModel {
-        @NameInMap("SourceDTSParameters")
+        @com.aliyun.core.annotation.NameInMap("SourceApacheKafkaParameters")
+        private SourceApacheKafkaParameters sourceApacheKafkaParameters;
+
+        @com.aliyun.core.annotation.NameInMap("SourceCustomizedKafkaConnectorParameters")
+        private SourceCustomizedKafkaConnectorParameters sourceCustomizedKafkaConnectorParameters;
+
+        @com.aliyun.core.annotation.NameInMap("SourceCustomizedKafkaParameters")
+        private SourceCustomizedKafkaParameters sourceCustomizedKafkaParameters;
+
+        @com.aliyun.core.annotation.NameInMap("SourceDTSParameters")
         private SourceDTSParameters sourceDTSParameters;
 
-        @NameInMap("SourceKafkaParameters")
+        @com.aliyun.core.annotation.NameInMap("SourceKafkaParameters")
         private SourceKafkaParameters sourceKafkaParameters;
 
-        @NameInMap("SourceMNSParameters")
+        @com.aliyun.core.annotation.NameInMap("SourceMNSParameters")
         private SourceMNSParameters sourceMNSParameters;
 
-        @NameInMap("SourceMQTTParameters")
+        @com.aliyun.core.annotation.NameInMap("SourceMQTTParameters")
         private SourceMQTTParameters sourceMQTTParameters;
 
-        @NameInMap("SourceRabbitMQParameters")
+        @com.aliyun.core.annotation.NameInMap("SourcePrometheusParameters")
+        private SourcePrometheusParameters sourcePrometheusParameters;
+
+        @com.aliyun.core.annotation.NameInMap("SourceRabbitMQParameters")
         private SourceRabbitMQParameters sourceRabbitMQParameters;
 
-        @NameInMap("SourceRocketMQParameters")
+        @com.aliyun.core.annotation.NameInMap("SourceRocketMQParameters")
         private SourceRocketMQParameters sourceRocketMQParameters;
 
-        @NameInMap("SourceSLSParameters")
+        @com.aliyun.core.annotation.NameInMap("SourceSLSParameters")
         private SourceSLSParameters sourceSLSParameters;
 
         private Source(Builder builder) {
+            this.sourceApacheKafkaParameters = builder.sourceApacheKafkaParameters;
+            this.sourceCustomizedKafkaConnectorParameters = builder.sourceCustomizedKafkaConnectorParameters;
+            this.sourceCustomizedKafkaParameters = builder.sourceCustomizedKafkaParameters;
             this.sourceDTSParameters = builder.sourceDTSParameters;
             this.sourceKafkaParameters = builder.sourceKafkaParameters;
             this.sourceMNSParameters = builder.sourceMNSParameters;
             this.sourceMQTTParameters = builder.sourceMQTTParameters;
+            this.sourcePrometheusParameters = builder.sourcePrometheusParameters;
             this.sourceRabbitMQParameters = builder.sourceRabbitMQParameters;
             this.sourceRocketMQParameters = builder.sourceRocketMQParameters;
             this.sourceSLSParameters = builder.sourceSLSParameters;
@@ -5711,6 +9607,27 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
         public static Source create() {
             return builder().build();
+        }
+
+        /**
+         * @return sourceApacheKafkaParameters
+         */
+        public SourceApacheKafkaParameters getSourceApacheKafkaParameters() {
+            return this.sourceApacheKafkaParameters;
+        }
+
+        /**
+         * @return sourceCustomizedKafkaConnectorParameters
+         */
+        public SourceCustomizedKafkaConnectorParameters getSourceCustomizedKafkaConnectorParameters() {
+            return this.sourceCustomizedKafkaConnectorParameters;
+        }
+
+        /**
+         * @return sourceCustomizedKafkaParameters
+         */
+        public SourceCustomizedKafkaParameters getSourceCustomizedKafkaParameters() {
+            return this.sourceCustomizedKafkaParameters;
         }
 
         /**
@@ -5742,6 +9659,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         }
 
         /**
+         * @return sourcePrometheusParameters
+         */
+        public SourcePrometheusParameters getSourcePrometheusParameters() {
+            return this.sourcePrometheusParameters;
+        }
+
+        /**
          * @return sourceRabbitMQParameters
          */
         public SourceRabbitMQParameters getSourceRabbitMQParameters() {
@@ -5763,16 +9687,44 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private SourceApacheKafkaParameters sourceApacheKafkaParameters; 
+            private SourceCustomizedKafkaConnectorParameters sourceCustomizedKafkaConnectorParameters; 
+            private SourceCustomizedKafkaParameters sourceCustomizedKafkaParameters; 
             private SourceDTSParameters sourceDTSParameters; 
             private SourceKafkaParameters sourceKafkaParameters; 
             private SourceMNSParameters sourceMNSParameters; 
             private SourceMQTTParameters sourceMQTTParameters; 
+            private SourcePrometheusParameters sourcePrometheusParameters; 
             private SourceRabbitMQParameters sourceRabbitMQParameters; 
             private SourceRocketMQParameters sourceRocketMQParameters; 
             private SourceSLSParameters sourceSLSParameters; 
 
             /**
-             * SourceDTSParameters.
+             * SourceApacheKafkaParameters.
+             */
+            public Builder sourceApacheKafkaParameters(SourceApacheKafkaParameters sourceApacheKafkaParameters) {
+                this.sourceApacheKafkaParameters = sourceApacheKafkaParameters;
+                return this;
+            }
+
+            /**
+             * SourceCustomizedKafkaConnectorParameters.
+             */
+            public Builder sourceCustomizedKafkaConnectorParameters(SourceCustomizedKafkaConnectorParameters sourceCustomizedKafkaConnectorParameters) {
+                this.sourceCustomizedKafkaConnectorParameters = sourceCustomizedKafkaConnectorParameters;
+                return this;
+            }
+
+            /**
+             * SourceCustomizedKafkaParameters.
+             */
+            public Builder sourceCustomizedKafkaParameters(SourceCustomizedKafkaParameters sourceCustomizedKafkaParameters) {
+                this.sourceCustomizedKafkaParameters = sourceCustomizedKafkaParameters;
+                return this;
+            }
+
+            /**
+             * The parameters that are returned if Data Transmission Service (DTS) is specified as the event source.
              */
             public Builder sourceDTSParameters(SourceDTSParameters sourceDTSParameters) {
                 this.sourceDTSParameters = sourceDTSParameters;
@@ -5780,7 +9732,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Source Kafka Parameters
+             * The parameters that are returned if Message Queue for Apache Kafka is specified as the event source.
              */
             public Builder sourceKafkaParameters(SourceKafkaParameters sourceKafkaParameters) {
                 this.sourceKafkaParameters = sourceKafkaParameters;
@@ -5788,7 +9740,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Source MNS Parameters
+             * The parameters that are returned if Message Service (MNS) is specified as the event source.
              */
             public Builder sourceMNSParameters(SourceMNSParameters sourceMNSParameters) {
                 this.sourceMNSParameters = sourceMNSParameters;
@@ -5796,7 +9748,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceMQTTParameters.
+             * The parameters that are returned if Message Queue for MQTT is specified as the event source.
              */
             public Builder sourceMQTTParameters(SourceMQTTParameters sourceMQTTParameters) {
                 this.sourceMQTTParameters = sourceMQTTParameters;
@@ -5804,7 +9756,15 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Source RabbitMQ Parameters
+             * SourcePrometheusParameters.
+             */
+            public Builder sourcePrometheusParameters(SourcePrometheusParameters sourcePrometheusParameters) {
+                this.sourcePrometheusParameters = sourcePrometheusParameters;
+                return this;
+            }
+
+            /**
+             * The parameters that are returned if Message Queue for RabbitMQ is specified as the event source.
              */
             public Builder sourceRabbitMQParameters(SourceRabbitMQParameters sourceRabbitMQParameters) {
                 this.sourceRabbitMQParameters = sourceRabbitMQParameters;
@@ -5820,7 +9780,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceSLSParameters.
+             * The parameters that are returned if Log Service is specified as the event source.
              */
             public Builder sourceSLSParameters(SourceSLSParameters sourceSLSParameters) {
                 this.sourceSLSParameters = sourceSLSParameters;
@@ -5835,7 +9795,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class Transforms extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
         private Transforms(Builder builder) {
@@ -5861,7 +9821,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private String arn; 
 
             /**
-             * Arn.
+             * The Alibaba Cloud Resource Name (ARN) of the dead-letter queue.
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -5876,28 +9836,28 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class EventStreamings extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EventStreamingName")
+        @com.aliyun.core.annotation.NameInMap("EventStreamingName")
         private String eventStreamingName;
 
-        @NameInMap("FilterPattern")
+        @com.aliyun.core.annotation.NameInMap("FilterPattern")
         private String filterPattern;
 
-        @NameInMap("RunOptions")
+        @com.aliyun.core.annotation.NameInMap("RunOptions")
         private RunOptions runOptions;
 
-        @NameInMap("Sink")
+        @com.aliyun.core.annotation.NameInMap("Sink")
         private Sink sink;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private Source source;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Transforms")
+        @com.aliyun.core.annotation.NameInMap("Transforms")
         private java.util.List < Transforms> transforms;
 
         private EventStreamings(Builder builder) {
@@ -5986,7 +9946,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private java.util.List < Transforms> transforms; 
 
             /**
-             * Description.
+             * The description of the event stream.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -5994,7 +9954,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * EventStreamingName.
+             * The name of the event stream.
              */
             public Builder eventStreamingName(String eventStreamingName) {
                 this.eventStreamingName = eventStreamingName;
@@ -6002,7 +9962,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * FilterPattern.
+             * The rule that is used to filter events. If you leave this parameter empty, all events are matched.
              */
             public Builder filterPattern(String filterPattern) {
                 this.filterPattern = filterPattern;
@@ -6010,7 +9970,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * RunOptions.
+             * The parameters that are returned for the runtime environment.
              */
             public Builder runOptions(RunOptions runOptions) {
                 this.runOptions = runOptions;
@@ -6018,7 +9978,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Sink.
+             * The event target.
              */
             public Builder sink(Sink sink) {
                 this.sink = sink;
@@ -6026,7 +9986,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * The event provider, which is also known as the event source.
              */
             public Builder source(Source source) {
                 this.source = source;
@@ -6034,7 +9994,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the event stream that is returned.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -6057,13 +10017,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("EventStreamings")
+        @com.aliyun.core.annotation.NameInMap("EventStreamings")
         private java.util.List < EventStreamings> eventStreamings;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Data(Builder builder) {
@@ -6107,7 +10067,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private Integer total; 
 
             /**
-             * The status of the event stream that is returned.
+             * The event streams.
              */
             public Builder eventStreamings(java.util.List < EventStreamings> eventStreamings) {
                 this.eventStreamings = eventStreamings;

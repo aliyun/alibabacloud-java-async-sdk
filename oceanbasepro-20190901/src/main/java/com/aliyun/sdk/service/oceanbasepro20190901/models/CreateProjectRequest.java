@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,80 +11,95 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateProjectRequest</p>
  */
 public class CreateProjectRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("CommonTransferConfig")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CommonTransferConfig")
     private CommonTransferConfig commonTransferConfig;
 
-    @Body
-    @NameInMap("EnableFullTransfer")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableFullTransfer")
     private Boolean enableFullTransfer;
 
-    @Body
-    @NameInMap("EnableFullVerify")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableFullVerify")
     private Boolean enableFullVerify;
 
-    @Body
-    @NameInMap("EnableIncrTransfer")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableIncrTransfer")
     private Boolean enableIncrTransfer;
 
-    @Body
-    @NameInMap("EnableReverseIncrTransfer")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableReverseIncrTransfer")
     private Boolean enableReverseIncrTransfer;
 
-    @Body
-    @NameInMap("EnableStructTransfer")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableStructTransfer")
     private Boolean enableStructTransfer;
 
-    @Body
-    @NameInMap("FullTransferConfig")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FullTransferConfig")
     private FullTransferConfig fullTransferConfig;
 
-    @Body
-    @NameInMap("IncrTransferConfig")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String id;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IncrTransferConfig")
     private IncrTransferConfig incrTransferConfig;
 
-    @Body
-    @NameInMap("LabelIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LabelIds")
     private java.util.List < String > labelIds;
 
-    @Body
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("OssKey")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OssKey")
     private String ossKey;
 
-    @Body
-    @NameInMap("SinkEndpointId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ReverseIncrTransferConfig")
+    private ReverseIncrTransferConfig reverseIncrTransferConfig;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SinkEndpointId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sinkEndpointId;
 
-    @Body
-    @NameInMap("SourceEndpointId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceEndpointId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceEndpointId;
 
-    @Body
-    @NameInMap("StructTransferConfig")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StructTransferConfig")
     private StructTransferConfig structTransferConfig;
 
-    @Body
-    @NameInMap("TransferMapping")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TransferMapping")
+    @com.aliyun.core.annotation.Validation(required = true)
     private TransferMapping transferMapping;
 
-    @Body
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
-    @Body
-    @NameInMap("UseOss")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UseOss")
     private Boolean useOss;
 
-    @Body
-    @NameInMap("WorkerGradeId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkerGradeId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workerGradeId;
 
     private CreateProjectRequest(Builder builder) {
@@ -98,10 +112,12 @@ public class CreateProjectRequest extends Request {
         this.enableReverseIncrTransfer = builder.enableReverseIncrTransfer;
         this.enableStructTransfer = builder.enableStructTransfer;
         this.fullTransferConfig = builder.fullTransferConfig;
+        this.id = builder.id;
         this.incrTransferConfig = builder.incrTransferConfig;
         this.labelIds = builder.labelIds;
         this.name = builder.name;
         this.ossKey = builder.ossKey;
+        this.reverseIncrTransferConfig = builder.reverseIncrTransferConfig;
         this.sinkEndpointId = builder.sinkEndpointId;
         this.sourceEndpointId = builder.sourceEndpointId;
         this.structTransferConfig = builder.structTransferConfig;
@@ -181,6 +197,13 @@ public class CreateProjectRequest extends Request {
     }
 
     /**
+     * @return id
+     */
+    public String getId() {
+        return this.id;
+    }
+
+    /**
      * @return incrTransferConfig
      */
     public IncrTransferConfig getIncrTransferConfig() {
@@ -206,6 +229,13 @@ public class CreateProjectRequest extends Request {
      */
     public String getOssKey() {
         return this.ossKey;
+    }
+
+    /**
+     * @return reverseIncrTransferConfig
+     */
+    public ReverseIncrTransferConfig getReverseIncrTransferConfig() {
+        return this.reverseIncrTransferConfig;
     }
 
     /**
@@ -266,10 +296,12 @@ public class CreateProjectRequest extends Request {
         private Boolean enableReverseIncrTransfer; 
         private Boolean enableStructTransfer; 
         private FullTransferConfig fullTransferConfig; 
+        private String id; 
         private IncrTransferConfig incrTransferConfig; 
         private java.util.List < String > labelIds; 
         private String name; 
         private String ossKey; 
+        private ReverseIncrTransferConfig reverseIncrTransferConfig; 
         private String sinkEndpointId; 
         private String sourceEndpointId; 
         private StructTransferConfig structTransferConfig; 
@@ -292,10 +324,12 @@ public class CreateProjectRequest extends Request {
             this.enableReverseIncrTransfer = request.enableReverseIncrTransfer;
             this.enableStructTransfer = request.enableStructTransfer;
             this.fullTransferConfig = request.fullTransferConfig;
+            this.id = request.id;
             this.incrTransferConfig = request.incrTransferConfig;
             this.labelIds = request.labelIds;
             this.name = request.name;
             this.ossKey = request.ossKey;
+            this.reverseIncrTransferConfig = request.reverseIncrTransferConfig;
             this.sinkEndpointId = request.sinkEndpointId;
             this.sourceEndpointId = request.sourceEndpointId;
             this.structTransferConfig = request.structTransferConfig;
@@ -380,6 +414,15 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
+         * Id.
+         */
+        public Builder id(String id) {
+            this.putBodyParameter("Id", id);
+            this.id = id;
+            return this;
+        }
+
+        /**
          * IncrTransferConfig.
          */
         public Builder incrTransferConfig(IncrTransferConfig incrTransferConfig) {
@@ -414,6 +457,16 @@ public class CreateProjectRequest extends Request {
         public Builder ossKey(String ossKey) {
             this.putBodyParameter("OssKey", ossKey);
             this.ossKey = ossKey;
+            return this;
+        }
+
+        /**
+         * ReverseIncrTransferConfig.
+         */
+        public Builder reverseIncrTransferConfig(ReverseIncrTransferConfig reverseIncrTransferConfig) {
+            String reverseIncrTransferConfigShrink = shrink(reverseIncrTransferConfig, "ReverseIncrTransferConfig", "json");
+            this.putBodyParameter("ReverseIncrTransferConfig", reverseIncrTransferConfigShrink);
+            this.reverseIncrTransferConfig = reverseIncrTransferConfig;
             return this;
         }
 
@@ -489,42 +542,119 @@ public class CreateProjectRequest extends Request {
 
     } 
 
+    public static class CustomColumns extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ColumnName")
+        private String columnName;
+
+        @com.aliyun.core.annotation.NameInMap("Expression")
+        private String expression;
+
+        private CustomColumns(Builder builder) {
+            this.columnName = builder.columnName;
+            this.expression = builder.expression;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CustomColumns create() {
+            return builder().build();
+        }
+
+        /**
+         * @return columnName
+         */
+        public String getColumnName() {
+            return this.columnName;
+        }
+
+        /**
+         * @return expression
+         */
+        public String getExpression() {
+            return this.expression;
+        }
+
+        public static final class Builder {
+            private String columnName; 
+            private String expression; 
+
+            /**
+             * ColumnName.
+             */
+            public Builder columnName(String columnName) {
+                this.columnName = columnName;
+                return this;
+            }
+
+            /**
+             * Expression.
+             */
+            public Builder expression(String expression) {
+                this.expression = expression;
+                return this;
+            }
+
+            public CustomColumns build() {
+                return new CustomColumns(this);
+            } 
+
+        } 
+
+    }
     public static class CommonTransferConfig extends TeaModel {
-        @NameInMap("ActiveActive")
+        @com.aliyun.core.annotation.NameInMap("ActiveActive")
         private Boolean activeActive;
 
-        @NameInMap("DataWorksBusinessName")
+        @com.aliyun.core.annotation.NameInMap("CustomColumns")
+        private java.util.List < CustomColumns> customColumns;
+
+        @com.aliyun.core.annotation.NameInMap("DataWorksBusinessName")
         private String dataWorksBusinessName;
 
-        @NameInMap("DatahubTopicType")
+        @com.aliyun.core.annotation.NameInMap("DatahubTopicType")
         private String datahubTopicType;
 
-        @NameInMap("MqPartition")
+        @com.aliyun.core.annotation.NameInMap("MqPartition")
         private Integer mqPartition;
 
-        @NameInMap("MqPartitionMode")
+        @com.aliyun.core.annotation.NameInMap("MqPartitionMode")
         private String mqPartitionMode;
 
-        @NameInMap("MqSerializerType")
+        @com.aliyun.core.annotation.NameInMap("MqSerializerType")
         private String mqSerializerType;
 
-        @NameInMap("RocketMqEnableMsgTrace")
+        @com.aliyun.core.annotation.NameInMap("RocketMqEnableMsgTrace")
         private Boolean rocketMqEnableMsgTrace;
 
-        @NameInMap("RocketMqMsgTags")
+        @com.aliyun.core.annotation.NameInMap("RocketMqMsgTags")
         private String rocketMqMsgTags;
 
-        @NameInMap("RocketMqProducerGroup")
+        @com.aliyun.core.annotation.NameInMap("RocketMqProducerGroup")
         private String rocketMqProducerGroup;
 
-        @NameInMap("RocketMqSendMsgTimeout")
+        @com.aliyun.core.annotation.NameInMap("RocketMqSendMsgTimeout")
         private Long rocketMqSendMsgTimeout;
 
-        @NameInMap("TableCategory")
+        @com.aliyun.core.annotation.NameInMap("SinkStoreFormat")
+        private String sinkStoreFormat;
+
+        @com.aliyun.core.annotation.NameInMap("SourceStoreFormat")
+        private String sourceStoreFormat;
+
+        @com.aliyun.core.annotation.NameInMap("SyncSchema")
+        private Boolean syncSchema;
+
+        @com.aliyun.core.annotation.NameInMap("SyncSchemaColumnName")
+        private String syncSchemaColumnName;
+
+        @com.aliyun.core.annotation.NameInMap("TableCategory")
         private String tableCategory;
 
         private CommonTransferConfig(Builder builder) {
             this.activeActive = builder.activeActive;
+            this.customColumns = builder.customColumns;
             this.dataWorksBusinessName = builder.dataWorksBusinessName;
             this.datahubTopicType = builder.datahubTopicType;
             this.mqPartition = builder.mqPartition;
@@ -534,6 +664,10 @@ public class CreateProjectRequest extends Request {
             this.rocketMqMsgTags = builder.rocketMqMsgTags;
             this.rocketMqProducerGroup = builder.rocketMqProducerGroup;
             this.rocketMqSendMsgTimeout = builder.rocketMqSendMsgTimeout;
+            this.sinkStoreFormat = builder.sinkStoreFormat;
+            this.sourceStoreFormat = builder.sourceStoreFormat;
+            this.syncSchema = builder.syncSchema;
+            this.syncSchemaColumnName = builder.syncSchemaColumnName;
             this.tableCategory = builder.tableCategory;
         }
 
@@ -550,6 +684,13 @@ public class CreateProjectRequest extends Request {
          */
         public Boolean getActiveActive() {
             return this.activeActive;
+        }
+
+        /**
+         * @return customColumns
+         */
+        public java.util.List < CustomColumns> getCustomColumns() {
+            return this.customColumns;
         }
 
         /**
@@ -616,6 +757,34 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
+         * @return sinkStoreFormat
+         */
+        public String getSinkStoreFormat() {
+            return this.sinkStoreFormat;
+        }
+
+        /**
+         * @return sourceStoreFormat
+         */
+        public String getSourceStoreFormat() {
+            return this.sourceStoreFormat;
+        }
+
+        /**
+         * @return syncSchema
+         */
+        public Boolean getSyncSchema() {
+            return this.syncSchema;
+        }
+
+        /**
+         * @return syncSchemaColumnName
+         */
+        public String getSyncSchemaColumnName() {
+            return this.syncSchemaColumnName;
+        }
+
+        /**
          * @return tableCategory
          */
         public String getTableCategory() {
@@ -624,6 +793,7 @@ public class CreateProjectRequest extends Request {
 
         public static final class Builder {
             private Boolean activeActive; 
+            private java.util.List < CustomColumns> customColumns; 
             private String dataWorksBusinessName; 
             private String datahubTopicType; 
             private Integer mqPartition; 
@@ -633,6 +803,10 @@ public class CreateProjectRequest extends Request {
             private String rocketMqMsgTags; 
             private String rocketMqProducerGroup; 
             private Long rocketMqSendMsgTimeout; 
+            private String sinkStoreFormat; 
+            private String sourceStoreFormat; 
+            private Boolean syncSchema; 
+            private String syncSchemaColumnName; 
             private String tableCategory; 
 
             /**
@@ -640,6 +814,14 @@ public class CreateProjectRequest extends Request {
              */
             public Builder activeActive(Boolean activeActive) {
                 this.activeActive = activeActive;
+                return this;
+            }
+
+            /**
+             * CustomColumns.
+             */
+            public Builder customColumns(java.util.List < CustomColumns> customColumns) {
+                this.customColumns = customColumns;
                 return this;
             }
 
@@ -716,6 +898,38 @@ public class CreateProjectRequest extends Request {
             }
 
             /**
+             * SinkStoreFormat.
+             */
+            public Builder sinkStoreFormat(String sinkStoreFormat) {
+                this.sinkStoreFormat = sinkStoreFormat;
+                return this;
+            }
+
+            /**
+             * SourceStoreFormat.
+             */
+            public Builder sourceStoreFormat(String sourceStoreFormat) {
+                this.sourceStoreFormat = sourceStoreFormat;
+                return this;
+            }
+
+            /**
+             * SyncSchema.
+             */
+            public Builder syncSchema(Boolean syncSchema) {
+                this.syncSchema = syncSchema;
+                return this;
+            }
+
+            /**
+             * SyncSchemaColumnName.
+             */
+            public Builder syncSchemaColumnName(String syncSchemaColumnName) {
+                this.syncSchemaColumnName = syncSchemaColumnName;
+                return this;
+            }
+
+            /**
              * TableCategory.
              */
             public Builder tableCategory(String tableCategory) {
@@ -731,23 +945,39 @@ public class CreateProjectRequest extends Request {
 
     }
     public static class FullTransferConfig extends TeaModel {
-        @NameInMap("AllowDestTableNotEmpty")
+        @com.aliyun.core.annotation.NameInMap("AllowDestTableNotEmpty")
         private Boolean allowDestTableNotEmpty;
 
-        @NameInMap("FullTransferSpeedMode")
+        @com.aliyun.core.annotation.NameInMap("FullTransferSpeedMode")
         private String fullTransferSpeedMode;
 
-        @NameInMap("FullVerifySpeedMode")
+        @com.aliyun.core.annotation.NameInMap("FullVerifySpeedMode")
         private String fullVerifySpeedMode;
 
-        @NameInMap("NonePkUkTruncateDstTable")
+        @com.aliyun.core.annotation.NameInMap("NonePkUkTruncateDstTable")
         private Boolean nonePkUkTruncateDstTable;
+
+        @com.aliyun.core.annotation.NameInMap("ReadWorkerNum")
+        private Integer readWorkerNum;
+
+        @com.aliyun.core.annotation.NameInMap("ThrottleIOPS")
+        private Integer throttleIOPS;
+
+        @com.aliyun.core.annotation.NameInMap("ThrottleRps")
+        private Integer throttleRps;
+
+        @com.aliyun.core.annotation.NameInMap("WriteWorkerNum")
+        private Integer writeWorkerNum;
 
         private FullTransferConfig(Builder builder) {
             this.allowDestTableNotEmpty = builder.allowDestTableNotEmpty;
             this.fullTransferSpeedMode = builder.fullTransferSpeedMode;
             this.fullVerifySpeedMode = builder.fullVerifySpeedMode;
             this.nonePkUkTruncateDstTable = builder.nonePkUkTruncateDstTable;
+            this.readWorkerNum = builder.readWorkerNum;
+            this.throttleIOPS = builder.throttleIOPS;
+            this.throttleRps = builder.throttleRps;
+            this.writeWorkerNum = builder.writeWorkerNum;
         }
 
         public static Builder builder() {
@@ -786,11 +1016,43 @@ public class CreateProjectRequest extends Request {
             return this.nonePkUkTruncateDstTable;
         }
 
+        /**
+         * @return readWorkerNum
+         */
+        public Integer getReadWorkerNum() {
+            return this.readWorkerNum;
+        }
+
+        /**
+         * @return throttleIOPS
+         */
+        public Integer getThrottleIOPS() {
+            return this.throttleIOPS;
+        }
+
+        /**
+         * @return throttleRps
+         */
+        public Integer getThrottleRps() {
+            return this.throttleRps;
+        }
+
+        /**
+         * @return writeWorkerNum
+         */
+        public Integer getWriteWorkerNum() {
+            return this.writeWorkerNum;
+        }
+
         public static final class Builder {
             private Boolean allowDestTableNotEmpty; 
             private String fullTransferSpeedMode; 
             private String fullVerifySpeedMode; 
             private Boolean nonePkUkTruncateDstTable; 
+            private Integer readWorkerNum; 
+            private Integer throttleIOPS; 
+            private Integer throttleRps; 
+            private Integer writeWorkerNum; 
 
             /**
              * AllowDestTableNotEmpty.
@@ -824,6 +1086,38 @@ public class CreateProjectRequest extends Request {
                 return this;
             }
 
+            /**
+             * ReadWorkerNum.
+             */
+            public Builder readWorkerNum(Integer readWorkerNum) {
+                this.readWorkerNum = readWorkerNum;
+                return this;
+            }
+
+            /**
+             * ThrottleIOPS.
+             */
+            public Builder throttleIOPS(Integer throttleIOPS) {
+                this.throttleIOPS = throttleIOPS;
+                return this;
+            }
+
+            /**
+             * ThrottleRps.
+             */
+            public Builder throttleRps(Integer throttleRps) {
+                this.throttleRps = throttleRps;
+                return this;
+            }
+
+            /**
+             * WriteWorkerNum.
+             */
+            public Builder writeWorkerNum(Integer writeWorkerNum) {
+                this.writeWorkerNum = writeWorkerNum;
+                return this;
+            }
+
             public FullTransferConfig build() {
                 return new FullTransferConfig(this);
             } 
@@ -832,24 +1126,33 @@ public class CreateProjectRequest extends Request {
 
     }
     public static class IncrTransferConfig extends TeaModel {
-        @NameInMap("EnableIncrSyncStatistics")
+        @com.aliyun.core.annotation.NameInMap("EnableIncrSyncStatistics")
         private Boolean enableIncrSyncStatistics;
 
-        @NameInMap("EnableSequencingWithinTxn")
+        @com.aliyun.core.annotation.NameInMap("EnableSequencingWithinTxn")
         private Boolean enableSequencingWithinTxn;
 
-        @NameInMap("IncrSyncConcurrency")
-        @Validation(maximum = 1024, minimum = 1)
+        @com.aliyun.core.annotation.NameInMap("IncrSyncConcurrency")
+        @com.aliyun.core.annotation.Validation(maximum = 1024, minimum = 1)
         private Integer incrSyncConcurrency;
 
-        @NameInMap("RecordTypeWhiteList")
+        @com.aliyun.core.annotation.NameInMap("RecordTypeWhiteList")
         private java.util.List < String > recordTypeWhiteList;
 
-        @NameInMap("StartTimestamp")
+        @com.aliyun.core.annotation.NameInMap("StartTimestamp")
         private String startTimestamp;
 
-        @NameInMap("StoreLogKeptHour")
+        @com.aliyun.core.annotation.NameInMap("StoreLogKeptHour")
         private Integer storeLogKeptHour;
+
+        @com.aliyun.core.annotation.NameInMap("SupportDDLTypes")
+        private java.util.List < String > supportDDLTypes;
+
+        @com.aliyun.core.annotation.NameInMap("ThrottleIOPS")
+        private Integer throttleIOPS;
+
+        @com.aliyun.core.annotation.NameInMap("ThrottleRps")
+        private Integer throttleRps;
 
         private IncrTransferConfig(Builder builder) {
             this.enableIncrSyncStatistics = builder.enableIncrSyncStatistics;
@@ -858,6 +1161,9 @@ public class CreateProjectRequest extends Request {
             this.recordTypeWhiteList = builder.recordTypeWhiteList;
             this.startTimestamp = builder.startTimestamp;
             this.storeLogKeptHour = builder.storeLogKeptHour;
+            this.supportDDLTypes = builder.supportDDLTypes;
+            this.throttleIOPS = builder.throttleIOPS;
+            this.throttleRps = builder.throttleRps;
         }
 
         public static Builder builder() {
@@ -910,6 +1216,27 @@ public class CreateProjectRequest extends Request {
             return this.storeLogKeptHour;
         }
 
+        /**
+         * @return supportDDLTypes
+         */
+        public java.util.List < String > getSupportDDLTypes() {
+            return this.supportDDLTypes;
+        }
+
+        /**
+         * @return throttleIOPS
+         */
+        public Integer getThrottleIOPS() {
+            return this.throttleIOPS;
+        }
+
+        /**
+         * @return throttleRps
+         */
+        public Integer getThrottleRps() {
+            return this.throttleRps;
+        }
+
         public static final class Builder {
             private Boolean enableIncrSyncStatistics; 
             private Boolean enableSequencingWithinTxn; 
@@ -917,6 +1244,9 @@ public class CreateProjectRequest extends Request {
             private java.util.List < String > recordTypeWhiteList; 
             private String startTimestamp; 
             private Integer storeLogKeptHour; 
+            private java.util.List < String > supportDDLTypes; 
+            private Integer throttleIOPS; 
+            private Integer throttleRps; 
 
             /**
              * EnableIncrSyncStatistics.
@@ -966,6 +1296,30 @@ public class CreateProjectRequest extends Request {
                 return this;
             }
 
+            /**
+             * SupportDDLTypes.
+             */
+            public Builder supportDDLTypes(java.util.List < String > supportDDLTypes) {
+                this.supportDDLTypes = supportDDLTypes;
+                return this;
+            }
+
+            /**
+             * ThrottleIOPS.
+             */
+            public Builder throttleIOPS(Integer throttleIOPS) {
+                this.throttleIOPS = throttleIOPS;
+                return this;
+            }
+
+            /**
+             * ThrottleRps.
+             */
+            public Builder throttleRps(Integer throttleRps) {
+                this.throttleRps = throttleRps;
+                return this;
+            }
+
             public IncrTransferConfig build() {
                 return new IncrTransferConfig(this);
             } 
@@ -973,11 +1327,213 @@ public class CreateProjectRequest extends Request {
         } 
 
     }
+    public static class ReverseIncrTransferConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnableIncrSyncStatistics")
+        private Boolean enableIncrSyncStatistics;
+
+        @com.aliyun.core.annotation.NameInMap("EnableSequencingWithinTxn")
+        private Boolean enableSequencingWithinTxn;
+
+        @com.aliyun.core.annotation.NameInMap("IncrSyncConcurrency")
+        @com.aliyun.core.annotation.Validation(maximum = 1024, minimum = 1)
+        private Integer incrSyncConcurrency;
+
+        @com.aliyun.core.annotation.NameInMap("RecordTypeWhiteList")
+        private java.util.List < String > recordTypeWhiteList;
+
+        @com.aliyun.core.annotation.NameInMap("StartTimestamp")
+        private String startTimestamp;
+
+        @com.aliyun.core.annotation.NameInMap("StoreLogKeptHour")
+        private Integer storeLogKeptHour;
+
+        @com.aliyun.core.annotation.NameInMap("SupportDDLTypes")
+        private java.util.List < String > supportDDLTypes;
+
+        @com.aliyun.core.annotation.NameInMap("ThrottleIOPS")
+        private Integer throttleIOPS;
+
+        @com.aliyun.core.annotation.NameInMap("ThrottleRps")
+        private Integer throttleRps;
+
+        private ReverseIncrTransferConfig(Builder builder) {
+            this.enableIncrSyncStatistics = builder.enableIncrSyncStatistics;
+            this.enableSequencingWithinTxn = builder.enableSequencingWithinTxn;
+            this.incrSyncConcurrency = builder.incrSyncConcurrency;
+            this.recordTypeWhiteList = builder.recordTypeWhiteList;
+            this.startTimestamp = builder.startTimestamp;
+            this.storeLogKeptHour = builder.storeLogKeptHour;
+            this.supportDDLTypes = builder.supportDDLTypes;
+            this.throttleIOPS = builder.throttleIOPS;
+            this.throttleRps = builder.throttleRps;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ReverseIncrTransferConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enableIncrSyncStatistics
+         */
+        public Boolean getEnableIncrSyncStatistics() {
+            return this.enableIncrSyncStatistics;
+        }
+
+        /**
+         * @return enableSequencingWithinTxn
+         */
+        public Boolean getEnableSequencingWithinTxn() {
+            return this.enableSequencingWithinTxn;
+        }
+
+        /**
+         * @return incrSyncConcurrency
+         */
+        public Integer getIncrSyncConcurrency() {
+            return this.incrSyncConcurrency;
+        }
+
+        /**
+         * @return recordTypeWhiteList
+         */
+        public java.util.List < String > getRecordTypeWhiteList() {
+            return this.recordTypeWhiteList;
+        }
+
+        /**
+         * @return startTimestamp
+         */
+        public String getStartTimestamp() {
+            return this.startTimestamp;
+        }
+
+        /**
+         * @return storeLogKeptHour
+         */
+        public Integer getStoreLogKeptHour() {
+            return this.storeLogKeptHour;
+        }
+
+        /**
+         * @return supportDDLTypes
+         */
+        public java.util.List < String > getSupportDDLTypes() {
+            return this.supportDDLTypes;
+        }
+
+        /**
+         * @return throttleIOPS
+         */
+        public Integer getThrottleIOPS() {
+            return this.throttleIOPS;
+        }
+
+        /**
+         * @return throttleRps
+         */
+        public Integer getThrottleRps() {
+            return this.throttleRps;
+        }
+
+        public static final class Builder {
+            private Boolean enableIncrSyncStatistics; 
+            private Boolean enableSequencingWithinTxn; 
+            private Integer incrSyncConcurrency; 
+            private java.util.List < String > recordTypeWhiteList; 
+            private String startTimestamp; 
+            private Integer storeLogKeptHour; 
+            private java.util.List < String > supportDDLTypes; 
+            private Integer throttleIOPS; 
+            private Integer throttleRps; 
+
+            /**
+             * EnableIncrSyncStatistics.
+             */
+            public Builder enableIncrSyncStatistics(Boolean enableIncrSyncStatistics) {
+                this.enableIncrSyncStatistics = enableIncrSyncStatistics;
+                return this;
+            }
+
+            /**
+             * EnableSequencingWithinTxn.
+             */
+            public Builder enableSequencingWithinTxn(Boolean enableSequencingWithinTxn) {
+                this.enableSequencingWithinTxn = enableSequencingWithinTxn;
+                return this;
+            }
+
+            /**
+             * IncrSyncConcurrency.
+             */
+            public Builder incrSyncConcurrency(Integer incrSyncConcurrency) {
+                this.incrSyncConcurrency = incrSyncConcurrency;
+                return this;
+            }
+
+            /**
+             * RecordTypeWhiteList.
+             */
+            public Builder recordTypeWhiteList(java.util.List < String > recordTypeWhiteList) {
+                this.recordTypeWhiteList = recordTypeWhiteList;
+                return this;
+            }
+
+            /**
+             * StartTimestamp.
+             */
+            public Builder startTimestamp(String startTimestamp) {
+                this.startTimestamp = startTimestamp;
+                return this;
+            }
+
+            /**
+             * StoreLogKeptHour.
+             */
+            public Builder storeLogKeptHour(Integer storeLogKeptHour) {
+                this.storeLogKeptHour = storeLogKeptHour;
+                return this;
+            }
+
+            /**
+             * SupportDDLTypes.
+             */
+            public Builder supportDDLTypes(java.util.List < String > supportDDLTypes) {
+                this.supportDDLTypes = supportDDLTypes;
+                return this;
+            }
+
+            /**
+             * ThrottleIOPS.
+             */
+            public Builder throttleIOPS(Integer throttleIOPS) {
+                this.throttleIOPS = throttleIOPS;
+                return this;
+            }
+
+            /**
+             * ThrottleRps.
+             */
+            public Builder throttleRps(Integer throttleRps) {
+                this.throttleRps = throttleRps;
+                return this;
+            }
+
+            public ReverseIncrTransferConfig build() {
+                return new ReverseIncrTransferConfig(this);
+            } 
+
+        } 
+
+    }
     public static class StructTransferConfig extends TeaModel {
-        @NameInMap("ByteCharConvertStrategy")
+        @com.aliyun.core.annotation.NameInMap("ByteCharConvertStrategy")
         private String byteCharConvertStrategy;
 
-        @NameInMap("DeferIndexCreation")
+        @com.aliyun.core.annotation.NameInMap("DeferIndexCreation")
         private Boolean deferIndexCreation;
 
         private StructTransferConfig(Builder builder) {
@@ -1035,16 +1591,16 @@ public class CreateProjectRequest extends Request {
 
     }
     public static class AdbTableSchema extends TeaModel {
-        @NameInMap("DistributedKeys")
+        @com.aliyun.core.annotation.NameInMap("DistributedKeys")
         private java.util.List < String > distributedKeys;
 
-        @NameInMap("PartitionLifeCycle")
+        @com.aliyun.core.annotation.NameInMap("PartitionLifeCycle")
         private String partitionLifeCycle;
 
-        @NameInMap("PartitionStatement")
+        @com.aliyun.core.annotation.NameInMap("PartitionStatement")
         private String partitionStatement;
 
-        @NameInMap("PrimaryKeys")
+        @com.aliyun.core.annotation.NameInMap("PrimaryKeys")
         private java.util.List < String > primaryKeys;
 
         private AdbTableSchema(Builder builder) {
@@ -1136,25 +1692,25 @@ public class CreateProjectRequest extends Request {
 
     }
     public static class SpecificTables extends TeaModel {
-        @NameInMap("AdbTableSchema")
+        @com.aliyun.core.annotation.NameInMap("AdbTableSchema")
         private AdbTableSchema adbTableSchema;
 
-        @NameInMap("FilterColumns")
+        @com.aliyun.core.annotation.NameInMap("FilterColumns")
         private java.util.List < String > filterColumns;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("MappedName")
+        @com.aliyun.core.annotation.NameInMap("MappedName")
         private String mappedName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ShardColumns")
+        @com.aliyun.core.annotation.NameInMap("ShardColumns")
         private java.util.List < String > shardColumns;
 
-        @NameInMap("WhereClause")
+        @com.aliyun.core.annotation.NameInMap("WhereClause")
         private String whereClause;
 
         private SpecificTables(Builder builder) {
@@ -1297,16 +1853,16 @@ public class CreateProjectRequest extends Request {
 
     }
     public static class SpecificViewsAdbTableSchema extends TeaModel {
-        @NameInMap("DistributedKeys")
+        @com.aliyun.core.annotation.NameInMap("DistributedKeys")
         private java.util.List < String > distributedKeys;
 
-        @NameInMap("PartitionLifeCycle")
+        @com.aliyun.core.annotation.NameInMap("PartitionLifeCycle")
         private String partitionLifeCycle;
 
-        @NameInMap("PartitionStatement")
+        @com.aliyun.core.annotation.NameInMap("PartitionStatement")
         private String partitionStatement;
 
-        @NameInMap("PrimaryKeys")
+        @com.aliyun.core.annotation.NameInMap("PrimaryKeys")
         private java.util.List < String > primaryKeys;
 
         private SpecificViewsAdbTableSchema(Builder builder) {
@@ -1398,25 +1954,25 @@ public class CreateProjectRequest extends Request {
 
     }
     public static class SpecificViews extends TeaModel {
-        @NameInMap("AdbTableSchema")
+        @com.aliyun.core.annotation.NameInMap("AdbTableSchema")
         private SpecificViewsAdbTableSchema adbTableSchema;
 
-        @NameInMap("FilterColumns")
+        @com.aliyun.core.annotation.NameInMap("FilterColumns")
         private java.util.List < String > filterColumns;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("MappedName")
+        @com.aliyun.core.annotation.NameInMap("MappedName")
         private String mappedName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ShardColumns")
+        @com.aliyun.core.annotation.NameInMap("ShardColumns")
         private java.util.List < String > shardColumns;
 
-        @NameInMap("WhereClause")
+        @com.aliyun.core.annotation.NameInMap("WhereClause")
         private String whereClause;
 
         private SpecificViews(Builder builder) {
@@ -1559,16 +2115,16 @@ public class CreateProjectRequest extends Request {
 
     }
     public static class TablesAdbTableSchema extends TeaModel {
-        @NameInMap("DistributedKeys")
+        @com.aliyun.core.annotation.NameInMap("DistributedKeys")
         private java.util.List < String > distributedKeys;
 
-        @NameInMap("PartitionLifeCycle")
+        @com.aliyun.core.annotation.NameInMap("PartitionLifeCycle")
         private String partitionLifeCycle;
 
-        @NameInMap("PartitionStatement")
+        @com.aliyun.core.annotation.NameInMap("PartitionStatement")
         private String partitionStatement;
 
-        @NameInMap("PrimaryKeys")
+        @com.aliyun.core.annotation.NameInMap("PrimaryKeys")
         private java.util.List < String > primaryKeys;
 
         private TablesAdbTableSchema(Builder builder) {
@@ -1660,25 +2216,25 @@ public class CreateProjectRequest extends Request {
 
     }
     public static class Tables extends TeaModel {
-        @NameInMap("AdbTableSchema")
+        @com.aliyun.core.annotation.NameInMap("AdbTableSchema")
         private TablesAdbTableSchema adbTableSchema;
 
-        @NameInMap("FilterColumns")
+        @com.aliyun.core.annotation.NameInMap("FilterColumns")
         private java.util.List < String > filterColumns;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("MappedName")
+        @com.aliyun.core.annotation.NameInMap("MappedName")
         private String mappedName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ShardColumns")
+        @com.aliyun.core.annotation.NameInMap("ShardColumns")
         private java.util.List < String > shardColumns;
 
-        @NameInMap("WhereClause")
+        @com.aliyun.core.annotation.NameInMap("WhereClause")
         private String whereClause;
 
         private Tables(Builder builder) {
@@ -1821,16 +2377,16 @@ public class CreateProjectRequest extends Request {
 
     }
     public static class ViewsAdbTableSchema extends TeaModel {
-        @NameInMap("DistributedKeys")
+        @com.aliyun.core.annotation.NameInMap("DistributedKeys")
         private java.util.List < String > distributedKeys;
 
-        @NameInMap("PartitionLifeCycle")
+        @com.aliyun.core.annotation.NameInMap("PartitionLifeCycle")
         private String partitionLifeCycle;
 
-        @NameInMap("PartitionStatement")
+        @com.aliyun.core.annotation.NameInMap("PartitionStatement")
         private String partitionStatement;
 
-        @NameInMap("PrimaryKeys")
+        @com.aliyun.core.annotation.NameInMap("PrimaryKeys")
         private java.util.List < String > primaryKeys;
 
         private ViewsAdbTableSchema(Builder builder) {
@@ -1922,25 +2478,25 @@ public class CreateProjectRequest extends Request {
 
     }
     public static class Views extends TeaModel {
-        @NameInMap("AdbTableSchema")
+        @com.aliyun.core.annotation.NameInMap("AdbTableSchema")
         private ViewsAdbTableSchema adbTableSchema;
 
-        @NameInMap("FilterColumns")
+        @com.aliyun.core.annotation.NameInMap("FilterColumns")
         private java.util.List < String > filterColumns;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("MappedName")
+        @com.aliyun.core.annotation.NameInMap("MappedName")
         private String mappedName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ShardColumns")
+        @com.aliyun.core.annotation.NameInMap("ShardColumns")
         private java.util.List < String > shardColumns;
 
-        @NameInMap("WhereClause")
+        @com.aliyun.core.annotation.NameInMap("WhereClause")
         private String whereClause;
 
         private Views(Builder builder) {
@@ -2083,31 +2639,31 @@ public class CreateProjectRequest extends Request {
 
     }
     public static class Databases extends TeaModel {
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("MappedName")
+        @com.aliyun.core.annotation.NameInMap("MappedName")
         private String mappedName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("SpecificTables")
+        @com.aliyun.core.annotation.NameInMap("SpecificTables")
         private java.util.List < SpecificTables> specificTables;
 
-        @NameInMap("SpecificViews")
+        @com.aliyun.core.annotation.NameInMap("SpecificViews")
         private java.util.List < SpecificViews> specificViews;
 
-        @NameInMap("Tables")
+        @com.aliyun.core.annotation.NameInMap("Tables")
         private java.util.List < Tables> tables;
 
-        @NameInMap("TenantName")
+        @com.aliyun.core.annotation.NameInMap("TenantName")
         private String tenantName;
 
-        @NameInMap("Views")
+        @com.aliyun.core.annotation.NameInMap("Views")
         private java.util.List < Views> views;
 
         private Databases(Builder builder) {
@@ -2284,16 +2840,16 @@ public class CreateProjectRequest extends Request {
 
     }
     public static class SpecificTablesAdbTableSchema extends TeaModel {
-        @NameInMap("DistributedKeys")
+        @com.aliyun.core.annotation.NameInMap("DistributedKeys")
         private java.util.List < String > distributedKeys;
 
-        @NameInMap("PartitionLifeCycle")
+        @com.aliyun.core.annotation.NameInMap("PartitionLifeCycle")
         private String partitionLifeCycle;
 
-        @NameInMap("PartitionStatement")
+        @com.aliyun.core.annotation.NameInMap("PartitionStatement")
         private String partitionStatement;
 
-        @NameInMap("PrimaryKeys")
+        @com.aliyun.core.annotation.NameInMap("PrimaryKeys")
         private java.util.List < String > primaryKeys;
 
         private SpecificTablesAdbTableSchema(Builder builder) {
@@ -2385,25 +2941,25 @@ public class CreateProjectRequest extends Request {
 
     }
     public static class DatabasesBlackSpecificTables extends TeaModel {
-        @NameInMap("AdbTableSchema")
+        @com.aliyun.core.annotation.NameInMap("AdbTableSchema")
         private SpecificTablesAdbTableSchema adbTableSchema;
 
-        @NameInMap("FilterColumns")
+        @com.aliyun.core.annotation.NameInMap("FilterColumns")
         private java.util.List < String > filterColumns;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("MappedName")
+        @com.aliyun.core.annotation.NameInMap("MappedName")
         private String mappedName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ShardColumns")
+        @com.aliyun.core.annotation.NameInMap("ShardColumns")
         private java.util.List < String > shardColumns;
 
-        @NameInMap("WhereClause")
+        @com.aliyun.core.annotation.NameInMap("WhereClause")
         private String whereClause;
 
         private DatabasesBlackSpecificTables(Builder builder) {
@@ -2546,16 +3102,16 @@ public class CreateProjectRequest extends Request {
 
     }
     public static class DatabasesBlackSpecificViewsAdbTableSchema extends TeaModel {
-        @NameInMap("DistributedKeys")
+        @com.aliyun.core.annotation.NameInMap("DistributedKeys")
         private java.util.List < String > distributedKeys;
 
-        @NameInMap("PartitionLifeCycle")
+        @com.aliyun.core.annotation.NameInMap("PartitionLifeCycle")
         private String partitionLifeCycle;
 
-        @NameInMap("PartitionStatement")
+        @com.aliyun.core.annotation.NameInMap("PartitionStatement")
         private String partitionStatement;
 
-        @NameInMap("PrimaryKeys")
+        @com.aliyun.core.annotation.NameInMap("PrimaryKeys")
         private java.util.List < String > primaryKeys;
 
         private DatabasesBlackSpecificViewsAdbTableSchema(Builder builder) {
@@ -2647,25 +3203,25 @@ public class CreateProjectRequest extends Request {
 
     }
     public static class DatabasesBlackSpecificViews extends TeaModel {
-        @NameInMap("AdbTableSchema")
+        @com.aliyun.core.annotation.NameInMap("AdbTableSchema")
         private DatabasesBlackSpecificViewsAdbTableSchema adbTableSchema;
 
-        @NameInMap("FilterColumns")
+        @com.aliyun.core.annotation.NameInMap("FilterColumns")
         private java.util.List < String > filterColumns;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("MappedName")
+        @com.aliyun.core.annotation.NameInMap("MappedName")
         private String mappedName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ShardColumns")
+        @com.aliyun.core.annotation.NameInMap("ShardColumns")
         private java.util.List < String > shardColumns;
 
-        @NameInMap("WhereClause")
+        @com.aliyun.core.annotation.NameInMap("WhereClause")
         private String whereClause;
 
         private DatabasesBlackSpecificViews(Builder builder) {
@@ -2808,16 +3364,16 @@ public class CreateProjectRequest extends Request {
 
     }
     public static class DatabasesBlackTablesAdbTableSchema extends TeaModel {
-        @NameInMap("DistributedKeys")
+        @com.aliyun.core.annotation.NameInMap("DistributedKeys")
         private java.util.List < String > distributedKeys;
 
-        @NameInMap("PartitionLifeCycle")
+        @com.aliyun.core.annotation.NameInMap("PartitionLifeCycle")
         private String partitionLifeCycle;
 
-        @NameInMap("PartitionStatement")
+        @com.aliyun.core.annotation.NameInMap("PartitionStatement")
         private String partitionStatement;
 
-        @NameInMap("PrimaryKeys")
+        @com.aliyun.core.annotation.NameInMap("PrimaryKeys")
         private java.util.List < String > primaryKeys;
 
         private DatabasesBlackTablesAdbTableSchema(Builder builder) {
@@ -2909,25 +3465,25 @@ public class CreateProjectRequest extends Request {
 
     }
     public static class DatabasesBlackTables extends TeaModel {
-        @NameInMap("AdbTableSchema")
+        @com.aliyun.core.annotation.NameInMap("AdbTableSchema")
         private DatabasesBlackTablesAdbTableSchema adbTableSchema;
 
-        @NameInMap("FilterColumns")
+        @com.aliyun.core.annotation.NameInMap("FilterColumns")
         private java.util.List < String > filterColumns;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("MappedName")
+        @com.aliyun.core.annotation.NameInMap("MappedName")
         private String mappedName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ShardColumns")
+        @com.aliyun.core.annotation.NameInMap("ShardColumns")
         private java.util.List < String > shardColumns;
 
-        @NameInMap("WhereClause")
+        @com.aliyun.core.annotation.NameInMap("WhereClause")
         private String whereClause;
 
         private DatabasesBlackTables(Builder builder) {
@@ -3070,16 +3626,16 @@ public class CreateProjectRequest extends Request {
 
     }
     public static class DatabasesBlackViewsAdbTableSchema extends TeaModel {
-        @NameInMap("DistributedKeys")
+        @com.aliyun.core.annotation.NameInMap("DistributedKeys")
         private java.util.List < String > distributedKeys;
 
-        @NameInMap("PartitionLifeCycle")
+        @com.aliyun.core.annotation.NameInMap("PartitionLifeCycle")
         private String partitionLifeCycle;
 
-        @NameInMap("PartitionStatement")
+        @com.aliyun.core.annotation.NameInMap("PartitionStatement")
         private String partitionStatement;
 
-        @NameInMap("PrimaryKeys")
+        @com.aliyun.core.annotation.NameInMap("PrimaryKeys")
         private java.util.List < String > primaryKeys;
 
         private DatabasesBlackViewsAdbTableSchema(Builder builder) {
@@ -3171,25 +3727,25 @@ public class CreateProjectRequest extends Request {
 
     }
     public static class DatabasesBlackViews extends TeaModel {
-        @NameInMap("AdbTableSchema")
+        @com.aliyun.core.annotation.NameInMap("AdbTableSchema")
         private DatabasesBlackViewsAdbTableSchema adbTableSchema;
 
-        @NameInMap("FilterColumns")
+        @com.aliyun.core.annotation.NameInMap("FilterColumns")
         private java.util.List < String > filterColumns;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("MappedName")
+        @com.aliyun.core.annotation.NameInMap("MappedName")
         private String mappedName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ShardColumns")
+        @com.aliyun.core.annotation.NameInMap("ShardColumns")
         private java.util.List < String > shardColumns;
 
-        @NameInMap("WhereClause")
+        @com.aliyun.core.annotation.NameInMap("WhereClause")
         private String whereClause;
 
         private DatabasesBlackViews(Builder builder) {
@@ -3332,31 +3888,31 @@ public class CreateProjectRequest extends Request {
 
     }
     public static class DatabasesBlack extends TeaModel {
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("MappedName")
+        @com.aliyun.core.annotation.NameInMap("MappedName")
         private String mappedName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("SpecificTables")
+        @com.aliyun.core.annotation.NameInMap("SpecificTables")
         private java.util.List < DatabasesBlackSpecificTables> specificTables;
 
-        @NameInMap("SpecificViews")
+        @com.aliyun.core.annotation.NameInMap("SpecificViews")
         private java.util.List < DatabasesBlackSpecificViews> specificViews;
 
-        @NameInMap("Tables")
+        @com.aliyun.core.annotation.NameInMap("Tables")
         private java.util.List < DatabasesBlackTables> tables;
 
-        @NameInMap("TenantName")
+        @com.aliyun.core.annotation.NameInMap("TenantName")
         private String tenantName;
 
-        @NameInMap("Views")
+        @com.aliyun.core.annotation.NameInMap("Views")
         private java.util.List < DatabasesBlackViews> views;
 
         private DatabasesBlack(Builder builder) {
@@ -3533,19 +4089,19 @@ public class CreateProjectRequest extends Request {
 
     }
     public static class TransferMapping extends TeaModel {
-        @NameInMap("Databases")
+        @com.aliyun.core.annotation.NameInMap("Databases")
         private java.util.List < Databases> databases;
 
-        @NameInMap("DatabasesBlack")
+        @com.aliyun.core.annotation.NameInMap("DatabasesBlack")
         private java.util.List < DatabasesBlack> databasesBlack;
 
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
-        @NameInMap("TableAndViewBlackList")
+        @com.aliyun.core.annotation.NameInMap("TableAndViewBlackList")
         private java.util.List < String > tableAndViewBlackList;
 
-        @NameInMap("TableAndViewWhiteList")
+        @com.aliyun.core.annotation.NameInMap("TableAndViewWhiteList")
         private java.util.List < String > tableAndViewWhiteList;
 
         private TransferMapping(Builder builder) {

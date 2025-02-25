@@ -1,39 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCategoryRequest} extends {@link RequestModel}
  *
  * <p>CreateCategoryRequest</p>
  */
 public class CreateCategoryRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AgentKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentKey")
     private String agentKey;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizCode")
+    private String bizCode;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("KnowledgeType")
+    private Integer knowledgeType;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("ParentCategoryId")
-    @Validation()
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ParentCategoryId")
+    @com.aliyun.core.annotation.Validation()
     private Long parentCategoryId;
 
     private CreateCategoryRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
+        this.bizCode = builder.bizCode;
+        this.knowledgeType = builder.knowledgeType;
         this.name = builder.name;
         this.parentCategoryId = builder.parentCategoryId;
     }
@@ -66,6 +76,20 @@ public class CreateCategoryRequest extends Request {
     }
 
     /**
+     * @return bizCode
+     */
+    public String getBizCode() {
+        return this.bizCode;
+    }
+
+    /**
+     * @return knowledgeType
+     */
+    public Integer getKnowledgeType() {
+        return this.knowledgeType;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -82,6 +106,8 @@ public class CreateCategoryRequest extends Request {
     public static final class Builder extends Request.Builder<CreateCategoryRequest, Builder> {
         private String regionId; 
         private String agentKey; 
+        private String bizCode; 
+        private Integer knowledgeType; 
         private String name; 
         private Long parentCategoryId; 
 
@@ -93,6 +119,8 @@ public class CreateCategoryRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.agentKey = request.agentKey;
+            this.bizCode = request.bizCode;
+            this.knowledgeType = request.knowledgeType;
             this.name = request.name;
             this.parentCategoryId = request.parentCategoryId;
         } 
@@ -116,7 +144,25 @@ public class CreateCategoryRequest extends Request {
         }
 
         /**
-         * Name.
+         * BizCode.
+         */
+        public Builder bizCode(String bizCode) {
+            this.putBodyParameter("BizCode", bizCode);
+            this.bizCode = bizCode;
+            return this;
+        }
+
+        /**
+         * KnowledgeType.
+         */
+        public Builder knowledgeType(Integer knowledgeType) {
+            this.putBodyParameter("KnowledgeType", knowledgeType);
+            this.knowledgeType = knowledgeType;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

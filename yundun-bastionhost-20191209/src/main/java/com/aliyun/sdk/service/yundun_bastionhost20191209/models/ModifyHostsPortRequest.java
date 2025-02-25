@@ -1,39 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyHostsPortRequest} extends {@link RequestModel}
  *
  * <p>ModifyHostsPortRequest</p>
  */
 public class ModifyHostsPortRequest extends Request {
-    @Query
-    @NameInMap("HostIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hostIds;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Port")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Port")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String port;
 
-    @Query
-    @NameInMap("ProtocolName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProtocolName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String protocolName;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private ModifyHostsPortRequest(Builder builder) {
@@ -114,10 +114,14 @@ public class ModifyHostsPortRequest extends Request {
         } 
 
         /**
-         * The ID of the host for which you want to change the port. The value is a JSON string. You can add up to 100 host IDs. If you specify multiple IDs, separate the IDs with commas (,).
-         * <p>
+         * <p>The ID of the host for which you want to change the port. The value is a JSON string. You can add up to 100 host IDs. If you specify multiple IDs, separate the IDs with commas (,).</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query the IDs of hosts.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [ListHosts](~~200665~~) operation to query the IDs of hosts.
+         * <strong>example:</strong>
+         * <p>[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;]</p>
          */
         public Builder hostIds(String hostIds) {
             this.putQueryParameter("HostIds", hostIds);
@@ -126,10 +130,14 @@ public class ModifyHostsPortRequest extends Request {
         }
 
         /**
-         * The ID of the bastion host for which you want to change the port of the host.
-         * <p>
+         * <p>The ID of the bastion host for which you want to change the port of the host.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-st220aw****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -138,7 +146,11 @@ public class ModifyHostsPortRequest extends Request {
         }
 
         /**
-         * The new port of the host. The port number must be an integer. Valid values: 22 to 65535.
+         * <p>The new port of the host. The port number must be an integer. Valid values: 22 to 65535.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
@@ -147,11 +159,15 @@ public class ModifyHostsPortRequest extends Request {
         }
 
         /**
-         * The protocol that is used to connect to the host. Valid values:
-         * <p>
+         * <p>The protocol that is used to connect to the host. Valid values:</p>
+         * <ul>
+         * <li><strong>SSH</strong></li>
+         * <li><strong>RDP</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **SSH**
-         * *   **RDP**
+         * <strong>example:</strong>
+         * <p>SSH</p>
          */
         public Builder protocolName(String protocolName) {
             this.putQueryParameter("ProtocolName", protocolName);
@@ -160,10 +176,13 @@ public class ModifyHostsPortRequest extends Request {
         }
 
         /**
-         * The region ID of the bastion host for which you want to change the port of the host.
-         * <p>
+         * <p>The region ID of the bastion host for which you want to change the port of the host.</p>
+         * <blockquote>
+         * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
          * 
-         * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

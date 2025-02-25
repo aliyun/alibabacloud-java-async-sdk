@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link JoinPublicIpsToEpnInstanceRequest} extends {@link RequestModel}
  *
  * <p>JoinPublicIpsToEpnInstanceRequest</p>
  */
 public class JoinPublicIpsToEpnInstanceRequest extends Request {
-    @Query
-    @NameInMap("EPNInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EPNInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String EPNInstanceId;
 
-    @Query
-    @NameInMap("InstanceInfos")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceInfos")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceInfos;
 
     private JoinPublicIpsToEpnInstanceRequest(Builder builder) {
@@ -70,7 +75,11 @@ public class JoinPublicIpsToEpnInstanceRequest extends Request {
         } 
 
         /**
-         * EPNInstanceId.
+         * <p>The ID of the EPN instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epn-xxxx</p>
          */
         public Builder EPNInstanceId(String EPNInstanceId) {
             this.putQueryParameter("EPNInstanceId", EPNInstanceId);
@@ -79,7 +88,11 @@ public class JoinPublicIpsToEpnInstanceRequest extends Request {
         }
 
         /**
-         * InstanceInfos.
+         * <p>The information about the public IP address that you want to add to the EPN instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceInfos=[{&quot;PublicIpAddress&quot;:&quot;2.230.XX.XX&quot;},{&quot;PublicIpAddress&quot;:&quot;2.230.XX.XX&quot;}]</p>
          */
         public Builder instanceInfos(String instanceInfos) {
             this.putQueryParameter("InstanceInfos", instanceInfos);

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyWebCacheSwitchRequest} extends {@link RequestModel}
  *
  * <p>ModifyWebCacheSwitchRequest</p>
  */
 public class ModifyWebCacheSwitchRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Domain")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Domain")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domain;
 
-    @Query
-    @NameInMap("Enable")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Enable")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer enable;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private ModifyWebCacheSwitchRequest(Builder builder) {
@@ -107,10 +112,14 @@ public class ModifyWebCacheSwitchRequest extends Request {
         }
 
         /**
-         * The domain name for which you want to configure the Static Page Caching policy.
-         * <p>
+         * <p>The domain name for which you want to configure the Static Page Caching policy.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all the domain names that are added to Anti-DDoS Pro or Anti-DDoS Premium.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeDomains](~~91724~~) operation to query all the domain names that are added to Anti-DDoS Pro or Anti-DDoS Premium.
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -119,11 +128,15 @@ public class ModifyWebCacheSwitchRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable or disable the Static Page Caching policy for a website. Valid values:
-         * <p>
+         * <p>Specifies whether to enable or disable the Static Page Caching policy for a website. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: enables the policy.</li>
+         * <li><strong>0</strong>: disables the policy.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **1**: enables the policy.
-         * *   **0**: disables the policy.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder enable(Integer enable) {
             this.putQueryParameter("Enable", enable);
@@ -132,10 +145,11 @@ public class ModifyWebCacheSwitchRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs in Resource Management.
-         * <p>
+         * <p>The ID of the resource group to which the instance belongs in Resource Management.</p>
+         * <p>If you do not configure this parameter, the instance belongs to the default resource group.</p>
          * 
-         * If you do not configure this parameter, the instance belongs to the default resource group.
+         * <strong>example:</strong>
+         * <p>rg-acfm2pz25js****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

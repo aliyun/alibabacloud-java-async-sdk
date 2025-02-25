@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.support_plan20210706.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEnterpriseDingtalkGroupCustomerMembersResponseBody} extends {@link TeaModel}
  *
  * <p>ListEnterpriseDingtalkGroupCustomerMembersResponseBody</p>
  */
 public class ListEnterpriseDingtalkGroupCustomerMembersResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
-    private java.util.List < EnterpriseDingtalkGroupMember > data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListEnterpriseDingtalkGroupCustomerMembersResponseBody(Builder builder) {
@@ -53,7 +58,7 @@ public class ListEnterpriseDingtalkGroupCustomerMembersResponseBody extends TeaM
     /**
      * @return data
      */
-    public java.util.List < EnterpriseDingtalkGroupMember > getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -80,13 +85,13 @@ public class ListEnterpriseDingtalkGroupCustomerMembersResponseBody extends TeaM
 
     public static final class Builder {
         private String code; 
-        private java.util.List < EnterpriseDingtalkGroupMember > data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * 接口请求结果返回码
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,15 +99,15 @@ public class ListEnterpriseDingtalkGroupCustomerMembersResponseBody extends TeaM
         }
 
         /**
-         * 企业服务群成员列表
+         * Data.
          */
-        public Builder data(java.util.List < EnterpriseDingtalkGroupMember > data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * 错误信息, 当success=false的时候, 可以取到message
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +115,7 @@ public class ListEnterpriseDingtalkGroupCustomerMembersResponseBody extends TeaM
         }
 
         /**
-         * 接口请求的唯一ID, 每次调用requestID唯一
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +123,7 @@ public class ListEnterpriseDingtalkGroupCustomerMembersResponseBody extends TeaM
         }
 
         /**
-         * 调用接口返回是否成功, true代表调用正常
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,4 +136,91 @@ public class ListEnterpriseDingtalkGroupCustomerMembersResponseBody extends TeaM
 
     } 
 
+    /**
+     * 
+     * {@link ListEnterpriseDingtalkGroupCustomerMembersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnterpriseDingtalkGroupCustomerMembersResponseBody</p>
+     */
+    public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("IsAdmin")
+        private Boolean isAdmin;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("UserId")
+        private String userId;
+
+        private Data(Builder builder) {
+            this.isAdmin = builder.isAdmin;
+            this.name = builder.name;
+            this.userId = builder.userId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return isAdmin
+         */
+        public Boolean getIsAdmin() {
+            return this.isAdmin;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return userId
+         */
+        public String getUserId() {
+            return this.userId;
+        }
+
+        public static final class Builder {
+            private Boolean isAdmin; 
+            private String name; 
+            private String userId; 
+
+            /**
+             * IsAdmin.
+             */
+            public Builder isAdmin(Boolean isAdmin) {
+                this.isAdmin = isAdmin;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * UserId.
+             */
+            public Builder userId(String userId) {
+                this.userId = userId;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
 }

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAccountsByLogResponseBody</p>
  */
 public class ListAccountsByLogResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListAccountsByLogResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class ListAccountsByLogResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -58,7 +57,7 @@ public class ListAccountsByLogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,25 +71,25 @@ public class ListAccountsByLogResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("Imported")
+        @com.aliyun.core.annotation.NameInMap("Imported")
         private Integer imported;
 
-        @NameInMap("LogCode")
+        @com.aliyun.core.annotation.NameInMap("LogCode")
         private String logCode;
 
-        @NameInMap("MainUserId")
+        @com.aliyun.core.annotation.NameInMap("MainUserId")
         private Long mainUserId;
 
-        @NameInMap("ProdCode")
+        @com.aliyun.core.annotation.NameInMap("ProdCode")
         private String prodCode;
 
-        @NameInMap("SubUserId")
+        @com.aliyun.core.annotation.NameInMap("SubUserId")
         private Long subUserId;
 
         private Data(Builder builder) {
@@ -170,7 +169,7 @@ public class ListAccountsByLogResponseBody extends TeaModel {
             private Long subUserId; 
 
             /**
-             * AccountId.
+             * The ID of the cloud account.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -178,7 +177,7 @@ public class ListAccountsByLogResponseBody extends TeaModel {
             }
 
             /**
-             * AccountName.
+             * The name of the cloud account.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -186,7 +185,7 @@ public class ListAccountsByLogResponseBody extends TeaModel {
             }
 
             /**
-             * Imported.
+             * Indicates whether the account is added. Valid values: -1: yes -0: no
              */
             public Builder imported(Integer imported) {
                 this.imported = imported;
@@ -194,7 +193,7 @@ public class ListAccountsByLogResponseBody extends TeaModel {
             }
 
             /**
-             * LogCode.
+             * The code of the log.
              */
             public Builder logCode(String logCode) {
                 this.logCode = logCode;
@@ -202,7 +201,7 @@ public class ListAccountsByLogResponseBody extends TeaModel {
             }
 
             /**
-             * MainUserId.
+             * The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.
              */
             public Builder mainUserId(Long mainUserId) {
                 this.mainUserId = mainUserId;
@@ -210,7 +209,7 @@ public class ListAccountsByLogResponseBody extends TeaModel {
             }
 
             /**
-             * ProdCode.
+             * The code of the service.
              */
             public Builder prodCode(String prodCode) {
                 this.prodCode = prodCode;
@@ -218,7 +217,7 @@ public class ListAccountsByLogResponseBody extends TeaModel {
             }
 
             /**
-             * SubUserId.
+             * The ID of the Alibaba Cloud account for which the threat analysis feature is enabled.
              */
             public Builder subUserId(Long subUserId) {
                 this.subUserId = subUserId;

@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCategoriesRequest} extends {@link RequestModel}
  *
  * <p>GetCategoriesRequest</p>
  */
 public class GetCategoriesRequest extends Request {
-    @Query
-    @NameInMap("CateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CateId")
     private Long cateId;
 
-    @Query
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Long pageNo;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private GetCategoriesRequest(Builder builder) {
@@ -110,7 +115,14 @@ public class GetCategoriesRequest extends Request {
         } 
 
         /**
-         * The ID of the category. Default value: **-1**, which indicates the parent category ID of a level 1 category.
+         * <p>The ID of the category. If you specify this parameter, the system queries the category based on the ID. You can specify only one category ID. You can use one of the following methods to obtain the ID:</p>
+         * <ul>
+         * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. Choose <strong>Configuration Management</strong> &gt; <strong>Media Management</strong> &gt; <strong>Categories</strong>. On the Audio and Video / Image Category or Short Video Material Category tab, view the category ID.</li>
+         * <li>Obtain the category ID from the response to the <a href="~~AddCategory~~">AddCategory</a> operation.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>49339****</p>
          */
         public Builder cateId(Long cateId) {
             this.putQueryParameter("CateId", cateId);
@@ -119,7 +131,10 @@ public class GetCategoriesRequest extends Request {
         }
 
         /**
-         * The number of the page where the subcategories to be returned are listed. Default value: **1**.
+         * <p>The number of the page where the subcategories to be returned are listed. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Long pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -128,7 +143,10 @@ public class GetCategoriesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page of the subcategory list. Default value: **10**. Maximum value: **100**.
+         * <p>The number of entries to return on each page of the subcategory list. Default value: <strong>10</strong>. Maximum value: <strong>100</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -137,11 +155,14 @@ public class GetCategoriesRequest extends Request {
         }
 
         /**
-         * The method for sorting the results. Valid values:
-         * <p>
+         * <p>The sorting method of the results. Valid values:</p>
+         * <ul>
+         * <li><strong>CreationTime:Desc</strong> (default): The results are sorted in reverse chronological order based on the creation time.</li>
+         * <li><strong>CreationTime:Asc</strong>: The results are sorted in chronological order based on the creation time.</li>
+         * </ul>
          * 
-         * *   **CreationTime:Desc** (default): The results are sorted in reverse chronological order based on the creation time.
-         * *   **CreationTime:Asc**: The results are sorted in chronological order based on the creation time.
+         * <strong>example:</strong>
+         * <p>CreationTime:Desc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -150,11 +171,14 @@ public class GetCategoriesRequest extends Request {
         }
 
         /**
-         * The type of the category. Valid values:
-         * <p>
+         * <p>The type of the category. If you specify this parameter, the system queries the category based on the type. Valid values:</p>
+         * <ul>
+         * <li><strong>default</strong> (default): audio, video, and image files</li>
+         * <li><strong>material</strong>: short video materials</li>
+         * </ul>
          * 
-         * *   **default** (default): default category
-         * *   **material**: material category
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

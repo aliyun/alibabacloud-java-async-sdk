@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,84 +11,88 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateEndpointGroupRequest</p>
  */
 public class CreateEndpointGroupRequest extends Request {
-    @Query
-    @NameInMap("AcceleratorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceleratorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String acceleratorId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("EndpointConfigurations")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointConfigurations")
     private java.util.List < EndpointConfigurations> endpointConfigurations;
 
-    @Query
-    @NameInMap("EndpointGroupRegion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointGroupRegion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endpointGroupRegion;
 
-    @Query
-    @NameInMap("EndpointGroupType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointGroupType")
     private String endpointGroupType;
 
-    @Query
-    @NameInMap("EndpointRequestProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointProtocolVersion")
+    private String endpointProtocolVersion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointRequestProtocol")
     private String endpointRequestProtocol;
 
-    @Query
-    @NameInMap("HealthCheckEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckEnabled")
     private Boolean healthCheckEnabled;
 
-    @Query
-    @NameInMap("HealthCheckIntervalSeconds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckIntervalSeconds")
     private Integer healthCheckIntervalSeconds;
 
-    @Query
-    @NameInMap("HealthCheckPath")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckPath")
     private String healthCheckPath;
 
-    @Query
-    @NameInMap("HealthCheckPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckPort")
     private Integer healthCheckPort;
 
-    @Query
-    @NameInMap("HealthCheckProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckProtocol")
     private String healthCheckProtocol;
 
-    @Query
-    @NameInMap("ListenerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String listenerId;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("PortOverrides")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PortOverrides")
     private java.util.List < PortOverrides> portOverrides;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("ThresholdCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ThresholdCount")
     private Integer thresholdCount;
 
-    @Query
-    @NameInMap("TrafficPercentage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficPercentage")
     private Integer trafficPercentage;
 
     private CreateEndpointGroupRequest(Builder builder) {
@@ -100,6 +103,7 @@ public class CreateEndpointGroupRequest extends Request {
         this.endpointConfigurations = builder.endpointConfigurations;
         this.endpointGroupRegion = builder.endpointGroupRegion;
         this.endpointGroupType = builder.endpointGroupType;
+        this.endpointProtocolVersion = builder.endpointProtocolVersion;
         this.endpointRequestProtocol = builder.endpointRequestProtocol;
         this.healthCheckEnabled = builder.healthCheckEnabled;
         this.healthCheckIntervalSeconds = builder.healthCheckIntervalSeconds;
@@ -168,6 +172,13 @@ public class CreateEndpointGroupRequest extends Request {
      */
     public String getEndpointGroupType() {
         return this.endpointGroupType;
+    }
+
+    /**
+     * @return endpointProtocolVersion
+     */
+    public String getEndpointProtocolVersion() {
+        return this.endpointProtocolVersion;
     }
 
     /**
@@ -268,6 +279,7 @@ public class CreateEndpointGroupRequest extends Request {
         private java.util.List < EndpointConfigurations> endpointConfigurations; 
         private String endpointGroupRegion; 
         private String endpointGroupType; 
+        private String endpointProtocolVersion; 
         private String endpointRequestProtocol; 
         private Boolean healthCheckEnabled; 
         private Integer healthCheckIntervalSeconds; 
@@ -294,6 +306,7 @@ public class CreateEndpointGroupRequest extends Request {
             this.endpointConfigurations = request.endpointConfigurations;
             this.endpointGroupRegion = request.endpointGroupRegion;
             this.endpointGroupType = request.endpointGroupType;
+            this.endpointProtocolVersion = request.endpointProtocolVersion;
             this.endpointRequestProtocol = request.endpointRequestProtocol;
             this.healthCheckEnabled = request.healthCheckEnabled;
             this.healthCheckIntervalSeconds = request.healthCheckIntervalSeconds;
@@ -322,9 +335,9 @@ public class CreateEndpointGroupRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          * 
-         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -336,7 +349,7 @@ public class CreateEndpointGroupRequest extends Request {
          * The description of the endpoint group.
          * <p>
          * 
-         * The description cannot exceed 256 characters in length and cannot contain `http://` or `https://`.
+         * The description can be up to 200 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -345,7 +358,7 @@ public class CreateEndpointGroupRequest extends Request {
         }
 
         /**
-         * The configurations of the endpoints in the endpoint group.
+         * The configurations of endpoints in the endpoint group.
          */
         public Builder endpointConfigurations(java.util.List < EndpointConfigurations> endpointConfigurations) {
             this.putQueryParameter("EndpointConfigurations", endpointConfigurations);
@@ -363,17 +376,26 @@ public class CreateEndpointGroupRequest extends Request {
         }
 
         /**
-         * The type of the endpoint group. Default value: default. Valid values:
+         * The type of the endpoint group. Valid values:
          * <p>
          * 
-         * *   **default**: a default endpoint group.
+         * *   **default** (default): a default endpoint group.
          * *   **virtual**: a virtual endpoint group.
          * 
-         * >  Only HTTP and HTTPS listeners support virtual endpoint groups.
+         * >  When you call this operation to create a virtual endpoint group for a Layer 4 listener, make sure that a default endpoint group is created.
          */
         public Builder endpointGroupType(String endpointGroupType) {
             this.putQueryParameter("EndpointGroupType", endpointGroupType);
             this.endpointGroupType = endpointGroupType;
+            return this;
+        }
+
+        /**
+         * EndpointProtocolVersion.
+         */
+        public Builder endpointProtocolVersion(String endpointProtocolVersion) {
+            this.putQueryParameter("EndpointProtocolVersion", endpointProtocolVersion);
+            this.endpointProtocolVersion = endpointProtocolVersion;
             return this;
         }
 
@@ -394,11 +416,11 @@ public class CreateEndpointGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the health check feature. Default value: true. Valid values:
+         * Specifies whether to enable the health check feature. Valid values:
          * <p>
          * 
-         * *   **true**: enables the health check feature.
-         * *   **false**: disables the health check feature.
+         * *   **true**
+         * *   **false**
          */
         public Builder healthCheckEnabled(Boolean healthCheckEnabled) {
             this.putQueryParameter("HealthCheckEnabled", healthCheckEnabled);
@@ -437,9 +459,9 @@ public class CreateEndpointGroupRequest extends Request {
          * The protocol over which to send health check requests. Valid values:
          * <p>
          * 
-         * *   **tcp**: TCP
-         * *   **http**: HTTP
-         * *   **https**: HTTPS
+         * *   **tcp** or **TCP**
+         * *   **http** or **HTTP**
+         * *   **https** or **HTTPS**
          */
         public Builder healthCheckProtocol(String healthCheckProtocol) {
             this.putQueryParameter("HealthCheckProtocol", healthCheckProtocol);
@@ -460,7 +482,7 @@ public class CreateEndpointGroupRequest extends Request {
          * The name of the endpoint group.
          * <p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+         * The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -527,25 +549,25 @@ public class CreateEndpointGroupRequest extends Request {
     } 
 
     public static class EndpointConfigurations extends TeaModel {
-        @NameInMap("EnableClientIPPreservation")
+        @com.aliyun.core.annotation.NameInMap("EnableClientIPPreservation")
         private Boolean enableClientIPPreservation;
 
-        @NameInMap("EnableProxyProtocol")
+        @com.aliyun.core.annotation.NameInMap("EnableProxyProtocol")
         private Boolean enableProxyProtocol;
 
-        @NameInMap("Endpoint")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String endpoint;
 
-        @NameInMap("SubAddress")
+        @com.aliyun.core.annotation.NameInMap("SubAddress")
         private String subAddress;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
-        @NameInMap("Weight")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Weight")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer weight;
 
         private EndpointConfigurations(Builder builder) {
@@ -640,7 +662,7 @@ public class CreateEndpointGroupRequest extends Request {
             }
 
             /**
-             * The IP address, domain name, or instance ID based on the value of Type.
+             * Enter the IP address, domain name, or instance ID based on the value of the Type parameter.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -650,7 +672,8 @@ public class CreateEndpointGroupRequest extends Request {
             /**
              * The private IP address of the ENI.
              * <p>
-             * > - When the Endpoint type is **ENI**, this parameter can be configured. If not configured, it defaults to the primary private IP address of ENI.
+             * 
+             * >  This parameter is available only when you set the endpoint type to **ENI**. If you leave this parameter empty, the primary private IP address of the ENI is used.
              */
             public Builder subAddress(String subAddress) {
                 this.subAddress = subAddress;
@@ -661,21 +684,25 @@ public class CreateEndpointGroupRequest extends Request {
              * The type of the endpoint. Valid values:
              * <p>
              * 
-             * *   **Domain**: a custom domain name
-             * *   **Ip**: a custom IP address
-             * *   **PublicIp**: a public IP address provided by Alibaba Cloud
-             * *   **ECS**: an Elastic Compute Service (ECS) instance
-             * *   **SLB**: a Server Load Balancer (SLB) instance
-             * *   **ALB**: an Application Load Balancer (ALB) instance
-             * *   **OSS**: an Object Storage Service (OSS) bucket
+             * *   **Domain:** a custom domain name.
+             * *   **Ip:** a custom IP address.
+             * *   **PublicIp:** a public IP address provided by Alibaba Cloud.
+             * *   **ECS:** an Elastic Compute Service (ECS) instance.
+             * *   **SLB:** a Classic Load Balancer (CLB) instance.
+             * *   **ALB:** an Application Load Balancer (ALB) instance.
+             * *   **OSS:** an Object Storage Service (OSS) bucket.
+             * *   **ENI:** an elastic network interface (ENI).
+             * *   **NLB:** a Network Load Balancer (NLB) instance.
              * 
              * > 
              * 
-             * *   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system automatically creates the service-linked role.
+             * *   If you set this parameter to **ECS**, **ENI**, **SLB**, **ALB**, or **NLB** and the AliyunServiceRoleForGaVpcEndpoint service-linked role does not exist, the system automatically creates the service-linked role.
              * 
-             * *   If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system automatically creates the service-linked role.
+             * *   If you set this parameter to **ALB** and the AliyunServiceRoleForGaAlb service-linked role does not exist, the system automatically creates the role.
              * 
-             * *   If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system automatically creates the service-linked role.
+             * *   If you set this parameter to **OSS** and the AliyunServiceRoleForGaOss service-linked role does not exist, the system automatically creates the role.
+             * 
+             * *   If you set this parameter to **NLB** and the AliyunServiceRoleForGaNlb service-linked role does not exist, the system automatically creates the role.
              * 
              * For more information, see [Service-linked roles](~~178360~~).
              */
@@ -690,7 +717,7 @@ public class CreateEndpointGroupRequest extends Request {
              * 
              * Valid values: **0** to **255**.
              * 
-             * >  If you set the weight of an endpoint to 0, the GA instance stops distributing traffic to the endpoint.
+             * >  If you set the weight of an endpoint to 0, GA stops distributing traffic to the endpoint. Proceed with caution.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -705,10 +732,10 @@ public class CreateEndpointGroupRequest extends Request {
 
     }
     public static class PortOverrides extends TeaModel {
-        @NameInMap("EndpointPort")
+        @com.aliyun.core.annotation.NameInMap("EndpointPort")
         private Integer endpointPort;
 
-        @NameInMap("ListenerPort")
+        @com.aliyun.core.annotation.NameInMap("ListenerPort")
         private Integer listenerPort;
 
         private PortOverrides(Builder builder) {
@@ -770,10 +797,10 @@ public class CreateEndpointGroupRequest extends Request {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

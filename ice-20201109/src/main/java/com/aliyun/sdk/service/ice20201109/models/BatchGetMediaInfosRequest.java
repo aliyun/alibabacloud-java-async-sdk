@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchGetMediaInfosRequest} extends {@link RequestModel}
  *
  * <p>BatchGetMediaInfosRequest</p>
  */
 public class BatchGetMediaInfosRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AdditionType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdditionType")
     private String additionType;
 
-    @Query
-    @NameInMap("MediaIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaIds")
     private String mediaIds;
 
     private BatchGetMediaInfosRequest(Builder builder) {
@@ -91,7 +96,12 @@ public class BatchGetMediaInfosRequest extends Request {
         }
 
         /**
-         * AdditionType.
+         * <p>The additional information that you want to query about the media assets. By default, only BasicInfo is returned. The following additional information can be queried:</p>
+         * <p>- FileInfo</p>
+         * <p>- DynamicMetaData</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FileInfo,DynamicMetaData</p>
          */
         public Builder additionType(String additionType) {
             this.putQueryParameter("AdditionType", additionType);
@@ -100,7 +110,10 @@ public class BatchGetMediaInfosRequest extends Request {
         }
 
         /**
-         * MediaIds.
+         * <p>The IDs of the media assets that you want to query. Separate the IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>b48fb04483915d4f2cd8</strong></strong></strong>,<strong><strong><strong>c48fb37407365d4f2cd8</strong></strong></strong></p>
          */
         public Builder mediaIds(String mediaIds) {
             this.putQueryParameter("MediaIds", mediaIds);

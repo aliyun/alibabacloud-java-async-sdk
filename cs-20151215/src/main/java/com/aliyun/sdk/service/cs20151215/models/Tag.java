@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Tag} extends {@link TeaModel}
  *
  * <p>Tag</p>
  */
 public class Tag extends TeaModel {
-    @NameInMap("key")
+    @com.aliyun.core.annotation.NameInMap("key")
     private String key;
 
-    @NameInMap("value")
+    @com.aliyun.core.annotation.NameInMap("value")
     private String value;
 
     private Tag(Builder builder) {

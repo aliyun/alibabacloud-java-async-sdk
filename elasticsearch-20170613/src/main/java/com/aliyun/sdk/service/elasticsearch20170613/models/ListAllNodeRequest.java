@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAllNodeRequest} extends {@link RequestModel}
  *
  * <p>ListAllNodeRequest</p>
  */
 public class ListAllNodeRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("extended")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("extended")
     private Boolean extended;
 
     private ListAllNodeRequest(Builder builder) {
@@ -69,7 +69,11 @@ public class ListAllNodeRequest extends Request {
         } 
 
         /**
-         * The return results.
+         * <p>The return results.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-tl32cpgwa002l****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -78,7 +82,10 @@ public class ListAllNodeRequest extends Request {
         }
 
         /**
-         * The Java Virtual Machine (JVM) heap memory usage of the node.
+         * <p>The Java Virtual Machine (JVM) heap memory usage of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder extended(Boolean extended) {
             this.putQueryParameter("extended", extended);

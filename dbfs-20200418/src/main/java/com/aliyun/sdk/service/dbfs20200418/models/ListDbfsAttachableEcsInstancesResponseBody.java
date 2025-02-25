@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbfs20200418.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDbfsAttachableEcsInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>ListDbfsAttachableEcsInstancesResponseBody</p>
  */
 public class ListDbfsAttachableEcsInstancesResponseBody extends TeaModel {
-    @NameInMap("EcsLabelInfo")
+    @com.aliyun.core.annotation.NameInMap("EcsLabelInfo")
     private java.util.List < EcsLabelInfo> ecsLabelInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListDbfsAttachableEcsInstancesResponseBody(Builder builder) {
@@ -91,26 +91,32 @@ public class ListDbfsAttachableEcsInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDbfsAttachableEcsInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDbfsAttachableEcsInstancesResponseBody</p>
+     */
     public static class EcsLabelInfo extends TeaModel {
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("InstanceTypeFamily")
+        @com.aliyun.core.annotation.NameInMap("InstanceTypeFamily")
         private String instanceTypeFamily;
 
-        @NameInMap("OSName")
+        @com.aliyun.core.annotation.NameInMap("OSName")
         private String OSName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
-        @NameInMap("label")
+        @com.aliyun.core.annotation.NameInMap("label")
         private String label;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private EcsLabelInfo(Builder builder) {

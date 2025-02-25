@@ -1,64 +1,69 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCapacityReservationRequest} extends {@link RequestModel}
  *
  * <p>ModifyCapacityReservationRequest</p>
  */
 public class ModifyCapacityReservationRequest extends Request {
-    @Query
-    @NameInMap("PrivatePoolOptions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivatePoolOptions")
     private PrivatePoolOptions privatePoolOptions;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("EndTimeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTimeType")
     private String endTimeType;
 
-    @Query
-    @NameInMap("InstanceAmount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceAmount")
     private Integer instanceAmount;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Platform")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Platform")
     private String platform;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private ModifyCapacityReservationRequest(Builder builder) {
@@ -218,7 +223,10 @@ public class ModifyCapacityReservationRequest extends Request {
         }
 
         /**
-         * The description of the capacity reservation. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.
+         * <p>The description of the capacity reservation. The description must be 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is description.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -227,7 +235,10 @@ public class ModifyCapacityReservationRequest extends Request {
         }
 
         /**
-         * The expiration time of the capacity reservation. This parameter takes effect only when `EndTimeType` is set to Limited. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC. For more information, see [ISO 8601](~~25696~~).
+         * <p>The expiration time of the capacity reservation. This parameter takes effect only when <code>EndTimeType</code> is set to Limited. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-30T06:32:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -236,11 +247,14 @@ public class ModifyCapacityReservationRequest extends Request {
         }
 
         /**
-         * The release mode of the capacity reservation. Valid values:
-         * <p>
+         * <p>The release mode of the capacity reservation. Valid values:</p>
+         * <ul>
+         * <li>Limited: The capacity reservation is automatically released at the specified point in time. If you configure this parameter, you must also configure <code>EndTime</code>.</li>
+         * <li>Unlimited: The capacity reservation must be manually released. You can release it anytime.</li>
+         * </ul>
          * 
-         * *   Limited: The capacity reservation is automatically released at the specified point in time. If you configure this parameter, you must also configure `EndTime`.
-         * *   Unlimited: The capacity reservation must be manually released. You can release it anytime.
+         * <strong>example:</strong>
+         * <p>Unlimited</p>
          */
         public Builder endTimeType(String endTimeType) {
             this.putQueryParameter("EndTimeType", endTimeType);
@@ -249,10 +263,13 @@ public class ModifyCapacityReservationRequest extends Request {
         }
 
         /**
-         * The total number of instances for which capacity is reserved. Valid values: the number of used instances to 1000.
-         * <p>
+         * <p>The total number of instances for which capacity is reserved. Valid values: the number of used instances to 1000.</p>
+         * <blockquote>
+         * <p>When you increase the number of instances, the increase may fail due to insufficient resources.</p>
+         * </blockquote>
          * 
-         * > When you increase the number of instances, the increase may fail due to insufficient resources.
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder instanceAmount(Integer instanceAmount) {
             this.putQueryParameter("InstanceAmount", instanceAmount);
@@ -279,13 +296,17 @@ public class ModifyCapacityReservationRequest extends Request {
         }
 
         /**
-         * The operating system of the image used by the instance. Valid values:
-         * <p>
+         * <p>The operating system of the image used by the instance. Valid values:</p>
+         * <ul>
+         * <li>Windows</li>
+         * <li>Linux</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is unavailable.</p>
+         * </blockquote>
          * 
-         * *   Windows
-         * *   Linux
-         * 
-         * > This parameter is unavailable.
+         * <strong>example:</strong>
+         * <p>Linux</p>
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -294,7 +315,11 @@ public class ModifyCapacityReservationRequest extends Request {
         }
 
         /**
-         * The region ID of the capacity reservation. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the capacity reservation. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -321,10 +346,13 @@ public class ModifyCapacityReservationRequest extends Request {
         }
 
         /**
-         * The mode in which the capacity reservation takes effect. Only immediate capacity reservations are supported. You do not need to specify a value for this parameter.
-         * <p>
+         * <p>The mode in which the capacity reservation takes effect. Only immediate capacity reservations are supported. You do not need to specify a value for this parameter.</p>
+         * <blockquote>
+         * <p>If you do not specify a value for this parameter, the capacity reservation immediately takes effect.</p>
+         * </blockquote>
          * 
-         * > If you do not specify a value for this parameter, the capacity reservation immediately takes effect.
+         * <strong>example:</strong>
+         * <p>Now</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -339,12 +367,18 @@ public class ModifyCapacityReservationRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyCapacityReservationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyCapacityReservationRequest</p>
+     */
     public static class PrivatePoolOptions extends TeaModel {
-        @NameInMap("Id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private PrivatePoolOptions(Builder builder) {
@@ -379,7 +413,11 @@ public class ModifyCapacityReservationRequest extends Request {
             private String name; 
 
             /**
-             * The capacity reservation ID.
+             * <p>The capacity reservation ID.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crp-bp67acfmxazb4****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -387,7 +425,10 @@ public class ModifyCapacityReservationRequest extends Request {
             }
 
             /**
-             * The name of the capacity reservation. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+             * <p>The name of the capacity reservation. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eapTestName</p>
              */
             public Builder name(String name) {
                 this.name = name;

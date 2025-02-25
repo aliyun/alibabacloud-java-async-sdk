@@ -1,28 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMediaInfoJobListResponse} extends {@link TeaModel}
  *
  * <p>QueryMediaInfoJobListResponse</p>
  */
 public class QueryMediaInfoJobListResponse extends Response {
-    @NameInMap("headers")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
-    @NameInMap("body")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("statusCode")
+    private Integer statusCode;
+
+    @com.aliyun.core.annotation.NameInMap("body")
     private QueryMediaInfoJobListResponseBody body;
 
     private QueryMediaInfoJobListResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +45,13 @@ public class QueryMediaInfoJobListResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public QueryMediaInfoJobListResponseBody getBody() {
@@ -52,6 +61,8 @@ public class QueryMediaInfoJobListResponse extends Response {
     public interface Builder extends Response.Builder<QueryMediaInfoJobListResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(QueryMediaInfoJobListResponseBody body);
 
@@ -64,6 +75,7 @@ public class QueryMediaInfoJobListResponse extends Response {
             extends Response.BuilderImpl<QueryMediaInfoJobListResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private QueryMediaInfoJobListResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +85,7 @@ public class QueryMediaInfoJobListResponse extends Response {
         private BuilderImpl(QueryMediaInfoJobListResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +95,15 @@ public class QueryMediaInfoJobListResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

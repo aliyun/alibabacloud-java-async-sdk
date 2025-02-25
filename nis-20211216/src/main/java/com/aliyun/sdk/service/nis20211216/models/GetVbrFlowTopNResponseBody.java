@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nis20211216.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetVbrFlowTopNResponseBody</p>
  */
 public class GetVbrFlowTopNResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VirtualBorderRouterFlowlogTopN")
+    @com.aliyun.core.annotation.NameInMap("VirtualBorderRouterFlowlogTopN")
     private java.util.List < VirtualBorderRouterFlowlogTopN> virtualBorderRouterFlowlogTopN;
 
     private GetVbrFlowTopNResponseBody(Builder builder) {
@@ -72,37 +71,37 @@ public class GetVbrFlowTopNResponseBody extends TeaModel {
     } 
 
     public static class VirtualBorderRouterFlowlogTopN extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("AttachmentId")
+        @com.aliyun.core.annotation.NameInMap("AttachmentId")
         private String attachmentId;
 
-        @NameInMap("Bytes")
+        @com.aliyun.core.annotation.NameInMap("Bytes")
         private Double bytes;
 
-        @NameInMap("CloudIp")
+        @com.aliyun.core.annotation.NameInMap("CloudIp")
         private String cloudIp;
 
-        @NameInMap("CloudPort")
+        @com.aliyun.core.annotation.NameInMap("CloudPort")
         private String cloudPort;
 
-        @NameInMap("CloudRegion")
+        @com.aliyun.core.annotation.NameInMap("CloudRegion")
         private String cloudRegion;
 
-        @NameInMap("OtherIp")
+        @com.aliyun.core.annotation.NameInMap("OtherIp")
         private String otherIp;
 
-        @NameInMap("OtherPort")
+        @com.aliyun.core.annotation.NameInMap("OtherPort")
         private String otherPort;
 
-        @NameInMap("Packets")
+        @com.aliyun.core.annotation.NameInMap("Packets")
         private Double packets;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("VirtualBorderRouterId")
+        @com.aliyun.core.annotation.NameInMap("VirtualBorderRouterId")
         private String virtualBorderRouterId;
 
         private VirtualBorderRouterFlowlogTopN(Builder builder) {

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceBillResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceBillResponseBody</p>
  */
 public class DescribeInstanceBillResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeInstanceBillResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,147 +148,157 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceBillResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceBillResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("AdjustAmount")
+        @com.aliyun.core.annotation.NameInMap("AdjustAmount")
         private Float adjustAmount;
 
-        @NameInMap("BillAccountID")
+        @com.aliyun.core.annotation.NameInMap("AfterDiscountAmount")
+        private Float afterDiscountAmount;
+
+        @com.aliyun.core.annotation.NameInMap("BillAccountID")
         private String billAccountID;
 
-        @NameInMap("BillAccountName")
+        @com.aliyun.core.annotation.NameInMap("BillAccountName")
         private String billAccountName;
 
-        @NameInMap("BillingDate")
+        @com.aliyun.core.annotation.NameInMap("BillingDate")
         private String billingDate;
 
-        @NameInMap("BillingItem")
+        @com.aliyun.core.annotation.NameInMap("BillingItem")
         private String billingItem;
 
-        @NameInMap("BillingItemCode")
+        @com.aliyun.core.annotation.NameInMap("BillingItemCode")
         private String billingItemCode;
 
-        @NameInMap("BillingType")
+        @com.aliyun.core.annotation.NameInMap("BillingType")
         private String billingType;
 
-        @NameInMap("BizType")
+        @com.aliyun.core.annotation.NameInMap("BizType")
         private String bizType;
 
-        @NameInMap("CashAmount")
+        @com.aliyun.core.annotation.NameInMap("CashAmount")
         private Float cashAmount;
 
-        @NameInMap("CommodityCode")
+        @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
 
-        @NameInMap("CostUnit")
+        @com.aliyun.core.annotation.NameInMap("CostUnit")
         private String costUnit;
 
-        @NameInMap("Currency")
+        @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
-        @NameInMap("DeductedByCashCoupons")
+        @com.aliyun.core.annotation.NameInMap("DeductedByCashCoupons")
         private Float deductedByCashCoupons;
 
-        @NameInMap("DeductedByCoupons")
+        @com.aliyun.core.annotation.NameInMap("DeductedByCoupons")
         private Float deductedByCoupons;
 
-        @NameInMap("DeductedByPrepaidCard")
+        @com.aliyun.core.annotation.NameInMap("DeductedByPrepaidCard")
         private Float deductedByPrepaidCard;
 
-        @NameInMap("DeductedByResourcePackage")
+        @com.aliyun.core.annotation.NameInMap("DeductedByResourcePackage")
         private String deductedByResourcePackage;
 
-        @NameInMap("InstanceConfig")
+        @com.aliyun.core.annotation.NameInMap("InstanceConfig")
         private String instanceConfig;
 
-        @NameInMap("InstanceID")
+        @com.aliyun.core.annotation.NameInMap("InstanceID")
         private String instanceID;
 
-        @NameInMap("InstanceSpec")
+        @com.aliyun.core.annotation.NameInMap("InstanceSpec")
         private String instanceSpec;
 
-        @NameInMap("InternetIP")
+        @com.aliyun.core.annotation.NameInMap("InternetIP")
         private String internetIP;
 
-        @NameInMap("IntranetIP")
+        @com.aliyun.core.annotation.NameInMap("IntranetIP")
         private String intranetIP;
 
-        @NameInMap("InvoiceDiscount")
+        @com.aliyun.core.annotation.NameInMap("InvoiceDiscount")
         private Float invoiceDiscount;
 
-        @NameInMap("Item")
+        @com.aliyun.core.annotation.NameInMap("Item")
         private String item;
 
-        @NameInMap("ItemName")
+        @com.aliyun.core.annotation.NameInMap("ItemName")
         private String itemName;
 
-        @NameInMap("ListPrice")
+        @com.aliyun.core.annotation.NameInMap("ListPrice")
         private String listPrice;
 
-        @NameInMap("ListPriceUnit")
+        @com.aliyun.core.annotation.NameInMap("ListPriceUnit")
         private String listPriceUnit;
 
-        @NameInMap("NickName")
+        @com.aliyun.core.annotation.NameInMap("NickName")
         private String nickName;
 
-        @NameInMap("OutstandingAmount")
+        @com.aliyun.core.annotation.NameInMap("OutstandingAmount")
         private Float outstandingAmount;
 
-        @NameInMap("OwnerID")
+        @com.aliyun.core.annotation.NameInMap("OwnerID")
         private String ownerID;
 
-        @NameInMap("PaymentAmount")
+        @com.aliyun.core.annotation.NameInMap("PaymentAmount")
         private Float paymentAmount;
 
-        @NameInMap("PipCode")
+        @com.aliyun.core.annotation.NameInMap("PipCode")
         private String pipCode;
 
-        @NameInMap("PretaxAmount")
+        @com.aliyun.core.annotation.NameInMap("PretaxAmount")
         private Float pretaxAmount;
 
-        @NameInMap("PretaxGrossAmount")
+        @com.aliyun.core.annotation.NameInMap("PretaxGrossAmount")
         private Float pretaxGrossAmount;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("ProductDetail")
+        @com.aliyun.core.annotation.NameInMap("ProductDetail")
         private String productDetail;
 
-        @NameInMap("ProductName")
+        @com.aliyun.core.annotation.NameInMap("ProductName")
         private String productName;
 
-        @NameInMap("ProductType")
+        @com.aliyun.core.annotation.NameInMap("ProductType")
         private String productType;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("ResourceGroup")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroup")
         private String resourceGroup;
 
-        @NameInMap("ServicePeriod")
+        @com.aliyun.core.annotation.NameInMap("ServicePeriod")
         private String servicePeriod;
 
-        @NameInMap("ServicePeriodUnit")
+        @com.aliyun.core.annotation.NameInMap("ServicePeriodUnit")
         private String servicePeriodUnit;
 
-        @NameInMap("SubscriptionType")
+        @com.aliyun.core.annotation.NameInMap("SubscriptionType")
         private String subscriptionType;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
-        @NameInMap("Usage")
+        @com.aliyun.core.annotation.NameInMap("Usage")
         private String usage;
 
-        @NameInMap("UsageUnit")
+        @com.aliyun.core.annotation.NameInMap("UsageUnit")
         private String usageUnit;
 
-        @NameInMap("Zone")
+        @com.aliyun.core.annotation.NameInMap("Zone")
         private String zone;
 
         private Items(Builder builder) {
             this.adjustAmount = builder.adjustAmount;
+            this.afterDiscountAmount = builder.afterDiscountAmount;
             this.billAccountID = builder.billAccountID;
             this.billAccountName = builder.billAccountName;
             this.billingDate = builder.billingDate;
@@ -332,6 +359,13 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
          */
         public Float getAdjustAmount() {
             return this.adjustAmount;
+        }
+
+        /**
+         * @return afterDiscountAmount
+         */
+        public Float getAfterDiscountAmount() {
+            return this.afterDiscountAmount;
         }
 
         /**
@@ -651,6 +685,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
 
         public static final class Builder {
             private Float adjustAmount; 
+            private Float afterDiscountAmount; 
             private String billAccountID; 
             private String billAccountName; 
             private String billingDate; 
@@ -698,7 +733,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             private String zone; 
 
             /**
-             * The amount deducted with credit refund.
+             * <p>The amount deducted with credit refund.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder adjustAmount(Float adjustAmount) {
                 this.adjustAmount = adjustAmount;
@@ -706,7 +744,18 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the account to which the bill belongs.
+             * AfterDiscountAmount.
+             */
+            public Builder afterDiscountAmount(Float afterDiscountAmount) {
+                this.afterDiscountAmount = afterDiscountAmount;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the account to which the bill belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>122</p>
              */
             public Builder billAccountID(String billAccountID) {
                 this.billAccountID = billAccountID;
@@ -714,7 +763,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the account to which the bill belongs.
+             * <p>The name of the account to which the bill belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
              */
             public Builder billAccountName(String billAccountName) {
                 this.billAccountName = billAccountName;
@@ -722,7 +774,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The billing date. This parameter is returned only if the Granularity parameter is set to DAILY. Format: YYYY-MM-DD.
+             * <p>The billing date. This parameter is returned only if the Granularity parameter is set to DAILY. Format: YYYY-MM-DD.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-03-20</p>
              */
             public Builder billingDate(String billingDate) {
                 this.billingDate = billingDate;
@@ -730,7 +785,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The billable item. A value is returned only if the IsBillingItem parameter is set to true.
+             * <p>The billable item. A value is returned only if the IsBillingItem parameter is set to true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Bandwidth</p>
              */
             public Builder billingItem(String billingItem) {
                 this.billingItem = billingItem;
@@ -738,7 +796,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the billable item.
+             * <p>The code of the billable item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>disk</p>
              */
             public Builder billingItemCode(String billingItemCode) {
                 this.billingItemCode = billingItemCode;
@@ -746,7 +807,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method.
+             * <p>The billing method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Other</p>
              */
             public Builder billingType(String billingType) {
                 this.billingType = billingType;
@@ -754,7 +818,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The type of business.
+             * <p>The type of business.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>trusteeship</p>
              */
             public Builder bizType(String bizType) {
                 this.bizType = bizType;
@@ -762,7 +829,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The amount paid in cash. The amount deducted with credit refund is not included.
+             * <p>The amount paid in cash. The amount deducted with credit refund is not included.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder cashAmount(Float cashAmount) {
                 this.cashAmount = cashAmount;
@@ -770,7 +840,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the commodity. The code is the same as that in Cost Center.
+             * <p>The code of the commodity. The code is the same as that in Cost Center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -778,7 +851,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The cost center.
+             * <p>The cost center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Not allocated</p>
              */
             public Builder costUnit(String costUnit) {
                 this.costUnit = costUnit;
@@ -786,12 +862,15 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The type of currency. Valid values:
-             * <p>
+             * <p>The type of currency. Valid values:</p>
+             * <ul>
+             * <li>CNY</li>
+             * <li>USD</li>
+             * <li>JPY</li>
+             * </ul>
              * 
-             * *   CNY
-             * *   USD
-             * *   JPY
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -799,7 +878,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The amount deducted with vouchers.
+             * <p>The amount deducted with vouchers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1</p>
              */
             public Builder deductedByCashCoupons(Float deductedByCashCoupons) {
                 this.deductedByCashCoupons = deductedByCashCoupons;
@@ -807,7 +889,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The amount deducted with coupons.
+             * <p>The amount deducted with coupons.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1</p>
              */
             public Builder deductedByCoupons(Float deductedByCoupons) {
                 this.deductedByCoupons = deductedByCoupons;
@@ -815,7 +900,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The amount deducted with prepaid cards.
+             * <p>The amount deducted with prepaid cards.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1</p>
              */
             public Builder deductedByPrepaidCard(Float deductedByPrepaidCard) {
                 this.deductedByPrepaidCard = deductedByPrepaidCard;
@@ -823,7 +911,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The amount deducted with resource plans. This parameter is valid only when the isBillingItem parameter is set to true.
+             * <p>The amount deducted with resource plans. This parameter is valid only when the isBillingItem parameter is set to true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1</p>
              */
             public Builder deductedByResourcePackage(String deductedByResourcePackage) {
                 this.deductedByResourcePackage = deductedByResourcePackage;
@@ -831,7 +922,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of the instance.
+             * <p>The configurations of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CPU:12</p>
              */
             public Builder instanceConfig(String instanceConfig) {
                 this.instanceConfig = instanceConfig;
@@ -839,7 +933,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-dadada</p>
              */
             public Builder instanceID(String instanceID) {
                 this.instanceID = instanceID;
@@ -847,7 +944,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the instance.
+             * <p>The type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.sn1ne.3xlarge</p>
              */
             public Builder instanceSpec(String instanceSpec) {
                 this.instanceSpec = instanceSpec;
@@ -855,7 +955,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address.
+             * <p>The public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34.xx.x.x</p>
              */
             public Builder internetIP(String internetIP) {
                 this.internetIP = internetIP;
@@ -863,7 +966,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address.
+             * <p>The private IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.xx.xx.xx</p>
              */
             public Builder intranetIP(String intranetIP) {
                 this.intranetIP = intranetIP;
@@ -871,7 +977,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The discount amount.
+             * <p>The discount amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1</p>
              */
             public Builder invoiceDiscount(Float invoiceDiscount) {
                 this.invoiceDiscount = invoiceDiscount;
@@ -879,13 +988,16 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the bill.
-             * <p>
+             * <p>The type of the bill.</p>
+             * <ul>
+             * <li>SubscriptionOrder: the subscription bill.</li>
+             * <li>PayAsYouGoBill: the pay-as-you-go bill,</li>
+             * <li>Refund: the refund.</li>
+             * <li>Adjustment: the adjustment bill.</li>
+             * </ul>
              * 
-             * *   SubscriptionOrder: the subscription bill.
-             * *   PayAsYouGoBill: the pay-as-you-go bill,
-             * *   Refund: the refund.
-             * *   Adjustment: the adjustment bill.
+             * <strong>example:</strong>
+             * <p>PayAsYouGoBill</p>
              */
             public Builder item(String item) {
                 this.item = item;
@@ -893,7 +1005,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the project.
+             * <p>The name of the project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iZ28bycvyb4Z</p>
              */
             public Builder itemName(String itemName) {
                 this.itemName = itemName;
@@ -901,7 +1016,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The unit price of the service. This parameter is valid only when the isBillingItem parameter is set to true.
+             * <p>The unit price of the service. This parameter is valid only when the isBillingItem parameter is set to true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder listPrice(String listPrice) {
                 this.listPrice = listPrice;
@@ -909,7 +1027,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the unit price. This parameter is valid only when the isBillingItem parameter is set to true.
+             * <p>The unit of the unit price. This parameter is valid only when the isBillingItem parameter is set to true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder listPriceUnit(String listPriceUnit) {
                 this.listPriceUnit = listPriceUnit;
@@ -917,7 +1038,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -925,7 +1049,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The unsettled amount.
+             * <p>The unsettled amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1</p>
              */
             public Builder outstandingAmount(Float outstandingAmount) {
                 this.outstandingAmount = outstandingAmount;
@@ -933,7 +1060,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the account that owns the resource. This parameter is returned in multi-account payment scenario.
+             * <p>The ID of the account that owns the resource. This parameter is returned in multi-account payment scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder ownerID(String ownerID) {
                 this.ownerID = ownerID;
@@ -941,7 +1071,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The amount paid in cash. The amount deducted with credit refund is not included.
+             * <p>The amount paid in cash. The amount deducted with credit refund is not included.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1</p>
              */
             public Builder paymentAmount(Float paymentAmount) {
                 this.paymentAmount = paymentAmount;
@@ -949,7 +1082,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the service. The code is the same as that in Cost Center.
+             * <p>The code of the service. The code is the same as that in Cost Center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder pipCode(String pipCode) {
                 this.pipCode = pipCode;
@@ -957,7 +1093,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The pretax amount.
+             * <p>The pretax amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1</p>
              */
             public Builder pretaxAmount(Float pretaxAmount) {
                 this.pretaxAmount = pretaxAmount;
@@ -965,7 +1104,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The pretax gross amount.
+             * <p>The pretax gross amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1</p>
              */
             public Builder pretaxGrossAmount(Float pretaxGrossAmount) {
                 this.pretaxGrossAmount = pretaxGrossAmount;
@@ -973,7 +1115,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the service.
+             * <p>The code of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -981,7 +1126,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the service.
+             * <p>The details of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ApsaraDB RDS</p>
              */
             public Builder productDetail(String productDetail) {
                 this.productDetail = productDetail;
@@ -989,7 +1137,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * <p>The name of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ApsaraDB RDS</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -997,7 +1148,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the service.
+             * <p>The type of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder productType(String productType) {
                 this.productType = productType;
@@ -1005,7 +1159,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China (Hangzhou)</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -1013,7 +1170,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default resource group</p>
              */
             public Builder resourceGroup(String resourceGroup) {
                 this.resourceGroup = resourceGroup;
@@ -1021,7 +1181,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The service duration.
+             * <p>The service duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder servicePeriod(String servicePeriod) {
                 this.servicePeriod = servicePeriod;
@@ -1029,7 +1192,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the service duration.
+             * <p>The unit of the service duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Second</p>
              */
             public Builder servicePeriodUnit(String servicePeriodUnit) {
                 this.servicePeriodUnit = servicePeriodUnit;
@@ -1037,11 +1203,14 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method. Valid values:
-             * <p>
+             * <p>The billing method. Valid values:</p>
+             * <ul>
+             * <li>Subscription: the subscription billing method.</li>
+             * <li>PayAsYouGo: the pay-as-you-go billing method.</li>
+             * </ul>
              * 
-             * *   Subscription: the subscription billing method.
-             * *   PayAsYouGo: the pay-as-you-go billing method.
+             * <strong>example:</strong>
+             * <p>PayAsYouGo</p>
              */
             public Builder subscriptionType(String subscriptionType) {
                 this.subscriptionType = subscriptionType;
@@ -1049,7 +1218,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the resource.
+             * <p>The tag of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key:testKey value:testValue; key:testKey1 value:testValues1</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -1057,7 +1229,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The usage of the service. This parameter is valid only when the isBillingItem parameter is set to true. The usage is the total usage in all bills in the billing cycle, not the amount that you purchase. For example, if 1 GB of storage is used and bills are generated every hour, the usage is 1 GB per hour. In this case, the usage is 24 GB per day.
+             * <p>The usage of the service. This parameter is valid only when the isBillingItem parameter is set to true. The usage is the total usage in all bills in the billing cycle, not the amount that you purchase. For example, if 1 GB of storage is used and bills are generated every hour, the usage is 1 GB per hour. In this case, the usage is 24 GB per day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder usage(String usage) {
                 this.usage = usage;
@@ -1065,7 +1240,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of usage. This parameter is valid only when the isBillingItem parameter is set to true.
+             * <p>The unit of usage. This parameter is valid only when the isBillingItem parameter is set to true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GB</p>
              */
             public Builder usageUnit(String usageUnit) {
                 this.usageUnit = usageUnit;
@@ -1073,7 +1251,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone.
+             * <p>The ID of the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hangzhou Zone B</p>
              */
             public Builder zone(String zone) {
                 this.zone = zone;
@@ -1087,26 +1268,32 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceBillResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceBillResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AccountID")
+        @com.aliyun.core.annotation.NameInMap("AccountID")
         private String accountID;
 
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("BillingCycle")
+        @com.aliyun.core.annotation.NameInMap("BillingCycle")
         private String billingCycle;
 
-        @NameInMap("Items")
-        private java.util.List < Items> items;
+        @com.aliyun.core.annotation.NameInMap("Items")
+        private java.util.List<Items> items;
 
-        @NameInMap("MaxResults")
+        @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {
@@ -1151,7 +1338,7 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
@@ -1180,13 +1367,16 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             private String accountID; 
             private String accountName; 
             private String billingCycle; 
-            private java.util.List < Items> items; 
+            private java.util.List<Items> items; 
             private Integer maxResults; 
             private String nextToken; 
             private Integer totalCount; 
 
             /**
-             * The ID of the account.
+             * <p>The ID of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>122</p>
              */
             public Builder accountID(String accountID) {
                 this.accountID = accountID;
@@ -1194,7 +1384,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the account.
+             * <p>The name of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -1202,7 +1395,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The billing cycle in the YYYY-MM format.
+             * <p>The billing cycle in the YYYY-MM format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-03</p>
              */
             public Builder billingCycle(String billingCycle) {
                 this.billingCycle = billingCycle;
@@ -1210,15 +1406,18 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the bill.
+             * <p>The details of the bill.</p>
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }
 
             /**
-             * The maximum number of entries returned.
+             * <p>The maximum number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -1226,7 +1425,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The position where the query stopped. If this parameter is left empty, all the results are returned. If you perform another call, you must set the NextToken parameter to the value of this parameter.
+             * <p>The position where the query stopped. If this parameter is left empty, all the results are returned. If you perform another call, you must set the NextToken parameter to the value of this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CAESEgoQCg4KCm</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -1234,7 +1436,10 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of returned entries.
+             * <p>The total number of returned entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

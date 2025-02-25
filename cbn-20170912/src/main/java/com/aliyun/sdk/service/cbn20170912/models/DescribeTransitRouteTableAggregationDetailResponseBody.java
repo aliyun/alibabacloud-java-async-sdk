@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTransitRouteTableAggregationDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTransitRouteTableAggregationDetailResponseBody</p>
  */
 public class DescribeTransitRouteTableAggregationDetailResponseBody extends TeaModel {
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private DescribeTransitRouteTableAggregationDetailResponseBody(Builder builder) {
@@ -49,7 +54,7 @@ public class DescribeTransitRouteTableAggregationDetailResponseBody extends TeaM
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -69,12 +74,15 @@ public class DescribeTransitRouteTableAggregationDetailResponseBody extends TeaM
 
     public static final class Builder {
         private Integer count; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
         private Integer total; 
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -82,15 +90,18 @@ public class DescribeTransitRouteTableAggregationDetailResponseBody extends TeaM
         }
 
         /**
-         * The configuration of the aggregate route.
+         * <p>The configuration of the aggregate route.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0C2EE7A8-74D4-4081-8236-CEBDE3BBCF50</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +109,10 @@ public class DescribeTransitRouteTableAggregationDetailResponseBody extends TeaM
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -111,14 +125,20 @@ public class DescribeTransitRouteTableAggregationDetailResponseBody extends TeaM
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTransitRouteTableAggregationDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTransitRouteTableAggregationDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Data(Builder builder) {
@@ -162,7 +182,10 @@ public class DescribeTransitRouteTableAggregationDetailResponseBody extends TeaM
             private String status; 
 
             /**
-             * The error message returned if the configuration of the aggregate route fails.
+             * <p>The error message returned if the configuration of the aggregate route fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desctest</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -170,7 +193,10 @@ public class DescribeTransitRouteTableAggregationDetailResponseBody extends TeaM
             }
 
             /**
-             * The ID of the virtual private cloud (VPC) for which the aggregate route is configured.
+             * <p>The ID of the virtual private cloud (VPC) for which the aggregate route is configured.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-6eh7fp9hdqa2wv85t****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -178,14 +204,17 @@ public class DescribeTransitRouteTableAggregationDetailResponseBody extends TeaM
             }
 
             /**
-             * The status of the aggregate route. Valid values:
-             * <p>
+             * <p>The status of the aggregate route. Valid values:</p>
+             * <ul>
+             * <li><strong>Configured</strong>: The aggregate route is advertised to the VPC.</li>
+             * <li><strong>Configuring</strong>: The aggregate route is being advertised.</li>
+             * <li><strong>ConfigFailed</strong>: The aggregate route failed to be advertised.</li>
+             * <li><strong>PartialConfigured</strong>: Failed to advertise the aggregate route to some VPCs.</li>
+             * <li><strong>Deleting</strong>: The aggregate route is being deleted.</li>
+             * </ul>
              * 
-             * *   **Configured**: The aggregate route is advertised to the VPC.
-             * *   **Configuring**: The aggregate route is being advertised.
-             * *   **ConfigFailed**: The aggregate route failed to be advertised.
-             * *   **PartialConfigured**: Failed to advertise the aggregate route to some VPCs.
-             * *   **Deleting**: The aggregate route is being deleted.
+             * <strong>example:</strong>
+             * <p>Configured</p>
              */
             public Builder status(String status) {
                 this.status = status;

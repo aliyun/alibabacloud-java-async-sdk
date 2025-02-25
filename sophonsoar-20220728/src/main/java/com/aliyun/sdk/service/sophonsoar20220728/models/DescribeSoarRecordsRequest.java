@@ -1,52 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSoarRecordsRequest} extends {@link RequestModel}
  *
  * <p>DescribeSoarRecordsRequest</p>
  */
 public class DescribeSoarRecordsRequest extends Request {
-    @Query
-    @NameInMap("EndMillis")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndMillis")
     private Long endMillis;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("PlaybookUuid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlaybookUuid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String playbookUuid;
 
-    @Query
-    @NameInMap("StartMillis")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartMillis")
     private Long startMillis;
 
-    @Query
-    @NameInMap("TaskStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskStatus")
     private String taskStatus;
 
-    @Query
-    @NameInMap("TaskflowMd5")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskflowMd5")
     private String taskflowMd5;
 
-    @Query
-    @NameInMap("TriggerUser")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TriggerUser")
     private String triggerUser;
 
     private DescribeSoarRecordsRequest(Builder builder) {
@@ -167,7 +167,10 @@ public class DescribeSoarRecordsRequest extends Request {
         } 
 
         /**
-         * EndMillis.
+         * <p>The end of the time range to query. The value is a 13-digit timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1683772744953</p>
          */
         public Builder endMillis(Long endMillis) {
             this.putQueryParameter("EndMillis", endMillis);
@@ -176,7 +179,14 @@ public class DescribeSoarRecordsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -185,7 +195,10 @@ public class DescribeSoarRecordsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1. Pages start from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -194,7 +207,13 @@ public class DescribeSoarRecordsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. If you do not specify the PageSize parameter, 10 entries are returned by default.</p>
+         * <blockquote>
+         * <p> We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -203,7 +222,14 @@ public class DescribeSoarRecordsRequest extends Request {
         }
 
         /**
-         * PlaybookUuid.
+         * <p>The playbook UUID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to query the playbook UUID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8f55e76d-b5d5-4720-9cd7-xxxxx</p>
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putQueryParameter("PlaybookUuid", playbookUuid);
@@ -212,7 +238,10 @@ public class DescribeSoarRecordsRequest extends Request {
         }
 
         /**
-         * StartMillis.
+         * <p>The beginning of the time range to query. The value is a 13-byte timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1683526284584</p>
          */
         public Builder startMillis(Long startMillis) {
             this.putQueryParameter("StartMillis", startMillis);
@@ -221,7 +250,15 @@ public class DescribeSoarRecordsRequest extends Request {
         }
 
         /**
-         * TaskStatus.
+         * <p>The status of the task. Valid values:</p>
+         * <ul>
+         * <li><strong>success</strong></li>
+         * <li><strong>failed</strong></li>
+         * <li><strong>inprogress</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>inprogress</p>
          */
         public Builder taskStatus(String taskStatus) {
             this.putQueryParameter("TaskStatus", taskStatus);
@@ -230,7 +267,10 @@ public class DescribeSoarRecordsRequest extends Request {
         }
 
         /**
-         * TaskflowMd5.
+         * <p>The MD5 value of the playbook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>be0a4ef084dd174abe478df52xxxxx</p>
          */
         public Builder taskflowMd5(String taskflowMd5) {
             this.putQueryParameter("TaskflowMd5", taskflowMd5);
@@ -239,7 +279,10 @@ public class DescribeSoarRecordsRequest extends Request {
         }
 
         /**
-         * TriggerUser.
+         * <p>The ID of the Alibaba Cloud account that is used to execute the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127xxxx4392</p>
          */
         public Builder triggerUser(String triggerUser) {
             this.putQueryParameter("TriggerUser", triggerUser);

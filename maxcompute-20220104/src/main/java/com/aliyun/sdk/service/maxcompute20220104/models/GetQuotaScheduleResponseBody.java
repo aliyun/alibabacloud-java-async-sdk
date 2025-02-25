@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQuotaScheduleResponseBody} extends {@link TeaModel}
  *
  * <p>GetQuotaScheduleResponseBody</p>
  */
 public class GetQuotaScheduleResponseBody extends TeaModel {
-    @NameInMap("data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("data")
+    private java.util.List<Data> data;
 
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMsg")
+    @com.aliyun.core.annotation.NameInMap("errorMsg")
     private String errorMsg;
 
-    @NameInMap("httpCode")
+    @com.aliyun.core.annotation.NameInMap("httpCode")
     private Integer httpCode;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private GetQuotaScheduleResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class GetQuotaScheduleResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -79,24 +84,28 @@ public class GetQuotaScheduleResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String errorCode; 
         private String errorMsg; 
         private Integer httpCode; 
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * *   If the value of success was false, an error code was returned.
-         * <p>
-         * *   If the value of success was true, a null value was returned.
+         * <ul>
+         * <li>If the value of success was false, an error code was returned.</li>
+         * <li>If the value of success was true, a null value was returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -104,7 +113,10 @@ public class GetQuotaScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>errorMsg</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -112,7 +124,10 @@ public class GetQuotaScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. If this parameter was not empty and the value of this parameter was not 200, the request failed.
+         * <p>Indicates whether the request was successful. If this parameter was not empty and the value of this parameter was not 200, the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -120,7 +135,10 @@ public class GetQuotaScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc059b716696296266308790e0d3e</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -133,11 +151,17 @@ public class GetQuotaScheduleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetQuotaScheduleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetQuotaScheduleResponseBody</p>
+     */
     public static class Condition extends TeaModel {
-        @NameInMap("after")
+        @com.aliyun.core.annotation.NameInMap("after")
         private String after;
 
-        @NameInMap("at")
+        @com.aliyun.core.annotation.NameInMap("at")
         private String at;
 
         private Condition(Builder builder) {
@@ -172,7 +196,10 @@ public class GetQuotaScheduleResponseBody extends TeaModel {
             private String at; 
 
             /**
-             * The start time when the quota plan takes effect.
+             * <p>The start time when the quota plan takes effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-25T04:23:04Z</p>
              */
             public Builder after(String after) {
                 this.after = after;
@@ -180,7 +207,10 @@ public class GetQuotaScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the quota plan takes effect.
+             * <p>The time when the quota plan takes effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0900</p>
              */
             public Builder at(String at) {
                 this.at = at;
@@ -194,23 +224,29 @@ public class GetQuotaScheduleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetQuotaScheduleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetQuotaScheduleResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("condition")
+        @com.aliyun.core.annotation.NameInMap("condition")
         private Condition condition;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("operator")
+        @com.aliyun.core.annotation.NameInMap("operator")
         private String operator;
 
-        @NameInMap("plan")
+        @com.aliyun.core.annotation.NameInMap("plan")
         private String plan;
 
-        @NameInMap("timezone")
+        @com.aliyun.core.annotation.NameInMap("timezone")
         private String timezone;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Data(Builder builder) {
@@ -281,7 +317,7 @@ public class GetQuotaScheduleResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The condition value.
+             * <p>The condition value.</p>
              */
             public Builder condition(Condition condition) {
                 this.condition = condition;
@@ -289,7 +325,10 @@ public class GetQuotaScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the quota plan.
+             * <p>The ID of the quota plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>63</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -297,7 +336,10 @@ public class GetQuotaScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the operator.
+             * <p>The name of the operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>userA</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -305,7 +347,10 @@ public class GetQuotaScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the quota plan.
+             * <p>The name of the quota plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>planA</p>
              */
             public Builder plan(String plan) {
                 this.plan = plan;
@@ -313,7 +358,10 @@ public class GetQuotaScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * The time zone.
+             * <p>The time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UTC+8</p>
              */
             public Builder timezone(String timezone) {
                 this.timezone = timezone;
@@ -321,7 +369,10 @@ public class GetQuotaScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the quota plan.
+             * <p>The type of the quota plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>once</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eais20190624.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachEaisEiRequest} extends {@link RequestModel}
  *
  * <p>AttachEaisEiRequest</p>
  */
 public class AttachEaisEiRequest extends Request {
-    @Query
-    @NameInMap("ClientInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientInstanceId;
 
-    @Query
-    @NameInMap("EiInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EiInstanceId")
     private String eiInstanceId;
 
-    @Query
-    @NameInMap("EiInstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EiInstanceType")
     private String eiInstanceType;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private AttachEaisEiRequest(Builder builder) {
@@ -98,7 +103,10 @@ public class AttachEaisEiRequest extends Request {
         } 
 
         /**
-         * ClientInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp14ws9hbt1oe0u9****</p>
          */
         public Builder clientInstanceId(String clientInstanceId) {
             this.putQueryParameter("ClientInstanceId", clientInstanceId);
@@ -125,7 +133,10 @@ public class AttachEaisEiRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

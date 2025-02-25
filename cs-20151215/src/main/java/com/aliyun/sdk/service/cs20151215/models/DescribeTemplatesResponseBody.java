@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTemplatesResponseBody</p>
  */
 public class DescribeTemplatesResponseBody extends TeaModel {
-    @NameInMap("page_info")
+    @com.aliyun.core.annotation.NameInMap("page_info")
     private PageInfo pageInfo;
 
-    @NameInMap("templates")
-    private java.util.List < Templates> templates;
+    @com.aliyun.core.annotation.NameInMap("templates")
+    private java.util.List<Templates> templates;
 
     private DescribeTemplatesResponseBody(Builder builder) {
         this.pageInfo = builder.pageInfo;
@@ -41,16 +46,16 @@ public class DescribeTemplatesResponseBody extends TeaModel {
     /**
      * @return templates
      */
-    public java.util.List < Templates> getTemplates() {
+    public java.util.List<Templates> getTemplates() {
         return this.templates;
     }
 
     public static final class Builder {
         private PageInfo pageInfo; 
-        private java.util.List < Templates> templates; 
+        private java.util.List<Templates> templates; 
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -58,9 +63,9 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The list of returned templates.
+         * <p>The list of returned templates.</p>
          */
-        public Builder templates(java.util.List < Templates> templates) {
+        public Builder templates(java.util.List<Templates> templates) {
             this.templates = templates;
             return this;
         }
@@ -71,14 +76,20 @@ public class DescribeTemplatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTemplatesResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("page_number")
+        @com.aliyun.core.annotation.NameInMap("page_number")
         private Long pageNumber;
 
-        @NameInMap("page_size")
+        @com.aliyun.core.annotation.NameInMap("page_size")
         private Long pageSize;
 
-        @NameInMap("total_count")
+        @com.aliyun.core.annotation.NameInMap("total_count")
         private Long totalCount;
 
         private PageInfo(Builder builder) {
@@ -122,7 +133,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -130,7 +144,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -138,7 +155,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -152,35 +172,41 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTemplatesResponseBody</p>
+     */
     public static class Templates extends TeaModel {
-        @NameInMap("acl")
+        @com.aliyun.core.annotation.NameInMap("acl")
         private String acl;
 
-        @NameInMap("created")
+        @com.aliyun.core.annotation.NameInMap("created")
         private String created;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("tags")
+        @com.aliyun.core.annotation.NameInMap("tags")
         private String tags;
 
-        @NameInMap("template")
+        @com.aliyun.core.annotation.NameInMap("template")
         private String template;
 
-        @NameInMap("template_type")
+        @com.aliyun.core.annotation.NameInMap("template_type")
         private String templateType;
 
-        @NameInMap("template_with_hist_id")
+        @com.aliyun.core.annotation.NameInMap("template_with_hist_id")
         private String templateWithHistId;
 
-        @NameInMap("updated")
+        @com.aliyun.core.annotation.NameInMap("updated")
         private String updated;
 
         private Templates(Builder builder) {
@@ -287,14 +313,16 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             private String updated; 
 
             /**
-             * The access control policy of the template. Valid values:
-             * <p>
+             * <p>The access control policy of the template. Valid values:</p>
+             * <ul>
+             * <li><code>private</code>: The template is private.</li>
+             * <li><code>public</code>: The template is public.</li>
+             * <li><code>shared</code>: The template can be shared.</li>
+             * </ul>
+             * <p>Default value: <code>private</code>.</p>
              * 
-             * *   `private`: The template is private.
-             * *   `public`: The template is public.
-             * *   `shared`: The template can be shared.
-             * 
-             * Default value: `private`.
+             * <strong>example:</strong>
+             * <p>private</p>
              */
             public Builder acl(String acl) {
                 this.acl = acl;
@@ -302,7 +330,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the template was created.
+             * <p>The time when the template was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-10T16:30:16+08:00</p>
              */
             public Builder created(String created) {
                 this.created = created;
@@ -310,7 +341,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the template.
+             * <p>The description of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a web server</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -318,7 +352,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the template.
+             * <p>The ID of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>874ec485-e7e6-4373-8a3b-47bde8ae789f</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -326,7 +363,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the template.
+             * <p>The name of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>webserver</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -334,7 +374,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The label of the template. By default, the value is the name of the template.
+             * <p>The label of the template. By default, the value is the name of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kubernetes</p>
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -342,7 +385,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The template content in the YAML format.
+             * <p>The template content in the YAML format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>apiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: nginx-deployment-basic\n  labels:\n    app: nginx\nspec:\n  replicas: 2\n  selector:\n    matchLabels:\n      app: nginx\n  template:\n    metadata:\n      labels:\n        app: nginx\n    spec:\n      containers:\n      - name: nginx\n        image: busybox:latest\n        ports:\n        - containerPort: 80</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -350,11 +396,14 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of template. This parameter can be set to a custom value.
-             * <p>
+             * <p>The type of template. This parameter can be set to a custom value.</p>
+             * <ul>
+             * <li>If the parameter is set to <code>kubernetes</code>, the template is displayed on the Templates page in the console.</li>
+             * <li>If the parameter is set to <code>compose</code>, the template is displayed on the Container Service - Swarm page in the console. However, Container Service for Swarm is deprecated.</li>
+             * </ul>
              * 
-             * *   If the parameter is set to `kubernetes`, the template is displayed on the Templates page in the console.
-             * *   If the parameter is set to `compose`, the template is displayed on the Container Service - Swarm page in the console. However, Container Service for Swarm is deprecated.
+             * <strong>example:</strong>
+             * <p>kubernetes</p>
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;
@@ -362,7 +411,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the parent template. The value of `template_with_hist_id` is the same for each template version. This allows you to manage different template versions.
+             * <p>The ID of the parent template. The value of <code>template_with_hist_id</code> is the same for each template version. This allows you to manage different template versions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ad81d115-7c8b-47e7-a222-9c28d7f6e588</p>
              */
             public Builder templateWithHistId(String templateWithHistId) {
                 this.templateWithHistId = templateWithHistId;
@@ -370,7 +422,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the template was updated.
+             * <p>The time when the template was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-10T16:30:16+08:00</p>
              */
             public Builder updated(String updated) {
                 this.updated = updated;

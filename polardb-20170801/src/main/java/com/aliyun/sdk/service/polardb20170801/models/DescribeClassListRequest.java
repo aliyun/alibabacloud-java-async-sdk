@@ -1,52 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClassListRequest} extends {@link RequestModel}
  *
  * <p>DescribeClassListRequest</p>
  */
 public class DescribeClassListRequest extends Request {
-    @Query
-    @NameInMap("CommodityCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommodityCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String commodityCode;
 
-    @Query
-    @NameInMap("MasterHa")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MasterHa")
     private String masterHa;
 
-    @Query
-    @NameInMap("OrderType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderType")
     private String orderType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private DescribeClassListRequest(Builder builder) {
@@ -167,7 +172,29 @@ public class DescribeClassListRequest extends Request {
         } 
 
         /**
-         * The maximum number of IOPS.
+         * <p>The code of the commodity. Valid values:</p>
+         * <ul>
+         * <li>polardb_sub: the subscription cluster in regions in the Chinese mainland</li>
+         * <li>polardb_sub _intl: the subscription cluster in regions outside the Chinese mainland</li>
+         * <li>polardb_payg: the pay-as-you-go cluster in regions in the Chinese mainland</li>
+         * <li>polardb_payg_intl: the pay-as-you-go cluster in regions outside the Chinese mainland</li>
+         * <li>polardb_sub_jushita: the subscription cluster for CloudTmall</li>
+         * <li>polardb_payg_jushita: the pay-as-you-go cluster for CloudTmall</li>
+         * <li>polardb_sub_cainiao: the subscription cluster for Cainiao</li>
+         * <li>polardb_payg_cainiao: the pay-as-you-go cluster for Cainiao</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>If you use an Alibaba Cloud account on the China site, you can view only the codes of the commodities that are available in the Chinese mainland.</li>
+         * <li>If you are using an Alibaba Cloud international account, you can view only the codes of the commodities that are available outside the Chinese mainland.</li>
+         * <li>If you use a CloudTmall account, you can view only the codes of the commodities that are available in CloudTmall.</li>
+         * <li>If you use a Cainiao account, you can view only the codes of the commodities that are available in Cainiao.</li>
+         * </ul>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polardb_sub</p>
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);
@@ -176,12 +203,15 @@ public class DescribeClassListRequest extends Request {
         }
 
         /**
-         * The number of nodes. Valid values:
-         * <p>
+         * <p>The number of nodes. Valid values:</p>
+         * <ul>
+         * <li>single: Standalone Edition.</li>
+         * <li>cluster: Cluster Edition.</li>
+         * <li>all: both Standalone Edition and Cluster Edition.</li>
+         * </ul>
          * 
-         * *   single
-         * *   cluster
-         * *   all
+         * <strong>example:</strong>
+         * <p>cluster</p>
          */
         public Builder masterHa(String masterHa) {
             this.putQueryParameter("MasterHa", masterHa);
@@ -190,7 +220,16 @@ public class DescribeClassListRequest extends Request {
         }
 
         /**
-         * The specification type of the cluster.
+         * <p>The type of the order. Valid values:</p>
+         * <ul>
+         * <li>BUY: The order is used to purchase a cluster.</li>
+         * <li>UPGRADE: The order is used to change the specifications of a cluster.</li>
+         * <li>RENEW: The order is used to renew a cluster.</li>
+         * <li>CONVERT: The order is used to change the billing method of a cluster.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BUY</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -217,7 +256,10 @@ public class DescribeClassListRequest extends Request {
         }
 
         /**
-         * The number of CPU cores.
+         * <p>The region ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -226,7 +268,10 @@ public class DescribeClassListRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-************</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDnsGtmAccessStrategyAvailableConfigRequest} extends {@link RequestModel}
  *
  * <p>DescribeDnsGtmAccessStrategyAvailableConfigRequest</p>
  */
 public class DescribeDnsGtmAccessStrategyAvailableConfigRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("StrategyMode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String strategyMode;
 
     private DescribeDnsGtmAccessStrategyAvailableConfigRequest(Builder builder) {
@@ -84,7 +89,11 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigRequest extends Request 
         } 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -93,7 +102,10 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigRequest extends Request 
         }
 
         /**
-         * The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.
+         * <p>The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -102,11 +114,15 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigRequest extends Request 
         }
 
         /**
-         * The type of the access policy. Valid values:
-         * <p>
+         * <p>The type of the access policy. Valid values:</p>
+         * <ul>
+         * <li>GEO: geographical location-based</li>
+         * <li>LATENCY: latency-based</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   GEO: geographical location-based
-         * *   LATENCY: latency-based
+         * <strong>example:</strong>
+         * <p>geo</p>
          */
         public Builder strategyMode(String strategyMode) {
             this.putQueryParameter("StrategyMode", strategyMode);

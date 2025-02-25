@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRulesResponseBody} extends {@link TeaModel}
  *
  * <p>CreateRulesResponseBody</p>
  */
 public class CreateRulesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Rules")
+    @com.aliyun.core.annotation.NameInMap("Rules")
     private Rules rules;
 
     private CreateRulesResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateRulesResponseBody extends TeaModel {
         private Rules rules; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9DEC9C28-AB05-4DDF-9A78-6B08EC9CE18C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class CreateRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The forwarding rules.
+         * <p>The forwarding rules.</p>
          */
         public Builder rules(Rules rules) {
             this.rules = rules;
@@ -71,11 +79,17 @@ public class CreateRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateRulesResponseBody</p>
+     */
     public static class Rule extends TeaModel {
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
         private Rule(Builder builder) {
@@ -110,7 +124,10 @@ public class CreateRulesResponseBody extends TeaModel {
             private String ruleName; 
 
             /**
-             * The forwarding rule ID.
+             * <p>The forwarding rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule-bp12jzy0*****</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -118,7 +135,10 @@ public class CreateRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the forwarding rule.
+             * <p>The name of the forwarding rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Rule2</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -132,9 +152,15 @@ public class CreateRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateRulesResponseBody</p>
+     */
     public static class Rules extends TeaModel {
-        @NameInMap("Rule")
-        private java.util.List < Rule> rule;
+        @com.aliyun.core.annotation.NameInMap("Rule")
+        private java.util.List<Rule> rule;
 
         private Rules(Builder builder) {
             this.rule = builder.rule;
@@ -151,17 +177,17 @@ public class CreateRulesResponseBody extends TeaModel {
         /**
          * @return rule
          */
-        public java.util.List < Rule> getRule() {
+        public java.util.List<Rule> getRule() {
             return this.rule;
         }
 
         public static final class Builder {
-            private java.util.List < Rule> rule; 
+            private java.util.List<Rule> rule; 
 
             /**
              * Rule.
              */
-            public Builder rule(java.util.List < Rule> rule) {
+            public Builder rule(java.util.List<Rule> rule) {
                 this.rule = rule;
                 return this;
             }

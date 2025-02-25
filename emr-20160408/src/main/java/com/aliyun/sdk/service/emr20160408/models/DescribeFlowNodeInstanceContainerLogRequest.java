@@ -145,16 +145,16 @@ public class DescribeFlowNodeInstanceContainerLogRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeFlowNodeInstanceContainerLogRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.containerId = response.containerId;
-            this.length = response.length;
-            this.logName = response.logName;
-            this.nodeInstanceId = response.nodeInstanceId;
-            this.offset = response.offset;
-            this.projectId = response.projectId;
-            this.regionId = response.regionId;
+        private Builder(DescribeFlowNodeInstanceContainerLogRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.containerId = request.containerId;
+            this.length = request.length;
+            this.logName = request.logName;
+            this.nodeInstanceId = request.nodeInstanceId;
+            this.offset = request.offset;
+            this.projectId = request.projectId;
+            this.regionId = request.regionId;
         } 
 
         /**
@@ -167,7 +167,7 @@ public class DescribeFlowNodeInstanceContainerLogRequest extends Request {
         }
 
         /**
-         * ContainerId.
+         * Conintainer ID。
          */
         public Builder containerId(String containerId) {
             this.putQueryParameter("ContainerId", containerId);

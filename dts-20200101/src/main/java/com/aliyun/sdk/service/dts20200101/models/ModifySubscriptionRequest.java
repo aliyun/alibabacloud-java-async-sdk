@@ -1,42 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySubscriptionRequest} extends {@link RequestModel}
  *
  * <p>ModifySubscriptionRequest</p>
  */
 public class ModifySubscriptionRequest extends Request {
-    @Query
-    @NameInMap("DbList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbList;
 
-    @Query
-    @NameInMap("DtsInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DtsInstanceId")
     private String dtsInstanceId;
 
-    @Query
-    @NameInMap("DtsJobId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DtsJobId")
     private String dtsJobId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("SubscriptionDataTypeDDL")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscriptionDataTypeDDL")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean subscriptionDataTypeDDL;
 
-    @Query
-    @NameInMap("SubscriptionDataTypeDML")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscriptionDataTypeDML")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean subscriptionDataTypeDML;
 
     private ModifySubscriptionRequest(Builder builder) {
@@ -45,6 +54,7 @@ public class ModifySubscriptionRequest extends Request {
         this.dtsInstanceId = builder.dtsInstanceId;
         this.dtsJobId = builder.dtsJobId;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.subscriptionDataTypeDDL = builder.subscriptionDataTypeDDL;
         this.subscriptionDataTypeDML = builder.subscriptionDataTypeDML;
     }
@@ -91,6 +101,13 @@ public class ModifySubscriptionRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return subscriptionDataTypeDDL
      */
     public Boolean getSubscriptionDataTypeDDL() {
@@ -109,6 +126,7 @@ public class ModifySubscriptionRequest extends Request {
         private String dtsInstanceId; 
         private String dtsJobId; 
         private String regionId; 
+        private String resourceGroupId; 
         private Boolean subscriptionDataTypeDDL; 
         private Boolean subscriptionDataTypeDML; 
 
@@ -122,15 +140,20 @@ public class ModifySubscriptionRequest extends Request {
             this.dtsInstanceId = request.dtsInstanceId;
             this.dtsJobId = request.dtsJobId;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.subscriptionDataTypeDDL = request.subscriptionDataTypeDDL;
             this.subscriptionDataTypeDML = request.subscriptionDataTypeDML;
         } 
 
         /**
-         * The objects of the change tracking task. The value is a JSON string. For more information, see [Objects of DTS tasks](~~209545~~).
-         * <p>
+         * <p>The objects of the change tracking task. The value is a JSON string. For more information, see <a href="https://help.aliyun.com/document_detail/209545.html">Objects of DTS tasks</a>.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/208925.html">DescribeDtsJobDetail</a> operation to query the original objects of the task.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDtsJobDetail](~~208925~~) operation to query the original objects of the task.
+         * <strong>example:</strong>
+         * <p>{&quot;dtstest&quot;:{&quot;name&quot;:&quot;dtstest&quot;,&quot;all&quot;:true}}</p>
          */
         public Builder dbList(String dbList) {
             this.putQueryParameter("DbList", dbList);
@@ -139,7 +162,10 @@ public class ModifySubscriptionRequest extends Request {
         }
 
         /**
-         * The ID of the change tracking instance. You can call the [DescribeDtsJobs](~~209702~~) operation to query the instance ID.
+         * <p>The ID of the change tracking instance. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsboss6pn1w******</p>
          */
         public Builder dtsInstanceId(String dtsInstanceId) {
             this.putQueryParameter("DtsInstanceId", dtsInstanceId);
@@ -148,7 +174,10 @@ public class ModifySubscriptionRequest extends Request {
         }
 
         /**
-         * The ID of the change tracking task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.
+         * <p>The ID of the change tracking task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>boss6pn1w******</p>
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -157,7 +186,10 @@ public class ModifySubscriptionRequest extends Request {
         }
 
         /**
-         * The ID of the region where the change tracking instance resides. For more information, see [List of supported regions](~~141033~~).
+         * <p>The ID of the region where the change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -166,11 +198,27 @@ public class ModifySubscriptionRequest extends Request {
         }
 
         /**
-         * Specifies whether to retrieve data definition language (DDL) statements. Valid values:
-         * <p>
+         * <p>Resource group ID.</p>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to retrieve data definition language (DDL) statements. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder subscriptionDataTypeDDL(Boolean subscriptionDataTypeDDL) {
             this.putQueryParameter("SubscriptionDataTypeDDL", subscriptionDataTypeDDL);
@@ -179,11 +227,15 @@ public class ModifySubscriptionRequest extends Request {
         }
 
         /**
-         * Specifies whether to retrieve data manipulation language (DML) statements. Valid values:
-         * <p>
+         * <p>Specifies whether to retrieve data manipulation language (DML) statements. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder subscriptionDataTypeDML(Boolean subscriptionDataTypeDML) {
             this.putQueryParameter("SubscriptionDataTypeDML", subscriptionDataTypeDML);

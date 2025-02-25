@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePropertyCountRequest} extends {@link RequestModel}
  *
  * <p>DescribePropertyCountRequest</p>
  */
 public class DescribePropertyCountRequest extends Request {
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @Query
-    @NameInMap("UuidList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UuidList")
     private String uuidList;
 
     private DescribePropertyCountRequest(Builder builder) {
@@ -68,20 +73,23 @@ public class DescribePropertyCountRequest extends Request {
         } 
 
         /**
-         * The type of the asset fingerprints. Separate multiple types with commas (,). Valid values:
-         * <p>
+         * <p>The type of the asset fingerprints. Separate multiple types with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>port</strong>: port</li>
+         * <li><strong>process</strong>: process</li>
+         * <li><strong>software</strong>: software</li>
+         * <li><strong>user</strong>: account</li>
+         * <li><strong>cron</strong>: scheduled task</li>
+         * <li><strong>sca</strong>: middleware</li>
+         * <li><strong>web</strong>: website</li>
+         * <li><strong>database</strong>: database</li>
+         * <li><strong>lkm</strong>: kernel module</li>
+         * <li><strong>autorun</strong>: startup item</li>
+         * <li><strong>web_server</strong>: web service</li>
+         * </ul>
          * 
-         * *   **port**: port
-         * *   **process**: process
-         * *   **software**: software
-         * *   **user**: account
-         * *   **cron**: scheduled task
-         * *   **sca**: middleware
-         * *   **web**: website
-         * *   **database**: database
-         * *   **lkm**: kernel module
-         * *   **autorun**: startup item
-         * *   **web_server**: web service
+         * <strong>example:</strong>
+         * <p>port,process</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -90,7 +98,11 @@ public class DescribePropertyCountRequest extends Request {
         }
 
         /**
-         * The UUIDs of the assets. Separate multiple UUIDs with commas (,).
+         * <p>The UUIDs of the assets. Separate multiple UUIDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9658314a-7609-4426-afc4-2c924072****,
+         * 9658314a-7609-4426-afc4-2c924072****</p>
          */
         public Builder uuidList(String uuidList) {
             this.putQueryParameter("UuidList", uuidList);

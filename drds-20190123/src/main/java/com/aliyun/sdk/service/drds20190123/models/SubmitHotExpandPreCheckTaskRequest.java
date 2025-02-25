@@ -90,16 +90,20 @@ public class SubmitHotExpandPreCheckTaskRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitHotExpandPreCheckTaskRequest response) {
-            super(response);
-            this.dbInstType = response.dbInstType;
-            this.dbName = response.dbName;
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.tableList = response.tableList;
+        private Builder(SubmitHotExpandPreCheckTaskRequest request) {
+            super(request);
+            this.dbInstType = request.dbInstType;
+            this.dbName = request.dbName;
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.tableList = request.tableList;
         } 
 
         /**
-         * DbInstType.
+         * The type of the database. Valid values:
+         * <p>
+         * 
+         * *   RDS
+         * *   PolarDB
          */
         public Builder dbInstType(String dbInstType) {
             this.putQueryParameter("DbInstType", dbInstType);
@@ -108,7 +112,7 @@ public class SubmitHotExpandPreCheckTaskRequest extends Request {
         }
 
         /**
-         * DbName.
+         * The name of the PolarDB-X database.
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -117,7 +121,7 @@ public class SubmitHotExpandPreCheckTaskRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the PolarDB-X 1.0 instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -126,7 +130,7 @@ public class SubmitHotExpandPreCheckTaskRequest extends Request {
         }
 
         /**
-         * TableList.
+         * The name of the table.
          */
         public Builder tableList(java.util.List < String > tableList) {
             this.putQueryParameter("TableList", tableList);

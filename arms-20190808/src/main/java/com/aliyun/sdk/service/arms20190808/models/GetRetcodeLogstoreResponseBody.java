@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRetcodeLogstoreResponseBody} extends {@link TeaModel}
  *
  * <p>GetRetcodeLogstoreResponseBody</p>
  */
 public class GetRetcodeLogstoreResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetRetcodeLogstoreResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetRetcodeLogstoreResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>The returned struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class GetRetcodeLogstoreResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A9C645C-C83F-4C9D-8CCB-29BEC9E1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class GetRetcodeLogstoreResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRetcodeLogstoreResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRetcodeLogstoreResponseBody</p>
+     */
     public static class RetcodeSLSConfig extends TeaModel {
-        @NameInMap("Logstore")
+        @com.aliyun.core.annotation.NameInMap("Logstore")
         private String logstore;
 
-        @NameInMap("Project")
+        @com.aliyun.core.annotation.NameInMap("Project")
         private String project;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private RetcodeSLSConfig(Builder builder) {
@@ -122,7 +136,10 @@ public class GetRetcodeLogstoreResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * Logstore.
+             * <p>The Log Service Logstore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>log-test-220431</p>
              */
             public Builder logstore(String logstore) {
                 this.logstore = logstore;
@@ -130,7 +147,10 @@ public class GetRetcodeLogstoreResponseBody extends TeaModel {
             }
 
             /**
-             * Project.
+             * <p>The Log Service project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-project</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -138,7 +158,10 @@ public class GetRetcodeLogstoreResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -152,14 +175,20 @@ public class GetRetcodeLogstoreResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRetcodeLogstoreResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRetcodeLogstoreResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("RetcodeSLSConfig")
+        @com.aliyun.core.annotation.NameInMap("RetcodeSLSConfig")
         private RetcodeSLSConfig retcodeSLSConfig;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Data(Builder builder) {
@@ -203,7 +232,10 @@ public class GetRetcodeLogstoreResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Message.
+             * <p>The content of the log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>retcode app or task can not be found!</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -211,7 +243,7 @@ public class GetRetcodeLogstoreResponseBody extends TeaModel {
             }
 
             /**
-             * RetcodeSLSConfig.
+             * <p>The information about Log Service.</p>
              */
             public Builder retcodeSLSConfig(RetcodeSLSConfig retcodeSLSConfig) {
                 this.retcodeSLSConfig = retcodeSLSConfig;
@@ -219,7 +251,10 @@ public class GetRetcodeLogstoreResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder status(String status) {
                 this.status = status;

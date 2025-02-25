@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEmgVulItemRequest} extends {@link RequestModel}
  *
  * <p>DescribeEmgVulItemRequest</p>
  */
 public class DescribeEmgVulItemRequest extends Request {
-    @Query
-    @NameInMap("CheckType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckType")
     private Integer checkType;
 
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RiskStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RiskStatus")
     private String riskStatus;
 
-    @Query
-    @NameInMap("ScanType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScanType")
     private String scanType;
 
-    @Query
-    @NameInMap("VulName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VulName")
     private String vulName;
 
     private DescribeEmgVulItemRequest(Builder builder) {
@@ -138,11 +143,14 @@ public class DescribeEmgVulItemRequest extends Request {
         } 
 
         /**
-         * The check method. Valid values:
-         * <p>
+         * <p>The check method. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: proof of concept (POC) verification</li>
+         * <li><strong>1</strong>: version comparison</li>
+         * </ul>
          * 
-         * *   **0**: proof of concept (POC) verification
-         * *   **1**: version comparison
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder checkType(Integer checkType) {
             this.putQueryParameter("CheckType", checkType);
@@ -151,7 +159,10 @@ public class DescribeEmgVulItemRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -160,11 +171,14 @@ public class DescribeEmgVulItemRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -173,7 +187,10 @@ public class DescribeEmgVulItemRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**.
+         * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -182,12 +199,14 @@ public class DescribeEmgVulItemRequest extends Request {
         }
 
         /**
-         * Specifies whether the vulnerability poses risks.\
-         * <p>
-         * If you do not specify this parameter, all vulnerabilities are queried regardless of whether the vulnerabilities pose risks. Valid values:
+         * <p>Specifies whether the vulnerability poses risks.<br>If you do not specify this parameter, all vulnerabilities are queried regardless of whether the vulnerabilities pose risks. Valid values:</p>
+         * <ul>
+         * <li><strong>y</strong>: yes</li>
+         * <li><strong>n</strong>: no</li>
+         * </ul>
          * 
-         * *   **y**: yes
-         * *   **n**: no
+         * <strong>example:</strong>
+         * <p>y</p>
          */
         public Builder riskStatus(String riskStatus) {
             this.putQueryParameter("RiskStatus", riskStatus);
@@ -196,12 +215,14 @@ public class DescribeEmgVulItemRequest extends Request {
         }
 
         /**
-         * The method that is used to detect the vulnerability.\
-         * <p>
-         * If you do not specify this parameter, all vulnerabilities are queried regardless of which method is used. Valid values:
+         * <p>The method that is used to detect the vulnerability.<br>If you do not specify this parameter, all vulnerabilities are queried regardless of which method is used. Valid values:</p>
+         * <ul>
+         * <li><strong>python</strong>: The Version method is used. Security Center checks the software versions of your server to check whether disclosed vulnerabilities exist on your server.</li>
+         * <li><strong>scan</strong>: The Network Scan method is used. Security Center analyzes the access traffic to your server over the Internet to check whether vulnerabilities exist on your server.</li>
+         * </ul>
          * 
-         * *   **python**: The Version method is used. Security Center checks the software versions of your server to check whether disclosed vulnerabilities exist on your server.
-         * *   **scan**: The Network Scan method is used. Security Center analyzes the access traffic to your server over the Internet to check whether vulnerabilities exist on your server.
+         * <strong>example:</strong>
+         * <p>python</p>
          */
         public Builder scanType(String scanType) {
             this.putQueryParameter("ScanType", scanType);
@@ -210,7 +231,10 @@ public class DescribeEmgVulItemRequest extends Request {
         }
 
         /**
-         * The name of the urgent vulnerability.
+         * <p>The name of the urgent vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Changjietong T + SetupAccount/Upload.aspx file Upload vulnerability (CNVD-2022-60632)</p>
          */
         public Builder vulName(String vulName) {
             this.putQueryParameter("VulName", vulName);

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClassicLinkInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeClassicLinkInstancesResponseBody</p>
  */
 public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
-    @NameInMap("Links")
+    @com.aliyun.core.annotation.NameInMap("Links")
     private Links links;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeClassicLinkInstancesResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The details of the ClassicLink connections between the instances reside in the classic network and VPCs.
+         * <p>The details of the ClassicLink connections between the instances reside in the classic network and VPCs.</p>
          */
         public Builder links(Links links) {
             this.links = links;
@@ -94,7 +99,10 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of ClassicLink connections.
+         * <p>The total number of ClassicLink connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,11 +148,17 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClassicLinkInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClassicLinkInstancesResponseBody</p>
+     */
     public static class Link extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private Link(Builder builder) {
@@ -170,7 +193,10 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-test</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -178,7 +204,10 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The VPC ID.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-test</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -192,9 +221,15 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClassicLinkInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClassicLinkInstancesResponseBody</p>
+     */
     public static class Links extends TeaModel {
-        @NameInMap("Link")
-        private java.util.List < Link> link;
+        @com.aliyun.core.annotation.NameInMap("Link")
+        private java.util.List<Link> link;
 
         private Links(Builder builder) {
             this.link = builder.link;
@@ -211,17 +246,17 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
         /**
          * @return link
          */
-        public java.util.List < Link> getLink() {
+        public java.util.List<Link> getLink() {
             return this.link;
         }
 
         public static final class Builder {
-            private java.util.List < Link> link; 
+            private java.util.List<Link> link; 
 
             /**
              * Link.
              */
-            public Builder link(java.util.List < Link> link) {
+            public Builder link(java.util.List<Link> link) {
                 this.link = link;
                 return this;
             }

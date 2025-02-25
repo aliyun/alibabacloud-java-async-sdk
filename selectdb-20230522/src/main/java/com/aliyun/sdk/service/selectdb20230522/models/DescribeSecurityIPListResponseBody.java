@@ -1,42 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.selectdb20230522.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSecurityIPListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSecurityIPListResponseBody</p>
  */
 public class DescribeSecurityIPListResponseBody extends TeaModel {
-    @NameInMap("Code")
-    private String code;
-
-    @NameInMap("DBInstanceName")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceName")
     private String DBInstanceName;
 
-    @NameInMap("GroupItems")
-    private java.util.List < GroupItems> groupItems;
+    @com.aliyun.core.annotation.NameInMap("GroupItems")
+    private java.util.List<GroupItems> groupItems;
 
-    @NameInMap("Message")
-    private String message;
-
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
-    private Boolean success;
-
     private DescribeSecurityIPListResponseBody(Builder builder) {
-        this.code = builder.code;
         this.DBInstanceName = builder.DBInstanceName;
         this.groupItems = builder.groupItems;
-        this.message = builder.message;
         this.requestId = builder.requestId;
-        this.success = builder.success;
     }
 
     public static Builder builder() {
@@ -45,13 +38,6 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
 
     public static DescribeSecurityIPListResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return code
-     */
-    public String getCode() {
-        return this.code;
     }
 
     /**
@@ -64,15 +50,8 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
     /**
      * @return groupItems
      */
-    public java.util.List < GroupItems> getGroupItems() {
+    public java.util.List<GroupItems> getGroupItems() {
         return this.groupItems;
-    }
-
-    /**
-     * @return message
-     */
-    public String getMessage() {
-        return this.message;
     }
 
     /**
@@ -82,31 +61,16 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    /**
-     * @return success
-     */
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public static final class Builder {
-        private String code; 
         private String DBInstanceName; 
-        private java.util.List < GroupItems> groupItems; 
-        private String message; 
+        private java.util.List<GroupItems> groupItems; 
         private String requestId; 
-        private Boolean success; 
 
         /**
-         * Code.
-         */
-        public Builder code(String code) {
-            this.code = code;
-            return this;
-        }
-
-        /**
-         * DBInstanceName.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb-cn-7213cjv****</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -114,34 +78,21 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
         }
 
         /**
-         * GroupItems.
+         * <p>The details about each IP address whitelist returned.</p>
          */
-        public Builder groupItems(java.util.List < GroupItems> groupItems) {
+        public Builder groupItems(java.util.List<GroupItems> groupItems) {
             this.groupItems = groupItems;
             return this;
         }
 
         /**
-         * Message.
-         */
-        public Builder message(String message) {
-            this.message = message;
-            return this;
-        }
-
-        /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5CBE044D-4594-525D-AC65-E988553D853E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * Success.
-         */
-        public Builder success(Boolean success) {
-            this.success = success;
             return this;
         }
 
@@ -151,20 +102,26 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSecurityIPListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityIPListResponseBody</p>
+     */
     public static class GroupItems extends TeaModel {
-        @NameInMap("AecurityIPType")
+        @com.aliyun.core.annotation.NameInMap("AecurityIPType")
         private String aecurityIPType;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("GroupTag")
+        @com.aliyun.core.annotation.NameInMap("GroupTag")
         private String groupTag;
 
-        @NameInMap("SecurityIPList")
+        @com.aliyun.core.annotation.NameInMap("SecurityIPList")
         private String securityIPList;
 
-        @NameInMap("WhitelistNetType")
+        @com.aliyun.core.annotation.NameInMap("WhitelistNetType")
         private String whitelistNetType;
 
         private GroupItems(Builder builder) {
@@ -226,7 +183,14 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
             private String whitelistNetType; 
 
             /**
-             * AecurityIPType.
+             * <p>The IP address type. Valid values:</p>
+             * <ul>
+             * <li>ipv4</li>
+             * <li>ipv6 (not supported)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ipv4</p>
              */
             public Builder aecurityIPType(String aecurityIPType) {
                 this.aecurityIPType = aecurityIPType;
@@ -234,7 +198,10 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>The name of the whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>group1</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -242,7 +209,10 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * GroupTag.
+             * <p>The tag of the whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder groupTag(String groupTag) {
                 this.groupTag = groupTag;
@@ -250,7 +220,10 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIPList.
+             * <p>The IP addresses in the whitelist. Multiple IP addresses are separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.0.XX.XX</p>
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;
@@ -258,7 +231,10 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * WhitelistNetType.
+             * <p>The network type of the whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mix</p>
              */
             public Builder whitelistNetType(String whitelistNetType) {
                 this.whitelistNetType = whitelistNetType;

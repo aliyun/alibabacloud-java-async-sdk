@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagDcdnResourcesRequest} extends {@link RequestModel}
  *
  * <p>TagDcdnResourcesRequest</p>
  */
 public class TagDcdnResourcesRequest extends Request {
-    @Query
-    @NameInMap("ResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > resourceId;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
-    @Query
-    @NameInMap("Tag")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Tag> tag;
 
     private TagDcdnResourcesRequest(Builder builder) {
@@ -85,7 +85,11 @@ public class TagDcdnResourcesRequest extends Request {
         } 
 
         /**
-         * The ID of the resource. Valid values of N: **1** to **50**.
+         * <p>The ID of the resource. Valid values of N: <strong>1</strong> to <strong>50</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -94,7 +98,11 @@ public class TagDcdnResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Set the value to **DOMAIN**.
+         * <p>The type of the resource. Set the value to <strong>DOMAIN</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DOMAIN</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -103,7 +111,8 @@ public class TagDcdnResourcesRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -118,12 +127,18 @@ public class TagDcdnResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TagDcdnResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>TagDcdnResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Key")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -158,7 +173,11 @@ public class TagDcdnResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag. Valid values of N: **1** to **20**.
+             * <p>The key of the tag. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -166,7 +185,10 @@ public class TagDcdnResourcesRequest extends Request {
             }
 
             /**
-             * The value of a tag. Valid values of N: **1** to **20**.
+             * <p>The value of a tag. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;

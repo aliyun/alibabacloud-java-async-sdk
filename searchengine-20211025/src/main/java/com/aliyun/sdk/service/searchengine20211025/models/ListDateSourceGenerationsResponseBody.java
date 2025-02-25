@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDateSourceGenerationsResponseBody} extends {@link TeaModel}
  *
  * <p>ListDateSourceGenerationsResponseBody</p>
  */
 public class ListDateSourceGenerationsResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
-    private java.util.List < Result> result;
+    @com.aliyun.core.annotation.NameInMap("result")
+    private java.util.List<Result> result;
 
     private ListDateSourceGenerationsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
 
         /**
-         * id of request
+         * <p>id of request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>022F36C7-9FB4-5D67-BEBC-3D14B0984463</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
         }
 
         /**
-         * List
+         * <p>List</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -71,26 +79,32 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDateSourceGenerationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDateSourceGenerationsResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("buildDeployId")
+        @com.aliyun.core.annotation.NameInMap("buildDeployId")
         private Integer buildDeployId;
 
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private Long createTime;
 
-        @NameInMap("dataDumpRoot")
+        @com.aliyun.core.annotation.NameInMap("dataDumpRoot")
         private String dataDumpRoot;
 
-        @NameInMap("generation")
+        @com.aliyun.core.annotation.NameInMap("generation")
         private Long generation;
 
-        @NameInMap("partition")
-        private java.util.Map < String, Integer > partition;
+        @com.aliyun.core.annotation.NameInMap("partition")
+        private java.util.Map<String, Integer> partition;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("timestamp")
+        @com.aliyun.core.annotation.NameInMap("timestamp")
         private Long timestamp;
 
         private Result(Builder builder) {
@@ -142,7 +156,7 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
         /**
          * @return partition
          */
-        public java.util.Map < String, Integer > getPartition() {
+        public java.util.Map<String, Integer> getPartition() {
             return this.partition;
         }
 
@@ -165,12 +179,15 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
             private Long createTime; 
             private String dataDumpRoot; 
             private Long generation; 
-            private java.util.Map < String, Integer > partition; 
+            private java.util.Map<String, Integer> partition; 
             private String status; 
             private Long timestamp; 
 
             /**
-             * buildDeployId
+             * <p>The ID of the offline deployment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>122</p>
              */
             public Builder buildDeployId(Integer buildDeployId) {
                 this.buildDeployId = buildDeployId;
@@ -178,7 +195,10 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
             }
 
             /**
-             * The time to start index building.
+             * <p>The timestamp that was generated when the index building was started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1626143673</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -186,7 +206,10 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
             }
 
             /**
-             * The directory where the index file created by using the dump table is saved.
+             * <p>The path of the dumped index in the Apsara File Storage for HDFS file system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder dataDumpRoot(String dataDumpRoot) {
                 this.dataDumpRoot = dataDumpRoot;
@@ -194,7 +217,10 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
             }
 
             /**
-             * The primary key of the generation.
+             * <p>The ID of the full index version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1626143930</p>
              */
             public Builder generation(Long generation) {
                 this.generation = generation;
@@ -202,15 +228,18 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
             }
 
             /**
-             * Key indicates the name of the index. value indicates the number of shards.
+             * <p>The shards of the index version. The value is a key-value pair in which the key indicates the index name and the value indicates the number of shards. The number of value shards.</p>
              */
-            public Builder partition(java.util.Map < String, Integer > partition) {
+            public Builder partition(java.util.Map<String, Integer> partition) {
                 this.partition = partition;
                 return this;
             }
 
             /**
-             * The status.
+             * <p>The status of the index version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STOPPED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -218,7 +247,10 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the offline indexing was initiated.
+             * <p>The start timestamp from which incremental data is retrieved.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1626143673</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;

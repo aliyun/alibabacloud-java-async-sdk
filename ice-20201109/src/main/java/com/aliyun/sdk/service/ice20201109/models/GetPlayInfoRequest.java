@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPlayInfoRequest} extends {@link RequestModel}
  *
  * <p>GetPlayInfoRequest</p>
  */
 public class GetPlayInfoRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("InputURL")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InputURL")
     private String inputURL;
 
-    @Query
-    @NameInMap("MediaId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaId")
     private String mediaId;
 
     private GetPlayInfoRequest(Builder builder) {
@@ -91,7 +96,10 @@ public class GetPlayInfoRequest extends Request {
         }
 
         /**
-         * InputURL.
+         * <p>The input URL that you specified for the media asset when you registered the media asset. For more information, see <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a>.</p>
+         * <blockquote>
+         * <p> You must specify at least one of the MediaId and InputURL parameters.</p>
+         * </blockquote>
          */
         public Builder inputURL(String inputURL) {
             this.putQueryParameter("InputURL", inputURL);
@@ -100,7 +108,13 @@ public class GetPlayInfoRequest extends Request {
         }
 
         /**
-         * MediaId.
+         * <p>The ID of the media asset.</p>
+         * <blockquote>
+         * <p> You must specify at least one of the MediaId and InputURL parameters.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>86434e152b7d4f20be480574439fe***</p>
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);

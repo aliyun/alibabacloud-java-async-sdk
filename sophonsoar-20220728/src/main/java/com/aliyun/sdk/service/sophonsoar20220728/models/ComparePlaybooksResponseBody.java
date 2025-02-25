@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ComparePlaybooksResponseBody} extends {@link TeaModel}
  *
  * <p>ComparePlaybooksResponseBody</p>
  */
 public class ComparePlaybooksResponseBody extends TeaModel {
-    @NameInMap("CompareResult")
+    @com.aliyun.core.annotation.NameInMap("CompareResult")
     private CompareResult compareResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ComparePlaybooksResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class ComparePlaybooksResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CompareResult.
+         * <p>The comparison result.</p>
          */
         public Builder compareResult(CompareResult compareResult) {
             this.compareResult = compareResult;
@@ -58,7 +58,10 @@ public class ComparePlaybooksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2EC05B06-BF3C-5F3E-8FE8-3B1FAD76087A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +74,20 @@ public class ComparePlaybooksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ComparePlaybooksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ComparePlaybooksResponseBody</p>
+     */
     public static class CompareResult extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("New")
+        @com.aliyun.core.annotation.NameInMap("New")
         private Boolean _new;
 
-        @NameInMap("Same")
+        @com.aliyun.core.annotation.NameInMap("Same")
         private Boolean same;
 
         private CompareResult(Builder builder) {
@@ -122,7 +131,10 @@ public class ComparePlaybooksResponseBody extends TeaModel {
             private Boolean same; 
 
             /**
-             * Description.
+             * <p>The description of the comparison result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The first version adds one node compared to the second version</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -130,7 +142,14 @@ public class ComparePlaybooksResponseBody extends TeaModel {
             }
 
             /**
-             * New.
+             * <p>Indicates whether the second version provides more information than the first version. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder _new(Boolean _new) {
                 this._new = _new;
@@ -138,7 +157,10 @@ public class ComparePlaybooksResponseBody extends TeaModel {
             }
 
             /**
-             * Same.
+             * <p>Indicates whether the configurations of the two versions are the same. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder same(Boolean same) {
                 this.same = same;

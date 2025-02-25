@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.emr20160408;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.emr20160408.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -22,19 +23,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddScalingConfigItemV2Response> addScalingConfigItemV2(AddScalingConfigItemV2Request request);
 
-    CompletableFuture<AuthorizeSecurityGroupResponse> authorizeSecurityGroup(AuthorizeSecurityGroupRequest request);
-
-    CompletableFuture<CancelOrderResponse> cancelOrder(CancelOrderRequest request);
-
     CompletableFuture<CloneFlowResponse> cloneFlow(CloneFlowRequest request);
 
     CompletableFuture<CloneFlowJobResponse> cloneFlowJob(CloneFlowJobRequest request);
-
-    CompletableFuture<CreateBackupResponse> createBackup(CreateBackupRequest request);
-
-    CompletableFuture<CreateBackupPlanResponse> createBackupPlan(CreateBackupPlanRequest request);
-
-    CompletableFuture<CreateClusterBootstrapActionResponse> createClusterBootstrapAction(CreateClusterBootstrapActionRequest request);
 
     CompletableFuture<CreateClusterHostGroupResponse> createClusterHostGroup(CreateClusterHostGroupRequest request);
 
@@ -43,10 +34,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateClusterV2Response> createClusterV2(CreateClusterV2Request request);
 
     CompletableFuture<CreateClusterWithTemplateResponse> createClusterWithTemplate(CreateClusterWithTemplateRequest request);
-
-    CompletableFuture<CreateDataSourceResponse> createDataSource(CreateDataSourceRequest request);
-
-    CompletableFuture<CreateExecutionPlanResponse> createExecutionPlan(CreateExecutionPlanRequest request);
 
     CompletableFuture<CreateFlowResponse> createFlow(CreateFlowRequest request);
 
@@ -62,31 +49,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateFlowProjectUserResponse> createFlowProjectUser(CreateFlowProjectUserRequest request);
 
-    CompletableFuture<CreateJobResponse> createJob(CreateJobRequest request);
-
-    CompletableFuture<CreateLibraryResponse> createLibrary(CreateLibraryRequest request);
-
-    CompletableFuture<CreateMetaTablePreviewTaskResponse> createMetaTablePreviewTask(CreateMetaTablePreviewTaskRequest request);
-
     CompletableFuture<CreateResourcePoolResponse> createResourcePool(CreateResourcePoolRequest request);
 
     CompletableFuture<CreateResourceQueueResponse> createResourceQueue(CreateResourceQueueRequest request);
 
     CompletableFuture<CreateScalingGroupV2Response> createScalingGroupV2(CreateScalingGroupV2Request request);
 
-    CompletableFuture<CreateScalingRuleResponse> createScalingRule(CreateScalingRuleRequest request);
-
-    CompletableFuture<CreateTagResponse> createTag(CreateTagRequest request);
-
-    CompletableFuture<CreateUserResponse> createUser(CreateUserRequest request);
-
-    CompletableFuture<CreateUsersResponse> createUsers(CreateUsersRequest request);
-
-    CompletableFuture<DecommissionHostComponentResponse> decommissionHostComponent(DecommissionHostComponentRequest request);
-
     CompletableFuture<DeleteClusterTemplateResponse> deleteClusterTemplate(DeleteClusterTemplateRequest request);
-
-    CompletableFuture<DeleteExecutionPlanResponse> deleteExecutionPlan(DeleteExecutionPlanRequest request);
 
     CompletableFuture<DeleteFlowResponse> deleteFlow(DeleteFlowRequest request);
 
@@ -100,23 +69,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteFlowProjectUserResponse> deleteFlowProjectUser(DeleteFlowProjectUserRequest request);
 
-    CompletableFuture<DeleteJobResponse> deleteJob(DeleteJobRequest request);
-
-    CompletableFuture<DeleteLibrariesResponse> deleteLibraries(DeleteLibrariesRequest request);
-
     CompletableFuture<DeleteResourcePoolResponse> deleteResourcePool(DeleteResourcePoolRequest request);
 
     CompletableFuture<DeleteResourceQueueResponse> deleteResourceQueue(DeleteResourceQueueRequest request);
 
-    CompletableFuture<DeleteScalingRuleResponse> deleteScalingRule(DeleteScalingRuleRequest request);
-
-    CompletableFuture<DeleteTagResponse> deleteTag(DeleteTagRequest request);
-
-    CompletableFuture<DeleteUserResponse> deleteUser(DeleteUserRequest request);
-
     CompletableFuture<DescribeClusterBasicInfoResponse> describeClusterBasicInfo(DescribeClusterBasicInfoRequest request);
-
-    CompletableFuture<DescribeClusterMetaCollectResponse> describeClusterMetaCollect(DescribeClusterMetaCollectRequest request);
 
     CompletableFuture<DescribeClusterOperationHostTaskLogResponse> describeClusterOperationHostTaskLog(DescribeClusterOperationHostTaskLogRequest request);
 
@@ -126,21 +83,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeClusterServiceConfigResponse> describeClusterServiceConfig(DescribeClusterServiceConfigRequest request);
 
-    CompletableFuture<DescribeClusterServiceConfigHistoryResponse> describeClusterServiceConfigHistory(DescribeClusterServiceConfigHistoryRequest request);
-
     CompletableFuture<DescribeClusterServiceConfigTagResponse> describeClusterServiceConfigTag(DescribeClusterServiceConfigTagRequest request);
 
     CompletableFuture<DescribeClusterTemplateResponse> describeClusterTemplate(DescribeClusterTemplateRequest request);
 
     CompletableFuture<DescribeClusterV2Response> describeClusterV2(DescribeClusterV2Request request);
-
-    CompletableFuture<DescribeDataSourceResponse> describeDataSource(DescribeDataSourceRequest request);
-
-    CompletableFuture<DescribeDiskOpsActivityResponse> describeDiskOpsActivity(DescribeDiskOpsActivityRequest request);
-
-    CompletableFuture<DescribeEmrMainVersionResponse> describeEmrMainVersion(DescribeEmrMainVersionRequest request);
-
-    CompletableFuture<DescribeExecutionPlanResponse> describeExecutionPlan(DescribeExecutionPlanRequest request);
 
     CompletableFuture<DescribeFlowResponse> describeFlow(DescribeFlowRequest request);
 
@@ -162,61 +109,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeFlowProjectClusterSettingResponse> describeFlowProjectClusterSetting(DescribeFlowProjectClusterSettingRequest request);
 
-    CompletableFuture<DescribeJobResponse> describeJob(DescribeJobRequest request);
-
-    CompletableFuture<DescribeLibraryDetailResponse> describeLibraryDetail(DescribeLibraryDetailRequest request);
-
-    CompletableFuture<DescribeLibraryInstallTaskDetailResponse> describeLibraryInstallTaskDetail(DescribeLibraryInstallTaskDetailRequest request);
-
-    CompletableFuture<DescribeMetaTablePreviewTaskResponse> describeMetaTablePreviewTask(DescribeMetaTablePreviewTaskRequest request);
-
-    CompletableFuture<DescribeScalingActivityResponse> describeScalingActivity(DescribeScalingActivityRequest request);
-
-    CompletableFuture<DescribeScalingCommonConfigResponse> describeScalingCommonConfig(DescribeScalingCommonConfigRequest request);
-
     CompletableFuture<DescribeScalingConfigItemV2Response> describeScalingConfigItemV2(DescribeScalingConfigItemV2Request request);
 
     CompletableFuture<DescribeScalingGroupInstanceV2Response> describeScalingGroupInstanceV2(DescribeScalingGroupInstanceV2Request request);
 
     CompletableFuture<DescribeScalingGroupV2Response> describeScalingGroupV2(DescribeScalingGroupV2Request request);
 
-    CompletableFuture<DescribeScalingRuleResponse> describeScalingRule(DescribeScalingRuleRequest request);
-
-    CompletableFuture<DescribeSecurityGroupAttributeResponse> describeSecurityGroupAttribute(DescribeSecurityGroupAttributeRequest request);
-
-    CompletableFuture<DetachAndReleaseClusterEniResponse> detachAndReleaseClusterEni(DetachAndReleaseClusterEniRequest request);
-
-    CompletableFuture<GetHdfsCapacityStatisticInfoResponse> getHdfsCapacityStatisticInfo(GetHdfsCapacityStatisticInfoRequest request);
-
-    CompletableFuture<GetJobInputStatisticInfoResponse> getJobInputStatisticInfo(GetJobInputStatisticInfoRequest request);
-
-    CompletableFuture<GetJobOutputStatisticInfoResponse> getJobOutputStatisticInfo(GetJobOutputStatisticInfoRequest request);
-
-    CompletableFuture<GetJobRunningTimeStatisticInfoResponse> getJobRunningTimeStatisticInfo(GetJobRunningTimeStatisticInfoRequest request);
-
-    CompletableFuture<GetQueueInputStatisticInfoResponse> getQueueInputStatisticInfo(GetQueueInputStatisticInfoRequest request);
-
-    CompletableFuture<GetQueueOutputStatisticInfoResponse> getQueueOutputStatisticInfo(GetQueueOutputStatisticInfoRequest request);
-
-    CompletableFuture<GetQueueSubmissionStatisticInfoResponse> getQueueSubmissionStatisticInfo(GetQueueSubmissionStatisticInfoRequest request);
-
-    CompletableFuture<GetUserInputStatisticInfoResponse> getUserInputStatisticInfo(GetUserInputStatisticInfoRequest request);
-
-    CompletableFuture<GetUserOutputStatisticInfoResponse> getUserOutputStatisticInfo(GetUserOutputStatisticInfoRequest request);
-
-    CompletableFuture<GetUserSubmissionStatisticInfoResponse> getUserSubmissionStatisticInfo(GetUserSubmissionStatisticInfoRequest request);
-
-    CompletableFuture<InstallLibrariesResponse> installLibraries(InstallLibrariesRequest request);
-
     CompletableFuture<JoinResourceGroupResponse> joinResourceGroup(JoinResourceGroupRequest request);
 
     CompletableFuture<KillFlowJobResponse> killFlowJob(KillFlowJobRequest request);
-
-    CompletableFuture<ListAdviceActionResponse> listAdviceAction(ListAdviceActionRequest request);
-
-    CompletableFuture<ListApmApplicationResponse> listApmApplication(ListApmApplicationRequest request);
-
-    CompletableFuture<ListBackupsResponse> listBackups(ListBackupsRequest request);
 
     CompletableFuture<ListClusterHostResponse> listClusterHost(ListClusterHostRequest request);
 
@@ -236,8 +137,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListClusterServiceResponse> listClusterService(ListClusterServiceRequest request);
 
-    CompletableFuture<ListClusterServiceComponentResponse> listClusterServiceComponent(ListClusterServiceComponentRequest request);
-
     CompletableFuture<ListClusterServiceComponentHealthInfoResponse> listClusterServiceComponentHealthInfo(ListClusterServiceComponentHealthInfoRequest request);
 
     CompletableFuture<ListClusterServiceConfigHistoryResponse> listClusterServiceConfigHistory(ListClusterServiceConfigHistoryRequest request);
@@ -248,17 +147,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListClustersResponse> listClusters(ListClustersRequest request);
 
-    CompletableFuture<ListDataSourceResponse> listDataSource(ListDataSourceRequest request);
-
-    CompletableFuture<ListDiskOpsEventsResponse> listDiskOpsEvents(ListDiskOpsEventsRequest request);
-
     CompletableFuture<ListEmrAvailableConfigResponse> listEmrAvailableConfig(ListEmrAvailableConfigRequest request);
 
     CompletableFuture<ListEmrAvailableResourceResponse> listEmrAvailableResource(ListEmrAvailableResourceRequest request);
 
     CompletableFuture<ListEmrMainVersionResponse> listEmrMainVersion(ListEmrMainVersionRequest request);
-
-    CompletableFuture<ListExecutionPlanInstancesResponse> listExecutionPlanInstances(ListExecutionPlanInstancesRequest request);
 
     CompletableFuture<ListFlowResponse> listFlow(ListFlowRequest request);
 
@@ -290,21 +183,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListFlowProjectUserResponse> listFlowProjectUser(ListFlowProjectUserRequest request);
 
-    CompletableFuture<ListJobExecutionInstancesResponse> listJobExecutionInstances(ListJobExecutionInstancesRequest request);
-
-    CompletableFuture<ListJobsResponse> listJobs(ListJobsRequest request);
-
-    CompletableFuture<ListLibrariesResponse> listLibraries(ListLibrariesRequest request);
-
-    CompletableFuture<ListLibraryInstallTasksResponse> listLibraryInstallTasks(ListLibraryInstallTasksRequest request);
-
-    CompletableFuture<ListLibraryStatusResponse> listLibraryStatus(ListLibraryStatusRequest request);
-
-    CompletableFuture<ListLocalDiskComponentInfoResponse> listLocalDiskComponentInfo(ListLocalDiskComponentInfoRequest request);
-
     CompletableFuture<ListResourcePoolResponse> listResourcePool(ListResourcePoolRequest request);
-
-    CompletableFuture<ListRolesResponse> listRoles(ListRolesRequest request);
 
     CompletableFuture<ListScalingActivityV2Response> listScalingActivityV2(ListScalingActivityV2Request request);
 
@@ -312,49 +191,21 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListScalingGroupV2Response> listScalingGroupV2(ListScalingGroupV2Request request);
 
-    CompletableFuture<ListSecurityGroupResponse> listSecurityGroup(ListSecurityGroupRequest request);
-
-    CompletableFuture<ListStackResponse> listStack(ListStackRequest request);
-
-    CompletableFuture<ListTagKeysResponse> listTagKeys(ListTagKeysRequest request);
-
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
-    CompletableFuture<ListTagValuesResponse> listTagValues(ListTagValuesRequest request);
-
-    CompletableFuture<ListUsersResponse> listUsers(ListUsersRequest request);
-
-    CompletableFuture<ListVswitchResponse> listVswitch(ListVswitchRequest request);
-
-    CompletableFuture<ModifyClusterBootstrapActionResponse> modifyClusterBootstrapAction(ModifyClusterBootstrapActionRequest request);
-
-    CompletableFuture<ModifyClusterHostGroupResponse> modifyClusterHostGroup(ModifyClusterHostGroupRequest request);
-
-    CompletableFuture<ModifyClusterMetaCollectResponse> modifyClusterMetaCollect(ModifyClusterMetaCollectRequest request);
-
     CompletableFuture<ModifyClusterNameResponse> modifyClusterName(ModifyClusterNameRequest request);
-
-    CompletableFuture<ModifyClusterSecurityGroupRuleResponse> modifyClusterSecurityGroupRule(ModifyClusterSecurityGroupRuleRequest request);
 
     CompletableFuture<ModifyClusterServiceConfigResponse> modifyClusterServiceConfig(ModifyClusterServiceConfigRequest request);
 
     CompletableFuture<ModifyClusterTemplateResponse> modifyClusterTemplate(ModifyClusterTemplateRequest request);
 
-    CompletableFuture<ModifyExecutionPlanResponse> modifyExecutionPlan(ModifyExecutionPlanRequest request);
-
-    CompletableFuture<ModifyFlowResponse> modifyFlow(ModifyFlowRequest request);
-
     CompletableFuture<ModifyFlowCategoryResponse> modifyFlowCategory(ModifyFlowCategoryRequest request);
 
     CompletableFuture<ModifyFlowForWebResponse> modifyFlowForWeb(ModifyFlowForWebRequest request);
 
-    CompletableFuture<ModifyFlowJobResponse> modifyFlowJob(ModifyFlowJobRequest request);
-
     CompletableFuture<ModifyFlowProjectResponse> modifyFlowProject(ModifyFlowProjectRequest request);
 
     CompletableFuture<ModifyFlowProjectClusterSettingResponse> modifyFlowProjectClusterSetting(ModifyFlowProjectClusterSettingRequest request);
-
-    CompletableFuture<ModifyJobResponse> modifyJob(ModifyJobRequest request);
 
     CompletableFuture<ModifyResourcePoolResponse> modifyResourcePool(ModifyResourcePoolRequest request);
 
@@ -365,14 +216,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyScalingConfigItemV2Response> modifyScalingConfigItemV2(ModifyScalingConfigItemV2Request request);
 
     CompletableFuture<ModifyScalingGroupV2Response> modifyScalingGroupV2(ModifyScalingGroupV2Request request);
-
-    CompletableFuture<ModifyScalingRuleResponse> modifyScalingRule(ModifyScalingRuleRequest request);
-
-    CompletableFuture<ModifyScalingTaskGroupResponse> modifyScalingTaskGroup(ModifyScalingTaskGroupRequest request);
-
-    CompletableFuture<QueryEntityResponse> queryEntity(QueryEntityRequest request);
-
-    CompletableFuture<QueryTagResponse> queryTag(QueryTagRequest request);
 
     CompletableFuture<RefreshClusterResourcePoolResponse> refreshClusterResourcePool(RefreshClusterResourcePoolRequest request);
 
@@ -386,21 +229,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ResizeClusterV2Response> resizeClusterV2(ResizeClusterV2Request request);
 
-    CompletableFuture<ResumeExecutionPlanSchedulerResponse> resumeExecutionPlanScheduler(ResumeExecutionPlanSchedulerRequest request);
-
     CompletableFuture<ResumeFlowResponse> resumeFlow(ResumeFlowRequest request);
-
-    CompletableFuture<RetryOperationResponse> retryOperation(RetryOperationRequest request);
 
     CompletableFuture<RunClusterServiceActionResponse> runClusterServiceAction(RunClusterServiceActionRequest request);
 
-    CompletableFuture<RunDiskOpsActivityResponse> runDiskOpsActivity(RunDiskOpsActivityRequest request);
-
-    CompletableFuture<RunExecutionPlanResponse> runExecutionPlan(RunExecutionPlanRequest request);
-
     CompletableFuture<RunScalingActionV2Response> runScalingActionV2(RunScalingActionV2Request request);
-
-    CompletableFuture<SearchLogResponse> searchLog(SearchLogRequest request);
 
     CompletableFuture<StartFlowResponse> startFlow(StartFlowRequest request);
 
@@ -408,22 +241,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SubmitFlowJobResponse> submitFlowJob(SubmitFlowJobRequest request);
 
-    CompletableFuture<SuspendExecutionPlanSchedulerResponse> suspendExecutionPlanScheduler(SuspendExecutionPlanSchedulerRequest request);
-
     CompletableFuture<SuspendFlowResponse> suspendFlow(SuspendFlowRequest request);
 
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
 
-    CompletableFuture<UninstallLibrariesResponse> uninstallLibraries(UninstallLibrariesRequest request);
-
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
-
-    CompletableFuture<UpdateDataSourceResponse> updateDataSource(UpdateDataSourceRequest request);
-
-    CompletableFuture<UpdateLibraryInstallTaskStatusResponse> updateLibraryInstallTaskStatus(UpdateLibraryInstallTaskStatusRequest request);
-
-    CompletableFuture<UpdateTagResponse> updateTag(UpdateTagRequest request);
-
-    CompletableFuture<UpdateUserResponse> updateUser(UpdateUserRequest request);
 
 }

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,131 +11,146 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PushSimpleRequest</p>
  */
 public class PushSimpleRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ActivityContentState")
+    private Object activityContentState;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ActivityEvent")
+    private String activityEvent;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Body
-    @NameInMap("ChannelId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChannelId")
     private String channelId;
 
-    @Body
-    @NameInMap("Classification")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Classification")
     private String classification;
 
-    @Body
-    @NameInMap("Content")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Content")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String content;
 
-    @Body
-    @NameInMap("DeliveryType")
-    @Validation(required = true, maximum = 10)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeliveryType")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 10)
     private Long deliveryType;
 
-    @Body
-    @NameInMap("ExpiredSeconds")
-    @Validation(required = true, maximum = 259200)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DismissalDate")
+    private Long dismissalDate;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExpiredSeconds")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 259200)
     private Long expiredSeconds;
 
-    @Body
-    @NameInMap("ExtendedParams")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExtendedParams")
     private String extendedParams;
 
-    @Body
-    @NameInMap("IconUrls")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IconUrls")
     private String iconUrls;
 
-    @Body
-    @NameInMap("ImageUrls")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ImageUrls")
     private String imageUrls;
 
-    @Body
-    @NameInMap("MiChannelId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MiChannelId")
     private String miChannelId;
 
-    @Body
-    @NameInMap("NotifyType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NotifyType")
     private String notifyType;
 
-    @Body
-    @NameInMap("PushAction")
-    @Validation(maximum = 10)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PushAction")
+    @com.aliyun.core.annotation.Validation(maximum = 10)
     private Long pushAction;
 
-    @Body
-    @NameInMap("PushStyle")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PushStyle")
     private Integer pushStyle;
 
-    @Body
-    @NameInMap("Silent")
-    @Validation(maximum = 10)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Silent")
+    @com.aliyun.core.annotation.Validation(maximum = 10)
     private Long silent;
 
-    @Body
-    @NameInMap("SmsSignName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SmsSignName")
     private String smsSignName;
 
-    @Body
-    @NameInMap("SmsStrategy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SmsStrategy")
     private Integer smsStrategy;
 
-    @Body
-    @NameInMap("SmsTemplateCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SmsTemplateCode")
     private String smsTemplateCode;
 
-    @Body
-    @NameInMap("SmsTemplateParam")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SmsTemplateParam")
     private String smsTemplateParam;
 
-    @Body
-    @NameInMap("StrategyContent")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StrategyContent")
     private String strategyContent;
 
-    @Body
-    @NameInMap("StrategyType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StrategyType")
     private Integer strategyType;
 
-    @Body
-    @NameInMap("TargetMsgkey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TargetMsgkey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetMsgkey;
 
-    @Body
-    @NameInMap("TaskName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TaskName")
     private String taskName;
 
-    @Body
-    @NameInMap("ThirdChannelCategory")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ThirdChannelCategory")
     private java.util.Map < String, ? > thirdChannelCategory;
 
-    @Body
-    @NameInMap("Title")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Title")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String title;
 
-    @Body
-    @NameInMap("Uri")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Uri")
     private String uri;
 
-    @Body
-    @NameInMap("WorkspaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
     private PushSimpleRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.activityContentState = builder.activityContentState;
+        this.activityEvent = builder.activityEvent;
         this.appId = builder.appId;
         this.channelId = builder.channelId;
         this.classification = builder.classification;
         this.content = builder.content;
         this.deliveryType = builder.deliveryType;
+        this.dismissalDate = builder.dismissalDate;
         this.expiredSeconds = builder.expiredSeconds;
         this.extendedParams = builder.extendedParams;
         this.iconUrls = builder.iconUrls;
@@ -181,6 +195,20 @@ public class PushSimpleRequest extends Request {
     }
 
     /**
+     * @return activityContentState
+     */
+    public Object getActivityContentState() {
+        return this.activityContentState;
+    }
+
+    /**
+     * @return activityEvent
+     */
+    public String getActivityEvent() {
+        return this.activityEvent;
+    }
+
+    /**
      * @return appId
      */
     public String getAppId() {
@@ -213,6 +241,13 @@ public class PushSimpleRequest extends Request {
      */
     public Long getDeliveryType() {
         return this.deliveryType;
+    }
+
+    /**
+     * @return dismissalDate
+     */
+    public Long getDismissalDate() {
+        return this.dismissalDate;
     }
 
     /**
@@ -364,11 +399,14 @@ public class PushSimpleRequest extends Request {
 
     public static final class Builder extends Request.Builder<PushSimpleRequest, Builder> {
         private String regionId; 
+        private Object activityContentState; 
+        private String activityEvent; 
         private String appId; 
         private String channelId; 
         private String classification; 
         private String content; 
         private Long deliveryType; 
+        private Long dismissalDate; 
         private Long expiredSeconds; 
         private String extendedParams; 
         private String iconUrls; 
@@ -398,11 +436,14 @@ public class PushSimpleRequest extends Request {
         private Builder(PushSimpleRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.activityContentState = request.activityContentState;
+            this.activityEvent = request.activityEvent;
             this.appId = request.appId;
             this.channelId = request.channelId;
             this.classification = request.classification;
             this.content = request.content;
             this.deliveryType = request.deliveryType;
+            this.dismissalDate = request.dismissalDate;
             this.expiredSeconds = request.expiredSeconds;
             this.extendedParams = request.extendedParams;
             this.iconUrls = request.iconUrls;
@@ -432,6 +473,24 @@ public class PushSimpleRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ActivityContentState.
+         */
+        public Builder activityContentState(Object activityContentState) {
+            this.putBodyParameter("ActivityContentState", activityContentState);
+            this.activityContentState = activityContentState;
+            return this;
+        }
+
+        /**
+         * ActivityEvent.
+         */
+        public Builder activityEvent(String activityEvent) {
+            this.putBodyParameter("ActivityEvent", activityEvent);
+            this.activityEvent = activityEvent;
             return this;
         }
 
@@ -477,6 +536,15 @@ public class PushSimpleRequest extends Request {
         public Builder deliveryType(Long deliveryType) {
             this.putBodyParameter("DeliveryType", deliveryType);
             this.deliveryType = deliveryType;
+            return this;
+        }
+
+        /**
+         * DismissalDate.
+         */
+        public Builder dismissalDate(Long dismissalDate) {
+            this.putBodyParameter("DismissalDate", dismissalDate);
+            this.dismissalDate = dismissalDate;
             return this;
         }
 

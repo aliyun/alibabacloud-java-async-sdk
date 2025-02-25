@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateHighReliablePhysicalConnectionResponseBody} extends {@link TeaModel}
  *
  * <p>CreateHighReliablePhysicalConnectionResponseBody</p>
  */
 public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
-    @NameInMap("ErrorInfoList")
+    @com.aliyun.core.annotation.NameInMap("ErrorInfoList")
     private ErrorInfoList errorInfoList;
 
-    @NameInMap("PhysicalConnectionList")
+    @com.aliyun.core.annotation.NameInMap("PhysicalConnectionList")
     private PhysicalConnectionList physicalConnectionList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateHighReliablePhysicalConnectionResponseBody(Builder builder) {
@@ -62,7 +67,13 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ErrorInfoList.
+         * <p>If the request fails the dry run, the following error codes and error messages may be returned:</p>
+         * <ul>
+         * <li>pconn.high.reliable.dryrun.error.disable.outbound.data.transfer.billing. Billing for outbound data transfer is not enabled.</li>
+         * <li>pconn.high.reliable.dryrun.error.incompatable.device.capacity. No device in the access point supports advanced features.</li>
+         * <li>pconn.high.reliable.dryrun.error.quota.exceeded. The quota is insufficient.</li>
+         * <li>pconn.high.reliable.dryrun.error.not.enough.resource. The access point resources are insufficient.</li>
+         * </ul>
          */
         public Builder errorInfoList(ErrorInfoList errorInfoList) {
             this.errorInfoList = errorInfoList;
@@ -70,7 +81,7 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * PhysicalConnectionList.
+         * <p>The Express Connect circuits.</p>
          */
         public Builder physicalConnectionList(PhysicalConnectionList physicalConnectionList) {
             this.physicalConnectionList = physicalConnectionList;
@@ -78,7 +89,10 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,14 +105,20 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateHighReliablePhysicalConnectionResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateHighReliablePhysicalConnectionResponseBody</p>
+     */
     public static class ErrorInfoListErrorInfoList extends TeaModel {
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
         private ErrorInfoListErrorInfoList(Builder builder) {
@@ -142,7 +162,10 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * ErrorCode.
+             * <p>Error codes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pconn.high.reliable.dryrun.error.disable.outbound.data.transfer.billing</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -150,7 +173,10 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The returned error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pconn.high.reliable.dryrun.error.disable.outbound.data.transfer.billing</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -158,7 +184,10 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the Express Connect circuit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-j5e5qqo616p81ncspbll1</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -172,9 +201,15 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateHighReliablePhysicalConnectionResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateHighReliablePhysicalConnectionResponseBody</p>
+     */
     public static class ErrorInfoList extends TeaModel {
-        @NameInMap("errorInfoList")
-        private java.util.List < ErrorInfoListErrorInfoList> errorInfoList;
+        @com.aliyun.core.annotation.NameInMap("errorInfoList")
+        private java.util.List<ErrorInfoListErrorInfoList> errorInfoList;
 
         private ErrorInfoList(Builder builder) {
             this.errorInfoList = builder.errorInfoList;
@@ -191,17 +226,17 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
         /**
          * @return errorInfoList
          */
-        public java.util.List < ErrorInfoListErrorInfoList> getErrorInfoList() {
+        public java.util.List<ErrorInfoListErrorInfoList> getErrorInfoList() {
             return this.errorInfoList;
         }
 
         public static final class Builder {
-            private java.util.List < ErrorInfoListErrorInfoList> errorInfoList; 
+            private java.util.List<ErrorInfoListErrorInfoList> errorInfoList; 
 
             /**
              * errorInfoList.
              */
-            public Builder errorInfoList(java.util.List < ErrorInfoListErrorInfoList> errorInfoList) {
+            public Builder errorInfoList(java.util.List<ErrorInfoListErrorInfoList> errorInfoList) {
                 this.errorInfoList = errorInfoList;
                 return this;
             }
@@ -213,11 +248,17 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateHighReliablePhysicalConnectionResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateHighReliablePhysicalConnectionResponseBody</p>
+     */
     public static class PhysicalConnectionListPhysicalConnectionList extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("RegionNo")
+        @com.aliyun.core.annotation.NameInMap("RegionNo")
         private String regionNo;
 
         private PhysicalConnectionListPhysicalConnectionList(Builder builder) {
@@ -252,7 +293,10 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
             private String regionNo; 
 
             /**
-             * InstanceId.
+             * <p>The ID of the Express Connect circuit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-j5e5qqo616p81ncspbll1</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -260,7 +304,10 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * <p>The region ID of the Express Connect circuit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -274,9 +321,15 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateHighReliablePhysicalConnectionResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateHighReliablePhysicalConnectionResponseBody</p>
+     */
     public static class PhysicalConnectionList extends TeaModel {
-        @NameInMap("physicalConnectionList")
-        private java.util.List < PhysicalConnectionListPhysicalConnectionList> physicalConnectionList;
+        @com.aliyun.core.annotation.NameInMap("physicalConnectionList")
+        private java.util.List<PhysicalConnectionListPhysicalConnectionList> physicalConnectionList;
 
         private PhysicalConnectionList(Builder builder) {
             this.physicalConnectionList = builder.physicalConnectionList;
@@ -293,17 +346,17 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
         /**
          * @return physicalConnectionList
          */
-        public java.util.List < PhysicalConnectionListPhysicalConnectionList> getPhysicalConnectionList() {
+        public java.util.List<PhysicalConnectionListPhysicalConnectionList> getPhysicalConnectionList() {
             return this.physicalConnectionList;
         }
 
         public static final class Builder {
-            private java.util.List < PhysicalConnectionListPhysicalConnectionList> physicalConnectionList; 
+            private java.util.List<PhysicalConnectionListPhysicalConnectionList> physicalConnectionList; 
 
             /**
              * physicalConnectionList.
              */
-            public Builder physicalConnectionList(java.util.List < PhysicalConnectionListPhysicalConnectionList> physicalConnectionList) {
+            public Builder physicalConnectionList(java.util.List<PhysicalConnectionListPhysicalConnectionList> physicalConnectionList) {
                 this.physicalConnectionList = physicalConnectionList;
                 return this;
             }

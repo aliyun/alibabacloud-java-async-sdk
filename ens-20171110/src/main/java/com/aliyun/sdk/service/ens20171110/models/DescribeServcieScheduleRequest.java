@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeServcieScheduleRequest} extends {@link RequestModel}
  *
  * <p>DescribeServcieScheduleRequest</p>
  */
 public class DescribeServcieScheduleRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("PodConfigName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PodConfigName")
     private String podConfigName;
 
-    @Query
-    @NameInMap("Uuid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String uuid;
 
     private DescribeServcieScheduleRequest(Builder builder) {
@@ -84,7 +89,11 @@ public class DescribeServcieScheduleRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>The ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>474bdef0-d149-4695-abfb-52912d91****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -93,7 +102,10 @@ public class DescribeServcieScheduleRequest extends Request {
         }
 
         /**
-         * PodConfigName.
+         * <p>This parameter does not take effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>android</p>
          */
         public Builder podConfigName(String podConfigName) {
             this.putQueryParameter("PodConfigName", podConfigName);
@@ -102,7 +114,11 @@ public class DescribeServcieScheduleRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * <p>The unique ID of the device.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hdm_f022bf160dc69e2d8eb421e508eb****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

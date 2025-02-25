@@ -1,53 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDoctorJobsStatsRequest} extends {@link RequestModel}
  *
  * <p>ListDoctorJobsStatsRequest</p>
  */
 public class ListDoctorJobsStatsRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("EndRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndRange")
     private EndRange endRange;
 
-    @Query
-    @NameInMap("GroupBy")
-    private java.util.List < String > groupBy;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupBy")
+    private java.util.List<String> groupBy;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OrderBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderBy")
     private String orderBy;
 
-    @Query
-    @NameInMap("OrderType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderType")
     private String orderType;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("StartRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartRange")
     private StartRange startRange;
 
     private ListDoctorJobsStatsRequest(Builder builder) {
@@ -93,7 +98,7 @@ public class ListDoctorJobsStatsRequest extends Request {
     /**
      * @return groupBy
      */
-    public java.util.List < String > getGroupBy() {
+    public java.util.List<String> getGroupBy() {
         return this.groupBy;
     }
 
@@ -142,7 +147,7 @@ public class ListDoctorJobsStatsRequest extends Request {
     public static final class Builder extends Request.Builder<ListDoctorJobsStatsRequest, Builder> {
         private String clusterId; 
         private EndRange endRange; 
-        private java.util.List < String > groupBy; 
+        private java.util.List<String> groupBy; 
         private Integer maxResults; 
         private String nextToken; 
         private String orderBy; 
@@ -168,7 +173,11 @@ public class ListDoctorJobsStatsRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b933c5aac8fe****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -177,7 +186,7 @@ public class ListDoctorJobsStatsRequest extends Request {
         }
 
         /**
-         * EndRange.
+         * <p>The range of end time. You can filter jobs whose end time falls within the specified time range.</p>
          */
         public Builder endRange(EndRange endRange) {
             this.putQueryParameter("EndRange", endRange);
@@ -186,16 +195,23 @@ public class ListDoctorJobsStatsRequest extends Request {
         }
 
         /**
-         * GroupBy.
+         * <p>The fields that are used for grouping data.</p>
+         * <p>Currently, only the first value is used for grouping data. Combinations of multiple values will be supported in the future.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
-        public Builder groupBy(java.util.List < String > groupBy) {
+        public Builder groupBy(java.util.List<String> groupBy) {
             this.putQueryParameter("GroupBy", groupBy);
             this.groupBy = groupBy;
             return this;
         }
 
         /**
-         * 一次获取的最大记录数。取值范围：1~100。
+         * <p>The maximum number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -204,7 +220,10 @@ public class ListDoctorJobsStatsRequest extends Request {
         }
 
         /**
-         * 标记当前开始读取的位置，置空表示从头开始。
+         * <p>The pagination token that is used in the request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -213,7 +232,14 @@ public class ListDoctorJobsStatsRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * <p>The field that you use to sort the query results. Valid values:</p>
+         * <ul>
+         * <li>vcoreSeconds: the aggregated number of vCPUs that are allocated to the job multiplied by the number of seconds the job has been running</li>
+         * <li>memSeconds: the aggregated amount of memory that is allocated to the job multiplied by the number of seconds the job has been running</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>vcoreSeconds</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -222,7 +248,14 @@ public class ListDoctorJobsStatsRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * <p>The order in which you want to sort the query results. Valid values:</p>
+         * <ul>
+         * <li>ASC: in ascending order</li>
+         * <li>DESC: in descending order</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -231,7 +264,11 @@ public class ListDoctorJobsStatsRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -240,7 +277,7 @@ public class ListDoctorJobsStatsRequest extends Request {
         }
 
         /**
-         * StartRange.
+         * <p>The range of start time. You can filter jobs whose start time falls within the specified time range.</p>
          */
         public Builder startRange(StartRange startRange) {
             this.putQueryParameter("StartRange", startRange);
@@ -255,11 +292,17 @@ public class ListDoctorJobsStatsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListDoctorJobsStatsRequest} extends {@link TeaModel}
+     *
+     * <p>ListDoctorJobsStatsRequest</p>
+     */
     public static class EndRange extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
         private EndRange(Builder builder) {
@@ -294,7 +337,10 @@ public class ListDoctorJobsStatsRequest extends Request {
             private Long startTime; 
 
             /**
-             * EndTime.
+             * <p>The end of the time range during which jobs ended. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1680019200000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -302,7 +348,10 @@ public class ListDoctorJobsStatsRequest extends Request {
             }
 
             /**
-             * StartTime.
+             * <p>The beginning of the time range during which jobs ended. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1675180800000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -316,11 +365,17 @@ public class ListDoctorJobsStatsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorJobsStatsRequest} extends {@link TeaModel}
+     *
+     * <p>ListDoctorJobsStatsRequest</p>
+     */
     public static class StartRange extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
         private StartRange(Builder builder) {
@@ -355,7 +410,10 @@ public class ListDoctorJobsStatsRequest extends Request {
             private Long startTime; 
 
             /**
-             * EndTime.
+             * <p>The end of the time range during which jobs were submitted. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1666406820000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -363,7 +421,10 @@ public class ListDoctorJobsStatsRequest extends Request {
             }
 
             /**
-             * StartTime.
+             * <p>The beginning of the time range during which jobs were submitted. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1679036826987</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

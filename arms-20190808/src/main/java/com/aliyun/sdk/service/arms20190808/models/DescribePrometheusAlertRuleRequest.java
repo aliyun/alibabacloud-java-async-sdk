@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePrometheusAlertRuleRequest} extends {@link RequestModel}
  *
  * <p>DescribePrometheusAlertRuleRequest</p>
  */
 public class DescribePrometheusAlertRuleRequest extends Request {
-    @Query
-    @NameInMap("AlertId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlertId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long alertId;
 
-    @Query
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
     private DescribePrometheusAlertRuleRequest(Builder builder) {
@@ -69,7 +74,11 @@ public class DescribePrometheusAlertRuleRequest extends Request {
         } 
 
         /**
-         * The ID of the alert rule. You can call the ListPrometheusAlertRules operation to query the ID of the alert rule.
+         * <p>The ID of the alert rule. You can call the ListPrometheusAlertRules operation to query the ID of the alert rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3888704</p>
          */
         public Builder alertId(Long alertId) {
             this.putQueryParameter("AlertId", alertId);
@@ -78,7 +87,10 @@ public class DescribePrometheusAlertRuleRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * <p>The ID of the Prometheus instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc7a37ee31aea4ed1a059eff8034b****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);

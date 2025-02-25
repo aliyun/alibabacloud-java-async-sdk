@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListIncidentsResponseBody</p>
  */
 public class ListIncidentsResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private java.util.List < Data> data;
 
-    @NameInMap("pageNumber")
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Integer pageNumber;
 
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Integer pageSize;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("totalCount")
+    @com.aliyun.core.annotation.NameInMap("totalCount")
     private Integer totalCount;
 
     private ListIncidentsResponseBody(Builder builder) {
@@ -132,58 +131,58 @@ public class ListIncidentsResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("assignToWhoIsValid")
+        @com.aliyun.core.annotation.NameInMap("assignToWhoIsValid")
         private Long assignToWhoIsValid;
 
-        @NameInMap("assignUserId")
+        @com.aliyun.core.annotation.NameInMap("assignUserId")
         private Long assignUserId;
 
-        @NameInMap("assignUserName")
+        @com.aliyun.core.annotation.NameInMap("assignUserName")
         private String assignUserName;
 
-        @NameInMap("assignUserPhone")
+        @com.aliyun.core.annotation.NameInMap("assignUserPhone")
         private String assignUserPhone;
 
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
 
-        @NameInMap("effect")
+        @com.aliyun.core.annotation.NameInMap("effect")
         private String effect;
 
-        @NameInMap("incidentId")
+        @com.aliyun.core.annotation.NameInMap("incidentId")
         private Long incidentId;
 
-        @NameInMap("incidentLevel")
+        @com.aliyun.core.annotation.NameInMap("incidentLevel")
         private String incidentLevel;
 
-        @NameInMap("incidentNumber")
+        @com.aliyun.core.annotation.NameInMap("incidentNumber")
         private String incidentNumber;
 
-        @NameInMap("incidentStatus")
+        @com.aliyun.core.annotation.NameInMap("incidentStatus")
         private String incidentStatus;
 
-        @NameInMap("incidentTitle")
+        @com.aliyun.core.annotation.NameInMap("incidentTitle")
         private String incidentTitle;
 
-        @NameInMap("isManual")
+        @com.aliyun.core.annotation.NameInMap("isManual")
         private Boolean isManual;
 
-        @NameInMap("relRouteRuleDeleteType")
+        @com.aliyun.core.annotation.NameInMap("relRouteRuleDeleteType")
         private Integer relRouteRuleDeleteType;
 
-        @NameInMap("relServiceDeleteType")
+        @com.aliyun.core.annotation.NameInMap("relServiceDeleteType")
         private Integer relServiceDeleteType;
 
-        @NameInMap("relatedServiceId")
+        @com.aliyun.core.annotation.NameInMap("relatedServiceId")
         private Long relatedServiceId;
 
-        @NameInMap("relatedServiceName")
+        @com.aliyun.core.annotation.NameInMap("relatedServiceName")
         private String relatedServiceName;
 
-        @NameInMap("routeRuleId")
+        @com.aliyun.core.annotation.NameInMap("routeRuleId")
         private Long routeRuleId;
 
-        @NameInMap("routeRuleName")
+        @com.aliyun.core.annotation.NameInMap("routeRuleName")
         private String routeRuleName;
 
         private Data(Builder builder) {

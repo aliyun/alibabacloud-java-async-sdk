@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGroupedInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeGroupedInstancesResponseBody</p>
  */
 public class DescribeGroupedInstancesResponseBody extends TeaModel {
-    @NameInMap("Instances")
-    private java.util.List < Instances> instances;
+    @com.aliyun.core.annotation.NameInMap("Instances")
+    private java.util.List<Instances> instances;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeGroupedInstancesResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
     /**
      * @return instances
      */
-    public java.util.List < Instances> getInstances() {
+    public java.util.List<Instances> getInstances() {
         return this.instances;
     }
 
@@ -57,20 +62,20 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Instances> instances; 
+        private java.util.List<Instances> instances; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
-         * An array that consists of the information about the assets.
+         * <p>The information about the assets.</p>
          */
-        public Builder instances(java.util.List < Instances> instances) {
+        public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
             return this;
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +83,10 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52A3AEE6-114A-499D-8990-4BA9B27FE0AA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,29 +99,38 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeGroupedInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGroupedInstancesResponseBody</p>
+     */
     public static class Instances extends TeaModel {
-        @NameInMap("AsapVulInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("AsapVulInstanceCount")
         private Long asapVulInstanceCount;
 
-        @NameInMap("AuthVersionCheckCount")
+        @com.aliyun.core.annotation.NameInMap("AuthVersionCheckCount")
         private Integer authVersionCheckCount;
 
-        @NameInMap("FieldAliasName")
+        @com.aliyun.core.annotation.NameInMap("FieldAliasName")
         private String fieldAliasName;
 
-        @NameInMap("GroupFlag")
+        @com.aliyun.core.annotation.NameInMap("GroupFlag")
         private Integer groupFlag;
 
-        @NameInMap("InstanceCount")
+        @com.aliyun.core.annotation.NameInMap("InstanceCoreCount")
+        private Long instanceCoreCount;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceCount")
         private String instanceCount;
 
-        @NameInMap("Os")
+        @com.aliyun.core.annotation.NameInMap("Os")
         private String os;
 
-        @NameInMap("RiskInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("RiskInstanceCount")
         private String riskInstanceCount;
 
-        @NameInMap("UnProtectedInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("UnProtectedInstanceCount")
         private String unProtectedInstanceCount;
 
         private Instances(Builder builder) {
@@ -121,6 +138,7 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             this.authVersionCheckCount = builder.authVersionCheckCount;
             this.fieldAliasName = builder.fieldAliasName;
             this.groupFlag = builder.groupFlag;
+            this.instanceCoreCount = builder.instanceCoreCount;
             this.instanceCount = builder.instanceCount;
             this.os = builder.os;
             this.riskInstanceCount = builder.riskInstanceCount;
@@ -164,6 +182,13 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceCoreCount
+         */
+        public Long getInstanceCoreCount() {
+            return this.instanceCoreCount;
+        }
+
+        /**
          * @return instanceCount
          */
         public String getInstanceCount() {
@@ -196,13 +221,17 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             private Integer authVersionCheckCount; 
             private String fieldAliasName; 
             private Integer groupFlag; 
+            private Long instanceCoreCount; 
             private String instanceCount; 
             private String os; 
             private String riskInstanceCount; 
             private String unProtectedInstanceCount; 
 
             /**
-             * The number of assets on which high-risk vulnerabilities are detected.
+             * <p>The number of assets on which high-risk vulnerabilities are detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder asapVulInstanceCount(Long asapVulInstanceCount) {
                 this.asapVulInstanceCount = asapVulInstanceCount;
@@ -210,7 +239,10 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of assets that are protected by the specified edition.
+             * <p>The number of assets that are protected by the specified edition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>205</p>
              */
             public Builder authVersionCheckCount(Integer authVersionCheckCount) {
                 this.authVersionCheckCount = authVersionCheckCount;
@@ -218,7 +250,10 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server group.
+             * <p>The name of the server group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testA</p>
              */
             public Builder fieldAliasName(String fieldAliasName) {
                 this.fieldAliasName = fieldAliasName;
@@ -226,11 +261,14 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the server group. Valid values:
-             * <p>
+             * <p>The type of the server group. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: the default group</li>
+             * <li><strong>1</strong>: other group</li>
+             * </ul>
              * 
-             * *   **0**: the default group
-             * *   **1**: other group
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder groupFlag(Integer groupFlag) {
                 this.groupFlag = groupFlag;
@@ -238,10 +276,27 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of assets that belong to the specified type.
-             * <p>
+             * <p>The number of cores of assets in the specified asset type.</p>
+             * <blockquote>
+             * <p> If the <strong>MachineTypes</strong> request parameter is not specified, the value of the InstanceCoreCount parameter indicates the total number of cores of assets within your account.</p>
+             * </blockquote>
              * 
-             * >  If the **MachineTypes** request parameter is not specified, the value of the InstanceCount parameter is the total number of your assets.
+             * <strong>example:</strong>
+             * <p>610</p>
+             */
+            public Builder instanceCoreCount(Long instanceCoreCount) {
+                this.instanceCoreCount = instanceCoreCount;
+                return this;
+            }
+
+            /**
+             * <p>The total number of assets that belong to the specified type.</p>
+             * <blockquote>
+             * <p> If the <strong>MachineTypes</strong> request parameter is not specified, the value of the InstanceCount parameter is the total number of your assets.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>205</p>
              */
             public Builder instanceCount(String instanceCount) {
                 this.instanceCount = instanceCount;
@@ -249,13 +304,17 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system type of the asset. Valid values:
-             * <p>
+             * <p>The operating system type of the asset. Valid values:</p>
+             * <ul>
+             * <li><strong>windows</strong></li>
+             * <li><strong>linux</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter is returned only when Lang is set to zh.</p>
+             * </blockquote>
              * 
-             * * **windows**
-             * * **linux**
-             * 
-             * > This parameter is returned only when Lang is set to zh.
+             * <strong>example:</strong>
+             * <p>windows</p>
              */
             public Builder os(String os) {
                 this.os = os;
@@ -263,7 +322,10 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of assets that are at risk.
+             * <p>The number of assets that are at risk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172</p>
              */
             public Builder riskInstanceCount(String riskInstanceCount) {
                 this.riskInstanceCount = riskInstanceCount;
@@ -271,7 +333,10 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of assets that are not protected by Security Center.
+             * <p>The number of assets that are not protected by Security Center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder unProtectedInstanceCount(String unProtectedInstanceCount) {
                 this.unProtectedInstanceCount = unProtectedInstanceCount;
@@ -285,17 +350,23 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGroupedInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGroupedInstancesResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -348,7 +419,10 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -356,7 +430,10 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -364,7 +441,10 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: **20**.
+             * <p>The number of entries returned per page. Default value: <strong>20</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -372,7 +452,10 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetBlockchainInfoResponseBody</p>
  */
 public class GetBlockchainInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private GetBlockchainInfoResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class GetBlockchainInfoResponseBody extends TeaModel {
     } 
 
     public static class NodeInfoList extends TeaModel {
-        @NameInMap("BlockHeight")
+        @com.aliyun.core.annotation.NameInMap("BlockHeight")
         private Long blockHeight;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Boolean status;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private NodeInfoList(Builder builder) {
@@ -173,34 +172,34 @@ public class GetBlockchainInfoResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("AbnormalNodes")
+        @com.aliyun.core.annotation.NameInMap("AbnormalNodes")
         private Integer abnormalNodes;
 
-        @NameInMap("Bizid")
+        @com.aliyun.core.annotation.NameInMap("Bizid")
         private String bizid;
 
-        @NameInMap("BlockHeight")
+        @com.aliyun.core.annotation.NameInMap("BlockHeight")
         private Integer blockHeight;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("IsRole")
+        @com.aliyun.core.annotation.NameInMap("IsRole")
         private Boolean isRole;
 
-        @NameInMap("NodeInfoList")
+        @com.aliyun.core.annotation.NameInMap("NodeInfoList")
         private java.util.List < NodeInfoList> nodeInfoList;
 
-        @NameInMap("NodeNumber")
+        @com.aliyun.core.annotation.NameInMap("NodeNumber")
         private Integer nodeNumber;
 
-        @NameInMap("Normal")
+        @com.aliyun.core.annotation.NameInMap("Normal")
         private Boolean normal;
 
-        @NameInMap("TransactionSum")
+        @com.aliyun.core.annotation.NameInMap("TransactionSum")
         private Integer transactionSum;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private Result(Builder builder) {

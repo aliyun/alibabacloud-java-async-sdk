@@ -1,30 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcesharing20200110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisassociateResourceSharePermissionRequest} extends {@link RequestModel}
  *
  * <p>DisassociateResourceSharePermissionRequest</p>
  */
 public class DisassociateResourceSharePermissionRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("PermissionName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PermissionName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String permissionName;
 
-    @Query
-    @NameInMap("ResourceShareId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceShareId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceShareId;
 
     private DisassociateResourceSharePermissionRequest(Builder builder) {
@@ -85,7 +84,7 @@ public class DisassociateResourceSharePermissionRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -94,7 +93,11 @@ public class DisassociateResourceSharePermissionRequest extends Request {
         }
 
         /**
-         * The name of the permission. For more information, see [Permission library](~~465474~~).
+         * <p>The name of the permission. For more information, see <a href="https://help.aliyun.com/document_detail/465474.html">Permission library</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunRSDefaultPermissionVSwitch</p>
          */
         public Builder permissionName(String permissionName) {
             this.putQueryParameter("PermissionName", permissionName);
@@ -103,7 +106,11 @@ public class DisassociateResourceSharePermissionRequest extends Request {
         }
 
         /**
-         * The ID of the resource share.
+         * <p>The ID of the resource share.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rs-6GRmdD3X****</p>
          */
         public Builder resourceShareId(String resourceShareId) {
             this.putQueryParameter("ResourceShareId", resourceShareId);

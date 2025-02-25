@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLogAnalysisResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLogAnalysisResponseBody</p>
  */
 public class DescribeLogAnalysisResponseBody extends TeaModel {
-    @NameInMap("Analyses")
+    @com.aliyun.core.annotation.NameInMap("Analyses")
     private Analyses analyses;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeLogAnalysisResponseBody(Builder builder) {
@@ -98,7 +103,7 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Analyses.
+         * <p>The collection of log dump information.</p>
          */
         public Builder analyses(Analyses analyses) {
             this.analyses = analyses;
@@ -106,7 +111,10 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +122,10 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +133,10 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of log dump entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +144,10 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C84F77AF-3DE5-48F1-B19B-37FCBE24****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of log dump entries in the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -151,17 +171,23 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLogAnalysisResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLogAnalysisResponseBody</p>
+     */
     public static class MetaValue extends TeaModel {
-        @NameInMap("Logstore")
+        @com.aliyun.core.annotation.NameInMap("Logstore")
         private String logstore;
 
-        @NameInMap("Project")
+        @com.aliyun.core.annotation.NameInMap("Project")
         private String project;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("RoleArn")
+        @com.aliyun.core.annotation.NameInMap("RoleArn")
         private String roleArn;
 
         private MetaValue(Builder builder) {
@@ -214,7 +240,10 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
             private String roleArn; 
 
             /**
-             * Logstore.
+             * <p>The name of the dedicated Logstore that is used to store NAS operation logs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nas-nfs</p>
              */
             public Builder logstore(String logstore) {
                 this.logstore = logstore;
@@ -222,7 +251,10 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * Project.
+             * <p>The name of the project where the dedicated Logstore resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nas-1746495857602745-cn-hangzhou</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -230,7 +262,10 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region where the dedicated Logstore resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -238,7 +273,10 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * RoleArn.
+             * <p>The role that is used by NAS to access Simple Log Service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::162165525211xxxx:role/aliyunnaslogarchiverole</p>
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -252,11 +290,17 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLogAnalysisResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLogAnalysisResponseBody</p>
+     */
     public static class Analysis extends TeaModel {
-        @NameInMap("MetaKey")
+        @com.aliyun.core.annotation.NameInMap("MetaKey")
         private String metaKey;
 
-        @NameInMap("MetaValue")
+        @com.aliyun.core.annotation.NameInMap("MetaValue")
         private MetaValue metaValue;
 
         private Analysis(Builder builder) {
@@ -291,7 +335,10 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
             private MetaValue metaValue; 
 
             /**
-             * MetaKey.
+             * <p>The ID of the file system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0c7154xxxx</p>
              */
             public Builder metaKey(String metaKey) {
                 this.metaKey = metaKey;
@@ -299,7 +346,7 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * MetaValue.
+             * <p>The log dump information of the file system.</p>
              */
             public Builder metaValue(MetaValue metaValue) {
                 this.metaValue = metaValue;
@@ -313,9 +360,15 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLogAnalysisResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLogAnalysisResponseBody</p>
+     */
     public static class Analyses extends TeaModel {
-        @NameInMap("Analysis")
-        private java.util.List < Analysis> analysis;
+        @com.aliyun.core.annotation.NameInMap("Analysis")
+        private java.util.List<Analysis> analysis;
 
         private Analyses(Builder builder) {
             this.analysis = builder.analysis;
@@ -332,17 +385,17 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
         /**
          * @return analysis
          */
-        public java.util.List < Analysis> getAnalysis() {
+        public java.util.List<Analysis> getAnalysis() {
             return this.analysis;
         }
 
         public static final class Builder {
-            private java.util.List < Analysis> analysis; 
+            private java.util.List<Analysis> analysis; 
 
             /**
              * Analysis.
              */
-            public Builder analysis(java.util.List < Analysis> analysis) {
+            public Builder analysis(java.util.List<Analysis> analysis) {
                 this.analysis = analysis;
                 return this;
             }

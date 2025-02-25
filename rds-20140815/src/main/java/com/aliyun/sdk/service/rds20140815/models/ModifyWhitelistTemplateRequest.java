@@ -1,45 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyWhitelistTemplateRequest} extends {@link RequestModel}
  *
  * <p>ModifyWhitelistTemplateRequest</p>
  */
 public class ModifyWhitelistTemplateRequest extends Request {
-    @Query
-    @NameInMap("IpWhitelist")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpWhitelist")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ipWhitelist;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private Integer templateId;
 
-    @Query
-    @NameInMap("TemplateName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
     private String templateName;
 
     private ModifyWhitelistTemplateRequest(Builder builder) {
         super(builder);
         this.ipWhitelist = builder.ipWhitelist;
+        this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -65,6 +75,13 @@ public class ModifyWhitelistTemplateRequest extends Request {
      */
     public String getIpWhitelist() {
         return this.ipWhitelist;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -104,6 +121,7 @@ public class ModifyWhitelistTemplateRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyWhitelistTemplateRequest, Builder> {
         private String ipWhitelist; 
+        private String regionId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -117,6 +135,7 @@ public class ModifyWhitelistTemplateRequest extends Request {
         private Builder(ModifyWhitelistTemplateRequest request) {
             super(request);
             this.ipWhitelist = request.ipWhitelist;
+            this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
@@ -125,13 +144,18 @@ public class ModifyWhitelistTemplateRequest extends Request {
         } 
 
         /**
-         * The IP addresses in an IP address whitelist. Separate multiple IP addresses with commas (,). Each IP address in the IP address whitelist must be unique. The entries in the IP address whitelist must be in one of the following formats:
-         * <p>
+         * <p>The IP addresses in an IP address whitelist. Separate multiple IP addresses with commas (,). Each IP address in the IP address whitelist must be unique. The entries in the IP address whitelist must be in one of the following formats:</p>
+         * <ul>
+         * <li>IP addresses, such as 10.23.XX.XX.</li>
+         * <li>CIDR blocks, such as 10.23.XX.XX/24. In this example, 24 indicates that the prefix of the CIDR block is 24-bit in length. You can replace 24 with a value that ranges from 1 to 32.</li>
+         * </ul>
+         * <blockquote>
+         * <p>: A maximum of 1,000 IP addresses or CIDR blocks can be added for each instance. If you want to add a large number of IP addresses, we recommend that you merge them into CIDR blocks, such as 10.23.XX.XX/24.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   IP addresses, such as 10.23.XX.XX.
-         * *   CIDR blocks, such as 10.23.XX.XX/24. In this example, 24 indicates that the prefix of the CIDR block is 24-bit in length. You can replace 24 with a value that ranges from 1 to 32.
-         * 
-         * > : A maximum of 1,000 IP addresses or CIDR blocks can be added for each instance. If you want to add a large number of IP addresses, we recommend that you merge them into CIDR blocks, such as 10.23.XX.XX/24.
+         * <strong>example:</strong>
+         * <p>139.196.X.X,101.132.X.X</p>
          */
         public Builder ipWhitelist(String ipWhitelist) {
             this.putQueryParameter("IpWhitelist", ipWhitelist);
@@ -140,7 +164,22 @@ public class ModifyWhitelistTemplateRequest extends Request {
         }
 
         /**
-         * The resource group ID. For more information about resource groups, see related documentation.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent zone list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The resource group ID. For more information about resource groups, see related documentation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -167,7 +206,10 @@ public class ModifyWhitelistTemplateRequest extends Request {
         }
 
         /**
-         * The ID of the whitelist template. This parameter is required when you modify or delete a whitelist. You can call the DescribeAllWhitelistTemplate operation to obtain the ID of the whitelist.
+         * <p>The ID of the whitelist template. This parameter is required when you modify or delete a whitelist. You can call the DescribeAllWhitelistTemplate operation to obtain the ID of the whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>539</p>
          */
         public Builder templateId(Integer templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -176,7 +218,10 @@ public class ModifyWhitelistTemplateRequest extends Request {
         }
 
         /**
-         * The name of the IP whitelist. This parameter is required when you create a whitelist. The value of this parameter cannot be modified after the whitelist is created. The value must be unique to an Alibaba Cloud account and start with a letter. You can call the DescribeWhitelistTemplate operation to obtain the name of the whitelist.
+         * <p>The name of the IP whitelist. This parameter is required when you create a whitelist. The value of this parameter cannot be modified after the whitelist is created. The value must be unique to an Alibaba Cloud account and start with a letter. You can call the DescribeWhitelistTemplate operation to obtain the name of the whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>template_123</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);

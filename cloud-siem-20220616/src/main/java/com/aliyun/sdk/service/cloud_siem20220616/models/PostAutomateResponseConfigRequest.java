@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PostAutomateResponseConfigRequest</p>
  */
 public class PostAutomateResponseConfigRequest extends Request {
-    @Body
-    @NameInMap("ActionConfig")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ActionConfig")
     private String actionConfig;
 
-    @Body
-    @NameInMap("ActionType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ActionType")
     private String actionType;
 
-    @Body
-    @NameInMap("AutoResponseType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoResponseType")
     private String autoResponseType;
 
-    @Body
-    @NameInMap("ExecutionCondition")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExecutionCondition")
     private String executionCondition;
 
-    @Body
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("RuleName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleFor")
+    private Long roleFor;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleType")
+    private Integer roleType;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RuleName")
     private String ruleName;
 
-    @Body
-    @NameInMap("SubUserId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SubUserId")
     private Long subUserId;
 
     private PostAutomateResponseConfigRequest(Builder builder) {
@@ -52,6 +59,8 @@ public class PostAutomateResponseConfigRequest extends Request {
         this.executionCondition = builder.executionCondition;
         this.id = builder.id;
         this.regionId = builder.regionId;
+        this.roleFor = builder.roleFor;
+        this.roleType = builder.roleType;
         this.ruleName = builder.ruleName;
         this.subUserId = builder.subUserId;
     }
@@ -112,6 +121,20 @@ public class PostAutomateResponseConfigRequest extends Request {
     }
 
     /**
+     * @return roleFor
+     */
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    /**
+     * @return roleType
+     */
+    public Integer getRoleType() {
+        return this.roleType;
+    }
+
+    /**
      * @return ruleName
      */
     public String getRuleName() {
@@ -132,6 +155,8 @@ public class PostAutomateResponseConfigRequest extends Request {
         private String executionCondition; 
         private Long id; 
         private String regionId; 
+        private Long roleFor; 
+        private Integer roleType; 
         private String ruleName; 
         private Long subUserId; 
 
@@ -147,12 +172,14 @@ public class PostAutomateResponseConfigRequest extends Request {
             this.executionCondition = request.executionCondition;
             this.id = request.id;
             this.regionId = request.regionId;
+            this.roleFor = request.roleFor;
+            this.roleType = request.roleType;
             this.ruleName = request.ruleName;
             this.subUserId = request.subUserId;
         } 
 
         /**
-         * The configuration of the action that is performed after the rule is hit. The value is in JSON format.
+         * The action configuration of the automated response rule. The value is in the JSON format.
          */
         public Builder actionConfig(String actionConfig) {
             this.putBodyParameter("ActionConfig", actionConfig);
@@ -161,12 +188,12 @@ public class PostAutomateResponseConfigRequest extends Request {
         }
 
         /**
-         * The action that is performed after the rule is hit. Separate multiple values with commas (,). Valid values:
+         * The type of the handling action. Multiple types are separated by commas (,). Valid values:
          * <p>
          * 
-         * *   doPlaybook: Execute a playbook.
-         * *   changeEventStatus: Change the event status.
-         * *   changeThreatLevel: Change the threat level of the event.
+         * *   **doPlaybook**: runs the playbook.
+         * *   **changeEventStatus**: changes the event status.
+         * *   **changeThreatLevel**: changes the threat level of the event.
          */
         public Builder actionType(String actionType) {
             this.putBodyParameter("ActionType", actionType);
@@ -175,11 +202,11 @@ public class PostAutomateResponseConfigRequest extends Request {
         }
 
         /**
-         * The rule type. Valid values:
+         * The type of the automated response rule. Valid values:
          * <p>
          * 
-         * *   event
-         * *   alert
+         * *   **event**
+         * *   **alert**
          */
         public Builder autoResponseType(String autoResponseType) {
             this.putBodyParameter("AutoResponseType", autoResponseType);
@@ -188,7 +215,7 @@ public class PostAutomateResponseConfigRequest extends Request {
         }
 
         /**
-         * The trigger condition of the rule. The value is in JSON format.
+         * The trigger condition of the automated response rule. The value is in the JSON format.
          */
         public Builder executionCondition(String executionCondition) {
             this.putBodyParameter("ExecutionCondition", executionCondition);
@@ -206,15 +233,36 @@ public class PostAutomateResponseConfigRequest extends Request {
         }
 
         /**
-         * The data management center of the threat analysis feature. Specify this parameter based on the region in which your assets reside. Valid values:
+         * The data management center of the threat analysis feature. Specify this parameter based on the regions in which your assets reside. Valid values:
          * <p>
          * 
-         * *   cn-hangzhou: Your assets reside in regions inside China.
-         * *   ap-southeast-1: Your assets reside in regions outside China.
+         * *   **cn-hangzhou**: Your assets reside in regions in China.
+         * *   **ap-southeast-1**: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the account that you switch from the management account.
+         */
+        public Builder roleFor(Long roleFor) {
+            this.putBodyParameter("RoleFor", roleFor);
+            this.roleFor = roleFor;
+            return this;
+        }
+
+        /**
+         * The type of the view. Valid values:
+         * <p>
+         * - 0: the current Alibaba Cloud account
+         * - 1: the global account
+         */
+        public Builder roleType(Integer roleType) {
+            this.putBodyParameter("RoleType", roleType);
+            this.roleType = roleType;
             return this;
         }
 

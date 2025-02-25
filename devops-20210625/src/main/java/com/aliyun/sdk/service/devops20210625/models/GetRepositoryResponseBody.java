@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRepositoryResponseBody} extends {@link TeaModel}
  *
  * <p>GetRepositoryResponseBody</p>
  */
 public class GetRepositoryResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("repository")
+    @com.aliyun.core.annotation.NameInMap("repository")
     private Repository repository;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private GetRepositoryResponseBody(Builder builder) {
@@ -131,32 +136,38 @@ public class GetRepositoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRepositoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRepositoryResponseBody</p>
+     */
     public static class Namespace extends TeaModel {
-        @NameInMap("avatar")
+        @com.aliyun.core.annotation.NameInMap("avatar")
         private String avatar;
 
-        @NameInMap("createdAt")
+        @com.aliyun.core.annotation.NameInMap("createdAt")
         private String createdAt;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("ownerId")
+        @com.aliyun.core.annotation.NameInMap("ownerId")
         private Long ownerId;
 
-        @NameInMap("path")
+        @com.aliyun.core.annotation.NameInMap("path")
         private String path;
 
-        @NameInMap("updatedAt")
+        @com.aliyun.core.annotation.NameInMap("updatedAt")
         private String updatedAt;
 
-        @NameInMap("visibilityLevel")
+        @com.aliyun.core.annotation.NameInMap("visibilityLevel")
         private Integer visibilityLevel;
 
         private Namespace(Builder builder) {
@@ -278,7 +289,10 @@ public class GetRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * id
+             * <p>id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -332,59 +346,65 @@ public class GetRepositoryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRepositoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRepositoryResponseBody</p>
+     */
     public static class Repository extends TeaModel {
-        @NameInMap("archive")
+        @com.aliyun.core.annotation.NameInMap("archive")
         private Boolean archive;
 
-        @NameInMap("avatarUrl")
+        @com.aliyun.core.annotation.NameInMap("avatarUrl")
         private String avatarUrl;
 
-        @NameInMap("createdAt")
+        @com.aliyun.core.annotation.NameInMap("createdAt")
         private String createdAt;
 
-        @NameInMap("creatorId")
+        @com.aliyun.core.annotation.NameInMap("creatorId")
         private Long creatorId;
 
-        @NameInMap("defaultBranch")
+        @com.aliyun.core.annotation.NameInMap("defaultBranch")
         private String defaultBranch;
 
-        @NameInMap("demoProjectStatus")
+        @com.aliyun.core.annotation.NameInMap("demoProjectStatus")
         private Boolean demoProjectStatus;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("httpUrlToRepository")
+        @com.aliyun.core.annotation.NameInMap("httpUrlToRepository")
         private String httpUrlToRepository;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("lastActivityAt")
+        @com.aliyun.core.annotation.NameInMap("lastActivityAt")
         private String lastActivityAt;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("nameWithNamespace")
+        @com.aliyun.core.annotation.NameInMap("nameWithNamespace")
         private String nameWithNamespace;
 
-        @NameInMap("namespace")
+        @com.aliyun.core.annotation.NameInMap("namespace")
         private Namespace namespace;
 
-        @NameInMap("path")
+        @com.aliyun.core.annotation.NameInMap("path")
         private String path;
 
-        @NameInMap("pathWithNamespace")
+        @com.aliyun.core.annotation.NameInMap("pathWithNamespace")
         private String pathWithNamespace;
 
-        @NameInMap("sshUrlToRepository")
+        @com.aliyun.core.annotation.NameInMap("sshUrlToRepository")
         private String sshUrlToRepository;
 
-        @NameInMap("visibilityLevel")
+        @com.aliyun.core.annotation.NameInMap("visibilityLevel")
         private Integer visibilityLevel;
 
-        @NameInMap("webUrl")
+        @com.aliyun.core.annotation.NameInMap("webUrl")
         private String webUrl;
 
         private Repository(Builder builder) {
@@ -627,7 +647,10 @@ public class GetRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * id
+             * <p>id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder id(Long id) {
                 this.id = id;

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyForwardEntryRequest} extends {@link RequestModel}
  *
  * <p>ModifyForwardEntryRequest</p>
  */
 public class ModifyForwardEntryRequest extends Request {
-    @Query
-    @NameInMap("ForwardEntryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForwardEntryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String forwardEntryId;
 
-    @Query
-    @NameInMap("ForwardEntryName")
-    @Validation(maxLength = 128)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForwardEntryName")
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String forwardEntryName;
 
-    @Query
-    @NameInMap("HealthCheckPort")
-    @Validation(maximum = 65535)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckPort")
+    @com.aliyun.core.annotation.Validation(maximum = 65535)
     private Integer healthCheckPort;
 
     private ModifyForwardEntryRequest(Builder builder) {
@@ -85,7 +90,11 @@ public class ModifyForwardEntryRequest extends Request {
         } 
 
         /**
-         * ForwardEntryId.
+         * <p>The ID of the DNAT entry.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dnat-5tfjp3537mi6iokl59g5c****</p>
          */
         public Builder forwardEntryId(String forwardEntryId) {
             this.putQueryParameter("ForwardEntryId", forwardEntryId);
@@ -94,7 +103,10 @@ public class ModifyForwardEntryRequest extends Request {
         }
 
         /**
-         * ForwardEntryName.
+         * <p>The name of the DNAT entry. The name must be 2 to 128 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test0</p>
          */
         public Builder forwardEntryName(String forwardEntryName) {
             this.putQueryParameter("ForwardEntryName", forwardEntryName);
@@ -103,7 +115,10 @@ public class ModifyForwardEntryRequest extends Request {
         }
 
         /**
-         * HealthCheckPort.
+         * <p>The probe port. The port must be within the internal port range. By default, this parameter is left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder healthCheckPort(Integer healthCheckPort) {
             this.putQueryParameter("HealthCheckPort", healthCheckPort);

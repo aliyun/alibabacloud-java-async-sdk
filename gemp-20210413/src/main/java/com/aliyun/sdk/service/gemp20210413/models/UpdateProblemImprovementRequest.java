@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,68 +11,68 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateProblemImprovementRequest</p>
  */
 public class UpdateProblemImprovementRequest extends Request {
-    @Body
-    @NameInMap("clientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("customProblemReason")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("customProblemReason")
     private String customProblemReason;
 
-    @Body
-    @NameInMap("discoverSource")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("discoverSource")
     private Long discoverSource;
 
-    @Body
-    @NameInMap("dutyDepartmentId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dutyDepartmentId")
     private Long dutyDepartmentId;
 
-    @Body
-    @NameInMap("dutyDepartmentName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dutyDepartmentName")
     private String dutyDepartmentName;
 
-    @Body
-    @NameInMap("dutyUserId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dutyUserId")
     private Long dutyUserId;
 
-    @Body
-    @NameInMap("injectionMode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("injectionMode")
     private String injectionMode;
 
-    @Body
-    @NameInMap("monitorSourceName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("monitorSourceName")
     private String monitorSourceName;
 
-    @Body
-    @NameInMap("problemId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("problemId")
     private Long problemId;
 
-    @Body
-    @NameInMap("problemReason")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("problemReason")
     private String problemReason;
 
-    @Body
-    @NameInMap("recentActivity")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("recentActivity")
     private String recentActivity;
 
-    @Body
-    @NameInMap("recoveryMode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("recoveryMode")
     private String recoveryMode;
 
-    @Body
-    @NameInMap("relationChanges")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("relationChanges")
     private String relationChanges;
 
-    @Body
-    @NameInMap("remark")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("remark")
     private String remark;
 
-    @Body
-    @NameInMap("replayDutyUserId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("replayDutyUserId")
     private Long replayDutyUserId;
 
-    @Body
-    @NameInMap("userReport")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("userReport")
     private Long userReport;
 
     private UpdateProblemImprovementRequest(Builder builder) {

@@ -1,28 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPermissionByCodeRequest} extends {@link RequestModel}
  *
  * <p>GetPermissionByCodeRequest</p>
  */
 public class GetPermissionByCodeRequest extends Request {
-    @Body
-    @NameInMap("Code")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Code")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String code;
 
-    @Body
-    @NameInMap("CustSpaceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustSpaceId")
     private String custSpaceId;
 
-    @Body
-    @NameInMap("Permissions")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Permissions")
     private java.util.List < String > permissions;
 
     private GetPermissionByCodeRequest(Builder builder) {
@@ -83,7 +83,11 @@ public class GetPermissionByCodeRequest extends Request {
         } 
 
         /**
-         * Code.
+         * <p>Authorize code information.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flow_001</p>
          */
         public Builder code(String code) {
             this.putBodyParameter("Code", code);
@@ -92,7 +96,10 @@ public class GetPermissionByCodeRequest extends Request {
         }
 
         /**
-         * CustSpaceId.
+         * <p>The space ID of the RAM user within the independent software vendor (ISV) account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>393847477</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putBodyParameter("CustSpaceId", custSpaceId);
@@ -101,7 +108,7 @@ public class GetPermissionByCodeRequest extends Request {
         }
 
         /**
-         * Permissions.
+         * <p>The permissions.</p>
          */
         public Builder permissions(java.util.List < String > permissions) {
             String permissionsShrink = shrink(permissions, "Permissions", "json");

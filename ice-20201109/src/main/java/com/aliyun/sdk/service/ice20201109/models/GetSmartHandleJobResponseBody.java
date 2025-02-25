@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSmartHandleJobResponseBody} extends {@link TeaModel}
  *
  * <p>GetSmartHandleJobResponseBody</p>
  */
 public class GetSmartHandleJobResponseBody extends TeaModel {
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @NameInMap("JobResult")
+    @com.aliyun.core.annotation.NameInMap("JobResult")
     private JobResult jobResult;
 
-    @NameInMap("Output")
+    @com.aliyun.core.annotation.NameInMap("Output")
     private String output;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SmartJobInfo")
+    @com.aliyun.core.annotation.NameInMap("SmartJobInfo")
     private SmartJobInfo smartJobInfo;
 
-    @NameInMap("State")
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
     private GetSmartHandleJobResponseBody(Builder builder) {
@@ -110,7 +115,10 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         private String userData; 
 
         /**
-         * JobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -118,7 +126,7 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         }
 
         /**
-         * JobResult.
+         * <p>The job results.</p>
          */
         public Builder jobResult(JobResult jobResult) {
             this.jobResult = jobResult;
@@ -126,7 +134,10 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         }
 
         /**
-         * Output.
+         * <p>The job results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder output(String output) {
             this.output = output;
@@ -134,7 +145,10 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +156,7 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         }
 
         /**
-         * SmartJobInfo.
+         * <p>The information about the intelligent job.</p>
          */
         public Builder smartJobInfo(SmartJobInfo smartJobInfo) {
             this.smartJobInfo = smartJobInfo;
@@ -150,7 +164,17 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         }
 
         /**
-         * State.
+         * <p>The job state.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Finished</li>
+         * <li>Failed</li>
+         * <li>Executing</li>
+         * <li>Created</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         public Builder state(String state) {
             this.state = state;
@@ -158,7 +182,10 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         }
 
         /**
-         * UserData.
+         * <p>The user-defined data in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;user&quot;:&quot;data&quot;}</p>
          */
         public Builder userData(String userData) {
             this.userData = userData;
@@ -171,16 +198,30 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSmartHandleJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSmartHandleJobResponseBody</p>
+     */
     public static class JobResult extends TeaModel {
-        @NameInMap("AiResult")
+        @com.aliyun.core.annotation.NameInMap("AiResult")
         private String aiResult;
 
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
+
+        @com.aliyun.core.annotation.NameInMap("MediaUrl")
+        private String mediaUrl;
+
+        @com.aliyun.core.annotation.NameInMap("Usage")
+        private String usage;
 
         private JobResult(Builder builder) {
             this.aiResult = builder.aiResult;
             this.mediaId = builder.mediaId;
+            this.mediaUrl = builder.mediaUrl;
+            this.usage = builder.usage;
         }
 
         public static Builder builder() {
@@ -205,12 +246,31 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
             return this.mediaId;
         }
 
+        /**
+         * @return mediaUrl
+         */
+        public String getMediaUrl() {
+            return this.mediaUrl;
+        }
+
+        /**
+         * @return usage
+         */
+        public String getUsage() {
+            return this.usage;
+        }
+
         public static final class Builder {
             private String aiResult; 
             private String mediaId; 
+            private String mediaUrl; 
+            private String usage; 
 
             /**
-             * 智能分析结果
+             * <p>The AI analysis result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Intelligent segmentation or tagging information</p>
              */
             public Builder aiResult(String aiResult) {
                 this.aiResult = aiResult;
@@ -218,10 +278,32 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
             }
 
             /**
-             * 媒资Id
+             * <p>The ID of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
+                return this;
+            }
+
+            /**
+             * MediaUrl.
+             */
+            public Builder mediaUrl(String mediaUrl) {
+                this.mediaUrl = mediaUrl;
+                return this;
+            }
+
+            /**
+             * <p>The token usage. This parameter is returned only for keyword-based text generation jobs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;total_tokens&quot;:100}</p>
+             */
+            public Builder usage(String usage) {
+                this.usage = usage;
                 return this;
             }
 
@@ -232,8 +314,14 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSmartHandleJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSmartHandleJobResponseBody</p>
+     */
     public static class InputConfig extends TeaModel {
-        @NameInMap("InputFile")
+        @com.aliyun.core.annotation.NameInMap("InputFile")
         private String inputFile;
 
         private InputConfig(Builder builder) {
@@ -259,7 +347,10 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
             private String inputFile; 
 
             /**
-             * InputFile.
+             * <p>The OSS URL or the ID of the material in the media asset library.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4 或 <strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
              */
             public Builder inputFile(String inputFile) {
                 this.inputFile = inputFile;
@@ -273,11 +364,17 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSmartHandleJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSmartHandleJobResponseBody</p>
+     */
     public static class OutputConfig extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
-        @NameInMap("Object")
+        @com.aliyun.core.annotation.NameInMap("Object")
         private String object;
 
         private OutputConfig(Builder builder) {
@@ -312,7 +409,10 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
             private String object; 
 
             /**
-             * OSS Bucket
+             * <p>The OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-bucket</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -320,7 +420,10 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
             }
 
             /**
-             * OSS Object
+             * <p>The OSS object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-object</p>
              */
             public Builder object(String object) {
                 this.object = object;
@@ -334,29 +437,35 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSmartHandleJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSmartHandleJobResponseBody</p>
+     */
     public static class SmartJobInfo extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("InputConfig")
+        @com.aliyun.core.annotation.NameInMap("InputConfig")
         private InputConfig inputConfig;
 
-        @NameInMap("JobType")
+        @com.aliyun.core.annotation.NameInMap("JobType")
         private String jobType;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("OutputConfig")
+        @com.aliyun.core.annotation.NameInMap("OutputConfig")
         private OutputConfig outputConfig;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private SmartJobInfo(Builder builder) {
@@ -445,7 +554,10 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * CreateTime.
+             * <p>The time when the job was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-26T04:11:10Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -453,7 +565,10 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The job description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试描述</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -461,7 +576,7 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
             }
 
             /**
-             * InputConfig.
+             * <p>The input configurations.</p>
              */
             public Builder inputConfig(InputConfig inputConfig) {
                 this.inputConfig = inputConfig;
@@ -469,7 +584,10 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobType.
+             * <p>The job type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ASR</p>
              */
             public Builder jobType(String jobType) {
                 this.jobType = jobType;
@@ -477,7 +595,10 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The time when the job was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-26T04:11:10Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -485,7 +606,7 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
             }
 
             /**
-             * OutputConfig.
+             * <p>The output configurations.</p>
              */
             public Builder outputConfig(OutputConfig outputConfig) {
                 this.outputConfig = outputConfig;
@@ -493,7 +614,10 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The job title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试标题</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -501,7 +625,10 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
             }
 
             /**
-             * userid。
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1974526429******</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAliasInput} extends {@link TeaModel}
  *
  * <p>CreateAliasInput</p>
  */
 public class CreateAliasInput extends TeaModel {
-    @NameInMap("additionalVersionWeight")
+    @com.aliyun.core.annotation.NameInMap("additionalVersionWeight")
     private java.util.Map < String, Float > additionalVersionWeight;
 
-    @NameInMap("aliasName")
-    @Validation(required = true, maxLength = 128, minLength = 1)
+    @com.aliyun.core.annotation.NameInMap("aliasName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128, minLength = 1)
     private String aliasName;
 
-    @NameInMap("description")
-    @Validation(maxLength = 256)
+    @com.aliyun.core.annotation.NameInMap("description")
+    @com.aliyun.core.annotation.Validation(maxLength = 256)
     private String description;
 
-    @NameInMap("versionId")
-    @Validation(required = true, maxLength = 10, minLength = 1)
+    @com.aliyun.core.annotation.NameInMap("versionId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 10, minLength = 1)
     private String versionId;
 
     private CreateAliasInput(Builder builder) {
@@ -85,7 +85,10 @@ public class CreateAliasInput extends TeaModel {
         }
 
         /**
-         * aliasName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod</p>
          */
         public Builder aliasName(String aliasName) {
             this.aliasName = aliasName;
@@ -101,7 +104,10 @@ public class CreateAliasInput extends TeaModel {
         }
 
         /**
-         * versionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder versionId(String versionId) {
             this.versionId = versionId;

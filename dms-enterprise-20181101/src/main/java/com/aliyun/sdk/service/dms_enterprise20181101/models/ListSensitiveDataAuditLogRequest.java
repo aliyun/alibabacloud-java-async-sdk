@@ -1,61 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSensitiveDataAuditLogRequest} extends {@link RequestModel}
  *
  * <p>ListSensitiveDataAuditLogRequest</p>
  */
 public class ListSensitiveDataAuditLogRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ColumnName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ColumnName")
     private String columnName;
 
-    @Query
-    @NameInMap("DbName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbName")
     private String dbName;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("ModuleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModuleName")
     private String moduleName;
 
-    @Query
-    @NameInMap("OpUserName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpUserName")
     private String opUserName;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @Query
-    @NameInMap("TableName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableName")
     private String tableName;
 
-    @Query
-    @NameInMap("Tid")
-    @Validation(minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tid")
+    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long tid;
 
     private ListSensitiveDataAuditLogRequest(Builder builder) {
@@ -205,7 +210,10 @@ public class ListSensitiveDataAuditLogRequest extends Request {
         }
 
         /**
-         * The name of the column that contains sensitive data.
+         * <p>The name of the column that contains sensitive data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ExampleColumnName</p>
          */
         public Builder columnName(String columnName) {
             this.putQueryParameter("ColumnName", columnName);
@@ -214,7 +222,10 @@ public class ListSensitiveDataAuditLogRequest extends Request {
         }
 
         /**
-         * The name of the database that stores the sensitive data.
+         * <p>The name of the database that stores the sensitive data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ExampleDbName</p>
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -223,7 +234,10 @@ public class ListSensitiveDataAuditLogRequest extends Request {
         }
 
         /**
-         * The end of the time range for which you want to query the audit logs for sensitive information. Specify the time in the yyyy-MM-DD HH:mm:ss format.
+         * <p>The end of the time range for which you want to query the audit logs for sensitive information. Specify the time in the yyyy-MM-DD HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-18 11:00:00</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -232,13 +246,16 @@ public class ListSensitiveDataAuditLogRequest extends Request {
         }
 
         /**
-         * The function module whose audit logs you want to query for sensitive data. If you do not specify this parameter, all audit logs are queried. Valid values:
-         * <p>
+         * <p>The function module whose audit logs you want to query for sensitive data. If you do not specify this parameter, all audit logs are queried. Valid values:</p>
+         * <ul>
+         * <li><strong>SQL_CONSOLE</strong>: data query</li>
+         * <li><strong>SQL_CONSOLE_EXPORT</strong>: query result export</li>
+         * <li><strong>DATA_CHANGE</strong>: data change</li>
+         * <li><strong>DATA_EXPORT</strong>: data export</li>
+         * </ul>
          * 
-         * *   **SQL_CONSOLE**: data query
-         * *   **SQL_CONSOLE_EXPORT**: query result export
-         * *   **DATA_CHANGE**: data change
-         * *   **DATA_EXPORT**: data export
+         * <strong>example:</strong>
+         * <p>SQL_CONSOLE</p>
          */
         public Builder moduleName(String moduleName) {
             this.putQueryParameter("ModuleName", moduleName);
@@ -247,7 +264,10 @@ public class ListSensitiveDataAuditLogRequest extends Request {
         }
 
         /**
-         * The username of the requester.
+         * <p>The username of the requester.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ExampleOpUserName</p>
          */
         public Builder opUserName(String opUserName) {
             this.putQueryParameter("OpUserName", opUserName);
@@ -256,7 +276,10 @@ public class ListSensitiveDataAuditLogRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -265,7 +288,10 @@ public class ListSensitiveDataAuditLogRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Example: 100
+         * <p>The number of entries to return on each page. Example: 100</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -274,7 +300,10 @@ public class ListSensitiveDataAuditLogRequest extends Request {
         }
 
         /**
-         * The beginning of the time range for which you want to query the audit logs for sensitive information. Specify the time in the yyyy-MM-DD HH:mm:ss format.
+         * <p>The beginning of the time range for which you want to query the audit logs for sensitive information. Specify the time in the yyyy-MM-DD HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-18 10:00:00</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -283,7 +312,10 @@ public class ListSensitiveDataAuditLogRequest extends Request {
         }
 
         /**
-         * The name of the table that stores the sensitive data.
+         * <p>The name of the table that stores the sensitive data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ExampleTableName</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);
@@ -292,7 +324,10 @@ public class ListSensitiveDataAuditLogRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * <p>The ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

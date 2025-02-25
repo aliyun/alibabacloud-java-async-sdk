@@ -1,74 +1,79 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitDynamicChartJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitDynamicChartJobRequest</p>
  */
 public class SubmitDynamicChartJobRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AxisParams")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AxisParams")
     private String axisParams;
 
-    @Query
-    @NameInMap("Background")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Background")
     private String background;
 
-    @Query
-    @NameInMap("ChartConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChartConfig")
     private String chartConfig;
 
-    @Query
-    @NameInMap("ChartTitle")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChartTitle")
     private String chartTitle;
 
-    @Query
-    @NameInMap("ChartType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChartType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String chartType;
 
-    @Query
-    @NameInMap("DataSource")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataSource")
     private String dataSource;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Input")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Input")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String input;
 
-    @Query
-    @NameInMap("OutputConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutputConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String outputConfig;
 
-    @Query
-    @NameInMap("Subtitle")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Subtitle")
     private String subtitle;
 
-    @Query
-    @NameInMap("Title")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Title")
     private String title;
 
-    @Query
-    @NameInMap("Unit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Unit")
     private String unit;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
     private SubmitDynamicChartJobRequest(Builder builder) {
@@ -248,7 +253,10 @@ public class SubmitDynamicChartJobRequest extends Request {
         }
 
         /**
-         * AxisParams.
+         * <p>The axis configurations. If XAxisFontInterval is set to 0 or left empty, the system automatically determines an optimal interval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;FontFile&quot;:&quot;Microsoft YaHei&quot;,&quot;XAxisFontSize&quot;:&quot;30&quot;,&quot;YAxisFontSize&quot;:&quot;30&quot;,&quot;XAxisFontInterval&quot;:&quot;30&quot;,&quot;AxisColor&quot;:&quot;30&quot;}</p>
          */
         public Builder axisParams(String axisParams) {
             this.putQueryParameter("AxisParams", axisParams);
@@ -257,7 +265,10 @@ public class SubmitDynamicChartJobRequest extends Request {
         }
 
         /**
-         * Background.
+         * <p>The chart background.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Color&quot;:&quot;#000000&quot;,&quot;ImageUrl&quot;:&quot;<a href="http://your-bucket.oss-cn-shanghai.aliyuncs.com/obj.jpg%22%7D">http://your-bucket.oss-cn-shanghai.aliyuncs.com/obj.jpg&quot;}</a></p>
          */
         public Builder background(String background) {
             this.putQueryParameter("Background", background);
@@ -266,7 +277,10 @@ public class SubmitDynamicChartJobRequest extends Request {
         }
 
         /**
-         * ChartConfig.
+         * <p>The chart configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Style&quot;:&quot;Normal&quot;,&quot;TitleStartTime&quot;:&quot;3000&quot;,&quot;ChartStartTime&quot;:&quot;3000&quot;,&quot;VideoDuration&quot;:&quot;15000&quot;}</p>
          */
         public Builder chartConfig(String chartConfig) {
             this.putQueryParameter("ChartConfig", chartConfig);
@@ -275,7 +289,7 @@ public class SubmitDynamicChartJobRequest extends Request {
         }
 
         /**
-         * ChartTitle.
+         * <p>The chart title.</p>
          */
         public Builder chartTitle(String chartTitle) {
             this.putQueryParameter("ChartTitle", chartTitle);
@@ -284,7 +298,17 @@ public class SubmitDynamicChartJobRequest extends Request {
         }
 
         /**
-         * ChartType.
+         * <p>The chart type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Line: line chart</li>
+         * <li>Histogram: bar chart</li>
+         * <li>Pie: pie chart</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Line</p>
          */
         public Builder chartType(String chartType) {
             this.putQueryParameter("ChartType", chartType);
@@ -293,7 +317,7 @@ public class SubmitDynamicChartJobRequest extends Request {
         }
 
         /**
-         * DataSource.
+         * <p>The data source.</p>
          */
         public Builder dataSource(String dataSource) {
             this.putQueryParameter("DataSource", dataSource);
@@ -302,7 +326,7 @@ public class SubmitDynamicChartJobRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The job description.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -311,7 +335,11 @@ public class SubmitDynamicChartJobRequest extends Request {
         }
 
         /**
-         * Input.
+         * <p>The input data for the chart.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;XlsFile&quot;:&quot;<a href="https://your-bucket.oss-cn-shanghai.aliyuncs.com/obj.xls%22%7D">https://your-bucket.oss-cn-shanghai.aliyuncs.com/obj.xls&quot;}</a></p>
          */
         public Builder input(String input) {
             this.putQueryParameter("Input", input);
@@ -320,7 +348,11 @@ public class SubmitDynamicChartJobRequest extends Request {
         }
 
         /**
-         * OutputConfig.
+         * <p>The output configurations.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;MediaURL&quot;:&quot;<a href="https://your-bucket.oss-cn-shanghai.aliyuncs.com/obj.mp4%22,%22Bitrate%22:2000,%22Width%22:800,%22Height%22:680%7D">https://your-bucket.oss-cn-shanghai.aliyuncs.com/obj.mp4&quot;,&quot;Bitrate&quot;:2000,&quot;Width&quot;:800,&quot;Height&quot;:680}</a></p>
          */
         public Builder outputConfig(String outputConfig) {
             this.putQueryParameter("OutputConfig", outputConfig);
@@ -329,7 +361,7 @@ public class SubmitDynamicChartJobRequest extends Request {
         }
 
         /**
-         * Subtitle.
+         * <p>The subtitle.</p>
          */
         public Builder subtitle(String subtitle) {
             this.putQueryParameter("Subtitle", subtitle);
@@ -338,7 +370,7 @@ public class SubmitDynamicChartJobRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>The job title.</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);
@@ -347,7 +379,7 @@ public class SubmitDynamicChartJobRequest extends Request {
         }
 
         /**
-         * Unit.
+         * <p>Unit</p>
          */
         public Builder unit(String unit) {
             this.putQueryParameter("Unit", unit);
@@ -356,7 +388,10 @@ public class SubmitDynamicChartJobRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The custom data in JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;user&quot;:&quot;data&quot;}</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

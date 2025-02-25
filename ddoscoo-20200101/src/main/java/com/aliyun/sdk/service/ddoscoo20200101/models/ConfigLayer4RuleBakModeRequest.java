@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfigLayer4RuleBakModeRequest} extends {@link RequestModel}
  *
  * <p>ConfigLayer4RuleBakModeRequest</p>
  */
 public class ConfigLayer4RuleBakModeRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("BakMode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BakMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bakMode;
 
-    @Query
-    @NameInMap("Listeners")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Listeners")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String listeners;
 
     private ConfigLayer4RuleBakModeRequest(Builder builder) {
@@ -93,11 +98,15 @@ public class ConfigLayer4RuleBakModeRequest extends Request {
         }
 
         /**
-         * The mode that you want to use to forward service traffic. Valid values:
-         * <p>
+         * <p>The mode that you want to use to forward service traffic. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: the default mode. In this mode, Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the origin IP address that you specified when you created the port forwarding rule. You can call the <a href="https://help.aliyun.com/document_detail/157482.html">CreateNetworkRules</a> operation to create a port forwarding rule.</li>
+         * <li><strong>1</strong>: the origin redundancy mode. In this mode, Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the primary or secondary origin servers. You can call the <a href="https://help.aliyun.com/document_detail/312684.html">ConfigLayer4RulePolicy</a> operation to configure IP addresses.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **0**: the default mode. In this mode, Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the origin IP address that you specified when you created the port forwarding rule. You can call the [CreateNetworkRules](~~157482~~) operation to create a port forwarding rule.
-         * *   **1**: the origin redundancy mode. In this mode, Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the primary or secondary origin servers. You can call the [ConfigLayer4RulePolicy](~~312684~~) operation to configure IP addresses.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder bakMode(String bakMode) {
             this.putQueryParameter("BakMode", bakMode);
@@ -106,18 +115,21 @@ public class ConfigLayer4RuleBakModeRequest extends Request {
         }
 
         /**
-         * The port forwarding rule that you want to manage.
-         * <p>
+         * <p>The port forwarding rule that you want to manage.</p>
+         * <p>This parameter is a string that consists of JSON arrays. Each element in a JSON array indicates a port forwarding rule. You can perform this operation only on one port forwarding rule at a time.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/157484.html">DescribeNetworkRules</a> to query existing port forwarding rules.</p>
+         * </blockquote>
+         * <p>Each port forwarding rule contains the following fields:</p>
+         * <ul>
+         * <li><strong>InstanceId</strong>: the ID of the instance. This field is required and must be of the STRING type.</li>
+         * <li><strong>Protocol</strong>: the forwarding protocol. This field is required and must be of the STRING type. Valid values: <strong>tcp</strong> and <strong>udp</strong>.</li>
+         * <li><strong>FrontendPort</strong>: the forwarding port. This field is required and must be of the INTEGER type.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * This parameter is a string that consists of JSON arrays. Each element in a JSON array indicates a port forwarding rule. You can perform this operation only on one port forwarding rule at a time.
-         * 
-         * > You can call the [DescribeNetworkRules](~~157484~~) to query existing port forwarding rules.
-         * 
-         * Each port forwarding rule contains the following fields:
-         * 
-         * *   **InstanceId**: the ID of the instance. This field is required and must be of the STRING type.
-         * *   **Protocol**: the forwarding protocol. This field is required and must be of the STRING type. Valid values: **tcp** and **udp**.
-         * *   **FrontendPort**: the forwarding port. This field is required and must be of the INTEGER type.
+         * <strong>example:</strong>
+         * <p>[{&quot;InstanceId&quot;:&quot;ddosDip-sg-4hr2b3l****&quot;,&quot;FrontendPort&quot;:2020,&quot;Protocol&quot;:&quot;udp&quot;}]</p>
          */
         public Builder listeners(String listeners) {
             this.putQueryParameter("Listeners", listeners);

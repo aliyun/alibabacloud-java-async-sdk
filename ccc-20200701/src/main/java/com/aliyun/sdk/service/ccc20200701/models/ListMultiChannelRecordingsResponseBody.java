@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMultiChannelRecordingsResponseBody} extends {@link TeaModel}
  *
  * <p>ListMultiChannelRecordingsResponseBody</p>
  */
 public class ListMultiChannelRecordingsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListMultiChannelRecordingsResponseBody(Builder builder) {
@@ -53,7 +58,7 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -80,7 +85,7 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
@@ -96,7 +101,7 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -131,11 +136,17 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListMultiChannelRecordingsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMultiChannelRecordingsResponseBody</p>
+     */
     public static class HoldTimeSegments extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
         private HoldTimeSegments(Builder builder) {
@@ -192,38 +203,44 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMultiChannelRecordingsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMultiChannelRecordingsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AgentChannelId")
+        @com.aliyun.core.annotation.NameInMap("AgentChannelId")
         private String agentChannelId;
 
-        @NameInMap("AgentId")
+        @com.aliyun.core.annotation.NameInMap("AgentId")
         private String agentId;
 
-        @NameInMap("AgentName")
+        @com.aliyun.core.annotation.NameInMap("AgentName")
         private String agentName;
 
-        @NameInMap("ContactId")
+        @com.aliyun.core.annotation.NameInMap("ContactId")
         private String contactId;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("FileUrl")
+        @com.aliyun.core.annotation.NameInMap("FileUrl")
         private String fileUrl;
 
-        @NameInMap("HoldTimeSegments")
-        private java.util.List < HoldTimeSegments> holdTimeSegments;
+        @com.aliyun.core.annotation.NameInMap("HoldTimeSegments")
+        private java.util.List<HoldTimeSegments> holdTimeSegments;
 
-        @NameInMap("RamId")
+        @com.aliyun.core.annotation.NameInMap("RamId")
         private String ramId;
 
-        @NameInMap("SkillGroupId")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupId")
         private String skillGroupId;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
         private Data(Builder builder) {
@@ -300,7 +317,7 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
         /**
          * @return holdTimeSegments
          */
-        public java.util.List < HoldTimeSegments> getHoldTimeSegments() {
+        public java.util.List<HoldTimeSegments> getHoldTimeSegments() {
             return this.holdTimeSegments;
         }
 
@@ -333,7 +350,7 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
             private String duration; 
             private String fileName; 
             private String fileUrl; 
-            private java.util.List < HoldTimeSegments> holdTimeSegments; 
+            private java.util.List<HoldTimeSegments> holdTimeSegments; 
             private String ramId; 
             private String skillGroupId; 
             private Long startTime; 
@@ -397,7 +414,7 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
             /**
              * HoldTimeSegments.
              */
-            public Builder holdTimeSegments(java.util.List < HoldTimeSegments> holdTimeSegments) {
+            public Builder holdTimeSegments(java.util.List<HoldTimeSegments> holdTimeSegments) {
                 this.holdTimeSegments = holdTimeSegments;
                 return this;
             }

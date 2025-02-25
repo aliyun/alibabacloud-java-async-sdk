@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetExecutionTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>GetExecutionTemplateResponseBody</p>
  */
 public class GetExecutionTemplateResponseBody extends TeaModel {
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private String content;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Template")
+    @com.aliyun.core.annotation.NameInMap("Template")
     private Template template;
 
     private GetExecutionTemplateResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class GetExecutionTemplateResponseBody extends TeaModel {
         private Template template; 
 
         /**
-         * The content of the template.
+         * <p>The content of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;{\n &quot;FormatVersion&quot;: &quot;OOS-2019-06-01&quot;,\n &quot;Parameters&quot;: {\n &quot;Status&quot;: {\n &quot;Type&quot;: &quot;String&quot;,\n &quot;Description&quot;: &quot;(Required) The ID of the ECS instance.&quot;\n }\n },\n &quot;Tasks&quot;: [\n {\n &quot;Name&quot;: &quot;bar&quot;,\n &quot;Properties&quot;: {\n &quot;Parameters&quot;: {\n &quot;Status&quot;: &quot;{{ Status }}&quot;\n },\n &quot;API&quot;: &quot;DescribeInstances&quot;,\n &quot;Service&quot;: &quot;Ecs&quot;\n },\n &quot;Action&quot;: &quot;acs::ExecuteAPI&quot;,\n &quot;Outputs&quot;: {\n &quot;InstanceIds&quot;, {\n &quot;ValueSelector&quot;: &quot;.Instances.Instance[].InstanceId&quot;,\n &quot;Type&quot;: &quot;List&quot;\n }\n }\n }\n ],\n &quot;Outputs&quot;: {\n &quot;InstanceIds&quot;: {\n &quot;Value&quot;: &quot; {{ bar.InstanceIds }} &quot;,\n &quot;Type&quot;: &quot;List&quot;\n }\n }\n}\n&quot;</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -70,7 +78,10 @@ public class GetExecutionTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14A60-EBE7-47CA-9757-12C1D47A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +89,7 @@ public class GetExecutionTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The metadata of the template.
+         * <p>The metadata of the template.</p>
          */
         public Builder template(Template template) {
             this.template = template;
@@ -91,41 +102,47 @@ public class GetExecutionTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetExecutionTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetExecutionTemplateResponseBody</p>
+     */
     public static class Template extends TeaModel {
-        @NameInMap("CreatedBy")
+        @com.aliyun.core.annotation.NameInMap("CreatedBy")
         private String createdBy;
 
-        @NameInMap("CreatedDate")
+        @com.aliyun.core.annotation.NameInMap("CreatedDate")
         private String createdDate;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Hash")
+        @com.aliyun.core.annotation.NameInMap("Hash")
         private String hash;
 
-        @NameInMap("ShareType")
+        @com.aliyun.core.annotation.NameInMap("ShareType")
         private String shareType;
 
-        @NameInMap("Tags")
-        private java.util.Map < String, ? > tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.Map<String, ?> tags;
 
-        @NameInMap("TemplateFormat")
+        @com.aliyun.core.annotation.NameInMap("TemplateFormat")
         private String templateFormat;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
-        @NameInMap("TemplateVersion")
+        @com.aliyun.core.annotation.NameInMap("TemplateVersion")
         private String templateVersion;
 
-        @NameInMap("UpdatedBy")
+        @com.aliyun.core.annotation.NameInMap("UpdatedBy")
         private String updatedBy;
 
-        @NameInMap("UpdatedDate")
+        @com.aliyun.core.annotation.NameInMap("UpdatedDate")
         private String updatedDate;
 
         private Template(Builder builder) {
@@ -189,7 +206,7 @@ public class GetExecutionTemplateResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.Map < String, ? > getTags() {
+        public java.util.Map<String, ?> getTags() {
             return this.tags;
         }
 
@@ -241,7 +258,7 @@ public class GetExecutionTemplateResponseBody extends TeaModel {
             private String description; 
             private String hash; 
             private String shareType; 
-            private java.util.Map < String, ? > tags; 
+            private java.util.Map<String, ?> tags; 
             private String templateFormat; 
             private String templateId; 
             private String templateName; 
@@ -250,7 +267,10 @@ public class GetExecutionTemplateResponseBody extends TeaModel {
             private String updatedDate; 
 
             /**
-             * The creator of the template.
+             * <p>The creator of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root(13090000)</p>
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -258,7 +278,10 @@ public class GetExecutionTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the template was created.
+             * <p>The time when the template was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-05-16T10:26:14Z</p>
              */
             public Builder createdDate(String createdDate) {
                 this.createdDate = createdDate;
@@ -266,7 +289,10 @@ public class GetExecutionTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the template.
+             * <p>The description of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Get status of instances</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -274,7 +300,10 @@ public class GetExecutionTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The SHA-256 value of the template content.
+             * <p>The SHA-256 value of the template content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4bc7d7a21b3e003434b9c223f6e6d2578b5ebfeb5be28c1fcf8a8a1b11907bb4</p>
              */
             public Builder hash(String hash) {
                 this.hash = hash;
@@ -282,7 +311,10 @@ public class GetExecutionTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The share type of the template. The share type of a user-created template is **Private**.
+             * <p>The share type of the template. The share type of a user-created template is <strong>Private</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Private</p>
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;
@@ -290,15 +322,21 @@ public class GetExecutionTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The tag keys and values. The number of key-value pairs ranges from 1 to 20.
+             * <p>The tag keys and values. The number of key-value pairs ranges from 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;k1&quot;:&quot;k2&quot;,&quot;k2&quot;:&quot;v2&quot;}</p>
              */
-            public Builder tags(java.util.Map < String, ? > tags) {
+            public Builder tags(java.util.Map<String, ?> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * The format of the template. The system automatically determines whether the format is JSON or YAML.
+             * <p>The format of the template. The system automatically determines whether the format is JSON or YAML.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JSON</p>
              */
             public Builder templateFormat(String templateFormat) {
                 this.templateFormat = templateFormat;
@@ -306,7 +344,10 @@ public class GetExecutionTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the template.
+             * <p>The ID of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-94753d4d828d38</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -314,7 +355,10 @@ public class GetExecutionTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the template.
+             * <p>The name of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyTemplate</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -322,7 +366,10 @@ public class GetExecutionTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the template. The name of the version consists of the letter v and a number. The number starts from 1.
+             * <p>The version of the template. The name of the version consists of the letter v and a number. The number starts from 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder templateVersion(String templateVersion) {
                 this.templateVersion = templateVersion;
@@ -330,7 +377,10 @@ public class GetExecutionTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The user who last updated the template.
+             * <p>The user who last updated the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root(13090000)</p>
              */
             public Builder updatedBy(String updatedBy) {
                 this.updatedBy = updatedBy;
@@ -338,7 +388,10 @@ public class GetExecutionTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the template was last updated.
+             * <p>The time when the template was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-05-16T10:26:14Z</p>
              */
             public Builder updatedDate(String updatedDate) {
                 this.updatedDate = updatedDate;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUserBuyStatusResponseBody</p>
  */
 public class DescribeUserBuyStatusResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeUserBuyStatusResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +57,7 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,37 +71,40 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("CanBuy")
+        @com.aliyun.core.annotation.NameInMap("CanBuy")
         private Boolean canBuy;
 
-        @NameInMap("Capacity")
+        @com.aliyun.core.annotation.NameInMap("Capacity")
         private Integer capacity;
 
-        @NameInMap("DurationDays")
+        @com.aliyun.core.annotation.NameInMap("DurationDays")
         private Long durationDays;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("MainUserId")
+        @com.aliyun.core.annotation.NameInMap("MainUserId")
         private Long mainUserId;
 
-        @NameInMap("MainUserName")
+        @com.aliyun.core.annotation.NameInMap("MainUserName")
         private String mainUserName;
 
-        @NameInMap("MasterUserId")
+        @com.aliyun.core.annotation.NameInMap("MasterUserId")
         private Long masterUserId;
 
-        @NameInMap("MasterUserName")
+        @com.aliyun.core.annotation.NameInMap("MasterUserName")
         private String masterUserName;
 
-        @NameInMap("SasInstanceId")
+        @com.aliyun.core.annotation.NameInMap("RdOrder")
+        private Integer rdOrder;
+
+        @com.aliyun.core.annotation.NameInMap("SasInstanceId")
         private String sasInstanceId;
 
-        @NameInMap("SubUserId")
+        @com.aliyun.core.annotation.NameInMap("SubUserId")
         private Long subUserId;
 
-        @NameInMap("SubUserName")
+        @com.aliyun.core.annotation.NameInMap("SubUserName")
         private String subUserName;
 
         private Data(Builder builder) {
@@ -114,6 +116,7 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
             this.mainUserName = builder.mainUserName;
             this.masterUserId = builder.masterUserId;
             this.masterUserName = builder.masterUserName;
+            this.rdOrder = builder.rdOrder;
             this.sasInstanceId = builder.sasInstanceId;
             this.subUserId = builder.subUserId;
             this.subUserName = builder.subUserName;
@@ -184,6 +187,13 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
         }
 
         /**
+         * @return rdOrder
+         */
+        public Integer getRdOrder() {
+            return this.rdOrder;
+        }
+
+        /**
          * @return sasInstanceId
          */
         public String getSasInstanceId() {
@@ -213,12 +223,17 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
             private String mainUserName; 
             private Long masterUserId; 
             private String masterUserName; 
+            private Integer rdOrder; 
             private String sasInstanceId; 
             private Long subUserId; 
             private String subUserName; 
 
             /**
-             * CanBuy.
+             * Indicates whether the logon Alibaba Cloud account can be used to place orders for the threat analysis feature, such as purchase, upgrade, and specifications change orders. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder canBuy(Boolean canBuy) {
                 this.canBuy = canBuy;
@@ -226,7 +241,7 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Capacity.
+             * The log storage capacity that is purchased for the threat analysis feature. Unit: GB.
              */
             public Builder capacity(Integer capacity) {
                 this.capacity = capacity;
@@ -234,7 +249,7 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * DurationDays.
+             * The number of days before the expiration time of the threat analysis feature.
              */
             public Builder durationDays(Long durationDays) {
                 this.durationDays = durationDays;
@@ -242,7 +257,7 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The timestamp when the threat analysis feature expires. Unit: milliseconds.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -250,7 +265,7 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * MainUserId.
+             * The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.
              */
             public Builder mainUserId(Long mainUserId) {
                 this.mainUserId = mainUserId;
@@ -258,7 +273,7 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * MainUserName.
+             * The username of the Alibaba Cloud account that is used to purchase the threat analysis feature.
              */
             public Builder mainUserName(String mainUserName) {
                 this.mainUserName = mainUserName;
@@ -266,7 +281,7 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * MasterUserId.
+             * The ID of the management account of the resource directory.
              */
             public Builder masterUserId(Long masterUserId) {
                 this.masterUserId = masterUserId;
@@ -274,7 +289,7 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * MasterUserName.
+             * The display name of the management account of the resource directory.
              */
             public Builder masterUserName(String masterUserName) {
                 this.masterUserName = masterUserName;
@@ -282,7 +297,15 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * SasInstanceId.
+             * RdOrder.
+             */
+            public Builder rdOrder(Integer rdOrder) {
+                this.rdOrder = rdOrder;
+                return this;
+            }
+
+            /**
+             * The instance ID of Security Center.
              */
             public Builder sasInstanceId(String sasInstanceId) {
                 this.sasInstanceId = sasInstanceId;
@@ -290,7 +313,7 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * SubUserId.
+             * The ID of the logon Alibaba Cloud account.
              */
             public Builder subUserId(Long subUserId) {
                 this.subUserId = subUserId;
@@ -298,7 +321,7 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * SubUserName.
+             * The username of the logon Alibaba Cloud account.
              */
             public Builder subUserName(String subUserName) {
                 this.subUserName = subUserName;

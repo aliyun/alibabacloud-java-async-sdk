@@ -1,74 +1,78 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.schedulerx220190430.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAppGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateAppGroupRequest</p>
  */
 public class CreateAppGroupRequest extends Request {
-    @Query
-    @NameInMap("AppKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppKey")
     private String appKey;
 
-    @Query
-    @NameInMap("AppName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
-    @Query
-    @NameInMap("AppType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppType")
     private Integer appType;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppVersion")
+    private Integer appVersion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("EnableLog")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableLog")
     private Boolean enableLog;
 
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("MaxJobs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxJobs")
     private Integer maxJobs;
 
-    @Query
-    @NameInMap("MonitorConfigJson")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MonitorConfigJson")
     private String monitorConfigJson;
 
-    @Query
-    @NameInMap("MonitorContactsJson")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MonitorContactsJson")
     private String monitorContactsJson;
 
-    @Query
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @Query
-    @NameInMap("NamespaceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespaceName")
     private String namespaceName;
 
-    @Query
-    @NameInMap("NamespaceSource")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespaceSource")
     private String namespaceSource;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ScheduleBusyWorkers")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScheduleBusyWorkers")
     private Boolean scheduleBusyWorkers;
 
     private CreateAppGroupRequest(Builder builder) {
@@ -76,6 +80,7 @@ public class CreateAppGroupRequest extends Request {
         this.appKey = builder.appKey;
         this.appName = builder.appName;
         this.appType = builder.appType;
+        this.appVersion = builder.appVersion;
         this.description = builder.description;
         this.enableLog = builder.enableLog;
         this.groupId = builder.groupId;
@@ -121,6 +126,13 @@ public class CreateAppGroupRequest extends Request {
      */
     public Integer getAppType() {
         return this.appType;
+    }
+
+    /**
+     * @return appVersion
+     */
+    public Integer getAppVersion() {
+        return this.appVersion;
     }
 
     /**
@@ -204,6 +216,7 @@ public class CreateAppGroupRequest extends Request {
         private String appKey; 
         private String appName; 
         private Integer appType; 
+        private Integer appVersion; 
         private String description; 
         private Boolean enableLog; 
         private String groupId; 
@@ -225,6 +238,7 @@ public class CreateAppGroupRequest extends Request {
             this.appKey = request.appKey;
             this.appName = request.appName;
             this.appType = request.appType;
+            this.appVersion = request.appVersion;
             this.description = request.description;
             this.enableLog = request.enableLog;
             this.groupId = request.groupId;
@@ -239,7 +253,10 @@ public class CreateAppGroupRequest extends Request {
         } 
 
         /**
-         * The AppKey for the application.
+         * <p>The AppKey for the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adcExHZviLcl****</p>
          */
         public Builder appKey(String appKey) {
             this.putQueryParameter("AppKey", appKey);
@@ -248,7 +265,11 @@ public class CreateAppGroupRequest extends Request {
         }
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DocTest</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -257,11 +278,14 @@ public class CreateAppGroupRequest extends Request {
         }
 
         /**
-         * 应用类型。
-         * <p>
+         * <p>The type of application. Valid values:</p>
+         * <ul>
+         * <li><code>TRACE</code>: Application Monitoring</li>
+         * <li><code>EBPF</code>: Application Monitoring eBPF Edition</li>
+         * </ul>
          * 
-         * - 1、普通应用。
-         * - 2、k8s应用。
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder appType(Integer appType) {
             this.putQueryParameter("AppType", appType);
@@ -270,7 +294,22 @@ public class CreateAppGroupRequest extends Request {
         }
 
         /**
-         * The description of the application.
+         * <p>The application version. 1: Basic version, 2: Professional version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        public Builder appVersion(Integer appVersion) {
+            this.putQueryParameter("AppVersion", appVersion);
+            this.appVersion = appVersion;
+            return this;
+        }
+
+        /**
+         * <p>The description of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -279,12 +318,14 @@ public class CreateAppGroupRequest extends Request {
         }
 
         /**
-         * 是否开启日志。
-         * <p>
+         * <p>Specifies whether to enable logging. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enabled</li>
+         * <li><code>false</code>: disabled</li>
+         * </ul>
          * 
-         * - true：开启
-         * 
-         * - false：关闭
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableLog(Boolean enableLog) {
             this.putQueryParameter("EnableLog", enableLog);
@@ -293,7 +334,11 @@ public class CreateAppGroupRequest extends Request {
         }
 
         /**
-         * The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.
+         * <p>The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestSchedulerx.defaultGroup</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -302,7 +347,10 @@ public class CreateAppGroupRequest extends Request {
         }
 
         /**
-         * The maximum number of jobs.
+         * <p>The maximum number of jobs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxJobs(Integer maxJobs) {
             this.putQueryParameter("MaxJobs", maxJobs);
@@ -311,7 +359,10 @@ public class CreateAppGroupRequest extends Request {
         }
 
         /**
-         * The configuration of the alert. The value is a JSON string. For more information about this parameter, see **Additional information about request parameters**.
+         * <p>The configuration of the alert. The value is a JSON string. For more information about this parameter, see <strong>Additional information about request parameters</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;sendChannel&quot;:&quot;sms,ding&quot;}</p>
          */
         public Builder monitorConfigJson(String monitorConfigJson) {
             this.putQueryParameter("MonitorConfigJson", monitorConfigJson);
@@ -320,7 +371,10 @@ public class CreateAppGroupRequest extends Request {
         }
 
         /**
-         * The configuration of alert contacts. The value is a JSON string.
+         * <p>The configuration of alert contacts. The value is a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;userName&quot;:&quot;Tom&quot;,&quot;userPhone&quot;:&quot;89756******&quot;},{&quot;userName&quot;:&quot;Bob&quot;,&quot;ding&quot;:&quot;<a href="http://www.example.com%22%7D%5D">http://www.example.com&quot;}]</a></p>
          */
         public Builder monitorContactsJson(String monitorContactsJson) {
             this.putQueryParameter("MonitorContactsJson", monitorContactsJson);
@@ -329,7 +383,11 @@ public class CreateAppGroupRequest extends Request {
         }
 
         /**
-         * The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.
+         * <p>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -338,7 +396,10 @@ public class CreateAppGroupRequest extends Request {
         }
 
         /**
-         * The name of the namespace.
+         * <p>The name of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         public Builder namespaceName(String namespaceName) {
             this.putQueryParameter("NamespaceName", namespaceName);
@@ -347,7 +408,10 @@ public class CreateAppGroupRequest extends Request {
         }
 
         /**
-         * This parameter is not supported. You do not need to specify this parameter.
+         * <p>This parameter is not supported. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>schedulerx</p>
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
@@ -356,7 +420,10 @@ public class CreateAppGroupRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -365,7 +432,10 @@ public class CreateAppGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to schedule a busy worker.
+         * <p>Specifies whether to schedule a busy worker.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder scheduleBusyWorkers(Boolean scheduleBusyWorkers) {
             this.putQueryParameter("ScheduleBusyWorkers", scheduleBusyWorkers);

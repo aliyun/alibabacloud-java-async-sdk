@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHoneypotNodeResponseBody} extends {@link TeaModel}
  *
  * <p>GetHoneypotNodeResponseBody</p>
  */
 public class GetHoneypotNodeResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HoneypotNode")
+    @com.aliyun.core.annotation.NameInMap("HoneypotNode")
     private HoneypotNode honeypotNode;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetHoneypotNodeResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +114,7 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the management node.
+         * <p>The details of the management node.</p>
          */
         public Builder honeypotNode(HoneypotNode honeypotNode) {
             this.honeypotNode = honeypotNode;
@@ -114,7 +122,10 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +133,10 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +144,10 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0A453658-070B-5554-B46C-867425BE4FD4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +155,14 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -155,44 +175,50 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetHoneypotNodeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHoneypotNodeResponseBody</p>
+     */
     public static class HoneypotNode extends TeaModel {
-        @NameInMap("AllowHoneypotAccessInternet")
+        @com.aliyun.core.annotation.NameInMap("AllowHoneypotAccessInternet")
         private Boolean allowHoneypotAccessInternet;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("EcsInstanceId")
+        @com.aliyun.core.annotation.NameInMap("EcsInstanceId")
         private String ecsInstanceId;
 
-        @NameInMap("HoneypotTotalCount")
+        @com.aliyun.core.annotation.NameInMap("HoneypotTotalCount")
         private Integer honeypotTotalCount;
 
-        @NameInMap("HoneypotUsedCount")
+        @com.aliyun.core.annotation.NameInMap("HoneypotUsedCount")
         private Integer honeypotUsedCount;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("NodeIp")
+        @com.aliyun.core.annotation.NameInMap("NodeIp")
         private String nodeIp;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("ProbeTotalCount")
+        @com.aliyun.core.annotation.NameInMap("ProbeTotalCount")
         private Integer probeTotalCount;
 
-        @NameInMap("ProbeUsedCount")
+        @com.aliyun.core.annotation.NameInMap("ProbeUsedCount")
         private Integer probeUsedCount;
 
-        @NameInMap("SecurityGroupProbeIpList")
-        private java.util.List < String > securityGroupProbeIpList;
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupProbeIpList")
+        private java.util.List<String> securityGroupProbeIpList;
 
-        @NameInMap("TotalStatus")
+        @com.aliyun.core.annotation.NameInMap("TotalStatus")
         private Integer totalStatus;
 
-        @NameInMap("UpgradeAvailable")
+        @com.aliyun.core.annotation.NameInMap("UpgradeAvailable")
         private Boolean upgradeAvailable;
 
         private HoneypotNode(Builder builder) {
@@ -292,7 +318,7 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
         /**
          * @return securityGroupProbeIpList
          */
-        public java.util.List < String > getSecurityGroupProbeIpList() {
+        public java.util.List<String> getSecurityGroupProbeIpList() {
             return this.securityGroupProbeIpList;
         }
 
@@ -321,16 +347,19 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
             private String nodeName; 
             private Integer probeTotalCount; 
             private Integer probeUsedCount; 
-            private java.util.List < String > securityGroupProbeIpList; 
+            private java.util.List<String> securityGroupProbeIpList; 
             private Integer totalStatus; 
             private Boolean upgradeAvailable; 
 
             /**
-             * Indicates whether a honeypot is allowed to access the Internet. Valid values:
-             * <p>
+             * <p>Indicates whether a honeypot is allowed to access the Internet. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The honeypot is allowed to access the Internet.</li>
+             * <li><strong>false</strong>: The honeypot is not allowed to access the Internet.</li>
+             * </ul>
              * 
-             * *   **true**: The honeypot is allowed to access the Internet.
-             * *   **false**: The honeypot is not allowed to access the Internet.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder allowHoneypotAccessInternet(Boolean allowHoneypotAccessInternet) {
                 this.allowHoneypotAccessInternet = allowHoneypotAccessInternet;
@@ -338,7 +367,10 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the management node was created.
+             * <p>The time when the management node was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-02 17:13:43</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -346,7 +378,10 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-2vccskxjunf1ag6w****</p>
              */
             public Builder ecsInstanceId(String ecsInstanceId) {
                 this.ecsInstanceId = ecsInstanceId;
@@ -354,7 +389,10 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of honeypots that can be deployed to the management node.
+             * <p>The maximum number of honeypots that can be deployed to the management node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder honeypotTotalCount(Integer honeypotTotalCount) {
                 this.honeypotTotalCount = honeypotTotalCount;
@@ -362,7 +400,10 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The number of honeypots that are deployed to the management node.
+             * <p>The number of honeypots that are deployed to the management node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder honeypotUsedCount(Integer honeypotUsedCount) {
                 this.honeypotUsedCount = honeypotUsedCount;
@@ -370,7 +411,10 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the management node.
+             * <p>The ID of the management node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a7409a58-bc60-41af-9d36-080d58ae****</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -378,7 +422,10 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the management node.
+             * <p>The IP address of the management node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101.37.XX.XX</p>
              */
             public Builder nodeIp(String nodeIp) {
                 this.nodeIp = nodeIp;
@@ -386,7 +433,10 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the management node.
+             * <p>The name of the management node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gmmc</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -394,7 +444,10 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of probes that can be deployed for the management node.
+             * <p>The maximum number of probes that can be deployed for the management node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder probeTotalCount(Integer probeTotalCount) {
                 this.probeTotalCount = probeTotalCount;
@@ -402,7 +455,10 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The number of probes that are deployed for the management node.
+             * <p>The number of probes that are deployed for the management node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder probeUsedCount(Integer probeUsedCount) {
                 this.probeUsedCount = probeUsedCount;
@@ -410,22 +466,25 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * An array consisting of the CIDR blocks that are allowed to access the management node.
+             * <p>An array consisting of the CIDR blocks that are allowed to access the management node.</p>
              */
-            public Builder securityGroupProbeIpList(java.util.List < String > securityGroupProbeIpList) {
+            public Builder securityGroupProbeIpList(java.util.List<String> securityGroupProbeIpList) {
                 this.securityGroupProbeIpList = securityGroupProbeIpList;
                 return this;
             }
 
             /**
-             * The status of the management node. Valid values:
-             * <p>
+             * <p>The status of the management node. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: preparing</li>
+             * <li><strong>1</strong>: normal</li>
+             * <li><strong>2</strong>: abnormal</li>
+             * <li><strong>4</strong>: starting</li>
+             * <li><strong>5</strong>: upgrading</li>
+             * </ul>
              * 
-             * *   **0**: preparing
-             * *   **1**: normal
-             * *   **2**: abnormal
-             * *   **4**: starting
-             * *   **5**: upgrading
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalStatus(Integer totalStatus) {
                 this.totalStatus = totalStatus;
@@ -433,11 +492,14 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the management node can be upgraded. Valid values:
-             * <p>
+             * <p>Indicates whether the management node can be upgraded. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder upgradeAvailable(Boolean upgradeAvailable) {
                 this.upgradeAvailable = upgradeAvailable;

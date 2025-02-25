@@ -62,7 +62,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * BackupPolicyDO.
+         * The information about the backup policy.
          */
         public Builder backupPolicyDO(BackupPolicyDO backupPolicyDO) {
             this.backupPolicyDO = backupPolicyDO;
@@ -70,7 +70,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * The result of the request.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -322,7 +322,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             private String preferredBackupTime; 
 
             /**
-             * BackupAppName.
+             * No value is returned.
              */
             public Builder backupAppName(String backupAppName) {
                 this.backupAppName = backupAppName;
@@ -330,7 +330,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * BackupDbName.
+             * No value is returned.
              */
             public Builder backupDbName(String backupDbName) {
                 this.backupDbName = backupDbName;
@@ -338,7 +338,11 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * BackupLevel.
+             * The backup level. Valid values:
+             * <p>
+             * 
+             * *   **db**: database backup
+             * *   **instance**: instance backup
              */
             public Builder backupLevel(String backupLevel) {
                 this.backupLevel = backupLevel;
@@ -346,7 +350,11 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * BackupLog.
+             * Indicates whether the log backup feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   **1**: The log backup feature is enabled.
+             * *   **0**: The log backup feature is disabled.
              */
             public Builder backupLog(String backupLog) {
                 this.backupLog = backupLog;
@@ -354,7 +362,11 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * BackupMode.
+             * The backup mode. Valid values:
+             * <p>
+             * 
+             * *   **logic**: logical backup
+             * *   **phy**: fast backup
              */
             public Builder backupMode(String backupMode) {
                 this.backupMode = backupMode;
@@ -362,7 +374,11 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * BackupPolicyMode.
+             * The type of the backup policy. Valid values:
+             * <p>
+             * 
+             * *   **DataBackupPolicy**: a data backup policy
+             * *   **LogBackupPolicy**: a log backup policy
              */
             public Builder backupPolicyMode(String backupPolicyMode) {
                 this.backupPolicyMode = backupPolicyMode;
@@ -370,7 +386,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * BackupRetentionPeriod.
+             * The retention period of backup files. Unit: days.
              */
             public Builder backupRetentionPeriod(Long backupRetentionPeriod) {
                 this.backupRetentionPeriod = backupRetentionPeriod;
@@ -378,7 +394,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * BackupType.
+             * No value is returned.
              */
             public Builder backupType(String backupType) {
                 this.backupType = backupType;
@@ -386,7 +402,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * DataBackupRetentionPeriod.
+             * The retention period of data backup files. Unit: days.
              */
             public Builder dataBackupRetentionPeriod(Long dataBackupRetentionPeriod) {
                 this.dataBackupRetentionPeriod = dataBackupRetentionPeriod;
@@ -394,7 +410,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * No value is returned.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -402,7 +418,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * No value is returned.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -410,7 +426,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * HighSpaceUsageProtection.
+             * No value is returned.
              */
             public Builder highSpaceUsageProtection(Long highSpaceUsageProtection) {
                 this.highSpaceUsageProtection = highSpaceUsageProtection;
@@ -418,7 +434,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * LocalLogRetentionHours.
+             * No value is returned.
              */
             public Builder localLogRetentionHours(Long localLogRetentionHours) {
                 this.localLogRetentionHours = localLogRetentionHours;
@@ -426,7 +442,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * LocalLogRetentionSpace.
+             * No value is returned.
              */
             public Builder localLogRetentionSpace(Long localLogRetentionSpace) {
                 this.localLogRetentionSpace = localLogRetentionSpace;
@@ -434,7 +450,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * LogBackupRetentionPeriod.
+             * The retention period of log backup files. Unit: days.
              */
             public Builder logBackupRetentionPeriod(Long logBackupRetentionPeriod) {
                 this.logBackupRetentionPeriod = logBackupRetentionPeriod;
@@ -442,7 +458,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * NextBackupActuallyTime.
+             * No value is returned.
              */
             public Builder nextBackupActuallyTime(String nextBackupActuallyTime) {
                 this.nextBackupActuallyTime = nextBackupActuallyTime;
@@ -450,7 +466,16 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PreferredBackupPeriod.
+             * The backup cycle. You can specify multiple backup cycles. Separate multiple backup cycles with commas (,). Valid values:
+             * <p>
+             * 
+             * *   **0**: every Monday
+             * *   **1**: every Tuesday
+             * *   **2**: every Wednesday
+             * *   **3**: every Thursday
+             * *   **4**: every Friday
+             * *   **5**: every Saturday
+             * *   **6**: every Sunday
              */
             public Builder preferredBackupPeriod(String preferredBackupPeriod) {
                 this.preferredBackupPeriod = preferredBackupPeriod;
@@ -458,7 +483,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PreferredBackupTime.
+             * The time range in which a backup is performed. The time is displayed in UTC.
              */
             public Builder preferredBackupTime(String preferredBackupTime) {
                 this.preferredBackupTime = preferredBackupTime;

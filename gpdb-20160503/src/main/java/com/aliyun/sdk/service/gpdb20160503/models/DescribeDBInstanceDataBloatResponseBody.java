@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceDataBloatResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstanceDataBloatResponseBody</p>
  */
 public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
-    @NameInMap("Items")
-    private java.util.List < Items> items;
+    @com.aliyun.core.annotation.NameInMap("Items")
+    private java.util.List<Items> items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDBInstanceDataBloatResponseBody(Builder builder) {
@@ -42,7 +47,7 @@ public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -68,21 +73,24 @@ public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private Integer pageNumber; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * Details of data bloat.
+         * <p>The queried data bloat.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -90,7 +98,10 @@ public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +109,10 @@ public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -111,41 +125,47 @@ public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstanceDataBloatResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceDataBloatResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("BloatCeoff")
+        @com.aliyun.core.annotation.NameInMap("BloatCeoff")
         private String bloatCeoff;
 
-        @NameInMap("BloatSize")
+        @com.aliyun.core.annotation.NameInMap("BloatSize")
         private String bloatSize;
 
-        @NameInMap("DatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
-        @NameInMap("ExpectTableSize")
+        @com.aliyun.core.annotation.NameInMap("ExpectTableSize")
         private String expectTableSize;
 
-        @NameInMap("RealTableSize")
+        @com.aliyun.core.annotation.NameInMap("RealTableSize")
         private String realTableSize;
 
-        @NameInMap("SchemaName")
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
         private String schemaName;
 
-        @NameInMap("Sequence")
+        @com.aliyun.core.annotation.NameInMap("Sequence")
         private Integer sequence;
 
-        @NameInMap("StorageType")
+        @com.aliyun.core.annotation.NameInMap("StorageType")
         private String storageType;
 
-        @NameInMap("SuggestedAction")
+        @com.aliyun.core.annotation.NameInMap("SuggestedAction")
         private String suggestedAction;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
-        @NameInMap("TimeLastUpdated")
+        @com.aliyun.core.annotation.NameInMap("TimeLastUpdated")
         private String timeLastUpdated;
 
-        @NameInMap("TimeLastVacuumed")
+        @com.aliyun.core.annotation.NameInMap("TimeLastVacuumed")
         private String timeLastVacuumed;
 
         private Items(Builder builder) {
@@ -270,10 +290,11 @@ public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
             private String timeLastVacuumed; 
 
             /**
-             * The coefficient of data bloat. It is calculated by using the following formula:
-             * <p>
+             * <p>The coefficient of data bloat. It is calculated by using the following formula:</p>
+             * <p>Bloat coefficient = Number of dead rows/Number of active rows.</p>
              * 
-             * Bloat coefficient = Number of dead rows/Number of active rows.
+             * <strong>example:</strong>
+             * <p>1.03</p>
              */
             public Builder bloatCeoff(String bloatCeoff) {
                 this.bloatCeoff = bloatCeoff;
@@ -281,7 +302,10 @@ public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
             }
 
             /**
-             * The bloat size of the table. It indicates the amount of space that can be released.
+             * <p>The bloat size of the table. It indicates the amount of space that can be released.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2MB</p>
              */
             public Builder bloatSize(String bloatSize) {
                 this.bloatSize = bloatSize;
@@ -289,7 +313,10 @@ public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adbtest</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -297,10 +324,11 @@ public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
             }
 
             /**
-             * The expected size of the table.
-             * <p>
+             * <p>The expected size of the table.</p>
+             * <p>It indicates the size of the table that has no data bloat.</p>
              * 
-             * It indicates the size of the table that has no data bloat.
+             * <strong>example:</strong>
+             * <p>1MB</p>
              */
             public Builder expectTableSize(String expectTableSize) {
                 this.expectTableSize = expectTableSize;
@@ -308,7 +336,10 @@ public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
             }
 
             /**
-             * The actual size of the table.
+             * <p>The actual size of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2MB</p>
              */
             public Builder realTableSize(String realTableSize) {
                 this.realTableSize = realTableSize;
@@ -316,7 +347,10 @@ public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the schema.
+             * <p>The name of the schema.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>schema1</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -324,7 +358,10 @@ public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
             }
 
             /**
-             * The sequence number.
+             * <p>The sequence number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sequence(Integer sequence) {
                 this.sequence = sequence;
@@ -332,12 +369,15 @@ public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
             }
 
             /**
-             * The storage type of the table. Valid values:
-             * <p>
+             * <p>The storage type of the table. Valid values:</p>
+             * <ul>
+             * <li><strong>Heap Table</strong></li>
+             * <li><strong>Append-Only Heap Table</strong></li>
+             * <li><strong>Append-Only Columnar Table</strong></li>
+             * </ul>
              * 
-             * *   **Heap Table**
-             * *   **Append-Only Heap Table**
-             * *   **Append-Only Columnar Table**
+             * <strong>example:</strong>
+             * <p>Heap Table</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -345,7 +385,10 @@ public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is not returned.
+             * <p>This parameter is not returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder suggestedAction(String suggestedAction) {
                 this.suggestedAction = suggestedAction;
@@ -353,7 +396,10 @@ public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tab1</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -361,7 +407,10 @@ public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the table was last deleted, inserted, or updated.
+             * <p>The time when the table was last deleted, inserted, or updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-08T20:00:00Z</p>
              */
             public Builder timeLastUpdated(String timeLastUpdated) {
                 this.timeLastUpdated = timeLastUpdated;
@@ -369,7 +418,10 @@ public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the table was last vacuumed. The time is displayed in UTC.
+             * <p>The time when the table was last vacuumed. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-08T16:00:00Z</p>
              */
             public Builder timeLastVacuumed(String timeLastVacuumed) {
                 this.timeLastVacuumed = timeLastVacuumed;

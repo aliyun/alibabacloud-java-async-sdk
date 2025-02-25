@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DecryptKMSDataKeyResponseBody} extends {@link TeaModel}
  *
  * <p>DecryptKMSDataKeyResponseBody</p>
  */
 public class DecryptKMSDataKeyResponseBody extends TeaModel {
-    @NameInMap("DataKey")
+    @com.aliyun.core.annotation.NameInMap("DataKey")
     private DataKey dataKey;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DecryptKMSDataKeyResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DecryptKMSDataKeyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DataKey.
+         * <p>The information about the decryption result.</p>
          */
         public Builder dataKey(DataKey dataKey) {
             this.dataKey = dataKey;
@@ -58,7 +63,10 @@ public class DecryptKMSDataKeyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class DecryptKMSDataKeyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DecryptKMSDataKeyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DecryptKMSDataKeyResponseBody</p>
+     */
     public static class DataKey extends TeaModel {
-        @NameInMap("KeyId")
+        @com.aliyun.core.annotation.NameInMap("KeyId")
         private String keyId;
 
-        @NameInMap("Plaintext")
+        @com.aliyun.core.annotation.NameInMap("Plaintext")
         private String plaintext;
 
         private DataKey(Builder builder) {
@@ -110,7 +124,10 @@ public class DecryptKMSDataKeyResponseBody extends TeaModel {
             private String plaintext; 
 
             /**
-             * KeyId.
+             * <p>The ID of the customer master key (CMK) that was used to decrypt the ciphertext.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>202b9877-5a25-46e3-a763-e20791b5****</p>
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;
@@ -118,7 +135,10 @@ public class DecryptKMSDataKeyResponseBody extends TeaModel {
             }
 
             /**
-             * Plaintext.
+             * <p>The plaintext that is generated after decryption.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tRYXuCwgja12xxO1N/gZERDDCLw9doZEQiPDk/Bv****</p>
              */
             public Builder plaintext(String plaintext) {
                 this.plaintext = plaintext;

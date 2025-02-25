@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstancesByExpireTimeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstancesByExpireTimeResponseBody</p>
  */
 public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeDBInstancesByExpireTimeResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The details of the instances.
+         * <p>The details of the instances.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -94,10 +99,11 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page. Valid values: any **non-zero** positive integer.
-         * <p>
+         * <p>The page number of the returned page. Valid values: any <strong>non-zero</strong> positive integer.</p>
+         * <p>Default value: <strong>1</strong>.</p>
          * 
-         * Default value: **1**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -105,7 +111,10 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
         }
 
         /**
-         * The number of instances returned on the current page.
+         * <p>The number of instances returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -113,7 +122,10 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +133,10 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -134,23 +149,29 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstancesByExpireTimeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstancesByExpireTimeResponseBody</p>
+     */
     public static class DBInstanceExpireTime extends TeaModel {
-        @NameInMap("DBInstanceDescription")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceDescription")
         private String DBInstanceDescription;
 
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("DBInstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceStatus")
         private String DBInstanceStatus;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("LockMode")
+        @com.aliyun.core.annotation.NameInMap("LockMode")
         private String lockMode;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
         private DBInstanceExpireTime(Builder builder) {
@@ -221,7 +242,10 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
             private String payType; 
 
             /**
-             * The description of the instance.
+             * <p>The description of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test database</p>
              */
             public Builder DBInstanceDescription(String DBInstanceDescription) {
                 this.DBInstanceDescription = DBInstanceDescription;
@@ -229,7 +253,10 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-uf6wjk5xxxxxxx</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -237,7 +264,10 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the instance. For more information, see [Instance state table](~~26315~~).
+             * <p>The status of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/26315.html">Instance state table</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder DBInstanceStatus(String DBInstanceStatus) {
                 this.DBInstanceStatus = DBInstanceStatus;
@@ -245,10 +275,13 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time of the instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
-             * <p>
+             * <p>The expiration time of the instance. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <blockquote>
+             * <p>: Pay-as-you-go instances never expire.</p>
+             * </blockquote>
              * 
-             * > : Pay-as-you-go instances never expire.
+             * <strong>example:</strong>
+             * <p>2019-03-27T16:00:00Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -256,15 +289,18 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
             }
 
             /**
-             * The lock mode of the instance. Valid values:
-             * <p>
+             * <p>The lock mode of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Unlock</strong>: The instance is not locked.</li>
+             * <li><strong>ManualLock</strong>: The instance is manually locked.</li>
+             * <li><strong>LockByExpiration</strong>: The instance is automatically locked after it expires.</li>
+             * <li><strong>LockByRestoration</strong>: The instance is automatically locked before it is rolled back.</li>
+             * <li><strong>LockByDiskQuota</strong>: The instance is automatically locked after its storage capacity is exhausted.</li>
+             * <li><strong>LockReadInstanceByDiskQuota</strong>: The instance is a read-only instance and is automatically locked after its storage capacity is exhausted.</li>
+             * </ul>
              * 
-             * *   **Unlock**: The instance is not locked.
-             * *   **ManualLock**: The instance is manually locked.
-             * *   **LockByExpiration**: The instance is automatically locked after it expires.
-             * *   **LockByRestoration**: The instance is automatically locked before it is rolled back.
-             * *   **LockByDiskQuota**: The instance is automatically locked after its storage capacity is exhausted.
-             * *   **LockReadInstanceByDiskQuota**: The instance is a read-only instance and is automatically locked after its storage capacity is exhausted.
+             * <strong>example:</strong>
+             * <p>Unlock</p>
              */
             public Builder lockMode(String lockMode) {
                 this.lockMode = lockMode;
@@ -272,11 +308,14 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the instance. Valid values:
-             * <p>
+             * <p>The billing method of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+             * <li><strong>Prepaid</strong>: subscription.</li>
+             * </ul>
              * 
-             * *   **Postpaid**: pay-as-you-go.
-             * *   **Prepaid**: subscription.
+             * <strong>example:</strong>
+             * <p>Prepaid</p>
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -290,9 +329,15 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstancesByExpireTimeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstancesByExpireTimeResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("DBInstanceExpireTime")
-        private java.util.List < DBInstanceExpireTime> DBInstanceExpireTime;
+        @com.aliyun.core.annotation.NameInMap("DBInstanceExpireTime")
+        private java.util.List<DBInstanceExpireTime> DBInstanceExpireTime;
 
         private Items(Builder builder) {
             this.DBInstanceExpireTime = builder.DBInstanceExpireTime;
@@ -309,17 +354,17 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
         /**
          * @return DBInstanceExpireTime
          */
-        public java.util.List < DBInstanceExpireTime> getDBInstanceExpireTime() {
+        public java.util.List<DBInstanceExpireTime> getDBInstanceExpireTime() {
             return this.DBInstanceExpireTime;
         }
 
         public static final class Builder {
-            private java.util.List < DBInstanceExpireTime> DBInstanceExpireTime; 
+            private java.util.List<DBInstanceExpireTime> DBInstanceExpireTime; 
 
             /**
              * DBInstanceExpireTime.
              */
-            public Builder DBInstanceExpireTime(java.util.List < DBInstanceExpireTime> DBInstanceExpireTime) {
+            public Builder DBInstanceExpireTime(java.util.List<DBInstanceExpireTime> DBInstanceExpireTime) {
                 this.DBInstanceExpireTime = DBInstanceExpireTime;
                 return this;
             }

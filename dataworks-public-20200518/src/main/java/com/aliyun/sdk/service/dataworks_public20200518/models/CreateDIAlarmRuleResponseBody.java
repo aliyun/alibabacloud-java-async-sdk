@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDIAlarmRuleResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDIAlarmRuleResponseBody</p>
  */
 public class CreateDIAlarmRuleResponseBody extends TeaModel {
-    @NameInMap("DIAlarmRuleId")
+    @com.aliyun.core.annotation.NameInMap("DIAlarmRuleId")
     private Long DIAlarmRuleId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateDIAlarmRuleResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateDIAlarmRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DIAlarmRuleId.
+         * <p>The alert rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34988</p>
          */
         public Builder DIAlarmRuleId(Long DIAlarmRuleId) {
             this.DIAlarmRuleId = DIAlarmRuleId;
@@ -58,7 +66,10 @@ public class CreateDIAlarmRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C636A747-7E4E-594D-94CD-2B4F8A9A9A63</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

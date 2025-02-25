@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnassignPrivateIpAddressesResponseBody} extends {@link TeaModel}
  *
  * <p>UnassignPrivateIpAddressesResponseBody</p>
  */
 public class UnassignPrivateIpAddressesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UnassignPrivateIpAddressesResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class UnassignPrivateIpAddressesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Id of the request
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ECC937A-AE0E-4626-BE51-DED1D6D1C888</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

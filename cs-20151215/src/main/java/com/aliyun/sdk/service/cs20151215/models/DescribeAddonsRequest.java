@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAddonsRequest} extends {@link RequestModel}
  *
  * <p>DescribeAddonsRequest</p>
  */
 public class DescribeAddonsRequest extends Request {
-    @Query
-    @NameInMap("cluster_profile")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("cluster_profile")
     private String clusterProfile;
 
-    @Query
-    @NameInMap("cluster_spec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("cluster_spec")
     private String clusterSpec;
 
-    @Query
-    @NameInMap("cluster_type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("cluster_type")
     private String clusterType;
 
-    @Query
-    @NameInMap("cluster_version")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("cluster_version")
     private String clusterVersion;
 
-    @Query
-    @NameInMap("region")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("region")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String region;
 
     private DescribeAddonsRequest(Builder builder) {
@@ -111,12 +116,15 @@ public class DescribeAddonsRequest extends Request {
         } 
 
         /**
-         * The type of cluster. Valid values:
-         * <p>
+         * <p>The cluster type. Valid values:</p>
+         * <ul>
+         * <li><code>Default</code>: ACK managed cluster</li>
+         * <li><code>Serverless</code>: ACK Serverless cluster</li>
+         * <li><code>Edge</code>: ACK Edge cluster</li>
+         * </ul>
          * 
-         * *   `Default`: ACK managed cluster
-         * *   `Serverless`: ACK Serverless cluster
-         * *   `Edge`: ACK Edge cluster
+         * <strong>example:</strong>
+         * <p>Default</p>
          */
         public Builder clusterProfile(String clusterProfile) {
             this.putQueryParameter("cluster_profile", clusterProfile);
@@ -125,13 +133,14 @@ public class DescribeAddonsRequest extends Request {
         }
 
         /**
-         * The edition of the cluster. If you set the cluster type to `ManagedKubernetes`, the following editions are supported:
-         * <p>
+         * <p>If you set <code>cluster_type</code> to <code>ManagedKubernetes</code> and specify <code>profile</code>, you can further specify the edition of the cluster. Valid values:</p>
+         * <ul>
+         * <li><code>ack.pro.small</code>: creates an ACK Pro cluster.</li>
+         * <li><code>ack.standard</code>: creates an ACK Basic cluster. If you leave the parameter empty, an ACK Basic cluster is created.</li>
+         * </ul>
          * 
-         * *   `ack.pro.small`: ACK Pro cluster
-         * *   `ack.standard`: ACK Basic cluster
-         * 
-         * By default, this parameter is left empty. If you leave this parameter empty, clusters are not filtered by edition.
+         * <strong>example:</strong>
+         * <p>ack.pro.small</p>
          */
         public Builder clusterSpec(String clusterSpec) {
             this.putQueryParameter("cluster_spec", clusterSpec);
@@ -140,13 +149,14 @@ public class DescribeAddonsRequest extends Request {
         }
 
         /**
-         * The type of cluster. Valid values:
-         * <p>
+         * <ul>
+         * <li><code>Kubernetes</code>: ACK dedicated cluster.</li>
+         * <li><code>ManagedKubernetes</code>: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless Basic clusters, ACK Serverless Pro clusters, ACK Edge Basic clusters, ACK Edge Pro clusters, and ACK Lingjun Pro clusters.</li>
+         * <li><code>ExternalKubernetes</code>: registered cluster.</li>
+         * </ul>
          * 
-         * *   `Kubernetes`: ACK dedicated cluster
-         * *   `ManagedKubernetes`: ACK managed cluster
-         * *   `Ask`: ACK Serverless cluster
-         * *   `ExternalKubernetes`: registered cluster
+         * <strong>example:</strong>
+         * <p>kubernetes</p>
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("cluster_type", clusterType);
@@ -155,7 +165,10 @@ public class DescribeAddonsRequest extends Request {
         }
 
         /**
-         * The cluster version.
+         * <p>The cluster version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.24.6-aliyun.1</p>
          */
         public Builder clusterVersion(String clusterVersion) {
             this.putQueryParameter("cluster_version", clusterVersion);
@@ -164,7 +177,11 @@ public class DescribeAddonsRequest extends Request {
         }
 
         /**
-         * The region ID of the cluster.
+         * <p>The region ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("region", region);

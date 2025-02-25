@@ -1,55 +1,60 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitSmarttagJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitSmarttagJobRequest</p>
  */
 public class SubmitSmarttagJobRequest extends Request {
-    @Query
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Content")
     private String content;
 
-    @Query
-    @NameInMap("ContentAddr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContentAddr")
     private String contentAddr;
 
-    @Query
-    @NameInMap("ContentType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContentType")
     private String contentType;
 
-    @Query
-    @NameInMap("Input")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Input")
     private Input input;
 
-    @Query
-    @NameInMap("NotifyUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NotifyUrl")
     private String notifyUrl;
 
-    @Query
-    @NameInMap("Params")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Params")
     private String params;
 
-    @Query
-    @NameInMap("ScheduleConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScheduleConfig")
     private ScheduleConfig scheduleConfig;
 
-    @Query
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
-    @Query
-    @NameInMap("Title")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Title")
     private String title;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
     private SubmitSmarttagJobRequest(Builder builder) {
@@ -180,7 +185,10 @@ public class SubmitSmarttagJobRequest extends Request {
         } 
 
         /**
-         * Content.
+         * <p>The video description. The description can contain letters, digits, and hyphens (-) and cannot start with a special character. The description can be up to 1 KB in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example content ****</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -189,7 +197,10 @@ public class SubmitSmarttagJobRequest extends Request {
         }
 
         /**
-         * ContentAddr.
+         * <p>This parameter is discontinued.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://123.com/testVideo.mp4">http://123.com/testVideo.mp4</a></p>
          */
         public Builder contentAddr(String contentAddr) {
             this.putQueryParameter("ContentAddr", contentAddr);
@@ -198,7 +209,10 @@ public class SubmitSmarttagJobRequest extends Request {
         }
 
         /**
-         * ContentType.
+         * <p>This parameter is discontinued.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>application/zip</p>
          */
         public Builder contentType(String contentType) {
             this.putQueryParameter("ContentType", contentType);
@@ -207,7 +221,7 @@ public class SubmitSmarttagJobRequest extends Request {
         }
 
         /**
-         * input
+         * <p>The job input.</p>
          */
         public Builder input(Input input) {
             String inputShrink = shrink(input, "Input", "json");
@@ -217,7 +231,10 @@ public class SubmitSmarttagJobRequest extends Request {
         }
 
         /**
-         * NotifyUrl.
+         * <p>The URL for receiving callbacks. Set the value to an HTTP URL or an HTTPS URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/endpoint/aliyun/ai?id=76401125000">https://example.com/endpoint/aliyun/ai?id=76401125000</a>***</p>
          */
         public Builder notifyUrl(String notifyUrl) {
             this.putQueryParameter("NotifyUrl", notifyUrl);
@@ -226,7 +243,16 @@ public class SubmitSmarttagJobRequest extends Request {
         }
 
         /**
-         * Params.
+         * <p>The additional request parameters. The value is a JSON string. Example: {&quot;needAsrData&quot;:true, &quot;needOcrData&quot;:false}. The following parameters are supported:</p>
+         * <ul>
+         * <li>needAsrData: specifies whether to query the automatic speech recognition (ASR) data. The value is of the BOOLEAN type. Default value: false. Valid values: true and false.</li>
+         * <li>needOcrData: specifies whether to query the optical character recognition (OCR) data. The value is of the BOOLEAN type. Default value: false. Valid values: true and false.</li>
+         * <li>needMetaData: specifies whether to query the metadata. The value is of the BOOLEAN type. Default value: false. Valid values: true and false.</li>
+         * <li>nlpParams: the input parameters of the natural language processing (NLP) operator. The value is a JSON object. This parameter is empty by default, which indicates that the NLP operator is not used. For more information, see the &quot;nlpParams&quot; section of this topic.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;needAsrData&quot;:true, &quot;needOcrData&quot;:false}</p>
          */
         public Builder params(String params) {
             this.putQueryParameter("Params", params);
@@ -235,7 +261,7 @@ public class SubmitSmarttagJobRequest extends Request {
         }
 
         /**
-         * scheduleConfig
+         * <p>The scheduling configurations.</p>
          */
         public Builder scheduleConfig(ScheduleConfig scheduleConfig) {
             String scheduleConfigShrink = shrink(scheduleConfig, "ScheduleConfig", "json");
@@ -245,7 +271,10 @@ public class SubmitSmarttagJobRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>The ID of the template that specifies the analysis algorithms. For more information about template operations, see <a href="https://help.aliyun.com/document_detail/445702.html">Configure templates</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39f8e0bc005e4f309379701645f4</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -254,7 +283,10 @@ public class SubmitSmarttagJobRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>The video title. The title can contain letters, digits, and hyphens (-) and cannot start with a special character. The title can be up to 256 bytes in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-title-****</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);
@@ -263,7 +295,10 @@ public class SubmitSmarttagJobRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The data to be passed through Simple Message Queue (SMQ, formerly MNS) during callbacks. The data can be up to 1 KB in length. For more information about how to specify an SMQ queue for receiving callbacks, see UpdatePipeline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{“a”:&quot;test&quot;}</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -278,11 +313,17 @@ public class SubmitSmarttagJobRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitSmarttagJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitSmarttagJobRequest</p>
+     */
     public static class Input extends TeaModel {
-        @NameInMap("Media")
+        @com.aliyun.core.annotation.NameInMap("Media")
         private String media;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Input(Builder builder) {
@@ -317,7 +358,12 @@ public class SubmitSmarttagJobRequest extends Request {
             private String type; 
 
             /**
-             * Media.
+             * <p>If Type is set to OSS, specify an OSS path. Example: OSS://test-bucket/video/202208/test.mp4.</p>
+             * <p>If Type is set to Media, specify a media asset ID. Example: c5c62d8f0361337cab312dce8e77dc6d.</p>
+             * <p>If Type is set to URL, specify an HTTP URL. Example: <a href="https://zc-test.oss-cn-shanghai.aliyuncs.com/test/unknowFace.mp4">https://zc-test.oss-cn-shanghai.aliyuncs.com/test/unknowFace.mp4</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c5c62d8f0361337cab312dce8e77dc6d</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -325,7 +371,15 @@ public class SubmitSmarttagJobRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The media type. Valid values:</p>
+             * <ul>
+             * <li>OSS</li>
+             * <li>Media</li>
+             * <li>URL</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Media</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -339,11 +393,17 @@ public class SubmitSmarttagJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitSmarttagJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitSmarttagJobRequest</p>
+     */
     public static class ScheduleConfig extends TeaModel {
-        @NameInMap("PipelineId")
+        @com.aliyun.core.annotation.NameInMap("PipelineId")
         private String pipelineId;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private String priority;
 
         private ScheduleConfig(Builder builder) {
@@ -378,7 +438,10 @@ public class SubmitSmarttagJobRequest extends Request {
             private String priority; 
 
             /**
-             * PipelineId.
+             * <p>The ID of the ApsaraVideo Media Processing (MPS) queue to which you want to submit the smart tagging job. The MPS queue is bound to an SMQ queue. This parameter specifies the default MPS queue. By default, an MPS queue can process a maximum of two concurrent smart tagging jobs. To increase the limit, submit a ticket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acdbfe4323bcfdae</p>
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;
@@ -386,7 +449,10 @@ public class SubmitSmarttagJobRequest extends Request {
             }
 
             /**
-             * Priority.
+             * <p>The job priority. This parameter is not implemented. You can leave this parameter empty or enter a random value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder priority(String priority) {
                 this.priority = priority;

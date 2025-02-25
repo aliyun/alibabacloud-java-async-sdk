@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNASFileSystemsRequest} extends {@link RequestModel}
  *
  * <p>DescribeNASFileSystemsRequest</p>
  */
 public class DescribeNASFileSystemsRequest extends Request {
-    @Query
-    @NameInMap("FileSystemId")
-    private java.util.List < String > fileSystemId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
+    private java.util.List<String> fileSystemId;
 
-    @Query
-    @NameInMap("MatchCompatibleProfile")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MatchCompatibleProfile")
     private Boolean matchCompatibleProfile;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 500)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 500)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OfficeSiteId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
     private String officeSiteId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private DescribeNASFileSystemsRequest(Builder builder) {
@@ -64,7 +69,7 @@ public class DescribeNASFileSystemsRequest extends Request {
     /**
      * @return fileSystemId
      */
-    public java.util.List < String > getFileSystemId() {
+    public java.util.List<String> getFileSystemId() {
         return this.fileSystemId;
     }
 
@@ -104,7 +109,7 @@ public class DescribeNASFileSystemsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeNASFileSystemsRequest, Builder> {
-        private java.util.List < String > fileSystemId; 
+        private java.util.List<String> fileSystemId; 
         private Boolean matchCompatibleProfile; 
         private Integer maxResults; 
         private String nextToken; 
@@ -126,16 +131,22 @@ public class DescribeNASFileSystemsRequest extends Request {
         } 
 
         /**
-         * FileSystemId.
+         * <p>The IDs of the NAS file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04f314****</p>
          */
-        public Builder fileSystemId(java.util.List < String > fileSystemId) {
+        public Builder fileSystemId(java.util.List<String> fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
             this.fileSystemId = fileSystemId;
             return this;
         }
 
         /**
-         * MatchCompatibleProfile.
+         * <p>Specifies whether to filter NAS file systems that only support the user profile management (UPM) feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder matchCompatibleProfile(Boolean matchCompatibleProfile) {
             this.putQueryParameter("MatchCompatibleProfile", matchCompatibleProfile);
@@ -144,7 +155,12 @@ public class DescribeNASFileSystemsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries to return on each page.</p>
+         * <p>Maximum value: 100.</p>
+         * <p>Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -153,7 +169,10 @@ public class DescribeNASFileSystemsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token that determines the start point of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -162,7 +181,10 @@ public class DescribeNASFileSystemsRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * <p>The ID of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-363353****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -171,7 +193,11 @@ public class DescribeNASFileSystemsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

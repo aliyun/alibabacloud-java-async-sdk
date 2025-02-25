@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateImageInfosResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateImageInfosResponseBody</p>
  */
 public class UpdateImageInfosResponseBody extends TeaModel {
-    @NameInMap("NonExistImageIds")
+    @com.aliyun.core.annotation.NameInMap("NonExistImageIds")
     private NonExistImageIds nonExistImageIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateImageInfosResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class UpdateImageInfosResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The IDs of the images that do not exist.
+         * <p>The IDs of the images that do not exist.</p>
          */
         public Builder nonExistImageIds(NonExistImageIds nonExistImageIds) {
             this.nonExistImageIds = nonExistImageIds;
@@ -58,7 +63,10 @@ public class UpdateImageInfosResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4AF6-D7393642CA58****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,9 +79,15 @@ public class UpdateImageInfosResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateImageInfosResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateImageInfosResponseBody</p>
+     */
     public static class NonExistImageIds extends TeaModel {
-        @NameInMap("ImageId")
-        private java.util.List < String > imageId;
+        @com.aliyun.core.annotation.NameInMap("ImageId")
+        private java.util.List<String> imageId;
 
         private NonExistImageIds(Builder builder) {
             this.imageId = builder.imageId;
@@ -90,17 +104,17 @@ public class UpdateImageInfosResponseBody extends TeaModel {
         /**
          * @return imageId
          */
-        public java.util.List < String > getImageId() {
+        public java.util.List<String> getImageId() {
             return this.imageId;
         }
 
         public static final class Builder {
-            private java.util.List < String > imageId; 
+            private java.util.List<String> imageId; 
 
             /**
              * ImageId.
              */
-            public Builder imageId(java.util.List < String > imageId) {
+            public Builder imageId(java.util.List<String> imageId) {
                 this.imageId = imageId;
                 return this;
             }

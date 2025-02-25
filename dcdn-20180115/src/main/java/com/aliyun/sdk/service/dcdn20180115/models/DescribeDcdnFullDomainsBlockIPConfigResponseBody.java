@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnFullDomainsBlockIPConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnFullDomainsBlockIPConfigResponseBody</p>
  */
 public class DescribeDcdnFullDomainsBlockIPConfigResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDcdnFullDomainsBlockIPConfigResponseBody(Builder builder) {
@@ -62,14 +62,16 @@ public class DescribeDcdnFullDomainsBlockIPConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <p>The value of Code is not 0 in the following scenarios:</p>
+         * <ul>
+         * <li>The format of the IP address is invalid.</li>
+         * <li>The number of IP addresses exceeds the limit.</li>
+         * <li>Other abnormal scenarios</li>
+         * </ul>
          * 
-         * The value of Code is not 0 in the following scenarios:
-         * 
-         * *   The format of the IP address is invalid.
-         * *   The number of IP addresses exceeds the limit.
-         * *   Other abnormal scenarios
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -77,7 +79,10 @@ public class DescribeDcdnFullDomainsBlockIPConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The returned results. If the operation is successful, URLs of OSS objects are returned. If the operation fails, an error message is returned.
+         * <p>The returned results. If the operation is successful, URLs of OSS objects are returned. If the operation fails, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxxx-api.oss-cn-hangzhou.aliyuncs.com/blocklist%2Fxxxxxxxxxxxx.txt?Expires=1682663947&OSSAccessKeyId=xxxxxxxxxx&Signature=xxxxxx">http://xxxx-api.oss-cn-hangzhou.aliyuncs.com/blocklist%2Fxxxxxxxxxxxx.txt?Expires=1682663947&amp;OSSAccessKeyId=xxxxxxxxxx&amp;Signature=xxxxxx</a></p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -85,7 +90,10 @@ public class DescribeDcdnFullDomainsBlockIPConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0C58632F-BA12-1A1E-986D-09285752B42C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResourceGroupMetric} extends {@link TeaModel}
  *
  * <p>ResourceGroupMetric</p>
  */
 public class ResourceGroupMetric extends TeaModel {
-    @NameInMap("GpuType")
+    @com.aliyun.core.annotation.NameInMap("GpuType")
     private String gpuType;
 
-    @NameInMap("Metrics")
-    private java.util.List < Metric > metrics;
+    @com.aliyun.core.annotation.NameInMap("Metrics")
+    private java.util.List<Metric> metrics;
 
-    @NameInMap("ResourceGroupID")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupID")
     private String resourceGroupID;
 
     private ResourceGroupMetric(Builder builder) {
@@ -45,7 +50,7 @@ public class ResourceGroupMetric extends TeaModel {
     /**
      * @return metrics
      */
-    public java.util.List < Metric > getMetrics() {
+    public java.util.List<Metric> getMetrics() {
         return this.metrics;
     }
 
@@ -58,7 +63,7 @@ public class ResourceGroupMetric extends TeaModel {
 
     public static final class Builder {
         private String gpuType; 
-        private java.util.List < Metric > metrics; 
+        private java.util.List<Metric> metrics; 
         private String resourceGroupID; 
 
         /**
@@ -72,7 +77,7 @@ public class ResourceGroupMetric extends TeaModel {
         /**
          * Metrics.
          */
-        public Builder metrics(java.util.List < Metric > metrics) {
+        public Builder metrics(java.util.List<Metric> metrics) {
             this.metrics = metrics;
             return this;
         }

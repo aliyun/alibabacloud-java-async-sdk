@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEthereumDeletableRequest</p>
  */
 public class DescribeEthereumDeletableRequest extends Request {
-    @Body
-    @NameInMap("EthereumId")
-    @Validation(required = true)
-    private String ethereumId;
-
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EthereumId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String ethereumId;
 
     private DescribeEthereumDeletableRequest(Builder builder) {
         super(builder);
-        this.ethereumId = builder.ethereumId;
         this.regionId = builder.regionId;
+        this.ethereumId = builder.ethereumId;
     }
 
     public static Builder builder() {
@@ -41,41 +40,32 @@ public class DescribeEthereumDeletableRequest extends Request {
     }
 
     /**
-     * @return ethereumId
-     */
-    public String getEthereumId() {
-        return this.ethereumId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return ethereumId
+     */
+    public String getEthereumId() {
+        return this.ethereumId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeEthereumDeletableRequest, Builder> {
-        private String ethereumId; 
         private String regionId; 
+        private String ethereumId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeEthereumDeletableRequest response) {
-            super(response);
-            this.ethereumId = response.ethereumId;
-            this.regionId = response.regionId;
+        private Builder(DescribeEthereumDeletableRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.ethereumId = request.ethereumId;
         } 
-
-        /**
-         * EthereumId.
-         */
-        public Builder ethereumId(String ethereumId) {
-            this.putBodyParameter("EthereumId", ethereumId);
-            this.ethereumId = ethereumId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -83,6 +73,15 @@ public class DescribeEthereumDeletableRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * EthereumId.
+         */
+        public Builder ethereumId(String ethereumId) {
+            this.putBodyParameter("EthereumId", ethereumId);
+            this.ethereumId = ethereumId;
             return this;
         }
 

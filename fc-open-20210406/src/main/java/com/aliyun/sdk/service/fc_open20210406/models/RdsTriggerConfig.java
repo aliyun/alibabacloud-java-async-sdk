@@ -74,7 +74,7 @@ public class RdsTriggerConfig extends TeaModel {
         private java.util.List < String > subscriptionObjects; 
 
         /**
-         * concurrency
+         * concurrency.
          */
         public Builder concurrency(Long concurrency) {
             this.concurrency = concurrency;
@@ -82,7 +82,7 @@ public class RdsTriggerConfig extends TeaModel {
         }
 
         /**
-         * eventFormat
+         * eventFormat.
          */
         public Builder eventFormat(String eventFormat) {
             this.eventFormat = eventFormat;
@@ -90,7 +90,7 @@ public class RdsTriggerConfig extends TeaModel {
         }
 
         /**
-         * retry
+         * retry.
          */
         public Builder retry(Long retry) {
             this.retry = retry;
@@ -98,7 +98,7 @@ public class RdsTriggerConfig extends TeaModel {
         }
 
         /**
-         * subscriptionObjects
+         * subscriptionObjects.
          */
         public Builder subscriptionObjects(java.util.List < String > subscriptionObjects) {
             this.subscriptionObjects = subscriptionObjects;

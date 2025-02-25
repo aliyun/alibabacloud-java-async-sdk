@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InsureOrderApplyResponseBody} extends {@link TeaModel}
  *
  * <p>InsureOrderApplyResponseBody</p>
  */
 public class InsureOrderApplyResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private InsureOrderApplyResponseBody(Builder builder) {
@@ -151,17 +156,23 @@ public class InsureOrderApplyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link InsureOrderApplyResponseBody} extends {@link TeaModel}
+     *
+     * <p>InsureOrderApplyResponseBody</p>
+     */
     public static class InsOrderPolicyList extends TeaModel {
-        @NameInMap("out_sub_ins_order_id")
+        @com.aliyun.core.annotation.NameInMap("out_sub_ins_order_id")
         private String outSubInsOrderId;
 
-        @NameInMap("policy_no")
+        @com.aliyun.core.annotation.NameInMap("policy_no")
         private String policyNo;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("sub_ins_order_id")
+        @com.aliyun.core.annotation.NameInMap("sub_ins_order_id")
         private String subInsOrderId;
 
         private InsOrderPolicyList(Builder builder) {
@@ -252,12 +263,18 @@ public class InsureOrderApplyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link InsureOrderApplyResponseBody} extends {@link TeaModel}
+     *
+     * <p>InsureOrderApplyResponseBody</p>
+     */
     public static class Module extends TeaModel {
-        @NameInMap("ins_order_id")
+        @com.aliyun.core.annotation.NameInMap("ins_order_id")
         private String insOrderId;
 
-        @NameInMap("ins_order_policy_list")
-        private java.util.List < InsOrderPolicyList> insOrderPolicyList;
+        @com.aliyun.core.annotation.NameInMap("ins_order_policy_list")
+        private java.util.List<InsOrderPolicyList> insOrderPolicyList;
 
         private Module(Builder builder) {
             this.insOrderId = builder.insOrderId;
@@ -282,13 +299,13 @@ public class InsureOrderApplyResponseBody extends TeaModel {
         /**
          * @return insOrderPolicyList
          */
-        public java.util.List < InsOrderPolicyList> getInsOrderPolicyList() {
+        public java.util.List<InsOrderPolicyList> getInsOrderPolicyList() {
             return this.insOrderPolicyList;
         }
 
         public static final class Builder {
             private String insOrderId; 
-            private java.util.List < InsOrderPolicyList> insOrderPolicyList; 
+            private java.util.List<InsOrderPolicyList> insOrderPolicyList; 
 
             /**
              * ins_order_id.
@@ -301,7 +318,7 @@ public class InsureOrderApplyResponseBody extends TeaModel {
             /**
              * ins_order_policy_list.
              */
-            public Builder insOrderPolicyList(java.util.List < InsOrderPolicyList> insOrderPolicyList) {
+            public Builder insOrderPolicyList(java.util.List<InsOrderPolicyList> insOrderPolicyList) {
                 this.insOrderPolicyList = insOrderPolicyList;
                 return this;
             }

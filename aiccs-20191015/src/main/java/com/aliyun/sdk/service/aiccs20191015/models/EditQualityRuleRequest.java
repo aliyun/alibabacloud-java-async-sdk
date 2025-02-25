@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EditQualityRuleRequest} extends {@link RequestModel}
  *
  * <p>EditQualityRuleRequest</p>
  */
 public class EditQualityRuleRequest extends Request {
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("KeyWords")
-    @Validation(required = true)
-    private java.util.List < String > keyWords;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("KeyWords")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> keyWords;
 
-    @Body
-    @NameInMap("MatchType")
-    @Validation(required = true, maximum = 1000, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MatchType")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 1000, minimum = 1)
     private Integer matchType;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("QualityRuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QualityRuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long qualityRuleId;
 
-    @Body
-    @NameInMap("RuleTag")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RuleTag")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer ruleTag;
 
     private EditQualityRuleRequest(Builder builder) {
@@ -75,7 +80,7 @@ public class EditQualityRuleRequest extends Request {
     /**
      * @return keyWords
      */
-    public java.util.List < String > getKeyWords() {
+    public java.util.List<String> getKeyWords() {
         return this.keyWords;
     }
 
@@ -109,7 +114,7 @@ public class EditQualityRuleRequest extends Request {
 
     public static final class Builder extends Request.Builder<EditQualityRuleRequest, Builder> {
         private String instanceId; 
-        private java.util.List < String > keyWords; 
+        private java.util.List<String> keyWords; 
         private Integer matchType; 
         private String name; 
         private Long qualityRuleId; 
@@ -130,7 +135,7 @@ public class EditQualityRuleRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -139,16 +144,16 @@ public class EditQualityRuleRequest extends Request {
         }
 
         /**
-         * KeyWords.
+         * <p>This parameter is required.</p>
          */
-        public Builder keyWords(java.util.List < String > keyWords) {
+        public Builder keyWords(java.util.List<String> keyWords) {
             this.putBodyParameter("KeyWords", keyWords);
             this.keyWords = keyWords;
             return this;
         }
 
         /**
-         * MatchType.
+         * <p>This parameter is required.</p>
          */
         public Builder matchType(Integer matchType) {
             this.putBodyParameter("MatchType", matchType);
@@ -157,7 +162,7 @@ public class EditQualityRuleRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -166,7 +171,7 @@ public class EditQualityRuleRequest extends Request {
         }
 
         /**
-         * QualityRuleId.
+         * <p>This parameter is required.</p>
          */
         public Builder qualityRuleId(Long qualityRuleId) {
             this.putBodyParameter("QualityRuleId", qualityRuleId);
@@ -175,7 +180,7 @@ public class EditQualityRuleRequest extends Request {
         }
 
         /**
-         * RuleTag.
+         * <p>This parameter is required.</p>
          */
         public Builder ruleTag(Integer ruleTag) {
             this.putBodyParameter("RuleTag", ruleTag);

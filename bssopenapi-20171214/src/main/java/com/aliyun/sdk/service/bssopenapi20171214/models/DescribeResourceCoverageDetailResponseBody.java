@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeResourceCoverageDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeResourceCoverageDetailResponseBody</p>
  */
 public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeResourceCoverageDetailResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,10 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the operation was successful.
+         * <p>Indicates whether the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,65 +148,71 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeResourceCoverageDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourceCoverageDetailResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("CapacityUnit")
+        @com.aliyun.core.annotation.NameInMap("CapacityUnit")
         private String capacityUnit;
 
-        @NameInMap("CommodityCode")
+        @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
 
-        @NameInMap("CommodityName")
+        @com.aliyun.core.annotation.NameInMap("CommodityName")
         private String commodityName;
 
-        @NameInMap("CoveragePercentage")
+        @com.aliyun.core.annotation.NameInMap("CoveragePercentage")
         private Float coveragePercentage;
 
-        @NameInMap("Currency")
+        @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
-        @NameInMap("DeductQuantity")
+        @com.aliyun.core.annotation.NameInMap("DeductQuantity")
         private Float deductQuantity;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceSpec")
+        @com.aliyun.core.annotation.NameInMap("InstanceSpec")
         private String instanceSpec;
 
-        @NameInMap("PaymentAmount")
+        @com.aliyun.core.annotation.NameInMap("PaymentAmount")
         private Float paymentAmount;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("ProductName")
+        @com.aliyun.core.annotation.NameInMap("ProductName")
         private String productName;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("RegionNo")
+        @com.aliyun.core.annotation.NameInMap("RegionNo")
         private String regionNo;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("TotalQuantity")
+        @com.aliyun.core.annotation.NameInMap("TotalQuantity")
         private Float totalQuantity;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
-        @NameInMap("Zone")
+        @com.aliyun.core.annotation.NameInMap("Zone")
         private String zone;
 
-        @NameInMap("ZoneName")
+        @com.aliyun.core.annotation.NameInMap("ZoneName")
         private String zoneName;
 
         private Items(Builder builder) {
@@ -386,7 +409,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             private String zoneName; 
 
             /**
-             * The unit that is used to measure the resources deducted from deduction plans.
+             * <p>The unit that is used to measure the resources deducted from deduction plans.</p>
              */
             public Builder capacityUnit(String capacityUnit) {
                 this.capacityUnit = capacityUnit;
@@ -394,7 +417,10 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the service.
+             * <p>The code of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -402,7 +428,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name and billing method of the service.
+             * <p>The name and billing method of the service.</p>
              */
             public Builder commodityName(String commodityName) {
                 this.commodityName = commodityName;
@@ -410,7 +436,10 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The coverage rate of a deduction plan.
+             * <p>The coverage rate of a deduction plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder coveragePercentage(Float coveragePercentage) {
                 this.coveragePercentage = coveragePercentage;
@@ -418,7 +447,10 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The currency in which deduction plans were priced.
+             * <p>The currency in which deduction plans were priced.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -426,7 +458,10 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of the resources deducted from a deduction plan.
+             * <p>The amount of the resources deducted from a deduction plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder deductQuantity(Float deductQuantity) {
                 this.deductQuantity = deductQuantity;
@@ -434,7 +469,10 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the time range in which the coverage details were queried.
+             * <p>The end of the time range in which the coverage details were queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-04-01 01:00:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -442,7 +480,10 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of a pay-as-you-go instance.
+             * <p>The ID of a pay-as-you-go instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1d9x623987rlj0dx4xx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -450,7 +491,10 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of a deduction plan.
+             * <p>The specifications of a deduction plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.t5-lc2m1.nano</p>
              */
             public Builder instanceSpec(String instanceSpec) {
                 this.instanceSpec = instanceSpec;
@@ -458,7 +502,10 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of the bill.
+             * <p>The amount of the bill.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder paymentAmount(Float paymentAmount) {
                 this.paymentAmount = paymentAmount;
@@ -466,7 +513,10 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the service.
+             * <p>The code of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -474,7 +524,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * <p>The name of the service.</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -482,7 +532,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The region.
+             * <p>The region.</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -490,7 +540,10 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the region.
+             * <p>The code of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-dg-a01</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -498,7 +551,10 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the time range in which the coverage details were queried.
+             * <p>The beginning of the time range in which the coverage details were queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-04-01 00:00:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -506,7 +562,10 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The total amount of resources consumed.
+             * <p>The total amount of resources consumed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalQuantity(Float totalQuantity) {
                 this.totalQuantity = totalQuantity;
@@ -514,7 +573,10 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the account.
+             * <p>The ID of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123745698925000</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -522,7 +584,10 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the account.
+             * <p>The username of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test13@test.aliyun.com">test13@test.aliyun.com</a></p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -530,7 +595,10 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the zone.
+             * <p>The code of the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder zone(String zone) {
                 this.zone = zone;
@@ -538,7 +606,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The zone.
+             * <p>The zone.</p>
              */
             public Builder zoneName(String zoneName) {
                 this.zoneName = zoneName;
@@ -552,17 +620,23 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeResourceCoverageDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourceCoverageDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Items")
-        private java.util.List < Items> items;
+        @com.aliyun.core.annotation.NameInMap("Items")
+        private java.util.List<Items> items;
 
-        @NameInMap("MaxResults")
+        @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {
@@ -583,7 +657,7 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
@@ -609,21 +683,24 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Items> items; 
+            private java.util.List<Items> items; 
             private Integer maxResults; 
             private String nextToken; 
             private Integer totalCount; 
 
             /**
-             * The data entries.
+             * <p>The data entries.</p>
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -631,7 +708,10 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The token of the next page.
+             * <p>The token of the next page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eyJwYWdlTnVtIjoyLCJwYWdlU2l6ZSI6MTB9</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -639,7 +719,10 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

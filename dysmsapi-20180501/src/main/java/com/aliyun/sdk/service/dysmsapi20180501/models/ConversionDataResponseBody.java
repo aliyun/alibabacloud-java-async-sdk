@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20180501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConversionDataResponseBody} extends {@link TeaModel}
  *
  * <p>ConversionDataResponseBody</p>
  */
 public class ConversionDataResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResponseCode")
+    @com.aliyun.core.annotation.NameInMap("ResponseCode")
     private String responseCode;
 
-    @NameInMap("ResponseDescription")
+    @com.aliyun.core.annotation.NameInMap("ResponseDescription")
     private String responseDescription;
 
     private ConversionDataResponseBody(Builder builder) {
@@ -62,7 +62,10 @@ public class ConversionDataResponseBody extends TeaModel {
         private String responseDescription; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F655A8D5-B967-440B-8683-DAD6FF8D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +73,10 @@ public class ConversionDataResponseBody extends TeaModel {
         }
 
         /**
-         * Status code. Returning OK means the request was successful. For other error codes, please refer to the [Error codes](~~180674~~) list.
+         * <p>Status code. Returning OK means the request was successful. For other error codes, please refer to the <a href="https://help.aliyun.com/document_detail/180674.html">Error codes</a> list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder responseCode(String responseCode) {
             this.responseCode = responseCode;
@@ -78,7 +84,10 @@ public class ConversionDataResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the status code.
+         * <p>The description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder responseDescription(String responseDescription) {
             this.responseDescription = responseDescription;

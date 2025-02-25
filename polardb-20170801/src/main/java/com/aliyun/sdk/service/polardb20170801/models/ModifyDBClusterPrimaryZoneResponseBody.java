@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBClusterPrimaryZoneResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyDBClusterPrimaryZoneResponseBody</p>
  */
 public class ModifyDBClusterPrimaryZoneResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyDBClusterPrimaryZoneResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class ModifyDBClusterPrimaryZoneResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ED12C6FF-3261-4571-AB57-3570F6******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

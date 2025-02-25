@@ -1,46 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstallEnvironmentFeatureRequest} extends {@link RequestModel}
  *
  * <p>InstallEnvironmentFeatureRequest</p>
  */
 public class InstallEnvironmentFeatureRequest extends Request {
-    @Query
-    @NameInMap("AliyunLang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AliyunLang")
     private String aliyunLang;
 
-    @Query
-    @NameInMap("Config")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Config")
     private String config;
 
-    @Query
-    @NameInMap("EnvironmentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnvironmentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String environmentId;
 
-    @Query
-    @NameInMap("FeatureName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FeatureName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String featureName;
 
-    @Query
-    @NameInMap("FeatureVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FeatureVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String featureVersion;
 
-    @Query
-    @NameInMap("Region")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private InstallEnvironmentFeatureRequest(Builder builder) {
@@ -141,7 +146,10 @@ public class InstallEnvironmentFeatureRequest extends Request {
         } 
 
         /**
-         * Language,the default language is Chinese.
+         * <p>The language. Valid values: zh and en. Default value: zh.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -150,7 +158,10 @@ public class InstallEnvironmentFeatureRequest extends Request {
         }
 
         /**
-         * Config information of Feature.
+         * <p>The metadata of the feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;continuous&quot;:true,&quot;dataRevision&quot;:2}</p>
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -159,7 +170,11 @@ public class InstallEnvironmentFeatureRequest extends Request {
         }
 
         /**
-         * Environment ID.
+         * <p>The environment ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxx</p>
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -168,7 +183,27 @@ public class InstallEnvironmentFeatureRequest extends Request {
         }
 
         /**
-         * Name of Feature.
+         * <p>The name of the feature.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>app-agent-pilot</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>metric-agent</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>metric-agent</p>
          */
         public Builder featureName(String featureName) {
             this.putQueryParameter("FeatureName", featureName);
@@ -177,7 +212,11 @@ public class InstallEnvironmentFeatureRequest extends Request {
         }
 
         /**
-         * Version of Feature.
+         * <p>The version of the feature.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.17</p>
          */
         public Builder featureVersion(String featureVersion) {
             this.putQueryParameter("FeatureVersion", featureVersion);
@@ -186,7 +225,10 @@ public class InstallEnvironmentFeatureRequest extends Request {
         }
 
         /**
-         * Region of Feature.
+         * <p>The region ID of the feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -195,7 +237,10 @@ public class InstallEnvironmentFeatureRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

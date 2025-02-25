@@ -1,18 +1,18 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateImageCacheResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateImageCacheResponseBody</p>
  */
 public class UpdateImageCacheResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateImageCacheResponseBody(Builder builder) {
@@ -38,7 +38,10 @@ public class UpdateImageCacheResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0E234675-3465-4CC3-9D0F-9A864BC391DD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

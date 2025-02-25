@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDiagnosticReportsRequest} extends {@link RequestModel}
  *
  * <p>DeleteDiagnosticReportsRequest</p>
  */
 public class DeleteDiagnosticReportsRequest extends Request {
-    @Host
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ReportIds")
-    @Validation(required = true)
-    private java.util.List < String > reportIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReportIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> reportIds;
 
     private DeleteDiagnosticReportsRequest(Builder builder) {
         super(builder);
@@ -63,14 +68,14 @@ public class DeleteDiagnosticReportsRequest extends Request {
     /**
      * @return reportIds
      */
-    public java.util.List < String > getReportIds() {
+    public java.util.List<String> getReportIds() {
         return this.reportIds;
     }
 
     public static final class Builder extends Request.Builder<DeleteDiagnosticReportsRequest, Builder> {
         private Long resourceOwnerId; 
         private String regionId; 
-        private java.util.List < String > reportIds; 
+        private java.util.List<String> reportIds; 
 
         private Builder() {
             super();
@@ -93,7 +98,11 @@ public class DeleteDiagnosticReportsRequest extends Request {
         }
 
         /**
-         * The region ID of the diagnostic report. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -102,9 +111,10 @@ public class DeleteDiagnosticReportsRequest extends Request {
         }
 
         /**
-         * The IDs of diagnostic reports. You can specify up to 100 report IDs.
+         * <p>The IDs of the diagnostic reports. You can specify up to 100 resource IDs.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder reportIds(java.util.List < String > reportIds) {
+        public Builder reportIds(java.util.List<String> reportIds) {
             this.putQueryParameter("ReportIds", reportIds);
             this.reportIds = reportIds;
             return this;

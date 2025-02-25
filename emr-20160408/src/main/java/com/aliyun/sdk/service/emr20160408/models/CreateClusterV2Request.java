@@ -54,6 +54,14 @@ public class CreateClusterV2Request extends Request {
     private String configurations;
 
     @Query
+    @NameInMap("DataDiskEncrypted")
+    private Boolean dataDiskEncrypted;
+
+    @Query
+    @NameInMap("DataDiskKMSKeyId")
+    private String dataDiskKMSKeyId;
+
+    @Query
     @NameInMap("DepositType")
     private String depositType;
 
@@ -226,6 +234,8 @@ public class CreateClusterV2Request extends Request {
         this.clusterType = builder.clusterType;
         this.config = builder.config;
         this.configurations = builder.configurations;
+        this.dataDiskEncrypted = builder.dataDiskEncrypted;
+        this.dataDiskKMSKeyId = builder.dataDiskKMSKeyId;
         this.depositType = builder.depositType;
         this.easEnable = builder.easEnable;
         this.emrVer = builder.emrVer;
@@ -348,6 +358,20 @@ public class CreateClusterV2Request extends Request {
      */
     public String getConfigurations() {
         return this.configurations;
+    }
+
+    /**
+     * @return dataDiskEncrypted
+     */
+    public Boolean getDataDiskEncrypted() {
+        return this.dataDiskEncrypted;
+    }
+
+    /**
+     * @return dataDiskKMSKeyId
+     */
+    public String getDataDiskKMSKeyId() {
+        return this.dataDiskKMSKeyId;
     }
 
     /**
@@ -634,6 +658,8 @@ public class CreateClusterV2Request extends Request {
         private String clusterType; 
         private java.util.List < Config> config; 
         private String configurations; 
+        private Boolean dataDiskEncrypted; 
+        private String dataDiskKMSKeyId; 
         private String depositType; 
         private Boolean easEnable; 
         private String emrVer; 
@@ -678,57 +704,59 @@ public class CreateClusterV2Request extends Request {
             super();
         } 
 
-        private Builder(CreateClusterV2Request response) {
-            super(response);
-            this.authorizeContent = response.authorizeContent;
-            this.autoPayOrder = response.autoPayOrder;
-            this.autoRenew = response.autoRenew;
-            this.bootstrapAction = response.bootstrapAction;
-            this.chargeType = response.chargeType;
-            this.clickHouseConf = response.clickHouseConf;
-            this.clientToken = response.clientToken;
-            this.clusterType = response.clusterType;
-            this.config = response.config;
-            this.configurations = response.configurations;
-            this.depositType = response.depositType;
-            this.easEnable = response.easEnable;
-            this.emrVer = response.emrVer;
-            this.extraAttributes = response.extraAttributes;
-            this.highAvailabilityEnable = response.highAvailabilityEnable;
-            this.hostComponentInfo = response.hostComponentInfo;
-            this.hostGroup = response.hostGroup;
-            this.initCustomHiveMetaDB = response.initCustomHiveMetaDB;
-            this.instanceGeneration = response.instanceGeneration;
-            this.ioOptimized = response.ioOptimized;
-            this.isOpenPublicIp = response.isOpenPublicIp;
-            this.keyPairName = response.keyPairName;
-            this.logPath = response.logPath;
-            this.machineType = response.machineType;
-            this.masterPwd = response.masterPwd;
-            this.metaStoreConf = response.metaStoreConf;
-            this.metaStoreType = response.metaStoreType;
-            this.name = response.name;
-            this.netType = response.netType;
-            this.optionSoftWareList = response.optionSoftWareList;
-            this.period = response.period;
-            this.promotionInfo = response.promotionInfo;
-            this.regionId = response.regionId;
-            this.relatedClusterId = response.relatedClusterId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityGroupId = response.securityGroupId;
-            this.securityGroupName = response.securityGroupName;
-            this.serviceInfo = response.serviceInfo;
-            this.sshEnable = response.sshEnable;
-            this.tag = response.tag;
-            this.useCustomHiveMetaDB = response.useCustomHiveMetaDB;
-            this.useLocalMetaDb = response.useLocalMetaDb;
-            this.userDefinedEmrEcsRole = response.userDefinedEmrEcsRole;
-            this.userInfo = response.userInfo;
-            this.vSwitchId = response.vSwitchId;
-            this.vpcId = response.vpcId;
-            this.whiteListType = response.whiteListType;
-            this.zoneId = response.zoneId;
+        private Builder(CreateClusterV2Request request) {
+            super(request);
+            this.authorizeContent = request.authorizeContent;
+            this.autoPayOrder = request.autoPayOrder;
+            this.autoRenew = request.autoRenew;
+            this.bootstrapAction = request.bootstrapAction;
+            this.chargeType = request.chargeType;
+            this.clickHouseConf = request.clickHouseConf;
+            this.clientToken = request.clientToken;
+            this.clusterType = request.clusterType;
+            this.config = request.config;
+            this.configurations = request.configurations;
+            this.dataDiskEncrypted = request.dataDiskEncrypted;
+            this.dataDiskKMSKeyId = request.dataDiskKMSKeyId;
+            this.depositType = request.depositType;
+            this.easEnable = request.easEnable;
+            this.emrVer = request.emrVer;
+            this.extraAttributes = request.extraAttributes;
+            this.highAvailabilityEnable = request.highAvailabilityEnable;
+            this.hostComponentInfo = request.hostComponentInfo;
+            this.hostGroup = request.hostGroup;
+            this.initCustomHiveMetaDB = request.initCustomHiveMetaDB;
+            this.instanceGeneration = request.instanceGeneration;
+            this.ioOptimized = request.ioOptimized;
+            this.isOpenPublicIp = request.isOpenPublicIp;
+            this.keyPairName = request.keyPairName;
+            this.logPath = request.logPath;
+            this.machineType = request.machineType;
+            this.masterPwd = request.masterPwd;
+            this.metaStoreConf = request.metaStoreConf;
+            this.metaStoreType = request.metaStoreType;
+            this.name = request.name;
+            this.netType = request.netType;
+            this.optionSoftWareList = request.optionSoftWareList;
+            this.period = request.period;
+            this.promotionInfo = request.promotionInfo;
+            this.regionId = request.regionId;
+            this.relatedClusterId = request.relatedClusterId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityGroupId = request.securityGroupId;
+            this.securityGroupName = request.securityGroupName;
+            this.serviceInfo = request.serviceInfo;
+            this.sshEnable = request.sshEnable;
+            this.tag = request.tag;
+            this.useCustomHiveMetaDB = request.useCustomHiveMetaDB;
+            this.useLocalMetaDb = request.useLocalMetaDb;
+            this.userDefinedEmrEcsRole = request.userDefinedEmrEcsRole;
+            this.userInfo = request.userInfo;
+            this.vSwitchId = request.vSwitchId;
+            this.vpcId = request.vpcId;
+            this.whiteListType = request.whiteListType;
+            this.zoneId = request.zoneId;
         } 
 
         /**
@@ -818,6 +846,24 @@ public class CreateClusterV2Request extends Request {
         public Builder configurations(String configurations) {
             this.putQueryParameter("Configurations", configurations);
             this.configurations = configurations;
+            return this;
+        }
+
+        /**
+         * DataDiskEncrypted.
+         */
+        public Builder dataDiskEncrypted(Boolean dataDiskEncrypted) {
+            this.putQueryParameter("DataDiskEncrypted", dataDiskEncrypted);
+            this.dataDiskEncrypted = dataDiskEncrypted;
+            return this;
+        }
+
+        /**
+         * DataDiskKMSKeyId.
+         */
+        public Builder dataDiskKMSKeyId(String dataDiskKMSKeyId) {
+            this.putQueryParameter("DataDiskKMSKeyId", dataDiskKMSKeyId);
+            this.dataDiskKMSKeyId = dataDiskKMSKeyId;
             return this;
         }
 
@@ -1146,7 +1192,7 @@ public class CreateClusterV2Request extends Request {
         }
 
         /**
-         * VpcId.
+         * VPC ID。
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

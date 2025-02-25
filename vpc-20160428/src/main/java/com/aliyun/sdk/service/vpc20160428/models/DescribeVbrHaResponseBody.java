@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVbrHaResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVbrHaResponseBody</p>
  */
 public class DescribeVbrHaResponseBody extends TeaModel {
-    @NameInMap("CreationTime")
+    @com.aliyun.core.annotation.NameInMap("CreationTime")
     private String creationTime;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("PeerVbrId")
+    @com.aliyun.core.annotation.NameInMap("PeerVbrId")
     private String peerVbrId;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("VbrHaId")
+    @com.aliyun.core.annotation.NameInMap("VbrHaId")
     private String vbrHaId;
 
-    @NameInMap("VbrId")
+    @com.aliyun.core.annotation.NameInMap("VbrId")
     private String vbrId;
 
     private DescribeVbrHaResponseBody(Builder builder) {
@@ -134,7 +139,10 @@ public class DescribeVbrHaResponseBody extends TeaModel {
         private String vbrId; 
 
         /**
-         * The time when the VBR was created.
+         * <p>The time when the VBR was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-08T12:20:55</p>
          */
         public Builder creationTime(String creationTime) {
             this.creationTime = creationTime;
@@ -142,10 +150,11 @@ public class DescribeVbrHaResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the VBR failover group.
-         * <p>
+         * <p>The description of the VBR failover group.</p>
+         * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 2 to 256 characters in length. It must start with a letter and cannot start with `http://`or `https://`.
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -153,7 +162,10 @@ public class DescribeVbrHaResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the VBR failover group.
+         * <p>The name of the VBR failover group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VBRHa</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -161,7 +173,10 @@ public class DescribeVbrHaResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the other VBR in the VBR failover group.
+         * <p>The ID of the other VBR in the VBR failover group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vbr-bp12mw1f8k3jgygk9****</p>
          */
         public Builder peerVbrId(String peerVbrId) {
             this.peerVbrId = peerVbrId;
@@ -169,7 +184,10 @@ public class DescribeVbrHaResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the region where the VBR is deployed.
+         * <p>The ID of the region in which the VBR is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -177,7 +195,10 @@ public class DescribeVbrHaResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4EC47282-1B74-4534-BD0E-403F3EE64CAF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -185,11 +206,14 @@ public class DescribeVbrHaResponseBody extends TeaModel {
         }
 
         /**
-         * The state of the VBR failover group.
-         * <p>
+         * <p>The status of the VBR failover group.</p>
+         * <ul>
+         * <li><strong>Creating</strong></li>
+         * <li><strong>Active</strong></li>
+         * </ul>
          * 
-         * *   **Creating**: The VBR failover group is being created.
-         * *   **Active**: The VBR failover group is running as expected.
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -197,7 +221,10 @@ public class DescribeVbrHaResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the VBR failover group.
+         * <p>The ID of the VBR failover group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vbrha-sa1sxheuxtd98****</p>
          */
         public Builder vbrHaId(String vbrHaId) {
             this.vbrHaId = vbrHaId;
@@ -205,7 +232,10 @@ public class DescribeVbrHaResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the VBR.
+         * <p>The VBR ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vbr-bp1jcg5cmxjbl9xgc****</p>
          */
         public Builder vbrId(String vbrId) {
             this.vbrId = vbrId;

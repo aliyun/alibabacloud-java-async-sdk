@@ -1,49 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceVpcAuthModeRequest} extends {@link RequestModel}
  *
  * <p>ModifyInstanceVpcAuthModeRequest</p>
  */
 public class ModifyInstanceVpcAuthModeRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("VpcAuthMode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcAuthMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcAuthMode;
 
     private ModifyInstanceVpcAuthModeRequest(Builder builder) {
@@ -163,7 +163,11 @@ public class ModifyInstanceVpcAuthModeRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -217,13 +221,17 @@ public class ModifyInstanceVpcAuthModeRequest extends Request {
         }
 
         /**
-         * Specifies whether to disable password-free access. Valid values:
-         * <p>
+         * <p>Specifies whether to disable password-free access. Valid values:</p>
+         * <ul>
+         * <li><strong>Open</strong>: disables password-free access.</li>
+         * <li><strong>Close</strong>: enables password-free access.</li>
+         * </ul>
+         * <p>**</p>
+         * <p><strong>Description</strong> Default value: <strong>Open</strong>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Open**: disables password-free access.
-         * *   **Close**: enables password-free access.
-         * 
-         * > The default value is **Open**.
+         * <strong>example:</strong>
+         * <p>Close</p>
          */
         public Builder vpcAuthMode(String vpcAuthMode) {
             this.putQueryParameter("VpcAuthMode", vpcAuthMode);

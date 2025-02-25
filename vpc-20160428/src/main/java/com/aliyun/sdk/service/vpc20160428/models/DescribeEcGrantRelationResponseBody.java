@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEcGrantRelationResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEcGrantRelationResponseBody</p>
  */
 public class DescribeEcGrantRelationResponseBody extends TeaModel {
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("EcGrantRelations")
-    private java.util.List < EcGrantRelations> ecGrantRelations;
+    @com.aliyun.core.annotation.NameInMap("EcGrantRelations")
+    private java.util.List<EcGrantRelations> ecGrantRelations;
 
-    @NameInMap("Page")
+    @com.aliyun.core.annotation.NameInMap("Page")
     private Integer page;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeEcGrantRelationResponseBody(Builder builder) {
@@ -57,7 +62,7 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
     /**
      * @return ecGrantRelations
      */
-    public java.util.List < EcGrantRelations> getEcGrantRelations() {
+    public java.util.List<EcGrantRelations> getEcGrantRelations() {
         return this.ecGrantRelations;
     }
 
@@ -91,14 +96,17 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer count; 
-        private java.util.List < EcGrantRelations> ecGrantRelations; 
+        private java.util.List<EcGrantRelations> ecGrantRelations; 
         private Integer page; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -106,15 +114,18 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
         }
 
         /**
-         * The query results.
+         * <p>The query results.</p>
          */
-        public Builder ecGrantRelations(java.util.List < EcGrantRelations> ecGrantRelations) {
+        public Builder ecGrantRelations(java.util.List<EcGrantRelations> ecGrantRelations) {
             this.ecGrantRelations = ecGrantRelations;
             return this;
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.page = page;
@@ -122,7 +133,10 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +144,10 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E6E90F6B-2B41-5AAF-ABEB-236ADBAAD91D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -151,38 +171,44 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEcGrantRelationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEcGrantRelationResponseBody</p>
+     */
     public static class EcGrantRelations extends TeaModel {
-        @NameInMap("AliUid")
+        @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GrantType")
+        @com.aliyun.core.annotation.NameInMap("GrantType")
         private String grantType;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InstanceRouterId")
+        @com.aliyun.core.annotation.NameInMap("InstanceRouterId")
         private String instanceRouterId;
 
-        @NameInMap("RegionNo")
+        @com.aliyun.core.annotation.NameInMap("RegionNo")
         private String regionNo;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("VbrInstanceId")
+        @com.aliyun.core.annotation.NameInMap("VbrInstanceId")
         private String vbrInstanceId;
 
-        @NameInMap("VbrOwnerUid")
+        @com.aliyun.core.annotation.NameInMap("VbrOwnerUid")
         private Long vbrOwnerUid;
 
-        @NameInMap("VbrRegionNo")
+        @com.aliyun.core.annotation.NameInMap("VbrRegionNo")
         private String vbrRegionNo;
 
         private EcGrantRelations(Builder builder) {
@@ -298,7 +324,10 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             private String vbrRegionNo; 
 
             /**
-             * The ID of the Alibaba Cloud account to which the VPC belongs.
+             * <p>The ID of the Alibaba Cloud account to which the VPC belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1250123456123456</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -306,7 +335,10 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             }
 
             /**
-             * The time when permissions on the VPC were granted to the VBR.
+             * <p>The time when permissions on the VPC were granted to the VBR.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-02T11:46Z</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -314,11 +346,14 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             }
 
             /**
-             * The VBRs that have permissions on the VPC. Valid values:
-             * <p>
+             * <p>The VBRs that have permissions on the VPC. Valid values:</p>
+             * <ul>
+             * <li><strong>All</strong>: VBRs that reside in the specified region and belong to the specified Alibaba Cloud account all have permissions on the VPC.</li>
+             * <li><strong>Specify</strong>: Only the specified VBR has permissions on the VPC.</li>
+             * </ul>
              * 
-             * *   **All**: VBRs that reside in the specified region and belong to the specified Alibaba Cloud account all have permissions on the VPC.
-             * *   **Specify**: Only the specified VBR has permissions on the VPC.
+             * <strong>example:</strong>
+             * <p>All</p>
              */
             public Builder grantType(String grantType) {
                 this.grantType = grantType;
@@ -326,7 +361,10 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * <p>The ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1brjuegjc88v3u9****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -334,7 +372,10 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the VPC.
+             * <p>The name of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPCname</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -342,7 +383,10 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vRouter.
+             * <p>The ID of the vRouter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vrt-bp1i0yzgjd8ra05ec****</p>
              */
             public Builder instanceRouterId(String instanceRouterId) {
                 this.instanceRouterId = instanceRouterId;
@@ -350,7 +394,10 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the VPC is deployed.
+             * <p>The ID of the region where the VPC is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -358,11 +405,14 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             }
 
             /**
-             * The query result. Valid values:
-             * <p>
+             * <p>The query result. Valid values:</p>
+             * <ul>
+             * <li><strong>Created</strong>: The VBR has permissions on the VPC.</li>
+             * <li><strong>Deleted</strong>: The VBR does not have permissions on the VPC.</li>
+             * </ul>
              * 
-             * *   **Created**: The VBR has permissions on the VPC.
-             * *   **Deleted**: The VBR does not have permissions on the VPC.
+             * <strong>example:</strong>
+             * <p>Created</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -370,7 +420,10 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VBR.
+             * <p>The ID of the VBR.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vbr-m5ex0xf63xk8s5bob****</p>
              */
             public Builder vbrInstanceId(String vbrInstanceId) {
                 this.vbrInstanceId = vbrInstanceId;
@@ -378,7 +431,10 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the VBR belongs.
+             * <p>The ID of the Alibaba Cloud account to which the VBR belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1210123456123456</p>
              */
             public Builder vbrOwnerUid(Long vbrOwnerUid) {
                 this.vbrOwnerUid = vbrOwnerUid;
@@ -386,7 +442,10 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the VBR is deployed.
+             * <p>The ID of the region where the VBR is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder vbrRegionNo(String vbrRegionNo) {
                 this.vbrRegionNo = vbrRegionNo;

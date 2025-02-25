@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterTasksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeClusterTasksResponseBody</p>
  */
 public class DescribeClusterTasksResponseBody extends TeaModel {
-    @NameInMap("page_info")
+    @com.aliyun.core.annotation.NameInMap("page_info")
     private PageInfo pageInfo;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("tasks")
-    private java.util.List < Tasks> tasks;
+    @com.aliyun.core.annotation.NameInMap("tasks")
+    private java.util.List<Tasks> tasks;
 
     private DescribeClusterTasksResponseBody(Builder builder) {
         this.pageInfo = builder.pageInfo;
@@ -52,17 +57,17 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
     /**
      * @return tasks
      */
-    public java.util.List < Tasks> getTasks() {
+    public java.util.List<Tasks> getTasks() {
         return this.tasks;
     }
 
     public static final class Builder {
         private PageInfo pageInfo; 
         private String requestId; 
-        private java.util.List < Tasks> tasks; 
+        private java.util.List<Tasks> tasks; 
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +75,10 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0527ac9a-c899-4341-a21a-xxxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,9 +86,9 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the tasks.
+         * <p>The information about the tasks.</p>
          */
-        public Builder tasks(java.util.List < Tasks> tasks) {
+        public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
             return this;
         }
@@ -91,14 +99,20 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClusterTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterTasksResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("page_number")
+        @com.aliyun.core.annotation.NameInMap("page_number")
         private Long pageNumber;
 
-        @NameInMap("page_size")
+        @com.aliyun.core.annotation.NameInMap("page_size")
         private Long pageSize;
 
-        @NameInMap("total_count")
+        @com.aliyun.core.annotation.NameInMap("total_count")
         private Long totalCount;
 
         private PageInfo(Builder builder) {
@@ -142,7 +156,10 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The number of the page returned.
+             * <p>The number of the page returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -150,7 +167,10 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -158,7 +178,10 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -172,11 +195,17 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterTasksResponseBody</p>
+     */
     public static class Error extends TeaModel {
-        @NameInMap("code")
+        @com.aliyun.core.annotation.NameInMap("code")
         private String code;
 
-        @NameInMap("message")
+        @com.aliyun.core.annotation.NameInMap("message")
         private String message;
 
         private Error(Builder builder) {
@@ -211,7 +240,10 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * The error code returned.
+             * <p>The error code returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BadRequest</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -219,7 +251,10 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned.
+             * <p>The error message returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Addon status not match</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -233,23 +268,29 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterTasksResponseBody</p>
+     */
     public static class Tasks extends TeaModel {
-        @NameInMap("created")
+        @com.aliyun.core.annotation.NameInMap("created")
         private String created;
 
-        @NameInMap("error")
+        @com.aliyun.core.annotation.NameInMap("error")
         private Error error;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
-        @NameInMap("task_id")
+        @com.aliyun.core.annotation.NameInMap("task_id")
         private String taskId;
 
-        @NameInMap("task_type")
+        @com.aliyun.core.annotation.NameInMap("task_type")
         private String taskType;
 
-        @NameInMap("updated")
+        @com.aliyun.core.annotation.NameInMap("updated")
         private String updated;
 
         private Tasks(Builder builder) {
@@ -320,7 +361,10 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             private String updated; 
 
             /**
-             * The time when the task was created.
+             * <p>The time when the task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-03T10:11:33+08:00</p>
              */
             public Builder created(String created) {
                 this.created = created;
@@ -328,7 +372,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The error returned for the task.
+             * <p>The error returned for the task.</p>
              */
             public Builder error(Error error) {
                 this.error = error;
@@ -336,7 +380,10 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task.
+             * <p>The status of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -344,7 +391,10 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The task ID.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>install-addons-c3xxxxxx</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -352,7 +402,10 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The type of task.
+             * <p>The type of task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cluster_addon_install</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -360,7 +413,10 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task was updated.
+             * <p>The time when the task was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-03T10:12:03.482+08:00</p>
              */
             public Builder updated(String updated) {
                 this.updated = updated;

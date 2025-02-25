@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeDBProxyInstanceKernelVersionResponseBody} extends {@link TeaModel}
  *
  * <p>UpgradeDBProxyInstanceKernelVersionResponseBody</p>
  */
 public class UpgradeDBProxyInstanceKernelVersionResponseBody extends TeaModel {
-    @NameInMap("DBInstanceName")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceName")
     private String DBInstanceName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
     private UpgradeDBProxyInstanceKernelVersionResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class UpgradeDBProxyInstanceKernelVersionResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The ID of the database proxy of the instance.
+         * <p>The ID of the database proxy of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bu9***</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -70,7 +78,10 @@ public class UpgradeDBProxyInstanceKernelVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44537EC8-DFA2-4745-B579-E733FF2C5B9A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +89,10 @@ public class UpgradeDBProxyInstanceKernelVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The task ID.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33436****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

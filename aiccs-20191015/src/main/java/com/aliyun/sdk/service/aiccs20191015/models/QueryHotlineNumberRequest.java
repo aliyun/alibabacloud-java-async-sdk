@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryHotlineNumberRequest} extends {@link RequestModel}
  *
  * <p>QueryHotlineNumberRequest</p>
  */
 public class QueryHotlineNumberRequest extends Request {
-    @Query
-    @NameInMap("CurrentPage")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Integer currentPage;
 
-    @Query
-    @NameInMap("DepartmentId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DepartmentId")
     private Long departmentId;
 
-    @Query
-    @NameInMap("GroupIds")
-    private java.util.List < Long > groupIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupIds")
+    private java.util.List<Long> groupIds;
 
-    @Query
-    @NameInMap("HotlineNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HotlineNumber")
     private String hotlineNumber;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true, maximum = 20, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 20, minimum = 1)
     private Integer pageSize;
 
     private QueryHotlineNumberRequest(Builder builder) {
@@ -79,7 +84,7 @@ public class QueryHotlineNumberRequest extends Request {
     /**
      * @return groupIds
      */
-    public java.util.List < Long > getGroupIds() {
+    public java.util.List<Long> getGroupIds() {
         return this.groupIds;
     }
 
@@ -107,7 +112,7 @@ public class QueryHotlineNumberRequest extends Request {
     public static final class Builder extends Request.Builder<QueryHotlineNumberRequest, Builder> {
         private Integer currentPage; 
         private Long departmentId; 
-        private java.util.List < Long > groupIds; 
+        private java.util.List<Long> groupIds; 
         private String hotlineNumber; 
         private String instanceId; 
         private Integer pageSize; 
@@ -127,7 +132,10 @@ public class QueryHotlineNumberRequest extends Request {
         } 
 
         /**
-         * 当前页码
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -136,7 +144,7 @@ public class QueryHotlineNumberRequest extends Request {
         }
 
         /**
-         * 部门id（技能组分组）
+         * DepartmentId.
          */
         public Builder departmentId(Long departmentId) {
             this.putQueryParameter("DepartmentId", departmentId);
@@ -145,9 +153,9 @@ public class QueryHotlineNumberRequest extends Request {
         }
 
         /**
-         * 技能组列表
+         * GroupIds.
          */
-        public Builder groupIds(java.util.List < Long > groupIds) {
+        public Builder groupIds(java.util.List<Long> groupIds) {
             String groupIdsShrink = shrink(groupIds, "GroupIds", "json");
             this.putQueryParameter("GroupIds", groupIdsShrink);
             this.groupIds = groupIds;
@@ -155,7 +163,7 @@ public class QueryHotlineNumberRequest extends Request {
         }
 
         /**
-         * 号码（支持模糊查询）
+         * HotlineNumber.
          */
         public Builder hotlineNumber(String hotlineNumber) {
             this.putQueryParameter("HotlineNumber", hotlineNumber);
@@ -164,7 +172,10 @@ public class QueryHotlineNumberRequest extends Request {
         }
 
         /**
-         * 实例id
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre-cn-***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -173,7 +184,10 @@ public class QueryHotlineNumberRequest extends Request {
         }
 
         /**
-         * 每页大小
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

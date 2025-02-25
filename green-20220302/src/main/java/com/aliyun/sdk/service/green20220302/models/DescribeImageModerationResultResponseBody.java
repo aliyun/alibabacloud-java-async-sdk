@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220302.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageModerationResultResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImageModerationResultResponseBody</p>
  */
 public class DescribeImageModerationResultResponseBody extends TeaModel {
-    @NameInMap("Code")
-    private String code;
+    @com.aliyun.core.annotation.NameInMap("Code")
+    private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Msg")
+    @com.aliyun.core.annotation.NameInMap("Msg")
     private String msg;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeImageModerationResultResponseBody(Builder builder) {
@@ -42,7 +47,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
     /**
      * @return code
      */
-    public String getCode() {
+    public Integer getCode() {
         return this.code;
     }
 
@@ -68,21 +73,24 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String code; 
+        private Integer code; 
         private Data data; 
         private String msg; 
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The returned HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
-        public Builder code(String code) {
+        public Builder code(Integer code) {
             this.code = code;
             return this;
         }
 
         /**
-         * Data.
+         * <p>The image moderation results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +98,10 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * <p>The message that is returned in response to the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -98,7 +109,10 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2881AD4F-638B-52A3-BA20-F74C5B1CEAE3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,15 +125,25 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImageModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageModerationResultResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("Confidence")
+        @com.aliyun.core.annotation.NameInMap("Confidence")
         private Float confidence;
 
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
         private Result(Builder builder) {
             this.confidence = builder.confidence;
+            this.description = builder.description;
             this.label = builder.label;
         }
 
@@ -139,6 +163,13 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
          * @return label
          */
         public String getLabel() {
@@ -147,10 +178,14 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private Float confidence; 
+            private String description; 
             private String label; 
 
             /**
-             * Confidence.
+             * <p>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>81.22</p>
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
@@ -158,7 +193,21 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * <p>The description of the result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>no risk</p>
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * <p>The labels returned after the image moderation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>violent_explosion</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -172,21 +221,30 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImageModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageModerationResultResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DataId")
+        @com.aliyun.core.annotation.NameInMap("DataId")
         private String dataId;
 
-        @NameInMap("Frame")
+        @com.aliyun.core.annotation.NameInMap("Frame")
         private String frame;
 
-        @NameInMap("FrameNum")
+        @com.aliyun.core.annotation.NameInMap("FrameNum")
         private Integer frameNum;
 
-        @NameInMap("ReqId")
+        @com.aliyun.core.annotation.NameInMap("ReqId")
         private String reqId;
 
-        @NameInMap("Result")
-        private java.util.List < Result> result;
+        @com.aliyun.core.annotation.NameInMap("Result")
+        private java.util.List<Result> result;
+
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
+        private String riskLevel;
 
         private Data(Builder builder) {
             this.dataId = builder.dataId;
@@ -194,6 +252,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
             this.frameNum = builder.frameNum;
             this.reqId = builder.reqId;
             this.result = builder.result;
+            this.riskLevel = builder.riskLevel;
         }
 
         public static Builder builder() {
@@ -235,8 +294,15 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.List < Result> getResult() {
+        public java.util.List<Result> getResult() {
             return this.result;
+        }
+
+        /**
+         * @return riskLevel
+         */
+        public String getRiskLevel() {
+            return this.riskLevel;
         }
 
         public static final class Builder {
@@ -244,10 +310,14 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
             private String frame; 
             private Integer frameNum; 
             private String reqId; 
-            private java.util.List < Result> result; 
+            private java.util.List<Result> result; 
+            private String riskLevel; 
 
             /**
-             * DataId.
+             * <p>The value of dataId that is specified in the API request. If this parameter is not specified in the API request, this field is not available in the response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2a5389eb-4ff8-4584-ac99-644e2a539aa1</p>
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -255,7 +325,10 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Frame.
+             * <p>The information about the captured frames.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;result&quot;:[{&quot;confidence&quot;:81.22,&quot;label&quot;:&quot;violent_explosion&quot;}]}]</p>
              */
             public Builder frame(String frame) {
                 this.frame = frame;
@@ -263,7 +336,10 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * FrameNum.
+             * <p>The number of frames.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder frameNum(Integer frameNum) {
                 this.frameNum = frameNum;
@@ -271,7 +347,10 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * ReqId.
+             * <p>The reqId field returned by the Image Async Moderation API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>B0963D30-BAB4-562F-9ED0-7A23AEC51C7C</p>
              */
             public Builder reqId(String reqId) {
                 this.reqId = reqId;
@@ -279,10 +358,21 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The results of image moderation parameters such as the label parameter and the confidence parameter.</p>
              */
-            public Builder result(java.util.List < Result> result) {
+            public Builder result(java.util.List<Result> result) {
                 this.result = result;
+                return this;
+            }
+
+            /**
+             * <p>Risk Level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
+             */
+            public Builder riskLevel(String riskLevel) {
+                this.riskLevel = riskLevel;
                 return this;
             }
 

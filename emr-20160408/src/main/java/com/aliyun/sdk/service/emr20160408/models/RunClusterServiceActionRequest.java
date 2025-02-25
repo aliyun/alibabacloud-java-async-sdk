@@ -273,26 +273,26 @@ public class RunClusterServiceActionRequest extends Request {
             super();
         } 
 
-        private Builder(RunClusterServiceActionRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.comment = response.comment;
-            this.componentNameList = response.componentNameList;
-            this.customCommand = response.customCommand;
-            this.customParams = response.customParams;
-            this.executeStrategy = response.executeStrategy;
-            this.hostGroupIdList = response.hostGroupIdList;
-            this.hostIdList = response.hostIdList;
-            this.interval = response.interval;
-            this.isRolling = response.isRolling;
-            this.nodeCountPerBatch = response.nodeCountPerBatch;
-            this.onlyRestartStaleConfigNodes = response.onlyRestartStaleConfigNodes;
-            this.regionId = response.regionId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.serviceActionName = response.serviceActionName;
-            this.serviceName = response.serviceName;
-            this.totlerateFailCount = response.totlerateFailCount;
-            this.turnOnMaintenanceMode = response.turnOnMaintenanceMode;
+        private Builder(RunClusterServiceActionRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.comment = request.comment;
+            this.componentNameList = request.componentNameList;
+            this.customCommand = request.customCommand;
+            this.customParams = request.customParams;
+            this.executeStrategy = request.executeStrategy;
+            this.hostGroupIdList = request.hostGroupIdList;
+            this.hostIdList = request.hostIdList;
+            this.interval = request.interval;
+            this.isRolling = request.isRolling;
+            this.nodeCountPerBatch = request.nodeCountPerBatch;
+            this.onlyRestartStaleConfigNodes = request.onlyRestartStaleConfigNodes;
+            this.regionId = request.regionId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.serviceActionName = request.serviceActionName;
+            this.serviceName = request.serviceName;
+            this.totlerateFailCount = request.totlerateFailCount;
+            this.turnOnMaintenanceMode = request.turnOnMaintenanceMode;
         } 
 
         /**

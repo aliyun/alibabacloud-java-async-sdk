@@ -1,58 +1,63 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceConnectionStringRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBInstanceConnectionStringRequest</p>
  */
 public class ModifyDBInstanceConnectionStringRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("CurrentConnectionString")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentConnectionString")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String currentConnectionString;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("NewConnectionString")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewConnectionString")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String newConnectionString;
 
-    @Query
-    @NameInMap("NewPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewPort")
     private Integer newPort;
 
-    @Query
-    @NameInMap("NodeId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeId")
     private String nodeId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyDBInstanceConnectionStringRequest(Builder builder) {
@@ -192,7 +197,11 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * The current connection string, which is to be modified.
+         * <p>The current endpoint that is to be modified.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bpxxxxxxxx.mongodb.rds.aliyuncs.com</p>
          */
         public Builder currentConnectionString(String currentConnectionString) {
             this.putQueryParameter("CurrentConnectionString", currentConnectionString);
@@ -201,10 +210,14 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p>If you set this parameter to the ID of a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.
+         * <strong>example:</strong>
+         * <p>dds-bpxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -213,10 +226,14 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * The new connection string. It must be 8 to 64 characters in length and can contain letters and digits. It must start with a lowercase letter.
-         * <p>
+         * <p>The new endpoint. It must be 8 to 64 characters in length and can contain letters and digits. It must start with a lowercase letter.</p>
+         * <blockquote>
+         * <p>You need only to specify the prefix of the endpoint. The content other than the prefix cannot be modified.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You need only to specify the prefix of the connection string. The content other than the prefix cannot be modified.
+         * <strong>example:</strong>
+         * <p>aliyuntest111</p>
          */
         public Builder newConnectionString(String newConnectionString) {
             this.putQueryParameter("NewConnectionString", newConnectionString);
@@ -225,9 +242,13 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * this parameter can be used. The new port should be within the range of 1000 to 65535.
-         * <p>
-         * >When the DBInstanceId parameter is passed in as a cloud disk instance ID
+         * <p>The new port number of the instance. The port number must be within the range from 1000 to 65535.</p>
+         * <blockquote>
+         * <p> This parameter is available only when you set the <strong>DBInstanceId</strong> parameter to the ID of an instance that uses cloud disks.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3310</p>
          */
         public Builder newPort(Integer newPort) {
             this.putQueryParameter("NewPort", newPort);
@@ -236,10 +257,13 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * The ID of the mongos in the specified sharded cluster instance. Only one mongos ID can be specified in each call.
-         * <p>
+         * <p>The ID of the mongos in the specified sharded cluster instance. Only one mongos ID can be specified in each call.</p>
+         * <blockquote>
+         * <p>This parameter is valid only when you specify the <strong>DBInstanceId</strong> parameter to the ID of a sharded cluster instance.</p>
+         * </blockquote>
          * 
-         * >  This parameter is valid only if you set the **DBInstanceId** parameter to the ID of a sharded cluster instance.
+         * <strong>example:</strong>
+         * <p>s-bpxxxxxxxx</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

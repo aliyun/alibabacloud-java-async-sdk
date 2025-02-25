@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApiTrafficControlsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeApiTrafficControlsResponseBody</p>
  */
 public class DescribeApiTrafficControlsResponseBody extends TeaModel {
-    @NameInMap("ApiTrafficControls")
+    @com.aliyun.core.annotation.NameInMap("ApiTrafficControls")
     private ApiTrafficControls apiTrafficControls;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeApiTrafficControlsResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeApiTrafficControlsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The returned throttling policy information. It is an array consisting of ApiTrafficControlItem data.
+         * <p>The returned throttling policy information. It is an array consisting of ApiTrafficControlItem data.</p>
          */
         public Builder apiTrafficControls(ApiTrafficControls apiTrafficControls) {
             this.apiTrafficControls = apiTrafficControls;
@@ -94,7 +99,10 @@ public class DescribeApiTrafficControlsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeApiTrafficControlsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeApiTrafficControlsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ004</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeApiTrafficControlsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,20 +148,26 @@ public class DescribeApiTrafficControlsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeApiTrafficControlsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApiTrafficControlsResponseBody</p>
+     */
     public static class ApiTrafficControlItem extends TeaModel {
-        @NameInMap("ApiId")
+        @com.aliyun.core.annotation.NameInMap("ApiId")
         private String apiId;
 
-        @NameInMap("ApiName")
+        @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
 
-        @NameInMap("BoundTime")
+        @com.aliyun.core.annotation.NameInMap("BoundTime")
         private String boundTime;
 
-        @NameInMap("TrafficControlId")
+        @com.aliyun.core.annotation.NameInMap("TrafficControlId")
         private String trafficControlId;
 
-        @NameInMap("TrafficControlName")
+        @com.aliyun.core.annotation.NameInMap("TrafficControlName")
         private String trafficControlName;
 
         private ApiTrafficControlItem(Builder builder) {
@@ -206,7 +229,10 @@ public class DescribeApiTrafficControlsResponseBody extends TeaModel {
             private String trafficControlName; 
 
             /**
-             * The ID of the API.
+             * <p>The ID of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>46fbb52840d146f186e38e8e70fc8c90</p>
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -214,7 +240,10 @@ public class DescribeApiTrafficControlsResponseBody extends TeaModel {
             }
 
             /**
-             * API operation
+             * <p>API operation</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testapi</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -222,7 +251,10 @@ public class DescribeApiTrafficControlsResponseBody extends TeaModel {
             }
 
             /**
-             * The binding time of the throttling policy.
+             * <p>The binding time of the throttling policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-07-23T08:28:48Z</p>
              */
             public Builder boundTime(String boundTime) {
                 this.boundTime = boundTime;
@@ -230,7 +262,10 @@ public class DescribeApiTrafficControlsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the throttling policy.
+             * <p>The ID of the throttling policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dd05f1c54d6749eda95f9fa6d491449a</p>
              */
             public Builder trafficControlId(String trafficControlId) {
                 this.trafficControlId = trafficControlId;
@@ -238,7 +273,10 @@ public class DescribeApiTrafficControlsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the throttling policy.
+             * <p>The name of the throttling policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>backendsignature</p>
              */
             public Builder trafficControlName(String trafficControlName) {
                 this.trafficControlName = trafficControlName;
@@ -252,9 +290,15 @@ public class DescribeApiTrafficControlsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeApiTrafficControlsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApiTrafficControlsResponseBody</p>
+     */
     public static class ApiTrafficControls extends TeaModel {
-        @NameInMap("ApiTrafficControlItem")
-        private java.util.List < ApiTrafficControlItem> apiTrafficControlItem;
+        @com.aliyun.core.annotation.NameInMap("ApiTrafficControlItem")
+        private java.util.List<ApiTrafficControlItem> apiTrafficControlItem;
 
         private ApiTrafficControls(Builder builder) {
             this.apiTrafficControlItem = builder.apiTrafficControlItem;
@@ -271,17 +315,17 @@ public class DescribeApiTrafficControlsResponseBody extends TeaModel {
         /**
          * @return apiTrafficControlItem
          */
-        public java.util.List < ApiTrafficControlItem> getApiTrafficControlItem() {
+        public java.util.List<ApiTrafficControlItem> getApiTrafficControlItem() {
             return this.apiTrafficControlItem;
         }
 
         public static final class Builder {
-            private java.util.List < ApiTrafficControlItem> apiTrafficControlItem; 
+            private java.util.List<ApiTrafficControlItem> apiTrafficControlItem; 
 
             /**
              * ApiTrafficControlItem.
              */
-            public Builder apiTrafficControlItem(java.util.List < ApiTrafficControlItem> apiTrafficControlItem) {
+            public Builder apiTrafficControlItem(java.util.List<ApiTrafficControlItem> apiTrafficControlItem) {
                 this.apiTrafficControlItem = apiTrafficControlItem;
                 return this;
             }

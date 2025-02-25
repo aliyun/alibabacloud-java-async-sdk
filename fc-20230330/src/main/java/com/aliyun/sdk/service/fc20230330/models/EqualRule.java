@@ -1,23 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EqualRule} extends {@link TeaModel}
  *
  * <p>EqualRule</p>
  */
 public class EqualRule extends TeaModel {
-    @NameInMap("match")
-    @Validation(required = true, maxLength = 256)
+    @com.aliyun.core.annotation.NameInMap("match")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 256)
     private String match;
 
-    @NameInMap("replacement")
-    @Validation(required = true, maxLength = 256)
+    @com.aliyun.core.annotation.NameInMap("replacement")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 256)
     private String replacement;
 
     private EqualRule(Builder builder) {
@@ -52,7 +52,10 @@ public class EqualRule extends TeaModel {
         private String replacement; 
 
         /**
-         * match.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/old</p>
          */
         public Builder match(String match) {
             this.match = match;
@@ -60,7 +63,10 @@ public class EqualRule extends TeaModel {
         }
 
         /**
-         * replacement.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/new</p>
          */
         public Builder replacement(String replacement) {
             this.replacement = replacement;

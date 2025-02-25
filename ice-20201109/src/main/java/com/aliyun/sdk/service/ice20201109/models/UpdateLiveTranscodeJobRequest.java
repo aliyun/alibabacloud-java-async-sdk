@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateLiveTranscodeJobRequest} extends {@link RequestModel}
  *
  * <p>UpdateLiveTranscodeJobRequest</p>
  */
 public class UpdateLiveTranscodeJobRequest extends Request {
-    @Query
-    @NameInMap("JobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobId;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(maxLength = 128, minLength = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(maxLength = 128, minLength = 1)
     private String name;
 
-    @Query
-    @NameInMap("StreamInput")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StreamInput")
     private StreamInput streamInput;
 
-    @Query
-    @NameInMap("TimedConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimedConfig")
     private TimedConfig timedConfig;
 
-    @Query
-    @NameInMap("TranscodeOutput")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TranscodeOutput")
     private TranscodeOutput transcodeOutput;
 
     private UpdateLiveTranscodeJobRequest(Builder builder) {
@@ -112,7 +117,11 @@ public class UpdateLiveTranscodeJobRequest extends Request {
         } 
 
         /**
-         * JobId.
+         * <p>The job ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -121,7 +130,10 @@ public class UpdateLiveTranscodeJobRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mytest3</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -130,7 +142,7 @@ public class UpdateLiveTranscodeJobRequest extends Request {
         }
 
         /**
-         * StreamInput.
+         * <p>The information about the input stream.</p>
          */
         public Builder streamInput(StreamInput streamInput) {
             String streamInputShrink = shrink(streamInput, "StreamInput", "json");
@@ -140,7 +152,7 @@ public class UpdateLiveTranscodeJobRequest extends Request {
         }
 
         /**
-         * TimedConfig.
+         * <p>The configuration of a timed transcoding job.</p>
          */
         public Builder timedConfig(TimedConfig timedConfig) {
             String timedConfigShrink = shrink(timedConfig, "TimedConfig", "json");
@@ -150,7 +162,7 @@ public class UpdateLiveTranscodeJobRequest extends Request {
         }
 
         /**
-         * TranscodeOutput.
+         * <p>The information about the transcoding output.</p>
          */
         public Builder transcodeOutput(TranscodeOutput transcodeOutput) {
             String transcodeOutputShrink = shrink(transcodeOutput, "TranscodeOutput", "json");
@@ -166,13 +178,19 @@ public class UpdateLiveTranscodeJobRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateLiveTranscodeJobRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateLiveTranscodeJobRequest</p>
+     */
     public static class StreamInput extends TeaModel {
-        @NameInMap("InputUrl")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("InputUrl")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String inputUrl;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private StreamInput(Builder builder) {
@@ -207,7 +225,11 @@ public class UpdateLiveTranscodeJobRequest extends Request {
             private String type; 
 
             /**
-             * InputUrl.
+             * <p>The URL of the input stream.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp://mydomain/app/stream1</p>
              */
             public Builder inputUrl(String inputUrl) {
                 this.inputUrl = inputUrl;
@@ -215,7 +237,11 @@ public class UpdateLiveTranscodeJobRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The type of the input stream. The value can only be rtmp.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -229,11 +255,17 @@ public class UpdateLiveTranscodeJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateLiveTranscodeJobRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateLiveTranscodeJobRequest</p>
+     */
     public static class TimedConfig extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private TimedConfig(Builder builder) {
@@ -268,7 +300,10 @@ public class UpdateLiveTranscodeJobRequest extends Request {
             private String startTime; 
 
             /**
-             * EndTime.
+             * <p>The stop time of the transcoding job. Note: The time span between the stop time and the current time cannot exceed seven days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-05T06:08:31Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -276,7 +311,10 @@ public class UpdateLiveTranscodeJobRequest extends Request {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the transcoding job. Note: The time span between the start time and the current time cannot exceed seven days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-06-19T02:16:41Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -290,13 +328,19 @@ public class UpdateLiveTranscodeJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateLiveTranscodeJobRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateLiveTranscodeJobRequest</p>
+     */
     public static class TranscodeOutput extends TeaModel {
-        @NameInMap("DomainName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DomainName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String domainName;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private TranscodeOutput(Builder builder) {
@@ -331,7 +375,11 @@ public class UpdateLiveTranscodeJobRequest extends Request {
             private String type; 
 
             /**
-             * DomainName.
+             * <p>The streaming domain name of ApsaraVideo Live.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mydomain</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -339,7 +387,11 @@ public class UpdateLiveTranscodeJobRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The type of the output stream. A value of LiveCenter indicates that the URL of the output stream is generated based on the domain name of ApsaraVideo Live. The value can only be LiveCenter.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LiveCenter</p>
              */
             public Builder type(String type) {
                 this.type = type;

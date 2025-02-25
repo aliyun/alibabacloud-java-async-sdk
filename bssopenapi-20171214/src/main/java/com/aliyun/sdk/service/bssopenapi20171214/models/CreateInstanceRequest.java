@@ -1,57 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreateInstanceRequest</p>
  */
 public class CreateInstanceRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Logistics")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Logistics")
     private String logistics;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Parameter")
-    private java.util.List < Parameter> parameter;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Parameter")
+    private java.util.List<Parameter> parameter;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
-    @Query
-    @NameInMap("ProductCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PricingCycle")
+    private Long pricingCycle;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productCode;
 
-    @Query
-    @NameInMap("ProductType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductType")
     private String productType;
 
-    @Query
-    @NameInMap("RenewPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RenewPeriod")
     private Integer renewPeriod;
 
-    @Query
-    @NameInMap("RenewalStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RenewalStatus")
     private String renewalStatus;
 
-    @Query
-    @NameInMap("SubscriptionType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscriptionType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subscriptionType;
 
     private CreateInstanceRequest(Builder builder) {
@@ -61,6 +70,7 @@ public class CreateInstanceRequest extends Request {
         this.ownerId = builder.ownerId;
         this.parameter = builder.parameter;
         this.period = builder.period;
+        this.pricingCycle = builder.pricingCycle;
         this.productCode = builder.productCode;
         this.productType = builder.productType;
         this.renewPeriod = builder.renewPeriod;
@@ -105,7 +115,7 @@ public class CreateInstanceRequest extends Request {
     /**
      * @return parameter
      */
-    public java.util.List < Parameter> getParameter() {
+    public java.util.List<Parameter> getParameter() {
         return this.parameter;
     }
 
@@ -114,6 +124,13 @@ public class CreateInstanceRequest extends Request {
      */
     public Integer getPeriod() {
         return this.period;
+    }
+
+    /**
+     * @return pricingCycle
+     */
+    public Long getPricingCycle() {
+        return this.pricingCycle;
     }
 
     /**
@@ -155,8 +172,9 @@ public class CreateInstanceRequest extends Request {
         private String clientToken; 
         private String logistics; 
         private Long ownerId; 
-        private java.util.List < Parameter> parameter; 
+        private java.util.List<Parameter> parameter; 
         private Integer period; 
+        private Long pricingCycle; 
         private String productCode; 
         private String productType; 
         private Integer renewPeriod; 
@@ -174,6 +192,7 @@ public class CreateInstanceRequest extends Request {
             this.ownerId = request.ownerId;
             this.parameter = request.parameter;
             this.period = request.period;
+            this.pricingCycle = request.pricingCycle;
             this.productCode = request.productCode;
             this.productType = request.productType;
             this.renewPeriod = request.renewPeriod;
@@ -182,7 +201,10 @@ public class CreateInstanceRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. The server checks whether a request that uses the same client token has been received. If a request that uses the same client token has been received, the server returns the same request result as the previous request.
+         * <p>The client token that is used to ensure the idempotence of the request. The server checks whether a request that uses the same client token has been received. If a request that uses the same client token has been received, the server returns the same request result as the previous request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JASIOFKVNVIXXXXXX</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -191,7 +213,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The logistics address of this order. This parameter is generally valid for physical orders.
+         * <p>The logistics address of this order. This parameter is generally valid for physical orders.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;cityCode&quot;:&quot;330100&quot;,&quot;cityName&quot;:&quot;Hangzhou&quot;,&quot;contactName&quot;:&quot;Test&quot;,&quot;countryCode&quot;:&quot;&quot;,&quot;districtName&quot;:&quot;Puyan Street&quot;,&quot;email&quot;:&quot;**@example.com&quot;,&quot;mobilePhone&quot;:&quot;153564848844&quot;,&quot;phone&quot;:&quot;1234567&quot;,&quot;provCode&quot;:&quot;330000&quot;,&quot;provName&quot;:&quot;Zhejiang&quot;,&quot;streetCode&quot;:&quot;33010610&quot;,&quot;streetName&quot;:&quot;Zhuantang&quot;,&quot;zipCode&quot;:&quot;0000&quot;}</p>
          */
         public Builder logistics(String logistics) {
             this.putQueryParameter("Logistics", logistics);
@@ -209,19 +234,22 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The details of the modules.
+         * <p>The details of the modules.</p>
          */
-        public Builder parameter(java.util.List < Parameter> parameter) {
+        public Builder parameter(java.util.List<Parameter> parameter) {
             this.putQueryParameter("Parameter", parameter);
             this.parameter = parameter;
             return this;
         }
 
         /**
-         * The subscription duration. Unit: month. The value must be an integral multiple of 12.
-         * <p>
+         * <p>The subscription duration. Unit: month. The value must be an integral multiple of 12.</p>
+         * <blockquote>
+         * <p> This parameter is required if you create a subscription instance.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required if you create a subscription instance.
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -230,7 +258,20 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The code of the service to which the instance belongs. You can query the service code by calling the **QueryProductList** operation or viewing **Codes of Alibaba Cloud Services**.
+         * PricingCycle.
+         */
+        public Builder pricingCycle(Long pricingCycle) {
+            this.putQueryParameter("PricingCycle", pricingCycle);
+            this.pricingCycle = pricingCycle;
+            return this;
+        }
+
+        /**
+         * <p>The code of the service to which the instance belongs. You can query the service code by calling the <strong>QueryProductList</strong> operation or viewing <strong>Codes of Alibaba Cloud Services</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -239,7 +280,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The type of the service.
+         * <p>The type of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -248,10 +292,13 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The auto-renewal period. Unit: month.
-         * <p>
+         * <p>The auto-renewal period. Unit: month.</p>
+         * <blockquote>
+         * <p> This parameter is required if the <strong>RenewalStatus</strong> parameter is set to <strong>AutoRenewal</strong>.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required if the **RenewalStatus** parameter is set to **AutoRenewal**.
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder renewPeriod(Integer renewPeriod) {
             this.putQueryParameter("RenewPeriod", renewPeriod);
@@ -260,13 +307,15 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The renewal method. Valid values:
-         * <p>
+         * <p>The renewal method. Valid values:</p>
+         * <ul>
+         * <li>AutoRenewal: The instance is automatically renewed.</li>
+         * <li>ManualRenewal: The instance is manually renewed.</li>
+         * </ul>
+         * <p>Default value: ManualRenewal.</p>
          * 
-         * *   AutoRenewal: The instance is automatically renewed.
-         * *   ManualRenewal: The instance is manually renewed.
-         * 
-         * Default value: ManualRenewal.
+         * <strong>example:</strong>
+         * <p>ManualRenewal</p>
          */
         public Builder renewalStatus(String renewalStatus) {
             this.putQueryParameter("RenewalStatus", renewalStatus);
@@ -275,11 +324,15 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The billing method. Valid values:
-         * <p>
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>Subscription: the subscription billing method.</li>
+         * <li>PayAsYouGo: the pay-as-you-go billing method.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Subscription: the subscription billing method.
-         * *   PayAsYouGo: the pay-as-you-go billing method.
+         * <strong>example:</strong>
+         * <p>Subscription</p>
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putQueryParameter("SubscriptionType", subscriptionType);
@@ -294,13 +347,19 @@ public class CreateInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
     public static class Parameter extends TeaModel {
-        @NameInMap("Code")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Code")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String code;
 
-        @NameInMap("Value")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Value")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String value;
 
         private Parameter(Builder builder) {
@@ -335,7 +394,11 @@ public class CreateInstanceRequest extends Request {
             private String value; 
 
             /**
-             * The code property of the Nth module. Value of N: 1 to 100. If multiple module property parameters are involved, concatenate multiple parameters based on the value of N in sequence.
+             * <p>The code property of the Nth module. Value of N: 1 to 100. If multiple module property parameters are involved, concatenate multiple parameters based on the value of N in sequence.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InstanceType</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -343,7 +406,11 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * The value property of the Nth module. Value of N: 1 to 100.
+             * <p>The value property of the Nth module. Value of N: 1 to 100.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>disk</p>
              */
             public Builder value(String value) {
                 this.value = value;

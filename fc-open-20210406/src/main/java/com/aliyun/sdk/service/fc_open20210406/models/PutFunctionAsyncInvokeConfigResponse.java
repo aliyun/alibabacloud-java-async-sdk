@@ -13,16 +13,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class PutFunctionAsyncInvokeConfigResponse extends Response {
     @NameInMap("headers")
-    @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    private Integer statusCode;
+
     @NameInMap("body")
-    @Validation(required = true)
     private PutFunctionAsyncInvokeConfigResponseBody body;
 
     private PutFunctionAsyncInvokeConfigResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +45,13 @@ public class PutFunctionAsyncInvokeConfigResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public PutFunctionAsyncInvokeConfigResponseBody getBody() {
@@ -52,6 +61,8 @@ public class PutFunctionAsyncInvokeConfigResponse extends Response {
     public interface Builder extends Response.Builder<PutFunctionAsyncInvokeConfigResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(PutFunctionAsyncInvokeConfigResponseBody body);
 
@@ -64,6 +75,7 @@ public class PutFunctionAsyncInvokeConfigResponse extends Response {
             extends Response.BuilderImpl<PutFunctionAsyncInvokeConfigResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private PutFunctionAsyncInvokeConfigResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +85,7 @@ public class PutFunctionAsyncInvokeConfigResponse extends Response {
         private BuilderImpl(PutFunctionAsyncInvokeConfigResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +95,15 @@ public class PutFunctionAsyncInvokeConfigResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

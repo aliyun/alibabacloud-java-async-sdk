@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDoctorReportComponentSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>GetDoctorReportComponentSummaryResponseBody</p>
  */
 public class GetDoctorReportComponentSummaryResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetDoctorReportComponentSummaryResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetDoctorReportComponentSummaryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>Report content.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class GetDoctorReportComponentSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class GetDoctorReportComponentSummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDoctorReportComponentSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorReportComponentSummaryResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private Integer score;
 
-        @NameInMap("Suggestion")
+        @com.aliyun.core.annotation.NameInMap("Suggestion")
         private String suggestion;
 
-        @NameInMap("Summary")
+        @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
 
         private Data(Builder builder) {
@@ -122,7 +136,10 @@ public class GetDoctorReportComponentSummaryResponseBody extends TeaModel {
             private String summary; 
 
             /**
-             * Score.
+             * <p>Score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>88</p>
              */
             public Builder score(Integer score) {
                 this.score = score;
@@ -130,7 +147,18 @@ public class GetDoctorReportComponentSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Suggestion.
+             * <p>Optimization suggestions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>计算健康度分数为 88 ，集群处于健康状态，继续保持 
+             * 计算任务扫描
+             * 对集群中 1518 个计算任务进行了扫描，包含 209 个任务处于不健康状态 ，596 个任务处于亚健康状态 ，713 个任务处于健康状态。 
+             * 其中：
+             *        Tez 任务 1518 个，加权平均分为 88 ，内存使用量占整体集群的 100.0% ，CPU 使用量占整体集群的 100.0% ，其中 209 个任务处于不健康状态，596 个任务处于亚健康状态；
+             * 可在下面的任务明细列表中点击&quot;&quot;查看详情&quot;&quot;，查看存在的具体问题及解决方案。其中&quot;&quot;低分任务算力内存时 (GB*Sec)Top20 &quot;&quot;表根据内存时使用量进行排序，由于大任务对集群整体影响可能更大，建议优先关注。
+             * 内存利用率较低
+             * 集群整体内存利用率为 47.8% ，内存利用率较低，计算资源存在浪费，建议优先对内存算力时较大且内存利用率较低的 TOP 任务进行优化
+             * 其中，Tez作业平均内存利用率为 47.8%</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -138,7 +166,10 @@ public class GetDoctorReportComponentSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Summary.
+             * <p>Report summary.</p>
+             * 
+             * <strong>example:</strong>
+             * <h4> [计算检测]  计算健康度分数为 88 ，健康度良好，继续加油 </h4><p style=\"\"text-indent：2em\"\">集群中大部分任务保持健康状态 </p><p style=\"\"text-indent：2em\"\">集群内存利用率为： 47.8% 偏低 </p>
              */
             public Builder summary(String summary) {
                 this.summary = summary;

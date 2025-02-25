@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAccountSecurityPracticeReportResponseBody} extends {@link TeaModel}
  *
  * <p>GetAccountSecurityPracticeReportResponseBody</p>
  */
 public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
-    @NameInMap("AccountSecurityPracticeInfo")
+    @com.aliyun.core.annotation.NameInMap("AccountSecurityPracticeInfo")
     private AccountSecurityPracticeInfo accountSecurityPracticeInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetAccountSecurityPracticeReportResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information of the security report for the Alibaba Cloud account.
+         * <p>The information about the security report for the Alibaba Cloud account.</p>
          */
         public Builder accountSecurityPracticeInfo(AccountSecurityPracticeInfo accountSecurityPracticeInfo) {
             this.accountSecurityPracticeInfo = accountSecurityPracticeInfo;
@@ -58,7 +63,10 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABA822EE-85C2-4418-9577-A1831FC8466D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,32 +79,38 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAccountSecurityPracticeReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAccountSecurityPracticeReportResponseBody</p>
+     */
     public static class AccountSecurityPracticeUserInfo extends TeaModel {
-        @NameInMap("BindMfa")
+        @com.aliyun.core.annotation.NameInMap("BindMfa")
         private Boolean bindMfa;
 
-        @NameInMap("OldAkNum")
+        @com.aliyun.core.annotation.NameInMap("OldAkNum")
         private Integer oldAkNum;
 
-        @NameInMap("RootWithAccessKey")
+        @com.aliyun.core.annotation.NameInMap("RootWithAccessKey")
         private Integer rootWithAccessKey;
 
-        @NameInMap("SubUser")
+        @com.aliyun.core.annotation.NameInMap("SubUser")
         private Integer subUser;
 
-        @NameInMap("SubUserBindMfa")
+        @com.aliyun.core.annotation.NameInMap("SubUserBindMfa")
         private Integer subUserBindMfa;
 
-        @NameInMap("SubUserPwdLevel")
+        @com.aliyun.core.annotation.NameInMap("SubUserPwdLevel")
         private String subUserPwdLevel;
 
-        @NameInMap("SubUserWithOldAccessKey")
+        @com.aliyun.core.annotation.NameInMap("SubUserWithOldAccessKey")
         private Integer subUserWithOldAccessKey;
 
-        @NameInMap("SubUserWithUnusedAccessKey")
+        @com.aliyun.core.annotation.NameInMap("SubUserWithUnusedAccessKey")
         private Integer subUserWithUnusedAccessKey;
 
-        @NameInMap("UnusedAkNum")
+        @com.aliyun.core.annotation.NameInMap("UnusedAkNum")
         private Integer unusedAkNum;
 
         private AccountSecurityPracticeUserInfo(Builder builder) {
@@ -194,11 +208,14 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
             private Integer unusedAkNum; 
 
             /**
-             * Indicates whether MFA is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether multi-factor authentication (MFA) is enabled. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder bindMfa(Boolean bindMfa) {
                 this.bindMfa = bindMfa;
@@ -206,7 +223,10 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
             }
 
             /**
-             * The number of old AccessKey pairs for the Alibaba Cloud account.
+             * <p>The number of old AccessKey pairs for the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder oldAkNum(Integer oldAkNum) {
                 this.oldAkNum = oldAkNum;
@@ -214,7 +234,10 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
             }
 
             /**
-             * The number of AccessKey pairs for the Alibaba Cloud account.
+             * <p>The number of AccessKey pairs for the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder rootWithAccessKey(Integer rootWithAccessKey) {
                 this.rootWithAccessKey = rootWithAccessKey;
@@ -222,7 +245,10 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
             }
 
             /**
-             * The number of RAM users within the Alibaba Cloud account.
+             * <p>The number of RAM users within the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder subUser(Integer subUser) {
                 this.subUser = subUser;
@@ -230,7 +256,10 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
             }
 
             /**
-             * The number of RAM users that have MFA devices bound.
+             * <p>The number of RAM users that have MFA devices bound.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder subUserBindMfa(Integer subUserBindMfa) {
                 this.subUserBindMfa = subUserBindMfa;
@@ -238,12 +267,15 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
             }
 
             /**
-             * The complexity level of the password for the RAM user. Valid values:
-             * <p>
+             * <p>The complexity level of the password for the RAM user. Valid values:</p>
+             * <ul>
+             * <li>low</li>
+             * <li>mid</li>
+             * <li>high</li>
+             * </ul>
              * 
-             * *   low
-             * *   mid
-             * *   high
+             * <strong>example:</strong>
+             * <p>low</p>
              */
             public Builder subUserPwdLevel(String subUserPwdLevel) {
                 this.subUserPwdLevel = subUserPwdLevel;
@@ -251,7 +283,10 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
             }
 
             /**
-             * The number of RAM users that use the old AccessKey pairs.
+             * <p>The number of RAM users that use the old AccessKey pairs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder subUserWithOldAccessKey(Integer subUserWithOldAccessKey) {
                 this.subUserWithOldAccessKey = subUserWithOldAccessKey;
@@ -259,7 +294,10 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
             }
 
             /**
-             * The number of RAM users that have no AccessKey pairs.
+             * <p>The number of Resource Access Management (RAM) users that have unused AccessKey pairs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder subUserWithUnusedAccessKey(Integer subUserWithUnusedAccessKey) {
                 this.subUserWithUnusedAccessKey = subUserWithUnusedAccessKey;
@@ -267,7 +305,10 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
             }
 
             /**
-             * The number of AccessKey pairs that are not used for the Alibaba Cloud account.
+             * <p>The number of AccessKey pairs that are not used for the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder unusedAkNum(Integer unusedAkNum) {
                 this.unusedAkNum = unusedAkNum;
@@ -281,11 +322,17 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAccountSecurityPracticeReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAccountSecurityPracticeReportResponseBody</p>
+     */
     public static class AccountSecurityPracticeInfo extends TeaModel {
-        @NameInMap("AccountSecurityPracticeUserInfo")
+        @com.aliyun.core.annotation.NameInMap("AccountSecurityPracticeUserInfo")
         private AccountSecurityPracticeUserInfo accountSecurityPracticeUserInfo;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private Integer score;
 
         private AccountSecurityPracticeInfo(Builder builder) {
@@ -320,7 +367,7 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
             private Integer score; 
 
             /**
-             * The information of the security report for the Alibaba Cloud account.
+             * <p>The information about the security report for the Alibaba Cloud account.</p>
              */
             public Builder accountSecurityPracticeUserInfo(AccountSecurityPracticeUserInfo accountSecurityPracticeUserInfo) {
                 this.accountSecurityPracticeUserInfo = accountSecurityPracticeUserInfo;
@@ -328,7 +375,10 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
             }
 
             /**
-             * The security score of the Alibaba Cloud account.
+             * <p>The security score of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>63</p>
              */
             public Builder score(Integer score) {
                 this.score = score;

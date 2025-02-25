@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AllocatePublicNetworkAddressResponseBody} extends {@link TeaModel}
  *
  * <p>AllocatePublicNetworkAddressResponseBody</p>
  */
 public class AllocatePublicNetworkAddressResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AllocatePublicNetworkAddressResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class AllocatePublicNetworkAddressResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8AA45036-497F-52E7-B951-F9C7B239****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

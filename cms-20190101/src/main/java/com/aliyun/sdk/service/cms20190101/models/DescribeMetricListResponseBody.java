@@ -1,36 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMetricListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMetricListResponseBody</p>
  */
 public class DescribeMetricListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Datapoints")
+    @com.aliyun.core.annotation.NameInMap("Datapoints")
     private String datapoints;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.NameInMap("Period")
     private String period;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeMetricListResponseBody(Builder builder) {
@@ -110,10 +110,13 @@ public class DescribeMetricListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the call was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -121,7 +124,10 @@ public class DescribeMetricListResponseBody extends TeaModel {
         }
 
         /**
-         * The monitoring data.
+         * <p>The monitoring data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;timestamp&quot;:1548777660000,&quot;userId&quot;:&quot;120886317861****&quot;,&quot;instanceId&quot;:&quot;i-abc&quot;,&quot;Minimum&quot;:9.92,&quot;Average&quot;:9.92,&quot;Maximum&quot;:9.92}]</p>
          */
         public Builder datapoints(String datapoints) {
             this.datapoints = datapoints;
@@ -129,7 +135,10 @@ public class DescribeMetricListResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified resource is not found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -137,7 +146,10 @@ public class DescribeMetricListResponseBody extends TeaModel {
         }
 
         /**
-         * The paging token.
+         * <p>The paging token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15761441850009dd70bb64cff1f0fff6d0b08ffff073be5fb1e785e2b020f7fed9b5e137bd810a6d6cff5ae****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -145,7 +157,10 @@ public class DescribeMetricListResponseBody extends TeaModel {
         }
 
         /**
-         * The interval at which the monitoring data is queried. Unit: seconds. Valid values: 60, 300, and 900.
+         * <p>The interval at which the monitoring data is queried. Unit: seconds. Valid values: 60, 300, and 900.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder period(String period) {
             this.period = period;
@@ -153,7 +168,10 @@ public class DescribeMetricListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3121AE7D-4AFF-4C25-8F1D-C8226EBB1F42</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -161,11 +179,14 @@ public class DescribeMetricListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

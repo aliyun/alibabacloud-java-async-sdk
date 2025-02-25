@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAppEventsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAppEventsResponseBody</p>
  */
 public class ListAppEventsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListAppEventsResponseBody(Builder builder) {
@@ -98,13 +103,16 @@ public class ListAppEventsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code. Valid values:
-         * <p>
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: The call was successful.</li>
+         * <li><strong>3xx</strong>: The call was redirected.</li>
+         * <li><strong>4xx</strong>: The call failed.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * </ul>
          * 
-         * *   **2xx**: The call was successful.
-         * *   **3xx**: The call was redirected.
-         * *   **4xx**: The call failed.
-         * *   **5xx**: A server error occurred.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -112,7 +120,7 @@ public class ListAppEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The events.
+         * <p>The events.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -120,11 +128,11 @@ public class ListAppEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the call failed. Take note of the following rules:
-         * <p>
-         * 
-         * *   If the call is successful, the **ErrorCode** parameter is not returned.
-         * *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section in this topic.
+         * <p>The error code returned if the call failed. Take note of the following rules:</p>
+         * <ul>
+         * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section in this topic.</li>
+         * </ul>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -132,7 +140,10 @@ public class ListAppEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -140,7 +151,10 @@ public class ListAppEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4D805CA-926D-41B1-8E63-7AD0C1ED****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -148,11 +162,14 @@ public class ListAppEventsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the events that occurred in the application were queried. Valid values:
-         * <p>
+         * <p>Indicates whether the events that occurred in the application were queried. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The events were queried.</li>
+         * <li><strong>false</strong>: The events failed to be queried.</li>
+         * </ul>
          * 
-         * *   **true**: The events were queried.
-         * *   **false**: The events failed to be queried.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -165,26 +182,32 @@ public class ListAppEventsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAppEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAppEventsResponseBody</p>
+     */
     public static class AppEventEntity extends TeaModel {
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
 
-        @NameInMap("FirstTimestamp")
+        @com.aliyun.core.annotation.NameInMap("FirstTimestamp")
         private String firstTimestamp;
 
-        @NameInMap("LastTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LastTimestamp")
         private String lastTimestamp;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("ObjectKind")
+        @com.aliyun.core.annotation.NameInMap("ObjectKind")
         private String objectKind;
 
-        @NameInMap("ObjectName")
+        @com.aliyun.core.annotation.NameInMap("ObjectName")
         private String objectName;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
         private AppEventEntity(Builder builder) {
@@ -264,7 +287,10 @@ public class ListAppEventsResponseBody extends TeaModel {
             private String reason; 
 
             /**
-             * The type of the event. Valid values:
+             * <p>The type of the event. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -272,7 +298,10 @@ public class ListAppEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the first occurrence of the event.
+             * <p>The timestamp of the first occurrence of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-02-19T05:01:28Z</p>
              */
             public Builder firstTimestamp(String firstTimestamp) {
                 this.firstTimestamp = firstTimestamp;
@@ -280,7 +309,10 @@ public class ListAppEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the last occurrence of the event.
+             * <p>The timestamp of the last occurrence of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-02-19T05:01:28Z</p>
              */
             public Builder lastTimestamp(String lastTimestamp) {
                 this.lastTimestamp = lastTimestamp;
@@ -288,7 +320,10 @@ public class ListAppEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the event.
+             * <p>The information about the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Created container</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -296,7 +331,10 @@ public class ListAppEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the object.
+             * <p>The type of the object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Pod</p>
              */
             public Builder objectKind(String objectKind) {
                 this.objectKind = objectKind;
@@ -304,7 +342,10 @@ public class ListAppEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the object.
+             * <p>The name of the object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>errew-b86bf540-b4dc-47d8-a42f-b4997c14bd8f-5595cbddd6-2****</p>
              */
             public Builder objectName(String objectName) {
                 this.objectName = objectName;
@@ -312,7 +353,10 @@ public class ListAppEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The cause of the event.
+             * <p>The cause of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Created</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -326,17 +370,23 @@ public class ListAppEventsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAppEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAppEventsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AppEventEntity")
-        private java.util.List < AppEventEntity> appEventEntity;
+        @com.aliyun.core.annotation.NameInMap("AppEventEntity")
+        private java.util.List<AppEventEntity> appEventEntity;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Integer totalSize;
 
         private Data(Builder builder) {
@@ -357,7 +407,7 @@ public class ListAppEventsResponseBody extends TeaModel {
         /**
          * @return appEventEntity
          */
-        public java.util.List < AppEventEntity> getAppEventEntity() {
+        public java.util.List<AppEventEntity> getAppEventEntity() {
             return this.appEventEntity;
         }
 
@@ -383,21 +433,24 @@ public class ListAppEventsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AppEventEntity> appEventEntity; 
+            private java.util.List<AppEventEntity> appEventEntity; 
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalSize; 
 
             /**
-             * The events.
+             * <p>The events.</p>
              */
-            public Builder appEventEntity(java.util.List < AppEventEntity> appEventEntity) {
+            public Builder appEventEntity(java.util.List<AppEventEntity> appEventEntity) {
                 this.appEventEntity = appEventEntity;
                 return this;
             }
 
             /**
-             * The number of the returned page.
+             * <p>The number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -405,7 +458,10 @@ public class ListAppEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -413,7 +469,10 @@ public class ListAppEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of events that occurred in an application.
+             * <p>The total number of events that occurred in an application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

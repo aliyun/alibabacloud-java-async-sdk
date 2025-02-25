@@ -1,25 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLayerVersionRequest} extends {@link RequestModel}
  *
  * <p>CreateLayerVersionRequest</p>
  */
 public class CreateLayerVersionRequest extends Request {
-    @Path
-    @NameInMap("layerName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("layerName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String layerName;
 
-    @Body
-    @NameInMap("body")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
+    @com.aliyun.core.annotation.Validation(required = true)
     private CreateLayerVersionInput body;
 
     private CreateLayerVersionRequest(Builder builder) {
@@ -70,7 +70,11 @@ public class CreateLayerVersionRequest extends Request {
         } 
 
         /**
-         * layerName.
+         * <p>The name of the layer.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-layer</p>
          */
         public Builder layerName(String layerName) {
             this.putPathParameter("layerName", layerName);
@@ -79,7 +83,8 @@ public class CreateLayerVersionRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The information about layer configurations.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder body(CreateLayerVersionInput body) {
             this.putBodyParameter("body", body);

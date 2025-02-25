@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyImageAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyImageAttributeResponseBody</p>
  */
 public class ModifyImageAttributeResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyImageAttributeResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class ModifyImageAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The service code. 0 is returned for a successful request. An error code is returned for a failed request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -58,7 +66,10 @@ public class ModifyImageAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AC66B8F3-0B0A-5FB1-9EA2-DC03B2CD5B04</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

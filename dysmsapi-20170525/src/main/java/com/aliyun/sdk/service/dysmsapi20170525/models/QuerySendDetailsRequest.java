@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySendDetailsRequest} extends {@link RequestModel}
  *
  * <p>QuerySendDetailsRequest</p>
  */
 public class QuerySendDetailsRequest extends Request {
-    @Query
-    @NameInMap("BizId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
     private String bizId;
 
-    @Query
-    @NameInMap("CurrentPage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long currentPage;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long pageSize;
 
-    @Query
-    @NameInMap("PhoneNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNumber;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SendDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SendDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sendDate;
 
     private QuerySendDetailsRequest(Builder builder) {
@@ -156,7 +161,10 @@ public class QuerySendDetailsRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>The ID of the delivery receipt. The delivery receipt ID is the value of the BizId parameter that is returned when you call the SendSms or SendBatchSms operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>134523^435****</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -165,7 +173,11 @@ public class QuerySendDetailsRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The page number of the first page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Long currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -183,7 +195,12 @@ public class QuerySendDetailsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of items displayed per page.</p>
+         * <p>Valid values: 1 to 50.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -192,7 +209,15 @@ public class QuerySendDetailsRequest extends Request {
         }
 
         /**
-         * PhoneNumber.
+         * <p>The mobile numbers of the recipients. Format:</p>
+         * <ul>
+         * <li>If you send messages in the Chinese mainland, specify an 11-digit mobile number, for example, 1390000****.</li>
+         * <li>If you send messages to countries or regions outside the Chinese mainland, specify this parameter in the &lt;Area code&gt;&lt;Mobile number&gt; format. Example: 8520000****.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1390000****</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -219,7 +244,12 @@ public class QuerySendDetailsRequest extends Request {
         }
 
         /**
-         * SendDate.
+         * <p>The date when the message was sent. You can query messages that were sent within the last 30 days.</p>
+         * <p>Format: yyyyMMdd. Example: 20181225.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20181228</p>
          */
         public Builder sendDate(String sendDate) {
             this.putQueryParameter("SendDate", sendDate);

@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetWorkflowTaskRequest} extends {@link RequestModel}
  *
  * <p>GetWorkflowTaskRequest</p>
  */
 public class GetWorkflowTaskRequest extends Request {
-    @Query
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
     private GetWorkflowTaskRequest(Builder builder) {
@@ -54,7 +59,10 @@ public class GetWorkflowTaskRequest extends Request {
         } 
 
         /**
-         * TaskId.
+         * <p>The ID of the workflow task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>4215e042b3966ca5441e</strong></strong></strong></p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

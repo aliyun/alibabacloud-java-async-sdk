@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOssUsageDataResponseBody} extends {@link TeaModel}
  *
  * <p>GetOssUsageDataResponseBody</p>
  */
 public class GetOssUsageDataResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UsageList")
-    private java.util.List < UsageList> usageList;
+    @com.aliyun.core.annotation.NameInMap("UsageList")
+    private java.util.List<UsageList> usageList;
 
     private GetOssUsageDataResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class GetOssUsageDataResponseBody extends TeaModel {
     /**
      * @return usageList
      */
-    public java.util.List < UsageList> getUsageList() {
+    public java.util.List<UsageList> getUsageList() {
         return this.usageList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < UsageList> usageList; 
+        private java.util.List<UsageList> usageList; 
 
         /**
-         * Id of the request
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2A8CCD48-14F9-0309-B957-7B1D74A8119D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class GetOssUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * UsageList.
+         * <p>The array of usage data.</p>
          */
-        public Builder usageList(java.util.List < UsageList> usageList) {
+        public Builder usageList(java.util.List<UsageList> usageList) {
             this.usageList = usageList;
             return this;
         }
@@ -71,26 +79,32 @@ public class GetOssUsageDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetOssUsageDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOssUsageDataResponseBody</p>
+     */
     public static class UsageList extends TeaModel {
-        @NameInMap("LanRxBw")
+        @com.aliyun.core.annotation.NameInMap("LanRxBw")
         private Long lanRxBw;
 
-        @NameInMap("LanTxBw")
+        @com.aliyun.core.annotation.NameInMap("LanTxBw")
         private Long lanTxBw;
 
-        @NameInMap("Point")
+        @com.aliyun.core.annotation.NameInMap("Point")
         private Long point;
 
-        @NameInMap("PointTs")
+        @com.aliyun.core.annotation.NameInMap("PointTs")
         private String pointTs;
 
-        @NameInMap("StorageUsageByte")
+        @com.aliyun.core.annotation.NameInMap("StorageUsageByte")
         private Long storageUsageByte;
 
-        @NameInMap("WanRxBw")
+        @com.aliyun.core.annotation.NameInMap("WanRxBw")
         private Long wanRxBw;
 
-        @NameInMap("WanTxBw")
+        @com.aliyun.core.annotation.NameInMap("WanTxBw")
         private Long wanTxBw;
 
         private UsageList(Builder builder) {
@@ -170,7 +184,10 @@ public class GetOssUsageDataResponseBody extends TeaModel {
             private Long wanTxBw; 
 
             /**
-             * LanRxBw.
+             * <p>The inbound bandwidth over the internal network. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>37865147</p>
              */
             public Builder lanRxBw(Long lanRxBw) {
                 this.lanRxBw = lanRxBw;
@@ -178,7 +195,10 @@ public class GetOssUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * LanTxBw.
+             * <p>The outbound bandwidth over the internal network. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22012187890</p>
              */
             public Builder lanTxBw(Long lanTxBw) {
                 this.lanTxBw = lanTxBw;
@@ -186,7 +206,10 @@ public class GetOssUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * Point.
+             * <p>The number of time points within a day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>144</p>
              */
             public Builder point(Long point) {
                 this.point = point;
@@ -194,7 +217,10 @@ public class GetOssUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * PointTs.
+             * <p>The point in time, in UTC. Format: 2010-01-21T09:50:23Z.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-12T00:00:00Z</p>
              */
             public Builder pointTs(String pointTs) {
                 this.pointTs = pointTs;
@@ -202,7 +228,10 @@ public class GetOssUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * StorageUsageByte.
+             * <p>The storage usage. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>85462146217</p>
              */
             public Builder storageUsageByte(Long storageUsageByte) {
                 this.storageUsageByte = storageUsageByte;
@@ -210,7 +239,10 @@ public class GetOssUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * WanRxBw.
+             * <p>The outbound bandwidth over the Internet. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>542155715</p>
              */
             public Builder wanRxBw(Long wanRxBw) {
                 this.wanRxBw = wanRxBw;
@@ -218,7 +250,10 @@ public class GetOssUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * WanTxBw.
+             * <p>The outbound bandwidth over the Internet. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>547126175217</p>
              */
             public Builder wanTxBw(Long wanTxBw) {
                 this.wanTxBw = wanTxBw;

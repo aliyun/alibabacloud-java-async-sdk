@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTenantsResponseBody</p>
  */
 public class DescribeTenantsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Tenants")
+    @com.aliyun.core.annotation.NameInMap("Tenants")
     private java.util.List < Tenants> tenants;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeTenantsResponseBody(Builder builder) {
@@ -92,58 +91,61 @@ public class DescribeTenantsResponseBody extends TeaModel {
     } 
 
     public static class Tenants extends TeaModel {
-        @NameInMap("Charset")
+        @com.aliyun.core.annotation.NameInMap("Charset")
         private String charset;
 
-        @NameInMap("Collation")
+        @com.aliyun.core.annotation.NameInMap("Collation")
         private String collation;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DeployMode")
+        @com.aliyun.core.annotation.NameInMap("DeployMode")
         private String deployMode;
 
-        @NameInMap("DeployType")
+        @com.aliyun.core.annotation.NameInMap("DeployType")
         private String deployType;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Mem")
+        @com.aliyun.core.annotation.NameInMap("EnableReadOnlyReplica")
+        private Boolean enableReadOnlyReplica;
+
+        @com.aliyun.core.annotation.NameInMap("Mem")
         private Integer mem;
 
-        @NameInMap("PrimaryZone")
+        @com.aliyun.core.annotation.NameInMap("PrimaryZone")
         private String primaryZone;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
-        @NameInMap("TenantMode")
+        @com.aliyun.core.annotation.NameInMap("TenantMode")
         private String tenantMode;
 
-        @NameInMap("TenantName")
+        @com.aliyun.core.annotation.NameInMap("TenantName")
         private String tenantName;
 
-        @NameInMap("UnitCpu")
+        @com.aliyun.core.annotation.NameInMap("UnitCpu")
         private Integer unitCpu;
 
-        @NameInMap("UnitMem")
+        @com.aliyun.core.annotation.NameInMap("UnitMem")
         private Integer unitMem;
 
-        @NameInMap("UnitNum")
+        @com.aliyun.core.annotation.NameInMap("UnitNum")
         private Integer unitNum;
 
-        @NameInMap("UsedDiskSize")
+        @com.aliyun.core.annotation.NameInMap("UsedDiskSize")
         private Double usedDiskSize;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private Tenants(Builder builder) {
@@ -154,6 +156,7 @@ public class DescribeTenantsResponseBody extends TeaModel {
             this.deployMode = builder.deployMode;
             this.deployType = builder.deployType;
             this.description = builder.description;
+            this.enableReadOnlyReplica = builder.enableReadOnlyReplica;
             this.mem = builder.mem;
             this.primaryZone = builder.primaryZone;
             this.status = builder.status;
@@ -222,6 +225,13 @@ public class DescribeTenantsResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return enableReadOnlyReplica
+         */
+        public Boolean getEnableReadOnlyReplica() {
+            return this.enableReadOnlyReplica;
         }
 
         /**
@@ -309,6 +319,7 @@ public class DescribeTenantsResponseBody extends TeaModel {
             private String deployMode; 
             private String deployType; 
             private String description; 
+            private Boolean enableReadOnlyReplica; 
             private Integer mem; 
             private String primaryZone; 
             private String status; 
@@ -376,6 +387,14 @@ public class DescribeTenantsResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * EnableReadOnlyReplica.
+             */
+            public Builder enableReadOnlyReplica(Boolean enableReadOnlyReplica) {
+                this.enableReadOnlyReplica = enableReadOnlyReplica;
                 return this;
             }
 

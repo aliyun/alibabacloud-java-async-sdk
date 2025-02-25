@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ValidateDataSourcesResponseBody</p>
  */
 public class ValidateDataSourcesResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < Result> result;
 
     private ValidateDataSourcesResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class ValidateDataSourcesResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * requestId.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +57,7 @@ public class ValidateDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The result returned.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -72,13 +71,13 @@ public class ValidateDataSourcesResponseBody extends TeaModel {
     } 
 
     public static class DataSource extends TeaModel {
-        @NameInMap("parameters")
+        @com.aliyun.core.annotation.NameInMap("parameters")
         private java.util.Map < String, ? > parameters;
 
-        @NameInMap("tableName")
+        @com.aliyun.core.annotation.NameInMap("tableName")
         private String tableName;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private DataSource(Builder builder) {
@@ -122,7 +121,7 @@ public class ValidateDataSourcesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * parameters.
+             * The parameters of the data source.
              */
             public Builder parameters(java.util.Map < String, ? > parameters) {
                 this.parameters = parameters;
@@ -130,7 +129,7 @@ public class ValidateDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * tableName.
+             * The name of the table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -138,7 +137,7 @@ public class ValidateDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * The type of the data source.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -153,13 +152,13 @@ public class ValidateDataSourcesResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("code")
+        @com.aliyun.core.annotation.NameInMap("code")
         private String code;
 
-        @NameInMap("dataSource")
+        @com.aliyun.core.annotation.NameInMap("dataSource")
         private DataSource dataSource;
 
-        @NameInMap("message")
+        @com.aliyun.core.annotation.NameInMap("message")
         private String message;
 
         private Result(Builder builder) {
@@ -203,7 +202,7 @@ public class ValidateDataSourcesResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * code.
+             * The code returned for the request.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -211,7 +210,7 @@ public class ValidateDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * dataSource.
+             * The data source.
              */
             public Builder dataSource(DataSource dataSource) {
                 this.dataSource = dataSource;
@@ -219,7 +218,7 @@ public class ValidateDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * message.
+             * The status of the execution.
              */
             public Builder message(String message) {
                 this.message = message;

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSlsOpenStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSlsOpenStatusResponseBody</p>
  */
 public class DescribeSlsOpenStatusResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SlsOpenStatus")
+    @com.aliyun.core.annotation.NameInMap("SlsOpenStatus")
     private Boolean slsOpenStatus;
 
     private DescribeSlsOpenStatusResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DescribeSlsOpenStatusResponseBody extends TeaModel {
         private Boolean slsOpenStatus; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,11 +66,14 @@ public class DescribeSlsOpenStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether Log Service is activated. Valid values:
-         * <p>
+         * <p>Indicates whether Log Service is activated. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder slsOpenStatus(Boolean slsOpenStatus) {
             this.slsOpenStatus = slsOpenStatus;

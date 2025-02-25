@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourceInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>ListResourceInstancesResponseBody</p>
  */
 public class ListResourceInstancesResponseBody extends TeaModel {
-    @NameInMap("Instances")
-    private java.util.List < ResourceInstance > instances;
+    @com.aliyun.core.annotation.NameInMap("Instances")
+    private java.util.List<ResourceInstance> instances;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListResourceInstancesResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class ListResourceInstancesResponseBody extends TeaModel {
     /**
      * @return instances
      */
-    public java.util.List < ResourceInstance > getInstances() {
+    public java.util.List<ResourceInstance> getInstances() {
         return this.instances;
     }
 
@@ -79,22 +84,25 @@ public class ListResourceInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ResourceInstance > instances; 
+        private java.util.List<ResourceInstance> instances; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * Instances.
+         * <p>The instances.</p>
          */
-        public Builder instances(java.util.List < ResourceInstance > instances) {
+        public Builder instances(java.util.List<ResourceInstance> instances) {
             this.instances = instances;
             return this;
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class ListResourceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class ListResourceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class ListResourceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

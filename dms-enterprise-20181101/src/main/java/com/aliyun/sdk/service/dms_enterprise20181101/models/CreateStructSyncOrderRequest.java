@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateStructSyncOrderRequest} extends {@link RequestModel}
  *
  * <p>CreateStructSyncOrderRequest</p>
  */
 public class CreateStructSyncOrderRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AttachmentKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AttachmentKey")
     private String attachmentKey;
 
-    @Query
-    @NameInMap("Comment")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comment")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String comment;
 
-    @Query
-    @NameInMap("Param")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Param")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Param param;
 
-    @Query
-    @NameInMap("RelatedUserList")
-    private java.util.List < Long > relatedUserList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelatedUserList")
+    private java.util.List<Long> relatedUserList;
 
-    @Query
-    @NameInMap("Tid")
-    @Validation(minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tid")
+    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long tid;
 
     private CreateStructSyncOrderRequest(Builder builder) {
@@ -93,7 +98,7 @@ public class CreateStructSyncOrderRequest extends Request {
     /**
      * @return relatedUserList
      */
-    public java.util.List < Long > getRelatedUserList() {
+    public java.util.List<Long> getRelatedUserList() {
         return this.relatedUserList;
     }
 
@@ -109,7 +114,7 @@ public class CreateStructSyncOrderRequest extends Request {
         private String attachmentKey; 
         private String comment; 
         private Param param; 
-        private java.util.List < Long > relatedUserList; 
+        private java.util.List<Long> relatedUserList; 
         private Long tid; 
 
         private Builder() {
@@ -136,7 +141,10 @@ public class CreateStructSyncOrderRequest extends Request {
         }
 
         /**
-         * The key of an attachment that is returned after the attachment is uploaded. You can call the [GetUserUploadFileJob](~~206069~~) operation to query the key of the attachment.
+         * <p>The key of an attachment that is returned after the attachment is uploaded. You can call the <a href="https://help.aliyun.com/document_detail/206069.html">GetUserUploadFileJob</a> operation to query the key of the attachment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>upload_3c7edea3-e4c3-4403-857d-737043036f69_test.sql</p>
          */
         public Builder attachmentKey(String attachmentKey) {
             this.putQueryParameter("AttachmentKey", attachmentKey);
@@ -145,7 +153,11 @@ public class CreateStructSyncOrderRequest extends Request {
         }
 
         /**
-         * The remarks of the ticket.
+         * <p>The remarks of the ticket.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -154,7 +166,8 @@ public class CreateStructSyncOrderRequest extends Request {
         }
 
         /**
-         * The parameters of the ticket.
+         * <p>The parameters of the ticket.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder param(Param param) {
             String paramShrink = shrink(param, "Param", "json");
@@ -164,9 +177,9 @@ public class CreateStructSyncOrderRequest extends Request {
         }
 
         /**
-         * The IDs of the stakeholders.
+         * <p>The IDs of the stakeholders.</p>
          */
-        public Builder relatedUserList(java.util.List < Long > relatedUserList) {
+        public Builder relatedUserList(java.util.List<Long> relatedUserList) {
             String relatedUserListShrink = shrink(relatedUserList, "RelatedUserList", "json");
             this.putQueryParameter("RelatedUserList", relatedUserListShrink);
             this.relatedUserList = relatedUserList;
@@ -174,10 +187,13 @@ public class CreateStructSyncOrderRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p> To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a>.</p>
+         * </blockquote>
          * 
-         * >  To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see [Manage DMS tenants](~~181330~~).
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -192,19 +208,25 @@ public class CreateStructSyncOrderRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateStructSyncOrderRequest} extends {@link TeaModel}
+     *
+     * <p>CreateStructSyncOrderRequest</p>
+     */
     public static class Source extends TeaModel {
-        @NameInMap("DbId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DbId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long dbId;
 
-        @NameInMap("DbSearchName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DbSearchName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String dbSearchName;
 
-        @NameInMap("Logic")
+        @com.aliyun.core.annotation.NameInMap("Logic")
         private Boolean logic;
 
-        @NameInMap("VersionId")
+        @com.aliyun.core.annotation.NameInMap("VersionId")
         private String versionId;
 
         private Source(Builder builder) {
@@ -257,7 +279,11 @@ public class CreateStructSyncOrderRequest extends Request {
             private String versionId; 
 
             /**
-             * The ID of the database. You can call the [SearchDatabases](~~141876~~) operation to query the ID of the database.
+             * <p>The ID of the database. You can call the <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabases</a> operation to query the ID of the database.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4324532</p>
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -265,7 +291,11 @@ public class CreateStructSyncOrderRequest extends Request {
             }
 
             /**
-             * The name that is used to search for the database. You can call the [SearchDatabases](~~141876~~) operation to query the name of the database.
+             * <p>The name that is used to search for the database. You can call the <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabases</a> operation to query the name of the database.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder dbSearchName(String dbSearchName) {
                 this.dbSearchName = dbSearchName;
@@ -273,11 +303,14 @@ public class CreateStructSyncOrderRequest extends Request {
             }
 
             /**
-             * Specifies whether the database is a logical database. Valid values:
-             * <p>
+             * <p>Specifies whether the database is a logical database. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The database is a logical database.</li>
+             * <li><strong>false</strong>: The database is not a logical database.</li>
+             * </ul>
              * 
-             * *   **true**: The database is a logical database.
-             * *   **false**: The database is not a logical database.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -285,7 +318,10 @@ public class CreateStructSyncOrderRequest extends Request {
             }
 
             /**
-             * The version number of the schema. The default value is the latest schema version number. For more information, see [Manage schema versions](~~202275~~).
+             * <p>The version number of the schema. The default value is the latest schema version number. For more information, see <a href="https://help.aliyun.com/document_detail/202275.html">Manage schema versions</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e179bbb8163dcdcfacda24858bedb4d8006ae2b8</p>
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;
@@ -299,11 +335,17 @@ public class CreateStructSyncOrderRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateStructSyncOrderRequest} extends {@link TeaModel}
+     *
+     * <p>CreateStructSyncOrderRequest</p>
+     */
     public static class TableInfoList extends TeaModel {
-        @NameInMap("SourceTableName")
+        @com.aliyun.core.annotation.NameInMap("SourceTableName")
         private String sourceTableName;
 
-        @NameInMap("TargetTableName")
+        @com.aliyun.core.annotation.NameInMap("TargetTableName")
         private String targetTableName;
 
         private TableInfoList(Builder builder) {
@@ -338,7 +380,10 @@ public class CreateStructSyncOrderRequest extends Request {
             private String targetTableName; 
 
             /**
-             * The name of the source table.
+             * <p>The name of the source table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_tbl</p>
              */
             public Builder sourceTableName(String sourceTableName) {
                 this.sourceTableName = sourceTableName;
@@ -346,7 +391,10 @@ public class CreateStructSyncOrderRequest extends Request {
             }
 
             /**
-             * The name of the destination table.
+             * <p>The name of the destination table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_tbl</p>
              */
             public Builder targetTableName(String targetTableName) {
                 this.targetTableName = targetTableName;
@@ -360,19 +408,25 @@ public class CreateStructSyncOrderRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateStructSyncOrderRequest} extends {@link TeaModel}
+     *
+     * <p>CreateStructSyncOrderRequest</p>
+     */
     public static class Target extends TeaModel {
-        @NameInMap("DbId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DbId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long dbId;
 
-        @NameInMap("DbSearchName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DbSearchName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String dbSearchName;
 
-        @NameInMap("Logic")
+        @com.aliyun.core.annotation.NameInMap("Logic")
         private Boolean logic;
 
-        @NameInMap("VersionId")
+        @com.aliyun.core.annotation.NameInMap("VersionId")
         private String versionId;
 
         private Target(Builder builder) {
@@ -425,7 +479,11 @@ public class CreateStructSyncOrderRequest extends Request {
             private String versionId; 
 
             /**
-             * The ID of the database. You can call the [SearchDatabases](~~141876~~) operation to query the ID of the database.
+             * <p>The ID of the database. You can call the <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabases</a> operation to query the ID of the database.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>432432</p>
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -433,7 +491,11 @@ public class CreateStructSyncOrderRequest extends Request {
             }
 
             /**
-             * The name that is used to search for the database. You can call the [SearchDatabases](~~141876~~) operation to query the name of the database.
+             * <p>The name that is used to search for the database. You can call the <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabases</a> operation to query the name of the database.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder dbSearchName(String dbSearchName) {
                 this.dbSearchName = dbSearchName;
@@ -441,11 +503,14 @@ public class CreateStructSyncOrderRequest extends Request {
             }
 
             /**
-             * Specifies whether the database is a logical database. Valid values:
-             * <p>
+             * <p>Specifies whether the database is a logical database. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The database is a logical database.</li>
+             * <li><strong>false</strong>: The database is not a logical database.</li>
+             * </ul>
              * 
-             * *   **true**: The database is a logical database.
-             * *   **false**: The database is not a logical database.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -453,10 +518,13 @@ public class CreateStructSyncOrderRequest extends Request {
             }
 
             /**
-             * The version number. By default, this parameter is left empty.
-             * <p>
+             * <p>The version number. By default, this parameter is left empty.</p>
+             * <blockquote>
+             * <p> If you specify the schema version number of the destination database, Data Management (DMS) only compares the schemas of the two databases.</p>
+             * </blockquote>
              * 
-             * >  If you specify the schema version number of the destination database, Data Management (DMS) only compares the schemas of the two databases.
+             * <strong>example:</strong>
+             * <p>e179bbb8163dcdcfacda24858bedb4d8006ae2b8</p>
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;
@@ -470,19 +538,25 @@ public class CreateStructSyncOrderRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateStructSyncOrderRequest} extends {@link TeaModel}
+     *
+     * <p>CreateStructSyncOrderRequest</p>
+     */
     public static class Param extends TeaModel {
-        @NameInMap("IgnoreError")
+        @com.aliyun.core.annotation.NameInMap("IgnoreError")
         private Boolean ignoreError;
 
-        @NameInMap("Source")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Source")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Source source;
 
-        @NameInMap("TableInfoList")
-        private java.util.List < TableInfoList> tableInfoList;
+        @com.aliyun.core.annotation.NameInMap("TableInfoList")
+        private java.util.List<TableInfoList> tableInfoList;
 
-        @NameInMap("Target")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Target")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Target target;
 
         private Param(Builder builder) {
@@ -517,7 +591,7 @@ public class CreateStructSyncOrderRequest extends Request {
         /**
          * @return tableInfoList
          */
-        public java.util.List < TableInfoList> getTableInfoList() {
+        public java.util.List<TableInfoList> getTableInfoList() {
             return this.tableInfoList;
         }
 
@@ -531,15 +605,18 @@ public class CreateStructSyncOrderRequest extends Request {
         public static final class Builder {
             private Boolean ignoreError; 
             private Source source; 
-            private java.util.List < TableInfoList> tableInfoList; 
+            private java.util.List<TableInfoList> tableInfoList; 
             private Target target; 
 
             /**
-             * Specifies whether to skip an error that occurs in executing an SQL statement. Valid values:
-             * <p>
+             * <p>Specifies whether to skip an error that occurs in executing an SQL statement. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: continues to execute subsequent SQL statements if an error occurs in executing an SQL statement.</li>
+             * <li><strong>false</strong>: stops executing subsequent SQL statements if an error occurs in executing an SQL statement.</li>
+             * </ul>
              * 
-             * *   **true**: continues to execute subsequent SQL statements if an error occurs in executing an SQL statement.
-             * *   **false**: stops executing subsequent SQL statements if an error occurs in executing an SQL statement.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder ignoreError(Boolean ignoreError) {
                 this.ignoreError = ignoreError;
@@ -547,7 +624,8 @@ public class CreateStructSyncOrderRequest extends Request {
             }
 
             /**
-             * The information about the base database.
+             * <p>The information about the base database.</p>
+             * <p>This parameter is required.</p>
              */
             public Builder source(Source source) {
                 this.source = source;
@@ -555,15 +633,16 @@ public class CreateStructSyncOrderRequest extends Request {
             }
 
             /**
-             * The information about the table of which you want to synchronize the schema.
+             * <p>The information about the table of which you want to synchronize the schema.</p>
              */
-            public Builder tableInfoList(java.util.List < TableInfoList> tableInfoList) {
+            public Builder tableInfoList(java.util.List<TableInfoList> tableInfoList) {
                 this.tableInfoList = tableInfoList;
                 return this;
             }
 
             /**
-             * The information about the database to which you want to synchronize the schema of a table.
+             * <p>The information about the database to which you want to synchronize the schema of a table.</p>
+             * <p>This parameter is required.</p>
              */
             public Builder target(Target target) {
                 this.target = target;

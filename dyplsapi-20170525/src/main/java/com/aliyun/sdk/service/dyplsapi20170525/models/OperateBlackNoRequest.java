@@ -1,46 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyplsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OperateBlackNoRequest} extends {@link RequestModel}
  *
  * <p>OperateBlackNoRequest</p>
  */
 public class OperateBlackNoRequest extends Request {
-    @Query
-    @NameInMap("BlackNo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BlackNo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String blackNo;
 
-    @Query
-    @NameInMap("OperateType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperateType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String operateType;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PoolKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PoolKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String poolKey;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Tips")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tips")
     private String tips;
 
     private OperateBlackNoRequest(Builder builder) {
@@ -141,7 +146,11 @@ public class OperateBlackNoRequest extends Request {
         } 
 
         /**
-         * BlackNo.
+         * <p>The phone number to be added to or deleted from the blacklist.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150****0000</p>
          */
         public Builder blackNo(String blackNo) {
             this.putQueryParameter("BlackNo", blackNo);
@@ -150,7 +159,15 @@ public class OperateBlackNoRequest extends Request {
         }
 
         /**
-         * OperateType.
+         * <p>The type of the operation on the phone number. Valid values:</p>
+         * <ul>
+         * <li><strong>AddBlack</strong>: adds the phone number to the blacklist.</li>
+         * <li><strong>DeleteBlack</strong>: deletes the phone number from the blacklist.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AddBlack</p>
          */
         public Builder operateType(String operateType) {
             this.putQueryParameter("OperateType", operateType);
@@ -168,7 +185,11 @@ public class OperateBlackNoRequest extends Request {
         }
 
         /**
-         * PoolKey.
+         * <p>The key of the phone number pool. Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view the key of the phone number pool on the <strong>Number Pool Management</strong> page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FC123456****</p>
          */
         public Builder poolKey(String poolKey) {
             this.putQueryParameter("PoolKey", poolKey);
@@ -195,7 +216,10 @@ public class OperateBlackNoRequest extends Request {
         }
 
         /**
-         * Tips.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcdef</p>
          */
         public Builder tips(String tips) {
             this.putQueryParameter("Tips", tips);

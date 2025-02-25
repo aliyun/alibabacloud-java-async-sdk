@@ -1,78 +1,89 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link NodeGroup} extends {@link TeaModel}
  *
  * <p>NodeGroup</p>
  */
 public class NodeGroup extends TeaModel {
-    @NameInMap("AdditionalSecurityGroupIds")
-    private java.util.List < String > additionalSecurityGroupIds;
+    @com.aliyun.core.annotation.NameInMap("AdditionalSecurityGroupIds")
+    private java.util.List<String> additionalSecurityGroupIds;
 
-    @NameInMap("CostOptimizedConfig")
+    @com.aliyun.core.annotation.NameInMap("CostOptimizedConfig")
     private CostOptimizedConfig costOptimizedConfig;
 
-    @NameInMap("DataDisks")
-    private java.util.List < DataDisk > dataDisks;
+    @com.aliyun.core.annotation.NameInMap("DataDisks")
+    private java.util.List<DataDisk> dataDisks;
 
-    @NameInMap("DeploymentSetStrategy")
+    @com.aliyun.core.annotation.NameInMap("DeploymentSetStrategy")
     private String deploymentSetStrategy;
 
-    @NameInMap("GracefulShutdown")
+    @com.aliyun.core.annotation.NameInMap("GracefulShutdown")
     private Boolean gracefulShutdown;
 
-    @NameInMap("InstanceTypes")
-    private java.util.List < String > instanceTypes;
+    @com.aliyun.core.annotation.NameInMap("InstanceTypes")
+    private java.util.List<String> instanceTypes;
 
-    @NameInMap("NodeGroupId")
+    @com.aliyun.core.annotation.NameInMap("NodeGroupId")
     private String nodeGroupId;
 
-    @NameInMap("NodeGroupName")
+    @com.aliyun.core.annotation.NameInMap("NodeGroupName")
     private String nodeGroupName;
 
-    @NameInMap("NodeGroupState")
+    @com.aliyun.core.annotation.NameInMap("NodeGroupState")
     private String nodeGroupState;
 
-    @NameInMap("NodeGroupType")
+    @com.aliyun.core.annotation.NameInMap("NodeGroupType")
     private String nodeGroupType;
 
-    @NameInMap("NodeResizeStrategy")
+    @com.aliyun.core.annotation.NameInMap("NodeResizeStrategy")
     private String nodeResizeStrategy;
 
-    @NameInMap("PaymentType")
+    @com.aliyun.core.annotation.NameInMap("PaymentType")
     private String paymentType;
 
-    @NameInMap("RunningNodeCount")
+    @com.aliyun.core.annotation.NameInMap("PrivatePoolOptions")
+    private PrivatePoolOptions privatePoolOptions;
+
+    @com.aliyun.core.annotation.NameInMap("RunningNodeCount")
     private Integer runningNodeCount;
 
-    @NameInMap("SpotBidPrices")
-    private java.util.List < SpotBidPrice > spotBidPrices;
+    @com.aliyun.core.annotation.NameInMap("SpotBidPrices")
+    private java.util.List<SpotBidPrice> spotBidPrices;
 
-    @NameInMap("SpotInstanceRemedy")
+    @com.aliyun.core.annotation.NameInMap("SpotInstanceRemedy")
     private Boolean spotInstanceRemedy;
 
-    @NameInMap("SpotStrategy")
+    @com.aliyun.core.annotation.NameInMap("SpotStrategy")
     private String spotStrategy;
 
-    @NameInMap("StateChangeReason")
+    @com.aliyun.core.annotation.NameInMap("StateChangeReason")
     private NodeGroupStateChangeReason stateChangeReason;
 
-    @NameInMap("SystemDisk")
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private String status;
+
+    @com.aliyun.core.annotation.NameInMap("SystemDisk")
     private SystemDisk systemDisk;
 
-    @NameInMap("VSwitchIds")
-    private java.util.List < String > vSwitchIds;
+    @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+    private java.util.List<String> vSwitchIds;
 
-    @NameInMap("WithPublicIp")
+    @com.aliyun.core.annotation.NameInMap("WithPublicIp")
     private Boolean withPublicIp;
 
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private NodeGroup(Builder builder) {
@@ -88,11 +99,13 @@ public class NodeGroup extends TeaModel {
         this.nodeGroupType = builder.nodeGroupType;
         this.nodeResizeStrategy = builder.nodeResizeStrategy;
         this.paymentType = builder.paymentType;
+        this.privatePoolOptions = builder.privatePoolOptions;
         this.runningNodeCount = builder.runningNodeCount;
         this.spotBidPrices = builder.spotBidPrices;
         this.spotInstanceRemedy = builder.spotInstanceRemedy;
         this.spotStrategy = builder.spotStrategy;
         this.stateChangeReason = builder.stateChangeReason;
+        this.status = builder.status;
         this.systemDisk = builder.systemDisk;
         this.vSwitchIds = builder.vSwitchIds;
         this.withPublicIp = builder.withPublicIp;
@@ -110,7 +123,7 @@ public class NodeGroup extends TeaModel {
     /**
      * @return additionalSecurityGroupIds
      */
-    public java.util.List < String > getAdditionalSecurityGroupIds() {
+    public java.util.List<String> getAdditionalSecurityGroupIds() {
         return this.additionalSecurityGroupIds;
     }
 
@@ -124,7 +137,7 @@ public class NodeGroup extends TeaModel {
     /**
      * @return dataDisks
      */
-    public java.util.List < DataDisk > getDataDisks() {
+    public java.util.List<DataDisk> getDataDisks() {
         return this.dataDisks;
     }
 
@@ -145,7 +158,7 @@ public class NodeGroup extends TeaModel {
     /**
      * @return instanceTypes
      */
-    public java.util.List < String > getInstanceTypes() {
+    public java.util.List<String> getInstanceTypes() {
         return this.instanceTypes;
     }
 
@@ -192,6 +205,13 @@ public class NodeGroup extends TeaModel {
     }
 
     /**
+     * @return privatePoolOptions
+     */
+    public PrivatePoolOptions getPrivatePoolOptions() {
+        return this.privatePoolOptions;
+    }
+
+    /**
      * @return runningNodeCount
      */
     public Integer getRunningNodeCount() {
@@ -201,7 +221,7 @@ public class NodeGroup extends TeaModel {
     /**
      * @return spotBidPrices
      */
-    public java.util.List < SpotBidPrice > getSpotBidPrices() {
+    public java.util.List<SpotBidPrice> getSpotBidPrices() {
         return this.spotBidPrices;
     }
 
@@ -227,6 +247,13 @@ public class NodeGroup extends TeaModel {
     }
 
     /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
      * @return systemDisk
      */
     public SystemDisk getSystemDisk() {
@@ -236,7 +263,7 @@ public class NodeGroup extends TeaModel {
     /**
      * @return vSwitchIds
      */
-    public java.util.List < String > getVSwitchIds() {
+    public java.util.List<String> getVSwitchIds() {
         return this.vSwitchIds;
     }
 
@@ -255,38 +282,43 @@ public class NodeGroup extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > additionalSecurityGroupIds; 
+        private java.util.List<String> additionalSecurityGroupIds; 
         private CostOptimizedConfig costOptimizedConfig; 
-        private java.util.List < DataDisk > dataDisks; 
+        private java.util.List<DataDisk> dataDisks; 
         private String deploymentSetStrategy; 
         private Boolean gracefulShutdown; 
-        private java.util.List < String > instanceTypes; 
+        private java.util.List<String> instanceTypes; 
         private String nodeGroupId; 
         private String nodeGroupName; 
         private String nodeGroupState; 
         private String nodeGroupType; 
         private String nodeResizeStrategy; 
         private String paymentType; 
+        private PrivatePoolOptions privatePoolOptions; 
         private Integer runningNodeCount; 
-        private java.util.List < SpotBidPrice > spotBidPrices; 
+        private java.util.List<SpotBidPrice> spotBidPrices; 
         private Boolean spotInstanceRemedy; 
         private String spotStrategy; 
         private NodeGroupStateChangeReason stateChangeReason; 
+        private String status; 
         private SystemDisk systemDisk; 
-        private java.util.List < String > vSwitchIds; 
+        private java.util.List<String> vSwitchIds; 
         private Boolean withPublicIp; 
         private String zoneId; 
 
         /**
-         * 安全组ID。
+         * <p>安全组ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;sg-hp3abbae8lb6lmb1****&quot;]</p>
          */
-        public Builder additionalSecurityGroupIds(java.util.List < String > additionalSecurityGroupIds) {
+        public Builder additionalSecurityGroupIds(java.util.List<String> additionalSecurityGroupIds) {
             this.additionalSecurityGroupIds = additionalSecurityGroupIds;
             return this;
         }
 
         /**
-         * 成本优化模式配置。
+         * <p>成本优化模式配置。</p>
          */
         public Builder costOptimizedConfig(CostOptimizedConfig costOptimizedConfig) {
             this.costOptimizedConfig = costOptimizedConfig;
@@ -294,21 +326,24 @@ public class NodeGroup extends TeaModel {
         }
 
         /**
-         * 数据盘列表。
+         * <p>数据盘列表。</p>
          */
-        public Builder dataDisks(java.util.List < DataDisk > dataDisks) {
+        public Builder dataDisks(java.util.List<DataDisk> dataDisks) {
             this.dataDisks = dataDisks;
             return this;
         }
 
         /**
-         * 部署集策略。取值范围：
-         * <p>
-         * - NONE：不适用部署集。
-         * - CLUSTER：使用集群级别部署集。
-         * - NODE_GROUP：使用节点组级别部署集。
+         * <p>部署集策略。取值范围：</p>
+         * <ul>
+         * <li>NONE：不适用部署集。</li>
+         * <li>CLUSTER：使用集群级别部署集。</li>
+         * <li>NODE_GROUP：使用节点组级别部署集。</li>
+         * </ul>
+         * <p>默认值：NONE。</p>
          * 
-         * 默认值：NONE。
+         * <strong>example:</strong>
+         * <p>NONE</p>
          */
         public Builder deploymentSetStrategy(String deploymentSetStrategy) {
             this.deploymentSetStrategy = deploymentSetStrategy;
@@ -316,10 +351,14 @@ public class NodeGroup extends TeaModel {
         }
 
         /**
-         * 节点组上部署的组件是否开启优雅下线。取值范围：
-         * <p>
-         * - true：开启优雅下线。
-         * - false：不开启优雅下线。
+         * <p>节点组上部署的组件是否开启优雅下线。取值范围：</p>
+         * <ul>
+         * <li>true：开启优雅下线。</li>
+         * <li>false：不开启优雅下线。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder gracefulShutdown(Boolean gracefulShutdown) {
             this.gracefulShutdown = gracefulShutdown;
@@ -327,15 +366,21 @@ public class NodeGroup extends TeaModel {
         }
 
         /**
-         * 实例类型列表。
+         * <p>实例类型列表。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;ecs.g6.4xlarge&quot;]</p>
          */
-        public Builder instanceTypes(java.util.List < String > instanceTypes) {
+        public Builder instanceTypes(java.util.List<String> instanceTypes) {
             this.instanceTypes = instanceTypes;
             return this;
         }
 
         /**
-         * 节点组ID。
+         * <p>节点组ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ng-869471354ecd****</p>
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.nodeGroupId = nodeGroupId;
@@ -343,7 +388,10 @@ public class NodeGroup extends TeaModel {
         }
 
         /**
-         * 节点组名称。最大长度128个字符。
+         * <p>节点组名称。最大长度128个字符。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>core-1</p>
          */
         public Builder nodeGroupName(String nodeGroupName) {
             this.nodeGroupName = nodeGroupName;
@@ -351,7 +399,10 @@ public class NodeGroup extends TeaModel {
         }
 
         /**
-         * 节点组状态。
+         * <p>节点组状态。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATED</p>
          */
         public Builder nodeGroupState(String nodeGroupState) {
             this.nodeGroupState = nodeGroupState;
@@ -359,11 +410,15 @@ public class NodeGroup extends TeaModel {
         }
 
         /**
-         * 节点组类型。取值范围：
-         * <p>
-         * - MASTER：管理类型节点组。
-         * - CORE：存储类型节点组。
-         * - TASK：计算类型节点组。
+         * <p>节点组类型。取值范围：</p>
+         * <ul>
+         * <li>MASTER：管理类型节点组。</li>
+         * <li>CORE：存储类型节点组。</li>
+         * <li>TASK：计算类型节点组。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CORE</p>
          */
         public Builder nodeGroupType(String nodeGroupType) {
             this.nodeGroupType = nodeGroupType;
@@ -371,9 +426,13 @@ public class NodeGroup extends TeaModel {
         }
 
         /**
-         * - COST_OPTIMIZED：成本优化策略。
-         * <p>
-         * - PRIORITY：优先级策略。
+         * <ul>
+         * <li>COST_OPTIMIZED：成本优化策略。</li>
+         * <li>PRIORITY：优先级策略。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIORITY</p>
          */
         public Builder nodeResizeStrategy(String nodeResizeStrategy) {
             this.nodeResizeStrategy = nodeResizeStrategy;
@@ -381,10 +440,14 @@ public class NodeGroup extends TeaModel {
         }
 
         /**
-         * 节点组付费类型。取值范围：
-         * <p>
-         * - PayAsYouGo：后付费，按量付费。
-         * - Subscription：预付费，包年包月。
+         * <p>节点组付费类型。取值范围：</p>
+         * <ul>
+         * <li>PayAsYouGo：后付费，按量付费。</li>
+         * <li>Subscription：预付费，包年包月。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PayAsYouGo</p>
          */
         public Builder paymentType(String paymentType) {
             this.paymentType = paymentType;
@@ -392,7 +455,18 @@ public class NodeGroup extends TeaModel {
         }
 
         /**
-         * 存活节点数量。
+         * PrivatePoolOptions.
+         */
+        public Builder privatePoolOptions(PrivatePoolOptions privatePoolOptions) {
+            this.privatePoolOptions = privatePoolOptions;
+            return this;
+        }
+
+        /**
+         * <p>存活节点数量。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder runningNodeCount(Integer runningNodeCount) {
             this.runningNodeCount = runningNodeCount;
@@ -402,18 +476,21 @@ public class NodeGroup extends TeaModel {
         /**
          * SpotBidPrices.
          */
-        public Builder spotBidPrices(java.util.List < SpotBidPrice > spotBidPrices) {
+        public Builder spotBidPrices(java.util.List<SpotBidPrice> spotBidPrices) {
             this.spotBidPrices = spotBidPrices;
             return this;
         }
 
         /**
-         * 开启补齐抢占式实例后，当收到抢占式实例将被回收的系统消息时，伸缩组将尝试创建新的实例，替换掉将被回收的抢占式实例。取值范围：
-         * <p>
-         * - true：开启补齐抢占式实例。
-         * - false：不开启补齐抢占式实例。
+         * <p>开启补齐抢占式实例后，当收到抢占式实例将被回收的系统消息时，伸缩组将尝试创建新的实例，替换掉将被回收的抢占式实例。取值范围：</p>
+         * <ul>
+         * <li>true：开启补齐抢占式实例。</li>
+         * <li>false：不开启补齐抢占式实例。</li>
+         * </ul>
+         * <p>默认值：false。</p>
          * 
-         * 默认值：false。
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder spotInstanceRemedy(Boolean spotInstanceRemedy) {
             this.spotInstanceRemedy = spotInstanceRemedy;
@@ -421,7 +498,10 @@ public class NodeGroup extends TeaModel {
         }
 
         /**
-         * 是否支持竞价实例。
+         * <p>是否支持竞价实例。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NoSpot</p>
          */
         public Builder spotStrategy(String spotStrategy) {
             this.spotStrategy = spotStrategy;
@@ -429,7 +509,7 @@ public class NodeGroup extends TeaModel {
         }
 
         /**
-         * 状态变化原因。
+         * <p>状态变化原因。</p>
          */
         public Builder stateChangeReason(NodeGroupStateChangeReason stateChangeReason) {
             this.stateChangeReason = stateChangeReason;
@@ -437,7 +517,15 @@ public class NodeGroup extends TeaModel {
         }
 
         /**
-         * 系统盘信息。
+         * Status.
+         */
+        public Builder status(String status) {
+            this.status = status;
+            return this;
+        }
+
+        /**
+         * <p>系统盘信息。</p>
          */
         public Builder systemDisk(SystemDisk systemDisk) {
             this.systemDisk = systemDisk;
@@ -445,18 +533,25 @@ public class NodeGroup extends TeaModel {
         }
 
         /**
-         * 虚拟机交换机ID列表。
+         * <p>虚拟机交换机ID列表。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;vsw-hp35g7ya5ymw68mmg****&quot;]</p>
          */
-        public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
+        public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             this.vSwitchIds = vSwitchIds;
             return this;
         }
 
         /**
-         * 是否开公网IP。取值范围：
-         * <p>
-         * - true：开公网。
-         * - false：不开公网。
+         * <p>是否开公网IP。取值范围：</p>
+         * <ul>
+         * <li>true：开公网。</li>
+         * <li>false：不开公网。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder withPublicIp(Boolean withPublicIp) {
             this.withPublicIp = withPublicIp;
@@ -464,7 +559,10 @@ public class NodeGroup extends TeaModel {
         }
 
         /**
-         * 可用区ID。
+         * <p>可用区ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-h</p>
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;

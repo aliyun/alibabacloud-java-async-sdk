@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyAppGroupResponseBody</p>
  */
 public class ModifyAppGroupResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
     private ModifyAppGroupResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class ModifyAppGroupResponseBody extends TeaModel {
     } 
 
     public static class Quota extends TeaModel {
-        @NameInMap("computeResource")
+        @com.aliyun.core.annotation.NameInMap("computeResource")
         private Integer computeResource;
 
-        @NameInMap("docSize")
+        @com.aliyun.core.annotation.NameInMap("docSize")
         private Integer docSize;
 
-        @NameInMap("spec")
+        @com.aliyun.core.annotation.NameInMap("spec")
         private String spec;
 
         private Quota(Builder builder) {
@@ -162,79 +161,70 @@ public class ModifyAppGroupResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("chargeType")
+        @com.aliyun.core.annotation.NameInMap("chargeType")
         private String chargeType;
 
-        @NameInMap("chargingWay")
+        @com.aliyun.core.annotation.NameInMap("chargingWay")
         private Integer chargingWay;
 
-        @NameInMap("commodityCode")
+        @com.aliyun.core.annotation.NameInMap("commodityCode")
         private String commodityCode;
 
-        @NameInMap("created")
+        @com.aliyun.core.annotation.NameInMap("created")
         private Integer created;
 
-        @NameInMap("currentVersion")
+        @com.aliyun.core.annotation.NameInMap("currentVersion")
         private String currentVersion;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("domain")
+        @com.aliyun.core.annotation.NameInMap("domain")
         private String domain;
 
-        @NameInMap("expireOn")
+        @com.aliyun.core.annotation.NameInMap("engineType")
+        private String engineType;
+
+        @com.aliyun.core.annotation.NameInMap("expireOn")
         private String expireOn;
 
-        @NameInMap("firstRankAlgoDeploymentId")
-        private Integer firstRankAlgoDeploymentId;
-
-        @NameInMap("hasPendingQuotaReviewTask")
+        @com.aliyun.core.annotation.NameInMap("hasPendingQuotaReviewTask")
         private Integer hasPendingQuotaReviewTask;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
-        @NameInMap("lockMode")
+        @com.aliyun.core.annotation.NameInMap("lockMode")
         private String lockMode;
 
-        @NameInMap("lockedByExpiration")
-        private Integer lockedByExpiration;
-
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("pendingSecondRankAlgoDeploymentId")
-        private Integer pendingSecondRankAlgoDeploymentId;
-
-        @NameInMap("processingOrderId")
-        private String processingOrderId;
-
-        @NameInMap("produced")
+        @com.aliyun.core.annotation.NameInMap("produced")
         private Integer produced;
 
-        @NameInMap("projectId")
+        @com.aliyun.core.annotation.NameInMap("projectId")
         private String projectId;
 
-        @NameInMap("quota")
+        @com.aliyun.core.annotation.NameInMap("quota")
         private Quota quota;
 
-        @NameInMap("secondRankAlgoDeploymentId")
-        private Integer secondRankAlgoDeploymentId;
+        @com.aliyun.core.annotation.NameInMap("resourceGroupId")
+        private String resourceGroupId;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("switchedTime")
+        @com.aliyun.core.annotation.NameInMap("switchedTime")
         private Integer switchedTime;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("updated")
+        @com.aliyun.core.annotation.NameInMap("updated")
         private Integer updated;
 
         private Result(Builder builder) {
@@ -245,20 +235,17 @@ public class ModifyAppGroupResponseBody extends TeaModel {
             this.currentVersion = builder.currentVersion;
             this.description = builder.description;
             this.domain = builder.domain;
+            this.engineType = builder.engineType;
             this.expireOn = builder.expireOn;
-            this.firstRankAlgoDeploymentId = builder.firstRankAlgoDeploymentId;
             this.hasPendingQuotaReviewTask = builder.hasPendingQuotaReviewTask;
             this.id = builder.id;
             this.instanceId = builder.instanceId;
             this.lockMode = builder.lockMode;
-            this.lockedByExpiration = builder.lockedByExpiration;
             this.name = builder.name;
-            this.pendingSecondRankAlgoDeploymentId = builder.pendingSecondRankAlgoDeploymentId;
-            this.processingOrderId = builder.processingOrderId;
             this.produced = builder.produced;
             this.projectId = builder.projectId;
             this.quota = builder.quota;
-            this.secondRankAlgoDeploymentId = builder.secondRankAlgoDeploymentId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.status = builder.status;
             this.switchedTime = builder.switchedTime;
             this.type = builder.type;
@@ -323,17 +310,17 @@ public class ModifyAppGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return engineType
+         */
+        public String getEngineType() {
+            return this.engineType;
+        }
+
+        /**
          * @return expireOn
          */
         public String getExpireOn() {
             return this.expireOn;
-        }
-
-        /**
-         * @return firstRankAlgoDeploymentId
-         */
-        public Integer getFirstRankAlgoDeploymentId() {
-            return this.firstRankAlgoDeploymentId;
         }
 
         /**
@@ -365,31 +352,10 @@ public class ModifyAppGroupResponseBody extends TeaModel {
         }
 
         /**
-         * @return lockedByExpiration
-         */
-        public Integer getLockedByExpiration() {
-            return this.lockedByExpiration;
-        }
-
-        /**
          * @return name
          */
         public String getName() {
             return this.name;
-        }
-
-        /**
-         * @return pendingSecondRankAlgoDeploymentId
-         */
-        public Integer getPendingSecondRankAlgoDeploymentId() {
-            return this.pendingSecondRankAlgoDeploymentId;
-        }
-
-        /**
-         * @return processingOrderId
-         */
-        public String getProcessingOrderId() {
-            return this.processingOrderId;
         }
 
         /**
@@ -414,10 +380,10 @@ public class ModifyAppGroupResponseBody extends TeaModel {
         }
 
         /**
-         * @return secondRankAlgoDeploymentId
+         * @return resourceGroupId
          */
-        public Integer getSecondRankAlgoDeploymentId() {
-            return this.secondRankAlgoDeploymentId;
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         /**
@@ -456,20 +422,17 @@ public class ModifyAppGroupResponseBody extends TeaModel {
             private String currentVersion; 
             private String description; 
             private String domain; 
+            private String engineType; 
             private String expireOn; 
-            private Integer firstRankAlgoDeploymentId; 
             private Integer hasPendingQuotaReviewTask; 
             private String id; 
             private String instanceId; 
             private String lockMode; 
-            private Integer lockedByExpiration; 
             private String name; 
-            private Integer pendingSecondRankAlgoDeploymentId; 
-            private String processingOrderId; 
             private Integer produced; 
             private String projectId; 
             private Quota quota; 
-            private Integer secondRankAlgoDeploymentId; 
+            private String resourceGroupId; 
             private String status; 
             private Integer switchedTime; 
             private String type; 
@@ -545,18 +508,18 @@ public class ModifyAppGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the application expired.
+             * engineType.
              */
-            public Builder expireOn(String expireOn) {
-                this.expireOn = expireOn;
+            public Builder engineType(String engineType) {
+                this.engineType = engineType;
                 return this;
             }
 
             /**
-             * The ID of the rough sort expression.
+             * The time when the application expired.
              */
-            public Builder firstRankAlgoDeploymentId(Integer firstRankAlgoDeploymentId) {
-                this.firstRankAlgoDeploymentId = firstRankAlgoDeploymentId;
+            public Builder expireOn(String expireOn) {
+                this.expireOn = expireOn;
                 return this;
             }
 
@@ -602,38 +565,10 @@ public class ModifyAppGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instance expires and is automatically locked. Valid values:
-             * <p>
-             * 
-             * *   0: no.
-             * *   1: yes.
-             */
-            public Builder lockedByExpiration(Integer lockedByExpiration) {
-                this.lockedByExpiration = lockedByExpiration;
-                return this;
-            }
-
-            /**
              * The name of the application.
              */
             public Builder name(String name) {
                 this.name = name;
-                return this;
-            }
-
-            /**
-             * The ID of the fine sort expression that is being created.
-             */
-            public Builder pendingSecondRankAlgoDeploymentId(Integer pendingSecondRankAlgoDeploymentId) {
-                this.pendingSecondRankAlgoDeploymentId = pendingSecondRankAlgoDeploymentId;
-                return this;
-            }
-
-            /**
-             * The ID of the order that is not complete for the instance.
-             */
-            public Builder processingOrderId(String processingOrderId) {
-                this.processingOrderId = processingOrderId;
                 return this;
             }
 
@@ -666,10 +601,10 @@ public class ModifyAppGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the fine sort expression.
+             * resourceGroupId.
              */
-            public Builder secondRankAlgoDeploymentId(Integer secondRankAlgoDeploymentId) {
-                this.secondRankAlgoDeploymentId = secondRankAlgoDeploymentId;
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

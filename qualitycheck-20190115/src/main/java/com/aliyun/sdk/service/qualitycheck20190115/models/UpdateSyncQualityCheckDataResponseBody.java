@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSyncQualityCheckDataResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateSyncQualityCheckDataResponseBody</p>
  */
 public class UpdateSyncQualityCheckDataResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private UpdateSyncQualityCheckDataResponseBody(Builder builder) {
@@ -131,11 +136,17 @@ public class UpdateSyncQualityCheckDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateSyncQualityCheckDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateSyncQualityCheckDataResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("Tid")
+        @com.aliyun.core.annotation.NameInMap("Tid")
         private String tid;
 
         private Data(Builder builder) {

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDDosAllEventListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDDosAllEventListResponseBody</p>
  */
 public class DescribeDDosAllEventListResponseBody extends TeaModel {
-    @NameInMap("AttackEvents")
-    private java.util.List < AttackEvents> attackEvents;
+    @com.aliyun.core.annotation.NameInMap("AttackEvents")
+    private java.util.List<AttackEvents> attackEvents;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
 
     private DescribeDDosAllEventListResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class DescribeDDosAllEventListResponseBody extends TeaModel {
     /**
      * @return attackEvents
      */
-    public java.util.List < AttackEvents> getAttackEvents() {
+    public java.util.List<AttackEvents> getAttackEvents() {
         return this.attackEvents;
     }
 
@@ -57,20 +62,23 @@ public class DescribeDDosAllEventListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AttackEvents> attackEvents; 
+        private java.util.List<AttackEvents> attackEvents; 
         private String requestId; 
         private Long total; 
 
         /**
-         * An array that consists of attack events.
+         * <p>An array that consists of attack events.</p>
          */
-        public Builder attackEvents(java.util.List < AttackEvents> attackEvents) {
+        public Builder attackEvents(java.util.List<AttackEvents> attackEvents) {
             this.attackEvents = attackEvents;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25D83ED5-28CB-5683-9CF7-AECE521F3005</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class DescribeDDosAllEventListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of DDoS attack events.
+         * <p>The total number of DDoS attack events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -91,29 +102,35 @@ public class DescribeDDosAllEventListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDDosAllEventListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDDosAllEventListResponseBody</p>
+     */
     public static class AttackEvents extends TeaModel {
-        @NameInMap("Area")
+        @com.aliyun.core.annotation.NameInMap("Area")
         private String area;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("Mbps")
+        @com.aliyun.core.annotation.NameInMap("Mbps")
         private Long mbps;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("Pps")
+        @com.aliyun.core.annotation.NameInMap("Pps")
         private Long pps;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
         private AttackEvents(Builder builder) {
@@ -202,18 +219,21 @@ public class DescribeDDosAllEventListResponseBody extends TeaModel {
             private Long startTime; 
 
             /**
-             * The source location or region from which the attack was initiated. Valid values:
-             * <p>
+             * <p>The source location or region from which the attack was initiated. Valid values:</p>
+             * <ul>
+             * <li><strong>cn</strong>: Chinese mainland</li>
+             * <li><strong>alb-cn-hongkong-gf-2</strong>: China (Hongkong)</li>
+             * <li><strong>alb-us-west-1-gf-2</strong>: US (Silicon Valley)</li>
+             * <li><strong>alb-ap-northeast-1-gf-1</strong>: Japan (Tokyo)</li>
+             * <li><strong>alb-ap-southeast-gf-1</strong>: Singapore</li>
+             * <li><strong>alb-eu-central-1-gf-1</strong>: Germany (Frankfurt)</li>
+             * <li><strong>alb-eu-central-1-gf-1</strong> or <strong>selb-eu-west-1-gf-1a</strong>: UK (London)</li>
+             * <li><strong>alb-us-east-gf-1</strong>: US (Virginia)</li>
+             * <li><strong>CT-yundi</strong>: China (Hongkong) This value is returned only for Anti-DDoS Premium instances of the Secure Chinese Mainland Acceleration (Sec-CMA) mitigation plan.</li>
+             * </ul>
              * 
-             * *   **cn**: Chinese mainland
-             * *   **alb-cn-hongkong-gf-2**: China (Hongkong)
-             * *   **alb-us-west-1-gf-2**: US (Silicon Valley)
-             * *   **alb-ap-northeast-1-gf-1**: Japan (Tokyo)
-             * *   **alb-ap-southeast-gf-1**: Singapore
-             * *   **alb-eu-central-1-gf-1**: Germany (Frankfurt)
-             * *   **alb-eu-central-1-gf-1** or **selb-eu-west-1-gf-1a**: UK (London)
-             * *   **alb-us-east-gf-1**: US (Virginia)
-             * *   **CT-yundi**: China (Hongkong) This value is returned only for Anti-DDoS Premium instances of the Secure Chinese Mainland Acceleration (Sec-CMA) mitigation plan.
+             * <strong>example:</strong>
+             * <p>cn</p>
              */
             public Builder area(String area) {
                 this.area = area;
@@ -221,7 +241,10 @@ public class DescribeDDosAllEventListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the DDoS attack stopped. This value is a UNIX timestamp. Unit: seconds.
+             * <p>The time when the DDoS attack stopped. This value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1634546030</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -229,13 +252,16 @@ public class DescribeDDosAllEventListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the DDoS attack event. Valid values:
-             * <p>
+             * <p>The type of the DDoS attack event. Valid values:</p>
+             * <ul>
+             * <li><strong>web-cc</strong>: resource exhaustion attacks</li>
+             * <li><strong>cc</strong>: connection flood attacks</li>
+             * <li><strong>defense</strong>: DDoS attacks that trigger traffic scrubbing</li>
+             * <li><strong>blackhole</strong>: DDoS attacks that trigger blackhole filtering</li>
+             * </ul>
              * 
-             * *   **web-cc**: resource exhaustion attacks
-             * *   **cc**: connection flood attacks
-             * *   **defense**: DDoS attacks that trigger traffic scrubbing
-             * *   **blackhole**: DDoS attacks that trigger blackhole filtering
+             * <strong>example:</strong>
+             * <p>cc</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -243,12 +269,15 @@ public class DescribeDDosAllEventListResponseBody extends TeaModel {
             }
 
             /**
-             * The attacked object. The attacked object varies based on the attack event type. The following list describes different attacked objects of different attack event types:
-             * <p>
+             * <p>The attacked object. The attacked object varies based on the attack event type. The following list describes different attacked objects of different attack event types:</p>
+             * <ul>
+             * <li>If <strong>EventType</strong> is set to <strong>web-cc</strong>, the value of this parameter indicates the domain name of the attacked website.</li>
+             * <li>If <strong>EventType</strong> is set to <strong>cc</strong>, the value of this parameter indicates the IP address of the attacked Anti-DDoS Pro or Anti-DDoS Premium instance.</li>
+             * <li>If <strong>EventType</strong> is set to <strong>defense</strong> or <strong>blackhole</strong>, the value of this parameter indicates the IP address of the attacked Anti-DDoS Pro or Anti-DDoS Premium instance.</li>
+             * </ul>
              * 
-             * *   If **EventType** is set to **web-cc**, the value of this parameter indicates the domain name of the attacked website.
-             * *   If **EventType** is set to **cc**, the value of this parameter indicates the IP address of the attacked Anti-DDoS Pro or Anti-DDoS Premium instance.
-             * *   If **EventType** is set to **defense** or **blackhole**, the value of this parameter indicates the IP address of the attacked Anti-DDoS Pro or Anti-DDoS Premium instance.
+             * <strong>example:</strong>
+             * <p>203.107.XX.XX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -256,7 +285,10 @@ public class DescribeDDosAllEventListResponseBody extends TeaModel {
             }
 
             /**
-             * The peak bandwidth of the attack traffic. Unit: Mbit/s.
+             * <p>The peak bandwidth of the attack traffic. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101899</p>
              */
             public Builder mbps(Long mbps) {
                 this.mbps = mbps;
@@ -264,10 +296,13 @@ public class DescribeDDosAllEventListResponseBody extends TeaModel {
             }
 
             /**
-             * The attacked port.
-             * <p>
+             * <p>The attacked port.</p>
+             * <blockquote>
+             * <p>If <strong>EventType</strong> is set to <strong>web-cc</strong>, this parameter is not returned.</p>
+             * </blockquote>
              * 
-             * > If **EventType** is set to **web-cc**, this parameter is not returned.
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -275,7 +310,10 @@ public class DescribeDDosAllEventListResponseBody extends TeaModel {
             }
 
             /**
-             * The peak packet forwarding rate of attack traffic. Unit: packets per second (pps).
+             * <p>The peak packet forwarding rate of attack traffic. Unit: packets per second (pps).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9664270</p>
              */
             public Builder pps(Long pps) {
                 this.pps = pps;
@@ -283,7 +321,10 @@ public class DescribeDDosAllEventListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the DDoS attack started. This value is a UNIX timestamp. Unit: seconds.
+             * <p>The time when the DDoS attack started. This value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1634543764</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutResourceMetricRulesRequest} extends {@link RequestModel}
  *
  * <p>PutResourceMetricRulesRequest</p>
  */
 public class PutResourceMetricRulesRequest extends Request {
-    @Query
-    @NameInMap("Rules")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Rules")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Rules> rules;
 
     private PutResourceMetricRulesRequest(Builder builder) {
@@ -55,7 +55,9 @@ public class PutResourceMetricRulesRequest extends Request {
         } 
 
         /**
-         * Rules.
+         * <p>The threshold-triggered alert rules.</p>
+         * <p>Valid values of N: 1 to 500.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder rules(java.util.List < Rules> rules) {
             this.putQueryParameter("Rules", rules);
@@ -70,23 +72,29 @@ public class PutResourceMetricRulesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link PutResourceMetricRulesRequest} extends {@link TeaModel}
+     *
+     * <p>PutResourceMetricRulesRequest</p>
+     */
     public static class Critical extends TeaModel {
-        @NameInMap("ComparisonOperator")
+        @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
         private String comparisonOperator;
 
-        @NameInMap("N")
+        @com.aliyun.core.annotation.NameInMap("N")
         private Integer n;
 
-        @NameInMap("PreCondition")
+        @com.aliyun.core.annotation.NameInMap("PreCondition")
         private String preCondition;
 
-        @NameInMap("Statistics")
+        @com.aliyun.core.annotation.NameInMap("Statistics")
         private String statistics;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private String threshold;
 
-        @NameInMap("Times")
+        @com.aliyun.core.annotation.NameInMap("Times")
         private Integer times;
 
         private Critical(Builder builder) {
@@ -211,23 +219,29 @@ public class PutResourceMetricRulesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link PutResourceMetricRulesRequest} extends {@link TeaModel}
+     *
+     * <p>PutResourceMetricRulesRequest</p>
+     */
     public static class Info extends TeaModel {
-        @NameInMap("ComparisonOperator")
+        @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
         private String comparisonOperator;
 
-        @NameInMap("N")
+        @com.aliyun.core.annotation.NameInMap("N")
         private Integer n;
 
-        @NameInMap("PreCondition")
+        @com.aliyun.core.annotation.NameInMap("PreCondition")
         private String preCondition;
 
-        @NameInMap("Statistics")
+        @com.aliyun.core.annotation.NameInMap("Statistics")
         private String statistics;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private String threshold;
 
-        @NameInMap("Times")
+        @com.aliyun.core.annotation.NameInMap("Times")
         private Integer times;
 
         private Info(Builder builder) {
@@ -352,23 +366,29 @@ public class PutResourceMetricRulesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link PutResourceMetricRulesRequest} extends {@link TeaModel}
+     *
+     * <p>PutResourceMetricRulesRequest</p>
+     */
     public static class Warn extends TeaModel {
-        @NameInMap("ComparisonOperator")
+        @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
         private String comparisonOperator;
 
-        @NameInMap("N")
+        @com.aliyun.core.annotation.NameInMap("N")
         private Integer n;
 
-        @NameInMap("PreCondition")
+        @com.aliyun.core.annotation.NameInMap("PreCondition")
         private String preCondition;
 
-        @NameInMap("Statistics")
+        @com.aliyun.core.annotation.NameInMap("Statistics")
         private String statistics;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private String threshold;
 
-        @NameInMap("Times")
+        @com.aliyun.core.annotation.NameInMap("Times")
         private Integer times;
 
         private Warn(Builder builder) {
@@ -493,17 +513,23 @@ public class PutResourceMetricRulesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link PutResourceMetricRulesRequest} extends {@link TeaModel}
+     *
+     * <p>PutResourceMetricRulesRequest</p>
+     */
     public static class Escalations extends TeaModel {
-        @NameInMap("Critical")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Critical")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Critical critical;
 
-        @NameInMap("Info")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Info")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Info info;
 
-        @NameInMap("Warn")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Warn")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Warn warn;
 
         private Escalations(Builder builder) {
@@ -577,11 +603,17 @@ public class PutResourceMetricRulesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link PutResourceMetricRulesRequest} extends {@link TeaModel}
+     *
+     * <p>PutResourceMetricRulesRequest</p>
+     */
     public static class Labels extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Labels(Builder builder) {
@@ -616,7 +648,10 @@ public class PutResourceMetricRulesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tagKey1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -624,10 +659,13 @@ public class PutResourceMetricRulesRequest extends Request {
             }
 
             /**
-             * The value of the tag.
-             * <p>
+             * <p>The tag value.</p>
+             * <blockquote>
+             * <p> You can use a template parameter to specify a tag value. CloudMonitor replaces the value of the template parameter with an actual tag value.</p>
+             * </blockquote>
              * 
-             * >  You can use a template parameter to specify a tag value. CloudMonitor replaces the value of the template parameter with an actual tag value.
+             * <strong>example:</strong>
+             * <p>ECS</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -641,59 +679,65 @@ public class PutResourceMetricRulesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link PutResourceMetricRulesRequest} extends {@link TeaModel}
+     *
+     * <p>PutResourceMetricRulesRequest</p>
+     */
     public static class Rules extends TeaModel {
-        @NameInMap("Escalations")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Escalations")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Escalations escalations;
 
-        @NameInMap("ContactGroups")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ContactGroups")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String contactGroups;
 
-        @NameInMap("EffectiveInterval")
+        @com.aliyun.core.annotation.NameInMap("EffectiveInterval")
         private String effectiveInterval;
 
-        @NameInMap("EmailSubject")
+        @com.aliyun.core.annotation.NameInMap("EmailSubject")
         private String emailSubject;
 
-        @NameInMap("Interval")
+        @com.aliyun.core.annotation.NameInMap("Interval")
         private String interval;
 
-        @NameInMap("Labels")
+        @com.aliyun.core.annotation.NameInMap("Labels")
         private java.util.List < Labels> labels;
 
-        @NameInMap("MetricName")
+        @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
 
-        @NameInMap("Namespace")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Namespace")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String namespace;
 
-        @NameInMap("NoDataPolicy")
+        @com.aliyun.core.annotation.NameInMap("NoDataPolicy")
         private String noDataPolicy;
 
-        @NameInMap("NoEffectiveInterval")
+        @com.aliyun.core.annotation.NameInMap("NoEffectiveInterval")
         private String noEffectiveInterval;
 
-        @NameInMap("Period")
+        @com.aliyun.core.annotation.NameInMap("Period")
         private String period;
 
-        @NameInMap("Resources")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Resources")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String resources;
 
-        @NameInMap("RuleId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("RuleId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String ruleId;
 
-        @NameInMap("RuleName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("RuleName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String ruleName;
 
-        @NameInMap("SilenceTime")
+        @com.aliyun.core.annotation.NameInMap("SilenceTime")
         private Integer silenceTime;
 
-        @NameInMap("Webhook")
+        @com.aliyun.core.annotation.NameInMap("Webhook")
         private String webhook;
 
         private Rules(Builder builder) {
@@ -862,12 +906,15 @@ public class PutResourceMetricRulesRequest extends Request {
             }
 
             /**
-             * The alert contact group. The alert notifications are sent to the alert contacts in the alert contact group.
-             * <p>
+             * <p>The alert contact groups. The alert notifications are sent to the alert contacts in the alert contact group.</p>
+             * <p>Valid values of N: 1 to 500.</p>
+             * <blockquote>
+             * <p> An alert contact group can contain one or more alert contacts. For information about how to create alert contacts and alert contact groups, see <a href="https://help.aliyun.com/document_detail/114923.html">PutContact</a> and <a href="https://help.aliyun.com/document_detail/114929.html">PutContactGroup</a>.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * Valid values of N: 1 to 500.
-             * 
-             * >  An alert contact group can contain one or more alert contacts. For information about how to create alert contacts and alert contact groups, see [PutContact](~~114923~~) and [PutContactGroup](~~114929~~).
+             * <strong>example:</strong>
+             * <p>ECS_Group</p>
              */
             public Builder contactGroups(String contactGroups) {
                 this.contactGroups = contactGroups;
@@ -875,10 +922,11 @@ public class PutResourceMetricRulesRequest extends Request {
             }
 
             /**
-             * The time period during which the alert rule is effective.
-             * <p>
+             * <p>The time period during which the alert rule is effective.</p>
+             * <p>Valid values of N: 1 to 500.</p>
              * 
-             * Valid values of N: 1 to 500.
+             * <strong>example:</strong>
+             * <p>00:00-23:59</p>
              */
             public Builder effectiveInterval(String effectiveInterval) {
                 this.effectiveInterval = effectiveInterval;
@@ -886,10 +934,8 @@ public class PutResourceMetricRulesRequest extends Request {
             }
 
             /**
-             * The subject of the alert notification email.
-             * <p>
-             * 
-             * Valid values of N: 1 to 500.
+             * <p>The subject of the alert notification email.</p>
+             * <p>Valid values of N: 1 to 500.</p>
              */
             public Builder emailSubject(String emailSubject) {
                 this.emailSubject = emailSubject;
@@ -897,14 +943,15 @@ public class PutResourceMetricRulesRequest extends Request {
             }
 
             /**
-             * The interval at which the alert rule is executed.
-             * <p>
+             * <p>The interval at which alerts are triggered based on the alert rule.</p>
+             * <p>Unit: seconds.</p>
+             * <p>Valid values of N: 1 to 500.</p>
+             * <blockquote>
+             * <p> For information about how to query the statistical period of a metric, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+             * </blockquote>
              * 
-             * Unit: seconds.
-             * 
-             * Valid values of N: 1 to 500.
-             * 
-             * >  For information about how to query the statistical period of a metric, see [Appendix 1: Metrics](~~163515~~).
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder interval(String interval) {
                 this.interval = interval;
@@ -912,7 +959,7 @@ public class PutResourceMetricRulesRequest extends Request {
             }
 
             /**
-             * Labels.
+             * <p>If the metric meets the specified condition in the alert rule and CloudMonitor sends an alert notification, the tag is also written to the metric and displayed in the alert notification.</p>
              */
             public Builder labels(java.util.List < Labels> labels) {
                 this.labels = labels;
@@ -920,12 +967,12 @@ public class PutResourceMetricRulesRequest extends Request {
             }
 
             /**
-             * The name of the metric.
-             * <p>
+             * <p>The metric name.</p>
+             * <p>Valid values of N: 1 to 500.</p>
+             * <p>For information about how to query the name of a metric, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
              * 
-             * Valid values of N: 1 to 500.
-             * 
-             * For information about how to query the name of a metric, see [Appendix 1: Metrics](~~163515~~).
+             * <strong>example:</strong>
+             * <p>cpu_total</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -933,12 +980,13 @@ public class PutResourceMetricRulesRequest extends Request {
             }
 
             /**
-             * The namespace of the cloud service.
-             * <p>
+             * <p>The namespace of the cloud service.</p>
+             * <p>Valid values of N: 1 to 500.</p>
+             * <p>For information about how to query the namespace of a cloud service, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+             * <p>This parameter is required.</p>
              * 
-             * Valid values of N: 1 to 500.
-             * 
-             * For information about how to query the namespace of a cloud service, see [Appendix 1: Metrics](~~163515~~).
+             * <strong>example:</strong>
+             * <p>acs_ecs_dashboard</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -946,14 +994,16 @@ public class PutResourceMetricRulesRequest extends Request {
             }
 
             /**
-             * The method that is used to handle alerts when no monitoring data is found. Valid values:
-             * <p>
+             * <p>The method that is used to handle alerts when no monitoring data is found. Valid values:</p>
+             * <ul>
+             * <li>KEEP_LAST_STATE (default): No operation is performed.</li>
+             * <li>INSUFFICIENT_DATA: An alert whose content is &quot;Insufficient data&quot; is triggered.</li>
+             * <li>OK: The status is considered normal.</li>
+             * </ul>
+             * <p>Valid values of N: 1 to 500.</p>
              * 
-             * *   KEEP_LAST_STATE (default value): No operation is performed.
-             * *   INSUFFICIENT_DATA: An alert whose content is "Insufficient data" is triggered.
-             * *   OK: The status is considered normal.
-             * 
-             * Valid values of N: 1 to 500.
+             * <strong>example:</strong>
+             * <p>KEEP_LAST_STATE</p>
              */
             public Builder noDataPolicy(String noDataPolicy) {
                 this.noDataPolicy = noDataPolicy;
@@ -961,10 +1011,11 @@ public class PutResourceMetricRulesRequest extends Request {
             }
 
             /**
-             * The time period during which the alert rule is ineffective.
-             * <p>
+             * <p>The time period during which the alert rule is ineffective.</p>
+             * <p>Valid values of N: 1 to 500.</p>
              * 
-             * Valid values of N: 1 to 500.
+             * <strong>example:</strong>
+             * <p>00:00-06:00</p>
              */
             public Builder noEffectiveInterval(String noEffectiveInterval) {
                 this.noEffectiveInterval = noEffectiveInterval;
@@ -972,14 +1023,15 @@ public class PutResourceMetricRulesRequest extends Request {
             }
 
             /**
-             * The statistical period of the metric.
-             * <p>
+             * <p>The statistical period of the metric.</p>
+             * <p>Unit: seconds. The default value is the interval at which the monitoring data of the metric is collected.</p>
+             * <p>Valid values of N: 1 to 500.</p>
+             * <blockquote>
+             * <p> For information about how to query the statistical period of a metric, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+             * </blockquote>
              * 
-             * Unit: seconds. The default value is the interval at which the monitoring data of the metric is collected.
-             * 
-             * Valid values of N: 1 to 500.
-             * 
-             * >  For information about how to query the statistical period of a metric, see [Appendix 1: Metrics](~~163515~~).
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder period(String period) {
                 this.period = period;
@@ -987,12 +1039,13 @@ public class PutResourceMetricRulesRequest extends Request {
             }
 
             /**
-             * The information about the resource. Examples: `[{"instanceId":"i-uf6j91r34rnwawoo****"}]` and `[{"userId":"100931896542****"}]`.
-             * <p>
+             * <p>The information about the resource. Example: <code>[{&quot;instanceId&quot;:&quot;i-uf6j91r34rnwawoo****&quot;}]</code> or <code>[{&quot;userId&quot;:&quot;100931896542****&quot;}]</code>.</p>
+             * <p>Valid values of N: 1 to 500.</p>
+             * <p>For more information about the supported dimensions that are used to query resources, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+             * <p>This parameter is required.</p>
              * 
-             * Valid values of N: 1 to 500.
-             * 
-             * For more information about the supported dimensions that are used to query resources, see [Appendix 1: Metrics](~~163515~~).
+             * <strong>example:</strong>
+             * <p>[{&quot;instanceId&quot;:&quot;i-uf6j91r34rnwawoo****&quot;}]</p>
              */
             public Builder resources(String resources) {
                 this.resources = resources;
@@ -1000,14 +1053,16 @@ public class PutResourceMetricRulesRequest extends Request {
             }
 
             /**
-             * The ID of the alert rule.
-             * <p>
+             * <p>The ID of the alert rule.</p>
+             * <p>Valid values of N: 1 to 500.</p>
+             * <p>You can specify a new ID or the ID of an existing alert rule. For information about how to query the ID of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
+             * <blockquote>
+             * <p> If you specify a new ID, a threshold-triggered alert rule is created.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * Valid values of N: 1 to 500.
-             * 
-             * You can specify a new ID or the ID of an existing alert rule. For information about how to query the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
-             * 
-             * >  If you specify a new ID, you create a threshold-triggered alert rule.
+             * <strong>example:</strong>
+             * <p>a151cd6023eacee2f0978e03863cc1697c89508****</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -1015,14 +1070,16 @@ public class PutResourceMetricRulesRequest extends Request {
             }
 
             /**
-             * The name of the alert rule.
-             * <p>
+             * <p>The name of the alert rule.</p>
+             * <p>Valid values of N: 1 to 500.</p>
+             * <p>You can specify a new name or the name of an existing alert rule. For information about how to query the name of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
+             * <blockquote>
+             * <p> If you specify a new name, a threshold-triggered alert rule is created.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * Valid values of N: 1 to 500.
-             * 
-             * You can specify a new name or the name of an existing alert rule. For information about how to query the name of an alert rule, see [DescribeMetricRuleList](~~114941~~).
-             * 
-             * >  If you specify a new name, you create a threshold-triggered alert rule.
+             * <strong>example:</strong>
+             * <p>test123</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -1030,14 +1087,15 @@ public class PutResourceMetricRulesRequest extends Request {
             }
 
             /**
-             * The mute period during which new alerts are not sent even if the trigger conditions are met.
-             * <p>
+             * <p>The mute period during which new alert notifications are not sent even if the trigger conditions are met.</p>
+             * <p>Unit: seconds. Default value: 86400.</p>
+             * <p>Valid values of N: 1 to 500.</p>
+             * <blockquote>
+             * <p> If an alert is not cleared after the mute period ends, CloudMonitor resends an alert notification.</p>
+             * </blockquote>
              * 
-             * Unit: seconds. Default value: 86400.
-             * 
-             * Valid values of N: 1 to 500.
-             * 
-             * >  If an alert is not cleared after the mute period ends, CloudMonitor resends an alert notification.
+             * <strong>example:</strong>
+             * <p>86400</p>
              */
             public Builder silenceTime(Integer silenceTime) {
                 this.silenceTime = silenceTime;
@@ -1045,10 +1103,11 @@ public class PutResourceMetricRulesRequest extends Request {
             }
 
             /**
-             * The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.
-             * <p>
+             * <p>The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.</p>
+             * <p>Valid values of N: 1 to 500.</p>
              * 
-             * Valid values of N: 1 to 500.
+             * <strong>example:</strong>
+             * <p><a href="https://alert.aliyun.com.com:8080/callback">https://alert.aliyun.com.com:8080/callback</a></p>
              */
             public Builder webhook(String webhook) {
                 this.webhook = webhook;

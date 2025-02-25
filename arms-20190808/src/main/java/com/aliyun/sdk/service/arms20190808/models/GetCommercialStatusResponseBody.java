@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCommercialStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetCommercialStatusResponseBody</p>
  */
 public class GetCommercialStatusResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UserAndCommodityStatus")
+    @com.aliyun.core.annotation.NameInMap("UserAndCommodityStatus")
     private UserAndCommodityStatus userAndCommodityStatus;
 
     private GetCommercialStatusResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class GetCommercialStatusResponseBody extends TeaModel {
         private UserAndCommodityStatus userAndCommodityStatus; 
 
         /**
-         * Id of the request
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>49C82193-E991-5F6A-AF3E-1664D8D05CA3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class GetCommercialStatusResponseBody extends TeaModel {
         }
 
         /**
-         * UserAndCommodityStatus.
+         * <p>The commercialization status of the service.</p>
          */
         public Builder userAndCommodityStatus(UserAndCommodityStatus userAndCommodityStatus) {
             this.userAndCommodityStatus = userAndCommodityStatus;
@@ -71,26 +79,32 @@ public class GetCommercialStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCommercialStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCommercialStatusResponseBody</p>
+     */
     public static class UserAndCommodityStatus extends TeaModel {
-        @NameInMap("Basic")
+        @com.aliyun.core.annotation.NameInMap("Basic")
         private Boolean basic;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
 
-        @NameInMap("ExtraInfo")
-        private java.util.Map < String, ? > extraInfo;
+        @com.aliyun.core.annotation.NameInMap("ExtraInfo")
+        private java.util.Map<String, ?> extraInfo;
 
-        @NameInMap("FreeDays")
+        @com.aliyun.core.annotation.NameInMap("FreeDays")
         private Long freeDays;
 
-        @NameInMap("Lable")
+        @com.aliyun.core.annotation.NameInMap("Lable")
         private String lable;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private UserAndCommodityStatus(Builder builder) {
@@ -135,7 +149,7 @@ public class GetCommercialStatusResponseBody extends TeaModel {
         /**
          * @return extraInfo
          */
-        public java.util.Map < String, ? > getExtraInfo() {
+        public java.util.Map<String, ?> getExtraInfo() {
             return this.extraInfo;
         }
 
@@ -164,13 +178,16 @@ public class GetCommercialStatusResponseBody extends TeaModel {
             private Boolean basic; 
             private String chargeType; 
             private Boolean enable; 
-            private java.util.Map < String, ? > extraInfo; 
+            private java.util.Map<String, ?> extraInfo; 
             private Long freeDays; 
             private String lable; 
             private String status; 
 
             /**
-             * Basic.
+             * <p>Indicates whether you are using the Basic Edition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder basic(Boolean basic) {
                 this.basic = basic;
@@ -178,7 +195,10 @@ public class GetCommercialStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeType.
+             * <p>The billing method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>usage</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -186,7 +206,10 @@ public class GetCommercialStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>Indicates whether the service is activated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -194,15 +217,21 @@ public class GetCommercialStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ExtraInfo.
+             * <p>The additional information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>info</p>
              */
-            public Builder extraInfo(java.util.Map < String, ? > extraInfo) {
+            public Builder extraInfo(java.util.Map<String, ?> extraInfo) {
                 this.extraInfo = extraInfo;
                 return this;
             }
 
             /**
-             * FreeDays.
+             * <p>The number of days during which the service is free of charge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder freeDays(Long freeDays) {
                 this.freeDays = freeDays;
@@ -210,7 +239,10 @@ public class GetCommercialStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Lable.
+             * <p>The tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NEW</p>
              */
             public Builder lable(String lable) {
                 this.lable = lable;
@@ -218,7 +250,16 @@ public class GetCommercialStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The commercialization status.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Normal: The service is activated.</li>
+             * <li>Abnormal: An exception occurs during activation.</li>
+             * <li>Free: The service is not activated.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;

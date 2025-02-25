@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFileDetectApiInvokeInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetFileDetectApiInvokeInfoResponseBody</p>
  */
 public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetFileDetectApiInvokeInfoResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Returns the response body.
+         * <p>Returns the response body.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9f368b6e-d60a-43c5-bd6f-c7087f2d****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,23 +79,29 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetFileDetectApiInvokeInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFileDetectApiInvokeInfoResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AuthCount")
+        @com.aliyun.core.annotation.NameInMap("AuthCount")
         private Long authCount;
 
-        @NameInMap("Expire")
+        @com.aliyun.core.annotation.NameInMap("Expire")
         private Long expire;
 
-        @NameInMap("FlowRate")
+        @com.aliyun.core.annotation.NameInMap("FlowRate")
         private Integer flowRate;
 
-        @NameInMap("RemainAuthCount")
+        @com.aliyun.core.annotation.NameInMap("RemainAuthCount")
         private Long remainAuthCount;
 
-        @NameInMap("SaleVersion")
+        @com.aliyun.core.annotation.NameInMap("SaleVersion")
         private Integer saleVersion;
 
-        @NameInMap("TimeUnit")
+        @com.aliyun.core.annotation.NameInMap("TimeUnit")
         private String timeUnit;
 
         private Data(Builder builder) {
@@ -158,7 +172,10 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
             private String timeUnit; 
 
             /**
-             * The total number of authorizations.
+             * <p>The total number of authorizations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder authCount(Long authCount) {
                 this.authCount = authCount;
@@ -166,7 +183,10 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the expiration date of the authorization number.
+             * <p>The timestamp of the expiration date of the authorization number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1815753600000</p>
              */
             public Builder expire(Long expire) {
                 this.expire = expire;
@@ -174,7 +194,10 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The frequency of calls.
+             * <p>The frequency of calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder flowRate(Integer flowRate) {
                 this.flowRate = flowRate;
@@ -182,7 +205,10 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of remaining authorizations.
+             * <p>The number of remaining authorizations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>900</p>
              */
             public Builder remainAuthCount(Long remainAuthCount) {
                 this.remainAuthCount = remainAuthCount;
@@ -190,11 +216,14 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The Authorized Version. Valid values include:
-             * <p>
+             * <p>The Authorized Version. Valid values include:</p>
+             * <ul>
+             * <li><strong>1:</strong> trial version</li>
+             * <li><strong>2:</strong> Enterprise Edition</li>
+             * </ul>
              * 
-             * * **1:** trial version
-             * * **2:** Enterprise Edition
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder saleVersion(Integer saleVersion) {
                 this.saleVersion = saleVersion;
@@ -202,11 +231,14 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time unit of the frequency limit. Value:
-             * <p>
+             * <p>The time unit of the frequency limit. Value:</p>
+             * <ul>
+             * <li><strong>SECONDS</strong></li>
+             * <li><strong>MINUTES</strong></li>
+             * </ul>
              * 
-             * * **SECONDS**
-             * * **MINUTES**
+             * <strong>example:</strong>
+             * <p>SECONDS</p>
              */
             public Builder timeUnit(String timeUnit) {
                 this.timeUnit = timeUnit;

@@ -1,41 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateInstanceRequest} extends {@link RequestModel}
  *
  * <p>UpdateInstanceRequest</p>
  */
 public class UpdateInstanceRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("instanceName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("aclInfo")
+    private AclInfo aclInfo;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("instanceName")
     private String instanceName;
 
-    @Body
-    @NameInMap("networkInfo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("networkInfo")
     private NetworkInfo networkInfo;
 
-    @Body
-    @NameInMap("productInfo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("productInfo")
     private ProductInfo productInfo;
 
-    @Body
-    @NameInMap("remark")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("remark")
     private String remark;
 
     private UpdateInstanceRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.aclInfo = builder.aclInfo;
         this.instanceName = builder.instanceName;
         this.networkInfo = builder.networkInfo;
         this.productInfo = builder.productInfo;
@@ -60,6 +70,13 @@ public class UpdateInstanceRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return aclInfo
+     */
+    public AclInfo getAclInfo() {
+        return this.aclInfo;
     }
 
     /**
@@ -92,6 +109,7 @@ public class UpdateInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateInstanceRequest, Builder> {
         private String instanceId; 
+        private AclInfo aclInfo; 
         private String instanceName; 
         private NetworkInfo networkInfo; 
         private ProductInfo productInfo; 
@@ -104,6 +122,7 @@ public class UpdateInstanceRequest extends Request {
         private Builder(UpdateInstanceRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.aclInfo = request.aclInfo;
             this.instanceName = request.instanceName;
             this.networkInfo = request.networkInfo;
             this.productInfo = request.productInfo;
@@ -111,7 +130,11 @@ public class UpdateInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the instance whose basic information and specifications you want to update.
+         * <p>The ID of the instance whose basic information and specifications you want to update.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq-cn-7e22ody****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -120,7 +143,19 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * The new name of the instance.
+         * <p>The access control list for the instance.</p>
+         */
+        public Builder aclInfo(AclInfo aclInfo) {
+            this.putBodyParameter("aclInfo", aclInfo);
+            this.aclInfo = aclInfo;
+            return this;
+        }
+
+        /**
+         * <p>The updated name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_instance</p>
          */
         public Builder instanceName(String instanceName) {
             this.putBodyParameter("instanceName", instanceName);
@@ -129,7 +164,7 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * The new network information about the instance.
+         * <p>The updated network information about the instance.</p>
          */
         public Builder networkInfo(NetworkInfo networkInfo) {
             this.putBodyParameter("networkInfo", networkInfo);
@@ -138,7 +173,7 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * The extended configurations of the instance.
+         * <p>Additional configurations of the instance.</p>
          */
         public Builder productInfo(ProductInfo productInfo) {
             this.putBodyParameter("productInfo", productInfo);
@@ -147,7 +182,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * The new remarks on the instance.
+         * <p>The updated description of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is the remark for test.</p>
          */
         public Builder remark(String remark) {
             this.putBodyParameter("remark", remark);
@@ -162,9 +200,91 @@ public class UpdateInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateInstanceRequest</p>
+     */
+    public static class AclInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("aclTypes")
+        private java.util.List<String> aclTypes;
+
+        @com.aliyun.core.annotation.NameInMap("defaultVpcAuthFree")
+        private Boolean defaultVpcAuthFree;
+
+        private AclInfo(Builder builder) {
+            this.aclTypes = builder.aclTypes;
+            this.defaultVpcAuthFree = builder.defaultVpcAuthFree;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AclInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return aclTypes
+         */
+        public java.util.List<String> getAclTypes() {
+            return this.aclTypes;
+        }
+
+        /**
+         * @return defaultVpcAuthFree
+         */
+        public Boolean getDefaultVpcAuthFree() {
+            return this.defaultVpcAuthFree;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> aclTypes; 
+            private Boolean defaultVpcAuthFree; 
+
+            /**
+             * <p>The authentication type of the instance.</p>
+             */
+            public Builder aclTypes(java.util.List<String> aclTypes) {
+                this.aclTypes = aclTypes;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether the authentication-free in VPCs feature is enabled.
+             * Indicates whether the authentication-free in VPCs feature is enabled.
+             * Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder defaultVpcAuthFree(Boolean defaultVpcAuthFree) {
+                this.defaultVpcAuthFree = defaultVpcAuthFree;
+                return this;
+            }
+
+            public AclInfo build() {
+                return new AclInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateInstanceRequest</p>
+     */
     public static class InternetInfo extends TeaModel {
-        @NameInMap("ipWhitelist")
-        private java.util.List < String > ipWhitelist;
+        @com.aliyun.core.annotation.NameInMap("ipWhitelist")
+        private java.util.List<String> ipWhitelist;
 
         private InternetInfo(Builder builder) {
             this.ipWhitelist = builder.ipWhitelist;
@@ -181,21 +301,21 @@ public class UpdateInstanceRequest extends Request {
         /**
          * @return ipWhitelist
          */
-        public java.util.List < String > getIpWhitelist() {
+        public java.util.List<String> getIpWhitelist() {
             return this.ipWhitelist;
         }
 
         public static final class Builder {
-            private java.util.List < String > ipWhitelist; 
+            private java.util.List<String> ipWhitelist; 
 
             /**
-             * The IP address whitelist that allows access to the instance over the Internet.
-             * <p>
-             * 
-             * *   If you do not configure an IP address whitelist, all IP addresses are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.
-             * *   If you configure an IP address whitelist, only IP addresses in the whitelist are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.
+             * <p>The whitelist that includes the IP addresses that are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</p>
+             * <ul>
+             * <li>If you do not configure an IP address whitelist, all CIDR blocks are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</li>
+             * <li>If you configure an IP address whitelist, only the IP addresses in the whitelist are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</li>
+             * </ul>
              */
-            public Builder ipWhitelist(java.util.List < String > ipWhitelist) {
+            public Builder ipWhitelist(java.util.List<String> ipWhitelist) {
                 this.ipWhitelist = ipWhitelist;
                 return this;
             }
@@ -207,8 +327,14 @@ public class UpdateInstanceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateInstanceRequest</p>
+     */
     public static class NetworkInfo extends TeaModel {
-        @NameInMap("internetInfo")
+        @com.aliyun.core.annotation.NameInMap("internetInfo")
         private InternetInfo internetInfo;
 
         private NetworkInfo(Builder builder) {
@@ -234,7 +360,7 @@ public class UpdateInstanceRequest extends Request {
             private InternetInfo internetInfo; 
 
             /**
-             * The Internet information about the instance. This parameter takes effect only when the Internet access feature is enabled for the instance.
+             * <p>The information about the Internet over which the instance is accessed. This parameter takes effect only if the Internet access feature is enabled for the instance.</p>
              */
             public Builder internetInfo(InternetInfo internetInfo) {
                 this.internetInfo = internetInfo;
@@ -248,17 +374,23 @@ public class UpdateInstanceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateInstanceRequest</p>
+     */
     public static class ProductInfo extends TeaModel {
-        @NameInMap("autoScaling")
+        @com.aliyun.core.annotation.NameInMap("autoScaling")
         private Boolean autoScaling;
 
-        @NameInMap("messageRetentionTime")
+        @com.aliyun.core.annotation.NameInMap("messageRetentionTime")
         private Integer messageRetentionTime;
 
-        @NameInMap("sendReceiveRatio")
+        @com.aliyun.core.annotation.NameInMap("sendReceiveRatio")
         private Float sendReceiveRatio;
 
-        @NameInMap("traceOn")
+        @com.aliyun.core.annotation.NameInMap("traceOn")
         private Boolean traceOn;
 
         private ProductInfo(Builder builder) {
@@ -311,17 +443,19 @@ public class UpdateInstanceRequest extends Request {
             private Boolean traceOn; 
 
             /**
-             * Specifies whether to enable burst scaling for the instance.
-             * <p>
+             * <p>Specifies whether to enable the elastic transactions per second (TPS) feature for the instance.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <p>After you enable the elastic TPS feature for an ApsaraMQ for RocketMQ instance, you can use a specific number of TPS that exceeds the specification limit. You are charged for using the elastic TPS feature. For more information, see <a href="https://help.aliyun.com/document_detail/427237.html">Computing fees</a>.</p>
+             * <blockquote>
+             * <p> The elastic TPS feature is supported only by specific instance editions. For more information, see <a href="https://help.aliyun.com/document_detail/444715.html">Instance editions</a>.</p>
+             * </blockquote>
              * 
-             * Valid values:
-             * 
-             * *   true
-             * *   false
-             * 
-             * After you enable burst scaling, the system allows the actual messaging transactions per second (TPS) of the ApsaraMQ for RocketMQ instance to exceed the upper limit of the basic computing specification. You are charged for the extra TPS. For more information, see [Computing fee](~~427237~~).
-             * 
-             * > Only specific types of instances support burst scaling. For more information, see [Instance specifications](~~444715~~).
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoScaling(Boolean autoScaling) {
                 this.autoScaling = autoScaling;
@@ -329,12 +463,12 @@ public class UpdateInstanceRequest extends Request {
             }
 
             /**
-             * The retention period of messages. Unit: hours.
-             * <p>
+             * <p>The retention period of messages. Unit: hours.</p>
+             * <p>For information about the valid values of this parameter, see the &quot;Limits on resource quotas&quot; section of the <a href="https://help.aliyun.com/document_detail/440347.html">Limits</a> topic.</p>
+             * <p>ApsaraMQ for RocketMQ supports serverless scaling of message storage. You are charged storage fees based on your actual storage usage. You can change the retention period of messages to manage storage capacity. For more information, see <a href="https://help.aliyun.com/document_detail/427238.html">Storage fees</a>.</p>
              * 
-             * For more information about the valid values, see the "Limits on resource quotas" section of the [Usage limits](~~440347~~) topic.
-             * 
-             * The storage of ApsaraMQ for RocketMQ messages is in serverless scaling mode. You are charged based on the actual used storage. You can adjust the storage retention period to reduce storage usage and costs. For more information, see [Storage fees](~~427238~~).
+             * <strong>example:</strong>
+             * <p>72</p>
              */
             public Builder messageRetentionTime(Integer messageRetentionTime) {
                 this.messageRetentionTime = messageRetentionTime;
@@ -342,10 +476,11 @@ public class UpdateInstanceRequest extends Request {
             }
 
             /**
-             * The ratio of the number of messages that you can send to the number of messages that you can receive in the instance.
-             * <p>
+             * <p>The ratio of the number of messages that you can send to the number of messages that you can receive on the instance.</p>
+             * <p>Value values: 0.25 to 1.</p>
              * 
-             * Value values: 0.25 to 1.
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder sendReceiveRatio(Float sendReceiveRatio) {
                 this.sendReceiveRatio = sendReceiveRatio;
@@ -353,7 +488,15 @@ public class UpdateInstanceRequest extends Request {
             }
 
             /**
-             * traceOn.
+             * <p>Specifies whether to enable the message trace feature.</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <p>This parameter is not in use. By default, the message trace feature is enabled for ApsaraMQ for RocketMQ instances, regardless of whether this parameter is configured.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder traceOn(Boolean traceOn) {
                 this.traceOn = traceOn;

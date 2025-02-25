@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDefenseResourceGroupResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDefenseResourceGroupResponseBody</p>
  */
 public class DescribeDefenseResourceGroupResponseBody extends TeaModel {
-    @NameInMap("Group")
+    @com.aliyun.core.annotation.NameInMap("Group")
     private Group group;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDefenseResourceGroupResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeDefenseResourceGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the protected object group.
+         * <p>The information about the protected object group.</p>
          */
         public Builder group(Group group) {
             this.group = group;
@@ -58,7 +63,10 @@ public class DescribeDefenseResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E67D21C6-5376-5F94-B745-70E08D03E3CB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +79,26 @@ public class DescribeDefenseResourceGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDefenseResourceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDefenseResourceGroupResponseBody</p>
+     */
     public static class Group extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("ResourceList")
+        @com.aliyun.core.annotation.NameInMap("ResourceList")
         private String resourceList;
 
         private Group(Builder builder) {
@@ -146,7 +160,10 @@ public class DescribeDefenseResourceGroupResponseBody extends TeaModel {
             private String resourceList; 
 
             /**
-             * The description of the protected object group.
+             * <p>The description of the protected object group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -154,7 +171,10 @@ public class DescribeDefenseResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the protected object group was created.
+             * <p>The time when the protected object group was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23242312312</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -162,7 +182,10 @@ public class DescribeDefenseResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The most recent time when the protected object group was modified.
+             * <p>The most recent time when the protected object group was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23242312312</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -170,7 +193,10 @@ public class DescribeDefenseResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the protected object group.
+             * <p>The name of the protected object group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>group1</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -178,7 +204,10 @@ public class DescribeDefenseResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The protected objects in the protected object group. The protected objects are separated with commas (,).
+             * <p>The protected objects in the protected object group. The protected objects are separated with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1.aliyundoc.com,test2.aliyundoc.com</p>
              */
             public Builder resourceList(String resourceList) {
                 this.resourceList = resourceList;

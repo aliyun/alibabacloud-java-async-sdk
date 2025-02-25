@@ -1,0 +1,108 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.apig20240327.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link UpdateGatewayFeatureResponseBody} extends {@link TeaModel}
+ *
+ * <p>UpdateGatewayFeatureResponseBody</p>
+ */
+public class UpdateGatewayFeatureResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("code")
+    private String code;
+
+    @com.aliyun.core.annotation.NameInMap("message")
+    private String message;
+
+    @com.aliyun.core.annotation.NameInMap("requestId")
+    private String requestId;
+
+    private UpdateGatewayFeatureResponseBody(Builder builder) {
+        this.code = builder.code;
+        this.message = builder.message;
+        this.requestId = builder.requestId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static UpdateGatewayFeatureResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return code
+     */
+    public String getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static final class Builder {
+        private String code; 
+        private String message; 
+        private String requestId; 
+
+        /**
+         * <p>Response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
+         */
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>043360DA-ED3B-5386-9B7A-D94DECF99A30</p>
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        public UpdateGatewayFeatureResponseBody build() {
+            return new UpdateGatewayFeatureResponseBody(this);
+        } 
+
+    } 
+
+}

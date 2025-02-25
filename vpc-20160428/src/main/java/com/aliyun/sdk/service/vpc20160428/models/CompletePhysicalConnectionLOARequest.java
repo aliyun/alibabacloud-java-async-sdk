@@ -1,65 +1,70 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CompletePhysicalConnectionLOARequest} extends {@link RequestModel}
  *
  * <p>CompletePhysicalConnectionLOARequest</p>
  */
 public class CompletePhysicalConnectionLOARequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("FinishWork")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FinishWork")
     private Boolean finishWork;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("LineCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LineCode")
     private String lineCode;
 
-    @Query
-    @NameInMap("LineLabel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LineLabel")
     private String lineLabel;
 
-    @Query
-    @NameInMap("LineSPContactInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LineSPContactInfo")
     private String lineSPContactInfo;
 
-    @Query
-    @NameInMap("LineServiceProvider")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LineServiceProvider")
     private String lineServiceProvider;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private CompletePhysicalConnectionLOARequest(Builder builder) {
@@ -210,12 +215,14 @@ public class CompletePhysicalConnectionLOARequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests.</p>
+         * <blockquote>
+         * <p> If you do not set this parameter, the system automatically uses <strong>RequestId</strong> as <strong>ClientToken</strong>. <strong>RequestId</strong> of each API request may be different.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the value, but you must ensure that it is unique among different requests.
-         * 
-         * >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** of each API request may be different.
+         * <strong>example:</strong>
+         * <p>02fb3da4-230e-11e9-8e44-0016e04115b</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -224,11 +231,14 @@ public class CompletePhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * Specifies whether the construction is completed. Valid values:
-         * <p>
+         * <p>Specifies whether the construction is completed. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder finishWork(Boolean finishWork) {
             this.putQueryParameter("FinishWork", finishWork);
@@ -237,7 +247,11 @@ public class CompletePhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * The ID of the Express Connect circuit.
+         * <p>The ID of the Express Connect circuit.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-bp10tvlhnwkw****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -246,7 +260,10 @@ public class CompletePhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * The circuit code provided by the connectivity provider.
+         * <p>The circuit code provided by the connectivity provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aaa111****</p>
          */
         public Builder lineCode(String lineCode) {
             this.putQueryParameter("LineCode", lineCode);
@@ -255,7 +272,10 @@ public class CompletePhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * The label of the cable in the data center.
+         * <p>The label of the cable in the data center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bbb222****</p>
          */
         public Builder lineLabel(String lineLabel) {
             this.putQueryParameter("LineLabel", lineLabel);
@@ -264,7 +284,10 @@ public class CompletePhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * The contact information about line O\&M.
+         * <p>The contact information about line O&amp;M.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1388888****</p>
          */
         public Builder lineSPContactInfo(String lineSPContactInfo) {
             this.putQueryParameter("LineSPContactInfo", lineSPContactInfo);
@@ -273,13 +296,16 @@ public class CompletePhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * The ISP. Valid values:
-         * <p>
+         * <p>The ISP. Valid values:</p>
+         * <ul>
+         * <li><strong>China Telecom</strong></li>
+         * <li><strong>China Unicom</strong></li>
+         * <li><strong>China Mobile</strong></li>
+         * <li><strong>Other ISPs in China</strong></li>
+         * </ul>
          * 
-         * *   **China Telecom**
-         * *   **China Unicom**
-         * *   **China Mobile**
-         * *   **Other ISPs in China**
+         * <strong>example:</strong>
+         * <p>Other ISPs in China</p>
          */
         public Builder lineServiceProvider(String lineServiceProvider) {
             this.putQueryParameter("LineServiceProvider", lineServiceProvider);
@@ -306,10 +332,12 @@ public class CompletePhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * The region ID of the Express Connect circuit.
-         * <p>
+         * <p>The region ID of the Express Connect circuit.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

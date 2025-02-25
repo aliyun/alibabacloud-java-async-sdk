@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnDomainTrafficDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnDomainTrafficDataResponseBody</p>
  */
 public class DescribeDcdnDomainTrafficDataResponseBody extends TeaModel {
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("TrafficDataPerInterval")
+    @com.aliyun.core.annotation.NameInMap("TrafficDataPerInterval")
     private TrafficDataPerInterval trafficDataPerInterval;
 
     private DescribeDcdnDomainTrafficDataResponseBody(Builder builder) {
@@ -98,7 +98,10 @@ public class DescribeDcdnDomainTrafficDataResponseBody extends TeaModel {
         private TrafficDataPerInterval trafficDataPerInterval; 
 
         /**
-         * The time interval between the data entries returned. Unit: seconds.
+         * <p>The time interval between the data entries returned. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -106,7 +109,10 @@ public class DescribeDcdnDomainTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -114,7 +120,10 @@ public class DescribeDcdnDomainTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * The end of the time range during which data was queried.
+         * <p>The end of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-10T21:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -122,7 +131,10 @@ public class DescribeDcdnDomainTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B955107D-E658-4E77-B913-E0AC3D31693E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +142,10 @@ public class DescribeDcdnDomainTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * The start of the time range during which data was queried.
+         * <p>The start of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-10T20:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -138,7 +153,7 @@ public class DescribeDcdnDomainTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * The network traffic returned at each time interval. Unit: bytes.
+         * <p>The network traffic returned at each time interval. Unit: bytes.</p>
          */
         public Builder trafficDataPerInterval(TrafficDataPerInterval trafficDataPerInterval) {
             this.trafficDataPerInterval = trafficDataPerInterval;
@@ -151,23 +166,29 @@ public class DescribeDcdnDomainTrafficDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnDomainTrafficDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainTrafficDataResponseBody</p>
+     */
     public static class DataModule extends TeaModel {
-        @NameInMap("DynamicHttpTraffic")
+        @com.aliyun.core.annotation.NameInMap("DynamicHttpTraffic")
         private Float dynamicHttpTraffic;
 
-        @NameInMap("DynamicHttpsTraffic")
+        @com.aliyun.core.annotation.NameInMap("DynamicHttpsTraffic")
         private Float dynamicHttpsTraffic;
 
-        @NameInMap("StaticHttpTraffic")
+        @com.aliyun.core.annotation.NameInMap("StaticHttpTraffic")
         private Float staticHttpTraffic;
 
-        @NameInMap("StaticHttpsTraffic")
+        @com.aliyun.core.annotation.NameInMap("StaticHttpsTraffic")
         private Float staticHttpsTraffic;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("Traffic")
+        @com.aliyun.core.annotation.NameInMap("Traffic")
         private Float traffic;
 
         private DataModule(Builder builder) {
@@ -238,7 +259,10 @@ public class DescribeDcdnDomainTrafficDataResponseBody extends TeaModel {
             private Float traffic; 
 
             /**
-             * The network traffic that was consumed to deliver dynamic content over HTTP.
+             * <p>The network traffic that was consumed to deliver dynamic content over HTTP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dynamicHttpTraffic(Float dynamicHttpTraffic) {
                 this.dynamicHttpTraffic = dynamicHttpTraffic;
@@ -246,7 +270,10 @@ public class DescribeDcdnDomainTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * The network traffic that was consumed to deliver dynamic content over HTTPS.
+             * <p>The network traffic that was consumed to deliver dynamic content over HTTPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dynamicHttpsTraffic(Float dynamicHttpsTraffic) {
                 this.dynamicHttpsTraffic = dynamicHttpsTraffic;
@@ -254,7 +281,10 @@ public class DescribeDcdnDomainTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * The network traffic that was consumed to deliver static content over HTTP.
+             * <p>The network traffic that was consumed to deliver static content over HTTP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder staticHttpTraffic(Float staticHttpTraffic) {
                 this.staticHttpTraffic = staticHttpTraffic;
@@ -262,7 +292,10 @@ public class DescribeDcdnDomainTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * The network traffic that was consumed to deliver static content over HTTPS.
+             * <p>The network traffic that was consumed to deliver static content over HTTPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>132</p>
              */
             public Builder staticHttpsTraffic(Float staticHttpsTraffic) {
                 this.staticHttpsTraffic = staticHttpsTraffic;
@@ -270,7 +303,10 @@ public class DescribeDcdnDomainTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the data returned.
+             * <p>The timestamp of the data returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-10T20:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -278,7 +314,10 @@ public class DescribeDcdnDomainTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * The total amount of network traffic.
+             * <p>The total amount of network traffic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder traffic(Float traffic) {
                 this.traffic = traffic;
@@ -292,8 +331,14 @@ public class DescribeDcdnDomainTrafficDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnDomainTrafficDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainTrafficDataResponseBody</p>
+     */
     public static class TrafficDataPerInterval extends TeaModel {
-        @NameInMap("DataModule")
+        @com.aliyun.core.annotation.NameInMap("DataModule")
         private java.util.List < DataModule> dataModule;
 
         private TrafficDataPerInterval(Builder builder) {

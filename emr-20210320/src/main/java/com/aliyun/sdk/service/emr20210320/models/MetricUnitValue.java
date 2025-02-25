@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MetricUnitValue} extends {@link TeaModel}
  *
  * <p>MetricUnitValue</p>
  */
 public class MetricUnitValue extends TeaModel {
-    @NameInMap("MetricName")
+    @com.aliyun.core.annotation.NameInMap("MetricName")
     private String metricName;
 
-    @NameInMap("MetricUnit")
+    @com.aliyun.core.annotation.NameInMap("MetricUnit")
     private String metricUnit;
 
     private MetricUnitValue(Builder builder) {
@@ -50,7 +55,7 @@ public class MetricUnitValue extends TeaModel {
         private String metricUnit; 
 
         /**
-         * 指标名称。
+         * <p>指标名称。</p>
          */
         public Builder metricName(String metricName) {
             this.metricName = metricName;
@@ -58,7 +63,7 @@ public class MetricUnitValue extends TeaModel {
         }
 
         /**
-         * 指标单位。
+         * <p>指标单位。</p>
          */
         public Builder metricUnit(String metricUnit) {
             this.metricUnit = metricUnit;

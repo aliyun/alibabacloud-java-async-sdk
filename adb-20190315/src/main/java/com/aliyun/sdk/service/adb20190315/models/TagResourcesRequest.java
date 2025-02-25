@@ -1,51 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourcesRequest} extends {@link RequestModel}
  *
  * <p>TagResourcesRequest</p>
  */
 public class TagResourcesRequest extends Request {
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > resourceId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
-    @Query
-    @NameInMap("Tag")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Tag> tag;
 
     private TagResourcesRequest(Builder builder) {
@@ -174,7 +174,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID of the cluster. You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
+         * <p>The region ID of the cluster. You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -183,14 +187,19 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the cluster to which to add a tag. If you want to add a tag to multiple clusters, click **Add** and enter the cluster IDs.
-         * <p>
+         * <p>The ID of the cluster to which to add a tag. If you want to add a tag to multiple clusters, click <strong>Add</strong> and enter the cluster IDs.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>You can add tags to up to 50 clusters at a time.</p>
+         * </li>
+         * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * > 
-         * 
-         * *   You can add tags to up to 50 clusters at a time.
-         * 
-         * *   You can call the [DescribeDBClusters](~~129857~~) operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.
+         * <strong>example:</strong>
+         * <p>am-bp1xxx.1</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -217,7 +226,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the cluster. Set the value to **ALIYUN::ADB::CLUSTER**.
+         * <p>The type of the cluster. Set the value to <strong>ALIYUN::ADB::CLUSTER</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::ADB::CLUSTER</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -226,7 +239,8 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The tags to add to the cluster.
+         * <p>The tags to add to the cluster.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -241,11 +255,17 @@ public class TagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>TagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -280,10 +300,13 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag. If you want to add multiple tags to a single cluster at a time, click **Add** and enter tag keys and values.
-             * <p>
+             * <p>The key of the tag. If you want to add multiple tags to a single cluster at a time, click <strong>Add</strong> and enter tag keys and values.</p>
+             * <blockquote>
+             * <p>You can add up to 20 tags at a time.</p>
+             * </blockquote>
              * 
-             * > You can add up to 20 tags at a time.
+             * <strong>example:</strong>
+             * <p>testkey1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -291,10 +314,13 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * The value of the tag. If you want to add multiple tags to a single cluster at a time, click **Add** and enter tag keys and values.
-             * <p>
+             * <p>The value of the tag. If you want to add multiple tags to a single cluster at a time, click <strong>Add</strong> and enter tag keys and values.</p>
+             * <blockquote>
+             * <p>You can add up to 20 tags at a time.</p>
+             * </blockquote>
              * 
-             * > You can add up to 20 tags at a time.
+             * <strong>example:</strong>
+             * <p>testvalue1</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateApiStageVariableResponseBody} extends {@link TeaModel}
  *
  * <p>CreateApiStageVariableResponseBody</p>
  */
 public class CreateApiStageVariableResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateApiStageVariableResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class CreateApiStageVariableResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>03442A3D-3B7D-434C-8A95-A5FEB999B529</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

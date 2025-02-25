@@ -1,3 +1,6 @@
+2024-07-16 Version: 1.0.3
+- Generated java-async 2022-03-14 for CC5G.
+
 2022-11-07 Version: 1.0.2
 - Cc5g.
 

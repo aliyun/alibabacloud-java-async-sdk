@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitLiveRecordJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitLiveRecordJobRequest</p>
  */
 public class SubmitLiveRecordJobRequest extends Request {
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("NotifyUrl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NotifyUrl")
     private String notifyUrl;
 
-    @Body
-    @NameInMap("RecordOutput")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RecordOutput")
+    @com.aliyun.core.annotation.Validation(required = true)
     private RecordOutput recordOutput;
 
-    @Body
-    @NameInMap("StreamInput")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StreamInput")
+    @com.aliyun.core.annotation.Validation(required = true)
     private StreamInput streamInput;
 
-    @Body
-    @NameInMap("TemplateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateId;
 
     private SubmitLiveRecordJobRequest(Builder builder) {
@@ -114,7 +119,11 @@ public class SubmitLiveRecordJobRequest extends Request {
         } 
 
         /**
-         * 代表资源名称的资源属性字段
+         * <p>The name of the recording job.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>live stream record 1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -123,7 +132,10 @@ public class SubmitLiveRecordJobRequest extends Request {
         }
 
         /**
-         * 回调地址
+         * <p>The callback URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/imsnotify">https://example.com/imsnotify</a></p>
          */
         public Builder notifyUrl(String notifyUrl) {
             this.putBodyParameter("NotifyUrl", notifyUrl);
@@ -132,7 +144,8 @@ public class SubmitLiveRecordJobRequest extends Request {
         }
 
         /**
-         * RecordOutput.
+         * <p>The storage address of the recording.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder recordOutput(RecordOutput recordOutput) {
             String recordOutputShrink = shrink(recordOutput, "RecordOutput", "json");
@@ -142,7 +155,8 @@ public class SubmitLiveRecordJobRequest extends Request {
         }
 
         /**
-         * StreamInput.
+         * <p>The URL of the live stream.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder streamInput(StreamInput streamInput) {
             String streamInputShrink = shrink(streamInput, "StreamInput", "json");
@@ -152,7 +166,11 @@ public class SubmitLiveRecordJobRequest extends Request {
         }
 
         /**
-         * 录制模板ID
+         * <p>The ID of the recording template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69e1f9fe-1e97-11ed-ba64-0c42a1b73d66</p>
          */
         public Builder templateId(String templateId) {
             this.putBodyParameter("TemplateId", templateId);
@@ -167,15 +185,21 @@ public class SubmitLiveRecordJobRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitLiveRecordJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitLiveRecordJobRequest</p>
+     */
     public static class RecordOutput extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
-        @NameInMap("Endpoint")
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private RecordOutput(Builder builder) {
@@ -219,7 +243,10 @@ public class SubmitLiveRecordJobRequest extends Request {
             private String type; 
 
             /**
-             * Bucket.
+             * <p>The bucket name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>imsbucket1</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -227,7 +254,10 @@ public class SubmitLiveRecordJobRequest extends Request {
             }
 
             /**
-             * Endpoint.
+             * <p>The endpoint of the storage service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-cn-hangzhou.aliyuncs.com</p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -235,7 +265,11 @@ public class SubmitLiveRecordJobRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The type of the storage address.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -249,12 +283,18 @@ public class SubmitLiveRecordJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitLiveRecordJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitLiveRecordJobRequest</p>
+     */
     public static class StreamInput extends TeaModel {
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private StreamInput(Builder builder) {
@@ -289,7 +329,11 @@ public class SubmitLiveRecordJobRequest extends Request {
             private String url; 
 
             /**
-             * Type.
+             * <p>The type of the live stream URL. The value can only be rtmp.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -297,7 +341,10 @@ public class SubmitLiveRecordJobRequest extends Request {
             }
 
             /**
-             * Url.
+             * <p>The URL of the live stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp://example.com/live/stream1</p>
              */
             public Builder url(String url) {
                 this.url = url;

@@ -1,39 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tag20180828.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetEffectivePolicyRequest} extends {@link RequestModel}
  *
  * <p>GetEffectivePolicyRequest</p>
  */
 public class GetEffectivePolicyRequest extends Request {
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("TargetId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagKeys")
+    private java.util.List<String> tagKeys;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetId")
     private String targetId;
 
-    @Query
-    @NameInMap("TargetType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetType")
     private String targetType;
 
     private GetEffectivePolicyRequest(Builder builder) {
@@ -42,6 +51,7 @@ public class GetEffectivePolicyRequest extends Request {
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.tagKeys = builder.tagKeys;
         this.targetId = builder.targetId;
         this.targetType = builder.targetType;
     }
@@ -88,6 +98,13 @@ public class GetEffectivePolicyRequest extends Request {
     }
 
     /**
+     * @return tagKeys
+     */
+    public java.util.List<String> getTagKeys() {
+        return this.tagKeys;
+    }
+
+    /**
      * @return targetId
      */
     public String getTargetId() {
@@ -106,6 +123,7 @@ public class GetEffectivePolicyRequest extends Request {
         private Long ownerId; 
         private String regionId; 
         private String resourceOwnerAccount; 
+        private java.util.List<String> tagKeys; 
         private String targetId; 
         private String targetType; 
 
@@ -119,6 +137,7 @@ public class GetEffectivePolicyRequest extends Request {
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.tagKeys = request.tagKeys;
             this.targetId = request.targetId;
             this.targetType = request.targetType;
         } 
@@ -142,7 +161,10 @@ public class GetEffectivePolicyRequest extends Request {
         }
 
         /**
-         * The region ID. Set the value to cn-shanghai.
+         * <p>The region ID. Set the value to cn-shanghai.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -160,10 +182,22 @@ public class GetEffectivePolicyRequest extends Request {
         }
 
         /**
-         * The ID of the object.
-         * <p>
+         * TagKeys.
+         */
+        public Builder tagKeys(java.util.List<String> tagKeys) {
+            this.putQueryParameter("TagKeys", tagKeys);
+            this.tagKeys = tagKeys;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the object.</p>
+         * <blockquote>
+         * <p> If you use the Tag Policy feature in single-account mode, this parameter is optional. If you use the Tag Policy feature in multi-account mode, this feature is required.</p>
+         * </blockquote>
          * 
-         * >  If you use the Tag Policy feature in single-account mode, this parameter is optional. If you use the Tag Policy feature in multi-account mode, this feature is required.
+         * <strong>example:</strong>
+         * <p>154950938137****</p>
          */
         public Builder targetId(String targetId) {
             this.putQueryParameter("TargetId", targetId);
@@ -172,15 +206,19 @@ public class GetEffectivePolicyRequest extends Request {
         }
 
         /**
-         * The type of the object. Valid values:
-         * <p>
+         * <p>The type of the object. Valid values:</p>
+         * <ul>
+         * <li>USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.</li>
+         * <li>ROOT: the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
+         * <li>FOLDER: a folder other than the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
+         * <li>ACCOUNT: a member in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you use the Tag Policy feature in single-account mode, this parameter is optional. If you use the Tag Policy feature in multi-account mode, this feature is required. The value of this parameter is not case-sensitive.</p>
+         * </blockquote>
          * 
-         * *   USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.
-         * *   ROOT: the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.
-         * *   FOLDER: a folder other than the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.
-         * *   ACCOUNT: a member in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.
-         * 
-         * >  If you use the Tag Policy feature in single-account mode, this parameter is optional. If you use the Tag Policy feature in multi-account mode, this feature is required. The value of this parameter is not case-sensitive.
+         * <strong>example:</strong>
+         * <p>ACCOUNT</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);

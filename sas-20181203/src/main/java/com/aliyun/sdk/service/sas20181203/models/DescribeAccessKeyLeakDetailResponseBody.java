@@ -1,81 +1,86 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccessKeyLeakDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAccessKeyLeakDetailResponseBody</p>
  */
 public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
-    @NameInMap("AccesskeyId")
+    @com.aliyun.core.annotation.NameInMap("AccesskeyId")
     private String accesskeyId;
 
-    @NameInMap("Asset")
+    @com.aliyun.core.annotation.NameInMap("Asset")
     private String asset;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("DealTime")
+    @com.aliyun.core.annotation.NameInMap("DealTime")
     private String dealTime;
 
-    @NameInMap("DealType")
+    @com.aliyun.core.annotation.NameInMap("DealType")
     private String dealType;
 
-    @NameInMap("GithubFileName")
+    @com.aliyun.core.annotation.NameInMap("GithubFileName")
     private String githubFileName;
 
-    @NameInMap("GithubFileType")
+    @com.aliyun.core.annotation.NameInMap("GithubFileType")
     private String githubFileType;
 
-    @NameInMap("GithubFileUpdateTime")
+    @com.aliyun.core.annotation.NameInMap("GithubFileUpdateTime")
     private String githubFileUpdateTime;
 
-    @NameInMap("GithubFileUrl")
+    @com.aliyun.core.annotation.NameInMap("GithubFileUrl")
     private String githubFileUrl;
 
-    @NameInMap("GithubRepoName")
+    @com.aliyun.core.annotation.NameInMap("GithubRepoName")
     private String githubRepoName;
 
-    @NameInMap("GithubRepoUrl")
+    @com.aliyun.core.annotation.NameInMap("GithubRepoUrl")
     private String githubRepoUrl;
 
-    @NameInMap("GithubUser")
+    @com.aliyun.core.annotation.NameInMap("GithubUser")
     private String githubUser;
 
-    @NameInMap("GithubUserPicUrl")
+    @com.aliyun.core.annotation.NameInMap("GithubUserPicUrl")
     private String githubUserPicUrl;
 
-    @NameInMap("GmtCreate")
+    @com.aliyun.core.annotation.NameInMap("GmtCreate")
     private String gmtCreate;
 
-    @NameInMap("GmtModified")
+    @com.aliyun.core.annotation.NameInMap("GmtModified")
     private String gmtModified;
 
-    @NameInMap("Remark")
+    @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Source")
+    @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
 
-    @NameInMap("TokenValid")
+    @com.aliyun.core.annotation.NameInMap("TokenValid")
     private Integer tokenValid;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @NameInMap("WhitelistStatus")
+    @com.aliyun.core.annotation.NameInMap("WhitelistStatus")
     private String whitelistStatus;
 
-    @NameInMap("WhitelistTime")
+    @com.aliyun.core.annotation.NameInMap("WhitelistTime")
     private Long whitelistTime;
 
     private DescribeAccessKeyLeakDetailResponseBody(Builder builder) {
@@ -290,7 +295,10 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
         private Long whitelistTime; 
 
         /**
-         * The ID of the AccessKey pair that is leaked.
+         * <p>The ID of the AccessKey pair that is leaked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LTAI4G4VjkC9wenfEvgX****</p>
          */
         public Builder accesskeyId(String accesskeyId) {
             this.accesskeyId = accesskeyId;
@@ -298,7 +306,10 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The platform to which the asset belongs. The value is fixed as **Cloud platform**.
+         * <p>The platform to which the asset belongs. The value is fixed as <strong>Cloud platform</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cloud platform</p>
          */
         public Builder asset(String asset) {
             this.asset = asset;
@@ -306,7 +317,10 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The code snippet that is leaked.
+         * <p>The code snippet that is leaked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>\n1231 \nak=LTAI4G4VjkC9wenfEvgX**** \n12311123 \nsk1999 \nsk1999sk1999 \nsk1999sk1999 \n\n\ntest001 ak hht \nak=LTAI4G4VjkC9wenfEvgX**** \nsk=AjEhS9XmnIzllpAx2LxMTMdrTG****</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -314,7 +328,10 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the AccessKey pair leak was handled.
+         * <p>The time when the AccessKey pair leak was handled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-17 15:47:08</p>
          */
         public Builder dealTime(String dealTime) {
             this.dealTime = dealTime;
@@ -322,13 +339,16 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The solution to the AccessKey pair leak. Valid values:
-         * <p>
+         * <p>The solution to the AccessKey pair leak. Valid values:</p>
+         * <ul>
+         * <li><strong>manual</strong>: manually deleted</li>
+         * <li><strong>disable</strong>: manually disabled</li>
+         * <li><strong>add-whitelist</strong>: added to the whitelist</li>
+         * <li><strong>pending</strong>: unhandled</li>
+         * </ul>
          * 
-         * *   **manual**: manually deleted
-         * *   **disable**: manually disabled
-         * *   **add-whitelist**: added to the whitelist
-         * *   **pending**: unhandled
+         * <strong>example:</strong>
+         * <p>add-whitelist</p>
          */
         public Builder dealType(String dealType) {
             this.dealType = dealType;
@@ -336,7 +356,10 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the GitHub file.
+         * <p>The name of the GitHub file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testAkLeak</p>
          */
         public Builder githubFileName(String githubFileName) {
             this.githubFileName = githubFileName;
@@ -344,16 +367,19 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the GitHub file. Valid values:
-         * <p>
+         * <p>The type of the GitHub file. Valid values:</p>
+         * <ul>
+         * <li>Python</li>
+         * <li>XML</li>
+         * <li>GO</li>
+         * <li>Javascript</li>
+         * <li>INI</li>
+         * <li>JSON</li>
+         * <li>C++</li>
+         * </ul>
          * 
-         * *   Python
-         * *   XML
-         * *   GO
-         * *   Javascript
-         * *   INI
-         * *   JSON
-         * *   C++
+         * <strong>example:</strong>
+         * <p>Python</p>
          */
         public Builder githubFileType(String githubFileType) {
             this.githubFileType = githubFileType;
@@ -361,7 +387,10 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the GitHub file was updated.
+         * <p>The time when the GitHub file was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-07-06T09:49:33</p>
          */
         public Builder githubFileUpdateTime(String githubFileUpdateTime) {
             this.githubFileUpdateTime = githubFileUpdateTime;
@@ -369,7 +398,10 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The URL of the GitHub file.
+         * <p>The URL of the GitHub file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://github.com/Blue00Blue/ExamOnline/blob/6c932c10fc3f217783f3937e2b230f79656c18a7/testAk">https://github.com/Blue00Blue/ExamOnline/blob/6c932c10fc3f217783f3937e2b230f79656c18a7/testAk</a>****</p>
          */
         public Builder githubFileUrl(String githubFileUrl) {
             this.githubFileUrl = githubFileUrl;
@@ -377,7 +409,10 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the GitHub repository.
+         * <p>The name of the GitHub repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ExamOnline</p>
          */
         public Builder githubRepoName(String githubRepoName) {
             this.githubRepoName = githubRepoName;
@@ -385,7 +420,10 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The URL of the GitHub repository.
+         * <p>The URL of the GitHub repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://github.com/Blue00Blue/ExamOn">https://github.com/Blue00Blue/ExamOn</a>****</p>
          */
         public Builder githubRepoUrl(String githubRepoUrl) {
             this.githubRepoUrl = githubRepoUrl;
@@ -393,7 +431,10 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The username of the GitHub user.
+         * <p>The username of the GitHub user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Blue00Blue</p>
          */
         public Builder githubUser(String githubUser) {
             this.githubUser = githubUser;
@@ -401,7 +442,10 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The URL of the profile picture for the GitHub user.
+         * <p>The URL of the profile picture for the GitHub user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://avatars.githubusercontent.com/u/26296896?s=48&v=">https://avatars.githubusercontent.com/u/26296896?s=48&amp;v=</a>****</p>
          */
         public Builder githubUserPicUrl(String githubUserPicUrl) {
             this.githubUserPicUrl = githubUserPicUrl;
@@ -409,7 +453,10 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The first time when the AccessKey pair leak was detected.
+         * <p>The first time when the AccessKey pair leak was detected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-07-06 17:49:41</p>
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -417,7 +464,10 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The last time when the AccessKey pair leak was detected.
+         * <p>The last time when the AccessKey pair leak was detected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-07-06 17:49:39</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -425,7 +475,10 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The remarks of the AccessKey pair leak.
+         * <p>The remarks of the AccessKey pair leak.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder remark(String remark) {
             this.remark = remark;
@@ -433,7 +486,10 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79CFF74D-E967-5407-8A78-EE03B925FDAA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -441,7 +497,10 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The platform on which the AccessKey pair leak is detected.
+         * <p>The platform on which the AccessKey pair leak is detected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GitHub</p>
          */
         public Builder source(String source) {
             this.source = source;
@@ -449,12 +508,15 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The validity of the key associated with the AK. Value:
-         * <p>
+         * <p>The validity of the key that is associated with the AccessKey pair. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: to be confirmed.</li>
+         * <li><strong>1</strong>: valid.</li>
+         * <li><strong>2</strong>: invalid.</li>
+         * </ul>
          * 
-         * * 0: to be confirmed
-         * * 1: Valid
-         * * 2: Invalid
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder tokenValid(Integer tokenValid) {
             this.tokenValid = tokenValid;
@@ -462,7 +524,10 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the leak. The value is fixed as **AccessKey**.
+         * <p>The type of the leak. The value is fixed as <strong>AccessKey</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AccessKey</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -470,11 +535,14 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the AccessKey pair leak is added to the whitelist. Valid values:
-         * <p>
+         * <p>Indicates whether the AccessKey pair leak is added to the whitelist. Valid values:</p>
+         * <ul>
+         * <li><strong>no</strong>: no</li>
+         * <li><strong>yes</strong>: yes</li>
+         * </ul>
          * 
-         * *   **no**: no
-         * *   **yes**: yes
+         * <strong>example:</strong>
+         * <p>no</p>
          */
         public Builder whitelistStatus(String whitelistStatus) {
             this.whitelistStatus = whitelistStatus;
@@ -482,7 +550,10 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the AK whitelist was added. Unit: milliseconds.
+         * <p>The time when the AccessKey pair was added to the whitelist. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1689172004478</p>
          */
         public Builder whitelistTime(Long whitelistTime) {
             this.whitelistTime = whitelistTime;

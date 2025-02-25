@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListByUserGroupIdResponseBody} extends {@link TeaModel}
  *
  * <p>ListByUserGroupIdResponseBody</p>
  */
 public class ListByUserGroupIdResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListByUserGroupIdResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D8749D65-E80A-433C-AF1B-CE9C180FF3B4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +78,7 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
         }
 
         /**
-         * The user group query result is returned.
+         * <p>The user group query result is returned.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -78,11 +86,14 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -95,32 +106,38 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListByUserGroupIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListByUserGroupIdResponseBody</p>
+     */
     public static class UserGroupModels extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateUser")
+        @com.aliyun.core.annotation.NameInMap("CreateUser")
         private String createUser;
 
-        @NameInMap("IdentifiedPath")
+        @com.aliyun.core.annotation.NameInMap("IdentifiedPath")
         private String identifiedPath;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("ModifyUser")
+        @com.aliyun.core.annotation.NameInMap("ModifyUser")
         private String modifyUser;
 
-        @NameInMap("ParentUsergroupId")
+        @com.aliyun.core.annotation.NameInMap("ParentUsergroupId")
         private String parentUsergroupId;
 
-        @NameInMap("UsergroupDesc")
+        @com.aliyun.core.annotation.NameInMap("UsergroupDesc")
         private String usergroupDesc;
 
-        @NameInMap("UsergroupId")
+        @com.aliyun.core.annotation.NameInMap("UsergroupId")
         private String usergroupId;
 
-        @NameInMap("UsergroupName")
+        @com.aliyun.core.annotation.NameInMap("UsergroupName")
         private String usergroupName;
 
         private UserGroupModels(Builder builder) {
@@ -218,7 +235,10 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
             private String usergroupName; 
 
             /**
-             * The time when the Secret was created.
+             * <p>The time when the Secret was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-15 17:13:55</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -226,7 +246,10 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * The UserID of the creator in the Quick BI.
+             * <p>The UserID of the creator in the Quick BI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>46e5*******ee22e2a292704c8</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -234,7 +257,10 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the user group.
+             * <p>The path of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2fe4fbd8-<strong><strong>-af083ea/34fd1-</strong></strong>-dcbc33f</p>
              */
             public Builder identifiedPath(String identifiedPath) {
                 this.identifiedPath = identifiedPath;
@@ -242,7 +268,10 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the protection policy was last modified.
+             * <p>The time when the protection policy was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-15 20:36:40</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -250,7 +279,10 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * The UserID of the modifier in the Quick BI.
+             * <p>The UserID of the modifier in the Quick BI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>46e5*******ee22e2a292704c8</p>
              */
             public Builder modifyUser(String modifyUser) {
                 this.modifyUser = modifyUser;
@@ -258,7 +290,10 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the parent user group.
+             * <p>The ID of the parent user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2fe4fbd8-588f-489a-b3e1-e92c7af083ea</p>
              */
             public Builder parentUsergroupId(String parentUsergroupId) {
                 this.parentUsergroupId = parentUsergroupId;
@@ -266,7 +301,10 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the user group.
+             * <p>The description of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Description</p>
              */
             public Builder usergroupDesc(String usergroupDesc) {
                 this.usergroupDesc = usergroupDesc;
@@ -274,7 +312,10 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user group.
+             * <p>The ID of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34fd141d-****-4093-8c33-8e066dcbc33f</p>
              */
             public Builder usergroupId(String usergroupId) {
                 this.usergroupId = usergroupId;
@@ -282,7 +323,10 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the user group.
+             * <p>The name of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test user group</p>
              */
             public Builder usergroupName(String usergroupName) {
                 this.usergroupName = usergroupName;
@@ -296,12 +340,18 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListByUserGroupIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListByUserGroupIdResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("FailedUserGroupIds")
-        private java.util.List < String > failedUserGroupIds;
+        @com.aliyun.core.annotation.NameInMap("FailedUserGroupIds")
+        private java.util.List<String> failedUserGroupIds;
 
-        @NameInMap("UserGroupModels")
-        private java.util.List < UserGroupModels> userGroupModels;
+        @com.aliyun.core.annotation.NameInMap("UserGroupModels")
+        private java.util.List<UserGroupModels> userGroupModels;
 
         private Result(Builder builder) {
             this.failedUserGroupIds = builder.failedUserGroupIds;
@@ -319,33 +369,33 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
         /**
          * @return failedUserGroupIds
          */
-        public java.util.List < String > getFailedUserGroupIds() {
+        public java.util.List<String> getFailedUserGroupIds() {
             return this.failedUserGroupIds;
         }
 
         /**
          * @return userGroupModels
          */
-        public java.util.List < UserGroupModels> getUserGroupModels() {
+        public java.util.List<UserGroupModels> getUserGroupModels() {
             return this.userGroupModels;
         }
 
         public static final class Builder {
-            private java.util.List < String > failedUserGroupIds; 
-            private java.util.List < UserGroupModels> userGroupModels; 
+            private java.util.List<String> failedUserGroupIds; 
+            private java.util.List<UserGroupModels> userGroupModels; 
 
             /**
              * FailedUserGroupIds.
              */
-            public Builder failedUserGroupIds(java.util.List < String > failedUserGroupIds) {
+            public Builder failedUserGroupIds(java.util.List<String> failedUserGroupIds) {
                 this.failedUserGroupIds = failedUserGroupIds;
                 return this;
             }
 
             /**
-             * The details of the user group that was queried.
+             * <p>The details of the user group that was queried.</p>
              */
-            public Builder userGroupModels(java.util.List < UserGroupModels> userGroupModels) {
+            public Builder userGroupModels(java.util.List<UserGroupModels> userGroupModels) {
                 this.userGroupModels = userGroupModels;
                 return this;
             }

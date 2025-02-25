@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDebugAppInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>GetDebugAppInstanceResponseBody</p>
  */
 public class GetDebugAppInstanceResponseBody extends TeaModel {
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
-    @NameInMap("AppInstanceGroupId")
+    @com.aliyun.core.annotation.NameInMap("AppInstanceGroupId")
     private String appInstanceGroupId;
 
-    @NameInMap("AppInstanceId")
+    @com.aliyun.core.annotation.NameInMap("AppInstanceId")
     private String appInstanceId;
 
-    @NameInMap("AppVersion")
+    @com.aliyun.core.annotation.NameInMap("AppVersion")
     private String appVersion;
 
-    @NameInMap("AuthCode")
+    @com.aliyun.core.annotation.NameInMap("AuthCode")
     private String authCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
     private GetDebugAppInstanceResponseBody(Builder builder) {
@@ -110,7 +115,10 @@ public class GetDebugAppInstanceResponseBody extends TeaModel {
         private String userId; 
 
         /**
-         * AppId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>__DEBUG_APP</p>
          */
         public Builder appId(String appId) {
             this.appId = appId;
@@ -118,7 +126,10 @@ public class GetDebugAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * AppInstanceGroupId.
+         * <p>The ID of the delivery group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aig-9ciijz60n4xsv****</p>
          */
         public Builder appInstanceGroupId(String appInstanceGroupId) {
             this.appInstanceGroupId = appInstanceGroupId;
@@ -126,7 +137,10 @@ public class GetDebugAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * AppInstanceId.
+         * <p>The ID of the application instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ai-7ybdeiyoeh5e****</p>
          */
         public Builder appInstanceId(String appInstanceId) {
             this.appInstanceId = appInstanceId;
@@ -134,7 +148,10 @@ public class GetDebugAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * AppVersion.
+         * <p>The ID of the application version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1</p>
          */
         public Builder appVersion(String appVersion) {
             this.appVersion = appVersion;
@@ -142,7 +159,10 @@ public class GetDebugAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * AuthCode.
+         * <p>The authorization code. This authorization code is valid for 3 minutes and can be used only once, regardless of whether the authentication succeeds. If multiple authentication codes are generated for a user, only the latest authentication code takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e4e169bea1cc48e8afac53**********</p>
          */
         public Builder authCode(String authCode) {
             this.authCode = authCode;
@@ -150,7 +170,10 @@ public class GetDebugAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +181,10 @@ public class GetDebugAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong>debug</strong></p>
          */
         public Builder userId(String userId) {
             this.userId = userId;

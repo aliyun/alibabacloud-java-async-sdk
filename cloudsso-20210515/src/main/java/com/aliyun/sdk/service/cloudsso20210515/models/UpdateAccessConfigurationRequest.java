@@ -1,35 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAccessConfigurationRequest} extends {@link RequestModel}
  *
  * <p>UpdateAccessConfigurationRequest</p>
  */
 public class UpdateAccessConfigurationRequest extends Request {
-    @Query
-    @NameInMap("AccessConfigurationId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessConfigurationId")
     private String accessConfigurationId;
 
-    @Query
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @Query
-    @NameInMap("NewDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewDescription")
     private String newDescription;
 
-    @Query
-    @NameInMap("NewRelayState")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewRelayState")
     private String newRelayState;
 
-    @Query
-    @NameInMap("NewSessionDuration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewSessionDuration")
     private Integer newSessionDuration;
 
     private UpdateAccessConfigurationRequest(Builder builder) {
@@ -110,7 +110,10 @@ public class UpdateAccessConfigurationRequest extends Request {
         } 
 
         /**
-         * The ID of the access configuration.
+         * <p>The ID of the access configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac-00jhtfl8thteu6uj****</p>
          */
         public Builder accessConfigurationId(String accessConfigurationId) {
             this.putQueryParameter("AccessConfigurationId", accessConfigurationId);
@@ -119,7 +122,10 @@ public class UpdateAccessConfigurationRequest extends Request {
         }
 
         /**
-         * The ID of the directory.
+         * <p>The ID of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -128,10 +134,11 @@ public class UpdateAccessConfigurationRequest extends Request {
         }
 
         /**
-         * The new description of the access configuration.
-         * <p>
+         * <p>The new description of the access configuration.</p>
+         * <p>The description can be up to 1,024 characters in length.</p>
          * 
-         * The description can be up to 1,024 characters in length.
+         * <strong>example:</strong>
+         * <p>This is an access configuration.</p>
          */
         public Builder newDescription(String newDescription) {
             this.putQueryParameter("NewDescription", newDescription);
@@ -140,10 +147,11 @@ public class UpdateAccessConfigurationRequest extends Request {
         }
 
         /**
-         * The new initial web page that is displayed after a CloudSSO user accesses an account in your resource directory by using the access configuration.
-         * <p>
+         * <p>The new initial web page that is displayed after a CloudSSO user accesses an account in your resource directory by using the access configuration.</p>
+         * <p>The web page must be a page of the Alibaba Cloud Management Console.</p>
          * 
-         * The web page must be a page of the Alibaba Cloud Management Console.
+         * <strong>example:</strong>
+         * <p><a href="https://cloudsso.console.aliyun.com">https://cloudsso.console.aliyun.com</a></p>
          */
         public Builder newRelayState(String newRelayState) {
             this.putQueryParameter("NewRelayState", newRelayState);
@@ -152,12 +160,12 @@ public class UpdateAccessConfigurationRequest extends Request {
         }
 
         /**
-         * The new duration of a session in which a CloudSSO user accesses an account in your resource directory by using the access configuration.
-         * <p>
+         * <p>The new duration of a session in which a CloudSSO user accesses an account in your resource directory by using the access configuration.</p>
+         * <p>Unit: seconds.</p>
+         * <p>Valid values: 900 to 43200. The value 900 indicates 15 minutes. The value 43200 indicates 12 hours.</p>
          * 
-         * Unit: seconds.
-         * 
-         * Valid values: 900 to 43200. The value 900 indicates 15 minutes. The value 43200 indicates 12 hours.
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder newSessionDuration(Integer newSessionDuration) {
             this.putQueryParameter("NewSessionDuration", newSessionDuration);

@@ -1,65 +1,70 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDedicatedBlockStorageClustersRequest} extends {@link RequestModel}
  *
  * <p>DescribeDedicatedBlockStorageClustersRequest</p>
  */
 public class DescribeDedicatedBlockStorageClustersRequest extends Request {
-    @Body
-    @NameInMap("AzoneId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AzoneId")
     private String azoneId;
 
-    @Body
-    @NameInMap("Category")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Category")
     private String category;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DedicatedBlockStorageClusterId")
-    private java.util.List < String > dedicatedBlockStorageClusterId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DedicatedBlockStorageClusterId")
+    private java.util.List<String> dedicatedBlockStorageClusterId;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Body
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Body
-    @NameInMap("Status")
-    private java.util.List < String > status;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private java.util.List<String> status;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private DescribeDedicatedBlockStorageClustersRequest(Builder builder) {
         super(builder);
@@ -114,7 +119,7 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
     /**
      * @return dedicatedBlockStorageClusterId
      */
-    public java.util.List < String > getDedicatedBlockStorageClusterId() {
+    public java.util.List<String> getDedicatedBlockStorageClusterId() {
         return this.dedicatedBlockStorageClusterId;
     }
 
@@ -163,14 +168,14 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
     /**
      * @return status
      */
-    public java.util.List < String > getStatus() {
+    public java.util.List<String> getStatus() {
         return this.status;
     }
 
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -178,15 +183,15 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         private String azoneId; 
         private String category; 
         private String clientToken; 
-        private java.util.List < String > dedicatedBlockStorageClusterId; 
+        private java.util.List<String> dedicatedBlockStorageClusterId; 
         private Integer maxResults; 
         private String nextToken; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
         private String resourceGroupId; 
-        private java.util.List < String > status; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<String> status; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -209,7 +214,10 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         } 
 
         /**
-         * The zone ID of the dedicated block storage cluster. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
+         * <p>The zone ID of the dedicated block storage cluster. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-heyuan-b</p>
          */
         public Builder azoneId(String azoneId) {
             this.putBodyParameter("AzoneId", azoneId);
@@ -218,10 +226,11 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         }
 
         /**
-         * The category of disks that can be created in the dedicated block storage cluster.
-         * <p>
+         * <p>The category of disks that can be created in the dedicated block storage cluster.</p>
+         * <p>Set the value to cloud_essd. Only enhanced SSDs (ESSDs) can be created in dedicated block storage clusters.</p>
          * 
-         * Set the value to cloud_essd. Only enhanced SSDs (ESSDs) can be created in dedicated block storage clusters.
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
          */
         public Builder category(String category) {
             this.putBodyParameter("Category", category);
@@ -241,7 +250,7 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         /**
          * DedicatedBlockStorageClusterId.
          */
-        public Builder dedicatedBlockStorageClusterId(java.util.List < String > dedicatedBlockStorageClusterId) {
+        public Builder dedicatedBlockStorageClusterId(java.util.List<String> dedicatedBlockStorageClusterId) {
             this.putQueryParameter("DedicatedBlockStorageClusterId", dedicatedBlockStorageClusterId);
             this.dedicatedBlockStorageClusterId = dedicatedBlockStorageClusterId;
             return this;
@@ -266,7 +275,10 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -275,7 +287,10 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -284,7 +299,11 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         }
 
         /**
-         * The region ID of the dedicated block storage cluster. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the dedicated block storage cluster. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-heyuan</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -293,7 +312,10 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group to which the dedicated block storage cluster belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmvs4****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -302,18 +324,25 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The states of dedicated block storage clusters. Valid values:</p>
+         * <ul>
+         * <li>Preparing</li>
+         * <li>Running</li>
+         * <li>Expired</li>
+         * <li>Offline</li>
+         * </ul>
+         * <p>Multiple states can be specified. Valid values of N: 1, 2, 3, and 4.</p>
          */
-        public Builder status(java.util.List < String > status) {
+        public Builder status(java.util.List<String> status) {
             this.putBodyParameter("Status", status);
             this.status = status;
             return this;
         }
 
         /**
-         * Tag.
+         * <p>The tags. Up to 20 tags are supported.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -326,11 +355,17 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDedicatedBlockStorageClustersRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedBlockStorageClustersRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -365,7 +400,10 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key of the dedicated block storage cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -373,7 +411,10 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value of the dedicated block storage cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

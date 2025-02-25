@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListManualDagInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>ListManualDagInstancesResponseBody</p>
  */
 public class ListManualDagInstancesResponseBody extends TeaModel {
-    @NameInMap("Instances")
-    private java.util.List < Instances> instances;
+    @com.aliyun.core.annotation.NameInMap("Instances")
+    private java.util.List<Instances> instances;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListManualDagInstancesResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class ListManualDagInstancesResponseBody extends TeaModel {
     /**
      * @return instances
      */
-    public java.util.List < Instances> getInstances() {
+    public java.util.List<Instances> getInstances() {
         return this.instances;
     }
 
@@ -46,19 +51,22 @@ public class ListManualDagInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Instances> instances; 
+        private java.util.List<Instances> instances; 
         private String requestId; 
 
         /**
-         * The instances in the manually triggered workflow.
+         * <p>The instances in the manually triggered workflow.</p>
          */
-        public Builder instances(java.util.List < Instances> instances) {
+        public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
             return this;
         }
 
         /**
-         * The ID of the request. You can use the ID to search for logs and troubleshoot issues based on the logs.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SDFSDFSDF-SDFSDF-SDFDSF-SDFSDF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,56 +79,62 @@ public class ListManualDagInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListManualDagInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListManualDagInstancesResponseBody</p>
+     */
     public static class Instances extends TeaModel {
-        @NameInMap("BeginRunningTime")
+        @com.aliyun.core.annotation.NameInMap("BeginRunningTime")
         private Long beginRunningTime;
 
-        @NameInMap("BeginWaitResTime")
+        @com.aliyun.core.annotation.NameInMap("BeginWaitResTime")
         private Long beginWaitResTime;
 
-        @NameInMap("BeginWaitTimeTime")
+        @com.aliyun.core.annotation.NameInMap("BeginWaitTimeTime")
         private Long beginWaitTimeTime;
 
-        @NameInMap("BizDate")
+        @com.aliyun.core.annotation.NameInMap("BizDate")
         private Long bizDate;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("CreateUser")
+        @com.aliyun.core.annotation.NameInMap("CreateUser")
         private String createUser;
 
-        @NameInMap("CycTime")
+        @com.aliyun.core.annotation.NameInMap("CycTime")
         private Long cycTime;
 
-        @NameInMap("DagId")
+        @com.aliyun.core.annotation.NameInMap("DagId")
         private Long dagId;
 
-        @NameInMap("DagType")
+        @com.aliyun.core.annotation.NameInMap("DagType")
         private String dagType;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private Long finishTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private Long modifyTime;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("ParamValues")
+        @com.aliyun.core.annotation.NameInMap("ParamValues")
         private String paramValues;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
         private Instances(Builder builder) {
@@ -290,7 +304,10 @@ public class ListManualDagInstancesResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * The time when the node started to run. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the instance started to run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1605178414676</p>
              */
             public Builder beginRunningTime(Long beginRunningTime) {
                 this.beginRunningTime = beginRunningTime;
@@ -298,7 +315,10 @@ public class ListManualDagInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the node started to wait for resources. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the instance started to wait for resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1605178414676</p>
              */
             public Builder beginWaitResTime(Long beginWaitResTime) {
                 this.beginWaitResTime = beginWaitResTime;
@@ -306,7 +326,10 @@ public class ListManualDagInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the node started to wait to be scheduled. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the instance started to wait to be scheduled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1605178414676</p>
              */
             public Builder beginWaitTimeTime(Long beginWaitTimeTime) {
                 this.beginWaitTimeTime = beginWaitTimeTime;
@@ -314,7 +337,10 @@ public class ListManualDagInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The data timestamp of the instance. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. In most cases, the value indicates one day before the time when the node was run.
+             * <p>The data timestamp of the instance. In most cases, the value is one day before the time when the instance was run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1605178414676</p>
              */
             public Builder bizDate(Long bizDate) {
                 this.bizDate = bizDate;
@@ -322,7 +348,10 @@ public class ListManualDagInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the node was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the instance was generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1605178414676</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -330,7 +359,10 @@ public class ListManualDagInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the account used to run the instance. For example, if an account named Test was used to run the instance to backfill data, the value of this parameter is Test.
+             * <p>The name of the account that is used to run the instance. For example, if you use an account named Test to run the instance, the value of this parameter is Test.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -338,7 +370,10 @@ public class ListManualDagInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the node was scheduled to run. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the instance was scheduled to run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1605178414676</p>
              */
             public Builder cycTime(Long cycTime) {
                 this.cycTime = cycTime;
@@ -346,7 +381,10 @@ public class ListManualDagInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the DAG for the manually triggered workflow.
+             * <p>The ID of the DAG for the instance in the manually triggered workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>350850491</p>
              */
             public Builder dagId(Long dagId) {
                 this.dagId = dagId;
@@ -354,7 +392,10 @@ public class ListManualDagInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the manually triggered workflow.
+             * <p>The type of the manually triggered workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder dagType(String dagType) {
                 this.dagType = dagType;
@@ -362,7 +403,10 @@ public class ListManualDagInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the node stopped running. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the instance finished running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1605178414676</p>
              */
             public Builder finishTime(Long finishTime) {
                 this.finishTime = finishTime;
@@ -370,7 +414,10 @@ public class ListManualDagInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance in the manually triggered workflow.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11726873619</p>
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -378,7 +425,10 @@ public class ListManualDagInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the node was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the instance was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1605178414676</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -386,7 +436,10 @@ public class ListManualDagInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node in the manually triggered workflow.
+             * <p>The ID of the node in the manually triggered workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>37851</p>
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -394,7 +447,10 @@ public class ListManualDagInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test2</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -402,7 +458,10 @@ public class ListManualDagInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters related to the instance.
+             * <p>The parameters related to the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx=yyy</p>
              */
             public Builder paramValues(String paramValues) {
                 this.paramValues = paramValues;
@@ -410,17 +469,20 @@ public class ListManualDagInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the node. Valid values:
-             * <p>
+             * <p>The status of the instance. Valid values:</p>
+             * <ul>
+             * <li>NOT_RUN: The instance is not run.</li>
+             * <li>WAIT_TIME: The instance is waiting for its scheduling time to arrive.</li>
+             * <li>WAIT_RESOURCE: The instance is waiting for resources.</li>
+             * <li>RUNNING: The instance is running.</li>
+             * <li>CHECKING: Data quality is being checked for the instance.</li>
+             * <li>CHECKING_CONDITION: Branch conditions are being checked for the instance.</li>
+             * <li>FAILURE: The instance fails to be run.</li>
+             * <li>SUCCESS: The instance is successfully run.</li>
+             * </ul>
              * 
-             * *   NOT_RUN: The node is not run.
-             * *   WAIT_TIME: The node is waiting for its scheduled time to arrive.
-             * *   WAIT_RESOURCE: The node is waiting for resources.
-             * *   RUNNING: The node is running.
-             * *   CHECKING: Data quality is being checked for the node.
-             * *   CHECKING_CONDITION: Branch conditions are being checked for the node.
-             * *   FAILURE: The node fails to run.
-             * *   SUCCESS: The node is run as expected.
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -428,17 +490,20 @@ public class ListManualDagInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The scheduling type of the node. Valid values:
-             * <p>
+             * <p>The scheduling type of the node. Valid values:</p>
+             * <ul>
+             * <li>NORMAL(0): The node is an auto triggered node. The scheduling system regularly runs the node.</li>
+             * <li>MANUAL(1): The node is a manually triggered node. The scheduling system does not regularly run the node.</li>
+             * <li>PAUSE(2): The node is a frozen node. The scheduling system regularly runs the node but sets the status of the node to failed when the scheduling system starts to run the node.</li>
+             * <li>SKIP(3): The node is a dry-run node. The scheduling system regularly runs the node but sets the status of the node to successful when the scheduling system starts to run the node.</li>
+             * <li>SKIP_UNCHOOSE(4): The node is an unselected node in a temporary workflow. This type of node exists only in temporary workflows. The scheduling system sets the status of the node to successful when the scheduling system starts to run the node.</li>
+             * <li>SKIP_CYCLE(5): The node is a node that is scheduled by week or month and is waiting for the scheduling time to arrive. The scheduling system regularly runs the node but sets the status of the node to successful when the scheduling system starts to run the node.</li>
+             * <li>CONDITION_UNCHOOSE(6): The node is not selected by its ancestor branch node and is run as a dry-run node.</li>
+             * <li>REALTIME_DEPRECATED(7): The node has instances that are generated in real time but deprecated. The scheduling system sets the status of the node to successful.</li>
+             * </ul>
              * 
-             * *   NORMAL(0): The node is an auto triggered node. It is run on a regular basis.
-             * *   MANUAL(1): The node is a manually triggered node. It is not run on a regular basis.
-             * *   PAUSE(2): The node is a frozen node. The scheduling system still runs the node on a regular basis but sets it to Failed when the scheduling system starts to run the node.
-             * *   SKIP(3): The node is a dry-run node. The scheduling system still runs the node on a regular basis but sets it to Succeeded when the scheduling system starts to run the node.
-             * *   SKIP_UNCHOOSE(4): The node is an unselected node in a temporary workflow. This type of node exists only in temporary workflows. The scheduling system sets the node to Succeeded when the scheduling system starts to run the node.
-             * *   SKIP_CYCLE(5): The node is a node that is scheduled by week or month and is waiting for its scheduled time. The scheduling system still runs the node on a regular basis but sets it to Succeeded when the scheduling system starts to run the node.
-             * *   CONDITION_UNCHOOSE(6): The node is not selected by its ancestor branch node and is run as a dry-run node.
-             * *   REALTIME_DEPRECATED(7): The node has instances generated in real time but deprecated. The scheduling system directly sets the node to Succeeded.
+             * <strong>example:</strong>
+             * <p>MANUAL</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

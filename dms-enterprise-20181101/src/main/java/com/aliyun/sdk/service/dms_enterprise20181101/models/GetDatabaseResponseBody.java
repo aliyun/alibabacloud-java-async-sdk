@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDatabaseResponseBody} extends {@link TeaModel}
  *
  * <p>GetDatabaseResponseBody</p>
  */
 public class GetDatabaseResponseBody extends TeaModel {
-    @NameInMap("Database")
+    @com.aliyun.core.annotation.NameInMap("Database")
     private Database database;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetDatabaseResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class GetDatabaseResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details of the database.
+         * <p>The details of the database.</p>
          */
         public Builder database(Database database) {
             this.database = database;
@@ -94,7 +99,10 @@ public class GetDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +110,10 @@ public class GetDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>An unknown error occurred.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +121,10 @@ public class GetDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3CDB8601-AD74-4A47-8114-08E08CD6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +132,14 @@ public class GetDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>false</strong>: The request fails.</li>
+         * </ul>
          * 
-         * *   **true**: The request is successful.
-         * *   **false**: The request fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -135,9 +152,15 @@ public class GetDatabaseResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDatabaseResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDatabaseResponseBody</p>
+     */
     public static class OwnerIdList extends TeaModel {
-        @NameInMap("OwnerIds")
-        private java.util.List < String > ownerIds;
+        @com.aliyun.core.annotation.NameInMap("OwnerIds")
+        private java.util.List<String> ownerIds;
 
         private OwnerIdList(Builder builder) {
             this.ownerIds = builder.ownerIds;
@@ -154,17 +177,17 @@ public class GetDatabaseResponseBody extends TeaModel {
         /**
          * @return ownerIds
          */
-        public java.util.List < String > getOwnerIds() {
+        public java.util.List<String> getOwnerIds() {
             return this.ownerIds;
         }
 
         public static final class Builder {
-            private java.util.List < String > ownerIds; 
+            private java.util.List<String> ownerIds; 
 
             /**
              * OwnerIds.
              */
-            public Builder ownerIds(java.util.List < String > ownerIds) {
+            public Builder ownerIds(java.util.List<String> ownerIds) {
                 this.ownerIds = ownerIds;
                 return this;
             }
@@ -176,9 +199,15 @@ public class GetDatabaseResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDatabaseResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDatabaseResponseBody</p>
+     */
     public static class OwnerNameList extends TeaModel {
-        @NameInMap("OwnerNames")
-        private java.util.List < String > ownerNames;
+        @com.aliyun.core.annotation.NameInMap("OwnerNames")
+        private java.util.List<String> ownerNames;
 
         private OwnerNameList(Builder builder) {
             this.ownerNames = builder.ownerNames;
@@ -195,17 +224,17 @@ public class GetDatabaseResponseBody extends TeaModel {
         /**
          * @return ownerNames
          */
-        public java.util.List < String > getOwnerNames() {
+        public java.util.List<String> getOwnerNames() {
             return this.ownerNames;
         }
 
         public static final class Builder {
-            private java.util.List < String > ownerNames; 
+            private java.util.List<String> ownerNames; 
 
             /**
              * OwnerNames.
              */
-            public Builder ownerNames(java.util.List < String > ownerNames) {
+            public Builder ownerNames(java.util.List<String> ownerNames) {
                 this.ownerNames = ownerNames;
                 return this;
             }
@@ -217,56 +246,62 @@ public class GetDatabaseResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDatabaseResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDatabaseResponseBody</p>
+     */
     public static class Database extends TeaModel {
-        @NameInMap("CatalogName")
+        @com.aliyun.core.annotation.NameInMap("CatalogName")
         private String catalogName;
 
-        @NameInMap("DatabaseId")
+        @com.aliyun.core.annotation.NameInMap("DatabaseId")
         private String databaseId;
 
-        @NameInMap("DbType")
+        @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;
 
-        @NameInMap("DbaId")
+        @com.aliyun.core.annotation.NameInMap("DbaId")
         private String dbaId;
 
-        @NameInMap("DbaName")
+        @com.aliyun.core.annotation.NameInMap("DbaName")
         private String dbaName;
 
-        @NameInMap("Encoding")
+        @com.aliyun.core.annotation.NameInMap("Encoding")
         private String encoding;
 
-        @NameInMap("EnvType")
+        @com.aliyun.core.annotation.NameInMap("EnvType")
         private String envType;
 
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("InstanceAlias")
+        @com.aliyun.core.annotation.NameInMap("InstanceAlias")
         private String instanceAlias;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("OwnerIdList")
+        @com.aliyun.core.annotation.NameInMap("OwnerIdList")
         private OwnerIdList ownerIdList;
 
-        @NameInMap("OwnerNameList")
+        @com.aliyun.core.annotation.NameInMap("OwnerNameList")
         private OwnerNameList ownerNameList;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("SchemaName")
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
         private String schemaName;
 
-        @NameInMap("SearchName")
+        @com.aliyun.core.annotation.NameInMap("SearchName")
         private String searchName;
 
-        @NameInMap("Sid")
+        @com.aliyun.core.annotation.NameInMap("Sid")
         private String sid;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private Database(Builder builder) {
@@ -436,7 +471,10 @@ public class GetDatabaseResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * The name of the catalog to which the database belongs.
+             * <p>The name of the catalog to which the database belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>def</p>
              */
             public Builder catalogName(String catalogName) {
                 this.catalogName = catalogName;
@@ -444,7 +482,10 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the database.
+             * <p>The ID of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>984****</p>
              */
             public Builder databaseId(String databaseId) {
                 this.databaseId = databaseId;
@@ -452,7 +493,10 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
+             * <p>The type of the database. For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/198106.html">DbType parameter</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -460,7 +504,10 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the database administrator (DBA).
+             * <p>The ID of the database administrator (DBA).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27****</p>
              */
             public Builder dbaId(String dbaId) {
                 this.dbaId = dbaId;
@@ -468,7 +515,10 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The nickname of the DBA.
+             * <p>The nickname of the DBA.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dba_name</p>
              */
             public Builder dbaName(String dbaName) {
                 this.dbaName = dbaName;
@@ -476,7 +526,10 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The encoding format of the database.
+             * <p>The encoding format of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>utf8mb4</p>
              */
             public Builder encoding(String encoding) {
                 this.encoding = encoding;
@@ -484,17 +537,20 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the environment to which the database belongs. Valid values:
-             * <p>
+             * <p>The type of the environment to which the database belongs. Valid values:</p>
+             * <ul>
+             * <li><strong>product</strong>: production environment</li>
+             * <li><strong>dev</strong>: development environment</li>
+             * <li><strong>pre</strong>: staging environment</li>
+             * <li><strong>test</strong>: test environment</li>
+             * <li><strong>sit</strong>: SIT environment</li>
+             * <li><strong>uat</strong>: user acceptance testing (UAT) environment</li>
+             * <li><strong>pet</strong>: stress testing environment</li>
+             * <li><strong>stag</strong>: STAG environment</li>
+             * </ul>
              * 
-             * *   **product**: production environment
-             * *   **dev**: development environment
-             * *   **pre**: staging environment
-             * *   **test**: test environment
-             * *   **sit**: SIT environment
-             * *   **uat**: user acceptance testing (UAT) environment
-             * *   **pet**: stress testing environment
-             * *   **stag**: STAG environment
+             * <strong>example:</strong>
+             * <p>product</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -502,7 +558,10 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint that is used to connect to the database.
+             * <p>The endpoint that is used to connect to the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -510,7 +569,10 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the instance.
+             * <p>The alias of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder instanceAlias(String instanceAlias) {
                 this.instanceAlias = instanceAlias;
@@ -518,7 +580,10 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>149****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -526,7 +591,7 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the owners of the database.
+             * <p>The IDs of the owners of the database.</p>
              */
             public Builder ownerIdList(OwnerIdList ownerIdList) {
                 this.ownerIdList = ownerIdList;
@@ -534,7 +599,7 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The names of the owners of the database.
+             * <p>The names of the owners of the database.</p>
              */
             public Builder ownerNameList(OwnerNameList ownerNameList) {
                 this.ownerNameList = ownerNameList;
@@ -542,7 +607,10 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The port that is used to connect to the database.
+             * <p>The port that is used to connect to the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -550,7 +618,10 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -558,7 +629,10 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The keyword that is used to search for the database.
+             * <p>The keyword that is used to search for the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:mysql@192.168.XX.XX">mysql@192.168.XX.XX</a>:3306</p>
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;
@@ -566,10 +640,13 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The SID of the database.
-             * <p>
+             * <p>The SID of the database.</p>
+             * <blockquote>
+             * <p> The value of the parameter is returned only for Oracle databases.</p>
+             * </blockquote>
              * 
-             * >  The value of the parameter is returned only for Oracle databases.
+             * <strong>example:</strong>
+             * <p>test_sid</p>
              */
             public Builder sid(String sid) {
                 this.sid = sid;
@@ -577,13 +654,16 @@ public class GetDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the database. Valid values:
-             * <p>
+             * <p>The status of the database. Valid values:</p>
+             * <ul>
+             * <li><strong>NORMAL</strong>: The database is running as expected.</li>
+             * <li><strong>DISABLE</strong>: The database is disabled.</li>
+             * <li><strong>OFFLINE</strong>: The database is unpublished.</li>
+             * <li><strong>NOT_EXIST</strong>: The database does not exist.</li>
+             * </ul>
              * 
-             * *   **NORMAL**: The database is running as expected.
-             * *   **DISABLE**: The database is disabled.
-             * *   **OFFLINE**: The database is unpublished.
-             * *   **NOT_EXIST**: The database does not exist.
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder state(String state) {
                 this.state = state;

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMfaDevicesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMfaDevicesResponseBody</p>
  */
 public class DescribeMfaDevicesResponseBody extends TeaModel {
-    @NameInMap("MfaDevices")
-    private java.util.List < MfaDevices> mfaDevices;
+    @com.aliyun.core.annotation.NameInMap("MfaDevices")
+    private java.util.List<MfaDevices> mfaDevices;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeMfaDevicesResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
     /**
      * @return mfaDevices
      */
-    public java.util.List < MfaDevices> getMfaDevices() {
+    public java.util.List<MfaDevices> getMfaDevices() {
         return this.mfaDevices;
     }
 
@@ -57,20 +62,23 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < MfaDevices> mfaDevices; 
+        private java.util.List<MfaDevices> mfaDevices; 
         private String nextToken; 
         private String requestId; 
 
         /**
-         * Details about the virtual MFA devices.
+         * <p>The information about the virtual MFA devices.</p>
          */
-        public Builder mfaDevices(java.util.List < MfaDevices> mfaDevices) {
+        public Builder mfaDevices(java.util.List<MfaDevices> mfaDevices) {
             this.mfaDevices = mfaDevices;
             return this;
         }
 
         /**
-         * The token that determines the start point of the next query.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6na6YlN9asMM31MsMcdQNpp</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +86,10 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33DBB8EC-6E68-4726-91C4-E09C59D9A7D8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,32 +102,38 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMfaDevicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMfaDevicesResponseBody</p>
+     */
     public static class MfaDevices extends TeaModel {
-        @NameInMap("ConsecutiveFails")
+        @com.aliyun.core.annotation.NameInMap("ConsecutiveFails")
         private Integer consecutiveFails;
 
-        @NameInMap("DeviceType")
+        @com.aliyun.core.annotation.NameInMap("DeviceType")
         private String deviceType;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
-        @NameInMap("GmtEnabled")
+        @com.aliyun.core.annotation.NameInMap("GmtEnabled")
         private String gmtEnabled;
 
-        @NameInMap("GmtUnlock")
+        @com.aliyun.core.annotation.NameInMap("GmtUnlock")
         private String gmtUnlock;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("SerialNumber")
+        @com.aliyun.core.annotation.NameInMap("SerialNumber")
         private String serialNumber;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private MfaDevices(Builder builder) {
@@ -214,7 +231,10 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The number of consecutive failures to bind the virtual MFA device, or the number of MFA failures based on the virtual MFA device.
+             * <p>The number of consecutive failures to bind the virtual MFA device, or the number of authentication failures based on the virtual MFA device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder consecutiveFails(Integer consecutiveFails) {
                 this.consecutiveFails = consecutiveFails;
@@ -222,7 +242,10 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * The types of the virtual MFA device. Set the value to TOTP_VIRTUAL, which indicates that the virtual MFA devices follow the Time-based One-time Password (TOTP) algorithm.
+             * <p>The type of the virtual MFA device. The value can only be TOTP_VIRTUAL. This value indicates that the virtual MFA device follows the Time-based One-time Password (TOTP) algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TOTP_VIRTUAL</p>
              */
             public Builder deviceType(String deviceType) {
                 this.deviceType = deviceType;
@@ -230,7 +253,12 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is unavailable.
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:username@example.com">username@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -238,7 +266,10 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the convenience user that uses the virtual MFA device.
+             * <p>The username of the convenience user that uses the virtual MFA device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -246,7 +277,10 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the virtual MFA device was enabled. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The time when the virtual MFA device was enabled. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-22T06:20:49Z</p>
              */
             public Builder gmtEnabled(String gmtEnabled) {
                 this.gmtEnabled = gmtEnabled;
@@ -254,7 +288,10 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when a locked virtual MFA device is automatically unlocked. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The time when the locked virtual MFA device was automatically unlocked. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-23T06:20:49Z</p>
              */
             public Builder gmtUnlock(String gmtUnlock) {
                 this.gmtUnlock = gmtUnlock;
@@ -262,7 +299,12 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is unavailable.
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>36</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -270,7 +312,10 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * The serial number of the virtual MFA device, which is a unique identifier.
+             * <p>The serial number of the virtual MFA device. The serial number is unique for each device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dc856334-446b-4035-bfbc-18af261e****</p>
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;
@@ -278,12 +323,33 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the virtual MFA device. Valid values:
-             * <p>
+             * <p>The status of the virtual MFA device.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>LOCKED</p>
+             * <!-- -->
              * 
-             * *   UNBOUND
-             * *   NORMAL
-             * *   LOCKED
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>UNBOUND</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>NORMAL</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- --></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder status(String status) {
                 this.status = status;

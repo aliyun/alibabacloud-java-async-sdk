@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCustomMetricRequest} extends {@link RequestModel}
  *
  * <p>DeleteCustomMetricRequest</p>
  */
 public class DeleteCustomMetricRequest extends Request {
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("Md5")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Md5")
     private String md5;
 
-    @Query
-    @NameInMap("MetricName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String metricName;
 
-    @Query
-    @NameInMap("UUID")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UUID")
     private String UUID;
 
     private DeleteCustomMetricRequest(Builder builder) {
@@ -98,7 +98,11 @@ public class DeleteCustomMetricRequest extends Request {
         } 
 
         /**
-         * The ID of the application group.
+         * <p>The ID of the application group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3607****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -107,10 +111,13 @@ public class DeleteCustomMetricRequest extends Request {
         }
 
         /**
-         * The MD5 value of the HTTP request body. The MD5 value is a 128-bit hash value used to verify the uniqueness of the reported monitoring data.
-         * <p>
+         * <p>The MD5 value of the HTTP request body. The MD5 value is a 128-bit hash value used to verify the uniqueness of the reported monitoring data.</p>
+         * <blockquote>
+         * <p> <code>Md5</code> is returned when you query the reported monitoring data of a metric.</p>
+         * </blockquote>
          * 
-         * >  `Md5` is returned when you query the reported monitoring data of a metric.
+         * <strong>example:</strong>
+         * <p>38796C8CFFEB8F89BB2A626C7BD7****</p>
          */
         public Builder md5(String md5) {
             this.putQueryParameter("Md5", md5);
@@ -119,7 +126,11 @@ public class DeleteCustomMetricRequest extends Request {
         }
 
         /**
-         * The name of the metric.
+         * <p>The name of the metric.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AdvanceCredit</p>
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -128,10 +139,13 @@ public class DeleteCustomMetricRequest extends Request {
         }
 
         /**
-         * The ID of the request for reporting monitoring data.
-         * <p>
+         * <p>The ID of the request for reporting monitoring data.</p>
+         * <blockquote>
+         * <p> <code>UUID</code> is returned when you query the reported monitoring data of a metric. We recommend that you specify the <code>Md5</code> parameter.</p>
+         * </blockquote>
          * 
-         * >  `UUID` is returned when you query the reported monitoring data of a metric. We recommend that you specify the `Md5` parameter.
+         * <strong>example:</strong>
+         * <p>5497633c-66c5-4eae-abaa-89db5adb****</p>
          */
         public Builder UUID(String UUID) {
             this.putQueryParameter("UUID", UUID);

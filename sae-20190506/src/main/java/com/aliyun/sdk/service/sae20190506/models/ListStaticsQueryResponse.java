@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListStaticsQueryResponse} extends {@link TeaModel}
  *
  * <p>ListStaticsQueryResponse</p>
  */
 public class ListStaticsQueryResponse extends Response {
-    @NameInMap("length")
+    @com.aliyun.core.annotation.NameInMap("length")
     private Long length;
 
-    @NameInMap("sort")
+    @com.aliyun.core.annotation.NameInMap("sort")
     private String sort;
 
-    @NameInMap("statics")
-    private java.util.List < StaticsInfo > statics;
+    @com.aliyun.core.annotation.NameInMap("statics")
+    private java.util.List<StaticsInfo> statics;
 
     private ListStaticsQueryResponse(BuilderImpl builder) {
         super(builder);
@@ -54,7 +59,7 @@ public class ListStaticsQueryResponse extends Response {
     /**
      * @return statics
      */
-    public java.util.List < StaticsInfo > getStatics() {
+    public java.util.List<StaticsInfo> getStatics() {
         return this.statics;
     }
 
@@ -64,7 +69,7 @@ public class ListStaticsQueryResponse extends Response {
 
         Builder sort(String sort);
 
-        Builder statics(java.util.List < StaticsInfo > statics);
+        Builder statics(java.util.List<StaticsInfo> statics);
 
         @Override
         ListStaticsQueryResponse build();
@@ -76,7 +81,7 @@ public class ListStaticsQueryResponse extends Response {
             implements Builder {
         private Long length; 
         private String sort; 
-        private java.util.List < StaticsInfo > statics; 
+        private java.util.List<StaticsInfo> statics; 
 
         private BuilderImpl() {
             super();
@@ -111,7 +116,7 @@ public class ListStaticsQueryResponse extends Response {
          * statics.
          */
         @Override
-        public Builder statics(java.util.List < StaticsInfo > statics) {
+        public Builder statics(java.util.List<StaticsInfo> statics) {
             this.statics = statics;
             return this;
         }

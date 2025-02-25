@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBlockchainSchemaTemplatesResponseBody</p>
  */
 public class DescribeBlockchainSchemaTemplatesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private DescribeBlockchainSchemaTemplatesResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class DescribeBlockchainSchemaTemplatesResponseBody extends TeaModel {
     } 
 
     public static class SchemaList extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("IsTemplate")
+        @com.aliyun.core.annotation.NameInMap("IsTemplate")
         private Integer isTemplate;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private Long version;
 
         private SchemaList(Builder builder) {
@@ -233,7 +232,7 @@ public class DescribeBlockchainSchemaTemplatesResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("SchemaList")
+        @com.aliyun.core.annotation.NameInMap("SchemaList")
         private java.util.List < SchemaList> schemaList;
 
         private Result(Builder builder) {

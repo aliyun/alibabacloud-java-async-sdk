@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SwitchPhysicalDtsJobToCloudResponseBody} extends {@link TeaModel}
  *
  * <p>SwitchPhysicalDtsJobToCloudResponseBody</p>
  */
 public class SwitchPhysicalDtsJobToCloudResponseBody extends TeaModel {
-    @NameInMap("DynamicCode")
+    @com.aliyun.core.annotation.NameInMap("DynamicCode")
     private String dynamicCode;
 
-    @NameInMap("DynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("DynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private SwitchPhysicalDtsJobToCloudResponseBody(Builder builder) {
@@ -110,7 +115,10 @@ public class SwitchPhysicalDtsJobToCloudResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * DynamicCode.
+         * <p>Dynamic error code, this parameter will be deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>403</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -118,7 +126,10 @@ public class SwitchPhysicalDtsJobToCloudResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>Dynamic error message used to replace the <strong>%s</strong> in the <strong>ErrMessage</strong> return parameter.  &gt; If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong>, and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DtsJobId</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -126,7 +137,10 @@ public class SwitchPhysicalDtsJobToCloudResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>Error code returned when the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -134,7 +148,10 @@ public class SwitchPhysicalDtsJobToCloudResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>Returns the corresponding error message when an invocation error occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request processing has failed due to some unknown error.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -142,7 +159,10 @@ public class SwitchPhysicalDtsJobToCloudResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>Status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -150,7 +170,10 @@ public class SwitchPhysicalDtsJobToCloudResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>659304E3-D44E-5EFA-BDE3-60015E30403B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +181,10 @@ public class SwitchPhysicalDtsJobToCloudResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

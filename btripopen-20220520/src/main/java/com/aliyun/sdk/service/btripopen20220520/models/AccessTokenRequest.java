@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AccessTokenRequest} extends {@link RequestModel}
  *
  * <p>AccessTokenRequest</p>
  */
 public class AccessTokenRequest extends Request {
-    @Query
-    @NameInMap("app_secret")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("app_secret")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appSecret;
 
     private AccessTokenRequest(Builder builder) {
@@ -55,7 +60,10 @@ public class AccessTokenRequest extends Request {
         } 
 
         /**
-         * app_secret.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ggZADkghsadgogeDxdaD</p>
          */
         public Builder appSecret(String appSecret) {
             this.putQueryParameter("app_secret", appSecret);

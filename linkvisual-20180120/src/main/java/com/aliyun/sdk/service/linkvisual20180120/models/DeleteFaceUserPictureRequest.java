@@ -77,11 +77,11 @@ public class DeleteFaceUserPictureRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteFaceUserPictureRequest response) {
-            super(response);
-            this.facePicMd5 = response.facePicMd5;
-            this.isolationId = response.isolationId;
-            this.userId = response.userId;
+        private Builder(DeleteFaceUserPictureRequest request) {
+            super(request);
+            this.facePicMd5 = request.facePicMd5;
+            this.isolationId = request.isolationId;
+            this.userId = request.userId;
         } 
 
         /**

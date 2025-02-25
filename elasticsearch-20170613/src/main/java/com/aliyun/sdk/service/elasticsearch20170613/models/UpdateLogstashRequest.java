@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateLogstashRequest} extends {@link RequestModel}
  *
  * <p>UpdateLogstashRequest</p>
  */
 public class UpdateLogstashRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("nodeAmount")
-    @Validation(maximum = 20, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("nodeAmount")
+    @com.aliyun.core.annotation.Validation(maximum = 20, minimum = 1)
     private Integer nodeAmount;
 
-    @Body
-    @NameInMap("nodeSpec")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("nodeSpec")
     private NodeSpec nodeSpec;
 
-    @Query
-    @NameInMap("clientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
     private UpdateLogstashRequest(Builder builder) {
@@ -98,7 +98,10 @@ public class UpdateLogstashRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ls-cn-n6w1o5jq****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -140,15 +143,21 @@ public class UpdateLogstashRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateLogstashRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateLogstashRequest</p>
+     */
     public static class NodeSpec extends TeaModel {
-        @NameInMap("disk")
-        @Validation(maximum = 2048, minimum = 20)
+        @com.aliyun.core.annotation.NameInMap("disk")
+        @com.aliyun.core.annotation.Validation(maximum = 2048, minimum = 20)
         private Integer disk;
 
-        @NameInMap("diskType")
+        @com.aliyun.core.annotation.NameInMap("diskType")
         private String diskType;
 
-        @NameInMap("spec")
+        @com.aliyun.core.annotation.NameInMap("spec")
         private String spec;
 
         private NodeSpec(Builder builder) {

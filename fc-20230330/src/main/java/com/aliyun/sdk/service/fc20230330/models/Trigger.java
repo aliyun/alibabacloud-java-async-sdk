@@ -1,54 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Trigger} extends {@link TeaModel}
  *
  * <p>Trigger</p>
  */
 public class Trigger extends TeaModel {
-    @NameInMap("createdTime")
+    @com.aliyun.core.annotation.NameInMap("createdTime")
     private String createdTime;
 
-    @NameInMap("description")
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @NameInMap("httpTrigger")
+    @com.aliyun.core.annotation.NameInMap("httpTrigger")
     private HTTPTrigger httpTrigger;
 
-    @NameInMap("invocationRole")
+    @com.aliyun.core.annotation.NameInMap("invocationRole")
     private String invocationRole;
 
-    @NameInMap("lastModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("lastModifiedTime")
     private String lastModifiedTime;
 
-    @NameInMap("qualifier")
+    @com.aliyun.core.annotation.NameInMap("qualifier")
     private String qualifier;
 
-    @NameInMap("sourceArn")
+    @com.aliyun.core.annotation.NameInMap("sourceArn")
     private String sourceArn;
 
-    @NameInMap("status")
+    @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
-    @NameInMap("targetArn")
+    @com.aliyun.core.annotation.NameInMap("targetArn")
     private String targetArn;
 
-    @NameInMap("triggerConfig")
+    @com.aliyun.core.annotation.NameInMap("triggerConfig")
     private String triggerConfig;
 
-    @NameInMap("triggerId")
+    @com.aliyun.core.annotation.NameInMap("triggerId")
     private String triggerId;
 
-    @NameInMap("triggerName")
+    @com.aliyun.core.annotation.NameInMap("triggerName")
     private String triggerName;
 
-    @NameInMap("triggerType")
+    @com.aliyun.core.annotation.NameInMap("triggerType")
     private String triggerType;
 
     private Trigger(Builder builder) {

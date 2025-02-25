@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDedicatedBlockStorageClusterAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyDedicatedBlockStorageClusterAttributeRequest</p>
  */
 public class ModifyDedicatedBlockStorageClusterAttributeRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DbscId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbscId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbscId;
 
-    @Query
-    @NameInMap("DbscName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbscName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbscName;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private ModifyDedicatedBlockStorageClusterAttributeRequest(Builder builder) {
@@ -113,10 +118,11 @@ public class ModifyDedicatedBlockStorageClusterAttributeRequest extends Request 
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests.</p>
+         * <p>The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How do I ensure idempotence </a>.</p>
          * 
-         * The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure idempotence ](~~25693~~).
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -125,7 +131,11 @@ public class ModifyDedicatedBlockStorageClusterAttributeRequest extends Request 
         }
 
         /**
-         * The ID of the dedicated block storage cluster.
+         * <p>The ID of the dedicated block storage cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbsc-cn-od43bf****</p>
          */
         public Builder dbscId(String dbscId) {
             this.putQueryParameter("DbscId", dbscId);
@@ -134,7 +144,11 @@ public class ModifyDedicatedBlockStorageClusterAttributeRequest extends Request 
         }
 
         /**
-         * The new name of the dedicated block storage cluster.
+         * <p>The new name of the dedicated block storage cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-test-dbsc</p>
          */
         public Builder dbscName(String dbscName) {
             this.putQueryParameter("DbscName", dbscName);
@@ -143,7 +157,10 @@ public class ModifyDedicatedBlockStorageClusterAttributeRequest extends Request 
         }
 
         /**
-         * The new description of dedicated block storage cluster.
+         * <p>The new description of dedicated block storage cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -152,7 +169,11 @@ public class ModifyDedicatedBlockStorageClusterAttributeRequest extends Request 
         }
 
         /**
-         * The region ID of the dedicated block storage cluster. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the dedicated block storage cluster. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-heyuan</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

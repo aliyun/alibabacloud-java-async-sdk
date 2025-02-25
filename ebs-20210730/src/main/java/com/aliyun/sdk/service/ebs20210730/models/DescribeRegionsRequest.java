@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRegionsRequest} extends {@link RequestModel}
  *
  * <p>DescribeRegionsRequest</p>
  */
 public class DescribeRegionsRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
     private DescribeRegionsRequest(Builder builder) {
@@ -82,14 +87,16 @@ public class DescribeRegionsRequest extends Request {
         } 
 
         /**
-         * The language in which the regions and zones are named. This parameter corresponds to the `LocalName` response parameter. Valid values:
-         * <p>
+         * <p>The language in which the regions and zones are named. This parameter corresponds to the <code>LocalName</code> response parameter. Valid values:</p>
+         * <ul>
+         * <li>zh-CN: Chinese</li>
+         * <li>en-US: English</li>
+         * <li>ja: Japanese</li>
+         * </ul>
+         * <p>Default value: zh-CN.</p>
          * 
-         * *   zh-CN: Chinese
-         * *   en-US: English
-         * *   ja: Japanese
-         * 
-         * Default value: zh-CN.
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -98,7 +105,10 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -107,14 +117,16 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * The type of resource. Valid values:
-         * <p>
+         * <p>The type of resource. Valid values:</p>
+         * <ul>
+         * <li>ear: async replication</li>
+         * <li>lens: CloudLens for EBS</li>
+         * <li>dbsc: Dedicated Block Storage Cluster</li>
+         * </ul>
+         * <p>Default value: ear.</p>
          * 
-         * *   ear: async replication
-         * *   lens: CloudLens for EBS
-         * *   dbsc: Dedicated Block Storage Cluster
-         * 
-         * Default value: ear.
+         * <strong>example:</strong>
+         * <p>ear</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

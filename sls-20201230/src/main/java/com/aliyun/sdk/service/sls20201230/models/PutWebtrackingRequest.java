@@ -1,43 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link PutWebtrackingRequest} extends {@link RequestModel}
  *
  * <p>PutWebtrackingRequest</p>
  */
 public class PutWebtrackingRequest extends Request {
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("project")
     private String project;
 
-    @Path
-    @NameInMap("logstoreName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("logstoreName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String logstoreName;
 
-    @Body
-    @NameInMap("__logs__")
-    @Validation(required = true)
-    private java.util.List < java.util.Map<String, String>> logs;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("__logs__")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<java.util.Map<String, String>> logs;
 
-    @Body
-    @NameInMap("__source__")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("__source__")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String source;
 
-    @Body
-    @NameInMap("__tags__")
-    private java.util.Map < String, String > tags;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("__tags__")
+    private java.util.Map<String, String> tags;
 
-    @Body
-    @NameInMap("__topic__")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("__topic__")
     private String topic;
 
     private PutWebtrackingRequest(Builder builder) {
@@ -80,7 +84,7 @@ public class PutWebtrackingRequest extends Request {
     /**
      * @return logs
      */
-    public java.util.List < java.util.Map<String, String>> getLogs() {
+    public java.util.List<java.util.Map<String, String>> getLogs() {
         return this.logs;
     }
 
@@ -94,7 +98,7 @@ public class PutWebtrackingRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.Map < String, String > getTags() {
+    public java.util.Map<String, String> getTags() {
         return this.tags;
     }
 
@@ -108,9 +112,9 @@ public class PutWebtrackingRequest extends Request {
     public static final class Builder extends Request.Builder<PutWebtrackingRequest, Builder> {
         private String project; 
         private String logstoreName; 
-        private java.util.List < java.util.Map<String, String>> logs; 
+        private java.util.List<java.util.Map<String, String>> logs; 
         private String source; 
-        private java.util.Map < String, String > tags; 
+        private java.util.Map<String, String> tags; 
         private String topic; 
 
         private Builder() {
@@ -128,7 +132,11 @@ public class PutWebtrackingRequest extends Request {
         } 
 
         /**
-         * project.
+         * <p>The name of the project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ali-test-project</p>
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -137,7 +145,11 @@ public class PutWebtrackingRequest extends Request {
         }
 
         /**
-         * logstoreName.
+         * <p>The name of the Logstore.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ali-test-logstore</p>
          */
         public Builder logstoreName(String logstoreName) {
             this.putPathParameter("logstoreName", logstoreName);
@@ -146,16 +158,24 @@ public class PutWebtrackingRequest extends Request {
         }
 
         /**
-         * __logs__.
+         * <p>The logs. Each element is a JSON object that indicates a log.</p>
+         * <blockquote>
+         * <p> <strong>Note</strong>: The time in a log that is collected by using the web tracking feature is the time at which Simple Log Service receives the log. You do not need to configure the <strong>time</strong> field for each log. If this field exists, it is overwritten by the time at which Simple Log Service receives the log.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          */
-        public Builder logs(java.util.List < java.util.Map<String, String>> logs) {
+        public Builder logs(java.util.List<java.util.Map<String, String>> logs) {
             this.putBodyParameter("__logs__", logs);
             this.logs = logs;
             return this;
         }
 
         /**
-         * __source__.
+         * <p>The source of the logs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>source</p>
          */
         public Builder source(String source) {
             this.putBodyParameter("__source__", source);
@@ -164,16 +184,19 @@ public class PutWebtrackingRequest extends Request {
         }
 
         /**
-         * __tags__.
+         * <p>The tags of the logs.</p>
          */
-        public Builder tags(java.util.Map < String, String > tags) {
+        public Builder tags(java.util.Map<String, String> tags) {
             this.putBodyParameter("__tags__", tags);
             this.tags = tags;
             return this;
         }
 
         /**
-         * __topic__.
+         * <p>The topic of the logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>topic</p>
          */
         public Builder topic(String topic) {
             this.putBodyParameter("__topic__", topic);

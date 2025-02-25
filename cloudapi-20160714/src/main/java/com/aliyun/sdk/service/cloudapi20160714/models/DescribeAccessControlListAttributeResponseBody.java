@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccessControlListAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAccessControlListAttributeResponseBody</p>
  */
 public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
-    @NameInMap("AclEntrys")
+    @com.aliyun.core.annotation.NameInMap("AclEntrys")
     private AclEntrys aclEntrys;
 
-    @NameInMap("AclId")
+    @com.aliyun.core.annotation.NameInMap("AclId")
     private String aclId;
 
-    @NameInMap("AclName")
+    @com.aliyun.core.annotation.NameInMap("AclName")
     private String aclName;
 
-    @NameInMap("IsUsed")
-    private String isUsed;
+    @com.aliyun.core.annotation.NameInMap("AddressIPVersion")
+    private String addressIPVersion;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAccessControlListAttributeResponseBody(Builder builder) {
         this.aclEntrys = builder.aclEntrys;
         this.aclId = builder.aclId;
         this.aclName = builder.aclName;
-        this.isUsed = builder.isUsed;
+        this.addressIPVersion = builder.addressIPVersion;
         this.requestId = builder.requestId;
     }
 
@@ -65,10 +70,10 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
     }
 
     /**
-     * @return isUsed
+     * @return addressIPVersion
      */
-    public String getIsUsed() {
-        return this.isUsed;
+    public String getAddressIPVersion() {
+        return this.addressIPVersion;
     }
 
     /**
@@ -82,11 +87,11 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
         private AclEntrys aclEntrys; 
         private String aclId; 
         private String aclName; 
-        private String isUsed; 
+        private String addressIPVersion; 
         private String requestId; 
 
         /**
-         * The information about the access control policy.
+         * <p>The information about the access control policy.</p>
          */
         public Builder aclEntrys(AclEntrys aclEntrys) {
             this.aclEntrys = aclEntrys;
@@ -94,7 +99,10 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the access control policy.
+         * <p>The ID of the access control policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acl-uf6fpfdg3b5muska7uqem</p>
          */
         public Builder aclId(String aclId) {
             this.aclId = aclId;
@@ -102,7 +110,10 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the access control policy.
+         * <p>The name of the access control policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testAcl</p>
          */
         public Builder aclName(String aclName) {
             this.aclName = aclName;
@@ -110,15 +121,21 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the policy was used.
+         * <p>The IP protocol version. Valid values: <strong>ipv4</strong> and <strong>ipv6</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv4</p>
          */
-        public Builder isUsed(String isUsed) {
-            this.isUsed = isUsed;
+        public Builder addressIPVersion(String addressIPVersion) {
+            this.addressIPVersion = addressIPVersion;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ015</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -131,11 +148,17 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAccessControlListAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccessControlListAttributeResponseBody</p>
+     */
     public static class AclEntry extends TeaModel {
-        @NameInMap("AclEntryComment")
+        @com.aliyun.core.annotation.NameInMap("AclEntryComment")
         private String aclEntryComment;
 
-        @NameInMap("AclEntryIp")
+        @com.aliyun.core.annotation.NameInMap("AclEntryIp")
         private String aclEntryIp;
 
         private AclEntry(Builder builder) {
@@ -170,7 +193,10 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
             private String aclEntryIp; 
 
             /**
-             * The description of an entry.
+             * <p>The entry description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder aclEntryComment(String aclEntryComment) {
                 this.aclEntryComment = aclEntryComment;
@@ -178,7 +204,10 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The entries of the access control policy.
+             * <p>The ACL entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.0/24</p>
              */
             public Builder aclEntryIp(String aclEntryIp) {
                 this.aclEntryIp = aclEntryIp;
@@ -192,9 +221,15 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAccessControlListAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccessControlListAttributeResponseBody</p>
+     */
     public static class AclEntrys extends TeaModel {
-        @NameInMap("AclEntry")
-        private java.util.List < AclEntry> aclEntry;
+        @com.aliyun.core.annotation.NameInMap("AclEntry")
+        private java.util.List<AclEntry> aclEntry;
 
         private AclEntrys(Builder builder) {
             this.aclEntry = builder.aclEntry;
@@ -211,17 +246,17 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
         /**
          * @return aclEntry
          */
-        public java.util.List < AclEntry> getAclEntry() {
+        public java.util.List<AclEntry> getAclEntry() {
             return this.aclEntry;
         }
 
         public static final class Builder {
-            private java.util.List < AclEntry> aclEntry; 
+            private java.util.List<AclEntry> aclEntry; 
 
             /**
              * AclEntry.
              */
-            public Builder aclEntry(java.util.List < AclEntry> aclEntry) {
+            public Builder aclEntry(java.util.List<AclEntry> aclEntry) {
                 this.aclEntry = aclEntry;
                 return this;
             }

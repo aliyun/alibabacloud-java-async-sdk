@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHoneypotAttackerSourceRequest} extends {@link RequestModel}
  *
  * <p>ListHoneypotAttackerSourceRequest</p>
  */
 public class ListHoneypotAttackerSourceRequest extends Request {
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("EndTimeStamp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTimeStamp")
     private Long endTimeStamp;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RiskLevelList")
-    private java.util.List < String > riskLevelList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RiskLevelList")
+    private java.util.List<String> riskLevelList;
 
-    @Query
-    @NameInMap("SrcIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcIp")
     private String srcIp;
 
-    @Query
-    @NameInMap("StartTimeStamp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTimeStamp")
     private Long startTimeStamp;
 
     private ListHoneypotAttackerSourceRequest(Builder builder) {
@@ -95,7 +100,7 @@ public class ListHoneypotAttackerSourceRequest extends Request {
     /**
      * @return riskLevelList
      */
-    public java.util.List < String > getRiskLevelList() {
+    public java.util.List<String> getRiskLevelList() {
         return this.riskLevelList;
     }
 
@@ -118,7 +123,7 @@ public class ListHoneypotAttackerSourceRequest extends Request {
         private Long endTimeStamp; 
         private String lang; 
         private Integer pageSize; 
-        private java.util.List < String > riskLevelList; 
+        private java.util.List<String> riskLevelList; 
         private String srcIp; 
         private Long startTimeStamp; 
 
@@ -138,7 +143,10 @@ public class ListHoneypotAttackerSourceRequest extends Request {
         } 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -147,7 +155,10 @@ public class ListHoneypotAttackerSourceRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. This value is a timestamp.
+         * <p>The end of the time range to query. This value is a timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1676945366221</p>
          */
         public Builder endTimeStamp(Long endTimeStamp) {
             this.putQueryParameter("EndTimeStamp", endTimeStamp);
@@ -156,11 +167,14 @@ public class ListHoneypotAttackerSourceRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -169,7 +183,10 @@ public class ListHoneypotAttackerSourceRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -178,16 +195,19 @@ public class ListHoneypotAttackerSourceRequest extends Request {
         }
 
         /**
-         * An array that consists of risk levels.
+         * <p>An array that consists of risk levels.</p>
          */
-        public Builder riskLevelList(java.util.List < String > riskLevelList) {
+        public Builder riskLevelList(java.util.List<String> riskLevelList) {
             this.putQueryParameter("RiskLevelList", riskLevelList);
             this.riskLevelList = riskLevelList;
             return this;
         }
 
         /**
-         * The source IP address of the attack.
+         * <p>The source IP address of the attack.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>175.136.230.***</p>
          */
         public Builder srcIp(String srcIp) {
             this.putQueryParameter("SrcIp", srcIp);
@@ -196,7 +216,10 @@ public class ListHoneypotAttackerSourceRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. This value is a timestamp.
+         * <p>The beginning of the time range to query. This value is a timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1674007632124</p>
          */
         public Builder startTimeStamp(Long startTimeStamp) {
             this.putQueryParameter("StartTimeStamp", startTimeStamp);

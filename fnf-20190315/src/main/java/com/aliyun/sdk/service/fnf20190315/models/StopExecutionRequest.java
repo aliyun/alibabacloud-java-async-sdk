@@ -30,17 +30,12 @@ public class StopExecutionRequest extends Request {
     @Validation(required = true)
     private String flowName;
 
-    @Query
-    @NameInMap("RequestId")
-    private String requestId;
-
     private StopExecutionRequest(Builder builder) {
         super(builder);
         this.cause = builder.cause;
         this.error = builder.error;
         this.executionName = builder.executionName;
         this.flowName = builder.flowName;
-        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -84,19 +79,11 @@ public class StopExecutionRequest extends Request {
         return this.flowName;
     }
 
-    /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public static final class Builder extends Request.Builder<StopExecutionRequest, Builder> {
         private String cause; 
         private String error; 
         private String executionName; 
         private String flowName; 
-        private String requestId; 
 
         private Builder() {
             super();
@@ -108,7 +95,6 @@ public class StopExecutionRequest extends Request {
             this.error = request.error;
             this.executionName = request.executionName;
             this.flowName = request.flowName;
-            this.requestId = request.requestId;
         } 
 
         /**
@@ -130,7 +116,7 @@ public class StopExecutionRequest extends Request {
         }
 
         /**
-         * The name of the execution that you want to stop. You can call the **ListExecutions** operation to obtain the value of this parameter. The name is unique in a flow. Configure this parameter based on the following rules:
+         * The name of the execution that you want to stop. You can call the **ListExecutions** operation to obtain the value of this parameter. The name is unique in a flow. Set this parameter based on the following rules:
          * <p>
          * 
          * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
@@ -145,7 +131,7 @@ public class StopExecutionRequest extends Request {
         }
 
         /**
-         * The name of the flow that you want to stop. You can call the **ListFlows** operation to obtain the value of this parameter. The name is unique within the region and cannot be modified after the flow is created. Configure this parameter based on the following rules:
+         * The name of the flow in which that you want to stop the execution. You can call the **ListFlows** operation to obtain the value of this parameter. The name is unique within the same region and cannot be modified after the flow is created. Set this parameter based on the following rules:
          * <p>
          * 
          * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
@@ -156,15 +142,6 @@ public class StopExecutionRequest extends Request {
         public Builder flowName(String flowName) {
             this.putBodyParameter("FlowName", flowName);
             this.flowName = flowName;
-            return this;
-        }
-
-        /**
-         * The request ID. If you specify this parameter, the system uses this value as the ID of the request. If you do not specify this parameter, the system generates a value at random.
-         */
-        public Builder requestId(String requestId) {
-            this.putQueryParameter("RequestId", requestId);
-            this.requestId = requestId;
             return this;
         }
 

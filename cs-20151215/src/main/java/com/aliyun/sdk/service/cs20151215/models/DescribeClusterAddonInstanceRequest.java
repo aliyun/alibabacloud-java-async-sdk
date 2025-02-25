@@ -1,23 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterAddonInstanceRequest} extends {@link RequestModel}
  *
  * <p>DescribeClusterAddonInstanceRequest</p>
  */
 public class DescribeClusterAddonInstanceRequest extends Request {
-    @Path
-    @NameInMap("ClusterID")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterID")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterID;
 
-    @Path
-    @NameInMap("AddonName")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("AddonName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String addonName;
 
     private DescribeClusterAddonInstanceRequest(Builder builder) {
@@ -68,7 +75,11 @@ public class DescribeClusterAddonInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cd06bbf8a86764a31bcac76136691****</p>
          */
         public Builder clusterID(String clusterID) {
             this.putPathParameter("ClusterID", clusterID);
@@ -77,7 +88,11 @@ public class DescribeClusterAddonInstanceRequest extends Request {
         }
 
         /**
-         * The name of the component.
+         * <p>The name of the component.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>terway-eniip</p>
          */
         public Builder addonName(String addonName) {
             this.putPathParameter("AddonName", addonName);

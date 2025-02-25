@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEpnMeasurementDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEpnMeasurementDataResponseBody</p>
  */
 public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
-    @NameInMap("MeasurementDatas")
+    @com.aliyun.core.annotation.NameInMap("MeasurementDatas")
     private MeasurementDatas measurementDatas;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeEpnMeasurementDataResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MeasurementDatas.
+         * <p>The metering data returned.</p>
          */
         public Builder measurementDatas(MeasurementDatas measurementDatas) {
             this.measurementDatas = measurementDatas;
@@ -58,7 +63,10 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A6328C33-6304-5291-8641-0A00A99D0DD0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +79,26 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEpnMeasurementDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEpnMeasurementDataResponseBody</p>
+     */
     public static class BandWidthFeeData extends TeaModel {
-        @NameInMap("CostCode")
+        @com.aliyun.core.annotation.NameInMap("CostCode")
         private String costCode;
 
-        @NameInMap("CostName")
+        @com.aliyun.core.annotation.NameInMap("CostName")
         private String costName;
 
-        @NameInMap("CostType")
+        @com.aliyun.core.annotation.NameInMap("CostType")
         private String costType;
 
-        @NameInMap("CostVal")
+        @com.aliyun.core.annotation.NameInMap("CostVal")
         private Integer costVal;
 
-        @NameInMap("IspLine")
+        @com.aliyun.core.annotation.NameInMap("IspLine")
         private String ispLine;
 
         private BandWidthFeeData(Builder builder) {
@@ -146,7 +160,10 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
             private String ispLine; 
 
             /**
-             * CostCode.
+             * <p>The code of the billable item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-cmcc-1</p>
              */
             public Builder costCode(String costCode) {
                 this.costCode = costCode;
@@ -154,7 +171,10 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * CostName.
+             * <p>The name of the billable item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Beijing, Shanghai, and Guangzhou Mobile</p>
              */
             public Builder costName(String costName) {
                 this.costName = costName;
@@ -162,7 +182,14 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * CostType.
+             * <p>Metering method</p>
+             * <ul>
+             * <li>SpeedUp: bandwidth of intelligent acceleration</li>
+             * <li>IntranetConnection: internal bandwidth</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SpeedUp</p>
              */
             public Builder costType(String costType) {
                 this.costType = costType;
@@ -170,7 +197,10 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * CostVal.
+             * <p>The value of the billable item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16486</p>
              */
             public Builder costVal(Integer costVal) {
                 this.costVal = costVal;
@@ -178,7 +208,10 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * IspLine.
+             * <p>This parameter is unavailable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This parameter is not currently in use.</p>
              */
             public Builder ispLine(String ispLine) {
                 this.ispLine = ispLine;
@@ -192,9 +225,15 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEpnMeasurementDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEpnMeasurementDataResponseBody</p>
+     */
     public static class BandWidthFeeDatas extends TeaModel {
-        @NameInMap("BandWidthFeeData")
-        private java.util.List < BandWidthFeeData> bandWidthFeeData;
+        @com.aliyun.core.annotation.NameInMap("BandWidthFeeData")
+        private java.util.List<BandWidthFeeData> bandWidthFeeData;
 
         private BandWidthFeeDatas(Builder builder) {
             this.bandWidthFeeData = builder.bandWidthFeeData;
@@ -211,17 +250,17 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
         /**
          * @return bandWidthFeeData
          */
-        public java.util.List < BandWidthFeeData> getBandWidthFeeData() {
+        public java.util.List<BandWidthFeeData> getBandWidthFeeData() {
             return this.bandWidthFeeData;
         }
 
         public static final class Builder {
-            private java.util.List < BandWidthFeeData> bandWidthFeeData; 
+            private java.util.List<BandWidthFeeData> bandWidthFeeData; 
 
             /**
              * BandWidthFeeData.
              */
-            public Builder bandWidthFeeData(java.util.List < BandWidthFeeData> bandWidthFeeData) {
+            public Builder bandWidthFeeData(java.util.List<BandWidthFeeData> bandWidthFeeData) {
                 this.bandWidthFeeData = bandWidthFeeData;
                 return this;
             }
@@ -233,20 +272,26 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEpnMeasurementDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEpnMeasurementDataResponseBody</p>
+     */
     public static class MeasurementData extends TeaModel {
-        @NameInMap("BandWidthFeeDatas")
+        @com.aliyun.core.annotation.NameInMap("BandWidthFeeDatas")
         private BandWidthFeeDatas bandWidthFeeDatas;
 
-        @NameInMap("ChargeModel")
+        @com.aliyun.core.annotation.NameInMap("ChargeModel")
         private String chargeModel;
 
-        @NameInMap("CostCycle")
+        @com.aliyun.core.annotation.NameInMap("CostCycle")
         private String costCycle;
 
-        @NameInMap("CostEndTime")
+        @com.aliyun.core.annotation.NameInMap("CostEndTime")
         private String costEndTime;
 
-        @NameInMap("CostStartTime")
+        @com.aliyun.core.annotation.NameInMap("CostStartTime")
         private String costStartTime;
 
         private MeasurementData(Builder builder) {
@@ -308,7 +353,7 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
             private String costStartTime; 
 
             /**
-             * BandWidthFeeDatas.
+             * <p>The bandwidth data returned.</p>
              */
             public Builder bandWidthFeeDatas(BandWidthFeeDatas bandWidthFeeDatas) {
                 this.bandWidthFeeDatas = bandWidthFeeDatas;
@@ -316,7 +361,14 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeModel.
+             * <p>The metering method. Valid values:</p>
+             * <ul>
+             * <li>ChargeByUnified: unified metering.</li>
+             * <li>ChargeByGrade: differential metering.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ChargeByGrade</p>
              */
             public Builder chargeModel(String chargeModel) {
                 this.chargeModel = chargeModel;
@@ -324,7 +376,10 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * CostCycle.
+             * <p>The metering cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-07-30</p>
              */
             public Builder costCycle(String costCycle) {
                 this.costCycle = costCycle;
@@ -332,7 +387,10 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * CostEndTime.
+             * <p>The end time of the metering cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-07-30T16:00:00Z</p>
              */
             public Builder costEndTime(String costEndTime) {
                 this.costEndTime = costEndTime;
@@ -340,7 +398,10 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * CostStartTime.
+             * <p>The start time of the metering cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-07-29T16:00:00Z</p>
              */
             public Builder costStartTime(String costStartTime) {
                 this.costStartTime = costStartTime;
@@ -354,9 +415,15 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEpnMeasurementDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEpnMeasurementDataResponseBody</p>
+     */
     public static class MeasurementDatas extends TeaModel {
-        @NameInMap("MeasurementData")
-        private java.util.List < MeasurementData> measurementData;
+        @com.aliyun.core.annotation.NameInMap("MeasurementData")
+        private java.util.List<MeasurementData> measurementData;
 
         private MeasurementDatas(Builder builder) {
             this.measurementData = builder.measurementData;
@@ -373,17 +440,17 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
         /**
          * @return measurementData
          */
-        public java.util.List < MeasurementData> getMeasurementData() {
+        public java.util.List<MeasurementData> getMeasurementData() {
             return this.measurementData;
         }
 
         public static final class Builder {
-            private java.util.List < MeasurementData> measurementData; 
+            private java.util.List<MeasurementData> measurementData; 
 
             /**
              * MeasurementData.
              */
-            public Builder measurementData(java.util.List < MeasurementData> measurementData) {
+            public Builder measurementData(java.util.List<MeasurementData> measurementData) {
                 this.measurementData = measurementData;
                 return this;
             }

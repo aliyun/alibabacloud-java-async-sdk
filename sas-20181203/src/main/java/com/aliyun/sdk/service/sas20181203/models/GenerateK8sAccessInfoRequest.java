@@ -1,59 +1,64 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateK8sAccessInfoRequest} extends {@link RequestModel}
  *
  * <p>GenerateK8sAccessInfoRequest</p>
  */
 public class GenerateK8sAccessInfoRequest extends Request {
-    @Query
-    @NameInMap("AliyunYundunGatewayApiName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AliyunYundunGatewayApiName")
     private String aliyunYundunGatewayApiName;
 
-    @Query
-    @NameInMap("AliyunYundunGatewayPopName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AliyunYundunGatewayPopName")
     private String aliyunYundunGatewayPopName;
 
-    @Query
-    @NameInMap("AliyunYundunGatewayProjectName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AliyunYundunGatewayProjectName")
     private String aliyunYundunGatewayProjectName;
 
-    @Query
-    @NameInMap("AuditLogStore")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuditLogStore")
     private String auditLogStore;
 
-    @Query
-    @NameInMap("AuditProject")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuditProject")
     private String auditProject;
 
-    @Query
-    @NameInMap("AuditRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuditRegionId")
     private String auditRegionId;
 
-    @Query
-    @NameInMap("ClusterName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterName;
 
-    @Query
-    @NameInMap("ExpireDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExpireDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long expireDate;
 
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long groupId;
 
-    @Query
-    @NameInMap("Vendor")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Vendor")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vendor;
 
     private GenerateK8sAccessInfoRequest(Builder builder) {
@@ -184,7 +189,10 @@ public class GenerateK8sAccessInfoRequest extends Request {
         } 
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder aliyunYundunGatewayApiName(String aliyunYundunGatewayApiName) {
             this.putQueryParameter("AliyunYundunGatewayApiName", aliyunYundunGatewayApiName);
@@ -193,7 +201,10 @@ public class GenerateK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder aliyunYundunGatewayPopName(String aliyunYundunGatewayPopName) {
             this.putQueryParameter("AliyunYundunGatewayPopName", aliyunYundunGatewayPopName);
@@ -202,7 +213,10 @@ public class GenerateK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder aliyunYundunGatewayProjectName(String aliyunYundunGatewayProjectName) {
             this.putQueryParameter("AliyunYundunGatewayProjectName", aliyunYundunGatewayProjectName);
@@ -211,7 +225,10 @@ public class GenerateK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * The Simple Log Service Logstore that is used to store the audit logs.
+         * <p>The Simple Log Service Logstore that is used to store the audit logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>audit-cf6baf6afa106eca665296fdf68b65bf</p>
          */
         public Builder auditLogStore(String auditLogStore) {
             this.putQueryParameter("AuditLogStore", auditLogStore);
@@ -220,7 +237,10 @@ public class GenerateK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * The Simple Log Service project that is used to store the audit logs.
+         * <p>The Simple Log Service project that is used to store the audit logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k8s-log-custom-huxintest1018-2</p>
          */
         public Builder auditProject(String auditProject) {
             this.putQueryParameter("AuditProject", auditProject);
@@ -229,7 +249,10 @@ public class GenerateK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the audit logs are stored.
+         * <p>The ID of the region in which the audit logs are stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder auditRegionId(String auditRegionId) {
             this.putQueryParameter("AuditRegionId", auditRegionId);
@@ -238,7 +261,11 @@ public class GenerateK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * The name of the Kubernetes cluster.
+         * <p>The name of the Kubernetes cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -247,7 +274,11 @@ public class GenerateK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * The time at which the container ends to be added.
+         * <p>The time at which the container ends to be added.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1711951508388</p>
          */
         public Builder expireDate(Long expireDate) {
             this.putQueryParameter("ExpireDate", expireDate);
@@ -256,7 +287,11 @@ public class GenerateK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * The group ID.
+         * <p>The group ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11341690</p>
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -265,14 +300,18 @@ public class GenerateK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * The service provider of the cloud asset. Valid values:
-         * <p>
+         * <p>The service provider of the cloud asset. Valid values:</p>
+         * <ul>
+         * <li><strong>Tencent</strong></li>
+         * <li><strong>HUAWEICLOUD</strong></li>
+         * <li><strong>Azure</strong></li>
+         * <li><strong>AWS</strong></li>
+         * <li><strong>Others</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Tencent**
-         * *   **HUAWEICLOUD**
-         * *   **Azure**
-         * *   **AWS**
-         * *   **Others**
+         * <strong>example:</strong>
+         * <p>Tencent</p>
          */
         public Builder vendor(String vendor) {
             this.putQueryParameter("Vendor", vendor);

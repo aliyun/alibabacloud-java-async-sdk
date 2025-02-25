@@ -40,9 +40,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can add up to two SAML signing certificates.
-      * This topic provides an example on how to add a SAML signing certificate to the directory `d-00fc2p61****`.
-      *
+     * <b>description</b> :
+     * <p>You can add up to two SAML signing certificates.
+     * This topic provides an example on how to add a SAML signing certificate to the directory <code>d-00fc2p61****</code>.</p>
+     * 
+     * @param request the request parameters of AddExternalSAMLIdPCertificate  AddExternalSAMLIdPCertificateRequest
+     * @return AddExternalSAMLIdPCertificateResponse
      */
     @Override
     public CompletableFuture<AddExternalSAMLIdPCertificateResponse> addExternalSAMLIdPCertificate(AddExternalSAMLIdPCertificateRequest request) {
@@ -59,8 +62,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to add the system policy `AliyunECSFullAccess` to the access configuration `ac-00jhtfl8thteu6uj****`.
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to add the system policy <code>AliyunECSFullAccess</code> to the access configuration <code>ac-00jhtfl8thteu6uj****</code>.</p>
+     * 
+     * @param request the request parameters of AddPermissionPolicyToAccessConfiguration  AddPermissionPolicyToAccessConfigurationRequest
+     * @return AddPermissionPolicyToAccessConfigurationResponse
      */
     @Override
     public CompletableFuture<AddPermissionPolicyToAccessConfigurationResponse> addPermissionPolicyToAccessConfiguration(AddPermissionPolicyToAccessConfigurationRequest request) {
@@ -77,9 +83,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot add a user to a group that is synchronized by using SCIM.
-      * This topic provides an example of how to add the user `u-00q8wbq42wiltcrk****` to the group `g-00jqzghi2n3o5hkh****`.
-      *
+     * <b>description</b> :
+     * <p>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot add a user to a group that is synchronized by using SCIM.
+     * This topic provides an example of how to add the user <code>u-00q8wbq42wiltcrk****</code> to the group <code>g-00jqzghi2n3o5hkh****</code>.</p>
+     * 
+     * @param request the request parameters of AddUserToGroup  AddUserToGroupRequest
+     * @return AddUserToGroupResponse
      */
     @Override
     public CompletableFuture<AddUserToGroupResponse> addUserToGroup(AddUserToGroupRequest request) {
@@ -96,9 +105,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If single sign-on (SSO) logon is disabled, you can clear the configurations of a SAML IdP. If SSO logon is enabled, you cannot clear the configurations.
-      * This topic provides an example on how to clear the configurations of the SAML IdP within the directory `d-00fc2p61****`.
-      *
+     * <b>description</b> :
+     * <p>If single sign-on (SSO) logon is disabled, you can clear the configurations of a SAML IdP. If SSO logon is enabled, you cannot clear the configurations.
+     * This topic provides an example on how to clear the configurations of the SAML IdP within the directory <code>d-00fc2p61****</code>.</p>
+     * 
+     * @param request the request parameters of ClearExternalSAMLIdentityProvider  ClearExternalSAMLIdentityProviderRequest
+     * @return ClearExternalSAMLIdentityProviderResponse
      */
     @Override
     public CompletableFuture<ClearExternalSAMLIdentityProviderResponse> clearExternalSAMLIdentityProvider(ClearExternalSAMLIdentityProviderRequest request) {
@@ -115,10 +127,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you call this operation, an asynchronous task is created. You can call the [GetTask](~~340670~~) operation to query the progress of task execution by using the value of the `TaskId` response parameter.
-      * For more information about how to assign permissions on an account in your resource directory, see [Overview of multi-account authorization](~~266726~~).
-      * This topic provides an example on how to assign access permissions on the account `114240524784****` in your resource directory to the CloudSSO user `u-00q8wbq42wiltcrk****` by using the access configuration `ac-00jhtfl8thteu6uj****`. After the call is successful, the CloudSSO user can access resources within the account in the resource directory.
-      *
+     * <b>description</b> :
+     * <p>When you call this operation, an asynchronous task is created. You can call the <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> operation to query the progress of the task based on the value of the <code>TaskId</code> response parameter.
+     * For more information about how to assign permissions on an account in your resource directory, see <a href="https://help.aliyun.com/document_detail/266726.html">Overview of multi-account authorization</a>.
+     * This topic provides an example on how to assign access permissions on the account <code>114240524784****</code> in your resource directory to the CloudSSO user <code>u-00q8wbq42wiltcrk****</code> by using the access configuration <code>ac-00jhtfl8thteu6uj****</code>. After the call is successful, the CloudSSO user can access resources within the account in the resource directory.</p>
+     * 
+     * @param request the request parameters of CreateAccessAssignment  CreateAccessAssignmentRequest
+     * @return CreateAccessAssignmentResponse
      */
     @Override
     public CompletableFuture<CreateAccessAssignmentResponse> createAccessAssignment(CreateAccessAssignmentRequest request) {
@@ -135,9 +150,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For more information about access configurations, see [Overview of access configurations](~~266737~~).
-      * This topic provides an example on how to create an access configuration named `ECS-Admin`.
-      *
+     * <b>description</b> :
+     * <p>For more information about access configurations, see <a href="https://help.aliyun.com/document_detail/266737.html">Overview of access configurations</a>.
+     * This topic provides an example on how to create an access configuration named <code>ECS-Admin</code>.</p>
+     * 
+     * @param request the request parameters of CreateAccessConfiguration  CreateAccessConfigurationRequest
+     * @return CreateAccessConfigurationResponse
      */
     @Override
     public CompletableFuture<CreateAccessConfigurationResponse> createAccessConfiguration(CreateAccessConfigurationRequest request) {
@@ -154,13 +172,18 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * A directory is a CloudSSO instance. Before you can use CloudSSO, you must create a directory. The directory is used to manage all CloudSSO resources.
-      * To create a directory, you must select a region. Alibaba Cloud stores data in the directory only in the region that you select. However, you can deploy Alibaba Cloud resources including Elastic Compute Service (ECS) instances and ApsaraDB RDS instances in other regions. You can also use your cloud account for logons and access the Alibaba Cloud resources in other regions. You can select a region to create a directory based on your security compliance requirements and the geographic location of specific users. If you do not have strict security compliance requirements, we recommend that you select a region that is the closest to the geographical location of the specific users. This way, access to cloud resources is accelerated. You can create the CloudSSO directory in the China (Shanghai), China (Hong Kong), US (Silicon Valley), or Germany (Frankfurt) region.
-      * This topic provides an example on how to create a directory named `example` in the China (Shanghai) region.
-      * ## Limits
-      * - You can create only one directory for a management account.
-      * - If you want to change the region of a directory, you must delete the directory and then create a directory in a different region.
-      *
+     * <b>description</b> :
+     * <p>A directory is a CloudSSO instance. Before you can use CloudSSO, you must create a directory. The directory is used to manage all CloudSSO resources.
+     * To create a directory, you must select a region. Alibaba Cloud stores data in the directory only in the region that you select. However, you can deploy Alibaba Cloud resources including Elastic Compute Service (ECS) instances and ApsaraDB RDS instances in other regions. You can also use your cloud account for logons and access the Alibaba Cloud resources in other regions. You can select a region to create a directory based on your security compliance requirements and the geographic location of specific users. If you do not have strict security compliance requirements, we recommend that you select a region that is the closest to the geographical location of the specific users. This way, access to cloud resources is accelerated. You can create the CloudSSO directory in the China (Shanghai), China (Hong Kong), US (Silicon Valley), or Germany (Frankfurt) region.
+     * This topic provides an example on how to create a directory named <code>example</code> in the China (Shanghai) region.</p>
+     * <h2>Limits</h2>
+     * <ul>
+     * <li>You can create only one directory for a management account.</li>
+     * <li>If you want to change the region of a directory, you must delete the directory and then create a directory in a different region.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateDirectory  CreateDirectoryRequest
+     * @return CreateDirectoryResponse
      */
     @Override
     public CompletableFuture<CreateDirectoryResponse> createDirectory(CreateDirectoryRequest request) {
@@ -177,8 +200,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to create a group named `TestGroup`.
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to create a group named <code>TestGroup</code>.</p>
+     * 
+     * @param request the request parameters of CreateGroup  CreateGroupRequest
+     * @return CreateGroupResponse
      */
     @Override
     public CompletableFuture<CreateGroupResponse> createGroup(CreateGroupRequest request) {
@@ -195,9 +221,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * SCIM credentials are required for SCIM synchronization. You can create up to two SCIM credentials.
-      * This topic provides an example on how to create a SCIM credential within the directory `d-00fc2p61****`.
-      *
+     * <b>description</b> :
+     * <p>SCIM credentials are required for SCIM synchronization. You can create up to two SCIM credentials.
+     * This topic provides an example on how to create a SCIM credential within the directory <code>d-00fc2p61****</code>.</p>
+     * 
+     * @param request the request parameters of CreateSCIMServerCredential  CreateSCIMServerCredentialRequest
+     * @return CreateSCIMServerCredentialResponse
      */
     @Override
     public CompletableFuture<CreateSCIMServerCredentialResponse> createSCIMServerCredential(CreateSCIMServerCredentialRequest request) {
@@ -214,8 +243,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to create a user named `Alice`.
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to create a user named <code>Alice</code>.</p>
+     * 
+     * @param request the request parameters of CreateUser  CreateUserRequest
+     * @return CreateUserResponse
      */
     @Override
     public CompletableFuture<CreateUserResponse> createUser(CreateUserRequest request) {
@@ -231,6 +263,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>You can create a RAM user provisioning for a member in your resource directory to create a RAM user that has the same username as a CloudSSO user. This way, the CloudSSO user can access the resources of the member as the RAM user.</p>
+     * 
+     * @param request the request parameters of CreateUserProvisioning  CreateUserProvisioningRequest
+     * @return CreateUserProvisioningResponse
+     */
     @Override
     public CompletableFuture<CreateUserProvisioningResponse> createUserProvisioning(CreateUserProvisioningRequest request) {
         try {
@@ -246,9 +285,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you call this operation, an asynchronous task is created. You can call the [GetTask](~~340670~~) operation to query the progress of the task based on the value of the `TaskId` response parameter.
-      * This topic provides an example on how to remove the access permissions on the account `114240524784****` in the resource directory from the CloudSSO user `u-00q8wbq42wiltcrk****`. The access permissions are assigned by using the access configuration `ac-00jhtfl8thteu6uj****`.
-      *
+     * <b>description</b> :
+     * <p>When you call this operation, an asynchronous task is created. You can call the <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> operation to query the progress of the task based on the value of the <code>TaskId</code> response parameter.
+     * This topic provides an example on how to remove the access permissions on the account <code>114240524784****</code> in the resource directory from the CloudSSO user <code>u-00q8wbq42wiltcrk****</code>. The access permissions are assigned by using the access configuration <code>ac-00jhtfl8thteu6uj****</code>.</p>
+     * 
+     * @param request the request parameters of DeleteAccessAssignment  DeleteAccessAssignmentRequest
+     * @return DeleteAccessAssignmentResponse
      */
     @Override
     public CompletableFuture<DeleteAccessAssignmentResponse> deleteAccessAssignment(DeleteAccessAssignmentRequest request) {
@@ -265,10 +307,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to delete the access configuration whose ID is `ac-001j9mcm3k7335bc****`.
-      * ## Prerequisites
-      * The access configuration that you want to delete is de-provisioned from the accounts in your resource directory. For more information, see [DeprovisionAccessConfiguration](~~338352~~).
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to delete the access configuration whose ID is <code>ac-001j9mcm3k7335bc****</code>.</p>
+     * <h2>Prerequisites</h2>
+     * <p>The access configuration that you want to delete is de-provisioned from the accounts in your resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338352.html">DeprovisionAccessConfiguration</a>.</p>
+     * 
+     * @param request the request parameters of DeleteAccessConfiguration  DeleteAccessConfigurationRequest
+     * @return DeleteAccessConfigurationResponse
      */
     @Override
     public CompletableFuture<DeleteAccessConfigurationResponse> deleteAccessConfiguration(DeleteAccessConfigurationRequest request) {
@@ -285,16 +330,21 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to delete a directory whose ID is `d-00fc2p61****`.
-      * ## Prerequisites
-      * No resources are contained in the directory that you want to delete.
-      * *   Access permissions on the accounts in your resource directory are removed from all users and groups. For more information, see [DeleteAccessAssignment](~~338350~~).
-      * *   Users are deleted. For more information, see [DeleteUser](~~341671~~).
-      * *   Groups are deleted. For more information, see [DeleteGroup](~~341821~~).
-      * *   Access configurations are deleted. For more information, see [DeleteAccessConfiguration](~~336907~~).
-      * *   System for Cross-domain Identity Management (SCIM) credentials are deleted. For more information, see [DeleteSCIMServerCredential](~~341842~~).
-      * *   SSO logon configurations are deleted. For more information, see [ClearExternalSAMLIdentityProvider](~~341573~~).
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to delete a directory whose ID is <code>d-00fc2p61****</code>.</p>
+     * <h2>Prerequisites</h2>
+     * <p>No resources are contained in the directory that you want to delete.</p>
+     * <ul>
+     * <li>Access permissions on the accounts in your resource directory are removed from all users and groups. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</li>
+     * <li>Users are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341671.html">DeleteUser</a>.</li>
+     * <li>Groups are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341821.html">DeleteGroup</a>.</li>
+     * <li>Access configurations are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/336907.html">DeleteAccessConfiguration</a>.</li>
+     * <li>System for Cross-domain Identity Management (SCIM) credentials are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341842.html">DeleteSCIMServerCredential</a>.</li>
+     * <li>SSO logon configurations are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341573.html">ClearExternalSAMLIdentityProvider</a>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteDirectory  DeleteDirectoryRequest
+     * @return DeleteDirectoryResponse
      */
     @Override
     public CompletableFuture<DeleteDirectoryResponse> deleteDirectory(DeleteDirectoryRequest request) {
@@ -311,12 +361,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot delete a group that is synchronized by using SCIM.
-      * ## Prerequisites
-      * The group that you want to delete is not associated with the following resources. If the group is associated with the resources, the deletion fails.
-      * *   Users: You must remove users from the group. For more information, see [RemoveUserFromGroup](~~335116~~).
-      * *   Access permissions: You must remove the access permissions on the accounts in your resource directory from the group. For more information, see [DeleteAccessAssignment](~~338350~~).
-      *
+     * <b>description</b> :
+     * <p>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot delete a group that is synchronized by using SCIM.</p>
+     * <h2>Prerequisites</h2>
+     * <p>The group that you want to delete is not associated with the following resources. If the group is associated with the resources, the deletion fails.</p>
+     * <ul>
+     * <li>Users: You must remove users from the group. For more information, see <a href="https://help.aliyun.com/document_detail/335116.html">RemoveUserFromGroup</a>.</li>
+     * <li>Access permissions: You must remove the access permissions on the accounts in your resource directory from the group. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteGroup  DeleteGroupRequest
+     * @return DeleteGroupResponse
      */
     @Override
     public CompletableFuture<DeleteGroupResponse> deleteGroup(DeleteGroupRequest request) {
@@ -333,8 +388,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to unbind the MFA device `mfa-00ujhet8pycljj7j****` from the user `u-00q8wbq42wiltcrk****`.
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to unbind the MFA device <code>mfa-00ujhet8pycljj7j****</code> from the user <code>u-00q8wbq42wiltcrk****</code>.</p>
+     * 
+     * @param request the request parameters of DeleteMFADeviceForUser  DeleteMFADeviceForUserRequest
+     * @return DeleteMFADeviceForUserResponse
      */
     @Override
     public CompletableFuture<DeleteMFADeviceForUserResponse> deleteMFADeviceForUser(DeleteMFADeviceForUserRequest request) {
@@ -351,9 +409,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * After a SCIM credential is deleted, the synchronization task that uses the SCIM credential fails.
-      * This topic provides an example on how to delete the SCIM credential whose ID is `scimcred-004whl0kvfwcypbi****`.
-      *
+     * <b>description</b> :
+     * <p>After a SCIM credential is deleted, the synchronization task that uses the SCIM credential fails.
+     * This topic provides an example on how to delete the SCIM credential whose ID is <code>scimcred-004whl0kvfwcypbi****</code>.</p>
+     * 
+     * @param request the request parameters of DeleteSCIMServerCredential  DeleteSCIMServerCredentialRequest
+     * @return DeleteSCIMServerCredentialResponse
      */
     @Override
     public CompletableFuture<DeleteSCIMServerCredentialResponse> deleteSCIMServerCredential(DeleteSCIMServerCredentialRequest request) {
@@ -370,13 +431,18 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot delete a user that is synchronized by using SCIM.
-      * ## Prerequisites
-      * The user that you want to delete is not associated with the following resources. If the user is associated with the resources, the deletion fails.
-      * *   Multi-factor authentication (MFA) devices: You must unbind the MFA devices from the user. For more information, see [DeleteMFADeviceForUser](~~341675~~).
-      * *   Access permissions: You must remove the access permissions on the accounts in your resource directory from the user. For more information, see [DeleteAccessAssignment](~~338350~~).
-      * *   Groups: You must remove the user from groups. For more information, see [RemoveUserFromGroup](~~335116~~).
-      *
+     * <b>description</b> :
+     * <p>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot delete a user that is synchronized by using SCIM.</p>
+     * <h2>Prerequisites</h2>
+     * <p>The user that you want to delete is not associated with the following resources. If the user is associated with the resources, the deletion fails.</p>
+     * <ul>
+     * <li>Multi-factor authentication (MFA) devices: You must unbind the MFA devices from the user. For more information, see <a href="https://help.aliyun.com/document_detail/341675.html">DeleteMFADeviceForUser</a>.</li>
+     * <li>Access permissions: You must remove the access permissions on the accounts in your resource directory from the user. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</li>
+     * <li>Groups: You must remove the user from groups. For more information, see <a href="https://help.aliyun.com/document_detail/335116.html">RemoveUserFromGroup</a>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteUser  DeleteUserRequest
+     * @return DeleteUserResponse
      */
     @Override
     public CompletableFuture<DeleteUserResponse> deleteUser(DeleteUserRequest request) {
@@ -392,6 +458,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteUserProvisioning  DeleteUserProvisioningRequest
+     * @return DeleteUserProvisioningResponse
+     */
     @Override
     public CompletableFuture<DeleteUserProvisioningResponse> deleteUserProvisioning(DeleteUserProvisioningRequest request) {
         try {
@@ -406,6 +476,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteUserProvisioningEvent  DeleteUserProvisioningEventRequest
+     * @return DeleteUserProvisioningEventResponse
+     */
     @Override
     public CompletableFuture<DeleteUserProvisioningEventResponse> deleteUserProvisioningEvent(DeleteUserProvisioningEventRequest request) {
         try {
@@ -421,9 +495,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you call this operation, an asynchronous task is automatically created. You can call the [GetTask](~~340670~~) operation to query the progress of the task based on the value of the `TaskId` response parameter.
-      * This topic provides an example on how to de-provision the access configuration `ac-00jhtfl8thteu6uj****` from the account `114240524784****` in your resource directory.
-      *
+     * <b>description</b> :
+     * <p>When you call this operation, an asynchronous task is automatically created. You can call the <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> operation to query the progress of the task based on the value of the <code>TaskId</code> response parameter.
+     * This topic provides an example on how to de-provision the access configuration <code>ac-00jhtfl8thteu6uj****</code> from the account <code>114240524784****</code> in your resource directory.</p>
+     * 
+     * @param request the request parameters of DeprovisionAccessConfiguration  DeprovisionAccessConfigurationRequest
+     * @return DeprovisionAccessConfigurationResponse
      */
     @Override
     public CompletableFuture<DeprovisionAccessConfigurationResponse> deprovisionAccessConfiguration(DeprovisionAccessConfigurationRequest request) {
@@ -440,8 +517,29 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If your CloudSSO has no directory, you can disable CloudSSO based on your business requirements. After you disable CloudSSO, you can enable it at any time.
-      *
+     * @param request the request parameters of DisableDelegateAccount  DisableDelegateAccountRequest
+     * @return DisableDelegateAccountResponse
+     */
+    @Override
+    public CompletableFuture<DisableDelegateAccountResponse> disableDelegateAccount(DisableDelegateAccountRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DisableDelegateAccount").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DisableDelegateAccountResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DisableDelegateAccountResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>If your CloudSSO has no directory, you can disable CloudSSO based on your business requirements. After you disable CloudSSO, you can enable it at any time.</p>
+     * 
+     * @param request the request parameters of DisableService  DisableServiceRequest
+     * @return DisableServiceResponse
      */
     @Override
     public CompletableFuture<DisableServiceResponse> disableService(DisableServiceRequest request) {
@@ -458,9 +556,34 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation only if your account belongs to the management account that is used to enable a resource directory and has permissions to enable CloudSSO. For more information, see [Enable CloudSSO](~~262819~~).
-      * If you call this operation, you agree to the [Alibaba Cloud International Website Product Terms of Service](https://www.alibabacloud.com/help/doc-detail/42416.htm).
-      *
+     * <b>description</b> :
+     * <p>You can use the management account of a resource directory to specify a member of the resource directory as the delegated administrator account of CloudSSO. For more information, see <a href="https://help.aliyun.com/document_detail/208117.html">Add a delegated administrator account</a>.
+     * After the delegated administrator account of CloudSSO is specified, you can call this operation to enable the delegated administrator account of CloudSSO to manage CloudSSO resources.</p>
+     * 
+     * @param request the request parameters of EnableDelegateAccount  EnableDelegateAccountRequest
+     * @return EnableDelegateAccountResponse
+     */
+    @Override
+    public CompletableFuture<EnableDelegateAccountResponse> enableDelegateAccount(EnableDelegateAccountRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnableDelegateAccount").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnableDelegateAccountResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnableDelegateAccountResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You can call this operation only if your account belongs to the management account that is used to enable a resource directory and has permissions to enable CloudSSO. For more information, see <a href="https://help.aliyun.com/document_detail/262819.html">Enable CloudSSO</a>.
+     * If you call this operation, you agree to the <a href="https://www.alibabacloud.com/help/doc-detail/42416.htm">Alibaba Cloud International Website Product Terms of Service</a>.</p>
+     * 
+     * @param request the request parameters of EnableService  EnableServiceRequest
+     * @return EnableServiceResponse
      */
     @Override
     public CompletableFuture<EnableServiceResponse> enableService(EnableServiceRequest request) {
@@ -477,8 +600,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to query the information about the access configuration whose ID is `ac-00ccule7tadaijxc****`.
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the information about the access configuration whose ID is <code>ac-00ccule7tadaijxc****</code>.</p>
+     * 
+     * @param request the request parameters of GetAccessConfiguration  GetAccessConfigurationRequest
+     * @return GetAccessConfigurationResponse
      */
     @Override
     public CompletableFuture<GetAccessConfigurationResponse> getAccessConfiguration(GetAccessConfigurationRequest request) {
@@ -495,8 +621,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to query information about the directory whose ID is `d-00fc2p61****`.
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query information about the directory whose ID is <code>d-00fc2p61****</code>.</p>
+     * 
+     * @param request the request parameters of GetDirectory  GetDirectoryRequest
+     * @return GetDirectoryResponse
      */
     @Override
     public CompletableFuture<GetDirectoryResponse> getDirectory(GetDirectoryRequest request) {
@@ -513,9 +642,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * During SAML 2.0-based single sign-on (SSO) logon, CloudSSO is an SP, and the identity management system of an enterprise is an identity provider (IdP).
-      * This topic provides an example on how to query the information about the SP within the directory `d-00fc2p61****`.
-      *
+     * <b>description</b> :
+     * <p>During SAML 2.0-based single sign-on (SSO) logon, CloudSSO is an SP, and the identity management system of an enterprise is an identity provider (IdP).
+     * This topic provides an example on how to query the information about the SP within the directory <code>d-00fc2p61****</code>.</p>
+     * 
+     * @param request the request parameters of GetDirectorySAMLServiceProviderInfo  GetDirectorySAMLServiceProviderInfoRequest
+     * @return GetDirectorySAMLServiceProviderInfoResponse
      */
     @Override
     public CompletableFuture<GetDirectorySAMLServiceProviderInfoResponse> getDirectorySAMLServiceProviderInfo(GetDirectorySAMLServiceProviderInfoRequest request) {
@@ -532,11 +664,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### [](#)
-      * This topic provides an example on how to query the statistics of a directory whose ID is `d-00fc2p61****`. The statistics include the number of users, quota for users, number of groups, quota for groups, number of access configurations, quota for access configurations, quota for system policies that can be configured for an access configuration, number of access permissions that are assigned, number of System for Cross-domain Identity Management (SCIM) credentials, number of asynchronous tasks, status of single sign-on (SSO), and status of SCIM synchronization.
-      * ### [](#qps)Limit
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the statistics of a directory whose ID is <code>d-00fc2p61****</code>. The statistics include the number of users, quota for users, number of groups, quota for groups, number of access configurations, quota for access configurations, number of access permissions that are assigned, number of system policies that can be configured for an access configuration, number of System for Cross-domain Identity Management (SCIM) credentials, number of asynchronous tasks, status of single sign-on (SSO) logon, and status of SCIM synchronization.</p>
+     * 
+     * @param request the request parameters of GetDirectoryStatistics  GetDirectoryStatisticsRequest
+     * @return GetDirectoryStatisticsResponse
      */
     @Override
     public CompletableFuture<GetDirectoryStatisticsResponse> getDirectoryStatistics(GetDirectoryStatisticsRequest request) {
@@ -553,8 +685,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to query the configurations of the SAML IdP within the directory `d-00fc2p61****`.
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the configurations of the SAML IdP within the directory <code>d-00fc2p61****</code>.</p>
+     * 
+     * @param request the request parameters of GetExternalSAMLIdentityProvider  GetExternalSAMLIdentityProviderRequest
+     * @return GetExternalSAMLIdentityProviderResponse
      */
     @Override
     public CompletableFuture<GetExternalSAMLIdentityProviderResponse> getExternalSAMLIdentityProvider(GetExternalSAMLIdentityProviderRequest request) {
@@ -571,8 +706,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to query the information about the group `g-00jqzghi2n3o5hkh****` in the directory `d-00fc2p61****`.
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the information about the group <code>g-00jqzghi2n3o5hkh****</code> in the directory <code>d-00fc2p61****</code>.</p>
+     * 
+     * @param request the request parameters of GetGroup  GetGroupRequest
+     * @return GetGroupResponse
      */
     @Override
     public CompletableFuture<GetGroupResponse> getGroup(GetGroupRequest request) {
@@ -589,9 +727,30 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If you enable username-password logon for CloudSSO users, you can also configure MFA for the users.
-      * This topic provides an example on how to query the MFA setting of all CloudSSO users that belong to the directory named `00q8wbq42wiltcrk****`.
-      *
+     * @param request the request parameters of GetLoginPreference  GetLoginPreferenceRequest
+     * @return GetLoginPreferenceResponse
+     */
+    @Override
+    public CompletableFuture<GetLoginPreferenceResponse> getLoginPreference(GetLoginPreferenceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetLoginPreference").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetLoginPreferenceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetLoginPreferenceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>If you enable username-password logon for CloudSSO users, you can also configure MFA for the users.
+     * This topic provides an example on how to query the MFA setting of all CloudSSO users that belong to the directory named <code>00q8wbq42wiltcrk****</code>.</p>
+     * 
+     * @param request the request parameters of GetMFAAuthenticationSettingInfo  GetMFAAuthenticationSettingInfoRequest
+     * @return GetMFAAuthenticationSettingInfoResponse
      */
     @Override
     public CompletableFuture<GetMFAAuthenticationSettingInfoResponse> getMFAAuthenticationSettingInfo(GetMFAAuthenticationSettingInfoRequest request) {
@@ -608,9 +767,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > This operation is no longer maintained and updated. You can call the [GetMFAAuthenticationSettingInfo](~~611286~~) operation to query more detailed information.
-      * This topic provides an example on how to query the MFA setting of the users that belong to the directory named `d-00fc2p61****`. The returned result shows that MFA is enabled for all the users.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This operation is no longer maintained and updated. You can call the <a href="https://help.aliyun.com/document_detail/611286.html">GetMFAAuthenticationSettingInfo</a> operation to query more detailed information.
+     * This topic provides an example on how to query the MFA setting of the users that belong to the directory named <code>d-00fc2p61****</code>. The returned result shows that MFA is enabled for all the users.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of GetMFAAuthenticationSettings  GetMFAAuthenticationSettingsRequest
+     * @return GetMFAAuthenticationSettingsResponse
      */
     @Override
     public CompletableFuture<GetMFAAuthenticationSettingsResponse> getMFAAuthenticationSettings(GetMFAAuthenticationSettingsRequest request) {
@@ -627,8 +791,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to check whether MFA is enabled for users in the directory whose ID is `00fc2p61****`. The returned result shows that MFA is in the Enabled state.
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to check whether MFA is enabled for users in the directory whose ID is <code>00fc2p61****</code>. The returned result shows that MFA is in the Enabled state.</p>
+     * 
+     * @param request the request parameters of GetMFAAuthenticationStatus  GetMFAAuthenticationStatusRequest
+     * @return GetMFAAuthenticationStatusResponse
      */
     @Override
     public CompletableFuture<GetMFAAuthenticationStatusResponse> getMFAAuthenticationStatus(GetMFAAuthenticationStatusRequest request) {
@@ -645,8 +812,29 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to query the status of SCIM synchronization within the directory `d-00fc2p61****`. The returned result shows that SCIM synchronization is in the Enabled state.
-      *
+     * @param request the request parameters of GetPasswordPolicy  GetPasswordPolicyRequest
+     * @return GetPasswordPolicyResponse
+     */
+    @Override
+    public CompletableFuture<GetPasswordPolicyResponse> getPasswordPolicy(GetPasswordPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetPasswordPolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetPasswordPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetPasswordPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the status of SCIM synchronization within the directory <code>d-00fc2p61****</code>. The returned result shows that SCIM synchronization is in the Enabled state.</p>
+     * 
+     * @param request the request parameters of GetSCIMSynchronizationStatus  GetSCIMSynchronizationStatusRequest
+     * @return GetSCIMSynchronizationStatusResponse
      */
     @Override
     public CompletableFuture<GetSCIMSynchronizationStatusResponse> getSCIMSynchronizationStatus(GetSCIMSynchronizationStatusRequest request) {
@@ -662,6 +850,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetServiceStatus  GetServiceStatusRequest
+     * @return GetServiceStatusResponse
+     */
     @Override
     public CompletableFuture<GetServiceStatusResponse> getServiceStatus(GetServiceStatusRequest request) {
         try {
@@ -677,8 +869,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to query the information about the task whose ID is `t-shfqw1u1edszvxw5****`.
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the information about the task whose ID is <code>t-shfqw1u1edszvxw5****</code>.</p>
+     * 
+     * @param request the request parameters of GetTask  GetTaskRequest
+     * @return GetTaskResponse
      */
     @Override
     public CompletableFuture<GetTaskResponse> getTask(GetTaskRequest request) {
@@ -695,9 +890,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the GetTaskStatus operation to query the status of an asynchronous task. If you want to query more information about an asynchronous task, you can call the [GetTask](~~340670~~) operation.
-      * This topic provides an example on how to query the information about the task whose ID is `t-shfqw1u1edszvxw5****`.
-      *
+     * <b>description</b> :
+     * <p>You can call the GetTaskStatus operation to query the status of an asynchronous task. If you want to query more information about an asynchronous task, call the <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> operation.
+     * This topic provides an example on how to query the information about the task whose ID is <code>t-shfqw1u1edszvxw5****</code>.</p>
+     * 
+     * @param request the request parameters of GetTaskStatus  GetTaskStatusRequest
+     * @return GetTaskStatusResponse
      */
     @Override
     public CompletableFuture<GetTaskStatusResponse> getTaskStatus(GetTaskStatusRequest request) {
@@ -714,8 +912,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to query information about the user whose ID is `u-00q8wbq42wiltcrk****` in the `d-00fc2p61****` directory.
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query information about the user whose ID is <code>u-00q8wbq42wiltcrk****</code> in the <code>d-00fc2p61****</code> directory.</p>
+     * 
+     * @param request the request parameters of GetUser  GetUserRequest
+     * @return GetUserResponse
      */
     @Override
     public CompletableFuture<GetUserResponse> getUser(GetUserRequest request) {
@@ -732,8 +933,29 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to query the MFA setting of the user named `u-00q8wbq42wiltcrk****`. The returned result shows that MFA is enabled for the user.
-      *
+     * @param request the request parameters of GetUserId  GetUserIdRequest
+     * @return GetUserIdResponse
+     */
+    @Override
+    public CompletableFuture<GetUserIdResponse> getUserId(GetUserIdRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetUserId").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetUserIdResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetUserIdResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the MFA setting of the user named <code>u-00q8wbq42wiltcrk****</code>. The returned result shows that MFA is enabled for the user.</p>
+     * 
+     * @param request the request parameters of GetUserMFAAuthenticationSettings  GetUserMFAAuthenticationSettingsRequest
+     * @return GetUserMFAAuthenticationSettingsResponse
      */
     @Override
     public CompletableFuture<GetUserMFAAuthenticationSettingsResponse> getUserMFAAuthenticationSettings(GetUserMFAAuthenticationSettingsRequest request) {
@@ -749,6 +971,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetUserProvisioning  GetUserProvisioningRequest
+     * @return GetUserProvisioningResponse
+     */
     @Override
     public CompletableFuture<GetUserProvisioningResponse> getUserProvisioning(GetUserProvisioningRequest request) {
         try {
@@ -763,6 +989,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetUserProvisioningConfiguration  GetUserProvisioningConfigurationRequest
+     * @return GetUserProvisioningConfigurationResponse
+     */
     @Override
     public CompletableFuture<GetUserProvisioningConfigurationResponse> getUserProvisioningConfiguration(GetUserProvisioningConfigurationRequest request) {
         try {
@@ -777,6 +1007,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetUserProvisioningEvent  GetUserProvisioningEventRequest
+     * @return GetUserProvisioningEventResponse
+     */
     @Override
     public CompletableFuture<GetUserProvisioningEventResponse> getUserProvisioningEvent(GetUserProvisioningEventRequest request) {
         try {
@@ -791,6 +1025,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetUserProvisioningRdAccountStatistics  GetUserProvisioningRdAccountStatisticsRequest
+     * @return GetUserProvisioningRdAccountStatisticsResponse
+     */
     @Override
     public CompletableFuture<GetUserProvisioningRdAccountStatisticsResponse> getUserProvisioningRdAccountStatistics(GetUserProvisioningRdAccountStatisticsRequest request) {
         try {
@@ -805,6 +1043,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetUserProvisioningStatistics  GetUserProvisioningStatisticsRequest
+     * @return GetUserProvisioningStatisticsResponse
+     */
     @Override
     public CompletableFuture<GetUserProvisioningStatisticsResponse> getUserProvisioningStatistics(GetUserProvisioningStatisticsRequest request) {
         try {
@@ -820,8 +1062,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to query the assigned access permissions on the account `114240524784****` in your resource directory. The returned result shows that access permissions on the account in your resource directory are assigned to one user.
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the assigned access permissions on the account <code>114240524784****</code> in your resource directory. The returned result shows that access permissions on the account in your resource directory is assigned to one user.</p>
+     * 
+     * @param request the request parameters of ListAccessAssignments  ListAccessAssignmentsRequest
+     * @return ListAccessAssignmentsResponse
      */
     @Override
     public CompletableFuture<ListAccessAssignmentsResponse> listAccessAssignments(ListAccessAssignmentsRequest request) {
@@ -838,8 +1083,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to query the accounts for which the access permission `ac-00ccule7tadaijxc****` is provisioned. The returned result shows that the access configuration is provisioned for two accounts in your resource directory.
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the accounts for which the access permission <code>ac-00ccule7tadaijxc****</code> is provisioned. The returned result shows that the access configuration is provisioned for two accounts in your resource directory.</p>
+     * 
+     * @param request the request parameters of ListAccessConfigurationProvisionings  ListAccessConfigurationProvisioningsRequest
+     * @return ListAccessConfigurationProvisioningsResponse
      */
     @Override
     public CompletableFuture<ListAccessConfigurationProvisioningsResponse> listAccessConfigurationProvisionings(ListAccessConfigurationProvisioningsRequest request) {
@@ -856,8 +1104,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to query the access configurations within the directory `d-00fc2p61****`. The returned result shows that the directory contains the `VPC-Admin` and `ECS-Admin` access configurations.
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the access configurations within the directory <code>d-00fc2p61****</code>. The returned result shows that the directory contains the <code>VPC-Admin</code> and <code>ECS-Admin</code> access configurations.</p>
+     * 
+     * @param request the request parameters of ListAccessConfigurations  ListAccessConfigurationsRequest
+     * @return ListAccessConfigurationsResponse
      */
     @Override
     public CompletableFuture<ListAccessConfigurationsResponse> listAccessConfigurations(ListAccessConfigurationsRequest request) {
@@ -874,8 +1125,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to query the directories within your Alibaba Cloud account. The returned result shows that only one directory with the ID `d-00fc2p61****` is created within your Alibaba Cloud account.
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the directories within your Alibaba Cloud account. The returned result shows that only one directory with the ID <code>d-00fc2p61****</code> is created within your Alibaba Cloud account.</p>
+     * 
+     * @param request the request parameters of ListDirectories  ListDirectoriesRequest
+     * @return ListDirectoriesResponse
      */
     @Override
     public CompletableFuture<ListDirectoriesResponse> listDirectories(ListDirectoriesRequest request) {
@@ -892,8 +1146,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to query the SAML signing certificates within the directory `d-00fc2p61****`. The returned result shows that the directory contains one SAML signing certificate.
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the SAML signing certificates within the directory <code>d-00fc2p61****</code>. The returned result shows that the directory contains one SAML signing certificate.</p>
+     * 
+     * @param request the request parameters of ListExternalSAMLIdPCertificates  ListExternalSAMLIdPCertificatesRequest
+     * @return ListExternalSAMLIdPCertificatesResponse
      */
     @Override
     public CompletableFuture<ListExternalSAMLIdPCertificatesResponse> listExternalSAMLIdPCertificates(ListExternalSAMLIdPCertificatesRequest request) {
@@ -910,8 +1167,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to query the users in the group `g-00jqzghi2n3o5hkh****`. The returned result shows that the group contains the user `Alice` and the user `user1`.
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the users in the group <code>g-00jqzghi2n3o5hkh****</code>. The returned result shows that the group contains the user <code>Alice</code> and the user <code>user1</code>.</p>
+     * 
+     * @param request the request parameters of ListGroupMembers  ListGroupMembersRequest
+     * @return ListGroupMembersResponse
      */
     @Override
     public CompletableFuture<ListGroupMembersResponse> listGroupMembers(ListGroupMembersRequest request) {
@@ -928,8 +1188,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to query the groups in the directory `d-00fc2p61****`. The returned result shows that the directory contains three groups. The groups `group1` and `group2` are synchronized from an external identity provider (IdP). The group `TestGroup` is manually created in CloudSSO.
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the groups in the directory <code>d-00fc2p61****</code>. The returned result shows that the directory contains three groups. The groups <code>group1</code> and <code>group2</code> are synchronized from an external identity provider (IdP). The group <code>TestGroup</code> is manually created in CloudSSO.</p>
+     * 
+     * @param request the request parameters of ListGroups  ListGroupsRequest
+     * @return ListGroupsResponse
      */
     @Override
     public CompletableFuture<ListGroupsResponse> listGroups(ListGroupsRequest request) {
@@ -946,8 +1209,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to query the groups to which the user `u-00q8wbq42wiltcrk****` is added. The returned result shows that the user is added to both the `TestGroup` and the `group1` groups.
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the groups to which the user <code>u-00q8wbq42wiltcrk****</code> is added. The returned result shows that the user is added to both the <code>TestGroup</code> and the <code>group1</code> groups.</p>
+     * 
+     * @param request the request parameters of ListJoinedGroupsForUser  ListJoinedGroupsForUserRequest
+     * @return ListJoinedGroupsForUserResponse
      */
     @Override
     public CompletableFuture<ListJoinedGroupsForUserResponse> listJoinedGroupsForUser(ListJoinedGroupsForUserRequest request) {
@@ -964,8 +1230,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to query the MFA devices that are bound to the user `u-00q8wbq42wiltcrk****`. The returned result shows that the MFA device named `Alice-MFA1` is bound to the user.
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the MFA devices that are bound to the user <code>u-00q8wbq42wiltcrk****</code>. The returned result shows that the MFA device named <code>Alice-MFA1</code> is bound to the user.</p>
+     * 
+     * @param request the request parameters of ListMFADevicesForUser  ListMFADevicesForUserRequest
+     * @return ListMFADevicesForUserResponse
      */
     @Override
     public CompletableFuture<ListMFADevicesForUserResponse> listMFADevicesForUser(ListMFADevicesForUserRequest request) {
@@ -982,8 +1251,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to query the policies that are created for the access configuration `ac-00jhtfl8thteu6uj****`. The returned result shows that the access configuration contains one system policy and one inline policy.
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the policies that are created for the access configuration <code>ac-00jhtfl8thteu6uj****</code>. The returned result shows that the access configuration contains one system policy and one inline policy.</p>
+     * 
+     * @param request the request parameters of ListPermissionPoliciesInAccessConfiguration  ListPermissionPoliciesInAccessConfigurationRequest
+     * @return ListPermissionPoliciesInAccessConfigurationResponse
      */
     @Override
     public CompletableFuture<ListPermissionPoliciesInAccessConfigurationResponse> listPermissionPoliciesInAccessConfiguration(ListPermissionPoliciesInAccessConfigurationRequest request) {
@@ -1000,8 +1272,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to query the SCIM credentials within the `d-00fc2p61****` directory.
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the SCIM credentials within the <code>d-00fc2p61****</code> directory.</p>
+     * 
+     * @param request the request parameters of ListSCIMServerCredentials  ListSCIMServerCredentialsRequest
+     * @return ListSCIMServerCredentialsResponse
      */
     @Override
     public CompletableFuture<ListSCIMServerCredentialsResponse> listSCIMServerCredentials(ListSCIMServerCredentialsRequest request) {
@@ -1018,9 +1293,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * By default, this operation queries the tasks within the previous 24 hours. This operation allows you to query the tasks within a maximum of 7 days. You can specify the start time of the query by using `Filter`.
-      * This topic provides an example on how to query the tasks within the previous 24 hours.
-      *
+     * <b>description</b> :
+     * <p>By default, this operation queries the tasks within the previous 24 hours. This operation allows you to query the tasks within a maximum of 7 days. You can specify the start time of the query by using <code>Filter</code>.
+     * This topic provides an example on how to query the tasks within the previous 24 hours.</p>
+     * 
+     * @param request the request parameters of ListTasks  ListTasksRequest
+     * @return ListTasksResponse
      */
     @Override
     public CompletableFuture<ListTasksResponse> listTasks(ListTasksRequest request) {
@@ -1036,6 +1314,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUserProvisioningEvents  ListUserProvisioningEventsRequest
+     * @return ListUserProvisioningEventsResponse
+     */
     @Override
     public CompletableFuture<ListUserProvisioningEventsResponse> listUserProvisioningEvents(ListUserProvisioningEventsRequest request) {
         try {
@@ -1050,6 +1332,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUserProvisionings  ListUserProvisioningsRequest
+     * @return ListUserProvisioningsResponse
+     */
     @Override
     public CompletableFuture<ListUserProvisioningsResponse> listUserProvisionings(ListUserProvisioningsRequest request) {
         try {
@@ -1065,8 +1351,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to query users in the `d-00fc2p61****` directory. The returned result shows that the directory contains two users. The user `AliceLee` is synchronized from an external identity provider (IdP). The user `user1` is manually created within CloudSSO.
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query users in the <code>d-00fc2p61****</code> directory. The returned result shows that the directory contains two users. The user <code>AliceLee</code> is synchronized from an external identity provider (IdP). The user <code>user1</code> is manually created within CloudSSO.</p>
+     * 
+     * @param request the request parameters of ListUsers  ListUsersRequest
+     * @return ListUsersResponse
      */
     @Override
     public CompletableFuture<ListUsersResponse> listUsers(ListUsersRequest request) {
@@ -1083,9 +1372,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you call this operation, an asynchronous task is automatically created. You can call the [GetTask](~~340670~~) operation to query the progress of the task based on the value of the `TaskId` response parameter.
-      * This topic provides an example on how to provision the access configuration `ac-00jhtfl8thteu6uj****` for the account `114240524784****` in your resource directory.
-      *
+     * <b>description</b> :
+     * <p>When you call this operation, an asynchronous task is automatically created. You can call the <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> operation to query the progress of the task based on the value of the <code>TaskId</code> response parameter.
+     * This topic provides an example on how to provision the access configuration <code>ac-00jhtfl8thteu6uj****</code> for the account <code>114240524784****</code> in your resource directory.</p>
+     * 
+     * @param request the request parameters of ProvisionAccessConfiguration  ProvisionAccessConfigurationRequest
+     * @return ProvisionAccessConfigurationResponse
      */
     @Override
     public CompletableFuture<ProvisionAccessConfigurationResponse> provisionAccessConfiguration(ProvisionAccessConfigurationRequest request) {
@@ -1102,8 +1394,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to remove the SAML signing certificate whose ID is `idp-c-00dt9gnl7fmjaw9c****`.
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to remove the SAML signing certificate whose ID is <code>idp-c-00dt9gnl7fmjaw9c****</code>.</p>
+     * 
+     * @param request the request parameters of RemoveExternalSAMLIdPCertificate  RemoveExternalSAMLIdPCertificateRequest
+     * @return RemoveExternalSAMLIdPCertificateResponse
      */
     @Override
     public CompletableFuture<RemoveExternalSAMLIdPCertificateResponse> removeExternalSAMLIdPCertificate(RemoveExternalSAMLIdPCertificateRequest request) {
@@ -1120,9 +1415,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * After you remove an inline policy from an access configuration, the policy cannot be restored.
-      * This topic provides an example on how to remove the system policy `AliyunECSFullAccess` from the access configuration `ac-00jhtfl8thteu6uj****`.
-      *
+     * <b>description</b> :
+     * <p>After you remove an inline policy from an access configuration, the policy cannot be restored.
+     * This topic provides an example on how to remove the system policy <code>AliyunECSFullAccess</code> from the access configuration <code>ac-00jhtfl8thteu6uj****</code>.</p>
+     * 
+     * @param request the request parameters of RemovePermissionPolicyFromAccessConfiguration  RemovePermissionPolicyFromAccessConfigurationRequest
+     * @return RemovePermissionPolicyFromAccessConfigurationResponse
      */
     @Override
     public CompletableFuture<RemovePermissionPolicyFromAccessConfigurationResponse> removePermissionPolicyFromAccessConfiguration(RemovePermissionPolicyFromAccessConfigurationRequest request) {
@@ -1139,9 +1437,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot remove a user from a group that is synchronized by using SCIM.  
-      * This topic provides an example on how to remove the user `u-00q8wbq42wiltcrk****` from the group `g-00jqzghi2n3o5hkh****`.
-      *
+     * <b>description</b> :
+     * <p>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot remove a user from a group that is synchronized by using SCIM.<br>This topic provides an example on how to remove the user <code>u-00q8wbq42wiltcrk****</code> from the group <code>g-00jqzghi2n3o5hkh****</code>.</p>
+     * 
+     * @param request the request parameters of RemoveUserFromGroup  RemoveUserFromGroupRequest
+     * @return RemoveUserFromGroupResponse
      */
     @Override
     public CompletableFuture<RemoveUserFromGroupResponse> removeUserFromGroup(RemoveUserFromGroupRequest request) {
@@ -1158,10 +1458,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If you forget your password or your password expires or is at risk, you must contact a CloudSSO administrator to reset your password.
-      * >  After you enable SSO logon, your password cannot be reset.
-      * This topic provides an example on how to reset the password of the user `u-00q8wbq42wiltcrk****`. The new password is automatically generated by the system.
-      *
+     * <b>description</b> :
+     * <p>If you forget your password or your password expires or is at risk, you must contact a CloudSSO administrator to reset your password.</p>
+     * <blockquote>
+     * <p> After you enable SSO logon, your password cannot be reset.
+     * This topic provides an example on how to reset the password of the user <code>u-00q8wbq42wiltcrk****</code>. The new password is automatically generated by the system.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of ResetUserPassword  ResetUserPasswordRequest
+     * @return ResetUserPasswordResponse
      */
     @Override
     public CompletableFuture<ResetUserPasswordResponse> resetUserPassword(ResetUserPasswordRequest request) {
@@ -1177,6 +1482,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RetryUserProvisioningEvent  RetryUserProvisioningEventRequest
+     * @return RetryUserProvisioningEventResponse
+     */
     @Override
     public CompletableFuture<RetryUserProvisioningEventResponse> retryUserProvisioningEvent(RetryUserProvisioningEventRequest request) {
         try {
@@ -1192,16 +1501,23 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * During SAML 2.0-based single sign-on (SSO) logon, CloudSSO is an SP, and the identity management system of an enterprise is an IdP.
-      * You can use one of the following methods to configure a SAML IdP. You can obtain the required metadata file or parameter values from your IdP.
-      * *   Use the metadata file. You can specify the `EncodedMetadataDocument` parameter to upload the metadata file.
-      * *   Manually configure the IdP. You can manually specify the following parameters for your IdP: `EntityId`, `LoginUrl`, `WantRequestSigned`, and `X509Certificate`.
-      * If you have configured a SAML IdP, the existing configurations are replaced after you call this operation.
-      * *   If the IdP is configured by using the metadata file, all existing configurations are replaced with new configurations.
-      * *   If the IdP is manually configured, the original parameter values that are different from the new parameter values are replaced.
-      * >  If SSO logon is enabled, new configurations immediately take effect. Take note of the impacts on the production environment.
-      * This topic provides an example on how to configure an IdP by using the metadata file within the directory `d-00fc2p61****`.
-      *
+     * <b>description</b> :
+     * <p>During SAML 2.0-based single sign-on (SSO) logon, CloudSSO is an SP, and the identity management system of an enterprise is an IdP.
+     * You can use one of the following methods to configure a SAML IdP. You can obtain the required metadata file or parameter values from your IdP.</p>
+     * <ul>
+     * <li>Use the metadata file. You can specify the <code>EncodedMetadataDocument</code> parameter to upload the metadata file.</li>
+     * <li>Manually configure the IdP. You can manually specify the following parameters for your IdP: <code>EntityId</code>, <code>LoginUrl</code>, <code>WantRequestSigned</code>, and <code>X509Certificate</code>.
+     * If you have configured a SAML IdP, the existing configurations are replaced after you call this operation.</li>
+     * <li>If the IdP is configured by using the metadata file, all existing configurations are replaced with new configurations.</li>
+     * <li>If the IdP is manually configured, the original parameter values that are different from the new parameter values are replaced.<blockquote>
+     * <p> If SSO logon is enabled, new configurations immediately take effect. Take note of the impacts on the production environment.
+     * This topic provides an example on how to configure an IdP by using the metadata file within the directory <code>d-00fc2p61****</code>.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of SetExternalSAMLIdentityProvider  SetExternalSAMLIdentityProviderRequest
+     * @return SetExternalSAMLIdentityProviderResponse
      */
     @Override
     public CompletableFuture<SetExternalSAMLIdentityProviderResponse> setExternalSAMLIdentityProvider(SetExternalSAMLIdentityProviderRequest request) {
@@ -1218,9 +1534,30 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If a CloudSSO administrator enables username-password logon for users, CloudSSO automatically enables MFA to improve security. The administrator can call this operation to enable or disable MFA based on the business requirements.
-      * This topic provides an example on how to enable MFA for users.
-      *
+     * @param request the request parameters of SetLoginPreference  SetLoginPreferenceRequest
+     * @return SetLoginPreferenceResponse
+     */
+    @Override
+    public CompletableFuture<SetLoginPreferenceResponse> setLoginPreference(SetLoginPreferenceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SetLoginPreference").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetLoginPreferenceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SetLoginPreferenceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>If a CloudSSO administrator enables username-password logon for users, CloudSSO automatically enables MFA to improve security. The administrator can call this operation to enable or disable MFA based on the business requirements.
+     * This topic provides an example on how to enable MFA for users.</p>
+     * 
+     * @param request the request parameters of SetMFAAuthenticationStatus  SetMFAAuthenticationStatusRequest
+     * @return SetMFAAuthenticationStatusResponse
      */
     @Override
     public CompletableFuture<SetMFAAuthenticationStatusResponse> setMFAAuthenticationStatus(SetMFAAuthenticationStatusRequest request) {
@@ -1237,11 +1574,34 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can synchronize users or groups from an external identity provider (IdP) that supports SCIM 2.0 to CloudSSO only after SCIM synchronization is enabled. If you disable SCIM synchronization, you can no longer synchronize users or groups to CloudSSO. The following list describes the impacts after SCIM synchronization is enabled or disabled:
-      * *   After you enable SCIM synchronization, you cannot modify or delete the users or groups that are synchronized to CloudSSO by using SCIM. In addition, you cannot add users to or remove users from the groups. However, you can change the passwords of the users and enable or disable the logon of the users.
-      * *   After you disable SCIM synchronization, you can modify and delete the users and groups that are synchronized to CloudSSO by using SCIM. You can also add users to or remove users from the groups.
-      * This topic provides an example on how to enable SCIM synchronization within the directory `d-00fc2p61****`.
-      *
+     * @param request the request parameters of SetPasswordPolicy  SetPasswordPolicyRequest
+     * @return SetPasswordPolicyResponse
+     */
+    @Override
+    public CompletableFuture<SetPasswordPolicyResponse> setPasswordPolicy(SetPasswordPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SetPasswordPolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetPasswordPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SetPasswordPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You can synchronize users or groups from an external identity provider (IdP) that supports SCIM 2.0 to CloudSSO only after SCIM synchronization is enabled. If you disable SCIM synchronization, you can no longer synchronize users or groups to CloudSSO. The following list describes the impacts after SCIM synchronization is enabled or disabled:</p>
+     * <ul>
+     * <li>After you enable SCIM synchronization, you cannot modify or delete the users or groups that are synchronized to CloudSSO by using SCIM. In addition, you cannot add users to or remove users from the groups. However, you can change the passwords of the users and enable or disable the logon of the users.</li>
+     * <li>After you disable SCIM synchronization, you can modify and delete the users and groups that are synchronized to CloudSSO by using SCIM. You can also add users to or remove users from the groups.
+     * This topic provides an example on how to enable SCIM synchronization within the directory <code>d-00fc2p61****</code>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of SetSCIMSynchronizationStatus  SetSCIMSynchronizationStatusRequest
+     * @return SetSCIMSynchronizationStatusResponse
      */
     @Override
     public CompletableFuture<SetSCIMSynchronizationStatusResponse> setSCIMSynchronizationStatus(SetSCIMSynchronizationStatusRequest request) {
@@ -1258,9 +1618,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can modify the `Description`, `SessionDuration`, and `RelayState` parameters for an access configuration.
-      * This topic provides an example on how to change the initial web page in the access configuration `ac-00jhtfl8thteu6uj****` to `https://cloudsso.console.aliyun.com`.
-      *
+     * <b>description</b> :
+     * <p>You can modify the <code>Description</code>, <code>SessionDuration</code>, and <code>RelayState</code> parameters for an access configuration.
+     * This topic provides an example on how to change the initial web page in the access configuration <code>ac-00jhtfl8thteu6uj****</code> to <code>https://cloudsso.console.aliyun.com</code>.</p>
+     * 
+     * @param request the request parameters of UpdateAccessConfiguration  UpdateAccessConfigurationRequest
+     * @return UpdateAccessConfigurationResponse
      */
     @Override
     public CompletableFuture<UpdateAccessConfigurationResponse> updateAccessConfiguration(UpdateAccessConfigurationRequest request) {
@@ -1277,9 +1640,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * After you change the name of a directory, the URL that is used to log on to the Cloud SSO user portal is changed. You must notify the Cloud SSO users of the correct URL. 
-      * This topic provides an example on how to change the name of a directory to `new-example`.
-      *
+     * <b>description</b> :
+     * <p>After you change the name of a directory, the URL that is used to log on to the Cloud SSO user portal is changed. You must notify the Cloud SSO users of the correct URL. 
+     * This topic provides an example on how to change the name of a directory to <code>new-example</code>.</p>
+     * 
+     * @param request the request parameters of UpdateDirectory  UpdateDirectoryRequest
+     * @return UpdateDirectoryResponse
      */
     @Override
     public CompletableFuture<UpdateDirectoryResponse> updateDirectory(UpdateDirectoryRequest request) {
@@ -1296,10 +1662,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can modify `GroupName` and `Description` for a group.
-      * >  If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify the information about a group that is synchronized by using SCIM.
-      * This topic provides an example on how to change the name of the group `g-00jqzghi2n3o5hkh****` to `NewTestGroup`.
-      *
+     * <b>description</b> :
+     * <p>You can modify <code>GroupName</code> and <code>Description</code> for a group.</p>
+     * <blockquote>
+     * <p> If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify the information about a group that is synchronized by using SCIM.
+     * This topic provides an example on how to change the name of the group <code>g-00jqzghi2n3o5hkh****</code> to <code>NewTestGroup</code>.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of UpdateGroup  UpdateGroupRequest
+     * @return UpdateGroupResponse
      */
     @Override
     public CompletableFuture<UpdateGroupResponse> updateGroup(UpdateGroupRequest request) {
@@ -1316,8 +1687,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to modify an inline policy that is created for the access configuration `ac-00jhtfl8thteu6uj****`.
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to modify an inline policy that is created for the access configuration <code>ac-00jhtfl8thteu6uj****</code>.</p>
+     * 
+     * @param request the request parameters of UpdateInlinePolicyForAccessConfiguration  UpdateInlinePolicyForAccessConfigurationRequest
+     * @return UpdateInlinePolicyForAccessConfigurationResponse
      */
     @Override
     public CompletableFuture<UpdateInlinePolicyForAccessConfigurationResponse> updateInlinePolicyForAccessConfiguration(UpdateInlinePolicyForAccessConfigurationRequest request) {
@@ -1334,9 +1708,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If you enable username-password logon for CloudSSO users, you can also configure MFA for the users.
-      * This topic provides an example on how to enable MFA for all CloudSSO users that belong to the directory named `d-00fc2p61****`.
-      *
+     * <b>description</b> :
+     * <p>If you enable username-password logon for CloudSSO users, you can also configure MFA for the users.
+     * This topic provides an example on how to enable MFA for all CloudSSO users that belong to the directory named <code>d-00fc2p61****</code>.</p>
+     * 
+     * @param request the request parameters of UpdateMFAAuthenticationSettings  UpdateMFAAuthenticationSettingsRequest
+     * @return UpdateMFAAuthenticationSettingsResponse
      */
     @Override
     public CompletableFuture<UpdateMFAAuthenticationSettingsResponse> updateMFAAuthenticationSettings(UpdateMFAAuthenticationSettingsRequest request) {
@@ -1353,8 +1730,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to disable the SCIM credential whose ID is `scimcred-004whl0kvfwcypbi****`. After the SCIM credential is disabled, the synchronization task that uses the SCIM credential fails. You can call this operation again to enable the SCIM credential.
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to disable the SCIM credential whose ID is <code>scimcred-004whl0kvfwcypbi****</code>. After the SCIM credential is disabled, the synchronization task that uses the SCIM credential fails. You can call this operation again to enable the SCIM credential.</p>
+     * 
+     * @param request the request parameters of UpdateSCIMServerCredentialStatus  UpdateSCIMServerCredentialStatusRequest
+     * @return UpdateSCIMServerCredentialStatusResponse
      */
     @Override
     public CompletableFuture<UpdateSCIMServerCredentialStatusResponse> updateSCIMServerCredentialStatus(UpdateSCIMServerCredentialStatusRequest request) {
@@ -1371,10 +1751,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can modify `FirstName`, `LastName`, `DisplayName`, `Email`, and `Description` for a user. You cannot modify `UserName` for a user.
-      * >  If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify the information about a user that is synchronized by using SCIM.
-      * This topic provides an example on how to change the email address of the user whose ID is `u-00q8wbq42wiltcrk****` to `AliceLee@example.com`.
-      *
+     * <b>description</b> :
+     * <p>You can modify <code>FirstName</code>, <code>LastName</code>, <code>DisplayName</code>, <code>Email</code>, and <code>Description</code> for a user. You cannot modify <code>UserName</code> for a user.</p>
+     * <blockquote>
+     * <p> If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify the information about a user that is synchronized by using SCIM.
+     * This topic provides an example on how to change the email address of the user whose ID is <code>u-00q8wbq42wiltcrk****</code> to <code>AliceLee@example.com</code>.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of UpdateUser  UpdateUserRequest
+     * @return UpdateUserResponse
      */
     @Override
     public CompletableFuture<UpdateUserResponse> updateUser(UpdateUserRequest request) {
@@ -1391,10 +1776,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If you call the [UpdateMFAAuthenticationSettings](~~450134~~) operation to set the MFAAuthenticationSettings parameter to `Byuser`, user-specific settings are applied. Then, you must call the UpdateUserMFAAuthenticationSettings operation to configure MFA for each user.
-      * By default, the MFAAuthenticationSettings parameter is set to `Enabled` for a new user.
-      * This topic provides an example on how to enable MFA for the user named `u-00q8wbq42wiltcrk****`.
-      *
+     * <b>description</b> :
+     * <p>If you call the <a href="https://help.aliyun.com/document_detail/450134.html">UpdateMFAAuthenticationSettings</a> operation to set the MFAAuthenticationSettings parameter to <code>Byuser</code>, user-specific settings are applied. Then, you must call the UpdateUserMFAAuthenticationSettings operation to configure MFA for each user.
+     * By default, the MFAAuthenticationSettings parameter is set to <code>Enabled</code> for a new user.
+     * This topic provides an example on how to enable MFA for the user named <code>u-00q8wbq42wiltcrk****</code>.</p>
+     * 
+     * @param request the request parameters of UpdateUserMFAAuthenticationSettings  UpdateUserMFAAuthenticationSettingsRequest
+     * @return UpdateUserMFAAuthenticationSettingsResponse
      */
     @Override
     public CompletableFuture<UpdateUserMFAAuthenticationSettingsResponse> updateUserMFAAuthenticationSettings(UpdateUserMFAAuthenticationSettingsRequest request) {
@@ -1410,6 +1798,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateUserProvisioning  UpdateUserProvisioningRequest
+     * @return UpdateUserProvisioningResponse
+     */
     @Override
     public CompletableFuture<UpdateUserProvisioningResponse> updateUserProvisioning(UpdateUserProvisioningRequest request) {
         try {
@@ -1424,6 +1816,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateUserProvisioningConfiguration  UpdateUserProvisioningConfigurationRequest
+     * @return UpdateUserProvisioningConfigurationResponse
+     */
     @Override
     public CompletableFuture<UpdateUserProvisioningConfigurationResponse> updateUserProvisioningConfiguration(UpdateUserProvisioningConfigurationRequest request) {
         try {
@@ -1439,8 +1835,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to change the status of the user whose ID is `u-00q8wbq42wiltcrk****` to Disabled. Users in the Disabled state cannot log on to the CloudSSO user portal.
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to change the status of the user whose ID is <code>u-00q8wbq42wiltcrk****</code> to Disabled. Users in the Disabled state cannot log on to the CloudSSO user portal.</p>
+     * 
+     * @param request the request parameters of UpdateUserStatus  UpdateUserStatusRequest
+     * @return UpdateUserStatusResponse
      */
     @Override
     public CompletableFuture<UpdateUserStatusResponse> updateUserStatus(UpdateUserStatusRequest request) {

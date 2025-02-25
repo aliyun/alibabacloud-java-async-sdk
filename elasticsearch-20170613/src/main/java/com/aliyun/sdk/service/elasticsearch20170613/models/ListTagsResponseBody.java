@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagsResponseBody} extends {@link TeaModel}
  *
  * <p>ListTagsResponseBody</p>
  */
 public class ListTagsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private ListTagsResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class ListTagsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The key of the tag.
+         * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +74,17 @@ public class ListTagsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTagsResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Result(Builder builder) {

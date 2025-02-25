@@ -1,52 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDevicesRequest} extends {@link RequestModel}
  *
  * <p>DescribeDevicesRequest</p>
  */
 public class DescribeDevicesRequest extends Request {
-    @Query
-    @NameInMap("AdDomain")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdDomain")
     private String adDomain;
 
-    @Query
-    @NameInMap("ClientType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientType;
 
-    @Query
-    @NameInMap("DeviceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceId")
     private String deviceId;
 
-    @Query
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @Query
-    @NameInMap("EndUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndUserId")
     private String endUserId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Region")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
-    @Query
-    @NameInMap("UserType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserType")
     private String userType;
 
     private DescribeDevicesRequest(Builder builder) {
@@ -167,7 +172,10 @@ public class DescribeDevicesRequest extends Request {
         } 
 
         /**
-         * The address of the Active Directory (AD) workspace.
+         * <p>The address of the Active Directory (AD) office network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xn--0zw****</p>
          */
         public Builder adDomain(String adDomain) {
             this.putQueryParameter("AdDomain", adDomain);
@@ -176,11 +184,16 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * The type of the Alibaba Cloud Workspace client.
-         * <p>
+         * <p>The type of the client.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>1: hardware client.</li>
+         * <li>2: software client.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   1: hardware client.
-         * *   2: software client.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder clientType(String clientType) {
             this.putQueryParameter("ClientType", clientType);
@@ -189,7 +202,10 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * The ID of the device.
+         * <p>The ID of the device. The serial number (SN) of the hardware client or the UUID of the software client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5F52817BE267A43C608D245070D2****</p>
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("DeviceId", deviceId);
@@ -198,7 +214,10 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * <p>The ID of the convenient office network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-jedbpr4sl9l37****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -207,7 +226,10 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * The ID of the convenience user to whom you want to bind the device.
+         * <p>The ID of the bound user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>moli</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -216,7 +238,10 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -225,7 +250,10 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -234,7 +262,10 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by WUYING Workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -243,11 +274,15 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * The type of the user account.
-         * <p>
+         * <p>The account type of the user.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>AD: enterprise AD account.</li>
+         * <li>SIMPLE: convenience account</li>
+         * </ul>
          * 
-         * *   SIMPLE: convenience account.
-         * *   AD: AD account.
+         * <strong>example:</strong>
+         * <p>SIMPLE</p>
          */
         public Builder userType(String userType) {
             this.putQueryParameter("UserType", userType);

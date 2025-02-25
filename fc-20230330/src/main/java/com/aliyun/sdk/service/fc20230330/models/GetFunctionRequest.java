@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFunctionRequest} extends {@link RequestModel}
  *
  * <p>GetFunctionRequest</p>
  */
 public class GetFunctionRequest extends Request {
-    @Path
-    @NameInMap("functionName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("functionName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String functionName;
 
-    @Query
-    @NameInMap("qualifier")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("qualifier")
     private String qualifier;
 
     private GetFunctionRequest(Builder builder) {
@@ -69,7 +69,11 @@ public class GetFunctionRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * <p>Ready</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-func</p>
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -78,7 +82,10 @@ public class GetFunctionRequest extends Request {
         }
 
         /**
-         * qualifier.
+         * <p>2023-03-10T10:10:10Z</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LATEST</p>
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);

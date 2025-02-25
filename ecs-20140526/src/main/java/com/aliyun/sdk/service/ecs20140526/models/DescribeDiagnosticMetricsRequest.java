@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiagnosticMetricsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDiagnosticMetricsRequest</p>
  */
 public class DescribeDiagnosticMetricsRequest extends Request {
-    @Host
-    @NameInMap("body")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("body")
     private String body;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("MetricIds")
-    private java.util.List < String > metricIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricIds")
+    private java.util.List<String> metricIds;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
     private DescribeDiagnosticMetricsRequest(Builder builder) {
@@ -78,7 +83,7 @@ public class DescribeDiagnosticMetricsRequest extends Request {
     /**
      * @return metricIds
      */
-    public java.util.List < String > getMetricIds() {
+    public java.util.List<String> getMetricIds() {
         return this.metricIds;
     }
 
@@ -106,7 +111,7 @@ public class DescribeDiagnosticMetricsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeDiagnosticMetricsRequest, Builder> {
         private String body; 
         private Integer maxResults; 
-        private java.util.List < String > metricIds; 
+        private java.util.List<String> metricIds; 
         private String nextToken; 
         private String regionId; 
         private String resourceType; 
@@ -135,7 +140,15 @@ public class DescribeDiagnosticMetricsRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The number of entries per page. Valid values: 1 to 100.</p>
+         * <p>Default value:</p>
+         * <ul>
+         * <li>If this parameter is left empty, the default value is 10.</li>
+         * <li>If you set this parameter to a value that is greater than 100, the default value is 100.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -144,22 +157,19 @@ public class DescribeDiagnosticMetricsRequest extends Request {
         }
 
         /**
-         * The ID of diagnostic metric.
+         * <p>The ID of diagnostic metrics.</p>
          */
-        public Builder metricIds(java.util.List < String > metricIds) {
+        public Builder metricIds(java.util.List<String> metricIds) {
             this.putQueryParameter("MetricIds", metricIds);
             this.metricIds = metricIds;
             return this;
         }
 
         /**
-         * The maximum number of entries to return on each page. Maximum value: 100.
-         * <p>
+         * <p>The pagination token that is used in the request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
          * 
-         * Default value:
-         * 
-         * *   If this parameter is left empty, the default value is 10.
-         * *   If this parameter is set to a value greater than 100, the default value is 100.
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -168,7 +178,11 @@ public class DescribeDiagnosticMetricsRequest extends Request {
         }
 
         /**
-         * The IDs of diagnostic metrics.
+         * <p>The region ID pf the diagnostic metric. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -177,7 +191,10 @@ public class DescribeDiagnosticMetricsRequest extends Request {
         }
 
         /**
-         * The query token. Set the value to the `NextToken` value returned in the last call to the DescribeDiagnosticMetrics operation. Leave this parameter empty the first time you call this operation.
+         * <p>The resource type supported by the diagnostic metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SparkOperatorInfo} extends {@link TeaModel}
  *
  * <p>SparkOperatorInfo</p>
  */
 public class SparkOperatorInfo extends TeaModel {
-    @NameInMap("MetricValue")
+    @com.aliyun.core.annotation.NameInMap("MetricValue")
     private Long metricValue;
 
-    @NameInMap("OperatorName")
+    @com.aliyun.core.annotation.NameInMap("OperatorName")
     private byte[] operatorName;
 
     private SparkOperatorInfo(Builder builder) {

@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnsRegionsRequest} extends {@link RequestModel}
  *
  * <p>DescribeEnsRegionsRequest</p>
  */
 public class DescribeEnsRegionsRequest extends Request {
-    @Query
-    @NameInMap("EnsRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnsRegionId")
     private String ensRegionId;
 
     private DescribeEnsRegionsRequest(Builder builder) {
@@ -54,7 +59,11 @@ public class DescribeEnsRegionsRequest extends Request {
         } 
 
         /**
-         * EnsRegionId.
+         * <p>The ID of the node.</p>
+         * <p>By default, all available node IDs are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-dalian-unicom</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);

@@ -1,125 +1,130 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDesktopGroupRequest} extends {@link RequestModel}
  *
  * <p>ModifyDesktopGroupRequest</p>
  */
 public class ModifyDesktopGroupRequest extends Request {
-    @Query
-    @NameInMap("AllowAutoSetup")
-    @Validation(maximum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllowAutoSetup")
+    @com.aliyun.core.annotation.Validation(maximum = 1)
     private Integer allowAutoSetup;
 
-    @Query
-    @NameInMap("AllowBufferCount")
-    @Validation(maximum = 1000)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllowBufferCount")
+    @com.aliyun.core.annotation.Validation(maximum = 1000)
     private Integer allowBufferCount;
 
-    @Query
-    @NameInMap("BindAmount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BindAmount")
     private Long bindAmount;
 
-    @Query
-    @NameInMap("BuyDesktopsCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BuyDesktopsCount")
     private Integer buyDesktopsCount;
 
-    @Query
-    @NameInMap("Classify")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Classify")
     private String classify;
 
-    @Query
-    @NameInMap("Comments")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comments")
     private String comments;
 
-    @Query
-    @NameInMap("ConnectDuration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectDuration")
     private Long connectDuration;
 
-    @Query
-    @NameInMap("DesktopGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String desktopGroupId;
 
-    @Query
-    @NameInMap("DesktopGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopGroupName")
     private String desktopGroupName;
 
-    @Query
-    @NameInMap("DisableSessionConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisableSessionConfig")
     private Boolean disableSessionConfig;
 
-    @Query
-    @NameInMap("FileSystemId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
     private String fileSystemId;
 
-    @Query
-    @NameInMap("IdleDisconnectDuration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdleDisconnectDuration")
     private Long idleDisconnectDuration;
 
-    @Query
-    @NameInMap("ImageId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
-    @Query
-    @NameInMap("KeepDuration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeepDuration")
     private Long keepDuration;
 
-    @Query
-    @NameInMap("LoadPolicy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadPolicy")
     private Long loadPolicy;
 
-    @Query
-    @NameInMap("MaxDesktopsCount")
-    @Validation(maximum = 1000)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxDesktopsCount")
+    @com.aliyun.core.annotation.Validation(maximum = 1000)
     private Integer maxDesktopsCount;
 
-    @Query
-    @NameInMap("MinDesktopsCount")
-    @Validation(maximum = 500)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinDesktopsCount")
+    @com.aliyun.core.annotation.Validation(maximum = 500)
     private Integer minDesktopsCount;
 
-    @Query
-    @NameInMap("OwnBundleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnBundleId")
     private String ownBundleId;
 
-    @Query
-    @NameInMap("PolicyGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyGroupId")
     private String policyGroupId;
 
-    @Query
-    @NameInMap("PolicyGroupIds")
-    private java.util.List < String > policyGroupIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyGroupIds")
+    private java.util.List<String> policyGroupIds;
 
-    @Query
-    @NameInMap("ProfileFollowSwitch")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProfileFollowSwitch")
     private Boolean profileFollowSwitch;
 
-    @Query
-    @NameInMap("RatioThreshold")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RatioThreshold")
     private Float ratioThreshold;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResetType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResetType")
     private Long resetType;
 
-    @Query
-    @NameInMap("ScaleStrategyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScaleStrategyId")
     private String scaleStrategyId;
 
-    @Query
-    @NameInMap("StopDuration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StopDuration")
     private Long stopDuration;
 
     private ModifyDesktopGroupRequest(Builder builder) {
@@ -301,7 +306,7 @@ public class ModifyDesktopGroupRequest extends Request {
     /**
      * @return policyGroupIds
      */
-    public java.util.List < String > getPolicyGroupIds() {
+    public java.util.List<String> getPolicyGroupIds() {
         return this.policyGroupIds;
     }
 
@@ -367,7 +372,7 @@ public class ModifyDesktopGroupRequest extends Request {
         private Integer minDesktopsCount; 
         private String ownBundleId; 
         private String policyGroupId; 
-        private java.util.List < String > policyGroupIds; 
+        private java.util.List<String> policyGroupIds; 
         private Boolean profileFollowSwitch; 
         private Float ratioThreshold; 
         private String regionId; 
@@ -410,11 +415,15 @@ public class ModifyDesktopGroupRequest extends Request {
         } 
 
         /**
-         * Specifies whether to automatically create cloud desktops in the desktop group if you set the billing method to subscription. If you set the ChargeType parameter to PrePaid, this parameter is required. Valid values:
-         * <p>
+         * <p>Specifies whether cloud computers can be automatically created in the subscription cloud computer pool. This parameter takes effect and is required only if you set <code>ChargeType</code> to <code>PrePaid</code>.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>0: false</li>
+         * <li>1: true</li>
+         * </ul>
          * 
-         * *   0: does not create cloud desktops in the desktop group.
-         * *   1: creates cloud desktops in the desktop group.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder allowAutoSetup(Integer allowAutoSetup) {
             this.putQueryParameter("AllowAutoSetup", allowAutoSetup);
@@ -423,7 +432,17 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to reserve cloud desktops if you set the billing method to pay-as-you-go. If you set the ChargeType parameter to PostPaid, this parameter is required. Valid values: 0: does not reserve cloud desktops. N: reserves N cloud desktops. Valid values of N: 1 to the value of the MaxDesktopsCount parameter.
+         * <p>The number of cloud computers that can be reserved in the pay-as-you-go cloud computer pool. This parameter takes effect and is required only if you set <code>ChargeType</code> to <code>PostPaid</code>. Valid values:</p>
+         * <ul>
+         * <li>0: does not allow the system to reserve cloud computers.</li>
+         * <li>N: allows the system to reserve N cloud computers (1≤ N ≤ 100).</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you set this parameter to 0, the system must create and start cloud computers and then assign the cloud computers to end users when the end users request cloud computers. This process is time-consuming. To improve user experience, we recommend that you reserve a specific number of cloud computers.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder allowBufferCount(Integer allowBufferCount) {
             this.putQueryParameter("AllowBufferCount", allowBufferCount);
@@ -432,7 +451,13 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * The maximum number of sessions per cloud desktop in the multi-session desktop group.
+         * <p>The number of concurrent sessions that is allowed for each cloud computer in a multi-session cloud computer pool.</p>
+         * <blockquote>
+         * <p> This parameter is unavailable.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder bindAmount(Long bindAmount) {
             this.putQueryParameter("BindAmount", bindAmount);
@@ -441,7 +466,13 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * The number of cloud desktops to purchase. Valid values: 0 to 200.
+         * <ul>
+         * <li>This parameter has different meanings based on the billing method of the cloud computer pool. For a subscription pool, this parameter specifies the number of cloud computers to purchase in the pool. Valid values: 0 to 200.</li>
+         * <li>For a pay-as-you-go pool, this parameter specifies the minimum number of cloud computers to create in the pool. Default value: 1. Valid values: 0 to <code>MaxDesktopsCount</code>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder buyDesktopsCount(Integer buyDesktopsCount) {
             this.putQueryParameter("BuyDesktopsCount", buyDesktopsCount);
@@ -450,7 +481,29 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * The classification of the cloud desktop pool.
+         * <p>The role that uses the cloud computer pool.</p>
+         * <blockquote>
+         * <p> This parameter is unavailable.</p>
+         * </blockquote>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>teacher</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>student</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>teacher</p>
          */
         public Builder classify(String classify) {
             this.putQueryParameter("Classify", classify);
@@ -459,7 +512,10 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * The remarks on the desktop group.
+         * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder comments(String comments) {
             this.putQueryParameter("Comments", comments);
@@ -468,7 +524,10 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * The maximum duration of the session. Unit: milliseconds.
+         * <p>The maximum period of time during which the session is connected. When the specified maximum period of time is reached, the session is automatically disconnected. Unit: milliseconds. Valid values: 900000 to 345600000. That is, the session can be connected for 15 to 5,760 minutes (4 days).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600000</p>
          */
         public Builder connectDuration(Long connectDuration) {
             this.putQueryParameter("ConnectDuration", connectDuration);
@@ -477,7 +536,11 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * The ID of the desktop group.
+         * <p>The ID of the cloud computer pool.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dg-2i8qxpv6t1a03****</p>
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -486,7 +549,10 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * The name of the desktop group.
+         * <p>The name of the cloud computer pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desktopGroupName1</p>
          */
         public Builder desktopGroupName(String desktopGroupName) {
             this.putQueryParameter("DesktopGroupName", desktopGroupName);
@@ -495,7 +561,10 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to disable session management.
+         * <p>Specifies whether to disable session management.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder disableSessionConfig(Boolean disableSessionConfig) {
             this.putQueryParameter("DisableSessionConfig", disableSessionConfig);
@@ -504,7 +573,13 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * The ID of the Apsara File Storage NAS (NAS) file system.
+         * <p>The ID of the File Storage NAS (NAS) file system for the user data roaming feature.</p>
+         * <blockquote>
+         * <p> This parameter is unavailable.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>04f314****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -513,7 +588,14 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * The maximum duration of the idle session. Unit: milliseconds.
+         * <p>After an end user connects to a cloud computer, the session is established. If the system does not detect inputs from the keyboard or mouse within the specified period of time, the session is closed. Unit: milliseconds. Valid values: 360000 to 3600000 (6 minutes to 60 minutes)</p>
+         * <p>End users can receive a prompt to save data before sessions are disconnected. The system sends the prompt 30 seconds before the specified period of time is reached. To prevent data loss, end users must save the data of the sessions.</p>
+         * <blockquote>
+         * <p> This parameter is suitable only for cloud computers whose image version is v1.0.2 or later.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>120000</p>
          */
         public Builder idleDisconnectDuration(Long idleDisconnectDuration) {
             this.putQueryParameter("IdleDisconnectDuration", idleDisconnectDuration);
@@ -522,7 +604,10 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * The IDs of the images.
+         * <p>The IDs of the images.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desktopimage-windows-server-2016-64-ch</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -531,7 +616,11 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * The retention period of cloud desktops in the desktop group after end users disconnect from the desktops. Unit: ms.
+         * <p>The retention period of a session after it is disconnected. Unit: milliseconds. Valid values: 180000 to 345600000. That is, the session can be retained for 3 to 5,760 minutes (4 days) after it is disconnected. If you set this parameter to 0, the session is permanently retained after it is disconnected.</p>
+         * <p>When a session is disconnected, take note of the following situations: If an end user does not resume the session within the specified duration, the session is closed and all unsaved data is cleared. If the end user resumes the session within the specified duration, the end user can continue to access data of the session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder keepDuration(Long keepDuration) {
             this.putQueryParameter("KeepDuration", keepDuration);
@@ -540,7 +629,18 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * The load balancing policy of the multi-session desktop group.
+         * <p>The load balancing policy of the multi-session cloud computer pool.</p>
+         * <blockquote>
+         * <p> This parameter is unavailable.</p>
+         * </blockquote>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>0: depth-first</li>
+         * <li>1: breadth-first</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder loadPolicy(Long loadPolicy) {
             this.putQueryParameter("LoadPolicy", loadPolicy);
@@ -549,7 +649,10 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * The maximum number of cloud desktops that the desktop group can contain. Valid values: 0 to 200.
+         * <p>The maximum number of cloud computers that can be housed in the pay-as-you-go cloud computer pool. Valid values: 0 to 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxDesktopsCount(Integer maxDesktopsCount) {
             this.putQueryParameter("MaxDesktopsCount", maxDesktopsCount);
@@ -558,7 +661,10 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * The minimum number of cloud desktops that must be contained in the desktop group if you set the billing method to subscription. If you set the ChargeType parameter to PrePaid, this parameter is required. Valid values: 0 to the value of MaxDesktopsCount. Default value: 1.
+         * <p>The maximum number of cloud computers that can be automatically created in the subscription cloud computer pool. This parameter takes effect and is required only if you set <code>ChargeType</code> to <code>PrePaid</code>. Default value: 1. Valid values: 0 to <code>MaxDesktopsCount</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder minDesktopsCount(Integer minDesktopsCount) {
             this.putQueryParameter("MinDesktopsCount", minDesktopsCount);
@@ -567,7 +673,10 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * The ID of the cloud desktop template.
+         * <p>The ID of the cloud computer template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b-7t275tpgjueeu****</p>
          */
         public Builder ownBundleId(String ownBundleId) {
             this.putQueryParameter("OwnBundleId", ownBundleId);
@@ -576,7 +685,10 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * The ID of the security policy.
+         * <p>The ID of the security policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pg-53iyi2aar0nd6****</p>
          */
         public Builder policyGroupId(String policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);
@@ -585,16 +697,22 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * The IDs of policy groups.
+         * <p>The IDs of policy groups.</p>
          */
-        public Builder policyGroupIds(java.util.List < String > policyGroupIds) {
+        public Builder policyGroupIds(java.util.List<String> policyGroupIds) {
             this.putQueryParameter("PolicyGroupIds", policyGroupIds);
             this.policyGroupIds = policyGroupIds;
             return this;
         }
 
         /**
-         * Specifies whether to enable data roaming.
+         * <p>Specifies whether to enable user data roaming.</p>
+         * <blockquote>
+         * <p> This parameter is unavailable.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder profileFollowSwitch(Boolean profileFollowSwitch) {
             this.putQueryParameter("ProfileFollowSwitch", profileFollowSwitch);
@@ -603,7 +721,15 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * The session usage threshold for the multi-session desktop group that has an auto scaling policy in effect.
+         * <p>The threshold for the ratio of connected sessions. This parameter indicates the condition that triggers auto scaling in a multi-session cloud computer pool. The ratio of connected sessions IS calculated by using the following formula:</p>
+         * <p><code>Ratio of connected sessions = Number of connected sessions/(Total number of cloud computers × Maximum number of sessions allowed for each cloud computer) × 100%</code></p>
+         * <p>If the ratio of connected sessions is greater than the specified value, new cloud computers are created. If the ratio of connected sessions is smaller than the specified value, idle cloud computers are deleted.</p>
+         * <blockquote>
+         * <p> This parameter is unavailable.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
          */
         public Builder ratioThreshold(Float ratioThreshold) {
             this.putQueryParameter("RatioThreshold", ratioThreshold);
@@ -612,7 +738,11 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the desktop group.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -621,7 +751,21 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * Specifies which type of disk to reset for cloud desktops in the desktop group.
+         * <p>The disk reset type of cloud computers.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>0: does not reset disks.</p>
+         * </li>
+         * <li><p>1: resets only the system disks.</p>
+         * </li>
+         * <li><p>2: resets only the user disks.</p>
+         * </li>
+         * <li><p>3: resets the system disks and user disks.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder resetType(Long resetType) {
             this.putQueryParameter("ResetType", resetType);
@@ -630,10 +774,13 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * The ID of the scaling policy group.
-         * <p>
+         * <p>The ID of the scaling policy group.</p>
+         * <blockquote>
+         * <p> This parameter is unavailable.</p>
+         * </blockquote>
          * 
-         * >  This parameter is unavailable.
+         * <strong>example:</strong>
+         * <p>s-kakowkdl****</p>
          */
         public Builder scaleStrategyId(String scaleStrategyId) {
             this.putQueryParameter("ScaleStrategyId", scaleStrategyId);
@@ -642,7 +789,10 @@ public class ModifyDesktopGroupRequest extends Request {
         }
 
         /**
-         * The duration before an idle cloud desktop is stopped. Unit: milliseconds.
+         * <p>The period of time before the idle cloud computer enters the Stopped state. When the specified period of time is reached, the cloud computer is automatically stopped. If an end user connects to the stopped cloud computer, the cloud computer automatically starts. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>180000</p>
          */
         public Builder stopDuration(Long stopDuration) {
             this.putQueryParameter("StopDuration", stopDuration);

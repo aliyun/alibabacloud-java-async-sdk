@@ -1,36 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSparkAppLogRequest} extends {@link RequestModel}
  *
  * <p>GetSparkAppLogRequest</p>
  */
 public class GetSparkAppLogRequest extends Request {
-    @Body
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @Body
-    @NameInMap("LogLength")
-    @Validation(maximum = 500)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LogLength")
+    @com.aliyun.core.annotation.Validation(maximum = 500)
     private Long logLength;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private Integer pageSize;
 
     private GetSparkAppLogRequest(Builder builder) {
         super(builder);
         this.appId = builder.appId;
         this.DBClusterId = builder.DBClusterId;
         this.logLength = builder.logLength;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
     }
 
     public static Builder builder() {
@@ -67,10 +82,26 @@ public class GetSparkAppLogRequest extends Request {
         return this.logLength;
     }
 
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
     public static final class Builder extends Request.Builder<GetSparkAppLogRequest, Builder> {
         private String appId; 
         private String DBClusterId; 
         private Long logLength; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
 
         private Builder() {
             super();
@@ -81,13 +112,19 @@ public class GetSparkAppLogRequest extends Request {
             this.appId = request.appId;
             this.DBClusterId = request.DBClusterId;
             this.logLength = request.logLength;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**
-         * The Spark application ID.
-         * <p>
+         * <p>The Spark application ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/612475.html">ListSparkApps</a> operation to query the Spark application ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [ListSparkApps](~~612475~~) operation to query the Spark application ID.
+         * <strong>example:</strong>
+         * <p>s202206061441hz22a35ab000****</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -96,7 +133,13 @@ public class GetSparkAppLogRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-2ze6fl8ud7t***</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -105,11 +148,38 @@ public class GetSparkAppLogRequest extends Request {
         }
 
         /**
-         * The number of log entries to return. Valid values: 1 to 500. Default value: 300.
+         * <p>The number of log entries to return. Valid values: 1 to 500. Default value: 300.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder logLength(Long logLength) {
             this.putBodyParameter("LogLength", logLength);
             this.logLength = logLength;
+            return this;
+        }
+
+        /**
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
             return this;
         }
 

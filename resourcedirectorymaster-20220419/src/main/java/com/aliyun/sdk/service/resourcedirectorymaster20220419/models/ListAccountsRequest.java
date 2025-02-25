@@ -1,40 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAccountsRequest} extends {@link RequestModel}
  *
  * <p>ListAccountsRequest</p>
  */
 public class ListAccountsRequest extends Request {
-    @Query
-    @NameInMap("IncludeTags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeTags")
     private Boolean includeTags;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("QueryKeyword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryKeyword")
     private String queryKeyword;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private ListAccountsRequest(Builder builder) {
         super(builder);
         this.includeTags = builder.includeTags;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.queryKeyword = builder.queryKeyword;
@@ -62,6 +77,20 @@ public class ListAccountsRequest extends Request {
     }
 
     /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -85,16 +114,18 @@ public class ListAccountsRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<ListAccountsRequest, Builder> {
         private Boolean includeTags; 
+        private Integer maxResults; 
+        private String nextToken; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String queryKeyword; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -103,6 +134,8 @@ public class ListAccountsRequest extends Request {
         private Builder(ListAccountsRequest request) {
             super(request);
             this.includeTags = request.includeTags;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.queryKeyword = request.queryKeyword;
@@ -110,10 +143,14 @@ public class ListAccountsRequest extends Request {
         } 
 
         /**
-         * Specifies whether to return the information of tags. Valid values:
-         * <p>
+         * <p>Specifies whether to return information about tags. Valid values:</p>
+         * <ul>
+         * <li>false (default value)</li>
+         * <li>true</li>
+         * </ul>
          * 
-         * false (default value) true
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includeTags(Boolean includeTags) {
             this.putQueryParameter("IncludeTags", includeTags);
@@ -122,10 +159,29 @@ public class ListAccountsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
-         * <p>
+         * MaxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * <p>The number of the page to return.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -134,10 +190,11 @@ public class ListAccountsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Valid values: 1 to 100. Default value: 10.</p>
          * 
-         * Valid values: 1 to 100. Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -146,10 +203,11 @@ public class ListAccountsRequest extends Request {
         }
 
         /**
-         * The keyword used for the query, such as the display name of a member.
-         * <p>
+         * <p>The keyword used for the query, such as the display name of a member.</p>
+         * <p>Fuzzy match is supported.</p>
          * 
-         * Fuzzy match is supported.
+         * <strong>example:</strong>
+         * <p>Advance</p>
          */
         public Builder queryKeyword(String queryKeyword) {
             this.putQueryParameter("QueryKeyword", queryKeyword);
@@ -158,9 +216,9 @@ public class ListAccountsRequest extends Request {
         }
 
         /**
-         * The tags. This parameter specifies a filter condition.
+         * <p>The tags. This parameter specifies a filter condition.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -173,11 +231,17 @@ public class ListAccountsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListAccountsRequest} extends {@link TeaModel}
+     *
+     * <p>ListAccountsRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -212,7 +276,10 @@ public class ListAccountsRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag_key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -220,7 +287,10 @@ public class ListAccountsRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag_value</p>
              */
             public Builder value(String value) {
                 this.value = value;

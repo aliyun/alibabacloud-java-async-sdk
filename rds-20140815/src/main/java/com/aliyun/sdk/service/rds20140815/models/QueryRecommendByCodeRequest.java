@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryRecommendByCodeRequest} extends {@link RequestModel}
  *
  * <p>QueryRecommendByCodeRequest</p>
  */
 public class QueryRecommendByCodeRequest extends Request {
-    @Query
-    @NameInMap("Code")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Code")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String code;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private String resourceOwnerId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
 
     private QueryRecommendByCodeRequest(Builder builder) {
         super(builder);
@@ -86,7 +91,7 @@ public class QueryRecommendByCodeRequest extends Request {
     /**
      * @return resourceOwnerId
      */
-    public String getResourceOwnerId() {
+    public Long getResourceOwnerId() {
         return this.resourceOwnerId;
     }
 
@@ -95,7 +100,7 @@ public class QueryRecommendByCodeRequest extends Request {
         private String ownerId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
-        private String resourceOwnerId; 
+        private Long resourceOwnerId; 
 
         private Builder() {
             super();
@@ -111,7 +116,11 @@ public class QueryRecommendByCodeRequest extends Request {
         } 
 
         /**
-         * The code.
+         * <p>The code.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds_recommend</p>
          */
         public Builder code(String code) {
             this.putQueryParameter("Code", code);
@@ -129,7 +138,10 @@ public class QueryRecommendByCodeRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -149,7 +161,7 @@ public class QueryRecommendByCodeRequest extends Request {
         /**
          * ResourceOwnerId.
          */
-        public Builder resourceOwnerId(String resourceOwnerId) {
+        public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
             return this;

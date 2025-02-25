@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiagnosisSQLInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDiagnosisSQLInfoResponseBody</p>
  */
 public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
-    @NameInMap("DiagnosisSQLInfo")
+    @com.aliyun.core.annotation.NameInMap("DiagnosisSQLInfo")
     private String diagnosisSQLInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StageInfos")
-    private java.util.List < StageInfos> stageInfos;
+    @com.aliyun.core.annotation.NameInMap("StageInfos")
+    private java.util.List<StageInfos> stageInfos;
 
     private DescribeDiagnosisSQLInfoResponseBody(Builder builder) {
         this.diagnosisSQLInfo = builder.diagnosisSQLInfo;
@@ -52,17 +57,17 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
     /**
      * @return stageInfos
      */
-    public java.util.List < StageInfos> getStageInfos() {
+    public java.util.List<StageInfos> getStageInfos() {
         return this.stageInfos;
     }
 
     public static final class Builder {
         private String diagnosisSQLInfo; 
         private String requestId; 
-        private java.util.List < StageInfos> stageInfos; 
+        private java.util.List<StageInfos> stageInfos; 
 
         /**
-         * DiagnosisSQLInfo.
+         * <p>The queried execution information, including the SQL statement, statistics, execution plan, and operator information.</p>
          */
         public Builder diagnosisSQLInfo(String diagnosisSQLInfo) {
             this.diagnosisSQLInfo = diagnosisSQLInfo;
@@ -70,7 +75,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,9 +86,9 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         }
 
         /**
-         * StageInfos.
+         * <p>The queried execution information by stage.</p>
          */
-        public Builder stageInfos(java.util.List < StageInfos> stageInfos) {
+        public Builder stageInfos(java.util.List<StageInfos> stageInfos) {
             this.stageInfos = stageInfos;
             return this;
         }
@@ -91,32 +99,38 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDiagnosisSQLInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDiagnosisSQLInfoResponseBody</p>
+     */
     public static class StageInfos extends TeaModel {
-        @NameInMap("InputDataSize")
+        @com.aliyun.core.annotation.NameInMap("InputDataSize")
         private Long inputDataSize;
 
-        @NameInMap("InputRows")
+        @com.aliyun.core.annotation.NameInMap("InputRows")
         private Long inputRows;
 
-        @NameInMap("OperatorCost")
+        @com.aliyun.core.annotation.NameInMap("OperatorCost")
         private Long operatorCost;
 
-        @NameInMap("OutputDataSize")
+        @com.aliyun.core.annotation.NameInMap("OutputDataSize")
         private Long outputDataSize;
 
-        @NameInMap("OutputRows")
+        @com.aliyun.core.annotation.NameInMap("OutputRows")
         private Long outputRows;
 
-        @NameInMap("PeakMemory")
+        @com.aliyun.core.annotation.NameInMap("PeakMemory")
         private Long peakMemory;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private Double progress;
 
-        @NameInMap("StageId")
+        @com.aliyun.core.annotation.NameInMap("StageId")
         private String stageId;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private StageInfos(Builder builder) {
@@ -214,7 +228,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * InputDataSize.
+             * <p>The total amount of input data in the stage. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2341</p>
              */
             public Builder inputDataSize(Long inputDataSize) {
                 this.inputDataSize = inputDataSize;
@@ -222,7 +239,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * InputRows.
+             * <p>The total number of input rows in the stage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2341</p>
              */
             public Builder inputRows(Long inputRows) {
                 this.inputRows = inputRows;
@@ -230,7 +250,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorCost.
+             * <p>The total amount of time consumed by all operators in the stage. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2341</p>
              */
             public Builder operatorCost(Long operatorCost) {
                 this.operatorCost = operatorCost;
@@ -238,7 +261,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * OutputDataSize.
+             * <p>The total amount of output data in the stage. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2341</p>
              */
             public Builder outputDataSize(Long outputDataSize) {
                 this.outputDataSize = outputDataSize;
@@ -246,7 +272,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * OutputRows.
+             * <p>The total number of output rows in the stage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2341</p>
              */
             public Builder outputRows(Long outputRows) {
                 this.outputRows = outputRows;
@@ -254,7 +283,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PeakMemory.
+             * <p>The total peak memory of the stage. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2341</p>
              */
             public Builder peakMemory(Long peakMemory) {
                 this.peakMemory = peakMemory;
@@ -262,7 +294,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * <p>The execution progress of the stage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.3</p>
              */
             public Builder progress(Double progress) {
                 this.progress = progress;
@@ -270,7 +305,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StageID。
+             * <p>The stage ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Stage[26]</p>
              */
             public Builder stageId(String stageId) {
                 this.stageId = stageId;
@@ -278,7 +316,10 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>The state of the stage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder state(String state) {
                 this.state = state;

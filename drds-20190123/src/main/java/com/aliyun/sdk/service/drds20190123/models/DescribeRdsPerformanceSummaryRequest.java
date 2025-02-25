@@ -76,15 +76,15 @@ public class DescribeRdsPerformanceSummaryRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRdsPerformanceSummaryRequest response) {
-            super(response);
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.rdsInstanceId = response.rdsInstanceId;
-            this.regionId = response.regionId;
+        private Builder(DescribeRdsPerformanceSummaryRequest request) {
+            super(request);
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.rdsInstanceId = request.rdsInstanceId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * DrdsInstanceId.
+         * The ID of a DRDS instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -102,7 +102,7 @@ public class DescribeRdsPerformanceSummaryRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the streaming domain resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

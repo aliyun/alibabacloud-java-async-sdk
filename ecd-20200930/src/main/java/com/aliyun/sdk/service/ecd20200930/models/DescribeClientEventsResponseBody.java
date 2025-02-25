@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClientEventsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeClientEventsResponseBody</p>
  */
 public class DescribeClientEventsResponseBody extends TeaModel {
-    @NameInMap("Events")
-    private java.util.List < Events> events;
+    @com.aliyun.core.annotation.NameInMap("Events")
+    private java.util.List<Events> events;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeClientEventsResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
     /**
      * @return events
      */
-    public java.util.List < Events> getEvents() {
+    public java.util.List<Events> getEvents() {
         return this.events;
     }
 
@@ -57,20 +62,23 @@ public class DescribeClientEventsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Events> events; 
+        private java.util.List<Events> events; 
         private String nextToken; 
         private String requestId; 
 
         /**
-         * The information about the regular user that connects to the cloud desktop from the EDS client. The information can be the RAM user ID or AD username.
+         * <p>The information about the events of an end user.</p>
          */
-        public Builder events(java.util.List < Events> events) {
+        public Builder events(java.util.List<Events> events) {
             this.events = events;
             return this;
         }
 
         /**
-         * The ID of the region.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +86,10 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the directory.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28A40F12-F340-442B-A35F-46EF6A03227B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,71 +102,80 @@ public class DescribeClientEventsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClientEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClientEventsResponseBody</p>
+     */
     public static class Events extends TeaModel {
-        @NameInMap("AliUid")
+        @com.aliyun.core.annotation.NameInMap("AliUid")
         private String aliUid;
 
-        @NameInMap("BytesReceived")
+        @com.aliyun.core.annotation.NameInMap("BytesReceived")
         private String bytesReceived;
 
-        @NameInMap("BytesSend")
+        @com.aliyun.core.annotation.NameInMap("BytesSend")
         private String bytesSend;
 
-        @NameInMap("ClientIp")
+        @com.aliyun.core.annotation.NameInMap("ClientIp")
         private String clientIp;
 
-        @NameInMap("ClientOS")
+        @com.aliyun.core.annotation.NameInMap("ClientOS")
         private String clientOS;
 
-        @NameInMap("ClientVersion")
+        @com.aliyun.core.annotation.NameInMap("ClientVersion")
         private String clientVersion;
 
-        @NameInMap("DesktopGroupId")
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("DesktopGroupId")
         private String desktopGroupId;
 
-        @NameInMap("DesktopGroupName")
+        @com.aliyun.core.annotation.NameInMap("DesktopGroupName")
         private String desktopGroupName;
 
-        @NameInMap("DesktopId")
+        @com.aliyun.core.annotation.NameInMap("DesktopId")
         private String desktopId;
 
-        @NameInMap("DesktopIp")
+        @com.aliyun.core.annotation.NameInMap("DesktopIp")
         private String desktopIp;
 
-        @NameInMap("DesktopName")
+        @com.aliyun.core.annotation.NameInMap("DesktopName")
         private String desktopName;
 
-        @NameInMap("DirectoryId")
+        @com.aliyun.core.annotation.NameInMap("DirectoryId")
         private String directoryId;
 
-        @NameInMap("DirectoryType")
+        @com.aliyun.core.annotation.NameInMap("DirectoryType")
         private String directoryType;
 
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
-        @NameInMap("EventId")
+        @com.aliyun.core.annotation.NameInMap("EventId")
         private String eventId;
 
-        @NameInMap("EventTime")
+        @com.aliyun.core.annotation.NameInMap("EventTime")
         private String eventTime;
 
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
 
-        @NameInMap("OfficeSiteId")
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
         private String officeSiteId;
 
-        @NameInMap("OfficeSiteName")
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteName")
         private String officeSiteName;
 
-        @NameInMap("OfficeSiteType")
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteType")
         private String officeSiteType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Events(Builder builder) {
@@ -165,6 +185,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             this.clientIp = builder.clientIp;
             this.clientOS = builder.clientOS;
             this.clientVersion = builder.clientVersion;
+            this.description = builder.description;
             this.desktopGroupId = builder.desktopGroupId;
             this.desktopGroupName = builder.desktopGroupName;
             this.desktopId = builder.desktopId;
@@ -231,6 +252,13 @@ public class DescribeClientEventsResponseBody extends TeaModel {
          */
         public String getClientVersion() {
             return this.clientVersion;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
         }
 
         /**
@@ -352,6 +380,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             private String clientIp; 
             private String clientOS; 
             private String clientVersion; 
+            private String description; 
             private String desktopGroupId; 
             private String desktopGroupName; 
             private String desktopId; 
@@ -370,7 +399,10 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The name of the cloud desktop.
+             * <p>The ID of the Alibaba Cloud account with which the event is associated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>112259558861****</p>
              */
             public Builder aliUid(String aliUid) {
                 this.aliUid = aliUid;
@@ -378,7 +410,10 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cloud desktop.
+             * <p>The number of bytes that are received.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8665</p>
              */
             public Builder bytesReceived(String bytesReceived) {
                 this.bytesReceived = bytesReceived;
@@ -386,7 +421,10 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the regular user that connects to the cloud desktop from the EDS client. The information can be the RAM user ID or Active Directory (AD) username. If you do not specify a value for this parameter, events of all regular users in the specified region are queried.
+             * <p>The number of bytes that are sent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2345</p>
              */
             public Builder bytesSend(String bytesSend) {
                 this.bytesSend = bytesSend;
@@ -394,7 +432,10 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the cloud desktop. If you do not specify a value for this parameter, events of all cloud desktops in the specified region are queried.
+             * <p>The IP address of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.68.<em>.</em></p>
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -402,7 +443,10 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cloud desktop.
+             * <p>The OS that the client runs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Darwin 17.7.0 x64</p>
              */
             public Builder clientOS(String clientOS) {
                 this.clientOS = clientOS;
@@ -410,7 +454,10 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * DescribeClientEvents
+             * <p>The client version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.4 202012021700</p>
              */
             public Builder clientVersion(String clientVersion) {
                 this.clientVersion = clientVersion;
@@ -418,7 +465,18 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopGroupId.
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * <p>The desktop group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dg-kadkdfaf****</p>
              */
             public Builder desktopGroupId(String desktopGroupId) {
                 this.desktopGroupId = desktopGroupId;
@@ -426,7 +484,10 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopGroupName.
+             * <p>The desktop group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testName</p>
              */
             public Builder desktopGroupName(String desktopGroupName) {
                 this.desktopGroupName = desktopGroupName;
@@ -434,7 +495,10 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the desktop group.
+             * <p>The cloud desktop ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-8fupvkhg0aayu****</p>
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -442,7 +506,10 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the workspace.
+             * <p>The IP address of the cloud desktop.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.10.<em>.</em></p>
              */
             public Builder desktopIp(String desktopIp) {
                 this.desktopIp = desktopIp;
@@ -450,7 +517,10 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopName.
+             * <p>The cloud desktop name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -458,7 +528,10 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the event.
+             * <p>The ID of the directory to which the cloud desktop belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou+dir-bh77qa8nmjot4****</p>
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -466,7 +539,10 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of event.
+             * <p>The directory type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RAM</p>
              */
             public Builder directoryType(String directoryType) {
                 this.directoryType = directoryType;
@@ -474,10 +550,10 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
-             * <p>
+             * <p>The information about the end user that connects to the cloud desktop from the EDS client. The information can be a RAM user ID or an AD username.</p>
              * 
-             * If you do not specify a value for this parameter, the current time is used.
+             * <strong>example:</strong>
+             * <p>28961708130834****</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -485,18 +561,10 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of event that you want to query. Valid values:
-             * <p>
+             * <p>The event ID.</p>
              * 
-             * *   DESKTOP_CONNECT: The desktop session is established.
-             * *   DESKTOP_DISCONNECT: The desktop session is disconnected.
-             * *   DESKTOP_REBOOT: The cloud desktop is restarted.
-             * *   CLIENT_AD_LOGIN: The AD user logs on to the client.
-             * *   GET_CONNECTION_TICKET: The request to connect to the cloud desktop is sent.
-             * *   DESKTOP_START: The cloud desktop is started.
-             * *   DESKTOP_STOP: The cloud desktop is stopped.
-             * 
-             * If you do not specify a value for this parameter, events of all types are queried.
+             * <strong>example:</strong>
+             * <p>5651188b-3070-d1cc-5311-75753d59****</p>
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -504,10 +572,10 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
-             * <p>
+             * <p>The time when the event occurred.</p>
              * 
-             * If you do not specify a value for this parameter, all events that occurred before the point in time that you specify for `EndTime` are queried.
+             * <strong>example:</strong>
+             * <p>2020-11-30T06:32:31Z</p>
              */
             public Builder eventTime(String eventTime) {
                 this.eventTime = eventTime;
@@ -515,7 +583,10 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The query token. Set the value to the NextToken value that is returned from the last call to the DescribeClientEvents operation.
+             * <p>The event type. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DESKTOP_DISCONNECT</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -523,7 +594,10 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the event.
+             * <p>The ID of the workspace to which the cloud desktop belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou+dir-bh77qa8nmjot4****</p>
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
@@ -531,7 +605,10 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * OfficeSiteName.
+             * <p>The workspace name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder officeSiteName(String officeSiteName) {
                 this.officeSiteName = officeSiteName;
@@ -539,7 +616,26 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * <p>The account type of the workspace.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>SIMPLE: convenience account</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>AD_CONNECTOR: enterprise AD account</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- --></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SIMPLE</p>
              */
             public Builder officeSiteType(String officeSiteType) {
                 this.officeSiteType = officeSiteType;
@@ -547,7 +643,10 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cloud desktop. If you do not specify a value for this parameter, events of all cloud desktops in the specified region are queried.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -555,7 +654,14 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of bytes that are sent.
+             * <p>The status of the event. If you set the EventType parameter to <code>DESKTOP_DISCONNECT</code> or <code>GET_CONNECTION_TICKET</code>, this parameter is returned. Valid values:</p>
+             * <ul>
+             * <li>200. The value indicates that the request is successful.</li>
+             * <li>An error message. The value indicates that the request failed. Example: FailedToGetConnectionTicket.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder status(String status) {
                 this.status = status;

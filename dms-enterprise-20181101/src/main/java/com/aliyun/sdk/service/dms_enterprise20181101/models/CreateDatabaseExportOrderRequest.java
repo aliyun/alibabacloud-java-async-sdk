@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDatabaseExportOrderRequest} extends {@link RequestModel}
  *
  * <p>CreateDatabaseExportOrderRequest</p>
  */
 public class CreateDatabaseExportOrderRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AttachmentKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AttachmentKey")
     private String attachmentKey;
 
-    @Query
-    @NameInMap("Comment")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comment")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String comment;
 
-    @Query
-    @NameInMap("ParentId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentId")
     private Long parentId;
 
-    @Query
-    @NameInMap("PluginParam")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PluginParam")
+    @com.aliyun.core.annotation.Validation(required = true)
     private PluginParam pluginParam;
 
-    @Query
-    @NameInMap("RelatedUserList")
-    private java.util.List < Long > relatedUserList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelatedUserList")
+    private java.util.List<Long> relatedUserList;
 
-    @Query
-    @NameInMap("Tid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tid")
     private Long tid;
 
     private CreateDatabaseExportOrderRequest(Builder builder) {
@@ -104,7 +109,7 @@ public class CreateDatabaseExportOrderRequest extends Request {
     /**
      * @return relatedUserList
      */
-    public java.util.List < Long > getRelatedUserList() {
+    public java.util.List<Long> getRelatedUserList() {
         return this.relatedUserList;
     }
 
@@ -121,7 +126,7 @@ public class CreateDatabaseExportOrderRequest extends Request {
         private String comment; 
         private Long parentId; 
         private PluginParam pluginParam; 
-        private java.util.List < Long > relatedUserList; 
+        private java.util.List<Long> relatedUserList; 
         private Long tid; 
 
         private Builder() {
@@ -149,7 +154,10 @@ public class CreateDatabaseExportOrderRequest extends Request {
         }
 
         /**
-         * The key of the attachment that provides more instructions for the ticket. You can call the [GetUserUploadFileJob](~~206069~~) operation to obtain the attachment key.
+         * <p>The key of the attachment that provides more instructions for the ticket. You can call the <a href="https://help.aliyun.com/document_detail/206069.html">GetUserUploadFileJob</a> operation to obtain the attachment key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>order_attachment.txt</p>
          */
         public Builder attachmentKey(String attachmentKey) {
             this.putQueryParameter("AttachmentKey", attachmentKey);
@@ -158,7 +166,11 @@ public class CreateDatabaseExportOrderRequest extends Request {
         }
 
         /**
-         * The purpose or objective of the ticket. This parameter helps reduce unnecessary communication.
+         * <p>The purpose or objective of the ticket. This parameter helps reduce unnecessary communication.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>document_test</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -167,7 +179,10 @@ public class CreateDatabaseExportOrderRequest extends Request {
         }
 
         /**
-         * The ID of the parent ticket.
+         * <p>The ID of the parent ticket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>877****</p>
          */
         public Builder parentId(Long parentId) {
             this.putQueryParameter("ParentId", parentId);
@@ -176,7 +191,8 @@ public class CreateDatabaseExportOrderRequest extends Request {
         }
 
         /**
-         * The parameters of the ticket.
+         * <p>The parameters of the ticket.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder pluginParam(PluginParam pluginParam) {
             String pluginParamShrink = shrink(pluginParam, "PluginParam", "json");
@@ -186,9 +202,9 @@ public class CreateDatabaseExportOrderRequest extends Request {
         }
 
         /**
-         * The stakeholders involved in this operation.
+         * <p>The stakeholders involved in this operation.</p>
          */
-        public Builder relatedUserList(java.util.List < Long > relatedUserList) {
+        public Builder relatedUserList(java.util.List<Long> relatedUserList) {
             String relatedUserListShrink = shrink(relatedUserList, "RelatedUserList", "json");
             this.putQueryParameter("RelatedUserList", relatedUserListShrink);
             this.relatedUserList = relatedUserList;
@@ -196,10 +212,13 @@ public class CreateDatabaseExportOrderRequest extends Request {
         }
 
         /**
-         * The tenant ID.
-         * <p>
+         * <p>The tenant ID.</p>
+         * <blockquote>
+         * <p>To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see the <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a> section of the &quot;Manage DMS tenants&quot; topic.</p>
+         * </blockquote>
          * 
-         * > To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see the [View information about the current tenant](~~181330~~) section of the "Manage DMS tenants" topic.
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -214,30 +233,36 @@ public class CreateDatabaseExportOrderRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDatabaseExportOrderRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDatabaseExportOrderRequest</p>
+     */
     public static class Config extends TeaModel {
-        @NameInMap("DataOption")
-        @Validation(required = true)
-        private java.util.List < String > dataOption;
+        @com.aliyun.core.annotation.NameInMap("DataOption")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List<String> dataOption;
 
-        @NameInMap("ExportContent")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ExportContent")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String exportContent;
 
-        @NameInMap("ExportTypes")
-        private java.util.List < String > exportTypes;
+        @com.aliyun.core.annotation.NameInMap("ExportTypes")
+        private java.util.List<String> exportTypes;
 
-        @NameInMap("SQLExtOption")
-        @Validation(required = true)
-        private java.util.List < String > SQLExtOption;
+        @com.aliyun.core.annotation.NameInMap("SQLExtOption")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List<String> SQLExtOption;
 
-        @NameInMap("SelectedTables")
-        private java.util.List < String > selectedTables;
+        @com.aliyun.core.annotation.NameInMap("SelectedTables")
+        private java.util.List<String> selectedTables;
 
-        @NameInMap("Tables")
-        private java.util.Map < String, String > tables;
+        @com.aliyun.core.annotation.NameInMap("Tables")
+        private java.util.Map<String, String> tables;
 
-        @NameInMap("TargetOption")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TargetOption")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String targetOption;
 
         private Config(Builder builder) {
@@ -261,7 +286,7 @@ public class CreateDatabaseExportOrderRequest extends Request {
         /**
          * @return dataOption
          */
-        public java.util.List < String > getDataOption() {
+        public java.util.List<String> getDataOption() {
             return this.dataOption;
         }
 
@@ -275,28 +300,28 @@ public class CreateDatabaseExportOrderRequest extends Request {
         /**
          * @return exportTypes
          */
-        public java.util.List < String > getExportTypes() {
+        public java.util.List<String> getExportTypes() {
             return this.exportTypes;
         }
 
         /**
          * @return SQLExtOption
          */
-        public java.util.List < String > getSQLExtOption() {
+        public java.util.List<String> getSQLExtOption() {
             return this.SQLExtOption;
         }
 
         /**
          * @return selectedTables
          */
-        public java.util.List < String > getSelectedTables() {
+        public java.util.List<String> getSelectedTables() {
             return this.selectedTables;
         }
 
         /**
          * @return tables
          */
-        public java.util.Map < String, String > getTables() {
+        public java.util.Map<String, String> getTables() {
             return this.tables;
         }
 
@@ -308,29 +333,34 @@ public class CreateDatabaseExportOrderRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > dataOption; 
+            private java.util.List<String> dataOption; 
             private String exportContent; 
-            private java.util.List < String > exportTypes; 
-            private java.util.List < String > SQLExtOption; 
-            private java.util.List < String > selectedTables; 
-            private java.util.Map < String, String > tables; 
+            private java.util.List<String> exportTypes; 
+            private java.util.List<String> SQLExtOption; 
+            private java.util.List<String> selectedTables; 
+            private java.util.Map<String, String> tables; 
             private String targetOption; 
 
             /**
-             * The export options for big data. The options are used to filter the big data to be exported. You can leave this parameter empty.
+             * <p>The export options for big data. The options are used to filter the big data to be exported. You can leave this parameter empty.</p>
+             * <p>This parameter is required.</p>
              */
-            public Builder dataOption(java.util.List < String > dataOption) {
+            public Builder dataOption(java.util.List<String> dataOption) {
                 this.dataOption = dataOption;
                 return this;
             }
 
             /**
-             * The type of data that you want to export. Valid values:
-             * <p>
+             * <p>The type of data that you want to export. Valid values:</p>
+             * <ul>
+             * <li><strong>DATA</strong>: The data of the database is exported.</li>
+             * <li><strong>STRUCT</strong>: The schema of the database is exported.</li>
+             * <li><strong>DATA_STRUCT</strong>: The data and schema of the database are exported.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **DATA**: The data of the database is exported.
-             * *   **STRUCT**: The schema of the database is exported.
-             * *   **DATA_STRUCT**: The data and schema of the database are exported.
+             * <strong>example:</strong>
+             * <p>DATA</p>
              */
             public Builder exportContent(String exportContent) {
                 this.exportContent = exportContent;
@@ -338,44 +368,49 @@ public class CreateDatabaseExportOrderRequest extends Request {
             }
 
             /**
-             * The types of schemas that you want to export.
+             * <p>The types of schemas that you want to export.</p>
              */
-            public Builder exportTypes(java.util.List < String > exportTypes) {
+            public Builder exportTypes(java.util.List<String> exportTypes) {
                 this.exportTypes = exportTypes;
                 return this;
             }
 
             /**
-             * The extension options of the SQL script. You can leave this parameter empty.
+             * <p>The extension options of the SQL script. You can leave this parameter empty.</p>
+             * <p>This parameter is required.</p>
              */
-            public Builder SQLExtOption(java.util.List < String > SQLExtOption) {
+            public Builder SQLExtOption(java.util.List<String> SQLExtOption) {
                 this.SQLExtOption = SQLExtOption;
                 return this;
             }
 
             /**
-             * The tables that you want to export.
+             * <p>The tables that you want to export.</p>
              */
-            public Builder selectedTables(java.util.List < String > selectedTables) {
+            public Builder selectedTables(java.util.List<String> selectedTables) {
                 this.selectedTables = selectedTables;
                 return this;
             }
 
             /**
-             * The conditions used to filter the tables to be exported.
+             * <p>The conditions used to filter the tables to be exported.</p>
              */
-            public Builder tables(java.util.Map < String, String > tables) {
+            public Builder tables(java.util.Map<String, String> tables) {
                 this.tables = tables;
                 return this;
             }
 
             /**
-             * The format in which the database is exported. Valid values:
-             * <p>
+             * <p>The format in which the database is exported. Valid values:</p>
+             * <ul>
+             * <li><strong>SQL</strong></li>
+             * <li><strong>CSV</strong></li>
+             * <li><strong>XLSX</strong></li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **SQL**
-             * *   **CSV**
-             * *   **XLSX**
+             * <strong>example:</strong>
+             * <p>SQL</p>
              */
             public Builder targetOption(String targetOption) {
                 this.targetOption = targetOption;
@@ -389,29 +424,35 @@ public class CreateDatabaseExportOrderRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateDatabaseExportOrderRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDatabaseExportOrderRequest</p>
+     */
     public static class PluginParam extends TeaModel {
-        @NameInMap("Classify")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Classify")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String classify;
 
-        @NameInMap("Config")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Config")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Config config;
 
-        @NameInMap("DbId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DbId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long dbId;
 
-        @NameInMap("InstanceId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long instanceId;
 
-        @NameInMap("Logic")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Logic")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Boolean logic;
 
-        @NameInMap("SearchName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("SearchName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String searchName;
 
         private PluginParam(Builder builder) {
@@ -482,7 +523,11 @@ public class CreateDatabaseExportOrderRequest extends Request {
             private String searchName; 
 
             /**
-             * The reason for the database export.
+             * <p>The reason for the database export.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>document_test</p>
              */
             public Builder classify(String classify) {
                 this.classify = classify;
@@ -490,7 +535,8 @@ public class CreateDatabaseExportOrderRequest extends Request {
             }
 
             /**
-             * The configurations for database export.
+             * <p>The configurations for database export.</p>
+             * <p>This parameter is required.</p>
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -498,7 +544,11 @@ public class CreateDatabaseExportOrderRequest extends Request {
             }
 
             /**
-             * The database ID.
+             * <p>The database ID.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17****</p>
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -506,7 +556,11 @@ public class CreateDatabaseExportOrderRequest extends Request {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>137****</p>
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -514,11 +568,15 @@ public class CreateDatabaseExportOrderRequest extends Request {
             }
 
             /**
-             * Specifies whether the database is a logical database. Valid values:
-             * <p>
+             * <p>Specifies whether the database is a logical database. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -526,7 +584,11 @@ public class CreateDatabaseExportOrderRequest extends Request {
             }
 
             /**
-             * The name that is used to search for the database.
+             * <p>The name that is used to search for the database.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@xxx.xxx.xxx.xxx">test@xxx.xxx.xxx.xxx</a>:3306</p>
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;

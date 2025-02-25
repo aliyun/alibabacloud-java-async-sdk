@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHoneypotProbeResponseBody} extends {@link TeaModel}
  *
  * <p>ListHoneypotProbeResponseBody</p>
  */
 public class ListHoneypotProbeResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("List")
-    private java.util.List < List> list;
+    @com.aliyun.core.annotation.NameInMap("List")
+    private java.util.List<List> list;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListHoneypotProbeResponseBody(Builder builder) {
@@ -68,7 +73,7 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
     /**
      * @return list
      */
-    public java.util.List < List> getList() {
+    public java.util.List<List> getList() {
         return this.list;
     }
 
@@ -103,14 +108,17 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private Integer httpStatusCode; 
-        private java.util.List < List> list; 
+        private java.util.List<List> list; 
         private String message; 
         private PageInfo pageInfo; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * The status code that is returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * <p>The status code that is returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +126,10 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -126,15 +137,18 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the details about the probe.
+         * <p>An array that consists of the details about the probe.</p>
          */
-        public Builder list(java.util.List < List> list) {
+        public Builder list(java.util.List<List> list) {
             this.list = list;
             return this;
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +156,7 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -150,7 +164,10 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4BC9E610-21BE-537F-82EF-144A60D5A970</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,11 +175,14 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -175,14 +195,20 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListHoneypotProbeResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHoneypotProbeResponseBody</p>
+     */
     public static class ControlNode extends TeaModel {
-        @NameInMap("EcsInstanceId")
+        @com.aliyun.core.annotation.NameInMap("EcsInstanceId")
         private String ecsInstanceId;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
         private ControlNode(Builder builder) {
@@ -226,7 +252,10 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
             private String nodeName; 
 
             /**
-             * The ID of the Elastic Compute Service (ECS) instance.
+             * <p>The ID of the Elastic Compute Service (ECS) instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-uf6eq0rlvu1mkh0p****</p>
              */
             public Builder ecsInstanceId(String ecsInstanceId) {
                 this.ecsInstanceId = ecsInstanceId;
@@ -234,7 +263,10 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * <p>The ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8ec9da17-c0e7-4642-aad6-defc9722****</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -242,7 +274,10 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HoneypotNode1</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -256,38 +291,44 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHoneypotProbeResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHoneypotProbeResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("ControlNode")
+        @com.aliyun.core.annotation.NameInMap("ControlNode")
         private ControlNode controlNode;
 
-        @NameInMap("DeployTime")
+        @com.aliyun.core.annotation.NameInMap("DeployTime")
         private Long deployTime;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("HostIp")
+        @com.aliyun.core.annotation.NameInMap("HostIp")
         private String hostIp;
 
-        @NameInMap("OsType")
+        @com.aliyun.core.annotation.NameInMap("OsType")
         private String osType;
 
-        @NameInMap("ProbeId")
+        @com.aliyun.core.annotation.NameInMap("ProbeId")
         private String probeId;
 
-        @NameInMap("ProbeType")
+        @com.aliyun.core.annotation.NameInMap("ProbeType")
         private String probeType;
 
-        @NameInMap("ProbeVersion")
+        @com.aliyun.core.annotation.NameInMap("ProbeVersion")
         private String probeVersion;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private List(Builder builder) {
@@ -403,7 +444,7 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The information about the management node.
+             * <p>The information about the management node.</p>
              */
             public Builder controlNode(ControlNode controlNode) {
                 this.controlNode = controlNode;
@@ -411,7 +452,10 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the probe was deployed.
+             * <p>The time when the probe was deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1669363825000</p>
              */
             public Builder deployTime(Long deployTime) {
                 this.deployTime = deployTime;
@@ -419,7 +463,10 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the probe.
+             * <p>The name of the probe.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod-pinpoint-hd1b</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -427,7 +474,10 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the server on which the probe is installed.
+             * <p>The IP address of the server on which the probe is installed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33.53.XX.XX</p>
              */
             public Builder hostIp(String hostIp) {
                 this.hostIp = hostIp;
@@ -435,11 +485,14 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system of the server on which the probe is deployed. Valid values:
-             * <p>
+             * <p>The operating system of the server on which the probe is deployed. Valid values:</p>
+             * <ul>
+             * <li>windows</li>
+             * <li>linux</li>
+             * </ul>
              * 
-             * *   windows
-             * *   linux
+             * <strong>example:</strong>
+             * <p>windows</p>
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -447,7 +500,10 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the probe.
+             * <p>The ID of the probe.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4d167bb3-dd09-4a6a-a179-d5d6a5b0****</p>
              */
             public Builder probeId(String probeId) {
                 this.probeId = probeId;
@@ -455,11 +511,14 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the probe. Valid values:
-             * <p>
+             * <p>The type of the probe. Valid values:</p>
+             * <ul>
+             * <li><strong>host_probe</strong>: host probe</li>
+             * <li><strong>vpc_black_hole_probe</strong>: VPC probe</li>
+             * </ul>
              * 
-             * *   **host_probe**: host probe
-             * *   **vpc_black_hole_probe**: VPC probe
+             * <strong>example:</strong>
+             * <p>host_probe</p>
              */
             public Builder probeType(String probeType) {
                 this.probeType = probeType;
@@ -467,7 +526,10 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the probe.
+             * <p>The version of the probe.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18060096</p>
              */
             public Builder probeVersion(String probeVersion) {
                 this.probeVersion = probeVersion;
@@ -475,19 +537,22 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the probe. Valid values:
-             * <p>
+             * <p>The status of the probe. Valid values:</p>
+             * <ul>
+             * <li><strong>installed</strong>: installed</li>
+             * <li><strong>install_failed</strong>: installation failed</li>
+             * <li><strong>online</strong>: online</li>
+             * <li><strong>offline</strong>: offline</li>
+             * <li><strong>unnormal</strong>: abnormal</li>
+             * <li><strong>unprobe</strong>: unauthorized</li>
+             * <li><strong>uninstalling</strong>: being uninstalled</li>
+             * <li><strong>uninstalled</strong>: uninstalled</li>
+             * <li><strong>uninstall_failed</strong>: uninstallation failed</li>
+             * <li><strong>not_exist</strong>: not installed</li>
+             * </ul>
              * 
-             * *   **installed**: installed
-             * *   **install_failed**: installation failed
-             * *   **online**: online
-             * *   **offline**: offline
-             * *   **unnormal**: abnormal
-             * *   **unprobe**: unauthorized
-             * *   **uninstalling**: being uninstalled
-             * *   **uninstalled**: uninstalled
-             * *   **uninstall_failed**: uninstallation failed
-             * *   **not_exist**: not installed
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -495,7 +560,10 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server to which the host probe is deployed.
+             * <p>The UUID of the server to which the host probe is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>49e25e0f-bb51-4a5a-a1b3-13a4ddaa****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -503,7 +571,10 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC in which the VPC probe is deployed.
+             * <p>The ID of the VPC in which the VPC probe is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-5gu8iu68w9b472jbb****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -517,17 +588,23 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHoneypotProbeResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHoneypotProbeResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -580,7 +657,10 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -588,7 +668,10 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -596,7 +679,10 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: **20**.
+             * <p>The number of entries returned per page. Default value: <strong>20</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -604,7 +690,10 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

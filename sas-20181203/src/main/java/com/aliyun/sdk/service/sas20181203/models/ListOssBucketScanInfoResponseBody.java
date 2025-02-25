@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOssBucketScanInfoResponseBody} extends {@link TeaModel}
  *
  * <p>ListOssBucketScanInfoResponseBody</p>
  */
 public class ListOssBucketScanInfoResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListOssBucketScanInfoResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -57,20 +62,20 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
-         * The data that is returned.
+         * <p>The data returned.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The page information.
+         * <p>The page information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +83,10 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6C578F36-92D2-552C-8AA0-86EB1AC2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,55 +99,65 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListOssBucketScanInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOssBucketScanInfoResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("BucketName")
+        @com.aliyun.core.annotation.NameInMap("BucketName")
         private String bucketName;
 
-        @NameInMap("ConfigStatus")
+        @com.aliyun.core.annotation.NameInMap("ConfigStatus")
         private Integer configStatus;
 
-        @NameInMap("HighRisk")
+        @com.aliyun.core.annotation.NameInMap("DecompressStatus")
+        private Integer decompressStatus;
+
+        @com.aliyun.core.annotation.NameInMap("HighRisk")
         private Long highRisk;
 
-        @NameInMap("LastScanEndTime")
+        @com.aliyun.core.annotation.NameInMap("LastScanEndTime")
         private Long lastScanEndTime;
 
-        @NameInMap("LastScanTime")
+        @com.aliyun.core.annotation.NameInMap("LastScanTime")
         private Long lastScanTime;
 
-        @NameInMap("LowRisk")
+        @com.aliyun.core.annotation.NameInMap("LowRisk")
         private Long lowRisk;
 
-        @NameInMap("MediumRisk")
+        @com.aliyun.core.annotation.NameInMap("MediumRisk")
         private Long mediumRisk;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ScanObject")
+        @com.aliyun.core.annotation.NameInMap("ScanObject")
         private Long scanObject;
 
-        @NameInMap("Scanned")
+        @com.aliyun.core.annotation.NameInMap("Scanned")
         private Boolean scanned;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("StorageClass")
+        @com.aliyun.core.annotation.NameInMap("StorageClass")
         private String storageClass;
 
-        @NameInMap("Support")
+        @com.aliyun.core.annotation.NameInMap("Support")
         private Boolean support;
 
-        @NameInMap("TotalObject")
+        @com.aliyun.core.annotation.NameInMap("TotalObject")
         private Long totalObject;
 
         private Data(Builder builder) {
             this.bucketName = builder.bucketName;
             this.configStatus = builder.configStatus;
+            this.decompressStatus = builder.decompressStatus;
             this.highRisk = builder.highRisk;
             this.lastScanEndTime = builder.lastScanEndTime;
             this.lastScanTime = builder.lastScanTime;
@@ -175,6 +193,13 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
          */
         public Integer getConfigStatus() {
             return this.configStatus;
+        }
+
+        /**
+         * @return decompressStatus
+         */
+        public Integer getDecompressStatus() {
+            return this.decompressStatus;
         }
 
         /**
@@ -271,6 +296,7 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
         public static final class Builder {
             private String bucketName; 
             private Integer configStatus; 
+            private Integer decompressStatus; 
             private Long highRisk; 
             private Long lastScanEndTime; 
             private Long lastScanTime; 
@@ -286,7 +312,10 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
             private Long totalObject; 
 
             /**
-             * The name of the bucket.
+             * <p>The name of the bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hz-new02****</p>
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -294,12 +323,15 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Configuration status, valid values:
-             * <p>
+             * <p>Configuration status, valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: No Configuration.</li>
+             * <li><strong>1</strong>: Not Open.</li>
+             * <li><strong>2</strong>: Open.</li>
+             * </ul>
              * 
-             * - **0**: No Configuration.
-             * - **1**: Not Open.
-             * - **2**: Open.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder configStatus(Integer configStatus) {
                 this.configStatus = configStatus;
@@ -307,7 +339,25 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of high-risk objects.
+             * <p>Bucket decompression configuration status, valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Decompression not configured.</li>
+             * <li><strong>1</strong>: Decompression configured.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder decompressStatus(Integer decompressStatus) {
+                this.decompressStatus = decompressStatus;
+                return this;
+            }
+
+            /**
+             * <p>The number of high-risk objects.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder highRisk(Long highRisk) {
                 this.highRisk = highRisk;
@@ -315,7 +365,10 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the most recent check ended. Unit: milliseconds.
+             * <p>The time when the most recent check ended. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1698388233883</p>
              */
             public Builder lastScanEndTime(Long lastScanEndTime) {
                 this.lastScanEndTime = lastScanEndTime;
@@ -323,7 +376,10 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the bucket was last checked. Unit: milliseconds.
+             * <p>The time when the bucket was last checked. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1698388233883</p>
              */
             public Builder lastScanTime(Long lastScanTime) {
                 this.lastScanTime = lastScanTime;
@@ -331,7 +387,10 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of low-risk objects.
+             * <p>The number of low-risk objects.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder lowRisk(Long lowRisk) {
                 this.lowRisk = lowRisk;
@@ -339,7 +398,10 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of medium-risk objects.
+             * <p>The number of medium-risk objects.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder mediumRisk(Long mediumRisk) {
                 this.mediumRisk = mediumRisk;
@@ -347,7 +409,10 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the bucket cannot be checked.
+             * <p>The reason why the bucket cannot be checked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Unsupported Region.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -355,7 +420,10 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -363,7 +431,10 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of objects that are checked.
+             * <p>The number of objects that are checked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder scanObject(Long scanObject) {
                 this.scanObject = scanObject;
@@ -371,11 +442,14 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the bucket is checked. Valid values:
-             * <p>
+             * <p>Indicates whether the bucket is checked. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder scanned(Boolean scanned) {
                 this.scanned = scanned;
@@ -383,13 +457,16 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The check status of the bucket. Valid values:
-             * <p>
+             * <p>The check status of the bucket. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: The bucket is not checked.</li>
+             * <li><strong>2</strong>: All objects in the bucket are being checked.</li>
+             * <li><strong>3</strong>: Only new objects are being checked.</li>
+             * <li><strong>4</strong>: The bucket is checked.</li>
+             * </ul>
              * 
-             * *   **1**: The bucket is not checked.
-             * *   **2**: All objects in the bucket are being checked.
-             * *   **3**: Only new objects are being checked.
-             * *   **4**: The bucket is checked.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -397,13 +474,16 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The storage class of the bucket. Valid values:
-             * <p>
+             * <p>The storage class of the bucket. Valid values:</p>
+             * <ul>
+             * <li><strong>Standard</strong></li>
+             * <li><strong>IA</strong></li>
+             * <li><strong>Archive</strong></li>
+             * <li><strong>ColdArchive</strong></li>
+             * </ul>
              * 
-             * *   **Standard**
-             * *   **IA**
-             * *   **Archive**
-             * *   **ColdArchive**
+             * <strong>example:</strong>
+             * <p>Archive</p>
              */
             public Builder storageClass(String storageClass) {
                 this.storageClass = storageClass;
@@ -411,11 +491,14 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the bucket can be checked. Valid values:
-             * <p>
+             * <p>Indicates whether the bucket can be checked. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder support(Boolean support) {
                 this.support = support;
@@ -423,7 +506,10 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of objects in the bucket.
+             * <p>The total number of objects in the bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalObject(Long totalObject) {
                 this.totalObject = totalObject;
@@ -437,14 +523,20 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListOssBucketScanInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOssBucketScanInfoResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -488,7 +580,10 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -496,7 +591,10 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -504,7 +602,10 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>165</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

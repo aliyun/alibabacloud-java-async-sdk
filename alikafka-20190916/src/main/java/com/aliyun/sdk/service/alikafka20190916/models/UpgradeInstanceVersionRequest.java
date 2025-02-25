@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeInstanceVersionRequest} extends {@link RequestModel}
  *
  * <p>UpgradeInstanceVersionRequest</p>
  */
 public class UpgradeInstanceVersionRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("TargetVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetVersion;
 
     private UpgradeInstanceVersionRequest(Builder builder) {
@@ -85,7 +90,11 @@ public class UpgradeInstanceVersionRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka_post-cn-v0h1fgs2****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -94,7 +103,11 @@ public class UpgradeInstanceVersionRequest extends Request {
         }
 
         /**
-         * The ID of the region where the instance resides.
+         * <p>The ID of the region where the instance resides.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -103,13 +116,16 @@ public class UpgradeInstanceVersionRequest extends Request {
         }
 
         /**
-         * The major version to be upgraded to. Valid values:
-         * <p>
+         * <p>The major version to be upgraded to. Valid values:</p>
+         * <ul>
+         * <li><strong>0.10.2</strong></li>
+         * <li><strong>2.2.0</strong></li>
+         * </ul>
+         * <p>If you set this parameter to the current major version, the system upgrades the instance to the latest minor version.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   **0.10.2**
-         * *   **2.2.0**
-         * 
-         * If you set this parameter to the current major version, the system upgrades the instance to the latest minor version.
+         * <strong>example:</strong>
+         * <p>0.10.2</p>
          */
         public Builder targetVersion(String targetVersion) {
             this.putQueryParameter("TargetVersion", targetVersion);

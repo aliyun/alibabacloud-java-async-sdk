@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMessageContactResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteMessageContactResponseBody</p>
  */
 public class DeleteMessageContactResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DeleteMessageContactResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DeleteMessageContactResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9B34724D-54B0-4A51-B34D-4512372FE1BE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,11 +66,14 @@ public class DeleteMessageContactResponseBody extends TeaModel {
         }
 
         /**
-         * The deletion status of the contact. Valid values:
-         * <p>
+         * <p>The deletion status of the contact. Valid values:</p>
+         * <ul>
+         * <li>Deleting</li>
+         * <li>Deleted</li>
+         * </ul>
          * 
-         * *   Deleting
-         * *   Deleted
+         * <strong>example:</strong>
+         * <p>Deleting</p>
          */
         public Builder status(String status) {
             this.status = status;

@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteBackupPolicyMachineRequest} extends {@link RequestModel}
  *
  * <p>DeleteBackupPolicyMachineRequest</p>
  */
 public class DeleteBackupPolicyMachineRequest extends Request {
-    @Query
-    @NameInMap("PolicyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long policyId;
 
-    @Query
-    @NameInMap("PolicyVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyVersion;
 
-    @Query
-    @NameInMap("Uuid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuid")
     private String uuid;
 
-    @Query
-    @NameInMap("UuidList")
-    private java.util.List < String > uuidList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UuidList")
+    private java.util.List<String> uuidList;
 
     private DeleteBackupPolicyMachineRequest(Builder builder) {
         super(builder);
@@ -75,7 +80,7 @@ public class DeleteBackupPolicyMachineRequest extends Request {
     /**
      * @return uuidList
      */
-    public java.util.List < String > getUuidList() {
+    public java.util.List<String> getUuidList() {
         return this.uuidList;
     }
 
@@ -83,7 +88,7 @@ public class DeleteBackupPolicyMachineRequest extends Request {
         private Long policyId; 
         private String policyVersion; 
         private String uuid; 
-        private java.util.List < String > uuidList; 
+        private java.util.List<String> uuidList; 
 
         private Builder() {
             super();
@@ -98,10 +103,14 @@ public class DeleteBackupPolicyMachineRequest extends Request {
         } 
 
         /**
-         * The ID of the anti-ransomware policy.
-         * <p>
+         * <p>The ID of the anti-ransomware policy.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> operation to query the IDs of anti-ransomware policies.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeBackupPolicies](~~DescribeBackupPolicies~~) operation to query the IDs of anti-ransomware policies.
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder policyId(Long policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -110,13 +119,18 @@ public class DeleteBackupPolicyMachineRequest extends Request {
         }
 
         /**
-         * The version of the anti-ransomware policy. Valid values:
-         * <p>
+         * <p>The version of the anti-ransomware policy. Valid values:</p>
+         * <ul>
+         * <li><strong>1.0.0</strong></li>
+         * <li><strong>2.0.0</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> operation to query the versions of anti-ransomware policies.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **1.0.0**
-         * *   **2.0.0**
-         * 
-         * >  You can call the [DescribeBackupPolicies](~~DescribeBackupPolicies~~) operation to query the versions of anti-ransomware policies.
+         * <strong>example:</strong>
+         * <p>2.0.0</p>
          */
         public Builder policyVersion(String policyVersion) {
             this.putQueryParameter("PolicyVersion", policyVersion);
@@ -125,10 +139,13 @@ public class DeleteBackupPolicyMachineRequest extends Request {
         }
 
         /**
-         * The UUID of the server to which the anti-ransomware policy is applied.
-         * <p>
+         * <p>The UUID of the server to which the anti-ransomware policy is applied.</p>
+         * <blockquote>
+         * <p>You must specify at least one of the <code>UuidList</code> and <code>Uuid</code> parameters.</p>
+         * </blockquote>
          * 
-         * > You must specify at least one of the `UuidList` and `Uuid` parameters.
+         * <strong>example:</strong>
+         * <p>083036e9-8411-4a9d-83af-9acbd****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);
@@ -137,12 +154,12 @@ public class DeleteBackupPolicyMachineRequest extends Request {
         }
 
         /**
-         * The UUIDs of the servers to which the anti-ransomware policy is applied.
-         * <p>
-         * 
-         * > You must specify at least one of the `UuidList` and `Uuid` parameters.
+         * <p>The UUIDs of the servers to which the anti-ransomware policy is applied.</p>
+         * <blockquote>
+         * <p>You must specify at least one of the <code>UuidList</code> and <code>Uuid</code> parameters.</p>
+         * </blockquote>
          */
-        public Builder uuidList(java.util.List < String > uuidList) {
+        public Builder uuidList(java.util.List<String> uuidList) {
             this.putQueryParameter("UuidList", uuidList);
             this.uuidList = uuidList;
             return this;

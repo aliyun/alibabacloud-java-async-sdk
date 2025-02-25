@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSlaEventListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSlaEventListResponseBody</p>
  */
 public class DescribeSlaEventListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SlaEvent")
-    private java.util.List < SlaEvent> slaEvent;
+    @com.aliyun.core.annotation.NameInMap("SlaEvent")
+    private java.util.List<SlaEvent> slaEvent;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
 
     private DescribeSlaEventListResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class DescribeSlaEventListResponseBody extends TeaModel {
     /**
      * @return slaEvent
      */
-    public java.util.List < SlaEvent> getSlaEvent() {
+    public java.util.List<SlaEvent> getSlaEvent() {
         return this.slaEvent;
     }
 
@@ -58,11 +63,14 @@ public class DescribeSlaEventListResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SlaEvent> slaEvent; 
+        private java.util.List<SlaEvent> slaEvent; 
         private Long total; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,15 +78,18 @@ public class DescribeSlaEventListResponseBody extends TeaModel {
         }
 
         /**
-         * SlaEvent.
+         * <p>The destination rate limit events.</p>
          */
-        public Builder slaEvent(java.util.List < SlaEvent> slaEvent) {
+        public Builder slaEvent(java.util.List<SlaEvent> slaEvent) {
             this.slaEvent = slaEvent;
             return this;
         }
 
         /**
-         * Total.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -91,17 +102,23 @@ public class DescribeSlaEventListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSlaEventListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSlaEventListResponseBody</p>
+     */
     public static class SlaEvent extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
         private SlaEvent(Builder builder) {
@@ -154,7 +171,10 @@ public class DescribeSlaEventListResponseBody extends TeaModel {
             private Long startTime; 
 
             /**
-             * EndTime.
+             * <p>The end of the time range. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1671886740</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -162,7 +182,10 @@ public class DescribeSlaEventListResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * <p>The IP address of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>203.107.XX.XX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -170,7 +193,14 @@ public class DescribeSlaEventListResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region to which the destination IP address belongs. Valid values:</p>
+             * <ul>
+             * <li><strong>cn</strong>: a region in the Chinese mainland</li>
+             * <li><strong>cn-hongkong</strong>: China (Hong Kong)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>cn</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -178,7 +208,10 @@ public class DescribeSlaEventListResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The beginning of the time range. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1678080840</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

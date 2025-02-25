@@ -1,57 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDiagnosticResponseBody} extends {@link TeaModel}
  *
  * <p>GetDiagnosticResponseBody</p>
  */
 public class GetDiagnosticResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("DiagnosticKey")
+    @com.aliyun.core.annotation.NameInMap("DiagnosticKey")
     private String diagnosticKey;
 
-    @NameInMap("DiagnosticProduct")
+    @com.aliyun.core.annotation.NameInMap("DiagnosticProduct")
     private String diagnosticProduct;
 
-    @NameInMap("DiagnosticResult")
+    @com.aliyun.core.annotation.NameInMap("DiagnosticResult")
     private DiagnosticResult diagnosticResult;
 
-    @NameInMap("DiagnosticTime")
+    @com.aliyun.core.annotation.NameInMap("DiagnosticTime")
     private String diagnosticTime;
 
-    @NameInMap("HttpCode")
+    @com.aliyun.core.annotation.NameInMap("HttpCode")
     private String httpCode;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Recommends")
+    @com.aliyun.core.annotation.NameInMap("Recommends")
     private java.util.Map < String, ? > recommends;
 
-    @NameInMap("ReportId")
+    @com.aliyun.core.annotation.NameInMap("ReportId")
     private String reportId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("StatusReason")
+    @com.aliyun.core.annotation.NameInMap("StatusReason")
     private String statusReason;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private GetDiagnosticResponseBody(Builder builder) {
@@ -194,7 +194,10 @@ public class GetDiagnosticResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Forbidden</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -202,7 +205,10 @@ public class GetDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * DiagnosticKey.
+         * <p>The keyword in the diagnosis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0938F60C-A2CA-5A2E-9983-03EB1E6D7AE2</p>
          */
         public Builder diagnosticKey(String diagnosticKey) {
             this.diagnosticKey = diagnosticKey;
@@ -210,7 +216,10 @@ public class GetDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * DiagnosticProduct.
+         * <p>The name of the diagnostic item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ros</p>
          */
         public Builder diagnosticProduct(String diagnosticProduct) {
             this.diagnosticProduct = diagnosticProduct;
@@ -218,7 +227,7 @@ public class GetDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * DiagnosticResult.
+         * <p>The diagnosis result.</p>
          */
         public Builder diagnosticResult(DiagnosticResult diagnosticResult) {
             this.diagnosticResult = diagnosticResult;
@@ -226,7 +235,10 @@ public class GetDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * DiagnosticTime.
+         * <p>The time when the diagnosis was performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-27T03:32:03Z</p>
          */
         public Builder diagnosticTime(String diagnosticTime) {
             this.diagnosticTime = diagnosticTime;
@@ -234,7 +246,10 @@ public class GetDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * HttpCode.
+         * <p>The HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -242,7 +257,10 @@ public class GetDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -250,7 +268,10 @@ public class GetDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameter ReportId is invalid, Can not find diagnostic report dr-5f6135782f104b0f****.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -258,7 +279,10 @@ public class GetDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * Recommends.
+         * <p>The suggestion for the diagnosis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;RosActionMessages&quot;: {&quot;Reason&quot;: &quot;Fail to delete stack (fc966920-450a-456b-983c-deeaec8e****), as deletion protection is enabled.&quot;, &quot;Recommend&quot;: &quot;&quot;}}</p>
          */
         public Builder recommends(java.util.Map < String, ? > recommends) {
             this.recommends = recommends;
@@ -266,7 +290,10 @@ public class GetDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * ReportId.
+         * <p>The ID of the diagnostic report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dr-cc80afc48c8741e9****</p>
          */
         public Builder reportId(String reportId) {
             this.reportId = reportId;
@@ -274,7 +301,10 @@ public class GetDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>96A24844-9603-5E79-BDF4-EFD412FC5D4C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -282,7 +312,15 @@ public class GetDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The diagnosis status. Valid values:</p>
+         * <ul>
+         * <li>Running: The diagnosis is in progress.</li>
+         * <li>Complete: The diagnosis is complete.</li>
+         * <li>Failed: The diagnosis failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -290,7 +328,10 @@ public class GetDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * StatusReason.
+         * <p>The reason for the diagnosis status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Complete</p>
          */
         public Builder statusReason(String statusReason) {
             this.statusReason = statusReason;
@@ -298,7 +339,14 @@ public class GetDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -311,14 +359,20 @@ public class GetDiagnosticResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDiagnosticResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDiagnosticResponseBody</p>
+     */
     public static class DiagnosticResult extends TeaModel {
-        @NameInMap("FailedResources")
+        @com.aliyun.core.annotation.NameInMap("FailedResources")
         private java.util.Map < String, ? > failedResources;
 
-        @NameInMap("RosActionMessages")
+        @com.aliyun.core.annotation.NameInMap("RosActionMessages")
         private java.util.Map < String, ? > rosActionMessages;
 
-        @NameInMap("StackMessages")
+        @com.aliyun.core.annotation.NameInMap("StackMessages")
         private java.util.Map < String, ? > stackMessages;
 
         private DiagnosticResult(Builder builder) {
@@ -362,7 +416,7 @@ public class GetDiagnosticResponseBody extends TeaModel {
             private java.util.Map < String, ? > stackMessages; 
 
             /**
-             * FailedResources.
+             * <p>The resources that failed to be diagnosed.</p>
              */
             public Builder failedResources(java.util.Map < String, ? > failedResources) {
                 this.failedResources = failedResources;
@@ -370,7 +424,7 @@ public class GetDiagnosticResponseBody extends TeaModel {
             }
 
             /**
-             * RosActionMessages.
+             * <p>The information about Resource Orchestration Service (ROS) calling.</p>
              */
             public Builder rosActionMessages(java.util.Map < String, ? > rosActionMessages) {
                 this.rosActionMessages = rosActionMessages;
@@ -378,7 +432,7 @@ public class GetDiagnosticResponseBody extends TeaModel {
             }
 
             /**
-             * StackMessages.
+             * <p>The stack information.</p>
              */
             public Builder stackMessages(java.util.Map < String, ? > stackMessages) {
                 this.stackMessages = stackMessages;

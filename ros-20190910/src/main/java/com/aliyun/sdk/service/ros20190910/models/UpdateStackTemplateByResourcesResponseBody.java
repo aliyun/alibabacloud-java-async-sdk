@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateStackTemplateByResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateStackTemplateByResourcesResponseBody</p>
  */
 public class UpdateStackTemplateByResourcesResponseBody extends TeaModel {
-    @NameInMap("NewTemplateBody")
+    @com.aliyun.core.annotation.NameInMap("NewTemplateBody")
     private String newTemplateBody;
 
-    @NameInMap("OldTemplateBody")
+    @com.aliyun.core.annotation.NameInMap("OldTemplateBody")
     private String oldTemplateBody;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateStackTemplateByResourcesResponseBody(Builder builder) {
@@ -62,7 +62,10 @@ public class UpdateStackTemplateByResourcesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The template content after correction.
+         * <p>The template content after correction.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;, &quot;Resources&quot;: {&quot;Vpc&quot;: {&quot;Type&quot;: &quot;ALIYUN::ECS::VPC&quot;, &quot;Properties&quot;: {&quot;VpcName&quot;: &quot;test&quot;, &quot;CidrBlock&quot;: &quot;192.168.0.0/16&quot;, &quot;Description&quot;: &quot;test2&quot;}}}, &quot;Outputs&quot;: {&quot;VpcId&quot;: {&quot;Value&quot;: {&quot;Fn::GetAtt&quot;: [&quot;Vpc&quot;, &quot;VpcId&quot;]}}}}</p>
          */
         public Builder newTemplateBody(String newTemplateBody) {
             this.newTemplateBody = newTemplateBody;
@@ -70,7 +73,10 @@ public class UpdateStackTemplateByResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The template content before correction.
+         * <p>The template content before correction.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;, &quot;Resources&quot;: {&quot;Vpc&quot;: {&quot;Type&quot;: &quot;ALIYUN::ECS::VPC&quot;, &quot;Properties&quot;: {&quot;VpcName&quot;: &quot;test&quot;, &quot;CidrBlock&quot;: &quot;192.168.0.0/16&quot;, &quot;Description&quot;: &quot;test1&quot;}}}, &quot;Outputs&quot;: {&quot;VpcId&quot;: {&quot;Value&quot;: {&quot;Fn::GetAtt&quot;: [&quot;Vpc&quot;, &quot;VpcId&quot;]}}}}</p>
          */
         public Builder oldTemplateBody(String oldTemplateBody) {
             this.oldTemplateBody = oldTemplateBody;
@@ -78,7 +84,10 @@ public class UpdateStackTemplateByResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B288A0BE-D927-4888-B0F7-B35EF84B6E6F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

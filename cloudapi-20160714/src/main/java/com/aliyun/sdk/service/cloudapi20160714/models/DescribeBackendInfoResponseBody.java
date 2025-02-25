@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackendInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackendInfoResponseBody</p>
  */
 public class DescribeBackendInfoResponseBody extends TeaModel {
-    @NameInMap("BackendInfo")
+    @com.aliyun.core.annotation.NameInMap("BackendInfo")
     private BackendInfo backendInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeBackendInfoResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the backend service.
+         * <p>The information about the backend service.</p>
          */
         public Builder backendInfo(BackendInfo backendInfo) {
             this.backendInfo = backendInfo;
@@ -58,7 +63,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0AA90E87-3506-5AA6-AFFB-A4D53B4F6231</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,35 +79,41 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackendInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackendInfoResponseBody</p>
+     */
     public static class NacosConfig extends TeaModel {
-        @NameInMap("AccessKey")
+        @com.aliyun.core.annotation.NameInMap("AccessKey")
         private String accessKey;
 
-        @NameInMap("AuthType")
+        @com.aliyun.core.annotation.NameInMap("AuthType")
         private String authType;
 
-        @NameInMap("Clusters")
+        @com.aliyun.core.annotation.NameInMap("Clusters")
         private String clusters;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
 
-        @NameInMap("SecretKey")
+        @com.aliyun.core.annotation.NameInMap("SecretKey")
         private String secretKey;
 
-        @NameInMap("ServerAddress")
+        @com.aliyun.core.annotation.NameInMap("ServerAddress")
         private String serverAddress;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private NacosConfig(Builder builder) {
@@ -206,7 +220,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The AccessKey of the RAM user that has the resource management permissions on Microservices Engine (MSE).
+             * <p>The AccessKey of the RAM user that has the resource management permissions on Microservices Engine (MSE).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A5FIDxxxxxx</p>
              */
             public Builder accessKey(String accessKey) {
                 this.accessKey = accessKey;
@@ -214,7 +231,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The authentication method.
+             * <p>The authentication method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PASSWORD</p>
              */
             public Builder authType(String authType) {
                 this.authType = authType;
@@ -222,7 +242,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster to which the microservice belongs.
+             * <p>The name of the cluster to which the microservice belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cluster1</p>
              */
             public Builder clusters(String clusters) {
                 this.clusters = clusters;
@@ -230,7 +253,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the group to which the microservice that is registered with Nacos belongs.
+             * <p>The name of the group to which the microservice that is registered with Nacos belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEFAULT_GROUP</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -238,7 +264,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the namespace where the microservice that is registered with Nacos resides.
+             * <p>The ID of the namespace where the microservice that is registered with Nacos resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>public</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -246,7 +275,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The password.
+             * <p>The password.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>password</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -254,7 +286,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The SecretKey of the RAM user that has the resource management permissions on MSE.
+             * <p>The SecretKey of the RAM user that has the resource management permissions on MSE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dl5loxxxxxx</p>
              */
             public Builder secretKey(String secretKey) {
                 this.secretKey = secretKey;
@@ -262,7 +297,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The Nacos service address.
+             * <p>The Nacos service address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://1xx.2xx.3xx.4xx:8848">http://1xx.2xx.3xx.4xx:8848</a></p>
              */
             public Builder serverAddress(String serverAddress) {
                 this.serverAddress = serverAddress;
@@ -270,7 +308,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The microservice name.
+             * <p>The microservice name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service-provider</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -278,7 +319,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The username.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>username</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -292,16 +336,122 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBackendInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackendInfoResponseBody</p>
+     */
+    public static class ZookeeperConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ConnectString")
+        private String connectString;
+
+        @com.aliyun.core.annotation.NameInMap("Namespace")
+        private String namespace;
+
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
+        private String serviceName;
+
+        private ZookeeperConfig(Builder builder) {
+            this.connectString = builder.connectString;
+            this.namespace = builder.namespace;
+            this.serviceName = builder.serviceName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ZookeeperConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return connectString
+         */
+        public String getConnectString() {
+            return this.connectString;
+        }
+
+        /**
+         * @return namespace
+         */
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        /**
+         * @return serviceName
+         */
+        public String getServiceName() {
+            return this.serviceName;
+        }
+
+        public static final class Builder {
+            private String connectString; 
+            private String namespace; 
+            private String serviceName; 
+
+            /**
+             * <p>The connection URL of the ZooKeeper server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://192.168.1.xxx:2181">http://192.168.1.xxx:2181</a></p>
+             */
+            public Builder connectString(String connectString) {
+                this.connectString = connectString;
+                return this;
+            }
+
+            /**
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>provider</p>
+             */
+            public Builder namespace(String namespace) {
+                this.namespace = namespace;
+                return this;
+            }
+
+            /**
+             * <p>Service name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service</p>
+             */
+            public Builder serviceName(String serviceName) {
+                this.serviceName = serviceName;
+                return this;
+            }
+
+            public ZookeeperConfig build() {
+                return new ZookeeperConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeBackendInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackendInfoResponseBody</p>
+     */
     public static class DiscoveryConfig extends TeaModel {
-        @NameInMap("NacosConfig")
+        @com.aliyun.core.annotation.NameInMap("NacosConfig")
         private NacosConfig nacosConfig;
 
-        @NameInMap("RcType")
+        @com.aliyun.core.annotation.NameInMap("RcType")
         private String rcType;
+
+        @com.aliyun.core.annotation.NameInMap("ZookeeperConfig")
+        private ZookeeperConfig zookeeperConfig;
 
         private DiscoveryConfig(Builder builder) {
             this.nacosConfig = builder.nacosConfig;
             this.rcType = builder.rcType;
+            this.zookeeperConfig = builder.zookeeperConfig;
         }
 
         public static Builder builder() {
@@ -326,12 +476,20 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             return this.rcType;
         }
 
+        /**
+         * @return zookeeperConfig
+         */
+        public ZookeeperConfig getZookeeperConfig() {
+            return this.zookeeperConfig;
+        }
+
         public static final class Builder {
             private NacosConfig nacosConfig; 
             private String rcType; 
+            private ZookeeperConfig zookeeperConfig; 
 
             /**
-             * The Nacos configurations.
+             * <p>The Nacos configurations.</p>
              */
             public Builder nacosConfig(NacosConfig nacosConfig) {
                 this.nacosConfig = nacosConfig;
@@ -339,10 +497,21 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The registry type.
+             * <p>The registry type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NACOS</p>
              */
             public Builder rcType(String rcType) {
                 this.rcType = rcType;
+                return this;
+            }
+
+            /**
+             * <p>The ZooKeeper configuration.</p>
+             */
+            public Builder zookeeperConfig(ZookeeperConfig zookeeperConfig) {
+                this.zookeeperConfig = zookeeperConfig;
                 return this;
             }
 
@@ -353,26 +522,32 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBackendInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackendInfoResponseBody</p>
+     */
     public static class EdasConfig extends TeaModel {
-        @NameInMap("EdasAppId")
+        @com.aliyun.core.annotation.NameInMap("EdasAppId")
         private String edasAppId;
 
-        @NameInMap("MicroserviceNamespace")
+        @com.aliyun.core.annotation.NameInMap("MicroserviceNamespace")
         private String microserviceNamespace;
 
-        @NameInMap("MicroserviceNamespaceId")
+        @com.aliyun.core.annotation.NameInMap("MicroserviceNamespaceId")
         private String microserviceNamespaceId;
 
-        @NameInMap("MicroserviceNamespaceName")
+        @com.aliyun.core.annotation.NameInMap("MicroserviceNamespaceName")
         private String microserviceNamespaceName;
 
-        @NameInMap("MseInstanceId")
+        @com.aliyun.core.annotation.NameInMap("MseInstanceId")
         private String mseInstanceId;
 
-        @NameInMap("RegistryType")
+        @com.aliyun.core.annotation.NameInMap("RegistryType")
         private String registryType;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
         private EdasConfig(Builder builder) {
@@ -452,7 +627,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             private String serviceName; 
 
             /**
-             * EdasAppId.
+             * <p>The EDAS application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6cd0c599-dxxx-496d-b3d5-6a71c657xxxxx</p>
              */
             public Builder edasAppId(String edasAppId) {
                 this.edasAppId = edasAppId;
@@ -460,7 +638,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MicroserviceNamespace.
+             * <p>The ID of the microservices namespace in EDAS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou:edasNacos</p>
              */
             public Builder microserviceNamespace(String microserviceNamespace) {
                 this.microserviceNamespace = microserviceNamespace;
@@ -468,7 +649,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MicroserviceNamespaceId.
+             * <p>The ID of the microservices namespace in EDAS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou:edasNacos</p>
              */
             public Builder microserviceNamespaceId(String microserviceNamespaceId) {
                 this.microserviceNamespaceId = microserviceNamespaceId;
@@ -476,7 +660,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MicroserviceNamespaceName.
+             * <p>The name of the microservices namespace in EDAS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Edas-Nacos</p>
              */
             public Builder microserviceNamespaceName(String microserviceNamespaceName) {
                 this.microserviceNamespaceName = microserviceNamespaceName;
@@ -484,7 +671,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MseInstanceId.
+             * <p>The MSE instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mse-cn-jia3n1rxxxx</p>
              */
             public Builder mseInstanceId(String mseInstanceId) {
                 this.mseInstanceId = mseInstanceId;
@@ -492,7 +682,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * RegistryType.
+             * <p>The registration type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EDAS</p>
              */
             public Builder registryType(String registryType) {
                 this.registryType = registryType;
@@ -500,7 +693,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The microservice name.
+             * <p>The service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -514,17 +710,23 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBackendInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackendInfoResponseBody</p>
+     */
     public static class EventBridgeConfig extends TeaModel {
-        @NameInMap("EventBridgeRegionId")
+        @com.aliyun.core.annotation.NameInMap("EventBridgeRegionId")
         private String eventBridgeRegionId;
 
-        @NameInMap("EventBus")
+        @com.aliyun.core.annotation.NameInMap("EventBus")
         private String eventBus;
 
-        @NameInMap("EventSource")
+        @com.aliyun.core.annotation.NameInMap("EventSource")
         private String eventSource;
 
-        @NameInMap("RoleArn")
+        @com.aliyun.core.annotation.NameInMap("RoleArn")
         private String roleArn;
 
         private EventBridgeConfig(Builder builder) {
@@ -577,7 +779,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             private String roleArn; 
 
             /**
-             * The region ID of the event bus in EventBridge.
+             * <p>The region ID of the event bus in EventBridge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder eventBridgeRegionId(String eventBridgeRegionId) {
                 this.eventBridgeRegionId = eventBridgeRegionId;
@@ -585,7 +790,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The event bus.
+             * <p>The event bus.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testBus</p>
              */
             public Builder eventBus(String eventBus) {
                 this.eventBus = eventBus;
@@ -593,7 +801,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The event source.
+             * <p>The event source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dds_driver</p>
              */
             public Builder eventSource(String eventSource) {
                 this.eventSource = eventSource;
@@ -601,7 +812,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ARN of the RAM role to be assumed by API Gateway to access EventBridge.
+             * <p>The ARN of the RAM role to be assumed by API Gateway to access EventBridge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::1975133748561***:role/aliyunserviceroleforiotlogexport</p>
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -615,30 +829,39 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBackendInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackendInfoResponseBody</p>
+     */
     public static class FunctionComputeConfig extends TeaModel {
-        @NameInMap("FcBaseUrl")
+        @com.aliyun.core.annotation.NameInMap("FcBaseUrl")
         private String fcBaseUrl;
 
-        @NameInMap("FcRegionId")
+        @com.aliyun.core.annotation.NameInMap("FcRegionId")
         private String fcRegionId;
 
-        @NameInMap("FcType")
+        @com.aliyun.core.annotation.NameInMap("FcType")
         private String fcType;
 
-        @NameInMap("FunctionName")
+        @com.aliyun.core.annotation.NameInMap("FunctionName")
         private String functionName;
 
-        @NameInMap("OnlyBusinessPath")
+        @com.aliyun.core.annotation.NameInMap("OnlyBusinessPath")
         private Boolean onlyBusinessPath;
 
-        @NameInMap("Qualifier")
+        @com.aliyun.core.annotation.NameInMap("Qualifier")
         private String qualifier;
 
-        @NameInMap("RoleArn")
+        @com.aliyun.core.annotation.NameInMap("RoleArn")
         private String roleArn;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
+
+        @com.aliyun.core.annotation.NameInMap("TriggerName")
+        private String triggerName;
 
         private FunctionComputeConfig(Builder builder) {
             this.fcBaseUrl = builder.fcBaseUrl;
@@ -649,6 +872,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             this.qualifier = builder.qualifier;
             this.roleArn = builder.roleArn;
             this.serviceName = builder.serviceName;
+            this.triggerName = builder.triggerName;
         }
 
         public static Builder builder() {
@@ -715,6 +939,13 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             return this.serviceName;
         }
 
+        /**
+         * @return triggerName
+         */
+        public String getTriggerName() {
+            return this.triggerName;
+        }
+
         public static final class Builder {
             private String fcBaseUrl; 
             private String fcRegionId; 
@@ -724,9 +955,13 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             private String qualifier; 
             private String roleArn; 
             private String serviceName; 
+            private String triggerName; 
 
             /**
-             * The root path of the Function Compute service.
+             * <p>The root path of the Function Compute service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://t*******.ap-*****.fcapp.run/">https://t*******.ap-*****.fcapp.run/</a></p>
              */
             public Builder fcBaseUrl(String fcBaseUrl) {
                 this.fcBaseUrl = fcBaseUrl;
@@ -734,7 +969,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the Function Compute service.
+             * <p>The region ID of the Function Compute service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder fcRegionId(String fcRegionId) {
                 this.fcRegionId = fcRegionId;
@@ -742,7 +980,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the service in Function Compute.
+             * <p>The type of the service in Function Compute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HttpTrigger</p>
              */
             public Builder fcType(String fcType) {
                 this.fcType = fcType;
@@ -750,7 +991,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The function name that is defined in Function Compute.
+             * <p>The function name that is defined in Function Compute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edge_function</p>
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
@@ -758,7 +1002,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the backend service receives only the service path.
+             * <p>Indicates whether the backend service receives only the service path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder onlyBusinessPath(Boolean onlyBusinessPath) {
                 this.onlyBusinessPath = onlyBusinessPath;
@@ -766,7 +1013,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the function.
+             * <p>The alias of the function.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testQualifier</p>
              */
             public Builder qualifier(String qualifier) {
                 this.qualifier = qualifier;
@@ -774,7 +1024,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the RAM role that is assumed by API Gateway to access Function Compute.
+             * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role that is assumed by API Gateway to access Function Compute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::31985*:role/aliyunserviceroleforbastionhostpam</p>
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -782,10 +1035,25 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The service name that is defined in Function Compute.
+             * <p>The service name that is defined in Function Compute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myservice</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
+                return this;
+            }
+
+            /**
+             * <p>The name of the trigger.</p>
+             * <p>You can specify the TriggerName or TriggerUrl parameter. The TriggerName parameter is optional.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1</p>
+             */
+            public Builder triggerName(String triggerName) {
+                this.triggerName = triggerName;
                 return this;
             }
 
@@ -796,11 +1064,17 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBackendInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackendInfoResponseBody</p>
+     */
     public static class MockHeaders extends TeaModel {
-        @NameInMap("HeaderName")
+        @com.aliyun.core.annotation.NameInMap("HeaderName")
         private String headerName;
 
-        @NameInMap("HeaderValue")
+        @com.aliyun.core.annotation.NameInMap("HeaderValue")
         private String headerValue;
 
         private MockHeaders(Builder builder) {
@@ -835,7 +1109,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             private String headerValue; 
 
             /**
-             * The name of the header parameter.
+             * <p>The header name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder headerName(String headerName) {
                 this.headerName = headerName;
@@ -843,7 +1120,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the header parameter.
+             * <p>The header value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder headerValue(String headerValue) {
                 this.headerValue = headerValue;
@@ -857,14 +1137,20 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBackendInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackendInfoResponseBody</p>
+     */
     public static class MockConfig extends TeaModel {
-        @NameInMap("MockHeaders")
-        private java.util.List < MockHeaders> mockHeaders;
+        @com.aliyun.core.annotation.NameInMap("MockHeaders")
+        private java.util.List<MockHeaders> mockHeaders;
 
-        @NameInMap("MockResult")
+        @com.aliyun.core.annotation.NameInMap("MockResult")
         private String mockResult;
 
-        @NameInMap("MockStatusCode")
+        @com.aliyun.core.annotation.NameInMap("MockStatusCode")
         private String mockStatusCode;
 
         private MockConfig(Builder builder) {
@@ -884,7 +1170,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         /**
          * @return mockHeaders
          */
-        public java.util.List < MockHeaders> getMockHeaders() {
+        public java.util.List<MockHeaders> getMockHeaders() {
             return this.mockHeaders;
         }
 
@@ -903,20 +1189,23 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < MockHeaders> mockHeaders; 
+            private java.util.List<MockHeaders> mockHeaders; 
             private String mockResult; 
             private String mockStatusCode; 
 
             /**
-             * The header returned for service mocking.
+             * <p>The header in the mocked response.</p>
              */
-            public Builder mockHeaders(java.util.List < MockHeaders> mockHeaders) {
+            public Builder mockHeaders(java.util.List<MockHeaders> mockHeaders) {
                 this.mockHeaders = mockHeaders;
                 return this;
             }
 
             /**
-             * The result returned for service mocking.
+             * <p>The mocked response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder mockResult(String mockResult) {
                 this.mockResult = mockResult;
@@ -924,7 +1213,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The status code that is returned for service mocking.
+             * <p>The status code in the mocked response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder mockStatusCode(String mockStatusCode) {
                 this.mockStatusCode = mockStatusCode;
@@ -938,11 +1230,17 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBackendInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackendInfoResponseBody</p>
+     */
     public static class OssConfig extends TeaModel {
-        @NameInMap("BucketName")
+        @com.aliyun.core.annotation.NameInMap("BucketName")
         private String bucketName;
 
-        @NameInMap("OssRegionId")
+        @com.aliyun.core.annotation.NameInMap("OssRegionId")
         private String ossRegionId;
 
         private OssConfig(Builder builder) {
@@ -977,7 +1275,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             private String ossRegionId; 
 
             /**
-             * The name of the OSS bucket.
+             * <p>The name of the OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my_bucket</p>
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -985,7 +1286,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the OSS bucket.
+             * <p>The region ID of the OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder ossRegionId(String ossRegionId) {
                 this.ossRegionId = ossRegionId;
@@ -999,26 +1303,32 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBackendInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackendInfoResponseBody</p>
+     */
     public static class VpcConfig extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Long port;
 
-        @NameInMap("VpcAccessId")
+        @com.aliyun.core.annotation.NameInMap("VpcAccessId")
         private String vpcAccessId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcScheme")
+        @com.aliyun.core.annotation.NameInMap("VpcScheme")
         private String vpcScheme;
 
-        @NameInMap("VpcTargetHostName")
+        @com.aliyun.core.annotation.NameInMap("VpcTargetHostName")
         private String vpcTargetHostName;
 
         private VpcConfig(Builder builder) {
@@ -1098,7 +1408,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             private String vpcTargetHostName; 
 
             /**
-             * The ID of the Elastic Compute Service (ECS) or Server Load Balancer (SLB) instance in the VPC.
+             * <p>The ID of the Elastic Compute Service (ECS) or Server Load Balancer (SLB) instance in the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-uf6iaale3gfef9t9cb41</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1106,7 +1419,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the VPC configuration.
+             * <p>The name of the VPC configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dypls-cn-beijing-slb-pre</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1114,7 +1430,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The port number that corresponds to the instance.
+             * <p>The port number that corresponds to the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder port(Long port) {
                 this.port = port;
@@ -1122,7 +1441,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC access authorization.
+             * <p>The ID of the VPC access authorization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2zej3ehuzg9m77kvwnfpn</p>
              */
             public Builder vpcAccessId(String vpcAccessId) {
                 this.vpcAccessId = vpcAccessId;
@@ -1130,7 +1452,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * <p>The ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-wz9v96hqi6d14744sxqmx</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -1138,7 +1463,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether HTTP or HTTPS is used.
+             * <p>Indicates whether HTTP or HTTPS is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http</p>
              */
             public Builder vpcScheme(String vpcScheme) {
                 this.vpcScheme = vpcScheme;
@@ -1146,7 +1474,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The host of the backend service.
+             * <p>The host of the VPC backend service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>openapi.alipan.com</p>
              */
             public Builder vpcTargetHostName(String vpcTargetHostName) {
                 this.vpcTargetHostName = vpcTargetHostName;
@@ -1160,38 +1491,44 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBackendInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackendInfoResponseBody</p>
+     */
     public static class BackendConfig extends TeaModel {
-        @NameInMap("DiscoveryConfig")
+        @com.aliyun.core.annotation.NameInMap("DiscoveryConfig")
         private DiscoveryConfig discoveryConfig;
 
-        @NameInMap("EdasConfig")
+        @com.aliyun.core.annotation.NameInMap("EdasConfig")
         private EdasConfig edasConfig;
 
-        @NameInMap("EventBridgeConfig")
+        @com.aliyun.core.annotation.NameInMap("EventBridgeConfig")
         private EventBridgeConfig eventBridgeConfig;
 
-        @NameInMap("FunctionComputeConfig")
+        @com.aliyun.core.annotation.NameInMap("FunctionComputeConfig")
         private FunctionComputeConfig functionComputeConfig;
 
-        @NameInMap("HttpTargetHostName")
+        @com.aliyun.core.annotation.NameInMap("HttpTargetHostName")
         private String httpTargetHostName;
 
-        @NameInMap("MockConfig")
+        @com.aliyun.core.annotation.NameInMap("MockConfig")
         private MockConfig mockConfig;
 
-        @NameInMap("OssConfig")
+        @com.aliyun.core.annotation.NameInMap("OssConfig")
         private OssConfig ossConfig;
 
-        @NameInMap("ServiceAddress")
+        @com.aliyun.core.annotation.NameInMap("ServiceAddress")
         private String serviceAddress;
 
-        @NameInMap("ServiceTimeout")
+        @com.aliyun.core.annotation.NameInMap("ServiceTimeout")
         private Integer serviceTimeout;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("VpcConfig")
+        @com.aliyun.core.annotation.NameInMap("VpcConfig")
         private VpcConfig vpcConfig;
 
         private BackendConfig(Builder builder) {
@@ -1307,7 +1644,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             private VpcConfig vpcConfig; 
 
             /**
-             * The information about the backend service whose type is Service Discovery.
+             * <p>The information about the backend service when the backend service is of the Service Discovery type.</p>
              */
             public Builder discoveryConfig(DiscoveryConfig discoveryConfig) {
                 this.discoveryConfig = discoveryConfig;
@@ -1315,7 +1652,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * EdasConfig.
+             * <p>The EDAS configuration.</p>
              */
             public Builder edasConfig(EdasConfig edasConfig) {
                 this.edasConfig = edasConfig;
@@ -1323,7 +1660,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the backend service whose type is EventBridge.
+             * <p>The information about the backend service whose type is EventBridge.</p>
              */
             public Builder eventBridgeConfig(EventBridgeConfig eventBridgeConfig) {
                 this.eventBridgeConfig = eventBridgeConfig;
@@ -1331,7 +1668,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the backend service whose type is Function Compute.
+             * <p>The information about the backend service whose type is Function Compute.</p>
              */
             public Builder functionComputeConfig(FunctionComputeConfig functionComputeConfig) {
                 this.functionComputeConfig = functionComputeConfig;
@@ -1339,7 +1676,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The host of the backend service.
+             * <p>The host of the HTTP backend service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.host.com">www.host.com</a></p>
              */
             public Builder httpTargetHostName(String httpTargetHostName) {
                 this.httpTargetHostName = httpTargetHostName;
@@ -1347,7 +1687,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the backend service whose type is Mock.
+             * <p>The information about the backend service when the backend service is of the Mock type.</p>
              */
             public Builder mockConfig(MockConfig mockConfig) {
                 this.mockConfig = mockConfig;
@@ -1355,7 +1695,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the backend service whose type is Object Storage Service (OSS).
+             * <p>The information about the backend service whose type is Object Storage Service (OSS).</p>
              */
             public Builder ossConfig(OssConfig ossConfig) {
                 this.ossConfig = ossConfig;
@@ -1363,7 +1703,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the backend service.
+             * <p>The URL of the backend service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.0.1</p>
              */
             public Builder serviceAddress(String serviceAddress) {
                 this.serviceAddress = serviceAddress;
@@ -1371,7 +1714,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceTimeout.
+             * <p>The timeout period of the backend service, in millisecond.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder serviceTimeout(Integer serviceTimeout) {
                 this.serviceTimeout = serviceTimeout;
@@ -1379,7 +1725,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the backend service.
+             * <p>The type of the backend service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1387,7 +1736,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the virtual private cloud (VPC). This parameter is available only for backend services whose type is VPC.
+             * <p>The information about the backend service when the backend service is of the VPC type.</p>
              */
             public Builder vpcConfig(VpcConfig vpcConfig) {
                 this.vpcConfig = vpcConfig;
@@ -1401,26 +1750,32 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBackendInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackendInfoResponseBody</p>
+     */
     public static class BackendModels extends TeaModel {
-        @NameInMap("BackendConfig")
+        @com.aliyun.core.annotation.NameInMap("BackendConfig")
         private BackendConfig backendConfig;
 
-        @NameInMap("BackendModelId")
+        @com.aliyun.core.annotation.NameInMap("BackendModelId")
         private String backendModelId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("StageModeId")
+        @com.aliyun.core.annotation.NameInMap("StageModeId")
         private String stageModeId;
 
-        @NameInMap("StageName")
+        @com.aliyun.core.annotation.NameInMap("StageName")
         private String stageName;
 
         private BackendModels(Builder builder) {
@@ -1500,7 +1855,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             private String stageName; 
 
             /**
-             * The backend service configurations.
+             * <p>The backend service configurations.</p>
              */
             public Builder backendConfig(BackendConfig backendConfig) {
                 this.backendConfig = backendConfig;
@@ -1508,7 +1863,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the backend service in the environment.
+             * <p>The ID of the backend service in the environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5c4995d08e8b4954b0f326e8e4f2b97d</p>
              */
             public Builder backendModelId(String backendModelId) {
                 this.backendModelId = backendModelId;
@@ -1516,7 +1874,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the backend service.
+             * <p>The description of the backend service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testDvs 1</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1524,7 +1885,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the backend service was created.
+             * <p>The time when the backend service was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-20T03:22:03.000+0000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -1532,7 +1896,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the backend service was modified.
+             * <p>The time when the backend service was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-20T03:22:03.000+0000</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -1540,7 +1907,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the environment.
+             * <p>The ID of the environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6fc978bb63574146b766863dd7bdf661</p>
              */
             public Builder stageModeId(String stageModeId) {
                 this.stageModeId = stageModeId;
@@ -1548,7 +1918,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The environment name.
+             * <p>The environment name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RELEASE</p>
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
@@ -1562,26 +1935,32 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBackendInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackendInfoResponseBody</p>
+     */
     public static class BackendInfo extends TeaModel {
-        @NameInMap("BackendId")
+        @com.aliyun.core.annotation.NameInMap("BackendId")
         private String backendId;
 
-        @NameInMap("BackendModels")
-        private java.util.List < BackendModels> backendModels;
+        @com.aliyun.core.annotation.NameInMap("BackendModels")
+        private java.util.List<BackendModels> backendModels;
 
-        @NameInMap("BackendName")
+        @com.aliyun.core.annotation.NameInMap("BackendName")
         private String backendName;
 
-        @NameInMap("BackendType")
+        @com.aliyun.core.annotation.NameInMap("BackendType")
         private String backendType;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
         private BackendInfo(Builder builder) {
@@ -1612,7 +1991,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         /**
          * @return backendModels
          */
-        public java.util.List < BackendModels> getBackendModels() {
+        public java.util.List<BackendModels> getBackendModels() {
             return this.backendModels;
         }
 
@@ -1653,7 +2032,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private String backendId; 
-            private java.util.List < BackendModels> backendModels; 
+            private java.util.List<BackendModels> backendModels; 
             private String backendName; 
             private String backendType; 
             private String createdTime; 
@@ -1661,7 +2040,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             private String modifiedTime; 
 
             /**
-             * The ID of the backend service.
+             * <p>The ID of the backend service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6fc978bb63574146b766863dd7bdf661</p>
              */
             public Builder backendId(String backendId) {
                 this.backendId = backendId;
@@ -1669,15 +2051,18 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of the backend service in the environment.
+             * <p>The configurations of the backend service in the environment.</p>
              */
-            public Builder backendModels(java.util.List < BackendModels> backendModels) {
+            public Builder backendModels(java.util.List<BackendModels> backendModels) {
                 this.backendModels = backendModels;
                 return this;
             }
 
             /**
-             * The name of the backend service.
+             * <p>The name of the backend service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testoss2</p>
              */
             public Builder backendName(String backendName) {
                 this.backendName = backendName;
@@ -1685,7 +2070,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the backend service.
+             * <p>The type of the backend service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder backendType(String backendType) {
                 this.backendType = backendType;
@@ -1693,7 +2081,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the backend service was created.
+             * <p>The time when the backend service was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-22T11:10:46+08:00</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -1701,7 +2092,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the backend service.
+             * <p>The description of the backend service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>add</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1709,7 +2103,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the backend service was modified.
+             * <p>The time when the backend service was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-11T15:18:09+08:00</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;

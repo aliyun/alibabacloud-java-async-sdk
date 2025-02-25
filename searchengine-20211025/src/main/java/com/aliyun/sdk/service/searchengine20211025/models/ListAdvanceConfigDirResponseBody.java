@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAdvanceConfigDirResponseBody} extends {@link TeaModel}
  *
  * <p>ListAdvanceConfigDirResponseBody</p>
  */
 public class ListAdvanceConfigDirResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
-    private java.util.List < Result> result;
+    @com.aliyun.core.annotation.NameInMap("result")
+    private java.util.List<Result> result;
 
     private ListAdvanceConfigDirResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class ListAdvanceConfigDirResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
 
         /**
-         * requestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2AE63638-5420-56DC-BF59-37D8174039A0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class ListAdvanceConfigDirResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * <p>The advanced configuration files.</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -71,17 +79,23 @@ public class ListAdvanceConfigDirResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAdvanceConfigDirResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAdvanceConfigDirResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("fullPathName")
+        @com.aliyun.core.annotation.NameInMap("fullPathName")
         private String fullPathName;
 
-        @NameInMap("isDir")
+        @com.aliyun.core.annotation.NameInMap("isDir")
         private Boolean isDir;
 
-        @NameInMap("isTemplate")
+        @com.aliyun.core.annotation.NameInMap("isTemplate")
         private Boolean isTemplate;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private Result(Builder builder) {
@@ -134,7 +148,10 @@ public class ListAdvanceConfigDirResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * fullPathName.
+             * <p>The absolute path in which the file is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;/path/wpd/nae&quot;</p>
              */
             public Builder fullPathName(String fullPathName) {
                 this.fullPathName = fullPathName;
@@ -142,7 +159,10 @@ public class ListAdvanceConfigDirResponseBody extends TeaModel {
             }
 
             /**
-             * isDir.
+             * <p>Indicates whether the file is a directory. Valid values: true and false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDir(Boolean isDir) {
                 this.isDir = isDir;
@@ -150,7 +170,10 @@ public class ListAdvanceConfigDirResponseBody extends TeaModel {
             }
 
             /**
-             * isTemplate.
+             * <p>Indicates whether the file is a template. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isTemplate(Boolean isTemplate) {
                 this.isTemplate = isTemplate;
@@ -158,7 +181,10 @@ public class ListAdvanceConfigDirResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The cluster name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>file_name_1</p>
              */
             public Builder name(String name) {
                 this.name = name;

@@ -1,3 +1,57 @@
+2025-02-08 Version: 3.0.17
+- Generated java-async 2020-05-18 for dataworks-public.
+
+2025-01-23 Version: 3.0.16
+- Generated java-async 2020-05-18 for dataworks-public.
+
+2025-01-13 Version: 3.0.15
+- Generated java-async 2020-05-18 for dataworks-public.
+
+2024-12-13 Version: 3.0.14
+- Generated java-async 2020-05-18 for dataworks-public.
+
+2024-11-21 Version: 3.0.13
+- Generated java-async 2020-05-18 for dataworks-public.
+
+2024-11-14 Version: 3.0.12
+- Generated java-async 2020-05-18 for dataworks-public.
+
+2024-11-04 Version: 3.0.11
+- Generated java-async 2020-05-18 for dataworks-public.
+
+2024-10-17 Version: 3.0.10
+- Generated java-async 2020-05-18 for dataworks-public.
+
+2024-09-18 Version: 3.0.9
+- Generated java-async 2020-05-18 for dataworks-public.
+
+2024-09-03 Version: 3.0.8
+- Generated java-async 2020-05-18 for dataworks-public.
+
+2024-09-03 Version: 3.0.7
+- Generated java-async 2020-05-18 for dataworks-public.
+
+2024-08-14 Version: 3.0.6
+- Generated java-async 2020-05-18 for dataworks-public.
+
+2024-05-30 Version: 3.0.5
+- Generated java-async 2020-05-18 for dataworks-public.
+
+2024-05-20 Version: 3.0.4
+- Generated java-async 2020-05-18 for dataworks-public.
+
+2024-05-16 Version: 3.0.3
+- Generated java-async 2020-05-18 for dataworks-public.
+
+2024-04-24 Version: 3.0.2
+- Generated java-async 2020-05-18 for dataworks-public.
+
+2024-04-17 Version: 3.0.1
+- Generated java-async 2020-05-18 for dataworks-public.
+
+2024-02-29 Version: 3.0.0
+- Generated java-async 2020-05-18 for dataworks-public.
+
 2023-12-11 Version: 2.0.0
 - Generated java-async 2020-05-18 for dataworks-public.
 

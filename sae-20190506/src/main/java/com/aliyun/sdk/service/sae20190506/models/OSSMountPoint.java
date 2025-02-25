@@ -1,40 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OSSMountPoint} extends {@link TeaModel}
  *
  * <p>OSSMountPoint</p>
  */
 public class OSSMountPoint extends TeaModel {
-    @NameInMap("bucketName")
-    @Validation(maxLength = 64, minLength = 3)
+    @com.aliyun.core.annotation.NameInMap("bucketName")
+    @com.aliyun.core.annotation.Validation(maxLength = 64, minLength = 3)
     private String bucketName;
 
-    @NameInMap("bucketPath")
-    @Validation(maxLength = 128)
+    @com.aliyun.core.annotation.NameInMap("bucketPath")
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String bucketPath;
 
-    @NameInMap("endpoint")
-    @Validation(maxLength = 128)
-    private String endpoint;
-
-    @NameInMap("mountDir")
-    @Validation(maxLength = 64, minLength = 2)
+    @com.aliyun.core.annotation.NameInMap("mountDir")
+    @com.aliyun.core.annotation.Validation(maxLength = 64, minLength = 2)
     private String mountDir;
 
-    @NameInMap("readOnly")
+    @com.aliyun.core.annotation.NameInMap("readOnly")
     private Boolean readOnly;
 
     private OSSMountPoint(Builder builder) {
         this.bucketName = builder.bucketName;
         this.bucketPath = builder.bucketPath;
-        this.endpoint = builder.endpoint;
         this.mountDir = builder.mountDir;
         this.readOnly = builder.readOnly;
     }
@@ -62,13 +62,6 @@ public class OSSMountPoint extends TeaModel {
     }
 
     /**
-     * @return endpoint
-     */
-    public String getEndpoint() {
-        return this.endpoint;
-    }
-
-    /**
      * @return mountDir
      */
     public String getMountDir() {
@@ -85,7 +78,6 @@ public class OSSMountPoint extends TeaModel {
     public static final class Builder {
         private String bucketName; 
         private String bucketPath; 
-        private String endpoint; 
         private String mountDir; 
         private Boolean readOnly; 
 
@@ -102,14 +94,6 @@ public class OSSMountPoint extends TeaModel {
          */
         public Builder bucketPath(String bucketPath) {
             this.bucketPath = bucketPath;
-            return this;
-        }
-
-        /**
-         * endpoint.
-         */
-        public Builder endpoint(String endpoint) {
-            this.endpoint = endpoint;
             return this;
         }
 

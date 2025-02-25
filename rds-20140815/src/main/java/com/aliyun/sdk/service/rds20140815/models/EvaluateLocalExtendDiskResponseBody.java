@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EvaluateLocalExtendDiskResponseBody} extends {@link TeaModel}
  *
  * <p>EvaluateLocalExtendDiskResponseBody</p>
  */
 public class EvaluateLocalExtendDiskResponseBody extends TeaModel {
-    @NameInMap("Available")
+    @com.aliyun.core.annotation.NameInMap("Available")
     private String available;
 
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("DBInstanceTransType")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceTransType")
     private String DBInstanceTransType;
 
-    @NameInMap("LocalUpgradeDiskLimit")
+    @com.aliyun.core.annotation.NameInMap("LocalUpgradeDiskLimit")
     private Long localUpgradeDiskLimit;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private EvaluateLocalExtendDiskResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class EvaluateLocalExtendDiskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the instance is available. Valid values: true and false.
+         * <p>Indicates whether the instance is available. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder available(String available) {
             this.available = available;
@@ -94,7 +102,10 @@ public class EvaluateLocalExtendDiskResponseBody extends TeaModel {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1375i66nd******</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -102,7 +113,10 @@ public class EvaluateLocalExtendDiskResponseBody extends TeaModel {
         }
 
         /**
-         * The data transfer type supported by the instance.
+         * <p>The data transfer type supported by the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder DBInstanceTransType(String DBInstanceTransType) {
             this.DBInstanceTransType = DBInstanceTransType;
@@ -110,7 +124,10 @@ public class EvaluateLocalExtendDiskResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum value of the local disk. Unit: GB.
+         * <p>The maximum value of the local disk. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder localUpgradeDiskLimit(Long localUpgradeDiskLimit) {
             this.localUpgradeDiskLimit = localUpgradeDiskLimit;
@@ -118,7 +135,10 @@ public class EvaluateLocalExtendDiskResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A4C4D26F-E5CE-5A28-8C54-46A6FB318223</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

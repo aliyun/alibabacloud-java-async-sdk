@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnsCommodityCodeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEnsCommodityCodeResponseBody</p>
  */
 public class DescribeEnsCommodityCodeResponseBody extends TeaModel {
-    @NameInMap("CommodityCodeInfo")
-    private java.util.List < CommodityCodeInfo> commodityCodeInfo;
+    @com.aliyun.core.annotation.NameInMap("CommodityCodeInfo")
+    private java.util.List<CommodityCodeInfo> commodityCodeInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeEnsCommodityCodeResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeEnsCommodityCodeResponseBody extends TeaModel {
     /**
      * @return commodityCodeInfo
      */
-    public java.util.List < CommodityCodeInfo> getCommodityCodeInfo() {
+    public java.util.List<CommodityCodeInfo> getCommodityCodeInfo() {
         return this.commodityCodeInfo;
     }
 
@@ -46,13 +51,13 @@ public class DescribeEnsCommodityCodeResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CommodityCodeInfo> commodityCodeInfo; 
+        private java.util.List<CommodityCodeInfo> commodityCodeInfo; 
         private String requestId; 
 
         /**
          * CommodityCodeInfo.
          */
-        public Builder commodityCodeInfo(java.util.List < CommodityCodeInfo> commodityCodeInfo) {
+        public Builder commodityCodeInfo(java.util.List<CommodityCodeInfo> commodityCodeInfo) {
             this.commodityCodeInfo = commodityCodeInfo;
             return this;
         }
@@ -71,11 +76,17 @@ public class DescribeEnsCommodityCodeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEnsCommodityCodeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsCommodityCodeResponseBody</p>
+     */
     public static class CommodityCodeInfo extends TeaModel {
-        @NameInMap("CommodityCode")
+        @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
 
-        @NameInMap("CommodityName")
+        @com.aliyun.core.annotation.NameInMap("CommodityName")
         private String commodityName;
 
         private CommodityCodeInfo(Builder builder) {

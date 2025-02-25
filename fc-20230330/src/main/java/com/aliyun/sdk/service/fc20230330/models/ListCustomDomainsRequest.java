@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCustomDomainsRequest} extends {@link RequestModel}
  *
  * <p>ListCustomDomainsRequest</p>
  */
 public class ListCustomDomainsRequest extends Request {
-    @Query
-    @NameInMap("limit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("limit")
     private Integer limit;
 
-    @Query
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("prefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("prefix")
     private String prefix;
 
     private ListCustomDomainsRequest(Builder builder) {
@@ -82,7 +82,10 @@ public class ListCustomDomainsRequest extends Request {
         } 
 
         /**
-         * limit.
+         * <p>The number of custom domain names returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -91,7 +94,10 @@ public class ListCustomDomainsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTIzNCNhYmM=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -100,7 +106,10 @@ public class ListCustomDomainsRequest extends Request {
         }
 
         /**
-         * prefix.
+         * <p>The domain name prefix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder prefix(String prefix) {
             this.putQueryParameter("prefix", prefix);

@@ -105,17 +105,17 @@ public class ModifyPolarDbReadWeightRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyPolarDbReadWeightRequest response) {
-            super(response);
-            this.dbInstanceId = response.dbInstanceId;
-            this.dbName = response.dbName;
-            this.dbNodeIds = response.dbNodeIds;
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.weights = response.weights;
+        private Builder(ModifyPolarDbReadWeightRequest request) {
+            super(request);
+            this.dbInstanceId = request.dbInstanceId;
+            this.dbName = request.dbName;
+            this.dbNodeIds = request.dbNodeIds;
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.weights = request.weights;
         } 
 
         /**
-         * DbInstanceId.
+         * Polar cluster ID.
          */
         public Builder dbInstanceId(String dbInstanceId) {
             this.putQueryParameter("DbInstanceId", dbInstanceId);
@@ -124,7 +124,7 @@ public class ModifyPolarDbReadWeightRequest extends Request {
         }
 
         /**
-         * DbName.
+         * The name of the database.
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -133,7 +133,7 @@ public class ModifyPolarDbReadWeightRequest extends Request {
         }
 
         /**
-         * DbNodeIds.
+         * The node list in the destination apsaradb for PolarDB cluster. The nodes in each cluster are separated with commas (,) and colons (:).
          */
         public Builder dbNodeIds(String dbNodeIds) {
             this.putQueryParameter("DbNodeIds", dbNodeIds);
@@ -142,7 +142,7 @@ public class ModifyPolarDbReadWeightRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of a DRDS instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -151,7 +151,7 @@ public class ModifyPolarDbReadWeightRequest extends Request {
         }
 
         /**
-         * Weights.
+         * The weight of the PolarDB cluster. Separate multiple weights with commas (,).
          */
         public Builder weights(String weights) {
             this.putQueryParameter("Weights", weights);

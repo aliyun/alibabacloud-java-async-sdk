@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateMediaResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateMediaResponseBody</p>
  */
 public class UpdateMediaResponseBody extends TeaModel {
-    @NameInMap("Media")
+    @com.aliyun.core.annotation.NameInMap("Media")
     private Media media;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateMediaResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class UpdateMediaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Media.
+         * <p>The information about the media file.</p>
          */
         public Builder media(Media media) {
             this.media = media;
@@ -58,7 +58,10 @@ public class UpdateMediaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6A88246F-C91F-42BD-BABE-DB0DF993F960</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +74,17 @@ public class UpdateMediaResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateMediaResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateMediaResponseBody</p>
+     */
     public static class File extends TeaModel {
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("URL")
+        @com.aliyun.core.annotation.NameInMap("URL")
         private String URL;
 
         private File(Builder builder) {
@@ -110,7 +119,14 @@ public class UpdateMediaResponseBody extends TeaModel {
             private String URL; 
 
             /**
-             * State.
+             * <p>The state of the input file. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal</strong>: The input file is normal.</li>
+             * <li><strong>Deleted</strong>: The input file is deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -118,7 +134,10 @@ public class UpdateMediaResponseBody extends TeaModel {
             }
 
             /**
-             * URL.
+             * <p>The name of the OSS bucket in which the input media file is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example-bucket-****.oss-cn-hangzhou.aliyuncs.com//example-****.mp4">http://example-bucket-****.oss-cn-hangzhou.aliyuncs.com//example-****.mp4</a></p>
              */
             public Builder URL(String URL) {
                 this.URL = URL;
@@ -132,8 +151,14 @@ public class UpdateMediaResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateMediaResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateMediaResponseBody</p>
+     */
     public static class RunIdList extends TeaModel {
-        @NameInMap("RunId")
+        @com.aliyun.core.annotation.NameInMap("RunId")
         private java.util.List < String > runId;
 
         private RunIdList(Builder builder) {
@@ -173,8 +198,14 @@ public class UpdateMediaResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateMediaResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateMediaResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < String > tag;
 
         private Tags(Builder builder) {
@@ -214,59 +245,65 @@ public class UpdateMediaResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateMediaResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateMediaResponseBody</p>
+     */
     public static class Media extends TeaModel {
-        @NameInMap("Bitrate")
+        @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
 
-        @NameInMap("CateId")
+        @com.aliyun.core.annotation.NameInMap("CateId")
         private Long cateId;
 
-        @NameInMap("CensorState")
+        @com.aliyun.core.annotation.NameInMap("CensorState")
         private String censorState;
 
-        @NameInMap("CoverURL")
+        @com.aliyun.core.annotation.NameInMap("CoverURL")
         private String coverURL;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("File")
+        @com.aliyun.core.annotation.NameInMap("File")
         private File file;
 
-        @NameInMap("Format")
+        @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
 
-        @NameInMap("Fps")
+        @com.aliyun.core.annotation.NameInMap("Fps")
         private String fps;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private String height;
 
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
-        @NameInMap("PublishState")
+        @com.aliyun.core.annotation.NameInMap("PublishState")
         private String publishState;
 
-        @NameInMap("RunIdList")
+        @com.aliyun.core.annotation.NameInMap("RunIdList")
         private RunIdList runIdList;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private String size;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private String width;
 
         private Media(Builder builder) {
@@ -445,7 +482,10 @@ public class UpdateMediaResponseBody extends TeaModel {
             private String width; 
 
             /**
-             * Bitrate.
+             * <p>The bitrate of the media file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2659.326</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -453,7 +493,10 @@ public class UpdateMediaResponseBody extends TeaModel {
             }
 
             /**
-             * CateId.
+             * <p>The ID of the category to which the media file belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cateId(Long cateId) {
                 this.cateId = cateId;
@@ -461,7 +504,14 @@ public class UpdateMediaResponseBody extends TeaModel {
             }
 
             /**
-             * CensorState.
+             * <p>The review state of the media file. Valid values:</p>
+             * <ul>
+             * <li><strong>Initiated</strong>: The media file is uploaded but not reviewed.</li>
+             * <li><strong>Pass</strong>: The media file is uploaded and passes the review.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Initiated</p>
              */
             public Builder censorState(String censorState) {
                 this.censorState = censorState;
@@ -469,7 +519,10 @@ public class UpdateMediaResponseBody extends TeaModel {
             }
 
             /**
-             * CoverURL.
+             * <p>The URL of the thumbnail.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example-bucket-****.oss-cn-shanghai.aliyuncs.com/example-****.jpg">http://example-bucket-****.oss-cn-shanghai.aliyuncs.com/example-****.jpg</a></p>
              */
             public Builder coverURL(String coverURL) {
                 this.coverURL = coverURL;
@@ -477,7 +530,10 @@ public class UpdateMediaResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The time when the media file was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-09-14T08:30:33Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -485,7 +541,10 @@ public class UpdateMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the media file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -493,7 +552,10 @@ public class UpdateMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The duration of the media file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7.965000</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -501,7 +563,7 @@ public class UpdateMediaResponseBody extends TeaModel {
             }
 
             /**
-             * File.
+             * <p>The information about the input file.</p>
              */
             public Builder file(File file) {
                 this.file = file;
@@ -509,7 +571,10 @@ public class UpdateMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Format.
+             * <p>The format of the media file. Valid values: mov, mp4, m4a, 3gp, 3g2, and mj2.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mov</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -517,7 +582,10 @@ public class UpdateMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Fps.
+             * <p>The frame rate of the media file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25.0</p>
              */
             public Builder fps(String fps) {
                 this.fps = fps;
@@ -525,7 +593,10 @@ public class UpdateMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * <p>The height of the media file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1080</p>
              */
             public Builder height(String height) {
                 this.height = height;
@@ -533,7 +604,10 @@ public class UpdateMediaResponseBody extends TeaModel {
             }
 
             /**
-             * MediaId.
+             * <p>The ID of the media file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3e1cd21131a94525be55acf65888****</p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -541,7 +615,16 @@ public class UpdateMediaResponseBody extends TeaModel {
             }
 
             /**
-             * PublishState.
+             * <p>The publishing state of the media file. Valid values:</p>
+             * <ul>
+             * <li><strong>Initiated</strong>: The media file is in the initial state.</li>
+             * <li><strong>UnPublish</strong>: The media file has not been published, and the playback permission on the OSS object is Private.</li>
+             * <li><strong>Published</strong>: The media file has been published, and the playback permission on the OSS object is Default.</li>
+             * <li><strong>Deleted</strong>: The media file is deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Published</p>
              */
             public Builder publishState(String publishState) {
                 this.publishState = publishState;
@@ -549,7 +632,7 @@ public class UpdateMediaResponseBody extends TeaModel {
             }
 
             /**
-             * RunIdList.
+             * <p>The IDs of the media workflow execution instances.</p>
              */
             public Builder runIdList(RunIdList runIdList) {
                 this.runIdList = runIdList;
@@ -557,7 +640,10 @@ public class UpdateMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The size of the media file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2647692</p>
              */
             public Builder size(String size) {
                 this.size = size;
@@ -565,7 +651,7 @@ public class UpdateMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The information about the tags.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -573,7 +659,10 @@ public class UpdateMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The title of the media file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hello</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -581,7 +670,10 @@ public class UpdateMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>The width of the media file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1920</p>
              */
             public Builder width(String width) {
                 this.width = width;

@@ -1,60 +1,65 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableDBClusterServerlessRequest} extends {@link RequestModel}
  *
  * <p>EnableDBClusterServerlessRequest</p>
  */
 public class EnableDBClusterServerlessRequest extends Request {
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ScaleApRoNumMax")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScaleApRoNumMax")
     private String scaleApRoNumMax;
 
-    @Query
-    @NameInMap("ScaleApRoNumMin")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScaleApRoNumMin")
     private String scaleApRoNumMin;
 
-    @Query
-    @NameInMap("ScaleMax")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScaleMax")
     private String scaleMax;
 
-    @Query
-    @NameInMap("ScaleMin")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScaleMin")
     private String scaleMin;
 
-    @Query
-    @NameInMap("ScaleRoNumMax")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScaleRoNumMax")
     private String scaleRoNumMax;
 
-    @Query
-    @NameInMap("ScaleRoNumMin")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScaleRoNumMin")
     private String scaleRoNumMin;
 
     private EnableDBClusterServerlessRequest(Builder builder) {
@@ -195,7 +200,11 @@ public class EnableDBClusterServerlessRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-**************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -240,7 +249,10 @@ public class EnableDBClusterServerlessRequest extends Request {
         }
 
         /**
-         * ScaleApRoNumMax.
+         * <p>The maximum number of stable AP read-only nodes. Valid values: 0 to 7.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder scaleApRoNumMax(String scaleApRoNumMax) {
             this.putQueryParameter("ScaleApRoNumMax", scaleApRoNumMax);
@@ -249,7 +261,10 @@ public class EnableDBClusterServerlessRequest extends Request {
         }
 
         /**
-         * ScaleApRoNumMin.
+         * <p>The minimum number of stable AP read-only nodes. Valid values: 0 to 7.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder scaleApRoNumMin(String scaleApRoNumMin) {
             this.putQueryParameter("ScaleApRoNumMin", scaleApRoNumMin);
@@ -258,7 +273,10 @@ public class EnableDBClusterServerlessRequest extends Request {
         }
 
         /**
-         * ScaleMax.
+         * <p>The maximum number of PCUs per node for scaling. Valid values: 1 to 8 PCUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder scaleMax(String scaleMax) {
             this.putQueryParameter("ScaleMax", scaleMax);
@@ -267,7 +285,10 @@ public class EnableDBClusterServerlessRequest extends Request {
         }
 
         /**
-         * ScaleMin.
+         * <p>The minimum number of PolarDB capacity units (PCUs) per node for scaling. Valid values: 1 to 8 PCUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder scaleMin(String scaleMin) {
             this.putQueryParameter("ScaleMin", scaleMin);
@@ -276,7 +297,10 @@ public class EnableDBClusterServerlessRequest extends Request {
         }
 
         /**
-         * ScaleRoNumMax.
+         * <p>The maximum number of read-only nodes for scaling. Valid values: 0 to 7.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder scaleRoNumMax(String scaleRoNumMax) {
             this.putQueryParameter("ScaleRoNumMax", scaleRoNumMax);
@@ -285,7 +309,10 @@ public class EnableDBClusterServerlessRequest extends Request {
         }
 
         /**
-         * ScaleRoNumMin.
+         * <p>The minimum number of read-only nodes for scaling. Valid values: 0 to 7.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder scaleRoNumMin(String scaleRoNumMin) {
             this.putQueryParameter("ScaleRoNumMin", scaleRoNumMin);

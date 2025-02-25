@@ -1,43 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAclEntriesRequest} extends {@link RequestModel}
  *
  * <p>DescribeAclEntriesRequest</p>
  */
 public class DescribeAclEntriesRequest extends Request {
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
+    private String officeSiteId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("SourceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceId")
     private String sourceId;
 
-    @Query
-    @NameInMap("SourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceType")
     private String sourceType;
 
     private DescribeAclEntriesRequest(Builder builder) {
         super(builder);
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.officeSiteId = builder.officeSiteId;
         this.regionId = builder.regionId;
         this.sourceId = builder.sourceId;
         this.sourceType = builder.sourceType;
@@ -71,6 +81,13 @@ public class DescribeAclEntriesRequest extends Request {
     }
 
     /**
+     * @return officeSiteId
+     */
+    public String getOfficeSiteId() {
+        return this.officeSiteId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -94,6 +111,7 @@ public class DescribeAclEntriesRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeAclEntriesRequest, Builder> {
         private Integer maxResults; 
         private String nextToken; 
+        private String officeSiteId; 
         private String regionId; 
         private String sourceId; 
         private String sourceType; 
@@ -106,13 +124,18 @@ public class DescribeAclEntriesRequest extends Request {
             super(request);
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.officeSiteId = request.officeSiteId;
             this.regionId = request.regionId;
             this.sourceId = request.sourceId;
             this.sourceType = request.sourceType;
         } 
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page. Maximum value: 1600.</p>
+         * <p>Default value: 1600.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -121,7 +144,10 @@ public class DescribeAclEntriesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token that is used for the next query. If this parameter is empty, all results have been returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kRxd1mKkNnHlUy14zdjl/I</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -130,7 +156,20 @@ public class DescribeAclEntriesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * OfficeSiteId.
+         */
+        public Builder officeSiteId(String officeSiteId) {
+            this.putQueryParameter("OfficeSiteId", officeSiteId);
+            this.officeSiteId = officeSiteId;
+            return this;
+        }
+
+        /**
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -139,7 +178,10 @@ public class DescribeAclEntriesRequest extends Request {
         }
 
         /**
-         * SourceId.
+         * <p>The ID of the instance to which the ACL applies. You can specify an office network ID or a cloud computer ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-****</p>
          */
         public Builder sourceId(String sourceId) {
             this.putQueryParameter("SourceId", sourceId);
@@ -148,7 +190,15 @@ public class DescribeAclEntriesRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * <p>The granularity of the ACL.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>desktop: cloud computer</li>
+         * <li>vpc: office network</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desktop</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);

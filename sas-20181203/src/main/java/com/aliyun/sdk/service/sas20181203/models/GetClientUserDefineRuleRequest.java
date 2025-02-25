@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetClientUserDefineRuleRequest} extends {@link RequestModel}
  *
  * <p>GetClientUserDefineRuleRequest</p>
  */
 public class GetClientUserDefineRuleRequest extends Request {
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long id;
 
     private GetClientUserDefineRuleRequest(Builder builder) {
@@ -55,7 +60,11 @@ public class GetClientUserDefineRuleRequest extends Request {
         } 
 
         /**
-         * The ID of the custom defense rule.
+         * <p>The ID of the custom defense rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200****</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

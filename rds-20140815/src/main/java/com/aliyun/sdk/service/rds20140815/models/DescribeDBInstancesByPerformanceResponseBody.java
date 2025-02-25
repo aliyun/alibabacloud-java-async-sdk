@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstancesByPerformanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstancesByPerformanceResponseBody</p>
  */
 public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeDBInstancesByPerformanceResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The details about the instance.
+         * <p>The details about the instance.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -94,7 +99,10 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on the current page.
+         * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -110,7 +121,10 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23907437-79B9-411A-9EE6-75A8F0F1C619</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -131,23 +148,29 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstancesByPerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstancesByPerformanceResponseBody</p>
+     */
     public static class DBInstancePerformance extends TeaModel {
-        @NameInMap("CPUUsage")
+        @com.aliyun.core.annotation.NameInMap("CPUUsage")
         private String CPUUsage;
 
-        @NameInMap("DBInstanceDescription")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceDescription")
         private String DBInstanceDescription;
 
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("DiskUsage")
+        @com.aliyun.core.annotation.NameInMap("DiskUsage")
         private String diskUsage;
 
-        @NameInMap("IOPSUsage")
+        @com.aliyun.core.annotation.NameInMap("IOPSUsage")
         private String IOPSUsage;
 
-        @NameInMap("SessionUsage")
+        @com.aliyun.core.annotation.NameInMap("SessionUsage")
         private String sessionUsage;
 
         private DBInstancePerformance(Builder builder) {
@@ -218,7 +241,10 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
             private String sessionUsage; 
 
             /**
-             * The CPU utilization of the instance in percentage.
+             * <p>The CPU utilization of the instance in percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.70</p>
              */
             public Builder CPUUsage(String CPUUsage) {
                 this.CPUUsage = CPUUsage;
@@ -226,7 +252,10 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DatabaseTest</p>
              */
             public Builder DBInstanceDescription(String DBInstanceDescription) {
                 this.DBInstanceDescription = DBInstanceDescription;
@@ -234,7 +263,10 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-uf6wjk5xxxxxx</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -242,7 +274,10 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The disk usage of the instance in percentage.
+             * <p>The disk usage of the instance in percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14.56</p>
              */
             public Builder diskUsage(String diskUsage) {
                 this.diskUsage = diskUsage;
@@ -250,7 +285,10 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The IOPS usage of the instance in percentage.
+             * <p>The IOPS usage of the instance in percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.15</p>
              */
             public Builder IOPSUsage(String IOPSUsage) {
                 this.IOPSUsage = IOPSUsage;
@@ -258,7 +296,10 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The number of sessions.
+             * <p>The number of sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.10</p>
              */
             public Builder sessionUsage(String sessionUsage) {
                 this.sessionUsage = sessionUsage;
@@ -272,9 +313,15 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstancesByPerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstancesByPerformanceResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("DBInstancePerformance")
-        private java.util.List < DBInstancePerformance> DBInstancePerformance;
+        @com.aliyun.core.annotation.NameInMap("DBInstancePerformance")
+        private java.util.List<DBInstancePerformance> DBInstancePerformance;
 
         private Items(Builder builder) {
             this.DBInstancePerformance = builder.DBInstancePerformance;
@@ -291,17 +338,17 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
         /**
          * @return DBInstancePerformance
          */
-        public java.util.List < DBInstancePerformance> getDBInstancePerformance() {
+        public java.util.List<DBInstancePerformance> getDBInstancePerformance() {
             return this.DBInstancePerformance;
         }
 
         public static final class Builder {
-            private java.util.List < DBInstancePerformance> DBInstancePerformance; 
+            private java.util.List<DBInstancePerformance> DBInstancePerformance; 
 
             /**
              * DBInstancePerformance.
              */
-            public Builder DBInstancePerformance(java.util.List < DBInstancePerformance> DBInstancePerformance) {
+            public Builder DBInstancePerformance(java.util.List<DBInstancePerformance> DBInstancePerformance) {
                 this.DBInstancePerformance = DBInstancePerformance;
                 return this;
             }

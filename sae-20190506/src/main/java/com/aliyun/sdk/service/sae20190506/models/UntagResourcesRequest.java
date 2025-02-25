@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UntagResourcesRequest</p>
  */
 public class UntagResourcesRequest extends Request {
-    @Query
-    @NameInMap("DeleteAll")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeleteAll")
     private Boolean deleteAll;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceIds;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
-    @Query
-    @NameInMap("TagKeys")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagKeys")
     private String tagKeys;
 
     private UntagResourcesRequest(Builder builder) {
@@ -113,7 +118,10 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * false
+         * <p>false</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder deleteAll(Boolean deleteAll) {
             this.putQueryParameter("DeleteAll", deleteAll);
@@ -122,7 +130,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * cn-beijing
+         * <p>cn-beijing</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -131,7 +143,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * \["d42921c4-5433-4abd-8075-0e536f8b\*\*\*\*"]
+         * <p>[&quot;d42921c4-5433-4abd-8075-0e536f8b****&quot;]</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;d42921c4-5433-4abd-8075-0e536f8b****&quot;]</p>
          */
         public Builder resourceIds(String resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -140,7 +156,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * application
+         * <p>application</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>application</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -149,7 +169,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * \["k1","k2"]
+         * <p>[&quot;k1&quot;,&quot;k2&quot;]</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;k1&quot;,&quot;k2&quot;]</p>
          */
         public Builder tagKeys(String tagKeys) {
             this.putQueryParameter("TagKeys", tagKeys);

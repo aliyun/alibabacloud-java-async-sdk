@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetStorageResponseBody</p>
  */
 public class GetStorageResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetStorageResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class GetStorageResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("CanOperate")
+        @com.aliyun.core.annotation.NameInMap("CanOperate")
         private Boolean canOperate;
 
-        @NameInMap("DisplayRegion")
+        @com.aliyun.core.annotation.NameInMap("DisplayRegion")
         private Boolean displayRegion;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Ttl")
+        @com.aliyun.core.annotation.NameInMap("Ttl")
         private Integer ttl;
 
         private Data(Builder builder) {
@@ -158,7 +157,10 @@ public class GetStorageResponseBody extends TeaModel {
             }
 
             /**
-             * The region in which the logs are stored. Default value: cn-shanghai. Valid values: cn-shanghai for the China site and ap-southeast-1 for the international site.
+             * The region where the data is stored.
+             * <p>
+             * 
+             * If the data management center is **cn-hangzhou**, the default value of **Region** is cn-shanghai, which specifies the China (Shanghai) region. If the data management center is **ap-southeast-1**, the default value of **Region** is ap-southeast-1, which specifies the Singapore region.
              */
             public Builder region(String region) {
                 this.region = region;

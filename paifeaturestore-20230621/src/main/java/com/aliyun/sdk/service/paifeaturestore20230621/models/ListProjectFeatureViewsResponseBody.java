@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProjectFeatureViewsResponseBody} extends {@link TeaModel}
  *
  * <p>ListProjectFeatureViewsResponseBody</p>
  */
 public class ListProjectFeatureViewsResponseBody extends TeaModel {
-    @NameInMap("FeatureViews")
-    private java.util.List < FeatureViews> featureViews;
+    @com.aliyun.core.annotation.NameInMap("FeatureViews")
+    private java.util.List<FeatureViews> featureViews;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListProjectFeatureViewsResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ListProjectFeatureViewsResponseBody extends TeaModel {
     /**
      * @return featureViews
      */
-    public java.util.List < FeatureViews> getFeatureViews() {
+    public java.util.List<FeatureViews> getFeatureViews() {
         return this.featureViews;
     }
 
@@ -57,14 +62,14 @@ public class ListProjectFeatureViewsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < FeatureViews> featureViews; 
+        private java.util.List<FeatureViews> featureViews; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * FeatureViews.
          */
-        public Builder featureViews(java.util.List < FeatureViews> featureViews) {
+        public Builder featureViews(java.util.List<FeatureViews> featureViews) {
             this.featureViews = featureViews;
             return this;
         }
@@ -91,14 +96,20 @@ public class ListProjectFeatureViewsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListProjectFeatureViewsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectFeatureViewsResponseBody</p>
+     */
     public static class Features extends TeaModel {
-        @NameInMap("Attributes")
-        private java.util.List < String > attributes;
+        @com.aliyun.core.annotation.NameInMap("Attributes")
+        private java.util.List<String> attributes;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Features(Builder builder) {
@@ -118,7 +129,7 @@ public class ListProjectFeatureViewsResponseBody extends TeaModel {
         /**
          * @return attributes
          */
-        public java.util.List < String > getAttributes() {
+        public java.util.List<String> getAttributes() {
             return this.attributes;
         }
 
@@ -137,14 +148,14 @@ public class ListProjectFeatureViewsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > attributes; 
+            private java.util.List<String> attributes; 
             private String name; 
             private String type; 
 
             /**
              * Attributes.
              */
-            public Builder attributes(java.util.List < String > attributes) {
+            public Builder attributes(java.util.List<String> attributes) {
                 this.attributes = attributes;
                 return this;
             }
@@ -172,20 +183,30 @@ public class ListProjectFeatureViewsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectFeatureViewsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectFeatureViewsResponseBody</p>
+     */
     public static class FeatureViews extends TeaModel {
-        @NameInMap("FeatureViewId")
+        @com.aliyun.core.annotation.NameInMap("FeatureViewId")
         private String featureViewId;
 
-        @NameInMap("Features")
-        private java.util.List < Features> features;
+        @com.aliyun.core.annotation.NameInMap("Features")
+        private java.util.List<Features> features;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
 
         private FeatureViews(Builder builder) {
             this.featureViewId = builder.featureViewId;
             this.features = builder.features;
             this.name = builder.name;
+            this.type = builder.type;
         }
 
         public static Builder builder() {
@@ -206,7 +227,7 @@ public class ListProjectFeatureViewsResponseBody extends TeaModel {
         /**
          * @return features
          */
-        public java.util.List < Features> getFeatures() {
+        public java.util.List<Features> getFeatures() {
             return this.features;
         }
 
@@ -217,10 +238,18 @@ public class ListProjectFeatureViewsResponseBody extends TeaModel {
             return this.name;
         }
 
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
         public static final class Builder {
             private String featureViewId; 
-            private java.util.List < Features> features; 
+            private java.util.List<Features> features; 
             private String name; 
+            private String type; 
 
             /**
              * FeatureViewId.
@@ -233,7 +262,7 @@ public class ListProjectFeatureViewsResponseBody extends TeaModel {
             /**
              * Features.
              */
-            public Builder features(java.util.List < Features> features) {
+            public Builder features(java.util.List<Features> features) {
                 this.features = features;
                 return this;
             }
@@ -243,6 +272,14 @@ public class ListProjectFeatureViewsResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
                 return this;
             }
 

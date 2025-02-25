@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link DeleteAnnotationDataRequest} extends {@link RequestModel}
  *
  * <p>DeleteAnnotationDataRequest</p>
  */
 public class DeleteAnnotationDataRequest extends Request {
-    @Path
-    @NameInMap("datasetId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("datasetId")
     private String datasetId;
 
-    @Path
-    @NameInMap("annotationdataId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("annotationdataId")
     private String annotationdataId;
 
     private DeleteAnnotationDataRequest(Builder builder) {
@@ -68,7 +73,10 @@ public class DeleteAnnotationDataRequest extends Request {
         } 
 
         /**
-         * datasetId.
+         * <p>The unique identifier of the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cb8cc4eb51a85e823471cdb368fae9be</p>
          */
         public Builder datasetId(String datasetId) {
             this.putPathParameter("datasetId", datasetId);
@@ -77,7 +85,10 @@ public class DeleteAnnotationDataRequest extends Request {
         }
 
         /**
-         * annotationdataId.
+         * <p>The unique identifier of the data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2156d560fc7c01420542df92cd6365ds</p>
          */
         public Builder annotationdataId(String annotationdataId) {
             this.putPathParameter("annotationdataId", annotationdataId);

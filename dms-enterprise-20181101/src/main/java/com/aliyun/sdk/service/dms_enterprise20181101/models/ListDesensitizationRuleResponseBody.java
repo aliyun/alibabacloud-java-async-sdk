@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDesensitizationRuleResponseBody} extends {@link TeaModel}
  *
  * <p>ListDesensitizationRuleResponseBody</p>
  */
 public class ListDesensitizationRuleResponseBody extends TeaModel {
-    @NameInMap("DesensitizationRuleList")
-    private java.util.List < DesensitizationRuleList> desensitizationRuleList;
+    @com.aliyun.core.annotation.NameInMap("DesensitizationRuleList")
+    private java.util.List<DesensitizationRuleList> desensitizationRuleList;
 
-    @NameInMap("ErrorCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListDesensitizationRuleResponseBody(Builder builder) {
@@ -51,7 +56,7 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
     /**
      * @return desensitizationRuleList
      */
-    public java.util.List < DesensitizationRuleList> getDesensitizationRuleList() {
+    public java.util.List<DesensitizationRuleList> getDesensitizationRuleList() {
         return this.desensitizationRuleList;
     }
 
@@ -91,7 +96,7 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DesensitizationRuleList> desensitizationRuleList; 
+        private java.util.List<DesensitizationRuleList> desensitizationRuleList; 
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
@@ -99,15 +104,19 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The list of masking rules.
+         * <p>The list of masking rules.</p>
          */
-        public Builder desensitizationRuleList(java.util.List < DesensitizationRuleList> desensitizationRuleList) {
+        public Builder desensitizationRuleList(java.util.List<DesensitizationRuleList> desensitizationRuleList) {
             this.desensitizationRuleList = desensitizationRuleList;
             return this;
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -115,7 +124,10 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -123,7 +135,10 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E76DD2E7-EBAC-5724-B163-19AAC233F8F2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -131,11 +146,14 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -143,7 +161,10 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned. By default, this parameter is not returned.
+         * <p>The total number of entries returned. By default, this parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -156,35 +177,41 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDesensitizationRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDesensitizationRuleResponseBody</p>
+     */
     public static class DesensitizationRuleList extends TeaModel {
-        @NameInMap("FuncParams")
+        @com.aliyun.core.annotation.NameInMap("FuncParams")
         private String funcParams;
 
-        @NameInMap("FuncSample")
+        @com.aliyun.core.annotation.NameInMap("FuncSample")
         private String funcSample;
 
-        @NameInMap("FunctionType")
+        @com.aliyun.core.annotation.NameInMap("FunctionType")
         private String functionType;
 
-        @NameInMap("LastModifierId")
+        @com.aliyun.core.annotation.NameInMap("LastModifierId")
         private String lastModifierId;
 
-        @NameInMap("LastModifierName")
+        @com.aliyun.core.annotation.NameInMap("LastModifierName")
         private String lastModifierName;
 
-        @NameInMap("ReferenceCount")
+        @com.aliyun.core.annotation.NameInMap("ReferenceCount")
         private Integer referenceCount;
 
-        @NameInMap("RuleDesc")
+        @com.aliyun.core.annotation.NameInMap("RuleDesc")
         private String ruleDesc;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Integer ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("RuleType")
+        @com.aliyun.core.annotation.NameInMap("RuleType")
         private String ruleType;
 
         private DesensitizationRuleList(Builder builder) {
@@ -291,7 +318,10 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
             private String ruleType; 
 
             /**
-             * The parameter.
+             * <p>The parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{paramName: salt, paramValue: 1}</p>
              */
             public Builder funcParams(String funcParams) {
                 this.funcParams = funcParams;
@@ -299,7 +329,10 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The example.
+             * <p>The example.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{paramName: testStr, paramValue: 1}]</p>
              */
             public Builder funcSample(String funcSample) {
                 this.funcSample = funcSample;
@@ -307,7 +340,10 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The algorithm type.
+             * <p>The algorithm type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MD5</p>
              */
             public Builder functionType(String functionType) {
                 this.functionType = functionType;
@@ -315,7 +351,10 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user who last modified the masking rule.
+             * <p>The ID of the user who last modified the masking rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder lastModifierId(String lastModifierId) {
                 this.lastModifierId = lastModifierId;
@@ -323,7 +362,10 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the user who last modified the masking rule.
+             * <p>The name of the user who last modified the masking rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test user</p>
              */
             public Builder lastModifierName(String lastModifierName) {
                 this.lastModifierName = lastModifierName;
@@ -331,7 +373,10 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that the masking was used.
+             * <p>The number of times that the masking was used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder referenceCount(Integer referenceCount) {
                 this.referenceCount = referenceCount;
@@ -339,7 +384,10 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the rule.
+             * <p>The description of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hash desensitization algorithm</p>
              */
             public Builder ruleDesc(String ruleDesc) {
                 this.ruleDesc = ruleDesc;
@@ -347,7 +395,10 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the masking rule.
+             * <p>The ID of the masking rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23</p>
              */
             public Builder ruleId(Integer ruleId) {
                 this.ruleId = ruleId;
@@ -355,7 +406,10 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the masking rule.
+             * <p>The name of the masking rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default desensitization rule test</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -363,7 +417,10 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The algorithm used for masking.
+             * <p>The algorithm used for masking.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HASH</p>
              */
             public Builder ruleType(String ruleType) {
                 this.ruleType = ruleType;

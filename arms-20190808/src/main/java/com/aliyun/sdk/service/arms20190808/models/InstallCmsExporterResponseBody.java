@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstallCmsExporterResponseBody} extends {@link TeaModel}
  *
  * <p>InstallCmsExporterResponseBody</p>
  */
 public class InstallCmsExporterResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private InstallCmsExporterResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class InstallCmsExporterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -58,7 +66,10 @@ public class InstallCmsExporterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E7A04B0D-E2CA-59BB-8A9D-D5D349C22BF1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

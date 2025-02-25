@@ -1,80 +1,85 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportVulRequest} extends {@link RequestModel}
  *
  * <p>ExportVulRequest</p>
  */
 public class ExportVulRequest extends Request {
-    @Query
-    @NameInMap("AliasName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AliasName")
     private String aliasName;
 
-    @Query
-    @NameInMap("AttachTypes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AttachTypes")
     private String attachTypes;
 
-    @Query
-    @NameInMap("ContainerName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerName")
     private String containerName;
 
-    @Query
-    @NameInMap("CreateTsEnd")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateTsEnd")
     private Long createTsEnd;
 
-    @Query
-    @NameInMap("CreateTsStart")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateTsStart")
     private Long createTsStart;
 
-    @Query
-    @NameInMap("CveId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CveId")
     private String cveId;
 
-    @Query
-    @NameInMap("Dealed")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Dealed")
     private String dealed;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("ImageName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageName")
     private String imageName;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Necessity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Necessity")
     private String necessity;
 
-    @Query
-    @NameInMap("Path")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Path")
     private String path;
 
-    @Query
-    @NameInMap("SearchTags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchTags")
     private String searchTags;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
-    @Query
-    @NameInMap("Uuids")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuids")
     private String uuids;
 
-    @Query
-    @NameInMap("VpcInstanceIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcInstanceIds")
     private String vpcInstanceIds;
 
     private ExportVulRequest(Builder builder) {
@@ -265,7 +270,10 @@ public class ExportVulRequest extends Request {
         } 
 
         /**
-         * The name of the vulnerability.
+         * <p>The name of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RHSA-2019:3197-Important: sudo security update</p>
          */
         public Builder aliasName(String aliasName) {
             this.putQueryParameter("AliasName", aliasName);
@@ -274,10 +282,13 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * The additional type of the vulnerabilities. You need to specify this parameter when you query application vulnerabilities. If you set the Type parameter to app, you must specify this parameter. Set the value to **sca**.
-         * <p>
+         * <p>The additional type of the vulnerabilities. You need to specify this parameter when you query application vulnerabilities. If you set the Type parameter to app, you must specify this parameter. Set the value to <strong>sca</strong>.</p>
+         * <blockquote>
+         * <p>If this parameter is set to <strong>sca</strong>, <strong>application vulnerabilities</strong> and the <strong>vulnerabilities that are detected based on software component analysis</strong> are queried. If you do not specify this parameter, only application vulnerabilities are queried.</p>
+         * </blockquote>
          * 
-         * > If this parameter is set to **sca**, **application vulnerabilities** and the **vulnerabilities that are detected based on software component analysis** are queried. If you do not specify this parameter, only application vulnerabilities are queried.
+         * <strong>example:</strong>
+         * <p>sca</p>
          */
         public Builder attachTypes(String attachTypes) {
             this.putQueryParameter("AttachTypes", attachTypes);
@@ -286,7 +297,10 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * The name of the container that is affected by the vulnerability.
+         * <p>The name of the container that is affected by the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxljob-7b87597b99-mcskr</p>
          */
         public Builder containerName(String containerName) {
             this.putQueryParameter("ContainerName", containerName);
@@ -295,10 +309,13 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * The end time of the first scan.
-         * <p>
+         * <p>The end time of the first scan.</p>
+         * <blockquote>
+         * <p> This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * </blockquote>
          * 
-         * >  This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <strong>example:</strong>
+         * <p>1696186800000</p>
          */
         public Builder createTsEnd(Long createTsEnd) {
             this.putQueryParameter("CreateTsEnd", createTsEnd);
@@ -307,10 +324,13 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * The start time of the first scan.
-         * <p>
+         * <p>The start time of the first scan.</p>
+         * <blockquote>
+         * <p> This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * </blockquote>
          * 
-         * >  This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <strong>example:</strong>
+         * <p>1696128144000</p>
          */
         public Builder createTsStart(Long createTsStart) {
             this.putQueryParameter("CreateTsStart", createTsStart);
@@ -319,7 +339,10 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * The Common Vulnerabilities and Exposures (CVE) ID of the vulnerability.
+         * <p>The Common Vulnerabilities and Exposures (CVE) ID of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CVE-2022-44702</p>
          */
         public Builder cveId(String cveId) {
             this.putQueryParameter("CveId", cveId);
@@ -328,11 +351,14 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * Specifies whether the vulnerability is fixed. Valid values:
-         * <p>
+         * <p>Specifies whether the vulnerability is fixed. Valid values:</p>
+         * <ul>
+         * <li><strong>y</strong>: The vulnerability is fixed.</li>
+         * <li><strong>n</strong>: The vulnerability is not fixed.</li>
+         * </ul>
          * 
-         * *   **y**: The vulnerability is fixed.
-         * *   **n**: The vulnerability is not fixed.
+         * <strong>example:</strong>
+         * <p>n</p>
          */
         public Builder dealed(String dealed) {
             this.putQueryParameter("Dealed", dealed);
@@ -341,10 +367,13 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * The server group ID of the server on which the vulnerabilities are detected.
-         * <p>
+         * <p>The server group ID of the server on which the vulnerabilities are detected.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the IDs of server groups.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of server groups.
+         * <strong>example:</strong>
+         * <p>8834224</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -353,7 +382,10 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * The name of the image that is affected by the vulnerability.
+         * <p>The name of the image that is affected by the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>container-<em><strong>:</strong></em>*</p>
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -362,11 +394,14 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -375,12 +410,15 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * The priority to fix the vulnerability. Separate multiple priorities with commas (,). Valid values:
-         * <p>
+         * <p>The priority to fix the vulnerability. Separate multiple priorities with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>asap</strong>: high</li>
+         * <li><strong>later</strong>: medium</li>
+         * <li><strong>nntf</strong>: low</li>
+         * </ul>
          * 
-         * *   **asap**: high
-         * *   **later**: medium
-         * *   **nntf**: low
+         * <strong>example:</strong>
+         * <p>asap</p>
          */
         public Builder necessity(String necessity) {
             this.putQueryParameter("Necessity", necessity);
@@ -389,7 +427,10 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * The path of the process that is affected by the vulnerability.
+         * <p>The path of the process that is affected by the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/etc/test</p>
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -398,15 +439,18 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * The tag that is used to search for the vulnerabilities. Valid values:
-         * <p>
+         * <p>The tag that is used to search for the vulnerabilities. Valid values:</p>
+         * <ul>
+         * <li>Restart required</li>
+         * <li>Remote exploitation</li>
+         * <li>Exploit exists</li>
+         * <li>Exploitable</li>
+         * <li>Privilege escalation</li>
+         * <li>Code execution</li>
+         * </ul>
          * 
-         * *   Restart required
-         * *   Remote exploitation
-         * *   Exploit exists
-         * *   Exploitable
-         * *   Privilege escalation
-         * *   Code execution
+         * <strong>example:</strong>
+         * <p>Restart required</p>
          */
         public Builder searchTags(String searchTags) {
             this.putQueryParameter("SearchTags", searchTags);
@@ -415,14 +459,18 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * The type of the vulnerability that you want to export. Valid values:
-         * <p>
+         * <p>The type of the vulnerability that you want to export. Valid values:</p>
+         * <ul>
+         * <li><strong>cve</strong>: Linux software vulnerability</li>
+         * <li><strong>sys</strong>: Windows system vulnerability</li>
+         * <li><strong>cms</strong>: Web-CMS vulnerability</li>
+         * <li><strong>app</strong>: application vulnerability</li>
+         * <li><strong>emg</strong>: urgent vulnerability</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **cve**: Linux software vulnerability
-         * *   **sys**: Windows system vulnerability
-         * *   **cms**: Web-CMS vulnerability
-         * *   **app**: application vulnerability
-         * *   **emg**: urgent vulnerability
+         * <strong>example:</strong>
+         * <p>app</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -431,7 +479,10 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * The UUID of the server on which the vulnerabilities are detected. Separate multiple UUIDs with commas (,).
+         * <p>The UUID of the server on which the vulnerabilities are detected. Separate multiple UUIDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1587bedb-fdb4-48c4-9330-****</p>
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);
@@ -440,10 +491,13 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) in which the vulnerabilities are detected. Separate multiple IDs with commas (,).
-         * <p>
+         * <p>The ID of the virtual private cloud (VPC) in which the vulnerabilities are detected. Separate multiple IDs with commas (,).</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeVpcList~~">DescribeVpcList</a> operation to query the IDs of VPCs.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeVpcList](~~DescribeVpcList~~) operation to query the IDs of VPCs.
+         * <strong>example:</strong>
+         * <p>ins-133****,ins-5414****</p>
          */
         public Builder vpcInstanceIds(String vpcInstanceIds) {
             this.putQueryParameter("VpcInstanceIds", vpcInstanceIds);

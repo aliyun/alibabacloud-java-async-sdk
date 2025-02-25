@@ -1,41 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePolicyGroupsRequest} extends {@link RequestModel}
  *
  * <p>DescribePolicyGroupsRequest</p>
  */
 public class DescribePolicyGroupsRequest extends Request {
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 200, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExternalPolicyGroupIds")
+    private java.util.List<String> externalPolicyGroupIds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 200, minimum = 1)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("PolicyGroupId")
-    private java.util.List < String > policyGroupId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyGroupId")
+    private java.util.List<String> policyGroupId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Scope")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scope")
     private String scope;
 
     private DescribePolicyGroupsRequest(Builder builder) {
         super(builder);
+        this.externalPolicyGroupIds = builder.externalPolicyGroupIds;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.policyGroupId = builder.policyGroupId;
@@ -57,6 +67,13 @@ public class DescribePolicyGroupsRequest extends Request {
     }
 
     /**
+     * @return externalPolicyGroupIds
+     */
+    public java.util.List<String> getExternalPolicyGroupIds() {
+        return this.externalPolicyGroupIds;
+    }
+
+    /**
      * @return maxResults
      */
     public Integer getMaxResults() {
@@ -73,7 +90,7 @@ public class DescribePolicyGroupsRequest extends Request {
     /**
      * @return policyGroupId
      */
-    public java.util.List < String > getPolicyGroupId() {
+    public java.util.List<String> getPolicyGroupId() {
         return this.policyGroupId;
     }
 
@@ -92,9 +109,10 @@ public class DescribePolicyGroupsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribePolicyGroupsRequest, Builder> {
+        private java.util.List<String> externalPolicyGroupIds; 
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < String > policyGroupId; 
+        private java.util.List<String> policyGroupId; 
         private String regionId; 
         private String scope; 
 
@@ -104,6 +122,7 @@ public class DescribePolicyGroupsRequest extends Request {
 
         private Builder(DescribePolicyGroupsRequest request) {
             super(request);
+            this.externalPolicyGroupIds = request.externalPolicyGroupIds;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.policyGroupId = request.policyGroupId;
@@ -112,11 +131,23 @@ public class DescribePolicyGroupsRequest extends Request {
         } 
 
         /**
-         * The number of entries per page.
-         * <p>
+         * ExternalPolicyGroupIds.
+         */
+        public Builder externalPolicyGroupIds(java.util.List<String> externalPolicyGroupIds) {
+            this.putQueryParameter("ExternalPolicyGroupIds", externalPolicyGroupIds);
+            this.externalPolicyGroupIds = externalPolicyGroupIds;
+            return this;
+        }
+
+        /**
+         * <p>The number of entries per page.</p>
+         * <ul>
+         * <li>Valid values: 1 to 100</li>
+         * <li>Default value: 10</li>
+         * </ul>
          * 
-         * *   Valid values: 1 to 100
-         * *   Default value: 10
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -125,7 +156,10 @@ public class DescribePolicyGroupsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -134,16 +168,23 @@ public class DescribePolicyGroupsRequest extends Request {
         }
 
         /**
-         * The policy IDs. You can specify one or more policy IDs.
+         * <p>The policy IDs. You can specify one or more policy IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system-all-enabled-policy</p>
          */
-        public Builder policyGroupId(java.util.List < String > policyGroupId) {
+        public Builder policyGroupId(java.util.List<String> policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);
             this.policyGroupId = policyGroupId;
             return this;
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -152,14 +193,16 @@ public class DescribePolicyGroupsRequest extends Request {
         }
 
         /**
-         * The effective scope of the policy. Valid values:
-         * <p>
+         * <p>The effective scope of the policy. Valid values:</p>
+         * <ul>
+         * <li>GLOBAL: The policy takes effect globally.</li>
+         * <li>IP: The policy takes effect based on the IP address.</li>
+         * <li>ALL: The policy takes effect without limits.</li>
+         * </ul>
+         * <p>Default value: GLOBAL.</p>
          * 
-         * *   GLOBAL: The policy takes effect globally.
-         * *   IP: The policy takes effect based on the IP address.
-         * *   ALL: The policy takes effect without limits.
-         * 
-         * Default value: GLOBAL.
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);

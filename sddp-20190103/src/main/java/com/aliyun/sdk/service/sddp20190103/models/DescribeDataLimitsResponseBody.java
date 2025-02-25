@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataLimitsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDataLimitsResponseBody</p>
  */
 public class DescribeDataLimitsResponseBody extends TeaModel {
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("Items")
-    private java.util.List < Items> items;
+    @com.aliyun.core.annotation.NameInMap("Items")
+    private java.util.List<Items> items;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDataLimitsResponseBody(Builder builder) {
@@ -53,7 +58,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -80,13 +85,16 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer currentPage; 
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * CurrentPage.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -94,15 +102,18 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The data assets.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>769FB3C1-F4C9-42DF-9B72-7077A8989***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,114 +148,135 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDataLimitsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataLimitsResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("AuditStatus")
+        @com.aliyun.core.annotation.NameInMap("AuditStatus")
         private Integer auditStatus;
 
-        @NameInMap("AutoScan")
+        @com.aliyun.core.annotation.NameInMap("AutoScan")
         private Integer autoScan;
 
-        @NameInMap("CheckStatus")
+        @com.aliyun.core.annotation.NameInMap("CheckStatus")
         private Integer checkStatus;
 
-        @NameInMap("CheckStatusName")
+        @com.aliyun.core.annotation.NameInMap("CheckStatusName")
         private String checkStatusName;
 
-        @NameInMap("DatamaskStatus")
+        @com.aliyun.core.annotation.NameInMap("DatamaskStatus")
         private Integer datamaskStatus;
 
-        @NameInMap("DbVersion")
+        @com.aliyun.core.annotation.NameInMap("DbVersion")
         private String dbVersion;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Integer enable;
 
-        @NameInMap("EngineType")
+        @com.aliyun.core.annotation.NameInMap("EngineType")
         private String engineType;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("EventStatus")
+        @com.aliyun.core.annotation.NameInMap("EventStatus")
         private Integer eventStatus;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("InstanceDescription")
+        @com.aliyun.core.annotation.NameInMap("InstanceDescription")
         private String instanceDescription;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("LastFinishedTime")
+        @com.aliyun.core.annotation.NameInMap("LastFinishedTime")
         private Long lastFinishedTime;
 
-        @NameInMap("LocalName")
+        @com.aliyun.core.annotation.NameInMap("LastStartTime")
+        private Long lastStartTime;
+
+        @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
 
-        @NameInMap("LogStoreDay")
+        @com.aliyun.core.annotation.NameInMap("LogStoreDay")
         private Integer logStoreDay;
 
-        @NameInMap("NextStartTime")
+        @com.aliyun.core.annotation.NameInMap("MemberAccount")
+        private Long memberAccount;
+
+        @com.aliyun.core.annotation.NameInMap("NextStartTime")
         private Long nextStartTime;
 
-        @NameInMap("OcrStatus")
+        @com.aliyun.core.annotation.NameInMap("OcrStatus")
         private Integer ocrStatus;
 
-        @NameInMap("ParentId")
+        @com.aliyun.core.annotation.NameInMap("ParentId")
         private String parentId;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("ProcessStatus")
+        @com.aliyun.core.annotation.NameInMap("ProcessStatus")
         private Integer processStatus;
 
-        @NameInMap("ProcessTotalCount")
+        @com.aliyun.core.annotation.NameInMap("ProcessTotalCount")
         private Integer processTotalCount;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private Long resourceType;
 
-        @NameInMap("ResourceTypeCode")
+        @com.aliyun.core.annotation.NameInMap("ResourceTypeCode")
         private String resourceTypeCode;
 
-        @NameInMap("SamplingSize")
+        @com.aliyun.core.annotation.NameInMap("SamplingSize")
         private Integer samplingSize;
 
-        @NameInMap("SupportAudit")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupIdList")
+        private java.util.List<String> securityGroupIdList;
+
+        @com.aliyun.core.annotation.NameInMap("SupportAudit")
         private Boolean supportAudit;
 
-        @NameInMap("SupportDatamask")
+        @com.aliyun.core.annotation.NameInMap("SupportDatamask")
         private Boolean supportDatamask;
 
-        @NameInMap("SupportEvent")
+        @com.aliyun.core.annotation.NameInMap("SupportEvent")
         private Boolean supportEvent;
 
-        @NameInMap("SupportOcr")
+        @com.aliyun.core.annotation.NameInMap("SupportOcr")
         private Boolean supportOcr;
 
-        @NameInMap("SupportScan")
+        @com.aliyun.core.annotation.NameInMap("SupportScan")
         private Boolean supportScan;
 
-        @NameInMap("TenantName")
+        @com.aliyun.core.annotation.NameInMap("TenantName")
         private String tenantName;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
+
+        @com.aliyun.core.annotation.NameInMap("VSwitchIdList")
+        private java.util.List<String> vSwitchIdList;
+
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private String vpcId;
 
         private Items(Builder builder) {
             this.auditStatus = builder.auditStatus;
@@ -257,8 +295,10 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             this.instanceDescription = builder.instanceDescription;
             this.instanceId = builder.instanceId;
             this.lastFinishedTime = builder.lastFinishedTime;
+            this.lastStartTime = builder.lastStartTime;
             this.localName = builder.localName;
             this.logStoreDay = builder.logStoreDay;
+            this.memberAccount = builder.memberAccount;
             this.nextStartTime = builder.nextStartTime;
             this.ocrStatus = builder.ocrStatus;
             this.parentId = builder.parentId;
@@ -269,6 +309,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             this.resourceType = builder.resourceType;
             this.resourceTypeCode = builder.resourceTypeCode;
             this.samplingSize = builder.samplingSize;
+            this.securityGroupIdList = builder.securityGroupIdList;
             this.supportAudit = builder.supportAudit;
             this.supportDatamask = builder.supportDatamask;
             this.supportEvent = builder.supportEvent;
@@ -277,6 +318,8 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             this.tenantName = builder.tenantName;
             this.totalCount = builder.totalCount;
             this.userName = builder.userName;
+            this.vSwitchIdList = builder.vSwitchIdList;
+            this.vpcId = builder.vpcId;
         }
 
         public static Builder builder() {
@@ -400,6 +443,13 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         }
 
         /**
+         * @return lastStartTime
+         */
+        public Long getLastStartTime() {
+            return this.lastStartTime;
+        }
+
+        /**
          * @return localName
          */
         public String getLocalName() {
@@ -411,6 +461,13 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
          */
         public Integer getLogStoreDay() {
             return this.logStoreDay;
+        }
+
+        /**
+         * @return memberAccount
+         */
+        public Long getMemberAccount() {
+            return this.memberAccount;
         }
 
         /**
@@ -484,6 +541,13 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         }
 
         /**
+         * @return securityGroupIdList
+         */
+        public java.util.List<String> getSecurityGroupIdList() {
+            return this.securityGroupIdList;
+        }
+
+        /**
          * @return supportAudit
          */
         public Boolean getSupportAudit() {
@@ -539,6 +603,20 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             return this.userName;
         }
 
+        /**
+         * @return vSwitchIdList
+         */
+        public java.util.List<String> getVSwitchIdList() {
+            return this.vSwitchIdList;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
         public static final class Builder {
             private Integer auditStatus; 
             private Integer autoScan; 
@@ -556,8 +634,10 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             private String instanceDescription; 
             private String instanceId; 
             private Long lastFinishedTime; 
+            private Long lastStartTime; 
             private String localName; 
             private Integer logStoreDay; 
+            private Long memberAccount; 
             private Long nextStartTime; 
             private Integer ocrStatus; 
             private String parentId; 
@@ -568,6 +648,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             private Long resourceType; 
             private String resourceTypeCode; 
             private Integer samplingSize; 
+            private java.util.List<String> securityGroupIdList; 
             private Boolean supportAudit; 
             private Boolean supportDatamask; 
             private Boolean supportEvent; 
@@ -576,9 +657,18 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             private String tenantName; 
             private Integer totalCount; 
             private String userName; 
+            private java.util.List<String> vSwitchIdList; 
+            private String vpcId; 
 
             /**
-             * AuditStatus.
+             * <p>Indicates whether the security audit feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: yes</li>
+             * <li><strong>0</strong>: no</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder auditStatus(Integer auditStatus) {
                 this.auditStatus = auditStatus;
@@ -586,7 +676,14 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * AutoScan.
+             * <p>Indicates whether the data asset can be automatically scanned. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: no</li>
+             * <li><strong>1</strong>: yes</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder autoScan(Integer autoScan) {
                 this.autoScan = autoScan;
@@ -594,7 +691,17 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * CheckStatus.
+             * <p>The data detection status. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The data detection is ready.</li>
+             * <li><strong>1</strong>: The data detection is running.</li>
+             * <li><strong>2</strong>: The connectivity test is in progress.</li>
+             * <li><strong>3</strong>: The connectivity test is passed.</li>
+             * <li><strong>4</strong>: The connectivity test failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder checkStatus(Integer checkStatus) {
                 this.checkStatus = checkStatus;
@@ -602,7 +709,10 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * CheckStatusName.
+             * <p>The name of the data detection status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Connectivity test status</p>
              */
             public Builder checkStatusName(String checkStatusName) {
                 this.checkStatusName = checkStatusName;
@@ -610,7 +720,14 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * DatamaskStatus.
+             * <p>Indicates whether DSC has the data de-identification permissions on the data asset. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: yes</li>
+             * <li><strong>0</strong>: no</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder datamaskStatus(Integer datamaskStatus) {
                 this.datamaskStatus = datamaskStatus;
@@ -618,7 +735,10 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * DbVersion.
+             * <p>The database engine version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0</p>
              */
             public Builder dbVersion(String dbVersion) {
                 this.dbVersion = dbVersion;
@@ -626,7 +746,14 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>Indicates whether DSC has the data identification permissions on the data asset. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: yes</li>
+             * <li><strong>0</strong>: no</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder enable(Integer enable) {
                 this.enable = enable;
@@ -634,7 +761,10 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * EngineType.
+             * <p>The type of the database engine. Valid values include <strong>MySQL</strong>, <strong>SQLServer</strong>, <strong>Oracle</strong>, <strong>PostgreSQL</strong>, and <strong>MongoDB</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder engineType(String engineType) {
                 this.engineType = engineType;
@@ -642,7 +772,10 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>connect_network_error</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -650,7 +783,10 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The reason for the failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The password is invalid.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -658,7 +794,14 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * EventStatus.
+             * <p>Indicates whether the data leak prevention feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: no</li>
+             * <li><strong>1</strong>: yes (default)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder eventStatus(Integer eventStatus) {
                 this.eventStatus = eventStatus;
@@ -666,7 +809,10 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the data asset was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>145600000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -674,7 +820,10 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The unique ID of the data asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -682,7 +831,10 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceDescription.
+             * <p>The description of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder instanceDescription(String instanceDescription) {
                 this.instanceDescription = instanceDescription;
@@ -690,7 +842,10 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the data asset to which the table belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12332</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -698,7 +853,14 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * LastFinishedTime.
+             * <p>The time when the last scan is performed.</p>
+             * <ul>
+             * <li>The value is a UNIX timestamp.</li>
+             * <li>Unit: milliseconds.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>145600000</p>
              */
             public Builder lastFinishedTime(Long lastFinishedTime) {
                 this.lastFinishedTime = lastFinishedTime;
@@ -706,7 +868,21 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * LocalName.
+             * <p>The last scan start time of data assets, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>145600000</p>
+             */
+            public Builder lastStartTime(Long lastStartTime) {
+                this.lastStartTime = lastStartTime;
+                return this;
+            }
+
+            /**
+             * <p>The region in which the data asset resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China (Hangzhou)</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -714,7 +890,10 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * LogStoreDay.
+             * <p>The retention period of raw logs. Unit: days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder logStoreDay(Integer logStoreDay) {
                 this.logStoreDay = logStoreDay;
@@ -722,7 +901,21 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * NextStartTime.
+             * <p>The ID of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>**********8103</p>
+             */
+            public Builder memberAccount(Long memberAccount) {
+                this.memberAccount = memberAccount;
+                return this;
+            }
+
+            /**
+             * <p>The next time when the data asset is scanned. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1676620236000</p>
              */
             public Builder nextStartTime(Long nextStartTime) {
                 this.nextStartTime = nextStartTime;
@@ -730,7 +923,14 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * OcrStatus.
+             * <p>Indicates whether the optical character recognition (OCR) feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: no</li>
+             * <li><strong>1</strong>: yes</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ocrStatus(Integer ocrStatus) {
                 this.ocrStatus = ocrStatus;
@@ -738,7 +938,10 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * ParentId.
+             * <p>The parent ID of the data asset that you want to query. Valid values include <strong>bucket, db, and project</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project</p>
              */
             public Builder parentId(String parentId) {
                 this.parentId = parentId;
@@ -746,7 +949,10 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The port number of the self-managed database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -754,7 +960,17 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessStatus.
+             * <p>The status of the data asset scan. Valid values:</p>
+             * <ul>
+             * <li><strong>-1</strong>: invalid</li>
+             * <li><strong>0</strong>: waiting</li>
+             * <li><strong>1</strong>: being scanned</li>
+             * <li><strong>2</strong>: suspended</li>
+             * <li><strong>3</strong>: completed</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder processStatus(Integer processStatus) {
                 this.processStatus = processStatus;
@@ -762,7 +978,10 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessTotalCount.
+             * <p>The total number of data tables or files.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder processTotalCount(Integer processTotalCount) {
                 this.processTotalCount = processTotalCount;
@@ -770,7 +989,10 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region in which the asset resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -778,7 +1000,18 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The type of the service to which the data asset belongs. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: MaxCompute</li>
+             * <li><strong>2</strong>: OSS</li>
+             * <li><strong>3</strong>: AnalyticDB for MySQL</li>
+             * <li><strong>4</strong>: Tablestore</li>
+             * <li><strong>5</strong>: ApsaraDB RDS</li>
+             * <li><strong>6</strong>: self-managed database</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder resourceType(Long resourceType) {
                 this.resourceType = resourceType;
@@ -786,7 +1019,10 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceTypeCode.
+             * <p>The code of the service to which the data asset belongs. Valid values: <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder resourceTypeCode(String resourceTypeCode) {
                 this.resourceTypeCode = resourceTypeCode;
@@ -794,7 +1030,10 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * SamplingSize.
+             * <p>The number of sensitive data samples. Valid values: <strong>0</strong>, <strong>5</strong>, and <strong>10</strong>. Unit: data entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder samplingSize(Integer samplingSize) {
                 this.samplingSize = samplingSize;
@@ -802,7 +1041,22 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportAudit.
+             * <p>A list of the IDs of the security groups that are used by PrivateLink when you install the DSC agent.</p>
+             */
+            public Builder securityGroupIdList(java.util.List<String> securityGroupIdList) {
+                this.securityGroupIdList = securityGroupIdList;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether the security audit feature is supported. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportAudit(Boolean supportAudit) {
                 this.supportAudit = supportAudit;
@@ -810,7 +1064,14 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportDatamask.
+             * <p>Indicates whether the data de-identification feature is supported. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportDatamask(Boolean supportDatamask) {
                 this.supportDatamask = supportDatamask;
@@ -818,7 +1079,14 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportEvent.
+             * <p>Indicates whether anomalous event detection is supported. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportEvent(Boolean supportEvent) {
                 this.supportEvent = supportEvent;
@@ -826,7 +1094,14 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportOcr.
+             * <p>Indicates whether OCR is supported. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportOcr(Boolean supportOcr) {
                 this.supportOcr = supportOcr;
@@ -834,7 +1109,14 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportScan.
+             * <p>Indicates whether the data asset scan feature is supported. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportScan(Boolean supportScan) {
                 this.supportScan = supportScan;
@@ -842,7 +1124,10 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * TenantName.
+             * <p>The alias of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>insta_gram</p>
              */
             public Builder tenantName(String tenantName) {
                 this.tenantName = tenantName;
@@ -850,7 +1135,10 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of fields in the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -858,10 +1146,32 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The username that is used to access the data asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tsts</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
+                return this;
+            }
+
+            /**
+             * <p>A list of the IDs of the vSwitches that are used by PrivateLink when you install the DSC agent.</p>
+             */
+            public Builder vSwitchIdList(java.util.List<String> vSwitchIdList) {
+                this.vSwitchIdList = vSwitchIdList;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the virtual private cloud (VPC) to which the data asset belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2zevcqke6hh09c41****</p>
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
                 return this;
             }
 

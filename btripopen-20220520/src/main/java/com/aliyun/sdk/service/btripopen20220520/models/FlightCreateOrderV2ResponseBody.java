@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightCreateOrderV2ResponseBody} extends {@link TeaModel}
  *
  * <p>FlightCreateOrderV2ResponseBody</p>
  */
 public class FlightCreateOrderV2ResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private FlightCreateOrderV2ResponseBody(Builder builder) {
@@ -114,7 +119,7 @@ public class FlightCreateOrderV2ResponseBody extends TeaModel {
         }
 
         /**
-         * module
+         * <p>module</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -122,7 +127,10 @@ public class FlightCreateOrderV2ResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210bc60a16916593445203790d2a16</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +146,10 @@ public class FlightCreateOrderV2ResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2103ad0716827336456723986d4bda</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -151,23 +162,29 @@ public class FlightCreateOrderV2ResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FlightCreateOrderV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightCreateOrderV2ResponseBody</p>
+     */
     public static class Module extends TeaModel {
-        @NameInMap("async_create_order_key")
+        @com.aliyun.core.annotation.NameInMap("async_create_order_key")
         private String asyncCreateOrderKey;
 
-        @NameInMap("latest_pay_time")
+        @com.aliyun.core.annotation.NameInMap("latest_pay_time")
         private String latestPayTime;
 
-        @NameInMap("order_id")
+        @com.aliyun.core.annotation.NameInMap("order_id")
         private Long orderId;
 
-        @NameInMap("out_order_id")
+        @com.aliyun.core.annotation.NameInMap("out_order_id")
         private String outOrderId;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("total_price")
+        @com.aliyun.core.annotation.NameInMap("total_price")
         private Long totalPrice;
 
         private Module(Builder builder) {

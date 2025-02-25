@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartAggregateConfigRuleEvaluationRequest} extends {@link RequestModel}
  *
  * <p>StartAggregateConfigRuleEvaluationRequest</p>
  */
 public class StartAggregateConfigRuleEvaluationRequest extends Request {
-    @Query
-    @NameInMap("AggregatorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AggregatorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aggregatorId;
 
-    @Query
-    @NameInMap("CompliancePackId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CompliancePackId")
     private String compliancePackId;
 
-    @Query
-    @NameInMap("ConfigRuleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigRuleId")
     private String configRuleId;
 
-    @Query
-    @NameInMap("RevertEvaluation")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RevertEvaluation")
     private Boolean revertEvaluation;
 
     private StartAggregateConfigRuleEvaluationRequest(Builder builder) {
@@ -97,10 +102,12 @@ public class StartAggregateConfigRuleEvaluationRequest extends Request {
         } 
 
         /**
-         * The ID of the account group.
-         * <p>
+         * <p>The ID of the account group.</p>
+         * <p>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).
+         * <strong>example:</strong>
+         * <p>ca-3a58626622af0005****</p>
          */
         public Builder aggregatorId(String aggregatorId) {
             this.putQueryParameter("AggregatorId", aggregatorId);
@@ -109,12 +116,14 @@ public class StartAggregateConfigRuleEvaluationRequest extends Request {
         }
 
         /**
-         * The ID of the compliance package.
-         * <p>
+         * <p>The ID of the compliance package.</p>
+         * <p>For more information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/262059.html">ListAggregateCompliancePacks</a>.</p>
+         * <blockquote>
+         * <p>You must configure either the <code>CompliancePackId</code> or <code>ConfigRuleId</code> parameter.</p>
+         * </blockquote>
          * 
-         * For more information about how to obtain the ID of a compliance package, see [ListAggregateCompliancePacks](~~262059~~).
-         * 
-         * > You must configure either the `CompliancePackId` or `ConfigRuleId` parameter.
+         * <strong>example:</strong>
+         * <p>cp-ac16626622af0053****</p>
          */
         public Builder compliancePackId(String compliancePackId) {
             this.putQueryParameter("CompliancePackId", compliancePackId);
@@ -123,10 +132,14 @@ public class StartAggregateConfigRuleEvaluationRequest extends Request {
         }
 
         /**
-         * The rule ID.
-         * <p>
+         * <p>The rule ID.</p>
+         * <p>For more information about how to query the ID of a rule, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</p>
+         * <blockquote>
+         * <p> You must configure either the <code>CompliancePackId</code> or <code>ConfigRuleId</code> parameter.</p>
+         * </blockquote>
          * 
-         * For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
+         * <strong>example:</strong>
+         * <p>cr-c169626622af009f****</p>
          */
         public Builder configRuleId(String configRuleId) {
             this.putQueryParameter("ConfigRuleId", configRuleId);
@@ -135,11 +148,14 @@ public class StartAggregateConfigRuleEvaluationRequest extends Request {
         }
 
         /**
-         * Specifies whether to re-evaluate the ignored incompliant resource. Valid values:
-         * <p>
+         * <p>Specifies whether to re-evaluate the ignored non-compliant resource. Valid values:</p>
+         * <ul>
+         * <li>true: re-evaluates the ignored non-compliant resource based on the rule.</li>
+         * <li>false (default): does not re-evaluate the ignored non-compliant resource based on the rule.</li>
+         * </ul>
          * 
-         * *   true: The ignored incompliant resource based on the rule are re-evaluated.
-         * *   false: The ignored incompliant resource based on the rule are not re-evaluated.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder revertEvaluation(Boolean revertEvaluation) {
             this.putQueryParameter("RevertEvaluation", revertEvaluation);

@@ -1,35 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeContactListRequest} extends {@link RequestModel}
  *
  * <p>DescribeContactListRequest</p>
  */
 public class DescribeContactListRequest extends Request {
-    @Query
-    @NameInMap("ChanelType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChanelType")
     private String chanelType;
 
-    @Query
-    @NameInMap("ChanelValue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChanelValue")
     private String chanelValue;
 
-    @Query
-    @NameInMap("ContactName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactName")
     private String contactName;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
     private DescribeContactListRequest(Builder builder) {
@@ -110,11 +110,14 @@ public class DescribeContactListRequest extends Request {
         } 
 
         /**
-         * The alert notification method. Valid values:
-         * <p>
+         * <p>The alert notification method. Valid values:</p>
+         * <ul>
+         * <li>Mail: emails</li>
+         * <li>DingWebHook: DingTalk chatbots</li>
+         * </ul>
          * 
-         * *   Mail: emails
-         * *   DingWebHook: DingTalk chatbots
+         * <strong>example:</strong>
+         * <p>Mail</p>
          */
         public Builder chanelType(String chanelType) {
             this.putQueryParameter("ChanelType", chanelType);
@@ -123,10 +126,13 @@ public class DescribeContactListRequest extends Request {
         }
 
         /**
-         * The value specified for the alert notification method.
-         * <p>
+         * <p>The value specified for the alert notification method.</p>
+         * <blockquote>
+         * <p> This parameter is required only if you set the <code>ChanelType</code> parameter to <code>Mail</code>.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required only if you set the `ChanelType` parameter to `Mail`.
+         * <strong>example:</strong>
+         * <p><a href="mailto:Alice@example.com">Alice@example.com</a></p>
          */
         public Builder chanelValue(String chanelValue) {
             this.putQueryParameter("ChanelValue", chanelValue);
@@ -135,7 +141,10 @@ public class DescribeContactListRequest extends Request {
         }
 
         /**
-         * The name of the alert contact.
+         * <p>The name of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         public Builder contactName(String contactName) {
             this.putQueryParameter("ContactName", contactName);
@@ -144,10 +153,11 @@ public class DescribeContactListRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -156,10 +166,11 @@ public class DescribeContactListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Default value: 100.</p>
          * 
-         * Default value: 100.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

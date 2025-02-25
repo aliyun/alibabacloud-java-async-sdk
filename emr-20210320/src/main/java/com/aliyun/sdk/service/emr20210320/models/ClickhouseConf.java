@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ClickhouseConf} extends {@link TeaModel}
  *
  * <p>ClickhouseConf</p>
  */
 public class ClickhouseConf extends TeaModel {
-    @NameInMap("InitialReplica")
+    @com.aliyun.core.annotation.NameInMap("InitialReplica")
     private Integer initialReplica;
 
-    @NameInMap("InitialShard")
+    @com.aliyun.core.annotation.NameInMap("InitialShard")
     private Integer initialShard;
 
-    @NameInMap("NewNodeCount")
+    @com.aliyun.core.annotation.NameInMap("NewNodeCount")
     private Integer newNodeCount;
 
-    @NameInMap("ResizeType")
+    @com.aliyun.core.annotation.NameInMap("ResizeType")
     private String resizeType;
 
     private ClickhouseConf(Builder builder) {

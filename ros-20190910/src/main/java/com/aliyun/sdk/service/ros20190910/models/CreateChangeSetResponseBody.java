@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateChangeSetResponseBody} extends {@link TeaModel}
  *
  * <p>CreateChangeSetResponseBody</p>
  */
 public class CreateChangeSetResponseBody extends TeaModel {
-    @NameInMap("ChangeSetId")
+    @com.aliyun.core.annotation.NameInMap("ChangeSetId")
     private String changeSetId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StackId")
+    @com.aliyun.core.annotation.NameInMap("StackId")
     private String stackId;
 
     private CreateChangeSetResponseBody(Builder builder) {
@@ -62,7 +62,10 @@ public class CreateChangeSetResponseBody extends TeaModel {
         private String stackId; 
 
         /**
-         * The ID of the change set.
+         * <p>The ID of the change set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e85abe0c-6528-43fb-ae93-fdf8de22****</p>
          */
         public Builder changeSetId(String changeSetId) {
             this.changeSetId = changeSetId;
@@ -70,7 +73,10 @@ public class CreateChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B288A0BE-D927-4888-B0F7-B35EF84B6E6F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +84,10 @@ public class CreateChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the stack.
+         * <p>The ID of the stack.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</p>
          */
         public Builder stackId(String stackId) {
             this.stackId = stackId;

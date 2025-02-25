@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDateSourceGenerationsRequest} extends {@link RequestModel}
  *
  * <p>ListDateSourceGenerationsRequest</p>
  */
 public class ListDateSourceGenerationsRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("dataSourceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("dataSourceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dataSourceName;
 
-    @Query
-    @NameInMap("domainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("domainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("validStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("validStatus")
     private Boolean validStatus;
 
     private ListDateSourceGenerationsRequest(Builder builder) {
@@ -99,7 +104,11 @@ public class ListDateSourceGenerationsRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-7mz2ttxta01</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -108,7 +117,11 @@ public class ListDateSourceGenerationsRequest extends Request {
         }
 
         /**
-         * The name of the data source.
+         * <p>The name of the data source.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-0ju2s170b03_test_api2</p>
          */
         public Builder dataSourceName(String dataSourceName) {
             this.putPathParameter("dataSourceName", dataSourceName);
@@ -117,7 +130,11 @@ public class ListDateSourceGenerationsRequest extends Request {
         }
 
         /**
-         * The data center where the data source is deployed.
+         * <p>The data center where the data source is deployed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bj_vpc_domain_1</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("domainName", domainName);
@@ -126,11 +143,14 @@ public class ListDateSourceGenerationsRequest extends Request {
         }
 
         /**
-         * The valid state of the data source. Valid values: true and false. The default value of this parameter is true.
-         * <p>
+         * <p>Specifies the index versions to be returned. Valid values:</p>
+         * <ol>
+         * <li>true (default): returns the index versions that are complete and not expired.</li>
+         * <li>false: returns all index versions.</li>
+         * </ol>
          * 
-         * 1.  true indicates that the generations that have not expired and of which the tasks have been executed are returned.
-         * 2.  false indicates that all generations are returned.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder validStatus(Boolean validStatus) {
             this.putQueryParameter("validStatus", validStatus);

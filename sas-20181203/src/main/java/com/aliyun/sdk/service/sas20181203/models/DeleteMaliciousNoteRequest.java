@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMaliciousNoteRequest} extends {@link RequestModel}
  *
  * <p>DeleteMaliciousNoteRequest</p>
  */
 public class DeleteMaliciousNoteRequest extends Request {
-    @Query
-    @NameInMap("NoteId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NoteId")
     private Long noteId;
 
     private DeleteMaliciousNoteRequest(Builder builder) {
@@ -54,10 +59,13 @@ public class DeleteMaliciousNoteRequest extends Request {
         } 
 
         /**
-         * The ID of the remarks.
-         * <p>
+         * <p>The ID of the remarks.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListAgentlessMaliciousFiles~~">ListAgentlessMaliciousFiles</a> operation to obtain the ID from the NoteId parameter.</p>
+         * </blockquote>
          * 
-         * >  You can call the [ListAgentlessMaliciousFiles](~~ListAgentlessMaliciousFiles~~) operation to obtain the ID from the NoteId parameter.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder noteId(Long noteId) {
             this.putQueryParameter("NoteId", noteId);

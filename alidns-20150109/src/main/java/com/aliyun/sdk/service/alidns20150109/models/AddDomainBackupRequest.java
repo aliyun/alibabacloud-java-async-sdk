@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddDomainBackupRequest} extends {@link RequestModel}
  *
  * <p>AddDomainBackupRequest</p>
  */
 public class AddDomainBackupRequest extends Request {
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("PeriodType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeriodType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String periodType;
 
     private AddDomainBackupRequest(Builder builder) {
@@ -84,7 +89,11 @@ public class AddDomainBackupRequest extends Request {
         } 
 
         /**
-         * The domain name for which you want to create a backup task.
+         * <p>The domain name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.aliyun.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -93,7 +102,15 @@ public class AddDomainBackupRequest extends Request {
         }
 
         /**
-         * The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -102,11 +119,15 @@ public class AddDomainBackupRequest extends Request {
         }
 
         /**
-         * The backup cycle. Valid values:
-         * <p>
+         * <p>The backup cycle. Valid values:</p>
+         * <ul>
+         * <li>DAY: backs up data on a daily basis.</li>
+         * <li>HOUR: backs up data on an hourly basis.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **DAY**: Backs up data once every day.
-         * *   **HOUR**: Backs up data once every hour.
+         * <strong>example:</strong>
+         * <p>HOUR</p>
          */
         public Builder periodType(String periodType) {
             this.putQueryParameter("PeriodType", periodType);

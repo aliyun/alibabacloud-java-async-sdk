@@ -1,66 +1,71 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImagePipelinesRequest} extends {@link RequestModel}
  *
  * <p>DescribeImagePipelinesRequest</p>
  */
 public class DescribeImagePipelinesRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("ImagePipelineId")
-    private java.util.List < String > imagePipelineId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImagePipelineId")
+    private java.util.List<String> imagePipelineId;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 500, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 500, minimum = 1)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private DescribeImagePipelinesRequest(Builder builder) {
         super(builder);
@@ -101,7 +106,7 @@ public class DescribeImagePipelinesRequest extends Request {
     /**
      * @return imagePipelineId
      */
-    public java.util.List < String > getImagePipelineId() {
+    public java.util.List<String> getImagePipelineId() {
         return this.imagePipelineId;
     }
 
@@ -171,13 +176,13 @@ public class DescribeImagePipelinesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<DescribeImagePipelinesRequest, Builder> {
         private String sourceRegionId; 
-        private java.util.List < String > imagePipelineId; 
+        private java.util.List<String> imagePipelineId; 
         private Integer maxResults; 
         private String name; 
         private String nextToken; 
@@ -187,7 +192,7 @@ public class DescribeImagePipelinesRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -219,19 +224,23 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * The ID of image template N. Valid values of N: 1 to 20.
+         * <p>The IDs of image templates. Valid values of N: 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip-2ze5tsl5bp6nf2b3****</p>
          */
-        public Builder imagePipelineId(java.util.List < String > imagePipelineId) {
+        public Builder imagePipelineId(java.util.List<String> imagePipelineId) {
             this.putQueryParameter("ImagePipelineId", imagePipelineId);
             this.imagePipelineId = imagePipelineId;
             return this;
         }
 
         /**
-         * The maximum number of entries to return on each page. Valid values: 1 to 500.
-         * <p>
+         * <p>The maximum number of entries per page. Valid values: 1 to 500.</p>
+         * <p>Default value: 50.</p>
          * 
-         * Default value: 50.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -240,7 +249,10 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * The name of the image template.
+         * <p>The name of the image template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testImagePipeline</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -249,7 +261,10 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * The query token. Set the value to the `NextToken` value returned in the last call to the DescribeImagePipelines operation. Leave this parameter empty the first time you call this operation.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -276,7 +291,11 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * The region ID of the image template. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the image template. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -285,10 +304,13 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
-         * <p>
+         * <p>The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
+         * <blockquote>
+         * <p> Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
+         * </blockquote>
          * 
-         * >  Resources in the default resource group are displayed in the response regardless of how this parameter is set.
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -315,9 +337,9 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * The key of tag N of the image template. Valid values of N: 1 to 20.
+         * <p>The tags of the image template.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -330,11 +352,17 @@ public class DescribeImagePipelinesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImagePipelinesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeImagePipelinesRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -369,7 +397,10 @@ public class DescribeImagePipelinesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the image template. Valid values of N: 1 to 20.
+             * <p>The key of tag N. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -377,7 +408,10 @@ public class DescribeImagePipelinesRequest extends Request {
             }
 
             /**
-             * The value of tag N of the image template. Valid values of N: 1 to 20.
+             * <p>The value of tag N. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

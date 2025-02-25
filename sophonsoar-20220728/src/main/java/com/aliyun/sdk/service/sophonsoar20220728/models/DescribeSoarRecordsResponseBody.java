@@ -1,25 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSoarRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSoarRecordsResponseBody</p>
  */
 public class DescribeSoarRecordsResponseBody extends TeaModel {
-    @NameInMap("Page")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("Page")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Page page;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SoarExecuteRecords")
+    @com.aliyun.core.annotation.NameInMap("SoarExecuteRecords")
     private java.util.List < SoarExecuteRecords> soarExecuteRecords;
 
     private DescribeSoarRecordsResponseBody(Builder builder) {
@@ -63,7 +63,8 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
         private java.util.List < SoarExecuteRecords> soarExecuteRecords; 
 
         /**
-         * Page.
+         * <p>The pagination information.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder page(Page page) {
             this.page = page;
@@ -71,7 +72,10 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>601C2DAC-6A67-5237-BEE8-5BF1CEE96296</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -79,7 +83,7 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * SoarExecuteRecords.
+         * <p>The execution records.</p>
          */
         public Builder soarExecuteRecords(java.util.List < SoarExecuteRecords> soarExecuteRecords) {
             this.soarExecuteRecords = soarExecuteRecords;
@@ -92,14 +96,20 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSoarRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSoarRecordsResponseBody</p>
+     */
     public static class Page extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Page(Builder builder) {
@@ -143,7 +153,10 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -151,7 +164,10 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -159,7 +175,10 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -173,41 +192,47 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSoarRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSoarRecordsResponseBody</p>
+     */
     public static class SoarExecuteRecords extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("ErrorMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
 
-        @NameInMap("RawEventReq")
+        @com.aliyun.core.annotation.NameInMap("RawEventReq")
         private String rawEventReq;
 
-        @NameInMap("RequestUuid")
+        @com.aliyun.core.annotation.NameInMap("RequestUuid")
         private String requestUuid;
 
-        @NameInMap("ResultMessage")
+        @com.aliyun.core.annotation.NameInMap("ResultMessage")
         private String resultMessage;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
-        @NameInMap("TaskflowMd5")
+        @com.aliyun.core.annotation.NameInMap("TaskflowMd5")
         private String taskflowMd5;
 
-        @NameInMap("TriggerType")
+        @com.aliyun.core.annotation.NameInMap("TriggerType")
         private String triggerType;
 
-        @NameInMap("TriggerUser")
+        @com.aliyun.core.annotation.NameInMap("TriggerUser")
         private String triggerUser;
 
         private SoarExecuteRecords(Builder builder) {
@@ -332,7 +357,10 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
             private String triggerUser; 
 
             /**
-             * EndTime.
+             * <p>The end of the time range to query. The value is a 13-digit timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1686294686000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -340,7 +368,10 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMsg.
+             * <p>The error message of the task. If the task is successful, this field is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>stime not match</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -348,7 +379,13 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * RawEventReq.
+             * <p>The request parameters of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;input1&quot;: &quot;xx.xx.xx.xx&quot;,
+             *     &quot;input2&quot;: &quot;7d&quot;
+             * }</p>
              */
             public Builder rawEventReq(String rawEventReq) {
                 this.rawEventReq = rawEventReq;
@@ -356,7 +393,10 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * RequestUuid.
+             * <p>The request ID of the task. The value is unique.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ba1ec480-aa90-4bb6-a1a7-9e311ae79321</p>
              */
             public Builder requestUuid(String requestUuid) {
                 this.requestUuid = requestUuid;
@@ -364,7 +404,10 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ResultMessage.
+             * <p>The returned information about the playbook. You can define the value in the playbook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Playbook finish</p>
              */
             public Builder resultMessage(String resultMessage) {
                 this.resultMessage = resultMessage;
@@ -372,7 +415,10 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The beginning of the time range to query. The value is a 13-byte timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1675823338433</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -380,7 +426,15 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the task. Valid values:</p>
+             * <ul>
+             * <li><strong>success</strong></li>
+             * <li><strong>fail</strong></li>
+             * <li><strong>running</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -388,7 +442,10 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TaskName.
+             * <p>The name of the task. The value is the same as the playbook UUID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>82848ebc-eaff-4791-acd4-xxxxx</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -396,7 +453,14 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * <p>The type of the task. Valid values:</p>
+             * <ul>
+             * <li><strong>general</strong>: a common task</li>
+             * <li><strong>standard</strong>: a component task</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -404,7 +468,10 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TaskflowMd5.
+             * <p>The MD5 value of the playbook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dea65a3db87fb9bd84bbxxxxx</p>
              */
             public Builder taskflowMd5(String taskflowMd5) {
                 this.taskflowMd5 = taskflowMd5;
@@ -412,7 +479,15 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerType.
+             * <p>The type of the task. Valid values:</p>
+             * <ul>
+             * <li><strong>debug</strong>: a debugging task</li>
+             * <li><strong>manual</strong>: a manual task</li>
+             * <li><strong>siem</strong>: a task that is triggered by an event or alert</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>debug</p>
              */
             public Builder triggerType(String triggerType) {
                 this.triggerType = triggerType;
@@ -420,7 +495,10 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerUser.
+             * <p>The ID of the Alibaba Cloud account that is used to execute the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127xxxx4392</p>
              */
             public Builder triggerUser(String triggerUser) {
                 this.triggerUser = triggerUser;

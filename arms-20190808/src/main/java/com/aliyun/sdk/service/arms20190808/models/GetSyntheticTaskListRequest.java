@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSyntheticTaskListRequest} extends {@link RequestModel}
  *
  * <p>GetSyntheticTaskListRequest</p>
  */
 public class GetSyntheticTaskListRequest extends Request {
-    @Query
-    @NameInMap("Direction")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Direction")
     private String direction;
 
-    @Query
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @Query
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Long pageNum;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("TaskName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskName")
     private String taskName;
 
-    @Query
-    @NameInMap("TaskStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskStatus")
     private String taskStatus;
 
-    @Query
-    @NameInMap("TaskType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskType")
     private String taskType;
 
-    @Query
-    @NameInMap("Url")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Url")
     private String url;
 
     private GetSyntheticTaskListRequest(Builder builder) {
@@ -166,7 +171,14 @@ public class GetSyntheticTaskListRequest extends Request {
         } 
 
         /**
-         * Direction.
+         * <p>The order by which the queried tasks are sorted. Valid values:</p>
+         * <ul>
+         * <li><strong>asc</strong>: ascending</li>
+         * <li><strong>desc</strong>: descending</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -175,7 +187,10 @@ public class GetSyntheticTaskListRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The condition by which the queried tasks are sorted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateTime</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -184,7 +199,10 @@ public class GetSyntheticTaskListRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Long pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -193,7 +211,10 @@ public class GetSyntheticTaskListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -202,7 +223,10 @@ public class GetSyntheticTaskListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID. Default value: <strong>cn-hangzhou</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -211,7 +235,10 @@ public class GetSyntheticTaskListRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * <p>The task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>net-test</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -220,7 +247,15 @@ public class GetSyntheticTaskListRequest extends Request {
         }
 
         /**
-         * TaskStatus.
+         * <p>The status of the task. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: The task is stopped.</li>
+         * <li><strong>1</strong>: The task is started.</li>
+         * <li><strong>9</strong>: The task is ended.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder taskStatus(String taskStatus) {
             this.putQueryParameter("TaskStatus", taskStatus);
@@ -229,7 +264,17 @@ public class GetSyntheticTaskListRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * <p>The type of the task. Valid values:</p>
+         * <ol>
+         * <li>3: web page performance - IE</li>
+         * <li>34: web page performance - Chrome</li>
+         * <li>0: network quality</li>
+         * <li>40: file download</li>
+         * <li>7: API performance</li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);
@@ -238,7 +283,10 @@ public class GetSyntheticTaskListRequest extends Request {
         }
 
         /**
-         * Url.
+         * <p>The URL for synthetic monitoring.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.example.com">https://www.example.com</a></p>
          */
         public Builder url(String url) {
             this.putQueryParameter("Url", url);

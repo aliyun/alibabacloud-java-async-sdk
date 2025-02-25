@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDiscoveredResourceCountsGroupByResourceTypeResponseBody} extends {@link TeaModel}
  *
  * <p>GetDiscoveredResourceCountsGroupByResourceTypeResponseBody</p>
  */
 public class GetDiscoveredResourceCountsGroupByResourceTypeResponseBody extends TeaModel {
-    @NameInMap("DiscoveredResourceCountsSummary")
-    private java.util.List < DiscoveredResourceCountsSummary> discoveredResourceCountsSummary;
+    @com.aliyun.core.annotation.NameInMap("DiscoveredResourceCountsSummary")
+    private java.util.List<DiscoveredResourceCountsSummary> discoveredResourceCountsSummary;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetDiscoveredResourceCountsGroupByResourceTypeResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class GetDiscoveredResourceCountsGroupByResourceTypeResponseBody extends 
     /**
      * @return discoveredResourceCountsSummary
      */
-    public java.util.List < DiscoveredResourceCountsSummary> getDiscoveredResourceCountsSummary() {
+    public java.util.List<DiscoveredResourceCountsSummary> getDiscoveredResourceCountsSummary() {
         return this.discoveredResourceCountsSummary;
     }
 
@@ -46,19 +51,22 @@ public class GetDiscoveredResourceCountsGroupByResourceTypeResponseBody extends 
     }
 
     public static final class Builder {
-        private java.util.List < DiscoveredResourceCountsSummary> discoveredResourceCountsSummary; 
+        private java.util.List<DiscoveredResourceCountsSummary> discoveredResourceCountsSummary; 
         private String requestId; 
 
         /**
-         * The statistics on the resources.
+         * <p>The statistics on the resources.</p>
          */
-        public Builder discoveredResourceCountsSummary(java.util.List < DiscoveredResourceCountsSummary> discoveredResourceCountsSummary) {
+        public Builder discoveredResourceCountsSummary(java.util.List<DiscoveredResourceCountsSummary> discoveredResourceCountsSummary) {
             this.discoveredResourceCountsSummary = discoveredResourceCountsSummary;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AC9BD94C-D20C-4D27-88D4-89E8D75C051B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class GetDiscoveredResourceCountsGroupByResourceTypeResponseBody extends 
 
     } 
 
+    /**
+     * 
+     * {@link GetDiscoveredResourceCountsGroupByResourceTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDiscoveredResourceCountsGroupByResourceTypeResponseBody</p>
+     */
     public static class DiscoveredResourceCountsSummary extends TeaModel {
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("ResourceCount")
+        @com.aliyun.core.annotation.NameInMap("ResourceCount")
         private Long resourceCount;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
         private DiscoveredResourceCountsSummary(Builder builder) {
@@ -122,10 +136,13 @@ public class GetDiscoveredResourceCountsGroupByResourceTypeResponseBody extends 
             private String resourceType; 
 
             /**
-             * The resource type by which the statistics are collected.
-             * <p>
+             * <p>The resource type by which the statistics are collected.</p>
+             * <blockquote>
+             * <p>We recommend that you use the <code>ResourceType</code> parameter.</p>
+             * </blockquote>
              * 
-             * > We recommend that you use the `ResourceType` parameter.
+             * <strong>example:</strong>
+             * <p>ACS::ECS::Instance</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -133,7 +150,10 @@ public class GetDiscoveredResourceCountsGroupByResourceTypeResponseBody extends 
             }
 
             /**
-             * The total number of resources.
+             * <p>The total number of resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder resourceCount(Long resourceCount) {
                 this.resourceCount = resourceCount;
@@ -141,7 +161,10 @@ public class GetDiscoveredResourceCountsGroupByResourceTypeResponseBody extends 
             }
 
             /**
-             * The resource type by which the statistics are collected.
+             * <p>The resource type by which the statistics are collected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS::ECS::Instance</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

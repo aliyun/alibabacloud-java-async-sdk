@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.alimt20181012;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.alimt20181012.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -18,9 +19,15 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<CreateAsyncTranslateResponse> createAsyncTranslate(CreateAsyncTranslateRequest request);
+
     CompletableFuture<CreateImageTranslateTaskResponse> createImageTranslateTask(CreateImageTranslateTaskRequest request);
 
+    CompletableFuture<GetAsyncTranslateResponse> getAsyncTranslate(GetAsyncTranslateRequest request);
+
     CompletableFuture<GetBatchTranslateResponse> getBatchTranslate(GetBatchTranslateRequest request);
+
+    CompletableFuture<GetBatchTranslateByVPCResponse> getBatchTranslateByVPC(GetBatchTranslateByVPCRequest request);
 
     CompletableFuture<GetDetectLanguageResponse> getDetectLanguage(GetDetectLanguageRequest request);
 
@@ -46,9 +53,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<TranslateResponse> translate(TranslateRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<TranslateECommerceResponse> translateECommerce(TranslateECommerceRequest request);
 
     CompletableFuture<TranslateGeneralResponse> translateGeneral(TranslateGeneralRequest request);
+
+    CompletableFuture<TranslateGeneralVpcResponse> translateGeneralVpc(TranslateGeneralVpcRequest request);
 
     CompletableFuture<TranslateImageResponse> translateImage(TranslateImageRequest request);
 

@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteZoneResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteZoneResponseBody</p>
  */
 public class DeleteZoneResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private DeleteZoneResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class DeleteZoneResponseBody extends TeaModel {
         private String zoneId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E246E023-F2EB-4034-83F7-B13FCF31459C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,10 @@ public class DeleteZoneResponseBody extends TeaModel {
         }
 
         /**
-         * zone ID
+         * <p>The zone ID. This ID uniquely identifies the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0e41496f12da01311d314f17b801****</p>
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;

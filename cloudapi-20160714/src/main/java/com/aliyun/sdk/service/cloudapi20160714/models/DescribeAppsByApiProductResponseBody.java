@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAppsByApiProductResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAppsByApiProductResponseBody</p>
  */
 public class DescribeAppsByApiProductResponseBody extends TeaModel {
-    @NameInMap("AuthorizedApps")
+    @com.aliyun.core.annotation.NameInMap("AuthorizedApps")
     private AuthorizedApps authorizedApps;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeAppsByApiProductResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeAppsByApiProductResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information about authorized applications.
+         * <p>The information about authorized applications.</p>
          */
         public Builder authorizedApps(AuthorizedApps authorizedApps) {
             this.authorizedApps = authorizedApps;
@@ -94,7 +99,10 @@ public class DescribeAppsByApiProductResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeAppsByApiProductResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeAppsByApiProductResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AC866798-62D3-52F4-8AB5-CA149A53984F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeAppsByApiProductResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,23 +148,29 @@ public class DescribeAppsByApiProductResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAppsByApiProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppsByApiProductResponseBody</p>
+     */
     public static class AuthorizedApp extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private Long appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("AuthValidTime")
+        @com.aliyun.core.annotation.NameInMap("AuthValidTime")
         private String authValidTime;
 
-        @NameInMap("AuthorizedTime")
+        @com.aliyun.core.annotation.NameInMap("AuthorizedTime")
         private String authorizedTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Extend")
+        @com.aliyun.core.annotation.NameInMap("Extend")
         private String extend;
 
         private AuthorizedApp(Builder builder) {
@@ -218,7 +241,10 @@ public class DescribeAppsByApiProductResponseBody extends TeaModel {
             private String extend; 
 
             /**
-             * The application ID.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>110982419</p>
              */
             public Builder appId(Long appId) {
                 this.appId = appId;
@@ -226,7 +252,10 @@ public class DescribeAppsByApiProductResponseBody extends TeaModel {
             }
 
             /**
-             * The application name.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>APP_02580_DEV</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -234,7 +263,10 @@ public class DescribeAppsByApiProductResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time of the authorization. The time is in GMT. An empty value indicates that the authorization does not expire.
+             * <p>The expiration time of the authorization. The time is in GMT. An empty value indicates that the authorization does not expire.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-06-17T03:41:53Z</p>
              */
             public Builder authValidTime(String authValidTime) {
                 this.authValidTime = authValidTime;
@@ -242,7 +274,10 @@ public class DescribeAppsByApiProductResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the authorization was created. The time is in GMT.
+             * <p>The time when the authorization was created. The time is in GMT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-07-21T06:17:20Z</p>
              */
             public Builder authorizedTime(String authorizedTime) {
                 this.authorizedTime = authorizedTime;
@@ -250,7 +285,10 @@ public class DescribeAppsByApiProductResponseBody extends TeaModel {
             }
 
             /**
-             * The authorization description.
+             * <p>The authorization description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test share with nsc qiming</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -258,7 +296,10 @@ public class DescribeAppsByApiProductResponseBody extends TeaModel {
             }
 
             /**
-             * The extended information.
+             * <p>The extended information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>extra info</p>
              */
             public Builder extend(String extend) {
                 this.extend = extend;
@@ -272,9 +313,15 @@ public class DescribeAppsByApiProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAppsByApiProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppsByApiProductResponseBody</p>
+     */
     public static class AuthorizedApps extends TeaModel {
-        @NameInMap("AuthorizedApp")
-        private java.util.List < AuthorizedApp> authorizedApp;
+        @com.aliyun.core.annotation.NameInMap("AuthorizedApp")
+        private java.util.List<AuthorizedApp> authorizedApp;
 
         private AuthorizedApps(Builder builder) {
             this.authorizedApp = builder.authorizedApp;
@@ -291,17 +338,17 @@ public class DescribeAppsByApiProductResponseBody extends TeaModel {
         /**
          * @return authorizedApp
          */
-        public java.util.List < AuthorizedApp> getAuthorizedApp() {
+        public java.util.List<AuthorizedApp> getAuthorizedApp() {
             return this.authorizedApp;
         }
 
         public static final class Builder {
-            private java.util.List < AuthorizedApp> authorizedApp; 
+            private java.util.List<AuthorizedApp> authorizedApp; 
 
             /**
              * AuthorizedApp.
              */
-            public Builder authorizedApp(java.util.List < AuthorizedApp> authorizedApp) {
+            public Builder authorizedApp(java.util.List<AuthorizedApp> authorizedApp) {
                 this.authorizedApp = authorizedApp;
                 return this;
             }

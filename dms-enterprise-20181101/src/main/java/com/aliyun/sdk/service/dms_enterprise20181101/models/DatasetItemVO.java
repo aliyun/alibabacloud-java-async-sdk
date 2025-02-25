@@ -1,60 +1,65 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DatasetItemVO} extends {@link TeaModel}
  *
  * <p>DatasetItemVO</p>
  */
 public class DatasetItemVO extends TeaModel {
-    @NameInMap("AsyncTaskList")
-    private java.util.List < AsyncTaskVO > asyncTaskList;
+    @com.aliyun.core.annotation.NameInMap("AsyncTaskList")
+    private java.util.List<AsyncTaskVO> asyncTaskList;
 
-    @NameInMap("DatasetStatus")
+    @com.aliyun.core.annotation.NameInMap("DatasetStatus")
     private Integer datasetStatus;
 
-    @NameInMap("DatasetType")
+    @com.aliyun.core.annotation.NameInMap("DatasetType")
     private Integer datasetType;
 
-    @NameInMap("Digest")
+    @com.aliyun.core.annotation.NameInMap("Digest")
     private String digest;
 
-    @NameInMap("FileSystem")
+    @com.aliyun.core.annotation.NameInMap("FileSystem")
     private String fileSystem;
 
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
 
-    @NameInMap("KeyName")
+    @com.aliyun.core.annotation.NameInMap("KeyName")
     private String keyName;
 
-    @NameInMap("MoreInfo")
+    @com.aliyun.core.annotation.NameInMap("MoreInfo")
     private String moreInfo;
 
-    @NameInMap("Path")
+    @com.aliyun.core.annotation.NameInMap("Path")
     private String path;
 
-    @NameInMap("ProjectsLinked")
-    private java.util.List < ProjectDetailsLiteVO > projectsLinked;
+    @com.aliyun.core.annotation.NameInMap("ProjectsLinked")
+    private java.util.List<ProjectDetailsLiteVO> projectsLinked;
 
-    @NameInMap("RecentTaskStatus")
+    @com.aliyun.core.annotation.NameInMap("RecentTaskStatus")
     private Integer recentTaskStatus;
 
-    @NameInMap("Remark")
+    @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
-    @NameInMap("Schema")
+    @com.aliyun.core.annotation.NameInMap("Schema")
     private String schema;
 
-    @NameInMap("TableName")
+    @com.aliyun.core.annotation.NameInMap("TableName")
     private String tableName;
 
-    @NameInMap("Url")
+    @com.aliyun.core.annotation.NameInMap("Url")
     private String url;
 
     private DatasetItemVO(Builder builder) {
@@ -86,7 +91,7 @@ public class DatasetItemVO extends TeaModel {
     /**
      * @return asyncTaskList
      */
-    public java.util.List < AsyncTaskVO > getAsyncTaskList() {
+    public java.util.List<AsyncTaskVO> getAsyncTaskList() {
         return this.asyncTaskList;
     }
 
@@ -149,7 +154,7 @@ public class DatasetItemVO extends TeaModel {
     /**
      * @return projectsLinked
      */
-    public java.util.List < ProjectDetailsLiteVO > getProjectsLinked() {
+    public java.util.List<ProjectDetailsLiteVO> getProjectsLinked() {
         return this.projectsLinked;
     }
 
@@ -189,7 +194,7 @@ public class DatasetItemVO extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AsyncTaskVO > asyncTaskList; 
+        private java.util.List<AsyncTaskVO> asyncTaskList; 
         private Integer datasetStatus; 
         private Integer datasetType; 
         private String digest; 
@@ -198,7 +203,7 @@ public class DatasetItemVO extends TeaModel {
         private String keyName; 
         private String moreInfo; 
         private String path; 
-        private java.util.List < ProjectDetailsLiteVO > projectsLinked; 
+        private java.util.List<ProjectDetailsLiteVO> projectsLinked; 
         private Integer recentTaskStatus; 
         private String remark; 
         private String schema; 
@@ -208,7 +213,7 @@ public class DatasetItemVO extends TeaModel {
         /**
          * AsyncTaskList.
          */
-        public Builder asyncTaskList(java.util.List < AsyncTaskVO > asyncTaskList) {
+        public Builder asyncTaskList(java.util.List<AsyncTaskVO> asyncTaskList) {
             this.asyncTaskList = asyncTaskList;
             return this;
         }
@@ -280,7 +285,7 @@ public class DatasetItemVO extends TeaModel {
         /**
          * ProjectsLinked.
          */
-        public Builder projectsLinked(java.util.List < ProjectDetailsLiteVO > projectsLinked) {
+        public Builder projectsLinked(java.util.List<ProjectDetailsLiteVO> projectsLinked) {
             this.projectsLinked = projectsLinked;
             return this;
         }

@@ -118,18 +118,18 @@ public class ValidateShardTaskRequest extends Request {
             super();
         } 
 
-        private Builder(ValidateShardTaskRequest response) {
-            super(response);
-            this.dbName = response.dbName;
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.regionId = response.regionId;
-            this.sourceTableName = response.sourceTableName;
-            this.targetTableName = response.targetTableName;
-            this.taskType = response.taskType;
+        private Builder(ValidateShardTaskRequest request) {
+            super(request);
+            this.dbName = request.dbName;
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.regionId = request.regionId;
+            this.sourceTableName = request.sourceTableName;
+            this.targetTableName = request.targetTableName;
+            this.taskType = request.taskType;
         } 
 
         /**
-         * DbName.
+         * The name of the database.
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -138,7 +138,7 @@ public class ValidateShardTaskRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the PolarDB-X 1.0 instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -147,7 +147,7 @@ public class ValidateShardTaskRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the PolarDB-X 1.0 instance is created.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -156,7 +156,7 @@ public class ValidateShardTaskRequest extends Request {
         }
 
         /**
-         * SourceTableName.
+         * The name of the table or table shard on which you want to perform the task.
          */
         public Builder sourceTableName(String sourceTableName) {
             this.putQueryParameter("SourceTableName", sourceTableName);
@@ -165,7 +165,7 @@ public class ValidateShardTaskRequest extends Request {
         }
 
         /**
-         * TargetTableName.
+         * The name of the table or table shard on which you perform the task.
          */
         public Builder targetTableName(String targetTableName) {
             this.putQueryParameter("TargetTableName", targetTableName);
@@ -174,7 +174,12 @@ public class ValidateShardTaskRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * The type of the task. Valid values:
+         * <p>
+         * 
+         * *   **SINGLE_TO_SHARD**: converts a single table to a table shard.
+         * *   **SHARD_TO_SINGLE**: converts a table shard to a single table.
+         * *   **SHARD_TO_SHARD**: converts a table shard to another table shard.
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

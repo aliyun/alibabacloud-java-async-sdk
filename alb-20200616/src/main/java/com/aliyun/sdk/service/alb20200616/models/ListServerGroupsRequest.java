@@ -1,44 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServerGroupsRequest} extends {@link RequestModel}
  *
  * <p>ListServerGroupsRequest</p>
  */
 public class ListServerGroupsRequest extends Request {
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ServerGroupIds")
-    private java.util.List < String > serverGroupIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerGroupIds")
+    private java.util.List<String> serverGroupIds;
 
-    @Query
-    @NameInMap("ServerGroupNames")
-    private java.util.List < String > serverGroupNames;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerGroupNames")
+    private java.util.List<String> serverGroupNames;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerGroupType")
+    private String serverGroupType;
 
-    @Query
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     private ListServerGroupsRequest(Builder builder) {
@@ -48,6 +57,7 @@ public class ListServerGroupsRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.serverGroupIds = builder.serverGroupIds;
         this.serverGroupNames = builder.serverGroupNames;
+        this.serverGroupType = builder.serverGroupType;
         this.tag = builder.tag;
         this.vpcId = builder.vpcId;
     }
@@ -89,21 +99,28 @@ public class ListServerGroupsRequest extends Request {
     /**
      * @return serverGroupIds
      */
-    public java.util.List < String > getServerGroupIds() {
+    public java.util.List<String> getServerGroupIds() {
         return this.serverGroupIds;
     }
 
     /**
      * @return serverGroupNames
      */
-    public java.util.List < String > getServerGroupNames() {
+    public java.util.List<String> getServerGroupNames() {
         return this.serverGroupNames;
+    }
+
+    /**
+     * @return serverGroupType
+     */
+    public String getServerGroupType() {
+        return this.serverGroupType;
     }
 
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -118,9 +135,10 @@ public class ListServerGroupsRequest extends Request {
         private Integer maxResults; 
         private String nextToken; 
         private String resourceGroupId; 
-        private java.util.List < String > serverGroupIds; 
-        private java.util.List < String > serverGroupNames; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<String> serverGroupIds; 
+        private java.util.List<String> serverGroupNames; 
+        private String serverGroupType; 
+        private java.util.List<Tag> tag; 
         private String vpcId; 
 
         private Builder() {
@@ -134,12 +152,16 @@ public class ListServerGroupsRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.serverGroupIds = request.serverGroupIds;
             this.serverGroupNames = request.serverGroupNames;
+            this.serverGroupType = request.serverGroupType;
             this.tag = request.tag;
             this.vpcId = request.vpcId;
         } 
 
         /**
-         * The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.
+         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -148,11 +170,14 @@ public class ListServerGroupsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>You do not need to specify this parameter for the first request.</li>
+         * <li>You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+         * </ul>
          * 
-         * *   You do not need to specify this parameter for the first request.
-         * *   You must specify the token that is obtained from the previous query as the value of **NextToken**.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXG****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -161,7 +186,10 @@ public class ListServerGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the server group belongs.
+         * <p>The ID of the resource group to which the server group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-atstuj3rtop****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -170,34 +198,57 @@ public class ListServerGroupsRequest extends Request {
         }
 
         /**
-         * The server group IDs.
+         * <p>The server group IDs.</p>
          */
-        public Builder serverGroupIds(java.util.List < String > serverGroupIds) {
+        public Builder serverGroupIds(java.util.List<String> serverGroupIds) {
             this.putQueryParameter("ServerGroupIds", serverGroupIds);
             this.serverGroupIds = serverGroupIds;
             return this;
         }
 
         /**
-         * The names of the server groups to be queried. You can specify at most 10 server group names.
+         * <p>The names of the server groups to be queried. You can specify at most 10 server group names.</p>
          */
-        public Builder serverGroupNames(java.util.List < String > serverGroupNames) {
+        public Builder serverGroupNames(java.util.List<String> serverGroupNames) {
             this.putQueryParameter("ServerGroupNames", serverGroupNames);
             this.serverGroupNames = serverGroupNames;
             return this;
         }
 
         /**
-         * The tags that are added to the server group. You can specify up to 10 tags in each call.
+         * <p>The server group type. Valid values:</p>
+         * <ul>
+         * <li><strong>Instance</strong>: instances, including ECS instances, ENIs, and elastic container instances.</li>
+         * <li><strong>Ip</strong>: IP addresses.</li>
+         * <li><strong>Fc</strong>: Function Compute</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder serverGroupType(String serverGroupType) {
+            this.putQueryParameter("ServerGroupType", serverGroupType);
+            this.serverGroupType = serverGroupType;
+            return this;
+        }
+
+        /**
+         * <p>The tags that are added to the server group. You can specify up to 10 tags in each call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance</p>
+         */
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The ID of the virtual private cloud (VPC).
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp15zckdt37pq72zv****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -212,11 +263,17 @@ public class ListServerGroupsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListServerGroupsRequest} extends {@link TeaModel}
+     *
+     * <p>ListServerGroupsRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -251,10 +308,11 @@ public class ListServerGroupsRequest extends Request {
             private String value; 
 
             /**
-             * The tag key. You can specify up to 10 tag keys.
-             * <p>
+             * <p>The tag key. You can specify up to 10 tag keys.</p>
+             * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
              * 
-             * The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -262,10 +320,11 @@ public class ListServerGroupsRequest extends Request {
             }
 
             /**
-             * The tag value. You can specify up to 10 tag values.
-             * <p>
+             * <p>The tag value. You can specify up to 10 tag values.</p>
+             * <p>The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
              * 
-             * The tag value can be up to 128 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder value(String value) {
                 this.value = value;

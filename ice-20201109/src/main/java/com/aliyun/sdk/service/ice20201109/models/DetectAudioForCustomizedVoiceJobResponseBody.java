@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetectAudioForCustomizedVoiceJobResponseBody} extends {@link TeaModel}
  *
  * <p>DetectAudioForCustomizedVoiceJobResponseBody</p>
  */
 public class DetectAudioForCustomizedVoiceJobResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DetectAudioForCustomizedVoiceJobResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class DetectAudioForCustomizedVoiceJobResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +75,10 @@ public class DetectAudioForCustomizedVoiceJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class DetectAudioForCustomizedVoiceJobResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values: true false</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -91,11 +102,17 @@ public class DetectAudioForCustomizedVoiceJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DetectAudioForCustomizedVoiceJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>DetectAudioForCustomizedVoiceJobResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Pass")
+        @com.aliyun.core.annotation.NameInMap("Pass")
         private Boolean pass;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
         private Data(Builder builder) {
@@ -130,7 +147,14 @@ public class DetectAudioForCustomizedVoiceJobResponseBody extends TeaModel {
             private String reason; 
 
             /**
-             * Pass.
+             * <p>Indicates whether the audio file passes the check. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder pass(Boolean pass) {
                 this.pass = pass;
@@ -138,7 +162,7 @@ public class DetectAudioForCustomizedVoiceJobResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * <p>The reason returned if the audio file failed to pass the check.</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;

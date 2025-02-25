@@ -1,42 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TargetTrackingPolicy} extends {@link TeaModel}
  *
  * <p>TargetTrackingPolicy</p>
  */
 public class TargetTrackingPolicy extends TeaModel {
-    @NameInMap("endTime")
+    @com.aliyun.core.annotation.NameInMap("endTime")
     private String endTime;
 
-    @NameInMap("maxCapacity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("maxCapacity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long maxCapacity;
 
-    @NameInMap("metricTarget")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("metricTarget")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Float metricTarget;
 
-    @NameInMap("metricType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("metricType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String metricType;
 
-    @NameInMap("minCapacity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("minCapacity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long minCapacity;
 
-    @NameInMap("name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @NameInMap("startTime")
+    @com.aliyun.core.annotation.NameInMap("startTime")
     private String startTime;
+
+    @com.aliyun.core.annotation.NameInMap("timeZone")
+    private String timeZone;
 
     private TargetTrackingPolicy(Builder builder) {
         this.endTime = builder.endTime;
@@ -46,6 +49,7 @@ public class TargetTrackingPolicy extends TeaModel {
         this.minCapacity = builder.minCapacity;
         this.name = builder.name;
         this.startTime = builder.startTime;
+        this.timeZone = builder.timeZone;
     }
 
     public static Builder builder() {
@@ -105,6 +109,13 @@ public class TargetTrackingPolicy extends TeaModel {
         return this.startTime;
     }
 
+    /**
+     * @return timeZone
+     */
+    public String getTimeZone() {
+        return this.timeZone;
+    }
+
     public static final class Builder {
         private String endTime; 
         private Long maxCapacity; 
@@ -113,6 +124,7 @@ public class TargetTrackingPolicy extends TeaModel {
         private Long minCapacity; 
         private String name; 
         private String startTime; 
+        private String timeZone; 
 
         /**
          * endTime.
@@ -123,7 +135,10 @@ public class TargetTrackingPolicy extends TeaModel {
         }
 
         /**
-         * maxCapacity.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxCapacity(Long maxCapacity) {
             this.maxCapacity = maxCapacity;
@@ -131,7 +146,10 @@ public class TargetTrackingPolicy extends TeaModel {
         }
 
         /**
-         * metricTarget.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.6</p>
          */
         public Builder metricTarget(Float metricTarget) {
             this.metricTarget = metricTarget;
@@ -139,7 +157,10 @@ public class TargetTrackingPolicy extends TeaModel {
         }
 
         /**
-         * metricType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CPUUtilization</p>
          */
         public Builder metricType(String metricType) {
             this.metricType = metricType;
@@ -147,7 +168,10 @@ public class TargetTrackingPolicy extends TeaModel {
         }
 
         /**
-         * minCapacity.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder minCapacity(Long minCapacity) {
             this.minCapacity = minCapacity;
@@ -155,7 +179,10 @@ public class TargetTrackingPolicy extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_1</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -167,6 +194,14 @@ public class TargetTrackingPolicy extends TeaModel {
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * timeZone.
+         */
+        public Builder timeZone(String timeZone) {
+            this.timeZone = timeZone;
             return this;
         }
 

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAsrVocabResponseBody} extends {@link TeaModel}
  *
  * <p>ListAsrVocabResponseBody</p>
  */
 public class ListAsrVocabResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListAsrVocabResponseBody(Builder builder) {
@@ -131,25 +136,39 @@ public class ListAsrVocabResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAsrVocabResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAsrVocabResponseBody</p>
+     */
     public static class AsrVocab extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("AsrVersion")
+        private Integer asrVersion;
+
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("ModelCustomizationId")
+        private String modelCustomizationId;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("VocabularyId")
+        @com.aliyun.core.annotation.NameInMap("VocabularyId")
         private String vocabularyId;
 
         private AsrVocab(Builder builder) {
+            this.asrVersion = builder.asrVersion;
             this.createTime = builder.createTime;
             this.id = builder.id;
+            this.modelCustomizationId = builder.modelCustomizationId;
             this.name = builder.name;
             this.updateTime = builder.updateTime;
             this.vocabularyId = builder.vocabularyId;
@@ -164,6 +183,13 @@ public class ListAsrVocabResponseBody extends TeaModel {
         }
 
         /**
+         * @return asrVersion
+         */
+        public Integer getAsrVersion() {
+            return this.asrVersion;
+        }
+
+        /**
          * @return createTime
          */
         public String getCreateTime() {
@@ -175,6 +201,13 @@ public class ListAsrVocabResponseBody extends TeaModel {
          */
         public String getId() {
             return this.id;
+        }
+
+        /**
+         * @return modelCustomizationId
+         */
+        public String getModelCustomizationId() {
+            return this.modelCustomizationId;
         }
 
         /**
@@ -199,11 +232,21 @@ public class ListAsrVocabResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer asrVersion; 
             private String createTime; 
             private String id; 
+            private String modelCustomizationId; 
             private String name; 
             private String updateTime; 
             private String vocabularyId; 
+
+            /**
+             * AsrVersion.
+             */
+            public Builder asrVersion(Integer asrVersion) {
+                this.asrVersion = asrVersion;
+                return this;
+            }
 
             /**
              * CreateTime.
@@ -218,6 +261,14 @@ public class ListAsrVocabResponseBody extends TeaModel {
              */
             public Builder id(String id) {
                 this.id = id;
+                return this;
+            }
+
+            /**
+             * ModelCustomizationId.
+             */
+            public Builder modelCustomizationId(String modelCustomizationId) {
+                this.modelCustomizationId = modelCustomizationId;
                 return this;
             }
 
@@ -252,9 +303,15 @@ public class ListAsrVocabResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAsrVocabResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAsrVocabResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AsrVocab")
-        private java.util.List < AsrVocab> asrVocab;
+        @com.aliyun.core.annotation.NameInMap("AsrVocab")
+        private java.util.List<AsrVocab> asrVocab;
 
         private Data(Builder builder) {
             this.asrVocab = builder.asrVocab;
@@ -271,17 +328,17 @@ public class ListAsrVocabResponseBody extends TeaModel {
         /**
          * @return asrVocab
          */
-        public java.util.List < AsrVocab> getAsrVocab() {
+        public java.util.List<AsrVocab> getAsrVocab() {
             return this.asrVocab;
         }
 
         public static final class Builder {
-            private java.util.List < AsrVocab> asrVocab; 
+            private java.util.List<AsrVocab> asrVocab; 
 
             /**
              * AsrVocab.
              */
-            public Builder asrVocab(java.util.List < AsrVocab> asrVocab) {
+            public Builder asrVocab(java.util.List<AsrVocab> asrVocab) {
                 this.asrVocab = asrVocab;
                 return this;
             }

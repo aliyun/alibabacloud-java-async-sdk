@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHostAccountsForHostShareKeyResponseBody} extends {@link TeaModel}
  *
  * <p>ListHostAccountsForHostShareKeyResponseBody</p>
  */
 public class ListHostAccountsForHostShareKeyResponseBody extends TeaModel {
-    @NameInMap("HostAccounts")
+    @com.aliyun.core.annotation.NameInMap("HostAccounts")
     private java.util.List < HostAccounts> hostAccounts;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListHostAccountsForHostShareKeyResponseBody(Builder builder) {
@@ -62,7 +62,7 @@ public class ListHostAccountsForHostShareKeyResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * An array that consists of the host accounts that are associated with the shared key.
+         * <p>An array that consists of the host accounts that are associated with the shared key.</p>
          */
         public Builder hostAccounts(java.util.List < HostAccounts> hostAccounts) {
             this.hostAccounts = hostAccounts;
@@ -70,7 +70,10 @@ public class ListHostAccountsForHostShareKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,10 @@ public class ListHostAccountsForHostShareKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of the host accounts that are associated with the shared key.
+         * <p>The total number of the host accounts that are associated with the shared key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -91,17 +97,23 @@ public class ListHostAccountsForHostShareKeyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListHostAccountsForHostShareKeyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHostAccountsForHostShareKeyResponseBody</p>
+     */
     public static class HostAccounts extends TeaModel {
-        @NameInMap("HostAccountName")
+        @com.aliyun.core.annotation.NameInMap("HostAccountName")
         private String hostAccountName;
 
-        @NameInMap("HostId")
+        @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;
 
-        @NameInMap("HostsAccountId")
+        @com.aliyun.core.annotation.NameInMap("HostsAccountId")
         private String hostsAccountId;
 
-        @NameInMap("ProtocolName")
+        @com.aliyun.core.annotation.NameInMap("ProtocolName")
         private String protocolName;
 
         private HostAccounts(Builder builder) {
@@ -154,7 +166,10 @@ public class ListHostAccountsForHostShareKeyResponseBody extends TeaModel {
             private String protocolName; 
 
             /**
-             * The name of the host account.
+             * <p>The name of the host account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root1234</p>
              */
             public Builder hostAccountName(String hostAccountName) {
                 this.hostAccountName = hostAccountName;
@@ -162,7 +177,10 @@ public class ListHostAccountsForHostShareKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the host.
+             * <p>The ID of the host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1113</p>
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -170,7 +188,10 @@ public class ListHostAccountsForHostShareKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the host account.
+             * <p>The ID of the host account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1235</p>
              */
             public Builder hostsAccountId(String hostsAccountId) {
                 this.hostsAccountId = hostsAccountId;
@@ -178,7 +199,10 @@ public class ListHostAccountsForHostShareKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The O\&M protocol.
+             * <p>The O&amp;M protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SSH</p>
              */
             public Builder protocolName(String protocolName) {
                 this.protocolName = protocolName;

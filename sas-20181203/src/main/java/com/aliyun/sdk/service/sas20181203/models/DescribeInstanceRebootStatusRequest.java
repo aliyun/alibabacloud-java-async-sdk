@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceRebootStatusRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceRebootStatusRequest</p>
  */
 public class DescribeInstanceRebootStatusRequest extends Request {
-    @Query
-    @NameInMap("Uuids")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuids")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String uuids;
 
     private DescribeInstanceRebootStatusRequest(Builder builder) {
@@ -55,7 +60,11 @@ public class DescribeInstanceRebootStatusRequest extends Request {
         } 
 
         /**
-         * The UUIDs of the servers that you restart. Separate multiple UUIDs with commas (,).
+         * <p>The UUIDs of the servers that you restart. Separate multiple UUIDs with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d77f7802-4f0a-4221-ab02-4d999e****</p>
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

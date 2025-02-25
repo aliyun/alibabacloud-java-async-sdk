@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DataSourceItem} extends {@link TeaModel}
  *
  * <p>DataSourceItem</p>
  */
 public class DataSourceItem extends TeaModel {
-    @NameInMap("DataSourceId")
+    @com.aliyun.core.annotation.NameInMap("DataSourceId")
     private String dataSourceId;
 
-    @NameInMap("DataSourceType")
+    @com.aliyun.core.annotation.NameInMap("DataSourceType")
     private String dataSourceType;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("DisplayName")
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
     private String displayName;
 
-    @NameInMap("Endpoint")
+    @com.aliyun.core.annotation.NameInMap("Endpoint")
     private String endpoint;
 
-    @NameInMap("FileSystemId")
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
     private String fileSystemId;
 
-    @NameInMap("GmtCreateTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
-    @NameInMap("GmtModifyTime")
+    @com.aliyun.core.annotation.NameInMap("GmtModifyTime")
     private String gmtModifyTime;
 
-    @NameInMap("MountPath")
+    @com.aliyun.core.annotation.NameInMap("MountPath")
     private String mountPath;
 
-    @NameInMap("Options")
+    @com.aliyun.core.annotation.NameInMap("Options")
     private String options;
 
-    @NameInMap("Path")
+    @com.aliyun.core.annotation.NameInMap("Path")
     private String path;
 
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
     private DataSourceItem(Builder builder) {

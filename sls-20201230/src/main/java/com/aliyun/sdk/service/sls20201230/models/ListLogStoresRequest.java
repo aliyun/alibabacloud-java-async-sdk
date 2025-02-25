@@ -1,40 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link ListLogStoresRequest} extends {@link RequestModel}
  *
  * <p>ListLogStoresRequest</p>
  */
 public class ListLogStoresRequest extends Request {
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("project")
     private String project;
 
-    @Query
-    @NameInMap("logstoreName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("logstoreName")
     private String logstoreName;
 
-    @Query
-    @NameInMap("mode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("mode")
     private String mode;
 
-    @Query
-    @NameInMap("offset")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("offset")
     private Integer offset;
 
-    @Query
-    @NameInMap("size")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("size")
     private Integer size;
 
-    @Query
-    @NameInMap("telemetryType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("telemetryType")
     private String telemetryType;
 
     private ListLogStoresRequest(Builder builder) {
@@ -125,7 +129,11 @@ public class ListLogStoresRequest extends Request {
         } 
 
         /**
-         * project.
+         * <p>The name of the project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ali-test-project</p>
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -134,7 +142,10 @@ public class ListLogStoresRequest extends Request {
         }
 
         /**
-         * The name of the Logstore. Fuzzy match is supported. For example, if you enter test, Logstores whose name contains test are returned.
+         * <p>The name of the Logstore. Fuzzy match is supported. For example, if you enter test, Logstores whose name contains test are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-logstore</p>
          */
         public Builder logstoreName(String logstoreName) {
             this.putQueryParameter("logstoreName", logstoreName);
@@ -143,11 +154,14 @@ public class ListLogStoresRequest extends Request {
         }
 
         /**
-         * The type of the Logstore. Valid values: standard and query.
-         * <p>
+         * <p>The type of the Logstore. Valid values: standard and query.</p>
+         * <ul>
+         * <li><strong>standard</strong>: Standard Logstore. This type of Logstore supports the log analysis feature and is suitable for scenarios such as real-time monitoring and interactive analysis. You can also use this type of Logstore to build a comprehensive observability system.</li>
+         * <li><strong>query</strong>: Query Logstore. This type of Logstore supports high-performance queries. The index traffic fee of a Query Logstore is approximately half that of a Standard Logstore. Query Logstores do not support SQL analysis. Query Logstores are suitable for scenarios in which the volume of data is large, the log retention period is long, or log analysis is not required. Log retention periods of weeks or months are considered long.</li>
+         * </ul>
          * 
-         * *   **standard**: Standard Logstore. This type of Logstore supports the log analysis feature and is suitable for scenarios such as real-time monitoring and interactive analysis. You can also use this type of Logstore to build a comprehensive observability system.
-         * *   **query**: Query Logstore. This type of Logstore supports high-performance queries. The index traffic fee of a Query Logstore is approximately half that of a Standard Logstore. Query Logstores do not support SQL analysis. Query Logstores are suitable for scenarios in which the volume of data is large, the log retention period is long, or log analysis is not required. Log retention periods of weeks or months are considered long.
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         public Builder mode(String mode) {
             this.putQueryParameter("mode", mode);
@@ -156,7 +170,10 @@ public class ListLogStoresRequest extends Request {
         }
 
         /**
-         * The line from which the query starts. Default value: 0.
+         * <p>The line from which the query starts. Default value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder offset(Integer offset) {
             this.putQueryParameter("offset", offset);
@@ -165,7 +182,10 @@ public class ListLogStoresRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: 500. Default value: 500.
+         * <p>The number of entries per page. Maximum value: 500. Default value: 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);
@@ -174,11 +194,14 @@ public class ListLogStoresRequest extends Request {
         }
 
         /**
-         * The type of the data that you want to query. Valid values:
-         * <p>
+         * <p>The type of the data that you want to query. Valid values:</p>
+         * <ul>
+         * <li>None: logs</li>
+         * <li>Metrics: metrics</li>
+         * </ul>
          * 
-         * *   None: logs
-         * *   Metrics: metrics
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder telemetryType(String telemetryType) {
             this.putQueryParameter("telemetryType", telemetryType);

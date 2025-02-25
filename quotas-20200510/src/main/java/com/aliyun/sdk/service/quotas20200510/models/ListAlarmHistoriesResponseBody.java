@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAlarmHistoriesResponseBody</p>
  */
 public class ListAlarmHistoriesResponseBody extends TeaModel {
-    @NameInMap("AlarmHistories")
+    @com.aliyun.core.annotation.NameInMap("AlarmHistories")
     private java.util.List < AlarmHistories> alarmHistories;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListAlarmHistoriesResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The details of the alert records.
+         * The details of the quota alert records.
          */
         public Builder alarmHistories(java.util.List < AlarmHistories> alarmHistories) {
             this.alarmHistories = alarmHistories;
@@ -132,31 +131,31 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
     } 
 
     public static class AlarmHistories extends TeaModel {
-        @NameInMap("AlarmName")
+        @com.aliyun.core.annotation.NameInMap("AlarmName")
         private String alarmName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("NotifyChannels")
+        @com.aliyun.core.annotation.NameInMap("NotifyChannels")
         private java.util.List < String > notifyChannels;
 
-        @NameInMap("NotifyTarget")
+        @com.aliyun.core.annotation.NameInMap("NotifyTarget")
         private String notifyTarget;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("QuotaActionCode")
+        @com.aliyun.core.annotation.NameInMap("QuotaActionCode")
         private String quotaActionCode;
 
-        @NameInMap("QuotaUsage")
+        @com.aliyun.core.annotation.NameInMap("QuotaUsage")
         private Float quotaUsage;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private Float threshold;
 
-        @NameInMap("ThresholdPercent")
+        @com.aliyun.core.annotation.NameInMap("ThresholdPercent")
         private Float thresholdPercent;
 
         private AlarmHistories(Builder builder) {
@@ -262,7 +261,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the quota alert was created.
+             * The time when the quota alert rule was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -270,7 +269,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * NotifyChannels.
+             * The notification methods of the quota alert.
              */
             public Builder notifyChannels(java.util.List < String > notifyChannels) {
                 this.notifyChannels = notifyChannels;
@@ -278,7 +277,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The alert contact.
+             * The quota alert contact.
              */
             public Builder notifyTarget(String notifyTarget) {
                 this.notifyTarget = notifyTarget;
@@ -294,7 +293,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the quota.
+             * The quota ID.
              */
             public Builder quotaActionCode(String quotaActionCode) {
                 this.quotaActionCode = quotaActionCode;
@@ -310,7 +309,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The numeric value of the alert threshold.
+             * The threshold to trigger quota alerts.
              */
             public Builder threshold(Float threshold) {
                 this.threshold = threshold;
@@ -318,7 +317,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The percentage of the alert threshold.
+             * The percentage of the quota alert threshold.
              */
             public Builder thresholdPercent(Float thresholdPercent) {
                 this.thresholdPercent = thresholdPercent;

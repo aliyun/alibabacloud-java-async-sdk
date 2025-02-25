@@ -63,7 +63,7 @@ public class SourceMNSParameters extends TeaModel {
         private String regionId; 
 
         /**
-         * IsBase64Decode
+         * IsBase64Decode.
          */
         public Builder isBase64Decode(Boolean isBase64Decode) {
             this.isBase64Decode = isBase64Decode;
@@ -71,7 +71,7 @@ public class SourceMNSParameters extends TeaModel {
         }
 
         /**
-         * QueueName
+         * QueueName.
          */
         public Builder queueName(String queueName) {
             this.queueName = queueName;
@@ -79,7 +79,7 @@ public class SourceMNSParameters extends TeaModel {
         }
 
         /**
-         * RegionId
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;

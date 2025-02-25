@@ -98,7 +98,7 @@ public class DescribeDrdsDBsResponseBody extends TeaModel {
         private String total; 
 
         /**
-         * Data.
+         * The list of returned databases.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class DescribeDrdsDBsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +114,7 @@ public class DescribeDrdsDBsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of databases returned on each page.
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +122,7 @@ public class DescribeDrdsDBsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeDrdsDBsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +138,7 @@ public class DescribeDrdsDBsResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * The number of returned databases.
          */
         public Builder total(String total) {
             this.total = total;
@@ -238,7 +238,7 @@ public class DescribeDrdsDBsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * CreateTime.
+             * The time when the database is created. The value of this parameter is a UNIX timestamp. Unit: ms.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -246,7 +246,7 @@ public class DescribeDrdsDBsResponseBody extends TeaModel {
             }
 
             /**
-             * DbInstType.
+             * The type of the database. Valid values: **RDS** and **POLARDB**.
              */
             public Builder dbInstType(String dbInstType) {
                 this.dbInstType = dbInstType;
@@ -254,7 +254,7 @@ public class DescribeDrdsDBsResponseBody extends TeaModel {
             }
 
             /**
-             * DbName.
+             * The name of the database.
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -262,7 +262,11 @@ public class DescribeDrdsDBsResponseBody extends TeaModel {
             }
 
             /**
-             * Mode.
+             * The partitioning mode of the database. Valid values:
+             * <p>
+             * 
+             * *   **HORIZONTAL**: The database is horizontally partitioned.
+             * *   **VERTICAL**: The database is vertically partitioned.
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -270,7 +274,7 @@ public class DescribeDrdsDBsResponseBody extends TeaModel {
             }
 
             /**
-             * Schema.
+             * The schema ID that is assigned to the partitioned database.
              */
             public Builder schema(String schema) {
                 this.schema = schema;
@@ -278,7 +282,7 @@ public class DescribeDrdsDBsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the database.
              */
             public Builder status(String status) {
                 this.status = status;

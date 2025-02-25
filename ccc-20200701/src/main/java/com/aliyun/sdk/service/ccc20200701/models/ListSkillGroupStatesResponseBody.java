@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSkillGroupStatesResponseBody} extends {@link TeaModel}
  *
  * <p>ListSkillGroupStatesResponseBody</p>
  */
 public class ListSkillGroupStatesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListSkillGroupStatesResponseBody(Builder builder) {
@@ -151,56 +156,62 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSkillGroupStatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSkillGroupStatesResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("AverageWaitingTime")
+        @com.aliyun.core.annotation.NameInMap("AverageWaitingTime")
         private Long averageWaitingTime;
 
-        @NameInMap("BreakingAgents")
+        @com.aliyun.core.annotation.NameInMap("BreakingAgents")
         private Long breakingAgents;
 
-        @NameInMap("InboundTalkingAgents")
+        @com.aliyun.core.annotation.NameInMap("InboundTalkingAgents")
         private Long inboundTalkingAgents;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("LoggedInAgents")
+        @com.aliyun.core.annotation.NameInMap("LoggedInAgents")
         private Long loggedInAgents;
 
-        @NameInMap("LongestCall")
+        @com.aliyun.core.annotation.NameInMap("LongestCall")
         private Long longestCall;
 
-        @NameInMap("OutboundScenarioReadyAgents")
+        @com.aliyun.core.annotation.NameInMap("OutboundScenarioReadyAgents")
         private Long outboundScenarioReadyAgents;
 
-        @NameInMap("OutboundTalkingAgents")
+        @com.aliyun.core.annotation.NameInMap("OutboundTalkingAgents")
         private Long outboundTalkingAgents;
 
-        @NameInMap("ReadyAgents")
+        @com.aliyun.core.annotation.NameInMap("ReadyAgents")
         private Long readyAgents;
 
-        @NameInMap("SkillGroupId")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupId")
         private String skillGroupId;
 
-        @NameInMap("SkillGroupName")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupName")
         private String skillGroupName;
 
-        @NameInMap("TalkingAgents")
+        @com.aliyun.core.annotation.NameInMap("TalkingAgents")
         private Long talkingAgents;
 
-        @NameInMap("WaitingCalls")
+        @com.aliyun.core.annotation.NameInMap("WaitingCalls")
         private Long waitingCalls;
 
-        @NameInMap("WaitingCallsLevel10")
+        @com.aliyun.core.annotation.NameInMap("WaitingCallsLevel10")
         private Long waitingCallsLevel10;
 
-        @NameInMap("WaitingCallsLevel20")
+        @com.aliyun.core.annotation.NameInMap("WaitingCallsLevel20")
         private Long waitingCallsLevel20;
 
-        @NameInMap("WaitingCallsLevel30")
+        @com.aliyun.core.annotation.NameInMap("WaitingCallsLevel30")
         private Long waitingCallsLevel30;
 
-        @NameInMap("WorkingAgents")
+        @com.aliyun.core.annotation.NameInMap("WorkingAgents")
         private Long workingAgents;
 
         private List(Builder builder) {
@@ -512,17 +523,23 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSkillGroupStatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSkillGroupStatesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("List")
-        private java.util.List < List> list;
+        @com.aliyun.core.annotation.NameInMap("List")
+        private java.util.List<List> list;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {
@@ -543,7 +560,7 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -569,7 +586,7 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -577,7 +594,7 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

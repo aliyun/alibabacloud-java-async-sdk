@@ -1,38 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportImageRequest} extends {@link RequestModel}
  *
  * <p>ExportImageRequest</p>
  */
 public class ExportImageRequest extends Request {
-    @Query
-    @NameInMap("ImageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String imageId;
 
-    @Query
-    @NameInMap("OSSBucket")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OSSBucket")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String OSSBucket;
 
-    @Query
-    @NameInMap("OSSPrefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OSSPrefix")
+    @com.aliyun.core.annotation.Validation(maxLength = 30)
     private String OSSPrefix;
 
-    @Query
-    @NameInMap("OSSRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OSSRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String OSSRegionId;
 
-    @Query
-    @NameInMap("RoleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleName")
     private String roleName;
 
     private ExportImageRequest(Builder builder) {
@@ -113,7 +119,11 @@ public class ExportImageRequest extends Request {
         } 
 
         /**
-         * ImageId.
+         * <p>The ID of the image.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-5ragaz3s74b7go8ks7jp9****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -122,7 +132,11 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * OSSBucket.
+         * <p>The OSS bucket to which you want to export the image.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>whxyl****</p>
          */
         public Builder OSSBucket(String OSSBucket) {
             this.putQueryParameter("OSSBucket", OSSBucket);
@@ -131,7 +145,7 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * OSSPrefix.
+         * <p>The prefix of the object as which you want to store the image in the OSS bucket. The prefix must be 1 to 30 characters in length and can contain digits and letters.</p>
          */
         public Builder OSSPrefix(String OSSPrefix) {
             this.putQueryParameter("OSSPrefix", OSSPrefix);
@@ -140,7 +154,11 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * OSSRegionId.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder OSSRegionId(String OSSRegionId) {
             this.putQueryParameter("OSSRegionId", OSSRegionId);
@@ -149,7 +167,10 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * RoleName.
+         * <p>The name of the Resource Access Management (RAM) role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunMNSLoggingRole</p>
          */
         public Builder roleName(String roleName) {
             this.putQueryParameter("RoleName", roleName);

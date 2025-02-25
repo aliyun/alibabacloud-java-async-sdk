@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceConfigResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyDBInstanceConfigResponseBody</p>
  */
 public class ModifyDBInstanceConfigResponseBody extends TeaModel {
-    @NameInMap("DbInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DbInstanceId")
     private String dbInstanceId;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Boolean status;
 
     private ModifyDBInstanceConfigResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class ModifyDBInstanceConfigResponseBody extends TeaModel {
         private Boolean status; 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder dbInstanceId(String dbInstanceId) {
             this.dbInstanceId = dbInstanceId;
@@ -82,7 +90,10 @@ public class ModifyDBInstanceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the operation fails.
+         * <p>The error message returned if the operation fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;error message&quot;</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -90,7 +101,10 @@ public class ModifyDBInstanceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34B32A0A-08EF-4A87-B6BE-CDD9F56FC3AD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,11 +112,14 @@ public class ModifyDBInstanceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The state of the operation. Valid values:
-         * <p>
+         * <p>The state of the operation. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: The operation failed.</li>
+         * <li><strong>1</strong>: The operation is successful.</li>
+         * </ul>
          * 
-         * *   **0**: The operation failed.
-         * *   **1**: The operation is successful.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Boolean status) {
             this.status = status;

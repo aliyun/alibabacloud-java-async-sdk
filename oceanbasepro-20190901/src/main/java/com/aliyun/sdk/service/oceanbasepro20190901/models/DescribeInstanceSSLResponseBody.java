@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceSSLResponseBody</p>
  */
 public class DescribeInstanceSSLResponseBody extends TeaModel {
-    @NameInMap("InstanceSSL")
+    @com.aliyun.core.annotation.NameInMap("InstanceSSL")
     private InstanceSSL instanceSSL;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceSSLResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
     } 
 
     public static class InstanceSSL extends TeaModel {
-        @NameInMap("CaUrl")
+        @com.aliyun.core.annotation.NameInMap("CaUrl")
         private String caUrl;
 
-        @NameInMap("EnableSSL")
+        @com.aliyun.core.annotation.NameInMap("EnableSSL")
         private String enableSSL;
 
-        @NameInMap("ForceSSL")
+        @com.aliyun.core.annotation.NameInMap("ForceSSL")
         private String forceSSL;
 
-        @NameInMap("ForceSSLSupport")
+        @com.aliyun.core.annotation.NameInMap("ForceSSLSupport")
         private Boolean forceSSLSupport;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("ValidPeriod")
+        @com.aliyun.core.annotation.NameInMap("ValidPeriod")
         private String validPeriod;
 
         private InstanceSSL(Builder builder) {

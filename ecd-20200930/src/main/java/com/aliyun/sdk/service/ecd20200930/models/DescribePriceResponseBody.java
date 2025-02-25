@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePriceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePriceResponseBody</p>
  */
 public class DescribePriceResponseBody extends TeaModel {
-    @NameInMap("PriceInfo")
+    @com.aliyun.core.annotation.NameInMap("PriceInfo")
     private PriceInfo priceInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePriceResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribePriceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The price details.
+         * <p>The price details.</p>
          */
         public Builder priceInfo(PriceInfo priceInfo) {
             this.priceInfo = priceInfo;
@@ -58,7 +63,10 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B1175630-3C44-4389-A3C1-15639FFC8EBC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +79,26 @@ public class DescribePriceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePriceResponseBody</p>
+     */
     public static class Promotions extends TeaModel {
-        @NameInMap("OptionCode")
+        @com.aliyun.core.annotation.NameInMap("OptionCode")
         private String optionCode;
 
-        @NameInMap("PromotionDesc")
+        @com.aliyun.core.annotation.NameInMap("PromotionDesc")
         private String promotionDesc;
 
-        @NameInMap("PromotionId")
+        @com.aliyun.core.annotation.NameInMap("PromotionId")
         private String promotionId;
 
-        @NameInMap("PromotionName")
+        @com.aliyun.core.annotation.NameInMap("PromotionName")
         private String promotionName;
 
-        @NameInMap("Selected")
+        @com.aliyun.core.annotation.NameInMap("Selected")
         private Boolean selected;
 
         private Promotions(Builder builder) {
@@ -146,7 +160,10 @@ public class DescribePriceResponseBody extends TeaModel {
             private Boolean selected; 
 
             /**
-             * The description of the promotion rule.
+             * <p>The description of the promotion rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder optionCode(String optionCode) {
                 this.optionCode = optionCode;
@@ -154,7 +171,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the promotion.
+             * <p>The description of the promotion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Get started with new services with a discount.</p>
              */
             public Builder promotionDesc(String promotionDesc) {
                 this.promotionDesc = promotionDesc;
@@ -162,7 +182,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The promotion ID.
+             * <p>The promotion ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder promotionId(String promotionId) {
                 this.promotionId = promotionId;
@@ -170,7 +193,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The promotion name.
+             * <p>The promotion name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Special Offer</p>
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -178,7 +204,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether an item is selected.
+             * <p>Indicates whether an item is selected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder selected(Boolean selected) {
                 this.selected = selected;
@@ -192,26 +221,32 @@ public class DescribePriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePriceResponseBody</p>
+     */
     public static class Price extends TeaModel {
-        @NameInMap("Currency")
+        @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
-        @NameInMap("DiscountPrice")
+        @com.aliyun.core.annotation.NameInMap("DiscountPrice")
         private Float discountPrice;
 
-        @NameInMap("OrderLines")
-        private java.util.Map < String, String > orderLines;
+        @com.aliyun.core.annotation.NameInMap("OrderLines")
+        private java.util.Map<String, String> orderLines;
 
-        @NameInMap("OriginalPrice")
+        @com.aliyun.core.annotation.NameInMap("OriginalPrice")
         private Float originalPrice;
 
-        @NameInMap("Promotions")
-        private java.util.List < Promotions> promotions;
+        @com.aliyun.core.annotation.NameInMap("Promotions")
+        private java.util.List<Promotions> promotions;
 
-        @NameInMap("SpPrice")
+        @com.aliyun.core.annotation.NameInMap("SpPrice")
         private Long spPrice;
 
-        @NameInMap("TradePrice")
+        @com.aliyun.core.annotation.NameInMap("TradePrice")
         private Float tradePrice;
 
         private Price(Builder builder) {
@@ -249,7 +284,7 @@ public class DescribePriceResponseBody extends TeaModel {
         /**
          * @return orderLines
          */
-        public java.util.Map < String, String > getOrderLines() {
+        public java.util.Map<String, String> getOrderLines() {
             return this.orderLines;
         }
 
@@ -263,7 +298,7 @@ public class DescribePriceResponseBody extends TeaModel {
         /**
          * @return promotions
          */
-        public java.util.List < Promotions> getPromotions() {
+        public java.util.List<Promotions> getPromotions() {
             return this.promotions;
         }
 
@@ -284,14 +319,17 @@ public class DescribePriceResponseBody extends TeaModel {
         public static final class Builder {
             private String currency; 
             private Float discountPrice; 
-            private java.util.Map < String, String > orderLines; 
+            private java.util.Map<String, String> orderLines; 
             private Float originalPrice; 
-            private java.util.List < Promotions> promotions; 
+            private java.util.List<Promotions> promotions; 
             private Long spPrice; 
             private Float tradePrice; 
 
             /**
-             * The unit of the currency.
+             * <p>The unit of the currency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -299,7 +337,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The discounted price.
+             * <p>The discounted price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -309,13 +350,16 @@ public class DescribePriceResponseBody extends TeaModel {
             /**
              * OrderLines.
              */
-            public Builder orderLines(java.util.Map < String, String > orderLines) {
+            public Builder orderLines(java.util.Map<String, String> orderLines) {
                 this.orderLines = orderLines;
                 return this;
             }
 
             /**
-             * The original price.
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.796</p>
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -323,9 +367,9 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the promotion.
+             * <p>The details of the promotion.</p>
              */
-            public Builder promotions(java.util.List < Promotions> promotions) {
+            public Builder promotions(java.util.List<Promotions> promotions) {
                 this.promotions = promotions;
                 return this;
             }
@@ -339,7 +383,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The actual price that is paid. The original price minus the discounted part equals the actual price.
+             * <p>The actual price that is paid. The original price minus the discounted part equals the actual price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.796</p>
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;
@@ -353,11 +400,17 @@ public class DescribePriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePriceResponseBody</p>
+     */
     public static class Rules extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
         private Rules(Builder builder) {
@@ -392,7 +445,10 @@ public class DescribePriceResponseBody extends TeaModel {
             private Long ruleId; 
 
             /**
-             * The description of the rule.
+             * <p>The description of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Receive a 15% discount on a one-year subscription.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -400,7 +456,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The rule ID.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>587</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -414,18 +473,24 @@ public class DescribePriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePriceResponseBody</p>
+     */
     public static class PriceInfo extends TeaModel {
-        @NameInMap("FreeCdsQuota")
+        @com.aliyun.core.annotation.NameInMap("FreeCdsQuota")
         private Boolean freeCdsQuota;
 
-        @NameInMap("FreeCdsSize")
+        @com.aliyun.core.annotation.NameInMap("FreeCdsSize")
         private Long freeCdsSize;
 
-        @NameInMap("Price")
+        @com.aliyun.core.annotation.NameInMap("Price")
         private Price price;
 
-        @NameInMap("Rules")
-        private java.util.List < Rules> rules;
+        @com.aliyun.core.annotation.NameInMap("Rules")
+        private java.util.List<Rules> rules;
 
         private PriceInfo(Builder builder) {
             this.freeCdsQuota = builder.freeCdsQuota;
@@ -466,7 +531,7 @@ public class DescribePriceResponseBody extends TeaModel {
         /**
          * @return rules
          */
-        public java.util.List < Rules> getRules() {
+        public java.util.List<Rules> getRules() {
             return this.rules;
         }
 
@@ -474,7 +539,7 @@ public class DescribePriceResponseBody extends TeaModel {
             private Boolean freeCdsQuota; 
             private Long freeCdsSize; 
             private Price price; 
-            private java.util.List < Rules> rules; 
+            private java.util.List<Rules> rules; 
 
             /**
              * FreeCdsQuota.
@@ -493,7 +558,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the price.
+             * <p>The information about the price.</p>
              */
             public Builder price(Price price) {
                 this.price = price;
@@ -501,9 +566,9 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the promotion rules.
+             * <p>The details of the promotion rules.</p>
              */
-            public Builder rules(java.util.List < Rules> rules) {
+            public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
                 return this;
             }

@@ -1,56 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePriceRequest} extends {@link RequestModel}
  *
  * <p>DescribePriceRequest</p>
  */
 public class DescribePriceRequest extends Request {
-    @Query
-    @NameInMap("DataDisk")
-    private java.util.List < DataDisk> dataDisk;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataDisk")
+    private java.util.List<DataDisk> dataDisk;
 
-    @Query
-    @NameInMap("SystemDisk")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SystemDisk")
     private SystemDisk systemDisk;
 
-    @Query
-    @NameInMap("DataDisks")
-    private java.util.List < DataDisks> dataDisks;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataDisks")
+    private java.util.List<DataDisks> dataDisks;
 
-    @Query
-    @NameInMap("EnsRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnsRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ensRegionId;
 
-    @Query
-    @NameInMap("InstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceType;
 
-    @Query
-    @NameInMap("InternetChargeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetChargeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String internetChargeType;
 
-    @Query
-    @NameInMap("Period")
-    @Validation(required = true, maximum = 12, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 12, minimum = 1)
     private Integer period;
 
-    @Query
-    @NameInMap("PeriodUnit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeriodUnit")
     private String periodUnit;
 
-    @Query
-    @NameInMap("Quantity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Quantity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer quantity;
 
     private DescribePriceRequest(Builder builder) {
@@ -82,7 +87,7 @@ public class DescribePriceRequest extends Request {
     /**
      * @return dataDisk
      */
-    public java.util.List < DataDisk> getDataDisk() {
+    public java.util.List<DataDisk> getDataDisk() {
         return this.dataDisk;
     }
 
@@ -96,7 +101,7 @@ public class DescribePriceRequest extends Request {
     /**
      * @return dataDisks
      */
-    public java.util.List < DataDisks> getDataDisks() {
+    public java.util.List<DataDisks> getDataDisks() {
         return this.dataDisks;
     }
 
@@ -143,9 +148,9 @@ public class DescribePriceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribePriceRequest, Builder> {
-        private java.util.List < DataDisk> dataDisk; 
+        private java.util.List<DataDisk> dataDisk; 
         private SystemDisk systemDisk; 
-        private java.util.List < DataDisks> dataDisks; 
+        private java.util.List<DataDisks> dataDisks; 
         private String ensRegionId; 
         private String instanceType; 
         private String internetChargeType; 
@@ -173,7 +178,7 @@ public class DescribePriceRequest extends Request {
         /**
          * DataDisk.
          */
-        public Builder dataDisk(java.util.List < DataDisk> dataDisk) {
+        public Builder dataDisk(java.util.List<DataDisk> dataDisk) {
             this.putQueryParameter("DataDisk", dataDisk);
             this.dataDisk = dataDisk;
             return this;
@@ -189,9 +194,9 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * DataDisks.
+         * <p>If you leave DataDisk.1.Size empty, the value that you specified for this parameter is used.</p>
          */
-        public Builder dataDisks(java.util.List < DataDisks> dataDisks) {
+        public Builder dataDisks(java.util.List<DataDisks> dataDisks) {
             String dataDisksShrink = shrink(dataDisks, "DataDisks", "json");
             this.putQueryParameter("DataDisks", dataDisksShrink);
             this.dataDisks = dataDisks;
@@ -199,7 +204,11 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * EnsRegionId.
+         * <p>The ID of the ENS node.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai-unicom</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -208,7 +217,11 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * <p>The specifications of instances.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ens.sn1.tiny</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -217,7 +230,17 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * InternetChargeType.
+         * <p>The bandwidth metering method of the instance. Valid values:</p>
+         * <ul>
+         * <li>BandwidthByDay: Pay by daily peak bandwidth</li>
+         * <li>95BandwidthByMonth: Pay by monthly 95th percentile bandwidth</li>
+         * <li>PayByBandwidth4thMonth: Pay by monthly fourth peak bandwidth</li>
+         * <li>PayByBandwidth: Pay by fixed bandwidth</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95BandwidthByMonth</p>
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -226,7 +249,16 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The subscription duration of the instance.</p>
+         * <ul>
+         * <li>If you leave the PeriodUnit parameter empty, the instance is purchased on a monthly basis. Valid values: Day and Month.</li>
+         * <li>If you set PeriodUnit to Day, you can set Period only to 3.</li>
+         * <li>If you set PeriodUnit to Month, you can set Period to a number from 1 to 9, or set Period to 12.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -235,7 +267,14 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * <p>The billing cycle of the ENS instance. Valid values:</p>
+         * <ul>
+         * <li>Month (default):</li>
+         * <li>Day</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -244,7 +283,11 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * Quantity.
+         * <p>The number of instances.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder quantity(Integer quantity) {
             this.putQueryParameter("Quantity", quantity);
@@ -259,8 +302,14 @@ public class DescribePriceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePriceRequest} extends {@link TeaModel}
+     *
+     * <p>DescribePriceRequest</p>
+     */
     public static class DataDisk extends TeaModel {
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
         private DataDisk(Builder builder) {
@@ -286,7 +335,10 @@ public class DescribePriceRequest extends Request {
             private Integer size; 
 
             /**
-             * Size.
+             * <p>The size of the data disk. Unit: GB. If you specify this parameter, this parameter takes precedence over the Size property in DataDisks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -300,9 +352,15 @@ public class DescribePriceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePriceRequest} extends {@link TeaModel}
+     *
+     * <p>DescribePriceRequest</p>
+     */
     public static class SystemDisk extends TeaModel {
-        @NameInMap("Size")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Size")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer size;
 
         private SystemDisk(Builder builder) {
@@ -328,7 +386,11 @@ public class DescribePriceRequest extends Request {
             private Integer size; 
 
             /**
-             * Size.
+             * <p>The size of the system disk. Unit: GB.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -342,11 +404,17 @@ public class DescribePriceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePriceRequest} extends {@link TeaModel}
+     *
+     * <p>DescribePriceRequest</p>
+     */
     public static class DataDisks extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
         private DataDisks(Builder builder) {
@@ -381,7 +449,10 @@ public class DescribePriceRequest extends Request {
             private Long size; 
 
             /**
-             * Category.
+             * <p>The category of the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_efficiency</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -389,7 +460,10 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * Size.
+             * <p>The size of the data disk. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder size(Long size) {
                 this.size = size;

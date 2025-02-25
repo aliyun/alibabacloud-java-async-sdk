@@ -1,46 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetCACertificateNameRequest} extends {@link RequestModel}
  *
  * <p>SetCACertificateNameRequest</p>
  */
 public class SetCACertificateNameRequest extends Request {
-    @Query
-    @NameInMap("CACertificateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CACertificateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String CACertificateId;
 
-    @Query
-    @NameInMap("CACertificateName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CACertificateName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String CACertificateName;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private SetCACertificateNameRequest(Builder builder) {
@@ -141,7 +146,11 @@ public class SetCACertificateNameRequest extends Request {
         } 
 
         /**
-         * The ID of the CA certificate.
+         * <p>The ID of the CA certificate.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>139a0******-cn-east-hangzhou-01</p>
          */
         public Builder CACertificateId(String CACertificateId) {
             this.putQueryParameter("CACertificateId", CACertificateId);
@@ -150,10 +159,12 @@ public class SetCACertificateNameRequest extends Request {
         }
 
         /**
-         * The name of the CA certificate.
-         * <p>
+         * <p>The CA certificate name.</p>
+         * <p>The name must be 1 to 80 character in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The name must be 1 to 80 characters in length and start with an English letter or a Chinese character. It can contain numbers, underscores (\_), periods (.), and hyphens (-).
+         * <strong>example:</strong>
+         * <p>mycacert02</p>
          */
         public Builder CACertificateName(String CACertificateName) {
             this.putQueryParameter("CACertificateName", CACertificateName);
@@ -180,10 +191,12 @@ public class SetCACertificateNameRequest extends Request {
         }
 
         /**
-         * The region to which the CA certificate belongs.
-         * <p>
+         * <p>The region of the CA certificate.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * To query the region ID, call [DescribeRegions](~~27584~~).
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

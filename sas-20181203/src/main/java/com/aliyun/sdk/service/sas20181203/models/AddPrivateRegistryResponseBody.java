@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddPrivateRegistryResponseBody} extends {@link TeaModel}
  *
  * <p>AddPrivateRegistryResponseBody</p>
  */
 public class AddPrivateRegistryResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AddPrivateRegistryResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The handling result.
+         * <p>The handling result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F8B6F758-BCD4-597A-8A2C-DA5A552C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,47 +79,53 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AddPrivateRegistryResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddPrivateRegistryResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AliUid")
+        @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("NetType")
+        @com.aliyun.core.annotation.NameInMap("NetType")
         private Long netType;
 
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
 
-        @NameInMap("ProtocolType")
+        @com.aliyun.core.annotation.NameInMap("ProtocolType")
         private Long protocolType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RegistryHostIp")
+        @com.aliyun.core.annotation.NameInMap("RegistryHostIp")
         private String registryHostIp;
 
-        @NameInMap("RegistryType")
+        @com.aliyun.core.annotation.NameInMap("RegistryType")
         private String registryType;
 
-        @NameInMap("RegistryVersion")
+        @com.aliyun.core.annotation.NameInMap("RegistryVersion")
         private String registryVersion;
 
-        @NameInMap("Token")
+        @com.aliyun.core.annotation.NameInMap("Token")
         private String token;
 
-        @NameInMap("TransPerHour")
+        @com.aliyun.core.annotation.NameInMap("TransPerHour")
         private Integer transPerHour;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private Data(Builder builder) {
@@ -254,7 +268,10 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The ID of the user.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1766185894104***</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -262,7 +279,10 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name of the image repository.
+             * <p>The domain name of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -270,7 +290,10 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image repository.
+             * <p>The ID of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>273698***</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -278,11 +301,14 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The network type. Valid values:
-             * <p>
+             * <p>The network type. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Internet</li>
+             * <li><strong>2</strong>: VPC</li>
+             * </ul>
              * 
-             * *   **1**: Internet
-             * *   **2**: VPC
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder netType(Long netType) {
                 this.netType = netType;
@@ -290,7 +316,10 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The password.
+             * <p>The password.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -298,11 +327,14 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the protocol. Valid values:
-             * <p>
+             * <p>The type of the protocol. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: HTTP</li>
+             * <li><strong>2</strong>: HTTPS</li>
+             * </ul>
              * 
-             * *   **1**: HTTP
-             * *   **2**: HTTPS
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder protocolType(Long protocolType) {
                 this.protocolType = protocolType;
@@ -310,7 +342,10 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the image repository.
+             * <p>The region ID of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -318,7 +353,10 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the image repository.
+             * <p>The IP address of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><code>114.55.**.**</code></p>
              */
             public Builder registryHostIp(String registryHostIp) {
                 this.registryHostIp = registryHostIp;
@@ -326,11 +364,14 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the image repository. Valid values:
-             * <p>
+             * <p>The type of the image repository. Valid values:</p>
+             * <ul>
+             * <li><strong>harbor</strong></li>
+             * <li><strong>quay</strong></li>
+             * </ul>
              * 
-             * *   **harbor**
-             * *   **quay**
+             * <strong>example:</strong>
+             * <p>harbor</p>
              */
             public Builder registryType(String registryType) {
                 this.registryType = registryType;
@@ -338,12 +379,15 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the image repository. Default value: -. Valid values:
-             * <p>
+             * <p>The version of the image repository. Default value: -. Valid values:</p>
+             * <ul>
+             * <li><strong>-</strong>: the default version</li>
+             * <li><strong>V1</strong></li>
+             * <li><strong>V2</strong></li>
+             * </ul>
              * 
-             * *   **-**: the default version
-             * *   **V1**
-             * *   **V2**
+             * <strong>example:</strong>
+             * <p>V2</p>
              */
             public Builder registryVersion(String registryVersion) {
                 this.registryVersion = registryVersion;
@@ -351,7 +395,10 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the token.
+             * <p>The value of the token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3c3c602c-fa1f-4bc0-992f-b4b2cac7****</p>
              */
             public Builder token(String token) {
                 this.token = token;
@@ -359,7 +406,10 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of scan tasks that are performed per hour.
+             * <p>The number of scan tasks that are performed per hour.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder transPerHour(Integer transPerHour) {
                 this.transPerHour = transPerHour;
@@ -367,7 +417,10 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The username.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -375,7 +428,10 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * <p>The ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2vchkxmf2j9yjt3x2****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCreatePrePaidInstanceResultResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCreatePrePaidInstanceResultResponseBody</p>
  */
 public class DescribeCreatePrePaidInstanceResultResponseBody extends TeaModel {
-    @NameInMap("InstanceCreateResult")
+    @com.aliyun.core.annotation.NameInMap("InstanceCreateResult")
     private InstanceCreateResult instanceCreateResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCreatePrePaidInstanceResultResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeCreatePrePaidInstanceResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceCreateResult.
+         * <p>Returned results of creating an instance.</p>
          */
         public Builder instanceCreateResult(InstanceCreateResult instanceCreateResult) {
             this.instanceCreateResult = instanceCreateResult;
@@ -58,7 +63,10 @@ public class DescribeCreatePrePaidInstanceResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAE90880-4970-4D81-A534-A6C0F3631F74</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class DescribeCreatePrePaidInstanceResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCreatePrePaidInstanceResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCreatePrePaidInstanceResultResponseBody</p>
+     */
     public static class InstanceCreateResult extends TeaModel {
-        @NameInMap("InstanceCreateStatus")
+        @com.aliyun.core.annotation.NameInMap("InstanceCreateStatus")
         private String instanceCreateStatus;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
         private InstanceCreateResult(Builder builder) {
@@ -110,7 +124,16 @@ public class DescribeCreatePrePaidInstanceResultResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * InstanceCreateStatus.
+             * <p>The status of the instance creation.</p>
+             * <ul>
+             * <li>Accepted</li>
+             * <li>Creating</li>
+             * <li>Failed</li>
+             * <li>Successed</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Successed</p>
              */
             public Builder instanceCreateStatus(String instanceCreateStatus) {
                 this.instanceCreateStatus = instanceCreateStatus;
@@ -118,7 +141,10 @@ public class DescribeCreatePrePaidInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-6ecpqvkicnchxccozrpxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetManagedRuleResponseBody} extends {@link TeaModel}
  *
  * <p>GetManagedRuleResponseBody</p>
  */
 public class GetManagedRuleResponseBody extends TeaModel {
-    @NameInMap("ManagedRule")
+    @com.aliyun.core.annotation.NameInMap("ManagedRule")
     private ManagedRule managedRule;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetManagedRuleResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetManagedRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the managed rule.
+         * <p>The details of the managed rule.</p>
          */
         public Builder managedRule(ManagedRule managedRule) {
             this.managedRule = managedRule;
@@ -58,7 +63,10 @@ public class GetManagedRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7E6DDC09-87C1-5310-A924-3491EAAE6F90</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,9 +79,15 @@ public class GetManagedRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetManagedRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetManagedRuleResponseBody</p>
+     */
     public static class Scope extends TeaModel {
-        @NameInMap("ComplianceResourceTypes")
-        private java.util.List < String > complianceResourceTypes;
+        @com.aliyun.core.annotation.NameInMap("ComplianceResourceTypes")
+        private java.util.List<String> complianceResourceTypes;
 
         private Scope(Builder builder) {
             this.complianceResourceTypes = builder.complianceResourceTypes;
@@ -90,17 +104,17 @@ public class GetManagedRuleResponseBody extends TeaModel {
         /**
          * @return complianceResourceTypes
          */
-        public java.util.List < String > getComplianceResourceTypes() {
+        public java.util.List<String> getComplianceResourceTypes() {
             return this.complianceResourceTypes;
         }
 
         public static final class Builder {
-            private java.util.List < String > complianceResourceTypes; 
+            private java.util.List<String> complianceResourceTypes; 
 
             /**
-             * The type of resource to which the managed rule applies.
+             * <p>The types of resources to which the managed rule applies.</p>
              */
-            public Builder complianceResourceTypes(java.util.List < String > complianceResourceTypes) {
+            public Builder complianceResourceTypes(java.util.List<String> complianceResourceTypes) {
                 this.complianceResourceTypes = complianceResourceTypes;
                 return this;
             }
@@ -112,11 +126,17 @@ public class GetManagedRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetManagedRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetManagedRuleResponseBody</p>
+     */
     public static class SourceDetails extends TeaModel {
-        @NameInMap("MaximumExecutionFrequency")
+        @com.aliyun.core.annotation.NameInMap("MaximumExecutionFrequency")
         private String maximumExecutionFrequency;
 
-        @NameInMap("MessageType")
+        @com.aliyun.core.annotation.NameInMap("MessageType")
         private String messageType;
 
         private SourceDetails(Builder builder) {
@@ -151,14 +171,17 @@ public class GetManagedRuleResponseBody extends TeaModel {
             private String messageType; 
 
             /**
-             * The interval at which the managed rule is triggered. Valid values:
-             * <p>
+             * <p>The interval at which the rule is triggered. Valid values: Valid values:</p>
+             * <ul>
+             * <li>One_Hour</li>
+             * <li>Three_Hours</li>
+             * <li>Six_Hours</li>
+             * <li>Twelve_Hours</li>
+             * <li>TwentyFour_Hours</li>
+             * </ul>
              * 
-             * *   One_Hour: 1 hour.
-             * *   Three_Hours: 3 hours.
-             * *   Six_Hours: 6 hours.
-             * *   Twelve_Hours: 12 hours
-             * *   TwentyFour_Hours: 24 hours
+             * <strong>example:</strong>
+             * <p>TwentyFour_Hours</p>
              */
             public Builder maximumExecutionFrequency(String maximumExecutionFrequency) {
                 this.maximumExecutionFrequency = maximumExecutionFrequency;
@@ -166,11 +189,14 @@ public class GetManagedRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The trigger type of the managed rule. Valid values:
-             * <p>
+             * <p>The trigger type of the rule. Valid values:</p>
+             * <ul>
+             * <li>ConfigurationItemChangeNotification: The rule is triggered by configuration changes.</li>
+             * <li>ScheduledNotification: The rule is periodically triggered.</li>
+             * </ul>
              * 
-             * *   ConfigurationItemChangeNotification: The managed rule is triggered by configuration changes.
-             * *   ScheduledNotification: The managed rule is periodically triggered.
+             * <strong>example:</strong>
+             * <p>ConfigurationItemChangeNotification</p>
              */
             public Builder messageType(String messageType) {
                 this.messageType = messageType;
@@ -184,36 +210,42 @@ public class GetManagedRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetManagedRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetManagedRuleResponseBody</p>
+     */
     public static class ManagedRule extends TeaModel {
-        @NameInMap("CompulsoryInputParameterDetails")
-        private java.util.Map < String, ? > compulsoryInputParameterDetails;
+        @com.aliyun.core.annotation.NameInMap("CompulsoryInputParameterDetails")
+        private java.util.Map<String, ?> compulsoryInputParameterDetails;
 
-        @NameInMap("ConfigRuleName")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleName")
         private String configRuleName;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("HelpUrls")
+        @com.aliyun.core.annotation.NameInMap("HelpUrls")
         private String helpUrls;
 
-        @NameInMap("Identifier")
+        @com.aliyun.core.annotation.NameInMap("Identifier")
         private String identifier;
 
-        @NameInMap("Labels")
-        private java.util.List < String > labels;
+        @com.aliyun.core.annotation.NameInMap("Labels")
+        private java.util.List<String> labels;
 
-        @NameInMap("OptionalInputParameterDetails")
-        private java.util.Map < String, ? > optionalInputParameterDetails;
+        @com.aliyun.core.annotation.NameInMap("OptionalInputParameterDetails")
+        private java.util.Map<String, ?> optionalInputParameterDetails;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private Integer riskLevel;
 
-        @NameInMap("Scope")
+        @com.aliyun.core.annotation.NameInMap("Scope")
         private Scope scope;
 
-        @NameInMap("SourceDetails")
-        private java.util.List < SourceDetails> sourceDetails;
+        @com.aliyun.core.annotation.NameInMap("SourceDetails")
+        private java.util.List<SourceDetails> sourceDetails;
 
         private ManagedRule(Builder builder) {
             this.compulsoryInputParameterDetails = builder.compulsoryInputParameterDetails;
@@ -239,7 +271,7 @@ public class GetManagedRuleResponseBody extends TeaModel {
         /**
          * @return compulsoryInputParameterDetails
          */
-        public java.util.Map < String, ? > getCompulsoryInputParameterDetails() {
+        public java.util.Map<String, ?> getCompulsoryInputParameterDetails() {
             return this.compulsoryInputParameterDetails;
         }
 
@@ -274,14 +306,14 @@ public class GetManagedRuleResponseBody extends TeaModel {
         /**
          * @return labels
          */
-        public java.util.List < String > getLabels() {
+        public java.util.List<String> getLabels() {
             return this.labels;
         }
 
         /**
          * @return optionalInputParameterDetails
          */
-        public java.util.Map < String, ? > getOptionalInputParameterDetails() {
+        public java.util.Map<String, ?> getOptionalInputParameterDetails() {
             return this.optionalInputParameterDetails;
         }
 
@@ -302,32 +334,38 @@ public class GetManagedRuleResponseBody extends TeaModel {
         /**
          * @return sourceDetails
          */
-        public java.util.List < SourceDetails> getSourceDetails() {
+        public java.util.List<SourceDetails> getSourceDetails() {
             return this.sourceDetails;
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > compulsoryInputParameterDetails; 
+            private java.util.Map<String, ?> compulsoryInputParameterDetails; 
             private String configRuleName; 
             private String description; 
             private String helpUrls; 
             private String identifier; 
-            private java.util.List < String > labels; 
-            private java.util.Map < String, ? > optionalInputParameterDetails; 
+            private java.util.List<String> labels; 
+            private java.util.Map<String, ?> optionalInputParameterDetails; 
             private Integer riskLevel; 
             private Scope scope; 
-            private java.util.List < SourceDetails> sourceDetails; 
+            private java.util.List<SourceDetails> sourceDetails; 
 
             /**
-             * The settings of the required input parameters for the managed rule.
+             * <p>The details of the required input parameters for the managed rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
-            public Builder compulsoryInputParameterDetails(java.util.Map < String, ? > compulsoryInputParameterDetails) {
+            public Builder compulsoryInputParameterDetails(java.util.Map<String, ?> compulsoryInputParameterDetails) {
                 this.compulsoryInputParameterDetails = compulsoryInputParameterDetails;
                 return this;
             }
 
             /**
-             * The name of the managed rule.
+             * <p>The name of the managed rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cdn-domain-https-enabled</p>
              */
             public Builder configRuleName(String configRuleName) {
                 this.configRuleName = configRuleName;
@@ -335,7 +373,10 @@ public class GetManagedRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the managed rule.
+             * <p>The description of the managed rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>If HTTPS encryption is enabled for the CDN domain name, the configuration is considered compliant.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -343,7 +384,10 @@ public class GetManagedRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the topic that provides guidance on remediation for the managed rule.
+             * <p>The URL of the topic that provides guidance on remediation for the managed rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.aliyundoc.com">https://example.aliyundoc.com</a></p>
              */
             public Builder helpUrls(String helpUrls) {
                 this.helpUrls = helpUrls;
@@ -351,7 +395,10 @@ public class GetManagedRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the managed rule.
+             * <p>The identifier of the managed rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cdn-domain-https-enabled</p>
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -359,28 +406,34 @@ public class GetManagedRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the managed rule.
+             * <p>The tags of the managed rule.</p>
              */
-            public Builder labels(java.util.List < String > labels) {
+            public Builder labels(java.util.List<String> labels) {
                 this.labels = labels;
                 return this;
             }
 
             /**
-             * The settings of the optional input parameters for the managed rule.
+             * <p>The details of the optional input parameters for the managed rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
-            public Builder optionalInputParameterDetails(java.util.Map < String, ? > optionalInputParameterDetails) {
+            public Builder optionalInputParameterDetails(java.util.Map<String, ?> optionalInputParameterDetails) {
                 this.optionalInputParameterDetails = optionalInputParameterDetails;
                 return this;
             }
 
             /**
-             * The risk level of the resources that are not compliant with the managed rule. Valid values:
-             * <p>
+             * <p>The risk level of the managed rule. Valid values:</p>
+             * <ul>
+             * <li>1: high</li>
+             * <li>2: medium</li>
+             * <li>3: low</li>
+             * </ul>
              * 
-             * *   1: high risk level
-             * *   2: medium risk level
-             * *   3: low risk level
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;
@@ -388,7 +441,7 @@ public class GetManagedRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The effective scope of the managed rule.
+             * <p>The effective scope of the managed rule.</p>
              */
             public Builder scope(Scope scope) {
                 this.scope = scope;
@@ -396,9 +449,9 @@ public class GetManagedRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the trigger type of the managed rule.
+             * <p>The information about the trigger type of the managed rule.</p>
              */
-            public Builder sourceDetails(java.util.List < SourceDetails> sourceDetails) {
+            public Builder sourceDetails(java.util.List<SourceDetails> sourceDetails) {
                 this.sourceDetails = sourceDetails;
                 return this;
             }

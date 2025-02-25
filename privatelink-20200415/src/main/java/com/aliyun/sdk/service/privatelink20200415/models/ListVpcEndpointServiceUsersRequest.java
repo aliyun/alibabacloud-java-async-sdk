@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.privatelink20200415.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListVpcEndpointServiceUsersRequest} extends {@link RequestModel}
  *
  * <p>ListVpcEndpointServiceUsersRequest</p>
  */
 public class ListVpcEndpointServiceUsersRequest extends Request {
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 1000)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 1000)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ServiceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceId;
 
-    @Query
-    @NameInMap("UserId")
-    @Validation()
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    @com.aliyun.core.annotation.Validation()
     private Long userId;
 
-    @Query
-    @NameInMap("UserListType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserListType")
     private String userListType;
 
     private ListVpcEndpointServiceUsersRequest(Builder builder) {
@@ -128,7 +133,10 @@ public class ListVpcEndpointServiceUsersRequest extends Request {
         } 
 
         /**
-         * The number of entries to return on each page. Valid values: **1 to 50**. Default value: **50**.
+         * <p>The number of entries to return on each page. Valid values: <strong>1 to 50</strong>. Default value: <strong>50</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -137,11 +145,14 @@ public class ListVpcEndpointServiceUsersRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If this is your first request and no next requests are to be performed, you do not need to specify this parameter.</li>
+         * <li>If a next request is to be performed, set the value to the value of <strong>NextToken</strong> that is returned from the last call.</li>
+         * </ul>
          * 
-         * *   If this is your first request and no next requests are to be performed, you do not need to specify this parameter.
-         * *   If a next request is to be performed, set the value to the value of **NextToken** that is returned from the last call.
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -150,10 +161,12 @@ public class ListVpcEndpointServiceUsersRequest extends Request {
         }
 
         /**
-         * The region ID of the endpoint service that you want to query.
-         * <p>
+         * <p>The region ID of the endpoint service that you want to query.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-huhehaote</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -162,7 +175,11 @@ public class ListVpcEndpointServiceUsersRequest extends Request {
         }
 
         /**
-         * The endpoint service ID.
+         * <p>The endpoint service ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epsrv-hp3vpx8yqxblby3i****</p>
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -171,7 +188,10 @@ public class ListVpcEndpointServiceUsersRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account in the whitelist of the endpoint service.
+         * <p>The ID of the Alibaba Cloud account in the whitelist of the endpoint service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678</p>
          */
         public Builder userId(Long userId) {
             this.putQueryParameter("UserId", userId);
@@ -180,7 +200,10 @@ public class ListVpcEndpointServiceUsersRequest extends Request {
         }
 
         /**
-         * The type of the user list in the whitelist of the endpoint service.
+         * <p>The type of the user list in the whitelist of the endpoint service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Users</p>
          */
         public Builder userListType(String userListType) {
             this.putQueryParameter("UserListType", userListType);

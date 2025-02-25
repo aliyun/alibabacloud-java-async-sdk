@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyDcdnDomainOwnerResponseBody} extends {@link TeaModel}
  *
  * <p>VerifyDcdnDomainOwnerResponseBody</p>
  */
 public class VerifyDcdnDomainOwnerResponseBody extends TeaModel {
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private String content;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private VerifyDcdnDomainOwnerResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class VerifyDcdnDomainOwnerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The verification result.
+         * <p>The verification result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>verify_dffeb6610035dcb77b413a59c32cd9**</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -58,7 +61,10 @@ public class VerifyDcdnDomainOwnerResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34AB41F1-04A5-496F-8C8D-634BDBE6A9FB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

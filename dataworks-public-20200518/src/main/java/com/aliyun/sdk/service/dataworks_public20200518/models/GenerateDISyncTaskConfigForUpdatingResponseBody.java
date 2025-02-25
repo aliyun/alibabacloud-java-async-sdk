@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateDISyncTaskConfigForUpdatingResponseBody} extends {@link TeaModel}
  *
  * <p>GenerateDISyncTaskConfigForUpdatingResponseBody</p>
  */
 public class GenerateDISyncTaskConfigForUpdatingResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GenerateDISyncTaskConfigForUpdatingResponseBody(Builder builder) {
@@ -62,11 +67,7 @@ public class GenerateDISyncTaskConfigForUpdatingResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the ID of the asynchronous thread is generated. Valid values:
-         * <p>
-         * 
-         * *   success: indicates that the ID of the asynchronous thread is generated.
-         * *   fail: indicates that the ID of the asynchronous thread fails to be generated. You can view the reason for the failure and troubleshoot the issue based on the reason.
+         * <p>The information returned for the ID of the asynchronous thread.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -74,7 +75,10 @@ public class GenerateDISyncTaskConfigForUpdatingResponseBody extends TeaModel {
         }
 
         /**
-         * The information returned for the ID of the asynchronous thread.
+         * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1411515937635973****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,7 +86,14 @@ public class GenerateDISyncTaskConfigForUpdatingResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can locate logs and troubleshoot issues based on the ID.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -95,14 +106,20 @@ public class GenerateDISyncTaskConfigForUpdatingResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GenerateDISyncTaskConfigForUpdatingResponseBody} extends {@link TeaModel}
+     *
+     * <p>GenerateDISyncTaskConfigForUpdatingResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("ProcessId")
+        @com.aliyun.core.annotation.NameInMap("ProcessId")
         private Long processId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Data(Builder builder) {
@@ -146,7 +163,10 @@ public class GenerateDISyncTaskConfigForUpdatingResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Message.
+             * <p>The reason why the ID of the asynchronous thread fails to be generated. If the ID is successfully generated, no value is returned for this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XXX is invalid.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -154,7 +174,10 @@ public class GenerateDISyncTaskConfigForUpdatingResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the ID of the asynchronous thread fails to be generated. If the ID is successfully generated, the value null is returned.
+             * <p>The ID of the asynchronous thread. You can call the <a href="https://help.aliyun.com/document_detail/383465.html">QueryDISyncTaskConfigProcessResult</a> operation to obtain the asynchronously generated parameters based on the ID. The parameters are used to update a real-time synchronization task in Data Integration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder processId(Long processId) {
                 this.processId = processId;
@@ -162,7 +185,14 @@ public class GenerateDISyncTaskConfigForUpdatingResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the asynchronous thread. You can call the [QueryDISyncTaskConfigProcessResult](~~383465~~) operation to obtain the asynchronously generated parameters based on the ID. The parameters are used to update a real-time synchronization node or a synchronization solution in Data Integration.
+             * <p>Indicates whether the ID of the asynchronous thread is generated. Valid values:</p>
+             * <ul>
+             * <li>success: indicates that the ID of the asynchronous thread is generated.</li>
+             * <li>fail: indicates that the ID of the asynchronous thread fails to be generated. You can view the reason for the failure and troubleshoot the issue based on the reason.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder status(String status) {
                 this.status = status;

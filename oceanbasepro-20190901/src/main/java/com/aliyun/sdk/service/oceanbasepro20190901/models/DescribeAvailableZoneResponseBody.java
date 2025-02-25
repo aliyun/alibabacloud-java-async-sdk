@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAvailableZoneResponseBody</p>
  */
 public class DescribeAvailableZoneResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAvailableZoneResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
     } 
 
     public static class DiskSizeRange extends TeaModel {
-        @NameInMap("Max")
+        @com.aliyun.core.annotation.NameInMap("Max")
         private Long max;
 
-        @NameInMap("Min")
+        @com.aliyun.core.annotation.NameInMap("Min")
         private Long min;
 
-        @NameInMap("Step")
+        @com.aliyun.core.annotation.NameInMap("Step")
         private Long step;
 
         private DiskSizeRange(Builder builder) {
@@ -153,13 +152,13 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
 
     }
     public static class SupportEngineVersions extends TeaModel {
-        @NameInMap("ObVersion")
+        @com.aliyun.core.annotation.NameInMap("ObVersion")
         private String obVersion;
 
-        @NameInMap("SupportIsolationOptimization")
+        @com.aliyun.core.annotation.NameInMap("SupportIsolationOptimization")
         private Boolean supportIsolationOptimization;
 
-        @NameInMap("SupportReplicaModes")
+        @com.aliyun.core.annotation.NameInMap("SupportReplicaModes")
         private java.util.List < String > supportReplicaModes;
 
         private SupportEngineVersions(Builder builder) {
@@ -234,19 +233,19 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
 
     }
     public static class SupportSpecifications extends TeaModel {
-        @NameInMap("DiskSizeRange")
+        @com.aliyun.core.annotation.NameInMap("DiskSizeRange")
         private DiskSizeRange diskSizeRange;
 
-        @NameInMap("DiskTypes")
+        @com.aliyun.core.annotation.NameInMap("DiskTypes")
         private java.util.List < String > diskTypes;
 
-        @NameInMap("InstanceClass")
+        @com.aliyun.core.annotation.NameInMap("InstanceClass")
         private String instanceClass;
 
-        @NameInMap("Spec")
+        @com.aliyun.core.annotation.NameInMap("Spec")
         private String spec;
 
-        @NameInMap("SupportEngineVersions")
+        @com.aliyun.core.annotation.NameInMap("SupportEngineVersions")
         private java.util.List < SupportEngineVersions> supportEngineVersions;
 
         private SupportSpecifications(Builder builder) {
@@ -355,29 +354,33 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
 
     }
     public static class AvailableZones extends TeaModel {
-        @NameInMap("Channel")
+        @com.aliyun.core.annotation.NameInMap("Channel")
         private String channel;
 
-        @NameInMap("DeployType")
+        @com.aliyun.core.annotation.NameInMap("CpuArch")
+        private String cpuArch;
+
+        @com.aliyun.core.annotation.NameInMap("DeployType")
         private String deployType;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Series")
+        @com.aliyun.core.annotation.NameInMap("Series")
         private String series;
 
-        @NameInMap("SupportSpecifications")
+        @com.aliyun.core.annotation.NameInMap("SupportSpecifications")
         private java.util.List < SupportSpecifications> supportSpecifications;
 
-        @NameInMap("Zones")
+        @com.aliyun.core.annotation.NameInMap("Zones")
         private String zones;
 
         private AvailableZones(Builder builder) {
             this.channel = builder.channel;
+            this.cpuArch = builder.cpuArch;
             this.deployType = builder.deployType;
             this.instanceType = builder.instanceType;
             this.region = builder.region;
@@ -399,6 +402,13 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
          */
         public String getChannel() {
             return this.channel;
+        }
+
+        /**
+         * @return cpuArch
+         */
+        public String getCpuArch() {
+            return this.cpuArch;
         }
 
         /**
@@ -445,6 +455,7 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
 
         public static final class Builder {
             private String channel; 
+            private String cpuArch; 
             private String deployType; 
             private String instanceType; 
             private String region; 
@@ -457,6 +468,14 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
              */
             public Builder channel(String channel) {
                 this.channel = channel;
+                return this;
+            }
+
+            /**
+             * CpuArch.
+             */
+            public Builder cpuArch(String cpuArch) {
+                this.cpuArch = cpuArch;
                 return this;
             }
 
@@ -516,7 +535,7 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AvailableZones")
+        @com.aliyun.core.annotation.NameInMap("AvailableZones")
         private java.util.List < AvailableZones> availableZones;
 
         private Data(Builder builder) {

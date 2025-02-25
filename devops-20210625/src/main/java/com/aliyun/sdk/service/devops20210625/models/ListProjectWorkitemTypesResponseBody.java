@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProjectWorkitemTypesResponseBody} extends {@link TeaModel}
  *
  * <p>ListProjectWorkitemTypesResponseBody</p>
  */
 public class ListProjectWorkitemTypesResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("workitemTypes")
-    private java.util.List < WorkitemTypes> workitemTypes;
+    @com.aliyun.core.annotation.NameInMap("workitemTypes")
+    private java.util.List<WorkitemTypes> workitemTypes;
 
     private ListProjectWorkitemTypesResponseBody(Builder builder) {
         this.errorCode = builder.errorCode;
@@ -74,7 +79,7 @@ public class ListProjectWorkitemTypesResponseBody extends TeaModel {
     /**
      * @return workitemTypes
      */
-    public java.util.List < WorkitemTypes> getWorkitemTypes() {
+    public java.util.List<WorkitemTypes> getWorkitemTypes() {
         return this.workitemTypes;
     }
 
@@ -83,7 +88,7 @@ public class ListProjectWorkitemTypesResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
-        private java.util.List < WorkitemTypes> workitemTypes; 
+        private java.util.List<WorkitemTypes> workitemTypes; 
 
         /**
          * errorCode.
@@ -120,7 +125,7 @@ public class ListProjectWorkitemTypesResponseBody extends TeaModel {
         /**
          * workitemTypes.
          */
-        public Builder workitemTypes(java.util.List < WorkitemTypes> workitemTypes) {
+        public Builder workitemTypes(java.util.List<WorkitemTypes> workitemTypes) {
             this.workitemTypes = workitemTypes;
             return this;
         }
@@ -131,41 +136,47 @@ public class ListProjectWorkitemTypesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListProjectWorkitemTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectWorkitemTypesResponseBody</p>
+     */
     public static class WorkitemTypes extends TeaModel {
-        @NameInMap("addUser")
+        @com.aliyun.core.annotation.NameInMap("addUser")
         private String addUser;
 
-        @NameInMap("categoryIdentifier")
+        @com.aliyun.core.annotation.NameInMap("categoryIdentifier")
         private String categoryIdentifier;
 
-        @NameInMap("creator")
+        @com.aliyun.core.annotation.NameInMap("creator")
         private String creator;
 
-        @NameInMap("defaultType")
+        @com.aliyun.core.annotation.NameInMap("defaultType")
         private Boolean defaultType;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("enable")
+        @com.aliyun.core.annotation.NameInMap("enable")
         private Boolean enable;
 
-        @NameInMap("gmtAdd")
+        @com.aliyun.core.annotation.NameInMap("gmtAdd")
         private Long gmtAdd;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("identifier")
+        @com.aliyun.core.annotation.NameInMap("identifier")
         private String identifier;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("nameEn")
+        @com.aliyun.core.annotation.NameInMap("nameEn")
         private String nameEn;
 
-        @NameInMap("systemDefault")
+        @com.aliyun.core.annotation.NameInMap("systemDefault")
         private Boolean systemDefault;
 
         private WorkitemTypes(Builder builder) {

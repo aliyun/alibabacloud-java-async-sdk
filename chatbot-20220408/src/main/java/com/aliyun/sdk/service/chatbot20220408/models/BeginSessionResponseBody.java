@@ -1,27 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BeginSessionResponseBody} extends {@link TeaModel}
  *
  * <p>BeginSessionResponseBody</p>
  */
 public class BeginSessionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("AsrMaxEndSilence")
+    private Integer asrMaxEndSilence;
+
+    @com.aliyun.core.annotation.NameInMap("Interruptible")
+    private Boolean interruptible;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SilenceReplyTimeout")
+    @com.aliyun.core.annotation.NameInMap("SilenceReplyTimeout")
     private Integer silenceReplyTimeout;
 
-    @NameInMap("WelcomeMessage")
+    @com.aliyun.core.annotation.NameInMap("WelcomeMessage")
     private String welcomeMessage;
 
     private BeginSessionResponseBody(Builder builder) {
+        this.asrMaxEndSilence = builder.asrMaxEndSilence;
+        this.interruptible = builder.interruptible;
         this.requestId = builder.requestId;
         this.silenceReplyTimeout = builder.silenceReplyTimeout;
         this.welcomeMessage = builder.welcomeMessage;
@@ -33,6 +41,20 @@ public class BeginSessionResponseBody extends TeaModel {
 
     public static BeginSessionResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return asrMaxEndSilence
+     */
+    public Integer getAsrMaxEndSilence() {
+        return this.asrMaxEndSilence;
+    }
+
+    /**
+     * @return interruptible
+     */
+    public Boolean getInterruptible() {
+        return this.interruptible;
     }
 
     /**
@@ -57,9 +79,27 @@ public class BeginSessionResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Integer asrMaxEndSilence; 
+        private Boolean interruptible; 
         private String requestId; 
         private Integer silenceReplyTimeout; 
         private String welcomeMessage; 
+
+        /**
+         * AsrMaxEndSilence.
+         */
+        public Builder asrMaxEndSilence(Integer asrMaxEndSilence) {
+            this.asrMaxEndSilence = asrMaxEndSilence;
+            return this;
+        }
+
+        /**
+         * Interruptible.
+         */
+        public Builder interruptible(Boolean interruptible) {
+            this.interruptible = interruptible;
+            return this;
+        }
 
         /**
          * RequestId.
@@ -70,7 +110,10 @@ public class BeginSessionResponseBody extends TeaModel {
         }
 
         /**
-         * 静默超时时间
+         * <p>静默超时时间</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder silenceReplyTimeout(Integer silenceReplyTimeout) {
             this.silenceReplyTimeout = silenceReplyTimeout;

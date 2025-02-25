@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteNatGatewayRequest} extends {@link RequestModel}
  *
  * <p>DeleteNatGatewayRequest</p>
  */
 public class DeleteNatGatewayRequest extends Request {
-    @Query
-    @NameInMap("Force")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Force")
     private Boolean force;
 
-    @Query
-    @NameInMap("NatGatewayId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NatGatewayId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String natGatewayId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private DeleteNatGatewayRequest(Builder builder) {
@@ -140,22 +145,28 @@ public class DeleteNatGatewayRequest extends Request {
         } 
 
         /**
-         * Specifies whether to forcefully delete the NAT gateway. Valid values:
-         * <p>
+         * <p>Specifies whether to forcefully delete the NAT gateway. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong> If you set the value to <strong>true</strong>:</p>
+         * <ul>
+         * <li>If the NAT gateway has SNAT entries, the system automatically deletes them.</li>
+         * <li>If the NAT gateway has DNAT entries, the system automatically deletes them.</li>
+         * <li>If the NAT gateway is associated with an elastic IP address (EIP), the system automatically disassociates the EIP from the NAT gateway.</li>
+         * <li>If the NAT gateway is associated with a NAT bandwidth plan, the system automatically disassociates the NAT bandwidth plan.</li>
+         * </ul>
+         * </li>
+         * <li><p><strong>false</strong>(default): no If you set the value to <strong>false</strong>:</p>
+         * <ul>
+         * <li>If the NAT gateway is associated with a NAT bandwidth plan, disassociate the NAT bandwidth plan first.</li>
+         * <li>If the NAT gateway has SNAT entries, delete them first.</li>
+         * <li>If the NAT gateway has DNAT entries, delete them first.</li>
+         * <li>If the NAT gateway is associated with an EIP, disassociate the EIP from the NAT gateway first.</li>
+         * </ul>
+         * </li>
+         * </ul>
          * 
-         * *   **true** If you set the value to **true**:
-         * 
-         *     *   If the NAT gateway has SNAT entries, the system automatically deletes them.
-         *     *   If the NAT gateway has DNAT entries, the system automatically deletes them.
-         *     *   If the NAT gateway is associated with an elastic IP address (EIP), the system automatically disassociates the EIP from the NAT gateway.
-         *     *   If the NAT gateway is associated with a NAT bandwidth plan, the system automatically disassociates the NAT bandwidth plan.
-         * 
-         * *   **false**(default): no If you set the value to **false**:
-         * 
-         *     *   If the NAT gateway is associated with a NAT bandwidth plan, disassociate the NAT bandwidth plan first.
-         *     *   If the NAT gateway has SNAT entries, delete them first.
-         *     *   If the NAT gateway has DNAT entries, delete them first.
-         *     *   If the NAT gateway is associated with an EIP, disassociate the EIP from the NAT gateway first.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -164,7 +175,11 @@ public class DeleteNatGatewayRequest extends Request {
         }
 
         /**
-         * The ID of the NAT gateway that you want to delete.
+         * <p>The ID of the NAT gateway that you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-bp1uewa15k4iy5770****</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -191,10 +206,12 @@ public class DeleteNatGatewayRequest extends Request {
         }
 
         /**
-         * The region ID of the NAT gateway.
-         * <p>
+         * <p>The region ID of the NAT gateway.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

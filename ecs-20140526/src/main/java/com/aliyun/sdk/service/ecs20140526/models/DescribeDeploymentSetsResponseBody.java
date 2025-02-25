@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDeploymentSetsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDeploymentSetsResponseBody</p>
  */
 public class DescribeDeploymentSetsResponseBody extends TeaModel {
-    @NameInMap("DeploymentSets")
+    @com.aliyun.core.annotation.NameInMap("DeploymentSets")
     private DeploymentSets deploymentSets;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDeploymentSetsResponseBody(Builder builder) {
@@ -98,7 +103,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the deployment sets.
+         * <p>Details about the deployment sets.</p>
          */
         public Builder deploymentSets(DeploymentSets deploymentSets) {
             this.deploymentSets = deploymentSets;
@@ -106,7 +111,10 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +122,10 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +133,10 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the deployment set.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -130,7 +144,10 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of deployment sets returned.
+         * <p>The total number of queried deployment sets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -151,14 +171,20 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDeploymentSetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDeploymentSetsResponseBody</p>
+     */
     public static class Capacity extends TeaModel {
-        @NameInMap("AvailableAmount")
+        @com.aliyun.core.annotation.NameInMap("AvailableAmount")
         private Integer availableAmount;
 
-        @NameInMap("UsedAmount")
+        @com.aliyun.core.annotation.NameInMap("UsedAmount")
         private Integer usedAmount;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Capacity(Builder builder) {
@@ -202,7 +228,10 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The number of ECS instances that can be added to the deployment set within the zone.
+             * <p>The number of ECS instances that can be added to the deployment set within the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18</p>
              */
             public Builder availableAmount(Integer availableAmount) {
                 this.availableAmount = availableAmount;
@@ -210,7 +239,10 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of ECS instances that belong to the zone in the deployment set.
+             * <p>The number of ECS instances that reside in the zone in the deployment set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder usedAmount(Integer usedAmount) {
                 this.usedAmount = usedAmount;
@@ -218,7 +250,10 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone. Only the zone IDs of existing ECS instances in the deployment set are returned.
+             * <p>The ID of the zone. Only the zone IDs of existing ECS instances in the deployment set are returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -232,9 +267,15 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDeploymentSetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDeploymentSetsResponseBody</p>
+     */
     public static class Capacities extends TeaModel {
-        @NameInMap("Capacity")
-        private java.util.List < Capacity> capacity;
+        @com.aliyun.core.annotation.NameInMap("Capacity")
+        private java.util.List<Capacity> capacity;
 
         private Capacities(Builder builder) {
             this.capacity = builder.capacity;
@@ -251,17 +292,17 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         /**
          * @return capacity
          */
-        public java.util.List < Capacity> getCapacity() {
+        public java.util.List<Capacity> getCapacity() {
             return this.capacity;
         }
 
         public static final class Builder {
-            private java.util.List < Capacity> capacity; 
+            private java.util.List<Capacity> capacity; 
 
             /**
              * Capacity.
              */
-            public Builder capacity(java.util.List < Capacity> capacity) {
+            public Builder capacity(java.util.List<Capacity> capacity) {
                 this.capacity = capacity;
                 return this;
             }
@@ -273,9 +314,15 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDeploymentSetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDeploymentSetsResponseBody</p>
+     */
     public static class InstanceIds extends TeaModel {
-        @NameInMap("InstanceId")
-        private java.util.List < String > instanceId;
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        private java.util.List<String> instanceId;
 
         private InstanceIds(Builder builder) {
             this.instanceId = builder.instanceId;
@@ -292,17 +339,17 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         /**
          * @return instanceId
          */
-        public java.util.List < String > getInstanceId() {
+        public java.util.List<String> getInstanceId() {
             return this.instanceId;
         }
 
         public static final class Builder {
-            private java.util.List < String > instanceId; 
+            private java.util.List<String> instanceId; 
 
             /**
              * InstanceId.
              */
-            public Builder instanceId(java.util.List < String > instanceId) {
+            public Builder instanceId(java.util.List<String> instanceId) {
                 this.instanceId = instanceId;
                 return this;
             }
@@ -314,41 +361,47 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDeploymentSetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDeploymentSetsResponseBody</p>
+     */
     public static class DeploymentSet extends TeaModel {
-        @NameInMap("Capacities")
+        @com.aliyun.core.annotation.NameInMap("Capacities")
         private Capacities capacities;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DeploymentSetDescription")
+        @com.aliyun.core.annotation.NameInMap("DeploymentSetDescription")
         private String deploymentSetDescription;
 
-        @NameInMap("DeploymentSetId")
+        @com.aliyun.core.annotation.NameInMap("DeploymentSetId")
         private String deploymentSetId;
 
-        @NameInMap("DeploymentSetName")
+        @com.aliyun.core.annotation.NameInMap("DeploymentSetName")
         private String deploymentSetName;
 
-        @NameInMap("DeploymentStrategy")
+        @com.aliyun.core.annotation.NameInMap("DeploymentStrategy")
         private String deploymentStrategy;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Granularity")
+        @com.aliyun.core.annotation.NameInMap("Granularity")
         private String granularity;
 
-        @NameInMap("GroupCount")
+        @com.aliyun.core.annotation.NameInMap("GroupCount")
         private Integer groupCount;
 
-        @NameInMap("InstanceAmount")
+        @com.aliyun.core.annotation.NameInMap("InstanceAmount")
         private Integer instanceAmount;
 
-        @NameInMap("InstanceIds")
+        @com.aliyun.core.annotation.NameInMap("InstanceIds")
         private InstanceIds instanceIds;
 
-        @NameInMap("Strategy")
+        @com.aliyun.core.annotation.NameInMap("Strategy")
         private String strategy;
 
         private DeploymentSet(Builder builder) {
@@ -473,7 +526,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             private String strategy; 
 
             /**
-             * Details of the capacities of the deployment set. This parameter is valid only when the deployment set contains Elastic Compute Service (ECS) instances. The value contains the capacities of the deployment set in different zones.
+             * <p>Details of the capacities of the deployment set. This parameter is valid only when the deployment set contains ECS instances. The value contains information about the capacities of the deployment set in different zones.</p>
              */
             public Builder capacities(Capacities capacities) {
                 this.capacities = capacities;
@@ -481,7 +534,10 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the deployment set was created.
+             * <p>The time when the deployment set was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-07T06:01:46Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -489,7 +545,10 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the deployment set.
+             * <p>The description of the deployment set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testDeploymentSetDescription</p>
              */
             public Builder deploymentSetDescription(String deploymentSetDescription) {
                 this.deploymentSetDescription = deploymentSetDescription;
@@ -497,7 +556,10 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the deployment set.
+             * <p>The ID of the deployment set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds-bp67acfmxazb4ph****</p>
              */
             public Builder deploymentSetId(String deploymentSetId) {
                 this.deploymentSetId = deploymentSetId;
@@ -505,7 +567,10 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the deployment set.
+             * <p>The name of the deployment set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testDeploymentSetName</p>
              */
             public Builder deploymentSetName(String deploymentSetName) {
                 this.deploymentSetName = deploymentSetName;
@@ -513,7 +578,10 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The deployment strategy. The value of this response parameter is that of the `Strategy` request parameter.
+             * <p>The deployment strategy. The return value of this parameter is the value of the <code>Strategy</code> request parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Availability</p>
              */
             public Builder deploymentStrategy(String deploymentStrategy) {
                 this.deploymentStrategy = deploymentStrategy;
@@ -521,7 +589,10 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The deployment domain.
+             * <p>The deployment domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -529,7 +600,10 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The deployment granularity.
+             * <p>The deployment granularity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>host</p>
              */
             public Builder granularity(String granularity) {
                 this.granularity = granularity;
@@ -537,10 +611,13 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of deployment set groups in the deployment set.
-             * <p>
+             * <p>The number of deployment set groups in the deployment set.</p>
+             * <blockquote>
+             * <p> This parameter is valid only when the Strategy request parameter is set to AvailabilityGroup.</p>
+             * </blockquote>
              * 
-             * >  This parameter is valid only when the Strategy request parameter is set to AvailabilityGroup.
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder groupCount(Integer groupCount) {
                 this.groupCount = groupCount;
@@ -548,7 +625,10 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances in the deployment set.
+             * <p>The number of instances in the deployment set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder instanceAmount(Integer instanceAmount) {
                 this.instanceAmount = instanceAmount;
@@ -556,7 +636,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the instances in the deployment set.
+             * <p>The IDs of the Elastic Compute Service (ECS) instances in the deployment set.</p>
              */
             public Builder instanceIds(InstanceIds instanceIds) {
                 this.instanceIds = instanceIds;
@@ -564,7 +644,10 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The deployment strategy.
+             * <p>The deployment strategy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LooseDispersion</p>
              */
             public Builder strategy(String strategy) {
                 this.strategy = strategy;
@@ -578,9 +661,15 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDeploymentSetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDeploymentSetsResponseBody</p>
+     */
     public static class DeploymentSets extends TeaModel {
-        @NameInMap("DeploymentSet")
-        private java.util.List < DeploymentSet> deploymentSet;
+        @com.aliyun.core.annotation.NameInMap("DeploymentSet")
+        private java.util.List<DeploymentSet> deploymentSet;
 
         private DeploymentSets(Builder builder) {
             this.deploymentSet = builder.deploymentSet;
@@ -597,17 +686,17 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         /**
          * @return deploymentSet
          */
-        public java.util.List < DeploymentSet> getDeploymentSet() {
+        public java.util.List<DeploymentSet> getDeploymentSet() {
             return this.deploymentSet;
         }
 
         public static final class Builder {
-            private java.util.List < DeploymentSet> deploymentSet; 
+            private java.util.List<DeploymentSet> deploymentSet; 
 
             /**
              * DeploymentSet.
              */
-            public Builder deploymentSet(java.util.List < DeploymentSet> deploymentSet) {
+            public Builder deploymentSet(java.util.List<DeploymentSet> deploymentSet) {
                 this.deploymentSet = deploymentSet;
                 return this;
             }

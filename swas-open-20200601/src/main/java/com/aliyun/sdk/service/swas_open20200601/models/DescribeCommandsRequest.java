@@ -1,45 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCommandsRequest} extends {@link RequestModel}
  *
  * <p>DescribeCommandsRequest</p>
  */
 public class DescribeCommandsRequest extends Request {
-    @Query
-    @NameInMap("CommandId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommandId")
     private String commandId;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @Query
-    @NameInMap("Provider")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Provider")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String provider;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private DescribeCommandsRequest(Builder builder) {
@@ -50,6 +63,8 @@ public class DescribeCommandsRequest extends Request {
         this.pageSize = builder.pageSize;
         this.provider = builder.provider;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
+        this.tag = builder.tag;
         this.type = builder.type;
     }
 
@@ -109,6 +124,20 @@ public class DescribeCommandsRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List<Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -122,6 +151,8 @@ public class DescribeCommandsRequest extends Request {
         private String pageSize; 
         private String provider; 
         private String regionId; 
+        private String resourceGroupId; 
+        private java.util.List<Tag> tag; 
         private String type; 
 
         private Builder() {
@@ -136,11 +167,16 @@ public class DescribeCommandsRequest extends Request {
             this.pageSize = request.pageSize;
             this.provider = request.provider;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.tag = request.tag;
             this.type = request.type;
         } 
 
         /**
-         * CommandId.
+         * <p>The command ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-sh02yh0932w****</p>
          */
         public Builder commandId(String commandId) {
             this.putQueryParameter("CommandId", commandId);
@@ -149,7 +185,10 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The command name. Fuzzy match is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -158,7 +197,12 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * <p>Pages start from 1.</p>
+         * <p>Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -167,7 +211,12 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * <p>Maximum value: 50.</p>
+         * <p>Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -176,7 +225,15 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * Provider.
+         * <p>The provider of the common command. Take note of the following items:</p>
+         * <ul>
+         * <li>If you set this parameter to <code>AlibabaCloud</code>, all the common commands provided by Alibaba Cloud are queried.</li>
+         * <li>If you set this parameter to <code>User</code>, all the custom commands created by you are queried.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AlibabaCloud</p>
          */
         public Builder provider(String provider) {
             this.putQueryParameter("Provider", provider);
@@ -185,7 +242,11 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -194,7 +255,36 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2bti7cf7****</p>
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * <p>The tags that are bound to the command.</p>
+         */
+        public Builder tag(java.util.List<Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * <p>The language type of the command. Valid values:</p>
+         * <ul>
+         * <li>RunBatScript: batch command, applicable to Windows instances</li>
+         * <li>RunPowerShellScript: PowerShell command, applicable to Windows instances</li>
+         * <li>RunShellScript: shell command, applicable to Linux instances</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RunShellScript</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -209,4 +299,77 @@ public class DescribeCommandsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCommandsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeCommandsRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * <p>The tag key of the command. A tag key can be 1 to 64 characters in length. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The tag value of the command. A tag value can be up to 64 characters in length. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

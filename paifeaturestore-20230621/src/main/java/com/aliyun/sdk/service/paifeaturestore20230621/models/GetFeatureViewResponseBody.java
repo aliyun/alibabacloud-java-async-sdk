@@ -1,82 +1,96 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFeatureViewResponseBody} extends {@link TeaModel}
  *
  * <p>GetFeatureViewResponseBody</p>
  */
 public class GetFeatureViewResponseBody extends TeaModel {
-    @NameInMap("Config")
+    @com.aliyun.core.annotation.NameInMap("Config")
     private String config;
 
-    @NameInMap("FeatureEntityId")
+    @com.aliyun.core.annotation.NameInMap("FeatureEntityId")
     private String featureEntityId;
 
-    @NameInMap("FeatureEntityName")
+    @com.aliyun.core.annotation.NameInMap("FeatureEntityName")
     private String featureEntityName;
 
-    @NameInMap("Fields")
-    private java.util.List < Fields> fields;
+    @com.aliyun.core.annotation.NameInMap("Fields")
+    private java.util.List<Fields> fields;
 
-    @NameInMap("GmtCreateTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
-    @NameInMap("GmtModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
     private String gmtModifiedTime;
 
-    @NameInMap("GmtSyncTime")
+    @com.aliyun.core.annotation.NameInMap("GmtSyncTime")
     private String gmtSyncTime;
 
-    @NameInMap("JoinId")
+    @com.aliyun.core.annotation.NameInMap("JoinId")
     private String joinId;
 
-    @NameInMap("LastSyncConfig")
+    @com.aliyun.core.annotation.NameInMap("LastSyncConfig")
     private String lastSyncConfig;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("MockTableName")
+    private String mockTableName;
+
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("Owner")
+    @com.aliyun.core.annotation.NameInMap("Owner")
     private String owner;
 
-    @NameInMap("ProjectId")
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
     private String projectId;
 
-    @NameInMap("ProjectName")
+    @com.aliyun.core.annotation.NameInMap("ProjectName")
     private String projectName;
 
-    @NameInMap("RegisterDatasourceId")
+    @com.aliyun.core.annotation.NameInMap("PublishTableScript")
+    private String publishTableScript;
+
+    @com.aliyun.core.annotation.NameInMap("RegisterDatasourceId")
     private String registerDatasourceId;
 
-    @NameInMap("RegisterDatasourceName")
+    @com.aliyun.core.annotation.NameInMap("RegisterDatasourceName")
     private String registerDatasourceName;
 
-    @NameInMap("RegisterTable")
+    @com.aliyun.core.annotation.NameInMap("RegisterTable")
     private String registerTable;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SyncOnlineTable")
+    @com.aliyun.core.annotation.NameInMap("SyncOnlineTable")
     private Boolean syncOnlineTable;
 
-    @NameInMap("TTL")
+    @com.aliyun.core.annotation.NameInMap("TTL")
     private Integer TTL;
 
-    @NameInMap("Tags")
-    private java.util.List < String > tags;
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<String> tags;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @NameInMap("WriteMethod")
+    @com.aliyun.core.annotation.NameInMap("WriteMethod")
     private String writeMethod;
+
+    @com.aliyun.core.annotation.NameInMap("WriteToFeatureDB")
+    private Boolean writeToFeatureDB;
 
     private GetFeatureViewResponseBody(Builder builder) {
         this.config = builder.config;
@@ -88,10 +102,12 @@ public class GetFeatureViewResponseBody extends TeaModel {
         this.gmtSyncTime = builder.gmtSyncTime;
         this.joinId = builder.joinId;
         this.lastSyncConfig = builder.lastSyncConfig;
+        this.mockTableName = builder.mockTableName;
         this.name = builder.name;
         this.owner = builder.owner;
         this.projectId = builder.projectId;
         this.projectName = builder.projectName;
+        this.publishTableScript = builder.publishTableScript;
         this.registerDatasourceId = builder.registerDatasourceId;
         this.registerDatasourceName = builder.registerDatasourceName;
         this.registerTable = builder.registerTable;
@@ -101,6 +117,7 @@ public class GetFeatureViewResponseBody extends TeaModel {
         this.tags = builder.tags;
         this.type = builder.type;
         this.writeMethod = builder.writeMethod;
+        this.writeToFeatureDB = builder.writeToFeatureDB;
     }
 
     public static Builder builder() {
@@ -135,7 +152,7 @@ public class GetFeatureViewResponseBody extends TeaModel {
     /**
      * @return fields
      */
-    public java.util.List < Fields> getFields() {
+    public java.util.List<Fields> getFields() {
         return this.fields;
     }
 
@@ -175,6 +192,13 @@ public class GetFeatureViewResponseBody extends TeaModel {
     }
 
     /**
+     * @return mockTableName
+     */
+    public String getMockTableName() {
+        return this.mockTableName;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -200,6 +224,13 @@ public class GetFeatureViewResponseBody extends TeaModel {
      */
     public String getProjectName() {
         return this.projectName;
+    }
+
+    /**
+     * @return publishTableScript
+     */
+    public String getPublishTableScript() {
+        return this.publishTableScript;
     }
 
     /**
@@ -247,7 +278,7 @@ public class GetFeatureViewResponseBody extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < String > getTags() {
+    public java.util.List<String> getTags() {
         return this.tags;
     }
 
@@ -265,29 +296,39 @@ public class GetFeatureViewResponseBody extends TeaModel {
         return this.writeMethod;
     }
 
+    /**
+     * @return writeToFeatureDB
+     */
+    public Boolean getWriteToFeatureDB() {
+        return this.writeToFeatureDB;
+    }
+
     public static final class Builder {
         private String config; 
         private String featureEntityId; 
         private String featureEntityName; 
-        private java.util.List < Fields> fields; 
+        private java.util.List<Fields> fields; 
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
         private String gmtSyncTime; 
         private String joinId; 
         private String lastSyncConfig; 
+        private String mockTableName; 
         private String name; 
         private String owner; 
         private String projectId; 
         private String projectName; 
+        private String publishTableScript; 
         private String registerDatasourceId; 
         private String registerDatasourceName; 
         private String registerTable; 
         private String requestId; 
         private Boolean syncOnlineTable; 
         private Integer TTL; 
-        private java.util.List < String > tags; 
+        private java.util.List<String> tags; 
         private String type; 
         private String writeMethod; 
+        private Boolean writeToFeatureDB; 
 
         /**
          * Config.
@@ -316,7 +357,7 @@ public class GetFeatureViewResponseBody extends TeaModel {
         /**
          * Fields.
          */
-        public Builder fields(java.util.List < Fields> fields) {
+        public Builder fields(java.util.List<Fields> fields) {
             this.fields = fields;
             return this;
         }
@@ -362,6 +403,14 @@ public class GetFeatureViewResponseBody extends TeaModel {
         }
 
         /**
+         * MockTableName.
+         */
+        public Builder mockTableName(String mockTableName) {
+            this.mockTableName = mockTableName;
+            return this;
+        }
+
+        /**
          * Name.
          */
         public Builder name(String name) {
@@ -390,6 +439,14 @@ public class GetFeatureViewResponseBody extends TeaModel {
          */
         public Builder projectName(String projectName) {
             this.projectName = projectName;
+            return this;
+        }
+
+        /**
+         * PublishTableScript.
+         */
+        public Builder publishTableScript(String publishTableScript) {
+            this.publishTableScript = publishTableScript;
             return this;
         }
 
@@ -444,7 +501,7 @@ public class GetFeatureViewResponseBody extends TeaModel {
         /**
          * Tags.
          */
-        public Builder tags(java.util.List < String > tags) {
+        public Builder tags(java.util.List<String> tags) {
             this.tags = tags;
             return this;
         }
@@ -465,20 +522,34 @@ public class GetFeatureViewResponseBody extends TeaModel {
             return this;
         }
 
+        /**
+         * WriteToFeatureDB.
+         */
+        public Builder writeToFeatureDB(Boolean writeToFeatureDB) {
+            this.writeToFeatureDB = writeToFeatureDB;
+            return this;
+        }
+
         public GetFeatureViewResponseBody build() {
             return new GetFeatureViewResponseBody(this);
         } 
 
     } 
 
+    /**
+     * 
+     * {@link GetFeatureViewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFeatureViewResponseBody</p>
+     */
     public static class Fields extends TeaModel {
-        @NameInMap("Attributes")
-        private java.util.List < String > attributes;
+        @com.aliyun.core.annotation.NameInMap("Attributes")
+        private java.util.List<String> attributes;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Fields(Builder builder) {
@@ -498,7 +569,7 @@ public class GetFeatureViewResponseBody extends TeaModel {
         /**
          * @return attributes
          */
-        public java.util.List < String > getAttributes() {
+        public java.util.List<String> getAttributes() {
             return this.attributes;
         }
 
@@ -517,14 +588,14 @@ public class GetFeatureViewResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > attributes; 
+            private java.util.List<String> attributes; 
             private String name; 
             private String type; 
 
             /**
              * Attributes.
              */
-            public Builder attributes(java.util.List < String > attributes) {
+            public Builder attributes(java.util.List<String> attributes) {
                 this.attributes = attributes;
                 return this;
             }

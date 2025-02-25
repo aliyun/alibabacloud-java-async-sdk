@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDBInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDBInstanceResponseBody</p>
  */
 public class CreateDBInstanceResponseBody extends TeaModel {
-    @NameInMap("ConnectionString")
+    @com.aliyun.core.annotation.NameInMap("ConnectionString")
     private String connectionString;
 
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
-    @NameInMap("Port")
+    @com.aliyun.core.annotation.NameInMap("Port")
     private String port;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateDBInstanceResponseBody(Builder builder) {
@@ -86,10 +91,11 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An invalid parameter. It is no longer returned when you call this operation.
-         * <p>
+         * <p>This parameter is deprecated and will not return a value.</p>
+         * <p>You can use the <a href="https://help.aliyun.com/document_detail/86910.html">DescribeDBInstanceAttribute</a> interface to view the connection address of the instance.</p>
          * 
-         * You can call the [DescribeDBInstanceAttribute](~~86910~~) operation to query the endpoint that is used to connect to the instance.
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****.gpdb.rds.aliyuncs.com</p>
          */
         public Builder connectionString(String connectionString) {
             this.connectionString = connectionString;
@@ -97,7 +103,10 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The instance ID.
+         * <p>Instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -105,7 +114,10 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The order ID.
+         * <p>Order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111111111111</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -113,10 +125,11 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * An invalid parameter. It is no longer returned when you call this operation.
-         * <p>
+         * <p>This parameter is deprecated and will not return a value.</p>
+         * <p>You can use the <a href="https://help.aliyun.com/document_detail/86910.html">DescribeDBInstanceAttribute</a> interface to view the port number of the instance.</p>
          * 
-         * You can call the [DescribeDBInstanceAttribute](~~86910~~) operation to query the port number that is used to connect to the instance.
+         * <strong>example:</strong>
+         * <p>3432</p>
          */
         public Builder port(String port) {
             this.port = port;
@@ -124,7 +137,10 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5414A4E5-4C36-4461-95FC-************</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

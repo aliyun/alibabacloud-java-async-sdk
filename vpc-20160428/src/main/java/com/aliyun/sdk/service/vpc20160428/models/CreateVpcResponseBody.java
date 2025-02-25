@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVpcResponseBody} extends {@link TeaModel}
  *
  * <p>CreateVpcResponseBody</p>
  */
 public class CreateVpcResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("RouteTableId")
+    @com.aliyun.core.annotation.NameInMap("RouteTableId")
     private String routeTableId;
 
-    @NameInMap("VRouterId")
+    @com.aliyun.core.annotation.NameInMap("VRouterId")
     private String vRouterId;
 
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     private CreateVpcResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class CreateVpcResponseBody extends TeaModel {
         private String vpcId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -94,7 +102,10 @@ public class CreateVpcResponseBody extends TeaModel {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph6aiy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -102,7 +113,10 @@ public class CreateVpcResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the route table that is automatically created by the system after the VPC is created.
+         * <p>The ID of the route table that is automatically created by the system after the VPC is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-bp145q7glnuzdv****</p>
          */
         public Builder routeTableId(String routeTableId) {
             this.routeTableId = routeTableId;
@@ -110,7 +124,10 @@ public class CreateVpcResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the vRouter that is automatically created by the system after the VPC is created.
+         * <p>The ID of the vRouter that is automatically created by the system after the VPC is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vrt-bp1lhl0taikrteen8****</p>
          */
         public Builder vRouterId(String vRouterId) {
             this.vRouterId = vRouterId;
@@ -118,7 +135,10 @@ public class CreateVpcResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the created VPC.
+         * <p>The ID of the created VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp15zckdt37pq72zv****</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;

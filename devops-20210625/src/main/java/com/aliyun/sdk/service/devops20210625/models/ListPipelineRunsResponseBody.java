@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPipelineRunsResponseBody} extends {@link TeaModel}
  *
  * <p>ListPipelineRunsResponseBody</p>
  */
 public class ListPipelineRunsResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @NameInMap("pipelineRuns")
-    private java.util.List < PipelineRuns> pipelineRuns;
+    @com.aliyun.core.annotation.NameInMap("pipelineRuns")
+    private java.util.List<PipelineRuns> pipelineRuns;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("totalCount")
+    @com.aliyun.core.annotation.NameInMap("totalCount")
     private Long totalCount;
 
     private ListPipelineRunsResponseBody(Builder builder) {
@@ -75,7 +80,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
     /**
      * @return pipelineRuns
      */
-    public java.util.List < PipelineRuns> getPipelineRuns() {
+    public java.util.List<PipelineRuns> getPipelineRuns() {
         return this.pipelineRuns;
     }
 
@@ -104,7 +109,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         private String errorCode; 
         private String errorMessage; 
         private String nextToken; 
-        private java.util.List < PipelineRuns> pipelineRuns; 
+        private java.util.List<PipelineRuns> pipelineRuns; 
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
@@ -136,7 +141,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         /**
          * pipelineRuns.
          */
-        public Builder pipelineRuns(java.util.List < PipelineRuns> pipelineRuns) {
+        public Builder pipelineRuns(java.util.List<PipelineRuns> pipelineRuns) {
             this.pipelineRuns = pipelineRuns;
             return this;
         }
@@ -171,26 +176,32 @@ public class ListPipelineRunsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPipelineRunsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPipelineRunsResponseBody</p>
+     */
     public static class PipelineRuns extends TeaModel {
-        @NameInMap("creatorAccountId")
+        @com.aliyun.core.annotation.NameInMap("creatorAccountId")
         private String creatorAccountId;
 
-        @NameInMap("endTime")
+        @com.aliyun.core.annotation.NameInMap("endTime")
         private Long endTime;
 
-        @NameInMap("pipelineId")
+        @com.aliyun.core.annotation.NameInMap("pipelineId")
         private Long pipelineId;
 
-        @NameInMap("pipelineRunId")
+        @com.aliyun.core.annotation.NameInMap("pipelineRunId")
         private Long pipelineRunId;
 
-        @NameInMap("startTime")
+        @com.aliyun.core.annotation.NameInMap("startTime")
         private Long startTime;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("triggerMode")
+        @com.aliyun.core.annotation.NameInMap("triggerMode")
         private Long triggerMode;
 
         private PipelineRuns(Builder builder) {

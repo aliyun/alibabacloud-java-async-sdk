@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCategoryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCategoryResponseBody</p>
  */
 public class DescribeCategoryResponseBody extends TeaModel {
-    @NameInMap("Category")
+    @com.aliyun.core.annotation.NameInMap("Category")
     private Category category;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCategoryResponseBody(Builder builder) {
@@ -71,20 +71,30 @@ public class DescribeCategoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCategoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCategoryResponseBody</p>
+     */
     public static class Category extends TeaModel {
-        @NameInMap("CategoryId")
+        @com.aliyun.core.annotation.NameInMap("BizCode")
+        private String bizCode;
+
+        @com.aliyun.core.annotation.NameInMap("CategoryId")
         private Long categoryId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ParentCategoryId")
+        @com.aliyun.core.annotation.NameInMap("ParentCategoryId")
         private Long parentCategoryId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private Category(Builder builder) {
+            this.bizCode = builder.bizCode;
             this.categoryId = builder.categoryId;
             this.name = builder.name;
             this.parentCategoryId = builder.parentCategoryId;
@@ -97,6 +107,13 @@ public class DescribeCategoryResponseBody extends TeaModel {
 
         public static Category create() {
             return builder().build();
+        }
+
+        /**
+         * @return bizCode
+         */
+        public String getBizCode() {
+            return this.bizCode;
         }
 
         /**
@@ -128,10 +145,19 @@ public class DescribeCategoryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String bizCode; 
             private Long categoryId; 
             private String name; 
             private Long parentCategoryId; 
             private Integer status; 
+
+            /**
+             * BizCode.
+             */
+            public Builder bizCode(String bizCode) {
+                this.bizCode = bizCode;
+                return this;
+            }
 
             /**
              * CategoryId.

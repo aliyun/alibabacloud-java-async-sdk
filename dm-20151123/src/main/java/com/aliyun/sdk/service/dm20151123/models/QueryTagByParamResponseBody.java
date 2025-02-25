@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20151123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryTagByParamResponseBody} extends {@link TeaModel}
  *
  * <p>QueryTagByParamResponseBody</p>
  */
 public class QueryTagByParamResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
     private QueryTagByParamResponseBody(Builder builder) {
@@ -131,14 +136,20 @@ public class QueryTagByParamResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryTagByParamResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTagByParamResponseBody</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("TagDescription")
+        @com.aliyun.core.annotation.NameInMap("TagDescription")
         private String tagDescription;
 
-        @NameInMap("TagId")
+        @com.aliyun.core.annotation.NameInMap("TagId")
         private String tagId;
 
-        @NameInMap("TagName")
+        @com.aliyun.core.annotation.NameInMap("TagName")
         private String tagName;
 
         private Tag(Builder builder) {
@@ -212,9 +223,15 @@ public class QueryTagByParamResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryTagByParamResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTagByParamResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("tag")
-        private java.util.List < Tag> tag;
+        @com.aliyun.core.annotation.NameInMap("tag")
+        private java.util.List<Tag> tag;
 
         private Data(Builder builder) {
             this.tag = builder.tag;
@@ -231,17 +248,17 @@ public class QueryTagByParamResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }

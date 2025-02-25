@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CapacityPlanResponseBody} extends {@link TeaModel}
  *
  * <p>CapacityPlanResponseBody</p>
  */
 public class CapacityPlanResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private CapacityPlanResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class CapacityPlanResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The response of the request.
+         * <p>ID of the current request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E91B7129-A669-4D9D-A743-F90A0FF1F5EF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class CapacityPlanResponseBody extends TeaModel {
         }
 
         /**
-         * The extension configuration information.
+         * <p>Returned result of the request.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -71,14 +74,20 @@ public class CapacityPlanResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CapacityPlanResponseBody} extends {@link TeaModel}
+     *
+     * <p>CapacityPlanResponseBody</p>
+     */
     public static class ExtendConfigs extends TeaModel {
-        @NameInMap("ConfigType")
+        @com.aliyun.core.annotation.NameInMap("ConfigType")
         private String configType;
 
-        @NameInMap("Disk")
+        @com.aliyun.core.annotation.NameInMap("Disk")
         private Long disk;
 
-        @NameInMap("DiskType")
+        @com.aliyun.core.annotation.NameInMap("DiskType")
         private String diskType;
 
         private ExtendConfigs(Builder builder) {
@@ -122,7 +131,13 @@ public class CapacityPlanResponseBody extends TeaModel {
             private String diskType; 
 
             /**
-             * The size of the disk. Unit: GiB.
+             * <p>Configuration type, with a single value: sharedDisk.</p>
+             * <blockquote>
+             * <p>This extendConfigs attribute may appear when the planned instance type is Advanced.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>sharedDisk</p>
              */
             public Builder configType(String configType) {
                 this.configType = configType;
@@ -130,10 +145,10 @@ public class CapacityPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the disk. Valid value: CPFS_PREMIUM.
-             * <p>
+             * <p>Disk size, in GiB.</p>
              * 
-             * >  The extendConfigs attribute that may occur when the planned instance type is enhanced (advanced).
+             * <strong>example:</strong>
+             * <p>2048</p>
              */
             public Builder disk(Long disk) {
                 this.disk = disk;
@@ -141,12 +156,13 @@ public class CapacityPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The version type. Valid values:
-             * <p>
+             * <p>Disk type, with a single value: CPFS_PREMIUM.</p>
+             * <blockquote>
+             * <p>This extendConfigs attribute may appear when the planned instance type is Advanced.</p>
+             * </blockquote>
              * 
-             * *   advanced: enhanced edition
-             * *   x-pack: Commercial Edition
-             * *   community: community version
+             * <strong>example:</strong>
+             * <p>CPFS_PREMIUM</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -160,23 +176,29 @@ public class CapacityPlanResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CapacityPlanResponseBody} extends {@link TeaModel}
+     *
+     * <p>CapacityPlanResponseBody</p>
+     */
     public static class NodeConfigurations extends TeaModel {
-        @NameInMap("Amount")
+        @com.aliyun.core.annotation.NameInMap("Amount")
         private Long amount;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Long cpu;
 
-        @NameInMap("Disk")
+        @com.aliyun.core.annotation.NameInMap("Disk")
         private Long disk;
 
-        @NameInMap("DiskType")
+        @com.aliyun.core.annotation.NameInMap("DiskType")
         private String diskType;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Long memory;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
         private NodeConfigurations(Builder builder) {
@@ -247,7 +269,10 @@ public class CapacityPlanResponseBody extends TeaModel {
             private String nodeType; 
 
             /**
-             * The number of CPUs of the cloud desktop.
+             * <p>Number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder amount(Long amount) {
                 this.amount = amount;
@@ -255,7 +280,10 @@ public class CapacityPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the disk. Unit: GiB.
+             * <p>Number of CPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cpu(Long cpu) {
                 this.cpu = cpu;
@@ -263,14 +291,10 @@ public class CapacityPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the hard disk. Valid values:
-             * <p>
+             * <p>Disk size, in GiB.</p>
              * 
-             * *   cloud_essd: enhanced SSD (ESSD)
-             * *   cloud_ssd: standard SSD
-             * *   cloud_efficiency: ultra disk
-             * *   local_ssd: local SSD
-             * *   local_efficiency: local ultra disk
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder disk(Long disk) {
                 this.disk = disk;
@@ -278,7 +302,22 @@ public class CapacityPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size of the current node role.
+             * <p>Disk type, with meanings as follows:</p>
+             * <ul>
+             * <li><p>cloud_essd: ESSD Cloud Disk</p>
+             * </li>
+             * <li><p>cloud_ssd: SSD Cloud Disk</p>
+             * </li>
+             * <li><p>cloud_efficiency: Efficient Cloud Disk</p>
+             * </li>
+             * <li><p>local_ssd: Local SSD Disk</p>
+             * </li>
+             * <li><p>local_efficiency: Local Efficient Disk</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_ssd</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -286,15 +325,10 @@ public class CapacityPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the node. Supported types are as follows:
-             * <p>
+             * <p>Specified memory size for the current node role.</p>
              * 
-             * *   WORKER: data node
-             * *   WORKER_WARM: cold data node
-             * *   MASTER: dedicated master node
-             * *   KIBANA: Kibana node
-             * *   COORDINATING: client node
-             * *   ELASTIC_WORKER: elastic node
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder memory(Long memory) {
                 this.memory = memory;
@@ -302,11 +336,24 @@ public class CapacityPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The result calculated based on the capacity planning. No default value is available. The values are as follows:
-             * <p>
+             * <p>Node type, with supported types as follows:</p>
+             * <ul>
+             * <li><p>WORKER: Data Node</p>
+             * </li>
+             * <li><p>WORKER_WARM: Cold Data Node</p>
+             * </li>
+             * <li><p>MASTER: Dedicated Master Node</p>
+             * </li>
+             * <li><p>KIBANA: Kibana Node</p>
+             * </li>
+             * <li><p>COORDINATING: Coordinator Node</p>
+             * </li>
+             * <li><p>ELASTIC_WORKER: Elastic Node</p>
+             * </li>
+             * </ul>
              * 
-             * *   true: indicates that the number of data nodes calculated by capacity planning exceeds the threshold of 50.
-             * *   false: The number of data nodes calculated by capacity planning is less than 50.
+             * <strong>example:</strong>
+             * <p>WORKER</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -320,17 +367,23 @@ public class CapacityPlanResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CapacityPlanResponseBody} extends {@link TeaModel}
+     *
+     * <p>CapacityPlanResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("ExtendConfigs")
+        @com.aliyun.core.annotation.NameInMap("ExtendConfigs")
         private java.util.List < ExtendConfigs> extendConfigs;
 
-        @NameInMap("InstanceCategory")
+        @com.aliyun.core.annotation.NameInMap("InstanceCategory")
         private String instanceCategory;
 
-        @NameInMap("NodeConfigurations")
+        @com.aliyun.core.annotation.NameInMap("NodeConfigurations")
         private java.util.List < NodeConfigurations> nodeConfigurations;
 
-        @NameInMap("OversizedCluster")
+        @com.aliyun.core.annotation.NameInMap("OversizedCluster")
         private Boolean oversizedCluster;
 
         private Result(Builder builder) {
@@ -383,10 +436,7 @@ public class CapacityPlanResponseBody extends TeaModel {
             private Boolean oversizedCluster; 
 
             /**
-             * The type of the configuration. Set the value to sharedDisk.
-             * <p>
-             * 
-             * >  The extendConfigs attribute that may occur when the planned instance type is enhanced (advanced).
+             * <p>Extended configuration information.</p>
              */
             public Builder extendConfigs(java.util.List < ExtendConfigs> extendConfigs) {
                 this.extendConfigs = extendConfigs;
@@ -394,7 +444,18 @@ public class CapacityPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The node information.
+             * <p>Edition type, with values meaning as follows:</p>
+             * <ul>
+             * <li><p>advanced: Enhanced Edition</p>
+             * </li>
+             * <li><p>x-pack: Commercial Edition</p>
+             * </li>
+             * <li><p>community: Community Edition</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>advanced</p>
              */
             public Builder instanceCategory(String instanceCategory) {
                 this.instanceCategory = instanceCategory;
@@ -402,7 +463,7 @@ public class CapacityPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The number of cores.
+             * <p>Node information.</p>
              */
             public Builder nodeConfigurations(java.util.List < NodeConfigurations> nodeConfigurations) {
                 this.nodeConfigurations = nodeConfigurations;
@@ -410,7 +471,16 @@ public class CapacityPlanResponseBody extends TeaModel {
             }
 
             /**
-             * OversizedCluster.
+             * <p>Based on the capacity planning calculation, there is no default value. The meanings of the values are as follows:</p>
+             * <ul>
+             * <li><p>true: Represents an oversized cluster, indicating that the number of data nodes calculated by the capacity planning exceeds the threshold of 50.</p>
+             * </li>
+             * <li><p>false: The number of data nodes calculated by the capacity planning is within 50.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder oversizedCluster(Boolean oversizedCluster) {
                 this.oversizedCluster = oversizedCluster;

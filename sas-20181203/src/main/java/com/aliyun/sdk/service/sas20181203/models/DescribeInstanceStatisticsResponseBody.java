@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceStatisticsResponseBody</p>
  */
 public class DescribeInstanceStatisticsResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceStatisticsResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -46,19 +51,22 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
 
         /**
-         * The risk information about the asset.
+         * <p>The risk information about assets.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8F035A9D-D19F-5430-8CA5-1497991B7C61</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,65 +79,74 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceStatisticsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Account")
+        @com.aliyun.core.annotation.NameInMap("Account")
         private Integer account;
 
-        @NameInMap("AgentlessAll")
+        @com.aliyun.core.annotation.NameInMap("AgentlessAll")
         private Integer agentlessAll;
 
-        @NameInMap("AgentlessBaseline")
+        @com.aliyun.core.annotation.NameInMap("AgentlessBaseline")
         private Integer agentlessBaseline;
 
-        @NameInMap("AgentlessMalicious")
+        @com.aliyun.core.annotation.NameInMap("AgentlessMalicious")
         private Integer agentlessMalicious;
 
-        @NameInMap("AgentlessVulCve")
+        @com.aliyun.core.annotation.NameInMap("AgentlessSensitiveFile")
+        private Integer agentlessSensitiveFile;
+
+        @com.aliyun.core.annotation.NameInMap("AgentlessVulCve")
         private Integer agentlessVulCve;
 
-        @NameInMap("AgentlessVulSca")
+        @com.aliyun.core.annotation.NameInMap("AgentlessVulSca")
         private Integer agentlessVulSca;
 
-        @NameInMap("AgentlessVulSys")
+        @com.aliyun.core.annotation.NameInMap("AgentlessVulSys")
         private Integer agentlessVulSys;
 
-        @NameInMap("AppNum")
+        @com.aliyun.core.annotation.NameInMap("AppNum")
         private Integer appNum;
 
-        @NameInMap("CmsNum")
+        @com.aliyun.core.annotation.NameInMap("CmsNum")
         private Integer cmsNum;
 
-        @NameInMap("CspmNum")
+        @com.aliyun.core.annotation.NameInMap("CspmNum")
         private Integer cspmNum;
 
-        @NameInMap("CveNum")
+        @com.aliyun.core.annotation.NameInMap("CveNum")
         private Integer cveNum;
 
-        @NameInMap("EmgNum")
+        @com.aliyun.core.annotation.NameInMap("EmgNum")
         private Integer emgNum;
 
-        @NameInMap("Health")
+        @com.aliyun.core.annotation.NameInMap("Health")
         private Integer health;
 
-        @NameInMap("ScaNum")
+        @com.aliyun.core.annotation.NameInMap("ScaNum")
         private Integer scaNum;
 
-        @NameInMap("Suspicious")
+        @com.aliyun.core.annotation.NameInMap("Suspicious")
         private Integer suspicious;
 
-        @NameInMap("SysNum")
+        @com.aliyun.core.annotation.NameInMap("SysNum")
         private Integer sysNum;
 
-        @NameInMap("Trojan")
+        @com.aliyun.core.annotation.NameInMap("Trojan")
         private Integer trojan;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
-        @NameInMap("Vul")
+        @com.aliyun.core.annotation.NameInMap("Vul")
         private Integer vul;
 
-        @NameInMap("WeakPWNum")
+        @com.aliyun.core.annotation.NameInMap("WeakPWNum")
         private Integer weakPWNum;
 
         private Data(Builder builder) {
@@ -137,6 +154,7 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             this.agentlessAll = builder.agentlessAll;
             this.agentlessBaseline = builder.agentlessBaseline;
             this.agentlessMalicious = builder.agentlessMalicious;
+            this.agentlessSensitiveFile = builder.agentlessSensitiveFile;
             this.agentlessVulCve = builder.agentlessVulCve;
             this.agentlessVulSca = builder.agentlessVulSca;
             this.agentlessVulSys = builder.agentlessVulSys;
@@ -189,6 +207,13 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
          */
         public Integer getAgentlessMalicious() {
             return this.agentlessMalicious;
+        }
+
+        /**
+         * @return agentlessSensitiveFile
+         */
+        public Integer getAgentlessSensitiveFile() {
+            return this.agentlessSensitiveFile;
         }
 
         /**
@@ -308,6 +333,7 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             private Integer agentlessAll; 
             private Integer agentlessBaseline; 
             private Integer agentlessMalicious; 
+            private Integer agentlessSensitiveFile; 
             private Integer agentlessVulCve; 
             private Integer agentlessVulSca; 
             private Integer agentlessVulSys; 
@@ -326,7 +352,10 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             private Integer weakPWNum; 
 
             /**
-             * The number of unusual logons to the asset.
+             * <p>The number of unusual logons to the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder account(Integer account) {
                 this.account = account;
@@ -334,7 +363,10 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of alerts generated by the agentless detection feature.
+             * <p>The number of alerts generated by the agentless detection feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder agentlessAll(Integer agentlessAll) {
                 this.agentlessAll = agentlessAll;
@@ -342,7 +374,10 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of baseline risks detected by the agentless detection feature.
+             * <p>The number of baseline risks detected by the agentless detection feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder agentlessBaseline(Integer agentlessBaseline) {
                 this.agentlessBaseline = agentlessBaseline;
@@ -350,7 +385,10 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of malicious samples detected by the agentless detection feature.
+             * <p>The number of malicious samples detected by the agentless detection feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder agentlessMalicious(Integer agentlessMalicious) {
                 this.agentlessMalicious = agentlessMalicious;
@@ -358,7 +396,21 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of system vulnerabilities detected by the agentless detection feature.
+             * <p>The number of sensitive file alerts generated by the agentless detection feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder agentlessSensitiveFile(Integer agentlessSensitiveFile) {
+                this.agentlessSensitiveFile = agentlessSensitiveFile;
+                return this;
+            }
+
+            /**
+             * <p>The number of system vulnerabilities detected by the agentless detection feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder agentlessVulCve(Integer agentlessVulCve) {
                 this.agentlessVulCve = agentlessVulCve;
@@ -366,7 +418,10 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of application vulnerabilities detected by the agentless detection feature.
+             * <p>The number of application vulnerabilities detected by the agentless detection feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder agentlessVulSca(Integer agentlessVulSca) {
                 this.agentlessVulSca = agentlessVulSca;
@@ -374,7 +429,10 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of Windows vulnerabilities detected by using agentless detection.
+             * <p>The number of Windows vulnerabilities detected by using agentless detection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder agentlessVulSys(Integer agentlessVulSys) {
                 this.agentlessVulSys = agentlessVulSys;
@@ -382,7 +440,10 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of application vulnerabilities detected on the asset.
+             * <p>The number of application vulnerabilities detected on the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder appNum(Integer appNum) {
                 this.appNum = appNum;
@@ -390,7 +451,10 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of Web-CMS vulnerabilities detected on the asset.
+             * <p>The number of Web-CMS vulnerabilities detected on the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder cmsNum(Integer cmsNum) {
                 this.cmsNum = cmsNum;
@@ -398,7 +462,10 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of configuration risks detected on the asset.
+             * <p>The number of configuration risks detected on the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cspmNum(Integer cspmNum) {
                 this.cspmNum = cspmNum;
@@ -406,7 +473,10 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of common vulnerabilities detected on the asset.
+             * <p>The number of common vulnerabilities detected on the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cveNum(Integer cveNum) {
                 this.cveNum = cveNum;
@@ -414,7 +484,10 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of urgent vulnerabilities detected on the asset.
+             * <p>The number of urgent vulnerabilities detected on the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder emgNum(Integer emgNum) {
                 this.emgNum = emgNum;
@@ -422,7 +495,10 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of baseline risks detected on the asset.
+             * <p>The number of baseline risks detected on the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder health(Integer health) {
                 this.health = health;
@@ -430,7 +506,10 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of middleware vulnerabilities detected on the asset.
+             * <p>The number of middleware vulnerabilities detected on the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder scaNum(Integer scaNum) {
                 this.scaNum = scaNum;
@@ -438,7 +517,10 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of alerts generated for the asset.
+             * <p>The number of alerts generated for the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder suspicious(Integer suspicious) {
                 this.suspicious = suspicious;
@@ -446,7 +528,10 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of Windows system vulnerabilities detected on the asset.
+             * <p>The number of Windows system vulnerabilities detected on the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder sysNum(Integer sysNum) {
                 this.sysNum = sysNum;
@@ -454,7 +539,10 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of trojans detected on the asset.
+             * <p>The number of trojans detected on the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder trojan(Integer trojan) {
                 this.trojan = trojan;
@@ -462,7 +550,10 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the asset.
+             * <p>The UUID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6690a46c-0edb-4663-a641-3629d1a9****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -470,7 +561,10 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of vulnerabilities detected on the asset.
+             * <p>The total number of vulnerabilities detected on the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17</p>
              */
             public Builder vul(Integer vul) {
                 this.vul = vul;
@@ -478,7 +572,10 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of weak passwords.
+             * <p>The number of weak passwords.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder weakPWNum(Integer weakPWNum) {
                 this.weakPWNum = weakPWNum;

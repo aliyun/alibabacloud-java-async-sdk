@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bpstudio20210931.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>ListTemplateResponseBody</p>
  */
 public class ListTemplateResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private Integer nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListTemplateResponseBody(Builder builder) {
@@ -98,7 +98,10 @@ public class ListTemplateResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +109,7 @@ public class ListTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The details about templates.
+         * <p>The details about templates.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -114,7 +117,10 @@ public class ListTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +128,10 @@ public class ListTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder nextToken(Integer nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +139,10 @@ public class ListTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A07FFDF2-78FA-1B48-9E38-88E833A93187</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class ListTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -151,26 +166,32 @@ public class ListTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTemplateResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ImageURL")
+        @com.aliyun.core.annotation.NameInMap("ImageURL")
         private String imageURL;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("TagId")
+        @com.aliyun.core.annotation.NameInMap("TagId")
         private Integer tagId;
 
-        @NameInMap("TagName")
+        @com.aliyun.core.annotation.NameInMap("TagName")
         private String tagName;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
         private Data(Builder builder) {
@@ -250,7 +271,10 @@ public class ListTemplateResponseBody extends TeaModel {
             private String templateId; 
 
             /**
-             * The time when the template was created.
+             * <p>The time when the template was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-18 16:41:31</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -258,7 +282,10 @@ public class ListTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the architecture image.
+             * <p>The URL of the architecture image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bp-studio-template/sr-U37UD2YQCRJ75X5V.png</p>
              */
             public Builder imageURL(String imageURL) {
                 this.imageURL = imageURL;
@@ -266,7 +293,10 @@ public class ListTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the template.
+             * <p>The name of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cadt-name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -274,7 +304,10 @@ public class ListTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmyjt3c5om3hi</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -282,7 +315,10 @@ public class ListTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tag that is added to the template.
+             * <p>The ID of the tag that is added to the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder tagId(Integer tagId) {
                 this.tagId = tagId;
@@ -290,7 +326,10 @@ public class ListTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the tag that is added to the template.
+             * <p>The name of the tag that is added to the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Official template</p>
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;
@@ -298,7 +337,10 @@ public class ListTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the template.
+             * <p>The ID of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CJQ6H0XUEQ20IYJQ</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;

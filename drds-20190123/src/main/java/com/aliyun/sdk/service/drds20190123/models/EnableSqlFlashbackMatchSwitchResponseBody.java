@@ -62,7 +62,7 @@ public class EnableSqlFlashbackMatchSwitchResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class EnableSqlFlashbackMatchSwitchResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Indicates whether SqlFlashbackMatchSwitch is enabled or not.
          */
         public Builder result(Boolean result) {
             this.result = result;
@@ -78,7 +78,7 @@ public class EnableSqlFlashbackMatchSwitchResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was sent successfully or not.
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -1,30 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eflo20220530.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVpdResponseBody} extends {@link TeaModel}
  *
  * <p>CreateVpdResponseBody</p>
  */
 public class CreateVpdResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private Content content;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateVpdResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.content = builder.content;
         this.message = builder.message;
@@ -37,6 +46,13 @@ public class CreateVpdResponseBody extends TeaModel {
 
     public static CreateVpdResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -68,13 +84,25 @@ public class CreateVpdResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private Integer code; 
         private Content content; 
         private String message; 
         private String requestId; 
 
         /**
-         * Code.
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
+
+        /**
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +110,7 @@ public class CreateVpdResponseBody extends TeaModel {
         }
 
         /**
-         * Content.
+         * <p>The response parameters.</p>
          */
         public Builder content(Content content) {
             this.content = content;
@@ -90,7 +118,10 @@ public class CreateVpdResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +129,10 @@ public class CreateVpdResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DBAD15D6-3F47-5B36-8A92-57C2919D13D0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,11 +145,17 @@ public class CreateVpdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateVpdResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateVpdResponseBody</p>
+     */
     public static class Content extends TeaModel {
-        @NameInMap("SubnetIds")
-        private java.util.List < String > subnetIds;
+        @com.aliyun.core.annotation.NameInMap("SubnetIds")
+        private java.util.List<String> subnetIds;
 
-        @NameInMap("VpdId")
+        @com.aliyun.core.annotation.NameInMap("VpdId")
         private String vpdId;
 
         private Content(Builder builder) {
@@ -134,7 +174,7 @@ public class CreateVpdResponseBody extends TeaModel {
         /**
          * @return subnetIds
          */
-        public java.util.List < String > getSubnetIds() {
+        public java.util.List<String> getSubnetIds() {
             return this.subnetIds;
         }
 
@@ -146,19 +186,22 @@ public class CreateVpdResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > subnetIds; 
+            private java.util.List<String> subnetIds; 
             private String vpdId; 
 
             /**
-             * SubnetIds.
+             * <p>Lingjun subnet ID list</p>
              */
-            public Builder subnetIds(java.util.List < String > subnetIds) {
+            public Builder subnetIds(java.util.List<String> subnetIds) {
                 this.subnetIds = subnetIds;
                 return this;
             }
 
             /**
-             * VpdId.
+             * <p>Lingjun CIDR block instance ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpd-eoiy88ju</p>
              */
             public Builder vpdId(String vpdId) {
                 this.vpdId = vpdId;

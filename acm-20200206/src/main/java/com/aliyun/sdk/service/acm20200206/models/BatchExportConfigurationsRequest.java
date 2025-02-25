@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.acm20200206.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BatchExportConfigurationsRequest</p>
  */
 public class BatchExportConfigurationsRequest extends Request {
-    @Query
-    @NameInMap("Data")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Data")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String data;
 
-    @Query
-    @NameInMap("NamespaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespaceId;
 
     private BatchExportConfigurationsRequest(Builder builder) {
@@ -63,10 +62,10 @@ public class BatchExportConfigurationsRequest extends Request {
             super();
         } 
 
-        private Builder(BatchExportConfigurationsRequest response) {
-            super(response);
-            this.data = response.data;
-            this.namespaceId = response.namespaceId;
+        private Builder(BatchExportConfigurationsRequest request) {
+            super(request);
+            this.data = request.data;
+            this.namespaceId = request.namespaceId;
         } 
 
         /**

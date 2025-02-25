@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainRecordsResponseBody</p>
  */
 public class DescribeDomainRecordsResponseBody extends TeaModel {
-    @NameInMap("DomainRecords")
+    @com.aliyun.core.annotation.NameInMap("DomainRecords")
     private DomainRecords domainRecords;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeDomainRecordsResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The DNS records returned.
+         * <p>The returned Domain Name System (DNS) records.</p>
          */
         public Builder domainRecords(DomainRecords domainRecords) {
             this.domainRecords = domainRecords;
@@ -94,7 +99,10 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the returned page.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of DNS records.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -131,47 +148,53 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainRecordsResponseBody</p>
+     */
     public static class Record extends TeaModel {
-        @NameInMap("CreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("Line")
+        @com.aliyun.core.annotation.NameInMap("Line")
         private String line;
 
-        @NameInMap("Locked")
+        @com.aliyun.core.annotation.NameInMap("Locked")
         private Boolean locked;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Long priority;
 
-        @NameInMap("RR")
+        @com.aliyun.core.annotation.NameInMap("RR")
         private String rr;
 
-        @NameInMap("RecordId")
+        @com.aliyun.core.annotation.NameInMap("RecordId")
         private String recordId;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TTL")
+        @com.aliyun.core.annotation.NameInMap("TTL")
         private Long TTL;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UpdateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("UpdateTimestamp")
         private Long updateTimestamp;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private Record(Builder builder) {
@@ -314,7 +337,10 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * CreateTimestamp.
+             * <p>The time when the DNS record was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since 00:00:00 UTC on January 1, 1970.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1666501957000</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -322,7 +348,10 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name to which the DNS record belongs.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -330,7 +359,10 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The line that is used by the DNS record.
+             * <p>The resolution line.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder line(String line) {
                 this.line = line;
@@ -338,7 +370,10 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the DNS record is locked.
+             * <p>Indicates whether the DNS record is locked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder locked(Boolean locked) {
                 this.locked = locked;
@@ -346,7 +381,10 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the MX record.
+             * <p>The priority of the mail exchanger (MX) record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder priority(Long priority) {
                 this.priority = priority;
@@ -354,7 +392,10 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The RR value.
+             * <p>The hostname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>www</p>
              */
             public Builder rr(String rr) {
                 this.rr = rr;
@@ -362,7 +403,10 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the DNS record.
+             * <p>The ID of the DNS record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9999985</p>
              */
             public Builder recordId(String recordId) {
                 this.recordId = recordId;
@@ -370,7 +414,10 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the DNS record.
+             * <p>The description of the DNS record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -378,7 +425,10 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the DNS record.
+             * <p>The status of the DNS record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -386,7 +436,10 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The time-to-live (TTL) of the DNS record.
+             * <p>The time-to-live (TTL) of the cached DNS record. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder TTL(Long TTL) {
                 this.TTL = TTL;
@@ -394,7 +447,10 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the DNS record.
+             * <p>The type of the DNS record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MX</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -402,7 +458,10 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTimestamp.
+             * <p>The time when the DNS record was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since 00:00:00 UTC on January 1, 1970.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1676872961000</p>
              */
             public Builder updateTimestamp(Long updateTimestamp) {
                 this.updateTimestamp = updateTimestamp;
@@ -410,7 +469,10 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The record value.
+             * <p>The record value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mail1.hichina.com</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -418,7 +480,10 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The weight of the DNS record.
+             * <p>The weight of the DNS record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -432,9 +497,15 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainRecordsResponseBody</p>
+     */
     public static class DomainRecords extends TeaModel {
-        @NameInMap("Record")
-        private java.util.List < Record> record;
+        @com.aliyun.core.annotation.NameInMap("Record")
+        private java.util.List<Record> record;
 
         private DomainRecords(Builder builder) {
             this.record = builder.record;
@@ -451,17 +522,17 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
         /**
          * @return record
          */
-        public java.util.List < Record> getRecord() {
+        public java.util.List<Record> getRecord() {
             return this.record;
         }
 
         public static final class Builder {
-            private java.util.List < Record> record; 
+            private java.util.List<Record> record; 
 
             /**
              * Record.
              */
-            public Builder record(java.util.List < Record> record) {
+            public Builder record(java.util.List<Record> record) {
                 this.record = record;
                 return this;
             }

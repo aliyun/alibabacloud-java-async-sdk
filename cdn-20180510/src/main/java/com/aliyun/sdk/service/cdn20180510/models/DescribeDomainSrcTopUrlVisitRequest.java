@@ -1,32 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainSrcTopUrlVisitRequest} extends {@link RequestModel}
  *
  * <p>DescribeDomainSrcTopUrlVisitRequest</p>
  */
 public class DescribeDomainSrcTopUrlVisitRequest extends Request {
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeDomainSrcTopUrlVisitRequest(Builder builder) {
@@ -97,7 +97,11 @@ public class DescribeDomainSrcTopUrlVisitRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name. Separate multiple accelerated domain names with commas (,).
+         * <p>The accelerated domain name. Separate multiple accelerated domain names with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -106,12 +110,14 @@ public class DescribeDomainSrcTopUrlVisitRequest extends Request {
         }
 
         /**
-         * The end of the time range to query.
-         * <p>
+         * <p>The end of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p>The end time must be later than the start time. The duration between the end time and the start time cannot exceed seven days.</p>
+         * </blockquote>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         * 
-         * > The end time must be later than the start time. The duration between the end time and the start time cannot exceed seven days.
+         * <strong>example:</strong>
+         * <p>2018-10-03T20:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -120,11 +126,14 @@ public class DescribeDomainSrcTopUrlVisitRequest extends Request {
         }
 
         /**
-         * The method that is used to sort the returned URLs. Default value: **pv**. Valid values:
-         * <p>
+         * <p>The method that is used to sort the returned URLs. Default value: <strong>pv</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>traf</strong>: by network traffic</li>
+         * <li><strong>pv</strong>: by the number of visits</li>
+         * </ul>
          * 
-         * *   **traf**: by network traffic
-         * *   **pv**: by the number of visits
+         * <strong>example:</strong>
+         * <p>pv</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -133,12 +142,14 @@ public class DescribeDomainSrcTopUrlVisitRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query.
-         * <p>
+         * <p>The beginning of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p>If you leave this parameter empty, data within the previous day is queried.</p>
+         * </blockquote>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         * 
-         * > If you leave this parameter empty, data within the previous day is queried.
+         * <strong>example:</strong>
+         * <p>2018-10-03T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

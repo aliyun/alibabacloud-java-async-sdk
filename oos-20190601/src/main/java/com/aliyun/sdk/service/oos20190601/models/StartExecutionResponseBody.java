@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartExecutionResponseBody} extends {@link TeaModel}
  *
  * <p>StartExecutionResponseBody</p>
  */
 public class StartExecutionResponseBody extends TeaModel {
-    @NameInMap("Execution")
+    @com.aliyun.core.annotation.NameInMap("Execution")
     private Execution execution;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private StartExecutionResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class StartExecutionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the execution.
+         * <p>The details of the execution.</p>
          */
         public Builder execution(Execution execution) {
             this.execution = execution;
@@ -58,7 +63,10 @@ public class StartExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14A07460-EBE7-47CA-9757-12CC4761D47A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class StartExecutionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link StartExecutionResponseBody} extends {@link TeaModel}
+     *
+     * <p>StartExecutionResponseBody</p>
+     */
     public static class CurrentTasks extends TeaModel {
-        @NameInMap("TaskAction")
+        @com.aliyun.core.annotation.NameInMap("TaskAction")
         private String taskAction;
 
-        @NameInMap("TaskExecutionId")
+        @com.aliyun.core.annotation.NameInMap("TaskExecutionId")
         private String taskExecutionId;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
         private CurrentTasks(Builder builder) {
@@ -122,7 +136,10 @@ public class StartExecutionResponseBody extends TeaModel {
             private String taskName; 
 
             /**
-             * The action of the task.
+             * <p>The action of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS::TimerTrigger</p>
              */
             public Builder taskAction(String taskAction) {
                 this.taskAction = taskAction;
@@ -130,7 +147,10 @@ public class StartExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * The execution ID of the task.
+             * <p>The execution ID of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exec-dsadasdawq</p>
              */
             public Builder taskExecutionId(String taskExecutionId) {
                 this.taskExecutionId = taskExecutionId;
@@ -138,7 +158,10 @@ public class StartExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the task.
+             * <p>The name of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testTask</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -152,77 +175,83 @@ public class StartExecutionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link StartExecutionResponseBody} extends {@link TeaModel}
+     *
+     * <p>StartExecutionResponseBody</p>
+     */
     public static class Execution extends TeaModel {
-        @NameInMap("Counters")
-        private java.util.Map < String, ? > counters;
+        @com.aliyun.core.annotation.NameInMap("Counters")
+        private java.util.Map<String, ?> counters;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("CurrentTasks")
-        private java.util.List < CurrentTasks> currentTasks;
+        @com.aliyun.core.annotation.NameInMap("CurrentTasks")
+        private java.util.List<CurrentTasks> currentTasks;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EndDate")
+        @com.aliyun.core.annotation.NameInMap("EndDate")
         private String endDate;
 
-        @NameInMap("ExecutedBy")
+        @com.aliyun.core.annotation.NameInMap("ExecutedBy")
         private String executedBy;
 
-        @NameInMap("ExecutionId")
+        @com.aliyun.core.annotation.NameInMap("ExecutionId")
         private String executionId;
 
-        @NameInMap("IsParent")
+        @com.aliyun.core.annotation.NameInMap("IsParent")
         private Boolean isParent;
 
-        @NameInMap("LoopMode")
+        @com.aliyun.core.annotation.NameInMap("LoopMode")
         private String loopMode;
 
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
-        @NameInMap("Outputs")
+        @com.aliyun.core.annotation.NameInMap("Outputs")
         private String outputs;
 
-        @NameInMap("Parameters")
+        @com.aliyun.core.annotation.NameInMap("Parameters")
         private String parameters;
 
-        @NameInMap("ParentExecutionId")
+        @com.aliyun.core.annotation.NameInMap("ParentExecutionId")
         private String parentExecutionId;
 
-        @NameInMap("RamRole")
+        @com.aliyun.core.annotation.NameInMap("RamRole")
         private String ramRole;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SafetyCheck")
+        @com.aliyun.core.annotation.NameInMap("SafetyCheck")
         private String safetyCheck;
 
-        @NameInMap("StartDate")
+        @com.aliyun.core.annotation.NameInMap("StartDate")
         private String startDate;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusMessage")
+        @com.aliyun.core.annotation.NameInMap("StatusMessage")
         private String statusMessage;
 
-        @NameInMap("Tags")
-        private java.util.Map < String, ? > tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.Map<String, ?> tags;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
-        @NameInMap("TemplateVersion")
+        @com.aliyun.core.annotation.NameInMap("TemplateVersion")
         private String templateVersion;
 
-        @NameInMap("UpdateDate")
+        @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
 
         private Execution(Builder builder) {
@@ -263,7 +292,7 @@ public class StartExecutionResponseBody extends TeaModel {
         /**
          * @return counters
          */
-        public java.util.Map < String, ? > getCounters() {
+        public java.util.Map<String, ?> getCounters() {
             return this.counters;
         }
 
@@ -277,7 +306,7 @@ public class StartExecutionResponseBody extends TeaModel {
         /**
          * @return currentTasks
          */
-        public java.util.List < CurrentTasks> getCurrentTasks() {
+        public java.util.List<CurrentTasks> getCurrentTasks() {
             return this.currentTasks;
         }
 
@@ -396,7 +425,7 @@ public class StartExecutionResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.Map < String, ? > getTags() {
+        public java.util.Map<String, ?> getTags() {
             return this.tags;
         }
 
@@ -429,9 +458,9 @@ public class StartExecutionResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > counters; 
+            private java.util.Map<String, ?> counters; 
             private String createDate; 
-            private java.util.List < CurrentTasks> currentTasks; 
+            private java.util.List<CurrentTasks> currentTasks; 
             private String description; 
             private String endDate; 
             private String executedBy; 
@@ -448,22 +477,28 @@ public class StartExecutionResponseBody extends TeaModel {
             private String startDate; 
             private String status; 
             private String statusMessage; 
-            private java.util.Map < String, ? > tags; 
+            private java.util.Map<String, ?> tags; 
             private String templateId; 
             private String templateName; 
             private String templateVersion; 
             private String updateDate; 
 
             /**
-             * The number of executions.
+             * <p>The number of executions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
-            public Builder counters(java.util.Map < String, ? > counters) {
+            public Builder counters(java.util.Map<String, ?> counters) {
                 this.counters = counters;
                 return this;
             }
 
             /**
-             * The time when the execution was created.
+             * <p>The time when the execution was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-05-16T10:26:14Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -471,15 +506,18 @@ public class StartExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * The information about in-progress tasks.
+             * <p>The information about in-progress tasks.</p>
              */
-            public Builder currentTasks(java.util.List < CurrentTasks> currentTasks) {
+            public Builder currentTasks(java.util.List<CurrentTasks> currentTasks) {
                 this.currentTasks = currentTasks;
                 return this;
             }
 
             /**
-             * The description of the execution.
+             * <p>The description of the execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test execution.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -487,7 +525,10 @@ public class StartExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the execution stopped.
+             * <p>The time when the execution stopped.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-05-16T10:26:14Z</p>
              */
             public Builder endDate(String endDate) {
                 this.endDate = endDate;
@@ -495,7 +536,10 @@ public class StartExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * The account ID of the user who started the execution of the template.
+             * <p>The account ID of the user who started the execution of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root(13092080xx12344)</p>
              */
             public Builder executedBy(String executedBy) {
                 this.executedBy = executedBy;
@@ -503,7 +547,10 @@ public class StartExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * The GUID of the execution.
+             * <p>The GUID of the execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exec-xxxyyy</p>
              */
             public Builder executionId(String executionId) {
                 this.executionId = executionId;
@@ -511,7 +558,10 @@ public class StartExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the execution is a parent execution.
+             * <p>Indicates whether the execution is a parent execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isParent(Boolean isParent) {
                 this.isParent = isParent;
@@ -519,7 +569,10 @@ public class StartExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * The loop mode.
+             * <p>The loop mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Automatic</p>
              */
             public Builder loopMode(String loopMode) {
                 this.loopMode = loopMode;
@@ -527,7 +580,10 @@ public class StartExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * The execution mode.
+             * <p>The execution mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Automatic</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -535,7 +591,10 @@ public class StartExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * The output of the execution.
+             * <p>The output of the execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ &quot;InstanceId&quot;:&quot;i-xxx&quot; }</p>
              */
             public Builder outputs(String outputs) {
                 this.outputs = outputs;
@@ -543,7 +602,10 @@ public class StartExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * The input parameters of the execution.
+             * <p>The input parameters of the execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ &quot;Status&quot;:&quot;Running&quot; }</p>
              */
             public Builder parameters(String parameters) {
                 this.parameters = parameters;
@@ -551,7 +613,10 @@ public class StartExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the parent execution.
+             * <p>The ID of the parent execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exec-xxxx</p>
              */
             public Builder parentExecutionId(String parentExecutionId) {
                 this.parentExecutionId = parentExecutionId;
@@ -559,7 +624,10 @@ public class StartExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * The role that started the execution of the template.
+             * <p>The role that started the execution of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OOSServiceRole</p>
              */
             public Builder ramRole(String ramRole) {
                 this.ramRole = ramRole;
@@ -567,7 +635,10 @@ public class StartExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmxsn4m4******</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -575,7 +646,10 @@ public class StartExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * The security check mode.
+             * <p>The security check mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Skip</p>
              */
             public Builder safetyCheck(String safetyCheck) {
                 this.safetyCheck = safetyCheck;
@@ -583,7 +657,10 @@ public class StartExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the execution was started.
+             * <p>The time when the execution was started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-05-16T10:26:14Z</p>
              */
             public Builder startDate(String startDate) {
                 this.startDate = startDate;
@@ -591,7 +668,10 @@ public class StartExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the execution.
+             * <p>The status of the execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -599,7 +679,10 @@ public class StartExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * The status information of the execution.
+             * <p>The status information of the execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder statusMessage(String statusMessage) {
                 this.statusMessage = statusMessage;
@@ -607,15 +690,21 @@ public class StartExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the execution.
+             * <p>The tags of the execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;k1&quot;:&quot;v2&quot;,&quot;k2&quot;:&quot;v2&quot;}</p>
              */
-            public Builder tags(java.util.Map < String, ? > tags) {
+            public Builder tags(java.util.Map<String, ?> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * The ID of the template.
+             * <p>The ID of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-1bd341007f</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -623,7 +712,10 @@ public class StartExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the template.
+             * <p>The name of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyTemplate</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -631,7 +723,10 @@ public class StartExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * The version number of the template.
+             * <p>The version number of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder templateVersion(String templateVersion) {
                 this.templateVersion = templateVersion;
@@ -639,7 +734,10 @@ public class StartExecutionResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the execution was last updated.
+             * <p>The time when the execution was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-05-16T10:26:14Z</p>
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

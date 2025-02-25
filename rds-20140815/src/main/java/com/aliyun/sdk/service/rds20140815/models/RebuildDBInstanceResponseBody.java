@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RebuildDBInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>RebuildDBInstanceResponseBody</p>
  */
 public class RebuildDBInstanceResponseBody extends TeaModel {
-    @NameInMap("MigrationId")
+    @com.aliyun.core.annotation.NameInMap("MigrationId")
     private Integer migrationId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private Integer taskId;
 
     private RebuildDBInstanceResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class RebuildDBInstanceResponseBody extends TeaModel {
         private Integer taskId; 
 
         /**
-         * The serial number of the task in the rebuild task queue. When the serial number becomes 0, the system starts to rebuild the secondary instance.
+         * <p>The serial number of the task in the rebuild task queue. When the serial number becomes 0, the system starts to rebuild the secondary instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>329****</p>
          */
         public Builder migrationId(Integer migrationId) {
             this.migrationId = migrationId;
@@ -70,7 +78,10 @@ public class RebuildDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>355DA57C-8CC4-40AB-B3F8-B684BA32EB9E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +89,10 @@ public class RebuildDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The task ID.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20867****</p>
          */
         public Builder taskId(Integer taskId) {
             this.taskId = taskId;

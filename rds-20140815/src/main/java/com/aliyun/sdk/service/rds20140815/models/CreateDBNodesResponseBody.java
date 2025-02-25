@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDBNodesResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDBNodesResponseBody</p>
  */
 public class CreateDBNodesResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("NodeIds")
+    @com.aliyun.core.annotation.NameInMap("NodeIds")
     private String nodeIds;
 
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private Long orderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateDBNodesResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class CreateDBNodesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze450g4ctg6t****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -82,7 +90,10 @@ public class CreateDBNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the created node. The value is a string. Multiple values are separated by commas (`,`).
+         * <p>The ID of the created node. The value is a string. Multiple values are separated by commas (<code>,</code>).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rn-abcd2*****</p>
          */
         public Builder nodeIds(String nodeIds) {
             this.nodeIds = nodeIds;
@@ -90,7 +101,10 @@ public class CreateDBNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order.
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2133400000*****</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -98,7 +112,10 @@ public class CreateDBNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7A41C147-C8D0-4DAE-A1A2-17EBCD60DFA1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Shop} extends {@link TeaModel}
  *
  * <p>Shop</p>
  */
 public class Shop extends TeaModel {
-    @NameInMap("cooperationShops")
-    private java.util.List < CooperationShop > cooperationShops;
+    @com.aliyun.core.annotation.NameInMap("cooperationShops")
+    private java.util.List<CooperationShop> cooperationShops;
 
-    @NameInMap("distributorId")
+    @com.aliyun.core.annotation.NameInMap("distributorId")
     private String distributorId;
 
-    @NameInMap("endDate")
+    @com.aliyun.core.annotation.NameInMap("endDate")
     private String endDate;
 
-    @NameInMap("purchaserId")
+    @com.aliyun.core.annotation.NameInMap("purchaserId")
     private String purchaserId;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("shopId")
+    @com.aliyun.core.annotation.NameInMap("shopId")
     private String shopId;
 
-    @NameInMap("shopName")
+    @com.aliyun.core.annotation.NameInMap("shopName")
     private String shopName;
 
-    @NameInMap("shopType")
+    @com.aliyun.core.annotation.NameInMap("shopType")
     private String shopType;
 
-    @NameInMap("startDate")
+    @com.aliyun.core.annotation.NameInMap("startDate")
     private String startDate;
 
-    @NameInMap("status")
+    @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
     private Shop(Builder builder) {
@@ -66,7 +71,7 @@ public class Shop extends TeaModel {
     /**
      * @return cooperationShops
      */
-    public java.util.List < CooperationShop > getCooperationShops() {
+    public java.util.List<CooperationShop> getCooperationShops() {
         return this.cooperationShops;
     }
 
@@ -134,7 +139,7 @@ public class Shop extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CooperationShop > cooperationShops; 
+        private java.util.List<CooperationShop> cooperationShops; 
         private String distributorId; 
         private String endDate; 
         private String purchaserId; 
@@ -148,7 +153,7 @@ public class Shop extends TeaModel {
         /**
          * cooperationShops.
          */
-        public Builder cooperationShops(java.util.List < CooperationShop > cooperationShops) {
+        public Builder cooperationShops(java.util.List<CooperationShop> cooperationShops) {
             this.cooperationShops = cooperationShops;
             return this;
         }

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOrganizationsResponseBody} extends {@link TeaModel}
  *
  * <p>ListOrganizationsResponseBody</p>
  */
 public class ListOrganizationsResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
-    private java.util.List < Result> result;
+    @com.aliyun.core.annotation.NameInMap("result")
+    private java.util.List<Result> result;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("total")
+    @com.aliyun.core.annotation.NameInMap("total")
     private Long total;
 
     private ListOrganizationsResponseBody(Builder builder) {
@@ -71,7 +76,7 @@ public class ListOrganizationsResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -93,7 +98,7 @@ public class ListOrganizationsResponseBody extends TeaModel {
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Boolean success; 
         private Long total; 
 
@@ -124,7 +129,7 @@ public class ListOrganizationsResponseBody extends TeaModel {
         /**
          * result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -151,25 +156,39 @@ public class ListOrganizationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListOrganizationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOrganizationsResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("accessLevel")
+        @com.aliyun.core.annotation.NameInMap("accessLevel")
         private Integer accessLevel;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("organizationId")
+        @com.aliyun.core.annotation.NameInMap("namespaceId")
+        private String namespaceId;
+
+        @com.aliyun.core.annotation.NameInMap("organizationAlias")
+        private String organizationAlias;
+
+        @com.aliyun.core.annotation.NameInMap("organizationId")
         private String organizationId;
 
-        @NameInMap("organizationName")
+        @com.aliyun.core.annotation.NameInMap("organizationName")
         private String organizationName;
 
-        @NameInMap("organizationRole")
+        @com.aliyun.core.annotation.NameInMap("organizationRole")
         private String organizationRole;
 
         private Result(Builder builder) {
             this.accessLevel = builder.accessLevel;
             this.id = builder.id;
+            this.namespaceId = builder.namespaceId;
+            this.organizationAlias = builder.organizationAlias;
             this.organizationId = builder.organizationId;
             this.organizationName = builder.organizationName;
             this.organizationRole = builder.organizationRole;
@@ -198,6 +217,20 @@ public class ListOrganizationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return namespaceId
+         */
+        public String getNamespaceId() {
+            return this.namespaceId;
+        }
+
+        /**
+         * @return organizationAlias
+         */
+        public String getOrganizationAlias() {
+            return this.organizationAlias;
+        }
+
+        /**
          * @return organizationId
          */
         public String getOrganizationId() {
@@ -221,6 +254,8 @@ public class ListOrganizationsResponseBody extends TeaModel {
         public static final class Builder {
             private Integer accessLevel; 
             private Long id; 
+            private String namespaceId; 
+            private String organizationAlias; 
             private String organizationId; 
             private String organizationName; 
             private String organizationRole; 
@@ -238,6 +273,22 @@ public class ListOrganizationsResponseBody extends TeaModel {
              */
             public Builder id(Long id) {
                 this.id = id;
+                return this;
+            }
+
+            /**
+             * namespaceId.
+             */
+            public Builder namespaceId(String namespaceId) {
+                this.namespaceId = namespaceId;
+                return this;
+            }
+
+            /**
+             * organizationAlias.
+             */
+            public Builder organizationAlias(String organizationAlias) {
+                this.organizationAlias = organizationAlias;
                 return this;
             }
 

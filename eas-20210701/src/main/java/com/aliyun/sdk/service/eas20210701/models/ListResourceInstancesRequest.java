@@ -1,65 +1,74 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourceInstancesRequest} extends {@link RequestModel}
  *
  * <p>ListResourceInstancesRequest</p>
  */
 public class ListResourceInstancesRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("ResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceId;
 
-    @Query
-    @NameInMap("ChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
 
-    @Query
-    @NameInMap("Filter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
     private String filter;
 
-    @Query
-    @NameInMap("InstanceIP")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIP")
     private String instanceIP;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @Query
-    @NameInMap("InstanceStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceStatus")
     private String instanceStatus;
 
-    @Query
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Label")
+    private java.util.Map<String, String> label;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Sort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sort")
     private String sort;
 
     private ListResourceInstancesRequest(Builder builder) {
@@ -72,6 +81,7 @@ public class ListResourceInstancesRequest extends Request {
         this.instanceId = builder.instanceId;
         this.instanceName = builder.instanceName;
         this.instanceStatus = builder.instanceStatus;
+        this.label = builder.label;
         this.order = builder.order;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -148,6 +158,13 @@ public class ListResourceInstancesRequest extends Request {
     }
 
     /**
+     * @return label
+     */
+    public java.util.Map<String, String> getLabel() {
+        return this.label;
+    }
+
+    /**
      * @return order
      */
     public String getOrder() {
@@ -184,6 +201,7 @@ public class ListResourceInstancesRequest extends Request {
         private String instanceId; 
         private String instanceName; 
         private String instanceStatus; 
+        private java.util.Map<String, String> label; 
         private String order; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -203,6 +221,7 @@ public class ListResourceInstancesRequest extends Request {
             this.instanceId = request.instanceId;
             this.instanceName = request.instanceName;
             this.instanceStatus = request.instanceStatus;
+            this.label = request.label;
             this.order = request.order;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -210,7 +229,11 @@ public class ListResourceInstancesRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The ID of the region to which the resource group belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -219,7 +242,11 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The ID of the resource group. For more information about how to query the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot</p>
          */
         public Builder resourceId(String resourceId) {
             this.putPathParameter("ResourceId", resourceId);
@@ -228,7 +255,14 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li>PrePaid: subscription.</li>
+         * <li>PostPaid: pay-as-you-go.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -237,7 +271,10 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * Filter.
+         * <p>The keyword used to query instances. Instances can be queried by instance ID or instance IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.224.xx.xx</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -246,7 +283,10 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * InstanceIP.
+         * <p>The IP address of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.224.xx.xx</p>
          */
         public Builder instanceIP(String instanceIP) {
             this.putQueryParameter("InstanceIP", instanceIP);
@@ -255,7 +295,10 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID. For more information about how to query the instance ID, see <a href="https://help.aliyun.com/document_detail/412129.html">ListResourceInstances</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1jd6x3uotsv****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -264,7 +307,10 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e-xxxx***</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -273,7 +319,87 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * InstanceStatus.
+         * <p>The instance state.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>Ready-SchedulingDisabled</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <p>The instance is available but unschedulable</p>
+         * <!-- -->
+         * 
+         * <p>.</p>
+         * </li>
+         * <li><p>Ready</p>
+         * <!-- -->
+         * 
+         * <p>: The instance</p>
+         * <!-- -->
+         * 
+         * <p>is running</p>
+         * <!-- -->
+         * 
+         * <p>.</p>
+         * </li>
+         * <li><p>NotReady</p>
+         * <!-- -->
+         * 
+         * <p>: The instance is unready.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Stopped</p>
+         * <!-- -->
+         * 
+         * <p>: The instance has stopped.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>NotReady-SchedulingDisabled</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <p>The instance is unavailable and unschedulable</p>
+         * <!-- -->
+         * 
+         * <p>.</p>
+         * </li>
+         * <li><p>Attaching</p>
+         * <!-- -->
+         * 
+         * <p>: The instance</p>
+         * <!-- -->
+         * 
+         * <p>is starting</p>
+         * <!-- -->
+         * 
+         * <p>.</p>
+         * </li>
+         * <li><p>Deleting</p>
+         * <!-- -->
+         * 
+         * <p>: The instance is being deleted.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>CreateFailed: The instance failed to be created.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Ready</p>
          */
         public Builder instanceStatus(String instanceStatus) {
             this.putQueryParameter("InstanceStatus", instanceStatus);
@@ -282,7 +408,37 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * Order.
+         * Label.
+         */
+        public Builder label(java.util.Map<String, String> label) {
+            String labelShrink = shrink(label, "Label", "json");
+            this.putQueryParameter("Label", labelShrink);
+            this.label = label;
+            return this;
+        }
+
+        /**
+         * <p>The sorting order.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>asc: The instances are sorted in ascending order.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>desc</p>
+         * <!-- -->
+         * 
+         * <p>: The instances are sorted in descending order.</p>
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -291,7 +447,10 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -300,7 +459,10 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -309,7 +471,56 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * Sort.
+         * <p>The field that you use to sort the query results.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>CreateTime</p>
+         * <!-- -->
+         * 
+         * <p>: The instances are sorted based on the time when the instances were created.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>MemoryUsed</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <p>The instances are sorted based on the memory usage of the instances</p>
+         * <!-- -->
+         * 
+         * <p>.</p>
+         * </li>
+         * <li><p>GpuUsed</p>
+         * <!-- -->
+         * 
+         * <p>: The instances are sorted based on the</p>
+         * <!-- -->
+         * 
+         * <p>GPU usage of the instances.</p>
+         * <!-- -->
+         * </li>
+         * <li><p>ExpireTime: The instances are sorted based on the time when the instances expired.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>CpuUsed</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <p>The instances are sorted based on the CPU utilization of the instances.</p>
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateTime</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);

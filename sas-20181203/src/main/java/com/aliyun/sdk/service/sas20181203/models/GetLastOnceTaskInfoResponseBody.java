@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLastOnceTaskInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetLastOnceTaskInfoResponseBody</p>
  */
 public class GetLastOnceTaskInfoResponseBody extends TeaModel {
-    @NameInMap("CollectTime")
+    @com.aliyun.core.annotation.NameInMap("CollectTime")
     private Long collectTime;
 
-    @NameInMap("FinishCount")
+    @com.aliyun.core.annotation.NameInMap("FinishCount")
     private Integer finishCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private Long taskId;
 
-    @NameInMap("TaskInfo")
+    @com.aliyun.core.annotation.NameInMap("TaskInfo")
     private TaskInfo taskInfo;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private GetLastOnceTaskInfoResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class GetLastOnceTaskInfoResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The time at which the task was run.
+         * <p>The time at which the task was run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1671184531000</p>
          */
         public Builder collectTime(Long collectTime) {
             this.collectTime = collectTime;
@@ -106,7 +114,10 @@ public class GetLastOnceTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The number of tasks that have been completed.
+         * <p>The number of tasks that have been completed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67</p>
          */
         public Builder finishCount(Integer finishCount) {
             this.finishCount = finishCount;
@@ -114,7 +125,10 @@ public class GetLastOnceTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BE120DAB-F4E7-4C53-ADC3-A97578AB****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +136,10 @@ public class GetLastOnceTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the latest scan task.
+         * <p>The ID of the latest scan task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3f65e1f1bb13118891a889d569a3****</p>
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;
@@ -130,7 +147,7 @@ public class GetLastOnceTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the latest task.
+         * <p>The information about the latest task.</p>
          */
         public Builder taskInfo(TaskInfo taskInfo) {
             this.taskInfo = taskInfo;
@@ -138,7 +155,10 @@ public class GetLastOnceTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -151,14 +171,20 @@ public class GetLastOnceTaskInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetLastOnceTaskInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLastOnceTaskInfoResponseBody</p>
+     */
     public static class TaskInfo extends TeaModel {
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private Integer progress;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private String result;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private TaskInfo(Builder builder) {
@@ -202,7 +228,10 @@ public class GetLastOnceTaskInfoResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The progress of the task in percentage.
+             * <p>The progress of the task in percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>69</p>
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -210,12 +239,15 @@ public class GetLastOnceTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The result of the scan task. Valid values:
-             * <p>
+             * <p>The result of the scan task. Valid values:</p>
+             * <ul>
+             * <li><strong>SUCCESS</strong>: The task is successful.</li>
+             * <li><strong>TASK_NOT_SUPPORT_REGION</strong>: The images are deployed in a region that is not supported by container image scan.</li>
+             * <li><strong>TASK_NOT_EXISTS</strong>: The task does not exist.</li>
+             * </ul>
              * 
-             * *   **SUCCESS**: The task is successful.
-             * *   **TASK\_NOT\_SUPPORT_REGION**: The images are deployed in a region that is not supported by container image scan.
-             * *   **TASK\_NOT_EXISTS**: The task does not exist.
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder result(String result) {
                 this.result = result;
@@ -223,13 +255,16 @@ public class GetLastOnceTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task. Valid values:
-             * <p>
+             * <p>The status of the task. Valid values:</p>
+             * <ul>
+             * <li><strong>INIT</strong>: The task is not started.</li>
+             * <li><strong>START</strong>: The task is started.</li>
+             * <li><strong>SUCCESS</strong>: The task is complete.</li>
+             * <li><strong>TIMEOUT</strong>: The task timed out.</li>
+             * </ul>
              * 
-             * *   **INIT**: The task is not started.
-             * *   **START**: The task is started.
-             * *   **SUCCESS**: The task is complete.
-             * *   **TIMEOUT**: The task timed out.
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder status(String status) {
                 this.status = status;

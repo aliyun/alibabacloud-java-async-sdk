@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySavingsPlansInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySavingsPlansInstanceResponseBody</p>
  */
 public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QuerySavingsPlansInstanceResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The return data.
+         * <p>The return data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,10 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61293E7A-3406-4447-8620-EC88B0AA66AD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the operation was successful.
+         * <p>Indicates whether the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,11 +148,17 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuerySavingsPlansInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySavingsPlansInstanceResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -170,7 +193,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -178,7 +201,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -192,77 +215,83 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySavingsPlansInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySavingsPlansInstanceResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("AllocationStatus")
+        @com.aliyun.core.annotation.NameInMap("AllocationStatus")
         private String allocationStatus;
 
-        @NameInMap("CommodityCode")
+        @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
 
-        @NameInMap("Currency")
+        @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
-        @NameInMap("CurrentPoolValue")
+        @com.aliyun.core.annotation.NameInMap("CurrentPoolValue")
         private String currentPoolValue;
 
-        @NameInMap("Cycle")
+        @com.aliyun.core.annotation.NameInMap("Cycle")
         private String cycle;
 
-        @NameInMap("DeductCycleType")
+        @com.aliyun.core.annotation.NameInMap("DeductCycleType")
         private String deductCycleType;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("EndTimestamp")
+        @com.aliyun.core.annotation.NameInMap("EndTimestamp")
         private Long endTimestamp;
 
-        @NameInMap("InstanceFamily")
+        @com.aliyun.core.annotation.NameInMap("InstanceFamily")
         private String instanceFamily;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("LastBillTotalUsage")
+        @com.aliyun.core.annotation.NameInMap("LastBillTotalUsage")
         private String lastBillTotalUsage;
 
-        @NameInMap("LastBillUtilization")
+        @com.aliyun.core.annotation.NameInMap("LastBillUtilization")
         private String lastBillUtilization;
 
-        @NameInMap("PayMode")
+        @com.aliyun.core.annotation.NameInMap("PayMode")
         private String payMode;
 
-        @NameInMap("PoolValue")
+        @com.aliyun.core.annotation.NameInMap("PoolValue")
         private String poolValue;
 
-        @NameInMap("PrepayFee")
+        @com.aliyun.core.annotation.NameInMap("PrepayFee")
         private String prepayFee;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("RestPoolValue")
+        @com.aliyun.core.annotation.NameInMap("RestPoolValue")
         private String restPoolValue;
 
-        @NameInMap("SavingsType")
+        @com.aliyun.core.annotation.NameInMap("SavingsType")
         private String savingsType;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("StartTimestamp")
+        @com.aliyun.core.annotation.NameInMap("StartTimestamp")
         private Long startTimestamp;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
-        @NameInMap("TotalSave")
+        @com.aliyun.core.annotation.NameInMap("TotalSave")
         private String totalSave;
 
-        @NameInMap("Utilization")
+        @com.aliyun.core.annotation.NameInMap("Utilization")
         private String utilization;
 
         private Items(Builder builder) {
@@ -450,7 +479,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -490,17 +519,20 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             private String startTime; 
             private Long startTimestamp; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String totalSave; 
             private String utilization; 
 
             /**
-             * The allocation status. Valid values:
-             * <p>
+             * <p>The allocation status. Valid values:</p>
+             * <ul>
+             * <li>unallocated</li>
+             * <li>allocated</li>
+             * <li>beAllocated</li>
+             * </ul>
              * 
-             * *   unallocated
-             * *   allocated
-             * *   beAllocated
+             * <strong>example:</strong>
+             * <p>unallocated</p>
              */
             public Builder allocationStatus(String allocationStatus) {
                 this.allocationStatus = allocationStatus;
@@ -516,7 +548,10 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The currency. Valid values: CNY and USD.
+             * <p>The currency. Valid values: CNY and USD.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -548,7 +583,10 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance expires. The time is in the format of yyyy-MM-dd HH:mm:ss.
+             * <p>The time when the instance expires. The time is in the format of yyyy-MM-dd HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-01 00:00:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -564,7 +602,10 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The instance family information. For an instance of the Elastic Compute Service (ECS) compute type, the value indicates the ECS instance family or the ECS instance family package.
+             * <p>The instance family information. For an instance of the Elastic Compute Service (ECS) compute type, the value indicates the ECS instance family or the ECS instance family package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.g6</p>
              */
             public Builder instanceFamily(String instanceFamily) {
                 this.instanceFamily = instanceFamily;
@@ -572,7 +613,10 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the savings plan instance.
+             * <p>The ID of the savings plan instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spn-xxxxxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -596,12 +640,15 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The payment type. Valid values:
-             * <p>
+             * <p>The payment type. Valid values:</p>
+             * <ul>
+             * <li>total: All Upfront</li>
+             * <li>half: Partial Upfront</li>
+             * <li>zero: No Upfront</li>
+             * </ul>
              * 
-             * *   total: All Upfront
-             * *   half: Partial Upfront
-             * *   zero: No Upfront
+             * <strong>example:</strong>
+             * <p>total</p>
              */
             public Builder payMode(String payMode) {
                 this.payMode = payMode;
@@ -609,7 +656,10 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The commitment.
+             * <p>The commitment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.00</p>
              */
             public Builder poolValue(String poolValue) {
                 this.poolValue = poolValue;
@@ -617,7 +667,10 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The prepaid amount.
+             * <p>The prepaid amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8760.00</p>
              */
             public Builder prepayFee(String prepayFee) {
                 this.prepayFee = prepayFee;
@@ -625,7 +678,10 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The region.
+             * <p>The region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-zhangjiakou-na62-a01</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -641,11 +697,14 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the savings plan. Valid values:
-             * <p>
+             * <p>The type of the savings plan. Valid values:</p>
+             * <ul>
+             * <li>universal: general-purpose</li>
+             * <li>ecs: ECS compute</li>
+             * </ul>
              * 
-             * *   universal: general-purpose
-             * *   ecs: ECS compute
+             * <strong>example:</strong>
+             * <p>ECS</p>
              */
             public Builder savingsType(String savingsType) {
                 this.savingsType = savingsType;
@@ -653,7 +712,10 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance takes effect. The time is in the format of yyyy-MM-dd HH:mm:ss.
+             * <p>The time when the instance takes effect. The time is in the format of yyyy-MM-dd HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-01-01 00:00:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -669,12 +731,15 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the instance. Valid values:
-             * <p>
+             * <p>The status of the instance. Valid values:</p>
+             * <ul>
+             * <li>NORMAL: normal</li>
+             * <li>LIMIT: stopped due to overdue payment</li>
+             * <li>RELEASE: released</li>
+             * </ul>
              * 
-             * *   NORMAL: normal
-             * *   LIMIT: stopped due to overdue payment
-             * *   RELEASE: released
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -682,15 +747,18 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The details about the tags.
+             * <p>The details about the tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * The total amount that is saved.
+             * <p>The total amount that is saved.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20.00</p>
              */
             public Builder totalSave(String totalSave) {
                 this.totalSave = totalSave;
@@ -698,7 +766,10 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The total usage.
+             * <p>The total usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder utilization(String utilization) {
                 this.utilization = utilization;
@@ -712,17 +783,23 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySavingsPlansInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySavingsPlansInstanceResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Items")
-        private java.util.List < Items> items;
+        @com.aliyun.core.annotation.NameInMap("Items")
+        private java.util.List<Items> items;
 
-        @NameInMap("PageNum")
+        @com.aliyun.core.annotation.NameInMap("PageNum")
         private Integer pageNum;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {
@@ -743,7 +820,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
@@ -769,21 +846,24 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Items> items; 
+            private java.util.List<Items> items; 
             private Integer pageNum; 
             private Integer pageSize; 
             private Integer totalCount; 
 
             /**
-             * The details about the instances.
+             * <p>The details about the instances.</p>
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -791,7 +871,10 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -799,7 +882,10 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

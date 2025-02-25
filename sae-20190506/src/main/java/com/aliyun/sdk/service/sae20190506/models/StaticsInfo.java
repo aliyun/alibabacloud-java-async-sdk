@@ -1,54 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StaticsInfo} extends {@link TeaModel}
  *
  * <p>StaticsInfo</p>
  */
 public class StaticsInfo extends TeaModel {
-    @NameInMap("activeCPUUsage")
+    @com.aliyun.core.annotation.NameInMap("activeCPUUsage")
     private Long activeCPUUsage;
 
-    @NameInMap("cost")
+    @com.aliyun.core.annotation.NameInMap("cost")
     private Float cost;
 
-    @NameInMap("diskUsage")
+    @com.aliyun.core.annotation.NameInMap("diskUsage")
     private Long diskUsage;
 
-    @NameInMap("functionName")
+    @com.aliyun.core.annotation.NameInMap("functionName")
     private String functionName;
 
-    @NameInMap("gpuUsage")
+    @com.aliyun.core.annotation.NameInMap("gpuUsage")
     private Long gpuUsage;
 
-    @NameInMap("idleCPUUsage")
+    @com.aliyun.core.annotation.NameInMap("idleCPUUsage")
     private Long idleCPUUsage;
 
-    @NameInMap("instanceTrafficOut")
+    @com.aliyun.core.annotation.NameInMap("instanceTrafficOut")
     private Long instanceTrafficOut;
 
-    @NameInMap("invocations")
+    @com.aliyun.core.annotation.NameInMap("invocations")
     private Long invocations;
 
-    @NameInMap("invokeCDNOut")
+    @com.aliyun.core.annotation.NameInMap("invokeCDNOut")
     private Long invokeCDNOut;
 
-    @NameInMap("invokeInternetOut")
+    @com.aliyun.core.annotation.NameInMap("invokeInternetOut")
     private Long invokeInternetOut;
 
-    @NameInMap("memoryUsage")
+    @com.aliyun.core.annotation.NameInMap("memoryUsage")
     private Long memoryUsage;
 
-    @NameInMap("region")
+    @com.aliyun.core.annotation.NameInMap("region")
     private String region;
 
-    @NameInMap("serviceName")
+    @com.aliyun.core.annotation.NameInMap("serviceName")
     private String serviceName;
 
     private StaticsInfo(Builder builder) {

@@ -1,89 +1,89 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBClusterRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBClusterRequest</p>
  */
 public class ModifyDBClusterRequest extends Request {
-    @Query
-    @NameInMap("ComputeResource")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComputeResource")
     private String computeResource;
 
-    @Query
-    @NameInMap("DBClusterCategory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterCategory")
     private String DBClusterCategory;
 
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("DBNodeClass")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBNodeClass")
     private String DBNodeClass;
 
-    @Query
-    @NameInMap("DBNodeGroupCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBNodeGroupCount")
     private String DBNodeGroupCount;
 
-    @Query
-    @NameInMap("DBNodeStorage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBNodeStorage")
     private String DBNodeStorage;
 
-    @Query
-    @NameInMap("DiskPerformanceLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskPerformanceLevel")
     private String diskPerformanceLevel;
 
-    @Query
-    @NameInMap("ElasticIOResource")
-    @Validation(maximum = 200)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ElasticIOResource")
+    @com.aliyun.core.annotation.Validation(maximum = 200)
     private Integer elasticIOResource;
 
-    @Query
-    @NameInMap("ElasticIOResourceSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ElasticIOResourceSize")
     private String elasticIOResourceSize;
 
-    @Query
-    @NameInMap("ExecutorCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExecutorCount")
     private String executorCount;
 
-    @Query
-    @NameInMap("Mode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mode")
     private String mode;
 
-    @Query
-    @NameInMap("ModifyType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModifyType")
     private String modifyType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("StorageResource")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageResource")
     private String storageResource;
 
     private ModifyDBClusterRequest(Builder builder) {
@@ -294,10 +294,13 @@ public class ModifyDBClusterRequest extends Request {
         } 
 
         /**
-         * The computing resources of the cluster. You can call the [DescribeAvailableResource](~~190632~~) operation to query the computing resources that are available within a region.
-         * <p>
+         * <p>The computing resources of the cluster. You can call the <a href="https://help.aliyun.com/document_detail/190632.html">DescribeAvailableResource</a> operation to query the computing resources that are available within a region.</p>
+         * <blockquote>
+         * <p>This parameter must be specified when Mode is set to Flexible.</p>
+         * </blockquote>
          * 
-         * > This parameter must be specified when Mode is set to Flexible.
+         * <strong>example:</strong>
+         * <p>32Core128GBNEW</p>
          */
         public Builder computeResource(String computeResource) {
             this.putQueryParameter("ComputeResource", computeResource);
@@ -306,13 +309,17 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * The edition of the cluster. Valid values:
-         * <p>
+         * <p>The edition of the cluster. Valid values:</p>
+         * <ul>
+         * <li><strong>Cluster</strong>: reserved mode for Cluster Edition.</li>
+         * <li><strong>MixedStorage</strong>: elastic mode for Cluster Edition.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you set DBClusterCategory to Cluster, you must set Mode to Reserver. If you set DBClusterCategory to MixedStorage, you must set Mode to Flexible. Otherwise, you fail to change the specifications of the cluster.</p>
+         * </blockquote>
          * 
-         * *   **Cluster**: reserved mode for Cluster Edition.
-         * *   **MixedStorage**: elastic mode for Cluster Edition.
-         * 
-         * > If you set DBClusterCategory to Cluster, you must set Mode to Reserver. If you set DBClusterCategory to MixedStorage, you must set Mode to Flexible. Otherwise, you fail to change the specifications of the cluster.
+         * <strong>example:</strong>
+         * <p>MixedStorage</p>
          */
         public Builder DBClusterCategory(String DBClusterCategory) {
             this.putQueryParameter("DBClusterCategory", DBClusterCategory);
@@ -321,7 +328,11 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-bp1u8c0mgfg58****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -330,13 +341,17 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * The node specifications of the cluster. Valid values:
-         * <p>
+         * <p>The node specifications of the cluster. Valid values:</p>
+         * <ul>
+         * <li><strong>C8</strong></li>
+         * <li><strong>C32</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter must be specified when Mode is set to Reserver.</p>
+         * </blockquote>
          * 
-         * *   **C8**
-         * *   **C32**
-         * 
-         * > This parameter must be specified when Mode is set to Reserver.
+         * <strong>example:</strong>
+         * <p>C32</p>
          */
         public Builder DBNodeClass(String DBNodeClass) {
             this.putQueryParameter("DBNodeClass", DBNodeClass);
@@ -345,10 +360,13 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * The number of node groups. Valid values: 1 to 200.
-         * <p>
+         * <p>The number of node groups. Valid values: 1 to 200.</p>
+         * <blockquote>
+         * <p>This parameter must be specified when Mode is set to Reserver.</p>
+         * </blockquote>
          * 
-         * > This parameter must be specified when Mode is set to Reserver.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder DBNodeGroupCount(String DBNodeGroupCount) {
             this.putQueryParameter("DBNodeGroupCount", DBNodeGroupCount);
@@ -357,17 +375,22 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * The storage capacity per node. Unit: GB.
-         * <p>
+         * <p>The storage capacity per node. Unit: GB.</p>
+         * <ul>
+         * <li>Valid values when DBClusterClass is set to C8: 100 to 2000.</li>
+         * <li>Valid values when DBClusterClass is set to C32: 100 to 8000.</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter must be specified when Mode is set to Reserver.</p>
+         * </li>
+         * <li><p>The storage capacity less than 1,000 GB increases in 100 GB increments. The storage capacity greater than 1,000 GB increases in 1,000 GB increments.</p>
+         * </li>
+         * </ul>
          * 
-         * *   Valid values when DBClusterClass is set to C8: 100 to 2000.
-         * *   Valid values when DBClusterClass is set to C32: 100 to 8000.
-         * 
-         * > 
-         * 
-         * *   This parameter must be specified when Mode is set to Reserver.
-         * 
-         * *   The storage capacity less than 1,000 GB increases in 100 GB increments. The storage capacity greater than 1,000 GB increases in 1,000 GB increments.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder DBNodeStorage(String DBNodeStorage) {
             this.putQueryParameter("DBNodeStorage", DBNodeStorage);
@@ -376,7 +399,16 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * The enhanced SSD (ESSD) performance level of the cluster. Valid values: PL1 PL2 PL3
+         * <p>The enhanced SSD (ESSD) performance level of the cluster. Valid values:</p>
+         * <ul>
+         * <li>PL0</li>
+         * <li>PL1</li>
+         * <li>PL2</li>
+         * <li>PL3</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PL1</p>
          */
         public Builder diskPerformanceLevel(String diskPerformanceLevel) {
             this.putQueryParameter("DiskPerformanceLevel", diskPerformanceLevel);
@@ -385,11 +417,14 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * The number of EIUs. The number of EIUs that you can purchase varies based on the single-node EIU specifications.
-         * <p>
+         * <p>The number of EIUs. The number of EIUs that you can purchase varies based on the single-node EIU specifications.</p>
+         * <ul>
+         * <li>If the single-node EIU specifications are 8 cores and 64 GB, you can purchase up to 32 EIUs.</li>
+         * <li>If the single-node EIU specifications are 12 cores and 96 GB, you can purchase up to 16 EIUs.</li>
+         * </ul>
          * 
-         * *   If the single-node EIU specifications are 8 cores and 64 GB, you can purchase up to 32 EIUs.
-         * *   If the single-node EIU specifications are 12 cores and 96 GB, you can purchase up to 16 EIUs.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder elasticIOResource(Integer elasticIOResource) {
             this.putQueryParameter("ElasticIOResource", elasticIOResource);
@@ -398,19 +433,25 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * The single-node specifications of an elastic I/O unit (EIU). Valid values:
-         * <p>
+         * <p>The single-node specifications of an elastic I/O unit (EIU). Valid values:</p>
+         * <ul>
+         * <li><strong>8Core64GB</strong>: If you set the parameter to <strong>8Core64GB</strong>, the specifications of an EIU are 24 cores and 192 GB memory.</li>
+         * <li><strong>12Core96GB</strong>: If you set the parameter to <strong>12Core96GB</strong>, the specifications of an EIU are 36 cores and 288 GB memory.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter takes effect only when your cluster meets the following requirements:</p>
+         * </blockquote>
+         * <ul>
+         * <li><p>The cluster is in elastic mode.</p>
+         * </li>
+         * <li><p>If the cluster resides in the China (Guangzhou), China (Shenzhen), China (Hangzhou), China (Shanghai), China (Qingdao), China (Beijing), or China (Zhangjiakou) region, the cluster has 16 cores and 64 GB memory or higher specifications.</p>
+         * </li>
+         * <li><p>If the cluster resides in another region, the cluster has 32 cores and 128 GB memory or higher specifications.</p>
+         * </li>
+         * </ul>
          * 
-         * *   **8Core64GB**: If you set the parameter to **8Core64GB**, the specifications of an EIU are 24 cores and 192 GB memory.
-         * *   **12Core96GB**: If you set the parameter to **12Core96GB**, the specifications of an EIU are 36 cores and 288 GB memory.
-         * 
-         * > This parameter is available only when the cluster meets the following conditions:
-         * 
-         * *   The cluster is in elastic mode.
-         * 
-         * *   If the cluster resides in the China (Guangzhou), China (Shenzhen), China (Hangzhou), China (Shanghai), China (Qingdao), China (Beijing), or China (Zhangjiakou) region, the cluster has 16 cores and 64 GB memory or higher specifications.
-         * 
-         * *   If the cluster resides in another region, the cluster has 32 cores and 128 GB memory or higher specifications.
+         * <strong>example:</strong>
+         * <p>8Core64GB</p>
          */
         public Builder elasticIOResourceSize(String elasticIOResourceSize) {
             this.putQueryParameter("ElasticIOResourceSize", elasticIOResourceSize);
@@ -419,7 +460,10 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * N/A
+         * <p>N/A</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder executorCount(String executorCount) {
             this.putQueryParameter("ExecutorCount", executorCount);
@@ -428,11 +472,14 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * The mode of the cluster. Valid values:
-         * <p>
+         * <p>The mode of the cluster. Valid values:</p>
+         * <ul>
+         * <li><strong>Reserver</strong>: the reserved mode.</li>
+         * <li><strong>Flexible</strong>: the elastic mode.</li>
+         * </ul>
          * 
-         * *   **Reserver**: the reserved mode.
-         * *   **Flexible**: the elastic mode.
+         * <strong>example:</strong>
+         * <p>Flexible</p>
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
@@ -441,11 +488,14 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * The change type. Valid values:
-         * <p>
+         * <p>The change type. Valid values:</p>
+         * <ul>
+         * <li><strong>Upgrade</strong></li>
+         * <li><strong>Downgrade</strong></li>
+         * </ul>
          * 
-         * *   **Upgrade**
-         * *   **Downgrade**
+         * <strong>example:</strong>
+         * <p>Upgrade</p>
          */
         public Builder modifyType(String modifyType) {
             this.putQueryParameter("ModifyType", modifyType);
@@ -472,7 +522,10 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * The region ID of the cluster. You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
+         * <p>The region ID of the cluster. You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -499,7 +552,10 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * N/A
+         * <p>N/A</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder storageResource(String storageResource) {
             this.putQueryParameter("StorageResource", storageResource);

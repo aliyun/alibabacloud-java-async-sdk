@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tag20180828.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTagsRequest} extends {@link RequestModel}
  *
  * <p>CreateTagsRequest</p>
  */
 public class CreateTagsRequest extends Request {
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("TagKeyValueParamList")
-    @Validation(required = true)
-    private java.util.List < TagKeyValueParamList> tagKeyValueParamList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagKeyValueParamList")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<TagKeyValueParamList> tagKeyValueParamList;
 
     private CreateTagsRequest(Builder builder) {
         super(builder);
@@ -87,7 +92,7 @@ public class CreateTagsRequest extends Request {
     /**
      * @return tagKeyValueParamList
      */
-    public java.util.List < TagKeyValueParamList> getTagKeyValueParamList() {
+    public java.util.List<TagKeyValueParamList> getTagKeyValueParamList() {
         return this.tagKeyValueParamList;
     }
 
@@ -96,7 +101,7 @@ public class CreateTagsRequest extends Request {
         private Long ownerId; 
         private String regionId; 
         private String resourceOwnerAccount; 
-        private java.util.List < TagKeyValueParamList> tagKeyValueParamList; 
+        private java.util.List<TagKeyValueParamList> tagKeyValueParamList; 
 
         private Builder() {
             super();
@@ -130,10 +135,14 @@ public class CreateTagsRequest extends Request {
         }
 
         /**
-         * The region ID.
-         * <p>
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p>Only <code>cn-hangzhou</code> is supported.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  Only `cn-hangzhou` is supported.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -151,9 +160,10 @@ public class CreateTagsRequest extends Request {
         }
 
         /**
-         * The tag keys and values list.
+         * <p>The information about the tags.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder tagKeyValueParamList(java.util.List < TagKeyValueParamList> tagKeyValueParamList) {
+        public Builder tagKeyValueParamList(java.util.List<TagKeyValueParamList> tagKeyValueParamList) {
             this.putQueryParameter("TagKeyValueParamList", tagKeyValueParamList);
             this.tagKeyValueParamList = tagKeyValueParamList;
             return this;
@@ -166,11 +176,17 @@ public class CreateTagsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateTagsRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTagsRequest</p>
+     */
     public static class TagValueParamList extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private TagValueParamList(Builder builder) {
@@ -205,10 +221,11 @@ public class CreateTagsRequest extends Request {
             private String value; 
 
             /**
-             * The description of the tag value.
-             * <p>
+             * <p>The description of the value for tag N.</p>
+             * <p>Valid values of N: 1 to 10.</p>
              * 
-             * Valid values of N: 1 to 10.
+             * <strong>example:</strong>
+             * <p>Test environment</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -216,12 +233,12 @@ public class CreateTagsRequest extends Request {
             }
 
             /**
-             * The tag value.
-             * <p>
+             * <p>The value of tag N.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>Valid values of N: 1 to 10.</p>
              * 
-             * The tag value can be a maximum of 128 characters in length. It cannot contain `http://` or `https://` and cannot start with `acs:` or `aliyun`.
-             * 
-             * Valid values of N: 1 to 10.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -235,16 +252,22 @@ public class CreateTagsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTagsRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTagsRequest</p>
+     */
     public static class TagKeyValueParamList extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Key")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Key")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String key;
 
-        @NameInMap("TagValueParamList")
-        private java.util.List < TagValueParamList> tagValueParamList;
+        @com.aliyun.core.annotation.NameInMap("TagValueParamList")
+        private java.util.List<TagValueParamList> tagValueParamList;
 
         private TagKeyValueParamList(Builder builder) {
             this.description = builder.description;
@@ -277,20 +300,21 @@ public class CreateTagsRequest extends Request {
         /**
          * @return tagValueParamList
          */
-        public java.util.List < TagValueParamList> getTagValueParamList() {
+        public java.util.List<TagValueParamList> getTagValueParamList() {
             return this.tagValueParamList;
         }
 
         public static final class Builder {
             private String description; 
             private String key; 
-            private java.util.List < TagValueParamList> tagValueParamList; 
+            private java.util.List<TagValueParamList> tagValueParamList; 
 
             /**
-             * The description of the tag key.
-             * <p>
+             * <p>The description of the key for tag N.</p>
+             * <p>Valid values of N: 1 to 10.</p>
              * 
-             * Valid values of N: 1 to 10.
+             * <strong>example:</strong>
+             * <p>Business environment</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -298,12 +322,13 @@ public class CreateTagsRequest extends Request {
             }
 
             /**
-             * The tag key.
-             * <p>
+             * <p>The value of tag N.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>Valid values of N: 1 to 10.</p>
+             * <p>This parameter is required.</p>
              * 
-             * The tag key can be a maximum of 128 characters in length. It cannot contain `http://` or `https://` and cannot start with `acs:` or `aliyun`.
-             * 
-             * Valid values of N: 1 to 10.
+             * <strong>example:</strong>
+             * <p>Environment</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -311,9 +336,9 @@ public class CreateTagsRequest extends Request {
             }
 
             /**
-             * The tag values list.
+             * <p>The information about the tag values.</p>
              */
-            public Builder tagValueParamList(java.util.List < TagValueParamList> tagValueParamList) {
+            public Builder tagValueParamList(java.util.List<TagValueParamList> tagValueParamList) {
                 this.tagValueParamList = tagValueParamList;
                 return this;
             }

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWebCacheConfigsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWebCacheConfigsResponseBody</p>
  */
 public class DescribeWebCacheConfigsResponseBody extends TeaModel {
-    @NameInMap("DomainCacheConfigs")
-    private java.util.List < DomainCacheConfigs> domainCacheConfigs;
+    @com.aliyun.core.annotation.NameInMap("DomainCacheConfigs")
+    private java.util.List<DomainCacheConfigs> domainCacheConfigs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeWebCacheConfigsResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
     /**
      * @return domainCacheConfigs
      */
-    public java.util.List < DomainCacheConfigs> getDomainCacheConfigs() {
+    public java.util.List<DomainCacheConfigs> getDomainCacheConfigs() {
         return this.domainCacheConfigs;
     }
 
@@ -46,19 +51,22 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DomainCacheConfigs> domainCacheConfigs; 
+        private java.util.List<DomainCacheConfigs> domainCacheConfigs; 
         private String requestId; 
 
         /**
-         * An array that consists of Static Page Caching configurations.
+         * <p>An array that consists of Static Page Caching configurations.</p>
          */
-        public Builder domainCacheConfigs(java.util.List < DomainCacheConfigs> domainCacheConfigs) {
+        public Builder domainCacheConfigs(java.util.List<DomainCacheConfigs> domainCacheConfigs) {
             this.domainCacheConfigs = domainCacheConfigs;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6623EA1F-30FB-5BC8-BEC9-74D55F6F08F1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,17 +79,23 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeWebCacheConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWebCacheConfigsResponseBody</p>
+     */
     public static class CustomRules extends TeaModel {
-        @NameInMap("CacheTtl")
+        @com.aliyun.core.annotation.NameInMap("CacheTtl")
         private Long cacheTtl;
 
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Uri")
+        @com.aliyun.core.annotation.NameInMap("Uri")
         private String uri;
 
         private CustomRules(Builder builder) {
@@ -134,7 +148,10 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
             private String uri; 
 
             /**
-             * The expiration time of the page cache. Unit: seconds.
+             * <p>The expiration time of the page cache. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86400</p>
              */
             public Builder cacheTtl(Long cacheTtl) {
                 this.cacheTtl = cacheTtl;
@@ -142,12 +159,15 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The cache mode. Valid values:
-             * <p>
+             * <p>The cache mode. Valid values:</p>
+             * <ul>
+             * <li><strong>standard</strong>: The standard cache mode is used.</li>
+             * <li><strong>aggressive</strong>: The enhanced cache mode is used.</li>
+             * <li><strong>bypass</strong>: No data is cached.</li>
+             * </ul>
              * 
-             * *   **standard**: The standard cache mode is used.
-             * *   **aggressive**: The enhanced cache mode is used.
-             * *   **bypass**: No data is cached.
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -155,7 +175,10 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the rule.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -163,7 +186,10 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The path to the cached page.
+             * <p>The path to the cached page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/blog/</p>
              */
             public Builder uri(String uri) {
                 this.uri = uri;
@@ -177,17 +203,23 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeWebCacheConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWebCacheConfigsResponseBody</p>
+     */
     public static class DomainCacheConfigs extends TeaModel {
-        @NameInMap("CustomRules")
-        private java.util.List < CustomRules> customRules;
+        @com.aliyun.core.annotation.NameInMap("CustomRules")
+        private java.util.List<CustomRules> customRules;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Integer enable;
 
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
         private DomainCacheConfigs(Builder builder) {
@@ -208,7 +240,7 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
         /**
          * @return customRules
          */
-        public java.util.List < CustomRules> getCustomRules() {
+        public java.util.List<CustomRules> getCustomRules() {
             return this.customRules;
         }
 
@@ -234,21 +266,24 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < CustomRules> customRules; 
+            private java.util.List<CustomRules> customRules; 
             private String domain; 
             private Integer enable; 
             private String mode; 
 
             /**
-             * An array that consists of custom caching rules.
+             * <p>An array that consists of custom caching rules.</p>
              */
-            public Builder customRules(java.util.List < CustomRules> customRules) {
+            public Builder customRules(java.util.List<CustomRules> customRules) {
                 this.customRules = customRules;
                 return this;
             }
 
             /**
-             * The domain name of the website.
+             * <p>The domain name of the website.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -256,11 +291,14 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the Static Page Caching policy. Valid values:
-             * <p>
+             * <p>The status of the Static Page Caching policy. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: enabled</li>
+             * <li><strong>0</strong>: disabled</li>
+             * </ul>
              * 
-             * *   **1**: enabled
-             * *   **0**: disabled
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder enable(Integer enable) {
                 this.enable = enable;
@@ -268,12 +306,15 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The cache mode. Valid values:
-             * <p>
+             * <p>The cache mode. Valid values:</p>
+             * <ul>
+             * <li><strong>standard</strong>: The standard cache mode is used.</li>
+             * <li><strong>aggressive</strong>: The enhanced cache mode is used.</li>
+             * <li><strong>bypass</strong>: No data is cached.</li>
+             * </ul>
              * 
-             * *   **standard**: The standard cache mode is used.
-             * *   **aggressive**: The enhanced cache mode is used.
-             * *   **bypass**: No data is cached.
+             * <strong>example:</strong>
+             * <p>bypass</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;

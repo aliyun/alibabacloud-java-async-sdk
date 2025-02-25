@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCloudDrivePermissionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCloudDrivePermissionsResponseBody</p>
  */
 public class DescribeCloudDrivePermissionsResponseBody extends TeaModel {
-    @NameInMap("CloudDrivePermissionModels")
-    private java.util.List < CloudDrivePermissionModels> cloudDrivePermissionModels;
+    @com.aliyun.core.annotation.NameInMap("CloudDrivePermissionModels")
+    private java.util.List<CloudDrivePermissionModels> cloudDrivePermissionModels;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCloudDrivePermissionsResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeCloudDrivePermissionsResponseBody extends TeaModel {
     /**
      * @return cloudDrivePermissionModels
      */
-    public java.util.List < CloudDrivePermissionModels> getCloudDrivePermissionModels() {
+    public java.util.List<CloudDrivePermissionModels> getCloudDrivePermissionModels() {
         return this.cloudDrivePermissionModels;
     }
 
@@ -46,13 +51,13 @@ public class DescribeCloudDrivePermissionsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CloudDrivePermissionModels> cloudDrivePermissionModels; 
+        private java.util.List<CloudDrivePermissionModels> cloudDrivePermissionModels; 
         private String requestId; 
 
         /**
          * CloudDrivePermissionModels.
          */
-        public Builder cloudDrivePermissionModels(java.util.List < CloudDrivePermissionModels> cloudDrivePermissionModels) {
+        public Builder cloudDrivePermissionModels(java.util.List<CloudDrivePermissionModels> cloudDrivePermissionModels) {
             this.cloudDrivePermissionModels = cloudDrivePermissionModels;
             return this;
         }
@@ -71,11 +76,17 @@ public class DescribeCloudDrivePermissionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCloudDrivePermissionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudDrivePermissionsResponseBody</p>
+     */
     public static class CloudDrivePermissionModels extends TeaModel {
-        @NameInMap("EndUsers")
-        private java.util.List < String > endUsers;
+        @com.aliyun.core.annotation.NameInMap("EndUsers")
+        private java.util.List<String> endUsers;
 
-        @NameInMap("Permission")
+        @com.aliyun.core.annotation.NameInMap("Permission")
         private String permission;
 
         private CloudDrivePermissionModels(Builder builder) {
@@ -94,7 +105,7 @@ public class DescribeCloudDrivePermissionsResponseBody extends TeaModel {
         /**
          * @return endUsers
          */
-        public java.util.List < String > getEndUsers() {
+        public java.util.List<String> getEndUsers() {
             return this.endUsers;
         }
 
@@ -106,13 +117,13 @@ public class DescribeCloudDrivePermissionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > endUsers; 
+            private java.util.List<String> endUsers; 
             private String permission; 
 
             /**
              * EndUsers.
              */
-            public Builder endUsers(java.util.List < String > endUsers) {
+            public Builder endUsers(java.util.List<String> endUsers) {
                 this.endUsers = endUsers;
                 return this;
             }

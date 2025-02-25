@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNASFileSystemRequest} extends {@link RequestModel}
  *
  * <p>CreateNASFileSystemRequest</p>
  */
 public class CreateNASFileSystemRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("EncryptType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptType")
     private String encryptType;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OfficeSiteId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String officeSiteId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("StorageType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageType")
     private String storageType;
 
     private CreateNASFileSystemRequest(Builder builder) {
@@ -126,7 +131,10 @@ public class CreateNASFileSystemRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>Description of the NAS file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -135,7 +143,15 @@ public class CreateNASFileSystemRequest extends Request {
         }
 
         /**
-         * EncryptType.
+         * <p>Whether the file system is encrypted. Uses KMS service-managed keys to encrypt the file system&quot;s on-disk data. No decryption is required when reading and writing encrypted data. Possible values and their meanings:</p>
+         * <ul>
+         * <li>0: Not encrypted.</li>
+         * <li>1: Encrypted using NAS-managed keys.</li>
+         * </ul>
+         * <p>Default value: 0</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder encryptType(String encryptType) {
             this.putQueryParameter("EncryptType", encryptType);
@@ -144,7 +160,16 @@ public class CreateNASFileSystemRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>Name of the NAS file system.
+         * The file name must follow these rules:</p>
+         * <ul>
+         * <li>Length: 2 to 128 English or Chinese characters.</li>
+         * <li>Must start with an uppercase or lowercase letter or a Chinese character, cannot start with http:// or https://.</li>
+         * <li>Can include numbers, underscores (_), or hyphens (-).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>testNAS</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -153,7 +178,11 @@ public class CreateNASFileSystemRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * <p>Workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-363353****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -162,7 +191,11 @@ public class CreateNASFileSystemRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -171,7 +204,15 @@ public class CreateNASFileSystemRequest extends Request {
         }
 
         /**
-         * StorageType.
+         * <p>Storage specification type of the NAS file system. Allowed values:</p>
+         * <ul>
+         * <li>Capacity: Capacity type.</li>
+         * <li>Performance: Performance type.</li>
+         * </ul>
+         * <p>Default value: Capacity</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Capacity</p>
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);

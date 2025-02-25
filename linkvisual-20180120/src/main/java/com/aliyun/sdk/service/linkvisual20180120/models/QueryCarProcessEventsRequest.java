@@ -184,19 +184,19 @@ public class QueryCarProcessEventsRequest extends Request {
             super();
         } 
 
-        private Builder(QueryCarProcessEventsRequest response) {
-            super(response);
-            this.actionType = response.actionType;
-            this.areaIndex = response.areaIndex;
-            this.beginTime = response.beginTime;
-            this.currentPage = response.currentPage;
-            this.endTime = response.endTime;
-            this.iotInstanceId = response.iotInstanceId;
-            this.pageSize = response.pageSize;
-            this.plateNo = response.plateNo;
-            this.subDeviceName = response.subDeviceName;
-            this.subIotId = response.subIotId;
-            this.subProductKey = response.subProductKey;
+        private Builder(QueryCarProcessEventsRequest request) {
+            super(request);
+            this.actionType = request.actionType;
+            this.areaIndex = request.areaIndex;
+            this.beginTime = request.beginTime;
+            this.currentPage = request.currentPage;
+            this.endTime = request.endTime;
+            this.iotInstanceId = request.iotInstanceId;
+            this.pageSize = request.pageSize;
+            this.plateNo = request.plateNo;
+            this.subDeviceName = request.subDeviceName;
+            this.subIotId = request.subIotId;
+            this.subProductKey = request.subProductKey;
         } 
 
         /**

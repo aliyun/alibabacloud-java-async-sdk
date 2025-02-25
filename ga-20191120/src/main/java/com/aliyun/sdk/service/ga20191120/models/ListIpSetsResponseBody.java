@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListIpSetsResponseBody</p>
  */
 public class ListIpSetsResponseBody extends TeaModel {
-    @NameInMap("IpSets")
+    @com.aliyun.core.annotation.NameInMap("IpSets")
     private java.util.List < IpSets> ipSets;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListIpSetsResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class ListIpSetsResponseBody extends TeaModel {
     } 
 
     public static class ServiceManagedInfos extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("ChildType")
+        @com.aliyun.core.annotation.NameInMap("ChildType")
         private String childType;
 
-        @NameInMap("IsManaged")
+        @com.aliyun.core.annotation.NameInMap("IsManaged")
         private Boolean isManaged;
 
         private ServiceManagedInfos(Builder builder) {
@@ -201,13 +200,13 @@ public class ListIpSetsResponseBody extends TeaModel {
              * The type of the child resource. Valid values:
              * <p>
              * 
-             * *   **Listener**: listener
-             * *   **IpSet**: acceleration region
-             * *   **EndpointGroup**: endpoint group
-             * *   **ForwardingRule**: forwarding rule
-             * *   **Endpoint**: endpoint
-             * *   **EndpointGroupDestination**: protocol mapping of an endpoint group associated with a custom routing listener
-             * *   **EndpointPolicy**: traffic policy of an endpoint associated with a custom routing listener
+             * *   **Listener**: listener.
+             * *   **IpSet**: acceleration region.
+             * *   **EndpointGroup**: endpoint group.
+             * *   **ForwardingRule**: forwarding rule.
+             * *   **Endpoint**: endpoint.
+             * *   **EndpointGroupDestination**: protocol mapping of an endpoint group associated with a custom routing listener.
+             * *   **EndpointPolicy**: traffic policy of an endpoint associated with a custom routing listener.
              * 
              * >  This parameter takes effect only if **Action** is set to **CreateChild**.
              */
@@ -217,11 +216,11 @@ public class ListIpSetsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the specified actions are managed. Valid values:
+             * Indicates whether the specified actions are managed.
              * <p>
              * 
-             * *   **true**: The specified actions are managed, and users cannot perform the specified actions on the managed instance.
-             * *   **false**: The specified actions are not managed, and users can perform the specified actions on the managed instance.
+             * *   **true**: The specified actions are managed, and users cannot perform the actions on the managed instance.****
+             * *   **false**: The specified actions are not managed, and users can perform the actions on the managed instance.
              */
             public Builder isManaged(Boolean isManaged) {
                 this.isManaged = isManaged;
@@ -236,34 +235,34 @@ public class ListIpSetsResponseBody extends TeaModel {
 
     }
     public static class IpSets extends TeaModel {
-        @NameInMap("AccelerateRegionId")
+        @com.aliyun.core.annotation.NameInMap("AccelerateRegionId")
         private String accelerateRegionId;
 
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Integer bandwidth;
 
-        @NameInMap("IpAddressList")
+        @com.aliyun.core.annotation.NameInMap("IpAddressList")
         private java.util.List < String > ipAddressList;
 
-        @NameInMap("IpSetId")
+        @com.aliyun.core.annotation.NameInMap("IpSetId")
         private String ipSetId;
 
-        @NameInMap("IpVersion")
+        @com.aliyun.core.annotation.NameInMap("IpVersion")
         private String ipVersion;
 
-        @NameInMap("IspType")
+        @com.aliyun.core.annotation.NameInMap("IspType")
         private String ispType;
 
-        @NameInMap("ServiceId")
+        @com.aliyun.core.annotation.NameInMap("ServiceId")
         private String serviceId;
 
-        @NameInMap("ServiceManaged")
+        @com.aliyun.core.annotation.NameInMap("ServiceManaged")
         private Boolean serviceManaged;
 
-        @NameInMap("ServiceManagedInfos")
+        @com.aliyun.core.annotation.NameInMap("ServiceManagedInfos")
         private java.util.List < ServiceManagedInfos> serviceManagedInfos;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private IpSets(Builder builder) {
@@ -407,6 +406,7 @@ public class ListIpSetsResponseBody extends TeaModel {
              * 
              * *   **IPv4**
              * *   **IPv6**
+             * *   **DUAL_STACK**
              */
             public Builder ipVersion(String ipVersion) {
                 this.ipVersion = ipVersion;
@@ -417,19 +417,8 @@ public class ListIpSetsResponseBody extends TeaModel {
              * The line type of the elastic IP address (EIP) in the acceleration region. Valid values:
              * <p>
              * 
-             * *   **BGP** (default)
-             * *   **BGP_PRO** If the acceleration region is China (Hong Kong) and a basic bandwidth plan whose bandwidth type is Premium is associated with the GA instance, the default value of IspType is BGP_PRO.
-             * 
-             * If you are allowed to use single-ISP bandwidth, one of the following values is supported:
-             * 
-             * *   **ChinaTelecom**
-             * *   **ChinaUnicom**
-             * *   **ChinaMobile**
-             * *   **ChinaTelecom_L2**
-             * *   **ChinaUnicom_L2**
-             * *   **ChinaMobile_L2**
-             * 
-             * >  The supported line types vary based on the acceleration region.
+             * *   **BGP**: BGP (Multi-ISP) lines. This is the default value.
+             * *   **BGP_PRO**: BGP (Multi-ISP) Pro lines.
              */
             public Builder ispType(String ispType) {
                 this.ispType = ispType;
@@ -437,10 +426,10 @@ public class ListIpSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The service that manages the instance.
+             * The ID of the service that manages the instance.
              * <p>
              * 
-             * >  This parameter takes effect only if **ServiceManaged** is set to **True**.
+             * >  This parameter takes effect only if **ServiceManaged** is set to **true**.
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -448,7 +437,7 @@ public class ListIpSetsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the GA instance is managed. Valid values:
+             * Indicates whether the instance is managed. Valid values:
              * <p>
              * 
              * *   **true**
@@ -463,9 +452,8 @@ public class ListIpSetsResponseBody extends TeaModel {
              * The actions that users can perform on the managed instance.
              * <p>
              * 
-             * >  This parameter takes effect only if **ServiceManaged** is set to **True**.
-             * 
-             * *   Users can perform only specific actions on a managed instance.
+             * > *   This parameter takes effect only if **ServiceManaged** is set to **true**.
+             * >*   Users can perform only specific actions on a managed instance.
              */
             public Builder serviceManagedInfos(java.util.List < ServiceManagedInfos> serviceManagedInfos) {
                 this.serviceManagedInfos = serviceManagedInfos;
@@ -476,10 +464,10 @@ public class ListIpSetsResponseBody extends TeaModel {
              * The status of the acceleration region. Valid values:
              * <p>
              * 
-             * *   **init**
-             * *   **active**
-             * *   **updating**
-             * *   **deleting**
+             * *   **init:** The acceleration region is being initialized.
+             * *   **active:** The acceleration region is in the running state.
+             * *   **updating:** The acceleration region is being configured.
+             * *   **deleting:** The acceleration region is being deleted.
              */
             public Builder state(String state) {
                 this.state = state;

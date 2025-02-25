@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CdnMigrateRegisterResponseBody} extends {@link TeaModel}
  *
  * <p>CdnMigrateRegisterResponseBody</p>
  */
 public class CdnMigrateRegisterResponseBody extends TeaModel {
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private CdnMigrateRegisterResponseBody(Builder builder) {
@@ -62,7 +62,10 @@ public class CdnMigrateRegisterResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * DomainName.
+         * <p>The accelerated domain name. You can specify only one domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -70,7 +73,10 @@ public class CdnMigrateRegisterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64D28B53-5902-409B-94F6-FD46680144FE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +84,15 @@ public class CdnMigrateRegisterResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The registration status. Valid values:</p>
+         * <ul>
+         * <li><strong>running</strong></li>
+         * <li><strong>succeed</strong></li>
+         * <li><strong>failed</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>succeed</p>
          */
         public Builder status(String status) {
             this.status = status;

@@ -1,75 +1,80 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyLosslessRuleRequest} extends {@link RequestModel}
  *
  * <p>ModifyLosslessRuleRequest</p>
  */
 public class ModifyLosslessRuleRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("Aligned")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Aligned")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean aligned;
 
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("AppName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
     private String appName;
 
-    @Query
-    @NameInMap("DelayTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DelayTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer delayTime;
 
-    @Query
-    @NameInMap("Enable")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Enable")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean enable;
 
-    @Query
-    @NameInMap("FuncType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FuncType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer funcType;
 
-    @Query
-    @NameInMap("LossLessDetail")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LossLessDetail")
     private Boolean lossLessDetail;
 
-    @Query
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Query
-    @NameInMap("Notice")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Notice")
     private Boolean notice;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Related")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Related")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean related;
 
-    @Query
-    @NameInMap("WarmupTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WarmupTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer warmupTime;
 
     private ModifyLosslessRuleRequest(Builder builder) {
@@ -230,11 +235,14 @@ public class ModifyLosslessRuleRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -243,7 +251,11 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * Specifies whether to align the lifecycle of the application in the Kubernetes cluster with that of the microservice.
+         * <p>Specifies whether to align the lifecycle of the application in the Kubernetes cluster with that of the microservice.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder aligned(Boolean aligned) {
             this.putQueryParameter("Aligned", aligned);
@@ -252,7 +264,11 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c644n5frmc@3e75f25fd4*****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -261,7 +277,10 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wx-work-api</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -270,7 +289,11 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * The registration latency.
+         * <p>The registration latency.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder delayTime(Integer delayTime) {
             this.putQueryParameter("DelayTime", delayTime);
@@ -279,11 +302,15 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the alert rule. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the alert rule. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables the rule.</li>
+         * <li><code>false</code>: disables the rule.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   `true`: enables the rule.
-         * *   `false`: disables the rule.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -292,7 +319,11 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * The slope of the prefetching curve.
+         * <p>The slope of the prefetching curve.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder funcType(Integer funcType) {
             this.putQueryParameter("FuncType", funcType);
@@ -301,7 +332,10 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * Specifies whether to display online and offline processing details.
+         * <p>Specifies whether to display online and offline processing details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder lossLessDetail(Boolean lossLessDetail) {
             this.putQueryParameter("LossLessDetail", lossLessDetail);
@@ -310,7 +344,10 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * The microservice namespace to which the rule applies.
+         * <p>The microservice namespace to which the rule applies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -319,7 +356,10 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable notification.
+         * <p>Specifies whether to enable notification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder notice(Boolean notice) {
             this.putQueryParameter("Notice", notice);
@@ -328,7 +368,11 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -337,7 +381,11 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * Specifies whether to associate with service prefetching.
+         * <p>Specifies whether to associate with service prefetching.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder related(Boolean related) {
             this.putQueryParameter("Related", related);
@@ -346,7 +394,11 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * The prefetching duration.
+         * <p>The prefetching duration.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder warmupTime(Integer warmupTime) {
             this.putQueryParameter("WarmupTime", warmupTime);

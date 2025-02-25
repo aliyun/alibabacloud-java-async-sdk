@@ -1,65 +1,79 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20151123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTrackListRequest} extends {@link RequestModel}
  *
  * <p>GetTrackListRequest</p>
  */
 public class GetTrackListRequest extends Request {
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountName")
+    private String accountName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("Offset")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Offset")
     private String offset;
 
-    @Query
-    @NameInMap("OffsetCreateTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OffsetCreateTime")
     private String offsetCreateTime;
 
-    @Query
-    @NameInMap("OffsetCreateTimeDesc")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OffsetCreateTimeDesc")
     private String offsetCreateTimeDesc;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
-    @Query
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagName")
+    private String tagName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Total")
     private String total;
 
     private GetTrackListRequest(Builder builder) {
         super(builder);
+        this.accountName = builder.accountName;
         this.endTime = builder.endTime;
         this.offset = builder.offset;
         this.offsetCreateTime = builder.offsetCreateTime;
@@ -70,6 +84,7 @@ public class GetTrackListRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.startTime = builder.startTime;
+        this.tagName = builder.tagName;
         this.total = builder.total;
     }
 
@@ -84,6 +99,13 @@ public class GetTrackListRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accountName
+     */
+    public String getAccountName() {
+        return this.accountName;
     }
 
     /**
@@ -157,6 +179,13 @@ public class GetTrackListRequest extends Request {
     }
 
     /**
+     * @return tagName
+     */
+    public String getTagName() {
+        return this.tagName;
+    }
+
+    /**
      * @return total
      */
     public String getTotal() {
@@ -164,6 +193,7 @@ public class GetTrackListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetTrackListRequest, Builder> {
+        private String accountName; 
         private String endTime; 
         private String offset; 
         private String offsetCreateTime; 
@@ -174,6 +204,7 @@ public class GetTrackListRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String startTime; 
+        private String tagName; 
         private String total; 
 
         private Builder() {
@@ -182,6 +213,7 @@ public class GetTrackListRequest extends Request {
 
         private Builder(GetTrackListRequest request) {
             super(request);
+            this.accountName = request.accountName;
             this.endTime = request.endTime;
             this.offset = request.offset;
             this.offsetCreateTime = request.offsetCreateTime;
@@ -192,11 +224,24 @@ public class GetTrackListRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.startTime = request.startTime;
+            this.tagName = request.tagName;
             this.total = request.total;
         } 
 
         /**
-         * EndTime.
+         * AccountName.
+         */
+        public Builder accountName(String accountName) {
+            this.putQueryParameter("AccountName", accountName);
+            this.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-09-29</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -277,11 +322,23 @@ public class GetTrackListRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-09-29</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * TagName.
+         */
+        public Builder tagName(String tagName) {
+            this.putQueryParameter("TagName", tagName);
+            this.tagName = tagName;
             return this;
         }
 

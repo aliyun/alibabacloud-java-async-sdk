@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFeatureViewFieldRelationshipsRequest} extends {@link RequestModel}
  *
  * <p>ListFeatureViewFieldRelationshipsRequest</p>
  */
 public class ListFeatureViewFieldRelationshipsRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("FeatureViewId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("FeatureViewId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String featureViewId;
 
-    @Path
-    @NameInMap("FieldName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("FieldName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fieldName;
 
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private ListFeatureViewFieldRelationshipsRequest(Builder builder) {
@@ -99,7 +104,10 @@ public class ListFeatureViewFieldRelationshipsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fs-cn-********</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -108,7 +116,10 @@ public class ListFeatureViewFieldRelationshipsRequest extends Request {
         }
 
         /**
-         * FeatureViewId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder featureViewId(String featureViewId) {
             this.putPathParameter("FeatureViewId", featureViewId);
@@ -117,7 +128,10 @@ public class ListFeatureViewFieldRelationshipsRequest extends Request {
         }
 
         /**
-         * FieldName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_id</p>
          */
         public Builder fieldName(String fieldName) {
             this.putPathParameter("FieldName", fieldName);

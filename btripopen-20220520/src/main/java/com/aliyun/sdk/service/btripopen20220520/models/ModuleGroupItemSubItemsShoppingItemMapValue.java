@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModuleGroupItemSubItemsShoppingItemMapValue} extends {@link TeaModel}
  *
  * <p>ModuleGroupItemSubItemsShoppingItemMapValue</p>
  */
 public class ModuleGroupItemSubItemsShoppingItemMapValue extends TeaModel {
-    @NameInMap("search_price")
+    @com.aliyun.core.annotation.NameInMap("search_price")
     private SearchPrice searchPrice;
 
     private ModuleGroupItemSubItemsShoppingItemMapValue(Builder builder) {
@@ -51,14 +56,20 @@ public class ModuleGroupItemSubItemsShoppingItemMapValue extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModuleGroupItemSubItemsShoppingItemMapValue} extends {@link TeaModel}
+     *
+     * <p>ModuleGroupItemSubItemsShoppingItemMapValue</p>
+     */
     public static class SearchPrice extends TeaModel {
-        @NameInMap("ticket_price")
+        @com.aliyun.core.annotation.NameInMap("ticket_price")
         private Integer ticketPrice;
 
-        @NameInMap("sell_price")
+        @com.aliyun.core.annotation.NameInMap("sell_price")
         private Integer sellPrice;
 
-        @NameInMap("tax")
+        @com.aliyun.core.annotation.NameInMap("tax")
         private Integer tax;
 
         private SearchPrice(Builder builder) {

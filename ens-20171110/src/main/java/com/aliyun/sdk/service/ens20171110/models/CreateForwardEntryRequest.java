@@ -1,58 +1,63 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateForwardEntryRequest} extends {@link RequestModel}
  *
  * <p>CreateForwardEntryRequest</p>
  */
 public class CreateForwardEntryRequest extends Request {
-    @Query
-    @NameInMap("ExternalIp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExternalIp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String externalIp;
 
-    @Query
-    @NameInMap("ExternalPort")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExternalPort")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String externalPort;
 
-    @Query
-    @NameInMap("ForwardEntryName")
-    @Validation(maxLength = 128)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForwardEntryName")
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String forwardEntryName;
 
-    @Query
-    @NameInMap("HealthCheckPort")
-    @Validation(maximum = 65535, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckPort")
+    @com.aliyun.core.annotation.Validation(maximum = 65535, minimum = 1)
     private Integer healthCheckPort;
 
-    @Query
-    @NameInMap("InternalIp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternalIp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String internalIp;
 
-    @Query
-    @NameInMap("InternalPort")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternalPort")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String internalPort;
 
-    @Query
-    @NameInMap("IpProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpProtocol")
     private String ipProtocol;
 
-    @Query
-    @NameInMap("NatGatewayId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NatGatewayId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String natGatewayId;
 
-    @Query
-    @NameInMap("StandbyExternalIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StandbyExternalIp")
     private String standbyExternalIp;
 
     private CreateForwardEntryRequest(Builder builder) {
@@ -173,7 +178,11 @@ public class CreateForwardEntryRequest extends Request {
         } 
 
         /**
-         * ExternalIp.
+         * <p>The elastic IP address (EIP) that is used to access the Internet.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>121.11.36.28</p>
          */
         public Builder externalIp(String externalIp) {
             this.putQueryParameter("ExternalIp", externalIp);
@@ -182,7 +191,16 @@ public class CreateForwardEntryRequest extends Request {
         }
 
         /**
-         * ExternalPort.
+         * <p>The external port or port range that is used for port forwarding.</p>
+         * <ul>
+         * <li>Valid values: 1 to 65535.</li>
+         * <li>To specify a port range, separate the first port and the last port with a forward slash (/), such as 10/20.</li>
+         * <li>If you set ExternalPort to a port range, you must also set InternalPort to a port range. The number of ports in the port ranges must be the same. For example, if you set ExternalPort to 10/20, you can set InternalPort to 80/90.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         public Builder externalPort(String externalPort) {
             this.putQueryParameter("ExternalPort", externalPort);
@@ -191,7 +209,10 @@ public class CreateForwardEntryRequest extends Request {
         }
 
         /**
-         * ForwardEntryName.
+         * <p>The name of the DNAT entry. The name must be 2 to 128 characters in length. The name cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test0</p>
          */
         public Builder forwardEntryName(String forwardEntryName) {
             this.putQueryParameter("ForwardEntryName", forwardEntryName);
@@ -200,7 +221,10 @@ public class CreateForwardEntryRequest extends Request {
         }
 
         /**
-         * HealthCheckPort.
+         * <p>The probe port. The port must be within the internal port range. By default, this parameter is left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder healthCheckPort(Integer healthCheckPort) {
             this.putQueryParameter("HealthCheckPort", healthCheckPort);
@@ -209,7 +233,11 @@ public class CreateForwardEntryRequest extends Request {
         }
 
         /**
-         * InternalIp.
+         * <p>The private IP address of the instance that uses the DNAT entry for Internet communication.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.13</p>
          */
         public Builder internalIp(String internalIp) {
             this.putQueryParameter("InternalIp", internalIp);
@@ -218,7 +246,15 @@ public class CreateForwardEntryRequest extends Request {
         }
 
         /**
-         * InternalPort.
+         * <p>The internal port or port range that is used for port forwarding.</p>
+         * <ul>
+         * <li>Valid values: 1 to 65535.</li>
+         * <li>To specify a port range, separate the first port and the last port with a forward slash (/), such as 10/20.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         public Builder internalPort(String internalPort) {
             this.putQueryParameter("InternalPort", internalPort);
@@ -227,7 +263,15 @@ public class CreateForwardEntryRequest extends Request {
         }
 
         /**
-         * IpProtocol.
+         * <p>The protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>TCP</strong>: forwards TCP packets.</li>
+         * <li><strong>UDP</strong>: forwards UDP packets.</li>
+         * <li><strong>Any</strong> (default): forwards all packets.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Any</p>
          */
         public Builder ipProtocol(String ipProtocol) {
             this.putQueryParameter("IpProtocol", ipProtocol);
@@ -236,7 +280,11 @@ public class CreateForwardEntryRequest extends Request {
         }
 
         /**
-         * NatGatewayId.
+         * <p>The ID of the Network Address Translation (NAT) gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nat-5t7nh1cfm6kxiszlttr383xpo</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -245,7 +293,10 @@ public class CreateForwardEntryRequest extends Request {
         }
 
         /**
-         * StandbyExternalIp.
+         * <p>The secondary EIP that is used to access the Internet. You need to select a secondary EIP that is bound to NAT. After the DNAT entry is created, the secondary EIP takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101.XXX.XXX.4</p>
          */
         public Builder standbyExternalIp(String standbyExternalIp) {
             this.putQueryParameter("StandbyExternalIp", standbyExternalIp);

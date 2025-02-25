@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAppServiceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAppServiceResponseBody</p>
  */
 public class CreateAppServiceResponseBody extends TeaModel {
-    @NameInMap("InternetEndpoint")
+    @com.aliyun.core.annotation.NameInMap("InternetEndpoint")
     private String internetEndpoint;
 
-    @NameInMap("IntranetEndpoint")
+    @com.aliyun.core.annotation.NameInMap("IntranetEndpoint")
     private String intranetEndpoint;
 
-    @NameInMap("Region")
+    @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServiceId")
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
     private String serviceId;
 
-    @NameInMap("ServiceName")
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private CreateAppServiceResponseBody(Builder builder) {
@@ -110,7 +115,10 @@ public class CreateAppServiceResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * InternetEndpoint.
+         * <p>The public endpoint of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://pai-eas.cn-shanghai">http://pai-eas.cn-shanghai</a>.****</p>
          */
         public Builder internetEndpoint(String internetEndpoint) {
             this.internetEndpoint = internetEndpoint;
@@ -118,7 +126,10 @@ public class CreateAppServiceResponseBody extends TeaModel {
         }
 
         /**
-         * IntranetEndpoint.
+         * <p>The internal endpoint of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://pai-eas-vpc.cn-shanghai">http://pai-eas-vpc.cn-shanghai</a>.****</p>
          */
         public Builder intranetEndpoint(String intranetEndpoint) {
             this.intranetEndpoint = intranetEndpoint;
@@ -126,7 +137,10 @@ public class CreateAppServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Region.
+         * <p>The region ID of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder region(String region) {
             this.region = region;
@@ -134,7 +148,10 @@ public class CreateAppServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +159,10 @@ public class CreateAppServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceId.
+         * <p>The service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-m-aaxxxddf</p>
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;
@@ -150,7 +170,10 @@ public class CreateAppServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceName.
+         * <p>The service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
@@ -158,7 +181,10 @@ public class CreateAppServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The service state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Creating</p>
          */
         public Builder status(String status) {
             this.status = status;

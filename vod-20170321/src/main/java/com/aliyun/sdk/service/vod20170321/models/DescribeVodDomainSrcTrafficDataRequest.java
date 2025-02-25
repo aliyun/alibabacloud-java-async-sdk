@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodDomainSrcTrafficDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeVodDomainSrcTrafficDataRequest</p>
  */
 public class DescribeVodDomainSrcTrafficDataRequest extends Request {
-    @Query
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("Interval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Interval")
     private String interval;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeVodDomainSrcTrafficDataRequest(Builder builder) {
@@ -110,10 +115,11 @@ public class DescribeVodDomainSrcTrafficDataRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name. You can specify a maximum of 500 domain names in a request. Separate multiple domain names with commas (,). If you specify multiple domain names in a request, aggregation results are returned.
-         * <p>
+         * <p>The accelerated domain name. You can specify a maximum of 500 domain names in a request. Separate multiple domain names with commas (,). If you specify multiple domain names in a request, aggregation results are returned.</p>
+         * <p>If you leave this parameter empty, the origin traffic data for all accelerated domain names is queried by default.</p>
          * 
-         * If you leave this parameter empty, the origin traffic data for all accelerated domain names is queried by default.
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -122,7 +128,10 @@ public class DescribeVodDomainSrcTrafficDataRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The end time must be later than the start time. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-09-24T15:59:59Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -131,14 +140,18 @@ public class DescribeVodDomainSrcTrafficDataRequest extends Request {
         }
 
         /**
-         * The time interval between the data entries to return. Unit: seconds. Valid values:
-         * <p>
+         * <p>The time interval between the data entries to return. Unit: seconds. Valid values:</p>
+         * <ul>
+         * <li><strong>300</strong>: 5 minutes</li>
+         * <li><strong>3600</strong>: 1 hour</li>
+         * <li><strong>86400</strong>: 1 day</li>
+         * </ul>
+         * <blockquote>
+         * <p>The time granularity supported by the Interval parameter varies based on the time range per query specified by using <code>StartTime</code> and <code>EndTime</code>. For more information, see the <strong>Time granularity</strong> section of this topic.</p>
+         * </blockquote>
          * 
-         * *   **300**: 5 minutes
-         * *   **3600**: 1 hour
-         * *   **86400**: 1 day
-         * 
-         * > The time granularity supported by the Interval parameter varies based on the time range per query specified by using `StartTime` and `EndTime`. For more information, see the **Time granularity** section of this topic.
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -156,10 +169,11 @@ public class DescribeVodDomainSrcTrafficDataRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         * <p>
+         * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>If you leave this parameter empty, the origin traffic data that is generated in the last 24 hours is queried by default.</p>
          * 
-         * If you leave this parameter empty, the origin traffic data that is generated in the last 24 hours is queried by default.
+         * <strong>example:</strong>
+         * <p>2022-03-22T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

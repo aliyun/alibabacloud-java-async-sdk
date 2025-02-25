@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEntitiesForPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>ListEntitiesForPolicyResponseBody</p>
  */
 public class ListEntitiesForPolicyResponseBody extends TeaModel {
-    @NameInMap("Groups")
+    @com.aliyun.core.annotation.NameInMap("Groups")
     private Groups groups;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Roles")
+    @com.aliyun.core.annotation.NameInMap("Roles")
     private Roles roles;
 
-    @NameInMap("Users")
+    @com.aliyun.core.annotation.NameInMap("Users")
     private Users users;
 
     private ListEntitiesForPolicyResponseBody(Builder builder) {
@@ -74,7 +79,7 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
         private Users users; 
 
         /**
-         * Groups.
+         * <p>The list of the RAM user groups.</p>
          */
         public Builder groups(Groups groups) {
             this.groups = groups;
@@ -82,7 +87,10 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7B8A4E7D-6CFF-471D-84DF-195A7A241ECB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +98,7 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Roles.
+         * <p>The information of RAM roles.</p>
          */
         public Builder roles(Roles roles) {
             this.roles = roles;
@@ -98,7 +106,7 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Users.
+         * <p>The list of the RAM users to which the policy is attached.</p>
          */
         public Builder users(Users users) {
             this.users = users;
@@ -111,14 +119,20 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListEntitiesForPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEntitiesForPolicyResponseBody</p>
+     */
     public static class Group extends TeaModel {
-        @NameInMap("AttachDate")
+        @com.aliyun.core.annotation.NameInMap("AttachDate")
         private String attachDate;
 
-        @NameInMap("Comments")
+        @com.aliyun.core.annotation.NameInMap("Comments")
         private String comments;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
         private Group(Builder builder) {
@@ -162,7 +176,10 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
             private String groupName; 
 
             /**
-             * AttachDate.
+             * <p>The time when the policy was attached to the RAM user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-02-18T17:22:08Z</p>
              */
             public Builder attachDate(String attachDate) {
                 this.attachDate = attachDate;
@@ -170,7 +187,10 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Comments.
+             * <p>The description of the RAM user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test team</p>
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -178,7 +198,10 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>The name of the RAM user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>QA-Team</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -192,9 +215,15 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEntitiesForPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEntitiesForPolicyResponseBody</p>
+     */
     public static class Groups extends TeaModel {
-        @NameInMap("Group")
-        private java.util.List < Group> group;
+        @com.aliyun.core.annotation.NameInMap("Group")
+        private java.util.List<Group> group;
 
         private Groups(Builder builder) {
             this.group = builder.group;
@@ -211,17 +240,17 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
         /**
          * @return group
          */
-        public java.util.List < Group> getGroup() {
+        public java.util.List<Group> getGroup() {
             return this.group;
         }
 
         public static final class Builder {
-            private java.util.List < Group> group; 
+            private java.util.List<Group> group; 
 
             /**
              * Group.
              */
-            public Builder group(java.util.List < Group> group) {
+            public Builder group(java.util.List<Group> group) {
                 this.group = group;
                 return this;
             }
@@ -233,20 +262,26 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEntitiesForPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEntitiesForPolicyResponseBody</p>
+     */
     public static class Role extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
-        @NameInMap("AttachDate")
+        @com.aliyun.core.annotation.NameInMap("AttachDate")
         private String attachDate;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("RoleId")
+        @com.aliyun.core.annotation.NameInMap("RoleId")
         private String roleId;
 
-        @NameInMap("RoleName")
+        @com.aliyun.core.annotation.NameInMap("RoleName")
         private String roleName;
 
         private Role(Builder builder) {
@@ -308,7 +343,10 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
             private String roleName; 
 
             /**
-             * Arn.
+             * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::123456789012****:role/ECSAdmin</p>
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -316,7 +354,10 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * AttachDate.
+             * <p>The time when the policy was attached to the RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-01-23T12:33:18Z</p>
              */
             public Builder attachDate(String attachDate) {
                 this.attachDate = attachDate;
@@ -324,7 +365,10 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS administrator</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -332,7 +376,10 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * RoleId.
+             * <p>The ID of the RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>122748924538****</p>
              */
             public Builder roleId(String roleId) {
                 this.roleId = roleId;
@@ -340,7 +387,10 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * <p>The name of the RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECSAdmin</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -354,9 +404,15 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEntitiesForPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEntitiesForPolicyResponseBody</p>
+     */
     public static class Roles extends TeaModel {
-        @NameInMap("Role")
-        private java.util.List < Role> role;
+        @com.aliyun.core.annotation.NameInMap("Role")
+        private java.util.List<Role> role;
 
         private Roles(Builder builder) {
             this.role = builder.role;
@@ -373,17 +429,17 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
         /**
          * @return role
          */
-        public java.util.List < Role> getRole() {
+        public java.util.List<Role> getRole() {
             return this.role;
         }
 
         public static final class Builder {
-            private java.util.List < Role> role; 
+            private java.util.List<Role> role; 
 
             /**
              * Role.
              */
-            public Builder role(java.util.List < Role> role) {
+            public Builder role(java.util.List<Role> role) {
                 this.role = role;
                 return this;
             }
@@ -395,17 +451,23 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEntitiesForPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEntitiesForPolicyResponseBody</p>
+     */
     public static class User extends TeaModel {
-        @NameInMap("AttachDate")
+        @com.aliyun.core.annotation.NameInMap("AttachDate")
         private String attachDate;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private User(Builder builder) {
@@ -458,7 +520,10 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * AttachDate.
+             * <p>The time when the policy was attached to the RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-01-23T12:33:18Z</p>
              */
             public Builder attachDate(String attachDate) {
                 this.attachDate = attachDate;
@@ -466,7 +531,10 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name of the RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhang*</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -474,7 +542,10 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The unique ID of the RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>122748924538****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -482,7 +553,10 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The name of the RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhangq****</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -496,9 +570,15 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEntitiesForPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEntitiesForPolicyResponseBody</p>
+     */
     public static class Users extends TeaModel {
-        @NameInMap("User")
-        private java.util.List < User> user;
+        @com.aliyun.core.annotation.NameInMap("User")
+        private java.util.List<User> user;
 
         private Users(Builder builder) {
             this.user = builder.user;
@@ -515,17 +595,17 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
         /**
          * @return user
          */
-        public java.util.List < User> getUser() {
+        public java.util.List<User> getUser() {
             return this.user;
         }
 
         public static final class Builder {
-            private java.util.List < User> user; 
+            private java.util.List<User> user; 
 
             /**
              * User.
              */
-            public Builder user(java.util.List < User> user) {
+            public Builder user(java.util.List<User> user) {
                 this.user = user;
                 return this;
             }

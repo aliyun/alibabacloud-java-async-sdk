@@ -1,46 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link IsvRuleSaveRequest} extends {@link RequestModel}
  *
  * <p>IsvRuleSaveRequest</p>
  */
 public class IsvRuleSaveRequest extends Request {
-    @Body
-    @NameInMap("apply_need")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("apply_need")
     private Boolean applyNeed;
 
-    @Body
-    @NameInMap("book_type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("book_type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bookType;
 
-    @Body
-    @NameInMap("bookuser_list")
-    private java.util.List < BookuserList> bookuserList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("bookuser_list")
+    private java.util.List<BookuserList> bookuserList;
 
-    @Body
-    @NameInMap("rule_need")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("rule_need")
     private Boolean ruleNeed;
 
-    @Body
-    @NameInMap("status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer status;
 
-    @Body
-    @NameInMap("user_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("user_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
-    @Header
-    @NameInMap("x-acs-btrip-so-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-so-corp-token")
     private String xAcsBtripSoCorpToken;
 
     private IsvRuleSaveRequest(Builder builder) {
@@ -84,7 +89,7 @@ public class IsvRuleSaveRequest extends Request {
     /**
      * @return bookuserList
      */
-    public java.util.List < BookuserList> getBookuserList() {
+    public java.util.List<BookuserList> getBookuserList() {
         return this.bookuserList;
     }
 
@@ -119,7 +124,7 @@ public class IsvRuleSaveRequest extends Request {
     public static final class Builder extends Request.Builder<IsvRuleSaveRequest, Builder> {
         private Boolean applyNeed; 
         private String bookType; 
-        private java.util.List < BookuserList> bookuserList; 
+        private java.util.List<BookuserList> bookuserList; 
         private Boolean ruleNeed; 
         private Integer status; 
         private String userId; 
@@ -150,7 +155,7 @@ public class IsvRuleSaveRequest extends Request {
         }
 
         /**
-         * book_type.
+         * <p>This parameter is required.</p>
          */
         public Builder bookType(String bookType) {
             this.putBodyParameter("book_type", bookType);
@@ -161,7 +166,7 @@ public class IsvRuleSaveRequest extends Request {
         /**
          * bookuser_list.
          */
-        public Builder bookuserList(java.util.List < BookuserList> bookuserList) {
+        public Builder bookuserList(java.util.List<BookuserList> bookuserList) {
             String bookuserListShrink = shrink(bookuserList, "bookuser_list", "json");
             this.putBodyParameter("bookuser_list", bookuserListShrink);
             this.bookuserList = bookuserList;
@@ -178,7 +183,10 @@ public class IsvRuleSaveRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putBodyParameter("status", status);
@@ -187,7 +195,10 @@ public class IsvRuleSaveRequest extends Request {
         }
 
         /**
-         * user_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("user_id", userId);
@@ -211,13 +222,19 @@ public class IsvRuleSaveRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link IsvRuleSaveRequest} extends {@link TeaModel}
+     *
+     * <p>IsvRuleSaveRequest</p>
+     */
     public static class BookuserList extends TeaModel {
-        @NameInMap("entity_id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("entity_id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String entityId;
 
-        @NameInMap("entity_type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("entity_type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer entityType;
 
         private BookuserList(Builder builder) {
@@ -252,7 +269,7 @@ public class IsvRuleSaveRequest extends Request {
             private Integer entityType; 
 
             /**
-             * entity_id.
+             * <p>This parameter is required.</p>
              */
             public Builder entityId(String entityId) {
                 this.entityId = entityId;
@@ -260,7 +277,7 @@ public class IsvRuleSaveRequest extends Request {
             }
 
             /**
-             * entity_type.
+             * <p>This parameter is required.</p>
              */
             public Builder entityType(Integer entityType) {
                 this.entityType = entityType;

@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHostResponseBody} extends {@link TeaModel}
  *
  * <p>GetHostResponseBody</p>
  */
 public class GetHostResponseBody extends TeaModel {
-    @NameInMap("Host")
+    @com.aliyun.core.annotation.NameInMap("Host")
     private GetHostResponseBodyHost host;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetHostResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class GetHostResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The fingerprint of the host. This parameter uniquely identifies a host.
+         * <p>The returned information about the host.</p>
          */
         public Builder host(GetHostResponseBodyHost host) {
             this.host = host;
@@ -58,11 +58,10 @@ public class GetHostResponseBody extends TeaModel {
         }
 
         /**
-         * The endpoint type of the host. Valid values:
-         * <p>
+         * <p>The request ID.</p>
          * 
-         * *   **Public**: a public endpoint
-         * *   **Private**: an internal endpoint
+         * <strong>example:</strong>
+         * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,14 +74,20 @@ public class GetHostResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetHostResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHostResponseBody</p>
+     */
     public static class Protocols extends TeaModel {
-        @NameInMap("HostFingerPrint")
+        @com.aliyun.core.annotation.NameInMap("HostFingerPrint")
         private String hostFingerPrint;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("ProtocolName")
+        @com.aliyun.core.annotation.NameInMap("ProtocolName")
         private String protocolName;
 
         private Protocols(Builder builder) {
@@ -126,7 +131,10 @@ public class GetHostResponseBody extends TeaModel {
             private String protocolName; 
 
             /**
-             * WB662865
+             * <p>The fingerprint of the host. This parameter uniquely identifies a host. A value is returned for this parameter only if you have performed O&amp;M operations on the host by using the bastion host. Otherwise, no value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ssh-ed25519|3e:46:5a:e1:1f:0d:39:7e:61:35:d5:fa:7b:2b:<strong>:</strong></p>
              */
             public Builder hostFingerPrint(String hostFingerPrint) {
                 this.hostFingerPrint = hostFingerPrint;
@@ -134,7 +142,10 @@ public class GetHostResponseBody extends TeaModel {
             }
 
             /**
-             * GetHost
+             * <p>The service port of the host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -142,7 +153,14 @@ public class GetHostResponseBody extends TeaModel {
             }
 
             /**
-             * ProtocolName.
+             * <p>The protocol that is used to connect to the host. Valid values:</p>
+             * <ul>
+             * <li><strong>SSH</strong></li>
+             * <li><strong>RDP</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SSH</p>
              */
             public Builder protocolName(String protocolName) {
                 this.protocolName = protocolName;
@@ -156,41 +174,47 @@ public class GetHostResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetHostResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHostResponseBody</p>
+     */
     public static class GetHostResponseBodyHost extends TeaModel {
-        @NameInMap("ActiveAddressType")
+        @com.aliyun.core.annotation.NameInMap("ActiveAddressType")
         private String activeAddressType;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("HostId")
+        @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;
 
-        @NameInMap("HostName")
+        @com.aliyun.core.annotation.NameInMap("HostName")
         private String hostName;
 
-        @NameInMap("HostPrivateAddress")
+        @com.aliyun.core.annotation.NameInMap("HostPrivateAddress")
         private String hostPrivateAddress;
 
-        @NameInMap("HostPublicAddress")
+        @com.aliyun.core.annotation.NameInMap("HostPublicAddress")
         private String hostPublicAddress;
 
-        @NameInMap("NetworkDomainId")
+        @com.aliyun.core.annotation.NameInMap("NetworkDomainId")
         private String networkDomainId;
 
-        @NameInMap("OSType")
+        @com.aliyun.core.annotation.NameInMap("OSType")
         private String OSType;
 
-        @NameInMap("Protocols")
+        @com.aliyun.core.annotation.NameInMap("Protocols")
         private java.util.List < Protocols> protocols;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("SourceInstanceId")
+        @com.aliyun.core.annotation.NameInMap("SourceInstanceId")
         private String sourceInstanceId;
 
-        @NameInMap("SourceInstanceState")
+        @com.aliyun.core.annotation.NameInMap("SourceInstanceState")
         private String sourceInstanceState;
 
         private GetHostResponseBodyHost(Builder builder) {
@@ -315,7 +339,14 @@ public class GetHostResponseBody extends TeaModel {
             private String sourceInstanceState; 
 
             /**
-             * The public endpoint of the host. You can set this parameter to a domain name or an IP address.
+             * <p>The address type of the host. Valid values:</p>
+             * <ul>
+             * <li><strong>Public</strong>: a public address</li>
+             * <li><strong>Private</strong>: a private address</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Public</p>
              */
             public Builder activeAddressType(String activeAddressType) {
                 this.activeAddressType = activeAddressType;
@@ -323,10 +354,10 @@ public class GetHostResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECS instance or dedicated cluster host that was queried.
-             * <p>
+             * <p>The description of the host.</p>
              * 
-             * >  No value is returned for this parameter if the **Source** parameter is set to **Local**.
+             * <strong>example:</strong>
+             * <p>host</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -334,7 +365,10 @@ public class GetHostResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * <p>The ID of the host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -342,10 +376,10 @@ public class GetHostResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Bastionhost instance where you want to query the host.
-             * <p>
+             * <p>The hostname.</p>
              * 
-             * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.
+             * <strong>example:</strong>
+             * <p>host</p>
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -353,7 +387,10 @@ public class GetHostResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the host.
+             * <p>The internal endpoint of the host. The value is a domain name or an IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder hostPrivateAddress(String hostPrivateAddress) {
                 this.hostPrivateAddress = hostPrivateAddress;
@@ -361,12 +398,10 @@ public class GetHostResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the host. Valid values:
-             * <p>
+             * <p>The public address of the host. The value is a domain name or an IP address.</p>
              * 
-             * - **Normal**: The host is normal.
-             * 
-             * - **Release**: The host is released.
+             * <strong>example:</strong>
+             * <p>1.1.XX.XX</p>
              */
             public Builder hostPublicAddress(String hostPublicAddress) {
                 this.hostPublicAddress = hostPublicAddress;
@@ -374,7 +409,10 @@ public class GetHostResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkDomainId.
+             * <p>The ID of the network domain to which the host belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder networkDomainId(String networkDomainId) {
                 this.networkDomainId = networkDomainId;
@@ -382,11 +420,14 @@ public class GetHostResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system of the host. Valid values:
-             * <p>
+             * <p>The operating system of the host. Valid values:</p>
+             * <ul>
+             * <li><strong>Linux</strong></li>
+             * <li><strong>Windows</strong></li>
+             * </ul>
              * 
-             * *   **Linux**
-             * *   **Windows**
+             * <strong>example:</strong>
+             * <p>Linux</p>
              */
             public Builder OSType(String OSType) {
                 this.OSType = OSType;
@@ -394,7 +435,7 @@ public class GetHostResponseBody extends TeaModel {
             }
 
             /**
-             * GetHost
+             * <p>The protocol information about the host.</p>
              */
             public Builder protocols(java.util.List < Protocols> protocols) {
                 this.protocols = protocols;
@@ -402,7 +443,15 @@ public class GetHostResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol information of the host.
+             * <p>The source of the host. Valid values:</p>
+             * <ul>
+             * <li><strong>Local</strong>: a host in a data center</li>
+             * <li><strong>Ecs</strong>: an Elastic Compute Service (ECS) instance</li>
+             * <li><strong>Rds</strong>: a host in an ApsaraDB MyBase dedicated cluster</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Local</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -410,7 +459,13 @@ public class GetHostResponseBody extends TeaModel {
             }
 
             /**
-             * Queries the details of a specified host, such as the name, source, endpoint, protocol, and service port of the host.
+             * <p>The ID of the ECS instance or the host in an ApsaraDB MyBase dedicated cluster.</p>
+             * <blockquote>
+             * <p> If <strong>Local</strong> is returned for the <strong>Source</strong> parameter, no value is returned for this parameter.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp19ienyt0yax748****</p>
              */
             public Builder sourceInstanceId(String sourceInstanceId) {
                 this.sourceInstanceId = sourceInstanceId;
@@ -418,10 +473,14 @@ public class GetHostResponseBody extends TeaModel {
             }
 
             /**
-             * All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~315526~~).
-             * <p>
+             * <p>The status of the host. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal</strong>: normal</li>
+             * <li><strong>Release</strong>: released</li>
+             * </ul>
              * 
-             * For more information about sample requests, see the "Examples" section of this topic.
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder sourceInstanceState(String sourceInstanceState) {
                 this.sourceInstanceState = sourceInstanceState;

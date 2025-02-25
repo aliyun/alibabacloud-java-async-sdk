@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link JoinResourceGroupRequest} extends {@link RequestModel}
  *
  * <p>JoinResourceGroupRequest</p>
  */
 public class JoinResourceGroupRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
     private JoinResourceGroupRequest(Builder builder) {
@@ -193,7 +198,10 @@ public class JoinResourceGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the resource. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -202,7 +210,10 @@ public class JoinResourceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which you want to add the instance.
+         * <p>The ID of the resource group to which you want to add the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -211,7 +222,10 @@ public class JoinResourceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the resource. For example, if you set ResourceType to instance, set this parameter to the ID of the instance.
+         * <p>The ID of the resource. For example, if you set ResourceType to instance, set this parameter to the ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp67acfmxazb4p****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -238,21 +252,26 @@ public class JoinResourceGroupRequest extends Request {
         }
 
         /**
-         * The type of the ECS resource. Valid values:
-         * <p>
+         * <p>The type of the ECS resource. Valid values:</p>
+         * <ul>
+         * <li>instance: instance</li>
+         * <li>disk: Elastic Block Storage (EBS) device</li>
+         * <li>snapshot: snapshot</li>
+         * <li>image: image</li>
+         * <li>securitygroup: security group</li>
+         * <li>ddh: dedicated host</li>
+         * <li>ddhcluster: dedicated host cluster</li>
+         * <li>eni: ENI</li>
+         * <li>keypair: SSH key pair</li>
+         * <li>launchtemplate: launch template</li>
+         * <li>command: Cloud Assistant command</li>
+         * <li>activation: activation code for a Cloud Assistant managed instance</li>
+         * <li>managedinstance: Cloud Assistant managed instance</li>
+         * </ul>
+         * <p>The values are case-sensitive.</p>
          * 
-         * *   instance: instance
-         * *   disk: Elastic Block Storage (EBS) device
-         * *   snapshot: snapshot
-         * *   image: image
-         * *   securitygroup: security group
-         * *   ddh: dedicated host
-         * *   ddhcluster: dedicated host cluster
-         * *   eni: ENI
-         * *   keypair: SSH key pair
-         * *   launchtemplate: launch template
-         * 
-         * These values are case-sensitive.
+         * <strong>example:</strong>
+         * <p>securitygroup</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

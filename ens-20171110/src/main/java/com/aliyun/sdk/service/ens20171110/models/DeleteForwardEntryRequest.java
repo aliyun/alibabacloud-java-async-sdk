@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteForwardEntryRequest} extends {@link RequestModel}
  *
  * <p>DeleteForwardEntryRequest</p>
  */
 public class DeleteForwardEntryRequest extends Request {
-    @Query
-    @NameInMap("ForwardEntryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForwardEntryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String forwardEntryId;
 
     private DeleteForwardEntryRequest(Builder builder) {
@@ -55,7 +60,11 @@ public class DeleteForwardEntryRequest extends Request {
         } 
 
         /**
-         * ForwardEntryId.
+         * <p>The ID of the DNAT entry that you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fwd-5tfk8qgepr9ijjkqxt8do****</p>
          */
         public Builder forwardEntryId(String forwardEntryId) {
             this.putQueryParameter("ForwardEntryId", forwardEntryId);

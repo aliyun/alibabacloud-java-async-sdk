@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dsw20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEcsSpecsResponseBody} extends {@link TeaModel}
  *
  * <p>ListEcsSpecsResponseBody</p>
  */
 public class ListEcsSpecsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("EcsSpecs")
-    private java.util.List < EcsSpecs> ecsSpecs;
+    @com.aliyun.core.annotation.NameInMap("EcsSpecs")
+    private java.util.List<EcsSpecs> ecsSpecs;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListEcsSpecsResponseBody(Builder builder) {
@@ -61,7 +66,7 @@ public class ListEcsSpecsResponseBody extends TeaModel {
     /**
      * @return ecsSpecs
      */
-    public java.util.List < EcsSpecs> getEcsSpecs() {
+    public java.util.List<EcsSpecs> getEcsSpecs() {
         return this.ecsSpecs;
     }
 
@@ -102,7 +107,7 @@ public class ListEcsSpecsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < EcsSpecs> ecsSpecs; 
+        private java.util.List<EcsSpecs> ecsSpecs; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
@@ -120,7 +125,7 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         /**
          * EcsSpecs.
          */
-        public Builder ecsSpecs(java.util.List < EcsSpecs> ecsSpecs) {
+        public Builder ecsSpecs(java.util.List<EcsSpecs> ecsSpecs) {
             this.ecsSpecs = ecsSpecs;
             return this;
         }
@@ -171,11 +176,17 @@ public class ListEcsSpecsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListEcsSpecsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEcsSpecsResponseBody</p>
+     */
     public static class Labels extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Labels(Builder builder) {
@@ -232,41 +243,47 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEcsSpecsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEcsSpecsResponseBody</p>
+     */
     public static class EcsSpecs extends TeaModel {
-        @NameInMap("AcceleratorType")
+        @com.aliyun.core.annotation.NameInMap("AcceleratorType")
         private String acceleratorType;
 
-        @NameInMap("CPU")
+        @com.aliyun.core.annotation.NameInMap("CPU")
         private Long CPU;
 
-        @NameInMap("Currency")
+        @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
-        @NameInMap("GPU")
+        @com.aliyun.core.annotation.NameInMap("GPU")
         private Long GPU;
 
-        @NameInMap("GPUType")
+        @com.aliyun.core.annotation.NameInMap("GPUType")
         private String GPUType;
 
-        @NameInMap("InstanceBandwidthRx")
+        @com.aliyun.core.annotation.NameInMap("InstanceBandwidthRx")
         private Long instanceBandwidthRx;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("IsAvailable")
+        @com.aliyun.core.annotation.NameInMap("IsAvailable")
         private Boolean isAvailable;
 
-        @NameInMap("Labels")
-        private java.util.List < Labels> labels;
+        @com.aliyun.core.annotation.NameInMap("Labels")
+        private java.util.List<Labels> labels;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Float memory;
 
-        @NameInMap("Price")
+        @com.aliyun.core.annotation.NameInMap("Price")
         private Double price;
 
-        @NameInMap("SystemDiskCapacity")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskCapacity")
         private Long systemDiskCapacity;
 
         private EcsSpecs(Builder builder) {
@@ -351,7 +368,7 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         /**
          * @return labels
          */
-        public java.util.List < Labels> getLabels() {
+        public java.util.List<Labels> getLabels() {
             return this.labels;
         }
 
@@ -385,7 +402,7 @@ public class ListEcsSpecsResponseBody extends TeaModel {
             private Long instanceBandwidthRx; 
             private String instanceType; 
             private Boolean isAvailable; 
-            private java.util.List < Labels> labels; 
+            private java.util.List<Labels> labels; 
             private Float memory; 
             private Double price; 
             private Long systemDiskCapacity; 
@@ -457,7 +474,7 @@ public class ListEcsSpecsResponseBody extends TeaModel {
             /**
              * Labels.
              */
-            public Builder labels(java.util.List < Labels> labels) {
+            public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;
                 return this;
             }

@@ -1,83 +1,93 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyForwardEntryRequest} extends {@link RequestModel}
  *
  * <p>ModifyForwardEntryRequest</p>
  */
 public class ModifyForwardEntryRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("ExternalIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExternalIp")
     private String externalIp;
 
-    @Query
-    @NameInMap("ExternalPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExternalPort")
     private String externalPort;
 
-    @Query
-    @NameInMap("ForwardEntryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForwardEntryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String forwardEntryId;
 
-    @Query
-    @NameInMap("ForwardEntryName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForwardEntryName")
     private String forwardEntryName;
 
-    @Query
-    @NameInMap("ForwardTableId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForwardTableId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String forwardTableId;
 
-    @Query
-    @NameInMap("InternalIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternalIp")
     private String internalIp;
 
-    @Query
-    @NameInMap("InternalPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternalPort")
     private String internalPort;
 
-    @Query
-    @NameInMap("IpProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpProtocol")
     private String ipProtocol;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PortBreak")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PortBreak")
     private Boolean portBreak;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyForwardEntryRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
         this.externalIp = builder.externalIp;
         this.externalPort = builder.externalPort;
         this.forwardEntryId = builder.forwardEntryId;
@@ -112,6 +122,13 @@ public class ModifyForwardEntryRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -214,6 +231,7 @@ public class ModifyForwardEntryRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyForwardEntryRequest, Builder> {
         private String clientToken; 
+        private Boolean dryRun; 
         private String externalIp; 
         private String externalPort; 
         private String forwardEntryId; 
@@ -236,6 +254,7 @@ public class ModifyForwardEntryRequest extends Request {
         private Builder(ModifyForwardEntryRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
             this.externalIp = request.externalIp;
             this.externalPort = request.externalPort;
             this.forwardEntryId = request.forwardEntryId;
@@ -253,12 +272,14 @@ public class ModifyForwardEntryRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -267,9 +288,22 @@ public class ModifyForwardEntryRequest extends Request {
         }
 
         /**
-         * *   When you modify DNAT entries of Internet NAT gateways, this parameter specifies the elastic IP addresses (EIPs) that are used to access the Internet.
-         * <p>
-         * *   When you modify DNAT entries of Virtual Private Cloud (VPC) NAT gateways, this parameter specifies the NAT IP addresses that are accessed by external networks.
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * <ul>
+         * <li>When you modify DNAT entries of Internet NAT gateways, this parameter specifies the elastic IP addresses (EIPs) that are used to access the Internet.</li>
+         * <li>When you modify DNAT entries of Virtual Private Cloud (VPC) NAT gateways, this parameter specifies the NAT IP addresses that are accessed by external networks.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>116.85.XX.XX</p>
          */
         public Builder externalIp(String externalIp) {
             this.putQueryParameter("ExternalIp", externalIp);
@@ -278,14 +312,20 @@ public class ModifyForwardEntryRequest extends Request {
         }
 
         /**
-         * *   The external port that is used to forward traffic when you modify DNAT entries of Internet NAT gateways.
-         * <p>
+         * <ul>
+         * <li><p>The external port that is used to forward traffic when you modify DNAT entries of Internet NAT gateways.</p>
+         * <ul>
+         * <li>Valid values: <strong>1</strong> to <strong>65535</strong>.</li>
+         * <li>If you want to modify the port range, separate port numbers with a forward slash (/), such as <code>10/20</code>.</li>
+         * <li>If you need to modify <strong>ExternalPort</strong> and <strong>InternalPort</strong> at the same time, and <strong>ExternalPort</strong> specifies a port range, make sure that <strong>InternalPort</strong> also specifies a port range, and both ranges specify the same number of ports. For example, you can set <strong>ExternalPort</strong> to <code>10/20</code> and <strong>InternalPort</strong> to <code>80/90</code>.</li>
+         * </ul>
+         * </li>
+         * <li><p>The port that is accessed by external networks when you modify DNAT entries of VPC NAT gateways. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+         * </li>
+         * </ul>
          * 
-         *     *   Valid values: **1** to **65535**.
-         *     *   If you want to modify the port range, separate port numbers with a forward slash (/), such as `10/20`.
-         *     *   If you need to modify **ExternalPort** and **InternalPort** at the same time, and **ExternalPort** specifies a port range, make sure that **InternalPort** also specifies a port range, and both ranges specify the same number of ports. For example, you can set **ExternalPort** to `10/20` and **InternalPort** to `80/90`.
-         * 
-         * *   The port that is accessed by external networks when you modify DNAT entries of VPC NAT gateways. Valid values: **1** to **65535**.
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder externalPort(String externalPort) {
             this.putQueryParameter("ExternalPort", externalPort);
@@ -294,7 +334,11 @@ public class ModifyForwardEntryRequest extends Request {
         }
 
         /**
-         * The ID of the DNAT entry.
+         * <p>The ID of the DNAT entry.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fwd-8vbn3bc8roygjp0gy****</p>
          */
         public Builder forwardEntryId(String forwardEntryId) {
             this.putQueryParameter("ForwardEntryId", forwardEntryId);
@@ -303,10 +347,11 @@ public class ModifyForwardEntryRequest extends Request {
         }
 
         /**
-         * The new name of the DNAT entry.
-         * <p>
+         * <p>The new name of the DNAT entry.</p>
+         * <p>The name must be 2 to 128 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder forwardEntryName(String forwardEntryName) {
             this.putQueryParameter("ForwardEntryName", forwardEntryName);
@@ -315,7 +360,11 @@ public class ModifyForwardEntryRequest extends Request {
         }
 
         /**
-         * The ID of the DNAT table to which the DNAT entry belongs.
+         * <p>The ID of the DNAT table to which the DNAT entry belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ftb-8vbx8xu2lqj9qb334****</p>
          */
         public Builder forwardTableId(String forwardTableId) {
             this.putQueryParameter("ForwardTableId", forwardTableId);
@@ -324,9 +373,13 @@ public class ModifyForwardEntryRequest extends Request {
         }
 
         /**
-         * *   The private IP address of the ECS instance that uses DNAT entries to communicate with the Internet when you modify DNAT entries of Internet NAT gateways.
-         * <p>
-         * *   The private IP address that uses DNAT entries to communicate when you modify DNAT entries of VPC NAT gateways.
+         * <ul>
+         * <li>The private IP address of the ECS instance that uses DNAT entries to communicate with the Internet when you modify DNAT entries of Internet NAT gateways.</li>
+         * <li>The private IP address that uses DNAT entries to communicate when you modify DNAT entries of VPC NAT gateways.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.78</p>
          */
         public Builder internalIp(String internalIp) {
             this.putQueryParameter("InternalIp", internalIp);
@@ -335,9 +388,13 @@ public class ModifyForwardEntryRequest extends Request {
         }
 
         /**
-         * *   The internal port or port range that is used to forward traffic when you modify DNAT entries of Internet NAT gateways. Valid values: **1** to **65535**.
-         * <p>
-         * *   The port of the destination ECS instance to be mapped when you modify DNAT entries of VPC NAT gateways. Valid values: **1** to **65535**.
+         * <ul>
+         * <li>The internal port or port range that is used to forward traffic when you modify DNAT entries of Internet NAT gateways. Valid values: <strong>1</strong> to <strong>65535</strong>.</li>
+         * <li>The port of the destination ECS instance to be mapped when you modify DNAT entries of VPC NAT gateways. Valid values: <strong>1</strong> to <strong>65535</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder internalPort(String internalPort) {
             this.putQueryParameter("InternalPort", internalPort);
@@ -346,12 +403,15 @@ public class ModifyForwardEntryRequest extends Request {
         }
 
         /**
-         * The protocol. Valid values:
-         * <p>
+         * <p>The protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>TCP</strong></li>
+         * <li><strong>UDP</strong></li>
+         * <li><strong>Any</strong></li>
+         * </ul>
          * 
-         * *   **TCP**
-         * *   **UDP**
-         * *   **Any**
+         * <strong>example:</strong>
+         * <p>TCP</p>
          */
         public Builder ipProtocol(String ipProtocol) {
             this.putQueryParameter("IpProtocol", ipProtocol);
@@ -378,11 +438,14 @@ public class ModifyForwardEntryRequest extends Request {
         }
 
         /**
-         * Specifies whether to remove limits on the port range. Valid values:
-         * <p>
+         * <p>Specifies whether to remove limits on the port range. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> If an SNAT entry and a DNAT entry use the same public IP address, and you want to specify a port number greater than <code>1024</code>, set <code>PortBreak</code> to <code>true</code>.</li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false** If an SNAT entry and a DNAT entry use the same public IP address, and you want to specify a port number greater than `1024`, set `PortBreak` to `true`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder portBreak(Boolean portBreak) {
             this.putQueryParameter("PortBreak", portBreak);
@@ -391,10 +454,12 @@ public class ModifyForwardEntryRequest extends Request {
         }
 
         /**
-         * The region ID of the NAT gateway.
-         * <p>
+         * <p>The region ID of the NAT gateway.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

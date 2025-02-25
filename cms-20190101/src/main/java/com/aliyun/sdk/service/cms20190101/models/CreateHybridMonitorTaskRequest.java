@@ -1,71 +1,76 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateHybridMonitorTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateHybridMonitorTaskRequest</p>
  */
 public class CreateHybridMonitorTaskRequest extends Request {
-    @Query
-    @NameInMap("AttachLabels")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AttachLabels")
     private java.util.List < AttachLabels> attachLabels;
 
-    @Query
-    @NameInMap("CollectInterval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CloudAccessId")
+    private java.util.List < String > cloudAccessId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CollectInterval")
     private String collectInterval;
 
-    @Query
-    @NameInMap("CollectTargetType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CollectTargetType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String collectTargetType;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @Query
-    @NameInMap("SLSProcessConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SLSProcessConfig")
     private SLSProcessConfig SLSProcessConfig;
 
-    @Query
-    @NameInMap("TargetUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetUserId")
     private String targetUserId;
 
-    @Query
-    @NameInMap("TargetUserIdList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetUserIdList")
     private String targetUserIdList;
 
-    @Query
-    @NameInMap("TaskName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskName")
     private String taskName;
 
-    @Query
-    @NameInMap("TaskType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskType;
 
-    @Query
-    @NameInMap("YARMConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("YARMConfig")
     private String YARMConfig;
 
     private CreateHybridMonitorTaskRequest(Builder builder) {
         super(builder);
         this.attachLabels = builder.attachLabels;
+        this.cloudAccessId = builder.cloudAccessId;
         this.collectInterval = builder.collectInterval;
         this.collectTargetType = builder.collectTargetType;
         this.description = builder.description;
@@ -97,6 +102,13 @@ public class CreateHybridMonitorTaskRequest extends Request {
      */
     public java.util.List < AttachLabels> getAttachLabels() {
         return this.attachLabels;
+    }
+
+    /**
+     * @return cloudAccessId
+     */
+    public java.util.List < String > getCloudAccessId() {
+        return this.cloudAccessId;
     }
 
     /**
@@ -178,6 +190,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateHybridMonitorTaskRequest, Builder> {
         private java.util.List < AttachLabels> attachLabels; 
+        private java.util.List < String > cloudAccessId; 
         private String collectInterval; 
         private String collectTargetType; 
         private String description; 
@@ -197,6 +210,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
         private Builder(CreateHybridMonitorTaskRequest request) {
             super(request);
             this.attachLabels = request.attachLabels;
+            this.cloudAccessId = request.cloudAccessId;
             this.collectInterval = request.collectInterval;
             this.collectTargetType = request.collectTargetType;
             this.description = request.description;
@@ -211,7 +225,10 @@ public class CreateHybridMonitorTaskRequest extends Request {
         } 
 
         /**
-         * AttachLabels.
+         * <p>The tags of the metric.</p>
+         * <blockquote>
+         * <p> This parameter is required only if the <code>TaskType</code> parameter is set to <code>aliyun_sls</code>.</p>
+         * </blockquote>
          */
         public Builder attachLabels(java.util.List < AttachLabels> attachLabels) {
             this.putQueryParameter("AttachLabels", attachLabels);
@@ -220,15 +237,27 @@ public class CreateHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * The interval at which metrics are collected. Valid values:
-         * <p>
+         * CloudAccessId.
+         */
+        public Builder cloudAccessId(java.util.List < String > cloudAccessId) {
+            this.putQueryParameter("CloudAccessId", cloudAccessId);
+            this.cloudAccessId = cloudAccessId;
+            return this;
+        }
+
+        /**
+         * <p>The collection period of the metric. Valid values:</p>
+         * <ul>
+         * <li>15</li>
+         * <li>60 (default)</li>
+         * </ul>
+         * <p>Unit: seconds.</p>
+         * <blockquote>
+         * <p> This parameter is required only if the <code>TaskType</code> parameter is set to <code>aliyun_sls</code>.</p>
+         * </blockquote>
          * 
-         * *   15
-         * *   60 (default value)
-         * 
-         * Unit: seconds.
-         * 
-         * >  This parameter is required only if the `TaskType` parameter is set to `aliyun_sls`.
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder collectInterval(String collectInterval) {
             this.putQueryParameter("CollectInterval", collectInterval);
@@ -237,11 +266,15 @@ public class CreateHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * The type of the collection target.
-         * <p>
+         * <p>The type of the collection target.</p>
+         * <ul>
+         * <li>If the <code>TaskType</code> parameter is set to <code>aliyun_fc</code>, enter <code>aliyun_fc</code>.</li>
+         * <li>If the <code>TaskType</code> parameter is set to <code>aliyun_sls</code>, enter the name of the Logstore group.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   If the `TaskType` parameter is set to `aliyun_fc`, enter `aliyun_fc`.
-         * *   If the `TaskType` parameter is set to `aliyun_sls`, enter the name of the Logstore group.
+         * <strong>example:</strong>
+         * <p>aliyun_fc</p>
          */
         public Builder collectTargetType(String collectTargetType) {
             this.putQueryParameter("CollectTargetType", collectTargetType);
@@ -250,7 +283,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * The description of the metric import task.
+         * <p>The description of the metric import task.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -259,12 +292,14 @@ public class CreateHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * The ID of the application group.
-         * <p>
+         * <p>The ID of the application group.</p>
+         * <p>For information about how to obtain the ID of an application group, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</p>
+         * <blockquote>
+         * <p> This parameter is required only if the <code>TaskType</code> parameter is set to <code>aliyun_sls</code>.</p>
+         * </blockquote>
          * 
-         * For information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).
-         * 
-         * >  This parameter is required only if the `TaskType` parameter is set to `aliyun_sls`.
+         * <strong>example:</strong>
+         * <p>3607****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -273,10 +308,12 @@ public class CreateHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * The name of the namespace.
-         * <p>
+         * <p>The name of the namespace.</p>
+         * <p>For information about how to obtain the name of a namespace, see <a href="https://help.aliyun.com/document_detail/428880.html">DescribeHybridMonitorNamespaceList</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](~~428880~~).
+         * <strong>example:</strong>
+         * <p>aliyun</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -285,10 +322,10 @@ public class CreateHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * The configurations of the logs that are imported from Log Service.
-         * <p>
-         * 
-         * >  This parameter is required only if the `TaskType` parameter is set to `aliyun_sls`.
+         * <p>The configurations of the logs that are imported from Simple Log Service.</p>
+         * <blockquote>
+         * <p> This parameter is required only if the <code>TaskType</code> parameter is set to <code>aliyun_sls</code>.</p>
+         * </blockquote>
          */
         public Builder SLSProcessConfig(SLSProcessConfig SLSProcessConfig) {
             this.putQueryParameter("SLSProcessConfig", SLSProcessConfig);
@@ -297,12 +334,14 @@ public class CreateHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * The ID of the member account.
-         * <p>
+         * <p>The ID of the member account.</p>
+         * <p>If you call this operation by using the management account of a resource directory, you can connect the Alibaba Cloud services that are activated for all members in the resource directory to Hybrid Cloud Monitoring. You can use the resource directory to monitor Alibaba Cloud services across enterprise accounts.</p>
+         * <blockquote>
+         * <p> This parameter is required only if the <code>TaskType</code> parameter is set to <code>aliyun_fc</code>.</p>
+         * </blockquote>
          * 
-         * If you call API operations by using a management account, you can connect the Alibaba Cloud services that are activated for a member account in a resource directory to Hybrid Cloud Monitoring. You can use the resource directory to monitor Alibaba Cloud services across enterprise accounts.
-         * 
-         * >  This parameter is required only if the `TaskType` parameter is set to `aliyun_fc`.
+         * <strong>example:</strong>
+         * <p>120886317861****</p>
          */
         public Builder targetUserId(String targetUserId) {
             this.putQueryParameter("TargetUserId", targetUserId);
@@ -311,10 +350,13 @@ public class CreateHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * The IDs of the member accounts. Separate multiple member account IDs with commas (,).
-         * <p>
+         * <p>The IDs of the member accounts. Separate multiple member account IDs with commas (,).</p>
+         * <blockquote>
+         * <p> This parameter is required only if you call this operation by using the management account.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required only if you call this operation by using the management account.
+         * <strong>example:</strong>
+         * <p>120886317861****</p>
          */
         public Builder targetUserIdList(String targetUserIdList) {
             this.putQueryParameter("TargetUserIdList", targetUserIdList);
@@ -323,11 +365,14 @@ public class CreateHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * The name of the metric import task.
-         * <p>
+         * <p>The name of the metric import task.</p>
+         * <ul>
+         * <li>If the <code>TaskType</code> parameter is set to <code>aliyun_fc</code>, enter the name of the metric import task.</li>
+         * <li>If the <code>TaskType</code> parameter is set to <code>aliyun_sls</code>, enter the name of the metric for logs imported from Simple Log Service.</li>
+         * </ul>
          * 
-         * *   If the `TaskType` parameter is set to `aliyun_fc`, enter the name of the metric import task.
-         * *   If the `TaskType` parameter is set to `aliyun_sls`, enter the name of the metric for logs imported from Log Service.
+         * <strong>example:</strong>
+         * <p>aliyun_task</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -336,11 +381,15 @@ public class CreateHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * Specifies whether to create a metric import task for an Alibaba Cloud service or create a metric for logs imported from Log Service. Valid values:
-         * <p>
+         * <p>The type of the metric import task. Valid values:</p>
+         * <ul>
+         * <li>aliyun_fc: metric import tasks for Alibaba Cloud services.</li>
+         * <li>aliyun_sls: metrics for logs imported from Simple Log Service.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   aliyun_fc: creates a metric import task for an Alibaba Cloud service
-         * *   aliyun_sls: creates a metric for logs imported from Log Service
+         * <strong>example:</strong>
+         * <p>aliyun_fc</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);
@@ -349,17 +398,13 @@ public class CreateHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * The configuration file of the Alibaba Cloud service that you want to monitor by using Hybrid Cloud Monitoring.
-         * <p>
-         * 
-         * *   namespace: the namespace of the Alibaba Cloud service. For information about how to query the namespace of an Alibaba Cloud service, see [DescribeMetricMetaList](~~98846~~).
-         * *   metric_list: the metrics of the Alibaba Cloud service. For information about how to query the metrics of an Alibaba Cloud service, see [DescribeMetricMetaList](~~98846~~).
-         * 
-         * The following code shows a sample configuration file:
-         * 
-         * ```
-         * 
-         * products:
+         * <p>The configuration file of the Alibaba Cloud service that you want to monitor by using Hybrid Cloud Monitoring.</p>
+         * <ul>
+         * <li>namespace: the namespace of the Alibaba Cloud service. For information about how to query the namespace of an Alibaba Cloud service, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a>.</li>
+         * <li>metric_list: the metrics of the Alibaba Cloud service. For information about how to query the metrics of an Alibaba Cloud service, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a>.</li>
+         * </ul>
+         * <p>The following code shows a sample configuration file:</p>
+         * <pre><code>products:
          * - namespace: acs_ecs_dashboard
          *   metric_info:
          *   - metric_list:
@@ -376,9 +421,13 @@ public class CreateHybridMonitorTaskRequest extends Request {
          *   - metric_list:
          *     - MySQL_QPS
          *     - MySQL_TPS
-         * ```
+         * </code></pre>
+         * <blockquote>
+         * <p> This parameter is required only if the <code>TaskType</code> parameter is set to <code>aliyun_fc</code>.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required only if the `TaskType` parameter is set to `aliyun_fc`.
+         * <strong>example:</strong>
+         * <p>products:- namespace: acs_ecs_dashboard  metric_info:  - metric_list:    - cpu_total</p>
          */
         public Builder YARMConfig(String YARMConfig) {
             this.putQueryParameter("YARMConfig", YARMConfig);
@@ -393,11 +442,17 @@ public class CreateHybridMonitorTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateHybridMonitorTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateHybridMonitorTaskRequest</p>
+     */
     public static class AttachLabels extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private AttachLabels(Builder builder) {
@@ -432,7 +487,10 @@ public class CreateHybridMonitorTaskRequest extends Request {
             private String value; 
 
             /**
-             * The tag key of the metric.
+             * <p>The tag key of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app_service</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -440,7 +498,10 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * The tag value of the metric.
+             * <p>The tag value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -454,11 +515,17 @@ public class CreateHybridMonitorTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateHybridMonitorTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateHybridMonitorTaskRequest</p>
+     */
     public static class Express extends TeaModel {
-        @NameInMap("Alias")
+        @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
 
-        @NameInMap("Express")
+        @com.aliyun.core.annotation.NameInMap("Express")
         private String express;
 
         private Express(Builder builder) {
@@ -493,7 +560,10 @@ public class CreateHybridMonitorTaskRequest extends Request {
             private String express; 
 
             /**
-             * The alias of the extended field that specifies the result of basic operations that are performed on aggregation results.
+             * <p>The alias of the extended field that specifies the result of basic operations performed on aggregation results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SuccRate</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -501,7 +571,10 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * The extended field that specifies the result of basic operations that are performed on aggregation results.
+             * <p>The extended field that specifies the result of basic operations performed on aggregation results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success_count</p>
              */
             public Builder express(String express) {
                 this.express = express;
@@ -515,14 +588,20 @@ public class CreateHybridMonitorTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateHybridMonitorTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateHybridMonitorTaskRequest</p>
+     */
     public static class Filters extends TeaModel {
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("SLSKeyName")
+        @com.aliyun.core.annotation.NameInMap("SLSKeyName")
         private String SLSKeyName;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Filters(Builder builder) {
@@ -566,17 +645,20 @@ public class CreateHybridMonitorTaskRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to filter logs imported from Log Service. Valid values:
-             * <p>
+             * <p>The method that is used to filter logs imported from Simple Log Service. Valid values:</p>
+             * <ul>
+             * <li><code>contain</code>: contains</li>
+             * <li><code>notContain</code>: does not contain</li>
+             * <li><code>&gt;</code>: greater than</li>
+             * <li><code>&lt;</code>: less than</li>
+             * <li><code>=</code>: equal to</li>
+             * <li><code>! =</code>: not equal to</li>
+             * <li><code>&gt;=</code>: greater than or equal to</li>
+             * <li><code>&lt;=</code>: less than or equal to</li>
+             * </ul>
              * 
-             * *   `contain`: contains
-             * *   `notContain`: does not contain
-             * *   `>`: greater than
-             * *   `<`: less than
-             * *   `=`: equal to
-             * *   `! =`: not equal to
-             * *   `>=`: greater than or equal to
-             * *   `<=`: less than or equal to
+             * <strong>example:</strong>
+             * <p>=</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -584,7 +666,10 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * The name of the key that is used to filter logs imported from Log Service.
+             * <p>The name of the key that is used to filter logs imported from Simple Log Service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>code</p>
              */
             public Builder SLSKeyName(String SLSKeyName) {
                 this.SLSKeyName = SLSKeyName;
@@ -592,7 +677,10 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * The value of the key that is used to filter logs imported from Log Service.
+             * <p>The value of the key that is used to filter logs imported from Simple Log Service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -606,11 +694,17 @@ public class CreateHybridMonitorTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateHybridMonitorTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateHybridMonitorTaskRequest</p>
+     */
     public static class Filter extends TeaModel {
-        @NameInMap("Filters")
+        @com.aliyun.core.annotation.NameInMap("Filters")
         private java.util.List < Filters> filters;
 
-        @NameInMap("Relation")
+        @com.aliyun.core.annotation.NameInMap("Relation")
         private String relation;
 
         private Filter(Builder builder) {
@@ -645,7 +739,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             private String relation; 
 
             /**
-             * The conditions that are used to filter logs imported from Log Service.
+             * <p>The conditions that are used to filter logs imported from Simple Log Service.</p>
              */
             public Builder filters(java.util.List < Filters> filters) {
                 this.filters = filters;
@@ -653,11 +747,14 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * The relationship between multiple filter conditions. Valid values:
-             * <p>
+             * <p>The relationship between multiple filter conditions. Valid values:</p>
+             * <ul>
+             * <li>and (default): Logs are processed only if all filter conditions are met.</li>
+             * <li>or: Logs are processed if one of the filter conditions is met.</li>
+             * </ul>
              * 
-             * *   and (default value): Logs are processed only if all filter conditions are met.
-             * *   or: Logs are processed if one of the filter conditions is met.
+             * <strong>example:</strong>
+             * <p>and</p>
              */
             public Builder relation(String relation) {
                 this.relation = relation;
@@ -671,11 +768,17 @@ public class CreateHybridMonitorTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateHybridMonitorTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateHybridMonitorTaskRequest</p>
+     */
     public static class GroupBy extends TeaModel {
-        @NameInMap("Alias")
+        @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
 
-        @NameInMap("SLSKeyName")
+        @com.aliyun.core.annotation.NameInMap("SLSKeyName")
         private String SLSKeyName;
 
         private GroupBy(Builder builder) {
@@ -710,7 +813,10 @@ public class CreateHybridMonitorTaskRequest extends Request {
             private String SLSKeyName; 
 
             /**
-             * The alias of the aggregation result.
+             * <p>The alias of the aggregation result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ApiResult</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -718,7 +824,10 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * The name of the key that is used to aggregate logs imported from Log Service.
+             * <p>The name of the key that is used to aggregate logs imported from Simple Log Service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>code</p>
              */
             public Builder SLSKeyName(String SLSKeyName) {
                 this.SLSKeyName = SLSKeyName;
@@ -732,20 +841,26 @@ public class CreateHybridMonitorTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateHybridMonitorTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateHybridMonitorTaskRequest</p>
+     */
     public static class Statistics extends TeaModel {
-        @NameInMap("Alias")
+        @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
 
-        @NameInMap("Function")
+        @com.aliyun.core.annotation.NameInMap("Function")
         private String function;
 
-        @NameInMap("Parameter1")
+        @com.aliyun.core.annotation.NameInMap("Parameter1")
         private String parameter1;
 
-        @NameInMap("Parameter2")
+        @com.aliyun.core.annotation.NameInMap("Parameter2")
         private String parameter2;
 
-        @NameInMap("SLSKeyName")
+        @com.aliyun.core.annotation.NameInMap("SLSKeyName")
         private String SLSKeyName;
 
         private Statistics(Builder builder) {
@@ -807,7 +922,10 @@ public class CreateHybridMonitorTaskRequest extends Request {
             private String SLSKeyName; 
 
             /**
-             * The alias of the aggregation result.
+             * <p>The alias of the aggregation result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>level_count</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -815,7 +933,23 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * Function.
+             * <p>The function that is used to aggregate the log data of a statistical period. Valid values:</p>
+             * <ul>
+             * <li>count: counts the number.</li>
+             * <li>sum: calculates the total value.</li>
+             * <li>avg: calculates the average value.</li>
+             * <li>max: calculates the maximum value.</li>
+             * <li>min: calculates the minimum value.</li>
+             * <li>value: collects samples within the statistical period.</li>
+             * <li>countps: calculates the number of values of the specified field divided by the total number of seconds within a statistical period.</li>
+             * <li>sumps: calculates the sum of the values of the specified field divided by the total number of seconds within a statistical period.</li>
+             * <li>distinct: calculates the number of unique values of the specified field within a statistical period.</li>
+             * <li>distribution: calculates the number of logs that meet a specified condition within the statistical period.</li>
+             * <li>percentile: sorts the values of the specified field in ascending order, and then returns the value that is at the specified percentile within the statistical period. Example: P50.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>count</p>
              */
             public Builder function(String function) {
                 this.function = function;
@@ -823,7 +957,14 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * Parameter1.
+             * <p>The value of the function that is used to aggregate logs imported from Simple Log Service.</p>
+             * <ul>
+             * <li>If the <code>Function</code> parameter is set to <code>distribution</code>, this parameter specifies the lower limit of the statistical interval. For example, if you want to calculate the number of HTTP requests whose status code is 2XX, set this parameter to 200.</li>
+             * <li>If the <code>Function</code> parameter is set to <code>percentile</code>, this parameter specifies the percentile at which the expected value is. For example, 0.5 specifies P50.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder parameter1(String parameter1) {
                 this.parameter1 = parameter1;
@@ -831,7 +972,13 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * Parameter2.
+             * <p>The value of the function that is used to aggregate logs imported from Simple Log Service.</p>
+             * <blockquote>
+             * <p> This parameter is required only if the <code>Function</code> parameter is set to <code>distribution</code>. This parameter specifies the upper limit of the statistical interval. For example, if you want to calculate the number of HTTP requests whose status code is 2XX, set this parameter to 299.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>299</p>
              */
             public Builder parameter2(String parameter2) {
                 this.parameter2 = parameter2;
@@ -839,7 +986,10 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * The name of the key that is used to aggregate logs imported from Log Service.
+             * <p>The name of the key that is used to aggregate logs imported from Simple Log Service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder SLSKeyName(String SLSKeyName) {
                 this.SLSKeyName = SLSKeyName;
@@ -853,17 +1003,23 @@ public class CreateHybridMonitorTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateHybridMonitorTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateHybridMonitorTaskRequest</p>
+     */
     public static class SLSProcessConfig extends TeaModel {
-        @NameInMap("Express")
+        @com.aliyun.core.annotation.NameInMap("Express")
         private java.util.List < Express> express;
 
-        @NameInMap("Filter")
+        @com.aliyun.core.annotation.NameInMap("Filter")
         private Filter filter;
 
-        @NameInMap("GroupBy")
+        @com.aliyun.core.annotation.NameInMap("GroupBy")
         private java.util.List < GroupBy> groupBy;
 
-        @NameInMap("Statistics")
+        @com.aliyun.core.annotation.NameInMap("Statistics")
         private java.util.List < Statistics> statistics;
 
         private SLSProcessConfig(Builder builder) {
@@ -916,7 +1072,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             private java.util.List < Statistics> statistics; 
 
             /**
-             * The extended fields that specify the results of basic operations that are performed on aggregation results.
+             * <p>The extended fields that specify the results of basic operations performed on aggregation results.</p>
              */
             public Builder express(java.util.List < Express> express) {
                 this.express = express;
@@ -924,7 +1080,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * The conditions that are used to filter logs imported from Log Service.
+             * <p>The conditions that are used to filter logs imported from Simple Log Service.</p>
              */
             public Builder filter(Filter filter) {
                 this.filter = filter;
@@ -932,7 +1088,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * The dimension based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL.
+             * <p>The dimension based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL.</p>
              */
             public Builder groupBy(java.util.List < GroupBy> groupBy) {
                 this.groupBy = groupBy;
@@ -940,7 +1096,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * Statistics.
+             * <p>The method that is used to aggregate logs imported from Simple Log Service.</p>
              */
             public Builder statistics(java.util.List < Statistics> statistics) {
                 this.statistics = statistics;

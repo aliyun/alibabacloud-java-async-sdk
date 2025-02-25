@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAccessKeyLastUsedResponseBody} extends {@link TeaModel}
  *
  * <p>GetAccessKeyLastUsedResponseBody</p>
  */
 public class GetAccessKeyLastUsedResponseBody extends TeaModel {
-    @NameInMap("AccessKeyLastUsed")
+    @com.aliyun.core.annotation.NameInMap("AccessKeyLastUsed")
     private AccessKeyLastUsed accessKeyLastUsed;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetAccessKeyLastUsedResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetAccessKeyLastUsedResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the time when the AccessKey pair was used for the last time.
+         * <p>The details of the time when the AccessKey pair was used for the last time.</p>
          */
         public Builder accessKeyLastUsed(AccessKeyLastUsed accessKeyLastUsed) {
             this.accessKeyLastUsed = accessKeyLastUsed;
@@ -58,7 +63,10 @@ public class GetAccessKeyLastUsedResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B29C79F6-354B-4297-A994-1338CC22A2EC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class GetAccessKeyLastUsedResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAccessKeyLastUsedResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAccessKeyLastUsedResponseBody</p>
+     */
     public static class AccessKeyLastUsed extends TeaModel {
-        @NameInMap("LastUsedDate")
+        @com.aliyun.core.annotation.NameInMap("LastUsedDate")
         private String lastUsedDate;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
         private AccessKeyLastUsed(Builder builder) {
@@ -110,7 +124,10 @@ public class GetAccessKeyLastUsedResponseBody extends TeaModel {
             private String serviceName; 
 
             /**
-             * The time when the AccessKey pair was used for the last time.
+             * <p>The time when the AccessKey pair was used for the last time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-16T01:37:37Z</p>
              */
             public Builder lastUsedDate(String lastUsedDate) {
                 this.lastUsedDate = lastUsedDate;
@@ -118,7 +135,10 @@ public class GetAccessKeyLastUsedResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud service that was last accessed by using the AccessKey pair.
+             * <p>The Alibaba Cloud service that was last accessed by using the AccessKey pair.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ram</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;

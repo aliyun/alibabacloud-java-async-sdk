@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeProjectProgressResponseBody</p>
  */
 public class DescribeProjectProgressResponseBody extends TeaModel {
-    @NameInMap("Advice")
+    @com.aliyun.core.annotation.NameInMap("Advice")
     private String advice;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Cost")
+    @com.aliyun.core.annotation.NameInMap("Cost")
     private String cost;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorDetail")
+    @com.aliyun.core.annotation.NameInMap("ErrorDetail")
     private ErrorDetail errorDetail;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeProjectProgressResponseBody(Builder builder) {
@@ -252,40 +251,40 @@ public class DescribeProjectProgressResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AlarmLevel")
+        @com.aliyun.core.annotation.NameInMap("AlarmLevel")
         private String alarmLevel;
 
-        @NameInMap("CurrentStep")
+        @com.aliyun.core.annotation.NameInMap("CurrentStep")
         private String currentStep;
 
-        @NameInMap("EnableFullTransfer")
+        @com.aliyun.core.annotation.NameInMap("EnableFullTransfer")
         private Boolean enableFullTransfer;
 
-        @NameInMap("EnableIncrSync")
+        @com.aliyun.core.annotation.NameInMap("EnableIncrSync")
         private Boolean enableIncrSync;
 
-        @NameInMap("EnableReverseIncrTransfer")
+        @com.aliyun.core.annotation.NameInMap("EnableReverseIncrTransfer")
         private Boolean enableReverseIncrTransfer;
 
-        @NameInMap("EnableStructTransfer")
+        @com.aliyun.core.annotation.NameInMap("EnableStructTransfer")
         private Boolean enableStructTransfer;
 
-        @NameInMap("FullTransferProgress")
+        @com.aliyun.core.annotation.NameInMap("FullTransferProgress")
         private Integer fullTransferProgress;
 
-        @NameInMap("IncrSyncCheckpoint")
+        @com.aliyun.core.annotation.NameInMap("IncrSyncCheckpoint")
         private Long incrSyncCheckpoint;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private String projectId;
 
-        @NameInMap("ReverseIncrTransferCheckpoint")
+        @com.aliyun.core.annotation.NameInMap("ReverseIncrTransferCheckpoint")
         private Long reverseIncrTransferCheckpoint;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StructTransferProgress")
+        @com.aliyun.core.annotation.NameInMap("StructTransferProgress")
         private Integer structTransferProgress;
 
         private Data(Builder builder) {
@@ -513,43 +512,43 @@ public class DescribeProjectProgressResponseBody extends TeaModel {
 
     }
     public static class ErrorDetail extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("ExtraContext")
+        @com.aliyun.core.annotation.NameInMap("ExtraContext")
         private java.util.Map < String, ? > extraContext;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("MessageMcmsContext")
+        @com.aliyun.core.annotation.NameInMap("MessageMcmsContext")
         private java.util.Map < String, String > messageMcmsContext;
 
-        @NameInMap("MessageMcmsKey")
+        @com.aliyun.core.annotation.NameInMap("MessageMcmsKey")
         private String messageMcmsKey;
 
-        @NameInMap("Proposal")
+        @com.aliyun.core.annotation.NameInMap("Proposal")
         private String proposal;
 
-        @NameInMap("ProposalMcmsContext")
+        @com.aliyun.core.annotation.NameInMap("ProposalMcmsContext")
         private java.util.Map < String, String > proposalMcmsContext;
 
-        @NameInMap("ProposalMcmsKey")
+        @com.aliyun.core.annotation.NameInMap("ProposalMcmsKey")
         private String proposalMcmsKey;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("ReasonMcmsContext")
+        @com.aliyun.core.annotation.NameInMap("ReasonMcmsContext")
         private java.util.Map < String, String > reasonMcmsContext;
 
-        @NameInMap("ReasonMcmsKey")
+        @com.aliyun.core.annotation.NameInMap("ReasonMcmsKey")
         private String reasonMcmsKey;
 
-        @NameInMap("UpstreamErrorDetail")
+        @com.aliyun.core.annotation.NameInMap("UpstreamErrorDetail")
         private Object upstreamErrorDetail;
 
         private ErrorDetail(Builder builder) {

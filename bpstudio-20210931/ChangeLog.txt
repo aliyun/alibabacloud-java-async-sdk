@@ -1,3 +1,42 @@
+2024-11-29 Version: 5.0.8
+- Generated java-async 2021-09-31 for BPStudio.
+
+2024-11-29 Version: 5.0.7
+- Generated java-async 2021-09-31 for BPStudio.
+
+2024-11-07 Version: 5.0.6
+- Generated java-async 2021-09-31 for BPStudio.
+
+2024-10-10 Version: 5.0.5
+- Generated java-async 2021-09-31 for BPStudio.
+
+2024-09-24 Version: 5.0.4
+- Generated java-async 2021-09-31 for BPStudio.
+
+2024-09-24 Version: 5.0.3
+- Generated java-async 2021-09-31 for BPStudio.
+
+2024-09-03 Version: 5.0.2
+- Generated java-async 2021-09-31 for BPStudio.
+
+2024-08-30 Version: 5.0.1
+- Generated java-async 2021-09-31 for BPStudio.
+
+2024-08-29 Version: 5.0.0
+- Generated java-async 2021-09-31 for BPStudio.
+
+2024-07-29 Version: 4.0.2
+- Generated java-async 2021-09-31 for BPStudio.
+
+2024-02-27 Version: 4.0.1
+- Generated java-async 2021-09-31 for BPStudio.
+
+2024-01-30 Version: 4.0.0
+- Generated java-async 2021-09-31 for BPStudio.
+
+2024-01-10 Version: 3.0.1
+- Generated java-async 2021-09-31 for BPStudio.
+
 2023-07-06 Version: 3.0.0
 - Fix bug asyncExecute Error.
 

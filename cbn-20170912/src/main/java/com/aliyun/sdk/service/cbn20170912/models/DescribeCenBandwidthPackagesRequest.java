@@ -1,60 +1,65 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCenBandwidthPackagesRequest} extends {@link RequestModel}
  *
  * <p>DescribeCenBandwidthPackagesRequest</p>
  */
 public class DescribeCenBandwidthPackagesRequest extends Request {
-    @Query
-    @NameInMap("Filter")
-    private java.util.List < Filter> filter;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
+    private java.util.List<Filter> filter;
 
-    @Query
-    @NameInMap("IncludeReservationData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeReservationData")
     private Boolean includeReservationData;
 
-    @Query
-    @NameInMap("IsOrKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsOrKey")
     private Boolean isOrKey;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private DescribeCenBandwidthPackagesRequest(Builder builder) {
         super(builder);
@@ -87,7 +92,7 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
     /**
      * @return filter
      */
-    public java.util.List < Filter> getFilter() {
+    public java.util.List<Filter> getFilter() {
         return this.filter;
     }
 
@@ -157,12 +162,12 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<DescribeCenBandwidthPackagesRequest, Builder> {
-        private java.util.List < Filter> filter; 
+        private java.util.List<Filter> filter; 
         private Boolean includeReservationData; 
         private Boolean isOrKey; 
         private String ownerAccount; 
@@ -172,7 +177,7 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -194,20 +199,23 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
         } 
 
         /**
-         * The filter configurations.
+         * <p>The filter configurations.</p>
          */
-        public Builder filter(java.util.List < Filter> filter) {
+        public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
             return this;
         }
 
         /**
-         * Specifies whether to include renewal data. Valid values:
-         * <p>
+         * <p>Specifies whether to include renewal data. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includeReservationData(Boolean includeReservationData) {
             this.putQueryParameter("IncludeReservationData", includeReservationData);
@@ -216,11 +224,14 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * The logical operator between the filter conditions. Valid values:
-         * <p>
+         * <p>The logical operator between the filter conditions. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong> (default): <strong>AND</strong> Bandwidth plans that meet all filter conditions are returned.</li>
+         * <li><strong>true</strong>: <strong>OR</strong> Bandwidth plans that meet one of the filter conditions are returned.</li>
+         * </ul>
          * 
-         * *   **false** (default): **AND** Bandwidth plans that meet all filter conditions are returned.
-         * *   **true**: **OR** Bandwidth plans that meet one of the filter conditions are returned.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isOrKey(Boolean isOrKey) {
             this.putQueryParameter("IsOrKey", isOrKey);
@@ -247,7 +258,10 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -256,7 +270,10 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+         * <p>The number of entries to return on each page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -265,7 +282,10 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfnwjeo4tv****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -292,12 +312,10 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * The information about the tags.
-         * <p>
-         * 
-         * You can specify at most 20 tags in each call.
+         * <p>The information about the tags.</p>
+         * <p>You can specify at most 20 tags in each call.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -310,12 +328,18 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCenBandwidthPackagesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeCenBandwidthPackagesRequest</p>
+     */
     public static class Filter extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
-        private java.util.List < String > value;
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private java.util.List<String> value;
 
         private Filter(Builder builder) {
             this.key = builder.key;
@@ -340,28 +364,33 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
         /**
          * @return value
          */
-        public java.util.List < String > getValue() {
+        public java.util.List<String> getValue() {
             return this.value;
         }
 
         public static final class Builder {
             private String key; 
-            private java.util.List < String > value; 
+            private java.util.List<String> value; 
 
             /**
-             * The filter conditions. You can use filter conditions to filter the bandwidth plans that you want to query. The following filter conditions are supported:
-             * <p>
+             * <p>The filter conditions. You can use filter conditions to filter the bandwidth plans that you want to query. The following filter conditions are supported:</p>
+             * <ul>
+             * <li><p><strong>CenId</strong>: CEN instance ID</p>
+             * </li>
+             * <li><p><strong>Status</strong>: bandwidth plan status. Valid values:</p>
+             * <ul>
+             * <li><strong>Idle</strong>: not associated with a CEN instance.</li>
+             * <li><strong>InUse</strong>: associated with a CEN instance.</li>
+             * </ul>
+             * </li>
+             * <li><p><strong>CenBandwidthPackageId</strong>: bandwidth plan ID</p>
+             * </li>
+             * <li><p><strong>Name</strong>: bandwidth plan name You can specify one or more filter conditions. The maximum value of <strong>N</strong> is <strong>5</strong>.</p>
+             * </li>
+             * </ul>
              * 
-             * *   **CenId**: CEN instance ID
-             * 
-             * *   **Status**: bandwidth plan status. Valid values:
-             * 
-             *     *   **Idle**: not associated with a CEN instance.
-             *     *   **InUse**: associated with a CEN instance.
-             * 
-             * *   **CenBandwidthPackageId**: bandwidth plan ID
-             * 
-             * *   **Name**: bandwidth plan name You can specify one or more filter conditions. The maximum value of **N** is **5**.
+             * <strong>example:</strong>
+             * <p>CenId</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -369,9 +398,12 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
             }
 
             /**
-             * Specify a filter value based on the **Key** parameter. You can specify multiple filter values for each **Key**. The logical operator between filter values is **OR**. If one filter value is matched, the filter condition is matched.
+             * <p>Specify a filter value based on the <strong>Key</strong> parameter. You can specify multiple filter values for each <strong>Key</strong>. The logical operator between filter values is <strong>OR</strong>. If one filter value is matched, the filter condition is matched.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Idle</p>
              */
-            public Builder value(java.util.List < String > value) {
+            public Builder value(java.util.List<String> value) {
                 this.value = value;
                 return this;
             }
@@ -383,11 +415,17 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCenBandwidthPackagesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeCenBandwidthPackagesRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -422,12 +460,12 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
             private String value; 
 
             /**
-             * The tag keys.
-             * <p>
+             * <p>The tag keys.</p>
+             * <p>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>You can specify at most 20 tag keys.</p>
              * 
-             * The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
-             * 
-             * You can specify at most 20 tag keys.
+             * <strong>example:</strong>
+             * <p>TagKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -435,12 +473,12 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
             }
 
             /**
-             * The tag values.
-             * <p>
+             * <p>The tag values.</p>
+             * <p>The tag values can be 0 to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value of each tag key must be unique. You can specify at most 20 tag values in each call.</p>
              * 
-             * The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
-             * 
-             * The tag value of each tag key must be unique. You can specify at most 20 tag values in each call.
+             * <strong>example:</strong>
+             * <p>TagValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

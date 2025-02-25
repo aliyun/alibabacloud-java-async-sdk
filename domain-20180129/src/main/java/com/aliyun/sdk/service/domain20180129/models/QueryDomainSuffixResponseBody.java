@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDomainSuffixResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDomainSuffixResponseBody</p>
  */
 public class QueryDomainSuffixResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SuffixList")
+    @com.aliyun.core.annotation.NameInMap("SuffixList")
     private SuffixList suffixList;
 
     private QueryDomainSuffixResponseBody(Builder builder) {
@@ -71,8 +71,14 @@ public class QueryDomainSuffixResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDomainSuffixResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDomainSuffixResponseBody</p>
+     */
     public static class SuffixList extends TeaModel {
-        @NameInMap("Suffix")
+        @com.aliyun.core.annotation.NameInMap("Suffix")
         private java.util.List < String > suffix;
 
         private SuffixList(Builder builder) {

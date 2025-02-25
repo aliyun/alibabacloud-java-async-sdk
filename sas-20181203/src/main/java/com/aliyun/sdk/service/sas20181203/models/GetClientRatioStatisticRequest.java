@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetClientRatioStatisticRequest} extends {@link RequestModel}
  *
  * <p>GetClientRatioStatisticRequest</p>
  */
 public class GetClientRatioStatisticRequest extends Request {
-    @Query
-    @NameInMap("ResourceDirectoryAccountId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
     private Long resourceDirectoryAccountId;
 
-    @Query
-    @NameInMap("StatisticTypes")
-    private java.util.List < String > statisticTypes;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StatisticTypes")
+    private java.util.List<String> statisticTypes;
 
-    @Query
-    @NameInMap("TimeEnd")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeEnd")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long timeEnd;
 
-    @Query
-    @NameInMap("TimeStart")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeStart")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long timeStart;
 
     private GetClientRatioStatisticRequest(Builder builder) {
@@ -61,7 +66,7 @@ public class GetClientRatioStatisticRequest extends Request {
     /**
      * @return statisticTypes
      */
-    public java.util.List < String > getStatisticTypes() {
+    public java.util.List<String> getStatisticTypes() {
         return this.statisticTypes;
     }
 
@@ -81,7 +86,7 @@ public class GetClientRatioStatisticRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetClientRatioStatisticRequest, Builder> {
         private Long resourceDirectoryAccountId; 
-        private java.util.List < String > statisticTypes; 
+        private java.util.List<String> statisticTypes; 
         private Long timeEnd; 
         private Long timeStart; 
 
@@ -98,9 +103,13 @@ public class GetClientRatioStatisticRequest extends Request {
         } 
 
         /**
-         * The ID of the primary account of the Resource Directory member account.
-         * <p>
-         * > call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) interface to obtain this parameter.
+         * <p>The ID of the primary account of the Resource Directory member account.</p>
+         * <blockquote>
+         * <p>call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> interface to obtain this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>127608589417****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -109,16 +118,20 @@ public class GetClientRatioStatisticRequest extends Request {
         }
 
         /**
-         * An array that consists of the details of a statistical type.
+         * <p>An array that consists of the details of a statistical type.</p>
          */
-        public Builder statisticTypes(java.util.List < String > statisticTypes) {
+        public Builder statisticTypes(java.util.List<String> statisticTypes) {
             this.putQueryParameter("StatisticTypes", statisticTypes);
             this.statisticTypes = statisticTypes;
             return this;
         }
 
         /**
-         * The timestamp that specifies the end of the time range to collect statistics. Unit: milliseconds.
+         * <p>The timestamp that specifies the end of the time range to collect statistics. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1686412799999</p>
          */
         public Builder timeEnd(Long timeEnd) {
             this.putQueryParameter("TimeEnd", timeEnd);
@@ -127,7 +140,11 @@ public class GetClientRatioStatisticRequest extends Request {
         }
 
         /**
-         * The timestamp that specifies the beginning of the time range to collect statistics. Unit: milliseconds.
+         * <p>The timestamp that specifies the beginning of the time range to collect statistics. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1671382800000</p>
          */
         public Builder timeStart(Long timeStart) {
             this.putQueryParameter("TimeStart", timeStart);

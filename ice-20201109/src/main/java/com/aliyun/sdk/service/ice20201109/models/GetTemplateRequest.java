@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTemplateRequest} extends {@link RequestModel}
  *
  * <p>GetTemplateRequest</p>
  */
 public class GetTemplateRequest extends Request {
-    @Query
-    @NameInMap("RelatedMediaidFlag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelatedMediaidFlag")
     private String relatedMediaidFlag;
 
-    @Query
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
     private GetTemplateRequest(Builder builder) {
@@ -68,7 +73,10 @@ public class GetTemplateRequest extends Request {
         } 
 
         /**
-         * RelatedMediaidFlag.
+         * <p>Specifies whether to return the information about the associated materials. Default value: 0. Valid values: 0 and 1. A value of 1 specifies that the information about the associated materials is returned. This parameter is valid only for regular templates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder relatedMediaidFlag(String relatedMediaidFlag) {
             this.putQueryParameter("RelatedMediaidFlag", relatedMediaidFlag);
@@ -77,7 +85,10 @@ public class GetTemplateRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>The template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

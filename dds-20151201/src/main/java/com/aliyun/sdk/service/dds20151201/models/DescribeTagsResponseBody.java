@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTagsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTagsResponseBody</p>
  */
 public class DescribeTagsResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
 
     private DescribeTagsResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -52,20 +57,23 @@ public class DescribeTagsResponseBody extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
     public static final class Builder {
         private String nextToken; 
         private String requestId; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
 
         /**
-         * The token used to start the next query.
-         * <p>
+         * <p>The token used to start the next query.</p>
+         * <blockquote>
+         * <p> If not all results are returned in the first query, this parameter is returned. You can pass in the value of this parameter in the next query.</p>
+         * </blockquote>
          * 
-         * >  If not all results are returned in the first query, this parameter is returned. You can pass in the value of this parameter in the next query.
+         * <strong>example:</strong>
+         * <p>212db86****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -73,7 +81,10 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EEDBE38F-5CF5-4316-AAC2-35817BA60D68</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,9 +92,9 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the tags.
+         * <p>Details about the tags.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }
@@ -94,12 +105,18 @@ public class DescribeTagsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTagsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValues")
-        private java.util.List < String > tagValues;
+        @com.aliyun.core.annotation.NameInMap("TagValues")
+        private java.util.List<String> tagValues;
 
         private Tags(Builder builder) {
             this.tagKey = builder.tagKey;
@@ -124,16 +141,19 @@ public class DescribeTagsResponseBody extends TeaModel {
         /**
          * @return tagValues
          */
-        public java.util.List < String > getTagValues() {
+        public java.util.List<String> getTagValues() {
             return this.tagValues;
         }
 
         public static final class Builder {
             private String tagKey; 
-            private java.util.List < String > tagValues; 
+            private java.util.List<String> tagValues; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>newKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -141,9 +161,9 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The values of the tags.
+             * <p>The values of the tags.</p>
              */
-            public Builder tagValues(java.util.List < String > tagValues) {
+            public Builder tagValues(java.util.List<String> tagValues) {
                 this.tagValues = tagValues;
                 return this;
             }

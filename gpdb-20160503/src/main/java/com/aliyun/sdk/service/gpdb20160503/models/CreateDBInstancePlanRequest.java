@@ -1,56 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDBInstancePlanRequest} extends {@link RequestModel}
  *
  * <p>CreateDBInstancePlanRequest</p>
  */
 public class CreateDBInstancePlanRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PlanConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlanConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String planConfig;
 
-    @Query
-    @NameInMap("PlanDesc")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlanDesc")
     private String planDesc;
 
-    @Query
-    @NameInMap("PlanEndDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlanEndDate")
     private String planEndDate;
 
-    @Query
-    @NameInMap("PlanName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlanName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String planName;
 
-    @Query
-    @NameInMap("PlanScheduleType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlanScheduleType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String planScheduleType;
 
-    @Query
-    @NameInMap("PlanStartDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlanStartDate")
     private String planStartDate;
 
-    @Query
-    @NameInMap("PlanType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlanType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String planType;
 
     private CreateDBInstancePlanRequest(Builder builder) {
@@ -171,10 +176,14 @@ public class CreateDBInstancePlanRequest extends Request {
         } 
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeDBInstances](~~86911~~) operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -192,7 +201,11 @@ public class CreateDBInstancePlanRequest extends Request {
         }
 
         /**
-         * The execution information of the plan. Specify the parameter in the JSON format. The parameter value varies based on the values of **PlanType** and **PlanScheduleType**. The following section describes the PlanConfig parameter.
+         * <p>The execution information of the plan. Specify the parameter in the JSON format. The parameter value varies based on the values of <strong>PlanType</strong> and <strong>PlanScheduleType</strong>. The following section describes the PlanConfig parameter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;pause&quot;:{&quot;planCronTime&quot;:&quot;0 0 12 1/1 * ? &quot;},&quot;resume&quot;:{&quot;planCronTime&quot;:&quot;0 0 0 1/1 * ? &quot;}}</p>
          */
         public Builder planConfig(String planConfig) {
             this.putQueryParameter("PlanConfig", planConfig);
@@ -201,7 +214,10 @@ public class CreateDBInstancePlanRequest extends Request {
         }
 
         /**
-         * The description of the plan.
+         * <p>The description of the plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a test plan</p>
          */
         public Builder planDesc(String planDesc) {
             this.putQueryParameter("PlanDesc", planDesc);
@@ -210,14 +226,18 @@ public class CreateDBInstancePlanRequest extends Request {
         }
 
         /**
-         * The end time of the plan. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC. The end time must be later than the start time.
-         * <p>
+         * <p>The end time of the plan. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC. The end time must be later than the start time.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter must be specified only when <strong>PlanScheduleType</strong> is set to <strong>Regular</strong>.</p>
+         * </li>
+         * <li><p>If you do not specify this parameter, the plan stops until the plan is deleted.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   This parameter must be specified only when **PlanScheduleType** is set to **Regular**.
-         * 
-         * *   If you do not specify this parameter, the plan does not end.
+         * <strong>example:</strong>
+         * <p>2023-04-17T23:00Z</p>
          */
         public Builder planEndDate(String planEndDate) {
             this.putQueryParameter("PlanEndDate", planEndDate);
@@ -226,7 +246,11 @@ public class CreateDBInstancePlanRequest extends Request {
         }
 
         /**
-         * The name of the plan.
+         * <p>The name of the plan.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-plan</p>
          */
         public Builder planName(String planName) {
             this.putQueryParameter("PlanName", planName);
@@ -235,11 +259,15 @@ public class CreateDBInstancePlanRequest extends Request {
         }
 
         /**
-         * The execution mode of the plan. Valid values:
-         * <p>
+         * <p>The execution mode of the plan. Valid values:</p>
+         * <ul>
+         * <li><strong>Postpone</strong>: The plan is executed later.</li>
+         * <li><strong>Regular</strong>: The plan is executed periodically.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Postpone**: The plan is executed later.
-         * *   **Regular**: The plan is executed periodically.
+         * <strong>example:</strong>
+         * <p>Regular</p>
          */
         public Builder planScheduleType(String planScheduleType) {
             this.putQueryParameter("PlanScheduleType", planScheduleType);
@@ -248,14 +276,18 @@ public class CreateDBInstancePlanRequest extends Request {
         }
 
         /**
-         * The start time of the plan. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
-         * <p>
+         * <p>The start time of the plan. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter must be specified only when <strong>PlanScheduleType</strong> is set to <strong>Regular</strong>.</p>
+         * </li>
+         * <li><p>If you do not specify this parameter, the current time is used.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   This parameter must be specified only when **PlanScheduleType** is set to **Regular**.
-         * 
-         * *   If you do not specify this parameter, the plan is executed immediately.
+         * <strong>example:</strong>
+         * <p>2022-04-17T23:00Z</p>
          */
         public Builder planStartDate(String planStartDate) {
             this.putQueryParameter("PlanStartDate", planStartDate);
@@ -264,18 +296,22 @@ public class CreateDBInstancePlanRequest extends Request {
         }
 
         /**
-         * The type of the plan. Valid values:
-         * <p>
+         * <p>The type of the plan. Valid values:</p>
+         * <ul>
+         * <li><strong>PauseResume</strong>: pauses and resumes an instance.</li>
+         * <li><strong>Resize</strong>: changes the number of compute nodes.</li>
+         * <li><strong>ModifySpec</strong>: changes compute node specifications.</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>You can specify the value to ModifySpec only for instances in elastic storage mode.</li>
+         * <li>You can specify the value to ModifySpec only for instances in elastic storage mode.</li>
+         * </ul>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **PauseResume**: pauses and resumes an instance.
-         * *   **Resize**: changes the number of compute nodes.
-         * *   **ModifySpec**: changes compute node specifications.
-         * 
-         * > 
-         * 
-         * *   You can specify the value to Resize only for instances in Serverless mode.
-         * 
-         * *   You can specify the value to ModifySpec only for instances in elastic storage mode.
+         * <strong>example:</strong>
+         * <p>PauseResume</p>
          */
         public Builder planType(String planType) {
             this.putQueryParameter("PlanType", planType);

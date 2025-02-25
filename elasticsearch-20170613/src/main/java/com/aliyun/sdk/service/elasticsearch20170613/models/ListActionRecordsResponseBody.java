@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListActionRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>ListActionRecordsResponseBody</p>
  */
 public class ListActionRecordsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private ListActionRecordsResponseBody(Builder builder) {
@@ -71,32 +71,38 @@ public class ListActionRecordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListActionRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListActionRecordsResponseBody</p>
+     */
     public static class SubStatusInfo extends TeaModel {
-        @NameInMap("completeNodeCount")
+        @com.aliyun.core.annotation.NameInMap("completeNodeCount")
         private Integer completeNodeCount;
 
-        @NameInMap("endTime")
+        @com.aliyun.core.annotation.NameInMap("endTime")
         private Long endTime;
 
-        @NameInMap("exception")
+        @com.aliyun.core.annotation.NameInMap("exception")
         private String exception;
 
-        @NameInMap("latencyMills")
+        @com.aliyun.core.annotation.NameInMap("latencyMills")
         private Long latencyMills;
 
-        @NameInMap("nodeCount")
+        @com.aliyun.core.annotation.NameInMap("nodeCount")
         private Integer nodeCount;
 
-        @NameInMap("process")
+        @com.aliyun.core.annotation.NameInMap("process")
         private String process;
 
-        @NameInMap("startTime")
+        @com.aliyun.core.annotation.NameInMap("startTime")
         private Long startTime;
 
-        @NameInMap("stateType")
+        @com.aliyun.core.annotation.NameInMap("stateType")
         private String stateType;
 
-        @NameInMap("subState")
+        @com.aliyun.core.annotation.NameInMap("subState")
         private String subState;
 
         private SubStatusInfo(Builder builder) {
@@ -272,35 +278,41 @@ public class ListActionRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListActionRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListActionRecordsResponseBody</p>
+     */
     public static class StatusInfo extends TeaModel {
-        @NameInMap("completeNodeCount")
+        @com.aliyun.core.annotation.NameInMap("completeNodeCount")
         private Integer completeNodeCount;
 
-        @NameInMap("endTime")
+        @com.aliyun.core.annotation.NameInMap("endTime")
         private Long endTime;
 
-        @NameInMap("exception")
+        @com.aliyun.core.annotation.NameInMap("exception")
         private String exception;
 
-        @NameInMap("latencyMills")
+        @com.aliyun.core.annotation.NameInMap("latencyMills")
         private Long latencyMills;
 
-        @NameInMap("nodeCount")
+        @com.aliyun.core.annotation.NameInMap("nodeCount")
         private Integer nodeCount;
 
-        @NameInMap("process")
+        @com.aliyun.core.annotation.NameInMap("process")
         private String process;
 
-        @NameInMap("startTime")
+        @com.aliyun.core.annotation.NameInMap("startTime")
         private Long startTime;
 
-        @NameInMap("stateType")
+        @com.aliyun.core.annotation.NameInMap("stateType")
         private String stateType;
 
-        @NameInMap("subState")
+        @com.aliyun.core.annotation.NameInMap("subState")
         private String subState;
 
-        @NameInMap("subStatusInfo")
+        @com.aliyun.core.annotation.NameInMap("subStatusInfo")
         private java.util.List < SubStatusInfo> subStatusInfo;
 
         private StatusInfo(Builder builder) {
@@ -493,59 +505,65 @@ public class ListActionRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListActionRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListActionRecordsResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("ActionName")
+        @com.aliyun.core.annotation.NameInMap("ActionName")
         private String actionName;
 
-        @NameInMap("ActionParams")
+        @com.aliyun.core.annotation.NameInMap("ActionParams")
         private java.util.Map < String, ? > actionParams;
 
-        @NameInMap("ActionResultAccessList")
+        @com.aliyun.core.annotation.NameInMap("ActionResultAccessList")
         private java.util.List < String > actionResultAccessList;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("MetaNow")
+        @com.aliyun.core.annotation.NameInMap("MetaNow")
         private String metaNow;
 
-        @NameInMap("MetaOld")
+        @com.aliyun.core.annotation.NameInMap("MetaOld")
         private String metaOld;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
-        @NameInMap("Process")
+        @com.aliyun.core.annotation.NameInMap("Process")
         private String process;
 
-        @NameInMap("RecordDiff")
+        @com.aliyun.core.annotation.NameInMap("RecordDiff")
         private java.util.Map < String, ? > recordDiff;
 
-        @NameInMap("RecordIds")
+        @com.aliyun.core.annotation.NameInMap("RecordIds")
         private java.util.List < String > recordIds;
 
-        @NameInMap("RequestId")
+        @com.aliyun.core.annotation.NameInMap("RequestId")
         private String requestId;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("StateType")
+        @com.aliyun.core.annotation.NameInMap("StateType")
         private String stateType;
 
-        @NameInMap("StatusInfo")
+        @com.aliyun.core.annotation.NameInMap("StatusInfo")
         private java.util.List < StatusInfo> statusInfo;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserInfo")
+        @com.aliyun.core.annotation.NameInMap("UserInfo")
         private String userInfo;
 
-        @NameInMap("UserType")
+        @com.aliyun.core.annotation.NameInMap("UserType")
         private String userType;
 
         private Result(Builder builder) {

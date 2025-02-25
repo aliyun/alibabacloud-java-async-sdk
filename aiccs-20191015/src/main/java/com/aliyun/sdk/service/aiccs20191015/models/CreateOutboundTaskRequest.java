@@ -1,96 +1,101 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOutboundTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateOutboundTaskRequest</p>
  */
 public class CreateOutboundTaskRequest extends Request {
-    @Query
-    @NameInMap("Ani")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ani")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ani;
 
-    @Query
-    @NameInMap("CallInfos")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallInfos")
     private String callInfos;
 
-    @Query
-    @NameInMap("DepartmentId")
-    @Validation()
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DepartmentId")
+    @com.aliyun.core.annotation.Validation()
     private Long departmentId;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("EndDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endDate;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("ExtAttrs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtAttrs")
     private String extAttrs;
 
-    @Query
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Model")
-    @Validation(maximum = 10)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Model")
+    @com.aliyun.core.annotation.Validation(maximum = 10)
     private Integer model;
 
-    @Query
-    @NameInMap("RetryInterval")
-    @Validation(maximum = 2880)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RetryInterval")
+    @com.aliyun.core.annotation.Validation(maximum = 2880)
     private Integer retryInterval;
 
-    @Query
-    @NameInMap("RetryTime")
-    @Validation(maximum = 3)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RetryTime")
+    @com.aliyun.core.annotation.Validation(maximum = 3)
     private Integer retryTime;
 
-    @Query
-    @NameInMap("SkillGroup")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkillGroup")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long skillGroup;
 
-    @Query
-    @NameInMap("StartDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startDate;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
-    @Query
-    @NameInMap("TaskName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskName;
 
-    @Query
-    @NameInMap("TaskType")
-    @Validation(required = true, maximum = 10)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskType")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 10)
     private Integer taskType;
 
     private CreateOutboundTaskRequest(Builder builder) {
@@ -291,7 +296,7 @@ public class CreateOutboundTaskRequest extends Request {
         } 
 
         /**
-         * Ani.
+         * <p>This parameter is required.</p>
          */
         public Builder ani(String ani) {
             this.putQueryParameter("Ani", ani);
@@ -327,7 +332,7 @@ public class CreateOutboundTaskRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * <p>This parameter is required.</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -336,7 +341,7 @@ public class CreateOutboundTaskRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>This parameter is required.</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -363,7 +368,7 @@ public class CreateOutboundTaskRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -399,7 +404,7 @@ public class CreateOutboundTaskRequest extends Request {
         }
 
         /**
-         * SkillGroup.
+         * <p>This parameter is required.</p>
          */
         public Builder skillGroup(Long skillGroup) {
             this.putQueryParameter("SkillGroup", skillGroup);
@@ -408,7 +413,7 @@ public class CreateOutboundTaskRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>This parameter is required.</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -417,7 +422,7 @@ public class CreateOutboundTaskRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -426,7 +431,7 @@ public class CreateOutboundTaskRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * <p>This parameter is required.</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -435,7 +440,7 @@ public class CreateOutboundTaskRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * <p>This parameter is required.</p>
          */
         public Builder taskType(Integer taskType) {
             this.putQueryParameter("TaskType", taskType);

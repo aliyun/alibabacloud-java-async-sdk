@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFileVersionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListFileVersionsResponseBody</p>
  */
 public class ListFileVersionsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListFileVersionsResponseBody(Builder builder) {
@@ -98,7 +103,7 @@ public class ListFileVersionsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The file versions returned.
+         * <p>The file versions returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +111,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ConnectionNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +122,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The connection does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +133,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +144,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,44 +171,50 @@ public class ListFileVersionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListFileVersionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFileVersionsResponseBody</p>
+     */
     public static class FileVersions extends TeaModel {
-        @NameInMap("ChangeType")
+        @com.aliyun.core.annotation.NameInMap("ChangeType")
         private String changeType;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("CommitTime")
+        @com.aliyun.core.annotation.NameInMap("CommitTime")
         private Long commitTime;
 
-        @NameInMap("CommitUser")
+        @com.aliyun.core.annotation.NameInMap("CommitUser")
         private String commitUser;
 
-        @NameInMap("FileContent")
+        @com.aliyun.core.annotation.NameInMap("FileContent")
         private String fileContent;
 
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("FilePropertyContent")
+        @com.aliyun.core.annotation.NameInMap("FilePropertyContent")
         private String filePropertyContent;
 
-        @NameInMap("FileVersion")
+        @com.aliyun.core.annotation.NameInMap("FileVersion")
         private Integer fileVersion;
 
-        @NameInMap("IsCurrentProd")
+        @com.aliyun.core.annotation.NameInMap("IsCurrentProd")
         private Boolean isCurrentProd;
 
-        @NameInMap("NodeContent")
+        @com.aliyun.core.annotation.NameInMap("NodeContent")
         private String nodeContent;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UseType")
+        @com.aliyun.core.annotation.NameInMap("UseType")
         private String useType;
 
         private FileVersions(Builder builder) {
@@ -322,7 +348,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
             private String useType; 
 
             /**
-             * The type of the change to the file of the current version. Valid values: CREATE, UPDATE, and DELETE.
+             * <p>The type of the change to the file of the current version. Valid values: CREATE, UPDATE, and DELETE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UPDATE</p>
              */
             public Builder changeType(String changeType) {
                 this.changeType = changeType;
@@ -330,7 +359,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the file version.
+             * <p>The description of the file version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Second version submission</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -338,7 +370,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the file version was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the file version was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1593881265000</p>
              */
             public Builder commitTime(Long commitTime) {
                 this.commitTime = commitTime;
@@ -346,7 +381,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account used to create the file of the current version.
+             * <p>The ID of the Alibaba Cloud account used to create the file of the current version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>73842342****</p>
              */
             public Builder commitUser(String commitUser) {
                 this.commitUser = commitUser;
@@ -354,7 +392,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The code in the file of the current version.
+             * <p>The code in the file of the current version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SHOW TABLES;</p>
              */
             public Builder fileContent(String fileContent) {
                 this.fileContent = fileContent;
@@ -362,7 +403,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the file of the current version.
+             * <p>The name of the file of the current version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ods_user_info_d</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -370,7 +414,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The basic information about the file of the current version.
+             * <p>The basic information about the file of the current version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;fileName&quot;:&quot;ods_user_info_d&quot;,&quot;fileType&quot;:10}</p>
              */
             public Builder filePropertyContent(String filePropertyContent) {
                 this.filePropertyContent = filePropertyContent;
@@ -378,7 +425,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the file.
+             * <p>The version of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder fileVersion(Integer fileVersion) {
                 this.fileVersion = fileVersion;
@@ -386,7 +436,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the file version is the same as the latest file version in the production environment.
+             * <p>Indicates whether the file version is the same as the latest file version in the production environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isCurrentProd(Boolean isCurrentProd) {
                 this.isCurrentProd = isCurrentProd;
@@ -394,7 +447,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The scheduling configurations for the node that corresponds to the file of the current version.
+             * <p>The scheduling configurations for the node that corresponds to the file of the current version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;cycleType&quot;:0,&quot;cronExpress&quot;:&quot;00 05 00 * * ?&quot;}</p>
              */
             public Builder nodeContent(String nodeContent) {
                 this.nodeContent = nodeContent;
@@ -402,7 +458,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the auto triggered node that corresponds to the file of the current version.
+             * <p>The ID of the auto triggered node that corresponds to the file of the current version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -410,7 +469,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the file of the current version. Valid values: COMMITTING, COMMITTED, CHECK_OK, PACKAGED, DEPLOYING, DEPLOYED, and CANCELLED.
+             * <p>The status of the file of the current version. Valid values: COMMITTING, COMMITTED, CHECK_OK, PACKAGED, DEPLOYING, DEPLOYED, and CANCELLED.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>COMMITTED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -418,7 +480,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The functional module to which the file belongs. Valid values: NORMAL, MANUAL, MANUAL_BIZ, SKIP, ADHOCQUERY, and COMPONENT. The value SKIP indicates that the node corresponding to the file is run in dry-run mode.
+             * <p>The functional module to which the file belongs. Valid values: NORMAL, MANUAL, MANUAL_BIZ, SKIP, ADHOCQUERY, and COMPONENT. The value SKIP indicates that the node corresponding to the file is run in dry-run mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder useType(String useType) {
                 this.useType = useType;
@@ -432,17 +497,23 @@ public class ListFileVersionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListFileVersionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFileVersionsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("FileVersions")
-        private java.util.List < FileVersions> fileVersions;
+        @com.aliyun.core.annotation.NameInMap("FileVersions")
+        private java.util.List<FileVersions> fileVersions;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {
@@ -463,7 +534,7 @@ public class ListFileVersionsResponseBody extends TeaModel {
         /**
          * @return fileVersions
          */
-        public java.util.List < FileVersions> getFileVersions() {
+        public java.util.List<FileVersions> getFileVersions() {
             return this.fileVersions;
         }
 
@@ -489,21 +560,24 @@ public class ListFileVersionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < FileVersions> fileVersions; 
+            private java.util.List<FileVersions> fileVersions; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
 
             /**
-             * The details of the file version.
+             * <p>The details of the file version.</p>
              */
-            public Builder fileVersions(java.util.List < FileVersions> fileVersions) {
+            public Builder fileVersions(java.util.List<FileVersions> fileVersions) {
                 this.fileVersions = fileVersions;
                 return this;
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -511,7 +585,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -519,7 +596,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDomainRecordStatusResponseBody} extends {@link TeaModel}
  *
  * <p>SetDomainRecordStatusResponseBody</p>
  */
 public class SetDomainRecordStatusResponseBody extends TeaModel {
-    @NameInMap("RecordId")
+    @com.aliyun.core.annotation.NameInMap("RecordId")
     private String recordId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private SetDomainRecordStatusResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class SetDomainRecordStatusResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The ID of the DNS record.
+         * <p>The ID of the DNS record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9999985</p>
          */
         public Builder recordId(String recordId) {
             this.recordId = recordId;
@@ -70,7 +78,10 @@ public class SetDomainRecordStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +89,10 @@ public class SetDomainRecordStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the DNS record.
+         * <p>The status of the DNS record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Disable</p>
          */
         public Builder status(String status) {
             this.status = status;

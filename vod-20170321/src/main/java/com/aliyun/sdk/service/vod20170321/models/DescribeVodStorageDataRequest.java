@@ -1,45 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodStorageDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeVodStorageDataRequest</p>
  */
 public class DescribeVodStorageDataRequest extends Request {
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    private String appId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Region")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
-    @Query
-    @NameInMap("Storage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Storage")
     private String storage;
 
-    @Query
-    @NameInMap("StorageType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageType")
     private String storageType;
 
     private DescribeVodStorageDataRequest(Builder builder) {
         super(builder);
+        this.appId = builder.appId;
         this.endTime = builder.endTime;
         this.ownerId = builder.ownerId;
         this.region = builder.region;
@@ -59,6 +69,13 @@ public class DescribeVodStorageDataRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appId
+     */
+    public String getAppId() {
+        return this.appId;
     }
 
     /**
@@ -104,6 +121,7 @@ public class DescribeVodStorageDataRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeVodStorageDataRequest, Builder> {
+        private String appId; 
         private String endTime; 
         private Long ownerId; 
         private String region; 
@@ -117,6 +135,7 @@ public class DescribeVodStorageDataRequest extends Request {
 
         private Builder(DescribeVodStorageDataRequest request) {
             super(request);
+            this.appId = request.appId;
             this.endTime = request.endTime;
             this.ownerId = request.ownerId;
             this.region = request.region;
@@ -126,7 +145,26 @@ public class DescribeVodStorageDataRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * <p>The ID of the application. </p>
+         * <ul>
+         * <li>Default value: <strong>app-1000000</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>app-1000000</p>
+         */
+        public Builder appId(String appId) {
+            this.putQueryParameter("AppId", appId);
+            this.appId = appId;
+            return this;
+        }
+
+        /**
+         * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-02-01T15:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -144,13 +182,16 @@ public class DescribeVodStorageDataRequest extends Request {
         }
 
         /**
-         * The region in which you want to query storage data. If you leave this parameter empty, data in all regions is returned. Separate multiple regions with commas (,). Valid values:
-         * <p>
+         * <p>The region in which you want to query storage data. If you leave this parameter empty, data in all regions is returned. Separate multiple regions with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>cn-shanghai</strong>: China (Shanghai)</li>
+         * <li><strong>cn-beijing</strong>: China (Beijing)</li>
+         * <li><strong>eu-central-1</strong>: Germany (Frankfurt)</li>
+         * <li><strong>ap-southeast-1</strong>: Singapore</li>
+         * </ul>
          * 
-         * *   **cn-shanghai**: China (Shanghai)
-         * *   **cn-beijing**: China (Beijing)
-         * *   **eu-central-1**: Germany (Frankfurt)
-         * *   **ap-southeast-1**: Singapore
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -159,7 +200,11 @@ public class DescribeVodStorageDataRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-02-01T14:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -168,7 +213,10 @@ public class DescribeVodStorageDataRequest extends Request {
         }
 
         /**
-         * The name of the Object Storage Service (OSS) bucket. If you leave this parameter empty, data of all buckets is returned. Separate multiple bucket names with commas (,).
+         * <p>The name of the Object Storage Service (OSS) bucket. If you leave this parameter empty, data of all buckets is returned. Separate multiple transcoding specifications with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bucket</p>
          */
         public Builder storage(String storage) {
             this.putQueryParameter("Storage", storage);
@@ -177,7 +225,10 @@ public class DescribeVodStorageDataRequest extends Request {
         }
 
         /**
-         * The storage type. Set the value to **OSS**.
+         * <p>The storage class. Set the value to <strong>OSS</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);

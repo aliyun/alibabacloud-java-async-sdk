@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCdsFileResponseBody} extends {@link TeaModel}
  *
  * <p>CreateCdsFileResponseBody</p>
  */
 public class CreateCdsFileResponseBody extends TeaModel {
-    @NameInMap("FileModel")
+    @com.aliyun.core.annotation.NameInMap("FileModel")
     private FileModel fileModel;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateCdsFileResponseBody(Builder builder) {
@@ -58,7 +63,10 @@ public class CreateCdsFileResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2BAFE05D-FFB9-5938-96D0-08017DB9****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class CreateCdsFileResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateCdsFileResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateCdsFileResponseBody</p>
+     */
     public static class FileModel extends TeaModel {
-        @NameInMap("FileId")
+        @com.aliyun.core.annotation.NameInMap("FileId")
         private String fileId;
 
-        @NameInMap("UploadId")
+        @com.aliyun.core.annotation.NameInMap("UploadId")
         private String uploadId;
 
-        @NameInMap("UploadUrl")
+        @com.aliyun.core.annotation.NameInMap("UploadUrl")
         private String uploadUrl;
 
         private FileModel(Builder builder) {

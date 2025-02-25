@@ -1,54 +1,63 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.privatelink20200415.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVpcEndpointServiceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateVpcEndpointServiceResponseBody</p>
  */
 public class CreateVpcEndpointServiceResponseBody extends TeaModel {
-    @NameInMap("AutoAcceptEnabled")
+    @com.aliyun.core.annotation.NameInMap("AddressIpVersion")
+    private String addressIpVersion;
+
+    @com.aliyun.core.annotation.NameInMap("AutoAcceptEnabled")
     private Boolean autoAcceptEnabled;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("ServiceBusinessStatus")
+    @com.aliyun.core.annotation.NameInMap("ServiceBusinessStatus")
     private String serviceBusinessStatus;
 
-    @NameInMap("ServiceDescription")
+    @com.aliyun.core.annotation.NameInMap("ServiceDescription")
     private String serviceDescription;
 
-    @NameInMap("ServiceDomain")
+    @com.aliyun.core.annotation.NameInMap("ServiceDomain")
     private String serviceDomain;
 
-    @NameInMap("ServiceId")
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
     private String serviceId;
 
-    @NameInMap("ServiceName")
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
 
-    @NameInMap("ServiceStatus")
+    @com.aliyun.core.annotation.NameInMap("ServiceStatus")
     private String serviceStatus;
 
-    @NameInMap("ServiceSupportIPv6")
+    @com.aliyun.core.annotation.NameInMap("ServiceSupportIPv6")
     private Boolean serviceSupportIPv6;
 
-    @NameInMap("ZoneAffinityEnabled")
+    @com.aliyun.core.annotation.NameInMap("ZoneAffinityEnabled")
     private Boolean zoneAffinityEnabled;
 
     private CreateVpcEndpointServiceResponseBody(Builder builder) {
+        this.addressIpVersion = builder.addressIpVersion;
         this.autoAcceptEnabled = builder.autoAcceptEnabled;
         this.createTime = builder.createTime;
         this.requestId = builder.requestId;
@@ -69,6 +78,13 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
 
     public static CreateVpcEndpointServiceResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return addressIpVersion
+     */
+    public String getAddressIpVersion() {
+        return this.addressIpVersion;
     }
 
     /**
@@ -156,6 +172,7 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String addressIpVersion; 
         private Boolean autoAcceptEnabled; 
         private String createTime; 
         private String requestId; 
@@ -170,11 +187,22 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
         private Boolean zoneAffinityEnabled; 
 
         /**
-         * Indicates whether the endpoint service automatically accepts endpoint connection requests. Valid values:
-         * <p>
+         * AddressIpVersion.
+         */
+        public Builder addressIpVersion(String addressIpVersion) {
+            this.addressIpVersion = addressIpVersion;
+            return this;
+        }
+
+        /**
+         * <p>Indicates whether the endpoint service automatically accepts endpoint connection requests. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoAcceptEnabled(Boolean autoAcceptEnabled) {
             this.autoAcceptEnabled = autoAcceptEnabled;
@@ -182,7 +210,10 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the endpoint service was created.
+         * <p>The time when the endpoint service was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-02T19:11:12Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -190,7 +221,10 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8D8992C1-6712-423C-BAC5-E5E817484C6B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -198,7 +232,10 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -206,11 +243,14 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The service state of the endpoint service. Valid values:
-         * <p>
+         * <p>The service state of the endpoint service. Valid values:</p>
+         * <ul>
+         * <li><strong>Normal</strong>: The endpoint service runs as expected.</li>
+         * <li><strong>FinancialLocked</strong>: The endpoint service is locked due to overdue payments.</li>
+         * </ul>
          * 
-         * *   **Normal**: The endpoint service runs as expected.
-         * *   **FinacialLocked**: The endpoint service is locked due to overdue payments.
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder serviceBusinessStatus(String serviceBusinessStatus) {
             this.serviceBusinessStatus = serviceBusinessStatus;
@@ -218,7 +258,10 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the endpoint service.
+         * <p>The description of the endpoint service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is my EndpointService.</p>
          */
         public Builder serviceDescription(String serviceDescription) {
             this.serviceDescription = serviceDescription;
@@ -226,7 +269,10 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The domain name of the endpoint service.
+         * <p>The domain name of the endpoint service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epsrv-hp3vpx8yqxblby3i****.cn-huhehaote.privatelink.aliyuncs.com</p>
          */
         public Builder serviceDomain(String serviceDomain) {
             this.serviceDomain = serviceDomain;
@@ -234,7 +280,10 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The endpoint service ID.
+         * <p>The endpoint service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epsrv-hp3vpx8yqxblby3i****</p>
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;
@@ -242,7 +291,10 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the endpoint service.
+         * <p>The name of the endpoint service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.aliyuncs.privatelink.cn-huhehaote.epsrv-hp3vpx8yqxblby3i****</p>
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
@@ -250,14 +302,16 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The state of the endpoint service. Valid values:
-         * <p>
+         * <p>The state of the endpoint service. Valid values:</p>
+         * <ul>
+         * <li><strong>Creating</strong>: The endpoint service is being created.</li>
+         * <li><strong>Pending</strong>: The endpoint service is being modified.</li>
+         * <li><strong>Active</strong>: The endpoint service is available.</li>
+         * <li><strong>Deleting</strong>: The endpoint service is being deleted.</li>
+         * </ul>
          * 
-         * *   **Creating**: The endpoint service is being created.
-         * *   **Pending**: The endpoint service is being modified.
-         * *   **Active**: The endpoint service is available.
-         * *   **Deleting**: The endpoint service is being deleted.
-         * *   **Inactive**: The endpoint service is unavailable.
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder serviceStatus(String serviceStatus) {
             this.serviceStatus = serviceStatus;
@@ -265,11 +319,14 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether IPv6 was enabled for the endpoint service. Valid values:
-         * <p>
+         * <p>Indicates whether IPv6 was enabled for the endpoint service. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder serviceSupportIPv6(Boolean serviceSupportIPv6) {
             this.serviceSupportIPv6 = serviceSupportIPv6;
@@ -277,11 +334,14 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the domain name of the nearest endpoint that is associated with the endpoint service is resolved first. Valid values:
-         * <p>
+         * <p>Indicates whether the domain name of the nearest endpoint that is associated with the endpoint service is resolved first. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder zoneAffinityEnabled(Boolean zoneAffinityEnabled) {
             this.zoneAffinityEnabled = zoneAffinityEnabled;

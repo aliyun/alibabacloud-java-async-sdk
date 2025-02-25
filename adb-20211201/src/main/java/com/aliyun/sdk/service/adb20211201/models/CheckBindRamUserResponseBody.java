@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckBindRamUserResponseBody} extends {@link TeaModel}
  *
  * <p>CheckBindRamUserResponseBody</p>
  */
 public class CheckBindRamUserResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Boolean result;
 
     private CheckBindRamUserResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CheckBindRamUserResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2FB9DCA3-DA56-5B43-A9A0-68E3D0E6AA84</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,11 +66,14 @@ public class CheckBindRamUserResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result of the request. Valid values:
-         * <p>
+         * <p>The returned result of the request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: the database account is associated with a RAM user.</li>
+         * <li><strong>false</strong>: the database account is not associated with a RAM user.</li>
+         * </ul>
          * 
-         * *   **true**: the database account is associated with a RAM user.
-         * *   **false**: the database account is not associated with a RAM user.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

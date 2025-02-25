@@ -1,35 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMigrationVerifyCodeRequest} extends {@link RequestModel}
  *
  * <p>GetMigrationVerifyCodeRequest</p>
  */
 public class GetMigrationVerifyCodeRequest extends Request {
-    @Query
-    @NameInMap("CustSpaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustSpaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String custSpaceId;
 
-    @Query
-    @NameInMap("Locale")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Locale")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String locale;
 
-    @Query
-    @NameInMap("Method")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Method")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String method;
 
-    @Query
-    @NameInMap("PhoneNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNumber;
 
     private GetMigrationVerifyCodeRequest(Builder builder) {
@@ -100,7 +100,11 @@ public class GetMigrationVerifyCodeRequest extends Request {
         } 
 
         /**
-         * CustSpaceId.
+         * <p>The space ID of the user under the independent software vendor (ISV) account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>293483938849493</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -109,7 +113,11 @@ public class GetMigrationVerifyCodeRequest extends Request {
         }
 
         /**
-         * Locale.
+         * <p>The language.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh_CN</p>
          */
         public Builder locale(String locale) {
             this.putQueryParameter("Locale", locale);
@@ -118,7 +126,11 @@ public class GetMigrationVerifyCodeRequest extends Request {
         }
 
         /**
-         * Method.
+         * <p>The method to obtain the verification code. Valid values: SMS and VOICE.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sms</p>
          */
         public Builder method(String method) {
             this.putQueryParameter("Method", method);
@@ -127,7 +139,11 @@ public class GetMigrationVerifyCodeRequest extends Request {
         }
 
         /**
-         * PhoneNumber.
+         * <p>Phone number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8613800001234</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);

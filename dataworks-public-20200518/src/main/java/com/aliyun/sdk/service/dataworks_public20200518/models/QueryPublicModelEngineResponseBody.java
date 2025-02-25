@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryPublicModelEngineResponseBody} extends {@link TeaModel}
  *
  * <p>QueryPublicModelEngineResponseBody</p>
  */
 public class QueryPublicModelEngineResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ReturnValue")
-    private java.util.List < java.util.Map<String, ?>> returnValue;
+    @com.aliyun.core.annotation.NameInMap("ReturnValue")
+    private java.util.List<java.util.Map<String, ?>> returnValue;
 
     private QueryPublicModelEngineResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class QueryPublicModelEngineResponseBody extends TeaModel {
     /**
      * @return returnValue
      */
-    public java.util.List < java.util.Map<String, ?>> getReturnValue() {
+    public java.util.List<java.util.Map<String, ?>> getReturnValue() {
         return this.returnValue;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < java.util.Map<String, ?>> returnValue; 
+        private java.util.List<java.util.Map<String, ?>> returnValue; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4CFB2DED-7D9B-4C42-B4AA-CFF4991DFFF4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class QueryPublicModelEngineResponseBody extends TeaModel {
         }
 
         /**
-         * ReturnValue.
+         * <p>The returned information about objects.</p>
          */
-        public Builder returnValue(java.util.List < java.util.Map<String, ?>> returnValue) {
+        public Builder returnValue(java.util.List<java.util.Map<String, ?>> returnValue) {
             this.returnValue = returnValue;
             return this;
         }

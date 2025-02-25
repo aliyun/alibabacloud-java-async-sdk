@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMessageCallbackResponseBody} extends {@link TeaModel}
  *
  * <p>GetMessageCallbackResponseBody</p>
  */
 public class GetMessageCallbackResponseBody extends TeaModel {
-    @NameInMap("MessageCallback")
+    @com.aliyun.core.annotation.NameInMap("MessageCallback")
     private MessageCallback messageCallback;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetMessageCallbackResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetMessageCallbackResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The configuration of the event notification.
+         * <p>The configuration of the event notification.</p>
          */
         public Builder messageCallback(MessageCallback messageCallback) {
             this.messageCallback = messageCallback;
@@ -58,7 +63,10 @@ public class GetMessageCallbackResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>272A222A-F7F7-4A3E-****-F531574F1234</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,29 +79,35 @@ public class GetMessageCallbackResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMessageCallbackResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMessageCallbackResponseBody</p>
+     */
     public static class MessageCallback extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AuthKey")
+        @com.aliyun.core.annotation.NameInMap("AuthKey")
         private String authKey;
 
-        @NameInMap("AuthSwitch")
+        @com.aliyun.core.annotation.NameInMap("AuthSwitch")
         private String authSwitch;
 
-        @NameInMap("CallbackType")
+        @com.aliyun.core.annotation.NameInMap("CallbackType")
         private String callbackType;
 
-        @NameInMap("CallbackURL")
+        @com.aliyun.core.annotation.NameInMap("CallbackURL")
         private String callbackURL;
 
-        @NameInMap("EventTypeList")
+        @com.aliyun.core.annotation.NameInMap("EventTypeList")
         private String eventTypeList;
 
-        @NameInMap("MnsEndpoint")
+        @com.aliyun.core.annotation.NameInMap("MnsEndpoint")
         private String mnsEndpoint;
 
-        @NameInMap("MnsQueueName")
+        @com.aliyun.core.annotation.NameInMap("MnsQueueName")
         private String mnsQueueName;
 
         private MessageCallback(Builder builder) {
@@ -182,7 +196,10 @@ public class GetMessageCallbackResponseBody extends TeaModel {
             private String mnsQueueName; 
 
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app-1000000</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -190,7 +207,10 @@ public class GetMessageCallbackResponseBody extends TeaModel {
             }
 
             /**
-             * The cryptographic key. This parameter is returned only for HTTP callbacks.
+             * <p>The cryptographic key. This parameter is returned only for HTTP callbacks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345678abc</p>
              */
             public Builder authKey(String authKey) {
                 this.authKey = authKey;
@@ -198,11 +218,14 @@ public class GetMessageCallbackResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether callback authentication is enabled. This parameter is returned only for HTTP callbacks. Valid values:
-             * <p>
+             * <p>Indicates whether callback authentication is enabled. This parameter is returned only for HTTP callbacks. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
              * 
-             * *   **on**
-             * *   **off**
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder authSwitch(String authSwitch) {
                 this.authSwitch = authSwitch;
@@ -210,11 +233,14 @@ public class GetMessageCallbackResponseBody extends TeaModel {
             }
 
             /**
-             * The callback method. Valid values:
-             * <p>
+             * <p>The callback method. Valid values:</p>
+             * <ul>
+             * <li><strong>HTTP</strong></li>
+             * <li><strong>MNS</strong></li>
+             * </ul>
              * 
-             * *   **HTTP**
-             * *   **MNS**
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder callbackType(String callbackType) {
                 this.callbackType = callbackType;
@@ -222,7 +248,10 @@ public class GetMessageCallbackResponseBody extends TeaModel {
             }
 
             /**
-             * The callback URL. This parameter is returned only for HTTP callbacks.
+             * <p>The callback URL. This parameter is returned only for HTTP callbacks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://test.com/test">http://test.com/test</a></p>
              */
             public Builder callbackURL(String callbackURL) {
                 this.callbackURL = callbackURL;
@@ -230,7 +259,10 @@ public class GetMessageCallbackResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the callback event.
+             * <p>The type of the callback event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FileUploadComplete,StreamTranscodeComplete,TranscodeComplete,SnapshotComplete,AIComplete,AddLiveRecordVideoComplete,CreateAuditComplete,UploadByURLComplete,ProduceMediaComplete,LiveRecordVideoComposeStart,ImageUploadComplete,VideoAnalysisComplete</p>
              */
             public Builder eventTypeList(String eventTypeList) {
                 this.eventTypeList = eventTypeList;
@@ -238,7 +270,10 @@ public class GetMessageCallbackResponseBody extends TeaModel {
             }
 
             /**
-             * The public endpoint of MNS. This parameter is returned only for MNS callbacks.
+             * <p>The public endpoint of MNS. This parameter is returned only for MNS callbacks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://1234567.mns.cn-shanghai-internal.aliyuncs.com/">http://1234567.mns.cn-shanghai-internal.aliyuncs.com/</a></p>
              */
             public Builder mnsEndpoint(String mnsEndpoint) {
                 this.mnsEndpoint = mnsEndpoint;
@@ -246,7 +281,10 @@ public class GetMessageCallbackResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Message Service (MNS) queue. This parameter is returned only for MNS callbacks.
+             * <p>The name of the Message Service (MNS) queue. This parameter is returned only for MNS callbacks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vodcallback</p>
              */
             public Builder mnsQueueName(String mnsQueueName) {
                 this.mnsQueueName = mnsQueueName;

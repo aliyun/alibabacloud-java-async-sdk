@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPolicesForPrivateAccessTagResponseBody} extends {@link TeaModel}
  *
  * <p>ListPolicesForPrivateAccessTagResponseBody</p>
  */
 public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
 
     private ListPolicesForPrivateAccessTagResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
 
         /**
          * RequestId.
@@ -60,7 +65,7 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
         /**
          * Tags.
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }
@@ -71,17 +76,23 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPolicesForPrivateAccessTagResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPolicesForPrivateAccessTagResponseBody</p>
+     */
     public static class CustomUserAttributes extends TeaModel {
-        @NameInMap("IdpId")
+        @com.aliyun.core.annotation.NameInMap("IdpId")
         private Integer idpId;
 
-        @NameInMap("Relation")
+        @com.aliyun.core.annotation.NameInMap("Relation")
         private String relation;
 
-        @NameInMap("UserGroupType")
+        @com.aliyun.core.annotation.NameInMap("UserGroupType")
         private String userGroupType;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private CustomUserAttributes(Builder builder) {
@@ -134,7 +145,10 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * 用户组的身份源ID。当自定义用户组类型为**department**时，存在该值。
+             * <p>用户组的身份源ID。当自定义用户组类型为<strong>department</strong>时，存在该值。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder idpId(Integer idpId) {
                 this.idpId = idpId;
@@ -142,10 +156,14 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
             }
 
             /**
-             * 用户组的关系。取值：
-             * <p>
-             * - **Equal**：等于。
-             * - **Unequal**：不等于。
+             * <p>用户组的关系。取值：</p>
+             * <ul>
+             * <li><strong>Equal</strong>：等于。</li>
+             * <li><strong>Unequal</strong>：不等于。</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Equal</p>
              */
             public Builder relation(String relation) {
                 this.relation = relation;
@@ -153,12 +171,16 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
             }
 
             /**
-             * 用户组的类型。取值：
-             * <p>
-             * - **username**：用户名。
-             * - **department**：部门。
-             * - **email**：邮箱。
-             * - **telephone**：手机。
+             * <p>用户组的类型。取值：</p>
+             * <ul>
+             * <li><strong>username</strong>：用户名。</li>
+             * <li><strong>department</strong>：部门。</li>
+             * <li><strong>email</strong>：邮箱。</li>
+             * <li><strong>telephone</strong>：手机。</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>department</p>
              */
             public Builder userGroupType(String userGroupType) {
                 this.userGroupType = userGroupType;
@@ -166,12 +188,16 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
             }
 
             /**
-             * 用户组属性的值。
-             * <p>
-             * - 当用户组类型为**username**时，表示用户名的值。长度为1~128个字符，支持中文和大小写英文字母，可包含数字、半角句号（.）、下划线（_）和短划线（-）。
-             * - 当用户组类型为**department**时，表示部门的值。如：OU=部门1,OU=SASE钉钉。
-             * - 当用户组类型为**email**时，表示邮箱的值。如：username@example.com。
-             * - 当用户组类型为**telephone**时，表示手机的值。如：13900001234。
+             * <p>用户组属性的值。</p>
+             * <ul>
+             * <li>当用户组类型为<strong>username</strong>时，表示用户名的值。长度为1~128个字符，支持中文和大小写英文字母，可包含数字、半角句号（.）、下划线（_）和短划线（-）。</li>
+             * <li>当用户组类型为<strong>department</strong>时，表示部门的值。如：OU=部门1,OU=SASE钉钉。</li>
+             * <li>当用户组类型为<strong>email</strong>时，表示邮箱的值。如：<a href="mailto:username@example.com">username@example.com</a>。</li>
+             * <li>当用户组类型为<strong>telephone</strong>时，表示手机的值。如：13900001234。</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OU=部门1,OU=SASE钉钉</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -185,35 +211,41 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPolicesForPrivateAccessTagResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPolicesForPrivateAccessTagResponseBody</p>
+     */
     public static class Polices extends TeaModel {
-        @NameInMap("ApplicationType")
+        @com.aliyun.core.annotation.NameInMap("ApplicationType")
         private String applicationType;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CustomUserAttributes")
-        private java.util.List < CustomUserAttributes> customUserAttributes;
+        @com.aliyun.core.annotation.NameInMap("CustomUserAttributes")
+        private java.util.List<CustomUserAttributes> customUserAttributes;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PolicyAction")
+        @com.aliyun.core.annotation.NameInMap("PolicyAction")
         private String policyAction;
 
-        @NameInMap("PolicyId")
+        @com.aliyun.core.annotation.NameInMap("PolicyId")
         private String policyId;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UserGroupType")
+        @com.aliyun.core.annotation.NameInMap("UserGroupType")
         private String userGroupType;
 
         private Polices(Builder builder) {
@@ -254,7 +286,7 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
         /**
          * @return customUserAttributes
          */
-        public java.util.List < CustomUserAttributes> getCustomUserAttributes() {
+        public java.util.List<CustomUserAttributes> getCustomUserAttributes() {
             return this.customUserAttributes;
         }
 
@@ -310,7 +342,7 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
         public static final class Builder {
             private String applicationType; 
             private String createTime; 
-            private java.util.List < CustomUserAttributes> customUserAttributes; 
+            private java.util.List<CustomUserAttributes> customUserAttributes; 
             private String description; 
             private String name; 
             private String policyAction; 
@@ -328,7 +360,10 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
             }
 
             /**
-             * 内网访问策略创建时间。
+             * <p>内网访问策略创建时间。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-02-21 14:10:16</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -336,9 +371,9 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
             }
 
             /**
-             * 自定义用户组属性集合。多个自定义用户组属性之间是或的关系，按照合集生效。
+             * <p>自定义用户组属性集合。多个自定义用户组属性之间是或的关系，按照合集生效。</p>
              */
-            public Builder customUserAttributes(java.util.List < CustomUserAttributes> customUserAttributes) {
+            public Builder customUserAttributes(java.util.List<CustomUserAttributes> customUserAttributes) {
                 this.customUserAttributes = customUserAttributes;
                 return this;
             }
@@ -392,12 +427,16 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
             }
 
             /**
-             * 用户组的类型。取值：
-             * <p>
-             * - **username**：用户名。
-             * - **department**：部门。
-             * - **email**：邮箱。
-             * - **telephone**：手机。
+             * <p>用户组的类型。取值：</p>
+             * <ul>
+             * <li><strong>username</strong>：用户名。</li>
+             * <li><strong>department</strong>：部门。</li>
+             * <li><strong>email</strong>：邮箱。</li>
+             * <li><strong>telephone</strong>：手机。</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>department</p>
              */
             public Builder userGroupType(String userGroupType) {
                 this.userGroupType = userGroupType;
@@ -411,11 +450,17 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPolicesForPrivateAccessTagResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPolicesForPrivateAccessTagResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Polices")
-        private java.util.List < Polices> polices;
+        @com.aliyun.core.annotation.NameInMap("Polices")
+        private java.util.List<Polices> polices;
 
-        @NameInMap("TagId")
+        @com.aliyun.core.annotation.NameInMap("TagId")
         private String tagId;
 
         private Tags(Builder builder) {
@@ -434,7 +479,7 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
         /**
          * @return polices
          */
-        public java.util.List < Polices> getPolices() {
+        public java.util.List<Polices> getPolices() {
             return this.polices;
         }
 
@@ -446,13 +491,13 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Polices> polices; 
+            private java.util.List<Polices> polices; 
             private String tagId; 
 
             /**
              * Polices.
              */
-            public Builder polices(java.util.List < Polices> polices) {
+            public Builder polices(java.util.List<Polices> polices) {
                 this.polices = polices;
                 return this;
             }

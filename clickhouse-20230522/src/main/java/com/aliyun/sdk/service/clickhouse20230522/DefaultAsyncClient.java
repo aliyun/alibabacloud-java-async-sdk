@@ -84,6 +84,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of CreateAccount  CreateAccountRequest
+     * @return CreateAccountResponse
+     */
     @Override
     public CompletableFuture<CreateAccountResponse> createAccount(CreateAccountRequest request) {
         try {
@@ -98,6 +102,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateDB  CreateDBRequest
+     * @return CreateDBResponse
+     */
     @Override
     public CompletableFuture<CreateDBResponse> createDB(CreateDBRequest request) {
         try {
@@ -112,6 +120,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateDBInstance  CreateDBInstanceRequest
+     * @return CreateDBInstanceResponse
+     */
     @Override
     public CompletableFuture<CreateDBInstanceResponse> createDBInstance(CreateDBInstanceRequest request) {
         try {
@@ -126,6 +138,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateEndpoint  CreateEndpointRequest
+     * @return CreateEndpointResponse
+     */
     @Override
     public CompletableFuture<CreateEndpointResponse> createEndpoint(CreateEndpointRequest request) {
         try {
@@ -140,6 +156,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteAccount  DeleteAccountRequest
+     * @return DeleteAccountResponse
+     */
     @Override
     public CompletableFuture<DeleteAccountResponse> deleteAccount(DeleteAccountRequest request) {
         try {
@@ -154,6 +174,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteDB  DeleteDBRequest
+     * @return DeleteDBResponse
+     */
     @Override
     public CompletableFuture<DeleteDBResponse> deleteDB(DeleteDBRequest request) {
         try {
@@ -168,6 +192,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteDBInstance  DeleteDBInstanceRequest
+     * @return DeleteDBInstanceResponse
+     */
     @Override
     public CompletableFuture<DeleteDBInstanceResponse> deleteDBInstance(DeleteDBInstanceRequest request) {
         try {
@@ -182,6 +210,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteEndpoint  DeleteEndpointRequest
+     * @return DeleteEndpointResponse
+     */
     @Override
     public CompletableFuture<DeleteEndpointResponse> deleteEndpoint(DeleteEndpointRequest request) {
         try {
@@ -196,6 +228,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAccountAuthority  DescribeAccountAuthorityRequest
+     * @return DescribeAccountAuthorityResponse
+     */
     @Override
     public CompletableFuture<DescribeAccountAuthorityResponse> describeAccountAuthority(DescribeAccountAuthorityRequest request) {
         try {
@@ -210,6 +246,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAccounts  DescribeAccountsRequest
+     * @return DescribeAccountsResponse
+     */
     @Override
     public CompletableFuture<DescribeAccountsResponse> describeAccounts(DescribeAccountsRequest request) {
         try {
@@ -224,6 +264,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDBInstanceAttribute  DescribeDBInstanceAttributeRequest
+     * @return DescribeDBInstanceAttributeResponse
+     */
     @Override
     public CompletableFuture<DescribeDBInstanceAttributeResponse> describeDBInstanceAttribute(DescribeDBInstanceAttributeRequest request) {
         try {
@@ -238,6 +282,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDBInstanceDataSources  DescribeDBInstanceDataSourcesRequest
+     * @return DescribeDBInstanceDataSourcesResponse
+     */
     @Override
     public CompletableFuture<DescribeDBInstanceDataSourcesResponse> describeDBInstanceDataSources(DescribeDBInstanceDataSourcesRequest request) {
         try {
@@ -252,6 +300,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDBInstances  DescribeDBInstancesRequest
+     * @return DescribeDBInstancesResponse
+     */
     @Override
     public CompletableFuture<DescribeDBInstancesResponse> describeDBInstances(DescribeDBInstancesRequest request) {
         try {
@@ -266,6 +318,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeEndpoints  DescribeEndpointsRequest
+     * @return DescribeEndpointsResponse
+     */
     @Override
     public CompletableFuture<DescribeEndpointsResponse> describeEndpoints(DescribeEndpointsRequest request) {
         try {
@@ -280,6 +336,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeProcessList  DescribeProcessListRequest
+     * @return DescribeProcessListResponse
+     */
     @Override
     public CompletableFuture<DescribeProcessListResponse> describeProcessList(DescribeProcessListRequest request) {
         try {
@@ -294,6 +354,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSecurityIPList  DescribeSecurityIPListRequest
+     * @return DescribeSecurityIPListResponse
+     */
     @Override
     public CompletableFuture<DescribeSecurityIPListResponse> describeSecurityIPList(DescribeSecurityIPListRequest request) {
         try {
@@ -308,6 +372,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSlowLogRecords  DescribeSlowLogRecordsRequest
+     * @return DescribeSlowLogRecordsResponse
+     */
     @Override
     public CompletableFuture<DescribeSlowLogRecordsResponse> describeSlowLogRecords(DescribeSlowLogRecordsRequest request) {
         try {
@@ -322,6 +390,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSlowLogTrend  DescribeSlowLogTrendRequest
+     * @return DescribeSlowLogTrendResponse
+     */
     @Override
     public CompletableFuture<DescribeSlowLogTrendResponse> describeSlowLogTrend(DescribeSlowLogTrendRequest request) {
         try {
@@ -336,6 +408,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of KillProcess  KillProcessRequest
+     * @return KillProcessResponse
+     */
     @Override
     public CompletableFuture<KillProcessResponse> killProcess(KillProcessRequest request) {
         try {
@@ -350,6 +426,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyAccountAuthority  ModifyAccountAuthorityRequest
+     * @return ModifyAccountAuthorityResponse
+     */
     @Override
     public CompletableFuture<ModifyAccountAuthorityResponse> modifyAccountAuthority(ModifyAccountAuthorityRequest request) {
         try {
@@ -364,6 +444,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyAccountDescription  ModifyAccountDescriptionRequest
+     * @return ModifyAccountDescriptionResponse
+     */
     @Override
     public CompletableFuture<ModifyAccountDescriptionResponse> modifyAccountDescription(ModifyAccountDescriptionRequest request) {
         try {
@@ -378,6 +462,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDBInstanceAttribute  ModifyDBInstanceAttributeRequest
+     * @return ModifyDBInstanceAttributeResponse
+     */
     @Override
     public CompletableFuture<ModifyDBInstanceAttributeResponse> modifyDBInstanceAttribute(ModifyDBInstanceAttributeRequest request) {
         try {
@@ -392,6 +480,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDBInstanceClass  ModifyDBInstanceClassRequest
+     * @return ModifyDBInstanceClassResponse
+     */
     @Override
     public CompletableFuture<ModifyDBInstanceClassResponse> modifyDBInstanceClass(ModifyDBInstanceClassRequest request) {
         try {
@@ -406,6 +498,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDBInstanceConnectionString  ModifyDBInstanceConnectionStringRequest
+     * @return ModifyDBInstanceConnectionStringResponse
+     */
     @Override
     public CompletableFuture<ModifyDBInstanceConnectionStringResponse> modifyDBInstanceConnectionString(ModifyDBInstanceConnectionStringRequest request) {
         try {
@@ -420,6 +516,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifySecurityIPList  ModifySecurityIPListRequest
+     * @return ModifySecurityIPListResponse
+     */
     @Override
     public CompletableFuture<ModifySecurityIPListResponse> modifySecurityIPList(ModifySecurityIPListRequest request) {
         try {
@@ -434,6 +534,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ResetAccountPassword  ResetAccountPasswordRequest
+     * @return ResetAccountPasswordResponse
+     */
     @Override
     public CompletableFuture<ResetAccountPasswordResponse> resetAccountPassword(ResetAccountPasswordRequest request) {
         try {
@@ -448,6 +552,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RestartDBInstance  RestartDBInstanceRequest
+     * @return RestartDBInstanceResponse
+     */
     @Override
     public CompletableFuture<RestartDBInstanceResponse> restartDBInstance(RestartDBInstanceRequest request) {
         try {
@@ -462,6 +570,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartDBInstance  StartDBInstanceRequest
+     * @return StartDBInstanceResponse
+     */
     @Override
     public CompletableFuture<StartDBInstanceResponse> startDBInstance(StartDBInstanceRequest request) {
         try {
@@ -476,6 +588,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopDBInstance  StopDBInstanceRequest
+     * @return StopDBInstanceResponse
+     */
     @Override
     public CompletableFuture<StopDBInstanceResponse> stopDBInstance(StopDBInstanceRequest request) {
         try {
@@ -485,6 +601,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<StopDBInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpgradeMinorVersion  UpgradeMinorVersionRequest
+     * @return UpgradeMinorVersionResponse
+     */
+    @Override
+    public CompletableFuture<UpgradeMinorVersionResponse> upgradeMinorVersion(UpgradeMinorVersionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpgradeMinorVersion").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpgradeMinorVersionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpgradeMinorVersionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

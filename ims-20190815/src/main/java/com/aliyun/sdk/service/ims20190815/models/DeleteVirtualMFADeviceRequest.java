@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteVirtualMFADeviceRequest} extends {@link RequestModel}
  *
  * <p>DeleteVirtualMFADeviceRequest</p>
  */
 public class DeleteVirtualMFADeviceRequest extends Request {
-    @Query
-    @NameInMap("SerialNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SerialNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serialNumber;
 
     private DeleteVirtualMFADeviceRequest(Builder builder) {
@@ -55,7 +60,11 @@ public class DeleteVirtualMFADeviceRequest extends Request {
         } 
 
         /**
-         * The serial number of the MFA device.
+         * <p>The serial number of the MFA device.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::123456789012****:mfa/device002</p>
          */
         public Builder serialNumber(String serialNumber) {
             this.putQueryParameter("SerialNumber", serialNumber);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,8 +11,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListByMonitorSourceIdRequest</p>
  */
 public class ListByMonitorSourceIdRequest extends Request {
-    @Body
-    @NameInMap("monitorSourceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("monitorSourceId")
     private String monitorSourceId;
 
     private ListByMonitorSourceIdRequest(Builder builder) {

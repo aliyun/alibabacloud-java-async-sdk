@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMonitoringConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMonitoringConfigResponseBody</p>
  */
 public class DescribeMonitoringConfigResponseBody extends TeaModel {
-    @NameInMap("AutoInstall")
+    @com.aliyun.core.annotation.NameInMap("AutoInstall")
     private Boolean autoInstall;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("EnableInstallAgentNewECS")
+    @com.aliyun.core.annotation.NameInMap("EnableInstallAgentNewECS")
     private Boolean enableInstallAgentNewECS;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeMonitoringConfigResponseBody(Builder builder) {
@@ -98,11 +98,14 @@ public class DescribeMonitoringConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the Cloud Monitor agent is automatically installed on existing ECS instances. Valid values:
-         * <p>
+         * <p>Indicates whether the Cloud Monitor agent is automatically installed on existing ECS instances. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoInstall(Boolean autoInstall) {
             this.autoInstall = autoInstall;
@@ -110,10 +113,13 @@ public class DescribeMonitoringConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the call was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -121,11 +127,14 @@ public class DescribeMonitoringConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the Cloud Monitor agent is automatically installed on new Elastic Compute Service (ECS) instances. Valid values:
-         * <p>
+         * <p>Indicates whether the Cloud Monitor agent is automatically installed on new Elastic Compute Service (ECS) instances. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableInstallAgentNewECS(Boolean enableInstallAgentNewECS) {
             this.enableInstallAgentNewECS = enableInstallAgentNewECS;
@@ -133,7 +142,10 @@ public class DescribeMonitoringConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Request is not authorization.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +153,10 @@ public class DescribeMonitoringConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F35654DB-0C9D-4FB3-903F-479BA7663061</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -149,11 +164,14 @@ public class DescribeMonitoringConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

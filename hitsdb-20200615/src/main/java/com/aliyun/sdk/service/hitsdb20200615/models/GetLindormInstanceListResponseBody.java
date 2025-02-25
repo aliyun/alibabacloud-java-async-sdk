@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hitsdb20200615.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLindormInstanceListResponseBody} extends {@link TeaModel}
  *
  * <p>GetLindormInstanceListResponseBody</p>
  */
 public class GetLindormInstanceListResponseBody extends TeaModel {
-    @NameInMap("InstanceList")
-    private java.util.List < InstanceList> instanceList;
+    @com.aliyun.core.annotation.NameInMap("InstanceList")
+    private java.util.List<InstanceList> instanceList;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private GetLindormInstanceListResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
     /**
      * @return instanceList
      */
-    public java.util.List < InstanceList> getInstanceList() {
+    public java.util.List<InstanceList> getInstanceList() {
         return this.instanceList;
     }
 
@@ -79,22 +84,25 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstanceList> instanceList; 
+        private java.util.List<InstanceList> instanceList; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer total; 
 
         /**
-         * InstanceList.
+         * <p>The list of instance.</p>
          */
-        public Builder instanceList(java.util.List < InstanceList> instanceList) {
+        public Builder instanceList(java.util.List<InstanceList> instanceList) {
             this.instanceList = instanceList;
             return this;
         }
 
         /**
-         * PageNumber.
+         * <p>The number of returned pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of instances that are returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CA1FAFD-E8DC-51C2-AA7E-CA6E2D049BA0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of returned instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -131,11 +148,17 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetLindormInstanceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLindormInstanceListResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -170,7 +193,10 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -178,7 +204,10 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.2.18</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -192,73 +221,99 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetLindormInstanceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLindormInstanceListResponseBody</p>
+     */
     public static class InstanceList extends TeaModel {
-        @NameInMap("AliUid")
+        @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
 
-        @NameInMap("CreateMilliseconds")
+        @com.aliyun.core.annotation.NameInMap("CreateMilliseconds")
         private Long createMilliseconds;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("EnableCompute")
+        @com.aliyun.core.annotation.NameInMap("EnableColumn")
+        private Boolean enableColumn;
+
+        @com.aliyun.core.annotation.NameInMap("EnableCompute")
         private Boolean enableCompute;
 
-        @NameInMap("EnableStream")
+        @com.aliyun.core.annotation.NameInMap("EnableLts")
+        private Boolean enableLts;
+
+        @com.aliyun.core.annotation.NameInMap("EnableMessage")
+        private Boolean enableMessage;
+
+        @com.aliyun.core.annotation.NameInMap("EnableRow")
+        private Boolean enableRow;
+
+        @com.aliyun.core.annotation.NameInMap("EnableStream")
         private Boolean enableStream;
 
-        @NameInMap("EngineType")
+        @com.aliyun.core.annotation.NameInMap("EnableVector")
+        private Boolean enableVector;
+
+        @com.aliyun.core.annotation.NameInMap("EngineType")
         private String engineType;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("ExpiredMilliseconds")
+        @com.aliyun.core.annotation.NameInMap("ExpiredMilliseconds")
         private Long expiredMilliseconds;
 
-        @NameInMap("InstanceAlias")
+        @com.aliyun.core.annotation.NameInMap("InstanceAlias")
         private String instanceAlias;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("InstanceStatus")
         private String instanceStatus;
 
-        @NameInMap("InstanceStorage")
+        @com.aliyun.core.annotation.NameInMap("InstanceStorage")
         private String instanceStorage;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ServiceType")
+        @com.aliyun.core.annotation.NameInMap("ServiceType")
         private String serviceType;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private InstanceList(Builder builder) {
             this.aliUid = builder.aliUid;
             this.createMilliseconds = builder.createMilliseconds;
             this.createTime = builder.createTime;
+            this.enableColumn = builder.enableColumn;
             this.enableCompute = builder.enableCompute;
+            this.enableLts = builder.enableLts;
+            this.enableMessage = builder.enableMessage;
+            this.enableRow = builder.enableRow;
             this.enableStream = builder.enableStream;
+            this.enableVector = builder.enableVector;
             this.engineType = builder.engineType;
             this.expireTime = builder.expireTime;
             this.expiredMilliseconds = builder.expiredMilliseconds;
@@ -306,6 +361,13 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
         }
 
         /**
+         * @return enableColumn
+         */
+        public Boolean getEnableColumn() {
+            return this.enableColumn;
+        }
+
+        /**
          * @return enableCompute
          */
         public Boolean getEnableCompute() {
@@ -313,10 +375,38 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
         }
 
         /**
+         * @return enableLts
+         */
+        public Boolean getEnableLts() {
+            return this.enableLts;
+        }
+
+        /**
+         * @return enableMessage
+         */
+        public Boolean getEnableMessage() {
+            return this.enableMessage;
+        }
+
+        /**
+         * @return enableRow
+         */
+        public Boolean getEnableRow() {
+            return this.enableRow;
+        }
+
+        /**
          * @return enableStream
          */
         public Boolean getEnableStream() {
             return this.enableStream;
+        }
+
+        /**
+         * @return enableVector
+         */
+        public Boolean getEnableVector() {
+            return this.enableVector;
         }
 
         /**
@@ -406,7 +496,7 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -428,8 +518,13 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             private Long aliUid; 
             private Long createMilliseconds; 
             private String createTime; 
+            private Boolean enableColumn; 
             private Boolean enableCompute; 
+            private Boolean enableLts; 
+            private Boolean enableMessage; 
+            private Boolean enableRow; 
             private Boolean enableStream; 
+            private Boolean enableVector; 
             private String engineType; 
             private String expireTime; 
             private Long expiredMilliseconds; 
@@ -442,12 +537,15 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             private String regionId; 
             private String resourceGroupId; 
             private String serviceType; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String vpcId; 
             private String zoneId; 
 
             /**
-             * AliUid.
+             * <p>The 16-digit AliUid of the Alibaba Cloud account that owns the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>164901546557****</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -455,7 +553,10 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * CreateMilliseconds.
+             * <p>The time when the instance is created. This value is a UNIX timestamp that indicates the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1631772842000</p>
              */
             public Builder createMilliseconds(Long createMilliseconds) {
                 this.createMilliseconds = createMilliseconds;
@@ -463,7 +564,10 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the instance is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-16 14:13:13</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -471,7 +575,28 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * EnableCompute.
+             * <p>Indicates whether the column storage engine is enabled, returning:</p>
+             * <ul>
+             * <li><strong>true</strong>: Enabled. - <strong>false</strong>: Not enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder enableColumn(Boolean enableColumn) {
+                this.enableColumn = enableColumn;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether LDPS is activated for the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: LDPS is activated for the instance.</li>
+             * <li><strong>false</strong>: LDPS is not activated for the instance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableCompute(Boolean enableCompute) {
                 this.enableCompute = enableCompute;
@@ -479,7 +604,50 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * EnableStream.
+             * <p>Indicates whether the LTS engine is enabled, returning:</p>
+             * <ul>
+             * <li><strong>true</strong>: Enabled. - <strong>false</strong>: Not enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder enableLts(Boolean enableLts) {
+                this.enableLts = enableLts;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether the message engine is enabled, returning:</p>
+             * <ul>
+             * <li><strong>true</strong>: Enabled. - <strong>false</strong>: Not enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder enableMessage(Boolean enableMessage) {
+                this.enableMessage = enableMessage;
+                return this;
+            }
+
+            /**
+             * EnableRow.
+             */
+            public Builder enableRow(Boolean enableRow) {
+                this.enableRow = enableRow;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether the Lindorm streaming engine is activated for the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The Lindorm streaming engine is activated for the instance.</li>
+             * <li><strong>false</strong>: The Lindorm streaming engine is not activated for the instance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableStream(Boolean enableStream) {
                 this.enableStream = enableStream;
@@ -487,7 +655,33 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * EngineType.
+             * <p>Whether the vector engine is enabled, returns:</p>
+             * <ul>
+             * <li><strong>true</strong>: Enabled. - <strong>false</strong>: Not enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder enableVector(Boolean enableVector) {
+                this.enableVector = enableVector;
+                return this;
+            }
+
+            /**
+             * <p>The engine supported by the instance. The engines are indicated by different numbers:</p>
+             * <ul>
+             * <li><strong>1</strong>: LindormSearch.</li>
+             * <li><strong>2</strong>: LindormTSDB.</li>
+             * <li><strong>4</strong>: LindormTable.</li>
+             * <li><strong>8</strong>: LindormDFS.</li>
+             * </ul>
+             * <blockquote>
+             * <p>The value of this parameter is the sum of all numbers that indicate the engines supported by the instance. For example, if the value of this parameter is 15, which is the sum of 1, 2, 4, and 8, the instance supports all four engines. If the value of this parameter is 6, which is the sum of 2 and 4, the instance supports LindormTSDB and LindormTable.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder engineType(String engineType) {
                 this.engineType = engineType;
@@ -495,7 +689,13 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * <p>The time when the instance expires.</p>
+             * <blockquote>
+             * <p>This parameter is returned only if the billing method of the instance is subscription.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-26 00:00:00</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -503,7 +703,10 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredMilliseconds.
+             * <p>The time when the instance expires. This value is a UNIX timestamp that indicates the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1650902400000</p>
              */
             public Builder expiredMilliseconds(Long expiredMilliseconds) {
                 this.expiredMilliseconds = expiredMilliseconds;
@@ -511,7 +714,10 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceAlias.
+             * <p>The name of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder instanceAlias(String instanceAlias) {
                 this.instanceAlias = instanceAlias;
@@ -519,7 +725,10 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the instance</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ld-bp17pwu1541ia****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -527,7 +736,33 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceStatus.
+             * <p>The status of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>CREATING</strong>: The instance is being created.</li>
+             * <li><strong>ACTIVATION</strong>: The instance is running.</li>
+             * <li><strong>COLD_EXPANDING</strong>: The Capacity storage of the instance is being scaled up.</li>
+             * <li><strong>MINOR_VERSION_TRANSING</strong>: The minor version of the instance is being updated.</li>
+             * <li><strong>RESIZING</strong>: The nodes in the instance are being scaled up.</li>
+             * <li><strong>SHRINKING</strong>: The nodes in the instance are being scaled down.</li>
+             * <li><strong>CLASS_CHANGING</strong>: The specification of the instance is being changed.</li>
+             * <li><strong>SSL_SWITCHING: SSL</strong>: The SSL configurations of the instance are being changed.</li>
+             * <li><strong>CDC_OPENING</strong>: Data subscription is being enabled for the instance.</li>
+             * <li><strong>TRANSFER</strong>: The data of the instance is being transferred.</li>
+             * <li><strong>DATABASE_TRANSFER</strong>: The data of the instance is being transferred to databases.</li>
+             * <li><strong>GUARD_CREATING</strong>: A disaster recovery instance is being created.</li>
+             * <li><strong>BACKUP_RECOVERING</strong>: The data of the instance is being restored from a backup.</li>
+             * <li><strong>DATABASE_IMPORTING</strong>: Data is being imported to the instance.</li>
+             * <li><strong>NET_MODIFYING</strong>: The network configurations of the instance are being changed.</li>
+             * <li><strong>NET_SWITCHING</strong>: The network of the instance is being switched between a virtual private cloud (VPC) and the Internet.</li>
+             * <li><strong>NET_CREATING</strong>: The connection to the instance is being created.</li>
+             * <li><strong>NET_DELETING</strong>: The connection to the instance is being deleted.</li>
+             * <li><strong>DELETING</strong>: The instance is being deleted.</li>
+             * <li><strong>RESTARTING</strong>: The instance is restarting.</li>
+             * <li><strong>LOCKED</strong>: The instance is locked because it expires.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVATION</p>
              */
             public Builder instanceStatus(String instanceStatus) {
                 this.instanceStatus = instanceStatus;
@@ -535,7 +770,10 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceStorage.
+             * <p>The storage capacity of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>960</p>
              */
             public Builder instanceStorage(String instanceStorage) {
                 this.instanceStorage = instanceStorage;
@@ -543,7 +781,10 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkType.
+             * <p>The network type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -551,7 +792,14 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * PayType.
+             * <p>The billing method of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>PREPAY</strong>: subscription.</li>
+             * <li><strong>POSTPAY</strong>: pay-as-you-go.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PREPAY</p>
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -559,7 +807,10 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -567,7 +818,10 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group to which the instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekzledqeat****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -575,7 +829,16 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceType.
+             * <p>The series of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>lindorm</strong>: The instance is a Lindorm instance.</li>
+             * <li><strong>serverless_lindorm</strong>: The instance is a Lindorm Serverless instance.</li>
+             * <li><strong>lindorm_standalone</strong>: The instance is a single-node Lindorm instance.</li>
+             * <li><strong>lts</strong>: The instance is an LTS instance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>lindorm</p>
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
@@ -583,15 +846,18 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The list of tags associated with the specified instances.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * VpcId.
+             * <p>The ID of the VPC in which the instance is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1n3i15v90el48nx****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -599,7 +865,10 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The ID of the zone in which the instance is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

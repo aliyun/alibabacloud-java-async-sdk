@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.market20151101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstancesResponseBody</p>
  */
 public class DescribeInstancesResponseBody extends TeaModel {
-    @NameInMap("InstanceItems")
+    @com.aliyun.core.annotation.NameInMap("InstanceItems")
     private InstanceItems instanceItems;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeInstancesResponseBody(Builder builder) {
@@ -131,56 +136,62 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class InstanceItem extends TeaModel {
-        @NameInMap("ApiJson")
+        @com.aliyun.core.annotation.NameInMap("ApiJson")
         private String apiJson;
 
-        @NameInMap("AppJson")
+        @com.aliyun.core.annotation.NameInMap("AppJson")
         private String appJson;
 
-        @NameInMap("BeganOn")
+        @com.aliyun.core.annotation.NameInMap("BeganOn")
         private Long beganOn;
 
-        @NameInMap("CreatedOn")
+        @com.aliyun.core.annotation.NameInMap("CreatedOn")
         private Long createdOn;
 
-        @NameInMap("EndOn")
+        @com.aliyun.core.annotation.NameInMap("EndOn")
         private Long endOn;
 
-        @NameInMap("ExtendJson")
+        @com.aliyun.core.annotation.NameInMap("ExtendJson")
         private String extendJson;
 
-        @NameInMap("HostJson")
+        @com.aliyun.core.annotation.NameInMap("HostJson")
         private String hostJson;
 
-        @NameInMap("IdaasJson")
+        @com.aliyun.core.annotation.NameInMap("IdaasJson")
         private String idaasJson;
 
-        @NameInMap("ImageJson")
+        @com.aliyun.core.annotation.NameInMap("ImageJson")
         private String imageJson;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
 
-        @NameInMap("OrderId")
+        @com.aliyun.core.annotation.NameInMap("OrderId")
         private Long orderId;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("ProductName")
+        @com.aliyun.core.annotation.NameInMap("ProductName")
         private String productName;
 
-        @NameInMap("ProductSkuCode")
+        @com.aliyun.core.annotation.NameInMap("ProductSkuCode")
         private String productSkuCode;
 
-        @NameInMap("ProductType")
+        @com.aliyun.core.annotation.NameInMap("ProductType")
         private String productType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SupplierName")
+        @com.aliyun.core.annotation.NameInMap("SupplierName")
         private String supplierName;
 
         private InstanceItem(Builder builder) {
@@ -492,9 +503,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class InstanceItems extends TeaModel {
-        @NameInMap("InstanceItem")
-        private java.util.List < InstanceItem> instanceItem;
+        @com.aliyun.core.annotation.NameInMap("InstanceItem")
+        private java.util.List<InstanceItem> instanceItem;
 
         private InstanceItems(Builder builder) {
             this.instanceItem = builder.instanceItem;
@@ -511,17 +528,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return instanceItem
          */
-        public java.util.List < InstanceItem> getInstanceItem() {
+        public java.util.List<InstanceItem> getInstanceItem() {
             return this.instanceItem;
         }
 
         public static final class Builder {
-            private java.util.List < InstanceItem> instanceItem; 
+            private java.util.List<InstanceItem> instanceItem; 
 
             /**
              * InstanceItem.
              */
-            public Builder instanceItem(java.util.List < InstanceItem> instanceItem) {
+            public Builder instanceItem(java.util.List<InstanceItem> instanceItem) {
                 this.instanceItem = instanceItem;
                 return this;
             }

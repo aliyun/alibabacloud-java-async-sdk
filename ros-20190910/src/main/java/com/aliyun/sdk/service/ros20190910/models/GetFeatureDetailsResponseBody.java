@@ -1,36 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFeatureDetailsResponseBody} extends {@link TeaModel}
  *
  * <p>GetFeatureDetailsResponseBody</p>
  */
 public class GetFeatureDetailsResponseBody extends TeaModel {
-    @NameInMap("DriftDetection")
+    @com.aliyun.core.annotation.NameInMap("DriftDetection")
     private DriftDetection driftDetection;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceCleaner")
+    @com.aliyun.core.annotation.NameInMap("ResourceCleaner")
     private ResourceCleaner resourceCleaner;
 
-    @NameInMap("ResourceImport")
+    @com.aliyun.core.annotation.NameInMap("ResourceImport")
     private ResourceImport resourceImport;
 
-    @NameInMap("TemplateParameterConstraints")
+    @com.aliyun.core.annotation.NameInMap("TemplateParameterConstraints")
     private TemplateParameterConstraints templateParameterConstraints;
 
-    @NameInMap("TemplateScratch")
+    @com.aliyun.core.annotation.NameInMap("TemplateScratch")
     private TemplateScratch templateScratch;
 
-    @NameInMap("Terraform")
+    @com.aliyun.core.annotation.NameInMap("Terraform")
     private Terraform terraform;
 
     private GetFeatureDetailsResponseBody(Builder builder) {
@@ -110,7 +110,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         private Terraform terraform; 
 
         /**
-         * DriftDetection.
+         * <p>Details of the drift detection feature.</p>
          */
         public Builder driftDetection(DriftDetection driftDetection) {
             this.driftDetection = driftDetection;
@@ -118,7 +118,10 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EBF833DA-D0E2-52BE-92E2-59CA56BE834E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -126,7 +129,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the resource cleaner feature.
+         * <p>Details of the resource cleaner feature.</p>
          */
         public Builder resourceCleaner(ResourceCleaner resourceCleaner) {
             this.resourceCleaner = resourceCleaner;
@@ -134,7 +137,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceImport.
+         * <p>Details of the resource import feature.</p>
          */
         public Builder resourceImport(ResourceImport resourceImport) {
             this.resourceImport = resourceImport;
@@ -142,7 +145,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the template parameter constraint feature.
+         * <p>Details of the template parameter constraint feature.</p>
          */
         public Builder templateParameterConstraints(TemplateParameterConstraints templateParameterConstraints) {
             this.templateParameterConstraints = templateParameterConstraints;
@@ -150,7 +153,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the scenario feature.
+         * <p>Details of the scenario feature.</p>
          */
         public Builder templateScratch(TemplateScratch templateScratch) {
             this.templateScratch = templateScratch;
@@ -158,7 +161,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the Terraform hosting feature.
+         * <p>Details of the Terraform hosting feature.</p>
          */
         public Builder terraform(Terraform terraform) {
             this.terraform = terraform;
@@ -171,8 +174,14 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetFeatureDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFeatureDetailsResponseBody</p>
+     */
     public static class DriftDetection extends TeaModel {
-        @NameInMap("SupportedResourceTypes")
+        @com.aliyun.core.annotation.NameInMap("SupportedResourceTypes")
         private java.util.List < String > supportedResourceTypes;
 
         private DriftDetection(Builder builder) {
@@ -198,7 +207,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             private java.util.List < String > supportedResourceTypes; 
 
             /**
-             * SupportedResourceTypes.
+             * <p>The resource types that are supported by the drift detection feature.</p>
              */
             public Builder supportedResourceTypes(java.util.List < String > supportedResourceTypes) {
                 this.supportedResourceTypes = supportedResourceTypes;
@@ -212,14 +221,20 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetFeatureDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFeatureDetailsResponseBody</p>
+     */
     public static class SupportedResourceTypes extends TeaModel {
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("SideEffects")
+        @com.aliyun.core.annotation.NameInMap("SideEffects")
         private java.util.List < String > sideEffects;
 
-        @NameInMap("SupportedFilters")
+        @com.aliyun.core.annotation.NameInMap("SupportedFilters")
         private java.util.List < String > supportedFilters;
 
         private SupportedResourceTypes(Builder builder) {
@@ -263,7 +278,10 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             private java.util.List < String > supportedFilters; 
 
             /**
-             * The resource type that can be cleaned up.
+             * <p>The resource type that supports the resource cleaner feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS:Instance</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -271,7 +289,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The names of the side effects. The StopInstance value indicates that an instance that is related to the specified resource is stopped.
+             * <p>The names of the side effects that may be caused by the cleanup operation performed on the resources of the specified type.</p>
              */
             public Builder sideEffects(java.util.List < String > sideEffects) {
                 this.sideEffects = sideEffects;
@@ -279,15 +297,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The filters that are used to filter resources. Valid values:
-             * <p>
-             * 
-             * *   RegionId: the ID of the region.
-             * *   ResourceId: the ID of the resource.
-             * *   ResourceName: the name of the resource.
-             * *   Tags: the tags of the resource.
-             * *   ResourceGroupId: the ID of the resource group.
-             * *   DeletionProtection: the deletion protection feature.
+             * <p>The names of the filters that are supported by the resource type.</p>
              */
             public Builder supportedFilters(java.util.List < String > supportedFilters) {
                 this.supportedFilters = supportedFilters;
@@ -301,8 +311,14 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetFeatureDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFeatureDetailsResponseBody</p>
+     */
     public static class ResourceCleaner extends TeaModel {
-        @NameInMap("SupportedResourceTypes")
+        @com.aliyun.core.annotation.NameInMap("SupportedResourceTypes")
         private java.util.List < SupportedResourceTypes> supportedResourceTypes;
 
         private ResourceCleaner(Builder builder) {
@@ -328,7 +344,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             private java.util.List < SupportedResourceTypes> supportedResourceTypes; 
 
             /**
-             * The resource types that can be cleaned up.
+             * <p>The resource types that can be cleaned up.</p>
              */
             public Builder supportedResourceTypes(java.util.List < SupportedResourceTypes> supportedResourceTypes) {
                 this.supportedResourceTypes = supportedResourceTypes;
@@ -342,11 +358,17 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetFeatureDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFeatureDetailsResponseBody</p>
+     */
     public static class ResourceImportSupportedResourceTypes extends TeaModel {
-        @NameInMap("ResourceIdentifiers")
+        @com.aliyun.core.annotation.NameInMap("ResourceIdentifiers")
         private java.util.List < String > resourceIdentifiers;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
         private ResourceImportSupportedResourceTypes(Builder builder) {
@@ -381,7 +403,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * ResourceIdentifiers.
+             * <p>The resource identifiers.</p>
              */
             public Builder resourceIdentifiers(java.util.List < String > resourceIdentifiers) {
                 this.resourceIdentifiers = resourceIdentifiers;
@@ -389,7 +411,10 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type that can be cleaned up.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN::ECS::Disk</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -403,8 +428,14 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetFeatureDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFeatureDetailsResponseBody</p>
+     */
     public static class ResourceImport extends TeaModel {
-        @NameInMap("SupportedResourceTypes")
+        @com.aliyun.core.annotation.NameInMap("SupportedResourceTypes")
         private java.util.List < ResourceImportSupportedResourceTypes> supportedResourceTypes;
 
         private ResourceImport(Builder builder) {
@@ -430,7 +461,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             private java.util.List < ResourceImportSupportedResourceTypes> supportedResourceTypes; 
 
             /**
-             * The resource types that can be cleaned up.
+             * <p>The resource types that are supported by the resource import feature.</p>
              */
             public Builder supportedResourceTypes(java.util.List < ResourceImportSupportedResourceTypes> supportedResourceTypes) {
                 this.supportedResourceTypes = supportedResourceTypes;
@@ -444,11 +475,17 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetFeatureDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFeatureDetailsResponseBody</p>
+     */
     public static class TemplateParameterConstraintsSupportedResourceTypes extends TeaModel {
-        @NameInMap("Properties")
+        @com.aliyun.core.annotation.NameInMap("Properties")
         private java.util.List < String > properties;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
         private TemplateParameterConstraintsSupportedResourceTypes(Builder builder) {
@@ -483,7 +520,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * The names of properties that are supported by the resource type.
+             * <p>The names of properties that are supported by the resource type.</p>
              */
             public Builder properties(java.util.List < String > properties) {
                 this.properties = properties;
@@ -491,7 +528,10 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN::ECS::Disk</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -505,8 +545,14 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetFeatureDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFeatureDetailsResponseBody</p>
+     */
     public static class TemplateParameterConstraints extends TeaModel {
-        @NameInMap("SupportedResourceTypes")
+        @com.aliyun.core.annotation.NameInMap("SupportedResourceTypes")
         private java.util.List < TemplateParameterConstraintsSupportedResourceTypes> supportedResourceTypes;
 
         private TemplateParameterConstraints(Builder builder) {
@@ -532,7 +578,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             private java.util.List < TemplateParameterConstraintsSupportedResourceTypes> supportedResourceTypes; 
 
             /**
-             * The resource types that support the template parameter constraint feature.
+             * <p>The resource types that support the template parameter constraint feature.</p>
              */
             public Builder supportedResourceTypes(java.util.List < TemplateParameterConstraintsSupportedResourceTypes> supportedResourceTypes) {
                 this.supportedResourceTypes = supportedResourceTypes;
@@ -546,23 +592,29 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetFeatureDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFeatureDetailsResponseBody</p>
+     */
     public static class TemplateScratchSupportedResourceTypes extends TeaModel {
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("SourceResourceGroupSupported")
+        @com.aliyun.core.annotation.NameInMap("SourceResourceGroupSupported")
         private Boolean sourceResourceGroupSupported;
 
-        @NameInMap("SourceResourcesSupported")
+        @com.aliyun.core.annotation.NameInMap("SourceResourcesSupported")
         private Boolean sourceResourcesSupported;
 
-        @NameInMap("SourceSupported")
+        @com.aliyun.core.annotation.NameInMap("SourceSupported")
         private Boolean sourceSupported;
 
-        @NameInMap("SourceTagSupported")
+        @com.aliyun.core.annotation.NameInMap("SourceTagSupported")
         private Boolean sourceTagSupported;
 
-        @NameInMap("SupportedTemplateScratchTypes")
+        @com.aliyun.core.annotation.NameInMap("SupportedTemplateScratchTypes")
         private java.util.List < String > supportedTemplateScratchTypes;
 
         private TemplateScratchSupportedResourceTypes(Builder builder) {
@@ -633,7 +685,10 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             private java.util.List < String > supportedTemplateScratchTypes; 
 
             /**
-             * The resource type.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN::ECS::Disk</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -641,11 +696,14 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the resource scope can be specified by resource group. Valid values:
-             * <p>
+             * <p>Indicates whether the resource scope can be specified by source resource group. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * - true
-             * - false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder sourceResourceGroupSupported(Boolean sourceResourceGroupSupported) {
                 this.sourceResourceGroupSupported = sourceResourceGroupSupported;
@@ -653,11 +711,14 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the resource scope can be specified by tag, resource group, or resource. Valid values:
-             * <p>
+             * <p>Indicates whether the resource scope can be specified by source resource. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * - true
-             * - false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder sourceResourcesSupported(Boolean sourceResourcesSupported) {
                 this.sourceResourcesSupported = sourceResourcesSupported;
@@ -665,11 +726,14 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the resource scope can be specified by resource. Valid values:
-             * <p>
+             * <p>Indicates whether the resource scope can be specified by source tag, resource group, or resource. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * - true
-             * - false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder sourceSupported(Boolean sourceSupported) {
                 this.sourceSupported = sourceSupported;
@@ -677,11 +741,14 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the resource scope can be specified by tag. Valid values:
-             * <p>
+             * <p>Indicates whether the resource scope can be specified by source tag. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * - true
-             * - false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder sourceTagSupported(Boolean sourceTagSupported) {
                 this.sourceTagSupported = sourceTagSupported;
@@ -689,7 +756,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportedTemplateScratchTypes.
+             * <p>The scenario types that are supported.</p>
              */
             public Builder supportedTemplateScratchTypes(java.util.List < String > supportedTemplateScratchTypes) {
                 this.supportedTemplateScratchTypes = supportedTemplateScratchTypes;
@@ -703,8 +770,14 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetFeatureDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFeatureDetailsResponseBody</p>
+     */
     public static class TemplateScratch extends TeaModel {
-        @NameInMap("SupportedResourceTypes")
+        @com.aliyun.core.annotation.NameInMap("SupportedResourceTypes")
         private java.util.List < TemplateScratchSupportedResourceTypes> supportedResourceTypes;
 
         private TemplateScratch(Builder builder) {
@@ -730,7 +803,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             private java.util.List < TemplateScratchSupportedResourceTypes> supportedResourceTypes; 
 
             /**
-             * The resource types that support the scenario feature.
+             * <p>The resource types that are supported by the scenario feature.</p>
              */
             public Builder supportedResourceTypes(java.util.List < TemplateScratchSupportedResourceTypes> supportedResourceTypes) {
                 this.supportedResourceTypes = supportedResourceTypes;
@@ -744,8 +817,14 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetFeatureDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFeatureDetailsResponseBody</p>
+     */
     public static class StackOperationRisk extends TeaModel {
-        @NameInMap("DeleteStack")
+        @com.aliyun.core.annotation.NameInMap("DeleteStack")
         private java.util.List < String > deleteStack;
 
         private StackOperationRisk(Builder builder) {
@@ -771,7 +850,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             private java.util.List < String > deleteStack; 
 
             /**
-             * The resource types that support the risk check performed to detect risks caused by a stack deletion operation.
+             * <p>The resource types that support the risk check performed to detect risks caused by a stack deletion operation.</p>
              */
             public Builder deleteStack(java.util.List < String > deleteStack) {
                 this.deleteStack = deleteStack;
@@ -785,20 +864,26 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetFeatureDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFeatureDetailsResponseBody</p>
+     */
     public static class TerraformSupportedResourceTypes extends TeaModel {
-        @NameInMap("CustomTag")
+        @com.aliyun.core.annotation.NameInMap("CustomTag")
         private java.util.List < String > customTag;
 
-        @NameInMap("EstimateCost")
+        @com.aliyun.core.annotation.NameInMap("EstimateCost")
         private java.util.List < String > estimateCost;
 
-        @NameInMap("ResourceGroup")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroup")
         private java.util.List < String > resourceGroup;
 
-        @NameInMap("StackOperationRisk")
+        @com.aliyun.core.annotation.NameInMap("StackOperationRisk")
         private StackOperationRisk stackOperationRisk;
 
-        @NameInMap("SystemTag")
+        @com.aliyun.core.annotation.NameInMap("SystemTag")
         private java.util.List < String > systemTag;
 
         private TerraformSupportedResourceTypes(Builder builder) {
@@ -860,7 +945,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             private java.util.List < String > systemTag; 
 
             /**
-             * The resource types that support the custom tag feature.
+             * <p>The resource types that support the custom tag feature.</p>
              */
             public Builder customTag(java.util.List < String > customTag) {
                 this.customTag = customTag;
@@ -868,7 +953,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource types that support the price inquiry feature.
+             * <p>The resource types that support the price inquiry feature.</p>
              */
             public Builder estimateCost(java.util.List < String > estimateCost) {
                 this.estimateCost = estimateCost;
@@ -876,7 +961,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource types that support the resource group feature.
+             * <p>The resource types that support the resource group feature.</p>
              */
             public Builder resourceGroup(java.util.List < String > resourceGroup) {
                 this.resourceGroup = resourceGroup;
@@ -884,7 +969,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type that support the risk check feature.
+             * <p>The resource type that support the risk check feature.</p>
              */
             public Builder stackOperationRisk(StackOperationRisk stackOperationRisk) {
                 this.stackOperationRisk = stackOperationRisk;
@@ -892,7 +977,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource types that support the system tag `acs:ros:stackId`.
+             * <p>The resource types that support the system tag <code>acs:ros:stackId</code>.</p>
              */
             public Builder systemTag(java.util.List < String > systemTag) {
                 this.systemTag = systemTag;
@@ -906,11 +991,17 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetFeatureDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFeatureDetailsResponseBody</p>
+     */
     public static class ProviderVersions extends TeaModel {
-        @NameInMap("ProviderName")
+        @com.aliyun.core.annotation.NameInMap("ProviderName")
         private String providerName;
 
-        @NameInMap("SupportedVersions")
+        @com.aliyun.core.annotation.NameInMap("SupportedVersions")
         private java.util.List < String > supportedVersions;
 
         private ProviderVersions(Builder builder) {
@@ -945,7 +1036,10 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             private java.util.List < String > supportedVersions; 
 
             /**
-             * The name of the provider.
+             * <p>The name of the provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alicloud</p>
              */
             public Builder providerName(String providerName) {
                 this.providerName = providerName;
@@ -953,7 +1047,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The versions of the provider.
+             * <p>The provider versions.</p>
              */
             public Builder supportedVersions(java.util.List < String > supportedVersions) {
                 this.supportedVersions = supportedVersions;
@@ -967,17 +1061,23 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetFeatureDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFeatureDetailsResponseBody</p>
+     */
     public static class SupportedVersions extends TeaModel {
-        @NameInMap("ProviderVersions")
+        @com.aliyun.core.annotation.NameInMap("ProviderVersions")
         private java.util.List < ProviderVersions> providerVersions;
 
-        @NameInMap("TerraformVersion")
+        @com.aliyun.core.annotation.NameInMap("TerraformVersion")
         private String terraformVersion;
 
-        @NameInMap("Transform")
+        @com.aliyun.core.annotation.NameInMap("Transform")
         private String transform;
 
-        @NameInMap("UpdateAllowedTransforms")
+        @com.aliyun.core.annotation.NameInMap("UpdateAllowedTransforms")
         private java.util.List < String > updateAllowedTransforms;
 
         private SupportedVersions(Builder builder) {
@@ -1030,7 +1130,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             private java.util.List < String > updateAllowedTransforms; 
 
             /**
-             * The names and versions of the providers that correspond to the Terraform versions.
+             * <p>The names and versions of the providers that correspond to the Terraform versions.</p>
              */
             public Builder providerVersions(java.util.List < ProviderVersions> providerVersions) {
                 this.providerVersions = providerVersions;
@@ -1038,7 +1138,10 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The Terraform version.
+             * <p>The Terraform version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.11</p>
              */
             public Builder terraformVersion(String terraformVersion) {
                 this.terraformVersion = terraformVersion;
@@ -1046,7 +1149,10 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The Terraform version that is supported by ROS. The parameter value is the same as the value of the Transform parameter in a Terraform template.
+             * <p>The Terraform version that is supported by ROS. The parameter value is the same as the value of the Transform parameter in a Terraform template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Aliyun::Terraform-v1.0</p>
              */
             public Builder transform(String transform) {
                 this.transform = transform;
@@ -1054,7 +1160,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The versions to which Terraform can be updated in ROS.
+             * <p>The Terraform versions that can be updated in ROS.</p>
              */
             public Builder updateAllowedTransforms(java.util.List < String > updateAllowedTransforms) {
                 this.updateAllowedTransforms = updateAllowedTransforms;
@@ -1068,11 +1174,17 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetFeatureDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFeatureDetailsResponseBody</p>
+     */
     public static class Terraform extends TeaModel {
-        @NameInMap("SupportedResourceTypes")
+        @com.aliyun.core.annotation.NameInMap("SupportedResourceTypes")
         private TerraformSupportedResourceTypes supportedResourceTypes;
 
-        @NameInMap("SupportedVersions")
+        @com.aliyun.core.annotation.NameInMap("SupportedVersions")
         private java.util.List < SupportedVersions> supportedVersions;
 
         private Terraform(Builder builder) {
@@ -1107,7 +1219,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             private java.util.List < SupportedVersions> supportedVersions; 
 
             /**
-             * The resource types that support the scenario feature.
+             * <p>The resource types that support the scenario feature.</p>
              */
             public Builder supportedResourceTypes(TerraformSupportedResourceTypes supportedResourceTypes) {
                 this.supportedResourceTypes = supportedResourceTypes;
@@ -1115,7 +1227,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The Terraform versions.
+             * <p>The Terraform versions.</p>
              */
             public Builder supportedVersions(java.util.List < SupportedVersions> supportedVersions) {
                 this.supportedVersions = supportedVersions;

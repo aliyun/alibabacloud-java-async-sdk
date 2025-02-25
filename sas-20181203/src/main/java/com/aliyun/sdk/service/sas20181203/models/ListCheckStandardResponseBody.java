@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCheckStandardResponseBody} extends {@link TeaModel}
  *
  * <p>ListCheckStandardResponseBody</p>
  */
 public class ListCheckStandardResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Standards")
-    private java.util.List < Standards> standards;
+    @com.aliyun.core.annotation.NameInMap("Standards")
+    private java.util.List<Standards> standards;
 
     private ListCheckStandardResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class ListCheckStandardResponseBody extends TeaModel {
     /**
      * @return standards
      */
-    public java.util.List < Standards> getStandards() {
+    public java.util.List<Standards> getStandards() {
         return this.standards;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Standards> standards; 
+        private java.util.List<Standards> standards; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FA91FBDA-***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class ListCheckStandardResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the check items.
+         * <p>The standards.</p>
          */
-        public Builder standards(java.util.List < Standards> standards) {
+        public Builder standards(java.util.List<Standards> standards) {
             this.standards = standards;
             return this;
         }
@@ -71,20 +79,30 @@ public class ListCheckStandardResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCheckStandardResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCheckStandardResponseBody</p>
+     */
     public static class Requirements extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("RiskCheckCount")
+        @com.aliyun.core.annotation.NameInMap("RiskCheckCount")
         private Long riskCheckCount;
 
-        @NameInMap("ShowName")
+        @com.aliyun.core.annotation.NameInMap("ShowName")
         private String showName;
+
+        @com.aliyun.core.annotation.NameInMap("ShowPriorityLevel")
+        private Integer showPriorityLevel;
 
         private Requirements(Builder builder) {
             this.id = builder.id;
             this.riskCheckCount = builder.riskCheckCount;
             this.showName = builder.showName;
+            this.showPriorityLevel = builder.showPriorityLevel;
         }
 
         public static Builder builder() {
@@ -116,13 +134,24 @@ public class ListCheckStandardResponseBody extends TeaModel {
             return this.showName;
         }
 
+        /**
+         * @return showPriorityLevel
+         */
+        public Integer getShowPriorityLevel() {
+            return this.showPriorityLevel;
+        }
+
         public static final class Builder {
             private Long id; 
             private Long riskCheckCount; 
             private String showName; 
+            private Integer showPriorityLevel; 
 
             /**
-             * The ID of the search condition.
+             * <p>The ID of the requirement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -130,7 +159,10 @@ public class ListCheckStandardResponseBody extends TeaModel {
             }
 
             /**
-             * The number of check items queried by using the search condition.
+             * <p>The number of check items in the requirement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder riskCheckCount(Long riskCheckCount) {
                 this.riskCheckCount = riskCheckCount;
@@ -138,10 +170,24 @@ public class ListCheckStandardResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the search condition.
+             * <p>The display name of the search condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RAM identity authentication</p>
              */
             public Builder showName(String showName) {
                 this.showName = showName;
+                return this;
+            }
+
+            /**
+             * <p>The priority for display.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder showPriorityLevel(Integer showPriorityLevel) {
+                this.showPriorityLevel = showPriorityLevel;
                 return this;
             }
 
@@ -152,23 +198,37 @@ public class ListCheckStandardResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCheckStandardResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCheckStandardResponseBody</p>
+     */
     public static class Standards extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("BindVendor")
+        private Integer bindVendor;
+
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Requirements")
-        private java.util.List < Requirements> requirements;
+        @com.aliyun.core.annotation.NameInMap("Requirements")
+        private java.util.List<Requirements> requirements;
 
-        @NameInMap("ShowName")
+        @com.aliyun.core.annotation.NameInMap("ShowName")
         private String showName;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("ShowPriorityLevel")
+        private Integer showPriorityLevel;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Standards(Builder builder) {
+            this.bindVendor = builder.bindVendor;
             this.id = builder.id;
             this.requirements = builder.requirements;
             this.showName = builder.showName;
+            this.showPriorityLevel = builder.showPriorityLevel;
             this.type = builder.type;
         }
 
@@ -181,6 +241,13 @@ public class ListCheckStandardResponseBody extends TeaModel {
         }
 
         /**
+         * @return bindVendor
+         */
+        public Integer getBindVendor() {
+            return this.bindVendor;
+        }
+
+        /**
          * @return id
          */
         public Long getId() {
@@ -190,7 +257,7 @@ public class ListCheckStandardResponseBody extends TeaModel {
         /**
          * @return requirements
          */
-        public java.util.List < Requirements> getRequirements() {
+        public java.util.List<Requirements> getRequirements() {
             return this.requirements;
         }
 
@@ -202,6 +269,13 @@ public class ListCheckStandardResponseBody extends TeaModel {
         }
 
         /**
+         * @return showPriorityLevel
+         */
+        public Integer getShowPriorityLevel() {
+            return this.showPriorityLevel;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -209,13 +283,36 @@ public class ListCheckStandardResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer bindVendor; 
             private Long id; 
-            private java.util.List < Requirements> requirements; 
+            private java.util.List<Requirements> requirements; 
             private String showName; 
+            private Integer showPriorityLevel; 
             private String type; 
 
             /**
-             * The ID of the check item.
+             * <p>The cloud service provider that uses the standard. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Alibaba Cloud.</li>
+             * <li><strong>3</strong>: Tencent Cloud.</li>
+             * <li><strong>4</strong>: Huawei Cloud.</li>
+             * <li><strong>5</strong>: Microsoft Azure.</li>
+             * <li><strong>7</strong>: AWS.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
+             */
+            public Builder bindVendor(Integer bindVendor) {
+                this.bindVendor = bindVendor;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the standard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -223,15 +320,18 @@ public class ListCheckStandardResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of search conditions.
+             * <p>The requirements.</p>
              */
-            public Builder requirements(java.util.List < Requirements> requirements) {
+            public Builder requirements(java.util.List<Requirements> requirements) {
                 this.requirements = requirements;
                 return this;
             }
 
             /**
-             * The display name of the check item.
+             * <p>The display name of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Identity and permission management</p>
              */
             public Builder showName(String showName) {
                 this.showName = showName;
@@ -239,7 +339,21 @@ public class ListCheckStandardResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the check item.
+             * <p>The priority for display.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder showPriorityLevel(Integer showPriorityLevel) {
+                this.showPriorityLevel = showPriorityLevel;
+                return this;
+            }
+
+            /**
+             * <p>The type of the standard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IDENTITY_PERMISSION</p>
              */
             public Builder type(String type) {
                 this.type = type;

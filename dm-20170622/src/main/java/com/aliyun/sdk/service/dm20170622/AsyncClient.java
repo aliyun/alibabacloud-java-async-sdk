@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.dm20170622;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.dm20170622.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -23,6 +24,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchSendMailResponse> batchSendMail(BatchSendMailRequest request);
 
     CompletableFuture<CheckDomainResponse> checkDomain(CheckDomainRequest request);
+
+    CompletableFuture<CheckDomainDnsResponse> checkDomainDns(CheckDomainDnsRequest request);
 
     CompletableFuture<CreateDomainResponse> createDomain(CreateDomainRequest request);
 

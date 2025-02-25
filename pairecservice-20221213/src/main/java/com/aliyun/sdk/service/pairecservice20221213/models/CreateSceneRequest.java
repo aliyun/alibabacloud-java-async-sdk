@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSceneRequest</p>
  */
 public class CreateSceneRequest extends Request {
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("Flows")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Flows")
     private java.util.List < Flows> flows;
 
-    @Body
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Body
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
     private CreateSceneRequest(Builder builder) {
@@ -139,10 +138,10 @@ public class CreateSceneRequest extends Request {
     } 
 
     public static class Flows extends TeaModel {
-        @NameInMap("FlowCode")
+        @com.aliyun.core.annotation.NameInMap("FlowCode")
         private String flowCode;
 
-        @NameInMap("FlowName")
+        @com.aliyun.core.annotation.NameInMap("FlowName")
         private String flowName;
 
         private Flows(Builder builder) {

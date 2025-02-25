@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSCIMServerCredentialResponseBody} extends {@link TeaModel}
  *
  * <p>CreateSCIMServerCredentialResponseBody</p>
  */
 public class CreateSCIMServerCredentialResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SCIMServerCredential")
+    @com.aliyun.core.annotation.NameInMap("SCIMServerCredential")
     private SCIMServerCredential SCIMServerCredential;
 
     private CreateSCIMServerCredentialResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class CreateSCIMServerCredentialResponseBody extends TeaModel {
         private SCIMServerCredential SCIMServerCredential; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2D2E5180-7ACF-57FF-A56C-26A49ABEBFF7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class CreateSCIMServerCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the SCIM credential.
+         * <p>The information about the SCIM credential.</p>
          */
         public Builder SCIMServerCredential(SCIMServerCredential SCIMServerCredential) {
             this.SCIMServerCredential = SCIMServerCredential;
@@ -71,26 +74,32 @@ public class CreateSCIMServerCredentialResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateSCIMServerCredentialResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateSCIMServerCredentialResponseBody</p>
+     */
     public static class SCIMServerCredential extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CredentialId")
+        @com.aliyun.core.annotation.NameInMap("CredentialId")
         private String credentialId;
 
-        @NameInMap("CredentialSecret")
+        @com.aliyun.core.annotation.NameInMap("CredentialSecret")
         private String credentialSecret;
 
-        @NameInMap("CredentialType")
+        @com.aliyun.core.annotation.NameInMap("CredentialType")
         private String credentialType;
 
-        @NameInMap("DirectoryId")
+        @com.aliyun.core.annotation.NameInMap("DirectoryId")
         private String directoryId;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private SCIMServerCredential(Builder builder) {
@@ -170,7 +179,10 @@ public class CreateSCIMServerCredentialResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The time when the SCIM credential was created.
+             * <p>The time when the SCIM credential was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-09T08:12:52Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -178,7 +190,10 @@ public class CreateSCIMServerCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the SCIM credential.
+             * <p>The ID of the SCIM credential.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>scimcred-004whl0kvfwcypbi****</p>
              */
             public Builder credentialId(String credentialId) {
                 this.credentialId = credentialId;
@@ -186,10 +201,13 @@ public class CreateSCIMServerCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * The SCIM credential.
-             * <p>
+             * <p>The SCIM credential.</p>
+             * <blockquote>
+             * <p> The SCIM credential is returned only when it is created. After the SCIM credential is created, you cannot query it. Keep the SCIM credential confidential.</p>
+             * </blockquote>
              * 
-             * >  The SCIM credential is returned only when it is created. After the SCIM credential is created, you cannot query it. Keep the SCIM credential confidential.
+             * <strong>example:</strong>
+             * <p>8aAJCtpbyPJ8saXeYDgyw****</p>
              */
             public Builder credentialSecret(String credentialSecret) {
                 this.credentialSecret = credentialSecret;
@@ -197,7 +215,10 @@ public class CreateSCIMServerCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the SCIM credential.
+             * <p>The type of the SCIM credential.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BearerToken</p>
              */
             public Builder credentialType(String credentialType) {
                 this.credentialType = credentialType;
@@ -205,7 +226,10 @@ public class CreateSCIMServerCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the directory.
+             * <p>The ID of the directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-00fc2p61****</p>
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -213,7 +237,10 @@ public class CreateSCIMServerCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the SCIM credential expires.
+             * <p>The time when the SCIM credential expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-09T08:12:52Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -221,7 +248,10 @@ public class CreateSCIMServerCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the SCIM credential. The value is fixed as Enabled, which indicates that the SCIM credential is enabled.
+             * <p>The status of the SCIM credential. The value is fixed as Enabled, which indicates that the SCIM credential is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;

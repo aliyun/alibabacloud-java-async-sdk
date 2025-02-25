@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListArtifactsResponseBody} extends {@link TeaModel}
  *
  * <p>ListArtifactsResponseBody</p>
  */
 public class ListArtifactsResponseBody extends TeaModel {
-    @NameInMap("Artifacts")
-    private java.util.List < Artifacts> artifacts;
+    @com.aliyun.core.annotation.NameInMap("Artifacts")
+    private java.util.List<Artifacts> artifacts;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListArtifactsResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class ListArtifactsResponseBody extends TeaModel {
     /**
      * @return artifacts
      */
-    public java.util.List < Artifacts> getArtifacts() {
+    public java.util.List<Artifacts> getArtifacts() {
         return this.artifacts;
     }
 
@@ -79,22 +84,25 @@ public class ListArtifactsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Artifacts> artifacts; 
+        private java.util.List<Artifacts> artifacts; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * Artifacts.
+         * <p>The information about deployment packages.</p>
          */
-        public Builder artifacts(java.util.List < Artifacts> artifacts) {
+        public Builder artifacts(java.util.List<Artifacts> artifacts) {
             this.artifacts = artifacts;
             return this;
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +110,10 @@ public class ListArtifactsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAc3HCuYhJi/wvpk4xOr0VLbfVwapgMwCN1wYzPVzLbItEdB0uWSY7AGnM3qCgm/YnjuEfwSnMwiMkcUoI0hRQzE=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +121,10 @@ public class ListArtifactsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46577928-3162-15A6-9084-69820EB9xxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class ListArtifactsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,11 +148,17 @@ public class ListArtifactsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListArtifactsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListArtifactsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -170,7 +193,10 @@ public class ListArtifactsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -178,7 +204,10 @@ public class ListArtifactsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -192,35 +221,45 @@ public class ListArtifactsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListArtifactsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListArtifactsResponseBody</p>
+     */
     public static class Artifacts extends TeaModel {
-        @NameInMap("ArtifactId")
+        @com.aliyun.core.annotation.NameInMap("ArtifactBuildProperty")
+        private String artifactBuildProperty;
+
+        @com.aliyun.core.annotation.NameInMap("ArtifactId")
         private String artifactId;
 
-        @NameInMap("ArtifactType")
+        @com.aliyun.core.annotation.NameInMap("ArtifactType")
         private String artifactType;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("MaxVersion")
+        @com.aliyun.core.annotation.NameInMap("MaxVersion")
         private String maxVersion;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
         private Artifacts(Builder builder) {
+            this.artifactBuildProperty = builder.artifactBuildProperty;
             this.artifactId = builder.artifactId;
             this.artifactType = builder.artifactType;
             this.description = builder.description;
@@ -238,6 +277,13 @@ public class ListArtifactsResponseBody extends TeaModel {
 
         public static Artifacts create() {
             return builder().build();
+        }
+
+        /**
+         * @return artifactBuildProperty
+         */
+        public String getArtifactBuildProperty() {
+            return this.artifactBuildProperty;
         }
 
         /**
@@ -299,11 +345,12 @@ public class ListArtifactsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
         public static final class Builder {
+            private String artifactBuildProperty; 
             private String artifactId; 
             private String artifactType; 
             private String description; 
@@ -312,10 +359,24 @@ public class ListArtifactsResponseBody extends TeaModel {
             private String name; 
             private String resourceGroupId; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
 
             /**
-             * ArtifactId.
+             * <p>The build properties of the artifact, utilized for hosting and building the deployment package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;CodeRepo&quot;:{&quot;Owner&quot;:&quot;wenle&quot;,&quot;Platform&quot;:&quot;github&quot;,&quot;Branch&quot;:&quot;main&quot;,&quot;RepoName&quot;:&quot;aliyun-computenest/java-springboot-demo&quot;}}</p>
+             */
+            public Builder artifactBuildProperty(String artifactBuildProperty) {
+                this.artifactBuildProperty = artifactBuildProperty;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the deployment package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>artifact-eea08d1e2d3a43aexxxx</p>
              */
             public Builder artifactId(String artifactId) {
                 this.artifactId = artifactId;
@@ -323,7 +384,10 @@ public class ListArtifactsResponseBody extends TeaModel {
             }
 
             /**
-             * ArtifactType.
+             * <p>The type of the deployment package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EcsImage</p>
              */
             public Builder artifactType(String artifactType) {
                 this.artifactType = artifactType;
@@ -331,7 +395,10 @@ public class ListArtifactsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the deployment package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -339,7 +406,10 @@ public class ListArtifactsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the deployment package was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10-20T02:19:55Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -347,7 +417,10 @@ public class ListArtifactsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxVersion.
+             * <p>The latest version of the deployment package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder maxVersion(String maxVersion) {
                 this.maxVersion = maxVersion;
@@ -355,7 +428,10 @@ public class ListArtifactsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the deployment package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -363,7 +439,10 @@ public class ListArtifactsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aek25rexxxxxxxx</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -371,7 +450,18 @@ public class ListArtifactsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the deployment package. Valid values:</p>
+             * <ul>
+             * <li>Created: The deployment package is created.</li>
+             * <li>Scanning: The deployment package is being scanned.</li>
+             * <li>ScanFailed: The deployment package failed to be scanned.</li>
+             * <li>Delivering: The deployment package is being distributed.</li>
+             * <li>Available: The deployment package is available.</li>
+             * <li>Deleted: The deployment package is deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Created</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -379,9 +469,9 @@ public class ListArtifactsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

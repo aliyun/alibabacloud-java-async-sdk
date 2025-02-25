@@ -1,63 +1,68 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCycleTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateCycleTaskRequest</p>
  */
 public class CreateCycleTaskRequest extends Request {
-    @Query
-    @NameInMap("Enable")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Enable")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer enable;
 
-    @Query
-    @NameInMap("FirstDateStr")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirstDateStr")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long firstDateStr;
 
-    @Query
-    @NameInMap("IntervalPeriod")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntervalPeriod")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer intervalPeriod;
 
-    @Query
-    @NameInMap("Param")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Param")
     private String param;
 
-    @Query
-    @NameInMap("PeriodUnit")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeriodUnit")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String periodUnit;
 
-    @Query
-    @NameInMap("Source")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
 
-    @Query
-    @NameInMap("TargetEndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetEndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer targetEndTime;
 
-    @Query
-    @NameInMap("TargetStartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetStartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer targetStartTime;
 
-    @Query
-    @NameInMap("TaskName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskName;
 
-    @Query
-    @NameInMap("TaskType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskType;
 
     private CreateCycleTaskRequest(Builder builder) {
@@ -188,11 +193,15 @@ public class CreateCycleTaskRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable the task. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the task. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **1**: yes
-         * *   **0**: no
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder enable(Integer enable) {
             this.putQueryParameter("Enable", enable);
@@ -201,7 +210,11 @@ public class CreateCycleTaskRequest extends Request {
         }
 
         /**
-         * The first time when the task is performed.
+         * <p>The first time when the task is performed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1650556800000</p>
          */
         public Builder firstDateStr(Long firstDateStr) {
             this.putQueryParameter("FirstDateStr", firstDateStr);
@@ -210,7 +223,11 @@ public class CreateCycleTaskRequest extends Request {
         }
 
         /**
-         * The interval of the task.
+         * <p>The interval of the task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder intervalPeriod(Integer intervalPeriod) {
             this.putQueryParameter("IntervalPeriod", intervalPeriod);
@@ -219,7 +236,23 @@ public class CreateCycleTaskRequest extends Request {
         }
 
         /**
-         * The additional information.
+         * <p>The additional information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;targetInfo&quot;: [
+         *             {
+         *                   &quot;type&quot;: &quot;groupId&quot;,
+         *                   &quot;name&quot;: &quot;TI HOST&quot;,
+         *                   &quot;target&quot;: 10597***
+         *             },
+         *             {
+         *                   &quot;type&quot;: &quot;groupId&quot;,
+         *                   &quot;name&quot;: &quot;expense HOST&quot;,
+         *                   &quot;target&quot;: 10597***
+         *             }
+         *       ]
+         * }</p>
          */
         public Builder param(String param) {
             this.putQueryParameter("Param", param);
@@ -228,11 +261,15 @@ public class CreateCycleTaskRequest extends Request {
         }
 
         /**
-         * The unit of the scan interval. Valid values:
-         * <p>
+         * <p>The unit of the scan interval. Valid values:</p>
+         * <ul>
+         * <li><strong>day</strong>: days</li>
+         * <li><strong>hour</strong>: hours</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **day**: days
-         * *   **hour**: hours
+         * <strong>example:</strong>
+         * <p>day</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -241,7 +278,10 @@ public class CreateCycleTaskRequest extends Request {
         }
 
         /**
-         * The additional source for the task.
+         * <p>The additional source for the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>console_batch</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -250,7 +290,11 @@ public class CreateCycleTaskRequest extends Request {
         }
 
         /**
-         * The time when the task ends. Unit: hours.
+         * <p>The time when the task ends. Unit: hours.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder targetEndTime(Integer targetEndTime) {
             this.putQueryParameter("TargetEndTime", targetEndTime);
@@ -259,7 +303,11 @@ public class CreateCycleTaskRequest extends Request {
         }
 
         /**
-         * The time when the task is started. Unit: hours.
+         * <p>The time when the task is started. Unit: hours.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder targetStartTime(Integer targetStartTime) {
             this.putQueryParameter("TargetStartTime", targetStartTime);
@@ -268,12 +316,16 @@ public class CreateCycleTaskRequest extends Request {
         }
 
         /**
-         * The name of the task. Valid values:
-         * <p>
+         * <p>The name of the task. Valid values:</p>
+         * <ul>
+         * <li><strong>VIRUS_VUL_SCHEDULE_SCAN</strong>: virus scan task</li>
+         * <li><strong>IMAGE_SCAN</strong>: image scan task</li>
+         * <li><strong>EMG_VUL_SCHEDULE_SCAN</strong>: urgent vulnerability scan task</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **VIRUS_VUL_SCHEDULE_SCAN**: virus scan task
-         * *   **IMAGE_SCAN**: image scan task
-         * *   **EMG_VUL_SCHEDULE_SCAN**: urgent vulnerability scan task
+         * <strong>example:</strong>
+         * <p>EMG_VUL_SCHEDULE_SCAN</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -282,12 +334,16 @@ public class CreateCycleTaskRequest extends Request {
         }
 
         /**
-         * The type of the task. Valid values:
-         * <p>
+         * <p>The type of the task. Valid values:</p>
+         * <ul>
+         * <li><strong>VIRUS_VUL_SCHEDULE_SCAN</strong>: virus scan task</li>
+         * <li><strong>IMAGE_SCAN</strong>: image scan task</li>
+         * <li><strong>EMG_VUL_SCHEDULE_SCAN</strong>: urgent vulnerability scan task</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **VIRUS_VUL_SCHEDULE_SCAN**: virus scan task
-         * *   **IMAGE_SCAN**: image scan task
-         * *   **EMG_VUL_SCHEDULE_SCAN**: urgent vulnerability scan task
+         * <strong>example:</strong>
+         * <p>VIRUS_VUL_SCHEDULE_SCAN</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

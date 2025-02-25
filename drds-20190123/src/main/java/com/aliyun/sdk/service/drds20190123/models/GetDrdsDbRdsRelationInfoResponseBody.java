@@ -62,7 +62,7 @@ public class GetDrdsDbRdsRelationInfoResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The structure information about the storage instances of the DRDS database. Each entry corresponds to a primary storage instance.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class GetDrdsDbRdsRelationInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class GetDrdsDbRdsRelationInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,7 +154,7 @@ public class GetDrdsDbRdsRelationInfoResponseBody extends TeaModel {
             private String usedInstanceType; 
 
             /**
-             * RdsInstanceId.
+             * The ID of the storage instance.
              */
             public Builder rdsInstanceId(String rdsInstanceId) {
                 this.rdsInstanceId = rdsInstanceId;
@@ -162,7 +162,7 @@ public class GetDrdsDbRdsRelationInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ReadOnlyInstanceInfo.
+             * The IDs of the read-only storage instances.
              */
             public Builder readOnlyInstanceInfo(java.util.List < String > readOnlyInstanceInfo) {
                 this.readOnlyInstanceInfo = readOnlyInstanceInfo;
@@ -170,7 +170,7 @@ public class GetDrdsDbRdsRelationInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UsedInstanceId.
+             * The ID of the storage instance that is in use. If the specified instance in the request is a primary DRDS instance, the value of this parameter is the ID of the primary storage instance. If the specified instance in the request is a read-only DRDS instance, the value of this parameter is the ID of the secondary storage instance.
              */
             public Builder usedInstanceId(String usedInstanceId) {
                 this.usedInstanceId = usedInstanceId;
@@ -178,7 +178,7 @@ public class GetDrdsDbRdsRelationInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UsedInstanceType.
+             * The type of the storage instance that is in use.
              */
             public Builder usedInstanceType(String usedInstanceType) {
                 this.usedInstanceType = usedInstanceType;

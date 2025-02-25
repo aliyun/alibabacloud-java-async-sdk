@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Workflow</p>
  */
 public class Workflow extends TeaModel {
-    @NameInMap("LatestEndTime")
+    @com.aliyun.core.annotation.NameInMap("LatestEndTime")
     private String latestEndTime;
 
-    @NameInMap("LatestInstanceId")
+    @com.aliyun.core.annotation.NameInMap("LatestInstanceId")
     private String latestInstanceId;
 
-    @NameInMap("LatestInstanceStatus")
+    @com.aliyun.core.annotation.NameInMap("LatestInstanceStatus")
     private String latestInstanceStatus;
 
-    @NameInMap("LatestStartTime")
+    @com.aliyun.core.annotation.NameInMap("LatestStartTime")
     private String latestStartTime;
 
     private Workflow(Builder builder) {

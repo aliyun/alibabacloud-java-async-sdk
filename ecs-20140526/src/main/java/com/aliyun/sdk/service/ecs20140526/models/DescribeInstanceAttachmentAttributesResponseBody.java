@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceAttachmentAttributesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceAttachmentAttributesResponseBody</p>
  */
 public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
-    @NameInMap("Instances")
+    @com.aliyun.core.annotation.NameInMap("Instances")
     private Instances instances;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeInstanceAttachmentAttributesResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the private pools that the instances match.
+         * <p>The information about the association between private pools and instances.</p>
          */
         public Builder instances(Instances instances) {
             this.instances = instances;
@@ -94,7 +99,10 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,14 +148,20 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceAttachmentAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceAttachmentAttributesResponseBody</p>
+     */
     public static class Instance extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("PrivatePoolOptionsId")
+        @com.aliyun.core.annotation.NameInMap("PrivatePoolOptionsId")
         private String privatePoolOptionsId;
 
-        @NameInMap("PrivatePoolOptionsMatchCriteria")
+        @com.aliyun.core.annotation.NameInMap("PrivatePoolOptionsMatchCriteria")
         private String privatePoolOptionsMatchCriteria;
 
         private Instance(Builder builder) {
@@ -182,7 +205,10 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
             private String privatePoolOptionsMatchCriteria; 
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp67acfmxazb4****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -190,7 +216,10 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the private pool. If the value of `PrivatePoolOptionsMatchCriteria` is `Open`, the value of PrivatePoolOptionsId is the ID of the private pool that is automatically matched to the instance.
+             * <p>The ID of the private pool. If the value of <code>PrivatePoolOptionsMatchCriteria</code> is <code>Open</code>, the value of PrivatePoolOptionsId is the ID of the private pool that is automatically matched to the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eap-bp67acfmxazb4****</p>
              */
             public Builder privatePoolOptionsId(String privatePoolOptionsId) {
                 this.privatePoolOptionsId = privatePoolOptionsId;
@@ -198,12 +227,15 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The match mode of the private pool. Valid values:
-             * <p>
+             * <p>The match mode of the private pool. Valid values:</p>
+             * <ul>
+             * <li>Open: open private pool. Instances automatically match an open private pool.</li>
+             * <li>Target: specified private pool. Instances match a specified private pool.</li>
+             * <li>None: no private pool. Instances do not use private pools.</li>
+             * </ul>
              * 
-             * *   Open: open private pool. Instances automatically match an open private pool.
-             * *   Target: specified private pool. Instances match a specified private pool.
-             * *   None: no private pool. Instances do not use private pools.
+             * <strong>example:</strong>
+             * <p>Open</p>
              */
             public Builder privatePoolOptionsMatchCriteria(String privatePoolOptionsMatchCriteria) {
                 this.privatePoolOptionsMatchCriteria = privatePoolOptionsMatchCriteria;
@@ -217,9 +249,15 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceAttachmentAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceAttachmentAttributesResponseBody</p>
+     */
     public static class Instances extends TeaModel {
-        @NameInMap("Instance")
-        private java.util.List < Instance> instance;
+        @com.aliyun.core.annotation.NameInMap("Instance")
+        private java.util.List<Instance> instance;
 
         private Instances(Builder builder) {
             this.instance = builder.instance;
@@ -236,17 +274,17 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
         /**
          * @return instance
          */
-        public java.util.List < Instance> getInstance() {
+        public java.util.List<Instance> getInstance() {
             return this.instance;
         }
 
         public static final class Builder {
-            private java.util.List < Instance> instance; 
+            private java.util.List<Instance> instance; 
 
             /**
              * Instance.
              */
-            public Builder instance(java.util.List < Instance> instance) {
+            public Builder instance(java.util.List<Instance> instance) {
                 this.instance = instance;
                 return this;
             }

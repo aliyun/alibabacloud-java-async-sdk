@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeForwardTableEntriesRequest} extends {@link RequestModel}
  *
  * <p>DescribeForwardTableEntriesRequest</p>
  */
 public class DescribeForwardTableEntriesRequest extends Request {
-    @Query
-    @NameInMap("ExternalIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExternalIp")
     private String externalIp;
 
-    @Query
-    @NameInMap("ForwardEntryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForwardEntryId")
     private String forwardEntryId;
 
-    @Query
-    @NameInMap("ForwardEntryName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForwardEntryName")
     private String forwardEntryName;
 
-    @Query
-    @NameInMap("InternalIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternalIp")
     private String internalIp;
 
-    @Query
-    @NameInMap("IpProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpProtocol")
     private String ipProtocol;
 
-    @Query
-    @NameInMap("NatGatewayId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NatGatewayId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String natGatewayId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
     private DescribeForwardTableEntriesRequest(Builder builder) {
@@ -153,7 +158,10 @@ public class DescribeForwardTableEntriesRequest extends Request {
         } 
 
         /**
-         * ExternalIp.
+         * <p>The EIP in the DNAT entry. The public IP address is used to access the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36.XXX.XXX.72</p>
          */
         public Builder externalIp(String externalIp) {
             this.putQueryParameter("ExternalIp", externalIp);
@@ -162,7 +170,10 @@ public class DescribeForwardTableEntriesRequest extends Request {
         }
 
         /**
-         * ForwardEntryId.
+         * <p>The ID of the DNAT entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fwd-5tfi6f0rutmd00xrhkag7****</p>
          */
         public Builder forwardEntryId(String forwardEntryId) {
             this.putQueryParameter("ForwardEntryId", forwardEntryId);
@@ -171,7 +182,10 @@ public class DescribeForwardTableEntriesRequest extends Request {
         }
 
         /**
-         * ForwardEntryName.
+         * <p>The name of the DNAT entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test0</p>
          */
         public Builder forwardEntryName(String forwardEntryName) {
             this.putQueryParameter("ForwardEntryName", forwardEntryName);
@@ -180,7 +194,10 @@ public class DescribeForwardTableEntriesRequest extends Request {
         }
 
         /**
-         * InternalIp.
+         * <p>The private IP address of the instance that uses the DNAT entry for Internet communication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.XXX.XXX.50</p>
          */
         public Builder internalIp(String internalIp) {
             this.putQueryParameter("InternalIp", internalIp);
@@ -189,7 +206,15 @@ public class DescribeForwardTableEntriesRequest extends Request {
         }
 
         /**
-         * IpProtocol.
+         * <p>The protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>TCP</strong>: forwards TCP packets.</li>
+         * <li><strong>UDP</strong>: forwards UDP packets.</li>
+         * <li><strong>Any</strong>: forwards all packets.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TCP</p>
          */
         public Builder ipProtocol(String ipProtocol) {
             this.putQueryParameter("IpProtocol", ipProtocol);
@@ -198,7 +223,11 @@ public class DescribeForwardTableEntriesRequest extends Request {
         }
 
         /**
-         * NatGatewayId.
+         * <p>The ID of the NAT gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nat-5t7nh1cfm6kxiszlttr38****</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -207,7 +236,11 @@ public class DescribeForwardTableEntriesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page <strong>1</strong>.</p>
+         * <p>Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -216,7 +249,11 @@ public class DescribeForwardTableEntriesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Maximum value: <strong>100</strong>.</p>
+         * <p>Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

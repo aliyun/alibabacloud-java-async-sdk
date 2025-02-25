@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCustomLinesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCustomLinesResponseBody</p>
  */
 public class DescribeCustomLinesResponseBody extends TeaModel {
-    @NameInMap("CustomLines")
-    private java.util.List < CustomLines> customLines;
+    @com.aliyun.core.annotation.NameInMap("CustomLines")
+    private java.util.List<CustomLines> customLines;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalItems")
+    @com.aliyun.core.annotation.NameInMap("TotalItems")
     private Integer totalItems;
 
-    @NameInMap("TotalPages")
+    @com.aliyun.core.annotation.NameInMap("TotalPages")
     private Integer totalPages;
 
     private DescribeCustomLinesResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
     /**
      * @return customLines
      */
-    public java.util.List < CustomLines> getCustomLines() {
+    public java.util.List<CustomLines> getCustomLines() {
         return this.customLines;
     }
 
@@ -90,7 +95,7 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CustomLines> customLines; 
+        private java.util.List<CustomLines> customLines; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -98,15 +103,18 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
         private Integer totalPages; 
 
         /**
-         * CustomLines.
+         * <p>The custom lines.</p>
          */
-        public Builder customLines(java.util.List < CustomLines> customLines) {
+        public Builder customLines(java.util.List<CustomLines> customLines) {
             this.customLines = customLines;
             return this;
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +122,10 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +133,10 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B57C121B-A45F-44D8-A9B2-13E5A5044195</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +144,10 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalItems.
+         * <p>The total number of custom lines.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalItems(Integer totalItems) {
             this.totalItems = totalItems;
@@ -138,7 +155,10 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPages.
+         * <p>The total number of returned pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -151,14 +171,20 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCustomLinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCustomLinesResponseBody</p>
+     */
     public static class CustomLines extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private CustomLines(Builder builder) {
@@ -202,7 +228,10 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Code.
+             * <p>The code of the custom line.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hra0yc-597</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -210,7 +239,10 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The unique ID of the custom line.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>597</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -218,7 +250,10 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the custom line.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hra0yd-597</p>
              */
             public Builder name(String name) {
                 this.name = name;

@@ -1,47 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSearchLogRequest} extends {@link RequestModel}
  *
  * <p>ListSearchLogRequest</p>
  */
 public class ListSearchLogRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("beginTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("beginTime")
     private Long beginTime;
 
-    @Query
-    @NameInMap("endTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("endTime")
     private Long endTime;
 
-    @Query
-    @NameInMap("page")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page")
     private Integer page;
 
-    @Query
-    @NameInMap("query")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("query")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String query;
 
-    @Query
-    @NameInMap("size")
-    @Validation(maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("size")
+    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
     private Integer size;
 
-    @Query
-    @NameInMap("type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private ListSearchLogRequest(Builder builder) {
@@ -142,7 +142,11 @@ public class ListSearchLogRequest extends Request {
         } 
 
         /**
-         * 1531910852074
+         * <p>1531910852074</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-n6w1o1x0w001c****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -151,7 +155,10 @@ public class ListSearchLogRequest extends Request {
         }
 
         /**
-         * 20
+         * <p>20</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1531910852074</p>
          */
         public Builder beginTime(Long beginTime) {
             this.putQueryParameter("beginTime", beginTime);
@@ -160,7 +167,10 @@ public class ListSearchLogRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1531910852074</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("endTime", endTime);
@@ -169,7 +179,10 @@ public class ListSearchLogRequest extends Request {
         }
 
         /**
-         * The header of the response.
+         * <p>The header of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -178,7 +191,11 @@ public class ListSearchLogRequest extends Request {
         }
 
         /**
-         * 1
+         * <p>1</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>host:<code>172.16.**.**</code> AND content:netty</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("query", query);
@@ -187,7 +204,10 @@ public class ListSearchLogRequest extends Request {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);
@@ -196,7 +216,11 @@ public class ListSearchLogRequest extends Request {
         }
 
         /**
-         * 1531910852074
+         * <p>1531910852074</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCELOG</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

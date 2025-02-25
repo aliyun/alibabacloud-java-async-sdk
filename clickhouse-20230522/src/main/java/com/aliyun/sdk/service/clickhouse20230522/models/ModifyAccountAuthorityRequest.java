@@ -1,31 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20230522.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAccountAuthorityRequest} extends {@link RequestModel}
  *
  * <p>ModifyAccountAuthorityRequest</p>
  */
 public class ModifyAccountAuthorityRequest extends Request {
-    @Query
-    @NameInMap("Account")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Account")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String account;
 
-    @Query
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("DmlAuthSetting")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DmlAuthSetting")
+    @com.aliyun.core.annotation.Validation(required = true)
     private DmlAuthSetting dmlAuthSetting;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private ModifyAccountAuthorityRequest(Builder builder) {
@@ -96,7 +105,11 @@ public class ModifyAccountAuthorityRequest extends Request {
         } 
 
         /**
-         * Account.
+         * <p>The name of the database account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder account(String account) {
             this.putQueryParameter("Account", account);
@@ -105,7 +118,10 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp100p4q1g9z3****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -114,7 +130,8 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
-         * DmlAuthSetting.
+         * <p>The information about permissions.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder dmlAuthSetting(DmlAuthSetting dmlAuthSetting) {
             String dmlAuthSettingShrink = shrink(dmlAuthSetting, "DmlAuthSetting", "json");
@@ -124,7 +141,11 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -139,17 +160,25 @@ public class ModifyAccountAuthorityRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyAccountAuthorityRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyAccountAuthorityRequest</p>
+     */
     public static class DmlAuthSetting extends TeaModel {
-        @NameInMap("AllowDatabases")
-        private java.util.List < String > allowDatabases;
+        @com.aliyun.core.annotation.NameInMap("AllowDatabases")
+        private java.util.List<String> allowDatabases;
 
-        @NameInMap("AllowDictionaries")
-        private java.util.List < String > allowDictionaries;
+        @com.aliyun.core.annotation.NameInMap("AllowDictionaries")
+        private java.util.List<String> allowDictionaries;
 
-        @NameInMap("DdlAuthority")
+        @com.aliyun.core.annotation.NameInMap("DdlAuthority")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Boolean ddlAuthority;
 
-        @NameInMap("DmlAuthority")
+        @com.aliyun.core.annotation.NameInMap("DmlAuthority")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer dmlAuthority;
 
         private DmlAuthSetting(Builder builder) {
@@ -170,14 +199,14 @@ public class ModifyAccountAuthorityRequest extends Request {
         /**
          * @return allowDatabases
          */
-        public java.util.List < String > getAllowDatabases() {
+        public java.util.List<String> getAllowDatabases() {
             return this.allowDatabases;
         }
 
         /**
          * @return allowDictionaries
          */
-        public java.util.List < String > getAllowDictionaries() {
+        public java.util.List<String> getAllowDictionaries() {
             return this.allowDictionaries;
         }
 
@@ -196,29 +225,37 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > allowDatabases; 
-            private java.util.List < String > allowDictionaries; 
+            private java.util.List<String> allowDatabases; 
+            private java.util.List<String> allowDictionaries; 
             private Boolean ddlAuthority; 
             private Integer dmlAuthority; 
 
             /**
-             * AllowDatabases.
+             * <p>The databases on which you want to grant permissions. Separate multiple databases with commas (,).</p>
              */
-            public Builder allowDatabases(java.util.List < String > allowDatabases) {
+            public Builder allowDatabases(java.util.List<String> allowDatabases) {
                 this.allowDatabases = allowDatabases;
                 return this;
             }
 
             /**
-             * AllowDictionaries.
+             * <p>The dictionaries on which you want to grant permissions. Separate multiple dictionaries with commas (,).</p>
              */
-            public Builder allowDictionaries(java.util.List < String > allowDictionaries) {
+            public Builder allowDictionaries(java.util.List<String> allowDictionaries) {
                 this.allowDictionaries = allowDictionaries;
                 return this;
             }
 
             /**
-             * DdlAuthority.
+             * <p>Specifies whether to grant the DDL permissions to the database account. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The account has the permissions to execute DDL statements.</li>
+             * <li><strong>false</strong>: The account does not have the permissions to execute DDL statements.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder ddlAuthority(Boolean ddlAuthority) {
                 this.ddlAuthority = ddlAuthority;
@@ -226,7 +263,16 @@ public class ModifyAccountAuthorityRequest extends Request {
             }
 
             /**
-             * DmlAuthority.
+             * <p>Specifies whether to grant the DML permissions to the database account. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The account has the permissions to read data from the database, write data to the database, and modify the settings of the database.</li>
+             * <li><strong>1</strong>: The account only has the permissions to read data from the database.</li>
+             * <li><strong>2</strong>: The account only has the permissions to read data from the database and modify the settings of the database.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dmlAuthority(Integer dmlAuthority) {
                 this.dmlAuthority = dmlAuthority;

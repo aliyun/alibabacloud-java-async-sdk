@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyplsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BindAxgResponseBody} extends {@link TeaModel}
  *
  * <p>BindAxgResponseBody</p>
  */
 public class BindAxgResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecretBindDTO")
+    @com.aliyun.core.annotation.NameInMap("SecretBindDTO")
     private SecretBindDTO secretBindDTO;
 
     private BindAxgResponseBody(Builder builder) {
@@ -74,7 +79,14 @@ public class BindAxgResponseBody extends TeaModel {
         private SecretBindDTO secretBindDTO; 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * <ul>
+         * <li>The value OK indicates that the request was successful.</li>
+         * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +94,10 @@ public class BindAxgResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +105,10 @@ public class BindAxgResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F655A8D5-B967-440B-8683-DAD6FF8DE990</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +116,7 @@ public class BindAxgResponseBody extends TeaModel {
         }
 
         /**
-         * SecretBindDTO.
+         * <p>The information returned after the phone numbers were bound.</p>
          */
         public Builder secretBindDTO(SecretBindDTO secretBindDTO) {
             this.secretBindDTO = secretBindDTO;
@@ -111,14 +129,20 @@ public class BindAxgResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BindAxgResponseBody} extends {@link TeaModel}
+     *
+     * <p>BindAxgResponseBody</p>
+     */
     public static class SecretBindDTO extends TeaModel {
-        @NameInMap("Extension")
+        @com.aliyun.core.annotation.NameInMap("Extension")
         private String extension;
 
-        @NameInMap("SecretNo")
+        @com.aliyun.core.annotation.NameInMap("SecretNo")
         private String secretNo;
 
-        @NameInMap("SubsId")
+        @com.aliyun.core.annotation.NameInMap("SubsId")
         private String subsId;
 
         private SecretBindDTO(Builder builder) {
@@ -162,7 +186,13 @@ public class BindAxgResponseBody extends TeaModel {
             private String subsId; 
 
             /**
-             * Extension.
+             * <p>The extension of the phone number.</p>
+             * <blockquote>
+             * <p> The BindAxg operation does not involve an extension. Ignore this parameter.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>139****0000</p>
              */
             public Builder extension(String extension) {
                 this.extension = extension;
@@ -170,7 +200,10 @@ public class BindAxgResponseBody extends TeaModel {
             }
 
             /**
-             * SecretNo.
+             * <p>The private number, that is, phone number X.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>139****0000</p>
              */
             public Builder secretNo(String secretNo) {
                 this.secretNo = secretNo;
@@ -178,7 +211,10 @@ public class BindAxgResponseBody extends TeaModel {
             }
 
             /**
-             * SubsId.
+             * <p>The binding ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1************3</p>
              */
             public Builder subsId(String subsId) {
                 this.subsId = subsId;

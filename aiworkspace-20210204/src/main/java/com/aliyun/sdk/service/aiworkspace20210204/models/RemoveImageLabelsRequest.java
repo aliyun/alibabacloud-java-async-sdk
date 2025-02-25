@@ -1,31 +1,31 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveImageLabelsRequest} extends {@link RequestModel}
  *
  * <p>RemoveImageLabelsRequest</p>
  */
 public class RemoveImageLabelsRequest extends Request {
-    @Path
-    @NameInMap("ImageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ImageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String imageId;
 
-    @Path
-    @NameInMap("LabelKeys")
-    @Validation(required = true)
-    private String labelKeys;
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("LabelKey")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String labelKey;
 
     private RemoveImageLabelsRequest(Builder builder) {
         super(builder);
         this.imageId = builder.imageId;
-        this.labelKeys = builder.labelKeys;
+        this.labelKey = builder.labelKey;
     }
 
     public static Builder builder() {
@@ -49,15 +49,15 @@ public class RemoveImageLabelsRequest extends Request {
     }
 
     /**
-     * @return labelKeys
+     * @return labelKey
      */
-    public String getLabelKeys() {
-        return this.labelKeys;
+    public String getLabelKey() {
+        return this.labelKey;
     }
 
     public static final class Builder extends Request.Builder<RemoveImageLabelsRequest, Builder> {
         private String imageId; 
-        private String labelKeys; 
+        private String labelKey; 
 
         private Builder() {
             super();
@@ -66,11 +66,14 @@ public class RemoveImageLabelsRequest extends Request {
         private Builder(RemoveImageLabelsRequest request) {
             super(request);
             this.imageId = request.imageId;
-            this.labelKeys = request.labelKeys;
+            this.labelKey = request.labelKey;
         } 
 
         /**
-         * ImageId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image-d8df******dsjfd</p>
          */
         public Builder imageId(String imageId) {
             this.putPathParameter("ImageId", imageId);
@@ -79,11 +82,14 @@ public class RemoveImageLabelsRequest extends Request {
         }
 
         /**
-         * LabelKeys.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key1</p>
          */
-        public Builder labelKeys(String labelKeys) {
-            this.putPathParameter("LabelKeys", labelKeys);
-            this.labelKeys = labelKeys;
+        public Builder labelKey(String labelKey) {
+            this.putPathParameter("LabelKey", labelKey);
+            this.labelKey = labelKey;
             return this;
         }
 

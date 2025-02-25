@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFlowTagGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListFlowTagGroupsResponseBody</p>
  */
 public class ListFlowTagGroupsResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("flowTagGroups")
-    private java.util.List < FlowTagGroups> flowTagGroups;
+    @com.aliyun.core.annotation.NameInMap("flowTagGroups")
+    private java.util.List<FlowTagGroups> flowTagGroups;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private ListFlowTagGroupsResponseBody(Builder builder) {
@@ -60,7 +65,7 @@ public class ListFlowTagGroupsResponseBody extends TeaModel {
     /**
      * @return flowTagGroups
      */
-    public java.util.List < FlowTagGroups> getFlowTagGroups() {
+    public java.util.List<FlowTagGroups> getFlowTagGroups() {
         return this.flowTagGroups;
     }
 
@@ -81,7 +86,7 @@ public class ListFlowTagGroupsResponseBody extends TeaModel {
     public static final class Builder {
         private String errorCode; 
         private String errorMessage; 
-        private java.util.List < FlowTagGroups> flowTagGroups; 
+        private java.util.List<FlowTagGroups> flowTagGroups; 
         private String requestId; 
         private Boolean success; 
 
@@ -104,7 +109,7 @@ public class ListFlowTagGroupsResponseBody extends TeaModel {
         /**
          * flowTagGroups.
          */
-        public Builder flowTagGroups(java.util.List < FlowTagGroups> flowTagGroups) {
+        public Builder flowTagGroups(java.util.List<FlowTagGroups> flowTagGroups) {
             this.flowTagGroups = flowTagGroups;
             return this;
         }
@@ -131,17 +136,23 @@ public class ListFlowTagGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListFlowTagGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFlowTagGroupsResponseBody</p>
+     */
     public static class FlowTagGroups extends TeaModel {
-        @NameInMap("creatorAccountId")
+        @com.aliyun.core.annotation.NameInMap("creatorAccountId")
         private String creatorAccountId;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("modiferAccountId")
+        @com.aliyun.core.annotation.NameInMap("modiferAccountId")
         private String modiferAccountId;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private FlowTagGroups(Builder builder) {

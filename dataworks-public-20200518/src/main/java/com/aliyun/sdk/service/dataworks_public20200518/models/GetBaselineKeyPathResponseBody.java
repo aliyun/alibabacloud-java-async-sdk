@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetBaselineKeyPathResponseBody} extends {@link TeaModel}
  *
  * <p>GetBaselineKeyPathResponseBody</p>
  */
 public class GetBaselineKeyPathResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetBaselineKeyPathResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -90,7 +95,7 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String errorCode; 
         private String errorMessage; 
         private Integer httpStatusCode; 
@@ -98,15 +103,18 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * <p>The information about the key path.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * ErrorCode.
+         * <p>Error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1031203110005</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +122,10 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameters are invalid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +133,10 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp when the event was found.
+         * <p>The timestamp when the event was found.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +144,10 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID of the call. After an error occurs, you can troubleshoot the problem based on the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,29 +171,35 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetBaselineKeyPathResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetBaselineKeyPathResponseBody</p>
+     */
     public static class Runs extends TeaModel {
-        @NameInMap("AbsTime")
+        @com.aliyun.core.annotation.NameInMap("AbsTime")
         private Long absTime;
 
-        @NameInMap("BeginCast")
+        @com.aliyun.core.annotation.NameInMap("BeginCast")
         private Long beginCast;
 
-        @NameInMap("BeginRunningTime")
+        @com.aliyun.core.annotation.NameInMap("BeginRunningTime")
         private Long beginRunningTime;
 
-        @NameInMap("BeginWaitResTime")
+        @com.aliyun.core.annotation.NameInMap("BeginWaitResTime")
         private Long beginWaitResTime;
 
-        @NameInMap("BeginWaitTimeTime")
+        @com.aliyun.core.annotation.NameInMap("BeginWaitTimeTime")
         private Long beginWaitTimeTime;
 
-        @NameInMap("EndCast")
+        @com.aliyun.core.annotation.NameInMap("EndCast")
         private Long endCast;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private Long finishTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Runs(Builder builder) {
@@ -262,7 +288,10 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * AbsTime.
+             * <p>The timestamp obtained by adding the predicted time when the instance started to run to the historical average running duration of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1553531402000</p>
              */
             public Builder absTime(Long absTime) {
                 this.absTime = absTime;
@@ -270,7 +299,10 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             }
 
             /**
-             * BeginCast.
+             * <p>The timestamp of the predicted time when the instance started to run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1553531686000</p>
              */
             public Builder beginCast(Long beginCast) {
                 this.beginCast = beginCast;
@@ -278,7 +310,10 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             }
 
             /**
-             * BeginRunningTime.
+             * <p>The timestamp of the actual time when the instance started to run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1553531401000</p>
              */
             public Builder beginRunningTime(Long beginRunningTime) {
                 this.beginRunningTime = beginRunningTime;
@@ -286,7 +321,10 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             }
 
             /**
-             * BeginWaitResTime.
+             * <p>The timestamp when the instance started to wait for resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1553531401000</p>
              */
             public Builder beginWaitResTime(Long beginWaitResTime) {
                 this.beginWaitResTime = beginWaitResTime;
@@ -294,7 +332,10 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             }
 
             /**
-             * BeginWaitTimeTime.
+             * <p>The timestamp when the instance started to wait for the scheduling time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1553531400000</p>
              */
             public Builder beginWaitTimeTime(Long beginWaitTimeTime) {
                 this.beginWaitTimeTime = beginWaitTimeTime;
@@ -302,7 +343,10 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             }
 
             /**
-             * EndCast.
+             * <p>The timestamp of the predicted time when the instance finished running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1553531687000</p>
              */
             public Builder endCast(Long endCast) {
                 this.endCast = endCast;
@@ -310,7 +354,10 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * <p>The timestamp of the actual time when the instance finished running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1553531401000</p>
              */
             public Builder finishTime(Long finishTime) {
                 this.finishTime = finishTime;
@@ -318,7 +365,10 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the instance. Valid values: NOT_RUN, WAIT_TIME, WAIT_RESOURCE, RUNNING, CHECKING, CHECKING_CONDITION, FAILURE, and SUCCESS. The value NOT_RUN indicates that the instance is not run. The value WAIT_TIME indicates that the instance is waiting to be run. The value WAIT_RESOURCE indicates that the instance is waiting for resources. The value RUNNING indicates that the instance is running. The value CHECKING indicates that data quality is being checked for the instance. The value CHECKING_CONDITION indicates that branch conditions are being checked for the instance. The value FAILURE indicates that the instance fails to run. The value SUCCESS indicates that the instance is run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -332,17 +382,23 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetBaselineKeyPathResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetBaselineKeyPathResponseBody</p>
+     */
     public static class Topics extends TeaModel {
-        @NameInMap("AddTime")
+        @com.aliyun.core.annotation.NameInMap("AddTime")
         private Long addTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
 
-        @NameInMap("TopicId")
+        @com.aliyun.core.annotation.NameInMap("TopicId")
         private Long topicId;
 
-        @NameInMap("TopicName")
+        @com.aliyun.core.annotation.NameInMap("TopicName")
         private String topicName;
 
         private Topics(Builder builder) {
@@ -395,7 +451,10 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             private String topicName; 
 
             /**
-             * AddTime.
+             * <p>The timestamp when the event was found.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1553531401000</p>
              */
             public Builder addTime(Long addTime) {
                 this.addTime = addTime;
@@ -403,7 +462,10 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -411,7 +473,10 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             }
 
             /**
-             * TopicId.
+             * <p>The event ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder topicId(Long topicId) {
                 this.topicId = topicId;
@@ -419,7 +484,10 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             }
 
             /**
-             * TopicName.
+             * <p>The name of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;
@@ -433,36 +501,42 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetBaselineKeyPathResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetBaselineKeyPathResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Bizdate")
+        @com.aliyun.core.annotation.NameInMap("Bizdate")
         private Long bizdate;
 
-        @NameInMap("InGroupId")
+        @com.aliyun.core.annotation.NameInMap("InGroupId")
         private Integer inGroupId;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("PrgType")
+        @com.aliyun.core.annotation.NameInMap("PrgType")
         private Integer prgType;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
-        @NameInMap("Runs")
-        private java.util.List < Runs> runs;
+        @com.aliyun.core.annotation.NameInMap("Runs")
+        private java.util.List<Runs> runs;
 
-        @NameInMap("Topics")
-        private java.util.List < Topics> topics;
+        @com.aliyun.core.annotation.NameInMap("Topics")
+        private java.util.List<Topics> topics;
 
         private Data(Builder builder) {
             this.bizdate = builder.bizdate;
@@ -544,14 +618,14 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
         /**
          * @return runs
          */
-        public java.util.List < Runs> getRuns() {
+        public java.util.List<Runs> getRuns() {
             return this.runs;
         }
 
         /**
          * @return topics
          */
-        public java.util.List < Topics> getTopics() {
+        public java.util.List<Topics> getTopics() {
             return this.topics;
         }
 
@@ -564,11 +638,14 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             private String owner; 
             private Integer prgType; 
             private Long projectId; 
-            private java.util.List < Runs> runs; 
-            private java.util.List < Topics> topics; 
+            private java.util.List<Runs> runs; 
+            private java.util.List<Topics> topics; 
 
             /**
-             * Bizdate.
+             * <p>The data timestamp of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1553443200000</p>
              */
             public Builder bizdate(Long bizdate) {
                 this.bizdate = bizdate;
@@ -576,7 +653,10 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             }
 
             /**
-             * InGroupId.
+             * <p>The ID of the scheduling cycle of the instance. Valid values: 1 to 288.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder inGroupId(Integer inGroupId) {
                 this.inGroupId = inGroupId;
@@ -584,7 +664,10 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -592,7 +675,10 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -600,7 +686,10 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Node name</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -608,7 +697,10 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The ID of the Alibaba Cloud account used by the node owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9527952****</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -616,7 +708,10 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             }
 
             /**
-             * PrgType.
+             * <p>The type of the node. Valid values: 23, 10, 6, and 99. The value 23 indicates that the node is a Data Integration node. The value 10 indicates that the node is a MaxCompute SQL node. The value 6 indicates that the node is a Shell node. The value 99 indicates that the node is a zero load node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder prgType(Integer prgType) {
                 this.prgType = prgType;
@@ -624,7 +719,10 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The ID of the workspace to which the node belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -632,17 +730,17 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             }
 
             /**
-             * Runs.
+             * <p>The running records of the instance.</p>
              */
-            public Builder runs(java.util.List < Runs> runs) {
+            public Builder runs(java.util.List<Runs> runs) {
                 this.runs = runs;
                 return this;
             }
 
             /**
-             * Topics.
+             * <p>The information about the events that are associated with the instance.</p>
              */
-            public Builder topics(java.util.List < Topics> topics) {
+            public Builder topics(java.util.List<Topics> topics) {
                 this.topics = topics;
                 return this;
             }

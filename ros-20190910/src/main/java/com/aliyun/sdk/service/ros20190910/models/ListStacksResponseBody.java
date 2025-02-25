@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListStacksResponseBody} extends {@link TeaModel}
  *
  * <p>ListStacksResponseBody</p>
  */
 public class ListStacksResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Stacks")
+    @com.aliyun.core.annotation.NameInMap("Stacks")
     private java.util.List < Stacks> stacks;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListStacksResponseBody(Builder builder) {
@@ -86,7 +86,10 @@ public class ListStacksResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,12 +97,12 @@ public class ListStacksResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Maximum value: 50.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Maximum value: 50.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -107,7 +110,10 @@ public class ListStacksResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FBAC80B4-9C27-529D-BC9C-4155FA5CD7A7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -115,7 +121,7 @@ public class ListStacksResponseBody extends TeaModel {
         }
 
         /**
-         * The stacks.
+         * <p>Details of the stacks.</p>
          */
         public Builder stacks(java.util.List < Stacks> stacks) {
             this.stacks = stacks;
@@ -123,7 +129,10 @@ public class ListStacksResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of stacks.
+         * <p>The total number of stacks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -136,23 +145,29 @@ public class ListStacksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListStacksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListStacksResponseBody</p>
+     */
     public static class OperationInfo extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("LogicalResourceId")
+        @com.aliyun.core.annotation.NameInMap("LogicalResourceId")
         private String logicalResourceId;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("RequestId")
+        @com.aliyun.core.annotation.NameInMap("RequestId")
         private String requestId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
         private OperationInfo(Builder builder) {
@@ -223,7 +238,10 @@ public class ListStacksResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * The name of the API operation that belongs to another Alibaba Cloud service.
+             * <p>The name of the API operation that belongs to another Alibaba Cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DeleteSecurityGroup</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -231,7 +249,10 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * The error code.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DependencyViolation</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -239,7 +260,10 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * The logical ID of the resource on which the operation error occurred.
+             * <p>The logical ID of the resource on which the operation error occurred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EcsSecurityGroup</p>
              */
             public Builder logicalResourceId(String logicalResourceId) {
                 this.logicalResourceId = logicalResourceId;
@@ -247,7 +271,10 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * The error message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>There is still instance(s) in the specified security group.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -255,7 +282,10 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request that is initiated to call the API operation of another Alibaba Cloud service.
+             * <p>The ID of the request that is initiated to call the API operation of another Alibaba Cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>071D6166-3F6B-5C7B-A1F0-0113FBB643A8</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -263,7 +293,10 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource on which the operation error occurred.
+             * <p>The type of the resource on which the operation error occurred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN::ECS::SecurityGroup</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -277,11 +310,17 @@ public class ListStacksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListStacksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListStacksResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -316,7 +355,10 @@ public class ListStacksResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The tag key of the stack.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:rm:rgId</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -324,7 +366,10 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * <p>The tag value of the stack.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aek2frunvw7****</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -338,62 +383,68 @@ public class ListStacksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListStacksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListStacksResponseBody</p>
+     */
     public static class Stacks extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DeletionProtection")
+        @com.aliyun.core.annotation.NameInMap("DeletionProtection")
         private String deletionProtection;
 
-        @NameInMap("DisableRollback")
+        @com.aliyun.core.annotation.NameInMap("DisableRollback")
         private Boolean disableRollback;
 
-        @NameInMap("DriftDetectionTime")
+        @com.aliyun.core.annotation.NameInMap("DriftDetectionTime")
         private String driftDetectionTime;
 
-        @NameInMap("OperationInfo")
+        @com.aliyun.core.annotation.NameInMap("OperationInfo")
         private OperationInfo operationInfo;
 
-        @NameInMap("ParentStackId")
+        @com.aliyun.core.annotation.NameInMap("ParentStackId")
         private String parentStackId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ServiceManaged")
+        @com.aliyun.core.annotation.NameInMap("ServiceManaged")
         private Boolean serviceManaged;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
-        @NameInMap("StackDriftStatus")
+        @com.aliyun.core.annotation.NameInMap("StackDriftStatus")
         private String stackDriftStatus;
 
-        @NameInMap("StackId")
+        @com.aliyun.core.annotation.NameInMap("StackId")
         private String stackId;
 
-        @NameInMap("StackName")
+        @com.aliyun.core.annotation.NameInMap("StackName")
         private String stackName;
 
-        @NameInMap("StackType")
+        @com.aliyun.core.annotation.NameInMap("StackType")
         private String stackType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusReason")
+        @com.aliyun.core.annotation.NameInMap("StatusReason")
         private String statusReason;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("TimeoutInMinutes")
+        @com.aliyun.core.annotation.NameInMap("TimeoutInMinutes")
         private Integer timeoutInMinutes;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private Stacks(Builder builder) {
@@ -581,7 +632,10 @@ public class ListStacksResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The time when the stack was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
+             * <p>The time when the stack was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-03-10T06:44:36</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -589,7 +643,17 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * DeletionProtection.
+             * <p>Indicates whether deletion protection is enabled for the stack. Valid values:</p>
+             * <ul>
+             * <li>Enabled: Deletion protection is enabled for the stack.</li>
+             * <li>Disabled: Deletion protection is disabled for the stack. In this case, you can delete the stack by using the console or calling the <a href="https://help.aliyun.com/document_detail/610812.html">DeleteStack</a> operation.</li>
+             * </ul>
+             * <blockquote>
+             * <p> Deletion protection of a nested stack is the same as that of its root stack.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Disabled</p>
              */
             public Builder deletionProtection(String deletionProtection) {
                 this.deletionProtection = deletionProtection;
@@ -597,11 +661,14 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether rollback is disabled when the stack fails to be created. Valid values:
-             * <p>
+             * <p>Indicates whether rollback is disabled when the stack fails to be created. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false (default)</li>
+             * </ul>
              * 
-             * *   true
-             * *   false (default)
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder disableRollback(Boolean disableRollback) {
                 this.disableRollback = disableRollback;
@@ -609,7 +676,10 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the most recent successful drift detection was performed on the stack.
+             * <p>The time when the most recent successful drift detection was performed on the stack.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-03-10T06:46:36</p>
              */
             public Builder driftDetectionTime(String driftDetectionTime) {
                 this.driftDetectionTime = driftDetectionTime;
@@ -617,10 +687,10 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * The supplementary information that is returned when an error occurs on a stack operation.
-             * <p>
-             * 
-             * > This parameter is returned only if an error occurs on a stack operation. The system returns at least one sub-property. For example, an error occurred when an API operation of another Alibaba Cloud service was called.
+             * <p>The supplementary information that is returned if an error occurs on a stack operation.</p>
+             * <blockquote>
+             * <p> This parameter is returned only under specific conditions, and is returned together with at least one sub-parameter. For example, an error occurred when an API operation of another Alibaba Cloud service was called.</p>
+             * </blockquote>
              */
             public Builder operationInfo(OperationInfo operationInfo) {
                 this.operationInfo = operationInfo;
@@ -628,7 +698,10 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the parent stack.
+             * <p>The ID of the parent stack.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf692****</p>
              */
             public Builder parentStackId(String parentStackId) {
                 this.parentStackId = parentStackId;
@@ -636,7 +709,10 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+             * <p>The region ID of the stack. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -644,7 +720,10 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aek2frunvw7****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -652,11 +731,14 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the stack is a managed stack. Valid values:
-             * <p>
+             * <p>Indicates whether the stack is a managed stack. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder serviceManaged(Boolean serviceManaged) {
                 this.serviceManaged = serviceManaged;
@@ -664,7 +746,10 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service to which the managed stack belongs.
+             * <p>The name of the service to which the managed stack belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACVS</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -672,12 +757,15 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the stack on which the most recent successful drift detection was performed. Valid values:
-             * <p>
+             * <p>The state of the stack on which the most recent successful drift detection was performed. Valid values:</p>
+             * <ul>
+             * <li>DRIFTED: The stack has drifted.</li>
+             * <li>NOT_CHECKED: No successful drift detection is performed on the stack.</li>
+             * <li>IN_SYNC: The stack is being synchronized.</li>
+             * </ul>
              * 
-             * *   DRIFTED: The stack has drifted.
-             * *   NOT_CHECKED: No successful drift detection is performed on the stack.
-             * *   IN_SYNC: The stack is being synchronized.
+             * <strong>example:</strong>
+             * <p>IN_SYNC</p>
              */
             public Builder stackDriftStatus(String stackDriftStatus) {
                 this.stackDriftStatus = stackDriftStatus;
@@ -685,7 +773,10 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * The stack ID.
+             * <p>The stack ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>67805444-a605-45ee-a57f-83908ff6****</p>
              */
             public Builder stackId(String stackId) {
                 this.stackId = stackId;
@@ -693,7 +784,10 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * The stack name.
+             * <p>The stack name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyStack</p>
              */
             public Builder stackName(String stackName) {
                 this.stackName = stackName;
@@ -701,11 +795,14 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * The stack type. Valid values:
-             * <p>
+             * <p>The stack type. Valid values:</p>
+             * <ul>
+             * <li>ROS: ROS stack. The stack is created by using a ROS template.</li>
+             * <li>Terraform: Terraform stack. The stack is created by using a Terraform template.</li>
+             * </ul>
              * 
-             * *   ROS: Resource Orchestration Service (ROS) stack. The stack is created by using a ROS template.
-             * *   Terraform: Terraform stack. The stack is created by using a Terraform template.
+             * <strong>example:</strong>
+             * <p>ROS</p>
              */
             public Builder stackType(String stackType) {
                 this.stackType = stackType;
@@ -713,7 +810,10 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the stack.
+             * <p>The state of the stack.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CREATE_COMPLETE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -721,7 +821,10 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the stack is in its current state.
+             * <p>The reason why the stack is in its current state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Stack CREATE completed successfully</p>
              */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;
@@ -729,7 +832,7 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the stack.
+             * <p>The tags of the stack.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -737,7 +840,10 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period that is allowed to create the stack. Unit: minutes.
+             * <p>The timeout period for creating the stack. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder timeoutInMinutes(Integer timeoutInMinutes) {
                 this.timeoutInMinutes = timeoutInMinutes;
@@ -745,7 +851,10 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the stack was updated. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
+             * <p>The time when the stack was updated. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-03-10T07:44:36</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

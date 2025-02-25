@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSlowLogRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSlowLogRecordsResponseBody</p>
  */
 public class DescribeSlowLogRecordsResponseBody extends TeaModel {
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeSlowLogRecordsResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The database engine.
+         * <p>The database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MongoDB</p>
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -106,7 +114,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the slow query logs.
+         * <p>An array that consists of the information about each slow query.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -114,7 +122,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page. The value must be an integer that is greater than 0. Default value: **1**.
+         * <p>The page number of the returned page. The value is a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +133,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of slow query log entries returned on the page.
+         * <p>The number of slow query log entries returned on the page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -130,7 +144,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8076C4BA-DDBD-529C-BFF4-D8620C3F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -151,35 +171,41 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSlowLogRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSlowLogRecordsResponseBody</p>
+     */
     public static class LogRecords extends TeaModel {
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("DBName")
+        @com.aliyun.core.annotation.NameInMap("DBName")
         private String DBName;
 
-        @NameInMap("DocsExamined")
+        @com.aliyun.core.annotation.NameInMap("DocsExamined")
         private Long docsExamined;
 
-        @NameInMap("ExecutionStartTime")
+        @com.aliyun.core.annotation.NameInMap("ExecutionStartTime")
         private String executionStartTime;
 
-        @NameInMap("HostAddress")
+        @com.aliyun.core.annotation.NameInMap("HostAddress")
         private String hostAddress;
 
-        @NameInMap("KeysExamined")
+        @com.aliyun.core.annotation.NameInMap("KeysExamined")
         private Long keysExamined;
 
-        @NameInMap("QueryTimes")
+        @com.aliyun.core.annotation.NameInMap("QueryTimes")
         private String queryTimes;
 
-        @NameInMap("ReturnRowCounts")
+        @com.aliyun.core.annotation.NameInMap("ReturnRowCounts")
         private Long returnRowCounts;
 
-        @NameInMap("SQLText")
+        @com.aliyun.core.annotation.NameInMap("SQLText")
         private String SQLText;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private LogRecords(Builder builder) {
@@ -286,7 +312,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The username of the database account that performs the operation.
+             * <p>The username of the database account that performs the operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -294,7 +323,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mongodbtest</p>
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -302,7 +334,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of documents that are scanned during the operation.
+             * <p>The number of documents that are scanned during the operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000000</p>
              */
             public Builder docsExamined(Long docsExamined) {
                 this.docsExamined = docsExamined;
@@ -310,7 +345,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the operation. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The start time of the operation. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-02-25T 01:41:28Z</p>
              */
             public Builder executionStartTime(String executionStartTime) {
                 this.executionStartTime = executionStartTime;
@@ -318,7 +356,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The host IP address that is used to connect to the database.
+             * <p>The host IP address that is used to connect to the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder hostAddress(String hostAddress) {
                 this.hostAddress = hostAddress;
@@ -326,7 +367,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows involved in index scans.
+             * <p>The number of rows involved in index scans.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder keysExamined(Long keysExamined) {
                 this.keysExamined = keysExamined;
@@ -334,7 +378,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The execution time of the statement. Unit: milliseconds.
+             * <p>The execution time of the statement. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder queryTimes(String queryTimes) {
                 this.queryTimes = queryTimes;
@@ -342,7 +389,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows returned by the SQL statement.
+             * <p>The number of rows returned by the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder returnRowCounts(Long returnRowCounts) {
                 this.returnRowCounts = returnRowCounts;
@@ -350,7 +400,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement that is executed during the slow operation.
+             * <p>The SQL statement that is executed during the slow operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;op&quot;:&quot;query&quot;,&quot;ns&quot;:&quot;mongodbtest.customer&quot;,&quot;query&quot;:{&quot;find&quot;:&quot;customer&quot;,&quot;filter&quot;:{&quot;name&quot;:&quot;jack&quot;}}}</p>
              */
             public Builder SQLText(String SQLText) {
                 this.SQLText = SQLText;
@@ -358,7 +411,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the collection.
+             * <p>The name of the collection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>C1</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -372,9 +428,15 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSlowLogRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSlowLogRecordsResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("LogRecords")
-        private java.util.List < LogRecords> logRecords;
+        @com.aliyun.core.annotation.NameInMap("LogRecords")
+        private java.util.List<LogRecords> logRecords;
 
         private Items(Builder builder) {
             this.logRecords = builder.logRecords;
@@ -391,17 +453,17 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         /**
          * @return logRecords
          */
-        public java.util.List < LogRecords> getLogRecords() {
+        public java.util.List<LogRecords> getLogRecords() {
             return this.logRecords;
         }
 
         public static final class Builder {
-            private java.util.List < LogRecords> logRecords; 
+            private java.util.List<LogRecords> logRecords; 
 
             /**
              * LogRecords.
              */
-            public Builder logRecords(java.util.List < LogRecords> logRecords) {
+            public Builder logRecords(java.util.List<LogRecords> logRecords) {
                 this.logRecords = logRecords;
                 return this;
             }

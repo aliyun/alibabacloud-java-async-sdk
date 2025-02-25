@@ -113,7 +113,7 @@ public class ListNodesByQueueRequest extends Request {
         } 
 
         /**
-         * Async.
+         * Specifies whether to enable asynchronous query.
          */
         public Builder async(Boolean async) {
             this.putQueryParameter("Async", async);
@@ -122,7 +122,7 @@ public class ListNodesByQueueRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * The ID of the E-HPC cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -143,7 +143,7 @@ public class ListNodesByQueueRequest extends Request {
          * The number of entries to return on each page. Valid values: 1 to 50.
          * <p>
          * 
-         * Default value: 10
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

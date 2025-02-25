@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMasterSlaveServerGroupAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMasterSlaveServerGroupAttributeResponseBody</p>
  */
 public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaModel {
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("LoadBalancerId")
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
     private String loadBalancerId;
 
-    @NameInMap("MasterSlaveBackendServers")
+    @com.aliyun.core.annotation.NameInMap("MasterSlaveBackendServers")
     private MasterSlaveBackendServers masterSlaveBackendServers;
 
-    @NameInMap("MasterSlaveServerGroupId")
+    @com.aliyun.core.annotation.NameInMap("MasterSlaveServerGroupId")
     private String masterSlaveServerGroupId;
 
-    @NameInMap("MasterSlaveServerGroupName")
+    @com.aliyun.core.annotation.NameInMap("MasterSlaveServerGroupName")
     private String masterSlaveServerGroupName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private Tags tags;
 
     private DescribeMasterSlaveServerGroupAttributeResponseBody(Builder builder) {
@@ -110,7 +115,10 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
         private Tags tags; 
 
         /**
-         * The time when the CLB instance was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.
+         * <p>The time when the CLB instance was created. The time follows the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-02T02:49:05Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -118,7 +126,10 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
         }
 
         /**
-         * The ID of the associated CLB instance.
+         * <p>The ID of the associated CLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-14fadafw4343a******</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.loadBalancerId = loadBalancerId;
@@ -126,7 +137,7 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
         }
 
         /**
-         * The list of backend servers in the primary/secondary server group.
+         * <p>A list of backend servers in the primary/secondary server group.</p>
          */
         public Builder masterSlaveBackendServers(MasterSlaveBackendServers masterSlaveBackendServers) {
             this.masterSlaveBackendServers = masterSlaveBackendServers;
@@ -134,7 +145,10 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
         }
 
         /**
-         * The ID of the primary/secondary server group.
+         * <p>The ID of the primary/secondary server group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rsp-cige6******</p>
          */
         public Builder masterSlaveServerGroupId(String masterSlaveServerGroupId) {
             this.masterSlaveServerGroupId = masterSlaveServerGroupId;
@@ -142,7 +156,10 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
         }
 
         /**
-         * The name of the primary/secondary server group.
+         * <p>The name of the primary/secondary server group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Group1</p>
          */
         public Builder masterSlaveServerGroupName(String masterSlaveServerGroupName) {
             this.masterSlaveServerGroupName = masterSlaveServerGroupName;
@@ -150,7 +167,10 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9DEC9C28-AB05-4DDF-9A78-6B08EC9CE18C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +178,7 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
         }
 
         /**
-         * The tag list.
+         * <p>The tag list.</p>
          */
         public Builder tags(Tags tags) {
             this.tags = tags;
@@ -171,23 +191,29 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMasterSlaveServerGroupAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMasterSlaveServerGroupAttributeResponseBody</p>
+     */
     public static class MasterSlaveBackendServer extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("ServerId")
+        @com.aliyun.core.annotation.NameInMap("ServerId")
         private String serverId;
 
-        @NameInMap("ServerType")
+        @com.aliyun.core.annotation.NameInMap("ServerType")
         private String serverType;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private MasterSlaveBackendServer(Builder builder) {
@@ -258,7 +284,10 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
             private Integer weight; 
 
             /**
-             * The description of the primary/secondary server group.
+             * <p>The description of the primary/secondary server group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Primary and secondary server group description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -266,7 +295,10 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
             }
 
             /**
-             * The port used by the backend server.
+             * <p>The port that is used by the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -274,7 +306,10 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
             }
 
             /**
-             * The ID of the ECS instance or ENI.
+             * <p>The ID of the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vm-hrf******</p>
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -282,7 +317,10 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
             }
 
             /**
-             * The type of backend server. Valid values: **Master and Slave. Default value: Master.
+             * <p>The type of backend server. Valid values: <strong>Master</strong> and <strong>Slave</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Slave</p>
              */
             public Builder serverType(String serverType) {
                 this.serverType = serverType;
@@ -290,11 +328,15 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
             }
 
             /**
-             * The type of the backend server. Valid values:
-             * <p>
+             * <p>The type of the backend server. Valid values:</p>
+             * <ul>
+             * <li><strong>ecs</strong> (default): Elastic Compute Service (ECS) instance</li>
+             * <li><strong>eni</strong>: elastic network interface (ENI)</li>
+             * <li><strong>eci</strong>: elastic container instance</li>
+             * </ul>
              * 
-             * *   **ecs** (default): an Elastic Compute Service (ECS) instance
-             * *   **eni**: an elastic network interface (ENI)
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -302,7 +344,10 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
             }
 
             /**
-             * The weight of the backend server.
+             * <p>The weight of the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -316,9 +361,15 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMasterSlaveServerGroupAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMasterSlaveServerGroupAttributeResponseBody</p>
+     */
     public static class MasterSlaveBackendServers extends TeaModel {
-        @NameInMap("MasterSlaveBackendServer")
-        private java.util.List < MasterSlaveBackendServer> masterSlaveBackendServer;
+        @com.aliyun.core.annotation.NameInMap("MasterSlaveBackendServer")
+        private java.util.List<MasterSlaveBackendServer> masterSlaveBackendServer;
 
         private MasterSlaveBackendServers(Builder builder) {
             this.masterSlaveBackendServer = builder.masterSlaveBackendServer;
@@ -335,17 +386,17 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
         /**
          * @return masterSlaveBackendServer
          */
-        public java.util.List < MasterSlaveBackendServer> getMasterSlaveBackendServer() {
+        public java.util.List<MasterSlaveBackendServer> getMasterSlaveBackendServer() {
             return this.masterSlaveBackendServer;
         }
 
         public static final class Builder {
-            private java.util.List < MasterSlaveBackendServer> masterSlaveBackendServer; 
+            private java.util.List<MasterSlaveBackendServer> masterSlaveBackendServer; 
 
             /**
              * MasterSlaveBackendServer.
              */
-            public Builder masterSlaveBackendServer(java.util.List < MasterSlaveBackendServer> masterSlaveBackendServer) {
+            public Builder masterSlaveBackendServer(java.util.List<MasterSlaveBackendServer> masterSlaveBackendServer) {
                 this.masterSlaveBackendServer = masterSlaveBackendServer;
                 return this;
             }
@@ -357,11 +408,17 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMasterSlaveServerGroupAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMasterSlaveServerGroupAttributeResponseBody</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -396,7 +453,11 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
             private String tagValue; 
 
             /**
-             * The tag key.
+             * <p>The tag key. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 64 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -404,7 +465,11 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
             }
 
             /**
-             * The tag value.
+             * <p>The tag value. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -418,9 +483,15 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMasterSlaveServerGroupAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMasterSlaveServerGroupAttributeResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -437,17 +508,17 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }

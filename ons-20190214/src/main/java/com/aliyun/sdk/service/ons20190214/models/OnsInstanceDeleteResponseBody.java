@@ -1,18 +1,18 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OnsInstanceDeleteResponseBody} extends {@link TeaModel}
  *
  * <p>OnsInstanceDeleteResponseBody</p>
  */
 public class OnsInstanceDeleteResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private OnsInstanceDeleteResponseBody(Builder builder) {
@@ -38,7 +38,10 @@ public class OnsInstanceDeleteResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.
+         * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A07E3902-B92E-44A6-B6C5-6AA111111****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOrdersResponseBody} extends {@link TeaModel}
  *
  * <p>ListOrdersResponseBody</p>
  */
 public class ListOrdersResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("Orders")
+    @com.aliyun.core.annotation.NameInMap("Orders")
     private Orders orders;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListOrdersResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class ListOrdersResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +114,10 @@ public class ListOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,7 +125,7 @@ public class ListOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * The details about the tickets.
+         * <p>The details about the tickets.</p>
          */
         public Builder orders(Orders orders) {
             this.orders = orders;
@@ -122,7 +133,10 @@ public class ListOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>427688B8-ADFB-4C4E-9D45-EF5C1FD6E23D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,11 +144,14 @@ public class ListOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * - **true**: The request was successful.
-         * - **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -142,7 +159,10 @@ public class ListOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries that are returned.
+         * <p>The total number of entries that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -155,32 +175,38 @@ public class ListOrdersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListOrdersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOrdersResponseBody</p>
+     */
     public static class Order extends TeaModel {
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("Committer")
+        @com.aliyun.core.annotation.NameInMap("Committer")
         private String committer;
 
-        @NameInMap("CommitterId")
+        @com.aliyun.core.annotation.NameInMap("CommitterId")
         private Long committerId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("LastModifyTime")
+        @com.aliyun.core.annotation.NameInMap("LastModifyTime")
         private String lastModifyTime;
 
-        @NameInMap("OrderId")
+        @com.aliyun.core.annotation.NameInMap("OrderId")
         private Long orderId;
 
-        @NameInMap("PluginType")
+        @com.aliyun.core.annotation.NameInMap("PluginType")
         private String pluginType;
 
-        @NameInMap("StatusCode")
+        @com.aliyun.core.annotation.NameInMap("StatusCode")
         private String statusCode;
 
-        @NameInMap("StatusDesc")
+        @com.aliyun.core.annotation.NameInMap("StatusDesc")
         private String statusDesc;
 
         private Order(Builder builder) {
@@ -278,7 +304,10 @@ public class ListOrdersResponseBody extends TeaModel {
             private String statusDesc; 
 
             /**
-             * The remarks of the ticket.
+             * <p>The remarks of the ticket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -286,7 +315,10 @@ public class ListOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The user who submitted the ticket.
+             * <p>The user who submitted the ticket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder committer(String committer) {
                 this.committer = committer;
@@ -294,7 +326,10 @@ public class ListOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user who submitted the ticket.
+             * <p>The ID of the user who submitted the ticket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51****</p>
              */
             public Builder committerId(Long committerId) {
                 this.committerId = committerId;
@@ -302,7 +337,10 @@ public class ListOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the ticket was created.
+             * <p>The time when the ticket was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-08 11:15:46</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -310,7 +348,10 @@ public class ListOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the ticket was last modified.
+             * <p>The time when the ticket was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-08 11:27:45</p>
              */
             public Builder lastModifyTime(String lastModifyTime) {
                 this.lastModifyTime = lastModifyTime;
@@ -318,7 +359,10 @@ public class ListOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ticket.
+             * <p>The ID of the ticket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51****</p>
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;
@@ -326,7 +370,10 @@ public class ListOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the ticket.
+             * <p>The type of the ticket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DC_COMMON</p>
              */
             public Builder pluginType(String pluginType) {
                 this.pluginType = pluginType;
@@ -334,17 +381,20 @@ public class ListOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The status code of the ticket. Valid values:
-             * <p>
+             * <p>The status code of the ticket. Valid values:</p>
+             * <ul>
+             * <li><strong>fail</strong>: The ticket fails to be executed.</li>
+             * <li><strong>toaudit</strong>: The ticket is waiting for approval.</li>
+             * <li><strong>cancel</strong>: The ticket is cancelled.</li>
+             * <li><strong>processing</strong>: The ticket is being executed.</li>
+             * <li><strong>approved</strong>: The ticket is approved.</li>
+             * <li><strong>reject</strong>: The ticket is rejected.</li>
+             * <li><strong>success</strong>: The ticket is executed.</li>
+             * <li><strong>closed</strong>: The ticket is closed.</li>
+             * </ul>
              * 
-             * *   **fail**: The ticket fails to be executed.
-             * *   **toaudit**: The ticket is waiting for approval.
-             * *   **cancel**: The ticket is cancelled.
-             * *   **processing**: The ticket is being executed.
-             * *   **approved**: The ticket is approved.
-             * *   **reject**: The ticket is rejected.
-             * *   **success**: The ticket is executed.
-             * *   **closed**: The ticket is closed.
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder statusCode(String statusCode) {
                 this.statusCode = statusCode;
@@ -352,7 +402,10 @@ public class ListOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The status description of the ticket.
+             * <p>The status description of the ticket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>changed successfully</p>
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;
@@ -366,9 +419,15 @@ public class ListOrdersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListOrdersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOrdersResponseBody</p>
+     */
     public static class Orders extends TeaModel {
-        @NameInMap("Order")
-        private java.util.List < Order> order;
+        @com.aliyun.core.annotation.NameInMap("Order")
+        private java.util.List<Order> order;
 
         private Orders(Builder builder) {
             this.order = builder.order;
@@ -385,17 +444,17 @@ public class ListOrdersResponseBody extends TeaModel {
         /**
          * @return order
          */
-        public java.util.List < Order> getOrder() {
+        public java.util.List<Order> getOrder() {
             return this.order;
         }
 
         public static final class Builder {
-            private java.util.List < Order> order; 
+            private java.util.List<Order> order; 
 
             /**
              * Order.
              */
-            public Builder order(java.util.List < Order> order) {
+            public Builder order(java.util.List<Order> order) {
                 this.order = order;
                 return this;
             }

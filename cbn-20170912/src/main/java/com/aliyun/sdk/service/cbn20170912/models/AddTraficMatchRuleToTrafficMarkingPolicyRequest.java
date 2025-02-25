@@ -1,49 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddTraficMatchRuleToTrafficMarkingPolicyRequest} extends {@link RequestModel}
  *
  * <p>AddTraficMatchRuleToTrafficMarkingPolicyRequest</p>
  */
 public class AddTraficMatchRuleToTrafficMarkingPolicyRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TrafficMarkingPolicyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficMarkingPolicyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String trafficMarkingPolicyId;
 
-    @Query
-    @NameInMap("TrafficMatchRules")
-    private java.util.List < TrafficMatchRules> trafficMatchRules;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficMatchRules")
+    private java.util.List<TrafficMatchRules> trafficMatchRules;
 
     private AddTraficMatchRuleToTrafficMarkingPolicyRequest(Builder builder) {
         super(builder);
@@ -122,7 +127,7 @@ public class AddTraficMatchRuleToTrafficMarkingPolicyRequest extends Request {
     /**
      * @return trafficMatchRules
      */
-    public java.util.List < TrafficMatchRules> getTrafficMatchRules() {
+    public java.util.List<TrafficMatchRules> getTrafficMatchRules() {
         return this.trafficMatchRules;
     }
 
@@ -134,7 +139,7 @@ public class AddTraficMatchRuleToTrafficMarkingPolicyRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String trafficMarkingPolicyId; 
-        private java.util.List < TrafficMatchRules> trafficMatchRules; 
+        private java.util.List<TrafficMatchRules> trafficMatchRules; 
 
         private Builder() {
             super();
@@ -153,7 +158,14 @@ public class AddTraficMatchRuleToTrafficMarkingPolicyRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId may be different for each request.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -162,7 +174,14 @@ public class AddTraficMatchRuleToTrafficMarkingPolicyRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -207,7 +226,11 @@ public class AddTraficMatchRuleToTrafficMarkingPolicyRequest extends Request {
         }
 
         /**
-         * TrafficMarkingPolicyId.
+         * <p>The ID of the traffic marking policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tm-u9nxup5kww5po8****</p>
          */
         public Builder trafficMarkingPolicyId(String trafficMarkingPolicyId) {
             this.putQueryParameter("TrafficMarkingPolicyId", trafficMarkingPolicyId);
@@ -216,9 +239,10 @@ public class AddTraficMatchRuleToTrafficMarkingPolicyRequest extends Request {
         }
 
         /**
-         * TrafficMatchRules.
+         * <p>The information about the traffic classification rule.</p>
+         * <p>You can specify at most 50 traffic classification rules.</p>
          */
-        public Builder trafficMatchRules(java.util.List < TrafficMatchRules> trafficMatchRules) {
+        public Builder trafficMatchRules(java.util.List<TrafficMatchRules> trafficMatchRules) {
             this.putQueryParameter("TrafficMatchRules", trafficMatchRules);
             this.trafficMatchRules = trafficMatchRules;
             return this;
@@ -231,29 +255,35 @@ public class AddTraficMatchRuleToTrafficMarkingPolicyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddTraficMatchRuleToTrafficMarkingPolicyRequest} extends {@link TeaModel}
+     *
+     * <p>AddTraficMatchRuleToTrafficMarkingPolicyRequest</p>
+     */
     public static class TrafficMatchRules extends TeaModel {
-        @NameInMap("DstCidr")
+        @com.aliyun.core.annotation.NameInMap("DstCidr")
         private String dstCidr;
 
-        @NameInMap("DstPortRange")
-        private java.util.List < Integer > dstPortRange;
+        @com.aliyun.core.annotation.NameInMap("DstPortRange")
+        private java.util.List<Integer> dstPortRange;
 
-        @NameInMap("MatchDscp")
+        @com.aliyun.core.annotation.NameInMap("MatchDscp")
         private Integer matchDscp;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("SrcCidr")
+        @com.aliyun.core.annotation.NameInMap("SrcCidr")
         private String srcCidr;
 
-        @NameInMap("SrcPortRange")
-        private java.util.List < Integer > srcPortRange;
+        @com.aliyun.core.annotation.NameInMap("SrcPortRange")
+        private java.util.List<Integer> srcPortRange;
 
-        @NameInMap("TrafficMatchRuleDescription")
+        @com.aliyun.core.annotation.NameInMap("TrafficMatchRuleDescription")
         private String trafficMatchRuleDescription;
 
-        @NameInMap("TrafficMatchRuleName")
+        @com.aliyun.core.annotation.NameInMap("TrafficMatchRuleName")
         private String trafficMatchRuleName;
 
         private TrafficMatchRules(Builder builder) {
@@ -285,7 +315,7 @@ public class AddTraficMatchRuleToTrafficMarkingPolicyRequest extends Request {
         /**
          * @return dstPortRange
          */
-        public java.util.List < Integer > getDstPortRange() {
+        public java.util.List<Integer> getDstPortRange() {
             return this.dstPortRange;
         }
 
@@ -313,7 +343,7 @@ public class AddTraficMatchRuleToTrafficMarkingPolicyRequest extends Request {
         /**
          * @return srcPortRange
          */
-        public java.util.List < Integer > getSrcPortRange() {
+        public java.util.List<Integer> getSrcPortRange() {
             return this.srcPortRange;
         }
 
@@ -333,16 +363,21 @@ public class AddTraficMatchRuleToTrafficMarkingPolicyRequest extends Request {
 
         public static final class Builder {
             private String dstCidr; 
-            private java.util.List < Integer > dstPortRange; 
+            private java.util.List<Integer> dstPortRange; 
             private Integer matchDscp; 
             private String protocol; 
             private String srcCidr; 
-            private java.util.List < Integer > srcPortRange; 
+            private java.util.List<Integer> srcPortRange; 
             private String trafficMatchRuleDescription; 
             private String trafficMatchRuleName; 
 
             /**
-             * DstCidr.
+             * <p>The destination CIDR block that is used to match packets.</p>
+             * <p>The traffic classification rule matches the packets whose destination IP addresses fall within the specified destination CIDR block. If you do not set this parameter, packets are considered a match regardless of the DSCP value.</p>
+             * <p>You can specify at most 50 traffic classification rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.10.10.0/24</p>
              */
             public Builder dstCidr(String dstCidr) {
                 this.dstCidr = dstCidr;
@@ -350,15 +385,31 @@ public class AddTraficMatchRuleToTrafficMarkingPolicyRequest extends Request {
             }
 
             /**
-             * DstPortRange.
+             * <p>The destination port range that is used to match packets. Valid values: <strong>-1</strong> and <strong>1</strong> to <strong>65535</strong>.</p>
+             * <p>The traffic classification rule matches the packets whose destination ports fall within the destination port range. If you do not set this parameter, packets are considered a match regardless of the DSCP value.</p>
+             * <p>You can specify at most two ports. Take note of the following rules:</p>
+             * <ul>
+             * <li>If you enter only one port number such as 1, the system matches the packets whose destination port is port 1.</li>
+             * <li>If you enter two port numbers such as 1 and 200, the system matches the packets whose destination ports fall between 1 and 200.</li>
+             * <li>If you enter two port numbers and one of them is -1, the other port number must also be -1. In this case, packets are considered a match regardless of the destination port.</li>
+             * </ul>
+             * <p>You can specify at most 50 traffic classification rules.</p>
              */
-            public Builder dstPortRange(java.util.List < Integer > dstPortRange) {
+            public Builder dstPortRange(java.util.List<Integer> dstPortRange) {
                 this.dstPortRange = dstPortRange;
                 return this;
             }
 
             /**
-             * MatchDscp.
+             * <p>The differentiated services code point (DSCP) value that is used to match packets. Valid values: <strong>0</strong> to <strong>63</strong>.</p>
+             * <p>The traffic classification rule matches the packets that contain the specified DSCP value. If you do not set this parameter, packets are considered a match regardless of the DSCP value.</p>
+             * <blockquote>
+             * <p> The DSCP value that you specify for this parameter is the DSCP value that packets carry before they are transmitted over the inter-region connection.</p>
+             * </blockquote>
+             * <p>You can specify at most 50 traffic classification rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder matchDscp(Integer matchDscp) {
                 this.matchDscp = matchDscp;
@@ -366,7 +417,12 @@ public class AddTraficMatchRuleToTrafficMarkingPolicyRequest extends Request {
             }
 
             /**
-             * Protocol.
+             * <p>The protocol that is used to match packets.</p>
+             * <p>Valid values: <strong>HTTP</strong>, <strong>HTTPS</strong>, <strong>TCP</strong>, <strong>UDP</strong>, <strong>SSH</strong>, and <strong>Telnet</strong>. For more information, log on to the <a href="https://cen.console.aliyun.com/cen/list">Cloud Enterprise Network (CEN) console</a>.</p>
+             * <p>You can specify at most 50 traffic classification rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -374,7 +430,12 @@ public class AddTraficMatchRuleToTrafficMarkingPolicyRequest extends Request {
             }
 
             /**
-             * SrcCidr.
+             * <p>The source CIDR block that is used to match packets.</p>
+             * <p>The traffic classification rule matches the packets whose source IP addresses fall within the specified source CIDR block. If you do not set this parameter, packets are considered a match regardless of the source IP address.</p>
+             * <p>You can specify at most 50 traffic classification rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.10.0/24</p>
              */
             public Builder srcCidr(String srcCidr) {
                 this.srcCidr = srcCidr;
@@ -382,15 +443,28 @@ public class AddTraficMatchRuleToTrafficMarkingPolicyRequest extends Request {
             }
 
             /**
-             * SrcPortRange.
+             * <p>The source port range that is used to match packets. Valid values: <strong>-1</strong> and <strong>1</strong> to <strong>65535</strong>.</p>
+             * <p>The traffic classification rule matches the packets whose source ports fall within the source port range. If you do not set this parameter, packets are considered a match regardless of the source port.</p>
+             * <p>You can specify at most two ports. Take note of the following rules:</p>
+             * <ul>
+             * <li>If you enter only one port number such as 1, the system matches the packets whose source port is 1.</li>
+             * <li>If you enter two port numbers such as 1 and 200, the system matches the packets whose source ports fall between 1 and 200.</li>
+             * <li>If you enter two port numbers and one of them is -1, the other port number must also be -1. In this case, packets are considered a match regardless of the source port.</li>
+             * </ul>
+             * <p>You can specify at most 50 traffic classification rules.</p>
              */
-            public Builder srcPortRange(java.util.List < Integer > srcPortRange) {
+            public Builder srcPortRange(java.util.List<Integer> srcPortRange) {
                 this.srcPortRange = srcPortRange;
                 return this;
             }
 
             /**
-             * TrafficMatchRuleDescription.
+             * <p>The description of the traffic classification rule.</p>
+             * <p>The description must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The description must start with a letter.</p>
+             * <p>You can specify at most 50 traffic classification rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desctest</p>
              */
             public Builder trafficMatchRuleDescription(String trafficMatchRuleDescription) {
                 this.trafficMatchRuleDescription = trafficMatchRuleDescription;
@@ -398,7 +472,12 @@ public class AddTraficMatchRuleToTrafficMarkingPolicyRequest extends Request {
             }
 
             /**
-             * TrafficMatchRuleName.
+             * <p>The name of the traffic classification rule.</p>
+             * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter.</p>
+             * <p>You can specify at most 50 traffic classification rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nametest</p>
              */
             public Builder trafficMatchRuleName(String trafficMatchRuleName) {
                 this.trafficMatchRuleName = trafficMatchRuleName;

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMediaAuditAudioResultDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetMediaAuditAudioResultDetailResponseBody</p>
  */
 public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
-    @NameInMap("MediaAuditAudioResultDetail")
+    @com.aliyun.core.annotation.NameInMap("MediaAuditAudioResultDetail")
     private MediaAuditAudioResultDetail mediaAuditAudioResultDetail;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetMediaAuditAudioResultDetailResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details of review results.
+         * <p>Details of review results.</p>
          */
         public Builder mediaAuditAudioResultDetail(MediaAuditAudioResultDetail mediaAuditAudioResultDetail) {
             this.mediaAuditAudioResultDetail = mediaAuditAudioResultDetail;
@@ -58,7 +63,10 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CB7D7232-1AB2-40FE-B8D3-****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,17 +79,23 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMediaAuditAudioResultDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaAuditAudioResultDetailResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("Text")
+        @com.aliyun.core.annotation.NameInMap("Text")
         private String text;
 
         private List(Builder builder) {
@@ -134,7 +148,10 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
             private String text; 
 
             /**
-             * The end time of the audio that failed the review. Unit: seconds.
+             * <p>The end time of the audio that failed the review. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -142,15 +159,19 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The review results. Valid values:
-             * <p>
-             * *   **spam**
-             * *   **ad**
-             * *   **abuse**
-             * *   **flood**
-             * *   **contraband**
-             * *   **meaningless**
-             * *   **normal**
+             * <p>The review results. Valid values:</p>
+             * <ul>
+             * <li><strong>spam</strong></li>
+             * <li><strong>ad</strong></li>
+             * <li><strong>abuse</strong></li>
+             * <li><strong>flood</strong></li>
+             * <li><strong>contraband</strong></li>
+             * <li><strong>meaningless</strong></li>
+             * <li><strong>normal</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>abuse</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -158,7 +179,10 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the audio that failed the review. Unit: seconds.
+             * <p>The start time of the audio that failed the review. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -166,7 +190,10 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The text that corresponds to the audio.
+             * <p>The text that corresponds to the audio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>beauty</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -180,14 +207,20 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMediaAuditAudioResultDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaAuditAudioResultDetailResponseBody</p>
+     */
     public static class MediaAuditAudioResultDetail extends TeaModel {
-        @NameInMap("List")
-        private java.util.List < List> list;
+        @com.aliyun.core.annotation.NameInMap("List")
+        private java.util.List<List> list;
 
-        @NameInMap("PageTotal")
+        @com.aliyun.core.annotation.NameInMap("PageTotal")
         private Integer pageTotal;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private MediaAuditAudioResultDetail(Builder builder) {
@@ -207,7 +240,7 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -226,20 +259,23 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer pageTotal; 
             private Integer total; 
 
             /**
-             * The list of results.
+             * <p>The list of results.</p>
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageTotal(Integer pageTotal) {
                 this.pageTotal = pageTotal;
@@ -247,7 +283,10 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of pages returned.
+             * <p>The total number of pages returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

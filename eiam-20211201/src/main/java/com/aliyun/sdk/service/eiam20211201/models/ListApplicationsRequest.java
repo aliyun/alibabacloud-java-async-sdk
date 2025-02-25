@@ -1,51 +1,68 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListApplicationsRequest} extends {@link RequestModel}
  *
  * <p>ListApplicationsRequest</p>
  */
 public class ListApplicationsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ApplicationIds")
-    private java.util.List < String > applicationIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationIds")
+    private java.util.List<String> applicationIds;
 
-    @Query
-    @NameInMap("ApplicationName")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationName")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String applicationName;
 
-    @Query
-    @NameInMap("AuthorizationType")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthorizationType")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String authorizationType;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String instanceId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("M2MClientStatus")
+    private String m2MClientStatus;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("Status")
-    @Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceServerStatus")
+    private String resourceServerStatus;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SsoType")
+    private String ssoType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private String status;
 
     private ListApplicationsRequest(Builder builder) {
@@ -55,8 +72,11 @@ public class ListApplicationsRequest extends Request {
         this.applicationName = builder.applicationName;
         this.authorizationType = builder.authorizationType;
         this.instanceId = builder.instanceId;
+        this.m2MClientStatus = builder.m2MClientStatus;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.resourceServerStatus = builder.resourceServerStatus;
+        this.ssoType = builder.ssoType;
         this.status = builder.status;
     }
 
@@ -83,7 +103,7 @@ public class ListApplicationsRequest extends Request {
     /**
      * @return applicationIds
      */
-    public java.util.List < String > getApplicationIds() {
+    public java.util.List<String> getApplicationIds() {
         return this.applicationIds;
     }
 
@@ -109,6 +129,13 @@ public class ListApplicationsRequest extends Request {
     }
 
     /**
+     * @return m2MClientStatus
+     */
+    public String getM2MClientStatus() {
+        return this.m2MClientStatus;
+    }
+
+    /**
      * @return pageNumber
      */
     public Long getPageNumber() {
@@ -123,6 +150,20 @@ public class ListApplicationsRequest extends Request {
     }
 
     /**
+     * @return resourceServerStatus
+     */
+    public String getResourceServerStatus() {
+        return this.resourceServerStatus;
+    }
+
+    /**
+     * @return ssoType
+     */
+    public String getSsoType() {
+        return this.ssoType;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -131,12 +172,15 @@ public class ListApplicationsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListApplicationsRequest, Builder> {
         private String regionId; 
-        private java.util.List < String > applicationIds; 
+        private java.util.List<String> applicationIds; 
         private String applicationName; 
         private String authorizationType; 
         private String instanceId; 
+        private String m2MClientStatus; 
         private Long pageNumber; 
         private Long pageSize; 
+        private String resourceServerStatus; 
+        private String ssoType; 
         private String status; 
 
         private Builder() {
@@ -150,8 +194,11 @@ public class ListApplicationsRequest extends Request {
             this.applicationName = request.applicationName;
             this.authorizationType = request.authorizationType;
             this.instanceId = request.instanceId;
+            this.m2MClientStatus = request.m2MClientStatus;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.resourceServerStatus = request.resourceServerStatus;
+            this.ssoType = request.ssoType;
             this.status = request.status;
         } 
 
@@ -165,16 +212,22 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * The IDs of the applications.
+         * <p>The IDs of the applications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ram Account SSO</p>
          */
-        public Builder applicationIds(java.util.List < String > applicationIds) {
+        public Builder applicationIds(java.util.List<String> applicationIds) {
             this.putQueryParameter("ApplicationIds", applicationIds);
             this.applicationIds = applicationIds;
             return this;
         }
 
         /**
-         * The name of the application. Only fuzzy match from the leftmost character is supported.
+         * <p>The name of the application. Only fuzzy match from the leftmost character is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ram Account SSO</p>
          */
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("ApplicationName", applicationName);
@@ -183,11 +236,14 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * The authorization of the application. Valid values:
-         * <p>
+         * <p>The authorization of the application. Valid values:</p>
+         * <ul>
+         * <li>authorize_required: Only the user with explicit authorization can access the application.</li>
+         * <li>default_all: By default, all users can access the application.</li>
+         * </ul>
          * 
-         * *   authorize_required: Only the user with explicit authorization can access the application.
-         * *   default_all: By default, all users can access the application.
+         * <strong>example:</strong>
+         * <p>authorize_required</p>
          */
         public Builder authorizationType(String authorizationType) {
             this.putQueryParameter("AuthorizationType", authorizationType);
@@ -196,7 +252,11 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -205,7 +265,19 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * M2MClientStatus.
+         */
+        public Builder m2MClientStatus(String m2MClientStatus) {
+            this.putQueryParameter("M2MClientStatus", m2MClientStatus);
+            this.m2MClientStatus = m2MClientStatus;
+            return this;
+        }
+
+        /**
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -214,7 +286,10 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -223,11 +298,32 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * The status of the application. Valid values:
-         * <p>
+         * ResourceServerStatus.
+         */
+        public Builder resourceServerStatus(String resourceServerStatus) {
+            this.putQueryParameter("ResourceServerStatus", resourceServerStatus);
+            this.resourceServerStatus = resourceServerStatus;
+            return this;
+        }
+
+        /**
+         * SsoType.
+         */
+        public Builder ssoType(String ssoType) {
+            this.putQueryParameter("SsoType", ssoType);
+            this.ssoType = ssoType;
+            return this;
+        }
+
+        /**
+         * <p>The status of the application. Valid values:</p>
+         * <ul>
+         * <li>Enabled: The application is enabled.</li>
+         * <li>Disabled: The application is disabled.</li>
+         * </ul>
          * 
-         * *   Enabled: The application is enabled.
-         * *   Disabled: The application is disabled.
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

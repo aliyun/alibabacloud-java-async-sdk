@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartDiskReplicaPairResponseBody} extends {@link TeaModel}
  *
  * <p>StartDiskReplicaPairResponseBody</p>
  */
 public class StartDiskReplicaPairResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private StartDiskReplicaPairResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class StartDiskReplicaPairResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A37597A6-BB99-19B3-85EA-4C2B91F0****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

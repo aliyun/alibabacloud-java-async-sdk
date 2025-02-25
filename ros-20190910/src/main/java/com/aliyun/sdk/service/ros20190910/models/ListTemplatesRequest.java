@@ -1,43 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTemplatesRequest} extends {@link RequestModel}
  *
  * <p>ListTemplatesRequest</p>
  */
 public class ListTemplatesRequest extends Request {
-    @Query
-    @NameInMap("IncludeTags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeTags")
     private String includeTags;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ShareType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShareType")
     private String shareType;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("TemplateName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
     private String templateName;
 
     private ListTemplatesRequest(Builder builder) {
@@ -138,11 +138,14 @@ public class ListTemplatesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to query the tag information. Valid values:
-         * <p>
+         * <p>Specifies whether to query the tag information. Valid values:</p>
+         * <ul>
+         * <li>Enabled</li>
+         * <li>Disabled (default)</li>
+         * </ul>
          * 
-         * *   Enabled
-         * *   Disabled (default)
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder includeTags(String includeTags) {
             this.putQueryParameter("IncludeTags", includeTags);
@@ -151,10 +154,10 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The page number.\
-         * <p>
-         * Pages start from page 1.\
-         * Default value: 1.
+         * <p>The page number.<br>Pages start from page 1.<br>Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -163,10 +166,10 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The number of entries per page.\
-         * <p>
-         * Valid values: 1 to 50.\
-         * Default value: 10.
+         * <p>The number of entries per page.<br>Valid values: 1 to 50.<br>Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -175,9 +178,10 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.\
-         * <p>
-         * For more information about resource groups, see the "Resource Group" section of [What is Resource Management?](~~94475~~)
+         * <p>The ID of the resource group.<br>For more information about resource groups, see the &quot;Resource Group&quot; section of <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a></p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph6aiy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -186,14 +190,16 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The sharing type of the template.
-         * <p>
+         * <p>The sharing type of the template.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Private (default): The template belongs to the template owner.</li>
+         * <li>Shared: The template is shared with other users.</li>
+         * <li>Official: The template is the shared template of the official version.</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   Private (default): The template belongs to the template owner.
-         * *   Shared: The template is shared with other users.
-         * *   Official: The template is the shared template of the official version.
+         * <strong>example:</strong>
+         * <p>Private</p>
          */
         public Builder shareType(String shareType) {
             this.putQueryParameter("ShareType", shareType);
@@ -202,7 +208,7 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The tags. You can specify up to 20 tags.
+         * <p>The tags. You can specify up to 20 tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -211,7 +217,10 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The template name. This parameter takes effect only when ShareType is set to Private. The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). The name must start with a digit or letter.
+         * <p>The template name. This parameter takes effect only when ShareType is set to Private. The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (_). The name must start with a digit or letter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyTemplate</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -226,11 +235,17 @@ public class ListTemplatesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListTemplatesRequest} extends {@link TeaModel}
+     *
+     * <p>ListTemplatesRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -265,10 +280,11 @@ public class ListTemplatesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag. This parameter takes effect only when ShareType is set to Private.
-             * <p>
+             * <p>The key of the tag. This parameter takes effect only when ShareType is set to Private.</p>
+             * <p>You can specify up to 20 tag keys.</p>
              * 
-             * You can specify up to 20 tag keys.
+             * <strong>example:</strong>
+             * <p>usage</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -276,10 +292,11 @@ public class ListTemplatesRequest extends Request {
             }
 
             /**
-             * The value of the tag. This parameter takes effect only when ShareType is set to Private.
-             * <p>
+             * <p>The value of the tag. This parameter takes effect only when ShareType is set to Private.</p>
+             * <p>You can specify up to 20 tag values.</p>
              * 
-             * You can specify up to 20 tag values.
+             * <strong>example:</strong>
+             * <p>deploy</p>
              */
             public Builder value(String value) {
                 this.value = value;

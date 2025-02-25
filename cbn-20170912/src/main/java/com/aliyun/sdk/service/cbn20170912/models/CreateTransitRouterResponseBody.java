@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTransitRouterResponseBody} extends {@link TeaModel}
  *
  * <p>CreateTransitRouterResponseBody</p>
  */
 public class CreateTransitRouterResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TransitRouterId")
+    @com.aliyun.core.annotation.NameInMap("TransitRouterId")
     private String transitRouterId;
 
     private CreateTransitRouterResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateTransitRouterResponseBody extends TeaModel {
         private String transitRouterId; 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>404DA7EC-F495-44B5-B543-6EDCDF90F3D1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,10 @@ public class CreateTransitRouterResponseBody extends TeaModel {
         }
 
         /**
-         * TransitRouterId.
+         * <p>The ID of the Enterprise Edition transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-uf6llz2286805i44g****</p>
          */
         public Builder transitRouterId(String transitRouterId) {
             this.transitRouterId = transitRouterId;

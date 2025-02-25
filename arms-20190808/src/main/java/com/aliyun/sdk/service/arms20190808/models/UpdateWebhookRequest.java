@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateWebhookRequest} extends {@link RequestModel}
  *
  * <p>UpdateWebhookRequest</p>
  */
 public class UpdateWebhookRequest extends Request {
-    @Query
-    @NameInMap("Body")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Body")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String body;
 
-    @Query
-    @NameInMap("ContactId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long contactId;
 
-    @Query
-    @NameInMap("ContactName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String contactName;
 
-    @Query
-    @NameInMap("HttpHeaders")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpHeaders")
     private String httpHeaders;
 
-    @Query
-    @NameInMap("HttpParams")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpParams")
     private String httpParams;
 
-    @Query
-    @NameInMap("Method")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Method")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String method;
 
-    @Query
-    @NameInMap("RecoverBody")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecoverBody")
     private String recoverBody;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Url")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Url")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String url;
 
     private UpdateWebhookRequest(Builder builder) {
@@ -172,7 +177,11 @@ public class UpdateWebhookRequest extends Request {
         } 
 
         /**
-         * The notification template that is sent when an alert is triggered. This parameter is required if the **Method** parameter is set to **Post**. You can use the $content placeholder to specify the notification content. The content cannot exceed 500 characters in length.
+         * <p>The notification template that is sent when an alert is triggered. This parameter is required if the <strong>Method</strong> parameter is set to <strong>Post</strong>. You can use the $content placeholder to specify the notification content. The content cannot exceed 500 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;Alert name&quot;:&quot;{{ .commonLabels.alertname }}{{if .commonLabels.clustername }}&quot;, &quot;Cluster name&quot;:&quot;{{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}&quot;, &quot;Application name&quot;:&quot;{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}&quot;, &quot;Notification policy&quot;:&quot;{{ .dispatchRuleName }}&quot;, &quot;Alert time&quot;:&quot;{{ .startTime }}&quot;, &quot;Alert content&quot;:&quot;{{ for .alerts }} {{ .annotations.message }} {{ end }}&quot; }</p>
          */
         public Builder body(String body) {
             this.putQueryParameter("Body", body);
@@ -181,7 +190,11 @@ public class UpdateWebhookRequest extends Request {
         }
 
         /**
-         * The ID of the webhook alert contact. You can call the **SearchAlertContact** operation to obtain the ID.
+         * <p>The ID of the webhook alert contact. You can call the <strong>SearchAlertContact</strong> operation to obtain the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48716</p>
          */
         public Builder contactId(Long contactId) {
             this.putQueryParameter("ContactId", contactId);
@@ -190,7 +203,11 @@ public class UpdateWebhookRequest extends Request {
         }
 
         /**
-         * The name of the webhook alert contact.
+         * <p>The name of the webhook alert contact.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Webhook alert</p>
          */
         public Builder contactName(String contactName) {
             this.putQueryParameter("ContactName", contactName);
@@ -199,7 +216,10 @@ public class UpdateWebhookRequest extends Request {
         }
 
         /**
-         * The HTTP request headers.
+         * <p>The HTTP request headers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;Content-Type&quot;:&quot;application/json&quot;}]</p>
          */
         public Builder httpHeaders(String httpHeaders) {
             this.putQueryParameter("HttpHeaders", httpHeaders);
@@ -208,7 +228,10 @@ public class UpdateWebhookRequest extends Request {
         }
 
         /**
-         * The parameters in the HTTP request.
+         * <p>The parameters in the HTTP request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;name&quot;:&quot;mike&quot;}]</p>
          */
         public Builder httpParams(String httpParams) {
             this.putQueryParameter("HttpParams", httpParams);
@@ -217,11 +240,15 @@ public class UpdateWebhookRequest extends Request {
         }
 
         /**
-         * The HTTP request method. Valid values:
-         * <p>
+         * <p>The HTTP request method. Valid values:</p>
+         * <ul>
+         * <li><code>Get</code></li>
+         * <li><code>Post</code></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   `Get`
-         * *   `Post`
+         * <strong>example:</strong>
+         * <p>Post</p>
          */
         public Builder method(String method) {
             this.putQueryParameter("Method", method);
@@ -230,7 +257,10 @@ public class UpdateWebhookRequest extends Request {
         }
 
         /**
-         * The notification template that is sent when an alert is resolved. This parameter is required if the **Method** parameter is set to **Post**. You can use the $content placeholder to specify the notification content. The content cannot exceed 500 characters in length.
+         * <p>The notification template that is sent when an alert is resolved. This parameter is required if the <strong>Method</strong> parameter is set to <strong>Post</strong>. You can use the $content placeholder to specify the notification content. The content cannot exceed 500 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;Alert name&quot;:&quot;{{ .commonLabels.alertname }}{{if .commonLabels.clustername }}&quot;, &quot;Cluster name&quot;:&quot;{{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}&quot;, &quot;Application name&quot;:&quot;{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}&quot;, &quot;Notification policy&quot;:&quot;{{ .dispatchRuleName }}&quot;, &quot;Recovery time&quot;:&quot;{{ .endTime }}&quot;, &quot;Alert content&quot;:&quot;{{ for .alerts }} {{ .annotations.message }} {{ end }}&quot; }</p>
          */
         public Builder recoverBody(String recoverBody) {
             this.putQueryParameter("RecoverBody", recoverBody);
@@ -239,7 +269,11 @@ public class UpdateWebhookRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -248,7 +282,11 @@ public class UpdateWebhookRequest extends Request {
         }
 
         /**
-         * The URL of the HTTP request method.
+         * <p>The URL of the HTTP request method.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=e1a049121ddbfce1ca963d115ef88cc7219583c4fb79fe6e398fbfb688">https://oapi.dingtalk.com/robot/send?access_token=e1a049121ddbfce1ca963d115ef88cc7219583c4fb79fe6e398fbfb688</a>******</p>
          */
         public Builder url(String url) {
             this.putQueryParameter("Url", url);

@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnWafPoliciesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnWafPoliciesResponseBody</p>
  */
 public class DescribeDcdnWafPoliciesResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("Policies")
+    @com.aliyun.core.annotation.NameInMap("Policies")
     private java.util.List < Policies> policies;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDcdnWafPoliciesResponseBody(Builder builder) {
@@ -86,7 +86,10 @@ public class DescribeDcdnWafPoliciesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page. Valid values: **1** to **100000**. Default value: **1**.
+         * <p>The page number of the returned page. Valid values: <strong>1</strong> to <strong>100000</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +97,10 @@ public class DescribeDcdnWafPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of protection policies returned per page. Valid values: an integer from **1** to **500**. Default value: **20**.
+         * <p>The number of protection policies returned per page. Valid values: an integer from <strong>1</strong> to <strong>500</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +108,7 @@ public class DescribeDcdnWafPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The information about protection policies.
+         * <p>The information about protection policies.</p>
          */
         public Builder policies(java.util.List < Policies> policies) {
             this.policies = policies;
@@ -110,7 +116,10 @@ public class DescribeDcdnWafPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>153ca2cd-3c01-44be-2e83-64dbc6c88630</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +127,10 @@ public class DescribeDcdnWafPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of protection policies.
+         * <p>The total number of protection policies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,29 +143,35 @@ public class DescribeDcdnWafPoliciesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnWafPoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnWafPoliciesResponseBody</p>
+     */
     public static class Policies extends TeaModel {
-        @NameInMap("DefenseScene")
+        @com.aliyun.core.annotation.NameInMap("DefenseScene")
         private String defenseScene;
 
-        @NameInMap("DomainCount")
+        @com.aliyun.core.annotation.NameInMap("DomainCount")
         private Integer domainCount;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("PolicyId")
+        @com.aliyun.core.annotation.NameInMap("PolicyId")
         private Long policyId;
 
-        @NameInMap("PolicyName")
+        @com.aliyun.core.annotation.NameInMap("PolicyName")
         private String policyName;
 
-        @NameInMap("PolicyStatus")
+        @com.aliyun.core.annotation.NameInMap("PolicyStatus")
         private String policyStatus;
 
-        @NameInMap("PolicyType")
+        @com.aliyun.core.annotation.NameInMap("PolicyType")
         private String policyType;
 
-        @NameInMap("RuleCount")
+        @com.aliyun.core.annotation.NameInMap("RuleCount")
         private Long ruleCount;
 
         private Policies(Builder builder) {
@@ -242,7 +260,10 @@ public class DescribeDcdnWafPoliciesResponseBody extends TeaModel {
             private Long ruleCount; 
 
             /**
-             * The type of the protection policy, which is the same as the DefenseScenes field in the QueryArgs parameter.
+             * <p>The type of the protection policy, which is the same as the DefenseScenes field in the QueryArgs parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>custom_acl</p>
              */
             public Builder defenseScene(String defenseScene) {
                 this.defenseScene = defenseScene;
@@ -250,7 +271,10 @@ public class DescribeDcdnWafPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of domain names that use the protection policy.
+             * <p>The number of domain names that use the protection policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder domainCount(Integer domainCount) {
                 this.domainCount = domainCount;
@@ -258,7 +282,10 @@ public class DescribeDcdnWafPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the protection policy was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The time when the protection policy was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-29T17:08:45Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -266,7 +293,10 @@ public class DescribeDcdnWafPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the protection policy.
+             * <p>The ID of the protection policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100001</p>
              */
             public Builder policyId(Long policyId) {
                 this.policyId = policyId;
@@ -274,7 +304,10 @@ public class DescribeDcdnWafPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the protection policy.
+             * <p>The name of the protection policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>policy_test</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -282,7 +315,10 @@ public class DescribeDcdnWafPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the protection policy, which is the same as the PolicyStatus field in the QueryArgs parameter.
+             * <p>The status of the protection policy, which is the same as the PolicyStatus field in the QueryArgs parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder policyStatus(String policyStatus) {
                 this.policyStatus = policyStatus;
@@ -290,7 +326,10 @@ public class DescribeDcdnWafPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether this protection policy is the default policy, which is the same as the PolicyType field in the QueryArgs parameter.
+             * <p>Indicates whether this protection policy is the default policy, which is the same as the PolicyType field in the QueryArgs parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -298,7 +337,10 @@ public class DescribeDcdnWafPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of protection rules in the protection policy.
+             * <p>The number of protection rules in the protection policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder ruleCount(Long ruleCount) {
                 this.ruleCount = ruleCount;

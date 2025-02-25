@@ -1,62 +1,67 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBEndpointAddressRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBEndpointAddressRequest</p>
  */
 public class ModifyDBEndpointAddressRequest extends Request {
-    @Query
-    @NameInMap("ConnectionStringPrefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectionStringPrefix")
     private String connectionStringPrefix;
 
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("DBEndpointId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBEndpointId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBEndpointId;
 
-    @Query
-    @NameInMap("NetType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String netType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Port")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Port")
     private String port;
 
-    @Query
-    @NameInMap("PrivateZoneAddressPrefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateZoneAddressPrefix")
     private String privateZoneAddressPrefix;
 
-    @Query
-    @NameInMap("PrivateZoneName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateZoneName")
     private String privateZoneName;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyDBEndpointAddressRequest(Builder builder) {
@@ -197,12 +202,15 @@ public class ModifyDBEndpointAddressRequest extends Request {
         } 
 
         /**
-         * The prefix of the new endpoint. The prefix must meet the following requirements:
-         * <p>
+         * <p>The prefix of the new endpoint. The prefix must meet the following requirements:</p>
+         * <ul>
+         * <li>It can contain lowercase letters, digits, and hyphens (-).</li>
+         * <li>It must start with a letter and end with a digit or a letter.</li>
+         * <li>It must be 6 to 30 characters in length.</li>
+         * </ul>
          * 
-         * *   It can contain lowercase letters, digits, and hyphens (-).
-         * *   It must start with a letter and end with a digit or a letter.
-         * *   It must be 6 to 30 characters in length.
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -211,10 +219,14 @@ public class ModifyDBEndpointAddressRequest extends Request {
         }
 
         /**
-         * The ID of cluster.
-         * <p>
+         * <p>The ID of cluster.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of the clusters that belong to your Alibaba Cloud account, such as cluster IDs.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeDBClusters](~~98094~~) operation to query the details of the clusters that belong to your Alibaba Cloud account, such as cluster IDs.
+         * <strong>example:</strong>
+         * <p>pc-***************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -223,10 +235,14 @@ public class ModifyDBEndpointAddressRequest extends Request {
         }
 
         /**
-         * The ID of the endpoint.
-         * <p>
+         * <p>The ID of the endpoint.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98205.html">DescribeDBClusterEndpoints</a> operation to query endpoint IDs.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeDBClusterEndpoints](~~98205~~) operation to query endpoint IDs.
+         * <strong>example:</strong>
+         * <p>pe-****************</p>
          */
         public Builder DBEndpointId(String DBEndpointId) {
             this.putQueryParameter("DBEndpointId", DBEndpointId);
@@ -235,11 +251,15 @@ public class ModifyDBEndpointAddressRequest extends Request {
         }
 
         /**
-         * The network type of the endpoint. Valid values:
-         * <p>
+         * <p>The network type of the endpoint. Valid values:</p>
+         * <ul>
+         * <li><strong>Public</strong></li>
+         * <li><strong>Private</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Public**
-         * *   **Private**
+         * <strong>example:</strong>
+         * <p>Public</p>
          */
         public Builder netType(String netType) {
             this.putQueryParameter("NetType", netType);
@@ -266,10 +286,13 @@ public class ModifyDBEndpointAddressRequest extends Request {
         }
 
         /**
-         * The port number. Valid values: 3000 to 5999.
-         * <p>
+         * <p>The port number. Valid values: 3000 to 5999.</p>
+         * <blockquote>
+         * <p>This parameter is valid only for PolarDB for MySQL clusters. If you leave this parameter empty, the default port 3306 is used.</p>
+         * </blockquote>
          * 
-         * > This parameter is valid only for PolarDB for MySQL clusters. If you leave this parameter empty, the default port 3306 is used.
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
@@ -278,15 +301,21 @@ public class ModifyDBEndpointAddressRequest extends Request {
         }
 
         /**
-         * The prefix of the private domain name. The prefix must meet the following requirements:
-         * <p>
+         * <p>The prefix of the private domain name. The prefix must meet the following requirements:</p>
+         * <ul>
+         * <li>The prefix can contain lowercase letters, digits, and hyphens (-).</li>
+         * <li>The prefix must start with a letter and end with a digit or a letter.</li>
+         * <li>The prefix must be 6 to 30 characters in length.</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>You can bind each internal endpoint of PolarDB to a private domain name. The private domain name takes effect only in the specified virtual private clouds (VPCs) in the current region. Private domain names are managed by using PrivateZone. You can use the CNAME record of PrivateZone to map domain names to PolarDB. You are charged a small fee for this feature. For more information, see <a href="https://help.aliyun.com/document_detail/71338.html">Pricing</a>.</li>
+         * <li>This parameter takes effect only if you set <strong>NetType</strong> to Private.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * *   The prefix can contain lowercase letters, digits, and hyphens (-).
-         * *   The prefix must start with a letter and end with a digit or a letter.
-         * *   The prefix must be 6 to 30 characters in length.
-         * 
-         * >- You can bind each internal endpoint of PolarDB to a private domain name. The private domain name takes effect only in the specified virtual private clouds (VPCs) in the current region. Private domain names are managed by using PrivateZone. You can use the CNAME record of PrivateZone to map domain names to PolarDB. You are charged a small fee for this feature. For more information, see [Pricing](~~71338~~).
-         * >- This parameter takes effect only if you set **NetType** to Private.
+         * <strong>example:</strong>
+         * <p>aliyundoc</p>
          */
         public Builder privateZoneAddressPrefix(String privateZoneAddressPrefix) {
             this.putQueryParameter("PrivateZoneAddressPrefix", privateZoneAddressPrefix);
@@ -295,10 +324,13 @@ public class ModifyDBEndpointAddressRequest extends Request {
         }
 
         /**
-         * The name of the private zone.
-         * <p>
+         * <p>The name of the private zone.</p>
+         * <blockquote>
+         * <p>This parameter takes effect only when <strong>NetType</strong> is set to Private.</p>
+         * </blockquote>
          * 
-         * > This parameter takes effect only when **NetType** is set to Private.
+         * <strong>example:</strong>
+         * <p>aliyundoc.com</p>
          */
         public Builder privateZoneName(String privateZoneName) {
             this.putQueryParameter("PrivateZoneName", privateZoneName);

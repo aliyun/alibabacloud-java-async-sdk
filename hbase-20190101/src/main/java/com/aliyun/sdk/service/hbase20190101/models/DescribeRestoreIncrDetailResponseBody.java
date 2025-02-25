@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRestoreIncrDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRestoreIncrDetailResponseBody</p>
  */
 public class DescribeRestoreIncrDetailResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RestoreIncrDetail")
+    @com.aliyun.core.annotation.NameInMap("RestoreIncrDetail")
     private RestoreIncrDetail restoreIncrDetail;
 
     private DescribeRestoreIncrDetailResponseBody(Builder builder) {
@@ -71,26 +76,32 @@ public class DescribeRestoreIncrDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRestoreIncrDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestoreIncrDetailResponseBody</p>
+     */
     public static class RestoreIncrDetail extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("Process")
+        @com.aliyun.core.annotation.NameInMap("Process")
         private String process;
 
-        @NameInMap("RestoreDelay")
+        @com.aliyun.core.annotation.NameInMap("RestoreDelay")
         private String restoreDelay;
 
-        @NameInMap("RestoreStartTs")
+        @com.aliyun.core.annotation.NameInMap("RestoreStartTs")
         private String restoreStartTs;
 
-        @NameInMap("RestoredTs")
+        @com.aliyun.core.annotation.NameInMap("RestoredTs")
         private String restoredTs;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private RestoreIncrDetail(Builder builder) {

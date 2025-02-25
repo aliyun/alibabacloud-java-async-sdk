@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceSpecResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyInstanceSpecResponseBody</p>
  */
 public class ModifyInstanceSpecResponseBody extends TeaModel {
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyInstanceSpecResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class ModifyInstanceSpecResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the order.
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20722623431****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -58,7 +61,10 @@ public class ModifyInstanceSpecResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0DA1D7EF-C80D-432C-8758-7D225182626B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

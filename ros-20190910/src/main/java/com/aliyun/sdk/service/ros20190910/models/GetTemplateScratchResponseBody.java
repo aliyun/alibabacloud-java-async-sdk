@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTemplateScratchResponseBody} extends {@link TeaModel}
  *
  * <p>GetTemplateScratchResponseBody</p>
  */
 public class GetTemplateScratchResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TemplateScratch")
+    @com.aliyun.core.annotation.NameInMap("TemplateScratch")
     private TemplateScratch templateScratch;
 
     private GetTemplateScratchResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         private TemplateScratch templateScratch; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A8E0EF98-6FBD-5656-8298-FC8194F0F7B7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         }
 
         /**
-         * The scenario.
+         * <p>The resource scenario.</p>
          */
         public Builder templateScratch(TemplateScratch templateScratch) {
             this.templateScratch = templateScratch;
@@ -71,11 +74,17 @@ public class GetTemplateScratchResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTemplateScratchResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTemplateScratchResponseBody</p>
+     */
     public static class PreferenceParameters extends TeaModel {
-        @NameInMap("ParameterKey")
+        @com.aliyun.core.annotation.NameInMap("ParameterKey")
         private String parameterKey;
 
-        @NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
         private String parameterValue;
 
         private PreferenceParameters(Builder builder) {
@@ -110,7 +119,10 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             private String parameterValue; 
 
             /**
-             * The key of the parameter.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DeletionPolicy</p>
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
@@ -118,7 +130,10 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the parameter.
+             * <p>The parameter value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Retain</p>
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -132,11 +147,17 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTemplateScratchResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTemplateScratchResponseBody</p>
+     */
     public static class SourceResourceGroup extends TeaModel {
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ResourceTypeFilter")
+        @com.aliyun.core.annotation.NameInMap("ResourceTypeFilter")
         private java.util.List < String > resourceTypeFilter;
 
         private SourceResourceGroup(Builder builder) {
@@ -171,7 +192,10 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             private java.util.List < String > resourceTypeFilter; 
 
             /**
-             * The ID of the source resource group.
+             * <p>The ID of the source resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmzawhxxc****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -179,7 +203,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The resource types.
+             * <p>The resource type filters.</p>
              */
             public Builder resourceTypeFilter(java.util.List < String > resourceTypeFilter) {
                 this.resourceTypeFilter = resourceTypeFilter;
@@ -193,14 +217,24 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTemplateScratchResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTemplateScratchResponseBody</p>
+     */
     public static class SourceResources extends TeaModel {
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("RelatedResourceTypeFilter")
+        private java.util.List < String > relatedResourceTypeFilter;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
         private SourceResources(Builder builder) {
+            this.relatedResourceTypeFilter = builder.relatedResourceTypeFilter;
             this.resourceId = builder.resourceId;
             this.resourceType = builder.resourceType;
         }
@@ -211,6 +245,13 @@ public class GetTemplateScratchResponseBody extends TeaModel {
 
         public static SourceResources create() {
             return builder().build();
+        }
+
+        /**
+         * @return relatedResourceTypeFilter
+         */
+        public java.util.List < String > getRelatedResourceTypeFilter() {
+            return this.relatedResourceTypeFilter;
         }
 
         /**
@@ -228,11 +269,23 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List < String > relatedResourceTypeFilter; 
             private String resourceId; 
             private String resourceType; 
 
             /**
-             * The ID of the resource.
+             * <p>The related resource type filters.</p>
+             */
+            public Builder relatedResourceTypeFilter(java.util.List < String > relatedResourceTypeFilter) {
+                this.relatedResourceTypeFilter = relatedResourceTypeFilter;
+                return this;
+            }
+
+            /**
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-m5e7cv7e9mz69sszb****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -240,7 +293,10 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN::ECS::VPC</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -254,11 +310,17 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTemplateScratchResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTemplateScratchResponseBody</p>
+     */
     public static class SourceTag extends TeaModel {
-        @NameInMap("ResourceTags")
+        @com.aliyun.core.annotation.NameInMap("ResourceTags")
         private java.util.Map < String, ? > resourceTags;
 
-        @NameInMap("ResourceTypeFilter")
+        @com.aliyun.core.annotation.NameInMap("ResourceTypeFilter")
         private java.util.List < String > resourceTypeFilter;
 
         private SourceTag(Builder builder) {
@@ -293,7 +355,10 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             private java.util.List < String > resourceTypeFilter; 
 
             /**
-             * The source tags.
+             * <p>The source tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;a&quot;: &quot;b&quot;}</p>
              */
             public Builder resourceTags(java.util.Map < String, ? > resourceTags) {
                 this.resourceTags = resourceTags;
@@ -301,7 +366,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The resource types.
+             * <p>The resource type filters.</p>
              */
             public Builder resourceTypeFilter(java.util.List < String > resourceTypeFilter) {
                 this.resourceTypeFilter = resourceTypeFilter;
@@ -315,11 +380,17 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTemplateScratchResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTemplateScratchResponseBody</p>
+     */
     public static class StackProvision extends TeaModel {
-        @NameInMap("Creatable")
+        @com.aliyun.core.annotation.NameInMap("Creatable")
         private Boolean creatable;
 
-        @NameInMap("Importable")
+        @com.aliyun.core.annotation.NameInMap("Importable")
         private Boolean importable;
 
         private StackProvision(Builder builder) {
@@ -354,11 +425,14 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             private Boolean importable; 
 
             /**
-             * Indicates whether the resource is replicated by calling the [CreateStack](~~132086~~) operation. Valid values:
-             * <p>
+             * <p>Indicates whether the resource is replicated by calling the <a href="https://help.aliyun.com/document_detail/132086.html">CreateStack</a> operation. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder creatable(Boolean creatable) {
                 this.creatable = creatable;
@@ -366,11 +440,14 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the resource is managed by calling the [CreateChangeSet](~~131051~~) operation. Valid values:
-             * <p>
+             * <p>Indicates whether the resource is managed by calling the <a href="https://help.aliyun.com/document_detail/131051.html">CreateChangeSet</a> operation. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder importable(Boolean importable) {
                 this.importable = importable;
@@ -384,14 +461,20 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTemplateScratchResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTemplateScratchResponseBody</p>
+     */
     public static class Stacks extends TeaModel {
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("StackId")
+        @com.aliyun.core.annotation.NameInMap("StackId")
         private String stackId;
 
-        @NameInMap("UsageType")
+        @com.aliyun.core.annotation.NameInMap("UsageType")
         private String usageType;
 
         private Stacks(Builder builder) {
@@ -435,7 +518,10 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             private String usageType; 
 
             /**
-             * The region ID of the stack.
+             * <p>The region ID of the stack.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -443,7 +529,10 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the stack.
+             * <p>The stack ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3708bf6a-3a67-44d4-9eb1-c56704b9****</p>
              */
             public Builder stackId(String stackId) {
                 this.stackId = stackId;
@@ -451,11 +540,14 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The purpose of the stack. Valid values:
-             * <p>
+             * <p>The purpose of the stack. Valid values:</p>
+             * <ul>
+             * <li>ResourceImport: resource management</li>
+             * <li>ArchitectureReplication: resource replication</li>
+             * </ul>
              * 
-             * *   ResourceImport: resource management
-             * *   ArchitectureReplication: resource replication
+             * <strong>example:</strong>
+             * <p>ArchitectureReplication</p>
              */
             public Builder usageType(String usageType) {
                 this.usageType = usageType;
@@ -469,56 +561,62 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTemplateScratchResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTemplateScratchResponseBody</p>
+     */
     public static class TemplateScratch extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("FailedCode")
+        @com.aliyun.core.annotation.NameInMap("FailedCode")
         private String failedCode;
 
-        @NameInMap("LogicalIdStrategy")
+        @com.aliyun.core.annotation.NameInMap("LogicalIdStrategy")
         private String logicalIdStrategy;
 
-        @NameInMap("PreferenceParameters")
+        @com.aliyun.core.annotation.NameInMap("PreferenceParameters")
         private java.util.List < PreferenceParameters> preferenceParameters;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SourceResourceGroup")
+        @com.aliyun.core.annotation.NameInMap("SourceResourceGroup")
         private SourceResourceGroup sourceResourceGroup;
 
-        @NameInMap("SourceResources")
+        @com.aliyun.core.annotation.NameInMap("SourceResources")
         private java.util.List < SourceResources> sourceResources;
 
-        @NameInMap("SourceTag")
+        @com.aliyun.core.annotation.NameInMap("SourceTag")
         private SourceTag sourceTag;
 
-        @NameInMap("StackProvision")
+        @com.aliyun.core.annotation.NameInMap("StackProvision")
         private StackProvision stackProvision;
 
-        @NameInMap("Stacks")
+        @com.aliyun.core.annotation.NameInMap("Stacks")
         private java.util.List < Stacks> stacks;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusReason")
+        @com.aliyun.core.annotation.NameInMap("StatusReason")
         private String statusReason;
 
-        @NameInMap("TemplateScratchData")
+        @com.aliyun.core.annotation.NameInMap("TemplateScratchData")
         private java.util.Map < String, ? > templateScratchData;
 
-        @NameInMap("TemplateScratchId")
+        @com.aliyun.core.annotation.NameInMap("TemplateScratchId")
         private String templateScratchId;
 
-        @NameInMap("TemplateScratchType")
+        @com.aliyun.core.annotation.NameInMap("TemplateScratchType")
         private String templateScratchType;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private TemplateScratch(Builder builder) {
@@ -688,10 +786,11 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The time at which the scenario was created.
-             * <p>
+             * <p>The time at which the resource scenario was created.</p>
+             * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
              * 
-             * The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
+             * <strong>example:</strong>
+             * <p>2021-12-22T01:49:22</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -699,7 +798,10 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the scenario.
+             * <p>The description of the resource scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The description of the resource scenario.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -707,10 +809,13 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The status code of the scenario that fails to be created.
-             * <p>
+             * <p>The status code of the resource scenario that fails to be created.</p>
+             * <blockquote>
+             * <p>This parameter is returned only if you set Status to GENERATE_FAILED.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only if you set Status to GENERATE_FAILED.
+             * <strong>example:</strong>
+             * <p>InvalidZoneId</p>
              */
             public Builder failedCode(String failedCode) {
                 this.failedCode = failedCode;
@@ -718,12 +823,15 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The policy based on which the logical ID is generated. Valid values:
-             * <p>
+             * <p>The policy based on which the logical ID is generated. Valid values:</p>
+             * <ul>
+             * <li>LongTypePrefixAndIndexSuffix (default): long-type prefix + index-type suffix</li>
+             * <li>LongTypePrefixAndHashSuffix: long-type prefix + hash-type suffix</li>
+             * <li>ShortTypePrefixAndHashSuffix: short-type prefix + hash-type suffix</li>
+             * </ul>
              * 
-             * *   LongTypePrefixAndIndexSuffix (default): long-type prefix + index-type suffix
-             * *   LongTypePrefixAndHashSuffix: long-type prefix + hash-type suffix
-             * *   ShortTypePrefixAndHashSuffix: short-type prefix + hash-type suffix
+             * <strong>example:</strong>
+             * <p>LongTypePrefixAndIndexSuffix</p>
              */
             public Builder logicalIdStrategy(String logicalIdStrategy) {
                 this.logicalIdStrategy = logicalIdStrategy;
@@ -731,7 +839,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The preference parameters of the scenario.
+             * <p>The preference parameters of the resource scenario.</p>
              */
             public Builder preferenceParameters(java.util.List < PreferenceParameters> preferenceParameters) {
                 this.preferenceParameters = preferenceParameters;
@@ -739,7 +847,10 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the source resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmzmhzoaad5oq</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -747,7 +858,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The source resource group.
+             * <p>The source resource group.</p>
              */
             public Builder sourceResourceGroup(SourceResourceGroup sourceResourceGroup) {
                 this.sourceResourceGroup = sourceResourceGroup;
@@ -755,7 +866,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The source resources.
+             * <p>The source resources.</p>
              */
             public Builder sourceResources(java.util.List < SourceResources> sourceResources) {
                 this.sourceResources = sourceResources;
@@ -763,7 +874,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The source tag.
+             * <p>The source tag.</p>
              */
             public Builder sourceTag(SourceTag sourceTag) {
                 this.sourceTag = sourceTag;
@@ -771,7 +882,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The preset information of the stack.
+             * <p>The preset information of the stack.</p>
              */
             public Builder stackProvision(StackProvision stackProvision) {
                 this.stackProvision = stackProvision;
@@ -779,7 +890,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The stacks that are associated with the scenario.
+             * <p>The stacks that are associated with the resource scenario.</p>
              */
             public Builder stacks(java.util.List < Stacks> stacks) {
                 this.stacks = stacks;
@@ -787,12 +898,15 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the scenario. Valid values:
-             * <p>
+             * <p>The state of the resource scenario. Valid values:</p>
+             * <ul>
+             * <li>GENERATE_IN_PROGRESS: The resource scenario is being created.</li>
+             * <li>GENERATE_COMPLETE: The resource scenario is created.</li>
+             * <li>GENERATE_FAILED: The resource scenario fails to be created.</li>
+             * </ul>
              * 
-             * *   GENERATE_IN_PROGRESS: The scenario is being created.
-             * *   GENERATE_COMPLETE: The scenario is created.
-             * *   GENERATE_FAILED: The scenario fails to be created.
+             * <strong>example:</strong>
+             * <p>GENERATE_COMPLETE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -800,10 +914,13 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the scenario fails to be created.
-             * <p>
+             * <p>The reason why the resource scenario fails to be created.</p>
+             * <blockquote>
+             * <p>This parameter is returned only if you set Status to GENERATE_FAILED.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only if you set Status to GENERATE_FAILED.
+             * <strong>example:</strong>
+             * <p>Resource ALIYUN::ECS::VPC vpc-m5eauuq80anx59v28**** could not be found for template scratch.</p>
              */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;
@@ -811,7 +928,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The scenario data.
+             * <p>The resource scenario data.</p>
              */
             public Builder templateScratchData(java.util.Map < String, ? > templateScratchData) {
                 this.templateScratchData = templateScratchData;
@@ -819,7 +936,10 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the scenario.
+             * <p>The ID of the resource scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ts-7f7a704cf71c49a6****</p>
              */
             public Builder templateScratchId(String templateScratchId) {
                 this.templateScratchId = templateScratchId;
@@ -827,11 +947,14 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the scenario. Valid values:
-             * <p>
+             * <p>The type of the resource scenario. Valid values:</p>
+             * <ul>
+             * <li>ResourceImport: resource management</li>
+             * <li>ArchitectureReplication: resource replication</li>
+             * </ul>
              * 
-             * *   ResourceImport: resource management
-             * *   ArchitectureReplication: resource replication
+             * <strong>example:</strong>
+             * <p>ArchitectureReplication</p>
              */
             public Builder templateScratchType(String templateScratchType) {
                 this.templateScratchType = templateScratchType;
@@ -839,10 +962,11 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the scenario was updated.
-             * <p>
+             * <p>The time at which the resource scenario was updated.</p>
+             * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
              * 
-             * The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
+             * <strong>example:</strong>
+             * <p>2021-12-22T01:49:23</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

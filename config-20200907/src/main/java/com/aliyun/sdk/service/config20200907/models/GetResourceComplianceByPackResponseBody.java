@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResourceComplianceByPackResponseBody} extends {@link TeaModel}
  *
  * <p>GetResourceComplianceByPackResponseBody</p>
  */
 public class GetResourceComplianceByPackResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceComplianceResult")
+    @com.aliyun.core.annotation.NameInMap("ResourceComplianceResult")
     private ResourceComplianceResult resourceComplianceResult;
 
     private GetResourceComplianceByPackResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class GetResourceComplianceByPackResponseBody extends TeaModel {
         private ResourceComplianceResult resourceComplianceResult; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6EC7AED1-172F-42AE-9C12-295BC2ADB751</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class GetResourceComplianceByPackResponseBody extends TeaModel {
         }
 
         /**
-         * The compliance evaluation results returned.
+         * <p>The compliance evaluation results returned.</p>
          */
         public Builder resourceComplianceResult(ResourceComplianceResult resourceComplianceResult) {
             this.resourceComplianceResult = resourceComplianceResult;
@@ -71,14 +79,20 @@ public class GetResourceComplianceByPackResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetResourceComplianceByPackResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourceComplianceByPackResponseBody</p>
+     */
     public static class ResourceComplianceResult extends TeaModel {
-        @NameInMap("CompliancePackId")
+        @com.aliyun.core.annotation.NameInMap("CompliancePackId")
         private String compliancePackId;
 
-        @NameInMap("NonCompliantCount")
+        @com.aliyun.core.annotation.NameInMap("NonCompliantCount")
         private Integer nonCompliantCount;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private ResourceComplianceResult(Builder builder) {
@@ -122,7 +136,10 @@ public class GetResourceComplianceByPackResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The ID of the compliance package.
+             * <p>The ID of the compliance package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cp-541e626622af0087****</p>
              */
             public Builder compliancePackId(String compliancePackId) {
                 this.compliancePackId = compliancePackId;
@@ -130,7 +147,10 @@ public class GetResourceComplianceByPackResponseBody extends TeaModel {
             }
 
             /**
-             * The number of non-compliant resources.
+             * <p>The number of non-compliant resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder nonCompliantCount(Integer nonCompliantCount) {
                 this.nonCompliantCount = nonCompliantCount;
@@ -138,7 +158,10 @@ public class GetResourceComplianceByPackResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of resources.
+             * <p>The total number of resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

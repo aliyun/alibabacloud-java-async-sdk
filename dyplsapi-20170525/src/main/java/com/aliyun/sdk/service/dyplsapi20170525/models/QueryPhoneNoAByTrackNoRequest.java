@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyplsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryPhoneNoAByTrackNoRequest} extends {@link RequestModel}
  *
  * <p>QueryPhoneNoAByTrackNoRequest</p>
  */
 public class QueryPhoneNoAByTrackNoRequest extends Request {
-    @Query
-    @NameInMap("CabinetNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CabinetNo")
     private String cabinetNo;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PhoneNoX")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNoX")
     private String phoneNoX;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("trackNo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("trackNo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String trackNo;
 
     private QueryPhoneNoAByTrackNoRequest(Builder builder) {
@@ -125,7 +130,10 @@ public class QueryPhoneNoAByTrackNoRequest extends Request {
         } 
 
         /**
-         * CabinetNo.
+         * <p>The cabinet number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25689****</p>
          */
         public Builder cabinetNo(String cabinetNo) {
             this.putQueryParameter("CabinetNo", cabinetNo);
@@ -143,7 +151,10 @@ public class QueryPhoneNoAByTrackNoRequest extends Request {
         }
 
         /**
-         * PhoneNoX.
+         * <p>Phone number X returned by the API operation for creating a binding.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1710000****</p>
          */
         public Builder phoneNoX(String phoneNoX) {
             this.putQueryParameter("PhoneNoX", phoneNoX);
@@ -170,7 +181,11 @@ public class QueryPhoneNoAByTrackNoRequest extends Request {
         }
 
         /**
-         * trackNo.
+         * <p>The tracking number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22573****</p>
          */
         public Builder trackNo(String trackNo) {
             this.putQueryParameter("trackNo", trackNo);

@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteRepositoryGroupRequest} extends {@link RequestModel}
  *
  * <p>DeleteRepositoryGroupRequest</p>
  */
 public class DeleteRepositoryGroupRequest extends Request {
-    @Path
-    @NameInMap("groupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("groupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long groupId;
 
-    @Query
-    @NameInMap("accessToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("accessToken")
     private String accessToken;
 
-    @Body
-    @NameInMap("reason")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("reason")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String reason;
 
-    @Query
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
     private DeleteRepositoryGroupRequest(Builder builder) {
@@ -99,7 +104,10 @@ public class DeleteRepositoryGroupRequest extends Request {
         } 
 
         /**
-         * groupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22901</p>
          */
         public Builder groupId(Long groupId) {
             this.putPathParameter("groupId", groupId);
@@ -117,7 +125,7 @@ public class DeleteRepositoryGroupRequest extends Request {
         }
 
         /**
-         * reason.
+         * <p>This parameter is required.</p>
          */
         public Builder reason(String reason) {
             this.putBodyParameter("reason", reason);
@@ -126,7 +134,10 @@ public class DeleteRepositoryGroupRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>624666bd54d036291ae13a36</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);

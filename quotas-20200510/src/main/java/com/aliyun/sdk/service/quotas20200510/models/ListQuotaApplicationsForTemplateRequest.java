@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListQuotaApplicationsForTemplateRequest</p>
  */
 public class ListQuotaApplicationsForTemplateRequest extends Request {
-    @Body
-    @NameInMap("ApplyEndTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApplyEndTime")
     private String applyEndTime;
 
-    @Body
-    @NameInMap("ApplyStartTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApplyStartTime")
     private String applyStartTime;
 
-    @Body
-    @NameInMap("BatchQuotaApplicationId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BatchQuotaApplicationId")
     private String batchQuotaApplicationId;
 
-    @Body
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Body
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Body
-    @NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
 
-    @Body
-    @NameInMap("QuotaActionCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QuotaActionCode")
     private String quotaActionCode;
 
-    @Body
-    @NameInMap("QuotaCategory")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QuotaCategory")
     private String quotaCategory;
 
     private ListQuotaApplicationsForTemplateRequest(Builder builder) {
@@ -152,7 +151,7 @@ public class ListQuotaApplicationsForTemplateRequest extends Request {
         } 
 
         /**
-         * ApplyEndTime.
+         * The UTC time when the quota application ends.
          */
         public Builder applyEndTime(String applyEndTime) {
             this.putBodyParameter("ApplyEndTime", applyEndTime);
@@ -161,7 +160,7 @@ public class ListQuotaApplicationsForTemplateRequest extends Request {
         }
 
         /**
-         * ApplyStartTime.
+         * The UTC time when the quota application starts.
          */
         public Builder applyStartTime(String applyStartTime) {
             this.putBodyParameter("ApplyStartTime", applyStartTime);
@@ -170,7 +169,7 @@ public class ListQuotaApplicationsForTemplateRequest extends Request {
         }
 
         /**
-         * BatchQuotaApplicationId.
+         * The ID of the quota application batch.
          */
         public Builder batchQuotaApplicationId(String batchQuotaApplicationId) {
             this.putBodyParameter("BatchQuotaApplicationId", batchQuotaApplicationId);
@@ -179,7 +178,10 @@ public class ListQuotaApplicationsForTemplateRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries to return for a single request.
+         * <p>
+         * 
+         * Valid values: 1 to 100. Default value: 30.
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -188,7 +190,10 @@ public class ListQuotaApplicationsForTemplateRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that marks the position from which you want to start the query.
+         * <p>
+         * 
+         * >  An empty value indicates that the query starts from the beginning.
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -197,7 +202,10 @@ public class ListQuotaApplicationsForTemplateRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The abbreviation of the Alibaba Cloud service name.
+         * <p>
+         * 
+         * >  To query the abbreviation of an Alibaba Cloud service name, call the [ListProducts](~~440555~~) operation and check the value of `ProductCode` in the response.
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -206,7 +214,7 @@ public class ListQuotaApplicationsForTemplateRequest extends Request {
         }
 
         /**
-         * QuotaActionCode.
+         * The quota ID.
          */
         public Builder quotaActionCode(String quotaActionCode) {
             this.putBodyParameter("QuotaActionCode", quotaActionCode);
@@ -215,7 +223,12 @@ public class ListQuotaApplicationsForTemplateRequest extends Request {
         }
 
         /**
-         * QuotaCategory.
+         * The quota type. Valid values:
+         * <p>
+         * 
+         * *   CommonQuota: general quota
+         * *   FlowControl: API rate limit
+         * *   WhiteListLabel: privilege
          */
         public Builder quotaCategory(String quotaCategory) {
             this.putBodyParameter("QuotaCategory", quotaCategory);

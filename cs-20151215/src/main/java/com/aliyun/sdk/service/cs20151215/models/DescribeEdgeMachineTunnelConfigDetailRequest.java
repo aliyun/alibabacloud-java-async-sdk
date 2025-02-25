@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEdgeMachineTunnelConfigDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribeEdgeMachineTunnelConfigDetailRequest</p>
  */
 public class DescribeEdgeMachineTunnelConfigDetailRequest extends Request {
-    @Path
-    @NameInMap("edge_machineid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("edge_machineid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String edgeMachineid;
 
     private DescribeEdgeMachineTunnelConfigDetailRequest(Builder builder) {
@@ -55,7 +60,11 @@ public class DescribeEdgeMachineTunnelConfigDetailRequest extends Request {
         } 
 
         /**
-         * The ID of the cloud-native box.
+         * <p>The ID of the cloud-native box.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc0725ddf688744979cd98445f67e****</p>
          */
         public Builder edgeMachineid(String edgeMachineid) {
             this.putPathParameter("edge_machineid", edgeMachineid);

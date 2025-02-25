@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.antiddos_public20170518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeIpDdosThresholdRequest</p>
  */
 public class DescribeIpDdosThresholdRequest extends Request {
-    @Query
-    @NameInMap("DdosRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DdosRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ddosRegionId;
 
-    @Query
-    @NameInMap("DdosType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DdosType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ddosType;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("InstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceType;
 
-    @Query
-    @NameInMap("InternetIp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetIp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String internetIp;
 
     private DescribeIpDdosThresholdRequest(Builder builder) {
@@ -115,7 +114,10 @@ public class DescribeIpDdosThresholdRequest extends Request {
         } 
 
         /**
-         * DdosRegionId.
+         * The region ID of the asset.
+         * <p>
+         * 
+         * > You can call the [DescribeRegions](~~353250~~) operation to query the most recent region list.
          */
         public Builder ddosRegionId(String ddosRegionId) {
             this.putQueryParameter("DdosRegionId", ddosRegionId);
@@ -124,7 +126,11 @@ public class DescribeIpDdosThresholdRequest extends Request {
         }
 
         /**
-         * DdosType.
+         * The type of the threshold. Valid values:
+         * <p>
+         * 
+         * *   **defense**: traffic scrubbing threshold
+         * *   **blackhole**: DDoS mitigation threshold
          */
         public Builder ddosType(String ddosType) {
             this.putQueryParameter("DdosType", ddosType);
@@ -133,7 +139,10 @@ public class DescribeIpDdosThresholdRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the asset.
+         * <p>
+         * 
+         * > You can call the [DescribeInstanceIpAddress](~~429562~~) operation to query the IDs of ECS instances, SLB instances, and EIPs within the current Alibaba Cloud account.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -142,7 +151,12 @@ public class DescribeIpDdosThresholdRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The type of the asset. Valid values:
+         * <p>
+         * 
+         * *   **ecs**: ECS instance
+         * *   **slb**: SLB instance
+         * *   **eip**: EIP
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -151,7 +165,7 @@ public class DescribeIpDdosThresholdRequest extends Request {
         }
 
         /**
-         * InternetIp.
+         * The IP address of the asset.
          */
         public Builder internetIp(String internetIp) {
             this.putQueryParameter("InternetIp", internetIp);

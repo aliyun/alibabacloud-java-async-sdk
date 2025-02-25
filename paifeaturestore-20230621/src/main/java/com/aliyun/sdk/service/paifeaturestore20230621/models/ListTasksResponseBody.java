@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTasksResponseBody} extends {@link TeaModel}
  *
  * <p>ListTasksResponseBody</p>
  */
 public class ListTasksResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Tasks")
-    private java.util.List < Tasks> tasks;
+    @com.aliyun.core.annotation.NameInMap("Tasks")
+    private java.util.List<Tasks> tasks;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListTasksResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class ListTasksResponseBody extends TeaModel {
     /**
      * @return tasks
      */
-    public java.util.List < Tasks> getTasks() {
+    public java.util.List<Tasks> getTasks() {
         return this.tasks;
     }
 
@@ -58,7 +63,7 @@ public class ListTasksResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Tasks> tasks; 
+        private java.util.List<Tasks> tasks; 
         private Integer totalCount; 
 
         /**
@@ -72,7 +77,7 @@ public class ListTasksResponseBody extends TeaModel {
         /**
          * Tasks.
          */
-        public Builder tasks(java.util.List < Tasks> tasks) {
+        public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
             return this;
         }
@@ -91,35 +96,41 @@ public class ListTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTasksResponseBody</p>
+     */
     public static class Tasks extends TeaModel {
-        @NameInMap("GmtCreateTime")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
 
-        @NameInMap("GmtExecutedTime")
+        @com.aliyun.core.annotation.NameInMap("GmtExecutedTime")
         private String gmtExecutedTime;
 
-        @NameInMap("GmtFinishedTime")
+        @com.aliyun.core.annotation.NameInMap("GmtFinishedTime")
         private String gmtFinishedTime;
 
-        @NameInMap("ObjectId")
+        @com.aliyun.core.annotation.NameInMap("ObjectId")
         private String objectId;
 
-        @NameInMap("ObjectType")
+        @com.aliyun.core.annotation.NameInMap("ObjectType")
         private String objectType;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private String projectId;
 
-        @NameInMap("ProjectName")
+        @com.aliyun.core.annotation.NameInMap("ProjectName")
         private String projectName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Tasks(Builder builder) {

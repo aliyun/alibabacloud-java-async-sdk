@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryTransactionResponseBody</p>
  */
 public class QueryTransactionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private QueryTransactionResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class QueryTransactionResponseBody extends TeaModel {
     } 
 
     public static class ReferenceList extends TeaModel {
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private String data;
 
-        @NameInMap("Length")
+        @com.aliyun.core.annotation.NameInMap("Length")
         private Integer length;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
         private ReferenceList(Builder builder) {
@@ -153,43 +152,43 @@ public class QueryTransactionResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("BlockHeight")
+        @com.aliyun.core.annotation.NameInMap("BlockHeight")
         private Long blockHeight;
 
-        @NameInMap("BlockVersion")
+        @com.aliyun.core.annotation.NameInMap("BlockVersion")
         private Integer blockVersion;
 
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private Integer category;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("ContentHash")
+        @com.aliyun.core.annotation.NameInMap("ContentHash")
         private String contentHash;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Hash")
+        @com.aliyun.core.annotation.NameInMap("Hash")
         private String hash;
 
-        @NameInMap("KeyName")
+        @com.aliyun.core.annotation.NameInMap("KeyName")
         private String keyName;
 
-        @NameInMap("KeyWrap")
+        @com.aliyun.core.annotation.NameInMap("KeyWrap")
         private String keyWrap;
 
-        @NameInMap("Nonce")
+        @com.aliyun.core.annotation.NameInMap("Nonce")
         private String nonce;
 
-        @NameInMap("ReferenceCount")
+        @com.aliyun.core.annotation.NameInMap("ReferenceCount")
         private Integer referenceCount;
 
-        @NameInMap("ReferenceList")
+        @com.aliyun.core.annotation.NameInMap("ReferenceList")
         private ReferenceList referenceList;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
         private Result(Builder builder) {

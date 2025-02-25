@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetWorkitemRelationsRequest} extends {@link RequestModel}
  *
  * <p>GetWorkitemRelationsRequest</p>
  */
 public class GetWorkitemRelationsRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Path
-    @NameInMap("workitemId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("workitemId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workitemId;
 
-    @Query
-    @NameInMap("relationType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("relationType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String relationType;
 
     private GetWorkitemRelationsRequest(Builder builder) {
@@ -85,7 +90,10 @@ public class GetWorkitemRelationsRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -94,7 +102,10 @@ public class GetWorkitemRelationsRequest extends Request {
         }
 
         /**
-         * workitemId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8876ad01xxxxx65d9710b2631</p>
          */
         public Builder workitemId(String workitemId) {
             this.putPathParameter("workitemId", workitemId);
@@ -103,7 +114,7 @@ public class GetWorkitemRelationsRequest extends Request {
         }
 
         /**
-         * relationType.
+         * <p>This parameter is required.</p>
          */
         public Builder relationType(String relationType) {
             this.putQueryParameter("relationType", relationType);

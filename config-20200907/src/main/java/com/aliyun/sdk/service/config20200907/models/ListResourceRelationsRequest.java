@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourceRelationsRequest} extends {@link RequestModel}
  *
  * <p>ListResourceRelationsRequest</p>
  */
 public class ListResourceRelationsRequest extends Request {
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 1000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 1)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("Region")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String region;
 
-    @Query
-    @NameInMap("RelationType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelationType")
     private String relationType;
 
-    @Query
-    @NameInMap("ResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceId;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
-    @Query
-    @NameInMap("TargetResourceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetResourceId")
     private String targetResourceId;
 
-    @Query
-    @NameInMap("TargetResourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetResourceType")
     private String targetResourceType;
 
     private ListResourceRelationsRequest(Builder builder) {
@@ -156,7 +161,10 @@ public class ListResourceRelationsRequest extends Request {
         } 
 
         /**
-         * The maximum number of entries to return for a single request. Valid values: 1 to 1000.
+         * <p>The maximum number of entries to return in a request. Valid values: 1 to 1000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -165,7 +173,10 @@ public class ListResourceRelationsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C2DjqMYSy0is7zSMGf21****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -174,7 +185,11 @@ public class ListResourceRelationsRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the resource resides.
+         * <p>The ID of the region in which the resource resides.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -183,42 +198,17 @@ public class ListResourceRelationsRequest extends Request {
         }
 
         /**
-         * The type of the relationship between the resource and the object.
-         * <p>
+         * <p>The type of the relationship between the resource and the object.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>IsContained: The object is included as part of the resource.</li>
+         * <li>IsAttachedTo: The object is added to the resource.</li>
+         * <li>IsAssociatedIn: The object is associated with the resource.</li>
+         * <li>Contains: The object contains the resource.</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   IsContained: The object is included as part of the resource.
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   IsAttachedTo: The object is added to the resource.
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   IsAssociatedIn: The object is associated with the resource.
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   Contains: The actual value contains the expected value.
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>IsAttachedTo</p>
          */
         public Builder relationType(String relationType) {
             this.putQueryParameter("RelationType", relationType);
@@ -227,7 +217,11 @@ public class ListResourceRelationsRequest extends Request {
         }
 
         /**
-         * The resource ID.
+         * <p>The resource ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-j6cajg9yrfoh4sas****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -236,7 +230,11 @@ public class ListResourceRelationsRequest extends Request {
         }
 
         /**
-         * The type of the resource.
+         * <p>The type of the resource.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::ECS::Instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -245,7 +243,10 @@ public class ListResourceRelationsRequest extends Request {
         }
 
         /**
-         * The ID of the resource that is associated with the object.
+         * <p>The ID of the resource that is associated with the object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-j6c8k731qbrc7fxi****</p>
          */
         public Builder targetResourceId(String targetResourceId) {
             this.putQueryParameter("TargetResourceId", targetResourceId);
@@ -254,7 +255,10 @@ public class ListResourceRelationsRequest extends Request {
         }
 
         /**
-         * The type of the resource that is associated with the object.
+         * <p>The type of the resource that is associated with the object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::ECS::Disk</p>
          */
         public Builder targetResourceType(String targetResourceType) {
             this.putQueryParameter("TargetResourceType", targetResourceType);

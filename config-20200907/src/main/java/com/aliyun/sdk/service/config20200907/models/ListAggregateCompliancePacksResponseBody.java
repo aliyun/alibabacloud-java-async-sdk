@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAggregateCompliancePacksResponseBody} extends {@link TeaModel}
  *
  * <p>ListAggregateCompliancePacksResponseBody</p>
  */
 public class ListAggregateCompliancePacksResponseBody extends TeaModel {
-    @NameInMap("CompliancePacksResult")
+    @com.aliyun.core.annotation.NameInMap("CompliancePacksResult")
     private CompliancePacksResult compliancePacksResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListAggregateCompliancePacksResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the compliance packages.
+         * <p>The information about the compliance packages.</p>
          */
         public Builder compliancePacksResult(CompliancePacksResult compliancePacksResult) {
             this.compliancePacksResult = compliancePacksResult;
@@ -58,7 +63,10 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B5806142-3090-4F86-A84E-12B3FE52C1C4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,32 +79,38 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAggregateCompliancePacksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAggregateCompliancePacksResponseBody</p>
+     */
     public static class CompliancePacks extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
 
-        @NameInMap("AggregatorId")
+        @com.aliyun.core.annotation.NameInMap("AggregatorId")
         private String aggregatorId;
 
-        @NameInMap("CompliancePackId")
+        @com.aliyun.core.annotation.NameInMap("CompliancePackId")
         private String compliancePackId;
 
-        @NameInMap("CompliancePackName")
+        @com.aliyun.core.annotation.NameInMap("CompliancePackName")
         private String compliancePackName;
 
-        @NameInMap("CompliancePackTemplateId")
+        @com.aliyun.core.annotation.NameInMap("CompliancePackTemplateId")
         private String compliancePackTemplateId;
 
-        @NameInMap("CreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private Integer riskLevel;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private CompliancePacks(Builder builder) {
@@ -194,7 +208,10 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the management account to which the compliance package belongs.
+             * <p>The ID of the management account to which the compliance package belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100931896542****</p>
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -202,7 +219,10 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the account group.
+             * <p>The ID of the account group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ca-f632626622af0079****</p>
              */
             public Builder aggregatorId(String aggregatorId) {
                 this.aggregatorId = aggregatorId;
@@ -210,7 +230,10 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the compliance package.
+             * <p>The ID of the compliance package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cp-fdc8626622af00f9****</p>
              */
             public Builder compliancePackId(String compliancePackId) {
                 this.compliancePackId = compliancePackId;
@@ -218,7 +241,10 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the compliance package.
+             * <p>The name of the compliance package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-name</p>
              */
             public Builder compliancePackName(String compliancePackName) {
                 this.compliancePackName = compliancePackName;
@@ -226,7 +252,10 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the compliance package template.
+             * <p>The ID of the compliance package template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ct-5f26ff4e06a300c4****</p>
              */
             public Builder compliancePackTemplateId(String compliancePackTemplateId) {
                 this.compliancePackTemplateId = compliancePackTemplateId;
@@ -234,7 +263,10 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the compliance package was created. Unit: milliseconds.
+             * <p>The timestamp when the compliance package was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1624243657000</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -242,7 +274,10 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the compliance package.
+             * <p>The description of the compliance package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -250,12 +285,15 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level of the resources that are not compliant with the managed rules in the compliance package. Valid values:
-             * <p>
+             * <p>The risk level of the resources that are not compliant with the managed rules in the compliance package. Valid values:</p>
+             * <ul>
+             * <li>1: high risk level.</li>
+             * <li>2: medium risk level.</li>
+             * <li>3: low risk level.</li>
+             * </ul>
              * 
-             * *   1: high risk level.
-             * *   2: medium risk level.
-             * *   3: low risk level.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;
@@ -263,11 +301,14 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the compliance package. Valid values:
-             * <p>
+             * <p>The status of the compliance package. Valid values:</p>
+             * <ul>
+             * <li>ACTIVE: The compliance package is available for use.</li>
+             * <li>CREATING: The compliance package is being created.</li>
+             * </ul>
              * 
-             * *   ACTIVE: The compliance package is available for use.
-             * *   CREATING: The compliance package is being created.
+             * <strong>example:</strong>
+             * <p>ACTIVE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -281,17 +322,23 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAggregateCompliancePacksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAggregateCompliancePacksResponseBody</p>
+     */
     public static class CompliancePacksResult extends TeaModel {
-        @NameInMap("CompliancePacks")
-        private java.util.List < CompliancePacks> compliancePacks;
+        @com.aliyun.core.annotation.NameInMap("CompliancePacks")
+        private java.util.List<CompliancePacks> compliancePacks;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private CompliancePacksResult(Builder builder) {
@@ -312,7 +359,7 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
         /**
          * @return compliancePacks
          */
-        public java.util.List < CompliancePacks> getCompliancePacks() {
+        public java.util.List<CompliancePacks> getCompliancePacks() {
             return this.compliancePacks;
         }
 
@@ -338,21 +385,24 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < CompliancePacks> compliancePacks; 
+            private java.util.List<CompliancePacks> compliancePacks; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Long totalCount; 
 
             /**
-             * The details of the compliance package.
+             * <p>The details of the compliance package.</p>
              */
-            public Builder compliancePacks(java.util.List < CompliancePacks> compliancePacks) {
+            public Builder compliancePacks(java.util.List<CompliancePacks> compliancePacks) {
                 this.compliancePacks = compliancePacks;
                 return this;
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -360,7 +410,10 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -368,7 +421,10 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of compliance packages returned.
+             * <p>The total number of compliance packages returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

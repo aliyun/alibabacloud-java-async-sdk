@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InquiryPriceRefundInstanceRequest} extends {@link RequestModel}
  *
  * <p>InquiryPriceRefundInstanceRequest</p>
  */
 public class InquiryPriceRefundInstanceRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
 
-    @Query
-    @NameInMap("ProductType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductType")
     private String productType;
 
     private InquiryPriceRefundInstanceRequest(Builder builder) {
@@ -96,7 +101,10 @@ public class InquiryPriceRefundInstanceRequest extends Request {
         } 
 
         /**
-         * This parameter is required for scenarios that need idempotence. The UUID that is used to ensure the idempotence of the request.
+         * <p>This parameter is required for scenarios that need idempotence. The UUID that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>793F021C-B589-1225-82A9-99232AEBE494</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -105,7 +113,10 @@ public class InquiryPriceRefundInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the instance. This parameter is required for unsubscription scenarios.
+         * <p>The ID of the instance. This parameter is required for unsubscription scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1etb69sqxgl4*******</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -114,7 +125,10 @@ public class InquiryPriceRefundInstanceRequest extends Request {
         }
 
         /**
-         * The code of the service. This parameter is required for unsubscription scenarios.
+         * <p>The code of the service. This parameter is required for unsubscription scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -123,7 +137,10 @@ public class InquiryPriceRefundInstanceRequest extends Request {
         }
 
         /**
-         * The type of the service. This parameter is required for unsubscription scenarios. Unless otherwise specified, set this parameter to an empty string.
+         * <p>The type of the service. This parameter is required for unsubscription scenarios. Unless otherwise specified, set this parameter to an empty string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>”“</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);

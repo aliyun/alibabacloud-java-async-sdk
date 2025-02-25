@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEncryptionKeyListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEncryptionKeyListResponseBody</p>
  */
 public class DescribeEncryptionKeyListResponseBody extends TeaModel {
-    @NameInMap("KeyIds")
+    @com.aliyun.core.annotation.NameInMap("KeyIds")
     private KeyIds keyIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeEncryptionKeyListResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeEncryptionKeyListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The custom keys that are available in the region.
+         * <p>The custom keys that are available in the region.</p>
          */
         public Builder keyIds(KeyIds keyIds) {
             this.keyIds = keyIds;
@@ -58,7 +58,10 @@ public class DescribeEncryptionKeyListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10E2160B-959C-5C3E-BFE6-86EC5925****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,8 +74,14 @@ public class DescribeEncryptionKeyListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEncryptionKeyListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEncryptionKeyListResponseBody</p>
+     */
     public static class KeyIds extends TeaModel {
-        @NameInMap("KeyId")
+        @com.aliyun.core.annotation.NameInMap("KeyId")
         private java.util.List < String > keyId;
 
         private KeyIds(Builder builder) {

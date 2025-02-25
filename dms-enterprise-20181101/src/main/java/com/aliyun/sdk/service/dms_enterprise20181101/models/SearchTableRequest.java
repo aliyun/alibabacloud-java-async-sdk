@@ -1,55 +1,60 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchTableRequest} extends {@link RequestModel}
  *
  * <p>SearchTableRequest</p>
  */
 public class SearchTableRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("DbType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbType")
     private String dbType;
 
-    @Query
-    @NameInMap("EnvType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnvType")
     private String envType;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ReturnGuid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReturnGuid")
     private Boolean returnGuid;
 
-    @Query
-    @NameInMap("SearchKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchKey")
     private String searchKey;
 
-    @Query
-    @NameInMap("SearchRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchRange")
     private String searchRange;
 
-    @Query
-    @NameInMap("SearchTarget")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchTarget")
     private String searchTarget;
 
-    @Query
-    @NameInMap("Tid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tid")
     private Long tid;
 
     private SearchTableRequest(Builder builder) {
@@ -189,17 +194,20 @@ public class SearchTableRequest extends Request {
         }
 
         /**
-         * The type of database. Valid values:
-         * <p>
+         * <p>The type of database. Valid values:</p>
+         * <ul>
+         * <li><strong>MySQL</strong></li>
+         * <li><strong>SQLServer</strong></li>
+         * <li><strong>PostgreSQL</strong></li>
+         * <li><strong>Oracle</strong></li>
+         * <li><strong>DRDS</strong></li>
+         * <li><strong>OceanBase</strong></li>
+         * <li><strong>Mongo</strong></li>
+         * <li><strong>Redis</strong></li>
+         * </ul>
          * 
-         * *   **MySQL**
-         * *   **SQLServer**
-         * *   **PostgreSQL**
-         * *   **Oracle**
-         * *   **DRDS**
-         * *   **OceanBase**
-         * *   **Mongo**
-         * *   **Redis**
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder dbType(String dbType) {
             this.putQueryParameter("DbType", dbType);
@@ -208,7 +216,10 @@ public class SearchTableRequest extends Request {
         }
 
         /**
-         * The type of the environment to which databases belong. For more information, see [Change the environment type of an instance](~~163309~~).
+         * <p>The type of the environment to which databases belong. For more information, see <a href="https://help.aliyun.com/document_detail/163309.html">Change the environment type of an instance</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRODUCT</p>
          */
         public Builder envType(String envType) {
             this.putQueryParameter("EnvType", envType);
@@ -217,7 +228,10 @@ public class SearchTableRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -226,7 +240,10 @@ public class SearchTableRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -235,7 +252,10 @@ public class SearchTableRequest extends Request {
         }
 
         /**
-         * Specifies whether to return the GUID of each table.
+         * <p>Specifies whether to return the GUID of each table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder returnGuid(Boolean returnGuid) {
             this.putQueryParameter("ReturnGuid", returnGuid);
@@ -244,7 +264,10 @@ public class SearchTableRequest extends Request {
         }
 
         /**
-         * The keyword that is used to query tables.
+         * <p>The keyword that is used to query tables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -253,13 +276,16 @@ public class SearchTableRequest extends Request {
         }
 
         /**
-         * The scope of tables that you want to query. Valid values:
-         * <p>
+         * <p>The scope of tables that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>HAS_PERMSSION</strong>: the tables on which the current account has permissions.</li>
+         * <li><strong>OWNER</strong>: the tables owned by the current account.</li>
+         * <li><strong>MY_FOCUS</strong>: the tables that the current account follows.</li>
+         * <li><strong>UNKNOWN</strong>: all tables.</li>
+         * </ul>
          * 
-         * *   **HAS_PERMSSION**: the tables on which the current account has permissions.
-         * *   **OWNER**: the tables owned by the current account.
-         * *   **MY_FOCUS**: the tables that the current account follows.
-         * *   **UNKNOWN**: all tables.
+         * <strong>example:</strong>
+         * <p>OWNER</p>
          */
         public Builder searchRange(String searchRange) {
             this.putQueryParameter("SearchRange", searchRange);
@@ -268,12 +294,15 @@ public class SearchTableRequest extends Request {
         }
 
         /**
-         * The type of table that you want to query. Valid values:
-         * <p>
+         * <p>The type of table that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>TABLE</strong>: physical and logical tables</li>
+         * <li><strong>SINGLE_TABLE</strong>: physical tables</li>
+         * <li><strong>LOGIC_TABLE</strong>: logical tables</li>
+         * </ul>
          * 
-         * *   **TABLE**: physical and logical tables
-         * *   **SINGLE_TABLE**: physical tables
-         * *   **LOGIC_TABLE**: logical tables
+         * <strong>example:</strong>
+         * <p>LOGIC_TABLE</p>
          */
         public Builder searchTarget(String searchTarget) {
             this.putQueryParameter("SearchTarget", searchTarget);
@@ -282,10 +311,13 @@ public class SearchTableRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p>To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a> section of the &quot;Manage DMS tenants&quot; topic.</p>
+         * </blockquote>
          * 
-         * > To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the [View information about the current tenant](~~181330~~) section of the "Manage DMS tenants" topic.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

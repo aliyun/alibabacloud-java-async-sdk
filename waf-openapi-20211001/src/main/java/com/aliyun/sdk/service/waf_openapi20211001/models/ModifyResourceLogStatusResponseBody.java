@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyResourceLogStatusResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyResourceLogStatusResponseBody</p>
  */
 public class ModifyResourceLogStatusResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Boolean status;
 
     private ModifyResourceLogStatusResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class ModifyResourceLogStatusResponseBody extends TeaModel {
         private Boolean status; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7C55A3E5-638A-5D6E-9A2F-C3CE5A677EC5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,11 +66,14 @@ public class ModifyResourceLogStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the log collection feature is enabled for the protected object. Valid values:
-         * <p>
+         * <p>Indicates whether the log collection feature is enabled for the protected object. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder status(Boolean status) {
             this.status = status;

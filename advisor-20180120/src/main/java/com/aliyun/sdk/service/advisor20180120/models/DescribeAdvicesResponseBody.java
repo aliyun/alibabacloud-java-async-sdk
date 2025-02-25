@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.advisor20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAdvicesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAdvicesResponseBody</p>
  */
 public class DescribeAdvicesResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAdvicesResponseBody(Builder builder) {
@@ -71,50 +76,60 @@ public class DescribeAdvicesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAdvicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAdvicesResponseBody</p>
+     */
     public static class Advice extends TeaModel {
-        @NameInMap("AliyunId")
+        @com.aliyun.core.annotation.NameInMap("AliyunId")
         private Long aliyunId;
 
-        @NameInMap("CheckId")
+        @com.aliyun.core.annotation.NameInMap("CheckId")
         private String checkId;
 
-        @NameInMap("CheckName")
+        @com.aliyun.core.annotation.NameInMap("CheckName")
         private String checkName;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("CheckPlanId")
+        private Long checkPlanId;
+
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GmtCreated")
+        @com.aliyun.core.annotation.NameInMap("GmtCreated")
         private String gmtCreated;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("IsExpired")
+        @com.aliyun.core.annotation.NameInMap("IsExpired")
         private Boolean isExpired;
 
-        @NameInMap("Product")
+        @com.aliyun.core.annotation.NameInMap("Product")
         private String product;
 
-        @NameInMap("Resource")
+        @com.aliyun.core.annotation.NameInMap("Resource")
         private String resource;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("Severity")
+        @com.aliyun.core.annotation.NameInMap("Severity")
         private Integer severity;
 
         private Advice(Builder builder) {
             this.aliyunId = builder.aliyunId;
             this.checkId = builder.checkId;
             this.checkName = builder.checkName;
+            this.checkPlanId = builder.checkPlanId;
             this.content = builder.content;
             this.description = builder.description;
             this.gmtCreated = builder.gmtCreated;
@@ -154,6 +169,13 @@ public class DescribeAdvicesResponseBody extends TeaModel {
          */
         public String getCheckName() {
             return this.checkName;
+        }
+
+        /**
+         * @return checkPlanId
+         */
+        public Long getCheckPlanId() {
+            return this.checkPlanId;
         }
 
         /**
@@ -230,6 +252,7 @@ public class DescribeAdvicesResponseBody extends TeaModel {
             private Long aliyunId; 
             private String checkId; 
             private String checkName; 
+            private Long checkPlanId; 
             private String content; 
             private String description; 
             private String gmtCreated; 
@@ -266,6 +289,14 @@ public class DescribeAdvicesResponseBody extends TeaModel {
             }
 
             /**
+             * CheckPlanId.
+             */
+            public Builder checkPlanId(Long checkPlanId) {
+                this.checkPlanId = checkPlanId;
+                return this;
+            }
+
+            /**
              * Content.
              */
             public Builder content(String content) {
@@ -298,7 +329,10 @@ public class DescribeAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * ID
+             * <p>ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -352,9 +386,15 @@ public class DescribeAdvicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAdvicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAdvicesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Advice")
-        private java.util.List < Advice> advice;
+        @com.aliyun.core.annotation.NameInMap("Advice")
+        private java.util.List<Advice> advice;
 
         private Data(Builder builder) {
             this.advice = builder.advice;
@@ -371,17 +411,17 @@ public class DescribeAdvicesResponseBody extends TeaModel {
         /**
          * @return advice
          */
-        public java.util.List < Advice> getAdvice() {
+        public java.util.List<Advice> getAdvice() {
             return this.advice;
         }
 
         public static final class Builder {
-            private java.util.List < Advice> advice; 
+            private java.util.List<Advice> advice; 
 
             /**
              * Advice.
              */
-            public Builder advice(java.util.List < Advice> advice) {
+            public Builder advice(java.util.List<Advice> advice) {
                 this.advice = advice;
                 return this;
             }

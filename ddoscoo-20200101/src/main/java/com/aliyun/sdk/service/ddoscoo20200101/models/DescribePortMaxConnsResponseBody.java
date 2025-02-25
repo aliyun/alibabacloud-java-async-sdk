@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePortMaxConnsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePortMaxConnsResponseBody</p>
  */
 public class DescribePortMaxConnsResponseBody extends TeaModel {
-    @NameInMap("PortMaxConns")
-    private java.util.List < PortMaxConns> portMaxConns;
+    @com.aliyun.core.annotation.NameInMap("PortMaxConns")
+    private java.util.List<PortMaxConns> portMaxConns;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePortMaxConnsResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribePortMaxConnsResponseBody extends TeaModel {
     /**
      * @return portMaxConns
      */
-    public java.util.List < PortMaxConns> getPortMaxConns() {
+    public java.util.List<PortMaxConns> getPortMaxConns() {
         return this.portMaxConns;
     }
 
@@ -46,19 +51,22 @@ public class DescribePortMaxConnsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < PortMaxConns> portMaxConns; 
+        private java.util.List<PortMaxConns> portMaxConns; 
         private String requestId; 
 
         /**
-         * An array consisting of the details of the maximum number of connections that are established over a port of the instance.
+         * <p>An array consisting of the details of the maximum number of connections that are established over a port of the instance.</p>
          */
-        public Builder portMaxConns(java.util.List < PortMaxConns> portMaxConns) {
+        public Builder portMaxConns(java.util.List<PortMaxConns> portMaxConns) {
             this.portMaxConns = portMaxConns;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>08F79110-2AF5-4FA7-998E-7C5E75EACF9C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class DescribePortMaxConnsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePortMaxConnsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePortMaxConnsResponseBody</p>
+     */
     public static class PortMaxConns extends TeaModel {
-        @NameInMap("Cps")
+        @com.aliyun.core.annotation.NameInMap("Cps")
         private Long cps;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
         private PortMaxConns(Builder builder) {
@@ -122,7 +136,10 @@ public class DescribePortMaxConnsResponseBody extends TeaModel {
             private String port; 
 
             /**
-             * The maximum number of connections per second (CPS).
+             * <p>The maximum number of connections per second (CPS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder cps(Long cps) {
                 this.cps = cps;
@@ -130,7 +147,10 @@ public class DescribePortMaxConnsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the instance.
+             * <p>The IP address of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>203.<em><strong>.</strong></em>.117</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -138,7 +158,10 @@ public class DescribePortMaxConnsResponseBody extends TeaModel {
             }
 
             /**
-             * The port of the instance.
+             * <p>The port of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(String port) {
                 this.port = port;

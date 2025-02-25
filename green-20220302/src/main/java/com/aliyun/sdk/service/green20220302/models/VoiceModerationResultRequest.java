@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220302.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VoiceModerationResultRequest} extends {@link RequestModel}
  *
  * <p>VoiceModerationResultRequest</p>
  */
 public class VoiceModerationResultRequest extends Request {
-    @Body
-    @NameInMap("Service")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Service")
     private String service;
 
-    @Body
-    @NameInMap("ServiceParameters")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceParameters")
     private String serviceParameters;
 
     private VoiceModerationResultRequest(Builder builder) {
@@ -68,7 +73,10 @@ public class VoiceModerationResultRequest extends Request {
         } 
 
         /**
-         * Service.
+         * <p>The type of the moderation service. Valid values: nickname_detection: user nickname</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nickname_detection</p>
          */
         public Builder service(String service) {
             this.putBodyParameter("Service", service);
@@ -77,7 +85,11 @@ public class VoiceModerationResultRequest extends Request {
         }
 
         /**
-         * ServiceParameters.
+         * <p>The parameters of API requests that are sent from API Gateway to the backend service.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/43988.html">ServiceParameter</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;taskId&quot;:&quot;xxxxx-xxxx&quot;}</p>
          */
         public Builder serviceParameters(String serviceParameters) {
             this.putBodyParameter("ServiceParameters", serviceParameters);

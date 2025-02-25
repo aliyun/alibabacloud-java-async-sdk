@@ -1,28 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryFpDBDeleteJobListResponse} extends {@link TeaModel}
  *
  * <p>QueryFpDBDeleteJobListResponse</p>
  */
 public class QueryFpDBDeleteJobListResponse extends Response {
-    @NameInMap("headers")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
-    @NameInMap("body")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("statusCode")
+    private Integer statusCode;
+
+    @com.aliyun.core.annotation.NameInMap("body")
     private QueryFpDBDeleteJobListResponseBody body;
 
     private QueryFpDBDeleteJobListResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +45,13 @@ public class QueryFpDBDeleteJobListResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public QueryFpDBDeleteJobListResponseBody getBody() {
@@ -52,6 +61,8 @@ public class QueryFpDBDeleteJobListResponse extends Response {
     public interface Builder extends Response.Builder<QueryFpDBDeleteJobListResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(QueryFpDBDeleteJobListResponseBody body);
 
@@ -64,6 +75,7 @@ public class QueryFpDBDeleteJobListResponse extends Response {
             extends Response.BuilderImpl<QueryFpDBDeleteJobListResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private QueryFpDBDeleteJobListResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +85,7 @@ public class QueryFpDBDeleteJobListResponse extends Response {
         private BuilderImpl(QueryFpDBDeleteJobListResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +95,15 @@ public class QueryFpDBDeleteJobListResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

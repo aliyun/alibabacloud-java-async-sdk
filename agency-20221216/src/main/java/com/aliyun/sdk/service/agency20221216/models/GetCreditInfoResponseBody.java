@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCreditInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetCreditInfoResponseBody</p>
  */
 public class GetCreditInfoResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetCreditInfoResponseBody(Builder builder) {
@@ -86,7 +91,14 @@ public class GetCreditInfoResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>Result Code:</p>
+         * <ul>
+         * <li>200 OK</li>
+         * <li>1109 System Error</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +106,7 @@ public class GetCreditInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +114,10 @@ public class GetCreditInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Message Information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +125,10 @@ public class GetCreditInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID, Alibaba Cloud will track errors with this.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +136,10 @@ public class GetCreditInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Candidate Value: True/False, which indicates whether the current API call itself is successful. It does not guarantee the success of subsequent business operations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,29 +152,35 @@ public class GetCreditInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCreditInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCreditInfoResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AccountStatus")
+        @com.aliyun.core.annotation.NameInMap("AccountStatus")
         private String accountStatus;
 
-        @NameInMap("AlarmThreshold")
+        @com.aliyun.core.annotation.NameInMap("AlarmThreshold")
         private String alarmThreshold;
 
-        @NameInMap("AvailableCredit")
+        @com.aliyun.core.annotation.NameInMap("AvailableCredit")
         private String availableCredit;
 
-        @NameInMap("ConsumedUndeductedValue")
+        @com.aliyun.core.annotation.NameInMap("ConsumedUndeductedValue")
         private String consumedUndeductedValue;
 
-        @NameInMap("CreditLine")
+        @com.aliyun.core.annotation.NameInMap("CreditLine")
         private String creditLine;
 
-        @NameInMap("OutstandingBalance")
+        @com.aliyun.core.annotation.NameInMap("OutstandingBalance")
         private String outstandingBalance;
 
-        @NameInMap("ZeroCreditShutdownPolicy")
+        @com.aliyun.core.annotation.NameInMap("ZeroCreditShutdownPolicy")
         private String zeroCreditShutdownPolicy;
 
-        @NameInMap("newBuyStatus")
+        @com.aliyun.core.annotation.NameInMap("newBuyStatus")
         private String newBuyStatus;
 
         private Data(Builder builder) {
@@ -242,7 +269,15 @@ public class GetCreditInfoResponseBody extends TeaModel {
             private String newBuyStatus; 
 
             /**
-             * AccountStatus.
+             * <p>The Credit Control status, Value Range:</br></p>
+             * <ol>
+             * <li>normal - Sub Account status is running as usual.</li>
+             * <li>arrearsNotShutdown - Sub Account status is running as usual, but have outstanding bill(s).</li>
+             * <li>shutdown -  Sub Account status is down.</li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder accountStatus(String accountStatus) {
                 this.accountStatus = accountStatus;
@@ -250,7 +285,10 @@ public class GetCreditInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AlarmThreshold.
+             * <p>Percentage value, when the available credit limit is lower than this credit limit percentage, a notification E-mail will be sent to the main account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder alarmThreshold(String alarmThreshold) {
                 this.alarmThreshold = alarmThreshold;
@@ -258,7 +296,10 @@ public class GetCreditInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AvailableCredit.
+             * <p>The Credit available to consume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>800</p>
              */
             public Builder availableCredit(String availableCredit) {
                 this.availableCredit = availableCredit;
@@ -266,7 +307,10 @@ public class GetCreditInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumedUndeductedValue.
+             * <p>Obtain total unpaid amount on demo bill before simulated deduction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.000000</p>
              */
             public Builder consumedUndeductedValue(String consumedUndeductedValue) {
                 this.consumedUndeductedValue = consumedUndeductedValue;
@@ -274,7 +318,10 @@ public class GetCreditInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CreditLine.
+             * <p>The Credit Line of Sub Account</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder creditLine(String creditLine) {
                 this.creditLine = creditLine;
@@ -282,7 +329,10 @@ public class GetCreditInfoResponseBody extends TeaModel {
             }
 
             /**
-             * OutstandingBalance.
+             * <p>The Credit have been consumed by Sub Account, and haven&quot;t be paid.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder outstandingBalance(String outstandingBalance) {
                 this.outstandingBalance = outstandingBalance;
@@ -290,7 +340,15 @@ public class GetCreditInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ZeroCreditShutdownPolicy.
+             * <p>The systematic controlling policy for resource management, specifically when the available Credit of Sub Account falls to 0 or less.</br></p>
+             * <ul>
+             * <li>1: delayStop. The account have Shutdown-delay Privilege,  After Shutdown-delay Credit is ran out, Alibaba Cloud will take over resources and keep the instance for 15 days. In addition, the instance will be released if Sub Account failed to pay the bill within these 15 days.</br></li>
+             * <li>2: noStop. Partner will manually manage Shutdown Status for Sub Account. Meanwhile, System would not manage the resource&quot;s life-circle of Sub Account.</br></li>
+             * <li>3: immediatelyStop. Once valid quota of Sub Account falls below 0 and be identified as defaulting account, it will trigger the instance shutdown immediately.</br></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>delayStop</p>
              */
             public Builder zeroCreditShutdownPolicy(String zeroCreditShutdownPolicy) {
                 this.zeroCreditShutdownPolicy = zeroCreditShutdownPolicy;
@@ -298,7 +356,14 @@ public class GetCreditInfoResponseBody extends TeaModel {
             }
 
             /**
-             * newBuyStatus.
+             * <p>Manage order operation.</p>
+             * <ul>
+             * <li>ban：Ban the new purchase action.</li>
+             * <li>normal：The account could raise new purchase order as usual.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ban</p>
              */
             public Builder newBuyStatus(String newBuyStatus) {
                 this.newBuyStatus = newBuyStatus;

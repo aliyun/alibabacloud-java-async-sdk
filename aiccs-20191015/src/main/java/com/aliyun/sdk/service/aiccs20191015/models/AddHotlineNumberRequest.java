@@ -1,68 +1,73 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddHotlineNumberRequest} extends {@link RequestModel}
  *
  * <p>AddHotlineNumberRequest</p>
  */
 public class AddHotlineNumberRequest extends Request {
-    @Body
-    @NameInMap("Description")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String description;
 
-    @Body
-    @NameInMap("EnableInbound")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableInbound")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean enableInbound;
 
-    @Body
-    @NameInMap("EnableInboundEvaluation")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableInboundEvaluation")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean enableInboundEvaluation;
 
-    @Body
-    @NameInMap("EnableOutbound")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableOutbound")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean enableOutbound;
 
-    @Body
-    @NameInMap("EnableOutboundEvaluation")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableOutboundEvaluation")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean enableOutboundEvaluation;
 
-    @Body
-    @NameInMap("EvaluationLevel")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EvaluationLevel")
     private Integer evaluationLevel;
 
-    @Body
-    @NameInMap("HotlineNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotlineNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hotlineNumber;
 
-    @Body
-    @NameInMap("InboundFlowId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InboundFlowId")
     private Long inboundFlowId;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("OutboundAllDepart")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OutboundAllDepart")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean outboundAllDepart;
 
-    @Body
-    @NameInMap("OutboundRangeList")
-    private java.util.List < OutboundRangeList> outboundRangeList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OutboundRangeList")
+    private java.util.List<OutboundRangeList> outboundRangeList;
 
     private AddHotlineNumberRequest(Builder builder) {
         super(builder);
@@ -165,7 +170,7 @@ public class AddHotlineNumberRequest extends Request {
     /**
      * @return outboundRangeList
      */
-    public java.util.List < OutboundRangeList> getOutboundRangeList() {
+    public java.util.List<OutboundRangeList> getOutboundRangeList() {
         return this.outboundRangeList;
     }
 
@@ -180,7 +185,7 @@ public class AddHotlineNumberRequest extends Request {
         private Long inboundFlowId; 
         private String instanceId; 
         private Boolean outboundAllDepart; 
-        private java.util.List < OutboundRangeList> outboundRangeList; 
+        private java.util.List<OutboundRangeList> outboundRangeList; 
 
         private Builder() {
             super();
@@ -202,7 +207,10 @@ public class AddHotlineNumberRequest extends Request {
         } 
 
         /**
-         * 号码描述
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -211,7 +219,10 @@ public class AddHotlineNumberRequest extends Request {
         }
 
         /**
-         * 是否用于入呼
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableInbound(Boolean enableInbound) {
             this.putBodyParameter("EnableInbound", enableInbound);
@@ -220,7 +231,10 @@ public class AddHotlineNumberRequest extends Request {
         }
 
         /**
-         * 是否开启入呼满意度
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableInboundEvaluation(Boolean enableInboundEvaluation) {
             this.putBodyParameter("EnableInboundEvaluation", enableInboundEvaluation);
@@ -229,7 +243,10 @@ public class AddHotlineNumberRequest extends Request {
         }
 
         /**
-         * 是否用于外呼
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableOutbound(Boolean enableOutbound) {
             this.putBodyParameter("EnableOutbound", enableOutbound);
@@ -238,7 +255,10 @@ public class AddHotlineNumberRequest extends Request {
         }
 
         /**
-         * 是否开启外呼满意度
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableOutboundEvaluation(Boolean enableOutboundEvaluation) {
             this.putBodyParameter("EnableOutboundEvaluation", enableOutboundEvaluation);
@@ -247,7 +267,7 @@ public class AddHotlineNumberRequest extends Request {
         }
 
         /**
-         * 满意度等级
+         * EvaluationLevel.
          */
         public Builder evaluationLevel(Integer evaluationLevel) {
             this.putBodyParameter("EvaluationLevel", evaluationLevel);
@@ -256,7 +276,10 @@ public class AddHotlineNumberRequest extends Request {
         }
 
         /**
-         * 号码
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>05710000****</p>
          */
         public Builder hotlineNumber(String hotlineNumber) {
             this.putBodyParameter("HotlineNumber", hotlineNumber);
@@ -265,7 +288,7 @@ public class AddHotlineNumberRequest extends Request {
         }
 
         /**
-         * 入呼ivr流程id
+         * InboundFlowId.
          */
         public Builder inboundFlowId(Long inboundFlowId) {
             this.putBodyParameter("InboundFlowId", inboundFlowId);
@@ -274,7 +297,10 @@ public class AddHotlineNumberRequest extends Request {
         }
 
         /**
-         * 实例id
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre-cn-***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -283,7 +309,10 @@ public class AddHotlineNumberRequest extends Request {
         }
 
         /**
-         * 外呼是否对所有部门生效
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder outboundAllDepart(Boolean outboundAllDepart) {
             this.putBodyParameter("OutboundAllDepart", outboundAllDepart);
@@ -292,9 +321,9 @@ public class AddHotlineNumberRequest extends Request {
         }
 
         /**
-         * 外呼生效范围
+         * OutboundRangeList.
          */
-        public Builder outboundRangeList(java.util.List < OutboundRangeList> outboundRangeList) {
+        public Builder outboundRangeList(java.util.List<OutboundRangeList> outboundRangeList) {
             String outboundRangeListShrink = shrink(outboundRangeList, "OutboundRangeList", "json");
             this.putBodyParameter("OutboundRangeList", outboundRangeListShrink);
             this.outboundRangeList = outboundRangeList;
@@ -308,12 +337,18 @@ public class AddHotlineNumberRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddHotlineNumberRequest} extends {@link TeaModel}
+     *
+     * <p>AddHotlineNumberRequest</p>
+     */
     public static class OutboundRangeList extends TeaModel {
-        @NameInMap("DepartmentId")
+        @com.aliyun.core.annotation.NameInMap("DepartmentId")
         private Long departmentId;
 
-        @NameInMap("GroupIdList")
-        private java.util.List < Long > groupIdList;
+        @com.aliyun.core.annotation.NameInMap("GroupIdList")
+        private java.util.List<Long> groupIdList;
 
         private OutboundRangeList(Builder builder) {
             this.departmentId = builder.departmentId;
@@ -338,16 +373,16 @@ public class AddHotlineNumberRequest extends Request {
         /**
          * @return groupIdList
          */
-        public java.util.List < Long > getGroupIdList() {
+        public java.util.List<Long> getGroupIdList() {
             return this.groupIdList;
         }
 
         public static final class Builder {
             private Long departmentId; 
-            private java.util.List < Long > groupIdList; 
+            private java.util.List<Long> groupIdList; 
 
             /**
-             * 生效部门id
+             * DepartmentId.
              */
             public Builder departmentId(Long departmentId) {
                 this.departmentId = departmentId;
@@ -355,9 +390,9 @@ public class AddHotlineNumberRequest extends Request {
             }
 
             /**
-             * 生效技能组列表（部门123下）
+             * GroupIdList.
              */
-            public Builder groupIdList(java.util.List < Long > groupIdList) {
+            public Builder groupIdList(java.util.List<Long> groupIdList) {
                 this.groupIdList = groupIdList;
                 return this;
             }

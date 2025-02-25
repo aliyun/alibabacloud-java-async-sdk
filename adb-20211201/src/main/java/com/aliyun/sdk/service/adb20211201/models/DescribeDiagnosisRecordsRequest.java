@@ -1,93 +1,98 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiagnosisRecordsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDiagnosisRecordsRequest</p>
  */
 public class DescribeDiagnosisRecordsRequest extends Request {
-    @Query
-    @NameInMap("ClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientIp")
     private String clientIp;
 
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("Database")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Database")
     private String database;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("Keyword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("MaxPeakMemory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxPeakMemory")
     private Long maxPeakMemory;
 
-    @Query
-    @NameInMap("MaxScanSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxScanSize")
     private Long maxScanSize;
 
-    @Query
-    @NameInMap("MinPeakMemory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinPeakMemory")
     private Long minPeakMemory;
 
-    @Query
-    @NameInMap("MinScanSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinScanSize")
     private Long minScanSize;
 
-    @Query
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("PatternId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PatternId")
     private String patternId;
 
-    @Query
-    @NameInMap("QueryCondition")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryCondition")
     private String queryCondition;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroup")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroup")
     private String resourceGroup;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @Query
-    @NameInMap("UserName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserName")
     private String userName;
 
     private DescribeDiagnosisRecordsRequest(Builder builder) {
@@ -308,7 +313,13 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         } 
 
         /**
-         * ClientIp.
+         * <p>The source IP address.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/308210.html">DescribeDiagnosisDimensions</a> operation to query the resource groups, database names, usernames, and source IP addresses of the SQL statements that meet a query condition.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>59.82.XX.XX</p>
          */
         public Builder clientIp(String clientIp) {
             this.putQueryParameter("ClientIp", clientIp);
@@ -317,7 +328,14 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/612397.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-bp1scs48yc125****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -326,7 +344,13 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * Database.
+         * <p>The name of the database on which the SQL statements are executed.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/308210.html">DescribeDiagnosisDimensions</a> operation to query the resource groups, database names, usernames, and source IP addresses of the SQL statements that meet a query condition.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>adb_demo</p>
          */
         public Builder database(String database) {
             this.putQueryParameter("Database", database);
@@ -335,7 +359,18 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. Set the time to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The end time must be later than the start time.</p>
+         * </li>
+         * <li><p>The maximum time range that can be specified is 24 hours.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1633017540000</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -344,7 +379,10 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The query keyword of the SQL statements.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -353,7 +391,16 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of file titles and error messages. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): simplified Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * <li><strong>ja</strong>: Japanese.</li>
+         * <li><strong>zh-tw</strong>: traditional Chinese.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -362,7 +409,10 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * MaxPeakMemory.
+         * <p>The maximum peak memory of the SQL statements. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89000000</p>
          */
         public Builder maxPeakMemory(Long maxPeakMemory) {
             this.putQueryParameter("MaxPeakMemory", maxPeakMemory);
@@ -371,7 +421,10 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * MaxScanSize.
+         * <p>The maximum scan size of the SQL statements. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024000000</p>
          */
         public Builder maxScanSize(Long maxScanSize) {
             this.putQueryParameter("MaxScanSize", maxScanSize);
@@ -380,7 +433,10 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * MinPeakMemory.
+         * <p>The minimum peak memory of the SQL statements. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder minPeakMemory(Long minPeakMemory) {
             this.putQueryParameter("MinPeakMemory", minPeakMemory);
@@ -389,7 +445,10 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * MinScanSize.
+         * <p>The minimum scan size of the SQL statements. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder minScanSize(Long minScanSize) {
             this.putQueryParameter("MinScanSize", minScanSize);
@@ -398,7 +457,35 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The order in which to sort the SQL statements by field, which contains the <code>Field</code> and <code>Type</code> fields. Specify the order in the JSON format. Example: <code>[{&quot;Field&quot;:&quot;StartTime&quot;, &quot;Type&quot;: &quot;desc&quot;}]</code>. Fields:</p>
+         * <ul>
+         * <li><p><code>Field</code> specifies the field that is used to sort the SQL statements. Valid values:</p>
+         * <ul>
+         * <li><code>StartTime</code>: the execution start time.</li>
+         * <li><code>Status</code>: the execution status.</li>
+         * <li><code>UserName</code>: the username.</li>
+         * <li><code>Cost</code>: the execution duration.</li>
+         * <li><code>PeakMemory</code>: the peak memory.</li>
+         * <li><code>ScanSize</code>: the amount of data that is scanned.</li>
+         * <li><code>Database</code>: the name of the database.</li>
+         * <li><code>ClientIp</code>: the source IP address.</li>
+         * <li><code>ResourceGroup</code>: the name of the resource group.</li>
+         * <li><code>QueueTime</code>: the amount of time that is consumed for queuing.</li>
+         * <li><code>OutputRows</code>: the number of output rows.</li>
+         * <li><code>OutputDataSize</code>: the amount of output data.</li>
+         * <li><code>ResourceCostRank</code>: the execution duration rank of operators that are used in the SQL statements. This value takes effect only when <code>QueryCondition</code> is set to <code>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;running&quot;}</code>.</li>
+         * </ul>
+         * </li>
+         * <li><p><code>Type</code> specifies the sorting order. Valid values (case-insensitive):</p>
+         * <ul>
+         * <li><code>Desc</code>: descending order.</li>
+         * <li><code>Asc</code>: ascending order.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;Field&quot;:&quot;StartTime&quot;, &quot;Type&quot;: &quot;desc&quot; }]</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -407,7 +494,10 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -416,7 +506,15 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong> (default)</li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -425,7 +523,10 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * PatternId.
+         * <p>The SQL pattern ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5575924945138******</p>
          */
         public Builder patternId(String patternId) {
             this.putQueryParameter("PatternId", patternId);
@@ -434,7 +535,15 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * QueryCondition.
+         * <p>The query condition for SQL statements, which can contain the <code>Type</code>, <code>Value</code>, <code>Min</code>, and <code>Max</code> fields. Specify the condition in the JSON format. <code>Type</code> specifies the query dimension. Valid values for Type: <code>maxCost</code>, <code>status</code>, and <code>cost</code>. <code>Value</code>, <code>Min</code>, or <code>Max</code> specifies the query range for the dimension. Valid values:</p>
+         * <ul>
+         * <li><code>{&quot;Type&quot;:&quot;maxCost&quot;,&quot;Value&quot;:&quot;100&quot;}</code>: queries the top 100 most time-consuming SQL statements. Set <code>Value</code> to 100.</li>
+         * <li><code>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;finished&quot;}</code>: queries the executed SQL statements. You can set <code>Value</code> to <code>running</code> to query the SQL statements that are being executed. You can also set Value to <code>failed</code> to query the SQL statements that failed to be executed.</li>
+         * <li><code>{&quot;Type&quot;:&quot;cost&quot;,&quot;Min&quot;:&quot;10&quot;,&quot;Max&quot;:&quot;200&quot;}</code>: queries the SQL statements whose execution duration is in the range of 10 to 200 milliseconds. You can also specify custom values for the Min and Max fields.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;finished&quot;}</p>
          */
         public Builder queryCondition(String queryCondition) {
             this.putQueryParameter("QueryCondition", queryCondition);
@@ -443,7 +552,14 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -452,7 +568,13 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * ResourceGroup.
+         * <p>The resource group to which the SQL statements belong.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/308210.html">DescribeDiagnosisDimensions</a> operation to query the resource groups, database names, usernames, and source IP addresses of the SQL statements that meet a query condition.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>user_default</p>
          */
         public Builder resourceGroup(String resourceGroup) {
             this.putQueryParameter("ResourceGroup", resourceGroup);
@@ -461,7 +583,13 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query. Set the time to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <blockquote>
+         * <p> You can query data only within the last 14 days.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1632931200000</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -470,7 +598,10 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * UserName.
+         * <p>The username that is used to execute the SQL statements. You can call the <a href="https://help.aliyun.com/document_detail/308210.html">DescribeDiagnosisDimensions</a> operation to query the resource groups, database names, usernames, and source IP addresses of the SQL statements that meet a query condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_user</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVirtualMFADeviceRequest} extends {@link RequestModel}
  *
  * <p>CreateVirtualMFADeviceRequest</p>
  */
 public class CreateVirtualMFADeviceRequest extends Request {
-    @Query
-    @NameInMap("VirtualMFADeviceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VirtualMFADeviceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String virtualMFADeviceName;
 
     private CreateVirtualMFADeviceRequest(Builder builder) {
@@ -55,10 +60,12 @@ public class CreateVirtualMFADeviceRequest extends Request {
         } 
 
         /**
-         * The name of the MFA device.
-         * <p>
+         * <p>The name of the MFA device.</p>
+         * <p>The name must be 1 to 64 characters in length and can contain letters, digits, and hyphens (-).</p>
+         * <p>This parameter is required.</p>
          * 
-         * The name must be 1 to 64 characters in length and can contain letters, digits, and hyphens (-).
+         * <strong>example:</strong>
+         * <p>device001</p>
          */
         public Builder virtualMFADeviceName(String virtualMFADeviceName) {
             this.putQueryParameter("VirtualMFADeviceName", virtualMFADeviceName);

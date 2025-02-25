@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InviteAccountToResourceDirectoryResponseBody} extends {@link TeaModel}
  *
  * <p>InviteAccountToResourceDirectoryResponseBody</p>
  */
 public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
-    @NameInMap("Handshake")
+    @com.aliyun.core.annotation.NameInMap("Handshake")
     private Handshake handshake;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private InviteAccountToResourceDirectoryResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the invitation.
+         * <p>The information about the invitation.</p>
          */
         public Builder handshake(Handshake handshake) {
             this.handshake = handshake;
@@ -58,7 +63,10 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9B34724D-54B0-4A51-B34D-4512372FE1BE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,38 +79,44 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link InviteAccountToResourceDirectoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>InviteAccountToResourceDirectoryResponseBody</p>
+     */
     public static class Handshake extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("HandshakeId")
+        @com.aliyun.core.annotation.NameInMap("HandshakeId")
         private String handshakeId;
 
-        @NameInMap("MasterAccountId")
+        @com.aliyun.core.annotation.NameInMap("MasterAccountId")
         private String masterAccountId;
 
-        @NameInMap("MasterAccountName")
+        @com.aliyun.core.annotation.NameInMap("MasterAccountName")
         private String masterAccountName;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("Note")
+        @com.aliyun.core.annotation.NameInMap("Note")
         private String note;
 
-        @NameInMap("ResourceDirectoryId")
+        @com.aliyun.core.annotation.NameInMap("ResourceDirectoryId")
         private String resourceDirectoryId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TargetEntity")
+        @com.aliyun.core.annotation.NameInMap("TargetEntity")
         private String targetEntity;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
         private Handshake(Builder builder) {
@@ -218,7 +232,10 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * The time when the invitation was created. The time is displayed in UTC.
+             * <p>The time when the invitation was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-08-10T09:55:41Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -226,7 +243,10 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the invitation expires. The time is displayed in UTC.
+             * <p>The time when the invitation expires. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-08-24T09:55:41Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -234,7 +254,10 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the invitation.
+             * <p>The ID of the invitation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>h-ycm4rp****</p>
              */
             public Builder handshakeId(String handshakeId) {
                 this.handshakeId = handshakeId;
@@ -242,7 +265,10 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the management account of the resource directory.
+             * <p>The ID of the management account of the resource directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172841235500****</p>
              */
             public Builder masterAccountId(String masterAccountId) {
                 this.masterAccountId = masterAccountId;
@@ -250,7 +276,10 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the management account of the resource directory.
+             * <p>The name of the management account of the resource directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alice</p>
              */
             public Builder masterAccountName(String masterAccountName) {
                 this.masterAccountName = masterAccountName;
@@ -258,7 +287,10 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the invitation was modified. The time is displayed in UTC.
+             * <p>The time when the invitation was modified. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-08-10T09:55:41Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -266,7 +298,10 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the invitation.
+             * <p>The description of the invitation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Welcome</p>
              */
             public Builder note(String note) {
                 this.note = note;
@@ -274,7 +309,10 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource directory.
+             * <p>The ID of the resource directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rd-abcdef****</p>
              */
             public Builder resourceDirectoryId(String resourceDirectoryId) {
                 this.resourceDirectoryId = resourceDirectoryId;
@@ -282,14 +320,17 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the invitation. Valid values:
-             * <p>
+             * <p>The status of the invitation. Valid values:</p>
+             * <ul>
+             * <li>Pending</li>
+             * <li>Accepted</li>
+             * <li>Cancelled</li>
+             * <li>Declined</li>
+             * <li>Expired</li>
+             * </ul>
              * 
-             * *   Pending
-             * *   Accepted
-             * *   Cancelled
-             * *   Declined
-             * *   Expired
+             * <strong>example:</strong>
+             * <p>Pending</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -297,7 +338,10 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID or logon email address of the invited account.
+             * <p>The ID or logon email address of the invited account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:someone@example.com">someone@example.com</a></p>
              */
             public Builder targetEntity(String targetEntity) {
                 this.targetEntity = targetEntity;
@@ -305,11 +349,14 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the invited account. Valid values:
-             * <p>
+             * <p>The type of the invited account. Valid values:</p>
+             * <ul>
+             * <li>Account: indicates the ID of the account.</li>
+             * <li>Email: indicates the logon email address of the account.</li>
+             * </ul>
              * 
-             * *   Account: indicates the ID of the account.
-             * *   Email: indicates the logon email address of the account.
+             * <strong>example:</strong>
+             * <p>Email</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

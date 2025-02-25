@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReleaseInstanceRequest} extends {@link RequestModel}
  *
  * <p>ReleaseInstanceRequest</p>
  */
 public class ReleaseInstanceRequest extends Request {
-    @Query
-    @NameInMap("ForceDeleteInstance")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForceDeleteInstance")
     private Boolean forceDeleteInstance;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private ReleaseInstanceRequest(Builder builder) {
@@ -84,11 +89,14 @@ public class ReleaseInstanceRequest extends Request {
         } 
 
         /**
-         * Specifies whether to immediately release the physical resources of the instance. Valid values:
-         * <p>
+         * <p>Specifies whether to immediately release the physical resources of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The physical resources of the instance are immediately released.</li>
+         * <li><strong>false</strong>: The physical resources of the instance are retained for a period of time before they are released.</li>
+         * </ul>
          * 
-         * *   **true**: The physical resources of the instance are immediately released.
-         * *   **false**: The physical resources of the instance are retained for a period of time before they are released.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forceDeleteInstance(Boolean forceDeleteInstance) {
             this.putQueryParameter("ForceDeleteInstance", forceDeleteInstance);
@@ -97,7 +105,11 @@ public class ReleaseInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka_post-cn-mp919o4v****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -106,7 +118,11 @@ public class ReleaseInstanceRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

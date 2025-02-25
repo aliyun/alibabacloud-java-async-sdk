@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20170622.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SenderStatisticsDetailByParamResponseBody</p>
  */
 public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
-    @NameInMap("NextStart")
+    @com.aliyun.core.annotation.NameInMap("NextStart")
     private Integer nextStart;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
     private SenderStatisticsDetailByParamResponseBody(Builder builder) {
@@ -92,29 +91,37 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
     } 
 
     public static class MailDetail extends TeaModel {
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("LastUpdateTime")
+        @com.aliyun.core.annotation.NameInMap("ErrorClassification")
+        private String errorClassification;
+
+        @com.aliyun.core.annotation.NameInMap("LastUpdateTime")
         private String lastUpdateTime;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("ToAddress")
+        @com.aliyun.core.annotation.NameInMap("Subject")
+        private String subject;
+
+        @com.aliyun.core.annotation.NameInMap("ToAddress")
         private String toAddress;
 
-        @NameInMap("UtcLastUpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UtcLastUpdateTime")
         private String utcLastUpdateTime;
 
         private MailDetail(Builder builder) {
             this.accountName = builder.accountName;
+            this.errorClassification = builder.errorClassification;
             this.lastUpdateTime = builder.lastUpdateTime;
             this.message = builder.message;
             this.status = builder.status;
+            this.subject = builder.subject;
             this.toAddress = builder.toAddress;
             this.utcLastUpdateTime = builder.utcLastUpdateTime;
         }
@@ -132,6 +139,13 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
          */
         public String getAccountName() {
             return this.accountName;
+        }
+
+        /**
+         * @return errorClassification
+         */
+        public String getErrorClassification() {
+            return this.errorClassification;
         }
 
         /**
@@ -156,6 +170,13 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
         }
 
         /**
+         * @return subject
+         */
+        public String getSubject() {
+            return this.subject;
+        }
+
+        /**
          * @return toAddress
          */
         public String getToAddress() {
@@ -171,9 +192,11 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
 
         public static final class Builder {
             private String accountName; 
+            private String errorClassification; 
             private String lastUpdateTime; 
             private String message; 
             private Integer status; 
+            private String subject; 
             private String toAddress; 
             private String utcLastUpdateTime; 
 
@@ -182,6 +205,14 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
+                return this;
+            }
+
+            /**
+             * ErrorClassification.
+             */
+            public Builder errorClassification(String errorClassification) {
+                this.errorClassification = errorClassification;
                 return this;
             }
 
@@ -210,6 +241,14 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
             }
 
             /**
+             * Subject.
+             */
+            public Builder subject(String subject) {
+                this.subject = subject;
+                return this;
+            }
+
+            /**
              * ToAddress.
              */
             public Builder toAddress(String toAddress) {
@@ -233,7 +272,7 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("mailDetail")
+        @com.aliyun.core.annotation.NameInMap("mailDetail")
         private java.util.List < MailDetail> mailDetail;
 
         private Data(Builder builder) {

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyImageFixCycleConfigResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyImageFixCycleConfigResponseBody</p>
  */
 public class ModifyImageFixCycleConfigResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Boolean data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyImageFixCycleConfigResponseBody(Builder builder) {
@@ -50,11 +55,14 @@ public class ModifyImageFixCycleConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the configurations of the scheduled image fix are modified.
-         * <p>
+         * <p>Indicates whether the configurations of the scheduled image fix are modified.</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -62,7 +70,10 @@ public class ModifyImageFixCycleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F7A4DF7E-57A4-5BBF-8290-223754AD****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

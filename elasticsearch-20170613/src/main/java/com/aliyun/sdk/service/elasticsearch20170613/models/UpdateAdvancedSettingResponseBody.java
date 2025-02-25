@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAdvancedSettingResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateAdvancedSettingResponseBody</p>
  */
 public class UpdateAdvancedSettingResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Boolean result;
 
     private UpdateAdvancedSettingResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class UpdateAdvancedSettingResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,11 +61,14 @@ public class UpdateAdvancedSettingResponseBody extends TeaModel {
         }
 
         /**
-         * Return results:
-         * <p>
+         * <p>Return results:</p>
+         * <ul>
+         * <li>true: garbage collector configuration changed successfully</li>
+         * <li>false: garbage collector configuration changed successfully failed</li>
+         * </ul>
          * 
-         * *   true: garbage collector configuration changed successfully
-         * *   false: garbage collector configuration changed successfully failed
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

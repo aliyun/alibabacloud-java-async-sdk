@@ -1,30 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DesensitizeDataRequest} extends {@link RequestModel}
  *
  * <p>DesensitizeDataRequest</p>
  */
 public class DesensitizeDataRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("Data")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Data")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String data;
 
-    @Body
-    @NameInMap("SceneCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SceneCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sceneCode;
 
     private DesensitizeDataRequest(Builder builder) {
@@ -85,7 +89,7 @@ public class DesensitizeDataRequest extends Request {
         } 
 
         /**
-         * The region ID. For example, the ID of the China (Shanghai) region is cn-shanghai, and that of the China (Zhangjiakou) region is cn-zhangjiakou. The system automatically determines the value of this parameter based on the endpoint used to call the operation.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -94,7 +98,11 @@ public class DesensitizeDataRequest extends Request {
         }
 
         /**
-         * The data that you want to mask.
+         * <p>The data that you want to mask.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15365291784</p>
          */
         public Builder data(String data) {
             this.putBodyParameter("Data", data);
@@ -103,7 +111,11 @@ public class DesensitizeDataRequest extends Request {
         }
 
         /**
-         * The code of the data masking scene. You can view the code on the Data Masking page in Data Security Guard of the DataWorks console.
+         * <p>The code of the data masking scenario. You can view the code on the Data Masking Management page in Data Security Guard of the DataWorks console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>_default_scene_code</p>
          */
         public Builder sceneCode(String sceneCode) {
             this.putBodyParameter("SceneCode", sceneCode);

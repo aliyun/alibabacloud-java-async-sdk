@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBlockedRegionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBlockedRegionsResponseBody</p>
  */
 public class DescribeBlockedRegionsResponseBody extends TeaModel {
-    @NameInMap("InfoList")
+    @com.aliyun.core.annotation.NameInMap("InfoList")
     private InfoList infoList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeBlockedRegionsResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeBlockedRegionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information returned.
+         * <p>The information returned.</p>
          */
         public Builder infoList(InfoList infoList) {
             this.infoList = infoList;
@@ -58,7 +58,10 @@ public class DescribeBlockedRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BFFCDFAD-DACC-484E-9BE6-0AF3B3A0DD23</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +74,20 @@ public class DescribeBlockedRegionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBlockedRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBlockedRegionsResponseBody</p>
+     */
     public static class InfoItem extends TeaModel {
-        @NameInMap("Continent")
+        @com.aliyun.core.annotation.NameInMap("Continent")
         private String continent;
 
-        @NameInMap("CountriesAndRegions")
+        @com.aliyun.core.annotation.NameInMap("CountriesAndRegions")
         private String countriesAndRegions;
 
-        @NameInMap("CountriesAndRegionsName")
+        @com.aliyun.core.annotation.NameInMap("CountriesAndRegionsName")
         private String countriesAndRegionsName;
 
         private InfoItem(Builder builder) {
@@ -122,7 +131,10 @@ public class DescribeBlockedRegionsResponseBody extends TeaModel {
             private String countriesAndRegionsName; 
 
             /**
-             * The district to which the country or region belongs.
+             * <p>The district to which the country or region belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Asia</p>
              */
             public Builder continent(String continent) {
                 this.continent = continent;
@@ -130,7 +142,10 @@ public class DescribeBlockedRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The abbreviation of the name of the country or region.
+             * <p>The abbreviation of the name of the country or region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AF</p>
              */
             public Builder countriesAndRegions(String countriesAndRegions) {
                 this.countriesAndRegions = countriesAndRegions;
@@ -138,7 +153,10 @@ public class DescribeBlockedRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the country or region.
+             * <p>The name of the country or region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Afghanistan</p>
              */
             public Builder countriesAndRegionsName(String countriesAndRegionsName) {
                 this.countriesAndRegionsName = countriesAndRegionsName;
@@ -152,8 +170,14 @@ public class DescribeBlockedRegionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBlockedRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBlockedRegionsResponseBody</p>
+     */
     public static class InfoList extends TeaModel {
-        @NameInMap("InfoItem")
+        @com.aliyun.core.annotation.NameInMap("InfoItem")
         private java.util.List < InfoItem> infoItem;
 
         private InfoList(Builder builder) {

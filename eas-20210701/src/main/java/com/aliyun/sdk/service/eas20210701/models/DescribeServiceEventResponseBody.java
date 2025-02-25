@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeServiceEventResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeServiceEventResponseBody</p>
  */
 public class DescribeServiceEventResponseBody extends TeaModel {
-    @NameInMap("Events")
-    private java.util.List < Events> events;
+    @com.aliyun.core.annotation.NameInMap("Events")
+    private java.util.List<Events> events;
 
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Long pageNum;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
-    @NameInMap("TotalPageNum")
+    @com.aliyun.core.annotation.NameInMap("TotalPageNum")
     private Long totalPageNum;
 
     private DescribeServiceEventResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class DescribeServiceEventResponseBody extends TeaModel {
     /**
      * @return events
      */
-    public java.util.List < Events> getEvents() {
+    public java.util.List<Events> getEvents() {
         return this.events;
     }
 
@@ -79,22 +84,25 @@ public class DescribeServiceEventResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Events> events; 
+        private java.util.List<Events> events; 
         private Long pageNum; 
         private String requestId; 
         private Long totalCount; 
         private Long totalPageNum; 
 
         /**
-         * Events.
+         * <p>The events.</p>
          */
-        public Builder events(java.util.List < Events> events) {
+        public Builder events(java.util.List<Events> events) {
             this.events = events;
             return this;
         }
 
         /**
-         * PageNum.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Long pageNum) {
             this.pageNum = pageNum;
@@ -102,7 +110,10 @@ public class DescribeServiceEventResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3D491C94-6239-5318-B4B4-799D859***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +121,10 @@ public class DescribeServiceEventResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>29</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +132,10 @@ public class DescribeServiceEventResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPageNum.
+         * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder totalPageNum(Long totalPageNum) {
             this.totalPageNum = totalPageNum;
@@ -131,17 +148,23 @@ public class DescribeServiceEventResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeServiceEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceEventResponseBody</p>
+     */
     public static class Events extends TeaModel {
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Events(Builder builder) {
@@ -194,7 +217,10 @@ public class DescribeServiceEventResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Message.
+             * <p>The returned message. The message is formatted and returned in the JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;versionId&quot;:1,&quot;message&quot;:&quot;Stage scale complete&quot;,&quot;availableInstance&quot;:1,&quot;unavailableInstance&quot;:0}</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -202,7 +228,10 @@ public class DescribeServiceEventResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * <p>The cause of the event. The information about the change in the service status is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Updating</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -210,7 +239,10 @@ public class DescribeServiceEventResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The time when the event occurred. The time must be in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-09 06:30:00</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -218,7 +250,14 @@ public class DescribeServiceEventResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The event type. Valid values:</p>
+             * <ul>
+             * <li>Normal</li>
+             * <li>Warning</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder type(String type) {
                 this.type = type;

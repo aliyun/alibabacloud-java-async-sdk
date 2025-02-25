@@ -115,14 +115,14 @@ public class AddApDeviceRequest extends Request {
             super();
         } 
 
-        private Builder(AddApDeviceRequest response) {
-            super(response);
-            this.apMac = response.apMac;
-            this.clientToken = response.clientToken;
-            this.extraParams = response.extraParams;
-            this.remark = response.remark;
-            this.serialNumber = response.serialNumber;
-            this.storeId = response.storeId;
+        private Builder(AddApDeviceRequest request) {
+            super(request);
+            this.apMac = request.apMac;
+            this.clientToken = request.clientToken;
+            this.extraParams = request.extraParams;
+            this.remark = request.remark;
+            this.serialNumber = request.serialNumber;
+            this.storeId = request.storeId;
         } 
 
         /**

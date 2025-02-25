@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAgentlessRelateMaliciousResponseBody} extends {@link TeaModel}
  *
  * <p>ListAgentlessRelateMaliciousResponseBody</p>
  */
 public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
-    @NameInMap("List")
-    private java.util.List < List> list;
+    @com.aliyun.core.annotation.NameInMap("List")
+    private java.util.List<List> list;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListAgentlessRelateMaliciousResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
     /**
      * @return list
      */
-    public java.util.List < List> getList() {
+    public java.util.List<List> getList() {
         return this.list;
     }
 
@@ -57,20 +62,20 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < List> list; 
+        private java.util.List<List> list; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
-         * The list of hosts that are associated with the risk.
+         * <p>The list of hosts that are associated with the risk.</p>
          */
-        public Builder list(java.util.List < List> list) {
+        public Builder list(java.util.List<List> list) {
             this.list = list;
             return this;
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +83,10 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FCA270CC-24C8-5DA1-9184-20F2605C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,35 +99,216 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAgentlessRelateMaliciousResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAgentlessRelateMaliciousResponseBody</p>
+     */
+    public static class Details extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("NameKey")
+        private String nameKey;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Details(Builder builder) {
+            this.name = builder.name;
+            this.nameKey = builder.nameKey;
+            this.type = builder.type;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Details create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return nameKey
+         */
+        public String getNameKey() {
+            return this.nameKey;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String nameKey; 
+            private String type; 
+            private String value; 
+
+            /**
+             * <p>The name of the detailed item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MD5</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * <p>The name key of the detailed item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>${suspicious.mp.db.maliciousfilemd5}</p>
+             */
+            public Builder nameKey(String nameKey) {
+                this.nameKey = nameKey;
+                return this;
+            }
+
+            /**
+             * <p>The type of the detailed item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * <p>The value of the detailed item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1f2e13a7c51ee89316ae50066515****</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Details build() {
+                return new Details(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListAgentlessRelateMaliciousResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAgentlessRelateMaliciousResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("FilePath")
+        @com.aliyun.core.annotation.NameInMap("Details")
+        private java.util.List<Details> details;
+
+        @com.aliyun.core.annotation.NameInMap("DownloadUrl")
+        private String downloadUrl;
+
+        @com.aliyun.core.annotation.NameInMap("FilePath")
         private String filePath;
 
-        @NameInMap("FirstScanTimestamp")
+        @com.aliyun.core.annotation.NameInMap("FirstScanTimestamp")
         private Long firstScanTimestamp;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("HighLight")
+        private String highLight;
+
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private Long id;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IntranetIp")
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("LatestScanTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LatestScanTimestamp")
         private Long latestScanTimestamp;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Level")
+        private String level;
+
+        @com.aliyun.core.annotation.NameInMap("MaliciousMd5")
+        private String maliciousMd5;
+
+        @com.aliyun.core.annotation.NameInMap("MaliciousName")
+        private String maliciousName;
+
+        @com.aliyun.core.annotation.NameInMap("MaliciousType")
+        private String maliciousType;
+
+        @com.aliyun.core.annotation.NameInMap("OperateResult")
+        private String operateResult;
+
+        @com.aliyun.core.annotation.NameInMap("OperateTimestamp")
+        private String operateTimestamp;
+
+        @com.aliyun.core.annotation.NameInMap("Partition")
+        private String partition;
+
+        @com.aliyun.core.annotation.NameInMap("TargetId")
+        private String targetId;
+
+        @com.aliyun.core.annotation.NameInMap("TargetName")
+        private String targetName;
+
+        @com.aliyun.core.annotation.NameInMap("TargetType")
+        private String targetType;
+
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private List(Builder builder) {
+            this.details = builder.details;
+            this.downloadUrl = builder.downloadUrl;
             this.filePath = builder.filePath;
             this.firstScanTimestamp = builder.firstScanTimestamp;
+            this.highLight = builder.highLight;
+            this.id = builder.id;
             this.instanceName = builder.instanceName;
             this.internetIp = builder.internetIp;
             this.intranetIp = builder.intranetIp;
             this.latestScanTimestamp = builder.latestScanTimestamp;
+            this.level = builder.level;
+            this.maliciousMd5 = builder.maliciousMd5;
+            this.maliciousName = builder.maliciousName;
+            this.maliciousType = builder.maliciousType;
+            this.operateResult = builder.operateResult;
+            this.operateTimestamp = builder.operateTimestamp;
+            this.partition = builder.partition;
+            this.targetId = builder.targetId;
+            this.targetName = builder.targetName;
+            this.targetType = builder.targetType;
             this.uuid = builder.uuid;
         }
 
@@ -129,6 +318,20 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
 
         public static List create() {
             return builder().build();
+        }
+
+        /**
+         * @return details
+         */
+        public java.util.List<Details> getDetails() {
+            return this.details;
+        }
+
+        /**
+         * @return downloadUrl
+         */
+        public String getDownloadUrl() {
+            return this.downloadUrl;
         }
 
         /**
@@ -143,6 +346,20 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
          */
         public Long getFirstScanTimestamp() {
             return this.firstScanTimestamp;
+        }
+
+        /**
+         * @return highLight
+         */
+        public String getHighLight() {
+            return this.highLight;
+        }
+
+        /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
         }
 
         /**
@@ -174,6 +391,76 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
         }
 
         /**
+         * @return level
+         */
+        public String getLevel() {
+            return this.level;
+        }
+
+        /**
+         * @return maliciousMd5
+         */
+        public String getMaliciousMd5() {
+            return this.maliciousMd5;
+        }
+
+        /**
+         * @return maliciousName
+         */
+        public String getMaliciousName() {
+            return this.maliciousName;
+        }
+
+        /**
+         * @return maliciousType
+         */
+        public String getMaliciousType() {
+            return this.maliciousType;
+        }
+
+        /**
+         * @return operateResult
+         */
+        public String getOperateResult() {
+            return this.operateResult;
+        }
+
+        /**
+         * @return operateTimestamp
+         */
+        public String getOperateTimestamp() {
+            return this.operateTimestamp;
+        }
+
+        /**
+         * @return partition
+         */
+        public String getPartition() {
+            return this.partition;
+        }
+
+        /**
+         * @return targetId
+         */
+        public String getTargetId() {
+            return this.targetId;
+        }
+
+        /**
+         * @return targetName
+         */
+        public String getTargetName() {
+            return this.targetName;
+        }
+
+        /**
+         * @return targetType
+         */
+        public String getTargetType() {
+            return this.targetType;
+        }
+
+        /**
          * @return uuid
          */
         public String getUuid() {
@@ -181,16 +468,52 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<Details> details; 
+            private String downloadUrl; 
             private String filePath; 
             private Long firstScanTimestamp; 
+            private String highLight; 
+            private Long id; 
             private String instanceName; 
             private String internetIp; 
             private String intranetIp; 
             private Long latestScanTimestamp; 
+            private String level; 
+            private String maliciousMd5; 
+            private String maliciousName; 
+            private String maliciousType; 
+            private String operateResult; 
+            private String operateTimestamp; 
+            private String partition; 
+            private String targetId; 
+            private String targetName; 
+            private String targetType; 
             private String uuid; 
 
             /**
-             * The file path.
+             * <p>The details of the alert events.</p>
+             */
+            public Builder details(java.util.List<Details> details) {
+                this.details = details;
+                return this;
+            }
+
+            /**
+             * <p>The URL to download the malicious image sample.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://upgrade-rule-pkg.oss-cn-beijing.aliyuncs.com/totalpackage/">https://upgrade-rule-pkg.oss-cn-beijing.aliyuncs.com/totalpackage/</a>***</p>
+             */
+            public Builder downloadUrl(String downloadUrl) {
+                this.downloadUrl = downloadUrl;
+                return this;
+            }
+
+            /**
+             * <p>The file path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/root/logs/arms/tracelogs/log****</p>
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
@@ -198,7 +521,10 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the first scan was performed. Unit: milliseconds.
+             * <p>The timestamp when the first scan was performed. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>168257753****</p>
              */
             public Builder firstScanTimestamp(Long firstScanTimestamp) {
                 this.firstScanTimestamp = firstScanTimestamp;
@@ -206,7 +532,32 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the asset.
+             * <p>The highlighted JSON string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;highlight&quot;:{&quot;ruleVersion&quot;:&quot;20230223&quot;,&quot;ruleId&quot;:600139,&quot;events&quot;:[[207,284]]}}</p>
+             */
+            public Builder highLight(String highLight) {
+                this.highLight = highLight;
+                return this;
+            }
+
+            /**
+             * <p>The event ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8012</p>
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * <p>The name of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sql-test-0****</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -214,7 +565,10 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the server.
+             * <p>The public IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.210.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -222,7 +576,10 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the server.
+             * <p>The private IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.25.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -230,7 +587,10 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the last scan was performed. Unit: milliseconds.
+             * <p>The timestamp when the last scan was performed. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>168257753****</p>
              */
             public Builder latestScanTimestamp(Long latestScanTimestamp) {
                 this.latestScanTimestamp = latestScanTimestamp;
@@ -238,7 +598,129 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * <p>The severity of the malicious file. Valid values:</p>
+             * <ul>
+             * <li>serious</li>
+             * <li>suspicious</li>
+             * <li>remind</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>serious</p>
+             */
+            public Builder level(String level) {
+                this.level = level;
+                return this;
+            }
+
+            /**
+             * <p>The MD5 hash value of the malicious file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1f2e13a7c51ee89316ae50066515****</p>
+             */
+            public Builder maliciousMd5(String maliciousMd5) {
+                this.maliciousMd5 = maliciousMd5;
+                return this;
+            }
+
+            /**
+             * <p>The name of the malicious file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WebShell</p>
+             */
+            public Builder maliciousName(String maliciousName) {
+                this.maliciousName = maliciousName;
+                return this;
+            }
+
+            /**
+             * <p>The type of the virus.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WebShell</p>
+             */
+            public Builder maliciousType(String maliciousType) {
+                this.maliciousType = maliciousType;
+                return this;
+            }
+
+            /**
+             * <p>The handling result of the alert.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>addWhitelist.USER.Success</p>
+             */
+            public Builder operateResult(String operateResult) {
+                this.operateResult = operateResult;
+                return this;
+            }
+
+            /**
+             * <p>The timestamp when the alert is handled. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>168257753****</p>
+             */
+            public Builder operateTimestamp(String operateTimestamp) {
+                this.operateTimestamp = operateTimestamp;
+                return this;
+            }
+
+            /**
+             * <p>The partition of the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/dev/xvda1</p>
+             */
+            public Builder partition(String partition) {
+                this.partition = partition;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the task object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-****</p>
+             */
+            public Builder targetId(String targetId) {
+                this.targetId = targetId;
+                return this;
+            }
+
+            /**
+             * <p>The name of the task object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>image_***</p>
+             */
+            public Builder targetName(String targetName) {
+                this.targetName = targetName;
+                return this;
+            }
+
+            /**
+             * <p>The type of the task object. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: snapshot.</li>
+             * <li><strong>2</strong>: image.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
+             */
+            public Builder targetType(String targetType) {
+                this.targetType = targetType;
+                return this;
+            }
+
+            /**
+             * <p>The UUID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>49e25e0f-bb51-4a5a-a1b3-13a4ddaa****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -252,17 +734,23 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAgentlessRelateMaliciousResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAgentlessRelateMaliciousResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -315,7 +803,10 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -323,7 +814,10 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -331,7 +825,10 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -339,7 +836,10 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>197</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

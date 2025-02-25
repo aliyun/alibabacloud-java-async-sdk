@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSchemasResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSchemasResponseBody</p>
  */
 public class DescribeSchemasResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeSchemasResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeSchemasResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The databases.
+         * <p>The databases.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -58,7 +58,10 @@ public class DescribeSchemasResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +74,17 @@ public class DescribeSchemasResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSchemasResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSchemasResponseBody</p>
+     */
     public static class Schema extends TeaModel {
-        @NameInMap("DBClusterId")
+        @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
 
-        @NameInMap("SchemaName")
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
         private String schemaName;
 
         private Schema(Builder builder) {
@@ -110,7 +119,10 @@ public class DescribeSchemasResponseBody extends TeaModel {
             private String schemaName; 
 
             /**
-             * The ID of the cluster.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>am-bp1xxxxxxxx47</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -118,7 +130,10 @@ public class DescribeSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adb_demo</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -132,8 +147,14 @@ public class DescribeSchemasResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSchemasResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSchemasResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("Schema")
+        @com.aliyun.core.annotation.NameInMap("Schema")
         private java.util.List < Schema> schema;
 
         private Items(Builder builder) {

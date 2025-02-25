@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRunningSqlConcurrencyControlRulesResponseBody} extends {@link TeaModel}
  *
  * <p>GetRunningSqlConcurrencyControlRulesResponseBody</p>
  */
 public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private GetRunningSqlConcurrencyControlRulesResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The detailed information, including the error codes and the number of entries that are returned.
+         * <p>The detailed information, including the error codes and the number of entries that are returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,10 +110,13 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +124,10 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,11 +135,14 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -138,35 +155,41 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRunningSqlConcurrencyControlRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRunningSqlConcurrencyControlRulesResponseBody</p>
+     */
     public static class RunningRules extends TeaModel {
-        @NameInMap("ConcurrencyControlTime")
+        @com.aliyun.core.annotation.NameInMap("ConcurrencyControlTime")
         private Long concurrencyControlTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private Long itemId;
 
-        @NameInMap("KeywordsHash")
+        @com.aliyun.core.annotation.NameInMap("KeywordsHash")
         private String keywordsHash;
 
-        @NameInMap("MaxConcurrency")
+        @com.aliyun.core.annotation.NameInMap("MaxConcurrency")
         private String maxConcurrency;
 
-        @NameInMap("SqlKeywords")
+        @com.aliyun.core.annotation.NameInMap("SqlKeywords")
         private String sqlKeywords;
 
-        @NameInMap("SqlType")
+        @com.aliyun.core.annotation.NameInMap("SqlType")
         private String sqlType;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private RunningRules(Builder builder) {
@@ -273,10 +296,13 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * The duration within which the SQL throttling rule takes effect. Unit: seconds.
-             * <p>
+             * <p>The duration within which the SQL throttling rule takes effect. Unit: seconds.</p>
+             * <blockquote>
+             * <p>The throttling rule takes effect only within this duration.</p>
+             * </blockquote>
              * 
-             * > The throttling rule takes effect only within this duration.
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder concurrencyControlTime(Long concurrencyControlTime) {
                 this.concurrencyControlTime = concurrencyControlTime;
@@ -284,7 +310,10 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-2ze1jdv45i7l6****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -292,7 +321,10 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the throttling rule that is applied to the instance.
+             * <p>The ID of the throttling rule that is applied to the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder itemId(Long itemId) {
                 this.itemId = itemId;
@@ -300,7 +332,10 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The hash value of the SQL keywords. The hash value is calculated based on the SQL keywords that are contained in the SQL statements to which the throttling rule is applied.
+             * <p>The hash value of the SQL keywords. The hash value is calculated based on the SQL keywords that are contained in the SQL statements to which the throttling rule is applied.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b0b8aceeb43baea87b219c81767b****</p>
              */
             public Builder keywordsHash(String keywordsHash) {
                 this.keywordsHash = keywordsHash;
@@ -308,10 +343,13 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of concurrent SQL statements. The value is a positive integer.
-             * <p>
+             * <p>The maximum number of concurrent SQL statements. The value is a positive integer.</p>
+             * <blockquote>
+             * <p>If the number of concurrent SQL statements that contain the specified keywords reaches this upper limit, the throttling rule is triggered.</p>
+             * </blockquote>
              * 
-             * > If the number of concurrent SQL statements that contain the specified keywords reaches this upper limit, the throttling rule is triggered.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder maxConcurrency(String maxConcurrency) {
                 this.maxConcurrency = maxConcurrency;
@@ -319,10 +357,13 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The keywords contained in the SQL statements to which the throttling rule was applied.
-             * <p>
+             * <p>The keywords contained in the SQL statements to which the throttling rule was applied.</p>
+             * <blockquote>
+             * <p>SQL keywords are separated by tildes (~). If the number of concurrent SQL statements that contain all the specified SQL keywords reaches the specified upper limit, the throttling rule is triggered.</p>
+             * </blockquote>
              * 
-             * > SQL keywords are separated by tildes (~). If the number of concurrent SQL statements that contain all the specified SQL keywords reaches the specified upper limit, the throttling rule is triggered.
+             * <strong>example:</strong>
+             * <p>call<del>open</del>api<del>test</del>4<del>from</del>POP</p>
              */
             public Builder sqlKeywords(String sqlKeywords) {
                 this.sqlKeywords = sqlKeywords;
@@ -330,12 +371,15 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the SQL statements. Valid values:
-             * <p>
+             * <p>The type of the SQL statements. Valid values:</p>
+             * <ul>
+             * <li><strong>SELECT</strong></li>
+             * <li><strong>UPDATE</strong></li>
+             * <li><strong>DELETE</strong></li>
+             * </ul>
              * 
-             * * **SELECT**
-             * * **UPDATE**
-             * * **DELETE**
+             * <strong>example:</strong>
+             * <p>SELECT</p>
              */
             public Builder sqlType(String sqlType) {
                 this.sqlType = sqlType;
@@ -343,7 +387,10 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the throttling rule started to take effect. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the throttling rule started to take effect. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1608888296000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -351,7 +398,10 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the throttling rule. The value of **Open** indicates that the throttling rule is in effect.
+             * <p>The status of the throttling rule. The value of <strong>Open</strong> indicates that the throttling rule is in effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Open</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -359,7 +409,10 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud account ID.
+             * <p>The Alibaba Cloud account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testxxx</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -373,9 +426,15 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRunningSqlConcurrencyControlRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRunningSqlConcurrencyControlRulesResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("runningRules")
-        private java.util.List < RunningRules> runningRules;
+        @com.aliyun.core.annotation.NameInMap("runningRules")
+        private java.util.List<RunningRules> runningRules;
 
         private List(Builder builder) {
             this.runningRules = builder.runningRules;
@@ -392,17 +451,17 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
         /**
          * @return runningRules
          */
-        public java.util.List < RunningRules> getRunningRules() {
+        public java.util.List<RunningRules> getRunningRules() {
             return this.runningRules;
         }
 
         public static final class Builder {
-            private java.util.List < RunningRules> runningRules; 
+            private java.util.List<RunningRules> runningRules; 
 
             /**
              * runningRules.
              */
-            public Builder runningRules(java.util.List < RunningRules> runningRules) {
+            public Builder runningRules(java.util.List<RunningRules> runningRules) {
                 this.runningRules = runningRules;
                 return this;
             }
@@ -414,11 +473,17 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRunningSqlConcurrencyControlRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRunningSqlConcurrencyControlRulesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private List list;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private Data(Builder builder) {
@@ -453,7 +518,7 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * The returned data.
+             * <p>The returned data.</p>
              */
             public Builder list(List list) {
                 this.list = list;
@@ -461,7 +526,10 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder total(Long total) {
                 this.total = total;

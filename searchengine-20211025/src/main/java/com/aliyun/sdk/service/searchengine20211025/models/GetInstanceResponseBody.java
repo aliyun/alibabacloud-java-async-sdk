@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>GetInstanceResponseBody</p>
  */
 public class GetInstanceResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
     private GetInstanceResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class GetInstanceResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E7B7D598-B080-5C8E-AA35-D43EC0D5F886</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the instance.
+         * <p>Response parameters</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -71,11 +79,510 @@ public class GetInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
+    public static class Network extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("allow")
+        private String allow;
+
+        @com.aliyun.core.annotation.NameInMap("endpoint")
+        private String endpoint;
+
+        @com.aliyun.core.annotation.NameInMap("publicEndpoint")
+        private String publicEndpoint;
+
+        @com.aliyun.core.annotation.NameInMap("vSwitchId")
+        private String vSwitchId;
+
+        @com.aliyun.core.annotation.NameInMap("vpcId")
+        private String vpcId;
+
+        private Network(Builder builder) {
+            this.allow = builder.allow;
+            this.endpoint = builder.endpoint;
+            this.publicEndpoint = builder.publicEndpoint;
+            this.vSwitchId = builder.vSwitchId;
+            this.vpcId = builder.vpcId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Network create() {
+            return builder().build();
+        }
+
+        /**
+         * @return allow
+         */
+        public String getAllow() {
+            return this.allow;
+        }
+
+        /**
+         * @return endpoint
+         */
+        public String getEndpoint() {
+            return this.endpoint;
+        }
+
+        /**
+         * @return publicEndpoint
+         */
+        public String getPublicEndpoint() {
+            return this.publicEndpoint;
+        }
+
+        /**
+         * @return vSwitchId
+         */
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public static final class Builder {
+            private String allow; 
+            private String endpoint; 
+            private String publicEndpoint; 
+            private String vSwitchId; 
+            private String vpcId; 
+
+            /**
+             * <p>The public domain name whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.0.0.1</p>
+             */
+            public Builder allow(String allow) {
+                this.allow = allow;
+                return this;
+            }
+
+            /**
+             * <p>The instance endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha-cn-35t3r****.ha.aliyuncs.com</p>
+             */
+            public Builder endpoint(String endpoint) {
+                this.endpoint = endpoint;
+                return this;
+            }
+
+            /**
+             * <p>The public endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha-cn-35t3ni****.public.ha.aliyuncs.com</p>
+             */
+            public Builder publicEndpoint(String publicEndpoint) {
+                this.publicEndpoint = publicEndpoint;
+                return this;
+            }
+
+            /**
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp11ldcf59q2n****</p>
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-wz9axk41d9vff****</p>
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            public Network build() {
+                return new Network(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
+    public static class QrsResource extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("category")
+        private String category;
+
+        @com.aliyun.core.annotation.NameInMap("cpu")
+        private Integer cpu;
+
+        @com.aliyun.core.annotation.NameInMap("disk")
+        private Integer disk;
+
+        @com.aliyun.core.annotation.NameInMap("mem")
+        private Integer mem;
+
+        @com.aliyun.core.annotation.NameInMap("nodeCount")
+        private Integer nodeCount;
+
+        private QrsResource(Builder builder) {
+            this.category = builder.category;
+            this.cpu = builder.cpu;
+            this.disk = builder.disk;
+            this.mem = builder.mem;
+            this.nodeCount = builder.nodeCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static QrsResource create() {
+            return builder().build();
+        }
+
+        /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
+        }
+
+        /**
+         * @return cpu
+         */
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        /**
+         * @return disk
+         */
+        public Integer getDisk() {
+            return this.disk;
+        }
+
+        /**
+         * @return mem
+         */
+        public Integer getMem() {
+            return this.mem;
+        }
+
+        /**
+         * @return nodeCount
+         */
+        public Integer getNodeCount() {
+            return this.nodeCount;
+        }
+
+        public static final class Builder {
+            private String category; 
+            private Integer cpu; 
+            private Integer disk; 
+            private Integer mem; 
+            private Integer nodeCount; 
+
+            /**
+             * <p>The category. Valid values: local_ssd, SSD, and cloud.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>local_ssd</p>
+             */
+            public Builder category(String category) {
+                this.category = category;
+                return this;
+            }
+
+            /**
+             * <p>The number of vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
+             */
+            public Builder cpu(Integer cpu) {
+                this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * <p>The storage capacity. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
+             */
+            public Builder disk(Integer disk) {
+                this.disk = disk;
+                return this;
+            }
+
+            /**
+             * <p>The memory of the instance. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder mem(Integer mem) {
+                this.mem = mem;
+                return this;
+            }
+
+            /**
+             * <p>The number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder nodeCount(Integer nodeCount) {
+                this.nodeCount = nodeCount;
+                return this;
+            }
+
+            public QrsResource build() {
+                return new QrsResource(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
+    public static class SearchResource extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("category")
+        private String category;
+
+        @com.aliyun.core.annotation.NameInMap("cpu")
+        private Integer cpu;
+
+        @com.aliyun.core.annotation.NameInMap("disk")
+        private Integer disk;
+
+        @com.aliyun.core.annotation.NameInMap("mem")
+        private Integer mem;
+
+        @com.aliyun.core.annotation.NameInMap("nodeCount")
+        private Integer nodeCount;
+
+        private SearchResource(Builder builder) {
+            this.category = builder.category;
+            this.cpu = builder.cpu;
+            this.disk = builder.disk;
+            this.mem = builder.mem;
+            this.nodeCount = builder.nodeCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SearchResource create() {
+            return builder().build();
+        }
+
+        /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
+        }
+
+        /**
+         * @return cpu
+         */
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        /**
+         * @return disk
+         */
+        public Integer getDisk() {
+            return this.disk;
+        }
+
+        /**
+         * @return mem
+         */
+        public Integer getMem() {
+            return this.mem;
+        }
+
+        /**
+         * @return nodeCount
+         */
+        public Integer getNodeCount() {
+            return this.nodeCount;
+        }
+
+        public static final class Builder {
+            private String category; 
+            private Integer cpu; 
+            private Integer disk; 
+            private Integer mem; 
+            private Integer nodeCount; 
+
+            /**
+             * <p>The category. Valid values: local_ssd, SSD, and cloud.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>local_ssd</p>
+             */
+            public Builder category(String category) {
+                this.category = category;
+                return this;
+            }
+
+            /**
+             * <p>The number of vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
+             */
+            public Builder cpu(Integer cpu) {
+                this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * <p>The storage capacity. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
+             */
+            public Builder disk(Integer disk) {
+                this.disk = disk;
+                return this;
+            }
+
+            /**
+             * <p>The memory of the instance. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder mem(Integer mem) {
+                this.mem = mem;
+                return this;
+            }
+
+            /**
+             * <p>The number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder nodeCount(Integer nodeCount) {
+                this.nodeCount = nodeCount;
+                return this;
+            }
+
+            public SearchResource build() {
+                return new SearchResource(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
+    public static class Spec extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("qrsResource")
+        private QrsResource qrsResource;
+
+        @com.aliyun.core.annotation.NameInMap("searchResource")
+        private SearchResource searchResource;
+
+        private Spec(Builder builder) {
+            this.qrsResource = builder.qrsResource;
+            this.searchResource = builder.searchResource;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Spec create() {
+            return builder().build();
+        }
+
+        /**
+         * @return qrsResource
+         */
+        public QrsResource getQrsResource() {
+            return this.qrsResource;
+        }
+
+        /**
+         * @return searchResource
+         */
+        public SearchResource getSearchResource() {
+            return this.searchResource;
+        }
+
+        public static final class Builder {
+            private QrsResource qrsResource; 
+            private SearchResource searchResource; 
+
+            /**
+             * <p>The QRS worker specifications.</p>
+             */
+            public Builder qrsResource(QrsResource qrsResource) {
+                this.qrsResource = qrsResource;
+                return this;
+            }
+
+            /**
+             * <p>The searcher worker specifications.</p>
+             */
+            public Builder searchResource(SearchResource searchResource) {
+                this.searchResource = searchResource;
+                return this;
+            }
+
+            public Spec build() {
+                return new Spec(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("key")
+        @com.aliyun.core.annotation.NameInMap("key")
         private String key;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private Tags(Builder builder) {
@@ -110,7 +617,10 @@ public class GetInstanceResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -118,7 +628,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -132,56 +645,94 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("chargeType")
+        @com.aliyun.core.annotation.NameInMap("bsVersion")
+        private String bsVersion;
+
+        @com.aliyun.core.annotation.NameInMap("chargeType")
         private String chargeType;
 
-        @NameInMap("commodityCode")
+        @com.aliyun.core.annotation.NameInMap("commodityCode")
         private String commodityCode;
 
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("expiredTime")
+        @com.aliyun.core.annotation.NameInMap("edition")
+        private String edition;
+
+        @com.aliyun.core.annotation.NameInMap("expiredTime")
         private String expiredTime;
 
-        @NameInMap("inDebt")
+        @com.aliyun.core.annotation.NameInMap("inDebt")
         private Boolean inDebt;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
-        @NameInMap("lockMode")
+        @com.aliyun.core.annotation.NameInMap("lockMode")
         private String lockMode;
 
-        @NameInMap("resourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("network")
+        private Network network;
+
+        @com.aliyun.core.annotation.NameInMap("newMode")
+        private Boolean newMode;
+
+        @com.aliyun.core.annotation.NameInMap("noQrs")
+        private Boolean noQrs;
+
+        @com.aliyun.core.annotation.NameInMap("resourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("spec")
+        private Spec spec;
+
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("tags")
+        private java.util.List<Tags> tags;
 
-        @NameInMap("updateTime")
+        @com.aliyun.core.annotation.NameInMap("updateTime")
         private String updateTime;
 
+        @com.aliyun.core.annotation.NameInMap("userName")
+        private String userName;
+
+        @com.aliyun.core.annotation.NameInMap("version")
+        private String version;
+
         private Result(Builder builder) {
+            this.bsVersion = builder.bsVersion;
             this.chargeType = builder.chargeType;
             this.commodityCode = builder.commodityCode;
             this.createTime = builder.createTime;
             this.description = builder.description;
+            this.edition = builder.edition;
             this.expiredTime = builder.expiredTime;
             this.inDebt = builder.inDebt;
             this.instanceId = builder.instanceId;
             this.lockMode = builder.lockMode;
+            this.network = builder.network;
+            this.newMode = builder.newMode;
+            this.noQrs = builder.noQrs;
             this.resourceGroupId = builder.resourceGroupId;
+            this.spec = builder.spec;
             this.status = builder.status;
             this.tags = builder.tags;
             this.updateTime = builder.updateTime;
+            this.userName = builder.userName;
+            this.version = builder.version;
         }
 
         public static Builder builder() {
@@ -190,6 +741,13 @@ public class GetInstanceResponseBody extends TeaModel {
 
         public static Result create() {
             return builder().build();
+        }
+
+        /**
+         * @return bsVersion
+         */
+        public String getBsVersion() {
+            return this.bsVersion;
         }
 
         /**
@@ -221,6 +779,13 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return edition
+         */
+        public String getEdition() {
+            return this.edition;
+        }
+
+        /**
          * @return expiredTime
          */
         public String getExpiredTime() {
@@ -249,10 +814,38 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return network
+         */
+        public Network getNetwork() {
+            return this.network;
+        }
+
+        /**
+         * @return newMode
+         */
+        public Boolean getNewMode() {
+            return this.newMode;
+        }
+
+        /**
+         * @return noQrs
+         */
+        public Boolean getNoQrs() {
+            return this.noQrs;
+        }
+
+        /**
          * @return resourceGroupId
          */
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        /**
+         * @return spec
+         */
+        public Spec getSpec() {
+            return this.spec;
         }
 
         /**
@@ -265,7 +858,7 @@ public class GetInstanceResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -276,22 +869,55 @@ public class GetInstanceResponseBody extends TeaModel {
             return this.updateTime;
         }
 
+        /**
+         * @return userName
+         */
+        public String getUserName() {
+            return this.userName;
+        }
+
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
         public static final class Builder {
+            private String bsVersion; 
             private String chargeType; 
             private String commodityCode; 
             private String createTime; 
             private String description; 
+            private String edition; 
             private String expiredTime; 
             private Boolean inDebt; 
             private String instanceId; 
             private String lockMode; 
+            private Network network; 
+            private Boolean newMode; 
+            private Boolean noQrs; 
             private String resourceGroupId; 
+            private Spec spec; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String updateTime; 
+            private String userName; 
+            private String version; 
 
             /**
-             * 付费类型
+             * bsVersion.
+             */
+            public Builder bsVersion(String bsVersion) {
+                this.bsVersion = bsVersion;
+                return this;
+            }
+
+            /**
+             * <p>The billing method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>POSYPAY</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -299,7 +925,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 商品code
+             * <p>The commodity code of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>commodityCode</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -307,7 +936,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 代表创建时间的资源属性字段
+             * <p>The time when the instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-06-17T02:01:26Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -315,7 +947,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * <p>The description of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha3_test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -323,7 +958,21 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * WB01240825
+             * <p>The edition of the instance. Valid values: vector and engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vector</p>
+             */
+            public Builder edition(String edition) {
+                this.edition = edition;
+                return this;
+            }
+
+            /**
+             * <p>The time when the instance expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1634609702</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -331,7 +980,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 是否欠费
+             * <p>Indicates whether an overdue payment is involved.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder inDebt(Boolean inDebt) {
                 this.inDebt = inDebt;
@@ -339,7 +991,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 代表资源一级ID的资源属性字段
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha-cn-7mz2qsgq301</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -347,7 +1002,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 锁定状态
+             * <p>The lock status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Unlock</p>
              */
             public Builder lockMode(String lockMode) {
                 this.lockMode = lockMode;
@@ -355,57 +1013,40 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ### Sample responses
-             * <p>
+             * <p>The network information of the instance.</p>
+             */
+            public Builder network(Network network) {
+                this.network = network;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether the instance is of the new version.</p>
              * 
-             * **Sample success responses**
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder newMode(Boolean newMode) {
+                this.newMode = newMode;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether the instance has only one node.</p>
              * 
-             *     {
-             *       "requestId": "90D6B8F5-FE97-4509-9AAB-367836C51818",
-             *       "result": 
-             *       {
-             *         "instanceId":"fadsfsafs",
-             *         "inDebt":true,
-             *         "lockMode":"Unlock",
-             *         "expiredTime":"asdfas",
-             *         "updateTime":"dfasf",
-             *         "createTime":"dfasf",
-             *         "resourceGroupId":"resourceGroupID",
-             *         "commodityCode":"commodityCode",
-             *         "chargeType":"POSYPAY",
-             *         "description":"this is description",
-             *         "apiVersion": "tisplus/v1",
-             *         "network": {
-             *           "vSwitchId": "vswitch_id_xxx",
-             *           "vpcId": "vpc_id_xxx",	  
-             *         },
-             *         "userName": "user",
-             *         "spec": {
-             *           "searchResource": {
-             *             "disk": 50,
-             *             "mem": 8,
-             *             "cpu": 2,
-             *             "nodeCount": 2
-             *           },
-             *           "qrsResource": {
-             *             "disk": 50,
-             *             "mem": 8,
-             *             "cpu": 2,
-             *             "nodeCount": 2
-             *           }
-             *         },
-             *        "status": "INIT",
-             *       }
-             *     }
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder noQrs(Boolean noQrs) {
+                this.noQrs = noQrs;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the resource group.</p>
              * 
-             * **Sample error responses**
-             * 
-             *     {
-             *       "requestId": "BD1EA715-DF6F-06C2-004C-C1FA0D3A9820",
-             *       "httpCode": 404,
-             *       "code": "App.NotFound",
-             *       "message": "App not found"
-             *     }
+             * <strong>example:</strong>
+             * <p>rg-aekzjvw24el5lma</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -413,7 +1054,24 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The node specifications.</p>
+             */
+            public Builder spec(Spec spec) {
+                this.spec = spec;
+                return this;
+            }
+
+            /**
+             * <p>The status of the instance. Valid values:</p>
+             * <ul>
+             * <li>INIT: being initialized</li>
+             * <li>WAIT_CONFIG: to be configured</li>
+             * <li>CONFIG_UPDATING: configuration taking effect</li>
+             * <li>READY: normal</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>INIT</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -421,18 +1079,43 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * tags.
+             * <p>The tags of the instance.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * 更新时间
+             * <p>The time when the instance was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1634609702</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
+                return this;
+            }
+
+            /**
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>admin</p>
+             */
+            public Builder userName(String userName) {
+                this.userName = userName;
+                return this;
+            }
+
+            /**
+             * <p>The version of the engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha3_3.10.0</p>
+             */
+            public Builder version(String version) {
+                this.version = version;
                 return this;
             }
 

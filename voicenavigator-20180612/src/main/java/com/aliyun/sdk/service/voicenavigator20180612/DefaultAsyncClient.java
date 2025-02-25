@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AssociateChatbotInstance  AssociateChatbotInstanceRequest
+     * @return AssociateChatbotInstanceResponse
+     */
     @Override
     public CompletableFuture<AssociateChatbotInstanceResponse> associateChatbotInstance(AssociateChatbotInstanceRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AuditTTSVoice  AuditTTSVoiceRequest
+     * @return AuditTTSVoiceResponse
+     */
     @Override
     public CompletableFuture<AuditTTSVoiceResponse> auditTTSVoice(AuditTTSVoiceRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BeginDialogue  BeginDialogueRequest
+     * @return BeginDialogueResponse
+     */
     @Override
     public CompletableFuture<BeginDialogueResponse> beginDialogue(BeginDialogueRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CollectedNumber  CollectedNumberRequest
+     * @return CollectedNumberResponse
+     */
     @Override
     public CompletableFuture<CollectedNumberResponse> collectedNumber(CollectedNumberRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateDownloadUrl  CreateDownloadUrlRequest
+     * @return CreateDownloadUrlResponse
+     */
     @Override
     public CompletableFuture<CreateDownloadUrlResponse> createDownloadUrl(CreateDownloadUrlRequest request) {
         try {
@@ -109,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateInstance  CreateInstanceRequest
+     * @return CreateInstanceResponse
+     */
     @Override
     public CompletableFuture<CreateInstanceResponse> createInstance(CreateInstanceRequest request) {
         try {
@@ -123,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DebugBeginDialogue  DebugBeginDialogueRequest
+     * @return DebugBeginDialogueResponse
+     */
     @Override
     public CompletableFuture<DebugBeginDialogueResponse> debugBeginDialogue(DebugBeginDialogueRequest request) {
         try {
@@ -137,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DebugCollectedNumber  DebugCollectedNumberRequest
+     * @return DebugCollectedNumberResponse
+     */
     @Override
     public CompletableFuture<DebugCollectedNumberResponse> debugCollectedNumber(DebugCollectedNumberRequest request) {
         try {
@@ -151,6 +183,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DebugDialogue  DebugDialogueRequest
+     * @return DebugDialogueResponse
+     */
     @Override
     public CompletableFuture<DebugDialogueResponse> debugDialogue(DebugDialogueRequest request) {
         try {
@@ -165,6 +201,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteInstance  DeleteInstanceRequest
+     * @return DeleteInstanceResponse
+     */
     @Override
     public CompletableFuture<DeleteInstanceResponse> deleteInstance(DeleteInstanceRequest request) {
         try {
@@ -179,6 +219,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeConversation  DescribeConversationRequest
+     * @return DescribeConversationResponse
+     */
     @Override
     public CompletableFuture<DescribeConversationResponse> describeConversation(DescribeConversationRequest request) {
         try {
@@ -193,6 +237,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeConversationContext  DescribeConversationContextRequest
+     * @return DescribeConversationContextResponse
+     */
     @Override
     public CompletableFuture<DescribeConversationContextResponse> describeConversationContext(DescribeConversationContextRequest request) {
         try {
@@ -207,6 +255,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeExportProgress  DescribeExportProgressRequest
+     * @return DescribeExportProgressResponse
+     */
     @Override
     public CompletableFuture<DescribeExportProgressResponse> describeExportProgress(DescribeExportProgressRequest request) {
         try {
@@ -221,6 +273,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeInstance  DescribeInstanceRequest
+     * @return DescribeInstanceResponse
+     */
     @Override
     public CompletableFuture<DescribeInstanceResponse> describeInstance(DescribeInstanceRequest request) {
         try {
@@ -235,6 +291,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeNavigationConfig  DescribeNavigationConfigRequest
+     * @return DescribeNavigationConfigResponse
+     */
     @Override
     public CompletableFuture<DescribeNavigationConfigResponse> describeNavigationConfig(DescribeNavigationConfigRequest request) {
         try {
@@ -249,6 +309,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRecording  DescribeRecordingRequest
+     * @return DescribeRecordingResponse
+     */
     @Override
     public CompletableFuture<DescribeRecordingResponse> describeRecording(DescribeRecordingRequest request) {
         try {
@@ -263,6 +327,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeStatisticalData  DescribeStatisticalDataRequest
+     * @return DescribeStatisticalDataResponse
+     */
     @Override
     public CompletableFuture<DescribeStatisticalDataResponse> describeStatisticalData(DescribeStatisticalDataRequest request) {
         try {
@@ -277,6 +345,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeTTSConfig  DescribeTTSConfigRequest
+     * @return DescribeTTSConfigResponse
+     */
     @Override
     public CompletableFuture<DescribeTTSConfigResponse> describeTTSConfig(DescribeTTSConfigRequest request) {
         try {
@@ -291,6 +363,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of Dialogue  DialogueRequest
+     * @return DialogueResponse
+     */
     @Override
     public CompletableFuture<DialogueResponse> dialogue(DialogueRequest request) {
         try {
@@ -305,6 +381,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DisableInstance  DisableInstanceRequest
+     * @return DisableInstanceResponse
+     */
     @Override
     public CompletableFuture<DisableInstanceResponse> disableInstance(DisableInstanceRequest request) {
         try {
@@ -319,6 +399,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EnableInstance  EnableInstanceRequest
+     * @return EnableInstanceResponse
+     */
     @Override
     public CompletableFuture<EnableInstanceResponse> enableInstance(EnableInstanceRequest request) {
         try {
@@ -333,6 +417,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EndDialogue  EndDialogueRequest
+     * @return EndDialogueResponse
+     */
     @Override
     public CompletableFuture<EndDialogueResponse> endDialogue(EndDialogueRequest request) {
         try {
@@ -347,6 +435,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExportConversationDetails  ExportConversationDetailsRequest
+     * @return ExportConversationDetailsResponse
+     */
     @Override
     public CompletableFuture<ExportConversationDetailsResponse> exportConversationDetails(ExportConversationDetailsRequest request) {
         try {
@@ -361,6 +453,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExportStatisticalData  ExportStatisticalDataRequest
+     * @return ExportStatisticalDataResponse
+     */
     @Override
     public CompletableFuture<ExportStatisticalDataResponse> exportStatisticalData(ExportStatisticalDataRequest request) {
         try {
@@ -375,6 +471,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GenerateUploadUrl  GenerateUploadUrlRequest
+     * @return GenerateUploadUrlResponse
+     */
     @Override
     public CompletableFuture<GenerateUploadUrlResponse> generateUploadUrl(GenerateUploadUrlRequest request) {
         try {
@@ -389,6 +489,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAsrConfig  GetAsrConfigRequest
+     * @return GetAsrConfigResponse
+     */
     @Override
     public CompletableFuture<GetAsrConfigResponse> getAsrConfig(GetAsrConfigRequest request) {
         try {
@@ -403,6 +507,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRealTimeConcurrency  GetRealTimeConcurrencyRequest
+     * @return GetRealTimeConcurrencyResponse
+     */
     @Override
     public CompletableFuture<GetRealTimeConcurrencyResponse> getRealTimeConcurrency(GetRealTimeConcurrencyRequest request) {
         try {
@@ -417,6 +525,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListChatbotInstances  ListChatbotInstancesRequest
+     * @return ListChatbotInstancesResponse
+     */
     @Override
     public CompletableFuture<ListChatbotInstancesResponse> listChatbotInstances(ListChatbotInstancesRequest request) {
         try {
@@ -431,6 +543,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListConversationDetails  ListConversationDetailsRequest
+     * @return ListConversationDetailsResponse
+     */
     @Override
     public CompletableFuture<ListConversationDetailsResponse> listConversationDetails(ListConversationDetailsRequest request) {
         try {
@@ -445,6 +561,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListConversations  ListConversationsRequest
+     * @return ListConversationsResponse
+     */
     @Override
     public CompletableFuture<ListConversationsResponse> listConversations(ListConversationsRequest request) {
         try {
@@ -459,11 +579,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDownloadTasks  ListDownloadTasksRequest
+     * @return ListDownloadTasksResponse
+     */
     @Override
     public CompletableFuture<ListDownloadTasksResponse> listDownloadTasks(ListDownloadTasksRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListDownloadTasks").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListDownloadTasks").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListDownloadTasksResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -473,6 +597,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListInstances  ListInstancesRequest
+     * @return ListInstancesResponse
+     */
     @Override
     public CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request) {
         try {
@@ -487,6 +615,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyAsrConfig  ModifyAsrConfigRequest
+     * @return ModifyAsrConfigResponse
+     */
     @Override
     public CompletableFuture<ModifyAsrConfigResponse> modifyAsrConfig(ModifyAsrConfigRequest request) {
         try {
@@ -501,6 +633,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyGreetingConfig  ModifyGreetingConfigRequest
+     * @return ModifyGreetingConfigResponse
+     */
     @Override
     public CompletableFuture<ModifyGreetingConfigResponse> modifyGreetingConfig(ModifyGreetingConfigRequest request) {
         try {
@@ -515,6 +651,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyInstance  ModifyInstanceRequest
+     * @return ModifyInstanceResponse
+     */
     @Override
     public CompletableFuture<ModifyInstanceResponse> modifyInstance(ModifyInstanceRequest request) {
         try {
@@ -529,6 +669,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifySilenceTimeoutConfig  ModifySilenceTimeoutConfigRequest
+     * @return ModifySilenceTimeoutConfigResponse
+     */
     @Override
     public CompletableFuture<ModifySilenceTimeoutConfigResponse> modifySilenceTimeoutConfig(ModifySilenceTimeoutConfigRequest request) {
         try {
@@ -543,6 +687,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyTTSConfig  ModifyTTSConfigRequest
+     * @return ModifyTTSConfigResponse
+     */
     @Override
     public CompletableFuture<ModifyTTSConfigResponse> modifyTTSConfig(ModifyTTSConfigRequest request) {
         try {
@@ -557,6 +705,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyUnrecognizingConfig  ModifyUnrecognizingConfigRequest
+     * @return ModifyUnrecognizingConfigResponse
+     */
     @Override
     public CompletableFuture<ModifyUnrecognizingConfigResponse> modifyUnrecognizingConfig(ModifyUnrecognizingConfigRequest request) {
         try {
@@ -571,6 +723,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryConversations  QueryConversationsRequest
+     * @return QueryConversationsResponse
+     */
     @Override
     public CompletableFuture<QueryConversationsResponse> queryConversations(QueryConversationsRequest request) {
         try {
@@ -585,6 +741,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveRecording  SaveRecordingRequest
+     * @return SaveRecordingResponse
+     */
     @Override
     public CompletableFuture<SaveRecordingResponse> saveRecording(SaveRecordingRequest request) {
         try {
@@ -599,6 +759,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SilenceTimeout  SilenceTimeoutRequest
+     * @return SilenceTimeoutResponse
+     */
     @Override
     public CompletableFuture<SilenceTimeoutResponse> silenceTimeout(SilenceTimeoutRequest request) {
         try {

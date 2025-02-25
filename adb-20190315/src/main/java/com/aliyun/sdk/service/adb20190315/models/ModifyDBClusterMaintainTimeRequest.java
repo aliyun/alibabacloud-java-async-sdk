@@ -1,41 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBClusterMaintainTimeRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBClusterMaintainTimeRequest</p>
  */
 public class ModifyDBClusterMaintainTimeRequest extends Request {
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("MaintainTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaintainTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String maintainTime;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyDBClusterMaintainTimeRequest(Builder builder) {
@@ -126,10 +126,14 @@ public class ModifyDBClusterMaintainTimeRequest extends Request {
         } 
 
         /**
-         * The ID of cluster.
-         * <p>
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the details of all AnalyticDB for MySQL clusters within a specific region, including cluster IDs.
+         * <strong>example:</strong>
+         * <p>am-bp111m2cfrdl****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -138,10 +142,14 @@ public class ModifyDBClusterMaintainTimeRequest extends Request {
         }
 
         /**
-         * The maintenance window of the cluster. It is in the hh:mmZ-hh:mmZ format.
-         * <p>
+         * <p>The maintenance window of the cluster. Specify the maintenance window in the hh:mmZ-hh:mmZ format.</p>
+         * <blockquote>
+         * <p> The time range must be 1 hour and start and end at the beginning of an hour.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The maintenance window lasts only 1 hour. Specify the beginning and end of the time range on the hour.
+         * <strong>example:</strong>
+         * <p>22:00Z-23:00Z</p>
          */
         public Builder maintainTime(String maintainTime) {
             this.putQueryParameter("MaintainTime", maintainTime);

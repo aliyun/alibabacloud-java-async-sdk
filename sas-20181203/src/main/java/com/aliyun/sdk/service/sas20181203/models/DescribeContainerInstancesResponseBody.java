@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeContainerInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeContainerInstancesResponseBody</p>
  */
 public class DescribeContainerInstancesResponseBody extends TeaModel {
-    @NameInMap("ContainerInstanceList")
-    private java.util.List < ContainerInstanceList> containerInstanceList;
+    @com.aliyun.core.annotation.NameInMap("ContainerInstanceList")
+    private java.util.List<ContainerInstanceList> containerInstanceList;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeContainerInstancesResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
     /**
      * @return containerInstanceList
      */
-    public java.util.List < ContainerInstanceList> getContainerInstanceList() {
+    public java.util.List<ContainerInstanceList> getContainerInstanceList() {
         return this.containerInstanceList;
     }
 
@@ -57,20 +62,20 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ContainerInstanceList> containerInstanceList; 
+        private java.util.List<ContainerInstanceList> containerInstanceList; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
-         * The details of the container asset.
+         * <p>The details of the container asset.</p>
          */
-        public Builder containerInstanceList(java.util.List < ContainerInstanceList> containerInstanceList) {
+        public Builder containerInstanceList(java.util.List<ContainerInstanceList> containerInstanceList) {
             this.containerInstanceList = containerInstanceList;
             return this;
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +83,10 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79CFF74D-E967-5407-8A78-EE03B925FDAA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,98 +99,104 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeContainerInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerInstancesResponseBody</p>
+     */
     public static class ContainerInstanceList extends TeaModel {
-        @NameInMap("AlarmCount")
+        @com.aliyun.core.annotation.NameInMap("AlarmCount")
         private Integer alarmCount;
 
-        @NameInMap("AlarmStatus")
+        @com.aliyun.core.annotation.NameInMap("AlarmStatus")
         private String alarmStatus;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("ContainerId")
+        @com.aliyun.core.annotation.NameInMap("ContainerId")
         private String containerId;
 
-        @NameInMap("CreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
-        @NameInMap("Exposed")
+        @com.aliyun.core.annotation.NameInMap("Exposed")
         private Integer exposed;
 
-        @NameInMap("ExposedDetail")
+        @com.aliyun.core.annotation.NameInMap("ExposedDetail")
         private String exposedDetail;
 
-        @NameInMap("HcCount")
+        @com.aliyun.core.annotation.NameInMap("HcCount")
         private Integer hcCount;
 
-        @NameInMap("HcStatus")
+        @com.aliyun.core.annotation.NameInMap("HcStatus")
         private String hcStatus;
 
-        @NameInMap("HostIp")
+        @com.aliyun.core.annotation.NameInMap("HostIp")
         private String hostIp;
 
-        @NameInMap("Image")
+        @com.aliyun.core.annotation.NameInMap("Image")
         private String image;
 
-        @NameInMap("ImageDigest")
+        @com.aliyun.core.annotation.NameInMap("ImageDigest")
         private String imageDigest;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("ImageRepoName")
+        @com.aliyun.core.annotation.NameInMap("ImageRepoName")
         private String imageRepoName;
 
-        @NameInMap("ImageRepoNamespace")
+        @com.aliyun.core.annotation.NameInMap("ImageRepoNamespace")
         private String imageRepoNamespace;
 
-        @NameInMap("ImageRepoTag")
+        @com.aliyun.core.annotation.NameInMap("ImageRepoTag")
         private String imageRepoTag;
 
-        @NameInMap("ImageUuid")
+        @com.aliyun.core.annotation.NameInMap("ImageUuid")
         private String imageUuid;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("NodeInfo")
+        @com.aliyun.core.annotation.NameInMap("NodeInfo")
         private String nodeInfo;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("Pod")
+        @com.aliyun.core.annotation.NameInMap("Pod")
         private String pod;
 
-        @NameInMap("PodIp")
+        @com.aliyun.core.annotation.NameInMap("PodIp")
         private String podIp;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RiskCount")
+        @com.aliyun.core.annotation.NameInMap("RiskCount")
         private String riskCount;
 
-        @NameInMap("RiskStatus")
+        @com.aliyun.core.annotation.NameInMap("RiskStatus")
         private String riskStatus;
 
-        @NameInMap("UpdateMark")
+        @com.aliyun.core.annotation.NameInMap("UpdateMark")
         private String updateMark;
 
-        @NameInMap("VulCount")
+        @com.aliyun.core.annotation.NameInMap("VulCount")
         private Integer vulCount;
 
-        @NameInMap("VulStatus")
+        @com.aliyun.core.annotation.NameInMap("VulStatus")
         private String vulStatus;
 
         private ContainerInstanceList(Builder builder) {
@@ -478,7 +492,10 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             private String vulStatus; 
 
             /**
-             * The number of alerts.
+             * <p>The number of alerts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder alarmCount(Integer alarmCount) {
                 this.alarmCount = alarmCount;
@@ -486,11 +503,14 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether alerts are generated for the container. Valid values:
-             * <p>
+             * <p>Indicates whether alerts are generated for the container. Valid values:</p>
+             * <ul>
+             * <li><strong>YES</strong></li>
+             * <li><strong>NO</strong></li>
+             * </ul>
              * 
-             * *   **YES**
-             * *   **NO**
+             * <strong>example:</strong>
+             * <p>YES</p>
              */
             public Builder alarmStatus(String alarmStatus) {
                 this.alarmStatus = alarmStatus;
@@ -498,7 +518,10 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alibaba-log-controller</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -506,7 +529,10 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cluster.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cfb41a869c71e4678a97021582dd8a****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -514,7 +540,10 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster name.
+             * <p>The cluster name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -522,7 +551,10 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the container.
+             * <p>The ID of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>48a6d9a92435a13ad573372c3f3c63b7e04d106458141df9f92155709d****</p>
              */
             public Builder containerId(String containerId) {
                 this.containerId = containerId;
@@ -530,7 +562,10 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the cluster was created. Unit: milliseconds.
+             * <p>The timestamp when the cluster was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1670368337000</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -538,11 +573,14 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the asset is exposed to the Internet.
-             * <p>
+             * <p>Indicates whether the asset is exposed to the Internet.</p>
+             * <ul>
+             * <li><strong>1</strong>: exposed</li>
+             * <li><strong>0</strong>: not exposed</li>
+             * </ul>
              * 
-             * *   **1**: exposed
-             * *   **0**: not exposed
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder exposed(Integer exposed) {
                 this.exposed = exposed;
@@ -550,7 +588,10 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The exposure details. The value is a JSON string.
+             * <p>The exposure details. The value is a JSON string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{}]</p>
              */
             public Builder exposedDetail(String exposedDetail) {
                 this.exposedDetail = exposedDetail;
@@ -558,7 +599,10 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of baseline risks.
+             * <p>The number of baseline risks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder hcCount(Integer hcCount) {
                 this.hcCount = hcCount;
@@ -566,11 +610,14 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether baseline risks are detected. Valid values:
-             * <p>
+             * <p>Indicates whether baseline risks are detected. Valid values:</p>
+             * <ul>
+             * <li><strong>NO</strong></li>
+             * <li><strong>YES</strong></li>
+             * </ul>
              * 
-             * *   **NO**
-             * *   **YES**
+             * <strong>example:</strong>
+             * <p>YES</p>
              */
             public Builder hcStatus(String hcStatus) {
                 this.hcStatus = hcStatus;
@@ -578,7 +625,10 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the host.
+             * <p>The IP address of the host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.24.XX.XX</p>
              */
             public Builder hostIp(String hostIp) {
                 this.hostIp = hostIp;
@@ -586,7 +636,10 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The image of the container.
+             * <p>The image of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>docker.io/library/nginx:latest</p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -594,7 +647,10 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The digest value of the image.
+             * <p>The digest value of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5b046e2de8c490819125193ee2eb71a66f2cc16c032dcd8b69ead4be1024****</p>
              */
             public Builder imageDigest(String imageDigest) {
                 this.imageDigest = imageDigest;
@@ -602,7 +658,10 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The image ID.
+             * <p>The image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry-vpc.cn-beijing.aliyuncs.com/acs/log-controller@sha256:5b046e2de8c490819125193ee2eb71a66f2cc16c032dcd8b69ead4be1024****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -610,7 +669,10 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image repository.
+             * <p>The name of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>log-controller</p>
              */
             public Builder imageRepoName(String imageRepoName) {
                 this.imageRepoName = imageRepoName;
@@ -618,7 +680,10 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace of the image repository.
+             * <p>The namespace of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs</p>
              */
             public Builder imageRepoNamespace(String imageRepoNamespace) {
                 this.imageRepoNamespace = imageRepoNamespace;
@@ -626,7 +691,10 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag that is added to the image.
+             * <p>The tag that is added to the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.3.1.0-dfa2010-aliyun</p>
              */
             public Builder imageRepoTag(String imageRepoTag) {
                 this.imageRepoTag = imageRepoTag;
@@ -634,7 +702,10 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the image.
+             * <p>The UUID of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5f23dfbceec289a49ac94e035e2****</p>
              */
             public Builder imageUuid(String imageUuid) {
                 this.imageUuid = imageUuid;
@@ -642,7 +713,10 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the asset.
+             * <p>The instance ID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-2zegzjyotydfkz9****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -650,7 +724,10 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kube-system</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -658,7 +735,10 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The node information.
+             * <p>The node information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder nodeInfo(String nodeInfo) {
                 this.nodeInfo = nodeInfo;
@@ -666,7 +746,10 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -674,7 +757,10 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The pod.
+             * <p>The pod.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alibaba-log-controller-6f847f8786-mk2mg</p>
              */
             public Builder pod(String pod) {
                 this.pod = pod;
@@ -682,7 +768,10 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the pod.
+             * <p>The IP address of the pod.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.24.XX.XX</p>
              */
             public Builder podIp(String podIp) {
                 this.podIp = podIp;
@@ -690,7 +779,10 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the container.
+             * <p>The region ID of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -698,7 +790,10 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of risks.
+             * <p>The number of risks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder riskCount(String riskCount) {
                 this.riskCount = riskCount;
@@ -706,11 +801,14 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether risks exist. Valid values:
-             * <p>
+             * <p>Indicates whether risks exist. Valid values:</p>
+             * <ul>
+             * <li><strong>NO</strong></li>
+             * <li><strong>YES</strong></li>
+             * </ul>
              * 
-             * *   **NO**
-             * *   **YES**
+             * <strong>example:</strong>
+             * <p>YES</p>
              */
             public Builder riskStatus(String riskStatus) {
                 this.riskStatus = riskStatus;
@@ -718,7 +816,10 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The update identifier of the container.
+             * <p>The update identifier of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>79cff74d-e967-5407-8a78-ee03b9****</p>
              */
             public Builder updateMark(String updateMark) {
                 this.updateMark = updateMark;
@@ -726,7 +827,10 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of vulnerabilities that are detected in the container cluster.
+             * <p>The number of vulnerabilities that are detected in the container cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder vulCount(Integer vulCount) {
                 this.vulCount = vulCount;
@@ -734,11 +838,14 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether vulnerabilities are detected in the container. Valid values:
-             * <p>
+             * <p>Indicates whether vulnerabilities are detected in the container. Valid values:</p>
+             * <ul>
+             * <li><strong>YES</strong></li>
+             * <li><strong>NO</strong></li>
+             * </ul>
              * 
-             * *   **YES**
-             * *   **NO**
+             * <strong>example:</strong>
+             * <p>YES</p>
              */
             public Builder vulStatus(String vulStatus) {
                 this.vulStatus = vulStatus;
@@ -752,17 +859,23 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeContainerInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerInstancesResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -815,7 +928,10 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -823,7 +939,10 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -831,7 +950,10 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -839,7 +961,10 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>45</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

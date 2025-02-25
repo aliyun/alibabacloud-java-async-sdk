@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceCatalogRequest} extends {@link RequestModel}
  *
  * <p>ListInstanceCatalogRequest</p>
  */
 public class ListInstanceCatalogRequest extends Request {
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("RequirementIds")
-    private java.util.List < Long > requirementIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequirementIds")
+    private java.util.List<Long> requirementIds;
 
-    @Query
-    @NameInMap("StandardIds")
-    private java.util.List < Long > standardIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StandardIds")
+    private java.util.List<Long> standardIds;
 
-    @Query
-    @NameInMap("Types")
-    private java.util.List < String > types;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Types")
+    private java.util.List<String> types;
 
     private ListInstanceCatalogRequest(Builder builder) {
         super(builder);
@@ -71,30 +76,30 @@ public class ListInstanceCatalogRequest extends Request {
     /**
      * @return requirementIds
      */
-    public java.util.List < Long > getRequirementIds() {
+    public java.util.List<Long> getRequirementIds() {
         return this.requirementIds;
     }
 
     /**
      * @return standardIds
      */
-    public java.util.List < Long > getStandardIds() {
+    public java.util.List<Long> getStandardIds() {
         return this.standardIds;
     }
 
     /**
      * @return types
      */
-    public java.util.List < String > getTypes() {
+    public java.util.List<String> getTypes() {
         return this.types;
     }
 
     public static final class Builder extends Request.Builder<ListInstanceCatalogRequest, Builder> {
         private String lang; 
         private String regionId; 
-        private java.util.List < Long > requirementIds; 
-        private java.util.List < Long > standardIds; 
-        private java.util.List < String > types; 
+        private java.util.List<Long> requirementIds; 
+        private java.util.List<Long> standardIds; 
+        private java.util.List<String> types; 
 
         private Builder() {
             super();
@@ -110,11 +115,14 @@ public class ListInstanceCatalogRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -123,11 +131,14 @@ public class ListInstanceCatalogRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the asset resides. Valid values:
-         * <p>
+         * <p>The ID of the region in which the asset resides. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong>: International</li>
+         * <li><strong>ap-southeast-1</strong>: Singapore</li>
+         * </ul>
          * 
-         * *   **cn-hangzhou**: International
-         * *   **ap-southeast-1**: Singapore
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -136,27 +147,27 @@ public class ListInstanceCatalogRequest extends Request {
         }
 
         /**
-         * The IDs of requirement items.
+         * <p>The IDs of requirement items.</p>
          */
-        public Builder requirementIds(java.util.List < Long > requirementIds) {
+        public Builder requirementIds(java.util.List<Long> requirementIds) {
             this.putQueryParameter("RequirementIds", requirementIds);
             this.requirementIds = requirementIds;
             return this;
         }
 
         /**
-         * The IDs of standards.
+         * <p>The IDs of standards.</p>
          */
-        public Builder standardIds(java.util.List < Long > standardIds) {
+        public Builder standardIds(java.util.List<Long> standardIds) {
             this.putQueryParameter("StandardIds", standardIds);
             this.standardIds = standardIds;
             return this;
         }
 
         /**
-         * The types of check standards.
+         * <p>The types of check standards.</p>
          */
-        public Builder types(java.util.List < String > types) {
+        public Builder types(java.util.List<String> types) {
             this.putQueryParameter("Types", types);
             this.types = types;
             return this;

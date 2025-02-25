@@ -1,52 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateEditingProjectRequest} extends {@link RequestModel}
  *
  * <p>UpdateEditingProjectRequest</p>
  */
 public class UpdateEditingProjectRequest extends Request {
-    @Query
-    @NameInMap("CoverURL")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CoverURL")
     private String coverURL;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
-    @Query
-    @NameInMap("ProjectId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private String resourceOwnerId;
 
-    @Query
-    @NameInMap("Timeline")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Timeline")
     private String timeline;
 
-    @Query
-    @NameInMap("Title")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Title")
     private String title;
 
     private UpdateEditingProjectRequest(Builder builder) {
@@ -167,7 +172,10 @@ public class UpdateEditingProjectRequest extends Request {
         } 
 
         /**
-         * The thumbnail URL of the online editing project.
+         * <p>The thumbnail URL of the online editing project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>https://<strong><strong>.com/6AB4D0E1E1C7446888</strong></strong>.png</p>
          */
         public Builder coverURL(String coverURL) {
             this.putQueryParameter("CoverURL", coverURL);
@@ -176,7 +184,10 @@ public class UpdateEditingProjectRequest extends Request {
         }
 
         /**
-         * The description of the online editing project.
+         * <p>The description of the online editing project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testtimeline001desciption</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -203,7 +214,11 @@ public class UpdateEditingProjectRequest extends Request {
         }
 
         /**
-         * The ID of the online editing project.
+         * <p>The ID of the online editing project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4ee4b97e27*****b525142a6b2</p>
          */
         public Builder projectId(String projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -230,7 +245,10 @@ public class UpdateEditingProjectRequest extends Request {
         }
 
         /**
-         * The timeline of the online editing project. For more information about the structure, see [Timeline](~~52839~~).
+         * <p>The timeline of the online editing project. For more information about the structure, see <a href="https://help.aliyun.com/document_detail/52839.html">Timeline</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;VideoTracks&quot;:[{&quot;VideoTrackClips&quot;:[{&quot;MediaId&quot;:&quot;cc3308ac500c<em><strong><strong>a54328bc3443&quot;},{&quot;MediaId&quot;:&quot;da87a9cff64</strong></strong></em>d88bc6d8326e4&quot;}]}]}</p>
          */
         public Builder timeline(String timeline) {
             this.putQueryParameter("Timeline", timeline);
@@ -239,7 +257,10 @@ public class UpdateEditingProjectRequest extends Request {
         }
 
         /**
-         * The title of the online editing project.
+         * <p>The title of the online editing project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testtimeline</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

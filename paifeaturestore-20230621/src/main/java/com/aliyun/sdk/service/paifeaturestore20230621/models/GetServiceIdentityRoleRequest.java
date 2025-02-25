@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetServiceIdentityRoleRequest} extends {@link RequestModel}
  *
  * <p>GetServiceIdentityRoleRequest</p>
  */
 public class GetServiceIdentityRoleRequest extends Request {
-    @Path
-    @NameInMap("RoleName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("RoleName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String roleName;
 
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private GetServiceIdentityRoleRequest(Builder builder) {
@@ -69,7 +74,10 @@ public class GetServiceIdentityRoleRequest extends Request {
         } 
 
         /**
-         * RoleName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunServiceRoleForFeatureStore</p>
          */
         public Builder roleName(String roleName) {
             this.putPathParameter("RoleName", roleName);

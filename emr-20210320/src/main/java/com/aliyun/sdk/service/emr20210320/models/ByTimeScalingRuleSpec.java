@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ByTimeScalingRuleSpec} extends {@link TeaModel}
  *
  * <p>ByTimeScalingRuleSpec</p>
  */
 public class ByTimeScalingRuleSpec extends TeaModel {
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @NameInMap("LaunchTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("LaunchTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long launchTime;
 
-    @NameInMap("RecurrenceType")
+    @com.aliyun.core.annotation.NameInMap("RecurrenceType")
     private String recurrenceType;
 
-    @NameInMap("RecurrenceValue")
+    @com.aliyun.core.annotation.NameInMap("RecurrenceValue")
     private String recurrenceValue;
 
     private ByTimeScalingRuleSpec(Builder builder) {
@@ -75,7 +80,10 @@ public class ByTimeScalingRuleSpec extends TeaModel {
         private String recurrenceValue; 
 
         /**
-         * 重复执行定时任务的结束时间戳。单位为毫秒。
+         * <p>重复执行定时任务的结束时间戳。单位为毫秒。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1639714800000</p>
          */
         public Builder endTime(Long endTime) {
             this.endTime = endTime;
@@ -83,7 +91,11 @@ public class ByTimeScalingRuleSpec extends TeaModel {
         }
 
         /**
-         * 启动时间戳。单位为毫秒。
+         * <p>启动时间戳。单位为毫秒。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1639714634819</p>
          */
         public Builder launchTime(Long launchTime) {
             this.launchTime = launchTime;
@@ -91,7 +103,10 @@ public class ByTimeScalingRuleSpec extends TeaModel {
         }
 
         /**
-         * 指定时间规则的执行类型。
+         * <p>指定时间规则的执行类型。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WEEKLY</p>
          */
         public Builder recurrenceType(String recurrenceType) {
             this.recurrenceType = recurrenceType;
@@ -99,7 +114,10 @@ public class ByTimeScalingRuleSpec extends TeaModel {
         }
 
         /**
-         * 重复执行定时任务的数值。具体取值取决于 recurrenceType 设置。
+         * <p>重复执行定时任务的数值。具体取值取决于 recurrenceType 设置。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MON,FRI,SUN</p>
          */
         public Builder recurrenceValue(String recurrenceValue) {
             this.recurrenceValue = recurrenceValue;

@@ -1,25 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AllocateDedicatedHostsResponseBody} extends {@link TeaModel}
  *
  * <p>AllocateDedicatedHostsResponseBody</p>
  */
 public class AllocateDedicatedHostsResponseBody extends TeaModel {
-    @NameInMap("DedicatedHostIdSets")
+    @com.aliyun.core.annotation.NameInMap("DedicatedHostIdSets")
     private DedicatedHostIdSets dedicatedHostIdSets;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
+    private String orderId;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AllocateDedicatedHostsResponseBody(Builder builder) {
         this.dedicatedHostIdSets = builder.dedicatedHostIdSets;
+        this.orderId = builder.orderId;
         this.requestId = builder.requestId;
     }
 
@@ -39,6 +48,13 @@ public class AllocateDedicatedHostsResponseBody extends TeaModel {
     }
 
     /**
+     * @return orderId
+     */
+    public String getOrderId() {
+        return this.orderId;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -47,10 +63,11 @@ public class AllocateDedicatedHostsResponseBody extends TeaModel {
 
     public static final class Builder {
         private DedicatedHostIdSets dedicatedHostIdSets; 
+        private String orderId; 
         private String requestId; 
 
         /**
-         * The IDs of the dedicated hosts.
+         * <p>The IDs of the dedicated hosts.</p>
          */
         public Builder dedicatedHostIdSets(DedicatedHostIdSets dedicatedHostIdSets) {
             this.dedicatedHostIdSets = dedicatedHostIdSets;
@@ -58,7 +75,18 @@ public class AllocateDedicatedHostsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * OrderId.
+         */
+        public Builder orderId(String orderId) {
+            this.orderId = orderId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E2A664A6-2933-4C64-88AE-5033D003****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,9 +99,15 @@ public class AllocateDedicatedHostsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AllocateDedicatedHostsResponseBody} extends {@link TeaModel}
+     *
+     * <p>AllocateDedicatedHostsResponseBody</p>
+     */
     public static class DedicatedHostIdSets extends TeaModel {
-        @NameInMap("DedicatedHostId")
-        private java.util.List < String > dedicatedHostId;
+        @com.aliyun.core.annotation.NameInMap("DedicatedHostId")
+        private java.util.List<String> dedicatedHostId;
 
         private DedicatedHostIdSets(Builder builder) {
             this.dedicatedHostId = builder.dedicatedHostId;
@@ -90,17 +124,17 @@ public class AllocateDedicatedHostsResponseBody extends TeaModel {
         /**
          * @return dedicatedHostId
          */
-        public java.util.List < String > getDedicatedHostId() {
+        public java.util.List<String> getDedicatedHostId() {
             return this.dedicatedHostId;
         }
 
         public static final class Builder {
-            private java.util.List < String > dedicatedHostId; 
+            private java.util.List<String> dedicatedHostId; 
 
             /**
              * DedicatedHostId.
              */
-            public Builder dedicatedHostId(java.util.List < String > dedicatedHostId) {
+            public Builder dedicatedHostId(java.util.List<String> dedicatedHostId) {
                 this.dedicatedHostId = dedicatedHostId;
                 return this;
             }

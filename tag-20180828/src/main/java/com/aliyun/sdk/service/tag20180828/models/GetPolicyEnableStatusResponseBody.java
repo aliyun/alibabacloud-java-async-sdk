@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tag20180828.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPolicyEnableStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetPolicyEnableStatusResponseBody</p>
  */
 public class GetPolicyEnableStatusResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StatusModels")
-    private java.util.List < StatusModels> statusModels;
+    @com.aliyun.core.annotation.NameInMap("StatusModels")
+    private java.util.List<StatusModels> statusModels;
 
     private GetPolicyEnableStatusResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class GetPolicyEnableStatusResponseBody extends TeaModel {
     /**
      * @return statusModels
      */
-    public java.util.List < StatusModels> getStatusModels() {
+    public java.util.List<StatusModels> getStatusModels() {
         return this.statusModels;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < StatusModels> statusModels; 
+        private java.util.List<StatusModels> statusModels; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6C8DF1B1-C65F-5D3A-9FDA-26A4683BB36B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class GetPolicyEnableStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the Tag Policy feature.
+         * <p>The information of the Tag Policy feature.</p>
          */
-        public Builder statusModels(java.util.List < StatusModels> statusModels) {
+        public Builder statusModels(java.util.List<StatusModels> statusModels) {
             this.statusModels = statusModels;
             return this;
         }
@@ -71,11 +79,17 @@ public class GetPolicyEnableStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPolicyEnableStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPolicyEnableStatusResponseBody</p>
+     */
     public static class StatusModels extends TeaModel {
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UserType")
+        @com.aliyun.core.annotation.NameInMap("UserType")
         private String userType;
 
         private StatusModels(Builder builder) {
@@ -110,13 +124,16 @@ public class GetPolicyEnableStatusResponseBody extends TeaModel {
             private String userType; 
 
             /**
-             * The status of the Tag Policy feature. Valid values:
-             * <p>
+             * <p>The status of the Tag Policy feature. Valid values:</p>
+             * <ul>
+             * <li>PendingEnable: The feature is being enabled.</li>
+             * <li>Enabled: The feature is enabled.</li>
+             * <li>Closing: The feature is being disabled.</li>
+             * <li>Disabled: The feature is disabled.</li>
+             * </ul>
              * 
-             * *   PendingEnable: The feature is being enabled.
-             * *   Enabled: The feature is enabled.
-             * *   Closing: The feature is being disabled.
-             * *   Disabled: The feature is disabled.
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -124,13 +141,15 @@ public class GetPolicyEnableStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The mode of the Tag Policy feature. Valid values:
-             * <p>
+             * <p>The mode of the Tag Policy feature. Valid values:</p>
+             * <ul>
+             * <li>USER: single-account mode</li>
+             * <li>RD: multi-account mode</li>
+             * </ul>
+             * <p>For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.</p>
              * 
-             * *   USER: single-account mode
-             * *   RD: multi-account mode
-             * 
-             * For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
+             * <strong>example:</strong>
+             * <p>RD</p>
              */
             public Builder userType(String userType) {
                 this.userType = userType;

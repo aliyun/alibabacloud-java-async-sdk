@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyForStreamAccessTokenResponseBody} extends {@link TeaModel}
  *
  * <p>ApplyForStreamAccessTokenResponseBody</p>
  */
 public class ApplyForStreamAccessTokenResponseBody extends TeaModel {
-    @NameInMap("AccessToken")
+    @com.aliyun.core.annotation.NameInMap("AccessToken")
     private String accessToken;
 
-    @NameInMap("ChannelId")
+    @com.aliyun.core.annotation.NameInMap("ChannelId")
     private String channelId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StreamSecret")
+    @com.aliyun.core.annotation.NameInMap("StreamSecret")
     private String streamSecret;
 
     private ApplyForStreamAccessTokenResponseBody(Builder builder) {
@@ -90,7 +90,10 @@ public class ApplyForStreamAccessTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>736994BD-AA35-4742-88C9-E64BE4BAA14B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

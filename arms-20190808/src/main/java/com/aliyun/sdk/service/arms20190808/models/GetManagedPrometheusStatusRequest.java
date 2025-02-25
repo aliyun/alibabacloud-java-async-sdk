@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetManagedPrometheusStatusRequest} extends {@link RequestModel}
  *
  * <p>GetManagedPrometheusStatusRequest</p>
  */
 public class GetManagedPrometheusStatusRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("ClusterType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterType;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     private GetManagedPrometheusStatusRequest(Builder builder) {
@@ -113,7 +118,11 @@ public class GetManagedPrometheusStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the ASK cluster. This parameter is required if the ClusterType parameter is set to ask.
+         * <p>The cluster ID. This parameter is required if the ClusterType parameter is set to ask.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc7a37ee31aea4ed1a059eff8034b****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -122,7 +131,11 @@ public class GetManagedPrometheusStatusRequest extends Request {
         }
 
         /**
-         * The type of the monitoring object. Valid values: ask , acs , one and ecs.
+         * <p>The type of the cluster. Valid values: ask and ecs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ask</p>
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -131,7 +144,11 @@ public class GetManagedPrometheusStatusRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -140,7 +157,10 @@ public class GetManagedPrometheusStatusRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the Prometheus instance belongs.
+         * <p>The resource group id of the Prometheus instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxyexli2****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -149,7 +169,10 @@ public class GetManagedPrometheusStatusRequest extends Request {
         }
 
         /**
-         * This parameter is required if the ClusterType parameter is set to ecs.
+         * <p>The ID of the virtual private cloud (VPC). This parameter is required if the ClusterType parameter is set to ecs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-***</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

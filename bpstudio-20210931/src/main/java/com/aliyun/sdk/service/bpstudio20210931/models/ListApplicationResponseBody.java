@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bpstudio20210931.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListApplicationResponseBody} extends {@link TeaModel}
  *
  * <p>ListApplicationResponseBody</p>
  */
 public class ListApplicationResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private Integer nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListApplicationResponseBody(Builder builder) {
@@ -98,7 +98,10 @@ public class ListApplicationResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +109,7 @@ public class ListApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the applications.
+         * <p>App listing information</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -114,7 +117,10 @@ public class ListApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The interface returns information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +128,10 @@ public class ListApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The query token returned in this call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder nextToken(Integer nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +139,10 @@ public class ListApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BFB7F5C8-FE7A-06CA-9F87-ABBF6B848F0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class ListApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -151,23 +166,29 @@ public class ListApplicationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ApplicationId")
+        @com.aliyun.core.annotation.NameInMap("ApplicationId")
         private String applicationId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ImageURL")
+        @com.aliyun.core.annotation.NameInMap("ImageURL")
         private String imageURL;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Data(Builder builder) {
@@ -238,7 +259,10 @@ public class ListApplicationResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ApplicationId.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JIX9NEZUALGS46UI</p>
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -246,7 +270,10 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the application was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-15  08:30:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -254,7 +281,10 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ImageURL.
+             * <p>The URL of the application architecture image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://bp-studio-daily.oss-cn-beijing.aliyuncs.com/1411182597819805/sr-Y3KR7ZSQZR2F0YX3.png">https://bp-studio-daily.oss-cn-beijing.aliyuncs.com/1411182597819805/sr-Y3KR7ZSQZR2F0YX3.png</a></p>
              */
             public Builder imageURL(String imageURL) {
                 this.imageURL = imageURL;
@@ -262,7 +292,10 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cadt-appName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -270,7 +303,10 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group to which the application belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -278,7 +314,10 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the application.
+             * <p>The status of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Deployed_Success</p>
              */
             public Builder status(String status) {
                 this.status = status;

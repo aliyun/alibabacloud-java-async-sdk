@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSAMLProvidersResponseBody} extends {@link TeaModel}
  *
  * <p>ListSAMLProvidersResponseBody</p>
  */
 public class ListSAMLProvidersResponseBody extends TeaModel {
-    @NameInMap("IsTruncated")
+    @com.aliyun.core.annotation.NameInMap("IsTruncated")
     private Boolean isTruncated;
 
-    @NameInMap("Marker")
+    @com.aliyun.core.annotation.NameInMap("Marker")
     private String marker;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SAMLProviders")
+    @com.aliyun.core.annotation.NameInMap("SAMLProviders")
     private SAMLProviders SAMLProviders;
 
     private ListSAMLProvidersResponseBody(Builder builder) {
@@ -74,11 +79,14 @@ public class ListSAMLProvidersResponseBody extends TeaModel {
         private SAMLProviders SAMLProviders; 
 
         /**
-         * Indicates whether the response is truncated. Valid values:
-         * <p>
+         * <p>Indicates whether the response is truncated. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -86,7 +94,10 @@ public class ListSAMLProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * The `marker`. This parameter is returned only if the value of `IsTruncated` is `true`. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.
+         * <p>The <code>marker</code>. This parameter is returned only if the value of <code>IsTruncated</code> is <code>true</code>. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.``</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EXAMPLE</p>
          */
         public Builder marker(String marker) {
             this.marker = marker;
@@ -94,7 +105,10 @@ public class ListSAMLProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2D8B70D3-E194-41C9-93C5-F6A10D716D24</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -102,7 +116,7 @@ public class ListSAMLProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the IdP.
+         * <p>The information about IdPs.</p>
          */
         public Builder SAMLProviders(SAMLProviders SAMLProviders) {
             this.SAMLProviders = SAMLProviders;
@@ -115,20 +129,26 @@ public class ListSAMLProvidersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSAMLProvidersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSAMLProvidersResponseBody</p>
+     */
     public static class SAMLProvider extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("SAMLProviderName")
+        @com.aliyun.core.annotation.NameInMap("SAMLProviderName")
         private String SAMLProviderName;
 
-        @NameInMap("UpdateDate")
+        @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
 
         private SAMLProvider(Builder builder) {
@@ -190,7 +210,10 @@ public class ListSAMLProvidersResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the IdP.
+             * <p>The Alibaba Cloud Resource Name (ARN) of the IdP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::177242285274****:saml-provider/test-provider</p>
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -198,7 +221,10 @@ public class ListSAMLProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-22T06:26:15Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -206,7 +232,10 @@ public class ListSAMLProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * The description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a provider.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -214,7 +243,10 @@ public class ListSAMLProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the IdP.
+             * <p>The name of the IdP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-provider</p>
              */
             public Builder SAMLProviderName(String SAMLProviderName) {
                 this.SAMLProviderName = SAMLProviderName;
@@ -222,7 +254,10 @@ public class ListSAMLProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * The update time.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-22T06:26:15Z</p>
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;
@@ -236,9 +271,15 @@ public class ListSAMLProvidersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSAMLProvidersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSAMLProvidersResponseBody</p>
+     */
     public static class SAMLProviders extends TeaModel {
-        @NameInMap("SAMLProvider")
-        private java.util.List < SAMLProvider> SAMLProvider;
+        @com.aliyun.core.annotation.NameInMap("SAMLProvider")
+        private java.util.List<SAMLProvider> SAMLProvider;
 
         private SAMLProviders(Builder builder) {
             this.SAMLProvider = builder.SAMLProvider;
@@ -255,17 +296,17 @@ public class ListSAMLProvidersResponseBody extends TeaModel {
         /**
          * @return SAMLProvider
          */
-        public java.util.List < SAMLProvider> getSAMLProvider() {
+        public java.util.List<SAMLProvider> getSAMLProvider() {
             return this.SAMLProvider;
         }
 
         public static final class Builder {
-            private java.util.List < SAMLProvider> SAMLProvider; 
+            private java.util.List<SAMLProvider> SAMLProvider; 
 
             /**
              * SAMLProvider.
              */
-            public Builder SAMLProvider(java.util.List < SAMLProvider> SAMLProvider) {
+            public Builder SAMLProvider(java.util.List<SAMLProvider> SAMLProvider) {
                 this.SAMLProvider = SAMLProvider;
                 return this;
             }

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetClassificationTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>GetClassificationTemplateResponseBody</p>
  */
 public class GetClassificationTemplateResponseBody extends TeaModel {
-    @NameInMap("ClassificationResourceTemplateMap")
+    @com.aliyun.core.annotation.NameInMap("ClassificationResourceTemplateMap")
     private ClassificationResourceTemplateMap classificationResourceTemplateMap;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetClassificationTemplateResponseBody(Builder builder) {
@@ -131,17 +136,23 @@ public class GetClassificationTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetClassificationTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClassificationTemplateResponseBody</p>
+     */
     public static class ClassificationResourceTemplateMap extends TeaModel {
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private Long resourceId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private Long templateId;
 
-        @NameInMap("TemplateType")
+        @com.aliyun.core.annotation.NameInMap("TemplateType")
         private String templateType;
 
         private ClassificationResourceTemplateMap(Builder builder) {

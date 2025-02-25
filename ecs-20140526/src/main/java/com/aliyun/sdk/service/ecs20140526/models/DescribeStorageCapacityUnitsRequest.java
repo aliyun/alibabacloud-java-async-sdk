@@ -1,70 +1,75 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeStorageCapacityUnitsRequest} extends {@link RequestModel}
  *
  * <p>DescribeStorageCapacityUnitsRequest</p>
  */
 public class DescribeStorageCapacityUnitsRequest extends Request {
-    @Query
-    @NameInMap("AllocationType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllocationType")
     private String allocationType;
 
-    @Query
-    @NameInMap("Capacity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Capacity")
     private Integer capacity;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Status")
-    private java.util.List < String > status;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private java.util.List<String> status;
 
-    @Query
-    @NameInMap("StorageCapacityUnitId")
-    private java.util.List < String > storageCapacityUnitId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageCapacityUnitId")
+    private java.util.List<String> storageCapacityUnitId;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private DescribeStorageCapacityUnitsRequest(Builder builder) {
         super(builder);
@@ -169,21 +174,21 @@ public class DescribeStorageCapacityUnitsRequest extends Request {
     /**
      * @return status
      */
-    public java.util.List < String > getStatus() {
+    public java.util.List<String> getStatus() {
         return this.status;
     }
 
     /**
      * @return storageCapacityUnitId
      */
-    public java.util.List < String > getStorageCapacityUnitId() {
+    public java.util.List<String> getStorageCapacityUnitId() {
         return this.storageCapacityUnitId;
     }
 
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -198,9 +203,9 @@ public class DescribeStorageCapacityUnitsRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < String > status; 
-        private java.util.List < String > storageCapacityUnitId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<String> status; 
+        private java.util.List<String> storageCapacityUnitId; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -224,13 +229,15 @@ public class DescribeStorageCapacityUnitsRequest extends Request {
         } 
 
         /**
-         * The allocation type. Valid values:
-         * <p>
+         * <p>The allocation type. Valid values:</p>
+         * <ul>
+         * <li>Normal: queries SCUs that belong to the current Alibaba Cloud account.</li>
+         * <li>Shared: queries SCUs shared between the Alibaba Cloud account and RAM users.</li>
+         * </ul>
+         * <p>Default value: Normal.</p>
          * 
-         * *   Normal: queries SCUs that belong to the current Alibaba Cloud account.
-         * *   Shared: queries SCUs shared between the Alibaba Cloud account and RAM users.
-         * 
-         * Default value: Normal.
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder allocationType(String allocationType) {
             this.putQueryParameter("AllocationType", allocationType);
@@ -239,7 +246,10 @@ public class DescribeStorageCapacityUnitsRequest extends Request {
         }
 
         /**
-         * The capacity of the SCU. Unit: GiB. Valid values: 20, 40, 100, 200, 500, 1024, 2048, 5120, 10240, 20480, and 51200.
+         * <p>The capacity of the SCU. Unit: GiB. Valid values: 20, 40, 100, 200, 500, 1024, 2048, 5120, 10240, 20480, and 51200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder capacity(Integer capacity) {
             this.putQueryParameter("Capacity", capacity);
@@ -248,7 +258,10 @@ public class DescribeStorageCapacityUnitsRequest extends Request {
         }
 
         /**
-         * The name of the SCU. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * <p>The name of the SCU. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testScuName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -275,12 +288,12 @@ public class DescribeStorageCapacityUnitsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
-         * <p>
+         * <p>The number of the page to return.</p>
+         * <p>Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -289,12 +302,12 @@ public class DescribeStorageCapacityUnitsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Maximum value: 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -303,7 +316,11 @@ public class DescribeStorageCapacityUnitsRequest extends Request {
         }
 
         /**
-         * The region ID of the SCU. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the SCU. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -330,33 +347,33 @@ public class DescribeStorageCapacityUnitsRequest extends Request {
         }
 
         /**
-         * The state of SCUs. You can specify 1 to 4 types of state. Valid values:
-         * <p>
+         * <p>The states of SCUs. The array is 1 to 4 in length.</p>
          * 
-         * *   Creating: The SCUs are being created.
-         * *   Active: The SCUs are in effect.
-         * *   Expired: The SCUs have expired.
-         * *   Pending: The SCUs have not taken effect.
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
-        public Builder status(java.util.List < String > status) {
+        public Builder status(java.util.List<String> status) {
             this.putQueryParameter("Status", status);
             this.status = status;
             return this;
         }
 
         /**
-         * One or multiple SCU IDs. You can specify 1 to 100 SCU IDs.
+         * <p>The IDs of the SCUs. You can specify 1 to 100 SCU IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scu-bp67acfmxazb4p****</p>
          */
-        public Builder storageCapacityUnitId(java.util.List < String > storageCapacityUnitId) {
+        public Builder storageCapacityUnitId(java.util.List<String> storageCapacityUnitId) {
             this.putQueryParameter("StorageCapacityUnitId", storageCapacityUnitId);
             this.storageCapacityUnitId = storageCapacityUnitId;
             return this;
         }
 
         /**
-         * The tags of the SCUs.
+         * <p>The tags to add to the SCU. You can add up to 20 tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -369,11 +386,17 @@ public class DescribeStorageCapacityUnitsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeStorageCapacityUnitsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeStorageCapacityUnitsRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -408,7 +431,10 @@ public class DescribeStorageCapacityUnitsRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the SCU. N is the identifier for the tag, which you can use to set and query the tag. Valid values of N: 1 to 20.
+             * <p>The key of tag N to be added to the SCU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -416,7 +442,10 @@ public class DescribeStorageCapacityUnitsRequest extends Request {
             }
 
             /**
-             * The value of tag N of the SCU. N is the identifier for the tag, which you can use to set and query the tag. The value of N must coincide with `Tag.N.Key`. Valid values of N: 1 to 20.
+             * <p>The value of tag N to be added to the SCU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

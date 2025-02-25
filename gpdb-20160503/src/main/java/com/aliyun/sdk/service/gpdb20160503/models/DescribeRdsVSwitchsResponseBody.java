@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRdsVSwitchsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRdsVSwitchsResponseBody</p>
  */
 public class DescribeRdsVSwitchsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VSwitches")
+    @com.aliyun.core.annotation.NameInMap("VSwitches")
     private VSwitches vSwitches;
 
     private DescribeRdsVSwitchsResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
         private VSwitches vSwitches; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B0BA251D-6854-5A99-A964-3C**********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the vSwitches.
+         * <p>Details of the vSwitches.</p>
          */
         public Builder vSwitches(VSwitches vSwitches) {
             this.vSwitches = vSwitches;
@@ -71,38 +79,44 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRdsVSwitchsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRdsVSwitchsResponseBody</p>
+     */
     public static class VSwitch extends TeaModel {
-        @NameInMap("AliUid")
+        @com.aliyun.core.annotation.NameInMap("AliUid")
         private String aliUid;
 
-        @NameInMap("Bid")
+        @com.aliyun.core.annotation.NameInMap("Bid")
         private String bid;
 
-        @NameInMap("CidrBlock")
+        @com.aliyun.core.annotation.NameInMap("CidrBlock")
         private String cidrBlock;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("IsDefault")
+        @com.aliyun.core.annotation.NameInMap("IsDefault")
         private Boolean isDefault;
 
-        @NameInMap("IzNo")
+        @com.aliyun.core.annotation.NameInMap("IzNo")
         private String izNo;
 
-        @NameInMap("RegionNo")
+        @com.aliyun.core.annotation.NameInMap("RegionNo")
         private String regionNo;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VSwitchName")
+        @com.aliyun.core.annotation.NameInMap("VSwitchName")
         private String vSwitchName;
 
         private VSwitch(Builder builder) {
@@ -218,7 +232,10 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             private String vSwitchName; 
 
             /**
-             * An invalid parameter. It is no longer returned when you call this operation.
+             * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder aliUid(String aliUid) {
                 this.aliUid = aliUid;
@@ -226,7 +243,10 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * An invalid parameter. It is no longer returned when you call this operation.
+             * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder bid(String bid) {
                 this.bid = bid;
@@ -234,7 +254,10 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * The CIDR block of the vSwitch.
+             * <p>The CIDR block of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.<strong>.</strong>.0/24</p>
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -242,7 +265,10 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * An invalid parameter. It is no longer returned when you call this operation.
+             * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -250,7 +276,10 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * An invalid parameter. It is no longer returned when you call this operation.
+             * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -258,11 +287,14 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the vSwitch is the default vSwitch. Valid values:
-             * <p>
+             * <p>Indicates whether the vSwitch is the default vSwitch. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -270,7 +302,10 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone.
+             * <p>The ID of the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder izNo(String izNo) {
                 this.izNo = izNo;
@@ -278,7 +313,10 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * An invalid parameter. It is no longer returned when you call this operation.
+             * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -286,7 +324,10 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the vSwitch. If **Available** is returned, the vSwitch is available.
+             * <p>The state of the vSwitch. If <strong>Available</strong> is returned, the vSwitch is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -294,7 +335,10 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * <p>The ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp*******************</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -302,7 +346,10 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the vSwitch.
+             * <p>The name of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-name</p>
              */
             public Builder vSwitchName(String vSwitchName) {
                 this.vSwitchName = vSwitchName;
@@ -316,9 +363,15 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRdsVSwitchsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRdsVSwitchsResponseBody</p>
+     */
     public static class VSwitches extends TeaModel {
-        @NameInMap("VSwitch")
-        private java.util.List < VSwitch> vSwitch;
+        @com.aliyun.core.annotation.NameInMap("VSwitch")
+        private java.util.List<VSwitch> vSwitch;
 
         private VSwitches(Builder builder) {
             this.vSwitch = builder.vSwitch;
@@ -335,17 +388,17 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
         /**
          * @return vSwitch
          */
-        public java.util.List < VSwitch> getVSwitch() {
+        public java.util.List<VSwitch> getVSwitch() {
             return this.vSwitch;
         }
 
         public static final class Builder {
-            private java.util.List < VSwitch> vSwitch; 
+            private java.util.List<VSwitch> vSwitch; 
 
             /**
-             * Details of the vSwitch.
+             * <p>Details of the vSwitch.</p>
              */
-            public Builder vSwitch(java.util.List < VSwitch> vSwitch) {
+            public Builder vSwitch(java.util.List<VSwitch> vSwitch) {
                 this.vSwitch = vSwitch;
                 return this;
             }

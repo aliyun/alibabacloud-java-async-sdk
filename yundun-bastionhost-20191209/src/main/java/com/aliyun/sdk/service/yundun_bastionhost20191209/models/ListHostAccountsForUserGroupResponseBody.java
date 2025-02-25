@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHostAccountsForUserGroupResponseBody} extends {@link TeaModel}
  *
  * <p>ListHostAccountsForUserGroupResponseBody</p>
  */
 public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
-    @NameInMap("HostAccounts")
+    @com.aliyun.core.annotation.NameInMap("HostAccounts")
     private java.util.List < HostAccounts> hostAccounts;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListHostAccountsForUserGroupResponseBody(Builder builder) {
@@ -62,7 +62,7 @@ public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * An array that consists of the queried host accounts.
+         * <p>An array that consists of the queried host accounts.</p>
          */
         public Builder hostAccounts(java.util.List < HostAccounts> hostAccounts) {
             this.hostAccounts = hostAccounts;
@@ -70,7 +70,10 @@ public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,10 @@ public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of host accounts that were queried.
+         * <p>The total number of host accounts that were queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -91,20 +97,26 @@ public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListHostAccountsForUserGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHostAccountsForUserGroupResponseBody</p>
+     */
     public static class HostAccounts extends TeaModel {
-        @NameInMap("HostAccountId")
+        @com.aliyun.core.annotation.NameInMap("HostAccountId")
         private String hostAccountId;
 
-        @NameInMap("HostAccountName")
+        @com.aliyun.core.annotation.NameInMap("HostAccountName")
         private String hostAccountName;
 
-        @NameInMap("HostId")
+        @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;
 
-        @NameInMap("IsAuthorized")
+        @com.aliyun.core.annotation.NameInMap("IsAuthorized")
         private Boolean isAuthorized;
 
-        @NameInMap("ProtocolName")
+        @com.aliyun.core.annotation.NameInMap("ProtocolName")
         private String protocolName;
 
         private HostAccounts(Builder builder) {
@@ -166,7 +178,10 @@ public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
             private String protocolName; 
 
             /**
-             * The ID of the host account.
+             * <p>The ID of the host account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder hostAccountId(String hostAccountId) {
                 this.hostAccountId = hostAccountId;
@@ -174,7 +189,10 @@ public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the host account.
+             * <p>The name of the host account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>host１</p>
              */
             public Builder hostAccountName(String hostAccountName) {
                 this.hostAccountName = hostAccountName;
@@ -182,7 +200,10 @@ public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the host for which the host accounts were queried.
+             * <p>The ID of the host for which the host accounts were queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>１</p>
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -190,11 +211,14 @@ public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the user group is authorized to manage the host account. Valid values:
-             * <p>
+             * <p>Indicates whether the user group is authorized to manage the host account. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isAuthorized(Boolean isAuthorized) {
                 this.isAuthorized = isAuthorized;
@@ -202,11 +226,14 @@ public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol that is used by the host. Valid values:
-             * <p>
+             * <p>The protocol that is used by the host. Valid values:</p>
+             * <ul>
+             * <li><strong>SSH</strong></li>
+             * <li><strong>RDP</strong></li>
+             * </ul>
              * 
-             * *   **SSH**
-             * *   **RDP**
+             * <strong>example:</strong>
+             * <p>SSH</p>
              */
             public Builder protocolName(String protocolName) {
                 this.protocolName = protocolName;

@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExposedCheckWarningResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeExposedCheckWarningResponseBody</p>
  */
 public class DescribeExposedCheckWarningResponseBody extends TeaModel {
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("WarningList")
-    private java.util.List < WarningList> warningList;
+    @com.aliyun.core.annotation.NameInMap("WarningList")
+    private java.util.List<WarningList> warningList;
 
     private DescribeExposedCheckWarningResponseBody(Builder builder) {
         this.count = builder.count;
@@ -52,17 +57,20 @@ public class DescribeExposedCheckWarningResponseBody extends TeaModel {
     /**
      * @return warningList
      */
-    public java.util.List < WarningList> getWarningList() {
+    public java.util.List<WarningList> getWarningList() {
         return this.warningList;
     }
 
     public static final class Builder {
         private Integer count; 
         private String requestId; 
-        private java.util.List < WarningList> warningList; 
+        private java.util.List<WarningList> warningList; 
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -70,7 +78,10 @@ public class DescribeExposedCheckWarningResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6D9CDB47-6191-4415-BE63-7E8B12CD****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,9 +89,9 @@ public class DescribeExposedCheckWarningResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the baseline risk items of the exposed server.
+         * <p>An array that consists of the baseline risk items of the exposed server.</p>
          */
-        public Builder warningList(java.util.List < WarningList> warningList) {
+        public Builder warningList(java.util.List<WarningList> warningList) {
             this.warningList = warningList;
             return this;
         }
@@ -91,20 +102,26 @@ public class DescribeExposedCheckWarningResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeExposedCheckWarningResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeExposedCheckWarningResponseBody</p>
+     */
     public static class WarningList extends TeaModel {
-        @NameInMap("RiskId")
+        @com.aliyun.core.annotation.NameInMap("RiskId")
         private Long riskId;
 
-        @NameInMap("RiskName")
+        @com.aliyun.core.annotation.NameInMap("RiskName")
         private String riskName;
 
-        @NameInMap("SubTypeAlias")
+        @com.aliyun.core.annotation.NameInMap("SubTypeAlias")
         private String subTypeAlias;
 
-        @NameInMap("TypeAlias")
+        @com.aliyun.core.annotation.NameInMap("TypeAlias")
         private String typeAlias;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private WarningList(Builder builder) {
@@ -166,10 +183,13 @@ public class DescribeExposedCheckWarningResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The ID of the baseline.
-             * <p>
+             * <p>The ID of the baseline.</p>
+             * <blockquote>
+             * <p> You can call the <a href="https://help.aliyun.com/document_detail/116179.html">DescribeCheckWarningSummary</a> operation to query the IDs of baselines.</p>
+             * </blockquote>
              * 
-             * >  You can call the [DescribeCheckWarningSummary](~~116179~~) operation to query the IDs of baselines.
+             * <strong>example:</strong>
+             * <p>107</p>
              */
             public Builder riskId(Long riskId) {
                 this.riskId = riskId;
@@ -177,7 +197,10 @@ public class DescribeExposedCheckWarningResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the baseline.
+             * <p>The name of the baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Weak password-Redis DB login weak password baseline</p>
              */
             public Builder riskName(String riskName) {
                 this.riskName = riskName;
@@ -185,7 +208,10 @@ public class DescribeExposedCheckWarningResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the baseline sub type.
+             * <p>The display name of the baseline sub type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Redis DB login weak password baseline</p>
              */
             public Builder subTypeAlias(String subTypeAlias) {
                 this.subTypeAlias = subTypeAlias;
@@ -193,7 +219,10 @@ public class DescribeExposedCheckWarningResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the baseline type.
+             * <p>The display name of the baseline type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Weak password</p>
              */
             public Builder typeAlias(String typeAlias) {
                 this.typeAlias = typeAlias;
@@ -201,7 +230,10 @@ public class DescribeExposedCheckWarningResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * <p>The UUID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1d35b031-ee4e-4e53-8b53-465ab712****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

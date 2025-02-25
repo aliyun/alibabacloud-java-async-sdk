@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbfs20200418.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDbfsAttachedEcsInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>ListDbfsAttachedEcsInstancesResponseBody</p>
  */
 public class ListDbfsAttachedEcsInstancesResponseBody extends TeaModel {
-    @NameInMap("EcsLabelInfo")
+    @com.aliyun.core.annotation.NameInMap("EcsLabelInfo")
     private java.util.List < EcsLabelInfo> ecsLabelInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListDbfsAttachedEcsInstancesResponseBody(Builder builder) {
@@ -71,23 +71,29 @@ public class ListDbfsAttachedEcsInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDbfsAttachedEcsInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDbfsAttachedEcsInstancesResponseBody</p>
+     */
     public static class EcsLabelInfo extends TeaModel {
-        @NameInMap("InstanceTypeFamily")
+        @com.aliyun.core.annotation.NameInMap("InstanceTypeFamily")
         private String instanceTypeFamily;
 
-        @NameInMap("MountPoint")
+        @com.aliyun.core.annotation.NameInMap("MountPoint")
         private String mountPoint;
 
-        @NameInMap("MountedTime")
+        @com.aliyun.core.annotation.NameInMap("MountedTime")
         private String mountedTime;
 
-        @NameInMap("OSName")
+        @com.aliyun.core.annotation.NameInMap("OSName")
         private String OSName;
 
-        @NameInMap("label")
+        @com.aliyun.core.annotation.NameInMap("label")
         private String label;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private EcsLabelInfo(Builder builder) {

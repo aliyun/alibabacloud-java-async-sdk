@@ -75,15 +75,15 @@ public class DescribeBackupDbsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeBackupDbsRequest response) {
-            super(response);
-            this.backupId = response.backupId;
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.preferredRestoreTime = response.preferredRestoreTime;
+        private Builder(DescribeBackupDbsRequest request) {
+            super(request);
+            this.backupId = request.backupId;
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.preferredRestoreTime = request.preferredRestoreTime;
         } 
 
         /**
-         * BackupId.
+         * Query by backup set ID
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -92,7 +92,7 @@ public class DescribeBackupDbsRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of a DRDS instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -101,7 +101,7 @@ public class DescribeBackupDbsRequest extends Request {
         }
 
         /**
-         * PreferredRestoreTime.
+         * Query by restoration time.
          */
         public Builder preferredRestoreTime(String preferredRestoreTime) {
             this.putQueryParameter("PreferredRestoreTime", preferredRestoreTime);

@@ -1,41 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bpstudio20210931.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ValuateTemplateRequest} extends {@link RequestModel}
  *
  * <p>ValuateTemplateRequest</p>
  */
 public class ValuateTemplateRequest extends Request {
-    @Body
-    @NameInMap("AreaId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AreaId")
     private String areaId;
 
-    @Body
-    @NameInMap("ClientToken")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientToken;
 
-    @Body
-    @NameInMap("Instances")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Instances")
     private java.util.List < Instances> instances;
 
-    @Body
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Body
-    @NameInMap("TemplateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateId;
 
-    @Body
-    @NameInMap("Variables")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Variables")
     private java.util.Map < String, String > variables;
 
     private ValuateTemplateRequest(Builder builder) {
@@ -126,7 +126,10 @@ public class ValuateTemplateRequest extends Request {
         } 
 
         /**
-         * AreaId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder areaId(String areaId) {
             this.putBodyParameter("AreaId", areaId);
@@ -135,7 +138,11 @@ public class ValuateTemplateRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1600765710019</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -144,7 +151,7 @@ public class ValuateTemplateRequest extends Request {
         }
 
         /**
-         * Instances.
+         * <p>The instances to be replaced.</p>
          */
         public Builder instances(java.util.List < Instances> instances) {
             String instancesShrink = shrink(instances, "Instances", "json");
@@ -154,7 +161,10 @@ public class ValuateTemplateRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group to which the application belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyjt3c5om3fi</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -163,7 +173,11 @@ public class ValuateTemplateRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>The template ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0KSHPM6SJU03TNZP</p>
          */
         public Builder templateId(String templateId) {
             this.putBodyParameter("TemplateId", templateId);
@@ -172,7 +186,7 @@ public class ValuateTemplateRequest extends Request {
         }
 
         /**
-         * Variables.
+         * <p>The parameter values that are contained in the template. If the template contains no parameter values, the default values are used.</p>
          */
         public Builder variables(java.util.Map < String, String > variables) {
             String variablesShrink = shrink(variables, "Variables", "json");
@@ -188,14 +202,20 @@ public class ValuateTemplateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ValuateTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>ValuateTemplateRequest</p>
+     */
     public static class Instances extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
         private Instances(Builder builder) {
@@ -239,7 +259,10 @@ public class ValuateTemplateRequest extends Request {
             private String nodeType; 
 
             /**
-             * Id.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1q56trhtaq40vlq5oj</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -247,7 +270,10 @@ public class ValuateTemplateRequest extends Request {
             }
 
             /**
-             * NodeName.
+             * <p>The name of the application instance that is displayed on the diagram.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -255,7 +281,10 @@ public class ValuateTemplateRequest extends Request {
             }
 
             /**
-             * NodeType.
+             * <p>The instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;

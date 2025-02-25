@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClusterAddonInstancesRequest} extends {@link RequestModel}
  *
  * <p>ListClusterAddonInstancesRequest</p>
  */
 public class ListClusterAddonInstancesRequest extends Request {
-    @Path
-    @NameInMap("cluster_id")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("cluster_id")
     private String clusterId;
 
     private ListClusterAddonInstancesRequest(Builder builder) {
@@ -54,7 +59,10 @@ public class ListClusterAddonInstancesRequest extends Request {
         } 
 
         /**
-         * cluster_id.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c02b3e03be10643e8a644a843ffcb****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);

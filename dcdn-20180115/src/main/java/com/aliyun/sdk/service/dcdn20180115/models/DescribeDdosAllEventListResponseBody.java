@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDdosAllEventListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDdosAllEventListResponseBody</p>
  */
 public class DescribeDdosAllEventListResponseBody extends TeaModel {
-    @NameInMap("DataList")
+    @com.aliyun.core.annotation.NameInMap("DataList")
     private java.util.List < DataList> dataList;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
 
     private DescribeDdosAllEventListResponseBody(Builder builder) {
@@ -86,7 +86,7 @@ public class DescribeDdosAllEventListResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * DataList.
+         * <p>The list of events.</p>
          */
         public Builder dataList(java.util.List < DataList> dataList) {
             this.dataList = dataList;
@@ -94,7 +94,10 @@ public class DescribeDdosAllEventListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +105,10 @@ public class DescribeDdosAllEventListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned on each page. Default value: <strong>10</strong>. Valid values: 5, 10, and 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +116,10 @@ public class DescribeDdosAllEventListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D73A4243-CFBD-5110-876F-09237E77ECBD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +127,10 @@ public class DescribeDdosAllEventListResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -131,32 +143,38 @@ public class DescribeDdosAllEventListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDdosAllEventListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDdosAllEventListResponseBody</p>
+     */
     public static class DataList extends TeaModel {
-        @NameInMap("Bps")
+        @com.aliyun.core.annotation.NameInMap("Bps")
         private Long bps;
 
-        @NameInMap("Cps")
+        @com.aliyun.core.annotation.NameInMap("Cps")
         private Long cps;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("EventId")
+        @com.aliyun.core.annotation.NameInMap("EventId")
         private String eventId;
 
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
 
-        @NameInMap("Pps")
+        @com.aliyun.core.annotation.NameInMap("Pps")
         private Long pps;
 
-        @NameInMap("Qps")
+        @com.aliyun.core.annotation.NameInMap("Qps")
         private Long qps;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Target")
+        @com.aliyun.core.annotation.NameInMap("Target")
         private String target;
 
         private DataList(Builder builder) {
@@ -254,7 +272,10 @@ public class DescribeDdosAllEventListResponseBody extends TeaModel {
             private String target; 
 
             /**
-             * Bps.
+             * <p>The peak attack traffic of volumetric attacks. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>800</p>
              */
             public Builder bps(Long bps) {
                 this.bps = bps;
@@ -262,7 +283,10 @@ public class DescribeDdosAllEventListResponseBody extends TeaModel {
             }
 
             /**
-             * Cps.
+             * <p>The peak of connection flood attacks. Unit: connections per seconds (CPS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder cps(Long cps) {
                 this.cps = cps;
@@ -270,7 +294,10 @@ public class DescribeDdosAllEventListResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end of the time range during which data was queried. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-26T15:59:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -278,7 +305,10 @@ public class DescribeDdosAllEventListResponseBody extends TeaModel {
             }
 
             /**
-             * EventId.
+             * <p>The event ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>28069</p>
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -286,7 +316,16 @@ public class DescribeDdosAllEventListResponseBody extends TeaModel {
             }
 
             /**
-             * EventType.
+             * <p>The type of the DDoS attack event that was queried. Valid values:</p>
+             * <ul>
+             * <li><strong>web-cc</strong>: web resource exhaustion attacks</li>
+             * <li><strong>cc</strong>: connection flood attacks</li>
+             * <li><strong>traffic</strong>: volumetric attacks</li>
+             * <li>If you do not configure this parameter, DDoS attack events of all types are queried.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>web-cc</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -294,7 +333,10 @@ public class DescribeDdosAllEventListResponseBody extends TeaModel {
             }
 
             /**
-             * Pps.
+             * <p>The peak attack traffic of volumetric attacks. Unit: packets per second (PPS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12000</p>
              */
             public Builder pps(Long pps) {
                 this.pps = pps;
@@ -302,7 +344,10 @@ public class DescribeDdosAllEventListResponseBody extends TeaModel {
             }
 
             /**
-             * Qps.
+             * <p>The peak of web resource exhaustion attacks. Unit: queries per second (QPS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7692</p>
              */
             public Builder qps(Long qps) {
                 this.qps = qps;
@@ -310,7 +355,10 @@ public class DescribeDdosAllEventListResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The beginning of the time range during which data was queried. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10-09T10:03:31Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -318,7 +366,10 @@ public class DescribeDdosAllEventListResponseBody extends TeaModel {
             }
 
             /**
-             * Target.
+             * <p>The attack target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder target(String target) {
                 this.target = target;

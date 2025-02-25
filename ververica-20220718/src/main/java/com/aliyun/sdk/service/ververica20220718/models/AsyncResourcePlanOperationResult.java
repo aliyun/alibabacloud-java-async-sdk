@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AsyncResourcePlanOperationResult} extends {@link TeaModel}
  *
  * <p>AsyncResourcePlanOperationResult</p>
  */
 public class AsyncResourcePlanOperationResult extends TeaModel {
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("plan")
+    @com.aliyun.core.annotation.NameInMap("plan")
     private String plan;
 
-    @NameInMap("ticketStatus")
+    @com.aliyun.core.annotation.NameInMap("ticketStatus")
     private String ticketStatus;
 
     private AsyncResourcePlanOperationResult(Builder builder) {

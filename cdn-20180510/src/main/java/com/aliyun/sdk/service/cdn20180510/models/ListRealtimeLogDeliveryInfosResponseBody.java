@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRealtimeLogDeliveryInfosResponseBody} extends {@link TeaModel}
  *
  * <p>ListRealtimeLogDeliveryInfosResponseBody</p>
  */
 public class ListRealtimeLogDeliveryInfosResponseBody extends TeaModel {
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private Content content;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListRealtimeLogDeliveryInfosResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class ListRealtimeLogDeliveryInfosResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about real-time log delivery.
+         * <p>The information about real-time log delivery.</p>
          */
         public Builder content(Content content) {
             this.content = content;
@@ -58,7 +58,10 @@ public class ListRealtimeLogDeliveryInfosResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95D5B69F-8AEC-419B-8F3A-612B35032B0D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +74,20 @@ public class ListRealtimeLogDeliveryInfosResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRealtimeLogDeliveryInfosResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRealtimeLogDeliveryInfosResponseBody</p>
+     */
     public static class RealtimeLogDeliveryInfos extends TeaModel {
-        @NameInMap("Logstore")
+        @com.aliyun.core.annotation.NameInMap("Logstore")
         private String logstore;
 
-        @NameInMap("Project")
+        @com.aliyun.core.annotation.NameInMap("Project")
         private String project;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
         private RealtimeLogDeliveryInfos(Builder builder) {
@@ -122,7 +131,10 @@ public class ListRealtimeLogDeliveryInfosResponseBody extends TeaModel {
             private String region; 
 
             /**
-             * The name of the Logstore that collects log data from Alibaba Cloud CDN in real time.
+             * <p>The name of the Logstore that collects log data from Alibaba Cloud CDN in real time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LogstoreName</p>
              */
             public Builder logstore(String logstore) {
                 this.logstore = logstore;
@@ -130,7 +142,10 @@ public class ListRealtimeLogDeliveryInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Log Service project that is used for real-time log delivery.
+             * <p>The name of the Log Service project that is used for real-time log delivery.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ProjectName</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -138,7 +153,10 @@ public class ListRealtimeLogDeliveryInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the Log Service project is deployed. For more information, see [Regions that support real-time log delivery](~~144883~~).
+             * <p>The ID of the region where the Log Service project is deployed. For more information, see <a href="https://help.aliyun.com/document_detail/144883.html">Regions that support real-time log delivery</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ch-shanghai</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -152,8 +170,14 @@ public class ListRealtimeLogDeliveryInfosResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRealtimeLogDeliveryInfosResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRealtimeLogDeliveryInfosResponseBody</p>
+     */
     public static class Content extends TeaModel {
-        @NameInMap("RealtimeLogDeliveryInfos")
+        @com.aliyun.core.annotation.NameInMap("RealtimeLogDeliveryInfos")
         private java.util.List < RealtimeLogDeliveryInfos> realtimeLogDeliveryInfos;
 
         private Content(Builder builder) {

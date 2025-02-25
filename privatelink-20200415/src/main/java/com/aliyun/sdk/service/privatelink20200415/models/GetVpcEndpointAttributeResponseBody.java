@@ -1,78 +1,90 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.privatelink20200415.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetVpcEndpointAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>GetVpcEndpointAttributeResponseBody</p>
  */
 public class GetVpcEndpointAttributeResponseBody extends TeaModel {
-    @NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.NameInMap("AddressIpVersion")
+    private String addressIpVersion;
+
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
     private Integer bandwidth;
 
-    @NameInMap("ConnectionStatus")
+    @com.aliyun.core.annotation.NameInMap("ConnectionStatus")
     private String connectionStatus;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("EndpointBusinessStatus")
+    @com.aliyun.core.annotation.NameInMap("EndpointBusinessStatus")
     private String endpointBusinessStatus;
 
-    @NameInMap("EndpointDescription")
+    @com.aliyun.core.annotation.NameInMap("EndpointDescription")
     private String endpointDescription;
 
-    @NameInMap("EndpointDomain")
+    @com.aliyun.core.annotation.NameInMap("EndpointDomain")
     private String endpointDomain;
 
-    @NameInMap("EndpointId")
+    @com.aliyun.core.annotation.NameInMap("EndpointId")
     private String endpointId;
 
-    @NameInMap("EndpointName")
+    @com.aliyun.core.annotation.NameInMap("EndpointName")
     private String endpointName;
 
-    @NameInMap("EndpointStatus")
+    @com.aliyun.core.annotation.NameInMap("EndpointStatus")
     private String endpointStatus;
 
-    @NameInMap("EndpointType")
+    @com.aliyun.core.annotation.NameInMap("EndpointType")
     private String endpointType;
 
-    @NameInMap("Payer")
+    @com.aliyun.core.annotation.NameInMap("Payer")
     private String payer;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("PolicyDocument")
+    private String policyDocument;
+
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("ResourceOwner")
+    @com.aliyun.core.annotation.NameInMap("ResourceOwner")
     private Boolean resourceOwner;
 
-    @NameInMap("ServiceId")
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
     private String serviceId;
 
-    @NameInMap("ServiceName")
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
 
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
-    @NameInMap("ZoneAffinityEnabled")
+    @com.aliyun.core.annotation.NameInMap("ZoneAffinityEnabled")
     private Boolean zoneAffinityEnabled;
 
-    @NameInMap("ZonePrivateIpAddressCount")
+    @com.aliyun.core.annotation.NameInMap("ZonePrivateIpAddressCount")
     private Long zonePrivateIpAddressCount;
 
     private GetVpcEndpointAttributeResponseBody(Builder builder) {
+        this.addressIpVersion = builder.addressIpVersion;
         this.bandwidth = builder.bandwidth;
         this.connectionStatus = builder.connectionStatus;
         this.createTime = builder.createTime;
@@ -84,6 +96,7 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         this.endpointStatus = builder.endpointStatus;
         this.endpointType = builder.endpointType;
         this.payer = builder.payer;
+        this.policyDocument = builder.policyDocument;
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
         this.resourceGroupId = builder.resourceGroupId;
@@ -101,6 +114,13 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
 
     public static GetVpcEndpointAttributeResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return addressIpVersion
+     */
+    public String getAddressIpVersion() {
+        return this.addressIpVersion;
     }
 
     /**
@@ -181,6 +201,13 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return policyDocument
+     */
+    public String getPolicyDocument() {
+        return this.policyDocument;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -244,6 +271,7 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String addressIpVersion; 
         private Integer bandwidth; 
         private String connectionStatus; 
         private String createTime; 
@@ -255,6 +283,7 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         private String endpointStatus; 
         private String endpointType; 
         private String payer; 
+        private String policyDocument; 
         private String regionId; 
         private String requestId; 
         private String resourceGroupId; 
@@ -266,7 +295,25 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         private Long zonePrivateIpAddressCount; 
 
         /**
-         * The bandwidth of the endpoint connection. Unit: Mbit/s.
+         * <p>The protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>IPv4</strong></li>
+         * <li><strong>DualStack</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv4</p>
+         */
+        public Builder addressIpVersion(String addressIpVersion) {
+            this.addressIpVersion = addressIpVersion;
+            return this;
+        }
+
+        /**
+         * <p>The bandwidth of the endpoint connection. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder bandwidth(Integer bandwidth) {
             this.bandwidth = bandwidth;
@@ -274,15 +321,18 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The state of the endpoint connection. Valid values:
-         * <p>
+         * <p>The state of the endpoint connection. Valid values:</p>
+         * <ul>
+         * <li><strong>Pending</strong>: The connection is being modified.</li>
+         * <li><strong>Connecting</strong>: The connection is being established.</li>
+         * <li><strong>Connected</strong>: The connection is established.</li>
+         * <li><strong>Disconnecting</strong>: The endpoint is being disconnected from the endpoint service.</li>
+         * <li><strong>Disconnected</strong>: The endpoint is disconnected from the endpoint service.</li>
+         * <li><strong>Deleting</strong>: The connection is being deleted.</li>
+         * </ul>
          * 
-         * *   **Pending**: The connection is being modified.
-         * *   **Connecting**: The connection is being established.
-         * *   **Connected**: The connection is established.
-         * *   **Disconnecting**: The endpoint is being disconnected from the endpoint service.
-         * *   **Disconnected**: The endpoint is disconnected from the endpoint service.
-         * *   **Deleting**: The connection is being deleted.
+         * <strong>example:</strong>
+         * <p>Connected</p>
          */
         public Builder connectionStatus(String connectionStatus) {
             this.connectionStatus = connectionStatus;
@@ -290,7 +340,10 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the endpoint was created.
+         * <p>The time when the endpoint was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-24T18:00:07Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -298,11 +351,14 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The service state of the endpoint. Valid values:
-         * <p>
+         * <p>The service state of the endpoint. Valid values:</p>
+         * <ul>
+         * <li><strong>Normal</strong>: The endpoint runs as expected.</li>
+         * <li><strong>FinancialLocked</strong>: The endpoint is locked due to overdue payments.</li>
+         * </ul>
          * 
-         * *   **Normal**: The endpoint runs as expected.
-         * *   **FinacialLocked**: The endpoint is locked due to overdue payments.
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder endpointBusinessStatus(String endpointBusinessStatus) {
             this.endpointBusinessStatus = endpointBusinessStatus;
@@ -310,7 +366,10 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the endpoint.
+         * <p>The description of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is my Endpoint.</p>
          */
         public Builder endpointDescription(String endpointDescription) {
             this.endpointDescription = endpointDescription;
@@ -318,7 +377,10 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The domain name of the endpoint.
+         * <p>The domain name of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ep-hp33b2e43fays7s8****.epsrv-hp3xdsq46ael67lo****.cn-huhehaote.privatelink.aliyuncs.com</p>
          */
         public Builder endpointDomain(String endpointDomain) {
             this.endpointDomain = endpointDomain;
@@ -326,7 +388,10 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The endpoint ID.
+         * <p>The endpoint ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ep-hp33b2e43fays7s8****</p>
          */
         public Builder endpointId(String endpointId) {
             this.endpointId = endpointId;
@@ -334,7 +399,10 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the endpoint.
+         * <p>The name of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder endpointName(String endpointName) {
             this.endpointName = endpointName;
@@ -342,13 +410,16 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The state of the endpoint. Valid values:
-         * <p>
+         * <p>The state of the endpoint. Valid values:</p>
+         * <ul>
+         * <li><strong>Creating</strong>: The endpoint is being created.</li>
+         * <li><strong>Active</strong>: The endpoint is available.</li>
+         * <li><strong>Pending</strong>: The endpoint is being modified.</li>
+         * <li><strong>Deleting</strong>: The endpoint is being deleted.</li>
+         * </ul>
          * 
-         * *   **Creating**: The endpoint is being created.
-         * *   **Active**: The endpoint is available.
-         * *   **Pending**: The endpoint is being modified.
-         * *   **Deleting**: The endpoint is being deleted.
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder endpointStatus(String endpointStatus) {
             this.endpointStatus = endpointStatus;
@@ -356,10 +427,11 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the endpoint.
-         * <p>
+         * <p>The type of the endpoint.</p>
+         * <p><strong>Interface</strong> is returned. The value indicates the interface endpoint with which the Classic Load Balancer (CLB) instances are associated.</p>
          * 
-         * **Interface** is returned. The value indicates the interface endpoint with which the Classic Load Balancer (CLB) instances are associated.
+         * <strong>example:</strong>
+         * <p>Interface</p>
          */
         public Builder endpointType(String endpointType) {
             this.endpointType = endpointType;
@@ -367,11 +439,14 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The payer. Valid values:
-         * <p>
+         * <p>The payer. Valid values:</p>
+         * <ul>
+         * <li><strong>Endpoint</strong>: the service consumer.</li>
+         * <li><strong>EndpointService</strong>: the service provider.</li>
+         * </ul>
          * 
-         * *   **Endpoint**: the service consumer.
-         * *   **EndpointService**: the service provider.
+         * <strong>example:</strong>
+         * <p>Endpoint</p>
          */
         public Builder payer(String payer) {
             this.payer = payer;
@@ -379,7 +454,18 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the endpoint.
+         * PolicyDocument.
+         */
+        public Builder policyDocument(String policyDocument) {
+            this.policyDocument = policyDocument;
+            return this;
+        }
+
+        /**
+         * <p>The region ID of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-huhehaote</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -387,7 +473,10 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8D8992C1-6712-423C-BAC5-E5E817484C6B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -395,7 +484,10 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmz7nocpei***</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -403,11 +495,14 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the endpoint and the endpoint service belong to the same Alibaba Cloud account. Valid values:
-         * <p>
+         * <p>Indicates whether the endpoint and the endpoint service belong to the same Alibaba Cloud account. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The endpoint and the endpoint service belong to the same Alibaba Cloud account.</li>
+         * <li><strong>false</strong>: The endpoint and the endpoint service do not belong to the same Alibaba Cloud account.</li>
+         * </ul>
          * 
-         * *   **true**: The endpoint and the endpoint service belong to the same Alibaba Cloud account.
-         * *   **false**: The endpoint and the endpoint service do not belong to the same Alibaba Cloud account.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder resourceOwner(Boolean resourceOwner) {
             this.resourceOwner = resourceOwner;
@@ -415,7 +510,10 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the endpoint service with which the endpoint is associated.
+         * <p>The ID of the endpoint service with which the endpoint is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epsrv-hp3vpx8yqxblby3i****</p>
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;
@@ -423,7 +521,10 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the endpoint service with which the endpoint is associated.
+         * <p>The name of the endpoint service with which the endpoint is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.aliyuncs.privatelink.cn-huhehaote.epsrv-hp3xdsq46ael67lo****</p>
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
@@ -431,7 +532,10 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) to which the endpoint belongs.
+         * <p>The ID of the virtual private cloud (VPC) to which the endpoint belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-fdfhkjafhjvcvdjf****</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;
@@ -439,11 +543,14 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether zone affinity is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether the domain name of the nearest endpoint that is associated with the endpoint service is resolved first. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**: Zone affinity is enabled.
-         * *   **false**: Zone affinity is disabled.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder zoneAffinityEnabled(Boolean zoneAffinityEnabled) {
             this.zoneAffinityEnabled = zoneAffinityEnabled;
@@ -451,7 +558,10 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The number of private IP addresses that are assigned to an elastic network interface (ENI) in each zone. Only **1** is returned.
+         * <p>The number of private IP addresses that are assigned to an elastic network interface (ENI) in each zone. Only <strong>1</strong> is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder zonePrivateIpAddressCount(Long zonePrivateIpAddressCount) {
             this.zonePrivateIpAddressCount = zonePrivateIpAddressCount;

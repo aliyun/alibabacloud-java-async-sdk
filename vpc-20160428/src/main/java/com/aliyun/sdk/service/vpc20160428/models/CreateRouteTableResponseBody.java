@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRouteTableResponseBody} extends {@link TeaModel}
  *
  * <p>CreateRouteTableResponseBody</p>
  */
 public class CreateRouteTableResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RouteTableId")
+    @com.aliyun.core.annotation.NameInMap("RouteTableId")
     private String routeTableId;
 
     private CreateRouteTableResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateRouteTableResponseBody extends TeaModel {
         private String routeTableId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>62172DD5-6BAC-45DF-8D44-E11ED28DCAC0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,10 @@ public class CreateRouteTableResponseBody extends TeaModel {
         }
 
         /**
-         * The IDs of the route tables.
+         * <p>The IDs of the route tables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-bp145q7glnuzdvzu2****</p>
          */
         public Builder routeTableId(String routeTableId) {
             this.routeTableId = routeTableId;

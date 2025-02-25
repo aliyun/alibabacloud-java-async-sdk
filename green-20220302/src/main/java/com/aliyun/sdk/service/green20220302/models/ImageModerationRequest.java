@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220302.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImageModerationRequest} extends {@link RequestModel}
  *
  * <p>ImageModerationRequest</p>
  */
 public class ImageModerationRequest extends Request {
-    @Body
-    @NameInMap("Service")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Service")
     private String service;
 
-    @Body
-    @NameInMap("ServiceParameters")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceParameters")
     private String serviceParameters;
 
     private ImageModerationRequest(Builder builder) {
@@ -68,7 +73,31 @@ public class ImageModerationRequest extends Request {
         } 
 
         /**
-         * Service.
+         * <p>The moderation services supported by Image Moderation 2.0. Valid values:</p>
+         * <ul>
+         * <li>baselineCheck: common baseline moderation</li>
+         * <li>baselineCheck_pro: common baseline moderation_Professional</li>
+         * <li>baselineCheck_cb: common baseline moderation_For regions outside the Chinese mainland</li>
+         * <li>tonalityImprove: content governance moderation</li>
+         * <li>aigcCheck: AI-generated image identification</li>
+         * <li>profilePhotoCheck: avatar image moderation</li>
+         * <li>advertisingCheck: marketing material identification</li>
+         * <li>liveStreamCheck: moderation of screenshots of videos and live streams</li>
+         * </ul>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>liveStreamCheck: moderation of screenshots of videos and live streams</li>
+         * <li>baselineCheck: common baseline moderation</li>
+         * <li>aigcCheck: AI-generated image identification</li>
+         * <li>baselineCheck_pro: common baseline moderation_Professional</li>
+         * <li>advertisingCheck: marketing material identification</li>
+         * <li>baselineCheck_cb: common baseline moderation_For regions outside the Chinese mainland</li>
+         * <li>tonalityImprove: content governance moderation</li>
+         * <li>profilePhotoCheck: avatar image moderation</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>baselineCheck</p>
          */
         public Builder service(String service) {
             this.putBodyParameter("Service", service);
@@ -77,7 +106,14 @@ public class ImageModerationRequest extends Request {
         }
 
         /**
-         * ServiceParameters.
+         * <p>The parameters required by the moderation service. The value is a JSON string.</p>
+         * <ul>
+         * <li>imageUrl: the URL of the object that you want to moderate. This parameter is required.</li>
+         * <li>dataId: the ID of the object that you want to moderate. This parameter is optional.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;imageUrl&quot;:&quot;<a href="https://www.aliyun.com/test.jpg%22,%22dataId%22:%22img1234567%22%7D">https://www.aliyun.com/test.jpg&quot;,&quot;dataId&quot;:&quot;img1234567&quot;}</a></p>
          */
         public Builder serviceParameters(String serviceParameters) {
             this.putBodyParameter("ServiceParameters", serviceParameters);

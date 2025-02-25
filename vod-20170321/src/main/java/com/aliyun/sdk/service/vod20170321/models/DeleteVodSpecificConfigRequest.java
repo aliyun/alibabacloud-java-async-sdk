@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteVodSpecificConfigRequest} extends {@link RequestModel}
  *
  * <p>DeleteVodSpecificConfigRequest</p>
  */
 public class DeleteVodSpecificConfigRequest extends Request {
-    @Query
-    @NameInMap("ConfigId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String configId;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("Env")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Env")
     private String env;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private DeleteVodSpecificConfigRequest(Builder builder) {
@@ -112,7 +117,11 @@ public class DeleteVodSpecificConfigRequest extends Request {
         } 
 
         /**
-         * The ID of the configuration.
+         * <p>The ID of the configuration.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2317****</p>
          */
         public Builder configId(String configId) {
             this.putQueryParameter("ConfigId", configId);
@@ -121,7 +130,11 @@ public class DeleteVodSpecificConfigRequest extends Request {
         }
 
         /**
-         * The domain name for CDN.
+         * <p>The accelerated domain name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -130,7 +143,14 @@ public class DeleteVodSpecificConfigRequest extends Request {
         }
 
         /**
-         * Env.
+         * <p>The environment from which the domain name configurations are deleted. Valid values:</p>
+         * <ul>
+         * <li>online: production environment</li>
+         * <li>gray: simulation environment</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         public Builder env(String env) {
             this.putQueryParameter("Env", env);

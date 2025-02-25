@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cc5g20220314.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListGroupAuthorizationRulesResponseBody</p>
  */
 public class ListGroupAuthorizationRulesResponseBody extends TeaModel {
-    @NameInMap("GroupAuthorizationRules")
+    @com.aliyun.core.annotation.NameInMap("GroupAuthorizationRules")
     private java.util.List < GroupAuthorizationRules> groupAuthorizationRules;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private String maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private ListGroupAuthorizationRulesResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class ListGroupAuthorizationRulesResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * 数组，返回示例目录。
+         * GroupAuthorizationRules.
          */
         public Builder groupAuthorizationRules(java.util.List < GroupAuthorizationRules> groupAuthorizationRules) {
             this.groupAuthorizationRules = groupAuthorizationRules;
@@ -110,7 +109,7 @@ public class ListGroupAuthorizationRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -132,43 +131,43 @@ public class ListGroupAuthorizationRulesResponseBody extends TeaModel {
     } 
 
     public static class GroupAuthorizationRules extends TeaModel {
-        @NameInMap("AuthorizationRuleId")
+        @com.aliyun.core.annotation.NameInMap("AuthorizationRuleId")
         private String authorizationRuleId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Destination")
+        @com.aliyun.core.annotation.NameInMap("Destination")
         private String destination;
 
-        @NameInMap("DestinationPort")
+        @com.aliyun.core.annotation.NameInMap("DestinationPort")
         private String destinationPort;
 
-        @NameInMap("DestinationType")
+        @com.aliyun.core.annotation.NameInMap("DestinationType")
         private String destinationType;
 
-        @NameInMap("Dns")
+        @com.aliyun.core.annotation.NameInMap("Dns")
         private Boolean dns;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Policy")
+        @com.aliyun.core.annotation.NameInMap("Policy")
         private String policy;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("SourceCidr")
+        @com.aliyun.core.annotation.NameInMap("SourceCidr")
         private String sourceCidr;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private GroupAuthorizationRules(Builder builder) {

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWebAccessLogDispatchStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWebAccessLogDispatchStatusResponseBody</p>
  */
 public class DescribeWebAccessLogDispatchStatusResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SlsConfigStatus")
-    private java.util.List < SlsConfigStatus> slsConfigStatus;
+    @com.aliyun.core.annotation.NameInMap("SlsConfigStatus")
+    private java.util.List<SlsConfigStatus> slsConfigStatus;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeWebAccessLogDispatchStatusResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class DescribeWebAccessLogDispatchStatusResponseBody extends TeaModel {
     /**
      * @return slsConfigStatus
      */
-    public java.util.List < SlsConfigStatus> getSlsConfigStatus() {
+    public java.util.List<SlsConfigStatus> getSlsConfigStatus() {
         return this.slsConfigStatus;
     }
 
@@ -58,11 +63,14 @@ public class DescribeWebAccessLogDispatchStatusResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SlsConfigStatus> slsConfigStatus; 
+        private java.util.List<SlsConfigStatus> slsConfigStatus; 
         private Integer totalCount; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,15 +78,18 @@ public class DescribeWebAccessLogDispatchStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the log analysis feature is enabled for domain names.
+         * <p>Indicates whether the log analysis feature is enabled for domain names.</p>
          */
-        public Builder slsConfigStatus(java.util.List < SlsConfigStatus> slsConfigStatus) {
+        public Builder slsConfigStatus(java.util.List<SlsConfigStatus> slsConfigStatus) {
             this.slsConfigStatus = slsConfigStatus;
             return this;
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -91,11 +102,17 @@ public class DescribeWebAccessLogDispatchStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeWebAccessLogDispatchStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWebAccessLogDispatchStatusResponseBody</p>
+     */
     public static class SlsConfigStatus extends TeaModel {
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
 
         private SlsConfigStatus(Builder builder) {
@@ -130,7 +147,10 @@ public class DescribeWebAccessLogDispatchStatusResponseBody extends TeaModel {
             private Boolean enable; 
 
             /**
-             * The domain name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -138,11 +158,14 @@ public class DescribeWebAccessLogDispatchStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the log analysis feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the log analysis feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;

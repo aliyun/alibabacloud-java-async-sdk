@@ -1,37 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccesskeyLeakListRequest} extends {@link RequestModel}
  *
  * <p>DescribeAccesskeyLeakListRequest</p>
  */
 public class DescribeAccesskeyLeakListRequest extends Request {
-    @Query
-    @NameInMap("CurrentPage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer currentPage;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Query")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Query")
     private String query;
 
-    @Query
-    @NameInMap("StartTs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTs")
     private Long startTs;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeAccesskeyLeakListRequest(Builder builder) {
@@ -39,6 +48,7 @@ public class DescribeAccesskeyLeakListRequest extends Request {
         this.currentPage = builder.currentPage;
         this.pageSize = builder.pageSize;
         this.query = builder.query;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.startTs = builder.startTs;
         this.status = builder.status;
     }
@@ -78,6 +88,13 @@ public class DescribeAccesskeyLeakListRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return startTs
      */
     public Long getStartTs() {
@@ -95,6 +112,7 @@ public class DescribeAccesskeyLeakListRequest extends Request {
         private Integer currentPage; 
         private Integer pageSize; 
         private String query; 
+        private Long resourceDirectoryAccountId; 
         private Long startTs; 
         private String status; 
 
@@ -107,12 +125,17 @@ public class DescribeAccesskeyLeakListRequest extends Request {
             this.currentPage = request.currentPage;
             this.pageSize = request.pageSize;
             this.query = request.query;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.startTs = request.startTs;
             this.status = request.status;
         } 
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -121,11 +144,14 @@ public class DescribeAccesskeyLeakListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.\
-         * <p>
-         * Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
+         * <p>The number of entries to return on each page.<br>Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <blockquote>
+         * <p>We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > We recommend that you do not leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -134,7 +160,10 @@ public class DescribeAccesskeyLeakListRequest extends Request {
         }
 
         /**
-         * The AccessKey ID that you want to query. Only exact match is supported.
+         * <p>The AccessKey ID that you want to query. Only exact match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LTAI4Fytv7ALKzkNVBV6****</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("Query", query);
@@ -143,7 +172,25 @@ public class DescribeAccesskeyLeakListRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. You can query all AccessKey pair leaks that are detected later than this time point. The value of this parameter is a UNIX timestamp. Unit: milliseconds.
+         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to query the ID.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>127608589417****</p>
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+            return this;
+        }
+
+        /**
+         * <p>The beginning of the time range to query. You can query all AccessKey pair leaks that are detected later than this time point. The value of this parameter is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1614155361489</p>
          */
         public Builder startTs(Long startTs) {
             this.putQueryParameter("StartTs", startTs);
@@ -152,11 +199,14 @@ public class DescribeAccesskeyLeakListRequest extends Request {
         }
 
         /**
-         * Specifies whether an AccessKey pair leak is handled. Valid values:
-         * <p>
+         * <p>Specifies whether an AccessKey pair leak is handled. Valid values:</p>
+         * <ul>
+         * <li><strong>pending</strong>: unhandled</li>
+         * <li><strong>dealed</strong>: handled</li>
+         * </ul>
          * 
-         * *   **pending**: unhandled
-         * *   **dealed**: handled
+         * <strong>example:</strong>
+         * <p>pending</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNodeInputOrOutputResponseBody} extends {@link TeaModel}
  *
  * <p>ListNodeInputOrOutputResponseBody</p>
  */
 public class ListNodeInputOrOutputResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListNodeInputOrOutputResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class ListNodeInputOrOutputResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -90,7 +95,7 @@ public class ListNodeInputOrOutputResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String errorCode; 
         private String errorMessage; 
         private Integer httpStatusCode; 
@@ -98,15 +103,18 @@ public class ListNodeInputOrOutputResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ancestor or descendant nodes.
+         * <p>The ancestor or descendant nodes.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The error code returned if the request fails.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ProjectNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +122,10 @@ public class ListNodeInputOrOutputResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request fails.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The project does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +133,10 @@ public class ListNodeInputOrOutputResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +144,10 @@ public class ListNodeInputOrOutputResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E6F0DBDD-5AD****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class ListNodeInputOrOutputResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,14 +171,20 @@ public class ListNodeInputOrOutputResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListNodeInputOrOutputResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNodeInputOrOutputResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private String data;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private Data(Builder builder) {
@@ -202,7 +228,10 @@ public class ListNodeInputOrOutputResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The name of the ancestor or descendant node.
+             * <p>The name of the ancestor or descendant node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxx.123141254_out</p>
              */
             public Builder data(String data) {
                 this.data = data;
@@ -210,7 +239,10 @@ public class ListNodeInputOrOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234667</p>
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -218,7 +250,10 @@ public class ListNodeInputOrOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the associated table.
+             * <p>This parameter does not take effect. You cannot obtain the parameter settings.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dwd_xxx_table</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPasswordExpirationConfigurationResponseBody} extends {@link TeaModel}
  *
  * <p>GetPasswordExpirationConfigurationResponseBody</p>
  */
 public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
-    @NameInMap("PasswordExpirationConfiguration")
+    @com.aliyun.core.annotation.NameInMap("PasswordExpirationConfiguration")
     private PasswordExpirationConfiguration passwordExpirationConfiguration;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetPasswordExpirationConfigurationResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The password expiration configurations.
+         * <p>The password expiration configurations.</p>
          */
         public Builder passwordExpirationConfiguration(PasswordExpirationConfiguration passwordExpirationConfiguration) {
             this.passwordExpirationConfiguration = passwordExpirationConfiguration;
@@ -58,7 +63,10 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,29 +79,39 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPasswordExpirationConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPasswordExpirationConfigurationResponseBody</p>
+     */
     public static class PasswordExpirationConfiguration extends TeaModel {
-        @NameInMap("PasswordExpirationAction")
+        @com.aliyun.core.annotation.NameInMap("EffectiveAuthenticationSourceIds")
+        private java.util.List<String> effectiveAuthenticationSourceIds;
+
+        @com.aliyun.core.annotation.NameInMap("PasswordExpirationAction")
         private String passwordExpirationAction;
 
-        @NameInMap("PasswordExpirationNotificationChannels")
-        private java.util.List < String > passwordExpirationNotificationChannels;
+        @com.aliyun.core.annotation.NameInMap("PasswordExpirationNotificationChannels")
+        private java.util.List<String> passwordExpirationNotificationChannels;
 
-        @NameInMap("PasswordExpirationNotificationDuration")
+        @com.aliyun.core.annotation.NameInMap("PasswordExpirationNotificationDuration")
         private Integer passwordExpirationNotificationDuration;
 
-        @NameInMap("PasswordExpirationNotificationStatus")
+        @com.aliyun.core.annotation.NameInMap("PasswordExpirationNotificationStatus")
         private String passwordExpirationNotificationStatus;
 
-        @NameInMap("PasswordExpirationStatus")
+        @com.aliyun.core.annotation.NameInMap("PasswordExpirationStatus")
         private String passwordExpirationStatus;
 
-        @NameInMap("PasswordForcedUpdateDuration")
+        @com.aliyun.core.annotation.NameInMap("PasswordForcedUpdateDuration")
         private Integer passwordForcedUpdateDuration;
 
-        @NameInMap("PasswordValidMaxDay")
+        @com.aliyun.core.annotation.NameInMap("PasswordValidMaxDay")
         private Integer passwordValidMaxDay;
 
         private PasswordExpirationConfiguration(Builder builder) {
+            this.effectiveAuthenticationSourceIds = builder.effectiveAuthenticationSourceIds;
             this.passwordExpirationAction = builder.passwordExpirationAction;
             this.passwordExpirationNotificationChannels = builder.passwordExpirationNotificationChannels;
             this.passwordExpirationNotificationDuration = builder.passwordExpirationNotificationDuration;
@@ -112,6 +130,13 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
         }
 
         /**
+         * @return effectiveAuthenticationSourceIds
+         */
+        public java.util.List<String> getEffectiveAuthenticationSourceIds() {
+            return this.effectiveAuthenticationSourceIds;
+        }
+
+        /**
          * @return passwordExpirationAction
          */
         public String getPasswordExpirationAction() {
@@ -121,7 +146,7 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
         /**
          * @return passwordExpirationNotificationChannels
          */
-        public java.util.List < String > getPasswordExpirationNotificationChannels() {
+        public java.util.List<String> getPasswordExpirationNotificationChannels() {
             return this.passwordExpirationNotificationChannels;
         }
 
@@ -161,8 +186,9 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<String> effectiveAuthenticationSourceIds; 
             private String passwordExpirationAction; 
-            private java.util.List < String > passwordExpirationNotificationChannels; 
+            private java.util.List<String> passwordExpirationNotificationChannels; 
             private Integer passwordExpirationNotificationDuration; 
             private String passwordExpirationNotificationStatus; 
             private String passwordExpirationStatus; 
@@ -170,12 +196,28 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
             private Integer passwordValidMaxDay; 
 
             /**
-             * The action to take when a password expires. Valid values:
-             * <p>
+             * <p>The list of valid authentication IDs. The default is all [&quot;ia_all&quot;]</p>
+             * <p>ia_all: All. If you fill in this value, you cannot fill in other values</p>
+             * <p>ia_password: Account password login</p>
+             * <p>ia_otp_sms: SMS verification code login method</p>
+             * <p>ia_webauthn: WebAuthn authenticator login method</p>
+             * <p>idp_xxx: Specific identity provider authentication method</p>
+             */
+            public Builder effectiveAuthenticationSourceIds(java.util.List<String> effectiveAuthenticationSourceIds) {
+                this.effectiveAuthenticationSourceIds = effectiveAuthenticationSourceIds;
+                return this;
+            }
+
+            /**
+             * <p>The action to take when a password expires. Valid values:</p>
+             * <ul>
+             * <li>forbid_login: Prohibit the user from using the password to log on to IDaaS.</li>
+             * <li>force_update_password: Force the user to change the password.</li>
+             * <li>remind_update_password: Remind the user to change the password.</li>
+             * </ul>
              * 
-             * *   forbid_login: Prohibit the user from using the password to log on to IDaaS.
-             * *   force_update_password: Force the user to change the password.
-             * *   remind_update_password: Remind the user to change the password.
+             * <strong>example:</strong>
+             * <p>forbid_login</p>
              */
             public Builder passwordExpirationAction(String passwordExpirationAction) {
                 this.passwordExpirationAction = passwordExpirationAction;
@@ -183,15 +225,21 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The methods for receiving password expiration notifications.
+             * <p>The methods for receiving password expiration notifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>login</p>
              */
-            public Builder passwordExpirationNotificationChannels(java.util.List < String > passwordExpirationNotificationChannels) {
+            public Builder passwordExpirationNotificationChannels(java.util.List<String> passwordExpirationNotificationChannels) {
                 this.passwordExpirationNotificationChannels = passwordExpirationNotificationChannels;
                 return this;
             }
 
             /**
-             * The number of days before the expiration date during which password expiration notifications are sent. Unit: day.
+             * <p>The number of days before the expiration date during which password expiration notifications are sent. Unit: day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder passwordExpirationNotificationDuration(Integer passwordExpirationNotificationDuration) {
                 this.passwordExpirationNotificationDuration = passwordExpirationNotificationDuration;
@@ -199,11 +247,14 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the password expiration notification feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the password expiration notification feature is enabled. Valid values:</p>
+             * <ul>
+             * <li>enabled</li>
+             * <li>disabled</li>
+             * </ul>
              * 
-             * *   enabled
-             * *   disabled
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder passwordExpirationNotificationStatus(String passwordExpirationNotificationStatus) {
                 this.passwordExpirationNotificationStatus = passwordExpirationNotificationStatus;
@@ -211,11 +262,14 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the password expiration feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the password expiration feature is enabled. Valid values:</p>
+             * <ul>
+             * <li>enabled</li>
+             * <li>disabled</li>
+             * </ul>
              * 
-             * *   enabled
-             * *   disabled
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder passwordExpirationStatus(String passwordExpirationStatus) {
                 this.passwordExpirationStatus = passwordExpirationStatus;
@@ -223,7 +277,10 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The number of days before which users must change the password to prevent password expiration. Unit: day.
+             * <p>The number of days before which users must change the password to prevent password expiration. Unit: day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder passwordForcedUpdateDuration(Integer passwordForcedUpdateDuration) {
                 this.passwordForcedUpdateDuration = passwordForcedUpdateDuration;
@@ -231,7 +288,10 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The validity period of a password. Unit: day.
+             * <p>The validity period of a password. Unit: day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>180</p>
              */
             public Builder passwordValidMaxDay(Integer passwordValidMaxDay) {
                 this.passwordValidMaxDay = passwordValidMaxDay;

@@ -98,7 +98,7 @@ public class ListUsersAsyncRequest extends Request {
         } 
 
         /**
-         * AsyncId.
+         * The ID of the asynchronous task.
          */
         public Builder asyncId(String asyncId) {
             this.putQueryParameter("AsyncId", asyncId);
@@ -107,7 +107,7 @@ public class ListUsersAsyncRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the E-HPC cluster. You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -116,7 +116,10 @@ public class ListUsersAsyncRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number.\
+         * <p>
+         * Pages start from page 1.\
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -125,7 +128,10 @@ public class ListUsersAsyncRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.\
+         * <p>
+         * Valid values: 1 to 50.\
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

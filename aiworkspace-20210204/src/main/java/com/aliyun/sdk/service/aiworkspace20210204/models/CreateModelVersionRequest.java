@@ -1,79 +1,94 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateModelVersionRequest} extends {@link RequestModel}
  *
  * <p>CreateModelVersionRequest</p>
  */
 public class CreateModelVersionRequest extends Request {
-    @Path
-    @NameInMap("ModelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ModelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String modelId;
 
-    @Body
-    @NameInMap("ApprovalStatus")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApprovalStatus")
     private String approvalStatus;
 
-    @Body
-    @NameInMap("FormatType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CompressionSpec")
+    private java.util.Map < String, ? > compressionSpec;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EvaluationSpec")
+    private java.util.Map < String, ? > evaluationSpec;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExtraInfo")
+    private java.util.Map < String, ? > extraInfo;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FormatType")
     private String formatType;
 
-    @Body
-    @NameInMap("FrameworkType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FrameworkType")
     private String frameworkType;
 
-    @Body
-    @NameInMap("InferenceSpec")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InferenceSpec")
     private java.util.Map < String, ? > inferenceSpec;
 
-    @Body
-    @NameInMap("Labels")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Labels")
     private java.util.List < Label > labels;
 
-    @Body
-    @NameInMap("Metrics")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Metrics")
     private java.util.Map < String, ? > metrics;
 
-    @Body
-    @NameInMap("Options")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Options")
     private String options;
 
-    @Body
-    @NameInMap("SourceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceId")
     private String sourceId;
 
-    @Body
-    @NameInMap("SourceType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceType")
     private String sourceType;
 
-    @Body
-    @NameInMap("TrainingSpec")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TrainingSpec")
     private java.util.Map < String, ? > trainingSpec;
 
-    @Body
-    @NameInMap("Uri")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Uri")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String uri;
 
-    @Body
-    @NameInMap("VersionDescription")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VersionDescription")
     private String versionDescription;
 
-    @Body
-    @NameInMap("VersionName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VersionName")
     private String versionName;
 
     private CreateModelVersionRequest(Builder builder) {
         super(builder);
         this.modelId = builder.modelId;
         this.approvalStatus = builder.approvalStatus;
+        this.compressionSpec = builder.compressionSpec;
+        this.evaluationSpec = builder.evaluationSpec;
+        this.extraInfo = builder.extraInfo;
         this.formatType = builder.formatType;
         this.frameworkType = builder.frameworkType;
         this.inferenceSpec = builder.inferenceSpec;
@@ -113,6 +128,27 @@ public class CreateModelVersionRequest extends Request {
      */
     public String getApprovalStatus() {
         return this.approvalStatus;
+    }
+
+    /**
+     * @return compressionSpec
+     */
+    public java.util.Map < String, ? > getCompressionSpec() {
+        return this.compressionSpec;
+    }
+
+    /**
+     * @return evaluationSpec
+     */
+    public java.util.Map < String, ? > getEvaluationSpec() {
+        return this.evaluationSpec;
+    }
+
+    /**
+     * @return extraInfo
+     */
+    public java.util.Map < String, ? > getExtraInfo() {
+        return this.extraInfo;
     }
 
     /**
@@ -202,6 +238,9 @@ public class CreateModelVersionRequest extends Request {
     public static final class Builder extends Request.Builder<CreateModelVersionRequest, Builder> {
         private String modelId; 
         private String approvalStatus; 
+        private java.util.Map < String, ? > compressionSpec; 
+        private java.util.Map < String, ? > evaluationSpec; 
+        private java.util.Map < String, ? > extraInfo; 
         private String formatType; 
         private String frameworkType; 
         private java.util.Map < String, ? > inferenceSpec; 
@@ -223,6 +262,9 @@ public class CreateModelVersionRequest extends Request {
             super(request);
             this.modelId = request.modelId;
             this.approvalStatus = request.approvalStatus;
+            this.compressionSpec = request.compressionSpec;
+            this.evaluationSpec = request.evaluationSpec;
+            this.extraInfo = request.extraInfo;
             this.formatType = request.formatType;
             this.frameworkType = request.frameworkType;
             this.inferenceSpec = request.inferenceSpec;
@@ -238,7 +280,10 @@ public class CreateModelVersionRequest extends Request {
         } 
 
         /**
-         * ModelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>model-dfs1****5c</p>
          */
         public Builder modelId(String modelId) {
             this.putPathParameter("ModelId", modelId);
@@ -252,6 +297,33 @@ public class CreateModelVersionRequest extends Request {
         public Builder approvalStatus(String approvalStatus) {
             this.putBodyParameter("ApprovalStatus", approvalStatus);
             this.approvalStatus = approvalStatus;
+            return this;
+        }
+
+        /**
+         * CompressionSpec.
+         */
+        public Builder compressionSpec(java.util.Map < String, ? > compressionSpec) {
+            this.putBodyParameter("CompressionSpec", compressionSpec);
+            this.compressionSpec = compressionSpec;
+            return this;
+        }
+
+        /**
+         * EvaluationSpec.
+         */
+        public Builder evaluationSpec(java.util.Map < String, ? > evaluationSpec) {
+            this.putBodyParameter("EvaluationSpec", evaluationSpec);
+            this.evaluationSpec = evaluationSpec;
+            return this;
+        }
+
+        /**
+         * ExtraInfo.
+         */
+        public Builder extraInfo(java.util.Map < String, ? > extraInfo) {
+            this.putBodyParameter("ExtraInfo", extraInfo);
+            this.extraInfo = extraInfo;
             return this;
         }
 
@@ -337,7 +409,10 @@ public class CreateModelVersionRequest extends Request {
         }
 
         /**
-         * Uri.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://mybucket.oss-cn-beijing.aliyuncs.com/mypath/</p>
          */
         public Builder uri(String uri) {
             this.putBodyParameter("Uri", uri);

@@ -1,202 +1,231 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyEciScalingConfigurationRequest} extends {@link RequestModel}
  *
  * <p>ModifyEciScalingConfigurationRequest</p>
  */
 public class ModifyEciScalingConfigurationRequest extends Request {
-    @Query
-    @NameInMap("AcrRegistryInfos")
-    private java.util.List < AcrRegistryInfos> acrRegistryInfos;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcrRegistryInfos")
+    private java.util.List<AcrRegistryInfos> acrRegistryInfos;
 
-    @Query
-    @NameInMap("ActiveDeadlineSeconds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ActiveDeadlineSeconds")
     private Long activeDeadlineSeconds;
 
-    @Query
-    @NameInMap("AutoCreateEip")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoCreateEip")
     private Boolean autoCreateEip;
 
-    @Query
-    @NameInMap("AutoMatchImageCache")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoMatchImageCache")
     private Boolean autoMatchImageCache;
 
-    @Query
-    @NameInMap("ContainerGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerGroupName")
     private String containerGroupName;
 
-    @Query
-    @NameInMap("Containers")
-    private java.util.List < Containers> containers;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Containers")
+    private java.util.List<Containers> containers;
 
-    @Query
-    @NameInMap("ContainersUpdateType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainersUpdateType")
     private String containersUpdateType;
 
-    @Query
-    @NameInMap("CostOptimization")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CostOptimization")
     private Boolean costOptimization;
 
-    @Query
-    @NameInMap("Cpu")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Cpu")
     private Float cpu;
 
-    @Query
-    @NameInMap("CpuOptionsCore")
-    @Validation(maximum = 1000)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CpuOptionsCore")
+    @com.aliyun.core.annotation.Validation(maximum = 1000)
     private Integer cpuOptionsCore;
 
-    @Query
-    @NameInMap("CpuOptionsThreadsPerCore")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CpuOptionsThreadsPerCore")
     private Integer cpuOptionsThreadsPerCore;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataCacheBucket")
+    private String dataCacheBucket;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataCacheBurstingEnabled")
+    private Boolean dataCacheBurstingEnabled;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataCachePL")
+    private String dataCachePL;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataCacheProvisionedIops")
+    private Integer dataCacheProvisionedIops;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DnsConfigNameServers")
-    private java.util.List < String > dnsConfigNameServers;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DnsConfigNameServers")
+    private java.util.List<String> dnsConfigNameServers;
 
-    @Query
-    @NameInMap("DnsConfigOptions")
-    private java.util.List < DnsConfigOptions> dnsConfigOptions;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DnsConfigOptions")
+    private java.util.List<DnsConfigOptions> dnsConfigOptions;
 
-    @Query
-    @NameInMap("DnsConfigSearchs")
-    private java.util.List < String > dnsConfigSearchs;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DnsConfigSearchs")
+    private java.util.List<String> dnsConfigSearchs;
 
-    @Query
-    @NameInMap("DnsPolicy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DnsPolicy")
     private String dnsPolicy;
 
-    @Query
-    @NameInMap("EgressBandwidth")
-    @Validation()
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EgressBandwidth")
+    @com.aliyun.core.annotation.Validation()
     private Long egressBandwidth;
 
-    @Query
-    @NameInMap("EipBandwidth")
-    @Validation(maximum = 1000000)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EipBandwidth")
+    @com.aliyun.core.annotation.Validation(maximum = 1000000)
     private Integer eipBandwidth;
 
-    @Query
-    @NameInMap("EnableSls")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableSls")
     private Boolean enableSls;
 
-    @Query
-    @NameInMap("EphemeralStorage")
-    @Validation(maximum = 5000)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EphemeralStorage")
+    @com.aliyun.core.annotation.Validation(maximum = 5000)
     private Integer ephemeralStorage;
 
-    @Query
-    @NameInMap("HostAliases")
-    private java.util.List < HostAliases> hostAliases;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GpuDriverVersion")
+    private String gpuDriverVersion;
 
-    @Query
-    @NameInMap("HostName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostAliases")
+    private java.util.List<HostAliases> hostAliases;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostName")
     private String hostName;
 
-    @Query
-    @NameInMap("ImageRegistryCredentials")
-    private java.util.List < ImageRegistryCredentials> imageRegistryCredentials;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageRegistryCredentials")
+    private java.util.List<ImageRegistryCredentials> imageRegistryCredentials;
 
-    @Query
-    @NameInMap("ImageSnapshotId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageSnapshotId")
     private String imageSnapshotId;
 
-    @Query
-    @NameInMap("IngressBandwidth")
-    @Validation()
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IngressBandwidth")
+    @com.aliyun.core.annotation.Validation()
     private Long ingressBandwidth;
 
-    @Query
-    @NameInMap("InitContainers")
-    private java.util.List < InitContainers> initContainers;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InitContainers")
+    private java.util.List<InitContainers> initContainers;
 
-    @Query
-    @NameInMap("InstanceFamilyLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceFamilyLevel")
     private String instanceFamilyLevel;
 
-    @Query
-    @NameInMap("Ipv6AddressCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceTypes")
+    private java.util.List<String> instanceTypes;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6AddressCount")
     private Integer ipv6AddressCount;
 
-    @Query
-    @NameInMap("LoadBalancerWeight")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerWeight")
     private Integer loadBalancerWeight;
 
-    @Query
-    @NameInMap("Memory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Memory")
     private Float memory;
 
-    @Query
-    @NameInMap("NtpServers")
-    private java.util.List < String > ntpServers;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NtpServers")
+    private java.util.List<String> ntpServers;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RamRoleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RamRoleName")
     private String ramRoleName;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("RestartPolicy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestartPolicy")
     private String restartPolicy;
 
-    @Query
-    @NameInMap("ScalingConfigurationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingConfigurationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scalingConfigurationId;
 
-    @Query
-    @NameInMap("ScalingConfigurationName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingConfigurationName")
     private String scalingConfigurationName;
 
-    @Query
-    @NameInMap("SecurityContextSysCtls")
-    private java.util.List < SecurityContextSysCtls> securityContextSysCtls;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityContextSysCtls")
+    private java.util.List<SecurityContextSysCtls> securityContextSysCtls;
 
-    @Query
-    @NameInMap("SecurityGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
     private String securityGroupId;
 
-    @Query
-    @NameInMap("SpotPriceLimit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotPriceLimit")
     private Float spotPriceLimit;
 
-    @Query
-    @NameInMap("SpotStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotStrategy")
     private String spotStrategy;
 
-    @Query
-    @NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
 
-    @Query
-    @NameInMap("TerminationGracePeriodSeconds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TerminationGracePeriodSeconds")
     private Long terminationGracePeriodSeconds;
 
-    @Query
-    @NameInMap("Volumes")
-    private java.util.List < Volumes> volumes;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Volumes")
+    private java.util.List<Volumes> volumes;
 
     private ModifyEciScalingConfigurationRequest(Builder builder) {
         super(builder);
@@ -211,6 +240,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         this.cpu = builder.cpu;
         this.cpuOptionsCore = builder.cpuOptionsCore;
         this.cpuOptionsThreadsPerCore = builder.cpuOptionsThreadsPerCore;
+        this.dataCacheBucket = builder.dataCacheBucket;
+        this.dataCacheBurstingEnabled = builder.dataCacheBurstingEnabled;
+        this.dataCachePL = builder.dataCachePL;
+        this.dataCacheProvisionedIops = builder.dataCacheProvisionedIops;
         this.description = builder.description;
         this.dnsConfigNameServers = builder.dnsConfigNameServers;
         this.dnsConfigOptions = builder.dnsConfigOptions;
@@ -220,6 +253,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         this.eipBandwidth = builder.eipBandwidth;
         this.enableSls = builder.enableSls;
         this.ephemeralStorage = builder.ephemeralStorage;
+        this.gpuDriverVersion = builder.gpuDriverVersion;
         this.hostAliases = builder.hostAliases;
         this.hostName = builder.hostName;
         this.imageRegistryCredentials = builder.imageRegistryCredentials;
@@ -227,6 +261,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         this.ingressBandwidth = builder.ingressBandwidth;
         this.initContainers = builder.initContainers;
         this.instanceFamilyLevel = builder.instanceFamilyLevel;
+        this.instanceTypes = builder.instanceTypes;
         this.ipv6AddressCount = builder.ipv6AddressCount;
         this.loadBalancerWeight = builder.loadBalancerWeight;
         this.memory = builder.memory;
@@ -263,7 +298,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
     /**
      * @return acrRegistryInfos
      */
-    public java.util.List < AcrRegistryInfos> getAcrRegistryInfos() {
+    public java.util.List<AcrRegistryInfos> getAcrRegistryInfos() {
         return this.acrRegistryInfos;
     }
 
@@ -298,7 +333,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
     /**
      * @return containers
      */
-    public java.util.List < Containers> getContainers() {
+    public java.util.List<Containers> getContainers() {
         return this.containers;
     }
 
@@ -338,6 +373,34 @@ public class ModifyEciScalingConfigurationRequest extends Request {
     }
 
     /**
+     * @return dataCacheBucket
+     */
+    public String getDataCacheBucket() {
+        return this.dataCacheBucket;
+    }
+
+    /**
+     * @return dataCacheBurstingEnabled
+     */
+    public Boolean getDataCacheBurstingEnabled() {
+        return this.dataCacheBurstingEnabled;
+    }
+
+    /**
+     * @return dataCachePL
+     */
+    public String getDataCachePL() {
+        return this.dataCachePL;
+    }
+
+    /**
+     * @return dataCacheProvisionedIops
+     */
+    public Integer getDataCacheProvisionedIops() {
+        return this.dataCacheProvisionedIops;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
@@ -347,21 +410,21 @@ public class ModifyEciScalingConfigurationRequest extends Request {
     /**
      * @return dnsConfigNameServers
      */
-    public java.util.List < String > getDnsConfigNameServers() {
+    public java.util.List<String> getDnsConfigNameServers() {
         return this.dnsConfigNameServers;
     }
 
     /**
      * @return dnsConfigOptions
      */
-    public java.util.List < DnsConfigOptions> getDnsConfigOptions() {
+    public java.util.List<DnsConfigOptions> getDnsConfigOptions() {
         return this.dnsConfigOptions;
     }
 
     /**
      * @return dnsConfigSearchs
      */
-    public java.util.List < String > getDnsConfigSearchs() {
+    public java.util.List<String> getDnsConfigSearchs() {
         return this.dnsConfigSearchs;
     }
 
@@ -401,9 +464,16 @@ public class ModifyEciScalingConfigurationRequest extends Request {
     }
 
     /**
+     * @return gpuDriverVersion
+     */
+    public String getGpuDriverVersion() {
+        return this.gpuDriverVersion;
+    }
+
+    /**
      * @return hostAliases
      */
-    public java.util.List < HostAliases> getHostAliases() {
+    public java.util.List<HostAliases> getHostAliases() {
         return this.hostAliases;
     }
 
@@ -417,7 +487,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
     /**
      * @return imageRegistryCredentials
      */
-    public java.util.List < ImageRegistryCredentials> getImageRegistryCredentials() {
+    public java.util.List<ImageRegistryCredentials> getImageRegistryCredentials() {
         return this.imageRegistryCredentials;
     }
 
@@ -438,7 +508,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
     /**
      * @return initContainers
      */
-    public java.util.List < InitContainers> getInitContainers() {
+    public java.util.List<InitContainers> getInitContainers() {
         return this.initContainers;
     }
 
@@ -447,6 +517,13 @@ public class ModifyEciScalingConfigurationRequest extends Request {
      */
     public String getInstanceFamilyLevel() {
         return this.instanceFamilyLevel;
+    }
+
+    /**
+     * @return instanceTypes
+     */
+    public java.util.List<String> getInstanceTypes() {
+        return this.instanceTypes;
     }
 
     /**
@@ -473,7 +550,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
     /**
      * @return ntpServers
      */
-    public java.util.List < String > getNtpServers() {
+    public java.util.List<String> getNtpServers() {
         return this.ntpServers;
     }
 
@@ -529,7 +606,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
     /**
      * @return securityContextSysCtls
      */
-    public java.util.List < SecurityContextSysCtls> getSecurityContextSysCtls() {
+    public java.util.List<SecurityContextSysCtls> getSecurityContextSysCtls() {
         return this.securityContextSysCtls;
     }
 
@@ -557,7 +634,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -571,42 +648,48 @@ public class ModifyEciScalingConfigurationRequest extends Request {
     /**
      * @return volumes
      */
-    public java.util.List < Volumes> getVolumes() {
+    public java.util.List<Volumes> getVolumes() {
         return this.volumes;
     }
 
     public static final class Builder extends Request.Builder<ModifyEciScalingConfigurationRequest, Builder> {
-        private java.util.List < AcrRegistryInfos> acrRegistryInfos; 
+        private java.util.List<AcrRegistryInfos> acrRegistryInfos; 
         private Long activeDeadlineSeconds; 
         private Boolean autoCreateEip; 
         private Boolean autoMatchImageCache; 
         private String containerGroupName; 
-        private java.util.List < Containers> containers; 
+        private java.util.List<Containers> containers; 
         private String containersUpdateType; 
         private Boolean costOptimization; 
         private Float cpu; 
         private Integer cpuOptionsCore; 
         private Integer cpuOptionsThreadsPerCore; 
+        private String dataCacheBucket; 
+        private Boolean dataCacheBurstingEnabled; 
+        private String dataCachePL; 
+        private Integer dataCacheProvisionedIops; 
         private String description; 
-        private java.util.List < String > dnsConfigNameServers; 
-        private java.util.List < DnsConfigOptions> dnsConfigOptions; 
-        private java.util.List < String > dnsConfigSearchs; 
+        private java.util.List<String> dnsConfigNameServers; 
+        private java.util.List<DnsConfigOptions> dnsConfigOptions; 
+        private java.util.List<String> dnsConfigSearchs; 
         private String dnsPolicy; 
         private Long egressBandwidth; 
         private Integer eipBandwidth; 
         private Boolean enableSls; 
         private Integer ephemeralStorage; 
-        private java.util.List < HostAliases> hostAliases; 
+        private String gpuDriverVersion; 
+        private java.util.List<HostAliases> hostAliases; 
         private String hostName; 
-        private java.util.List < ImageRegistryCredentials> imageRegistryCredentials; 
+        private java.util.List<ImageRegistryCredentials> imageRegistryCredentials; 
         private String imageSnapshotId; 
         private Long ingressBandwidth; 
-        private java.util.List < InitContainers> initContainers; 
+        private java.util.List<InitContainers> initContainers; 
         private String instanceFamilyLevel; 
+        private java.util.List<String> instanceTypes; 
         private Integer ipv6AddressCount; 
         private Integer loadBalancerWeight; 
         private Float memory; 
-        private java.util.List < String > ntpServers; 
+        private java.util.List<String> ntpServers; 
         private Long ownerId; 
         private String ramRoleName; 
         private String resourceGroupId; 
@@ -614,13 +697,13 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         private String restartPolicy; 
         private String scalingConfigurationId; 
         private String scalingConfigurationName; 
-        private java.util.List < SecurityContextSysCtls> securityContextSysCtls; 
+        private java.util.List<SecurityContextSysCtls> securityContextSysCtls; 
         private String securityGroupId; 
         private Float spotPriceLimit; 
         private String spotStrategy; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
         private Long terminationGracePeriodSeconds; 
-        private java.util.List < Volumes> volumes; 
+        private java.util.List<Volumes> volumes; 
 
         private Builder() {
             super();
@@ -639,6 +722,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             this.cpu = request.cpu;
             this.cpuOptionsCore = request.cpuOptionsCore;
             this.cpuOptionsThreadsPerCore = request.cpuOptionsThreadsPerCore;
+            this.dataCacheBucket = request.dataCacheBucket;
+            this.dataCacheBurstingEnabled = request.dataCacheBurstingEnabled;
+            this.dataCachePL = request.dataCachePL;
+            this.dataCacheProvisionedIops = request.dataCacheProvisionedIops;
             this.description = request.description;
             this.dnsConfigNameServers = request.dnsConfigNameServers;
             this.dnsConfigOptions = request.dnsConfigOptions;
@@ -648,6 +735,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             this.eipBandwidth = request.eipBandwidth;
             this.enableSls = request.enableSls;
             this.ephemeralStorage = request.ephemeralStorage;
+            this.gpuDriverVersion = request.gpuDriverVersion;
             this.hostAliases = request.hostAliases;
             this.hostName = request.hostName;
             this.imageRegistryCredentials = request.imageRegistryCredentials;
@@ -655,6 +743,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             this.ingressBandwidth = request.ingressBandwidth;
             this.initContainers = request.initContainers;
             this.instanceFamilyLevel = request.instanceFamilyLevel;
+            this.instanceTypes = request.instanceTypes;
             this.ipv6AddressCount = request.ipv6AddressCount;
             this.loadBalancerWeight = request.loadBalancerWeight;
             this.memory = request.memory;
@@ -676,16 +765,19 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         } 
 
         /**
-         * Information about the Container Registry Enterprise Edition instance.
+         * <p>The Container Registry Enterprise Edition instances.</p>
          */
-        public Builder acrRegistryInfos(java.util.List < AcrRegistryInfos> acrRegistryInfos) {
+        public Builder acrRegistryInfos(java.util.List<AcrRegistryInfos> acrRegistryInfos) {
             this.putQueryParameter("AcrRegistryInfos", acrRegistryInfos);
             this.acrRegistryInfos = acrRegistryInfos;
             return this;
         }
 
         /**
-         * The validity period. Unit: seconds.
+         * <p>The validity period of the scaling configuration. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder activeDeadlineSeconds(Long activeDeadlineSeconds) {
             this.putQueryParameter("ActiveDeadlineSeconds", activeDeadlineSeconds);
@@ -694,7 +786,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * Specifies whether to automatically create an elastic IP address (EIP) and bind the EIP to the elastic container instance.
+         * <p>Specifies whether to automatically create elastic IP addresses (EIPs) and bind the EIPs to elastic container instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoCreateEip(Boolean autoCreateEip) {
             this.putQueryParameter("AutoCreateEip", autoCreateEip);
@@ -703,10 +798,11 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * Specifies whether to automatically match the image cache.
-         * <p>
+         * <p>Specifies whether to automatically match image caches.</p>
+         * <p>Default value: false.</p>
          * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoMatchImageCache(Boolean autoMatchImageCache) {
             this.putQueryParameter("AutoMatchImageCache", autoMatchImageCache);
@@ -715,11 +811,14 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The name of the elastic container instance. The name must meet the following requirements:
-         * <p>
+         * <p>The name series of elastic container instances. Naming conventions:</p>
+         * <ul>
+         * <li>The name must be 2 to 128 characters in length.</li>
+         * <li>The name can contain only lowercase letters, digits, and hyphens (-). The name cannot start or end with a hyphen (-).</li>
+         * </ul>
          * 
-         * *   The name must be 2 to 128 characters in length
-         * *   The name can contain only lowercase letters, digits, and hyphens (-). It cannot start or end with a hyphen (-).
+         * <strong>example:</strong>
+         * <p>nginx-test</p>
          */
         public Builder containerGroupName(String containerGroupName) {
             this.putQueryParameter("ContainerGroupName", containerGroupName);
@@ -728,16 +827,24 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The containers.
+         * <p>The containers.</p>
          */
-        public Builder containers(java.util.List < Containers> containers) {
+        public Builder containers(java.util.List<Containers> containers) {
             this.putQueryParameter("Containers", containers);
             this.containers = containers;
             return this;
         }
 
         /**
-         * ContainersUpdateType.
+         * <p>The update mode of containers. Valid values:</p>
+         * <ul>
+         * <li>RenewUpdate: full update mode. This value takes effect based on the value of Containers in an update request. This value indicates that the previous setting of Containers is overwritten.</li>
+         * <li>IncrementalUpdate: incremental update mode. Container matching is performed based on the Container.name value. Only the parameters that are included in the request parameters are updated.</li>
+         * </ul>
+         * <p>Default value: RenewUpdate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RenewUpdate</p>
          */
         public Builder containersUpdateType(String containersUpdateType) {
             this.putQueryParameter("ContainersUpdateType", containersUpdateType);
@@ -746,13 +853,15 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the cost optimization feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the Cost Optimization feature. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder costOptimization(Boolean costOptimization) {
             this.putQueryParameter("CostOptimization", costOptimization);
@@ -761,7 +870,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The number of vCPUs of the elastic container instance.
+         * <p>The number of vCPUs per elastic container instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         public Builder cpu(Float cpu) {
             this.putQueryParameter("Cpu", cpu);
@@ -770,7 +882,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The number of physical CPU cores. This parameter is not available for all instance types. For more information, see [Specify custom CPU options](~~197781~~).
+         * <p>The number of physical CPU cores. You can specify this parameter for only specific ECS instance types. For more information, see <a href="https://help.aliyun.com/document_detail/197781.html">Specify CPU options</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder cpuOptionsCore(Integer cpuOptionsCore) {
             this.putQueryParameter("CpuOptionsCore", cpuOptionsCore);
@@ -779,7 +894,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The number of threads per core. This parameter is not available for all instance types. A value of 1 indicates that Hyper-Threading is disabled. For more information, see [Specify custom CPU options](~~197781~~).
+         * <p>The number of threads per core. You can specify this parameter for only specific instance types. A value of 1 specifies that Hyper-Threading is disabled. For more information, see <a href="https://help.aliyun.com/document_detail/197781.html">Specify CPU options</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder cpuOptionsThreadsPerCore(Integer cpuOptionsThreadsPerCore) {
             this.putQueryParameter("CpuOptionsThreadsPerCore", cpuOptionsThreadsPerCore);
@@ -788,7 +906,81 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * > This parameter is unavailable.
+         * <p>The bucket in which data caches are stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
+        public Builder dataCacheBucket(String dataCacheBucket) {
+            this.putQueryParameter("DataCacheBucket", dataCacheBucket);
+            this.dataCacheBucket = dataCacheBucket;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to enable the Performance Burst feature for the ESSD AutoPL disk in which data caches are stored. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * <blockquote>
+         * <p> For more information about ESSD AutoPL disks, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder dataCacheBurstingEnabled(Boolean dataCacheBurstingEnabled) {
+            this.putQueryParameter("DataCacheBurstingEnabled", dataCacheBurstingEnabled);
+            this.dataCacheBurstingEnabled = dataCacheBurstingEnabled;
+            return this;
+        }
+
+        /**
+         * <p>The performance level (PL) of the cloud disk in which data caches are stored. We recommend that you use Enterprise SSDs (ESSDs). Valid values:</p>
+         * <ul>
+         * <li>PL0: An ESSD can deliver up to 10,000 random read/write IOPS.</li>
+         * <li>PL1: An ESSD can deliver up to 50,000 random read/write IOPS.</li>
+         * <li>PL2: An ESSD can deliver up to 100,000 random read/write IOPS.</li>
+         * <li>PL3: An ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
+         * </ul>
+         * <p>Default value: PL1.</p>
+         * <blockquote>
+         * <p> For more information about ESSDs, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>PL1</p>
+         */
+        public Builder dataCachePL(String dataCachePL) {
+            this.putQueryParameter("DataCachePL", dataCachePL);
+            this.dataCachePL = dataCachePL;
+            return this;
+        }
+
+        /**
+         * <p>The provisioned read/write IOPS of the ESSD AutoPL disk in which data caches are stored. Valid values: 0 to min{50,000, 1,000 × *Capacity - Baseline IOPS}. Baseline IOPS = min{1,800+50 x *Capacity, 50,000}.</p>
+         * <blockquote>
+         * <p> For more information about ESSD AutoPL disks, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>40000</p>
+         */
+        public Builder dataCacheProvisionedIops(Integer dataCacheProvisionedIops) {
+            this.putQueryParameter("DataCacheProvisionedIops", dataCacheProvisionedIops);
+            this.dataCacheProvisionedIops = dataCacheProvisionedIops;
+            return this;
+        }
+
+        /**
+         * <blockquote>
+         * <p> This parameter is unavailable.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -797,38 +989,41 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The IP addresses of the DNS servers.
+         * <p>The IP addresses of DNS servers.</p>
          */
-        public Builder dnsConfigNameServers(java.util.List < String > dnsConfigNameServers) {
+        public Builder dnsConfigNameServers(java.util.List<String> dnsConfigNameServers) {
             this.putQueryParameter("DnsConfigNameServers", dnsConfigNameServers);
             this.dnsConfigNameServers = dnsConfigNameServers;
             return this;
         }
 
         /**
-         * The options. Each option is a name-value pair. The value in the name-value pair is optional.
+         * <p>The options. Each option is a name-value pair. The value in the name-value pair is optional.</p>
          */
-        public Builder dnsConfigOptions(java.util.List < DnsConfigOptions> dnsConfigOptions) {
+        public Builder dnsConfigOptions(java.util.List<DnsConfigOptions> dnsConfigOptions) {
             this.putQueryParameter("DnsConfigOptions", dnsConfigOptions);
             this.dnsConfigOptions = dnsConfigOptions;
             return this;
         }
 
         /**
-         * The DNS lookup domains.
+         * <p>The search domains of DNS servers.</p>
          */
-        public Builder dnsConfigSearchs(java.util.List < String > dnsConfigSearchs) {
+        public Builder dnsConfigSearchs(java.util.List<String> dnsConfigSearchs) {
             this.putQueryParameter("DnsConfigSearchs", dnsConfigSearchs);
             this.dnsConfigSearchs = dnsConfigSearchs;
             return this;
         }
 
         /**
-         * The Domain Name System (DNS) policy. Valid values:
-         * <p>
+         * <p>The Domain Name System (DNS) policy. Valid values:</p>
+         * <ul>
+         * <li>None: uses the DNS that is specified by DnsConfig.</li>
+         * <li>Default: uses the DNS that is specified for the runtime environment.</li>
+         * </ul>
          * 
-         * *   None: uses the DNS that is set for the DnsConfig field.
-         * *   Default: use the DNS that is set for the runtime environment.
+         * <strong>example:</strong>
+         * <p>Default</p>
          */
         public Builder dnsPolicy(String dnsPolicy) {
             this.putQueryParameter("DnsPolicy", dnsPolicy);
@@ -837,7 +1032,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The maximum outbound bandwidth. Unit: bit/s.
+         * <p>The maximum outbound bandwidth. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024000</p>
          */
         public Builder egressBandwidth(Long egressBandwidth) {
             this.putQueryParameter("EgressBandwidth", egressBandwidth);
@@ -846,10 +1044,11 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The bandwidth of the EIP.
-         * <p>
+         * <p>The EIP bandwidth.</p>
+         * <p>Default value: 5. Unit: Mbit/s.</p>
          * 
-         * Default value: 5. Unit: Mbit/s.
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder eipBandwidth(Integer eipBandwidth) {
             this.putQueryParameter("EipBandwidth", eipBandwidth);
@@ -858,7 +1057,12 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * > This parameter is unavailable.
+         * <blockquote>
+         * <p> This parameter is not available for use.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableSls(Boolean enableSls) {
             this.putQueryParameter("EnableSls", enableSls);
@@ -867,7 +1071,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The size of the temporary storage space. By default, an enhanced SSD (ESSD) of the PL1 level is used. Unit: GiB.
+         * <p>The size of the temporary storage space. By default, an Enterprise SSD (ESSD) of the PL1 type is used. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder ephemeralStorage(Integer ephemeralStorage) {
             this.putQueryParameter("EphemeralStorage", ephemeralStorage);
@@ -876,16 +1083,38 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * Information about the hosts.
+         * <p>The version of the GPU driver. Valid values:</p>
+         * <ul>
+         * <li>tesla=470.82.01 (default)</li>
+         * <li>tesla=525.85.12</li>
+         * </ul>
+         * <blockquote>
+         * <p> You can switch the GPU driver version only for a few Elastic Compute Service (ECS) instance types. For more information, see <a href="https://help.aliyun.com/document_detail/2579486.html">Specify GPU-accelerated ECS instance types to create an elastic container instance</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>tesla=525.85.12</p>
          */
-        public Builder hostAliases(java.util.List < HostAliases> hostAliases) {
+        public Builder gpuDriverVersion(String gpuDriverVersion) {
+            this.putQueryParameter("GpuDriverVersion", gpuDriverVersion);
+            this.gpuDriverVersion = gpuDriverVersion;
+            return this;
+        }
+
+        /**
+         * <p>The hosts.</p>
+         */
+        public Builder hostAliases(java.util.List<HostAliases> hostAliases) {
             this.putQueryParameter("HostAliases", hostAliases);
             this.hostAliases = hostAliases;
             return this;
         }
 
         /**
-         * The name of the elastic container instance.
+         * <p>The hostname series of elastic container instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder hostName(String hostName) {
             this.putQueryParameter("HostName", hostName);
@@ -894,16 +1123,19 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * Information about the image repository.
+         * <p>The image repositories.</p>
          */
-        public Builder imageRegistryCredentials(java.util.List < ImageRegistryCredentials> imageRegistryCredentials) {
+        public Builder imageRegistryCredentials(java.util.List<ImageRegistryCredentials> imageRegistryCredentials) {
             this.putQueryParameter("ImageRegistryCredentials", imageRegistryCredentials);
             this.imageRegistryCredentials = imageRegistryCredentials;
             return this;
         }
 
         /**
-         * The ID of the image cache.
+         * <p>The ID of the image cache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>imc-2zebxkiifuyzzlhl****</p>
          */
         public Builder imageSnapshotId(String imageSnapshotId) {
             this.putQueryParameter("ImageSnapshotId", imageSnapshotId);
@@ -912,7 +1144,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The maximum inbound bandwidth. Unit: bit/s.
+         * <p>The maximum inbound bandwidth. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024000</p>
          */
         public Builder ingressBandwidth(Long ingressBandwidth) {
             this.putQueryParameter("IngressBandwidth", ingressBandwidth);
@@ -921,21 +1156,24 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The init containers.
+         * <p>The init containers.</p>
          */
-        public Builder initContainers(java.util.List < InitContainers> initContainers) {
+        public Builder initContainers(java.util.List<InitContainers> initContainers) {
             this.putQueryParameter("InitContainers", initContainers);
             this.initContainers = initContainers;
             return this;
         }
 
         /**
-         * The level of the instance type, which is used to filter the instance types that meet the specified criteria. This parameter takes effect only if you set the `CostOptimization` parameter to true. Valid values:
-         * <p>
+         * <p>The level of the instance family, which is used to filter instance types that meet the specified criteria. This parameter takes effect only if you set <code>CostOptimization</code> to true. Valid values:</p>
+         * <ul>
+         * <li>EntryLevel: entry level (shared instance type). Instance types of this level are the most cost-effective but may not provide stable computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared instance families</a>.</li>
+         * <li>EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources, and are suitable for business scenarios that require high stability. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</li>
+         * <li>CreditEntryLevel: credit-based entry level (burstable instance types). CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview</a> of burstable instances.</li>
+         * </ul>
          * 
-         * *   EntryLevel: shared instance type. Instances of this level are the most cost-effective but may not provide stable computing performance in a consistent manner. Instances of this level are suitable for business scenarios in which the CPU utilization is low. For more information, see [Shared instance families](~~108489~~).
-         * *   EnterpriseLevel: Instances of this level provide stable performance and dedicated resources, and are suitable for business scenarios that require high stability. For more information, see [Instance family](~~25378~~).
-         * *   CreditEntryLevel: This value is valid only for burstable instances. CPU credits are used to ensure computing performance. Instances of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see the [Overview](~~59977~~) topic of burstable instances.
+         * <strong>example:</strong>
+         * <p>EnterpriseLevel</p>
          */
         public Builder instanceFamilyLevel(String instanceFamilyLevel) {
             this.putQueryParameter("InstanceFamilyLevel", instanceFamilyLevel);
@@ -944,7 +1182,19 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The number of IPv6 addresses.
+         * <p>The ECS instance types. You can specify up to five instance types.</p>
+         */
+        public Builder instanceTypes(java.util.List<String> instanceTypes) {
+            this.putQueryParameter("InstanceTypes", instanceTypes);
+            this.instanceTypes = instanceTypes;
+            return this;
+        }
+
+        /**
+         * <p>The number of IPv6 addresses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ipv6AddressCount(Integer ipv6AddressCount) {
             this.putQueryParameter("Ipv6AddressCount", ipv6AddressCount);
@@ -953,7 +1203,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The weight of the elastic container instance as a backend server. Valid values: 1 to 100.
+         * <p>The load balancing weight of each backend server. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder loadBalancerWeight(Integer loadBalancerWeight) {
             this.putQueryParameter("LoadBalancerWeight", loadBalancerWeight);
@@ -962,7 +1215,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The memory size of the elastic container instance. Unit: GiB.
+         * <p>The memory size per elastic container instance. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
          */
         public Builder memory(Float memory) {
             this.putQueryParameter("Memory", memory);
@@ -971,9 +1227,9 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The domain names of the NTP server.
+         * <p>The endpoints of Network Time Protocol (NTP) servers.</p>
          */
-        public Builder ntpServers(java.util.List < String > ntpServers) {
+        public Builder ntpServers(java.util.List<String> ntpServers) {
             this.putQueryParameter("NtpServers", ntpServers);
             this.ntpServers = ntpServers;
             return this;
@@ -989,7 +1245,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The name of the RAM role for the instance. You can use an instance RAM role to access both elastic container instances and Elastic Compute Service (ECS) instances. For more information, see [Use an instance RAM role by calling API operations](~~61178~~).
+         * <p>The name of the instance Resource Access Management (RAM) role. You can use the same RAM role to access elastic container instances and Elastic Compute Service (ECS) instances. For more information, see <a href="https://help.aliyun.com/document_detail/61178.html">Use an instance RAM role by calling API operations</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RamTestRole</p>
          */
         public Builder ramRoleName(String ramRoleName) {
             this.putQueryParameter("RamRoleName", ramRoleName);
@@ -998,7 +1257,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-uf66jeqopgqa9hdn****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -1016,14 +1278,16 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The instance restart policy. Valid values:
-         * <p>
+         * <p>The instance restart policy. Valid values:</p>
+         * <ul>
+         * <li>Always: always restarts elastic container instances.</li>
+         * <li>Never: never restarts elastic container instances.</li>
+         * <li>OnFailure: restarts elastic container instances upon failures.</li>
+         * </ul>
+         * <p>Default value: Always.</p>
          * 
-         * *   Always: always restarts the elastic container instance.
-         * *   Never: never restarts the elastic container instance.
-         * *   OnFailure: restarts the elastic container instance upon failures.
-         * 
-         * Default value: Always.
+         * <strong>example:</strong>
+         * <p>Always</p>
          */
         public Builder restartPolicy(String restartPolicy) {
             this.putQueryParameter("RestartPolicy", restartPolicy);
@@ -1032,7 +1296,11 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The ID of the scaling configuration that you want to modify.
+         * <p>The ID of the scaling configuration that you want to modify.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asc-bp16har3jpj6fjbx****</p>
          */
         public Builder scalingConfigurationId(String scalingConfigurationId) {
             this.putQueryParameter("ScalingConfigurationId", scalingConfigurationId);
@@ -1041,10 +1309,11 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The name of the scaling configuration. The name must be 2 to 64 characters in length and can contain letters, digits, underscores (\_), hyphens (-), and periods (.). The name must start with a letter or a digit.
-         * <p>
+         * <p>The name of the scaling configuration. The name must be 2 to 64 characters in length, and can contain letters, digits, underscores (_), hyphens (-), and periods (.). The name must start with a letter or a digit.</p>
+         * <p>The name of a scaling configuration must be unique in the specified region. If you do not specify this parameter, the value of ScalingConfigurationId is used.</p>
          * 
-         * The name of the scaling configuration must be unique within a scaling group in a region. If you do not specify this parameter, the value of the ScalingConfigurationId parameter is used.
+         * <strong>example:</strong>
+         * <p>test-modify</p>
          */
         public Builder scalingConfigurationName(String scalingConfigurationName) {
             this.putQueryParameter("ScalingConfigurationName", scalingConfigurationName);
@@ -1053,19 +1322,20 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The system information of the security context in which the elastic container instance runs.
+         * <p>The security contexts in which the elastic container instance runs.</p>
          */
-        public Builder securityContextSysCtls(java.util.List < SecurityContextSysCtls> securityContextSysCtls) {
+        public Builder securityContextSysCtls(java.util.List<SecurityContextSysCtls> securityContextSysCtls) {
             this.putQueryParameter("SecurityContextSysCtls", securityContextSysCtls);
             this.securityContextSysCtls = securityContextSysCtls;
             return this;
         }
 
         /**
-         * The ID of the security group with which you want to associate the elastic container instance. Elastic container instances that are associated with the same security group can access each other.
-         * <p>
+         * <p>The ID of the security group to which elastic container instances belong. Elastic container instances that belong to the same security group can communicate with each other.</p>
+         * <p>If you do not specify a security group, the system uses the default security group in the region that you selected. Make sure that the inbound rules of the security group contain the protocols and port numbers of the containers that you want to expose. If you do not have a default security group in the region, the system creates a default security group and then adds the container protocols and port numbers that you specified to the inbound rules of the security group.</p>
          * 
-         * If you do not specify a security group, the system uses the default security group in the region that you selected. Make sure that the inbound rules of the security group contain the protocols and the port numbers of the containers that you want to expose. If you do not have a default security group in the region, the system creates a default security group, and then adds the declared container protocols and port numbers to the inbound rules of the security group.
+         * <strong>example:</strong>
+         * <p>sg-uf66jeqopgqa9hdn****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -1074,10 +1344,11 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The maximum hourly price of the preemptible elastic container instance. The value can be accurate to three decimal places.
-         * <p>
+         * <p>The maximum hourly price of preemptible elastic container instances. The value can be accurate to three decimal places.</p>
+         * <p>If you set SpotStrategy to SpotWithPriceLimit, you must specify SpotPriceLimit.</p>
          * 
-         * If you set the SpotStrategy parameter to SpotWithPriceLimit, you must also specify the SpotPriceLimit parameter.
+         * <strong>example:</strong>
+         * <p>0.025</p>
          */
         public Builder spotPriceLimit(Float spotPriceLimit) {
             this.putQueryParameter("SpotPriceLimit", spotPriceLimit);
@@ -1086,14 +1357,16 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The bidding policy for the elastic container instance. Valid values:
-         * <p>
+         * <p>The instance bidding policy. Valid values:</p>
+         * <ul>
+         * <li>NoSpot: The instances are created as pay-as-you-go instances.</li>
+         * <li>SpotWithPriceLimit: The instances are preemptible instances for which you can specify the maximum hourly price.</li>
+         * <li>SpotAsPriceGo: The instances are created as preemptible instances for which the market price at the time of purchase is used as the bid price.</li>
+         * </ul>
+         * <p>Default value: NoSpot.</p>
          * 
-         * *   NoSpot: The instance is a pay-as-you-go instance.
-         * *   SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.
-         * *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is used as the bid price.
-         * 
-         * Default value: NoSpot.
+         * <strong>example:</strong>
+         * <p>SpotPriceLimit</p>
          */
         public Builder spotStrategy(String spotStrategy) {
             this.putQueryParameter("SpotStrategy", spotStrategy);
@@ -1102,16 +1375,19 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * Information about the tags.
+         * <p>The tags.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;
         }
 
         /**
-         * The buffer time in which the program handles operations before the program is stopped. Unit: seconds.
+         * <p>The buffer period during which the program handles operations before the program is stopped. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder terminationGracePeriodSeconds(Long terminationGracePeriodSeconds) {
             this.putQueryParameter("TerminationGracePeriodSeconds", terminationGracePeriodSeconds);
@@ -1120,9 +1396,9 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * Information about the volumes.
+         * <p>The volumes.</p>
          */
-        public Builder volumes(java.util.List < Volumes> volumes) {
+        public Builder volumes(java.util.List<Volumes> volumes) {
             this.putQueryParameter("Volumes", volumes);
             this.volumes = volumes;
             return this;
@@ -1135,17 +1411,23 @@ public class ModifyEciScalingConfigurationRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyEciScalingConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyEciScalingConfigurationRequest</p>
+     */
     public static class AcrRegistryInfos extends TeaModel {
-        @NameInMap("Domains")
-        private java.util.List < String > domains;
+        @com.aliyun.core.annotation.NameInMap("Domains")
+        private java.util.List<String> domains;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private AcrRegistryInfos(Builder builder) {
@@ -1166,7 +1448,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         /**
          * @return domains
          */
-        public java.util.List < String > getDomains() {
+        public java.util.List<String> getDomains() {
             return this.domains;
         }
 
@@ -1192,21 +1474,24 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > domains; 
+            private java.util.List<String> domains; 
             private String instanceId; 
             private String instanceName; 
             private String regionId; 
 
             /**
-             * The domain names of the Container Registry Enterprise Edition instances. By default, all domain names of the Container Registry Enterprise Edition instances are displayed. You can specify one or more domain names. Separate multiple domain names with commas (,).
+             * <p>The domain names of the Container Registry Enterprise Edition instance. By default, all domain names of the instance are displayed. Separate multiple domain names with commas (,).</p>
              */
-            public Builder domains(java.util.List < String > domains) {
+            public Builder domains(java.util.List<String> domains) {
                 this.domains = domains;
                 return this;
             }
 
             /**
-             * The ID of the Container Registry Enterprise Edition instance.
+             * <p>The ID of the Container Registry Enterprise Edition instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cri-nwj395hgf6f3****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1214,7 +1499,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The name of the Container Registry Enterprise Edition instance.
+             * <p>The name of the Container Registry Enterprise Edition instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acr-test</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -1222,7 +1510,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The region ID of the Container Registry Enterprise Edition instance.
+             * <p>The region ID of the Container Registry Enterprise Edition instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1236,9 +1527,15 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyEciScalingConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyEciScalingConfigurationRequest</p>
+     */
     public static class Exec extends TeaModel {
-        @NameInMap("Commands")
-        private java.util.List < String > commands;
+        @com.aliyun.core.annotation.NameInMap("Commands")
+        private java.util.List<String> commands;
 
         private Exec(Builder builder) {
             this.commands = builder.commands;
@@ -1255,17 +1552,17 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         /**
          * @return commands
          */
-        public java.util.List < String > getCommands() {
+        public java.util.List<String> getCommands() {
             return this.commands;
         }
 
         public static final class Builder {
-            private java.util.List < String > commands; 
+            private java.util.List<String> commands; 
 
             /**
              * Commands.
              */
-            public Builder commands(java.util.List < String > commands) {
+            public Builder commands(java.util.List<String> commands) {
                 this.commands = commands;
                 return this;
             }
@@ -1277,14 +1574,20 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyEciScalingConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyEciScalingConfigurationRequest</p>
+     */
     public static class HttpGet extends TeaModel {
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Scheme")
+        @com.aliyun.core.annotation.NameInMap("Scheme")
         private String scheme;
 
         private HttpGet(Builder builder) {
@@ -1358,8 +1661,14 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyEciScalingConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyEciScalingConfigurationRequest</p>
+     */
     public static class TcpSocket extends TeaModel {
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
         private TcpSocket(Builder builder) {
@@ -1399,32 +1708,38 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyEciScalingConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyEciScalingConfigurationRequest</p>
+     */
     public static class LivenessProbe extends TeaModel {
-        @NameInMap("Exec")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Exec")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Exec exec;
 
-        @NameInMap("FailureThreshold")
+        @com.aliyun.core.annotation.NameInMap("FailureThreshold")
         private Integer failureThreshold;
 
-        @NameInMap("HttpGet")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("HttpGet")
+        @com.aliyun.core.annotation.Validation(required = true)
         private HttpGet httpGet;
 
-        @NameInMap("InitialDelaySeconds")
+        @com.aliyun.core.annotation.NameInMap("InitialDelaySeconds")
         private Integer initialDelaySeconds;
 
-        @NameInMap("PeriodSeconds")
+        @com.aliyun.core.annotation.NameInMap("PeriodSeconds")
         private Integer periodSeconds;
 
-        @NameInMap("SuccessThreshold")
+        @com.aliyun.core.annotation.NameInMap("SuccessThreshold")
         private Integer successThreshold;
 
-        @NameInMap("TcpSocket")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TcpSocket")
+        @com.aliyun.core.annotation.Validation(required = true)
         private TcpSocket tcpSocket;
 
-        @NameInMap("TimeoutSeconds")
+        @com.aliyun.core.annotation.NameInMap("TimeoutSeconds")
         private Integer timeoutSeconds;
 
         private LivenessProbe(Builder builder) {
@@ -1583,9 +1898,15 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyEciScalingConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyEciScalingConfigurationRequest</p>
+     */
     public static class ReadinessProbeExec extends TeaModel {
-        @NameInMap("Commands")
-        private java.util.List < String > commands;
+        @com.aliyun.core.annotation.NameInMap("Commands")
+        private java.util.List<String> commands;
 
         private ReadinessProbeExec(Builder builder) {
             this.commands = builder.commands;
@@ -1602,17 +1923,17 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         /**
          * @return commands
          */
-        public java.util.List < String > getCommands() {
+        public java.util.List<String> getCommands() {
             return this.commands;
         }
 
         public static final class Builder {
-            private java.util.List < String > commands; 
+            private java.util.List<String> commands; 
 
             /**
              * Commands.
              */
-            public Builder commands(java.util.List < String > commands) {
+            public Builder commands(java.util.List<String> commands) {
                 this.commands = commands;
                 return this;
             }
@@ -1624,14 +1945,20 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyEciScalingConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyEciScalingConfigurationRequest</p>
+     */
     public static class ReadinessProbeHttpGet extends TeaModel {
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Scheme")
+        @com.aliyun.core.annotation.NameInMap("Scheme")
         private String scheme;
 
         private ReadinessProbeHttpGet(Builder builder) {
@@ -1705,8 +2032,14 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyEciScalingConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyEciScalingConfigurationRequest</p>
+     */
     public static class ReadinessProbeTcpSocket extends TeaModel {
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
         private ReadinessProbeTcpSocket(Builder builder) {
@@ -1746,32 +2079,38 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyEciScalingConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyEciScalingConfigurationRequest</p>
+     */
     public static class ReadinessProbe extends TeaModel {
-        @NameInMap("Exec")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Exec")
+        @com.aliyun.core.annotation.Validation(required = true)
         private ReadinessProbeExec exec;
 
-        @NameInMap("FailureThreshold")
+        @com.aliyun.core.annotation.NameInMap("FailureThreshold")
         private Integer failureThreshold;
 
-        @NameInMap("HttpGet")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("HttpGet")
+        @com.aliyun.core.annotation.Validation(required = true)
         private ReadinessProbeHttpGet httpGet;
 
-        @NameInMap("InitialDelaySeconds")
+        @com.aliyun.core.annotation.NameInMap("InitialDelaySeconds")
         private Integer initialDelaySeconds;
 
-        @NameInMap("PeriodSeconds")
+        @com.aliyun.core.annotation.NameInMap("PeriodSeconds")
         private Integer periodSeconds;
 
-        @NameInMap("SuccessThreshold")
+        @com.aliyun.core.annotation.NameInMap("SuccessThreshold")
         private Integer successThreshold;
 
-        @NameInMap("TcpSocket")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TcpSocket")
+        @com.aliyun.core.annotation.Validation(required = true)
         private ReadinessProbeTcpSocket tcpSocket;
 
-        @NameInMap("TimeoutSeconds")
+        @com.aliyun.core.annotation.NameInMap("TimeoutSeconds")
         private Integer timeoutSeconds;
 
         private ReadinessProbe(Builder builder) {
@@ -1930,9 +2269,15 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyEciScalingConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyEciScalingConfigurationRequest</p>
+     */
     public static class Capability extends TeaModel {
-        @NameInMap("Adds")
-        private java.util.List < String > adds;
+        @com.aliyun.core.annotation.NameInMap("Adds")
+        private java.util.List<String> adds;
 
         private Capability(Builder builder) {
             this.adds = builder.adds;
@@ -1949,17 +2294,17 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         /**
          * @return adds
          */
-        public java.util.List < String > getAdds() {
+        public java.util.List<String> getAdds() {
             return this.adds;
         }
 
         public static final class Builder {
-            private java.util.List < String > adds; 
+            private java.util.List<String> adds; 
 
             /**
              * Adds.
              */
-            public Builder adds(java.util.List < String > adds) {
+            public Builder adds(java.util.List<String> adds) {
                 this.adds = adds;
                 return this;
             }
@@ -1971,15 +2316,21 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyEciScalingConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyEciScalingConfigurationRequest</p>
+     */
     public static class SecurityContext extends TeaModel {
-        @NameInMap("Capability")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Capability")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Capability capability;
 
-        @NameInMap("ReadOnlyRootFilesystem")
+        @com.aliyun.core.annotation.NameInMap("ReadOnlyRootFilesystem")
         private Boolean readOnlyRootFilesystem;
 
-        @NameInMap("RunAsUser")
+        @com.aliyun.core.annotation.NameInMap("RunAsUser")
         private Long runAsUser;
 
         private SecurityContext(Builder builder) {
@@ -2053,8 +2404,14 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyEciScalingConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyEciScalingConfigurationRequest</p>
+     */
     public static class FieldRef extends TeaModel {
-        @NameInMap("FieldPath")
+        @com.aliyun.core.annotation.NameInMap("FieldPath")
         private String fieldPath;
 
         private FieldRef(Builder builder) {
@@ -2094,15 +2451,21 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyEciScalingConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyEciScalingConfigurationRequest</p>
+     */
     public static class EnvironmentVars extends TeaModel {
-        @NameInMap("FieldRef")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("FieldRef")
+        @com.aliyun.core.annotation.Validation(required = true)
         private FieldRef fieldRef;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private EnvironmentVars(Builder builder) {
@@ -2154,7 +2517,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The key of the environment variable. Specify the name in the `[0-9a-zA-Z]` format. The name must be 1 to 128 characters in length, and can contain underscores (\_). It cannot start with a digit.
+             * <p>The name of the environment variable. The name can be 1 to 128 characters in length, and can contain letters, underscores (_), and digits. The name cannot start with a digit. Specify the value in the <code>[0-9a-zA-Z]</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PATH</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -2162,7 +2528,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The value of the environment variable. The value must be 0 to 256 characters in length.
+             * <p>The value of the environment variable. The value can be up to 256 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/local/bin</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2176,11 +2545,17 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyEciScalingConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyEciScalingConfigurationRequest</p>
+     */
     public static class Ports extends TeaModel {
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
         private Ports(Builder builder) {
@@ -2215,7 +2590,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             private String protocol; 
 
             /**
-             * The port number. Valid values: 1 to 65535.
+             * <p>The port number. Valid values: 1 to 65535.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -2223,11 +2601,14 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The type of the protocol. Valid values:
-             * <p>
+             * <p>The protocol type. Valid values:</p>
+             * <ul>
+             * <li>TCP</li>
+             * <li>UDP</li>
+             * </ul>
              * 
-             * *   TCP
-             * *   UDP
+             * <strong>example:</strong>
+             * <p>TCP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -2241,20 +2622,26 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyEciScalingConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyEciScalingConfigurationRequest</p>
+     */
     public static class VolumeMounts extends TeaModel {
-        @NameInMap("MountPath")
+        @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
 
-        @NameInMap("MountPropagation")
+        @com.aliyun.core.annotation.NameInMap("MountPropagation")
         private String mountPropagation;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ReadOnly")
+        @com.aliyun.core.annotation.NameInMap("ReadOnly")
         private Boolean readOnly;
 
-        @NameInMap("SubPath")
+        @com.aliyun.core.annotation.NameInMap("SubPath")
         private String subPath;
 
         private VolumeMounts(Builder builder) {
@@ -2316,10 +2703,13 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             private String subPath; 
 
             /**
-             * The path where the container mounts the volume.
-             * <p>
+             * <p>The directory within the container onto which you want to mount the volume.</p>
+             * <blockquote>
+             * <p> The information stored within this directory is overwritten by the data on the mounted volume. Exercise caution when you specify this parameter.</p>
+             * </blockquote>
              * 
-             * >  Data stored in the path of the container is directly overwritten by the content of the volume.
+             * <strong>example:</strong>
+             * <p>/pod/data</p>
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -2327,12 +2717,15 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The mount propagation setting of the volume. Mount propagation allows the sharing of volumes that are mounted on one container with other containers in the same pod, or even with other pods on the same node. Valid values:
-             * <p>
+             * <p>The mount propagation settings of the volume. Mount propagation enables volumes mounted on one container to be shared among other containers within the same pod or across distinct pods residing on the same node. Valid values:</p>
+             * <ul>
+             * <li>None: Subsequent mounts executed on the volume or its subdirectories do not propagate to the volume.</li>
+             * <li>HostToCotainer: Subsequent mounts executed on the volume or its subdirectories propagate to the volume.</li>
+             * <li>Bidirectional: This value is similar to HostToCotainer. Subsequent mounts executed on the volume or its subdirectories propagate to the volume. In addition, volume mounts executed on the container propagate back to the underlying instance and to all containers across every pod that uses the same volume.</li>
+             * </ul>
              * 
-             * *   None: The volume mount does not receive subsequent mounts that are mounted to this volume or its subdirectories.
-             * *   HostToCotainer: The volume mount receives all subsequent mounts that are mounted to this volume or its subdirectories.
-             * *   Bidirectional: This value is similar to HostToCotainer. The volume mount receives all subsequent mounts that are mounted to this volume or its subdirectories. In addition, all volume mounts that are created by the container are propagated back to the instance and to all containers of all pods that use the same volume.
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder mountPropagation(String mountPropagation) {
                 this.mountPropagation = mountPropagation;
@@ -2340,7 +2733,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The name of the volume. The value of this parameter is the same as the value of the Volumes.Name parameter.
+             * <p>The volume name. The value of this parameter is the same as the name of the volume that is mounted to containers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default-volume1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2348,10 +2744,11 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * Specifies whether the volume is read-only.
-             * <p>
+             * <p>Specifies whether the volume is read-only.</p>
+             * <p>Default value: false.</p>
              * 
-             * Default value: false.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -2359,7 +2756,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The subdirectory of the volume.
+             * <p>The volume subdirectory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>data2/</p>
              */
             public Builder subPath(String subPath) {
                 this.subPath = subPath;
@@ -2373,62 +2773,110 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyEciScalingConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyEciScalingConfigurationRequest</p>
+     */
     public static class Containers extends TeaModel {
-        @NameInMap("LivenessProbe")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("LivenessProbe")
+        @com.aliyun.core.annotation.Validation(required = true)
         private LivenessProbe livenessProbe;
 
-        @NameInMap("ReadinessProbe")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ReadinessProbe")
+        @com.aliyun.core.annotation.Validation(required = true)
         private ReadinessProbe readinessProbe;
 
-        @NameInMap("SecurityContext")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("SecurityContext")
+        @com.aliyun.core.annotation.Validation(required = true)
         private SecurityContext securityContext;
 
-        @NameInMap("Args")
-        private java.util.List < String > args;
+        @com.aliyun.core.annotation.NameInMap("Args")
+        private java.util.List<String> args;
 
-        @NameInMap("Commands")
-        private java.util.List < String > commands;
+        @com.aliyun.core.annotation.NameInMap("Commands")
+        private java.util.List<String> commands;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Float cpu;
 
-        @NameInMap("EnvironmentVars")
-        private java.util.List < EnvironmentVars> environmentVars;
+        @com.aliyun.core.annotation.NameInMap("EnvironmentVars")
+        private java.util.List<EnvironmentVars> environmentVars;
 
-        @NameInMap("Gpu")
+        @com.aliyun.core.annotation.NameInMap("Gpu")
         private Integer gpu;
 
-        @NameInMap("Image")
+        @com.aliyun.core.annotation.NameInMap("Image")
         private String image;
 
-        @NameInMap("ImagePullPolicy")
+        @com.aliyun.core.annotation.NameInMap("ImagePullPolicy")
         private String imagePullPolicy;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("LifecyclePostStartHandlerExecs")
+        private java.util.List<String> lifecyclePostStartHandlerExecs;
+
+        @com.aliyun.core.annotation.NameInMap("LifecyclePostStartHandlerHttpGetHost")
+        private String lifecyclePostStartHandlerHttpGetHost;
+
+        @com.aliyun.core.annotation.NameInMap("LifecyclePostStartHandlerHttpGetPath")
+        private String lifecyclePostStartHandlerHttpGetPath;
+
+        @com.aliyun.core.annotation.NameInMap("LifecyclePostStartHandlerHttpGetPort")
+        private Integer lifecyclePostStartHandlerHttpGetPort;
+
+        @com.aliyun.core.annotation.NameInMap("LifecyclePostStartHandlerHttpGetScheme")
+        private String lifecyclePostStartHandlerHttpGetScheme;
+
+        @com.aliyun.core.annotation.NameInMap("LifecyclePostStartHandlerTcpSocketHost")
+        private String lifecyclePostStartHandlerTcpSocketHost;
+
+        @com.aliyun.core.annotation.NameInMap("LifecyclePostStartHandlerTcpSocketPort")
+        private Integer lifecyclePostStartHandlerTcpSocketPort;
+
+        @com.aliyun.core.annotation.NameInMap("LifecyclePreStopHandlerExecs")
+        private java.util.List<String> lifecyclePreStopHandlerExecs;
+
+        @com.aliyun.core.annotation.NameInMap("LifecyclePreStopHandlerHttpGetHost")
+        private String lifecyclePreStopHandlerHttpGetHost;
+
+        @com.aliyun.core.annotation.NameInMap("LifecyclePreStopHandlerHttpGetPath")
+        private String lifecyclePreStopHandlerHttpGetPath;
+
+        @com.aliyun.core.annotation.NameInMap("LifecyclePreStopHandlerHttpGetPort")
+        private Integer lifecyclePreStopHandlerHttpGetPort;
+
+        @com.aliyun.core.annotation.NameInMap("LifecyclePreStopHandlerHttpGetScheme")
+        private String lifecyclePreStopHandlerHttpGetScheme;
+
+        @com.aliyun.core.annotation.NameInMap("LifecyclePreStopHandlerTcpSocketHost")
+        private String lifecyclePreStopHandlerTcpSocketHost;
+
+        @com.aliyun.core.annotation.NameInMap("LifecyclePreStopHandlerTcpSocketPort")
+        private Integer lifecyclePreStopHandlerTcpSocketPort;
+
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Float memory;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Ports")
-        private java.util.List < Ports> ports;
+        @com.aliyun.core.annotation.NameInMap("Ports")
+        private java.util.List<Ports> ports;
 
-        @NameInMap("Stdin")
+        @com.aliyun.core.annotation.NameInMap("Stdin")
         private Boolean stdin;
 
-        @NameInMap("StdinOnce")
+        @com.aliyun.core.annotation.NameInMap("StdinOnce")
         private Boolean stdinOnce;
 
-        @NameInMap("Tty")
+        @com.aliyun.core.annotation.NameInMap("Tty")
         private Boolean tty;
 
-        @NameInMap("VolumeMounts")
-        private java.util.List < VolumeMounts> volumeMounts;
+        @com.aliyun.core.annotation.NameInMap("VolumeMounts")
+        private java.util.List<VolumeMounts> volumeMounts;
 
-        @NameInMap("WorkingDir")
+        @com.aliyun.core.annotation.NameInMap("WorkingDir")
         private String workingDir;
 
         private Containers(Builder builder) {
@@ -2442,6 +2890,20 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             this.gpu = builder.gpu;
             this.image = builder.image;
             this.imagePullPolicy = builder.imagePullPolicy;
+            this.lifecyclePostStartHandlerExecs = builder.lifecyclePostStartHandlerExecs;
+            this.lifecyclePostStartHandlerHttpGetHost = builder.lifecyclePostStartHandlerHttpGetHost;
+            this.lifecyclePostStartHandlerHttpGetPath = builder.lifecyclePostStartHandlerHttpGetPath;
+            this.lifecyclePostStartHandlerHttpGetPort = builder.lifecyclePostStartHandlerHttpGetPort;
+            this.lifecyclePostStartHandlerHttpGetScheme = builder.lifecyclePostStartHandlerHttpGetScheme;
+            this.lifecyclePostStartHandlerTcpSocketHost = builder.lifecyclePostStartHandlerTcpSocketHost;
+            this.lifecyclePostStartHandlerTcpSocketPort = builder.lifecyclePostStartHandlerTcpSocketPort;
+            this.lifecyclePreStopHandlerExecs = builder.lifecyclePreStopHandlerExecs;
+            this.lifecyclePreStopHandlerHttpGetHost = builder.lifecyclePreStopHandlerHttpGetHost;
+            this.lifecyclePreStopHandlerHttpGetPath = builder.lifecyclePreStopHandlerHttpGetPath;
+            this.lifecyclePreStopHandlerHttpGetPort = builder.lifecyclePreStopHandlerHttpGetPort;
+            this.lifecyclePreStopHandlerHttpGetScheme = builder.lifecyclePreStopHandlerHttpGetScheme;
+            this.lifecyclePreStopHandlerTcpSocketHost = builder.lifecyclePreStopHandlerTcpSocketHost;
+            this.lifecyclePreStopHandlerTcpSocketPort = builder.lifecyclePreStopHandlerTcpSocketPort;
             this.memory = builder.memory;
             this.name = builder.name;
             this.ports = builder.ports;
@@ -2484,14 +2946,14 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         /**
          * @return args
          */
-        public java.util.List < String > getArgs() {
+        public java.util.List<String> getArgs() {
             return this.args;
         }
 
         /**
          * @return commands
          */
-        public java.util.List < String > getCommands() {
+        public java.util.List<String> getCommands() {
             return this.commands;
         }
 
@@ -2505,7 +2967,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         /**
          * @return environmentVars
          */
-        public java.util.List < EnvironmentVars> getEnvironmentVars() {
+        public java.util.List<EnvironmentVars> getEnvironmentVars() {
             return this.environmentVars;
         }
 
@@ -2531,6 +2993,104 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
+         * @return lifecyclePostStartHandlerExecs
+         */
+        public java.util.List<String> getLifecyclePostStartHandlerExecs() {
+            return this.lifecyclePostStartHandlerExecs;
+        }
+
+        /**
+         * @return lifecyclePostStartHandlerHttpGetHost
+         */
+        public String getLifecyclePostStartHandlerHttpGetHost() {
+            return this.lifecyclePostStartHandlerHttpGetHost;
+        }
+
+        /**
+         * @return lifecyclePostStartHandlerHttpGetPath
+         */
+        public String getLifecyclePostStartHandlerHttpGetPath() {
+            return this.lifecyclePostStartHandlerHttpGetPath;
+        }
+
+        /**
+         * @return lifecyclePostStartHandlerHttpGetPort
+         */
+        public Integer getLifecyclePostStartHandlerHttpGetPort() {
+            return this.lifecyclePostStartHandlerHttpGetPort;
+        }
+
+        /**
+         * @return lifecyclePostStartHandlerHttpGetScheme
+         */
+        public String getLifecyclePostStartHandlerHttpGetScheme() {
+            return this.lifecyclePostStartHandlerHttpGetScheme;
+        }
+
+        /**
+         * @return lifecyclePostStartHandlerTcpSocketHost
+         */
+        public String getLifecyclePostStartHandlerTcpSocketHost() {
+            return this.lifecyclePostStartHandlerTcpSocketHost;
+        }
+
+        /**
+         * @return lifecyclePostStartHandlerTcpSocketPort
+         */
+        public Integer getLifecyclePostStartHandlerTcpSocketPort() {
+            return this.lifecyclePostStartHandlerTcpSocketPort;
+        }
+
+        /**
+         * @return lifecyclePreStopHandlerExecs
+         */
+        public java.util.List<String> getLifecyclePreStopHandlerExecs() {
+            return this.lifecyclePreStopHandlerExecs;
+        }
+
+        /**
+         * @return lifecyclePreStopHandlerHttpGetHost
+         */
+        public String getLifecyclePreStopHandlerHttpGetHost() {
+            return this.lifecyclePreStopHandlerHttpGetHost;
+        }
+
+        /**
+         * @return lifecyclePreStopHandlerHttpGetPath
+         */
+        public String getLifecyclePreStopHandlerHttpGetPath() {
+            return this.lifecyclePreStopHandlerHttpGetPath;
+        }
+
+        /**
+         * @return lifecyclePreStopHandlerHttpGetPort
+         */
+        public Integer getLifecyclePreStopHandlerHttpGetPort() {
+            return this.lifecyclePreStopHandlerHttpGetPort;
+        }
+
+        /**
+         * @return lifecyclePreStopHandlerHttpGetScheme
+         */
+        public String getLifecyclePreStopHandlerHttpGetScheme() {
+            return this.lifecyclePreStopHandlerHttpGetScheme;
+        }
+
+        /**
+         * @return lifecyclePreStopHandlerTcpSocketHost
+         */
+        public String getLifecyclePreStopHandlerTcpSocketHost() {
+            return this.lifecyclePreStopHandlerTcpSocketHost;
+        }
+
+        /**
+         * @return lifecyclePreStopHandlerTcpSocketPort
+         */
+        public Integer getLifecyclePreStopHandlerTcpSocketPort() {
+            return this.lifecyclePreStopHandlerTcpSocketPort;
+        }
+
+        /**
          * @return memory
          */
         public Float getMemory() {
@@ -2547,7 +3107,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         /**
          * @return ports
          */
-        public java.util.List < Ports> getPorts() {
+        public java.util.List<Ports> getPorts() {
             return this.ports;
         }
 
@@ -2575,7 +3135,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         /**
          * @return volumeMounts
          */
-        public java.util.List < VolumeMounts> getVolumeMounts() {
+        public java.util.List<VolumeMounts> getVolumeMounts() {
             return this.volumeMounts;
         }
 
@@ -2590,20 +3150,34 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             private LivenessProbe livenessProbe; 
             private ReadinessProbe readinessProbe; 
             private SecurityContext securityContext; 
-            private java.util.List < String > args; 
-            private java.util.List < String > commands; 
+            private java.util.List<String> args; 
+            private java.util.List<String> commands; 
             private Float cpu; 
-            private java.util.List < EnvironmentVars> environmentVars; 
+            private java.util.List<EnvironmentVars> environmentVars; 
             private Integer gpu; 
             private String image; 
             private String imagePullPolicy; 
+            private java.util.List<String> lifecyclePostStartHandlerExecs; 
+            private String lifecyclePostStartHandlerHttpGetHost; 
+            private String lifecyclePostStartHandlerHttpGetPath; 
+            private Integer lifecyclePostStartHandlerHttpGetPort; 
+            private String lifecyclePostStartHandlerHttpGetScheme; 
+            private String lifecyclePostStartHandlerTcpSocketHost; 
+            private Integer lifecyclePostStartHandlerTcpSocketPort; 
+            private java.util.List<String> lifecyclePreStopHandlerExecs; 
+            private String lifecyclePreStopHandlerHttpGetHost; 
+            private String lifecyclePreStopHandlerHttpGetPath; 
+            private Integer lifecyclePreStopHandlerHttpGetPort; 
+            private String lifecyclePreStopHandlerHttpGetScheme; 
+            private String lifecyclePreStopHandlerTcpSocketHost; 
+            private Integer lifecyclePreStopHandlerTcpSocketPort; 
             private Float memory; 
             private String name; 
-            private java.util.List < Ports> ports; 
+            private java.util.List<Ports> ports; 
             private Boolean stdin; 
             private Boolean stdinOnce; 
             private Boolean tty; 
-            private java.util.List < VolumeMounts> volumeMounts; 
+            private java.util.List<VolumeMounts> volumeMounts; 
             private String workingDir; 
 
             /**
@@ -2631,23 +3205,26 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The arguments that correspond to the startup commands of the container. You can specify up to 10 arguments.
+             * <p>The container startup arguments. You can specify up to 10 arguments.</p>
              */
-            public Builder args(java.util.List < String > args) {
+            public Builder args(java.util.List<String> args) {
                 this.args = args;
                 return this;
             }
 
             /**
-             * The commands that you want to execute in the container when you use the command line interface (CLI) to perform probes.
+             * <p>The commands that you can run in the container when you use the CLI to perform a liveness probe.</p>
              */
-            public Builder commands(java.util.List < String > commands) {
+            public Builder commands(java.util.List<String> commands) {
                 this.commands = commands;
                 return this;
             }
 
             /**
-             * The number of vCPUs that you want to allocate to the container.
+             * <p>The number of vCPUs per container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.25</p>
              */
             public Builder cpu(Float cpu) {
                 this.cpu = cpu;
@@ -2655,15 +3232,18 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * Information about the environment variables.
+             * <p>The environment variables.</p>
              */
-            public Builder environmentVars(java.util.List < EnvironmentVars> environmentVars) {
+            public Builder environmentVars(java.util.List<EnvironmentVars> environmentVars) {
                 this.environmentVars = environmentVars;
                 return this;
             }
 
             /**
-             * The number of GPUs that you want to allocate to the container.
+             * <p>The number of GPUs per container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder gpu(Integer gpu) {
                 this.gpu = gpu;
@@ -2671,7 +3251,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The image of the container.
+             * <p>The container image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry-vpc.cn-hangzhou.aliyuncs.com/eci_open/nginx:latest</p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -2679,12 +3262,15 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The image pulling policy. Valid values:
-             * <p>
+             * <p>The image pulling policy. Valid values:</p>
+             * <ul>
+             * <li>Always: Image pulling is performed each time instances are created.</li>
+             * <li>IfNotPresent: Image pulling is performed as needed. On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.</li>
+             * <li>Never: On-premises images are always used. Image pulling is not performed.</li>
+             * </ul>
              * 
-             * *   Always: pulls images each time.
-             * *   IfNotPresent: pulls images only if no on-premises images are available. On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.
-             * *   Never: never pulls images. On-premises images are always used.
+             * <strong>example:</strong>
+             * <p>Always</p>
              */
             public Builder imagePullPolicy(String imagePullPolicy) {
                 this.imagePullPolicy = imagePullPolicy;
@@ -2692,7 +3278,166 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The memory size of the container. Unit: GiB.
+             * <p>The commands that you can run within the container to configure the postStart callback function.</p>
+             */
+            public Builder lifecyclePostStartHandlerExecs(java.util.List<String> lifecyclePostStartHandlerExecs) {
+                this.lifecyclePostStartHandlerExecs = lifecyclePostStartHandlerExecs;
+                return this;
+            }
+
+            /**
+             * <p>The IP address of the host to which you want to send the HTTP GET request to configure the postStart callback function.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.XX.XX</p>
+             */
+            public Builder lifecyclePostStartHandlerHttpGetHost(String lifecyclePostStartHandlerHttpGetHost) {
+                this.lifecyclePostStartHandlerHttpGetHost = lifecyclePostStartHandlerHttpGetHost;
+                return this;
+            }
+
+            /**
+             * <p>The path to which you want to send the HTTP GET request to configure the postStart callback function.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/healthyz</p>
+             */
+            public Builder lifecyclePostStartHandlerHttpGetPath(String lifecyclePostStartHandlerHttpGetPath) {
+                this.lifecyclePostStartHandlerHttpGetPath = lifecyclePostStartHandlerHttpGetPath;
+                return this;
+            }
+
+            /**
+             * <p>The port over which you want to send the HTTP GET request to configure the postStart callback function.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5050</p>
+             */
+            public Builder lifecyclePostStartHandlerHttpGetPort(Integer lifecyclePostStartHandlerHttpGetPort) {
+                this.lifecyclePostStartHandlerHttpGetPort = lifecyclePostStartHandlerHttpGetPort;
+                return this;
+            }
+
+            /**
+             * <p>The protocol type of the HTTP GET request that you want to send to configure the postStart callback function. Valid values:</p>
+             * <ul>
+             * <li>HTTP</li>
+             * <li>HTTPS</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTPS</p>
+             */
+            public Builder lifecyclePostStartHandlerHttpGetScheme(String lifecyclePostStartHandlerHttpGetScheme) {
+                this.lifecyclePostStartHandlerHttpGetScheme = lifecyclePostStartHandlerHttpGetScheme;
+                return this;
+            }
+
+            /**
+             * <p>The IP address of the host detected by the TCP socket that you want to use to configure the postStart callback function.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.XX.XX</p>
+             */
+            public Builder lifecyclePostStartHandlerTcpSocketHost(String lifecyclePostStartHandlerTcpSocketHost) {
+                this.lifecyclePostStartHandlerTcpSocketHost = lifecyclePostStartHandlerTcpSocketHost;
+                return this;
+            }
+
+            /**
+             * <p>The port detected by the TCP socket that you want to use to configure the postStart callback function.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
+             */
+            public Builder lifecyclePostStartHandlerTcpSocketPort(Integer lifecyclePostStartHandlerTcpSocketPort) {
+                this.lifecyclePostStartHandlerTcpSocketPort = lifecyclePostStartHandlerTcpSocketPort;
+                return this;
+            }
+
+            /**
+             * <p>The commands that you can run within the container to configure the preStop callback function.</p>
+             */
+            public Builder lifecyclePreStopHandlerExecs(java.util.List<String> lifecyclePreStopHandlerExecs) {
+                this.lifecyclePreStopHandlerExecs = lifecyclePreStopHandlerExecs;
+                return this;
+            }
+
+            /**
+             * <p>The IP address of the host to which you want to send the HTTP GET request to configure the preStop callback function.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.XX.XX</p>
+             */
+            public Builder lifecyclePreStopHandlerHttpGetHost(String lifecyclePreStopHandlerHttpGetHost) {
+                this.lifecyclePreStopHandlerHttpGetHost = lifecyclePreStopHandlerHttpGetHost;
+                return this;
+            }
+
+            /**
+             * <p>The path to which you want to send the HTTP GET request to configure the preStop callback function.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/healthyz</p>
+             */
+            public Builder lifecyclePreStopHandlerHttpGetPath(String lifecyclePreStopHandlerHttpGetPath) {
+                this.lifecyclePreStopHandlerHttpGetPath = lifecyclePreStopHandlerHttpGetPath;
+                return this;
+            }
+
+            /**
+             * <p>The port over which you want to send the HTTP GET request to configure the preStop callback function.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
+             */
+            public Builder lifecyclePreStopHandlerHttpGetPort(Integer lifecyclePreStopHandlerHttpGetPort) {
+                this.lifecyclePreStopHandlerHttpGetPort = lifecyclePreStopHandlerHttpGetPort;
+                return this;
+            }
+
+            /**
+             * <p>The protocol type of the HTTP GET request that you want to send to configure the preStop callback function. Valid values:</p>
+             * <ul>
+             * <li>HTTP</li>
+             * <li>HTTPS</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
+             */
+            public Builder lifecyclePreStopHandlerHttpGetScheme(String lifecyclePreStopHandlerHttpGetScheme) {
+                this.lifecyclePreStopHandlerHttpGetScheme = lifecyclePreStopHandlerHttpGetScheme;
+                return this;
+            }
+
+            /**
+             * <p>The IP address of the host detected by the TCP socket that you want to use to configure the preStop callback function.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.XX.XX</p>
+             */
+            public Builder lifecyclePreStopHandlerTcpSocketHost(String lifecyclePreStopHandlerTcpSocketHost) {
+                this.lifecyclePreStopHandlerTcpSocketHost = lifecyclePreStopHandlerTcpSocketHost;
+                return this;
+            }
+
+            /**
+             * <p>The port detected by the TCP socket that you want to use to configure the preStop callback function.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
+             */
+            public Builder lifecyclePreStopHandlerTcpSocketPort(Integer lifecyclePreStopHandlerTcpSocketPort) {
+                this.lifecyclePreStopHandlerTcpSocketPort = lifecyclePreStopHandlerTcpSocketPort;
+                return this;
+            }
+
+            /**
+             * <p>The memory size per container. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder memory(Float memory) {
                 this.memory = memory;
@@ -2700,7 +3445,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The name of the container image.
+             * <p>The name of the container image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nginx</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2708,18 +3456,19 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * Information about the ports.
+             * <p>The ports.</p>
              */
-            public Builder ports(java.util.List < Ports> ports) {
+            public Builder ports(java.util.List<Ports> ports) {
                 this.ports = ports;
                 return this;
             }
 
             /**
-             * Specifies whether the container allocates buffer resources to standard input streams when the container is running. If you do not specify this parameter, an end-of-file (EOF) error may occur.
-             * <p>
+             * <p>Specifies whether the container allocates buffer resources to standard input streams during its active runtime. If you do not specify this parameter, an end-of-file (EOF) error occurs when standard input streams in the container are read.</p>
+             * <p>Default value: false.</p>
              * 
-             * Default value: false.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder stdin(Boolean stdin) {
                 this.stdin = stdin;
@@ -2727,10 +3476,11 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * Specifies whether standard input streams are disconnected after a client is disconnected.
-             * <p>
+             * <p>Specifies whether standard input streams remain connected during multiple sessions when StdinOnce is set to true.</p>
+             * <p>If you set StdinOnce to true, standard input streams are connected after the container is started, and remain idle until a client is connected to receive data. After the client is disconnected, streams are also disconnected and remain disconnected until the container is restarted.</p>
              * 
-             * If you set the StdinOnce parameter to true, standard input streams are connected after the container is started, and remain idle until a client is connected to receive data. After the client is disconnected, streams are also disconnected, and remain disconnected until the container is started again.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder stdinOnce(Boolean stdinOnce) {
                 this.stdinOnce = stdinOnce;
@@ -2738,10 +3488,11 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable interaction. Default value: false.
-             * <p>
+             * <p>Specifies whether to enable Interaction. Default value: false.</p>
+             * <p>If the command is a /bin/bash command, set this parameter to true.</p>
              * 
-             * If the command is a /bin/bash command, set the value to true.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder tty(Boolean tty) {
                 this.tty = tty;
@@ -2749,15 +3500,18 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * Information about the volume mount of the container.
+             * <p>The volume mounts of the container.</p>
              */
-            public Builder volumeMounts(java.util.List < VolumeMounts> volumeMounts) {
+            public Builder volumeMounts(java.util.List<VolumeMounts> volumeMounts) {
                 this.volumeMounts = volumeMounts;
                 return this;
             }
 
             /**
-             * The working directory of the container.
+             * <p>The working directory of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/local/</p>
              */
             public Builder workingDir(String workingDir) {
                 this.workingDir = workingDir;
@@ -2771,11 +3525,17 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyEciScalingConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyEciScalingConfigurationRequest</p>
+     */
     public static class DnsConfigOptions extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private DnsConfigOptions(Builder builder) {
@@ -2810,7 +3570,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             private String value; 
 
             /**
-             * The variable name of the option.
+             * <p>The variable name of the option.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2818,7 +3581,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The variable value of the option.
+             * <p>The variable value of the option.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2832,11 +3598,17 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyEciScalingConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyEciScalingConfigurationRequest</p>
+     */
     public static class HostAliases extends TeaModel {
-        @NameInMap("Hostnames")
-        private java.util.List < String > hostnames;
+        @com.aliyun.core.annotation.NameInMap("Hostnames")
+        private java.util.List<String> hostnames;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
         private HostAliases(Builder builder) {
@@ -2855,7 +3627,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         /**
          * @return hostnames
          */
-        public java.util.List < String > getHostnames() {
+        public java.util.List<String> getHostnames() {
             return this.hostnames;
         }
 
@@ -2867,19 +3639,22 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > hostnames; 
+            private java.util.List<String> hostnames; 
             private String ip; 
 
             /**
-             * The hostnames that you want to add.
+             * <p>The names of the hosts that you want to add.</p>
              */
-            public Builder hostnames(java.util.List < String > hostnames) {
+            public Builder hostnames(java.util.List<String> hostnames) {
                 this.hostnames = hostnames;
                 return this;
             }
 
             /**
-             * The IP address that you want to add.
+             * <p>The IP address that you want to add.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.0.XX.XX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -2893,14 +3668,20 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyEciScalingConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyEciScalingConfigurationRequest</p>
+     */
     public static class ImageRegistryCredentials extends TeaModel {
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
 
-        @NameInMap("Server")
+        @com.aliyun.core.annotation.NameInMap("Server")
         private String server;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private ImageRegistryCredentials(Builder builder) {
@@ -2944,7 +3725,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             private String userName; 
 
             /**
-             * The password that is used to access the image repository.
+             * <p>The password of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yourpaasword</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -2952,7 +3736,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The domain name of the image repository.
+             * <p>The address of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry-vpc.cn-shanghai.aliyuncs.com</p>
              */
             public Builder server(String server) {
                 this.server = server;
@@ -2960,7 +3747,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The username that is used to access the image repository.
+             * <p>The username of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yourusername</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -2974,9 +3764,15 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyEciScalingConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyEciScalingConfigurationRequest</p>
+     */
     public static class SecurityContextCapability extends TeaModel {
-        @NameInMap("Adds")
-        private java.util.List < String > adds;
+        @com.aliyun.core.annotation.NameInMap("Adds")
+        private java.util.List<String> adds;
 
         private SecurityContextCapability(Builder builder) {
             this.adds = builder.adds;
@@ -2993,17 +3789,17 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         /**
          * @return adds
          */
-        public java.util.List < String > getAdds() {
+        public java.util.List<String> getAdds() {
             return this.adds;
         }
 
         public static final class Builder {
-            private java.util.List < String > adds; 
+            private java.util.List<String> adds; 
 
             /**
              * Adds.
              */
-            public Builder adds(java.util.List < String > adds) {
+            public Builder adds(java.util.List<String> adds) {
                 this.adds = adds;
                 return this;
             }
@@ -3015,15 +3811,21 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyEciScalingConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyEciScalingConfigurationRequest</p>
+     */
     public static class InitContainersSecurityContext extends TeaModel {
-        @NameInMap("Capability")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Capability")
+        @com.aliyun.core.annotation.Validation(required = true)
         private SecurityContextCapability capability;
 
-        @NameInMap("ReadOnlyRootFilesystem")
+        @com.aliyun.core.annotation.NameInMap("ReadOnlyRootFilesystem")
         private Boolean readOnlyRootFilesystem;
 
-        @NameInMap("RunAsUser")
+        @com.aliyun.core.annotation.NameInMap("RunAsUser")
         private Long runAsUser;
 
         private InitContainersSecurityContext(Builder builder) {
@@ -3097,8 +3899,14 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyEciScalingConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyEciScalingConfigurationRequest</p>
+     */
     public static class InitContainerEnvironmentVarsFieldRef extends TeaModel {
-        @NameInMap("FieldPath")
+        @com.aliyun.core.annotation.NameInMap("FieldPath")
         private String fieldPath;
 
         private InitContainerEnvironmentVarsFieldRef(Builder builder) {
@@ -3138,15 +3946,21 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyEciScalingConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyEciScalingConfigurationRequest</p>
+     */
     public static class InitContainerEnvironmentVars extends TeaModel {
-        @NameInMap("FieldRef")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("FieldRef")
+        @com.aliyun.core.annotation.Validation(required = true)
         private InitContainerEnvironmentVarsFieldRef fieldRef;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private InitContainerEnvironmentVars(Builder builder) {
@@ -3198,7 +4012,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The key of the environment variable. The key must be 1 to 128 characters in length. Specify the name in the `[0-9a-zA-Z]` format. The name can contain underscores and cannot start with a digit.
+             * <p>The name of the environment variable. The name can be 1 to 128 characters in length, and can contain letters, underscores (_), and digits. The name cannot start with a digit. Specify the value in the <code>[0-9a-zA-Z]</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Path</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -3206,7 +4023,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The value of the environment variable. The value must be 0 to 256 characters in length.
+             * <p>The value of the environment variable. The value can be up to 256 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/bin/</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -3220,11 +4040,17 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyEciScalingConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyEciScalingConfigurationRequest</p>
+     */
     public static class InitContainerPorts extends TeaModel {
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
         private InitContainerPorts(Builder builder) {
@@ -3259,7 +4085,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             private String protocol; 
 
             /**
-             * The port number. Valid values: 1 to 65535.
+             * <p>The port number. Valid values: 1 to 65535.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -3267,11 +4096,14 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The type of the protocol. Valid values:
-             * <p>
+             * <p>The protocol type. Valid values:</p>
+             * <ul>
+             * <li>TCP</li>
+             * <li>UDP</li>
+             * </ul>
              * 
-             * *   TCP
-             * *   UDP
+             * <strong>example:</strong>
+             * <p>TCP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -3285,20 +4117,26 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyEciScalingConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyEciScalingConfigurationRequest</p>
+     */
     public static class InitContainerVolumeMounts extends TeaModel {
-        @NameInMap("MountPath")
+        @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
 
-        @NameInMap("MountPropagation")
+        @com.aliyun.core.annotation.NameInMap("MountPropagation")
         private String mountPropagation;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ReadOnly")
+        @com.aliyun.core.annotation.NameInMap("ReadOnly")
         private Boolean readOnly;
 
-        @NameInMap("SubPath")
+        @com.aliyun.core.annotation.NameInMap("SubPath")
         private String subPath;
 
         private InitContainerVolumeMounts(Builder builder) {
@@ -3360,10 +4198,13 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             private String subPath; 
 
             /**
-             * The path where the container mounts the volume.
-             * <p>
+             * <p>The directory within the init container onto which you want to mount the volume.</p>
+             * <blockquote>
+             * <p> The information stored within this directory is overwritten by the data on the mounted volume. Exercise caution when you specify this parameter.</p>
+             * </blockquote>
              * 
-             * >  Data stored in the path of the container is overwritten by the content of the volume.
+             * <strong>example:</strong>
+             * <p>/usr/share/</p>
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -3371,14 +4212,16 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The mount propagation setting of the volume. Mount propagation allows the sharing of volumes that are mounted on one container with other containers in the same pod, or even with other pods on the same node. Valid values:
-             * <p>
+             * <p>The mount propagation settings of the volume. Mount propagation enables volumes mounted on one container to be shared among other containers within the same pod or across distinct pods residing on the same node. Valid values:</p>
+             * <ul>
+             * <li>None: Subsequent mounts executed on the volume or its subdirectories do not propagate to the volume.</li>
+             * <li>HostToCotainer: Subsequent mounts executed on the volume or its subdirectories propagate to the volume.</li>
+             * <li>Bidirectional: This value is similar to HostToCotainer. Subsequent mounts executed on the volume or its subdirectories propagate to the volume. In addition, volume mounts executed on the container propagate back to the underlying instance and to all containers across every pod that uses the same volume.</li>
+             * </ul>
+             * <p>Default value: None.</p>
              * 
-             * *   None: The volume mount does not receive subsequent mounts that are mounted to this volume or its subdirectories.
-             * *   HostToCotainer: The volume mount receives all subsequent mounts that are mounted to this volume or its subdirectories.
-             * *   Bidirectional: This value is similar to HostToCotainer. The volume mount receives all subsequent mounts that are mounted to this volume or its subdirectories. In addition, all volume mounts that are created by the container are propagated back to the instance and to all containers of all pods that use the same volume.
-             * 
-             * Default value: None.
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder mountPropagation(String mountPropagation) {
                 this.mountPropagation = mountPropagation;
@@ -3386,7 +4229,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The name of the volume.
+             * <p>The name of the volume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-empty</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3394,10 +4240,11 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * Specifies whether the mount path is read-only.
-             * <p>
+             * <p>Specifies whether the mount path is read-only.</p>
+             * <p>Default value: false.</p>
              * 
-             * Default value: false.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -3405,7 +4252,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The subdirectory of the volume. The elastic container instance can mount different directories of the same volume to different subdirectories of containers.
+             * <p>The volume subdirectory. The pod can mount different directories of the same volume to different subdirectories of init containers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Always</p>
              */
             public Builder subPath(String subPath) {
                 this.subPath = subPath;
@@ -3419,45 +4269,51 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyEciScalingConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyEciScalingConfigurationRequest</p>
+     */
     public static class InitContainers extends TeaModel {
-        @NameInMap("SecurityContext")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("SecurityContext")
+        @com.aliyun.core.annotation.Validation(required = true)
         private InitContainersSecurityContext securityContext;
 
-        @NameInMap("Args")
-        private java.util.List < String > args;
+        @com.aliyun.core.annotation.NameInMap("Args")
+        private java.util.List<String> args;
 
-        @NameInMap("Commands")
-        private java.util.List < String > commands;
+        @com.aliyun.core.annotation.NameInMap("Commands")
+        private java.util.List<String> commands;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Float cpu;
 
-        @NameInMap("Gpu")
+        @com.aliyun.core.annotation.NameInMap("Gpu")
         private Integer gpu;
 
-        @NameInMap("Image")
+        @com.aliyun.core.annotation.NameInMap("Image")
         private String image;
 
-        @NameInMap("ImagePullPolicy")
+        @com.aliyun.core.annotation.NameInMap("ImagePullPolicy")
         private String imagePullPolicy;
 
-        @NameInMap("InitContainerEnvironmentVars")
-        private java.util.List < InitContainerEnvironmentVars> initContainerEnvironmentVars;
+        @com.aliyun.core.annotation.NameInMap("InitContainerEnvironmentVars")
+        private java.util.List<InitContainerEnvironmentVars> initContainerEnvironmentVars;
 
-        @NameInMap("InitContainerPorts")
-        private java.util.List < InitContainerPorts> initContainerPorts;
+        @com.aliyun.core.annotation.NameInMap("InitContainerPorts")
+        private java.util.List<InitContainerPorts> initContainerPorts;
 
-        @NameInMap("InitContainerVolumeMounts")
-        private java.util.List < InitContainerVolumeMounts> initContainerVolumeMounts;
+        @com.aliyun.core.annotation.NameInMap("InitContainerVolumeMounts")
+        private java.util.List<InitContainerVolumeMounts> initContainerVolumeMounts;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Float memory;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("WorkingDir")
+        @com.aliyun.core.annotation.NameInMap("WorkingDir")
         private String workingDir;
 
         private InitContainers(Builder builder) {
@@ -3494,14 +4350,14 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         /**
          * @return args
          */
-        public java.util.List < String > getArgs() {
+        public java.util.List<String> getArgs() {
             return this.args;
         }
 
         /**
          * @return commands
          */
-        public java.util.List < String > getCommands() {
+        public java.util.List<String> getCommands() {
             return this.commands;
         }
 
@@ -3536,21 +4392,21 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         /**
          * @return initContainerEnvironmentVars
          */
-        public java.util.List < InitContainerEnvironmentVars> getInitContainerEnvironmentVars() {
+        public java.util.List<InitContainerEnvironmentVars> getInitContainerEnvironmentVars() {
             return this.initContainerEnvironmentVars;
         }
 
         /**
          * @return initContainerPorts
          */
-        public java.util.List < InitContainerPorts> getInitContainerPorts() {
+        public java.util.List<InitContainerPorts> getInitContainerPorts() {
             return this.initContainerPorts;
         }
 
         /**
          * @return initContainerVolumeMounts
          */
-        public java.util.List < InitContainerVolumeMounts> getInitContainerVolumeMounts() {
+        public java.util.List<InitContainerVolumeMounts> getInitContainerVolumeMounts() {
             return this.initContainerVolumeMounts;
         }
 
@@ -3577,15 +4433,15 @@ public class ModifyEciScalingConfigurationRequest extends Request {
 
         public static final class Builder {
             private InitContainersSecurityContext securityContext; 
-            private java.util.List < String > args; 
-            private java.util.List < String > commands; 
+            private java.util.List<String> args; 
+            private java.util.List<String> commands; 
             private Float cpu; 
             private Integer gpu; 
             private String image; 
             private String imagePullPolicy; 
-            private java.util.List < InitContainerEnvironmentVars> initContainerEnvironmentVars; 
-            private java.util.List < InitContainerPorts> initContainerPorts; 
-            private java.util.List < InitContainerVolumeMounts> initContainerVolumeMounts; 
+            private java.util.List<InitContainerEnvironmentVars> initContainerEnvironmentVars; 
+            private java.util.List<InitContainerPorts> initContainerPorts; 
+            private java.util.List<InitContainerVolumeMounts> initContainerVolumeMounts; 
             private Float memory; 
             private String name; 
             private String workingDir; 
@@ -3599,23 +4455,26 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The startup parameter of the container.
+             * <p>The container startup arguments.</p>
              */
-            public Builder args(java.util.List < String > args) {
+            public Builder args(java.util.List<String> args) {
                 this.args = args;
                 return this;
             }
 
             /**
-             * The commands that you want to run to start the container.
+             * <p>The commands that you can run to start the init container.</p>
              */
-            public Builder commands(java.util.List < String > commands) {
+            public Builder commands(java.util.List<String> commands) {
                 this.commands = commands;
                 return this;
             }
 
             /**
-             * The number of vCPUs that you want to allocate to the container.
+             * <p>The number of vCPUs per init container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder cpu(Float cpu) {
                 this.cpu = cpu;
@@ -3623,7 +4482,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The number of GPUs that you want to allocate to the container.
+             * <p>The number of GPUs per init container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder gpu(Integer gpu) {
                 this.gpu = gpu;
@@ -3631,7 +4493,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The container image.
+             * <p>The image of the init container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nginx</p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -3639,12 +4504,15 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The image pulling policy. Valid values:
-             * <p>
+             * <p>The image pulling policy. Valid values:</p>
+             * <ul>
+             * <li>Always: Image pulling is performed each time instances are created.</li>
+             * <li>IfNotPresent: Image pulling is performed as needed. On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.</li>
+             * <li>Never: On-premises images are always used. Image pulling is not performed.</li>
+             * </ul>
              * 
-             * *   Always: pulls images each time.
-             * *   IfNotPresent: pulls images only if no on-premises images are available. On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.
-             * *   Never: never pulls images. On-premises images are always used. Image pulling is not performed.
+             * <strong>example:</strong>
+             * <p>Always</p>
              */
             public Builder imagePullPolicy(String imagePullPolicy) {
                 this.imagePullPolicy = imagePullPolicy;
@@ -3652,31 +4520,34 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The environment variables of the init container.
+             * <p>The environment variables of the init container.</p>
              */
-            public Builder initContainerEnvironmentVars(java.util.List < InitContainerEnvironmentVars> initContainerEnvironmentVars) {
+            public Builder initContainerEnvironmentVars(java.util.List<InitContainerEnvironmentVars> initContainerEnvironmentVars) {
                 this.initContainerEnvironmentVars = initContainerEnvironmentVars;
                 return this;
             }
 
             /**
-             * The ports of the init container.
+             * <p>The ports of the init container.</p>
              */
-            public Builder initContainerPorts(java.util.List < InitContainerPorts> initContainerPorts) {
+            public Builder initContainerPorts(java.util.List<InitContainerPorts> initContainerPorts) {
                 this.initContainerPorts = initContainerPorts;
                 return this;
             }
 
             /**
-             * Information about the volume mounts of the init container.
+             * <p>The volume mounts of the init container.</p>
              */
-            public Builder initContainerVolumeMounts(java.util.List < InitContainerVolumeMounts> initContainerVolumeMounts) {
+            public Builder initContainerVolumeMounts(java.util.List<InitContainerVolumeMounts> initContainerVolumeMounts) {
                 this.initContainerVolumeMounts = initContainerVolumeMounts;
                 return this;
             }
 
             /**
-             * The size of the memory. Unit: GiB.
+             * <p>The memory size per init container. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder memory(Float memory) {
                 this.memory = memory;
@@ -3684,7 +4555,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The name of the container.
+             * <p>The name of the init container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-init</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3692,7 +4566,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The working directory.
+             * <p>The working directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/local</p>
              */
             public Builder workingDir(String workingDir) {
                 this.workingDir = workingDir;
@@ -3706,11 +4583,17 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyEciScalingConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyEciScalingConfigurationRequest</p>
+     */
     public static class SecurityContextSysCtls extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SecurityContextSysCtls(Builder builder) {
@@ -3745,7 +4628,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             private String value; 
 
             /**
-             * The name of the security context in which the elastic container instance runs.
+             * <p>The variable name of the security context in which the elastic container instance runs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kernel.msgmax</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3753,7 +4639,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The variable value of the security context in which the elastic container instance runs.
+             * <p>The variable value of the security context in which the elastic container instance runs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>65536</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -3767,11 +4656,17 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyEciScalingConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyEciScalingConfigurationRequest</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -3806,7 +4701,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>version</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -3814,7 +4712,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -3828,14 +4729,20 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyEciScalingConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyEciScalingConfigurationRequest</p>
+     */
     public static class DiskVolume extends TeaModel {
-        @NameInMap("DiskId")
+        @com.aliyun.core.annotation.NameInMap("DiskId")
         private String diskId;
 
-        @NameInMap("DiskSize")
+        @com.aliyun.core.annotation.NameInMap("DiskSize")
         private Integer diskSize;
 
-        @NameInMap("FsType")
+        @com.aliyun.core.annotation.NameInMap("FsType")
         private String fsType;
 
         private DiskVolume(Builder builder) {
@@ -3909,11 +4816,17 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyEciScalingConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyEciScalingConfigurationRequest</p>
+     */
     public static class EmptyDirVolume extends TeaModel {
-        @NameInMap("Medium")
+        @com.aliyun.core.annotation.NameInMap("Medium")
         private String medium;
 
-        @NameInMap("SizeLimit")
+        @com.aliyun.core.annotation.NameInMap("SizeLimit")
         private String sizeLimit;
 
         private EmptyDirVolume(Builder builder) {
@@ -3970,14 +4883,20 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyEciScalingConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyEciScalingConfigurationRequest</p>
+     */
     public static class FlexVolume extends TeaModel {
-        @NameInMap("Driver")
+        @com.aliyun.core.annotation.NameInMap("Driver")
         private String driver;
 
-        @NameInMap("FsType")
+        @com.aliyun.core.annotation.NameInMap("FsType")
         private String fsType;
 
-        @NameInMap("Options")
+        @com.aliyun.core.annotation.NameInMap("Options")
         private String options;
 
         private FlexVolume(Builder builder) {
@@ -4051,11 +4970,17 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyEciScalingConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyEciScalingConfigurationRequest</p>
+     */
     public static class HostPathVolume extends TeaModel {
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private HostPathVolume(Builder builder) {
@@ -4112,14 +5037,20 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyEciScalingConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyEciScalingConfigurationRequest</p>
+     */
     public static class NFSVolume extends TeaModel {
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("ReadOnly")
+        @com.aliyun.core.annotation.NameInMap("ReadOnly")
         private Boolean readOnly;
 
-        @NameInMap("Server")
+        @com.aliyun.core.annotation.NameInMap("Server")
         private String server;
 
         private NFSVolume(Builder builder) {
@@ -4171,10 +5102,11 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * Specifies whether the mount path is read-only.
-             * <p>
+             * <p>Specifies whether the mount path is read-only.</p>
+             * <p>Default value: false.</p>
              * 
-             * Default value: false.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -4182,7 +5114,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The domain name of the image repository.
+             * <p>The address of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry-vpc.cn-shanghai.aliyuncs.com</p>
              */
             public Builder server(String server) {
                 this.server = server;
@@ -4196,14 +5131,20 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyEciScalingConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyEciScalingConfigurationRequest</p>
+     */
     public static class ConfigFileVolumeConfigFileToPath extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private Integer mode;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
         private ConfigFileVolumeConfigFileToPath(Builder builder) {
@@ -4247,7 +5188,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             private String path; 
 
             /**
-             * The content of the configuration file, which can be up to 32 KB in size.
+             * <p>The content of the configuration file (32 KB).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bGl1bWk=</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -4255,7 +5199,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The permissions on ConfigFileVolume.
+             * <p>The permissions on the ConfigFile volume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0644</p>
              */
             public Builder mode(Integer mode) {
                 this.mode = mode;
@@ -4263,7 +5210,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The relative path to the configuration file.
+             * <p>The relative path to the configuration file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/bin/</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -4277,37 +5227,43 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyEciScalingConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyEciScalingConfigurationRequest</p>
+     */
     public static class Volumes extends TeaModel {
-        @NameInMap("DiskVolume")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DiskVolume")
+        @com.aliyun.core.annotation.Validation(required = true)
         private DiskVolume diskVolume;
 
-        @NameInMap("EmptyDirVolume")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EmptyDirVolume")
+        @com.aliyun.core.annotation.Validation(required = true)
         private EmptyDirVolume emptyDirVolume;
 
-        @NameInMap("FlexVolume")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("FlexVolume")
+        @com.aliyun.core.annotation.Validation(required = true)
         private FlexVolume flexVolume;
 
-        @NameInMap("HostPathVolume")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("HostPathVolume")
+        @com.aliyun.core.annotation.Validation(required = true)
         private HostPathVolume hostPathVolume;
 
-        @NameInMap("NFSVolume")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("NFSVolume")
+        @com.aliyun.core.annotation.Validation(required = true)
         private NFSVolume NFSVolume;
 
-        @NameInMap("ConfigFileVolumeConfigFileToPath")
-        private java.util.List < ConfigFileVolumeConfigFileToPath> configFileVolumeConfigFileToPath;
+        @com.aliyun.core.annotation.NameInMap("ConfigFileVolumeConfigFileToPath")
+        private java.util.List<ConfigFileVolumeConfigFileToPath> configFileVolumeConfigFileToPath;
 
-        @NameInMap("ConfigFileVolumeDefaultMode")
+        @com.aliyun.core.annotation.NameInMap("ConfigFileVolumeDefaultMode")
         private Integer configFileVolumeDefaultMode;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Volumes(Builder builder) {
@@ -4368,7 +5324,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         /**
          * @return configFileVolumeConfigFileToPath
          */
-        public java.util.List < ConfigFileVolumeConfigFileToPath> getConfigFileVolumeConfigFileToPath() {
+        public java.util.List<ConfigFileVolumeConfigFileToPath> getConfigFileVolumeConfigFileToPath() {
             return this.configFileVolumeConfigFileToPath;
         }
 
@@ -4399,7 +5355,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             private FlexVolume flexVolume; 
             private HostPathVolume hostPathVolume; 
             private NFSVolume NFSVolume; 
-            private java.util.List < ConfigFileVolumeConfigFileToPath> configFileVolumeConfigFileToPath; 
+            private java.util.List<ConfigFileVolumeConfigFileToPath> configFileVolumeConfigFileToPath; 
             private Integer configFileVolumeDefaultMode; 
             private String name; 
             private String type; 
@@ -4445,15 +5401,18 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The paths to the configuration files.
+             * <p>The paths to the configuration files.</p>
              */
-            public Builder configFileVolumeConfigFileToPath(java.util.List < ConfigFileVolumeConfigFileToPath> configFileVolumeConfigFileToPath) {
+            public Builder configFileVolumeConfigFileToPath(java.util.List<ConfigFileVolumeConfigFileToPath> configFileVolumeConfigFileToPath) {
                 this.configFileVolumeConfigFileToPath = configFileVolumeConfigFileToPath;
                 return this;
             }
 
             /**
-             * The default permissions on ConfigFileVolume.
+             * <p>The default permissions on the ConfigFile volume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0644</p>
              */
             public Builder configFileVolumeDefaultMode(Integer configFileVolumeDefaultMode) {
                 this.configFileVolumeDefaultMode = configFileVolumeDefaultMode;
@@ -4461,7 +5420,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The name of the volume.
+             * <p>The volume name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default-volume1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -4469,7 +5431,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The type of HostPathVolume. Examples: File, Directory, and Socket.
+             * <p>The type of the Host directory. Examples: File, Directory, and Socket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EmptyDirVolume</p>
              */
             public Builder type(String type) {
                 this.type = type;

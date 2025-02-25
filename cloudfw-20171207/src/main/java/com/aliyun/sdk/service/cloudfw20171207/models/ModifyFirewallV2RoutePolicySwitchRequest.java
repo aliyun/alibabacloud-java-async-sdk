@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyFirewallV2RoutePolicySwitchRequest} extends {@link RequestModel}
  *
  * <p>ModifyFirewallV2RoutePolicySwitchRequest</p>
  */
 public class ModifyFirewallV2RoutePolicySwitchRequest extends Request {
-    @Query
-    @NameInMap("FirewallId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirewallId")
     private String firewallId;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("ShouldRecover")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShouldRecover")
     private String shouldRecover;
 
-    @Query
-    @NameInMap("TrFirewallRoutePolicyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrFirewallRoutePolicyId")
     private String trFirewallRoutePolicyId;
 
-    @Query
-    @NameInMap("TrFirewallRoutePolicySwitchStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrFirewallRoutePolicySwitchStatus")
     private String trFirewallRoutePolicySwitchStatus;
 
     private ModifyFirewallV2RoutePolicySwitchRequest(Builder builder) {
@@ -110,7 +115,10 @@ public class ModifyFirewallV2RoutePolicySwitchRequest extends Request {
         } 
 
         /**
-         * FirewallId.
+         * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vfw-tr-5b202e7f0be64611****</p>
          */
         public Builder firewallId(String firewallId) {
             this.putQueryParameter("FirewallId", firewallId);
@@ -119,7 +127,14 @@ public class ModifyFirewallV2RoutePolicySwitchRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the content within the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -128,7 +143,14 @@ public class ModifyFirewallV2RoutePolicySwitchRequest extends Request {
         }
 
         /**
-         * ShouldRecover.
+         * <p>Specifies whether to restore the traffic redirection configurations. Valid values:</p>
+         * <ul>
+         * <li>true: roll back</li>
+         * <li>false: withdraw</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder shouldRecover(String shouldRecover) {
             this.putQueryParameter("ShouldRecover", shouldRecover);
@@ -137,7 +159,10 @@ public class ModifyFirewallV2RoutePolicySwitchRequest extends Request {
         }
 
         /**
-         * TrFirewallRoutePolicyId.
+         * <p>The ID of the routing policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>policy-93684cc5caa44b2e****</p>
          */
         public Builder trFirewallRoutePolicyId(String trFirewallRoutePolicyId) {
             this.putQueryParameter("TrFirewallRoutePolicyId", trFirewallRoutePolicyId);
@@ -146,7 +171,14 @@ public class ModifyFirewallV2RoutePolicySwitchRequest extends Request {
         }
 
         /**
-         * TrFirewallRoutePolicySwitchStatus.
+         * <p>The status of the routing policy. Valid values:</p>
+         * <ul>
+         * <li>open: enabled</li>
+         * <li>close: disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>open</p>
          */
         public Builder trFirewallRoutePolicySwitchStatus(String trFirewallRoutePolicySwitchStatus) {
             this.putQueryParameter("TrFirewallRoutePolicySwitchStatus", trFirewallRoutePolicySwitchStatus);

@@ -1,54 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetListenerAccessControlStatusRequest} extends {@link RequestModel}
  *
  * <p>SetListenerAccessControlStatusRequest</p>
  */
 public class SetListenerAccessControlStatusRequest extends Request {
-    @Query
-    @NameInMap("AccessControlStatus")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessControlStatus")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accessControlStatus;
 
-    @Query
-    @NameInMap("ListenerPort")
-    @Validation(required = true, maximum = 65535, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerPort")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 65535, minimum = 1)
     private Integer listenerPort;
 
-    @Query
-    @NameInMap("ListenerProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerProtocol")
     private String listenerProtocol;
 
-    @Query
-    @NameInMap("LoadBalancerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loadBalancerId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private SetListenerAccessControlStatusRequest(Builder builder) {
@@ -169,13 +174,18 @@ public class SetListenerAccessControlStatusRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable the whitelist. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the whitelist. Valid values:</p>
+         * <ul>
+         * <li><strong>open_white_list</strong>: enables the whitelist.</li>
+         * <li><strong>close</strong>: disables the whitelist.</li>
+         * </ul>
+         * <blockquote>
+         * <p> After the whitelist is enabled, if no IP address is added to the whitelist, the CLB instance does not distribute network traffic.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **open_white_list**: enables the whitelist.
-         * *   **close**: disables the whitelist.
-         * 
-         * >  After the whitelist is enabled, if no IP address is added to the whitelist, the CLB instance does not distribute network traffic.
+         * <strong>example:</strong>
+         * <p>open_white_list</p>
          */
         public Builder accessControlStatus(String accessControlStatus) {
             this.putQueryParameter("AccessControlStatus", accessControlStatus);
@@ -184,10 +194,12 @@ public class SetListenerAccessControlStatusRequest extends Request {
         }
 
         /**
-         * The frontend port that is used by the CLB instance.
-         * <p>
+         * <p>The frontend port that is used by the CLB instance.</p>
+         * <p>Valid values: <strong>1 to 65535</strong>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values: **1 to 65535**.
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
@@ -196,10 +208,13 @@ public class SetListenerAccessControlStatusRequest extends Request {
         }
 
         /**
-         * The frontend protocol that is used by the CLB instance.
-         * <p>
+         * <p>The frontend protocol that is used by the CLB instance.</p>
+         * <blockquote>
+         * <p> This parameter is required when listeners that use different protocols listen on the same port.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required when listeners that use different protocols listen on the same port.
+         * <strong>example:</strong>
+         * <p>https</p>
          */
         public Builder listenerProtocol(String listenerProtocol) {
             this.putQueryParameter("ListenerProtocol", listenerProtocol);
@@ -208,7 +223,11 @@ public class SetListenerAccessControlStatusRequest extends Request {
         }
 
         /**
-         * The ID of the CLB instance.
+         * <p>The ID of the CLB instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-8vb86hxixo8lvsja8****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -235,10 +254,11 @@ public class SetListenerAccessControlStatusRequest extends Request {
         }
 
         /**
-         * The region where the Classic Load Balancer (CLB) instance is created.
-         * <p>
+         * <p>The region where the Classic Load Balancer (CLB) instance is created.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

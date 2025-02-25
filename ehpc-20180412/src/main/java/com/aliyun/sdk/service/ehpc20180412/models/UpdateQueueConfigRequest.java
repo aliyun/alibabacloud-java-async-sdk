@@ -159,7 +159,11 @@ public class UpdateQueueConfigRequest extends Request {
         }
 
         /**
-         * NetworkInterfaceTrafficMode.
+         * The communication model of the ENI. Valid values:
+         * <p>
+         * 
+         * *   Standard: uses the TCP communication mode.
+         * *   HighPerformance: uses the remote direct memory access (RDMA) communication mode with the Elastic RDMA Interface (ERI) enabled.
          */
         public Builder networkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
             this.putQueryParameter("NetworkInterfaceTrafficMode", networkInterfaceTrafficMode);

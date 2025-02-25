@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMultiZoneAvailableRegionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMultiZoneAvailableRegionsResponseBody</p>
  */
 public class DescribeMultiZoneAvailableRegionsResponseBody extends TeaModel {
-    @NameInMap("Regions")
+    @com.aliyun.core.annotation.NameInMap("Regions")
     private Regions regions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeMultiZoneAvailableRegionsResponseBody(Builder builder) {
@@ -71,9 +76,15 @@ public class DescribeMultiZoneAvailableRegionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMultiZoneAvailableRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMultiZoneAvailableRegionsResponseBody</p>
+     */
     public static class Zones extends TeaModel {
-        @NameInMap("Zone")
-        private java.util.List < String > zone;
+        @com.aliyun.core.annotation.NameInMap("Zone")
+        private java.util.List<String> zone;
 
         private Zones(Builder builder) {
             this.zone = builder.zone;
@@ -90,17 +101,17 @@ public class DescribeMultiZoneAvailableRegionsResponseBody extends TeaModel {
         /**
          * @return zone
          */
-        public java.util.List < String > getZone() {
+        public java.util.List<String> getZone() {
             return this.zone;
         }
 
         public static final class Builder {
-            private java.util.List < String > zone; 
+            private java.util.List<String> zone; 
 
             /**
              * Zone.
              */
-            public Builder zone(java.util.List < String > zone) {
+            public Builder zone(java.util.List<String> zone) {
                 this.zone = zone;
                 return this;
             }
@@ -112,11 +123,17 @@ public class DescribeMultiZoneAvailableRegionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMultiZoneAvailableRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMultiZoneAvailableRegionsResponseBody</p>
+     */
     public static class AvailableCombine extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Zones")
+        @com.aliyun.core.annotation.NameInMap("Zones")
         private Zones zones;
 
         private AvailableCombine(Builder builder) {
@@ -173,9 +190,15 @@ public class DescribeMultiZoneAvailableRegionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMultiZoneAvailableRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMultiZoneAvailableRegionsResponseBody</p>
+     */
     public static class AvailableCombines extends TeaModel {
-        @NameInMap("AvailableCombine")
-        private java.util.List < AvailableCombine> availableCombine;
+        @com.aliyun.core.annotation.NameInMap("AvailableCombine")
+        private java.util.List<AvailableCombine> availableCombine;
 
         private AvailableCombines(Builder builder) {
             this.availableCombine = builder.availableCombine;
@@ -192,17 +215,17 @@ public class DescribeMultiZoneAvailableRegionsResponseBody extends TeaModel {
         /**
          * @return availableCombine
          */
-        public java.util.List < AvailableCombine> getAvailableCombine() {
+        public java.util.List<AvailableCombine> getAvailableCombine() {
             return this.availableCombine;
         }
 
         public static final class Builder {
-            private java.util.List < AvailableCombine> availableCombine; 
+            private java.util.List<AvailableCombine> availableCombine; 
 
             /**
              * AvailableCombine.
              */
-            public Builder availableCombine(java.util.List < AvailableCombine> availableCombine) {
+            public Builder availableCombine(java.util.List<AvailableCombine> availableCombine) {
                 this.availableCombine = availableCombine;
                 return this;
             }
@@ -214,17 +237,23 @@ public class DescribeMultiZoneAvailableRegionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMultiZoneAvailableRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMultiZoneAvailableRegionsResponseBody</p>
+     */
     public static class Region extends TeaModel {
-        @NameInMap("AvailableCombines")
+        @com.aliyun.core.annotation.NameInMap("AvailableCombines")
         private AvailableCombines availableCombines;
 
-        @NameInMap("LocalName")
+        @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
 
-        @NameInMap("RegionEndpoint")
+        @com.aliyun.core.annotation.NameInMap("RegionEndpoint")
         private String regionEndpoint;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private Region(Builder builder) {
@@ -315,9 +344,15 @@ public class DescribeMultiZoneAvailableRegionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMultiZoneAvailableRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMultiZoneAvailableRegionsResponseBody</p>
+     */
     public static class Regions extends TeaModel {
-        @NameInMap("Region")
-        private java.util.List < Region> region;
+        @com.aliyun.core.annotation.NameInMap("Region")
+        private java.util.List<Region> region;
 
         private Regions(Builder builder) {
             this.region = builder.region;
@@ -334,17 +369,17 @@ public class DescribeMultiZoneAvailableRegionsResponseBody extends TeaModel {
         /**
          * @return region
          */
-        public java.util.List < Region> getRegion() {
+        public java.util.List<Region> getRegion() {
             return this.region;
         }
 
         public static final class Builder {
-            private java.util.List < Region> region; 
+            private java.util.List<Region> region; 
 
             /**
              * Region.
              */
-            public Builder region(java.util.List < Region> region) {
+            public Builder region(java.util.List<Region> region) {
                 this.region = region;
                 return this;
             }

@@ -1,32 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePipelinesRequest} extends {@link RequestModel}
  *
  * <p>CreatePipelinesRequest</p>
  */
 public class CreatePipelinesRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
     private java.util.List < CreatePipelinesRequestBody> body;
 
-    @Query
-    @NameInMap("trigger")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("trigger")
     private Boolean trigger;
 
     private CreatePipelinesRequest(Builder builder) {
@@ -97,7 +97,10 @@ public class CreatePipelinesRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ls-cn-oew1qbgl****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -139,34 +142,40 @@ public class CreatePipelinesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreatePipelinesRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePipelinesRequest</p>
+     */
     public static class CreatePipelinesRequestBody extends TeaModel {
-        @NameInMap("batchDelay")
+        @com.aliyun.core.annotation.NameInMap("batchDelay")
         private Integer batchDelay;
 
-        @NameInMap("batchSize")
+        @com.aliyun.core.annotation.NameInMap("batchSize")
         private Integer batchSize;
 
-        @NameInMap("config")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("config")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String config;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("pipelineId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("pipelineId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String pipelineId;
 
-        @NameInMap("queueCheckPointWrites")
+        @com.aliyun.core.annotation.NameInMap("queueCheckPointWrites")
         private Integer queueCheckPointWrites;
 
-        @NameInMap("queueMaxBytes")
+        @com.aliyun.core.annotation.NameInMap("queueMaxBytes")
         private Integer queueMaxBytes;
 
-        @NameInMap("queueType")
+        @com.aliyun.core.annotation.NameInMap("queueType")
         private String queueType;
 
-        @NameInMap("workers")
+        @com.aliyun.core.annotation.NameInMap("workers")
         private Integer workers;
 
         private CreatePipelinesRequestBody(Builder builder) {
@@ -280,7 +289,10 @@ public class CreatePipelinesRequest extends Request {
             }
 
             /**
-             * config.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>input { } filter { } output { }</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -296,7 +308,10 @@ public class CreatePipelinesRequest extends Request {
             }
 
             /**
-             * pipelineId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pipeline-test</p>
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;

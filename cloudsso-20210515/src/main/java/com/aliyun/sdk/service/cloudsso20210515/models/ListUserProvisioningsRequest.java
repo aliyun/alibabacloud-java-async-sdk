@@ -1,43 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserProvisioningsRequest} extends {@link RequestModel}
  *
  * <p>ListUserProvisioningsRequest</p>
  */
 public class ListUserProvisioningsRequest extends Request {
-    @Query
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("PrincipalId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrincipalId")
     private String principalId;
 
-    @Query
-    @NameInMap("PrincipalType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrincipalType")
     private String principalType;
 
-    @Query
-    @NameInMap("TargetId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetId")
     private String targetId;
 
-    @Query
-    @NameInMap("TargetType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetType")
     private String targetType;
 
     private ListUserProvisioningsRequest(Builder builder) {
@@ -138,7 +138,10 @@ public class ListUserProvisioningsRequest extends Request {
         } 
 
         /**
-         * DirectoryId.
+         * <p>The ID of the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-003qew84****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -147,7 +150,12 @@ public class ListUserProvisioningsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -156,7 +164,11 @@ public class ListUserProvisioningsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token that is used to initiate the next request. If this is your first time to call this operation, you do not need to specify the <code>NextToken</code> parameter.</p>
+         * <p>When you call this operation for the first time, if the total number of entries to return is larger than the value of <code>MaxResults</code>, the entries are truncated. The system returns entries based on the value of <code>MaxResults</code>, and does not return the excess entries. In this case, the value of the response parameter <code>IsTruncated</code> is <code>true</code>, and <code>NextToken</code> is returned. In the next call, you can use the value of <code>NextToken</code> and maintain the settings of the other request parameters to query the excess entries. You can repeat the call until the value of <code>IsTruncated</code> becomes <code>false</code>. This way, all entries are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27EbL9j4ZgZjsMZFqbZFgbwQ1VXFU1Khcpx9e2vrW1zwzTBmTGWaM7ixHhRin8SCsxaJdazYVCzeKc2UF2QkyGb83cPhr8ZxrzoaiTd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -165,7 +177,14 @@ public class ListUserProvisioningsRequest extends Request {
         }
 
         /**
-         * PrincipalId.
+         * <p>The identity ID of the RAM user provisioning. Valid values:</p>
+         * <ul>
+         * <li>If <code>Group</code> is returned for the <code>PrincipalType</code> parameter, the value of this parameter is the ID of a CloudSSO user group (g-********).</li>
+         * <li>If <code>User</code> is returned for the <code>PrincipalType</code> parameter, the value of this parameter is the ID of a CloudSSO user (u-********).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>u-88d73u*****</p>
          */
         public Builder principalId(String principalId) {
             this.putQueryParameter("PrincipalId", principalId);
@@ -174,7 +193,14 @@ public class ListUserProvisioningsRequest extends Request {
         }
 
         /**
-         * PrincipalType.
+         * <p>The identity type of the RAM user provisioning. Valid values:</p>
+         * <ul>
+         * <li>User: The identity of the RAM user provisioning is a CloudSSO user.</li>
+         * <li>Group: The identity of the RAM user provisioning is a CloudSSO user group.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RD-Account</p>
          */
         public Builder principalType(String principalType) {
             this.putQueryParameter("PrincipalType", principalType);
@@ -183,7 +209,10 @@ public class ListUserProvisioningsRequest extends Request {
         }
 
         /**
-         * TargetId.
+         * <p>The ID of the object for which you create the RAM user provisioning. The value is fixed as the ID of the member in the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1743382******</p>
          */
         public Builder targetId(String targetId) {
             this.putQueryParameter("TargetId", targetId);
@@ -192,7 +221,10 @@ public class ListUserProvisioningsRequest extends Request {
         }
 
         /**
-         * TargetType.
+         * <p>The object for which you create the RAM user provisioning. The value is fixed as <code>RD-Account</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>User</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);

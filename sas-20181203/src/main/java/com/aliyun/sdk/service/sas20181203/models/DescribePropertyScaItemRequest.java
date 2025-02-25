@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePropertyScaItemRequest} extends {@link RequestModel}
  *
  * <p>DescribePropertyScaItemRequest</p>
  */
 public class DescribePropertyScaItemRequest extends Request {
-    @Query
-    @NameInMap("Biz")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Biz")
     private String biz;
 
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("ForceFlush")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForceFlush")
     private Boolean forceFlush;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SearchInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchInfo")
     private String searchInfo;
 
-    @Query
-    @NameInMap("SearchItem")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchItem")
     private String searchItem;
 
     private DescribePropertyScaItemRequest(Builder builder) {
@@ -138,14 +143,18 @@ public class DescribePropertyScaItemRequest extends Request {
         } 
 
         /**
-         * The type of the asset fingerprint that you want to query. Default value: **sca**. Valid values:
-         * <p>
+         * <p>The type of the asset fingerprint that you want to query. Default value: <strong>sca</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>sca</strong>: middleware</li>
+         * <li><strong>sca_database</strong>: database</li>
+         * <li><strong>sca_web</strong>: web service</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the default value <strong>sca</strong> is used, which indicates that middleware fingerprints are queried.</p>
+         * </blockquote>
          * 
-         * *   **sca**: middleware
-         * *   **sca_database**: database
-         * *   **sca_web**: web service
-         * 
-         * > If you do not specify this parameter, the default value **sca** is used, which indicates that middleware fingerprints are queried.
+         * <strong>example:</strong>
+         * <p>sca</p>
          */
         public Builder biz(String biz) {
             this.putQueryParameter("Biz", biz);
@@ -154,7 +163,10 @@ public class DescribePropertyScaItemRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -163,11 +175,14 @@ public class DescribePropertyScaItemRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcefully refresh the data that you want to query. Valid values:
-         * <p>
+         * <p>Specifies whether to forcefully refresh the data that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forceFlush(Boolean forceFlush) {
             this.putQueryParameter("ForceFlush", forceFlush);
@@ -176,11 +191,14 @@ public class DescribePropertyScaItemRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -189,10 +207,13 @@ public class DescribePropertyScaItemRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <blockquote>
+         * <p>We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
          * 
-         * > We recommend that you do not leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -201,22 +222,28 @@ public class DescribePropertyScaItemRequest extends Request {
         }
 
         /**
-         * The search keyword. You must specify this parameter based on the value of the **SearchItem** parameter.
-         * <p>
+         * <p>The search keyword. You must specify this parameter based on the value of the <strong>SearchItem</strong> parameter.</p>
+         * <ul>
+         * <li><p>If the <strong>SearchItem</strong> parameter is set to <strong>name</strong>, you must enter the name of an asset fingerprint.</p>
+         * </li>
+         * <li><p>If the <strong>SearchItem</strong> parameter is set to <strong>type</strong>, you must enter the type of an asset fingerprint. Valid values:</p>
+         * <ul>
+         * <li><strong>system_service</strong>: system service</li>
+         * <li><strong>software_library</strong>: software library</li>
+         * <li><strong>docker_component</strong>: container component</li>
+         * <li><strong>database</strong>: database</li>
+         * <li><strong>web_container</strong>: web container</li>
+         * <li><strong>jar</strong>: JAR package</li>
+         * <li><strong>web_framework</strong>: web framework</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>You must specify both the <strong>SearchItem</strong> and <strong>SearchInfo</strong> parameters before you can query the asset fingerprints based on the specified name or type.</p>
+         * </blockquote>
          * 
-         * *   If the **SearchItem** parameter is set to **name**, you must enter the name of an asset fingerprint.
-         * 
-         * *   If the **SearchItem** parameter is set to **type**, you must enter the type of an asset fingerprint. Valid values:
-         * 
-         *     *   **system_service**: system service
-         *     *   **software_library**: software library
-         *     *   **docker_component**: container component
-         *     *   **database**: database
-         *     *   **web_container**: web container
-         *     *   **jar**: JAR package
-         *     *   **web_framework**: web framework
-         * 
-         * > You must specify both the **SearchItem** and **SearchInfo** parameters before you can query the asset fingerprints based on the specified name or type.
+         * <strong>example:</strong>
+         * <p>system_service</p>
          */
         public Builder searchInfo(String searchInfo) {
             this.putQueryParameter("SearchInfo", searchInfo);
@@ -225,13 +252,17 @@ public class DescribePropertyScaItemRequest extends Request {
         }
 
         /**
-         * The type of the search condition. Valid values:
-         * <p>
+         * <p>The type of the search condition. Valid values:</p>
+         * <ul>
+         * <li><strong>name</strong>: the name of a database, middleware, or web service</li>
+         * <li><strong>type</strong>: the type of a database, middleware, or web service</li>
+         * </ul>
+         * <blockquote>
+         * <p>You must specify both the <strong>SearchItem</strong> and <strong>SearchInfo</strong> parameters before you can query the asset fingerprints based on the specified name or type.</p>
+         * </blockquote>
          * 
-         * *   **name**: the name of a database, middleware, or web service
-         * *   **type**: the type of a database, middleware, or web service
-         * 
-         * > You must specify both the **SearchItem** and **SearchInfo** parameters before you can query the asset fingerprints based on the specified name or type.
+         * <strong>example:</strong>
+         * <p>type</p>
          */
         public Builder searchItem(String searchItem) {
             this.putQueryParameter("SearchItem", searchItem);

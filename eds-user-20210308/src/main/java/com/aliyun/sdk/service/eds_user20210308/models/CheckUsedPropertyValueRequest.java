@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckUsedPropertyValueRequest} extends {@link RequestModel}
  *
  * <p>CheckUsedPropertyValueRequest</p>
  */
 public class CheckUsedPropertyValueRequest extends Request {
-    @Query
-    @NameInMap("PropertyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PropertyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long propertyId;
 
-    @Query
-    @NameInMap("PropertyValueId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PropertyValueId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long propertyValueId;
 
     private CheckUsedPropertyValueRequest(Builder builder) {
@@ -70,7 +75,11 @@ public class CheckUsedPropertyValueRequest extends Request {
         } 
 
         /**
-         * The ID of the property.
+         * <p>The property ID. You can call the <a href="~~ListProperty~~">ListProperty</a> operation to query property ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>380</p>
          */
         public Builder propertyId(Long propertyId) {
             this.putQueryParameter("PropertyId", propertyId);
@@ -79,7 +88,11 @@ public class CheckUsedPropertyValueRequest extends Request {
         }
 
         /**
-         * The ID of the property value.
+         * <p>The ID of the property value. You can call the <a href="~~ListProperty~~">ListProperty</a> operation to query the ID of the property value.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>978</p>
          */
         public Builder propertyValueId(Long propertyValueId) {
             this.putQueryParameter("PropertyValueId", propertyValueId);

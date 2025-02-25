@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddInvoiceEntityRequest} extends {@link RequestModel}
  *
  * <p>AddInvoiceEntityRequest</p>
  */
 public class AddInvoiceEntityRequest extends Request {
-    @Body
-    @NameInMap("entities")
-    @Validation(required = true)
-    private java.util.List < Entities> entities;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("entities")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Entities> entities;
 
-    @Body
-    @NameInMap("third_part_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("third_part_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String thirdPartId;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private AddInvoiceEntityRequest(Builder builder) {
@@ -49,7 +54,7 @@ public class AddInvoiceEntityRequest extends Request {
     /**
      * @return entities
      */
-    public java.util.List < Entities> getEntities() {
+    public java.util.List<Entities> getEntities() {
         return this.entities;
     }
 
@@ -68,7 +73,7 @@ public class AddInvoiceEntityRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddInvoiceEntityRequest, Builder> {
-        private java.util.List < Entities> entities; 
+        private java.util.List<Entities> entities; 
         private String thirdPartId; 
         private String xAcsBtripCorpToken; 
 
@@ -84,9 +89,9 @@ public class AddInvoiceEntityRequest extends Request {
         } 
 
         /**
-         * entities.
+         * <p>This parameter is required.</p>
          */
-        public Builder entities(java.util.List < Entities> entities) {
+        public Builder entities(java.util.List<Entities> entities) {
             String entitiesShrink = shrink(entities, "entities", "json");
             this.putBodyParameter("entities", entitiesShrink);
             this.entities = entities;
@@ -94,7 +99,10 @@ public class AddInvoiceEntityRequest extends Request {
         }
 
         /**
-         * third_part_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4854821</p>
          */
         public Builder thirdPartId(String thirdPartId) {
             this.putBodyParameter("third_part_id", thirdPartId);
@@ -118,17 +126,23 @@ public class AddInvoiceEntityRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddInvoiceEntityRequest} extends {@link TeaModel}
+     *
+     * <p>AddInvoiceEntityRequest</p>
+     */
     public static class Entities extends TeaModel {
-        @NameInMap("entity_id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("entity_id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String entityId;
 
-        @NameInMap("entity_name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("entity_name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String entityName;
 
-        @NameInMap("entity_type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("entity_type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String entityType;
 
         private Entities(Builder builder) {
@@ -172,7 +186,10 @@ public class AddInvoiceEntityRequest extends Request {
             private String entityType; 
 
             /**
-             * entity_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder entityId(String entityId) {
                 this.entityId = entityId;
@@ -180,7 +197,7 @@ public class AddInvoiceEntityRequest extends Request {
             }
 
             /**
-             * entity_name.
+             * <p>This parameter is required.</p>
              */
             public Builder entityName(String entityName) {
                 this.entityName = entityName;
@@ -188,7 +205,10 @@ public class AddInvoiceEntityRequest extends Request {
             }
 
             /**
-             * entity_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder entityType(String entityType) {
                 this.entityType = entityType;

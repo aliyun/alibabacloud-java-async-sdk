@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMetricsOutput} extends {@link TeaModel}
  *
  * <p>ListMetricsOutput</p>
  */
 public class ListMetricsOutput extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("metrics")
-    private java.util.Map < String, java.util.List<MetricInfo>> metrics;
+    @com.aliyun.core.annotation.NameInMap("metrics")
+    private java.util.Map<String, java.util.List<MetricInfo>> metrics;
 
     private ListMetricsOutput(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class ListMetricsOutput extends TeaModel {
     /**
      * @return metrics
      */
-    public java.util.Map < String, java.util.List<MetricInfo>> getMetrics() {
+    public java.util.Map<String, java.util.List<MetricInfo>> getMetrics() {
         return this.metrics;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.Map < String, java.util.List<MetricInfo>> metrics; 
+        private java.util.Map<String, java.util.List<MetricInfo>> metrics; 
 
         /**
          * RequestId.
@@ -60,7 +65,7 @@ public class ListMetricsOutput extends TeaModel {
         /**
          * metrics.
          */
-        public Builder metrics(java.util.Map < String, java.util.List<MetricInfo>> metrics) {
+        public Builder metrics(java.util.Map<String, java.util.List<MetricInfo>> metrics) {
             this.metrics = metrics;
             return this;
         }

@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnDomainConfigsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCdnDomainConfigsResponseBody</p>
  */
 public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
-    @NameInMap("DomainConfigs")
+    @com.aliyun.core.annotation.NameInMap("DomainConfigs")
     private DomainConfigs domainConfigs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCdnDomainConfigsResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The configurations of the domain name.
+         * <p>The configurations of the domain name.</p>
          */
         public Builder domainConfigs(DomainConfigs domainConfigs) {
             this.domainConfigs = domainConfigs;
@@ -58,7 +58,10 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C80705BF-0F76-41FA-BAD1-5B59296A4E59</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +74,17 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCdnDomainConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCdnDomainConfigsResponseBody</p>
+     */
     public static class FunctionArg extends TeaModel {
-        @NameInMap("ArgName")
+        @com.aliyun.core.annotation.NameInMap("ArgName")
         private String argName;
 
-        @NameInMap("ArgValue")
+        @com.aliyun.core.annotation.NameInMap("ArgValue")
         private String argValue;
 
         private FunctionArg(Builder builder) {
@@ -110,7 +119,10 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
             private String argValue; 
 
             /**
-             * The parameter name, which is the configuration item of **functionName**. You can configure multiple configuration items.
+             * <p>The parameter name, which is the configuration item of <strong>functionName</strong>. You can configure multiple configuration items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>auth_type</p>
              */
             public Builder argName(String argName) {
                 this.argName = argName;
@@ -118,7 +130,10 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The parameter value, which is the value of the configuration item of **functionName**.
+             * <p>The parameter value, which is the value of the configuration item of <strong>functionName</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>req_auth</p>
              */
             public Builder argValue(String argValue) {
                 this.argValue = argValue;
@@ -132,8 +147,14 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCdnDomainConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCdnDomainConfigsResponseBody</p>
+     */
     public static class FunctionArgs extends TeaModel {
-        @NameInMap("FunctionArg")
+        @com.aliyun.core.annotation.NameInMap("FunctionArg")
         private java.util.List < FunctionArg> functionArg;
 
         private FunctionArgs(Builder builder) {
@@ -173,20 +194,26 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCdnDomainConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCdnDomainConfigsResponseBody</p>
+     */
     public static class DomainConfig extends TeaModel {
-        @NameInMap("ConfigId")
+        @com.aliyun.core.annotation.NameInMap("ConfigId")
         private String configId;
 
-        @NameInMap("FunctionArgs")
+        @com.aliyun.core.annotation.NameInMap("FunctionArgs")
         private FunctionArgs functionArgs;
 
-        @NameInMap("FunctionName")
+        @com.aliyun.core.annotation.NameInMap("FunctionName")
         private String functionName;
 
-        @NameInMap("ParentId")
+        @com.aliyun.core.annotation.NameInMap("ParentId")
         private String parentId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private DomainConfig(Builder builder) {
@@ -248,7 +275,10 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the configuration.
+             * <p>The ID of the configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6295</p>
              */
             public Builder configId(String configId) {
                 this.configId = configId;
@@ -256,7 +286,7 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of each feature.
+             * <p>The configuration of each feature.</p>
              */
             public Builder functionArgs(FunctionArgs functionArgs) {
                 this.functionArgs = functionArgs;
@@ -264,7 +294,10 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the feature.
+             * <p>The name of the feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliauth</p>
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
@@ -272,12 +305,12 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule condition. This parameter is optional.
-             * <p>
+             * <p>The ID of the rule condition. This parameter is optional.</p>
+             * <p>To create a rule condition, you can configure the <strong>condition</strong> feature that is described in the <a href="https://help.aliyun.com/document_detail/388460.html">Parameters for configuring features for domain names</a> topic. A rule condition can identify parameters that are included in requests and filter requests based on the identified parameters. Each rule condition has a <a href="https://help.aliyun.com/document_detail/388994.html">ConfigId</a>. You can use ConfigId as ParentId that is referenced by other features. This way, you can combine rule conditions and features for flexible configurations.</p>
+             * <p>For more information, see <a href="https://help.aliyun.com/document_detail/90915.html">BatchSetCdnDomainConfig</a> or ParentId configuration example in this topic.</p>
              * 
-             * To create a rule condition, you can configure the **condition** feature that is described in the [Parameters for configuring features for domain names](~~388460~~) topic. A rule condition can identify parameters that are included in requests and filter requests based on the identified parameters. Each rule condition has a [ConfigId](~~388994~~). You can use ConfigId as ParentId that is referenced by other features. This way, you can combine rule conditions and features for flexible configurations.
-             * 
-             * For more information, see [BatchSetCdnDomainConfig](~~90915~~) or ParentId configuration example in this topic.
+             * <strong>example:</strong>
+             * <p>222728944812032</p>
              */
             public Builder parentId(String parentId) {
                 this.parentId = parentId;
@@ -285,13 +318,16 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the configuration. Valid values:
-             * <p>
+             * <p>The status of the configuration. Valid values:</p>
+             * <ul>
+             * <li><strong>success</strong></li>
+             * <li><strong>testing</strong></li>
+             * <li><strong>failed</strong></li>
+             * <li><strong>configuring</strong></li>
+             * </ul>
              * 
-             * *   **success**
-             * *   **testing**
-             * *   **failed**
-             * *   **configuring**
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -305,8 +341,14 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCdnDomainConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCdnDomainConfigsResponseBody</p>
+     */
     public static class DomainConfigs extends TeaModel {
-        @NameInMap("DomainConfig")
+        @com.aliyun.core.annotation.NameInMap("DomainConfig")
         private java.util.List < DomainConfig> domainConfig;
 
         private DomainConfigs(Builder builder) {

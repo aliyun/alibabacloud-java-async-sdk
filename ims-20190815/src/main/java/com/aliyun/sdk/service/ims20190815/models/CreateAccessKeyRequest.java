@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAccessKeyRequest} extends {@link RequestModel}
  *
  * <p>CreateAccessKeyRequest</p>
  */
 public class CreateAccessKeyRequest extends Request {
-    @Query
-    @NameInMap("UserPrincipalName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserPrincipalName")
     private String userPrincipalName;
 
     private CreateAccessKeyRequest(Builder builder) {
@@ -54,10 +59,11 @@ public class CreateAccessKeyRequest extends Request {
         } 
 
         /**
-         * The logon name of the RAM user.
-         * <p>
+         * <p>The logon name of the RAM user.</p>
+         * <p>If this parameter is empty, an AccessKey pair is created for the current user.</p>
          * 
-         * If this parameter is empty, an AccessKey pair is created for the current user.
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
          */
         public Builder userPrincipalName(String userPrincipalName) {
             this.putQueryParameter("UserPrincipalName", userPrincipalName);

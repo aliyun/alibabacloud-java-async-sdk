@@ -1,78 +1,83 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSpotPriceHistoryRequest} extends {@link RequestModel}
  *
  * <p>DescribeSpotPriceHistoryRequest</p>
  */
 public class DescribeSpotPriceHistoryRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("InstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceType;
 
-    @Query
-    @NameInMap("IoOptimized")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IoOptimized")
     private String ioOptimized;
 
-    @Query
-    @NameInMap("NetworkType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String networkType;
 
-    @Query
-    @NameInMap("OSType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OSType")
     private String OSType;
 
-    @Query
-    @NameInMap("Offset")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Offset")
     private Integer offset;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SpotDuration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotDuration")
     private Integer spotDuration;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private DescribeSpotPriceHistoryRequest(Builder builder) {
@@ -262,10 +267,11 @@ public class DescribeSpotPriceHistoryRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC. The specified time can be up to 30 days earlier than the specified EndTime value.
-         * <p>
+         * <p>The end of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601 standard</a> in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
+         * <p>This parameter is empty by default. If this parameter is empty, the current time is used.</p>
          * 
-         * This parameter is empty by default. If this parameter is empty, the time that is 3 hours earlier than the specified EndTime value is used.
+         * <strong>example:</strong>
+         * <p>2017-08-22T08:45:08Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -274,11 +280,12 @@ public class DescribeSpotPriceHistoryRequest extends Request {
         }
 
         /**
-         * The network type of the preemptible instance. Valid values:
-         * <p>
+         * <p>The beginning of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC. The specified time can be up to 30 days earlier than the specified EndTime value.</p>
+         * <p>This parameter is empty by default. If this parameter is empty, the time that is 3 hours earlier than the specified EndTime value is used.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   classic: classic network
-         * *   vpc: Virtual Private Cloud (VPC)
+         * <strong>example:</strong>
+         * <p>ecs.t1.xsmall</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -287,13 +294,16 @@ public class DescribeSpotPriceHistoryRequest extends Request {
         }
 
         /**
-         * The protection period of the preemptible instance. Unit: hours. Valid values: 0, 1, 2, 3, 4, 5, and 6.
-         * <p>
+         * <p>Specifies whether the instance is I/O optimized. Valid values:</p>
+         * <ul>
+         * <li>optimized: The instance is I/O optimized.</li>
+         * <li>none: The instance is not I/O optimized.</li>
+         * </ul>
+         * <p>For instances of generation I instance families, the default value is none.</p>
+         * <p>For instances of other instance families, the default value is optimized.</p>
          * 
-         * *   The following protection periods are available in invitational preview: 2, 3, 4, 5, and 6 hours. If you want to set this parameter to one of these values, submit a ticket.
-         * *   If this parameter is set to 0, no protection period is configured for the preemptible instance.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>optimized</p>
          */
         public Builder ioOptimized(String ioOptimized) {
             this.putQueryParameter("IoOptimized", ioOptimized);
@@ -302,7 +312,15 @@ public class DescribeSpotPriceHistoryRequest extends Request {
         }
 
         /**
-         * The zone ID of the preemptible instance.
+         * <p>The network type of the preemptible instance. Valid values:</p>
+         * <ul>
+         * <li>classic: classic network</li>
+         * <li>vpc: Virtual Private Cloud (VPC)</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -311,10 +329,14 @@ public class DescribeSpotPriceHistoryRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
-         * <p>
+         * <p>The type of the operating system platform. Valid values:</p>
+         * <ul>
+         * <li>linux</li>
+         * <li>windows</li>
+         * </ul>
          * 
-         * This parameter is empty by default. If this parameter is empty, the current time is used.
+         * <strong>example:</strong>
+         * <p>linux</p>
          */
         public Builder OSType(String OSType) {
             this.putQueryParameter("OSType", OSType);
@@ -323,11 +345,11 @@ public class DescribeSpotPriceHistoryRequest extends Request {
         }
 
         /**
-         * The type of the operating system platform. Valid values:
-         * <p>
+         * <p>The line from which the query starts.</p>
+         * <p>Default value: 0</p>
          * 
-         * *   linux
-         * *   windows
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder offset(Integer offset) {
             this.putQueryParameter("Offset", offset);
@@ -354,7 +376,11 @@ public class DescribeSpotPriceHistoryRequest extends Request {
         }
 
         /**
-         * Queries the price history of a preemptible instance within the last 30 days.
+         * <p>The zone ID of the preemptible instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -381,7 +407,18 @@ public class DescribeSpotPriceHistoryRequest extends Request {
         }
 
         /**
-         * The instance type of the preemptible instance.
+         * <p>The protection period of the preemptible instance. Unit: hours. Default value: 1. Valid values:</p>
+         * <ul>
+         * <li>1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
+         * <li>0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
+         * </ul>
+         * <p>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify a protection period based on your business requirements.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only if you set SpotStrategy to SpotWithPriceLimit or SpotAsPriceGo.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder spotDuration(Integer spotDuration) {
             this.putQueryParameter("SpotDuration", spotDuration);
@@ -390,15 +427,11 @@ public class DescribeSpotPriceHistoryRequest extends Request {
         }
 
         /**
-         * Specifies whether the instance is I/O optimized. Valid values:
-         * <p>
+         * <p>The beginning of the time range to query. The value of this parameter and the value of EndTime can be up to 30 days apart. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601 standard</a> in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
+         * <p>This parameter is left empty by default. If this parameter is empty, the time that is 3 hours earlier than the value of EndTime is used.</p>
          * 
-         * *   optimized: The instance is I/O optimized.
-         * *   none: The instance is not I/O optimized.
-         * 
-         * For instances of generation I instance families, the default value is none.
-         * 
-         * For instances of other instance families, the default value is optimized.
+         * <strong>example:</strong>
+         * <p>2017-08-22T08:45:08Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -407,7 +440,10 @@ public class DescribeSpotPriceHistoryRequest extends Request {
         }
 
         /**
-         * The region ID of the preemptible instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The spot price (market price) of the preemptible instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-g</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

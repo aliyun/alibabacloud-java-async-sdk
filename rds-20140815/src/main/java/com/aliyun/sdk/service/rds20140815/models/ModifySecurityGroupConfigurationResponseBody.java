@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySecurityGroupConfigurationResponseBody} extends {@link TeaModel}
  *
  * <p>ModifySecurityGroupConfigurationResponseBody</p>
  */
 public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
-    @NameInMap("DBInstanceName")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceName")
     private String DBInstanceName;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifySecurityGroupConfigurationResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxx</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -70,7 +78,7 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of information about the ECS security group.
+         * <p>An array that consists of information about the ECS security group.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -78,7 +86,10 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8585861B-8F0D-4D17-9460-C42255EB10C0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,14 +102,20 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifySecurityGroupConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifySecurityGroupConfigurationResponseBody</p>
+     */
     public static class EcsSecurityGroupRelation extends TeaModel {
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
         private EcsSecurityGroupRelation(Builder builder) {
@@ -142,11 +159,14 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
             private String securityGroupId; 
 
             /**
-             * The network type of the ECS security group. Valid values:
-             * <p>
+             * <p>The network type of the ECS security group. Valid values:</p>
+             * <ul>
+             * <li><strong>Classic</strong></li>
+             * <li><strong>VPC</strong></li>
+             * </ul>
              * 
-             * *   **Classic**
-             * *   **VPC**
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -154,7 +174,10 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -162,7 +185,10 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECS security group.
+             * <p>The ID of the ECS security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-xxxxxxx</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -176,9 +202,15 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifySecurityGroupConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifySecurityGroupConfigurationResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("EcsSecurityGroupRelation")
-        private java.util.List < EcsSecurityGroupRelation> ecsSecurityGroupRelation;
+        @com.aliyun.core.annotation.NameInMap("EcsSecurityGroupRelation")
+        private java.util.List<EcsSecurityGroupRelation> ecsSecurityGroupRelation;
 
         private Items(Builder builder) {
             this.ecsSecurityGroupRelation = builder.ecsSecurityGroupRelation;
@@ -195,17 +227,17 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
         /**
          * @return ecsSecurityGroupRelation
          */
-        public java.util.List < EcsSecurityGroupRelation> getEcsSecurityGroupRelation() {
+        public java.util.List<EcsSecurityGroupRelation> getEcsSecurityGroupRelation() {
             return this.ecsSecurityGroupRelation;
         }
 
         public static final class Builder {
-            private java.util.List < EcsSecurityGroupRelation> ecsSecurityGroupRelation; 
+            private java.util.List<EcsSecurityGroupRelation> ecsSecurityGroupRelation; 
 
             /**
              * EcsSecurityGroupRelation.
              */
-            public Builder ecsSecurityGroupRelation(java.util.List < EcsSecurityGroupRelation> ecsSecurityGroupRelation) {
+            public Builder ecsSecurityGroupRelation(java.util.List<EcsSecurityGroupRelation> ecsSecurityGroupRelation) {
                 this.ecsSecurityGroupRelation = ecsSecurityGroupRelation;
                 return this;
             }

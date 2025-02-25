@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAccountTransactionDetailsResponseBody} extends {@link TeaModel}
  *
  * <p>QueryAccountTransactionDetailsResponseBody</p>
  */
 public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryAccountTransactionDetailsResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,10 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asadadad-edafafafaasd</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,44 +148,50 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryAccountTransactionDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAccountTransactionDetailsResponseBody</p>
+     */
     public static class AccountTransactionsList extends TeaModel {
-        @NameInMap("Amount")
+        @com.aliyun.core.annotation.NameInMap("Amount")
         private String amount;
 
-        @NameInMap("Balance")
+        @com.aliyun.core.annotation.NameInMap("Balance")
         private String balance;
 
-        @NameInMap("BillingCycle")
+        @com.aliyun.core.annotation.NameInMap("BillingCycle")
         private String billingCycle;
 
-        @NameInMap("FundType")
+        @com.aliyun.core.annotation.NameInMap("FundType")
         private String fundType;
 
-        @NameInMap("RecordID")
+        @com.aliyun.core.annotation.NameInMap("RecordID")
         private String recordID;
 
-        @NameInMap("Remarks")
+        @com.aliyun.core.annotation.NameInMap("Remarks")
         private String remarks;
 
-        @NameInMap("TransactionAccount")
+        @com.aliyun.core.annotation.NameInMap("TransactionAccount")
         private String transactionAccount;
 
-        @NameInMap("TransactionChannel")
+        @com.aliyun.core.annotation.NameInMap("TransactionChannel")
         private String transactionChannel;
 
-        @NameInMap("TransactionChannelSN")
+        @com.aliyun.core.annotation.NameInMap("TransactionChannelSN")
         private String transactionChannelSN;
 
-        @NameInMap("TransactionFlow")
+        @com.aliyun.core.annotation.NameInMap("TransactionFlow")
         private String transactionFlow;
 
-        @NameInMap("TransactionNumber")
+        @com.aliyun.core.annotation.NameInMap("TransactionNumber")
         private String transactionNumber;
 
-        @NameInMap("TransactionTime")
+        @com.aliyun.core.annotation.NameInMap("TransactionTime")
         private String transactionTime;
 
-        @NameInMap("TransactionType")
+        @com.aliyun.core.annotation.NameInMap("TransactionType")
         private String transactionType;
 
         private AccountTransactionsList(Builder builder) {
@@ -302,7 +325,10 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
             private String transactionType; 
 
             /**
-             * The amount of the transaction.
+             * <p>The amount of the transaction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.00</p>
              */
             public Builder amount(String amount) {
                 this.amount = amount;
@@ -310,7 +336,10 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The balance of the account.
+             * <p>The balance of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder balance(String balance) {
                 this.balance = balance;
@@ -318,7 +347,10 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The billing cycle.
+             * <p>The billing cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10</p>
              */
             public Builder billingCycle(String billingCycle) {
                 this.billingCycle = billingCycle;
@@ -326,10 +358,11 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of transaction payment. Valid values:
-             * <p>
+             * <p>The type of transaction payment. Valid values:</p>
+             * <p>Cash: pay for the transaction in cash. Deposit: pay for the transaction with deposit. RegularBankCreditRefund: pay for the transaction with credit refund controlled by a bank. DirectPay: directly pay for the transaction.</p>
              * 
-             * Cash: pay for the transaction in cash. Deposit: pay for the transaction with deposit. RegularBankCreditRefund: pay for the transaction with credit refund controlled by a bank. DirectPay: directly pay for the transaction.
+             * <strong>example:</strong>
+             * <p>Cash</p>
              */
             public Builder fundType(String fundType) {
                 this.fundType = fundType;
@@ -337,7 +370,10 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the order or bill.
+             * <p>The ID of the order or bill.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022120336190912</p>
              */
             public Builder recordID(String recordID) {
                 this.recordID = recordID;
@@ -345,7 +381,10 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks.
+             * <p>The remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder remarks(String remarks) {
                 this.remarks = remarks;
@@ -353,7 +392,10 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The transaction account.
+             * <p>The transaction account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:fortune_test@xxx.com">fortune_test@xxx.com</a></p>
              */
             public Builder transactionAccount(String transactionAccount) {
                 this.transactionAccount = transactionAccount;
@@ -361,7 +403,10 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The transaction channel.
+             * <p>The transaction channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIPAY</p>
              */
             public Builder transactionChannel(String transactionChannel) {
                 this.transactionChannel = transactionChannel;
@@ -369,7 +414,10 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The serial number of the transaction channel.
+             * <p>The serial number of the transaction channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123232434343532</p>
              */
             public Builder transactionChannelSN(String transactionChannelSN) {
                 this.transactionChannelSN = transactionChannelSN;
@@ -377,10 +425,11 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the transaction is of the income type or the expenditure type. If one of the following types is specified, results for the specific type are returned. If the type that you specified for the parameter does not belong to the following types, no result is returned. If the parameter is left empty, results for transactions of the income and expenditure types are all returned. Valid values:
-             * <p>
+             * <p>Indicates whether the transaction is of the income type or the expenditure type. If one of the following types is specified, results for the specific type are returned. If the type that you specified for the parameter does not belong to the following types, no result is returned. If the parameter is left empty, results for transactions of the income and expenditure types are all returned. Valid values:</p>
+             * <p>Income and Expense.</p>
              * 
-             * Income and Expense.
+             * <strong>example:</strong>
+             * <p>Income</p>
              */
             public Builder transactionFlow(String transactionFlow) {
                 this.transactionFlow = transactionFlow;
@@ -388,7 +437,10 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the transaction.
+             * <p>The number of the transaction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>43342334</p>
              */
             public Builder transactionNumber(String transactionNumber) {
                 this.transactionNumber = transactionNumber;
@@ -396,7 +448,10 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the transaction was made.
+             * <p>The time when the transaction was made.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10-01</p>
              */
             public Builder transactionTime(String transactionTime) {
                 this.transactionTime = transactionTime;
@@ -404,10 +459,11 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the transaction. If one of the following transaction types is specified, results for the specified transaction type are returned. If the transaction type that you specified does not belong to the following transaction types, no result is returned. If the parameter is left empty, results for all transaction types are returned. Valid values:
-             * <p>
+             * <p>The type of the transaction. If one of the following transaction types is specified, results for the specified transaction type are returned. If the transaction type that you specified does not belong to the following transaction types, no result is returned. If the parameter is left empty, results for all transaction types are returned. Valid values:</p>
+             * <p>Payment, Withdraw, Refund, Consumption, Transfer, and Adjust.</p>
              * 
-             * Payment, Withdraw, Refund, Consumption, Transfer, and Adjust.
+             * <strong>example:</strong>
+             * <p>Consumption</p>
              */
             public Builder transactionType(String transactionType) {
                 this.transactionType = transactionType;
@@ -421,9 +477,15 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryAccountTransactionDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAccountTransactionDetailsResponseBody</p>
+     */
     public static class DataAccountTransactionsList extends TeaModel {
-        @NameInMap("AccountTransactionsList")
-        private java.util.List < AccountTransactionsList> accountTransactionsList;
+        @com.aliyun.core.annotation.NameInMap("AccountTransactionsList")
+        private java.util.List<AccountTransactionsList> accountTransactionsList;
 
         private DataAccountTransactionsList(Builder builder) {
             this.accountTransactionsList = builder.accountTransactionsList;
@@ -440,17 +502,17 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
         /**
          * @return accountTransactionsList
          */
-        public java.util.List < AccountTransactionsList> getAccountTransactionsList() {
+        public java.util.List<AccountTransactionsList> getAccountTransactionsList() {
             return this.accountTransactionsList;
         }
 
         public static final class Builder {
-            private java.util.List < AccountTransactionsList> accountTransactionsList; 
+            private java.util.List<AccountTransactionsList> accountTransactionsList; 
 
             /**
              * AccountTransactionsList.
              */
-            public Builder accountTransactionsList(java.util.List < AccountTransactionsList> accountTransactionsList) {
+            public Builder accountTransactionsList(java.util.List<AccountTransactionsList> accountTransactionsList) {
                 this.accountTransactionsList = accountTransactionsList;
                 return this;
             }
@@ -462,20 +524,26 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryAccountTransactionDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAccountTransactionDetailsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("AccountTransactionsList")
+        @com.aliyun.core.annotation.NameInMap("AccountTransactionsList")
         private DataAccountTransactionsList accountTransactionsList;
 
-        @NameInMap("MaxResults")
+        @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {
@@ -537,7 +605,10 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The name of the account.
+             * <p>The name of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yidi</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -545,7 +616,7 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the transactions within the account.
+             * <p>The details of the transactions within the account.</p>
              */
             public Builder accountTransactionsList(DataAccountTransactionsList accountTransactionsList) {
                 this.accountTransactionsList = accountTransactionsList;
@@ -553,7 +624,10 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is invalid.
+             * <p>This parameter is invalid.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -561,7 +635,10 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The token that is used for paging.
+             * <p>The token that is used for paging.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ASHDADS</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -569,7 +646,10 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelOrderCreateResponseBody} extends {@link TeaModel}
  *
  * <p>HotelOrderCreateResponseBody</p>
  */
 public class HotelOrderCreateResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private HotelOrderCreateResponseBody(Builder builder) {
@@ -151,15 +156,25 @@ public class HotelOrderCreateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link HotelOrderCreateResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderCreateResponseBody</p>
+     */
     public static class Module extends TeaModel {
-        @NameInMap("btrip_order_id")
+        @com.aliyun.core.annotation.NameInMap("btrip_order_id")
         private Long btripOrderId;
 
-        @NameInMap("total_price")
+        @com.aliyun.core.annotation.NameInMap("payment_no")
+        private String paymentNo;
+
+        @com.aliyun.core.annotation.NameInMap("total_price")
         private Long totalPrice;
 
         private Module(Builder builder) {
             this.btripOrderId = builder.btripOrderId;
+            this.paymentNo = builder.paymentNo;
             this.totalPrice = builder.totalPrice;
         }
 
@@ -179,6 +194,13 @@ public class HotelOrderCreateResponseBody extends TeaModel {
         }
 
         /**
+         * @return paymentNo
+         */
+        public String getPaymentNo() {
+            return this.paymentNo;
+        }
+
+        /**
          * @return totalPrice
          */
         public Long getTotalPrice() {
@@ -187,6 +209,7 @@ public class HotelOrderCreateResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long btripOrderId; 
+            private String paymentNo; 
             private Long totalPrice; 
 
             /**
@@ -194,6 +217,14 @@ public class HotelOrderCreateResponseBody extends TeaModel {
              */
             public Builder btripOrderId(Long btripOrderId) {
                 this.btripOrderId = btripOrderId;
+                return this;
+            }
+
+            /**
+             * payment_no.
+             */
+            public Builder paymentNo(String paymentNo) {
+                this.paymentNo = paymentNo;
                 return this;
             }
 

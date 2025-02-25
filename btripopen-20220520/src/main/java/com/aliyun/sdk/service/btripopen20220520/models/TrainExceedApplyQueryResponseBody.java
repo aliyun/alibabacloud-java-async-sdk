@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TrainExceedApplyQueryResponseBody} extends {@link TeaModel}
  *
  * <p>TrainExceedApplyQueryResponseBody</p>
  */
 public class TrainExceedApplyQueryResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private TrainExceedApplyQueryResponseBody(Builder builder) {
@@ -151,44 +156,50 @@ public class TrainExceedApplyQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TrainExceedApplyQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainExceedApplyQueryResponseBody</p>
+     */
     public static class ApplyIntentionInfoDO extends TeaModel {
-        @NameInMap("arr_city")
+        @com.aliyun.core.annotation.NameInMap("arr_city")
         private String arrCity;
 
-        @NameInMap("arr_city_name")
+        @com.aliyun.core.annotation.NameInMap("arr_city_name")
         private String arrCityName;
 
-        @NameInMap("arr_station")
+        @com.aliyun.core.annotation.NameInMap("arr_station")
         private String arrStation;
 
-        @NameInMap("arr_time")
+        @com.aliyun.core.annotation.NameInMap("arr_time")
         private String arrTime;
 
-        @NameInMap("dep_city")
+        @com.aliyun.core.annotation.NameInMap("dep_city")
         private String depCity;
 
-        @NameInMap("dep_city_name")
+        @com.aliyun.core.annotation.NameInMap("dep_city_name")
         private String depCityName;
 
-        @NameInMap("dep_station")
+        @com.aliyun.core.annotation.NameInMap("dep_station")
         private String depStation;
 
-        @NameInMap("dep_time")
+        @com.aliyun.core.annotation.NameInMap("dep_time")
         private String depTime;
 
-        @NameInMap("price")
+        @com.aliyun.core.annotation.NameInMap("price")
         private Long price;
 
-        @NameInMap("seat_name")
+        @com.aliyun.core.annotation.NameInMap("seat_name")
         private String seatName;
 
-        @NameInMap("train_no")
+        @com.aliyun.core.annotation.NameInMap("train_no")
         private String trainNo;
 
-        @NameInMap("train_type_desc")
+        @com.aliyun.core.annotation.NameInMap("train_type_desc")
         private String trainTypeDesc;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private Integer type;
 
         private ApplyIntentionInfoDO(Builder builder) {
@@ -432,42 +443,51 @@ public class TrainExceedApplyQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainExceedApplyQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainExceedApplyQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
-        @NameInMap("apply_id")
+        @com.aliyun.core.annotation.NameInMap("apply_id")
         private Long applyId;
 
-        @NameInMap("apply_intention_info_d_o")
+        @com.aliyun.core.annotation.NameInMap("apply_intention_info_d_o")
         private ApplyIntentionInfoDO applyIntentionInfoDO;
 
-        @NameInMap("btrip_cause")
+        @com.aliyun.core.annotation.NameInMap("btrip_cause")
         private String btripCause;
 
-        @NameInMap("corp_id")
+        @com.aliyun.core.annotation.NameInMap("corp_id")
         private String corpId;
 
-        @NameInMap("exceed_reason")
+        @com.aliyun.core.annotation.NameInMap("exceed_reason")
         private String exceedReason;
 
-        @NameInMap("exceed_type")
+        @com.aliyun.core.annotation.NameInMap("exceed_type")
         private Integer exceedType;
 
-        @NameInMap("origin_standard")
+        @com.aliyun.core.annotation.NameInMap("origin_standard")
         private String originStandard;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("submit_time")
+        @com.aliyun.core.annotation.NameInMap("submit_time")
         private String submitTime;
 
-        @NameInMap("thirdpart_apply_id")
+        @com.aliyun.core.annotation.NameInMap("thirdpart_apply_id")
         private String thirdpartApplyId;
 
-        @NameInMap("thirdpart_corp_id")
+        @com.aliyun.core.annotation.NameInMap("thirdpart_corp_id")
         private String thirdpartCorpId;
 
-        @NameInMap("user_id")
+        @com.aliyun.core.annotation.NameInMap("user_id")
         private String userId;
+
+        @com.aliyun.core.annotation.NameInMap("user_name")
+        private String userName;
 
         private Module(Builder builder) {
             this.applyId = builder.applyId;
@@ -482,6 +502,7 @@ public class TrainExceedApplyQueryResponseBody extends TeaModel {
             this.thirdpartApplyId = builder.thirdpartApplyId;
             this.thirdpartCorpId = builder.thirdpartCorpId;
             this.userId = builder.userId;
+            this.userName = builder.userName;
         }
 
         public static Builder builder() {
@@ -576,6 +597,13 @@ public class TrainExceedApplyQueryResponseBody extends TeaModel {
             return this.userId;
         }
 
+        /**
+         * @return userName
+         */
+        public String getUserName() {
+            return this.userName;
+        }
+
         public static final class Builder {
             private Long applyId; 
             private ApplyIntentionInfoDO applyIntentionInfoDO; 
@@ -589,6 +617,7 @@ public class TrainExceedApplyQueryResponseBody extends TeaModel {
             private String thirdpartApplyId; 
             private String thirdpartCorpId; 
             private String userId; 
+            private String userName; 
 
             /**
              * apply_id.
@@ -683,6 +712,14 @@ public class TrainExceedApplyQueryResponseBody extends TeaModel {
              */
             public Builder userId(String userId) {
                 this.userId = userId;
+                return this;
+            }
+
+            /**
+             * user_name.
+             */
+            public Builder userName(String userName) {
+                this.userName = userName;
                 return this;
             }
 

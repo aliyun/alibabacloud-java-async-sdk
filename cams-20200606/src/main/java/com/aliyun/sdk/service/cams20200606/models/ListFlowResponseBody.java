@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFlowResponseBody} extends {@link TeaModel}
  *
  * <p>ListFlowResponseBody</p>
  */
 public class ListFlowResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListFlowResponseBody(Builder builder) {
@@ -74,7 +74,10 @@ public class ListFlowResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>If OK is returned, the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +85,7 @@ public class ListFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -90,7 +93,10 @@ public class ListFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +104,10 @@ public class ListFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request。
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1612C226-E271-4CFE-9F18-4066D550F91B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,14 +120,20 @@ public class ListFlowResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListFlowResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFlowResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Categories")
+        @com.aliyun.core.annotation.NameInMap("Categories")
         private java.util.List < String > categories;
 
-        @NameInMap("FlowId")
+        @com.aliyun.core.annotation.NameInMap("FlowId")
         private String flowId;
 
-        @NameInMap("FlowName")
+        @com.aliyun.core.annotation.NameInMap("FlowName")
         private String flowName;
 
         private Data(Builder builder) {
@@ -162,7 +177,7 @@ public class ListFlowResponseBody extends TeaModel {
             private String flowName; 
 
             /**
-             * Categories.
+             * <p>The categories of the Flows.</p>
              */
             public Builder categories(java.util.List < String > categories) {
                 this.categories = categories;
@@ -170,7 +185,10 @@ public class ListFlowResponseBody extends TeaModel {
             }
 
             /**
-             * flow ID。
+             * <p>The Flow ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3939393***</p>
              */
             public Builder flowId(String flowId) {
                 this.flowId = flowId;
@@ -178,7 +196,10 @@ public class ListFlowResponseBody extends TeaModel {
             }
 
             /**
-             * FlowName.
+             * <p>The Flow name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>flow-02020</p>
              */
             public Builder flowName(String flowName) {
                 this.flowName = flowName;

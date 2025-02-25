@@ -1,44 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BindSlbRequest} extends {@link RequestModel}
  *
  * <p>BindSlbRequest</p>
  */
 public class BindSlbRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("Internet")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Internet")
     private String internet;
 
-    @Query
-    @NameInMap("InternetSlbId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetSlbChargeType")
+    private String internetSlbChargeType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetSlbId")
     private String internetSlbId;
 
-    @Query
-    @NameInMap("Intranet")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Intranet")
     private String intranet;
 
-    @Query
-    @NameInMap("IntranetSlbId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntranetSlbChargeType")
+    private String intranetSlbChargeType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntranetSlbId")
     private String intranetSlbId;
 
     private BindSlbRequest(Builder builder) {
         super(builder);
         this.appId = builder.appId;
         this.internet = builder.internet;
+        this.internetSlbChargeType = builder.internetSlbChargeType;
         this.internetSlbId = builder.internetSlbId;
         this.intranet = builder.intranet;
+        this.intranetSlbChargeType = builder.intranetSlbChargeType;
         this.intranetSlbId = builder.intranetSlbId;
     }
 
@@ -70,6 +85,13 @@ public class BindSlbRequest extends Request {
     }
 
     /**
+     * @return internetSlbChargeType
+     */
+    public String getInternetSlbChargeType() {
+        return this.internetSlbChargeType;
+    }
+
+    /**
      * @return internetSlbId
      */
     public String getInternetSlbId() {
@@ -84,6 +106,13 @@ public class BindSlbRequest extends Request {
     }
 
     /**
+     * @return intranetSlbChargeType
+     */
+    public String getIntranetSlbChargeType() {
+        return this.intranetSlbChargeType;
+    }
+
+    /**
      * @return intranetSlbId
      */
     public String getIntranetSlbId() {
@@ -93,8 +122,10 @@ public class BindSlbRequest extends Request {
     public static final class Builder extends Request.Builder<BindSlbRequest, Builder> {
         private String appId; 
         private String internet; 
+        private String internetSlbChargeType; 
         private String internetSlbId; 
         private String intranet; 
+        private String intranetSlbChargeType; 
         private String intranetSlbId; 
 
         private Builder() {
@@ -105,13 +136,19 @@ public class BindSlbRequest extends Request {
             super(request);
             this.appId = request.appId;
             this.internet = request.internet;
+            this.internetSlbChargeType = request.internetSlbChargeType;
             this.internetSlbId = request.internetSlbId;
             this.intranet = request.intranet;
+            this.intranetSlbChargeType = request.intranetSlbChargeType;
             this.intranetSlbId = request.intranetSlbId;
         } 
 
         /**
-         * 0099b7be-5f5b-4512-a7fc-56049ef1\*\*\*\*
+         * <p>0099b7be-5f5b-4512-a7fc-56049ef1****</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0099b7be-5f5b-4512-a7fc-56049ef1****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -120,7 +157,10 @@ public class BindSlbRequest extends Request {
         }
 
         /**
-         * \[{"port":80,"targetPort":8080,"protocol":"TCP"}]
+         * <p>[{&quot;port&quot;:80,&quot;targetPort&quot;:8080,&quot;protocol&quot;:&quot;TCP&quot;}]</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;port&quot;:80,&quot;targetPort&quot;:8080,&quot;protocol&quot;:&quot;TCP&quot;}]</p>
          */
         public Builder internet(String internet) {
             this.putQueryParameter("Internet", internet);
@@ -129,7 +169,19 @@ public class BindSlbRequest extends Request {
         }
 
         /**
-         * lb-bp1tg0k6d9nqaw7l1\*\*\*\*
+         * InternetSlbChargeType.
+         */
+        public Builder internetSlbChargeType(String internetSlbChargeType) {
+            this.putQueryParameter("InternetSlbChargeType", internetSlbChargeType);
+            this.internetSlbChargeType = internetSlbChargeType;
+            return this;
+        }
+
+        /**
+         * <p>lb-bp1tg0k6d9nqaw7l1****</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp1tg0k6d9nqaw7l1****</p>
          */
         public Builder internetSlbId(String internetSlbId) {
             this.putQueryParameter("InternetSlbId", internetSlbId);
@@ -138,7 +190,10 @@ public class BindSlbRequest extends Request {
         }
 
         /**
-         * \[{"port":80,"targetPort":8080,"protocol":"TCP"}]
+         * <p>[{&quot;port&quot;:80,&quot;targetPort&quot;:8080,&quot;protocol&quot;:&quot;TCP&quot;}]</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;port&quot;:80,&quot;targetPort&quot;:8080,&quot;protocol&quot;:&quot;TCP&quot;}]</p>
          */
         public Builder intranet(String intranet) {
             this.putQueryParameter("Intranet", intranet);
@@ -147,7 +202,19 @@ public class BindSlbRequest extends Request {
         }
 
         /**
-         * lb-bp1tg0k6d9nqaw7l1\*\*\*\*
+         * IntranetSlbChargeType.
+         */
+        public Builder intranetSlbChargeType(String intranetSlbChargeType) {
+            this.putQueryParameter("IntranetSlbChargeType", intranetSlbChargeType);
+            this.intranetSlbChargeType = intranetSlbChargeType;
+            return this;
+        }
+
+        /**
+         * <p>lb-bp1tg0k6d9nqaw7l1****</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp1tg0k6d9nqaw7l1****</p>
          */
         public Builder intranetSlbId(String intranetSlbId) {
             this.putQueryParameter("IntranetSlbId", intranetSlbId);

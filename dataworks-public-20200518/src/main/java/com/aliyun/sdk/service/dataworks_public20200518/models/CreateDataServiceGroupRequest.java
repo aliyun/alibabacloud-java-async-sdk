@@ -1,44 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDataServiceGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateDataServiceGroupRequest</p>
  */
 public class CreateDataServiceGroupRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("ApiGatewayGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApiGatewayGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String apiGatewayGroupId;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("GroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupName;
 
-    @Body
-    @NameInMap("ProjectId")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Long projectId;
 
-    @Body
-    @NameInMap("TenantId")
-    @Validation(minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
+    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long tenantId;
 
     private CreateDataServiceGroupRequest(Builder builder) {
@@ -129,7 +133,7 @@ public class CreateDataServiceGroupRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -138,7 +142,11 @@ public class CreateDataServiceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the API group that is associated with the business process in the API Gateway console. You can log on to the API Gateway console and go to the Group Details page to view the ID.
+         * <p>The ID of the API group that is associated with the business process in the API Gateway console. You can log on to the API Gateway console and go to the Group Details page to view the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000abcd</p>
          */
         public Builder apiGatewayGroupId(String apiGatewayGroupId) {
             this.putBodyParameter("ApiGatewayGroupId", apiGatewayGroupId);
@@ -147,7 +155,10 @@ public class CreateDataServiceGroupRequest extends Request {
         }
 
         /**
-         * The description of the business process.
+         * <p>The description of the business process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test business process</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -156,7 +167,11 @@ public class CreateDataServiceGroupRequest extends Request {
         }
 
         /**
-         * The name of the business process.
+         * <p>The name of the business process.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Business process name</p>
          */
         public Builder groupName(String groupName) {
             this.putBodyParameter("GroupName", groupName);
@@ -165,7 +180,11 @@ public class CreateDataServiceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * <p>The ID of the workspace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -174,7 +193,10 @@ public class CreateDataServiceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * <p>The tenant ID. This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10002</p>
          */
         public Builder tenantId(Long tenantId) {
             this.putBodyParameter("TenantId", tenantId);

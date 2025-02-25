@@ -1,23 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOperationOssUploadPolicyRequest} extends {@link RequestModel}
  *
  * <p>GetOperationOssUploadPolicyRequest</p>
  */
 public class GetOperationOssUploadPolicyRequest extends Request {
-    @Query
-    @NameInMap("AuditType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuditType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer auditType;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
     private GetOperationOssUploadPolicyRequest(Builder builder) {
@@ -68,7 +69,10 @@ public class GetOperationOssUploadPolicyRequest extends Request {
         } 
 
         /**
-         * AuditType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder auditType(Integer auditType) {
             this.putQueryParameter("AuditType", auditType);

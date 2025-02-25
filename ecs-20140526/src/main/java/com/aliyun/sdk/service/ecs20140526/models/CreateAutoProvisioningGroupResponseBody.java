@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAutoProvisioningGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAutoProvisioningGroupResponseBody</p>
  */
 public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
-    @NameInMap("AutoProvisioningGroupId")
+    @com.aliyun.core.annotation.NameInMap("AutoProvisioningGroupId")
     private String autoProvisioningGroupId;
 
-    @NameInMap("LaunchResults")
+    @com.aliyun.core.annotation.NameInMap("LaunchResults")
     private LaunchResults launchResults;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateAutoProvisioningGroupResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the auto provisioning group.
+         * <p>The ID of the auto provisioning group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apg-sn54avj8htgvtyh8****</p>
          */
         public Builder autoProvisioningGroupId(String autoProvisioningGroupId) {
             this.autoProvisioningGroupId = autoProvisioningGroupId;
@@ -70,7 +78,7 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the instances created by the auto provisioning group. The values of the parameters in this array are returned only when the AutoProvisioningGroupType parameter is set to `instant`.
+         * <p>The instances created by the auto provisioning group. The values of the parameters in this array are returned only when AutoProvisioningGroupType is set to <code>instant</code>.</p>
          */
         public Builder launchResults(LaunchResults launchResults) {
             this.launchResults = launchResults;
@@ -78,7 +86,10 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>745CEC9F-0DD7-4451-9FE7-8B752F39****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,9 +102,15 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAutoProvisioningGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateAutoProvisioningGroupResponseBody</p>
+     */
     public static class InstanceIds extends TeaModel {
-        @NameInMap("InstanceId")
-        private java.util.List < String > instanceId;
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        private java.util.List<String> instanceId;
 
         private InstanceIds(Builder builder) {
             this.instanceId = builder.instanceId;
@@ -110,17 +127,17 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
         /**
          * @return instanceId
          */
-        public java.util.List < String > getInstanceId() {
+        public java.util.List<String> getInstanceId() {
             return this.instanceId;
         }
 
         public static final class Builder {
-            private java.util.List < String > instanceId; 
+            private java.util.List<String> instanceId; 
 
             /**
              * InstanceId.
              */
-            public Builder instanceId(java.util.List < String > instanceId) {
+            public Builder instanceId(java.util.List<String> instanceId) {
                 this.instanceId = instanceId;
                 return this;
             }
@@ -132,26 +149,32 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateAutoProvisioningGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateAutoProvisioningGroupResponseBody</p>
+     */
     public static class LaunchResult extends TeaModel {
-        @NameInMap("Amount")
+        @com.aliyun.core.annotation.NameInMap("Amount")
         private Integer amount;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
 
-        @NameInMap("InstanceIds")
+        @com.aliyun.core.annotation.NameInMap("InstanceIds")
         private InstanceIds instanceIds;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("SpotStrategy")
+        @com.aliyun.core.annotation.NameInMap("SpotStrategy")
         private String spotStrategy;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private LaunchResult(Builder builder) {
@@ -231,7 +254,10 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The number of instances. Valid values: 1 to 100000.
+             * <p>The number of created instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -239,7 +265,10 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The error code returned when the instance cannot be created.
+             * <p>The error code returned when the instance cannot be created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InvalidParameter</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -247,7 +276,10 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned when the instance cannot be created.
+             * <p>The error message returned when the instance cannot be created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Specific parameter is not valid.</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -255,7 +287,7 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of created instances.
+             * <p>The IDs of created instances.</p>
              */
             public Builder instanceIds(InstanceIds instanceIds) {
                 this.instanceIds = instanceIds;
@@ -263,7 +295,10 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type.
+             * <p>The instance type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.g5.large</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -271,12 +306,15 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The bidding policy for the pay-as-you-go instance. Valid values:
-             * <p>
+             * <p>The bidding policy for the pay-as-you-go instance. Valid values:</p>
+             * <ul>
+             * <li>NoSpot: The instance is a regular pay-as-you-go instance.</li>
+             * <li>SpotWithPriceLimit: The instance is a preemptible instance for which you specify the maximum hourly price.</li>
+             * <li>SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is used as the bid price.</li>
+             * </ul>
              * 
-             * *   NoSpot: The instance is created as a regular pay-as-you-go instance.
-             * *   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.
-             * *   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.
+             * <strong>example:</strong>
+             * <p>NoSpot</p>
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -284,7 +322,10 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID of the instance.
+             * <p>The zone ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-g</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -298,9 +339,15 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateAutoProvisioningGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateAutoProvisioningGroupResponseBody</p>
+     */
     public static class LaunchResults extends TeaModel {
-        @NameInMap("LaunchResult")
-        private java.util.List < LaunchResult> launchResult;
+        @com.aliyun.core.annotation.NameInMap("LaunchResult")
+        private java.util.List<LaunchResult> launchResult;
 
         private LaunchResults(Builder builder) {
             this.launchResult = builder.launchResult;
@@ -317,17 +364,17 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
         /**
          * @return launchResult
          */
-        public java.util.List < LaunchResult> getLaunchResult() {
+        public java.util.List<LaunchResult> getLaunchResult() {
             return this.launchResult;
         }
 
         public static final class Builder {
-            private java.util.List < LaunchResult> launchResult; 
+            private java.util.List<LaunchResult> launchResult; 
 
             /**
              * LaunchResult.
              */
-            public Builder launchResult(java.util.List < LaunchResult> launchResult) {
+            public Builder launchResult(java.util.List<LaunchResult> launchResult) {
                 this.launchResult = launchResult;
                 return this;
             }

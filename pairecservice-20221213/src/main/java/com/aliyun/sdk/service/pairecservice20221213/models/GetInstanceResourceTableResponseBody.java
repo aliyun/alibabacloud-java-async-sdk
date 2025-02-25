@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInstanceResourceTableResponseBody</p>
  */
 public class GetInstanceResourceTableResponseBody extends TeaModel {
-    @NameInMap("Fields")
+    @com.aliyun.core.annotation.NameInMap("Fields")
     private java.util.List < Fields> fields;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TableName")
+    @com.aliyun.core.annotation.NameInMap("TableName")
     private String tableName;
 
     private GetInstanceResourceTableResponseBody(Builder builder) {
@@ -92,20 +91,24 @@ public class GetInstanceResourceTableResponseBody extends TeaModel {
     } 
 
     public static class Fields extends TeaModel {
-        @NameInMap("IsDimensionField")
+        @com.aliyun.core.annotation.NameInMap("IsDimensionField")
         private Boolean isDimensionField;
 
-        @NameInMap("Meaning")
+        @com.aliyun.core.annotation.NameInMap("IsPartitionField")
+        private Boolean isPartitionField;
+
+        @com.aliyun.core.annotation.NameInMap("Meaning")
         private String meaning;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Fields(Builder builder) {
             this.isDimensionField = builder.isDimensionField;
+            this.isPartitionField = builder.isPartitionField;
             this.meaning = builder.meaning;
             this.name = builder.name;
             this.type = builder.type;
@@ -124,6 +127,13 @@ public class GetInstanceResourceTableResponseBody extends TeaModel {
          */
         public Boolean getIsDimensionField() {
             return this.isDimensionField;
+        }
+
+        /**
+         * @return isPartitionField
+         */
+        public Boolean getIsPartitionField() {
+            return this.isPartitionField;
         }
 
         /**
@@ -149,6 +159,7 @@ public class GetInstanceResourceTableResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean isDimensionField; 
+            private Boolean isPartitionField; 
             private String meaning; 
             private String name; 
             private String type; 
@@ -158,6 +169,14 @@ public class GetInstanceResourceTableResponseBody extends TeaModel {
              */
             public Builder isDimensionField(Boolean isDimensionField) {
                 this.isDimensionField = isDimensionField;
+                return this;
+            }
+
+            /**
+             * IsPartitionField.
+             */
+            public Builder isPartitionField(Boolean isPartitionField) {
+                this.isPartitionField = isPartitionField;
                 return this;
             }
 

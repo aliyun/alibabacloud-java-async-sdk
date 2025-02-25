@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSuspEventQuaraFilesRequest} extends {@link RequestModel}
  *
  * <p>DescribeSuspEventQuaraFilesRequest</p>
  */
 public class DescribeSuspEventQuaraFilesRequest extends Request {
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private String currentPage;
 
-    @Query
-    @NameInMap("From")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("From")
     private String from;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     @Deprecated
     private String groupId;
 
-    @Query
-    @NameInMap("GroupingId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupingId")
     private Long groupingId;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @Query
-    @NameInMap("QuaraTag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QuaraTag")
     private String quaraTag;
 
-    @Query
-    @NameInMap("SourceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceIp")
     private String sourceIp;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeSuspEventQuaraFilesRequest(Builder builder) {
@@ -153,7 +158,10 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -162,7 +170,10 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
         }
 
         /**
-         * The ID of the request source. Set the value to **sas**.
+         * <p>The ID of the request source. Set the value to <strong>sas</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas</p>
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -171,7 +182,10 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
         }
 
         /**
-         * The ID of the asset group.
+         * <p>The ID of the asset group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10541428</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -180,7 +194,10 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
         }
 
         /**
-         * The ID of the server group to which the server belongs. The quarantined file is located on the server.
+         * <p>The ID of the server group to which the server belongs. The quarantined file is located on the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11472451</p>
          */
         public Builder groupingId(Long groupingId) {
             this.putQueryParameter("GroupingId", groupingId);
@@ -189,7 +206,10 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -198,7 +218,10 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
         }
 
         /**
-         * The unique ID of the quarantined file.
+         * <p>The unique ID of the quarantined file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a31337789f64d39b2219733ec99f9af7</p>
          */
         public Builder quaraTag(String quaraTag) {
             this.putQueryParameter("QuaraTag", quaraTag);
@@ -207,7 +230,10 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>59.82.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -216,15 +242,18 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
         }
 
         /**
-         * The status of the quarantined file that you want to query. Valid values:
-         * <p>
+         * <p>The status of the quarantined file that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>quaraFailed</strong>: The file fails to be quarantined.</li>
+         * <li><strong>quaraDone</strong>: The file is quarantined.</li>
+         * <li><strong>quaraing</strong>: The file is being quarantined.</li>
+         * <li><strong>rollbackFailed</strong>: The system fails to cancel quarantining the file.</li>
+         * <li><strong>rollbackDone</strong>: The system cancelled quarantining the file.</li>
+         * <li><strong>rollbacking</strong>: The system is cancelling quarantining the file.</li>
+         * </ul>
          * 
-         * *   **quaraFailed**: The file fails to be quarantined.
-         * *   **quaraDone**: The file is quarantined.
-         * *   **quaraing**: The file is being quarantined.
-         * *   **rollbackFailed**: The system fails to cancel quarantining the file.
-         * *   **rollbackDone**: The system cancelled quarantining the file.
-         * *   **rollbacking**: The system is cancelling quarantining the file.
+         * <strong>example:</strong>
+         * <p>quaraDone</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

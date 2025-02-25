@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SearchStrategy</p>
  */
 public class SearchStrategy extends TeaModel {
-    @NameInMap("description")
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @NameInMap("isDefault")
+    @com.aliyun.core.annotation.NameInMap("isDefault")
     private Boolean isDefault;
 
-    @NameInMap("mergeConfig")
+    @com.aliyun.core.annotation.NameInMap("mergeConfig")
     private MergeConfig mergeConfig;
 
-    @NameInMap("name")
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @NameInMap("searchConfigs")
+    @com.aliyun.core.annotation.NameInMap("searchConfigs")
     private java.util.List < SearchConfigs> searchConfigs;
 
     private SearchStrategy(Builder builder) {
@@ -132,10 +131,10 @@ public class SearchStrategy extends TeaModel {
     } 
 
     public static class MergeConfig extends TeaModel {
-        @NameInMap("docCount")
+        @com.aliyun.core.annotation.NameInMap("docCount")
         private Integer docCount;
 
-        @NameInMap("rankName")
+        @com.aliyun.core.annotation.NameInMap("rankName")
         private String rankName;
 
         private MergeConfig(Builder builder) {
@@ -193,16 +192,16 @@ public class SearchStrategy extends TeaModel {
 
     }
     public static class SearchConfigs extends TeaModel {
-        @NameInMap("firstRankName")
+        @com.aliyun.core.annotation.NameInMap("firstRankName")
         private String firstRankName;
 
-        @NameInMap("mergeProportion")
+        @com.aliyun.core.annotation.NameInMap("mergeProportion")
         private Integer mergeProportion;
 
-        @NameInMap("queryType")
+        @com.aliyun.core.annotation.NameInMap("queryType")
         private String queryType;
 
-        @NameInMap("secondRankName")
+        @com.aliyun.core.annotation.NameInMap("secondRankName")
         private String secondRankName;
 
         private SearchConfigs(Builder builder) {

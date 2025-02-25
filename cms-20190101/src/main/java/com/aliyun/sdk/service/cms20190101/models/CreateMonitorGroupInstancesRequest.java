@@ -1,25 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMonitorGroupInstancesRequest} extends {@link RequestModel}
  *
  * <p>CreateMonitorGroupInstancesRequest</p>
  */
 public class CreateMonitorGroupInstancesRequest extends Request {
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("Instances")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Instances")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Instances> instances;
 
     private CreateMonitorGroupInstancesRequest(Builder builder) {
@@ -70,7 +70,11 @@ public class CreateMonitorGroupInstancesRequest extends Request {
         } 
 
         /**
-         * The ID of the application group.
+         * <p>The ID of the application group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3607****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -79,7 +83,8 @@ public class CreateMonitorGroupInstancesRequest extends Request {
         }
 
         /**
-         * The instances that you want to add to the application group.
+         * <p>The instances that you want to add to the application group.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder instances(java.util.List < Instances> instances) {
             this.putQueryParameter("Instances", instances);
@@ -94,21 +99,27 @@ public class CreateMonitorGroupInstancesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateMonitorGroupInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>CreateMonitorGroupInstancesRequest</p>
+     */
     public static class Instances extends TeaModel {
-        @NameInMap("Category")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Category")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String category;
 
-        @NameInMap("InstanceId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String instanceId;
 
-        @NameInMap("InstanceName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String instanceName;
 
-        @NameInMap("RegionId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("RegionId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String regionId;
 
         private Instances(Builder builder) {
@@ -161,10 +172,12 @@ public class CreateMonitorGroupInstancesRequest extends Request {
             private String regionId; 
 
             /**
-             * The abbreviation of the Alibaba Cloud service name.
-             * <p>
+             * <p>The abbreviation of the Alibaba Cloud service name.</p>
+             * <p>To obtain the abbreviation of an Alibaba Cloud service name, call the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation. The <code>metricCategory</code> tag in the <code>Labels</code> response parameter indicates the abbreviation of the Alibaba Cloud service name.</p>
+             * <p>This parameter is required.</p>
              * 
-             * To obtain the abbreviation of an Alibaba Cloud service name, call the [DescribeProjectMeta](~~114916~~) operation. The `metricCategory` tag in the `Labels` response parameter indicates the abbreviation of the Alibaba Cloud service name.
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -172,7 +185,11 @@ public class CreateMonitorGroupInstancesRequest extends Request {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-2ze26xj5wwy12****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -180,7 +197,11 @@ public class CreateMonitorGroupInstancesRequest extends Request {
             }
 
             /**
-             * The instance name.
+             * <p>The instance name.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-instance-ecs</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -188,7 +209,11 @@ public class CreateMonitorGroupInstancesRequest extends Request {
             }
 
             /**
-             * The region ID of the instance.
+             * <p>The region ID of the instance.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

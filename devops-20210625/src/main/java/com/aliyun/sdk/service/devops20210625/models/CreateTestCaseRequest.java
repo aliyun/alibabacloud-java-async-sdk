@@ -1,56 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTestCaseRequest} extends {@link RequestModel}
  *
  * <p>CreateTestCaseRequest</p>
  */
 public class CreateTestCaseRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Body
-    @NameInMap("assignedTo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("assignedTo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String assignedTo;
 
-    @Body
-    @NameInMap("directoryIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("directoryIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String directoryIdentifier;
 
-    @Body
-    @NameInMap("fieldValueList")
-    private java.util.List < FieldValueList> fieldValueList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("fieldValueList")
+    private java.util.List<FieldValueList> fieldValueList;
 
-    @Body
-    @NameInMap("priority")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("priority")
     private String priority;
 
-    @Body
-    @NameInMap("spaceIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("spaceIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String spaceIdentifier;
 
-    @Body
-    @NameInMap("subject")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("subject")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subject;
 
-    @Body
-    @NameInMap("tags")
-    private java.util.List < String > tags;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("tags")
+    private java.util.List<String> tags;
 
-    @Body
-    @NameInMap("testcaseStepContentInfo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("testcaseStepContentInfo")
     private TestcaseStepContentInfo testcaseStepContentInfo;
 
     private CreateTestCaseRequest(Builder builder) {
@@ -103,7 +108,7 @@ public class CreateTestCaseRequest extends Request {
     /**
      * @return fieldValueList
      */
-    public java.util.List < FieldValueList> getFieldValueList() {
+    public java.util.List<FieldValueList> getFieldValueList() {
         return this.fieldValueList;
     }
 
@@ -131,7 +136,7 @@ public class CreateTestCaseRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < String > getTags() {
+    public java.util.List<String> getTags() {
         return this.tags;
     }
 
@@ -146,11 +151,11 @@ public class CreateTestCaseRequest extends Request {
         private String organizationId; 
         private String assignedTo; 
         private String directoryIdentifier; 
-        private java.util.List < FieldValueList> fieldValueList; 
+        private java.util.List<FieldValueList> fieldValueList; 
         private String priority; 
         private String spaceIdentifier; 
         private String subject; 
-        private java.util.List < String > tags; 
+        private java.util.List<String> tags; 
         private TestcaseStepContentInfo testcaseStepContentInfo; 
 
         private Builder() {
@@ -171,7 +176,10 @@ public class CreateTestCaseRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -180,7 +188,10 @@ public class CreateTestCaseRequest extends Request {
         }
 
         /**
-         * assignedTo.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19xxxx31947xxxx</p>
          */
         public Builder assignedTo(String assignedTo) {
             this.putBodyParameter("assignedTo", assignedTo);
@@ -189,7 +200,10 @@ public class CreateTestCaseRequest extends Request {
         }
 
         /**
-         * directoryIdentifier.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fdd395xxxxx9q9845xxxxx23</p>
          */
         public Builder directoryIdentifier(String directoryIdentifier) {
             this.putBodyParameter("directoryIdentifier", directoryIdentifier);
@@ -200,7 +214,7 @@ public class CreateTestCaseRequest extends Request {
         /**
          * fieldValueList.
          */
-        public Builder fieldValueList(java.util.List < FieldValueList> fieldValueList) {
+        public Builder fieldValueList(java.util.List<FieldValueList> fieldValueList) {
             this.putBodyParameter("fieldValueList", fieldValueList);
             this.fieldValueList = fieldValueList;
             return this;
@@ -216,7 +230,10 @@ public class CreateTestCaseRequest extends Request {
         }
 
         /**
-         * spaceIdentifier.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asd345xxxxx9q9845xxxxx34</p>
          */
         public Builder spaceIdentifier(String spaceIdentifier) {
             this.putBodyParameter("spaceIdentifier", spaceIdentifier);
@@ -225,7 +242,7 @@ public class CreateTestCaseRequest extends Request {
         }
 
         /**
-         * subject.
+         * <p>This parameter is required.</p>
          */
         public Builder subject(String subject) {
             this.putBodyParameter("subject", subject);
@@ -236,7 +253,7 @@ public class CreateTestCaseRequest extends Request {
         /**
          * tags.
          */
-        public Builder tags(java.util.List < String > tags) {
+        public Builder tags(java.util.List<String> tags) {
             this.putBodyParameter("tags", tags);
             this.tags = tags;
             return this;
@@ -258,11 +275,17 @@ public class CreateTestCaseRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateTestCaseRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTestCaseRequest</p>
+     */
     public static class FieldValueList extends TeaModel {
-        @NameInMap("fieldIdentifier")
+        @com.aliyun.core.annotation.NameInMap("fieldIdentifier")
         private String fieldIdentifier;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private FieldValueList(Builder builder) {
@@ -319,11 +342,17 @@ public class CreateTestCaseRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTestCaseRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTestCaseRequest</p>
+     */
     public static class StepResultList extends TeaModel {
-        @NameInMap("expected")
+        @com.aliyun.core.annotation.NameInMap("expected")
         private String expected;
 
-        @NameInMap("step")
+        @com.aliyun.core.annotation.NameInMap("step")
         private String step;
 
         private StepResultList(Builder builder) {
@@ -380,15 +409,21 @@ public class CreateTestCaseRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTestCaseRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTestCaseRequest</p>
+     */
     public static class TestcaseStepContentInfo extends TeaModel {
-        @NameInMap("precondition")
+        @com.aliyun.core.annotation.NameInMap("precondition")
         private String precondition;
 
-        @NameInMap("stepResultList")
-        private java.util.List < StepResultList> stepResultList;
+        @com.aliyun.core.annotation.NameInMap("stepResultList")
+        private java.util.List<StepResultList> stepResultList;
 
-        @NameInMap("stepType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("stepType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String stepType;
 
         private TestcaseStepContentInfo(Builder builder) {
@@ -415,7 +450,7 @@ public class CreateTestCaseRequest extends Request {
         /**
          * @return stepResultList
          */
-        public java.util.List < StepResultList> getStepResultList() {
+        public java.util.List<StepResultList> getStepResultList() {
             return this.stepResultList;
         }
 
@@ -428,7 +463,7 @@ public class CreateTestCaseRequest extends Request {
 
         public static final class Builder {
             private String precondition; 
-            private java.util.List < StepResultList> stepResultList; 
+            private java.util.List<StepResultList> stepResultList; 
             private String stepType; 
 
             /**
@@ -442,13 +477,16 @@ public class CreateTestCaseRequest extends Request {
             /**
              * stepResultList.
              */
-            public Builder stepResultList(java.util.List < StepResultList> stepResultList) {
+            public Builder stepResultList(java.util.List<StepResultList> stepResultList) {
                 this.stepResultList = stepResultList;
                 return this;
             }
 
             /**
-             * stepType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TEXT</p>
              */
             public Builder stepType(String stepType) {
                 this.stepType = stepType;

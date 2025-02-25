@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bpstudio20210931.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ValuateTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>ValuateTemplateResponseBody</p>
  */
 public class ValuateTemplateResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ValuateTemplateResponseBody(Builder builder) {
@@ -74,7 +74,10 @@ public class ValuateTemplateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +85,7 @@ public class ValuateTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The result of the inquiry.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +93,10 @@ public class ValuateTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +104,10 @@ public class ValuateTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>847C9D0A-BABD-589C-8A9C-6464409EDED9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,32 +120,38 @@ public class ValuateTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ValuateTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>ValuateTemplateResponseBody</p>
+     */
     public static class PriceList extends TeaModel {
-        @NameInMap("DiscountAmount")
+        @com.aliyun.core.annotation.NameInMap("DiscountAmount")
         private Float discountAmount;
 
-        @NameInMap("Error")
+        @com.aliyun.core.annotation.NameInMap("Error")
         private String error;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
-        @NameInMap("OriginalPrice")
+        @com.aliyun.core.annotation.NameInMap("OriginalPrice")
         private Float originalPrice;
 
-        @NameInMap("PriceUnit")
+        @com.aliyun.core.annotation.NameInMap("PriceUnit")
         private String priceUnit;
 
-        @NameInMap("PromotionName")
+        @com.aliyun.core.annotation.NameInMap("PromotionName")
         private String promotionName;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("TradePrice")
+        @com.aliyun.core.annotation.NameInMap("TradePrice")
         private Float tradePrice;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private PriceList(Builder builder) {
@@ -234,7 +249,10 @@ public class ValuateTemplateResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * DiscountAmount.
+             * <p>The discount amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>82.99</p>
              */
             public Builder discountAmount(Float discountAmount) {
                 this.discountAmount = discountAmount;
@@ -242,7 +260,10 @@ public class ValuateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Error.
+             * <p>The error message that is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ServiceUnavailable : The request has failed due to a temporary failure of the server.\r\nRequestId : 4AA302DB-3286-5589-8637-FF6D8507B7A9.</p>
              */
             public Builder error(String error) {
                 this.error = error;
@@ -250,7 +271,10 @@ public class ValuateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eip</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -258,7 +282,10 @@ public class ValuateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalPrice.
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>83.0</p>
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -266,7 +293,10 @@ public class ValuateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * PriceUnit.
+             * <p>The pricing unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USD</p>
              */
             public Builder priceUnit(String priceUnit) {
                 this.priceUnit = priceUnit;
@@ -274,7 +304,10 @@ public class ValuateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionName.
+             * <p>The discount information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The discount information.</p>
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -282,7 +315,10 @@ public class ValuateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1687225092</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -290,7 +326,10 @@ public class ValuateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TradePrice.
+             * <p>The price at which the transaction is made.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.01</p>
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;
@@ -298,7 +337,10 @@ public class ValuateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Indicates whether the instance is newly created. Valid values:<br>1: The instance is newly created.<br>2: The instance already exists.<br>0: The price of the instance is not included.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;1&quot;</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -312,29 +354,35 @@ public class ValuateTemplateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ValuateTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>ValuateTemplateResponseBody</p>
+     */
     public static class ResourceList extends TeaModel {
-        @NameInMap("DiscountAmount")
+        @com.aliyun.core.annotation.NameInMap("DiscountAmount")
         private Double discountAmount;
 
-        @NameInMap("Error")
+        @com.aliyun.core.annotation.NameInMap("Error")
         private String error;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
-        @NameInMap("OriginalPrice")
+        @com.aliyun.core.annotation.NameInMap("OriginalPrice")
         private Double originalPrice;
 
-        @NameInMap("PriceList")
+        @com.aliyun.core.annotation.NameInMap("PriceList")
         private java.util.List < PriceList> priceList;
 
-        @NameInMap("PriceUnit")
+        @com.aliyun.core.annotation.NameInMap("PriceUnit")
         private String priceUnit;
 
-        @NameInMap("PromotionName")
+        @com.aliyun.core.annotation.NameInMap("PromotionName")
         private String promotionName;
 
-        @NameInMap("TradePrice")
+        @com.aliyun.core.annotation.NameInMap("TradePrice")
         private Double tradePrice;
 
         private ResourceList(Builder builder) {
@@ -423,7 +471,10 @@ public class ValuateTemplateResponseBody extends TeaModel {
             private Double tradePrice; 
 
             /**
-             * DiscountAmount.
+             * <p>The discount amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>73</p>
              */
             public Builder discountAmount(Double discountAmount) {
                 this.discountAmount = discountAmount;
@@ -431,7 +482,10 @@ public class ValuateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Error.
+             * <p>The error message that is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InvalidSaleComponentFault : The request not refer to the correct order sale component.</p>
              */
             public Builder error(String error) {
                 this.error = error;
@@ -439,7 +493,10 @@ public class ValuateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -447,7 +504,10 @@ public class ValuateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalPrice.
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>83.0</p>
              */
             public Builder originalPrice(Double originalPrice) {
                 this.originalPrice = originalPrice;
@@ -455,7 +515,7 @@ public class ValuateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * PriceList.
+             * <p>The information about the price.</p>
              */
             public Builder priceList(java.util.List < PriceList> priceList) {
                 this.priceList = priceList;
@@ -463,7 +523,10 @@ public class ValuateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * PriceUnit.
+             * <p>The pricing unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USD</p>
              */
             public Builder priceUnit(String priceUnit) {
                 this.priceUnit = priceUnit;
@@ -471,7 +534,10 @@ public class ValuateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionName.
+             * <p>The discount information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The discount information.</p>
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -479,7 +545,10 @@ public class ValuateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TradePrice.
+             * <p>The price at which the transaction is made.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0</p>
              */
             public Builder tradePrice(Double tradePrice) {
                 this.tradePrice = tradePrice;
@@ -493,8 +562,14 @@ public class ValuateTemplateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ValuateTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>ValuateTemplateResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ResourceList")
+        @com.aliyun.core.annotation.NameInMap("ResourceList")
         private java.util.List < ResourceList> resourceList;
 
         private Data(Builder builder) {
@@ -520,7 +595,7 @@ public class ValuateTemplateResponseBody extends TeaModel {
             private java.util.List < ResourceList> resourceList; 
 
             /**
-             * ResourceList.
+             * <p>The result set of the inquiry.</p>
              */
             public Builder resourceList(java.util.List < ResourceList> resourceList) {
                 this.resourceList = resourceList;

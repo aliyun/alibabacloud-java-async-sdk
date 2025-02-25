@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.cloud_siem20220616;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.cloud_siem20220616.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -26,8 +27,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddUserSourceLogConfigResponse> addUserSourceLogConfig(AddUserSourceLogConfigRequest request);
 
-    CompletableFuture<BatchJobCheckResponse> batchJobCheck(BatchJobCheckRequest request);
-
     CompletableFuture<BatchJobSubmitResponse> batchJobSubmit(BatchJobSubmitRequest request);
 
     CompletableFuture<BindAccountResponse> bindAccount(BindAccountRequest request);
@@ -43,8 +42,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDataSourceResponse> deleteDataSource(DeleteDataSourceRequest request);
 
     CompletableFuture<DeleteDataSourceLogResponse> deleteDataSourceLog(DeleteDataSourceLogRequest request);
-
-    CompletableFuture<DeleteQuickQueryResponse> deleteQuickQuery(DeleteQuickQueryRequest request);
 
     CompletableFuture<DeleteUserResponse> deleteUser(DeleteUserRequest request);
 
@@ -89,8 +86,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeCloudSiemEventsResponse> describeCloudSiemEvents(DescribeCloudSiemEventsRequest request);
 
     CompletableFuture<DescribeCsImportedProdStatusByUserResponse> describeCsImportedProdStatusByUser(DescribeCsImportedProdStatusByUserRequest request);
-
-    CompletableFuture<DescribeCustomizeRuleResponse> describeCustomizeRule(DescribeCustomizeRuleRequest request);
 
     CompletableFuture<DescribeCustomizeRuleCountResponse> describeCustomizeRuleCount(DescribeCustomizeRuleCountRequest request);
 

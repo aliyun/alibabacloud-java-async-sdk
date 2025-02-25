@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RollbackApplicationRequest} extends {@link RequestModel}
  *
  * <p>RollbackApplicationRequest</p>
  */
 public class RollbackApplicationRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("FromAppVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FromAppVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fromAppVersion;
 
-    @Query
-    @NameInMap("Timeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Timeout")
     private Integer timeout;
 
-    @Query
-    @NameInMap("ToAppVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ToAppVersion")
     private String toAppVersion;
 
     private RollbackApplicationRequest(Builder builder) {
@@ -98,7 +103,11 @@ public class RollbackApplicationRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>The ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>474bdef0-d149-4695-abfb-52912d91****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -107,7 +116,11 @@ public class RollbackApplicationRequest extends Request {
         }
 
         /**
-         * FromAppVersion.
+         * <p>The current version number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v2-1</p>
          */
         public Builder fromAppVersion(String fromAppVersion) {
             this.putQueryParameter("FromAppVersion", fromAppVersion);
@@ -116,7 +129,10 @@ public class RollbackApplicationRequest extends Request {
         }
 
         /**
-         * Timeout.
+         * <p>The timeout period of the asynchronous rollback operation. Unit: seconds. Default value: 300.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1800</p>
          */
         public Builder timeout(Integer timeout) {
             this.putQueryParameter("Timeout", timeout);
@@ -125,7 +141,10 @@ public class RollbackApplicationRequest extends Request {
         }
 
         /**
-         * ToAppVersion.
+         * <p>The target version number. By default, the system automatically rolls back the container version to the previous version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v2</p>
          */
         public Builder toAppVersion(String toAppVersion) {
             this.putQueryParameter("ToAppVersion", toAppVersion);

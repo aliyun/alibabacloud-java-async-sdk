@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWorkFlowNodesResponseBody} extends {@link TeaModel}
  *
  * <p>ListWorkFlowNodesResponseBody</p>
  */
 public class ListWorkFlowNodesResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("WorkflowNodes")
+    @com.aliyun.core.annotation.NameInMap("WorkflowNodes")
     private WorkflowNodes workflowNodes;
 
     private ListWorkFlowNodesResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
         private WorkflowNodes workflowNodes; 
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +102,10 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +113,10 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CFD8FE00-36D9-4C1B-940D-65A7B73D9066</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +124,10 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -118,7 +135,7 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The details of approval nodes.
+         * <p>The details of approval nodes.</p>
          */
         public Builder workflowNodes(WorkflowNodes workflowNodes) {
             this.workflowNodes = workflowNodes;
@@ -131,14 +148,20 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListWorkFlowNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkFlowNodesResponseBody</p>
+     */
     public static class AuditUser extends TeaModel {
-        @NameInMap("NickName")
+        @com.aliyun.core.annotation.NameInMap("NickName")
         private String nickName;
 
-        @NameInMap("RealName")
+        @com.aliyun.core.annotation.NameInMap("RealName")
         private String realName;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
 
         private AuditUser(Builder builder) {
@@ -182,7 +205,10 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
             private Long userId; 
 
             /**
-             * The nickname of the approver.
+             * <p>The nickname of the approver.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -190,7 +216,10 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The real name of the approver.
+             * <p>The real name of the approver.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder realName(String realName) {
                 this.realName = realName;
@@ -198,7 +227,10 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the approver. The ID is different from the ID of the Alibaba Cloud account of the approver.
+             * <p>The ID of the approver. The ID is different from the ID of the Alibaba Cloud account of the approver.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -212,9 +244,15 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListWorkFlowNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkFlowNodesResponseBody</p>
+     */
     public static class AuditUsers extends TeaModel {
-        @NameInMap("AuditUser")
-        private java.util.List < AuditUser> auditUser;
+        @com.aliyun.core.annotation.NameInMap("AuditUser")
+        private java.util.List<AuditUser> auditUser;
 
         private AuditUsers(Builder builder) {
             this.auditUser = builder.auditUser;
@@ -231,17 +269,17 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
         /**
          * @return auditUser
          */
-        public java.util.List < AuditUser> getAuditUser() {
+        public java.util.List<AuditUser> getAuditUser() {
             return this.auditUser;
         }
 
         public static final class Builder {
-            private java.util.List < AuditUser> auditUser; 
+            private java.util.List<AuditUser> auditUser; 
 
             /**
              * AuditUser.
              */
-            public Builder auditUser(java.util.List < AuditUser> auditUser) {
+            public Builder auditUser(java.util.List<AuditUser> auditUser) {
                 this.auditUser = auditUser;
                 return this;
             }
@@ -253,26 +291,32 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListWorkFlowNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkFlowNodesResponseBody</p>
+     */
     public static class WorkflowNode extends TeaModel {
-        @NameInMap("AuditUsers")
+        @com.aliyun.core.annotation.NameInMap("AuditUsers")
         private AuditUsers auditUsers;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("CreateUserId")
+        @com.aliyun.core.annotation.NameInMap("CreateUserId")
         private Long createUserId;
 
-        @NameInMap("CreateUserNickName")
+        @com.aliyun.core.annotation.NameInMap("CreateUserNickName")
         private String createUserNickName;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
         private WorkflowNode(Builder builder) {
@@ -352,7 +396,7 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
             private String nodeType; 
 
             /**
-             * The details about approvers.
+             * <p>The details about approvers.</p>
              */
             public Builder auditUsers(AuditUsers auditUsers) {
                 this.auditUsers = auditUsers;
@@ -360,7 +404,10 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the approval template.
+             * <p>The description of the approval template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -368,7 +415,10 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the creator. This ID is different from the ID of the Alibaba Cloud account of the creator.
+             * <p>The ID of the creator. This ID is different from the ID of the Alibaba Cloud account of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder createUserId(Long createUserId) {
                 this.createUserId = createUserId;
@@ -376,7 +426,10 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the user who creates the approval node.
+             * <p>The name of the user who creates the approval node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder createUserNickName(String createUserNickName) {
                 this.createUserNickName = createUserNickName;
@@ -384,7 +437,10 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the approval node.
+             * <p>The ID of the approval node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -392,7 +448,10 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the approval node.
+             * <p>The name of the approval node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -400,11 +459,14 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the approval node. Valid values:
-             * <p>
+             * <p>The type of the approval node. Valid values:</p>
+             * <ul>
+             * <li>SYS: The approval node is predefined by the system.</li>
+             * <li>USER_LIST: The approval node is created by a user.</li>
+             * </ul>
              * 
-             * *   SYS: The approval node is predefined by the system.
-             * *   USER_LIST: The approval node is created by a user.
+             * <strong>example:</strong>
+             * <p>SYS</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -418,9 +480,15 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListWorkFlowNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkFlowNodesResponseBody</p>
+     */
     public static class WorkflowNodes extends TeaModel {
-        @NameInMap("WorkflowNode")
-        private java.util.List < WorkflowNode> workflowNode;
+        @com.aliyun.core.annotation.NameInMap("WorkflowNode")
+        private java.util.List<WorkflowNode> workflowNode;
 
         private WorkflowNodes(Builder builder) {
             this.workflowNode = builder.workflowNode;
@@ -437,17 +505,17 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
         /**
          * @return workflowNode
          */
-        public java.util.List < WorkflowNode> getWorkflowNode() {
+        public java.util.List<WorkflowNode> getWorkflowNode() {
             return this.workflowNode;
         }
 
         public static final class Builder {
-            private java.util.List < WorkflowNode> workflowNode; 
+            private java.util.List<WorkflowNode> workflowNode; 
 
             /**
              * WorkflowNode.
              */
-            public Builder workflowNode(java.util.List < WorkflowNode> workflowNode) {
+            public Builder workflowNode(java.util.List<WorkflowNode> workflowNode) {
                 this.workflowNode = workflowNode;
                 return this;
             }

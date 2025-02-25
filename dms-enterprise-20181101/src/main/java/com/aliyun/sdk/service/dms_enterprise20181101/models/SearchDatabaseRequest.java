@@ -1,51 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchDatabaseRequest} extends {@link RequestModel}
  *
  * <p>SearchDatabaseRequest</p>
  */
 public class SearchDatabaseRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("DbType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbType")
     private String dbType;
 
-    @Query
-    @NameInMap("EnvType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnvType")
     private String envType;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SearchKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchKey")
     private String searchKey;
 
-    @Query
-    @NameInMap("SearchRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchRange")
     private String searchRange;
 
-    @Query
-    @NameInMap("SearchTarget")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchTarget")
     private String searchTarget;
 
-    @Query
-    @NameInMap("Tid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tid")
     private Long tid;
 
     private SearchDatabaseRequest(Builder builder) {
@@ -175,7 +181,10 @@ public class SearchDatabaseRequest extends Request {
         }
 
         /**
-         * The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
+         * <p>The type of the database. For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/198106.html">DbType parameter</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MYSQL</p>
          */
         public Builder dbType(String dbType) {
             this.putQueryParameter("DbType", dbType);
@@ -184,7 +193,10 @@ public class SearchDatabaseRequest extends Request {
         }
 
         /**
-         * The environment type of the database. For more information, see [Change the environment type of an instance](~~163309~~).
+         * <p>The environment type of the database. For more information, see <a href="https://help.aliyun.com/document_detail/163309.html">Change the environment type of an instance</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder envType(String envType) {
             this.putQueryParameter("EnvType", envType);
@@ -193,7 +205,10 @@ public class SearchDatabaseRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -202,7 +217,10 @@ public class SearchDatabaseRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -211,7 +229,10 @@ public class SearchDatabaseRequest extends Request {
         }
 
         /**
-         * The keyword that is used to search for databases.
+         * <p>The keyword that is used to search for databases.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb</p>
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -220,13 +241,16 @@ public class SearchDatabaseRequest extends Request {
         }
 
         /**
-         * The query range based on permissions. Valid values:
-         * <p>
+         * <p>The query range based on permissions. Valid values:</p>
+         * <ul>
+         * <li><strong>HAS_PERMSSION</strong>: searches for databases on which the current user has permissions.</li>
+         * <li><strong>OWNER</strong>: searches for databases owned by the current user.</li>
+         * <li><strong>MY_FOCUS</strong>: searches for databases that the current user follows.</li>
+         * <li><strong>UNKNOWN</strong>: searches for all databases.</li>
+         * </ul>
          * 
-         * *   **HAS_PERMSSION**: searches for databases on which the current user has permissions.
-         * *   **OWNER**: searches for databases owned by the current user.
-         * *   **MY_FOCUS**: searches for databases that the current user follows.
-         * *   **UNKNOWN**: searches for all databases.
+         * <strong>example:</strong>
+         * <p>HAS_PERMSSION</p>
          */
         public Builder searchRange(String searchRange) {
             this.putQueryParameter("SearchRange", searchRange);
@@ -235,12 +259,15 @@ public class SearchDatabaseRequest extends Request {
         }
 
         /**
-         * The category of the database. Valid values:
-         * <p>
+         * <p>The category of the database. Valid values:</p>
+         * <ul>
+         * <li><strong>DB</strong>: single database or logical database.</li>
+         * <li><strong>SINGLE_DB</strong>: single database.</li>
+         * <li><strong>LOGIC_DB</strong>: logical database.</li>
+         * </ul>
          * 
-         * *   **DB**: single database or logical database.
-         * *   **SINGLE_DB**: single database.
-         * *   **LOGIC_DB**: logical database.
+         * <strong>example:</strong>
+         * <p>SINGLE_DB</p>
          */
         public Builder searchTarget(String searchTarget) {
             this.putQueryParameter("SearchTarget", searchTarget);
@@ -249,7 +276,10 @@ public class SearchDatabaseRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to query the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

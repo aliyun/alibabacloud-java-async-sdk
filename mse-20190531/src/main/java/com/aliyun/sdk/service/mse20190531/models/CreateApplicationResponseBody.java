@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateApplicationResponseBody} extends {@link TeaModel}
  *
  * <p>CreateApplicationResponseBody</p>
  */
 public class CreateApplicationResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private CreateApplicationResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class CreateApplicationResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The response code returned.
+         * <p>The response code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +114,10 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The data of the node.
+         * <p>The data of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +125,10 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +136,10 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +147,10 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>68D91223-CCE9-5F9C-B538-20F617DA48B1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +158,14 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -155,44 +178,50 @@ public class CreateApplicationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateApplicationResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("ExtraInfo")
+        @com.aliyun.core.annotation.NameInMap("ExtraInfo")
         private String extraInfo;
 
-        @NameInMap("Language")
+        @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
 
-        @NameInMap("LicenseKey")
+        @com.aliyun.core.annotation.NameInMap("LicenseKey")
         private String licenseKey;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private Data(Builder builder) {
@@ -326,7 +355,10 @@ public class CreateApplicationResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxxxxx@xxxxxxxxxx</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -334,7 +366,10 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spring-cloud-a</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -342,7 +377,10 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1631001140913</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -350,7 +388,10 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The additional information.
+             * <p>The additional information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;rpcTypes&quot;:[&quot;dubbo&quot;,&quot;springCloud&quot;]}</p>
              */
             public Builder extraInfo(String extraInfo) {
                 this.extraInfo = extraInfo;
@@ -358,7 +399,10 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The programming language of the application.
+             * <p>The programming language of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JAVA</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -366,7 +410,10 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The license key in use.
+             * <p>The license key in use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxxxxx@xxxxxxxxxx</p>
              */
             public Builder licenseKey(String licenseKey) {
                 this.licenseKey = licenseKey;
@@ -374,7 +421,10 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * MSE命名空间名字。
+             * <p>MSE命名空间名字。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -382,7 +432,10 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -390,11 +443,14 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The service where the application is deployed. Valid values:
-             * <p>
+             * <p>The service where the application is deployed. Valid values:</p>
+             * <ul>
+             * <li>- ACK: Container Service for Kubernetes</li>
+             * <li>- Normal: another service</li>
+             * </ul>
              * 
-             * *   \- ACK: Container Service for Kubernetes
-             * *   \- Normal: another service
+             * <strong>example:</strong>
+             * <p>ACK</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -402,7 +458,10 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the application. A value of 1 indicates that the application is in a normal state.
+             * <p>The status of the application. A value of 1 indicates that the application is in a normal state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -410,7 +469,10 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The update time.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1632979237663</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -418,7 +480,10 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1888888888</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -426,7 +491,10 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 版本号。
+             * <p>版本号。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder version(String version) {
                 this.version = version;

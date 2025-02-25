@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DepartmentSaveRequest} extends {@link RequestModel}
  *
  * <p>DepartmentSaveRequest</p>
  */
 public class DepartmentSaveRequest extends Request {
-    @Body
-    @NameInMap("depart_list")
-    private java.util.List < DepartList> departList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("depart_list")
+    private java.util.List<DepartList> departList;
 
-    @Header
-    @NameInMap("x-acs-btrip-so-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-so-corp-token")
     private String xAcsBtripSoCorpToken;
 
     private DepartmentSaveRequest(Builder builder) {
@@ -42,7 +47,7 @@ public class DepartmentSaveRequest extends Request {
     /**
      * @return departList
      */
-    public java.util.List < DepartList> getDepartList() {
+    public java.util.List<DepartList> getDepartList() {
         return this.departList;
     }
 
@@ -54,7 +59,7 @@ public class DepartmentSaveRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DepartmentSaveRequest, Builder> {
-        private java.util.List < DepartList> departList; 
+        private java.util.List<DepartList> departList; 
         private String xAcsBtripSoCorpToken; 
 
         private Builder() {
@@ -70,7 +75,7 @@ public class DepartmentSaveRequest extends Request {
         /**
          * depart_list.
          */
-        public Builder departList(java.util.List < DepartList> departList) {
+        public Builder departList(java.util.List<DepartList> departList) {
             String departListShrink = shrink(departList, "depart_list", "json");
             this.putBodyParameter("depart_list", departListShrink);
             this.departList = departList;
@@ -93,27 +98,33 @@ public class DepartmentSaveRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DepartmentSaveRequest} extends {@link TeaModel}
+     *
+     * <p>DepartmentSaveRequest</p>
+     */
     public static class DepartList extends TeaModel {
-        @NameInMap("depart_id")
+        @com.aliyun.core.annotation.NameInMap("depart_id")
         private Long departId;
 
-        @NameInMap("depart_name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("depart_name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String departName;
 
-        @NameInMap("depart_pid")
+        @com.aliyun.core.annotation.NameInMap("depart_pid")
         private Long departPid;
 
-        @NameInMap("manager_ids")
+        @com.aliyun.core.annotation.NameInMap("manager_ids")
         private String managerIds;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("third_depart_id")
+        @com.aliyun.core.annotation.NameInMap("third_depart_id")
         private String thirdDepartId;
 
-        @NameInMap("third_depart_pid")
+        @com.aliyun.core.annotation.NameInMap("third_depart_pid")
         private String thirdDepartPid;
 
         private DepartList(Builder builder) {
@@ -201,7 +212,7 @@ public class DepartmentSaveRequest extends Request {
             }
 
             /**
-             * depart_name.
+             * <p>This parameter is required.</p>
              */
             public Builder departName(String departName) {
                 this.departName = departName;

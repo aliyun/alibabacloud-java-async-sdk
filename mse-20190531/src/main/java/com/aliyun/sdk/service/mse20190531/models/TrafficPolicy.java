@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TrafficPolicy} extends {@link TeaModel}
  *
  * <p>TrafficPolicy</p>
  */
 public class TrafficPolicy extends TeaModel {
-    @NameInMap("LoadBalancerSettings")
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerSettings")
     private LoadBalancerSettings loadBalancerSettings;
 
-    @NameInMap("TlsSetting")
+    @com.aliyun.core.annotation.NameInMap("TlsSetting")
     private TlsSetting tlsSetting;
 
     private TrafficPolicy(Builder builder) {
@@ -71,14 +76,20 @@ public class TrafficPolicy extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TrafficPolicy} extends {@link TeaModel}
+     *
+     * <p>TrafficPolicy</p>
+     */
     public static class HttpCookie extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("TTL")
+        @com.aliyun.core.annotation.NameInMap("TTL")
         private String TTL;
 
         private HttpCookie(Builder builder) {
@@ -152,14 +163,20 @@ public class TrafficPolicy extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrafficPolicy} extends {@link TeaModel}
+     *
+     * <p>TrafficPolicy</p>
+     */
     public static class ConsistentHashLBConfig extends TeaModel {
-        @NameInMap("ConsistentHashLBType")
+        @com.aliyun.core.annotation.NameInMap("ConsistentHashLBType")
         private String consistentHashLBType;
 
-        @NameInMap("HttpCookie")
+        @com.aliyun.core.annotation.NameInMap("HttpCookie")
         private HttpCookie httpCookie;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
         private ConsistentHashLBConfig(Builder builder) {
@@ -233,14 +250,20 @@ public class TrafficPolicy extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrafficPolicy} extends {@link TeaModel}
+     *
+     * <p>TrafficPolicy</p>
+     */
     public static class LoadBalancerSettings extends TeaModel {
-        @NameInMap("ConsistentHashLBConfig")
+        @com.aliyun.core.annotation.NameInMap("ConsistentHashLBConfig")
         private ConsistentHashLBConfig consistentHashLBConfig;
 
-        @NameInMap("LoadbalancerType")
+        @com.aliyun.core.annotation.NameInMap("LoadbalancerType")
         private String loadbalancerType;
 
-        @NameInMap("WarmupDuration")
+        @com.aliyun.core.annotation.NameInMap("WarmupDuration")
         private Long warmupDuration;
 
         private LoadBalancerSettings(Builder builder) {
@@ -314,18 +337,24 @@ public class TrafficPolicy extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrafficPolicy} extends {@link TeaModel}
+     *
+     * <p>TrafficPolicy</p>
+     */
     public static class TlsSetting extends TeaModel {
-        @NameInMap("CaCertContent")
+        @com.aliyun.core.annotation.NameInMap("CaCertContent")
         private String caCertContent;
 
-        @NameInMap("CertId")
+        @com.aliyun.core.annotation.NameInMap("CertId")
         private String certId;
 
-        @NameInMap("Sni")
+        @com.aliyun.core.annotation.NameInMap("Sni")
         private String sni;
 
-        @NameInMap("TlsMode")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TlsMode")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String tlsMode;
 
         private TlsSetting(Builder builder) {
@@ -402,7 +431,10 @@ public class TrafficPolicy extends TeaModel {
             }
 
             /**
-             * TlsMode.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SIMPLE</p>
              */
             public Builder tlsMode(String tlsMode) {
                 this.tlsMode = tlsMode;

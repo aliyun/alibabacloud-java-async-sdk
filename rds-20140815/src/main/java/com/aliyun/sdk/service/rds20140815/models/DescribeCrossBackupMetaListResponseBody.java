@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCrossBackupMetaListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCrossBackupMetaListResponseBody</p>
  */
 public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
-    @NameInMap("DBInstanceName")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceName")
     private String DBInstanceName;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalPageCount")
+    @com.aliyun.core.annotation.NameInMap("TotalPageCount")
     private Integer totalPageCount;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeCrossBackupMetaListResponseBody(Builder builder) {
@@ -110,7 +115,10 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The instance to which the cross-region backup file belongs.
+         * <p>The instance to which the cross-region backup file belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -118,7 +126,7 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the information about the databases and tables whose data is included in the cross-region backup file.
+         * <p>An array that consists of the information about the databases and tables whose data is included in the cross-region backup file.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -126,7 +134,10 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -134,7 +145,10 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -142,7 +156,10 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60F9A12A-16B8-4728-B099-4CA38D32C31C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +167,10 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of pages returned.
+         * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPageCount(Integer totalPageCount) {
             this.totalPageCount = totalPageCount;
@@ -158,7 +178,10 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -171,14 +194,20 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCrossBackupMetaListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCrossBackupMetaListResponseBody</p>
+     */
     public static class Meta extends TeaModel {
-        @NameInMap("Database")
+        @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private String size;
 
-        @NameInMap("Tables")
+        @com.aliyun.core.annotation.NameInMap("Tables")
         private String tables;
 
         private Meta(Builder builder) {
@@ -222,7 +251,10 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
             private String tables; 
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testdb1</p>
              */
             public Builder database(String database) {
                 this.database = database;
@@ -230,7 +262,10 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the table. Unit: KB. If the database contains more than one table, the names of these tables are separated by commas (,).
+             * <p>The size of the table. Unit: KB. If the database contains more than one table, the names of these tables are separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder size(String size) {
                 this.size = size;
@@ -238,7 +273,10 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the names of the tables that the database contains. If the database contains more than one table, the names of these tables are separated by commas (,).
+             * <p>An array that consists of the names of the tables that the database contains. If the database contains more than one table, the names of these tables are separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1,test2</p>
              */
             public Builder tables(String tables) {
                 this.tables = tables;
@@ -252,9 +290,15 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCrossBackupMetaListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCrossBackupMetaListResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("Meta")
-        private java.util.List < Meta> meta;
+        @com.aliyun.core.annotation.NameInMap("Meta")
+        private java.util.List<Meta> meta;
 
         private Items(Builder builder) {
             this.meta = builder.meta;
@@ -271,17 +315,17 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
         /**
          * @return meta
          */
-        public java.util.List < Meta> getMeta() {
+        public java.util.List<Meta> getMeta() {
             return this.meta;
         }
 
         public static final class Builder {
-            private java.util.List < Meta> meta; 
+            private java.util.List<Meta> meta; 
 
             /**
              * Meta.
              */
-            public Builder meta(java.util.List < Meta> meta) {
+            public Builder meta(java.util.List<Meta> meta) {
                 this.meta = meta;
                 return this;
             }

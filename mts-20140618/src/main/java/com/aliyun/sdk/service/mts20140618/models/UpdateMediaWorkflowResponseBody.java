@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateMediaWorkflowResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateMediaWorkflowResponseBody</p>
  */
 public class UpdateMediaWorkflowResponseBody extends TeaModel {
-    @NameInMap("MediaWorkflow")
+    @com.aliyun.core.annotation.NameInMap("MediaWorkflow")
     private MediaWorkflow mediaWorkflow;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateMediaWorkflowResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class UpdateMediaWorkflowResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MediaWorkflow.
+         * <p>The detailed information about the media workflow.</p>
          */
         public Builder mediaWorkflow(MediaWorkflow mediaWorkflow) {
             this.mediaWorkflow = mediaWorkflow;
@@ -58,7 +58,10 @@ public class UpdateMediaWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7D752035-97DA-54E5-88E2-E8405EEA****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,23 +74,29 @@ public class UpdateMediaWorkflowResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateMediaWorkflowResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateMediaWorkflowResponseBody</p>
+     */
     public static class MediaWorkflow extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("MediaWorkflowId")
+        @com.aliyun.core.annotation.NameInMap("MediaWorkflowId")
         private String mediaWorkflowId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Topology")
+        @com.aliyun.core.annotation.NameInMap("Topology")
         private String topology;
 
-        @NameInMap("TriggerMode")
+        @com.aliyun.core.annotation.NameInMap("TriggerMode")
         private String triggerMode;
 
         private MediaWorkflow(Builder builder) {
@@ -158,7 +167,10 @@ public class UpdateMediaWorkflowResponseBody extends TeaModel {
             private String triggerMode; 
 
             /**
-             * CreationTime.
+             * <p>The time when the media workflow was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-04-01T05:29:38Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -166,7 +178,10 @@ public class UpdateMediaWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * MediaWorkflowId.
+             * <p>The ID of the media workflow that is updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6307eb0d3f85477882d205aa040f****</p>
              */
             public Builder mediaWorkflowId(String mediaWorkflowId) {
                 this.mediaWorkflowId = mediaWorkflowId;
@@ -174,7 +189,10 @@ public class UpdateMediaWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the media workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>examp-mediaworkflow-****</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -182,7 +200,14 @@ public class UpdateMediaWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>The state of the media workflow. Valid values:</p>
+             * <ul>
+             * <li><strong>Inactive</strong>: The media workflow is disabled.</li>
+             * <li><strong>Active</strong>: The media workflow is enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -190,7 +215,41 @@ public class UpdateMediaWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * Topology.
+             * <p>The topology of the media workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *       &quot;Activities&quot;: {
+             *             &quot;Act-Start&quot;: {
+             *                   &quot;Parameters&quot;: {
+             *                         &quot;PipelineId&quot;: &quot;130266f58161436a80bf07cb12c8****&quot;,
+             *                         &quot;InputFile&quot;: &quot;{&quot;Bucket&quot;: &quot;example-bucket-<strong><strong>&quot;,&quot;Location&quot;: &quot;cn-shanghai&quot;}&quot;
+             *                   },
+             *                   &quot;Type&quot;: &quot;Start&quot;
+             *             },
+             *             &quot;Act-Report&quot;: {
+             *                   &quot;Parameters&quot;: {},
+             *                   &quot;Type&quot;: &quot;Report&quot;
+             *             },
+             *             &quot;Act-Transcode-M3U8&quot;: {
+             *                   &quot;Parameters&quot;: {
+             *                         &quot;Outputs&quot;: &quot;[{&quot;Object&quot;:&quot;transcode/{ObjectPrefix}{FileName}&quot;,&quot;TemplateId&quot;: &quot;957d1719ee85ed6527b90cf62726</strong></strong>&quot;}]&quot;,
+             *                         &quot;OutputBucket&quot;: &quot;example-bucket-****&quot;,
+             *                         &quot;OutputLocation&quot;: &quot;cn-shanghai&quot;
+             *                   },
+             *                   &quot;Type&quot;: &quot;Transcode&quot;
+             *             }
+             *       },
+             *       &quot;Dependencies&quot;: {
+             *             &quot;Act-Start&quot;: [
+             *                   &quot;Act-Transcode-M3U8&quot;
+             *             ],
+             *             &quot;Act-Report&quot;: [],
+             *             &quot;Act-Transcode-M3U8&quot;: [
+             *                   &quot;Act-Report&quot;
+             *             ]
+             *       }
+             * }</p>
              */
             public Builder topology(String topology) {
                 this.topology = topology;
@@ -198,7 +257,14 @@ public class UpdateMediaWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerMode.
+             * <p>The trigger mode of the media workflow. Valid values:</p>
+             * <ul>
+             * <li><strong>OssAutoTrigger</strong>: The media workflow is automatically triggered.</li>
+             * <li><strong>NotInAuto</strong>: The media workflow is not automatically triggered.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OssAutoTrigger</p>
              */
             public Builder triggerMode(String triggerMode) {
                 this.triggerMode = triggerMode;

@@ -1,67 +1,72 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePrefixListRequest} extends {@link RequestModel}
  *
  * <p>CreatePrefixListRequest</p>
  */
 public class CreatePrefixListRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("AddressFamily")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddressFamily")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String addressFamily;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Entry")
-    private java.util.List < Entry> entry;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Entry")
+    private java.util.List<Entry> entry;
 
-    @Query
-    @NameInMap("MaxEntries")
-    @Validation(required = true, maximum = 200, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxEntries")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 200, minimum = 1)
     private Integer maxEntries;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PrefixListName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrefixListName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String prefixListName;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private CreatePrefixListRequest(Builder builder) {
@@ -124,7 +129,7 @@ public class CreatePrefixListRequest extends Request {
     /**
      * @return entry
      */
-    public java.util.List < Entry> getEntry() {
+    public java.util.List<Entry> getEntry() {
         return this.entry;
     }
 
@@ -182,7 +187,7 @@ public class CreatePrefixListRequest extends Request {
         private String addressFamily; 
         private String clientToken; 
         private String description; 
-        private java.util.List < Entry> entry; 
+        private java.util.List<Entry> entry; 
         private Integer maxEntries; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -221,11 +226,15 @@ public class CreatePrefixListRequest extends Request {
         }
 
         /**
-         * The IP address family. Valid values:
-         * <p>
+         * <p>The IP address family. Valid values:</p>
+         * <ul>
+         * <li>IPv4</li>
+         * <li>IPv6</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   IPv4
-         * *   IPv6
+         * <strong>example:</strong>
+         * <p>IPv4</p>
          */
         public Builder addressFamily(String addressFamily) {
             this.putQueryParameter("AddressFamily", addressFamily);
@@ -234,7 +243,10 @@ public class CreatePrefixListRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The `ClientToken` value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <code>token</code> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -243,7 +255,10 @@ public class CreatePrefixListRequest extends Request {
         }
 
         /**
-         * The description of the prefix list. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+         * <p>The description of the prefix list. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is description.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -252,16 +267,20 @@ public class CreatePrefixListRequest extends Request {
         }
 
         /**
-         * 前缀列表条目信息。
+         * <p>The details of entries in the prefix list.</p>
          */
-        public Builder entry(java.util.List < Entry> entry) {
+        public Builder entry(java.util.List<Entry> entry) {
             this.putQueryParameter("Entry", entry);
             this.entry = entry;
             return this;
         }
 
         /**
-         * The maximum number of entries that the prefix list can contain. Valid values: 1 to 200.
+         * <p>The maximum number of entries that the prefix list can contain. Valid values: 1 to 200.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxEntries(Integer maxEntries) {
             this.putQueryParameter("MaxEntries", maxEntries);
@@ -288,7 +307,11 @@ public class CreatePrefixListRequest extends Request {
         }
 
         /**
-         * The name of the prefix list. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://`, `https://`, `com.aliyun`, or `com.alibabacloud`. It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
+         * <p>The name of the prefix list. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-). It must start with a letter and cannot start with <code>http://</code>, <code>https://</code>, <code>com.aliyun</code>, or <code>com.alibabacloud</code>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PrefixListNameSample</p>
          */
         public Builder prefixListName(String prefixListName) {
             this.putQueryParameter("PrefixListName", prefixListName);
@@ -297,7 +320,11 @@ public class CreatePrefixListRequest extends Request {
         }
 
         /**
-         * The ID of the region in which to create the prefix list.
+         * <p>The ID of the region in which to create the prefix list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chengdu</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -330,12 +357,18 @@ public class CreatePrefixListRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreatePrefixListRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePrefixListRequest</p>
+     */
     public static class Entry extends TeaModel {
-        @NameInMap("Cidr")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Cidr")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String cidr;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
         private Entry(Builder builder) {
@@ -370,18 +403,20 @@ public class CreatePrefixListRequest extends Request {
             private String description; 
 
             /**
-             * The CIDR block in entry N. Valid values of N: 0 to 200. Take note of the following items:
-             * <p>
+             * <p>The CIDR block in entry N. Valid values of N: 0 to 200. Take note of the following items:</p>
+             * <ul>
+             * <li>The total number of entries cannot exceed the <code>MaxEntries</code> value.</li>
+             * <li>CIDR block types are determined by the IP address family. You cannot combine IPv4 and IPv6 CIDR blocks in a single prefix list.</li>
+             * <li>CIDR blocks must be unique across all entries in a prefix list. For example, you cannot specify 192.168.1.0/24 twice in the entries of the prefix list.</li>
+             * <li>IP addresses are supported. The system converts IP addresses into CIDR blocks. For example, if you specify 192.168.1.100, the system converts it into the 192.168.1.100/32 CIDR block.</li>
+             * <li>If an IPv6 CIDR block is used, the system converts it into the zero compression format and changes uppercase letters into lowercase ones. For example, if you specify 2001:0DB8:0000:0000:0000:0000:0000:0000/32, the system converts it into 2001:db8::/32.</li>
+             * </ul>
+             * <p>For more information about CIDR blocks, see the <a href="https://help.aliyun.com/document_detail/40637.html#title-gu4-uzk-12r">What is CIDR?</a> section in the &quot;Network FAQ&quot; topic.</p>
+             * <p>This parameter is empty by default.</p>
+             * <p>This parameter is required.</p>
              * 
-             * *   The total number of entries must not exceed the `MaxEntries` value.
-             * *   CIDR block types are determined by the IP address family. You cannot combine IPv4 and IPv6 CIDR blocks in a single prefix list.
-             * *   CIDR blocks must be unique across all entries in a prefix list. For example, you cannot specify 192.168.1.0/24 twice in the entries of the prefix list.
-             * *   IP addresses are supported. The system converts IP addresses into CIDR blocks. For example, if you specify 192.168.1.100, the system converts it into the 192.168.1.100/32 CIDR block.
-             * *   If an IPv6 CIDR block is used, the system converts it to the zero compression format and changes uppercase letters into lowercase ones. For example, if you specify 2001:0DB8:0000:0000:0000:0000:0000:0000/32, the system converts it into 2001:db8::/32.
-             * 
-             * For more information about CIDR blocks, see the "What is CIDR block?" section of the [Network FAQ](https://www.alibabacloud.com/help/doc-detail/40637.htm#title-gu4-uzk-12r) topic.
-             * 
-             * This parameter is empty by default.
+             * <strong>example:</strong>
+             * <p>192.168.1.0/24</p>
              */
             public Builder cidr(String cidr) {
                 this.cidr = cidr;
@@ -389,7 +424,10 @@ public class CreatePrefixListRequest extends Request {
             }
 
             /**
-             * The description in entry N. The description must be 2 to 32 characters in length and cannot start with `http://` or `https://`. Valid values of N: 0 to 200.
+             * <p>The description in entry N. The description must be 2 to 32 characters in length and cannot start with <code>http://</code> or <code>https://</code>. Valid values of N: 0 to 200.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Description Sample 01</p>
              */
             public Builder description(String description) {
                 this.description = description;

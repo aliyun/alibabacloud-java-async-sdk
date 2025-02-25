@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourcesRequest} extends {@link RequestModel}
  *
  * <p>TagResourcesRequest</p>
  */
 public class TagResourcesRequest extends Request {
-    @Body
-    @NameInMap("ResourceIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > resourceIds;
 
-    @Body
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
-    @Body
-    @NameInMap("Tags")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Tags> tags;
 
     private TagResourcesRequest(Builder builder) {
@@ -85,7 +85,8 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * A tag.
+         * <p>A tag.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder resourceIds(java.util.List < String > resourceIds) {
             this.putBodyParameter("ResourceIds", resourceIds);
@@ -94,7 +95,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("ResourceType", resourceType);
@@ -103,7 +108,8 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The value of the tag.
+         * <p>The value of the tag.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putBodyParameter("Tags", tags);
@@ -118,13 +124,19 @@ public class TagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>TagResourcesRequest</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("key")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("key")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String key;
 
-        @NameInMap("value")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("value")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String value;
 
         private Tags(Builder builder) {
@@ -159,7 +171,11 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The returned object.
+             * <p>The returned object.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -167,11 +183,15 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * Indicates whether tags are added to the clusters. Valid values:
-             * <p>
+             * <p>Indicates whether tags are added to the clusters. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>IT</p>
              */
             public Builder value(String value) {
                 this.value = value;

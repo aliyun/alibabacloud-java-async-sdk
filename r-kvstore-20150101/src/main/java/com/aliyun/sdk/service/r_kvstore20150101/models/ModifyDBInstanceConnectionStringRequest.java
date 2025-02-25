@@ -1,62 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceConnectionStringRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBInstanceConnectionStringRequest</p>
  */
 public class ModifyDBInstanceConnectionStringRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("CurrentConnectionString")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentConnectionString")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String currentConnectionString;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("IPType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IPType")
     private String IPType;
 
-    @Query
-    @NameInMap("NewConnectionString")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewConnectionString")
     private String newConnectionString;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Port")
-    @Validation(maxLength = 5, minLength = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Port")
+    @com.aliyun.core.annotation.Validation(maxLength = 5, minLength = 1)
     private String port;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private ModifyDBInstanceConnectionStringRequest(Builder builder) {
@@ -206,7 +206,11 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * The current endpoint of the instance.
+         * <p>The current endpoint of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****.redis.rds.aliyuncs.com</p>
          */
         public Builder currentConnectionString(String currentConnectionString) {
             this.putQueryParameter("CurrentConnectionString", currentConnectionString);
@@ -215,7 +219,11 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -224,11 +232,14 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * The network type of the endpoint. Valid values:
-         * <p>
+         * <p>The network type of the endpoint. Valid values:</p>
+         * <ul>
+         * <li><strong>Private</strong>: internal network</li>
+         * <li><strong>Public</strong>: Internet</li>
+         * </ul>
          * 
-         * *   **Private**: internal network
-         * *   **Public**: Internet
+         * <strong>example:</strong>
+         * <p>Public</p>
          */
         public Builder IPType(String IPType) {
             this.putQueryParameter("IPType", IPType);
@@ -237,10 +248,13 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * The prefix of the new endpoint. Specify the endpoint in the `<prefix>.redis.rds.aliyuncs.com` format. The prefix can contain lowercase letters and digits, and must start with a lowercase letter. The prefix can be 8 to 40 characters in length.
-         * <p>
+         * <p>The prefix of the new endpoint. Specify the endpoint in the <code>&lt;prefix&gt;.redis.rds.aliyuncs.com</code> format. The prefix must be 8 to 40 characters in length and can contain lowercase letters and digits. It must start with a lowercase letter.</p>
+         * <blockquote>
+         * <p> You must specify one of the <strong>NewConnectionString</strong> and <strong>Port</strong> parameters.</p>
+         * </blockquote>
          * 
-         * > You must specify one of the **NewConnectionString** and **Port** parameters.
+         * <strong>example:</strong>
+         * <p>standardredis</p>
          */
         public Builder newConnectionString(String newConnectionString) {
             this.putQueryParameter("NewConnectionString", newConnectionString);
@@ -267,10 +281,13 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * The port number that is used to connect to the instance. Valid values: **1024** to **65535**.
-         * <p>
+         * <p>The port number that is used to connect to the instance. Valid values: <strong>1024</strong> to <strong>65535</strong>.</p>
+         * <blockquote>
+         * <p>You must specify one of the <strong>NewConnectionString</strong> and <strong>Port</strong> parameters.</p>
+         * </blockquote>
          * 
-         * > You must specify one of the **NewConnectionString** and **Port** parameters.
+         * <strong>example:</strong>
+         * <p>6379</p>
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);

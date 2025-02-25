@@ -106,7 +106,7 @@ public class SaveEnvResponseBody extends TeaModel {
         }
 
         /**
-         * 操作的环境id
+         * EnvId.
          */
         public Builder envId(String envId) {
             this.envId = envId;

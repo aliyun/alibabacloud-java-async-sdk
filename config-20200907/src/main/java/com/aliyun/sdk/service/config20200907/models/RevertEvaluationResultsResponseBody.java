@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RevertEvaluationResultsResponseBody} extends {@link TeaModel}
  *
  * <p>RevertEvaluationResultsResponseBody</p>
  */
 public class RevertEvaluationResultsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private RevertEvaluationResultsResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class RevertEvaluationResultsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01ACCBF2-0B0B-59F2-9E84-07B38267BCA1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

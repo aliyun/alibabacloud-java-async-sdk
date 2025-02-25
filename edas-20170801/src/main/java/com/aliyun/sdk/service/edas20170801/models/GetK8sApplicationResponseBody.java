@@ -74,7 +74,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the application.
+         * The information about the application.
          */
         public Builder applcation(Applcation applcation) {
             this.applcation = applcation;
@@ -300,6 +300,9 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         @NameInMap("EnvList")
         private EnvList envList;
 
+        @NameInMap("FeatureAnnotations")
+        private String featureAnnotations;
+
         @NameInMap("Instances")
         private Integer instances;
 
@@ -354,6 +357,9 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         @NameInMap("TomcatVersion")
         private String tomcatVersion;
 
+        @NameInMap("WorkloadType")
+        private String workloadType;
+
         private App(Builder builder) {
             this.annotations = builder.annotations;
             this.appId = builder.appId;
@@ -370,6 +376,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             this.enableEmptyPushReject = builder.enableEmptyPushReject;
             this.enableLosslessRule = builder.enableLosslessRule;
             this.envList = builder.envList;
+            this.featureAnnotations = builder.featureAnnotations;
             this.instances = builder.instances;
             this.instancesBeforeScaling = builder.instancesBeforeScaling;
             this.k8sNamespace = builder.k8sNamespace;
@@ -388,6 +395,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             this.requestMem = builder.requestMem;
             this.slbInfo = builder.slbInfo;
             this.tomcatVersion = builder.tomcatVersion;
+            this.workloadType = builder.workloadType;
         }
 
         public static Builder builder() {
@@ -501,6 +509,13 @@ public class GetK8sApplicationResponseBody extends TeaModel {
          */
         public EnvList getEnvList() {
             return this.envList;
+        }
+
+        /**
+         * @return featureAnnotations
+         */
+        public String getFeatureAnnotations() {
+            return this.featureAnnotations;
         }
 
         /**
@@ -629,6 +644,13 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             return this.tomcatVersion;
         }
 
+        /**
+         * @return workloadType
+         */
+        public String getWorkloadType() {
+            return this.workloadType;
+        }
+
         public static final class Builder {
             private String annotations; 
             private String appId; 
@@ -645,6 +667,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             private Boolean enableEmptyPushReject; 
             private Boolean enableLosslessRule; 
             private EnvList envList; 
+            private String featureAnnotations; 
             private Integer instances; 
             private Integer instancesBeforeScaling; 
             private String k8sNamespace; 
@@ -663,6 +686,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             private Integer requestMem; 
             private String slbInfo; 
             private String tomcatVersion; 
+            private String workloadType; 
 
             /**
              * The annotation of an application pod.
@@ -745,7 +769,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the application. Valid values:
+             * The application type. Valid values:
              * <p>
              * 
              * *   General: native Java application
@@ -766,7 +790,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 应用是否开启了推空保护。
+             * Indicates whether the Empty List Protection feature is enabled for the application.
              */
             public Builder enableEmptyPushReject(Boolean enableEmptyPushReject) {
                 this.enableEmptyPushReject = enableEmptyPushReject;
@@ -774,7 +798,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 应用是否开启了无损上线。
+             * Indicates whether the Graceful Release feature is enabled for the application.
              */
             public Builder enableLosslessRule(Boolean enableLosslessRule) {
                 this.enableLosslessRule = enableLosslessRule;
@@ -786,6 +810,20 @@ public class GetK8sApplicationResponseBody extends TeaModel {
              */
             public Builder envList(EnvList envList) {
                 this.envList = envList;
+                return this;
+            }
+
+            /**
+             * The feature annotations. Possible values:
+             * <p>
+             * 
+             * *   base.combination.edas: enables EDAS integrated management solution.
+             * *   base.combination.arms: enables ARMS monitoring.
+             * *   base.combination.mse: enables MSE microservices governance.
+             * *   base.combination.none: enables lifecycle management.
+             */
+            public Builder featureAnnotations(String featureAnnotations) {
+                this.featureAnnotations = featureAnnotations;
                 return this;
             }
 
@@ -846,7 +884,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 应用是否启用了无损滚动发布模式配置通过就绪检查前完成服务注册。
+             * Indicates whether the Graceful Rolling Release and Configure Complete Service Registration before Readiness Probing feature is enabled for the application.
              */
             public Builder losslessRuleAligned(Boolean losslessRuleAligned) {
                 this.losslessRuleAligned = losslessRuleAligned;
@@ -854,7 +892,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 应用配置的服务延迟注册时长，单位：秒。
+             * The delay of service registration. Unit: seconds.
              */
             public Builder losslessRuleDelayTime(Integer losslessRuleDelayTime) {
                 this.losslessRuleDelayTime = losslessRuleDelayTime;
@@ -862,7 +900,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 应用设置的服务预热曲线。
+             * The number of prefetching curves.
              */
             public Builder losslessRuleFuncType(Integer losslessRuleFuncType) {
                 this.losslessRuleFuncType = losslessRuleFuncType;
@@ -870,7 +908,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 应用是否启用了无损滚动发布模式配置通过就绪检查前完成服务预热。
+             * Indicates whether the Graceful Rolling Release and Configure Complete Service Prefetching before Readiness Probing feature is enabled for the application.
              */
             public Builder losslessRuleRelated(Boolean losslessRuleRelated) {
                 this.losslessRuleRelated = losslessRuleRelated;
@@ -878,7 +916,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 应用设置的服务预热时长，单位：秒。
+             * The service prefetching duration. Unit: seconds.
              */
             public Builder losslessRuleWarmupTime(Integer losslessRuleWarmupTime) {
                 this.losslessRuleWarmupTime = losslessRuleWarmupTime;
@@ -930,6 +968,14 @@ public class GetK8sApplicationResponseBody extends TeaModel {
              */
             public Builder tomcatVersion(String tomcatVersion) {
                 this.tomcatVersion = tomcatVersion;
+                return this;
+            }
+
+            /**
+             * The workload type. Valid values: Deployment and StatefulSet. If you do not specify this parameter, Deployment is used.
+             */
+            public Builder workloadType(String workloadType) {
+                this.workloadType = workloadType;
                 return this;
             }
 
@@ -1315,7 +1361,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 使用自定义OpenJDK运行时，配置的基础镜像地址。
+             * The URL of the base image. If you use a custom Java Development Kit (JDK) runtime, you must specify this parameter.
              */
             public Builder userBaseImageUrl(String userBaseImageUrl) {
                 this.userBaseImageUrl = userBaseImageUrl;
@@ -1380,7 +1426,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The ID of the component.
+             * The component ID.
              */
             public Builder componentId(String componentId) {
                 this.componentId = componentId;
@@ -1396,7 +1442,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the component. Valid values:
+             * The component type. Valid values:
              */
             public Builder type(String type) {
                 this.type = type;

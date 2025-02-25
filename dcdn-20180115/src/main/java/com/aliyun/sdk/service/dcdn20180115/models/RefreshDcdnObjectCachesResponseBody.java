@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RefreshDcdnObjectCachesResponseBody} extends {@link TeaModel}
  *
  * <p>RefreshDcdnObjectCachesResponseBody</p>
  */
 public class RefreshDcdnObjectCachesResponseBody extends TeaModel {
-    @NameInMap("RefreshTaskId")
+    @com.aliyun.core.annotation.NameInMap("RefreshTaskId")
     private String refreshTaskId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private RefreshDcdnObjectCachesResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class RefreshDcdnObjectCachesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the refresh task. Multiple IDs are separated by commas (,).
+         * <p>The ID of the refresh task. Multiple IDs are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95248880</p>
          */
         public Builder refreshTaskId(String refreshTaskId) {
             this.refreshTaskId = refreshTaskId;
@@ -58,7 +61,10 @@ public class RefreshDcdnObjectCachesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E5BD4B50-7A02-493A-AE0B-97B9024B4135</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

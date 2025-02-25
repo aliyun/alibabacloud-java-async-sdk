@@ -1,26 +1,31 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnassignPrivateIpAddressesRequest} extends {@link RequestModel}
  *
  * <p>UnassignPrivateIpAddressesRequest</p>
  */
 public class UnassignPrivateIpAddressesRequest extends Request {
-    @Query
-    @NameInMap("NetworkInterfaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String networkInterfaceId;
 
-    @Query
-    @NameInMap("PrivateIpAddress")
-    @Validation(required = true)
-    private java.util.List < String > privateIpAddress;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> privateIpAddress;
 
     private UnassignPrivateIpAddressesRequest(Builder builder) {
         super(builder);
@@ -51,13 +56,13 @@ public class UnassignPrivateIpAddressesRequest extends Request {
     /**
      * @return privateIpAddress
      */
-    public java.util.List < String > getPrivateIpAddress() {
+    public java.util.List<String> getPrivateIpAddress() {
         return this.privateIpAddress;
     }
 
     public static final class Builder extends Request.Builder<UnassignPrivateIpAddressesRequest, Builder> {
         private String networkInterfaceId; 
-        private java.util.List < String > privateIpAddress; 
+        private java.util.List<String> privateIpAddress; 
 
         private Builder() {
             super();
@@ -70,7 +75,11 @@ public class UnassignPrivateIpAddressesRequest extends Request {
         } 
 
         /**
-         * NetworkInterfaceId.
+         * <p>The ID of the ENI.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-f8z57orgmt6d144t****</p>
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -79,9 +88,10 @@ public class UnassignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * PrivateIpAddress.
+         * <p>The secondary private IP addresses to unassign.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder privateIpAddress(java.util.List < String > privateIpAddress) {
+        public Builder privateIpAddress(java.util.List<String> privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
             this.privateIpAddress = privateIpAddress;
             return this;

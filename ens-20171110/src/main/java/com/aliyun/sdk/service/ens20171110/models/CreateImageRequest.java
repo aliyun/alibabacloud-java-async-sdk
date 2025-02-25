@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateImageRequest} extends {@link RequestModel}
  *
  * <p>CreateImageRequest</p>
  */
 public class CreateImageRequest extends Request {
-    @Query
-    @NameInMap("DeleteAfterImageUpload")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeleteAfterImageUpload")
     private String deleteAfterImageUpload;
 
-    @Query
-    @NameInMap("ImageName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String imageName;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("SnapshotId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotId")
     private String snapshotId;
 
     private CreateImageRequest(Builder builder) {
@@ -97,7 +102,15 @@ public class CreateImageRequest extends Request {
         } 
 
         /**
-         * DeleteAfterImageUpload.
+         * <p>Specifies whether to automatically release the instance after the image is packaged and uploaded. Only image builders are supported. Default value: false. Valid values:</p>
+         * <ul>
+         * <li>true: The image is released when the instance is released.</li>
+         * <li>false: The image is retained when the instance is released.</li>
+         * <li>If you leave this parameter empty, the default value is used.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder deleteAfterImageUpload(String deleteAfterImageUpload) {
             this.putQueryParameter("DeleteAfterImageUpload", deleteAfterImageUpload);
@@ -106,7 +119,11 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * ImageName.
+         * <p>The name of the image. The name must be 2 to 128 characters in length. The name can contain letters, digits, colons (:), underscores (<em>), and hyphens (-). It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (</em>), and hyphens (-).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ImageName</p>
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -115,7 +132,10 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-5rr1bnyrc4tswr8cq3w6y****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -124,7 +144,10 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * SnapshotId.
+         * <p>The ID of the snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bp67acfmxazb4p****</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);

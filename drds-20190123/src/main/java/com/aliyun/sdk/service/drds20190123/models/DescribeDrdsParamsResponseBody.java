@@ -62,7 +62,7 @@ public class DescribeDrdsParamsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * List.
+         * Indicates information about parameters.
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -70,7 +70,7 @@ public class DescribeDrdsParamsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Indicates the ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeDrdsParamsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +238,7 @@ public class DescribeDrdsParamsResponseBody extends TeaModel {
             private String paramVariableName; 
 
             /**
-             * DbName.
+             * Indicates the name of the database.
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -246,7 +246,7 @@ public class DescribeDrdsParamsResponseBody extends TeaModel {
             }
 
             /**
-             * NeedRestart.
+             * Indicates whether a restart is required.
              */
             public Builder needRestart(Boolean needRestart) {
                 this.needRestart = needRestart;
@@ -254,7 +254,7 @@ public class DescribeDrdsParamsResponseBody extends TeaModel {
             }
 
             /**
-             * ParamDefaultValue.
+             * Indicates the default value of a parameter.
              */
             public Builder paramDefaultValue(String paramDefaultValue) {
                 this.paramDefaultValue = paramDefaultValue;
@@ -262,7 +262,7 @@ public class DescribeDrdsParamsResponseBody extends TeaModel {
             }
 
             /**
-             * ParamDesc.
+             * Indicates the description of the parameter.
              */
             public Builder paramDesc(String paramDesc) {
                 this.paramDesc = paramDesc;
@@ -270,7 +270,7 @@ public class DescribeDrdsParamsResponseBody extends TeaModel {
             }
 
             /**
-             * ParamEnglishName.
+             * Indicates the name of the parameter.
              */
             public Builder paramEnglishName(String paramEnglishName) {
                 this.paramEnglishName = paramEnglishName;
@@ -278,7 +278,7 @@ public class DescribeDrdsParamsResponseBody extends TeaModel {
             }
 
             /**
-             * ParamLevel.
+             * Indicates the parameter level.
              */
             public Builder paramLevel(String paramLevel) {
                 this.paramLevel = paramLevel;
@@ -286,7 +286,7 @@ public class DescribeDrdsParamsResponseBody extends TeaModel {
             }
 
             /**
-             * ParamName.
+             * Indicates the name of the parameter.
              */
             public Builder paramName(String paramName) {
                 this.paramName = paramName;
@@ -294,7 +294,7 @@ public class DescribeDrdsParamsResponseBody extends TeaModel {
             }
 
             /**
-             * ParamRanges.
+             * Indicates the value range of the parameter.
              */
             public Builder paramRanges(String paramRanges) {
                 this.paramRanges = paramRanges;
@@ -302,7 +302,7 @@ public class DescribeDrdsParamsResponseBody extends TeaModel {
             }
 
             /**
-             * ParamType.
+             * Indicates the type of the parameter.
              */
             public Builder paramType(String paramType) {
                 this.paramType = paramType;
@@ -310,7 +310,7 @@ public class DescribeDrdsParamsResponseBody extends TeaModel {
             }
 
             /**
-             * ParamValue.
+             * Indicates the value of the parameter.
              */
             public Builder paramValue(String paramValue) {
                 this.paramValue = paramValue;
@@ -318,7 +318,7 @@ public class DescribeDrdsParamsResponseBody extends TeaModel {
             }
 
             /**
-             * ParamVariableName.
+             * Indicates the name of the variable.
              */
             public Builder paramVariableName(String paramVariableName) {
                 this.paramVariableName = paramVariableName;

@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDoctorHBaseRegionRequest} extends {@link RequestModel}
  *
  * <p>GetDoctorHBaseRegionRequest</p>
  */
 public class GetDoctorHBaseRegionRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("DateTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DateTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dateTime;
 
-    @Query
-    @NameInMap("HbaseRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HbaseRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hbaseRegionId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private GetDoctorHBaseRegionRequest(Builder builder) {
@@ -100,7 +105,11 @@ public class GetDoctorHBaseRegionRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * <p>Cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b933c5aac8fe****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -109,7 +118,11 @@ public class GetDoctorHBaseRegionRequest extends Request {
         }
 
         /**
-         * DateTime.
+         * <p>Date.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-01</p>
          */
         public Builder dateTime(String dateTime) {
             this.putQueryParameter("DateTime", dateTime);
@@ -118,7 +131,11 @@ public class GetDoctorHBaseRegionRequest extends Request {
         }
 
         /**
-         * Region ID。
+         * <p>Region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67f6808f60a8c357103a3a95fe00610e</p>
          */
         public Builder hbaseRegionId(String hbaseRegionId) {
             this.putQueryParameter("HbaseRegionId", hbaseRegionId);
@@ -127,7 +144,11 @@ public class GetDoctorHBaseRegionRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * <p>Region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

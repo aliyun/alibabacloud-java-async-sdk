@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteGreyTagRouteRequest} extends {@link RequestModel}
  *
  * <p>DeleteGreyTagRouteRequest</p>
  */
 public class DeleteGreyTagRouteRequest extends Request {
-    @Query
-    @NameInMap("GreyTagRouteId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GreyTagRouteId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long greyTagRouteId;
 
     private DeleteGreyTagRouteRequest(Builder builder) {
@@ -55,7 +60,11 @@ public class DeleteGreyTagRouteRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder greyTagRouteId(Long greyTagRouteId) {
             this.putQueryParameter("GreyTagRouteId", greyTagRouteId);

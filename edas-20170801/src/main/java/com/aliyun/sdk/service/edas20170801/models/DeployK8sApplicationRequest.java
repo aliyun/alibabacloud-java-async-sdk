@@ -66,6 +66,10 @@ public class DeployK8sApplicationRequest extends Request {
     private String customAffinity;
 
     @Query
+    @NameInMap("CustomAgentVersion")
+    private String customAgentVersion;
+
+    @Query
     @NameInMap("CustomTolerations")
     private String customTolerations;
 
@@ -296,6 +300,7 @@ public class DeployK8sApplicationRequest extends Request {
         this.cpuLimit = builder.cpuLimit;
         this.cpuRequest = builder.cpuRequest;
         this.customAffinity = builder.customAffinity;
+        this.customAgentVersion = builder.customAgentVersion;
         this.customTolerations = builder.customTolerations;
         this.deployAcrossNodes = builder.deployAcrossNodes;
         this.deployAcrossZones = builder.deployAcrossZones;
@@ -454,6 +459,13 @@ public class DeployK8sApplicationRequest extends Request {
      */
     public String getCustomAffinity() {
         return this.customAffinity;
+    }
+
+    /**
+     * @return customAgentVersion
+     */
+    public String getCustomAgentVersion() {
+        return this.customAgentVersion;
     }
 
     /**
@@ -848,6 +860,7 @@ public class DeployK8sApplicationRequest extends Request {
         private Integer cpuLimit; 
         private Integer cpuRequest; 
         private String customAffinity; 
+        private String customAgentVersion; 
         private String customTolerations; 
         private String deployAcrossNodes; 
         private String deployAcrossZones; 
@@ -922,6 +935,7 @@ public class DeployK8sApplicationRequest extends Request {
             this.cpuLimit = request.cpuLimit;
             this.cpuRequest = request.cpuRequest;
             this.customAffinity = request.customAffinity;
+            this.customAgentVersion = request.customAgentVersion;
             this.customTolerations = request.customTolerations;
             this.deployAcrossNodes = request.deployAcrossNodes;
             this.deployAcrossZones = request.deployAcrossZones;
@@ -1112,6 +1126,15 @@ public class DeployK8sApplicationRequest extends Request {
         public Builder customAffinity(String customAffinity) {
             this.putQueryParameter("CustomAffinity", customAffinity);
             this.customAffinity = customAffinity;
+            return this;
+        }
+
+        /**
+         * CustomAgentVersion.
+         */
+        public Builder customAgentVersion(String customAgentVersion) {
+            this.putQueryParameter("CustomAgentVersion", customAgentVersion);
+            this.customAgentVersion = customAgentVersion;
             return this;
         }
 

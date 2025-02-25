@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAntChainTransactionStatisticsRequest</p>
  */
 public class DescribeAntChainTransactionStatisticsRequest extends Request {
-    @Body
-    @NameInMap("AntChainId")
-    @Validation(required = true)
-    private String antChainId;
-
-    @Body
-    @NameInMap("End")
-    @Validation(required = true)
-    private Long end;
-
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("Start")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AntChainId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String antChainId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("End")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private Long end;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Start")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long start;
 
     private DescribeAntChainTransactionStatisticsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.antChainId = builder.antChainId;
         this.end = builder.end;
-        this.regionId = builder.regionId;
         this.start = builder.start;
     }
 
@@ -53,6 +52,13 @@ public class DescribeAntChainTransactionStatisticsRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return antChainId
      */
     public String getAntChainId() {
@@ -67,13 +73,6 @@ public class DescribeAntChainTransactionStatisticsRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return start
      */
     public Long getStart() {
@@ -81,22 +80,31 @@ public class DescribeAntChainTransactionStatisticsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeAntChainTransactionStatisticsRequest, Builder> {
+        private String regionId; 
         private String antChainId; 
         private Long end; 
-        private String regionId; 
         private Long start; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeAntChainTransactionStatisticsRequest response) {
-            super(response);
-            this.antChainId = response.antChainId;
-            this.end = response.end;
-            this.regionId = response.regionId;
-            this.start = response.start;
+        private Builder(DescribeAntChainTransactionStatisticsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.antChainId = request.antChainId;
+            this.end = request.end;
+            this.start = request.start;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AntChainId.
@@ -113,15 +121,6 @@ public class DescribeAntChainTransactionStatisticsRequest extends Request {
         public Builder end(Long end) {
             this.putBodyParameter("End", end);
             this.end = end;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

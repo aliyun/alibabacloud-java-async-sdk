@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alimt20181012.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TranslateImageRequest</p>
  */
 public class TranslateImageRequest extends Request {
-    @Body
-    @NameInMap("Ext")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Ext")
     private String ext;
 
-    @Body
-    @NameInMap("Field")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Field")
     private String field;
 
-    @Body
-    @NameInMap("ImageBase64")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ImageBase64")
     private String imageBase64;
 
-    @Body
-    @NameInMap("ImageUrl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ImageUrl")
     private String imageUrl;
 
-    @Body
-    @NameInMap("SourceLanguage")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceLanguage")
     private String sourceLanguage;
 
-    @Body
-    @NameInMap("TargetLanguage")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TargetLanguage")
     private String targetLanguage;
 
     private TranslateImageRequest(Builder builder) {

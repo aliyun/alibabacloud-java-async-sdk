@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateBasicAcceleratorResponseBody</p>
  */
 public class CreateBasicAcceleratorResponseBody extends TeaModel {
-    @NameInMap("AcceleratorId")
+    @com.aliyun.core.annotation.NameInMap("AcceleratorId")
     private String acceleratorId;
 
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateBasicAcceleratorResponseBody(Builder builder) {
@@ -70,7 +69,12 @@ public class CreateBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order.
+         * The order ID.
+         * <p>
+         * 
+         * This parameter is returned only if ChargeType is set to PREPAY.
+         * 
+         * If **AutoPay** is set to **false**, go to [Order Center](https://usercenter2-intl.aliyun.com/order/list) to complete the payment after an order is generated.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;

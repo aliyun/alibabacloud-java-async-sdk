@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataSharePerformanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDataSharePerformanceResponseBody</p>
  */
 public class DescribeDataSharePerformanceResponseBody extends TeaModel {
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("PerformanceKeys")
-    private java.util.List < PerformanceKeys> performanceKeys;
+    @com.aliyun.core.annotation.NameInMap("PerformanceKeys")
+    private java.util.List<PerformanceKeys> performanceKeys;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeDataSharePerformanceResponseBody(Builder builder) {
@@ -60,7 +65,7 @@ public class DescribeDataSharePerformanceResponseBody extends TeaModel {
     /**
      * @return performanceKeys
      */
-    public java.util.List < PerformanceKeys> getPerformanceKeys() {
+    public java.util.List<PerformanceKeys> getPerformanceKeys() {
         return this.performanceKeys;
     }
 
@@ -81,12 +86,15 @@ public class DescribeDataSharePerformanceResponseBody extends TeaModel {
     public static final class Builder {
         private String DBClusterId; 
         private String endTime; 
-        private java.util.List < PerformanceKeys> performanceKeys; 
+        private java.util.List<PerformanceKeys> performanceKeys; 
         private String requestId; 
         private String startTime; 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -94,7 +102,10 @@ public class DescribeDataSharePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * The end time of the query.
+         * <p>The end time of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-03T15:10Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -102,15 +113,18 @@ public class DescribeDataSharePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * Details of data sharing performance metrics.
+         * <p>Details of data sharing performance metrics.</p>
          */
-        public Builder performanceKeys(java.util.List < PerformanceKeys> performanceKeys) {
+        public Builder performanceKeys(java.util.List<PerformanceKeys> performanceKeys) {
             this.performanceKeys = performanceKeys;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BBE00C04-A3E8-4114-881D-0480A72CB92E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeDataSharePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * The start time of the query.
+         * <p>The start time of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-03T15:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -131,9 +148,15 @@ public class DescribeDataSharePerformanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDataSharePerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataSharePerformanceResponseBody</p>
+     */
     public static class Values extends TeaModel {
-        @NameInMap("Point")
-        private java.util.List < String > point;
+        @com.aliyun.core.annotation.NameInMap("Point")
+        private java.util.List<String> point;
 
         private Values(Builder builder) {
             this.point = builder.point;
@@ -150,17 +173,17 @@ public class DescribeDataSharePerformanceResponseBody extends TeaModel {
         /**
          * @return point
          */
-        public java.util.List < String > getPoint() {
+        public java.util.List<String> getPoint() {
             return this.point;
         }
 
         public static final class Builder {
-            private java.util.List < String > point; 
+            private java.util.List<String> point; 
 
             /**
-             * The value of the performance metric at a point in time.
+             * <p>The value of the performance metric at a point in time.</p>
              */
-            public Builder point(java.util.List < String > point) {
+            public Builder point(java.util.List<String> point) {
                 this.point = point;
                 return this;
             }
@@ -172,12 +195,18 @@ public class DescribeDataSharePerformanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataSharePerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataSharePerformanceResponseBody</p>
+     */
     public static class Series extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Values")
-        private java.util.List < Values> values;
+        @com.aliyun.core.annotation.NameInMap("Values")
+        private java.util.List<Values> values;
 
         private Series(Builder builder) {
             this.name = builder.name;
@@ -202,16 +231,19 @@ public class DescribeDataSharePerformanceResponseBody extends TeaModel {
         /**
          * @return values
          */
-        public java.util.List < Values> getValues() {
+        public java.util.List<Values> getValues() {
             return this.values;
         }
 
         public static final class Builder {
             private String name; 
-            private java.util.List < Values> values; 
+            private java.util.List<Values> values; 
 
             /**
-             * The name of the performance metric.
+             * <p>The name of the performance metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adbpg_datashare_topic_count</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -219,9 +251,9 @@ public class DescribeDataSharePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * One or more values of the performance metric.
+             * <p>One or more values of the performance metric.</p>
              */
-            public Builder values(java.util.List < Values> values) {
+            public Builder values(java.util.List<Values> values) {
                 this.values = values;
                 return this;
             }
@@ -233,14 +265,20 @@ public class DescribeDataSharePerformanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataSharePerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataSharePerformanceResponseBody</p>
+     */
     public static class PerformanceKeys extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Series")
-        private java.util.List < Series> series;
+        @com.aliyun.core.annotation.NameInMap("Series")
+        private java.util.List<Series> series;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
         private PerformanceKeys(Builder builder) {
@@ -267,7 +305,7 @@ public class DescribeDataSharePerformanceResponseBody extends TeaModel {
         /**
          * @return series
          */
-        public java.util.List < Series> getSeries() {
+        public java.util.List<Series> getSeries() {
             return this.series;
         }
 
@@ -280,11 +318,14 @@ public class DescribeDataSharePerformanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String name; 
-            private java.util.List < Series> series; 
+            private java.util.List<Series> series; 
             private String unit; 
 
             /**
-             * The name of the performance metric.
+             * <p>The name of the performance metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adbpg_datashare_topic_count</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -292,15 +333,18 @@ public class DescribeDataSharePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the performance metric.
+             * <p>Details of the performance metric.</p>
              */
-            public Builder series(java.util.List < Series> series) {
+            public Builder series(java.util.List<Series> series) {
                 this.series = series;
                 return this;
             }
 
             /**
-             * The unit of the performance metric.
+             * <p>The unit of the performance metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>int</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;

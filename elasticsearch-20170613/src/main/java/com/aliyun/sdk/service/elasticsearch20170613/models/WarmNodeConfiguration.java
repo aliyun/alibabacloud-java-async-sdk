@@ -1,36 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link WarmNodeConfiguration} extends {@link TeaModel}
  *
  * <p>WarmNodeConfiguration</p>
  */
 public class WarmNodeConfiguration extends TeaModel {
-    @NameInMap("amount")
-    @Validation(maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.NameInMap("amount")
+    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
     private Long amount;
 
-    @NameInMap("disk")
-    @Validation(maximum = 20480, minimum = 500)
+    @com.aliyun.core.annotation.NameInMap("disk")
+    @com.aliyun.core.annotation.Validation(maximum = 20480, minimum = 500)
     private Long disk;
 
-    @NameInMap("diskEncryption")
+    @com.aliyun.core.annotation.NameInMap("diskEncryption")
     private Boolean diskEncryption;
 
-    @NameInMap("diskType")
+    @com.aliyun.core.annotation.NameInMap("diskType")
     private String diskType;
 
-    @NameInMap("performanceLevel")
+    @com.aliyun.core.annotation.NameInMap("performanceLevel")
     private String performanceLevel;
 
-    @NameInMap("spec")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("spec")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String spec;
 
     private WarmNodeConfiguration(Builder builder) {
@@ -141,7 +141,7 @@ public class WarmNodeConfiguration extends TeaModel {
         }
 
         /**
-         * spec.
+         * <p>This parameter is required.</p>
          */
         public Builder spec(String spec) {
             this.spec = spec;

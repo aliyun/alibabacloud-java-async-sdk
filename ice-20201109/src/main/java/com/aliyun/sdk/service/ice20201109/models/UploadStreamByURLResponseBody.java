@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UploadStreamByURLResponseBody} extends {@link TeaModel}
  *
  * <p>UploadStreamByURLResponseBody</p>
  */
 public class UploadStreamByURLResponseBody extends TeaModel {
-    @NameInMap("FileURL")
+    @com.aliyun.core.annotation.NameInMap("FileURL")
     private String fileURL;
 
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @NameInMap("MediaId")
+    @com.aliyun.core.annotation.NameInMap("MediaId")
     private String mediaId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SourceURL")
+    @com.aliyun.core.annotation.NameInMap("SourceURL")
     private String sourceURL;
 
     private UploadStreamByURLResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class UploadStreamByURLResponseBody extends TeaModel {
         private String sourceURL; 
 
         /**
-         * FileURL.
+         * <p>The OSS URL of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://outin-***.oss-cn-shanghai.aliyuncs.com/stream/48555e8b-181dd5a8c07/48555e8b-181dd5a8c07.mp4">http://outin-***.oss-cn-shanghai.aliyuncs.com/stream/48555e8b-181dd5a8c07/48555e8b-181dd5a8c07.mp4</a></p>
          */
         public Builder fileURL(String fileURL) {
             this.fileURL = fileURL;
@@ -94,7 +102,10 @@ public class UploadStreamByURLResponseBody extends TeaModel {
         }
 
         /**
-         * JobId.
+         * <p>The ID of the upload job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>cdb3e74639973036bc84</strong></strong></p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -102,7 +113,10 @@ public class UploadStreamByURLResponseBody extends TeaModel {
         }
 
         /**
-         * MediaId.
+         * <p>The ID of the media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>411bed50018971edb60b0764a0ec6***</p>
          */
         public Builder mediaId(String mediaId) {
             this.mediaId = mediaId;
@@ -110,7 +124,10 @@ public class UploadStreamByURLResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>89-C21D-4B78-AE24-3788B8</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +135,10 @@ public class UploadStreamByURLResponseBody extends TeaModel {
         }
 
         /**
-         * SourceURL.
+         * <p>The URL of the source file that is uploaded in the upload job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/sample-stream.mp4">https://example.com/sample-stream.mp4</a></p>
          */
         public Builder sourceURL(String sourceURL) {
             this.sourceURL = sourceURL;

@@ -1,47 +1,72 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDiskRequest} extends {@link RequestModel}
  *
  * <p>CreateDiskRequest</p>
  */
 public class CreateDiskRequest extends Request {
-    @Query
-    @NameInMap("Category")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Category")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String category;
 
-    @Query
-    @NameInMap("EnsRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskName")
+    private String diskName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Encrypted")
+    private Boolean encrypted;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnsRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ensRegionId;
 
-    @Query
-    @NameInMap("InstanceChargeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceChargeType;
 
-    @Query
-    @NameInMap("Size")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KMSKeyId")
+    private String KMSKeyId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Size")
     private String size;
 
-    @Query
-    @NameInMap("SnapshotId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotId")
     private String snapshotId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private CreateDiskRequest(Builder builder) {
         super(builder);
         this.category = builder.category;
+        this.diskName = builder.diskName;
+        this.encrypted = builder.encrypted;
         this.ensRegionId = builder.ensRegionId;
         this.instanceChargeType = builder.instanceChargeType;
+        this.KMSKeyId = builder.KMSKeyId;
         this.size = builder.size;
         this.snapshotId = builder.snapshotId;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -65,6 +90,20 @@ public class CreateDiskRequest extends Request {
     }
 
     /**
+     * @return diskName
+     */
+    public String getDiskName() {
+        return this.diskName;
+    }
+
+    /**
+     * @return encrypted
+     */
+    public Boolean getEncrypted() {
+        return this.encrypted;
+    }
+
+    /**
      * @return ensRegionId
      */
     public String getEnsRegionId() {
@@ -76,6 +115,13 @@ public class CreateDiskRequest extends Request {
      */
     public String getInstanceChargeType() {
         return this.instanceChargeType;
+    }
+
+    /**
+     * @return KMSKeyId
+     */
+    public String getKMSKeyId() {
+        return this.KMSKeyId;
     }
 
     /**
@@ -92,12 +138,23 @@ public class CreateDiskRequest extends Request {
         return this.snapshotId;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List<Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<CreateDiskRequest, Builder> {
         private String category; 
+        private String diskName; 
+        private Boolean encrypted; 
         private String ensRegionId; 
         private String instanceChargeType; 
+        private String KMSKeyId; 
         private String size; 
         private String snapshotId; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -106,14 +163,26 @@ public class CreateDiskRequest extends Request {
         private Builder(CreateDiskRequest request) {
             super(request);
             this.category = request.category;
+            this.diskName = request.diskName;
+            this.encrypted = request.encrypted;
             this.ensRegionId = request.ensRegionId;
             this.instanceChargeType = request.instanceChargeType;
+            this.KMSKeyId = request.KMSKeyId;
             this.size = request.size;
             this.snapshotId = request.snapshotId;
+            this.tag = request.tag;
         } 
 
         /**
-         * Category.
+         * <p>The category of the disk. Valid values:</p>
+         * <ul>
+         * <li>cloud_efficiency: ultra disk.</li>
+         * <li>cloud_ssd: all-flash disk.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_efficiency</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -122,7 +191,39 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * EnsRegionId.
+         * <p>The name of the disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourDiskName</p>
+         */
+        public Builder diskName(String diskName) {
+            this.putQueryParameter("DiskName", diskName);
+            this.diskName = diskName;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to encrypt the new system disk. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default): no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder encrypted(Boolean encrypted) {
+            this.putQueryParameter("Encrypted", encrypted);
+            this.encrypted = encrypted;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the edge node.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chengdu-telecom</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -131,7 +232,11 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * InstanceChargeType.
+         * <p>The billing method of the instance. Set the value to <strong>PostPaid</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -140,7 +245,25 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * Size.
+         * <p>The ID of the Key Management Service (KMS) key that is used by the cloud disk.</p>
+         * <blockquote>
+         * <p> If you set the <strong>Encrypted</strong> parameter to <strong>true</strong>, the default service key is used when the <strong>KMSKeyId</strong> parameter is empty.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0e478b7a-4262-4802-b8cb-00d3fxxxxx</p>
+         */
+        public Builder KMSKeyId(String KMSKeyId) {
+            this.putQueryParameter("KMSKeyId", KMSKeyId);
+            this.KMSKeyId = KMSKeyId;
+            return this;
+        }
+
+        /**
+         * <p>The size of the disk. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder size(String size) {
             this.putQueryParameter("Size", size);
@@ -149,11 +272,28 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * SnapshotId.
+         * <p>The ID of the snapshot that you want to use to create the disk.</p>
+         * <p>The following limits apply to the <strong>SnapshotId</strong> and <strong>Size</strong> parameters:</p>
+         * <ul>
+         * <li>If the size of the snapshot specified by <strong>SnapshotId</strong> is greater than the specified <strong>Size</strong> value, the size of the created disk is equal to the specified snapshot size.</li>
+         * <li>If the size of the snapshot specified by <strong>SnapshotId</strong> is smaller than the specified <strong>Size</strong> value, the size of the created disk is equal to the specified <strong>Size</strong> value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>s-897654321****</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
             this.snapshotId = snapshotId;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List<Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -164,4 +304,71 @@ public class CreateDiskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDiskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDiskRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

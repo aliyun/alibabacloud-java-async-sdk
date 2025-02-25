@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alimt20181012.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTitleDiagnoseResponseBody</p>
  */
 public class GetTitleDiagnoseResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetTitleDiagnoseResponseBody(Builder builder) {
@@ -112,34 +111,34 @@ public class GetTitleDiagnoseResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AllUppercaseWords")
+        @com.aliyun.core.annotation.NameInMap("AllUppercaseWords")
         private String allUppercaseWords;
 
-        @NameInMap("ContainCoreClasses")
+        @com.aliyun.core.annotation.NameInMap("ContainCoreClasses")
         private String containCoreClasses;
 
-        @NameInMap("DisableWords")
+        @com.aliyun.core.annotation.NameInMap("DisableWords")
         private String disableWords;
 
-        @NameInMap("DuplicateWords")
+        @com.aliyun.core.annotation.NameInMap("DuplicateWords")
         private String duplicateWords;
 
-        @NameInMap("LanguageQualityScore")
+        @com.aliyun.core.annotation.NameInMap("LanguageQualityScore")
         private String languageQualityScore;
 
-        @NameInMap("NoFirstUppercaseList")
+        @com.aliyun.core.annotation.NameInMap("NoFirstUppercaseList")
         private String noFirstUppercaseList;
 
-        @NameInMap("OverLengthLimit")
+        @com.aliyun.core.annotation.NameInMap("OverLengthLimit")
         private String overLengthLimit;
 
-        @NameInMap("TotalScore")
+        @com.aliyun.core.annotation.NameInMap("TotalScore")
         private String totalScore;
 
-        @NameInMap("WordCount")
+        @com.aliyun.core.annotation.NameInMap("WordCount")
         private String wordCount;
 
-        @NameInMap("WordSpelledCorrectError")
+        @com.aliyun.core.annotation.NameInMap("WordSpelledCorrectError")
         private String wordSpelledCorrectError;
 
         private Data(Builder builder) {

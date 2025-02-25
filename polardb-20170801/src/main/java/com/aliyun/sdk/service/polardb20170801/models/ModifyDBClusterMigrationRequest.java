@@ -1,62 +1,67 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBClusterMigrationRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBClusterMigrationRequest</p>
  */
 public class ModifyDBClusterMigrationRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ConnectionStrings")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectionStrings")
     private String connectionStrings;
 
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("NewMasterInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewMasterInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String newMasterInstanceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("SourceRDSDBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceRDSDBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceRDSDBInstanceId;
 
-    @Query
-    @NameInMap("SwapConnectionString")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SwapConnectionString")
     private String swapConnectionString;
 
     private ModifyDBClusterMigrationRequest(Builder builder) {
@@ -206,10 +211,13 @@ public class ModifyDBClusterMigrationRequest extends Request {
         }
 
         /**
-         * The endpoints to be switched. The endpoints are in the JSON format.
-         * <p>
+         * <p>The endpoints to be switched. The endpoints are in the JSON format.</p>
+         * <blockquote>
+         * <p>This parameter is valid when the SwapConnectionString parameter is set to true.</p>
+         * </blockquote>
          * 
-         * > This parameter is valid when the SwapConnectionString parameter is set to true.
+         * <strong>example:</strong>
+         * <p>{&quot;rm-2ze73el581cs*****.mysql.pre.rds.aliyuncs.com&quot;:&quot;pc-2ze8200s298e*****.mysql.polardb.pre.rds.aliyuncs.com&quot;,&quot;rm-2ze73el581cs86*****.mysql.pre.rds.aliyuncs.com&quot;:&quot;test-p*****.mysql.polardb.pre.rds.aliyuncs.com&quot;}</p>
          */
         public Builder connectionStrings(String connectionStrings) {
             this.putQueryParameter("ConnectionStrings", connectionStrings);
@@ -218,7 +226,11 @@ public class ModifyDBClusterMigrationRequest extends Request {
         }
 
         /**
-         * The ID of cluster.
+         * <p>The ID of cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-**************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -227,11 +239,15 @@ public class ModifyDBClusterMigrationRequest extends Request {
         }
 
         /**
-         * The ID of the new instance or new cluster. Valid values:
-         * <p>
+         * <p>The ID of the new instance or new cluster. Valid values:</p>
+         * <ul>
+         * <li>To perform a data migration, enter the ID of the PolarDB cluster.</li>
+         * <li>To perform a migration rollback, enter the ID of the ApsaraDB for RDS instance.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   To perform a data migration, enter the ID of the PolarDB cluster.
-         * *   To perform a migration rollback, enter the ID of the ApsaraDB for RDS instance.
+         * <strong>example:</strong>
+         * <p>pc-**************</p>
          */
         public Builder newMasterInstanceId(String newMasterInstanceId) {
             this.putQueryParameter("NewMasterInstanceId", newMasterInstanceId);
@@ -285,7 +301,11 @@ public class ModifyDBClusterMigrationRequest extends Request {
         }
 
         /**
-         * The ID of the source ApsaraDB RDS instance.
+         * <p>The ID of the source ApsaraDB RDS instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-************</p>
          */
         public Builder sourceRDSDBInstanceId(String sourceRDSDBInstanceId) {
             this.putQueryParameter("SourceRDSDBInstanceId", sourceRDSDBInstanceId);
@@ -294,13 +314,15 @@ public class ModifyDBClusterMigrationRequest extends Request {
         }
 
         /**
-         * Specifies whether to switch the endpoints. Valid values:
-         * <p>
+         * <p>Specifies whether to switch the endpoints. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: switches the endpoints. If you select this option, you do not need the change the endpoint in your applications.</li>
+         * <li><strong>false</strong>: does not switch the endpoints. If you select this option, you must specify the endpoint of the PolarDB cluster in your applications.</li>
+         * </ul>
+         * <p>Default value: <strong>false</strong>.</p>
          * 
-         * *   **true**: switches the endpoints. If you select this option, you do not need the change the endpoint in your applications.
-         * *   **false**: does not switch the endpoints. If you select this option, you must specify the endpoint of the PolarDB cluster in your applications.
-         * 
-         * Default value: **false**.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder swapConnectionString(String swapConnectionString) {
             this.putQueryParameter("SwapConnectionString", swapConnectionString);

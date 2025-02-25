@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOpaPluginStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetOpaPluginStatusResponseBody</p>
  */
 public class GetOpaPluginStatusResponseBody extends TeaModel {
-    @NameInMap("InstallStatus")
-    private java.util.List < InstallStatus> installStatus;
+    @com.aliyun.core.annotation.NameInMap("InstallStatus")
+    private java.util.List<InstallStatus> installStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetOpaPluginStatusResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class GetOpaPluginStatusResponseBody extends TeaModel {
     /**
      * @return installStatus
      */
-    public java.util.List < InstallStatus> getInstallStatus() {
+    public java.util.List<InstallStatus> getInstallStatus() {
         return this.installStatus;
     }
 
@@ -46,19 +51,22 @@ public class GetOpaPluginStatusResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstallStatus> installStatus; 
+        private java.util.List<InstallStatus> installStatus; 
         private String requestId; 
 
         /**
-         * The installation status of the components that are required for clusters protected by proactive defense for containers.
+         * <p>The installation status of the components that are required for clusters protected by proactive defense for containers.</p>
          */
-        public Builder installStatus(java.util.List < InstallStatus> installStatus) {
+        public Builder installStatus(java.util.List<InstallStatus> installStatus) {
             this.installStatus = installStatus;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>09969D2C-4FAD-429E-BFBF-9A60DEF8BF6F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class GetOpaPluginStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetOpaPluginStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOpaPluginStatusResponseBody</p>
+     */
     public static class InstallStatus extends TeaModel {
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("InstallStatus")
+        @com.aliyun.core.annotation.NameInMap("InstallStatus")
         private Boolean installStatus;
 
         private InstallStatus(Builder builder) {
@@ -110,7 +124,10 @@ public class GetOpaPluginStatusResponseBody extends TeaModel {
             private Boolean installStatus; 
 
             /**
-             * The cluster ID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c60b77fe62093480db6164a3c2fa****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -118,11 +135,14 @@ public class GetOpaPluginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the component is installed. Valid values:
-             * <p>
+             * <p>Indicates whether the component is installed. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder installStatus(Boolean installStatus) {
                 this.installStatus = installStatus;

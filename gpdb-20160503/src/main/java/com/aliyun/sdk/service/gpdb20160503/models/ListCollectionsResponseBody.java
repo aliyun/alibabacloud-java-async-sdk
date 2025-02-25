@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCollectionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListCollectionsResponseBody</p>
  */
 public class ListCollectionsResponseBody extends TeaModel {
-    @NameInMap("Collections")
+    @com.aliyun.core.annotation.NameInMap("Collections")
     private Collections collections;
 
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private ListCollectionsResponseBody(Builder builder) {
@@ -122,7 +127,7 @@ public class ListCollectionsResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The queried vector collections.
+         * <p>The queried vector collections.</p>
          */
         public Builder collections(Collections collections) {
             this.collections = collections;
@@ -130,7 +135,10 @@ public class ListCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -138,7 +146,10 @@ public class ListCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -146,7 +157,10 @@ public class ListCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -154,7 +168,10 @@ public class ListCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the namespace.
+         * <p>The name of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mynamespace</p>
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
@@ -162,7 +179,10 @@ public class ListCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -170,7 +190,10 @@ public class ListCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,11 +201,14 @@ public class ListCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>success</strong></li>
+         * <li><strong>fail</strong></li>
+         * </ul>
          * 
-         * *   **success**
-         * *   **fail**
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -195,9 +221,15 @@ public class ListCollectionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCollectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCollectionsResponseBody</p>
+     */
     public static class Collections extends TeaModel {
-        @NameInMap("Collection")
-        private java.util.List < String > collection;
+        @com.aliyun.core.annotation.NameInMap("Collection")
+        private java.util.List<String> collection;
 
         private Collections(Builder builder) {
             this.collection = builder.collection;
@@ -214,17 +246,17 @@ public class ListCollectionsResponseBody extends TeaModel {
         /**
          * @return collection
          */
-        public java.util.List < String > getCollection() {
+        public java.util.List<String> getCollection() {
             return this.collection;
         }
 
         public static final class Builder {
-            private java.util.List < String > collection; 
+            private java.util.List<String> collection; 
 
             /**
              * Collection.
              */
-            public Builder collection(java.util.List < String > collection) {
+            public Builder collection(java.util.List<String> collection) {
                 this.collection = collection;
                 return this;
             }

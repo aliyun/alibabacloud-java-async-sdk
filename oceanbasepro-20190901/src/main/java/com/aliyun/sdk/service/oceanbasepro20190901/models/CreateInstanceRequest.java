@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,78 +11,89 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateInstanceRequest</p>
  */
 public class CreateInstanceRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private Boolean autoRenew;
 
-    @Body
-    @NameInMap("AutoRenewPeriod")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoRenewPeriod")
     private Long autoRenewPeriod;
 
-    @Body
-    @NameInMap("ChargeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String chargeType;
 
-    @Body
-    @NameInMap("DiskSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CpuArch")
+    private String cpuArch;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DiskSize")
     private Long diskSize;
 
-    @Body
-    @NameInMap("DiskType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DiskType")
     private String diskType;
 
-    @Body
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Body
-    @NameInMap("InstanceClass")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceClass")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceClass;
 
-    @Body
-    @NameInMap("InstanceName")
-    @Validation(maxLength = 20)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String instanceName;
 
-    @Body
-    @NameInMap("IsolationOptimization")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IsolationOptimization")
     private String isolationOptimization;
 
-    @Body
-    @NameInMap("ObVersion")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ObVersion")
     private String obVersion;
 
-    @Body
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Long period;
 
-    @Body
-    @NameInMap("PeriodUnit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PeriodUnit")
     private String periodUnit;
 
-    @Body
-    @NameInMap("ReplicaMode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PrimaryInstance")
+    private String primaryInstance;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PrimaryRegion")
+    private String primaryRegion;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ReplicaMode")
     private String replicaMode;
 
-    @Body
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Body
-    @NameInMap("Series")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Series")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String series;
 
-    @Body
-    @NameInMap("Zones")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Zones")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String zones;
 
     private CreateInstanceRequest(Builder builder) {
@@ -92,6 +102,7 @@ public class CreateInstanceRequest extends Request {
         this.autoRenew = builder.autoRenew;
         this.autoRenewPeriod = builder.autoRenewPeriod;
         this.chargeType = builder.chargeType;
+        this.cpuArch = builder.cpuArch;
         this.diskSize = builder.diskSize;
         this.diskType = builder.diskType;
         this.dryRun = builder.dryRun;
@@ -101,6 +112,8 @@ public class CreateInstanceRequest extends Request {
         this.obVersion = builder.obVersion;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
+        this.primaryInstance = builder.primaryInstance;
+        this.primaryRegion = builder.primaryRegion;
         this.replicaMode = builder.replicaMode;
         this.resourceGroupId = builder.resourceGroupId;
         this.series = builder.series;
@@ -146,6 +159,13 @@ public class CreateInstanceRequest extends Request {
      */
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    /**
+     * @return cpuArch
+     */
+    public String getCpuArch() {
+        return this.cpuArch;
     }
 
     /**
@@ -212,6 +232,20 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
+     * @return primaryInstance
+     */
+    public String getPrimaryInstance() {
+        return this.primaryInstance;
+    }
+
+    /**
+     * @return primaryRegion
+     */
+    public String getPrimaryRegion() {
+        return this.primaryRegion;
+    }
+
+    /**
      * @return replicaMode
      */
     public String getReplicaMode() {
@@ -244,6 +278,7 @@ public class CreateInstanceRequest extends Request {
         private Boolean autoRenew; 
         private Long autoRenewPeriod; 
         private String chargeType; 
+        private String cpuArch; 
         private Long diskSize; 
         private String diskType; 
         private Boolean dryRun; 
@@ -253,6 +288,8 @@ public class CreateInstanceRequest extends Request {
         private String obVersion; 
         private Long period; 
         private String periodUnit; 
+        private String primaryInstance; 
+        private String primaryRegion; 
         private String replicaMode; 
         private String resourceGroupId; 
         private String series; 
@@ -268,6 +305,7 @@ public class CreateInstanceRequest extends Request {
             this.autoRenew = request.autoRenew;
             this.autoRenewPeriod = request.autoRenewPeriod;
             this.chargeType = request.chargeType;
+            this.cpuArch = request.cpuArch;
             this.diskSize = request.diskSize;
             this.diskType = request.diskType;
             this.dryRun = request.dryRun;
@@ -277,6 +315,8 @@ public class CreateInstanceRequest extends Request {
             this.obVersion = request.obVersion;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
+            this.primaryInstance = request.primaryInstance;
+            this.primaryRegion = request.primaryRegion;
             this.replicaMode = request.replicaMode;
             this.resourceGroupId = request.resourceGroupId;
             this.series = request.series;
@@ -330,6 +370,15 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
+         * CpuArch.
+         */
+        public Builder cpuArch(String cpuArch) {
+            this.putBodyParameter("CpuArch", cpuArch);
+            this.cpuArch = cpuArch;
+            return this;
+        }
+
+        /**
          * The size of the storage space,in GB.    
          * <p>
          * The limits on the storage space vary with the cluster specifications:   
@@ -346,7 +395,11 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The return result of the request.
+         * The type of the storage disk where the cluster is deployed. This parameter takes effect only for Standard Cluster Edition (Cloud Disk).
+         * <p>
+         * Valid values:
+         * - cloud_essd_pl1: ESSD PL1.
+         * - cloud_essd_pl0: ESSD PL0. Default value: cloud_essd_pl1.
          */
         public Builder diskType(String diskType) {
             this.putBodyParameter("DiskType", diskType);
@@ -355,7 +408,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform only a dry run for the request. Default value: false. Valid values:
+         * <p>
+         * - true: Only a dry-run request is sent and the instance is not created. If the dry run succeeds, DryRunResult=true is returned. If the dry run fails, an error code is returned.
+         * - false: The actual request is sent and no dry run is performed. The instance is created if the requirements are met. By default, the DryRunResult parameter returns false if you set DryRun to false.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putBodyParameter("DryRun", dryRun);
@@ -391,7 +447,11 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * IsolationOptimization.
+         * Specifies whether to enable the control group feature.
+         * <p>
+         * Valid values:
+         * - true
+         * - false
          */
         public Builder isolationOptimization(String isolationOptimization) {
             this.putBodyParameter("IsolationOptimization", isolationOptimization);
@@ -435,7 +495,34 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * ReplicaMode.
+         * Primary instance ID.
+         */
+        public Builder primaryInstance(String primaryInstance) {
+            this.putBodyParameter("PrimaryInstance", primaryInstance);
+            this.primaryInstance = primaryInstance;
+            return this;
+        }
+
+        /**
+         * Primary instance region.
+         */
+        public Builder primaryRegion(String primaryRegion) {
+            this.putBodyParameter("PrimaryRegion", primaryRegion);
+            this.primaryRegion = primaryRegion;
+            return this;
+        }
+
+        /**
+         * The number of full-featured replicas.
+         * <p>
+         * - 3F: three full-featured replicas.
+         * - 2F1L: two full-featured replicas and one log replica.
+         * - 2F1A: two full-featured replicas and one arbitration service.
+         * - ApsaraDB for OceanBase earlier than V4.1 supports 3F and 2F1L.
+         * - ApsaraDB for OceanBase V4.1 or later supports 3F and 2F1A.
+         * - An ApsaraDB for OceanBase instance deployed across three zones supports only 3F.
+         * - An ApsaraDB for OceanBase instance deployed across two zones supports 2F1A or 2F1L, depending on the version.
+         * - An ApsaraDB for OceanBase instance deployed in a single zone supports 3F, 2F1A, or 2F1L, depending on the version.
          */
         public Builder replicaMode(String replicaMode) {
             this.putBodyParameter("ReplicaMode", replicaMode);

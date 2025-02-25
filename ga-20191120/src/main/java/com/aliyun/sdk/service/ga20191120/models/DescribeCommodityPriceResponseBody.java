@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCommodityPriceResponseBody</p>
  */
 public class DescribeCommodityPriceResponseBody extends TeaModel {
-    @NameInMap("Currency")
+    @com.aliyun.core.annotation.NameInMap("Currency")
     private String currency;
 
-    @NameInMap("DiscountPrice")
+    @com.aliyun.core.annotation.NameInMap("DiscountPrice")
     private Double discountPrice;
 
-    @NameInMap("OrderDetails")
+    @com.aliyun.core.annotation.NameInMap("OrderDetails")
     private java.util.List < OrderDetails> orderDetails;
 
-    @NameInMap("OriginalPrice")
+    @com.aliyun.core.annotation.NameInMap("OriginalPrice")
     private Double originalPrice;
 
-    @NameInMap("Promotions")
+    @com.aliyun.core.annotation.NameInMap("Promotions")
     private java.util.List < Promotions> promotions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RuleDetails")
+    @com.aliyun.core.annotation.NameInMap("RuleDetails")
     private java.util.List < RuleDetails> ruleDetails;
 
-    @NameInMap("TradePrice")
+    @com.aliyun.core.annotation.NameInMap("TradePrice")
     private Double tradePrice;
 
     private DescribeCommodityPriceResponseBody(Builder builder) {
@@ -158,10 +157,10 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
         }
 
         /**
-         * The list of coupons.
+         * The details of the coupon.
          * <p>
          * 
-         * >  This parameter is unavailable on the China site (aliyun.com).
+         * >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
          */
         public Builder promotions(java.util.List < Promotions> promotions) {
             this.promotions = promotions;
@@ -199,19 +198,19 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
     } 
 
     public static class ModuleDetails extends TeaModel {
-        @NameInMap("DiscountPrice")
+        @com.aliyun.core.annotation.NameInMap("DiscountPrice")
         private Double discountPrice;
 
-        @NameInMap("ModuleCode")
+        @com.aliyun.core.annotation.NameInMap("ModuleCode")
         private String moduleCode;
 
-        @NameInMap("ModuleName")
+        @com.aliyun.core.annotation.NameInMap("ModuleName")
         private String moduleName;
 
-        @NameInMap("OriginalPrice")
+        @com.aliyun.core.annotation.NameInMap("OriginalPrice")
         private Double originalPrice;
 
-        @NameInMap("TradePrice")
+        @com.aliyun.core.annotation.NameInMap("TradePrice")
         private Double tradePrice;
 
         private ModuleDetails(Builder builder) {
@@ -305,7 +304,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The discounted price.
+             * The transaction price, which is equal to the original price minus the discount.
              */
             public Builder tradePrice(Double tradePrice) {
                 this.tradePrice = tradePrice;
@@ -320,19 +319,19 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
 
     }
     public static class PromDetails extends TeaModel {
-        @NameInMap("FinalPromFee")
+        @com.aliyun.core.annotation.NameInMap("FinalPromFee")
         private Double finalPromFee;
 
-        @NameInMap("OptionCode")
+        @com.aliyun.core.annotation.NameInMap("OptionCode")
         private String optionCode;
 
-        @NameInMap("PromType")
+        @com.aliyun.core.annotation.NameInMap("PromType")
         private String promType;
 
-        @NameInMap("PromotionId")
+        @com.aliyun.core.annotation.NameInMap("PromotionId")
         private String promotionId;
 
-        @NameInMap("PromotionName")
+        @com.aliyun.core.annotation.NameInMap("PromotionName")
         private String promotionName;
 
         private PromDetails(Builder builder) {
@@ -397,7 +396,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
              * The discounted price.
              * <p>
              * 
-             * >  This parameter is unavailable on the China site (aliyun.com).
+             * >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
              */
             public Builder finalPromFee(Double finalPromFee) {
                 this.finalPromFee = finalPromFee;
@@ -408,7 +407,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
              * The code of the discount option.
              * <p>
              * 
-             * >  This parameter is unavailable on the China site (aliyun.com).
+             * >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
              */
             public Builder optionCode(String optionCode) {
                 this.optionCode = optionCode;
@@ -419,7 +418,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
              * The sub-type of the discount.
              * <p>
              * 
-             * >  This parameter is unavailable on the China site (aliyun.com).
+             * >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
              */
             public Builder promType(String promType) {
                 this.promType = promType;
@@ -430,7 +429,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
              * The ID of the discount item.
              * <p>
              * 
-             * >  This parameter is unavailable on the China site (aliyun.com).
+             * >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
              */
             public Builder promotionId(String promotionId) {
                 this.promotionId = promotionId;
@@ -441,7 +440,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
              * The name of the discount item.
              * <p>
              * 
-             * >  This parameter is unavailable on the China site (aliyun.com).
+             * >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -456,31 +455,31 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
 
     }
     public static class OrderDetails extends TeaModel {
-        @NameInMap("CommodityCode")
+        @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
 
-        @NameInMap("CommodityName")
+        @com.aliyun.core.annotation.NameInMap("CommodityName")
         private String commodityName;
 
-        @NameInMap("DiscountPrice")
+        @com.aliyun.core.annotation.NameInMap("DiscountPrice")
         private Double discountPrice;
 
-        @NameInMap("ModuleDetails")
+        @com.aliyun.core.annotation.NameInMap("ModuleDetails")
         private java.util.List < ModuleDetails> moduleDetails;
 
-        @NameInMap("OriginalPrice")
+        @com.aliyun.core.annotation.NameInMap("OriginalPrice")
         private Double originalPrice;
 
-        @NameInMap("PromDetails")
+        @com.aliyun.core.annotation.NameInMap("PromDetails")
         private java.util.List < PromDetails> promDetails;
 
-        @NameInMap("Quantity")
+        @com.aliyun.core.annotation.NameInMap("Quantity")
         private Long quantity;
 
-        @NameInMap("RuleIds")
+        @com.aliyun.core.annotation.NameInMap("RuleIds")
         private java.util.List < Long > ruleIds;
 
-        @NameInMap("TradePrice")
+        @com.aliyun.core.annotation.NameInMap("TradePrice")
         private Double tradePrice;
 
         private OrderDetails(Builder builder) {
@@ -618,10 +617,10 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The details about the discount.
+             * The details of the discount.
              * <p>
              * 
-             * >  This parameter is unavailable on the China site (aliyun.com).
+             * >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
              */
             public Builder promDetails(java.util.List < PromDetails> promDetails) {
                 this.promDetails = promDetails;
@@ -637,7 +636,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the discount rules.
+             * The IDs of discount rules.
              */
             public Builder ruleIds(java.util.List < Long > ruleIds) {
                 this.ruleIds = ruleIds;
@@ -660,19 +659,19 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
 
     }
     public static class Promotions extends TeaModel {
-        @NameInMap("CanPromFee")
+        @com.aliyun.core.annotation.NameInMap("CanPromFee")
         private Double canPromFee;
 
-        @NameInMap("OptionCode")
+        @com.aliyun.core.annotation.NameInMap("OptionCode")
         private String optionCode;
 
-        @NameInMap("PromotionName")
+        @com.aliyun.core.annotation.NameInMap("PromotionName")
         private String promotionName;
 
-        @NameInMap("PromotionOptionNo")
+        @com.aliyun.core.annotation.NameInMap("PromotionOptionNo")
         private String promotionOptionNo;
 
-        @NameInMap("Selected")
+        @com.aliyun.core.annotation.NameInMap("Selected")
         private Boolean selected;
 
         private Promotions(Builder builder) {
@@ -737,7 +736,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
              * The discounted amount.
              * <p>
              * 
-             * >  This parameter is unavailable on the China site (aliyun.com).
+             * >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
              */
             public Builder canPromFee(Double canPromFee) {
                 this.canPromFee = canPromFee;
@@ -745,10 +744,10 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the commodity to which the coupon applies.
+             * The code of the commodity to which the coupon can be applied.
              * <p>
              * 
-             * >  This parameter is unavailable on the China site (aliyun.com).
+             * >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
              */
             public Builder optionCode(String optionCode) {
                 this.optionCode = optionCode;
@@ -759,7 +758,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
              * The name of the coupon.
              * <p>
              * 
-             * >  This parameter is unavailable on the China site (aliyun.com).
+             * >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -767,14 +766,10 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The coupon code.
+             * The code of the coupon.
              * <p>
-             * 
-             * > 
-             * 
-             * *   `youhuiquan_promotion_option_id_for_blank` indicates coupons that do not apply.
-             * 
-             * *   This parameter is unavailable on the China site (aliyun.com).
+             * > *   `youhuiquan_promotion_option_id_for_blank` indicates coupons that cannot be applied to the commodity.
+             * > *   This parameter does not take effect for accounts registered on the China site (aliyun.com).
              */
             public Builder promotionOptionNo(String promotionOptionNo) {
                 this.promotionOptionNo = promotionOptionNo;
@@ -782,13 +777,13 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether an item is selected. Valid values:
+             * Indicates whether the coupon was selected.
              * <p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * *   **true**
+             * *   **false**
              * 
-             * >  This parameter is unavailable on the China site (aliyun.com).
+             * >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
              */
             public Builder selected(Boolean selected) {
                 this.selected = selected;
@@ -803,10 +798,10 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
 
     }
     public static class RuleDetails extends TeaModel {
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
         private RuleDetails(Builder builder) {

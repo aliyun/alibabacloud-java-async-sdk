@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.market20151101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ActivateLicenseRequest} extends {@link RequestModel}
  *
  * <p>ActivateLicenseRequest</p>
  */
 public class ActivateLicenseRequest extends Request {
-    @Query
-    @NameInMap("Identification")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Identification")
     private String identification;
 
-    @Query
-    @NameInMap("LicenseCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LicenseCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String licenseCode;
 
     private ActivateLicenseRequest(Builder builder) {
@@ -78,7 +83,10 @@ public class ActivateLicenseRequest extends Request {
         }
 
         /**
-         * LicenseCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>APSEDH8TA5CSGK-********_6CNTACBH9EQPOATFXJQL4B2COE7M43VVQ7GUGKAA</p>
          */
         public Builder licenseCode(String licenseCode) {
             this.putQueryParameter("LicenseCode", licenseCode);

@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.support_plan20210706;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.support_plan20210706.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -18,30 +19,40 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
-    CompletableFuture<CloseTaskOrderResponse> closeTaskOrder(CloseTaskOrderRequest request);
+    /**
+     * @param request the request parameters of AddEnterpriseGroupMemberToTaskGroup  AddEnterpriseGroupMemberToTaskGroupRequest
+     * @return AddEnterpriseGroupMemberToTaskGroupResponse
+     */
+    CompletableFuture<AddEnterpriseGroupMemberToTaskGroupResponse> addEnterpriseGroupMemberToTaskGroup(AddEnterpriseGroupMemberToTaskGroupRequest request);
 
+    /**
+     * @param request the request parameters of CreateTaskOrder  CreateTaskOrderRequest
+     * @return CreateTaskOrderResponse
+     */
     CompletableFuture<CreateTaskOrderResponse> createTaskOrder(CreateTaskOrderRequest request);
 
-    CompletableFuture<CreateTaskOrderByEventReportResponse> createTaskOrderByEventReport(CreateTaskOrderByEventReportRequest request);
-
-    CompletableFuture<DeleteEnterpriseDingtalkGroupCustomerMemberResponse> deleteEnterpriseDingtalkGroupCustomerMember(DeleteEnterpriseDingtalkGroupCustomerMemberRequest request);
-
-    CompletableFuture<GetEnterpriseDingtalkGroupResponse> getEnterpriseDingtalkGroup(GetEnterpriseDingtalkGroupRequest request);
-
-    CompletableFuture<GetEnterpriseDingtalkGroupCustomerMemberResponse> getEnterpriseDingtalkGroupCustomerMember(GetEnterpriseDingtalkGroupCustomerMemberRequest request);
-
+    /**
+     * @param request the request parameters of ListDdTaskOrder  ListDdTaskOrderRequest
+     * @return ListDdTaskOrderResponse
+     */
     CompletableFuture<ListDdTaskOrderResponse> listDdTaskOrder(ListDdTaskOrderRequest request);
 
+    /**
+     * @param request the request parameters of ListEnterpriseDingtalkGroupCustomerMembers  ListEnterpriseDingtalkGroupCustomerMembersRequest
+     * @return ListEnterpriseDingtalkGroupCustomerMembersResponse
+     */
     CompletableFuture<ListEnterpriseDingtalkGroupCustomerMembersResponse> listEnterpriseDingtalkGroupCustomerMembers(ListEnterpriseDingtalkGroupCustomerMembersRequest request);
 
+    /**
+     * @param request the request parameters of ListEnterpriseDingtalkGroups  ListEnterpriseDingtalkGroupsRequest
+     * @return ListEnterpriseDingtalkGroupsResponse
+     */
     CompletableFuture<ListEnterpriseDingtalkGroupsResponse> listEnterpriseDingtalkGroups(ListEnterpriseDingtalkGroupsRequest request);
 
+    /**
+     * @param request the request parameters of ListProductByGroup  ListProductByGroupRequest
+     * @return ListProductByGroupResponse
+     */
     CompletableFuture<ListProductByGroupResponse> listProductByGroup(ListProductByGroupRequest request);
-
-    CompletableFuture<QueryTaskInfoResponse> queryTaskInfo(QueryTaskInfoRequest request);
-
-    CompletableFuture<ReplyMessageApiResponse> replyMessageApi(ReplyMessageApiRequest request);
-
-    CompletableFuture<RestOpenTaskOrderResponse> restOpenTaskOrder(RestOpenTaskOrderRequest request);
 
 }

@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnsCommodityCodeRequest} extends {@link RequestModel}
  *
  * <p>DescribeEnsCommodityCodeRequest</p>
  */
 public class DescribeEnsCommodityCodeRequest extends Request {
-    @Query
-    @NameInMap("CommodityCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommodityCode")
     private String commodityCode;
 
     private DescribeEnsCommodityCodeRequest(Builder builder) {

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListImagesRequest</p>
  */
 public class ListImagesRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("ImageCategory")
     private String imageCategory;
@@ -23,6 +27,10 @@ public class ListImagesRequest extends Request {
     @Query
     @NameInMap("ImageName")
     private String imageName;
+
+    @Query
+    @NameInMap("InstanceType")
+    private String instanceType;
 
     @Query
     @NameInMap("MaxResults")
@@ -53,19 +61,17 @@ public class ListImagesRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("Status")
     private String status;
 
     private ListImagesRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.imageCategory = builder.imageCategory;
         this.imageId = builder.imageId;
         this.imageName = builder.imageName;
+        this.instanceType = builder.instanceType;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.ownerAccount = builder.ownerAccount;
@@ -73,7 +79,6 @@ public class ListImagesRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.status = builder.status;
     }
 
@@ -88,6 +93,13 @@ public class ListImagesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -109,6 +121,13 @@ public class ListImagesRequest extends Request {
      */
     public String getImageName() {
         return this.imageName;
+    }
+
+    /**
+     * @return instanceType
+     */
+    public String getInstanceType() {
+        return this.instanceType;
     }
 
     /**
@@ -161,13 +180,6 @@ public class ListImagesRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return status
      */
     public String getStatus() {
@@ -175,9 +187,11 @@ public class ListImagesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListImagesRequest, Builder> {
+        private String sourceRegionId; 
         private String imageCategory; 
         private java.util.List < String > imageId; 
         private String imageName; 
+        private String instanceType; 
         private Integer maxResults; 
         private String nextToken; 
         private String ownerAccount; 
@@ -185,31 +199,45 @@ public class ListImagesRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private String status; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListImagesRequest response) {
-            super(response);
-            this.imageCategory = response.imageCategory;
-            this.imageId = response.imageId;
-            this.imageName = response.imageName;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceRegionId = response.sourceRegionId;
-            this.status = response.status;
+        private Builder(ListImagesRequest request) {
+            super(request);
+            this.sourceRegionId = request.sourceRegionId;
+            this.imageCategory = request.imageCategory;
+            this.imageId = request.imageId;
+            this.imageName = request.imageName;
+            this.instanceType = request.instanceType;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.status = request.status;
         } 
 
         /**
-         * ImageCategory.
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * The image source. Valid values:
+         * <p>
+         * 
+         * *   system: public images provided by Alibaba Cloud.
+         * *   self: custom images that you create.
+         * *   others: shared images from other Alibaba Cloud accounts.
          */
         public Builder imageCategory(String imageCategory) {
             this.putQueryParameter("ImageCategory", imageCategory);
@@ -218,7 +246,7 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * The image IDs. Valid values of N: 1 to 100.
          */
         public Builder imageId(java.util.List < String > imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -227,7 +255,7 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * ImageName.
+         * The image name. The name must be 2 to 128 characters in length. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -236,7 +264,16 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The instance type.
+         */
+        public Builder instanceType(String instanceType) {
+            this.putQueryParameter("InstanceType", instanceType);
+            this.instanceType = instanceType;
+            return this;
+        }
+
+        /**
+         * The maximum number of entries to return on each page. Valid values: 1 to 100.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -245,7 +282,7 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -272,7 +309,7 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -299,16 +336,15 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
-            return this;
-        }
-
-        /**
-         * Status.
+         * The image state. Valid values:
+         * <p>
+         * 
+         * *   Waiting
+         * *   Creating
+         * *   Copying
+         * *   Importing
+         * *   Available (default)
+         * *   CreateFailed
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

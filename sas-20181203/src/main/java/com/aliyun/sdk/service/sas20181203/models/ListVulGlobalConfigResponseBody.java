@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListVulGlobalConfigResponseBody} extends {@link TeaModel}
  *
  * <p>ListVulGlobalConfigResponseBody</p>
  */
 public class ListVulGlobalConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VulGlobalConfigList")
-    private java.util.List < VulGlobalConfigList> vulGlobalConfigList;
+    @com.aliyun.core.annotation.NameInMap("VulGlobalConfigList")
+    private java.util.List<VulGlobalConfigList> vulGlobalConfigList;
 
     private ListVulGlobalConfigResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class ListVulGlobalConfigResponseBody extends TeaModel {
     /**
      * @return vulGlobalConfigList
      */
-    public java.util.List < VulGlobalConfigList> getVulGlobalConfigList() {
+    public java.util.List<VulGlobalConfigList> getVulGlobalConfigList() {
         return this.vulGlobalConfigList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < VulGlobalConfigList> vulGlobalConfigList; 
+        private java.util.List<VulGlobalConfigList> vulGlobalConfigList; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7E0618A9-D5EF-4220-9471-C42B5E92719F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class ListVulGlobalConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations.
+         * <p>The configurations.</p>
          */
-        public Builder vulGlobalConfigList(java.util.List < VulGlobalConfigList> vulGlobalConfigList) {
+        public Builder vulGlobalConfigList(java.util.List<VulGlobalConfigList> vulGlobalConfigList) {
             this.vulGlobalConfigList = vulGlobalConfigList;
             return this;
         }
@@ -71,11 +79,17 @@ public class ListVulGlobalConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListVulGlobalConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVulGlobalConfigResponseBody</p>
+     */
     public static class VulGlobalConfigList extends TeaModel {
-        @NameInMap("ConfigKey")
+        @com.aliyun.core.annotation.NameInMap("ConfigKey")
         private String configKey;
 
-        @NameInMap("ConfigValue")
+        @com.aliyun.core.annotation.NameInMap("ConfigValue")
         private String configValue;
 
         private VulGlobalConfigList(Builder builder) {
@@ -110,7 +124,10 @@ public class ListVulGlobalConfigResponseBody extends TeaModel {
             private String configValue; 
 
             /**
-             * The key of the configuration item.
+             * <p>The key of the configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vul_scan_ip_list</p>
              */
             public Builder configKey(String configKey) {
                 this.configKey = configKey;
@@ -118,7 +135,10 @@ public class ListVulGlobalConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the configuration item.
+             * <p>The value of the configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.0.<em>.</em>,127.0.<em>.</em></p>
              */
             public Builder configValue(String configValue) {
                 this.configValue = configValue;

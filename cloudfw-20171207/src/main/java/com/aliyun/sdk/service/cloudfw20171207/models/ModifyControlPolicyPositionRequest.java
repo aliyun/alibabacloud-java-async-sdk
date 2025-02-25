@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyControlPolicyPositionRequest} extends {@link RequestModel}
  *
  * <p>ModifyControlPolicyPositionRequest</p>
  */
 public class ModifyControlPolicyPositionRequest extends Request {
-    @Query
-    @NameInMap("Direction")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Direction")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String direction;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("NewOrder")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewOrder")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String newOrder;
 
-    @Query
-    @NameInMap("OldOrder")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OldOrder")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String oldOrder;
 
-    @Query
-    @NameInMap("SourceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceIp")
     @Deprecated
     private String sourceIp;
 
@@ -114,11 +119,15 @@ public class ModifyControlPolicyPositionRequest extends Request {
         } 
 
         /**
-         * The direction of the traffic to which the IPv4 access control policy applies. Valid values:
-         * <p>
+         * <p>The direction of the traffic to which the IPv4 access control policy applies. Valid values:</p>
+         * <ul>
+         * <li>in: inbound traffic</li>
+         * <li>out: outbound traffic</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   in: inbound traffic
-         * *   out: outbound traffic
+         * <strong>example:</strong>
+         * <p>in</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -127,11 +136,14 @@ public class ModifyControlPolicyPositionRequest extends Request {
         }
 
         /**
-         * The language of the content within the response. Valid values:
-         * <p>
+         * <p>The language of the content within the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese (default)</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese (default)
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -140,14 +152,14 @@ public class ModifyControlPolicyPositionRequest extends Request {
         }
 
         /**
-         * The new priority of the IPv4 access control policy.
-         * <p>
+         * <p>The new priority of the IPv4 access control policy. You must specify a numeric value for this parameter. The value 1 indicates the highest priority. A larger value indicates a lower priority.</p>
+         * <blockquote>
+         * <p> The new priority cannot exceed the priority range of the IPv4 access control policy. Otherwise, an error occurs when you call this operation. Before you call this operation, we recommend that you use the <a href="https://help.aliyun.com/document_detail/138862.html">DescribePolicyPriorUsed</a> operation to query the priority range of the IPv4 access control policy in the specified direction.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * You must specify a numeric value for this parameter. The value 1 indicates the highest priority. A larger value indicates a lower priority.
-         * 
-         * >  The value of this parameter must be within the priority range of existing IPv4 access control policies. Otherwise, an error occurs when you call this operation.
-         * 
-         * We recommend that you first call the [DescribePolicyPriorUsed](~~138862~~) operation to query the priority range of existing IPv4 access control policies that apply to the traffic of the specified direction.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder newOrder(String newOrder) {
             this.putQueryParameter("NewOrder", newOrder);
@@ -156,7 +168,11 @@ public class ModifyControlPolicyPositionRequest extends Request {
         }
 
         /**
-         * The original priority of the IPv4 access control policy.
+         * <p>The original priority of the IPv4 access control policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder oldOrder(String oldOrder) {
             this.putQueryParameter("OldOrder", oldOrder);
@@ -165,7 +181,10 @@ public class ModifyControlPolicyPositionRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

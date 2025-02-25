@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRecommendIndexResponseBody</p>
  */
 public class DescribeRecommendIndexResponseBody extends TeaModel {
-    @NameInMap("RecommendIndex")
+    @com.aliyun.core.annotation.NameInMap("RecommendIndex")
     private RecommendIndex recommendIndex;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeRecommendIndexResponseBody(Builder builder) {
@@ -75,13 +74,13 @@ public class DescribeRecommendIndexResponseBody extends TeaModel {
     } 
 
     public static class RecommendIndex extends TeaModel {
-        @NameInMap("SuggestIndex")
+        @com.aliyun.core.annotation.NameInMap("SuggestIndex")
         private String suggestIndex;
 
-        @NameInMap("TableList")
+        @com.aliyun.core.annotation.NameInMap("TableList")
         private String tableList;
 
-        @NameInMap("TenantMode")
+        @com.aliyun.core.annotation.NameInMap("TenantMode")
         private String tenantMode;
 
         private RecommendIndex(Builder builder) {

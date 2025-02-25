@@ -18,6 +18,9 @@ public class StatefulAsyncInvocation extends TeaModel {
     @NameInMap("destinationStatus")
     private String destinationStatus;
 
+    @NameInMap("durationMs")
+    private Long durationMs;
+
     @NameInMap("endTime")
     private Long endTime;
 
@@ -45,6 +48,9 @@ public class StatefulAsyncInvocation extends TeaModel {
     @NameInMap("requestId")
     private String requestId;
 
+    @NameInMap("returnPayload")
+    private String returnPayload;
+
     @NameInMap("serviceName")
     private String serviceName;
 
@@ -57,6 +63,7 @@ public class StatefulAsyncInvocation extends TeaModel {
     private StatefulAsyncInvocation(Builder builder) {
         this.alreadyRetriedTimes = builder.alreadyRetriedTimes;
         this.destinationStatus = builder.destinationStatus;
+        this.durationMs = builder.durationMs;
         this.endTime = builder.endTime;
         this.events = builder.events;
         this.functionName = builder.functionName;
@@ -66,6 +73,7 @@ public class StatefulAsyncInvocation extends TeaModel {
         this.invocationPayload = builder.invocationPayload;
         this.qualifier = builder.qualifier;
         this.requestId = builder.requestId;
+        this.returnPayload = builder.returnPayload;
         this.serviceName = builder.serviceName;
         this.startedTime = builder.startedTime;
         this.status = builder.status;
@@ -91,6 +99,13 @@ public class StatefulAsyncInvocation extends TeaModel {
      */
     public String getDestinationStatus() {
         return this.destinationStatus;
+    }
+
+    /**
+     * @return durationMs
+     */
+    public Long getDurationMs() {
+        return this.durationMs;
     }
 
     /**
@@ -157,6 +172,13 @@ public class StatefulAsyncInvocation extends TeaModel {
     }
 
     /**
+     * @return returnPayload
+     */
+    public String getReturnPayload() {
+        return this.returnPayload;
+    }
+
+    /**
      * @return serviceName
      */
     public String getServiceName() {
@@ -180,6 +202,7 @@ public class StatefulAsyncInvocation extends TeaModel {
     public static final class Builder {
         private Long alreadyRetriedTimes; 
         private String destinationStatus; 
+        private Long durationMs; 
         private Long endTime; 
         private java.util.List < StatefulAsyncInvocationEvent > events; 
         private String functionName; 
@@ -189,12 +212,13 @@ public class StatefulAsyncInvocation extends TeaModel {
         private String invocationPayload; 
         private String qualifier; 
         private String requestId; 
+        private String returnPayload; 
         private String serviceName; 
         private Long startedTime; 
         private String status; 
 
         /**
-         * 异步任务调用失败后的已重试次数。
+         * alreadyRetriedTimes.
          */
         public Builder alreadyRetriedTimes(Long alreadyRetriedTimes) {
             this.alreadyRetriedTimes = alreadyRetriedTimes;
@@ -202,7 +226,7 @@ public class StatefulAsyncInvocation extends TeaModel {
         }
 
         /**
-         * 异步任务的目的状态。
+         * destinationStatus.
          */
         public Builder destinationStatus(String destinationStatus) {
             this.destinationStatus = destinationStatus;
@@ -210,7 +234,15 @@ public class StatefulAsyncInvocation extends TeaModel {
         }
 
         /**
-         * 异步任务的结束时间。
+         * durationMs.
+         */
+        public Builder durationMs(Long durationMs) {
+            this.durationMs = durationMs;
+            return this;
+        }
+
+        /**
+         * endTime.
          */
         public Builder endTime(Long endTime) {
             this.endTime = endTime;
@@ -218,7 +250,7 @@ public class StatefulAsyncInvocation extends TeaModel {
         }
 
         /**
-         * 异步任务事件列表。
+         * events.
          */
         public Builder events(java.util.List < StatefulAsyncInvocationEvent > events) {
             this.events = events;
@@ -226,7 +258,7 @@ public class StatefulAsyncInvocation extends TeaModel {
         }
 
         /**
-         * 异步任务所属的函数的名称。
+         * functionName.
          */
         public Builder functionName(String functionName) {
             this.functionName = functionName;
@@ -234,7 +266,7 @@ public class StatefulAsyncInvocation extends TeaModel {
         }
 
         /**
-         * 异步任务的执行实例ID。
+         * instanceId.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -242,7 +274,7 @@ public class StatefulAsyncInvocation extends TeaModel {
         }
 
         /**
-         * 异步任务的错误消息。
+         * invocationErrorMessage.
          */
         public Builder invocationErrorMessage(String invocationErrorMessage) {
             this.invocationErrorMessage = invocationErrorMessage;
@@ -250,7 +282,7 @@ public class StatefulAsyncInvocation extends TeaModel {
         }
 
         /**
-         * 异步任务ID。
+         * invocationId.
          */
         public Builder invocationId(String invocationId) {
             this.invocationId = invocationId;
@@ -258,7 +290,7 @@ public class StatefulAsyncInvocation extends TeaModel {
         }
 
         /**
-         * 异步任务的任务触发事件。
+         * invocationPayload.
          */
         public Builder invocationPayload(String invocationPayload) {
             this.invocationPayload = invocationPayload;
@@ -266,7 +298,7 @@ public class StatefulAsyncInvocation extends TeaModel {
         }
 
         /**
-         * 异步任务所属的服务的别名或版本。
+         * qualifier.
          */
         public Builder qualifier(String qualifier) {
             this.qualifier = qualifier;
@@ -274,7 +306,7 @@ public class StatefulAsyncInvocation extends TeaModel {
         }
 
         /**
-         * 异步任务的请求ID。
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -282,7 +314,15 @@ public class StatefulAsyncInvocation extends TeaModel {
         }
 
         /**
-         * 异步任务所属的服务的名称。
+         * returnPayload.
+         */
+        public Builder returnPayload(String returnPayload) {
+            this.returnPayload = returnPayload;
+            return this;
+        }
+
+        /**
+         * serviceName.
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
@@ -290,7 +330,7 @@ public class StatefulAsyncInvocation extends TeaModel {
         }
 
         /**
-         * 异步任务的开始时间。
+         * startedTime.
          */
         public Builder startedTime(Long startedTime) {
             this.startedTime = startedTime;
@@ -298,7 +338,7 @@ public class StatefulAsyncInvocation extends TeaModel {
         }
 
         /**
-         * 异步任务的执行状态。      Enqueued：异步消息已入队，等待处理。      Succeeded：调用执行成功。      Failed：调用执行失败。      Running：调用执行中。      Stopped：调用执行终止。      Stopping：执行停止中。      Invalid：您的执行因函数被删除等原因处于无效状态（任务未被执行）。      Expired：您为任务配置了最长排队等待的期限。该任务因为超期被丢弃（任务未被执行）。      Retrying：异步调用因执行错误重试中。
+         * status.
          */
         public Builder status(String status) {
             this.status = status;

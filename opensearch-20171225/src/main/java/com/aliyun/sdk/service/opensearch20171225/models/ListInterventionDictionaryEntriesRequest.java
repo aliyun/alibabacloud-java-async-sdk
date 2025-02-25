@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInterventionDictionaryEntriesRequest</p>
  */
 public class ListInterventionDictionaryEntriesRequest extends Request {
-    @Path
-    @NameInMap("name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("pageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("word")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("word")
     private String word;
 
     private ListInterventionDictionaryEntriesRequest(Builder builder) {
@@ -97,7 +96,7 @@ public class ListInterventionDictionaryEntriesRequest extends Request {
         } 
 
         /**
-         * my_dict
+         * The name of the intervention dictionary.
          */
         public Builder name(String name) {
             this.putPathParameter("name", name);
@@ -106,7 +105,7 @@ public class ListInterventionDictionaryEntriesRequest extends Request {
         }
 
         /**
-         * 1
+         * The page number. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -115,7 +114,7 @@ public class ListInterventionDictionaryEntriesRequest extends Request {
         }
 
         /**
-         * 10
+         * The number of entries returned per page. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -124,7 +123,7 @@ public class ListInterventionDictionaryEntriesRequest extends Request {
         }
 
         /**
-         * Test
+         * The intervention entry.
          */
         public Builder word(String word) {
             this.putQueryParameter("word", word);

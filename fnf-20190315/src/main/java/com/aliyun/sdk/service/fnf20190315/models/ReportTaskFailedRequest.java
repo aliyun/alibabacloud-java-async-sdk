@@ -22,10 +22,6 @@ public class ReportTaskFailedRequest extends Request {
     private String error;
 
     @Query
-    @NameInMap("RequestId")
-    private String requestId;
-
-    @Query
     @NameInMap("TaskToken")
     @Validation(required = true)
     private String taskToken;
@@ -34,7 +30,6 @@ public class ReportTaskFailedRequest extends Request {
         super(builder);
         this.cause = builder.cause;
         this.error = builder.error;
-        this.requestId = builder.requestId;
         this.taskToken = builder.taskToken;
     }
 
@@ -66,13 +61,6 @@ public class ReportTaskFailedRequest extends Request {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return taskToken
      */
     public String getTaskToken() {
@@ -82,7 +70,6 @@ public class ReportTaskFailedRequest extends Request {
     public static final class Builder extends Request.Builder<ReportTaskFailedRequest, Builder> {
         private String cause; 
         private String error; 
-        private String requestId; 
         private String taskToken; 
 
         private Builder() {
@@ -93,7 +80,6 @@ public class ReportTaskFailedRequest extends Request {
             super(request);
             this.cause = request.cause;
             this.error = request.error;
-            this.requestId = request.requestId;
             this.taskToken = request.taskToken;
         } 
 
@@ -112,15 +98,6 @@ public class ReportTaskFailedRequest extends Request {
         public Builder error(String error) {
             this.putBodyParameter("Error", error);
             this.error = error;
-            return this;
-        }
-
-        /**
-         * The request ID. If you specify this parameter, the system uses this value as the ID of the request. If you do not specify this parameter, the system generates a value at random.
-         */
-        public Builder requestId(String requestId) {
-            this.putQueryParameter("RequestId", requestId);
-            this.requestId = requestId;
             return this;
         }
 

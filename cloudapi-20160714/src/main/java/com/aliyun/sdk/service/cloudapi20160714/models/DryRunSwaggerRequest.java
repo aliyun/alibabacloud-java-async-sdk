@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DryRunSwaggerRequest} extends {@link RequestModel}
  *
  * <p>DryRunSwaggerRequest</p>
  */
 public class DryRunSwaggerRequest extends Request {
-    @Body
-    @NameInMap("Data")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Data")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String data;
 
-    @Query
-    @NameInMap("DataFormat")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataFormat")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dataFormat;
 
-    @Query
-    @NameInMap("GlobalCondition")
-    private java.util.Map < String, ? > globalCondition;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GlobalCondition")
+    private java.util.Map<String, ?> globalCondition;
 
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("Overwrite")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Overwrite")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean overwrite;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private DryRunSwaggerRequest(Builder builder) {
@@ -80,7 +85,7 @@ public class DryRunSwaggerRequest extends Request {
     /**
      * @return globalCondition
      */
-    public java.util.Map < String, ? > getGlobalCondition() {
+    public java.util.Map<String, ?> getGlobalCondition() {
         return this.globalCondition;
     }
 
@@ -108,7 +113,7 @@ public class DryRunSwaggerRequest extends Request {
     public static final class Builder extends Request.Builder<DryRunSwaggerRequest, Builder> {
         private String data; 
         private String dataFormat; 
-        private java.util.Map < String, ? > globalCondition; 
+        private java.util.Map<String, ?> globalCondition; 
         private String groupId; 
         private Boolean overwrite; 
         private String securityToken; 
@@ -128,7 +133,11 @@ public class DryRunSwaggerRequest extends Request {
         } 
 
         /**
-         * Data.
+         * <p>The Swagger text content.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;A Swagger API definition in YAML&quot;</p>
          */
         public Builder data(String data) {
             this.putBodyParameter("Data", data);
@@ -137,7 +146,15 @@ public class DryRunSwaggerRequest extends Request {
         }
 
         /**
-         * DataFormat.
+         * <p>The Swagger text format:</p>
+         * <ul>
+         * <li>json</li>
+         * <li>yaml</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yaml</p>
          */
         public Builder dataFormat(String dataFormat) {
             this.putQueryParameter("DataFormat", dataFormat);
@@ -146,9 +163,12 @@ public class DryRunSwaggerRequest extends Request {
         }
 
         /**
-         * GlobalCondition.
+         * <p>The global condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
-        public Builder globalCondition(java.util.Map < String, ? > globalCondition) {
+        public Builder globalCondition(java.util.Map<String, ?> globalCondition) {
             String globalConditionShrink = shrink(globalCondition, "GlobalCondition", "json");
             this.putQueryParameter("GlobalCondition", globalConditionShrink);
             this.globalCondition = globalCondition;
@@ -156,7 +176,11 @@ public class DryRunSwaggerRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * <p>The ID of the API group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d633cf5524f841b9950e245b191bdabf</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -165,7 +189,12 @@ public class DryRunSwaggerRequest extends Request {
         }
 
         /**
-         * Overwrite.
+         * <p>Specifies whether to overwrite the existing API.</p>
+         * <p>APIs with the same HTTP request type and backend request path are considered the same.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder overwrite(Boolean overwrite) {
             this.putQueryParameter("Overwrite", overwrite);

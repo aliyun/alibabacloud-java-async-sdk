@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteFabricChaincodeRequest</p>
  */
 public class DeleteFabricChaincodeRequest extends Request {
-    @Body
-    @NameInMap("ChaincodeId")
-    @Validation(required = true)
-    private String chaincodeId;
-
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChaincodeId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String chaincodeId;
 
     private DeleteFabricChaincodeRequest(Builder builder) {
         super(builder);
-        this.chaincodeId = builder.chaincodeId;
         this.regionId = builder.regionId;
+        this.chaincodeId = builder.chaincodeId;
     }
 
     public static Builder builder() {
@@ -41,41 +40,32 @@ public class DeleteFabricChaincodeRequest extends Request {
     }
 
     /**
-     * @return chaincodeId
-     */
-    public String getChaincodeId() {
-        return this.chaincodeId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return chaincodeId
+     */
+    public String getChaincodeId() {
+        return this.chaincodeId;
+    }
+
     public static final class Builder extends Request.Builder<DeleteFabricChaincodeRequest, Builder> {
-        private String chaincodeId; 
         private String regionId; 
+        private String chaincodeId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteFabricChaincodeRequest response) {
-            super(response);
-            this.chaincodeId = response.chaincodeId;
-            this.regionId = response.regionId;
+        private Builder(DeleteFabricChaincodeRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.chaincodeId = request.chaincodeId;
         } 
-
-        /**
-         * ChaincodeId.
-         */
-        public Builder chaincodeId(String chaincodeId) {
-            this.putBodyParameter("ChaincodeId", chaincodeId);
-            this.chaincodeId = chaincodeId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -83,6 +73,15 @@ public class DeleteFabricChaincodeRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ChaincodeId.
+         */
+        public Builder chaincodeId(String chaincodeId) {
+            this.putBodyParameter("ChaincodeId", chaincodeId);
+            this.chaincodeId = chaincodeId;
             return this;
         }
 

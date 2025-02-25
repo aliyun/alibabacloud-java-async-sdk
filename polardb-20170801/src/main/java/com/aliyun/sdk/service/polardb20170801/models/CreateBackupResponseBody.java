@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateBackupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateBackupResponseBody</p>
  */
 public class CreateBackupResponseBody extends TeaModel {
-    @NameInMap("BackupJobId")
+    @com.aliyun.core.annotation.NameInMap("BackupJobId")
     private String backupJobId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateBackupResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateBackupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the backup set.
+         * <p>The ID of the backup set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11111111</p>
          */
         public Builder backupJobId(String backupJobId) {
             this.backupJobId = backupJobId;
@@ -58,7 +66,10 @@ public class CreateBackupResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F3322AFE-083E-4D77-A074-421301******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

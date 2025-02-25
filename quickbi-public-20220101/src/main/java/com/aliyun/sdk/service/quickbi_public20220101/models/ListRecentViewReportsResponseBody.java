@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRecentViewReportsResponseBody} extends {@link TeaModel}
  *
  * <p>ListRecentViewReportsResponseBody</p>
  */
 public class ListRecentViewReportsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListRecentViewReportsResponseBody(Builder builder) {
@@ -91,50 +96,56 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRecentViewReportsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRecentViewReportsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Favorite")
+        @com.aliyun.core.annotation.NameInMap("Favorite")
         private Boolean favorite;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("HasEditAuth")
+        @com.aliyun.core.annotation.NameInMap("HasEditAuth")
         private Boolean hasEditAuth;
 
-        @NameInMap("HasViewAuth")
+        @com.aliyun.core.annotation.NameInMap("HasViewAuth")
         private Boolean hasViewAuth;
 
-        @NameInMap("LatestViewTime")
+        @com.aliyun.core.annotation.NameInMap("LatestViewTime")
         private String latestViewTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OwnerName")
+        @com.aliyun.core.annotation.NameInMap("OwnerName")
         private String ownerName;
 
-        @NameInMap("OwnerNum")
+        @com.aliyun.core.annotation.NameInMap("OwnerNum")
         private String ownerNum;
 
-        @NameInMap("PublishStatus")
+        @com.aliyun.core.annotation.NameInMap("PublishStatus")
         private Integer publishStatus;
 
-        @NameInMap("TreeId")
+        @com.aliyun.core.annotation.NameInMap("TreeId")
         private String treeId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("ViewCount")
+        @com.aliyun.core.annotation.NameInMap("ViewCount")
         private Long viewCount;
 
-        @NameInMap("WorkspaceId")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceId")
         private String workspaceId;
 
-        @NameInMap("WorkspaceName")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceName")
         private String workspaceName;
 
         private Data(Builder builder) {
@@ -412,23 +423,29 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRecentViewReportsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRecentViewReportsResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("Attention")
+        @com.aliyun.core.annotation.NameInMap("Attention")
         private String attention;
 
-        @NameInMap("Data")
-        private java.util.List < Data> data;
+        @com.aliyun.core.annotation.NameInMap("Data")
+        private java.util.List<Data> data;
 
-        @NameInMap("PageNum")
+        @com.aliyun.core.annotation.NameInMap("PageNum")
         private Integer pageNum;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalNum")
+        @com.aliyun.core.annotation.NameInMap("TotalNum")
         private Integer totalNum;
 
-        @NameInMap("TotalPages")
+        @com.aliyun.core.annotation.NameInMap("TotalPages")
         private Integer totalPages;
 
         private Result(Builder builder) {
@@ -458,7 +475,7 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < Data> getData() {
+        public java.util.List<Data> getData() {
             return this.data;
         }
 
@@ -492,7 +509,7 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String attention; 
-            private java.util.List < Data> data; 
+            private java.util.List<Data> data; 
             private Integer pageNum; 
             private Integer pageSize; 
             private Integer totalNum; 
@@ -509,7 +526,7 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
             /**
              * Data.
              */
-            public Builder data(java.util.List < Data> data) {
+            public Builder data(java.util.List<Data> data) {
                 this.data = data;
                 return this;
             }

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFileSystemRequest} extends {@link RequestModel}
  *
  * <p>CreateFileSystemRequest</p>
  */
 public class CreateFileSystemRequest extends Request {
-    @Query
-    @NameInMap("OrderDetails")
-    @Validation(required = true)
-    private java.util.List < OrderDetails> orderDetails;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderDetails")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<OrderDetails> orderDetails;
 
     private CreateFileSystemRequest(Builder builder) {
         super(builder);
@@ -38,12 +43,12 @@ public class CreateFileSystemRequest extends Request {
     /**
      * @return orderDetails
      */
-    public java.util.List < OrderDetails> getOrderDetails() {
+    public java.util.List<OrderDetails> getOrderDetails() {
         return this.orderDetails;
     }
 
     public static final class Builder extends Request.Builder<CreateFileSystemRequest, Builder> {
-        private java.util.List < OrderDetails> orderDetails; 
+        private java.util.List<OrderDetails> orderDetails; 
 
         private Builder() {
             super();
@@ -55,9 +60,10 @@ public class CreateFileSystemRequest extends Request {
         } 
 
         /**
-         * OrderDetails.
+         * <p>The information about the orders.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder orderDetails(java.util.List < OrderDetails> orderDetails) {
+        public Builder orderDetails(java.util.List<OrderDetails> orderDetails) {
             String orderDetailsShrink = shrink(orderDetails, "OrderDetails", "json");
             this.putQueryParameter("OrderDetails", orderDetailsShrink);
             this.orderDetails = orderDetails;
@@ -71,37 +77,43 @@ public class CreateFileSystemRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateFileSystemRequest} extends {@link TeaModel}
+     *
+     * <p>CreateFileSystemRequest</p>
+     */
     public static class OrderDetails extends TeaModel {
-        @NameInMap("ChargeType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String chargeType;
 
-        @NameInMap("EnsRegionId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EnsRegionId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String ensRegionId;
 
-        @NameInMap("FileSystemName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("FileSystemName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String fileSystemName;
 
-        @NameInMap("MountTargetDomain")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("MountTargetDomain")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String mountTargetDomain;
 
-        @NameInMap("NetworkId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("NetworkId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String networkId;
 
-        @NameInMap("OrderType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("OrderType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String orderType;
 
-        @NameInMap("ProtocolType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ProtocolType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String protocolType;
 
-        @NameInMap("StorgeType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("StorgeType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String storgeType;
 
         private OrderDetails(Builder builder) {
@@ -190,7 +202,15 @@ public class CreateFileSystemRequest extends Request {
             private String storgeType; 
 
             /**
-             * ChargeType.
+             * <p>The billing method of the NAS file system. Valid values:</p>
+             * <ul>
+             * <li>PrePaid: subscription. This billing method is not supported.</li>
+             * <li>PostPaid: pay-as-you-go.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PostPaid</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -198,7 +218,11 @@ public class CreateFileSystemRequest extends Request {
             }
 
             /**
-             * EnsRegionId.
+             * <p>The ID of the edge node.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-suzhou-telecom</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -206,7 +230,11 @@ public class CreateFileSystemRequest extends Request {
             }
 
             /**
-             * FileSystemName.
+             * <p>The name of the file system. The name must be 1 to 80 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nasFile</p>
              */
             public Builder fileSystemName(String fileSystemName) {
                 this.fileSystemName = fileSystemName;
@@ -214,7 +242,11 @@ public class CreateFileSystemRequest extends Request {
             }
 
             /**
-             * MountTargetDomain.
+             * <p>The name of the mount target. The name must be 1 to 80 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nasMount</p>
              */
             public Builder mountTargetDomain(String mountTargetDomain) {
                 this.mountTargetDomain = mountTargetDomain;
@@ -222,7 +254,11 @@ public class CreateFileSystemRequest extends Request {
             }
 
             /**
-             * NetworkId.
+             * <p>The ID of the VPC.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-xxx</p>
              */
             public Builder networkId(String networkId) {
                 this.networkId = networkId;
@@ -230,7 +266,11 @@ public class CreateFileSystemRequest extends Request {
             }
 
             /**
-             * BUY。
+             * <p>The type of the order. Set the value to BUY.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BUY</p>
              */
             public Builder orderType(String orderType) {
                 this.orderType = orderType;
@@ -238,7 +278,11 @@ public class CreateFileSystemRequest extends Request {
             }
 
             /**
-             * ProtocolType.
+             * <p>The storage protocol. Set the value to nfs.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nfs</p>
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -246,7 +290,15 @@ public class CreateFileSystemRequest extends Request {
             }
 
             /**
-             * StorgeType.
+             * <p>The storage type. Valid values:</p>
+             * <ul>
+             * <li>Capacity.</li>
+             * <li>Performance.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>capacity</p>
              */
             public Builder storgeType(String storgeType) {
                 this.storgeType = storgeType;

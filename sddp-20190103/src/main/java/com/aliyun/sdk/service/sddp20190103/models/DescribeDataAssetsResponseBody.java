@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataAssetsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDataAssetsResponseBody</p>
  */
 public class DescribeDataAssetsResponseBody extends TeaModel {
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("Items")
-    private java.util.List < Items> items;
+    @com.aliyun.core.annotation.NameInMap("Items")
+    private java.util.List<Items> items;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDataAssetsResponseBody(Builder builder) {
@@ -53,7 +58,7 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -80,13 +85,16 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer currentPage; 
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * CurrentPage.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -94,15 +102,18 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>An array that consists of data assets.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>71064826-726F-4ADA-B879-05D8055476FB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of queried data assets that contain sensitive data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,62 +148,68 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDataAssetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataAssetsResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("Acl")
+        @com.aliyun.core.annotation.NameInMap("Acl")
         private String acl;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private Long creationTime;
 
-        @NameInMap("DataType")
+        @com.aliyun.core.annotation.NameInMap("DataType")
         private String dataType;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Labelsec")
+        @com.aliyun.core.annotation.NameInMap("Labelsec")
         private Boolean labelsec;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ObjectKey")
+        @com.aliyun.core.annotation.NameInMap("ObjectKey")
         private String objectKey;
 
-        @NameInMap("OdpsRiskLevelName")
+        @com.aliyun.core.annotation.NameInMap("OdpsRiskLevelName")
         private String odpsRiskLevelName;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("ProductId")
+        @com.aliyun.core.annotation.NameInMap("ProductId")
         private String productId;
 
-        @NameInMap("Protection")
+        @com.aliyun.core.annotation.NameInMap("Protection")
         private Boolean protection;
 
-        @NameInMap("RiskLevelId")
+        @com.aliyun.core.annotation.NameInMap("RiskLevelId")
         private Long riskLevelId;
 
-        @NameInMap("RiskLevelName")
+        @com.aliyun.core.annotation.NameInMap("RiskLevelName")
         private String riskLevelName;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("Sensitive")
+        @com.aliyun.core.annotation.NameInMap("Sensitive")
         private Boolean sensitive;
 
-        @NameInMap("SensitiveCount")
+        @com.aliyun.core.annotation.NameInMap("SensitiveCount")
         private Integer sensitiveCount;
 
-        @NameInMap("SensitiveRatio")
+        @com.aliyun.core.annotation.NameInMap("SensitiveRatio")
         private String sensitiveRatio;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Items(Builder builder) {
@@ -374,7 +397,13 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Acl.
+             * <p>The access control list (ACL) that controls the access permissions on the OSS bucket.</p>
+             * <blockquote>
+             * <p>This parameter is returned only when you set the parameter <strong>RangeId</strong> to <strong>21</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>private</p>
              */
             public Builder acl(String acl) {
                 this.acl = acl;
@@ -382,7 +411,10 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The time when the data asset was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1536751124000</p>
              */
             public Builder creationTime(Long creationTime) {
                 this.creationTime = creationTime;
@@ -390,7 +422,10 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * DataType.
+             * <p>The data type of the data asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS_BUCKET</p>
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -398,7 +433,10 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the data asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>268</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -406,7 +444,16 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * Labelsec.
+             * <p>The sensitivity tag of the data. The value is fixed as <strong>0</strong>. <strong>0</strong>, <strong>1</strong>, <strong>2</strong>, or <strong>3</strong> is returned for this parameter only when you set the parameter <strong>RangeId</strong> to <strong>1</strong>.</p>
+             * <ul>
+             * <li><strong>0</strong>: unclassified</li>
+             * <li><strong>1</strong>: confidential</li>
+             * <li><strong>2</strong>: sensitive</li>
+             * <li><strong>3</strong>: highly sensitive</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder labelsec(Boolean labelsec) {
                 this.labelsec = labelsec;
@@ -414,7 +461,10 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the data asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gxdata</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -422,7 +472,13 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectKey.
+             * <p>The key value of the OSS object.</p>
+             * <blockquote>
+             * <p>This parameter is returned only when you set the parameter <strong>RangeId</strong> to <strong>22</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Internal</p>
              */
             public Builder objectKey(String objectKey) {
                 this.objectKey = objectKey;
@@ -430,7 +486,19 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * OdpsRiskLevelName.
+             * <p>The sensitivity level of the MaxCompute data asset. Valid values:</p>
+             * <ul>
+             * <li><strong>S1</strong>: low sensitivity level</li>
+             * <li><strong>S2</strong>: medium sensitivity level</li>
+             * <li><strong>S3</strong>: high sensitivity level</li>
+             * <li><strong>S4</strong>: highest sensitivity level</li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter is returned only when you set the parameter <strong>RangeId</strong> to <strong>1</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>S4</p>
              */
             public Builder odpsRiskLevelName(String odpsRiskLevelName) {
                 this.odpsRiskLevelName = odpsRiskLevelName;
@@ -438,7 +506,10 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The account that owns the data asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtdep-239-******</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -446,7 +517,10 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * <p>The name of the service to which the data asset belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -454,7 +528,17 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * ProductId.
+             * <p>The ID of the service to which the data asset belongs. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: MaxCompute</li>
+             * <li><strong>2</strong>: OSS</li>
+             * <li><strong>3</strong>: AnalyticDB for MySQL</li>
+             * <li><strong>4</strong>: Tablestore</li>
+             * <li><strong>5</strong>: ApsaraDB RDS</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder productId(String productId) {
                 this.productId = productId;
@@ -462,7 +546,14 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * Protection.
+             * <p>Indicates whether the data protection mechanism is enabled for the data asset. The value is fixed as <strong>false</strong>. <strong>true</strong> or <strong>false</strong> is returned for this parameter only when you set the parameter <strong>RangeId</strong> to <strong>1</strong>.</p>
+             * <ul>
+             * <li><strong>false</strong>: The data protection mechanism is disabled.</li>
+             * <li><strong>true</strong>: The data protection mechanism is enabled. Only data inbound is supported. Data outbound is not supported.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder protection(Boolean protection) {
                 this.protection = protection;
@@ -470,7 +561,23 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevelId.
+             * <p>The sensitivity level of the data asset. A higher sensitivity level indicates that the identified data is more sensitive. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: No sensitive data is identified.</li>
+             * <li><strong>2</strong>: sensitive data at level 1.</li>
+             * <li><strong>3</strong>: sensitive data at level 2.</li>
+             * <li><strong>3</strong>: sensitive data at level 3.</li>
+             * <li><strong>5</strong>: sensitive data at level 4.</li>
+             * <li><strong>6</strong>: sensitive data at level 5.</li>
+             * <li><strong>7</strong>: sensitive data at level 6.</li>
+             * <li><strong>8</strong>: sensitive data at level 7.</li>
+             * <li><strong>9</strong>: sensitive data at level 8.</li>
+             * <li><strong>10</strong>: sensitive data at level 9.</li>
+             * <li><strong>11</strong>: sensitive data at level 10.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder riskLevelId(Long riskLevelId) {
                 this.riskLevelId = riskLevelId;
@@ -478,7 +585,10 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevelName.
+             * <p>The name of the sensitivity level for the data asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Medium sensitivity level</p>
              */
             public Builder riskLevelName(String riskLevelName) {
                 this.riskLevelName = riskLevelName;
@@ -486,7 +596,10 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The name of the sensitive data detection rule that the data asset hits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>*** rule</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -494,7 +607,14 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * Sensitive.
+             * <p>Indicates whether the data asset contains sensitive data. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder sensitive(Boolean sensitive) {
                 this.sensitive = sensitive;
@@ -502,7 +622,10 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * SensitiveCount.
+             * <p>The total number of sensitive data assets. For example, the value can be the total number of sensitive MaxCompute projects, packages, or tables, the total number of sensitive ApsaraDB RDS databases or tables, or the total number of sensitive OSS buckets or objects.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24</p>
              */
             public Builder sensitiveCount(Integer sensitiveCount) {
                 this.sensitiveCount = sensitiveCount;
@@ -510,7 +633,10 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * SensitiveRatio.
+             * <p>The percentage of sensitive data in all data assets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>45%</p>
              */
             public Builder sensitiveRatio(String sensitiveRatio) {
                 this.sensitiveRatio = sensitiveRatio;
@@ -518,7 +644,10 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of data assets. For example, the value can be the total number of MaxCompute projects, packages, or tables, the total number of ApsaraDB RDS databases or tables, or the total number of OSS buckets or objects.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>432</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

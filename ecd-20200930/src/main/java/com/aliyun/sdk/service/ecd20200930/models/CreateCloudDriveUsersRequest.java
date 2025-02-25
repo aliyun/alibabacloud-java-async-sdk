@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCloudDriveUsersRequest} extends {@link RequestModel}
  *
  * <p>CreateCloudDriveUsersRequest</p>
  */
 public class CreateCloudDriveUsersRequest extends Request {
-    @Query
-    @NameInMap("CdsId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CdsId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cdsId;
 
-    @Query
-    @NameInMap("EndUserId")
-    @Validation(required = true)
-    private java.util.List < String > endUserId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> endUserId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("UserMaxSize")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserMaxSize")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Long userMaxSize;
 
     private CreateCloudDriveUsersRequest(Builder builder) {
@@ -63,7 +68,7 @@ public class CreateCloudDriveUsersRequest extends Request {
     /**
      * @return endUserId
      */
-    public java.util.List < String > getEndUserId() {
+    public java.util.List<String> getEndUserId() {
         return this.endUserId;
     }
 
@@ -83,7 +88,7 @@ public class CreateCloudDriveUsersRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateCloudDriveUsersRequest, Builder> {
         private String cdsId; 
-        private java.util.List < String > endUserId; 
+        private java.util.List<String> endUserId; 
         private String regionId; 
         private Long userMaxSize; 
 
@@ -100,7 +105,11 @@ public class CreateCloudDriveUsersRequest extends Request {
         } 
 
         /**
-         * The ID of the cloud disk.
+         * <p>The ID of the cloud disk.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+cds-352282****</p>
          */
         public Builder cdsId(String cdsId) {
             this.putQueryParameter("CdsId", cdsId);
@@ -109,16 +118,21 @@ public class CreateCloudDriveUsersRequest extends Request {
         }
 
         /**
-         * The IDs of the end users.
+         * <p>The IDs of the end users.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder endUserId(java.util.List < String > endUserId) {
+        public Builder endUserId(java.util.List<String> endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
             this.endUserId = endUserId;
             return this;
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -127,7 +141,11 @@ public class CreateCloudDriveUsersRequest extends Request {
         }
 
         /**
-         * The maximum storage space of an end user. Unit: bytes.
+         * <p>The maximum storage space of an end user. Unit: bytes.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder userMaxSize(Long userMaxSize) {
             this.putQueryParameter("UserMaxSize", userMaxSize);

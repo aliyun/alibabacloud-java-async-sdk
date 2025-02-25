@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGatewayAuthConsumerStatusRequest} extends {@link RequestModel}
  *
  * <p>UpdateGatewayAuthConsumerStatusRequest</p>
  */
 public class UpdateGatewayAuthConsumerStatusRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("ConsumerStatus")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConsumerStatus")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean consumerStatus;
 
-    @Query
-    @NameInMap("GatewayUniqueId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String gatewayUniqueId;
 
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long id;
 
     private UpdateGatewayAuthConsumerStatusRequest(Builder builder) {
@@ -99,11 +104,14 @@ public class UpdateGatewayAuthConsumerStatusRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -112,11 +120,15 @@ public class UpdateGatewayAuthConsumerStatusRequest extends Request {
         }
 
         /**
-         * The status of the consumer. Valid values:
-         * <p>
+         * <p>The status of the consumer. Valid values:</p>
+         * <ul>
+         * <li>true: The consumer is enabled.</li>
+         * <li>false: The consumer is disabled.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   true: The consumer is enabled.
-         * *   false: The consumer is disabled.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder consumerStatus(Boolean consumerStatus) {
             this.putQueryParameter("ConsumerStatus", consumerStatus);
@@ -125,7 +137,11 @@ public class UpdateGatewayAuthConsumerStatusRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-685f661467b54f48b7b7a76605ce****</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -134,7 +150,11 @@ public class UpdateGatewayAuthConsumerStatusRequest extends Request {
         }
 
         /**
-         * The consumer ID.
+         * <p>The consumer ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

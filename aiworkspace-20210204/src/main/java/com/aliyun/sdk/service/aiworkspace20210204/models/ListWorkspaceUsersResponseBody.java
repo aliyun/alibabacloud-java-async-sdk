@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWorkspaceUsersResponseBody} extends {@link TeaModel}
  *
  * <p>ListWorkspaceUsersResponseBody</p>
  */
 public class ListWorkspaceUsersResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
-    @NameInMap("Users")
+    @com.aliyun.core.annotation.NameInMap("Users")
     private java.util.List < Users> users;
 
     private ListWorkspaceUsersResponseBody(Builder builder) {
@@ -91,11 +91,17 @@ public class ListWorkspaceUsersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListWorkspaceUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkspaceUsersResponseBody</p>
+     */
     public static class Users extends TeaModel {
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private Users(Builder builder) {

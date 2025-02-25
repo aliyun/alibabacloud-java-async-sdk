@@ -1,45 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAllWhitelistTemplateRequest} extends {@link RequestModel}
  *
  * <p>DescribeAllWhitelistTemplateRequest</p>
  */
 public class DescribeAllWhitelistTemplateRequest extends Request {
-    @Query
-    @NameInMap("FuzzySearch")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FuzzySearch")
     private Boolean fuzzySearch;
 
-    @Query
-    @NameInMap("MaxRecordsPerPage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxRecordsPerPage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer maxRecordsPerPage;
 
-    @Query
-    @NameInMap("PageNumbers")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumbers")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNumbers;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TemplateName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
     private String templateName;
 
     private DescribeAllWhitelistTemplateRequest(Builder builder) {
@@ -47,6 +56,7 @@ public class DescribeAllWhitelistTemplateRequest extends Request {
         this.fuzzySearch = builder.fuzzySearch;
         this.maxRecordsPerPage = builder.maxRecordsPerPage;
         this.pageNumbers = builder.pageNumbers;
+        this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -88,6 +98,13 @@ public class DescribeAllWhitelistTemplateRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -119,6 +136,7 @@ public class DescribeAllWhitelistTemplateRequest extends Request {
         private Boolean fuzzySearch; 
         private Integer maxRecordsPerPage; 
         private Integer pageNumbers; 
+        private String regionId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -133,6 +151,7 @@ public class DescribeAllWhitelistTemplateRequest extends Request {
             this.fuzzySearch = request.fuzzySearch;
             this.maxRecordsPerPage = request.maxRecordsPerPage;
             this.pageNumbers = request.pageNumbers;
+            this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
@@ -140,11 +159,14 @@ public class DescribeAllWhitelistTemplateRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable fuzzy search. Valid values:
-         * <p>
+         * <p>Specifies whether to enable fuzzy search. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder fuzzySearch(Boolean fuzzySearch) {
             this.putQueryParameter("FuzzySearch", fuzzySearch);
@@ -153,7 +175,11 @@ public class DescribeAllWhitelistTemplateRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Enumerated valid values: 10, 30, and 50.
+         * <p>The number of entries to return on each page. Enumerated valid values: 10, 30, and 50.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxRecordsPerPage(Integer maxRecordsPerPage) {
             this.putQueryParameter("MaxRecordsPerPage", maxRecordsPerPage);
@@ -162,7 +188,11 @@ public class DescribeAllWhitelistTemplateRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumbers(Integer pageNumbers) {
             this.putQueryParameter("PageNumbers", pageNumbers);
@@ -171,7 +201,22 @@ public class DescribeAllWhitelistTemplateRequest extends Request {
         }
 
         /**
-         * The resource group ID. For more information about resource groups, see related documentation.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The resource group ID. For more information about resource groups, see related documentation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyhigxskzysy</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -198,7 +243,10 @@ public class DescribeAllWhitelistTemplateRequest extends Request {
         }
 
         /**
-         * The name of the IP whitelist template. If you specify this parameter when you perform a fuzzy search, you can call the DescribeWhitelistTemplate operation to query the name of the whitelist template during the fuzzy search.
+         * <p>The name of the IP whitelist template. If you specify this parameter when you perform a fuzzy search, you can call the DescribeWhitelistTemplate operation to query the name of the whitelist template during the fuzzy search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>template</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);

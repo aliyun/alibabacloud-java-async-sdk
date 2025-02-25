@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLiveSnapshotTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>GetLiveSnapshotTemplateResponseBody</p>
  */
 public class GetLiveSnapshotTemplateResponseBody extends TeaModel {
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("LastModified")
+    @com.aliyun.core.annotation.NameInMap("LastModified")
     private String lastModified;
 
-    @NameInMap("OverwriteFormat")
+    @com.aliyun.core.annotation.NameInMap("OverwriteFormat")
     private String overwriteFormat;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SequenceFormat")
+    @com.aliyun.core.annotation.NameInMap("SequenceFormat")
     private String sequenceFormat;
 
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
-    @NameInMap("TemplateName")
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
     private String templateName;
 
-    @NameInMap("TimeInterval")
+    @com.aliyun.core.annotation.NameInMap("TimeInterval")
     private Integer timeInterval;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private GetLiveSnapshotTemplateResponseBody(Builder builder) {
@@ -134,7 +139,10 @@ public class GetLiveSnapshotTemplateResponseBody extends TeaModel {
         private String type; 
 
         /**
-         * CreateTime.
+         * <p>The time when the configuration was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-02-02T22:22:22Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -142,7 +150,10 @@ public class GetLiveSnapshotTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * LastModified.
+         * <p>The time when the template was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-02-02T22:22:22Z</p>
          */
         public Builder lastModified(String lastModified) {
             this.lastModified = lastModified;
@@ -150,7 +161,10 @@ public class GetLiveSnapshotTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * OverwriteFormat.
+         * <p>The naming format of the snapshot captured in overwrite mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>snapshot/{JobId}.jpg</p>
          */
         public Builder overwriteFormat(String overwriteFormat) {
             this.overwriteFormat = overwriteFormat;
@@ -158,7 +172,10 @@ public class GetLiveSnapshotTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -166,7 +183,10 @@ public class GetLiveSnapshotTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * SequenceFormat.
+         * <p>The naming format of the snapshot captured in time series mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>snapshot/{JobId}/{UnixTimestamp}.jpg</p>
          */
         public Builder sequenceFormat(String sequenceFormat) {
             this.sequenceFormat = sequenceFormat;
@@ -174,7 +194,10 @@ public class GetLiveSnapshotTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateId.
+         * <p>The template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>a046-263c-3560-978a-fb287782</strong></strong></p>
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;
@@ -182,7 +205,7 @@ public class GetLiveSnapshotTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateName.
+         * <p>The template name.</p>
          */
         public Builder templateName(String templateName) {
             this.templateName = templateName;
@@ -190,7 +213,10 @@ public class GetLiveSnapshotTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TimeInterval.
+         * <p>The interval between two adjacent snapshots.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder timeInterval(Integer timeInterval) {
             this.timeInterval = timeInterval;
@@ -198,7 +224,15 @@ public class GetLiveSnapshotTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The type of the template.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>system</li>
+         * <li>custom</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         public Builder type(String type) {
             this.type = type;

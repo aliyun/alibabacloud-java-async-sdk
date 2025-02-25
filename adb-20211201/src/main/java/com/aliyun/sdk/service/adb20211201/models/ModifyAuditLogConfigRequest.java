@@ -1,52 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAuditLogConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifyAuditLogConfigRequest</p>
  */
 public class ModifyAuditLogConfigRequest extends Request {
-    @Query
-    @NameInMap("AuditLogStatus")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuditLogStatus")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String auditLogStatus;
 
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineType")
+    private String engineType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyAuditLogConfigRequest(Builder builder) {
         super(builder);
         this.auditLogStatus = builder.auditLogStatus;
         this.DBClusterId = builder.DBClusterId;
+        this.engineType = builder.engineType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -79,6 +89,13 @@ public class ModifyAuditLogConfigRequest extends Request {
      */
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    /**
+     * @return engineType
+     */
+    public String getEngineType() {
+        return this.engineType;
     }
 
     /**
@@ -119,6 +136,7 @@ public class ModifyAuditLogConfigRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyAuditLogConfigRequest, Builder> {
         private String auditLogStatus; 
         private String DBClusterId; 
+        private String engineType; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -133,6 +151,7 @@ public class ModifyAuditLogConfigRequest extends Request {
             super(request);
             this.auditLogStatus = request.auditLogStatus;
             this.DBClusterId = request.DBClusterId;
+            this.engineType = request.engineType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -141,13 +160,18 @@ public class ModifyAuditLogConfigRequest extends Request {
         } 
 
         /**
-         * Modifies the status of SQL audit. Valid values:
-         * <p>
+         * <p>The status to which you want to change the SQL audit feature. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> After you disable the SQL audit feature, all SQL audit logs are deleted. You must query and export SQL audit logs before you disable SQL audit. For more information, see <a href="https://help.aliyun.com/document_detail/612426.html">DescribeAuditLogRecords</a>. When you re-enable SQL audit, audit logs that are generated from the time when SQL audit was last enabled are available for queries.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **on**: enables SQL audit.
-         * *   **off**: disables SQL audit.
-         * 
-         * >  After you disable the SQL audit feature, all SQL audit logs are deleted. You must query and export SQL audit logs before you disable SQL audit. For more information, see Query and export SQL audit logs. When you re-enable SQL audit, audit logs that are generated from the last time when SQL audit was enabled are available for queries.
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder auditLogStatus(String auditLogStatus) {
             this.putQueryParameter("AuditLogStatus", auditLogStatus);
@@ -156,14 +180,34 @@ public class ModifyAuditLogConfigRequest extends Request {
         }
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
-         * <p>
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeDBClusters](~~454250~~) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
+         * <strong>example:</strong>
+         * <p>amv-t4nj8619bz2w3****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * <p>The type of the compute engine. Valid values:</p>
+         * <ul>
+         * <li>XIHE (<strong>default</strong>)</li>
+         * <li>SPARK</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>XIHE</p>
+         */
+        public Builder engineType(String engineType) {
+            this.putQueryParameter("EngineType", engineType);
+            this.engineType = engineType;
             return this;
         }
 
@@ -186,10 +230,14 @@ public class ModifyAuditLogConfigRequest extends Request {
         }
 
         /**
-         * The region ID.
-         * <p>
+         * <p>The region ID of the cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeRegions](~~454314~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

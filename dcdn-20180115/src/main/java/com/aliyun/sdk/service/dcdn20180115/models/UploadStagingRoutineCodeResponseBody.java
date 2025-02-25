@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UploadStagingRoutineCodeResponseBody} extends {@link TeaModel}
  *
  * <p>UploadStagingRoutineCodeResponseBody</p>
  */
 public class UploadStagingRoutineCodeResponseBody extends TeaModel {
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private java.util.Map < String, ? > content;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UploadStagingRoutineCodeResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class UploadStagingRoutineCodeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The parameters required by the code.
+         * <p>The parameters required by the code.</p>
          */
         public Builder content(java.util.Map < String, ? > content) {
             this.content = content;
@@ -58,7 +58,10 @@ public class UploadStagingRoutineCodeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DFA2027F-86C0-4421-9593-581A7993696C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

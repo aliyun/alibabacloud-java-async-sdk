@@ -1,100 +1,106 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReplaceSystemDiskRequest} extends {@link RequestModel}
  *
  * <p>ReplaceSystemDiskRequest</p>
  */
 public class ReplaceSystemDiskRequest extends Request {
-    @Query
-    @NameInMap("SystemDisk")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SystemDisk")
     private SystemDisk systemDisk;
 
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("Architecture")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Architecture")
     private String architecture;
 
-    @Query
-    @NameInMap("Arn")
-    private java.util.List < Arn> arn;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Arn")
+    private java.util.List<Arn> arn;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DiskId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskId")
     private String diskId;
 
-    @Query
-    @NameInMap("EncryptAlgorithm")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptAlgorithm")
     private String encryptAlgorithm;
 
-    @Query
-    @NameInMap("Encrypted")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Encrypted")
     private Boolean encrypted;
 
-    @Query
-    @NameInMap("ImageId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("KMSKeyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KMSKeyId")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String KMSKeyId;
 
-    @Query
-    @NameInMap("KeyPairName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyPairName")
     private String keyPairName;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Password")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Password")
     private String password;
 
-    @Query
-    @NameInMap("PasswordInherit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordInherit")
     private Boolean passwordInherit;
 
-    @Query
-    @NameInMap("Platform")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Platform")
     private String platform;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityEnhancementStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityEnhancementStrategy")
     private String securityEnhancementStrategy;
 
-    @Query
-    @NameInMap("UseAdditionalService")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseAdditionalService")
     private Boolean useAdditionalService;
 
     private ReplaceSystemDiskRequest(Builder builder) {
@@ -159,7 +165,7 @@ public class ReplaceSystemDiskRequest extends Request {
     /**
      * @return arn
      */
-    public java.util.List < Arn> getArn() {
+    public java.util.List<Arn> getArn() {
         return this.arn;
     }
 
@@ -286,7 +292,7 @@ public class ReplaceSystemDiskRequest extends Request {
         private SystemDisk systemDisk; 
         private String sourceRegionId; 
         private String architecture; 
-        private java.util.List < Arn> arn; 
+        private java.util.List<Arn> arn; 
         private String clientToken; 
         private String diskId; 
         private String encryptAlgorithm; 
@@ -353,11 +359,12 @@ public class ReplaceSystemDiskRequest extends Request {
         }
 
         /**
-         * The system architecture. Valid values:
-         * <p>
+         * <blockquote>
+         * <p> This parameter is deprecated.</p>
+         * </blockquote>
          * 
-         * *   i386
-         * *   x86\_64
+         * <strong>example:</strong>
+         * <p>i386</p>
          */
         public Builder architecture(String architecture) {
             this.putQueryParameter("Architecture", architecture);
@@ -366,16 +373,19 @@ public class ReplaceSystemDiskRequest extends Request {
         }
 
         /**
-         * This parameter is not available for public use.
+         * <p>This parameter is not available for public use.</p>
          */
-        public Builder arn(java.util.List < Arn> arn) {
+        public Builder arn(java.util.List<Arn> arn) {
             this.putQueryParameter("Arn", arn);
             this.arn = arn;
             return this;
         }
 
         /**
-         * The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but make sure that the token is unique across requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but make sure that the token is unique across requests. The <strong>token</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -384,14 +394,12 @@ public class ReplaceSystemDiskRequest extends Request {
         }
 
         /**
-         * The disk ID.
-         * <p>
+         * <blockquote>
+         * <p> This parameter is deprecated. To improve compatibility, we recommend that you use <code>ImageId</code>.</p>
+         * </blockquote>
          * 
-         * If the `ImageId` parameter is not specified, this parameter is required.
-         * 
-         * If the DiskId parameter is specified, the `Platform` and `Architecture` parameters are required. The specified values of `Platform` and `Architecture` must be consistent with those of `Platform` and `Architecture` parameters of the instance.
-         * 
-         * > This feature is available to select users. To use this feature, [submit a ticket](https://workorder-intl.console.aliyun.com/console.htm).
+         * <strong>example:</strong>
+         * <p>d-bp67acfmxazb4ph****</p>
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -400,7 +408,12 @@ public class ReplaceSystemDiskRequest extends Request {
         }
 
         /**
-         * > This parameter is not available for public use.
+         * <blockquote>
+         * <p>This parameter is not available for public use.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>hide</p>
          */
         public Builder encryptAlgorithm(String encryptAlgorithm) {
             this.putQueryParameter("EncryptAlgorithm", encryptAlgorithm);
@@ -409,13 +422,15 @@ public class ReplaceSystemDiskRequest extends Request {
         }
 
         /**
-         * Specifies whether to encrypt the disk. Valid values:
-         * <p>
+         * <p>Specifies whether to encrypt the disk. Valid values:</p>
+         * <ul>
+         * <li>true: encrypts the disk.</li>
+         * <li>false: does not encrypt the disk.</li>
+         * </ul>
+         * <p>Default value: false</p>
          * 
-         * *   true: encrypts the disk.
-         * *   false: does not encrypt the disk.
-         * 
-         * Default value: false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder encrypted(Boolean encrypted) {
             this.putQueryParameter("Encrypted", encrypted);
@@ -424,10 +439,11 @@ public class ReplaceSystemDiskRequest extends Request {
         }
 
         /**
-         * The ID of the image to be used to replace the system disk.
-         * <p>
+         * <p>The ID of the image to be used to replace the system disk.</p>
+         * <p>If the <code>DiskId</code> parameter is not specified, this parameter is required.</p>
          * 
-         * If the `DiskId` parameter is not specified, this parameter is required.
+         * <strong>example:</strong>
+         * <p>m-bp67acfmxazb4ph****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -436,7 +452,14 @@ public class ReplaceSystemDiskRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The ID of the instance whose operating system you want to replace.</p>
+         * <blockquote>
+         * <p> Make sure that the instance is in the <code>Stopped</code> (<code>Stopped</code>) state.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4ph****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -445,7 +468,10 @@ public class ReplaceSystemDiskRequest extends Request {
         }
 
         /**
-         * The ID of the KMS key that you want to use for the system disk.
+         * <p>The ID of the KMS key to use for the system disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e522b26d-abf6-4e0d-b5da-04b7******3c</p>
          */
         public Builder KMSKeyId(String KMSKeyId) {
             this.putQueryParameter("KMSKeyId", KMSKeyId);
@@ -454,10 +480,13 @@ public class ReplaceSystemDiskRequest extends Request {
         }
 
         /**
-         * The name of the key pair.
-         * <p>
+         * <p>The name of the key pair.</p>
+         * <blockquote>
+         * <p>This parameter is applicable only to Linux instances. You can bind an SSH key pair to the instance as a logon credential. After you bind the SSH key pair, the username and password logon method is disabled for the instance.</p>
+         * </blockquote>
          * 
-         * > This parameter is applicable only to Linux instances. You can bind an SSH key pair to the instance as a logon credential. After you bind the SSH key pair, the username and password logon method is disabled for the instance.
+         * <strong>example:</strong>
+         * <p>testKeyPairName</p>
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -484,16 +513,17 @@ public class ReplaceSystemDiskRequest extends Request {
         }
 
         /**
-         * Specifies whether to reset the password for the instance. The password must be 8 to 30 characters in length and contain at least three of the following items: uppercase letters, lowercase letters, digits, and special characters. Special characters include:
-         * <p>
+         * <p>Specifies whether to reset the password for the instance. The password must be 8 to 30 characters in length and contain at least three of the following items: uppercase letters, lowercase letters, digits, and special characters. Special characters include:</p>
+         * <pre><code>()`~!@#$%^&amp;*-_+=|{}[]:;\&quot;&lt;&gt;,.?/
+         * </code></pre>
+         * <p>The passwords of Windows instances cannot start with a forward slash (/).</p>
+         * <p>This parameter is empty by default, which indicates that the current password remains unchanged.</p>
+         * <blockquote>
+         * <p>If you specify <code>Password</code>, we recommend that you send requests over HTTPS to prevent password leaks.</p>
+         * </blockquote>
          * 
-         *     ()`~!@#$%^&*-_+=|{}[]:;\"<>,.?/
-         * 
-         * The passwords of Windows instances cannot start with a forward slash (/).
-         * 
-         * This parameter is empty by default, which indicates that the current password remains unchanged.
-         * 
-         * > If you specify `Password`, we recommend that you send requests over HTTPS to prevent password leaks.
+         * <strong>example:</strong>
+         * <p>EcsV587!</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -502,12 +532,14 @@ public class ReplaceSystemDiskRequest extends Request {
         }
 
         /**
-         * Specifies whether to use the preset password of the image.
-         * <p>
+         * <p>Specifies whether to use the preset password of the image.</p>
+         * <p>Default value: false</p>
+         * <blockquote>
+         * <p>If the PasswordInherit parameter is specified, you must leave the Password parameter empty. Before you use this parameter, make sure that a password is preset for the image.</p>
+         * </blockquote>
          * 
-         * Default value: false
-         * 
-         * > If the PasswordInherit parameter is specified, you must leave the Password parameter empty. Before you use this parameter, make sure that a password is preset for the image.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder passwordInherit(Boolean passwordInherit) {
             this.putQueryParameter("PasswordInherit", passwordInherit);
@@ -516,11 +548,12 @@ public class ReplaceSystemDiskRequest extends Request {
         }
 
         /**
-         * The operating system distribution. Valid values:
-         * <p>
+         * <blockquote>
+         * <p> This parameter is deprecated.</p>
+         * </blockquote>
          * 
-         * *   CentOS
-         * *   Ubuntu
+         * <strong>example:</strong>
+         * <p>CentOS</p>
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -547,13 +580,15 @@ public class ReplaceSystemDiskRequest extends Request {
         }
 
         /**
-         * Specifies whether to use Security Center Basic after the system disk is replaced. Valid values:
-         * <p>
+         * <p>Specifies whether to use Security Center Basic after the system disk is replaced. Valid values:</p>
+         * <ul>
+         * <li>Active: uses Security Center Basic after the system disk is re-initialized. This value is applicable only to public images.</li>
+         * <li>Deactive: does not use Security Center Basic after the system disk is re-initialized. This value is applicable to all images.</li>
+         * </ul>
+         * <p>Default value: Deactive.</p>
          * 
-         * *   Active: uses Security Center Basic after the system disk is re-initialized. This value is applicable only to public images.
-         * *   Deactive: does not use Security Center Basic after the system disk is re-initialized. This value is applicable to all images.
-         * 
-         * Default value: Deactive.
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder securityEnhancementStrategy(String securityEnhancementStrategy) {
             this.putQueryParameter("SecurityEnhancementStrategy", securityEnhancementStrategy);
@@ -562,10 +597,13 @@ public class ReplaceSystemDiskRequest extends Request {
         }
 
         /**
-         * Specifies whether to use the system configurations for virtual machines provided by Alibaba Cloud. System configurations for Windows: NTP and KMS. System configurations for Linux: NTP and YUM.
-         * <p>
+         * <p>Specifies whether to use the system configurations for virtual machines provided by Alibaba Cloud. System configurations for Windows: NTP and KMS. System configurations for Linux: NTP and YUM.</p>
+         * <blockquote>
+         * <p>This parameter takes effect only when you attach a system disk whose device name is /dev/xvda.</p>
+         * </blockquote>
          * 
-         * > This parameter takes effect only when you attach a system disk whose device name is /dev/xvda.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder useAdditionalService(Boolean useAdditionalService) {
             this.putQueryParameter("UseAdditionalService", useAdditionalService);
@@ -580,8 +618,14 @@ public class ReplaceSystemDiskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ReplaceSystemDiskRequest} extends {@link TeaModel}
+     *
+     * <p>ReplaceSystemDiskRequest</p>
+     */
     public static class SystemDisk extends TeaModel {
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
         private SystemDisk(Builder builder) {
@@ -607,12 +651,30 @@ public class ReplaceSystemDiskRequest extends Request {
             private Integer size; 
 
             /**
-             * The capacity of the new system disk. Unit: GiB. Valid values: Max{20, Size of the image specified by ImageId} to 500.
-             * <p>
+             * <p>The capacity of the new system disk. Unit: GiB. Valid values for different disk categories:</p>
+             * <ul>
+             * <li><p>Basic disk: Max{20, Size of the image specified by ImageId} to 500.</p>
+             * </li>
+             * <li><p>Enterprise SSD (ESSD):</p>
+             * <ul>
+             * <li>PL0: Max{1, Size of the image specified by ImageId} to 2048.</li>
+             * <li>PL1: Max{20, Size of the image specified by ImageId} to 2048.</li>
+             * <li>PL2: Max{461, Size of the image specified by ImageId} to 2048.</li>
+             * <li>PL3: Max{1261, Size of the image specified by ImageId} to 2048.</li>
+             * </ul>
+             * </li>
+             * <li><p>ESSD AutoPL disk: Max{1, Size of the image specified by ImageId} to 2048.</p>
+             * </li>
+             * <li><p>Other disk categories: Max{20, Size of the image specified by ImageId} to 2048.</p>
+             * </li>
+             * </ul>
+             * <p>Default value: 40 or the size of the image specified by ImageId, whichever is greater.</p>
+             * <blockquote>
+             * <p> If the capacity of the new system disk exceeds <code>Max{20, Capacity of the original system disk}</code>, you are charged for the excess capacity.</p>
+             * </blockquote>
              * 
-             * Default value: Max{40, Size of the image specified by ImageId}.
-             * 
-             * > If the capacity of the new system disk exceeds `Max{20, Capacity of the original system disk}`, you are charged for the excess capacity.
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -626,14 +688,20 @@ public class ReplaceSystemDiskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ReplaceSystemDiskRequest} extends {@link TeaModel}
+     *
+     * <p>ReplaceSystemDiskRequest</p>
+     */
     public static class Arn extends TeaModel {
-        @NameInMap("AssumeRoleFor")
+        @com.aliyun.core.annotation.NameInMap("AssumeRoleFor")
         private Long assumeRoleFor;
 
-        @NameInMap("RoleType")
+        @com.aliyun.core.annotation.NameInMap("RoleType")
         private String roleType;
 
-        @NameInMap("Rolearn")
+        @com.aliyun.core.annotation.NameInMap("Rolearn")
         private String rolearn;
 
         private Arn(Builder builder) {
@@ -677,7 +745,12 @@ public class ReplaceSystemDiskRequest extends Request {
             private String rolearn; 
 
             /**
-             * > This parameter is unavailable.
+             * <blockquote>
+             * <p>This parameter is unavailable.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder assumeRoleFor(Long assumeRoleFor) {
                 this.assumeRoleFor = assumeRoleFor;
@@ -685,7 +758,12 @@ public class ReplaceSystemDiskRequest extends Request {
             }
 
             /**
-             * > This parameter is not available for public use.
+             * <blockquote>
+             * <p>This parameter is not available for public use.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder roleType(String roleType) {
                 this.roleType = roleType;
@@ -693,7 +771,12 @@ public class ReplaceSystemDiskRequest extends Request {
             }
 
             /**
-             * > This parameter is not available for public use.
+             * <blockquote>
+             * <p>This parameter is not available for public use.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder rolearn(String rolearn) {
                 this.rolearn = rolearn;

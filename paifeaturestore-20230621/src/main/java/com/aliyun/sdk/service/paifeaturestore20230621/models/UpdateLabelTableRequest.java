@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateLabelTableRequest} extends {@link RequestModel}
  *
  * <p>UpdateLabelTableRequest</p>
  */
 public class UpdateLabelTableRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("LabelTableId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("LabelTableId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String labelTableId;
 
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("DatasourceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DatasourceId")
     private String datasourceId;
 
-    @Body
-    @NameInMap("Fields")
-    @Validation(required = true)
-    private java.util.List < Fields> fields;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Fields")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Fields> fields;
 
-    @Body
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
     private UpdateLabelTableRequest(Builder builder) {
@@ -93,7 +98,7 @@ public class UpdateLabelTableRequest extends Request {
     /**
      * @return fields
      */
-    public java.util.List < Fields> getFields() {
+    public java.util.List<Fields> getFields() {
         return this.fields;
     }
 
@@ -109,7 +114,7 @@ public class UpdateLabelTableRequest extends Request {
         private String labelTableId; 
         private String regionId; 
         private String datasourceId; 
-        private java.util.List < Fields> fields; 
+        private java.util.List<Fields> fields; 
         private String name; 
 
         private Builder() {
@@ -127,7 +132,10 @@ public class UpdateLabelTableRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>featurestore-test1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -136,7 +144,10 @@ public class UpdateLabelTableRequest extends Request {
         }
 
         /**
-         * LabelTableId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder labelTableId(String labelTableId) {
             this.putPathParameter("LabelTableId", labelTableId);
@@ -163,9 +174,9 @@ public class UpdateLabelTableRequest extends Request {
         }
 
         /**
-         * Fields.
+         * <p>This parameter is required.</p>
          */
-        public Builder fields(java.util.List < Fields> fields) {
+        public Builder fields(java.util.List<Fields> fields) {
             this.putBodyParameter("Fields", fields);
             this.fields = fields;
             return this;
@@ -187,17 +198,23 @@ public class UpdateLabelTableRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateLabelTableRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateLabelTableRequest</p>
+     */
     public static class Fields extends TeaModel {
-        @NameInMap("Attributes")
-        @Validation(required = true)
-        private java.util.List < String > attributes;
+        @com.aliyun.core.annotation.NameInMap("Attributes")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List<String> attributes;
 
-        @NameInMap("Name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private Fields(Builder builder) {
@@ -217,7 +234,7 @@ public class UpdateLabelTableRequest extends Request {
         /**
          * @return attributes
          */
-        public java.util.List < String > getAttributes() {
+        public java.util.List<String> getAttributes() {
             return this.attributes;
         }
 
@@ -236,20 +253,23 @@ public class UpdateLabelTableRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > attributes; 
+            private java.util.List<String> attributes; 
             private String name; 
             private String type; 
 
             /**
-             * Attributes.
+             * <p>This parameter is required.</p>
              */
-            public Builder attributes(java.util.List < String > attributes) {
+            public Builder attributes(java.util.List<String> attributes) {
                 this.attributes = attributes;
                 return this;
             }
 
             /**
-             * Name.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lat</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -257,7 +277,10 @@ public class UpdateLabelTableRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DOUBLE</p>
              */
             public Builder type(String type) {
                 this.type = type;

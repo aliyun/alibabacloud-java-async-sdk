@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCycleTaskRequest} extends {@link RequestModel}
  *
  * <p>DeleteCycleTaskRequest</p>
  */
 public class DeleteCycleTaskRequest extends Request {
-    @Query
-    @NameInMap("ConfigId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String configId;
 
     private DeleteCycleTaskRequest(Builder builder) {
@@ -55,10 +60,14 @@ public class DeleteCycleTaskRequest extends Request {
         } 
 
         /**
-         * The ID of the task configuration.
-         * <p>
+         * <p>The ID of the task configuration.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeCycleTaskList~~">DescribeCycleTaskList</a> operation to query the IDs of task configurations.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeCycleTaskList](~~DescribeCycleTaskList~~) operation to query the IDs of task configurations.
+         * <strong>example:</strong>
+         * <p>435f626256ebf564cf5ba966a539****</p>
          */
         public Builder configId(String configId) {
             this.putQueryParameter("ConfigId", configId);

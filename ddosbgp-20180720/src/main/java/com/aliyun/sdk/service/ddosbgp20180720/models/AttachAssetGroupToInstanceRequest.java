@@ -1,41 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachAssetGroupToInstanceRequest} extends {@link RequestModel}
  *
  * <p>AttachAssetGroupToInstanceRequest</p>
  */
 public class AttachAssetGroupToInstanceRequest extends Request {
-    @Query
-    @NameInMap("AssetGroupList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssetGroupList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < AssetGroupList> assetGroupList;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
-
-    @Query
-    @NameInMap("SourceIp")
-    private String sourceIp;
 
     private AttachAssetGroupToInstanceRequest(Builder builder) {
         super(builder);
         this.assetGroupList = builder.assetGroupList;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
-        this.sourceIp = builder.sourceIp;
     }
 
     public static Builder builder() {
@@ -72,18 +67,10 @@ public class AttachAssetGroupToInstanceRequest extends Request {
         return this.regionId;
     }
 
-    /**
-     * @return sourceIp
-     */
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
     public static final class Builder extends Request.Builder<AttachAssetGroupToInstanceRequest, Builder> {
         private java.util.List < AssetGroupList> assetGroupList; 
         private String instanceId; 
         private String regionId; 
-        private String sourceIp; 
 
         private Builder() {
             super();
@@ -94,11 +81,11 @@ public class AttachAssetGroupToInstanceRequest extends Request {
             this.assetGroupList = request.assetGroupList;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
-            this.sourceIp = request.sourceIp;
         } 
 
         /**
-         * AssetGroupList.
+         * <p>The information about the asset to be associated.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder assetGroupList(java.util.List < AssetGroupList> assetGroupList) {
             String assetGroupListShrink = shrink(assetGroupList, "AssetGroupList", "json");
@@ -108,7 +95,14 @@ public class AttachAssetGroupToInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance to query.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> operation to query the IDs of all Anti-DDoS Origin instances of paid editions.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddosbgp-cn-n6w1r7nz****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -117,20 +111,17 @@ public class AttachAssetGroupToInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region in which the instance resides.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * SourceIp.
-         */
-        public Builder sourceIp(String sourceIp) {
-            this.putQueryParameter("SourceIp", sourceIp);
-            this.sourceIp = sourceIp;
             return this;
         }
 
@@ -141,20 +132,26 @@ public class AttachAssetGroupToInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AttachAssetGroupToInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>AttachAssetGroupToInstanceRequest</p>
+     */
     public static class AssetGroupList extends TeaModel {
-        @NameInMap("MemberUid")
+        @com.aliyun.core.annotation.NameInMap("MemberUid")
         private String memberUid;
 
-        @NameInMap("Name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
-        @NameInMap("Region")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Region")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String region;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private AssetGroupList(Builder builder) {
@@ -207,7 +204,10 @@ public class AttachAssetGroupToInstanceRequest extends Request {
             private String type; 
 
             /**
-             * MemberUid.
+             * <p>The UID of the member to which the asset belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1743970208320***</p>
              */
             public Builder memberUid(String memberUid) {
                 this.memberUid = memberUid;
@@ -215,7 +215,11 @@ public class AttachAssetGroupToInstanceRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The ID of the asset that you want to add. If the asset is a Web Application Firewall (WAF) instance, specify the ID of the WAF instance.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>waf-test-001</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -223,7 +227,11 @@ public class AttachAssetGroupToInstanceRequest extends Request {
             }
 
             /**
-             * Region.
+             * <p>The region ID of the asset.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -231,7 +239,11 @@ public class AttachAssetGroupToInstanceRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The type of the asset.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>waf</p>
              */
             public Builder type(String type) {
                 this.type = type;

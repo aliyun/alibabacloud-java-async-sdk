@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchTraceAppByNameRequest} extends {@link RequestModel}
  *
  * <p>SearchTraceAppByNameRequest</p>
  */
 public class SearchTraceAppByNameRequest extends Request {
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
 
-    @Query
-    @NameInMap("TraceAppName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TraceAppName")
     private String traceAppName;
 
     private SearchTraceAppByNameRequest(Builder builder) {
@@ -54,7 +59,7 @@ public class SearchTraceAppByNameRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -67,7 +72,7 @@ public class SearchTraceAppByNameRequest extends Request {
 
     public static final class Builder extends Request.Builder<SearchTraceAppByNameRequest, Builder> {
         private String regionId; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
         private String traceAppName; 
 
         private Builder() {
@@ -82,7 +87,10 @@ public class SearchTraceAppByNameRequest extends Request {
         } 
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -91,19 +99,22 @@ public class SearchTraceAppByNameRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * <p>The list of tags.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;
         }
 
         /**
-         * The name of the application.
-         * <p>
+         * <p>The name of the application.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, all application monitoring tasks in the specified region are queried.</p>
+         * </blockquote>
          * 
-         * > If you do not specify this parameter, all application monitoring tasks in the specified region are queried.
+         * <strong>example:</strong>
+         * <p>test-app</p>
          */
         public Builder traceAppName(String traceAppName) {
             this.putQueryParameter("TraceAppName", traceAppName);
@@ -118,11 +129,17 @@ public class SearchTraceAppByNameRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SearchTraceAppByNameRequest} extends {@link TeaModel}
+     *
+     * <p>SearchTraceAppByNameRequest</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -157,7 +174,10 @@ public class SearchTraceAppByNameRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -165,7 +185,10 @@ public class SearchTraceAppByNameRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

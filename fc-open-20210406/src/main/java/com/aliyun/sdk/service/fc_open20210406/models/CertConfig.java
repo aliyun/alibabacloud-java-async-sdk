@@ -62,7 +62,7 @@ public class CertConfig extends TeaModel {
         private String privateKey; 
 
         /**
-         * 证书名称
+         * certName.
          */
         public Builder certName(String certName) {
             this.certName = certName;
@@ -70,7 +70,7 @@ public class CertConfig extends TeaModel {
         }
 
         /**
-         * 证书，如果是证书链则依次填写多个证书
+         * certificate.
          */
         public Builder certificate(String certificate) {
             this.certificate = certificate;
@@ -78,7 +78,7 @@ public class CertConfig extends TeaModel {
         }
 
         /**
-         * 私钥
+         * privateKey.
          */
         public Builder privateKey(String privateKey) {
             this.privateKey = privateKey;

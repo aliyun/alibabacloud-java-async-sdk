@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link IgnoreCheckItemsRequest} extends {@link RequestModel}
  *
  * <p>IgnoreCheckItemsRequest</p>
  */
 public class IgnoreCheckItemsRequest extends Request {
-    @Query
-    @NameInMap("CheckAndRiskTypeList")
-    private java.util.List < CheckAndRiskTypeList> checkAndRiskTypeList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckAndRiskTypeList")
+    private java.util.List<CheckAndRiskTypeList> checkAndRiskTypeList;
 
-    @Query
-    @NameInMap("CheckIds")
-    private java.util.List < Long > checkIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckIds")
+    private java.util.List<Long> checkIds;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Reason")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Reason")
     private String reason;
 
-    @Query
-    @NameInMap("Source")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer type;
 
-    @Query
-    @NameInMap("UuidList")
-    private java.util.List < String > uuidList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UuidList")
+    private java.util.List<String> uuidList;
 
     private IgnoreCheckItemsRequest(Builder builder) {
         super(builder);
@@ -68,14 +73,14 @@ public class IgnoreCheckItemsRequest extends Request {
     /**
      * @return checkAndRiskTypeList
      */
-    public java.util.List < CheckAndRiskTypeList> getCheckAndRiskTypeList() {
+    public java.util.List<CheckAndRiskTypeList> getCheckAndRiskTypeList() {
         return this.checkAndRiskTypeList;
     }
 
     /**
      * @return checkIds
      */
-    public java.util.List < Long > getCheckIds() {
+    public java.util.List<Long> getCheckIds() {
         return this.checkIds;
     }
 
@@ -110,18 +115,18 @@ public class IgnoreCheckItemsRequest extends Request {
     /**
      * @return uuidList
      */
-    public java.util.List < String > getUuidList() {
+    public java.util.List<String> getUuidList() {
         return this.uuidList;
     }
 
     public static final class Builder extends Request.Builder<IgnoreCheckItemsRequest, Builder> {
-        private java.util.List < CheckAndRiskTypeList> checkAndRiskTypeList; 
-        private java.util.List < Long > checkIds; 
+        private java.util.List<CheckAndRiskTypeList> checkAndRiskTypeList; 
+        private java.util.List<Long> checkIds; 
         private String lang; 
         private String reason; 
         private String source; 
         private Integer type; 
-        private java.util.List < String > uuidList; 
+        private java.util.List<String> uuidList; 
 
         private Builder() {
             super();
@@ -139,29 +144,32 @@ public class IgnoreCheckItemsRequest extends Request {
         } 
 
         /**
-         * The risk items.
+         * <p>The information about check items.</p>
          */
-        public Builder checkAndRiskTypeList(java.util.List < CheckAndRiskTypeList> checkAndRiskTypeList) {
+        public Builder checkAndRiskTypeList(java.util.List<CheckAndRiskTypeList> checkAndRiskTypeList) {
             this.putQueryParameter("CheckAndRiskTypeList", checkAndRiskTypeList);
             this.checkAndRiskTypeList = checkAndRiskTypeList;
             return this;
         }
 
         /**
-         * CheckIds.
+         * <p>The IDs of check items.</p>
          */
-        public Builder checkIds(java.util.List < Long > checkIds) {
+        public Builder checkIds(java.util.List<Long> checkIds) {
             this.putQueryParameter("CheckIds", checkIds);
             this.checkIds = checkIds;
             return this;
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -170,7 +178,10 @@ public class IgnoreCheckItemsRequest extends Request {
         }
 
         /**
-         * The reason why you add the risk item to the whitelist.
+         * <p>The reason why you add the risk item to the whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>already config in another way</p>
          */
         public Builder reason(String reason) {
             this.putQueryParameter("Reason", reason);
@@ -179,11 +190,14 @@ public class IgnoreCheckItemsRequest extends Request {
         }
 
         /**
-         * The data source. Valid values:
-         * <p>
+         * <p>The data source. Valid values:</p>
+         * <ul>
+         * <li><strong>default</strong>: host baseline</li>
+         * <li><strong>agentless</strong>: agentless baseline</li>
+         * </ul>
          * 
-         * *   **default**: host baseline
-         * *   **agentless**: agentless baseline
+         * <strong>example:</strong>
+         * <p>agentless</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -192,10 +206,15 @@ public class IgnoreCheckItemsRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform on the risk item.Valid values:
-         * <p>
-         * *  **1**: adds the risk item to the whitelist
-         * *  **2**: removes the risk item from the whitelist
+         * <p>The operation that you want to perform on the risk item.Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: adds the risk item to the whitelist</li>
+         * <li><strong>2</strong>: removes the risk item from the whitelist</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder type(Integer type) {
             this.putQueryParameter("Type", type);
@@ -204,12 +223,12 @@ public class IgnoreCheckItemsRequest extends Request {
         }
 
         /**
-         * The UUIDs of the servers.
-         * <p>
-         * 
-         * > You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+         * <p>The UUIDs of the servers.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+         * </blockquote>
          */
-        public Builder uuidList(java.util.List < String > uuidList) {
+        public Builder uuidList(java.util.List<String> uuidList) {
             this.putQueryParameter("UuidList", uuidList);
             this.uuidList = uuidList;
             return this;
@@ -222,11 +241,17 @@ public class IgnoreCheckItemsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link IgnoreCheckItemsRequest} extends {@link TeaModel}
+     *
+     * <p>IgnoreCheckItemsRequest</p>
+     */
     public static class CheckAndRiskTypeList extends TeaModel {
-        @NameInMap("CheckId")
+        @com.aliyun.core.annotation.NameInMap("CheckId")
         private Long checkId;
 
-        @NameInMap("RiskType")
+        @com.aliyun.core.annotation.NameInMap("RiskType")
         private String riskType;
 
         private CheckAndRiskTypeList(Builder builder) {
@@ -261,7 +286,10 @@ public class IgnoreCheckItemsRequest extends Request {
             private String riskType; 
 
             /**
-             * The ID of the check item.
+             * <p>The ID of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>52</p>
              */
             public Builder checkId(Long checkId) {
                 this.checkId = checkId;
@@ -269,7 +297,10 @@ public class IgnoreCheckItemsRequest extends Request {
             }
 
             /**
-             * The baseline type of the check item.
+             * <p>The baseline type of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>weak_password</p>
              */
             public Builder riskType(String riskType) {
                 this.riskType = riskType;

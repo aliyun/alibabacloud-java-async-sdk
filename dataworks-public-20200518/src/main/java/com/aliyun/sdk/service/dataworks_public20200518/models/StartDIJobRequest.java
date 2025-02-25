@@ -1,33 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartDIJobRequest} extends {@link RequestModel}
  *
  * <p>StartDIJobRequest</p>
  */
 public class StartDIJobRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("DIJobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DIJobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long DIJobId;
 
-    @Body
-    @NameInMap("ForceToRerun")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ForceToRerun")
     private Boolean forceToRerun;
 
-    @Body
-    @NameInMap("RealtimeStartSettings")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RealtimeStartSettings")
     private RealtimeStartSettings realtimeStartSettings;
 
     private StartDIJobRequest(Builder builder) {
@@ -98,7 +102,7 @@ public class StartDIJobRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -107,7 +111,11 @@ public class StartDIJobRequest extends Request {
         }
 
         /**
-         * DIJobId.
+         * <p>The task ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11743</p>
          */
         public Builder DIJobId(Long DIJobId) {
             this.putBodyParameter("DIJobId", DIJobId);
@@ -116,7 +124,10 @@ public class StartDIJobRequest extends Request {
         }
 
         /**
-         * ForceToRerun.
+         * <p>Specifies whether to forcefully rerun all synchronization steps. If you do not configure this parameter, the system does not forcefully rerun the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder forceToRerun(Boolean forceToRerun) {
             this.putBodyParameter("ForceToRerun", forceToRerun);
@@ -125,7 +136,7 @@ public class StartDIJobRequest extends Request {
         }
 
         /**
-         * RealtimeStartSettings.
+         * <p>The settings for the start.</p>
          */
         public Builder realtimeStartSettings(RealtimeStartSettings realtimeStartSettings) {
             String realtimeStartSettingsShrink = shrink(realtimeStartSettings, "RealtimeStartSettings", "json");
@@ -141,11 +152,17 @@ public class StartDIJobRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link StartDIJobRequest} extends {@link TeaModel}
+     *
+     * <p>StartDIJobRequest</p>
+     */
     public static class FailoverSettings extends TeaModel {
-        @NameInMap("Interval")
+        @com.aliyun.core.annotation.NameInMap("Interval")
         private Long interval;
 
-        @NameInMap("UpperLimit")
+        @com.aliyun.core.annotation.NameInMap("UpperLimit")
         private Long upperLimit;
 
         private FailoverSettings(Builder builder) {
@@ -180,7 +197,10 @@ public class StartDIJobRequest extends Request {
             private Long upperLimit; 
 
             /**
-             * Interval.
+             * <p>The failover interval. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder interval(Long interval) {
                 this.interval = interval;
@@ -188,7 +208,10 @@ public class StartDIJobRequest extends Request {
             }
 
             /**
-             * UpperLimit.
+             * <p>The maximum number of failovers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder upperLimit(Long upperLimit) {
                 this.upperLimit = upperLimit;
@@ -202,11 +225,17 @@ public class StartDIJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link StartDIJobRequest} extends {@link TeaModel}
+     *
+     * <p>StartDIJobRequest</p>
+     */
     public static class RealtimeStartSettings extends TeaModel {
-        @NameInMap("FailoverSettings")
+        @com.aliyun.core.annotation.NameInMap("FailoverSettings")
         private FailoverSettings failoverSettings;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
         private RealtimeStartSettings(Builder builder) {
@@ -241,7 +270,7 @@ public class StartDIJobRequest extends Request {
             private Long startTime; 
 
             /**
-             * FailoverSettings.
+             * <p>The failover settings.</p>
              */
             public Builder failoverSettings(FailoverSettings failoverSettings) {
                 this.failoverSettings = failoverSettings;
@@ -249,7 +278,10 @@ public class StartDIJobRequest extends Request {
             }
 
             /**
-             * StartTime.
+             * <p>The timestamp of the start offset. Unit: seconds. If you do not configure this parameter, the offset is not reset by default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1671516776</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

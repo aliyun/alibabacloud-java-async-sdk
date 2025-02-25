@@ -49,9 +49,9 @@ public class DetectUserFaceByUrlRequest extends Request {
             super();
         } 
 
-        private Builder(DetectUserFaceByUrlRequest response) {
-            super(response);
-            this.facePicUrl = response.facePicUrl;
+        private Builder(DetectUserFaceByUrlRequest request) {
+            super(request);
+            this.facePicUrl = request.facePicUrl;
         } 
 
         /**

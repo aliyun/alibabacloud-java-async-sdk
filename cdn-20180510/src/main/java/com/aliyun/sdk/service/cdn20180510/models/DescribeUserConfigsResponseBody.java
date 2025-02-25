@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserConfigsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUserConfigsResponseBody</p>
  */
 public class DescribeUserConfigsResponseBody extends TeaModel {
-    @NameInMap("Configs")
+    @com.aliyun.core.annotation.NameInMap("Configs")
     private Configs configs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeUserConfigsResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeUserConfigsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The configurations of the specified feature.
+         * <p>The configurations of the specified feature.</p>
          */
         public Builder configs(Configs configs) {
             this.configs = configs;
@@ -58,7 +58,10 @@ public class DescribeUserConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9BCC7BAA-ACBE-45E5-83F0-98BF7E693E84</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +74,20 @@ public class DescribeUserConfigsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUserConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUserConfigsResponseBody</p>
+     */
     public static class OssLogConfig extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private String enable;
 
-        @NameInMap("Prefix")
+        @com.aliyun.core.annotation.NameInMap("Prefix")
         private String prefix;
 
         private OssLogConfig(Builder builder) {
@@ -122,7 +131,10 @@ public class DescribeUserConfigsResponseBody extends TeaModel {
             private String prefix; 
 
             /**
-             * The name of the bucket.
+             * <p>The name of the bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Buckettest</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -130,7 +142,10 @@ public class DescribeUserConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the OSS bucket is enabled.
+             * <p>Indicates whether the OSS bucket is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder enable(String enable) {
                 this.enable = enable;
@@ -138,7 +153,10 @@ public class DescribeUserConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The prefix.
+             * <p>The prefix.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder prefix(String prefix) {
                 this.prefix = prefix;
@@ -152,8 +170,14 @@ public class DescribeUserConfigsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeUserConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUserConfigsResponseBody</p>
+     */
     public static class WafConfig extends TeaModel {
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private String enable;
 
         private WafConfig(Builder builder) {
@@ -179,7 +203,10 @@ public class DescribeUserConfigsResponseBody extends TeaModel {
             private String enable; 
 
             /**
-             * Indicates whether WAF is enabled.
+             * <p>Indicates whether WAF is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder enable(String enable) {
                 this.enable = enable;
@@ -193,11 +220,17 @@ public class DescribeUserConfigsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeUserConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUserConfigsResponseBody</p>
+     */
     public static class Configs extends TeaModel {
-        @NameInMap("OssLogConfig")
+        @com.aliyun.core.annotation.NameInMap("OssLogConfig")
         private OssLogConfig ossLogConfig;
 
-        @NameInMap("WafConfig")
+        @com.aliyun.core.annotation.NameInMap("WafConfig")
         private WafConfig wafConfig;
 
         private Configs(Builder builder) {
@@ -232,7 +265,7 @@ public class DescribeUserConfigsResponseBody extends TeaModel {
             private WafConfig wafConfig; 
 
             /**
-             * The configurations of Object Storage Service (OSS).
+             * <p>The configurations of Object Storage Service (OSS).</p>
              */
             public Builder ossLogConfig(OssLogConfig ossLogConfig) {
                 this.ossLogConfig = ossLogConfig;
@@ -240,7 +273,7 @@ public class DescribeUserConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of Web Application Firewall (WAF).
+             * <p>The configurations of Web Application Firewall (WAF).</p>
              */
             public Builder wafConfig(WafConfig wafConfig) {
                 this.wafConfig = wafConfig;

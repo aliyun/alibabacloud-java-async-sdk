@@ -104,13 +104,13 @@ public class JoinResourceGroupRequest extends Request {
             super();
         } 
 
-        private Builder(JoinResourceGroupRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceId = response.resourceId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.resourceType = response.resourceType;
+        private Builder(JoinResourceGroupRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceId = request.resourceId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.resourceType = request.resourceType;
         } 
 
         /**

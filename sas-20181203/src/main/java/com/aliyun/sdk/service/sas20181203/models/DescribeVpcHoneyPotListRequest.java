@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpcHoneyPotListRequest} extends {@link RequestModel}
  *
  * <p>DescribeVpcHoneyPotListRequest</p>
  */
 public class DescribeVpcHoneyPotListRequest extends Request {
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("HoneyPotExistence")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HoneyPotExistence")
     private Boolean honeyPotExistence;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
-    @Query
-    @NameInMap("VpcName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcName")
     private String vpcName;
 
-    @Query
-    @NameInMap("VpcRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcRegionId")
     private String vpcRegionId;
 
     private DescribeVpcHoneyPotListRequest(Builder builder) {
@@ -124,7 +129,10 @@ public class DescribeVpcHoneyPotListRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -133,11 +141,14 @@ public class DescribeVpcHoneyPotListRequest extends Request {
         }
 
         /**
-         * Specifies whether the cloud honeypot feature is enabled for the VPCs. Valid values:
-         * <p>
+         * <p>Specifies whether the cloud honeypot feature is enabled for the VPCs. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder honeyPotExistence(Boolean honeyPotExistence) {
             this.putQueryParameter("HoneyPotExistence", honeyPotExistence);
@@ -146,10 +157,13 @@ public class DescribeVpcHoneyPotListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
-         * <p>
+         * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <blockquote>
+         * <p>We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
          * 
-         * > We recommend that you do not leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -158,10 +172,13 @@ public class DescribeVpcHoneyPotListRequest extends Request {
         }
 
         /**
-         * The ID of the VPC on which the honeypot is deployed.
-         * <p>
+         * <p>The ID of the VPC on which the honeypot is deployed.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeVpcList~~">DescribeVpcList</a> operation to query the IDs of VPCs.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeVpcList](~~DescribeVpcList~~) operation to query the IDs of VPCs.
+         * <strong>example:</strong>
+         * <p>vpc-d7o009q63fqy21r8u****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -170,10 +187,13 @@ public class DescribeVpcHoneyPotListRequest extends Request {
         }
 
         /**
-         * The name of the VPC.
-         * <p>
+         * <p>The name of the VPC.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeVpcList~~">DescribeVpcList</a> operation to query the names of VPCs.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeVpcList](~~DescribeVpcList~~) operation to query the names of VPCs.
+         * <strong>example:</strong>
+         * <p>abcnet</p>
          */
         public Builder vpcName(String vpcName) {
             this.putQueryParameter("VpcName", vpcName);
@@ -182,10 +202,13 @@ public class DescribeVpcHoneyPotListRequest extends Request {
         }
 
         /**
-         * The region ID of the VPC.
-         * <p>
+         * <p>The region ID of the VPC.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeVpcList~~">DescribeVpcList</a> operation to query the region IDs of VPCs.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeVpcList](~~DescribeVpcList~~) operation to query the region IDs of VPCs.
+         * <strong>example:</strong>
+         * <p>ap-southeast-2</p>
          */
         public Builder vpcRegionId(String vpcRegionId) {
             this.putQueryParameter("VpcRegionId", vpcRegionId);

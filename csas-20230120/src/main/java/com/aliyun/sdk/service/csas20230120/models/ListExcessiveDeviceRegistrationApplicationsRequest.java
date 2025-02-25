@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListExcessiveDeviceRegistrationApplicationsRequest} extends {@link RequestModel}
  *
  * <p>ListExcessiveDeviceRegistrationApplicationsRequest</p>
  */
 public class ListExcessiveDeviceRegistrationApplicationsRequest extends Request {
-    @Query
-    @NameInMap("ApplicationIds")
-    private java.util.List < String > applicationIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationIds")
+    private java.util.List<String> applicationIds;
 
-    @Query
-    @NameInMap("CurrentPage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long currentPage;
 
-    @Query
-    @NameInMap("Department")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Department")
     private String department;
 
-    @Query
-    @NameInMap("DeviceTag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceTag")
     private String deviceTag;
 
-    @Query
-    @NameInMap("Hostname")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Hostname")
     private String hostname;
 
-    @Query
-    @NameInMap("Mac")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mac")
     private String mac;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long pageSize;
 
-    @Query
-    @NameInMap("SaseUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SaseUserId")
     private String saseUserId;
 
-    @Query
-    @NameInMap("Statuses")
-    private java.util.List < String > statuses;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Statuses")
+    private java.util.List<String> statuses;
 
-    @Query
-    @NameInMap("Username")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Username")
     private String username;
 
     private ListExcessiveDeviceRegistrationApplicationsRequest(Builder builder) {
@@ -84,7 +89,7 @@ public class ListExcessiveDeviceRegistrationApplicationsRequest extends Request 
     /**
      * @return applicationIds
      */
-    public java.util.List < String > getApplicationIds() {
+    public java.util.List<String> getApplicationIds() {
         return this.applicationIds;
     }
 
@@ -140,7 +145,7 @@ public class ListExcessiveDeviceRegistrationApplicationsRequest extends Request 
     /**
      * @return statuses
      */
-    public java.util.List < String > getStatuses() {
+    public java.util.List<String> getStatuses() {
         return this.statuses;
     }
 
@@ -152,7 +157,7 @@ public class ListExcessiveDeviceRegistrationApplicationsRequest extends Request 
     }
 
     public static final class Builder extends Request.Builder<ListExcessiveDeviceRegistrationApplicationsRequest, Builder> {
-        private java.util.List < String > applicationIds; 
+        private java.util.List<String> applicationIds; 
         private Long currentPage; 
         private String department; 
         private String deviceTag; 
@@ -160,7 +165,7 @@ public class ListExcessiveDeviceRegistrationApplicationsRequest extends Request 
         private String mac; 
         private Long pageSize; 
         private String saseUserId; 
-        private java.util.List < String > statuses; 
+        private java.util.List<String> statuses; 
         private String username; 
 
         private Builder() {
@@ -184,14 +189,17 @@ public class ListExcessiveDeviceRegistrationApplicationsRequest extends Request 
         /**
          * ApplicationIds.
          */
-        public Builder applicationIds(java.util.List < String > applicationIds) {
+        public Builder applicationIds(java.util.List<String> applicationIds) {
             this.putQueryParameter("ApplicationIds", applicationIds);
             this.applicationIds = applicationIds;
             return this;
         }
 
         /**
-         * CurrentPage.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Long currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -236,7 +244,10 @@ public class ListExcessiveDeviceRegistrationApplicationsRequest extends Request 
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -256,7 +267,7 @@ public class ListExcessiveDeviceRegistrationApplicationsRequest extends Request 
         /**
          * Statuses.
          */
-        public Builder statuses(java.util.List < String > statuses) {
+        public Builder statuses(java.util.List<String> statuses) {
             this.putQueryParameter("Statuses", statuses);
             this.statuses = statuses;
             return this;

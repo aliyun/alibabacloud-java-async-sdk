@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGatewayResponseBody} extends {@link TeaModel}
  *
  * <p>CreateGatewayResponseBody</p>
  */
 public class CreateGatewayResponseBody extends TeaModel {
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @NameInMap("GatewayId")
+    @com.aliyun.core.annotation.NameInMap("GatewayId")
     private String gatewayId;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateGatewayResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class CreateGatewayResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ClusterId.
+         * <p>The region ID of the private gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -82,7 +90,10 @@ public class CreateGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * GatewayId.
+         * <p>The private gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-1uhcqmsc7x22******</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.gatewayId = gatewayId;
@@ -90,7 +101,10 @@ public class CreateGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successfully create gateway.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +112,10 @@ public class CreateGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainRealtimeLogDeliveryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainRealtimeLogDeliveryResponseBody</p>
  */
 public class DescribeDomainRealtimeLogDeliveryResponseBody extends TeaModel {
-    @NameInMap("Logstore")
+    @com.aliyun.core.annotation.NameInMap("Logstore")
     private String logstore;
 
-    @NameInMap("Project")
+    @com.aliyun.core.annotation.NameInMap("Project")
     private String project;
 
-    @NameInMap("Region")
+    @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeDomainRealtimeLogDeliveryResponseBody(Builder builder) {
@@ -86,7 +86,10 @@ public class DescribeDomainRealtimeLogDeliveryResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The name of the Logstore where log entries are stored.
+         * <p>The name of the Logstore where log entries are stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LogstoreName</p>
          */
         public Builder logstore(String logstore) {
             this.logstore = logstore;
@@ -94,7 +97,10 @@ public class DescribeDomainRealtimeLogDeliveryResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the Log Service project that is used for real-time log delivery.
+         * <p>The name of the Log Service project that is used for real-time log delivery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ProjectName</p>
          */
         public Builder project(String project) {
             this.project = project;
@@ -102,7 +108,10 @@ public class DescribeDomainRealtimeLogDeliveryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the region where the Log Service project is deployed.
+         * <p>The ID of the region where the Log Service project is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder region(String region) {
             this.region = region;
@@ -110,7 +119,10 @@ public class DescribeDomainRealtimeLogDeliveryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2F8F3852-912F-42AC-80EB-F1CF4284DE93</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +130,14 @@ public class DescribeDomainRealtimeLogDeliveryResponseBody extends TeaModel {
         }
 
         /**
-         * The status of real-time log delivery. Valid values:
-         * <p>
+         * <p>The status of real-time log delivery. Valid values:</p>
+         * <ul>
+         * <li><strong>online</strong></li>
+         * <li><strong>offline</strong></li>
+         * </ul>
          * 
-         * *   **online**
-         * *   **offline**
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         public Builder status(String status) {
             this.status = status;

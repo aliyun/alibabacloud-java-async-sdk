@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRestoreTablesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRestoreTablesResponseBody</p>
  */
 public class DescribeRestoreTablesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RestoreFull")
+    @com.aliyun.core.annotation.NameInMap("RestoreFull")
     private RestoreFull restoreFull;
 
-    @NameInMap("RestoreIncrDetail")
+    @com.aliyun.core.annotation.NameInMap("RestoreIncrDetail")
     private RestoreIncrDetail restoreIncrDetail;
 
-    @NameInMap("RestoreSchema")
+    @com.aliyun.core.annotation.NameInMap("RestoreSchema")
     private RestoreSchema restoreSchema;
 
-    @NameInMap("RestoreSummary")
+    @com.aliyun.core.annotation.NameInMap("RestoreSummary")
     private RestoreSummary restoreSummary;
 
-    @NameInMap("Tables")
+    @com.aliyun.core.annotation.NameInMap("Tables")
     private Tables tables;
 
     private DescribeRestoreTablesResponseBody(Builder builder) {
@@ -151,29 +156,35 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRestoreTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestoreTablesResponseBody</p>
+     */
     public static class RestoreFullDetail extends TeaModel {
-        @NameInMap("DataSize")
+        @com.aliyun.core.annotation.NameInMap("DataSize")
         private String dataSize;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Process")
+        @com.aliyun.core.annotation.NameInMap("Process")
         private String process;
 
-        @NameInMap("Speed")
+        @com.aliyun.core.annotation.NameInMap("Speed")
         private String speed;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Table")
+        @com.aliyun.core.annotation.NameInMap("Table")
         private String table;
 
         private RestoreFullDetail(Builder builder) {
@@ -332,9 +343,15 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRestoreTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestoreTablesResponseBody</p>
+     */
     public static class RestoreFullDetails extends TeaModel {
-        @NameInMap("RestoreFullDetail")
-        private java.util.List < RestoreFullDetail> restoreFullDetail;
+        @com.aliyun.core.annotation.NameInMap("RestoreFullDetail")
+        private java.util.List<RestoreFullDetail> restoreFullDetail;
 
         private RestoreFullDetails(Builder builder) {
             this.restoreFullDetail = builder.restoreFullDetail;
@@ -351,17 +368,17 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
         /**
          * @return restoreFullDetail
          */
-        public java.util.List < RestoreFullDetail> getRestoreFullDetail() {
+        public java.util.List<RestoreFullDetail> getRestoreFullDetail() {
             return this.restoreFullDetail;
         }
 
         public static final class Builder {
-            private java.util.List < RestoreFullDetail> restoreFullDetail; 
+            private java.util.List<RestoreFullDetail> restoreFullDetail; 
 
             /**
              * RestoreFullDetail.
              */
-            public Builder restoreFullDetail(java.util.List < RestoreFullDetail> restoreFullDetail) {
+            public Builder restoreFullDetail(java.util.List<RestoreFullDetail> restoreFullDetail) {
                 this.restoreFullDetail = restoreFullDetail;
                 return this;
             }
@@ -373,29 +390,35 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRestoreTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestoreTablesResponseBody</p>
+     */
     public static class RestoreFull extends TeaModel {
-        @NameInMap("DataSize")
+        @com.aliyun.core.annotation.NameInMap("DataSize")
         private String dataSize;
 
-        @NameInMap("Fail")
+        @com.aliyun.core.annotation.NameInMap("Fail")
         private Integer fail;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("RestoreFullDetails")
+        @com.aliyun.core.annotation.NameInMap("RestoreFullDetails")
         private RestoreFullDetails restoreFullDetails;
 
-        @NameInMap("Speed")
+        @com.aliyun.core.annotation.NameInMap("Speed")
         private String speed;
 
-        @NameInMap("Succeed")
+        @com.aliyun.core.annotation.NameInMap("Succeed")
         private Integer succeed;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private RestoreFull(Builder builder) {
@@ -554,26 +577,32 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRestoreTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestoreTablesResponseBody</p>
+     */
     public static class RestoreIncrDetail extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("Process")
+        @com.aliyun.core.annotation.NameInMap("Process")
         private String process;
 
-        @NameInMap("RestoreDelay")
+        @com.aliyun.core.annotation.NameInMap("RestoreDelay")
         private String restoreDelay;
 
-        @NameInMap("RestoreStartTs")
+        @com.aliyun.core.annotation.NameInMap("RestoreStartTs")
         private String restoreStartTs;
 
-        @NameInMap("RestoredTs")
+        @com.aliyun.core.annotation.NameInMap("RestoredTs")
         private String restoredTs;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private RestoreIncrDetail(Builder builder) {
@@ -715,20 +744,26 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRestoreTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestoreTablesResponseBody</p>
+     */
     public static class RestoreSchemaDetail extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Table")
+        @com.aliyun.core.annotation.NameInMap("Table")
         private String table;
 
         private RestoreSchemaDetail(Builder builder) {
@@ -836,9 +871,15 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRestoreTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestoreTablesResponseBody</p>
+     */
     public static class RestoreSchemaDetails extends TeaModel {
-        @NameInMap("RestoreSchemaDetail")
-        private java.util.List < RestoreSchemaDetail> restoreSchemaDetail;
+        @com.aliyun.core.annotation.NameInMap("RestoreSchemaDetail")
+        private java.util.List<RestoreSchemaDetail> restoreSchemaDetail;
 
         private RestoreSchemaDetails(Builder builder) {
             this.restoreSchemaDetail = builder.restoreSchemaDetail;
@@ -855,17 +896,17 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
         /**
          * @return restoreSchemaDetail
          */
-        public java.util.List < RestoreSchemaDetail> getRestoreSchemaDetail() {
+        public java.util.List<RestoreSchemaDetail> getRestoreSchemaDetail() {
             return this.restoreSchemaDetail;
         }
 
         public static final class Builder {
-            private java.util.List < RestoreSchemaDetail> restoreSchemaDetail; 
+            private java.util.List<RestoreSchemaDetail> restoreSchemaDetail; 
 
             /**
              * RestoreSchemaDetail.
              */
-            public Builder restoreSchemaDetail(java.util.List < RestoreSchemaDetail> restoreSchemaDetail) {
+            public Builder restoreSchemaDetail(java.util.List<RestoreSchemaDetail> restoreSchemaDetail) {
                 this.restoreSchemaDetail = restoreSchemaDetail;
                 return this;
             }
@@ -877,23 +918,29 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRestoreTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestoreTablesResponseBody</p>
+     */
     public static class RestoreSchema extends TeaModel {
-        @NameInMap("Fail")
+        @com.aliyun.core.annotation.NameInMap("Fail")
         private Integer fail;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("RestoreSchemaDetails")
+        @com.aliyun.core.annotation.NameInMap("RestoreSchemaDetails")
         private RestoreSchemaDetails restoreSchemaDetails;
 
-        @NameInMap("Succeed")
+        @com.aliyun.core.annotation.NameInMap("Succeed")
         private Integer succeed;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private RestoreSchema(Builder builder) {
@@ -1018,23 +1065,29 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRestoreTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestoreTablesResponseBody</p>
+     */
     public static class RestoreSummary extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("RecordId")
+        @com.aliyun.core.annotation.NameInMap("RecordId")
         private String recordId;
 
-        @NameInMap("RestoreToDate")
+        @com.aliyun.core.annotation.NameInMap("RestoreToDate")
         private String restoreToDate;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("TargetCluster")
+        @com.aliyun.core.annotation.NameInMap("TargetCluster")
         private String targetCluster;
 
         private RestoreSummary(Builder builder) {
@@ -1159,9 +1212,15 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRestoreTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestoreTablesResponseBody</p>
+     */
     public static class Tables extends TeaModel {
-        @NameInMap("Table")
-        private java.util.List < String > table;
+        @com.aliyun.core.annotation.NameInMap("Table")
+        private java.util.List<String> table;
 
         private Tables(Builder builder) {
             this.table = builder.table;
@@ -1178,17 +1237,17 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
         /**
          * @return table
          */
-        public java.util.List < String > getTable() {
+        public java.util.List<String> getTable() {
             return this.table;
         }
 
         public static final class Builder {
-            private java.util.List < String > table; 
+            private java.util.List<String> table; 
 
             /**
              * Table.
              */
-            public Builder table(java.util.List < String > table) {
+            public Builder table(java.util.List<String> table) {
                 this.table = table;
                 return this;
             }

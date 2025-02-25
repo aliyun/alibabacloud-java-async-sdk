@@ -132,15 +132,19 @@ public class QueryLiveStreamingResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("DecryptKey")
-        private String decryptKey;
-
         @NameInMap("Path")
         private String path;
 
+        @NameInMap("RelayDecryptKey")
+        private String relayDecryptKey;
+
+        @NameInMap("StunInfo")
+        private String stunInfo;
+
         private Data(Builder builder) {
-            this.decryptKey = builder.decryptKey;
             this.path = builder.path;
+            this.relayDecryptKey = builder.relayDecryptKey;
+            this.stunInfo = builder.stunInfo;
         }
 
         public static Builder builder() {
@@ -152,36 +156,52 @@ public class QueryLiveStreamingResponseBody extends TeaModel {
         }
 
         /**
-         * @return decryptKey
-         */
-        public String getDecryptKey() {
-            return this.decryptKey;
-        }
-
-        /**
          * @return path
          */
         public String getPath() {
             return this.path;
         }
 
-        public static final class Builder {
-            private String decryptKey; 
-            private String path; 
+        /**
+         * @return relayDecryptKey
+         */
+        public String getRelayDecryptKey() {
+            return this.relayDecryptKey;
+        }
 
-            /**
-             * DecryptKey.
-             */
-            public Builder decryptKey(String decryptKey) {
-                this.decryptKey = decryptKey;
-                return this;
-            }
+        /**
+         * @return stunInfo
+         */
+        public String getStunInfo() {
+            return this.stunInfo;
+        }
+
+        public static final class Builder {
+            private String path; 
+            private String relayDecryptKey; 
+            private String stunInfo; 
 
             /**
              * Path.
              */
             public Builder path(String path) {
                 this.path = path;
+                return this;
+            }
+
+            /**
+             * RelayDecryptKey.
+             */
+            public Builder relayDecryptKey(String relayDecryptKey) {
+                this.relayDecryptKey = relayDecryptKey;
+                return this;
+            }
+
+            /**
+             * StunInfo.
+             */
+            public Builder stunInfo(String stunInfo) {
+                this.stunInfo = stunInfo;
                 return this;
             }
 

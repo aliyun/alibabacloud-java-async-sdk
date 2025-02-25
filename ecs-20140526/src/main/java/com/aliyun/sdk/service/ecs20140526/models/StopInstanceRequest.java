@@ -1,60 +1,65 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopInstanceRequest} extends {@link RequestModel}
  *
  * <p>StopInstanceRequest</p>
  */
 public class StopInstanceRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("ConfirmStop")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfirmStop")
     private Boolean confirmStop;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("ForceStop")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForceStop")
     private Boolean forceStop;
 
-    @Query
-    @NameInMap("Hibernate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Hibernate")
     private Boolean hibernate;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("StoppedMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StoppedMode")
     private String stoppedMode;
 
     private StopInstanceRequest(Builder builder) {
@@ -204,7 +209,10 @@ public class StopInstanceRequest extends Request {
         }
 
         /**
-         * This parameter will be removed in the future and is retained only to ensure compatibility. We recommend that you ignore this parameter.
+         * <p>This parameter will be removed in the future and is retained only to ensure compatibility. We recommend that you ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder confirmStop(Boolean confirmStop) {
             this.putQueryParameter("ConfirmStop", confirmStop);
@@ -213,13 +221,15 @@ public class StopInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and available ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li>false: performs a dry run and performs the actual request.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and available ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   false: performs a dry run and performs the actual request.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -228,13 +238,15 @@ public class StopInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcibly stop the instance. Valid values:
-         * <p>
+         * <p>Specifies whether to forcefully stop the ECS instance. Valid values:</p>
+         * <ul>
+         * <li>true: forcefully stops the ECS instance. If you set ForceStop to true, this operation is equivalent to a power-off operation. Cache data that is not written to storage devices on the instance is lost.</li>
+         * <li>false: normally stops the ECS instance.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forceStop(Boolean forceStop) {
             this.putQueryParameter("ForceStop", forceStop);
@@ -243,7 +255,12 @@ public class StopInstanceRequest extends Request {
         }
 
         /**
-         * > This parameter is in invitational preview and is not publicly available.
+         * <blockquote>
+         * <p>This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>hide</p>
          */
         public Builder hibernate(Boolean hibernate) {
             this.putQueryParameter("Hibernate", hibernate);
@@ -252,7 +269,11 @@ public class StopInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4ph****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -297,13 +318,15 @@ public class StopInstanceRequest extends Request {
         }
 
         /**
-         * The stop mode of the pay-as-you-go instance. Valid values:
-         * <p>
+         * <p>The stop mode of the pay-as-you-go instance. Valid values:</p>
+         * <ul>
+         * <li>StopCharging: economical mode. For information about how <code>StopCharging</code> takes effect, see the &quot;Conditions for enabling economical mode&quot; section in <a href="https://help.aliyun.com/document_detail/63353.html">Economical mode</a>.</li>
+         * <li>KeepCharging: standard mode. You continue to be charged for instances that are stopped in standard mode.</li>
+         * </ul>
+         * <p>Default value: If the conditions for enabling the economical mode are met and you have enabled this mode in the ECS console, the default value is <a href="~~63353#default~~">StopCharging</a>. For more information, see the &quot;Enable economical mode&quot; section in <code>Economical mode</code>. Otherwise, the default value is <code>KeepCharging</code>.</p>
          * 
-         * *   StopCharging: economical mode. For information about how `StopCharging` takes effect, see the "Conditions for enabling economical mode" section in [Economical mode](~~63353~~).
-         * *   KeepCharging: standard mode. You continue to be charged for instances that are stopped in standard mode.
-         * 
-         * Default value: If the conditions for enabling the economical mode are met and you have enabled this mode in the ECS console, the default value is [StopCharging](~~63353#default~~). For more information, see the "Enable economical mode" section in `Economical mode`. Otherwise, the default value is `KeepCharging`.
+         * <strong>example:</strong>
+         * <p>KeepCharging</p>
          */
         public Builder stoppedMode(String stoppedMode) {
             this.putQueryParameter("StoppedMode", stoppedMode);

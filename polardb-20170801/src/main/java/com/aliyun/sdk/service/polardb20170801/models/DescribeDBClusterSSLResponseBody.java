@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBClusterSSLResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBClusterSSLResponseBody</p>
  */
 public class DescribeDBClusterSSLResponseBody extends TeaModel {
-    @NameInMap("Items")
-    private java.util.List < Items> items;
+    @com.aliyun.core.annotation.NameInMap("Items")
+    private java.util.List<Items> items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SSLAutoRotate")
+    @com.aliyun.core.annotation.NameInMap("SSLAutoRotate")
     private String SSLAutoRotate;
 
     private DescribeDBClusterSSLResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -57,20 +62,23 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private String requestId; 
         private String SSLAutoRotate; 
 
         /**
-         * The list of SSL connections.
+         * <p>The list of SSL connections.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C890995A-CF06-4F4D-8DB8-DD26C2******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,13 +86,17 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether automatic rotation of SSL certificates is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether automatic rotation of SSL certificates is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>Enable</strong>: The feature is enabled.</li>
+         * <li><strong>Disable</strong>: The feature is disabled.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is valid only for a PolarDB for MySQL cluster.</p>
+         * </blockquote>
          * 
-         * *   **Enable**: The feature is enabled.
-         * *   **Disable**: The feature is disabled.
-         * 
-         * > This parameter is valid only for a PolarDB for MySQL cluster.
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         public Builder SSLAutoRotate(String SSLAutoRotate) {
             this.SSLAutoRotate = SSLAutoRotate;
@@ -97,21 +109,31 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBClusterSSLResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterSSLResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("DBEndpointId")
+        @com.aliyun.core.annotation.NameInMap("DBEndpointId")
         private String DBEndpointId;
 
-        @NameInMap("SSLConnectionString")
+        @com.aliyun.core.annotation.NameInMap("SSLAutoRotate")
+        private String SSLAutoRotate;
+
+        @com.aliyun.core.annotation.NameInMap("SSLConnectionString")
         private String SSLConnectionString;
 
-        @NameInMap("SSLEnabled")
+        @com.aliyun.core.annotation.NameInMap("SSLEnabled")
         private String SSLEnabled;
 
-        @NameInMap("SSLExpireTime")
+        @com.aliyun.core.annotation.NameInMap("SSLExpireTime")
         private String SSLExpireTime;
 
         private Items(Builder builder) {
             this.DBEndpointId = builder.DBEndpointId;
+            this.SSLAutoRotate = builder.SSLAutoRotate;
             this.SSLConnectionString = builder.SSLConnectionString;
             this.SSLEnabled = builder.SSLEnabled;
             this.SSLExpireTime = builder.SSLExpireTime;
@@ -130,6 +152,13 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
          */
         public String getDBEndpointId() {
             return this.DBEndpointId;
+        }
+
+        /**
+         * @return SSLAutoRotate
+         */
+        public String getSSLAutoRotate() {
+            return this.SSLAutoRotate;
         }
 
         /**
@@ -155,12 +184,16 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
 
         public static final class Builder {
             private String DBEndpointId; 
+            private String SSLAutoRotate; 
             private String SSLConnectionString; 
             private String SSLEnabled; 
             private String SSLExpireTime; 
 
             /**
-             * The ID of the endpoint.
+             * <p>The ID of the endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pe-************</p>
              */
             public Builder DBEndpointId(String DBEndpointId) {
                 this.DBEndpointId = DBEndpointId;
@@ -168,7 +201,28 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
             }
 
             /**
-             * The SSL connection string.
+             * <p>Indicates whether automatic rotation of SSL certificates is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>Enable</strong>: The feature is enabled.</li>
+             * <li><strong>Disable</strong>: The feature is disabled.</li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter is valid only for a PolarDB for MySQL cluster.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
+             */
+            public Builder SSLAutoRotate(String SSLAutoRotate) {
+                this.SSLAutoRotate = SSLAutoRotate;
+                return this;
+            }
+
+            /**
+             * <p>The SSL connection string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-************.mysql.polardb.rds.aliyuncs.com</p>
              */
             public Builder SSLConnectionString(String SSLConnectionString) {
                 this.SSLConnectionString = SSLConnectionString;
@@ -176,11 +230,14 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether SSL encryption is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong>: SSL is enabled.</li>
+             * <li><strong>Disable</strong>: SSL is disabled.</li>
+             * </ul>
              * 
-             * *   **Enabled**: SSL is enabled.
-             * *   **Disable**: SSL is disabled.
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder SSLEnabled(String SSLEnabled) {
                 this.SSLEnabled = SSLEnabled;
@@ -188,7 +245,10 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the server certificate expires. The time is in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
+             * <p>The time when the server certificate expires. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-13T07:14:22Z</p>
              */
             public Builder SSLExpireTime(String SSLExpireTime) {
                 this.SSLExpireTime = SSLExpireTime;

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnsRegionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEnsRegionsResponseBody</p>
  */
 public class DescribeEnsRegionsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("EnsRegions")
+    @com.aliyun.core.annotation.NameInMap("EnsRegions")
     private EnsRegions ensRegions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeEnsRegionsResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The service code. 0 is returned for a successful request. An error code is returned for a failed request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -70,7 +78,7 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * EnsRegions.
+         * <p>The information about the regions.</p>
          */
         public Builder ensRegions(EnsRegions ensRegions) {
             this.ensRegions = ensRegions;
@@ -78,7 +86,10 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,20 +102,26 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEnsRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsRegionsResponseBody</p>
+     */
     public static class EnsRegionsEnsRegions extends TeaModel {
-        @NameInMap("Area")
+        @com.aliyun.core.annotation.NameInMap("Area")
         private String area;
 
-        @NameInMap("EnName")
+        @com.aliyun.core.annotation.NameInMap("EnName")
         private String enName;
 
-        @NameInMap("EnsRegionId")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Province")
+        @com.aliyun.core.annotation.NameInMap("Province")
         private String province;
 
         private EnsRegionsEnsRegions(Builder builder) {
@@ -166,7 +183,10 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
             private String province; 
 
             /**
-             * Area.
+             * <p>The code of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NorthEastChina</p>
              */
             public Builder area(String area) {
                 this.area = area;
@@ -174,7 +194,10 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * EnName.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NorthChina</p>
              */
             public Builder enName(String enName) {
                 this.enName = enName;
@@ -182,7 +205,10 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * EnsRegionId.
+             * <p>The ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-dalian-unicom</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -190,7 +216,10 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Dalian Unicom</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -198,7 +227,10 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * Province.
+             * <p>The province where the node is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Liaoning Province</p>
              */
             public Builder province(String province) {
                 this.province = province;
@@ -212,9 +244,15 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnsRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsRegionsResponseBody</p>
+     */
     public static class EnsRegions extends TeaModel {
-        @NameInMap("EnsRegions")
-        private java.util.List < EnsRegionsEnsRegions> ensRegions;
+        @com.aliyun.core.annotation.NameInMap("EnsRegions")
+        private java.util.List<EnsRegionsEnsRegions> ensRegions;
 
         private EnsRegions(Builder builder) {
             this.ensRegions = builder.ensRegions;
@@ -231,17 +269,17 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
         /**
          * @return ensRegions
          */
-        public java.util.List < EnsRegionsEnsRegions> getEnsRegions() {
+        public java.util.List<EnsRegionsEnsRegions> getEnsRegions() {
             return this.ensRegions;
         }
 
         public static final class Builder {
-            private java.util.List < EnsRegionsEnsRegions> ensRegions; 
+            private java.util.List<EnsRegionsEnsRegions> ensRegions; 
 
             /**
-             * EnsRegions.
+             * <p>The information about the regions.</p>
              */
-            public Builder ensRegions(java.util.List < EnsRegionsEnsRegions> ensRegions) {
+            public Builder ensRegions(java.util.List<EnsRegionsEnsRegions> ensRegions) {
                 this.ensRegions = ensRegions;
                 return this;
             }

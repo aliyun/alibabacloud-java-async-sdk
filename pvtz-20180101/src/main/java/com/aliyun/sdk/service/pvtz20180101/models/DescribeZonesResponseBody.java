@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeZonesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeZonesResponseBody</p>
  */
 public class DescribeZonesResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalItems")
+    @com.aliyun.core.annotation.NameInMap("TotalItems")
     private Integer totalItems;
 
-    @NameInMap("TotalPages")
+    @com.aliyun.core.annotation.NameInMap("TotalPages")
     private Integer totalPages;
 
-    @NameInMap("Zones")
+    @com.aliyun.core.annotation.NameInMap("Zones")
     private Zones zones;
 
     private DescribeZonesResponseBody(Builder builder) {
@@ -98,7 +98,10 @@ public class DescribeZonesResponseBody extends TeaModel {
         private Zones zones; 
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -106,7 +109,10 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -114,7 +120,10 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +131,10 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalItems.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalItems(Integer totalItems) {
             this.totalItems = totalItems;
@@ -130,7 +142,10 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPages.
+         * <p>The total number of returned pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -138,7 +153,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * Zones.
+         * <p>The zones.</p>
          */
         public Builder zones(Zones zones) {
             this.zones = zones;
@@ -151,11 +166,17 @@ public class DescribeZonesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeZonesResponseBody</p>
+     */
     public static class ResourceTag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private ResourceTag(Builder builder) {
@@ -190,7 +211,10 @@ public class DescribeZonesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * <p>The key of tag N added to the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -198,7 +222,10 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of tag N added to the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>daily</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -212,8 +239,14 @@ public class DescribeZonesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeZonesResponseBody</p>
+     */
     public static class ResourceTags extends TeaModel {
-        @NameInMap("ResourceTag")
+        @com.aliyun.core.annotation.NameInMap("ResourceTag")
         private java.util.List < ResourceTag> resourceTag;
 
         private ResourceTags(Builder builder) {
@@ -253,59 +286,65 @@ public class DescribeZonesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeZonesResponseBody</p>
+     */
     public static class Zone extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
-        @NameInMap("Creator")
+        @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
 
-        @NameInMap("CreatorSubType")
+        @com.aliyun.core.annotation.NameInMap("CreatorSubType")
         private String creatorSubType;
 
-        @NameInMap("DnsGroup")
+        @com.aliyun.core.annotation.NameInMap("DnsGroup")
         private String dnsGroup;
 
-        @NameInMap("DnsGroupChanging")
+        @com.aliyun.core.annotation.NameInMap("DnsGroupChanging")
         private Boolean dnsGroupChanging;
 
-        @NameInMap("IsPtr")
+        @com.aliyun.core.annotation.NameInMap("IsPtr")
         private Boolean isPtr;
 
-        @NameInMap("ProxyPattern")
+        @com.aliyun.core.annotation.NameInMap("ProxyPattern")
         private String proxyPattern;
 
-        @NameInMap("RecordCount")
+        @com.aliyun.core.annotation.NameInMap("RecordCount")
         private Integer recordCount;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ResourceTags")
+        @com.aliyun.core.annotation.NameInMap("ResourceTags")
         private ResourceTags resourceTags;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("UpdateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("UpdateTimestamp")
         private Long updateTimestamp;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
-        @NameInMap("ZoneName")
+        @com.aliyun.core.annotation.NameInMap("ZoneName")
         private String zoneName;
 
-        @NameInMap("ZoneTag")
+        @com.aliyun.core.annotation.NameInMap("ZoneTag")
         private String zoneTag;
 
-        @NameInMap("ZoneType")
+        @com.aliyun.core.annotation.NameInMap("ZoneType")
         private String zoneType;
 
         private Zone(Builder builder) {
@@ -484,7 +523,10 @@ public class DescribeZonesResponseBody extends TeaModel {
             private String zoneType; 
 
             /**
-             * CreateTime.
+             * <p>The time when the zone was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-28T13:08Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -492,7 +534,10 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTimestamp.
+             * <p>The time when the zone was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1514466483000</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -500,7 +545,10 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The creator of the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>546356****</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -508,7 +556,16 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorSubType.
+             * <p>The account type. Valid values:</p>
+             * <ul>
+             * <li><strong>CUSTOMER</strong>: Alibaba Cloud account</li>
+             * <li><strong>SUB</strong>: RAM user</li>
+             * <li><strong>STS</strong>: assumed role that obtains the Security Token Service (STS) token of a RAM role</li>
+             * <li><strong>OTHER</strong>: other types</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SUB</p>
              */
             public Builder creatorSubType(String creatorSubType) {
                 this.creatorSubType = creatorSubType;
@@ -516,7 +573,14 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * DnsGroup.
+             * <p>The logical location type of the built-in authoritative module in which the zone is added. Valid values:</p>
+             * <ul>
+             * <li><strong>NORMAL_ZONE</strong>: regular module</li>
+             * <li><strong>FAST_ZONE</strong>: acceleration module</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL_ZONE</p>
              */
             public Builder dnsGroup(String dnsGroup) {
                 this.dnsGroup = dnsGroup;
@@ -524,7 +588,14 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * DnsGroupChanging.
+             * <p>Indicates whether the zone is being removed to another logical location. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder dnsGroupChanging(Boolean dnsGroupChanging) {
                 this.dnsGroupChanging = dnsGroupChanging;
@@ -532,7 +603,14 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * IsPtr.
+             * <p>Indicates whether the zone is a reverse lookup zone. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isPtr(Boolean isPtr) {
                 this.isPtr = isPtr;
@@ -540,7 +618,14 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * ProxyPattern.
+             * <p>Indicates whether the recursive resolution proxy for subdomain names is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>ZONE</strong>: The recursive resolution proxy for subdomain names is disabled. In this case, NXDOMAIN is returned if the queried domain name does not exist in the zone.</li>
+             * <li><strong>RECORD</strong>: The recursive resolution proxy for subdomain names is enabled. In this case, if the queried domain name does not exist in the zone, DNS requests are recursively forwarded to the forward module and then to the recursion module until DNS results are returned.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ZONE</p>
              */
             public Builder proxyPattern(String proxyPattern) {
                 this.proxyPattern = proxyPattern;
@@ -548,7 +633,10 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * RecordCount.
+             * <p>The number of Domain Name System (DNS) records added in the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder recordCount(Integer recordCount) {
                 this.recordCount = recordCount;
@@ -556,7 +644,10 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * <p>The description of the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -564,7 +655,10 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group to which the zone belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekz2qj7awz****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -572,7 +666,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceTags.
+             * <p>The tags added to the zone.</p>
              */
             public Builder resourceTags(ResourceTags resourceTags) {
                 this.resourceTags = resourceTags;
@@ -580,7 +674,10 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the zone was last modified. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-01-03T08:57Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -588,7 +685,10 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTimestamp.
+             * <p>The time when the DNS record was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since 00:00:00 UTC on January 1, 1970.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1514969843000</p>
              */
             public Builder updateTimestamp(Long updateTimestamp) {
                 this.updateTimestamp = updateTimestamp;
@@ -596,7 +696,10 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * zone ID。
+             * <p>The zone ID. This ID uniquely identifies the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6d83e3b31aa60ca4aaa7161f1b6b**95</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -604,7 +707,10 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneName.
+             * <p>The name of the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.com</p>
              */
             public Builder zoneName(String zoneName) {
                 this.zoneName = zoneName;
@@ -612,7 +718,14 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneTag.
+             * <p>The type of the cloud service. Valid values:</p>
+             * <ul>
+             * <li>If ZoneType is set to AUTH_ZONE, no value is returned for this parameter.</li>
+             * <li>If ZoneType is set to CLOUD_PRODUCT_ZONE, the type of the cloud service is returned.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>BLINK</p>
              */
             public Builder zoneTag(String zoneTag) {
                 this.zoneTag = zoneTag;
@@ -620,7 +733,14 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneType.
+             * <p>The zone type. Valid values:</p>
+             * <ul>
+             * <li><strong>AUTH_ZONE</strong>: authoritative zone</li>
+             * <li><strong>CLOUD_PRODUCT_ZONE</strong>: authoritative zone for cloud services</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CLOUD_PRODUCT_ZONE</p>
              */
             public Builder zoneType(String zoneType) {
                 this.zoneType = zoneType;
@@ -634,8 +754,14 @@ public class DescribeZonesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeZonesResponseBody</p>
+     */
     public static class Zones extends TeaModel {
-        @NameInMap("Zone")
+        @com.aliyun.core.annotation.NameInMap("Zone")
         private java.util.List < Zone> zone;
 
         private Zones(Builder builder) {

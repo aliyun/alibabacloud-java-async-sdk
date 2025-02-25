@@ -1,0 +1,192 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.vdc20201214.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DescribeFaultDiagnosisUserDetailRequest} extends {@link RequestModel}
+ *
+ * <p>DescribeFaultDiagnosisUserDetailRequest</p>
+ */
+public class DescribeFaultDiagnosisUserDetailRequest extends Request {
+    @Query
+    @NameInMap("AppId")
+    @Validation(required = true)
+    private String appId;
+
+    @Query
+    @NameInMap("ChannelId")
+    @Validation(required = true)
+    private String channelId;
+
+    @Query
+    @NameInMap("CreatedTs")
+    @Validation(required = true)
+    private Long createdTs;
+
+    @Query
+    @NameInMap("FaultType")
+    @Validation(required = true)
+    private String faultType;
+
+    @Query
+    @NameInMap("QueryCallUserInfo")
+    private Boolean queryCallUserInfo;
+
+    @Query
+    @NameInMap("UserId")
+    @Validation(required = true)
+    private String userId;
+
+    private DescribeFaultDiagnosisUserDetailRequest(Builder builder) {
+        super(builder);
+        this.appId = builder.appId;
+        this.channelId = builder.channelId;
+        this.createdTs = builder.createdTs;
+        this.faultType = builder.faultType;
+        this.queryCallUserInfo = builder.queryCallUserInfo;
+        this.userId = builder.userId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DescribeFaultDiagnosisUserDetailRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return appId
+     */
+    public String getAppId() {
+        return this.appId;
+    }
+
+    /**
+     * @return channelId
+     */
+    public String getChannelId() {
+        return this.channelId;
+    }
+
+    /**
+     * @return createdTs
+     */
+    public Long getCreatedTs() {
+        return this.createdTs;
+    }
+
+    /**
+     * @return faultType
+     */
+    public String getFaultType() {
+        return this.faultType;
+    }
+
+    /**
+     * @return queryCallUserInfo
+     */
+    public Boolean getQueryCallUserInfo() {
+        return this.queryCallUserInfo;
+    }
+
+    /**
+     * @return userId
+     */
+    public String getUserId() {
+        return this.userId;
+    }
+
+    public static final class Builder extends Request.Builder<DescribeFaultDiagnosisUserDetailRequest, Builder> {
+        private String appId; 
+        private String channelId; 
+        private Long createdTs; 
+        private String faultType; 
+        private Boolean queryCallUserInfo; 
+        private String userId; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(DescribeFaultDiagnosisUserDetailRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.channelId = request.channelId;
+            this.createdTs = request.createdTs;
+            this.faultType = request.faultType;
+            this.queryCallUserInfo = request.queryCallUserInfo;
+            this.userId = request.userId;
+        } 
+
+        /**
+         * AppId.
+         */
+        public Builder appId(String appId) {
+            this.putQueryParameter("AppId", appId);
+            this.appId = appId;
+            return this;
+        }
+
+        /**
+         * ChannelId.
+         */
+        public Builder channelId(String channelId) {
+            this.putQueryParameter("ChannelId", channelId);
+            this.channelId = channelId;
+            return this;
+        }
+
+        /**
+         * CreatedTs.
+         */
+        public Builder createdTs(Long createdTs) {
+            this.putQueryParameter("CreatedTs", createdTs);
+            this.createdTs = createdTs;
+            return this;
+        }
+
+        /**
+         * FaultType.
+         */
+        public Builder faultType(String faultType) {
+            this.putQueryParameter("FaultType", faultType);
+            this.faultType = faultType;
+            return this;
+        }
+
+        /**
+         * QueryCallUserInfo.
+         */
+        public Builder queryCallUserInfo(Boolean queryCallUserInfo) {
+            this.putQueryParameter("QueryCallUserInfo", queryCallUserInfo);
+            this.queryCallUserInfo = queryCallUserInfo;
+            return this;
+        }
+
+        /**
+         * UserId.
+         */
+        public Builder userId(String userId) {
+            this.putQueryParameter("UserId", userId);
+            this.userId = userId;
+            return this;
+        }
+
+        @Override
+        public DescribeFaultDiagnosisUserDetailRequest build() {
+            return new DescribeFaultDiagnosisUserDetailRequest(this);
+        } 
+
+    } 
+
+}

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAccountInfoRequest} extends {@link RequestModel}
  *
  * <p>GetAccountInfoRequest</p>
  */
 public class GetAccountInfoRequest extends Request {
-    @Query
-    @NameInMap("CurrentPage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer currentPage;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true, maximum = 20, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 20, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Uid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uid")
     private Long uid;
 
-    @Query
-    @NameInMap("UserType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserType")
     private String userType;
 
     private GetAccountInfoRequest(Builder builder) {
@@ -98,7 +103,11 @@ public class GetAccountInfoRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>Pagination, current page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -107,7 +116,11 @@ public class GetAccountInfoRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Pagination, record number on each page, maximum 20.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -116,7 +129,10 @@ public class GetAccountInfoRequest extends Request {
         }
 
         /**
-         * Uid.
+         * <p>Account UID of Distribution Customer. This parameter and the UserType parameter must have one filled. If this parameter is empty, then check all Distribution Customer accounts of the selected UserType.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1215848086704806</p>
          */
         public Builder uid(Long uid) {
             this.putQueryParameter("Uid", uid);
@@ -125,7 +141,15 @@ public class GetAccountInfoRequest extends Request {
         }
 
         /**
-         * UserType.
+         * <p>Distribution Customer&quot;s Account Type:</p>
+         * <ul>
+         * <li>1 End User</li>
+         * <li>2 Enterprise</li>
+         * <li>3 T2 Partner</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder userType(String userType) {
             this.putQueryParameter("UserType", userType);

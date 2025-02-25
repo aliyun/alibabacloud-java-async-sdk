@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitIspFlushCacheTaskRequest} extends {@link RequestModel}
  *
  * <p>SubmitIspFlushCacheTaskRequest</p>
  */
 public class SubmitIspFlushCacheTaskRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientToken;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("Isp")
-    @Validation(required = true)
-    private java.util.List < String > isp;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Isp")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> isp;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
     private SubmitIspFlushCacheTaskRequest(Builder builder) {
@@ -69,7 +74,7 @@ public class SubmitIspFlushCacheTaskRequest extends Request {
     /**
      * @return isp
      */
-    public java.util.List < String > getIsp() {
+    public java.util.List<String> getIsp() {
         return this.isp;
     }
 
@@ -83,7 +88,7 @@ public class SubmitIspFlushCacheTaskRequest extends Request {
     public static final class Builder extends Request.Builder<SubmitIspFlushCacheTaskRequest, Builder> {
         private String clientToken; 
         private String domainName; 
-        private java.util.List < String > isp; 
+        private java.util.List<String> isp; 
         private String lang; 
 
         private Builder() {
@@ -99,7 +104,7 @@ public class SubmitIspFlushCacheTaskRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>This parameter is required.</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -108,7 +113,7 @@ public class SubmitIspFlushCacheTaskRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -117,9 +122,9 @@ public class SubmitIspFlushCacheTaskRequest extends Request {
         }
 
         /**
-         * Isp.
+         * <p>This parameter is required.</p>
          */
-        public Builder isp(java.util.List < String > isp) {
+        public Builder isp(java.util.List<String> isp) {
             this.putQueryParameter("Isp", isp);
             this.isp = isp;
             return this;

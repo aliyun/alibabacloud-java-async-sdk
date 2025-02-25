@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeContactsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeContactsResponseBody</p>
  */
 public class DescribeContactsResponseBody extends TeaModel {
-    @NameInMap("PageBean")
+    @com.aliyun.core.annotation.NameInMap("PageBean")
     private PageBean pageBean;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeContactsResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeContactsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The objects that were returned.
+         * <p>The objects that were returned.</p>
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -58,7 +63,10 @@ public class DescribeContactsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21E85B16-75A6-429A-9F65-8AAC9A54****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,29 +79,35 @@ public class DescribeContactsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeContactsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContactsResponseBody</p>
+     */
     public static class AlertContacts extends TeaModel {
-        @NameInMap("ArmsContactId")
+        @com.aliyun.core.annotation.NameInMap("ArmsContactId")
         private Long armsContactId;
 
-        @NameInMap("ContactId")
+        @com.aliyun.core.annotation.NameInMap("ContactId")
         private Float contactId;
 
-        @NameInMap("ContactName")
+        @com.aliyun.core.annotation.NameInMap("ContactName")
         private String contactName;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("IsEmailVerify")
+        @com.aliyun.core.annotation.NameInMap("IsEmailVerify")
         private Boolean isEmailVerify;
 
-        @NameInMap("IsVerify")
+        @com.aliyun.core.annotation.NameInMap("IsVerify")
         private Boolean isVerify;
 
-        @NameInMap("Phone")
+        @com.aliyun.core.annotation.NameInMap("Phone")
         private String phone;
 
-        @NameInMap("ReissueSendNotice")
+        @com.aliyun.core.annotation.NameInMap("ReissueSendNotice")
         private Long reissueSendNotice;
 
         private AlertContacts(Builder builder) {
@@ -182,7 +196,10 @@ public class DescribeContactsResponseBody extends TeaModel {
             private Long reissueSendNotice; 
 
             /**
-             * The ID of the alert contact.
+             * <p>The ID of the alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100147</p>
              */
             public Builder armsContactId(Long armsContactId) {
                 this.armsContactId = armsContactId;
@@ -190,7 +207,10 @@ public class DescribeContactsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the alert contact.
+             * <p>The ID of the alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder contactId(Float contactId) {
                 this.contactId = contactId;
@@ -198,7 +218,10 @@ public class DescribeContactsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert contact.
+             * <p>The name of the alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>John Doe</p>
              */
             public Builder contactName(String contactName) {
                 this.contactName = contactName;
@@ -206,7 +229,10 @@ public class DescribeContactsResponseBody extends TeaModel {
             }
 
             /**
-             * The email address of the alert contact.
+             * <p>The email address of the alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:someone@example.com">someone@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -214,7 +240,10 @@ public class DescribeContactsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the email address was verified.
+             * <p>Indicates whether the email address was verified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isEmailVerify(Boolean isEmailVerify) {
                 this.isEmailVerify = isEmailVerify;
@@ -222,11 +251,14 @@ public class DescribeContactsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the mobile number was verified. Valid values:
-             * <p>
+             * <p>Indicates whether the mobile number was verified. Valid values:</p>
+             * <ul>
+             * <li><code>false</code>: no</li>
+             * <li><code>true</code>: yes</li>
+             * </ul>
              * 
-             * *   `false`: no
-             * *   `true`: yes
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isVerify(Boolean isVerify) {
                 this.isVerify = isVerify;
@@ -234,7 +266,10 @@ public class DescribeContactsResponseBody extends TeaModel {
             }
 
             /**
-             * The mobile number of the alert contact.
+             * <p>The mobile number of the alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1381111****</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -242,13 +277,16 @@ public class DescribeContactsResponseBody extends TeaModel {
             }
 
             /**
-             * The operation that you want to perform if phone calls fail to be answered. Valid values:
-             * <p>
+             * <p>The operation that you want to perform if phone calls fail to be answered. Valid values:</p>
+             * <ul>
+             * <li>0: No operation is performed.</li>
+             * <li>1: A phone call is made again.</li>
+             * <li>2: A text message is sent.</li>
+             * <li>3 (default value): The global default value is used.</li>
+             * </ul>
              * 
-             * *   0: No operation is performed.
-             * *   1: A phone call is made again.
-             * *   2: A text message is sent.
-             * *   3 (default value): The global default value is used.
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder reissueSendNotice(Long reissueSendNotice) {
                 this.reissueSendNotice = reissueSendNotice;
@@ -262,17 +300,23 @@ public class DescribeContactsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeContactsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContactsResponseBody</p>
+     */
     public static class PageBean extends TeaModel {
-        @NameInMap("AlertContacts")
-        private java.util.List < AlertContacts> alertContacts;
+        @com.aliyun.core.annotation.NameInMap("AlertContacts")
+        private java.util.List<AlertContacts> alertContacts;
 
-        @NameInMap("Page")
+        @com.aliyun.core.annotation.NameInMap("Page")
         private Long page;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private PageBean(Builder builder) {
@@ -293,7 +337,7 @@ public class DescribeContactsResponseBody extends TeaModel {
         /**
          * @return alertContacts
          */
-        public java.util.List < AlertContacts> getAlertContacts() {
+        public java.util.List<AlertContacts> getAlertContacts() {
             return this.alertContacts;
         }
 
@@ -319,21 +363,24 @@ public class DescribeContactsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AlertContacts> alertContacts; 
+            private java.util.List<AlertContacts> alertContacts; 
             private Long page; 
             private Long size; 
             private Long total; 
 
             /**
-             * The alert contacts.
+             * <p>The alert contacts.</p>
              */
-            public Builder alertContacts(java.util.List < AlertContacts> alertContacts) {
+            public Builder alertContacts(java.util.List<AlertContacts> alertContacts) {
                 this.alertContacts = alertContacts;
                 return this;
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Long page) {
                 this.page = page;
@@ -341,7 +388,10 @@ public class DescribeContactsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of alert contacts returned per page.
+             * <p>The number of alert contacts returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -349,7 +399,10 @@ public class DescribeContactsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of alert contacts.
+             * <p>The total number of alert contacts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder total(Long total) {
                 this.total = total;

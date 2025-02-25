@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunCommandResponseBody} extends {@link TeaModel}
  *
  * <p>RunCommandResponseBody</p>
  */
 public class RunCommandResponseBody extends TeaModel {
-    @NameInMap("InvokeId")
+    @com.aliyun.core.annotation.NameInMap("InvokeId")
     private String invokeId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private RunCommandResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class RunCommandResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the command execution.
+         * <p>The ID of the command execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-hz01qgsqj2n****</p>
          */
         public Builder invokeId(String invokeId) {
             this.invokeId = invokeId;
@@ -58,7 +66,10 @@ public class RunCommandResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

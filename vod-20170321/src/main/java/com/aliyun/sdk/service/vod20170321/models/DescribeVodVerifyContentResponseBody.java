@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodVerifyContentResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVodVerifyContentResponseBody</p>
  */
 public class DescribeVodVerifyContentResponseBody extends TeaModel {
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private String content;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeVodVerifyContentResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DescribeVodVerifyContentResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The verification content.
+         * <p>The verification content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>verify_dffeb661*****3a59c31cd91f</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -58,7 +66,10 @@ public class DescribeVodVerifyContentResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34AB41F1-04A5-4688-634BDBE6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

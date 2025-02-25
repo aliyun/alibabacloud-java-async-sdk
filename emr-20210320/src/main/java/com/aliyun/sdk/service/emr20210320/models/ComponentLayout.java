@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ComponentLayout} extends {@link TeaModel}
  *
  * <p>ComponentLayout</p>
  */
 public class ComponentLayout extends TeaModel {
-    @NameInMap("ApplicationName")
+    @com.aliyun.core.annotation.NameInMap("ApplicationName")
     private String applicationName;
 
-    @NameInMap("ComponentName")
+    @com.aliyun.core.annotation.NameInMap("ComponentName")
     private String componentName;
 
-    @NameInMap("NodeSelector")
+    @com.aliyun.core.annotation.NameInMap("NodeSelector")
     private NodeSelector nodeSelector;
 
     private ComponentLayout(Builder builder) {
@@ -62,7 +67,10 @@ public class ComponentLayout extends TeaModel {
         private NodeSelector nodeSelector; 
 
         /**
-         * 应用名称。
+         * <p>应用名称。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HDFS</p>
          */
         public Builder applicationName(String applicationName) {
             this.applicationName = applicationName;
@@ -70,7 +78,10 @@ public class ComponentLayout extends TeaModel {
         }
 
         /**
-         * 组件名称。
+         * <p>组件名称。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DataNode</p>
          */
         public Builder componentName(String componentName) {
             this.componentName = componentName;
@@ -78,7 +89,7 @@ public class ComponentLayout extends TeaModel {
         }
 
         /**
-         * 节点选择器。
+         * <p>节点选择器。</p>
          */
         public Builder nodeSelector(NodeSelector nodeSelector) {
             this.nodeSelector = nodeSelector;
@@ -91,30 +102,36 @@ public class ComponentLayout extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ComponentLayout} extends {@link TeaModel}
+     *
+     * <p>ComponentLayout</p>
+     */
     public static class NodeSelector extends TeaModel {
-        @NameInMap("NodeEndIndex")
+        @com.aliyun.core.annotation.NameInMap("NodeEndIndex")
         private Integer nodeEndIndex;
 
-        @NameInMap("NodeGroupId")
+        @com.aliyun.core.annotation.NameInMap("NodeGroupId")
         private String nodeGroupId;
 
-        @NameInMap("NodeGroupIndex")
+        @com.aliyun.core.annotation.NameInMap("NodeGroupIndex")
         private Integer nodeGroupIndex;
 
-        @NameInMap("NodeGroupName")
+        @com.aliyun.core.annotation.NameInMap("NodeGroupName")
         private String nodeGroupName;
 
-        @NameInMap("NodeGroupTypes")
-        private java.util.List < String > nodeGroupTypes;
+        @com.aliyun.core.annotation.NameInMap("NodeGroupTypes")
+        private java.util.List<String> nodeGroupTypes;
 
-        @NameInMap("NodeNames")
-        private java.util.List < String > nodeNames;
+        @com.aliyun.core.annotation.NameInMap("NodeNames")
+        private java.util.List<String> nodeNames;
 
-        @NameInMap("NodeSelectType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("NodeSelectType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String nodeSelectType;
 
-        @NameInMap("NodeStartIndex")
+        @com.aliyun.core.annotation.NameInMap("NodeStartIndex")
         private Integer nodeStartIndex;
 
         private NodeSelector(Builder builder) {
@@ -167,14 +184,14 @@ public class ComponentLayout extends TeaModel {
         /**
          * @return nodeGroupTypes
          */
-        public java.util.List < String > getNodeGroupTypes() {
+        public java.util.List<String> getNodeGroupTypes() {
             return this.nodeGroupTypes;
         }
 
         /**
          * @return nodeNames
          */
-        public java.util.List < String > getNodeNames() {
+        public java.util.List<String> getNodeNames() {
             return this.nodeNames;
         }
 
@@ -197,13 +214,16 @@ public class ComponentLayout extends TeaModel {
             private String nodeGroupId; 
             private Integer nodeGroupIndex; 
             private String nodeGroupName; 
-            private java.util.List < String > nodeGroupTypes; 
-            private java.util.List < String > nodeNames; 
+            private java.util.List<String> nodeGroupTypes; 
+            private java.util.List<String> nodeNames; 
             private String nodeSelectType; 
             private Integer nodeStartIndex; 
 
             /**
-             * 节点结束编号，包含结束编号。
+             * <p>节点结束编号，包含结束编号。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder nodeEndIndex(Integer nodeEndIndex) {
                 this.nodeEndIndex = nodeEndIndex;
@@ -211,7 +231,10 @@ public class ComponentLayout extends TeaModel {
             }
 
             /**
-             * 节点组ID。
+             * <p>节点组ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>G-F609686D45D4ABCD</p>
              */
             public Builder nodeGroupId(String nodeGroupId) {
                 this.nodeGroupId = nodeGroupId;
@@ -219,7 +242,10 @@ public class ComponentLayout extends TeaModel {
             }
 
             /**
-             * 机器组下标编号。
+             * <p>机器组下标编号。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder nodeGroupIndex(Integer nodeGroupIndex) {
                 this.nodeGroupIndex = nodeGroupIndex;
@@ -227,7 +253,10 @@ public class ComponentLayout extends TeaModel {
             }
 
             /**
-             * 机器组名。
+             * <p>机器组名。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>master-1</p>
              */
             public Builder nodeGroupName(String nodeGroupName) {
                 this.nodeGroupName = nodeGroupName;
@@ -235,23 +264,33 @@ public class ComponentLayout extends TeaModel {
             }
 
             /**
-             * SelectType = NODE_GROUP 且 nodeGroupId 不存在时使用
+             * <p>SelectType = NODE_GROUP 且 nodeGroupId 不存在时使用</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[null]</p>
              */
-            public Builder nodeGroupTypes(java.util.List < String > nodeGroupTypes) {
+            public Builder nodeGroupTypes(java.util.List<String> nodeGroupTypes) {
                 this.nodeGroupTypes = nodeGroupTypes;
                 return this;
             }
 
             /**
-             * 节点名称列表。
+             * <p>节点名称列表。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[null]</p>
              */
-            public Builder nodeNames(java.util.List < String > nodeNames) {
+            public Builder nodeNames(java.util.List<String> nodeNames) {
                 this.nodeNames = nodeNames;
                 return this;
             }
 
             /**
-             * 节点选择类型。
+             * <p>节点选择类型。</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CLUSTER</p>
              */
             public Builder nodeSelectType(String nodeSelectType) {
                 this.nodeSelectType = nodeSelectType;
@@ -259,7 +298,10 @@ public class ComponentLayout extends TeaModel {
             }
 
             /**
-             * 节点开始编号，包含开始编号。
+             * <p>节点开始编号，包含开始编号。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder nodeStartIndex(Integer nodeStartIndex) {
                 this.nodeStartIndex = nodeStartIndex;

@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstallMonitoringAgentRequest} extends {@link RequestModel}
  *
  * <p>InstallMonitoringAgentRequest</p>
  */
 public class InstallMonitoringAgentRequest extends Request {
-    @Query
-    @NameInMap("Force")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Force")
     private Boolean force;
 
-    @Query
-    @NameInMap("InstallCommand")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstallCommand")
     private String installCommand;
 
-    @Query
-    @NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private java.util.List < String > instanceIds;
 
     private InstallMonitoringAgentRequest(Builder builder) {
@@ -82,11 +82,14 @@ public class InstallMonitoringAgentRequest extends Request {
         } 
 
         /**
-         * Specifies whether to install the CloudMonitor agent. Valid values:
-         * <p>
+         * <p>Specifies whether to install the CloudMonitor agent. Valid values:</p>
+         * <ul>
+         * <li>true (default value): yes</li>
+         * <li>false: no</li>
+         * </ul>
          * 
-         * *   true (default value): yes
-         * *   false: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -95,14 +98,18 @@ public class InstallMonitoringAgentRequest extends Request {
         }
 
         /**
-         * Specifies whether to install the CloudMonitor agent on all ECS instances that belong to the current Alibaba Cloud account. Valid values:
-         * <p>
+         * <p>Specifies whether to install the CloudMonitor agent on all ECS instances that belong to the current Alibaba Cloud account. Valid values:</p>
+         * <ul>
+         * <li><code>onlyInstallNotHasAgent</code>: installs the latest version of the CloudMonitor agent only on ECS instances on which the agent is not installed.</li>
+         * <li><code>onlyUpgradeAgent</code>: upgrades the CloudMonitor agent to the latest version only for ECS instances on which an earlier version of the agent is installed.</li>
+         * <li><code>installAndUpgrade</code>: installs the latest version of the CloudMonitor agent on ECS instances on which the agent is not installed, and upgrades the CloudMonitor agent to the latest version for ECS instances on which an earlier version of the agent is installed.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you set the InstallCommand parameter, the <code>InstanceIds</code> parameter does not take effect.</p>
+         * </blockquote>
          * 
-         * *   `onlyInstallNotHasAgent`: installs the latest version of the CloudMonitor agent only on ECS instances on which the agent is not installed.
-         * *   `onlyUpgradeAgent`: upgrades the CloudMonitor agent to the latest version only for ECS instances on which an earlier version of the agent is installed.
-         * *   `installAndUpgrade`: installs the latest version of the CloudMonitor agent on ECS instances on which the agent is not installed, and upgrades the CloudMonitor agent to the latest version for ECS instances on which an earlier version of the agent is installed.
-         * 
-         * >  If you set the InstallCommand parameter, the `InstanceIds` parameter does not take effect.
+         * <strong>example:</strong>
+         * <p>onlyInstallNotHasAgent</p>
          */
         public Builder installCommand(String installCommand) {
             this.putQueryParameter("InstallCommand", installCommand);

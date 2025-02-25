@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RefundReason} extends {@link TeaModel}
  *
  * <p>RefundReason</p>
  */
 public class RefundReason extends TeaModel {
-    @NameInMap("proofRequired")
+    @com.aliyun.core.annotation.NameInMap("proofRequired")
     private Boolean proofRequired;
 
-    @NameInMap("reasonTextId")
+    @com.aliyun.core.annotation.NameInMap("reasonTextId")
     private String reasonTextId;
 
-    @NameInMap("reasonTips")
+    @com.aliyun.core.annotation.NameInMap("reasonTips")
     private String reasonTips;
 
-    @NameInMap("refundDescRequired")
+    @com.aliyun.core.annotation.NameInMap("refundDescRequired")
     private Boolean refundDescRequired;
 
     private RefundReason(Builder builder) {

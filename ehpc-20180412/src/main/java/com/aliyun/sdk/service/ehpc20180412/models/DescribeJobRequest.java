@@ -84,7 +84,10 @@ public class DescribeJobRequest extends Request {
         } 
 
         /**
-         * Async.
+         * Specifies whether to use an asynchronous link to stop the job.
+         * <p>
+         * 
+         * Default value: false.
          */
         public Builder async(Boolean async) {
             this.putQueryParameter("Async", async);
@@ -93,10 +96,10 @@ public class DescribeJobRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * The ID of the E-HPC cluster.
          * <p>
          * 
-         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
+         * You can call the [ListClusters](~~87116~~) operation to obtain the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -105,10 +108,10 @@ public class DescribeJobRequest extends Request {
         }
 
         /**
-         * The ID of the job.
+         * The job ID.
          * <p>
          * 
-         * You can call the [ListJobs](~~87251~~) operation to query the job ID.
+         * You can call the [ListJobs](~~87251~~) operation to obtain the job ID.
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

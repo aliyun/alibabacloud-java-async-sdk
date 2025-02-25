@@ -1,35 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUsersRequest} extends {@link RequestModel}
  *
  * <p>CreateUsersRequest</p>
  */
 public class CreateUsersRequest extends Request {
-    @Query
-    @NameInMap("AutoLockTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoLockTime")
     private String autoLockTime;
 
-    @Body
-    @NameInMap("Password")
-    @Validation(maxLength = 256)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsLocalAdmin")
+    private Boolean isLocalAdmin;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Password")
+    @com.aliyun.core.annotation.Validation(maxLength = 256)
     private String password;
 
-    @Body
-    @NameInMap("Users")
-    @Validation(required = true)
-    private java.util.List < Users> users;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordExpireDays")
+    private String passwordExpireDays;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Users")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Users> users;
 
     private CreateUsersRequest(Builder builder) {
         super(builder);
         this.autoLockTime = builder.autoLockTime;
+        this.isLocalAdmin = builder.isLocalAdmin;
         this.password = builder.password;
+        this.passwordExpireDays = builder.passwordExpireDays;
         this.users = builder.users;
     }
 
@@ -54,6 +69,13 @@ public class CreateUsersRequest extends Request {
     }
 
     /**
+     * @return isLocalAdmin
+     */
+    public Boolean getIsLocalAdmin() {
+        return this.isLocalAdmin;
+    }
+
+    /**
      * @return password
      */
     public String getPassword() {
@@ -61,16 +83,25 @@ public class CreateUsersRequest extends Request {
     }
 
     /**
+     * @return passwordExpireDays
+     */
+    public String getPasswordExpireDays() {
+        return this.passwordExpireDays;
+    }
+
+    /**
      * @return users
      */
-    public java.util.List < Users> getUsers() {
+    public java.util.List<Users> getUsers() {
         return this.users;
     }
 
     public static final class Builder extends Request.Builder<CreateUsersRequest, Builder> {
         private String autoLockTime; 
+        private Boolean isLocalAdmin; 
         private String password; 
-        private java.util.List < Users> users; 
+        private String passwordExpireDays; 
+        private java.util.List<Users> users; 
 
         private Builder() {
             super();
@@ -79,12 +110,17 @@ public class CreateUsersRequest extends Request {
         private Builder(CreateUsersRequest request) {
             super(request);
             this.autoLockTime = request.autoLockTime;
+            this.isLocalAdmin = request.isLocalAdmin;
             this.password = request.password;
+            this.passwordExpireDays = request.passwordExpireDays;
             this.users = request.users;
         } 
 
         /**
-         * AutoLockTime.
+         * <p>The date on which the convenience users are automatically locked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-03</p>
          */
         public Builder autoLockTime(String autoLockTime) {
             this.putQueryParameter("AutoLockTime", autoLockTime);
@@ -93,7 +129,19 @@ public class CreateUsersRequest extends Request {
         }
 
         /**
-         * The initial password. If this parameter is left empty, an email for password reset is sent to the specified email address.
+         * IsLocalAdmin.
+         */
+        public Builder isLocalAdmin(Boolean isLocalAdmin) {
+            this.putQueryParameter("IsLocalAdmin", isLocalAdmin);
+            this.isLocalAdmin = isLocalAdmin;
+            return this;
+        }
+
+        /**
+         * <p>The initial password. If this parameter is left empty, an email for password reset is sent to the specified email address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test123****</p>
          */
         public Builder password(String password) {
             this.putBodyParameter("Password", password);
@@ -102,9 +150,22 @@ public class CreateUsersRequest extends Request {
         }
 
         /**
-         * Details of the convenience users.
+         * PasswordExpireDays.
          */
-        public Builder users(java.util.List < Users> users) {
+        public Builder passwordExpireDays(String passwordExpireDays) {
+            this.putQueryParameter("PasswordExpireDays", passwordExpireDays);
+            this.passwordExpireDays = passwordExpireDays;
+            return this;
+        }
+
+        /**
+         * <p>The information about the convenience user.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateUsers</p>
+         */
+        public Builder users(java.util.List<Users> users) {
             this.putBodyParameter("Users", users);
             this.users = users;
             return this;
@@ -117,27 +178,36 @@ public class CreateUsersRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateUsersRequest} extends {@link TeaModel}
+     *
+     * <p>CreateUsersRequest</p>
+     */
     public static class Users extends TeaModel {
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("EndUserId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String endUserId;
 
-        @NameInMap("OrgId")
+        @com.aliyun.core.annotation.NameInMap("OrgId")
         private String orgId;
 
-        @NameInMap("OwnerType")
+        @com.aliyun.core.annotation.NameInMap("OwnerType")
         private String ownerType;
 
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
 
-        @NameInMap("Phone")
+        @com.aliyun.core.annotation.NameInMap("Phone")
         private String phone;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("RealNickName")
+        private String realNickName;
+
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
         private Users(Builder builder) {
@@ -147,6 +217,7 @@ public class CreateUsersRequest extends Request {
             this.ownerType = builder.ownerType;
             this.password = builder.password;
             this.phone = builder.phone;
+            this.realNickName = builder.realNickName;
             this.remark = builder.remark;
         }
 
@@ -201,6 +272,13 @@ public class CreateUsersRequest extends Request {
         }
 
         /**
+         * @return realNickName
+         */
+        public String getRealNickName() {
+            return this.realNickName;
+        }
+
+        /**
          * @return remark
          */
         public String getRemark() {
@@ -214,10 +292,14 @@ public class CreateUsersRequest extends Request {
             private String ownerType; 
             private String password; 
             private String phone; 
+            private String realNickName; 
             private String remark; 
 
             /**
-             * The email address of the end user. The email address is used to receive notifications about events such as desktop assignment. You must specify an email address or a mobile number to receive notifications.
+             * <p>The email address of the convenience user. The email address is used to receive notifications about events such as desktop assignment. You must specify an email address or a mobile number to receive notifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:username@example.com">username@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -225,7 +307,11 @@ public class CreateUsersRequest extends Request {
             }
 
             /**
-             * The name of the end user. The name must be 3 to 24 characters in length, and can contain lowercase letters, digits, and underscores (\_).
+             * <p>The username of the convenience user. The name can contain lowercase letters, digits, and underscores (_), and must be 3 to 24 characters in length.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -233,7 +319,10 @@ public class CreateUsersRequest extends Request {
             }
 
             /**
-             * The organization to which the end user belongs.
+             * <p>The organization to which the convenience user belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1111****</p>
              */
             public Builder orgId(String orgId) {
                 this.orgId = orgId;
@@ -241,7 +330,15 @@ public class CreateUsersRequest extends Request {
             }
 
             /**
-             * The type of the account ownership.
+             * <p>The type of the account ownership.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>CreateFromManager: administrator-activated</li>
+             * <li>Normal: user-activated</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder ownerType(String ownerType) {
                 this.ownerType = ownerType;
@@ -249,7 +346,13 @@ public class CreateUsersRequest extends Request {
             }
 
             /**
-             * The password of the end user.
+             * <p>The user password.</p>
+             * <blockquote>
+             * <p> The password must be at least 10 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters (excluding spaces).</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>password1</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -257,7 +360,10 @@ public class CreateUsersRequest extends Request {
             }
 
             /**
-             * Mobile numbers are not supported on the international site (alibabacloud.com).
+             * <p>Mobile numbers are not supported on the international site (alibabacloud.com).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1381111****</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -265,7 +371,21 @@ public class CreateUsersRequest extends Request {
             }
 
             /**
-             * The remarks of the end user.
+             * <p>The display name of the end user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Bean</p>
+             */
+            public Builder realNickName(String realNickName) {
+                this.realNickName = realNickName;
+                return this;
+            }
+
+            /**
+             * <p>The remarks on the convenience user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>remark1</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;

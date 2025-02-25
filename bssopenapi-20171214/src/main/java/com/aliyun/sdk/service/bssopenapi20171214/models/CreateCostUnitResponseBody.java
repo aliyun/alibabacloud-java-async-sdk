@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCostUnitResponseBody} extends {@link TeaModel}
  *
  * <p>CreateCostUnitResponseBody</p>
  */
 public class CreateCostUnitResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateCostUnitResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class CreateCostUnitResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class CreateCostUnitResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,10 @@ public class CreateCostUnitResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful！</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class CreateCostUnitResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F5B803CF-94D8-43AF-ADB3-D819AAD30E27</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class CreateCostUnitResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful.
+         * <p>Indicates whether the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,17 +148,23 @@ public class CreateCostUnitResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateCostUnitResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateCostUnitResponseBody</p>
+     */
     public static class CostUnitDtoList extends TeaModel {
-        @NameInMap("OwnerUid")
+        @com.aliyun.core.annotation.NameInMap("OwnerUid")
         private Long ownerUid;
 
-        @NameInMap("ParentUnitId")
+        @com.aliyun.core.annotation.NameInMap("ParentUnitId")
         private Long parentUnitId;
 
-        @NameInMap("UnitId")
+        @com.aliyun.core.annotation.NameInMap("UnitId")
         private Long unitId;
 
-        @NameInMap("UnitName")
+        @com.aliyun.core.annotation.NameInMap("UnitName")
         private String unitName;
 
         private CostUnitDtoList(Builder builder) {
@@ -194,7 +217,10 @@ public class CreateCostUnitResponseBody extends TeaModel {
             private String unitName; 
 
             /**
-             * The user ID of the owner of the cost center.
+             * <p>The user ID of the owner of the cost center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26387563</p>
              */
             public Builder ownerUid(Long ownerUid) {
                 this.ownerUid = ownerUid;
@@ -202,7 +228,10 @@ public class CreateCostUnitResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the parent cost center. A value of -1 indicates the root cost center.
+             * <p>The ID of the parent cost center. A value of -1 indicates the root cost center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder parentUnitId(Long parentUnitId) {
                 this.parentUnitId = parentUnitId;
@@ -210,7 +239,10 @@ public class CreateCostUnitResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cost center.
+             * <p>The ID of the cost center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>84327659328</p>
              */
             public Builder unitId(Long unitId) {
                 this.unitId = unitId;
@@ -218,7 +250,10 @@ public class CreateCostUnitResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cost center.
+             * <p>The name of the cost center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder unitName(String unitName) {
                 this.unitName = unitName;
@@ -232,9 +267,15 @@ public class CreateCostUnitResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateCostUnitResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateCostUnitResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CostUnitDtoList")
-        private java.util.List < CostUnitDtoList> costUnitDtoList;
+        @com.aliyun.core.annotation.NameInMap("CostUnitDtoList")
+        private java.util.List<CostUnitDtoList> costUnitDtoList;
 
         private Data(Builder builder) {
             this.costUnitDtoList = builder.costUnitDtoList;
@@ -251,17 +292,17 @@ public class CreateCostUnitResponseBody extends TeaModel {
         /**
          * @return costUnitDtoList
          */
-        public java.util.List < CostUnitDtoList> getCostUnitDtoList() {
+        public java.util.List<CostUnitDtoList> getCostUnitDtoList() {
             return this.costUnitDtoList;
         }
 
         public static final class Builder {
-            private java.util.List < CostUnitDtoList> costUnitDtoList; 
+            private java.util.List<CostUnitDtoList> costUnitDtoList; 
 
             /**
-             * The list of cost center entities.
+             * <p>The list of cost center entities.</p>
              */
-            public Builder costUnitDtoList(java.util.List < CostUnitDtoList> costUnitDtoList) {
+            public Builder costUnitDtoList(java.util.List<CostUnitDtoList> costUnitDtoList) {
                 this.costUnitDtoList = costUnitDtoList;
                 return this;
             }

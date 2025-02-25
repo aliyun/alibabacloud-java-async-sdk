@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDagsResponseBody} extends {@link TeaModel}
  *
  * <p>ListDagsResponseBody</p>
  */
 public class ListDagsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListDagsResponseBody(Builder builder) {
@@ -98,7 +103,7 @@ public class ListDagsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The entities returned.
+         * <p>The details of DAGs.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +111,10 @@ public class ListDagsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ConnectionNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +122,10 @@ public class ListDagsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The connection does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +133,10 @@ public class ListDagsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can locate logs and troubleshoot issues based on the ID.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +144,10 @@ public class ListDagsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7782a299-b291-4fee-8424-cf8058efa8e8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class ListDagsResponseBody extends TeaModel {
         }
 
         /**
-         * The details of DAGs.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,44 +171,50 @@ public class ListDagsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDagsResponseBody</p>
+     */
     public static class Dags extends TeaModel {
-        @NameInMap("Bizdate")
+        @com.aliyun.core.annotation.NameInMap("Bizdate")
         private Long bizdate;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("CreateUser")
+        @com.aliyun.core.annotation.NameInMap("CreateUser")
         private String createUser;
 
-        @NameInMap("DagId")
+        @com.aliyun.core.annotation.NameInMap("DagId")
         private Long dagId;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private Long finishTime;
 
-        @NameInMap("Gmtdate")
+        @com.aliyun.core.annotation.NameInMap("Gmtdate")
         private Long gmtdate;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private Long modifyTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OpSeq")
+        @com.aliyun.core.annotation.NameInMap("OpSeq")
         private Long opSeq;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Dags(Builder builder) {
@@ -322,7 +348,10 @@ public class ListDagsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The name of the DAG.
+             * <p>The data timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1605052800000</p>
              */
             public Builder bizdate(Long bizdate) {
                 this.bizdate = bizdate;
@@ -330,7 +359,10 @@ public class ListDagsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1605052800000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -338,7 +370,10 @@ public class ListDagsResponseBody extends TeaModel {
             }
 
             /**
-             * The data timestamp.
+             * <p>The creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1736629400048545</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -346,7 +381,10 @@ public class ListDagsResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the DAG was scheduled to run.
+             * <p>The DAG ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>351249682</p>
              */
             public Builder dagId(Long dagId) {
                 this.dagId = dagId;
@@ -354,7 +392,10 @@ public class ListDagsResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the DAG was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1605052800000</p>
              */
             public Builder finishTime(Long finishTime) {
                 this.finishTime = finishTime;
@@ -362,7 +403,10 @@ public class ListDagsResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the DAG started to run.
+             * <p>The actual running time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1605052800000</p>
              */
             public Builder gmtdate(Long gmtdate) {
                 this.gmtdate = gmtdate;
@@ -370,7 +414,10 @@ public class ListDagsResponseBody extends TeaModel {
             }
 
             /**
-             * The sequence number of the operation.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1605052800000</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -378,7 +425,10 @@ public class ListDagsResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the DAG was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The name of the DAG.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_dag</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -386,7 +436,10 @@ public class ListDagsResponseBody extends TeaModel {
             }
 
             /**
-             * OpSeq.
+             * <p>The sequence number of the operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder opSeq(Long opSeq) {
                 this.opSeq = opSeq;
@@ -394,7 +447,10 @@ public class ListDagsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the DAG.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>112345</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -402,7 +458,10 @@ public class ListDagsResponseBody extends TeaModel {
             }
 
             /**
-             * The user who created the DAG.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1605052800000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -410,7 +469,16 @@ public class ListDagsResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the DAG finished running. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The status of the DAG. Valid values:</p>
+             * <ul>
+             * <li>CREATED</li>
+             * <li>RUNNING</li>
+             * <li>FAILURE</li>
+             * <li>SUCCESS</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>FAILURE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -418,7 +486,16 @@ public class ListDagsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the DAG. Valid values: CREATED, RUNNING, FAILURE, and SUCCESS.
+             * <p>The type of the DAG. Valid values:</p>
+             * <ul>
+             * <li>MANUAL: DAG for a manually triggered workflow</li>
+             * <li>SMOKE_TEST: DAG for a smoke testing workflow</li>
+             * <li>SUPPLY_DATA: DAG for a data backfill instance</li>
+             * <li>BUSINESS_PROCESS_DAG: DAG for a one-time workflow</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>MANUAL_FLOW</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -432,9 +509,15 @@ public class ListDagsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDagsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Dags")
-        private java.util.List < Dags> dags;
+        @com.aliyun.core.annotation.NameInMap("Dags")
+        private java.util.List<Dags> dags;
 
         private Data(Builder builder) {
             this.dags = builder.dags;
@@ -451,17 +534,17 @@ public class ListDagsResponseBody extends TeaModel {
         /**
          * @return dags
          */
-        public java.util.List < Dags> getDags() {
+        public java.util.List<Dags> getDags() {
             return this.dags;
         }
 
         public static final class Builder {
-            private java.util.List < Dags> dags; 
+            private java.util.List<Dags> dags; 
 
             /**
-             * The type of the DAG. Valid values: MANUAL, SMOKE_TEST, SUPPLY_DATA, and BUSINESS_PROCESS_DAG.
+             * <p>The entities returned.</p>
              */
-            public Builder dags(java.util.List < Dags> dags) {
+            public Builder dags(java.util.List<Dags> dags) {
                 this.dags = dags;
                 return this;
             }

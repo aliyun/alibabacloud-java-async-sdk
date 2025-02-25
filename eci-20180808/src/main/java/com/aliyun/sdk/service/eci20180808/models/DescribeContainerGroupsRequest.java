@@ -1,80 +1,89 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeContainerGroupsRequest} extends {@link RequestModel}
  *
  * <p>DescribeContainerGroupsRequest</p>
  */
 public class DescribeContainerGroupsRequest extends Request {
-    @Query
-    @NameInMap("ContainerGroupIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComputeCategory")
+    private String computeCategory;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerGroupIds")
     private String containerGroupIds;
 
-    @Query
-    @NameInMap("ContainerGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerGroupName")
     private String containerGroupName;
 
-    @Query
-    @NameInMap("Limit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Limit")
     private Integer limit;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+    private String securityGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @Query
-    @NameInMap("WithEvent")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WithEvent")
     private Boolean withEvent;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private DescribeContainerGroupsRequest(Builder builder) {
         super(builder);
+        this.computeCategory = builder.computeCategory;
         this.containerGroupIds = builder.containerGroupIds;
         this.containerGroupName = builder.containerGroupName;
         this.limit = builder.limit;
@@ -85,6 +94,7 @@ public class DescribeContainerGroupsRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.securityGroupId = builder.securityGroupId;
         this.status = builder.status;
         this.tag = builder.tag;
         this.vSwitchId = builder.vSwitchId;
@@ -103,6 +113,13 @@ public class DescribeContainerGroupsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return computeCategory
+     */
+    public String getComputeCategory() {
+        return this.computeCategory;
     }
 
     /**
@@ -176,6 +193,13 @@ public class DescribeContainerGroupsRequest extends Request {
     }
 
     /**
+     * @return securityGroupId
+     */
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -211,6 +235,7 @@ public class DescribeContainerGroupsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeContainerGroupsRequest, Builder> {
+        private String computeCategory; 
         private String containerGroupIds; 
         private String containerGroupName; 
         private Integer limit; 
@@ -221,6 +246,7 @@ public class DescribeContainerGroupsRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String securityGroupId; 
         private String status; 
         private java.util.List < Tag> tag; 
         private String vSwitchId; 
@@ -233,6 +259,7 @@ public class DescribeContainerGroupsRequest extends Request {
 
         private Builder(DescribeContainerGroupsRequest request) {
             super(request);
+            this.computeCategory = request.computeCategory;
             this.containerGroupIds = request.containerGroupIds;
             this.containerGroupName = request.containerGroupName;
             this.limit = request.limit;
@@ -243,6 +270,7 @@ public class DescribeContainerGroupsRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.securityGroupId = request.securityGroupId;
             this.status = request.status;
             this.tag = request.tag;
             this.vSwitchId = request.vSwitchId;
@@ -251,7 +279,26 @@ public class DescribeContainerGroupsRequest extends Request {
         } 
 
         /**
-         * The IDs of the elastic container instances in JSON format. You can specify up to 20 IDs.
+         * <p>The compute category of the instance. Valid values:</p>
+         * <ul>
+         * <li>economy</li>
+         * <li>general</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>economy</p>
+         */
+        public Builder computeCategory(String computeCategory) {
+            this.putQueryParameter("ComputeCategory", computeCategory);
+            this.computeCategory = computeCategory;
+            return this;
+        }
+
+        /**
+         * <p>The IDs of the elastic container instances in JSON format. You can specify up to 20 IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;eci-bp17gw49eu09yiwm****&quot;, &quot;eci-bp19aq49du01abcm****&quot;, &quot;eci-2zegym1qhbmdfr1s****&quot;]</p>
          */
         public Builder containerGroupIds(String containerGroupIds) {
             this.putQueryParameter("ContainerGroupIds", containerGroupIds);
@@ -260,7 +307,10 @@ public class DescribeContainerGroupsRequest extends Request {
         }
 
         /**
-         * The name of the elastic container instance.
+         * <p>The name of the elastic container instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder containerGroupName(String containerGroupName) {
             this.putQueryParameter("ContainerGroupName", containerGroupName);
@@ -269,10 +319,13 @@ public class DescribeContainerGroupsRequest extends Request {
         }
 
         /**
-         * The maximum number of resources to return. Default value: 20. Maximum value: 20.
-         * <p>
+         * <p>The maximum number of resources to return. Default value: 20. Maximum value: 20.</p>
+         * <blockquote>
+         * <p> The number of returned resources is less than or equal to the specified number.</p>
+         * </blockquote>
          * 
-         * >  The number of returned resources is less than or equal to the specified number.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);
@@ -281,10 +334,13 @@ public class DescribeContainerGroupsRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the query. If this parameter is left empty, all results have been returned.
-         * <p>
+         * <p>The token that determines the start point of the query. If this parameter is left empty, all results have been returned.</p>
+         * <blockquote>
+         * <p>You do not need to specify this parameter in the first request. Starting from the second request, you can obtain the token from the result returned by the previous request.</p>
+         * </blockquote>
          * 
-         * > You do not need to specify this parameter in the first request. Starting from the second request, you can obtain the token from the result returned by the previous request.
+         * <strong>example:</strong>
+         * <p>d78f2dd8-5979-42fe-****-b16db43be5bc</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -311,7 +367,11 @@ public class DescribeContainerGroupsRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -320,7 +380,10 @@ public class DescribeContainerGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the elastic container instances belong. If you do not specify a resource group when you create an elastic container instance, the system automatically adds the instance to the default resource group in your account.
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzh43v*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -347,19 +410,34 @@ public class DescribeContainerGroupsRequest extends Request {
         }
 
         /**
-         * The status of the elastic container instance. Valid values:
-         * <p>
+         * <p>The ID of the security group to which the instance belongs.</p>
          * 
-         * *   Pending: The instance is being started.
-         * *   Running: The instance is running.
-         * *   Succeeded: The instance runs successfully.
-         * *   Failed: The instance fails to run.
-         * *   Scheduling: The instance is being created.
-         * *   ScheduleFailed: The instance fails to be created.
-         * *   Restarting: The instance is being restarted.
-         * *   Updating: The instance is being updated.
-         * *   Terminating: The instance is being terminated.
-         * *   Expired: The instance expires.
+         * <strong>example:</strong>
+         * <p>sg-uf66jeqopgqa9hdn****</p>
+         */
+        public Builder securityGroupId(String securityGroupId) {
+            this.putQueryParameter("SecurityGroupId", securityGroupId);
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+
+        /**
+         * <p>The status of the elastic container instance. Valid values:</p>
+         * <ul>
+         * <li>Pending: The instance is being started.</li>
+         * <li>Running: The instance is running.</li>
+         * <li>Succeeded: The instance runs successfully.</li>
+         * <li>Failed: The instance fails to run.</li>
+         * <li>Scheduling: The instance is being created.</li>
+         * <li>ScheduleFailed: The instance fails to be created.</li>
+         * <li>Restarting: The instance is being restarted.</li>
+         * <li>Updating: The instance is being updated.</li>
+         * <li>Terminating: The instance is being terminated.</li>
+         * <li>Expired: The instance expires.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -368,7 +446,7 @@ public class DescribeContainerGroupsRequest extends Request {
         }
 
         /**
-         * The tag of the instances.
+         * <p>The tag of the instances.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -377,7 +455,10 @@ public class DescribeContainerGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch to which the elastic container instances are connected.
+         * <p>The ID of the vSwitch to which the elastic container instances are connected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1jrgfqqy54kg5hc****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -386,7 +467,10 @@ public class DescribeContainerGroupsRequest extends Request {
         }
 
         /**
-         * Specifies whether to return event information.
+         * <p>Specify whether to return event information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder withEvent(Boolean withEvent) {
             this.putQueryParameter("WithEvent", withEvent);
@@ -395,10 +479,11 @@ public class DescribeContainerGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the zone in which the elastic container instances are deployed. If you do not specify this parameter, the system selects a zone.
-         * <p>
+         * <p>The ID of the zone in which the elastic container instances are deployed. If you do not specify this parameter, the system selects a zone.</p>
+         * <p>This parameter is empty by default.</p>
          * 
-         * This parameter is empty by default.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -413,11 +498,17 @@ public class DescribeContainerGroupsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeContainerGroupsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerGroupsRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -452,7 +543,10 @@ public class DescribeContainerGroupsRequest extends Request {
             private String value; 
 
             /**
-             * The tag key of the instances.
+             * <p>The tag key of the instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -460,7 +554,10 @@ public class DescribeContainerGroupsRequest extends Request {
             }
 
             /**
-             * The tag value of the instances.
+             * <p>The tag value of the instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAlertRuleResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteAlertRuleResponseBody</p>
  */
 public class DeleteAlertRuleResponseBody extends TeaModel {
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteAlertRuleResponseBody(Builder builder) {
@@ -50,11 +55,14 @@ public class DeleteAlertRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the call was successful.
-         * <p>
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><code>true</code>: The call was successful.</li>
+         * <li><code>false</code>: The call failed.</li>
+         * </ul>
          * 
-         * *   `true`: The call was successful.
-         * *   `false`: The call failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -62,7 +70,10 @@ public class DeleteAlertRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C21AB7CF-B7AF-410F-BD61-82D1567F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

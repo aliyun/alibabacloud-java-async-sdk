@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceRamRoleResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceRamRoleResponseBody</p>
  */
 public class DescribeInstanceRamRoleResponseBody extends TeaModel {
-    @NameInMap("InstanceRamRoleSets")
+    @com.aliyun.core.annotation.NameInMap("InstanceRamRoleSets")
     private InstanceRamRoleSets instanceRamRoleSets;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeInstanceRamRoleResponseBody(Builder builder) {
@@ -74,7 +79,7 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the instance RAM roles.
+         * <p>The IDs of the ECS instances and the names of the corresponding instance RAM roles.</p>
          */
         public Builder instanceRamRoleSets(InstanceRamRoleSets instanceRamRoleSets) {
             this.instanceRamRoleSets = instanceRamRoleSets;
@@ -82,7 +87,10 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the instance RAM role.
+         * <p>The region ID of the ECS instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -90,7 +98,10 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +109,10 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of instance RAM roles returned.
+         * <p>The number of ECS instances returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -111,11 +125,17 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceRamRoleResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceRamRoleResponseBody</p>
+     */
     public static class InstanceRamRoleSet extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("RamRoleName")
+        @com.aliyun.core.annotation.NameInMap("RamRoleName")
         private String ramRoleName;
 
         private InstanceRamRoleSet(Builder builder) {
@@ -150,7 +170,10 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
             private String ramRoleName; 
 
             /**
-             * The ID of the instance
+             * <p>The ID of the instance</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp67acfmxazb4p****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -158,7 +181,10 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance RAM role.
+             * <p>The name of the instance RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EcsServiceRole-EcsDocGuideTest</p>
              */
             public Builder ramRoleName(String ramRoleName) {
                 this.ramRoleName = ramRoleName;
@@ -172,9 +198,15 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceRamRoleResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceRamRoleResponseBody</p>
+     */
     public static class InstanceRamRoleSets extends TeaModel {
-        @NameInMap("InstanceRamRoleSet")
-        private java.util.List < InstanceRamRoleSet> instanceRamRoleSet;
+        @com.aliyun.core.annotation.NameInMap("InstanceRamRoleSet")
+        private java.util.List<InstanceRamRoleSet> instanceRamRoleSet;
 
         private InstanceRamRoleSets(Builder builder) {
             this.instanceRamRoleSet = builder.instanceRamRoleSet;
@@ -191,17 +223,17 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
         /**
          * @return instanceRamRoleSet
          */
-        public java.util.List < InstanceRamRoleSet> getInstanceRamRoleSet() {
+        public java.util.List<InstanceRamRoleSet> getInstanceRamRoleSet() {
             return this.instanceRamRoleSet;
         }
 
         public static final class Builder {
-            private java.util.List < InstanceRamRoleSet> instanceRamRoleSet; 
+            private java.util.List<InstanceRamRoleSet> instanceRamRoleSet; 
 
             /**
              * InstanceRamRoleSet.
              */
-            public Builder instanceRamRoleSet(java.util.List < InstanceRamRoleSet> instanceRamRoleSet) {
+            public Builder instanceRamRoleSet(java.util.List<InstanceRamRoleSet> instanceRamRoleSet) {
                 this.instanceRamRoleSet = instanceRamRoleSet;
                 return this;
             }

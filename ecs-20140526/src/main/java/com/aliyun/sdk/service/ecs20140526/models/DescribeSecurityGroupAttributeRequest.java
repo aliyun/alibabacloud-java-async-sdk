@@ -1,59 +1,75 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSecurityGroupAttributeRequest} extends {@link RequestModel}
  *
  * <p>DescribeSecurityGroupAttributeRequest</p>
  */
 public class DescribeSecurityGroupAttributeRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("Direction")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Direction")
     private String direction;
 
-    @Query
-    @NameInMap("NicType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 10)
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NicType")
     private String nicType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String securityGroupId;
 
     private DescribeSecurityGroupAttributeRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
         this.direction = builder.direction;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.nicType = builder.nicType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -88,6 +104,20 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
      */
     public String getDirection() {
         return this.direction;
+    }
+
+    /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -142,6 +172,8 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeSecurityGroupAttributeRequest, Builder> {
         private String sourceRegionId; 
         private String direction; 
+        private Integer maxResults; 
+        private String nextToken; 
         private String nicType; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -158,6 +190,8 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
             this.direction = request.direction;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
             this.nicType = request.nicType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -177,14 +211,16 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
         }
 
         /**
-         * The direction in which the security group rule is applied. Valid values:
-         * <p>
+         * <p>The direction in which the security group rule is applied. Valid values:</p>
+         * <ul>
+         * <li>egress: outbound</li>
+         * <li>ingress: inbound</li>
+         * <li>all: outbound and inbound</li>
+         * </ul>
+         * <p>Default value: all.</p>
          * 
-         * *   egress: outbound.
-         * *   ingress: inbound.
-         * *   all: outbound and inbound.
-         * 
-         * Default value: all.
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -193,23 +229,53 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
         }
 
         /**
-         * The network interface card (NIC) type of the security group rule.
-         * <p>
+         * <p>The maximum number of entries per page.</p>
+         * <ul>
+         * <li>Minimum value: 10.</li>
+         * <li>Maximum value: 1000.</li>
+         * </ul>
+         * <p>Default value: 500.</p>
          * 
-         * *   Valid values for rules of security groups in the classic network:
+         * <strong>example:</strong>
+         * <p>500</p>
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
          * 
-         *     *   internet (default)
-         *     *   intranet
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * <p>The network interface controller (NIC) type of the security group rule.</p>
+         * <ul>
+         * <li><p>Valid values for rules of security groups in the classic network:</p>
+         * <ul>
+         * <li>internet (default)</li>
+         * <li>intranet</li>
+         * </ul>
+         * <p>**</p>
+         * <p><strong>Note</strong> You can query security group rules of only one NIC type in a single call. To query security group rules of both NIC types, call the operation twice.</p>
+         * </li>
+         * <li><p>When the security group is in a virtual private cloud (VPC), set the value to intranet, which is the default value for rules of security groups in VPCs.</p>
+         * <p>**</p>
+         * <p><strong>Note</strong> If you set this parameter to internet or leave this parameter empty, a value of intranet is automatically used.</p>
+         * </li>
+         * </ul>
          * 
-         *     **
-         * 
-         *     **Note**You can query security group rules of only one NIC type in a single call. To query security group rules of both NIC types, call the operation twice.
-         * 
-         * *   If the security group is in a virtual private cloud (VPC), set the value to intranet. This is also the default value.
-         * 
-         *     **
-         * 
-         *     **Note**If you set this parameter to internet or leave this parameter empty, the value of intranet is automatically used.
+         * <strong>example:</strong>
+         * <p>intranet</p>
          */
         public Builder nicType(String nicType) {
             this.putQueryParameter("NicType", nicType);
@@ -236,7 +302,11 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the security group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -263,7 +333,11 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the security group.
+         * <p>The ID of the security group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp1gxw6bznjjvhu3****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);

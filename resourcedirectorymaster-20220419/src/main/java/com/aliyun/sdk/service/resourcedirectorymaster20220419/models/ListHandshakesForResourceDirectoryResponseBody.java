@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHandshakesForResourceDirectoryResponseBody} extends {@link TeaModel}
  *
  * <p>ListHandshakesForResourceDirectoryResponseBody</p>
  */
 public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
-    @NameInMap("Handshakes")
+    @com.aliyun.core.annotation.NameInMap("Handshakes")
     private Handshakes handshakes;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListHandshakesForResourceDirectoryResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information of the invitations.
+         * <p>The information of the invitations.</p>
          */
         public Builder handshakes(Handshakes handshakes) {
             this.handshakes = handshakes;
@@ -94,7 +99,10 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9B34724D-54B0-4A51-B34D-4512372FE1BE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,38 +148,44 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListHandshakesForResourceDirectoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHandshakesForResourceDirectoryResponseBody</p>
+     */
     public static class Handshake extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("HandshakeId")
+        @com.aliyun.core.annotation.NameInMap("HandshakeId")
         private String handshakeId;
 
-        @NameInMap("MasterAccountId")
+        @com.aliyun.core.annotation.NameInMap("MasterAccountId")
         private String masterAccountId;
 
-        @NameInMap("MasterAccountName")
+        @com.aliyun.core.annotation.NameInMap("MasterAccountName")
         private String masterAccountName;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("Note")
+        @com.aliyun.core.annotation.NameInMap("Note")
         private String note;
 
-        @NameInMap("ResourceDirectoryId")
+        @com.aliyun.core.annotation.NameInMap("ResourceDirectoryId")
         private String resourceDirectoryId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TargetEntity")
+        @com.aliyun.core.annotation.NameInMap("TargetEntity")
         private String targetEntity;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
         private Handshake(Builder builder) {
@@ -278,7 +301,10 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * The time when the invitation was created. The time is displayed in UTC.
+             * <p>The time when the invitation was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-08-10T09:55:41Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -286,7 +312,10 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the invitation expires. The time is displayed in UTC.
+             * <p>The time when the invitation expires. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-08-24T09:55:41Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -294,7 +323,10 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the invitation.
+             * <p>The ID of the invitation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>h-ycm4rp****</p>
              */
             public Builder handshakeId(String handshakeId) {
                 this.handshakeId = handshakeId;
@@ -302,7 +334,10 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the management account of the resource directory.
+             * <p>The ID of the management account of the resource directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172841235500****</p>
              */
             public Builder masterAccountId(String masterAccountId) {
                 this.masterAccountId = masterAccountId;
@@ -310,7 +345,10 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the management account of the resource directory.
+             * <p>The name of the management account of the resource directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alice</p>
              */
             public Builder masterAccountName(String masterAccountName) {
                 this.masterAccountName = masterAccountName;
@@ -318,7 +356,10 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the invitation was modified. The time is displayed in UTC.
+             * <p>The time when the invitation was modified. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-08-10T09:55:41Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -326,7 +367,10 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the invitation.
+             * <p>The description of the invitation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Welcome</p>
              */
             public Builder note(String note) {
                 this.note = note;
@@ -334,7 +378,10 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource directory.
+             * <p>The ID of the resource directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rd-abcdef****</p>
              */
             public Builder resourceDirectoryId(String resourceDirectoryId) {
                 this.resourceDirectoryId = resourceDirectoryId;
@@ -342,14 +389,17 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the invitation. Valid values:
-             * <p>
+             * <p>The status of the invitation. Valid values:</p>
+             * <ul>
+             * <li>Pending: The invitation is waiting for confirmation.</li>
+             * <li>Accepted: The invitation is accepted.</li>
+             * <li>Cancelled: The invitation is canceled.</li>
+             * <li>Declined: The invitation is rejected.</li>
+             * <li>Expired: The invitation expires.</li>
+             * </ul>
              * 
-             * *   Pending: The invitation is waiting for confirmation.
-             * *   Accepted: The invitation is accepted.
-             * *   Cancelled: The invitation is canceled.
-             * *   Declined: The invitation is rejected.
-             * *   Expired: The invitation expires.
+             * <strong>example:</strong>
+             * <p>Pending</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -357,7 +407,10 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID or logon email address of the invited account.
+             * <p>The ID or logon email address of the invited account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:someone@example.com">someone@example.com</a></p>
              */
             public Builder targetEntity(String targetEntity) {
                 this.targetEntity = targetEntity;
@@ -365,11 +418,14 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the invited account. Valid values:
-             * <p>
+             * <p>The type of the invited account. Valid values:</p>
+             * <ul>
+             * <li>Account: indicates the ID of the account.</li>
+             * <li>Email: indicates the logon email address of the account.</li>
+             * </ul>
              * 
-             * *   Account: indicates the ID of the account.
-             * *   Email: indicates the logon email address of the account.
+             * <strong>example:</strong>
+             * <p>Email</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -383,9 +439,15 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHandshakesForResourceDirectoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHandshakesForResourceDirectoryResponseBody</p>
+     */
     public static class Handshakes extends TeaModel {
-        @NameInMap("Handshake")
-        private java.util.List < Handshake> handshake;
+        @com.aliyun.core.annotation.NameInMap("Handshake")
+        private java.util.List<Handshake> handshake;
 
         private Handshakes(Builder builder) {
             this.handshake = builder.handshake;
@@ -402,17 +464,17 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
         /**
          * @return handshake
          */
-        public java.util.List < Handshake> getHandshake() {
+        public java.util.List<Handshake> getHandshake() {
             return this.handshake;
         }
 
         public static final class Builder {
-            private java.util.List < Handshake> handshake; 
+            private java.util.List<Handshake> handshake; 
 
             /**
              * Handshake.
              */
-            public Builder handshake(java.util.List < Handshake> handshake) {
+            public Builder handshake(java.util.List<Handshake> handshake) {
                 this.handshake = handshake;
                 return this;
             }

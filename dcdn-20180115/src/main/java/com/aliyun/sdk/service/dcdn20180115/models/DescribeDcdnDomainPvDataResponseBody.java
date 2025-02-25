@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnDomainPvDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnDomainPvDataResponseBody</p>
  */
 public class DescribeDcdnDomainPvDataResponseBody extends TeaModel {
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("PvDataInterval")
+    @com.aliyun.core.annotation.NameInMap("PvDataInterval")
     private PvDataInterval pvDataInterval;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeDcdnDomainPvDataResponseBody(Builder builder) {
@@ -98,7 +98,10 @@ public class DescribeDcdnDomainPvDataResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * The time interval between the data entries returned. Unit: seconds.
+         * <p>The time interval between the data entries returned. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -106,7 +109,10 @@ public class DescribeDcdnDomainPvDataResponseBody extends TeaModel {
         }
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -114,7 +120,10 @@ public class DescribeDcdnDomainPvDataResponseBody extends TeaModel {
         }
 
         /**
-         * The end of the time range that was queried.
+         * <p>The end of the time range that was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-11-29T00:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -122,7 +131,7 @@ public class DescribeDcdnDomainPvDataResponseBody extends TeaModel {
         }
 
         /**
-         * The number of PVs at each interval.
+         * <p>The number of PVs at each interval.</p>
          */
         public Builder pvDataInterval(PvDataInterval pvDataInterval) {
             this.pvDataInterval = pvDataInterval;
@@ -130,7 +139,10 @@ public class DescribeDcdnDomainPvDataResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BCD7D917-76F1-442F-BB75-C810DE34C761</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class DescribeDcdnDomainPvDataResponseBody extends TeaModel {
         }
 
         /**
-         * The beginning of the time range that was queried.
+         * <p>The beginning of the time range that was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-11-28T00:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -151,11 +166,17 @@ public class DescribeDcdnDomainPvDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnDomainPvDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainPvDataResponseBody</p>
+     */
     public static class UsageData extends TeaModel {
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private UsageData(Builder builder) {
@@ -190,7 +211,10 @@ public class DescribeDcdnDomainPvDataResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The timestamp of the data returned.
+             * <p>The timestamp of the data returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-11-28T03:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -198,7 +222,10 @@ public class DescribeDcdnDomainPvDataResponseBody extends TeaModel {
             }
 
             /**
-             * The number of PVs.
+             * <p>The number of PVs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9292</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -212,8 +239,14 @@ public class DescribeDcdnDomainPvDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnDomainPvDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainPvDataResponseBody</p>
+     */
     public static class PvDataInterval extends TeaModel {
-        @NameInMap("UsageData")
+        @com.aliyun.core.annotation.NameInMap("UsageData")
         private java.util.List < UsageData> usageData;
 
         private PvDataInterval(Builder builder) {

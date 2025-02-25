@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBatchResultDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBatchResultDetailResponseBody</p>
  */
 public class DescribeBatchResultDetailResponseBody extends TeaModel {
-    @NameInMap("BatchResultDetails")
+    @com.aliyun.core.annotation.NameInMap("BatchResultDetails")
     private BatchResultDetails batchResultDetails;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeBatchResultDetailResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Detailed information about the batch operation result.
+         * <p>The detailed results of the batch operation.</p>
          */
         public Builder batchResultDetails(BatchResultDetails batchResultDetails) {
             this.batchResultDetails = batchResultDetails;
@@ -94,7 +99,10 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75446CC1-FC9A-4595-8D96-089D73D7A63D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -131,53 +148,59 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBatchResultDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBatchResultDetailResponseBody</p>
+     */
     public static class BatchResultDetail extends TeaModel {
-        @NameInMap("BatchType")
+        @com.aliyun.core.annotation.NameInMap("BatchType")
         private String batchType;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Line")
+        @com.aliyun.core.annotation.NameInMap("Line")
         private String line;
 
-        @NameInMap("NewRr")
+        @com.aliyun.core.annotation.NameInMap("NewRr")
         private String newRr;
 
-        @NameInMap("NewValue")
+        @com.aliyun.core.annotation.NameInMap("NewValue")
         private String newValue;
 
-        @NameInMap("OperateDateStr")
+        @com.aliyun.core.annotation.NameInMap("OperateDateStr")
         private String operateDateStr;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private String priority;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("RecordId")
+        @com.aliyun.core.annotation.NameInMap("RecordId")
         private String recordId;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("Rr")
+        @com.aliyun.core.annotation.NameInMap("Rr")
         private String rr;
 
-        @NameInMap("RrStatus")
+        @com.aliyun.core.annotation.NameInMap("RrStatus")
         private String rrStatus;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Boolean status;
 
-        @NameInMap("Ttl")
+        @com.aliyun.core.annotation.NameInMap("Ttl")
         private String ttl;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private BatchResultDetail(Builder builder) {
@@ -338,7 +361,10 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The type of the batch operation.
+             * <p>The type of the batch operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DOMAIN_ADD</p>
              */
             public Builder batchType(String batchType) {
                 this.batchType = batchType;
@@ -346,7 +372,10 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -354,7 +383,10 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The line code.
+             * <p>The line code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder line(String line) {
                 this.line = line;
@@ -362,7 +394,10 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The new host record.
+             * <p>The new hostname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo-batch-7</p>
              */
             public Builder newRr(String newRr) {
                 this.newRr = newRr;
@@ -370,7 +405,10 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The new record value.
+             * <p>The new record value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.0.2.254</p>
              */
             public Builder newValue(String newValue) {
                 this.newValue = newValue;
@@ -378,7 +416,10 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the operation was performed.
+             * <p>The time when the operation was performed. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-08-22 18:02:58</p>
              */
             public Builder operateDateStr(String operateDateStr) {
                 this.operateDateStr = operateDateStr;
@@ -386,7 +427,10 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of an MX-type DNS record.
+             * <p>The priority of the mail exchanger (MX) record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -394,7 +438,10 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The cause of the execution failure.
+             * <p>The cause of the execution failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Task lock fail</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -402,7 +449,10 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the DNS record.
+             * <p>The ID of the DNS record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456789</p>
              */
             public Builder recordId(String recordId) {
                 this.recordId = recordId;
@@ -410,7 +460,10 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the DNS record.
+             * <p>The description of the DNS record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>remark</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -418,7 +471,10 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The host record.
+             * <p>The hostname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>www</p>
              */
             public Builder rr(String rr) {
                 this.rr = rr;
@@ -426,7 +482,10 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the DNS record.
+             * <p>The status of the DNS record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>stop</p>
              */
             public Builder rrStatus(String rrStatus) {
                 this.rrStatus = rrStatus;
@@ -434,7 +493,10 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The execution result. Valid values:**true**: The execution succeeded.**false**: The execution failed.
+             * <p>The execution result of the batch operation. Valid values: <strong>true</strong>: The operation succeeded. <strong>false</strong>: The operation failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder status(Boolean status) {
                 this.status = status;
@@ -442,7 +504,10 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The TTL of the DNS record.
+             * <p>The time-to-live (TTL) of the DNS record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder ttl(String ttl) {
                 this.ttl = ttl;
@@ -450,7 +515,10 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the DNS record.
+             * <p>The type of the DNS record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -458,7 +526,10 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the DNS record.
+             * <p>The record value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.0.2.0</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -472,9 +543,15 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBatchResultDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBatchResultDetailResponseBody</p>
+     */
     public static class BatchResultDetails extends TeaModel {
-        @NameInMap("BatchResultDetail")
-        private java.util.List < BatchResultDetail> batchResultDetail;
+        @com.aliyun.core.annotation.NameInMap("BatchResultDetail")
+        private java.util.List<BatchResultDetail> batchResultDetail;
 
         private BatchResultDetails(Builder builder) {
             this.batchResultDetail = builder.batchResultDetail;
@@ -491,17 +568,17 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
         /**
          * @return batchResultDetail
          */
-        public java.util.List < BatchResultDetail> getBatchResultDetail() {
+        public java.util.List<BatchResultDetail> getBatchResultDetail() {
             return this.batchResultDetail;
         }
 
         public static final class Builder {
-            private java.util.List < BatchResultDetail> batchResultDetail; 
+            private java.util.List<BatchResultDetail> batchResultDetail; 
 
             /**
              * BatchResultDetail.
              */
-            public Builder batchResultDetail(java.util.List < BatchResultDetail> batchResultDetail) {
+            public Builder batchResultDetail(java.util.List<BatchResultDetail> batchResultDetail) {
                 this.batchResultDetail = batchResultDetail;
                 return this;
             }

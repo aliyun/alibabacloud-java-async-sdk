@@ -1,63 +1,68 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateWebCCRuleRequest} extends {@link RequestModel}
  *
  * <p>CreateWebCCRuleRequest</p>
  */
 public class CreateWebCCRuleRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Act")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Act")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String act;
 
-    @Query
-    @NameInMap("Count")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Count")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer count;
 
-    @Query
-    @NameInMap("Domain")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Domain")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domain;
 
-    @Query
-    @NameInMap("Interval")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Interval")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer interval;
 
-    @Query
-    @NameInMap("Mode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mode;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("Ttl")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ttl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer ttl;
 
-    @Query
-    @NameInMap("Uri")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uri")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String uri;
 
     private CreateWebCCRuleRequest(Builder builder) {
@@ -197,7 +202,15 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * Act.
+         * <p>The action on the requests that trigger the custom frequency control rule. Valid values:</p>
+         * <ul>
+         * <li><strong>close</strong>: blocks the requests.</li>
+         * <li><strong>captcha</strong>: triggers Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) verification for the requests.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>close</p>
          */
         public Builder act(String act) {
             this.putQueryParameter("Act", act);
@@ -206,7 +219,10 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * Count.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder count(Integer count) {
             this.putQueryParameter("Count", count);
@@ -215,7 +231,14 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * Domain.
+         * <p>The domain name of the website.</p>
+         * <blockquote>
+         * <p> A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -224,7 +247,10 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * Interval.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder interval(Integer interval) {
             this.putQueryParameter("Interval", interval);
@@ -233,7 +259,18 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * Mode.
+         * <p>The matching mode. Valid values:</p>
+         * <ul>
+         * <li><strong>prefix</strong>: prefix match.</li>
+         * <li><strong>match</strong>: exact match.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If the <strong>URI</strong> of the check path contains parameters, you must set this parameter to <strong>prefix</strong>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prefix</p>
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
@@ -242,7 +279,11 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the rule. The name can be up to 128 characters in length and contain letters, digits, and underscores (_).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testrule</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -251,7 +292,11 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group to which the Anti-DDoS Proxy instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+         * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94485.html">Create a resource group</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm2pz25js****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -260,7 +305,11 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * Ttl.
+         * <p>The blocking duration. Valid values: <strong>60</strong> to <strong>86400</strong>. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder ttl(Integer ttl) {
             this.putQueryParameter("Ttl", ttl);
@@ -269,7 +318,14 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * Uri.
+         * <p>The check path.</p>
+         * <blockquote>
+         * <p> The URI cannot be modified. The domain name of the website, the check path, and the rule name uniquely identify a rule.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/abc/a.php</p>
          */
         public Builder uri(String uri) {
             this.putQueryParameter("Uri", uri);

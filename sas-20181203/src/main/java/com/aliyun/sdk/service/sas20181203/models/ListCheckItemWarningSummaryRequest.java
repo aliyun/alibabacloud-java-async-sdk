@@ -1,68 +1,81 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCheckItemWarningSummaryRequest} extends {@link RequestModel}
  *
  * <p>ListCheckItemWarningSummaryRequest</p>
  */
 public class ListCheckItemWarningSummaryRequest extends Request {
-    @Query
-    @NameInMap("CheckItemFuzzy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckItemFuzzy")
     private String checkItemFuzzy;
 
-    @Query
-    @NameInMap("CheckLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckLevel")
     private String checkLevel;
 
-    @Query
-    @NameInMap("CheckType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckType")
     private String checkType;
 
-    @Query
-    @NameInMap("CheckWarningStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckWarningStatus")
     private Integer checkWarningStatus;
 
-    @Query
-    @NameInMap("ContainerFieldName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckWarningStatusList")
+    private java.util.List<Integer> checkWarningStatusList;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerFieldName")
     private String containerFieldName;
 
-    @Query
-    @NameInMap("ContainerFieldValue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerFieldValue")
     private String containerFieldValue;
 
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private Long groupId;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RiskType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RiskType")
     private String riskType;
 
-    @Query
-    @NameInMap("Source")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
 
-    @Query
-    @NameInMap("UuidList")
-    private java.util.List < String > uuidList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    private Long startTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UuidList")
+    private java.util.List<String> uuidList;
 
     private ListCheckItemWarningSummaryRequest(Builder builder) {
         super(builder);
@@ -70,6 +83,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         this.checkLevel = builder.checkLevel;
         this.checkType = builder.checkType;
         this.checkWarningStatus = builder.checkWarningStatus;
+        this.checkWarningStatusList = builder.checkWarningStatusList;
         this.containerFieldName = builder.containerFieldName;
         this.containerFieldValue = builder.containerFieldValue;
         this.currentPage = builder.currentPage;
@@ -78,6 +92,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         this.pageSize = builder.pageSize;
         this.riskType = builder.riskType;
         this.source = builder.source;
+        this.startTime = builder.startTime;
         this.uuidList = builder.uuidList;
     }
 
@@ -120,6 +135,13 @@ public class ListCheckItemWarningSummaryRequest extends Request {
      */
     public Integer getCheckWarningStatus() {
         return this.checkWarningStatus;
+    }
+
+    /**
+     * @return checkWarningStatusList
+     */
+    public java.util.List<Integer> getCheckWarningStatusList() {
+        return this.checkWarningStatusList;
     }
 
     /**
@@ -179,9 +201,16 @@ public class ListCheckItemWarningSummaryRequest extends Request {
     }
 
     /**
+     * @return startTime
+     */
+    public Long getStartTime() {
+        return this.startTime;
+    }
+
+    /**
      * @return uuidList
      */
-    public java.util.List < String > getUuidList() {
+    public java.util.List<String> getUuidList() {
         return this.uuidList;
     }
 
@@ -190,6 +219,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         private String checkLevel; 
         private String checkType; 
         private Integer checkWarningStatus; 
+        private java.util.List<Integer> checkWarningStatusList; 
         private String containerFieldName; 
         private String containerFieldValue; 
         private Integer currentPage; 
@@ -198,7 +228,8 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         private Integer pageSize; 
         private String riskType; 
         private String source; 
-        private java.util.List < String > uuidList; 
+        private Long startTime; 
+        private java.util.List<String> uuidList; 
 
         private Builder() {
             super();
@@ -210,6 +241,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
             this.checkLevel = request.checkLevel;
             this.checkType = request.checkType;
             this.checkWarningStatus = request.checkWarningStatus;
+            this.checkWarningStatusList = request.checkWarningStatusList;
             this.containerFieldName = request.containerFieldName;
             this.containerFieldValue = request.containerFieldValue;
             this.currentPage = request.currentPage;
@@ -218,11 +250,15 @@ public class ListCheckItemWarningSummaryRequest extends Request {
             this.pageSize = request.pageSize;
             this.riskType = request.riskType;
             this.source = request.source;
+            this.startTime = request.startTime;
             this.uuidList = request.uuidList;
         } 
 
         /**
-         * The name of the check item. Fuzzy match is supported.
+         * <p>The name of the check item. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>password</p>
          */
         public Builder checkItemFuzzy(String checkItemFuzzy) {
             this.putQueryParameter("CheckItemFuzzy", checkItemFuzzy);
@@ -231,11 +267,15 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * The risk level. Default value: null, which indicates that check items at all risk levels are queried.Valid values:
-         * <p>
-         * *   **high**
-         * *   **medium**
-         * *   **low**
+         * <p>The risk level. Default value: null, which indicates that check items at all risk levels are queried.Valid values:</p>
+         * <ul>
+         * <li><strong>high</strong></li>
+         * <li><strong>medium</strong></li>
+         * <li><strong>low</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>medium</p>
          */
         public Builder checkLevel(String checkLevel) {
             this.putQueryParameter("CheckLevel", checkLevel);
@@ -244,7 +284,10 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * The type of the check item.
+         * <p>The type of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hc.check.type.attack_defense</p>
          */
         public Builder checkType(String checkType) {
             this.putQueryParameter("CheckType", checkType);
@@ -253,10 +296,15 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * The risk status. Default value: null, which indicates that check items in all states are queried.Valid values:
-         * <p>
-         * *   **1**: failed
-         * *   **3**: passed
+         * <p>The risk status. Default value is null, meaning check items in all states are queried. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: failed</li>
+         * <li><strong>3</strong>: passed</li>
+         * <li><strong>6</strong>: whitelisted</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder checkWarningStatus(Integer checkWarningStatus) {
             this.putQueryParameter("CheckWarningStatus", checkWarningStatus);
@@ -265,7 +313,19 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * The name of the field that is used to query containers.
+         * <p>The list of risk levels. If the CheckWarningStatus parameter is specified, only it takes effect.</p>
+         */
+        public Builder checkWarningStatusList(java.util.List<Integer> checkWarningStatusList) {
+            this.putQueryParameter("CheckWarningStatusList", checkWarningStatusList);
+            this.checkWarningStatusList = checkWarningStatusList;
+            return this;
+        }
+
+        /**
+         * <p>The name of the field that is used to query containers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>clusterId</p>
          */
         public Builder containerFieldName(String containerFieldName) {
             this.putQueryParameter("ContainerFieldName", containerFieldName);
@@ -274,7 +334,10 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * The value of the field that is used to query containers.
+         * <p>The value of the field that is used to query containers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c471f0f61b9c04f8380556e922cf1****</p>
          */
         public Builder containerFieldValue(String containerFieldValue) {
             this.putQueryParameter("ContainerFieldValue", containerFieldValue);
@@ -283,7 +346,10 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -292,10 +358,13 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * The ID of the asset group.
-         * <p>
+         * <p>The ID of the asset group.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the IDs of asset groups.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of asset groups.
+         * <strong>example:</strong>
+         * <p>1161****</p>
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -304,11 +373,14 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -317,10 +389,13 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
-         * <p>
+         * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <blockquote>
+         * <p>We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
          * 
-         * > We recommend that you do not leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -329,7 +404,10 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * The type of the baseline.
+         * <p>The type of the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>weak_password</p>
          */
         public Builder riskType(String riskType) {
             this.putQueryParameter("RiskType", riskType);
@@ -338,11 +416,14 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * The data source. Default value: **default**. Valid value:
-         * <p>
+         * <p>The data source. Default value: <strong>default</strong>. Valid value:</p>
+         * <ul>
+         * <li><strong>agentless</strong>: The check items of baselines for agentless detection.</li>
+         * <li><strong>default</strong>: The check items of baselines for hosts.</li>
+         * </ul>
          * 
-         * *   **agentless**: The check items of baselines for agentless detection.
-         * *   **default**: The check items of baselines for hosts.
+         * <strong>example:</strong>
+         * <p>agentless</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -351,9 +432,24 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * The UUID array of the servers.
+         * <p>Start of time range for filtering alerts, effective only for querying historically handled alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1732793158366</p>
          */
-        public Builder uuidList(java.util.List < String > uuidList) {
+        public Builder startTime(Long startTime) {
+            this.putQueryParameter("StartTime", startTime);
+            this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * <p>The UUIDs of the servers.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/141932.html">DescribeCloudCenterInstances</a> operation to query the UUIDs of the servers.</p>
+         * </blockquote>
+         */
+        public Builder uuidList(java.util.List<String> uuidList) {
             this.putQueryParameter("UuidList", uuidList);
             this.uuidList = uuidList;
             return this;

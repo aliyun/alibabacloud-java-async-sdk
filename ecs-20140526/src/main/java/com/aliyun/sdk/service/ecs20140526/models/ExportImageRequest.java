@@ -1,58 +1,63 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportImageRequest} extends {@link RequestModel}
  *
  * <p>ExportImageRequest</p>
  */
 public class ExportImageRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("ImageFormat")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageFormat")
     private String imageFormat;
 
-    @Query
-    @NameInMap("ImageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String imageId;
 
-    @Query
-    @NameInMap("OSSBucket")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OSSBucket")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String OSSBucket;
 
-    @Query
-    @NameInMap("OSSPrefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OSSPrefix")
     private String OSSPrefix;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RoleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleName")
     private String roleName;
 
     private ExportImageRequest(Builder builder) {
@@ -192,16 +197,18 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * The format in which you want to export the custom image. Valid values:
-         * <p>
+         * <p>The format in which you want to export the custom image. Valid values:</p>
+         * <ul>
+         * <li>raw</li>
+         * <li>vhd</li>
+         * <li>qcow2</li>
+         * <li>vmdk</li>
+         * <li>vdi</li>
+         * </ul>
+         * <p>Default value: raw.</p>
          * 
-         * *   raw
-         * *   vhd
-         * *   qcow2
-         * *   vmdk
-         * *   vdi
-         * 
-         * Default value: raw.
+         * <strong>example:</strong>
+         * <p>raw</p>
          */
         public Builder imageFormat(String imageFormat) {
             this.putQueryParameter("ImageFormat", imageFormat);
@@ -210,7 +217,11 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * The custom image ID.
+         * <p>The custom image ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-bp67acfmxazb4p****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -219,7 +230,11 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * The OSS bucket in which you want to store the exported custom image.
+         * <p>The OSS bucket in which you want to store the exported custom image.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testexportImage</p>
          */
         public Builder OSSBucket(String OSSBucket) {
             this.putQueryParameter("OSSBucket", OSSBucket);
@@ -228,7 +243,10 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * The prefix for the name of the OSS object. The prefix must be 1 to 30 characters in length and can contain digits and letters.
+         * <p>The prefix for the name of the OSS object. The prefix must be 1 to 30 characters in length and can contain digits and letters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EcsExport</p>
          */
         public Builder OSSPrefix(String OSSPrefix) {
             this.putQueryParameter("OSSPrefix", OSSPrefix);
@@ -246,7 +264,11 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * The region ID of the custom image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the custom image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -273,7 +295,10 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * The name of the RAM role that you want to use to export the custom image.
+         * <p>The name of the RAM role that you want to use to export the custom image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunECSImageExportDefaultRole</p>
          */
         public Builder roleName(String roleName) {
             this.putQueryParameter("RoleName", roleName);

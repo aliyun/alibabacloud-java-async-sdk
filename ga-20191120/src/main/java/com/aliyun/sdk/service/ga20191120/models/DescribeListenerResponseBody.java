@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,73 +11,76 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeListenerResponseBody</p>
  */
 public class DescribeListenerResponseBody extends TeaModel {
-    @NameInMap("AcceleratorId")
+    @com.aliyun.core.annotation.NameInMap("AcceleratorId")
     private String acceleratorId;
 
-    @NameInMap("AclType")
+    @com.aliyun.core.annotation.NameInMap("AclType")
     private String aclType;
 
-    @NameInMap("BackendPorts")
+    @com.aliyun.core.annotation.NameInMap("BackendPorts")
     private java.util.List < BackendPorts> backendPorts;
 
-    @NameInMap("Certificates")
+    @com.aliyun.core.annotation.NameInMap("Certificates")
     private java.util.List < Certificates> certificates;
 
-    @NameInMap("ClientAffinity")
+    @com.aliyun.core.annotation.NameInMap("ClientAffinity")
     private String clientAffinity;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("IdleTimeout")
+    @com.aliyun.core.annotation.NameInMap("HttpVersion")
+    private String httpVersion;
+
+    @com.aliyun.core.annotation.NameInMap("IdleTimeout")
     private Integer idleTimeout;
 
-    @NameInMap("ListenerId")
+    @com.aliyun.core.annotation.NameInMap("ListenerId")
     private String listenerId;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("PortRanges")
+    @com.aliyun.core.annotation.NameInMap("PortRanges")
     private java.util.List < PortRanges> portRanges;
 
-    @NameInMap("Protocol")
+    @com.aliyun.core.annotation.NameInMap("Protocol")
     private String protocol;
 
-    @NameInMap("ProxyProtocol")
+    @com.aliyun.core.annotation.NameInMap("ProxyProtocol")
     private Boolean proxyProtocol;
 
-    @NameInMap("RelatedAcls")
+    @com.aliyun.core.annotation.NameInMap("RelatedAcls")
     private java.util.List < RelatedAcls> relatedAcls;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RequestTimeout")
+    @com.aliyun.core.annotation.NameInMap("RequestTimeout")
     private Integer requestTimeout;
 
-    @NameInMap("SecurityPolicyId")
+    @com.aliyun.core.annotation.NameInMap("SecurityPolicyId")
     private String securityPolicyId;
 
-    @NameInMap("ServiceId")
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
     private String serviceId;
 
-    @NameInMap("ServiceManaged")
+    @com.aliyun.core.annotation.NameInMap("ServiceManaged")
     private Boolean serviceManaged;
 
-    @NameInMap("ServiceManagedInfos")
+    @com.aliyun.core.annotation.NameInMap("ServiceManagedInfos")
     private java.util.List < ServiceManagedInfos> serviceManagedInfos;
 
-    @NameInMap("State")
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @NameInMap("XForwardedForConfig")
+    @com.aliyun.core.annotation.NameInMap("XForwardedForConfig")
     private XForwardedForConfig xForwardedForConfig;
 
     private DescribeListenerResponseBody(Builder builder) {
@@ -89,6 +91,7 @@ public class DescribeListenerResponseBody extends TeaModel {
         this.clientAffinity = builder.clientAffinity;
         this.createTime = builder.createTime;
         this.description = builder.description;
+        this.httpVersion = builder.httpVersion;
         this.idleTimeout = builder.idleTimeout;
         this.listenerId = builder.listenerId;
         this.name = builder.name;
@@ -162,6 +165,13 @@ public class DescribeListenerResponseBody extends TeaModel {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return httpVersion
+     */
+    public String getHttpVersion() {
+        return this.httpVersion;
     }
 
     /**
@@ -284,6 +294,7 @@ public class DescribeListenerResponseBody extends TeaModel {
         private String clientAffinity; 
         private String createTime; 
         private String description; 
+        private String httpVersion; 
         private Integer idleTimeout; 
         private String listenerId; 
         private String name; 
@@ -313,10 +324,10 @@ public class DescribeListenerResponseBody extends TeaModel {
          * The type of the ACL. Valid values:
          * <p>
          * 
-         * *   **white**: a whitelist. Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists apply to scenarios in which you want to allow only specified IP addresses to access an application. Your service may be adversely affected if the whitelist is not properly configured. After you configure a whitelist for a listener, only requests from the IP addresses that are added to the whitelist are forwarded by the listener. If the whitelist is enabled but no IP addresses are added to the ACL, the listener does not forward requests.
-         * *   **black**: a blacklist. All requests from the IP addresses or CIDR blocks in the ACL are blocked. Blacklists apply to scenarios in which you want to deny access from specific IP addresses to an application. If the blacklist is enabled but no IP addresses are added to the ACL, the listener forwards all requests.
+         * *   **white**: a whitelist. Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists are suitable for scenarios in which you want to allow only specific IP addresses to access an application. If a whitelist is improperly configured, risks may arise. After a whitelist is configured for a listener, only requests from the IP addresses that are added to the whitelist are distributed by the listener. If the whitelist is enabled but no IP addresses are added to the ACL, the listener does not forward requests.
+         * *   **black**: a blacklist. All requests from the IP addresses or CIDR blocks in the ACL are blocked. Blacklists are suitable for scenarios in which you want to deny access from specific IP addresses to an application. If the blacklist is enabled but no IP addresses are added to the ACL, the listener forwards all requests.
          * 
-         * If the value of **Status** is **on**, this parameter is returned.
+         * This parameter is returned only if the value of **Status** is **on**.
          */
         public Builder aclType(String aclType) {
             this.aclType = aclType;
@@ -324,7 +335,7 @@ public class DescribeListenerResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the backend ports.
+         * The information about the backend ports.
          */
         public Builder backendPorts(java.util.List < BackendPorts> backendPorts) {
             this.backendPorts = backendPorts;
@@ -343,8 +354,8 @@ public class DescribeListenerResponseBody extends TeaModel {
          * Indicates whether client affinity is enabled for the listener.
          * <p>
          * 
-         * *   If **NONE** is returned, client affinity is disabled. In this case, requests from the same client may be forwarded to different endpoints.
-         * *   If **SOURCE_IP** is returned, client affinity is enabled. In this case, when a client accesses stateful applications, requests from the same client are always forwarded to the same endpoint regardless of the source port or protocol.
+         * *   If **NONE** is returned, client affinity is disabled. Requests from the same client may be forwarded to different endpoints.
+         * *   If **SOURCE_IP** is returned, client affinity is enabled. When a client accesses stateful applications, requests from the same client are forwarded to the same endpoint regardless of the source port or protocol.
          */
         public Builder clientAffinity(String clientAffinity) {
             this.clientAffinity = clientAffinity;
@@ -352,7 +363,7 @@ public class DescribeListenerResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp when the listener was created. Unit: milliseconds.
+         * The time when the listener was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -368,7 +379,22 @@ public class DescribeListenerResponseBody extends TeaModel {
         }
 
         /**
-         * IdleTimeout.
+         * The maximum version of the HTTP protocol. Valid values:
+         * <p>
+         * 
+         * *   **http3**
+         * *   **http2**
+         * *   **http1.1**
+         * 
+         * >  This parameter is returned only for HTTPS listeners.
+         */
+        public Builder httpVersion(String httpVersion) {
+            this.httpVersion = httpVersion;
+            return this;
+        }
+
+        /**
+         * The timeout period of idle connections. Unit: seconds.
          */
         public Builder idleTimeout(Integer idleTimeout) {
             this.idleTimeout = idleTimeout;
@@ -392,7 +418,7 @@ public class DescribeListenerResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the listener ports.
+         * The information about the listener ports.
          */
         public Builder portRanges(java.util.List < PortRanges> portRanges) {
             this.portRanges = portRanges;
@@ -403,10 +429,10 @@ public class DescribeListenerResponseBody extends TeaModel {
          * The network transmission protocol that is used by the listener. Valid values:
          * <p>
          * 
-         * *   **tcp**: TCP
-         * *   **udp**: UDP
-         * *   **http**: HTTP
-         * *   **https**: HTTPS
+         * *   **tcp**: TCP.
+         * *   **udp**: UDP.
+         * *   **http**: HTTP.
+         * *   **https**: HTTPS.
          */
         public Builder protocol(String protocol) {
             this.protocol = protocol;
@@ -417,8 +443,8 @@ public class DescribeListenerResponseBody extends TeaModel {
          * Indicates whether the client IP address preservation feature is enabled. Valid values:
          * <p>
          * 
-         * *   **true**: The client IP address preservation feature is enabled. After client IP addresses are reserved, you can view the source IP addresses of clients over the backend service.
-         * *   **false**: The client IP address preservation feature is disabled.
+         * *   **true** You can view the source IP addresses of clients over the backend service.
+         * *   **false**
          */
         public Builder proxyProtocol(Boolean proxyProtocol) {
             this.proxyProtocol = proxyProtocol;
@@ -442,7 +468,10 @@ public class DescribeListenerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestTimeout.
+         * The timeout period of HTTP or HTTPS requests. Unit: seconds.
+         * <p>
+         * 
+         * >  This parameter is returned only for HTTP and HTTPS listeners. If no responses are received from the backend server within the specified timeout period, GA returns the HTTP 504 error code to the client.
          */
         public Builder requestTimeout(Integer requestTimeout) {
             this.requestTimeout = requestTimeout;
@@ -455,28 +484,28 @@ public class DescribeListenerResponseBody extends TeaModel {
          * 
          * *   **tls_cipher_policy\_1\_0**
          * 
-         *     *   Supported Transport Layer Security (TLS) versions: TLS 1.0, TLS 1.1, and TLS 1.2
-         *     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA
+         *     *   Supported Transport Layer Security (TLS) versions: TLS 1.0, TLS 1.1, and TLS 1.2.
+         *     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA.
          * 
          * *   **tls_cipher_policy\_1\_1**
          * 
-         *     *   Supported TLS versions: TLS 1.1 and TLS 1.2
-         *     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA
+         *     *   Supported TLS versions: TLS 1.1 and TLS 1.2.
+         *     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA.
          * 
          * *   **tls_cipher_policy\_1\_2**
          * 
-         *     *   Supported TLS version: TLS 1.2
-         *     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA
+         *     *   Supported TLS version: TLS 1.2.
+         *     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA.
          * 
          * *   **tls_cipher_policy\_1\_2\_strict**
          * 
-         *     *   Supported TLS version: TLS 1.2
-         *     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA
+         *     *   Supported TLS version: TLS 1.2.
+         *     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA.
          * 
          * *   **tls_cipher_policy\_1\_2\_strict_with\_1\_3**
          * 
-         *     *   Supported TLS versions: TLS 1.2 and TLS 1.3
-         *     *   Supported cipher suites: TLS_AES\_128\_GCM_SHA256, TLS_AES\_256\_GCM_SHA384, TLS_CHACHA20\_POLY1305\_SHA256, TLS_AES\_128\_CCM_SHA256, TLS_AES\_128\_CCM\_8\_SHA256, ECDHE-ECDSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384, ECDHE-ECDSA-AES128-SHA256, ECDHE-ECDSA-AES256-SHA384, ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA, ECDHE-ECDSA-AES256-SHA, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA
+         *     *   Supported TLS versions: TLS 1.2 and TLS 1.3.
+         *     *   Supported cipher suites: TLS_AES\_128\_GCM_SHA256, TLS_AES\_256\_GCM_SHA384, TLS_CHACHA20\_POLY1305\_SHA256, TLS_AES\_128\_CCM_SHA256, TLS_AES\_128\_CCM\_8\_SHA256, ECDHE-ECDSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384, ECDHE-ECDSA-AES128-SHA256, ECDHE-ECDSA-AES256-SHA384, ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA, ECDHE-ECDSA-AES256-SHA, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA.
          * 
          * >  This parameter is returned only for HTTPS listeners.
          */
@@ -486,10 +515,10 @@ public class DescribeListenerResponseBody extends TeaModel {
         }
 
         /**
-         * The service ID to which the managed instance belongs.
+         * The ID of the service that manages the instance.
          * <p>
          * 
-         * >  Valid only when the ServiceManaged parameter is True.
+         * >  This parameter is returned only if the value of **ServiceManaged** is **true**.
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;
@@ -497,11 +526,11 @@ public class DescribeListenerResponseBody extends TeaModel {
         }
 
         /**
-         * Is it a managed instance. Valid values:
+         * Indicates whether the instance is managed. Valid values:
          * <p>
          * 
-         * - true
-         * - false
+         * *   **true**
+         * *   **false**
          */
         public Builder serviceManaged(Boolean serviceManaged) {
             this.serviceManaged = serviceManaged;
@@ -509,7 +538,10 @@ public class DescribeListenerResponseBody extends TeaModel {
         }
 
         /**
-         * A list of action policies that users can execute on this managed instance.
+         * The actions that users can perform on the managed instance.
+         * <p>
+         * >*   This parameter is returned only if the value of **ServiceManaged** is **true**.
+         * >*   Users can perform only specific actions on a managed instance.
          */
         public Builder serviceManagedInfos(java.util.List < ServiceManagedInfos> serviceManagedInfos) {
             this.serviceManagedInfos = serviceManagedInfos;
@@ -517,13 +549,13 @@ public class DescribeListenerResponseBody extends TeaModel {
         }
 
         /**
-         * The state of the listener. Valid values:
+         * The status of the listener. Valid values:
          * <p>
          * 
          * *   **configuring**: The listener is being configured.
          * *   **init**: The listener is being initialized.
          * *   **updating**: The listener is being updated.
-         * *   **deleting**: The listener is being deleted.
+         * *   **deleting:** The listener is being deleted.
          */
         public Builder state(String state) {
             this.state = state;
@@ -534,8 +566,8 @@ public class DescribeListenerResponseBody extends TeaModel {
          * The routing type of the listener. Valid values:
          * <p>
          * 
-         * *   **Standard**: intelligent routing
-         * *   **CustomRouting**: custom routing
+         * *   **Standard**: intelligent routing.
+         * *   **CustomRouting**: custom routing.
          */
         public Builder type(String type) {
             this.type = type;
@@ -557,10 +589,10 @@ public class DescribeListenerResponseBody extends TeaModel {
     } 
 
     public static class BackendPorts extends TeaModel {
-        @NameInMap("FromPort")
+        @com.aliyun.core.annotation.NameInMap("FromPort")
         private String fromPort;
 
-        @NameInMap("ToPort")
+        @com.aliyun.core.annotation.NameInMap("ToPort")
         private String toPort;
 
         private BackendPorts(Builder builder) {
@@ -595,10 +627,10 @@ public class DescribeListenerResponseBody extends TeaModel {
             private String toPort; 
 
             /**
-             * The start port in the range of ports used by the backend server to receive requests.
+             * The first port in the range of ports that are used by the backend server to receive requests.
              * <p>
              * 
-             * This parameter is returned only when you configure an HTTPS listener and the listening port is the same port used by the backend server to provide services.
+             * This parameter is returned only if an HTTPS listener is configured and the listener port is the same as the service port of the backend server.
              */
             public Builder fromPort(String fromPort) {
                 this.fromPort = fromPort;
@@ -606,7 +638,7 @@ public class DescribeListenerResponseBody extends TeaModel {
             }
 
             /**
-             * The end port in the range of ports used by the backend server to receive requests.
+             * The last port in the range of ports that are used by the backend server to receive requests.
              */
             public Builder toPort(String toPort) {
                 this.toPort = toPort;
@@ -621,10 +653,10 @@ public class DescribeListenerResponseBody extends TeaModel {
 
     }
     public static class Certificates extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Certificates(Builder builder) {
@@ -667,10 +699,10 @@ public class DescribeListenerResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the certificate.
+             * The type of the SSL certificate.
              * <p>
              * 
-             * Only **Server** can be returned. This value Server indicates a server certificate.
+             * Only **Server** may be returned, which indicates a server certificate.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -685,10 +717,10 @@ public class DescribeListenerResponseBody extends TeaModel {
 
     }
     public static class PortRanges extends TeaModel {
-        @NameInMap("FromPort")
+        @com.aliyun.core.annotation.NameInMap("FromPort")
         private Integer fromPort;
 
-        @NameInMap("ToPort")
+        @com.aliyun.core.annotation.NameInMap("ToPort")
         private Integer toPort;
 
         private PortRanges(Builder builder) {
@@ -723,7 +755,7 @@ public class DescribeListenerResponseBody extends TeaModel {
             private Integer toPort; 
 
             /**
-             * The start port in the range of listening ports used to receive and forward requests to endpoints.
+             * The first port in the range of listener ports that are used to receive and forward requests to endpoints.
              */
             public Builder fromPort(Integer fromPort) {
                 this.fromPort = fromPort;
@@ -731,7 +763,7 @@ public class DescribeListenerResponseBody extends TeaModel {
             }
 
             /**
-             * The end port in the range of listening ports used to receive and forward requests to endpoints.
+             * The last port in the range of listener ports that are used to receive and forward requests to endpoints.
              */
             public Builder toPort(Integer toPort) {
                 this.toPort = toPort;
@@ -746,10 +778,10 @@ public class DescribeListenerResponseBody extends TeaModel {
 
     }
     public static class RelatedAcls extends TeaModel {
-        @NameInMap("AclId")
+        @com.aliyun.core.annotation.NameInMap("AclId")
         private String aclId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private RelatedAcls(Builder builder) {
@@ -795,8 +827,8 @@ public class DescribeListenerResponseBody extends TeaModel {
              * Indicates whether the access control feature is enabled. Valid values:
              * <p>
              * 
-             * *   **on**: enabled
-             * *   **off**: disabled
+             * *   **on**: enabled.
+             * *   **off**: disabled.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -811,13 +843,13 @@ public class DescribeListenerResponseBody extends TeaModel {
 
     }
     public static class ServiceManagedInfos extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("ChildType")
+        @com.aliyun.core.annotation.NameInMap("ChildType")
         private String childType;
 
-        @NameInMap("IsManaged")
+        @com.aliyun.core.annotation.NameInMap("IsManaged")
         private Boolean isManaged;
 
         private ServiceManagedInfos(Builder builder) {
@@ -861,15 +893,15 @@ public class DescribeListenerResponseBody extends TeaModel {
             private Boolean isManaged; 
 
             /**
-             * Managed policy action name, Valid values:
+             * The name of the action on the managed instance. Valid values:
              * <p>
              * 
-             * - Create
-             * - Update
-             * - Delete
-             * - Associate
-             * - UserUnmanaged
-             * - CreateChild
+             * *   **Create**
+             * *   **Update**
+             * *   **Delete**
+             * *   **Associate**
+             * *   **UserUnmanaged**
+             * *   **CreateChild**
              */
             public Builder action(String action) {
                 this.action = action;
@@ -877,18 +909,18 @@ public class DescribeListenerResponseBody extends TeaModel {
             }
 
             /**
-             * Sub resource type, Valid values:
+             * The type of the child resource. Valid values:
              * <p>
              * 
-             * - Listener
-             * - IpSet
-             * - EndpointGroup
-             * - ForwardingRule
-             * - Endpoint
-             * - EndpointGroupDestination
-             * - EndpointPolicy
+             * *   **Listener**: a listener.
+             * *   **IpSet**: an acceleration region.
+             * *   **EndpointGroup**: an endpoint group.
+             * *   **ForwardingRule**: a forwarding rule.
+             * *   **Endpoint**: an endpoint.
+             * *   **EndpointGroupDestination**: a protocol mapping of an endpoint group associated with a custom routing listener.
+             * *   **EndpointPolicy**: a traffic policy of an endpoint associated with a custom routing listener.
              * 
-             * >Only valid when the Action parameter is CreateChild.
+             * >  This parameter is returned only if the value of **Action** is **CreateChild**.
              */
             public Builder childType(String childType) {
                 this.childType = childType;
@@ -896,10 +928,11 @@ public class DescribeListenerResponseBody extends TeaModel {
             }
 
             /**
-             * Is the managed policy action managed, Valid values:
+             * Indicates whether the specified actions are managed.
              * <p>
-             * - **true**: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.
-             * - **false**: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.
+             * 
+             * *   **true**: The specified actions are managed, and users cannot perform the specified actions on the managed instance.
+             * *   **false**: The specified actions are not managed, and users can perform the specified actions on the managed instance.
              */
             public Builder isManaged(Boolean isManaged) {
                 this.isManaged = isManaged;
@@ -914,19 +947,19 @@ public class DescribeListenerResponseBody extends TeaModel {
 
     }
     public static class XForwardedForConfig extends TeaModel {
-        @NameInMap("XForwardedForGaApEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForGaApEnabled")
         private Boolean xForwardedForGaApEnabled;
 
-        @NameInMap("XForwardedForGaIdEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForGaIdEnabled")
         private Boolean xForwardedForGaIdEnabled;
 
-        @NameInMap("XForwardedForPortEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForPortEnabled")
         private Boolean xForwardedForPortEnabled;
 
-        @NameInMap("XForwardedForProtoEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForProtoEnabled")
         private Boolean xForwardedForProtoEnabled;
 
-        @NameInMap("XRealIpEnabled")
+        @com.aliyun.core.annotation.NameInMap("XRealIpEnabled")
         private Boolean xRealIpEnabled;
 
         private XForwardedForConfig(Builder builder) {
@@ -988,11 +1021,11 @@ public class DescribeListenerResponseBody extends TeaModel {
             private Boolean xRealIpEnabled; 
 
             /**
-             * Indicates whether the `GA-AP` header is used to retrieve the information about acceleration regions. Valid values:
+             * Indicates whether the `GA-AP` header is used to retrieve information about acceleration regions. Valid values:
              * <p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * *   **true**
+             * *   **false**
              * 
              * >  This parameter is returned only for HTTP and HTTPS listeners.
              */
@@ -1005,8 +1038,8 @@ public class DescribeListenerResponseBody extends TeaModel {
              * Indicates whether the `GA-ID` header is used to retrieve the ID of the GA instance. Valid values:
              * <p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * *   **true**
+             * *   **false**
              * 
              * >  This parameter is returned only for HTTP and HTTPS listeners.
              */
@@ -1019,8 +1052,8 @@ public class DescribeListenerResponseBody extends TeaModel {
              * Indicates whether the `GA-X-Forward-Port` header is used to retrieve the listener ports of the GA instance. Valid values:
              * <p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * *   **true**
+             * *   **false**
              * 
              * >  This parameter is returned only for HTTP and HTTPS listeners.
              */
@@ -1033,8 +1066,8 @@ public class DescribeListenerResponseBody extends TeaModel {
              * Indicates whether the `GA-X-Forward-Proto` header is used to retrieve the listener protocol of the GA instance. Valid values:
              * <p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * *   **true**
+             * *   **false**
              * 
              * >  This parameter is returned only for HTTP and HTTPS listeners.
              */

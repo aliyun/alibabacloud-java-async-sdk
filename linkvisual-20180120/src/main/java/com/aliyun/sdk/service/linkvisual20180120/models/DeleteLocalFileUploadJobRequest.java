@@ -62,10 +62,10 @@ public class DeleteLocalFileUploadJobRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteLocalFileUploadJobRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.jobId = response.jobId;
+        private Builder(DeleteLocalFileUploadJobRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.jobId = request.jobId;
         } 
 
         /**

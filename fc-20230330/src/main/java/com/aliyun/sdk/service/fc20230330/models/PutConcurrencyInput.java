@@ -1,19 +1,19 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutConcurrencyInput} extends {@link TeaModel}
  *
  * <p>PutConcurrencyInput</p>
  */
 public class PutConcurrencyInput extends TeaModel {
-    @NameInMap("reservedConcurrency")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("reservedConcurrency")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long reservedConcurrency;
 
     private PutConcurrencyInput(Builder builder) {
@@ -39,7 +39,10 @@ public class PutConcurrencyInput extends TeaModel {
         private Long reservedConcurrency; 
 
         /**
-         * reservedConcurrency.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder reservedConcurrency(Long reservedConcurrency) {
             this.reservedConcurrency = reservedConcurrency;

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DataValue} extends {@link TeaModel}
  *
  * <p>DataValue</p>
  */
 public class DataValue extends TeaModel {
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @NameInMap("AppName")
+    @com.aliyun.core.annotation.NameInMap("AppName")
     private String appName;
 
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
     private DataValue(Builder builder) {
@@ -86,7 +91,10 @@ public class DataValue extends TeaModel {
         private String appId; 
 
         /**
-         * The ID of the user to which the application belongs.
+         * <p>The ID of the user to which the application belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -94,7 +102,10 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * The region where the application resides.
+         * <p>The region where the application resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -102,7 +113,10 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * The microservice namespace where the application resides.
+         * <p>The microservice namespace where the application resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
@@ -110,7 +124,10 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * The application name.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-app-name</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -118,7 +135,10 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * The application ID.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456abcde@12345abcde</p>
          */
         public Builder appId(String appId) {
             this.appId = appId;

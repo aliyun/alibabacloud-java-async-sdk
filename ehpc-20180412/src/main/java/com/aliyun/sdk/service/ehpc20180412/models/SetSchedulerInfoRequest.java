@@ -113,7 +113,7 @@ public class SetSchedulerInfoRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * The ID of the E-HPC cluster.
          * <p>
          * 
          * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
@@ -125,7 +125,7 @@ public class SetSchedulerInfoRequest extends Request {
         }
 
         /**
-         * PbsInfo.
+         * The information about PBS schedulers.
          */
         public Builder pbsInfo(java.util.List < PbsInfo> pbsInfo) {
             this.putQueryParameter("PbsInfo", pbsInfo);
@@ -134,7 +134,7 @@ public class SetSchedulerInfoRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID.
          * <p>
          * 
          * You can call the [ListRegions](~~188593~~) operation to obtain the IDs of regions supported by Elastic High Performance Computing (E-HPC).
@@ -146,7 +146,7 @@ public class SetSchedulerInfoRequest extends Request {
         }
 
         /**
-         * Scheduler.
+         * The scheduler information.
          */
         public Builder scheduler(java.util.List < Scheduler> scheduler) {
             this.putQueryParameter("Scheduler", scheduler);
@@ -155,7 +155,7 @@ public class SetSchedulerInfoRequest extends Request {
         }
 
         /**
-         * SlurmInfo.
+         * The information about Slurm schedulers.
          */
         public Builder slurmInfo(java.util.List < SlurmInfo> slurmInfo) {
             this.putQueryParameter("SlurmInfo", slurmInfo);
@@ -477,7 +477,7 @@ public class SetSchedulerInfoRequest extends Request {
             private Integer schedMaxQueuedJobs; 
 
             /**
-             * AclLimit.
+             * The information about limits on the queue.
              */
             public Builder aclLimit(java.util.List < AclLimit> aclLimit) {
                 this.aclLimit = aclLimit;
@@ -485,12 +485,10 @@ public class SetSchedulerInfoRequest extends Request {
             }
 
             /**
-             * The retention period of jobs. After the retention period is exceeded, job data is deleted. Unit: days.
+             * The retention period of jobs. After the retention period is exceeded, job data is deleted. Unit: days.\
              * <p>
-             * 
-             * Valid values: 1 to 30
-             * 
-             * Default value: 14
+             * Valid values: 1 to 30.\
+             * Default value: 14.
              */
             public Builder jobHistoryDuration(Integer jobHistoryDuration) {
                 this.jobHistoryDuration = jobHistoryDuration;
@@ -498,7 +496,7 @@ public class SetSchedulerInfoRequest extends Request {
             }
 
             /**
-             * ResourceLimit.
+             * The information about the nodes that are used by cluster users.
              */
             public Builder resourceLimit(java.util.List < ResourceLimit> resourceLimit) {
                 this.resourceLimit = resourceLimit;
@@ -513,7 +511,7 @@ public class SetSchedulerInfoRequest extends Request {
              * 
              * A scheduling period is the interval between two consecutive running jobs. If you set SchedInterval to 60, another job can be run 60 seconds after a job starts running.
              * 
-             * Default value: 60
+             * Default value: 60.
              */
             public Builder schedInterval(Integer schedInterval) {
                 this.schedInterval = schedInterval;
@@ -580,7 +578,7 @@ public class SetSchedulerInfoRequest extends Request {
              * *   slurm19
              * *   slurm20
              * 
-             * >  If you set Scheduler.N.SchedName to pbs or pbs19, you must specify at least one of the PbsInfo.N.SchedInterval, PbsInfo.N.JobHistoryDuration, and PbsInfo.N.AclLimit parameters. If you set Scheduler.N.SchedName to slurm, slurm19, or slurm20, you must specify at least one of the SlurmInfo.N.SchedInterval and SlurmInfo.N.BackfillInterval parameters.
+             * >  If you set Scheduler.N.SchedName to pbs or pbs19, you must specify at least one of the PbsInfo.N.SchedInterval, PbsInfo.N.JobHistoryDuration, PbsInfo.N.ResourceLimit, and PbsInfo.N.AclLimit parameters. If you set Scheduler.N.SchedName to slurm, slurm19, or slurm20, you must specify at least one of the SlurmInfo.N.SchedInterval and SlurmInfo.N.BackfillInterval parameters.
              */
             public Builder schedName(String schedName) {
                 this.schedName = schedName;
@@ -636,7 +634,7 @@ public class SetSchedulerInfoRequest extends Request {
              * The backfill scheduling period. Unit: seconds.
              * <p>
              * 
-             * Default value: 60
+             * Default value: 60.
              */
             public Builder backfillInterval(Integer backfillInterval) {
                 this.backfillInterval = backfillInterval;
@@ -649,7 +647,7 @@ public class SetSchedulerInfoRequest extends Request {
              * 
              * SchedInterval specifies the scheduling period. Unit: seconds.
              * 
-             * Default value: 60
+             * Default value: 60.
              */
             public Builder schedInterval(Integer schedInterval) {
                 this.schedInterval = schedInterval;

@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetClusterCheckResponseBody} extends {@link TeaModel}
  *
  * <p>GetClusterCheckResponseBody</p>
  */
 public class GetClusterCheckResponseBody extends TeaModel {
-    @NameInMap("check_id")
+    @com.aliyun.core.annotation.NameInMap("check_id")
     private String checkId;
 
-    @NameInMap("check_items")
-    private java.util.Map < String, java.util.List<java.util.Map<String, ?>>> checkItems;
+    @com.aliyun.core.annotation.NameInMap("check_items")
+    private java.util.Map<String, java.util.List<java.util.Map<String, ?>>> checkItems;
 
-    @NameInMap("created_at")
+    @com.aliyun.core.annotation.NameInMap("created_at")
     private String createdAt;
 
-    @NameInMap("finished_at")
+    @com.aliyun.core.annotation.NameInMap("finished_at")
     private String finishedAt;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("status")
+    @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
-    @NameInMap("type")
+    @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
     private GetClusterCheckResponseBody(Builder builder) {
@@ -61,7 +66,7 @@ public class GetClusterCheckResponseBody extends TeaModel {
     /**
      * @return checkItems
      */
-    public java.util.Map < String, java.util.List<java.util.Map<String, ?>>> getCheckItems() {
+    public java.util.Map<String, java.util.List<java.util.Map<String, ?>>> getCheckItems() {
         return this.checkItems;
     }
 
@@ -102,7 +107,7 @@ public class GetClusterCheckResponseBody extends TeaModel {
 
     public static final class Builder {
         private String checkId; 
-        private java.util.Map < String, java.util.List<java.util.Map<String, ?>>> checkItems; 
+        private java.util.Map<String, java.util.List<java.util.Map<String, ?>>> checkItems; 
         private String createdAt; 
         private String finishedAt; 
         private String message; 
@@ -110,7 +115,10 @@ public class GetClusterCheckResponseBody extends TeaModel {
         private String type; 
 
         /**
-         * Id of the request
+         * <p>The ID of the cluster check task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1697100584236600453-ce0da5a1d627e4e9e9f96cae8ad07****-clustercheck-lboto</p>
          */
         public Builder checkId(String checkId) {
             this.checkId = checkId;
@@ -118,15 +126,18 @@ public class GetClusterCheckResponseBody extends TeaModel {
         }
 
         /**
-         * check_items.
+         * <p>The list of check items.</p>
          */
-        public Builder checkItems(java.util.Map < String, java.util.List<java.util.Map<String, ?>>> checkItems) {
+        public Builder checkItems(java.util.Map<String, java.util.List<java.util.Map<String, ?>>> checkItems) {
             this.checkItems = checkItems;
             return this;
         }
 
         /**
-         * created_at.
+         * <p>The time when the cluster check task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-10-16T08:31:20.292030178Z</p>
          */
         public Builder createdAt(String createdAt) {
             this.createdAt = createdAt;
@@ -134,7 +145,10 @@ public class GetClusterCheckResponseBody extends TeaModel {
         }
 
         /**
-         * finished_at.
+         * <p>The time when the cluster check task was completed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-10-16T08:35:20.292030178Z</p>
          */
         public Builder finishedAt(String finishedAt) {
             this.finishedAt = finishedAt;
@@ -142,7 +156,10 @@ public class GetClusterCheckResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The message that indicates the status of the cluster check task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task succeed</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -150,7 +167,10 @@ public class GetClusterCheckResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The status of the cluster check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Succeeded</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -158,7 +178,10 @@ public class GetClusterCheckResponseBody extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The check method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ClusterUpgrade</p>
          */
         public Builder type(String type) {
             this.type = type;

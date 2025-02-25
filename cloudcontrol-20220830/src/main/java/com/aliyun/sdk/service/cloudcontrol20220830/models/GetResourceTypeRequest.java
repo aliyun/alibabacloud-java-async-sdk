@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudcontrol20220830.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetResourceTypeRequest</p>
  */
 public class GetResourceTypeRequest extends Request {
-    @Path
-    @NameInMap("requestPath")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("requestPath")
     private String requestPath;
 
-    @Header
-    @NameInMap("x-acs-accept-language")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-accept-language")
     private String xAcsAcceptLanguage;
 
     private GetResourceTypeRequest(Builder builder) {

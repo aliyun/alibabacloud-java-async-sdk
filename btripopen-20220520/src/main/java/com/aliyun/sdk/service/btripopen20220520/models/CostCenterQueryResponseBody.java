@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CostCenterQueryResponseBody} extends {@link TeaModel}
  *
  * <p>CostCenterQueryResponseBody</p>
  */
 public class CostCenterQueryResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
-    private java.util.List < Module> module;
+    @com.aliyun.core.annotation.NameInMap("module")
+    private java.util.List<Module> module;
 
-    @NameInMap("more_page")
+    @com.aliyun.core.annotation.NameInMap("more_page")
     private Boolean morePage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private CostCenterQueryResponseBody(Builder builder) {
@@ -68,7 +73,7 @@ public class CostCenterQueryResponseBody extends TeaModel {
     /**
      * @return module
      */
-    public java.util.List < Module> getModule() {
+    public java.util.List<Module> getModule() {
         return this.module;
     }
 
@@ -103,7 +108,7 @@ public class CostCenterQueryResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private String message; 
-        private java.util.List < Module> module; 
+        private java.util.List<Module> module; 
         private Boolean morePage; 
         private String requestId; 
         private Boolean success; 
@@ -128,7 +133,7 @@ public class CostCenterQueryResponseBody extends TeaModel {
         /**
          * module.
          */
-        public Builder module(java.util.List < Module> module) {
+        public Builder module(java.util.List<Module> module) {
             this.module = module;
             return this;
         }
@@ -158,7 +163,10 @@ public class CostCenterQueryResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21041ce316577904808056433edbb2</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -171,20 +179,26 @@ public class CostCenterQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CostCenterQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CostCenterQueryResponseBody</p>
+     */
     public static class EntityDOS extends TeaModel {
-        @NameInMap("corp_id")
+        @com.aliyun.core.annotation.NameInMap("corp_id")
         private String corpId;
 
-        @NameInMap("entity_id")
+        @com.aliyun.core.annotation.NameInMap("entity_id")
         private String entityId;
 
-        @NameInMap("entity_type")
+        @com.aliyun.core.annotation.NameInMap("entity_type")
         private String entityType;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("user_num")
+        @com.aliyun.core.annotation.NameInMap("user_num")
         private Integer userNum;
 
         private EntityDOS(Builder builder) {
@@ -292,35 +306,41 @@ public class CostCenterQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CostCenterQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CostCenterQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
-        @NameInMap("alipay_no")
+        @com.aliyun.core.annotation.NameInMap("alipay_no")
         private String alipayNo;
 
-        @NameInMap("corp_id")
+        @com.aliyun.core.annotation.NameInMap("corp_id")
         private String corpId;
 
-        @NameInMap("disable")
+        @com.aliyun.core.annotation.NameInMap("disable")
         private Long disable;
 
-        @NameInMap("entity_d_o_s")
-        private java.util.List < EntityDOS> entityDOS;
+        @com.aliyun.core.annotation.NameInMap("entity_d_o_s")
+        private java.util.List<EntityDOS> entityDOS;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("number")
+        @com.aliyun.core.annotation.NameInMap("number")
         private String number;
 
-        @NameInMap("rule_code")
+        @com.aliyun.core.annotation.NameInMap("rule_code")
         private Long ruleCode;
 
-        @NameInMap("scope")
+        @com.aliyun.core.annotation.NameInMap("scope")
         private Long scope;
 
-        @NameInMap("thirdpart_id")
+        @com.aliyun.core.annotation.NameInMap("thirdpart_id")
         private String thirdpartId;
 
-        @NameInMap("title")
+        @com.aliyun.core.annotation.NameInMap("title")
         private String title;
 
         private Module(Builder builder) {
@@ -368,7 +388,7 @@ public class CostCenterQueryResponseBody extends TeaModel {
         /**
          * @return entityDOS
          */
-        public java.util.List < EntityDOS> getEntityDOS() {
+        public java.util.List<EntityDOS> getEntityDOS() {
             return this.entityDOS;
         }
 
@@ -418,7 +438,7 @@ public class CostCenterQueryResponseBody extends TeaModel {
             private String alipayNo; 
             private String corpId; 
             private Long disable; 
-            private java.util.List < EntityDOS> entityDOS; 
+            private java.util.List<EntityDOS> entityDOS; 
             private Long id; 
             private String number; 
             private Long ruleCode; 
@@ -453,7 +473,7 @@ public class CostCenterQueryResponseBody extends TeaModel {
             /**
              * entity_d_o_s.
              */
-            public Builder entityDOS(java.util.List < EntityDOS> entityDOS) {
+            public Builder entityDOS(java.util.List<EntityDOS> entityDOS) {
                 this.entityDOS = entityDOS;
                 return this;
             }
@@ -475,7 +495,10 @@ public class CostCenterQueryResponseBody extends TeaModel {
             }
 
             /**
-             * rule code
+             * <p>rule code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500578154</p>
              */
             public Builder ruleCode(Long ruleCode) {
                 this.ruleCode = ruleCode;

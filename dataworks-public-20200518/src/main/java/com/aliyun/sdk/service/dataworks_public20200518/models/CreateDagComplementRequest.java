@@ -1,71 +1,75 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDagComplementRequest} extends {@link RequestModel}
  *
  * <p>CreateDagComplementRequest</p>
  */
 public class CreateDagComplementRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("BizBeginTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizBeginTime")
     private String bizBeginTime;
 
-    @Body
-    @NameInMap("BizEndTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizEndTime")
     private String bizEndTime;
 
-    @Body
-    @NameInMap("EndBizDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndBizDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endBizDate;
 
-    @Body
-    @NameInMap("ExcludeNodeIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExcludeNodeIds")
     private String excludeNodeIds;
 
-    @Body
-    @NameInMap("IncludeNodeIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IncludeNodeIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String includeNodeIds;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("NodeParams")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeParams")
     private String nodeParams;
 
-    @Body
-    @NameInMap("Parallelism")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Parallelism")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean parallelism;
 
-    @Body
-    @NameInMap("ProjectEnv")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectEnv")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectEnv;
 
-    @Body
-    @NameInMap("RootNodeId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RootNodeId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long rootNodeId;
 
-    @Body
-    @NameInMap("StartBizDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StartBizDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startBizDate;
 
     private CreateDagComplementRequest(Builder builder) {
@@ -216,7 +220,10 @@ public class CreateDagComplementRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -243,7 +250,10 @@ public class CreateDagComplementRequest extends Request {
         }
 
         /**
-         * EndBizDate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-05-21 00:00:00</p>
          */
         public Builder endBizDate(String endBizDate) {
             this.putBodyParameter("EndBizDate", endBizDate);
@@ -261,7 +271,10 @@ public class CreateDagComplementRequest extends Request {
         }
 
         /**
-         * IncludeNodeIds.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>74324,74325</p>
          */
         public Builder includeNodeIds(String includeNodeIds) {
             this.putBodyParameter("IncludeNodeIds", includeNodeIds);
@@ -270,7 +283,10 @@ public class CreateDagComplementRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xm_test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -288,7 +304,10 @@ public class CreateDagComplementRequest extends Request {
         }
 
         /**
-         * Parallelism.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder parallelism(Boolean parallelism) {
             this.putBodyParameter("Parallelism", parallelism);
@@ -297,7 +316,10 @@ public class CreateDagComplementRequest extends Request {
         }
 
         /**
-         * ProjectEnv.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
@@ -306,7 +328,10 @@ public class CreateDagComplementRequest extends Request {
         }
 
         /**
-         * RootNodeId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder rootNodeId(Long rootNodeId) {
             this.putBodyParameter("RootNodeId", rootNodeId);
@@ -315,7 +340,10 @@ public class CreateDagComplementRequest extends Request {
         }
 
         /**
-         * StartBizDate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-05-20 00:00:00</p>
          */
         public Builder startBizDate(String startBizDate) {
             this.putBodyParameter("StartBizDate", startBizDate);

@@ -77,11 +77,11 @@ public class RemoveFaceUserFromUserGroupRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveFaceUserFromUserGroupRequest response) {
-            super(response);
-            this.isolationId = response.isolationId;
-            this.userGroupId = response.userGroupId;
-            this.userId = response.userId;
+        private Builder(RemoveFaceUserFromUserGroupRequest request) {
+            super(request);
+            this.isolationId = request.isolationId;
+            this.userGroupId = request.userGroupId;
+            this.userId = request.userId;
         } 
 
         /**

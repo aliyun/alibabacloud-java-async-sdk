@@ -1,77 +1,98 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddressGetRequest} extends {@link RequestModel}
  *
  * <p>AddressGetRequest</p>
  */
 public class AddressGetRequest extends Request {
-    @Query
-    @NameInMap("action_type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("action_type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer actionType;
 
-    @Query
-    @NameInMap("arr_city_code")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("arr_city_code")
     private String arrCityCode;
 
-    @Query
-    @NameInMap("arr_city_name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("arr_city_name")
     private String arrCityName;
 
-    @Query
-    @NameInMap("car_scenes_code")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("car_scenes_code")
     private String carScenesCode;
 
-    @Query
-    @NameInMap("dep_city_code")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dep_city_code")
     private String depCityCode;
 
-    @Query
-    @NameInMap("dep_city_name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dep_city_name")
     private String depCityName;
 
-    @Query
-    @NameInMap("dep_date")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dep_date")
     private String depDate;
 
-    @Query
-    @NameInMap("itinerary_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("itinerary_id")
     private String itineraryId;
 
-    @Query
-    @NameInMap("order_Id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("middle_page")
+    private Integer middlePage;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("order_Id")
     private String orderId;
 
-    @Query
-    @NameInMap("phone")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("phone")
     private String phone;
 
-    @Query
-    @NameInMap("sub_corp_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("sub_corp_id")
     private String subCorpId;
 
-    @Query
-    @NameInMap("taobao_callback_url")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("taobao_callback_url")
     private String taobaoCallbackUrl;
 
-    @Query
-    @NameInMap("type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("thirdpart_apply_id")
+    private String thirdpartApplyId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("traveler_id")
+    private String travelerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("type")
     private Integer type;
 
-    @Query
-    @NameInMap("user_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("use_booking_proxy")
+    private Integer useBookingProxy;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("user_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
-    @Header
-    @NameInMap("x-acs-btrip-so-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-so-corp-token")
     private String xAcsBtripSoCorpToken;
 
     private AddressGetRequest(Builder builder) {
@@ -84,11 +105,15 @@ public class AddressGetRequest extends Request {
         this.depCityName = builder.depCityName;
         this.depDate = builder.depDate;
         this.itineraryId = builder.itineraryId;
+        this.middlePage = builder.middlePage;
         this.orderId = builder.orderId;
         this.phone = builder.phone;
         this.subCorpId = builder.subCorpId;
         this.taobaoCallbackUrl = builder.taobaoCallbackUrl;
+        this.thirdpartApplyId = builder.thirdpartApplyId;
+        this.travelerId = builder.travelerId;
         this.type = builder.type;
+        this.useBookingProxy = builder.useBookingProxy;
         this.userId = builder.userId;
         this.xAcsBtripSoCorpToken = builder.xAcsBtripSoCorpToken;
     }
@@ -163,6 +188,13 @@ public class AddressGetRequest extends Request {
     }
 
     /**
+     * @return middlePage
+     */
+    public Integer getMiddlePage() {
+        return this.middlePage;
+    }
+
+    /**
      * @return orderId
      */
     public String getOrderId() {
@@ -191,10 +223,31 @@ public class AddressGetRequest extends Request {
     }
 
     /**
+     * @return thirdpartApplyId
+     */
+    public String getThirdpartApplyId() {
+        return this.thirdpartApplyId;
+    }
+
+    /**
+     * @return travelerId
+     */
+    public String getTravelerId() {
+        return this.travelerId;
+    }
+
+    /**
      * @return type
      */
     public Integer getType() {
         return this.type;
+    }
+
+    /**
+     * @return useBookingProxy
+     */
+    public Integer getUseBookingProxy() {
+        return this.useBookingProxy;
     }
 
     /**
@@ -220,11 +273,15 @@ public class AddressGetRequest extends Request {
         private String depCityName; 
         private String depDate; 
         private String itineraryId; 
+        private Integer middlePage; 
         private String orderId; 
         private String phone; 
         private String subCorpId; 
         private String taobaoCallbackUrl; 
+        private String thirdpartApplyId; 
+        private String travelerId; 
         private Integer type; 
+        private Integer useBookingProxy; 
         private String userId; 
         private String xAcsBtripSoCorpToken; 
 
@@ -242,17 +299,24 @@ public class AddressGetRequest extends Request {
             this.depCityName = request.depCityName;
             this.depDate = request.depDate;
             this.itineraryId = request.itineraryId;
+            this.middlePage = request.middlePage;
             this.orderId = request.orderId;
             this.phone = request.phone;
             this.subCorpId = request.subCorpId;
             this.taobaoCallbackUrl = request.taobaoCallbackUrl;
+            this.thirdpartApplyId = request.thirdpartApplyId;
+            this.travelerId = request.travelerId;
             this.type = request.type;
+            this.useBookingProxy = request.useBookingProxy;
             this.userId = request.userId;
             this.xAcsBtripSoCorpToken = request.xAcsBtripSoCorpToken;
         } 
 
         /**
-         * action_type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder actionType(Integer actionType) {
             this.putQueryParameter("action_type", actionType);
@@ -324,6 +388,15 @@ public class AddressGetRequest extends Request {
         }
 
         /**
+         * middle_page.
+         */
+        public Builder middlePage(Integer middlePage) {
+            this.putQueryParameter("middle_page", middlePage);
+            this.middlePage = middlePage;
+            return this;
+        }
+
+        /**
          * order_Id.
          */
         public Builder orderId(String orderId) {
@@ -360,6 +433,24 @@ public class AddressGetRequest extends Request {
         }
 
         /**
+         * thirdpart_apply_id.
+         */
+        public Builder thirdpartApplyId(String thirdpartApplyId) {
+            this.putQueryParameter("thirdpart_apply_id", thirdpartApplyId);
+            this.thirdpartApplyId = thirdpartApplyId;
+            return this;
+        }
+
+        /**
+         * traveler_id.
+         */
+        public Builder travelerId(String travelerId) {
+            this.putQueryParameter("traveler_id", travelerId);
+            this.travelerId = travelerId;
+            return this;
+        }
+
+        /**
          * type.
          */
         public Builder type(Integer type) {
@@ -369,7 +460,16 @@ public class AddressGetRequest extends Request {
         }
 
         /**
-         * user_id.
+         * use_booking_proxy.
+         */
+        public Builder useBookingProxy(Integer useBookingProxy) {
+            this.putQueryParameter("use_booking_proxy", useBookingProxy);
+            this.useBookingProxy = useBookingProxy;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("user_id", userId);

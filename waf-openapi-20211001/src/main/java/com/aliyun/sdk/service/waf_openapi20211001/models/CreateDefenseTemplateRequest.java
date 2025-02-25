@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDefenseTemplateRequest} extends {@link RequestModel}
  *
  * <p>CreateDefenseTemplateRequest</p>
  */
 public class CreateDefenseTemplateRequest extends Request {
-    @Query
-    @NameInMap("DefenseScene")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefenseScene")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String defenseScene;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceManagerResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceManagerResourceGroupId")
     private String resourceManagerResourceGroupId;
 
-    @Query
-    @NameInMap("TemplateName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateName;
 
-    @Query
-    @NameInMap("TemplateOrigin")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateOrigin")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateOrigin;
 
-    @Query
-    @NameInMap("TemplateStatus")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateStatus")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer templateStatus;
 
-    @Query
-    @NameInMap("TemplateType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateType;
 
     private CreateDefenseTemplateRequest(Builder builder) {
@@ -172,7 +177,11 @@ public class CreateDefenseTemplateRequest extends Request {
         } 
 
         /**
-         * The scenario in which you want to use the protection rule template. For more information, see the description of the **DefenseScene** parameter in the [CreateDefenseRule](~~CreateDefenseRule~~) topic.
+         * <p>The scenario in which you want to use the protection rule template. For more information, see the description of the <strong>DefenseScene</strong> parameter in the <a href="~~CreateDefenseRule~~">CreateDefenseRule</a> topic.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf_group</p>
          */
         public Builder defenseScene(String defenseScene) {
             this.putQueryParameter("DefenseScene", defenseScene);
@@ -181,7 +190,10 @@ public class CreateDefenseTemplateRequest extends Request {
         }
 
         /**
-         * The description of the protection rule template.
+         * <p>The description of the protection rule template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -190,10 +202,14 @@ public class CreateDefenseTemplateRequest extends Request {
         }
 
         /**
-         * The ID of the Web Application Firewall (WAF) instance.
-         * <p>
+         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
+         * <strong>example:</strong>
+         * <p>waf_cdnsdf3****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -202,11 +218,14 @@ public class CreateDefenseTemplateRequest extends Request {
         }
 
         /**
-         * The region where the WAF instance resides. Valid values:
-         * <p>
+         * <p>The region where the WAF instance resides. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
+         * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+         * </ul>
          * 
-         * *   **cn-hangzhou:** the Chinese mainland.
-         * *   **ap-southeast-1:** outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -215,7 +234,10 @@ public class CreateDefenseTemplateRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud resource group.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -224,7 +246,11 @@ public class CreateDefenseTemplateRequest extends Request {
         }
 
         /**
-         * The name of the protection rule template.
+         * <p>The name of the protection rule template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test221</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -233,7 +259,11 @@ public class CreateDefenseTemplateRequest extends Request {
         }
 
         /**
-         * The origin of the protection rule template that you want to create. Set the value to **custom**. The value specifies that the protection rule template is a custom template.
+         * <p>The origin of the protection rule template that you want to create. Set the value to <strong>custom</strong>. The value specifies that the protection rule template is a custom template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         public Builder templateOrigin(String templateOrigin) {
             this.putQueryParameter("TemplateOrigin", templateOrigin);
@@ -242,11 +272,15 @@ public class CreateDefenseTemplateRequest extends Request {
         }
 
         /**
-         * The status of the protection rule template. Valid values:
-         * <p>
+         * <p>The status of the protection rule template. Valid values:</p>
+         * <ul>
+         * <li><strong>0:</strong> disabled.</li>
+         * <li><strong>1:</strong> enabled.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **0:** disabled.
-         * *   **1:** enabled.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder templateStatus(Integer templateStatus) {
             this.putQueryParameter("TemplateStatus", templateStatus);
@@ -255,11 +289,15 @@ public class CreateDefenseTemplateRequest extends Request {
         }
 
         /**
-         * The type of the protection rule template. Valid values:
-         * <p>
+         * <p>The type of the protection rule template. Valid values:</p>
+         * <ul>
+         * <li><strong>user_default:</strong> default template.</li>
+         * <li><strong>user_custom:</strong> custom template.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **user_default:** default template.
-         * *   **user_custom:** custom template.
+         * <strong>example:</strong>
+         * <p>user_default</p>
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);

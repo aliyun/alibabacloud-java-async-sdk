@@ -1,30 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImageConfig} extends {@link TeaModel}
  *
  * <p>ImageConfig</p>
  */
 public class ImageConfig extends TeaModel {
-    @NameInMap("accelerationType")
+    @com.aliyun.core.annotation.NameInMap("accelerationType")
     private String accelerationType;
 
-    @NameInMap("image")
+    @com.aliyun.core.annotation.NameInMap("image")
     private String image;
 
-    @NameInMap("instanceID")
+    @com.aliyun.core.annotation.NameInMap("instanceID")
     private String instanceID;
+
+    @com.aliyun.core.annotation.NameInMap("registryConfig")
+    private RegistryConfig registryConfig;
 
     private ImageConfig(Builder builder) {
         this.accelerationType = builder.accelerationType;
         this.image = builder.image;
         this.instanceID = builder.instanceID;
+        this.registryConfig = builder.registryConfig;
     }
 
     public static Builder builder() {
@@ -56,10 +65,18 @@ public class ImageConfig extends TeaModel {
         return this.instanceID;
     }
 
+    /**
+     * @return registryConfig
+     */
+    public RegistryConfig getRegistryConfig() {
+        return this.registryConfig;
+    }
+
     public static final class Builder {
         private String accelerationType; 
         private String image; 
         private String instanceID; 
+        private RegistryConfig registryConfig; 
 
         /**
          * accelerationType.
@@ -82,6 +99,14 @@ public class ImageConfig extends TeaModel {
          */
         public Builder instanceID(String instanceID) {
             this.instanceID = instanceID;
+            return this;
+        }
+
+        /**
+         * registryConfig.
+         */
+        public Builder registryConfig(RegistryConfig registryConfig) {
+            this.registryConfig = registryConfig;
             return this;
         }
 

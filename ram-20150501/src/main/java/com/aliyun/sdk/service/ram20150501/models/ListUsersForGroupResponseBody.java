@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUsersForGroupResponseBody} extends {@link TeaModel}
  *
  * <p>ListUsersForGroupResponseBody</p>
  */
 public class ListUsersForGroupResponseBody extends TeaModel {
-    @NameInMap("IsTruncated")
+    @com.aliyun.core.annotation.NameInMap("IsTruncated")
     private Boolean isTruncated;
 
-    @NameInMap("Marker")
+    @com.aliyun.core.annotation.NameInMap("Marker")
     private String marker;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Users")
+    @com.aliyun.core.annotation.NameInMap("Users")
     private Users users;
 
     private ListUsersForGroupResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         private Users users; 
 
         /**
-         * IsTruncated.
+         * <p>Indicates whether the response is truncated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -82,7 +90,10 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Marker.
+         * <p>The marker. This parameter is returned only if the value of <code>IsTruncated</code> is <code>true</code>. If the value of IsTruncated is <code>true</code>, you can call this operation again and set <code>marker</code> to obtain the truncated part.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EXAMPLE</p>
          */
         public Builder marker(String marker) {
             this.marker = marker;
@@ -90,7 +101,10 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4B450CA1-36E8-4AA2-8461-86B42BF4CC4E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +112,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Users.
+         * <p>The list of the RAM users.</p>
          */
         public Builder users(Users users) {
             this.users = users;
@@ -111,14 +125,20 @@ public class ListUsersForGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUsersForGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUsersForGroupResponseBody</p>
+     */
     public static class User extends TeaModel {
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("JoinDate")
+        @com.aliyun.core.annotation.NameInMap("JoinDate")
         private String joinDate;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private User(Builder builder) {
@@ -162,7 +182,10 @@ public class ListUsersForGroupResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * DisplayName.
+             * <p>The display name of the RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alice</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -170,7 +193,10 @@ public class ListUsersForGroupResponseBody extends TeaModel {
             }
 
             /**
-             * JoinDate.
+             * <p>The time when the RAM user joined the RAM user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-01-23T12:33:18Z</p>
              */
             public Builder joinDate(String joinDate) {
                 this.joinDate = joinDate;
@@ -178,7 +204,10 @@ public class ListUsersForGroupResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The name of the RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhangqiang</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -192,9 +221,15 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUsersForGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUsersForGroupResponseBody</p>
+     */
     public static class Users extends TeaModel {
-        @NameInMap("User")
-        private java.util.List < User> user;
+        @com.aliyun.core.annotation.NameInMap("User")
+        private java.util.List<User> user;
 
         private Users(Builder builder) {
             this.user = builder.user;
@@ -211,17 +246,17 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         /**
          * @return user
          */
-        public java.util.List < User> getUser() {
+        public java.util.List<User> getUser() {
             return this.user;
         }
 
         public static final class Builder {
-            private java.util.List < User> user; 
+            private java.util.List<User> user; 
 
             /**
              * User.
              */
-            public Builder user(java.util.List < User> user) {
+            public Builder user(java.util.List<User> user) {
                 this.user = user;
                 return this;
             }

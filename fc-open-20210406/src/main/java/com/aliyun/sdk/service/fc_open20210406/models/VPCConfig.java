@@ -74,7 +74,7 @@ public class VPCConfig extends TeaModel {
         private String vpcId; 
 
         /**
-         * Role
+         * role.
          */
         public Builder role(String role) {
             this.role = role;
@@ -82,7 +82,7 @@ public class VPCConfig extends TeaModel {
         }
 
         /**
-         * 安全组ID
+         * securityGroupId.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
@@ -90,7 +90,7 @@ public class VPCConfig extends TeaModel {
         }
 
         /**
-         * VSwitch ID列表
+         * vSwitchIds.
          */
         public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
             this.vSwitchIds = vSwitchIds;
@@ -98,7 +98,7 @@ public class VPCConfig extends TeaModel {
         }
 
         /**
-         * VPC ID
+         * vpcId.
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;

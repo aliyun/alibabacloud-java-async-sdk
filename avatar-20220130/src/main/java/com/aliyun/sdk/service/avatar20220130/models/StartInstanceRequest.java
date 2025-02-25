@@ -33,6 +33,10 @@ public class StartInstanceRequest extends Request {
     private Long tenantId;
 
     @Query
+    @NameInMap("TextRequest")
+    private TextRequest textRequest;
+
+    @Query
     @NameInMap("User")
     private User user;
 
@@ -43,6 +47,7 @@ public class StartInstanceRequest extends Request {
         this.channel = builder.channel;
         this.commandRequest = builder.commandRequest;
         this.tenantId = builder.tenantId;
+        this.textRequest = builder.textRequest;
         this.user = builder.user;
     }
 
@@ -95,6 +100,13 @@ public class StartInstanceRequest extends Request {
     }
 
     /**
+     * @return textRequest
+     */
+    public TextRequest getTextRequest() {
+        return this.textRequest;
+    }
+
+    /**
      * @return user
      */
     public User getUser() {
@@ -107,6 +119,7 @@ public class StartInstanceRequest extends Request {
         private Channel channel; 
         private CommandRequest commandRequest; 
         private Long tenantId; 
+        private TextRequest textRequest; 
         private User user; 
 
         private Builder() {
@@ -120,6 +133,7 @@ public class StartInstanceRequest extends Request {
             this.channel = request.channel;
             this.commandRequest = request.commandRequest;
             this.tenantId = request.tenantId;
+            this.textRequest = request.textRequest;
             this.user = request.user;
         } 
 
@@ -168,6 +182,16 @@ public class StartInstanceRequest extends Request {
         public Builder tenantId(Long tenantId) {
             this.putQueryParameter("TenantId", tenantId);
             this.tenantId = tenantId;
+            return this;
+        }
+
+        /**
+         * TextRequest.
+         */
+        public Builder textRequest(TextRequest textRequest) {
+            String textRequestShrink = shrink(textRequest, "TextRequest", "json");
+            this.putQueryParameter("TextRequest", textRequestShrink);
+            this.textRequest = textRequest;
             return this;
         }
 
@@ -294,8 +318,16 @@ public class StartInstanceRequest extends Request {
         @NameInMap("AlphaSwitch")
         private Boolean alphaSwitch;
 
+        @NameInMap("BackGroundImageUrl")
+        private String backGroundImageUrl;
+
+        @NameInMap("Locate")
+        private Integer locate;
+
         private CommandRequest(Builder builder) {
             this.alphaSwitch = builder.alphaSwitch;
+            this.backGroundImageUrl = builder.backGroundImageUrl;
+            this.locate = builder.locate;
         }
 
         public static Builder builder() {
@@ -313,8 +345,24 @@ public class StartInstanceRequest extends Request {
             return this.alphaSwitch;
         }
 
+        /**
+         * @return backGroundImageUrl
+         */
+        public String getBackGroundImageUrl() {
+            return this.backGroundImageUrl;
+        }
+
+        /**
+         * @return locate
+         */
+        public Integer getLocate() {
+            return this.locate;
+        }
+
         public static final class Builder {
             private Boolean alphaSwitch; 
+            private String backGroundImageUrl; 
+            private Integer locate; 
 
             /**
              * AlphaSwitch.
@@ -324,8 +372,125 @@ public class StartInstanceRequest extends Request {
                 return this;
             }
 
+            /**
+             * BackGroundImageUrl.
+             */
+            public Builder backGroundImageUrl(String backGroundImageUrl) {
+                this.backGroundImageUrl = backGroundImageUrl;
+                return this;
+            }
+
+            /**
+             * Locate.
+             */
+            public Builder locate(Integer locate) {
+                this.locate = locate;
+                return this;
+            }
+
             public CommandRequest build() {
                 return new CommandRequest(this);
+            } 
+
+        } 
+
+    }
+    public static class TextRequest extends TeaModel {
+        @NameInMap("PitchRate")
+        private Integer pitchRate;
+
+        @NameInMap("SpeechRate")
+        private Integer speechRate;
+
+        @NameInMap("Voice")
+        private String voice;
+
+        @NameInMap("Volume")
+        private Integer volume;
+
+        private TextRequest(Builder builder) {
+            this.pitchRate = builder.pitchRate;
+            this.speechRate = builder.speechRate;
+            this.voice = builder.voice;
+            this.volume = builder.volume;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TextRequest create() {
+            return builder().build();
+        }
+
+        /**
+         * @return pitchRate
+         */
+        public Integer getPitchRate() {
+            return this.pitchRate;
+        }
+
+        /**
+         * @return speechRate
+         */
+        public Integer getSpeechRate() {
+            return this.speechRate;
+        }
+
+        /**
+         * @return voice
+         */
+        public String getVoice() {
+            return this.voice;
+        }
+
+        /**
+         * @return volume
+         */
+        public Integer getVolume() {
+            return this.volume;
+        }
+
+        public static final class Builder {
+            private Integer pitchRate; 
+            private Integer speechRate; 
+            private String voice; 
+            private Integer volume; 
+
+            /**
+             * PitchRate.
+             */
+            public Builder pitchRate(Integer pitchRate) {
+                this.pitchRate = pitchRate;
+                return this;
+            }
+
+            /**
+             * SpeechRate.
+             */
+            public Builder speechRate(Integer speechRate) {
+                this.speechRate = speechRate;
+                return this;
+            }
+
+            /**
+             * Voice.
+             */
+            public Builder voice(String voice) {
+                this.voice = voice;
+                return this;
+            }
+
+            /**
+             * Volume.
+             */
+            public Builder volume(Integer volume) {
+                this.volume = volume;
+                return this;
+            }
+
+            public TextRequest build() {
+                return new TextRequest(this);
             } 
 
         } 

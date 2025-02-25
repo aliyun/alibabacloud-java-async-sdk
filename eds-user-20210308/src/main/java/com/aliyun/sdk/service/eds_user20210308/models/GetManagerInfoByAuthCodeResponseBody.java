@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetManagerInfoByAuthCodeResponseBody} extends {@link TeaModel}
  *
  * <p>GetManagerInfoByAuthCodeResponseBody</p>
  */
 public class GetManagerInfoByAuthCodeResponseBody extends TeaModel {
-    @NameInMap("OrgId")
+    @com.aliyun.core.annotation.NameInMap("OrgId")
     private String orgId;
 
-    @NameInMap("Phone")
+    @com.aliyun.core.annotation.NameInMap("Phone")
     private String phone;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TeamName")
+    @com.aliyun.core.annotation.NameInMap("TeamName")
     private String teamName;
 
-    @NameInMap("UserName")
+    @com.aliyun.core.annotation.NameInMap("UserName")
     private String userName;
 
-    @NameInMap("WaId")
+    @com.aliyun.core.annotation.NameInMap("WaId")
     private Long waId;
 
     private GetManagerInfoByAuthCodeResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class GetManagerInfoByAuthCodeResponseBody extends TeaModel {
         private Long waId; 
 
         /**
-         * OrgId.
+         * <p>The organization ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678901234****</p>
          */
         public Builder orgId(String orgId) {
             this.orgId = orgId;
@@ -106,7 +114,10 @@ public class GetManagerInfoByAuthCodeResponseBody extends TeaModel {
         }
 
         /**
-         * Phone.
+         * <p>The mobile number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1301234****</p>
          */
         public Builder phone(String phone) {
             this.phone = phone;
@@ -114,7 +125,10 @@ public class GetManagerInfoByAuthCodeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +136,10 @@ public class GetManagerInfoByAuthCodeResponseBody extends TeaModel {
         }
 
         /**
-         * TeamName.
+         * <p>The team name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>devteam</p>
          */
         public Builder teamName(String teamName) {
             this.teamName = teamName;
@@ -130,7 +147,10 @@ public class GetManagerInfoByAuthCodeResponseBody extends TeaModel {
         }
 
         /**
-         * UserName.
+         * <p>The tenant name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhangsan</p>
          */
         public Builder userName(String userName) {
             this.userName = userName;
@@ -138,7 +158,10 @@ public class GetManagerInfoByAuthCodeResponseBody extends TeaModel {
         }
 
         /**
-         * WaId.
+         * <p>The ID of the Elastic Desktop Service account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678901234****</p>
          */
         public Builder waId(Long waId) {
             this.waId = waId;

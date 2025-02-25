@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyIpControlPolicyItemRequest} extends {@link RequestModel}
  *
  * <p>ModifyIpControlPolicyItemRequest</p>
  */
 public class ModifyIpControlPolicyItemRequest extends Request {
-    @Query
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
-    @Query
-    @NameInMap("CidrIp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CidrIp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cidrIp;
 
-    @Query
-    @NameInMap("IpControlId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpControlId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ipControlId;
 
-    @Query
-    @NameInMap("PolicyItemId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyItemId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyItemId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private ModifyIpControlPolicyItemRequest(Builder builder) {
@@ -113,14 +118,17 @@ public class ModifyIpControlPolicyItemRequest extends Request {
         } 
 
         /**
-         * The ID of the application that is restricted by the policy. You can configure the AppId parameter only when the value of the IpControlType parameter is ALLOW.
-         * <p>
+         * <p>The ID of the application that is restricted by the policy. You can configure the AppId parameter only when the value of the IpControlType parameter is ALLOW.</p>
+         * <ul>
+         * <li>You can add only one application ID at a time.</li>
+         * <li>If this parameter is empty, no applications are restricted.</li>
+         * <li>If this parameter is not empty, not only IP addresses but also applications are restricted.</li>
+         * <li>If this parameter is not empty and no security authentication method is specified for the API, all API calls are restricted.</li>
+         * <li>If the value of the IpControlType parameter is REFUSE and the AppId parameter is not empty, API Gateway automatically ignores the AppId parameter and restricts only the IP addresses.</li>
+         * </ul>
          * 
-         * *   You can add only one application ID at a time.
-         * *   If this parameter is empty, no applications are restricted.
-         * *   If this parameter is not empty, not only IP addresses but also applications are restricted.
-         * *   If this parameter is not empty and no security authentication method is specified for the API, all API calls are restricted.
-         * *   If the value of the IpControlType parameter is REFUSE and the AppId parameter is not empty, API Gateway automatically ignores the AppId parameter and restricts only the IP addresses.
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -129,7 +137,11 @@ public class ModifyIpControlPolicyItemRequest extends Request {
         }
 
         /**
-         * The IP address or CIDR block that is defined in a policy. Separate multiple IP addresses or CIDR blocks with semicolons (;). You can add a maximum of 10 IP addresses or CIDR blocks.
+         * <p>The IP address or CIDR block that is defined in a policy. Separate multiple IP addresses or CIDR blocks with semicolons (;). You can add a maximum of 10 IP addresses or CIDR blocks.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113.125.1.101;101.11.1.1</p>
          */
         public Builder cidrIp(String cidrIp) {
             this.putQueryParameter("CidrIp", cidrIp);
@@ -138,7 +150,11 @@ public class ModifyIpControlPolicyItemRequest extends Request {
         }
 
         /**
-         * The ID of the ACL. The ID is unique.
+         * <p>The ID of the ACL. The ID is unique.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7ea91319a34d48a09b5c9c871d9768b1</p>
          */
         public Builder ipControlId(String ipControlId) {
             this.putQueryParameter("IpControlId", ipControlId);
@@ -147,7 +163,11 @@ public class ModifyIpControlPolicyItemRequest extends Request {
         }
 
         /**
-         * The ID of the policy.
+         * <p>The ID of the policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>P151617000829241</p>
          */
         public Builder policyItemId(String policyItemId) {
             this.putQueryParameter("PolicyItemId", policyItemId);

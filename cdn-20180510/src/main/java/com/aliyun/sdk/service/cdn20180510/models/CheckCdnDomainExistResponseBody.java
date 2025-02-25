@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckCdnDomainExistResponseBody} extends {@link TeaModel}
  *
  * <p>CheckCdnDomainExistResponseBody</p>
  */
 public class CheckCdnDomainExistResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private CheckCdnDomainExistResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class CheckCdnDomainExistResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64D28B53-5902-409B-94F6-FD46680144FE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,17 +61,20 @@ public class CheckCdnDomainExistResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the domain name. Valid values:
-         * <p>
+         * <p>The status of the domain name. Valid values:</p>
+         * <ul>
+         * <li><strong>DomainNotExist</strong>: The domain name is not added.</li>
+         * <li><strong>DomainExistOtherUser</strong>: The domain name has been added by another account.</li>
+         * <li><strong>DomainExistCdnProduct</strong>: The domain name has been added to Alibaba Cloud CDN.</li>
+         * <li><strong>DomainExistDcdnProduct</strong>: The domain name has been added to Dynamic Content Delivery Network (DCDN).</li>
+         * <li><strong>DomainExistScdnProduct</strong>: The domain name has been added to Secure CDN (SCDN).</li>
+         * <li><strong>DomainExistVodProduct</strong>: The domain name has been added to ApsaraVideo VOD.</li>
+         * <li><strong>DomainExistLiveProduct</strong>: The domain name has been added to ApsaraVideo Live.</li>
+         * <li><strong>DomainExistDcdnipaProduct</strong>: The domain name has been added to DCDN IP Application Accelerator (IPA).</li>
+         * </ul>
          * 
-         * *   **DomainNotExist**: The domain name is not added.
-         * *   **DomainExistOtherUser**: The domain name has been added by another account.
-         * *   **DomainExistCdnProduct**: The domain name has been added to Alibaba Cloud CDN.
-         * *   **DomainExistDcdnProduct**: The domain name has been added to Dynamic Content Delivery Network (DCDN).
-         * *   **DomainExistScdnProduct**: The domain name has been added to Secure CDN (SCDN).
-         * *   **DomainExistVodProduct**: The domain name has been added to ApsaraVideo VOD.
-         * *   **DomainExistLiveProduct**: The domain name has been added to ApsaraVideo Live.
-         * *   **DomainExistDcdnipaProduct**: The domain name has been added to DCDN IP Application Accelerator (IPA).
+         * <strong>example:</strong>
+         * <p>DomainNotExist</p>
          */
         public Builder status(String status) {
             this.status = status;

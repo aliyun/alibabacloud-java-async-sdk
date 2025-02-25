@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVulAutoRepairConfigRequest} extends {@link RequestModel}
  *
  * <p>CreateVulAutoRepairConfigRequest</p>
  */
 public class CreateVulAutoRepairConfigRequest extends Request {
-    @Query
-    @NameInMap("Reason")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Reason")
     private String reason;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
-    @Query
-    @NameInMap("VulAutoRepairConfigList")
-    @Validation(required = true)
-    private java.util.List < VulAutoRepairConfigList> vulAutoRepairConfigList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VulAutoRepairConfigList")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<VulAutoRepairConfigList> vulAutoRepairConfigList;
 
     private CreateVulAutoRepairConfigRequest(Builder builder) {
         super(builder);
@@ -63,14 +68,14 @@ public class CreateVulAutoRepairConfigRequest extends Request {
     /**
      * @return vulAutoRepairConfigList
      */
-    public java.util.List < VulAutoRepairConfigList> getVulAutoRepairConfigList() {
+    public java.util.List<VulAutoRepairConfigList> getVulAutoRepairConfigList() {
         return this.vulAutoRepairConfigList;
     }
 
     public static final class Builder extends Request.Builder<CreateVulAutoRepairConfigRequest, Builder> {
         private String reason; 
         private String type; 
-        private java.util.List < VulAutoRepairConfigList> vulAutoRepairConfigList; 
+        private java.util.List<VulAutoRepairConfigList> vulAutoRepairConfigList; 
 
         private Builder() {
             super();
@@ -84,7 +89,10 @@ public class CreateVulAutoRepairConfigRequest extends Request {
         } 
 
         /**
-         * The reason why the vulnerability can be automatically fixed.
+         * <p>The reason why the vulnerability can be automatically fixed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestAutoRepair</p>
          */
         public Builder reason(String reason) {
             this.putQueryParameter("Reason", reason);
@@ -93,7 +101,11 @@ public class CreateVulAutoRepairConfigRequest extends Request {
         }
 
         /**
-         * The type of the vulnerability. Valid values: -**cve**: Linux software vulnerability -**sys**: Windows system vulnerability
+         * <p>The type of the vulnerability. Valid values: -<strong>cve</strong>: Linux software vulnerability -<strong>sys</strong>: Windows system vulnerability</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cve</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -102,9 +114,10 @@ public class CreateVulAutoRepairConfigRequest extends Request {
         }
 
         /**
-         * The vulnerabilities that can be automatically fixed.
+         * <p>The vulnerabilities that can be automatically fixed.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder vulAutoRepairConfigList(java.util.List < VulAutoRepairConfigList> vulAutoRepairConfigList) {
+        public Builder vulAutoRepairConfigList(java.util.List<VulAutoRepairConfigList> vulAutoRepairConfigList) {
             this.putQueryParameter("VulAutoRepairConfigList", vulAutoRepairConfigList);
             this.vulAutoRepairConfigList = vulAutoRepairConfigList;
             return this;
@@ -117,13 +130,19 @@ public class CreateVulAutoRepairConfigRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateVulAutoRepairConfigRequest} extends {@link TeaModel}
+     *
+     * <p>CreateVulAutoRepairConfigRequest</p>
+     */
     public static class VulAutoRepairConfigList extends TeaModel {
-        @NameInMap("AliasName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("AliasName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String aliasName;
 
-        @NameInMap("Name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
         private VulAutoRepairConfigList(Builder builder) {
@@ -158,7 +177,11 @@ public class CreateVulAutoRepairConfigRequest extends Request {
             private String name; 
 
             /**
-             * The alias of the vulnerability.
+             * <p>The alias of the vulnerability.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CVE-2018-25032:zlib 1.2.11 memory corruption</p>
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -166,7 +189,11 @@ public class CreateVulAutoRepairConfigRequest extends Request {
             }
 
             /**
-             * The name of the vulnerability.
+             * <p>The name of the vulnerability.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>anolisos:8.4:ANSA-2022:0001</p>
              */
             public Builder name(String name) {
                 this.name = name;

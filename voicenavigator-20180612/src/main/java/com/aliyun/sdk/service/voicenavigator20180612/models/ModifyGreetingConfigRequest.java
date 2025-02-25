@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyGreetingConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifyGreetingConfigRequest</p>
  */
 public class ModifyGreetingConfigRequest extends Request {
-    @Query
-    @NameInMap("GreetingWords")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GreetingWords")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String greetingWords;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("IntentTrigger")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntentTrigger")
     private String intentTrigger;
 
-    @Query
-    @NameInMap("SourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceType;
 
     private ModifyGreetingConfigRequest(Builder builder) {
@@ -99,7 +104,7 @@ public class ModifyGreetingConfigRequest extends Request {
         } 
 
         /**
-         * GreetingWords.
+         * <p>This parameter is required.</p>
          */
         public Builder greetingWords(String greetingWords) {
             this.putQueryParameter("GreetingWords", greetingWords);
@@ -108,7 +113,10 @@ public class ModifyGreetingConfigRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12f407b22cbe4890ac595f09985848d5</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -126,7 +134,10 @@ public class ModifyGreetingConfigRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chatbotIntent</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);

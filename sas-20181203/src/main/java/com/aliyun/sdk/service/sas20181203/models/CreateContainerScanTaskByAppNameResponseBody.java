@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateContainerScanTaskByAppNameResponseBody} extends {@link TeaModel}
  *
  * <p>CreateContainerScanTaskByAppNameResponseBody</p>
  */
 public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateContainerScanTaskByAppNameResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned if the request was successful.
+         * <p>The data returned if the request was successful.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +75,10 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -78,7 +86,10 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1EE7B150-D67E-53FD-A52D-3E8E669A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,32 +102,38 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateContainerScanTaskByAppNameResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateContainerScanTaskByAppNameResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CanCreate")
+        @com.aliyun.core.annotation.NameInMap("CanCreate")
         private Boolean canCreate;
 
-        @NameInMap("CollectTime")
+        @com.aliyun.core.annotation.NameInMap("CollectTime")
         private Long collectTime;
 
-        @NameInMap("ExecTime")
+        @com.aliyun.core.annotation.NameInMap("ExecTime")
         private Long execTime;
 
-        @NameInMap("FinishCount")
+        @com.aliyun.core.annotation.NameInMap("FinishCount")
         private Integer finishCount;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private Integer progress;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private String result;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {
@@ -214,11 +231,14 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Indicates whether you can create more scan tasks. Valid values:
-             * <p>
+             * <p>Indicates whether you can create more scan tasks. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder canCreate(Boolean canCreate) {
                 this.canCreate = canCreate;
@@ -226,7 +246,10 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the image information was collected. Unit: milliseconds.
+             * <p>The timestamp generated when the image information was collected. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1644286364150</p>
              */
             public Builder collectTime(Long collectTime) {
                 this.collectTime = collectTime;
@@ -234,7 +257,10 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the scan task started. Unit: milliseconds.
+             * <p>The timestamp generated when the scan task started. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1644286364150</p>
              */
             public Builder execTime(Long execTime) {
                 this.execTime = execTime;
@@ -242,7 +268,10 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
             }
 
             /**
-             * The number of container applications that are scanned.
+             * <p>The number of container applications that are scanned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder finishCount(Integer finishCount) {
                 this.finishCount = finishCount;
@@ -250,7 +279,10 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the scan task in percentage.
+             * <p>The progress of the scan task in percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -258,13 +290,16 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
             }
 
             /**
-             * The result of the scan task. Valid values:
-             * <p>
+             * <p>The result of the scan task. Valid values:</p>
+             * <ul>
+             * <li><strong>SUCCESS</strong>: The task is successful.</li>
+             * <li><strong>TASK_NOT_SUPPORT_REGION</strong>: The task is not supported in the region where the image is deployed.</li>
+             * </ul>
+             * <blockquote>
+             * </blockquote>
              * 
-             * *   **SUCCESS**: The task is successful.
-             * *   **TASK_NOT_SUPPORT_REGION**: The task is not supported in the region where the image is deployed.
-             * 
-             * >
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder result(String result) {
                 this.result = result;
@@ -272,13 +307,16 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the scan task. Valid values:
-             * <p>
+             * <p>The status of the scan task. Valid values:</p>
+             * <ul>
+             * <li><strong>INIT</strong>: The task is being initialized.</li>
+             * <li><strong>PRE_ANALYZER</strong>: The task is being pre-processed.</li>
+             * <li><strong>SUCCESS</strong>: The task succeeds.</li>
+             * <li><strong>FAIL</strong>: The task fails.</li>
+             * </ul>
              * 
-             * *   **INIT**: The task is being initialized.
-             * *   **PRE_ANALYZER**: The task is being pre-processed.
-             * *   **SUCCESS**: The task succeeds.
-             * *   **FAIL**: The task fails.
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -286,7 +324,10 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the scan task.
+             * <p>The ID of the scan task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fc98d58eb56f699d49bf7ebbd6d7****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -294,7 +335,10 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of container applications that you want to scan.
+             * <p>The total number of container applications that you want to scan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

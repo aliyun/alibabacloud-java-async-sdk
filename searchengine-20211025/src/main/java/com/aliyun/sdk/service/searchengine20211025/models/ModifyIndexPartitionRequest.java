@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyIndexPartitionRequest} extends {@link RequestModel}
  *
  * <p>ModifyIndexPartitionRequest</p>
  */
 public class ModifyIndexPartitionRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("dataSourceName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dataSourceName")
     private String dataSourceName;
 
-    @Body
-    @NameInMap("domainName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("domainName")
     private String domainName;
 
-    @Body
-    @NameInMap("generation")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("generation")
     private Long generation;
 
-    @Body
-    @NameInMap("indexInfos")
-    private java.util.List < IndexInfos> indexInfos;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("indexInfos")
+    private java.util.List<IndexInfos> indexInfos;
 
     private ModifyIndexPartitionRequest(Builder builder) {
         super(builder);
@@ -86,7 +91,7 @@ public class ModifyIndexPartitionRequest extends Request {
     /**
      * @return indexInfos
      */
-    public java.util.List < IndexInfos> getIndexInfos() {
+    public java.util.List<IndexInfos> getIndexInfos() {
         return this.indexInfos;
     }
 
@@ -95,7 +100,7 @@ public class ModifyIndexPartitionRequest extends Request {
         private String dataSourceName; 
         private String domainName; 
         private Long generation; 
-        private java.util.List < IndexInfos> indexInfos; 
+        private java.util.List<IndexInfos> indexInfos; 
 
         private Builder() {
             super();
@@ -111,7 +116,11 @@ public class ModifyIndexPartitionRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-7mz2ttxta01</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -120,7 +129,10 @@ public class ModifyIndexPartitionRequest extends Request {
         }
 
         /**
-         * The name of the data source.
+         * <p>The name of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder dataSourceName(String dataSourceName) {
             this.putBodyParameter("dataSourceName", dataSourceName);
@@ -129,7 +141,10 @@ public class ModifyIndexPartitionRequest extends Request {
         }
 
         /**
-         * The information about each index.
+         * <p>The data center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pre_domain_1</p>
          */
         public Builder domainName(String domainName) {
             this.putBodyParameter("domainName", domainName);
@@ -138,7 +153,10 @@ public class ModifyIndexPartitionRequest extends Request {
         }
 
         /**
-         * The name of the data center.
+         * <p>The primary key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1633293829</p>
          */
         public Builder generation(Long generation) {
             this.putBodyParameter("generation", generation);
@@ -147,9 +165,9 @@ public class ModifyIndexPartitionRequest extends Request {
         }
 
         /**
-         * The number of shards of the index.
+         * <p>The index information.</p>
          */
-        public Builder indexInfos(java.util.List < IndexInfos> indexInfos) {
+        public Builder indexInfos(java.util.List<IndexInfos> indexInfos) {
             this.putBodyParameter("indexInfos", indexInfos);
             this.indexInfos = indexInfos;
             return this;
@@ -162,14 +180,20 @@ public class ModifyIndexPartitionRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyIndexPartitionRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyIndexPartitionRequest</p>
+     */
     public static class IndexInfos extends TeaModel {
-        @NameInMap("indexName")
+        @com.aliyun.core.annotation.NameInMap("indexName")
         private String indexName;
 
-        @NameInMap("parallelNum")
+        @com.aliyun.core.annotation.NameInMap("parallelNum")
         private Integer parallelNum;
 
-        @NameInMap("partitionCount")
+        @com.aliyun.core.annotation.NameInMap("partitionCount")
         private Integer partitionCount;
 
         private IndexInfos(Builder builder) {
@@ -213,7 +237,10 @@ public class ModifyIndexPartitionRequest extends Request {
             private Integer partitionCount; 
 
             /**
-             * auditing
+             * <p>The index name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>atest2</p>
              */
             public Builder indexName(String indexName) {
                 this.indexName = indexName;
@@ -221,7 +248,10 @@ public class ModifyIndexPartitionRequest extends Request {
             }
 
             /**
-             * The parameters in the request body.
+             * <p>The concurrency. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder parallelNum(Integer parallelNum) {
                 this.parallelNum = parallelNum;
@@ -229,7 +259,10 @@ public class ModifyIndexPartitionRequest extends Request {
             }
 
             /**
-             * The number of shards of the index.
+             * <p>The number of shards.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder partitionCount(Integer partitionCount) {
                 this.partitionCount = partitionCount;

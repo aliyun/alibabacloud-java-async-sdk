@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddUserSourceLogConfigRequest</p>
  */
 public class AddUserSourceLogConfigRequest extends Request {
-    @Body
-    @NameInMap("Deleted")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Deleted")
     private Integer deleted;
 
-    @Body
-    @NameInMap("DisPlayLine")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DisPlayLine")
     private String disPlayLine;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("SourceLogCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceLogCode")
     private String sourceLogCode;
 
-    @Body
-    @NameInMap("SourceLogInfo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceLogInfo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceLogInfo;
 
-    @Body
-    @NameInMap("SourceProdCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceProdCode")
     private String sourceProdCode;
 
-    @Body
-    @NameInMap("SubUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SubUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long subUserId;
 
     private AddUserSourceLogConfigRequest(Builder builder) {
@@ -140,7 +139,11 @@ public class AddUserSourceLogConfigRequest extends Request {
         } 
 
         /**
-         * Deleted.
+         * Specifies whether to add logs or delete added logs. Valid values:
+         * <p>
+         * 
+         * *   \-1: deletes added logs.
+         * *   0: adds logs.
          */
         public Builder deleted(Integer deleted) {
             this.putBodyParameter("Deleted", deleted);
@@ -149,7 +152,7 @@ public class AddUserSourceLogConfigRequest extends Request {
         }
 
         /**
-         * DisPlayLine.
+         * The display details of the Logstore.
          */
         public Builder disPlayLine(String disPlayLine) {
             this.putBodyParameter("DisPlayLine", disPlayLine);
@@ -158,7 +161,11 @@ public class AddUserSourceLogConfigRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions in China.
+         * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -167,7 +174,7 @@ public class AddUserSourceLogConfigRequest extends Request {
         }
 
         /**
-         * SourceLogCode.
+         * The log code.
          */
         public Builder sourceLogCode(String sourceLogCode) {
             this.putBodyParameter("SourceLogCode", sourceLogCode);
@@ -176,7 +183,7 @@ public class AddUserSourceLogConfigRequest extends Request {
         }
 
         /**
-         * SourceLogInfo.
+         * The details of the Logstore that you want to use in the JSON string format.
          */
         public Builder sourceLogInfo(String sourceLogInfo) {
             this.putBodyParameter("SourceLogInfo", sourceLogInfo);
@@ -185,7 +192,7 @@ public class AddUserSourceLogConfigRequest extends Request {
         }
 
         /**
-         * SourceProdCode.
+         * The code of the cloud service.
          */
         public Builder sourceProdCode(String sourceProdCode) {
             this.putBodyParameter("SourceProdCode", sourceProdCode);
@@ -194,7 +201,7 @@ public class AddUserSourceLogConfigRequest extends Request {
         }
 
         /**
-         * SubUserId.
+         * The ID of the Alibaba Cloud account.
          */
         public Builder subUserId(Long subUserId) {
             this.putBodyParameter("SubUserId", subUserId);

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200407.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCertificateForPackageRequestResponseBody} extends {@link TeaModel}
  *
  * <p>CreateCertificateForPackageRequestResponseBody</p>
  */
 public class CreateCertificateForPackageRequestResponseBody extends TeaModel {
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private Long orderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateCertificateForPackageRequestResponseBody(Builder builder) {
@@ -50,7 +55,13 @@ public class CreateCertificateForPackageRequestResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * OrderId.
+         * <p>The ID of the certificate application order.</p>
+         * <blockquote>
+         * <p> You can use the ID to query the status of the certificate application order. For more information, see <a href="https://help.aliyun.com/document_detail/164111.html">DescribeCertificateState</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2021010</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -58,7 +69,10 @@ public class CreateCertificateForPackageRequestResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5890029B-938A-589E-98B9-3DEC7BA7C400</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

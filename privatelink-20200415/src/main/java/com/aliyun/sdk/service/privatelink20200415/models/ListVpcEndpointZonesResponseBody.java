@@ -1,33 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.privatelink20200415.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListVpcEndpointZonesResponseBody} extends {@link TeaModel}
  *
  * <p>ListVpcEndpointZonesResponseBody</p>
  */
 public class ListVpcEndpointZonesResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Zones")
-    private java.util.List < Zones> zones;
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
+    private Integer totalCount;
+
+    @com.aliyun.core.annotation.NameInMap("Zones")
+    private java.util.List<Zones> zones;
 
     private ListVpcEndpointZonesResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
+        this.totalCount = builder.totalCount;
         this.zones = builder.zones;
     }
 
@@ -61,9 +70,16 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
     }
 
     /**
+     * @return totalCount
+     */
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    /**
      * @return zones
      */
-    public java.util.List < Zones> getZones() {
+    public java.util.List<Zones> getZones() {
         return this.zones;
     }
 
@@ -71,10 +87,14 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < Zones> zones; 
+        private Integer totalCount; 
+        private java.util.List<Zones> zones; 
 
         /**
-         * The number of entries returned on each page.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -82,11 +102,14 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If no value is returned for <strong>NextToken</strong>, no next requests are performed.</li>
+         * <li>If a value is returned for <strong>NextToken</strong>, the value can be used in the next request to retrieve a new page of results.</li>
+         * </ul>
          * 
-         * *   If no value is returned for **NextToken**, no next requests are performed.
-         * *   If a value is returned for **NextToken**, the value can be used in the next request to retrieve a new page of results.
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -94,7 +117,10 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -102,9 +128,20 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
         }
 
         /**
-         * The zones.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
-        public Builder zones(java.util.List < Zones> zones) {
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+
+        /**
+         * <p>The information about the zones.</p>
+         */
+        public Builder zones(java.util.List<Zones> zones) {
             this.zones = zones;
             return this;
         }
@@ -115,29 +152,35 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListVpcEndpointZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVpcEndpointZonesResponseBody</p>
+     */
     public static class Zones extends TeaModel {
-        @NameInMap("EniId")
+        @com.aliyun.core.annotation.NameInMap("EniId")
         private String eniId;
 
-        @NameInMap("EniIp")
+        @com.aliyun.core.annotation.NameInMap("EniIp")
         private String eniIp;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("ZoneDomain")
+        @com.aliyun.core.annotation.NameInMap("ZoneDomain")
         private String zoneDomain;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
-        @NameInMap("ZoneIpv6Address")
+        @com.aliyun.core.annotation.NameInMap("ZoneIpv6Address")
         private String zoneIpv6Address;
 
-        @NameInMap("ZoneStatus")
+        @com.aliyun.core.annotation.NameInMap("ZoneStatus")
         private String zoneStatus;
 
         private Zones(Builder builder) {
@@ -226,7 +269,10 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
             private String zoneStatus; 
 
             /**
-             * The endpoint ENI ID.
+             * <p>The ID of the endpoint ENI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eni-hp3c8qj1tyct8aqy****</p>
              */
             public Builder eniId(String eniId) {
                 this.eniId = eniId;
@@ -234,7 +280,10 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the endpoint ENI.
+             * <p>The IP address of the endpoint ENI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.2.23</p>
              */
             public Builder eniIp(String eniIp) {
                 this.eniIp = eniIp;
@@ -242,7 +291,10 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the endpoint.
+             * <p>The region ID of the endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-huhehaote</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -250,7 +302,10 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch in the zone. The system automatically creates an endpoint elastic network interface (ENI) in the vSwitch.
+             * <p>The ID of the vSwitch in the zone. The system automatically creates an endpoint elastic network interface (ENI) in the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-hjkshjvdkdvd****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -258,10 +313,11 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name of the zone.
-             * <p>
+             * <p>The domain name of the zone.</p>
+             * <p>After the endpoint in the zone is connected to the endpoint service, you can access the service resources of the endpoint service by using the domain name of the zone.</p>
              * 
-             * After the endpoint is connected to the endpoint service, you can access the service resources in the endpoint service by using the domain name of the zone.
+             * <strong>example:</strong>
+             * <p>ep-hp3f033dp24c5yc9****-cn-huhehaote.epsrv-hp3itcpowf37m3d5****.cn-huhehaote-a.privatelink.aliyuncs.com</p>
              */
             public Builder zoneDomain(String zoneDomain) {
                 this.zoneDomain = zoneDomain;
@@ -269,7 +325,10 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-huhehaote-a</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -277,11 +336,14 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether IPv6 is enabled for the endpoint service. Valid values:
-             * <p>
+             * <p>Indicates whether the endpoint service supports IPv6. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong> (default)</li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false** (default)
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder zoneIpv6Address(String zoneIpv6Address) {
                 this.zoneIpv6Address = zoneIpv6Address;
@@ -289,16 +351,19 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the zone. Valid values:
-             * <p>
+             * <p>The state of the zone. Valid values:</p>
+             * <ul>
+             * <li><strong>Creating</strong>: The zone is being created.</li>
+             * <li><strong>Wait</strong>: The zone is to be connected.</li>
+             * <li><strong>Connected</strong>: The zone is connected.</li>
+             * <li><strong>Deleting</strong>: The zone is being deleted.</li>
+             * <li><strong>Disconnecting</strong>: The zone is being disconnected.</li>
+             * <li><strong>Disconnected</strong>: The zone is disconnected.</li>
+             * <li><strong>Connecting</strong>: The zone is being connected.</li>
+             * </ul>
              * 
-             * *   **Creating**: The zone is being created.
-             * *   **Wait**: The zone is to be connected.
-             * *   **Connected**: The zone is connected.
-             * *   **Deleting**: The zone is being deleted.
-             * *   **Disconnecting**: The zone is being disconnected.
-             * *   **Disconnected**: The zone is disconnected.
-             * *   **Connecting**: The zone is being connected.
+             * <strong>example:</strong>
+             * <p>Wait</p>
              */
             public Builder zoneStatus(String zoneStatus) {
                 this.zoneStatus = zoneStatus;

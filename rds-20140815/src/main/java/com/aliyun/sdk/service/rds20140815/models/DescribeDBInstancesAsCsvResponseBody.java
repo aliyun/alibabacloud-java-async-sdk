@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstancesAsCsvResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstancesAsCsvResponseBody</p>
  */
 public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBInstancesAsCsvResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the fields in **DBInstanceAttribute**.
+         * <p>An array that consists of the fields in <strong>DBInstanceAttribute</strong>.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -58,7 +63,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A444291****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,9 +79,15 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstancesAsCsvResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstancesAsCsvResponseBody</p>
+     */
     public static class SlaveZones extends TeaModel {
-        @NameInMap("slaveRegion")
-        private java.util.List < String > slaveRegion;
+        @com.aliyun.core.annotation.NameInMap("slaveRegion")
+        private java.util.List<String> slaveRegion;
 
         private SlaveZones(Builder builder) {
             this.slaveRegion = builder.slaveRegion;
@@ -90,17 +104,17 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
         /**
          * @return slaveRegion
          */
-        public java.util.List < String > getSlaveRegion() {
+        public java.util.List<String> getSlaveRegion() {
             return this.slaveRegion;
         }
 
         public static final class Builder {
-            private java.util.List < String > slaveRegion; 
+            private java.util.List<String> slaveRegion; 
 
             /**
              * slaveRegion.
              */
-            public Builder slaveRegion(java.util.List < String > slaveRegion) {
+            public Builder slaveRegion(java.util.List<String> slaveRegion) {
                 this.slaveRegion = slaveRegion;
                 return this;
             }
@@ -112,134 +126,140 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstancesAsCsvResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstancesAsCsvResponseBody</p>
+     */
     public static class DBInstanceAttribute extends TeaModel {
-        @NameInMap("AccountMaxQuantity")
+        @com.aliyun.core.annotation.NameInMap("AccountMaxQuantity")
         private Integer accountMaxQuantity;
 
-        @NameInMap("AccountType")
+        @com.aliyun.core.annotation.NameInMap("AccountType")
         private String accountType;
 
-        @NameInMap("AvailabilityValue")
+        @com.aliyun.core.annotation.NameInMap("AvailabilityValue")
         private String availabilityValue;
 
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("ConnectionMode")
+        @com.aliyun.core.annotation.NameInMap("ConnectionMode")
         private String connectionMode;
 
-        @NameInMap("ConnectionString")
+        @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DBInstanceCPU")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceCPU")
         private String DBInstanceCPU;
 
-        @NameInMap("DBInstanceClass")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceClass")
         private String DBInstanceClass;
 
-        @NameInMap("DBInstanceClassType")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceClassType")
         private String DBInstanceClassType;
 
-        @NameInMap("DBInstanceDescription")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceDescription")
         private String DBInstanceDescription;
 
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("DBInstanceMemory")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceMemory")
         private Long DBInstanceMemory;
 
-        @NameInMap("DBInstanceNetType")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceNetType")
         private String DBInstanceNetType;
 
-        @NameInMap("DBInstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceStatus")
         private String DBInstanceStatus;
 
-        @NameInMap("DBInstanceStorage")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceStorage")
         private Integer DBInstanceStorage;
 
-        @NameInMap("DBInstanceType")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceType")
         private String DBInstanceType;
 
-        @NameInMap("DBMaxQuantity")
+        @com.aliyun.core.annotation.NameInMap("DBMaxQuantity")
         private Integer DBMaxQuantity;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("EngineVersion")
+        @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private String engineVersion;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("ExportKey")
+        @com.aliyun.core.annotation.NameInMap("ExportKey")
         private String exportKey;
 
-        @NameInMap("GuardDBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("GuardDBInstanceId")
         private String guardDBInstanceId;
 
-        @NameInMap("IncrementSourceDBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("IncrementSourceDBInstanceId")
         private String incrementSourceDBInstanceId;
 
-        @NameInMap("InstanceNetworkType")
+        @com.aliyun.core.annotation.NameInMap("InstanceNetworkType")
         private String instanceNetworkType;
 
-        @NameInMap("LockMode")
+        @com.aliyun.core.annotation.NameInMap("LockMode")
         private String lockMode;
 
-        @NameInMap("LockReason")
+        @com.aliyun.core.annotation.NameInMap("LockReason")
         private String lockReason;
 
-        @NameInMap("MaintainTime")
+        @com.aliyun.core.annotation.NameInMap("MaintainTime")
         private String maintainTime;
 
-        @NameInMap("MasterInstanceId")
+        @com.aliyun.core.annotation.NameInMap("MasterInstanceId")
         private String masterInstanceId;
 
-        @NameInMap("MaxConnections")
+        @com.aliyun.core.annotation.NameInMap("MaxConnections")
         private Integer maxConnections;
 
-        @NameInMap("MaxIOPS")
+        @com.aliyun.core.annotation.NameInMap("MaxIOPS")
         private Integer maxIOPS;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("ReadDelayTime")
+        @com.aliyun.core.annotation.NameInMap("ReadDelayTime")
         private String readDelayTime;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SecurityIPList")
+        @com.aliyun.core.annotation.NameInMap("SecurityIPList")
         private String securityIPList;
 
-        @NameInMap("SlaveZones")
+        @com.aliyun.core.annotation.NameInMap("SlaveZones")
         private SlaveZones slaveZones;
 
-        @NameInMap("SupportUpgradeAccountType")
+        @com.aliyun.core.annotation.NameInMap("SupportUpgradeAccountType")
         private String supportUpgradeAccountType;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private String tags;
 
-        @NameInMap("TempDBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("TempDBInstanceId")
         private String tempDBInstanceId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private DBInstanceAttribute(Builder builder) {
@@ -643,7 +663,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The maximum number of accounts.
+             * <p>The maximum number of accounts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder accountMaxQuantity(Integer accountMaxQuantity) {
                 this.accountMaxQuantity = accountMaxQuantity;
@@ -651,7 +674,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the account.
+             * <p>The type of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>super</p>
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -659,7 +685,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The service availability of the instance in percentage.
+             * <p>The service availability of the instance in percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder availabilityValue(String availabilityValue) {
                 this.availabilityValue = availabilityValue;
@@ -667,7 +696,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the instance.
+             * <p>The category of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -675,11 +707,14 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The connection mode of the instance. Valid values:
-             * <p>
+             * <p>The connection mode of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Performance</strong>: standard mode.</li>
+             * <li><strong>Safety</strong>: enhanced mode</li>
+             * </ul>
              * 
-             * *   **Performance**: standard mode.
-             * *   **Safety**: safe mode.
+             * <strong>example:</strong>
+             * <p>Performance</p>
              */
             public Builder connectionMode(String connectionMode) {
                 this.connectionMode = connectionMode;
@@ -687,7 +722,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The internal endpoint of the instance.
+             * <p>The internal endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-uf6wjk5xxxxxxxxxx.mysql.rds.aliyuncs.com</p>
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -695,7 +733,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2011-05-30T12:11:04Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -703,7 +744,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The number of CPU cores.
+             * <p>The number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder DBInstanceCPU(String DBInstanceCPU) {
                 this.DBInstanceCPU = DBInstanceCPU;
@@ -711,7 +755,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the instance.
+             * <p>The instance type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds.mys2.small</p>
              */
             public Builder DBInstanceClass(String DBInstanceClass) {
                 this.DBInstanceClass = DBInstanceClass;
@@ -719,7 +766,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The instance family.
+             * <p>The instance family.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s</p>
              */
             public Builder DBInstanceClassType(String DBInstanceClassType) {
                 this.DBInstanceClassType = DBInstanceClassType;
@@ -727,7 +777,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the instance.
+             * <p>The instance description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder DBInstanceDescription(String DBInstanceDescription) {
                 this.DBInstanceDescription = DBInstanceDescription;
@@ -735,7 +788,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-uf6wjk5xxxxxxxxxx</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -743,7 +799,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The memory capacity of the instance. Unit: MB.
+             * <p>The memory capacity of the instance. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4096</p>
              */
             public Builder DBInstanceMemory(Long DBInstanceMemory) {
                 this.DBInstanceMemory = DBInstanceMemory;
@@ -751,11 +810,14 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The network type of the instance. Valid values:
-             * <p>
+             * <p>The network type of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Internet</strong></li>
+             * <li><strong>Intranet</strong></li>
+             * </ul>
              * 
-             * *   **Internet**: Internet
-             * *   **Intranet**: internal network
+             * <strong>example:</strong>
+             * <p>Internet</p>
              */
             public Builder DBInstanceNetType(String DBInstanceNetType) {
                 this.DBInstanceNetType = DBInstanceNetType;
@@ -763,7 +825,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the instance.
+             * <p>The instance status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder DBInstanceStatus(String DBInstanceStatus) {
                 this.DBInstanceStatus = DBInstanceStatus;
@@ -771,7 +836,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The storage capacity of the instance. Unit: GB.
+             * <p>The storage capacity of the instance. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder DBInstanceStorage(Integer DBInstanceStorage) {
                 this.DBInstanceStorage = DBInstanceStorage;
@@ -779,13 +847,16 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the instance. Valid values:
-             * <p>
+             * <p>The instance type. Valid values:</p>
+             * <ul>
+             * <li><strong>Primary</strong>: primary instance</li>
+             * <li><strong>ReadOnly</strong>: read-only instance</li>
+             * <li><strong>Guard</strong>: disaster recovery instance</li>
+             * <li><strong>Temp</strong>: temporary instance</li>
+             * </ul>
              * 
-             * *   **Primary**: primary instance
-             * *   **Readonly**: read-only instance
-             * *   **Guard**: disaster recovery instance
-             * *   **Temp**: temporary instance
+             * <strong>example:</strong>
+             * <p>Primary</p>
              */
             public Builder DBInstanceType(String DBInstanceType) {
                 this.DBInstanceType = DBInstanceType;
@@ -793,7 +864,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of databases that can be created on the instance.
+             * <p>The maximum number of databases that can be created on the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder DBMaxQuantity(Integer DBMaxQuantity) {
                 this.DBMaxQuantity = DBMaxQuantity;
@@ -801,7 +875,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine of the instance.
+             * <p>The database engine of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -809,7 +886,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The engine version of the instance.
+             * <p>The engine version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.0</p>
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -817,7 +897,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time.
+             * <p>The expiration time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-03-27T16:00:00Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -825,7 +908,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * A deprecated parameter. You do not need to configure this parameter.
+             * <p>A deprecated parameter. You do not need to specify this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>API</p>
              */
             public Builder exportKey(String exportKey) {
                 this.exportKey = exportKey;
@@ -833,7 +919,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the disaster recovery instance that is attached to the instance.
+             * <p>The ID of the disaster recovery instance that is attached to the primary instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-uf64zsuxxxxxxxxxx</p>
              */
             public Builder guardDBInstanceId(String guardDBInstanceId) {
                 this.guardDBInstanceId = guardDBInstanceId;
@@ -841,7 +930,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance from which incremental data comes. The incremental data of a disaster recovery instance or read-only instance comes from its primary instance. If this parameter is not returned, the instance is a primary instance.
+             * <p>The ID of the instance from which incremental data comes. The incremental data of a disaster recovery instance comes from its primary instance. The incremental data of a read-only instance comes from its primary instance. If this parameter is not returned, the instance is a primary instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-uf6wjk5xxxxxxxxxx</p>
              */
             public Builder incrementSourceDBInstanceId(String incrementSourceDBInstanceId) {
                 this.incrementSourceDBInstanceId = incrementSourceDBInstanceId;
@@ -849,7 +941,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The network type.
+             * <p>The network type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder instanceNetworkType(String instanceNetworkType) {
                 this.instanceNetworkType = instanceNetworkType;
@@ -857,7 +952,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The lock mode of the instance.
+             * <p>The lock mode of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Unlock</p>
              */
             public Builder lockMode(String lockMode) {
                 this.lockMode = lockMode;
@@ -865,7 +963,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the instance was locked.
+             * <p>The reason why the instance was locked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance_expired</p>
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -873,7 +974,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The maintenance window of the instance. The time is displayed in UTC. Take note that the maintenance window that is displayed in the ApsaraDB RDS console is equal to the value of this parameter plus 8 hours.
+             * <p>The maintenance window of the instance. The time follows the ISO 8601 standard and is displayed in UTC. In the ApsaraDB RDS console, the maintenance window is displayed in UTC+8.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00Z-02:00Z</p>
              */
             public Builder maintainTime(String maintainTime) {
                 this.maintainTime = maintainTime;
@@ -881,7 +985,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the primary instance.
+             * <p>The primary instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-uf6wjk5xxxxxxxxxx</p>
              */
             public Builder masterInstanceId(String masterInstanceId) {
                 this.masterInstanceId = masterInstanceId;
@@ -889,7 +996,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of concurrent connections.
+             * <p>The maximum number of concurrent connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder maxConnections(Integer maxConnections) {
                 this.maxConnections = maxConnections;
@@ -897,7 +1007,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of I/O requests per second.
+             * <p>The maximum number of I/O requests per second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>150</p>
              */
             public Builder maxIOPS(Integer maxIOPS) {
                 this.maxIOPS = maxIOPS;
@@ -905,7 +1018,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the instance.
+             * <p>The billing method of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Postpaid</p>
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -913,7 +1029,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The port that is used to connect to the instance over an internal network.
+             * <p>The port that is used to connect to the instance over an internal network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -921,7 +1040,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The latency of data replication from the primary instance to the read-only instance. This parameter is valid for read-only instances.
+             * <p>The latency of data replication from the primary instance to the read-only instance. This parameter is valid for read-only instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder readDelayTime(String readDelayTime) {
                 this.readDelayTime = readDelayTime;
@@ -929,7 +1051,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -937,7 +1062,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address whitelist.
+             * <p>The IP addresses in the whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>42.xx.xx.xx</p>
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;
@@ -945,7 +1073,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * A deprecated parameter. You do not need to configure this parameter.
+             * <p>A deprecated parameter. You do not need to specify this parameter.</p>
              */
             public Builder slaveZones(SlaveZones slaveZones) {
                 this.slaveZones = slaveZones;
@@ -953,7 +1081,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * N/A.
+             * <p>N/A.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>No</p>
              */
             public Builder supportUpgradeAccountType(String supportUpgradeAccountType) {
                 this.supportUpgradeAccountType = supportUpgradeAccountType;
@@ -961,7 +1092,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>The tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -969,7 +1103,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the temporary instance that is attached to the instance.
+             * <p>The ID of the temporary instance that is attached to the primary instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-uf64zsuxxxxxxxxxx</p>
              */
             public Builder tempDBInstanceId(String tempDBInstanceId) {
                 this.tempDBInstanceId = tempDBInstanceId;
@@ -977,7 +1114,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch ID.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-uf6adz52c2pxxxxxxxxxx</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -985,7 +1125,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC).
+             * <p>The virtual private cloud (VPC) ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-uf6f7l4fg90xxxxxxxxxx</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -993,7 +1136,10 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -1007,9 +1153,15 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstancesAsCsvResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstancesAsCsvResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("DBInstanceAttribute")
-        private java.util.List < DBInstanceAttribute> DBInstanceAttribute;
+        @com.aliyun.core.annotation.NameInMap("DBInstanceAttribute")
+        private java.util.List<DBInstanceAttribute> DBInstanceAttribute;
 
         private Items(Builder builder) {
             this.DBInstanceAttribute = builder.DBInstanceAttribute;
@@ -1026,17 +1178,17 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
         /**
          * @return DBInstanceAttribute
          */
-        public java.util.List < DBInstanceAttribute> getDBInstanceAttribute() {
+        public java.util.List<DBInstanceAttribute> getDBInstanceAttribute() {
             return this.DBInstanceAttribute;
         }
 
         public static final class Builder {
-            private java.util.List < DBInstanceAttribute> DBInstanceAttribute; 
+            private java.util.List<DBInstanceAttribute> DBInstanceAttribute; 
 
             /**
              * DBInstanceAttribute.
              */
-            public Builder DBInstanceAttribute(java.util.List < DBInstanceAttribute> DBInstanceAttribute) {
+            public Builder DBInstanceAttribute(java.util.List<DBInstanceAttribute> DBInstanceAttribute) {
                 this.DBInstanceAttribute = DBInstanceAttribute;
                 return this;
             }

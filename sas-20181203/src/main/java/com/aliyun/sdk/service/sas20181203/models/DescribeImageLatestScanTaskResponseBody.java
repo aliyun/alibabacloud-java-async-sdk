@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageLatestScanTaskResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImageLatestScanTaskResponseBody</p>
  */
 public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Task")
-    private java.util.List < Task> task;
+    @com.aliyun.core.annotation.NameInMap("Task")
+    private java.util.List<Task> task;
 
     private DescribeImageLatestScanTaskResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
     /**
      * @return task
      */
-    public java.util.List < Task> getTask() {
+    public java.util.List<Task> getTask() {
         return this.task;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Task> task; 
+        private java.util.List<Task> task; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B48AB3C-84FC-424D-A01D-B9270EF4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the information about the task.
+         * <p>An array that consists of the information about the task.</p>
          */
-        public Builder task(java.util.List < Task> task) {
+        public Builder task(java.util.List<Task> task) {
             this.task = task;
             return this;
         }
@@ -71,44 +79,50 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImageLatestScanTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageLatestScanTaskResponseBody</p>
+     */
     public static class Task extends TeaModel {
-        @NameInMap("Create")
+        @com.aliyun.core.annotation.NameInMap("Create")
         private String create;
 
-        @NameInMap("Finish")
+        @com.aliyun.core.annotation.NameInMap("Finish")
         private Integer finish;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private Long finishTime;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Modified")
+        @com.aliyun.core.annotation.NameInMap("Modified")
         private String modified;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Target")
+        @com.aliyun.core.annotation.NameInMap("Target")
         private String target;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
         private Task(Builder builder) {
@@ -242,7 +256,10 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * The time when the task was created. The time is in the yyyy-MM-dd HH:mm:ss format.
+             * <p>The time when the task was created. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-20 11:59:05</p>
              */
             public Builder create(String create) {
                 this.create = create;
@@ -250,7 +267,10 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The number of images that are scanned.
+             * <p>The number of images that are scanned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder finish(Integer finish) {
                 this.finish = finish;
@@ -258,7 +278,10 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the task. A value is returned only when the task is in the Finished state. Otherwise, the returned value is empty.
+             * <p>The end time of the task. A value is returned only when the task is in the Finished state. Otherwise, the returned value is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1669693430977</p>
              */
             public Builder finishTime(Long finishTime) {
                 this.finishTime = finishTime;
@@ -266,7 +289,10 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The task ID.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9755662</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -274,7 +300,10 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task was last modified. The time is in the yyyy-MM-dd HH:mm:ss format.
+             * <p>The time when the task was last modified. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-20 12:00:05</p>
              */
             public Builder modified(String modified) {
                 this.modified = modified;
@@ -282,7 +311,10 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the task.
+             * <p>The name of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IMAGE_SCAN</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -290,11 +322,14 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The method in which the task was created. A task can be created in the Security Center console or by calling an API operation. Valid values:
-             * <p>
+             * <p>The method in which the task was created. A task can be created in the Security Center console or by calling an API operation. Valid values:</p>
+             * <ul>
+             * <li><strong>console_batch</strong>: The task was created in the Security Center console.</li>
+             * <li><strong>openapi</strong>: The task was created by calling an API operation.</li>
+             * </ul>
              * 
-             * *   **console_batch**: The task was created in the Security Center console.
-             * *   **openapi**: The task was created by calling an API operation.
+             * <strong>example:</strong>
+             * <p>console_batch</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -302,7 +337,10 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the task.
+             * <p>The start time of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1668614400000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -310,16 +348,19 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task. Valid value:
-             * <p>
+             * <p>The status of the task. Valid value:</p>
+             * <ul>
+             * <li><strong>PROCESSING</strong>: The task is running.</li>
+             * <li><strong>START</strong>: The task is being started.</li>
+             * <li><strong>MESSAGE_SEND</strong>: The scan task is sent.</li>
+             * <li><strong>PRE_ANALYZER</strong>: The image is in precheck.</li>
+             * <li><strong>SUCCESS</strong>: The task was successful.</li>
+             * <li><strong>FAIL</strong>: The task failed.</li>
+             * <li><strong>TIMOUT</strong>: The task timed out.</li>
+             * </ul>
              * 
-             * *   **PROCESSING**: The task is running.
-             * *   **START**: The task is being started.
-             * *   **MESSAGE_SEND**: The scan task is sent.
-             * *   **PRE_ANALYZER**: The image is in precheck.
-             * *   **SUCCESS**: The task was successful.
-             * *   **FAIL**: The task failed.
-             * *   **TIMOUT**: The task timed out.
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -327,7 +368,10 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The digest value of the image.
+             * <p>The digest value of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8f0fbdb41d3d1ade4ffdf21558443f4c03342010563bb8c43ccc09594d50****</p>
              */
             public Builder target(String target) {
                 this.target = target;
@@ -335,10 +379,13 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the scanned asset. Valid value:
-             * <p>
+             * <p>The type of the scanned asset. Valid value:</p>
+             * <ul>
+             * <li><strong>IMAGE</strong></li>
+             * </ul>
              * 
-             * *   **IMAGE**
+             * <strong>example:</strong>
+             * <p>IMAGE</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -346,7 +393,10 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the scan task.
+             * <p>The ID of the scan task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0a960b9a48b788a8689154b032bf****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -354,10 +404,13 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the task. Valid value:
-             * <p>
+             * <p>The type of the task. Valid value:</p>
+             * <ul>
+             * <li><strong>IMAGE_SCAN</strong></li>
+             * </ul>
              * 
-             * *   **IMAGE_SCAN**
+             * <strong>example:</strong>
+             * <p>IMAGE_SCAN</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

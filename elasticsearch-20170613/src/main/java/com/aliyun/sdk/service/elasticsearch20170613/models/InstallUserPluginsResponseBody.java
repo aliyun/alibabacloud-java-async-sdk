@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstallUserPluginsResponseBody} extends {@link TeaModel}
  *
  * <p>InstallUserPluginsResponseBody</p>
  */
 public class InstallUserPluginsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < String > result;
 
     private InstallUserPluginsResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class InstallUserPluginsResponseBody extends TeaModel {
         private java.util.List < String > result; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6F*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

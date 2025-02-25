@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nis20211216.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInternetTupleResponseBody</p>
  */
 public class GetInternetTupleResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetInternetTupleResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class GetInternetTupleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ranking result of instances by Internet traffic.
+         * The ranking result of Internet traffic data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -72,100 +71,100 @@ public class GetInternetTupleResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AccessRegion")
+        @com.aliyun.core.annotation.NameInMap("AccessRegion")
         private String accessRegion;
 
-        @NameInMap("BeginTime")
+        @com.aliyun.core.annotation.NameInMap("BeginTime")
         private String beginTime;
 
-        @NameInMap("ByteCount")
+        @com.aliyun.core.annotation.NameInMap("ByteCount")
         private Double byteCount;
 
-        @NameInMap("CloudCity")
+        @com.aliyun.core.annotation.NameInMap("CloudCity")
         private String cloudCity;
 
-        @NameInMap("CloudCountry")
+        @com.aliyun.core.annotation.NameInMap("CloudCountry")
         private String cloudCountry;
 
-        @NameInMap("CloudIp")
+        @com.aliyun.core.annotation.NameInMap("CloudIp")
         private String cloudIp;
 
-        @NameInMap("CloudIsp")
+        @com.aliyun.core.annotation.NameInMap("CloudIsp")
         private String cloudIsp;
 
-        @NameInMap("CloudPort")
+        @com.aliyun.core.annotation.NameInMap("CloudPort")
         private String cloudPort;
 
-        @NameInMap("CloudProduct")
+        @com.aliyun.core.annotation.NameInMap("CloudProduct")
         private String cloudProduct;
 
-        @NameInMap("CloudProvince")
+        @com.aliyun.core.annotation.NameInMap("CloudProvince")
         private String cloudProvince;
 
-        @NameInMap("Direction")
+        @com.aliyun.core.annotation.NameInMap("Direction")
         private String direction;
 
-        @NameInMap("InByteCount")
+        @com.aliyun.core.annotation.NameInMap("InByteCount")
         private Double inByteCount;
 
-        @NameInMap("InOutOrderCount")
+        @com.aliyun.core.annotation.NameInMap("InOutOrderCount")
         private Double inOutOrderCount;
 
-        @NameInMap("InPacketCount")
+        @com.aliyun.core.annotation.NameInMap("InPacketCount")
         private Double inPacketCount;
 
-        @NameInMap("InRetranCount")
+        @com.aliyun.core.annotation.NameInMap("InRetranCount")
         private Double inRetranCount;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("OtherCity")
+        @com.aliyun.core.annotation.NameInMap("OtherCity")
         private String otherCity;
 
-        @NameInMap("OtherCountry")
+        @com.aliyun.core.annotation.NameInMap("OtherCountry")
         private String otherCountry;
 
-        @NameInMap("OtherIp")
+        @com.aliyun.core.annotation.NameInMap("OtherIp")
         private String otherIp;
 
-        @NameInMap("OtherIsp")
+        @com.aliyun.core.annotation.NameInMap("OtherIsp")
         private String otherIsp;
 
-        @NameInMap("OtherPort")
+        @com.aliyun.core.annotation.NameInMap("OtherPort")
         private String otherPort;
 
-        @NameInMap("OtherProduct")
+        @com.aliyun.core.annotation.NameInMap("OtherProduct")
         private String otherProduct;
 
-        @NameInMap("OtherProvince")
+        @com.aliyun.core.annotation.NameInMap("OtherProvince")
         private String otherProvince;
 
-        @NameInMap("OutByteCount")
+        @com.aliyun.core.annotation.NameInMap("OutByteCount")
         private Double outByteCount;
 
-        @NameInMap("OutOrderCount")
+        @com.aliyun.core.annotation.NameInMap("OutOrderCount")
         private Double outOrderCount;
 
-        @NameInMap("OutOutOrderCount")
+        @com.aliyun.core.annotation.NameInMap("OutOutOrderCount")
         private Double outOutOrderCount;
 
-        @NameInMap("OutPacketCount")
+        @com.aliyun.core.annotation.NameInMap("OutPacketCount")
         private Double outPacketCount;
 
-        @NameInMap("OutRetranCount")
+        @com.aliyun.core.annotation.NameInMap("OutRetranCount")
         private Double outRetranCount;
 
-        @NameInMap("PacketCount")
+        @com.aliyun.core.annotation.NameInMap("PacketCount")
         private Double packetCount;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("RetransmitRate")
+        @com.aliyun.core.annotation.NameInMap("RetransmitRate")
         private Double retransmitRate;
 
-        @NameInMap("Rtt")
+        @com.aliyun.core.annotation.NameInMap("Rtt")
         private Double rtt;
 
         private Data(Builder builder) {
@@ -473,7 +472,7 @@ public class GetInternetTupleResponseBody extends TeaModel {
              * The access point of Alibaba Cloud.
              * <p>
              * 
-             * > This parameter is valid only when the value of **InstanceId** is the instance ID of an Anycast elastic IP address (EIP).
+             * >  This parameter is valid only if you set **InstanceId** to the instance ID of an Anycast elastic IP address (EIP).
              */
             public Builder accessRegion(String accessRegion) {
                 this.accessRegion = accessRegion;
@@ -537,7 +536,7 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The product code of the instance to which the local IP address belongs.
+             * The service code of the instance to which the local IP address belongs.
              */
             public Builder cloudProduct(String cloudProduct) {
                 this.cloudProduct = cloudProduct;
@@ -553,11 +552,11 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The direction of the Internet traffic. Valid values:
+             * The direction of Internet traffic. Valid values:
              * <p>
              * 
-             * - **in**: inbound
-             * - **out**: outbound
+             * *   **in**: inbound
+             * *   **out**: outbound
              */
             public Builder direction(String direction) {
                 this.direction = direction;
@@ -565,7 +564,7 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The inbound traffic volume. Unit: bytes.
+             * The inbound traffic volume. Unit: bytes.
              */
             public Builder inByteCount(Double inByteCount) {
                 this.inByteCount = inByteCount;
@@ -597,7 +596,7 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID to which the local IP address belongs.
+             * The ID of the instance to which the local IP address belongs.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -605,7 +604,7 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The remote city. In most cases, this parameter is empty if the value of **OtherCountry** is not China.
+             * The remote city. In most cases, this parameter is empty if you set **OtherCountry** to a country except China.
              */
             public Builder otherCity(String otherCity) {
                 this.otherCity = otherCity;
@@ -645,7 +644,7 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The product code of the instance to which the remote IP address belongs. If the IP address is not in the cloud, this parameter is empty.
+             * The service code of the instance to which the remote IP address belongs. If the IP address is not on the cloud, this parameter is empty.
              */
             public Builder otherProduct(String otherProduct) {
                 this.otherProduct = otherProduct;
@@ -653,7 +652,7 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The remote province. In most cases, this parameter is empty if the value of **OtherCountry** is not China.
+             * The remote province. In most cases, this parameter is empty if you set **OtherCountry** to a country except China.
              */
             public Builder otherProvince(String otherProvince) {
                 this.otherProvince = otherProvince;
@@ -661,7 +660,7 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The outbound traffic volume. Unit: bytes.
+             * The outbound traffic volume. Unit: bytes.
              */
             public Builder outByteCount(Double outByteCount) {
                 this.outByteCount = outByteCount;
@@ -717,7 +716,7 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * RetransmitRate.
+             * The retransmission rate of TCP packets.
              */
             public Builder retransmitRate(Double retransmitRate) {
                 this.retransmitRate = retransmitRate;
@@ -725,7 +724,7 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The round-trip time (RTT). Unit: milliseconds.
+             * The round-trip time (RTT). Unit: milliseconds.
              */
             public Builder rtt(Double rtt) {
                 this.rtt = rtt;

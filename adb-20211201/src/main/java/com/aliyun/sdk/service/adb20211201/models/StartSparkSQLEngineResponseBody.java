@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartSparkSQLEngineResponseBody} extends {@link TeaModel}
  *
  * <p>StartSparkSQLEngineResponseBody</p>
  */
 public class StartSparkSQLEngineResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private StartSparkSQLEngineResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class StartSparkSQLEngineResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class StartSparkSQLEngineResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D65A809F-34CE-4550-9BC1-0ED21ETG380</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class StartSparkSQLEngineResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link StartSparkSQLEngineResponseBody} extends {@link TeaModel}
+     *
+     * <p>StartSparkSQLEngineResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private Data(Builder builder) {
@@ -122,7 +136,10 @@ public class StartSparkSQLEngineResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * The ID of the Spark job.
+             * <p>The ID of the Spark job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s202301xxxx</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -130,7 +147,10 @@ public class StartSparkSQLEngineResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Spark application.
+             * <p>The name of the Spark application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SQLEngine1</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -138,13 +158,16 @@ public class StartSparkSQLEngineResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the Spark SQL engine. Valid values:
-             * <p>
+             * <p>The state of the Spark SQL engine. Valid values:</p>
+             * <ul>
+             * <li>SUBMITTED</li>
+             * <li>STARTING</li>
+             * <li>RUNNING</li>
+             * <li>FAILED</li>
+             * </ul>
              * 
-             * *   SUBMITTED
-             * *   STARTING
-             * *   RUNNING
-             * *   FAILED
+             * <strong>example:</strong>
+             * <p>SUBMITTED</p>
              */
             public Builder state(String state) {
                 this.state = state;

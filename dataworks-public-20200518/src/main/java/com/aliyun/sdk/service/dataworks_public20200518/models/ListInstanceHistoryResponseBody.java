@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceHistoryResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstanceHistoryResponseBody</p>
  */
 public class ListInstanceHistoryResponseBody extends TeaModel {
-    @NameInMap("Instances")
-    private java.util.List < Instances> instances;
+    @com.aliyun.core.annotation.NameInMap("Instances")
+    private java.util.List<Instances> instances;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListInstanceHistoryResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
     /**
      * @return instances
      */
-    public java.util.List < Instances> getInstances() {
+    public java.util.List<Instances> getInstances() {
         return this.instances;
     }
 
@@ -57,34 +62,23 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Instances> instances; 
+        private java.util.List<Instances> instances; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * The status of the node that generates the instance. Valid values:
-         * <p>
-         * 
-         * *   NOT_RUN: The node is not run.
-         * *   WAIT_TIME: The node is waiting for the scheduling time to arrive.
-         * *   WAIT_RESOURCE: The node is waiting for resources.
-         * *   RUNNING: The node is running.
-         * *   CHECKING: Data quality is being checked for the node.
-         * *   CHECKING_CONDITION: Branch conditions are being checked for the node.
-         * *   FAILURE: The node fails to be run.
-         * *   SUCCESS: The node is successfully run.
+         * <p>The instances.</p>
          */
-        public Builder instances(java.util.List < Instances> instances) {
+        public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
             return this;
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>The request ID.</p>
          * 
-         * *   true: The request is successful.
-         * *   false: The request fails.
+         * <strong>example:</strong>
+         * <p>E6F0DBDD-5AD****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -92,7 +86,14 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * The instance list.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -105,56 +106,62 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstanceHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceHistoryResponseBody</p>
+     */
     public static class Instances extends TeaModel {
-        @NameInMap("BeginRunningTime")
+        @com.aliyun.core.annotation.NameInMap("BeginRunningTime")
         private Long beginRunningTime;
 
-        @NameInMap("BeginWaitResTime")
+        @com.aliyun.core.annotation.NameInMap("BeginWaitResTime")
         private Long beginWaitResTime;
 
-        @NameInMap("BeginWaitTimeTime")
+        @com.aliyun.core.annotation.NameInMap("BeginWaitTimeTime")
         private Long beginWaitTimeTime;
 
-        @NameInMap("Bizdate")
+        @com.aliyun.core.annotation.NameInMap("Bizdate")
         private Long bizdate;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("CycTime")
+        @com.aliyun.core.annotation.NameInMap("CycTime")
         private Long cycTime;
 
-        @NameInMap("DagId")
+        @com.aliyun.core.annotation.NameInMap("DagId")
         private Long dagId;
 
-        @NameInMap("DagType")
+        @com.aliyun.core.annotation.NameInMap("DagType")
         private String dagType;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private Long finishTime;
 
-        @NameInMap("InstanceHistoryId")
+        @com.aliyun.core.annotation.NameInMap("InstanceHistoryId")
         private Long instanceHistoryId;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private Long modifyTime;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
         private Instances(Builder builder) {
@@ -324,7 +331,10 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * The time when the running of the node was complete. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the instance started to be run. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1590416703313</p>
              */
             public Builder beginRunningTime(Long beginRunningTime) {
                 this.beginRunningTime = beginRunningTime;
@@ -332,7 +342,10 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The data timestamp of the instance. In most cases, the value is one day before the time when the instance was run.
+             * <p>The time when the instance started to wait for resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1590416703313</p>
              */
             public Builder beginWaitResTime(Long beginWaitResTime) {
                 this.beginWaitResTime = beginWaitResTime;
@@ -340,7 +353,10 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node that generates the instance.
+             * <p>The time when the instance started to wait to be scheduled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1590416703313</p>
              */
             public Builder beginWaitTimeTime(Long beginWaitTimeTime) {
                 this.beginWaitTimeTime = beginWaitTimeTime;
@@ -348,7 +364,10 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node.
+             * <p>The data timestamp of the instance. In most cases, the value is one day before the time when the instance was run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1590336000000</p>
              */
             public Builder bizdate(Long bizdate) {
                 this.bizdate = bizdate;
@@ -356,7 +375,10 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workflow.
+             * <p>The time when the instance was generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1590416703313</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -364,7 +386,10 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance started to be run. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the node started to be run. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1590422400000</p>
              */
             public Builder cycTime(Long cycTime) {
                 this.cycTime = cycTime;
@@ -372,17 +397,10 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the node. Valid values:
-             * <p>
+             * <p>The workflow ID.</p>
              * 
-             * *   NORMAL(0): The node is an auto triggered node. The scheduling system regularly runs the node.
-             * *   MANUAL(1): The node is a manually triggered node. The scheduling system does not regularly run the node.
-             * *   PAUSE(2): The node is a frozen node. The scheduling system regularly runs the node but sets the status of the node to failed when the scheduling system starts to run the node.
-             * *   SKIP(3): The node is a dry-run node. The scheduling system regularly runs the node but sets the status of the node to succeeded when the scheduling system starts to run the node.
-             * *   SKIP_UNCHOOSE(4): The node is an unselected node in a temporary workflow. This type of node exists only in temporary workflows. The scheduling system sets the status of the node to succeeded when the scheduling system starts to run the node.
-             * *   SKIP_CYCLE(5): The node is a node that is scheduled by week or month and is waiting for the scheduling time to arrive. The scheduling system regularly runs the node but sets the status of the node to succeeded when the scheduling system starts to run the node.
-             * *   CONDITION_UNCHOOSE(6): The node is not selected by its ancestor branch node and is run as a dry-run node.
-             * *   REALTIME_DEPRECATED(7): The node has instances that are generated in real time but deprecated. The scheduling system sets the status of the node to succeeded.
+             * <strong>example:</strong>
+             * <p>33845</p>
              */
             public Builder dagId(Long dagId) {
                 this.dagId = dagId;
@@ -390,7 +408,14 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the node was last modified.
+             * <p>Indicates whether the instance is associated with a monitoring rule in Data Quality. Valid values:</p>
+             * <ul>
+             * <li>0: The instance is associated with a monitoring rule in Data Quality.</li>
+             * <li>1: The instance is not associated with a monitoring rule in Data Quality.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder dagType(String dagType) {
                 this.dagType = dagType;
@@ -398,7 +423,10 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was generated.
+             * <p>The error message. This parameter is deprecated. You can call the GetInstanceLog operation to query the error information related to the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>error message</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -406,7 +434,10 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The error message that is returned for the instance. This parameter is deprecated. You can call the GetInstanceLog operation to query the error information related to the node.
+             * <p>The time when the running of the node was complete. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1590416703313</p>
              */
             public Builder finishTime(Long finishTime) {
                 this.finishTime = finishTime;
@@ -414,7 +445,10 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceHistoryId.
+             * <p>The historical record number of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder instanceHistoryId(Long instanceHistoryId) {
                 this.instanceHistoryId = instanceHistoryId;
@@ -422,7 +456,10 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance started to wait for resources.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -430,7 +467,10 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The time when the node was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1590416703313</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -438,7 +478,10 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The historical record number of the instance.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33115</p>
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -446,7 +489,10 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance started to wait to be scheduled.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kzh</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -454,7 +500,20 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the node started to be run. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * <p>The status of the node that generates the instance. Valid values:</p>
+             * <ul>
+             * <li>NOT_RUN: The node is not run.</li>
+             * <li>WAIT_TIME: The node is waiting for the scheduling time to arrive.</li>
+             * <li>WAIT_RESOURCE: The node is waiting for resources.</li>
+             * <li>RUNNING: The node is running.</li>
+             * <li>CHECKING: Data quality is being checked for the node.</li>
+             * <li>CHECKING_CONDITION: Branch conditions are being checked for the node.</li>
+             * <li>FAILURE: The node fails to be run.</li>
+             * <li>SUCCESS: The node is successfully run.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NOT_RUN</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -462,11 +521,20 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instance is associated with a monitoring rule in Data Quality (DQC). Valid values:
-             * <p>
+             * <p>The scheduling type of the node. Valid values:</p>
+             * <ul>
+             * <li>NORMAL(0): The node is an auto triggered node. The scheduling system regularly runs the node.</li>
+             * <li>MANUAL(1): The node is a manually triggered node. The scheduling system does not regularly run the node.</li>
+             * <li>PAUSE(2): The node is a frozen node. The scheduling system regularly runs the node but sets the status of the node to failed when the scheduling system starts to run the node.</li>
+             * <li>SKIP(3): The node is a dry-run node. The scheduling system regularly runs the node but sets the status of the node to successful when the scheduling system starts to run the node.</li>
+             * <li>SKIP_UNCHOOSE(4): The node is an unselected node in a temporary workflow. This type of node exists only in temporary workflows. The scheduling system sets the status of the node to successful when the scheduling system starts to run the node.</li>
+             * <li>SKIP_CYCLE(5): The node is a node that is scheduled by the week or month and is waiting for the scheduling time to arrive. The scheduling system regularly runs the node but sets the status of the node to successful when the scheduling system starts to run the node.</li>
+             * <li>CONDITION_UNCHOOSE(6): The node is not selected by its ancestor branch node and is run as a dry-run node.</li>
+             * <li>REALTIME_DEPRECATED(7): The node has instances that are generated in real time but deprecated. The scheduling system sets the status of the node to successful.</li>
+             * </ul>
              * 
-             * *   0: The instance is associated with a monitoring rule in Data Quality.
-             * *   1: The instance is not associated with a monitoring rule in Data Quality.
+             * <strong>example:</strong>
+             * <p>NORMAL(0)</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

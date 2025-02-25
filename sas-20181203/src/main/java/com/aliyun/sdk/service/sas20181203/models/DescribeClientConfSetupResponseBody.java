@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClientConfSetupResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeClientConfSetupResponseBody</p>
  */
 public class DescribeClientConfSetupResponseBody extends TeaModel {
-    @NameInMap("ClientConf")
+    @com.aliyun.core.annotation.NameInMap("ClientConf")
     private ClientConf clientConf;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeClientConfSetupResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeClientConfSetupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The configurations of the Security Center agent.
+         * <p>The configurations of the Security Center agent.</p>
          */
         public Builder clientConf(ClientConf clientConf) {
             this.clientConf = clientConf;
@@ -58,7 +63,10 @@ public class DescribeClientConfSetupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>151F6EB6-D5F3-417A-AF7B-4D84975D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class DescribeClientConfSetupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClientConfSetupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClientConfSetupResponseBody</p>
+     */
     public static class ClientConf extends TeaModel {
-        @NameInMap("Config")
+        @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
 
-        @NameInMap("StrategyTag")
+        @com.aliyun.core.annotation.NameInMap("StrategyTag")
         private String strategyTag;
 
-        @NameInMap("StrategyTagValue")
+        @com.aliyun.core.annotation.NameInMap("StrategyTagValue")
         private String strategyTagValue;
 
         private ClientConf(Builder builder) {
@@ -122,7 +136,10 @@ public class DescribeClientConfSetupResponseBody extends TeaModel {
             private String strategyTagValue; 
 
             /**
-             * The configurations of the usage for the Security Center agent.
+             * <p>The configurations of the usage for the Security Center agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;mem&quot;:&quot;200&quot;,&quot;cpu&quot;:&quot;10&quot;,&quot;cpu_all&quot;:&quot;0&quot;}</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -130,7 +147,10 @@ public class DescribeClientConfSetupResponseBody extends TeaModel {
             }
 
             /**
-             * The tag that is added to the configuration.
+             * <p>The tag that is added to the configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>machineResource</p>
              */
             public Builder strategyTag(String strategyTag) {
                 this.strategyTag = strategyTag;
@@ -138,12 +158,15 @@ public class DescribeClientConfSetupResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag. Valid values:
-             * <p>
+             * <p>The value of the tag. Valid values:</p>
+             * <ul>
+             * <li>major</li>
+             * <li>advanced</li>
+             * <li>basic</li>
+             * </ul>
              * 
-             * *   major
-             * *   advanced
-             * *   basic
+             * <strong>example:</strong>
+             * <p>major</p>
              */
             public Builder strategyTagValue(String strategyTagValue) {
                 this.strategyTagValue = strategyTagValue;

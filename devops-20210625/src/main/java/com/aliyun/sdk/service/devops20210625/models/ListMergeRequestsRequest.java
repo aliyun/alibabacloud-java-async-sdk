@@ -1,76 +1,96 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMergeRequestsRequest} extends {@link RequestModel}
  *
  * <p>ListMergeRequestsRequest</p>
  */
 public class ListMergeRequestsRequest extends Request {
-    @Query
-    @NameInMap("accessToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("accessToken")
     private String accessToken;
 
-    @Query
-    @NameInMap("authorIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("authorIds")
     private String authorIds;
 
-    @Query
-    @NameInMap("filter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("createdAfter")
+    private String createdAfter;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("createdBefore")
+    private String createdBefore;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("filter")
     private String filter;
 
-    @Query
-    @NameInMap("groupIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("groupIds")
     private String groupIds;
 
-    @Query
-    @NameInMap("orderBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("labelIds")
+    private String labelIds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("orderBy")
     private String orderBy;
 
-    @Query
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Query
-    @NameInMap("page")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page")
     private Long page;
 
-    @Query
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("projectIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("projectIds")
     private String projectIds;
 
-    @Query
-    @NameInMap("reviewerIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("reviewerIds")
     private String reviewerIds;
 
-    @Query
-    @NameInMap("search")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("search")
     private String search;
 
-    @Query
-    @NameInMap("sort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("sort")
     private String sort;
 
-    @Query
-    @NameInMap("state")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("state")
     private String state;
 
     private ListMergeRequestsRequest(Builder builder) {
         super(builder);
         this.accessToken = builder.accessToken;
         this.authorIds = builder.authorIds;
+        this.createdAfter = builder.createdAfter;
+        this.createdBefore = builder.createdBefore;
         this.filter = builder.filter;
         this.groupIds = builder.groupIds;
+        this.labelIds = builder.labelIds;
         this.orderBy = builder.orderBy;
         this.organizationId = builder.organizationId;
         this.page = builder.page;
@@ -110,6 +130,20 @@ public class ListMergeRequestsRequest extends Request {
     }
 
     /**
+     * @return createdAfter
+     */
+    public String getCreatedAfter() {
+        return this.createdAfter;
+    }
+
+    /**
+     * @return createdBefore
+     */
+    public String getCreatedBefore() {
+        return this.createdBefore;
+    }
+
+    /**
      * @return filter
      */
     public String getFilter() {
@@ -121,6 +155,13 @@ public class ListMergeRequestsRequest extends Request {
      */
     public String getGroupIds() {
         return this.groupIds;
+    }
+
+    /**
+     * @return labelIds
+     */
+    public String getLabelIds() {
+        return this.labelIds;
     }
 
     /**
@@ -189,8 +230,11 @@ public class ListMergeRequestsRequest extends Request {
     public static final class Builder extends Request.Builder<ListMergeRequestsRequest, Builder> {
         private String accessToken; 
         private String authorIds; 
+        private String createdAfter; 
+        private String createdBefore; 
         private String filter; 
         private String groupIds; 
+        private String labelIds; 
         private String orderBy; 
         private String organizationId; 
         private Long page; 
@@ -209,8 +253,11 @@ public class ListMergeRequestsRequest extends Request {
             super(request);
             this.accessToken = request.accessToken;
             this.authorIds = request.authorIds;
+            this.createdAfter = request.createdAfter;
+            this.createdBefore = request.createdBefore;
             this.filter = request.filter;
             this.groupIds = request.groupIds;
+            this.labelIds = request.labelIds;
             this.orderBy = request.orderBy;
             this.organizationId = request.organizationId;
             this.page = request.page;
@@ -241,6 +288,24 @@ public class ListMergeRequestsRequest extends Request {
         }
 
         /**
+         * createdAfter.
+         */
+        public Builder createdAfter(String createdAfter) {
+            this.putQueryParameter("createdAfter", createdAfter);
+            this.createdAfter = createdAfter;
+            return this;
+        }
+
+        /**
+         * createdBefore.
+         */
+        public Builder createdBefore(String createdBefore) {
+            this.putQueryParameter("createdBefore", createdBefore);
+            this.createdBefore = createdBefore;
+            return this;
+        }
+
+        /**
          * filter.
          */
         public Builder filter(String filter) {
@@ -259,6 +324,15 @@ public class ListMergeRequestsRequest extends Request {
         }
 
         /**
+         * labelIds.
+         */
+        public Builder labelIds(String labelIds) {
+            this.putQueryParameter("labelIds", labelIds);
+            this.labelIds = labelIds;
+            return this;
+        }
+
+        /**
          * orderBy.
          */
         public Builder orderBy(String orderBy) {
@@ -268,7 +342,10 @@ public class ListMergeRequestsRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60de7a6852743a5162b5f957</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);

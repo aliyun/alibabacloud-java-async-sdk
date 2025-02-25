@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDashboardsByNameResponseBody} extends {@link TeaModel}
  *
  * <p>ListDashboardsByNameResponseBody</p>
  */
 public class ListDashboardsByNameResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListDashboardsByNameResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class ListDashboardsByNameResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 状态码。说明 200表示成功。
+         * <p>Status Code. Description 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +90,10 @@ public class ListDashboardsByNameResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned struct.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;name&quot;:&quot;Edas Ingress Url Analysis&quot;,&quot;type&quot;:&quot;edas-ingress-url-analysis&quot;,&quot;url&quot;:&quot;<a href="https://g.console.aliyun.com/d/1036052989950239-11040375-66-3/edas-ingress-url-analysis?var-clusterId=29ksa&var-regionId=cn-hangzhou%22%7D%5D">https://g.console.aliyun.com/d/1036052989950239-11040375-66-3/edas-ingress-url-analysis?var-clusterId=29ksa&amp;var-regionId=cn-hangzhou&quot;}]</a></p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -90,7 +101,10 @@ public class ListDashboardsByNameResponseBody extends TeaModel {
         }
 
         /**
-         * 返回结果的提示信息。
+         * <p>Returns a hint message for the result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +112,10 @@ public class ListDashboardsByNameResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request, You can use the ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2983BEF7-4A0D-47A2-94A2-8E9C5E63****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

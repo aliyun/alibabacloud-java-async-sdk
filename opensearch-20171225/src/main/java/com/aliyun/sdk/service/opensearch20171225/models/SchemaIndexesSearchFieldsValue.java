@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SchemaIndexesSearchFieldsValue</p>
  */
 public class SchemaIndexesSearchFieldsValue extends TeaModel {
-    @NameInMap("analyzer")
+    @com.aliyun.core.annotation.NameInMap("analyzer")
     private String analyzer;
 
-    @NameInMap("analyzerType")
+    @com.aliyun.core.annotation.NameInMap("analyzerType")
     private String analyzerType;
 
-    @NameInMap("analyzerGeneration")
+    @com.aliyun.core.annotation.NameInMap("analyzerGeneration")
     private String analyzerGeneration;
 
-    @NameInMap("fields")
+    @com.aliyun.core.annotation.NameInMap("fields")
     private java.util.List < String > fields;
 
-    @NameInMap("label")
+    @com.aliyun.core.annotation.NameInMap("label")
     private String label;
 
     private SchemaIndexesSearchFieldsValue(Builder builder) {

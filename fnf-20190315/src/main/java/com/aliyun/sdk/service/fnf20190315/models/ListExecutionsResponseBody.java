@@ -62,7 +62,7 @@ public class ListExecutionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The queried executions.
+         * The information about executions.
          */
         public Builder executions(java.util.List < Executions> executions) {
             this.executions = executions;
@@ -234,7 +234,7 @@ public class ListExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The execution result, which is in the JSON format.
+             * The output of the execution, which is in the JSON format
              */
             public Builder output(String output) {
                 this.output = output;
@@ -250,7 +250,7 @@ public class ListExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the execution.
+             * The status of the execution.
              */
             public Builder status(String status) {
                 this.status = status;

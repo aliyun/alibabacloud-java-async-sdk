@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,52 +11,52 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>App</p>
  */
 public class App extends TeaModel {
-    @NameInMap("autoSwitch")
+    @com.aliyun.core.annotation.NameInMap("autoSwitch")
     private Boolean autoSwitch;
 
-    @NameInMap("cluster")
+    @com.aliyun.core.annotation.NameInMap("cluster")
     private Cluster cluster;
 
-    @NameInMap("dataSources")
+    @com.aliyun.core.annotation.NameInMap("dataSources")
     private java.util.List < DataSource > dataSources;
 
-    @NameInMap("description")
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @NameInMap("domain")
+    @com.aliyun.core.annotation.NameInMap("domain")
     private Domain domain;
 
-    @NameInMap("fetchFields")
+    @com.aliyun.core.annotation.NameInMap("fetchFields")
     private java.util.List < String > fetchFields;
 
-    @NameInMap("firstRanks")
+    @com.aliyun.core.annotation.NameInMap("firstRanks")
     private java.util.List < FirstRank > firstRanks;
 
-    @NameInMap("networkType")
+    @com.aliyun.core.annotation.NameInMap("networkType")
     private String networkType;
 
-    @NameInMap("queryProcessors")
+    @com.aliyun.core.annotation.NameInMap("queryProcessors")
     private java.util.List < QueryProcessor > queryProcessors;
 
-    @NameInMap("quota")
+    @com.aliyun.core.annotation.NameInMap("quota")
     private Quota quota;
 
-    @NameInMap("realtimeShared")
+    @com.aliyun.core.annotation.NameInMap("realtimeShared")
     private Boolean realtimeShared;
 
-    @NameInMap("schema")
+    @com.aliyun.core.annotation.NameInMap("schema")
     private Schema schema;
 
-    @NameInMap("schemas")
+    @com.aliyun.core.annotation.NameInMap("schemas")
     private java.util.List < Schema > schemas;
 
-    @NameInMap("secondRanks")
+    @com.aliyun.core.annotation.NameInMap("secondRanks")
     private java.util.List < SecondRank > secondRanks;
 
-    @NameInMap("summaries")
+    @com.aliyun.core.annotation.NameInMap("summaries")
     private java.util.List < Summary > summaries;
 
-    @NameInMap("type")
+    @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
     private App(Builder builder) {
@@ -352,10 +351,10 @@ public class App extends TeaModel {
     } 
 
     public static class Cluster extends TeaModel {
-        @NameInMap("maxQueryClauseLength")
+        @com.aliyun.core.annotation.NameInMap("maxQueryClauseLength")
         private Integer maxQueryClauseLength;
 
-        @NameInMap("maxTimeoutMS")
+        @com.aliyun.core.annotation.NameInMap("maxTimeoutMS")
         private Integer maxTimeoutMS;
 
         private Cluster(Builder builder) {

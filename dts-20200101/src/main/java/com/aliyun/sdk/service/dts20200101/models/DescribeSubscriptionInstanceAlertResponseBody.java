@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSubscriptionInstanceAlertResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSubscriptionInstanceAlertResponseBody</p>
  */
 public class DescribeSubscriptionInstanceAlertResponseBody extends TeaModel {
-    @NameInMap("DelayAlertPhone")
+    @com.aliyun.core.annotation.NameInMap("DelayAlertPhone")
     private String delayAlertPhone;
 
-    @NameInMap("DelayAlertStatus")
+    @com.aliyun.core.annotation.NameInMap("DelayAlertStatus")
     private String delayAlertStatus;
 
-    @NameInMap("DelayOverSeconds")
+    @com.aliyun.core.annotation.NameInMap("DelayOverSeconds")
     private String delayOverSeconds;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("ErrorAlertPhone")
+    @com.aliyun.core.annotation.NameInMap("ErrorAlertPhone")
     private String errorAlertPhone;
 
-    @NameInMap("ErrorAlertStatus")
+    @com.aliyun.core.annotation.NameInMap("ErrorAlertStatus")
     private String errorAlertStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubscriptionInstanceID")
+    @com.aliyun.core.annotation.NameInMap("SubscriptionInstanceID")
     private String subscriptionInstanceID;
 
-    @NameInMap("SubscriptionInstanceName")
+    @com.aliyun.core.annotation.NameInMap("SubscriptionInstanceName")
     private String subscriptionInstanceName;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private DescribeSubscriptionInstanceAlertResponseBody(Builder builder) {
@@ -158,7 +163,10 @@ public class DescribeSubscriptionInstanceAlertResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The mobile phone numbers that receive latency-related alerts.
+         * <p>The mobile phone numbers that receive latency-related alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1361234****,1371234****</p>
          */
         public Builder delayAlertPhone(String delayAlertPhone) {
             this.delayAlertPhone = delayAlertPhone;
@@ -166,11 +174,14 @@ public class DescribeSubscriptionInstanceAlertResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether task latency is monitored. Valid values:
-         * <p>
+         * <p>Indicates whether task latency is monitored. Valid values:</p>
+         * <ul>
+         * <li><strong>enable</strong>: yes</li>
+         * <li><strong>disable</strong>: no</li>
+         * </ul>
          * 
-         * *   **enable**: yes
-         * *   **disable**: no
+         * <strong>example:</strong>
+         * <p>enable</p>
          */
         public Builder delayAlertStatus(String delayAlertStatus) {
             this.delayAlertStatus = delayAlertStatus;
@@ -178,7 +189,10 @@ public class DescribeSubscriptionInstanceAlertResponseBody extends TeaModel {
         }
 
         /**
-         * The threshold for triggering latency alerts. The unit is seconds and the value is an integer. The recommended value is 10 seconds.
+         * <p>The threshold for triggering latency alerts. The unit is seconds and the value is an integer. The recommended value is 10 seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder delayOverSeconds(String delayOverSeconds) {
             this.delayOverSeconds = delayOverSeconds;
@@ -186,7 +200,10 @@ public class DescribeSubscriptionInstanceAlertResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the call failed.
+         * <p>The error code returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -194,7 +211,10 @@ public class DescribeSubscriptionInstanceAlertResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the call failed.
+         * <p>The error message returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request processing has failed due to some unknown error.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -202,7 +222,10 @@ public class DescribeSubscriptionInstanceAlertResponseBody extends TeaModel {
         }
 
         /**
-         * The mobile phone numbers that receive status-related alerts.
+         * <p>The mobile phone numbers that receive status-related alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1361234****,1371234****</p>
          */
         public Builder errorAlertPhone(String errorAlertPhone) {
             this.errorAlertPhone = errorAlertPhone;
@@ -210,11 +233,14 @@ public class DescribeSubscriptionInstanceAlertResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether task status is monitored. Valid values:
-         * <p>
+         * <p>Indicates whether task status is monitored. Valid values:</p>
+         * <ul>
+         * <li><strong>enable</strong>: yes</li>
+         * <li><strong>disable</strong>: no</li>
+         * </ul>
          * 
-         * *   **enable**: yes
-         * *   **disable**: no
+         * <strong>example:</strong>
+         * <p>enable</p>
          */
         public Builder errorAlertStatus(String errorAlertStatus) {
             this.errorAlertStatus = errorAlertStatus;
@@ -222,7 +248,10 @@ public class DescribeSubscriptionInstanceAlertResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210ec2e116055198849072222d****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,7 +259,10 @@ public class DescribeSubscriptionInstanceAlertResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the change tracking instance.
+         * <p>The ID of the change tracking instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsl8zl9ek6292****</p>
          */
         public Builder subscriptionInstanceID(String subscriptionInstanceID) {
             this.subscriptionInstanceID = subscriptionInstanceID;
@@ -238,7 +270,10 @@ public class DescribeSubscriptionInstanceAlertResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the change tracking instance.
+         * <p>The name of the change tracking instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder subscriptionInstanceName(String subscriptionInstanceName) {
             this.subscriptionInstanceName = subscriptionInstanceName;
@@ -246,7 +281,10 @@ public class DescribeSubscriptionInstanceAlertResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

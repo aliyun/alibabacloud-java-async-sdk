@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TransferClusterBackupResponseBody} extends {@link TeaModel}
  *
  * <p>TransferClusterBackupResponseBody</p>
  */
 public class TransferClusterBackupResponseBody extends TeaModel {
-    @NameInMap("AlreadyDone")
+    @com.aliyun.core.annotation.NameInMap("AlreadyDone")
     private String alreadyDone;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private TransferClusterBackupResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class TransferClusterBackupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the instance is switched to the cluster backup mode. If the value of this parameter is **1**, the instance is switched to the cluster backup mode.
+         * <p>Indicates whether the instance is switched to the cluster backup mode. If the value of this parameter is <strong>1</strong>, the instance is switched to the cluster backup mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder alreadyDone(String alreadyDone) {
             this.alreadyDone = alreadyDone;
@@ -58,7 +66,10 @@ public class TransferClusterBackupResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3C4A2494-85C4-45C5-93CF-548DB3375193</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

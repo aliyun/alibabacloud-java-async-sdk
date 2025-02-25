@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTagResourcesResponseBody</p>
  */
 public class ListTagResourcesResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TagResources")
+    @com.aliyun.core.annotation.NameInMap("TagResources")
     private TagResources tagResources;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListTagResourcesResponseBody(Builder builder) {
@@ -94,7 +93,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * An array of information about the resources to which tags are added.
+         * The information about the resources to which tags are added.
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -116,16 +115,16 @@ public class ListTagResourcesResponseBody extends TeaModel {
     } 
 
     public static class TagResource extends TeaModel {
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private TagResource(Builder builder) {
@@ -189,11 +188,11 @@ public class ListTagResourcesResponseBody extends TeaModel {
              * The type of the resource.
              * <p>
              * 
-             * *   **accelerator:** a standard GA instance.
-             * *   **basicaccelerator:** a basic GA instance.
-             * *   **bandwidthpackage:** a bandwidth plan.
-             * *   **acl:** an ACL.
-             * *   **endpointgroup:** an EndpointGroup.
+             * *   **accelerator**: a standard GA instance
+             * *   **basicaccelerator**: a basic GA instance
+             * *   **bandwidthpackage**: a bandwidth plan
+             * *   **acl**: an ACL
+             * *   **endpointgroup**: an endpoint group
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -201,7 +200,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the tag.
+             * The tag key.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -209,7 +208,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * The tag value.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -224,7 +223,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     }
     public static class TagResources extends TeaModel {
-        @NameInMap("TagResource")
+        @com.aliyun.core.annotation.NameInMap("TagResource")
         private java.util.List < TagResource> tagResource;
 
         private TagResources(Builder builder) {

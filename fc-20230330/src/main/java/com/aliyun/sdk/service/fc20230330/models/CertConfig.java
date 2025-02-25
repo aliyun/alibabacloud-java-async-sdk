@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CertConfig} extends {@link TeaModel}
  *
  * <p>CertConfig</p>
  */
 public class CertConfig extends TeaModel {
-    @NameInMap("certName")
-    @Validation(required = true, maxLength = 128, minLength = 1)
+    @com.aliyun.core.annotation.NameInMap("certName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128, minLength = 1)
     private String certName;
 
-    @NameInMap("certificate")
-    @Validation(required = true, maxLength = 20480)
+    @com.aliyun.core.annotation.NameInMap("certificate")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 20480)
     private String certificate;
 
-    @NameInMap("privateKey")
-    @Validation(required = true, maxLength = 4096)
+    @com.aliyun.core.annotation.NameInMap("privateKey")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 4096)
     private String privateKey;
 
     private CertConfig(Builder builder) {
@@ -65,7 +65,10 @@ public class CertConfig extends TeaModel {
         private String privateKey; 
 
         /**
-         * certName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-cert</p>
          */
         public Builder certName(String certName) {
             this.certName = certName;
@@ -73,7 +76,10 @@ public class CertConfig extends TeaModel {
         }
 
         /**
-         * certificate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PEM format</p>
          */
         public Builder certificate(String certificate) {
             this.certificate = certificate;
@@ -81,7 +87,10 @@ public class CertConfig extends TeaModel {
         }
 
         /**
-         * privateKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PEM format</p>
          */
         public Builder privateKey(String privateKey) {
             this.privateKey = privateKey;

@@ -1,247 +1,304 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateApplicationRequest} extends {@link RequestModel}
  *
  * <p>CreateApplicationRequest</p>
  */
 public class CreateApplicationRequest extends Request {
-    @Query
-    @NameInMap("AcrAssumeRoleArn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcrAssumeRoleArn")
     private String acrAssumeRoleArn;
 
-    @Body
-    @NameInMap("AcrInstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AcrInstanceId")
     private String acrInstanceId;
 
-    @Query
-    @NameInMap("AppDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppDescription")
     private String appDescription;
 
-    @Query
-    @NameInMap("AppName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
-    @Body
-    @NameInMap("AssociateEip")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppSource")
+    private String appSource;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AssociateEip")
     private Boolean associateEip;
 
-    @Query
-    @NameInMap("AutoConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoConfig")
     private Boolean autoConfig;
 
-    @Query
-    @NameInMap("Command")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BaseAppId")
+    private String baseAppId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Command")
     private String command;
 
-    @Query
-    @NameInMap("CommandArgs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommandArgs")
     private String commandArgs;
 
-    @Body
-    @NameInMap("ConfigMapMountDesc")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConfigMapMountDesc")
     private String configMapMountDesc;
 
-    @Query
-    @NameInMap("Cpu")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Cpu")
     private Integer cpu;
 
-    @Query
-    @NameInMap("CustomHostAlias")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomHostAlias")
     private String customHostAlias;
 
-    @Query
-    @NameInMap("Deploy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomImageNetworkType")
+    private String customImageNetworkType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Deploy")
     private Boolean deploy;
 
-    @Query
-    @NameInMap("EdasContainerVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Dotnet")
+    private String dotnet;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EdasContainerVersion")
     private String edasContainerVersion;
 
-    @Query
-    @NameInMap("EnableEbpf")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableCpuBurst")
+    private Boolean enableCpuBurst;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableEbpf")
     private String enableEbpf;
 
-    @Query
-    @NameInMap("Envs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableNewArms")
+    private Boolean enableNewArms;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableSidecarResourceIsolated")
+    private Boolean enableSidecarResourceIsolated;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Envs")
     private String envs;
 
-    @Query
-    @NameInMap("ImagePullSecrets")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImagePullSecrets")
     private String imagePullSecrets;
 
-    @Query
-    @NameInMap("ImageUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageUrl")
     private String imageUrl;
 
-    @Query
-    @NameInMap("JarStartArgs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JarStartArgs")
     private String jarStartArgs;
 
-    @Query
-    @NameInMap("JarStartOptions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JarStartOptions")
     private String jarStartOptions;
 
-    @Query
-    @NameInMap("Jdk")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Jdk")
     private String jdk;
 
-    @Query
-    @NameInMap("KafkaConfigs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KafkaConfigs")
     private String kafkaConfigs;
 
-    @Query
-    @NameInMap("Liveness")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Liveness")
     private String liveness;
 
-    @Query
-    @NameInMap("Memory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Memory")
     private Integer memory;
 
-    @Query
-    @NameInMap("MicroRegistration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MicroRegistration")
     private String microRegistration;
 
-    @Query
-    @NameInMap("MountDesc")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MicroRegistrationConfig")
+    private String microRegistrationConfig;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MountDesc")
     private String mountDesc;
 
-    @Query
-    @NameInMap("MountHost")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MountHost")
     private String mountHost;
 
-    @Query
-    @NameInMap("NamespaceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespaceId")
     private String namespaceId;
 
-    @Query
-    @NameInMap("NasConfigs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NasConfigs")
     private String nasConfigs;
 
-    @Query
-    @NameInMap("NasId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NasId")
     private String nasId;
 
-    @Body
-    @NameInMap("OssAkId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OidcRoleName")
+    private String oidcRoleName;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OssAkId")
     private String ossAkId;
 
-    @Body
-    @NameInMap("OssAkSecret")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OssAkSecret")
     private String ossAkSecret;
 
-    @Body
-    @NameInMap("OssMountDescs")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OssMountDescs")
     private String ossMountDescs;
 
-    @Query
-    @NameInMap("PackageType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PackageType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String packageType;
 
-    @Query
-    @NameInMap("PackageUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PackageUrl")
     private String packageUrl;
 
-    @Query
-    @NameInMap("PackageVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PackageVersion")
     private String packageVersion;
 
-    @Body
-    @NameInMap("Php")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Php")
     private String php;
 
-    @Query
-    @NameInMap("PhpArmsConfigLocation")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhpArmsConfigLocation")
     private String phpArmsConfigLocation;
 
-    @Body
-    @NameInMap("PhpConfig")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PhpConfig")
     private String phpConfig;
 
-    @Query
-    @NameInMap("PhpConfigLocation")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhpConfigLocation")
     private String phpConfigLocation;
 
-    @Query
-    @NameInMap("PostStart")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PostStart")
     private String postStart;
 
-    @Query
-    @NameInMap("PreStop")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreStop")
     private String preStop;
 
-    @Query
-    @NameInMap("ProgrammingLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProgrammingLanguage")
     private String programmingLanguage;
 
-    @Query
-    @NameInMap("PvtzDiscoverySvc")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PvtzDiscoverySvc")
     private String pvtzDiscoverySvc;
 
-    @Query
-    @NameInMap("Python")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Python")
     private String python;
 
-    @Query
-    @NameInMap("PythonModules")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PythonModules")
     private String pythonModules;
 
-    @Query
-    @NameInMap("Readiness")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Readiness")
     private String readiness;
 
-    @Query
-    @NameInMap("Replicas")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Replicas")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer replicas;
 
-    @Query
-    @NameInMap("SaeVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    private String resourceType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SaeVersion")
     private String saeVersion;
 
-    @Query
-    @NameInMap("SecurityGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecretMountDesc")
+    private String secretMountDesc;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
     private String securityGroupId;
 
-    @Query
-    @NameInMap("SlsConfigs")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceTags")
+    private String serviceTags;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SidecarContainersConfig")
+    private java.util.List<SidecarContainerConfig> sidecarContainersConfig;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SlsConfigs")
     private String slsConfigs;
 
-    @Query
-    @NameInMap("TerminationGracePeriodSeconds")
-    @Validation(maximum = 6000)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TerminationGracePeriodSeconds")
+    @com.aliyun.core.annotation.Validation(maximum = 6000)
     private Integer terminationGracePeriodSeconds;
 
-    @Query
-    @NameInMap("Timezone")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Timezone")
     private String timezone;
 
-    @Query
-    @NameInMap("TomcatConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TomcatConfig")
     private String tomcatConfig;
 
-    @Query
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @Query
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
-    @Query
-    @NameInMap("WarStartOptions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WarStartOptions")
     private String warStartOptions;
 
-    @Query
-    @NameInMap("WebContainer")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WebContainer")
     private String webContainer;
 
     private CreateApplicationRequest(Builder builder) {
@@ -250,16 +307,23 @@ public class CreateApplicationRequest extends Request {
         this.acrInstanceId = builder.acrInstanceId;
         this.appDescription = builder.appDescription;
         this.appName = builder.appName;
+        this.appSource = builder.appSource;
         this.associateEip = builder.associateEip;
         this.autoConfig = builder.autoConfig;
+        this.baseAppId = builder.baseAppId;
         this.command = builder.command;
         this.commandArgs = builder.commandArgs;
         this.configMapMountDesc = builder.configMapMountDesc;
         this.cpu = builder.cpu;
         this.customHostAlias = builder.customHostAlias;
+        this.customImageNetworkType = builder.customImageNetworkType;
         this.deploy = builder.deploy;
+        this.dotnet = builder.dotnet;
         this.edasContainerVersion = builder.edasContainerVersion;
+        this.enableCpuBurst = builder.enableCpuBurst;
         this.enableEbpf = builder.enableEbpf;
+        this.enableNewArms = builder.enableNewArms;
+        this.enableSidecarResourceIsolated = builder.enableSidecarResourceIsolated;
         this.envs = builder.envs;
         this.imagePullSecrets = builder.imagePullSecrets;
         this.imageUrl = builder.imageUrl;
@@ -270,11 +334,13 @@ public class CreateApplicationRequest extends Request {
         this.liveness = builder.liveness;
         this.memory = builder.memory;
         this.microRegistration = builder.microRegistration;
+        this.microRegistrationConfig = builder.microRegistrationConfig;
         this.mountDesc = builder.mountDesc;
         this.mountHost = builder.mountHost;
         this.namespaceId = builder.namespaceId;
         this.nasConfigs = builder.nasConfigs;
         this.nasId = builder.nasId;
+        this.oidcRoleName = builder.oidcRoleName;
         this.ossAkId = builder.ossAkId;
         this.ossAkSecret = builder.ossAkSecret;
         this.ossMountDescs = builder.ossMountDescs;
@@ -293,8 +359,12 @@ public class CreateApplicationRequest extends Request {
         this.pythonModules = builder.pythonModules;
         this.readiness = builder.readiness;
         this.replicas = builder.replicas;
+        this.resourceType = builder.resourceType;
         this.saeVersion = builder.saeVersion;
+        this.secretMountDesc = builder.secretMountDesc;
         this.securityGroupId = builder.securityGroupId;
+        this.serviceTags = builder.serviceTags;
+        this.sidecarContainersConfig = builder.sidecarContainersConfig;
         this.slsConfigs = builder.slsConfigs;
         this.terminationGracePeriodSeconds = builder.terminationGracePeriodSeconds;
         this.timezone = builder.timezone;
@@ -347,6 +417,13 @@ public class CreateApplicationRequest extends Request {
     }
 
     /**
+     * @return appSource
+     */
+    public String getAppSource() {
+        return this.appSource;
+    }
+
+    /**
      * @return associateEip
      */
     public Boolean getAssociateEip() {
@@ -358,6 +435,13 @@ public class CreateApplicationRequest extends Request {
      */
     public Boolean getAutoConfig() {
         return this.autoConfig;
+    }
+
+    /**
+     * @return baseAppId
+     */
+    public String getBaseAppId() {
+        return this.baseAppId;
     }
 
     /**
@@ -396,10 +480,24 @@ public class CreateApplicationRequest extends Request {
     }
 
     /**
+     * @return customImageNetworkType
+     */
+    public String getCustomImageNetworkType() {
+        return this.customImageNetworkType;
+    }
+
+    /**
      * @return deploy
      */
     public Boolean getDeploy() {
         return this.deploy;
+    }
+
+    /**
+     * @return dotnet
+     */
+    public String getDotnet() {
+        return this.dotnet;
     }
 
     /**
@@ -410,10 +508,31 @@ public class CreateApplicationRequest extends Request {
     }
 
     /**
+     * @return enableCpuBurst
+     */
+    public Boolean getEnableCpuBurst() {
+        return this.enableCpuBurst;
+    }
+
+    /**
      * @return enableEbpf
      */
     public String getEnableEbpf() {
         return this.enableEbpf;
+    }
+
+    /**
+     * @return enableNewArms
+     */
+    public Boolean getEnableNewArms() {
+        return this.enableNewArms;
+    }
+
+    /**
+     * @return enableSidecarResourceIsolated
+     */
+    public Boolean getEnableSidecarResourceIsolated() {
+        return this.enableSidecarResourceIsolated;
     }
 
     /**
@@ -487,6 +606,13 @@ public class CreateApplicationRequest extends Request {
     }
 
     /**
+     * @return microRegistrationConfig
+     */
+    public String getMicroRegistrationConfig() {
+        return this.microRegistrationConfig;
+    }
+
+    /**
      * @return mountDesc
      */
     public String getMountDesc() {
@@ -519,6 +645,13 @@ public class CreateApplicationRequest extends Request {
      */
     public String getNasId() {
         return this.nasId;
+    }
+
+    /**
+     * @return oidcRoleName
+     */
+    public String getOidcRoleName() {
+        return this.oidcRoleName;
     }
 
     /**
@@ -648,6 +781,13 @@ public class CreateApplicationRequest extends Request {
     }
 
     /**
+     * @return resourceType
+     */
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    /**
      * @return saeVersion
      */
     public String getSaeVersion() {
@@ -655,10 +795,31 @@ public class CreateApplicationRequest extends Request {
     }
 
     /**
+     * @return secretMountDesc
+     */
+    public String getSecretMountDesc() {
+        return this.secretMountDesc;
+    }
+
+    /**
      * @return securityGroupId
      */
     public String getSecurityGroupId() {
         return this.securityGroupId;
+    }
+
+    /**
+     * @return serviceTags
+     */
+    public String getServiceTags() {
+        return this.serviceTags;
+    }
+
+    /**
+     * @return sidecarContainersConfig
+     */
+    public java.util.List<SidecarContainerConfig> getSidecarContainersConfig() {
+        return this.sidecarContainersConfig;
     }
 
     /**
@@ -722,16 +883,23 @@ public class CreateApplicationRequest extends Request {
         private String acrInstanceId; 
         private String appDescription; 
         private String appName; 
+        private String appSource; 
         private Boolean associateEip; 
         private Boolean autoConfig; 
+        private String baseAppId; 
         private String command; 
         private String commandArgs; 
         private String configMapMountDesc; 
         private Integer cpu; 
         private String customHostAlias; 
+        private String customImageNetworkType; 
         private Boolean deploy; 
+        private String dotnet; 
         private String edasContainerVersion; 
+        private Boolean enableCpuBurst; 
         private String enableEbpf; 
+        private Boolean enableNewArms; 
+        private Boolean enableSidecarResourceIsolated; 
         private String envs; 
         private String imagePullSecrets; 
         private String imageUrl; 
@@ -742,11 +910,13 @@ public class CreateApplicationRequest extends Request {
         private String liveness; 
         private Integer memory; 
         private String microRegistration; 
+        private String microRegistrationConfig; 
         private String mountDesc; 
         private String mountHost; 
         private String namespaceId; 
         private String nasConfigs; 
         private String nasId; 
+        private String oidcRoleName; 
         private String ossAkId; 
         private String ossAkSecret; 
         private String ossMountDescs; 
@@ -765,8 +935,12 @@ public class CreateApplicationRequest extends Request {
         private String pythonModules; 
         private String readiness; 
         private Integer replicas; 
+        private String resourceType; 
         private String saeVersion; 
+        private String secretMountDesc; 
         private String securityGroupId; 
+        private String serviceTags; 
+        private java.util.List<SidecarContainerConfig> sidecarContainersConfig; 
         private String slsConfigs; 
         private Integer terminationGracePeriodSeconds; 
         private String timezone; 
@@ -786,16 +960,23 @@ public class CreateApplicationRequest extends Request {
             this.acrInstanceId = request.acrInstanceId;
             this.appDescription = request.appDescription;
             this.appName = request.appName;
+            this.appSource = request.appSource;
             this.associateEip = request.associateEip;
             this.autoConfig = request.autoConfig;
+            this.baseAppId = request.baseAppId;
             this.command = request.command;
             this.commandArgs = request.commandArgs;
             this.configMapMountDesc = request.configMapMountDesc;
             this.cpu = request.cpu;
             this.customHostAlias = request.customHostAlias;
+            this.customImageNetworkType = request.customImageNetworkType;
             this.deploy = request.deploy;
+            this.dotnet = request.dotnet;
             this.edasContainerVersion = request.edasContainerVersion;
+            this.enableCpuBurst = request.enableCpuBurst;
             this.enableEbpf = request.enableEbpf;
+            this.enableNewArms = request.enableNewArms;
+            this.enableSidecarResourceIsolated = request.enableSidecarResourceIsolated;
             this.envs = request.envs;
             this.imagePullSecrets = request.imagePullSecrets;
             this.imageUrl = request.imageUrl;
@@ -806,11 +987,13 @@ public class CreateApplicationRequest extends Request {
             this.liveness = request.liveness;
             this.memory = request.memory;
             this.microRegistration = request.microRegistration;
+            this.microRegistrationConfig = request.microRegistrationConfig;
             this.mountDesc = request.mountDesc;
             this.mountHost = request.mountHost;
             this.namespaceId = request.namespaceId;
             this.nasConfigs = request.nasConfigs;
             this.nasId = request.nasId;
+            this.oidcRoleName = request.oidcRoleName;
             this.ossAkId = request.ossAkId;
             this.ossAkSecret = request.ossAkSecret;
             this.ossMountDescs = request.ossMountDescs;
@@ -829,8 +1012,12 @@ public class CreateApplicationRequest extends Request {
             this.pythonModules = request.pythonModules;
             this.readiness = request.readiness;
             this.replicas = request.replicas;
+            this.resourceType = request.resourceType;
             this.saeVersion = request.saeVersion;
+            this.secretMountDesc = request.secretMountDesc;
             this.securityGroupId = request.securityGroupId;
+            this.serviceTags = request.serviceTags;
+            this.sidecarContainersConfig = request.sidecarContainersConfig;
             this.slsConfigs = request.slsConfigs;
             this.terminationGracePeriodSeconds = request.terminationGracePeriodSeconds;
             this.timezone = request.timezone;
@@ -842,7 +1029,10 @@ public class CreateApplicationRequest extends Request {
         } 
 
         /**
-         * acs:ram::123456789012\*\*\*\*:role/adminrole
+         * <p>acs:ram::123456789012****:role/adminrole</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::123456789012****:role/adminrole</p>
          */
         public Builder acrAssumeRoleArn(String acrAssumeRoleArn) {
             this.putQueryParameter("AcrAssumeRoleArn", acrAssumeRoleArn);
@@ -851,7 +1041,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * cri-xxxxxx
+         * <p>cri-xxxxxx</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-xxxxxx</p>
          */
         public Builder acrInstanceId(String acrInstanceId) {
             this.putBodyParameter("AcrInstanceId", acrInstanceId);
@@ -860,7 +1053,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * This is a test description.
+         * <p>This is a test description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a test description.</p>
          */
         public Builder appDescription(String appDescription) {
             this.putQueryParameter("AppDescription", appDescription);
@@ -869,7 +1065,11 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * test
+         * <p>test</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -878,7 +1078,19 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * true
+         * AppSource.
+         */
+        public Builder appSource(String appSource) {
+            this.putQueryParameter("AppSource", appSource);
+            this.appSource = appSource;
+            return this;
+        }
+
+        /**
+         * <p>true</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder associateEip(Boolean associateEip) {
             this.putBodyParameter("AssociateEip", associateEip);
@@ -887,7 +1099,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * true
+         * <p>true</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoConfig(Boolean autoConfig) {
             this.putQueryParameter("AutoConfig", autoConfig);
@@ -896,7 +1111,19 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * sleep
+         * BaseAppId.
+         */
+        public Builder baseAppId(String baseAppId) {
+            this.putBodyParameter("BaseAppId", baseAppId);
+            this.baseAppId = baseAppId;
+            return this;
+        }
+
+        /**
+         * <p>sleep</p>
+         * 
+         * <strong>example:</strong>
+         * <p>echo</p>
          */
         public Builder command(String command) {
             this.putQueryParameter("Command", command);
@@ -905,7 +1132,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * 1d
+         * <p>1d</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;a&quot;,&quot;b&quot;]</p>
          */
         public Builder commandArgs(String commandArgs) {
             this.putQueryParameter("CommandArgs", commandArgs);
@@ -914,7 +1144,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * \[{"configMapId":16,"key":"test","mountPath":"/tmp"}]
+         * <p>[{&quot;configMapId&quot;:16,&quot;key&quot;:&quot;test&quot;,&quot;mountPath&quot;:&quot;/tmp&quot;}]</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;configMapId&quot;:16,&quot;key&quot;:&quot;test&quot;,&quot;mountPath&quot;:&quot;/tmp&quot;}]</p>
          */
         public Builder configMapMountDesc(String configMapMountDesc) {
             this.putBodyParameter("ConfigMapMountDesc", configMapMountDesc);
@@ -923,7 +1156,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * 1000
+         * <p>1000</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder cpu(Integer cpu) {
             this.putQueryParameter("Cpu", cpu);
@@ -932,7 +1168,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * \[{"hostName":"samplehost","ip":"127.0.0.1"}]
+         * <p>[{&quot;hostName&quot;:&quot;samplehost&quot;,&quot;ip&quot;:&quot;127.0.0.1&quot;}]</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;hostName&quot;:&quot;samplehost&quot;,&quot;ip&quot;:&quot;127.0.0.1&quot;}]</p>
          */
         public Builder customHostAlias(String customHostAlias) {
             this.putQueryParameter("CustomHostAlias", customHostAlias);
@@ -941,7 +1180,19 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * true
+         * CustomImageNetworkType.
+         */
+        public Builder customImageNetworkType(String customImageNetworkType) {
+            this.putQueryParameter("CustomImageNetworkType", customImageNetworkType);
+            this.customImageNetworkType = customImageNetworkType;
+            return this;
+        }
+
+        /**
+         * <p>true</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deploy(Boolean deploy) {
             this.putQueryParameter("Deploy", deploy);
@@ -950,11 +1201,32 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * 3.5.3
+         * Dotnet.
+         */
+        public Builder dotnet(String dotnet) {
+            this.putQueryParameter("Dotnet", dotnet);
+            this.dotnet = dotnet;
+            return this;
+        }
+
+        /**
+         * <p>3.5.3</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.5.3</p>
          */
         public Builder edasContainerVersion(String edasContainerVersion) {
             this.putQueryParameter("EdasContainerVersion", edasContainerVersion);
             this.edasContainerVersion = edasContainerVersion;
+            return this;
+        }
+
+        /**
+         * EnableCpuBurst.
+         */
+        public Builder enableCpuBurst(Boolean enableCpuBurst) {
+            this.putQueryParameter("EnableCpuBurst", enableCpuBurst);
+            this.enableCpuBurst = enableCpuBurst;
             return this;
         }
 
@@ -968,7 +1240,28 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * \[{"name":"envtmp","value":"0"}]
+         * EnableNewArms.
+         */
+        public Builder enableNewArms(Boolean enableNewArms) {
+            this.putQueryParameter("EnableNewArms", enableNewArms);
+            this.enableNewArms = enableNewArms;
+            return this;
+        }
+
+        /**
+         * EnableSidecarResourceIsolated.
+         */
+        public Builder enableSidecarResourceIsolated(Boolean enableSidecarResourceIsolated) {
+            this.putBodyParameter("EnableSidecarResourceIsolated", enableSidecarResourceIsolated);
+            this.enableSidecarResourceIsolated = enableSidecarResourceIsolated;
+            return this;
+        }
+
+        /**
+         * <p>[{&quot;name&quot;:&quot;envtmp&quot;,&quot;value&quot;:&quot;0&quot;}]</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;name&quot;:&quot;envtmp&quot;,&quot;value&quot;:&quot;0&quot;}]</p>
          */
         public Builder envs(String envs) {
             this.putQueryParameter("Envs", envs);
@@ -986,7 +1279,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * registry.cn-hangzhou.aliyuncs.com/sae_test/ali_sae_test:0.0.1
+         * <p>registry.cn-hangzhou.aliyuncs.com/sae_test/ali_sae_test:0.0.1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry.cn-hangzhou.aliyuncs.com/sae_test/ali_sae_test:0.0.1</p>
          */
         public Builder imageUrl(String imageUrl) {
             this.putQueryParameter("ImageUrl", imageUrl);
@@ -995,7 +1291,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * custom-args
+         * <p>custom-args</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom-args</p>
          */
         public Builder jarStartArgs(String jarStartArgs) {
             this.putQueryParameter("JarStartArgs", jarStartArgs);
@@ -1004,7 +1303,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * \-Xms4G -Xmx4G
+         * <p>-Xms4G -Xmx4G</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-Xms4G -Xmx4G</p>
          */
         public Builder jarStartOptions(String jarStartOptions) {
             this.putQueryParameter("JarStartOptions", jarStartOptions);
@@ -1013,7 +1315,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Open JDK 8
+         * <p>Open JDK 8</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Open JDK 8</p>
          */
         public Builder jdk(String jdk) {
             this.putQueryParameter("Jdk", jdk);
@@ -1031,7 +1336,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * {"exec":{"command":\["sh","-c","cat /home/admin/start.sh"]},"initialDelaySeconds":30,"periodSeconds":30,"timeoutSeconds":2}
+         * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;cat /home/admin/start.sh&quot;]},&quot;initialDelaySeconds&quot;:30,&quot;periodSeconds&quot;:30,&quot;timeoutSeconds&quot;:2}</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;cat /home/admin/start.sh&quot;]},&quot;initialDelaySeconds&quot;:30,&quot;periodSeconds&quot;:30,&quot;timeoutSeconds&quot;:2}</p>
          */
         public Builder liveness(String liveness) {
             this.putQueryParameter("Liveness", liveness);
@@ -1040,7 +1348,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * 1024
+         * <p>1024</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder memory(Integer memory) {
             this.putQueryParameter("Memory", memory);
@@ -1058,7 +1369,19 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * \[{mountPath: "/tmp", nasPath: "/"}]
+         * MicroRegistrationConfig.
+         */
+        public Builder microRegistrationConfig(String microRegistrationConfig) {
+            this.putBodyParameter("MicroRegistrationConfig", microRegistrationConfig);
+            this.microRegistrationConfig = microRegistrationConfig;
+            return this;
+        }
+
+        /**
+         * <p>[{mountPath: &quot;/tmp&quot;, nasPath: &quot;/&quot;}]</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{mountPath: &quot;/tmp&quot;, nasPath: &quot;/&quot;}]</p>
          */
         public Builder mountDesc(String mountDesc) {
             this.putQueryParameter("MountDesc", mountDesc);
@@ -1067,7 +1390,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * example.com
+         * <p>example.com</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder mountHost(String mountHost) {
             this.putQueryParameter("MountHost", mountHost);
@@ -1076,7 +1402,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * cn-beijing:test
+         * <p>cn-beijing:test</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing:test</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -1094,7 +1423,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * KSAK\*\*\*\*
+         * <p>KSAK****</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KSAK****</p>
          */
         public Builder nasId(String nasId) {
             this.putQueryParameter("NasId", nasId);
@@ -1103,7 +1435,19 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * xxxxxx
+         * OidcRoleName.
+         */
+        public Builder oidcRoleName(String oidcRoleName) {
+            this.putQueryParameter("OidcRoleName", oidcRoleName);
+            this.oidcRoleName = oidcRoleName;
+            return this;
+        }
+
+        /**
+         * <p>xxxxxx</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
          */
         public Builder ossAkId(String ossAkId) {
             this.putBodyParameter("OssAkId", ossAkId);
@@ -1112,7 +1456,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * xxxxxx
+         * <p>xxxxxx</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
          */
         public Builder ossAkSecret(String ossAkSecret) {
             this.putBodyParameter("OssAkSecret", ossAkSecret);
@@ -1121,7 +1468,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * \[{"bucketName": "oss-bucket", "bucketPath": "data/user.data", "mountPath": "/usr/data/user.data", "readOnly": true}]
+         * <p>[{&quot;bucketName&quot;: &quot;oss-bucket&quot;, &quot;bucketPath&quot;: &quot;data/user.data&quot;, &quot;mountPath&quot;: &quot;/usr/data/user.data&quot;, &quot;readOnly&quot;: true}]</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;bucketName&quot;: &quot;oss-bucket&quot;, &quot;bucketPath&quot;: &quot;data/user.data&quot;, &quot;mountPath&quot;: &quot;/usr/data/user.data&quot;, &quot;readOnly&quot;: true}]</p>
          */
         public Builder ossMountDescs(String ossMountDescs) {
             this.putBodyParameter("OssMountDescs", ossMountDescs);
@@ -1130,7 +1480,11 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * FatJar
+         * <p>FatJar</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FatJar</p>
          */
         public Builder packageType(String packageType) {
             this.putQueryParameter("PackageType", packageType);
@@ -1139,7 +1493,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * http://myoss.oss-cn-\*\*\*\*.aliyuncs.com/my-buc/2019-06-30/\*\*\*\*.jar
+         * <p><a href="http://myoss.oss-cn-%5C*%5C*%5C*%5C*.aliyuncs.com/my-buc/2019-06-30/%5C*%5C*%5C*%5C*.jar">http://myoss.oss-cn-\*\*\*\*.aliyuncs.com/my-buc/2019-06-30/\*\*\*\*.jar</a></p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://myoss.oss-cn-****.aliyuncs.com/my-buc/2019-06-30/****.jar">http://myoss.oss-cn-****.aliyuncs.com/my-buc/2019-06-30/****.jar</a></p>
          */
         public Builder packageUrl(String packageUrl) {
             this.putQueryParameter("PackageUrl", packageUrl);
@@ -1148,7 +1505,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * 1.0.0
+         * <p>1.0.0</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         public Builder packageVersion(String packageVersion) {
             this.putQueryParameter("PackageVersion", packageVersion);
@@ -1166,7 +1526,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * /usr/local/etc/php/conf.d/arms.ini
+         * <p>/usr/local/etc/php/conf.d/arms.ini</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/local/etc/php/conf.d/arms.ini</p>
          */
         public Builder phpArmsConfigLocation(String phpArmsConfigLocation) {
             this.putQueryParameter("PhpArmsConfigLocation", phpArmsConfigLocation);
@@ -1175,7 +1538,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * k1=v1
+         * <p>k1=v1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k1=v1</p>
          */
         public Builder phpConfig(String phpConfig) {
             this.putBodyParameter("PhpConfig", phpConfig);
@@ -1184,7 +1550,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * /usr/local/etc/php/php.ini
+         * <p>/usr/local/etc/php/php.ini</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/local/etc/php/php.ini</p>
          */
         public Builder phpConfigLocation(String phpConfigLocation) {
             this.putQueryParameter("PhpConfigLocation", phpConfigLocation);
@@ -1193,7 +1562,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * {"exec":{"command":\["cat","/etc/group"]}}
+         * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</p>
          */
         public Builder postStart(String postStart) {
             this.putQueryParameter("PostStart", postStart);
@@ -1202,7 +1574,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * {"exec":{"command":\["cat","/etc/group"]}}
+         * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</p>
          */
         public Builder preStop(String preStop) {
             this.putQueryParameter("PreStop", preStop);
@@ -1247,7 +1622,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * {"exec":{"command":\["sh","-c","cat /home/admin/start.sh"]},"initialDelaySeconds":30,"periodSeconds":30,"timeoutSeconds":2}
+         * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;cat /home/admin/start.sh&quot;]},&quot;initialDelaySeconds&quot;:30,&quot;periodSeconds&quot;:30,&quot;timeoutSeconds&quot;:2}</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;cat /home/admin/start.sh&quot;]},&quot;initialDelaySeconds&quot;:30,&quot;periodSeconds&quot;:30,&quot;timeoutSeconds&quot;:2}</p>
          */
         public Builder readiness(String readiness) {
             this.putQueryParameter("Readiness", readiness);
@@ -1256,11 +1634,24 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * 1
+         * <p>1</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder replicas(Integer replicas) {
             this.putQueryParameter("Replicas", replicas);
             this.replicas = replicas;
+            return this;
+        }
+
+        /**
+         * ResourceType.
+         */
+        public Builder resourceType(String resourceType) {
+            this.putQueryParameter("ResourceType", resourceType);
+            this.resourceType = resourceType;
             return this;
         }
 
@@ -1274,7 +1665,19 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * sg-wz969ngg2e49q5i4\*\*\*\*
+         * SecretMountDesc.
+         */
+        public Builder secretMountDesc(String secretMountDesc) {
+            this.putQueryParameter("SecretMountDesc", secretMountDesc);
+            this.secretMountDesc = secretMountDesc;
+            return this;
+        }
+
+        /**
+         * <p>sg-wz969ngg2e49q5i4****</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-wz969ngg2e49q5i4****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -1283,7 +1686,29 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * \[{"logDir":"","logType":"stdout"},{"logDir":"/tmp/a.log"}]
+         * ServiceTags.
+         */
+        public Builder serviceTags(String serviceTags) {
+            this.putBodyParameter("ServiceTags", serviceTags);
+            this.serviceTags = serviceTags;
+            return this;
+        }
+
+        /**
+         * SidecarContainersConfig.
+         */
+        public Builder sidecarContainersConfig(java.util.List<SidecarContainerConfig> sidecarContainersConfig) {
+            String sidecarContainersConfigShrink = shrink(sidecarContainersConfig, "SidecarContainersConfig", "json");
+            this.putBodyParameter("SidecarContainersConfig", sidecarContainersConfigShrink);
+            this.sidecarContainersConfig = sidecarContainersConfig;
+            return this;
+        }
+
+        /**
+         * <p>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</p>
          */
         public Builder slsConfigs(String slsConfigs) {
             this.putQueryParameter("SlsConfigs", slsConfigs);
@@ -1292,7 +1717,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * 30
+         * <p>30</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder terminationGracePeriodSeconds(Integer terminationGracePeriodSeconds) {
             this.putQueryParameter("TerminationGracePeriodSeconds", terminationGracePeriodSeconds);
@@ -1301,7 +1729,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Asia/Shanghai
+         * <p>Asia/Shanghai</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
          */
         public Builder timezone(String timezone) {
             this.putQueryParameter("Timezone", timezone);
@@ -1310,7 +1741,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * {"port":8080,"contextPath":"/","maxThreads":400,"uriEncoding":"ISO-8859-1","useBodyEncodingForUri":true}
+         * <p>{&quot;port&quot;:8080,&quot;contextPath&quot;:&quot;/&quot;,&quot;maxThreads&quot;:400,&quot;uriEncoding&quot;:&quot;ISO-8859-1&quot;,&quot;useBodyEncodingForUri&quot;:true}</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;port&quot;:8080,&quot;contextPath&quot;:&quot;/&quot;,&quot;maxThreads&quot;:400,&quot;uriEncoding&quot;:&quot;ISO-8859-1&quot;,&quot;useBodyEncodingForUri&quot;:true}</p>
          */
         public Builder tomcatConfig(String tomcatConfig) {
             this.putQueryParameter("TomcatConfig", tomcatConfig);
@@ -1319,7 +1753,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * vsw-bp12mw1f8k3jgygk9\*\*\*\*
+         * <p>vsw-bp12mw1f8k3jgygk9****</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp12mw1f8k3jgygk9****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -1328,7 +1765,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * vpc-bp1aevy8sofi8mh1q\*\*\*\*
+         * <p>vpc-bp1aevy8sofi8mh1q****</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1aevy8sofi8mh1q****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -1337,7 +1777,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * CATALINA_OPTS=\\"$CATALINA_OPTS $Options\\" catalina.sh run
+         * <p>CATALINA_OPTS=\&quot;$CATALINA_OPTS $Options\&quot; catalina.sh run</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CATALINA_OPTS=&quot;$CATALINA_OPTS $Options&quot; catalina.sh run</p>
          */
         public Builder warStartOptions(String warStartOptions) {
             this.putQueryParameter("WarStartOptions", warStartOptions);
@@ -1346,7 +1789,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * apache-tomcat-7.0.91
+         * <p>apache-tomcat-7.0.91</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apache-tomcat-7.0.91</p>
          */
         public Builder webContainer(String webContainer) {
             this.putQueryParameter("WebContainer", webContainer);

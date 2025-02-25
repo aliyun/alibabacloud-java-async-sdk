@@ -1,65 +1,82 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePrivateAccessPolicyRequest} extends {@link RequestModel}
  *
  * <p>CreatePrivateAccessPolicyRequest</p>
  */
 public class CreatePrivateAccessPolicyRequest extends Request {
-    @Body
-    @NameInMap("ApplicationIds")
-    private java.util.List < String > applicationIds;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApplicationIds")
+    private java.util.List<String> applicationIds;
 
-    @Body
-    @NameInMap("ApplicationType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApplicationType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String applicationType;
 
-    @Body
-    @NameInMap("CustomUserAttributes")
-    private java.util.List < CustomUserAttributes> customUserAttributes;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustomUserAttributes")
+    private java.util.List<CustomUserAttributes> customUserAttributes;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeviceAttributeAction")
+    private String deviceAttributeAction;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeviceAttributeId")
+    private String deviceAttributeId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("PolicyAction")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PolicyAction")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyAction;
 
-    @Body
-    @NameInMap("Priority")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Priority")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer priority;
 
-    @Body
-    @NameInMap("Status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String status;
 
-    @Body
-    @NameInMap("TagIds")
-    private java.util.List < String > tagIds;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TagIds")
+    private java.util.List<String> tagIds;
 
-    @Body
-    @NameInMap("UserGroupIds")
-    private java.util.List < String > userGroupIds;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TriggerTemplateId")
+    private String triggerTemplateId;
 
-    @Body
-    @NameInMap("UserGroupMode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserGroupIds")
+    private java.util.List<String> userGroupIds;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserGroupMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userGroupMode;
 
     private CreatePrivateAccessPolicyRequest(Builder builder) {
@@ -68,11 +85,14 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         this.applicationType = builder.applicationType;
         this.customUserAttributes = builder.customUserAttributes;
         this.description = builder.description;
+        this.deviceAttributeAction = builder.deviceAttributeAction;
+        this.deviceAttributeId = builder.deviceAttributeId;
         this.name = builder.name;
         this.policyAction = builder.policyAction;
         this.priority = builder.priority;
         this.status = builder.status;
         this.tagIds = builder.tagIds;
+        this.triggerTemplateId = builder.triggerTemplateId;
         this.userGroupIds = builder.userGroupIds;
         this.userGroupMode = builder.userGroupMode;
     }
@@ -93,7 +113,7 @@ public class CreatePrivateAccessPolicyRequest extends Request {
     /**
      * @return applicationIds
      */
-    public java.util.List < String > getApplicationIds() {
+    public java.util.List<String> getApplicationIds() {
         return this.applicationIds;
     }
 
@@ -107,7 +127,7 @@ public class CreatePrivateAccessPolicyRequest extends Request {
     /**
      * @return customUserAttributes
      */
-    public java.util.List < CustomUserAttributes> getCustomUserAttributes() {
+    public java.util.List<CustomUserAttributes> getCustomUserAttributes() {
         return this.customUserAttributes;
     }
 
@@ -116,6 +136,20 @@ public class CreatePrivateAccessPolicyRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return deviceAttributeAction
+     */
+    public String getDeviceAttributeAction() {
+        return this.deviceAttributeAction;
+    }
+
+    /**
+     * @return deviceAttributeId
+     */
+    public String getDeviceAttributeId() {
+        return this.deviceAttributeId;
     }
 
     /**
@@ -149,14 +183,21 @@ public class CreatePrivateAccessPolicyRequest extends Request {
     /**
      * @return tagIds
      */
-    public java.util.List < String > getTagIds() {
+    public java.util.List<String> getTagIds() {
         return this.tagIds;
+    }
+
+    /**
+     * @return triggerTemplateId
+     */
+    public String getTriggerTemplateId() {
+        return this.triggerTemplateId;
     }
 
     /**
      * @return userGroupIds
      */
-    public java.util.List < String > getUserGroupIds() {
+    public java.util.List<String> getUserGroupIds() {
         return this.userGroupIds;
     }
 
@@ -168,16 +209,19 @@ public class CreatePrivateAccessPolicyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreatePrivateAccessPolicyRequest, Builder> {
-        private java.util.List < String > applicationIds; 
+        private java.util.List<String> applicationIds; 
         private String applicationType; 
-        private java.util.List < CustomUserAttributes> customUserAttributes; 
+        private java.util.List<CustomUserAttributes> customUserAttributes; 
         private String description; 
+        private String deviceAttributeAction; 
+        private String deviceAttributeId; 
         private String name; 
         private String policyAction; 
         private Integer priority; 
         private String status; 
-        private java.util.List < String > tagIds; 
-        private java.util.List < String > userGroupIds; 
+        private java.util.List<String> tagIds; 
+        private String triggerTemplateId; 
+        private java.util.List<String> userGroupIds; 
         private String userGroupMode; 
 
         private Builder() {
@@ -190,11 +234,14 @@ public class CreatePrivateAccessPolicyRequest extends Request {
             this.applicationType = request.applicationType;
             this.customUserAttributes = request.customUserAttributes;
             this.description = request.description;
+            this.deviceAttributeAction = request.deviceAttributeAction;
+            this.deviceAttributeId = request.deviceAttributeId;
             this.name = request.name;
             this.policyAction = request.policyAction;
             this.priority = request.priority;
             this.status = request.status;
             this.tagIds = request.tagIds;
+            this.triggerTemplateId = request.triggerTemplateId;
             this.userGroupIds = request.userGroupIds;
             this.userGroupMode = request.userGroupMode;
         } 
@@ -202,14 +249,17 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         /**
          * ApplicationIds.
          */
-        public Builder applicationIds(java.util.List < String > applicationIds) {
+        public Builder applicationIds(java.util.List<String> applicationIds) {
             this.putBodyParameter("ApplicationIds", applicationIds);
             this.applicationIds = applicationIds;
             return this;
         }
 
         /**
-         * ApplicationType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Application</p>
          */
         public Builder applicationType(String applicationType) {
             this.putBodyParameter("ApplicationType", applicationType);
@@ -220,7 +270,7 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         /**
          * CustomUserAttributes.
          */
-        public Builder customUserAttributes(java.util.List < CustomUserAttributes> customUserAttributes) {
+        public Builder customUserAttributes(java.util.List<CustomUserAttributes> customUserAttributes) {
             this.putBodyParameter("CustomUserAttributes", customUserAttributes);
             this.customUserAttributes = customUserAttributes;
             return this;
@@ -236,7 +286,28 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         }
 
         /**
-         * Name.
+         * DeviceAttributeAction.
+         */
+        public Builder deviceAttributeAction(String deviceAttributeAction) {
+            this.putBodyParameter("DeviceAttributeAction", deviceAttributeAction);
+            this.deviceAttributeAction = deviceAttributeAction;
+            return this;
+        }
+
+        /**
+         * DeviceAttributeId.
+         */
+        public Builder deviceAttributeId(String deviceAttributeId) {
+            this.putBodyParameter("DeviceAttributeId", deviceAttributeId);
+            this.deviceAttributeId = deviceAttributeId;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>private_access_policy_name</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -245,7 +316,10 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         }
 
         /**
-         * PolicyAction.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Allow</p>
          */
         public Builder policyAction(String policyAction) {
             this.putBodyParameter("PolicyAction", policyAction);
@@ -254,7 +328,10 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder priority(Integer priority) {
             this.putBodyParameter("Priority", priority);
@@ -263,7 +340,10 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);
@@ -272,28 +352,42 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         }
 
         /**
-         * 内网访问标签ID集合。最多可输入100个内网访问标签ID。当**ApplicationType**为**Tag时**，必填。和**ApplicationIds**互斥。
+         * <p>内网访问标签ID集合。最多可输入100个内网访问标签ID。当<strong>ApplicationType</strong>为<strong>Tag时</strong>，必填。和<strong>ApplicationIds</strong>互斥。</p>
          */
-        public Builder tagIds(java.util.List < String > tagIds) {
+        public Builder tagIds(java.util.List<String> tagIds) {
             this.putBodyParameter("TagIds", tagIds);
             this.tagIds = tagIds;
             return this;
         }
 
         /**
+         * TriggerTemplateId.
+         */
+        public Builder triggerTemplateId(String triggerTemplateId) {
+            this.putBodyParameter("TriggerTemplateId", triggerTemplateId);
+            this.triggerTemplateId = triggerTemplateId;
+            return this;
+        }
+
+        /**
          * UserGroupIds.
          */
-        public Builder userGroupIds(java.util.List < String > userGroupIds) {
+        public Builder userGroupIds(java.util.List<String> userGroupIds) {
             this.putBodyParameter("UserGroupIds", userGroupIds);
             this.userGroupIds = userGroupIds;
             return this;
         }
 
         /**
-         * 内网访问策略的用户组类型。取值：
-         * <p>
-         * - **Normal**：普通用户组。
-         * - **Custom**：自定义用户组。
+         * <p>内网访问策略的用户组类型。取值：</p>
+         * <ul>
+         * <li><strong>Normal</strong>：普通用户组。</li>
+         * <li><strong>Custom</strong>：自定义用户组。</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder userGroupMode(String userGroupMode) {
             this.putBodyParameter("UserGroupMode", userGroupMode);
@@ -308,20 +402,23 @@ public class CreatePrivateAccessPolicyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreatePrivateAccessPolicyRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePrivateAccessPolicyRequest</p>
+     */
     public static class CustomUserAttributes extends TeaModel {
-        @NameInMap("IdpId")
+        @com.aliyun.core.annotation.NameInMap("IdpId")
         private Integer idpId;
 
-        @NameInMap("Relation")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Relation")
         private String relation;
 
-        @NameInMap("UserGroupType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("UserGroupType")
         private String userGroupType;
 
-        @NameInMap("Value")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private CustomUserAttributes(Builder builder) {

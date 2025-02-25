@@ -1,112 +1,129 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateScalingRuleRequest} extends {@link RequestModel}
  *
  * <p>CreateScalingRuleRequest</p>
  */
 public class CreateScalingRuleRequest extends Request {
-    @Query
-    @NameInMap("AdjustmentType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdjustmentType")
     private String adjustmentType;
 
-    @Query
-    @NameInMap("AdjustmentValue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdjustmentValue")
     private Integer adjustmentValue;
 
-    @Query
-    @NameInMap("AlarmDimensions")
-    private java.util.List < AlarmDimensions> alarmDimensions;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlarmDimensions")
+    private java.util.List<AlarmDimensions> alarmDimensions;
 
-    @Query
-    @NameInMap("Cooldown")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Cooldown")
     private Integer cooldown;
 
-    @Query
-    @NameInMap("DisableScaleIn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisableScaleIn")
     private Boolean disableScaleIn;
 
-    @Query
-    @NameInMap("EstimatedInstanceWarmup")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EstimatedInstanceWarmup")
     private Integer estimatedInstanceWarmup;
 
-    @Query
-    @NameInMap("InitialMaxSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HybridMetrics")
+    private java.util.List<HybridMetrics> hybridMetrics;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HybridMonitorNamespace")
+    private String hybridMonitorNamespace;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InitialMaxSize")
     private Integer initialMaxSize;
 
-    @Query
-    @NameInMap("MetricName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricName")
     private String metricName;
 
-    @Query
-    @NameInMap("MinAdjustmentMagnitude")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricType")
+    private String metricType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinAdjustmentMagnitude")
     private Integer minAdjustmentMagnitude;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PredictiveScalingMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PredictiveScalingMode")
     private String predictiveScalingMode;
 
-    @Query
-    @NameInMap("PredictiveTaskBufferTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PredictiveTaskBufferTime")
     private Integer predictiveTaskBufferTime;
 
-    @Query
-    @NameInMap("PredictiveValueBehavior")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PredictiveValueBehavior")
     private String predictiveValueBehavior;
 
-    @Query
-    @NameInMap("PredictiveValueBuffer")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PredictiveValueBuffer")
     private Integer predictiveValueBuffer;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ScaleInEvaluationCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScaleInEvaluationCount")
     private Integer scaleInEvaluationCount;
 
-    @Query
-    @NameInMap("ScaleOutEvaluationCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScaleOutEvaluationCount")
     private Integer scaleOutEvaluationCount;
 
-    @Query
-    @NameInMap("ScalingGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scalingGroupId;
 
-    @Query
-    @NameInMap("ScalingRuleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingRuleName")
     private String scalingRuleName;
 
-    @Query
-    @NameInMap("ScalingRuleType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingRuleType")
     private String scalingRuleType;
 
-    @Query
-    @NameInMap("StepAdjustments")
-    private java.util.List < StepAdjustments> stepAdjustments;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StepAdjustments")
+    private java.util.List<StepAdjustments> stepAdjustments;
 
-    @Query
-    @NameInMap("TargetValue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetValue")
     private Float targetValue;
 
     private CreateScalingRuleRequest(Builder builder) {
@@ -117,8 +134,11 @@ public class CreateScalingRuleRequest extends Request {
         this.cooldown = builder.cooldown;
         this.disableScaleIn = builder.disableScaleIn;
         this.estimatedInstanceWarmup = builder.estimatedInstanceWarmup;
+        this.hybridMetrics = builder.hybridMetrics;
+        this.hybridMonitorNamespace = builder.hybridMonitorNamespace;
         this.initialMaxSize = builder.initialMaxSize;
         this.metricName = builder.metricName;
+        this.metricType = builder.metricType;
         this.minAdjustmentMagnitude = builder.minAdjustmentMagnitude;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -167,7 +187,7 @@ public class CreateScalingRuleRequest extends Request {
     /**
      * @return alarmDimensions
      */
-    public java.util.List < AlarmDimensions> getAlarmDimensions() {
+    public java.util.List<AlarmDimensions> getAlarmDimensions() {
         return this.alarmDimensions;
     }
 
@@ -193,6 +213,20 @@ public class CreateScalingRuleRequest extends Request {
     }
 
     /**
+     * @return hybridMetrics
+     */
+    public java.util.List<HybridMetrics> getHybridMetrics() {
+        return this.hybridMetrics;
+    }
+
+    /**
+     * @return hybridMonitorNamespace
+     */
+    public String getHybridMonitorNamespace() {
+        return this.hybridMonitorNamespace;
+    }
+
+    /**
      * @return initialMaxSize
      */
     public Integer getInitialMaxSize() {
@@ -204,6 +238,13 @@ public class CreateScalingRuleRequest extends Request {
      */
     public String getMetricName() {
         return this.metricName;
+    }
+
+    /**
+     * @return metricType
+     */
+    public String getMetricType() {
+        return this.metricType;
     }
 
     /**
@@ -307,7 +348,7 @@ public class CreateScalingRuleRequest extends Request {
     /**
      * @return stepAdjustments
      */
-    public java.util.List < StepAdjustments> getStepAdjustments() {
+    public java.util.List<StepAdjustments> getStepAdjustments() {
         return this.stepAdjustments;
     }
 
@@ -321,12 +362,15 @@ public class CreateScalingRuleRequest extends Request {
     public static final class Builder extends Request.Builder<CreateScalingRuleRequest, Builder> {
         private String adjustmentType; 
         private Integer adjustmentValue; 
-        private java.util.List < AlarmDimensions> alarmDimensions; 
+        private java.util.List<AlarmDimensions> alarmDimensions; 
         private Integer cooldown; 
         private Boolean disableScaleIn; 
         private Integer estimatedInstanceWarmup; 
+        private java.util.List<HybridMetrics> hybridMetrics; 
+        private String hybridMonitorNamespace; 
         private Integer initialMaxSize; 
         private String metricName; 
+        private String metricType; 
         private Integer minAdjustmentMagnitude; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -341,7 +385,7 @@ public class CreateScalingRuleRequest extends Request {
         private String scalingGroupId; 
         private String scalingRuleName; 
         private String scalingRuleType; 
-        private java.util.List < StepAdjustments> stepAdjustments; 
+        private java.util.List<StepAdjustments> stepAdjustments; 
         private Float targetValue; 
 
         private Builder() {
@@ -356,8 +400,11 @@ public class CreateScalingRuleRequest extends Request {
             this.cooldown = request.cooldown;
             this.disableScaleIn = request.disableScaleIn;
             this.estimatedInstanceWarmup = request.estimatedInstanceWarmup;
+            this.hybridMetrics = request.hybridMetrics;
+            this.hybridMonitorNamespace = request.hybridMonitorNamespace;
             this.initialMaxSize = request.initialMaxSize;
             this.metricName = request.metricName;
+            this.metricType = request.metricType;
             this.minAdjustmentMagnitude = request.minAdjustmentMagnitude;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -377,12 +424,15 @@ public class CreateScalingRuleRequest extends Request {
         } 
 
         /**
-         * The number of instances that must be scaled based on the scaling rule. This parameter is required only if you set the ScalingRuleType parameter to SimpleScalingRule or StepScalingRule. The number of ECS instances that are scaled in a single scaling activity cannot exceed 1,000.
-         * <p>
+         * <p>The scaling method of the scaling rule. This parameter is required only if you set the ScalingRuleType parameter to SimpleScalingRule or StepScalingRule. Valid values:</p>
+         * <ul>
+         * <li>QuantityChangeInCapacity: adds the specified number of ECS instances to or removes the specified number of ECS instances from the scaling group.</li>
+         * <li>PercentChangeInCapacity: adds the specified percentage of ECS instances to or removes the specified percentage of ECS instances from the scaling group.</li>
+         * <li>TotalCapacity: adjusts the number of ECS instances in the scaling group to a specified number.</li>
+         * </ul>
          * 
-         * *   Valid values if you set the AdjustmentType parameter to QuantityChangeInCapacity: -1000 to 1000.
-         * *   Valid values if you set the AdjustmentType parameter to PercentChangeInCapacity: -100 to 10000.
-         * *   Valid values if you set the AdjustmentType parameter to TotalCapacity: 0 to 2000.
+         * <strong>example:</strong>
+         * <p>QuantityChangeInCapacity</p>
          */
         public Builder adjustmentType(String adjustmentType) {
             this.putQueryParameter("AdjustmentType", adjustmentType);
@@ -391,15 +441,15 @@ public class CreateScalingRuleRequest extends Request {
         }
 
         /**
-         * The type of the scaling rule. Valid values:
-         * <p>
+         * <p>The number of instances that must be scaled based on the scaling rule. This parameter is required only if you set the ScalingRuleType parameter to SimpleScalingRule or StepScalingRule. The number of ECS instances that are scaled in a single scaling activity cannot exceed 1,000.</p>
+         * <ul>
+         * <li>Valid values if you set the AdjustmentType parameter to QuantityChangeInCapacity: -1000 to 1000.</li>
+         * <li>Valid values if you set the AdjustmentType parameter to PercentChangeInCapacity: -100 to 10000.</li>
+         * <li>Valid values if you set the AdjustmentType parameter to TotalCapacity: 0 to 2000.</li>
+         * </ul>
          * 
-         * *   SimpleScalingRule: scales the number of ECS instances based on the values that are specified for the AdjustmentType and AdjustmentValue parameters.
-         * *   TargetTrackingScalingRule: calculates the number of ECS instances that must be scaled and maintains the value of a predefined metric close to the value that is specified for the TargetValue parameter.
-         * *   StepScalingRule: scales ECS instances in steps based on the specified thresholds and metric values.
-         * *   PredictiveScalingRule: uses machine learning to analyze historical monitoring data of the scaling group and predicts the future values of metrics. In addition, Auto Scaling automatically creates scheduled tasks to specify the boundary values for the scaling group.
-         * 
-         * Default value: SimpleScalingRule.
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder adjustmentValue(Integer adjustmentValue) {
             this.putQueryParameter("AdjustmentValue", adjustmentValue);
@@ -408,16 +458,20 @@ public class CreateScalingRuleRequest extends Request {
         }
 
         /**
-         * 监控项维度信息值，适用于目标追踪规则，当监控项需额外维度信息时设置，例如LoadBalancerRealServerAverageQps监控项需指定rulePool维度键值信息。
+         * <p>The metric dimensions. This parameter is applicable to target tracking scaling rules. If your predefined metric requires extra dimensions, you must specify this parameter. For example, if you use LoadBalancerRealServerAverageQps as your predefined metric, you must use this parameter to specify the rulePool dimension.</p>
          */
-        public Builder alarmDimensions(java.util.List < AlarmDimensions> alarmDimensions) {
+        public Builder alarmDimensions(java.util.List<AlarmDimensions> alarmDimensions) {
             this.putQueryParameter("AlarmDimensions", alarmDimensions);
             this.alarmDimensions = alarmDimensions;
             return this;
         }
 
         /**
-         * The minimum number of instances that must be scaled when the AdjustmentType parameter is set to PercentChangeInCapacity. This parameter takes effect only if you set the ScalingRuleType parameter to SimpleScalingRule or StepScalingRule.
+         * <p>The cooldown time of the scaling rule. This parameter is available only if you set the ScalingRuleType parameter to SimpleScalingRule. Valid values: 0 to 86400. Unit: seconds.</p>
+         * <p>By default, this parameter is left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder cooldown(Integer cooldown) {
             this.putQueryParameter("Cooldown", cooldown);
@@ -426,10 +480,11 @@ public class CreateScalingRuleRequest extends Request {
         }
 
         /**
-         * Specifies whether to disable scale-in. This parameter is available only if you set ScalingRuleType to TargetTrackingScalingRule.
-         * <p>
+         * <p>Specifies whether to disable scale-in. This parameter is available only if you set ScalingRuleType to TargetTrackingScalingRule.</p>
+         * <p>Default value: false.</p>
          * 
-         * Default value: false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disableScaleIn(Boolean disableScaleIn) {
             this.putQueryParameter("DisableScaleIn", disableScaleIn);
@@ -438,14 +493,15 @@ public class CreateScalingRuleRequest extends Request {
         }
 
         /**
-         * The warmup period of an instance. This parameter is available only if you set ScalingRuleType to TargetTrackingScalingRule or PredictiveScalingRule. Auto Scaling adds ECS instances that are in the Warmup state to a scaling group but does not report the monitoring data of the ECS instances to CloudMonitor during the warmup period.
-         * <p>
+         * <p>The warmup period of an instance. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule or PredictiveScalingRule. Auto Scaling adds ECS instances that are in the warmup state to a scaling group but does not report monitoring data to CloudMonitor during the warmup period.</p>
+         * <blockquote>
+         * <p>Auto Scaling calculates the number of ECS instances that must be scaled. ECS instances in the warmup state are not counted towards the current capacity of the scaling group.</p>
+         * </blockquote>
+         * <p>Valid values: 0 to 86400. Unit: seconds.</p>
+         * <p>Default value: 300.</p>
          * 
-         * > Auto Scaling calculates the number of ECS instances that must be scaled. ECS instances in the Warmup state are not counted towards the current capacity of the scaling group.
-         * 
-         * Valid values: 0 to 86400. Unit: seconds.
-         * 
-         * Default value: 300
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder estimatedInstanceWarmup(Integer estimatedInstanceWarmup) {
             this.putQueryParameter("EstimatedInstanceWarmup", estimatedInstanceWarmup);
@@ -454,7 +510,33 @@ public class CreateScalingRuleRequest extends Request {
         }
 
         /**
-         * Details of the step adjustments.
+         * <p>The Hybrid Cloud Monitoring metrics.</p>
+         */
+        public Builder hybridMetrics(java.util.List<HybridMetrics> hybridMetrics) {
+            this.putQueryParameter("HybridMetrics", hybridMetrics);
+            this.hybridMetrics = hybridMetrics;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the Hybrid Cloud Monitoring namespace.</p>
+         * <p>For information about how to manage Hybrid Cloud Monitoring namespaces, see <a href="https://help.aliyun.com/document_detail/217606.html">Manage namespaces</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun-test</p>
+         */
+        public Builder hybridMonitorNamespace(String hybridMonitorNamespace) {
+            this.putQueryParameter("HybridMonitorNamespace", hybridMonitorNamespace);
+            this.hybridMonitorNamespace = hybridMonitorNamespace;
+            return this;
+        }
+
+        /**
+         * <p>The maximum number of ECS instances that can be contained in the scaling group. If you specify InitialMaxSize, you must specify <code>PredictiveValueBehavior</code>.</p>
+         * <p>The default value of this parameter is the value of MaxSize.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder initialMaxSize(Integer initialMaxSize) {
             this.putQueryParameter("InitialMaxSize", initialMaxSize);
@@ -463,7 +545,28 @@ public class CreateScalingRuleRequest extends Request {
         }
 
         /**
-         * The target value. This parameter is required only if you set the ScalingRuleType parameter to TargetTrackingScalingRule or PredictiveScalingRule. The value must be greater than 0 and can have up to three decimal places.
+         * <p>The predefined metric that you want to monitor. If you set ScalingRuleType to TargetTrackingScalingRule or PredictiveScalingRule, you must specify this parameter.</p>
+         * <p>Valid values if you set ScalingRuleType to TargetTrackingScalingRule:</p>
+         * <ul>
+         * <li>CpuUtilizationAgent (recommended): the CPU utilization.</li>
+         * <li>MemoryUtilization (recommended): the memory usage.</li>
+         * <li>CpuUtilization: the average CPU utilization.</li>
+         * <li>IntranetTx: the outbound traffic over an internal network.</li>
+         * <li>IntranetRx: the average inbound traffic over an internal network.</li>
+         * <li>VpcInternetTx: the outbound traffic from a virtual private cloud (VPC) to the Internet.</li>
+         * <li>VpcInternetRx: the inbound traffic from the Internet to a VPC.</li>
+         * <li>LoadBalancerRealServerAverageQps:the queries per second (QPS) per Application Load Balancer (ALB) server group.</li>
+         * </ul>
+         * <p>Valid values if you set ScalingRuleType to PredictiveScalingRule:</p>
+         * <ul>
+         * <li>CpuUtilization: the average CPU utilization.</li>
+         * <li>IntranetRx: the average inbound traffic over an internal network.</li>
+         * <li>IntranetTx: the average outbound traffic over an internal network.</li>
+         * </ul>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/74854.html">Event-triggered tasks of the system monitoring type</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CpuUtilization</p>
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -472,12 +575,27 @@ public class CreateScalingRuleRequest extends Request {
         }
 
         /**
-         * The scaling method of the scaling rule. This parameter is required only if you set the ScalingRuleType parameter to SimpleScalingRule or StepScalingRule. Valid values:
-         * <p>
+         * <p>The metric type. Valid values:</p>
+         * <ul>
+         * <li>system: system metrics of CloudMonitor.</li>
+         * <li>custom: custom metrics that are reported to CloudMonitor.</li>
+         * <li>hybrid: metrics of Hybrid Cloud Monitoring.</li>
+         * </ul>
          * 
-         * *   QuantityChangeInCapacity: adds the specified number of ECS instances to or removes the specified number of ECS instances from the scaling group.
-         * *   PercentChangeInCapacity: adds the specified percentage of ECS instances to or removes the specified percentage of ECS instances from the scaling group.
-         * *   TotalCapacity: adjusts the number of ECS instances in the scaling group to a specified number.
+         * <strong>example:</strong>
+         * <p>system</p>
+         */
+        public Builder metricType(String metricType) {
+            this.putQueryParameter("MetricType", metricType);
+            this.metricType = metricType;
+            return this;
+        }
+
+        /**
+         * <p>The minimum number of instances that must be scaled when the AdjustmentType parameter is set to PercentChangeInCapacity. This parameter takes effect only if you set the ScalingRuleType parameter to SimpleScalingRule or StepScalingRule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder minAdjustmentMagnitude(Integer minAdjustmentMagnitude) {
             this.putQueryParameter("MinAdjustmentMagnitude", minAdjustmentMagnitude);
@@ -504,14 +622,15 @@ public class CreateScalingRuleRequest extends Request {
         }
 
         /**
-         * The maximum value for predication tasks. Valid values:
-         * <p>
+         * <p>The mode of the predictive scaling rule. Valid values:</p>
+         * <ul>
+         * <li>PredictAndScale: produces predictions and creates prediction tasks.</li>
+         * <li>PredictOnly: produces predictions but does not create prediction tasks.</li>
+         * </ul>
+         * <p>Default value: PredictAndScale.</p>
          * 
-         * *   MaxOverridePredictiveValue: uses the initial maximum capacity as the maximum value for prediction tasks if the predicted value is greater than the initial maximum capacity.
-         * *   PredictiveValueOverrideMax: uses the predicted value as the maximum value for prediction tasks if the predicted value is greater than the initial maximum capacity.
-         * *   PredictiveValueOverrideMaxWithBuffer: increases the predicted value by a percentage that is specified by the PredictiveValueBuffer parameter. If the predicted value that is increased by the percentage is greater than the initial maximum capacity, the increased value is used as the maximum value for prediction tasks.
-         * 
-         * Default value: MaxOverridePredictiveValue.
+         * <strong>example:</strong>
+         * <p>PredictAndScale</p>
          */
         public Builder predictiveScalingMode(String predictiveScalingMode) {
             this.putQueryParameter("PredictiveScalingMode", predictiveScalingMode);
@@ -520,10 +639,11 @@ public class CreateScalingRuleRequest extends Request {
         }
 
         /**
-         * The maximum number of ECS instances in the scaling group. If you specify this parameter, you must also specify the PredictiveValueBehavior parameter.
-         * <p>
+         * <p>The amount of buffer time before the prediction task is executed. By default, all prediction tasks that are automatically created for a predictive scaling rule are executed on the hour. You can specify an amount of buffer time for resource preparation before the prediction tasks are executed. Valid values: 0 to 60. Unit: minutes.</p>
+         * <p>Default value: 0.</p>
          * 
-         * The default value of this parameter is the value of the MaxSize parameter.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder predictiveTaskBufferTime(Integer predictiveTaskBufferTime) {
             this.putQueryParameter("PredictiveTaskBufferTime", predictiveTaskBufferTime);
@@ -532,10 +652,16 @@ public class CreateScalingRuleRequest extends Request {
         }
 
         /**
-         * The percentage of the increment to the predicted value when the PredictiveValueBehavior parameter is set to PredictiveValueOverrideMaxWithBuffer. If the predicted value increased by this percentage is greater than the initial maximum capacity, the increased value is used as the maximum value for prediction tasks. Valid values: 0 to 100.
-         * <p>
+         * <p>The maximum value for predication tasks. Valid values:</p>
+         * <ul>
+         * <li>MaxOverridePredictiveValue: uses the initial maximum capacity as the maximum value for prediction tasks if the predicted value is greater than the initial maximum capacity.</li>
+         * <li>PredictiveValueOverrideMax: uses the predicted value as the maximum value for prediction tasks if the predicted value is greater than the initial maximum capacity.</li>
+         * <li>PredictiveValueOverrideMaxWithBuffer: increases the predicted value by a percentage that is specified by the PredictiveValueBuffer parameter. If the predicted value that is increased by the percentage is greater than the initial maximum capacity, the increased value is used as the maximum value for prediction tasks.</li>
+         * </ul>
+         * <p>Default value: MaxOverridePredictiveValue.</p>
          * 
-         * Default value: 0.
+         * <strong>example:</strong>
+         * <p>MaxOverridePredictiveValue</p>
          */
         public Builder predictiveValueBehavior(String predictiveValueBehavior) {
             this.putQueryParameter("PredictiveValueBehavior", predictiveValueBehavior);
@@ -544,10 +670,11 @@ public class CreateScalingRuleRequest extends Request {
         }
 
         /**
-         * The amount of buffer time before the prediction task is executed. By default, all prediction tasks that are automatically created for a predictive scaling rule are executed on the hour. You can specify an amount of buffer time for resource preparation before the prediction tasks are executed. Valid values: 0 to 60. Unit: minutes.
-         * <p>
+         * <p>The ratio based on which the predicted value is increased when you set <code>PredictiveValueBehavior</code> to <code>PredictiveValueOverrideMaxWithBuffer</code>. If the predicted value increased by this ratio is greater than the initial maximum capacity, the increased value is used as the maximum value for prediction tasks. Valid values: 0 to 100.</p>
+         * <p>Default value: 0.</p>
          * 
-         * Default value: 0.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder predictiveValueBuffer(Integer predictiveValueBuffer) {
             this.putQueryParameter("PredictiveValueBuffer", predictiveValueBuffer);
@@ -556,7 +683,10 @@ public class CreateScalingRuleRequest extends Request {
         }
 
         /**
-         * The unique identifier of the scaling rule.
+         * <p>The region ID of the scaling group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -574,10 +704,11 @@ public class CreateScalingRuleRequest extends Request {
         }
 
         /**
-         * The number of consecutive times that the event-triggered task created for scale-out activities must meet the threshold conditions before an alert is triggered. After a target tracking scaling rule is created, an event-triggered task is automatically created and then associated with the target tracking scaling rule.
-         * <p>
+         * <p>The number of consecutive times that the event-triggered task created for scale-in activities must meet the threshold conditions before an alert is triggered. After a target tracking scaling rule is created, an event-triggered task is automatically created and then associated with the target tracking scaling rule.</p>
+         * <p>Default value: 15.</p>
          * 
-         * Default value: 3.
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder scaleInEvaluationCount(Integer scaleInEvaluationCount) {
             this.putQueryParameter("ScaleInEvaluationCount", scaleInEvaluationCount);
@@ -586,13 +717,11 @@ public class CreateScalingRuleRequest extends Request {
         }
 
         /**
-         * The mode of the predictive scaling rule. Valid values:
-         * <p>
+         * <p>The number of consecutive times that the event-triggered task created for scale-out activities must meet the threshold conditions before an alert is triggered. After a target tracking scaling rule is created, an event-triggered task is automatically created and then associated with the target tracking scaling rule.</p>
+         * <p>Default value: 3.</p>
          * 
-         * *   PredictAndScale: produces predictions and creates prediction tasks.
-         * *   PredictOnly: produces predictions but does not create prediction tasks.
-         * 
-         * Default value: PredictAndScale.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder scaleOutEvaluationCount(Integer scaleOutEvaluationCount) {
             this.putQueryParameter("ScaleOutEvaluationCount", scaleOutEvaluationCount);
@@ -601,10 +730,11 @@ public class CreateScalingRuleRequest extends Request {
         }
 
         /**
-         * The name of the scaling rule. It must be 2 to 64 characters in length, and can contain letters, digits, underscores (\_), hyphens (-), and periods (.). It must start with a letter or a digit. The name of a scaling rule must be unique in the scaling group to which the scaling rule belongs and within an Alibaba Cloud account.
-         * <p>
+         * <p>The ID of the scaling group to which the scaling rule belongs.</p>
+         * <p>This parameter is required.</p>
          * 
-         * If you do not specify this parameter, the value of the ScalingRuleId parameter is used.
+         * <strong>example:</strong>
+         * <p>asg-bp1ffogfdauy0jw0****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);
@@ -613,10 +743,12 @@ public class CreateScalingRuleRequest extends Request {
         }
 
         /**
-         * The cooldown time of the scaling rule. This parameter is available only if you set the ScalingRuleType parameter to SimpleScalingRule. Valid values: 0 to 86400. Unit: seconds.
-         * <p>
+         * <p>The name of the scaling rule. The name must be 2 to 64 characters in length, and can contain letters, digits, underscores (_), hyphens (-), and periods (.). The name must start with a letter or a digit.</p>
+         * <p>The name of each scaling rule must be unique under the same account within a region.</p>
+         * <p>If you leave this parameter empty, the scaling rule ID is used.</p>
          * 
-         * By default, this parameter is left empty.
+         * <strong>example:</strong>
+         * <p>scalingrule****</p>
          */
         public Builder scalingRuleName(String scalingRuleName) {
             this.putQueryParameter("ScalingRuleName", scalingRuleName);
@@ -625,15 +757,17 @@ public class CreateScalingRuleRequest extends Request {
         }
 
         /**
-         * The type of the scaling rule. Valid values:
-         * <p>
+         * <p>The type of the scaling rule. Valid values:</p>
+         * <ul>
+         * <li>SimpleScalingRule: a simple scaling rule. After you execute a simple scaling rule, Auto Scaling adjusts the number of ECS instances or elastic container instances in the scaling group based on the values of AdjustmentType and AdjustmentValue.</li>
+         * <li>TargetTrackingScalingRule: a target tracking scaling rule. After you execute a target tracking scaling rule, Auto Scaling dynamically calculates the number of ECS instances or elastic container instances to scale based on the predefined metric (MetricName) and attempts to maintain the metric value close to the expected value (TargetValue).</li>
+         * <li>StepScalingRule: a step scaling rule. After you execute a step scaling rule, Auto Scaling scales instances step by step based on the predefined thresholds and metric values.</li>
+         * <li>PredictiveScalingRule: a predictive scaling rule. After you execute a predictive scaling rule, Auto Scaling uses machine learning to analyze historical monitoring data of the scaling group and predicts the future values of metrics. In addition, Auto Scaling automatically creates scheduled tasks to specify the value range for the scaling group.</li>
+         * </ul>
+         * <p>Default value: SimpleScalingRule.</p>
          * 
-         * *   SimpleScalingRule: adjusts the number of ECS instances based on the values of AdjustmentType and AdjustmentValue.
-         * *   TargetTrackingScalingRule: calculates the number of ECS instances that need to be scaled in a dynamic manner and maintains the value of a predefined metric close to the value of TargetValue.
-         * *   StepScalingRule: scales ECS instances in steps based on the specified thresholds and metric values.
-         * *   PredictiveScalingRule: uses machine learning to analyze historical monitoring data of the scaling group and predicts the future values of the predefined metrics. In addition, Auto Scaling automatically creates scheduled tasks to specify the boundary values for the scaling group.
-         * 
-         * Default value: SimpleScalingRule
+         * <strong>example:</strong>
+         * <p>SimpleScalingRule</p>
          */
         public Builder scalingRuleType(String scalingRuleType) {
             this.putQueryParameter("ScalingRuleType", scalingRuleType);
@@ -642,19 +776,19 @@ public class CreateScalingRuleRequest extends Request {
         }
 
         /**
-         * Details of the step adjustments.
+         * <p>Details of the step adjustments.</p>
          */
-        public Builder stepAdjustments(java.util.List < StepAdjustments> stepAdjustments) {
+        public Builder stepAdjustments(java.util.List<StepAdjustments> stepAdjustments) {
             this.putQueryParameter("StepAdjustments", stepAdjustments);
             this.stepAdjustments = stepAdjustments;
             return this;
         }
 
         /**
-         * Specifies whether to disable scale-in. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule.
-         * <p>
+         * <p>The target value. This parameter is required only if you set the ScalingRuleType parameter to TargetTrackingScalingRule or PredictiveScalingRule. The value must be greater than 0 and can have up to three decimal places.</p>
          * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>0.125</p>
          */
         public Builder targetValue(Float targetValue) {
             this.putQueryParameter("TargetValue", targetValue);
@@ -669,11 +803,17 @@ public class CreateScalingRuleRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateScalingRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateScalingRuleRequest</p>
+     */
     public static class AlarmDimensions extends TeaModel {
-        @NameInMap("DimensionKey")
+        @com.aliyun.core.annotation.NameInMap("DimensionKey")
         private String dimensionKey;
 
-        @NameInMap("DimensionValue")
+        @com.aliyun.core.annotation.NameInMap("DimensionValue")
         private String dimensionValue;
 
         private AlarmDimensions(Builder builder) {
@@ -708,7 +848,10 @@ public class CreateScalingRuleRequest extends Request {
             private String dimensionValue; 
 
             /**
-             * 监控项关联的维度信息键。
+             * <p>The dimension key of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rulePool</p>
              */
             public Builder dimensionKey(String dimensionKey) {
                 this.dimensionKey = dimensionKey;
@@ -716,7 +859,10 @@ public class CreateScalingRuleRequest extends Request {
             }
 
             /**
-             * 监控项关联的维度信息值。
+             * <p>The dimension value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sgp-l1cbirz451yxuxxx</p>
              */
             public Builder dimensionValue(String dimensionValue) {
                 this.dimensionValue = dimensionValue;
@@ -730,14 +876,238 @@ public class CreateScalingRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateScalingRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateScalingRuleRequest</p>
+     */
+    public static class Dimensions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DimensionKey")
+        private String dimensionKey;
+
+        @com.aliyun.core.annotation.NameInMap("DimensionValue")
+        private String dimensionValue;
+
+        private Dimensions(Builder builder) {
+            this.dimensionKey = builder.dimensionKey;
+            this.dimensionValue = builder.dimensionValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Dimensions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dimensionKey
+         */
+        public String getDimensionKey() {
+            return this.dimensionKey;
+        }
+
+        /**
+         * @return dimensionValue
+         */
+        public String getDimensionValue() {
+            return this.dimensionValue;
+        }
+
+        public static final class Builder {
+            private String dimensionKey; 
+            private String dimensionValue; 
+
+            /**
+             * <p>The key of the metric dimension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>queue</p>
+             */
+            public Builder dimensionKey(String dimensionKey) {
+                this.dimensionKey = dimensionKey;
+                return this;
+            }
+
+            /**
+             * <p>The value of the metric dimension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testQueue</p>
+             */
+            public Builder dimensionValue(String dimensionValue) {
+                this.dimensionValue = dimensionValue;
+                return this;
+            }
+
+            public Dimensions build() {
+                return new Dimensions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateScalingRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateScalingRuleRequest</p>
+     */
+    public static class HybridMetrics extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Dimensions")
+        private java.util.List<Dimensions> dimensions;
+
+        @com.aliyun.core.annotation.NameInMap("Expression")
+        private String expression;
+
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private String id;
+
+        @com.aliyun.core.annotation.NameInMap("MetricName")
+        private String metricName;
+
+        @com.aliyun.core.annotation.NameInMap("Statistic")
+        private String statistic;
+
+        private HybridMetrics(Builder builder) {
+            this.dimensions = builder.dimensions;
+            this.expression = builder.expression;
+            this.id = builder.id;
+            this.metricName = builder.metricName;
+            this.statistic = builder.statistic;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static HybridMetrics create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dimensions
+         */
+        public java.util.List<Dimensions> getDimensions() {
+            return this.dimensions;
+        }
+
+        /**
+         * @return expression
+         */
+        public String getExpression() {
+            return this.expression;
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return metricName
+         */
+        public String getMetricName() {
+            return this.metricName;
+        }
+
+        /**
+         * @return statistic
+         */
+        public String getStatistic() {
+            return this.statistic;
+        }
+
+        public static final class Builder {
+            private java.util.List<Dimensions> dimensions; 
+            private String expression; 
+            private String id; 
+            private String metricName; 
+            private String statistic; 
+
+            /**
+             * <p>The metric dimensions. You can use this parameter to specify the monitored resources.</p>
+             */
+            public Builder dimensions(java.util.List<Dimensions> dimensions) {
+                this.dimensions = dimensions;
+                return this;
+            }
+
+            /**
+             * <p>The metric expression that consists of multiple Hybrid Cloud Monitoring metrics. It calculates a result used to trigger scaling events.</p>
+             * <p>The expression must be written in Reverse Polish Notation (RPN) format and supports only the following operators: <code>+, -, *, /</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>(a+b)/2</p>
+             */
+            public Builder expression(String expression) {
+                this.expression = expression;
+                return this;
+            }
+
+            /**
+             * <p>The reference ID of the metric in the metric expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a</p>
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * <p>The name of the Hybrid Cloud Monitoring metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliyunSmq_NumberOfMessagesVisible</p>
+             */
+            public Builder metricName(String metricName) {
+                this.metricName = metricName;
+                return this;
+            }
+
+            /**
+             * <p>The statistical method of the metric value. Valid values:</p>
+             * <ul>
+             * <li>Average: calculates the average value of all metric values within a specified interval.</li>
+             * <li>Minimum: calculates the minimum value of all metric values within a specified interval.</li>
+             * <li>Maximum: calculates the maximum value of all metric values within a specified interval.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Average</p>
+             */
+            public Builder statistic(String statistic) {
+                this.statistic = statistic;
+                return this;
+            }
+
+            public HybridMetrics build() {
+                return new HybridMetrics(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateScalingRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateScalingRuleRequest</p>
+     */
     public static class StepAdjustments extends TeaModel {
-        @NameInMap("MetricIntervalLowerBound")
+        @com.aliyun.core.annotation.NameInMap("MetricIntervalLowerBound")
         private Float metricIntervalLowerBound;
 
-        @NameInMap("MetricIntervalUpperBound")
+        @com.aliyun.core.annotation.NameInMap("MetricIntervalUpperBound")
         private Float metricIntervalUpperBound;
 
-        @NameInMap("ScalingAdjustment")
+        @com.aliyun.core.annotation.NameInMap("ScalingAdjustment")
         private Integer scalingAdjustment;
 
         private StepAdjustments(Builder builder) {
@@ -781,7 +1151,10 @@ public class CreateScalingRuleRequest extends Request {
             private Integer scalingAdjustment; 
 
             /**
-             * The region ID of the scaling group.
+             * <p>The lower limit specified in a step adjustment. This parameter is available only if you set the ScalingRuleType parameter to StepScalingRule. Valid values: -9.999999E18 to 9.999999E18.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder metricIntervalLowerBound(Float metricIntervalLowerBound) {
                 this.metricIntervalLowerBound = metricIntervalLowerBound;
@@ -789,7 +1162,10 @@ public class CreateScalingRuleRequest extends Request {
             }
 
             /**
-             * The number of ECS instances that you want to scale in a step adjustment. This parameter is available only if you set the ScalingRuleType parameter to StepScalingRule.
+             * <p>The upper limit that is specified in a step adjustment. Valid values: -9.999999E18 to 9.999999E18.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.0</p>
              */
             public Builder metricIntervalUpperBound(Float metricIntervalUpperBound) {
                 this.metricIntervalUpperBound = metricIntervalUpperBound;
@@ -797,7 +1173,10 @@ public class CreateScalingRuleRequest extends Request {
             }
 
             /**
-             * The lower limit specified in a step adjustment. This parameter is available only if you set the ScalingRuleType parameter to StepScalingRule. Valid values: -9.999999E18 to 9.999999E18.
+             * <p>The number of ECS instances that you want to scale in a step adjustment. This parameter is available only if you set the ScalingRuleType parameter to StepScalingRule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder scalingAdjustment(Integer scalingAdjustment) {
                 this.scalingAdjustment = scalingAdjustment;

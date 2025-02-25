@@ -1,73 +1,73 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfigSchedruleOnDemandRequest} extends {@link RequestModel}
  *
  * <p>ConfigSchedruleOnDemandRequest</p>
  */
 public class ConfigSchedruleOnDemandRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("RuleAction")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleAction")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleAction;
 
-    @Query
-    @NameInMap("RuleConditionCnt")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleConditionCnt")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleConditionCnt;
 
-    @Query
-    @NameInMap("RuleConditionKpps")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleConditionKpps")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleConditionKpps;
 
-    @Query
-    @NameInMap("RuleConditionMbps")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleConditionMbps")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleConditionMbps;
 
-    @Query
-    @NameInMap("RuleName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleName;
 
-    @Query
-    @NameInMap("RuleSwitch")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleSwitch")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleSwitch;
 
-    @Query
-    @NameInMap("RuleUndoBeginTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleUndoBeginTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleUndoBeginTime;
 
-    @Query
-    @NameInMap("RuleUndoEndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleUndoEndTime")
     private String ruleUndoEndTime;
 
-    @Query
-    @NameInMap("RuleUndoMode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleUndoMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleUndoMode;
 
-    @Query
-    @NameInMap("TimeZone")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeZone")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String timeZone;
 
     private ConfigSchedruleOnDemandRequest(Builder builder) {
@@ -218,10 +218,14 @@ public class ConfigSchedruleOnDemandRequest extends Request {
         } 
 
         /**
-         * The ID of the on-demand instance.
-         * <p>
+         * <p>The ID of the on-demand instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/152120.html">DescribeOnDemandInstance</a> operation to query the IDs of all on-demand instances.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeOnDemandInstance](~~152120~~) operation to query the IDs of all on-demand instances.
+         * <strong>example:</strong>
+         * <p>ddosbgp-cn-z2q1qzxb****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -230,10 +234,13 @@ public class ConfigSchedruleOnDemandRequest extends Request {
         }
 
         /**
-         * The region ID of the on-demand instance.
-         * <p>
+         * <p>The region ID of the on-demand instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeRegions](~~118703~~) operation to query all regions supported by Anti-DDoS Origin.
+         * <strong>example:</strong>
+         * <p>cn-zhangjiakou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -242,7 +249,11 @@ public class ConfigSchedruleOnDemandRequest extends Request {
         }
 
         /**
-         * The scheduling action. Set the value to **declare**, which indicates that the route is advertised.
+         * <p>The scheduling action. Set the value to <strong>declare</strong>, which indicates that the route is advertised.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>declare</p>
          */
         public Builder ruleAction(String ruleAction) {
             this.putQueryParameter("RuleAction", ruleAction);
@@ -251,10 +262,14 @@ public class ConfigSchedruleOnDemandRequest extends Request {
         }
 
         /**
-         * If the inbound bandwidth or packets consecutively exceed the threshold for the specified number of times, the scheduling rule is triggered and traffic is rerouted to the on-demand instance. The specified number of times is the value of this parameter.
-         * <p>
+         * <p>If the inbound bandwidth or packets consecutively exceed the threshold for the specified number of times, the scheduling rule is triggered and traffic is rerouted to the on-demand instance. The specified number of times is the value of this parameter.</p>
+         * <blockquote>
+         * <p> The threshold of inbound bandwidth is the value of <strong>RuleConditionMbps</strong>. The threshold of inbound packets is the value of <strong>RuleConditionKpps</strong>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The threshold of inbound bandwidth is the value of **RuleConditionMbps**. The threshold of inbound packets is the value of **RuleConditionKpps**.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder ruleConditionCnt(String ruleConditionCnt) {
             this.putQueryParameter("RuleConditionCnt", ruleConditionCnt);
@@ -263,7 +278,11 @@ public class ConfigSchedruleOnDemandRequest extends Request {
         }
 
         /**
-         * The threshold of inbound packets. Unit: Kpps. Minimum value: **10**.
+         * <p>The threshold of inbound packets. Unit: kilo packets per second (Kpps). Minimum value: <strong>10</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder ruleConditionKpps(String ruleConditionKpps) {
             this.putQueryParameter("RuleConditionKpps", ruleConditionKpps);
@@ -272,7 +291,11 @@ public class ConfigSchedruleOnDemandRequest extends Request {
         }
 
         /**
-         * The threshold of inbound bandwidth. Unit: Mbit/s. Minimum value: **100**.
+         * <p>The threshold of inbound bandwidth. Unit: Mbit/s. Minimum value: <strong>100</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder ruleConditionMbps(String ruleConditionMbps) {
             this.putQueryParameter("RuleConditionMbps", ruleConditionMbps);
@@ -281,10 +304,12 @@ public class ConfigSchedruleOnDemandRequest extends Request {
         }
 
         /**
-         * The name of the scheduling rule.
-         * <p>
+         * <p>The name of the scheduling rule.</p>
+         * <p>The name can contain lowercase letters, digits, hyphens (-), and underscores (_). The name can be up to 32 characters in length. We recommend that you use the ID of the on-demand instance as the name. Example: <code>ddosbgp-cn-z2q1qzxb****</code>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The name can contain lowercase letters, digits, hyphens (-), and underscores (\_). The name can be up to 32 characters in length. We recommend that you use the ID of the on-demand instance as the name. Example: `ddosbgp-cn-z2q1qzxb****`.
+         * <strong>example:</strong>
+         * <p>ddosbgp-cn-z2q1qzxb****</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -293,11 +318,15 @@ public class ConfigSchedruleOnDemandRequest extends Request {
         }
 
         /**
-         * Specifies whether the scheduling rule is enabled. Valid values:
-         * <p>
+         * <p>Specifies whether the scheduling rule is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **on**: enabled
-         * *   **off**: disabled
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder ruleSwitch(String ruleSwitch) {
             this.putQueryParameter("RuleSwitch", ruleSwitch);
@@ -306,12 +335,15 @@ public class ConfigSchedruleOnDemandRequest extends Request {
         }
 
         /**
-         * The start time of the period during which the scheduling rule is automatically stopped. The time must be in the 24-hour clock and in the `hh:mm` format.
-         * <p>
+         * <p>The start time of the period during which the scheduling rule is automatically stopped. The time must be in the 24-hour clock and in the <code>hh:mm</code> format.</p>
+         * <p>If the system detects that DDoS attacks stop, the system no longer reroutes traffic to the on-demand instance from the time you specified. We recommend that you set this parameter to a value that is defined as off-peak hours.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only when the value of <strong>RuleUndoMode</strong> is <strong>auto</strong>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * If the system detects that DDoS attacks stop, the system no longer reroutes traffic to the on-demand instance from the time you specified. We recommend that you set this parameter to a value that is defined as off-peak hours.
-         * 
-         * >  This parameter takes effect only when the **RuleUndoMode** parameter is set to **auto**.
+         * <strong>example:</strong>
+         * <p>03:00</p>
          */
         public Builder ruleUndoBeginTime(String ruleUndoBeginTime) {
             this.putQueryParameter("RuleUndoBeginTime", ruleUndoBeginTime);
@@ -320,7 +352,10 @@ public class ConfigSchedruleOnDemandRequest extends Request {
         }
 
         /**
-         * The end time of the period during which the scheduling rule is automatically stopped. The time must be in the 24-hour clock and in the `hh:mm` format.
+         * <p>The end time of the period during which the scheduling rule is automatically stopped. The time must be in the 24-hour clock and in the <code>hh:mm</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>03:05</p>
          */
         public Builder ruleUndoEndTime(String ruleUndoEndTime) {
             this.putQueryParameter("RuleUndoEndTime", ruleUndoEndTime);
@@ -329,11 +364,15 @@ public class ConfigSchedruleOnDemandRequest extends Request {
         }
 
         /**
-         * The stop method of the scheduling rule. Valid values:
-         * <p>
+         * <p>The stop method of the scheduling rule. Valid values:</p>
+         * <ul>
+         * <li><strong>auto</strong></li>
+         * <li><strong>manual</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **auto**: The scheduling rule automatically stops.
-         * *   **manual**: The scheduling rule is manually stopped.
+         * <strong>example:</strong>
+         * <p>manual</p>
          */
         public Builder ruleUndoMode(String ruleUndoMode) {
             this.putQueryParameter("RuleUndoMode", ruleUndoMode);
@@ -342,12 +381,15 @@ public class ConfigSchedruleOnDemandRequest extends Request {
         }
 
         /**
-         * The time zone of the time when the scheduling rule automatically stops. The time zone must be in the `GMT-hh:mm` format.
-         * <p>
+         * <p>The time zone of the time when the scheduling rule automatically stops. The time zone must be in the <code>GMT-hh:mm</code> format.</p>
+         * <p>For example, the value <code>GMT-08:00</code> indicates that the time zone is UTC+8.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only when the value of <strong>RuleUndoMode</strong> is <strong>auto</strong>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * For example, the value `GMT-08:00` indicates that the time zone is UTC+8.
-         * 
-         * >  This parameter takes effect only when the **RuleUndoMode** parameter is set to **auto**.
+         * <strong>example:</strong>
+         * <p>GMT-08:00</p>
          */
         public Builder timeZone(String timeZone) {
             this.putQueryParameter("TimeZone", timeZone);

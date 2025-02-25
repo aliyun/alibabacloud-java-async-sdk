@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eflo_controller20221215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteClusterResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteClusterResponseBody</p>
  */
 public class DeleteClusterResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteClusterResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class DeleteClusterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>Request Id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FC4A1C7-421C-5EAB-9361-4C0338EFA287</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

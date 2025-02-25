@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceAutoRenewAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceAutoRenewAttributeResponseBody</p>
  */
 public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("InstanceRenewAttributes")
+    @com.aliyun.core.annotation.NameInMap("InstanceRenewAttributes")
     private InstanceRenewAttributes instanceRenewAttributes;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceAutoRenewAttributeResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The returned service code. A value of 0 indicates that the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -70,7 +78,7 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceRenewAttributes.
+         * <p>The renewal status of the instance.</p>
          */
         public Builder instanceRenewAttributes(InstanceRenewAttributes instanceRenewAttributes) {
             this.instanceRenewAttributes = instanceRenewAttributes;
@@ -78,7 +86,10 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4DD66F05-3116-4BAA-B588-52EB2E7F431D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,14 +102,20 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceAutoRenewAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceAutoRenewAttributeResponseBody</p>
+     */
     public static class InstanceRenewAttribute extends TeaModel {
-        @NameInMap("AutoRenewal")
+        @com.aliyun.core.annotation.NameInMap("AutoRenewal")
         private Boolean autoRenewal;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
         private InstanceRenewAttribute(Builder builder) {
@@ -142,7 +159,14 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * AutoRenewal.
+             * <p>The renewal type of the instance.</p>
+             * <ul>
+             * <li><strong>true</strong>: enables auto-renewal.</li>
+             * <li><strong>false</strong>: disables auto-renewal.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder autoRenewal(Boolean autoRenewal) {
                 this.autoRenewal = autoRenewal;
@@ -150,7 +174,10 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The unit of the auto-renewal period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -158,7 +185,10 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-5ci7l7k1m9m2zmhp4iw3o****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -172,9 +202,15 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceAutoRenewAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceAutoRenewAttributeResponseBody</p>
+     */
     public static class InstanceRenewAttributes extends TeaModel {
-        @NameInMap("InstanceRenewAttribute")
-        private java.util.List < InstanceRenewAttribute> instanceRenewAttribute;
+        @com.aliyun.core.annotation.NameInMap("InstanceRenewAttribute")
+        private java.util.List<InstanceRenewAttribute> instanceRenewAttribute;
 
         private InstanceRenewAttributes(Builder builder) {
             this.instanceRenewAttribute = builder.instanceRenewAttribute;
@@ -191,17 +227,17 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
         /**
          * @return instanceRenewAttribute
          */
-        public java.util.List < InstanceRenewAttribute> getInstanceRenewAttribute() {
+        public java.util.List<InstanceRenewAttribute> getInstanceRenewAttribute() {
             return this.instanceRenewAttribute;
         }
 
         public static final class Builder {
-            private java.util.List < InstanceRenewAttribute> instanceRenewAttribute; 
+            private java.util.List<InstanceRenewAttribute> instanceRenewAttribute; 
 
             /**
              * InstanceRenewAttribute.
              */
-            public Builder instanceRenewAttribute(java.util.List < InstanceRenewAttribute> instanceRenewAttribute) {
+            public Builder instanceRenewAttribute(java.util.List<InstanceRenewAttribute> instanceRenewAttribute) {
                 this.instanceRenewAttribute = instanceRenewAttribute;
                 return this;
             }

@@ -1,65 +1,70 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyADConnectorDirectoryRequest} extends {@link RequestModel}
  *
  * <p>ModifyADConnectorDirectoryRequest</p>
  */
 public class ModifyADConnectorDirectoryRequest extends Request {
-    @Query
-    @NameInMap("AdHostname")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdHostname")
     private String adHostname;
 
-    @Query
-    @NameInMap("DirectoryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String directoryId;
 
-    @Query
-    @NameInMap("DirectoryName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryName")
     private String directoryName;
 
-    @Query
-    @NameInMap("DnsAddress")
-    private java.util.List < String > dnsAddress;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DnsAddress")
+    private java.util.List<String> dnsAddress;
 
-    @Query
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @Query
-    @NameInMap("DomainPassword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainPassword")
     private String domainPassword;
 
-    @Query
-    @NameInMap("DomainUserName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainUserName")
     private String domainUserName;
 
-    @Query
-    @NameInMap("MfaEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MfaEnabled")
     private Boolean mfaEnabled;
 
-    @Query
-    @NameInMap("OUName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OUName")
     private String OUName;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("SubDomainDnsAddress")
-    private java.util.List < String > subDomainDnsAddress;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubDomainDnsAddress")
+    private java.util.List<String> subDomainDnsAddress;
 
-    @Query
-    @NameInMap("SubDomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubDomainName")
     private String subDomainName;
 
     private ModifyADConnectorDirectoryRequest(Builder builder) {
@@ -115,7 +120,7 @@ public class ModifyADConnectorDirectoryRequest extends Request {
     /**
      * @return dnsAddress
      */
-    public java.util.List < String > getDnsAddress() {
+    public java.util.List<String> getDnsAddress() {
         return this.dnsAddress;
     }
 
@@ -164,7 +169,7 @@ public class ModifyADConnectorDirectoryRequest extends Request {
     /**
      * @return subDomainDnsAddress
      */
-    public java.util.List < String > getSubDomainDnsAddress() {
+    public java.util.List<String> getSubDomainDnsAddress() {
         return this.subDomainDnsAddress;
     }
 
@@ -179,14 +184,14 @@ public class ModifyADConnectorDirectoryRequest extends Request {
         private String adHostname; 
         private String directoryId; 
         private String directoryName; 
-        private java.util.List < String > dnsAddress; 
+        private java.util.List<String> dnsAddress; 
         private String domainName; 
         private String domainPassword; 
         private String domainUserName; 
         private Boolean mfaEnabled; 
         private String OUName; 
         private String regionId; 
-        private java.util.List < String > subDomainDnsAddress; 
+        private java.util.List<String> subDomainDnsAddress; 
         private String subDomainName; 
 
         private Builder() {
@@ -210,7 +215,10 @@ public class ModifyADConnectorDirectoryRequest extends Request {
         } 
 
         /**
-         * AdHostname.
+         * <p>The hostname of the domain controller. The hostname must comply with the naming conventions for hostnames in Windows.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cnshsv21hmcdc01</p>
          */
         public Builder adHostname(String adHostname) {
             this.putQueryParameter("AdHostname", adHostname);
@@ -219,7 +227,11 @@ public class ModifyADConnectorDirectoryRequest extends Request {
         }
 
         /**
-         * DirectoryId.
+         * <p>The ID of the directory.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-gx2x1dhsmu52rd****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -228,7 +240,10 @@ public class ModifyADConnectorDirectoryRequest extends Request {
         }
 
         /**
-         * DirectoryName.
+         * <p>The name of the AD directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDirectoryName</p>
          */
         public Builder directoryName(String directoryName) {
             this.putQueryParameter("DirectoryName", directoryName);
@@ -237,16 +252,22 @@ public class ModifyADConnectorDirectoryRequest extends Request {
         }
 
         /**
-         * DnsAddress.
+         * <p>The IP address of the DNS server corresponding to the enterprise AD. You can specify only one IP address. Make sure that the specified IP address is accessible in the network of the selected vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><code>127.0.**.**</code></p>
          */
-        public Builder dnsAddress(java.util.List < String > dnsAddress) {
+        public Builder dnsAddress(java.util.List<String> dnsAddress) {
             this.putQueryParameter("DnsAddress", dnsAddress);
             this.dnsAddress = dnsAddress;
             return this;
         }
 
         /**
-         * DomainName.
+         * <p>The domain name. The name must be 2 to 255 characters in length and must be in the two-part domain name format, such as <code>example.com</code>. You can register each domain name only once.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -255,7 +276,10 @@ public class ModifyADConnectorDirectoryRequest extends Request {
         }
 
         /**
-         * DomainPassword.
+         * <p>The password of the domain administrator. The username can be up to 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testPassword</p>
          */
         public Builder domainPassword(String domainPassword) {
             this.putQueryParameter("DomainPassword", domainPassword);
@@ -264,7 +288,10 @@ public class ModifyADConnectorDirectoryRequest extends Request {
         }
 
         /**
-         * DomainUserName.
+         * <p>The username of the domain administrator. The username can be up to 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sAMAccountName</p>
          */
         public Builder domainUserName(String domainUserName) {
             this.putQueryParameter("DomainUserName", domainUserName);
@@ -273,7 +300,29 @@ public class ModifyADConnectorDirectoryRequest extends Request {
         }
 
         /**
-         * MfaEnabled.
+         * <p>Specifies whether to enable Multi-Factor Authentication (MFA). After you enable MFA, all AD users in the directory must enter a dynamic verification code generated by the virtual MFA device in addition to a correct password when they log on to a cloud computer.</p>
+         * <blockquote>
+         * <p> When end users log on to a cloud computer for the first time, they must bind an MFA device.</p>
+         * </blockquote>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><!-- -->
+         * 
+         * <p>false (default)</p>
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder mfaEnabled(Boolean mfaEnabled) {
             this.putQueryParameter("MfaEnabled", mfaEnabled);
@@ -282,7 +331,10 @@ public class ModifyADConnectorDirectoryRequest extends Request {
         }
 
         /**
-         * OUName.
+         * <p>The name of the organizational unit (OU) in the AD domain. You can call the ListUserAdOrganizationUnits operation to obtain the name of the OU.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com/Domain Controllers</p>
          */
         public Builder OUName(String OUName) {
             this.putQueryParameter("OUName", OUName);
@@ -291,7 +343,11 @@ public class ModifyADConnectorDirectoryRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -300,16 +356,22 @@ public class ModifyADConnectorDirectoryRequest extends Request {
         }
 
         /**
-         * SubDomainDnsAddress.
+         * <p>The DNS address of the existing AD subdomain.<br>If you specify the <code>SubDomainName</code> parameter but you do not specify this parameter, the DNS address of the subdomain is the same as the DNS address of the parent domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><code>127.0.**.**</code></p>
          */
-        public Builder subDomainDnsAddress(java.util.List < String > subDomainDnsAddress) {
+        public Builder subDomainDnsAddress(java.util.List<String> subDomainDnsAddress) {
             this.putQueryParameter("SubDomainDnsAddress", subDomainDnsAddress);
             this.subDomainDnsAddress = subDomainDnsAddress;
             return this;
         }
 
         /**
-         * SubDomainName.
+         * <p>The domain name of the existing AD subdomain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>childexample.com</p>
          */
         public Builder subDomainName(String subDomainName) {
             this.putQueryParameter("SubDomainName", subDomainName);

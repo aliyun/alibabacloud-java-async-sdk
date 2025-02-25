@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListVirusScanMachineEventResponseBody} extends {@link TeaModel}
  *
  * <p>ListVirusScanMachineEventResponseBody</p>
  */
 public class ListVirusScanMachineEventResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListVirusScanMachineEventResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -57,20 +62,20 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
-         * The details of the alert event.
+         * <p>The details of the alert event.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +83,10 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2DAEF40F-8E1A-550D-8793-99C61C401DD0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,17 +99,23 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListVirusScanMachineEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVirusScanMachineEventResponseBody</p>
+     */
     public static class Details extends TeaModel {
-        @NameInMap("InfoType")
+        @com.aliyun.core.annotation.NameInMap("InfoType")
         private String infoType;
 
-        @NameInMap("NameDisplay")
+        @com.aliyun.core.annotation.NameInMap("NameDisplay")
         private String nameDisplay;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("ValueDisplay")
+        @com.aliyun.core.annotation.NameInMap("ValueDisplay")
         private String valueDisplay;
 
         private Details(Builder builder) {
@@ -154,10 +168,13 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             private String valueDisplay; 
 
             /**
-             * The display type of the value for ValueDisplay. Valid value:
-             * <p>
+             * <p>The display type of the value for ValueDisplay. Valid value:</p>
+             * <ul>
+             * <li><strong>download_url</strong>, which indicates a download URL.</li>
+             * </ul>
              * 
-             * *   **download_url**, which indicates a download URL.
+             * <strong>example:</strong>
+             * <p>download_url</p>
              */
             public Builder infoType(String infoType) {
                 this.infoType = infoType;
@@ -165,7 +182,10 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the alert event.
+             * <p>The display name of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Trojan Path</p>
              */
             public Builder nameDisplay(String nameDisplay) {
                 this.nameDisplay = nameDisplay;
@@ -173,13 +193,15 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             }
 
             /**
-             * The format in which the details of the exception are displayed.
-             * <p>
+             * <p>The format in which the details of the exception are displayed.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><strong>text</strong></li>
+             * <li><strong>html</strong></li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   **text**
-             * *   **html**
+             * <strong>example:</strong>
+             * <p>html</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -187,7 +209,10 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             }
 
             /**
-             * The attribute information about the exception. The information includes the logon time or location of an alert triggered by an unusual logon, and the trojan file path or trojan type of an alert.
+             * <p>The attribute information about the exception. The information includes the logon time or location of an alert triggered by an unusual logon, and the trojan file path or trojan type of an alert.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>getopt</p>
              */
             public Builder valueDisplay(String valueDisplay) {
                 this.valueDisplay = valueDisplay;
@@ -201,29 +226,35 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListVirusScanMachineEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVirusScanMachineEventResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Details")
-        private java.util.List < Details> details;
+        @com.aliyun.core.annotation.NameInMap("Details")
+        private java.util.List<Details> details;
 
-        @NameInMap("EventId")
+        @com.aliyun.core.annotation.NameInMap("EventId")
         private Long eventId;
 
-        @NameInMap("EventName")
+        @com.aliyun.core.annotation.NameInMap("EventName")
         private String eventName;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IntranetIp")
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("LastTimeStamp")
+        @com.aliyun.core.annotation.NameInMap("LastTimeStamp")
         private Long lastTimeStamp;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
         private Data(Builder builder) {
@@ -248,7 +279,7 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
         /**
          * @return details
          */
-        public java.util.List < Details> getDetails() {
+        public java.util.List<Details> getDetails() {
             return this.details;
         }
 
@@ -302,7 +333,7 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Details> details; 
+            private java.util.List<Details> details; 
             private Long eventId; 
             private String eventName; 
             private String instanceName; 
@@ -312,15 +343,18 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             private String level; 
 
             /**
-             * The details of the exception.
+             * <p>The details of the exception.</p>
              */
-            public Builder details(java.util.List < Details> details) {
+            public Builder details(java.util.List<Details> details) {
                 this.details = details;
                 return this;
             }
 
             /**
-             * The ID of the alert event.
+             * <p>The ID of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>911273</p>
              */
             public Builder eventId(Long eventId) {
                 this.eventId = eventId;
@@ -328,7 +362,10 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert event. The value indicates a subtype.
+             * <p>The name of the alert event. The value indicates a subtype.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Unusual Logon</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -336,7 +373,10 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-wz92q7m5hsbgfhdss***</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -344,7 +384,10 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address.
+             * <p>The public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -352,7 +395,10 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address.
+             * <p>The private IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.42.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -360,7 +406,10 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the alert event was last generated. Unit: milliseconds.
+             * <p>The timestamp when the alert event was last generated. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1682046733628</p>
              */
             public Builder lastTimeStamp(Long lastTimeStamp) {
                 this.lastTimeStamp = lastTimeStamp;
@@ -368,12 +417,15 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level of the alert event. Valid values:
-             * <p>
+             * <p>The risk level of the alert event. Valid values:</p>
+             * <ul>
+             * <li><strong>serious</strong></li>
+             * <li><strong>suspicious</strong></li>
+             * <li><strong>remind</strong></li>
+             * </ul>
              * 
-             * *   **serious**
-             * *   **suspicious**
-             * *   **remind**
+             * <strong>example:</strong>
+             * <p>serious</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -387,14 +439,20 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListVirusScanMachineEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVirusScanMachineEventResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -438,7 +496,10 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -446,7 +507,10 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -454,7 +518,10 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>149</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

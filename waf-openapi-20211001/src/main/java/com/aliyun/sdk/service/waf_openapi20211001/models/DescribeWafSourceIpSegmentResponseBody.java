@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWafSourceIpSegmentResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWafSourceIpSegmentResponseBody</p>
  */
 public class DescribeWafSourceIpSegmentResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("WafSourceIp")
+    @com.aliyun.core.annotation.NameInMap("WafSourceIp")
     private WafSourceIp wafSourceIp;
 
     private DescribeWafSourceIpSegmentResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DescribeWafSourceIpSegmentResponseBody extends TeaModel {
         private WafSourceIp wafSourceIp; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9087ADDC-9047-4D02-82A7-33021B58083C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class DescribeWafSourceIpSegmentResponseBody extends TeaModel {
         }
 
         /**
-         * The back-to-origin CIDR blocks that are used by the protection cluster.
+         * <p>The back-to-origin CIDR blocks that are used by the protection cluster.</p>
          */
         public Builder wafSourceIp(WafSourceIp wafSourceIp) {
             this.wafSourceIp = wafSourceIp;
@@ -71,12 +79,18 @@ public class DescribeWafSourceIpSegmentResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeWafSourceIpSegmentResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWafSourceIpSegmentResponseBody</p>
+     */
     public static class WafSourceIp extends TeaModel {
-        @NameInMap("IPv4")
-        private java.util.List < String > iPv4;
+        @com.aliyun.core.annotation.NameInMap("IPv4")
+        private java.util.List<String> iPv4;
 
-        @NameInMap("IPv6")
-        private java.util.List < String > iPv6;
+        @com.aliyun.core.annotation.NameInMap("IPv6")
+        private java.util.List<String> iPv6;
 
         private WafSourceIp(Builder builder) {
             this.iPv4 = builder.iPv4;
@@ -94,33 +108,33 @@ public class DescribeWafSourceIpSegmentResponseBody extends TeaModel {
         /**
          * @return iPv4
          */
-        public java.util.List < String > getIPv4() {
+        public java.util.List<String> getIPv4() {
             return this.iPv4;
         }
 
         /**
          * @return iPv6
          */
-        public java.util.List < String > getIPv6() {
+        public java.util.List<String> getIPv6() {
             return this.iPv6;
         }
 
         public static final class Builder {
-            private java.util.List < String > iPv4; 
-            private java.util.List < String > iPv6; 
+            private java.util.List<String> iPv4; 
+            private java.util.List<String> iPv6; 
 
             /**
-             * An array of back-to-origin IPv4 CIDR blocks.
+             * <p>An array of back-to-origin IPv4 CIDR blocks.</p>
              */
-            public Builder iPv4(java.util.List < String > iPv4) {
+            public Builder iPv4(java.util.List<String> iPv4) {
                 this.iPv4 = iPv4;
                 return this;
             }
 
             /**
-             * An array of back-to-origin IPv6 CIDR blocks.
+             * <p>An array of back-to-origin IPv6 CIDR blocks.</p>
              */
-            public Builder iPv6(java.util.List < String > iPv6) {
+            public Builder iPv6(java.util.List<String> iPv6) {
                 this.iPv6 = iPv6;
                 return this;
             }

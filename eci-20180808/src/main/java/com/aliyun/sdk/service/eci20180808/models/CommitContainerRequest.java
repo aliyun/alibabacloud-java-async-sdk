@@ -1,58 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CommitContainerRequest} extends {@link RequestModel}
  *
  * <p>CommitContainerRequest</p>
  */
 public class CommitContainerRequest extends Request {
-    @Query
-    @NameInMap("AcrRegistryInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcrRegistryInfo")
     private AcrRegistryInfo acrRegistryInfo;
 
-    @Query
-    @NameInMap("Arn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Arn")
     private Arn arn;
 
-    @Query
-    @NameInMap("ContainerGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String containerGroupId;
 
-    @Query
-    @NameInMap("ContainerName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String containerName;
 
-    @Query
-    @NameInMap("Image")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Image")
     private Image image;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private CommitContainerRequest(Builder builder) {
@@ -183,9 +183,10 @@ public class CommitContainerRequest extends Request {
         } 
 
         /**
-         * The access credential configurations of the Container Registry Enterprise Edition instance.\
-         * <p>
-         * If you use a Container Registry Personal Edition instance, you can leave this parameter empty.
+         * <p>The access credential configurations of the Container Registry Enterprise Edition instance.</p>
+         * <blockquote>
+         * <p> If you use a Container Registry Personal Edition instance, you do not need to configure this parameter. If you use a Container Registry Enterprise Edition instance, you must configure this parameter.</p>
+         * </blockquote>
          */
         public Builder acrRegistryInfo(AcrRegistryInfo acrRegistryInfo) {
             this.putQueryParameter("AcrRegistryInfo", acrRegistryInfo);
@@ -194,7 +195,7 @@ public class CommitContainerRequest extends Request {
         }
 
         /**
-         * The ARN that is required for authorization.
+         * <p>The details about the ARN that is required for authorization.</p>
          */
         public Builder arn(Arn arn) {
             this.putQueryParameter("Arn", arn);
@@ -203,7 +204,11 @@ public class CommitContainerRequest extends Request {
         }
 
         /**
-         * The ID of the container group.
+         * <p>The ID of the container group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eci-bp1do4xz75fa5sd****</p>
          */
         public Builder containerGroupId(String containerGroupId) {
             this.putQueryParameter("ContainerGroupId", containerGroupId);
@@ -212,7 +217,11 @@ public class CommitContainerRequest extends Request {
         }
 
         /**
-         * The name of the container.
+         * <p>The name of the container.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>container-1</p>
          */
         public Builder containerName(String containerName) {
             this.putQueryParameter("ContainerName", containerName);
@@ -221,7 +230,7 @@ public class CommitContainerRequest extends Request {
         }
 
         /**
-         * The image of the container.
+         * <p>The image of the container.</p>
          */
         public Builder image(Image image) {
             this.putQueryParameter("Image", image);
@@ -248,7 +257,11 @@ public class CommitContainerRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -281,17 +294,23 @@ public class CommitContainerRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CommitContainerRequest} extends {@link TeaModel}
+     *
+     * <p>CommitContainerRequest</p>
+     */
     public static class AcrRegistryInfo extends TeaModel {
-        @NameInMap("ArnService")
+        @com.aliyun.core.annotation.NameInMap("ArnService")
         private String arnService;
 
-        @NameInMap("ArnUser")
+        @com.aliyun.core.annotation.NameInMap("ArnUser")
         private String arnUser;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private AcrRegistryInfo(Builder builder) {
@@ -344,7 +363,10 @@ public class CommitContainerRequest extends Request {
             private String regionId; 
 
             /**
-             * The RAM role ARN of the account to which permissions are granted during a cross-account authorization.
+             * <p>The Alibaba Cloud Resource Access (ARN) of the RAM role that is assigned to the user (the authorized account) in cross-account authorization scenarios.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::1609982529******:role/role-test</p>
              */
             public Builder arnService(String arnService) {
                 this.arnService = arnService;
@@ -352,7 +374,10 @@ public class CommitContainerRequest extends Request {
             }
 
             /**
-             * The RAM role ARN of the account that is used to grant permissions during a cross-account authorization.
+             * <p>The ARN of the RAM role that is assigned to the authorizer in cross-account authorization scenarios.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::1298452580******:role/role-test</p>
              */
             public Builder arnUser(String arnUser) {
                 this.arnUser = arnUser;
@@ -360,7 +385,10 @@ public class CommitContainerRequest extends Request {
             }
 
             /**
-             * The ID of the Container Registry Enterprise Edition instance.
+             * <p>The ID of the Container Registry Enterprise Edition instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cri-nwj395hgf6f3****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -368,7 +396,10 @@ public class CommitContainerRequest extends Request {
             }
 
             /**
-             * The ID of the region where the Container Registry Enterprise Edition instance resides.
+             * <p>The region ID of the Container Registry Enterprise Edition instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -382,11 +413,17 @@ public class CommitContainerRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CommitContainerRequest} extends {@link TeaModel}
+     *
+     * <p>CommitContainerRequest</p>
+     */
     public static class Arn extends TeaModel {
-        @NameInMap("RoleArn")
+        @com.aliyun.core.annotation.NameInMap("RoleArn")
         private String roleArn;
 
-        @NameInMap("RoleType")
+        @com.aliyun.core.annotation.NameInMap("RoleType")
         private String roleType;
 
         private Arn(Builder builder) {
@@ -421,7 +458,10 @@ public class CommitContainerRequest extends Request {
             private String roleType; 
 
             /**
-             * The ARN of the RAM role of the Container Registry Enterprise Edition instance.
+             * <p>The ARN of the authorized role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram:xxx</p>
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -429,7 +469,10 @@ public class CommitContainerRequest extends Request {
             }
 
             /**
-             * The type of the authorization.
+             * <p>The authorization type. A value of service indicates that RAM roles are used for authorization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder roleType(String roleType) {
                 this.roleType = roleType;
@@ -443,19 +486,25 @@ public class CommitContainerRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CommitContainerRequest} extends {@link TeaModel}
+     *
+     * <p>CommitContainerRequest</p>
+     */
     public static class Image extends TeaModel {
-        @NameInMap("Author")
+        @com.aliyun.core.annotation.NameInMap("Author")
         private String author;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Repository")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Repository")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String repository;
 
-        @NameInMap("Tag")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String tag;
 
         private Image(Builder builder) {
@@ -508,7 +557,10 @@ public class CommitContainerRequest extends Request {
             private String tag; 
 
             /**
-             * The authorization of the image.
+             * <p>The authorization of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECI</p>
              */
             public Builder author(String author) {
                 this.author = author;
@@ -516,7 +568,10 @@ public class CommitContainerRequest extends Request {
             }
 
             /**
-             * The message about the image.
+             * <p>The message about the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test commit</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -524,7 +579,11 @@ public class CommitContainerRequest extends Request {
             }
 
             /**
-             * The image repository.
+             * <p>The image repository.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry-vpc.cn-hangzhou.aliyuncs.com/eastest/registry-test</p>
              */
             public Builder repository(String repository) {
                 this.repository = repository;
@@ -532,7 +591,11 @@ public class CommitContainerRequest extends Request {
             }
 
             /**
-             * The tag of the image. This parameter is empty by default, which indicates that the tag is not modified.
+             * <p>The tag of the image. This parameter is empty by default, which indicates that the tag is not modified.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.6</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;

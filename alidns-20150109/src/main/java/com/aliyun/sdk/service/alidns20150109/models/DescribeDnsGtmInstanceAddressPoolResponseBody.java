@@ -1,54 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDnsGtmInstanceAddressPoolResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDnsGtmInstanceAddressPoolResponseBody</p>
  */
 public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
-    @NameInMap("AddrCount")
+    @com.aliyun.core.annotation.NameInMap("AddrCount")
     private Integer addrCount;
 
-    @NameInMap("AddrPoolId")
+    @com.aliyun.core.annotation.NameInMap("AddrPoolId")
     private String addrPoolId;
 
-    @NameInMap("Addrs")
+    @com.aliyun.core.annotation.NameInMap("Addrs")
     private Addrs addrs;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("CreateTimestamp")
+    @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
     private Long createTimestamp;
 
-    @NameInMap("LbaStrategy")
+    @com.aliyun.core.annotation.NameInMap("LbaStrategy")
     private String lbaStrategy;
 
-    @NameInMap("MonitorConfigId")
+    @com.aliyun.core.annotation.NameInMap("MonitorConfigId")
     private String monitorConfigId;
 
-    @NameInMap("MonitorStatus")
+    @com.aliyun.core.annotation.NameInMap("MonitorStatus")
     private String monitorStatus;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @NameInMap("UpdateTime")
+    @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
-    @NameInMap("UpdateTimestamp")
+    @com.aliyun.core.annotation.NameInMap("UpdateTimestamp")
     private Long updateTimestamp;
 
     private DescribeDnsGtmInstanceAddressPoolResponseBody(Builder builder) {
@@ -182,7 +187,10 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
         private Long updateTimestamp; 
 
         /**
-         * The number of addresses in the address pool.
+         * <p>The number of addresses in the address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder addrCount(Integer addrCount) {
             this.addrCount = addrCount;
@@ -190,7 +198,10 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the address pool.
+         * <p>The ID of the address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testpool1</p>
          */
         public Builder addrPoolId(String addrPoolId) {
             this.addrPoolId = addrPoolId;
@@ -198,7 +209,7 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * The addresses in the address pool.
+         * <p>The addresses in the address pool.</p>
          */
         public Builder addrs(Addrs addrs) {
             this.addrs = addrs;
@@ -206,7 +217,10 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the address pool was created.
+         * <p>The time when the address pool was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-28T13:08Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -214,7 +228,10 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp that indicates the time when the address pool was created.
+         * <p>The timestamp that indicates the time when the address pool was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1527690629357</p>
          */
         public Builder createTimestamp(Long createTimestamp) {
             this.createTimestamp = createTimestamp;
@@ -222,11 +239,14 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * The load balancing policy for the address pool. Valid values:
-         * <p>
+         * <p>The load balancing policy for the address pool. Valid values:</p>
+         * <ul>
+         * <li>ALL_RR: returns all addresses.</li>
+         * <li>RATIO: returns addresses by weight.</li>
+         * </ul>
          * 
-         * *   ALL_RR: returns all addresses.
-         * *   RATIO: returns addresses by weight.
+         * <strong>example:</strong>
+         * <p>all_rr</p>
          */
         public Builder lbaStrategy(String lbaStrategy) {
             this.lbaStrategy = lbaStrategy;
@@ -234,7 +254,10 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the health check configuration.
+         * <p>The ID of the health check configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder monitorConfigId(String monitorConfigId) {
             this.monitorConfigId = monitorConfigId;
@@ -242,12 +265,15 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates the status of the health check. Valid values:
-         * <p>
+         * <p>Indicates the status of the health check. Valid values:</p>
+         * <ul>
+         * <li>OPEN: The health check is enabled.</li>
+         * <li>CLOSE: The health check is disabled.</li>
+         * <li>UNCONFIGURED: The health check is not configured.</li>
+         * </ul>
          * 
-         * *   OPEN: The health check is enabled.
-         * *   CLOSE: The health check is disabled.
-         * *   UNCONFIGURED: The health check is not configured.
+         * <strong>example:</strong>
+         * <p>open</p>
          */
         public Builder monitorStatus(String monitorStatus) {
             this.monitorStatus = monitorStatus;
@@ -255,7 +281,10 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the address pool.
+         * <p>The name of the address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -263,7 +292,10 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -271,12 +303,15 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the address pool. Valid values:
-         * <p>
+         * <p>The type of the address pool. Valid values:</p>
+         * <ul>
+         * <li>IPV4: IPv4 address</li>
+         * <li>IPV6: IPv6 address</li>
+         * <li>DOMAIN: domain name</li>
+         * </ul>
          * 
-         * *   IPV4: IPv4 address
-         * *   IPV6: IPv6 address
-         * *   DOMAIN: domain name
+         * <strong>example:</strong>
+         * <p>ipv4</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -284,7 +319,10 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the address pool was last updated.
+         * <p>The time when the address pool was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-28T13:08Z</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -292,7 +330,10 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp that indicates the time when the address pool was last updated.
+         * <p>The timestamp that indicates the time when the address pool was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1527690629357</p>
          */
         public Builder updateTimestamp(Long updateTimestamp) {
             this.updateTimestamp = updateTimestamp;
@@ -305,35 +346,41 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDnsGtmInstanceAddressPoolResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmInstanceAddressPoolResponseBody</p>
+     */
     public static class Addr extends TeaModel {
-        @NameInMap("Addr")
+        @com.aliyun.core.annotation.NameInMap("Addr")
         private String addr;
 
-        @NameInMap("AlertStatus")
+        @com.aliyun.core.annotation.NameInMap("AlertStatus")
         private String alertStatus;
 
-        @NameInMap("AttributeInfo")
+        @com.aliyun.core.annotation.NameInMap("AttributeInfo")
         private String attributeInfo;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
-        @NameInMap("LbaWeight")
+        @com.aliyun.core.annotation.NameInMap("LbaWeight")
         private Integer lbaWeight;
 
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("UpdateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("UpdateTimestamp")
         private Long updateTimestamp;
 
         private Addr(Builder builder) {
@@ -440,7 +487,10 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
             private Long updateTimestamp; 
 
             /**
-             * The address.
+             * <p>The address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.1.1</p>
              */
             public Builder addr(String addr) {
                 this.addr = addr;
@@ -448,11 +498,14 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the last health check on the address. Valid values:
-             * <p>
+             * <p>The status of the last health check on the address. Valid values:</p>
+             * <ul>
+             * <li>OK: No active alerts are triggered.</li>
+             * <li>ALERT: Alerts are triggered based on the alert rules.</li>
+             * </ul>
              * 
-             * *   OK: No active alerts are triggered.
-             * *   ALERT: Alerts are triggered based on the alert rules.
+             * <strong>example:</strong>
+             * <p>ok</p>
              */
             public Builder alertStatus(String alertStatus) {
                 this.alertStatus = alertStatus;
@@ -460,12 +513,15 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
             }
 
             /**
-             * The source region of the address.
-             * <p>
+             * <p>The source region of the address.</p>
+             * <ul>
+             * <li>lineCode: the line code of the source region of the address. This parameter is deprecated, and lineCodes prevails.</li>
+             * <li>lineName: the line name of the source region of the address. This parameter is deprecated.</li>
+             * <li>lineCodes: the line codes of the source regions of the address.</li>
+             * </ul>
              * 
-             * *   lineCode: the line code of the source region of the address. This parameter is deprecated, and lineCodes prevails.
-             * *   lineName: the line name of the source region of the address. This parameter is deprecated.
-             * *   lineCodes: the line codes of the source regions of the address.
+             * <strong>example:</strong>
+             * <p>&quot;lineCode&quot;:&quot;aliyun_r_cn-zhangjiakou&quot;, &quot;lineName&quot;: &quot;Alibaba Cloud_China (Zhangjiakou)&quot;, &quot;lineCodes&quot;: [&quot;aliyun_r_cn-zhangjiakou&quot;]</p>
              */
             public Builder attributeInfo(String attributeInfo) {
                 this.attributeInfo = attributeInfo;
@@ -473,7 +529,10 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the address was added into the address pool.
+             * <p>The time when the address was added into the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-28T13:08Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -481,7 +540,10 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp that indicates the time when the address was added into the address pool.
+             * <p>The timestamp that indicates the time when the address was added into the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1527690629357</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -489,7 +551,10 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
             }
 
             /**
-             * The weight of the address.
+             * <p>The weight of the address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder lbaWeight(Integer lbaWeight) {
                 this.lbaWeight = lbaWeight;
@@ -497,12 +562,15 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
             }
 
             /**
-             * The mode of the address. Valid values:
-             * <p>
+             * <p>The mode of the address. Valid values:</p>
+             * <ul>
+             * <li>SMART: smart return</li>
+             * <li>ONLINE: always online</li>
+             * <li>OFFLINE: always offline</li>
+             * </ul>
              * 
-             * *   SMART: smart return
-             * *   ONLINE: always online
-             * *   OFFLINE: always offline
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -510,7 +578,10 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the address.
+             * <p>The description of the address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -518,7 +589,10 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the address was last updated.
+             * <p>The time when the address was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-28T13:08Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -526,7 +600,10 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp that indicates the time when the address was last updated.
+             * <p>The timestamp that indicates the time when the address was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1527690629357</p>
              */
             public Builder updateTimestamp(Long updateTimestamp) {
                 this.updateTimestamp = updateTimestamp;
@@ -540,9 +617,15 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmInstanceAddressPoolResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmInstanceAddressPoolResponseBody</p>
+     */
     public static class Addrs extends TeaModel {
-        @NameInMap("Addr")
-        private java.util.List < Addr> addr;
+        @com.aliyun.core.annotation.NameInMap("Addr")
+        private java.util.List<Addr> addr;
 
         private Addrs(Builder builder) {
             this.addr = builder.addr;
@@ -559,17 +642,20 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
         /**
          * @return addr
          */
-        public java.util.List < Addr> getAddr() {
+        public java.util.List<Addr> getAddr() {
             return this.addr;
         }
 
         public static final class Builder {
-            private java.util.List < Addr> addr; 
+            private java.util.List<Addr> addr; 
 
             /**
-             * The address.
+             * <p>The address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.1.1</p>
              */
-            public Builder addr(java.util.List < Addr> addr) {
+            public Builder addr(java.util.List<Addr> addr) {
                 this.addr = addr;
                 return this;
             }

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccountAttributesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAccountAttributesResponseBody</p>
  */
 public class DescribeAccountAttributesResponseBody extends TeaModel {
-    @NameInMap("AccountAttributeItems")
+    @com.aliyun.core.annotation.NameInMap("AccountAttributeItems")
     private AccountAttributeItems accountAttributeItems;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAccountAttributesResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about account privileges specified by AccountAttributeItem in the specified region.
+         * <p>Details about account privileges in the specified region.</p>
          */
         public Builder accountAttributeItems(AccountAttributeItems accountAttributeItems) {
             this.accountAttributeItems = accountAttributeItems;
@@ -58,7 +63,10 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8CE45CD5-31FB-47C2-959D-CA8144CE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,26 +79,32 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAccountAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccountAttributesResponseBody</p>
+     */
     public static class ValueItem extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("DiskCategory")
+        @com.aliyun.core.annotation.NameInMap("DiskCategory")
         private String diskCategory;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("InstanceChargeType")
+        @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
         private String instanceChargeType;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private ValueItem(Builder builder) {
@@ -170,7 +184,10 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The number of privilege attributes in the account.
+             * <p>The number of privilege attributes in the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -178,12 +195,15 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The data disk category. Valid values:
-             * <p>
+             * <p>The data disk category. Valid values:</p>
+             * <ul>
+             * <li>cloud_efficiency: ultra disk</li>
+             * <li>cloud_ssd: standard SSD</li>
+             * <li>cloud_essd: enhanced SSD (ESSD)</li>
+             * </ul>
              * 
-             * *   cloud_efficiency: ultra disk
-             * *   cloud_ssd: standard SSD
-             * *   cloud_essd: enhanced SSD (ESSD)
+             * <strong>example:</strong>
+             * <p>cloud_ssd</p>
              */
             public Builder diskCategory(String diskCategory) {
                 this.diskCategory = diskCategory;
@@ -191,7 +211,10 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time of a privilege. This parameter is returned only when the account privilege has an expiration time. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The expiration time of a privilege. This parameter is returned only when the account privilege has an expiration time. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-01-01T12:30:00Z</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -199,7 +222,10 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the instance.
+             * <p>The billing method of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PrePaid</p>
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -207,7 +233,10 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the instance.
+             * <p>The type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.g5.large</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -215,36 +244,37 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the resource quota in the specified region. Valid values:
-             * <p>
+             * <p>The value of the resource quota in the specified region. Valid values:</p>
+             * <p>The values returned for the resource quotas to which the following AttributeName values correspond are 0 or positive integers:</p>
+             * <ul>
+             * <li>max-security-groups</li>
+             * <li>max-elastic-network-interfaces</li>
+             * <li>max-postpaid-instance-vcpu-count</li>
+             * <li>max-spot-instance-vcpu-count</li>
+             * <li>used-postpaid-instance-vcpu-count</li>
+             * <li>used-spot-instance-vcpu-count</li>
+             * <li>max-postpaid-yundisk-capacity (the value is deprecated)</li>
+             * <li>used-postpaid-yundisk-capacity (the value is deprecated)</li>
+             * <li>max-dedicated-hosts</li>
+             * <li>max-axt-command-count</li>
+             * <li>max-axt-invocation-daily</li>
+             * <li>max-cloud-assistant-activation-count</li>
+             * </ul>
+             * <p>When AttributeName is set to supported-postpay-instance-types, instance types are returned. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</p>
+             * <p>When AttributeName is set to real-name-authentications, one of the following values is returned:</p>
+             * <ul>
+             * <li>yes</li>
+             * <li>none</li>
+             * <li>unnecessary</li>
+             * </ul>
+             * <p>When AttributeName is set to instance-network-type, one of the following values is returned:</p>
+             * <ul>
+             * <li>vpc</li>
+             * <li>classic</li>
+             * </ul>
              * 
-             * The values returned for the resource quotas to which the following AttributeName values correspond are 0 or positive integers:
-             * 
-             * *   max-security-groups
-             * *   max-elastic-network-interfaces
-             * *   max-postpaid-instance-vcpu-count
-             * *   max-spot-instance-vcpu-count
-             * *   used-postpaid-instance-vcpu-count
-             * *   used-spot-instance-vcpu-count
-             * *   max-postpaid-yundisk-capacity
-             * *   used-postpaid-yundisk-capacity
-             * *   max-dedicated-hosts
-             * *   max-axt-command-count
-             * *   max-axt-invocation-daily
-             * *   max-cloud-assistant-activation-count
-             * 
-             * When the AttributeName parameter is set to supported-postpay-instance-types, an instance type is returned. For more information, see [Instance families](~~25378~~).
-             * 
-             * When the AttributeName parameter is set to real-name-authentications, one of the following values is returned:
-             * 
-             * *   yes
-             * *   none
-             * *   unnecessary
-             * 
-             * When the AttributeName parameter is set to instance-network-type, one of the following values is returned:
-             * 
-             * *   vpc
-             * *   classic
+             * <strong>example:</strong>
+             * <p>800</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -252,7 +282,10 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone in which the resource resides.
+             * <p>The ID of the zone in which the resource resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-b</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -266,9 +299,15 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAccountAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccountAttributesResponseBody</p>
+     */
     public static class AttributeValues extends TeaModel {
-        @NameInMap("ValueItem")
-        private java.util.List < ValueItem> valueItem;
+        @com.aliyun.core.annotation.NameInMap("ValueItem")
+        private java.util.List<ValueItem> valueItem;
 
         private AttributeValues(Builder builder) {
             this.valueItem = builder.valueItem;
@@ -285,17 +324,17 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
         /**
          * @return valueItem
          */
-        public java.util.List < ValueItem> getValueItem() {
+        public java.util.List<ValueItem> getValueItem() {
             return this.valueItem;
         }
 
         public static final class Builder {
-            private java.util.List < ValueItem> valueItem; 
+            private java.util.List<ValueItem> valueItem; 
 
             /**
              * ValueItem.
              */
-            public Builder valueItem(java.util.List < ValueItem> valueItem) {
+            public Builder valueItem(java.util.List<ValueItem> valueItem) {
                 this.valueItem = valueItem;
                 return this;
             }
@@ -307,11 +346,17 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAccountAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccountAttributesResponseBody</p>
+     */
     public static class AccountAttributeItem extends TeaModel {
-        @NameInMap("AttributeName")
+        @com.aliyun.core.annotation.NameInMap("AttributeName")
         private String attributeName;
 
-        @NameInMap("AttributeValues")
+        @com.aliyun.core.annotation.NameInMap("AttributeValues")
         private AttributeValues attributeValues;
 
         private AccountAttributeItem(Builder builder) {
@@ -346,24 +391,27 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
             private AttributeValues attributeValues; 
 
             /**
-             * The type of the resource quota in the specified region. Valid values:
-             * <p>
+             * <p>The type of the resource quota in the specified region. Valid values:</p>
+             * <ul>
+             * <li>instance-network-type: the available network types.</li>
+             * <li>max-security-groups: the maximum number of security groups.</li>
+             * <li>max-elastic-network-interfaces: the maximum number of ENIs.</li>
+             * <li>max-postpaid-instance-vcpu-count: the maximum number of vCPUs for pay-as-you-go instances.</li>
+             * <li>max-spot-instance-vcpu-count: the maximum number of vCPUs for preemptible instances.</li>
+             * <li>used-postpaid-instance-vcpu-count: the number of vCPUs that were allocated to pay-as-you-go instances.</li>
+             * <li>used-spot-instance-vcpu-count: the number of vCPUs that were allocated to preemptible instances.</li>
+             * <li>max-postpaid-yundisk-capacity: the maximum capacity of pay-as-you-go data disks. (The value is deprecated.)</li>
+             * <li>used-postpaid-yundisk-capacity: the capacity of pay-as-you-go data disks that were created. (The value is deprecated.)</li>
+             * <li>max-dedicated-hosts: the maximum number of dedicated hosts.</li>
+             * <li>supported-postpaid-instance-types: the instance types of pay-as-you-go I/O optimized instances.</li>
+             * <li>max-axt-command-count: the maximum number of Cloud Assistant commands.</li>
+             * <li>max-axt-invocation-daily: the maximum number of Cloud Assistant command executions per day.</li>
+             * <li>real-name-authentication: whether the account completed the real-name verification.</li>
+             * <li>max-cloud-assistant-activation-count: the maximum number of activation codes that can be created to use to register managed instances.</li>
+             * </ul>
              * 
-             * *   instance-network-type: available network types
-             * *   max-security-groups: the maximum number of security groups
-             * *   max-elastic-network-interfaces: the maximum number of ENIs
-             * *   max-postpaid-instance-vcpu-count: the maximum number of vCPUs for pay-as-you-go instances
-             * *   max-spot-instance-vcpu-count: the maximum number of vCPUs for preemptible instances
-             * *   used-postpaid-instance-vcpu-count: the number of vCPUs that have been allocated to pay-as-you-go instances
-             * *   used-spot-instance-vcpu-count: the number of vCPUs that have been allocated to preemptible instances
-             * *   max-postpaid-yundisk-capacity: the maximum capacity of pay-as-you-go data disks
-             * *   used-postpaid-yundisk-capacity: the capacity of pay-as-you-go disks that have been created
-             * *   max-dedicated-hosts: the maximum number of dedicated hosts
-             * *   supported-postpaid-instance-types: the instance types of pay-as-you-go I/O optimized instances
-             * *   max-axt-command-count: the maximum number of Cloud Assistant commands
-             * *   max-axt-invocation-daily: the maximum number of Cloud Assistant command executions per day
-             * *   real-name-authentication: whether the account has passed the real-name verification
-             * *   max-cloud-assistant-activation-count: the maximum number of activation codes that can be created to use to register managed instances
+             * <strong>example:</strong>
+             * <p>max-security-groups</p>
              */
             public Builder attributeName(String attributeName) {
                 this.attributeName = attributeName;
@@ -371,7 +419,7 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The specific values of resource quotas.
+             * <p>The values of resource quotas.</p>
              */
             public Builder attributeValues(AttributeValues attributeValues) {
                 this.attributeValues = attributeValues;
@@ -385,9 +433,15 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAccountAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccountAttributesResponseBody</p>
+     */
     public static class AccountAttributeItems extends TeaModel {
-        @NameInMap("AccountAttributeItem")
-        private java.util.List < AccountAttributeItem> accountAttributeItem;
+        @com.aliyun.core.annotation.NameInMap("AccountAttributeItem")
+        private java.util.List<AccountAttributeItem> accountAttributeItem;
 
         private AccountAttributeItems(Builder builder) {
             this.accountAttributeItem = builder.accountAttributeItem;
@@ -404,17 +458,17 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
         /**
          * @return accountAttributeItem
          */
-        public java.util.List < AccountAttributeItem> getAccountAttributeItem() {
+        public java.util.List<AccountAttributeItem> getAccountAttributeItem() {
             return this.accountAttributeItem;
         }
 
         public static final class Builder {
-            private java.util.List < AccountAttributeItem> accountAttributeItem; 
+            private java.util.List<AccountAttributeItem> accountAttributeItem; 
 
             /**
              * AccountAttributeItem.
              */
-            public Builder accountAttributeItem(java.util.List < AccountAttributeItem> accountAttributeItem) {
+            public Builder accountAttributeItem(java.util.List<AccountAttributeItem> accountAttributeItem) {
                 this.accountAttributeItem = accountAttributeItem;
                 return this;
             }

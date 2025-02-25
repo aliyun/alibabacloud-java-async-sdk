@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyTagPoliciesResponseBody} extends {@link TeaModel}
  *
  * <p>ApplyTagPoliciesResponseBody</p>
  */
 public class ApplyTagPoliciesResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ApplyTagPoliciesResponseBody(Builder builder) {
@@ -42,7 +47,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -68,21 +73,24 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * The details of the data.
+         * <p>The details of the data.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +98,10 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>316F5F64-F73D-42DC-8632-01E308B6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +109,10 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -111,35 +125,41 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ApplyTagPoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ApplyTagPoliciesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CarryData")
+        @com.aliyun.core.annotation.NameInMap("CarryData")
         private Boolean carryData;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("InstanceNum")
+        @com.aliyun.core.annotation.NameInMap("InstanceNum")
         private Integer instanceNum;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Rate")
+        @com.aliyun.core.annotation.NameInMap("Rate")
         private Integer rate;
 
-        @NameInMap("Remove")
+        @com.aliyun.core.annotation.NameInMap("Remove")
         private Boolean remove;
 
-        @NameInMap("Rules")
+        @com.aliyun.core.annotation.NameInMap("Rules")
         private String rules;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
         private Data(Builder builder) {
@@ -246,7 +266,10 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             private String tag; 
 
             /**
-             * Indicates whether the field is the primary key.
+             * <p>Indicates whether the field is the primary key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder carryData(Boolean carryData) {
                 this.carryData = carryData;
@@ -254,11 +277,14 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the rule is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the rule is enabled. Valid values:</p>
+             * <ul>
+             * <li><code>true</code>: The rule is enabled.</li>
+             * <li><code>false</code>: The rule is disabled.</li>
+             * </ul>
              * 
-             * *   `true`: The rule is enabled.
-             * *   `false`: The rule is disabled.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -266,7 +292,10 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the primary key.
+             * <p>The ID of the primary key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -274,7 +303,10 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances.
+             * <p>The number of instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder instanceNum(Integer instanceNum) {
                 this.instanceNum = instanceNum;
@@ -282,7 +314,10 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The policy name.
+             * <p>The policy name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -290,7 +325,10 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The rate.
+             * <p>The rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder rate(Integer rate) {
                 this.rate = rate;
@@ -298,7 +336,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the routing rule was deleted.
+             * <p>Indicates whether the routing rule was deleted.</p>
              */
             public Builder remove(Boolean remove) {
                 this.remove = remove;
@@ -306,7 +344,10 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the routing rule.
+             * <p>The details of the routing rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;_base&quot;: {&quot;rate&quot;: 100, &quot;remove&quot;: true}, &quot;blue&quot;: {&quot;rate&quot;: 0}}</p>
              */
             public Builder rules(String rules) {
                 this.rules = rules;
@@ -314,7 +355,10 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -322,7 +366,10 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag.
+             * <p>The tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gray</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;

@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLogicInstanceTopologyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLogicInstanceTopologyResponseBody</p>
  */
 public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("RedisProxyList")
+    @com.aliyun.core.annotation.NameInMap("RedisProxyList")
     private RedisProxyList redisProxyList;
 
-    @NameInMap("RedisShardList")
+    @com.aliyun.core.annotation.NameInMap("RedisShardList")
     private RedisShardList redisShardList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeLogicInstanceTopologyResponseBody(Builder builder) {
@@ -74,7 +74,10 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -82,7 +85,7 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * The detailed proxy information, including information about proxy nodes.
+         * <p>The information about proxy nodes.</p>
          */
         public Builder redisProxyList(RedisProxyList redisProxyList) {
             this.redisProxyList = redisProxyList;
@@ -90,7 +93,7 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * Details of data shards, including node information such as NodeInfo.
+         * <p>Details of data shards, including node information such as NodeInfo.</p>
          */
         public Builder redisShardList(RedisShardList redisShardList) {
             this.redisShardList = redisShardList;
@@ -98,7 +101,10 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>794120D1-E0CF-4713-BAE4-EBAEA04506AF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,20 +117,26 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLogicInstanceTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLogicInstanceTopologyResponseBody</p>
+     */
     public static class NodeInfo extends TeaModel {
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private String bandwidth;
 
-        @NameInMap("Capacity")
+        @com.aliyun.core.annotation.NameInMap("Capacity")
         private String capacity;
 
-        @NameInMap("Connection")
+        @com.aliyun.core.annotation.NameInMap("Connection")
         private String connection;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
         private NodeInfo(Builder builder) {
@@ -186,7 +198,10 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
             private String nodeType; 
 
             /**
-             * The maximum bandwidth of the node. Unit: Mbit/s.
+             * <p>The maximum bandwidth of the node. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>96</p>
              */
             public Builder bandwidth(String bandwidth) {
                 this.bandwidth = bandwidth;
@@ -194,7 +209,10 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The storage capacity of the node. Unit: MB.
+             * <p>The storage capacity of the node. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5120</p>
              */
             public Builder capacity(String capacity) {
                 this.capacity = capacity;
@@ -202,7 +220,10 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of connections.
+             * <p>The maximum number of connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>320000</p>
              */
             public Builder connection(String connection) {
                 this.connection = connection;
@@ -210,7 +231,10 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The node ID.
+             * <p>The ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-bp10noxlhcoim2****-proxy-3#542****</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -218,11 +242,14 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The node type. Valid values:
-             * <p>
+             * <p>The node type. Valid values:</p>
+             * <ul>
+             * <li><strong>db</strong>: a data node.</li>
+             * <li><strong>normal</strong>: a management node, which can be a proxy node or a Configserver node. For specific instances, the return value of this parameter is proxy or cs, instead of normal.</li>
+             * </ul>
              * 
-             * *   **proxy**: proxy node
-             * *   **db**: data node
+             * <strong>example:</strong>
+             * <p>proxy</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -236,8 +263,14 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLogicInstanceTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLogicInstanceTopologyResponseBody</p>
+     */
     public static class RedisProxyList extends TeaModel {
-        @NameInMap("NodeInfo")
+        @com.aliyun.core.annotation.NameInMap("NodeInfo")
         private java.util.List < NodeInfo> nodeInfo;
 
         private RedisProxyList(Builder builder) {
@@ -277,23 +310,29 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLogicInstanceTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLogicInstanceTopologyResponseBody</p>
+     */
     public static class RedisShardListNodeInfo extends TeaModel {
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private String bandwidth;
 
-        @NameInMap("Capacity")
+        @com.aliyun.core.annotation.NameInMap("Capacity")
         private String capacity;
 
-        @NameInMap("Connection")
+        @com.aliyun.core.annotation.NameInMap("Connection")
         private String connection;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
-        @NameInMap("SubInstanceType")
+        @com.aliyun.core.annotation.NameInMap("SubInstanceType")
         private String subInstanceType;
 
         private RedisShardListNodeInfo(Builder builder) {
@@ -364,7 +403,10 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
             private String subInstanceType; 
 
             /**
-             * The maximum bandwidth of the node. Unit: Mbit/s.
+             * <p>The maximum bandwidth of the node. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>96</p>
              */
             public Builder bandwidth(String bandwidth) {
                 this.bandwidth = bandwidth;
@@ -372,7 +414,10 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The storage capacity of the node. Unit: MB.
+             * <p>The storage capacity of the node. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2048</p>
              */
             public Builder capacity(String capacity) {
                 this.capacity = capacity;
@@ -380,7 +425,10 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of connections.
+             * <p>The maximum number of connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder connection(String connection) {
                 this.connection = connection;
@@ -388,7 +436,10 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The node ID.
+             * <p>The ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-bp10noxlhcoim2****-db-0#688****</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -396,11 +447,14 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The node type. Valid values:
-             * <p>
+             * <p>The node type. Valid values:</p>
+             * <ul>
+             * <li><strong>proxy</strong>: proxy node</li>
+             * <li><strong>db</strong>: data node</li>
+             * </ul>
              * 
-             * *   **proxy**: proxy node
-             * *   **db**: data node
+             * <strong>example:</strong>
+             * <p>db</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -408,11 +462,14 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the child instance. Valid values:
-             * <p>
+             * <p>The type of the child instance. Valid values:</p>
+             * <ul>
+             * <li><strong>master</strong>: master node</li>
+             * <li><strong>readonly</strong>: read-only instance</li>
+             * </ul>
              * 
-             * *   **master**: master node
-             * *   **readonly**: read-only instance
+             * <strong>example:</strong>
+             * <p>master</p>
              */
             public Builder subInstanceType(String subInstanceType) {
                 this.subInstanceType = subInstanceType;
@@ -426,8 +483,14 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLogicInstanceTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLogicInstanceTopologyResponseBody</p>
+     */
     public static class RedisShardList extends TeaModel {
-        @NameInMap("NodeInfo")
+        @com.aliyun.core.annotation.NameInMap("NodeInfo")
         private java.util.List < RedisShardListNodeInfo> nodeInfo;
 
         private RedisShardList(Builder builder) {

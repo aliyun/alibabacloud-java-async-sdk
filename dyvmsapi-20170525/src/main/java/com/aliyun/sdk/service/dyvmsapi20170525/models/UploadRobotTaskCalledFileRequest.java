@@ -1,45 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UploadRobotTaskCalledFileRequest} extends {@link RequestModel}
  *
  * <p>UploadRobotTaskCalledFileRequest</p>
  */
 public class UploadRobotTaskCalledFileRequest extends Request {
-    @Query
-    @NameInMap("CalledNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CalledNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String calledNumber;
 
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long id;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TtsParam")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TtsParam")
     private String ttsParam;
 
-    @Query
-    @NameInMap("TtsParamHead")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TtsParamHead")
     private String ttsParamHead;
 
     private UploadRobotTaskCalledFileRequest(Builder builder) {
@@ -128,19 +128,26 @@ public class UploadRobotTaskCalledFileRequest extends Request {
             super();
         } 
 
-        private Builder(UploadRobotTaskCalledFileRequest response) {
-            super(response);
-            this.calledNumber = response.calledNumber;
-            this.id = response.id;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.ttsParam = response.ttsParam;
-            this.ttsParamHead = response.ttsParamHead;
+        private Builder(UploadRobotTaskCalledFileRequest request) {
+            super(request);
+            this.calledNumber = request.calledNumber;
+            this.id = request.id;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.ttsParam = request.ttsParam;
+            this.ttsParamHead = request.ttsParamHead;
         } 
 
         /**
-         * CalledNumber.
+         * <p>The called numbers. Separate multiple called numbers with commas (,).</p>
+         * <blockquote>
+         * <p>After you create a robocall task, you must upload called numbers in batches. You can upload up to 300,000 called numbers for each task.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1370<strong><strong>000,1370</strong></strong>111</p>
          */
         public Builder calledNumber(String calledNumber) {
             this.putQueryParameter("CalledNumber", calledNumber);
@@ -149,7 +156,11 @@ public class UploadRobotTaskCalledFileRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The unique ID of the robocall task. You can call the <a href="~~CreateRobotTask~~">CreateRobotTask</a> operation to obtain the ID of the robocall task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1045****</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -185,7 +196,14 @@ public class UploadRobotTaskCalledFileRequest extends Request {
         }
 
         /**
-         * TtsParam.
+         * <p>The values of the variable in the text-to-speech (TTS) template, in the JSON format. The variable values specified by the TtsParam parameter must match the variable names specified by the TtsParamHead parameter.</p>
+         * <ul>
+         * <li>If all the called numbers carry the same variable values, you can set the value of the number field to <strong>all</strong> and upload only one copy of the variable values.</li>
+         * <li>If only some of the called numbers carry the same variable values, you can set the value of the number field to <strong>all</strong> for these called numbers and set the value of the number field and variable values for other called numbers based on your business requirements. The system preferentially selects the values that you set for the called numbers.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;number&quot;:&quot;1370****000&quot;,&quot;params&quot;:[&quot;xiaowang&quot;,&quot;xiaoli&quot;,&quot;xiaozhou&quot;]}]</p>
          */
         public Builder ttsParam(String ttsParam) {
             this.putQueryParameter("TtsParam", ttsParam);
@@ -194,7 +212,10 @@ public class UploadRobotTaskCalledFileRequest extends Request {
         }
 
         /**
-         * TtsParamHead.
+         * <p>The list of variable names carried in the robocall task, in the JSON format. The TtsParamHead parameter must be used together with the TtsParam parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;name1&quot;,&quot;name2&quot;,&quot;name3&quot;]</p>
          */
         public Builder ttsParamHead(String ttsParamHead) {
             this.putQueryParameter("TtsParamHead", ttsParamHead);

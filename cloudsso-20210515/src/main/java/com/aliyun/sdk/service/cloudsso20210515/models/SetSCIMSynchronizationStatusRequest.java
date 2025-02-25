@@ -1,23 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetSCIMSynchronizationStatusRequest} extends {@link RequestModel}
  *
  * <p>SetSCIMSynchronizationStatusRequest</p>
  */
 public class SetSCIMSynchronizationStatusRequest extends Request {
-    @Query
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @Query
-    @NameInMap("SCIMSynchronizationStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SCIMSynchronizationStatus")
     private String SCIMSynchronizationStatus;
 
     private SetSCIMSynchronizationStatusRequest(Builder builder) {
@@ -68,7 +68,10 @@ public class SetSCIMSynchronizationStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the directory.
+         * <p>The ID of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -77,11 +80,14 @@ public class SetSCIMSynchronizationStatusRequest extends Request {
         }
 
         /**
-         * The status of SCIM synchronization. Valid values:
-         * <p>
+         * <p>The status of SCIM synchronization. Valid values:</p>
+         * <ul>
+         * <li>Enabled</li>
+         * <li>Disabled</li>
+         * </ul>
          * 
-         * *   Enabled
-         * *   Disabled
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder SCIMSynchronizationStatus(String SCIMSynchronizationStatus) {
             this.putQueryParameter("SCIMSynchronizationStatus", SCIMSynchronizationStatus);

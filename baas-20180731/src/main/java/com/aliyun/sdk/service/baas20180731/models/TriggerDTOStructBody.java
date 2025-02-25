@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TriggerDTOStructBody</p>
  */
 public class TriggerDTOStructBody extends TeaModel {
-    @NameInMap("Checkpoint")
+    @com.aliyun.core.annotation.NameInMap("Checkpoint")
     private CheckPointStructBody checkpoint;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("Option")
+    @com.aliyun.core.annotation.NameInMap("Option")
     private String option;
 
-    @NameInMap("PendingErrorLogs")
+    @com.aliyun.core.annotation.NameInMap("PendingErrorLogs")
     private String pendingErrorLogs;
 
-    @NameInMap("Source")
+    @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private TriggerDTOStructBody(Builder builder) {

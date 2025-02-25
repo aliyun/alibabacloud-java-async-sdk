@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterAddonUpgradeStatusRequest} extends {@link RequestModel}
  *
  * <p>DescribeClusterAddonUpgradeStatusRequest</p>
  */
 public class DescribeClusterAddonUpgradeStatusRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("ComponentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ComponentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String componentId;
 
     private DescribeClusterAddonUpgradeStatusRequest(Builder builder) {
@@ -70,7 +75,11 @@ public class DescribeClusterAddonUpgradeStatusRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c106f377e16f34eb1808d6b9362c9****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -79,10 +88,12 @@ public class DescribeClusterAddonUpgradeStatusRequest extends Request {
         }
 
         /**
-         * The component ID. Example: nginx-ingress-controller, flexvolume, or metrics-server.
-         * <p>
+         * <p>The component ID. Example: nginx-ingress-controller, flexvolume, or metrics-server.</p>
+         * <p>You can call the <code>DescribeAddons</code> API operation to query the components supported by the cluster.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the `DescribeAddons` API operation to query the components supported by the cluster.
+         * <strong>example:</strong>
+         * <p>cloud-controller-manager</p>
          */
         public Builder componentId(String componentId) {
             this.putPathParameter("ComponentId", componentId);

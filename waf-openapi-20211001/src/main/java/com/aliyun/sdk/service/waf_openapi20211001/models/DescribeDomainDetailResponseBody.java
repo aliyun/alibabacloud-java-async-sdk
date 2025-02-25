@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainDetailResponseBody</p>
  */
 public class DescribeDomainDetailResponseBody extends TeaModel {
-    @NameInMap("CertDetail")
+    @com.aliyun.core.annotation.NameInMap("CertDetail")
     private CertDetail certDetail;
 
-    @NameInMap("Cname")
+    @com.aliyun.core.annotation.NameInMap("Cname")
     private String cname;
 
-    @NameInMap("Domain")
+    @com.aliyun.core.annotation.NameInMap("Domain")
     private String domain;
 
-    @NameInMap("Listen")
+    @com.aliyun.core.annotation.NameInMap("Listen")
     private Listen listen;
 
-    @NameInMap("Redirect")
+    @com.aliyun.core.annotation.NameInMap("Redirect")
     private Redirect redirect;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceManagerResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceManagerResourceGroupId")
     private String resourceManagerResourceGroupId;
 
-    @NameInMap("SM2CertDetail")
+    @com.aliyun.core.annotation.NameInMap("SM2CertDetail")
     private SM2CertDetail sM2CertDetail;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Long status;
 
     private DescribeDomainDetailResponseBody(Builder builder) {
@@ -134,7 +139,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         private Long status; 
 
         /**
-         * The details of the SSL certificate.
+         * <p>The details of the SSL certificate.</p>
          */
         public Builder certDetail(CertDetail certDetail) {
             this.certDetail = certDetail;
@@ -142,7 +147,10 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The CNAME that is assigned by WAF to the domain name.
+         * <p>The CNAME that is assigned by WAF to the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxcvdaf.****.com</p>
          */
         public Builder cname(String cname) {
             this.cname = cname;
@@ -150,7 +158,10 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The domain name.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
          */
         public Builder domain(String domain) {
             this.domain = domain;
@@ -158,7 +169,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations of the listeners.
+         * <p>The configurations of the listeners.</p>
          */
         public Builder listen(Listen listen) {
             this.listen = listen;
@@ -166,7 +177,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations of the forwarding rule.
+         * <p>The configurations of the forwarding rule.</p>
          */
         public Builder redirect(Redirect redirect) {
             this.redirect = redirect;
@@ -174,7 +185,10 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BAEF9CA9-66A0-533E-BD09-5D5D7AA8****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +196,10 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
@@ -190,7 +207,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the SM certificate.
+         * <p>The information about the SM certificate.</p>
          */
         public Builder sM2CertDetail(SM2CertDetail sM2CertDetail) {
             this.sM2CertDetail = sM2CertDetail;
@@ -198,14 +215,17 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the domain name. Valid values:
-         * <p>
+         * <p>The status of the domain name. Valid values:</p>
+         * <ul>
+         * <li><strong>1:</strong> The domain name is in a normal state.</li>
+         * <li><strong>2:</strong> The domain name is being created.</li>
+         * <li><strong>3:</strong> The domain name is being modified.</li>
+         * <li><strong>4:</strong> The domain name is being released.</li>
+         * <li><strong>5:</strong> WAF no longer forwards traffic of the domain name.</li>
+         * </ul>
          * 
-         * *   **1:** The domain name is in a normal state.
-         * *   **2:** The domain name is being created.
-         * *   **3:** The domain name is being modified.
-         * *   **4:** The domain name is being released.
-         * *   **5:** WAF no longer forwards traffic of the domain name.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Long status) {
             this.status = status;
@@ -218,23 +238,29 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainDetailResponseBody</p>
+     */
     public static class CertDetail extends TeaModel {
-        @NameInMap("CommonName")
+        @com.aliyun.core.annotation.NameInMap("CommonName")
         private String commonName;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Sans")
-        private java.util.List < String > sans;
+        @com.aliyun.core.annotation.NameInMap("Sans")
+        private java.util.List<String> sans;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
         private CertDetail(Builder builder) {
@@ -285,7 +311,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         /**
          * @return sans
          */
-        public java.util.List < String > getSans() {
+        public java.util.List<String> getSans() {
             return this.sans;
         }
 
@@ -301,11 +327,14 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             private Long endTime; 
             private String id; 
             private String name; 
-            private java.util.List < String > sans; 
+            private java.util.List<String> sans; 
             private Long startTime; 
 
             /**
-             * The domain name of your website.
+             * <p>The domain name of your website.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.aliyundoc.com</p>
              */
             public Builder commonName(String commonName) {
                 this.commonName = commonName;
@@ -313,7 +342,10 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the validity period of the SSL certificate. The value is in the UNIX timestamp format. Unit: milliseconds.
+             * <p>The end of the validity period of the SSL certificate. The value is in the UNIX timestamp format. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1685590400000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -321,7 +353,10 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the SSL certificate.
+             * <p>The ID of the SSL certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123-cn-hangzhou</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -329,7 +364,10 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the SSL certificate.
+             * <p>The name of the SSL certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-cert-name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -337,15 +375,18 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * All domain names that are bound to the certificate.
+             * <p>All domain names that are bound to the certificate.</p>
              */
-            public Builder sans(java.util.List < String > sans) {
+            public Builder sans(java.util.List<String> sans) {
                 this.sans = sans;
                 return this;
             }
 
             /**
-             * The beginning of the validity period of the SSL certificate. The value is in the UNIX timestamp format. Unit: milliseconds.
+             * <p>The beginning of the validity period of the SSL certificate. The value is in the UNIX timestamp format. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1677772800000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -359,57 +400,63 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainDetailResponseBody</p>
+     */
     public static class Listen extends TeaModel {
-        @NameInMap("CertId")
+        @com.aliyun.core.annotation.NameInMap("CertId")
         private Long certId;
 
-        @NameInMap("CipherSuite")
+        @com.aliyun.core.annotation.NameInMap("CipherSuite")
         private Long cipherSuite;
 
-        @NameInMap("CustomCiphers")
-        private java.util.List < String > customCiphers;
+        @com.aliyun.core.annotation.NameInMap("CustomCiphers")
+        private java.util.List<String> customCiphers;
 
-        @NameInMap("EnableTLSv3")
+        @com.aliyun.core.annotation.NameInMap("EnableTLSv3")
         private Boolean enableTLSv3;
 
-        @NameInMap("ExclusiveIp")
+        @com.aliyun.core.annotation.NameInMap("ExclusiveIp")
         private Boolean exclusiveIp;
 
-        @NameInMap("FocusHttps")
+        @com.aliyun.core.annotation.NameInMap("FocusHttps")
         private Boolean focusHttps;
 
-        @NameInMap("Http2Enabled")
+        @com.aliyun.core.annotation.NameInMap("Http2Enabled")
         private Boolean http2Enabled;
 
-        @NameInMap("HttpPorts")
-        private java.util.List < Long > httpPorts;
+        @com.aliyun.core.annotation.NameInMap("HttpPorts")
+        private java.util.List<Long> httpPorts;
 
-        @NameInMap("HttpsPorts")
-        private java.util.List < Long > httpsPorts;
+        @com.aliyun.core.annotation.NameInMap("HttpsPorts")
+        private java.util.List<Long> httpsPorts;
 
-        @NameInMap("IPv6Enabled")
+        @com.aliyun.core.annotation.NameInMap("IPv6Enabled")
         private Boolean iPv6Enabled;
 
-        @NameInMap("ProtectionResource")
+        @com.aliyun.core.annotation.NameInMap("ProtectionResource")
         private String protectionResource;
 
-        @NameInMap("SM2AccessOnly")
+        @com.aliyun.core.annotation.NameInMap("SM2AccessOnly")
         private Boolean sM2AccessOnly;
 
-        @NameInMap("SM2CertId")
-        private Boolean sM2CertId;
+        @com.aliyun.core.annotation.NameInMap("SM2CertId")
+        private String sM2CertId;
 
-        @NameInMap("SM2Enabled")
+        @com.aliyun.core.annotation.NameInMap("SM2Enabled")
         private Boolean sM2Enabled;
 
-        @NameInMap("TLSVersion")
+        @com.aliyun.core.annotation.NameInMap("TLSVersion")
         private String TLSVersion;
 
-        @NameInMap("XffHeaderMode")
+        @com.aliyun.core.annotation.NameInMap("XffHeaderMode")
         private Long xffHeaderMode;
 
-        @NameInMap("XffHeaders")
-        private java.util.List < String > xffHeaders;
+        @com.aliyun.core.annotation.NameInMap("XffHeaders")
+        private java.util.List<String> xffHeaders;
 
         private Listen(Builder builder) {
             this.certId = builder.certId;
@@ -456,7 +503,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         /**
          * @return customCiphers
          */
-        public java.util.List < String > getCustomCiphers() {
+        public java.util.List<String> getCustomCiphers() {
             return this.customCiphers;
         }
 
@@ -491,14 +538,14 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         /**
          * @return httpPorts
          */
-        public java.util.List < Long > getHttpPorts() {
+        public java.util.List<Long> getHttpPorts() {
             return this.httpPorts;
         }
 
         /**
          * @return httpsPorts
          */
-        public java.util.List < Long > getHttpsPorts() {
+        public java.util.List<Long> getHttpsPorts() {
             return this.httpsPorts;
         }
 
@@ -526,7 +573,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         /**
          * @return sM2CertId
          */
-        public Boolean getSM2CertId() {
+        public String getSM2CertId() {
             return this.sM2CertId;
         }
 
@@ -554,31 +601,34 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         /**
          * @return xffHeaders
          */
-        public java.util.List < String > getXffHeaders() {
+        public java.util.List<String> getXffHeaders() {
             return this.xffHeaders;
         }
 
         public static final class Builder {
             private Long certId; 
             private Long cipherSuite; 
-            private java.util.List < String > customCiphers; 
+            private java.util.List<String> customCiphers; 
             private Boolean enableTLSv3; 
             private Boolean exclusiveIp; 
             private Boolean focusHttps; 
             private Boolean http2Enabled; 
-            private java.util.List < Long > httpPorts; 
-            private java.util.List < Long > httpsPorts; 
+            private java.util.List<Long> httpPorts; 
+            private java.util.List<Long> httpsPorts; 
             private Boolean iPv6Enabled; 
             private String protectionResource; 
             private Boolean sM2AccessOnly; 
-            private Boolean sM2CertId; 
+            private String sM2CertId; 
             private Boolean sM2Enabled; 
             private String TLSVersion; 
             private Long xffHeaderMode; 
-            private java.util.List < String > xffHeaders; 
+            private java.util.List<String> xffHeaders; 
 
             /**
-             * The ID of the certificate.
+             * <p>The ID of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder certId(Long certId) {
                 this.certId = certId;
@@ -586,12 +636,15 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the cipher suites. Valid values:
-             * <p>
+             * <p>The type of the cipher suites. Valid values:</p>
+             * <ul>
+             * <li><strong>1:</strong> all cipher suites.</li>
+             * <li><strong>2:</strong> strong cipher suites.</li>
+             * <li><strong>99:</strong> custom cipher suites.</li>
+             * </ul>
              * 
-             * *   **1:** all cipher suites.
-             * *   **2:** strong cipher suites.
-             * *   **99:** custom cipher suites.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cipherSuite(Long cipherSuite) {
                 this.cipherSuite = cipherSuite;
@@ -599,19 +652,22 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * An array of custom cipher suites.
+             * <p>An array of custom cipher suites.</p>
              */
-            public Builder customCiphers(java.util.List < String > customCiphers) {
+            public Builder customCiphers(java.util.List<String> customCiphers) {
                 this.customCiphers = customCiphers;
                 return this;
             }
 
             /**
-             * Indicates whether TLS 1.3 is supported. Valid values:
-             * <p>
+             * <p>Indicates whether TLS 1.3 is supported. Valid values:</p>
+             * <ul>
+             * <li><strong>true:</strong> TLS 1.3 is supported.</li>
+             * <li><strong>false:</strong> TLS 1.3 is not supported.</li>
+             * </ul>
              * 
-             * *   **true:** TLS 1.3 is supported.
-             * *   **false:** TLS 1.3 is not supported.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableTLSv3(Boolean enableTLSv3) {
                 this.enableTLSv3 = enableTLSv3;
@@ -619,11 +675,14 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether an exclusive IP address is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether an exclusive IP address is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true:</strong> An exclusive IP address is enabled for the domain name.</li>
+             * <li><strong>false:</strong> No exclusive IP addresses are enabled for the domain name.</li>
+             * </ul>
              * 
-             * *   **true:** An exclusive IP address is enabled for the domain name.
-             * *   **false:** No exclusive IP addresses are enabled for the domain name.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder exclusiveIp(Boolean exclusiveIp) {
                 this.exclusiveIp = exclusiveIp;
@@ -631,11 +690,14 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether HTTP to HTTPS redirection is enabled for the domain name. Valid values:
-             * <p>
+             * <p>Indicates whether HTTP to HTTPS redirection is enabled for the domain name. Valid values:</p>
+             * <ul>
+             * <li><strong>true:</strong> HTTP to HTTPS redirection is enabled.</li>
+             * <li><strong>false:</strong> HTTP to HTTPS redirection is disabled.</li>
+             * </ul>
              * 
-             * *   **true:** HTTP to HTTPS redirection is enabled.
-             * *   **false:** HTTP to HTTPS redirection is disabled.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder focusHttps(Boolean focusHttps) {
                 this.focusHttps = focusHttps;
@@ -643,11 +705,14 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether HTTP/2 is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether HTTP/2 is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true:</strong> HTTP/2 is enabled.</li>
+             * <li><strong>false:</strong> HTTP/2 is disabled.</li>
+             * </ul>
              * 
-             * *   **true:** HTTP/2 is enabled.
-             * *   **false:** HTTP/2 is disabled.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder http2Enabled(Boolean http2Enabled) {
                 this.http2Enabled = http2Enabled;
@@ -655,27 +720,30 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * An array of HTTP listener ports.
+             * <p>An array of HTTP listener ports.</p>
              */
-            public Builder httpPorts(java.util.List < Long > httpPorts) {
+            public Builder httpPorts(java.util.List<Long> httpPorts) {
                 this.httpPorts = httpPorts;
                 return this;
             }
 
             /**
-             * An array of HTTPS listener ports.
+             * <p>An array of HTTPS listener ports.</p>
              */
-            public Builder httpsPorts(java.util.List < Long > httpsPorts) {
+            public Builder httpsPorts(java.util.List<Long> httpsPorts) {
                 this.httpsPorts = httpsPorts;
                 return this;
             }
 
             /**
-             * Indicates whether IPv6 is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether IPv6 is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true:</strong> IPv6 is enabled.</li>
+             * <li><strong>false:</strong> IPv6 is disabled.</li>
+             * </ul>
              * 
-             * *   **true:** IPv6 is enabled.
-             * *   **false:** IPv6 is disabled.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder iPv6Enabled(Boolean iPv6Enabled) {
                 this.iPv6Enabled = iPv6Enabled;
@@ -683,11 +751,14 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of protection resource that is used. Valid values:
-             * <p>
+             * <p>The type of protection resource that is used. Valid values:</p>
+             * <ul>
+             * <li><strong>share:</strong> shared cluster.</li>
+             * <li><strong>gslb:</strong> shared cluster-based intelligent load balancing.</li>
+             * </ul>
              * 
-             * *   **share:** shared cluster.
-             * *   **gslb:** shared cluster-based intelligent load balancing.
+             * <strong>example:</strong>
+             * <p>share</p>
              */
             public Builder protectionResource(String protectionResource) {
                 this.protectionResource = protectionResource;
@@ -695,7 +766,14 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SM2AccessOnly.
+             * <p>Indicates whether only SM certificate-based clients can access the domain name. This parameter is returned only if the value of SM2Enabled is true. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder sM2AccessOnly(Boolean sM2AccessOnly) {
                 this.sM2AccessOnly = sM2AccessOnly;
@@ -703,15 +781,25 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SM2CertId.
+             * <p>The ID of the SM certificate that is added. This parameter is returned only if the value of SM2Enabled is true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123-cn-hangzhou</p>
              */
-            public Builder sM2CertId(Boolean sM2CertId) {
+            public Builder sM2CertId(String sM2CertId) {
                 this.sM2CertId = sM2CertId;
                 return this;
             }
 
             /**
-             * SM2Enabled.
+             * <p>Indicates whether SM certificate-based verification is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder sM2Enabled(Boolean sM2Enabled) {
                 this.sM2Enabled = sM2Enabled;
@@ -719,12 +807,15 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the Transport Layer Security (TLS) protocol. Valid values:
-             * <p>
+             * <p>The version of the Transport Layer Security (TLS) protocol. Valid values:</p>
+             * <ul>
+             * <li><strong>tlsv1</strong></li>
+             * <li><strong>tlsv1.1</strong></li>
+             * <li><strong>tlsv1.2</strong></li>
+             * </ul>
              * 
-             * *   **tlsv1**
-             * *   **tlsv1.1**
-             * *   **tlsv1.2**
+             * <strong>example:</strong>
+             * <p>tlsv1.2</p>
              */
             public Builder TLSVersion(String TLSVersion) {
                 this.TLSVersion = TLSVersion;
@@ -732,12 +823,15 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The method that WAF uses to obtain the actual IP address of a client. Valid values:
-             * <p>
+             * <p>The method that WAF uses to obtain the actual IP address of a client. Valid values:</p>
+             * <ul>
+             * <li><strong>0:</strong> No Layer 7 proxies are deployed in front of WAF.</li>
+             * <li><strong>1:</strong> WAF reads the first value of the X-Forwarded-For (XFF) header field as the actual IP address of the client.</li>
+             * <li><strong>2:</strong> WAF reads the value of a custom header field as the actual IP address of the client.</li>
+             * </ul>
              * 
-             * *   **0:** No Layer 7 proxies are deployed in front of WAF.
-             * *   **1:** WAF reads the first value of the X-Forwarded-For (XFF) header field as the actual IP address of the client.
-             * *   **2:** WAF reads the value of a custom header field as the actual IP address of the client.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder xffHeaderMode(Long xffHeaderMode) {
                 this.xffHeaderMode = xffHeaderMode;
@@ -745,9 +839,9 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * An array of custom header fields that are used to obtain the actual IP address of a client.
+             * <p>An array of custom header fields that are used to obtain the actual IP address of a client.</p>
              */
-            public Builder xffHeaders(java.util.List < String > xffHeaders) {
+            public Builder xffHeaders(java.util.List<String> xffHeaders) {
                 this.xffHeaders = xffHeaders;
                 return this;
             }
@@ -759,8 +853,14 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainDetailResponseBody</p>
+     */
     public static class Backends extends TeaModel {
-        @NameInMap("Backend")
+        @com.aliyun.core.annotation.NameInMap("Backend")
         private String backend;
 
         private Backends(Builder builder) {
@@ -786,7 +886,10 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             private String backend; 
 
             /**
-             * The IP address or domain name of the origin server.
+             * <p>The IP address or domain name of the origin server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.XX.XX</p>
              */
             public Builder backend(String backend) {
                 this.backend = backend;
@@ -800,11 +903,67 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainDetailResponseBody</p>
+     */
+    public static class BackupBackends extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Backend")
+        private String backend;
+
+        private BackupBackends(Builder builder) {
+            this.backend = builder.backend;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BackupBackends create() {
+            return builder().build();
+        }
+
+        /**
+         * @return backend
+         */
+        public String getBackend() {
+            return this.backend;
+        }
+
+        public static final class Builder {
+            private String backend; 
+
+            /**
+             * <p>The IP address or domain name of the origin server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.XX.XX</p>
+             */
+            public Builder backend(String backend) {
+                this.backend = backend;
+                return this;
+            }
+
+            public BackupBackends build() {
+                return new BackupBackends(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDomainDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainDetailResponseBody</p>
+     */
     public static class RequestHeaders extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private RequestHeaders(Builder builder) {
@@ -839,7 +998,10 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the custom header field.
+             * <p>The custom header field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aaa</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -847,7 +1009,10 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the custom header field.
+             * <p>The value of the custom header field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bbb</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -861,48 +1026,61 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainDetailResponseBody</p>
+     */
     public static class Redirect extends TeaModel {
-        @NameInMap("Backends")
-        private java.util.List < Backends> backends;
+        @com.aliyun.core.annotation.NameInMap("Backends")
+        private java.util.List<Backends> backends;
 
-        @NameInMap("ConnectTimeout")
+        @com.aliyun.core.annotation.NameInMap("BackupBackends")
+        private java.util.List<BackupBackends> backupBackends;
+
+        @com.aliyun.core.annotation.NameInMap("ConnectTimeout")
         private Integer connectTimeout;
 
-        @NameInMap("FocusHttpBackend")
+        @com.aliyun.core.annotation.NameInMap("FocusHttpBackend")
         private Boolean focusHttpBackend;
 
-        @NameInMap("Keepalive")
+        @com.aliyun.core.annotation.NameInMap("Keepalive")
         private Boolean keepalive;
 
-        @NameInMap("KeepaliveRequests")
+        @com.aliyun.core.annotation.NameInMap("KeepaliveRequests")
         private Integer keepaliveRequests;
 
-        @NameInMap("KeepaliveTimeout")
+        @com.aliyun.core.annotation.NameInMap("KeepaliveTimeout")
         private Integer keepaliveTimeout;
 
-        @NameInMap("Loadbalance")
+        @com.aliyun.core.annotation.NameInMap("Loadbalance")
         private String loadbalance;
 
-        @NameInMap("ReadTimeout")
+        @com.aliyun.core.annotation.NameInMap("ReadTimeout")
         private Integer readTimeout;
 
-        @NameInMap("RequestHeaders")
-        private java.util.List < RequestHeaders> requestHeaders;
+        @com.aliyun.core.annotation.NameInMap("RequestHeaders")
+        private java.util.List<RequestHeaders> requestHeaders;
 
-        @NameInMap("Retry")
+        @com.aliyun.core.annotation.NameInMap("Retry")
         private Boolean retry;
 
-        @NameInMap("SniEnabled")
+        @com.aliyun.core.annotation.NameInMap("SniEnabled")
         private Boolean sniEnabled;
 
-        @NameInMap("SniHost")
+        @com.aliyun.core.annotation.NameInMap("SniHost")
         private String sniHost;
 
-        @NameInMap("WriteTimeout")
+        @com.aliyun.core.annotation.NameInMap("WriteTimeout")
         private Integer writeTimeout;
+
+        @com.aliyun.core.annotation.NameInMap("XffProto")
+        private Boolean xffProto;
 
         private Redirect(Builder builder) {
             this.backends = builder.backends;
+            this.backupBackends = builder.backupBackends;
             this.connectTimeout = builder.connectTimeout;
             this.focusHttpBackend = builder.focusHttpBackend;
             this.keepalive = builder.keepalive;
@@ -915,6 +1093,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             this.sniEnabled = builder.sniEnabled;
             this.sniHost = builder.sniHost;
             this.writeTimeout = builder.writeTimeout;
+            this.xffProto = builder.xffProto;
         }
 
         public static Builder builder() {
@@ -928,8 +1107,15 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         /**
          * @return backends
          */
-        public java.util.List < Backends> getBackends() {
+        public java.util.List<Backends> getBackends() {
             return this.backends;
+        }
+
+        /**
+         * @return backupBackends
+         */
+        public java.util.List<BackupBackends> getBackupBackends() {
+            return this.backupBackends;
         }
 
         /**
@@ -984,7 +1170,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         /**
          * @return requestHeaders
          */
-        public java.util.List < RequestHeaders> getRequestHeaders() {
+        public java.util.List<RequestHeaders> getRequestHeaders() {
             return this.requestHeaders;
         }
 
@@ -1016,8 +1202,16 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             return this.writeTimeout;
         }
 
+        /**
+         * @return xffProto
+         */
+        public Boolean getXffProto() {
+            return this.xffProto;
+        }
+
         public static final class Builder {
-            private java.util.List < Backends> backends; 
+            private java.util.List<Backends> backends; 
+            private java.util.List<BackupBackends> backupBackends; 
             private Integer connectTimeout; 
             private Boolean focusHttpBackend; 
             private Boolean keepalive; 
@@ -1025,22 +1219,34 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             private Integer keepaliveTimeout; 
             private String loadbalance; 
             private Integer readTimeout; 
-            private java.util.List < RequestHeaders> requestHeaders; 
+            private java.util.List<RequestHeaders> requestHeaders; 
             private Boolean retry; 
             private Boolean sniEnabled; 
             private String sniHost; 
             private Integer writeTimeout; 
+            private Boolean xffProto; 
 
             /**
-             * An array of addresses of origin servers.
+             * <p>An array of addresses of origin servers.</p>
              */
-            public Builder backends(java.util.List < Backends> backends) {
+            public Builder backends(java.util.List<Backends> backends) {
                 this.backends = backends;
                 return this;
             }
 
             /**
-             * The timeout period of the connection. Unit: seconds. Valid values: 5 to 120.
+             * BackupBackends.
+             */
+            public Builder backupBackends(java.util.List<BackupBackends> backupBackends) {
+                this.backupBackends = backupBackends;
+                return this;
+            }
+
+            /**
+             * <p>The timeout period of the connection. Unit: seconds. Valid values: 5 to 120.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder connectTimeout(Integer connectTimeout) {
                 this.connectTimeout = connectTimeout;
@@ -1048,11 +1254,14 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether HTTPS to HTTP redirection is enabled for back-to-origin requests of the domain name. Valid values:
-             * <p>
+             * <p>Indicates whether HTTPS to HTTP redirection is enabled for back-to-origin requests of the domain name. Valid values:</p>
+             * <ul>
+             * <li><strong>true:</strong> HTTPS to HTTP redirection for back-to-origin requests of the domain name is enabled.</li>
+             * <li><strong>false:</strong> HTTPS to HTTP redirection for back-to-origin requests of the domain name is disabled.</li>
+             * </ul>
              * 
-             * *   **true:** HTTPS to HTTP redirection for back-to-origin requests of the domain name is enabled.
-             * *   **false:** HTTPS to HTTP redirection for back-to-origin requests of the domain name is disabled.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder focusHttpBackend(Boolean focusHttpBackend) {
                 this.focusHttpBackend = focusHttpBackend;
@@ -1060,11 +1269,14 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the persistent connection feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the persistent connection feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true:</strong> The persistent connection feature is enabled. This is the default value.</li>
+             * <li><strong>false:</strong> The persistent connection feature is disabled.</li>
+             * </ul>
              * 
-             * *   **true:** The persistent connection feature is enabled. This is the default value.
-             * *   **false:** The persistent connection feature is disabled.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder keepalive(Boolean keepalive) {
                 this.keepalive = keepalive;
@@ -1072,10 +1284,13 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of reused persistent connections. Valid values: 60 to 1000.
-             * <p>
+             * <p>The number of reused persistent connections. Valid values: 60 to 1000.</p>
+             * <blockquote>
+             * <p> This parameter specifies the number of reused persistent connections when you enable the persistent connection feature.</p>
+             * </blockquote>
              * 
-             * >  This parameter specifies the number of reused persistent connections when you enable the persistent connection feature.
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder keepaliveRequests(Integer keepaliveRequests) {
                 this.keepaliveRequests = keepaliveRequests;
@@ -1083,10 +1298,13 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period of persistent connections that are in the Idle state. Valid values: 1 to 60. Default value: 15. Unit: seconds.
-             * <p>
+             * <p>The timeout period of persistent connections that are in the Idle state. Valid values: 1 to 60. Default value: 15. Unit: seconds.</p>
+             * <blockquote>
+             * <p> This parameter specifies the period of time during which a reused persistent connection is allowed to remain in the Idle state before the persistent connection is released.</p>
+             * </blockquote>
              * 
-             * >  This parameter specifies the period of time during which a reused persistent connection is allowed to remain in the Idle state before the persistent connection is released.
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder keepaliveTimeout(Integer keepaliveTimeout) {
                 this.keepaliveTimeout = keepaliveTimeout;
@@ -1094,12 +1312,15 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The load balancing algorithm that is used when WAF forwards requests to the origin server. Valid values:
-             * <p>
+             * <p>The load balancing algorithm that is used when WAF forwards requests to the origin server. Valid values:</p>
+             * <ul>
+             * <li><strong>ip_hash:</strong> the IP hash algorithm.</li>
+             * <li><strong>roundRobin:</strong> the round-robin algorithm.</li>
+             * <li><strong>leastTime:</strong> the least response time algorithm.</li>
+             * </ul>
              * 
-             * *   **ip_hash:** the IP hash algorithm.
-             * *   **roundRobin:** the round-robin algorithm.
-             * *   **leastTime:** the least response time algorithm.
+             * <strong>example:</strong>
+             * <p>iphash</p>
              */
             public Builder loadbalance(String loadbalance) {
                 this.loadbalance = loadbalance;
@@ -1107,7 +1328,10 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The read timeout period. Unit: seconds. Valid values: 5 to 1800.
+             * <p>The read timeout period. Unit: seconds. Valid values: 5 to 1800.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder readTimeout(Integer readTimeout) {
                 this.readTimeout = readTimeout;
@@ -1115,19 +1339,22 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * An array of key-value pairs that are used to mark the requests that pass through the WAF instance.
+             * <p>An array of key-value pairs that are used to mark the requests that pass through the WAF instance.</p>
              */
-            public Builder requestHeaders(java.util.List < RequestHeaders> requestHeaders) {
+            public Builder requestHeaders(java.util.List<RequestHeaders> requestHeaders) {
                 this.requestHeaders = requestHeaders;
                 return this;
             }
 
             /**
-             * Indicates whether WAF retries to forward requests when requests fail to be forwarded to the origin server. Valid values:
-             * <p>
+             * <p>Indicates whether WAF retries when requests fail to be forwarded to the origin server. Valid values:</p>
+             * <ul>
+             * <li><strong>true:</strong> WAF retries. This is the default value.</li>
+             * <li><strong>false:</strong> WAF does not retry.</li>
+             * </ul>
              * 
-             * *   **true:** WAF retries to forward requests. This is the default value.
-             * *   **false:** WAF does not retry to forward requests.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder retry(Boolean retry) {
                 this.retry = retry;
@@ -1135,11 +1362,14 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether origin Server Name Indication (SNI) is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether origin Server Name Indication (SNI) is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true:</strong> Origin SNI is enabled.</li>
+             * <li><strong>false:</strong> Origin SNI is disabled. This is the default value.</li>
+             * </ul>
              * 
-             * *   **true:** Origin SNI is enabled.
-             * *   **false:** Origin SNI is disabled. This is the default value.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder sniEnabled(Boolean sniEnabled) {
                 this.sniEnabled = sniEnabled;
@@ -1147,7 +1377,10 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the custom SNI field.
+             * <p>The value of the custom SNI field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
              */
             public Builder sniHost(String sniHost) {
                 this.sniHost = sniHost;
@@ -1155,10 +1388,28 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The write timeout period. Unit: seconds. Valid values: 5 to 1800.
+             * <p>The write timeout period. Unit: seconds. Valid values: 5 to 1800.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder writeTimeout(Integer writeTimeout) {
                 this.writeTimeout = writeTimeout;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether the X-Forward-For-Proto header is used to identify the protocol used by WAF to forward requests to the origin server. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong> (default)</li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder xffProto(Boolean xffProto) {
+                this.xffProto = xffProto;
                 return this;
             }
 
@@ -1169,23 +1420,29 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainDetailResponseBody</p>
+     */
     public static class SM2CertDetail extends TeaModel {
-        @NameInMap("CommonName")
+        @com.aliyun.core.annotation.NameInMap("CommonName")
         private String commonName;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Sans")
-        private java.util.List < String > sans;
+        @com.aliyun.core.annotation.NameInMap("Sans")
+        private java.util.List<String> sans;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
         private SM2CertDetail(Builder builder) {
@@ -1236,7 +1493,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         /**
          * @return sans
          */
-        public java.util.List < String > getSans() {
+        public java.util.List<String> getSans() {
             return this.sans;
         }
 
@@ -1252,11 +1509,14 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             private Long endTime; 
             private String id; 
             private String name; 
-            private java.util.List < String > sans; 
+            private java.util.List<String> sans; 
             private Long startTime; 
 
             /**
-             * The domain name of your website.
+             * <p>The domain name of your website.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.aliyundoc.com</p>
              */
             public Builder commonName(String commonName) {
                 this.commonName = commonName;
@@ -1264,7 +1524,10 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the validity period of the SSL certificate. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The end of the validity period of the SSL certificate. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1665590400000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -1272,7 +1535,10 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the SSL certificate.
+             * <p>The ID of the SSL certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123-cn-hangzhou</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1280,7 +1546,10 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the SSL certificate.
+             * <p>The name of the SSL certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-sm2-cert-name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1288,15 +1557,18 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * All domain names that are bound to the certificate.
+             * <p>All domain names that are bound to the certificate.</p>
              */
-            public Builder sans(java.util.List < String > sans) {
+            public Builder sans(java.util.List<String> sans) {
                 this.sans = sans;
                 return this;
             }
 
             /**
-             * The beginning of the validity period of the SSL certificate. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The beginning of the validity period of the SSL certificate. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1657551525000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

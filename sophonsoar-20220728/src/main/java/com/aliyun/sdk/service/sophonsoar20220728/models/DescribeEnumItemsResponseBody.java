@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnumItemsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEnumItemsResponseBody</p>
  */
 public class DescribeEnumItemsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeEnumItemsResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeEnumItemsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>The information about the enumeration item.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -58,7 +58,10 @@ public class DescribeEnumItemsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E7698CFB-4E1C-5840-8EC9-691B86729E94</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +74,17 @@ public class DescribeEnumItemsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEnumItemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnumItemsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Data(Builder builder) {
@@ -110,7 +119,10 @@ public class DescribeEnumItemsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * <p>The key of the enumeration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>system_xxxxx_process_book</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -118,7 +130,10 @@ public class DescribeEnumItemsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the enumeration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>system_xxxxx_process_book</p>
              */
             public Builder value(String value) {
                 this.value = value;

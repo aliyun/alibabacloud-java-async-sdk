@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SelectedDomainListResponseBody} extends {@link TeaModel}
  *
  * <p>SelectedDomainListResponseBody</p>
  */
 public class SelectedDomainListResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Module")
+    @com.aliyun.core.annotation.NameInMap("Module")
     private Module module;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private SelectedDomainListResponseBody(Builder builder) {
@@ -90,7 +95,10 @@ public class SelectedDomainListResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80011ABC-F573-4795-B0E8-377BFBBA3422</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,8 +119,14 @@ public class SelectedDomainListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SelectedDomainListResponseBody} extends {@link TeaModel}
+     *
+     * <p>SelectedDomainListResponseBody</p>
+     */
     public static class Module extends TeaModel {
-        @NameInMap("DownloadUrl")
+        @com.aliyun.core.annotation.NameInMap("DownloadUrl")
         private String downloadUrl;
 
         private Module(Builder builder) {

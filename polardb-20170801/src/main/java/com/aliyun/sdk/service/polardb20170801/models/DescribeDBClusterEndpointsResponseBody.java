@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBClusterEndpointsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBClusterEndpointsResponseBody</p>
  */
 public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
-    @NameInMap("Items")
-    private java.util.List < Items> items;
+    @com.aliyun.core.annotation.NameInMap("Items")
+    private java.util.List<Items> items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBClusterEndpointsResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -46,19 +51,22 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private String requestId; 
 
         /**
-         * The details of the endpoints.
+         * <p>The information about the endpoints.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2DC120BF-6EBA-4C63-BE99-B09F9E******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,33 +79,43 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBClusterEndpointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterEndpointsResponseBody</p>
+     */
     public static class AddressItems extends TeaModel {
-        @NameInMap("ConnectionString")
+        @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
 
-        @NameInMap("IPAddress")
+        @com.aliyun.core.annotation.NameInMap("DashboardUsed")
+        private Boolean dashboardUsed;
+
+        @com.aliyun.core.annotation.NameInMap("IPAddress")
         private String IPAddress;
 
-        @NameInMap("NetType")
+        @com.aliyun.core.annotation.NameInMap("NetType")
         private String netType;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("PrivateZoneConnectionString")
+        @com.aliyun.core.annotation.NameInMap("PrivateZoneConnectionString")
         private String privateZoneConnectionString;
 
-        @NameInMap("VPCId")
+        @com.aliyun.core.annotation.NameInMap("VPCId")
         private String VPCId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcInstanceId")
+        @com.aliyun.core.annotation.NameInMap("VpcInstanceId")
         private String vpcInstanceId;
 
         private AddressItems(Builder builder) {
             this.connectionString = builder.connectionString;
+            this.dashboardUsed = builder.dashboardUsed;
             this.IPAddress = builder.IPAddress;
             this.netType = builder.netType;
             this.port = builder.port;
@@ -120,6 +138,13 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
          */
         public String getConnectionString() {
             return this.connectionString;
+        }
+
+        /**
+         * @return dashboardUsed
+         */
+        public Boolean getDashboardUsed() {
+            return this.dashboardUsed;
         }
 
         /**
@@ -173,6 +198,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String connectionString; 
+            private Boolean dashboardUsed; 
             private String IPAddress; 
             private String netType; 
             private String port; 
@@ -182,7 +208,10 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             private String vpcInstanceId; 
 
             /**
-             * The endpoint.
+             * <p>The endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>********.rwlb.polardb-pg-public.rds.aliyuncs.com</p>
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -190,7 +219,18 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address.
+             * DashboardUsed.
+             */
+            public Builder dashboardUsed(Boolean dashboardUsed) {
+                this.dashboardUsed = dashboardUsed;
+                return this;
+            }
+
+            /**
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.<em><strong>.</strong></em>.***</p>
              */
             public Builder IPAddress(String IPAddress) {
                 this.IPAddress = IPAddress;
@@ -198,11 +238,14 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The network type of the endpoint. Valid values:
-             * <p>
+             * <p>The network type of the endpoint. Valid values:</p>
+             * <ul>
+             * <li><strong>Public</strong></li>
+             * <li><strong>Private</strong></li>
+             * </ul>
              * 
-             * *   **Public**
-             * *   **Private**
+             * <strong>example:</strong>
+             * <p>Private</p>
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -210,7 +253,10 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The port.
+             * <p>The port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1521</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -218,7 +264,10 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The private domain name that is bound to the endpoint.
+             * <p>The private domain name that is bound to the endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><em><strong>.</strong></em>.**.com</p>
              */
             public Builder privateZoneConnectionString(String privateZoneConnectionString) {
                 this.privateZoneConnectionString = privateZoneConnectionString;
@@ -226,7 +275,10 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * <p>The ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-***************</p>
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;
@@ -234,7 +286,10 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * <p>The ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-************</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -242,10 +297,13 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC) instance.
-             * <p>
+             * <p>The ID of the virtual private cloud (VPC) instance.</p>
+             * <blockquote>
+             * <p>This parameter is returned for only PolarDB for MySQL clusters.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned for only PolarDB for MySQL clusters.
+             * <strong>example:</strong>
+             * <p>pe-*************</p>
              */
             public Builder vpcInstanceId(String vpcInstanceId) {
                 this.vpcInstanceId = vpcInstanceId;
@@ -259,36 +317,51 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBClusterEndpointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterEndpointsResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("AddressItems")
-        private java.util.List < AddressItems> addressItems;
+        @com.aliyun.core.annotation.NameInMap("AddressItems")
+        private java.util.List<AddressItems> addressItems;
 
-        @NameInMap("AutoAddNewNodes")
+        @com.aliyun.core.annotation.NameInMap("AutoAddNewNodes")
         private String autoAddNewNodes;
 
-        @NameInMap("DBClusterId")
+        @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
 
-        @NameInMap("DBEndpointDescription")
+        @com.aliyun.core.annotation.NameInMap("DBEndpointDescription")
         private String DBEndpointDescription;
 
-        @NameInMap("DBEndpointId")
+        @com.aliyun.core.annotation.NameInMap("DBEndpointId")
         private String DBEndpointId;
 
-        @NameInMap("EndpointConfig")
+        @com.aliyun.core.annotation.NameInMap("EndpointConfig")
         private String endpointConfig;
 
-        @NameInMap("EndpointType")
+        @com.aliyun.core.annotation.NameInMap("EndpointType")
         private String endpointType;
 
-        @NameInMap("NodeWithRoles")
+        @com.aliyun.core.annotation.NameInMap("NodeWithRoles")
         private String nodeWithRoles;
 
-        @NameInMap("Nodes")
+        @com.aliyun.core.annotation.NameInMap("Nodes")
         private String nodes;
 
-        @NameInMap("ReadWriteMode")
+        @com.aliyun.core.annotation.NameInMap("PolarSccTimeoutAction")
+        private String polarSccTimeoutAction;
+
+        @com.aliyun.core.annotation.NameInMap("PolarSccWaitTimeout")
+        private String polarSccWaitTimeout;
+
+        @com.aliyun.core.annotation.NameInMap("ReadWriteMode")
         private String readWriteMode;
+
+        @com.aliyun.core.annotation.NameInMap("SccMode")
+        private String sccMode;
 
         private Items(Builder builder) {
             this.addressItems = builder.addressItems;
@@ -300,7 +373,10 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             this.endpointType = builder.endpointType;
             this.nodeWithRoles = builder.nodeWithRoles;
             this.nodes = builder.nodes;
+            this.polarSccTimeoutAction = builder.polarSccTimeoutAction;
+            this.polarSccWaitTimeout = builder.polarSccWaitTimeout;
             this.readWriteMode = builder.readWriteMode;
+            this.sccMode = builder.sccMode;
         }
 
         public static Builder builder() {
@@ -314,7 +390,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         /**
          * @return addressItems
          */
-        public java.util.List < AddressItems> getAddressItems() {
+        public java.util.List<AddressItems> getAddressItems() {
             return this.addressItems;
         }
 
@@ -375,14 +451,35 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         }
 
         /**
+         * @return polarSccTimeoutAction
+         */
+        public String getPolarSccTimeoutAction() {
+            return this.polarSccTimeoutAction;
+        }
+
+        /**
+         * @return polarSccWaitTimeout
+         */
+        public String getPolarSccWaitTimeout() {
+            return this.polarSccWaitTimeout;
+        }
+
+        /**
          * @return readWriteMode
          */
         public String getReadWriteMode() {
             return this.readWriteMode;
         }
 
+        /**
+         * @return sccMode
+         */
+        public String getSccMode() {
+            return this.sccMode;
+        }
+
         public static final class Builder {
-            private java.util.List < AddressItems> addressItems; 
+            private java.util.List<AddressItems> addressItems; 
             private String autoAddNewNodes; 
             private String DBClusterId; 
             private String DBEndpointDescription; 
@@ -391,22 +488,28 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             private String endpointType; 
             private String nodeWithRoles; 
             private String nodes; 
+            private String polarSccTimeoutAction; 
+            private String polarSccWaitTimeout; 
             private String readWriteMode; 
+            private String sccMode; 
 
             /**
-             * The details of the endpoint.
+             * <p>The details of the endpoint.</p>
              */
-            public Builder addressItems(java.util.List < AddressItems> addressItems) {
+            public Builder addressItems(java.util.List<AddressItems> addressItems) {
                 this.addressItems = addressItems;
                 return this;
             }
 
             /**
-             * Indicates whether new nodes are automatically associated with the default cluster endpoint. Valid values:
-             * <p>
+             * <p>Indicates whether new nodes are automatically associated with the default cluster endpoint. Valid values:</p>
+             * <ul>
+             * <li><strong>Enable</strong></li>
+             * <li><strong>Disable</strong></li>
+             * </ul>
              * 
-             * *   **Enable**
-             * *   **Disable**
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder autoAddNewNodes(String autoAddNewNodes) {
                 this.autoAddNewNodes = autoAddNewNodes;
@@ -414,7 +517,10 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cluster.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-bp1s826a1up******</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -422,7 +528,10 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the endpoint.
+             * <p>The name of the endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder DBEndpointDescription(String DBEndpointDescription) {
                 this.DBEndpointDescription = DBEndpointDescription;
@@ -430,7 +539,10 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the endpoint.
+             * <p>The ID of the endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pe-*************</p>
              */
             public Builder DBEndpointId(String DBEndpointId) {
                 this.DBEndpointId = DBEndpointId;
@@ -438,26 +550,33 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The advanced configurations of the endpoint.
-             * <p>
+             * <p>The advanced configurations of the endpoint.</p>
+             * <ul>
+             * <li><p><strong>DistributedTransaction</strong>: indicates whether transaction splitting is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
+             * </li>
+             * <li><p><strong>ConsistLevel</strong>: the consistency level of sessions. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: eventual consistency.</li>
+             * <li><strong>1</strong>: session consistency.</li>
+             * <li><strong>2</strong>: global consistency.</li>
+             * </ul>
+             * </li>
+             * <li><p><strong>LoadBalanceStrategy</strong>: the load balancing policy that automatically schedules loads. Only <strong>load</strong> may be returned.</p>
+             * </li>
+             * <li><p><strong>MasterAcceptReads</strong>: indicates whether the primary node processes read requests. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
+             * </li>
+             * </ul>
              * 
-             * *   **DistributedTransaction**: indicates whether transaction splitting is enabled. Valid values:
-             * 
-             *     *   **on**
-             *     *   **off**
-             * 
-             * *   **ConsistLevel**: the consistency level of sessions. Valid values:
-             * 
-             *     *   **0**: eventual consistency.
-             *     *   **1**: session consistency.
-             *     *   **2**: global consistency.
-             * 
-             * *   **LoadBalanceStrategy**: the load balancing policy that automatically schedules loads. Only **load** may be returned.
-             * 
-             * *   **MasterAcceptReads**: indicates whether the primary node processes read requests. Valid values:
-             * 
-             *     *   **on**
-             *     *   **off**
+             * <strong>example:</strong>
+             * <p>{&quot;DistributedTransaction&quot;:&quot;off&quot;,&quot;ConsistLevel&quot;:&quot;0&quot;,&quot;LoadBalanceStrategy&quot;:&quot;load&quot;,&quot;MasterAcceptReads&quot;:&quot;on&quot;}</p>
              */
             public Builder endpointConfig(String endpointConfig) {
                 this.endpointConfig = endpointConfig;
@@ -465,12 +584,15 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the endpoint. Valid values:
-             * <p>
+             * <p>The type of the endpoint. Valid values:</p>
+             * <ul>
+             * <li><strong>Cluster</strong>: the default endpoint.</li>
+             * <li><strong>Primary</strong>: the primary endpoint.</li>
+             * <li><strong>Custom</strong>: a custom cluster endpoint.</li>
+             * </ul>
              * 
-             * *   **Cluster**: the default endpoint.
-             * *   **Primary**: the primary endpoint.
-             * *   **Custom**: a custom cluster endpoint.
+             * <strong>example:</strong>
+             * <p>Custom</p>
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;
@@ -478,10 +600,13 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The role name of each node in the endpoint. The role name of the primary node is **Writer**. Multiple read-only nodes can be associated with an endpoint. Therefore, the role name of each read-only node is suffixed with a number, such as **Reader1** and **Reader2**.
-             * <p>
+             * <p>The role name of each node in the endpoint. The role name of the primary node is <strong>Writer</strong>. Multiple read-only nodes can be associated with an endpoint. Therefore, the role name of each read-only node is suffixed with a number, such as <strong>Reader1</strong> and <strong>Reader2</strong>.</p>
+             * <blockquote>
+             * <p>This parameter is valid only for PolarDB for PostgreSQL clusters and PolarDB for PostgreSQL (Compatible with Oracle)) clusters.</p>
+             * </blockquote>
              * 
-             * > This parameter is valid only for PolarDB for PostgreSQL clusters and PolarDB for PostgreSQL (Compatible with Oracle)) clusters.
+             * <strong>example:</strong>
+             * <p>Reader1</p>
              */
             public Builder nodeWithRoles(String nodeWithRoles) {
                 this.nodeWithRoles = nodeWithRoles;
@@ -489,7 +614,10 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The nodes in the endpoint.
+             * <p>The nodes in the endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pi-<em><strong><strong><strong><strong><strong><strong><strong>,pi-</strong></strong></strong></strong></strong></strong></strong></em></p>
              */
             public Builder nodes(String nodes) {
                 this.nodes = nodes;
@@ -497,14 +625,41 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The read/write mode. Valid values:
-             * <p>
+             * PolarSccTimeoutAction.
+             */
+            public Builder polarSccTimeoutAction(String polarSccTimeoutAction) {
+                this.polarSccTimeoutAction = polarSccTimeoutAction;
+                return this;
+            }
+
+            /**
+             * PolarSccWaitTimeout.
+             */
+            public Builder polarSccWaitTimeout(String polarSccWaitTimeout) {
+                this.polarSccWaitTimeout = polarSccWaitTimeout;
+                return this;
+            }
+
+            /**
+             * <p>The read/write mode. Valid values:</p>
+             * <ul>
+             * <li><strong>ReadWrite</strong>: handles read and write requests. Automatic read/write splitting is enabled.</li>
+             * <li><strong>ReadOnly</strong>: handles read-only requests.</li>
+             * </ul>
              * 
-             * *   **ReadWrite**: handles read and write requests. Automatic read/write splitting is enabled.
-             * *   **ReadOnly**: handles read-only requests.
+             * <strong>example:</strong>
+             * <p>ReadOnly</p>
              */
             public Builder readWriteMode(String readWriteMode) {
                 this.readWriteMode = readWriteMode;
+                return this;
+            }
+
+            /**
+             * SccMode.
+             */
+            public Builder sccMode(String sccMode) {
+                this.sccMode = sccMode;
                 return this;
             }
 

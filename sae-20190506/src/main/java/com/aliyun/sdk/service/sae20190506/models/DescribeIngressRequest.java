@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIngressRequest} extends {@link RequestModel}
  *
  * <p>DescribeIngressRequest</p>
  */
 public class DescribeIngressRequest extends Request {
-    @Query
-    @NameInMap("IngressId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IngressId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long ingressId;
 
     private DescribeIngressRequest(Builder builder) {
@@ -55,7 +60,11 @@ public class DescribeIngressRequest extends Request {
         } 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>87</p>
          */
         public Builder ingressId(Long ingressId) {
             this.putQueryParameter("IngressId", ingressId);

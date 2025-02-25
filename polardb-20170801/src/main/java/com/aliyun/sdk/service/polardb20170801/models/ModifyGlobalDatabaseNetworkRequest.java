@@ -1,58 +1,67 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyGlobalDatabaseNetworkRequest} extends {@link RequestModel}
  *
  * <p>ModifyGlobalDatabaseNetworkRequest</p>
  */
 public class ModifyGlobalDatabaseNetworkRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("GDNDescription")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableGlobalDomainName")
+    private Boolean enableGlobalDomainName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GDNDescription")
     private String GDNDescription;
 
-    @Query
-    @NameInMap("GDNId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GDNId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String GDNId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private ModifyGlobalDatabaseNetworkRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.enableGlobalDomainName = builder.enableGlobalDomainName;
         this.GDNDescription = builder.GDNDescription;
         this.GDNId = builder.GDNId;
         this.ownerAccount = builder.ownerAccount;
@@ -81,6 +90,13 @@ public class ModifyGlobalDatabaseNetworkRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return enableGlobalDomainName
+     */
+    public Boolean getEnableGlobalDomainName() {
+        return this.enableGlobalDomainName;
     }
 
     /**
@@ -141,6 +157,7 @@ public class ModifyGlobalDatabaseNetworkRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyGlobalDatabaseNetworkRequest, Builder> {
         private String regionId; 
+        private Boolean enableGlobalDomainName; 
         private String GDNDescription; 
         private String GDNId; 
         private String ownerAccount; 
@@ -157,6 +174,7 @@ public class ModifyGlobalDatabaseNetworkRequest extends Request {
         private Builder(ModifyGlobalDatabaseNetworkRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.enableGlobalDomainName = request.enableGlobalDomainName;
             this.GDNDescription = request.GDNDescription;
             this.GDNId = request.GDNId;
             this.ownerAccount = request.ownerAccount;
@@ -177,13 +195,28 @@ public class ModifyGlobalDatabaseNetworkRequest extends Request {
         }
 
         /**
-         * The description of the GDN. The description must meet the following requirements:
-         * <p>
+         * <p>Create a global domain</p>
          * 
-         * *   It cannot start with `http://` or `https://`.
-         * *   It must start with a letter.
-         * *   It can contain letters, digits, underscores (\_), and hyphens (-).
-         * *   It must be 2 to 126 characters in length.
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder enableGlobalDomainName(Boolean enableGlobalDomainName) {
+            this.putQueryParameter("EnableGlobalDomainName", enableGlobalDomainName);
+            this.enableGlobalDomainName = enableGlobalDomainName;
+            return this;
+        }
+
+        /**
+         * <p>The description of the GDN. The description must meet the following requirements:</p>
+         * <ul>
+         * <li>The description cannot start with http:// or https://.</li>
+         * <li>The description must start with a letter.</li>
+         * <li>The description can contain letters, digits, underscores (_), and hyphens (-).</li>
+         * <li>The description must be 2 to 126 characters in length.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GDN-fortest</p>
          */
         public Builder GDNDescription(String GDNDescription) {
             this.putQueryParameter("GDNDescription", GDNDescription);
@@ -192,7 +225,11 @@ public class ModifyGlobalDatabaseNetworkRequest extends Request {
         }
 
         /**
-         * The ID of the GDN.
+         * <p>The GDN ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gdn-bp1fttxsrmv*****</p>
          */
         public Builder GDNId(String GDNId) {
             this.putQueryParameter("GDNId", GDNId);
@@ -219,7 +256,10 @@ public class ModifyGlobalDatabaseNetworkRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-************</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteContactGroupRequest} extends {@link RequestModel}
  *
  * <p>DeleteContactGroupRequest</p>
  */
 public class DeleteContactGroupRequest extends Request {
-    @Query
-    @NameInMap("ContactGroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactGroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String contactGroupName;
 
     private DeleteContactGroupRequest(Builder builder) {
@@ -55,7 +55,11 @@ public class DeleteContactGroupRequest extends Request {
         } 
 
         /**
-         * The name of the alert group.
+         * <p>The name of the alert group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>contact_group_2019_templatedfkXQ</p>
          */
         public Builder contactGroupName(String contactGroupName) {
             this.putQueryParameter("ContactGroupName", contactGroupName);

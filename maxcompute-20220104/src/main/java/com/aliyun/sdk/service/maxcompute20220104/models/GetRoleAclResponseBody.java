@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRoleAclResponseBody} extends {@link TeaModel}
  *
  * <p>GetRoleAclResponseBody</p>
  */
 public class GetRoleAclResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMsg")
+    @com.aliyun.core.annotation.NameInMap("errorMsg")
     private String errorMsg;
 
-    @NameInMap("httpCode")
+    @com.aliyun.core.annotation.NameInMap("httpCode")
     private Integer httpCode;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private GetRoleAclResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class GetRoleAclResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -94,7 +99,10 @@ public class GetRoleAclResponseBody extends TeaModel {
         }
 
         /**
-         * errorCode.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>040002</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +110,10 @@ public class GetRoleAclResponseBody extends TeaModel {
         }
 
         /**
-         * errorMsg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>error message</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -110,7 +121,10 @@ public class GetRoleAclResponseBody extends TeaModel {
         }
 
         /**
-         * httpCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -118,7 +132,10 @@ public class GetRoleAclResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a06dc0916696898838762018e9564</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -131,14 +148,20 @@ public class GetRoleAclResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRoleAclResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRoleAclResponseBody</p>
+     */
     public static class Function extends TeaModel {
-        @NameInMap("actions")
-        private java.util.List < String > actions;
+        @com.aliyun.core.annotation.NameInMap("actions")
+        private java.util.List<String> actions;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("schemaName")
+        @com.aliyun.core.annotation.NameInMap("schemaName")
         private String schemaName;
 
         private Function(Builder builder) {
@@ -158,7 +181,7 @@ public class GetRoleAclResponseBody extends TeaModel {
         /**
          * @return actions
          */
-        public java.util.List < String > getActions() {
+        public java.util.List<String> getActions() {
             return this.actions;
         }
 
@@ -177,20 +200,23 @@ public class GetRoleAclResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > actions; 
+            private java.util.List<String> actions; 
             private String name; 
             private String schemaName; 
 
             /**
-             * The operations that were performed on the function.
+             * <p>The operations that were performed on the function.</p>
              */
-            public Builder actions(java.util.List < String > actions) {
+            public Builder actions(java.util.List<String> actions) {
                 this.actions = actions;
                 return this;
             }
 
             /**
-             * The name of the function.
+             * <p>The name of the function.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>functionA</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -198,7 +224,10 @@ public class GetRoleAclResponseBody extends TeaModel {
             }
 
             /**
-             * schemaName.
+             * <p>The Schema name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -212,14 +241,20 @@ public class GetRoleAclResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRoleAclResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRoleAclResponseBody</p>
+     */
     public static class Instance extends TeaModel {
-        @NameInMap("actions")
-        private java.util.List < String > actions;
+        @com.aliyun.core.annotation.NameInMap("actions")
+        private java.util.List<String> actions;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("schemaName")
+        @com.aliyun.core.annotation.NameInMap("schemaName")
         private String schemaName;
 
         private Instance(Builder builder) {
@@ -239,7 +274,7 @@ public class GetRoleAclResponseBody extends TeaModel {
         /**
          * @return actions
          */
-        public java.util.List < String > getActions() {
+        public java.util.List<String> getActions() {
             return this.actions;
         }
 
@@ -258,20 +293,23 @@ public class GetRoleAclResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > actions; 
+            private java.util.List<String> actions; 
             private String name; 
             private String schemaName; 
 
             /**
-             * The operations that were performed on the instance.
+             * <p>The operations that were performed on the instance.</p>
              */
-            public Builder actions(java.util.List < String > actions) {
+            public Builder actions(java.util.List<String> actions) {
                 this.actions = actions;
                 return this;
             }
 
             /**
-             * The name of the instance.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instanceA</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -279,7 +317,10 @@ public class GetRoleAclResponseBody extends TeaModel {
             }
 
             /**
-             * schemaName.
+             * <p>The Schema name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -293,14 +334,20 @@ public class GetRoleAclResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRoleAclResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRoleAclResponseBody</p>
+     */
     public static class Package extends TeaModel {
-        @NameInMap("actions")
-        private java.util.List < String > actions;
+        @com.aliyun.core.annotation.NameInMap("actions")
+        private java.util.List<String> actions;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("schemaName")
+        @com.aliyun.core.annotation.NameInMap("schemaName")
         private String schemaName;
 
         private Package(Builder builder) {
@@ -320,7 +367,7 @@ public class GetRoleAclResponseBody extends TeaModel {
         /**
          * @return actions
          */
-        public java.util.List < String > getActions() {
+        public java.util.List<String> getActions() {
             return this.actions;
         }
 
@@ -339,20 +386,23 @@ public class GetRoleAclResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > actions; 
+            private java.util.List<String> actions; 
             private String name; 
             private String schemaName; 
 
             /**
-             * The operations that were performed on the package.
+             * <p>The operations that were performed on the package.</p>
              */
-            public Builder actions(java.util.List < String > actions) {
+            public Builder actions(java.util.List<String> actions) {
                 this.actions = actions;
                 return this;
             }
 
             /**
-             * The name of the package.
+             * <p>The name of the package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>packageA</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -360,7 +410,10 @@ public class GetRoleAclResponseBody extends TeaModel {
             }
 
             /**
-             * schemaName.
+             * <p>The Schema name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -374,14 +427,20 @@ public class GetRoleAclResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRoleAclResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRoleAclResponseBody</p>
+     */
     public static class Project extends TeaModel {
-        @NameInMap("actions")
-        private java.util.List < String > actions;
+        @com.aliyun.core.annotation.NameInMap("actions")
+        private java.util.List<String> actions;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("schemaName")
+        @com.aliyun.core.annotation.NameInMap("schemaName")
         private String schemaName;
 
         private Project(Builder builder) {
@@ -401,7 +460,7 @@ public class GetRoleAclResponseBody extends TeaModel {
         /**
          * @return actions
          */
-        public java.util.List < String > getActions() {
+        public java.util.List<String> getActions() {
             return this.actions;
         }
 
@@ -420,20 +479,23 @@ public class GetRoleAclResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > actions; 
+            private java.util.List<String> actions; 
             private String name; 
             private String schemaName; 
 
             /**
-             * The operations that were performed on the project.
+             * <p>The operations that were performed on the project.</p>
              */
-            public Builder actions(java.util.List < String > actions) {
+            public Builder actions(java.util.List<String> actions) {
                 this.actions = actions;
                 return this;
             }
 
             /**
-             * The name of the MaxCompute project.
+             * <p>The name of the MaxCompute project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>projectA</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -441,7 +503,10 @@ public class GetRoleAclResponseBody extends TeaModel {
             }
 
             /**
-             * schemaName.
+             * <p>The Schema name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -455,14 +520,20 @@ public class GetRoleAclResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRoleAclResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRoleAclResponseBody</p>
+     */
     public static class Resource extends TeaModel {
-        @NameInMap("actions")
-        private java.util.List < String > actions;
+        @com.aliyun.core.annotation.NameInMap("actions")
+        private java.util.List<String> actions;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("schemaName")
+        @com.aliyun.core.annotation.NameInMap("schemaName")
         private String schemaName;
 
         private Resource(Builder builder) {
@@ -482,7 +553,7 @@ public class GetRoleAclResponseBody extends TeaModel {
         /**
          * @return actions
          */
-        public java.util.List < String > getActions() {
+        public java.util.List<String> getActions() {
             return this.actions;
         }
 
@@ -501,20 +572,23 @@ public class GetRoleAclResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > actions; 
+            private java.util.List<String> actions; 
             private String name; 
             private String schemaName; 
 
             /**
-             * The operations that were performed on the resource.
+             * <p>The operations that were performed on the resource.</p>
              */
-            public Builder actions(java.util.List < String > actions) {
+            public Builder actions(java.util.List<String> actions) {
                 this.actions = actions;
                 return this;
             }
 
             /**
-             * The name of the resource.
+             * <p>The name of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>resourceA</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -522,7 +596,10 @@ public class GetRoleAclResponseBody extends TeaModel {
             }
 
             /**
-             * schemaName.
+             * <p>The Schema name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -536,14 +613,20 @@ public class GetRoleAclResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRoleAclResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRoleAclResponseBody</p>
+     */
     public static class Table extends TeaModel {
-        @NameInMap("actions")
-        private java.util.List < String > actions;
+        @com.aliyun.core.annotation.NameInMap("actions")
+        private java.util.List<String> actions;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("schemaName")
+        @com.aliyun.core.annotation.NameInMap("schemaName")
         private String schemaName;
 
         private Table(Builder builder) {
@@ -563,7 +646,7 @@ public class GetRoleAclResponseBody extends TeaModel {
         /**
          * @return actions
          */
-        public java.util.List < String > getActions() {
+        public java.util.List<String> getActions() {
             return this.actions;
         }
 
@@ -582,20 +665,23 @@ public class GetRoleAclResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > actions; 
+            private java.util.List<String> actions; 
             private String name; 
             private String schemaName; 
 
             /**
-             * The operations that were performed on the table.
+             * <p>The operations that were performed on the table.</p>
              */
-            public Builder actions(java.util.List < String > actions) {
+            public Builder actions(java.util.List<String> actions) {
                 this.actions = actions;
                 return this;
             }
 
             /**
-             * The name of the table.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tableA</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -603,7 +689,10 @@ public class GetRoleAclResponseBody extends TeaModel {
             }
 
             /**
-             * schemaName.
+             * <p>The Schema name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -617,24 +706,30 @@ public class GetRoleAclResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRoleAclResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRoleAclResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("function")
-        private java.util.List < Function> function;
+        @com.aliyun.core.annotation.NameInMap("function")
+        private java.util.List<Function> function;
 
-        @NameInMap("instance")
-        private java.util.List < Instance> instance;
+        @com.aliyun.core.annotation.NameInMap("instance")
+        private java.util.List<Instance> instance;
 
-        @NameInMap("package")
-        private java.util.List < Package> _package;
+        @com.aliyun.core.annotation.NameInMap("package")
+        private java.util.List<Package> _package;
 
-        @NameInMap("project")
-        private java.util.List < Project> project;
+        @com.aliyun.core.annotation.NameInMap("project")
+        private java.util.List<Project> project;
 
-        @NameInMap("resource")
-        private java.util.List < Resource> resource;
+        @com.aliyun.core.annotation.NameInMap("resource")
+        private java.util.List<Resource> resource;
 
-        @NameInMap("table")
-        private java.util.List < Table> table;
+        @com.aliyun.core.annotation.NameInMap("table")
+        private java.util.List<Table> table;
 
         private Data(Builder builder) {
             this.function = builder.function;
@@ -656,97 +751,97 @@ public class GetRoleAclResponseBody extends TeaModel {
         /**
          * @return function
          */
-        public java.util.List < Function> getFunction() {
+        public java.util.List<Function> getFunction() {
             return this.function;
         }
 
         /**
          * @return instance
          */
-        public java.util.List < Instance> getInstance() {
+        public java.util.List<Instance> getInstance() {
             return this.instance;
         }
 
         /**
          * @return _package
          */
-        public java.util.List < Package> get_package() {
+        public java.util.List<Package> get_package() {
             return this._package;
         }
 
         /**
          * @return project
          */
-        public java.util.List < Project> getProject() {
+        public java.util.List<Project> getProject() {
             return this.project;
         }
 
         /**
          * @return resource
          */
-        public java.util.List < Resource> getResource() {
+        public java.util.List<Resource> getResource() {
             return this.resource;
         }
 
         /**
          * @return table
          */
-        public java.util.List < Table> getTable() {
+        public java.util.List<Table> getTable() {
             return this.table;
         }
 
         public static final class Builder {
-            private java.util.List < Function> function; 
-            private java.util.List < Instance> instance; 
-            private java.util.List < Package> _package; 
-            private java.util.List < Project> project; 
-            private java.util.List < Resource> resource; 
-            private java.util.List < Table> table; 
+            private java.util.List<Function> function; 
+            private java.util.List<Instance> instance; 
+            private java.util.List<Package> _package; 
+            private java.util.List<Project> project; 
+            private java.util.List<Resource> resource; 
+            private java.util.List<Table> table; 
 
             /**
-             * The function.
+             * <p>The function.</p>
              */
-            public Builder function(java.util.List < Function> function) {
+            public Builder function(java.util.List<Function> function) {
                 this.function = function;
                 return this;
             }
 
             /**
-             * The instance.
+             * <p>The instance.</p>
              */
-            public Builder instance(java.util.List < Instance> instance) {
+            public Builder instance(java.util.List<Instance> instance) {
                 this.instance = instance;
                 return this;
             }
 
             /**
-             * The package.
+             * <p>The package.</p>
              */
-            public Builder _package(java.util.List < Package> _package) {
+            public Builder _package(java.util.List<Package> _package) {
                 this._package = _package;
                 return this;
             }
 
             /**
-             * The project.
+             * <p>The project.</p>
              */
-            public Builder project(java.util.List < Project> project) {
+            public Builder project(java.util.List<Project> project) {
                 this.project = project;
                 return this;
             }
 
             /**
-             * The resource.
+             * <p>The resource.</p>
              */
-            public Builder resource(java.util.List < Resource> resource) {
+            public Builder resource(java.util.List<Resource> resource) {
                 this.resource = resource;
                 return this;
             }
 
             /**
-             * The table.
+             * <p>The table.</p>
              */
-            public Builder table(java.util.List < Table> table) {
+            public Builder table(java.util.List<Table> table) {
                 this.table = table;
                 return this;
             }

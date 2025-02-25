@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRiskCheckItemResultResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRiskCheckItemResultResponseBody</p>
  */
 public class DescribeRiskCheckItemResultResponseBody extends TeaModel {
-    @NameInMap("PageContentResource")
+    @com.aliyun.core.annotation.NameInMap("PageContentResource")
     private PageContentResource pageContentResource;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeRiskCheckItemResultResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeRiskCheckItemResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageContentResource(PageContentResource pageContentResource) {
             this.pageContentResource = pageContentResource;
@@ -58,7 +63,10 @@ public class DescribeRiskCheckItemResultResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3BFB4989-A108-46A4-954E-FF7EF02D1078</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,23 +79,29 @@ public class DescribeRiskCheckItemResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRiskCheckItemResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRiskCheckItemResultResponseBody</p>
+     */
     public static class PageContentResource extends TeaModel {
-        @NameInMap("ContentResource")
-        private java.util.Map < String, ? > contentResource;
+        @com.aliyun.core.annotation.NameInMap("ContentResource")
+        private java.util.Map<String, ?> contentResource;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageCount")
+        @com.aliyun.core.annotation.NameInMap("PageCount")
         private Integer pageCount;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageContentResource(Builder builder) {
@@ -110,7 +124,7 @@ public class DescribeRiskCheckItemResultResponseBody extends TeaModel {
         /**
          * @return contentResource
          */
-        public java.util.Map < String, ? > getContentResource() {
+        public java.util.Map<String, ?> getContentResource() {
             return this.contentResource;
         }
 
@@ -150,7 +164,7 @@ public class DescribeRiskCheckItemResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > contentResource; 
+            private java.util.Map<String, ?> contentResource; 
             private Integer count; 
             private Integer currentPage; 
             private Integer pageCount; 
@@ -158,15 +172,18 @@ public class DescribeRiskCheckItemResultResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The data of the affected assets on each page in a dynamic table.
+             * <p>The data of the affected assets on each page in a dynamic table.</p>
              */
-            public Builder contentResource(java.util.Map < String, ? > contentResource) {
+            public Builder contentResource(java.util.Map<String, ?> contentResource) {
                 this.contentResource = contentResource;
                 return this;
             }
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -174,7 +191,10 @@ public class DescribeRiskCheckItemResultResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -182,7 +202,10 @@ public class DescribeRiskCheckItemResultResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of pages returned.
+             * <p>The total number of pages returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder pageCount(Integer pageCount) {
                 this.pageCount = pageCount;
@@ -190,7 +213,10 @@ public class DescribeRiskCheckItemResultResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -198,7 +224,10 @@ public class DescribeRiskCheckItemResultResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

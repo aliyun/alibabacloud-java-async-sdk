@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeServiceLinkedRoleStatusRequest} extends {@link RequestModel}
  *
  * <p>DescribeServiceLinkedRoleStatusRequest</p>
  */
 public class DescribeServiceLinkedRoleStatusRequest extends Request {
-    @Query
-    @NameInMap("ServiceLinkedRole")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceLinkedRole")
     private String serviceLinkedRole;
 
     private DescribeServiceLinkedRoleStatusRequest(Builder builder) {
@@ -54,11 +59,14 @@ public class DescribeServiceLinkedRoleStatusRequest extends Request {
         } 
 
         /**
-         * The service-linked role. Default value: **AliyunServiceRoleForSas**. Valid values:
-         * <p>
+         * <p>The service-linked role. Default value: <strong>AliyunServiceRoleForSas</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>AliyunServiceRoleForSas</strong>: the service-linked role of Security Center. Security Center assumes this role to access the resources of other cloud services within your account.</li>
+         * <li><strong>AliyunServiceRoleForSasCspm</strong>: the service-linked role of Security Center-CSPM. Security Center-CSPM assumes this role to access the resources of other cloud services within your account.</li>
+         * </ul>
          * 
-         * *   **AliyunServiceRoleForSas**: the service-linked role of Security Center. Security Center assumes this role to access the resources of other cloud services within your account.
-         * *   **AliyunServiceRoleForSasCspm**: the service-linked role of Security Center-CSPM. Security Center-CSPM assumes this role to access the resources of other cloud services within your account.
+         * <strong>example:</strong>
+         * <p>AliyunServiceRoleForSas</p>
          */
         public Builder serviceLinkedRole(String serviceLinkedRole) {
             this.putQueryParameter("ServiceLinkedRole", serviceLinkedRole);

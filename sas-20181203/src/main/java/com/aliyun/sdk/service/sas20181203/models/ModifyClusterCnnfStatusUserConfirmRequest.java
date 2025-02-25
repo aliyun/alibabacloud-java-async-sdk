@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyClusterCnnfStatusUserConfirmRequest} extends {@link RequestModel}
  *
  * <p>ModifyClusterCnnfStatusUserConfirmRequest</p>
  */
 public class ModifyClusterCnnfStatusUserConfirmRequest extends Request {
-    @Query
-    @NameInMap("ClusterIds")
-    private java.util.List < String > clusterIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterIds")
+    private java.util.List<String> clusterIds;
 
-    @Query
-    @NameInMap("UserConfirm")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserConfirm")
     private Boolean userConfirm;
 
     private ModifyClusterCnnfStatusUserConfirmRequest(Builder builder) {
@@ -42,7 +47,7 @@ public class ModifyClusterCnnfStatusUserConfirmRequest extends Request {
     /**
      * @return clusterIds
      */
-    public java.util.List < String > getClusterIds() {
+    public java.util.List<String> getClusterIds() {
         return this.clusterIds;
     }
 
@@ -54,7 +59,7 @@ public class ModifyClusterCnnfStatusUserConfirmRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyClusterCnnfStatusUserConfirmRequest, Builder> {
-        private java.util.List < String > clusterIds; 
+        private java.util.List<String> clusterIds; 
         private Boolean userConfirm; 
 
         private Builder() {
@@ -68,20 +73,23 @@ public class ModifyClusterCnnfStatusUserConfirmRequest extends Request {
         } 
 
         /**
-         * The IDs of the clusters.
+         * <p>The cluster IDs.</p>
          */
-        public Builder clusterIds(java.util.List < String > clusterIds) {
+        public Builder clusterIds(java.util.List<String> clusterIds) {
             this.putQueryParameter("ClusterIds", clusterIds);
             this.clusterIds = clusterIds;
             return this;
         }
 
         /**
-         * Specifies whether to fix the blocking status of the cluster. Valid values:
-         * <p>
+         * <p>Specifies whether to fix the blocking status of the cluster. Valid values:</p>
+         * <ul>
+         * <li>true: yes</li>
+         * <li>false: no</li>
+         * </ul>
          * 
-         * *   true: yes
-         * *   false: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder userConfirm(Boolean userConfirm) {
             this.putQueryParameter("UserConfirm", userConfirm);

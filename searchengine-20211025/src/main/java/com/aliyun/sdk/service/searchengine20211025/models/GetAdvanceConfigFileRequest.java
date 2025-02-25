@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAdvanceConfigFileRequest} extends {@link RequestModel}
  *
  * <p>GetAdvanceConfigFileRequest</p>
  */
 public class GetAdvanceConfigFileRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("configName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("configName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String configName;
 
-    @Query
-    @NameInMap("fileName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("fileName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileName;
 
     private GetAdvanceConfigFileRequest(Builder builder) {
@@ -85,7 +90,11 @@ public class GetAdvanceConfigFileRequest extends Request {
         } 
 
         /**
-         * Obtains the information in a specified advanced configuration file.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-2r42ostoc01</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -94,7 +103,11 @@ public class GetAdvanceConfigFileRequest extends Request {
         }
 
         /**
-         * configName.
+         * <p>The name of the advanced configuration.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-7pp2pcna701_online_config_v5</p>
          */
         public Builder configName(String configName) {
             this.putPathParameter("configName", configName);
@@ -103,7 +116,11 @@ public class GetAdvanceConfigFileRequest extends Request {
         }
 
         /**
-         * fileName.
+         * <p>The name of the file</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/intervene_dict/chn_ecommerce_general.dict</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("fileName", fileName);

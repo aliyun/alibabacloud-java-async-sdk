@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DebuggerJob} extends {@link TeaModel}
  *
  * <p>DebuggerJob</p>
  */
 public class DebuggerJob extends TeaModel {
-    @NameInMap("DebuggerJobId")
+    @com.aliyun.core.annotation.NameInMap("DebuggerJobId")
     private String debuggerJobId;
 
-    @NameInMap("DisplayName")
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
     private String displayName;
 
-    @NameInMap("Duration")
+    @com.aliyun.core.annotation.NameInMap("Duration")
     private String duration;
 
-    @NameInMap("GmtCreateTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
-    @NameInMap("GmtFailedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtFailedTime")
     private String gmtFailedTime;
 
-    @NameInMap("GmtFinishTime")
+    @com.aliyun.core.annotation.NameInMap("GmtFinishTime")
     private String gmtFinishTime;
 
-    @NameInMap("GmtRunningTime")
+    @com.aliyun.core.annotation.NameInMap("GmtRunningTime")
     private String gmtRunningTime;
 
-    @NameInMap("GmtStoppedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtStoppedTime")
     private String gmtStoppedTime;
 
-    @NameInMap("GmtSubmittedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtSubmittedTime")
     private String gmtSubmittedTime;
 
-    @NameInMap("GmtSucceedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtSucceedTime")
     private String gmtSucceedTime;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
-    @NameInMap("WorkspaceName")
+    @com.aliyun.core.annotation.NameInMap("WorkspaceName")
     private String workspaceName;
 
     private DebuggerJob(Builder builder) {

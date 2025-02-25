@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDISyncTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDISyncTaskResponseBody</p>
  */
 public class CreateDISyncTaskResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateDISyncTaskResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class CreateDISyncTaskResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * <p>The information that indicates whether the data synchronization task is created.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +75,10 @@ public class CreateDISyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1411515937635973****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class CreateDISyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -91,14 +102,20 @@ public class CreateDISyncTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDISyncTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateDISyncTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("FileId")
+        @com.aliyun.core.annotation.NameInMap("FileId")
         private Long fileId;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Data(Builder builder) {
@@ -142,7 +159,10 @@ public class CreateDISyncTaskResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * FileId.
+             * <p>The ID of the data synchronization task that is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000001</p>
              */
             public Builder fileId(Long fileId) {
                 this.fileId = fileId;
@@ -150,7 +170,10 @@ public class CreateDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error message that is returned if the data synchronization task fails to be created. If the data synchronization task is successfully created, this parameter is not returned. If the data synchronization task fails to be created, an error message in the &quot;Invalid path: Workflow/xxxx/Data Integration&quot; format is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Invalid path: Business Flow/xxxx/Data Integration</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -158,7 +181,14 @@ public class CreateDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The creation status of the data synchronization task. Valid values:</p>
+             * <ul>
+             * <li>success</li>
+             * <li>fail</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;

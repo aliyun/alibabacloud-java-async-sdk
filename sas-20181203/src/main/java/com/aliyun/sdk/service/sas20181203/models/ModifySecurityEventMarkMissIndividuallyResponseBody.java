@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySecurityEventMarkMissIndividuallyResponseBody} extends {@link TeaModel}
  *
  * <p>ModifySecurityEventMarkMissIndividuallyResponseBody</p>
  */
 public class ModifySecurityEventMarkMissIndividuallyResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TimeCost")
+    @com.aliyun.core.annotation.NameInMap("TimeCost")
     private Long timeCost;
 
     private ModifySecurityEventMarkMissIndividuallyResponseBody(Builder builder) {
@@ -98,11 +103,14 @@ public class ModifySecurityEventMarkMissIndividuallyResponseBody extends TeaMode
         private Long timeCost; 
 
         /**
-         * The status code of the alert event.
-         * <p>
+         * <p>The status code of the alert event.</p>
+         * <ul>
+         * <li><strong>200</strong>: indicates that the alert event is successfully handled.</li>
+         * <li>Other codes: indicates that the alert event fails to be handled.</li>
+         * </ul>
          * 
-         * *   **200**: indicates that the alert event is successfully handled.
-         * *   Other codes: indicates that the alert event fails to be handled.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -110,7 +118,10 @@ public class ModifySecurityEventMarkMissIndividuallyResponseBody extends TeaMode
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -118,7 +129,10 @@ public class ModifySecurityEventMarkMissIndividuallyResponseBody extends TeaMode
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -126,7 +140,10 @@ public class ModifySecurityEventMarkMissIndividuallyResponseBody extends TeaMode
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A37B852F-E346-5FF2-82BD-D1F1DXXXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,11 +151,14 @@ public class ModifySecurityEventMarkMissIndividuallyResponseBody extends TeaMode
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -146,7 +166,10 @@ public class ModifySecurityEventMarkMissIndividuallyResponseBody extends TeaMode
         }
 
         /**
-         * The time that was consumed to process the request. Unit: milliseconds.
+         * <p>The time that was consumed to process the request. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder timeCost(Long timeCost) {
             this.timeCost = timeCost;

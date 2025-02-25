@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ProblemLevelGroupValue</p>
  */
 public class ProblemLevelGroupValue extends TeaModel {
-    @NameInMap("childRuleRelation")
+    @com.aliyun.core.annotation.NameInMap("childRuleRelation")
     private Integer childRuleRelation;
 
-    @NameInMap("matchCount")
+    @com.aliyun.core.annotation.NameInMap("matchCount")
     private Long matchCount;
 
-    @NameInMap("timeWindow")
+    @com.aliyun.core.annotation.NameInMap("timeWindow")
     private Long timeWindow;
 
-    @NameInMap("timeWindowUnit")
+    @com.aliyun.core.annotation.NameInMap("timeWindowUnit")
     private String timeWindowUnit;
 
-    @NameInMap("enableUpgrade")
+    @com.aliyun.core.annotation.NameInMap("enableUpgrade")
     private Boolean enableUpgrade;
 
-    @NameInMap("upgradeTimeWindow")
+    @com.aliyun.core.annotation.NameInMap("upgradeTimeWindow")
     private Long upgradeTimeWindow;
 
-    @NameInMap("upgradeTimeWindowUnit")
+    @com.aliyun.core.annotation.NameInMap("upgradeTimeWindowUnit")
     private String upgradeTimeWindowUnit;
 
     private ProblemLevelGroupValue(Builder builder) {

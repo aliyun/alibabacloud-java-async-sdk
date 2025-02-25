@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNamespaceListRequest} extends {@link RequestModel}
  *
  * <p>DescribeNamespaceListRequest</p>
  */
 public class DescribeNamespaceListRequest extends Request {
-    @Query
-    @NameInMap("ContainCustom")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainCustom")
     private Boolean containCustom;
 
-    @Query
-    @NameInMap("HybridCloudExclude")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HybridCloudExclude")
     private Boolean hybridCloudExclude;
 
     private DescribeNamespaceListRequest(Builder builder) {
@@ -68,7 +73,14 @@ public class DescribeNamespaceListRequest extends Request {
         } 
 
         /**
-         * true
+         * <p>Specifies whether to return custom namespaces. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The system returns custom namespaces.</li>
+         * <li><strong>false</strong>: The system does not return custom namespaces.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder containCustom(Boolean containCustom) {
             this.putQueryParameter("ContainCustom", containCustom);
@@ -77,7 +89,14 @@ public class DescribeNamespaceListRequest extends Request {
         }
 
         /**
-         * true
+         * <p>Specifies whether to exclude hybrid cloud namespaces from the result. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The system excludes hybrid cloud namespaces from the result.</li>
+         * <li><strong>false</strong>: The system does not exclude hybrid cloud namespaces from the result.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder hybridCloudExclude(Boolean hybridCloudExclude) {
             this.putQueryParameter("HybridCloudExclude", hybridCloudExclude);

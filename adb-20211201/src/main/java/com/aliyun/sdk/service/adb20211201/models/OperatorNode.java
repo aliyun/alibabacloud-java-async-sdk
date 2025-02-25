@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OperatorNode} extends {@link TeaModel}
  *
  * <p>OperatorNode</p>
  */
 public class OperatorNode extends TeaModel {
-    @NameInMap("children")
-    private java.util.List < OperatorNode > children;
+    @com.aliyun.core.annotation.NameInMap("children")
+    private java.util.List<OperatorNode> children;
 
-    @NameInMap("id")
+    @com.aliyun.core.annotation.NameInMap("id")
     private Integer id;
 
-    @NameInMap("levelWidth")
+    @com.aliyun.core.annotation.NameInMap("levelWidth")
     private Integer levelWidth;
 
-    @NameInMap("nodeDepth")
+    @com.aliyun.core.annotation.NameInMap("nodeDepth")
     private Integer nodeDepth;
 
-    @NameInMap("nodeName")
+    @com.aliyun.core.annotation.NameInMap("nodeName")
     private String nodeName;
 
-    @NameInMap("nodeWidth")
+    @com.aliyun.core.annotation.NameInMap("nodeWidth")
     private Integer nodeWidth;
 
-    @NameInMap("parentId")
+    @com.aliyun.core.annotation.NameInMap("parentId")
     private Integer parentId;
 
-    @NameInMap("stats")
+    @com.aliyun.core.annotation.NameInMap("stats")
     private Stats stats;
 
     private OperatorNode(Builder builder) {
@@ -58,7 +63,7 @@ public class OperatorNode extends TeaModel {
     /**
      * @return children
      */
-    public java.util.List < OperatorNode > getChildren() {
+    public java.util.List<OperatorNode> getChildren() {
         return this.children;
     }
 
@@ -112,7 +117,7 @@ public class OperatorNode extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < OperatorNode > children; 
+        private java.util.List<OperatorNode> children; 
         private Integer id; 
         private Integer levelWidth; 
         private Integer nodeDepth; 
@@ -124,7 +129,7 @@ public class OperatorNode extends TeaModel {
         /**
          * children.
          */
-        public Builder children(java.util.List < OperatorNode > children) {
+        public Builder children(java.util.List<OperatorNode> children) {
             this.children = children;
             return this;
         }
@@ -191,20 +196,26 @@ public class OperatorNode extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link OperatorNode} extends {@link TeaModel}
+     *
+     * <p>OperatorNode</p>
+     */
     public static class Stats extends TeaModel {
-        @NameInMap("bytes")
+        @com.aliyun.core.annotation.NameInMap("bytes")
         private Long bytes;
 
-        @NameInMap("outputRows")
+        @com.aliyun.core.annotation.NameInMap("outputRows")
         private Long outputRows;
 
-        @NameInMap("parameters")
+        @com.aliyun.core.annotation.NameInMap("parameters")
         private String parameters;
 
-        @NameInMap("peakMemory")
+        @com.aliyun.core.annotation.NameInMap("peakMemory")
         private Long peakMemory;
 
-        @NameInMap("timeCost")
+        @com.aliyun.core.annotation.NameInMap("timeCost")
         private Long timeCost;
 
         private Stats(Builder builder) {

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDataSourcesResponseBody} extends {@link TeaModel}
  *
  * <p>ListDataSourcesResponseBody</p>
  */
 public class ListDataSourcesResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListDataSourcesResponseBody(Builder builder) {
@@ -74,7 +79,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The number of entries returned per page. Default value: 10. Maximum value: 100.
+         * <p>The query result returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -82,7 +87,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -90,7 +98,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The query result.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc14115159376359****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +109,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -111,59 +125,65 @@ public class ListDataSourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDataSourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataSourcesResponseBody</p>
+     */
     public static class DataSources extends TeaModel {
-        @NameInMap("BindingCalcEngineId")
+        @com.aliyun.core.annotation.NameInMap("BindingCalcEngineId")
         private Long bindingCalcEngineId;
 
-        @NameInMap("ConnectStatus")
+        @com.aliyun.core.annotation.NameInMap("ConnectStatus")
         private Integer connectStatus;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("DataSourceType")
+        @com.aliyun.core.annotation.NameInMap("DataSourceType")
         private String dataSourceType;
 
-        @NameInMap("DefaultEngine")
+        @com.aliyun.core.annotation.NameInMap("DefaultEngine")
         private Boolean defaultEngine;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EnvType")
+        @com.aliyun.core.annotation.NameInMap("EnvType")
         private Integer envType;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Integer projectId;
 
-        @NameInMap("Sequence")
+        @com.aliyun.core.annotation.NameInMap("Sequence")
         private Integer sequence;
 
-        @NameInMap("Shared")
+        @com.aliyun.core.annotation.NameInMap("Shared")
         private Boolean shared;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("SubType")
+        @com.aliyun.core.annotation.NameInMap("SubType")
         private String subType;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private Long tenantId;
 
         private DataSources(Builder builder) {
@@ -342,7 +362,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             private Long tenantId; 
 
             /**
-             * BindingCalcEngineId.
+             * <p>The ID of the compute engine with which the data source is associated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder bindingCalcEngineId(Long bindingCalcEngineId) {
                 this.bindingCalcEngineId = bindingCalcEngineId;
@@ -350,7 +373,14 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the data source.
+             * <p>The status of the data source. Valid values:</p>
+             * <ul>
+             * <li>1: The data source is accessible.</li>
+             * <li>2: The data source is inaccessible.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder connectStatus(Integer connectStatus) {
                 this.connectStatus = connectStatus;
@@ -358,7 +388,83 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the compute engine instance with which the data source is associated.
+             * <p>The data connection string. The value of this parameter is in the JSON format. Examples of connection strings of common data sources:</p>
+             * <ul>
+             * <li><p>MaxCompute</p>
+             * <pre><code>{
+             *   &quot;pubEndpoint&quot;: &quot;http://service.cn.maxcompute.aliyun.com/api&quot;,
+             *   &quot;accessId&quot;: &quot;xxxxxxx&quot;,
+             *   &quot;securityToken&quot;: null,
+             *   &quot;endpoint&quot;: &quot;http://service.cn.maxcompute.aliyun-inc.com/api&quot;,
+             *   &quot;accessKey&quot;: &quot;***&quot;,
+             *   &quot;name&quot;: &quot;PRE_PROJECT_A_engine&quot;,
+             *   &quot;project&quot;: &quot;PRE_PROJECT_A&quot;,
+             *   &quot;vpcEndpoint&quot;: &quot;http://service.cn.maxcompute.aliyun-inc.com/api&quot;,
+             *   &quot;region&quot;: &quot;cn-shanghai&quot;,
+             *   &quot;authType&quot;: &quot;2&quot;
+             * }
+             * </code></pre>
+             * </li>
+             * <li><p>MySQL</p>
+             * <pre><code>{
+             *   &quot;configType&quot;: &quot;1&quot;,
+             *   &quot;database&quot;: &quot;mysql_d111b&quot;,
+             *   &quot;instanceName&quot;: &quot;rm-xxxxxx&quot;,
+             *   &quot;password&quot;: &quot;***&quot;,
+             *   &quot;rdsOwnerId&quot;: &quot;12133xxxxxx&quot;,
+             *   &quot;tag&quot;: &quot;rds&quot;,
+             *   &quot;username&quot;: &quot;mysql_db111&quot;
+             * }
+             * </code></pre>
+             * </li>
+             * <li><p>ApsaraDB RDS for SQL Server</p>
+             * <pre><code>{
+             *   &quot;configType&quot;: &quot;1&quot;,
+             *   &quot;jdbcUrl&quot;: &quot;jdbc:sqlserver://rm-xxxxx.sqlserver.rds.aliyuncs.com:1433;DatabaseName=sqlserver_db1&quot;,
+             *   &quot;password&quot;: &quot;***&quot;,
+             *   &quot;tag&quot;: &quot;public&quot;,
+             *   &quot;username&quot;: &quot;sqlserver_db111&quot;
+             * }
+             * </code></pre>
+             * </li>
+             * <li><p>Object Storage Service (OSS)</p>
+             * <pre><code>{
+             *   &quot;accessId&quot;: &quot;LTAINbR9Uxxxx&quot;,
+             *   &quot;accessKey&quot;: &quot;***&quot;,
+             *   &quot;bucket&quot;: &quot;bigxxx1223&quot;,
+             *   &quot;configType&quot;: &quot;1&quot;,
+             *   &quot;endpoint&quot;: &quot;http://oss-cn-hangzhou.aliyuncs.com&quot;,
+             *   &quot;tag&quot;: &quot;public&quot;
+             * }
+             * </code></pre>
+             * </li>
+             * <li><p>ApsaraDB RDS for PostgreSQL</p>
+             * <pre><code>{
+             *   &quot;configType&quot;: &quot;1&quot;,
+             *   &quot;database&quot;: &quot;cdp_xxx&quot;,
+             *   &quot;instanceName&quot;: &quot;rm-xxxx&quot;,
+             *   &quot;password&quot;: &quot;***&quot;,
+             *   &quot;rdsOwnerId&quot;: &quot;121xxxxx&quot;,
+             *   &quot;tag&quot;: &quot;rds&quot;,
+             *   &quot;username&quot;: &quot;cdp_xxx&quot;
+             * }
+             * </code></pre>
+             * </li>
+             * <li><p>AnalyticDB for MySQL</p>
+             * <pre><code>{
+             *   &quot;configType&quot;: &quot;1&quot;,
+             *   &quot;password&quot;: &quot;***&quot;,
+             *   &quot;schema&quot;: &quot;ads_demo&quot;,
+             *   &quot;tag&quot;: &quot;public&quot;,
+             *   &quot;url&quot;: &quot;ads-xxx-xxxx.cn-hangzhou-1.ads.aliyuncs.com:3029&quot;,
+             *   &quot;username&quot;: &quot;lslslsls&quot;
+             * }
+             * </code></pre>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;pubEndpoint&quot;:&quot;<a href="http://service.cn.maxcompute.aliyun.com/api%22,%22accessId%22:%22TMP.3KecGjvzy3i8MYfn2BGHgF7EHGyBFZcHm7GgngrABVRyvvKQrfF5kskR36xP361C3dqwbGo7SGYptAeGyiTwHXqLaBUvYC%22,%22securityToken%22:null,%22endpoint%22:%22http://service.cn.maxcompute.aliyun-inc.com/api%22,%22accessKey%22:%22***%22,%22name%22:%22PRE_PROJECT_A_engine%22,%22project%22:%22PRE_PROJECT_A%22,%22vpcEndpoint%22:%22http://service.cn.maxcompute.aliyun-inc.com/api%22,%22region%22:%22cn-shanghai%22,%22authType%22:%222%22%7D">http://service.cn.maxcompute.aliyun.com/api&quot;,&quot;accessId&quot;:&quot;TMP.3KecGjvzy3i8MYfn2BGHgF7EHGyBFZcHm7GgngrABVRyvvKQrfF5kskR36xP361C3dqwbGo7SGYptAeGyiTwHXqLaBUvYC&quot;,&quot;securityToken&quot;:null,&quot;endpoint&quot;:&quot;http://service.cn.maxcompute.aliyun-inc.com/api&quot;,&quot;accessKey&quot;:&quot;***&quot;,&quot;name&quot;:&quot;PRE_PROJECT_A_engine&quot;,&quot;project&quot;:&quot;PRE_PROJECT_A&quot;,&quot;vpcEndpoint&quot;:&quot;http://service.cn.maxcompute.aliyun-inc.com/api&quot;,&quot;region&quot;:&quot;cn-shanghai&quot;,&quot;authType&quot;:&quot;2&quot;}</a></p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -366,7 +472,25 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the compute engine instance that is associated with the data source is the default compute engine instance used by data sources of the same type.
+             * <p>The type of the data source. Valid values:</p>
+             * <ul>
+             * <li>odps</li>
+             * <li>mysql</li>
+             * <li>rds</li>
+             * <li>oss</li>
+             * <li>sqlserver</li>
+             * <li>polardb</li>
+             * <li>oracle</li>
+             * <li>mongodb</li>
+             * <li>emr</li>
+             * <li>postgresql</li>
+             * <li>analyticdb_for_mysql</li>
+             * <li>hybriddb_for_postgresql</li>
+             * <li>holo</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder dataSourceType(String dataSourceType) {
                 this.dataSourceType = dataSourceType;
@@ -374,7 +498,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that is used to last modify the data source.
+             * <p>Indicates whether the compute engine that is associated with the data source is the default compute engine used by data sources of the same type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder defaultEngine(Boolean defaultEngine) {
                 this.defaultEngine = defaultEngine;
@@ -382,7 +509,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the data source was created. Example: Mar 17, 2021 4:09:32 PM.
+             * <p>The description of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a connection</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -390,7 +520,14 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The field that is used to sort data sources. Data sources are sorted in descending order based on the value of this parameter.
+             * <p>The environment in which the data source is used. Valid values:</p>
+             * <ul>
+             * <li>0: development environment</li>
+             * <li>1: production environment</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder envType(Integer envType) {
                 this.envType = envType;
@@ -398,7 +535,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the data source is a shared data source.
+             * <p>The time when the data source was created. Example: Mar 17, 2021 4:09:32 PM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mar 17, 2021 4:09:32 PM</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -406,11 +546,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the data source. Valid values:
-             * <p>
+             * <p>The time when the data source was last modified. Example: Mar 17, 2021 4:09:32 PM.</p>
              * 
-             * *   1: The data source is accessible.
-             * *   2: The data source is inaccessible.
+             * <strong>example:</strong>
+             * <p>Mar 17, 2021 4:09:32 PM</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -418,7 +557,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tenant.
+             * <p>The data source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -426,7 +568,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data source.
+             * <p>The name of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -434,97 +579,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The data connection string. The value of this parameter is in the JSON format. Sample connection strings of common data sources:
-             * <p>
+             * <p>The ID of the Alibaba Cloud account that is used to last modify the data source.</p>
              * 
-             * *   MaxCompute
-             * 
-             * <!---->
-             * 
-             *     json
-             *     {
-             *       "pubEndpoint": "http://service.cn.maxcompute.aliyun.com/api",
-             *       "accessId": "xxxxxxx",
-             *       "securityToken": null,
-             *       "endpoint": "http://service.cn.maxcompute.aliyun-inc.com/api",
-             *       "accessKey": "***",
-             *       "name": "PRE_PROJECT_A_engine",
-             *       "project": "PRE_PROJECT_A",
-             *       "vpcEndpoint": "http://service.cn.maxcompute.aliyun-inc.com/api",
-             *       "region": "cn-shanghai",
-             *       "authType": "2"
-             *     }
-             * 
-             * *   mysql
-             * 
-             * <!---->
-             * 
-             *     json
-             *     {
-             *       "configType": "1",
-             *       "database": "mysql_d111b",
-             *       "instanceName": "rm-xxxxxx",
-             *       "password": "***",
-             *       "rdsOwnerId": "12133xxxxxx",
-             *       "tag": "rds",
-             *       "username": "mysql_db111"
-             *     }
-             * 
-             * *   sqlserver
-             * 
-             * <!---->
-             * 
-             *     json
-             *     {
-             *       "configType": "1",
-             *       "jdbcUrl": "jdbc:sqlserver://rm-xxxxx.sqlserver.rds.aliyuncs.com:1433;DatabaseName=sqlserver_db1",
-             *       "password": "***",
-             *       "tag": "public",
-             *       "username": "sqlserver_db111"
-             *     }
-             * 
-             * *   oss
-             * 
-             * <!---->
-             * 
-             *     json
-             *     {
-             *       "accessId": "LTAINbR9Uxxxx",
-             *       "accessKey": "***",
-             *       "bucket": "bigxxx1223",
-             *       "configType": "1",
-             *       "endpoint": "http://oss-cn-hangzhou.aliyuncs.com",
-             *       "tag": "public"
-             *     }
-             * 
-             * *   postgresql
-             * 
-             * <!---->
-             * 
-             *     json
-             *     {
-             *       "configType": "1",
-             *       "database": "cdp_xxx",
-             *       "instanceName": "rm-xxxx",
-             *       "password": "***",
-             *       "rdsOwnerId": "121xxxxx",
-             *       "tag": "rds",
-             *       "username": "cdp_xxx"
-             *     }
-             * 
-             * *   ads
-             * 
-             * <!---->
-             * 
-             *     json
-             *     {
-             *       "configType": "1",
-             *       "password": "***",
-             *       "schema": "ads_demo",
-             *       "tag": "public",
-             *       "url": "ads-xxx-xxxx.cn-hangzhou-1.ads.aliyuncs.com:3029",
-             *       "username": "lslslsls"
-             *     }
+             * <strong>example:</strong>
+             * <p>193543050****</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -532,7 +590,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the data source was last modified. Example: Mar 17, 2021 4:09:32 PM.
+             * <p>The ID of the workspace to which the data source belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder projectId(Integer projectId) {
                 this.projectId = projectId;
@@ -540,22 +601,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the data source. Valid values:
-             * <p>
+             * <p>The sequence number of the data source. Data sources are sorted in descending order based on the value of this parameter.</p>
              * 
-             * *   odps
-             * *   mysql
-             * *   rds
-             * *   oss
-             * *   sqlserver
-             * *   polardb
-             * *   oracle
-             * *   mongodb
-             * *   emr
-             * *   postgresql
-             * *   analyticdb_for_mysql
-             * *   hybriddb_for_postgresql
-             * *   holo
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder sequence(Integer sequence) {
                 this.sequence = sequence;
@@ -563,7 +612,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the data source.
+             * <p>Indicates whether the data source is a shared data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder shared(Boolean shared) {
                 this.shared = shared;
@@ -571,10 +623,14 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The subtype of the data source. This parameter takes effect only if the DataSourceType parameter is set to rds.
-             * <p>
+             * <p>The status of the data source. Valid values:</p>
+             * <ul>
+             * <li>1: The data source is accessible.</li>
+             * <li>2: The data source is inaccessible.</li>
+             * </ul>
              * 
-             * If the DataSourceType parameter is set to rds, this parameter can be set to mysql, sqlserver, or postgresql.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -582,11 +638,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The environment in which the data source is used. Valid values:
-             * <p>
+             * <p>The subtype of the data source. This parameter takes effect only when the DataSourceType parameter is set to rds.</p>
              * 
-             * *   0: development environment
-             * *   1: production environment
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder subType(String subType) {
                 this.subType = subType;
@@ -594,7 +649,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567</p>
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -608,17 +666,23 @@ public class ListDataSourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDataSourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataSourcesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DataSources")
-        private java.util.List < DataSources> dataSources;
+        @com.aliyun.core.annotation.NameInMap("DataSources")
+        private java.util.List<DataSources> dataSources;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {
@@ -639,7 +703,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         /**
          * @return dataSources
          */
-        public java.util.List < DataSources> getDataSources() {
+        public java.util.List<DataSources> getDataSources() {
             return this.dataSources;
         }
 
@@ -665,21 +729,24 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DataSources> dataSources; 
+            private java.util.List<DataSources> dataSources; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
 
             /**
-             * The ID of the workspace to which the data source belongs.
+             * <p>The data sources.</p>
              */
-            public Builder dataSources(java.util.List < DataSources> dataSources) {
+            public Builder dataSources(java.util.List<DataSources> dataSources) {
                 this.dataSources = dataSources;
                 return this;
             }
 
             /**
-             * The total number of data sources.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -687,7 +754,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The data sources.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -695,11 +765,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the data source. Valid values:
-             * <p>
+             * <p>The total number of data sources.</p>
              * 
-             * *   1: The data source is accessible.
-             * *   2: The data source is inaccessible.
+             * <strong>example:</strong>
+             * <p>233</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

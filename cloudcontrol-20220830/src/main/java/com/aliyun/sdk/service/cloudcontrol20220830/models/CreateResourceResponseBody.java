@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudcontrol20220830.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateResourceResponseBody</p>
  */
 public class CreateResourceResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("resourceId")
+    @com.aliyun.core.annotation.NameInMap("resourceId")
     private String resourceId;
 
-    @NameInMap("resourcePath")
+    @com.aliyun.core.annotation.NameInMap("resourcePath")
     private String resourcePath;
 
-    @NameInMap("taskId")
+    @com.aliyun.core.annotation.NameInMap("taskId")
     private String taskId;
 
     private CreateResourceResponseBody(Builder builder) {

@@ -1,106 +1,111 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightCreateOrderRequest} extends {@link RequestModel}
  *
  * <p>FlightCreateOrderRequest</p>
  */
 public class FlightCreateOrderRequest extends Request {
-    @Body
-    @NameInMap("arr_airport_code")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("arr_airport_code")
     private String arrAirportCode;
 
-    @Body
-    @NameInMap("arr_city_code")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("arr_city_code")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String arrCityCode;
 
-    @Body
-    @NameInMap("auto_pay")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("auto_pay")
     private Integer autoPay;
 
-    @Body
-    @NameInMap("buyer_name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("buyer_name")
     private String buyerName;
 
-    @Body
-    @NameInMap("buyer_unique_key")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("buyer_unique_key")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String buyerUniqueKey;
 
-    @Body
-    @NameInMap("contact_info")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("contact_info")
+    @com.aliyun.core.annotation.Validation(required = true)
     private ContactInfo contactInfo;
 
-    @Body
-    @NameInMap("dep_airport_code")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dep_airport_code")
     private String depAirportCode;
 
-    @Body
-    @NameInMap("dep_city_code")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dep_city_code")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String depCityCode;
 
-    @Body
-    @NameInMap("dep_date")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dep_date")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String depDate;
 
-    @Body
-    @NameInMap("dis_order_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dis_order_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String disOrderId;
 
-    @Body
-    @NameInMap("order_attr")
-    private java.util.Map < String, ? > orderAttr;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("order_attr")
+    private java.util.Map<String, ?> orderAttr;
 
-    @Body
-    @NameInMap("order_params")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("order_params")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String orderParams;
 
-    @Body
-    @NameInMap("ota_item_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ota_item_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String otaItemId;
 
-    @Body
-    @NameInMap("price")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("price")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long price;
 
-    @Body
-    @NameInMap("receipt_address")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("receipt_address")
     private String receiptAddress;
 
-    @Body
-    @NameInMap("receipt_target")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("receipt_target")
     private Integer receiptTarget;
 
-    @Body
-    @NameInMap("receipt_title")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("receipt_title")
     private String receiptTitle;
 
-    @Body
-    @NameInMap("traveler_info_list")
-    @Validation(required = true)
-    private java.util.List < TravelerInfoList> travelerInfoList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("traveler_info_list")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<TravelerInfoList> travelerInfoList;
 
-    @Body
-    @NameInMap("trip_type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("trip_type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer tripType;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private FlightCreateOrderRequest(Builder builder) {
@@ -213,7 +218,7 @@ public class FlightCreateOrderRequest extends Request {
     /**
      * @return orderAttr
      */
-    public java.util.Map < String, ? > getOrderAttr() {
+    public java.util.Map<String, ?> getOrderAttr() {
         return this.orderAttr;
     }
 
@@ -262,7 +267,7 @@ public class FlightCreateOrderRequest extends Request {
     /**
      * @return travelerInfoList
      */
-    public java.util.List < TravelerInfoList> getTravelerInfoList() {
+    public java.util.List<TravelerInfoList> getTravelerInfoList() {
         return this.travelerInfoList;
     }
 
@@ -291,14 +296,14 @@ public class FlightCreateOrderRequest extends Request {
         private String depCityCode; 
         private String depDate; 
         private String disOrderId; 
-        private java.util.Map < String, ? > orderAttr; 
+        private java.util.Map<String, ?> orderAttr; 
         private String orderParams; 
         private String otaItemId; 
         private Long price; 
         private String receiptAddress; 
         private Integer receiptTarget; 
         private String receiptTitle; 
-        private java.util.List < TravelerInfoList> travelerInfoList; 
+        private java.util.List<TravelerInfoList> travelerInfoList; 
         private Integer tripType; 
         private String xAcsBtripCorpToken; 
 
@@ -340,7 +345,10 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * arr_city_code.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HGH</p>
          */
         public Builder arrCityCode(String arrCityCode) {
             this.putBodyParameter("arr_city_code", arrCityCode);
@@ -367,7 +375,10 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * buyer_unique_key.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder buyerUniqueKey(String buyerUniqueKey) {
             this.putBodyParameter("buyer_unique_key", buyerUniqueKey);
@@ -376,7 +387,7 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * contact_info.
+         * <p>This parameter is required.</p>
          */
         public Builder contactInfo(ContactInfo contactInfo) {
             String contactInfoShrink = shrink(contactInfo, "contact_info", "json");
@@ -395,7 +406,10 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * dep_city_code.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BJS</p>
          */
         public Builder depCityCode(String depCityCode) {
             this.putBodyParameter("dep_city_code", depCityCode);
@@ -404,7 +418,10 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * dep_date.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000-00-00 00:00:00</p>
          */
         public Builder depDate(String depDate) {
             this.putBodyParameter("dep_date", depDate);
@@ -413,7 +430,10 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * dis_order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dis123</p>
          */
         public Builder disOrderId(String disOrderId) {
             this.putBodyParameter("dis_order_id", disOrderId);
@@ -424,7 +444,7 @@ public class FlightCreateOrderRequest extends Request {
         /**
          * order_attr.
          */
-        public Builder orderAttr(java.util.Map < String, ? > orderAttr) {
+        public Builder orderAttr(java.util.Map<String, ?> orderAttr) {
             String orderAttrShrink = shrink(orderAttr, "order_attr", "json");
             this.putBodyParameter("order_attr", orderAttrShrink);
             this.orderAttr = orderAttr;
@@ -432,7 +452,10 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * order_params.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000_1_0</p>
          */
         public Builder orderParams(String orderParams) {
             this.putBodyParameter("order_params", orderParams);
@@ -441,7 +464,10 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * ota_item_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7fb731deeb4510b86c17e8c8c25740_11</p>
          */
         public Builder otaItemId(String otaItemId) {
             this.putBodyParameter("ota_item_id", otaItemId);
@@ -450,7 +476,10 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * price.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder price(Long price) {
             this.putBodyParameter("price", price);
@@ -486,9 +515,9 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * traveler_info_list.
+         * <p>This parameter is required.</p>
          */
-        public Builder travelerInfoList(java.util.List < TravelerInfoList> travelerInfoList) {
+        public Builder travelerInfoList(java.util.List<TravelerInfoList> travelerInfoList) {
             String travelerInfoListShrink = shrink(travelerInfoList, "traveler_info_list", "json");
             this.putBodyParameter("traveler_info_list", travelerInfoListShrink);
             this.travelerInfoList = travelerInfoList;
@@ -496,7 +525,10 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
-         * trip_type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder tripType(Integer tripType) {
             this.putBodyParameter("trip_type", tripType);
@@ -520,16 +552,22 @@ public class FlightCreateOrderRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link FlightCreateOrderRequest} extends {@link TeaModel}
+     *
+     * <p>FlightCreateOrderRequest</p>
+     */
     public static class ContactInfo extends TeaModel {
-        @NameInMap("contact_email")
+        @com.aliyun.core.annotation.NameInMap("contact_email")
         private String contactEmail;
 
-        @NameInMap("contact_name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("contact_name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String contactName;
 
-        @NameInMap("contact_phone")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("contact_phone")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String contactPhone;
 
         private ContactInfo(Builder builder) {
@@ -581,7 +619,7 @@ public class FlightCreateOrderRequest extends Request {
             }
 
             /**
-             * contact_name.
+             * <p>This parameter is required.</p>
              */
             public Builder contactName(String contactName) {
                 this.contactName = contactName;
@@ -589,7 +627,10 @@ public class FlightCreateOrderRequest extends Request {
             }
 
             /**
-             * contact_phone.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12312345211</p>
              */
             public Builder contactPhone(String contactPhone) {
                 this.contactPhone = contactPhone;
@@ -603,47 +644,53 @@ public class FlightCreateOrderRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightCreateOrderRequest} extends {@link TeaModel}
+     *
+     * <p>FlightCreateOrderRequest</p>
+     */
     public static class TravelerInfoList extends TeaModel {
-        @NameInMap("birthday")
+        @com.aliyun.core.annotation.NameInMap("birthday")
         private String birthday;
 
-        @NameInMap("cert_nation")
+        @com.aliyun.core.annotation.NameInMap("cert_nation")
         private String certNation;
 
-        @NameInMap("cert_no")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("cert_no")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String certNo;
 
-        @NameInMap("cert_type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("cert_type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String certType;
 
-        @NameInMap("cert_valid_date")
+        @com.aliyun.core.annotation.NameInMap("cert_valid_date")
         private String certValidDate;
 
-        @NameInMap("name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
-        @NameInMap("nationality")
+        @com.aliyun.core.annotation.NameInMap("nationality")
         private String nationality;
 
-        @NameInMap("nationality_code")
+        @com.aliyun.core.annotation.NameInMap("nationality_code")
         private String nationalityCode;
 
-        @NameInMap("out_user_id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("out_user_id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String outUserId;
 
-        @NameInMap("phone")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("phone")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String phone;
 
-        @NameInMap("sex")
+        @com.aliyun.core.annotation.NameInMap("sex")
         private Integer sex;
 
-        @NameInMap("type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private TravelerInfoList(Builder builder) {
@@ -784,7 +831,10 @@ public class FlightCreateOrderRequest extends Request {
             }
 
             /**
-             * cert_no.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1262651555151</p>
              */
             public Builder certNo(String certNo) {
                 this.certNo = certNo;
@@ -792,7 +842,10 @@ public class FlightCreateOrderRequest extends Request {
             }
 
             /**
-             * cert_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder certType(String certType) {
                 this.certType = certType;
@@ -808,7 +861,7 @@ public class FlightCreateOrderRequest extends Request {
             }
 
             /**
-             * name.
+             * <p>This parameter is required.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -816,7 +869,10 @@ public class FlightCreateOrderRequest extends Request {
             }
 
             /**
-             * 国籍
+             * <p>国籍</p>
+             * 
+             * <strong>example:</strong>
+             * <p>中国大陆</p>
              */
             public Builder nationality(String nationality) {
                 this.nationality = nationality;
@@ -824,7 +880,10 @@ public class FlightCreateOrderRequest extends Request {
             }
 
             /**
-             * 国籍二字码
+             * <p>国籍二字码</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN</p>
              */
             public Builder nationalityCode(String nationalityCode) {
                 this.nationalityCode = nationalityCode;
@@ -832,7 +891,10 @@ public class FlightCreateOrderRequest extends Request {
             }
 
             /**
-             * out_user_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder outUserId(String outUserId) {
                 this.outUserId = outUserId;
@@ -840,7 +902,10 @@ public class FlightCreateOrderRequest extends Request {
             }
 
             /**
-             * phone.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12341231232</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -856,7 +921,10 @@ public class FlightCreateOrderRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(String type) {
                 this.type = type;

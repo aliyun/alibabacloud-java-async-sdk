@@ -1,96 +1,101 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FieldSchemaModel} extends {@link TeaModel}
  *
  * <p>FieldSchemaModel</p>
  */
 public class FieldSchemaModel extends TeaModel {
-    @NameInMap("AutoIncrement")
+    @com.aliyun.core.annotation.NameInMap("AutoIncrement")
     private Boolean autoIncrement;
 
-    @NameInMap("ColumnRawName")
+    @com.aliyun.core.annotation.NameInMap("ColumnRawName")
     private String columnRawName;
 
-    @NameInMap("Comment")
+    @com.aliyun.core.annotation.NameInMap("Comment")
     private String comment;
 
-    @NameInMap("CompressFloatUseShort")
+    @com.aliyun.core.annotation.NameInMap("CompressFloatUseShort")
     private Boolean compressFloatUseShort;
 
-    @NameInMap("Compression")
+    @com.aliyun.core.annotation.NameInMap("Compression")
     private String compression;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("DataType")
+    @com.aliyun.core.annotation.NameInMap("DataType")
     private String dataType;
 
-    @NameInMap("DatabaseName")
+    @com.aliyun.core.annotation.NameInMap("DatabaseName")
     private String databaseName;
 
-    @NameInMap("DefaultValue")
+    @com.aliyun.core.annotation.NameInMap("DefaultValue")
     private String defaultValue;
 
-    @NameInMap("Delimiter")
+    @com.aliyun.core.annotation.NameInMap("Delimiter")
     private String delimiter;
 
-    @NameInMap("Encode")
+    @com.aliyun.core.annotation.NameInMap("Encode")
     private String encode;
 
-    @NameInMap("IsPartitionKey")
+    @com.aliyun.core.annotation.NameInMap("IsPartitionKey")
     private Boolean isPartitionKey;
 
-    @NameInMap("MappedName")
+    @com.aliyun.core.annotation.NameInMap("MappedName")
     private String mappedName;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("Nullable")
+    @com.aliyun.core.annotation.NameInMap("Nullable")
     private Boolean nullable;
 
-    @NameInMap("OnUpdate")
+    @com.aliyun.core.annotation.NameInMap("OnUpdate")
     private String onUpdate;
 
-    @NameInMap("OrdinalPosition")
+    @com.aliyun.core.annotation.NameInMap("OrdinalPosition")
     private Long ordinalPosition;
 
-    @NameInMap("PhysicalColumnName")
+    @com.aliyun.core.annotation.NameInMap("PhysicalColumnName")
     private String physicalColumnName;
 
-    @NameInMap("PkPosition")
+    @com.aliyun.core.annotation.NameInMap("PkPosition")
     private Long pkPosition;
 
-    @NameInMap("Precision")
+    @com.aliyun.core.annotation.NameInMap("Precision")
     private Long precision;
 
-    @NameInMap("Primarykey")
+    @com.aliyun.core.annotation.NameInMap("Primarykey")
     private Boolean primarykey;
 
-    @NameInMap("Scale")
+    @com.aliyun.core.annotation.NameInMap("Scale")
     private Long scale;
 
-    @NameInMap("TableName")
+    @com.aliyun.core.annotation.NameInMap("TableName")
     private String tableName;
 
-    @NameInMap("Tokenizer")
+    @com.aliyun.core.annotation.NameInMap("Tokenizer")
     private String tokenizer;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @NameInMap("UpdateTime")
+    @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
-    @NameInMap("ValueType")
+    @com.aliyun.core.annotation.NameInMap("ValueType")
     private String valueType;
 
     private FieldSchemaModel(Builder builder) {

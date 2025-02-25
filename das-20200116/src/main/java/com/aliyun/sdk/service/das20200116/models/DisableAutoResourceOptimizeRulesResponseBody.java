@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisableAutoResourceOptimizeRulesResponseBody} extends {@link TeaModel}
  *
  * <p>DisableAutoResourceOptimizeRulesResponseBody</p>
  */
 public class DisableAutoResourceOptimizeRulesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DisableAutoResourceOptimizeRulesResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DisableAutoResourceOptimizeRulesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class DisableAutoResourceOptimizeRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,10 +110,13 @@ public class DisableAutoResourceOptimizeRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +124,10 @@ public class DisableAutoResourceOptimizeRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,11 +135,14 @@ public class DisableAutoResourceOptimizeRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,14 +155,20 @@ public class DisableAutoResourceOptimizeRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DisableAutoResourceOptimizeRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DisableAutoResourceOptimizeRulesResponseBody</p>
+     */
     public static class ConfigFailInstanceList extends TeaModel {
-        @NameInMap("ConfigSuccess")
+        @com.aliyun.core.annotation.NameInMap("ConfigSuccess")
         private Boolean configSuccess;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
         private ConfigFailInstanceList(Builder builder) {
@@ -189,12 +212,16 @@ public class DisableAutoResourceOptimizeRulesResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * Indicates whether the automatic tablespace fragment recycling feature is disabled. Valid values:
-             * <p>
+             * <p>Indicates whether the automatic tablespace fragment recycling feature is disabled. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong></p>
+             * </li>
+             * <li><p><strong>false</strong></p>
+             * </li>
+             * </ul>
              * 
-             * * **true**
-             * 
-             * * **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder configSuccess(Boolean configSuccess) {
                 this.configSuccess = configSuccess;
@@ -202,7 +229,10 @@ public class DisableAutoResourceOptimizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned if the request failed.
+             * <p>The error message returned if the request failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cannot found instance by rm-2ze9xrhze0709****</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -210,7 +240,10 @@ public class DisableAutoResourceOptimizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The database instance ID.
+             * <p>The database instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-2ze9xrhze0709****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -224,11 +257,17 @@ public class DisableAutoResourceOptimizeRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DisableAutoResourceOptimizeRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DisableAutoResourceOptimizeRulesResponseBody</p>
+     */
     public static class ConfigSuccessInstanceList extends TeaModel {
-        @NameInMap("ConfigSuccess")
+        @com.aliyun.core.annotation.NameInMap("ConfigSuccess")
         private Boolean configSuccess;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
         private ConfigSuccessInstanceList(Builder builder) {
@@ -263,12 +302,16 @@ public class DisableAutoResourceOptimizeRulesResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * Indicates whether the automatic tablespace fragment recycling feature is disabled. Valid values:
-             * <p>
+             * <p>Indicates whether the automatic tablespace fragment recycling feature is disabled. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong></p>
+             * </li>
+             * <li><p><strong>false</strong></p>
+             * </li>
+             * </ul>
              * 
-             * * **true**
-             * 
-             * * **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder configSuccess(Boolean configSuccess) {
                 this.configSuccess = configSuccess;
@@ -276,7 +319,10 @@ public class DisableAutoResourceOptimizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The database instance ID.
+             * <p>The database instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-2ze8g2am97624****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -290,20 +336,26 @@ public class DisableAutoResourceOptimizeRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DisableAutoResourceOptimizeRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DisableAutoResourceOptimizeRulesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ConfigFailInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("ConfigFailInstanceCount")
         private Long configFailInstanceCount;
 
-        @NameInMap("ConfigFailInstanceList")
-        private java.util.List < ConfigFailInstanceList> configFailInstanceList;
+        @com.aliyun.core.annotation.NameInMap("ConfigFailInstanceList")
+        private java.util.List<ConfigFailInstanceList> configFailInstanceList;
 
-        @NameInMap("ConfigSuccessInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("ConfigSuccessInstanceCount")
         private Long configSuccessInstanceCount;
 
-        @NameInMap("ConfigSuccessInstanceList")
-        private java.util.List < ConfigSuccessInstanceList> configSuccessInstanceList;
+        @com.aliyun.core.annotation.NameInMap("ConfigSuccessInstanceList")
+        private java.util.List<ConfigSuccessInstanceList> configSuccessInstanceList;
 
-        @NameInMap("TotalInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("TotalInstanceCount")
         private Long totalInstanceCount;
 
         private Data(Builder builder) {
@@ -332,7 +384,7 @@ public class DisableAutoResourceOptimizeRulesResponseBody extends TeaModel {
         /**
          * @return configFailInstanceList
          */
-        public java.util.List < ConfigFailInstanceList> getConfigFailInstanceList() {
+        public java.util.List<ConfigFailInstanceList> getConfigFailInstanceList() {
             return this.configFailInstanceList;
         }
 
@@ -346,7 +398,7 @@ public class DisableAutoResourceOptimizeRulesResponseBody extends TeaModel {
         /**
          * @return configSuccessInstanceList
          */
-        public java.util.List < ConfigSuccessInstanceList> getConfigSuccessInstanceList() {
+        public java.util.List<ConfigSuccessInstanceList> getConfigSuccessInstanceList() {
             return this.configSuccessInstanceList;
         }
 
@@ -359,13 +411,16 @@ public class DisableAutoResourceOptimizeRulesResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long configFailInstanceCount; 
-            private java.util.List < ConfigFailInstanceList> configFailInstanceList; 
+            private java.util.List<ConfigFailInstanceList> configFailInstanceList; 
             private Long configSuccessInstanceCount; 
-            private java.util.List < ConfigSuccessInstanceList> configSuccessInstanceList; 
+            private java.util.List<ConfigSuccessInstanceList> configSuccessInstanceList; 
             private Long totalInstanceCount; 
 
             /**
-             * The number of database instances for which the automatic tablespace fragment recycling feature failed to be disabled.
+             * <p>The number of database instances for which the automatic tablespace fragment recycling feature failed to be disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder configFailInstanceCount(Long configFailInstanceCount) {
                 this.configFailInstanceCount = configFailInstanceCount;
@@ -373,15 +428,18 @@ public class DisableAutoResourceOptimizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The list of database instances for which the automatic tablespace fragment recycling feature failed to be disabled.
+             * <p>The list of database instances for which the automatic tablespace fragment recycling feature failed to be disabled.</p>
              */
-            public Builder configFailInstanceList(java.util.List < ConfigFailInstanceList> configFailInstanceList) {
+            public Builder configFailInstanceList(java.util.List<ConfigFailInstanceList> configFailInstanceList) {
                 this.configFailInstanceList = configFailInstanceList;
                 return this;
             }
 
             /**
-             * The number of database instances for which the automatic tablespace fragment recycling feature is disabled.
+             * <p>The number of database instances for which the automatic tablespace fragment recycling feature is disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder configSuccessInstanceCount(Long configSuccessInstanceCount) {
                 this.configSuccessInstanceCount = configSuccessInstanceCount;
@@ -389,15 +447,18 @@ public class DisableAutoResourceOptimizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The list of database instances for which the automatic tablespace fragment recycling feature is disabled.
+             * <p>The list of database instances for which the automatic tablespace fragment recycling feature is disabled.</p>
              */
-            public Builder configSuccessInstanceList(java.util.List < ConfigSuccessInstanceList> configSuccessInstanceList) {
+            public Builder configSuccessInstanceList(java.util.List<ConfigSuccessInstanceList> configSuccessInstanceList) {
                 this.configSuccessInstanceList = configSuccessInstanceList;
                 return this;
             }
 
             /**
-             * The total number of database instances.
+             * <p>The total number of database instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalInstanceCount(Long totalInstanceCount) {
                 this.totalInstanceCount = totalInstanceCount;

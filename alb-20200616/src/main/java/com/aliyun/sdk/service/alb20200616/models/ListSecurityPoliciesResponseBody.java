@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSecurityPoliciesResponseBody} extends {@link TeaModel}
  *
  * <p>ListSecurityPoliciesResponseBody</p>
  */
 public class ListSecurityPoliciesResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecurityPolicies")
-    private java.util.List < SecurityPolicies> securityPolicies;
+    @com.aliyun.core.annotation.NameInMap("SecurityPolicies")
+    private java.util.List<SecurityPolicies> securityPolicies;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListSecurityPoliciesResponseBody(Builder builder) {
@@ -67,7 +72,7 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
     /**
      * @return securityPolicies
      */
-    public java.util.List < SecurityPolicies> getSecurityPolicies() {
+    public java.util.List<SecurityPolicies> getSecurityPolicies() {
         return this.securityPolicies;
     }
 
@@ -82,11 +87,14 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < SecurityPolicies> securityPolicies; 
+        private java.util.List<SecurityPolicies> securityPolicies; 
         private Integer totalCount; 
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,11 +102,14 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value is returned for <strong>NextToken</strong>, the value is the token that determines the start point of the next query.</li>
+         * </ul>
          * 
-         * *   If **NextToken** is empty, no next page exists.
-         * *   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -106,7 +117,10 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>593B0448-D13E-4C56-AC0D-FDF0FDE0E9A3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -114,15 +128,18 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The supported security policies.
+         * <p>The supported security policies.</p>
          */
-        public Builder securityPolicies(java.util.List < SecurityPolicies> securityPolicies) {
+        public Builder securityPolicies(java.util.List<SecurityPolicies> securityPolicies) {
             this.securityPolicies = securityPolicies;
             return this;
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -135,11 +152,17 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSecurityPoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSecurityPoliciesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -174,7 +197,10 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -182,7 +208,10 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value. The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>product</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -196,30 +225,36 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSecurityPoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSecurityPoliciesResponseBody</p>
+     */
     public static class SecurityPolicies extends TeaModel {
-        @NameInMap("Ciphers")
-        private java.util.List < String > ciphers;
+        @com.aliyun.core.annotation.NameInMap("Ciphers")
+        private java.util.List<String> ciphers;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SecurityPolicyId")
+        @com.aliyun.core.annotation.NameInMap("SecurityPolicyId")
         private String securityPolicyId;
 
-        @NameInMap("SecurityPolicyName")
+        @com.aliyun.core.annotation.NameInMap("SecurityPolicyName")
         private String securityPolicyName;
 
-        @NameInMap("SecurityPolicyStatus")
+        @com.aliyun.core.annotation.NameInMap("SecurityPolicyStatus")
         private String securityPolicyStatus;
 
-        @NameInMap("TLSVersions")
-        private java.util.List < String > TLSVersions;
+        @com.aliyun.core.annotation.NameInMap("TLSVersions")
+        private java.util.List<String> TLSVersions;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
         private SecurityPolicies(Builder builder) {
             this.ciphers = builder.ciphers;
@@ -243,7 +278,7 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
         /**
          * @return ciphers
          */
-        public java.util.List < String > getCiphers() {
+        public java.util.List<String> getCiphers() {
             return this.ciphers;
         }
 
@@ -285,37 +320,40 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
         /**
          * @return TLSVersions
          */
-        public java.util.List < String > getTLSVersions() {
+        public java.util.List<String> getTLSVersions() {
             return this.TLSVersions;
         }
 
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
         public static final class Builder {
-            private java.util.List < String > ciphers; 
+            private java.util.List<String> ciphers; 
             private String createTime; 
             private String resourceGroupId; 
             private String securityPolicyId; 
             private String securityPolicyName; 
             private String securityPolicyStatus; 
-            private java.util.List < String > TLSVersions; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<String> TLSVersions; 
+            private java.util.List<Tags> tags; 
 
             /**
-             * The supported cipher suites.
+             * <p>The supported cipher suites.</p>
              */
-            public Builder ciphers(java.util.List < String > ciphers) {
+            public Builder ciphers(java.util.List<String> ciphers) {
                 this.ciphers = ciphers;
                 return this;
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the ACL was created. The time follows the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-02-15T07:37:33Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -323,7 +361,10 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The resource group ID.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-atstuj3rtop****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -331,7 +372,10 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The security policy ID.
+             * <p>The ID of the security policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-atstuj3rtop****</p>
              */
             public Builder securityPolicyId(String securityPolicyId) {
                 this.securityPolicyId = securityPolicyId;
@@ -339,7 +383,10 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the security policy.
+             * <p>The name of the security policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-secrity</p>
              */
             public Builder securityPolicyName(String securityPolicyName) {
                 this.securityPolicyName = securityPolicyName;
@@ -347,11 +394,14 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the security policy. Valid values:
-             * <p>
+             * <p>The status of the security policy. Valid values:</p>
+             * <ul>
+             * <li><strong>Configuring</strong></li>
+             * <li><strong>Available</strong></li>
+             * </ul>
              * 
-             * *   **Configuring**
-             * *   **Available**
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder securityPolicyStatus(String securityPolicyStatus) {
                 this.securityPolicyStatus = securityPolicyStatus;
@@ -359,17 +409,17 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The supported TLS protocol versions.
+             * <p>The supported TLS protocol versions.</p>
              */
-            public Builder TLSVersions(java.util.List < String > TLSVersions) {
+            public Builder TLSVersions(java.util.List<String> TLSVersions) {
                 this.TLSVersions = TLSVersions;
                 return this;
             }
 
             /**
-             * Tags.
+             * <p>The tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

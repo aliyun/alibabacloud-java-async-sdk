@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OnsGroupListResponseBody} extends {@link TeaModel}
  *
  * <p>OnsGroupListResponseBody</p>
  */
 public class OnsGroupListResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private OnsGroupListResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class OnsGroupListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned list of subscriptions.
+         * <p>The returned list of subscriptions.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,10 @@ public class OnsGroupListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.
+         * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16996623-AC4A-43AF-9248-FD9D2D75****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +74,17 @@ public class OnsGroupListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link OnsGroupListResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsGroupListResponseBody</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -110,7 +119,10 @@ public class OnsGroupListResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag that is attached to the consumer group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CartService</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -118,7 +130,10 @@ public class OnsGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag that is attached to the consumer group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ServiceA</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -132,8 +147,14 @@ public class OnsGroupListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OnsGroupListResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsGroupListResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -173,32 +194,38 @@ public class OnsGroupListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OnsGroupListResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsGroupListResponseBody</p>
+     */
     public static class SubscribeInfoDo extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupType")
+        @com.aliyun.core.annotation.NameInMap("GroupType")
         private String groupType;
 
-        @NameInMap("IndependentNaming")
+        @com.aliyun.core.annotation.NameInMap("IndependentNaming")
         private Boolean independentNaming;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private SubscribeInfoDo(Builder builder) {
@@ -296,7 +323,10 @@ public class OnsGroupListResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * The time when the group was created.
+             * <p>The point in time when the consumer group was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1568896605000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -304,7 +334,10 @@ public class OnsGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the consumer group.
+             * <p>The ID of the consumer group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GID_test_group_id</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -312,11 +345,14 @@ public class OnsGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol over which the queried consumer groups consume messages. All clients in a consumer group communicate with the Message Queue for Apache RocketMQ broker over the same protocol. A consumer group cannot contain TCP clients and HTTP clients at the same time. You must create different consumer groups for TCP clients and HTTP clients. Valid values:
-             * <p>
+             * <p>The protocol over which the queried consumer group publishes and subscribes to messages. All clients in a consumer group communicate with the ApsaraMQ for RocketMQ broker over the same protocol. You must create different consumer groups for TCP clients and HTTP clients. Valid values:</p>
+             * <ul>
+             * <li><strong>tcp</strong>: indicates that the consumer group publishes and subscribes to messages over TCP.</li>
+             * <li><strong>http</strong>: indicates that the consumer group publishes and subscribes to messages over HTTP.</li>
+             * </ul>
              * 
-             * *   **tcp**: indicates that the consumer group consumes messages over TCP.
-             * *   **http**: indicates that the consumer group consumes messages over HTTP.
+             * <strong>example:</strong>
+             * <p>tcp</p>
              */
             public Builder groupType(String groupType) {
                 this.groupType = groupType;
@@ -324,11 +360,14 @@ public class OnsGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instance uses a namespace. Valid values:
-             * <p>
+             * <p>Indicates whether the instance uses a namespace. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The instance uses a separate namespace. The name of each resource must be unique in the instance. The names of resources in different instances can be the same.</li>
+             * <li><strong>false</strong>: The instance does not use a separate namespace. The name of each resource must be globally unique within the instance and across all instances.</li>
+             * </ul>
              * 
-             * *   **true**: The instance uses a separate namespace. The name of each resource must be unique in the instance. The names of resources in different instances can be the same.
-             * *   **false**: The instance does not use a separate namespace. The name of each resource must be globally unique within and across all instances.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder independentNaming(Boolean independentNaming) {
                 this.independentNaming = independentNaming;
@@ -336,7 +375,10 @@ public class OnsGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MQ_INST_111111111111_DOxxxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -344,7 +386,10 @@ public class OnsGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user who created the consumer group.
+             * <p>The Alibaba Cloud account ID of the user who created the consumer group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>138015630679****</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -352,7 +397,10 @@ public class OnsGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the consumer group.
+             * <p>The description of the consumer group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -360,7 +408,7 @@ public class OnsGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * The tags that are attached to the consumer group.
+             * <p>The tags that are attached to the consumer group.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -368,7 +416,10 @@ public class OnsGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the group ID was updated.
+             * <p>The most recent point in time when the consumer group was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1570700979000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -382,8 +433,14 @@ public class OnsGroupListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OnsGroupListResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsGroupListResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("SubscribeInfoDo")
+        @com.aliyun.core.annotation.NameInMap("SubscribeInfoDo")
         private java.util.List < SubscribeInfoDo> subscribeInfoDo;
 
         private Data(Builder builder) {

@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageCriteriaRequest} extends {@link RequestModel}
  *
  * <p>DescribeImageCriteriaRequest</p>
  */
 public class DescribeImageCriteriaRequest extends Request {
-    @Query
-    @NameInMap("Value")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Value")
     private String value;
 
     private DescribeImageCriteriaRequest(Builder builder) {
@@ -54,10 +59,13 @@ public class DescribeImageCriteriaRequest extends Request {
         } 
 
         /**
-         * The keyword that you specify for fuzzy search when you query the image.
-         * <p>
+         * <p>The keyword that you specify for fuzzy search when you query the image.</p>
+         * <blockquote>
+         * <p>The value of this parameter can be an image ID, image tag, image instance ID, image repository name, image repository ID, image repository namespace, image region, image digest, or image repository type.</p>
+         * </blockquote>
          * 
-         * > The value of this parameter can be an image ID, image tag, image instance ID, image repository name, image repository ID, image repository namespace, image region, image digest, or image repository type.
+         * <strong>example:</strong>
+         * <p>525</p>
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

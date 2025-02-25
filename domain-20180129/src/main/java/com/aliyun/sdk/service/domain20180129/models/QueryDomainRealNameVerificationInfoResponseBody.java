@@ -1,39 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDomainRealNameVerificationInfoResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDomainRealNameVerificationInfoResponseBody</p>
  */
 public class QueryDomainRealNameVerificationInfoResponseBody extends TeaModel {
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("IdentityCredential")
+    @com.aliyun.core.annotation.NameInMap("IdentityCredential")
     private String identityCredential;
 
-    @NameInMap("IdentityCredentialNo")
+    @com.aliyun.core.annotation.NameInMap("IdentityCredentialNo")
     private String identityCredentialNo;
 
-    @NameInMap("IdentityCredentialType")
+    @com.aliyun.core.annotation.NameInMap("IdentityCredentialType")
     private String identityCredentialType;
 
-    @NameInMap("IdentityCredentialUrl")
+    @com.aliyun.core.annotation.NameInMap("IdentityCredentialUrl")
     private String identityCredentialUrl;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubmissionDate")
+    @com.aliyun.core.annotation.NameInMap("SubmissionDate")
     private String submissionDate;
 
     private QueryDomainRealNameVerificationInfoResponseBody(Builder builder) {

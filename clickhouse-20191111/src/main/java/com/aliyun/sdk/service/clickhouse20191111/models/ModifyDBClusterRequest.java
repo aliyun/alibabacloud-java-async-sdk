@@ -1,56 +1,68 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBClusterRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBClusterRequest</p>
  */
 public class ModifyDBClusterRequest extends Request {
-    @Query
-    @NameInMap("DBClusterClass")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterClass")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterClass;
 
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @Query
-    @NameInMap("DBNodeGroupCount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBNodeGroupCount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBNodeGroupCount;
 
-    @Query
-    @NameInMap("DBNodeStorage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBNodeStorage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBNodeStorage;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbNodeStorageType")
+    private String dbNodeStorageType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisableWriteWindows")
+    private String disableWriteWindows;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyDBClusterRequest(Builder builder) {
@@ -59,6 +71,8 @@ public class ModifyDBClusterRequest extends Request {
         this.DBClusterId = builder.DBClusterId;
         this.DBNodeGroupCount = builder.DBNodeGroupCount;
         this.DBNodeStorage = builder.DBNodeStorage;
+        this.dbNodeStorageType = builder.dbNodeStorageType;
+        this.disableWriteWindows = builder.disableWriteWindows;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -108,6 +122,20 @@ public class ModifyDBClusterRequest extends Request {
     }
 
     /**
+     * @return dbNodeStorageType
+     */
+    public String getDbNodeStorageType() {
+        return this.dbNodeStorageType;
+    }
+
+    /**
+     * @return disableWriteWindows
+     */
+    public String getDisableWriteWindows() {
+        return this.disableWriteWindows;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -147,6 +175,8 @@ public class ModifyDBClusterRequest extends Request {
         private String DBClusterId; 
         private String DBNodeGroupCount; 
         private String DBNodeStorage; 
+        private String dbNodeStorageType; 
+        private String disableWriteWindows; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -163,6 +193,8 @@ public class ModifyDBClusterRequest extends Request {
             this.DBClusterId = request.DBClusterId;
             this.DBNodeGroupCount = request.DBNodeGroupCount;
             this.DBNodeStorage = request.DBNodeStorage;
+            this.dbNodeStorageType = request.dbNodeStorageType;
+            this.disableWriteWindows = request.disableWriteWindows;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -171,7 +203,33 @@ public class ModifyDBClusterRequest extends Request {
         } 
 
         /**
-         * DBClusterClass.
+         * <p>The specifications of the cluster.</p>
+         * <ul>
+         * <li><p>Valid values when the cluster is of Single-replica Edition:</p>
+         * <ul>
+         * <li><strong>S4-NEW</strong></li>
+         * <li><strong>S8</strong></li>
+         * <li><strong>S16</strong></li>
+         * <li><strong>S32</strong></li>
+         * <li><strong>S64</strong></li>
+         * <li><strong>S104</strong></li>
+         * </ul>
+         * </li>
+         * <li><p>Valid values when the cluster is of Double-replica Edition:</p>
+         * <ul>
+         * <li><strong>C4-NEW</strong></li>
+         * <li><strong>C8</strong></li>
+         * <li><strong>C16</strong></li>
+         * <li><strong>C32</strong></li>
+         * <li><strong>C64</strong></li>
+         * <li><strong>C104</strong></li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S4-NEW</p>
          */
         public Builder DBClusterClass(String DBClusterClass) {
             this.putQueryParameter("DBClusterClass", DBClusterClass);
@@ -180,7 +238,10 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp19lo45sy98x****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -189,7 +250,15 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * DBNodeGroupCount.
+         * <p>The number of nodes in the cluster.</p>
+         * <ul>
+         * <li>If the cluster is of Single-replica Edition, the value must be an integer that ranges from 1 to 48.</li>
+         * <li>If the cluster is of Double-replica Edition, the value must be an integer that ranges from 1 to 24.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder DBNodeGroupCount(String DBNodeGroupCount) {
             this.putQueryParameter("DBNodeGroupCount", DBNodeGroupCount);
@@ -198,11 +267,37 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * DBNodeStorage.
+         * <p>The storage capacity of a single node of the cluster. Unit: GB.</p>
+         * <p>Valid values: 100 to 32000.</p>
+         * <blockquote>
+         * <p> This value is a multiple of 100.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder DBNodeStorage(String DBNodeStorage) {
             this.putQueryParameter("DBNodeStorage", DBNodeStorage);
             this.DBNodeStorage = DBNodeStorage;
+            return this;
+        }
+
+        /**
+         * DbNodeStorageType.
+         */
+        public Builder dbNodeStorageType(String dbNodeStorageType) {
+            this.putQueryParameter("DbNodeStorageType", dbNodeStorageType);
+            this.dbNodeStorageType = dbNodeStorageType;
+            return this;
+        }
+
+        /**
+         * DisableWriteWindows.
+         */
+        public Builder disableWriteWindows(String disableWriteWindows) {
+            this.putQueryParameter("DisableWriteWindows", disableWriteWindows);
+            this.disableWriteWindows = disableWriteWindows;
             return this;
         }
 
@@ -225,7 +320,11 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

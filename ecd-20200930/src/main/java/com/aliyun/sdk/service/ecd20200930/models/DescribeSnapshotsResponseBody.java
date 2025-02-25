@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSnapshotsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSnapshotsResponseBody</p>
  */
 public class DescribeSnapshotsResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Snapshots")
-    private java.util.List < Snapshots> snapshots;
+    @com.aliyun.core.annotation.NameInMap("Snapshots")
+    private java.util.List<Snapshots> snapshots;
 
     private DescribeSnapshotsResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -52,17 +57,20 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     /**
      * @return snapshots
      */
-    public java.util.List < Snapshots> getSnapshots() {
+    public java.util.List<Snapshots> getSnapshots() {
         return this.snapshots;
     }
 
     public static final class Builder {
         private String nextToken; 
         private String requestId; 
-        private java.util.List < Snapshots> snapshots; 
+        private java.util.List<Snapshots> snapshots; 
 
         /**
-         * If the NextToken parameter is empty, no next page exists.
+         * <p>If the NextToken parameter is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +78,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51592A88-0F2C-55E6-AD2C-2AD9C10D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,9 +89,9 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * The queried snapshots.
+         * <p>Details of the queried snapshots.</p>
          */
-        public Builder snapshots(java.util.List < Snapshots> snapshots) {
+        public Builder snapshots(java.util.List<Snapshots> snapshots) {
             this.snapshots = snapshots;
             return this;
         }
@@ -91,59 +102,71 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSnapshotsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSnapshotsResponseBody</p>
+     */
     public static class Snapshots extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Creator")
+        @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
 
-        @NameInMap("DeletionTime")
+        @com.aliyun.core.annotation.NameInMap("DeletionTime")
         private String deletionTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DesktopId")
+        @com.aliyun.core.annotation.NameInMap("DesktopId")
         private String desktopId;
 
-        @NameInMap("DesktopName")
+        @com.aliyun.core.annotation.NameInMap("DesktopName")
         private String desktopName;
 
-        @NameInMap("DesktopStatus")
+        @com.aliyun.core.annotation.NameInMap("DesktopStatus")
         private String desktopStatus;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("ProtocolType")
+        @com.aliyun.core.annotation.NameInMap("ProtocolType")
         private String protocolType;
 
-        @NameInMap("RemainTime")
+        @com.aliyun.core.annotation.NameInMap("RemainTime")
         private Integer remainTime;
 
-        @NameInMap("SnapshotId")
+        @com.aliyun.core.annotation.NameInMap("RestorePointId")
+        private String restorePointId;
+
+        @com.aliyun.core.annotation.NameInMap("RestorePointName")
+        private String restorePointName;
+
+        @com.aliyun.core.annotation.NameInMap("SnapshotId")
         private String snapshotId;
 
-        @NameInMap("SnapshotName")
+        @com.aliyun.core.annotation.NameInMap("SnapshotName")
         private String snapshotName;
 
-        @NameInMap("SnapshotType")
+        @com.aliyun.core.annotation.NameInMap("SnapshotType")
         private String snapshotType;
 
-        @NameInMap("SourceDiskSize")
+        @com.aliyun.core.annotation.NameInMap("SourceDiskSize")
         private String sourceDiskSize;
 
-        @NameInMap("SourceDiskType")
+        @com.aliyun.core.annotation.NameInMap("SourceDiskType")
         private String sourceDiskType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("VolumeEncryptionEnabled")
+        @com.aliyun.core.annotation.NameInMap("VolumeEncryptionEnabled")
         private Boolean volumeEncryptionEnabled;
 
-        @NameInMap("VolumeEncryptionKey")
+        @com.aliyun.core.annotation.NameInMap("VolumeEncryptionKey")
         private String volumeEncryptionKey;
 
         private Snapshots(Builder builder) {
@@ -157,6 +180,8 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             this.progress = builder.progress;
             this.protocolType = builder.protocolType;
             this.remainTime = builder.remainTime;
+            this.restorePointId = builder.restorePointId;
+            this.restorePointName = builder.restorePointName;
             this.snapshotId = builder.snapshotId;
             this.snapshotName = builder.snapshotName;
             this.snapshotType = builder.snapshotType;
@@ -246,6 +271,20 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
+         * @return restorePointId
+         */
+        public String getRestorePointId() {
+            return this.restorePointId;
+        }
+
+        /**
+         * @return restorePointName
+         */
+        public String getRestorePointName() {
+            return this.restorePointName;
+        }
+
+        /**
          * @return snapshotId
          */
         public String getSnapshotId() {
@@ -312,6 +351,8 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             private String progress; 
             private String protocolType; 
             private Integer remainTime; 
+            private String restorePointId; 
+            private String restorePointName; 
             private String snapshotId; 
             private String snapshotName; 
             private String snapshotType; 
@@ -322,7 +363,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             private String volumeEncryptionKey; 
 
             /**
-             * The time when the snapshot was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The point in time at which the snapshot was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-mm-ddthh:mm:ssz</code> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-20T14:52:28Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -330,7 +374,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The user that creates the cloud desktop.
+             * <p>The user who creates the snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Administrator</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -338,7 +385,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the snapshot was deleted. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-mm-ddthh:mm:ssz format. The time is displayed in UTC.
+             * <p>The time when the snapshot was deleted. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-mm-ddthh:mm:ssz</code> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-20T14:52:28Z</p>
              */
             public Builder deletionTime(String deletionTime) {
                 this.deletionTime = deletionTime;
@@ -346,7 +396,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The snapshot description.
+             * <p>The description of the snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testDescription</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -354,7 +407,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cloud desktop to which the snapshot belongs.
+             * <p>The ID of the cloud computer to which the snapshot belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-g03l3tlm8djoj****</p>
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -362,7 +418,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The cloud desktop name.
+             * <p>The name of the cloud computer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -370,17 +429,21 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The cloud desktop state. Valid values:
-             * <p>
+             * <p>The status of the cloud computer.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Stopped</li>
+             * <li>Starting</li>
+             * <li>Rebuilding</li>
+             * <li>Running</li>
+             * <li>Stopping</li>
+             * <li>Expired</li>
+             * <li>Deleted</li>
+             * <li>Pending</li>
+             * </ul>
              * 
-             * *   Pending: The cloud desktop is pending.
-             * *   Starting: The cloud desktop is being started.
-             * *   Running: The cloud desktop is running.
-             * *   Stopping: The cloud desktop is being stopped.
-             * *   Rebuilding: The cloud desktop is being recreated.
-             * *   Stopped: The cloud desktop is stopped.
-             * *   Expired: The cloud desktop expired.
-             * *   Deleted: The cloud desktop is deleted.
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder desktopStatus(String desktopStatus) {
                 this.desktopStatus = desktopStatus;
@@ -388,7 +451,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of creating the snapshot. Unit: percentage (%).
+             * <p>The progress of creating the snapshot. Unit: %.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100%</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -396,11 +462,26 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol. Valid values:
-             * <p>
+             * <p>The protocol type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>HDX: High-definition Experience (HDX) protocol</p>
+             * <!-- -->
              * 
-             * *   ASP
-             * *   HDX
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>ASP: in-house Adaptive Streaming Protocol (ASP)</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- --></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ASP</p>
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -408,10 +489,13 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The remaining time required to create the snapshot. Unit: seconds.
-             * <p>
+             * <p>The remaining time that is required to complete the snapshot creation. Unit: seconds.</p>
+             * <blockquote>
+             * <p> When the <code>Status</code> value is <code>PROGRESSING</code>, the <code>RemainTime</code> value is <code>-1</code>. A value of -1 indicates that the system is calculating the remaining time.</p>
+             * </blockquote>
              * 
-             * > If the value of the `Status` parameter is `PROGRESSING` and the value of the `RemainTime` parameter is `-1`, the system is calculating the remaining time required to create the snapshot.
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder remainTime(Integer remainTime) {
                 this.remainTime = remainTime;
@@ -419,7 +503,26 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The snapshot ID.
+             * RestorePointId.
+             */
+            public Builder restorePointId(String restorePointId) {
+                this.restorePointId = restorePointId;
+                return this;
+            }
+
+            /**
+             * RestorePointName.
+             */
+            public Builder restorePointName(String restorePointName) {
+                this.restorePointName = restorePointName;
+                return this;
+            }
+
+            /**
+             * <p>The snapshot ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s-2zeipxmnhej803x7****</p>
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -427,7 +530,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The snapshot name.
+             * <p>The name of the snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testSnapshotName</p>
              */
             public Builder snapshotName(String snapshotName) {
                 this.snapshotName = snapshotName;
@@ -435,11 +541,26 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The snapshot type. Valid values:
-             * <p>
+             * <p>The type of the snapshot.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>AUTO: automatic snapshot</p>
+             * <!-- -->
              * 
-             * *   AUTO: automatic snapshot
-             * *   USER: manual snapshot
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>USER: manual snapshot</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- --></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>USER</p>
              */
             public Builder snapshotType(String snapshotType) {
                 this.snapshotType = snapshotType;
@@ -447,7 +568,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the source disk. Unit: GiB.
+             * <p>The capacity of the source disk. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>150</p>
              */
             public Builder sourceDiskSize(String sourceDiskSize) {
                 this.sourceDiskSize = sourceDiskSize;
@@ -455,11 +579,26 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the source disk. Valid values:
-             * <p>
+             * <p>The type of the source disk.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>SYSTEM: system disk</p>
+             * <!-- -->
              * 
-             * *   SYSTEM: system disk
-             * *   DATA: data disk
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>DATA: data disk</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- --></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEM</p>
              */
             public Builder sourceDiskType(String sourceDiskType) {
                 this.sourceDiskType = sourceDiskType;
@@ -467,12 +606,33 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the snapshot. Valid values:
-             * <p>
+             * <p>The status of the snapshot.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>PROGRESSING: The snapshot is being created.</p>
+             * <!-- -->
              * 
-             * *   PROGRESSING: The snapshot is being created.
-             * *   FAILED: The snapshot failed to be created.
-             * *   ACCOMPLISHED: The snapshot is created.
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>FAILED: The snapshot fails to be created.</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>ACCOMPLISHED: The snapshot is created.</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- --></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ACCOMPLISHED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -480,7 +640,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether disk encryption is enabled.
+             * <p>Indicates whether disk encryption is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder volumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
                 this.volumeEncryptionEnabled = volumeEncryptionEnabled;
@@ -488,7 +651,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to obtain a list of KMS keys.
+             * <p>The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> operation to query the list of KMS keys.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d4****</p>
              */
             public Builder volumeEncryptionKey(String volumeEncryptionKey) {
                 this.volumeEncryptionKey = volumeEncryptionKey;

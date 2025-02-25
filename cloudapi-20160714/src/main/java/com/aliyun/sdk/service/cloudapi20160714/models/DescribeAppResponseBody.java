@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAppResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAppResponseBody</p>
  */
 public class DescribeAppResponseBody extends TeaModel {
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private Long appId;
 
-    @NameInMap("AppName")
+    @com.aliyun.core.annotation.NameInMap("AppName")
     private String appName;
 
-    @NameInMap("CreatedTime")
+    @com.aliyun.core.annotation.NameInMap("CreatedTime")
     private String createdTime;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("Extend")
+    @com.aliyun.core.annotation.NameInMap("Extend")
     private String extend;
 
-    @NameInMap("ModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("ModifiedTime")
     private String modifiedTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAppResponseBody(Builder builder) {
@@ -110,7 +115,10 @@ public class DescribeAppResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the app.
+         * <p>The ID of the app.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110843374</p>
          */
         public Builder appId(Long appId) {
             this.appId = appId;
@@ -118,7 +126,10 @@ public class DescribeAppResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the app.
+         * <p>The name of the app.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateApptest</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -126,7 +137,10 @@ public class DescribeAppResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the app was created.
+         * <p>The time when the app was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-01-29T09:33:01Z</p>
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -134,7 +148,10 @@ public class DescribeAppResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the app.
+         * <p>The description of the app.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Estimated on October 15, 2021 at 10:20:27</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -142,7 +159,10 @@ public class DescribeAppResponseBody extends TeaModel {
         }
 
         /**
-         * The extended information.
+         * <p>扩展信息</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110243810311</p>
          */
         public Builder extend(String extend) {
             this.extend = extend;
@@ -150,7 +170,10 @@ public class DescribeAppResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the app was modified.
+         * <p>The time when the app was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-01-29T09:33:01Z</p>
          */
         public Builder modifiedTime(String modifiedTime) {
             this.modifiedTime = modifiedTime;
@@ -158,7 +181,10 @@ public class DescribeAppResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DBDB3B0F-EC61-5F33-88AD-EC2446FA1DDB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

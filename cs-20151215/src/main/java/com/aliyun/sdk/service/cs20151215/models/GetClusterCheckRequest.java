@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetClusterCheckRequest} extends {@link RequestModel}
  *
  * <p>GetClusterCheckRequest</p>
  */
 public class GetClusterCheckRequest extends Request {
-    @Path
-    @NameInMap("cluster_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("cluster_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("check_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("check_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String checkId;
 
     private GetClusterCheckRequest(Builder builder) {
@@ -70,7 +75,11 @@ public class GetClusterCheckRequest extends Request {
         } 
 
         /**
-         * cluster_id.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ce0da5a1d627e4e9e9f96cae8ad07****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -79,7 +88,11 @@ public class GetClusterCheckRequest extends Request {
         }
 
         /**
-         * check_id.
+         * <p>The ID of the cluster check task. You can call the <a href="https://help.aliyun.com/document_detail/2667902.html">RunClusterCheck</a> operation to obtain the check_id.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1697100584236600453-ce0da5a1d627e4e9e9f96cae8ad07****-clustercheck-lboto</p>
          */
         public Builder checkId(String checkId) {
             this.putPathParameter("check_id", checkId);

@@ -1,59 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMetricRuleBlackListRequest} extends {@link RequestModel}
  *
  * <p>CreateMetricRuleBlackListRequest</p>
  */
 public class CreateMetricRuleBlackListRequest extends Request {
-    @Query
-    @NameInMap("Category")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Category")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String category;
 
-    @Query
-    @NameInMap("EffectiveTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveTime")
     private String effectiveTime;
 
-    @Query
-    @NameInMap("EnableEndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableEndTime")
     private String enableEndTime;
 
-    @Query
-    @NameInMap("EnableStartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableStartTime")
     private String enableStartTime;
 
-    @Query
-    @NameInMap("Instances")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Instances")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > instances;
 
-    @Query
-    @NameInMap("Metrics")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Metrics")
     private java.util.List < Metrics> metrics;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @Query
-    @NameInMap("ScopeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScopeType")
     private String scopeType;
 
-    @Query
-    @NameInMap("ScopeValue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScopeValue")
     private String scopeValue;
 
     private CreateMetricRuleBlackListRequest(Builder builder) {
@@ -184,7 +184,11 @@ public class CreateMetricRuleBlackListRequest extends Request {
         } 
 
         /**
-         * The category of the cloud service. For example, ApsaraDB for Redis includes the following categories: ApsaraDB for Redis (standard architecture), ApsaraDB for Redis (cluster architecture), and ApsaraDB for Redis (read/write splitting architecture). In this case, the valid values of this parameter for ApsaraDB for Redis include `kvstore_standard`, `kvstore_sharding`, and `kvstore_splitrw`.
+         * <p>The category of the cloud service. For example, ApsaraDB for Redis includes the following categories: ApsaraDB for Redis (standard architecture), ApsaraDB for Redis (cluster architecture), and ApsaraDB for Redis (read/write splitting architecture). In this case, the valid values of this parameter for ApsaraDB for Redis include <code>kvstore_standard</code>, <code>kvstore_sharding</code>, and <code>kvstore_splitrw</code>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -193,15 +197,20 @@ public class CreateMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * The time range within which the blacklist policy is effective.
-         * <p>
+         * <p>The time range within which the blacklist policy is effective.</p>
+         * <ul>
+         * <li><p>If you do not configure this parameter, the blacklist policy is permanently effective.</p>
+         * </li>
+         * <li><p>If you configure this parameter, the blacklist policy is effective only within the specified time range. Examples:</p>
+         * <ul>
+         * <li><code>03:00-04:59</code>: The blacklist policy is effective from 03:00 to 05:00 local time. 05:00 local time is excluded.</li>
+         * <li><code>03:00-04:59 UTC+0700</code>: The blacklist policy is effective from 03:00 to 05:00 (UTC+7). 05:00 (UTC+7) is excluded.</li>
+         * </ul>
+         * </li>
+         * </ul>
          * 
-         * *   If you do not configure this parameter, the blacklist policy is permanently effective.
-         * 
-         * *   If you configure this parameter, the blacklist policy is effective only within the specified time range. Examples:
-         * 
-         *     *   `03:00-04:59`: The blacklist policy is effective from 03:00 to 05:00 local time. 05:00 local time is excluded.
-         *     *   `03:00-04:59 UTC+0700`: The blacklist policy is effective from 03:00 to 05:00 (UTC+7). 05:00 (UTC+7) is excluded.
+         * <strong>example:</strong>
+         * <p>03:00-04:59</p>
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
@@ -210,10 +219,11 @@ public class CreateMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * The timestamp when the blacklist policy expires.
-         * <p>
+         * <p>The timestamp when the blacklist policy expires.</p>
+         * <p>Unit: milliseconds.</p>
          * 
-         * Unit: milliseconds.
+         * <strong>example:</strong>
+         * <p>1640608200000</p>
          */
         public Builder enableEndTime(String enableEndTime) {
             this.putQueryParameter("EnableEndTime", enableEndTime);
@@ -222,10 +232,11 @@ public class CreateMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * The timestamp when the blacklist policy starts to take effect.
-         * <p>
+         * <p>The timestamp when the blacklist policy starts to take effect.</p>
+         * <p>Unit: milliseconds.</p>
          * 
-         * Unit: milliseconds.
+         * <strong>example:</strong>
+         * <p>1640237400000</p>
          */
         public Builder enableStartTime(String enableStartTime) {
             this.putQueryParameter("EnableStartTime", enableStartTime);
@@ -234,7 +245,8 @@ public class CreateMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * The IDs of instances that belong to the specified cloud service.
+         * <p>The IDs of the instances that belong to the specified cloud service.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder instances(java.util.List < String > instances) {
             this.putQueryParameter("Instances", instances);
@@ -243,11 +255,11 @@ public class CreateMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * The metrics of the instance.
-         * <p>
-         * 
-         * *   If you do not configure this parameter, the blacklist policy applies to all metrics of the specified cloud service.
-         * *   If you configure this parameter, the blacklist policy applies only to the current metric.
+         * <p>The metrics of the instance.</p>
+         * <ul>
+         * <li>If you do not configure this parameter, the blacklist policy applies to all metrics of the specified cloud service.</li>
+         * <li>If you configure this parameter, the blacklist policy applies only to the current metric.</li>
+         * </ul>
          */
         public Builder metrics(java.util.List < Metrics> metrics) {
             this.putQueryParameter("Metrics", metrics);
@@ -256,7 +268,11 @@ public class CreateMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * The name of the blacklist policy.
+         * <p>The name of the blacklist policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Blacklist-01</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -265,10 +281,12 @@ public class CreateMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * The namespace of the cloud service.
-         * <p>
+         * <p>The namespace of the cloud service.</p>
+         * <p>For more information about the namespaces of different cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about the namespaces of different cloud services, see [Appendix 1: Metrics](~~163515~~).
+         * <strong>example:</strong>
+         * <p>acs_ecs_dashboard</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -277,11 +295,14 @@ public class CreateMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * The effective scope of the blacklist policy. Valid values:
-         * <p>
+         * <p>The effective scope of the blacklist policy. Valid values:</p>
+         * <ul>
+         * <li>USER (default): The blacklist policy takes effect only for the current Alibaba Cloud account.</li>
+         * <li>GROUP: The blacklist policy takes effect only for the specified application group. For information about how to query the IDs of application groups, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</li>
+         * </ul>
          * 
-         * *   USER: The blacklist policy takes effect only for the current Alibaba Cloud account.
-         * *   GROUP (default): The blacklist policy takes effect only for the specified application group. For more information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).
+         * <strong>example:</strong>
+         * <p>USER</p>
          */
         public Builder scopeType(String scopeType) {
             this.putQueryParameter("ScopeType", scopeType);
@@ -290,10 +311,13 @@ public class CreateMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * The ID of the application group. The value of this parameter is a JSON array.
-         * <p>
+         * <p>The ID of the application group. The value of this parameter is a JSON array.</p>
+         * <blockquote>
+         * <p>This parameter must be specified when <code>ScopeType</code> is set to <code>GROUP</code>.</p>
+         * </blockquote>
          * 
-         * > This parameter must be specified when `ScopeType` is set to `GROUP`.
+         * <strong>example:</strong>
+         * <p>[&quot;67****&quot;,&quot;78****&quot;]</p>
          */
         public Builder scopeValue(String scopeValue) {
             this.putQueryParameter("ScopeValue", scopeValue);
@@ -308,12 +332,18 @@ public class CreateMetricRuleBlackListRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateMetricRuleBlackListRequest} extends {@link TeaModel}
+     *
+     * <p>CreateMetricRuleBlackListRequest</p>
+     */
     public static class Metrics extends TeaModel {
-        @NameInMap("MetricName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("MetricName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String metricName;
 
-        @NameInMap("Resource")
+        @com.aliyun.core.annotation.NameInMap("Resource")
         private String resource;
 
         private Metrics(Builder builder) {
@@ -348,10 +378,12 @@ public class CreateMetricRuleBlackListRequest extends Request {
             private String resource; 
 
             /**
-             * The metric name.
-             * <p>
+             * <p>The metric name.</p>
+             * <p>Valid values of N: 1 to 10.</p>
+             * <p>This parameter is required.</p>
              * 
-             * Valid values of N: 1 to 10.
+             * <strong>example:</strong>
+             * <p>disk_utilization</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -359,10 +391,11 @@ public class CreateMetricRuleBlackListRequest extends Request {
             }
 
             /**
-             * The extended dimension of the instance. For example, `{"device":"C:"}` specifies that the blacklist policy is applied to all C disks of the specified Elastic Compute Service (ECS) instance.
-             * <p>
+             * <p>The extended dimension of the instance. For example, <code>{&quot;device&quot;:&quot;C:&quot;}</code> specifies that the blacklist policy is applied to all C disks of the specified Elastic Compute Service (ECS) instance.</p>
+             * <p>Valid values of N: 1 to 10.</p>
              * 
-             * Valid values of N: 1 to 10.
+             * <strong>example:</strong>
+             * <p>{&quot;device&quot;:&quot;C:&quot;}</p>
              */
             public Builder resource(String resource) {
                 this.resource = resource;

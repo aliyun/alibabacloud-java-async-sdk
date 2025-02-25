@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateApplicationRequest} extends {@link RequestModel}
  *
  * <p>CreateApplicationRequest</p>
  */
 public class CreateApplicationRequest extends Request {
-    @Query
-    @NameInMap("AccessTokenValidity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessTokenValidity")
     private Integer accessTokenValidity;
 
-    @Query
-    @NameInMap("AppName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
     private String appName;
 
-    @Query
-    @NameInMap("AppType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appType;
 
-    @Query
-    @NameInMap("DisplayName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String displayName;
 
-    @Query
-    @NameInMap("IsMultiTenant")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsMultiTenant")
     private Boolean isMultiTenant;
 
-    @Query
-    @NameInMap("PredefinedScopes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PredefinedScopes")
     private String predefinedScopes;
 
-    @Query
-    @NameInMap("RedirectUris")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RedirectUris")
     private String redirectUris;
 
-    @Query
-    @NameInMap("RefreshTokenValidity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RefreshTokenValidity")
     private Integer refreshTokenValidity;
 
-    @Query
-    @NameInMap("RequiredScopes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequiredScopes")
     private String requiredScopes;
 
-    @Query
-    @NameInMap("SecretRequired")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecretRequired")
     private Boolean secretRequired;
 
     private CreateApplicationRequest(Builder builder) {
@@ -182,12 +187,12 @@ public class CreateApplicationRequest extends Request {
         } 
 
         /**
-         * The validity period of the access token.
-         * <p>
+         * <p>The validity period of the access token.</p>
+         * <p>Valid values: 900 to 10800. Unit: seconds.</p>
+         * <p>Default value: 3600.</p>
          * 
-         * Valid values: 900 to 10800. Unit: seconds.
-         * 
-         * Default value: 3600.
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder accessTokenValidity(Integer accessTokenValidity) {
             this.putQueryParameter("AccessTokenValidity", accessTokenValidity);
@@ -196,10 +201,11 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The name of the application.
-         * <p>
+         * <p>The application name.</p>
+         * <p>The name can be up to 64 characters in length. The name can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
          * 
-         * The name can be up to 64 characters in length. The name can contain letters, digits, periods (.), underscores (\_), and hyphens (-).
+         * <strong>example:</strong>
+         * <p>myapp</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -208,12 +214,16 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The type of the application. Valid values:
-         * <p>
+         * <p>The type of the application. Valid values:</p>
+         * <ul>
+         * <li>WebApp: a web application that interacts with a browser.</li>
+         * <li>NativeApp: a native application that runs on an operating system, such as a desktop operating system or a mobile operating system.</li>
+         * <li>ServerApp: an application that accesses Alibaba Cloud services without the need of manual user logon. User provisioning is automated based on the System for Cross-Domain Identity Management (SCIM) protocol.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   WebApp: a web application that interacts with a browser.
-         * *   NativeApp: a native application that runs on an operating system, such as a desktop operating system or a mobile operating system.
-         * *   ServerApp: an application that accesses Alibaba Cloud services without the need of manual user logon. User provisioning is automated based on the System for Cross-Domain Identity Management (SCIM) protocol.
+         * <strong>example:</strong>
+         * <p>WebApp</p>
          */
         public Builder appType(String appType) {
             this.putQueryParameter("AppType", appType);
@@ -222,10 +232,12 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The display name of the application.
-         * <p>
+         * <p>The display name of the application.</p>
+         * <p>The name can be up to 24 characters in length.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The name can be up to 24 characters in length.
+         * <strong>example:</strong>
+         * <p>myapp</p>
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -234,11 +246,14 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Indicates whether the application can be installed by using other Alibaba Cloud accounts. Valid values:
-         * <p>
+         * <p>Indicates whether the application can be installed by using other Alibaba Cloud accounts. Valid values:</p>
+         * <ul>
+         * <li>true: If you do not set this parameter for applications of the NativeApp and ServerApp types, true is used.</li>
+         * <li>false: If you do not set this parameter for applications of the WebApp type, false is used.</li>
+         * </ul>
          * 
-         * *   true: If you do not set this parameter for applications of the NativeApp and ServerApp types, true is used.
-         * *   false: If you do not set this parameter for applications of the WebApp type, false is used.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isMultiTenant(Boolean isMultiTenant) {
             this.putQueryParameter("IsMultiTenant", isMultiTenant);
@@ -247,12 +262,12 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The scope of application permissions.
-         * <p>
+         * <p>The scope of application permissions.</p>
+         * <p>For more information about the application permission scope, see <a href="https://help.aliyun.com/document_detail/93693.html">Open authorization scope</a>. You can also call the <a href="https://help.aliyun.com/document_detail/187206.html">ListPredefinedScopes</a> operation to query the permissions that are supported by different types of applications.</p>
+         * <p>If you enter multiple permission scopes, separate them with semicolons (;).</p>
          * 
-         * For more information about the application permission scope, see [Open authorization scope](~~93693~~). You can also call the [ListPredefinedScopes](~~187206~~) operation to obtain the permission scopes supported by different types of applications.
-         * 
-         * If you enter multiple permission scopes, separate them with semicolons (;).
+         * <strong>example:</strong>
+         * <p>aliuid</p>
          */
         public Builder predefinedScopes(String predefinedScopes) {
             this.putQueryParameter("PredefinedScopes", predefinedScopes);
@@ -261,10 +276,11 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The callback URL.
-         * <p>
+         * <p>The callback URL.</p>
+         * <p>If you enter multiple callback URLs, separate them with semicolons (;).</p>
          * 
-         * If you enter multiple callback URLs, separate them with semicolons (;).
+         * <strong>example:</strong>
+         * <p><a href="https://www.example.com">https://www.example.com</a></p>
          */
         public Builder redirectUris(String redirectUris) {
             this.putQueryParameter("RedirectUris", redirectUris);
@@ -273,15 +289,16 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The validity period of the refreshed token.
-         * <p>
+         * <p>The validity period of the refreshed token.</p>
+         * <p>Valid values: 7200 to 31536000. Unit: seconds.</p>
+         * <p>Default value:</p>
+         * <ul>
+         * <li>For applications of the WebApp and ServerApp types, if this parameter is left empty, the value 2592000 is used. The value 2592000 indicates that the validity period of the refreshed token is 30 days.</li>
+         * <li>For applications of the NativeApp type, if this parameter is left empty, the value 7776000 is used. The value 7776000 indicates that the validity period of the refreshed token is 90 days.</li>
+         * </ul>
          * 
-         * Valid values: 7200 to 31536000. Unit: seconds.
-         * 
-         * Default value:
-         * 
-         * *   For applications of the WebApp and ServerApp types, if this parameter is left empty, the value 2592000 is used. The value 2592000 indicates that the validity period of the refreshed token is 30 days.
-         * *   For applications of the NativeApp type, if this parameter is left empty, the value 7776000 is used. The value 7776000 indicates that the validity period of the refreshed token is 90 days.
+         * <strong>example:</strong>
+         * <p>2592000</p>
          */
         public Builder refreshTokenValidity(Integer refreshTokenValidity) {
             this.putQueryParameter("RefreshTokenValidity", refreshTokenValidity);
@@ -290,7 +307,15 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * RequiredScopes.
+         * <p>The required permission.</p>
+         * <p>You can specify one or more permissions for the <code>RequiredScopes</code> parameter. After you specify this parameter, the required permissions are automatically selected and cannot be revoked when a user grants permissions on the application.</p>
+         * <p>If you enter multiple permission scopes, separate them with semicolons (;).</p>
+         * <blockquote>
+         * <p> If the permission that you specify for the <code>RequiredScopes</code> parameter is not included in the value of the <code>PredefinedScopes</code> parameter, the permission does not take effect.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>aliuid;profile</p>
          */
         public Builder requiredScopes(String requiredScopes) {
             this.putQueryParameter("RequiredScopes", requiredScopes);
@@ -299,14 +324,20 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Indicates whether a secret is required. Valid values:
-         * <p>
+         * <p>Indicates whether a secret is required. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>For applications of the WebApp and ServerApp types, this parameter is automatically set to true and cannot be changed.</li>
+         * <li>For applications of the NativeApp type, this parameter can be set to true or false. If you do not set this parameter, false is used. Applications of the NativeApp type run in untrusted environments and the secrets of these applications are not protected. Therefore, we recommend that you do not set this parameter to true unless otherwise specified. For more information, see <a href="https://help.aliyun.com/document_detail/93697.html">Use an application of the NativeApp type to log on to Alibaba Cloud</a>.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * *   true
-         * *   false
-         * 
-         * >- For applications of the WebApp and ServerApp types, this parameter is automatically set to true and cannot be changed.
-         * >- For applications of the NativeApp type, this parameter can be set to true or false. If you do not set this parameter, false is used. Applications of the NativeApp type run in untrusted environments and the secrets of these applications are not protected. Therefore, we recommend that you do not set this parameter to true unless otherwise specified. For more information, see [Use an application of the NativeApp type to log on to Alibaba Cloud](~~93697~~).
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder secretRequired(Boolean secretRequired) {
             this.putQueryParameter("SecretRequired", secretRequired);

@@ -1,46 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBNodeHotReplicaModeRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBNodeHotReplicaModeRequest</p>
  */
 public class ModifyDBNodeHotReplicaModeRequest extends Request {
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("DBNodeId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBNodeId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBNodeId;
 
-    @Query
-    @NameInMap("HotReplicaMode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HotReplicaMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hotReplicaMode;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyDBNodeHotReplicaModeRequest(Builder builder) {
@@ -141,10 +146,14 @@ public class ModifyDBNodeHotReplicaModeRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
-         * <p>
+         * <p>The ID of the cluster.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of the clusters that belong to your Alibaba Cloud account, such as cluster IDs.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeDBClusters](~~98094~~) operation to query the details of the clusters that belong to your Alibaba Cloud account, such as cluster IDs.
+         * <strong>example:</strong>
+         * <p>pc-2vc327c2a14a3u858</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -153,7 +162,11 @@ public class ModifyDBNodeHotReplicaModeRequest extends Request {
         }
 
         /**
-         * The ID of the node in the cluster.
+         * <p>The ID of the node in the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pi-2ze28275h9x5r4wt1</p>
          */
         public Builder DBNodeId(String DBNodeId) {
             this.putQueryParameter("DBNodeId", DBNodeId);
@@ -162,11 +175,15 @@ public class ModifyDBNodeHotReplicaModeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the hot standby feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the hot standby feature. Valid values:</p>
+         * <ul>
+         * <li><strong>ON</strong></li>
+         * <li><strong>OFF</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **ON**
-         * *   **OFF**
+         * <strong>example:</strong>
+         * <p>ON</p>
          */
         public Builder hotReplicaMode(String hotReplicaMode) {
             this.putQueryParameter("HotReplicaMode", hotReplicaMode);

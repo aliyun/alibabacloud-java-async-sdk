@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceErrorLogResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstanceErrorLogResponseBody</p>
  */
 public class DescribeDBInstanceErrorLogResponseBody extends TeaModel {
-    @NameInMap("Items")
-    private java.util.List < Items> items;
+    @com.aliyun.core.annotation.NameInMap("Items")
+    private java.util.List<Items> items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDBInstanceErrorLogResponseBody(Builder builder) {
@@ -42,7 +47,7 @@ public class DescribeDBInstanceErrorLogResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -68,21 +73,24 @@ public class DescribeDBInstanceErrorLogResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private Integer pageNumber; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * The content of the error log.
+         * <p>The content of the error log.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -90,7 +98,10 @@ public class DescribeDBInstanceErrorLogResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +109,10 @@ public class DescribeDBInstanceErrorLogResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -111,23 +125,29 @@ public class DescribeDBInstanceErrorLogResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstanceErrorLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceErrorLogResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("Database")
+        @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
 
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("LogContext")
+        @com.aliyun.core.annotation.NameInMap("LogContext")
         private String logContext;
 
-        @NameInMap("LogLevel")
+        @com.aliyun.core.annotation.NameInMap("LogLevel")
         private String logLevel;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private Long time;
 
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private String user;
 
         private Items(Builder builder) {
@@ -198,7 +218,10 @@ public class DescribeDBInstanceErrorLogResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adbtest</p>
              */
             public Builder database(String database) {
                 this.database = database;
@@ -206,7 +229,10 @@ public class DescribeDBInstanceErrorLogResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is not supported.
+             * <p>This parameter is not supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -214,7 +240,10 @@ public class DescribeDBInstanceErrorLogResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the error log.
+             * <p>The content of the error log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>unsupported frontend protocol 2689.28208: server supports 1.0 to 3.0</p>
              */
             public Builder logContext(String logContext) {
                 this.logContext = logContext;
@@ -222,7 +251,10 @@ public class DescribeDBInstanceErrorLogResponseBody extends TeaModel {
             }
 
             /**
-             * The level of the queried log.
+             * <p>The level of the queried log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FATAL</p>
              */
             public Builder logLevel(String logLevel) {
                 this.logLevel = logLevel;
@@ -230,7 +262,10 @@ public class DescribeDBInstanceErrorLogResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the log was generated. The time is displayed in UTC.
+             * <p>The time when the log was generated. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-24 11:28:14</p>
              */
             public Builder time(Long time) {
                 this.time = time;
@@ -238,7 +273,10 @@ public class DescribeDBInstanceErrorLogResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database account.
+             * <p>The name of the database account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adbpguser</p>
              */
             public Builder user(String user) {
                 this.user = user;

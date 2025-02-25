@@ -1,23 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutMonitoringConfigRequest} extends {@link RequestModel}
  *
  * <p>PutMonitoringConfigRequest</p>
  */
 public class PutMonitoringConfigRequest extends Request {
-    @Query
-    @NameInMap("AutoInstall")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoInstall")
     private Boolean autoInstall;
 
-    @Query
-    @NameInMap("EnableInstallAgentNewECS")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableInstallAgentNewECS")
     private Boolean enableInstallAgentNewECS;
 
     private PutMonitoringConfigRequest(Builder builder) {
@@ -68,11 +68,10 @@ public class PutMonitoringConfigRequest extends Request {
         } 
 
         /**
-         * Specifies whether to automatically install the CloudMonitor agent on existing Elastic Compute Service (ECS) instances. Valid values:
-         * <p>
+         * <p>This parameter is deprecated.</p>
          * 
-         * *   true (default value)
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoInstall(Boolean autoInstall) {
             this.putQueryParameter("AutoInstall", autoInstall);
@@ -81,11 +80,14 @@ public class PutMonitoringConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to automatically install the CloudMonitor agent on new ECS instances. Valid values:
-         * <p>
+         * <p>Specifies whether to automatically install the CloudMonitor agent on new ECS instances. Valid values:</p>
+         * <ul>
+         * <li>true (default): The CloudMonitor agent is automatically installed on new ECS instances.</li>
+         * <li>false: The CloudMonitor agent is not automatically installed on new ECS instances.</li>
+         * </ul>
          * 
-         * *   true (default value)
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableInstallAgentNewECS(Boolean enableInstallAgentNewECS) {
             this.putQueryParameter("EnableInstallAgentNewECS", enableInstallAgentNewECS);

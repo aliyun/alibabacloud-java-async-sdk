@@ -90,8 +90,14 @@ public class ListFunctionsResponseBody extends TeaModel {
         @NameInMap("customContainerConfig")
         private CustomContainerConfig customContainerConfig;
 
+        @NameInMap("customDNS")
+        private CustomDNS customDNS;
+
         @NameInMap("customHealthCheckConfig")
         private CustomHealthCheckConfig customHealthCheckConfig;
+
+        @NameInMap("customRuntimeConfig")
+        private CustomRuntimeConfig customRuntimeConfig;
 
         @NameInMap("description")
         private String description;
@@ -138,6 +144,9 @@ public class ListFunctionsResponseBody extends TeaModel {
         @NameInMap("layers")
         private java.util.List < String > layers;
 
+        @NameInMap("layersArnV2")
+        private java.util.List < String > layersArnV2;
+
         @NameInMap("memorySize")
         private Integer memorySize;
 
@@ -154,7 +163,9 @@ public class ListFunctionsResponseBody extends TeaModel {
             this.cpu = builder.cpu;
             this.createdTime = builder.createdTime;
             this.customContainerConfig = builder.customContainerConfig;
+            this.customDNS = builder.customDNS;
             this.customHealthCheckConfig = builder.customHealthCheckConfig;
+            this.customRuntimeConfig = builder.customRuntimeConfig;
             this.description = builder.description;
             this.diskSize = builder.diskSize;
             this.environmentVariables = builder.environmentVariables;
@@ -170,6 +181,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             this.instanceType = builder.instanceType;
             this.lastModifiedTime = builder.lastModifiedTime;
             this.layers = builder.layers;
+            this.layersArnV2 = builder.layersArnV2;
             this.memorySize = builder.memorySize;
             this.runtime = builder.runtime;
             this.timeout = builder.timeout;
@@ -226,10 +238,24 @@ public class ListFunctionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return customDNS
+         */
+        public CustomDNS getCustomDNS() {
+            return this.customDNS;
+        }
+
+        /**
          * @return customHealthCheckConfig
          */
         public CustomHealthCheckConfig getCustomHealthCheckConfig() {
             return this.customHealthCheckConfig;
+        }
+
+        /**
+         * @return customRuntimeConfig
+         */
+        public CustomRuntimeConfig getCustomRuntimeConfig() {
+            return this.customRuntimeConfig;
         }
 
         /**
@@ -338,6 +364,13 @@ public class ListFunctionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return layersArnV2
+         */
+        public java.util.List < String > getLayersArnV2() {
+            return this.layersArnV2;
+        }
+
+        /**
          * @return memorySize
          */
         public Integer getMemorySize() {
@@ -365,7 +398,9 @@ public class ListFunctionsResponseBody extends TeaModel {
             private Float cpu; 
             private String createdTime; 
             private CustomContainerConfig customContainerConfig; 
+            private CustomDNS customDNS; 
             private CustomHealthCheckConfig customHealthCheckConfig; 
+            private CustomRuntimeConfig customRuntimeConfig; 
             private String description; 
             private Integer diskSize; 
             private java.util.Map < String, String > environmentVariables; 
@@ -381,12 +416,13 @@ public class ListFunctionsResponseBody extends TeaModel {
             private String instanceType; 
             private String lastModifiedTime; 
             private java.util.List < String > layers; 
+            private java.util.List < String > layersArnV2; 
             private Integer memorySize; 
             private String runtime; 
             private Integer timeout; 
 
             /**
-             * The port on which the HTTP server listens for the custom runtime or custom container runtime.
+             * The port on which the HTTP server listens for the custom runtime or Custom Container runtime.
              */
             public Builder caPort(Integer caPort) {
                 this.caPort = caPort;
@@ -394,7 +430,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * The CRC-64 value of the function code package.
+             * The CRC64 value of the function code package.
              */
             public Builder codeChecksum(String codeChecksum) {
                 this.codeChecksum = codeChecksum;
@@ -402,7 +438,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the function code package that is returned by the system. Unit: bytes.
+             * The size of the function code package returned by the system. Unit: bytes.
              */
             public Builder codeSize(Long codeSize) {
                 this.codeSize = codeSize;
@@ -410,7 +446,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of vCPUs of the function. The value must be a multiple of 0.05.
+             * The CPU size of the function. Unit: vCPUs. The value is a multiple of 0.05 vCPUs.
              */
             public Builder cpu(Float cpu) {
                 this.cpu = cpu;
@@ -426,7 +462,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of the custom container runtime.
+             * The configurations of the Custom Container runtime.
              */
             public Builder customContainerConfig(CustomContainerConfig customContainerConfig) {
                 this.customContainerConfig = customContainerConfig;
@@ -434,10 +470,26 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * The custom health check configuration of the function. This parameter is applicable only to custom runtimes and custom containers.
+             * The custom DNS settings of the function.
+             */
+            public Builder customDNS(CustomDNS customDNS) {
+                this.customDNS = customDNS;
+                return this;
+            }
+
+            /**
+             * The custom health check configurations of the function. This parameter is applicable only to custom runtimes and Custom Container runtimes.
              */
             public Builder customHealthCheckConfig(CustomHealthCheckConfig customHealthCheckConfig) {
                 this.customHealthCheckConfig = customHealthCheckConfig;
+                return this;
+            }
+
+            /**
+             * The configurations of the custom runtime function.
+             */
+            public Builder customRuntimeConfig(CustomRuntimeConfig customRuntimeConfig) {
+                this.customRuntimeConfig = customRuntimeConfig;
                 return this;
             }
 
@@ -450,7 +502,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * The disk size of the function. Unit: MB. Valid values: 512 and 10240.
+             * The disk size of the function. Unit: MB. Valid values: 512 MB and 10240 MB.
              */
             public Builder diskSize(Integer diskSize) {
                 this.diskSize = diskSize;
@@ -458,7 +510,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * The environment variables that you configured for the function. You can obtain the values of the environment variables from the function.
+             * The environment variables that are configured for the function. You can obtain the values of the environment variables from the function.
              */
             public Builder environmentVariables(java.util.Map < String, String > environmentVariables) {
                 this.environmentVariables = environmentVariables;
@@ -466,7 +518,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID that is generated by the system for the function.
+             * The ID generated by the system for each function. The ID is globally unique.
              */
             public Builder functionId(String functionId) {
                 this.functionId = functionId;
@@ -474,7 +526,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the function.
+             * The function name.
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
@@ -482,7 +534,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * The GPU memory capacity for the function. Unit: MB. The value is a multiple of 1,024.
+             * The GPU memory size of the function. Unit: MB, which is a multiple of 1024MB.
              */
             public Builder gpuMemorySize(Integer gpuMemorySize) {
                 this.gpuMemorySize = gpuMemorySize;
@@ -498,7 +550,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period for the execution of the Initializer hook. Unit: seconds. Default value: 3. Valid values: 1 to 300. When this period ends, the execution of the Initializer hook is terminated.
+             * The timeout period for the Initializer hook to run. Unit: seconds. Default value: 3. Minimum value: 1. Maximum value: 300. When the period ends, the execution of the Initializer hook is terminated.
              */
             public Builder initializationTimeout(Integer initializationTimeout) {
                 this.initializationTimeout = initializationTimeout;
@@ -506,7 +558,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * The handler of the Initializer hook. The format of the value is determined by the programming language that you use. For more information, see [Initializer hook](~~157704~~).
+             * The handler of the initializer function. The format of the value varies based on the programming language that you use. For more information, see [Initializer function](~~157704~~).
              */
             public Builder initializer(String initializer) {
                 this.initializer = initializer;
@@ -530,10 +582,10 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * The soft concurrency of the instance. You can use this parameter to implement graceful scale-up of instances. If the number of concurrent requests on an instance is greater than the value of soft concurrency, an instance scale-up is triggered. For example, if your instance requires a long time to start, you can specify a suitable soft concurrency to start the instance in advance.
+             * The soft concurrency of the instance. You can use this property to implement graceful scale-ups for instances. If the number of concurrent requests on an instance is greater than the soft concurrency value of the instance, an instance scale-up is triggered. For example, if your instance requires a long time to start, you can specify a suitable soft concurrency to start the instance in advance.
              * <p>
              * 
-             * The value must be less than or equal to that of the **instanceConcurrency** parameter.
+             * The value must be less than or equal to that of **instanceConcurrency**.
              */
             public Builder instanceSoftConcurrency(Integer instanceSoftConcurrency) {
                 this.instanceSoftConcurrency = instanceSoftConcurrency;
@@ -546,9 +598,9 @@ public class ListFunctionsResponseBody extends TeaModel {
              * 
              * *   **e1**: elastic instance
              * *   **c1**: performance instance
-             * *   **fc.gpu.tesla.1**: GPU-accelerated instance (Tesla T4)
-             * *   **fc.gpu.ampere.1**: GPU-accelerated instance (Ampere A10)
-             * *   **g1**: same as fc.gpu.tesla.1
+             * *   **fc.gpu.tesla. 1**: GPU-accelerated instances of Tesla T4 type
+             * *   **fc.gpu.ampere. 1**: GPU-accelerated instances of the Ampere A10 type
+             * *   **g1**: Same fc.gpu.tesla. 1.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -564,10 +616,10 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about layers.
+             * A list of layers.
              * <p>
              * 
-             * > Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file that has the same name as a layer with a larger subscript.
+             * >  If multiple layers exist, the layers are merged based on the array subscripts in descending order. The content of a layer with a smaller subscript overwrites that of a larger subscript.
              */
             public Builder layers(java.util.List < String > layers) {
                 this.layers = layers;
@@ -575,7 +627,15 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size that is configured for the function. Unit: MB.
+             * A list of layer ARNs.
+             */
+            public Builder layersArnV2(java.util.List < String > layersArnV2) {
+                this.layersArnV2 = layersArnV2;
+                return this;
+            }
+
+            /**
+             * The memory size of the function. Unit: MB.
              */
             public Builder memorySize(Integer memorySize) {
                 this.memorySize = memorySize;
@@ -583,7 +643,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * The runtime environment of the function. Valid values: **nodejs16**, **nodejs14**, **nodejs12**, **nodejs10**, **nodejs8**, **nodejs6**, **nodejs4.4**, **python3.10**, **python3.9**, **python3**, **python2.7**, **java11**, **java8**, **go1**, **php7.2**, **dotnetcore3.1**, **dotnetcore2.1**, **custom.debian10**, **custom**, and **custom-container**. For more information, see [Supported function runtime environments](~~73338~~).
+             * The runtime of the function. Valid values: **nodejs16**, **nodejs14**, **nodejs12**, **nodejs10**, **nodejs8**, **nodejs6**, **nodejs4.4**, **python3.10**, **python3.9**, **python3**, **python2.7**, **java11**, **java8**, **go1**, **php7.2**, **dotnetcore3.1**, **dotnetcore2.1**, **custom.debian10**, **custom**, and **custom-container**. For more information, see [Runtimes that are supported by Function Compute](~~73338~~).
              */
             public Builder runtime(String runtime) {
                 this.runtime = runtime;
@@ -591,7 +651,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period for the execution of the function. Unit: seconds. Default value: 60. Valid values: 1 to 600. When this period expires, the execution of the function is terminated.
+             * The timeout period for the function to run. Unit: seconds. Default value: 60. Minimum value: 1. Maximum value: 600. When this period expires, the execution of the function is terminated.
              */
             public Builder timeout(Integer timeout) {
                 this.timeout = timeout;

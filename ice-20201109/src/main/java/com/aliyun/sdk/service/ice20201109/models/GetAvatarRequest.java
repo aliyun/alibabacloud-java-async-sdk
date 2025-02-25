@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAvatarRequest} extends {@link RequestModel}
  *
  * <p>GetAvatarRequest</p>
  */
 public class GetAvatarRequest extends Request {
-    @Query
-    @NameInMap("AvatarId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AvatarId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String avatarId;
 
     private GetAvatarRequest(Builder builder) {
@@ -55,7 +60,13 @@ public class GetAvatarRequest extends Request {
         } 
 
         /**
-         * AvatarId.
+         * <ul>
+         * <li>The ID of the digital human.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Avatar-XXXX</p>
          */
         public Builder avatarId(String avatarId) {
             this.putQueryParameter("AvatarId", avatarId);

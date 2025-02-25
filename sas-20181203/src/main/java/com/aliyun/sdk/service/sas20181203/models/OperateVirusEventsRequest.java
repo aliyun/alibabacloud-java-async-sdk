@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OperateVirusEventsRequest} extends {@link RequestModel}
  *
  * <p>OperateVirusEventsRequest</p>
  */
 public class OperateVirusEventsRequest extends Request {
-    @Query
-    @NameInMap("OperationAll")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationAll")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer operationAll;
 
-    @Query
-    @NameInMap("OperationCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String operationCode;
 
-    @Query
-    @NameInMap("OperationRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationRange")
     private String operationRange;
 
     private OperateVirusEventsRequest(Builder builder) {
@@ -84,11 +89,15 @@ public class OperateVirusEventsRequest extends Request {
         } 
 
         /**
-         * Specifies whether to handle all alert events. Valid values:
-         * <p>
+         * <p>Specifies whether to handle all alert events. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **1**: yes
-         * *   **0**: no
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder operationAll(Integer operationAll) {
             this.putQueryParameter("OperationAll", operationAll);
@@ -97,13 +106,17 @@ public class OperateVirusEventsRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform on the alert events. Valid values:
-         * <p>
+         * <p>The operation that you want to perform on the alert events. Valid values:</p>
+         * <ul>
+         * <li><strong>default</strong>: performs in-depth detection and removal</li>
+         * <li><strong>ignore</strong>: ignores the alert event</li>
+         * <li><strong>advance_mark_mis_info</strong>: adds the alert events to the whitelist</li>
+         * <li><strong>manual_handled</strong>: marks the alert events as manually handled</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **default**: performs in-depth detection and removal
-         * *   **ignore**: ignores the alert event
-         * *   **advance_mark_mis_info**: adds the alert events to the whitelist
-         * *   **manual_handled**: marks the alert events as manually handled
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder operationCode(String operationCode) {
             this.putQueryParameter("OperationCode", operationCode);
@@ -112,7 +125,10 @@ public class OperateVirusEventsRequest extends Request {
         }
 
         /**
-         * The handling scope.
+         * <p>The handling scope.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;type&quot;:&quot;machine&quot;,&quot;list&quot;:[&quot;xxxxxxxxx-4cbf-4ca6-a1b7-8a09d1f86ab0&quot;]}]</p>
          */
         public Builder operationRange(String operationRange) {
             this.putQueryParameter("OperationRange", operationRange);

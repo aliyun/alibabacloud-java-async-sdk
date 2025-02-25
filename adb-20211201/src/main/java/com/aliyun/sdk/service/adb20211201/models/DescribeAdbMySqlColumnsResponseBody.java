@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAdbMySqlColumnsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAdbMySqlColumnsResponseBody</p>
  */
 public class DescribeAdbMySqlColumnsResponseBody extends TeaModel {
-    @NameInMap("ColumnCount")
+    @com.aliyun.core.annotation.NameInMap("ColumnCount")
     private Integer columnCount;
 
-    @NameInMap("Columns")
-    private java.util.List < Columns> columns;
+    @com.aliyun.core.annotation.NameInMap("Columns")
+    private java.util.List<Columns> columns;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Schema")
+    @com.aliyun.core.annotation.NameInMap("Schema")
     private String schema;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TableName")
+    @com.aliyun.core.annotation.NameInMap("TableName")
     private String tableName;
 
     private DescribeAdbMySqlColumnsResponseBody(Builder builder) {
@@ -61,7 +66,7 @@ public class DescribeAdbMySqlColumnsResponseBody extends TeaModel {
     /**
      * @return columns
      */
-    public java.util.List < Columns> getColumns() {
+    public java.util.List<Columns> getColumns() {
         return this.columns;
     }
 
@@ -102,7 +107,7 @@ public class DescribeAdbMySqlColumnsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer columnCount; 
-        private java.util.List < Columns> columns; 
+        private java.util.List<Columns> columns; 
         private String message; 
         private String requestId; 
         private String schema; 
@@ -110,7 +115,10 @@ public class DescribeAdbMySqlColumnsResponseBody extends TeaModel {
         private String tableName; 
 
         /**
-         * The total number of columns.
+         * <p>The total number of columns.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder columnCount(Integer columnCount) {
             this.columnCount = columnCount;
@@ -118,19 +126,22 @@ public class DescribeAdbMySqlColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the columns.
+         * <p>Details of the columns.</p>
          */
-        public Builder columns(java.util.List < Columns> columns) {
+        public Builder columns(java.util.List<Columns> columns) {
             this.columns = columns;
             return this;
         }
 
         /**
-         * The message returned for the operation. Valid values:
-         * <p>
+         * <p>The message returned for the operation. Valid values:</p>
+         * <ul>
+         * <li><strong>Success</strong> is returned if the operation is successful.</li>
+         * <li>An error message is returned if the operation fails.</li>
+         * </ul>
          * 
-         * *   **Success** is returned if the operation is successful.
-         * *   An error message is returned if the operation fails.
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +149,10 @@ public class DescribeAdbMySqlColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A9F013CD-0222-595E-8157-445969B97F03</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +160,10 @@ public class DescribeAdbMySqlColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adb_demo</p>
          */
         public Builder schema(String schema) {
             this.schema = schema;
@@ -154,11 +171,14 @@ public class DescribeAdbMySqlColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the operation is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the operation is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The operation is successful.</li>
+         * <li><strong>false</strong>: The operation fails.</li>
+         * </ul>
          * 
-         * *   **true**: The operation is successful.
-         * *   **false**: The operation fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -166,7 +186,10 @@ public class DescribeAdbMySqlColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the table.
+         * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder tableName(String tableName) {
             this.tableName = tableName;
@@ -179,14 +202,20 @@ public class DescribeAdbMySqlColumnsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAdbMySqlColumnsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAdbMySqlColumnsResponseBody</p>
+     */
     public static class Columns extends TeaModel {
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Columns(Builder builder) {
@@ -230,7 +259,10 @@ public class DescribeAdbMySqlColumnsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The comments of the column.
+             * <p>The comments of the column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -238,7 +270,10 @@ public class DescribeAdbMySqlColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the column.
+             * <p>The name of the column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>id</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -246,7 +281,10 @@ public class DescribeAdbMySqlColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * The data type of the column.
+             * <p>The data type of the column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bigint</p>
              */
             public Builder type(String type) {
                 this.type = type;

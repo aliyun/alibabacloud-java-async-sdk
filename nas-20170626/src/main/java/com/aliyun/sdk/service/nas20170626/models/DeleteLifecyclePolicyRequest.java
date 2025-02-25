@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLifecyclePolicyRequest} extends {@link RequestModel}
  *
  * <p>DeleteLifecyclePolicyRequest</p>
  */
 public class DeleteLifecyclePolicyRequest extends Request {
-    @Query
-    @NameInMap("FileSystemId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileSystemId;
 
-    @Query
-    @NameInMap("LifecyclePolicyName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LifecyclePolicyName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String lifecyclePolicyName;
 
     private DeleteLifecyclePolicyRequest(Builder builder) {
@@ -63,14 +68,18 @@ public class DeleteLifecyclePolicyRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteLifecyclePolicyRequest response) {
-            super(response);
-            this.fileSystemId = response.fileSystemId;
-            this.lifecyclePolicyName = response.lifecyclePolicyName;
+        private Builder(DeleteLifecyclePolicyRequest request) {
+            super(request);
+            this.fileSystemId = request.fileSystemId;
+            this.lifecyclePolicyName = request.lifecyclePolicyName;
         } 
 
         /**
-         * FileSystemId.
+         * <p>The ID of the file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31a8e4****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -79,7 +88,11 @@ public class DeleteLifecyclePolicyRequest extends Request {
         }
 
         /**
-         * LifecyclePolicyName.
+         * <p>The name of the lifecycle policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lifecyclepolicy1</p>
          */
         public Builder lifecyclePolicyName(String lifecyclePolicyName) {
             this.putQueryParameter("LifecyclePolicyName", lifecyclePolicyName);

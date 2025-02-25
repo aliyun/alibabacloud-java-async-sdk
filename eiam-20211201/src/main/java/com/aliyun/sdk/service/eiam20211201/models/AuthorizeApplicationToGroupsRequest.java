@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AuthorizeApplicationToGroupsRequest} extends {@link RequestModel}
  *
  * <p>AuthorizeApplicationToGroupsRequest</p>
  */
 public class AuthorizeApplicationToGroupsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ApplicationId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String applicationId;
 
-    @Query
-    @NameInMap("GroupIds")
-    @Validation(required = true)
-    private java.util.List < String > groupIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> groupIds;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String instanceId;
 
     private AuthorizeApplicationToGroupsRequest(Builder builder) {
@@ -69,7 +74,7 @@ public class AuthorizeApplicationToGroupsRequest extends Request {
     /**
      * @return groupIds
      */
-    public java.util.List < String > getGroupIds() {
+    public java.util.List<String> getGroupIds() {
         return this.groupIds;
     }
 
@@ -83,7 +88,7 @@ public class AuthorizeApplicationToGroupsRequest extends Request {
     public static final class Builder extends Request.Builder<AuthorizeApplicationToGroupsRequest, Builder> {
         private String regionId; 
         private String applicationId; 
-        private java.util.List < String > groupIds; 
+        private java.util.List<String> groupIds; 
         private String instanceId; 
 
         private Builder() {
@@ -108,7 +113,11 @@ public class AuthorizeApplicationToGroupsRequest extends Request {
         }
 
         /**
-         * The application ID.
+         * <p>The application ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
          */
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
@@ -117,16 +126,24 @@ public class AuthorizeApplicationToGroupsRequest extends Request {
         }
 
         /**
-         * The group IDs. You can specify up to 100 group IDs at a time.
+         * <p>The group IDs. You can specify up to 100 group IDs at a time.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group_miu8e4t4d7i4u7uwezgr54xxxx</p>
          */
-        public Builder groupIds(java.util.List < String > groupIds) {
+        public Builder groupIds(java.util.List<String> groupIds) {
             this.putQueryParameter("GroupIds", groupIds);
             this.groupIds = groupIds;
             return this;
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk2676xxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

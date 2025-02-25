@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyAuthenticationRequest} extends {@link RequestModel}
  *
  * <p>VerifyAuthenticationRequest</p>
  */
 public class VerifyAuthenticationRequest extends Request {
-    @Query
-    @NameInMap("OnlyCheck")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OnlyCheck")
     private Boolean onlyCheck;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Uid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uid")
     private Long uid;
 
     private VerifyAuthenticationRequest(Builder builder) {
@@ -110,7 +115,14 @@ public class VerifyAuthenticationRequest extends Request {
         } 
 
         /**
-         * OnlyCheck.
+         * <p>Specifies whether to check only the authorization status. Valid values:</p>
+         * <ul>
+         * <li>true: checks only the authorization status. The service-linked role is not created.</li>
+         * <li>false (default): checks the authorization status and resource usage.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder onlyCheck(Boolean onlyCheck) {
             this.putQueryParameter("OnlyCheck", onlyCheck);
@@ -146,7 +158,10 @@ public class VerifyAuthenticationRequest extends Request {
         }
 
         /**
-         * Uid.
+         * <p>The ID of your Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678123*****</p>
          */
         public Builder uid(Long uid) {
             this.putQueryParameter("Uid", uid);

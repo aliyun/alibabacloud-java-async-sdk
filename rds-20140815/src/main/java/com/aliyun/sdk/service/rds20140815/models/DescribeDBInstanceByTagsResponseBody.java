@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceByTagsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstanceByTagsResponseBody</p>
  */
 public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeDBInstanceByTagsResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The details about the instance.
+         * <p>The details about the instance.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -94,7 +99,10 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -110,7 +121,10 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -131,11 +148,17 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstanceByTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceByTagsResponseBody</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -170,7 +193,10 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -178,7 +204,10 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -192,9 +221,15 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceByTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceByTagsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -211,17 +246,17 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -233,11 +268,17 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceByTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceByTagsResponseBody</p>
+     */
     public static class DBInstanceTag extends TeaModel {
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
         private DBInstanceTag(Builder builder) {
@@ -272,7 +313,10 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
             private Tags tags; 
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-uf6w**********</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -280,7 +324,7 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The details about the tag.
+             * <p>The details about the tag.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -294,9 +338,15 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceByTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceByTagsResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("DBInstanceTag")
-        private java.util.List < DBInstanceTag> DBInstanceTag;
+        @com.aliyun.core.annotation.NameInMap("DBInstanceTag")
+        private java.util.List<DBInstanceTag> DBInstanceTag;
 
         private Items(Builder builder) {
             this.DBInstanceTag = builder.DBInstanceTag;
@@ -313,17 +363,17 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
         /**
          * @return DBInstanceTag
          */
-        public java.util.List < DBInstanceTag> getDBInstanceTag() {
+        public java.util.List<DBInstanceTag> getDBInstanceTag() {
             return this.DBInstanceTag;
         }
 
         public static final class Builder {
-            private java.util.List < DBInstanceTag> DBInstanceTag; 
+            private java.util.List<DBInstanceTag> DBInstanceTag; 
 
             /**
              * DBInstanceTag.
              */
-            public Builder DBInstanceTag(java.util.List < DBInstanceTag> DBInstanceTag) {
+            public Builder DBInstanceTag(java.util.List<DBInstanceTag> DBInstanceTag) {
                 this.DBInstanceTag = DBInstanceTag;
                 return this;
             }

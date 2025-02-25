@@ -1,50 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSecurityPolicyRequest} extends {@link RequestModel}
  *
  * <p>CreateSecurityPolicyRequest</p>
  */
 public class CreateSecurityPolicyRequest extends Request {
-    @Body
-    @NameInMap("Ciphers")
-    @Validation(required = true)
-    private java.util.List < String > ciphers;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Ciphers")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> ciphers;
 
-    @Body
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Body
-    @NameInMap("SecurityPolicyName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SecurityPolicyName")
     private String securityPolicyName;
 
-    @Body
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Body
-    @NameInMap("TlsVersions")
-    @Validation(required = true)
-    private java.util.List < String > tlsVersions;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TlsVersions")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> tlsVersions;
 
     private CreateSecurityPolicyRequest(Builder builder) {
         super(builder);
@@ -74,7 +79,7 @@ public class CreateSecurityPolicyRequest extends Request {
     /**
      * @return ciphers
      */
-    public java.util.List < String > getCiphers() {
+    public java.util.List<String> getCiphers() {
         return this.ciphers;
     }
 
@@ -116,26 +121,26 @@ public class CreateSecurityPolicyRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     /**
      * @return tlsVersions
      */
-    public java.util.List < String > getTlsVersions() {
+    public java.util.List<String> getTlsVersions() {
         return this.tlsVersions;
     }
 
     public static final class Builder extends Request.Builder<CreateSecurityPolicyRequest, Builder> {
-        private java.util.List < String > ciphers; 
+        private java.util.List<String> ciphers; 
         private String clientToken; 
         private Boolean dryRun; 
         private String regionId; 
         private String resourceGroupId; 
         private String securityPolicyName; 
-        private java.util.List < Tag> tag; 
-        private java.util.List < String > tlsVersions; 
+        private java.util.List<Tag> tag; 
+        private java.util.List<String> tlsVersions; 
 
         private Builder() {
             super();
@@ -154,62 +159,64 @@ public class CreateSecurityPolicyRequest extends Request {
         } 
 
         /**
-         * The supported cipher suites, which are determined by the TLS protocol version. You can specify at most 32 cipher suites.
-         * <p>
-         * 
-         * TLS 1.0 and TLS 1.1 support the following cipher suites:
-         * 
-         * *   **ECDHE-ECDSA-AES128-SHA**
-         * *   **ECDHE-ECDSA-AES256-SHA**
-         * *   **ECDHE-RSA-AES128-SHA**
-         * *   **ECDHE-RSA-AES256-SHA**
-         * *   **AES128-SHA**
-         * *   **AES256-SHA**
-         * *   **DES-CBC3-SHA**
-         * 
-         * TLS 1.2 supports the following cipher suites:
-         * 
-         * *   **ECDHE-ECDSA-AES128-SHA**
-         * *   **ECDHE-ECDSA-AES256-SHA**
-         * *   **ECDHE-RSA-AES128-SHA**
-         * *   **ECDHE-RSA-AES256-SHA**
-         * *   **AES128-SHA**
-         * *   **AES256-SHA**
-         * *   **DES-CBC3-SHA**
-         * *   **ECDHE-ECDSA-AES128-GCM-SHA256**
-         * *   **ECDHE-ECDSA-AES256-GCM-SHA384**
-         * *   **ECDHE-ECDSA-AES128-SHA256**
-         * *   **ECDHE-ECDSA-AES256-SHA384**
-         * *   **ECDHE-RSA-AES128-GCM-SHA256**
-         * *   **ECDHE-RSA-AES256-GCM-SHA384**
-         * *   **ECDHE-RSA-AES128-SHA256**
-         * *   **ECDHE-RSA-AES256-SHA384**
-         * *   **AES128-GCM-SHA256**
-         * *   **AES256-GCM-SHA384**
-         * *   **AES128-SHA256**
-         * *   **AES256-SHA256**
-         * 
-         * TLS 1.3 supports the following cipher suites:
-         * 
-         * *   **TLS_AES\_128\_GCM_SHA256**
-         * *   **TLS_AES\_256\_GCM_SHA384**
-         * *   **TLS_CHACHA20\_POLY1305\_SHA256**
-         * *   **TLS_AES\_128\_CCM_SHA256**
-         * *   **TLS_AES\_128\_CCM\_8\_SHA256**
+         * <p>The supported cipher suites, which are determined by the TLS protocol version. You can specify at most 32 cipher suites.</p>
+         * <p>TLS 1.0 and TLS 1.1 support the following cipher suites:</p>
+         * <ul>
+         * <li><strong>ECDHE-ECDSA-AES128-SHA</strong></li>
+         * <li><strong>ECDHE-ECDSA-AES256-SHA</strong></li>
+         * <li><strong>ECDHE-RSA-AES128-SHA</strong></li>
+         * <li><strong>ECDHE-RSA-AES256-SHA</strong></li>
+         * <li><strong>AES128-SHA</strong></li>
+         * <li><strong>AES256-SHA</strong></li>
+         * <li><strong>DES-CBC3-SHA</strong></li>
+         * </ul>
+         * <p>TLS 1.2 supports the following cipher suites:</p>
+         * <ul>
+         * <li><strong>ECDHE-ECDSA-AES128-SHA</strong></li>
+         * <li><strong>ECDHE-ECDSA-AES256-SHA</strong></li>
+         * <li><strong>ECDHE-RSA-AES128-SHA</strong></li>
+         * <li><strong>ECDHE-RSA-AES256-SHA</strong></li>
+         * <li><strong>AES128-SHA</strong></li>
+         * <li><strong>AES256-SHA</strong></li>
+         * <li><strong>DES-CBC3-SHA</strong></li>
+         * <li><strong>ECDHE-ECDSA-AES128-GCM-SHA256</strong></li>
+         * <li><strong>ECDHE-ECDSA-AES256-GCM-SHA384</strong></li>
+         * <li><strong>ECDHE-ECDSA-AES128-SHA256</strong></li>
+         * <li><strong>ECDHE-ECDSA-AES256-SHA384</strong></li>
+         * <li><strong>ECDHE-RSA-AES128-GCM-SHA256</strong></li>
+         * <li><strong>ECDHE-RSA-AES256-GCM-SHA384</strong></li>
+         * <li><strong>ECDHE-RSA-AES128-SHA256</strong></li>
+         * <li><strong>ECDHE-RSA-AES256-SHA384</strong></li>
+         * <li><strong>AES128-GCM-SHA256</strong></li>
+         * <li><strong>AES256-GCM-SHA384</strong></li>
+         * <li><strong>AES128-SHA256</strong></li>
+         * <li><strong>AES256-SHA256</strong></li>
+         * </ul>
+         * <p>TLS 1.3 supports the following cipher suites:</p>
+         * <ul>
+         * <li><strong>TLS_AES_128_GCM_SHA256</strong></li>
+         * <li><strong>TLS_AES_256_GCM_SHA384</strong></li>
+         * <li><strong>TLS_CHACHA20_POLY1305_SHA256</strong></li>
+         * <li><strong>TLS_AES_128_CCM_SHA256</strong></li>
+         * <li><strong>TLS_AES_128_CCM_8_SHA256</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          */
-        public Builder ciphers(java.util.List < String > ciphers) {
+        public Builder ciphers(java.util.List<String> ciphers) {
             this.putBodyParameter("Ciphers", ciphers);
             this.ciphers = ciphers;
             return this;
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must ensure that it is unique among all requests. ClientToken can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the value, but you must ensure that it is unique among all requests. ClientToken can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -218,11 +225,14 @@ public class CreateSecurityPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether only to precheck the request. Valid values:
-         * <p>
+         * <p>Specifies whether only to precheck the request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: checks the request but does not create the security policy. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: checks the request but does not create the security policy. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
-         * *   **false** (default): sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putBodyParameter("DryRun", dryRun);
@@ -231,10 +241,11 @@ public class CreateSecurityPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the region where the NLB instance is deployed.
-         * <p>
+         * <p>The ID of the region where the NLB instance is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeRegions](~~443657~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -243,7 +254,10 @@ public class CreateSecurityPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-atstuj3rtop****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -252,10 +266,11 @@ public class CreateSecurityPolicyRequest extends Request {
         }
 
         /**
-         * The name of the security policy.
-         * <p>
+         * <p>The name of the security policy.</p>
+         * <p>The name must be 1 to 200 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
          * 
-         * The name must be 1 to 200 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-).
+         * <strong>example:</strong>
+         * <p>TLSCipherPolicy</p>
          */
         public Builder securityPolicyName(String securityPolicyName) {
             this.putBodyParameter("SecurityPolicyName", securityPolicyName);
@@ -264,18 +279,19 @@ public class CreateSecurityPolicyRequest extends Request {
         }
 
         /**
-         * 标签列表。
+         * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putBodyParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The supported versions of the Transport Layer Security (TLS) protocol. Valid values: **TLSv1.0**, **TLSv1.1**, **TLSv1.2**, and **TLSv1.3**.
+         * <p>The supported versions of the Transport Layer Security (TLS) protocol. Valid values: <strong>TLSv1.0</strong>, <strong>TLSv1.1</strong>, <strong>TLSv1.2</strong>, and <strong>TLSv1.3</strong>.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder tlsVersions(java.util.List < String > tlsVersions) {
+        public Builder tlsVersions(java.util.List<String> tlsVersions) {
             this.putBodyParameter("TlsVersions", tlsVersions);
             this.tlsVersions = tlsVersions;
             return this;
@@ -288,11 +304,17 @@ public class CreateSecurityPolicyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateSecurityPolicyRequest} extends {@link TeaModel}
+     *
+     * <p>CreateSecurityPolicyRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -327,10 +349,11 @@ public class CreateSecurityPolicyRequest extends Request {
             private String value; 
 
             /**
-             * 标签键。最多支持128个字符，不能以`aliyun`或`acs:`开头，不能包含`http://`或`https://`。
-             * <p>
+             * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
              * 
-             * 一次调用最多支持添加20个标签。
+             * <strong>example:</strong>
+             * <p>KeyTest</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -338,10 +361,11 @@ public class CreateSecurityPolicyRequest extends Request {
             }
 
             /**
-             * 标签值。最多支持128个字符，不能以`aliyun`或`acs:`开头，不能包含`http://`或`https://`。
-             * <p>
+             * <p>The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * 一次调用最多支持添加20个标签。
+             * <strong>example:</strong>
+             * <p>ValueTest</p>
              */
             public Builder value(String value) {
                 this.value = value;

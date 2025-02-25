@@ -1,31 +1,31 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryRobotInfoListRequest} extends {@link RequestModel}
  *
  * <p>QueryRobotInfoListRequest</p>
  */
 public class QueryRobotInfoListRequest extends Request {
-    @Query
-    @NameInMap("AuditStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuditStatus")
     private String auditStatus;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private QueryRobotInfoListRequest(Builder builder) {
@@ -87,16 +87,25 @@ public class QueryRobotInfoListRequest extends Request {
             super();
         } 
 
-        private Builder(QueryRobotInfoListRequest response) {
-            super(response);
-            this.auditStatus = response.auditStatus;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(QueryRobotInfoListRequest request) {
+            super(request);
+            this.auditStatus = request.auditStatus;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * AuditStatus.
+         * <p>The review state. Valid values:</p>
+         * <ul>
+         * <li><strong>CONFIGURABLE</strong></li>
+         * <li><strong>AUDITING</strong></li>
+         * <li><strong>AUDITPASS</strong></li>
+         * <li><strong>AUDITFAIL</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AUDITING</p>
          */
         public Builder auditStatus(String auditStatus) {
             this.putQueryParameter("AuditStatus", auditStatus);

@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link IsvGetAppIdResponseBody} extends {@link TeaModel}
  *
  * <p>IsvGetAppIdResponseBody</p>
  */
 public class IsvGetAppIdResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("ConfigId")
+    @com.aliyun.core.annotation.NameInMap("ConfigId")
     private String configId;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private IsvGetAppIdResponseBody(Builder builder) {
@@ -98,7 +98,10 @@ public class IsvGetAppIdResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -106,7 +109,10 @@ public class IsvGetAppIdResponseBody extends TeaModel {
         }
 
         /**
-         * The message ID.
+         * <p>The message ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23hr3v</p>
          */
         public Builder appId(String appId) {
             this.appId = appId;
@@ -114,11 +120,14 @@ public class IsvGetAppIdResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
-         * <p>
+         * <p>The HTTP status code returned.</p>
+         * <ul>
+         * <li>A value of OK indicates that the call is successful.</li>
+         * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+         * </ul>
          * 
-         * *   A value of OK indicates that the call is successful.
-         * *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -126,7 +135,10 @@ public class IsvGetAppIdResponseBody extends TeaModel {
         }
 
         /**
-         * ConfigId.
+         * <p>The ID of the configuration item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28972951817****</p>
          */
         public Builder configId(String configId) {
             this.configId = configId;
@@ -134,7 +146,10 @@ public class IsvGetAppIdResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +157,10 @@ public class IsvGetAppIdResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>744c4b5c79c9432497a075bdfca3***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

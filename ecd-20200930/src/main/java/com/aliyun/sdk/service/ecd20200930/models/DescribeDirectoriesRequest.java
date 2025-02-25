@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDirectoriesRequest} extends {@link RequestModel}
  *
  * <p>DescribeDirectoriesRequest</p>
  */
 public class DescribeDirectoriesRequest extends Request {
-    @Query
-    @NameInMap("DirectoryId")
-    private java.util.List < String > directoryId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
+    private java.util.List<String> directoryId;
 
-    @Query
-    @NameInMap("DirectoryStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryStatus")
     private String directoryStatus;
 
-    @Query
-    @NameInMap("DirectoryType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryType")
     private String directoryType;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 500)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 500)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeDirectoriesRequest(Builder builder) {
@@ -69,7 +74,7 @@ public class DescribeDirectoriesRequest extends Request {
     /**
      * @return directoryId
      */
-    public java.util.List < String > getDirectoryId() {
+    public java.util.List<String> getDirectoryId() {
         return this.directoryId;
     }
 
@@ -116,7 +121,7 @@ public class DescribeDirectoriesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDirectoriesRequest, Builder> {
-        private java.util.List < String > directoryId; 
+        private java.util.List<String> directoryId; 
         private String directoryStatus; 
         private String directoryType; 
         private Integer maxResults; 
@@ -140,16 +145,22 @@ public class DescribeDirectoriesRequest extends Request {
         } 
 
         /**
-         * Details of directory IDs. You can specify one or more directory IDs.
+         * <p>Details of directory IDs. You can specify one or more directory IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-gx2x1dhsmu52rd****</p>
          */
-        public Builder directoryId(java.util.List < String > directoryId) {
+        public Builder directoryId(java.util.List<String> directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
             this.directoryId = directoryId;
             return this;
         }
 
         /**
-         * The status of the directory. The value of this parameter is the same as the value of the `Status` parameter.
+         * <p>The directory status. This parameter is equivalent to <code>Status</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>REGISTERED</p>
          */
         public Builder directoryStatus(String directoryStatus) {
             this.putQueryParameter("DirectoryStatus", directoryStatus);
@@ -158,7 +169,16 @@ public class DescribeDirectoriesRequest extends Request {
         }
 
         /**
-         * The type of the directory.
+         * <p>The directory type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>SIMPLE: a directory of the convenience account type</li>
+         * <li>AD_CONNECTOR: an AD directory</li>
+         * <li>RAM: a RAM directory</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RAM</p>
          */
         public Builder directoryType(String directoryType) {
             this.putQueryParameter("DirectoryType", directoryType);
@@ -167,12 +187,12 @@ public class DescribeDirectoriesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Maximum value: 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Maximum value: 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -181,7 +201,10 @@ public class DescribeDirectoriesRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the next query. If this parameter is empty, all results are returned.
+         * <p>The token that determines the start point of the next query. If this parameter is empty, all results are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -190,7 +213,11 @@ public class DescribeDirectoriesRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -199,7 +226,75 @@ public class DescribeDirectoriesRequest extends Request {
         }
 
         /**
-         * The status of the workspace.
+         * <p>The directory status.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>REGISTERING: The directory is being registered.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>DEREGISTERING: The directory is being deregistered.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>REGISTERED: The directory is registered.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>NEEDCONFIGTRUST: A trust relationship needs to be configured for the directory.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>CONFIGTRUSTFAILED: A trust relationship fails to be configured for the directory.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>DEREGISTERED: The directory is deregistered.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>ERROR: One or more configurations of the directory are invalid.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>CONFIGTRUSTING: A trust relationship is being configured.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>NEEDCONFIGUSER: Users need to be configured for the directory.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>REGISTERED</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

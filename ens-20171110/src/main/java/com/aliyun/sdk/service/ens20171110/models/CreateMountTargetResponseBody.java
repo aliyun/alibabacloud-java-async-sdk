@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMountTargetResponseBody} extends {@link TeaModel}
  *
  * <p>CreateMountTargetResponseBody</p>
  */
 public class CreateMountTargetResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private CreateMountTargetResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateMountTargetResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70EACC9C-D07A-4A34-ADA4-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,16 @@ public class CreateMountTargetResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The state of the mount target. Valid values:</p>
+         * <ul>
+         * <li>active</li>
+         * <li>inactive</li>
+         * <li>pending</li>
+         * <li>deleting</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>pending</p>
          */
         public Builder status(String status) {
             this.status = status;

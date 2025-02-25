@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSensitivityLevelRequest} extends {@link RequestModel}
  *
  * <p>ListSensitivityLevelRequest</p>
  */
 public class ListSensitivityLevelRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private Long templateId;
 
-    @Query
-    @NameInMap("TemplateType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateType")
     private String templateType;
 
-    @Query
-    @NameInMap("Tid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tid")
     private Long tid;
 
     private ListSensitivityLevelRequest(Builder builder) {
@@ -105,7 +110,10 @@ public class ListSensitivityLevelRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>The ID of the classification template. You can call the <a href="https://help.aliyun.com/document_detail/460613.html">ListClassificationTemplates</a> operation to query the ID of the classification template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15**</p>
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -114,7 +122,15 @@ public class ListSensitivityLevelRequest extends Request {
         }
 
         /**
-         * TemplateType.
+         * <p>The type of the classification template. You can call the <a href="https://help.aliyun.com/document_detail/460613.html">ListClassificationTemplates</a> operation to query the type of the classification template.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>USER_DEFINE: a custom template.</li>
+         * <li>INNER: a built-in template.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>INNER</p>
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);
@@ -123,7 +139,13 @@ public class ListSensitivityLevelRequest extends Request {
         }
 
         /**
-         * Tid.
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p> To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a> in the topic &quot;Manage DMS tenants.&quot;</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>20***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

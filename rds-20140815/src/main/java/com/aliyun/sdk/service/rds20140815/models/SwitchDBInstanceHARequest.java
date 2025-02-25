@@ -1,49 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SwitchDBInstanceHARequest} extends {@link RequestModel}
  *
  * <p>SwitchDBInstanceHARequest</p>
  */
 public class SwitchDBInstanceHARequest extends Request {
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("EffectiveTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveTime")
     private String effectiveTime;
 
-    @Query
-    @NameInMap("Force")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Force")
     private String force;
 
-    @Query
-    @NameInMap("NodeId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodeId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private SwitchDBInstanceHARequest(Builder builder) {
@@ -154,7 +159,11 @@ public class SwitchDBInstanceHARequest extends Request {
         } 
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -163,13 +172,15 @@ public class SwitchDBInstanceHARequest extends Request {
         }
 
         /**
-         * The time when the switching takes effect. Valid values:
-         * <p>
+         * <p>The time when the switching takes effect. Valid values:</p>
+         * <ul>
+         * <li><strong>Immediate</strong>: The switching immediately takes effect.</li>
+         * <li><strong>MaintainTime</strong>: The switching takes effect during the maintenance time.</li>
+         * </ul>
+         * <p>Default value: <strong>Immediate</strong>.</p>
          * 
-         * *   **Immediate**: The switching immediately takes effect.
-         * *   **MaintainTime**: The switching takes effect during the maintenance time.
-         * 
-         * Default value: **Immediate**.
+         * <strong>example:</strong>
+         * <p>Immediate</p>
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
@@ -178,13 +189,15 @@ public class SwitchDBInstanceHARequest extends Request {
         }
 
         /**
-         * Specifies whether to enable forcible switching. Valid values:
-         * <p>
+         * <p>Specifies whether to enable forcible switching. Valid values:</p>
+         * <ul>
+         * <li><strong>Yes</strong></li>
+         * <li><strong>No</strong></li>
+         * </ul>
+         * <p>Default value: <strong>No</strong>.</p>
          * 
-         * *   **Yes**
-         * *   **No**
-         * 
-         * Default value: **No**.
+         * <strong>example:</strong>
+         * <p>No</p>
          */
         public Builder force(String force) {
             this.putQueryParameter("Force", force);
@@ -193,7 +206,11 @@ public class SwitchDBInstanceHARequest extends Request {
         }
 
         /**
-         * The secondary instance ID. You can call the DescribeDBInstanceHAConfig operation to query the secondary instance ID.
+         * <p>The secondary instance ID. You can call the DescribeDBInstanceHAConfig operation to query the secondary instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>349054</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

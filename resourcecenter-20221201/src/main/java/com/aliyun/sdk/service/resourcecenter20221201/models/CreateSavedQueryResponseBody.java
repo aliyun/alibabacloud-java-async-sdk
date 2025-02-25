@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSavedQueryResponseBody} extends {@link TeaModel}
  *
  * <p>CreateSavedQueryResponseBody</p>
  */
 public class CreateSavedQueryResponseBody extends TeaModel {
-    @NameInMap("QueryId")
+    @com.aliyun.core.annotation.NameInMap("QueryId")
     private String queryId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateSavedQueryResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class CreateSavedQueryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The query ID.
+         * <p>The template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sq-GeAck****</p>
          */
         public Builder queryId(String queryId) {
             this.queryId = queryId;
@@ -58,7 +61,10 @@ public class CreateSavedQueryResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EFA806B9-7F36-55AB-8B7A-D680C2C5EE57</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,31 +1,31 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateInlinePolicyForAccessConfigurationRequest} extends {@link RequestModel}
  *
  * <p>UpdateInlinePolicyForAccessConfigurationRequest</p>
  */
 public class UpdateInlinePolicyForAccessConfigurationRequest extends Request {
-    @Query
-    @NameInMap("AccessConfigurationId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessConfigurationId")
     private String accessConfigurationId;
 
-    @Query
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @Query
-    @NameInMap("InlinePolicyName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InlinePolicyName")
     private String inlinePolicyName;
 
-    @Query
-    @NameInMap("NewInlinePolicyDocument")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewInlinePolicyDocument")
     private String newInlinePolicyDocument;
 
     private UpdateInlinePolicyForAccessConfigurationRequest(Builder builder) {
@@ -96,7 +96,10 @@ public class UpdateInlinePolicyForAccessConfigurationRequest extends Request {
         } 
 
         /**
-         * The ID of the access configuration.
+         * <p>The ID of the access configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac-00jhtfl8thteu6uj****</p>
          */
         public Builder accessConfigurationId(String accessConfigurationId) {
             this.putQueryParameter("AccessConfigurationId", accessConfigurationId);
@@ -105,7 +108,10 @@ public class UpdateInlinePolicyForAccessConfigurationRequest extends Request {
         }
 
         /**
-         * The ID of the directory.
+         * <p>The ID of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -114,7 +120,10 @@ public class UpdateInlinePolicyForAccessConfigurationRequest extends Request {
         }
 
         /**
-         * The name of the inline policy.
+         * <p>The name of the inline policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InlinePolicy</p>
          */
         public Builder inlinePolicyName(String inlinePolicyName) {
             this.putQueryParameter("InlinePolicyName", inlinePolicyName);
@@ -123,12 +132,12 @@ public class UpdateInlinePolicyForAccessConfigurationRequest extends Request {
         }
 
         /**
-         * The new configurations of the inline policy.
-         * <p>
+         * <p>The new configurations of the inline policy.</p>
+         * <p>The value can be up to 4,096 characters in length.</p>
+         * <p>For more information about the syntax and structure of RAM policies, see <a href="https://help.aliyun.com/document_detail/93739.html">Policy syntax and structure</a>.</p>
          * 
-         * The value can be up to 4,096 characters in length.
-         * 
-         * For more information about the syntax and structure of RAM policies, see [Policy syntax and structure](~~93739~~).
+         * <strong>example:</strong>
+         * <p>{&quot;Statement&quot;: [{&quot;Action&quot;: &quot;<em>&quot;,&quot;Effect&quot;: &quot;Allow&quot;,&quot;Resource&quot;: &quot;</em>&quot;}],&quot;Version&quot;: &quot;1&quot;}</p>
          */
         public Builder newInlinePolicyDocument(String newInlinePolicyDocument) {
             this.putQueryParameter("NewInlinePolicyDocument", newInlinePolicyDocument);

@@ -1,29 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHostAccountRequest} extends {@link RequestModel}
  *
  * <p>GetHostAccountRequest</p>
  */
 public class GetHostAccountRequest extends Request {
-    @Query
-    @NameInMap("HostAccountId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostAccountId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hostAccountId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private GetHostAccountRequest(Builder builder) {
@@ -84,10 +84,14 @@ public class GetHostAccountRequest extends Request {
         } 
 
         /**
-         * The ID of the host account that you want to query.
-         * <p>
+         * <p>The ID of the host account that you want to query.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/204372.html">ListHostAccounts</a> operation to query the ID of the host account.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [ListHostAccounts](~~204372~~) operation to query the ID of the host account.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder hostAccountId(String hostAccountId) {
             this.putQueryParameter("HostAccountId", hostAccountId);
@@ -96,10 +100,14 @@ public class GetHostAccountRequest extends Request {
         }
 
         /**
-         * The ID of the bastion host in which you want to query the details of the host account.
-         * <p>
+         * <p>The ID of the bastion host in which you want to query the details of the host account.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-st220aw****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -108,10 +116,13 @@ public class GetHostAccountRequest extends Request {
         }
 
         /**
-         * The region ID of the bastion host in which you want to query the details of the host account.
-         * <p>
+         * <p>The region ID of the bastion host in which you want to query the details of the host account.</p>
+         * <blockquote>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
          * 
-         * > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

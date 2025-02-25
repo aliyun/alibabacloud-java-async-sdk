@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataArchiveOrderDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetDataArchiveOrderDetailResponseBody</p>
  */
 public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
-    @NameInMap("DataArchiveOrderDetail")
+    @com.aliyun.core.annotation.NameInMap("DataArchiveOrderDetail")
     private DataArchiveOrderDetail dataArchiveOrderDetail;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TraceId")
+    @com.aliyun.core.annotation.NameInMap("TraceId")
     private String traceId;
 
     private GetDataArchiveOrderDetailResponseBody(Builder builder) {
@@ -98,7 +103,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * The details of data archiving tickets.
+         * <p>The details of data archiving tickets.</p>
          */
         public Builder dataArchiveOrderDetail(DataArchiveOrderDetail dataArchiveOrderDetail) {
             this.dataArchiveOrderDetail = dataArchiveOrderDetail;
@@ -106,7 +111,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the call failed.
+         * <p>The error code returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NoPermission</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +122,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The error message that is returned if the request failed.
+         * <p>The error message that is returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>User [19929582****] not exist</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +133,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to query logs and troubleshoot issues.
+         * <p>The ID of the request, which is used to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4161CE36-28DF-5191-8A6F-A17076A0B124</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,11 +144,14 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -142,7 +159,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Tracks service requests.
+         * <p>Tracks service requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a06e1e316757357507896067d3780</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -155,59 +175,65 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDataArchiveOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataArchiveOrderDetailResponseBody</p>
+     */
     public static class DagInfo extends TeaModel {
-        @NameInMap("CreatorId")
+        @com.aliyun.core.annotation.NameInMap("CreatorId")
         private String creatorId;
 
-        @NameInMap("CronBeginDate")
+        @com.aliyun.core.annotation.NameInMap("CronBeginDate")
         private String cronBeginDate;
 
-        @NameInMap("CronEndDate")
+        @com.aliyun.core.annotation.NameInMap("CronEndDate")
         private String cronEndDate;
 
-        @NameInMap("CronTrigger")
+        @com.aliyun.core.annotation.NameInMap("CronTrigger")
         private Boolean cronTrigger;
 
-        @NameInMap("DWDevelop")
+        @com.aliyun.core.annotation.NameInMap("DWDevelop")
         private Boolean DWDevelop;
 
-        @NameInMap("DagName")
+        @com.aliyun.core.annotation.NameInMap("DagName")
         private String dagName;
 
-        @NameInMap("DagOwnerId")
+        @com.aliyun.core.annotation.NameInMap("DagOwnerId")
         private String dagOwnerId;
 
-        @NameInMap("DeployId")
+        @com.aliyun.core.annotation.NameInMap("DeployId")
         private Long deployId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EditDagId")
+        @com.aliyun.core.annotation.NameInMap("EditDagId")
         private Long editDagId;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("IsPublic")
+        @com.aliyun.core.annotation.NameInMap("IsPublic")
         private Long isPublic;
 
-        @NameInMap("Legacy")
+        @com.aliyun.core.annotation.NameInMap("Legacy")
         private Boolean legacy;
 
-        @NameInMap("System")
+        @com.aliyun.core.annotation.NameInMap("System")
         private Boolean system;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
-        @NameInMap("TriggerOnce")
+        @com.aliyun.core.annotation.NameInMap("TriggerOnce")
         private Boolean triggerOnce;
 
         private DagInfo(Builder builder) {
@@ -386,7 +412,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             private Boolean triggerOnce; 
 
             /**
-             * The ID of the user who created the task flow.
+             * <p>The ID of the user who created the task flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>59****</p>
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -394,7 +423,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The start time for scheduling. The task flow is not scheduled before this point in time.
+             * <p>The start time for scheduling. The task flow is not scheduled before this point in time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1970-01-01</p>
              */
             public Builder cronBeginDate(String cronBeginDate) {
                 this.cronBeginDate = cronBeginDate;
@@ -402,7 +434,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The end time for scheduling. The task flow is not scheduled after this point in time.
+             * <p>The end time for scheduling. The task flow is not scheduled after this point in time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9999-01-01</p>
              */
             public Builder cronEndDate(String cronEndDate) {
                 this.cronEndDate = cronEndDate;
@@ -410,11 +445,14 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the archiving task is a scheduled task. Valid values:
-             * <p>
+             * <p>Indicates whether the archiving task is a scheduled task. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder cronTrigger(Boolean cronTrigger) {
                 this.cronTrigger = cronTrigger;
@@ -422,10 +460,13 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the task is used to develop warehouses.
-             * <p>
+             * <p>Indicates whether the task is used to develop warehouses.</p>
+             * <blockquote>
+             * <p> This field is a retained field that is not in use.</p>
+             * </blockquote>
              * 
-             * >  This field is a retained field that is not in use.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder DWDevelop(Boolean DWDevelop) {
                 this.DWDevelop = DWDevelop;
@@ -433,7 +474,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the workflow.
+             * <p>The name of the workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>data-archive-9099197</p>
              */
             public Builder dagName(String dagName) {
                 this.dagName = dagName;
@@ -441,7 +485,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the owner of the workflow.
+             * <p>The ID of the owner of the workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13****</p>
              */
             public Builder dagOwnerId(String dagOwnerId) {
                 this.dagOwnerId = dagOwnerId;
@@ -449,7 +496,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the deployment record.
+             * <p>The ID of the deployment record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>93***</p>
              */
             public Builder deployId(Long deployId) {
                 this.deployId = deployId;
@@ -457,7 +507,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the workflow.
+             * <p>The description of the workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>order id:9099197</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -465,7 +518,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the editable workflow version.
+             * <p>The ID of the editable workflow version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24***</p>
              */
             public Builder editDagId(Long editDagId) {
                 this.editDagId = editDagId;
@@ -473,7 +529,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the workflow was created.
+             * <p>The time when the workflow was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-15 16:00:48</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -481,7 +540,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the workflow was last modified.
+             * <p>The time when the workflow was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-06-15 16:00:48</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -489,7 +551,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task flow.
+             * <p>The ID of the task flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24***</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -497,11 +562,14 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the workflow is public. Valid values:
-             * <p>
+             * <p>Indicates whether the workflow is public. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: not public.</li>
+             * <li><strong>1</strong>: public.</li>
+             * </ul>
              * 
-             * *   **0**: not public.
-             * *   **1**: public.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder isPublic(Long isPublic) {
                 this.isPublic = isPublic;
@@ -509,11 +577,14 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the task is a historical task. Valid values:
-             * <p>
+             * <p>Indicates whether the task is a historical task. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder legacy(Boolean legacy) {
                 this.legacy = legacy;
@@ -521,11 +592,14 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the task was created by the system. Valid values:
-             * <p>
+             * <p>Indicates whether the task was created by the system. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder system(Boolean system) {
                 this.system = system;
@@ -533,7 +607,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The tenant ID.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5***</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -541,11 +618,14 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the workflow is triggered to run once. Valid values:
-             * <p>
+             * <p>Indicates whether the workflow is triggered to run once. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder triggerOnce(Boolean triggerOnce) {
                 this.triggerOnce = triggerOnce;
@@ -559,32 +639,38 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataArchiveOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataArchiveOrderDetailResponseBody</p>
+     */
     public static class StandardGroup extends TeaModel {
-        @NameInMap("DbType")
+        @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("FreeOrStable")
+        @com.aliyun.core.annotation.NameInMap("FreeOrStable")
         private Boolean freeOrStable;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("GroupMode")
+        @com.aliyun.core.annotation.NameInMap("GroupMode")
         private String groupMode;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("LastMenderId")
+        @com.aliyun.core.annotation.NameInMap("LastMenderId")
         private Long lastMenderId;
 
         private StandardGroup(Builder builder) {
@@ -682,7 +768,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             private Long lastMenderId; 
 
             /**
-             * The type of the instance engine. For information about the valid values of this parameter, see [DbType parameter](~~198106~~).
+             * <p>The type of the instance engine. For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/198106.html">DbType parameter</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -690,7 +779,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the security rule set.
+             * <p>The description of the security rule set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adb_mysql default</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -698,11 +790,14 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instance is managed in Flexible Management or Stable Change mode. Valid values:
-             * <p>
+             * <p>Indicates whether the instance is managed in Flexible Management or Stable Change mode. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder freeOrStable(Boolean freeOrStable) {
                 this.freeOrStable = freeOrStable;
@@ -710,7 +805,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the security rule was created.
+             * <p>The time when the security rule was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-05-24 14:12:32</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -718,7 +816,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the security rule was last modified.
+             * <p>The time when the security rule was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-05-25 14:12:32</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -726,12 +827,15 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the control mode of the instance. Valid values:
-             * <p>
+             * <p>The type of the control mode of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>COMMON</strong>: The instance is managed in Security Collaboration mode.</li>
+             * <li><strong>NONE_CONTROL</strong>: The instance is managed in Flexible Management mode.</li>
+             * <li><strong>STABLE</strong>: The instance is managed in Stable Change mode.</li>
+             * </ul>
              * 
-             * *   **COMMON**: The instance is managed in Security Collaboration mode.
-             * *   **NONE_CONTROL**: The instance is managed in Flexible Management mode.
-             * *   **STABLE**: The instance is managed in Stable Change mode.
+             * <strong>example:</strong>
+             * <p>COMMON</p>
              */
             public Builder groupMode(String groupMode) {
                 this.groupMode = groupMode;
@@ -739,7 +843,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the security rule that corresponds to the control mode.
+             * <p>The name of the security rule that corresponds to the control mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adb_mysql default</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -747,7 +854,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security rule.
+             * <p>The ID of the security rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24***</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -755,7 +865,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID of the last modified security rule.
+             * <p>The user ID of the last modified security rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12****</p>
              */
             public Builder lastMenderId(Long lastMenderId) {
                 this.lastMenderId = lastMenderId;
@@ -769,98 +882,104 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataArchiveOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataArchiveOrderDetailResponseBody</p>
+     */
     public static class DbBaseInfo extends TeaModel {
-        @NameInMap("Alias")
+        @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
 
-        @NameInMap("AlterTimeout")
+        @com.aliyun.core.annotation.NameInMap("AlterTimeout")
         private Long alterTimeout;
 
-        @NameInMap("AssetControl")
+        @com.aliyun.core.annotation.NameInMap("AssetControl")
         private Boolean assetControl;
 
-        @NameInMap("CatalogName")
+        @com.aliyun.core.annotation.NameInMap("CatalogName")
         private String catalogName;
 
-        @NameInMap("ClusterNode")
+        @com.aliyun.core.annotation.NameInMap("ClusterNode")
         private String clusterNode;
 
-        @NameInMap("DbId")
+        @com.aliyun.core.annotation.NameInMap("DbId")
         private Long dbId;
 
-        @NameInMap("DbType")
+        @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;
 
-        @NameInMap("DbaId")
+        @com.aliyun.core.annotation.NameInMap("DbaId")
         private Long dbaId;
 
-        @NameInMap("DbaName")
+        @com.aliyun.core.annotation.NameInMap("DbaName")
         private String dbaName;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Encoding")
+        @com.aliyun.core.annotation.NameInMap("Encoding")
         private String encoding;
 
-        @NameInMap("EnvType")
+        @com.aliyun.core.annotation.NameInMap("EnvType")
         private String envType;
 
-        @NameInMap("Follow")
+        @com.aliyun.core.annotation.NameInMap("Follow")
         private Boolean follow;
 
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("Idc")
+        @com.aliyun.core.annotation.NameInMap("Idc")
         private String idc;
 
-        @NameInMap("IdcTitle")
+        @com.aliyun.core.annotation.NameInMap("IdcTitle")
         private String idcTitle;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
 
-        @NameInMap("InstanceSource")
+        @com.aliyun.core.annotation.NameInMap("InstanceSource")
         private String instanceSource;
 
-        @NameInMap("LastSyncTime")
+        @com.aliyun.core.annotation.NameInMap("LastSyncTime")
         private String lastSyncTime;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("Logic")
+        @com.aliyun.core.annotation.NameInMap("Logic")
         private Boolean logic;
 
-        @NameInMap("OwnerIds")
-        private java.util.List < Long > ownerIds;
+        @com.aliyun.core.annotation.NameInMap("OwnerIds")
+        private java.util.List<Long> ownerIds;
 
-        @NameInMap("OwnerNames")
-        private java.util.List < String > ownerNames;
+        @com.aliyun.core.annotation.NameInMap("OwnerNames")
+        private java.util.List<String> ownerNames;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Long port;
 
-        @NameInMap("SchemaName")
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
         private String schemaName;
 
-        @NameInMap("SearchName")
+        @com.aliyun.core.annotation.NameInMap("SearchName")
         private String searchName;
 
-        @NameInMap("StandardGroup")
+        @com.aliyun.core.annotation.NameInMap("StandardGroup")
         private StandardGroup standardGroup;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("TableCount")
+        @com.aliyun.core.annotation.NameInMap("TableCount")
         private Long tableCount;
 
-        @NameInMap("TnsName")
+        @com.aliyun.core.annotation.NameInMap("TnsName")
         private String tnsName;
 
-        @NameInMap("UnitType")
+        @com.aliyun.core.annotation.NameInMap("UnitType")
         private String unitType;
 
         private DbBaseInfo(Builder builder) {
@@ -1055,14 +1174,14 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         /**
          * @return ownerIds
          */
-        public java.util.List < Long > getOwnerIds() {
+        public java.util.List<Long> getOwnerIds() {
             return this.ownerIds;
         }
 
         /**
          * @return ownerNames
          */
-        public java.util.List < String > getOwnerNames() {
+        public java.util.List<String> getOwnerNames() {
             return this.ownerNames;
         }
 
@@ -1144,8 +1263,8 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             private String lastSyncTime; 
             private String level; 
             private Boolean logic; 
-            private java.util.List < Long > ownerIds; 
-            private java.util.List < String > ownerNames; 
+            private java.util.List<Long> ownerIds; 
+            private java.util.List<String> ownerNames; 
             private Long port; 
             private String schemaName; 
             private String searchName; 
@@ -1156,7 +1275,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             private String unitType; 
 
             /**
-             * The alias of the database instance.
+             * <p>The alias of the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tf-testAccDMSEnterpriseLogicDatabase853****</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -1164,7 +1286,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period of queries on the database.
+             * <p>The timeout period of queries on the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder alterTimeout(Long alterTimeout) {
                 this.alterTimeout = alterTimeout;
@@ -1172,11 +1297,14 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether access control is enabled for data assets. Valid values:
-             * <p>
+             * <p>Indicates whether access control is enabled for data assets. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder assetControl(Boolean assetControl) {
                 this.assetControl = assetControl;
@@ -1184,7 +1312,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance in the instance list.
+             * <p>The name of the instance in the instance list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder catalogName(String catalogName) {
                 this.catalogName = catalogName;
@@ -1192,7 +1323,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instance is added to the DMS whitelist.
+             * <p>Indicates whether the instance is added to the DMS whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>whitelist_done</p>
              */
             public Builder clusterNode(String clusterNode) {
                 this.clusterNode = clusterNode;
@@ -1200,10 +1334,13 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the database. You can call the [SearchDatabase](~~141876~~) operation to query the ID of the database.
-             * <p>
+             * <p>The ID of the database. You can call the <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation to query the ID of the database.</p>
+             * <blockquote>
+             * <p> You can call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> operation to query the ID of a physical database or the <a href="https://help.aliyun.com/document_detail/141874.html">ListLogicDatabases</a> operation to query the ID of a logical database.</p>
+             * </blockquote>
              * 
-             * >  You can call the [ListDatabases](~~141873~~) operation to query the ID of a physical database or the [ListLogicDatabases](~~141874~~) operation to query the ID of a logical database.
+             * <strong>example:</strong>
+             * <p>348****</p>
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -1211,7 +1348,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the database. For information about the valid values of this parameter, see [DbType parameter](~~198106~~).
+             * <p>The type of the database. For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/198106.html">DbType parameter</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -1219,7 +1359,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the database administrator (DBA) of the instance.
+             * <p>The ID of the database administrator (DBA) of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16****</p>
              */
             public Builder dbaId(Long dbaId) {
                 this.dbaId = dbaId;
@@ -1227,7 +1370,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The nickname of the DBA of the instance.
+             * <p>The nickname of the DBA of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DBA</p>
              */
             public Builder dbaName(String dbaName) {
                 this.dbaName = dbaName;
@@ -1235,7 +1381,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The complete endpoint of the database.
+             * <p>The complete endpoint of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test@rm-2ze756u8837****.mysql.rds.aliyuncs.com:3306 [test]</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1243,7 +1392,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The encoding format of the database.
+             * <p>The encoding format of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>utf8</p>
              */
             public Builder encoding(String encoding) {
                 this.encoding = encoding;
@@ -1251,17 +1403,20 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the environment to which the database belongs. Valid values:
-             * <p>
+             * <p>The type of the environment to which the database belongs. Valid values:</p>
+             * <ul>
+             * <li><strong>product</strong>: production environment</li>
+             * <li><strong>dev</strong>: development environment</li>
+             * <li><strong>pre</strong>: staging environment</li>
+             * <li><strong>test</strong>: test environment</li>
+             * <li><strong>sit</strong>: system integration testing (SIT) environment</li>
+             * <li><strong>uat</strong>: user acceptance testing (UAT) environment</li>
+             * <li><strong>pet</strong>: stress testing environment</li>
+             * <li><strong>stag</strong>: STAG environment</li>
+             * </ul>
              * 
-             * *   **product**: production environment
-             * *   **dev**: development environment
-             * *   **pre**: staging environment
-             * *   **test**: test environment
-             * *   **sit**: system integration testing (SIT) environment
-             * *   **uat**: user acceptance testing (UAT) environment
-             * *   **pet**: stress testing environment
-             * *   **stag**: STAG environment
+             * <strong>example:</strong>
+             * <p>product</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -1269,11 +1424,14 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instance needs special attention. Valid values:
-             * <p>
+             * <p>Indicates whether the instance needs special attention. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder follow(Boolean follow) {
                 this.follow = follow;
@@ -1281,7 +1439,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint that is used to connect to the database.
+             * <p>The endpoint that is used to connect to the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-2ze756u8837****.mysql.rds.aliyuncs.com</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -1289,7 +1450,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The region in which the database instance resides.
+             * <p>The region in which the database instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder idc(String idc) {
                 this.idc = idc;
@@ -1297,7 +1461,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the region in which the database instance resides.
+             * <p>The name of the region in which the database instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder idcTitle(String idcTitle) {
                 this.idcTitle = idcTitle;
@@ -1305,7 +1472,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance to which the database belongs.
+             * <p>The ID of the instance to which the database belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>175****</p>
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -1313,14 +1483,17 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the database instance.Valid values:
-             * <p>
+             * <p>The source of the database instance.Valid values:</p>
+             * <ul>
+             * <li><strong>RDS</strong>: an ApsaraDB RDS instance.</li>
+             * <li><strong>ECS_OWN</strong>: a self-managed database deployed on an Elastic Compute Service (ECS) instance.</li>
+             * <li><strong>PUBLIC_OWN</strong>: a self-managed database instance that is connected over the Internet.</li>
+             * <li><strong>VPC_ID</strong>: a self-managed database instance in a virtual private cloud (VPC) that is connected over Express Connect circuits.</li>
+             * <li><strong>GATEWAY</strong>: a database instance connected by using a database gateway.</li>
+             * </ul>
              * 
-             * *   **RDS**: an ApsaraDB RDS instance.
-             * *   **ECS_OWN**: a self-managed database deployed on an Elastic Compute Service (ECS) instance.
-             * *   **PUBLIC_OWN**: a self-managed database instance that is connected over the Internet.
-             * *   **VPC_ID**: a self-managed database instance in a virtual private cloud (VPC) that is connected over Express Connect circuits.
-             * *   **GATEWAY**: a database instance connected by using a database gateway.
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder instanceSource(String instanceSource) {
                 this.instanceSource = instanceSource;
@@ -1328,7 +1501,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the database information was last obtained.
+             * <p>The time when the database information was last obtained.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-14 18:34:45</p>
              */
             public Builder lastSyncTime(String lastSyncTime) {
                 this.lastSyncTime = lastSyncTime;
@@ -1336,7 +1512,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The instance level.
+             * <p>The instance level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>medium</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -1344,11 +1523,14 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the database is logical. Valid values:
-             * <p>
+             * <p>Indicates whether the database is logical. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -1356,26 +1538,29 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the owners of the databases, which are stored as an array. You can call the [GetUser](~~147098~~) or [ListUsers](~~141938~~) operation to query the IDs of the owners.
-             * <p>
-             * 
-             * >  The value of OwnerIds is the same as the value of UserId
+             * <p>The IDs of the owners of the databases, which are stored as an array. You can call the <a href="https://help.aliyun.com/document_detail/147098.html">GetUser</a> or <a href="https://help.aliyun.com/document_detail/141938.html">ListUsers</a> operation to query the IDs of the owners.</p>
+             * <blockquote>
+             * <p> The value of OwnerIds is the same as the value of UserId</p>
+             * </blockquote>
              */
-            public Builder ownerIds(java.util.List < Long > ownerIds) {
+            public Builder ownerIds(java.util.List<Long> ownerIds) {
                 this.ownerIds = ownerIds;
                 return this;
             }
 
             /**
-             * The usernames of the database owners.
+             * <p>The usernames of the database owners.</p>
              */
-            public Builder ownerNames(java.util.List < String > ownerNames) {
+            public Builder ownerNames(java.util.List<String> ownerNames) {
                 this.ownerNames = ownerNames;
                 return this;
             }
 
             /**
-             * The port that is used to connect to the database.
+             * <p>The port that is used to connect to the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(Long port) {
                 this.port = port;
@@ -1383,7 +1568,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -1391,7 +1579,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name that is used to search for the database.
+             * <p>The name that is used to search for the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test@rm-2ze756u8837****.mysql.rds.aliyuncs.com:3306 [test]</p>
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;
@@ -1399,7 +1590,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the control mode of the instance.
+             * <p>The details of the control mode of the instance.</p>
              */
             public Builder standardGroup(StandardGroup standardGroup) {
                 this.standardGroup = standardGroup;
@@ -1407,13 +1598,16 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the database. Valid values:
-             * <p>
+             * <p>The status of the database. Valid values:</p>
+             * <ul>
+             * <li><strong>NORMAL</strong>: The database is running as expected.</li>
+             * <li><strong>DISABLE</strong>: The database is disabled.</li>
+             * <li><strong>OFFLINE</strong>: The database is unpublished.</li>
+             * <li><strong>NOT_EXIST</strong>: The database does not exist.</li>
+             * </ul>
              * 
-             * *   **NORMAL**: The database is running as expected.
-             * *   **DISABLE**: The database is disabled.
-             * *   **OFFLINE**: The database is unpublished.
-             * *   **NOT_EXIST**: The database does not exist.
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -1421,7 +1615,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of tables.
+             * <p>The number of tables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>201</p>
              */
             public Builder tableCount(Long tableCount) {
                 this.tableCount = tableCount;
@@ -1429,7 +1626,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of TNS.
+             * <p>The name of TNS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TNS_4010</p>
              */
             public Builder tnsName(String tnsName) {
                 this.tnsName = tnsName;
@@ -1437,7 +1637,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The unit type.
+             * <p>The unit type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder unitType(String unitType) {
                 this.unitType = unitType;
@@ -1451,44 +1654,50 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataArchiveOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataArchiveOrderDetailResponseBody</p>
+     */
     public static class Instances extends TeaModel {
-        @NameInMap("BusinessTime")
+        @com.aliyun.core.annotation.NameInMap("BusinessTime")
         private String businessTime;
 
-        @NameInMap("DagId")
+        @com.aliyun.core.annotation.NameInMap("DagId")
         private Long dagId;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("HistoryDagId")
+        @com.aliyun.core.annotation.NameInMap("HistoryDagId")
         private Long historyDagId;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("LastRunningContext")
+        @com.aliyun.core.annotation.NameInMap("LastRunningContext")
         private String lastRunningContext;
 
-        @NameInMap("Msg")
+        @com.aliyun.core.annotation.NameInMap("Msg")
         private String msg;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Long status;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
-        @NameInMap("TriggerType")
+        @com.aliyun.core.annotation.NameInMap("TriggerType")
         private Long triggerType;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private Instances(Builder builder) {
@@ -1622,7 +1831,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The business time of the task flow. The time is in the yyyy-MM-DD HH:mm:ss format.
+             * <p>The business time of the task flow. The time is displayed in the yyyy-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-14 16:00:57</p>
              */
             public Builder businessTime(String businessTime) {
                 this.businessTime = businessTime;
@@ -1630,7 +1842,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.
+             * <p>The task flow ID. You can call the <a href="https://help.aliyun.com/document_detail/424565.html">ListTaskFlow</a> or <a href="https://help.aliyun.com/document_detail/426672.html">ListLhTaskFlowAndScenario</a> operation to obtain the value of this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>37***</p>
              */
             public Builder dagId(Long dagId) {
                 this.dagId = dagId;
@@ -1638,7 +1853,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the task flow. The time is in the yyyy-MM-DD HH:mm:ss format.
+             * <p>The time when the task flow ended. The time is displayed in the yyyy-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-06-04 15:14:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -1646,7 +1864,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task flow was created.
+             * <p>The time when the task flow was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-14 16:00:57</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -1654,7 +1875,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task flow was last modified.
+             * <p>The time when the task flow was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-14 16:00:57</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -1662,7 +1886,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the historical task flow.
+             * <p>The ID of the historical task flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32***</p>
              */
             public Builder historyDagId(Long historyDagId) {
                 this.historyDagId = historyDagId;
@@ -1670,7 +1897,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the running task flow.
+             * <p>The ID of the instance in the task flow that is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24***</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1678,7 +1908,15 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The running scenario of the last task flow.
+             * <p>The context of the previous execution of the task flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *       &quot;nodes&quot;: [
+             *             48**
+             *       ],
+             *       &quot;edges&quot;: {}
+             * }</p>
              */
             public Builder lastRunningContext(String lastRunningContext) {
                 this.lastRunningContext = lastRunningContext;
@@ -1686,7 +1924,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The running details of the task.
+             * <p>The context of the current execution of the task flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-15 16:37:48[GMT+08:00] INFO - Resource Control is active!\n2023-05-15 16:37:48[GMT+08:00] INFO - Starting job j_4834 at Mon May 15 16:37:48 CST 2023</p>
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -1694,15 +1935,18 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task. Valid values:
-             * <p>
+             * <p>The status of the task. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The task is waiting for execution.</li>
+             * <li><strong>1</strong>: The task is in progress.</li>
+             * <li><strong>2</strong>: The task is suspended.</li>
+             * <li><strong>3</strong>: The task failed.</li>
+             * <li><strong>4</strong>: The task is successful.</li>
+             * <li><strong>5</strong>: The task is complete.</li>
+             * </ul>
              * 
-             * *   **0**: waiting for execution.
-             * *   **1**: running.
-             * *   **2**: suspended.
-             * *   **3**: failed.
-             * *   **4**: successful.
-             * *   **5**: complete.
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder status(Long status) {
                 this.status = status;
@@ -1710,7 +1954,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The tenant ID.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5***</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -1718,11 +1965,14 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The mode in which the task flow was triggered. Valid values:
-             * <p>
+             * <p>The mode in which the task flow was triggered. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The task flow was triggered based on a schedule.</li>
+             * <li><strong>1</strong>: The task flow was manually triggered.</li>
+             * </ul>
              * 
-             * *   **0**: The task flow was triggered based on a schedule.
-             * *   **1**: The task flow was manually triggered.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder triggerType(Long triggerType) {
                 this.triggerType = triggerType;
@@ -1730,7 +1980,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The version number.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -1744,8 +1997,14 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataArchiveOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataArchiveOrderDetailResponseBody</p>
+     */
     public static class NextFireTimeResult extends TeaModel {
-        @NameInMap("CronFireType")
+        @com.aliyun.core.annotation.NameInMap("CronFireType")
         private String cronFireType;
 
         private NextFireTimeResult(Builder builder) {
@@ -1771,7 +2030,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             private String cronFireType; 
 
             /**
-             * The type of scheduled triggering.
+             * <p>The type of scheduled triggering.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NOT_SET</p>
              */
             public Builder cronFireType(String cronFireType) {
                 this.cronFireType = cronFireType;
@@ -1785,30 +2047,36 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataArchiveOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataArchiveOrderDetailResponseBody</p>
+     */
     public static class PluginExtraData extends TeaModel {
-        @NameInMap("DagInfo")
+        @com.aliyun.core.annotation.NameInMap("DagInfo")
         private DagInfo dagInfo;
 
-        @NameInMap("DbBaseInfo")
+        @com.aliyun.core.annotation.NameInMap("DbBaseInfo")
         private DbBaseInfo dbBaseInfo;
 
-        @NameInMap("InstanceTotal")
+        @com.aliyun.core.annotation.NameInMap("InstanceTotal")
         private Long instanceTotal;
 
-        @NameInMap("Instances")
-        private java.util.List < Instances> instances;
+        @com.aliyun.core.annotation.NameInMap("Instances")
+        private java.util.List<Instances> instances;
 
-        @NameInMap("NextFireTimeResult")
+        @com.aliyun.core.annotation.NameInMap("NextFireTimeResult")
         private NextFireTimeResult nextFireTimeResult;
 
-        @NameInMap("PageIndex")
+        @com.aliyun.core.annotation.NameInMap("PageIndex")
         private Long pageIndex;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Long pageSize;
 
-        @NameInMap("TempTableNameMap")
-        private java.util.Map < String, ? > tempTableNameMap;
+        @com.aliyun.core.annotation.NameInMap("TempTableNameMap")
+        private java.util.Map<String, ?> tempTableNameMap;
 
         private PluginExtraData(Builder builder) {
             this.dagInfo = builder.dagInfo;
@@ -1853,7 +2121,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         /**
          * @return instances
          */
-        public java.util.List < Instances> getInstances() {
+        public java.util.List<Instances> getInstances() {
             return this.instances;
         }
 
@@ -1881,7 +2149,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         /**
          * @return tempTableNameMap
          */
-        public java.util.Map < String, ? > getTempTableNameMap() {
+        public java.util.Map<String, ?> getTempTableNameMap() {
             return this.tempTableNameMap;
         }
 
@@ -1889,14 +2157,14 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             private DagInfo dagInfo; 
             private DbBaseInfo dbBaseInfo; 
             private Long instanceTotal; 
-            private java.util.List < Instances> instances; 
+            private java.util.List<Instances> instances; 
             private NextFireTimeResult nextFireTimeResult; 
             private Long pageIndex; 
             private Long pageSize; 
-            private java.util.Map < String, ? > tempTableNameMap; 
+            private java.util.Map<String, ?> tempTableNameMap; 
 
             /**
-             * The information about the workflow.
+             * <p>The information about the workflow.</p>
              */
             public Builder dagInfo(DagInfo dagInfo) {
                 this.dagInfo = dagInfo;
@@ -1904,7 +2172,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The database information related to data archiving tickets.
+             * <p>The database information related to data archiving tickets.</p>
              */
             public Builder dbBaseInfo(DbBaseInfo dbBaseInfo) {
                 this.dbBaseInfo = dbBaseInfo;
@@ -1912,7 +2180,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of archiving tasks.
+             * <p>The total number of archiving tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder instanceTotal(Long instanceTotal) {
                 this.instanceTotal = instanceTotal;
@@ -1920,15 +2191,15 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The list of archiving tasks.
+             * <p>The list of archiving tasks.</p>
              */
-            public Builder instances(java.util.List < Instances> instances) {
+            public Builder instances(java.util.List<Instances> instances) {
                 this.instances = instances;
                 return this;
             }
 
             /**
-             * The time when the next task is triggered.
+             * <p>The time when the next task is triggered.</p>
              */
             public Builder nextFireTimeResult(NextFireTimeResult nextFireTimeResult) {
                 this.nextFireTimeResult = nextFireTimeResult;
@@ -1936,7 +2207,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageIndex(Long pageIndex) {
                 this.pageIndex = pageIndex;
@@ -1944,7 +2218,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -1952,9 +2229,16 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the temporary table that is generated by the archiving task (indicated by the archiving task ID).
+             * <p>The name of the temporary table that is generated by the archiving task (indicated by the archiving task ID).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *       &quot;803***&quot;: [
+             *             &quot;tmp_dms_21321_20230704144336_temp_test_check&quot;
+             *       ]
+             * }</p>
              */
-            public Builder tempTableNameMap(java.util.Map < String, ? > tempTableNameMap) {
+            public Builder tempTableNameMap(java.util.Map<String, ?> tempTableNameMap) {
                 this.tempTableNameMap = tempTableNameMap;
                 return this;
             }
@@ -1966,11 +2250,17 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataArchiveOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataArchiveOrderDetailResponseBody</p>
+     */
     public static class TableIncludes extends TeaModel {
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
-        @NameInMap("TableWhere")
+        @com.aliyun.core.annotation.NameInMap("TableWhere")
         private String tableWhere;
 
         private TableIncludes(Builder builder) {
@@ -2005,7 +2295,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             private String tableWhere; 
 
             /**
-             * The name of the table.
+             * <p>The table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tm_insured_cb</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -2013,7 +2306,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The filter conditions.
+             * <p>The filter condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>id&lt;1000 or gmt_create&lt;&quot;2023-05-14 16:00:57&quot;</p>
              */
             public Builder tableWhere(String tableWhere) {
                 this.tableWhere = tableWhere;
@@ -2027,36 +2323,42 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataArchiveOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataArchiveOrderDetailResponseBody</p>
+     */
     public static class PluginParam extends TeaModel {
-        @NameInMap("ArchiveMethod")
+        @com.aliyun.core.annotation.NameInMap("ArchiveMethod")
         private String archiveMethod;
 
-        @NameInMap("DbSchema")
+        @com.aliyun.core.annotation.NameInMap("DbSchema")
         private String dbSchema;
 
-        @NameInMap("Logic")
+        @com.aliyun.core.annotation.NameInMap("Logic")
         private Boolean logic;
 
-        @NameInMap("OrderAfter")
-        private java.util.List < String > orderAfter;
+        @com.aliyun.core.annotation.NameInMap("OrderAfter")
+        private java.util.List<String> orderAfter;
 
-        @NameInMap("RunMethod")
+        @com.aliyun.core.annotation.NameInMap("RunMethod")
         private String runMethod;
 
-        @NameInMap("SourceDatabaseId")
+        @com.aliyun.core.annotation.NameInMap("SourceDatabaseId")
         private Long sourceDatabaseId;
 
-        @NameInMap("TableIncludes")
-        private java.util.List < TableIncludes> tableIncludes;
+        @com.aliyun.core.annotation.NameInMap("TableIncludes")
+        private java.util.List<TableIncludes> tableIncludes;
 
-        @NameInMap("TableMapping")
-        private java.util.List < String > tableMapping;
+        @com.aliyun.core.annotation.NameInMap("TableMapping")
+        private java.util.List<String> tableMapping;
 
-        @NameInMap("TargetInstanceId")
+        @com.aliyun.core.annotation.NameInMap("TargetInstanceId")
         private String targetInstanceId;
 
-        @NameInMap("Variables")
-        private java.util.List < String > variables;
+        @com.aliyun.core.annotation.NameInMap("Variables")
+        private java.util.List<String> variables;
 
         private PluginParam(Builder builder) {
             this.archiveMethod = builder.archiveMethod;
@@ -2103,7 +2405,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         /**
          * @return orderAfter
          */
-        public java.util.List < String > getOrderAfter() {
+        public java.util.List<String> getOrderAfter() {
             return this.orderAfter;
         }
 
@@ -2124,14 +2426,14 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         /**
          * @return tableIncludes
          */
-        public java.util.List < TableIncludes> getTableIncludes() {
+        public java.util.List<TableIncludes> getTableIncludes() {
             return this.tableIncludes;
         }
 
         /**
          * @return tableMapping
          */
-        public java.util.List < String > getTableMapping() {
+        public java.util.List<String> getTableMapping() {
             return this.tableMapping;
         }
 
@@ -2145,7 +2447,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         /**
          * @return variables
          */
-        public java.util.List < String > getVariables() {
+        public java.util.List<String> getVariables() {
             return this.variables;
         }
 
@@ -2153,16 +2455,19 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             private String archiveMethod; 
             private String dbSchema; 
             private Boolean logic; 
-            private java.util.List < String > orderAfter; 
+            private java.util.List<String> orderAfter; 
             private String runMethod; 
             private Long sourceDatabaseId; 
-            private java.util.List < TableIncludes> tableIncludes; 
-            private java.util.List < String > tableMapping; 
+            private java.util.List<TableIncludes> tableIncludes; 
+            private java.util.List<String> tableMapping; 
             private String targetInstanceId; 
-            private java.util.List < String > variables; 
+            private java.util.List<String> variables; 
 
             /**
-             * The type of the archiving destination.
+             * <p>The type of the archiving destination.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>inner_oss</p>
              */
             public Builder archiveMethod(String archiveMethod) {
                 this.archiveMethod = archiveMethod;
@@ -2170,7 +2475,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The schema of the database and table to be archived.
+             * <p>The schema of the database and table to be archived.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder dbSchema(String dbSchema) {
                 this.dbSchema = dbSchema;
@@ -2178,11 +2486,14 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the database is logical.
-             * <p>
+             * <p>Indicates whether the database is logical.</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -2190,15 +2501,18 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The post behavior of archiving.
+             * <p>The post behavior of archiving.</p>
              */
-            public Builder orderAfter(java.util.List < String > orderAfter) {
+            public Builder orderAfter(java.util.List<String> orderAfter) {
                 this.orderAfter = orderAfter;
                 return this;
             }
 
             /**
-             * The running method, which indicates whether to run the task immediately or at a specific point in time.
+             * <p>The running method, which indicates whether to run the task immediately or at a specific point in time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>now</p>
              */
             public Builder runMethod(String runMethod) {
                 this.runMethod = runMethod;
@@ -2206,7 +2520,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the source database.
+             * <p>The ID of the source database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12***</p>
              */
             public Builder sourceDatabaseId(Long sourceDatabaseId) {
                 this.sourceDatabaseId = sourceDatabaseId;
@@ -2214,23 +2531,26 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The list of the archived tables and the filter conditions.
+             * <p>The list of the archived tables and the filter conditions.</p>
              */
-            public Builder tableIncludes(java.util.List < TableIncludes> tableIncludes) {
+            public Builder tableIncludes(java.util.List<TableIncludes> tableIncludes) {
                 this.tableIncludes = tableIncludes;
                 return this;
             }
 
             /**
-             * The mapping of schemas.
+             * <p>The mapping of schemas.</p>
              */
-            public Builder tableMapping(java.util.List < String > tableMapping) {
+            public Builder tableMapping(java.util.List<String> tableMapping) {
                 this.tableMapping = tableMapping;
                 return this;
             }
 
             /**
-             * The ID of the destination instance.
+             * <p>The ID of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12***</p>
              */
             public Builder targetInstanceId(String targetInstanceId) {
                 this.targetInstanceId = targetInstanceId;
@@ -2238,9 +2558,9 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time variable defined for scheduled archiving.
+             * <p>The time variable defined for scheduled archiving.</p>
              */
-            public Builder variables(java.util.List < String > variables) {
+            public Builder variables(java.util.List<String> variables) {
                 this.variables = variables;
                 return this;
             }
@@ -2252,50 +2572,56 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataArchiveOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataArchiveOrderDetailResponseBody</p>
+     */
     public static class DataArchiveOrderDetail extends TeaModel {
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("Committer")
+        @com.aliyun.core.annotation.NameInMap("Committer")
         private String committer;
 
-        @NameInMap("CommitterId")
+        @com.aliyun.core.annotation.NameInMap("CommitterId")
         private Long committerId;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("PluginExtraData")
+        @com.aliyun.core.annotation.NameInMap("PluginExtraData")
         private PluginExtraData pluginExtraData;
 
-        @NameInMap("PluginParam")
+        @com.aliyun.core.annotation.NameInMap("PluginParam")
         private PluginParam pluginParam;
 
-        @NameInMap("PluginType")
+        @com.aliyun.core.annotation.NameInMap("PluginType")
         private String pluginType;
 
-        @NameInMap("RelatedUserList")
-        private java.util.List < Long > relatedUserList;
+        @com.aliyun.core.annotation.NameInMap("RelatedUserList")
+        private java.util.List<Long> relatedUserList;
 
-        @NameInMap("RelatedUserNickList")
-        private java.util.List < String > relatedUserNickList;
+        @com.aliyun.core.annotation.NameInMap("RelatedUserNickList")
+        private java.util.List<String> relatedUserNickList;
 
-        @NameInMap("StatusCode")
+        @com.aliyun.core.annotation.NameInMap("StatusCode")
         private String statusCode;
 
-        @NameInMap("StatusDesc")
+        @com.aliyun.core.annotation.NameInMap("StatusDesc")
         private String statusDesc;
 
-        @NameInMap("WorkflowInstanceId")
+        @com.aliyun.core.annotation.NameInMap("WorkflowInstanceId")
         private Long workflowInstanceId;
 
-        @NameInMap("WorkflowStatusDesc")
+        @com.aliyun.core.annotation.NameInMap("WorkflowStatusDesc")
         private String workflowStatusDesc;
 
         private DataArchiveOrderDetail(Builder builder) {
@@ -2390,14 +2716,14 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         /**
          * @return relatedUserList
          */
-        public java.util.List < Long > getRelatedUserList() {
+        public java.util.List<Long> getRelatedUserList() {
             return this.relatedUserList;
         }
 
         /**
          * @return relatedUserNickList
          */
-        public java.util.List < String > getRelatedUserNickList() {
+        public java.util.List<String> getRelatedUserNickList() {
             return this.relatedUserNickList;
         }
 
@@ -2439,15 +2765,18 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             private PluginExtraData pluginExtraData; 
             private PluginParam pluginParam; 
             private String pluginType; 
-            private java.util.List < Long > relatedUserList; 
-            private java.util.List < String > relatedUserNickList; 
+            private java.util.List<Long> relatedUserList; 
+            private java.util.List<String> relatedUserNickList; 
             private String statusCode; 
             private String statusDesc; 
             private Long workflowInstanceId; 
             private String workflowStatusDesc; 
 
             /**
-             * The description of the data archiving tickets.
+             * <p>The description of the data archiving tickets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Archiving of test results</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -2455,7 +2784,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The user who submitted the ticket.
+             * <p>The user who submitted the ticket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dmstest</p>
              */
             public Builder committer(String committer) {
                 this.committer = committer;
@@ -2463,7 +2795,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user who submitted the ticket. The ID is a user ID and not the ID of an Alibaba Cloud account.
+             * <p>The ID of the user who submitted the ticket. The ID is a user ID and not the ID of an Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26***</p>
              */
             public Builder committerId(Long committerId) {
                 this.committerId = committerId;
@@ -2471,7 +2806,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the ticket was created.
+             * <p>The time when the ticket was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-15 16:00:48</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -2479,7 +2817,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the ticket was last modified.
+             * <p>The time when the ticket was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-23 16:00:48</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -2487,7 +2828,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of data archiving tickets.
+             * <p>The ID of data archiving tickets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>868****</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -2495,7 +2839,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The additional information about the ticket.
+             * <p>The additional information about the ticket.</p>
              */
             public Builder pluginExtraData(PluginExtraData pluginExtraData) {
                 this.pluginExtraData = pluginExtraData;
@@ -2503,7 +2847,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ticket creation parameter. The value is a JSON string. For more information, see [PluginType parameter](~~429109~~).
+             * <p>The ticket creation parameter. The value is a JSON string. For more information, see <a href="https://help.aliyun.com/document_detail/429109.html">PluginType parameter</a>.</p>
              */
             public Builder pluginParam(PluginParam pluginParam) {
                 this.pluginParam = pluginParam;
@@ -2511,7 +2855,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The plug-in type that corresponds to the type of the ticket. The plug-in type for data archiving is DATA_ARCHIVE. For more information, see [PluginType parameter](~~429109~~).
+             * <p>The plug-in type that corresponds to the type of the ticket. The plug-in type for data archiving is DATA_ARCHIVE. For more information, see <a href="https://help.aliyun.com/document_detail/429109.html">PluginType parameter</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DATA_ARCHIVE</p>
              */
             public Builder pluginType(String pluginType) {
                 this.pluginType = pluginType;
@@ -2519,32 +2866,35 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The user IDs related to the ticket.
+             * <p>The user IDs related to the ticket.</p>
              */
-            public Builder relatedUserList(java.util.List < Long > relatedUserList) {
+            public Builder relatedUserList(java.util.List<Long> relatedUserList) {
                 this.relatedUserList = relatedUserList;
                 return this;
             }
 
             /**
-             * The nicknames of the users that are related to the ticket.
+             * <p>The nicknames of the users that are related to the ticket.</p>
              */
-            public Builder relatedUserNickList(java.util.List < String > relatedUserNickList) {
+            public Builder relatedUserNickList(java.util.List<String> relatedUserNickList) {
                 this.relatedUserNickList = relatedUserNickList;
                 return this;
             }
 
             /**
-             * The status code of the ticket. Valid values:
-             * <p>
+             * <p>The status code of the ticket. Valid values:</p>
+             * <ul>
+             * <li><strong>new</strong>: newly created.</li>
+             * <li><strong>toaudit</strong>: being reviewed.</li>
+             * <li><strong>Approved</strong>: approved.</li>
+             * <li><strong>reject</strong>: rejected.</li>
+             * <li><strong>processing</strong>: being executed.</li>
+             * <li><strong>Success</strong>: successful.</li>
+             * <li><strong>closed</strong>: disabled.</li>
+             * </ul>
              * 
-             * *   **new**: newly created.
-             * *   **toaudit**: being reviewed.
-             * *   **Approved**: approved.
-             * *   **reject**: rejected.
-             * *   **processing**: being executed.
-             * *   **Success**: successful.
-             * *   **closed**: disabled.
+             * <strong>example:</strong>
+             * <p>processing</p>
              */
             public Builder statusCode(String statusCode) {
                 this.statusCode = statusCode;
@@ -2552,7 +2902,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The status description of the ticket.
+             * <p>The status description of the ticket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a ticket task is being executed.</p>
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;
@@ -2560,7 +2913,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the approval process. You can call the [GetOrderBaseInfo](~~144642~~) operation to obtain the ID of the approval process.
+             * <p>The ID of the approval process. You can call the <a href="https://help.aliyun.com/document_detail/144642.html">GetOrderBaseInfo</a> operation to obtain the ID of the approval process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>29****</p>
              */
             public Builder workflowInstanceId(Long workflowInstanceId) {
                 this.workflowInstanceId = workflowInstanceId;
@@ -2568,7 +2924,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the approval process.
+             * <p>The description of the approval process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approved</p>
              */
             public Builder workflowStatusDesc(String workflowStatusDesc) {
                 this.workflowStatusDesc = workflowStatusDesc;

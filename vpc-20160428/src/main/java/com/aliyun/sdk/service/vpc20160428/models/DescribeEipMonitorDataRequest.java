@@ -1,54 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEipMonitorDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeEipMonitorDataRequest</p>
  */
 public class DescribeEipMonitorDataRequest extends Request {
-    @Query
-    @NameInMap("AllocationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllocationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String allocationId;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
     private DescribeEipMonitorDataRequest(Builder builder) {
@@ -169,7 +174,11 @@ public class DescribeEipMonitorDataRequest extends Request {
         } 
 
         /**
-         * The ID of the EIP.
+         * <p>The ID of the EIP.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-2zeerraiwb7uj6idcfv****</p>
          */
         public Builder allocationId(String allocationId) {
             this.putQueryParameter("AllocationId", allocationId);
@@ -178,10 +187,12 @@ public class DescribeEipMonitorDataRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The time must be in UTC. Specify the time in the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. For example, `2013-01-10T12:00:00Z` specifies 20:00:00 (UTC+8) on January 10, 2013.
-         * <p>
+         * <p>The end of the time range to query. The time must be in UTC. Specify the time in the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. For example, <code>2013-01-10T12:00:00Z</code> specifies 20:00:00 (UTC+8) on January 10, 2013.</p>
+         * <p>If the value of seconds (ss) is not 00, the end time is automatically rounded up to the next minute.</p>
+         * <p>This parameter is required.</p>
          * 
-         * If the value of seconds (ss) is not 00, the end time is automatically rounded up to the next minute.
+         * <strong>example:</strong>
+         * <p>2020-01-05T03:05:10Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -208,11 +219,14 @@ public class DescribeEipMonitorDataRequest extends Request {
         }
 
         /**
-         * The duration of each monitoring data entry. Unit: seconds. Valid values: **60** (default), **300**, **900**, and **3600**.
-         * <p>
+         * <p>The duration of each monitoring data entry. Unit: seconds. Valid values: <strong>60</strong> (default), <strong>300</strong>, <strong>900</strong>, and <strong>3600</strong>.</p>
+         * <ul>
+         * <li>If the value of <strong>(EndTime</strong> - <strong>StartTime</strong>)/<strong>Period</strong> is greater than 200, a maximum of 200 monitoring data entries are returned at a time.</li>
+         * <li>If the value of (<strong>EndTime</strong> - <strong>StartTime</strong>)/<strong>Period</strong> is less than or equal to 200, only the monitoring data collected between the start time and end time is returned.</li>
+         * </ul>
          * 
-         * *   If the value of **(EndTime** - **StartTime**)/**Period** is greater than 200, a maximum of 200 monitoring data entries are returned at a time.
-         * *   If the value of (**EndTime** - **StartTime**)/**Period** is less than or equal to 200, only the monitoring data collected between the start time and end time is returned.
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -221,7 +235,10 @@ public class DescribeEipMonitorDataRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the EIP belongs. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <p>The ID of the region to which the EIP belongs. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -248,10 +265,12 @@ public class DescribeEipMonitorDataRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The time must be in UTC. Specify the time in the ISO 8601 standard in `YYYY-MM-DDThh:mm:ssZ` format. For example, `2013-01-10T12:00:00Z` specifies 20:00:00 (UTC+8) on January 10, 2013.
-         * <p>
+         * <p>The beginning of the time range to query. The time must be in UTC. Specify the time in the ISO 8601 standard in <code>YYYY-MM-DDThh:mm:ssZ</code> format. For example, <code>2013-01-10T12:00:00Z</code> specifies 20:00:00 (UTC+8) on January 10, 2013.</p>
+         * <p>If the value of seconds (ss) is not 00, the start time is automatically rounded up to the next minute.</p>
+         * <p>This parameter is required.</p>
          * 
-         * If the value of seconds (ss) is not 00, the start time is automatically rounded up to the next minute.
+         * <strong>example:</strong>
+         * <p>2020-01-05T01:05:05Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

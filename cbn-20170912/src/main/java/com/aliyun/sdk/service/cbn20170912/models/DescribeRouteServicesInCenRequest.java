@@ -1,60 +1,65 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRouteServicesInCenRequest} extends {@link RequestModel}
  *
  * <p>DescribeRouteServicesInCenRequest</p>
  */
 public class DescribeRouteServicesInCenRequest extends Request {
-    @Query
-    @NameInMap("AccessRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessRegionId")
     private String accessRegionId;
 
-    @Query
-    @NameInMap("CenId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CenId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cenId;
 
-    @Query
-    @NameInMap("Host")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Host")
     private String host;
 
-    @Query
-    @NameInMap("HostRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostRegionId")
     private String hostRegionId;
 
-    @Query
-    @NameInMap("HostVpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostVpcId")
     private String hostVpcId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private DescribeRouteServicesInCenRequest(Builder builder) {
@@ -195,7 +200,10 @@ public class DescribeRouteServicesInCenRequest extends Request {
         } 
 
         /**
-         * The ID of the region where the cloud service is accessed.
+         * <p>The ID of the region where the cloud service is accessed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder accessRegionId(String accessRegionId) {
             this.putQueryParameter("AccessRegionId", accessRegionId);
@@ -204,7 +212,11 @@ public class DescribeRouteServicesInCenRequest extends Request {
         }
 
         /**
-         * The ID of the CEN instance.
+         * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-pfa6ugf3xl0qsd****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -213,10 +225,11 @@ public class DescribeRouteServicesInCenRequest extends Request {
         }
 
         /**
-         * The service address of the cloud service.
-         * <p>
+         * <p>The service address of the cloud service.</p>
+         * <p>You can enter a domain name, an IP address, or a CIDR block.</p>
          * 
-         * You can enter a domain name, an IP address, or a CIDR block.
+         * <strong>example:</strong>
+         * <p>100.118.28.0/24</p>
          */
         public Builder host(String host) {
             this.putQueryParameter("Host", host);
@@ -225,10 +238,11 @@ public class DescribeRouteServicesInCenRequest extends Request {
         }
 
         /**
-         * The ID of the region where the cloud service is deployed.
-         * <p>
+         * <p>The region ID of the cloud service.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder hostRegionId(String hostRegionId) {
             this.putQueryParameter("HostRegionId", hostRegionId);
@@ -237,7 +251,10 @@ public class DescribeRouteServicesInCenRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) that is associated with the cloud service.
+         * <p>The ID of the VPC associated with the cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1h8vbrbcgohcju5****</p>
          */
         public Builder hostVpcId(String hostVpcId) {
             this.putQueryParameter("HostVpcId", hostVpcId);
@@ -264,7 +281,10 @@ public class DescribeRouteServicesInCenRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -273,7 +293,10 @@ public class DescribeRouteServicesInCenRequest extends Request {
         }
 
         /**
-         * The number of entries to return per page. Default value: **10**. Valid values: **1** to **50**.
+         * <p>The number of entries per page. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200630.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCertificatePrivateKeyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCertificatePrivateKeyResponseBody</p>
  */
 public class DescribeCertificatePrivateKeyResponseBody extends TeaModel {
-    @NameInMap("EncryptedData")
+    @com.aliyun.core.annotation.NameInMap("EncryptedData")
     private String encryptedData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCertificatePrivateKeyResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DescribeCertificatePrivateKeyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The content of the encrypted private key.
+         * <p>The content of the encrypted private key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN ENCRYPTED PRIVATE KEY----- …… -----END ENCRYPTED PRIVATE KEY-----</p>
          */
         public Builder encryptedData(String encryptedData) {
             this.encryptedData = encryptedData;
@@ -58,7 +66,10 @@ public class DescribeCertificatePrivateKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>09470F19-CEE8-5C63-BF2C-02B5E3F07A17</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

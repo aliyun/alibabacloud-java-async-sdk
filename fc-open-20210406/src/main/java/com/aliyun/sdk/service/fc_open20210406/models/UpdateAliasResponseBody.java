@@ -27,6 +27,12 @@ public class UpdateAliasResponseBody extends TeaModel {
     @NameInMap("lastModifiedTime")
     private String lastModifiedTime;
 
+    @NameInMap("resolvePolicy")
+    private String resolvePolicy;
+
+    @NameInMap("routePolicy")
+    private RoutePolicy routePolicy;
+
     @NameInMap("versionId")
     private String versionId;
 
@@ -36,6 +42,8 @@ public class UpdateAliasResponseBody extends TeaModel {
         this.createdTime = builder.createdTime;
         this.description = builder.description;
         this.lastModifiedTime = builder.lastModifiedTime;
+        this.resolvePolicy = builder.resolvePolicy;
+        this.routePolicy = builder.routePolicy;
         this.versionId = builder.versionId;
     }
 
@@ -83,6 +91,20 @@ public class UpdateAliasResponseBody extends TeaModel {
     }
 
     /**
+     * @return resolvePolicy
+     */
+    public String getResolvePolicy() {
+        return this.resolvePolicy;
+    }
+
+    /**
+     * @return routePolicy
+     */
+    public RoutePolicy getRoutePolicy() {
+        return this.routePolicy;
+    }
+
+    /**
      * @return versionId
      */
     public String getVersionId() {
@@ -95,6 +117,8 @@ public class UpdateAliasResponseBody extends TeaModel {
         private String createdTime; 
         private String description; 
         private String lastModifiedTime; 
+        private String resolvePolicy; 
+        private RoutePolicy routePolicy; 
         private String versionId; 
 
         /**
@@ -138,6 +162,22 @@ public class UpdateAliasResponseBody extends TeaModel {
          */
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
+            return this;
+        }
+
+        /**
+         * resolvePolicy.
+         */
+        public Builder resolvePolicy(String resolvePolicy) {
+            this.resolvePolicy = resolvePolicy;
+            return this;
+        }
+
+        /**
+         * routePolicy.
+         */
+        public Builder routePolicy(RoutePolicy routePolicy) {
+            this.routePolicy = routePolicy;
             return this;
         }
 

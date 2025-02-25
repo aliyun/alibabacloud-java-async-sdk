@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyRDSToClickhouseDbResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyRDSToClickhouseDbResponseBody</p>
  */
 public class ModifyRDSToClickhouseDbResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private Long errorCode;
 
-    @NameInMap("ErrorMsg")
+    @com.aliyun.core.annotation.NameInMap("ErrorMsg")
     private String errorMsg;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Long status;
 
     private ModifyRDSToClickhouseDbResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class ModifyRDSToClickhouseDbResponseBody extends TeaModel {
         private Long status; 
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errorCode(Long errorCode) {
             this.errorCode = errorCode;
@@ -82,7 +90,13 @@ public class ModifyRDSToClickhouseDbResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMsg.
+         * <ul>
+         * <li>If the value <strong>1</strong> is returned for the <strong>Status</strong> parameter, the system does not return the ErrorMsg parameter.</li>
+         * <li>If the value <strong>0</strong> is returned for the <strong>Status</strong> parameter, the ErrorMsg parameter returns the cause for the modification failure.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ClickHouse exception, code: 49, host: 100.100.118.132, port: 49670; Code: 49, e.displayText() = DB::Exception: Logical error: there is no global context (version 20.8.17.25)n</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -90,7 +104,10 @@ public class ModifyRDSToClickhouseDbResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>746CD303-0B82-5E8D-886D-93A9FAF3A876</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +115,14 @@ public class ModifyRDSToClickhouseDbResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>Indicates whether the modification was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: The modification was successful.</li>
+         * <li><strong>0</strong>: The modification failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Long status) {
             this.status = status;

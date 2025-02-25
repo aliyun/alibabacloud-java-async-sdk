@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUserResponseBody} extends {@link TeaModel}
  *
  * <p>CreateUserResponseBody</p>
  */
 public class CreateUserResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("User")
+    @com.aliyun.core.annotation.NameInMap("User")
     private User user;
 
     private CreateUserResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class CreateUserResponseBody extends TeaModel {
         private User user; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F6F90F3D-4502-5877-B80B-97476F6AE2CC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class CreateUserResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the user.
+         * <p>The information about the user.</p>
          */
         public Builder user(User user) {
             this.user = user;
@@ -71,38 +74,44 @@ public class CreateUserResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateUserResponseBody</p>
+     */
     public static class User extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("FirstName")
+        @com.aliyun.core.annotation.NameInMap("FirstName")
         private String firstName;
 
-        @NameInMap("LastName")
+        @com.aliyun.core.annotation.NameInMap("LastName")
         private String lastName;
 
-        @NameInMap("ProvisionType")
+        @com.aliyun.core.annotation.NameInMap("ProvisionType")
         private String provisionType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private User(Builder builder) {
@@ -218,7 +227,10 @@ public class CreateUserResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The time when the user was created.
+             * <p>The time when the user was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-10-26T03:03:42Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -226,7 +238,10 @@ public class CreateUserResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the user.
+             * <p>The description of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a user.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -234,7 +249,10 @@ public class CreateUserResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the user.
+             * <p>The display name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alice</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -242,7 +260,10 @@ public class CreateUserResponseBody extends TeaModel {
             }
 
             /**
-             * The email address of the user.
+             * <p>The email address of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:Alice@example.com">Alice@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -250,7 +271,10 @@ public class CreateUserResponseBody extends TeaModel {
             }
 
             /**
-             * The first name of the user.
+             * <p>The first name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alice</p>
              */
             public Builder firstName(String firstName) {
                 this.firstName = firstName;
@@ -258,7 +282,10 @@ public class CreateUserResponseBody extends TeaModel {
             }
 
             /**
-             * The last name of the user.
+             * <p>The last name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Lee</p>
              */
             public Builder lastName(String lastName) {
                 this.lastName = lastName;
@@ -266,11 +293,14 @@ public class CreateUserResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the user. Valid values:
-             * <p>
+             * <p>The type of the user. Valid values:</p>
+             * <ul>
+             * <li>Manual: The user is manually created.</li>
+             * <li>Synchronized: The user is synchronized from an external identity provider (IdP).</li>
+             * </ul>
              * 
-             * *   Manual: The user is manually created.
-             * *   Synchronized: The user is synchronized from an external identity provider (IdP).
+             * <strong>example:</strong>
+             * <p>Manual</p>
              */
             public Builder provisionType(String provisionType) {
                 this.provisionType = provisionType;
@@ -278,11 +308,14 @@ public class CreateUserResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the user. Valid values:
-             * <p>
+             * <p>The status of the user. Valid values:</p>
+             * <ul>
+             * <li>Enabled: The logon of the user is enabled.</li>
+             * <li>Disabled: The logon of the user is disabled.</li>
+             * </ul>
              * 
-             * *   Enabled: The logon of the user is enabled.
-             * *   Disabled: The logon of the user is disabled.
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -290,7 +323,10 @@ public class CreateUserResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the user was modified.
+             * <p>The time when the user was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-10-26T03:03:42Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -298,7 +334,10 @@ public class CreateUserResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>u-00q8wbq42wiltcrk****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -306,7 +345,10 @@ public class CreateUserResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the user.
+             * <p>The name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alice</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

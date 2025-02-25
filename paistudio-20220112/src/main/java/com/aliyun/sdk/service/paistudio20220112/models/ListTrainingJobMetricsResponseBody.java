@@ -1,26 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTrainingJobMetricsResponseBody} extends {@link TeaModel}
  *
  * <p>ListTrainingJobMetricsResponseBody</p>
  */
 public class ListTrainingJobMetricsResponseBody extends TeaModel {
-    @NameInMap("Metrics")
-    private java.util.List < Metrics> metrics;
+    @com.aliyun.core.annotation.NameInMap("Metrics")
+    private java.util.List<Metrics> metrics;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
+    private Long totalCount;
 
     private ListTrainingJobMetricsResponseBody(Builder builder) {
         this.metrics = builder.metrics;
         this.requestId = builder.requestId;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -34,7 +43,7 @@ public class ListTrainingJobMetricsResponseBody extends TeaModel {
     /**
      * @return metrics
      */
-    public java.util.List < Metrics> getMetrics() {
+    public java.util.List<Metrics> getMetrics() {
         return this.metrics;
     }
 
@@ -45,14 +54,22 @@ public class ListTrainingJobMetricsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return totalCount
+     */
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
     public static final class Builder {
-        private java.util.List < Metrics> metrics; 
+        private java.util.List<Metrics> metrics; 
         private String requestId; 
+        private Long totalCount; 
 
         /**
          * Metrics.
          */
-        public Builder metrics(java.util.List < Metrics> metrics) {
+        public Builder metrics(java.util.List<Metrics> metrics) {
             this.metrics = metrics;
             return this;
         }
@@ -65,20 +82,34 @@ public class ListTrainingJobMetricsResponseBody extends TeaModel {
             return this;
         }
 
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Long totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+
         public ListTrainingJobMetricsResponseBody build() {
             return new ListTrainingJobMetricsResponseBody(this);
         } 
 
     } 
 
+    /**
+     * 
+     * {@link ListTrainingJobMetricsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTrainingJobMetricsResponseBody</p>
+     */
     public static class Metrics extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private String timestamp;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Double value;
 
         private Metrics(Builder builder) {
@@ -130,7 +161,10 @@ public class ListTrainingJobMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-18T22:20:55Z</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;

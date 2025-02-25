@@ -1,40 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGlobalResourceRequest} extends {@link RequestModel}
  *
  * <p>CreateGlobalResourceRequest</p>
  */
 public class CreateGlobalResourceRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("ResourceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceName;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
     private CreateGlobalResourceRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
         this.clusterId = builder.clusterId;
+        this.regionId = builder.regionId;
         this.resourceName = builder.resourceName;
         this.resourceType = builder.resourceType;
     }
@@ -67,6 +77,13 @@ public class CreateGlobalResourceRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceName
      */
     public String getResourceName() {
@@ -83,6 +100,7 @@ public class CreateGlobalResourceRequest extends Request {
     public static final class Builder extends Request.Builder<CreateGlobalResourceRequest, Builder> {
         private String clientToken; 
         private String clusterId; 
+        private String regionId; 
         private String resourceName; 
         private String resourceType; 
 
@@ -94,6 +112,7 @@ public class CreateGlobalResourceRequest extends Request {
             super(request);
             this.clientToken = request.clientToken;
             this.clusterId = request.clusterId;
+            this.regionId = request.regionId;
             this.resourceName = request.resourceName;
             this.resourceType = request.resourceType;
         } 
@@ -108,7 +127,10 @@ public class CreateGlobalResourceRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hb-t4naqsay5gn****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -117,7 +139,19 @@ public class CreateGlobalResourceRequest extends Request {
         }
 
         /**
-         * ResourceName.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PubPhoenixSLBQueryServerVip</p>
          */
         public Builder resourceName(String resourceName) {
             this.putQueryParameter("ResourceName", resourceName);
@@ -126,7 +160,10 @@ public class CreateGlobalResourceRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GLOBAL_VIP</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

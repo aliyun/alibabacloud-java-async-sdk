@@ -1,55 +1,65 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApiGroupsRequest} extends {@link RequestModel}
  *
  * <p>DescribeApiGroupsRequest</p>
  */
 public class DescribeApiGroupsRequest extends Request {
-    @Query
-    @NameInMap("EnableTagAuth")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BasePath")
+    private String basePath;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableTagAuth")
     private Boolean enableTagAuth;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("Sort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sort")
     private String sort;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private DescribeApiGroupsRequest(Builder builder) {
         super(builder);
+        this.basePath = builder.basePath;
         this.enableTagAuth = builder.enableTagAuth;
         this.groupId = builder.groupId;
         this.groupName = builder.groupName;
@@ -72,6 +82,13 @@ public class DescribeApiGroupsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return basePath
+     */
+    public String getBasePath() {
+        return this.basePath;
     }
 
     /**
@@ -133,11 +150,12 @@ public class DescribeApiGroupsRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<DescribeApiGroupsRequest, Builder> {
+        private String basePath; 
         private Boolean enableTagAuth; 
         private String groupId; 
         private String groupName; 
@@ -146,7 +164,7 @@ public class DescribeApiGroupsRequest extends Request {
         private Integer pageSize; 
         private String securityToken; 
         private String sort; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -154,6 +172,7 @@ public class DescribeApiGroupsRequest extends Request {
 
         private Builder(DescribeApiGroupsRequest request) {
             super(request);
+            this.basePath = request.basePath;
             this.enableTagAuth = request.enableTagAuth;
             this.groupId = request.groupId;
             this.groupName = request.groupName;
@@ -166,7 +185,22 @@ public class DescribeApiGroupsRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable tag verification.
+         * <p>The root path of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/edmdgp/service20250116management01/v1</p>
+         */
+        public Builder basePath(String basePath) {
+            this.putQueryParameter("BasePath", basePath);
+            this.basePath = basePath;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to enable tag verification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableTagAuth(Boolean enableTagAuth) {
             this.putQueryParameter("EnableTagAuth", enableTagAuth);
@@ -175,7 +209,10 @@ public class DescribeApiGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the API group. This ID is generated by the system and globally unique.
+         * <p>The ID of the API group. This ID is generated by the system and globally unique.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>be6d2abcc0dd4f749fc2d2edd6567164</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -184,7 +221,10 @@ public class DescribeApiGroupsRequest extends Request {
         }
 
         /**
-         * The keyword that can be specified in the name of the API group.
+         * <p>The keyword that can be specified in the name of the API group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Traffic</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -193,7 +233,10 @@ public class DescribeApiGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apigateway-cn-v6419k43245xx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -202,7 +245,10 @@ public class DescribeApiGroupsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -211,7 +257,10 @@ public class DescribeApiGroupsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 50. Default value: 10.
+         * <p>The number of entries to return on each page. Maximum value: 50. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -229,11 +278,14 @@ public class DescribeApiGroupsRequest extends Request {
         }
 
         /**
-         * The order. Valid values: asc and desc. Default value: desc.
-         * <p>
+         * <p>The order. Valid values: asc and desc. Default value: desc.</p>
+         * <ul>
+         * <li>asc: The API groups are displayed in ascending order of modification time.</li>
+         * <li>desc: The API groups are displayed in descending order of modification time.</li>
+         * </ul>
          * 
-         * *   asc: The API groups are displayed in ascending order of modification time.
-         * *   desc: The API groups are displayed in descending order of modification time.
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -242,9 +294,9 @@ public class DescribeApiGroupsRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * <p>The list of tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -257,11 +309,17 @@ public class DescribeApiGroupsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeApiGroupsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeApiGroupsRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -296,7 +354,10 @@ public class DescribeApiGroupsRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -304,7 +365,10 @@ public class DescribeApiGroupsRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserInfoInChannelResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUserInfoInChannelResponseBody</p>
  */
 public class DescribeUserInfoInChannelResponseBody extends TeaModel {
-    @NameInMap("IsChannelExist")
+    @com.aliyun.core.annotation.NameInMap("IsChannelExist")
     private Boolean isChannelExist;
 
-    @NameInMap("IsInChannel")
+    @com.aliyun.core.annotation.NameInMap("IsInChannel")
     private Boolean isInChannel;
 
-    @NameInMap("Property")
-    private java.util.List < Property> property;
+    @com.aliyun.core.annotation.NameInMap("Property")
+    private java.util.List<Property> property;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Timestamp")
+    @com.aliyun.core.annotation.NameInMap("Timestamp")
     private Integer timestamp;
 
     private DescribeUserInfoInChannelResponseBody(Builder builder) {
@@ -60,7 +65,7 @@ public class DescribeUserInfoInChannelResponseBody extends TeaModel {
     /**
      * @return property
      */
-    public java.util.List < Property> getProperty() {
+    public java.util.List<Property> getProperty() {
         return this.property;
     }
 
@@ -81,7 +86,7 @@ public class DescribeUserInfoInChannelResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean isChannelExist; 
         private Boolean isInChannel; 
-        private java.util.List < Property> property; 
+        private java.util.List<Property> property; 
         private String requestId; 
         private Integer timestamp; 
 
@@ -104,7 +109,7 @@ public class DescribeUserInfoInChannelResponseBody extends TeaModel {
         /**
          * Property.
          */
-        public Builder property(java.util.List < Property> property) {
+        public Builder property(java.util.List<Property> property) {
             this.property = property;
             return this;
         }
@@ -131,14 +136,20 @@ public class DescribeUserInfoInChannelResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUserInfoInChannelResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUserInfoInChannelResponseBody</p>
+     */
     public static class Property extends TeaModel {
-        @NameInMap("Join")
+        @com.aliyun.core.annotation.NameInMap("Join")
         private Integer join;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private Integer role;
 
-        @NameInMap("Session")
+        @com.aliyun.core.annotation.NameInMap("Session")
         private String session;
 
         private Property(Builder builder) {

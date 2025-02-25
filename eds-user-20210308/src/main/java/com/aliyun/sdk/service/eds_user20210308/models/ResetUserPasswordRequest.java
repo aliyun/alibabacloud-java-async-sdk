@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResetUserPasswordRequest} extends {@link RequestModel}
  *
  * <p>ResetUserPasswordRequest</p>
  */
 public class ResetUserPasswordRequest extends Request {
-    @Body
-    @NameInMap("NotifyType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NotifyType")
     private Integer notifyType;
 
-    @Body
-    @NameInMap("Users")
-    @Validation(required = true)
-    private java.util.List < String > users;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Users")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> users;
 
     private ResetUserPasswordRequest(Builder builder) {
         super(builder);
@@ -50,13 +55,13 @@ public class ResetUserPasswordRequest extends Request {
     /**
      * @return users
      */
-    public java.util.List < String > getUsers() {
+    public java.util.List<String> getUsers() {
         return this.users;
     }
 
     public static final class Builder extends Request.Builder<ResetUserPasswordRequest, Builder> {
         private Integer notifyType; 
-        private java.util.List < String > users; 
+        private java.util.List<String> users; 
 
         private Builder() {
             super();
@@ -69,7 +74,13 @@ public class ResetUserPasswordRequest extends Request {
         } 
 
         /**
-         * The method to notify the user after the password is reset.
+         * <p>The method to notify the user after the password is reset.</p>
+         * <blockquote>
+         * <p>Alibaba Cloud accounts of the international site do not support sending notification through text messages.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder notifyType(Integer notifyType) {
             this.putBodyParameter("NotifyType", notifyType);
@@ -78,9 +89,13 @@ public class ResetUserPasswordRequest extends Request {
         }
 
         /**
-         * The names of the convenience users whose passwords you want to reset.
+         * <p>The names of the convenience users whose passwords you want to reset.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
-        public Builder users(java.util.List < String > users) {
+        public Builder users(java.util.List<String> users) {
             this.putBodyParameter("Users", users);
             this.users = users;
             return this;

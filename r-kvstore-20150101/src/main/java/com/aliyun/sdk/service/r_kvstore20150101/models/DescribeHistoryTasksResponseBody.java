@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHistoryTasksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHistoryTasksResponseBody</p>
  */
 public class DescribeHistoryTasksResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeHistoryTasksResponseBody(Builder builder) {
@@ -86,7 +86,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The request source. Valid values: System and User.
+         * <p>The queried task objects.</p>
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -94,7 +94,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: 1.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +105,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page. Valid values: 10 to 100. Default value: 10.
+         * <p>The maximum number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +116,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The unique ID of the request. If the request fails, provide this ID for technical support to troubleshoot the failure.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5D622714-AEDD-4609-9167-F5DDD3D1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +127,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of tasks that meet these constraints without taking pagination into account.
+         * <p>The total number of tasks that meet these constraints without taking pagination into account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,65 +143,71 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHistoryTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHistoryTasksResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("ActionInfo")
+        @com.aliyun.core.annotation.NameInMap("ActionInfo")
         private String actionInfo;
 
-        @NameInMap("CallerSource")
+        @com.aliyun.core.annotation.NameInMap("CallerSource")
         private String callerSource;
 
-        @NameInMap("CallerUid")
+        @com.aliyun.core.annotation.NameInMap("CallerUid")
         private String callerUid;
 
-        @NameInMap("CurrentStepName")
+        @com.aliyun.core.annotation.NameInMap("CurrentStepName")
         private String currentStepName;
 
-        @NameInMap("DbType")
+        @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("Product")
+        @com.aliyun.core.annotation.NameInMap("Product")
         private String product;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private Float progress;
 
-        @NameInMap("ReasonCode")
+        @com.aliyun.core.annotation.NameInMap("ReasonCode")
         private String reasonCode;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RemainTime")
+        @com.aliyun.core.annotation.NameInMap("RemainTime")
         private Integer remainTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("TaskDetail")
+        @com.aliyun.core.annotation.NameInMap("TaskDetail")
         private String taskDetail;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
-        @NameInMap("Uid")
+        @com.aliyun.core.annotation.NameInMap("Uid")
         private String uid;
 
         private Items(Builder builder) {
@@ -386,7 +404,37 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             private String uid; 
 
             /**
-             * ActionInfo.
+             * <p>A set of allowed actions that can be taken on the task. The system matches the current step name and status of the task to the available actions specified by ActionInfo. If no matching action is found, the current status of the task does not support any action. Example:</p>
+             * <pre><code>{&quot;steps&quot;: [
+             *     {
+             *       &quot;step_name&quot;: &quot;exec_task&quot;, // The name of the step, which matches CurrentStepName.
+             *       &quot;action_info&quot;: {    // The actions supported for this step.
+             *         &quot;Waiting&quot;: [      // The status, which matches Status.
+             *           &quot;modifySwitchTime&quot; // The action. Multiple actions are supported.
+             *         ]
+             *       }
+             *     },
+             *     {
+             *       &quot;step_name&quot;: &quot;init_task&quot;, // The name of the step.
+             *       &quot;action_info&quot;: {    // The actions supported for this step.
+             *         &quot;Running&quot;: [      // The status.
+             *           &quot;cancel&quot;,       // The action.
+             *           &quot;pause&quot;
+             *         ]
+             *       }
+             *     }
+             *   ]
+             * }
+             * </code></pre>
+             * <p>The system may support the following actions:</p>
+             * <ul>
+             * <li><strong>retry</strong></li>
+             * <li><strong>cancel</strong></li>
+             * <li><strong>modifySwitchTime</strong>: changes the switching or restoration time.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;steps&quot;:[{&quot;action_info&quot;:{&quot;Waiting&quot;:[&quot;modifySwitchTime&quot;]},&quot;step_name&quot;:&quot;exec_task&quot;}]}</p>
              */
             public Builder actionInfo(String actionInfo) {
                 this.actionInfo = actionInfo;
@@ -394,7 +442,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * CallerSource.
+             * <p>The ID of the user who made the request. If CallerSource is set to User, CallerUid indicates the unique ID (UID) of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>141345906006****</p>
              */
             public Builder callerSource(String callerSource) {
                 this.callerSource = callerSource;
@@ -402,7 +453,14 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * CallerUid.
+             * <p>The request source. Valid values:</p>
+             * <ul>
+             * <li><strong>System</strong></li>
+             * <li><strong>User</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>User</p>
              */
             public Builder callerUid(String callerUid) {
                 this.callerUid = callerUid;
@@ -410,7 +468,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentStepName.
+             * <p>The name of the current step. If this parameter is left empty, the task is not started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exec_task</p>
              */
             public Builder currentStepName(String currentStepName) {
                 this.currentStepName = currentStepName;
@@ -418,7 +479,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * DbType.
+             * <p>The database type. The return value is redis.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>redis</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -426,7 +490,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the task. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-02-03T12:06:17Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -434,7 +501,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-bp1zxszhcgatnx****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -442,7 +512,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dba-tair-test-qcloud</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -450,7 +523,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * <p>The instance type. The return value is Instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Instance</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -458,7 +534,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Product.
+             * <p>The product. The return value is kvstore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kvstore</p>
              */
             public Builder product(String product) {
                 this.product = product;
@@ -466,7 +545,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * <p>The task progress. Valid values: 0 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>79.0</p>
              */
             public Builder progress(Float progress) {
                 this.progress = progress;
@@ -474,7 +556,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ReasonCode.
+             * <p>The reason why the current task was initiated.</p>
              */
             public Builder reasonCode(String reasonCode) {
                 this.reasonCode = reasonCode;
@@ -482,7 +564,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -490,7 +575,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * RemainTime.
+             * <p>The estimated amount of time remaining to complete the task. Unit: seconds. A value of 0 indicates that the task is completed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder remainTime(Integer remainTime) {
                 this.remainTime = remainTime;
@@ -498,7 +586,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the task. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-02-03T11:31:03Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -506,7 +597,19 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task status.</p>
+             * <ul>
+             * <li><strong>Scheduled</strong></li>
+             * <li><strong>Running</strong></li>
+             * <li><strong>Succeed</strong></li>
+             * <li><strong>Failed</strong></li>
+             * <li><strong>Cancelling</strong></li>
+             * <li><strong>Canceled</strong></li>
+             * <li><strong>Waiting</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -514,7 +617,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskDetail.
+             * <p>The task details. The details vary based on the task type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;callerUid&quot;:&quot;test&quot;}</p>
              */
             public Builder taskDetail(String taskDetail) {
                 this.taskDetail = taskDetail;
@@ -522,7 +628,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-83br18hloy3faf****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -530,7 +639,19 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * <p>The task type.</p>
+             * <ul>
+             * <li><strong>ModifyInsSpec</strong></li>
+             * <li><strong>DeleteInsNode</strong></li>
+             * <li><strong>AddInsNode</strong></li>
+             * <li><strong>HaSwitch</strong></li>
+             * <li><strong>RestartIns</strong></li>
+             * <li><strong>CreateIns</strong></li>
+             * <li><strong>ModifyInsConfig</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ModifyInsSpec</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -538,7 +659,10 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Uid.
+             * <p>The ID of the user to which the resources belong.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>141345906006****</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;

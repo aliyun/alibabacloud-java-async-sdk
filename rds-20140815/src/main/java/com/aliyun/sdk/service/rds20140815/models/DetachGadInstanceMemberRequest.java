@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachGadInstanceMemberRequest} extends {@link RequestModel}
  *
  * <p>DetachGadInstanceMemberRequest</p>
  */
 public class DetachGadInstanceMemberRequest extends Request {
-    @Query
-    @NameInMap("GadInstanceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GadInstanceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String gadInstanceName;
 
-    @Query
-    @NameInMap("MemberInstanceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MemberInstanceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String memberInstanceName;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private DetachGadInstanceMemberRequest(Builder builder) {
@@ -98,7 +103,11 @@ public class DetachGadInstanceMemberRequest extends Request {
         } 
 
         /**
-         * The ID of the global active database cluster.
+         * <p>The ID of the global active database cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gad-rm-bp1npi2j8********</p>
          */
         public Builder gadInstanceName(String gadInstanceName) {
             this.putQueryParameter("GadInstanceName", gadInstanceName);
@@ -107,7 +116,11 @@ public class DetachGadInstanceMemberRequest extends Request {
         }
 
         /**
-         * The ID of the instance that serves as the unit node you want to remove. You can call the DescribeGadInstances query the instance ID.
+         * <p>The ID of the instance that serves as the unit node you want to remove. You can call the DescribeGadInstances query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1npi2j8********</p>
          */
         public Builder memberInstanceName(String memberInstanceName) {
             this.putQueryParameter("MemberInstanceName", memberInstanceName);
@@ -116,7 +129,10 @@ public class DetachGadInstanceMemberRequest extends Request {
         }
 
         /**
-         * The region ID of the central node. You can call the DescribeGadInstances operation to query the region ID.
+         * <p>The region ID of the central node. You can call the DescribeGadInstances operation to query the region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -125,7 +141,10 @@ public class DetachGadInstanceMemberRequest extends Request {
         }
 
         /**
-         * The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.
+         * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

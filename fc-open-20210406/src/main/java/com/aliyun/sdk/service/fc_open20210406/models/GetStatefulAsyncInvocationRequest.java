@@ -183,7 +183,7 @@ public class GetStatefulAsyncInvocationRequest extends Request {
         } 
 
         /**
-         * The event triggered by the asynchronous task.
+         * The name of service to which the asynchronous tasks belong.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -192,7 +192,7 @@ public class GetStatefulAsyncInvocationRequest extends Request {
         }
 
         /**
-         * The number of retries after the asynchronous task fails.
+         * The name of function to which the asynchronous task belongs.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -201,7 +201,10 @@ public class GetStatefulAsyncInvocationRequest extends Request {
         }
 
         /**
-         * The request ID of the asynchronous task.
+         * The ID of the asynchronous task.
+         * <p>
+         * 
+         * >  If you use an SDK to invoke a function, we recommend that you specify a business-related ID to facilitate subsequent operations. For example, a video processing function can use video file names as invocation IDs. This way, you can easily check whether a video is successfully processed or terminated before it is processed. The ID must start with a letter or an underscore (\_) and can contain letters, digits (0-9), underscores (\_), and hyphens (-). The ID can be up to 128 characters in length. If you do not specify the ID of an asynchronous invocation, Function Compute automatically generates an ID.
          */
         public Builder invocationId(String invocationId) {
             this.putPathParameter("invocationId", invocationId);
@@ -210,7 +213,7 @@ public class GetStatefulAsyncInvocationRequest extends Request {
         }
 
         /**
-         * The list of events that trigger the asynchronous task.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -219,7 +222,7 @@ public class GetStatefulAsyncInvocationRequest extends Request {
         }
 
         /**
-         * The structure of the asynchronous task.
+         * The CRC-64 value of the function code package. This value is used to check data integrity. The value is automatically calculated by a tool.
          */
         public Builder xFcCodeChecksum(String xFcCodeChecksum) {
             this.putHeaderParameter("X-Fc-Code-Checksum", xFcCodeChecksum);
@@ -228,7 +231,7 @@ public class GetStatefulAsyncInvocationRequest extends Request {
         }
 
         /**
-         * Alibaba Cloud provides SDKs for multiple programming languages to help you integrate Alibaba Cloud services by using APIs. We recommend that you use an SDK to call API operations. This frees you from manual signature verification.
+         * The time when the function is invoked. The value is in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -237,7 +240,11 @@ public class GetStatefulAsyncInvocationRequest extends Request {
         }
 
         /**
-         * StatefulAsyncInvocation: asynchronous task. Asynchronous tasks allow you to manage the states on the basis of common asynchronous invocations, which is more suitable for task scenarios.
+         * The method used to invoke the function. Valid values:
+         * <p>
+         * 
+         * *   **Sync**: synchronous invocation mode
+         * *   **Async**: asynchronous invocation mode
          */
         public Builder xFcInvocationType(String xFcInvocationType) {
             this.putHeaderParameter("X-Fc-Invocation-Type", xFcInvocationType);
@@ -246,7 +253,11 @@ public class GetStatefulAsyncInvocationRequest extends Request {
         }
 
         /**
-         * The latest version of Function Compute API.
+         * The method used to return logs. Default value: None. Valid values:
+         * <p>
+         * 
+         * *   **Tail**: returns the last 4 KB of logs that are generated for the current request.
+         * *   **None**: does not return logs for the request.
          */
         public Builder xFcLogType(String xFcLogType) {
             this.putHeaderParameter("X-Fc-Log-Type", xFcLogType);
@@ -255,7 +266,7 @@ public class GetStatefulAsyncInvocationRequest extends Request {
         }
 
         /**
-         * You can search for API operations, call and debug API operations online, and dynamically generate executable sample code for SDKs.
+         * The trace ID of the request for Function Compute API.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -264,7 +275,7 @@ public class GetStatefulAsyncInvocationRequest extends Request {
         }
 
         /**
-         * The ID of the instance that is used to run the asynchronous task.
+         * The version or alias of the service to which the asynchronous task belongs.
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);

@@ -1,83 +1,92 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTemplatesRequest} extends {@link RequestModel}
  *
  * <p>ListTemplatesRequest</p>
  */
 public class ListTemplatesRequest extends Request {
-    @Query
-    @NameInMap("Category")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Category")
     private String category;
 
-    @Query
-    @NameInMap("CreatedBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreatedBy")
     private String createdBy;
 
-    @Query
-    @NameInMap("CreatedDateAfter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreatedDateAfter")
     private String createdDateAfter;
 
-    @Query
-    @NameInMap("CreatedDateBefore")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreatedDateBefore")
     private String createdDateBefore;
 
-    @Query
-    @NameInMap("HasTrigger")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HasTrigger")
     private Boolean hasTrigger;
 
-    @Query
-    @NameInMap("IsFavorite")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsExample")
+    private Boolean isExample;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsFavorite")
     private Boolean isFavorite;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ShareType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShareType")
     private String shareType;
 
-    @Query
-    @NameInMap("SortField")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortField")
     private String sortField;
 
-    @Query
-    @NameInMap("SortOrder")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortOrder")
     private String sortOrder;
 
-    @Query
-    @NameInMap("Tags")
-    private java.util.Map < String, ? > tags;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.Map<String, ?> tags;
 
-    @Query
-    @NameInMap("TemplateFormat")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateFormat")
     private String templateFormat;
 
-    @Query
-    @NameInMap("TemplateName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
     private String templateName;
 
-    @Query
-    @NameInMap("TemplateType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateType")
     private String templateType;
 
     private ListTemplatesRequest(Builder builder) {
@@ -87,6 +96,7 @@ public class ListTemplatesRequest extends Request {
         this.createdDateAfter = builder.createdDateAfter;
         this.createdDateBefore = builder.createdDateBefore;
         this.hasTrigger = builder.hasTrigger;
+        this.isExample = builder.isExample;
         this.isFavorite = builder.isFavorite;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -150,6 +160,13 @@ public class ListTemplatesRequest extends Request {
     }
 
     /**
+     * @return isExample
+     */
+    public Boolean getIsExample() {
+        return this.isExample;
+    }
+
+    /**
      * @return isFavorite
      */
     public Boolean getIsFavorite() {
@@ -208,7 +225,7 @@ public class ListTemplatesRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.Map < String, ? > getTags() {
+    public java.util.Map<String, ?> getTags() {
         return this.tags;
     }
 
@@ -239,6 +256,7 @@ public class ListTemplatesRequest extends Request {
         private String createdDateAfter; 
         private String createdDateBefore; 
         private Boolean hasTrigger; 
+        private Boolean isExample; 
         private Boolean isFavorite; 
         private Integer maxResults; 
         private String nextToken; 
@@ -247,7 +265,7 @@ public class ListTemplatesRequest extends Request {
         private String shareType; 
         private String sortField; 
         private String sortOrder; 
-        private java.util.Map < String, ? > tags; 
+        private java.util.Map<String, ?> tags; 
         private String templateFormat; 
         private String templateName; 
         private String templateType; 
@@ -263,6 +281,7 @@ public class ListTemplatesRequest extends Request {
             this.createdDateAfter = request.createdDateAfter;
             this.createdDateBefore = request.createdDateBefore;
             this.hasTrigger = request.hasTrigger;
+            this.isExample = request.isExample;
             this.isFavorite = request.isFavorite;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
@@ -278,7 +297,10 @@ public class ListTemplatesRequest extends Request {
         } 
 
         /**
-         * The type of the template. Valid values include TimerTrigger, EventTrigger, AlarmTrigger, and Other.
+         * <p>The type of the template. Valid values include TimerTrigger, EventTrigger, AlarmTrigger, and Other.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TimerTrigger</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -287,11 +309,14 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The creator of the template.
-         * <p>
+         * <p>The creator of the template.</p>
+         * <ul>
+         * <li>To query the template provided by Alibaba Cloud, set this parameter to <strong>ACS</strong>.</li>
+         * <li>To query the template created by a user, set this parameter to the <strong>ID</strong> of the template or the <strong>name of the user</strong> who creates the template.</li>
+         * </ul>
          * 
-         * *   To query the template provided by Alibaba Cloud, set this parameter to **ACS**.
-         * *   To query the template created by a user, set this parameter to the **ID** of the template or the **name of the user** who creates the template.
+         * <strong>example:</strong>
+         * <p>ACS</p>
          */
         public Builder createdBy(String createdBy) {
             this.putQueryParameter("CreatedBy", createdBy);
@@ -300,10 +325,11 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * Specifies to query the template that is created at or later than the specified time.
-         * <p>
+         * <p>Specifies to query the template that is created at or later than the specified time.</p>
+         * <p>The value must be in the YYYY-MM-DDThh:mm:ssZ format.</p>
          * 
-         * The value must be in the YYYY-MM-DDThh:mm:ssZ format.
+         * <strong>example:</strong>
+         * <p>2019-05-16T10:26:14Z</p>
          */
         public Builder createdDateAfter(String createdDateAfter) {
             this.putQueryParameter("CreatedDateAfter", createdDateAfter);
@@ -312,10 +338,11 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * Specifies to query the template that is created at or before the specified time.
-         * <p>
+         * <p>Specifies to query the template that is created at or before the specified time.</p>
+         * <p>The value must be in the YYYY-MM-DDThh:mm::ssZ format.</p>
          * 
-         * The value must be in the YYYY-MM-DDThh:mm::ssZ format.
+         * <strong>example:</strong>
+         * <p>2019-05-16T10:26:14Z</p>
          */
         public Builder createdDateBefore(String createdDateBefore) {
             this.putQueryParameter("CreatedDateBefore", createdDateBefore);
@@ -324,7 +351,10 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the template that is configured with a trigger.
+         * <p>Specifies whether to query the template that is configured with a trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder hasTrigger(Boolean hasTrigger) {
             this.putQueryParameter("HasTrigger", hasTrigger);
@@ -333,7 +363,22 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * IsFavorite.
+         * <p>Specifies whether the template is an example template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder isExample(Boolean isExample) {
+            this.putQueryParameter("IsExample", isExample);
+            this.isExample = isExample;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether the template is added to favorites.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isFavorite(Boolean isFavorite) {
             this.putQueryParameter("IsFavorite", isFavorite);
@@ -342,7 +387,10 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 20 to 100. Default value: 50.
+         * <p>The number of entries per page. Valid values: 10 to 100. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -351,7 +399,10 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The token that is used to retrieve the next page of results.
+         * <p>The token that is used to retrieve the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -360,7 +411,10 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The ID of the region in which you want to query templates.
+         * <p>The ID of the region in which you want to query templates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -369,7 +423,10 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxsn4m4******</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -378,11 +435,14 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The share type of the template. Valid values:
-         * <p>
+         * <p>The share type of the template. Valid values:</p>
+         * <ul>
+         * <li><strong>Public</strong></li>
+         * <li><strong>Private</strong></li>
+         * </ul>
          * 
-         * *   **Public**
-         * *   **Private**
+         * <strong>example:</strong>
+         * <p>Private</p>
          */
         public Builder shareType(String shareType) {
             this.putQueryParameter("ShareType", shareType);
@@ -391,14 +451,17 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The field that is used to sort the templates to be returned. Valid values:
-         * <p>
+         * <p>The field that is used to sort the templates to be queried. Valid values:</p>
+         * <ul>
+         * <li><strong>TotalExecutionCount</strong> (default): The system sorts the returned templates based on the total number of times that the templates are used.</li>
+         * <li><strong>Popularity</strong>: The system sorts the returned templates based on the popularity of the templates.</li>
+         * <li><strong>TemplateName</strong>: The system sorts the returned templates based on the names of the templates.</li>
+         * <li><strong>CreatedDate</strong>: The system sorts the returned templates based on the points in time when the templates are created.</li>
+         * <li><strong>UpdatedDate</strong>: The system sorts the returned templates based on the points in time when the templates are updated.</li>
+         * </ul>
          * 
-         * *   **TotalExecutionCounts**: The system sorts the returned templates based on the total number of execution times of the template. This is the default value.
-         * *   **Popularity**: The system sorts the returned templates based on the popularity of the template.
-         * *   **TemplateName**: The system sorts the returned templates based on the name of the template.
-         * *   **CreatedDate**: The system sorts the returned templates based on the creation time of the template.
-         * *   **UpdateDate**: The system sorts the returned templates based on the update time of the template.
+         * <strong>example:</strong>
+         * <p>Popularity</p>
          */
         public Builder sortField(String sortField) {
             this.putQueryParameter("SortField", sortField);
@@ -407,11 +470,14 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The order in which you want to sort the results. Valid values:
-         * <p>
+         * <p>The order in which you want to sort the results. Valid values:</p>
+         * <ul>
+         * <li><strong>Ascending</strong>: ascending order.</li>
+         * <li><strong>Descending</strong>: descending order. This is the default value.</li>
+         * </ul>
          * 
-         * *   **Ascending**: ascending order.
-         * *   **Descending**: descending order. This is the default value.
+         * <strong>example:</strong>
+         * <p>Descending</p>
          */
         public Builder sortOrder(String sortOrder) {
             this.putQueryParameter("SortOrder", sortOrder);
@@ -420,9 +486,12 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The tag keys and values. The number of key-value pairs ranges from 1 to 20.
+         * <p>The tag keys and values. The number of key-value pairs ranges from 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;k1&quot;:&quot;k2&quot;,&quot;k2&quot;:&quot;v2&quot;}</p>
          */
-        public Builder tags(java.util.Map < String, ? > tags) {
+        public Builder tags(java.util.Map<String, ?> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
@@ -430,11 +499,14 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The format of the template. Valid values:
-         * <p>
+         * <p>The format of the template. Valid values:</p>
+         * <ul>
+         * <li><strong>JSON</strong></li>
+         * <li><strong>YAML</strong></li>
+         * </ul>
          * 
-         * *   **JSON**
-         * *   **YAML**
+         * <strong>example:</strong>
+         * <p>YAML</p>
          */
         public Builder templateFormat(String templateFormat) {
             this.putQueryParameter("TemplateFormat", templateFormat);
@@ -443,7 +515,10 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The name of the template. All templates whose names contain the specified template name are to be returned.
+         * <p>The name of the template. All templates whose names contain the specified template name are to be returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyTemplate</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -452,34 +527,15 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The type of the template.
-         * <p>
+         * <p>The type of the template. Valid values:</p>
+         * <ul>
+         * <li>Automation: the template for automated tasks.</li>
+         * <li>State: the template for configuration inventories.</li>
+         * <li>Package: the template for software packages.</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   Automation
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   State
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   Package
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>private</p>
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);

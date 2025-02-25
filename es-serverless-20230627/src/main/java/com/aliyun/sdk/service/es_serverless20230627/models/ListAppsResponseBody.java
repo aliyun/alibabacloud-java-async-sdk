@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.es_serverless20230627.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAppsResponseBody</p>
  */
 public class ListAppsResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < Result> result;
 
-    @NameInMap("totalCount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("totalCount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer totalCount;
 
     private ListAppsResponseBody(Builder builder) {
@@ -93,39 +92,43 @@ public class ListAppsResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("appId")
+        @com.aliyun.core.annotation.NameInMap("appId")
         private String appId;
 
-        @NameInMap("appName")
+        @com.aliyun.core.annotation.NameInMap("appName")
         private String appName;
 
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("appType")
+        private String appType;
+
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
-        @NameInMap("modifiedTime")
+        @com.aliyun.core.annotation.NameInMap("modifiedTime")
         private String modifiedTime;
 
-        @NameInMap("ownerId")
+        @com.aliyun.core.annotation.NameInMap("ownerId")
         private String ownerId;
 
-        @NameInMap("regionId")
+        @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("version")
+        @com.aliyun.core.annotation.NameInMap("version")
         private String version;
 
         private Result(Builder builder) {
             this.appId = builder.appId;
             this.appName = builder.appName;
+            this.appType = builder.appType;
             this.createTime = builder.createTime;
             this.description = builder.description;
             this.instanceId = builder.instanceId;
@@ -156,6 +159,13 @@ public class ListAppsResponseBody extends TeaModel {
          */
         public String getAppName() {
             return this.appName;
+        }
+
+        /**
+         * @return appType
+         */
+        public String getAppType() {
+            return this.appType;
         }
 
         /**
@@ -217,6 +227,7 @@ public class ListAppsResponseBody extends TeaModel {
         public static final class Builder {
             private String appId; 
             private String appName; 
+            private String appType; 
             private String createTime; 
             private String description; 
             private String instanceId; 
@@ -239,6 +250,14 @@ public class ListAppsResponseBody extends TeaModel {
              */
             public Builder appName(String appName) {
                 this.appName = appName;
+                return this;
+            }
+
+            /**
+             * appType.
+             */
+            public Builder appType(String appType) {
+                this.appType = appType;
                 return this;
             }
 

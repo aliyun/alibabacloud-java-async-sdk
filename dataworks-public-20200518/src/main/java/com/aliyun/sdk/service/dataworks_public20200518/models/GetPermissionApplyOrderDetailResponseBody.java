@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPermissionApplyOrderDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetPermissionApplyOrderDetailResponseBody</p>
  */
 public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
-    @NameInMap("ApplyOrderDetail")
+    @com.aliyun.core.annotation.NameInMap("ApplyOrderDetail")
     private ApplyOrderDetail applyOrderDetail;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetPermissionApplyOrderDetailResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about the permission request order.
+         * <p>The details of the permission request order.</p>
          */
         public Builder applyOrderDetail(ApplyOrderDetail applyOrderDetail) {
             this.applyOrderDetail = applyOrderDetail;
@@ -58,7 +63,10 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1ec92159376****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,8 +79,14 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPermissionApplyOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPermissionApplyOrderDetailResponseBody</p>
+     */
     public static class ApproveAccountList extends TeaModel {
-        @NameInMap("BaseId")
+        @com.aliyun.core.annotation.NameInMap("BaseId")
         private String baseId;
 
         private ApproveAccountList(Builder builder) {
@@ -98,7 +112,10 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             private String baseId; 
 
             /**
-             * The unique ID of the Alibaba Cloud account that is used to approve the permission request order.
+             * <p>The ID of the Alibaba Cloud account that is used to process the permission request order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>182293110403****</p>
              */
             public Builder baseId(String baseId) {
                 this.baseId = baseId;
@@ -112,14 +129,20 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPermissionApplyOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPermissionApplyOrderDetailResponseBody</p>
+     */
     public static class ColumnMetaList extends TeaModel {
-        @NameInMap("ColumnComment")
+        @com.aliyun.core.annotation.NameInMap("ColumnComment")
         private String columnComment;
 
-        @NameInMap("ColumnName")
+        @com.aliyun.core.annotation.NameInMap("ColumnName")
         private String columnName;
 
-        @NameInMap("SecurityLevel")
+        @com.aliyun.core.annotation.NameInMap("SecurityLevel")
         private String securityLevel;
 
         private ColumnMetaList(Builder builder) {
@@ -163,7 +186,10 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             private String securityLevel; 
 
             /**
-             * The description of the column on which you request permissions.
+             * <p>The description of the column on which you request permissions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Field description</p>
              */
             public Builder columnComment(String columnComment) {
                 this.columnComment = columnComment;
@@ -171,7 +197,10 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the column on which you request permissions.
+             * <p>The name of the column on which you request permissions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aColumnName</p>
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -179,7 +208,10 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityLevel.
+             * <p>The security level of the column on which you request permissions. Valid values: 0 to 9.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder securityLevel(String securityLevel) {
                 this.securityLevel = securityLevel;
@@ -193,11 +225,17 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPermissionApplyOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPermissionApplyOrderDetailResponseBody</p>
+     */
     public static class ObjectMetaList extends TeaModel {
-        @NameInMap("ColumnMetaList")
-        private java.util.List < ColumnMetaList> columnMetaList;
+        @com.aliyun.core.annotation.NameInMap("ColumnMetaList")
+        private java.util.List<ColumnMetaList> columnMetaList;
 
-        @NameInMap("ObjectName")
+        @com.aliyun.core.annotation.NameInMap("ObjectName")
         private String objectName;
 
         private ObjectMetaList(Builder builder) {
@@ -216,7 +254,7 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
         /**
          * @return columnMetaList
          */
-        public java.util.List < ColumnMetaList> getColumnMetaList() {
+        public java.util.List<ColumnMetaList> getColumnMetaList() {
             return this.columnMetaList;
         }
 
@@ -228,19 +266,22 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ColumnMetaList> columnMetaList; 
+            private java.util.List<ColumnMetaList> columnMetaList; 
             private String objectName; 
 
             /**
-             * The information about the column fields in the object on which you request permissions.
+             * <p>The information about the column fields in the object on which you request permissions.</p>
              */
-            public Builder columnMetaList(java.util.List < ColumnMetaList> columnMetaList) {
+            public Builder columnMetaList(java.util.List<ColumnMetaList> columnMetaList) {
                 this.columnMetaList = columnMetaList;
                 return this;
             }
 
             /**
-             * The name of the table on which you request permissions.
+             * <p>The name of the table on which you request permissions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aTableName</p>
              */
             public Builder objectName(String objectName) {
                 this.objectName = objectName;
@@ -254,14 +295,20 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPermissionApplyOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPermissionApplyOrderDetailResponseBody</p>
+     */
     public static class ProjectMeta extends TeaModel {
-        @NameInMap("MaxComputeProjectName")
+        @com.aliyun.core.annotation.NameInMap("MaxComputeProjectName")
         private String maxComputeProjectName;
 
-        @NameInMap("ObjectMetaList")
-        private java.util.List < ObjectMetaList> objectMetaList;
+        @com.aliyun.core.annotation.NameInMap("ObjectMetaList")
+        private java.util.List<ObjectMetaList> objectMetaList;
 
-        @NameInMap("WorkspaceId")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceId")
         private Integer workspaceId;
 
         private ProjectMeta(Builder builder) {
@@ -288,7 +335,7 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
         /**
          * @return objectMetaList
          */
-        public java.util.List < ObjectMetaList> getObjectMetaList() {
+        public java.util.List<ObjectMetaList> getObjectMetaList() {
             return this.objectMetaList;
         }
 
@@ -301,11 +348,14 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private String maxComputeProjectName; 
-            private java.util.List < ObjectMetaList> objectMetaList; 
+            private java.util.List<ObjectMetaList> objectMetaList; 
             private Integer workspaceId; 
 
             /**
-             * The MaxCompute project to which the object on which you request permissions belongs.
+             * <p>The MaxCompute project to which the object on which you request permissions belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aMaxComputeProject</p>
              */
             public Builder maxComputeProjectName(String maxComputeProjectName) {
                 this.maxComputeProjectName = maxComputeProjectName;
@@ -313,15 +363,18 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the object on which you request permissions.
+             * <p>The details about the object on which you request permissions.</p>
              */
-            public Builder objectMetaList(java.util.List < ObjectMetaList> objectMetaList) {
+            public Builder objectMetaList(java.util.List<ObjectMetaList> objectMetaList) {
                 this.objectMetaList = objectMetaList;
                 return this;
             }
 
             /**
-             * The ID of the DataWorks workspace that is associated with the object on which you request permissions.
+             * <p>The ID of the DataWorks workspace that is associated with the object on which you request permissions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder workspaceId(Integer workspaceId) {
                 this.workspaceId = workspaceId;
@@ -335,17 +388,23 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPermissionApplyOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPermissionApplyOrderDetailResponseBody</p>
+     */
     public static class ApproveContent extends TeaModel {
-        @NameInMap("ApplyReason")
+        @com.aliyun.core.annotation.NameInMap("ApplyReason")
         private String applyReason;
 
-        @NameInMap("Deadline")
+        @com.aliyun.core.annotation.NameInMap("Deadline")
         private Long deadline;
 
-        @NameInMap("OrderType")
+        @com.aliyun.core.annotation.NameInMap("OrderType")
         private Integer orderType;
 
-        @NameInMap("ProjectMeta")
+        @com.aliyun.core.annotation.NameInMap("ProjectMeta")
         private ProjectMeta projectMeta;
 
         private ApproveContent(Builder builder) {
@@ -398,7 +457,10 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             private ProjectMeta projectMeta; 
 
             /**
-             * The reason for your request. The administrator decides whether to approve the request based on the request reason.
+             * <p>The reason of the permission request. The administrator processes the request based on the reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>I need to use this table</p>
              */
             public Builder applyReason(String applyReason) {
                 this.applyReason = applyReason;
@@ -406,10 +468,10 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time of the permissions that you requested. The parameter value is a UNIX timestamp.
-             * <p>
+             * <p>The expiration time of the permissions that you request. The value is a UNIX timestamp. If LabelSecurity is disabled for the MaxCompute project in which you want to request permissions on the fields of a table, or the security level of the fields is 0 or is lower than or equal to the security level of the Alibaba Cloud account for which you want to request permissions, you can request only permanent permissions.</p>
              * 
-             * If LabelSecurity is disabled in the MaxCompute project, or the security level of fields in the MaxCompute table on which you request permissions is 0 or is less than or equal to the security level of the Alibaba Cloud account for which you request permissions, you can request only permanent permissions.
+             * <strong>example:</strong>
+             * <p>1617115071885</p>
              */
             public Builder deadline(Long deadline) {
                 this.deadline = deadline;
@@ -417,7 +479,10 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the permission request order. The parameter value is 1 and cannot be changed. 1 indicates that ACL-based authorization is requested.
+             * <p>The type of the permission request order. The parameter value is 1 and cannot be changed. This value indicates ACL-based authorization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder orderType(Integer orderType) {
                 this.orderType = orderType;
@@ -425,7 +490,7 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the project and workspace that are associated with the object on which you requested permissions.
+             * <p>The information about the project and workspace that are associated with the object on which you request permissions.</p>
              */
             public Builder projectMeta(ProjectMeta projectMeta) {
                 this.projectMeta = projectMeta;
@@ -439,17 +504,23 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPermissionApplyOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPermissionApplyOrderDetailResponseBody</p>
+     */
     public static class GranteeObjectList extends TeaModel {
-        @NameInMap("GranteeId")
+        @com.aliyun.core.annotation.NameInMap("GranteeId")
         private String granteeId;
 
-        @NameInMap("GranteeName")
+        @com.aliyun.core.annotation.NameInMap("GranteeName")
         private String granteeName;
 
-        @NameInMap("GranteeType")
+        @com.aliyun.core.annotation.NameInMap("GranteeType")
         private Integer granteeType;
 
-        @NameInMap("GranteeTypeSub")
+        @com.aliyun.core.annotation.NameInMap("GranteeTypeSub")
         private Integer granteeTypeSub;
 
         private GranteeObjectList(Builder builder) {
@@ -502,7 +573,10 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             private Integer granteeTypeSub; 
 
             /**
-             * The unique ID of the account that is used to request permissions.
+             * <p>The ID of the account that is used to request permissions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>267842600408993176</p>
              */
             public Builder granteeId(String granteeId) {
                 this.granteeId = granteeId;
@@ -510,11 +584,14 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the account that is used to request permissions. The name is in the same format as that of the account used to access the MaxCompute project.
-             * <p>
+             * <p>The name of the account that is used to request permissions. The name is in the same format as that of the account used to access the MaxCompute project.</p>
+             * <ul>
+             * <li>If the account is an Alibaba Cloud account, the value is in the ALIYUN$+Account name format.</li>
+             * <li>If the account is a RAM user, the value is in the RAM$+Account name format.</li>
+             * </ul>
              * 
-             * *   An Alibaba Cloud account is in the format of ALIYUN$+Account name.
-             * *   A RAM user is in the format of RAM$+Account name.
+             * <strong>example:</strong>
+             * <p>RAM$dataworks_3h1_1:StsRamUser(StsRamUser)</p>
              */
             public Builder granteeName(String granteeName) {
                 this.granteeName = granteeName;
@@ -522,7 +599,10 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the subject that requests permissions. The parameter value is 1 and cannot be changed. It indicates user.
+             * <p>The type of the subject that requests permissions. The value is fixed as 1, which indicates users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder granteeType(Integer granteeType) {
                 this.granteeType = granteeType;
@@ -530,12 +610,15 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The subtype of the subject that requests permissions. Valid values:
-             * <p>
+             * <p>The subtype of the subject that requests permissions. Valid values:</p>
+             * <ul>
+             * <li>101: production account</li>
+             * <li>103: individual account</li>
+             * <li>105: account that requests permissions for others</li>
+             * </ul>
              * 
-             * *   101: production account
-             * *   103: individual account
-             * *   105: account that requests permissions for others
+             * <strong>example:</strong>
+             * <p>103</p>
              */
             public Builder granteeTypeSub(Integer granteeTypeSub) {
                 this.granteeTypeSub = granteeTypeSub;
@@ -549,27 +632,33 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPermissionApplyOrderDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPermissionApplyOrderDetailResponseBody</p>
+     */
     public static class ApplyOrderDetail extends TeaModel {
-        @NameInMap("ApplyBaseId")
+        @com.aliyun.core.annotation.NameInMap("ApplyBaseId")
         private String applyBaseId;
 
-        @NameInMap("ApplyTimestamp")
+        @com.aliyun.core.annotation.NameInMap("ApplyTimestamp")
         private Long applyTimestamp;
 
-        @NameInMap("ApproveAccountList")
-        private java.util.List < ApproveAccountList> approveAccountList;
+        @com.aliyun.core.annotation.NameInMap("ApproveAccountList")
+        private java.util.List<ApproveAccountList> approveAccountList;
 
-        @NameInMap("ApproveContent")
+        @com.aliyun.core.annotation.NameInMap("ApproveContent")
         private ApproveContent approveContent;
 
-        @NameInMap("FlowId")
+        @com.aliyun.core.annotation.NameInMap("FlowId")
         private String flowId;
 
-        @NameInMap("FlowStatus")
+        @com.aliyun.core.annotation.NameInMap("FlowStatus")
         private Integer flowStatus;
 
-        @NameInMap("GranteeObjectList")
-        private java.util.List < GranteeObjectList> granteeObjectList;
+        @com.aliyun.core.annotation.NameInMap("GranteeObjectList")
+        private java.util.List<GranteeObjectList> granteeObjectList;
 
         private ApplyOrderDetail(Builder builder) {
             this.applyBaseId = builder.applyBaseId;
@@ -606,7 +695,7 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
         /**
          * @return approveAccountList
          */
-        public java.util.List < ApproveAccountList> getApproveAccountList() {
+        public java.util.List<ApproveAccountList> getApproveAccountList() {
             return this.approveAccountList;
         }
 
@@ -634,21 +723,24 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
         /**
          * @return granteeObjectList
          */
-        public java.util.List < GranteeObjectList> getGranteeObjectList() {
+        public java.util.List<GranteeObjectList> getGranteeObjectList() {
             return this.granteeObjectList;
         }
 
         public static final class Builder {
             private String applyBaseId; 
             private Long applyTimestamp; 
-            private java.util.List < ApproveAccountList> approveAccountList; 
+            private java.util.List<ApproveAccountList> approveAccountList; 
             private ApproveContent approveContent; 
             private String flowId; 
             private Integer flowStatus; 
-            private java.util.List < GranteeObjectList> granteeObjectList; 
+            private java.util.List<GranteeObjectList> granteeObjectList; 
 
             /**
-             * The unique ID of the Alibaba Cloud account that is used to submit the permission request order.
+             * <p>The ID of the Alibaba Cloud account that was used to submit the permission request order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>267842600408993176</p>
              */
             public Builder applyBaseId(String applyBaseId) {
                 this.applyBaseId = applyBaseId;
@@ -656,7 +748,10 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the permission request order was submitted. The parameter value is a UNIX timestamp.
+             * <p>The time when the permission request order was submitted. The value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1615284086000</p>
              */
             public Builder applyTimestamp(Long applyTimestamp) {
                 this.applyTimestamp = applyTimestamp;
@@ -664,15 +759,15 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The list of Alibaba Cloud accounts that are used to approve the permission request order.
+             * <p>The list of Alibaba Cloud accounts that are used to process the permission request order.</p>
              */
-            public Builder approveAccountList(java.util.List < ApproveAccountList> approveAccountList) {
+            public Builder approveAccountList(java.util.List<ApproveAccountList> approveAccountList) {
                 this.approveAccountList = approveAccountList;
                 return this;
             }
 
             /**
-             * The content of the permission request.
+             * <p>The content of the permission request.</p>
              */
             public Builder approveContent(ApproveContent approveContent) {
                 this.approveContent = approveContent;
@@ -680,7 +775,10 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the permission request order.
+             * <p>The ID of the permission request order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ad8da78d-8135-455e-9486-27cf213fc140</p>
              */
             public Builder flowId(String flowId) {
                 this.flowId = flowId;
@@ -688,13 +786,16 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the permission request order. Valid values:
-             * <p>
+             * <p>The status of the permission request order. Valid values:</p>
+             * <ul>
+             * <li>1: to be processed</li>
+             * <li>2: approved and authorized</li>
+             * <li>3: approved but authorization failed</li>
+             * <li>4: rejected</li>
+             * </ul>
              * 
-             * *   1: pending approval
-             * *   2: approved and authorized
-             * *   3: approved but authorization failed
-             * *   4: rejected
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder flowStatus(Integer flowStatus) {
                 this.flowStatus = flowStatus;
@@ -702,9 +803,9 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Information about the account that is used to request permissions.
+             * <p>The information about the account that is used to request permissions.</p>
              */
-            public Builder granteeObjectList(java.util.List < GranteeObjectList> granteeObjectList) {
+            public Builder granteeObjectList(java.util.List<GranteeObjectList> granteeObjectList) {
                 this.granteeObjectList = granteeObjectList;
                 return this;
             }

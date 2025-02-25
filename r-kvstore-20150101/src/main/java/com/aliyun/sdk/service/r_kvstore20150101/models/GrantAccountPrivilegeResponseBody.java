@@ -1,18 +1,18 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GrantAccountPrivilegeResponseBody} extends {@link TeaModel}
  *
  * <p>GrantAccountPrivilegeResponseBody</p>
  */
 public class GrantAccountPrivilegeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GrantAccountPrivilegeResponseBody(Builder builder) {
@@ -38,7 +38,10 @@ public class GrantAccountPrivilegeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3845BDF5-15A6-4444-B770-78501819****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

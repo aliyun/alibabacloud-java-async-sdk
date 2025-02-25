@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMetricRulesResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteMetricRulesResponseBody</p>
  */
 public class DeleteMetricRulesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DeleteMetricRulesResponseBody(Builder builder) {
@@ -74,10 +74,13 @@ public class DeleteMetricRulesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code.
-         * <p>
+         * <p>The status code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates a success.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates a success.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -85,7 +88,10 @@ public class DeleteMetricRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified resource is not found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -93,7 +99,10 @@ public class DeleteMetricRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E5599964-8D0D-40DC-8E90-27A619384B81</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,11 +110,14 @@ public class DeleteMetricRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the operation was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
+         * <ul>
+         * <li>true: successful.</li>
+         * <li>false: failed.</li>
+         * </ul>
          * 
-         * *   true: successful.
-         * *   false: failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

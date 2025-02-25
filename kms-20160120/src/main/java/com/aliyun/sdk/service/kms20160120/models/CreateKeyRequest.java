@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateKeyRequest</p>
  */
 public class CreateKeyRequest extends Request {
-    @Query
-    @NameInMap("DKMSInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DKMSInstanceId")
     private String DKMSInstanceId;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("EnableAutomaticRotation")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableAutomaticRotation")
     private Boolean enableAutomaticRotation;
 
-    @Query
-    @NameInMap("KeySpec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeySpec")
     private String keySpec;
 
-    @Query
-    @NameInMap("KeyUsage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyUsage")
     private String keyUsage;
 
-    @Query
-    @NameInMap("Origin")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Origin")
     private String origin;
 
-    @Query
-    @NameInMap("ProtectionLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Policy")
+    private String policy;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProtectionLevel")
     private String protectionLevel;
 
-    @Query
-    @NameInMap("RotationInterval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RotationInterval")
     private String rotationInterval;
 
-    @Query
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private String tags;
 
     private CreateKeyRequest(Builder builder) {
@@ -56,6 +59,7 @@ public class CreateKeyRequest extends Request {
         this.keySpec = builder.keySpec;
         this.keyUsage = builder.keyUsage;
         this.origin = builder.origin;
+        this.policy = builder.policy;
         this.protectionLevel = builder.protectionLevel;
         this.rotationInterval = builder.rotationInterval;
         this.tags = builder.tags;
@@ -117,6 +121,13 @@ public class CreateKeyRequest extends Request {
     }
 
     /**
+     * @return policy
+     */
+    public String getPolicy() {
+        return this.policy;
+    }
+
+    /**
      * @return protectionLevel
      */
     public String getProtectionLevel() {
@@ -144,6 +155,7 @@ public class CreateKeyRequest extends Request {
         private String keySpec; 
         private String keyUsage; 
         private String origin; 
+        private String policy; 
         private String protectionLevel; 
         private String rotationInterval; 
         private String tags; 
@@ -160,27 +172,17 @@ public class CreateKeyRequest extends Request {
             this.keySpec = request.keySpec;
             this.keyUsage = request.keyUsage;
             this.origin = request.origin;
+            this.policy = request.policy;
             this.protectionLevel = request.protectionLevel;
             this.rotationInterval = request.rotationInterval;
             this.tags = request.tags;
         } 
 
         /**
-         * The type of the CMK. Valid values:
+         * The ID of the KMS instance.
          * <p>
          * 
-         * *   Aliyun_AES\_256
-         * *   Aliyun_AES\_128
-         * *   Aliyun_AES\_192
-         * *   Aliyun_SM4
-         * *   RSA\_2048
-         * *   RSA\_3072
-         * *   EC_P256
-         * *   EC_P256K
-         * *   EC_SM2
-         * 
-         * > * The default type of the CMK is Aliyun\_AES\_256.
-         * > * Only Dedicated KMS supports Aliyun\_AES\_128 and Aliyun\_AES\_192.
+         * > You must specify this parameter if you need to create a key for a KMS instance. If you need to create a default key of the CMK type, you do not need to specify this parameter.
          */
         public Builder DKMSInstanceId(String DKMSInstanceId) {
             this.putQueryParameter("DKMSInstanceId", DKMSInstanceId);
@@ -189,7 +191,10 @@ public class CreateKeyRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **CreateKey**.
+         * The description of the key.
+         * <p>
+         * 
+         * The description can be 0 to 8,192 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -198,16 +203,13 @@ public class CreateKeyRequest extends Request {
         }
 
         /**
-         * The protection level of the CMK. Valid values:
+         * Specifies whether to enable automatic key rotation. Valid values:
          * <p>
          * 
-         * *   SOFTWARE
-         * *   HSM
+         * - true
+         * - false (default)
          * 
-         * Default value: SOFTWARE.
-         * 
-         * > * The value of this parameter is case-sensitive.
-         * > * Assume that you set this parameter to HSM. If you set the Origin parameter to Aliyun_KMS, the CMK is created in a managed HSM. If you set the Origin parameter to EXTERNAL, you can import an external key into the managed HSM.
+         * This parameter is valid only when the key belongs to an instance type that supports automatic rotation. For more information, see [Key rotation](~~2358146~~).
          */
         public Builder enableAutomaticRotation(Boolean enableAutomaticRotation) {
             this.putQueryParameter("EnableAutomaticRotation", enableAutomaticRotation);
@@ -216,10 +218,10 @@ public class CreateKeyRequest extends Request {
         }
 
         /**
-         * The period of automatic key rotation. Specify the value in the integer\[unit] format. Unit: d (day), h (hour), m (minute), or s (second). For example, you can use either 7d or 604800s to specify a seven-day period. The period can range from 7 days to 730 days.
+         * The key specification. The valid values vary based on the KMS instance type. For more information, see [Overview](~~480159~~).
          * <p>
          * 
-         * >  If you set the EnableAutomaticRotation parameter to true, you must also specify this parameter. If you set the EnableAutomaticRotation parameter to false, you can leave this parameter unspecified.
+         * > If you do not specify a value for this parameter, the default key specification is Aliyun_AES_256.
          */
         public Builder keySpec(String keySpec) {
             this.putQueryParameter("KeySpec", keySpec);
@@ -228,10 +230,13 @@ public class CreateKeyRequest extends Request {
         }
 
         /**
-         * The description of the CMK.
+         * The usage of the key. Valid values:
          * <p>
          * 
-         * The description can be 0 to 8,192 characters in length.
+         * - ENCRYPT/DECRYPT
+         * - SIGN/VERIFY
+         * 
+         * If the key supports signing and verification, the default value is SIGN/VERIFY. If the key does not support signing and verification, the default value is ENCRYPT/DECRYPT.
          */
         public Builder keyUsage(String keyUsage) {
             this.putQueryParameter("KeyUsage", keyUsage);
@@ -240,13 +245,16 @@ public class CreateKeyRequest extends Request {
         }
 
         /**
-         * The usage of the CMK. Valid values:
+         * The key material origin. Valid values:
          * <p>
          * 
-         * *   ENCRYPT/DECRYPT: encrypts or decrypts data.
-         * *   SIGN/VERIFY: generates or verifies a digital signature.
+         * - Aliyun_KMS (default): KMS generates key material.
+         * - EXTERNAL: You import key material.
          * 
-         * If the CMK supports signature verification, the default value is SIGN/VERIFY. If the CMK does not support signature verification, the default value is ENCRYPT/DECRYPT.
+         * 
+         * > - The value of this parameter is case-sensitive.
+         * > - Default keys of the customer master key (CMK) type support Aliyun_KMS and EXTERNAL. Keys in instances of the software key management type support only Aliyun_KMS. Keys in instances of the hardware key management type support Aliyun_KMS and EXTERNAL.
+         * > - If you set Origin to EXTERNAL, you must import key material. For more information, see [Import key material into a symmetric key](~~607841~~) or [Import key material into an asymmetric key](~~608827~~).
          */
         public Builder origin(String origin) {
             this.putQueryParameter("Origin", origin);
@@ -255,15 +263,26 @@ public class CreateKeyRequest extends Request {
         }
 
         /**
-         * The source of key material. Valid values:
+         * Policy.
+         */
+        public Builder policy(String policy) {
+            this.putQueryParameter("Policy", policy);
+            this.policy = policy;
+            return this;
+        }
+
+        /**
+         * You do not need to specify this parameter. KMS sets a protection level for your key.
          * <p>
          * 
-         * *   Aliyun_KMS (default value)
-         * *   EXTERNAL
+         * The protection level of the key. Valid values:
          * 
-         * > * The value of this parameter is case-sensitive.
-         * > * If you set the KeySpec parameter to an asymmetric CMK type, you are not allowed to set the Origin parameter to EXTERNAL.
-         * > * If you set the Origin parameter to EXTERNAL, you must import key material. For more information, see [Import key material](~~68523~~).
+         * - SOFTWARE
+         * - HSM
+         * 
+         * 
+         * > - If DKMSInstanceId is specified, this parameter does not take effect. If your instance is an instance of the software key management type, set the value to SOFTWARE. If your instance is an instance of the hardware key management type, set the value to HSM.
+         * > - If you do not specify DKMSInstanceId, we recommend that you do not specify this parameter. KMS sets a protection level for your key. If managed hardware security modules (HSMs) exist in the region of your KMS instance, set the value to HSM. If managed HSMs do not exist in the region of your KMS instance, set the value to SOFTWARE. For more information, see Managed HSM overview.
          */
         public Builder protectionLevel(String protectionLevel) {
             this.putQueryParameter("ProtectionLevel", protectionLevel);
@@ -272,15 +291,14 @@ public class CreateKeyRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable automatic key rotation. Valid values:
+         * The period of automatic key rotation. Format: integer[unit]. Unit: d (day), h (hour), m (minute), or s (second). For example, both 7d and 604800s represent a seven-day interval.
          * <p>
          * 
-         * *   true
-         * *   false
+         * - For a default key, set the value to 365 days.
+         * - For a software-protected key, set a value that ranges from 7 to 365 days.
+         * - A hardware-protected key does not support automatic rotation.
          * 
-         * Default value: false.
-         * 
-         * >  If the Origin parameter is set to EXTERNAL or the KeySpec parameter is set to an asymmetric CMK type, automatic key rotation is not supported.
+         * > If EnableAutomaticRotation is set to true, this parameter is required.
          */
         public Builder rotationInterval(String rotationInterval) {
             this.putQueryParameter("RotationInterval", rotationInterval);
@@ -289,7 +307,14 @@ public class CreateKeyRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tag that is added to the key. A tag consists of a key-value pair.
+         * <p>
+         * 
+         * You can enter up to 20 tags. Enter multiple tags in the [{"TagKey":"key1","TagValue":"value1"},{"TagKey":"key2","TagValue":"value2"},..] format.
+         * 
+         * Each tag key or tag value can be up to 128 characters in length and can contain letters, digits, forward slashes (/), backslashes (\), underscores (_), hyphens (-), periods (.), plus signs (+), equal signs (=), colons (:), and at signs (@).
+         * 
+         * > The tag key cannot start with aliyun or acs:.
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);

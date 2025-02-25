@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TransferDomainRequest} extends {@link RequestModel}
  *
  * <p>TransferDomainRequest</p>
  */
 public class TransferDomainRequest extends Request {
-    @Query
-    @NameInMap("DomainNames")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainNames")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainNames;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Remark")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
-    @Query
-    @NameInMap("TargetUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long targetUserId;
 
     private TransferDomainRequest(Builder builder) {
@@ -98,7 +103,11 @@ public class TransferDomainRequest extends Request {
         } 
 
         /**
-         * The list of domain names. Separate multiple domain names with commas (,). Only domain names registered with Alibaba Cloud are supported.
+         * <p>The domain names. Separate multiple domain names with commas (,). Only domain names registered with Alibaba Cloud are supported.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1.com,test2.com</p>
          */
         public Builder domainNames(String domainNames) {
             this.putQueryParameter("DomainNames", domainNames);
@@ -107,7 +116,14 @@ public class TransferDomainRequest extends Request {
         }
 
         /**
-         * The language type.
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -116,7 +132,10 @@ public class TransferDomainRequest extends Request {
         }
 
         /**
-         * The detailed information.
+         * <p>The description of the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test domain transfer</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -125,7 +144,11 @@ public class TransferDomainRequest extends Request {
         }
 
         /**
-         * The ID of the user to which domain names were transferred.
+         * <p>The destination user ID. The domain names and their Domain Name System (DNS) records are transferred to the destination user ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678</p>
          */
         public Builder targetUserId(Long targetUserId) {
             this.putQueryParameter("TargetUserId", targetUserId);

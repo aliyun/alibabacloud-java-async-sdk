@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddUserToGroupRequest} extends {@link RequestModel}
  *
  * <p>AddUserToGroupRequest</p>
  */
 public class AddUserToGroupRequest extends Request {
-    @Query
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
-    @Query
-    @NameInMap("UserName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserName")
     private String userName;
 
     private AddUserToGroupRequest(Builder builder) {
@@ -61,14 +66,17 @@ public class AddUserToGroupRequest extends Request {
             super();
         } 
 
-        private Builder(AddUserToGroupRequest response) {
-            super(response);
-            this.groupName = response.groupName;
-            this.userName = response.userName;
+        private Builder(AddUserToGroupRequest request) {
+            super(request);
+            this.groupName = request.groupName;
+            this.userName = request.userName;
         } 
 
         /**
-         * GroupName.
+         * <p>The name of the RAM user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dev-Team</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -77,7 +85,10 @@ public class AddUserToGroupRequest extends Request {
         }
 
         /**
-         * UserName.
+         * <p>The name of the RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhangq****</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

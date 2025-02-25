@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeParameterModificationHistoryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeParameterModificationHistoryResponseBody</p>
  */
 public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
-    @NameInMap("HistoricalParameters")
+    @com.aliyun.core.annotation.NameInMap("HistoricalParameters")
     private HistoricalParameters historicalParameters;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeParameterModificationHistoryResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details of the parameter modification records.
+         * <p>Details of the parameter modification records.</p>
          */
         public Builder historicalParameters(HistoricalParameters historicalParameters) {
             this.historicalParameters = historicalParameters;
@@ -58,7 +58,10 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>963C20F0-7CE1-4591-AAF3-6F3CD1CE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,17 +74,23 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeParameterModificationHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeParameterModificationHistoryResponseBody</p>
+     */
     public static class HistoricalParameter extends TeaModel {
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("NewParameterValue")
+        @com.aliyun.core.annotation.NameInMap("NewParameterValue")
         private String newParameterValue;
 
-        @NameInMap("OldParameterValue")
+        @com.aliyun.core.annotation.NameInMap("OldParameterValue")
         private String oldParameterValue;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
         private HistoricalParameter(Builder builder) {
@@ -134,7 +143,10 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
             private String parameterName; 
 
             /**
-             * The time when the parameter was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The time when the parameter was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-05T09:56:10Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -142,7 +154,10 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The parameter value after modification.
+             * <p>The parameter value after modification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder newParameterValue(String newParameterValue) {
                 this.newParameterValue = newParameterValue;
@@ -150,7 +165,10 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The parameter value before modification.
+             * <p>The parameter value before modification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-2</p>
              */
             public Builder oldParameterValue(String oldParameterValue) {
                 this.oldParameterValue = oldParameterValue;
@@ -158,7 +176,10 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>script_check_enable</p>
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -172,8 +193,14 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeParameterModificationHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeParameterModificationHistoryResponseBody</p>
+     */
     public static class HistoricalParameters extends TeaModel {
-        @NameInMap("HistoricalParameter")
+        @com.aliyun.core.annotation.NameInMap("HistoricalParameter")
         private java.util.List < HistoricalParameter> historicalParameter;
 
         private HistoricalParameters(Builder builder) {

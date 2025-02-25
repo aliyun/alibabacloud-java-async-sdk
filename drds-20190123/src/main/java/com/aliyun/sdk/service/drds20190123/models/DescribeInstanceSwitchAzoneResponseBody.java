@@ -62,7 +62,7 @@ public class DescribeInstanceSwitchAzoneResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeInstanceSwitchAzoneResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The result of the operation.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -78,7 +78,7 @@ public class DescribeInstanceSwitchAzoneResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -195,7 +195,7 @@ public class DescribeInstanceSwitchAzoneResponseBody extends TeaModel {
             private TargetAzones targetAzones; 
 
             /**
-             * OriginAzoneId.
+             * The ID of the source azoneId.
              */
             public Builder originAzoneId(String originAzoneId) {
                 this.originAzoneId = originAzoneId;
@@ -203,7 +203,7 @@ public class DescribeInstanceSwitchAzoneResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * regionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -211,7 +211,7 @@ public class DescribeInstanceSwitchAzoneResponseBody extends TeaModel {
             }
 
             /**
-             * SwitchAble.
+             * Indicates whether the job can be switched.
              */
             public Builder switchAble(Boolean switchAble) {
                 this.switchAble = switchAble;
@@ -219,7 +219,7 @@ public class DescribeInstanceSwitchAzoneResponseBody extends TeaModel {
             }
 
             /**
-             * TargetAzones.
+             * Target azones.
              */
             public Builder targetAzones(TargetAzones targetAzones) {
                 this.targetAzones = targetAzones;

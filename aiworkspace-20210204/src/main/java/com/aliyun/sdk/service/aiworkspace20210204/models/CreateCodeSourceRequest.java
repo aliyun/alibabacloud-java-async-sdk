@@ -1,59 +1,64 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCodeSourceRequest} extends {@link RequestModel}
  *
  * <p>CreateCodeSourceRequest</p>
  */
 public class CreateCodeSourceRequest extends Request {
-    @Body
-    @NameInMap("Accessibility")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Accessibility")
     private String accessibility;
 
-    @Body
-    @NameInMap("CodeBranch")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CodeBranch")
     private String codeBranch;
 
-    @Body
-    @NameInMap("CodeRepo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CodeCommit")
+    private String codeCommit;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CodeRepo")
     private String codeRepo;
 
-    @Body
-    @NameInMap("CodeRepoAccessToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CodeRepoAccessToken")
     private String codeRepoAccessToken;
 
-    @Body
-    @NameInMap("CodeRepoUserName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CodeRepoUserName")
     private String codeRepoUserName;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("DisplayName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String displayName;
 
-    @Body
-    @NameInMap("MountPath")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MountPath")
     private String mountPath;
 
-    @Body
-    @NameInMap("WorkspaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
     private CreateCodeSourceRequest(Builder builder) {
         super(builder);
         this.accessibility = builder.accessibility;
         this.codeBranch = builder.codeBranch;
+        this.codeCommit = builder.codeCommit;
         this.codeRepo = builder.codeRepo;
         this.codeRepoAccessToken = builder.codeRepoAccessToken;
         this.codeRepoUserName = builder.codeRepoUserName;
@@ -88,6 +93,13 @@ public class CreateCodeSourceRequest extends Request {
      */
     public String getCodeBranch() {
         return this.codeBranch;
+    }
+
+    /**
+     * @return codeCommit
+     */
+    public String getCodeCommit() {
+        return this.codeCommit;
     }
 
     /**
@@ -142,6 +154,7 @@ public class CreateCodeSourceRequest extends Request {
     public static final class Builder extends Request.Builder<CreateCodeSourceRequest, Builder> {
         private String accessibility; 
         private String codeBranch; 
+        private String codeCommit; 
         private String codeRepo; 
         private String codeRepoAccessToken; 
         private String codeRepoUserName; 
@@ -158,6 +171,7 @@ public class CreateCodeSourceRequest extends Request {
             super(request);
             this.accessibility = request.accessibility;
             this.codeBranch = request.codeBranch;
+            this.codeCommit = request.codeCommit;
             this.codeRepo = request.codeRepo;
             this.codeRepoAccessToken = request.codeRepoAccessToken;
             this.codeRepoUserName = request.codeRepoUserName;
@@ -182,6 +196,15 @@ public class CreateCodeSourceRequest extends Request {
         public Builder codeBranch(String codeBranch) {
             this.putBodyParameter("CodeBranch", codeBranch);
             this.codeBranch = codeBranch;
+            return this;
+        }
+
+        /**
+         * CodeCommit.
+         */
+        public Builder codeCommit(String codeCommit) {
+            this.putBodyParameter("CodeCommit", codeCommit);
+            this.codeCommit = codeCommit;
             return this;
         }
 
@@ -222,7 +245,10 @@ public class CreateCodeSourceRequest extends Request {
         }
 
         /**
-         * DisplayName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyCodeSource1</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("DisplayName", displayName);
@@ -240,7 +266,10 @@ public class CreateCodeSourceRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

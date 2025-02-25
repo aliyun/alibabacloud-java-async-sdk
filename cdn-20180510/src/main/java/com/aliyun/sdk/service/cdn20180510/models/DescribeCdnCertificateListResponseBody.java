@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnCertificateListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCdnCertificateListResponseBody</p>
  */
 public class DescribeCdnCertificateListResponseBody extends TeaModel {
-    @NameInMap("CertificateListModel")
+    @com.aliyun.core.annotation.NameInMap("CertificateListModel")
     private CertificateListModel certificateListModel;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCdnCertificateListResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeCdnCertificateListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about certificates.
+         * <p>Details about certificates.</p>
          */
         public Builder certificateListModel(CertificateListModel certificateListModel) {
             this.certificateListModel = certificateListModel;
@@ -58,7 +58,10 @@ public class DescribeCdnCertificateListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FC0E34AC-0239-44A7-AB0E-800DE522C8DA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,23 +74,29 @@ public class DescribeCdnCertificateListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCdnCertificateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCdnCertificateListResponseBody</p>
+     */
     public static class Cert extends TeaModel {
-        @NameInMap("CertId")
+        @com.aliyun.core.annotation.NameInMap("CertId")
         private Long certId;
 
-        @NameInMap("CertName")
+        @com.aliyun.core.annotation.NameInMap("CertName")
         private String certName;
 
-        @NameInMap("Common")
+        @com.aliyun.core.annotation.NameInMap("Common")
         private String common;
 
-        @NameInMap("Fingerprint")
+        @com.aliyun.core.annotation.NameInMap("Fingerprint")
         private String fingerprint;
 
-        @NameInMap("Issuer")
+        @com.aliyun.core.annotation.NameInMap("Issuer")
         private String issuer;
 
-        @NameInMap("LastTime")
+        @com.aliyun.core.annotation.NameInMap("LastTime")
         private Long lastTime;
 
         private Cert(Builder builder) {
@@ -158,7 +167,10 @@ public class DescribeCdnCertificateListResponseBody extends TeaModel {
             private Long lastTime; 
 
             /**
-             * The ID of the certificate.
+             * <p>The ID of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder certId(Long certId) {
                 this.certId = certId;
@@ -166,7 +178,10 @@ public class DescribeCdnCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the certificate.
+             * <p>The name of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Certificate1</p>
              */
             public Builder certName(String certName) {
                 this.certName = certName;
@@ -174,7 +189,10 @@ public class DescribeCdnCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * The Common Name (CN) attribute of the certificate. In most cases, the CN is a domain name.
+             * <p>The Common Name (CN) attribute of the certificate. In most cases, the CN is a domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder common(String common) {
                 this.common = common;
@@ -182,7 +200,10 @@ public class DescribeCdnCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * The fingerprint of the certificate.
+             * <p>The fingerprint of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2ED68FD33786C5B42950D40A6C50353575BB****</p>
              */
             public Builder fingerprint(String fingerprint) {
                 this.fingerprint = fingerprint;
@@ -190,7 +211,10 @@ public class DescribeCdnCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * The certificate authority (CA) that issued the certificate.
+             * <p>The certificate authority (CA) that issued the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CO****</p>
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
@@ -198,7 +222,10 @@ public class DescribeCdnCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp.
+             * <p>The timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1512388610</p>
              */
             public Builder lastTime(Long lastTime) {
                 this.lastTime = lastTime;
@@ -212,8 +239,14 @@ public class DescribeCdnCertificateListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCdnCertificateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCdnCertificateListResponseBody</p>
+     */
     public static class CertList extends TeaModel {
-        @NameInMap("Cert")
+        @com.aliyun.core.annotation.NameInMap("Cert")
         private java.util.List < Cert> cert;
 
         private CertList(Builder builder) {
@@ -253,11 +286,17 @@ public class DescribeCdnCertificateListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCdnCertificateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCdnCertificateListResponseBody</p>
+     */
     public static class CertificateListModel extends TeaModel {
-        @NameInMap("CertList")
+        @com.aliyun.core.annotation.NameInMap("CertList")
         private CertList certList;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
         private CertificateListModel(Builder builder) {
@@ -292,7 +331,7 @@ public class DescribeCdnCertificateListResponseBody extends TeaModel {
             private Integer count; 
 
             /**
-             * The list of certificates.
+             * <p>The list of certificates.</p>
              */
             public Builder certList(CertList certList) {
                 this.certList = certList;
@@ -300,7 +339,10 @@ public class DescribeCdnCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of certificates that are returned.
+             * <p>The number of certificates that are returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Integer count) {
                 this.count = count;

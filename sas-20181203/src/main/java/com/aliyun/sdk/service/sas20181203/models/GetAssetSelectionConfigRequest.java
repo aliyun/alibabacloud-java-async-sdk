@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAssetSelectionConfigRequest} extends {@link RequestModel}
  *
  * <p>GetAssetSelectionConfigRequest</p>
  */
 public class GetAssetSelectionConfigRequest extends Request {
-    @Query
-    @NameInMap("BusinessType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String businessType;
 
     private GetAssetSelectionConfigRequest(Builder builder) {
@@ -55,14 +60,18 @@ public class GetAssetSelectionConfigRequest extends Request {
         } 
 
         /**
-         * The feature that is selected for the asset. Valid values:
-         * <p>
+         * <p>The feature that is selected for the asset. Valid values:</p>
+         * <ul>
+         * <li><strong>VIRUS_SCAN_CYCLE_CONFIG</strong>: virus detection and removal</li>
+         * <li><strong>VIRUS_SCAN_ONCE_TASK</strong>: one-time scan for viruses</li>
+         * <li><strong>AGENTLESS_MALICIOUS_WHITE_LIST_[ID]</strong>: a whitelist rule for alerts that are detected by using the agentless detection feature</li>
+         * <li><strong>AGENTLESS_VUL_WHITE_LIST_[ID]</strong>: a whitelist rule for vulnerabilities that are detected by using the agentless detection feature</li>
+         * <li><strong>FILE_PROTECT_RULE_SWITCH_TYPE_[ID]</strong>: core file protectioion</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **VIRUS_SCAN_CYCLE_CONFIG**: virus detection and removal
-         * *   **VIRUS_SCAN_ONCE_TASK**: one-time scan for viruses
-         * *   **AGENTLESS_MALICIOUS_WHITE_LIST_\[ID]**: a whitelist rule for alerts that are detected by using the agentless detection feature
-         * *   **AGENTLESS_VUL_WHITE_LIST_\[ID]**: a whitelist rule for vulnerabilities that are detected by using the agentless detection feature
-         * *   **FILE_PROTECT_RULE_SWITCH_TYPE_\[ID]**: core file protectioion
+         * <strong>example:</strong>
+         * <p>VIRUS_SCAN_CYCLE_CONFIG</p>
          */
         public Builder businessType(String businessType) {
             this.putQueryParameter("BusinessType", businessType);

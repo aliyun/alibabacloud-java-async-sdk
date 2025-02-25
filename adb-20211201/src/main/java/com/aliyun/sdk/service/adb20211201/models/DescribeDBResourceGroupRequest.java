@@ -1,32 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBResourceGroupRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBResourceGroupRequest</p>
  */
 public class DescribeDBResourceGroupRequest extends Request {
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
-    @Query
-    @NameInMap("GroupType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupType")
     private String groupType;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
     private DescribeDBResourceGroupRequest(Builder builder) {
@@ -34,6 +43,7 @@ public class DescribeDBResourceGroupRequest extends Request {
         this.DBClusterId = builder.DBClusterId;
         this.groupName = builder.groupName;
         this.groupType = builder.groupType;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
     }
 
@@ -72,6 +82,13 @@ public class DescribeDBResourceGroupRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -82,6 +99,7 @@ public class DescribeDBResourceGroupRequest extends Request {
         private String DBClusterId; 
         private String groupName; 
         private String groupType; 
+        private String regionId; 
         private String resourceOwnerAccount; 
 
         private Builder() {
@@ -93,11 +111,16 @@ public class DescribeDBResourceGroupRequest extends Request {
             this.DBClusterId = request.DBClusterId;
             this.groupName = request.groupName;
             this.groupType = request.groupType;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
         } 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-bp11q28kvl688****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -106,10 +129,13 @@ public class DescribeDBResourceGroupRequest extends Request {
         }
 
         /**
-         * The name of the resource group.
-         * <p>
+         * <p>The name of the resource group.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the information about all resource groups in the cluster is returned.</p>
+         * </blockquote>
          * 
-         * > If you do not specify this parameter, the information about all resource groups in the cluster is returned.
+         * <strong>example:</strong>
+         * <p>test_group</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -118,17 +144,36 @@ public class DescribeDBResourceGroupRequest extends Request {
         }
 
         /**
-         * The type of the resource group. Valid values:
-         * <p>
+         * <p>The type of the resource group. Valid values:</p>
+         * <ul>
+         * <li><strong>Interactive</strong></li>
+         * <li><strong>Job</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group overview</a>.</p>
+         * </blockquote>
          * 
-         * *   **Interactive**
-         * *   **Job**
-         * 
-         * > For information about resource groups of Data Lakehouse Edition, see [Resource groups](~~428610~~).
+         * <strong>example:</strong>
+         * <p>Job</p>
          */
         public Builder groupType(String groupType) {
             this.putQueryParameter("GroupType", groupType);
             this.groupType = groupType;
+            return this;
+        }
+
+        /**
+         * <p>The region ID of the cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/612393.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

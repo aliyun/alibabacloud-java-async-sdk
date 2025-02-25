@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiagnosisMonitorPerformanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDiagnosisMonitorPerformanceResponseBody</p>
  */
 public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
-    @NameInMap("Performances")
+    @com.aliyun.core.annotation.NameInMap("Performances")
     private java.util.List < Performances> performances;
 
-    @NameInMap("PerformancesThreshold")
+    @com.aliyun.core.annotation.NameInMap("PerformancesThreshold")
     private Integer performancesThreshold;
 
-    @NameInMap("PerformancesTruncated")
+    @com.aliyun.core.annotation.NameInMap("PerformancesTruncated")
     private Boolean performancesTruncated;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDiagnosisMonitorPerformanceResponseBody(Builder builder) {
@@ -74,7 +74,7 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The monitoring information of queries displayed in Gantt charts.
+         * <p>The monitoring information about queries displayed in Gantt charts.</p>
          */
         public Builder performances(java.util.List < Performances> performances) {
             this.performances = performances;
@@ -82,10 +82,13 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * The threshold for the number of queries displayed in a Gantt chart. The default value is 10000.
-         * <p>
+         * <p>The threshold for the number of queries displayed in a Gantt chart. Default value: 10000.</p>
+         * <blockquote>
+         * <p> Up to 10,000 queries can be displayed in a Gantt chart even if more queries exist.</p>
+         * </blockquote>
          * 
-         * >  A maximum of 10,000 queries can be displayed in a Gantt chart even if more queries exist.
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder performancesThreshold(Integer performancesThreshold) {
             this.performancesThreshold = performancesThreshold;
@@ -93,11 +96,14 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether all queries are returned. Valid values:
-         * <p>
+         * <p>Indicates whether all queries are returned. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true: All queries are returned.
-         * *   false: Only a specified number of queries are returned.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder performancesTruncated(Boolean performancesTruncated) {
             this.performancesTruncated = performancesTruncated;
@@ -105,7 +111,10 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0F1AC5FD-16E9-5399-B81F-5AC434B1D9F8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,32 +127,38 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDiagnosisMonitorPerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDiagnosisMonitorPerformanceResponseBody</p>
+     */
     public static class Performances extends TeaModel {
-        @NameInMap("Cost")
+        @com.aliyun.core.annotation.NameInMap("Cost")
         private Long cost;
 
-        @NameInMap("PeakMemory")
+        @com.aliyun.core.annotation.NameInMap("PeakMemory")
         private Long peakMemory;
 
-        @NameInMap("ProcessId")
+        @com.aliyun.core.annotation.NameInMap("ProcessId")
         private String processId;
 
-        @NameInMap("RcHost")
+        @com.aliyun.core.annotation.NameInMap("RcHost")
         private String rcHost;
 
-        @NameInMap("ScanRows")
+        @com.aliyun.core.annotation.NameInMap("ScanRows")
         private Long scanRows;
 
-        @NameInMap("ScanSize")
+        @com.aliyun.core.annotation.NameInMap("ScanSize")
         private Long scanSize;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private Performances(Builder builder) {
@@ -241,10 +256,13 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The total amount of time consumed by the query. Unit: milliseconds.
-             * <p>
+             * <p>The total execution duration. Unit: milliseconds.</p>
+             * <blockquote>
+             * <p> This value is the cumulative value of the <code>QueuedTime</code>, <code>TotalPlanningTime</code>, and <code>ExecutionTime</code> parameters.</p>
+             * </blockquote>
              * 
-             * >  This parameter indicates the sum of `QueuedTime`, `TotalPlanningTime`, and `ExecutionTime`.
+             * <strong>example:</strong>
+             * <p>252</p>
              */
             public Builder cost(Long cost) {
                 this.cost = cost;
@@ -252,7 +270,10 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The peak memory of the query. Unit: bytes.
+             * <p>The peak memory of the query. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder peakMemory(Long peakMemory) {
                 this.peakMemory = peakMemory;
@@ -260,10 +281,10 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the query.
-             * <p>
+             * <p>The query ID.</p>
              * 
-             * >  You can call the [DescribeProcessList](~~143382~~) operation to query the IDs of queries that are being executed.
+             * <strong>example:</strong>
+             * <p>202210311015270330101470300315153****</p>
              */
             public Builder processId(String processId) {
                 this.processId = processId;
@@ -271,7 +292,10 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the AnalyticDB for MySQL frontend node on which the SQL statement is executed.
+             * <p>The IP address of the AnalyticDB for MySQL frontend node on which the SQL statement is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder rcHost(String rcHost) {
                 this.rcHost = rcHost;
@@ -279,7 +303,10 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries scanned.
+             * <p>The number of rows scanned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2345</p>
              */
             public Builder scanRows(Long scanRows) {
                 this.scanRows = scanRows;
@@ -287,7 +314,10 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of scanned data. Unit: bytes.
+             * <p>The amount of scanned data. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder scanSize(Long scanSize) {
                 this.scanSize = scanSize;
@@ -295,7 +325,10 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The execution start time of the SQL statement. The time is in the UNIX timestamp format. Unit: milliseconds.
+             * <p>The execution start time of the SQL statement. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1669011260000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -303,12 +336,15 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the SQL statement. Valid values:
-             * <p>
+             * <p>The status of the SQL statement. Valid values:</p>
+             * <ul>
+             * <li><strong>running</strong></li>
+             * <li><strong>finished</strong></li>
+             * <li><strong>failed</strong></li>
+             * </ul>
              * 
-             * *   **running**
-             * *   **finished**
-             * *   **failed**
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -316,7 +352,10 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The database account that is used to submit the query.
+             * <p>The database account that is used to submit the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rpt</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

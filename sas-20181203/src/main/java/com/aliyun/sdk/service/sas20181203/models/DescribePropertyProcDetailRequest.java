@@ -1,59 +1,64 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePropertyProcDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribePropertyProcDetailRequest</p>
  */
 public class DescribePropertyProcDetailRequest extends Request {
-    @Query
-    @NameInMap("Cmdline")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Cmdline")
     private String cmdline;
 
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("Extend")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Extend")
     private String extend;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ProcTimeEnd")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProcTimeEnd")
     private Long procTimeEnd;
 
-    @Query
-    @NameInMap("ProcTimeStart")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProcTimeStart")
     private Long procTimeStart;
 
-    @Query
-    @NameInMap("Remark")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
-    @Query
-    @NameInMap("ResourceDirectoryAccountId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
     private Long resourceDirectoryAccountId;
 
-    @Query
-    @NameInMap("User")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("User")
     private String user;
 
-    @Query
-    @NameInMap("Uuid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuid")
     private String uuid;
 
     private DescribePropertyProcDetailRequest(Builder builder) {
@@ -194,7 +199,10 @@ public class DescribePropertyProcDetailRequest extends Request {
         } 
 
         /**
-         * The startup parameter of the process.
+         * <p>The startup parameter of the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>./8888</p>
          */
         public Builder cmdline(String cmdline) {
             this.putQueryParameter("Cmdline", cmdline);
@@ -203,7 +211,10 @@ public class DescribePropertyProcDetailRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -212,7 +223,10 @@ public class DescribePropertyProcDetailRequest extends Request {
         }
 
         /**
-         * Specifies whether fuzzy search by process name is supported. If you want to use fuzzy search, set the parameter to 1. If you set the parameter to a different value or leave the parameter empty, fuzzy search is not supported.
+         * <p>Specifies whether fuzzy search by process name is supported. If you want to use fuzzy search, set the parameter to 1. If you set the parameter to a different value or leave the parameter empty, fuzzy search is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder extend(String extend) {
             this.putQueryParameter("Extend", extend);
@@ -221,7 +235,10 @@ public class DescribePropertyProcDetailRequest extends Request {
         }
 
         /**
-         * The name of the process.
+         * <p>The name of the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8888</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -230,7 +247,10 @@ public class DescribePropertyProcDetailRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**.
+         * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -239,7 +259,10 @@ public class DescribePropertyProcDetailRequest extends Request {
         }
 
         /**
-         * The timestamp when the process ends. Unit: milliseconds.
+         * <p>The timestamp when the process ends. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1649587453000</p>
          */
         public Builder procTimeEnd(Long procTimeEnd) {
             this.putQueryParameter("ProcTimeEnd", procTimeEnd);
@@ -248,7 +271,10 @@ public class DescribePropertyProcDetailRequest extends Request {
         }
 
         /**
-         * The timestamp when the process starts. Unit: milliseconds.
+         * <p>The timestamp when the process starts. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1648809853000</p>
          */
         public Builder procTimeStart(Long procTimeStart) {
             this.putQueryParameter("ProcTimeStart", procTimeStart);
@@ -257,7 +283,10 @@ public class DescribePropertyProcDetailRequest extends Request {
         }
 
         /**
-         * The name or IP address of the server.
+         * <p>The name or IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -266,10 +295,13 @@ public class DescribePropertyProcDetailRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud account ID of the member in the resource directory.
-         * <p>
+         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to query the account ID.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.
+         * <strong>example:</strong>
+         * <p>127608589417****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -278,7 +310,10 @@ public class DescribePropertyProcDetailRequest extends Request {
         }
 
         /**
-         * The user who runs the process.
+         * <p>The user who runs the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
          */
         public Builder user(String user) {
             this.putQueryParameter("User", user);
@@ -287,7 +322,10 @@ public class DescribePropertyProcDetailRequest extends Request {
         }
 
         /**
-         * The UUID of the server.
+         * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50d213b4-3a35-427a-b8a5-04b0c7e1****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

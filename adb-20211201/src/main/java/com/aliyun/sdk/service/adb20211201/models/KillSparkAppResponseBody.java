@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link KillSparkAppResponseBody} extends {@link TeaModel}
  *
  * <p>KillSparkAppResponseBody</p>
  */
 public class KillSparkAppResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private KillSparkAppResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class KillSparkAppResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class KillSparkAppResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69D0810B-F9F5-5F4C-A57F-DF36133B63C9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +79,26 @@ public class KillSparkAppResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link KillSparkAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>KillSparkAppResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("DBClusterId")
+        @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private Data(Builder builder) {
@@ -146,7 +160,10 @@ public class KillSparkAppResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * The ID of the Spark application.
+             * <p>The Spark application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s202204132018hzprec1ac****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -154,7 +171,10 @@ public class KillSparkAppResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Spark application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LAKEHOUSE-1-1</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -162,7 +182,10 @@ public class KillSparkAppResponseBody extends TeaModel {
             }
 
             /**
-             * The database ID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>amv-bp1c3em7b2e****</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -170,7 +193,10 @@ public class KillSparkAppResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned if the request failed.
+             * <p>The error message returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[Advisor] Advisor feature is not available for instance: am-2ze292w4fyglwxxxx</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -178,14 +204,23 @@ public class KillSparkAppResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the Spark application. Valid values:
-             * <p>
+             * <p>The execution state of the Spark application. Valid values:</p>
+             * <ul>
+             * <li><strong>SUBMITTED</strong></li>
+             * <li><strong>STARTING</strong></li>
+             * <li><strong>RUNNING</strong></li>
+             * <li><strong>FAILING</strong></li>
+             * <li><strong>FAILED</strong></li>
+             * <li><strong>KILLING</strong></li>
+             * <li><strong>KILLED</strong></li>
+             * <li><strong>SUCCEEDING</strong></li>
+             * <li><strong>COMPLETED</strong></li>
+             * <li><strong>FATAL</strong></li>
+             * <li><strong>UNKNOWN</strong></li>
+             * </ul>
              * 
-             * *   **waiting**
-             * *   **running**
-             * *   **finished**
-             * *   **failed**
-             * *   **closed**
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder state(String state) {
                 this.state = state;

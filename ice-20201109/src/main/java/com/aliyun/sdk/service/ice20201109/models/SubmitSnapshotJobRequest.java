@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitSnapshotJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitSnapshotJobRequest</p>
  */
 public class SubmitSnapshotJobRequest extends Request {
-    @Query
-    @NameInMap("Input")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Input")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Input input;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("Output")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Output")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Output output;
 
-    @Query
-    @NameInMap("ScheduleConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScheduleConfig")
     private ScheduleConfig scheduleConfig;
 
-    @Query
-    @NameInMap("TemplateConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private TemplateConfig templateConfig;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
     private SubmitSnapshotJobRequest(Builder builder) {
@@ -127,7 +132,8 @@ public class SubmitSnapshotJobRequest extends Request {
         } 
 
         /**
-         * Input.
+         * <p>The snapshot input.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder input(Input input) {
             String inputShrink = shrink(input, "Input", "json");
@@ -137,7 +143,10 @@ public class SubmitSnapshotJobRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SampleJob</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -146,7 +155,8 @@ public class SubmitSnapshotJobRequest extends Request {
         }
 
         /**
-         * Output.
+         * <p>The snapshot output.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder output(Output output) {
             String outputShrink = shrink(output, "Output", "json");
@@ -156,7 +166,7 @@ public class SubmitSnapshotJobRequest extends Request {
         }
 
         /**
-         * ScheduleConfig.
+         * <p>The scheduling settings.</p>
          */
         public Builder scheduleConfig(ScheduleConfig scheduleConfig) {
             String scheduleConfigShrink = shrink(scheduleConfig, "ScheduleConfig", "json");
@@ -166,7 +176,8 @@ public class SubmitSnapshotJobRequest extends Request {
         }
 
         /**
-         * TemplateConfig.
+         * <p>The snapshot template configuration.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder templateConfig(TemplateConfig templateConfig) {
             String templateConfigShrink = shrink(templateConfig, "TemplateConfig", "json");
@@ -176,7 +187,10 @@ public class SubmitSnapshotJobRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The user-defined data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;test parameter&quot;: &quot;test value&quot;}</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -191,13 +205,19 @@ public class SubmitSnapshotJobRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitSnapshotJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitSnapshotJobRequest</p>
+     */
     public static class Input extends TeaModel {
-        @NameInMap("Media")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Media")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String media;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private Input(Builder builder) {
@@ -232,7 +252,18 @@ public class SubmitSnapshotJobRequest extends Request {
             private String type; 
 
             /**
-             * Media.
+             * <p>The input file. If Type is set to OSS, the URL of an OSS object is returned. If Type is set to Media, the ID of a media asset is returned. The URL of an OSS object can be in one of the following formats:</p>
+             * <ol>
+             * <li>oss://bucket/object</li>
+             * <li>http(s)://bucket.oss-[RegionId].aliyuncs.com/object In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS.</li>
+             * </ol>
+             * <blockquote>
+             * <p> Before you use the OSS bucket in the URL, you must add the bucket on the <a href="https://help.aliyun.com/document_detail/609918.html">Storage Management</a> page of the Intelligent Media Services (IMS) console.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket/object.mp4</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -240,7 +271,15 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The type of the input file. Valid values:</p>
+             * <ol>
+             * <li>OSS: an Object Storage Service (OSS) object.</li>
+             * <li>Media: a media asset.</li>
+             * </ol>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Media</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -254,13 +293,19 @@ public class SubmitSnapshotJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitSnapshotJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitSnapshotJobRequest</p>
+     */
     public static class Output extends TeaModel {
-        @NameInMap("Media")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Media")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String media;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private Output(Builder builder) {
@@ -295,7 +340,19 @@ public class SubmitSnapshotJobRequest extends Request {
             private String type; 
 
             /**
-             * Media.
+             * <p>The output file. If Type is set to OSS, the URL of an OSS object is returned. If Type is set to Media, the ID of a media asset is returned. The URL of an OSS object can be in one of the following formats:</p>
+             * <ol>
+             * <li>oss://bucket/object</li>
+             * <li>http(s)://bucket.oss-[RegionId].aliyuncs.com/object</li>
+             * </ol>
+             * <p>In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS. If multiple static snapshots were captured, the object must contain the &quot;{Count}&quot; placeholder. In the case of a sprite, the object must contain the &quot;{TileCount}&quot; placeholder. The suffix of the WebVTT snapshot objects must be &quot;.vtt&quot;.</p>
+             * <blockquote>
+             * <p> Before you use the OSS bucket in the URL, you must add the bucket on the <a href="https://help.aliyun.com/document_detail/609918.html">Storage Management</a> page of the IMS console.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://test-bucket/output-{Count}.jpg</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -303,7 +360,15 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The type of the output file. Valid values:</p>
+             * <ol>
+             * <li>OSS: an OSS object.</li>
+             * <li>Media: a media asset.</li>
+             * </ol>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -317,8 +382,14 @@ public class SubmitSnapshotJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitSnapshotJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitSnapshotJobRequest</p>
+     */
     public static class ScheduleConfig extends TeaModel {
-        @NameInMap("PipelineId")
+        @com.aliyun.core.annotation.NameInMap("PipelineId")
         private String pipelineId;
 
         private ScheduleConfig(Builder builder) {
@@ -344,7 +415,10 @@ public class SubmitSnapshotJobRequest extends Request {
             private String pipelineId; 
 
             /**
-             * PipelineId.
+             * <p>The ID of the ApsaraVideo Media Processing (MPS) queue that is used to run the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;
@@ -358,26 +432,32 @@ public class SubmitSnapshotJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitSnapshotJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitSnapshotJobRequest</p>
+     */
     public static class SpriteSnapshotConfig extends TeaModel {
-        @NameInMap("CellHeight")
+        @com.aliyun.core.annotation.NameInMap("CellHeight")
         private Integer cellHeight;
 
-        @NameInMap("CellWidth")
+        @com.aliyun.core.annotation.NameInMap("CellWidth")
         private Integer cellWidth;
 
-        @NameInMap("Color")
+        @com.aliyun.core.annotation.NameInMap("Color")
         private String color;
 
-        @NameInMap("Columns")
+        @com.aliyun.core.annotation.NameInMap("Columns")
         private Integer columns;
 
-        @NameInMap("Lines")
+        @com.aliyun.core.annotation.NameInMap("Lines")
         private Integer lines;
 
-        @NameInMap("Margin")
+        @com.aliyun.core.annotation.NameInMap("Margin")
         private Integer margin;
 
-        @NameInMap("Padding")
+        @com.aliyun.core.annotation.NameInMap("Padding")
         private Integer padding;
 
         private SpriteSnapshotConfig(Builder builder) {
@@ -457,7 +537,10 @@ public class SubmitSnapshotJobRequest extends Request {
             private Integer padding; 
 
             /**
-             * CellHeight.
+             * <p>The height of a single snapshot before tiling. The default value is the height of the output snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>480</p>
              */
             public Builder cellHeight(Integer cellHeight) {
                 this.cellHeight = cellHeight;
@@ -465,7 +548,10 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * CellWidth.
+             * <p>The width of a single snapshot before tiling. The default value is the width of the output snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>720</p>
              */
             public Builder cellWidth(Integer cellWidth) {
                 this.cellWidth = cellWidth;
@@ -473,7 +559,10 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * Color.
+             * <p>The background color.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>#000000</p>
              */
             public Builder color(String color) {
                 this.color = color;
@@ -481,7 +570,10 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * Columns.
+             * <p>The number of columns that the image sprite contains.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder columns(Integer columns) {
                 this.columns = columns;
@@ -489,7 +581,10 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * Lines.
+             * <p>The number of rows that the image sprite contains.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder lines(Integer lines) {
                 this.lines = lines;
@@ -497,7 +592,10 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * Margin.
+             * <p>The width of the frame. Default value: 0. Unit: pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder margin(Integer margin) {
                 this.margin = margin;
@@ -505,7 +603,10 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * Padding.
+             * <p>The spacing between two adjacent snapshots. Default value: 0. Unit: pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder padding(Integer padding) {
                 this.padding = padding;
@@ -519,38 +620,44 @@ public class SubmitSnapshotJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitSnapshotJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitSnapshotJobRequest</p>
+     */
     public static class OverwriteParams extends TeaModel {
-        @NameInMap("BlackLevel")
+        @com.aliyun.core.annotation.NameInMap("BlackLevel")
         private Integer blackLevel;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("FrameType")
+        @com.aliyun.core.annotation.NameInMap("FrameType")
         private String frameType;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Integer height;
 
-        @NameInMap("Interval")
+        @com.aliyun.core.annotation.NameInMap("Interval")
         private Long interval;
 
-        @NameInMap("IsSptFrag")
+        @com.aliyun.core.annotation.NameInMap("IsSptFrag")
         private Boolean isSptFrag;
 
-        @NameInMap("PixelBlackThreshold")
+        @com.aliyun.core.annotation.NameInMap("PixelBlackThreshold")
         private Integer pixelBlackThreshold;
 
-        @NameInMap("SpriteSnapshotConfig")
+        @com.aliyun.core.annotation.NameInMap("SpriteSnapshotConfig")
         private SpriteSnapshotConfig spriteSnapshotConfig;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private Long time;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private Integer width;
 
         private OverwriteParams(Builder builder) {
@@ -666,7 +773,10 @@ public class SubmitSnapshotJobRequest extends Request {
             private Integer width; 
 
             /**
-             * BlackLevel.
+             * <p>The threshold that is used to filter out black frames for the first snapshot to be captured. This feature is available if you request the system to capture multiple snapshots.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder blackLevel(Integer blackLevel) {
                 this.blackLevel = blackLevel;
@@ -674,7 +784,10 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * Count.
+             * <p>The number of snapshots.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -682,7 +795,10 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * FrameType.
+             * <p>The type of the frame.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>intra</p>
              */
             public Builder frameType(String frameType) {
                 this.frameType = frameType;
@@ -690,7 +806,10 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * Height.
+             * <p>The height of a captured snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>480</p>
              */
             public Builder height(Integer height) {
                 this.height = height;
@@ -698,7 +817,10 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * Interval.
+             * <p>The interval at which snapshots are captured.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder interval(Long interval) {
                 this.interval = interval;
@@ -706,7 +828,10 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * IsSptFrag.
+             * <p>The WebVTT snapshot configuration that specifies whether to merge the output snapshots.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isSptFrag(Boolean isSptFrag) {
                 this.isSptFrag = isSptFrag;
@@ -714,7 +839,10 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * PixelBlackThreshold.
+             * <p>The color value threshold that determines whether a pixel is black.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70</p>
              */
             public Builder pixelBlackThreshold(Integer pixelBlackThreshold) {
                 this.pixelBlackThreshold = pixelBlackThreshold;
@@ -722,7 +850,7 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * SpriteSnapshotConfig.
+             * <p>The configuration of the sprite snapshot.</p>
              */
             public Builder spriteSnapshotConfig(SpriteSnapshotConfig spriteSnapshotConfig) {
                 this.spriteSnapshotConfig = spriteSnapshotConfig;
@@ -730,7 +858,10 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * Time.
+             * <p>The point in time at which the system starts to capture snapshots in the input video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder time(Long time) {
                 this.time = time;
@@ -738,7 +869,10 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The snapshot type. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sprite</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -746,7 +880,10 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * Width.
+             * <p>The width of a captured snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>720</p>
              */
             public Builder width(Integer width) {
                 this.width = width;
@@ -760,12 +897,18 @@ public class SubmitSnapshotJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitSnapshotJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitSnapshotJobRequest</p>
+     */
     public static class TemplateConfig extends TeaModel {
-        @NameInMap("OverwriteParams")
+        @com.aliyun.core.annotation.NameInMap("OverwriteParams")
         private OverwriteParams overwriteParams;
 
-        @NameInMap("TemplateId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String templateId;
 
         private TemplateConfig(Builder builder) {
@@ -800,7 +943,7 @@ public class SubmitSnapshotJobRequest extends Request {
             private String templateId; 
 
             /**
-             * OverwriteParams.
+             * <p>The parameters that are used to overwrite the corresponding parameters.</p>
              */
             public Builder overwriteParams(OverwriteParams overwriteParams) {
                 this.overwriteParams = overwriteParams;
@@ -808,7 +951,11 @@ public class SubmitSnapshotJobRequest extends Request {
             }
 
             /**
-             * TemplateId.
+             * <p>The template ID.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;

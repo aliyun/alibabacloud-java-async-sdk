@@ -1,52 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAgAccountRequest} extends {@link RequestModel}
  *
  * <p>CreateAgAccountRequest</p>
  */
 public class CreateAgAccountRequest extends Request {
-    @Query
-    @NameInMap("AccountAttr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountAttr")
     private String accountAttr;
 
-    @Query
-    @NameInMap("CityName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CityName")
     private String cityName;
 
-    @Query
-    @NameInMap("EnterpriseName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnterpriseName")
     private String enterpriseName;
 
-    @Query
-    @NameInMap("FirstName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirstName")
     private String firstName;
 
-    @Query
-    @NameInMap("LastName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LastName")
     private String lastName;
 
-    @Query
-    @NameInMap("LoginEmail")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoginEmail")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loginEmail;
 
-    @Query
-    @NameInMap("NationCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NationCode")
     private String nationCode;
 
-    @Query
-    @NameInMap("Postcode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Postcode")
     private String postcode;
 
-    @Query
-    @NameInMap("ProvinceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProvinceName")
     private String provinceName;
 
     private CreateAgAccountRequest(Builder builder) {
@@ -167,7 +172,10 @@ public class CreateAgAccountRequest extends Request {
         } 
 
         /**
-         * The attribute of the account. To view the attribute of the account, use the account to log on to the Alibaba Cloud Management Console, move the pointer over the profile picture in the upper-right corner, and then click **Security Settings**.
+         * <p>The attribute of the account. To view the attribute of the account, use the account to log on to the Alibaba Cloud Management Console, move the pointer over the profile picture in the upper-right corner, and then click <strong>Security Settings</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder accountAttr(String accountAttr) {
             this.putQueryParameter("AccountAttr", accountAttr);
@@ -176,7 +184,10 @@ public class CreateAgAccountRequest extends Request {
         }
 
         /**
-         * The name of the city.
+         * <p>The name of the city.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Beijing</p>
          */
         public Builder cityName(String cityName) {
             this.putQueryParameter("CityName", cityName);
@@ -185,7 +196,10 @@ public class CreateAgAccountRequest extends Request {
         }
 
         /**
-         * The name of the enterprise.
+         * <p>The name of the enterprise.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dongguan ChuangNeng Electric Appliance Co., Ltd</p>
          */
         public Builder enterpriseName(String enterpriseName) {
             this.putQueryParameter("EnterpriseName", enterpriseName);
@@ -194,7 +208,10 @@ public class CreateAgAccountRequest extends Request {
         }
 
         /**
-         * The first name.
+         * <p>The first name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Zhicheng</p>
          */
         public Builder firstName(String firstName) {
             this.putQueryParameter("FirstName", firstName);
@@ -203,10 +220,11 @@ public class CreateAgAccountRequest extends Request {
         }
 
         /**
-         * The last name.
-         * <p>
+         * <p>The last name.</p>
+         * <p>The last name can be up to 64 characters in length.</p>
          * 
-         * The last name can be up to 64 characters in length.
+         * <strong>example:</strong>
+         * <p>Wu</p>
          */
         public Builder lastName(String lastName) {
             this.putQueryParameter("LastName", lastName);
@@ -215,7 +233,11 @@ public class CreateAgAccountRequest extends Request {
         }
 
         /**
-         * The email address used to log on to the account.
+         * <p>The email address used to log on to the account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>email</p>
          */
         public Builder loginEmail(String loginEmail) {
             this.putQueryParameter("LoginEmail", loginEmail);
@@ -224,7 +246,10 @@ public class CreateAgAccountRequest extends Request {
         }
 
         /**
-         * The country code.
+         * <p>The country code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CN</p>
          */
         public Builder nationCode(String nationCode) {
             this.putQueryParameter("NationCode", nationCode);
@@ -233,7 +258,10 @@ public class CreateAgAccountRequest extends Request {
         }
 
         /**
-         * The zip code.
+         * <p>The zip code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>350000</p>
          */
         public Builder postcode(String postcode) {
             this.putQueryParameter("Postcode", postcode);
@@ -242,7 +270,10 @@ public class CreateAgAccountRequest extends Request {
         }
 
         /**
-         * The name of the province. This parameter is optional.
+         * <p>The name of the province. This parameter is optional.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Beijing</p>
          */
         public Builder provinceName(String provinceName) {
             this.putQueryParameter("ProvinceName", provinceName);

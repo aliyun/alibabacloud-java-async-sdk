@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDBInstancePlanResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateDBInstancePlanResponseBody</p>
  */
 public class UpdateDBInstancePlanResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("PlanId")
+    @com.aliyun.core.annotation.NameInMap("PlanId")
     private String planId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private UpdateDBInstancePlanResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class UpdateDBInstancePlanResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -94,10 +102,11 @@ public class UpdateDBInstancePlanResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
-         * <p>
+         * <p>The error message returned.</p>
+         * <p>This parameter is returned only when the operation fails.</p>
          * 
-         * This parameter is returned only when the operation fails.
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -105,7 +114,10 @@ public class UpdateDBInstancePlanResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the plan.
+         * <p>The ID of the plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder planId(String planId) {
             this.planId = planId;
@@ -113,7 +125,10 @@ public class UpdateDBInstancePlanResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34b32a0a-08ef-4a87-b6be-cdd9f56fc3ad</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,10 +136,11 @@ public class UpdateDBInstancePlanResponseBody extends TeaModel {
         }
 
         /**
-         * The state of the operation.
-         * <p>
+         * <p>The state of the operation.</p>
+         * <p>If the operation is successful, <strong>success</strong> is returned. If the operation fails, this parameter is not returned.</p>
          * 
-         * If the operation is successful, **success** is returned. If the operation fails, this parameter is not returned.
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder status(String status) {
             this.status = status;

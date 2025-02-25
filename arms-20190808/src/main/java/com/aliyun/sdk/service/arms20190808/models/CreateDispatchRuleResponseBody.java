@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDispatchRuleResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDispatchRuleResponseBody</p>
  */
 public class CreateDispatchRuleResponseBody extends TeaModel {
-    @NameInMap("DispatchRuleId")
+    @com.aliyun.core.annotation.NameInMap("DispatchRuleId")
     private Long dispatchRuleId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateDispatchRuleResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateDispatchRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DispatchRuleId.
+         * <p>The ID of the dispatch policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10413</p>
          */
         public Builder dispatchRuleId(Long dispatchRuleId) {
             this.dispatchRuleId = dispatchRuleId;
@@ -58,7 +66,10 @@ public class CreateDispatchRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5EC8221-08F2-4C95-9AF1-49FD998C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWebAccessModeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWebAccessModeResponseBody</p>
  */
 public class DescribeWebAccessModeResponseBody extends TeaModel {
-    @NameInMap("DomainModes")
-    private java.util.List < DomainModes> domainModes;
+    @com.aliyun.core.annotation.NameInMap("DomainModes")
+    private java.util.List<DomainModes> domainModes;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeWebAccessModeResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeWebAccessModeResponseBody extends TeaModel {
     /**
      * @return domainModes
      */
-    public java.util.List < DomainModes> getDomainModes() {
+    public java.util.List<DomainModes> getDomainModes() {
         return this.domainModes;
     }
 
@@ -46,19 +51,22 @@ public class DescribeWebAccessModeResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DomainModes> domainModes; 
+        private java.util.List<DomainModes> domainModes; 
         private String requestId; 
 
         /**
-         * An array consisting of the modes in which the website service is added.
+         * <p>An array consisting of the modes in which the website service is added.</p>
          */
-        public Builder domainModes(java.util.List < DomainModes> domainModes) {
+        public Builder domainModes(java.util.List<DomainModes> domainModes) {
             this.domainModes = domainModes;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bcf28g5-d57c-11e7-9bs0-d89d6717dxbc</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class DescribeWebAccessModeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeWebAccessModeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWebAccessModeResponseBody</p>
+     */
     public static class DomainModes extends TeaModel {
-        @NameInMap("AccessMode")
+        @com.aliyun.core.annotation.NameInMap("AccessMode")
         private Integer accessMode;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
         private DomainModes(Builder builder) {
@@ -110,12 +124,15 @@ public class DescribeWebAccessModeResponseBody extends TeaModel {
             private String domain; 
 
             /**
-             * The mode in which the website service is added. Valid values:
-             * <p>
+             * <p>The mode in which the website service is added. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: A record</li>
+             * <li><strong>1</strong>: anti-DDoS mode</li>
+             * <li><strong>2</strong>: origin redundancy mode</li>
+             * </ul>
              * 
-             * *   **0**: A record
-             * *   **1**: anti-DDoS mode
-             * *   **2**: origin redundancy mode
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder accessMode(Integer accessMode) {
                 this.accessMode = accessMode;
@@ -123,7 +140,10 @@ public class DescribeWebAccessModeResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name of the website.
+             * <p>The domain name of the website.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;

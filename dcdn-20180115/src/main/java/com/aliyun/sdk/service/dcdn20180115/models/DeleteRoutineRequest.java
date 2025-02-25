@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteRoutineRequest} extends {@link RequestModel}
  *
  * <p>DeleteRoutineRequest</p>
  */
 public class DeleteRoutineRequest extends Request {
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
     private DeleteRoutineRequest(Builder builder) {
@@ -55,7 +55,11 @@ public class DeleteRoutineRequest extends Request {
         } 
 
         /**
-         * The name of the routine. The name must be unique among the routines that belong to the same Alibaba Cloud account.
+         * <p>The name of the routine. The name must be unique among the routines that belong to the same Alibaba Cloud account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

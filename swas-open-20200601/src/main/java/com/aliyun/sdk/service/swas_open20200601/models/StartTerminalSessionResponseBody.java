@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartTerminalSessionResponseBody} extends {@link TeaModel}
  *
  * <p>StartTerminalSessionResponseBody</p>
  */
 public class StartTerminalSessionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @NameInMap("SessionId")
+    @com.aliyun.core.annotation.NameInMap("SessionId")
     private String sessionId;
 
-    @NameInMap("WebSocketUrl")
+    @com.aliyun.core.annotation.NameInMap("WebSocketUrl")
     private String webSocketUrl;
 
     private StartTerminalSessionResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class StartTerminalSessionResponseBody extends TeaModel {
         private String webSocketUrl; 
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20758A-585D-4A41-A9B2-28DA8F4F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,7 +90,10 @@ public class StartTerminalSessionResponseBody extends TeaModel {
         }
 
         /**
-         * The security token included in the WebSocket request header. The system uses this token to authenticate the request.
+         * <p>The security token included in the WebSocket request header. The system uses this token to authenticate the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>token-xxxaaz</p>
          */
         public Builder securityToken(String securityToken) {
             this.securityToken = securityToken;
@@ -90,7 +101,10 @@ public class StartTerminalSessionResponseBody extends TeaModel {
         }
 
         /**
-         * The session ID.
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ffb90b6e-b18a-4a33-88cf-86fb88****</p>
          */
         public Builder sessionId(String sessionId) {
             this.sessionId = sessionId;
@@ -98,7 +112,10 @@ public class StartTerminalSessionResponseBody extends TeaModel {
         }
 
         /**
-         * The URL of the WebSocket session that is used to connect to the server. The URL contains the session ID (`SessionId`) and the authentication token (`SecurityToken`).
+         * <p>The URL of the WebSocket session that is used to connect to the server. The URL contains the session ID (<code>SessionId</code>) and the authentication token (<code>SecurityToken</code>).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wss://xxxx</p>
          */
         public Builder webSocketUrl(String webSocketUrl) {
             this.webSocketUrl = webSocketUrl;

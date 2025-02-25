@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,58 +11,58 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCustomRoutingEndpointGroupResponseBody</p>
  */
 public class DescribeCustomRoutingEndpointGroupResponseBody extends TeaModel {
-    @NameInMap("AcceleratorId")
+    @com.aliyun.core.annotation.NameInMap("AcceleratorId")
     private String acceleratorId;
 
-    @NameInMap("AccessLogSwitch")
+    @com.aliyun.core.annotation.NameInMap("AccessLogSwitch")
     private String accessLogSwitch;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("EnableAccessLog")
+    @com.aliyun.core.annotation.NameInMap("EnableAccessLog")
     private Boolean enableAccessLog;
 
-    @NameInMap("EndpointGroupId")
+    @com.aliyun.core.annotation.NameInMap("EndpointGroupId")
     private String endpointGroupId;
 
-    @NameInMap("EndpointGroupIpList")
+    @com.aliyun.core.annotation.NameInMap("EndpointGroupIpList")
     private java.util.List < String > endpointGroupIpList;
 
-    @NameInMap("EndpointGroupRegion")
+    @com.aliyun.core.annotation.NameInMap("EndpointGroupRegion")
     private String endpointGroupRegion;
 
-    @NameInMap("EndpointGroupUnconfirmedIpList")
+    @com.aliyun.core.annotation.NameInMap("EndpointGroupUnconfirmedIpList")
     private java.util.List < String > endpointGroupUnconfirmedIpList;
 
-    @NameInMap("ListenerId")
+    @com.aliyun.core.annotation.NameInMap("ListenerId")
     private String listenerId;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServiceId")
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
     private String serviceId;
 
-    @NameInMap("ServiceManaged")
+    @com.aliyun.core.annotation.NameInMap("ServiceManaged")
     private Boolean serviceManaged;
 
-    @NameInMap("ServiceManagedInfos")
+    @com.aliyun.core.annotation.NameInMap("ServiceManagedInfos")
     private java.util.List < ServiceManagedInfos> serviceManagedInfos;
 
-    @NameInMap("SlsLogStoreName")
+    @com.aliyun.core.annotation.NameInMap("SlsLogStoreName")
     private String slsLogStoreName;
 
-    @NameInMap("SlsProjectName")
+    @com.aliyun.core.annotation.NameInMap("SlsProjectName")
     private String slsProjectName;
 
-    @NameInMap("SlsRegion")
+    @com.aliyun.core.annotation.NameInMap("SlsRegion")
     private String slsRegion;
 
-    @NameInMap("State")
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
     private DescribeCustomRoutingEndpointGroupResponseBody(Builder builder) {
@@ -420,13 +419,13 @@ public class DescribeCustomRoutingEndpointGroupResponseBody extends TeaModel {
     } 
 
     public static class ServiceManagedInfos extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("ChildType")
+        @com.aliyun.core.annotation.NameInMap("ChildType")
         private String childType;
 
-        @NameInMap("IsManaged")
+        @com.aliyun.core.annotation.NameInMap("IsManaged")
         private Boolean isManaged;
 
         private ServiceManagedInfos(Builder builder) {

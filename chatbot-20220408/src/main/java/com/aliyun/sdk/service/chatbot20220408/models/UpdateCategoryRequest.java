@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateCategoryRequest} extends {@link RequestModel}
  *
  * <p>UpdateCategoryRequest</p>
  */
 public class UpdateCategoryRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AgentKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentKey")
     private String agentKey;
 
-    @Body
-    @NameInMap("CategoryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizCode")
+    private String bizCode;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CategoryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long categoryId;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
     private UpdateCategoryRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
+        this.bizCode = builder.bizCode;
         this.categoryId = builder.categoryId;
         this.name = builder.name;
     }
@@ -66,6 +71,13 @@ public class UpdateCategoryRequest extends Request {
     }
 
     /**
+     * @return bizCode
+     */
+    public String getBizCode() {
+        return this.bizCode;
+    }
+
+    /**
      * @return categoryId
      */
     public Long getCategoryId() {
@@ -82,6 +94,7 @@ public class UpdateCategoryRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateCategoryRequest, Builder> {
         private String regionId; 
         private String agentKey; 
+        private String bizCode; 
         private Long categoryId; 
         private String name; 
 
@@ -93,6 +106,7 @@ public class UpdateCategoryRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.agentKey = request.agentKey;
+            this.bizCode = request.bizCode;
             this.categoryId = request.categoryId;
             this.name = request.name;
         } 
@@ -116,7 +130,19 @@ public class UpdateCategoryRequest extends Request {
         }
 
         /**
-         * CategoryId.
+         * BizCode.
+         */
+        public Builder bizCode(String bizCode) {
+            this.putBodyParameter("BizCode", bizCode);
+            this.bizCode = bizCode;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>231001028593</p>
          */
         public Builder categoryId(Long categoryId) {
             this.putBodyParameter("CategoryId", categoryId);
@@ -125,7 +151,7 @@ public class UpdateCategoryRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

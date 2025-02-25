@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSparkAppAttemptLogResponseBody} extends {@link TeaModel}
  *
  * <p>GetSparkAppAttemptLogResponseBody</p>
  */
 public class GetSparkAppAttemptLogResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetSparkAppAttemptLogResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetSparkAppAttemptLogResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The queried log.
+         * <p>The queried log.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class GetSparkAppAttemptLogResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C3A9594F-1D40-4472-A96C-8FB8AA20D38C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,23 +79,33 @@ public class GetSparkAppAttemptLogResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSparkAppAttemptLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSparkAppAttemptLogResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("DBClusterId")
+        @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
 
-        @NameInMap("LogContent")
+        @com.aliyun.core.annotation.NameInMap("LogContent")
         private String logContent;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("LogSize")
+        private Integer logSize;
+
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
         private Data(Builder builder) {
             this.appId = builder.appId;
             this.DBClusterId = builder.DBClusterId;
             this.logContent = builder.logContent;
+            this.logSize = builder.logSize;
             this.message = builder.message;
         }
 
@@ -121,6 +139,13 @@ public class GetSparkAppAttemptLogResponseBody extends TeaModel {
         }
 
         /**
+         * @return logSize
+         */
+        public Integer getLogSize() {
+            return this.logSize;
+        }
+
+        /**
          * @return message
          */
         public String getMessage() {
@@ -131,10 +156,14 @@ public class GetSparkAppAttemptLogResponseBody extends TeaModel {
             private String appId; 
             private String DBClusterId; 
             private String logContent; 
+            private Integer logSize; 
             private String message; 
 
             /**
-             * The application ID.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s202204132018hzprec1ac61a000****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -142,7 +171,10 @@ public class GetSparkAppAttemptLogResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+             * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>amv-clusterxxx</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -150,7 +182,10 @@ public class GetSparkAppAttemptLogResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the log.
+             * <p>The content of the log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22/04/22 15:30:49 INFO Utils: Start the dump task because s202207151211hz****-0001 app end, the interval is 238141ms;22/04/22 15:30:49 INFO AbstractConnector: Stopped Spark@5e774d9d{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}</p>
              */
             public Builder logContent(String logContent) {
                 this.logContent = logContent;
@@ -158,7 +193,21 @@ public class GetSparkAppAttemptLogResponseBody extends TeaModel {
             }
 
             /**
-             * The alert message returned for the request, such as task execution failure or insufficient resources. If no alert occurs, null is returned.
+             * <p>The number of log entries. A value of 0 indicates that no valid logs are returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>775946240</p>
+             */
+            public Builder logSize(Integer logSize) {
+                this.logSize = logSize;
+                return this;
+            }
+
+            /**
+             * <p>The alert message returned for the request, such as task execution failure or insufficient resources. If no alert occurs, null is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WARNING: log file maybe deleted, please check oss path: oss://TestBucketName/applog/</p>
              */
             public Builder message(String message) {
                 this.message = message;

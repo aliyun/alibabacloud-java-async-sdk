@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePlaybookInputOutputResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePlaybookInputOutputResponseBody</p>
  */
 public class DescribePlaybookInputOutputResponseBody extends TeaModel {
-    @NameInMap("Config")
+    @com.aliyun.core.annotation.NameInMap("Config")
     private Config config;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePlaybookInputOutputResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribePlaybookInputOutputResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Config.
+         * <p>The configurations.</p>
          */
         public Builder config(Config config) {
             this.config = config;
@@ -58,7 +58,10 @@ public class DescribePlaybookInputOutputResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>688B4CCD-5272-5DCF-9D76-FE5EFEF545F8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +74,30 @@ public class DescribePlaybookInputOutputResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePlaybookInputOutputResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePlaybookInputOutputResponseBody</p>
+     */
     public static class Config extends TeaModel {
-        @NameInMap("InputParams")
+        @com.aliyun.core.annotation.NameInMap("ExeConfig")
+        private String exeConfig;
+
+        @com.aliyun.core.annotation.NameInMap("InputParams")
         private String inputParams;
 
-        @NameInMap("OutputParams")
+        @com.aliyun.core.annotation.NameInMap("OutputParams")
         private String outputParams;
 
-        @NameInMap("ParamType")
+        @com.aliyun.core.annotation.NameInMap("ParamType")
         private String paramType;
 
-        @NameInMap("PlaybookUuid")
+        @com.aliyun.core.annotation.NameInMap("PlaybookUuid")
         private String playbookUuid;
 
         private Config(Builder builder) {
+            this.exeConfig = builder.exeConfig;
             this.inputParams = builder.inputParams;
             this.outputParams = builder.outputParams;
             this.paramType = builder.paramType;
@@ -97,6 +110,13 @@ public class DescribePlaybookInputOutputResponseBody extends TeaModel {
 
         public static Config create() {
             return builder().build();
+        }
+
+        /**
+         * @return exeConfig
+         */
+        public String getExeConfig() {
+            return this.exeConfig;
         }
 
         /**
@@ -128,13 +148,35 @@ public class DescribePlaybookInputOutputResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String exeConfig; 
             private String inputParams; 
             private String outputParams; 
             private String paramType; 
             private String playbookUuid; 
 
             /**
-             * InputParams.
+             * <p>The execution method of the playbook is in JSONObject format.</p>
+             */
+            public Builder exeConfig(String exeConfig) {
+                this.exeConfig = exeConfig;
+                return this;
+            }
+
+            /**
+             * <p>The input parameter configuration of the playbook. The value is a JSON array.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[
+             *     {
+             *         &quot;typeName&quot;: &quot;String&quot;,
+             *         &quot;dataClass&quot;: &quot;normal&quot;,
+             *         &quot;dataType&quot;: &quot;String&quot;,
+             *         &quot;description&quot;: &quot;period&quot;,
+             *         &quot;example&quot;: &quot;&quot;,
+             *         &quot;name&quot;: &quot;period&quot;,
+             *         &quot;required&quot;: false
+             *     }
+             * ]</p>
              */
             public Builder inputParams(String inputParams) {
                 this.inputParams = inputParams;
@@ -142,7 +184,10 @@ public class DescribePlaybookInputOutputResponseBody extends TeaModel {
             }
 
             /**
-             * OutputParams.
+             * <p>The output parameter configuration. This parameter is unavailable and is always left empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder outputParams(String outputParams) {
                 this.outputParams = outputParams;
@@ -150,7 +195,16 @@ public class DescribePlaybookInputOutputResponseBody extends TeaModel {
             }
 
             /**
-             * ParamType.
+             * <p>The input parameter type of the playbook. Valid values:</p>
+             * <ul>
+             * <li><strong>template-ip</strong></li>
+             * <li><strong>template-file</strong></li>
+             * <li><strong>template-process</strong></li>
+             * <li><strong>custom</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>custom</p>
              */
             public Builder paramType(String paramType) {
                 this.paramType = paramType;
@@ -158,7 +212,10 @@ public class DescribePlaybookInputOutputResponseBody extends TeaModel {
             }
 
             /**
-             * PlaybookUuid.
+             * <p>The UUID of the playbook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9030076b-6733-4842-b05a-xxxxxx</p>
              */
             public Builder playbookUuid(String playbookUuid) {
                 this.playbookUuid = playbookUuid;

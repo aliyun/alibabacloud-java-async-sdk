@@ -29,12 +29,17 @@ public class SearchResourcesRequest extends Request {
     @NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
+    @Query
+    @NameInMap("SortCriterion")
+    private SortCriterion sortCriterion;
+
     private SearchResourcesRequest(Builder builder) {
         super(builder);
         this.filter = builder.filter;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.resourceGroupId = builder.resourceGroupId;
+        this.sortCriterion = builder.sortCriterion;
     }
 
     public static Builder builder() {
@@ -78,26 +83,35 @@ public class SearchResourcesRequest extends Request {
         return this.resourceGroupId;
     }
 
+    /**
+     * @return sortCriterion
+     */
+    public SortCriterion getSortCriterion() {
+        return this.sortCriterion;
+    }
+
     public static final class Builder extends Request.Builder<SearchResourcesRequest, Builder> {
         private java.util.List < Filter> filter; 
         private Integer maxResults; 
         private String nextToken; 
         private String resourceGroupId; 
+        private SortCriterion sortCriterion; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(SearchResourcesRequest response) {
-            super(response);
-            this.filter = response.filter;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.resourceGroupId = response.resourceGroupId;
+        private Builder(SearchResourcesRequest request) {
+            super(request);
+            this.filter = request.filter;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.resourceGroupId = request.resourceGroupId;
+            this.sortCriterion = request.sortCriterion;
         } 
 
         /**
-         * Filter.
+         * The filter conditions.
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -106,7 +120,12 @@ public class SearchResourcesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries to return on each page.
+         * <p>
+         * 
+         * Valid values: 1 to 100.
+         * 
+         * Default value: 20.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -115,7 +134,10 @@ public class SearchResourcesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used to initiate the next request.
+         * <p>
+         * 
+         * If the total number of entries returned for the current request exceeds the value of the `MaxResults` parameter, the entries are truncated. In this case, you can use the token to initiate another request and obtain the remaining entries.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -124,11 +146,20 @@ public class SearchResourcesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * The method that is used to sort the entries.
+         */
+        public Builder sortCriterion(SortCriterion sortCriterion) {
+            this.putQueryParameter("SortCriterion", sortCriterion);
+            this.sortCriterion = sortCriterion;
             return this;
         }
 
@@ -190,7 +221,14 @@ public class SearchResourcesRequest extends Request {
             private java.util.List < String > value; 
 
             /**
-             * Key.
+             * The key of the filter condition. Valid values:
+             * <p>
+             * 
+             * *   ResourceType: resource type
+             * *   RegionId: region ID
+             * *   ResourceId: resource ID
+             * *   ResourceGroupId: resource group ID
+             * *   ResourceName: resource name
              */
             public Builder key(String key) {
                 this.key = key;
@@ -198,7 +236,7 @@ public class SearchResourcesRequest extends Request {
             }
 
             /**
-             * MatchType.
+             * The matching method. Set the value to Equals. This value indicates that resources that match the filter conditions are queried.
              */
             public Builder matchType(String matchType) {
                 this.matchType = matchType;
@@ -206,7 +244,7 @@ public class SearchResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The values of the filter condition.
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;
@@ -215,6 +253,74 @@ public class SearchResourcesRequest extends Request {
 
             public Filter build() {
                 return new Filter(this);
+            } 
+
+        } 
+
+    }
+    public static class SortCriterion extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Order")
+        private String order;
+
+        private SortCriterion(Builder builder) {
+            this.key = builder.key;
+            this.order = builder.order;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SortCriterion create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return order
+         */
+        public String getOrder() {
+            return this.order;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String order; 
+
+            /**
+             * The attribute based on which the entries are sorted.
+             * <p>
+             * 
+             * The value `CreateTime` indicates the creation time of resources.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The order in which the entries are sorted. Valid values:
+             * <p>
+             * 
+             * *   ASC: The entries are sorted in ascending order. This value is the default value.
+             * *   DESC: The entries are sorted in descending order.
+             */
+            public Builder order(String order) {
+                this.order = order;
+                return this;
+            }
+
+            public SortCriterion build() {
+                return new SortCriterion(this);
             } 
 
         } 

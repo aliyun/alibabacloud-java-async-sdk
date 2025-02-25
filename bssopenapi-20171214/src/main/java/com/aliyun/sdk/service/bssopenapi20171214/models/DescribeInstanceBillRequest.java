@@ -1,73 +1,78 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceBillRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceBillRequest</p>
  */
 public class DescribeInstanceBillRequest extends Request {
-    @Query
-    @NameInMap("BillOwnerId")
-    @Validation()
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BillOwnerId")
+    @com.aliyun.core.annotation.Validation()
     private Long billOwnerId;
 
-    @Query
-    @NameInMap("BillingCycle")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BillingCycle")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String billingCycle;
 
-    @Query
-    @NameInMap("BillingDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BillingDate")
     private String billingDate;
 
-    @Query
-    @NameInMap("Granularity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Granularity")
     private String granularity;
 
-    @Query
-    @NameInMap("InstanceID")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceID")
     private String instanceID;
 
-    @Query
-    @NameInMap("IsBillingItem")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsBillingItem")
     private Boolean isBillingItem;
 
-    @Query
-    @NameInMap("IsHideZeroCharge")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsHideZeroCharge")
     private Boolean isHideZeroCharge;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PipCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PipCode")
     private String pipCode;
 
-    @Query
-    @NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
 
-    @Query
-    @NameInMap("ProductType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductType")
     private String productType;
 
-    @Query
-    @NameInMap("SubscriptionType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscriptionType")
     private String subscriptionType;
 
     private DescribeInstanceBillRequest(Builder builder) {
@@ -238,7 +243,10 @@ public class DescribeInstanceBillRequest extends Request {
         } 
 
         /**
-         * The ID of the member. If you specify this parameter, the bills of the member are queried. If you do not specify this parameter, the bills of the current account are queried by default.
+         * <p>The ID of the member. If you specify this parameter, the bills of the member are queried. If you do not specify this parameter, the bills of the current account are queried by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>122</p>
          */
         public Builder billOwnerId(Long billOwnerId) {
             this.putQueryParameter("BillOwnerId", billOwnerId);
@@ -247,9 +255,12 @@ public class DescribeInstanceBillRequest extends Request {
         }
 
         /**
-         * The billing cycle. Specify the parameter in the YYYY-MM format.
-         * <p>
-         * Only the latest 18 month billing cycle is supported.
+         * <p>The billing cycle. Specify the parameter in the YYYY-MM format.
+         * Only the latest 18 month billing cycle is supported.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-03</p>
          */
         public Builder billingCycle(String billingCycle) {
             this.putQueryParameter("BillingCycle", billingCycle);
@@ -258,7 +269,10 @@ public class DescribeInstanceBillRequest extends Request {
         }
 
         /**
-         * The billing date. This parameter is required only when the Granularity parameter is set to DAILY. Format: YYYY-MM-DD.
+         * <p>The billing date. This parameter is required only when the Granularity parameter is set to DAILY. Format: YYYY-MM-DD.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-03-02</p>
          */
         public Builder billingDate(String billingDate) {
             this.putQueryParameter("BillingDate", billingDate);
@@ -267,13 +281,15 @@ public class DescribeInstanceBillRequest extends Request {
         }
 
         /**
-         * The granularity at which bills are queried. Valid values:
-         * <p>
+         * <p>The granularity at which bills are queried. Valid values:</p>
+         * <ul>
+         * <li>MONTHLY: queries bills on a monthly basis. The data that you query is the same as the data searched by instances on the Billing Details tab of the Bill Details page in the User Center console.</li>
+         * <li>DAILY: queries bills on a daily basis. The data that you query is the same as the data searched by days on the Billing Details tab of the Bill Details page in the User Center console.</li>
+         * </ul>
+         * <p>The BillingDate parameter is required if you set the Granularity parameter to DAILY.</p>
          * 
-         * *   MONTHLY: queries bills on a monthly basis. The data that you query is the same as the data searched by instances on the Billing Details tab of the Bill Details page in the User Center console.
-         * *   DAILY: queries bills on a daily basis. The data that you query is the same as the data searched by days on the Billing Details tab of the Bill Details page in the User Center console.
-         * 
-         * The BillingDate parameter is required if you set the Granularity parameter to DAILY.
+         * <strong>example:</strong>
+         * <p>MONTHLY</p>
          */
         public Builder granularity(String granularity) {
             this.putQueryParameter("Granularity", granularity);
@@ -282,7 +298,10 @@ public class DescribeInstanceBillRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder instanceID(String instanceID) {
             this.putQueryParameter("InstanceID", instanceID);
@@ -291,13 +310,15 @@ public class DescribeInstanceBillRequest extends Request {
         }
 
         /**
-         * Specifies whether to query data by billable items. Valid values:
-         * <p>
+         * <p>Specifies whether to query data by billable items. Valid values:</p>
+         * <ul>
+         * <li>false: The data that you query is the same as the data searched by instances on the Billing Details tab of the Bill Details page in the User Center console.</li>
+         * <li>true: The data that you query is the same as the data searched by billable items on the Billing Details tab of the Bill Details page in the User Center console.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   false: The data that you query is the same as the data searched by instances on the Billing Details tab of the Bill Details page in the User Center console.
-         * *   true: The data that you query is the same as the data searched by billable items on the Billing Details tab of the Bill Details page in the User Center console.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isBillingItem(Boolean isBillingItem) {
             this.putQueryParameter("IsBillingItem", isBillingItem);
@@ -306,11 +327,14 @@ public class DescribeInstanceBillRequest extends Request {
         }
 
         /**
-         * Specifies whether to filter bills if both the pretax gross amount and pretax amount are 0. Valid values:
-         * <p>
+         * <p>Specifies whether to filter bills if both the pretax gross amount and pretax amount are 0. Valid values:</p>
+         * <ul>
+         * <li>false: does not filter bills.</li>
+         * <li>true: filters bills.</li>
+         * </ul>
          * 
-         * *   false: does not filter bills.
-         * *   true: filters bills.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isHideZeroCharge(Boolean isHideZeroCharge) {
             this.putQueryParameter("IsHideZeroCharge", isHideZeroCharge);
@@ -319,7 +343,10 @@ public class DescribeInstanceBillRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return. Default value: 20. Maximum value: 300.
+         * <p>The maximum number of entries to return. Default value: 20. Maximum value: 300.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -328,7 +355,10 @@ public class DescribeInstanceBillRequest extends Request {
         }
 
         /**
-         * The token that is used to indicate the position where the results for the current call start. The parameter must be left empty or set to the value of the NextToken parameter that is returned from the last call. Otherwise, an error is returned. If the parameter is left empty, data is queried from the first item.
+         * <p>The token that is used to indicate the position where the results for the current call start. The parameter must be left empty or set to the value of the NextToken parameter that is returned from the last call. Otherwise, an error is returned. If the parameter is left empty, data is queried from the first item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CAESEgoQCg4KCm</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -346,7 +376,10 @@ public class DescribeInstanceBillRequest extends Request {
         }
 
         /**
-         * PipCode.
+         * <p>The code of the service. The code is the same as that in Cost Center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder pipCode(String pipCode) {
             this.putQueryParameter("PipCode", pipCode);
@@ -355,7 +388,10 @@ public class DescribeInstanceBillRequest extends Request {
         }
 
         /**
-         * The code of the service.
+         * <p>The code of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -364,7 +400,10 @@ public class DescribeInstanceBillRequest extends Request {
         }
 
         /**
-         * The type of the service.
+         * <p>The type of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -373,11 +412,14 @@ public class DescribeInstanceBillRequest extends Request {
         }
 
         /**
-         * The billing method. Valid values:
-         * <p>
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>Subscription: the subscription billing method.</li>
+         * <li>PayAsYouGo: the pay-as-you-go billing method.</li>
+         * </ul>
          * 
-         * *   Subscription: the subscription billing method.
-         * *   PayAsYouGo: the pay-as-you-go billing method.
+         * <strong>example:</strong>
+         * <p>PayAsYouGo</p>
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putQueryParameter("SubscriptionType", subscriptionType);

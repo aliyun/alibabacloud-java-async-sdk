@@ -50,7 +50,7 @@ public class CustomRuntimeConfig extends TeaModel {
         private java.util.List < String > command; 
 
         /**
-         * 启动入口命令接收的参数
+         * args.
          */
         public Builder args(java.util.List < String > args) {
             this.args = args;
@@ -58,7 +58,7 @@ public class CustomRuntimeConfig extends TeaModel {
         }
 
         /**
-         * 启动入口命令
+         * command.
          */
         public Builder command(java.util.List < String > command) {
             this.command = command;

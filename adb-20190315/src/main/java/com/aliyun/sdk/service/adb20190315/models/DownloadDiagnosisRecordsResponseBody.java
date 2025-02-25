@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DownloadDiagnosisRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>DownloadDiagnosisRecordsResponseBody</p>
  */
 public class DownloadDiagnosisRecordsResponseBody extends TeaModel {
-    @NameInMap("DownloadId")
+    @com.aliyun.core.annotation.NameInMap("DownloadId")
     private Integer downloadId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DownloadDiagnosisRecordsResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class DownloadDiagnosisRecordsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the download task.
+         * <p>The ID of the download task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>68</p>
          */
         public Builder downloadId(Integer downloadId) {
             this.downloadId = downloadId;
@@ -58,7 +61,10 @@ public class DownloadDiagnosisRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D4ACF4E0-2952-3A87-9A2C-474058******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

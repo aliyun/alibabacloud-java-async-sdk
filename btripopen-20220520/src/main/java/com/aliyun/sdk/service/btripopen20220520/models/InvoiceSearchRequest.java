@@ -1,31 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InvoiceSearchRequest} extends {@link RequestModel}
  *
  * <p>InvoiceSearchRequest</p>
  */
 public class InvoiceSearchRequest extends Request {
-    @Query
-    @NameInMap("title")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("third_part_id")
+    private String thirdPartId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("title")
     private String title;
 
-    @Query
-    @NameInMap("user_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("user_id")
     private String userId;
 
-    @Header
-    @NameInMap("x-acs-btrip-so-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-so-corp-token")
     private String xAcsBtripSoCorpToken;
 
     private InvoiceSearchRequest(Builder builder) {
         super(builder);
+        this.thirdPartId = builder.thirdPartId;
         this.title = builder.title;
         this.userId = builder.userId;
         this.xAcsBtripSoCorpToken = builder.xAcsBtripSoCorpToken;
@@ -42,6 +52,13 @@ public class InvoiceSearchRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return thirdPartId
+     */
+    public String getThirdPartId() {
+        return this.thirdPartId;
     }
 
     /**
@@ -66,6 +83,7 @@ public class InvoiceSearchRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<InvoiceSearchRequest, Builder> {
+        private String thirdPartId; 
         private String title; 
         private String userId; 
         private String xAcsBtripSoCorpToken; 
@@ -76,10 +94,20 @@ public class InvoiceSearchRequest extends Request {
 
         private Builder(InvoiceSearchRequest request) {
             super(request);
+            this.thirdPartId = request.thirdPartId;
             this.title = request.title;
             this.userId = request.userId;
             this.xAcsBtripSoCorpToken = request.xAcsBtripSoCorpToken;
         } 
+
+        /**
+         * third_part_id.
+         */
+        public Builder thirdPartId(String thirdPartId) {
+            this.putQueryParameter("third_part_id", thirdPartId);
+            this.thirdPartId = thirdPartId;
+            return this;
+        }
 
         /**
          * title.

@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryFailReasonForRegistrantProfileRealNameVerificationResponseBody} extends {@link TeaModel}
  *
  * <p>QueryFailReasonForRegistrantProfileRealNameVerificationResponseBody</p>
  */
 public class QueryFailReasonForRegistrantProfileRealNameVerificationResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryFailReasonForRegistrantProfileRealNameVerificationResponseBody(Builder builder) {
@@ -71,11 +71,17 @@ public class QueryFailReasonForRegistrantProfileRealNameVerificationResponseBody
 
     } 
 
+    /**
+     * 
+     * {@link QueryFailReasonForRegistrantProfileRealNameVerificationResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryFailReasonForRegistrantProfileRealNameVerificationResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Date")
+        @com.aliyun.core.annotation.NameInMap("Date")
         private String date;
 
-        @NameInMap("FailReason")
+        @com.aliyun.core.annotation.NameInMap("FailReason")
         private String failReason;
 
         private Data(Builder builder) {

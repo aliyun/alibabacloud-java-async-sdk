@@ -1,38 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDcdnDomainSMCertificateRequest} extends {@link RequestModel}
  *
  * <p>SetDcdnDomainSMCertificateRequest</p>
  */
 public class SetDcdnDomainSMCertificateRequest extends Request {
-    @Query
-    @NameInMap("CertIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String certIdentifier;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("SSLProtocol")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SSLProtocol")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String SSLProtocol;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private SetDcdnDomainSMCertificateRequest(Builder builder) {
@@ -113,7 +113,11 @@ public class SetDcdnDomainSMCertificateRequest extends Request {
         } 
 
         /**
-         * The identifier of the certificate. The value is Certificate ID-cn-hangzhou. If the ID of the certificate is 123, CertIdentifier is set to 123-cn-hangzhou.
+         * <p>The identifier of the certificate. The value is Certificate ID-cn-hangzhou. If the ID of the certificate is 123, CertIdentifier is set to 123-cn-hangzhou.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123-cn-hangzhou</p>
          */
         public Builder certIdentifier(String certIdentifier) {
             this.putQueryParameter("CertIdentifier", certIdentifier);
@@ -122,10 +126,14 @@ public class SetDcdnDomainSMCertificateRequest extends Request {
         }
 
         /**
-         * The accelerated domain name for which the SM certificate is configured.
-         * <p>
+         * <p>The accelerated domain name for which the SM certificate is configured.</p>
+         * <blockquote>
+         * <p>The domain name must have HTTPS secure acceleration enabled.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > The domain name must have HTTPS secure acceleration enabled.
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -143,11 +151,15 @@ public class SetDcdnDomainSMCertificateRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the SSL certificate. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the SSL certificate. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **on**
-         * *   **off**
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder SSLProtocol(String SSLProtocol) {
             this.putQueryParameter("SSLProtocol", SSLProtocol);

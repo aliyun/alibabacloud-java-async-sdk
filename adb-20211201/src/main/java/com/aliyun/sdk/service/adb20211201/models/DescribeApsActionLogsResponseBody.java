@@ -1,39 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApsActionLogsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeApsActionLogsResponseBody</p>
  */
 public class DescribeApsActionLogsResponseBody extends TeaModel {
-    @NameInMap("ActionLogs")
-    private java.util.List < ActionLogs> actionLogs;
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
 
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("ActionLogs")
+    private java.util.List<ActionLogs> actionLogs;
+
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
-    @NameInMap("WorkloadId")
+    @com.aliyun.core.annotation.NameInMap("WorkloadId")
     private String workloadId;
 
     private DescribeApsActionLogsResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.actionLogs = builder.actionLogs;
         this.DBClusterId = builder.DBClusterId;
         this.pageNumber = builder.pageNumber;
@@ -52,9 +61,16 @@ public class DescribeApsActionLogsResponseBody extends TeaModel {
     }
 
     /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
+    }
+
+    /**
      * @return actionLogs
      */
-    public java.util.List < ActionLogs> getActionLogs() {
+    public java.util.List<ActionLogs> getActionLogs() {
         return this.actionLogs;
     }
 
@@ -101,7 +117,8 @@ public class DescribeApsActionLogsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ActionLogs> actionLogs; 
+        private String accessDeniedDetail; 
+        private java.util.List<ActionLogs> actionLogs; 
         private String DBClusterId; 
         private String pageNumber; 
         private String pageSize; 
@@ -110,15 +127,37 @@ public class DescribeApsActionLogsResponseBody extends TeaModel {
         private String workloadId; 
 
         /**
-         * Details of the logs.
+         * <p>The information about the request denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;AuthAction&quot;: &quot;xxx&quot;,
+         *   &quot;AuthPrincipalDisplayName&quot;: &quot;sampleName&quot;,
+         *   &quot;AuthPrincipalOwnerId&quot;: &quot;111111111111111111&quot;,
+         *   &quot;AuthPrincipalType&quot;: &quot;SubUser&quot;,
+         *   &quot;AuthResource&quot;: &quot;xxx&quot;,
+         *   &quot;NoPermissionType&quot;: &quot;xxx&quot;,
+         *   &quot;PolicyType&quot;: &quot;xxx&quot;
+         * }</p>
          */
-        public Builder actionLogs(java.util.List < ActionLogs> actionLogs) {
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
+
+        /**
+         * <p>The queried logs.</p>
+         */
+        public Builder actionLogs(java.util.List<ActionLogs> actionLogs) {
             this.actionLogs = actionLogs;
             return this;
         }
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-bp1r053byu48p****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -126,7 +165,10 @@ public class DescribeApsActionLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -134,7 +176,10 @@ public class DescribeApsActionLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on each page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -142,7 +187,10 @@ public class DescribeApsActionLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5EDBA27-AF3E-5966-9503-FD1557E19167</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +198,10 @@ public class DescribeApsActionLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -158,7 +209,10 @@ public class DescribeApsActionLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the real-time data ingestion task.
+         * <p>The ID of the real-time data ingestion job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aps-hz109vpvt4fg8528d****</p>
          */
         public Builder workloadId(String workloadId) {
             this.workloadId = workloadId;
@@ -171,17 +225,23 @@ public class DescribeApsActionLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeApsActionLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApsActionLogsResponseBody</p>
+     */
     public static class ActionLogs extends TeaModel {
-        @NameInMap("Context")
+        @com.aliyun.core.annotation.NameInMap("Context")
         private String context;
 
-        @NameInMap("Stage")
+        @com.aliyun.core.annotation.NameInMap("Stage")
         private String stage;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
         private ActionLogs(Builder builder) {
@@ -234,7 +294,10 @@ public class DescribeApsActionLogsResponseBody extends TeaModel {
             private String time; 
 
             /**
-             * The content of the log.
+             * <p>The content of the log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DDL migration job finished</p>
              */
             public Builder context(String context) {
                 this.context = context;
@@ -242,12 +305,15 @@ public class DescribeApsActionLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The task phase during which the logs are generated. Valid values:
-             * <p>
+             * <p>The phase during which the log was generated. Valid values:</p>
+             * <ul>
+             * <li><strong>StructureMigrate</strong>: schema migration.</li>
+             * <li><strong>FullDataSync</strong>: full data synchronization.</li>
+             * <li><strong>IncrementalSync</strong>: incremental data synchronization.</li>
+             * </ul>
              * 
-             * *   **StructureMigrate**: schema migration.
-             * *   **FullDataSync**: full data synchronization.
-             * *   **IncrementalSync**: incremental data synchronization.
+             * <strong>example:</strong>
+             * <p>FullDataSync</p>
              */
             public Builder stage(String stage) {
                 this.stage = stage;
@@ -255,12 +321,15 @@ public class DescribeApsActionLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the log. Multiple log types are separated by commas (,). Valid values:
-             * <p>
+             * <p>The type of the log. Multiple log types are separated by commas (,). Valid values:</p>
+             * <ul>
+             * <li><strong>INFO</strong></li>
+             * <li><strong>WARN</strong></li>
+             * <li><strong>ERROR</strong></li>
+             * </ul>
              * 
-             * *   **INFO**
-             * *   **WARN**
-             * *   **ERROR**
+             * <strong>example:</strong>
+             * <p>INFO,WARN,ERROR</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -268,7 +337,10 @@ public class DescribeApsActionLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the log is generated. The time follows the ISO 8601 standard in the **yyyy-MM-ddTHH:mm:ssZ** format. The time is displayed in UTC.
+             * <p>The time when the log was generated. The time follows the ISO 8601 standard in the <strong>yyyy-MM-ddTHH:mm:ssZ</strong> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-02-01T05:46:30Z</p>
              */
             public Builder time(String time) {
                 this.time = time;

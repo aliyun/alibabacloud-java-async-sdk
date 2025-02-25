@@ -1,71 +1,76 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeProcessListRequest} extends {@link RequestModel}
  *
  * <p>DescribeProcessListRequest</p>
  */
 public class DescribeProcessListRequest extends Request {
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("InitialQueryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InitialQueryId")
     private String initialQueryId;
 
-    @Query
-    @NameInMap("InitialUser")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InitialUser")
     private String initialUser;
 
-    @Query
-    @NameInMap("Keyword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
-    @Query
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(maximum = 9999999999D, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(maximum = 9999999999D, minimum = 1)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 9999999999D)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 9999999999D)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("QueryDurationMs")
-    @Validation(maximum = 9999999999D)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryDurationMs")
+    @com.aliyun.core.annotation.Validation(maximum = 9999999999D)
     private Integer queryDurationMs;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private DescribeProcessListRequest(Builder builder) {
@@ -226,7 +231,11 @@ public class DescribeProcessListRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query information about all the clusters that are deployed in a specific region. The information includes the cluster IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp1190tj036am****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -235,7 +244,10 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * InitialQueryId.
+         * <p>The ID of the query statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6c69d508-f05f-4c74-857c-d982b7e7e79f</p>
          */
         public Builder initialQueryId(String initialQueryId) {
             this.putQueryParameter("InitialQueryId", initialQueryId);
@@ -244,7 +256,10 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * InitialUser.
+         * <p>The account that is used to log on to the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder initialUser(String initialUser) {
             this.putQueryParameter("InitialUser", initialUser);
@@ -253,7 +268,10 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The keyword that is used to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>join</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -262,7 +280,16 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>Sorting by the specified column name. Valid values:</p>
+         * <ul>
+         * <li>elapsed: the cumulative execution time</li>
+         * <li>written_rows: the number of written rows</li>
+         * <li>read_rows: the number of read rows</li>
+         * <li>memory_usage: the memory usage</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>elapsed</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -289,7 +316,10 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -298,7 +328,15 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong> (default)</li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -307,7 +345,10 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * QueryDurationMs.
+         * <p>The minimum query duration. The minimum value is <strong>1000</strong>, and the default value is <strong>1000</strong>. Unit: milliseconds. Queries that last longer than this duration are returned in response parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder queryDurationMs(Integer queryDurationMs) {
             this.putQueryParameter("QueryDurationMs", queryDurationMs);
@@ -316,7 +357,10 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNetworkAccessEndpointsRequest} extends {@link RequestModel}
  *
  * <p>ListNetworkAccessEndpointsRequest</p>
  */
 public class ListNetworkAccessEndpointsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String instanceId;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Long maxResults;
 
-    @Query
-    @NameInMap("NetworkAccessEndpointStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkAccessEndpointStatus")
     private String networkAccessEndpointStatus;
 
-    @Query
-    @NameInMap("NetworkAccessEndpointType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkAccessEndpointType")
     private String networkAccessEndpointType;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
-    @Query
-    @NameInMap("VpcRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcRegionId")
     private String vpcRegionId;
 
     private ListNetworkAccessEndpointsRequest(Builder builder) {
@@ -162,7 +167,11 @@ public class ListNetworkAccessEndpointsRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -171,7 +180,10 @@ public class ListNetworkAccessEndpointsRequest extends Request {
         }
 
         /**
-         * 分页查询时每页行数。默认值为20，最大值为100。
+         * <p>分页查询时每页行数。默认值为20，最大值为100。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -180,7 +192,10 @@ public class ListNetworkAccessEndpointsRequest extends Request {
         }
 
         /**
-         * 专属网络端点连接的状态。NetworkAccessEndpointType取值为shared时不生效。
+         * <p>专属网络端点连接的状态。NetworkAccessEndpointType取值为shared时不生效。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         public Builder networkAccessEndpointStatus(String networkAccessEndpointStatus) {
             this.putQueryParameter("NetworkAccessEndpointStatus", networkAccessEndpointStatus);
@@ -189,7 +204,10 @@ public class ListNetworkAccessEndpointsRequest extends Request {
         }
 
         /**
-         * 专属网络端点连接的类型。取值可选范围：1. private - 专属网络端点；2. shared - 共享网络端点
+         * <p>专属网络端点连接的类型。取值可选范围：1. private - 专属网络端点；2. shared - 共享网络端点</p>
+         * 
+         * <strong>example:</strong>
+         * <p>private</p>
          */
         public Builder networkAccessEndpointType(String networkAccessEndpointType) {
             this.putQueryParameter("NetworkAccessEndpointType", networkAccessEndpointType);
@@ -198,7 +216,10 @@ public class ListNetworkAccessEndpointsRequest extends Request {
         }
 
         /**
-         * 查询凭证（Token），取值为上一次API调用返回的NextToken参数值。
+         * <p>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NTxxxxxexample</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -207,7 +228,10 @@ public class ListNetworkAccessEndpointsRequest extends Request {
         }
 
         /**
-         * 专属网络端点连接的Vpc ID。NetworkAccessEndpointType取值为shared时不生效。
+         * <p>专属网络端点连接的Vpc ID。NetworkAccessEndpointType取值为shared时不生效。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-examplexxx</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -216,7 +240,10 @@ public class ListNetworkAccessEndpointsRequest extends Request {
         }
 
         /**
-         * 专属网络端点连接的Vpc所属地域，该地域取值必须在ListNetworkAccessEndpointAvailableRegions接口中返回。NetworkAccessEndpointType取值为shared时不生效。
+         * <p>专属网络端点连接的Vpc所属地域，该地域取值必须在ListNetworkAccessEndpointAvailableRegions接口中返回。NetworkAccessEndpointType取值为shared时不生效。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder vpcRegionId(String vpcRegionId) {
             this.putQueryParameter("VpcRegionId", vpcRegionId);

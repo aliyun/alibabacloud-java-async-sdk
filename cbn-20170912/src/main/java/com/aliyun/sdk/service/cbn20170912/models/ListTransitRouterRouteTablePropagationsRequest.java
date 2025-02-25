@@ -1,60 +1,65 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTransitRouterRouteTablePropagationsRequest} extends {@link RequestModel}
  *
  * <p>ListTransitRouterRouteTablePropagationsRequest</p>
  */
 public class ListTransitRouterRouteTablePropagationsRequest extends Request {
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("TransitRouterAttachmentId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentId")
     private String transitRouterAttachmentId;
 
-    @Query
-    @NameInMap("TransitRouterAttachmentResourceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentResourceId")
     private String transitRouterAttachmentResourceId;
 
-    @Query
-    @NameInMap("TransitRouterAttachmentResourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentResourceType")
     private String transitRouterAttachmentResourceType;
 
-    @Query
-    @NameInMap("TransitRouterRouteTableId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterRouteTableId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String transitRouterRouteTableId;
 
     private ListTransitRouterRouteTablePropagationsRequest(Builder builder) {
@@ -195,7 +200,10 @@ public class ListTransitRouterRouteTablePropagationsRequest extends Request {
         } 
 
         /**
-         * The number of entries to return on each page. Default value: **50**.
+         * <p>The number of entries to return on each page. Default value: <strong>50</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -204,7 +212,10 @@ public class ListTransitRouterRouteTablePropagationsRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the query.
+         * <p>The token that determines the start point of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dd20****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -249,12 +260,15 @@ public class ListTransitRouterRouteTablePropagationsRequest extends Request {
         }
 
         /**
-         * The status of the route learning correlation. Valid values:
-         * <p>
+         * <p>The status of the route learning correlation. Valid values:</p>
+         * <ul>
+         * <li><strong>Active</strong>: available</li>
+         * <li><strong>Enabling</strong>: being enabled</li>
+         * <li><strong>Disabling</strong>: being disabled</li>
+         * </ul>
          * 
-         * *   **Active**: available
-         * *   **Enabling**: being enabled
-         * *   **Disabling**: being disabled
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -263,7 +277,10 @@ public class ListTransitRouterRouteTablePropagationsRequest extends Request {
         }
 
         /**
-         * The ID of the network instance connection.
+         * <p>The ID of the network instance connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-attach-vx6iwhjr1x1j78****</p>
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
@@ -272,7 +289,10 @@ public class ListTransitRouterRouteTablePropagationsRequest extends Request {
         }
 
         /**
-         * The ID of the network instance.
+         * <p>The ID of the network instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1h8vbrbcgohcju5****</p>
          */
         public Builder transitRouterAttachmentResourceId(String transitRouterAttachmentResourceId) {
             this.putQueryParameter("TransitRouterAttachmentResourceId", transitRouterAttachmentResourceId);
@@ -281,13 +301,16 @@ public class ListTransitRouterRouteTablePropagationsRequest extends Request {
         }
 
         /**
-         * The type of the network instance. Valid values:
-         * <p>
+         * <p>The type of the network instance. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
+         * <li><strong>VBR</strong>: virtual border router (VBR)</li>
+         * <li><strong>TR</strong>: transit router</li>
+         * <li><strong>VPN</strong>: VPN connection</li>
+         * </ul>
          * 
-         * *   **VPC**: virtual private cloud (VPC)
-         * *   **VBR**: virtual border router (VBR)
-         * *   **TR**: transit router
-         * *   **VPN**: VPN connection
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder transitRouterAttachmentResourceType(String transitRouterAttachmentResourceType) {
             this.putQueryParameter("TransitRouterAttachmentResourceType", transitRouterAttachmentResourceType);
@@ -296,7 +319,11 @@ public class ListTransitRouterRouteTablePropagationsRequest extends Request {
         }
 
         /**
-         * The ID of the route table of the Enterprise Edition transit router.
+         * <p>The ID of the route table of the Enterprise Edition transit router.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-bp1dudbh2d5na6b50****</p>
          */
         public Builder transitRouterRouteTableId(String transitRouterRouteTableId) {
             this.putQueryParameter("TransitRouterRouteTableId", transitRouterRouteTableId);

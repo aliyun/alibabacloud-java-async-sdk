@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSimQuestionResponseBody} extends {@link TeaModel}
  *
  * <p>ListSimQuestionResponseBody</p>
  */
 public class ListSimQuestionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SimQuestions")
+    @com.aliyun.core.annotation.NameInMap("SimQuestions")
     private java.util.List < SimQuestions> simQuestions;
 
     private ListSimQuestionResponseBody(Builder builder) {
@@ -71,17 +71,23 @@ public class ListSimQuestionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSimQuestionResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSimQuestionResponseBody</p>
+     */
     public static class SimQuestions extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("SimQuestionId")
+        @com.aliyun.core.annotation.NameInMap("SimQuestionId")
         private Long simQuestionId;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private SimQuestions(Builder builder) {

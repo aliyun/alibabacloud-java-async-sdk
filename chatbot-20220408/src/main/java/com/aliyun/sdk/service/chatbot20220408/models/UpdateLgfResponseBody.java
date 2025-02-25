@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateLgfResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateLgfResponseBody</p>
  */
 public class UpdateLgfResponseBody extends TeaModel {
-    @NameInMap("LgfId")
+    @com.aliyun.core.annotation.NameInMap("LgfId")
     private Long lgfId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateLgfResponseBody(Builder builder) {

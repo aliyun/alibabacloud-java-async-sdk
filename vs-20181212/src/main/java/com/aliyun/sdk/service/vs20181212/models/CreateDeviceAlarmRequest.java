@@ -1,58 +1,63 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDeviceAlarmRequest} extends {@link RequestModel}
  *
  * <p>CreateDeviceAlarmRequest</p>
  */
 public class CreateDeviceAlarmRequest extends Request {
-    @Query
-    @NameInMap("Alarm")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Alarm")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer alarm;
 
-    @Query
-    @NameInMap("ChannelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChannelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer channelId;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @Query
-    @NameInMap("Expire")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Expire")
     private Long expire;
 
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String id;
 
-    @Query
-    @NameInMap("ObjectType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ObjectType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer objectType;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
-    @Query
-    @NameInMap("SubAlarm")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubAlarm")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer subAlarm;
 
     private CreateDeviceAlarmRequest(Builder builder) {
@@ -159,21 +164,24 @@ public class CreateDeviceAlarmRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDeviceAlarmRequest response) {
-            super(response);
-            this.alarm = response.alarm;
-            this.channelId = response.channelId;
-            this.endTime = response.endTime;
-            this.expire = response.expire;
-            this.id = response.id;
-            this.objectType = response.objectType;
-            this.ownerId = response.ownerId;
-            this.startTime = response.startTime;
-            this.subAlarm = response.subAlarm;
+        private Builder(CreateDeviceAlarmRequest request) {
+            super(request);
+            this.alarm = request.alarm;
+            this.channelId = request.channelId;
+            this.endTime = request.endTime;
+            this.expire = request.expire;
+            this.id = request.id;
+            this.objectType = request.objectType;
+            this.ownerId = request.ownerId;
+            this.startTime = request.startTime;
+            this.subAlarm = request.subAlarm;
         } 
 
         /**
-         * Alarm.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder alarm(Integer alarm) {
             this.putQueryParameter("Alarm", alarm);
@@ -182,7 +190,10 @@ public class CreateDeviceAlarmRequest extends Request {
         }
 
         /**
-         * ChannelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder channelId(Integer channelId) {
             this.putQueryParameter("ChannelId", channelId);
@@ -191,7 +202,10 @@ public class CreateDeviceAlarmRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1632314789000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -209,7 +223,10 @@ public class CreateDeviceAlarmRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>348*****380-cn-qingdao</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -218,7 +235,10 @@ public class CreateDeviceAlarmRequest extends Request {
         }
 
         /**
-         * ObjectType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder objectType(Integer objectType) {
             this.putQueryParameter("ObjectType", objectType);
@@ -236,7 +256,10 @@ public class CreateDeviceAlarmRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1632121707000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -245,7 +268,7 @@ public class CreateDeviceAlarmRequest extends Request {
         }
 
         /**
-         * SubAlarm.
+         * <p>This parameter is required.</p>
          */
         public Builder subAlarm(Integer subAlarm) {
             this.putQueryParameter("SubAlarm", subAlarm);

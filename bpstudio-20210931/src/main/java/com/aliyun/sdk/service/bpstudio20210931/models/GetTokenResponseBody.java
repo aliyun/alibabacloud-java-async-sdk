@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bpstudio20210931.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTokenResponseBody} extends {@link TeaModel}
  *
  * <p>GetTokenResponseBody</p>
  */
 public class GetTokenResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetTokenResponseBody(Builder builder) {
@@ -74,7 +74,10 @@ public class GetTokenResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +85,7 @@ public class GetTokenResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the token.
+         * <p>The information about the token.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +93,10 @@ public class GetTokenResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +104,10 @@ public class GetTokenResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A07FFDF2-78FA-1B48-9E38-88E833A93187</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,23 +120,29 @@ public class GetTokenResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTokenResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTokenResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AccessKeyId")
+        @com.aliyun.core.annotation.NameInMap("AccessKeyId")
         private String accessKeyId;
 
-        @NameInMap("AccessKeySecret")
+        @com.aliyun.core.annotation.NameInMap("AccessKeySecret")
         private String accessKeySecret;
 
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
-        @NameInMap("Endpoint")
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
 
-        @NameInMap("SecurityToken")
+        @com.aliyun.core.annotation.NameInMap("SecurityToken")
         private String securityToken;
 
-        @NameInMap("SnapshotBucket")
+        @com.aliyun.core.annotation.NameInMap("SnapshotBucket")
         private String snapshotBucket;
 
         private Data(Builder builder) {
@@ -198,7 +213,10 @@ public class GetTokenResponseBody extends TeaModel {
             private String snapshotBucket; 
 
             /**
-             * The AccessKey ID that is used to access OSS.
+             * <p>The AccessKey ID that is used to access OSS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STS.NTm*****8tu</p>
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -206,7 +224,10 @@ public class GetTokenResponseBody extends TeaModel {
             }
 
             /**
-             * The AccessKey secret used to access OSS.
+             * <p>The AccessKey secret used to access OSS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9NG*****K4X</p>
              */
             public Builder accessKeySecret(String accessKeySecret) {
                 this.accessKeySecret = accessKeySecret;
@@ -214,7 +235,10 @@ public class GetTokenResponseBody extends TeaModel {
             }
 
             /**
-             * The OSS bucket that is used to store the architecture image.
+             * <p>The OSS bucket that is used to store the architecture image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bucket-1</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -222,7 +246,10 @@ public class GetTokenResponseBody extends TeaModel {
             }
 
             /**
-             * The OSS endpoint.
+             * <p>The OSS endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://oss-cn-beijing.aliyuncs.com">https://oss-cn-beijing.aliyuncs.com</a></p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -230,7 +257,10 @@ public class GetTokenResponseBody extends TeaModel {
             }
 
             /**
-             * The token that is used to access the Object Storage Service (OSS) bucket that stores the architecture image.
+             * <p>The token that is used to access the Object Storage Service (OSS) bucket that stores the architecture image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ABCD</p>
              */
             public Builder securityToken(String securityToken) {
                 this.securityToken = securityToken;
@@ -238,7 +268,10 @@ public class GetTokenResponseBody extends TeaModel {
             }
 
             /**
-             * The OSS bucket that is used to save data snapshots.
+             * <p>The OSS bucket that is used to save data snapshots.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bucket-2</p>
              */
             public Builder snapshotBucket(String snapshotBucket) {
                 this.snapshotBucket = snapshotBucket;

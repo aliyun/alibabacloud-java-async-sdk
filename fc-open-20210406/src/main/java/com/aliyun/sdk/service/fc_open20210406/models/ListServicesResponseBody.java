@@ -58,7 +58,7 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The information about a service.
+         * The list of services.
          */
         public Builder services(java.util.List < Services> services) {
             this.services = services;
@@ -105,6 +105,9 @@ public class ListServicesResponseBody extends TeaModel {
         @NameInMap("tracingConfig")
         private TracingConfig tracingConfig;
 
+        @NameInMap("useSLRAuthentication")
+        private Boolean useSLRAuthentication;
+
         @NameInMap("vpcConfig")
         private VPCConfig vpcConfig;
 
@@ -120,6 +123,7 @@ public class ListServicesResponseBody extends TeaModel {
             this.serviceId = builder.serviceId;
             this.serviceName = builder.serviceName;
             this.tracingConfig = builder.tracingConfig;
+            this.useSLRAuthentication = builder.useSLRAuthentication;
             this.vpcConfig = builder.vpcConfig;
         }
 
@@ -209,6 +213,13 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         /**
+         * @return useSLRAuthentication
+         */
+        public Boolean getUseSLRAuthentication() {
+            return this.useSLRAuthentication;
+        }
+
+        /**
          * @return vpcConfig
          */
         public VPCConfig getVpcConfig() {
@@ -227,6 +238,7 @@ public class ListServicesResponseBody extends TeaModel {
             private String serviceId; 
             private String serviceName; 
             private TracingConfig tracingConfig; 
+            private Boolean useSLRAuthentication; 
             private VPCConfig vpcConfig; 
 
             /**
@@ -249,8 +261,8 @@ public class ListServicesResponseBody extends TeaModel {
              * Specifies whether to allow functions to access the Internet. Valid values:
              * <p>
              * 
-             * *   **true**: allows functions in the specified service to access the Internet.
-             * *   **false**: does not allow functions to access the Internet.
+             * *   **true**:
+             * *   **false**
              */
             public Builder internetAccess(Boolean internetAccess) {
                 this.internetAccess = internetAccess;
@@ -258,7 +270,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the service was last modified.
+             * The last time when the service was updated.
              */
             public Builder lastModifiedTime(String lastModifiedTime) {
                 this.lastModifiedTime = lastModifiedTime;
@@ -266,7 +278,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The log configuration, which specifies a Logstore to store function execution logs.
+             * The logging configurations. Function Compute writes function execution logs to the specified Logstore.
              */
             public Builder logConfig(LogConfig logConfig) {
                 this.logConfig = logConfig;
@@ -274,7 +286,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of the NAS file system. The configuration allows functions in the specified service in Function Compute to access the NAS file system.
+             * The configuration of the Apsara File Storage NAS (NAS) file system. The configuration allows functions in the specified service in Function Compute to access the NAS file system.
              */
             public Builder nasConfig(NASConfig nasConfig) {
                 this.nasConfig = nasConfig;
@@ -282,7 +294,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The OSS mount configurations.
+             * The Object Storage Service (OSS) mounting configuration.
              */
             public Builder ossMountConfig(OSSMountConfig ossMountConfig) {
                 this.ossMountConfig = ossMountConfig;
@@ -290,11 +302,11 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The RAM role that is used to grant required permissions to Function Compute. The RAM role is used in the following scenarios:
+             * The Alibaba Cloud Resource Name (ARN) of the RAM role that is used to grant required permissions to Function Compute. The RAM role is used in the following scenarios:
              * <p>
              * 
-             * *   Sends function execution logs to your Logstore.
-             * *   Generates a token for a function to access other cloud resources during function execution.
+             * *   Send function execution logs to your Logstore.
+             * *   Generate a token for a function to access other Alibaba Cloud resources during function execution.
              */
             public Builder role(String role) {
                 this.role = role;
@@ -302,7 +314,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID generated by the system for the service.
+             * The ID generated by the system for each service, which is globally unique.
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -318,7 +330,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of Tracing Analysis. After you configure Tracing Analysis for a service in Function Compute, you can record the execution duration of a request, view the amount of cold start time for a function, and record the execution duration of a function. For more information, see [Overview](~~189804~~).
+             * The configurations of Managed Service for OpenTelemetry. After you configure Managed Service for OpenTelemetry for a service in Function Compute, you can record the execution duration of a request, view the amount of cold start time for a function, and record the execution duration of a function. For more information, see [Overview](~~189804~~).
              */
             public Builder tracingConfig(TracingConfig tracingConfig) {
                 this.tracingConfig = tracingConfig;
@@ -326,7 +338,15 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The VPC configuration. The configuration allows a function to access the specified VPC.
+             * useSLRAuthentication.
+             */
+            public Builder useSLRAuthentication(Boolean useSLRAuthentication) {
+                this.useSLRAuthentication = useSLRAuthentication;
+                return this;
+            }
+
+            /**
+             * The VPC configurations, which allow functions in the specified service to access the specified VPC.
              */
             public Builder vpcConfig(VPCConfig vpcConfig) {
                 this.vpcConfig = vpcConfig;

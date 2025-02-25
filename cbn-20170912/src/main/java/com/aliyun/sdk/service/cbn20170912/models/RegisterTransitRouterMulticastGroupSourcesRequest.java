@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RegisterTransitRouterMulticastGroupSourcesRequest} extends {@link RequestModel}
  *
  * <p>RegisterTransitRouterMulticastGroupSourcesRequest</p>
  */
 public class RegisterTransitRouterMulticastGroupSourcesRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("GroupIpAddress")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupIpAddress")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupIpAddress;
 
-    @Query
-    @NameInMap("NetworkInterfaceIds")
-    private java.util.List < String > networkInterfaceIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfaceIds")
+    private java.util.List<String> networkInterfaceIds;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TransitRouterMulticastDomainId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterMulticastDomainId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String transitRouterMulticastDomainId;
 
-    @Query
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     private RegisterTransitRouterMulticastGroupSourcesRequest(Builder builder) {
@@ -105,7 +110,7 @@ public class RegisterTransitRouterMulticastGroupSourcesRequest extends Request {
     /**
      * @return networkInterfaceIds
      */
-    public java.util.List < String > getNetworkInterfaceIds() {
+    public java.util.List<String> getNetworkInterfaceIds() {
         return this.networkInterfaceIds;
     }
 
@@ -155,7 +160,7 @@ public class RegisterTransitRouterMulticastGroupSourcesRequest extends Request {
         private String clientToken; 
         private Boolean dryRun; 
         private String groupIpAddress; 
-        private java.util.List < String > networkInterfaceIds; 
+        private java.util.List<String> networkInterfaceIds; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
@@ -182,12 +187,14 @@ public class RegisterTransitRouterMulticastGroupSourcesRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID is different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-4266****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -196,11 +203,14 @@ public class RegisterTransitRouterMulticastGroupSourcesRequest extends Request {
         }
 
         /**
-         * Specifies whether only to check the request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform a dry run, without sending the actual request. Default values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: prechecks the request but does not create the multicast source. The system checks the required parameters, the request format, and the service limits. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
-         * *   **false** (default): sends the request. After the request passes the precheck, the multicast source is created.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -209,10 +219,15 @@ public class RegisterTransitRouterMulticastGroupSourcesRequest extends Request {
         }
 
         /**
-         * The IP address of the multicast group to which the multicast source belongs. Valid values: **224.0.0.1** to **239.255.255.254**.
-         * <p>
+         * <p>The IP address of the multicast group to which the multicast source belongs. Valid values: <strong>224.0.1.0</strong> to <strong>239.255.255.254</strong>.</p>
+         * <blockquote>
+         * <p>224.0.0.0 to 224.0.0.255 are reserved by the system and cannot be used by multicast groups.</p>
+         * </blockquote>
+         * <p>If the multicast group does not exist in the multicast domain, the system automatically creates the multicast group in the multicast domain.</p>
+         * <p>This parameter is required.</p>
          * 
-         * If the multicast group does not exist in the multicast domain, the system automatically creates the multicast group in the multicast domain.
+         * <strong>example:</strong>
+         * <p>239.XX.XX.2</p>
          */
         public Builder groupIpAddress(String groupIpAddress) {
             this.putQueryParameter("GroupIpAddress", groupIpAddress);
@@ -221,14 +236,9 @@ public class RegisterTransitRouterMulticastGroupSourcesRequest extends Request {
         }
 
         /**
-         * The IDs of the ENIs.
-         * <p>
-         * 
-         * You can create only one multicast source in a multicast group.
-         * 
-         * >  This parameter is required.
+         * <p>The IDs of the ENIs.</p>
          */
-        public Builder networkInterfaceIds(java.util.List < String > networkInterfaceIds) {
+        public Builder networkInterfaceIds(java.util.List<String> networkInterfaceIds) {
             this.putQueryParameter("NetworkInterfaceIds", networkInterfaceIds);
             this.networkInterfaceIds = networkInterfaceIds;
             return this;
@@ -271,7 +281,11 @@ public class RegisterTransitRouterMulticastGroupSourcesRequest extends Request {
         }
 
         /**
-         * The ID of the multicast domain to which the multicast source belongs.
+         * <p>The ID of the multicast domain to which the multicast source belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-mcast-domain-5mjb5gjb6dgu98****</p>
          */
         public Builder transitRouterMulticastDomainId(String transitRouterMulticastDomainId) {
             this.putQueryParameter("TransitRouterMulticastDomainId", transitRouterMulticastDomainId);
@@ -280,11 +294,14 @@ public class RegisterTransitRouterMulticastGroupSourcesRequest extends Request {
         }
 
         /**
-         * The ID of the VPC to which the ENI belongs.
-         * <p>
+         * <p>The ID of the VPC to which the ENI belongs.</p>
+         * <ul>
+         * <li>If the ENI belongs to the current Alibaba Cloud account, ignore this parameter.</li>
+         * <li>If the ENI belongs to a different Alibaba Cloud account, you must set this parameter.</li>
+         * </ul>
          * 
-         * *   If the ENI belongs to the current Alibaba Cloud account, ignore this parameter.
-         * *   If the ENI belongs to a different Alibaba Cloud account, you must set this parameter.
+         * <strong>example:</strong>
+         * <p>vpc-wz9fusm6zq8uy7cfa****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

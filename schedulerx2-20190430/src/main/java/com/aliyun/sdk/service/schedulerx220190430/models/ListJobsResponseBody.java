@@ -1,33 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.schedulerx220190430.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListJobsResponseBody} extends {@link TeaModel}
  *
  * <p>ListJobsResponseBody</p>
  */
 public class ListJobsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private AccessDeniedDetail accessDeniedDetail;
+
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListJobsResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -41,6 +45,13 @@ public class ListJobsResponseBody extends TeaModel {
 
     public static ListJobsResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public AccessDeniedDetail getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -79,6 +90,7 @@ public class ListJobsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private AccessDeniedDetail accessDeniedDetail; 
         private Integer code; 
         private Data data; 
         private String message; 
@@ -86,7 +98,18 @@ public class ListJobsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code that is returned.
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
+
+        /**
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the jobs.
+         * <p>The information about the jobs.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,10 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message that is returned if an error occurs.
+         * <p>The error message that is returned if an error occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>namespace can not find namespace: 1a72ecb1-b4cc-400a-a71b-20cdec9b****, namespaceSource:null</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +136,10 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>71BCC0E3-64B2-4B63-A870-AFB64EBCB58B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +147,14 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call is successful.</li>
+         * <li><strong>false</strong>: The call fails.</li>
+         * </ul>
          * 
-         * *   **true**: The call is successful.
-         * *   **false**: The call fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -135,17 +167,190 @@ public class ListJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListJobsResponseBody</p>
+     */
+    public static class AccessDeniedDetail extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AuthAction")
+        private String authAction;
+
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalDisplayName")
+        private String authPrincipalDisplayName;
+
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalOwnerId")
+        private String authPrincipalOwnerId;
+
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalType")
+        private String authPrincipalType;
+
+        @com.aliyun.core.annotation.NameInMap("EncodedDiagnosticMessage")
+        private String encodedDiagnosticMessage;
+
+        @com.aliyun.core.annotation.NameInMap("NoPermissionType")
+        private String noPermissionType;
+
+        @com.aliyun.core.annotation.NameInMap("PolicyType")
+        private String policyType;
+
+        private AccessDeniedDetail(Builder builder) {
+            this.authAction = builder.authAction;
+            this.authPrincipalDisplayName = builder.authPrincipalDisplayName;
+            this.authPrincipalOwnerId = builder.authPrincipalOwnerId;
+            this.authPrincipalType = builder.authPrincipalType;
+            this.encodedDiagnosticMessage = builder.encodedDiagnosticMessage;
+            this.noPermissionType = builder.noPermissionType;
+            this.policyType = builder.policyType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AccessDeniedDetail create() {
+            return builder().build();
+        }
+
+        /**
+         * @return authAction
+         */
+        public String getAuthAction() {
+            return this.authAction;
+        }
+
+        /**
+         * @return authPrincipalDisplayName
+         */
+        public String getAuthPrincipalDisplayName() {
+            return this.authPrincipalDisplayName;
+        }
+
+        /**
+         * @return authPrincipalOwnerId
+         */
+        public String getAuthPrincipalOwnerId() {
+            return this.authPrincipalOwnerId;
+        }
+
+        /**
+         * @return authPrincipalType
+         */
+        public String getAuthPrincipalType() {
+            return this.authPrincipalType;
+        }
+
+        /**
+         * @return encodedDiagnosticMessage
+         */
+        public String getEncodedDiagnosticMessage() {
+            return this.encodedDiagnosticMessage;
+        }
+
+        /**
+         * @return noPermissionType
+         */
+        public String getNoPermissionType() {
+            return this.noPermissionType;
+        }
+
+        /**
+         * @return policyType
+         */
+        public String getPolicyType() {
+            return this.policyType;
+        }
+
+        public static final class Builder {
+            private String authAction; 
+            private String authPrincipalDisplayName; 
+            private String authPrincipalOwnerId; 
+            private String authPrincipalType; 
+            private String encodedDiagnosticMessage; 
+            private String noPermissionType; 
+            private String policyType; 
+
+            /**
+             * AuthAction.
+             */
+            public Builder authAction(String authAction) {
+                this.authAction = authAction;
+                return this;
+            }
+
+            /**
+             * AuthPrincipalDisplayName.
+             */
+            public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
+                this.authPrincipalDisplayName = authPrincipalDisplayName;
+                return this;
+            }
+
+            /**
+             * AuthPrincipalOwnerId.
+             */
+            public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
+                this.authPrincipalOwnerId = authPrincipalOwnerId;
+                return this;
+            }
+
+            /**
+             * AuthPrincipalType.
+             */
+            public Builder authPrincipalType(String authPrincipalType) {
+                this.authPrincipalType = authPrincipalType;
+                return this;
+            }
+
+            /**
+             * EncodedDiagnosticMessage.
+             */
+            public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
+                this.encodedDiagnosticMessage = encodedDiagnosticMessage;
+                return this;
+            }
+
+            /**
+             * NoPermissionType.
+             */
+            public Builder noPermissionType(String noPermissionType) {
+                this.noPermissionType = noPermissionType;
+                return this;
+            }
+
+            /**
+             * PolicyType.
+             */
+            public Builder policyType(String policyType) {
+                this.policyType = policyType;
+                return this;
+            }
+
+            public AccessDeniedDetail build() {
+                return new AccessDeniedDetail(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListJobsResponseBody</p>
+     */
     public static class ContactInfo extends TeaModel {
-        @NameInMap("Ding")
+        @com.aliyun.core.annotation.NameInMap("Ding")
         private String ding;
 
-        @NameInMap("UserMail")
+        @com.aliyun.core.annotation.NameInMap("UserMail")
         private String userMail;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
-        @NameInMap("UserPhone")
+        @com.aliyun.core.annotation.NameInMap("UserPhone")
         private String userPhone;
 
         private ContactInfo(Builder builder) {
@@ -198,7 +403,10 @@ public class ListJobsResponseBody extends TeaModel {
             private String userPhone; 
 
             /**
-             * The webhook URL of the DingTalk chatbot.
+             * <p>The webhook URL of the DingTalk chatbot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=">https://oapi.dingtalk.com/robot/send?access_token=</a>**********</p>
              */
             public Builder ding(String ding) {
                 this.ding = ding;
@@ -206,7 +414,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The email address of the user.
+             * <p>The email address of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:user@mail.com">user@mail.com</a></p>
              */
             public Builder userMail(String userMail) {
                 this.userMail = userMail;
@@ -214,7 +425,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The username.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>userA</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -222,7 +436,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The mobile number of the user.
+             * <p>The mobile number of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1381111****</p>
              */
             public Builder userPhone(String userPhone) {
                 this.userPhone = userPhone;
@@ -236,23 +453,29 @@ public class ListJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListJobsResponseBody</p>
+     */
     public static class MonitorConfig extends TeaModel {
-        @NameInMap("FailEnable")
+        @com.aliyun.core.annotation.NameInMap("FailEnable")
         private Boolean failEnable;
 
-        @NameInMap("MissWorkerEnable")
+        @com.aliyun.core.annotation.NameInMap("MissWorkerEnable")
         private Boolean missWorkerEnable;
 
-        @NameInMap("SendChannel")
+        @com.aliyun.core.annotation.NameInMap("SendChannel")
         private String sendChannel;
 
-        @NameInMap("Timeout")
+        @com.aliyun.core.annotation.NameInMap("Timeout")
         private Long timeout;
 
-        @NameInMap("TimeoutEnable")
+        @com.aliyun.core.annotation.NameInMap("TimeoutEnable")
         private Boolean timeoutEnable;
 
-        @NameInMap("TimeoutKillEnable")
+        @com.aliyun.core.annotation.NameInMap("TimeoutKillEnable")
         private Boolean timeoutKillEnable;
 
         private MonitorConfig(Builder builder) {
@@ -323,11 +546,14 @@ public class ListJobsResponseBody extends TeaModel {
             private Boolean timeoutKillEnable; 
 
             /**
-             * Indicates whether the feature of generating an alert upon a failure is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the feature of generating an alert upon a failure is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The feature is enabled.</li>
+             * <li><strong>false</strong>: The feature is disabled.</li>
+             * </ul>
              * 
-             * *   **true**: The feature is enabled.
-             * *   **false**: The feature is disabled.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder failEnable(Boolean failEnable) {
                 this.failEnable = failEnable;
@@ -335,7 +561,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the feature of generating an alert when no machine is available for running the job is enabled.
+             * <p>Indicates whether the feature of generating an alert when no machine is available for running the job is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder missWorkerEnable(Boolean missWorkerEnable) {
                 this.missWorkerEnable = missWorkerEnable;
@@ -343,7 +572,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The method that is used to send an alert notification. Only Short Message Service (SMS) is supported.
+             * <p>The method that is used to send an alert notification. Only Short Message Service (SMS) is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sms</p>
              */
             public Builder sendChannel(String sendChannel) {
                 this.sendChannel = sendChannel;
@@ -351,7 +583,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout threshold. Unit: seconds. Default value: 7200.
+             * <p>The timeout threshold. Unit: seconds. Default value: 7200.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12300</p>
              */
             public Builder timeout(Long timeout) {
                 this.timeout = timeout;
@@ -359,11 +594,14 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the feature of generating an alert upon a timeout is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the feature of generating an alert upon a timeout is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The feature is enabled.</li>
+             * <li><strong>false</strong>: The feature is disabled.</li>
+             * </ul>
              * 
-             * *   **true**: The feature is enabled.
-             * *   **false**: The feature is disabled.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder timeoutEnable(Boolean timeoutEnable) {
                 this.timeoutEnable = timeoutEnable;
@@ -371,11 +609,14 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the feature of stopping job triggering upon a timeout is enabled. By default, the feature is disabled.
-             * <p>
+             * <p>Indicates whether the feature of stopping job triggering upon a timeout is enabled. By default, the feature is disabled.</p>
+             * <ul>
+             * <li><strong>true</strong>: The feature is enabled.</li>
+             * <li><strong>false</strong>: The feature is disabled.</li>
+             * </ul>
              * 
-             * *   **true**: The feature is enabled.
-             * *   **false**: The feature is disabled.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder timeoutKillEnable(Boolean timeoutKillEnable) {
                 this.timeoutKillEnable = timeoutKillEnable;
@@ -389,11 +630,17 @@ public class ListJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListJobsResponseBody</p>
+     */
     public static class JobMonitorInfo extends TeaModel {
-        @NameInMap("ContactInfo")
+        @com.aliyun.core.annotation.NameInMap("ContactInfo")
         private java.util.List < ContactInfo> contactInfo;
 
-        @NameInMap("MonitorConfig")
+        @com.aliyun.core.annotation.NameInMap("MonitorConfig")
         private MonitorConfig monitorConfig;
 
         private JobMonitorInfo(Builder builder) {
@@ -428,7 +675,7 @@ public class ListJobsResponseBody extends TeaModel {
             private MonitorConfig monitorConfig; 
 
             /**
-             * The contact information.
+             * <p>The contact information.</p>
              */
             public Builder contactInfo(java.util.List < ContactInfo> contactInfo) {
                 this.contactInfo = contactInfo;
@@ -436,7 +683,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of the alerting feature and the alert threshold.
+             * <p>The configurations of the alerting feature and the alert threshold.</p>
              */
             public Builder monitorConfig(MonitorConfig monitorConfig) {
                 this.monitorConfig = monitorConfig;
@@ -450,23 +697,29 @@ public class ListJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListJobsResponseBody</p>
+     */
     public static class MapTaskXAttrs extends TeaModel {
-        @NameInMap("ConsumerSize")
+        @com.aliyun.core.annotation.NameInMap("ConsumerSize")
         private Integer consumerSize;
 
-        @NameInMap("DispatcherSize")
+        @com.aliyun.core.annotation.NameInMap("DispatcherSize")
         private Integer dispatcherSize;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("QueueSize")
+        @com.aliyun.core.annotation.NameInMap("QueueSize")
         private Integer queueSize;
 
-        @NameInMap("TaskAttemptInterval")
+        @com.aliyun.core.annotation.NameInMap("TaskAttemptInterval")
         private Integer taskAttemptInterval;
 
-        @NameInMap("TaskMaxAttempt")
+        @com.aliyun.core.annotation.NameInMap("TaskMaxAttempt")
         private Integer taskMaxAttempt;
 
         private MapTaskXAttrs(Builder builder) {
@@ -537,7 +790,10 @@ public class ListJobsResponseBody extends TeaModel {
             private Integer taskMaxAttempt; 
 
             /**
-             * The number of threads that are triggered by a standalone job at a time. Default value: 5.
+             * <p>The number of threads that are triggered by a standalone job at a time. Default value: 5.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder consumerSize(Integer consumerSize) {
                 this.consumerSize = consumerSize;
@@ -545,7 +801,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of task distribution threads. Default value: 5.
+             * <p>The number of task distribution threads. Default value: 5.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder dispatcherSize(Integer dispatcherSize) {
                 this.dispatcherSize = dispatcherSize;
@@ -553,7 +812,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of tasks that are pulled by a parallel job at a time. Default value: 100.
+             * <p>The number of tasks that are pulled by a parallel job at a time. Default value: 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -561,7 +823,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of task queues that can be cached. Default value: 10000.
+             * <p>The maximum number of task queues that can be cached. Default value: 10000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder queueSize(Integer queueSize) {
                 this.queueSize = queueSize;
@@ -569,7 +834,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The interval at which the system retries to run the task after a task failure.
+             * <p>The interval at which the system retries to run the task after a task failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder taskAttemptInterval(Integer taskAttemptInterval) {
                 this.taskAttemptInterval = taskAttemptInterval;
@@ -577,7 +845,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of retries after a task failure.
+             * <p>The number of retries after a task failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder taskMaxAttempt(Integer taskMaxAttempt) {
                 this.taskMaxAttempt = taskMaxAttempt;
@@ -591,17 +862,23 @@ public class ListJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListJobsResponseBody</p>
+     */
     public static class TimeConfig extends TeaModel {
-        @NameInMap("Calendar")
+        @com.aliyun.core.annotation.NameInMap("Calendar")
         private String calendar;
 
-        @NameInMap("DataOffset")
+        @com.aliyun.core.annotation.NameInMap("DataOffset")
         private Integer dataOffset;
 
-        @NameInMap("TimeExpression")
+        @com.aliyun.core.annotation.NameInMap("TimeExpression")
         private String timeExpression;
 
-        @NameInMap("TimeType")
+        @com.aliyun.core.annotation.NameInMap("TimeType")
         private Integer timeType;
 
         private TimeConfig(Builder builder) {
@@ -654,7 +931,10 @@ public class ListJobsResponseBody extends TeaModel {
             private Integer timeType; 
 
             /**
-             * If the TimeType parameter is set to cron, you can specify custom calendar days.
+             * <p>If the TimeType parameter is set to cron, you can specify custom calendar days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Business days</p>
              */
             public Builder calendar(String calendar) {
                 this.calendar = calendar;
@@ -662,7 +942,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time offset if the TimeType parameter is set to cron. Unit: seconds.
+             * <p>The time offset if the TimeType parameter is set to cron. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dataOffset(Integer dataOffset) {
                 this.dataOffset = dataOffset;
@@ -670,13 +953,16 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time expression. Valid values:
-             * <p>
+             * <p>The time expression. Valid values:</p>
+             * <ul>
+             * <li><strong>api</strong>: indicates that no time expression is used to specify the time when to schedule the job.</li>
+             * <li><strong>fix_rate</strong>: indicates that the job is triggered at a fixed frequency. For example, a value of 30 indicates that the job is triggered every 30 seconds.</li>
+             * <li><strong>cron</strong>: indicates that a standard CRON expression is used to specify the time when to schedule the job.</li>
+             * <li><strong>second_delay</strong>: indicates that the job is triggered after a fixed delay. Valid values: 1 to 60. Unit: seconds.</li>
+             * </ul>
              * 
-             * *   **api**: indicates that no time expression is used to specify the time when to schedule the job.
-             * *   **fix_rate**: indicates that the job is triggered at a fixed frequency. For example, a value of 30 indicates that the job is triggered every 30 seconds.
-             * *   **cron**: indicates that a standard CRON expression is used to specify the time when to schedule the job.
-             * *   **second_delay**: indicates that the job is triggered after a fixed delay. Valid values: 1 to 60. Unit: seconds.
+             * <strong>example:</strong>
+             * <p>0 0/10 * * * ?</p>
              */
             public Builder timeExpression(String timeExpression) {
                 this.timeExpression = timeExpression;
@@ -684,13 +970,16 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The method that is used to specify the time when to schedule the job. Valid values:
-             * <p>
+             * <p>The method that is used to specify the time when to schedule the job. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: cron</li>
+             * <li><strong>3</strong>: fix_rate</li>
+             * <li><strong>4</strong>: second_delay</li>
+             * <li><strong>100</strong>: api</li>
+             * </ul>
              * 
-             * *   **1**: cron
-             * *   **3**: fix_rate
-             * *   **4**: second_delay
-             * *   **100**: api
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder timeType(Integer timeType) {
                 this.timeType = timeType;
@@ -704,56 +993,62 @@ public class ListJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListJobsResponseBody</p>
+     */
     public static class Jobs extends TeaModel {
-        @NameInMap("AttemptInterval")
+        @com.aliyun.core.annotation.NameInMap("AttemptInterval")
         private Integer attemptInterval;
 
-        @NameInMap("ClassName")
+        @com.aliyun.core.annotation.NameInMap("ClassName")
         private String className;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ExecuteMode")
+        @com.aliyun.core.annotation.NameInMap("ExecuteMode")
         private String executeMode;
 
-        @NameInMap("JarUrl")
+        @com.aliyun.core.annotation.NameInMap("JarUrl")
         private String jarUrl;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private Long jobId;
 
-        @NameInMap("JobMonitorInfo")
+        @com.aliyun.core.annotation.NameInMap("JobMonitorInfo")
         private JobMonitorInfo jobMonitorInfo;
 
-        @NameInMap("JobType")
+        @com.aliyun.core.annotation.NameInMap("JobType")
         private String jobType;
 
-        @NameInMap("MapTaskXAttrs")
+        @com.aliyun.core.annotation.NameInMap("MapTaskXAttrs")
         private MapTaskXAttrs mapTaskXAttrs;
 
-        @NameInMap("MaxAttempt")
+        @com.aliyun.core.annotation.NameInMap("MaxAttempt")
         private Integer maxAttempt;
 
-        @NameInMap("MaxConcurrency")
+        @com.aliyun.core.annotation.NameInMap("MaxConcurrency")
         private String maxConcurrency;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Parameters")
+        @com.aliyun.core.annotation.NameInMap("Parameters")
         private String parameters;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("TimeConfig")
+        @com.aliyun.core.annotation.NameInMap("TimeConfig")
         private TimeConfig timeConfig;
 
-        @NameInMap("XAttrs")
+        @com.aliyun.core.annotation.NameInMap("XAttrs")
         private String xAttrs;
 
         private Jobs(Builder builder) {
@@ -923,7 +1218,10 @@ public class ListJobsResponseBody extends TeaModel {
             private String xAttrs; 
 
             /**
-             * The interval at which the system retries to run the job after a job failure. Unit: seconds. Default value: 30.
+             * <p>The interval at which the system retries to run the job after a job failure. Unit: seconds. Default value: 30.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder attemptInterval(Integer attemptInterval) {
                 this.attemptInterval = attemptInterval;
@@ -931,7 +1229,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The full path of the job interface class. This parameter is returned only for a Java job.
+             * <p>The full path of the job interface class. This parameter is returned only for a Java job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>com.alibaba.schedulerx.test.helloworld</p>
              */
             public Builder className(String className) {
                 this.className = className;
@@ -939,7 +1240,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The script of the job. This parameter is returned only for a Python, Shell, or Go job.
+             * <p>The script of the job. This parameter is returned only for a Python, Shell, or Go job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>echo &quot;hello&quot;</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -947,7 +1251,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the job.
+             * <p>The description of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -955,15 +1262,18 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The execution mode of the job. Valid values:
-             * <p>
+             * <p>The execution mode of the job. Valid values:</p>
+             * <ul>
+             * <li><strong>standalone</strong>: The job runs in standalone mode.</li>
+             * <li><strong>broadcast</strong>: The job runs in broadcast mode.</li>
+             * <li><strong>parallel</strong>: The job runs in parallel computing mode.</li>
+             * <li><strong>grid</strong>: The job runs in memory grid mode.</li>
+             * <li><strong>batch</strong>: The job runs in grid computing mode.</li>
+             * <li><strong>shard</strong>: The job runs in multipart mode.</li>
+             * </ul>
              * 
-             * *   **standalone**: The job runs in standalone mode.
-             * *   **broadcast**: The job runs in broadcast mode.
-             * *   **parallel**: The job runs in parallel computing mode.
-             * *   **grid**: The job runs in memory grid mode.
-             * *   **batch**: The job runs in grid computing mode.
-             * *   **shard**: The job runs in multipart mode.
+             * <strong>example:</strong>
+             * <p>standalone</p>
              */
             public Builder executeMode(String executeMode) {
                 this.executeMode = executeMode;
@@ -971,7 +1281,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The full path to which a JAR package is uploaded in Object Storage Service (OSS).
+             * <p>The full path to which a JAR package is uploaded in Object Storage Service (OSS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>https:doc***.oss-cn-hangzhou.aliyuncs.com/sc-****-D-0.0.2-SNAPSHOT.jar</p>
              */
             public Builder jarUrl(String jarUrl) {
                 this.jarUrl = jarUrl;
@@ -979,7 +1292,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the job.
+             * <p>The ID of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99341</p>
              */
             public Builder jobId(Long jobId) {
                 this.jobId = jobId;
@@ -987,7 +1303,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The monitoring information of the job.
+             * <p>The monitoring information of the job.</p>
              */
             public Builder jobMonitorInfo(JobMonitorInfo jobMonitorInfo) {
                 this.jobMonitorInfo = jobMonitorInfo;
@@ -995,7 +1311,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the job.
+             * <p>The type of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>java</p>
              */
             public Builder jobType(String jobType) {
                 this.jobType = jobType;
@@ -1003,7 +1322,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The advanced configurations of the job. The parameters are returned only if the value of the ExecuteMode parameter is parallel, grid, or batch.
+             * <p>The advanced configurations of the job. The parameters are returned only if the value of the ExecuteMode parameter is parallel, grid, or batch.</p>
              */
             public Builder mapTaskXAttrs(MapTaskXAttrs mapTaskXAttrs) {
                 this.mapTaskXAttrs = mapTaskXAttrs;
@@ -1011,7 +1330,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of retries after a job failure. This parameter is specified based on your business requirements. Default value: 0.
+             * <p>The maximum number of retries after a job failure. This parameter is specified based on your business requirements. Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxAttempt(Integer maxAttempt) {
                 this.maxAttempt = maxAttempt;
@@ -1019,7 +1341,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of instances that can concurrently run for the job. Default value: 1. A value of 1 indicates that if the last triggered instance is running, the next instance is not triggered even if the scheduled point in time for running the instance is reached.
+             * <p>The maximum number of instances that can concurrently run for the job. Default value: 1. A value of 1 indicates that if the last triggered instance is running, the next instance is not triggered even if the scheduled point in time for running the instance is reached.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder maxConcurrency(String maxConcurrency) {
                 this.maxConcurrency = maxConcurrency;
@@ -1027,7 +1352,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the job.
+             * <p>The name of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>helloworld</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1035,7 +1363,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The user-defined parameters. These parameters can be obtained when the job is running.
+             * <p>The user-defined parameters. These parameters can be obtained when the job is running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder parameters(String parameters) {
                 this.parameters = parameters;
@@ -1043,11 +1374,14 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the job is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the job is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: The job is enabled and can be triggered.</li>
+             * <li><strong>0</strong>: The job is disabled and cannot be triggered.</li>
+             * </ul>
              * 
-             * *   **1**: The job is enabled and can be triggered.
-             * *   **0**: The job is disabled and cannot be triggered.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -1055,7 +1389,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time configurations.
+             * <p>The time configurations.</p>
              */
             public Builder timeConfig(TimeConfig timeConfig) {
                 this.timeConfig = timeConfig;
@@ -1063,7 +1397,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The extended fields.
+             * <p>The extended fields.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;pageSize&quot;:5,&quot;queueSize&quot;:10,&quot;consumerSize&quot;:5,&quot;dispatcherSize&quot;:5,&quot;taskMaxAttempt&quot;:0,&quot;taskAttemptInterval&quot;:0,&quot;globalConsumerSize&quot;:1000,&quot;taskDispatchMode&quot;:&quot;push&quot;}</p>
              */
             public Builder xAttrs(String xAttrs) {
                 this.xAttrs = xAttrs;
@@ -1077,8 +1414,14 @@ public class ListJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListJobsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Jobs")
+        @com.aliyun.core.annotation.NameInMap("Jobs")
         private java.util.List < Jobs> jobs;
 
         private Data(Builder builder) {
@@ -1104,7 +1447,7 @@ public class ListJobsResponseBody extends TeaModel {
             private java.util.List < Jobs> jobs; 
 
             /**
-             * The jobs and their details.
+             * <p>The jobs and their details.</p>
              */
             public Builder jobs(java.util.List < Jobs> jobs) {
                 this.jobs = jobs;

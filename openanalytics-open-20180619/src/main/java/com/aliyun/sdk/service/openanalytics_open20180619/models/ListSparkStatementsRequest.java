@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openanalytics_open20180619.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSparkStatementsRequest} extends {@link RequestModel}
  *
  * <p>ListSparkStatementsRequest</p>
  */
 public class ListSparkStatementsRequest extends Request {
-    @Body
-    @NameInMap("JobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("JobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobId;
 
     private ListSparkStatementsRequest(Builder builder) {
@@ -49,13 +49,16 @@ public class ListSparkStatementsRequest extends Request {
             super();
         } 
 
-        private Builder(ListSparkStatementsRequest response) {
-            super(response);
-            this.jobId = response.jobId;
+        private Builder(ListSparkStatementsRequest request) {
+            super(request);
+            this.jobId = request.jobId;
         } 
 
         /**
-         * JobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>j202106071620hangzhou00000000001</p>
          */
         public Builder jobId(String jobId) {
             this.putBodyParameter("JobId", jobId);

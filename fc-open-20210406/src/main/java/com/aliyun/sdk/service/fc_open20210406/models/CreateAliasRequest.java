@@ -219,10 +219,10 @@ public class CreateAliasRequest extends Request {
         }
 
         /**
-         * The additional version to which the alias points and the weight of the additional version.
+         * The canary release version to which the alias points and the weight of the canary release version.
          * <p>
          * 
-         * *   The additional version takes effect only when the function is invoked.
+         * *   The canary release version takes effect only when the function is invoked.
          * *   The value consists of a version number and a specific weight. For example, 2:0.05 indicates that when a function is invoked, Version 2 is the canary release version, 5% of the traffic is distributed to the canary release version, and 95% of the traffic is distributed to the major version.
          */
         public Builder additionalVersionWeight(java.util.Map < String, Float > additionalVersionWeight) {
@@ -250,11 +250,11 @@ public class CreateAliasRequest extends Request {
         }
 
         /**
-         * The canary release mode. Valid values:
+         * The canary release mode. Default values: off. Valid values:
          * <p>
          * 
-         * *   **Random**: random canary release. This is the default value.
-         * *   **Content**: rule-based canary release.
+         * *   **Random**: random canary release.
+         * *   **Content**: rule-based canary release. By default, this parameter is empty.
          */
         public Builder resolvePolicy(String resolvePolicy) {
             this.putBodyParameter("resolvePolicy", resolvePolicy);

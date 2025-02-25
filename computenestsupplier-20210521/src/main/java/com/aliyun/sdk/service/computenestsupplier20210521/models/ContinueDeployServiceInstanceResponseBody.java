@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ContinueDeployServiceInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>ContinueDeployServiceInstanceResponseBody</p>
  */
 public class ContinueDeployServiceInstanceResponseBody extends TeaModel {
-    @NameInMap("DryRunResult")
+    @com.aliyun.core.annotation.NameInMap("DryRunResult")
     private DryRunResult dryRunResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServiceInstanceId")
+    @com.aliyun.core.annotation.NameInMap("ServiceInstanceId")
     private String serviceInstanceId;
 
     private ContinueDeployServiceInstanceResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class ContinueDeployServiceInstanceResponseBody extends TeaModel {
         private String serviceInstanceId; 
 
         /**
-         * DryRunResult.
+         * <p>The dry run result.</p>
          */
         public Builder dryRunResult(DryRunResult dryRunResult) {
             this.dryRunResult = dryRunResult;
@@ -70,7 +75,10 @@ public class ContinueDeployServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>82DF27ED-E538-5AC0-A11C-39334A873189</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class ContinueDeployServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceInstanceId.
+         * <p>The ID of the service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>si-d6ab3a63ccbb4b17****</p>
          */
         public Builder serviceInstanceId(String serviceInstanceId) {
             this.serviceInstanceId = serviceInstanceId;
@@ -91,15 +102,21 @@ public class ContinueDeployServiceInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ContinueDeployServiceInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ContinueDeployServiceInstanceResponseBody</p>
+     */
     public static class DryRunResult extends TeaModel {
-        @NameInMap("ParametersAllowedToBeModified")
-        private java.util.List < String > parametersAllowedToBeModified;
+        @com.aliyun.core.annotation.NameInMap("ParametersAllowedToBeModified")
+        private java.util.List<String> parametersAllowedToBeModified;
 
-        @NameInMap("ParametersConditionallyAllowedToBeModified")
-        private java.util.List < String > parametersConditionallyAllowedToBeModified;
+        @com.aliyun.core.annotation.NameInMap("ParametersConditionallyAllowedToBeModified")
+        private java.util.List<String> parametersConditionallyAllowedToBeModified;
 
-        @NameInMap("ParametersNotAllowedToBeModified")
-        private java.util.List < String > parametersNotAllowedToBeModified;
+        @com.aliyun.core.annotation.NameInMap("ParametersNotAllowedToBeModified")
+        private java.util.List<String> parametersNotAllowedToBeModified;
 
         private DryRunResult(Builder builder) {
             this.parametersAllowedToBeModified = builder.parametersAllowedToBeModified;
@@ -118,49 +135,58 @@ public class ContinueDeployServiceInstanceResponseBody extends TeaModel {
         /**
          * @return parametersAllowedToBeModified
          */
-        public java.util.List < String > getParametersAllowedToBeModified() {
+        public java.util.List<String> getParametersAllowedToBeModified() {
             return this.parametersAllowedToBeModified;
         }
 
         /**
          * @return parametersConditionallyAllowedToBeModified
          */
-        public java.util.List < String > getParametersConditionallyAllowedToBeModified() {
+        public java.util.List<String> getParametersConditionallyAllowedToBeModified() {
             return this.parametersConditionallyAllowedToBeModified;
         }
 
         /**
          * @return parametersNotAllowedToBeModified
          */
-        public java.util.List < String > getParametersNotAllowedToBeModified() {
+        public java.util.List<String> getParametersNotAllowedToBeModified() {
             return this.parametersNotAllowedToBeModified;
         }
 
         public static final class Builder {
-            private java.util.List < String > parametersAllowedToBeModified; 
-            private java.util.List < String > parametersConditionallyAllowedToBeModified; 
-            private java.util.List < String > parametersNotAllowedToBeModified; 
+            private java.util.List<String> parametersAllowedToBeModified; 
+            private java.util.List<String> parametersConditionallyAllowedToBeModified; 
+            private java.util.List<String> parametersNotAllowedToBeModified; 
 
             /**
-             * ParametersAllowedToBeModified.
+             * <p>The parameters that can be modified. The operation that is performed to modify the parameters does not cause a validation error.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if DryRun is set to true.</p>
+             * </blockquote>
              */
-            public Builder parametersAllowedToBeModified(java.util.List < String > parametersAllowedToBeModified) {
+            public Builder parametersAllowedToBeModified(java.util.List<String> parametersAllowedToBeModified) {
                 this.parametersAllowedToBeModified = parametersAllowedToBeModified;
                 return this;
             }
 
             /**
-             * ParametersConditionallyAllowedToBeModified.
+             * <p>The parameters that can be modified under specific conditions. The new values of the parameters determine whether the operation that is performed to modify the parameters causes a validation error.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if DryRun is set to true.</p>
+             * </blockquote>
              */
-            public Builder parametersConditionallyAllowedToBeModified(java.util.List < String > parametersConditionallyAllowedToBeModified) {
+            public Builder parametersConditionallyAllowedToBeModified(java.util.List<String> parametersConditionallyAllowedToBeModified) {
                 this.parametersConditionallyAllowedToBeModified = parametersConditionallyAllowedToBeModified;
                 return this;
             }
 
             /**
-             * ParametersNotAllowedToBeModified.
+             * <p>The parameters that cannot be modified. The operation that is performed to modify the parameters causes a validation error.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if DryRun is set to true.</p>
+             * </blockquote>
              */
-            public Builder parametersNotAllowedToBeModified(java.util.List < String > parametersNotAllowedToBeModified) {
+            public Builder parametersNotAllowedToBeModified(java.util.List<String> parametersNotAllowedToBeModified) {
                 this.parametersNotAllowedToBeModified = parametersNotAllowedToBeModified;
                 return this;
             }

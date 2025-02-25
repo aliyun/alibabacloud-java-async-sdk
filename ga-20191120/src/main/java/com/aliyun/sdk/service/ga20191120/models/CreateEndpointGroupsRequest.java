@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateEndpointGroupsRequest</p>
  */
 public class CreateEndpointGroupsRequest extends Request {
-    @Query
-    @NameInMap("AcceleratorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceleratorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String acceleratorId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("EndpointGroupConfigurations")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndpointGroupConfigurations")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < EndpointGroupConfigurations> endpointGroupConfigurations;
 
-    @Query
-    @NameInMap("ListenerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String listenerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private CreateEndpointGroupsRequest(Builder builder) {
@@ -140,9 +139,9 @@ public class CreateEndpointGroupsRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          * 
-         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -151,11 +150,11 @@ public class CreateEndpointGroupsRequest extends Request {
         }
 
         /**
-         * Specifies whether to only precheck the request. Default value: false. Valid values:
+         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
          * <p>
          * 
-         * *   **true**: prechecks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
-         * *   **false**: sends the request. If the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.
+         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -164,10 +163,10 @@ public class CreateEndpointGroupsRequest extends Request {
         }
 
         /**
-         * Terminal node group configuration information.
+         * EndpointGroupConfigurations.
          */
         public Builder endpointGroupConfigurations(java.util.List < EndpointGroupConfigurations> endpointGroupConfigurations) {
-            this.putQueryParameter("EndpointGroupConfigurations", endpointGroupConfigurations);
+            this.putBodyParameter("EndpointGroupConfigurations", endpointGroupConfigurations);
             this.endpointGroupConfigurations = endpointGroupConfigurations;
             return this;
         }
@@ -176,7 +175,7 @@ public class CreateEndpointGroupsRequest extends Request {
          * The ID of the listener.
          * <p>
          * 
-         * >  If the protocol of the listener is **HTTP** or **HTTPS**, only one endpoint group is created after you call the **CreateEndpointGroups** operation.
+         * >  If the listener protocol is **HTTP** or **HTTPS**, you can call the **CreateEndpointGroups** operation to create only one endpoint group.
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -201,16 +200,16 @@ public class CreateEndpointGroupsRequest extends Request {
     } 
 
     public static class EndpointConfigurations extends TeaModel {
-        @NameInMap("Endpoint")
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
 
-        @NameInMap("SubAddress")
+        @com.aliyun.core.annotation.NameInMap("SubAddress")
         private String subAddress;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Long weight;
 
         private EndpointConfigurations(Builder builder) {
@@ -263,12 +262,7 @@ public class CreateEndpointGroupsRequest extends Request {
             private Long weight; 
 
             /**
-             * The IP address, domain name or instance id according to the type of the endpoint.
-             * <p>
-             * 
-             * You can specify up to 100 endpoint IP addresses or domain names in an endpoint group.
-             * 
-             * >  This parameter is required.
+             * Endpoint.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -276,10 +270,7 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * The private IP address of the ENI.
-             * <p>
-             * 
-             * > - When the Endpoint type is ENI, this parameter can be configured. If not configured, it defaults to the primary private IP address of ENI.
+             * SubAddress.
              */
             public Builder subAddress(String subAddress) {
                 this.subAddress = subAddress;
@@ -287,24 +278,7 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * The type of the endpoint. Valid values:
-             * <p>
-             * 
-             * *   **Domain:** a custom domain name.
-             * *   **Ip:** a custom IP address.
-             * *   **PublicIp:** a public IP address provided by Alibaba Cloud.
-             * *   **ECS:** Elastic Compute Service (ECS) instance.
-             * *   **SLB:** Server Load Balancer (SLB) instance.
-             * *   **ALB:** Application Load Balancer (ALB) instance.
-             * *   **OSS:** Object Storage Service (OSS) bucket.
-             * *   **ENI:** Elastic Network interface (ENI).
-             * *   **NLB:** Network Load Balancer (NLB) instance.
-             * 
-             * > *   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system automatically creates the service-linked role.
-             * >*   If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system automatically creates the service-linked role.
-             * >*   If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system automatically creates the service-linked role.
-             * 
-             * For more information, see [Service linked roles](~~178360~~).
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -312,16 +286,7 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * The weight of the endpoint.
-             * <p>
-             * 
-             * Valid values: **0** to **255**.
-             * 
-             * You can set the weights of up to 100 endpoints in an endpoint group.
-             * 
-             * > 
-             * *   This parameter is required.
-             * *   If the weight of an endpoint is set to 0, GA stops distributing network traffic to the endpoint. Proceed with caution.
+             * Weight.
              */
             public Builder weight(Long weight) {
                 this.weight = weight;
@@ -336,10 +301,10 @@ public class CreateEndpointGroupsRequest extends Request {
 
     }
     public static class PortOverrides extends TeaModel {
-        @NameInMap("EndpointPort")
+        @com.aliyun.core.annotation.NameInMap("EndpointPort")
         private Long endpointPort;
 
-        @NameInMap("ListenerPort")
+        @com.aliyun.core.annotation.NameInMap("ListenerPort")
         private Long listenerPort;
 
         private PortOverrides(Builder builder) {
@@ -374,10 +339,7 @@ public class CreateEndpointGroupsRequest extends Request {
             private Long listenerPort; 
 
             /**
-             * The endpoint port that is mapped to the listener port.
-             * <p>
-             * 
-             * You can specify endpoint ports in up to five port mappings.
+             * EndpointPort.
              */
             public Builder endpointPort(Long endpointPort) {
                 this.endpointPort = endpointPort;
@@ -385,14 +347,7 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * The listener port that is mapped to the endpoint port.
-             * <p>
-             * 
-             * You can specify listener ports in up to five port mappings.
-             * 
-             * > 
-             * *   Only HTTP and HTTPS listeners support port mappings.
-             * *   The listener port in a port mapping must be the one used by the current listener.
+             * ListenerPort.
              */
             public Builder listenerPort(Long listenerPort) {
                 this.listenerPort = listenerPort;
@@ -407,13 +362,13 @@ public class CreateEndpointGroupsRequest extends Request {
 
     }
     public static class SystemTag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Scope")
+        @com.aliyun.core.annotation.NameInMap("Scope")
         private String scope;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SystemTag(Builder builder) {
@@ -488,10 +443,10 @@ public class CreateEndpointGroupsRequest extends Request {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -549,59 +504,62 @@ public class CreateEndpointGroupsRequest extends Request {
 
     }
     public static class EndpointGroupConfigurations extends TeaModel {
-        @NameInMap("EnableClientIPPreservationProxyProtocol")
+        @com.aliyun.core.annotation.NameInMap("EnableClientIPPreservationProxyProtocol")
         private Boolean enableClientIPPreservationProxyProtocol;
 
-        @NameInMap("EnableClientIPPreservationToa")
+        @com.aliyun.core.annotation.NameInMap("EnableClientIPPreservationToa")
         private Boolean enableClientIPPreservationToa;
 
-        @NameInMap("EndpointConfigurations")
+        @com.aliyun.core.annotation.NameInMap("EndpointConfigurations")
         private java.util.List < EndpointConfigurations> endpointConfigurations;
 
-        @NameInMap("EndpointGroupDescription")
+        @com.aliyun.core.annotation.NameInMap("EndpointGroupDescription")
         private String endpointGroupDescription;
 
-        @NameInMap("EndpointGroupName")
+        @com.aliyun.core.annotation.NameInMap("EndpointGroupName")
         private String endpointGroupName;
 
-        @NameInMap("EndpointGroupRegion")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EndpointGroupRegion")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String endpointGroupRegion;
 
-        @NameInMap("EndpointGroupType")
+        @com.aliyun.core.annotation.NameInMap("EndpointGroupType")
         private String endpointGroupType;
 
-        @NameInMap("EndpointRequestProtocol")
+        @com.aliyun.core.annotation.NameInMap("EndpointProtocolVersion")
+        private String endpointProtocolVersion;
+
+        @com.aliyun.core.annotation.NameInMap("EndpointRequestProtocol")
         private String endpointRequestProtocol;
 
-        @NameInMap("HealthCheckEnabled")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckEnabled")
         private Boolean healthCheckEnabled;
 
-        @NameInMap("HealthCheckIntervalSeconds")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckIntervalSeconds")
         private Long healthCheckIntervalSeconds;
 
-        @NameInMap("HealthCheckPath")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckPath")
         private String healthCheckPath;
 
-        @NameInMap("HealthCheckPort")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckPort")
         private Long healthCheckPort;
 
-        @NameInMap("HealthCheckProtocol")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckProtocol")
         private String healthCheckProtocol;
 
-        @NameInMap("PortOverrides")
+        @com.aliyun.core.annotation.NameInMap("PortOverrides")
         private java.util.List < PortOverrides> portOverrides;
 
-        @NameInMap("SystemTag")
+        @com.aliyun.core.annotation.NameInMap("SystemTag")
         private java.util.List < SystemTag> systemTag;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
-        @NameInMap("ThresholdCount")
+        @com.aliyun.core.annotation.NameInMap("ThresholdCount")
         private Long thresholdCount;
 
-        @NameInMap("TrafficPercentage")
+        @com.aliyun.core.annotation.NameInMap("TrafficPercentage")
         private Long trafficPercentage;
 
         private EndpointGroupConfigurations(Builder builder) {
@@ -612,6 +570,7 @@ public class CreateEndpointGroupsRequest extends Request {
             this.endpointGroupName = builder.endpointGroupName;
             this.endpointGroupRegion = builder.endpointGroupRegion;
             this.endpointGroupType = builder.endpointGroupType;
+            this.endpointProtocolVersion = builder.endpointProtocolVersion;
             this.endpointRequestProtocol = builder.endpointRequestProtocol;
             this.healthCheckEnabled = builder.healthCheckEnabled;
             this.healthCheckIntervalSeconds = builder.healthCheckIntervalSeconds;
@@ -680,6 +639,13 @@ public class CreateEndpointGroupsRequest extends Request {
          */
         public String getEndpointGroupType() {
             return this.endpointGroupType;
+        }
+
+        /**
+         * @return endpointProtocolVersion
+         */
+        public String getEndpointProtocolVersion() {
+            return this.endpointProtocolVersion;
         }
 
         /**
@@ -767,6 +733,7 @@ public class CreateEndpointGroupsRequest extends Request {
             private String endpointGroupName; 
             private String endpointGroupRegion; 
             private String endpointGroupType; 
+            private String endpointProtocolVersion; 
             private String endpointRequestProtocol; 
             private Boolean healthCheckEnabled; 
             private Long healthCheckIntervalSeconds; 
@@ -780,13 +747,7 @@ public class CreateEndpointGroupsRequest extends Request {
             private Long trafficPercentage; 
 
             /**
-             * Specifies whether to use the proxy protocol to preserve client IP addresses. Default value: false. Valid values:
-             * <p>
-             * 
-             * *   **true**: uses the proxy protocol to preserve client IP addresses.
-             * *   **false**: does not use the proxy protocol to preserve client IP addresses.
-             * 
-             * You can specify this parameter for up to 10 endpoint groups.
+             * EnableClientIPPreservationProxyProtocol.
              */
             public Builder enableClientIPPreservationProxyProtocol(Boolean enableClientIPPreservationProxyProtocol) {
                 this.enableClientIPPreservationProxyProtocol = enableClientIPPreservationProxyProtocol;
@@ -794,13 +755,7 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * Specifies whether to preserve client IP addresses by using the TCP Option Address (TOA) module. Default value: false. Valid values:
-             * <p>
-             * 
-             * *   **true**: preserves client IP addresses by using the TOA module.
-             * *   **false**: does not preserve client IP addresses by using the TOA module.
-             * 
-             * You can specify this parameter for up to 10 endpoint groups.
+             * EnableClientIPPreservationToa.
              */
             public Builder enableClientIPPreservationToa(Boolean enableClientIPPreservationToa) {
                 this.enableClientIPPreservationToa = enableClientIPPreservationToa;
@@ -808,7 +763,7 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * Terminal node configuration information.
+             * EndpointConfigurations.
              */
             public Builder endpointConfigurations(java.util.List < EndpointConfigurations> endpointConfigurations) {
                 this.endpointConfigurations = endpointConfigurations;
@@ -816,12 +771,7 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * The description of the endpoint group.
-             * <p>
-             * 
-             * The description cannot exceed 256 characters in length and cannot contain `http://` or `https://`.
-             * 
-             * You can enter the descriptions of up to 10 endpoint groups.
+             * EndpointGroupDescription.
              */
             public Builder endpointGroupDescription(String endpointGroupDescription) {
                 this.endpointGroupDescription = endpointGroupDescription;
@@ -829,12 +779,7 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * The name of the endpoint group.
-             * <p>
-             * 
-             * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
-             * 
-             * You can enter the names of up to 10 endpoint groups.
+             * EndpointGroupName.
              */
             public Builder endpointGroupName(String endpointGroupName) {
                 this.endpointGroupName = endpointGroupName;
@@ -842,10 +787,7 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * The ID of the region where you want to create the endpoint group.
-             * <p>
-             * 
-             * You can enter the IDs of up to 10 regions.
+             * EndpointGroupRegion.
              */
             public Builder endpointGroupRegion(String endpointGroupRegion) {
                 this.endpointGroupRegion = endpointGroupRegion;
@@ -853,15 +795,7 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * The type of the endpoint group. Default value: default. Valid values:
-             * <p>
-             * 
-             * *   **default**: a default endpoint group.
-             * *   **virtual**: a virtual endpoint group.
-             * 
-             * You can specify the types of up to 10 endpoint groups.
-             * 
-             * >  Only HTTP and HTTPS listeners support virtual endpoint groups.
+             * EndpointGroupType.
              */
             public Builder endpointGroupType(String endpointGroupType) {
                 this.endpointGroupType = endpointGroupType;
@@ -869,17 +803,15 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * The protocol that is used by the backend service. Default value: HTTP. Valid values:
-             * <p>
-             * 
-             * *   **HTTP**: HTTP
-             * *   **HTTPS**: HTTPS
-             * 
-             * You can specify up to 10 backend service protocols.
-             * 
-             * > 
-             * *   You can set this parameter only if the listener that is associated with the endpoint group uses **HTTP** or **HTTPS**.
-             * *   For an **HTTP** listener, the backend service protocol must be **HTTP**.
+             * EndpointProtocolVersion.
+             */
+            public Builder endpointProtocolVersion(String endpointProtocolVersion) {
+                this.endpointProtocolVersion = endpointProtocolVersion;
+                return this;
+            }
+
+            /**
+             * EndpointRequestProtocol.
              */
             public Builder endpointRequestProtocol(String endpointRequestProtocol) {
                 this.endpointRequestProtocol = endpointRequestProtocol;
@@ -887,13 +819,7 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable the health check feature. Default value: false. Valid values:
-             * <p>
-             * 
-             * *   **true**: enables the health check feature.
-             * *   **false**: disables the health check feature.
-             * 
-             * You can enable the health check feature for up to 10 endpoint groups.
+             * HealthCheckEnabled.
              */
             public Builder healthCheckEnabled(Boolean healthCheckEnabled) {
                 this.healthCheckEnabled = healthCheckEnabled;
@@ -901,10 +827,7 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * The interval at which health checks are performed. Unit: seconds.
-             * <p>
-             * 
-             * You can specify up to 10 health check intervals.
+             * HealthCheckIntervalSeconds.
              */
             public Builder healthCheckIntervalSeconds(Long healthCheckIntervalSeconds) {
                 this.healthCheckIntervalSeconds = healthCheckIntervalSeconds;
@@ -912,10 +835,7 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * The path to which health check requests are sent.
-             * <p>
-             * 
-             * You can specify up to 10 health check paths.
+             * HealthCheckPath.
              */
             public Builder healthCheckPath(String healthCheckPath) {
                 this.healthCheckPath = healthCheckPath;
@@ -923,10 +843,7 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * The port that is used for health checks. Valid values: **1** to **65535**.
-             * <p>
-             * 
-             * You can specify up to 10 ports for health checks.
+             * HealthCheckPort.
              */
             public Builder healthCheckPort(Long healthCheckPort) {
                 this.healthCheckPort = healthCheckPort;
@@ -934,14 +851,7 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * The protocol over which health check requests are sent. Valid values:
-             * <p>
-             * 
-             * *   **tcp**: TCP
-             * *   **http**: HTTP
-             * *   **https**: HTTPS
-             * 
-             * You can specify up to 10 health check protocols.
+             * HealthCheckProtocol.
              */
             public Builder healthCheckProtocol(String healthCheckProtocol) {
                 this.healthCheckProtocol = healthCheckProtocol;
@@ -949,7 +859,7 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * The mappings between ports.
+             * PortOverrides.
              */
             public Builder portOverrides(java.util.List < PortOverrides> portOverrides) {
                 this.portOverrides = portOverrides;
@@ -973,12 +883,7 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * The number of consecutive health check failures that must occur before a healthy endpoint group is considered unhealthy, or the number of consecutive health check successes that must occur before an unhealthy endpoint group is considered healthy.
-             * <p>
-             * 
-             * Valid values: **2** to **10**. Default value: **3**.
-             * 
-             * You can specify the number of consecutive health check successes or failures for up to 10 endpoint groups.
+             * ThresholdCount.
              */
             public Builder thresholdCount(Long thresholdCount) {
                 this.thresholdCount = thresholdCount;
@@ -986,12 +891,7 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * The value of the traffic distribution ratio. If a listener is associated with multiple endpoint groups, you can set this parameter to distribute different percentages of traffic to the endpoint groups.
-             * <p>
-             * 
-             * Valid values: **1** to **100**. Default value: **100**.
-             * 
-             * You can specify the traffic distribution ratios for up to 10 endpoint groups.
+             * TrafficPercentage.
              */
             public Builder trafficPercentage(Long trafficPercentage) {
                 this.trafficPercentage = trafficPercentage;

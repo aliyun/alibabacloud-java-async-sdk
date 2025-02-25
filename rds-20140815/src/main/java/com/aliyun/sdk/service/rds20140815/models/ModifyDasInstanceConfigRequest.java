@@ -1,50 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDasInstanceConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifyDasInstanceConfigRequest</p>
  */
 public class ModifyDasInstanceConfigRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("StorageAutoScale")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageAutoScale")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String storageAutoScale;
 
-    @Query
-    @NameInMap("StorageThreshold")
-    @Validation(maximum = 50, minimum = 10)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageThreshold")
+    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 10)
     private Integer storageThreshold;
 
-    @Query
-    @NameInMap("StorageUpperBound")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageUpperBound")
     private Integer storageUpperBound;
 
     private ModifyDasInstanceConfigRequest(Builder builder) {
@@ -155,7 +160,10 @@ public class ModifyDasInstanceConfigRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCz*****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -164,7 +172,11 @@ public class ModifyDasInstanceConfigRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5*****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -200,11 +212,15 @@ public class ModifyDasInstanceConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable automatic storage expansion. Valid values:
-         * <p>
+         * <p>Specifies whether to enable automatic storage expansion. Valid values:</p>
+         * <ul>
+         * <li><strong>Enable</strong></li>
+         * <li><strong>Disable</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Enable**
-         * *   **Disable**
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         public Builder storageAutoScale(String storageAutoScale) {
             this.putQueryParameter("StorageAutoScale", storageAutoScale);
@@ -213,16 +229,20 @@ public class ModifyDasInstanceConfigRequest extends Request {
         }
 
         /**
-         * The threshold in percentage based on which an automatic storage expansion is triggered. If the available storage reaches the threshold, ApsaraDB RDS increases the storage capacity of the instance. Valid values:
-         * <p>
+         * <p>The threshold in percentage based on which an automatic storage expansion is triggered. If the available storage reaches the threshold, ApsaraDB RDS increases the storage capacity of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>10</strong></li>
+         * <li><strong>20</strong></li>
+         * <li><strong>30</strong></li>
+         * <li><strong>40</strong></li>
+         * <li><strong>50</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> If you set the StorageAutoScale parameter to <strong>Enable</strong>, you must specify this parameter.</p>
+         * </blockquote>
          * 
-         * *   **10**
-         * *   **20**
-         * *   **30**
-         * *   **40**
-         * *   **50**
-         * 
-         * >  If you set the StorageAutoScale parameter to **Enable**, you must specify this parameter.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder storageThreshold(Integer storageThreshold) {
             this.putQueryParameter("StorageThreshold", storageThreshold);
@@ -231,13 +251,17 @@ public class ModifyDasInstanceConfigRequest extends Request {
         }
 
         /**
-         * The maximum storage capacity that is allowed for an automatic storage expansion. The value of this parameter must be greater than or equal to the current storage capacity of the RDS instance.
-         * <p>
+         * <p>The maximum storage capacity that is allowed for an automatic storage expansion. The value of this parameter must be greater than or equal to the current storage capacity of the RDS instance.</p>
+         * <ul>
+         * <li>If the RDS instance uses ESSDs, the maximum value of this parameter can be set to 32000 GB.</li>
+         * <li>If the RDS instance uses standard SSDs, the maximum value of this parameter can be set to 6000 GB.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you set the <strong>StorageAutoScale</strong> parameter to <strong>Enable</strong>, you must specify this parameter.</p>
+         * </blockquote>
          * 
-         * *   If the RDS instance uses ESSDs, the maximum value of this parameter can be set to 32000 GB.
-         * *   If the RDS instance uses standard SSDs, the maximum value of this parameter can be set to 6000 GB.
-         * 
-         * >  If you set the **StorageAutoScale** parameter to **Enable**, you must specify this parameter.
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder storageUpperBound(Integer storageUpperBound) {
             this.putQueryParameter("StorageUpperBound", storageUpperBound);

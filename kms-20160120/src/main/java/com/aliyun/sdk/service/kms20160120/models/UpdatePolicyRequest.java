@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdatePolicyRequest</p>
  */
 public class UpdatePolicyRequest extends Request {
-    @Query
-    @NameInMap("AccessControlRules")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessControlRules")
     private String accessControlRules;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("Permissions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Permissions")
     private String permissions;
 
-    @Query
-    @NameInMap("Resources")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Resources")
     private String resources;
 
     private UpdatePolicyRequest(Builder builder) {
@@ -111,7 +110,10 @@ public class UpdatePolicyRequest extends Request {
         } 
 
         /**
-         * AccessControlRules.
+         * The access control rule.
+         * <p>
+         * 
+         * > For more information about how to query created access control rules, see [ListNetworkRules](~~2539433~~).
          */
         public Builder accessControlRules(String accessControlRules) {
             this.putQueryParameter("AccessControlRules", accessControlRules);
@@ -120,7 +122,7 @@ public class UpdatePolicyRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -129,7 +131,7 @@ public class UpdatePolicyRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the permission policy that you want to update.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -138,7 +140,13 @@ public class UpdatePolicyRequest extends Request {
         }
 
         /**
-         * Permissions.
+         * The operations that are supported by the updated policy. Valid values:
+         * <p>
+         * 
+         * *   RbacPermission/Template/CryptoServiceKeyUser: allows you to perform cryptographic operations.
+         * *   RbacPermission/Template/CryptoServiceSecretUser: allows you to perform secret-related operations.
+         * 
+         * You can select both.
          */
         public Builder permissions(String permissions) {
             this.putQueryParameter("Permissions", permissions);
@@ -147,7 +155,11 @@ public class UpdatePolicyRequest extends Request {
         }
 
         /**
-         * Resources.
+         * The key and secret that are allowed to access after the update.
+         * <p>
+         * 
+         * *   Key: Enter a key in the `key/${KeyId}` format. To allow access to all keys of a KMS instance, enter key/\*.
+         * *   Secret: Enter a secret in the `secret/${SecretName}` format. To allow access to all secrets of a KMS instance, enter secret/\*.
          */
         public Builder resources(String resources) {
             this.putQueryParameter("Resources", resources);

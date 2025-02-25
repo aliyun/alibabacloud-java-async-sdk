@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200630.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCACertificateResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCACertificateResponseBody</p>
  */
 public class DescribeCACertificateResponseBody extends TeaModel {
-    @NameInMap("Certificate")
+    @com.aliyun.core.annotation.NameInMap("Certificate")
     private Certificate certificate;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Years")
+    @com.aliyun.core.annotation.NameInMap("Years")
     private Integer years;
 
     private DescribeCACertificateResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         private Integer years; 
 
         /**
-         * The details about the CA certificate.
+         * <p>The details about the CA certificate.</p>
          */
         public Builder certificate(Certificate certificate) {
             this.certificate = certificate;
@@ -70,7 +75,10 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The validity period of the CA certificate. Unit: years.
+         * <p>The validity period of the CA certificate. Unit: years.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder years(Integer years) {
             this.years = years;
@@ -91,95 +102,109 @@ public class DescribeCACertificateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCACertificateResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCACertificateResponseBody</p>
+     */
     public static class Certificate extends TeaModel {
-        @NameInMap("AfterDate")
+        @com.aliyun.core.annotation.NameInMap("AfterDate")
         private Long afterDate;
 
-        @NameInMap("Algorithm")
+        @com.aliyun.core.annotation.NameInMap("Algorithm")
         private String algorithm;
 
-        @NameInMap("BeforeDate")
+        @com.aliyun.core.annotation.NameInMap("BeforeDate")
         private Long beforeDate;
 
-        @NameInMap("CertIssuedCount")
+        @com.aliyun.core.annotation.NameInMap("CaCertChain")
+        private String caCertChain;
+
+        @com.aliyun.core.annotation.NameInMap("CertIssuedCount")
         private Long certIssuedCount;
 
-        @NameInMap("CertRemainingCount")
+        @com.aliyun.core.annotation.NameInMap("CertRemainingCount")
         private Long certRemainingCount;
 
-        @NameInMap("CertTotalCount")
+        @com.aliyun.core.annotation.NameInMap("CertTotalCount")
         private Long certTotalCount;
 
-        @NameInMap("CertificateType")
+        @com.aliyun.core.annotation.NameInMap("CertificateType")
         private String certificateType;
 
-        @NameInMap("CommonName")
+        @com.aliyun.core.annotation.NameInMap("CommonName")
         private String commonName;
 
-        @NameInMap("CountryCode")
+        @com.aliyun.core.annotation.NameInMap("CountryCode")
         private String countryCode;
 
-        @NameInMap("CrlStatus")
+        @com.aliyun.core.annotation.NameInMap("CrlDay")
+        private Integer crlDay;
+
+        @com.aliyun.core.annotation.NameInMap("CrlStatus")
         private String crlStatus;
 
-        @NameInMap("CrlUrl")
+        @com.aliyun.core.annotation.NameInMap("CrlUrl")
         private String crlUrl;
 
-        @NameInMap("Identifier")
+        @com.aliyun.core.annotation.NameInMap("Identifier")
         private String identifier;
 
-        @NameInMap("KeySize")
+        @com.aliyun.core.annotation.NameInMap("KeySize")
         private Integer keySize;
 
-        @NameInMap("Locality")
+        @com.aliyun.core.annotation.NameInMap("Locality")
         private String locality;
 
-        @NameInMap("Md5")
+        @com.aliyun.core.annotation.NameInMap("Md5")
         private String md5;
 
-        @NameInMap("Organization")
+        @com.aliyun.core.annotation.NameInMap("Organization")
         private String organization;
 
-        @NameInMap("OrganizationUnit")
+        @com.aliyun.core.annotation.NameInMap("OrganizationUnit")
         private String organizationUnit;
 
-        @NameInMap("ParentIdentifier")
+        @com.aliyun.core.annotation.NameInMap("ParentIdentifier")
         private String parentIdentifier;
 
-        @NameInMap("Sans")
+        @com.aliyun.core.annotation.NameInMap("Sans")
         private String sans;
 
-        @NameInMap("SerialNumber")
+        @com.aliyun.core.annotation.NameInMap("SerialNumber")
         private String serialNumber;
 
-        @NameInMap("Sha2")
+        @com.aliyun.core.annotation.NameInMap("Sha2")
         private String sha2;
 
-        @NameInMap("SignAlgorithm")
+        @com.aliyun.core.annotation.NameInMap("SignAlgorithm")
         private String signAlgorithm;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SubjectDN")
+        @com.aliyun.core.annotation.NameInMap("SubjectDN")
         private String subjectDN;
 
-        @NameInMap("X509Certificate")
+        @com.aliyun.core.annotation.NameInMap("X509Certificate")
         private String x509Certificate;
 
         private Certificate(Builder builder) {
             this.afterDate = builder.afterDate;
             this.algorithm = builder.algorithm;
             this.beforeDate = builder.beforeDate;
+            this.caCertChain = builder.caCertChain;
             this.certIssuedCount = builder.certIssuedCount;
             this.certRemainingCount = builder.certRemainingCount;
             this.certTotalCount = builder.certTotalCount;
             this.certificateType = builder.certificateType;
             this.commonName = builder.commonName;
             this.countryCode = builder.countryCode;
+            this.crlDay = builder.crlDay;
             this.crlStatus = builder.crlStatus;
             this.crlUrl = builder.crlUrl;
             this.identifier = builder.identifier;
@@ -229,6 +254,13 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         }
 
         /**
+         * @return caCertChain
+         */
+        public String getCaCertChain() {
+            return this.caCertChain;
+        }
+
+        /**
          * @return certIssuedCount
          */
         public Long getCertIssuedCount() {
@@ -268,6 +300,13 @@ public class DescribeCACertificateResponseBody extends TeaModel {
          */
         public String getCountryCode() {
             return this.countryCode;
+        }
+
+        /**
+         * @return crlDay
+         */
+        public Integer getCrlDay() {
+            return this.crlDay;
         }
 
         /**
@@ -393,12 +432,14 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             private Long afterDate; 
             private String algorithm; 
             private Long beforeDate; 
+            private String caCertChain; 
             private Long certIssuedCount; 
             private Long certRemainingCount; 
             private Long certTotalCount; 
             private String certificateType; 
             private String commonName; 
             private String countryCode; 
+            private Integer crlDay; 
             private String crlStatus; 
             private String crlUrl; 
             private String identifier; 
@@ -418,7 +459,10 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             private String x509Certificate; 
 
             /**
-             * The expiration date of the CA certificate. This value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The expiration date of the CA certificate. This value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1665819958000</p>
              */
             public Builder afterDate(Long afterDate) {
                 this.afterDate = afterDate;
@@ -426,12 +470,15 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The encryption algorithm of the CA certificate. Valid values:
-             * <p>
+             * <p>The encryption algorithm of the CA certificate. Valid values:</p>
+             * <ul>
+             * <li><strong>RSA</strong>: the Rivest-Shamir-Adleman (RSA) algorithm.</li>
+             * <li><strong>ECC</strong>: the elliptic curve cryptography (ECC) algorithm.</li>
+             * <li><strong>SM2</strong>: the SM2 algorithm, which is developed and approved by the State Cryptography Administration of China.</li>
+             * </ul>
              * 
-             * *   **RSA**: the Rivest-Shamir-Adleman (RSA) algorithm.
-             * *   **ECC**: the elliptic curve cryptography (ECC) algorithm.
-             * *   **SM2**: the SM2 algorithm, which is developed and approved by the State Cryptography Administration of China.
+             * <strong>example:</strong>
+             * <p>RSA</p>
              */
             public Builder algorithm(String algorithm) {
                 this.algorithm = algorithm;
@@ -439,7 +486,10 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The issuance date of the CA certificate. This value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The issuance date of the CA certificate. This value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1634283958000</p>
              */
             public Builder beforeDate(Long beforeDate) {
                 this.beforeDate = beforeDate;
@@ -447,7 +497,29 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * CertIssuedCount.
+             * <p>CA certificate chain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-----BEGIN CERTIFICATE-----
+             * 用户证书
+             * -----END CERTIFICATE-----</p>
+             * <p>-----BEGIN CERTIFICATE-----
+             * 中间证书
+             * -----END CERTIFICATE-----</p>
+             * <p>-----BEGIN CERTIFICATE-----
+             * 根证书
+             * -----END CERTIFICATE-----</p>
+             */
+            public Builder caCertChain(String caCertChain) {
+                this.caCertChain = caCertChain;
+                return this;
+            }
+
+            /**
+             * <p>The number of certificates issued by private CA instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder certIssuedCount(Long certIssuedCount) {
                 this.certIssuedCount = certIssuedCount;
@@ -455,7 +527,10 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * CertRemainingCount.
+             * <p>The remaining number of assignable certificate quotas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder certRemainingCount(Long certRemainingCount) {
                 this.certRemainingCount = certRemainingCount;
@@ -463,7 +538,10 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * CertTotalCount.
+             * <p>The total number of purchased certificate quotas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder certTotalCount(Long certTotalCount) {
                 this.certTotalCount = certTotalCount;
@@ -471,11 +549,14 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the CA certificate. Valid values:
-             * <p>
+             * <p>The type of the CA certificate. Valid values:</p>
+             * <ul>
+             * <li><strong>ROOT</strong>: root CA certificate</li>
+             * <li><strong>SUB_ROOT</strong>: intermediate CA certificate</li>
+             * </ul>
              * 
-             * *   **ROOT**: root CA certificate
-             * *   **SUB_ROOT**: intermediate CA certificate
+             * <strong>example:</strong>
+             * <p>SUB_ROOT</p>
              */
             public Builder certificateType(String certificateType) {
                 this.certificateType = certificateType;
@@ -483,7 +564,10 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The common name or abbreviation of the organization that is associated with the CA certificate.
+             * <p>The common name or abbreviation of the organization that is associated with the CA certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Aliyun</p>
              */
             public Builder commonName(String commonName) {
                 this.commonName = commonName;
@@ -491,10 +575,11 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the country in which the organization is located.
-             * <p>
+             * <p>The code of the country in which the organization is located.</p>
+             * <p>For more information about country codes, see the <strong>&quot;Country codes&quot;</strong> section of the <a href="https://help.aliyun.com/document_detail/198289.html">Manage company profiles</a> topic.</p>
              * 
-             * For more information about country codes, see the **"Country codes"** section of the [Manage company profiles](~~198289~~) topic.
+             * <strong>example:</strong>
+             * <p>CN</p>
              */
             public Builder countryCode(String countryCode) {
                 this.countryCode = countryCode;
@@ -502,7 +587,21 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the certificate revocation list (CRL) feature.
+             * <p>CRL validity period: 1-365 days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
+             */
+            public Builder crlDay(Integer crlDay) {
+                this.crlDay = crlDay;
+                return this;
+            }
+
+            /**
+             * <p>The status of the certificate revocation list (CRL) feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVE</p>
              */
             public Builder crlStatus(String crlStatus) {
                 this.crlStatus = crlStatus;
@@ -510,7 +609,10 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The address of the CRL.
+             * <p>The address of the CRL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://crl-cn-publish.oss-cn-hangzhou.aliyuncs.com/pca/crl/1925647866611395/1ed40789-483f-6023-b6b8-29ddd3bb0a9a.crl">https://crl-cn-publish.oss-cn-hangzhou.aliyuncs.com/pca/crl/1925647866611395/1ed40789-483f-6023-b6b8-29ddd3bb0a9a.crl</a></p>
              */
             public Builder crlUrl(String crlUrl) {
                 this.crlUrl = crlUrl;
@@ -518,7 +620,10 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The unique identifier of the CA certificate.
+             * <p>The unique identifier of the CA certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>160ae6bb538d538c70c01f81dcf2****</p>
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -526,7 +631,10 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The key length of the CA certificate.
+             * <p>The key length of the CA certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2048</p>
              */
             public Builder keySize(Integer keySize) {
                 this.keySize = keySize;
@@ -534,7 +642,10 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the city in which the organization is located.
+             * <p>The name of the city in which the organization is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hangzhou</p>
              */
             public Builder locality(String locality) {
                 this.locality = locality;
@@ -542,7 +653,10 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The MD5 fingerprint of the CA certificate.
+             * <p>The MD5 fingerprint of the CA certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>160ae6bb538d538c70c01f81dcf2****</p>
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
@@ -550,7 +664,10 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the organization that is associated with the CA certificate.
+             * <p>The name of the organization that is associated with the CA certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba Cloud Computing Co., Ltd.</p>
              */
             public Builder organization(String organization) {
                 this.organization = organization;
@@ -558,7 +675,10 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the department or branch in the organization that is associated with the CA certificate.
+             * <p>The name of the department or branch in the organization that is associated with the CA certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Security</p>
              */
             public Builder organizationUnit(String organizationUnit) {
                 this.organizationUnit = organizationUnit;
@@ -566,10 +686,13 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The unique identifier of the root CA certificate from which the CA certificate is issued.
-             * <p>
+             * <p>The unique identifier of the root CA certificate from which the CA certificate is issued.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if the value of the <strong>CertificateType</strong> parameter is <strong>SUB_ROOT</strong>. The value SUB_ROOT indicates an intermediate CA certificate.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only if the value of the **CertificateType** parameter is **SUB_ROOT**. The value SUB_ROOT indicates an intermediate CA certificate.
+             * <strong>example:</strong>
+             * <p>1a83bcbb89e562885e40aa0108f5****</p>
              */
             public Builder parentIdentifier(String parentIdentifier) {
                 this.parentIdentifier = parentIdentifier;
@@ -577,7 +700,10 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is deprecated.
+             * <p>This parameter is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sans(String sans) {
                 this.sans = sans;
@@ -585,7 +711,10 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The serial number of the CA certificate.
+             * <p>The serial number of the CA certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70e3b2566d92805173767869727fb92e****</p>
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;
@@ -593,7 +722,10 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The SHA-256 fingerprint of the CA certificate.
+             * <p>The SHA-256 fingerprint of the CA certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14dcc8afc7578e1fcec36d658f7e20de18f6957bbac42b373a66bc9de4e9****</p>
              */
             public Builder sha2(String sha2) {
                 this.sha2 = sha2;
@@ -601,7 +733,10 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The signature algorithm of the CA certificate.
+             * <p>The signature algorithm of the CA certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SHA256WITHRSA</p>
              */
             public Builder signAlgorithm(String signAlgorithm) {
                 this.signAlgorithm = signAlgorithm;
@@ -609,7 +744,10 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the province, municipality, or autonomous region in which the organization is located.
+             * <p>The name of the province, municipality, or autonomous region in which the organization is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhejiang</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -617,11 +755,14 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the CA certificate. Valid values:
-             * <p>
+             * <p>The status of the CA certificate. Valid values:</p>
+             * <ul>
+             * <li><strong>ISSUE</strong>: The CA certificate is issued.</li>
+             * <li><strong>REVOKE</strong>: The CA certificate is revoked.</li>
+             * </ul>
              * 
-             * *   **ISSUE**: The CA certificate is issued.
-             * *   **REVOKE**: The CA certificate is revoked.
+             * <strong>example:</strong>
+             * <p>ISSUE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -629,15 +770,18 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The user attribute of the CA certificate, which contains the following information:
-             * <p>
+             * <p>The user attribute of the CA certificate, which contains the following information:</p>
+             * <ul>
+             * <li><strong>C</strong>: the country code in which the organization is located</li>
+             * <li><strong>O</strong>: the name of the organization</li>
+             * <li><strong>OU</strong>: the name of the department or branch in the organization</li>
+             * <li><strong>L</strong>: the name of the city in which the organization is located</li>
+             * <li><strong>ST</strong>: the name of the province, municipality, or autonomous region in which the organization is located</li>
+             * <li><strong>CN</strong>: the common name or abbreviation of the organization</li>
+             * </ul>
              * 
-             * *   **C**: the country code in which the organization is located
-             * *   **O**: the name of the organization
-             * *   **OU**: the name of the department or branch in the organization
-             * *   **L**: the name of the city in which the organization is located
-             * *   **ST**: the name of the province, municipality, or autonomous region in which the organization is located
-             * *   **CN**: the common name or abbreviation of the organization
+             * <strong>example:</strong>
+             * <p>C=CN,O=Alibaba Cloud Computing Co., Ltd.,OU=Security,L=Hangzhou,ST=Zhejiang,CN=Aliyun</p>
              */
             public Builder subjectDN(String subjectDN) {
                 this.subjectDN = subjectDN;
@@ -645,7 +789,10 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the CA certificate.
+             * <p>The content of the CA certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-----BEGIN CERTIFICATE----- …… -----END CERTIFICATE-----</p>
              */
             public Builder x509Certificate(String x509Certificate) {
                 this.x509Certificate = x509Certificate;

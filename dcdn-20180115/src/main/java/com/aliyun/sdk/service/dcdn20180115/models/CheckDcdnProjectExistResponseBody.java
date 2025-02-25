@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckDcdnProjectExistResponseBody} extends {@link TeaModel}
  *
  * <p>CheckDcdnProjectExistResponseBody</p>
  */
 public class CheckDcdnProjectExistResponseBody extends TeaModel {
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private Content content;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CheckDcdnProjectExistResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class CheckDcdnProjectExistResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned results.
+         * <p>The returned results.</p>
          */
         public Builder content(Content content) {
             this.content = content;
@@ -58,7 +58,10 @@ public class CheckDcdnProjectExistResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b021e538-9dde-46ed-a1f2-9469da8f3e77</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,8 +74,14 @@ public class CheckDcdnProjectExistResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CheckDcdnProjectExistResponseBody} extends {@link TeaModel}
+     *
+     * <p>CheckDcdnProjectExistResponseBody</p>
+     */
     public static class Content extends TeaModel {
-        @NameInMap("Exist")
+        @com.aliyun.core.annotation.NameInMap("Exist")
         private String exist;
 
         private Content(Builder builder) {
@@ -98,11 +107,14 @@ public class CheckDcdnProjectExistResponseBody extends TeaModel {
             private String exist; 
 
             /**
-             * Indicates whether the real-time log delivery project exists. Valid values:
-             * <p>
+             * <p>Indicates whether the real-time log delivery project exists. Valid values:</p>
+             * <ul>
+             * <li><strong>false</strong></li>
+             * <li><strong>true</strong></li>
+             * </ul>
              * 
-             * *   **false**
-             * *   **true**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder exist(String exist) {
                 this.exist = exist;

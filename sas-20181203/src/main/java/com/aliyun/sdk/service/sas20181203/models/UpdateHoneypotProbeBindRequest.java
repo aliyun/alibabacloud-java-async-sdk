@@ -1,63 +1,68 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateHoneypotProbeBindRequest} extends {@link RequestModel}
  *
  * <p>UpdateHoneypotProbeBindRequest</p>
  */
 public class UpdateHoneypotProbeBindRequest extends Request {
-    @Query
-    @NameInMap("BindId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BindId")
     private String bindId;
 
-    @Query
-    @NameInMap("BindPortList")
-    private java.util.List < BindPortList> bindPortList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BindPortList")
+    private java.util.List<BindPortList> bindPortList;
 
-    @Query
-    @NameInMap("BindType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BindType")
     private String bindType;
 
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("HoneypotId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HoneypotId")
     private String honeypotId;
 
-    @Query
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Ports")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ports")
     private String ports;
 
-    @Query
-    @NameInMap("ProbeId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProbeId")
     private String probeId;
 
-    @Query
-    @NameInMap("ServiceIpList")
-    private java.util.List < String > serviceIpList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceIpList")
+    private java.util.List<String> serviceIpList;
 
-    @Query
-    @NameInMap("SetStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SetStatus")
     private Integer setStatus;
 
     private UpdateHoneypotProbeBindRequest(Builder builder) {
@@ -99,7 +104,7 @@ public class UpdateHoneypotProbeBindRequest extends Request {
     /**
      * @return bindPortList
      */
-    public java.util.List < BindPortList> getBindPortList() {
+    public java.util.List<BindPortList> getBindPortList() {
         return this.bindPortList;
     }
 
@@ -162,7 +167,7 @@ public class UpdateHoneypotProbeBindRequest extends Request {
     /**
      * @return serviceIpList
      */
-    public java.util.List < String > getServiceIpList() {
+    public java.util.List<String> getServiceIpList() {
         return this.serviceIpList;
     }
 
@@ -175,7 +180,7 @@ public class UpdateHoneypotProbeBindRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateHoneypotProbeBindRequest, Builder> {
         private String bindId; 
-        private java.util.List < BindPortList> bindPortList; 
+        private java.util.List<BindPortList> bindPortList; 
         private String bindType; 
         private Integer currentPage; 
         private String honeypotId; 
@@ -184,7 +189,7 @@ public class UpdateHoneypotProbeBindRequest extends Request {
         private Integer pageSize; 
         private String ports; 
         private String probeId; 
-        private java.util.List < String > serviceIpList; 
+        private java.util.List<String> serviceIpList; 
         private Integer setStatus; 
 
         private Builder() {
@@ -208,7 +213,10 @@ public class UpdateHoneypotProbeBindRequest extends Request {
         } 
 
         /**
-         * The unique ID of the honeypot to which the probe is bound.
+         * <p>The unique ID of the honeypot to which the probe is bound.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f52e8624-e43c-473c-8312-e0fed384****</p>
          */
         public Builder bindId(String bindId) {
             this.putQueryParameter("BindId", bindId);
@@ -217,20 +225,23 @@ public class UpdateHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * The ports that are bound to the probe.
+         * <p>The ports that are bound to the probe.</p>
          */
-        public Builder bindPortList(java.util.List < BindPortList> bindPortList) {
+        public Builder bindPortList(java.util.List<BindPortList> bindPortList) {
             this.putQueryParameter("BindPortList", bindPortList);
             this.bindPortList = bindPortList;
             return this;
         }
 
         /**
-         * The operation that the probe performs. Valid values:
-         * <p>
+         * <p>The operation that the probe performs. Valid values:</p>
+         * <ul>
+         * <li><strong>forward_honey</strong>: forward traffic to a honeypot</li>
+         * <li><strong>scan_port</strong>: monitor and scan</li>
+         * </ul>
          * 
-         * *   **forward_honey**: forward traffic to a honeypot
-         * *   **scan_port**: monitor and scan
+         * <strong>example:</strong>
+         * <p>forward_honey</p>
          */
         public Builder bindType(String bindType) {
             this.putQueryParameter("BindType", bindType);
@@ -239,7 +250,10 @@ public class UpdateHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page **1**. Default value: **1**.
+         * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -248,10 +262,13 @@ public class UpdateHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * The honeypot ID.
-         * <p>
+         * <p>The honeypot ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListHoneypot~~">ListHoneypot</a> operation to obtain the IDs of honeypots.</p>
+         * </blockquote>
          * 
-         * >  You can call the [ListHoneypot](~~ListHoneypot~~) operation to obtain the IDs of honeypots.
+         * <strong>example:</strong>
+         * <p>dba7d44775be8e0e5888ee3b1a62554a93d2512247cabc38ddeac17a3b3f****</p>
          */
         public Builder honeypotId(String honeypotId) {
             this.putQueryParameter("HoneypotId", honeypotId);
@@ -260,7 +277,10 @@ public class UpdateHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * The port ID of the probe service.
+         * <p>The port ID of the probe service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1906</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -269,11 +289,14 @@ public class UpdateHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -282,10 +305,13 @@ public class UpdateHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.
-         * <p>
+         * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</p>
+         * <blockquote>
+         * <p> We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
          * 
-         * >  We recommend that you do not leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -294,7 +320,10 @@ public class UpdateHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * The ports that are monitored.
+         * <p>The ports that are monitored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;tcp&quot;:&quot;1-65535&quot;,&quot;udp&quot;:&quot;1-65535&quot;}</p>
          */
         public Builder ports(String ports) {
             this.putQueryParameter("Ports", ports);
@@ -303,10 +332,13 @@ public class UpdateHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * The probe ID.
-         * <p>
+         * <p>The probe ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListHoneypotProbe~~">ListHoneypotProbe</a> operation to query the IDs of probes.</p>
+         * </blockquote>
          * 
-         * >  You can call the [ListHoneypotProbe](~~ListHoneypotProbe~~) operation to query the IDs of probes.
+         * <strong>example:</strong>
+         * <p>36bad711-d1ac-4419-ac68-c1aa280f****</p>
          */
         public Builder probeId(String probeId) {
             this.putQueryParameter("ProbeId", probeId);
@@ -315,16 +347,19 @@ public class UpdateHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * The IP addresses that are monitored.
+         * <p>The IP addresses that are monitored.</p>
          */
-        public Builder serviceIpList(java.util.List < String > serviceIpList) {
+        public Builder serviceIpList(java.util.List<String> serviceIpList) {
             this.putQueryParameter("ServiceIpList", serviceIpList);
             this.serviceIpList = serviceIpList;
             return this;
         }
 
         /**
-         * The status of the port.
+         * <p>The status of the port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder setStatus(Integer setStatus) {
             this.putQueryParameter("SetStatus", setStatus);
@@ -339,26 +374,32 @@ public class UpdateHoneypotProbeBindRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateHoneypotProbeBindRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateHoneypotProbeBindRequest</p>
+     */
     public static class BindPortList extends TeaModel {
-        @NameInMap("BindPort")
+        @com.aliyun.core.annotation.NameInMap("BindPort")
         private Boolean bindPort;
 
-        @NameInMap("EndPort")
+        @com.aliyun.core.annotation.NameInMap("EndPort")
         private Integer endPort;
 
-        @NameInMap("Fixed")
+        @com.aliyun.core.annotation.NameInMap("Fixed")
         private Boolean fixed;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Proto")
+        @com.aliyun.core.annotation.NameInMap("Proto")
         private String proto;
 
-        @NameInMap("StartPort")
+        @com.aliyun.core.annotation.NameInMap("StartPort")
         private Integer startPort;
 
-        @NameInMap("TargetPort")
+        @com.aliyun.core.annotation.NameInMap("TargetPort")
         private Integer targetPort;
 
         private BindPortList(Builder builder) {
@@ -438,11 +479,14 @@ public class UpdateHoneypotProbeBindRequest extends Request {
             private Integer targetPort; 
 
             /**
-             * Specifies whether to bind a port. Valid values:
-             * <p>
+             * <p>Specifies whether to bind a port. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder bindPort(Boolean bindPort) {
                 this.bindPort = bindPort;
@@ -450,7 +494,10 @@ public class UpdateHoneypotProbeBindRequest extends Request {
             }
 
             /**
-             * The end port on which the probe monitors.
+             * <p>The end port on which the probe monitors.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>81</p>
              */
             public Builder endPort(Integer endPort) {
                 this.endPort = endPort;
@@ -458,11 +505,14 @@ public class UpdateHoneypotProbeBindRequest extends Request {
             }
 
             /**
-             * Specifies whether the port is fixed. Valid values:
-             * <p>
+             * <p>Specifies whether the port is fixed. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: no</li>
+             * <li><strong>1</strong>: yes</li>
+             * </ul>
              * 
-             * *   **0**: no
-             * *   **1**: yes
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder fixed(Boolean fixed) {
                 this.fixed = fixed;
@@ -470,7 +520,10 @@ public class UpdateHoneypotProbeBindRequest extends Request {
             }
 
             /**
-             * The UUID of the port.
+             * <p>The UUID of the port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3183</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -478,11 +531,14 @@ public class UpdateHoneypotProbeBindRequest extends Request {
             }
 
             /**
-             * The type of the protocol. Valid values:
-             * <p>
+             * <p>The type of the protocol. Valid values:</p>
+             * <ul>
+             * <li><strong>tcp</strong></li>
+             * <li><strong>udp</strong></li>
+             * </ul>
              * 
-             * *   **tcp**
-             * *   **udp**
+             * <strong>example:</strong>
+             * <p>tcp</p>
              */
             public Builder proto(String proto) {
                 this.proto = proto;
@@ -490,7 +546,10 @@ public class UpdateHoneypotProbeBindRequest extends Request {
             }
 
             /**
-             * The start port on which the probe monitors.
+             * <p>The start port on which the probe monitors.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>81</p>
              */
             public Builder startPort(Integer startPort) {
                 this.startPort = startPort;
@@ -498,7 +557,10 @@ public class UpdateHoneypotProbeBindRequest extends Request {
             }
 
             /**
-             * The destination port.
+             * <p>The destination port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder targetPort(Integer targetPort) {
                 this.targetPort = targetPort;

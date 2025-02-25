@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceVpcAuthModeRequest} extends {@link RequestModel}
  *
  * <p>ModifyInstanceVpcAuthModeRequest</p>
  */
 public class ModifyInstanceVpcAuthModeRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("NodeId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeId")
     private String nodeId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("VpcAuthMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcAuthMode")
     private String vpcAuthMode;
 
     private ModifyInstanceVpcAuthModeRequest(Builder builder) {
@@ -162,7 +167,11 @@ public class ModifyInstanceVpcAuthModeRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **ModifyInstanceVpcAuthMode**.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bpxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -171,7 +180,13 @@ public class ModifyInstanceVpcAuthModeRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the mongos node in the sharded cluster instance.</p>
+         * <blockquote>
+         * <p> This parameter can be used only when the instance type is sharded cluster.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bpxxxxxxxx</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -216,10 +231,10 @@ public class ModifyInstanceVpcAuthModeRequest extends Request {
         }
 
         /**
-         * The ID of the mongos node in the specified sharded cluster instance.
-         * <p>
+         * <p>Specify whether to disable password-free access over VPC. Set the value to <strong>Close</strong>.</p>
          * 
-         * >  This parameter can be used only when the instance type is sharded cluster.
+         * <strong>example:</strong>
+         * <p>Open</p>
          */
         public Builder vpcAuthMode(String vpcAuthMode) {
             this.putQueryParameter("VpcAuthMode", vpcAuthMode);

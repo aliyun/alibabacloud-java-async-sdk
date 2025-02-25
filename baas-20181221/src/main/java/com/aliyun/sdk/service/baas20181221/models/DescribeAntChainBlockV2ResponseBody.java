@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAntChainBlockV2ResponseBody</p>
  */
 public class DescribeAntChainBlockV2ResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private String httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("ResultCode")
+    @com.aliyun.core.annotation.NameInMap("ResultCode")
     private String resultCode;
 
-    @NameInMap("ResultMessage")
+    @com.aliyun.core.annotation.NameInMap("ResultMessage")
     private String resultMessage;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeAntChainBlockV2ResponseBody(Builder builder) {
@@ -192,40 +191,40 @@ public class DescribeAntChainBlockV2ResponseBody extends TeaModel {
     } 
 
     public static class TransSummaryList extends TeaModel {
-        @NameInMap("Alias")
+        @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
 
-        @NameInMap("BlockHash")
+        @com.aliyun.core.annotation.NameInMap("BlockHash")
         private String blockHash;
 
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private Integer category;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("From")
+        @com.aliyun.core.annotation.NameInMap("From")
         private String from;
 
-        @NameInMap("GasUsed")
+        @com.aliyun.core.annotation.NameInMap("GasUsed")
         private Long gasUsed;
 
-        @NameInMap("Hash")
+        @com.aliyun.core.annotation.NameInMap("Hash")
         private String hash;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Long height;
 
-        @NameInMap("ReferenceCount")
+        @com.aliyun.core.annotation.NameInMap("ReferenceCount")
         private Integer referenceCount;
 
-        @NameInMap("To")
+        @com.aliyun.core.annotation.NameInMap("To")
         private String to;
 
-        @NameInMap("TransTypeV10")
+        @com.aliyun.core.annotation.NameInMap("TransTypeV10")
         private String transTypeV10;
 
-        @NameInMap("TransTypeV6")
+        @com.aliyun.core.annotation.NameInMap("TransTypeV6")
         private String transTypeV6;
 
         private TransSummaryList(Builder builder) {
@@ -453,31 +452,31 @@ public class DescribeAntChainBlockV2ResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("AntChainId")
+        @com.aliyun.core.annotation.NameInMap("AntChainId")
         private String antChainId;
 
-        @NameInMap("BlockHash")
+        @com.aliyun.core.annotation.NameInMap("BlockHash")
         private String blockHash;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Integer height;
 
-        @NameInMap("PreviousHash")
+        @com.aliyun.core.annotation.NameInMap("PreviousHash")
         private String previousHash;
 
-        @NameInMap("RootTxHash")
+        @com.aliyun.core.annotation.NameInMap("RootTxHash")
         private String rootTxHash;
 
-        @NameInMap("TransSummaryList")
+        @com.aliyun.core.annotation.NameInMap("TransSummaryList")
         private java.util.List < TransSummaryList> transSummaryList;
 
-        @NameInMap("TransactionSize")
+        @com.aliyun.core.annotation.NameInMap("TransactionSize")
         private Integer transactionSize;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private Long version;
 
         private Result(Builder builder) {

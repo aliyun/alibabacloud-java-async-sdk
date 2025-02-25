@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTemplatesRequest} extends {@link RequestModel}
  *
  * <p>DescribeTemplatesRequest</p>
  */
 public class DescribeTemplatesRequest extends Request {
-    @Query
-    @NameInMap("page_num")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page_num")
     private Long pageNum;
 
-    @Query
-    @NameInMap("page_size")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page_size")
     private Long pageSize;
 
-    @Query
-    @NameInMap("template_type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("template_type")
     private String templateType;
 
     private DescribeTemplatesRequest(Builder builder) {
@@ -82,10 +87,11 @@ public class DescribeTemplatesRequest extends Request {
         } 
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Long pageNum) {
             this.putQueryParameter("page_num", pageNum);
@@ -94,10 +100,11 @@ public class DescribeTemplatesRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("page_size", pageSize);
@@ -106,13 +113,15 @@ public class DescribeTemplatesRequest extends Request {
         }
 
         /**
-         * The type of template. This parameter can be set to a custom value.
-         * <p>
+         * <p>The type of template. This parameter can be set to a custom value.</p>
+         * <ul>
+         * <li>If the parameter is set to <code>kubernetes</code>, the template is displayed on the Templates page in the console.</li>
+         * <li>If you set the parameter to <code>compose</code>, the template is not displayed on the Templates page in the console.</li>
+         * </ul>
+         * <p>Default value: <code>kubernetes</code>.</p>
          * 
-         * *   If the parameter is set to `kubernetes`, the template is displayed on the Templates page in the console.
-         * *   If you set the parameter to `compose`, the template is not displayed on the Templates page in the console.
-         * 
-         * Default value: `kubernetes`.
+         * <strong>example:</strong>
+         * <p>kubernetes</p>
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("template_type", templateType);

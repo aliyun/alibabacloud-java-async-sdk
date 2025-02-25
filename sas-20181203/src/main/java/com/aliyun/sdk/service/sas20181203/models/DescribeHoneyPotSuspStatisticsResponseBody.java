@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHoneyPotSuspStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHoneyPotSuspStatisticsResponseBody</p>
  */
 public class DescribeHoneyPotSuspStatisticsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SuspHoneyPotStatisticsResponse")
-    private java.util.List < SuspHoneyPotStatisticsResponse> suspHoneyPotStatisticsResponse;
+    @com.aliyun.core.annotation.NameInMap("SuspHoneyPotStatisticsResponse")
+    private java.util.List<SuspHoneyPotStatisticsResponse> suspHoneyPotStatisticsResponse;
 
     private DescribeHoneyPotSuspStatisticsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class DescribeHoneyPotSuspStatisticsResponseBody extends TeaModel {
     /**
      * @return suspHoneyPotStatisticsResponse
      */
-    public java.util.List < SuspHoneyPotStatisticsResponse> getSuspHoneyPotStatisticsResponse() {
+    public java.util.List<SuspHoneyPotStatisticsResponse> getSuspHoneyPotStatisticsResponse() {
         return this.suspHoneyPotStatisticsResponse;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SuspHoneyPotStatisticsResponse> suspHoneyPotStatisticsResponse; 
+        private java.util.List<SuspHoneyPotStatisticsResponse> suspHoneyPotStatisticsResponse; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9E3969FA-5ACC-4256-9FDE-BB6918CD0410</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class DescribeHoneyPotSuspStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the top 5 VPCs or assets for which alerts are most frequently generated.
+         * <p>An array that consists of the top 5 VPCs or assets for which alerts are most frequently generated.</p>
          */
-        public Builder suspHoneyPotStatisticsResponse(java.util.List < SuspHoneyPotStatisticsResponse> suspHoneyPotStatisticsResponse) {
+        public Builder suspHoneyPotStatisticsResponse(java.util.List<SuspHoneyPotStatisticsResponse> suspHoneyPotStatisticsResponse) {
             this.suspHoneyPotStatisticsResponse = suspHoneyPotStatisticsResponse;
             return this;
         }
@@ -71,23 +79,29 @@ public class DescribeHoneyPotSuspStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHoneyPotSuspStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHoneyPotSuspStatisticsResponseBody</p>
+     */
     public static class SuspHoneyPotStatisticsResponse extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcName")
+        @com.aliyun.core.annotation.NameInMap("VpcName")
         private String vpcName;
 
         private SuspHoneyPotStatisticsResponse(Builder builder) {
@@ -158,7 +172,10 @@ public class DescribeHoneyPotSuspStatisticsResponseBody extends TeaModel {
             private String vpcName; 
 
             /**
-             * The total number of alerts that are generated for the asset.
+             * <p>The total number of alerts that are generated for the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8793</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -166,10 +183,13 @@ public class DescribeHoneyPotSuspStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server.
-             * <p>
+             * <p>The ID of the server.</p>
+             * <blockquote>
+             * <p>This parameter is returned only when <strong>StatisticsKeyType</strong> is set to <strong>uuid</strong>.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only when **StatisticsKeyType** is set to **uuid**.
+             * <strong>example:</strong>
+             * <p>i-p0whhoba24wd28p8****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -177,10 +197,13 @@ public class DescribeHoneyPotSuspStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
-             * <p>
+             * <p>The name of the server.</p>
+             * <blockquote>
+             * <p>This parameter is returned only when <strong>StatisticsKeyType</strong> is set to <strong>uuid</strong>.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only when **StatisticsKeyType** is set to **uuid**.
+             * <strong>example:</strong>
+             * <p>abc-launch-advisor</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -188,11 +211,14 @@ public class DescribeHoneyPotSuspStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the asset. Valid values:
-             * <p>
+             * <p>The type of the asset. Valid values:</p>
+             * <ul>
+             * <li><strong>vpcInstanceId</strong>: VPC</li>
+             * <li><strong>uuid</strong>: server</li>
+             * </ul>
              * 
-             * *   **vpcInstanceId**: VPC
-             * *   **uuid**: server
+             * <strong>example:</strong>
+             * <p>vpcInstanceId</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -200,10 +226,13 @@ public class DescribeHoneyPotSuspStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
-             * <p>
+             * <p>The ID of the VPC.</p>
+             * <blockquote>
+             * <p>This parameter is returned only when <strong>StatisticsKeyType</strong> is set to <strong>vpcInstanceId</strong>.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only when **StatisticsKeyType** is set to **vpcInstanceId**.
+             * <strong>example:</strong>
+             * <p>vpc-p0wwdsuutdyu1ygkt****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -211,10 +240,13 @@ public class DescribeHoneyPotSuspStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the VPC.
-             * <p>
+             * <p>The name of the VPC.</p>
+             * <blockquote>
+             * <p>This parameter is returned only when <strong>StatisticsKeyType</strong> is set to <strong>vpcInstanceId</strong>.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only when **StatisticsKeyType** is set to **vpcInstanceId**.
+             * <strong>example:</strong>
+             * <p>abc01</p>
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;

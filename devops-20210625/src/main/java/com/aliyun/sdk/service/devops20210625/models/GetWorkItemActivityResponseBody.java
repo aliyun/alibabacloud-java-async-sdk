@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetWorkItemActivityResponseBody} extends {@link TeaModel}
  *
  * <p>GetWorkItemActivityResponseBody</p>
  */
 public class GetWorkItemActivityResponseBody extends TeaModel {
-    @NameInMap("activities")
-    private java.util.List < Activities> activities;
+    @com.aliyun.core.annotation.NameInMap("activities")
+    private java.util.List<Activities> activities;
 
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMsg")
+    @com.aliyun.core.annotation.NameInMap("errorMsg")
     private String errorMsg;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private GetWorkItemActivityResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
     /**
      * @return activities
      */
-    public java.util.List < Activities> getActivities() {
+    public java.util.List<Activities> getActivities() {
         return this.activities;
     }
 
@@ -79,7 +84,7 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Activities> activities; 
+        private java.util.List<Activities> activities; 
         private String errorCode; 
         private String errorMsg; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
         /**
          * activities.
          */
-        public Builder activities(java.util.List < Activities> activities) {
+        public Builder activities(java.util.List<Activities> activities) {
             this.activities = activities;
             return this;
         }
@@ -131,14 +136,20 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetWorkItemActivityResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWorkItemActivityResponseBody</p>
+     */
     public static class NewValue extends TeaModel {
-        @NameInMap("displayValue")
+        @com.aliyun.core.annotation.NameInMap("displayValue")
         private String displayValue;
 
-        @NameInMap("plainValue")
+        @com.aliyun.core.annotation.NameInMap("plainValue")
         private String plainValue;
 
-        @NameInMap("resourceType")
+        @com.aliyun.core.annotation.NameInMap("resourceType")
         private String resourceType;
 
         private NewValue(Builder builder) {
@@ -212,14 +223,20 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetWorkItemActivityResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWorkItemActivityResponseBody</p>
+     */
     public static class OldValue extends TeaModel {
-        @NameInMap("displayValue")
+        @com.aliyun.core.annotation.NameInMap("displayValue")
         private String displayValue;
 
-        @NameInMap("plainValue")
+        @com.aliyun.core.annotation.NameInMap("plainValue")
         private String plainValue;
 
-        @NameInMap("resourceType")
+        @com.aliyun.core.annotation.NameInMap("resourceType")
         private String resourceType;
 
         private OldValue(Builder builder) {
@@ -293,17 +310,23 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetWorkItemActivityResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWorkItemActivityResponseBody</p>
+     */
     public static class Property extends TeaModel {
-        @NameInMap("displayName")
+        @com.aliyun.core.annotation.NameInMap("displayName")
         private String displayName;
 
-        @NameInMap("propertyIdentifier")
+        @com.aliyun.core.annotation.NameInMap("propertyIdentifier")
         private String propertyIdentifier;
 
-        @NameInMap("propertyName")
+        @com.aliyun.core.annotation.NameInMap("propertyName")
         private String propertyName;
 
-        @NameInMap("propertyType")
+        @com.aliyun.core.annotation.NameInMap("propertyType")
         private String propertyType;
 
         private Property(Builder builder) {
@@ -394,35 +417,41 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetWorkItemActivityResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWorkItemActivityResponseBody</p>
+     */
     public static class Activities extends TeaModel {
-        @NameInMap("actionType")
+        @com.aliyun.core.annotation.NameInMap("actionType")
         private String actionType;
 
-        @NameInMap("eventId")
+        @com.aliyun.core.annotation.NameInMap("eventId")
         private Long eventId;
 
-        @NameInMap("eventTime")
+        @com.aliyun.core.annotation.NameInMap("eventTime")
         private Long eventTime;
 
-        @NameInMap("eventType")
+        @com.aliyun.core.annotation.NameInMap("eventType")
         private String eventType;
 
-        @NameInMap("newValue")
-        private java.util.List < NewValue> newValue;
+        @com.aliyun.core.annotation.NameInMap("newValue")
+        private java.util.List<NewValue> newValue;
 
-        @NameInMap("oldValue")
-        private java.util.List < OldValue> oldValue;
+        @com.aliyun.core.annotation.NameInMap("oldValue")
+        private java.util.List<OldValue> oldValue;
 
-        @NameInMap("operator")
+        @com.aliyun.core.annotation.NameInMap("operator")
         private String operator;
 
-        @NameInMap("parentEventId")
+        @com.aliyun.core.annotation.NameInMap("parentEventId")
         private Long parentEventId;
 
-        @NameInMap("property")
+        @com.aliyun.core.annotation.NameInMap("property")
         private Property property;
 
-        @NameInMap("resourceIdentifier")
+        @com.aliyun.core.annotation.NameInMap("resourceIdentifier")
         private String resourceIdentifier;
 
         private Activities(Builder builder) {
@@ -477,14 +506,14 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
         /**
          * @return newValue
          */
-        public java.util.List < NewValue> getNewValue() {
+        public java.util.List<NewValue> getNewValue() {
             return this.newValue;
         }
 
         /**
          * @return oldValue
          */
-        public java.util.List < OldValue> getOldValue() {
+        public java.util.List<OldValue> getOldValue() {
             return this.oldValue;
         }
 
@@ -521,8 +550,8 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
             private Long eventId; 
             private Long eventTime; 
             private String eventType; 
-            private java.util.List < NewValue> newValue; 
-            private java.util.List < OldValue> oldValue; 
+            private java.util.List<NewValue> newValue; 
+            private java.util.List<OldValue> oldValue; 
             private String operator; 
             private Long parentEventId; 
             private Property property; 
@@ -563,7 +592,7 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
             /**
              * newValue.
              */
-            public Builder newValue(java.util.List < NewValue> newValue) {
+            public Builder newValue(java.util.List<NewValue> newValue) {
                 this.newValue = newValue;
                 return this;
             }
@@ -571,7 +600,7 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
             /**
              * oldValue.
              */
-            public Builder oldValue(java.util.List < OldValue> oldValue) {
+            public Builder oldValue(java.util.List<OldValue> oldValue) {
                 this.oldValue = oldValue;
                 return this;
             }

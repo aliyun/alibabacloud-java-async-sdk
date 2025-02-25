@@ -1,28 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyMonitorGroupRequest} extends {@link RequestModel}
  *
  * <p>ModifyMonitorGroupRequest</p>
  */
 public class ModifyMonitorGroupRequest extends Request {
-    @Query
-    @NameInMap("ContactGroups")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactGroups")
     private String contactGroups;
 
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
     private ModifyMonitorGroupRequest(Builder builder) {
@@ -83,7 +83,10 @@ public class ModifyMonitorGroupRequest extends Request {
         } 
 
         /**
-         * The alert groups that can receive alert notifications for the application group.
+         * <p>The alert groups that can receive alert notifications for the application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alarm_ecs_group</p>
          */
         public Builder contactGroups(String contactGroups) {
             this.putQueryParameter("ContactGroups", contactGroups);
@@ -92,7 +95,11 @@ public class ModifyMonitorGroupRequest extends Request {
         }
 
         /**
-         * The ID of the application group.
+         * <p>The ID of the application group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -101,7 +108,10 @@ public class ModifyMonitorGroupRequest extends Request {
         }
 
         /**
-         * The name of the application group.
+         * <p>The name of the application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs_group</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);

@@ -62,7 +62,7 @@ public class ValidateShardTaskResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * List.
+         * Indicates the check results.
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -70,7 +70,7 @@ public class ValidateShardTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Indicates the ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ValidateShardTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,7 +130,7 @@ public class ValidateShardTaskResponseBody extends TeaModel {
             private Integer result; 
 
             /**
-             * Item.
+             * Indicates the name of a check item.
              */
             public Builder item(String item) {
                 this.item = item;
@@ -138,7 +138,11 @@ public class ValidateShardTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * Indicates the result of the check item. Valid values:
+             * <p>
+             * 
+             * *   **0**: indicates the task is valid.
+             * *   **1**: indicates the task is invalid.
              */
             public Builder result(Integer result) {
                 this.result = result;

@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDdosEventResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDdosEventResponseBody</p>
  */
 public class DescribeDdosEventResponseBody extends TeaModel {
-    @NameInMap("Events")
+    @com.aliyun.core.annotation.NameInMap("Events")
     private java.util.List < Events> events;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
 
     private DescribeDdosEventResponseBody(Builder builder) {
@@ -62,7 +62,7 @@ public class DescribeDdosEventResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * The details about the DDoS attack event.
+         * <p>The details about the DDoS attack event.</p>
          */
         public Builder events(java.util.List < Events> events) {
             this.events = events;
@@ -70,7 +70,10 @@ public class DescribeDdosEventResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F3B6C3F9-6B21-519D-B976-A1E14166F909</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,10 @@ public class DescribeDdosEventResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of DDoS attack events.
+         * <p>The total number of DDoS attack events that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -91,23 +97,29 @@ public class DescribeDdosEventResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDdosEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDdosEventResponseBody</p>
+     */
     public static class Events extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Integer endTime;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("Mbps")
+        @com.aliyun.core.annotation.NameInMap("Mbps")
         private Integer mbps;
 
-        @NameInMap("Pps")
+        @com.aliyun.core.annotation.NameInMap("Pps")
         private Integer pps;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Integer startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Events(Builder builder) {
@@ -178,7 +190,10 @@ public class DescribeDdosEventResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The time when the DDoS attack stopped. This value is a UNIX timestamp. Unit: seconds.
+             * <p>The time when the DDoS attack stopped. This value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1637554335</p>
              */
             public Builder endTime(Integer endTime) {
                 this.endTime = endTime;
@@ -186,7 +201,10 @@ public class DescribeDdosEventResponseBody extends TeaModel {
             }
 
             /**
-             * The attacked IP address.
+             * <p>The attacked IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.89.XX.XX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -194,7 +212,10 @@ public class DescribeDdosEventResponseBody extends TeaModel {
             }
 
             /**
-             * The volume of the request traffic at the start of the DDoS attack. Unit: Mbit/s.
+             * <p>The volume of the request traffic at the start of the DDoS attack. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder mbps(Integer mbps) {
                 this.mbps = mbps;
@@ -202,7 +223,10 @@ public class DescribeDdosEventResponseBody extends TeaModel {
             }
 
             /**
-             * The number of packets at the start of the DDoS attack. Unit: packets per second (PPS).
+             * <p>The number of packets at the start of the DDoS attack. Unit: packets per second (PPS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>456</p>
              */
             public Builder pps(Integer pps) {
                 this.pps = pps;
@@ -210,7 +234,10 @@ public class DescribeDdosEventResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the DDoS attack started. This value is a UNIX timestamp. Unit: seconds.
+             * <p>The time when the DDoS attack started. This value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1637554034</p>
              */
             public Builder startTime(Integer startTime) {
                 this.startTime = startTime;
@@ -218,13 +245,16 @@ public class DescribeDdosEventResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the DDoS attack event. Valid values:
-             * <p>
+             * <p>The status of the DDoS attack event. Valid values:</p>
+             * <ul>
+             * <li><strong>hole_begin</strong>: indicates that blackhole filtering is triggered for the attacked IP address.</li>
+             * <li><strong>hole_end</strong>: indicates that blackhole filtering is deactivated for the attacked IP address.</li>
+             * <li><strong>defense_begin</strong>: indicates that attack traffic is being scrubbed.</li>
+             * <li><strong>defense_end</strong>: indicates that attack traffic is scrubbed.</li>
+             * </ul>
              * 
-             * *   **hole_begin**: indicates that blackhole filtering is triggered for the attacked IP address.
-             * *   **hole_end**: indicates that blackhole filtering is deactivated for the attacked IP address.
-             * *   **defense_begin**: indicates that attack traffic is being scrubbed.
-             * *   **defense_end**: indicates that attack traffic is scrubbed.
+             * <strong>example:</strong>
+             * <p>defense_end</p>
              */
             public Builder status(String status) {
                 this.status = status;

@@ -1,53 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCloudMigrationTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateCloudMigrationTaskRequest</p>
  */
 public class CreateCloudMigrationTaskRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceName;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SourceAccount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceAccount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceAccount;
 
-    @Query
-    @NameInMap("SourceCategory")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceCategory")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceCategory;
 
-    @Query
-    @NameInMap("SourceIpAddress")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceIpAddress")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceIpAddress;
 
-    @Query
-    @NameInMap("SourcePassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourcePassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourcePassword;
 
-    @Query
-    @NameInMap("SourcePort")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourcePort")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long sourcePort;
 
-    @Query
-    @NameInMap("TaskName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskName")
     private String taskName;
 
     private CreateCloudMigrationTaskRequest(Builder builder) {
@@ -158,7 +163,11 @@ public class CreateCloudMigrationTaskRequest extends Request {
         } 
 
         /**
-         * The ID of the destination instance. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The ID of the destination instance. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pgm-bp102g323jd4****</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -176,7 +185,11 @@ public class CreateCloudMigrationTaskRequest extends Request {
         }
 
         /**
-         * The username of the account that is used to connect to the self-managed PostgreSQL instance. Enter the username of the account that you created in the [Create an account for cloud migration on a self-managed PostgreSQL instance](~~369500~~) topic.
+         * <p>The username of the account that is used to connect to the self-managed PostgreSQL instance. Enter the username of the account that you created in the <a href="https://help.aliyun.com/document_detail/369500.html">Create an account for cloud migration on a self-managed PostgreSQL instance</a> topic.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>migratetest</p>
          */
         public Builder sourceAccount(String sourceAccount) {
             this.putQueryParameter("SourceAccount", sourceAccount);
@@ -185,11 +198,15 @@ public class CreateCloudMigrationTaskRequest extends Request {
         }
 
         /**
-         * The environment in which the self-managed PostgreSQL instance runs.
-         * <p>
+         * <p>The environment in which the self-managed PostgreSQL instance runs.</p>
+         * <ul>
+         * <li><strong>idcOnVpc</strong>: The self-managed PostgreSQL instance resides in a data center. The data center can communicate with the VPC to which the ApsaraDB RDS for PostgreSQL instance belongs.</li>
+         * <li><strong>ecsOnVpc</strong>: The self-managed PostgreSQL instance resides on an ECS instance.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **idcOnVpc**: The self-managed PostgreSQL instance resides in a data center. The data center can communicate with the VPC to which the ApsaraDB RDS for PostgreSQL instance belongs.
-         * *   **ecsOnVpc**: The self-managed PostgreSQL instance resides on an ECS instance.
+         * <strong>example:</strong>
+         * <p>ecsOnVpc</p>
          */
         public Builder sourceCategory(String sourceCategory) {
             this.putQueryParameter("SourceCategory", sourceCategory);
@@ -198,11 +215,15 @@ public class CreateCloudMigrationTaskRequest extends Request {
         }
 
         /**
-         * The private or public IP address that is used to connect to the self-managed PostgreSQL instance.
-         * <p>
+         * <p>The private or public IP address that is used to connect to the self-managed PostgreSQL instance.</p>
+         * <ul>
+         * <li>If the self-managed PostgreSQL instance resides on an Elastic Compute Service (ECS) instance, enter the private IP address of the ECS instance. For more information about how to obtain the private IP address of an ECS instance, see <a href="https://help.aliyun.com/document_detail/273914.html">View IP addresses</a>.</li>
+         * <li>If the self-managed PostgreSQL instance resides in a data center, enter the private IP address of the data center.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   If the self-managed PostgreSQL instance resides on an Elastic Compute Service (ECS) instance, enter the private IP address of the ECS instance. For more information about how to obtain the private IP address of an ECS instance, see [View IP addresses](~~273914~~).
-         * *   If the self-managed PostgreSQL instance resides in a data center, enter the private IP address of the data center.
+         * <strong>example:</strong>
+         * <p>172.16.XX.XX</p>
          */
         public Builder sourceIpAddress(String sourceIpAddress) {
             this.putQueryParameter("SourceIpAddress", sourceIpAddress);
@@ -211,7 +232,11 @@ public class CreateCloudMigrationTaskRequest extends Request {
         }
 
         /**
-         * The password of the account that is used to connect to the self-managed PostgreSQL instance. Enter the password of the account that you created in the [Create an account for cloud migration on a self-managed PostgreSQL instance](~~369500~~) topic.
+         * <p>The password of the account that is used to connect to the self-managed PostgreSQL instance. Enter the password of the account that you created in the <a href="https://help.aliyun.com/document_detail/369500.html">Create an account for cloud migration on a self-managed PostgreSQL instance</a> topic.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder sourcePassword(String sourcePassword) {
             this.putQueryParameter("SourcePassword", sourcePassword);
@@ -220,7 +245,11 @@ public class CreateCloudMigrationTaskRequest extends Request {
         }
 
         /**
-         * The port number that is used to connect to the self-managed PostgreSQL instance. You can run the `netstat -a | grep PGSQL` command to obtain the port number.
+         * <p>The port number that is used to connect to the self-managed PostgreSQL instance. You can run the <code>netstat -a | grep PGSQL</code> command to obtain the port number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5432</p>
          */
         public Builder sourcePort(Long sourcePort) {
             this.putQueryParameter("SourcePort", sourcePort);
@@ -229,7 +258,10 @@ public class CreateCloudMigrationTaskRequest extends Request {
         }
 
         /**
-         * The name of the task. If you do not specify this parameter, ApsaraDB RDS automatically generates a name for the cloud migration task.
+         * <p>The name of the task. If you do not specify this parameter, ApsaraDB RDS automatically generates a name for the cloud migration task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>362c6c7a-4d20-4eac-898c-1495ceab374c</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);

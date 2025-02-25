@@ -1,39 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEmailVerificationResponseBody} extends {@link TeaModel}
  *
  * <p>ListEmailVerificationResponseBody</p>
  */
 public class ListEmailVerificationResponseBody extends TeaModel {
-    @NameInMap("CurrentPageNum")
+    @com.aliyun.core.annotation.NameInMap("CurrentPageNum")
     private Integer currentPageNum;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("NextPage")
+    @com.aliyun.core.annotation.NameInMap("NextPage")
     private Boolean nextPage;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("PrePage")
+    @com.aliyun.core.annotation.NameInMap("PrePage")
     private Boolean prePage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalItemNum")
+    @com.aliyun.core.annotation.NameInMap("TotalItemNum")
     private Integer totalItemNum;
 
-    @NameInMap("TotalPageNum")
+    @com.aliyun.core.annotation.NameInMap("TotalPageNum")
     private Integer totalPageNum;
 
     private ListEmailVerificationResponseBody(Builder builder) {
@@ -191,35 +191,41 @@ public class ListEmailVerificationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListEmailVerificationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEmailVerificationResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ConfirmIp")
+        @com.aliyun.core.annotation.NameInMap("ConfirmIp")
         private String confirmIp;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("EmailVerificationNo")
+        @com.aliyun.core.annotation.NameInMap("EmailVerificationNo")
         private String emailVerificationNo;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("SendIp")
+        @com.aliyun.core.annotation.NameInMap("SendIp")
         private String sendIp;
 
-        @NameInMap("TokenSendTime")
+        @com.aliyun.core.annotation.NameInMap("TokenSendTime")
         private String tokenSendTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("VerificationStatus")
+        @com.aliyun.core.annotation.NameInMap("VerificationStatus")
         private Integer verificationStatus;
 
-        @NameInMap("VerificationTime")
+        @com.aliyun.core.annotation.NameInMap("VerificationTime")
         private String verificationTime;
 
         private Data(Builder builder) {

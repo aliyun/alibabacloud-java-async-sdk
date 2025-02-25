@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGatewayRouteTableEntriesResponseBody} extends {@link TeaModel}
  *
  * <p>ListGatewayRouteTableEntriesResponseBody</p>
  */
 public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
-    @NameInMap("GatewayRouteEntryModels")
-    private java.util.List < GatewayRouteEntryModels> gatewayRouteEntryModels;
+    @com.aliyun.core.annotation.NameInMap("GatewayRouteEntryModels")
+    private java.util.List<GatewayRouteEntryModels> gatewayRouteEntryModels;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private ListGatewayRouteTableEntriesResponseBody(Builder builder) {
@@ -42,7 +47,7 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
     /**
      * @return gatewayRouteEntryModels
      */
-    public java.util.List < GatewayRouteEntryModels> getGatewayRouteEntryModels() {
+    public java.util.List<GatewayRouteEntryModels> getGatewayRouteEntryModels() {
         return this.gatewayRouteEntryModels;
     }
 
@@ -68,25 +73,28 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < GatewayRouteEntryModels> gatewayRouteEntryModels; 
+        private java.util.List<GatewayRouteEntryModels> gatewayRouteEntryModels; 
         private String nextToken; 
         private String requestId; 
         private String totalCount; 
 
         /**
-         * The details of the routes in the gateway route table.
+         * <p>The details of the routes in the gateway route table.</p>
          */
-        public Builder gatewayRouteEntryModels(java.util.List < GatewayRouteEntryModels> gatewayRouteEntryModels) {
+        public Builder gatewayRouteEntryModels(java.util.List<GatewayRouteEntryModels> gatewayRouteEntryModels) {
             this.gatewayRouteEntryModels = gatewayRouteEntryModels;
             return this;
         }
 
         /**
-         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value is returned for <strong>NextToken</strong>, the value is used to retrieve a new page of results.</li>
+         * </ul>
          * 
-         * *   If **NextToken** is empty, no next page exists.
-         * *   If a value is returned for **NextToken**, the value is used to retrieve a new page of results.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -94,7 +102,10 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -102,7 +113,10 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -115,17 +129,23 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListGatewayRouteTableEntriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewayRouteTableEntriesResponseBody</p>
+     */
     public static class NextHops extends TeaModel {
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private String enabled;
 
-        @NameInMap("NextHopId")
+        @com.aliyun.core.annotation.NameInMap("NextHopId")
         private String nextHopId;
 
-        @NameInMap("NextHopType")
+        @com.aliyun.core.annotation.NameInMap("NextHopType")
         private String nextHopType;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private String weight;
 
         private NextHops(Builder builder) {
@@ -178,11 +198,14 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
             private String weight; 
 
             /**
-             * Indicates whether the route is available. Valid values:
-             * <p>
+             * <p>Indicates whether the route is available. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: unavailable</li>
+             * <li><strong>1</strong>: available</li>
+             * </ul>
              * 
-             * *   **0**: unavailable
-             * *   **1**: available
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder enabled(String enabled) {
                 this.enabled = enabled;
@@ -190,7 +213,10 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the next hop.
+             * <p>The ID of the next hop.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpn-bp10zyaph5cc8b7c7****</p>
              */
             public Builder nextHopId(String nextHopId) {
                 this.nextHopId = nextHopId;
@@ -198,17 +224,20 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the next hop. Valid values:
-             * <p>
+             * <p>The type of the next hop. Valid values:</p>
+             * <ul>
+             * <li><strong>Instance</strong> (default): an ECS instance</li>
+             * <li><strong>HaVip</strong>: a high-availability virtual IP address (HAVIP).</li>
+             * <li><strong>VpnGateway</strong>: a VPN gateway</li>
+             * <li><strong>NatGateway</strong>: a NAT gateway</li>
+             * <li><strong>NetworkInterface</strong>: a secondary ENI</li>
+             * <li><strong>RouterInterface</strong>: a router interface</li>
+             * <li><strong>IPv6Gateway</strong>: an IPv6 gateway</li>
+             * <li><strong>Attachment</strong>: a transit router</li>
+             * </ul>
              * 
-             * *   **Instance** (default): an ECS instance
-             * *   **HaVip**: a high-availability virtual IP address (HAVIP).
-             * *   **VpnGateway**: a VPN gateway
-             * *   **NatGateway**: a NAT gateway
-             * *   **NetworkInterface**: a secondary ENI
-             * *   **RouterInterface**: a router interface
-             * *   **IPv6Gateway**: an IPv6 gateway
-             * *   **Attachment**: a transit router
+             * <strong>example:</strong>
+             * <p>Instance</p>
              */
             public Builder nextHopType(String nextHopType) {
                 this.nextHopType = nextHopType;
@@ -216,7 +245,10 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The weight of the route.
+             * <p>The weight of the route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder weight(String weight) {
                 this.weight = weight;
@@ -230,26 +262,32 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListGatewayRouteTableEntriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewayRouteTableEntriesResponseBody</p>
+     */
     public static class GatewayRouteEntryModels extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DestinationCidrBlock")
+        @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
         private String destinationCidrBlock;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NextHopId")
+        @com.aliyun.core.annotation.NameInMap("NextHopId")
         private String nextHopId;
 
-        @NameInMap("NextHopType")
+        @com.aliyun.core.annotation.NameInMap("NextHopType")
         private String nextHopType;
 
-        @NameInMap("NextHops")
-        private java.util.List < NextHops> nextHops;
+        @com.aliyun.core.annotation.NameInMap("NextHops")
+        private java.util.List<NextHops> nextHops;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private GatewayRouteEntryModels(Builder builder) {
@@ -308,7 +346,7 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
         /**
          * @return nextHops
          */
-        public java.util.List < NextHops> getNextHops() {
+        public java.util.List<NextHops> getNextHops() {
             return this.nextHops;
         }
 
@@ -325,11 +363,14 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
             private String name; 
             private String nextHopId; 
             private String nextHopType; 
-            private java.util.List < NextHops> nextHops; 
+            private java.util.List<NextHops> nextHops; 
             private String status; 
 
             /**
-             * The name of the route entry.
+             * <p>The name of the route entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -337,7 +378,10 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The destination CIDR block of the route.
+             * <p>The destination CIDR block of the route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.5</p>
              */
             public Builder destinationCidrBlock(String destinationCidrBlock) {
                 this.destinationCidrBlock = destinationCidrBlock;
@@ -345,10 +389,11 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the route entry.
-             * <p>
+             * <p>The name of the route entry.</p>
+             * <p>The name must be 2 to 128 characters in length and can contain letter, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
              * 
-             * The name must be 2 to 128 characters in length and can contain letter, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -356,7 +401,10 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the next hop.
+             * <p>The ID of the next hop.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp11gcl0sm85t9bi****</p>
              */
             public Builder nextHopId(String nextHopId) {
                 this.nextHopId = nextHopId;
@@ -364,12 +412,15 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the next hop. Valid values:
-             * <p>
+             * <p>The type of the next hop. Valid values:</p>
+             * <ul>
+             * <li><strong>EcsInstance</strong>: Elastic Compute Service (ECS) instance</li>
+             * <li><strong>NetworkInterface</strong>: elastic network interfaces (ENIs).</li>
+             * <li><strong>Local</strong>: local next hop</li>
+             * </ul>
              * 
-             * *   **EcsInstance**: Elastic Compute Service (ECS) instance
-             * *   **NetworkInterface**: elastic network interfaces (ENIs).
-             * *   **Local**: local next hop
+             * <strong>example:</strong>
+             * <p>EcsInstance</p>
              */
             public Builder nextHopType(String nextHopType) {
                 this.nextHopType = nextHopType;
@@ -377,20 +428,23 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the next hop.
+             * <p>The information about the next hop.</p>
              */
-            public Builder nextHops(java.util.List < NextHops> nextHops) {
+            public Builder nextHops(java.util.List<NextHops> nextHops) {
                 this.nextHops = nextHops;
                 return this;
             }
 
             /**
-             * The status of the route entry. Valid values:
-             * <p>
+             * <p>The status of the route entry. Valid values:</p>
+             * <ul>
+             * <li><strong>Pending</strong></li>
+             * <li><strong>Available</strong></li>
+             * <li><strong>Modifying</strong></li>
+             * </ul>
              * 
-             * *   **Pending**
-             * *   **Available**
-             * *   **Modifying**
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;

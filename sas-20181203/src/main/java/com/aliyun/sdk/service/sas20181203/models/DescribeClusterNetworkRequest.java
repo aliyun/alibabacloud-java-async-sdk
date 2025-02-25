@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterNetworkRequest} extends {@link RequestModel}
  *
  * <p>DescribeClusterNetworkRequest</p>
  */
 public class DescribeClusterNetworkRequest extends Request {
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
     private DescribeClusterNetworkRequest(Builder builder) {
@@ -70,10 +75,14 @@ public class DescribeClusterNetworkRequest extends Request {
         } 
 
         /**
-         * The end timestamp of the query. Unit: milliseconds.
-         * <p>
+         * <p>The end timestamp of the query. Unit: milliseconds.</p>
+         * <blockquote>
+         * <p>The days between the start timestamp and the end timestamp cannot exceed <strong>seven</strong> days.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > The days between the start timestamp and the end timestamp cannot exceed **seven** days.
+         * <strong>example:</strong>
+         * <p>1656038940435</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -82,10 +91,14 @@ public class DescribeClusterNetworkRequest extends Request {
         }
 
         /**
-         * The start timestamp of the query. Unit: milliseconds.
-         * <p>
+         * <p>The start timestamp of the query. Unit: milliseconds.</p>
+         * <blockquote>
+         * <p>The days between the start timestamp and the end timestamp cannot exceed <strong>seven</strong> days.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > The days between the start timestamp and the end timestamp cannot exceed **seven** days.
+         * <strong>example:</strong>
+         * <p>1656038740435</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

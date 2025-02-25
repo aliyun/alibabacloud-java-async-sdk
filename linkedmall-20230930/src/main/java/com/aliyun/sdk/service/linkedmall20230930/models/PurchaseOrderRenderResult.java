@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PurchaseOrderRenderResult} extends {@link TeaModel}
  *
  * <p>PurchaseOrderRenderResult</p>
  */
 public class PurchaseOrderRenderResult extends TeaModel {
-    @NameInMap("addressList")
-    private java.util.List < AddressInfo > addressList;
+    @com.aliyun.core.annotation.NameInMap("addressList")
+    private java.util.List<AddressInfo> addressList;
 
-    @NameInMap("canSell")
+    @com.aliyun.core.annotation.NameInMap("canSell")
     private Boolean canSell;
 
-    @NameInMap("extInfo")
-    private java.util.Map < String, ? > extInfo;
+    @com.aliyun.core.annotation.NameInMap("extInfo")
+    private java.util.Map<String, ?> extInfo;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("orderList")
-    private java.util.List < OrderRenderResult > orderList;
+    @com.aliyun.core.annotation.NameInMap("orderList")
+    private java.util.List<OrderRenderResult> orderList;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("unsellableOrderList")
-    private java.util.List < OrderRenderResult > unsellableOrderList;
+    @com.aliyun.core.annotation.NameInMap("unsellableOrderList")
+    private java.util.List<OrderRenderResult> unsellableOrderList;
 
     private PurchaseOrderRenderResult(Builder builder) {
         this.addressList = builder.addressList;
@@ -54,7 +59,7 @@ public class PurchaseOrderRenderResult extends TeaModel {
     /**
      * @return addressList
      */
-    public java.util.List < AddressInfo > getAddressList() {
+    public java.util.List<AddressInfo> getAddressList() {
         return this.addressList;
     }
 
@@ -68,7 +73,7 @@ public class PurchaseOrderRenderResult extends TeaModel {
     /**
      * @return extInfo
      */
-    public java.util.Map < String, ? > getExtInfo() {
+    public java.util.Map<String, ?> getExtInfo() {
         return this.extInfo;
     }
 
@@ -82,7 +87,7 @@ public class PurchaseOrderRenderResult extends TeaModel {
     /**
      * @return orderList
      */
-    public java.util.List < OrderRenderResult > getOrderList() {
+    public java.util.List<OrderRenderResult> getOrderList() {
         return this.orderList;
     }
 
@@ -96,23 +101,23 @@ public class PurchaseOrderRenderResult extends TeaModel {
     /**
      * @return unsellableOrderList
      */
-    public java.util.List < OrderRenderResult > getUnsellableOrderList() {
+    public java.util.List<OrderRenderResult> getUnsellableOrderList() {
         return this.unsellableOrderList;
     }
 
     public static final class Builder {
-        private java.util.List < AddressInfo > addressList; 
+        private java.util.List<AddressInfo> addressList; 
         private Boolean canSell; 
-        private java.util.Map < String, ? > extInfo; 
+        private java.util.Map<String, ?> extInfo; 
         private String message; 
-        private java.util.List < OrderRenderResult > orderList; 
+        private java.util.List<OrderRenderResult> orderList; 
         private String requestId; 
-        private java.util.List < OrderRenderResult > unsellableOrderList; 
+        private java.util.List<OrderRenderResult> unsellableOrderList; 
 
         /**
          * addressList.
          */
-        public Builder addressList(java.util.List < AddressInfo > addressList) {
+        public Builder addressList(java.util.List<AddressInfo> addressList) {
             this.addressList = addressList;
             return this;
         }
@@ -128,7 +133,7 @@ public class PurchaseOrderRenderResult extends TeaModel {
         /**
          * extInfo.
          */
-        public Builder extInfo(java.util.Map < String, ? > extInfo) {
+        public Builder extInfo(java.util.Map<String, ?> extInfo) {
             this.extInfo = extInfo;
             return this;
         }
@@ -144,7 +149,7 @@ public class PurchaseOrderRenderResult extends TeaModel {
         /**
          * orderList.
          */
-        public Builder orderList(java.util.List < OrderRenderResult > orderList) {
+        public Builder orderList(java.util.List<OrderRenderResult> orderList) {
             this.orderList = orderList;
             return this;
         }
@@ -160,7 +165,7 @@ public class PurchaseOrderRenderResult extends TeaModel {
         /**
          * unsellableOrderList.
          */
-        public Builder unsellableOrderList(java.util.List < OrderRenderResult > unsellableOrderList) {
+        public Builder unsellableOrderList(java.util.List<OrderRenderResult> unsellableOrderList) {
             this.unsellableOrderList = unsellableOrderList;
             return this;
         }

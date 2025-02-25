@@ -1,64 +1,64 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataCachesRequest} extends {@link RequestModel}
  *
  * <p>DescribeDataCachesRequest</p>
  */
 public class DescribeDataCachesRequest extends Request {
-    @Query
-    @NameInMap("Bucket")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bucket")
     private String bucket;
 
-    @Query
-    @NameInMap("DataCacheId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataCacheId")
     private java.util.List < String > dataCacheId;
 
-    @Query
-    @NameInMap("Limit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Limit")
     private Integer limit;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Path")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Path")
     private String path;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
     private DescribeDataCachesRequest(Builder builder) {
@@ -209,7 +209,10 @@ public class DescribeDataCachesRequest extends Request {
         } 
 
         /**
-         * The bucket that stores the data cache. Default value: default.
+         * <p>The bucket that stores the data cache. Default value: default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder bucket(String bucket) {
             this.putQueryParameter("Bucket", bucket);
@@ -218,7 +221,7 @@ public class DescribeDataCachesRequest extends Request {
         }
 
         /**
-         * The data cache IDs.
+         * <p>The data cache IDs.</p>
          */
         public Builder dataCacheId(java.util.List < String > dataCacheId) {
             this.putQueryParameter("DataCacheId", dataCacheId);
@@ -227,7 +230,10 @@ public class DescribeDataCachesRequest extends Request {
         }
 
         /**
-         * The maximum entries of query results that are allowed to be displayed. Valid values: 1 to 20. Default value: 20.
+         * <p>The maximum entries of query results that are allowed to be displayed. Valid values: 1 to 20. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);
@@ -236,7 +242,10 @@ public class DescribeDataCachesRequest extends Request {
         }
 
         /**
-         * The query token. Set the value to the NextToken value that is returned in the previous call.
+         * <p>The query token. Set the value to the NextToken value that is returned in the previous call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d78f2dd8-5979-42fe-****-b16db43be5bc</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -263,7 +272,10 @@ public class DescribeDataCachesRequest extends Request {
         }
 
         /**
-         * The virtual host (vHost) directory in which the data cache resides.
+         * <p>The virtual host (vHost) directory in which the data cache resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/data/models/</p>
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -272,7 +284,11 @@ public class DescribeDataCachesRequest extends Request {
         }
 
         /**
-         * The region ID of the data caches that you want to query.
+         * <p>The region ID of the data caches that you want to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -281,7 +297,10 @@ public class DescribeDataCachesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the data cache belongs.
+         * <p>The ID of the resource group to which the data cache belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzw2jz2z****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -308,7 +327,7 @@ public class DescribeDataCachesRequest extends Request {
         }
 
         /**
-         * The tags that are attached to the data cache.
+         * <p>The tags that are attached to the data cache.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -323,11 +342,17 @@ public class DescribeDataCachesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDataCachesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeDataCachesRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -362,7 +387,10 @@ public class DescribeDataCachesRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testkey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -370,7 +398,10 @@ public class DescribeDataCachesRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testvalue</p>
              */
             public Builder value(String value) {
                 this.value = value;

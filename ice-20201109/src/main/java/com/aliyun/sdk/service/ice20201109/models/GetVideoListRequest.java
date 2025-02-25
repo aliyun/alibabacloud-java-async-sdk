@@ -1,47 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetVideoListRequest} extends {@link RequestModel}
  *
  * <p>GetVideoListRequest</p>
  */
 public class GetVideoListRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("CateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CateId")
     private Long cateId;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private GetVideoListRequest(Builder builder) {
@@ -161,7 +166,10 @@ public class GetVideoListRequest extends Request {
         }
 
         /**
-         * CateId.
+         * <p>The ID of the category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>781111</p>
          */
         public Builder cateId(Long cateId) {
             this.putQueryParameter("CateId", cateId);
@@ -170,7 +178,10 @@ public class GetVideoListRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-01-11T12:59:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -179,7 +190,10 @@ public class GetVideoListRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -188,7 +202,10 @@ public class GetVideoListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -197,7 +214,14 @@ public class GetVideoListRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sorting method of the results. Valid values:</p>
+         * <ul>
+         * <li>CreationTime:Desc (default): sorts results in reverse chronological order.</li>
+         * <li>CreationTime:Asc: sorts results in chronological order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CreationTime:Asc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -206,7 +230,10 @@ public class GetVideoListRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-01-11T12:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -215,7 +242,24 @@ public class GetVideoListRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the video. You can specify multiple video statuses and separate them with commas (,).</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>PrepareFail: The file is abnormal.</li>
+         * <li>UploadFail: The video failed to be uploaded.</li>
+         * <li>UploadSucc: The video is uploaded.</li>
+         * <li>Transcoding: The video is being transcoded.</li>
+         * <li>TranscodeFail: The video failed to be transcoded.</li>
+         * <li>ProduceFail: The video failed to be produced.</li>
+         * <li>Normal: The video is normal.</li>
+         * <li>Uploading: The video is being uploaded.</li>
+         * <li>Preparing: The file is being generated.</li>
+         * <li>Blocked: The video is blocked.</li>
+         * <li>checking: The video is being reviewed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Uploading,Normal</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

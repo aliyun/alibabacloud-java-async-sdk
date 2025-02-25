@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDoctorReportsResponseBody} extends {@link TeaModel}
  *
  * <p>ListDoctorReportsResponseBody</p>
  */
 public class ListDoctorReportsResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListDoctorReportsResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class ListDoctorReportsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -79,22 +84,25 @@ public class ListDoctorReportsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * Data.
+         * <p>The reports.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * 本次请求所返回的最大记录条数。
+         * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +110,10 @@ public class ListDoctorReportsResponseBody extends TeaModel {
         }
 
         /**
-         * 返回读取到的数据位置，空代表数据已经读取完毕。
+         * <p>A pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +121,10 @@ public class ListDoctorReportsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class ListDoctorReportsResponseBody extends TeaModel {
         }
 
         /**
-         * 本次请求条件下的数据总量。
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,14 +148,20 @@ public class ListDoctorReportsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDoctorReportsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorReportsResponseBody</p>
+     */
     public static class SummaryReport extends TeaModel {
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private Integer score;
 
-        @NameInMap("Suggestion")
+        @com.aliyun.core.annotation.NameInMap("Suggestion")
         private String suggestion;
 
-        @NameInMap("Summary")
+        @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
 
         private SummaryReport(Builder builder) {
@@ -182,7 +205,10 @@ public class ListDoctorReportsResponseBody extends TeaModel {
             private String summary; 
 
             /**
-             * Score.
+             * <p>The score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>88</p>
              */
             public Builder score(Integer score) {
                 this.score = score;
@@ -190,7 +216,10 @@ public class ListDoctorReportsResponseBody extends TeaModel {
             }
 
             /**
-             * Suggestion.
+             * <p>The optimization suggestion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>block</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -198,7 +227,10 @@ public class ListDoctorReportsResponseBody extends TeaModel {
             }
 
             /**
-             * Summary.
+             * <p>The summary of the report.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eastbuy-mse-plugin-auth</p>
              */
             public Builder summary(String summary) {
                 this.summary = summary;
@@ -212,14 +244,20 @@ public class ListDoctorReportsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorReportsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorReportsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ComponentTypes")
-        private java.util.List < String > componentTypes;
+        @com.aliyun.core.annotation.NameInMap("ComponentTypes")
+        private java.util.List<String> componentTypes;
 
-        @NameInMap("DateTime")
+        @com.aliyun.core.annotation.NameInMap("DateTime")
         private String dateTime;
 
-        @NameInMap("SummaryReport")
+        @com.aliyun.core.annotation.NameInMap("SummaryReport")
         private SummaryReport summaryReport;
 
         private Data(Builder builder) {
@@ -239,7 +277,7 @@ public class ListDoctorReportsResponseBody extends TeaModel {
         /**
          * @return componentTypes
          */
-        public java.util.List < String > getComponentTypes() {
+        public java.util.List<String> getComponentTypes() {
             return this.componentTypes;
         }
 
@@ -258,20 +296,70 @@ public class ListDoctorReportsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > componentTypes; 
+            private java.util.List<String> componentTypes; 
             private String dateTime; 
             private SummaryReport summaryReport; 
 
             /**
-             * ComponentTypes.
+             * <p>The component types.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>compute</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>hive</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>hdfs</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>yarn</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>oss</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>hbase</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- --></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
-            public Builder componentTypes(java.util.List < String > componentTypes) {
+            public Builder componentTypes(java.util.List<String> componentTypes) {
                 this.componentTypes = componentTypes;
                 return this;
             }
 
             /**
-             * DateTime.
+             * <p>The date on which the report was generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-06-29</p>
              */
             public Builder dateTime(String dateTime) {
                 this.dateTime = dateTime;
@@ -279,7 +367,7 @@ public class ListDoctorReportsResponseBody extends TeaModel {
             }
 
             /**
-             * SummaryReport.
+             * <p>The summary of the report.</p>
              */
             public Builder summaryReport(SummaryReport summaryReport) {
                 this.summaryReport = summaryReport;

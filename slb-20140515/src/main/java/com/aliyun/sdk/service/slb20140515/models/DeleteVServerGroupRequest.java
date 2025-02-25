@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteVServerGroupRequest} extends {@link RequestModel}
  *
  * <p>DeleteVServerGroupRequest</p>
  */
 public class DeleteVServerGroupRequest extends Request {
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("VServerGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VServerGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vServerGroupId;
 
     private DeleteVServerGroupRequest(Builder builder) {
@@ -144,7 +149,11 @@ public class DeleteVServerGroupRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the associated Server Load Balancer (SLB) instance belongs.
+         * <p>The ID of the region to which the associated Server Load Balancer (SLB) instance belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -171,10 +180,14 @@ public class DeleteVServerGroupRequest extends Request {
         }
 
         /**
-         * The ID of the VServer group to be deleted.
-         * <p>
+         * <p>The ID of the VServer group to be deleted.</p>
+         * <blockquote>
+         * <p> If the VServer group is in use, it cannot be deleted.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  If the VServer group is in use, it cannot be deleted.
+         * <strong>example:</strong>
+         * <p>rsp-cige6j*****</p>
          */
         public Builder vServerGroupId(String vServerGroupId) {
             this.putQueryParameter("VServerGroupId", vServerGroupId);

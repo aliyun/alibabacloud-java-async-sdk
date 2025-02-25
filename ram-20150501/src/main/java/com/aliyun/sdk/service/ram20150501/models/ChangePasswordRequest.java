@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangePasswordRequest} extends {@link RequestModel}
  *
  * <p>ChangePasswordRequest</p>
  */
 public class ChangePasswordRequest extends Request {
-    @Query
-    @NameInMap("NewPassword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewPassword")
     private String newPassword;
 
-    @Query
-    @NameInMap("OldPassword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OldPassword")
     private String oldPassword;
 
     private ChangePasswordRequest(Builder builder) {
@@ -61,14 +66,18 @@ public class ChangePasswordRequest extends Request {
             super();
         } 
 
-        private Builder(ChangePasswordRequest response) {
-            super(response);
-            this.newPassword = response.newPassword;
-            this.oldPassword = response.oldPassword;
+        private Builder(ChangePasswordRequest request) {
+            super(request);
+            this.newPassword = request.newPassword;
+            this.oldPassword = request.oldPassword;
         } 
 
         /**
-         * NewPassword.
+         * <p>The new password that is used to log on to the Alibaba Cloud Management Console.</p>
+         * <p>The password must meet the complexity requirements. For more information, see <a href="https://help.aliyun.com/document_detail/28739.html">SetPasswordPolicy</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aw$2****</p>
          */
         public Builder newPassword(String newPassword) {
             this.putQueryParameter("NewPassword", newPassword);
@@ -77,7 +86,10 @@ public class ChangePasswordRequest extends Request {
         }
 
         /**
-         * OldPassword.
+         * <p>The old password that is used to log on to the Alibaba Cloud Management Console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12****</p>
          */
         public Builder oldPassword(String oldPassword) {
             this.putQueryParameter("OldPassword", oldPassword);

@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTaskResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTaskResponseBody</p>
  */
 public class DescribeTaskResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("CompletedTime")
+    @com.aliyun.core.annotation.NameInMap("CompletedTime")
     private Long completedTime;
 
-    @NameInMap("CreatedTime")
+    @com.aliyun.core.annotation.NameInMap("CreatedTime")
     private Long createdTime;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("Progress")
+    @com.aliyun.core.annotation.NameInMap("Progress")
     private Integer progress;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private String result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("UpdatedTime")
+    @com.aliyun.core.annotation.NameInMap("UpdatedTime")
     private Long updatedTime;
 
     private DescribeTaskResponseBody(Builder builder) {
@@ -158,7 +163,10 @@ public class DescribeTaskResponseBody extends TeaModel {
         private Long updatedTime; 
 
         /**
-         * Code.
+         * <p>HttpCode</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -166,7 +174,10 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * CompletedTime.
+         * <p>The time when the task was complete. The time is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1615607706</p>
          */
         public Builder completedTime(Long completedTime) {
             this.completedTime = completedTime;
@@ -174,7 +185,10 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * CreatedTime.
+         * <p>The time when the job was created. This value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1615607706</p>
          */
         public Builder createdTime(Long createdTime) {
             this.createdTime = createdTime;
@@ -182,7 +196,16 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The status of the job. Valid values:</p>
+         * <ul>
+         * <li><strong>created</strong>: The job is created.</li>
+         * <li><strong>expired</strong>: The job expires.</li>
+         * <li><strong>completed</strong>: The job is completed.</li>
+         * <li><strong>cancelled</strong>: The job is canceled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>completed</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -190,7 +213,10 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message that is returned. If the call is successful, &quot;successful&quot; is returned. If the call fails, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -198,7 +224,10 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstallBackupClientsTask</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -206,7 +235,10 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Progress.
+         * <p>The progress of the job. Valid values: 0 to 100. Unit: percentage (%). If the job fails, the value -1 is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder progress(Integer progress) {
             this.progress = progress;
@@ -214,7 +246,10 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -222,7 +257,10 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The result of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder result(String result) {
             this.result = result;
@@ -230,7 +268,14 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful.</p>
+         * <ul>
+         * <li>true: The call is successful.</li>
+         * <li>false: The call fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +283,10 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * UpdatedTime.
+         * <p>The time when the job was updated. This value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1615607706</p>
          */
         public Builder updatedTime(Long updatedTime) {
             this.updatedTime = updatedTime;

@@ -1,53 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceLogsInput} extends {@link TeaModel}
  *
  * <p>GetInstanceLogsInput</p>
  */
 public class GetInstanceLogsInput extends TeaModel {
-    @NameInMap("backwardLine")
+    @com.aliyun.core.annotation.NameInMap("backwardLine")
     private Long backwardLine;
 
-    @NameInMap("endTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("endTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @NameInMap("forwardLine")
+    @com.aliyun.core.annotation.NameInMap("forwardLine")
     private Long forwardLine;
 
-    @NameInMap("isTail")
+    @com.aliyun.core.annotation.NameInMap("isTail")
     private Boolean isTail;
 
-    @NameInMap("match")
+    @com.aliyun.core.annotation.NameInMap("match")
     private String match;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("offset")
+    @com.aliyun.core.annotation.NameInMap("offset")
     private Long offset;
 
-    @NameInMap("packID")
+    @com.aliyun.core.annotation.NameInMap("packID")
     private String packID;
 
-    @NameInMap("packMeta")
+    @com.aliyun.core.annotation.NameInMap("packMeta")
     private String packMeta;
 
-    @NameInMap("startTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("startTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
-    @NameInMap("timestamp")
+    @com.aliyun.core.annotation.NameInMap("timestamp")
     private String timestamp;
 
-    @NameInMap("versionID")
+    @com.aliyun.core.annotation.NameInMap("versionID")
     private String versionID;
 
     private GetInstanceLogsInput(Builder builder) {
@@ -180,7 +185,7 @@ public class GetInstanceLogsInput extends TeaModel {
         }
 
         /**
-         * endTime.
+         * <p>This parameter is required.</p>
          */
         public Builder endTime(Long endTime) {
             this.endTime = endTime;
@@ -244,7 +249,7 @@ public class GetInstanceLogsInput extends TeaModel {
         }
 
         /**
-         * startTime.
+         * <p>This parameter is required.</p>
          */
         public Builder startTime(Long startTime) {
             this.startTime = startTime;

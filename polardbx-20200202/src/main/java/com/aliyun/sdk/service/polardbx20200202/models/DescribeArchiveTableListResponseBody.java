@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeArchiveTableListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeArchiveTableListResponseBody</p>
  */
 public class DescribeArchiveTableListResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeArchiveTableListResponseBody(Builder builder) {
@@ -71,26 +76,32 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeArchiveTableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeArchiveTableListResponseBody</p>
+     */
     public static class Tables extends TeaModel {
-        @NameInMap("ArchiveStatus")
+        @com.aliyun.core.annotation.NameInMap("ArchiveStatus")
         private String archiveStatus;
 
-        @NameInMap("CreatedDate")
+        @com.aliyun.core.annotation.NameInMap("CreatedDate")
         private Long createdDate;
 
-        @NameInMap("FileCount")
+        @com.aliyun.core.annotation.NameInMap("FileCount")
         private Integer fileCount;
 
-        @NameInMap("LastSuccessArchiveTime")
+        @com.aliyun.core.annotation.NameInMap("LastSuccessArchiveTime")
         private Long lastSuccessArchiveTime;
 
-        @NameInMap("SchemaName")
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
         private String schemaName;
 
-        @NameInMap("SpaceSize")
+        @com.aliyun.core.annotation.NameInMap("SpaceSize")
         private Double spaceSize;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private Tables(Builder builder) {
@@ -232,29 +243,35 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeArchiveTableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeArchiveTableListResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("PageIndex")
+        @com.aliyun.core.annotation.NameInMap("PageIndex")
         private Long pageIndex;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Long pageSize;
 
-        @NameInMap("PausedCount")
+        @com.aliyun.core.annotation.NameInMap("PausedCount")
         private Integer pausedCount;
 
-        @NameInMap("RunningCount")
+        @com.aliyun.core.annotation.NameInMap("RunningCount")
         private Integer runningCount;
 
-        @NameInMap("SuccessCount")
+        @com.aliyun.core.annotation.NameInMap("SuccessCount")
         private Integer successCount;
 
-        @NameInMap("Tables")
-        private java.util.List < Tables> tables;
+        @com.aliyun.core.annotation.NameInMap("Tables")
+        private java.util.List<Tables> tables;
 
-        @NameInMap("TobeArchivedConut")
+        @com.aliyun.core.annotation.NameInMap("TobeArchivedConut")
         private Integer tobeArchivedConut;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private Data(Builder builder) {
@@ -314,7 +331,7 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
         /**
          * @return tables
          */
-        public java.util.List < Tables> getTables() {
+        public java.util.List<Tables> getTables() {
             return this.tables;
         }
 
@@ -338,7 +355,7 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
             private Integer pausedCount; 
             private Integer runningCount; 
             private Integer successCount; 
-            private java.util.List < Tables> tables; 
+            private java.util.List<Tables> tables; 
             private Integer tobeArchivedConut; 
             private Long total; 
 
@@ -385,7 +402,7 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
             /**
              * Tables.
              */
-            public Builder tables(java.util.List < Tables> tables) {
+            public Builder tables(java.util.List<Tables> tables) {
                 this.tables = tables;
                 return this;
             }

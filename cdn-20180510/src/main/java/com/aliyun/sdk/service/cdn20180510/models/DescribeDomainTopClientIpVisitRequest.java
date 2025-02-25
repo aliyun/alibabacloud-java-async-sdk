@@ -1,39 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainTopClientIpVisitRequest} extends {@link RequestModel}
  *
  * <p>DescribeDomainTopClientIpVisitRequest</p>
  */
 public class DescribeDomainTopClientIpVisitRequest extends Request {
-    @Query
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("Limit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Limit")
     private String limit;
 
-    @Query
-    @NameInMap("LocationNameEn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LocationNameEn")
     private String locationNameEn;
 
-    @Query
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeDomainTopClientIpVisitRequest(Builder builder) {
@@ -124,10 +124,11 @@ public class DescribeDomainTopClientIpVisitRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name. Separate multiple accelerated domain names with commas (,).
-         * <p>
+         * <p>The accelerated domain name. Separate multiple accelerated domain names with commas (,).</p>
+         * <p>By default, this operation queries client IP addresses for all accelerated domain names.</p>
          * 
-         * By default, this operation queries client IP addresses for all accelerated domain names.
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -136,12 +137,12 @@ public class DescribeDomainTopClientIpVisitRequest extends Request {
         }
 
         /**
-         * The end of the time range to query.
-         * <p>
+         * <p>The end of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The end time must be later than the start time.</p>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         * 
-         * The end time must be later than the start time.
+         * <strong>example:</strong>
+         * <p>2019-10-01T16:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -150,10 +151,11 @@ public class DescribeDomainTopClientIpVisitRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return. Maximum value: 100.
-         * <p>
+         * <p>The maximum number of entries to return. Maximum value: 100.</p>
+         * <p>Default value: 20. The default value specifies that the top 20 IP addresses are returned.</p>
          * 
-         * Default value: 20. The default value specifies that the top 20 IP addresses are returned.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder limit(String limit) {
             this.putQueryParameter("Limit", limit);
@@ -162,10 +164,11 @@ public class DescribeDomainTopClientIpVisitRequest extends Request {
         }
 
         /**
-         * The name of the region. Separate multiple region names with commas (,).
-         * <p>
+         * <p>The name of the region. Separate multiple region names with commas (,).</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/91077.html">DescribeCdnRegionAndIsp</a> operation to query regions.</p>
          * 
-         * You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query regions.
+         * <strong>example:</strong>
+         * <p>beijing</p>
          */
         public Builder locationNameEn(String locationNameEn) {
             this.putQueryParameter("LocationNameEn", locationNameEn);
@@ -174,11 +177,14 @@ public class DescribeDomainTopClientIpVisitRequest extends Request {
         }
 
         /**
-         * The criterion by which you want to sort client IP addresses. Valid values:
-         * <p>
+         * <p>The criterion by which you want to sort client IP addresses. Valid values:</p>
+         * <ul>
+         * <li><strong>traf</strong>: by network traffic. This is the default value.</li>
+         * <li><strong>acc</strong>: by the number of requests.</li>
+         * </ul>
          * 
-         * *   **traf**: by network traffic. This is the default value.
-         * *   **acc**: by the number of requests.
+         * <strong>example:</strong>
+         * <p>traf</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -187,10 +193,11 @@ public class DescribeDomainTopClientIpVisitRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query.
-         * <p>
+         * <p>The beginning of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <strong>example:</strong>
+         * <p>2019-09-30T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

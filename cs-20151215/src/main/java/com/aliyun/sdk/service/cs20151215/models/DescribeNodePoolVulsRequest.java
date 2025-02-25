@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNodePoolVulsRequest} extends {@link RequestModel}
  *
  * <p>DescribeNodePoolVulsRequest</p>
  */
 public class DescribeNodePoolVulsRequest extends Request {
-    @Path
-    @NameInMap("cluster_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("cluster_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("nodepool_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("nodepool_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodepoolId;
 
-    @Query
-    @NameInMap("necessity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("necessity")
     private String necessity;
 
     private DescribeNodePoolVulsRequest(Builder builder) {
@@ -84,7 +89,11 @@ public class DescribeNodePoolVulsRequest extends Request {
         } 
 
         /**
-         * cluster_id.
+         * <p>Cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c17e742cee942410486f237293d66****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -93,7 +102,11 @@ public class DescribeNodePoolVulsRequest extends Request {
         }
 
         /**
-         * nodepool_id.
+         * <p>Node pool ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np38f32fdbc60e4a1e957ffde77846****</p>
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putPathParameter("nodepool_id", nodepoolId);
@@ -102,7 +115,15 @@ public class DescribeNodePoolVulsRequest extends Request {
         }
 
         /**
-         * necessity.
+         * <p>The priority to fix the vulnerability. Separate multiple priorities with commas (,). Valid values:</p>
+         * <ul>
+         * <li><code>asap</code>: high</li>
+         * <li><code>later</code>: medium</li>
+         * <li><code>nntf</code>: low</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>asap</p>
          */
         public Builder necessity(String necessity) {
             this.putQueryParameter("necessity", necessity);

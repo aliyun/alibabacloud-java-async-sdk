@@ -1,23 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveExternalSAMLIdPCertificateRequest} extends {@link RequestModel}
  *
  * <p>RemoveExternalSAMLIdPCertificateRequest</p>
  */
 public class RemoveExternalSAMLIdPCertificateRequest extends Request {
-    @Query
-    @NameInMap("CertificateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertificateId")
     private String certificateId;
 
-    @Query
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
     private RemoveExternalSAMLIdPCertificateRequest(Builder builder) {
@@ -68,10 +68,11 @@ public class RemoveExternalSAMLIdPCertificateRequest extends Request {
         } 
 
         /**
-         * The ID of the certificate.
-         * <p>
+         * <p>The ID of the certificate.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/341629.html">ListExternalSAMLIdPCertificates</a> operation to query the IDs of certificates.</p>
          * 
-         * You can call the [ListExternalSAMLIdPCertificates](~~341629~~) operation to query the IDs of certificates.
+         * <strong>example:</strong>
+         * <p>idp-c-00dt9gnl7fmjaw9c****</p>
          */
         public Builder certificateId(String certificateId) {
             this.putQueryParameter("CertificateId", certificateId);
@@ -80,7 +81,10 @@ public class RemoveExternalSAMLIdPCertificateRequest extends Request {
         }
 
         /**
-         * The ID of the directory.
+         * <p>The ID of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);

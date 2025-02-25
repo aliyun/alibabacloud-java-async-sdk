@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWorkitemsResponseBody} extends {@link TeaModel}
  *
  * <p>ListWorkitemsResponseBody</p>
  */
 public class ListWorkitemsResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMsg")
+    @com.aliyun.core.annotation.NameInMap("errorMsg")
     private String errorMsg;
 
-    @NameInMap("maxResults")
+    @com.aliyun.core.annotation.NameInMap("maxResults")
     private Long maxResults;
 
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("totalCount")
+    @com.aliyun.core.annotation.NameInMap("totalCount")
     private Long totalCount;
 
-    @NameInMap("workitems")
-    private java.util.List < Workitems> workitems;
+    @com.aliyun.core.annotation.NameInMap("workitems")
+    private java.util.List<Workitems> workitems;
 
     private ListWorkitemsResponseBody(Builder builder) {
         this.errorCode = builder.errorCode;
@@ -107,7 +112,7 @@ public class ListWorkitemsResponseBody extends TeaModel {
     /**
      * @return workitems
      */
-    public java.util.List < Workitems> getWorkitems() {
+    public java.util.List<Workitems> getWorkitems() {
         return this.workitems;
     }
 
@@ -119,7 +124,7 @@ public class ListWorkitemsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
-        private java.util.List < Workitems> workitems; 
+        private java.util.List<Workitems> workitems; 
 
         /**
          * errorCode.
@@ -180,7 +185,7 @@ public class ListWorkitemsResponseBody extends TeaModel {
         /**
          * workitems.
          */
-        public Builder workitems(java.util.List < Workitems> workitems) {
+        public Builder workitems(java.util.List<Workitems> workitems) {
             this.workitems = workitems;
             return this;
         }
@@ -191,71 +196,77 @@ public class ListWorkitemsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListWorkitemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkitemsResponseBody</p>
+     */
     public static class Workitems extends TeaModel {
-        @NameInMap("assignedTo")
+        @com.aliyun.core.annotation.NameInMap("assignedTo")
         private String assignedTo;
 
-        @NameInMap("categoryIdentifier")
+        @com.aliyun.core.annotation.NameInMap("categoryIdentifier")
         private String categoryIdentifier;
 
-        @NameInMap("creator")
+        @com.aliyun.core.annotation.NameInMap("creator")
         private String creator;
 
-        @NameInMap("document")
+        @com.aliyun.core.annotation.NameInMap("document")
         private String document;
 
-        @NameInMap("finishTime")
+        @com.aliyun.core.annotation.NameInMap("finishTime")
         private Long finishTime;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private Long gmtModified;
 
-        @NameInMap("identifier")
+        @com.aliyun.core.annotation.NameInMap("identifier")
         private String identifier;
 
-        @NameInMap("logicalStatus")
+        @com.aliyun.core.annotation.NameInMap("logicalStatus")
         private String logicalStatus;
 
-        @NameInMap("modifier")
+        @com.aliyun.core.annotation.NameInMap("modifier")
         private String modifier;
 
-        @NameInMap("parentIdentifier")
+        @com.aliyun.core.annotation.NameInMap("parentIdentifier")
         private String parentIdentifier;
 
-        @NameInMap("serialNumber")
+        @com.aliyun.core.annotation.NameInMap("serialNumber")
         private String serialNumber;
 
-        @NameInMap("spaceIdentifier")
+        @com.aliyun.core.annotation.NameInMap("spaceIdentifier")
         private String spaceIdentifier;
 
-        @NameInMap("spaceName")
+        @com.aliyun.core.annotation.NameInMap("spaceName")
         private String spaceName;
 
-        @NameInMap("spaceType")
+        @com.aliyun.core.annotation.NameInMap("spaceType")
         private String spaceType;
 
-        @NameInMap("sprintIdentifier")
+        @com.aliyun.core.annotation.NameInMap("sprintIdentifier")
         private String sprintIdentifier;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("statusIdentifier")
+        @com.aliyun.core.annotation.NameInMap("statusIdentifier")
         private String statusIdentifier;
 
-        @NameInMap("statusStageIdentifier")
+        @com.aliyun.core.annotation.NameInMap("statusStageIdentifier")
         private String statusStageIdentifier;
 
-        @NameInMap("subject")
+        @com.aliyun.core.annotation.NameInMap("subject")
         private String subject;
 
-        @NameInMap("updateStatusAt")
+        @com.aliyun.core.annotation.NameInMap("updateStatusAt")
         private Long updateStatusAt;
 
-        @NameInMap("workitemTypeIdentifier")
+        @com.aliyun.core.annotation.NameInMap("workitemTypeIdentifier")
         private String workitemTypeIdentifier;
 
         private Workitems(Builder builder) {

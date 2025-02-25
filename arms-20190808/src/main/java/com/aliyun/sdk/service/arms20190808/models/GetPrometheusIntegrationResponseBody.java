@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPrometheusIntegrationResponseBody} extends {@link TeaModel}
  *
  * <p>GetPrometheusIntegrationResponseBody</p>
  */
 public class GetPrometheusIntegrationResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetPrometheusIntegrationResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.
+         * <p>The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +90,7 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
         }
 
         /**
-         * The struct returned.
+         * <p>The returned struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +98,10 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>message</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +109,10 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9BEF2832-9D95-5E3E-9B10-74887CA17B94</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,56 +125,62 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPrometheusIntegrationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPrometheusIntegrationResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CanDelete")
+        @com.aliyun.core.annotation.NameInMap("CanDelete")
         private Boolean canDelete;
 
-        @NameInMap("CanEditor")
+        @com.aliyun.core.annotation.NameInMap("CanEditor")
         private Boolean canEditor;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ContainerName")
+        @com.aliyun.core.annotation.NameInMap("ContainerName")
         private String containerName;
 
-        @NameInMap("Describe")
+        @com.aliyun.core.annotation.NameInMap("Describe")
         private String describe;
 
-        @NameInMap("ExporterType")
+        @com.aliyun.core.annotation.NameInMap("ExporterType")
         private String exporterType;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("IntegrationType")
+        @com.aliyun.core.annotation.NameInMap("IntegrationType")
         private String integrationType;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("NeedUpgrade")
+        @com.aliyun.core.annotation.NameInMap("NeedUpgrade")
         private Boolean needUpgrade;
 
-        @NameInMap("Param")
+        @com.aliyun.core.annotation.NameInMap("Param")
         private String param;
 
-        @NameInMap("ShowDescribe")
+        @com.aliyun.core.annotation.NameInMap("ShowDescribe")
         private Boolean showDescribe;
 
-        @NameInMap("ShowLog")
+        @com.aliyun.core.annotation.NameInMap("ShowLog")
         private String showLog;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Target")
+        @com.aliyun.core.annotation.NameInMap("Target")
         private String target;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private Data(Builder builder) {
@@ -330,7 +350,10 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * Indicates whether the exporter can be deleted.
+             * <p>Indicates whether the exporter can be deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder canDelete(Boolean canDelete) {
                 this.canDelete = canDelete;
@@ -338,7 +361,10 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the exporter can be modified.
+             * <p>Indicates whether the exporter can be modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder canEditor(Boolean canEditor) {
                 this.canEditor = canEditor;
@@ -346,7 +372,10 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Prometheus instance.
+             * <p>The ID of the Prometheus instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c589a1b8db05c4561aefbb898ca8fb1cf</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -354,7 +383,10 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The container name.
+             * <p>The container name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kafka-exporter-1</p>
              */
             public Builder containerName(String containerName) {
                 this.containerName = containerName;
@@ -362,7 +394,10 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the exporter.
+             * <p>The description of the exporter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;{}&quot;</p>
              */
             public Builder describe(String describe) {
                 this.describe = describe;
@@ -370,7 +405,10 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the exporter.
+             * <p>The type of the exporter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tidb-exporter</p>
              */
             public Builder exporterType(String exporterType) {
                 this.exporterType = exporterType;
@@ -378,7 +416,10 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The exporter ID.
+             * <p>The ID of the exporter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2893</p>
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -386,7 +427,10 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the exporter.
+             * <p>The name of the exporter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lpd-skyeye</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -394,7 +438,10 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the integration.
+             * <p>The integration type. Valid values: kafka, mysql, redis, snmp, emr, nubela, and tidb.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tidb</p>
              */
             public Builder integrationType(String integrationType) {
                 this.integrationType = integrationType;
@@ -402,7 +449,10 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>arms-prom</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -410,7 +460,10 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether an upgrade is required.
+             * <p>Indicates whether an upgrade is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder needUpgrade(Boolean needUpgrade) {
                 this.needUpgrade = needUpgrade;
@@ -418,7 +471,18 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of the exporter. The value is a JSON string.
+             * <p>The parameters of the exporter. Format: JSON string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *       &quot;port&quot;: &quot;5554&quot;,
+             *       &quot;name&quot;: &quot;kafka-test12&quot;,
+             *       &quot;kafka_instance&quot;: &quot;kafka-test&quot;,
+             *       &quot;__label_value&quot;: &quot;kafka-test&quot;,
+             *       &quot;scrape_interval&quot;: 33,
+             *       &quot;metrics_path&quot;: &quot;/metrics&quot;,
+             *       &quot;__label_key&quot;: &quot;kafka-test&quot;
+             * }</p>
              */
             public Builder param(String param) {
                 this.param = param;
@@ -426,7 +490,10 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the description is displayed.
+             * <p>Indicates whether the description is displayed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder showDescribe(Boolean showDescribe) {
                 this.showDescribe = showDescribe;
@@ -434,7 +501,10 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the exporter logs are displayed.
+             * <p>Indicates whether the exporter logs are displayed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder showLog(String showLog) {
                 this.showLog = showLog;
@@ -442,7 +512,10 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the exporter.
+             * <p>The status of the exporter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>installed</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -450,7 +523,10 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The monitored IP address.
+             * <p>The monitored IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.0.0.1:3422</p>
              */
             public Builder target(String target) {
                 this.target = target;
@@ -458,7 +534,10 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The version information.
+             * <p>The version information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder version(String version) {
                 this.version = version;

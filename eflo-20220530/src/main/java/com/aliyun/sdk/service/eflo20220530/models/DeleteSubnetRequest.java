@@ -1,31 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eflo20220530.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSubnetRequest} extends {@link RequestModel}
  *
  * <p>DeleteSubnetRequest</p>
  */
 public class DeleteSubnetRequest extends Request {
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Body
-    @NameInMap("SubnetId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SubnetId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subnetId;
 
-    @Body
-    @NameInMap("VpdId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VpdId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpdId;
 
-    @Body
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String zoneId;
 
     private DeleteSubnetRequest(Builder builder) {
@@ -96,7 +105,11 @@ public class DeleteSubnetRequest extends Request {
         } 
 
         /**
-         * 地域
+         * <p>The region ID of the disk.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-wulanchabu</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -105,7 +118,11 @@ public class DeleteSubnetRequest extends Request {
         }
 
         /**
-         * Subnet ID
+         * <p>Lingjun subnet ID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>subnet-f3zfzmnc</p>
          */
         public Builder subnetId(String subnetId) {
             this.putBodyParameter("SubnetId", subnetId);
@@ -114,7 +131,11 @@ public class DeleteSubnetRequest extends Request {
         }
 
         /**
-         * 所属Vpd ID
+         * <p>Lingjun CIDR block ID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpd-iv2zm1qf</p>
          */
         public Builder vpdId(String vpdId) {
             this.putBodyParameter("VpdId", vpdId);
@@ -123,7 +144,11 @@ public class DeleteSubnetRequest extends Request {
         }
 
         /**
-         * 可用区
+         * <p>Zone</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-wulanchabu-b</p>
          */
         public Builder zoneId(String zoneId) {
             this.putBodyParameter("ZoneId", zoneId);

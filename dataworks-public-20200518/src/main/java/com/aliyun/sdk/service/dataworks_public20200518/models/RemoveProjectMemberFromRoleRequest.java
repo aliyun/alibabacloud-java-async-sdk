@@ -1,35 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveProjectMemberFromRoleRequest} extends {@link RequestModel}
  *
  * <p>RemoveProjectMemberFromRoleRequest</p>
  */
 public class RemoveProjectMemberFromRoleRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ProjectId")
-    @Validation(required = true, maximum = 10000000)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 10000000)
     private Long projectId;
 
-    @Query
-    @NameInMap("RoleCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String roleCode;
 
-    @Query
-    @NameInMap("UserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
     private RemoveProjectMemberFromRoleRequest(Builder builder) {
@@ -100,7 +104,7 @@ public class RemoveProjectMemberFromRoleRequest extends Request {
         } 
 
         /**
-         * The ID of the region where the DataWorks workspace resides.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -109,7 +113,11 @@ public class RemoveProjectMemberFromRoleRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace.
+         * <p>The DataWorks workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -118,20 +126,22 @@ public class RemoveProjectMemberFromRoleRequest extends Request {
         }
 
         /**
-         * The role in the DataWorks workspace. You can call the ListProjectRoles operation to query codes of the roles in the workspace.
-         * <p>
+         * <p>The code of the role in the DataWorks workspace. You can call the ListProjectRoles operation to query the codes of all roles in a DataWorks workspace. Valid values:</p>
+         * <ul>
+         * <li>role_project_owner: workspace owner</li>
+         * <li>role_project_admin: workspace administrator</li>
+         * <li>role_project_dev: developer</li>
+         * <li>role_project_pe: O&amp;M engineer</li>
+         * <li>role_project_deploy: deployment expert</li>
+         * <li>role_project_guest: visitor</li>
+         * <li>role_project_security: security administrator</li>
+         * <li>role_project_tester: experiencer</li>
+         * <li>role_project_erd: model designer</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   role_project_owner: workspace owner
-         * *   role_project_admin: workspace administrator
-         * *   role_project_dev: developer
-         * *   role_project_pe: O\&M engineer
-         * *   role_project_deploy: deployment expert
-         * *   role_project_guest: visitor
-         * *   role_project_security: security administrator
-         * *   role_project_tester: experiencer
-         * *   role_project_erd: model designer
+         * <strong>example:</strong>
+         * <p>role_project_guest</p>
          */
         public Builder roleCode(String roleCode) {
             this.putQueryParameter("RoleCode", roleCode);
@@ -140,7 +150,11 @@ public class RemoveProjectMemberFromRoleRequest extends Request {
         }
 
         /**
-         * The ID of the user.
+         * <p>The user ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

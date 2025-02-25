@@ -1,73 +1,78 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDedicatedHostAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyDedicatedHostAttributeRequest</p>
  */
 public class ModifyDedicatedHostAttributeRequest extends Request {
-    @Query
-    @NameInMap("NetworkAttributes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkAttributes")
     private NetworkAttributes networkAttributes;
 
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("ActionOnMaintenance")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ActionOnMaintenance")
     private String actionOnMaintenance;
 
-    @Query
-    @NameInMap("AutoPlacement")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPlacement")
     private String autoPlacement;
 
-    @Query
-    @NameInMap("CpuOverCommitRatio")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CpuOverCommitRatio")
     private Float cpuOverCommitRatio;
 
-    @Query
-    @NameInMap("DedicatedHostClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DedicatedHostClusterId")
     private String dedicatedHostClusterId;
 
-    @Query
-    @NameInMap("DedicatedHostId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DedicatedHostId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dedicatedHostId;
 
-    @Query
-    @NameInMap("DedicatedHostName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DedicatedHostName")
     private String dedicatedHostName;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyDedicatedHostAttributeRequest(Builder builder) {
@@ -256,15 +261,16 @@ public class ModifyDedicatedHostAttributeRequest extends Request {
         }
 
         /**
-         * The policy for migrating the instances deployed on the dedicated host when the dedicated host fails or needs to be repaired online. Valid values:
-         * <p>
+         * <p>The policy for migrating the instances deployed on the dedicated host when the dedicated host fails or needs to be repaired online. Valid values:</p>
+         * <ul>
+         * <li>Migrate: The instances are migrated to another physical machine and then restarted.</li>
+         * <li>Stop: The instances are stopped. If the dedicated host cannot be repaired, the instances are migrated to another physical machine and then restarted.</li>
+         * </ul>
+         * <p>If the dedicated host has cloud disks attached, the default value is Migrate.</p>
+         * <p>If the dedicated host has local disks attached, the default value is Stop.</p>
          * 
-         * *   Migrate: The instances are migrated to another physical machine and then restarted.
-         * *   Stop: The instances are stopped. If the dedicated host cannot be repaired, the instances are migrated to another physical machine and then restarted.
-         * 
-         * If the dedicated host has cloud disks attached, the default value is Migrate.
-         * 
-         * If the dedicated host has local disks attached, the default value is Stop.
+         * <strong>example:</strong>
+         * <p>Migrate</p>
          */
         public Builder actionOnMaintenance(String actionOnMaintenance) {
             this.putQueryParameter("ActionOnMaintenance", actionOnMaintenance);
@@ -273,13 +279,15 @@ public class ModifyDedicatedHostAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to add the dedicated host to the resource pool for automatic deployment. If you do not specify the **DedicatedHostId** parameter when you create an instance on a dedicated host, Alibaba Cloud automatically selects a dedicated host from the resource pool to host the instance. Valid values:
-         * <p>
+         * <p>Specifies whether to add the dedicated host to the resource pool for automatic deployment. If you do not specify <strong>DedicatedHostId</strong> when you create an instance on a dedicated host, Alibaba Cloud automatically selects a dedicated host from the resource pool to host the instance. Valid values:</p>
+         * <ul>
+         * <li>on: adds the dedicated host to the resource pool for automatic deployment.</li>
+         * <li>off: does not add the dedicated host to the resource pool for automatic deployment.</li>
+         * </ul>
+         * <p>For information about automatic deployment, see <a href="https://help.aliyun.com/document_detail/118938.html">Functions and features</a>.</p>
          * 
-         * *   on: adds the dedicated host to the resource pool for automatic deployment.
-         * *   off: does not add the dedicated host to the resource pool for automatic deployment.
-         * 
-         * For information about automatic deployment, see [Features](~~118938~~).
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder autoPlacement(String autoPlacement) {
             this.putQueryParameter("AutoPlacement", autoPlacement);
@@ -288,10 +296,11 @@ public class ModifyDedicatedHostAttributeRequest extends Request {
         }
 
         /**
-         * The CPU overcommit ratio. You can configure CPU overcommit ratios only for the following dedicated host types: g6s, c6s, and r6s. Valid values: 1 to 5.
-         * <p>
+         * <p>The CPU overcommit ratio. You can configure CPU overcommit ratios only for the following dedicated host types: g6s, c6s, and r6s. Valid values: 1 to 5.</p>
+         * <p>The CPU overcommit ratio affects the number of available vCPUs on a dedicated host. You can use the following formula to calculate the number of available vCPUs on a dedicated host: Number of available vCPUs = Number of physical CPU cores × 2 × CPU overcommit ratio. For example, the number of physical CPU cores on each g6s dedicated host is 52. If you change the CPU overcommit ratio of a g6s dedicated host to 4, the number of available vCPUs on the dedicated host is 416. For scenarios that have minimal requirements for CPU stability or where CPU load is not heavy, such as development and test environments, you can increase the number of available vCPUs on a dedicated host by increasing the CPU overcommit ratio. This allows you to deploy more ECS instances of the same specifications on the dedicated host and reduce the unit deployment cost.</p>
          * 
-         * The CPU overcommit ratio affects the number of available vCPUs on a dedicated host. You can use the following formula to calculate the number of available vCPUs on a dedicated host: Number of available vCPUs = Number of physical CPU cores × 2 × CPU overcommit ratio. For example, the number of physical CPU cores on each g6s dedicated host is 52. If you change the CPU overcommit ratio of a g6s dedicated host to 4, the number of available vCPUs on the dedicated host is 416. For scenarios that have minimal requirements for CPU stability or where CPU load is not heavy, such as development and test environments, you can increase the number of available vCPUs on a dedicated host by increasing the CPU overcommit ratio. This way, you can deploy more ECS instances of the same specifications on the dedicated host and reduce the unit deployment cost.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder cpuOverCommitRatio(Float cpuOverCommitRatio) {
             this.putQueryParameter("CpuOverCommitRatio", cpuOverCommitRatio);
@@ -300,7 +309,10 @@ public class ModifyDedicatedHostAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the dedicated host cluster to which the dedicated host belongs.
+         * <p>The ID of the dedicated host cluster to which to assign the dedicated host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc-bp165p6xk2tlw61e****</p>
          */
         public Builder dedicatedHostClusterId(String dedicatedHostClusterId) {
             this.putQueryParameter("DedicatedHostClusterId", dedicatedHostClusterId);
@@ -309,7 +321,11 @@ public class ModifyDedicatedHostAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the dedicated host.
+         * <p>The ID of the dedicated host.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dh-bp165p6xk2tlw61e****</p>
          */
         public Builder dedicatedHostId(String dedicatedHostId) {
             this.putQueryParameter("DedicatedHostId", dedicatedHostId);
@@ -318,7 +334,10 @@ public class ModifyDedicatedHostAttributeRequest extends Request {
         }
 
         /**
-         * The name of the dedicated host. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. The name can contain digits, letters, colons (:), underscores (\_), and hyphens (-).
+         * <p>The name of the dedicated host. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDedicatedHostName</p>
          */
         public Builder dedicatedHostName(String dedicatedHostName) {
             this.putQueryParameter("DedicatedHostName", dedicatedHostName);
@@ -327,7 +346,10 @@ public class ModifyDedicatedHostAttributeRequest extends Request {
         }
 
         /**
-         * The description of the dedicated host. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+         * <p>The description of the dedicated host. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -354,7 +376,11 @@ public class ModifyDedicatedHostAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the dedicated host. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The ID of the region where the dedicated host resides. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -387,11 +413,17 @@ public class ModifyDedicatedHostAttributeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyDedicatedHostAttributeRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyDedicatedHostAttributeRequest</p>
+     */
     public static class NetworkAttributes extends TeaModel {
-        @NameInMap("SlbUdpTimeout")
+        @com.aliyun.core.annotation.NameInMap("SlbUdpTimeout")
         private Integer slbUdpTimeout;
 
-        @NameInMap("UdpTimeout")
+        @com.aliyun.core.annotation.NameInMap("UdpTimeout")
         private Integer udpTimeout;
 
         private NetworkAttributes(Builder builder) {
@@ -426,7 +458,10 @@ public class ModifyDedicatedHostAttributeRequest extends Request {
             private Integer udpTimeout; 
 
             /**
-             * The timeout period for a UDP session between a Server Load Balancer (SLB) instance and the dedicated host. Unit: seconds. Valid values: 15 to 310.
+             * <p>The timeout period for a UDP session between a Server Load Balancer (SLB) instance and the dedicated host. Unit: seconds. Valid values: 15 to 310.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder slbUdpTimeout(Integer slbUdpTimeout) {
                 this.slbUdpTimeout = slbUdpTimeout;
@@ -434,7 +469,10 @@ public class ModifyDedicatedHostAttributeRequest extends Request {
             }
 
             /**
-             * The timeout period for a UDP session between a user and an Alibaba Cloud service on the dedicated host. Unit: seconds. Valid values: 15 to 310.
+             * <p>The timeout period for a UDP session between a user and an Alibaba Cloud service on the dedicated host. Unit: seconds. Valid values: 15 to 310.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder udpTimeout(Integer udpTimeout) {
                 this.udpTimeout = udpTimeout;

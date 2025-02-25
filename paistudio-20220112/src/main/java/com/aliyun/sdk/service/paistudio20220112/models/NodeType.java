@@ -1,39 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link NodeType} extends {@link TeaModel}
  *
  * <p>NodeType</p>
  */
 public class NodeType extends TeaModel {
-    @NameInMap("AcceleratorType")
+    @com.aliyun.core.annotation.NameInMap("AcceleratorType")
     private String acceleratorType;
 
-    @NameInMap("CPU")
+    @com.aliyun.core.annotation.NameInMap("CPU")
     private String CPU;
 
-    @NameInMap("GPU")
+    @com.aliyun.core.annotation.NameInMap("GPU")
     private String GPU;
 
-    @NameInMap("GPUType")
+    @com.aliyun.core.annotation.NameInMap("GPUMemory")
+    private String GPUMemory;
+
+    @com.aliyun.core.annotation.NameInMap("GPUType")
     private String GPUType;
 
-    @NameInMap("Memory")
+    @com.aliyun.core.annotation.NameInMap("Memory")
     private String memory;
 
-    @NameInMap("NodeType")
+    @com.aliyun.core.annotation.NameInMap("NodeType")
     private String nodeType;
 
     private NodeType(Builder builder) {
         this.acceleratorType = builder.acceleratorType;
         this.CPU = builder.CPU;
         this.GPU = builder.GPU;
+        this.GPUMemory = builder.GPUMemory;
         this.GPUType = builder.GPUType;
         this.memory = builder.memory;
         this.nodeType = builder.nodeType;
@@ -69,6 +78,13 @@ public class NodeType extends TeaModel {
     }
 
     /**
+     * @return GPUMemory
+     */
+    public String getGPUMemory() {
+        return this.GPUMemory;
+    }
+
+    /**
      * @return GPUType
      */
     public String getGPUType() {
@@ -93,6 +109,7 @@ public class NodeType extends TeaModel {
         private String acceleratorType; 
         private String CPU; 
         private String GPU; 
+        private String GPUMemory; 
         private String GPUType; 
         private String memory; 
         private String nodeType; 
@@ -118,6 +135,14 @@ public class NodeType extends TeaModel {
          */
         public Builder GPU(String GPU) {
             this.GPU = GPU;
+            return this;
+        }
+
+        /**
+         * GPUMemory.
+         */
+        public Builder GPUMemory(String GPUMemory) {
+            this.GPUMemory = GPUMemory;
             return this;
         }
 

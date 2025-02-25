@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCustomDomainInput} extends {@link TeaModel}
  *
  * <p>CreateCustomDomainInput</p>
  */
 public class CreateCustomDomainInput extends TeaModel {
-    @NameInMap("applicationName")
+    @com.aliyun.core.annotation.NameInMap("applicationName")
     private String applicationName;
 
-    @NameInMap("certConfig")
+    @com.aliyun.core.annotation.NameInMap("certConfig")
     private CertConfig certConfig;
 
-    @NameInMap("domainName")
-    @Validation(maxLength = 256, minLength = 1)
+    @com.aliyun.core.annotation.NameInMap("domainName")
+    @com.aliyun.core.annotation.Validation(maxLength = 256, minLength = 1)
     private String domainName;
 
-    @NameInMap("keepFullPath")
+    @com.aliyun.core.annotation.NameInMap("keepFullPath")
     private Boolean keepFullPath;
 
-    @NameInMap("namespaceID")
+    @com.aliyun.core.annotation.NameInMap("namespaceID")
     private String namespaceID;
 
-    @NameInMap("protocol")
+    @com.aliyun.core.annotation.NameInMap("protocol")
     private String protocol;
 
-    @NameInMap("tlsConfig")
+    @com.aliyun.core.annotation.NameInMap("tlsConfig")
     private TLSConfig tlsConfig;
 
-    @NameInMap("wafConfig")
+    @com.aliyun.core.annotation.NameInMap("wafConfig")
     private WAFConfig wafConfig;
 
     private CreateCustomDomainInput(Builder builder) {

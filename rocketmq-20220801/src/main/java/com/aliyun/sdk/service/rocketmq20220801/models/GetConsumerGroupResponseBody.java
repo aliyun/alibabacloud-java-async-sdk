@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetConsumerGroupResponseBody} extends {@link TeaModel}
  *
  * <p>GetConsumerGroupResponseBody</p>
  */
 public class GetConsumerGroupResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("dynamicCode")
+    @com.aliyun.core.annotation.NameInMap("dynamicCode")
     private String dynamicCode;
 
-    @NameInMap("dynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("dynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("httpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("httpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private GetConsumerGroupResponseBody(Builder builder) {
@@ -122,7 +127,10 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidConsumerGroupId</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,7 +138,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The result data that is returned.
+         * <p>The result data that is returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +146,10 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic error code.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ConsumerGroupId</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -146,7 +157,10 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic error message.
+         * <p>The dynamic error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>consumerGroupId</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -154,7 +168,10 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -162,7 +179,10 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter consumerGroupId is invalid.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -170,7 +190,10 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.
+         * <p>The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C7F94090-3358-506A-97DC-34BC803C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +201,10 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful.
+         * <p>Indicates whether the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -191,14 +217,20 @@ public class GetConsumerGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetConsumerGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConsumerGroupResponseBody</p>
+     */
     public static class ConsumeRetryPolicy extends TeaModel {
-        @NameInMap("deadLetterTargetTopic")
+        @com.aliyun.core.annotation.NameInMap("deadLetterTargetTopic")
         private String deadLetterTargetTopic;
 
-        @NameInMap("maxRetryTimes")
+        @com.aliyun.core.annotation.NameInMap("maxRetryTimes")
         private Integer maxRetryTimes;
 
-        @NameInMap("retryPolicy")
+        @com.aliyun.core.annotation.NameInMap("retryPolicy")
         private String retryPolicy;
 
         private ConsumeRetryPolicy(Builder builder) {
@@ -242,10 +274,11 @@ public class GetConsumerGroupResponseBody extends TeaModel {
             private String retryPolicy; 
 
             /**
-             * The dead-letter topic.
-             * <p>
+             * <p>The dead-letter topic.</p>
+             * <p>If a consumer still fails to consume a message after the message is retried for a specified number of times, the message is delivered to a dead-letter topic for subsequent business recovery or troubleshooting. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Consumption retry and dead-letter messages</a>.</p>
              * 
-             * If a consumer still fails to consume a message after the message is retried for a specified number of times, the message is delivered to a dead-letter topic for subsequent business recovery or troubleshooting. For more information, see [Consumption retry and dead-letter messages](~~440356~~).
+             * <strong>example:</strong>
+             * <p>DLQ_mqtest</p>
              */
             public Builder deadLetterTargetTopic(String deadLetterTargetTopic) {
                 this.deadLetterTargetTopic = deadLetterTargetTopic;
@@ -253,7 +286,10 @@ public class GetConsumerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of retries.
+             * <p>The maximum number of retries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder maxRetryTimes(Integer maxRetryTimes) {
                 this.maxRetryTimes = maxRetryTimes;
@@ -261,38 +297,35 @@ public class GetConsumerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The retry policy.
-             * <p>
+             * <p>The retry policy.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>FixedRetryPolicy</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <p>:</p>
+             * <!-- -->
              * 
-             * *   FixedRetryPolicy
+             * <p>Failed messages are retried at a fixed interval</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <p>.</p>
+             * </li>
+             * <li><p>DefaultRetryPolicy</p>
+             * <!-- -->
              * 
-             *     :
+             * <p>:</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <p>Failed messages are retried at incremental intervals as the number of retries increases</p>
+             * <!-- -->
              * 
-             *     Failed messages are retried at a fixed interval
+             * <p>.</p>
+             * </li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             *     .
-             * 
-             * *   DefaultRetryPolicy
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     Failed messages are retried at incremental intervals as the number of retries increases
-             * 
-             *     <!-- -->
-             * 
-             *     .
+             * <strong>example:</strong>
+             * <p>DefaultRetryPolicy</p>
              */
             public Builder retryPolicy(String retryPolicy) {
                 this.retryPolicy = retryPolicy;
@@ -306,32 +339,41 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetConsumerGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConsumerGroupResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("consumeRetryPolicy")
+        @com.aliyun.core.annotation.NameInMap("consumeRetryPolicy")
         private ConsumeRetryPolicy consumeRetryPolicy;
 
-        @NameInMap("consumerGroupId")
+        @com.aliyun.core.annotation.NameInMap("consumerGroupId")
         private String consumerGroupId;
 
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
 
-        @NameInMap("deliveryOrderType")
+        @com.aliyun.core.annotation.NameInMap("deliveryOrderType")
         private String deliveryOrderType;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
-        @NameInMap("regionId")
+        @com.aliyun.core.annotation.NameInMap("maxReceiveTps")
+        private Long maxReceiveTps;
+
+        @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
 
-        @NameInMap("remark")
+        @com.aliyun.core.annotation.NameInMap("remark")
         private String remark;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("updateTime")
+        @com.aliyun.core.annotation.NameInMap("updateTime")
         private String updateTime;
 
         private Data(Builder builder) {
@@ -340,6 +382,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.deliveryOrderType = builder.deliveryOrderType;
             this.instanceId = builder.instanceId;
+            this.maxReceiveTps = builder.maxReceiveTps;
             this.regionId = builder.regionId;
             this.remark = builder.remark;
             this.status = builder.status;
@@ -390,6 +433,13 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxReceiveTps
+         */
+        public Long getMaxReceiveTps() {
+            return this.maxReceiveTps;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -423,13 +473,14 @@ public class GetConsumerGroupResponseBody extends TeaModel {
             private String createTime; 
             private String deliveryOrderType; 
             private String instanceId; 
+            private Long maxReceiveTps; 
             private String regionId; 
             private String remark; 
             private String status; 
             private String updateTime; 
 
             /**
-             * The consumption retry policy that you want to configure for the consumer group. For more information, see [Consumption retry](~~440356~~).
+             * <p>The consumption retry policy that you want to configure for the consumer group. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Consumption retry</a>.</p>
              */
             public Builder consumeRetryPolicy(ConsumeRetryPolicy consumeRetryPolicy) {
                 this.consumeRetryPolicy = consumeRetryPolicy;
@@ -437,7 +488,10 @@ public class GetConsumerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the consumer group.
+             * <p>The ID of the consumer group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CID-TEST</p>
              */
             public Builder consumerGroupId(String consumerGroupId) {
                 this.consumerGroupId = consumerGroupId;
@@ -445,7 +499,10 @@ public class GetConsumerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the consumer group was created.
+             * <p>The time when the consumer group was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-01 20:05:50</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -453,34 +510,30 @@ public class GetConsumerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The message delivery order of the consumer group.
-             * <p>
+             * <p>The message delivery order of the consumer group.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>Concurrently</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <p>:</p>
+             * <!-- -->
              * 
-             * *   Concurrently
+             * <p>concurrent delivery</p>
+             * <!-- -->
+             * </li>
+             * <li><p>Orderly</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <p>:</p>
+             * <!-- -->
              * 
-             *     :
+             * <p>ordered delivery</p>
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             *     concurrent delivery
-             * 
-             *     <!-- -->
-             * 
-             * *   Orderly
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     ordered delivery
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>Concurrently</p>
              */
             public Builder deliveryOrderType(String deliveryOrderType) {
                 this.deliveryOrderType = deliveryOrderType;
@@ -488,7 +541,10 @@ public class GetConsumerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rmq-cn-7e22ody****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -496,7 +552,18 @@ public class GetConsumerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the instance resides.
+             * maxReceiveTps.
+             */
+            public Builder maxReceiveTps(Long maxReceiveTps) {
+                this.maxReceiveTps = maxReceiveTps;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the region in which the instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -504,7 +571,10 @@ public class GetConsumerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks on the consumer group.
+             * <p>The remarks on the consumer group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is the remark for test.</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -512,38 +582,35 @@ public class GetConsumerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the consumer group.
-             * <p>
+             * <p>The state of the consumer group.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>RUNNING</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <p>: The consumer group is</p>
+             * <!-- -->
              * 
-             * *   RUNNING
+             * <p>running</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <p>.</p>
+             * </li>
+             * <li><p>CREATING</p>
+             * <!-- -->
              * 
-             *     : The consumer group is
+             * <p>: The consumer group is</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <p>being created</p>
+             * <!-- -->
              * 
-             *     running
+             * <p>.</p>
+             * </li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             *     .
-             * 
-             * *   CREATING
-             * 
-             *     <!-- -->
-             * 
-             *     : The consumer group is
-             * 
-             *     <!-- -->
-             * 
-             *     being created
-             * 
-             *     <!-- -->
-             * 
-             *     .
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -551,7 +618,10 @@ public class GetConsumerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the consumer group was last updated.
+             * <p>The time when the consumer group was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-01 20:05:50</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

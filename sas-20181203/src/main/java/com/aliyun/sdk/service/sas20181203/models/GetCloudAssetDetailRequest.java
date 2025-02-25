@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCloudAssetDetailRequest} extends {@link RequestModel}
  *
  * <p>GetCloudAssetDetailRequest</p>
  */
 public class GetCloudAssetDetailRequest extends Request {
-    @Query
-    @NameInMap("AssetSubType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssetSubType")
     private Integer assetSubType;
 
-    @Query
-    @NameInMap("AssetType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssetType")
     private Integer assetType;
 
-    @Query
-    @NameInMap("CloudAssetInstances")
-    private java.util.List < CloudAssetInstances> cloudAssetInstances;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CloudAssetInstances")
+    private java.util.List<CloudAssetInstances> cloudAssetInstances;
 
-    @Query
-    @NameInMap("Vendor")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Vendor")
     private Integer vendor;
 
     private GetCloudAssetDetailRequest(Builder builder) {
@@ -66,7 +71,7 @@ public class GetCloudAssetDetailRequest extends Request {
     /**
      * @return cloudAssetInstances
      */
-    public java.util.List < CloudAssetInstances> getCloudAssetInstances() {
+    public java.util.List<CloudAssetInstances> getCloudAssetInstances() {
         return this.cloudAssetInstances;
     }
 
@@ -80,7 +85,7 @@ public class GetCloudAssetDetailRequest extends Request {
     public static final class Builder extends Request.Builder<GetCloudAssetDetailRequest, Builder> {
         private Integer assetSubType; 
         private Integer assetType; 
-        private java.util.List < CloudAssetInstances> cloudAssetInstances; 
+        private java.util.List<CloudAssetInstances> cloudAssetInstances; 
         private Integer vendor; 
 
         private Builder() {
@@ -96,7 +101,10 @@ public class GetCloudAssetDetailRequest extends Request {
         } 
 
         /**
-         * The subtype of the cloud service.
+         * <p>The subtype of the cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder assetSubType(Integer assetSubType) {
             this.putQueryParameter("AssetSubType", assetSubType);
@@ -105,34 +113,37 @@ public class GetCloudAssetDetailRequest extends Request {
         }
 
         /**
-         * The type of the cloud asset. Valid values:
-         * <p>
+         * <p>The type of the cloud asset. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Elastic Compute Service (ECS).</li>
+         * <li><strong>1</strong>: Server Load Balancer (SLB).</li>
+         * <li><strong>3</strong>: ApsaraDB RDS.</li>
+         * <li><strong>4</strong>: ApsaraDB for MongoDB.</li>
+         * <li><strong>5</strong>: ApsaraDB for Redis.</li>
+         * <li><strong>6</strong>: Container Registry.</li>
+         * <li><strong>8</strong>: Container Service for Kubernetes.</li>
+         * <li><strong>9</strong>: Virtual Private Cloud (VPC).</li>
+         * <li><strong>11</strong>: ActionTrail.</li>
+         * <li><strong>12</strong>: Alibaba Cloud CDN (CDN).</li>
+         * <li><strong>13</strong>: Certificate Management Service.</li>
+         * <li><strong>14</strong>: Apsara Devops.</li>
+         * <li><strong>15</strong>: Resource Access Management (RAM).</li>
+         * <li><strong>16</strong>: Anti-DDoS.</li>
+         * <li><strong>17</strong>: Web Application Firewall (WAF).</li>
+         * <li><strong>18</strong>: Object Storage Service (OSS).</li>
+         * <li><strong>19</strong>: PolarDB.</li>
+         * <li><strong>20</strong>: ApsaraDB RDS for PostgreSQL.</li>
+         * <li><strong>21</strong>: Microservices Engine (MSE).</li>
+         * <li><strong>22</strong>: File Storage NAS (NAS).</li>
+         * <li><strong>23</strong>: Data Security Center (DSC).</li>
+         * <li><strong>24</strong>: Elastic IP Address (EIP).</li>
+         * <li><strong>25</strong>: Identity as a Service (IDaaS)-Employee Identity and Access Management (EIAM).</li>
+         * <li><strong>26</strong>: PolarDB-X.</li>
+         * <li><strong>27</strong>: Elasticsearch.</li>
+         * </ul>
          * 
-         * *   **0**: Elastic Compute Service (ECS).
-         * *   **1**: Server Load Balancer (SLB).
-         * *   **3**: ApsaraDB RDS.
-         * *   **4**: ApsaraDB for MongoDB.
-         * *   **5**: ApsaraDB for Redis.
-         * *   **6**: Container Registry.
-         * *   **8**: Container Service for Kubernetes.
-         * *   **9**: Virtual Private Cloud (VPC).
-         * *   **11**: ActionTrail.
-         * *   **12**: Alibaba Cloud CDN (CDN).
-         * *   **13**: Certificate Management Service.
-         * *   **14**: Apsara Devops.
-         * *   **15**: Resource Access Management (RAM).
-         * *   **16**: Anti-DDoS.
-         * *   **17**: Web Application Firewall (WAF).
-         * *   **18**: Object Storage Service (OSS).
-         * *   **19**: PolarDB.
-         * *   **20**: ApsaraDB RDS for PostgreSQL.
-         * *   **21**: Microservices Engine (MSE).
-         * *   **22**: Apsara File Storage NAS (NAS).
-         * *   **23**: Data Security Center (DSC).
-         * *   **24**: Elastic IP Address (EIP).
-         * *   **25**: Identity as a Service (IDaaS)-Employee Identity and Access Management (EIAM).
-         * *   **26**: PolarDB-X.
-         * *   **27**: Elasticsearch.
+         * <strong>example:</strong>
+         * <p>14</p>
          */
         public Builder assetType(Integer assetType) {
             this.putQueryParameter("AssetType", assetType);
@@ -141,23 +152,26 @@ public class GetCloudAssetDetailRequest extends Request {
         }
 
         /**
-         * The details of the assets.
+         * <p>The details of the assets.</p>
          */
-        public Builder cloudAssetInstances(java.util.List < CloudAssetInstances> cloudAssetInstances) {
+        public Builder cloudAssetInstances(java.util.List<CloudAssetInstances> cloudAssetInstances) {
             this.putQueryParameter("CloudAssetInstances", cloudAssetInstances);
             this.cloudAssetInstances = cloudAssetInstances;
             return this;
         }
 
         /**
-         * The service provider of the cloud asset. Valid values:
-         * <p>
+         * <p>The service provider of the cloud asset. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Alibaba Cloud.</li>
+         * <li><strong>1</strong>: service provider that is unrecognized.</li>
+         * <li><strong>2</strong>: data center.</li>
+         * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, and <strong>7</strong>: third-party service provider.</li>
+         * <li><strong>8</strong>: simple application server.</li>
+         * </ul>
          * 
-         * *   **0**: Alibaba Cloud.
-         * *   **1**: service provider that is unrecognized.
-         * *   **2**: data center.
-         * *   **3**, **4**, **5**, and **7**: third-party service provider.
-         * *   **8**: simple application server.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder vendor(Integer vendor) {
             this.putQueryParameter("Vendor", vendor);
@@ -172,11 +186,17 @@ public class GetCloudAssetDetailRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetCloudAssetDetailRequest} extends {@link TeaModel}
+     *
+     * <p>GetCloudAssetDetailRequest</p>
+     */
     public static class CloudAssetInstances extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private CloudAssetInstances(Builder builder) {
@@ -211,7 +231,10 @@ public class GetCloudAssetDetailRequest extends Request {
             private String regionId; 
 
             /**
-             * The instance ID of the cloud asset.
+             * <p>The instance ID of the cloud asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-wz9hf86vbzbrrde7****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -219,10 +242,13 @@ public class GetCloudAssetDetailRequest extends Request {
             }
 
             /**
-             * The region in which the cloud asset resides.
-             * <p>
+             * <p>The region in which the cloud asset resides.</p>
+             * <blockquote>
+             * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+             * </blockquote>
              * 
-             * > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendCardSmsResponseBody} extends {@link TeaModel}
  *
  * <p>SendCardSmsResponseBody</p>
  */
 public class SendCardSmsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private SendCardSmsResponseBody(Builder builder) {
@@ -74,7 +79,14 @@ public class SendCardSmsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * <ul>
+         * <li>If OK is returned, the request is successful.</li>
+         * <li>Other values indicate that the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +94,7 @@ public class SendCardSmsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +102,10 @@ public class SendCardSmsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F655A8D5-B967-440B-8683-DAD6FF8D28D0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +113,14 @@ public class SendCardSmsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -111,23 +133,29 @@ public class SendCardSmsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SendCardSmsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SendCardSmsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("BizCardId")
+        @com.aliyun.core.annotation.NameInMap("BizCardId")
         private String bizCardId;
 
-        @NameInMap("BizDigitalId")
+        @com.aliyun.core.annotation.NameInMap("BizDigitalId")
         private String bizDigitalId;
 
-        @NameInMap("BizSmsId")
+        @com.aliyun.core.annotation.NameInMap("BizSmsId")
         private String bizSmsId;
 
-        @NameInMap("CardTmpState")
+        @com.aliyun.core.annotation.NameInMap("CardTmpState")
         private Integer cardTmpState;
 
-        @NameInMap("MediaMobiles")
+        @com.aliyun.core.annotation.NameInMap("MediaMobiles")
         private String mediaMobiles;
 
-        @NameInMap("NotMediaMobiles")
+        @com.aliyun.core.annotation.NameInMap("NotMediaMobiles")
         private String notMediaMobiles;
 
         private Data(Builder builder) {
@@ -198,7 +226,10 @@ public class SendCardSmsResponseBody extends TeaModel {
             private String notMediaMobiles; 
 
             /**
-             * BizCardId.
+             * <p>The ID of the card message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder bizCardId(String bizCardId) {
                 this.bizCardId = bizCardId;
@@ -206,7 +237,10 @@ public class SendCardSmsResponseBody extends TeaModel {
             }
 
             /**
-             * BizDigitalId.
+             * <p>The ID of the digital message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>232</p>
              */
             public Builder bizDigitalId(String bizDigitalId) {
                 this.bizDigitalId = bizDigitalId;
@@ -214,7 +248,10 @@ public class SendCardSmsResponseBody extends TeaModel {
             }
 
             /**
-             * BizSmsId.
+             * <p>The ID of the text message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>524</p>
              */
             public Builder bizSmsId(String bizSmsId) {
                 this.bizSmsId = bizSmsId;
@@ -222,7 +259,18 @@ public class SendCardSmsResponseBody extends TeaModel {
             }
 
             /**
-             * CardTmpState.
+             * <p>The review status of the card message template.</p>
+             * <ul>
+             * <li><strong>0</strong>: pending approval</li>
+             * <li><strong>1</strong>: approved</li>
+             * <li><strong>2</strong>: rejected</li>
+             * </ul>
+             * <blockquote>
+             * <p>Unapproved card messages are rolled back.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder cardTmpState(Integer cardTmpState) {
                 this.cardTmpState = cardTmpState;
@@ -230,7 +278,10 @@ public class SendCardSmsResponseBody extends TeaModel {
             }
 
             /**
-             * MediaMobiles.
+             * <p>The mobile phone number from which the card message is sent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1390000****</p>
              */
             public Builder mediaMobiles(String mediaMobiles) {
                 this.mediaMobiles = mediaMobiles;
@@ -238,7 +289,10 @@ public class SendCardSmsResponseBody extends TeaModel {
             }
 
             /**
-             * NotMediaMobiles.
+             * <p>The mobile phone number whose card message is rolled back.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1390000****</p>
              */
             public Builder notMediaMobiles(String notMediaMobiles) {
                 this.notMediaMobiles = notMediaMobiles;

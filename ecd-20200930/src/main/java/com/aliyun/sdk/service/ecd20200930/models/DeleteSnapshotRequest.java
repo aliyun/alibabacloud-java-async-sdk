@@ -1,26 +1,31 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSnapshotRequest} extends {@link RequestModel}
  *
  * <p>DeleteSnapshotRequest</p>
  */
 public class DeleteSnapshotRequest extends Request {
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("SnapshotId")
-    @Validation(required = true)
-    private java.util.List < String > snapshotId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> snapshotId;
 
     private DeleteSnapshotRequest(Builder builder) {
         super(builder);
@@ -51,13 +56,13 @@ public class DeleteSnapshotRequest extends Request {
     /**
      * @return snapshotId
      */
-    public java.util.List < String > getSnapshotId() {
+    public java.util.List<String> getSnapshotId() {
         return this.snapshotId;
     }
 
     public static final class Builder extends Request.Builder<DeleteSnapshotRequest, Builder> {
         private String regionId; 
-        private java.util.List < String > snapshotId; 
+        private java.util.List<String> snapshotId; 
 
         private Builder() {
             super();
@@ -70,7 +75,11 @@ public class DeleteSnapshotRequest extends Request {
         } 
 
         /**
-         * The ID of the region.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -79,9 +88,13 @@ public class DeleteSnapshotRequest extends Request {
         }
 
         /**
-         * The IDs of the snapshots. You can specify 1 to 100 IDs of snapshots.
+         * <p>The snapshot IDs. You can specify 1 to 100 IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-2ze81owrnv9pity4****</p>
          */
-        public Builder snapshotId(java.util.List < String > snapshotId) {
+        public Builder snapshotId(java.util.List<String> snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
             this.snapshotId = snapshotId;
             return this;

@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBVersionInfosRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBVersionInfosRequest</p>
  */
 public class DescribeDBVersionInfosRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceMode")
     private String DBInstanceMode;
 
-    @Query
-    @NameInMap("DBVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBVersion")
     private String DBVersion;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private DescribeDBVersionInfosRequest(Builder builder) {
@@ -111,7 +116,14 @@ public class DescribeDBVersionInfosRequest extends Request {
         } 
 
         /**
-         * DBInstanceMode.
+         * <p>The resource type of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>StorageElastic</strong>: elastic storage mode.</li>
+         * <li><strong>Serverless</strong>: Serverless mode.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>StorageElastic</p>
          */
         public Builder DBInstanceMode(String DBInstanceMode) {
             this.putQueryParameter("DBInstanceMode", DBInstanceMode);
@@ -120,7 +132,10 @@ public class DescribeDBVersionInfosRequest extends Request {
         }
 
         /**
-         * DBVersion.
+         * <p>The minor version number that does not include the prefix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6.3.10.20</p>
          */
         public Builder DBVersion(String DBVersion) {
             this.putQueryParameter("DBVersion", DBVersion);
@@ -138,7 +153,14 @@ public class DescribeDBVersionInfosRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -147,7 +169,10 @@ public class DescribeDBVersionInfosRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group to which the instance belongs. For information about how to obtain the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceSpecsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceSpecsResponseBody</p>
  */
 public class DescribeInstanceSpecsResponseBody extends TeaModel {
-    @NameInMap("InstanceSpecs")
+    @com.aliyun.core.annotation.NameInMap("InstanceSpecs")
     private java.util.List < InstanceSpecs> instanceSpecs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceSpecsResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The specifications of the Anti-DDoS Origin Enterprise instance, including whether the unlimited protection feature is enabled, and the numbers of times that the unlimited protection feature can be enabled and has been enabled.
+         * <p>The specifications of the Anti-DDoS Origin instance, including whether best-effort protection is enabled, the number of available best-effort protection sessions, and the number of used best-effort protection sessions.</p>
          */
         public Builder instanceSpecs(java.util.List < InstanceSpecs> instanceSpecs) {
             this.instanceSpecs = instanceSpecs;
@@ -58,7 +58,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5840AB9F-1419-4620-807D-5EA476090247</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,34 +74,48 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceSpecsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceSpecsResponseBody</p>
+     */
     public static class PackConfig extends TeaModel {
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Long bandwidth;
 
-        @NameInMap("BindIpCount")
+        @com.aliyun.core.annotation.NameInMap("BindIpCount")
         private Integer bindIpCount;
 
-        @NameInMap("IpAdvanceThre")
+        @com.aliyun.core.annotation.NameInMap("ElasticBwMbps")
+        private Integer elasticBwMbps;
+
+        @com.aliyun.core.annotation.NameInMap("ElasticBwMode")
+        private String elasticBwMode;
+
+        @com.aliyun.core.annotation.NameInMap("IpAdvanceThre")
         private Integer ipAdvanceThre;
 
-        @NameInMap("IpBasicThre")
+        @com.aliyun.core.annotation.NameInMap("IpBasicThre")
         private Integer ipBasicThre;
 
-        @NameInMap("IpSpec")
+        @com.aliyun.core.annotation.NameInMap("IpSpec")
         private Integer ipSpec;
 
-        @NameInMap("NormalBandwidth")
+        @com.aliyun.core.annotation.NameInMap("NormalBandwidth")
         private Integer normalBandwidth;
 
-        @NameInMap("PackAdvThre")
+        @com.aliyun.core.annotation.NameInMap("PackAdvThre")
         private Integer packAdvThre;
 
-        @NameInMap("PackBasicThre")
+        @com.aliyun.core.annotation.NameInMap("PackBasicThre")
         private Integer packBasicThre;
 
         private PackConfig(Builder builder) {
             this.bandwidth = builder.bandwidth;
             this.bindIpCount = builder.bindIpCount;
+            this.elasticBwMbps = builder.elasticBwMbps;
+            this.elasticBwMode = builder.elasticBwMode;
             this.ipAdvanceThre = builder.ipAdvanceThre;
             this.ipBasicThre = builder.ipBasicThre;
             this.ipSpec = builder.ipSpec;
@@ -127,6 +144,20 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
          */
         public Integer getBindIpCount() {
             return this.bindIpCount;
+        }
+
+        /**
+         * @return elasticBwMbps
+         */
+        public Integer getElasticBwMbps() {
+            return this.elasticBwMbps;
+        }
+
+        /**
+         * @return elasticBwMode
+         */
+        public String getElasticBwMode() {
+            return this.elasticBwMode;
         }
 
         /**
@@ -174,6 +205,8 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         public static final class Builder {
             private Long bandwidth; 
             private Integer bindIpCount; 
+            private Integer elasticBwMbps; 
+            private String elasticBwMode; 
             private Integer ipAdvanceThre; 
             private Integer ipBasicThre; 
             private Integer ipSpec; 
@@ -182,7 +215,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             private Integer packBasicThre; 
 
             /**
-             * The bandwidth of the package configuration.
+             * <p>The bandwidth. Unit: Gbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder bandwidth(Long bandwidth) {
                 this.bandwidth = bandwidth;
@@ -190,7 +226,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of IP addresses that are protected by the Anti-DDoS Origin Enterprise instance.
+             * <p>The number of IP addresses that are protected by the Anti-DDoS Origin Enterprise instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder bindIpCount(Integer bindIpCount) {
                 this.bindIpCount = bindIpCount;
@@ -198,7 +237,36 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The burstable bandwidth of each protected IP address. Unit: Gbit/s.
+             * <p>The burstable clean bandwidth. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
+             */
+            public Builder elasticBwMbps(Integer elasticBwMbps) {
+                this.elasticBwMbps = elasticBwMbps;
+                return this;
+            }
+
+            /**
+             * <p>The metering method of burstable clean bandwidth. Valid values:</p>
+             * <ul>
+             * <li><strong>month</strong>: the monthly 95th percentile metering method.</li>
+             * <li><strong>day</strong>: the daily 95th percentile metering method.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>day</p>
+             */
+            public Builder elasticBwMode(String elasticBwMode) {
+                this.elasticBwMode = elasticBwMode;
+                return this;
+            }
+
+            /**
+             * <p>The burstable protection bandwidth of each protected IP address. Unit: Gbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder ipAdvanceThre(Integer ipAdvanceThre) {
                 this.ipAdvanceThre = ipAdvanceThre;
@@ -206,7 +274,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The basic bandwidth of each protected IP address. Unit: Gbit/s.
+             * <p>The basic protection bandwidth of each protected IP address. Unit: Gbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder ipBasicThre(Integer ipBasicThre) {
                 this.ipBasicThre = ipBasicThre;
@@ -214,7 +285,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of IP addresses that can be protected by the Anti-DDoS Origin Enterprise instance.
+             * <p>The number of IP addresses that can be protected by the Anti-DDoS Origin Enterprise instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder ipSpec(Integer ipSpec) {
                 this.ipSpec = ipSpec;
@@ -222,7 +296,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The normal clean bandwidth. Unit: Mbit/s.
+             * <p>The clean bandwidth. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder normalBandwidth(Integer normalBandwidth) {
                 this.normalBandwidth = normalBandwidth;
@@ -230,7 +307,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The burstable protection bandwidth of the Anti-DDoS Origin Enterprise instance. Unit: Gbit/s.
+             * <p>The burstable protection bandwidth of the Anti-DDoS Origin instance. Unit: Gbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder packAdvThre(Integer packAdvThre) {
                 this.packAdvThre = packAdvThre;
@@ -238,7 +318,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The basic protection bandwidth of the Anti-DDoS Origin Enterprise instance. Unit: Gbit/s.
+             * <p>The basic protection bandwidth of the Anti-DDoS Origin instance. Unit: Gbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder packBasicThre(Integer packBasicThre) {
                 this.packBasicThre = packBasicThre;
@@ -252,35 +335,45 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceSpecsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceSpecsResponseBody</p>
+     */
     public static class InstanceSpecs extends TeaModel {
-        @NameInMap("AvailableDefenseTimes")
+        @com.aliyun.core.annotation.NameInMap("AvailableDefenseTimes")
         private Integer availableDefenseTimes;
 
-        @NameInMap("AvailableDeleteBlackholeCount")
+        @com.aliyun.core.annotation.NameInMap("AvailableDeleteBlackholeCount")
         private String availableDeleteBlackholeCount;
 
-        @NameInMap("DefenseTimesPercent")
+        @com.aliyun.core.annotation.NameInMap("DefenseTimesPercent")
         private Integer defenseTimesPercent;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("DowngradeStatus")
+        private Integer downgradeStatus;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("IsFullDefenseMode")
+        @com.aliyun.core.annotation.NameInMap("IsFullDefenseMode")
         private Integer isFullDefenseMode;
 
-        @NameInMap("PackConfig")
+        @com.aliyun.core.annotation.NameInMap("PackConfig")
         private PackConfig packConfig;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("TotalDefenseTimes")
+        @com.aliyun.core.annotation.NameInMap("TotalDefenseTimes")
         private Integer totalDefenseTimes;
 
         private InstanceSpecs(Builder builder) {
             this.availableDefenseTimes = builder.availableDefenseTimes;
             this.availableDeleteBlackholeCount = builder.availableDeleteBlackholeCount;
             this.defenseTimesPercent = builder.defenseTimesPercent;
+            this.downgradeStatus = builder.downgradeStatus;
             this.instanceId = builder.instanceId;
             this.isFullDefenseMode = builder.isFullDefenseMode;
             this.packConfig = builder.packConfig;
@@ -315,6 +408,13 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
          */
         public Integer getDefenseTimesPercent() {
             return this.defenseTimesPercent;
+        }
+
+        /**
+         * @return downgradeStatus
+         */
+        public Integer getDowngradeStatus() {
+            return this.downgradeStatus;
         }
 
         /**
@@ -356,6 +456,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             private Integer availableDefenseTimes; 
             private String availableDeleteBlackholeCount; 
             private Integer defenseTimesPercent; 
+            private Integer downgradeStatus; 
             private String instanceId; 
             private Integer isFullDefenseMode; 
             private PackConfig packConfig; 
@@ -363,7 +464,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             private Integer totalDefenseTimes; 
 
             /**
-             * The number of times that the unlimited protection feature can be enabled.
+             * <p>The available best-effort protection sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder availableDefenseTimes(Integer availableDefenseTimes) {
                 this.availableDefenseTimes = availableDefenseTimes;
@@ -371,7 +475,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that blackhole filtering can be deactivated.
+             * <p>The number of times that blackhole filtering can be deactivated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder availableDeleteBlackholeCount(String availableDeleteBlackholeCount) {
                 this.availableDeleteBlackholeCount = availableDeleteBlackholeCount;
@@ -379,7 +486,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * DefenseTimesPercent.
+             * <p>The percentage of the used best-effort protection sessions. Unit: %.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder defenseTimesPercent(Integer defenseTimesPercent) {
                 this.defenseTimesPercent = defenseTimesPercent;
@@ -387,7 +497,24 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Anti-DDoS Origin Enterprise instance.
+             * <p>Indicates whether the instance is downgraded. Valid value:</p>
+             * <ul>
+             * <li><strong>8</strong>: The instance is downgraded due to excessive bandwidth usage.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
+             */
+            public Builder downgradeStatus(Integer downgradeStatus) {
+                this.downgradeStatus = downgradeStatus;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the Anti-DDoS Origin instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddosbgp-cn-n6w1r7nz****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -395,11 +522,14 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the unlimited protection feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether best-effort protection is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Best-effort protection is disabled.</li>
+             * <li><strong>1</strong>: Best-effort protection is enabled.</li>
+             * </ul>
              * 
-             * *   **0**: The unlimited protection feature is disabled.
-             * *   **1**: The unlimited protection feature is enabled.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isFullDefenseMode(Integer isFullDefenseMode) {
                 this.isFullDefenseMode = isFullDefenseMode;
@@ -407,7 +537,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of the Anti-DDoS Origin Enterprise instance, including the number of protected IP addresses and protection bandwidth.
+             * <p>The configurations of the Anti-DDoS Origin instance, including the number of protected IP addresses and protection bandwidth.</p>
              */
             public Builder packConfig(PackConfig packConfig) {
                 this.packConfig = packConfig;
@@ -415,10 +545,13 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the Anti-DDoS Origin Enterprise instance.
-             * <p>
+             * <p>The region ID of the Anti-DDoS Origin instance.</p>
+             * <blockquote>
+             * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the name of the region.</p>
+             * </blockquote>
              * 
-             * >  You can call the [DescribeRegions](~~118703~~) operation to query the name of the region.
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -426,7 +559,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that the unlimited protection feature can be enabled.
+             * <p>The total best-effort protection sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalDefenseTimes(Integer totalDefenseTimes) {
                 this.totalDefenseTimes = totalDefenseTimes;

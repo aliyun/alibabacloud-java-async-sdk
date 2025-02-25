@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAppGroupsRequest</p>
  */
 public class ListAppGroupsRequest extends Request {
-    @Query
-    @NameInMap("instanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("instanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @Query
-    @NameInMap("pageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("resourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("sortBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("sortBy")
     private Integer sortBy;
 
-    @Query
-    @NameInMap("tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("tags")
     private java.util.List < Tags> tags;
 
-    @Query
-    @NameInMap("type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
     private ListAppGroupsRequest(Builder builder) {
@@ -152,7 +151,7 @@ public class ListAppGroupsRequest extends Request {
         } 
 
         /**
-         * ops-cn-xxxx
+         * The ID of the instance. Exact match is used.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("instanceId", instanceId);
@@ -161,7 +160,7 @@ public class ListAppGroupsRequest extends Request {
         }
 
         /**
-         * my_name
+         * The name of the application.
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -170,7 +169,7 @@ public class ListAppGroupsRequest extends Request {
         }
 
         /**
-         * 1
+         * The page number. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -179,7 +178,7 @@ public class ListAppGroupsRequest extends Request {
         }
 
         /**
-         * 10
+         * The number of entries per page. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -188,7 +187,7 @@ public class ListAppGroupsRequest extends Request {
         }
 
         /**
-         * ""
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("resourceGroupId", resourceGroupId);
@@ -197,7 +196,13 @@ public class ListAppGroupsRequest extends Request {
         }
 
         /**
-         * 0
+         * The method based on which applications are sorted. Valid values:
+         * <p>
+         * 
+         * *   0: sorts applications in descending order by creation time.
+         * *   1: sorts applications in descending order by modification time.
+         * 
+         * Default value: 0.
          */
         public Builder sortBy(Integer sortBy) {
             this.putQueryParameter("sortBy", sortBy);
@@ -206,7 +211,7 @@ public class ListAppGroupsRequest extends Request {
         }
 
         /**
-         * tags.
+         * The tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
             String tagsShrink = shrink(tags, "tags", "json");
@@ -216,7 +221,11 @@ public class ListAppGroupsRequest extends Request {
         }
 
         /**
-         * standard
+         * The type of the application. Valid values:
+         * <p>
+         * 
+         * *   standard: a High-performance Search Edition application.
+         * *   enhanced: an Industry Algorithm Edition application.
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);
@@ -232,10 +241,10 @@ public class ListAppGroupsRequest extends Request {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("key")
+        @com.aliyun.core.annotation.NameInMap("key")
         private String key;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private Tags(Builder builder) {
@@ -270,7 +279,7 @@ public class ListAppGroupsRequest extends Request {
             private String value; 
 
             /**
-             * key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -278,7 +287,7 @@ public class ListAppGroupsRequest extends Request {
             }
 
             /**
-             * value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

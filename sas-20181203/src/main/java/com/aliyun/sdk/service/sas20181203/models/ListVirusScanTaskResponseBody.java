@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListVirusScanTaskResponseBody} extends {@link TeaModel}
  *
  * <p>ListVirusScanTaskResponseBody</p>
  */
 public class ListVirusScanTaskResponseBody extends TeaModel {
-    @NameInMap("List")
-    private java.util.List < List> list;
+    @com.aliyun.core.annotation.NameInMap("List")
+    private java.util.List<List> list;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListVirusScanTaskResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
     /**
      * @return list
      */
-    public java.util.List < List> getList() {
+    public java.util.List<List> getList() {
         return this.list;
     }
 
@@ -57,20 +62,20 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < List> list; 
+        private java.util.List<List> list; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
-         * The returned virus scan tasks.
+         * <p>The returned virus scan tasks.</p>
          */
-        public Builder list(java.util.List < List> list) {
+        public Builder list(java.util.List<List> list) {
             this.list = list;
             return this;
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +83,10 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A4EB8B1C-1DEC-5E18-BCD0-D1BBB3936FA7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,41 +99,47 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListVirusScanTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVirusScanTaskResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IntranetIp")
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private Integer progress;
 
-        @NameInMap("ScanPath")
-        private java.util.List < String > scanPath;
+        @com.aliyun.core.annotation.NameInMap("ScanPath")
+        private java.util.List<String> scanPath;
 
-        @NameInMap("ScanType")
+        @com.aliyun.core.annotation.NameInMap("ScanType")
         private String scanType;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private List(Builder builder) {
@@ -189,7 +203,7 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
         /**
          * @return scanPath
          */
-        public java.util.List < String > getScanPath() {
+        public java.util.List<String> getScanPath() {
             return this.scanPath;
         }
 
@@ -241,7 +255,7 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
             private String internetIp; 
             private String intranetIp; 
             private Integer progress; 
-            private java.util.List < String > scanPath; 
+            private java.util.List<String> scanPath; 
             private String scanType; 
             private Long startTime; 
             private Integer status; 
@@ -250,7 +264,10 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The timestamp when the virus scan task ended. Unit: milliseconds.
+             * <p>The timestamp when the virus scan task ended. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1662343860051</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -258,7 +275,10 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
+             * <p>The name of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sql-test-0****</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -266,7 +286,10 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the server.
+             * <p>The public IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.210.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -274,7 +297,10 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the server.
+             * <p>The private IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.25.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -282,7 +308,10 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the task in percentage.
+             * <p>The progress of the task in percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>62</p>
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -290,19 +319,22 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the file that is scanned.
+             * <p>The information about the file that is scanned.</p>
              */
-            public Builder scanPath(java.util.List < String > scanPath) {
+            public Builder scanPath(java.util.List<String> scanPath) {
                 this.scanPath = scanPath;
                 return this;
             }
 
             /**
-             * The type of the virus scan task. Valid values:
-             * <p>
+             * <p>The type of the virus scan task. Valid values:</p>
+             * <ul>
+             * <li><strong>system</strong>: automatic scan task</li>
+             * <li><strong>user</strong>: custom scan task</li>
+             * </ul>
              * 
-             * *   **system**: automatic scan task
-             * *   **user**: custom scan task
+             * <strong>example:</strong>
+             * <p>system</p>
              */
             public Builder scanType(String scanType) {
                 this.scanType = scanType;
@@ -310,7 +342,10 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the virus scan task started. Unit: milliseconds.
+             * <p>The timestamp when the virus scan task started. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1651290987000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -318,13 +353,16 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the virus scan task. Valid values:
-             * <p>
+             * <p>The status of the virus scan task. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: running</li>
+             * <li><strong>2</strong>: complete</li>
+             * <li><strong>3</strong>: failed</li>
+             * <li><strong>4</strong>: timed out</li>
+             * </ul>
              * 
-             * *   **1**: running
-             * *   **2**: complete
-             * *   **3**: failed
-             * *   **4**: timed out
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -332,7 +370,10 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virus scan task.
+             * <p>The ID of the virus scan task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2e75557bfa570381f5c516cad9b6xxxx</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -340,10 +381,13 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the virus scan task.
-             * <p>
+             * <p>The name of the virus scan task.</p>
+             * <ul>
+             * <li>The value is fixed as <strong>VIRUS_VUL_SCHEDULE_SCAN</strong>, which indicates a virus scan task.</li>
+             * </ul>
              * 
-             * *   The value is fixed as **VIRUS_VUL_SCHEDULE_SCAN**, which indicates a virus scan task.
+             * <strong>example:</strong>
+             * <p>VIRUS_VUL_SCHEDULE_SCAN</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -351,7 +395,10 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * <p>The UUID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>49e25e0f-bb51-4a5a-a1b3-13a4ddaa****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -365,14 +412,20 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListVirusScanTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVirusScanTaskResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -416,7 +469,10 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -424,7 +480,10 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -432,7 +491,10 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>224</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

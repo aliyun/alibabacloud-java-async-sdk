@@ -1,26 +1,31 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RevertEvaluationResultsRequest} extends {@link RequestModel}
  *
  * <p>RevertEvaluationResultsRequest</p>
  */
 public class RevertEvaluationResultsRequest extends Request {
-    @Body
-    @NameInMap("ConfigRuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConfigRuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String configRuleId;
 
-    @Body
-    @NameInMap("Resources")
-    @Validation(required = true)
-    private java.util.List < Resources> resources;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Resources")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Resources> resources;
 
     private RevertEvaluationResultsRequest(Builder builder) {
         super(builder);
@@ -51,13 +56,13 @@ public class RevertEvaluationResultsRequest extends Request {
     /**
      * @return resources
      */
-    public java.util.List < Resources> getResources() {
+    public java.util.List<Resources> getResources() {
         return this.resources;
     }
 
     public static final class Builder extends Request.Builder<RevertEvaluationResultsRequest, Builder> {
         private String configRuleId; 
-        private java.util.List < Resources> resources; 
+        private java.util.List<Resources> resources; 
 
         private Builder() {
             super();
@@ -70,10 +75,12 @@ public class RevertEvaluationResultsRequest extends Request {
         } 
 
         /**
-         * The rule ID.
-         * <p>
+         * <p>The rule ID.</p>
+         * <p>For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of a rule, see [ListConfigRules](~~169607~~).
+         * <strong>example:</strong>
+         * <p>cr-7e72626622af0051****</p>
          */
         public Builder configRuleId(String configRuleId) {
             this.putBodyParameter("ConfigRuleId", configRuleId);
@@ -82,9 +89,10 @@ public class RevertEvaluationResultsRequest extends Request {
         }
 
         /**
-         * The resources that are to be re-evaluated.
+         * <p>The resources that are to be re-evaluated.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder resources(java.util.List < Resources> resources) {
+        public Builder resources(java.util.List<Resources> resources) {
             String resourcesShrink = shrink(resources, "Resources", "json");
             this.putBodyParameter("Resources", resourcesShrink);
             this.resources = resources;
@@ -98,21 +106,27 @@ public class RevertEvaluationResultsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RevertEvaluationResultsRequest} extends {@link TeaModel}
+     *
+     * <p>RevertEvaluationResultsRequest</p>
+     */
     public static class Resources extends TeaModel {
-        @NameInMap("Region")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Region")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String region;
 
-        @NameInMap("ResourceAccountId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ResourceAccountId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long resourceAccountId;
 
-        @NameInMap("ResourceId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String resourceId;
 
-        @NameInMap("ResourceType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String resourceType;
 
         private Resources(Builder builder) {
@@ -165,10 +179,12 @@ public class RevertEvaluationResultsRequest extends Request {
             private String resourceType; 
 
             /**
-             * The ID of the region in which the resource resides.
-             * <p>
+             * <p>The ID of the region in which the resource resides.</p>
+             * <p>For more information about how to obtain the ID of the region in which a resource resides, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</p>
+             * <p>This parameter is required.</p>
              * 
-             * For more information about how to obtain the ID of the region in which a resource resides, see [ListDiscoveredResources](~~169620~~).
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -176,7 +192,11 @@ public class RevertEvaluationResultsRequest extends Request {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the resource belongs.
+             * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100931896542****</p>
              */
             public Builder resourceAccountId(Long resourceAccountId) {
                 this.resourceAccountId = resourceAccountId;
@@ -184,10 +204,12 @@ public class RevertEvaluationResultsRequest extends Request {
             }
 
             /**
-             * The resource ID.
-             * <p>
+             * <p>The resource ID.</p>
+             * <p>For more information about how to obtain the ID of a resource, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</p>
+             * <p>This parameter is required.</p>
              * 
-             * For more information about how to obtain the ID of a resource, see [ListDiscoveredResources](~~169620~~).
+             * <strong>example:</strong>
+             * <p>lb-hp3a3b4ztyfm2plgm****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -195,10 +217,12 @@ public class RevertEvaluationResultsRequest extends Request {
             }
 
             /**
-             * The resource type.
-             * <p>
+             * <p>The resource type.</p>
+             * <p>For more information about how to query the type of a resource, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</p>
+             * <p>This parameter is required.</p>
              * 
-             * For more information about how to query the type of a resource, see [ListDiscoveredResources](~~169620~~).
+             * <strong>example:</strong>
+             * <p>ACS::SLB::LoadBalancer</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

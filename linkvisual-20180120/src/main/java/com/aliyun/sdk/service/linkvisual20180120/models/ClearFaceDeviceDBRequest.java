@@ -90,12 +90,12 @@ public class ClearFaceDeviceDBRequest extends Request {
             super();
         } 
 
-        private Builder(ClearFaceDeviceDBRequest response) {
-            super(response);
-            this.deviceName = response.deviceName;
-            this.iotInstanceId = response.iotInstanceId;
-            this.isolationId = response.isolationId;
-            this.productKey = response.productKey;
+        private Builder(ClearFaceDeviceDBRequest request) {
+            super(request);
+            this.deviceName = request.deviceName;
+            this.iotInstanceId = request.iotInstanceId;
+            this.isolationId = request.isolationId;
+            this.productKey = request.productKey;
         } 
 
         /**

@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIpControlsRequest} extends {@link RequestModel}
  *
  * <p>DescribeIpControlsRequest</p>
  */
 public class DescribeIpControlsRequest extends Request {
-    @Query
-    @NameInMap("IpControlId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpControlId")
     private String ipControlId;
 
-    @Query
-    @NameInMap("IpControlName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpControlName")
     private String ipControlName;
 
-    @Query
-    @NameInMap("IpControlType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpControlType")
     private String ipControlType;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private DescribeIpControlsRequest(Builder builder) {
@@ -125,7 +130,10 @@ public class DescribeIpControlsRequest extends Request {
         } 
 
         /**
-         * IpControlId.
+         * <p>The ID of the ACL. The ID is unique.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7ea91319a34d48a09b5c9c871d9768b1</p>
          */
         public Builder ipControlId(String ipControlId) {
             this.putQueryParameter("IpControlId", ipControlId);
@@ -134,7 +142,10 @@ public class DescribeIpControlsRequest extends Request {
         }
 
         /**
-         * IpControlName.
+         * <p>The name of the ACL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACL test</p>
          */
         public Builder ipControlName(String ipControlName) {
             this.putQueryParameter("IpControlName", ipControlName);
@@ -143,7 +154,14 @@ public class DescribeIpControlsRequest extends Request {
         }
 
         /**
-         * The name of the ACL.
+         * <p>The type of the ACL. Valid values:</p>
+         * <ul>
+         * <li><strong>ALLOW</strong>: a whitelist</li>
+         * <li><strong>REFUSE</strong>: a blacklist</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ALLOW</p>
          */
         public Builder ipControlType(String ipControlType) {
             this.putQueryParameter("IpControlType", ipControlType);
@@ -152,7 +170,10 @@ public class DescribeIpControlsRequest extends Request {
         }
 
         /**
-         * ACLtest
+         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -161,11 +182,10 @@ public class DescribeIpControlsRequest extends Request {
         }
 
         /**
-         * The type of the ACL. Valid values:
-         * <p>
+         * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
          * 
-         * *   **ALLOW**: an IP address whitelist
-         * *   **REFUSE**: an IP address blacklist
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

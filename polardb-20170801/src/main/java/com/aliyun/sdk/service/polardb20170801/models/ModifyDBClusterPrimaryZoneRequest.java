@@ -1,66 +1,75 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBClusterPrimaryZoneRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBClusterPrimaryZoneRequest</p>
  */
 public class ModifyDBClusterPrimaryZoneRequest extends Request {
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("FromTimeService")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FromTimeService")
     private Boolean fromTimeService;
 
-    @Query
-    @NameInMap("IsSwitchOverForDisaster")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsSwitchOverForDisaster")
     private String isSwitchOverForDisaster;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PlannedEndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlannedEndTime")
     private String plannedEndTime;
 
-    @Query
-    @NameInMap("PlannedStartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlannedStartTime")
     private String plannedStartTime;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("VPCId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VPCId")
     private String VPCId;
 
-    @Query
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @Query
-    @NameInMap("ZoneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String zoneId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneType")
+    private String zoneType;
 
     private ModifyDBClusterPrimaryZoneRequest(Builder builder) {
         super(builder);
@@ -76,6 +85,7 @@ public class ModifyDBClusterPrimaryZoneRequest extends Request {
         this.VPCId = builder.VPCId;
         this.vSwitchId = builder.vSwitchId;
         this.zoneId = builder.zoneId;
+        this.zoneType = builder.zoneType;
     }
 
     public static Builder builder() {
@@ -175,6 +185,13 @@ public class ModifyDBClusterPrimaryZoneRequest extends Request {
         return this.zoneId;
     }
 
+    /**
+     * @return zoneType
+     */
+    public String getZoneType() {
+        return this.zoneType;
+    }
+
     public static final class Builder extends Request.Builder<ModifyDBClusterPrimaryZoneRequest, Builder> {
         private String DBClusterId; 
         private Boolean fromTimeService; 
@@ -188,6 +205,7 @@ public class ModifyDBClusterPrimaryZoneRequest extends Request {
         private String VPCId; 
         private String vSwitchId; 
         private String zoneId; 
+        private String zoneType; 
 
         private Builder() {
             super();
@@ -207,13 +225,18 @@ public class ModifyDBClusterPrimaryZoneRequest extends Request {
             this.VPCId = request.VPCId;
             this.vSwitchId = request.vSwitchId;
             this.zoneId = request.zoneId;
+            this.zoneType = request.zoneType;
         } 
 
         /**
-         * The ID of the cluster.
-         * <p>
+         * <p>The ID of the cluster.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/173433.html">DescribeDBClusters</a> operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeDBClusters](~~173433~~) operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.
+         * <strong>example:</strong>
+         * <p>pc-**************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -222,11 +245,14 @@ public class ModifyDBClusterPrimaryZoneRequest extends Request {
         }
 
         /**
-         * Specifies an immediate or scheduled task to switch the primary zone. Valid values:
-         * <p>
+         * <p>Specifies whether to change the primary zone immediately. Valid values:</p>
+         * <ul>
+         * <li>false (default): changes the primary zone as scheduled.</li>
+         * <li>true: changes the primary zone immediately.</li>
+         * </ul>
          * 
-         * *   false: scheduled task
-         * *   true: immediate task
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder fromTimeService(Boolean fromTimeService) {
             this.putQueryParameter("FromTimeService", fromTimeService);
@@ -235,7 +261,14 @@ public class ModifyDBClusterPrimaryZoneRequest extends Request {
         }
 
         /**
-         * IsSwitchOverForDisaster.
+         * <p>Specifies whether to switch back to the original primary zone.</p>
+         * <ul>
+         * <li>true: switches back to the original primary zone.</li>
+         * <li>false: does not switch back to the original primary zone.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isSwitchOverForDisaster(String isSwitchOverForDisaster) {
             this.putQueryParameter("IsSwitchOverForDisaster", isSwitchOverForDisaster);
@@ -262,14 +295,16 @@ public class ModifyDBClusterPrimaryZoneRequest extends Request {
         }
 
         /**
-         * The latest start time to run the task. Specify the time in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.
-         * <p>
+         * <p>The latest start time to switch the primary zone within the scheduled time period. Specify the time in the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
+         * <blockquote>
+         * <ul>
+         * <li>The latest start time must be at least 30 minutes later than the earliest start time.</li>
+         * <li>If you specify the <code>PlannedStartTime</code> parameter but do not specify the PlannedEndTime parameter, the latest start time of the task is set to a value that is calculated by <code>the value of the PlannedEndTime parameter + 30 minutes</code> by default. For example, if you set the <code>PlannedStartTime</code> parameter to <code>2021-01-14T09:00:00Z</code> and you do not specify the PlannedEndTime parameter, the latest start time of the task is set to <code>2021-01-14T09:30:00Z</code>.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > 
-         * 
-         * *   The value of this parameter must be at least 30 minutes later than the value of the PlannedStartTime parameter.
-         * 
-         * *   By default, if you specify the `PlannedStartTime` parameter but do not specify the PlannedEndTime parameter, the latest start time of the task is set to a value that is calculated by using the following formula: `Value of the PlannedEndTime parameter + 30 minutes`. For example, if you set the `PlannedStartTime` parameter to `2021-01-14T09:00:00Z` and you do not specify the PlannedEndTime parameter, the latest start time of the task is set to `2021-01-14T09:30:00Z`.
+         * <strong>example:</strong>
+         * <p>2021-01-14T09:30:00Z</p>
          */
         public Builder plannedEndTime(String plannedEndTime) {
             this.putQueryParameter("PlannedEndTime", plannedEndTime);
@@ -278,14 +313,16 @@ public class ModifyDBClusterPrimaryZoneRequest extends Request {
         }
 
         /**
-         * The earliest time to switch the primary zone within the scheduled time period. Specify the parameter in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.
-         * <p>
+         * <p>The start time to change the primary zone within the scheduled time period. Specify the time in the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
+         * <blockquote>
+         * <ul>
+         * <li>The start time of the task can be a point in time within the next 24 hours. For example, if the current time is <code>2021-01-14T09:00:00Z</code>, you can specify a point in time from <code>2021-01-14T09:00:00Z</code> to <code>2021-01-15T09:00:00Z</code>.</li>
+         * <li>If you leave this parameter empty, the primary zone is immediately changed.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > 
-         * 
-         * *   The earliest start time of the task can be a point in time within the next 24 hours. For example, if the current time is `2021-01-14T09:00:00Z`, you can specify a point in the time range from `2021-01-14T09:00:00Z` to `2021-01-15T09:00:00Z`.
-         * 
-         * *   If this parameter is empty, the primary zone is immediately switched.
+         * <strong>example:</strong>
+         * <p>2021-01-14T09:00:00Z</p>
          */
         public Builder plannedStartTime(String plannedStartTime) {
             this.putQueryParameter("PlannedStartTime", plannedStartTime);
@@ -312,7 +349,10 @@ public class ModifyDBClusterPrimaryZoneRequest extends Request {
         }
 
         /**
-         * VPCId.
+         * <p>The virtual private cloud (VPC) ID of the destination primary zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-**********</p>
          */
         public Builder VPCId(String VPCId) {
             this.putQueryParameter("VPCId", VPCId);
@@ -321,17 +361,16 @@ public class ModifyDBClusterPrimaryZoneRequest extends Request {
         }
 
         /**
-         * The vSwitch ID of in the destination primary zone.
-         * <p>
+         * <p>The ID of the vSwitch in the destination primary zone.</p>
+         * <blockquote>
+         * <ul>
+         * <li>For a PolarDB for PostgreSQL (Compatible with Oracle) cluster or a PolarDB for PostgreSQL cluster, this parameter is required.</li>
+         * <li>For a PolarDB for MySQL cluster, the default vSwitch is used if no vSwitches are created in the destination zone. If a vSwitch is in the destination zone, this parameter is required.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > 
-         * 
-         * *   This parameter is required for a PolarDB for Oracle or PolarDB for PostgreSQL cluster.
-         * 
-         * *   For a PolarDB for MySQL cluster:
-         * 
-         *     *   This parameter is optional if no vSwitches have been created in the destination zone. The default vSwitch is used.
-         *     *   This parameter is required if a vSwitch has been created in the destination zone.
+         * <strong>example:</strong>
+         * <p>vsw-**************</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -340,14 +379,34 @@ public class ModifyDBClusterPrimaryZoneRequest extends Request {
         }
 
         /**
-         * The ID of the destination primary zone.
-         * <p>
+         * <p>The ID of the destination primary zone.</p>
+         * <blockquote>
+         * <p> You can call the DescribeRegions operation to query available zones.<a href="~~98041~~"></a></p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeRegions](~~98041~~) operation to query available zones.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-g</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
             this.zoneId = zoneId;
+            return this;
+        }
+
+        /**
+         * <p>The zone type. Valid values:</p>
+         * <ul>
+         * <li><strong>Primary</strong>: primary zone</li>
+         * <li><strong>Standby</strong>: secondary zone</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Primary</p>
+         */
+        public Builder zoneType(String zoneType) {
+            this.putQueryParameter("ZoneType", zoneType);
+            this.zoneType = zoneType;
             return this;
         }
 

@@ -1,19 +1,19 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDcdnUserConfigRequest} extends {@link RequestModel}
  *
  * <p>DeleteDcdnUserConfigRequest</p>
  */
 public class DeleteDcdnUserConfigRequest extends Request {
-    @Query
-    @NameInMap("FunctionName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FunctionName")
     private String functionName;
 
     private DeleteDcdnUserConfigRequest(Builder builder) {
@@ -54,7 +54,10 @@ public class DeleteDcdnUserConfigRequest extends Request {
         } 
 
         /**
-         * FunctionName.
+         * <p>The name of the user feature that you want to delete. Currently, only DCDN Web Application Firewall (WAF) can be deleted. Default value: waf.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf</p>
          */
         public Builder functionName(String functionName) {
             this.putQueryParameter("FunctionName", functionName);

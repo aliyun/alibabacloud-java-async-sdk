@@ -1,23 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResourceCountsRequest} extends {@link RequestModel}
  *
  * <p>GetResourceCountsRequest</p>
  */
 public class GetResourceCountsRequest extends Request {
-    @Query
-    @NameInMap("Filter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
     private java.util.List < Filter> filter;
 
-    @Query
-    @NameInMap("GroupByKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupByKey")
     private String groupByKey;
 
     private GetResourceCountsRequest(Builder builder) {
@@ -68,7 +68,7 @@ public class GetResourceCountsRequest extends Request {
         } 
 
         /**
-         * The filter conditions.
+         * <p>The filter conditions.</p>
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -77,14 +77,17 @@ public class GetResourceCountsRequest extends Request {
         }
 
         /**
-         * The dimension by which resources are queried. Valid values:
-         * <p>
+         * <p>The dimension by which resources are queried. Valid values:</p>
+         * <ul>
+         * <li>ResourceType</li>
+         * <li>Region</li>
+         * <li>ResourceGroupId</li>
+         * <li>TagKey</li>
+         * <li>TagValue</li>
+         * </ul>
          * 
-         * *   ResourceType
-         * *   Region
-         * *   ResourceGroupId
-         * *   TagKey
-         * *   TagValue
+         * <strong>example:</strong>
+         * <p>ResourceType</p>
          */
         public Builder groupByKey(String groupByKey) {
             this.putQueryParameter("GroupByKey", groupByKey);
@@ -99,14 +102,20 @@ public class GetResourceCountsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetResourceCountsRequest} extends {@link TeaModel}
+     *
+     * <p>GetResourceCountsRequest</p>
+     */
     public static class Filter extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("MatchType")
+        @com.aliyun.core.annotation.NameInMap("MatchType")
         private String matchType;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private java.util.List < String > value;
 
         private Filter(Builder builder) {
@@ -150,7 +159,10 @@ public class GetResourceCountsRequest extends Request {
             private java.util.List < String > value; 
 
             /**
-             * The key of the filter condition. For more information, see `Supported filter parameters`.
+             * <p>The key of the filter condition. For more information, see <code>Supported filter parameters</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RegionId</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -158,10 +170,11 @@ public class GetResourceCountsRequest extends Request {
             }
 
             /**
-             * The matching mode.
-             * <p>
+             * <p>The matching mode.</p>
+             * <p>The value Equals indicates an equal match.</p>
              * 
-             * The value Equals indicates an equal match.
+             * <strong>example:</strong>
+             * <p>Equals</p>
              */
             public Builder matchType(String matchType) {
                 this.matchType = matchType;
@@ -169,7 +182,7 @@ public class GetResourceCountsRequest extends Request {
             }
 
             /**
-             * The values of the filter condition.
+             * <p>The values of the filter condition.</p>
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;

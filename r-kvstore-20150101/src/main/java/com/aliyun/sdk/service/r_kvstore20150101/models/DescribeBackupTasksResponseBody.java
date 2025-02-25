@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupTasksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackupTasksResponseBody</p>
  */
 public class DescribeBackupTasksResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private AccessDeniedDetail accessDeniedDetail;
 
-    @NameInMap("BackupJobs")
+    @com.aliyun.core.annotation.NameInMap("BackupJobs")
     private java.util.List < BackupJobs> backupJobs;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeBackupTasksResponseBody(Builder builder) {
@@ -74,7 +74,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The following parameters are no longer used. Ignore the parameters.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -82,7 +82,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the backup tasks.
+         * <p>The details of the backup tasks.</p>
          */
         public Builder backupJobs(java.util.List < BackupJobs> backupJobs) {
             this.backupJobs = backupJobs;
@@ -90,7 +90,10 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -98,15 +101,18 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the backup task. Valid values:
-         * <p>
+         * <p>The status of the backup task. Valid values:</p>
+         * <ul>
+         * <li><strong>NoStart</strong>: The backup task is not started.</li>
+         * <li><strong>Preparing</strong>: The backup task is being prepared.</li>
+         * <li><strong>Waiting</strong>: The backup task is pending.</li>
+         * <li><strong>Uploading:</strong> The system is uploading the backup file.</li>
+         * <li><strong>Checking:</strong> The system is checking the uploaded backup file.</li>
+         * <li><strong>Finished</strong>: The backup task is complete.</li>
+         * </ul>
          * 
-         * *   **NoStart**: The backup task is not started.
-         * *   **Preparing**: The backup task is being prepared.
-         * *   **Waiting**: The backup task is pending.
-         * *   **Uploading:** The system is uploading the backup file.
-         * *   **Checking:** The system is checking the uploaded backup file.
-         * *   **Finished**: The backup task is complete.
+         * <strong>example:</strong>
+         * <p>BB73740C-23E2-4392-9DA4-2660C74C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -119,26 +125,32 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackupTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupTasksResponseBody</p>
+     */
     public static class AccessDeniedDetail extends TeaModel {
-        @NameInMap("AuthAction")
+        @com.aliyun.core.annotation.NameInMap("AuthAction")
         private String authAction;
 
-        @NameInMap("AuthPrincipalDisplayName")
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalDisplayName")
         private String authPrincipalDisplayName;
 
-        @NameInMap("AuthPrincipalOwnerId")
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalOwnerId")
         private String authPrincipalOwnerId;
 
-        @NameInMap("AuthPrincipalType")
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalType")
         private String authPrincipalType;
 
-        @NameInMap("EncodedDiagnosticMessage")
+        @com.aliyun.core.annotation.NameInMap("EncodedDiagnosticMessage")
         private String encodedDiagnosticMessage;
 
-        @NameInMap("NoPermissionType")
+        @com.aliyun.core.annotation.NameInMap("NoPermissionType")
         private String noPermissionType;
 
-        @NameInMap("PolicyType")
+        @com.aliyun.core.annotation.NameInMap("PolicyType")
         private String policyType;
 
         private AccessDeniedDetail(Builder builder) {
@@ -218,7 +230,10 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             private String policyType; 
 
             /**
-             * AuthAction.
+             * <p>This parameter is no longer used. Ignore this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>_</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -226,7 +241,10 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>This parameter is no longer used. Ignore this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>_</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -234,7 +252,10 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>This parameter is no longer used. Ignore this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>_</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -242,7 +263,10 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>This parameter is no longer used. Ignore this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>_</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -250,7 +274,10 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>This parameter is no longer used. Ignore this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>_</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -258,7 +285,10 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * NoPermissionType.
+             * <p>This parameter is no longer used. Ignore this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>_</p>
              */
             public Builder noPermissionType(String noPermissionType) {
                 this.noPermissionType = noPermissionType;
@@ -266,7 +296,10 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>This parameter is no longer used. Ignore this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>_</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -280,26 +313,32 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBackupTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupTasksResponseBody</p>
+     */
     public static class BackupJobs extends TeaModel {
-        @NameInMap("BackupJobID")
-        private Integer backupJobID;
+        @com.aliyun.core.annotation.NameInMap("BackupJobID")
+        private Long backupJobID;
 
-        @NameInMap("BackupProgressStatus")
+        @com.aliyun.core.annotation.NameInMap("BackupProgressStatus")
         private String backupProgressStatus;
 
-        @NameInMap("JobMode")
+        @com.aliyun.core.annotation.NameInMap("JobMode")
         private String jobMode;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("Process")
+        @com.aliyun.core.annotation.NameInMap("Process")
         private String process;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("TaskAction")
+        @com.aliyun.core.annotation.NameInMap("TaskAction")
         private String taskAction;
 
         private BackupJobs(Builder builder) {
@@ -323,7 +362,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         /**
          * @return backupJobID
          */
-        public Integer getBackupJobID() {
+        public Long getBackupJobID() {
             return this.backupJobID;
         }
 
@@ -370,7 +409,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private Integer backupJobID; 
+            private Long backupJobID; 
             private String backupProgressStatus; 
             private String jobMode; 
             private String nodeId; 
@@ -379,23 +418,29 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             private String taskAction; 
 
             /**
-             * The ID of the backup task.
+             * <p>The ID of the backup task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8491111</p>
              */
-            public Builder backupJobID(Integer backupJobID) {
+            public Builder backupJobID(Long backupJobID) {
                 this.backupJobID = backupJobID;
                 return this;
             }
 
             /**
-             * The state of the backup task. Valid values:
-             * <p>
+             * <p>The state of the backup task. Valid values:</p>
+             * <ul>
+             * <li><strong>NoStart</strong>: The backup task is not started.</li>
+             * <li><strong>Preparing</strong>: The backup task is being prepared.</li>
+             * <li><strong>Waiting</strong>: The backup task is pending.</li>
+             * <li><strong>Uploading</strong>: The system is uploading the backup file.</li>
+             * <li><strong>Checking</strong>: The system is checking the uploaded backup file.</li>
+             * <li><strong>Finished</strong>: The backup task is completed.</li>
+             * </ul>
              * 
-             * *   **NoStart**: The backup task is not started.
-             * *   **Preparing**: The backup task is being prepared.
-             * *   **Waiting**: The backup task is pending.
-             * *   **Uploading**: The system is uploading the backup file.
-             * *   **Checking**: The system is checking the uploaded backup file.
-             * *   **Finished**: The backup task is completed.
+             * <strong>example:</strong>
+             * <p>Automated</p>
              */
             public Builder backupProgressStatus(String backupProgressStatus) {
                 this.backupProgressStatus = backupProgressStatus;
@@ -403,11 +448,14 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The backup mode. Valid values:
-             * <p>
+             * <p>The backup mode. Valid values:</p>
+             * <ul>
+             * <li><strong>Automated</strong>: automatic backup</li>
+             * <li><strong>Manual</strong>: manual backup</li>
+             * </ul>
              * 
-             * *   **Automated**: automatic backup
-             * *   **Manual**: manual backup
+             * <strong>example:</strong>
+             * <p>Manual</p>
              */
             public Builder jobMode(String jobMode) {
                 this.jobMode = jobMode;
@@ -415,7 +463,10 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data node.
+             * <p>The ID of the data node.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -423,7 +474,10 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the backup task in percentage.
+             * <p>The progress of the backup task in percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder process(String process) {
                 this.process = process;
@@ -431,7 +485,10 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the backup task. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The start time of the backup task. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-05T19:24:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -439,11 +496,14 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the backup task. Valid values:
-             * <p>
+             * <p>The type of the backup task. Valid values:</p>
+             * <ul>
+             * <li><strong>TempBackupTask</strong>: The backup task was manually performed.</li>
+             * <li><strong>NormalBackupTask</strong>: The backup task was automatically performed.</li>
+             * </ul>
              * 
-             * *   **TempBackupTask**: The backup task was manually performed.
-             * *   **NormalBackupTask**: The backup task was automatically performed.
+             * <strong>example:</strong>
+             * <p>NormalBackupTask</p>
              */
             public Builder taskAction(String taskAction) {
                 this.taskAction = taskAction;

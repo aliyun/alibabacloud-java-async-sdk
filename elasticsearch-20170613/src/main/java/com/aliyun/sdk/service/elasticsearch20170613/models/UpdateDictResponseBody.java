@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDictResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateDictResponseBody</p>
  */
 public class UpdateDictResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private UpdateDictResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class UpdateDictResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class UpdateDictResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result.
+         * <p>The returned result.</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -71,17 +74,23 @@ public class UpdateDictResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateDictResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateDictResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("fileSize")
+        @com.aliyun.core.annotation.NameInMap("fileSize")
         private Long fileSize;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("sourceType")
+        @com.aliyun.core.annotation.NameInMap("sourceType")
         private String sourceType;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Result(Builder builder) {
@@ -134,7 +143,10 @@ public class UpdateDictResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The size of the dictionary file. Unit: bytes.
+             * <p>The size of the dictionary file. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2782602</p>
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -142,7 +154,10 @@ public class UpdateDictResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the dictionary file.
+             * <p>The name of the dictionary file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEM_MAIN.dic</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -150,11 +165,14 @@ public class UpdateDictResponseBody extends TeaModel {
             }
 
             /**
-             * The source type of the dictionary file. Valid values:
-             * <p>
+             * <p>The source type of the dictionary file. Valid values:</p>
+             * <ul>
+             * <li>OSS</li>
+             * <li>ORIGIN</li>
+             * </ul>
              * 
-             * *   OSS
-             * *   ORIGIN
+             * <strong>example:</strong>
+             * <p>ORIGIN</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -162,11 +180,14 @@ public class UpdateDictResponseBody extends TeaModel {
             }
 
             /**
-             * The dictionary type. Valid values:
-             * <p>
+             * <p>The dictionary type. Valid values:</p>
+             * <ul>
+             * <li>MAIN: IK main dicrionary</li>
+             * <li>STOP: IK stopword list</li>
+             * </ul>
              * 
-             * *   MAIN: IK main dicrionary
-             * *   STOP: IK stopword list
+             * <strong>example:</strong>
+             * <p>MAIN</p>
              */
             public Builder type(String type) {
                 this.type = type;

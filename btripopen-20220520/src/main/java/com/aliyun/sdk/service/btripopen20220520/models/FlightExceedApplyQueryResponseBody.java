@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightExceedApplyQueryResponseBody} extends {@link TeaModel}
  *
  * <p>FlightExceedApplyQueryResponseBody</p>
  */
 public class FlightExceedApplyQueryResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private FlightExceedApplyQueryResponseBody(Builder builder) {
@@ -151,50 +156,56 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FlightExceedApplyQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightExceedApplyQueryResponseBody</p>
+     */
     public static class ApplyIntentionInfoDo extends TeaModel {
-        @NameInMap("arr_airport_name")
+        @com.aliyun.core.annotation.NameInMap("arr_airport_name")
         private String arrAirportName;
 
-        @NameInMap("arr_city")
+        @com.aliyun.core.annotation.NameInMap("arr_city")
         private String arrCity;
 
-        @NameInMap("arr_city_name")
+        @com.aliyun.core.annotation.NameInMap("arr_city_name")
         private String arrCityName;
 
-        @NameInMap("arr_time")
+        @com.aliyun.core.annotation.NameInMap("arr_time")
         private String arrTime;
 
-        @NameInMap("cabin")
+        @com.aliyun.core.annotation.NameInMap("cabin")
         private String cabin;
 
-        @NameInMap("cabin_class")
+        @com.aliyun.core.annotation.NameInMap("cabin_class")
         private Integer cabinClass;
 
-        @NameInMap("cabin_class_str")
+        @com.aliyun.core.annotation.NameInMap("cabin_class_str")
         private String cabinClassStr;
 
-        @NameInMap("dep_airport_name")
+        @com.aliyun.core.annotation.NameInMap("dep_airport_name")
         private String depAirportName;
 
-        @NameInMap("dep_city")
+        @com.aliyun.core.annotation.NameInMap("dep_city")
         private String depCity;
 
-        @NameInMap("dep_city_name")
+        @com.aliyun.core.annotation.NameInMap("dep_city_name")
         private String depCityName;
 
-        @NameInMap("dep_time")
+        @com.aliyun.core.annotation.NameInMap("dep_time")
         private String depTime;
 
-        @NameInMap("discount")
+        @com.aliyun.core.annotation.NameInMap("discount")
         private String discount;
 
-        @NameInMap("flight_no")
+        @com.aliyun.core.annotation.NameInMap("flight_no")
         private String flightNo;
 
-        @NameInMap("price")
+        @com.aliyun.core.annotation.NameInMap("price")
         private Long price;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private Integer type;
 
         private ApplyIntentionInfoDo(Builder builder) {
@@ -472,44 +483,377 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
         } 
 
     }
-    public static class ApplyRecommendFlights extends TeaModel {
-        @NameInMap("arr_airport_name")
+    /**
+     * 
+     * {@link FlightExceedApplyQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightExceedApplyQueryResponseBody</p>
+     */
+    public static class ApplyIntentionInfoDoList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("arr_airport_name")
         private String arrAirportName;
 
-        @NameInMap("arr_city_name")
+        @com.aliyun.core.annotation.NameInMap("arr_city")
+        private String arrCity;
+
+        @com.aliyun.core.annotation.NameInMap("arr_city_name")
         private String arrCityName;
 
-        @NameInMap("arr_time")
+        @com.aliyun.core.annotation.NameInMap("arr_time")
         private String arrTime;
 
-        @NameInMap("cabin")
+        @com.aliyun.core.annotation.NameInMap("cabin")
         private String cabin;
 
-        @NameInMap("cabin_class")
+        @com.aliyun.core.annotation.NameInMap("cabin_class")
         private Integer cabinClass;
 
-        @NameInMap("cabin_class_str")
+        @com.aliyun.core.annotation.NameInMap("cabin_class_str")
         private String cabinClassStr;
 
-        @NameInMap("dep_airport_name")
+        @com.aliyun.core.annotation.NameInMap("dep_airport_name")
         private String depAirportName;
 
-        @NameInMap("dep_city_name")
+        @com.aliyun.core.annotation.NameInMap("dep_city")
+        private String depCity;
+
+        @com.aliyun.core.annotation.NameInMap("dep_city_name")
         private String depCityName;
 
-        @NameInMap("dep_time")
+        @com.aliyun.core.annotation.NameInMap("dep_time")
         private String depTime;
 
-        @NameInMap("discount")
+        @com.aliyun.core.annotation.NameInMap("discount")
         private String discount;
 
-        @NameInMap("flight_no")
+        @com.aliyun.core.annotation.NameInMap("flight_no")
         private String flightNo;
 
-        @NameInMap("price")
+        @com.aliyun.core.annotation.NameInMap("price")
         private Long price;
 
-        @NameInMap("transfer_airport_name")
+        @com.aliyun.core.annotation.NameInMap("type")
+        private Integer type;
+
+        private ApplyIntentionInfoDoList(Builder builder) {
+            this.arrAirportName = builder.arrAirportName;
+            this.arrCity = builder.arrCity;
+            this.arrCityName = builder.arrCityName;
+            this.arrTime = builder.arrTime;
+            this.cabin = builder.cabin;
+            this.cabinClass = builder.cabinClass;
+            this.cabinClassStr = builder.cabinClassStr;
+            this.depAirportName = builder.depAirportName;
+            this.depCity = builder.depCity;
+            this.depCityName = builder.depCityName;
+            this.depTime = builder.depTime;
+            this.discount = builder.discount;
+            this.flightNo = builder.flightNo;
+            this.price = builder.price;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ApplyIntentionInfoDoList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return arrAirportName
+         */
+        public String getArrAirportName() {
+            return this.arrAirportName;
+        }
+
+        /**
+         * @return arrCity
+         */
+        public String getArrCity() {
+            return this.arrCity;
+        }
+
+        /**
+         * @return arrCityName
+         */
+        public String getArrCityName() {
+            return this.arrCityName;
+        }
+
+        /**
+         * @return arrTime
+         */
+        public String getArrTime() {
+            return this.arrTime;
+        }
+
+        /**
+         * @return cabin
+         */
+        public String getCabin() {
+            return this.cabin;
+        }
+
+        /**
+         * @return cabinClass
+         */
+        public Integer getCabinClass() {
+            return this.cabinClass;
+        }
+
+        /**
+         * @return cabinClassStr
+         */
+        public String getCabinClassStr() {
+            return this.cabinClassStr;
+        }
+
+        /**
+         * @return depAirportName
+         */
+        public String getDepAirportName() {
+            return this.depAirportName;
+        }
+
+        /**
+         * @return depCity
+         */
+        public String getDepCity() {
+            return this.depCity;
+        }
+
+        /**
+         * @return depCityName
+         */
+        public String getDepCityName() {
+            return this.depCityName;
+        }
+
+        /**
+         * @return depTime
+         */
+        public String getDepTime() {
+            return this.depTime;
+        }
+
+        /**
+         * @return discount
+         */
+        public String getDiscount() {
+            return this.discount;
+        }
+
+        /**
+         * @return flightNo
+         */
+        public String getFlightNo() {
+            return this.flightNo;
+        }
+
+        /**
+         * @return price
+         */
+        public Long getPrice() {
+            return this.price;
+        }
+
+        /**
+         * @return type
+         */
+        public Integer getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String arrAirportName; 
+            private String arrCity; 
+            private String arrCityName; 
+            private String arrTime; 
+            private String cabin; 
+            private Integer cabinClass; 
+            private String cabinClassStr; 
+            private String depAirportName; 
+            private String depCity; 
+            private String depCityName; 
+            private String depTime; 
+            private String discount; 
+            private String flightNo; 
+            private Long price; 
+            private Integer type; 
+
+            /**
+             * arr_airport_name.
+             */
+            public Builder arrAirportName(String arrAirportName) {
+                this.arrAirportName = arrAirportName;
+                return this;
+            }
+
+            /**
+             * arr_city.
+             */
+            public Builder arrCity(String arrCity) {
+                this.arrCity = arrCity;
+                return this;
+            }
+
+            /**
+             * arr_city_name.
+             */
+            public Builder arrCityName(String arrCityName) {
+                this.arrCityName = arrCityName;
+                return this;
+            }
+
+            /**
+             * arr_time.
+             */
+            public Builder arrTime(String arrTime) {
+                this.arrTime = arrTime;
+                return this;
+            }
+
+            /**
+             * cabin.
+             */
+            public Builder cabin(String cabin) {
+                this.cabin = cabin;
+                return this;
+            }
+
+            /**
+             * cabin_class.
+             */
+            public Builder cabinClass(Integer cabinClass) {
+                this.cabinClass = cabinClass;
+                return this;
+            }
+
+            /**
+             * cabin_class_str.
+             */
+            public Builder cabinClassStr(String cabinClassStr) {
+                this.cabinClassStr = cabinClassStr;
+                return this;
+            }
+
+            /**
+             * dep_airport_name.
+             */
+            public Builder depAirportName(String depAirportName) {
+                this.depAirportName = depAirportName;
+                return this;
+            }
+
+            /**
+             * dep_city.
+             */
+            public Builder depCity(String depCity) {
+                this.depCity = depCity;
+                return this;
+            }
+
+            /**
+             * dep_city_name.
+             */
+            public Builder depCityName(String depCityName) {
+                this.depCityName = depCityName;
+                return this;
+            }
+
+            /**
+             * dep_time.
+             */
+            public Builder depTime(String depTime) {
+                this.depTime = depTime;
+                return this;
+            }
+
+            /**
+             * discount.
+             */
+            public Builder discount(String discount) {
+                this.discount = discount;
+                return this;
+            }
+
+            /**
+             * flight_no.
+             */
+            public Builder flightNo(String flightNo) {
+                this.flightNo = flightNo;
+                return this;
+            }
+
+            /**
+             * price.
+             */
+            public Builder price(Long price) {
+                this.price = price;
+                return this;
+            }
+
+            /**
+             * type.
+             */
+            public Builder type(Integer type) {
+                this.type = type;
+                return this;
+            }
+
+            public ApplyIntentionInfoDoList build() {
+                return new ApplyIntentionInfoDoList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link FlightExceedApplyQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightExceedApplyQueryResponseBody</p>
+     */
+    public static class ApplyRecommendFlights extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("arr_airport_name")
+        private String arrAirportName;
+
+        @com.aliyun.core.annotation.NameInMap("arr_city_name")
+        private String arrCityName;
+
+        @com.aliyun.core.annotation.NameInMap("arr_time")
+        private String arrTime;
+
+        @com.aliyun.core.annotation.NameInMap("cabin")
+        private String cabin;
+
+        @com.aliyun.core.annotation.NameInMap("cabin_class")
+        private Integer cabinClass;
+
+        @com.aliyun.core.annotation.NameInMap("cabin_class_str")
+        private String cabinClassStr;
+
+        @com.aliyun.core.annotation.NameInMap("dep_airport_name")
+        private String depAirportName;
+
+        @com.aliyun.core.annotation.NameInMap("dep_city_name")
+        private String depCityName;
+
+        @com.aliyun.core.annotation.NameInMap("dep_time")
+        private String depTime;
+
+        @com.aliyun.core.annotation.NameInMap("discount")
+        private String discount;
+
+        @com.aliyun.core.annotation.NameInMap("flight_no")
+        private String flightNo;
+
+        @com.aliyun.core.annotation.NameInMap("price")
+        private Long price;
+
+        @com.aliyun.core.annotation.NameInMap("transfer_airport_name")
         private String transferAirportName;
 
         private ApplyRecommendFlights(Builder builder) {
@@ -753,49 +1097,62 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightExceedApplyQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightExceedApplyQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
-        @NameInMap("apply_id")
+        @com.aliyun.core.annotation.NameInMap("apply_id")
         private Long applyId;
 
-        @NameInMap("apply_intention_info_do")
+        @com.aliyun.core.annotation.NameInMap("apply_intention_info_do")
         private ApplyIntentionInfoDo applyIntentionInfoDo;
 
-        @NameInMap("apply_recommend_flights")
+        @com.aliyun.core.annotation.NameInMap("apply_intention_info_do_list")
+        private java.util.List<ApplyIntentionInfoDoList> applyIntentionInfoDoList;
+
+        @com.aliyun.core.annotation.NameInMap("apply_recommend_flights")
         private ApplyRecommendFlights applyRecommendFlights;
 
-        @NameInMap("btrip_cause")
+        @com.aliyun.core.annotation.NameInMap("btrip_cause")
         private String btripCause;
 
-        @NameInMap("corp_id")
+        @com.aliyun.core.annotation.NameInMap("corp_id")
         private String corpId;
 
-        @NameInMap("exceed_reason")
+        @com.aliyun.core.annotation.NameInMap("exceed_reason")
         private String exceedReason;
 
-        @NameInMap("exceed_type")
+        @com.aliyun.core.annotation.NameInMap("exceed_type")
         private Integer exceedType;
 
-        @NameInMap("origin_standard")
+        @com.aliyun.core.annotation.NameInMap("origin_standard")
         private String originStandard;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("submit_time")
+        @com.aliyun.core.annotation.NameInMap("submit_time")
         private String submitTime;
 
-        @NameInMap("thirdpart_apply_id")
+        @com.aliyun.core.annotation.NameInMap("thirdpart_apply_id")
         private String thirdpartApplyId;
 
-        @NameInMap("thirdpart_corp_id")
+        @com.aliyun.core.annotation.NameInMap("thirdpart_corp_id")
         private String thirdpartCorpId;
 
-        @NameInMap("user_id")
+        @com.aliyun.core.annotation.NameInMap("user_id")
         private String userId;
+
+        @com.aliyun.core.annotation.NameInMap("user_name")
+        private String userName;
 
         private Module(Builder builder) {
             this.applyId = builder.applyId;
             this.applyIntentionInfoDo = builder.applyIntentionInfoDo;
+            this.applyIntentionInfoDoList = builder.applyIntentionInfoDoList;
             this.applyRecommendFlights = builder.applyRecommendFlights;
             this.btripCause = builder.btripCause;
             this.corpId = builder.corpId;
@@ -807,6 +1164,7 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
             this.thirdpartApplyId = builder.thirdpartApplyId;
             this.thirdpartCorpId = builder.thirdpartCorpId;
             this.userId = builder.userId;
+            this.userName = builder.userName;
         }
 
         public static Builder builder() {
@@ -829,6 +1187,13 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
          */
         public ApplyIntentionInfoDo getApplyIntentionInfoDo() {
             return this.applyIntentionInfoDo;
+        }
+
+        /**
+         * @return applyIntentionInfoDoList
+         */
+        public java.util.List<ApplyIntentionInfoDoList> getApplyIntentionInfoDoList() {
+            return this.applyIntentionInfoDoList;
         }
 
         /**
@@ -908,9 +1273,17 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
             return this.userId;
         }
 
+        /**
+         * @return userName
+         */
+        public String getUserName() {
+            return this.userName;
+        }
+
         public static final class Builder {
             private Long applyId; 
             private ApplyIntentionInfoDo applyIntentionInfoDo; 
+            private java.util.List<ApplyIntentionInfoDoList> applyIntentionInfoDoList; 
             private ApplyRecommendFlights applyRecommendFlights; 
             private String btripCause; 
             private String corpId; 
@@ -922,6 +1295,7 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
             private String thirdpartApplyId; 
             private String thirdpartCorpId; 
             private String userId; 
+            private String userName; 
 
             /**
              * apply_id.
@@ -936,6 +1310,14 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
              */
             public Builder applyIntentionInfoDo(ApplyIntentionInfoDo applyIntentionInfoDo) {
                 this.applyIntentionInfoDo = applyIntentionInfoDo;
+                return this;
+            }
+
+            /**
+             * apply_intention_info_do_list.
+             */
+            public Builder applyIntentionInfoDoList(java.util.List<ApplyIntentionInfoDoList> applyIntentionInfoDoList) {
+                this.applyIntentionInfoDoList = applyIntentionInfoDoList;
                 return this;
             }
 
@@ -1024,6 +1406,14 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
              */
             public Builder userId(String userId) {
                 this.userId = userId;
+                return this;
+            }
+
+            /**
+             * user_name.
+             */
+            public Builder userName(String userName) {
+                this.userName = userName;
                 return this;
             }
 

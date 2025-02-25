@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitHotlineTransferRegisterResponseBody} extends {@link TeaModel}
  *
  * <p>SubmitHotlineTransferRegisterResponseBody</p>
  */
 public class SubmitHotlineTransferRegisterResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Long data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SubmitHotlineTransferRegisterResponseBody(Builder builder) {
@@ -74,7 +74,14 @@ public class SubmitHotlineTransferRegisterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * <ul>
+         * <li>The value OK indicates that the request was successful.</li>
+         * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/112502.html">API error codes</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +89,10 @@ public class SubmitHotlineTransferRegisterResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The registration ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2258****</p>
          */
         public Builder data(Long data) {
             this.data = data;
@@ -90,7 +100,10 @@ public class SubmitHotlineTransferRegisterResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +111,10 @@ public class SubmitHotlineTransferRegisterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6086693B-2250-17CE-A41F-06259AB6DB1B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

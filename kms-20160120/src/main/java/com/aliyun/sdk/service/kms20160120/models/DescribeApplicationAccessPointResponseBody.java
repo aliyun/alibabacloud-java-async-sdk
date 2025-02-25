@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeApplicationAccessPointResponseBody</p>
  */
 public class DescribeApplicationAccessPointResponseBody extends TeaModel {
-    @NameInMap("Arn")
+    @com.aliyun.core.annotation.NameInMap("Arn")
     private String arn;
 
-    @NameInMap("AuthenticationMethod")
+    @com.aliyun.core.annotation.NameInMap("AuthenticationMethod")
     private String authenticationMethod;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("Policies")
+    @com.aliyun.core.annotation.NameInMap("Policies")
     private String policies;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeApplicationAccessPointResponseBody(Builder builder) {
@@ -98,7 +97,7 @@ public class DescribeApplicationAccessPointResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Arn.
+         * The ARN of the AAP.
          */
         public Builder arn(String arn) {
             this.arn = arn;
@@ -106,7 +105,7 @@ public class DescribeApplicationAccessPointResponseBody extends TeaModel {
         }
 
         /**
-         * AuthenticationMethod.
+         * The authentication method.
          */
         public Builder authenticationMethod(String authenticationMethod) {
             this.authenticationMethod = authenticationMethod;
@@ -114,7 +113,7 @@ public class DescribeApplicationAccessPointResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -122,7 +121,7 @@ public class DescribeApplicationAccessPointResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * The name of the AAP.
          */
         public Builder name(String name) {
             this.name = name;
@@ -130,7 +129,7 @@ public class DescribeApplicationAccessPointResponseBody extends TeaModel {
         }
 
         /**
-         * Policies.
+         * The permission policy that is bound to the AAP.
          */
         public Builder policies(String policies) {
             this.policies = policies;
@@ -138,7 +137,7 @@ public class DescribeApplicationAccessPointResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

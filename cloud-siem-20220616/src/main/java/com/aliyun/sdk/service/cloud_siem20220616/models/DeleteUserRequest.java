@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteUserRequest</p>
  */
 public class DeleteUserRequest extends Request {
-    @Body
-    @NameInMap("AddedUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AddedUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long addedUserId;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private DeleteUserRequest(Builder builder) {
@@ -69,7 +68,7 @@ public class DeleteUserRequest extends Request {
         } 
 
         /**
-         * AddedUserId.
+         * The ID of the Alibaba Cloud account.
          */
         public Builder addedUserId(Long addedUserId) {
             this.putBodyParameter("AddedUserId", addedUserId);
@@ -78,7 +77,11 @@ public class DeleteUserRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions in China.
+         * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);

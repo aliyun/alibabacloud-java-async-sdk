@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyMetricRuleTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>ApplyMetricRuleTemplateResponseBody</p>
  */
 public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Resource")
+    @com.aliyun.core.annotation.NameInMap("Resource")
     private Resource resource;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ApplyMetricRuleTemplateResponseBody(Builder builder) {
@@ -86,10 +86,13 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code.
-         * <p>
+         * <p>The responses code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * >  The HTTP status code 200 indicates that the call succeeds.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -97,7 +100,10 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified resource is not found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -105,7 +111,10 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3F897F3C-020A-4993-95B4-63ABB84F83E6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -113,7 +122,7 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The resources that are affected by the alert rule.
+         * <p>The resources that are affected by the alert rule.</p>
          */
         public Builder resource(Resource resource) {
             this.resource = resource;
@@ -121,11 +130,14 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call succeeds. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true: The call succeeds.
-         * *   false: The call fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,20 +150,26 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ApplyMetricRuleTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>ApplyMetricRuleTemplateResponseBody</p>
+     */
     public static class AlertResults extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private AlertResults(Builder builder) {
@@ -213,10 +231,13 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * The response code.
-             * <p>
+             * <p>The responses code.</p>
+             * <blockquote>
+             * <p> The status code 200 indicates that the request was successful.</p>
+             * </blockquote>
              * 
-             * >  The HTTP status code 200 indicates that the call succeeds.
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -224,7 +245,10 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The returned information.
+             * <p>The returned message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alert rule is creating, please wait a few minutes.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -232,7 +256,10 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the alert rule.
+             * <p>The ID of the alert rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>applyTemplate8ab74c6b-9f27-47ab-8841-de01dc08****</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -240,7 +267,10 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert rule.
+             * <p>The name of the alert rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test123</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -248,11 +278,14 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the call succeeds. Valid values:
-             * <p>
+             * <p>Indicates whether the request was successful. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true: The call succeeds.
-             * *   false: The call fails.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -266,11 +299,17 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyMetricRuleTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>ApplyMetricRuleTemplateResponseBody</p>
+     */
     public static class Resource extends TeaModel {
-        @NameInMap("AlertResults")
+        @com.aliyun.core.annotation.NameInMap("AlertResults")
         private java.util.List < AlertResults> alertResults;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private Long groupId;
 
         private Resource(Builder builder) {
@@ -305,7 +344,7 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
             private Long groupId; 
 
             /**
-             * The details of the generated alert rule.
+             * <p>The details of the generated alert rule.</p>
              */
             public Builder alertResults(java.util.List < AlertResults> alertResults) {
                 this.alertResults = alertResults;
@@ -313,7 +352,10 @@ public class ApplyMetricRuleTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application group to which the alert template is applied.
+             * <p>The ID of the application group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;

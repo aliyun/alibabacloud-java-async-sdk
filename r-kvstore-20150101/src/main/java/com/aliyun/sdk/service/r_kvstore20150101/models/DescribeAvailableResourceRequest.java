@@ -1,80 +1,80 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAvailableResourceRequest} extends {@link RequestModel}
  *
  * <p>DescribeAvailableResourceRequest</p>
  */
 public class DescribeAvailableResourceRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @Query
-    @NameInMap("InstanceChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
     private String instanceChargeType;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("InstanceScene")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceScene")
     private String instanceScene;
 
-    @Query
-    @NameInMap("NodeId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeId")
     private String nodeId;
 
-    @Query
-    @NameInMap("OrderType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderType")
     private String orderType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ProductType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductType")
     private String productType;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private DescribeAvailableResourceRequest(Builder builder) {
@@ -265,11 +265,14 @@ public class DescribeAvailableResourceRequest extends Request {
         } 
 
         /**
-         * The display language of the response. Default value: zh-CN. Valid values:
-         * <p>
+         * <p>The display language of the response. Default value: zh-CN. Valid values:</p>
+         * <ul>
+         * <li><strong>zh-CN</strong>: Chinese</li>
+         * <li><strong>en-US</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh-CN**: Chinese
-         * *   **en-US**: English
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -278,11 +281,14 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * The category of the instance. Valid values:
-         * <p>
+         * <p>The category of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Redis</strong></li>
+         * <li><strong>Memcache</strong></li>
+         * </ul>
          * 
-         * *   **Redis**
-         * *   **Memcache**
+         * <strong>example:</strong>
+         * <p>Redis</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -291,13 +297,17 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Valid values:
-         * <p>
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>PrePaid</strong>: subscription</li>
+         * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+         * </ul>
+         * <blockquote>
+         * <p>The default value is <strong>PrePaid</strong>.</p>
+         * </blockquote>
          * 
-         * *   **PrePaid**: subscription
-         * *   **PostPaid**: pay-as-you-go
-         * 
-         * > The default value is **PrePaid**.
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -306,10 +316,13 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The ID of the instance.</p>
+         * <blockquote>
+         * <p>This parameter is available and required only if the <strong>OrderType</strong> parameter is set to <strong>UPGRADE</strong> or <strong>DOWNGRADE</strong>.</p>
+         * </blockquote>
          * 
-         * > This parameter is available and required only if the **OrderType** parameter is set to **UPGRADE** or **DOWNGRADE**.
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -318,12 +331,13 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * Redis产品系列，取值如下：
-         * <p>
+         * <p>The edition of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>professional</strong>: Standard Edition. This edition supports the standalone, master-replica, read /write splitting, and cluster architectures and provides high scalability.</li>
+         * </ul>
          * 
-         * - **professional**：标准版，支持单副本、主备、读写分离、集群四种架构，扩展性强。
-         *  <props="china">
-         * -  **economical**：仅支持主备架构，具有价格优势，更多信息请参见[经济版实例](~~2489678~~)。</props>
+         * <strong>example:</strong>
+         * <p>professional</p>
          */
         public Builder instanceScene(String instanceScene) {
             this.putQueryParameter("InstanceScene", instanceScene);
@@ -332,10 +346,13 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * The ID of the data node for which you want to query available resources that can be created. You can call the [DescribeLogicInstanceTopology](~~94665~~) operation to query the ID of the data node. Remove the number sign (`#`) and the content that follows the number sign. For example, retain only r-bp10noxlhcoim2\*\*\*\*-db-0.
-         * <p>
+         * <p>The ID of the data node for which you want to query available resources that can be created. You can call the <a href="https://help.aliyun.com/document_detail/94665.html">DescribeLogicInstanceTopology</a> operation to query the ID of the data node. Remove the number sign (<code>#</code>) and the content that follows the number sign. For example, retain only r-bp10noxlhcoim2****-db-0.</p>
+         * <blockquote>
+         * <p>Before you specify this parameter, you must set the <strong>InstanceId</strong> parameter to the ID of an instance that uses the cluster or read/write splitting architecture.</p>
+         * </blockquote>
          * 
-         * > Before you specify this parameter, you must set the **InstanceId** parameter to the ID of an instance that uses the cluster or read/write splitting architecture.
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****-db-0</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -344,12 +361,15 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * The type of the order. Default value: BUY. Valid values:
-         * <p>
+         * <p>The type of the order. Default value: BUY. Valid values:</p>
+         * <ul>
+         * <li><strong>BUY</strong>: orders that are newly created</li>
+         * <li><strong>UPGRADE</strong>: orders that are used to upgrade instances</li>
+         * <li><strong>DOWNGRADE</strong>: orders that are used to downgrade instances</li>
+         * </ul>
          * 
-         * *   **BUY**: orders that are newly created
-         * *   **UPGRADE**: orders that are used to upgrade instances
-         * *   **DOWNGRADE**: orders that are used to downgrade instances
+         * <strong>example:</strong>
+         * <p>BUY</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -376,14 +396,17 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * The instance series. Valid values:
-         * <p>
+         * <p>The series of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Local</strong>: classic ApsaraDB for Redis Community Edition instance or classic ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance</li>
+         * <li><strong>Tair_rdb</strong>: cloud-native ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance</li>
+         * <li><strong>Tair_scm</strong>: ApsaraDB for Redis Enhanced Edition (Tair) persistent memory-optimized instance</li>
+         * <li><strong>Tair_essd</strong>: ESSD-based instance</li>
+         * <li><strong>OnECS</strong>: cloud-native ApsaraDB for Redis Community Edition instance</li>
+         * </ul>
          * 
-         * *   **Local**: ApsaraDB for Redis Community Edition instance that uses local disks or ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance that uses local disks
-         * *   **Tair_rdb**: ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance that uses cloud disks
-         * *   **Tair_scm**: ApsaraDB for Redis Enhanced Edition (Tair) persistent memory-optimized instance
-         * *   **Tair_essd**: ApsaraDB for Redis Enhanced Edition (Tair) ESSD-based instance
-         * *   **OnECS**: ApsaraDB for Redis Community Edition instance that uses cloud disks
+         * <strong>example:</strong>
+         * <p>Local</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -392,7 +415,11 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~61012~~) operation to query the most recent region list.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61012.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -401,10 +428,13 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs. You can call the [ListResourceGroups](~~158855~~) operation to query the IDs of resource groups.
-         * <p>
+         * <p>The ID of the resource group to which the instance belongs. You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the IDs of resource groups.</p>
+         * <blockquote>
+         * <p>You can also query the IDs of resource groups in the Resource Management console. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information about a resource group</a>.</p>
+         * </blockquote>
          * 
-         * > You can also query the IDs of resource groups in the Resource Management console. For more information, see [View basic information about a resource group](~~151181~~).
+         * <strong>example:</strong>
+         * <p>rg-acfmyiu4e******</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -440,7 +470,10 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * The zone ID of the instance. You can call the [DescribeZones](~~94527~~) operation to query the most recent zone list.
+         * <p>The zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/94527.html">DescribeZones</a> operation to query the most recent zone list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

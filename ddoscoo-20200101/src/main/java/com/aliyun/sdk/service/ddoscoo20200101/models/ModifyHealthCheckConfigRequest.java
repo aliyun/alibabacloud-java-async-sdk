@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyHealthCheckConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifyHealthCheckConfigRequest</p>
  */
 public class ModifyHealthCheckConfigRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ForwardProtocol")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForwardProtocol")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String forwardProtocol;
 
-    @Query
-    @NameInMap("FrontendPort")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FrontendPort")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer frontendPort;
 
-    @Query
-    @NameInMap("HealthCheck")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheck")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String healthCheck;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private ModifyHealthCheckConfigRequest(Builder builder) {
@@ -123,11 +128,15 @@ public class ModifyHealthCheckConfigRequest extends Request {
         }
 
         /**
-         * The forwarding protocol. Valid values:
-         * <p>
+         * <p>The forwarding protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>tcp</strong></li>
+         * <li><strong>udp</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **tcp**
-         * *   **udp**
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         public Builder forwardProtocol(String forwardProtocol) {
             this.putQueryParameter("ForwardProtocol", forwardProtocol);
@@ -136,7 +145,11 @@ public class ModifyHealthCheckConfigRequest extends Request {
         }
 
         /**
-         * The forwarding port.
+         * <p>The forwarding port.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         public Builder frontendPort(Integer frontendPort) {
             this.putQueryParameter("FrontendPort", frontendPort);
@@ -145,32 +158,33 @@ public class ModifyHealthCheckConfigRequest extends Request {
         }
 
         /**
-         * The details of the health check configuration. This parameter is a JSON string. The string contains the following fields:
-         * <p>
+         * <p>The details of the health check configuration. This parameter is a JSON string. The string contains the following fields:</p>
+         * <ul>
+         * <li><p><strong>Type</strong>: the protocol type. This field is required and must be of the STRING type. Valid values: <strong>tcp</strong> (Layer 4) and <strong>http</strong> (Layer 7).</p>
+         * </li>
+         * <li><p><strong>Domain</strong>: the domain name, which must be of the STRING type.</p>
+         * <p>**</p>
+         * <p><strong>Note</strong>This parameter is returned only when the Layer 7 health check configuration is queried.</p>
+         * </li>
+         * <li><p><strong>Uri</strong>: the check path, which must be of the STRING type.</p>
+         * <p>**</p>
+         * <p><strong>Note</strong>This parameter is returned only when the Layer 7 health check configuration is queried.</p>
+         * </li>
+         * <li><p><strong>Timeout</strong>: the response timeout period, which must be of the INTEGER type. Valid values: <strong>1</strong> to <strong>30</strong>. Unit: seconds.</p>
+         * </li>
+         * <li><p><strong>Port</strong>: the port on which you want to perform the health check, which must be of the INTEGER type.</p>
+         * </li>
+         * <li><p><strong>Interval</strong>: the health check interval, which must be of the INTEGER type. Valid values: <strong>1</strong> to <strong>30</strong>. Unit: seconds.</p>
+         * </li>
+         * <li><p><strong>Up</strong>: the number of consecutive successful health checks that must occur before declaring a port healthy, which must be of the INTEGER type. Valid values: <strong>1</strong> to <strong>10</strong>.</p>
+         * </li>
+         * <li><p><strong>Down</strong>: the number of consecutive failed health checks that must occur before declaring a port unhealthy, which must be of the INTEGER type. Valid values: <strong>1</strong> to <strong>10</strong>.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Type**: the protocol type. This field is required and must be of the STRING type. Valid values: **tcp** (Layer 4) and **http** (Layer 7).
-         * 
-         * *   **Domain**: the domain name, which must be of the STRING type.
-         * 
-         *     **
-         * 
-         *     **Note**This parameter is returned only when the Layer 7 health check configuration is queried.
-         * 
-         * *   **Uri**: the check path, which must be of the STRING type.
-         * 
-         *     **
-         * 
-         *     **Note**This parameter is returned only when the Layer 7 health check configuration is queried.
-         * 
-         * *   **Timeout**: the response timeout period, which must be of the INTEGER type. Valid values: **1** to **30**. Unit: seconds.
-         * 
-         * *   **Port**: the port on which you want to perform the health check, which must be of the INTEGER type.
-         * 
-         * *   **Interval**: the health check interval, which must be of the INTEGER type. Valid values: **1** to **30**. Unit: seconds.
-         * 
-         * *   **Up**: the number of consecutive successful health checks that must occur before declaring a port healthy, which must be of the INTEGER type. Valid values: **1** to **10**.
-         * 
-         * *   **Down**: the number of consecutive failed health checks that must occur before declaring a port unhealthy, which must be of the INTEGER type. Valid values: **1** to **10**.
+         * <strong>example:</strong>
+         * <p>{&quot;Type&quot;:&quot;tcp&quot;,&quot;Timeout&quot;:10,&quot;Port&quot;:8080,&quot;Interval&quot;:10,&quot;Up&quot;:10,&quot;Down&quot;:40}</p>
          */
         public Builder healthCheck(String healthCheck) {
             this.putQueryParameter("HealthCheck", healthCheck);
@@ -179,10 +193,14 @@ public class ModifyHealthCheckConfigRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The ID of the instance.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-mp91j1ao****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

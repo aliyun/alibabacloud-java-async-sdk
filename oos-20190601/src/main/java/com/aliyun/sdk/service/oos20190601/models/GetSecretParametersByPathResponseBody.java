@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSecretParametersByPathResponseBody} extends {@link TeaModel}
  *
  * <p>GetSecretParametersByPathResponseBody</p>
  */
 public class GetSecretParametersByPathResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("Parameters")
-    private java.util.List < Parameters> parameters;
+    @com.aliyun.core.annotation.NameInMap("Parameters")
+    private java.util.List<Parameters> parameters;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private GetSecretParametersByPathResponseBody(Builder builder) {
@@ -60,7 +65,7 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
     /**
      * @return parameters
      */
-    public java.util.List < Parameters> getParameters() {
+    public java.util.List<Parameters> getParameters() {
         return this.parameters;
     }
 
@@ -81,12 +86,15 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
     public static final class Builder {
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < Parameters> parameters; 
+        private java.util.List<Parameters> parameters; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,7 +102,10 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gAAAAABfTgv5ewUWmNdJ3g7JVLvX70sPH90GZOVGC</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,15 +113,18 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the encryption parameters.
+         * <p>The information about the encryption parameters.</p>
          */
-        public Builder parameters(java.util.List < Parameters> parameters) {
+        public Builder parameters(java.util.List<Parameters> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25156E99-7437-4590-AA58-2ACA17DE405C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,44 +148,50 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSecretParametersByPathResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSecretParametersByPathResponseBody</p>
+     */
     public static class Parameters extends TeaModel {
-        @NameInMap("Constraints")
+        @com.aliyun.core.annotation.NameInMap("Constraints")
         private String constraints;
 
-        @NameInMap("CreatedBy")
+        @com.aliyun.core.annotation.NameInMap("CreatedBy")
         private String createdBy;
 
-        @NameInMap("CreatedDate")
+        @com.aliyun.core.annotation.NameInMap("CreatedDate")
         private String createdDate;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("KeyId")
+        @com.aliyun.core.annotation.NameInMap("KeyId")
         private String keyId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ParameterVersion")
+        @com.aliyun.core.annotation.NameInMap("ParameterVersion")
         private Integer parameterVersion;
 
-        @NameInMap("ShareType")
+        @com.aliyun.core.annotation.NameInMap("ShareType")
         private String shareType;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UpdatedBy")
+        @com.aliyun.core.annotation.NameInMap("UpdatedBy")
         private String updatedBy;
 
-        @NameInMap("UpdatedDate")
+        @com.aliyun.core.annotation.NameInMap("UpdatedDate")
         private String updatedDate;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Parameters(Builder builder) {
@@ -302,7 +325,10 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The constraints of the encryption parameter.
+             * <p>The constraints of the encryption parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;AllowedPattern&quot;: &quot;^[a-g]*$&quot;}</p>
              */
             public Builder constraints(String constraints) {
                 this.constraints = constraints;
@@ -310,7 +336,10 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * The user who created the encryption parameter.
+             * <p>The user who created the encryption parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root(130900000)</p>
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -318,7 +347,10 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the encryption parameter was updated.
+             * <p>The time when the encryption parameter was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-21T06:22:48Z</p>
              */
             public Builder createdDate(String createdDate) {
                 this.createdDate = createdDate;
@@ -326,7 +358,10 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the encryption parameter.
+             * <p>The description of the encryption parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>secretParameter</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -334,7 +369,10 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the encryption parameter.
+             * <p>The ID of the encryption parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>p-7cdc0000000000000000</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -342,7 +380,10 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the key.
+             * <p>The ID of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>090xxbex-xexx-xxxx-axfc-ddxxcxxxxcex</p>
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;
@@ -350,7 +391,10 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the encryption parameter.
+             * <p>The name of the encryption parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mySecretParameter</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -358,7 +402,10 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * The version number of the encryption parameter.
+             * <p>The version number of the encryption parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder parameterVersion(Integer parameterVersion) {
                 this.parameterVersion = parameterVersion;
@@ -366,7 +413,10 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * The share type of the encryption parameter.
+             * <p>The share type of the encryption parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Private</p>
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;
@@ -374,7 +424,10 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * The data type of the encryption parameter.
+             * <p>The data type of the encryption parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Secret</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -382,7 +435,10 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * The user who updated the encryption parameter.
+             * <p>The user who updated the encryption parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root(130900000)</p>
              */
             public Builder updatedBy(String updatedBy) {
                 this.updatedBy = updatedBy;
@@ -390,7 +446,10 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the encryption parameter was updated.
+             * <p>The time when the encryption parameter was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-21T06:22:48Z</p>
              */
             public Builder updatedDate(String updatedDate) {
                 this.updatedDate = updatedDate;
@@ -398,7 +457,10 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the encryption parameter.
+             * <p>The value of the encryption parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>secretParameter</p>
              */
             public Builder value(String value) {
                 this.value = value;

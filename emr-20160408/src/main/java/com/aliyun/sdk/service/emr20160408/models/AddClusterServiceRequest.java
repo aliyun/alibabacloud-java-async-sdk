@@ -103,13 +103,13 @@ public class AddClusterServiceRequest extends Request {
             super();
         } 
 
-        private Builder(AddClusterServiceRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.comment = response.comment;
-            this.regionId = response.regionId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.service = response.service;
+        private Builder(AddClusterServiceRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.comment = request.comment;
+            this.regionId = request.regionId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.service = request.service;
         } 
 
         /**

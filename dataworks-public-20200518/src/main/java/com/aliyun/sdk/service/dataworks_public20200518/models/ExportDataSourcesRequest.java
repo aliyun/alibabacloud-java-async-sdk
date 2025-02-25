@@ -1,51 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportDataSourcesRequest} extends {@link RequestModel}
  *
  * <p>ExportDataSourcesRequest</p>
  */
 public class ExportDataSourcesRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("DataSourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataSourceType")
     private String dataSourceType;
 
-    @Query
-    @NameInMap("EnvType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnvType")
     private Integer envType;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ProjectId")
-    @Validation(required = true, maximum = 10000000000D, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 10000000000D, minimum = 1)
     private Long projectId;
 
-    @Query
-    @NameInMap("SubType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubType")
     private String subType;
 
     private ExportDataSourcesRequest(Builder builder) {
@@ -156,7 +160,7 @@ public class ExportDataSourcesRequest extends Request {
         } 
 
         /**
-         * The ID of the region in which the data sources reside. For example, the ID of the China (Shanghai) region is cn-shanghai, and that of the China (Zhangjiakou) region is cn-zhangjiakou. The system automatically determines the value of this parameter based on the endpoint used to call the operation.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -165,22 +169,25 @@ public class ExportDataSourcesRequest extends Request {
         }
 
         /**
-         * The data source type. Valid values:
-         * <p>
+         * <p>The type of the data source. Valid values:</p>
+         * <ul>
+         * <li>odps</li>
+         * <li>mysql</li>
+         * <li>rds</li>
+         * <li>oss</li>
+         * <li>sqlserver</li>
+         * <li>polardb</li>
+         * <li>oracle</li>
+         * <li>mongodb</li>
+         * <li>emr</li>
+         * <li>postgresql</li>
+         * <li>analyticdb_for_mysql</li>
+         * <li>hybriddb_for_postgresql</li>
+         * <li>holo</li>
+         * </ul>
          * 
-         * *   odps
-         * *   mysql
-         * *   rds
-         * *   oss
-         * *   sqlserver
-         * *   polardb
-         * *   oracle
-         * *   mongodb
-         * *   emr
-         * *   postgresql
-         * *   analyticdb_for_mysql
-         * *   hybriddb_for_postgresql
-         * *   holo
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);
@@ -189,11 +196,14 @@ public class ExportDataSourcesRequest extends Request {
         }
 
         /**
-         * The environment to which the data sources belong. Valid values:
-         * <p>
+         * <p>The environment in which the data source resides. Valid values:</p>
+         * <ul>
+         * <li>0: development environment</li>
+         * <li>1: production environment</li>
+         * </ul>
          * 
-         * *   0: development environment
-         * *   1: production environment
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder envType(Integer envType) {
             this.putQueryParameter("EnvType", envType);
@@ -202,10 +212,10 @@ public class ExportDataSourcesRequest extends Request {
         }
 
         /**
-         * The keyword contained in the names of the data sources to be exported.
-         * <p>
+         * <p>The keyword contained in the names of the data sources that you want to export. You can specify only one keyword. For example, if you set this parameter to test, you can call the ExportDataSources operation to export all data sources whose names contain test in the workspace.</p>
          * 
-         * You can specify only one keyword. For example, if you set this parameter to test, all the data sources whose names contain test in the specified workspace are exported.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -214,7 +224,10 @@ public class ExportDataSourcesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value of this parameter must be a positive integer greater than or equal to 1.
+         * <p>The page number. Pages start from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -223,7 +236,10 @@ public class ExportDataSourcesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -232,7 +248,11 @@ public class ExportDataSourcesRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace to which the data sources belong. You can call the [ListProjects](~~178393~~) operation to query the ID of the workspace.
+         * <p>The ID of the DataWorks workspace to which the data sources belong. You can call the <a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a> operation to query the ID of the workspace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -241,10 +261,11 @@ public class ExportDataSourcesRequest extends Request {
         }
 
         /**
-         * The data source subtype. This parameter takes effect only if the DataSourceType parameter is set to rds.
-         * <p>
+         * <p>The subtype of the data source. This parameter takes effect only when the DataSourceType parameter is set to rds.</p>
+         * <p>If the value of the DataSourceType parameter is rds, the value of this parameter can be mysql, sqlserver, or postgresql.</p>
          * 
-         * If the DataSourceType parameter is set to rds, this parameter can be set to mysql, sqlserver, or postgresql.
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         public Builder subType(String subType) {
             this.putQueryParameter("SubType", subType);

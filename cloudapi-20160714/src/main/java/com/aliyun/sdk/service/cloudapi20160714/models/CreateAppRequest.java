@@ -1,49 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAppRequest} extends {@link RequestModel}
  *
  * <p>CreateAppRequest</p>
  */
 public class CreateAppRequest extends Request {
-    @Query
-    @NameInMap("AppCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppCode")
     private String appCode;
 
-    @Query
-    @NameInMap("AppKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppKey")
     private String appKey;
 
-    @Query
-    @NameInMap("AppName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
-    @Query
-    @NameInMap("AppSecret")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppSecret")
     private String appSecret;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Extend")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Extend")
     private String extend;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private CreateAppRequest(Builder builder) {
         super(builder);
@@ -122,7 +127,7 @@ public class CreateAppRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -134,7 +139,7 @@ public class CreateAppRequest extends Request {
         private String description; 
         private String extend; 
         private String securityToken; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -153,7 +158,10 @@ public class CreateAppRequest extends Request {
         } 
 
         /**
-         * The AppCode of the application.
+         * <p>The AppCode of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3aaf905a0a1f4f0eabc6d891dfa08afc</p>
          */
         public Builder appCode(String appCode) {
             this.putQueryParameter("AppCode", appCode);
@@ -162,7 +170,10 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * The key of the application that is used to make an API call.
+         * <p>The key of the application that is used to make an API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60030986</p>
          */
         public Builder appKey(String appKey) {
             this.putQueryParameter("AppKey", appKey);
@@ -171,7 +182,11 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * The name of the application. The name must be 4 to 26 characters in length. The name can contain letters, digits, and underscores (\_), and must start with a letter.
+         * <p>The name of the application. The name must be 4 to 26 characters in length. The name can contain letters, digits, and underscores (_), and must start with a letter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateAppTest</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -180,7 +195,10 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * The password of the application.
+         * <p>The password of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nzyNqFkRWB2uLw86</p>
          */
         public Builder appSecret(String appSecret) {
             this.putQueryParameter("AppSecret", appSecret);
@@ -189,7 +207,10 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * The description of the application. The description can be up to 180 characters in length.
+         * <p>The description of the application. The description can be up to 180 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -198,7 +219,10 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * The extended information.
+         * <p>The extended information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110210264071</p>
          */
         public Builder extend(String extend) {
             this.putQueryParameter("Extend", extend);
@@ -216,9 +240,12 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * The tag of objects that match the rule. You can specify multiple tags.
+         * <p>The tag of objects that match the rule. You can specify multiple tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Key， Value</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -231,11 +258,17 @@ public class CreateAppRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAppRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAppRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -270,10 +303,11 @@ public class CreateAppRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
-             * <p>
+             * <p>The key of the tag.</p>
+             * <p>Valid values of n: <code>[1, 20]</code>.</p>
              * 
-             * Valid values of n: `[1, 20]`.
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -281,10 +315,11 @@ public class CreateAppRequest extends Request {
             }
 
             /**
-             * The value of the tag.
-             * <p>
+             * <p>The value of the tag.</p>
+             * <p>Valid values of n: <code>[1, 20]</code>. If the parameter has a value, you must specify a value for the tag key with the same N as tag.N.Key. Otherwise, an error is reported.</p>
              * 
-             * Valid values of n: `[1, 20]`. If the parameter has a value, you must specify a value for the tag key with the same N as tag.N.Key. Otherwise, an error is reported.
+             * <strong>example:</strong>
+             * <p>&quot; &quot;</p>
              */
             public Builder value(String value) {
                 this.value = value;

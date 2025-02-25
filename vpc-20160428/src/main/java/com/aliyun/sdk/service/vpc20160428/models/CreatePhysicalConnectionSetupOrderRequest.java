@@ -1,62 +1,67 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePhysicalConnectionSetupOrderRequest} extends {@link RequestModel}
  *
  * <p>CreatePhysicalConnectionSetupOrderRequest</p>
  */
 public class CreatePhysicalConnectionSetupOrderRequest extends Request {
-    @Query
-    @NameInMap("AccessPointId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessPointId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accessPointId;
 
-    @Query
-    @NameInMap("AutoPay")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
     private Boolean autoPay;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("LineOperator")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LineOperator")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String lineOperator;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PortType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PortType")
     private String portType;
 
-    @Query
-    @NameInMap("RedundantPhysicalConnectionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RedundantPhysicalConnectionId")
     private String redundantPhysicalConnectionId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private CreatePhysicalConnectionSetupOrderRequest(Builder builder) {
@@ -197,7 +202,11 @@ public class CreatePhysicalConnectionSetupOrderRequest extends Request {
         } 
 
         /**
-         * The ID of the access point.
+         * <p>The ID of the access point.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-cn-beijing-ft-A</p>
          */
         public Builder accessPointId(String accessPointId) {
             this.putQueryParameter("AccessPointId", accessPointId);
@@ -206,11 +215,14 @@ public class CreatePhysicalConnectionSetupOrderRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable automatic payment. Valid values:
-         * <p>
+         * <p>Specifies whether to enable automatic payments. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong> (default): disables automatic payment.</li>
+         * <li><strong>true</strong></li>
+         * </ul>
          * 
-         * *   **false** (default): disables automatic payment.
-         * *   **true**: enables automatic payment.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -219,12 +231,14 @@ public class CreatePhysicalConnectionSetupOrderRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** of each API request may be different.
+         * <strong>example:</strong>
+         * <p>318BB676-0A2B-43A0-9AD8-F1D34E93750F</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -233,15 +247,19 @@ public class CreatePhysicalConnectionSetupOrderRequest extends Request {
         }
 
         /**
-         * The connectivity provider of the Express Connect circuit. Valid values:
-         * <p>
+         * <p>The connectivity provider of the Express Connect circuit. Valid values:</p>
+         * <ul>
+         * <li><strong>CT</strong>: China Telecom</li>
+         * <li><strong>CU</strong>: China Unicom</li>
+         * <li><strong>CM</strong>: China Mobile</li>
+         * <li><strong>CO</strong>: other connectivity providers in the Chinese mainland</li>
+         * <li><strong>Equinix</strong>: Equinix</li>
+         * <li><strong>Other</strong>: other connectivity providers outside the Chinese mainland</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **CT**: China Telecom
-         * *   **CU**: China Unicom
-         * *   **CM**: China Mobile
-         * *   **CO**: other connectivity providers in the Chinese mainland
-         * *   **Equinix**: Equinix
-         * *   **Other**: other connectivity providers outside the Chinese mainland
+         * <strong>example:</strong>
+         * <p>CT</p>
          */
         public Builder lineOperator(String lineOperator) {
             this.putQueryParameter("LineOperator", lineOperator);
@@ -268,18 +286,22 @@ public class CreatePhysicalConnectionSetupOrderRequest extends Request {
         }
 
         /**
-         * The port type. Valid values:
-         * <p>
+         * <p>The port type of the Express Connect circuit. Valid values:</p>
+         * <ul>
+         * <li><strong>100Base-T</strong>: 100 Mbit/s copper Ethernet port</li>
+         * <li><strong>1000Base-T</strong> (default): 1,000 Mbit/s copper Ethernet port</li>
+         * <li><strong>1000Base-LX</strong>: 1,000 Mbit/s single-mode optical port (10 km)</li>
+         * <li><strong>10GBase-T</strong>: 10,000 Mbit/s copper Ethernet port</li>
+         * <li><strong>10GBase-LR</strong>: 10,000 Mbit/s single-mode optical port (10 km)</li>
+         * <li><strong>40GBase-LR</strong>: 40,000 Mbit/s single-mode optical port</li>
+         * <li><strong>100GBase-LR</strong>: 100,000 Mbit/s single-mode optical port</li>
+         * </ul>
+         * <blockquote>
+         * <p> Whether 40GBase-LR and 100GBase-LR ports can be created depends on resource supplies. For more information, contact your account manager.</p>
+         * </blockquote>
          * 
-         * *   **100Base-T**: 100 Mbit/s copper Ethernet port
-         * *   **1000Base-T** (default): 1,000 Mbit/s copper Ethernet port
-         * *   **1000Base-LX**: 1,000 Mbit/s single-mode optical port (10 km)
-         * *   **10GBase-T**: 10,000 Mbit/s copper Ethernet port
-         * *   **10GBase-LR**: 10,000 Mbit/s single-mode optical port (10 km)
-         * *   **40GBase-LR**: 40,000 Mbit/s single-mode optical port
-         * *   **100GBase-LR**: 100,000 Mbit/s single-mode optical port
-         * 
-         * >  Whether 40GBase-LR and 100GBase-LR ports can be created is based on resource supplies. For more information, contact your business manager.
+         * <strong>example:</strong>
+         * <p>100Base-T</p>
          */
         public Builder portType(String portType) {
             this.putQueryParameter("PortType", portType);
@@ -288,7 +310,10 @@ public class CreatePhysicalConnectionSetupOrderRequest extends Request {
         }
 
         /**
-         * The ID of the redundant Express Connect circuit. The redundant Express Connect circuit must be in the **Allocated**, **Confirmed**, or **Enabled** state.
+         * <p>The ID of the redundant physical connection. The redundant physical connection must be in the <strong>Allocated</strong>, <strong>Confirmed</strong>, or <strong>Enabled</strong> state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-bp10zsv5ntp****</p>
          */
         public Builder redundantPhysicalConnectionId(String redundantPhysicalConnectionId) {
             this.putQueryParameter("RedundantPhysicalConnectionId", redundantPhysicalConnectionId);
@@ -297,10 +322,12 @@ public class CreatePhysicalConnectionSetupOrderRequest extends Request {
         }
 
         /**
-         * The region ID of the Express Connect circuit.
-         * <p>
+         * <p>The region ID of the Express Connect circuit.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

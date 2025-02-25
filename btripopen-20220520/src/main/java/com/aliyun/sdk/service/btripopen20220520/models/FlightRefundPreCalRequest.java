@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightRefundPreCalRequest} extends {@link RequestModel}
  *
  * <p>FlightRefundPreCalRequest</p>
  */
 public class FlightRefundPreCalRequest extends Request {
-    @Query
-    @NameInMap("dis_order_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dis_order_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String disOrderId;
 
-    @Query
-    @NameInMap("is_voluntary")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("is_voluntary")
     private String isVoluntary;
 
-    @Query
-    @NameInMap("passenger_segment_info_list")
-    @Validation(required = true)
-    private java.util.List < PassengerSegmentInfoList> passengerSegmentInfoList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("passenger_segment_info_list")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<PassengerSegmentInfoList> passengerSegmentInfoList;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private FlightRefundPreCalRequest(Builder builder) {
@@ -68,7 +73,7 @@ public class FlightRefundPreCalRequest extends Request {
     /**
      * @return passengerSegmentInfoList
      */
-    public java.util.List < PassengerSegmentInfoList> getPassengerSegmentInfoList() {
+    public java.util.List<PassengerSegmentInfoList> getPassengerSegmentInfoList() {
         return this.passengerSegmentInfoList;
     }
 
@@ -82,7 +87,7 @@ public class FlightRefundPreCalRequest extends Request {
     public static final class Builder extends Request.Builder<FlightRefundPreCalRequest, Builder> {
         private String disOrderId; 
         private String isVoluntary; 
-        private java.util.List < PassengerSegmentInfoList> passengerSegmentInfoList; 
+        private java.util.List<PassengerSegmentInfoList> passengerSegmentInfoList; 
         private String xAcsBtripCorpToken; 
 
         private Builder() {
@@ -98,7 +103,10 @@ public class FlightRefundPreCalRequest extends Request {
         } 
 
         /**
-         * dis_order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dis123</p>
          */
         public Builder disOrderId(String disOrderId) {
             this.putQueryParameter("dis_order_id", disOrderId);
@@ -116,9 +124,9 @@ public class FlightRefundPreCalRequest extends Request {
         }
 
         /**
-         * passenger_segment_info_list.
+         * <p>This parameter is required.</p>
          */
-        public Builder passengerSegmentInfoList(java.util.List < PassengerSegmentInfoList> passengerSegmentInfoList) {
+        public Builder passengerSegmentInfoList(java.util.List<PassengerSegmentInfoList> passengerSegmentInfoList) {
             String passengerSegmentInfoListShrink = shrink(passengerSegmentInfoList, "passenger_segment_info_list", "json");
             this.putQueryParameter("passenger_segment_info_list", passengerSegmentInfoListShrink);
             this.passengerSegmentInfoList = passengerSegmentInfoList;
@@ -141,17 +149,23 @@ public class FlightRefundPreCalRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link FlightRefundPreCalRequest} extends {@link TeaModel}
+     *
+     * <p>FlightRefundPreCalRequest</p>
+     */
     public static class PassengerSegmentInfoList extends TeaModel {
-        @NameInMap("flight_no")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("flight_no")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String flightNo;
 
-        @NameInMap("passenger_name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("passenger_name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String passengerName;
 
-        @NameInMap("user_id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("user_id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String userId;
 
         private PassengerSegmentInfoList(Builder builder) {
@@ -195,7 +209,10 @@ public class FlightRefundPreCalRequest extends Request {
             private String userId; 
 
             /**
-             * flight_no.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CA1982</p>
              */
             public Builder flightNo(String flightNo) {
                 this.flightNo = flightNo;
@@ -203,7 +220,7 @@ public class FlightRefundPreCalRequest extends Request {
             }
 
             /**
-             * passenger_name.
+             * <p>This parameter is required.</p>
              */
             public Builder passengerName(String passengerName) {
                 this.passengerName = passengerName;
@@ -211,7 +228,10 @@ public class FlightRefundPreCalRequest extends Request {
             }
 
             /**
-             * user_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23112</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

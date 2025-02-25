@@ -1,53 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResourcePriceRequest} extends {@link RequestModel}
  *
  * <p>GetResourcePriceRequest</p>
  */
 public class GetResourcePriceRequest extends Request {
-    @Query
-    @NameInMap("Amount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Amount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long amount;
 
-    @Query
-    @NameInMap("AppInstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppInstanceType")
     private String appInstanceType;
 
-    @Query
-    @NameInMap("BizRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizRegionId;
 
-    @Query
-    @NameInMap("ChargeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String chargeType;
 
-    @Query
-    @NameInMap("NodeInstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeInstanceType")
     private String nodeInstanceType;
 
-    @Query
-    @NameInMap("Period")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long period;
 
-    @Query
-    @NameInMap("PeriodUnit")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeriodUnit")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String periodUnit;
 
-    @Query
-    @NameInMap("ProductType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productType;
 
     private GetResourcePriceRequest(Builder builder) {
@@ -158,7 +163,11 @@ public class GetResourcePriceRequest extends Request {
         } 
 
         /**
-         * Amount.
+         * <p>The number of resources to purchase.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder amount(Long amount) {
             this.putQueryParameter("Amount", amount);
@@ -167,7 +176,11 @@ public class GetResourcePriceRequest extends Request {
         }
 
         /**
-         * AppInstanceType.
+         * <p>The type ID of the sessions that you purchase. You can call the <code>ListAppInstanceType</code> operation to obtain the ID.</p>
+         * <p>You must specify one of AppInstanceType and NodeInstanceType. If you specify both of the parameters, the value of NodeInstanceType takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>appstreaming.general</p>
          */
         public Builder appInstanceType(String appInstanceType) {
             this.putQueryParameter("AppInstanceType", appInstanceType);
@@ -176,7 +189,16 @@ public class GetResourcePriceRequest extends Request {
         }
 
         /**
-         * BizRegionId.
+         * <p>The ID of the region where the delivery group resides. For information about the supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>cn-shanghai: China (Shanghai).</li>
+         * <li>cn-hangzhou: China (Hangzhou)</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder bizRegionId(String bizRegionId) {
             this.putQueryParameter("BizRegionId", bizRegionId);
@@ -185,7 +207,16 @@ public class GetResourcePriceRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * <p>The billing method.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>PostPaid: pay-as-you-go</li>
+         * <li>PrePaid: subscription</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -194,7 +225,19 @@ public class GetResourcePriceRequest extends Request {
         }
 
         /**
-         * NodeInstanceType.
+         * <p>The ID of the resource type that you purchase. You can call the <a href="https://help.aliyun.com/document_detail/428502.html">ListNodeInstanceType</a> to obtain the ID.</p>
+         * <p>You must specify one of AppInstanceType and NodeInstanceType. If you specify both of the parameters, the value of NodeInstanceType takes effect.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>appstreaming.vgpu.8c16g.4g: WUYING - Graphics - 8 vCPUs, 16 GiB Memory, 4 GiB GPU Memory</li>
+         * <li>appstreaming.general.8c16g: WUYING - General - 8 vCPUs, 16 GiB Memory</li>
+         * <li>appstreaming.general.4c8g: WUYING - General - 4 vCPUs, 8 GiB Memory</li>
+         * <li>appstreaming.vgpu.14c93g.12g: WUYING - Graphics - 14 vCPUs, 93 GiB Memory, 12 GiB GPU Memory.</li>
+         * <li>appstreaming.vgpu.8c31g.16g: WUYING - Graphics - 8 vCPUs, 31 GiB Memory, 16 GiB GPU Memory</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>appstreaming.vgpu.4c8g.2g</p>
          */
         public Builder nodeInstanceType(String nodeInstanceType) {
             this.putQueryParameter("NodeInstanceType", nodeInstanceType);
@@ -203,7 +246,11 @@ public class GetResourcePriceRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The subscription duration of resources. This parameter must be configured together with <code>PeriodUnit</code>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Long period) {
             this.putQueryParameter("Period", period);
@@ -212,7 +259,24 @@ public class GetResourcePriceRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * <p>The unit of the subscription duration. This parameter must be configured together with <code>Period</code>. The following items describe valid values for the combinations of <code>Period</code> and <code>PeriodUnit</code>:</p>
+         * <ul>
+         * <li>1 Week</li>
+         * <li>1 Month</li>
+         * <li>2 Month</li>
+         * <li>3 Month</li>
+         * <li>6 Month</li>
+         * <li>1 Year</li>
+         * <li>2 Year</li>
+         * <li>3 Year</li>
+         * </ul>
+         * <blockquote>
+         * <p> The value of this parameter is case-insensitive. For example, <code>Week</code> is valid and <code>week</code> is invalid. If you specify a value combination other than the preceding combinations, such as <code>2 Week</code>, the operation can still be called. However, an error occurs when you place the order.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Week</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -221,7 +285,15 @@ public class GetResourcePriceRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>The product type.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>CloudApp: App Streaming</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudApp</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);

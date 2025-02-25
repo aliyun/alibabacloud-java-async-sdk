@@ -1,30 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ActiveAggregateConfigRulesRequest} extends {@link RequestModel}
  *
  * <p>ActiveAggregateConfigRulesRequest</p>
  */
 public class ActiveAggregateConfigRulesRequest extends Request {
-    @Query
-    @NameInMap("AggregatorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AggregatorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aggregatorId;
 
-    @Query
-    @NameInMap("ConfigRuleIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CompliancePackId")
+    private String compliancePackId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigRuleIds")
     private String configRuleIds;
 
     private ActiveAggregateConfigRulesRequest(Builder builder) {
         super(builder);
         this.aggregatorId = builder.aggregatorId;
+        this.compliancePackId = builder.compliancePackId;
         this.configRuleIds = builder.configRuleIds;
     }
 
@@ -49,6 +58,13 @@ public class ActiveAggregateConfigRulesRequest extends Request {
     }
 
     /**
+     * @return compliancePackId
+     */
+    public String getCompliancePackId() {
+        return this.compliancePackId;
+    }
+
+    /**
      * @return configRuleIds
      */
     public String getConfigRuleIds() {
@@ -57,6 +73,7 @@ public class ActiveAggregateConfigRulesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ActiveAggregateConfigRulesRequest, Builder> {
         private String aggregatorId; 
+        private String compliancePackId; 
         private String configRuleIds; 
 
         private Builder() {
@@ -66,14 +83,20 @@ public class ActiveAggregateConfigRulesRequest extends Request {
         private Builder(ActiveAggregateConfigRulesRequest request) {
             super(request);
             this.aggregatorId = request.aggregatorId;
+            this.compliancePackId = request.compliancePackId;
             this.configRuleIds = request.configRuleIds;
         } 
 
         /**
-         * The ID of the account group.
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of the account group, see [ListAggregators](~~255797~~).
+         * <strong>example:</strong>
+         * <p>ca-a4e5626622af0079****</p>
          */
         public Builder aggregatorId(String aggregatorId) {
             this.putQueryParameter("AggregatorId", aggregatorId);
@@ -82,10 +105,26 @@ public class ActiveAggregateConfigRulesRequest extends Request {
         }
 
         /**
-         * The rule ID. Separate multiple rule IDs with commas (,).
-         * <p>
+         * <p>The rule ID.</p>
          * 
-         * For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
+         * <strong>example:</strong>
+         * <p>cp-fe416457e0d90022****</p>
+         */
+        public Builder compliancePackId(String compliancePackId) {
+            this.putQueryParameter("CompliancePackId", compliancePackId);
+            this.compliancePackId = compliancePackId;
+            return this;
+        }
+
+        /**
+         * <p>The error code returned.</p>
+         * <ul>
+         * <li>If the rule is enabled, no error code is returned.</li>
+         * <li>If the rule fails to be enabled, an error code is returned. For more information about error codes, see <a href="https://error-center.alibabacloud.com/status/product/Config">Error codes</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cr-5772ba41209e007b****</p>
          */
         public Builder configRuleIds(String configRuleIds) {
             this.putQueryParameter("ConfigRuleIds", configRuleIds);

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNetworkAccessEndpointResponseBody} extends {@link TeaModel}
  *
  * <p>CreateNetworkAccessEndpointResponseBody</p>
  */
 public class CreateNetworkAccessEndpointResponseBody extends TeaModel {
-    @NameInMap("NetworkAccessEndpointId")
+    @com.aliyun.core.annotation.NameInMap("NetworkAccessEndpointId")
     private String networkAccessEndpointId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateNetworkAccessEndpointResponseBody(Builder builder) {

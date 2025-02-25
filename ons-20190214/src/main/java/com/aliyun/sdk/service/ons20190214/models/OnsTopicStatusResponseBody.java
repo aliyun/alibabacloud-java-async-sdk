@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OnsTopicStatusResponseBody} extends {@link TeaModel}
  *
  * <p>OnsTopicStatusResponseBody</p>
  */
 public class OnsTopicStatusResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private OnsTopicStatusResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class OnsTopicStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data structure of the queried topic.
+         * <p>The data structure of the queried topic.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,10 @@ public class OnsTopicStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.
+         * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>427EE49D-D762-41FB-8F3D-9BAC96C3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +74,20 @@ public class OnsTopicStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link OnsTopicStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsTopicStatusResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("LastTimeStamp")
+        @com.aliyun.core.annotation.NameInMap("LastTimeStamp")
         private Long lastTimeStamp;
 
-        @NameInMap("Perm")
+        @com.aliyun.core.annotation.NameInMap("Perm")
         private Integer perm;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private Data(Builder builder) {
@@ -122,12 +131,12 @@ public class OnsTopicStatusResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The point in time when the latest message is ready in the topic. If no message exists in the topic, the return value of this parameter is 0.
-             * <p>
+             * <p>The point in time when the latest message is ready in the topic. If no message exists in the topic, the return value of this parameter is 0.</p>
+             * <p>The value of this parameter is a UNIX timestamp in milliseconds.</p>
+             * <p>For information about the definition of ready messages and ready time, see <a href="https://help.aliyun.com/document_detail/29533.html">Terms</a>.</p>
              * 
-             * The value of this parameter is a UNIX timestamp in milliseconds.
-             * 
-             * For information about the definition of ready messages and ready time, see [Terms](~~29533~~).
+             * <strong>example:</strong>
+             * <p>1570864984364</p>
              */
             public Builder lastTimeStamp(Long lastTimeStamp) {
                 this.lastTimeStamp = lastTimeStamp;
@@ -135,12 +144,15 @@ public class OnsTopicStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the operations that you can perform on the topic. Valid values:
-             * <p>
+             * <p>Indicates the operations that you can perform on the topic. Valid values:</p>
+             * <ul>
+             * <li><strong>2</strong>: You can publish messages to the topic.</li>
+             * <li><strong>4</strong>: You can subscribe to the topic.</li>
+             * <li><strong>6</strong>: You can publish messages to and subscribe to the topic.</li>
+             * </ul>
              * 
-             * *   **2**: You can publish messages to the topic.
-             * *   **4**: You can subscribe to the topic.
-             * *   **6**: You can publish messages to and subscribe to the topic.
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder perm(Integer perm) {
                 this.perm = perm;
@@ -148,7 +160,10 @@ public class OnsTopicStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of messages in all partitions of the topic.
+             * <p>The total number of messages in all partitions of the topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2310</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnConditionIPBInfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeCdnConditionIPBInfoRequest</p>
  */
 public class DescribeCdnConditionIPBInfoRequest extends Request {
-    @Query
-    @NameInMap("DataId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dataId;
 
     private DescribeCdnConditionIPBInfoRequest(Builder builder) {
@@ -55,15 +55,19 @@ public class DescribeCdnConditionIPBInfoRequest extends Request {
         } 
 
         /**
-         * The configuration ID. Valid values:
-         * <p>
+         * <p>The configuration ID. Valid values:</p>
+         * <ul>
+         * <li>condition_region_config_cn</li>
+         * <li>condition_region_config_en</li>
+         * <li>condition_isp_config_cn</li>
+         * <li>condition_isp_config_en</li>
+         * <li>condition_country_config_cn</li>
+         * <li>condition_country_config_en</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   condition_region_config_cn
-         * *   condition_region_config_en
-         * *   condition_isp_config_cn
-         * *   condition_isp_config_en
-         * *   condition_country_config_cn
-         * *   condition_country_config_en
+         * <strong>example:</strong>
+         * <p>condition_region_config_cn</p>
          */
         public Builder dataId(String dataId) {
             this.putQueryParameter("DataId", dataId);

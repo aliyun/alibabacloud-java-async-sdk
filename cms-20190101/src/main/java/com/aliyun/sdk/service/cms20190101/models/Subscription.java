@@ -1,47 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Subscription} extends {@link TeaModel}
  *
  * <p>Subscription</p>
  */
 public class Subscription extends TeaModel {
-    @NameInMap("Conditions")
+    @com.aliyun.core.annotation.NameInMap("Conditions")
     private java.util.List < Conditions> conditions;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("Enabled")
+    private Boolean enabled;
+
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @NameInMap("Relation")
+    @com.aliyun.core.annotation.NameInMap("Product")
+    private String product;
+
+    @com.aliyun.core.annotation.NameInMap("Relation")
     private String relation;
 
-    @NameInMap("StrategyUuid")
+    @com.aliyun.core.annotation.NameInMap("StrategyUuid")
     private String strategyUuid;
 
-    @NameInMap("UpdateTime")
+    @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
-    @NameInMap("Uuid")
+    @com.aliyun.core.annotation.NameInMap("Uuid")
     private String uuid;
 
     private Subscription(Builder builder) {
         this.conditions = builder.conditions;
         this.createTime = builder.createTime;
         this.description = builder.description;
+        this.enabled = builder.enabled;
         this.name = builder.name;
+        this.product = builder.product;
         this.relation = builder.relation;
         this.strategyUuid = builder.strategyUuid;
         this.updateTime = builder.updateTime;
@@ -78,10 +86,24 @@ public class Subscription extends TeaModel {
     }
 
     /**
+     * @return enabled
+     */
+    public Boolean getEnabled() {
+        return this.enabled;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
         return this.name;
+    }
+
+    /**
+     * @return product
+     */
+    public String getProduct() {
+        return this.product;
     }
 
     /**
@@ -116,7 +138,9 @@ public class Subscription extends TeaModel {
         private java.util.List < Conditions> conditions; 
         private String createTime; 
         private String description; 
+        private Boolean enabled; 
         private String name; 
+        private String product; 
         private String relation; 
         private String strategyUuid; 
         private String updateTime; 
@@ -147,10 +171,26 @@ public class Subscription extends TeaModel {
         }
 
         /**
-         * Name.
+         * Enabled.
+         */
+        public Builder enabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.name = name;
+            return this;
+        }
+
+        /**
+         * Product.
+         */
+        public Builder product(String product) {
+            this.product = product;
             return this;
         }
 
@@ -192,14 +232,20 @@ public class Subscription extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link Subscription} extends {@link TeaModel}
+     *
+     * <p>Subscription</p>
+     */
     public static class Conditions extends TeaModel {
-        @NameInMap("Field")
+        @com.aliyun.core.annotation.NameInMap("Field")
         private String field;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Conditions(Builder builder) {

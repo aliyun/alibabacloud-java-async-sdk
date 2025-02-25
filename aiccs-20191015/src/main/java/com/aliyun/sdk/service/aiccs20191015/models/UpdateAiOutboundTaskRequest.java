@@ -1,68 +1,73 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAiOutboundTaskRequest} extends {@link RequestModel}
  *
  * <p>UpdateAiOutboundTaskRequest</p>
  */
 public class UpdateAiOutboundTaskRequest extends Request {
-    @Query
-    @NameInMap("ConcurrentRate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConcurrentRate")
     private Integer concurrentRate;
 
-    @Query
-    @NameInMap("Description")
-    @Validation(maxLength = 100)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(maxLength = 100)
     private String description;
 
-    @Query
-    @NameInMap("ExecutionTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExecutionTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String executionTime;
 
-    @Query
-    @NameInMap("ForecastCallRate")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForecastCallRate")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Float forecastCallRate;
 
-    @Query
-    @NameInMap("HandlerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HandlerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long handlerId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true, maxLength = 15, minLength = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 15, minLength = 1)
     private String name;
 
-    @Query
-    @NameInMap("NumRepeated")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NumRepeated")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer numRepeated;
 
-    @Query
-    @NameInMap("OutboundNums")
-    @Validation(required = true)
-    private java.util.List < String > outboundNums;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutboundNums")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> outboundNums;
 
-    @Query
-    @NameInMap("RecallRule")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecallRule")
     private RecallRule recallRule;
 
-    @Query
-    @NameInMap("TaskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long taskId;
 
     private UpdateAiOutboundTaskRequest(Builder builder) {
@@ -152,7 +157,7 @@ public class UpdateAiOutboundTaskRequest extends Request {
     /**
      * @return outboundNums
      */
-    public java.util.List < String > getOutboundNums() {
+    public java.util.List<String> getOutboundNums() {
         return this.outboundNums;
     }
 
@@ -179,7 +184,7 @@ public class UpdateAiOutboundTaskRequest extends Request {
         private String instanceId; 
         private String name; 
         private Integer numRepeated; 
-        private java.util.List < String > outboundNums; 
+        private java.util.List<String> outboundNums; 
         private RecallRule recallRule; 
         private Long taskId; 
 
@@ -203,7 +208,7 @@ public class UpdateAiOutboundTaskRequest extends Request {
         } 
 
         /**
-         * 自动外呼的并发
+         * ConcurrentRate.
          */
         public Builder concurrentRate(Integer concurrentRate) {
             this.putQueryParameter("ConcurrentRate", concurrentRate);
@@ -212,7 +217,7 @@ public class UpdateAiOutboundTaskRequest extends Request {
         }
 
         /**
-         * 任务描述（0～100字符）
+         * Description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -221,7 +226,10 @@ public class UpdateAiOutboundTaskRequest extends Request {
         }
 
         /**
-         * 任务执行时间
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;TUESDAY&quot;:[{&quot;start&quot;:&quot;06:00&quot;,&quot;end&quot;:&quot;06:05&quot;}],&quot;MONDAY&quot;:[{&quot;start&quot;:&quot;09:00&quot;,&quot;end&quot;:&quot;18:00&quot;},{&quot;start&quot;:&quot;20:30&quot;,&quot;end&quot;:&quot;21:45&quot;},{&quot;start&quot;:&quot;22:30&quot;,&quot;end&quot;:&quot;22:50&quot;}],&quot;WEDNESDAY&quot;:[{&quot;start&quot;:&quot;09:00&quot;,&quot;end&quot;:&quot;18:00&quot;}],&quot;THURSDAY&quot;:[{&quot;start&quot;:&quot;09:00&quot;,&quot;end&quot;:&quot;18:00&quot;}],&quot;FRIDAY&quot;:[{&quot;start&quot;:&quot;09:00&quot;,&quot;end&quot;:&quot;18:00&quot;}],&quot;SATURDAY&quot;:[{&quot;start&quot;:&quot;09:00&quot;,&quot;end&quot;:&quot;18:00&quot;}],&quot;SUNDAY&quot;:[{&quot;start&quot;:&quot;17:00&quot;,&quot;end&quot;:&quot;23:45&quot;}]}</p>
          */
         public Builder executionTime(String executionTime) {
             this.putQueryParameter("ExecutionTime", executionTime);
@@ -230,7 +238,7 @@ public class UpdateAiOutboundTaskRequest extends Request {
         }
 
         /**
-         * 预测式外呼固定外呼比例（>=1）
+         * ForecastCallRate.
          */
         public Builder forecastCallRate(Float forecastCallRate) {
             this.putQueryParameter("ForecastCallRate", forecastCallRate);
@@ -239,7 +247,10 @@ public class UpdateAiOutboundTaskRequest extends Request {
         }
 
         /**
-         * 技能组id（预测式外呼）或者ivr id（自动外呼）
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder handlerId(Long handlerId) {
             this.putQueryParameter("HandlerId", handlerId);
@@ -248,7 +259,10 @@ public class UpdateAiOutboundTaskRequest extends Request {
         }
 
         /**
-         * 实例ID
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent_***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -257,7 +271,10 @@ public class UpdateAiOutboundTaskRequest extends Request {
         }
 
         /**
-         * 任务名（1～15字符）
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx外呼任务</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -266,7 +283,10 @@ public class UpdateAiOutboundTaskRequest extends Request {
         }
 
         /**
-         * 被叫号码重复策略（0:任务内去重，1:任务内不去重）
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder numRepeated(Integer numRepeated) {
             this.putQueryParameter("NumRepeated", numRepeated);
@@ -275,9 +295,9 @@ public class UpdateAiOutboundTaskRequest extends Request {
         }
 
         /**
-         * 外呼主叫号码
+         * <p>This parameter is required.</p>
          */
-        public Builder outboundNums(java.util.List < String > outboundNums) {
+        public Builder outboundNums(java.util.List<String> outboundNums) {
             String outboundNumsShrink = shrink(outboundNums, "OutboundNums", "json");
             this.putQueryParameter("OutboundNums", outboundNumsShrink);
             this.outboundNums = outboundNums;
@@ -285,7 +305,7 @@ public class UpdateAiOutboundTaskRequest extends Request {
         }
 
         /**
-         * 失败重呼策略
+         * RecallRule.
          */
         public Builder recallRule(RecallRule recallRule) {
             String recallRuleShrink = shrink(recallRule, "RecallRule", "json");
@@ -295,7 +315,10 @@ public class UpdateAiOutboundTaskRequest extends Request {
         }
 
         /**
-         * 任务id
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -310,13 +333,19 @@ public class UpdateAiOutboundTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateAiOutboundTaskRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateAiOutboundTaskRequest</p>
+     */
     public static class RecallRule extends TeaModel {
-        @NameInMap("Count")
-        @Validation(maximum = 3, minimum = 1)
+        @com.aliyun.core.annotation.NameInMap("Count")
+        @com.aliyun.core.annotation.Validation(maximum = 3, minimum = 1)
         private Integer count;
 
-        @NameInMap("Interval")
-        @Validation(maximum = 60, minimum = 1)
+        @com.aliyun.core.annotation.NameInMap("Interval")
+        @com.aliyun.core.annotation.Validation(maximum = 60, minimum = 1)
         private Integer interval;
 
         private RecallRule(Builder builder) {
@@ -351,7 +380,7 @@ public class UpdateAiOutboundTaskRequest extends Request {
             private Integer interval; 
 
             /**
-             * 失败重呼次数（1～3次）
+             * Count.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -359,7 +388,7 @@ public class UpdateAiOutboundTaskRequest extends Request {
             }
 
             /**
-             * 失败重呼间隔时间（1～60分钟）
+             * Interval.
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;

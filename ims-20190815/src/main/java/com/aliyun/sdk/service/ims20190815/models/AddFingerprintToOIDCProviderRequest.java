@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddFingerprintToOIDCProviderRequest} extends {@link RequestModel}
  *
  * <p>AddFingerprintToOIDCProviderRequest</p>
  */
 public class AddFingerprintToOIDCProviderRequest extends Request {
-    @Query
-    @NameInMap("Fingerprint")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Fingerprint")
     private String fingerprint;
 
-    @Query
-    @NameInMap("OIDCProviderName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OIDCProviderName")
     private String OIDCProviderName;
 
     private AddFingerprintToOIDCProviderRequest(Builder builder) {
@@ -68,12 +73,12 @@ public class AddFingerprintToOIDCProviderRequest extends Request {
         } 
 
         /**
-         * The fingerprint of the HTTPS certificate.
-         * <p>
+         * <p>The fingerprint of the HTTPS certificate.</p>
+         * <p>The fingerprint can contain letters and digits.</p>
+         * <p>The fingerprint can be up to 40 characters in length.</p>
          * 
-         * The fingerprint can contain letters and digits.
-         * 
-         * The fingerprint can be up to 40 characters in length.
+         * <strong>example:</strong>
+         * <p>902ef2deeb3c5b13ea4c3d5193629309e231****</p>
          */
         public Builder fingerprint(String fingerprint) {
             this.putQueryParameter("Fingerprint", fingerprint);
@@ -82,7 +87,10 @@ public class AddFingerprintToOIDCProviderRequest extends Request {
         }
 
         /**
-         * The name of the OIDC IdP.
+         * <p>The name of the OIDC IdP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestOIDCProvider</p>
          */
         public Builder OIDCProviderName(String OIDCProviderName) {
             this.putQueryParameter("OIDCProviderName", OIDCProviderName);

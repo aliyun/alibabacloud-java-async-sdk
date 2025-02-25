@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFlowStatisticResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeFlowStatisticResponseBody</p>
  */
 public class DescribeFlowStatisticResponseBody extends TeaModel {
-    @NameInMap("DesktopCount")
+    @com.aliyun.core.annotation.NameInMap("DesktopCount")
     private Integer desktopCount;
 
-    @NameInMap("DesktopFlowStatistic")
-    private java.util.List < DesktopFlowStatistic> desktopFlowStatistic;
+    @com.aliyun.core.annotation.NameInMap("DesktopFlowStatistic")
+    private java.util.List<DesktopFlowStatistic> desktopFlowStatistic;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeFlowStatisticResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class DescribeFlowStatisticResponseBody extends TeaModel {
     /**
      * @return desktopFlowStatistic
      */
-    public java.util.List < DesktopFlowStatistic> getDesktopFlowStatistic() {
+    public java.util.List<DesktopFlowStatistic> getDesktopFlowStatistic() {
         return this.desktopFlowStatistic;
     }
 
@@ -58,11 +63,14 @@ public class DescribeFlowStatisticResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer desktopCount; 
-        private java.util.List < DesktopFlowStatistic> desktopFlowStatistic; 
+        private java.util.List<DesktopFlowStatistic> desktopFlowStatistic; 
         private String requestId; 
 
         /**
-         * The number of available cloud desktops in the workspace.
+         * <p>The number of available cloud computers in the office network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder desktopCount(Integer desktopCount) {
             this.desktopCount = desktopCount;
@@ -70,15 +78,18 @@ public class DescribeFlowStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the traffic that is consumed by cloud desktops.
+         * <p>The traffic statistics.</p>
          */
-        public Builder desktopFlowStatistic(java.util.List < DesktopFlowStatistic> desktopFlowStatistic) {
+        public Builder desktopFlowStatistic(java.util.List<DesktopFlowStatistic> desktopFlowStatistic) {
             this.desktopFlowStatistic = desktopFlowStatistic;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>269BDB16-2CD8-4865-84BD-11C40BC2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,17 +102,23 @@ public class DescribeFlowStatisticResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeFlowStatisticResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFlowStatisticResponseBody</p>
+     */
     public static class DesktopFlowStatistic extends TeaModel {
-        @NameInMap("DesktopId")
+        @com.aliyun.core.annotation.NameInMap("DesktopId")
         private String desktopId;
 
-        @NameInMap("DesktopName")
+        @com.aliyun.core.annotation.NameInMap("DesktopName")
         private String desktopName;
 
-        @NameInMap("FlowIn")
+        @com.aliyun.core.annotation.NameInMap("FlowIn")
         private String flowIn;
 
-        @NameInMap("FlowRank")
+        @com.aliyun.core.annotation.NameInMap("FlowRank")
         private Integer flowRank;
 
         private DesktopFlowStatistic(Builder builder) {
@@ -154,7 +171,10 @@ public class DescribeFlowStatisticResponseBody extends TeaModel {
             private Integer flowRank; 
 
             /**
-             * The ID of the cloud desktop.
+             * <p>The ID of the cloud computer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-8bslxqq0csytn****</p>
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -162,7 +182,10 @@ public class DescribeFlowStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cloud desktop.
+             * <p>The name of the cloud computer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desktop-1</p>
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -170,7 +193,10 @@ public class DescribeFlowStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of the traffic. Unit: KB.
+             * <p>The traffic amount. Unit: KB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder flowIn(String flowIn) {
                 this.flowIn = flowIn;
@@ -178,7 +204,10 @@ public class DescribeFlowStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The traffic ranking.
+             * <p>The traffic ranking.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder flowRank(Integer flowRank) {
                 this.flowRank = flowRank;

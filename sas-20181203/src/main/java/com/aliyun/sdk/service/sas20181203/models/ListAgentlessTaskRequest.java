@@ -1,75 +1,80 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAgentlessTaskRequest} extends {@link RequestModel}
  *
  * <p>ListAgentlessTaskRequest</p>
  */
 public class ListAgentlessTaskRequest extends Request {
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @Query
-    @NameInMap("InternetIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetIp")
     private String internetIp;
 
-    @Query
-    @NameInMap("IntranetIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntranetIp")
     private String intranetIp;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("MachineName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MachineName")
     private String machineName;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RootTask")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RootTask")
     private Boolean rootTask;
 
-    @Query
-    @NameInMap("RootTaskId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RootTaskId")
     private String rootTaskId;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
-    @Query
-    @NameInMap("TargetName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetName")
     private String targetName;
 
-    @Query
-    @NameInMap("TargetType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetType")
     private Integer targetType;
 
-    @Query
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
-    @Query
-    @NameInMap("Uuid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuid")
     private String uuid;
 
     private ListAgentlessTaskRequest(Builder builder) {
@@ -250,7 +255,10 @@ public class ListAgentlessTaskRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -259,7 +267,10 @@ public class ListAgentlessTaskRequest extends Request {
         }
 
         /**
-         * The end timestamp of the task.
+         * <p>The end timestamp of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1635575219000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -268,7 +279,10 @@ public class ListAgentlessTaskRequest extends Request {
         }
 
         /**
-         * The public IP address of the asset that you want to query.
+         * <p>The public IP address of the asset that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.XX.XX</p>
          */
         public Builder internetIp(String internetIp) {
             this.putQueryParameter("InternetIp", internetIp);
@@ -277,7 +291,10 @@ public class ListAgentlessTaskRequest extends Request {
         }
 
         /**
-         * The private IP address of the asset that you want to query.
+         * <p>The private IP address of the asset that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.26.XX.XX</p>
          */
         public Builder intranetIp(String intranetIp) {
             this.putQueryParameter("IntranetIp", intranetIp);
@@ -286,11 +303,14 @@ public class ListAgentlessTaskRequest extends Request {
         }
 
         /**
-         * The language type. Valid values:
-         * <p>
+         * <p>The language type. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -299,7 +319,10 @@ public class ListAgentlessTaskRequest extends Request {
         }
 
         /**
-         * The name of the instance.
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oracle-win-001****</p>
          */
         public Builder machineName(String machineName) {
             this.putQueryParameter("MachineName", machineName);
@@ -308,7 +331,10 @@ public class ListAgentlessTaskRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -317,11 +343,14 @@ public class ListAgentlessTaskRequest extends Request {
         }
 
         /**
-         * Specifies whether to query main tasks. Valid values:
-         * <p>
+         * <p>Specifies whether to query main tasks. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: queries main tasks.</li>
+         * <li><strong>false</strong>: queries subtasks.</li>
+         * </ul>
          * 
-         * *   **true**: queries main tasks.
-         * *   **false**: queries subtasks.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder rootTask(Boolean rootTask) {
             this.putQueryParameter("RootTask", rootTask);
@@ -330,7 +359,10 @@ public class ListAgentlessTaskRequest extends Request {
         }
 
         /**
-         * The ID of the main task.
+         * <p>The ID of the main task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12c27343861610c5db3f7a2573b4****</p>
          */
         public Builder rootTaskId(String rootTaskId) {
             this.putQueryParameter("RootTaskId", rootTaskId);
@@ -339,7 +371,10 @@ public class ListAgentlessTaskRequest extends Request {
         }
 
         /**
-         * The start timestamp of the task.
+         * <p>The start timestamp of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1651290987000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -348,13 +383,16 @@ public class ListAgentlessTaskRequest extends Request {
         }
 
         /**
-         * The status of the detection task.
-         * <p>
+         * <p>The status of the detection task.</p>
+         * <ul>
+         * <li><strong>1</strong>: The detection task is in progress.</li>
+         * <li><strong>2</strong>: The detection task is complete.</li>
+         * <li><strong>3</strong>: The detection task fails.</li>
+         * <li><strong>4</strong>: The detection task times out.</li>
+         * </ul>
          * 
-         * *   **1**: The detection task is in progress.
-         * *   **2**: The detection task is complete.
-         * *   **3**: The detection task fails.
-         * *   **4**: The detection task times out.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -363,7 +401,10 @@ public class ListAgentlessTaskRequest extends Request {
         }
 
         /**
-         * The name of the asset that you want to detect.
+         * <p>The name of the asset that you want to detect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>source-test-obj-0****</p>
          */
         public Builder targetName(String targetName) {
             this.putQueryParameter("TargetName", targetName);
@@ -372,11 +413,14 @@ public class ListAgentlessTaskRequest extends Request {
         }
 
         /**
-         * The type of the asset that you want to detect. Valid values:
-         * <p>
+         * <p>The type of the asset that you want to detect. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: snapshot</li>
+         * <li><strong>2</strong>: image</li>
+         * </ul>
          * 
-         * *   **1**: snapshot
-         * *   **2**: image
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder targetType(Integer targetType) {
             this.putQueryParameter("TargetType", targetType);
@@ -385,7 +429,10 @@ public class ListAgentlessTaskRequest extends Request {
         }
 
         /**
-         * The ID of the main task. If you want to query subtasks of a main task, you must specify this parameter.
+         * <p>The ID of the main task. If you want to query subtasks of a main task, you must specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d7b2acf8d362742123e4a84e1bf8****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -394,7 +441,10 @@ public class ListAgentlessTaskRequest extends Request {
         }
 
         /**
-         * The UUID of the server.
+         * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e4af3620-6895-4e2f-a641-a9d8fb53****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

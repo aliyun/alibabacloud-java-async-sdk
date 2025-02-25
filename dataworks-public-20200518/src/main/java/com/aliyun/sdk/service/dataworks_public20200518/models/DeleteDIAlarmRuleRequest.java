@@ -1,25 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDIAlarmRuleRequest} extends {@link RequestModel}
  *
  * <p>DeleteDIAlarmRuleRequest</p>
  */
 public class DeleteDIAlarmRuleRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("DIAlarmRuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DIAlarmRuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long DIAlarmRuleId;
 
     private DeleteDIAlarmRuleRequest(Builder builder) {
@@ -70,7 +74,7 @@ public class DeleteDIAlarmRuleRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -79,7 +83,11 @@ public class DeleteDIAlarmRuleRequest extends Request {
         }
 
         /**
-         * DIAlarmRuleId.
+         * <p>The alert rule ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34971</p>
          */
         public Builder DIAlarmRuleId(Long DIAlarmRuleId) {
             this.putBodyParameter("DIAlarmRuleId", DIAlarmRuleId);

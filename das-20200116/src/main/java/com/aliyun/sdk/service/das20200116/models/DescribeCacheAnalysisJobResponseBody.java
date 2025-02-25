@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCacheAnalysisJobResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCacheAnalysisJobResponseBody</p>
  */
 public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private DescribeCacheAnalysisJobResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the task.
+         * <p>The details of the cache analysis task.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,10 +110,13 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned for the request.
-         * <p>
+         * <p>The message that is returned for the request.</p>
+         * <blockquote>
+         * <p> If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message that contains information such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request is successful, **Successful** is returned. If the request fails, an error message that contains information such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +124,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,11 +135,14 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -138,29 +155,35 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCacheAnalysisJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCacheAnalysisJobResponseBody</p>
+     */
     public static class KeyInfo extends TeaModel {
-        @NameInMap("Bytes")
+        @com.aliyun.core.annotation.NameInMap("Bytes")
         private Long bytes;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("Db")
+        @com.aliyun.core.annotation.NameInMap("Db")
         private Integer db;
 
-        @NameInMap("Encoding")
+        @com.aliyun.core.annotation.NameInMap("Encoding")
         private String encoding;
 
-        @NameInMap("ExpirationTimeMillis")
+        @com.aliyun.core.annotation.NameInMap("ExpirationTimeMillis")
         private Long expirationTimeMillis;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private KeyInfo(Builder builder) {
@@ -249,7 +272,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The number of bytes that are occupied by the key.
+             * <p>The number of bytes that are occupied by the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder bytes(Long bytes) {
                 this.bytes = bytes;
@@ -257,7 +283,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The number of elements in the key.
+             * <p>The number of elements in the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -265,7 +294,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder db(Integer db) {
                 this.db = db;
@@ -273,7 +305,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The data type of the key.
+             * <p>The data type of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hashtable</p>
              */
             public Builder encoding(String encoding) {
                 this.encoding = encoding;
@@ -281,7 +316,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration period of the key. Unit: milliseconds. A value of 0 indicates that the key does not expire.
+             * <p>The time when the key expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. A value of 0 indicates that the key never expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1596256542547</p>
              */
             public Builder expirationTimeMillis(Long expirationTimeMillis) {
                 this.expirationTimeMillis = expirationTimeMillis;
@@ -289,7 +327,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the key.
+             * <p>The key name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task_x****</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -297,7 +338,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data node on the instance.
+             * <p>The ID of the data node on the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-x****-db-0</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -305,7 +349,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The data type of the instance.
+             * <p>The data type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hash</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -319,9 +366,15 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCacheAnalysisJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCacheAnalysisJobResponseBody</p>
+     */
     public static class BigKeys extends TeaModel {
-        @NameInMap("KeyInfo")
-        private java.util.List < KeyInfo> keyInfo;
+        @com.aliyun.core.annotation.NameInMap("KeyInfo")
+        private java.util.List<KeyInfo> keyInfo;
 
         private BigKeys(Builder builder) {
             this.keyInfo = builder.keyInfo;
@@ -338,17 +391,17 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         /**
          * @return keyInfo
          */
-        public java.util.List < KeyInfo> getKeyInfo() {
+        public java.util.List<KeyInfo> getKeyInfo() {
             return this.keyInfo;
         }
 
         public static final class Builder {
-            private java.util.List < KeyInfo> keyInfo; 
+            private java.util.List<KeyInfo> keyInfo; 
 
             /**
              * KeyInfo.
              */
-            public Builder keyInfo(java.util.List < KeyInfo> keyInfo) {
+            public Builder keyInfo(java.util.List<KeyInfo> keyInfo) {
                 this.keyInfo = keyInfo;
                 return this;
             }
@@ -360,29 +413,35 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCacheAnalysisJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCacheAnalysisJobResponseBody</p>
+     */
     public static class BigKeysOfNumKeyInfo extends TeaModel {
-        @NameInMap("Bytes")
+        @com.aliyun.core.annotation.NameInMap("Bytes")
         private Long bytes;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("Db")
+        @com.aliyun.core.annotation.NameInMap("Db")
         private Integer db;
 
-        @NameInMap("Encoding")
+        @com.aliyun.core.annotation.NameInMap("Encoding")
         private String encoding;
 
-        @NameInMap("ExpirationTimeMillis")
+        @com.aliyun.core.annotation.NameInMap("ExpirationTimeMillis")
         private Long expirationTimeMillis;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private BigKeysOfNumKeyInfo(Builder builder) {
@@ -471,7 +530,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The number of bytes that are occupied by the key.
+             * <p>The number of bytes that are occupied by the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder bytes(Long bytes) {
                 this.bytes = bytes;
@@ -479,7 +541,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The number of elements in the key.
+             * <p>The number of elements in the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -487,7 +552,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder db(Integer db) {
                 this.db = db;
@@ -495,7 +563,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The data type of the key.
+             * <p>The data type of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hashtable</p>
              */
             public Builder encoding(String encoding) {
                 this.encoding = encoding;
@@ -503,7 +574,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration period of the key. Unit: milliseconds. A value of 0 indicates that the key does not expire.
+             * <p>The time when the key expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. A value of 0 indicates that the key never expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1596256542547</p>
              */
             public Builder expirationTimeMillis(Long expirationTimeMillis) {
                 this.expirationTimeMillis = expirationTimeMillis;
@@ -511,7 +585,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the key.
+             * <p>The key name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task_x****</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -519,7 +596,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data node on the instance.
+             * <p>The ID of the data node on the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-x****-db-0</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -527,7 +607,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The data type of the instance.
+             * <p>The data type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hash</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -541,9 +624,15 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCacheAnalysisJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCacheAnalysisJobResponseBody</p>
+     */
     public static class BigKeysOfNum extends TeaModel {
-        @NameInMap("KeyInfo")
-        private java.util.List < BigKeysOfNumKeyInfo> keyInfo;
+        @com.aliyun.core.annotation.NameInMap("KeyInfo")
+        private java.util.List<BigKeysOfNumKeyInfo> keyInfo;
 
         private BigKeysOfNum(Builder builder) {
             this.keyInfo = builder.keyInfo;
@@ -560,17 +649,17 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         /**
          * @return keyInfo
          */
-        public java.util.List < BigKeysOfNumKeyInfo> getKeyInfo() {
+        public java.util.List<BigKeysOfNumKeyInfo> getKeyInfo() {
             return this.keyInfo;
         }
 
         public static final class Builder {
-            private java.util.List < BigKeysOfNumKeyInfo> keyInfo; 
+            private java.util.List<BigKeysOfNumKeyInfo> keyInfo; 
 
             /**
              * KeyInfo.
              */
-            public Builder keyInfo(java.util.List < BigKeysOfNumKeyInfo> keyInfo) {
+            public Builder keyInfo(java.util.List<BigKeysOfNumKeyInfo> keyInfo) {
                 this.keyInfo = keyInfo;
                 return this;
             }
@@ -582,20 +671,203 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCacheAnalysisJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCacheAnalysisJobResponseBody</p>
+     */
+    public static class ExpiryLevel extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AnalysisTs")
+        private Long analysisTs;
+
+        @com.aliyun.core.annotation.NameInMap("Level")
+        private Integer level;
+
+        @com.aliyun.core.annotation.NameInMap("TotalBytes")
+        private Long totalBytes;
+
+        @com.aliyun.core.annotation.NameInMap("TotalKeys")
+        private Long totalKeys;
+
+        private ExpiryLevel(Builder builder) {
+            this.analysisTs = builder.analysisTs;
+            this.level = builder.level;
+            this.totalBytes = builder.totalBytes;
+            this.totalKeys = builder.totalKeys;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExpiryLevel create() {
+            return builder().build();
+        }
+
+        /**
+         * @return analysisTs
+         */
+        public Long getAnalysisTs() {
+            return this.analysisTs;
+        }
+
+        /**
+         * @return level
+         */
+        public Integer getLevel() {
+            return this.level;
+        }
+
+        /**
+         * @return totalBytes
+         */
+        public Long getTotalBytes() {
+            return this.totalBytes;
+        }
+
+        /**
+         * @return totalKeys
+         */
+        public Long getTotalKeys() {
+            return this.totalKeys;
+        }
+
+        public static final class Builder {
+            private Long analysisTs; 
+            private Integer level; 
+            private Long totalBytes; 
+            private Long totalKeys; 
+
+            /**
+             * <p>The time when the cache analysis task was complete. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1717469347000</p>
+             */
+            public Builder analysisTs(Long analysisTs) {
+                this.analysisTs = analysisTs;
+                return this;
+            }
+
+            /**
+             * <p>The expiration level. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The key never expires.</li>
+             * <li><strong>1</strong>: The key has expired.</li>
+             * <li><strong>2</strong>: The key has expired for 0 to 1 hour.</li>
+             * <li><strong>3</strong>: The key has expired for 1 to 3 hours.</li>
+             * <li><strong>4</strong>: The key has expired for 3 to 12 hours.</li>
+             * <li><strong>5</strong>: The key has expired for 12 to 24 hours.</li>
+             * <li><strong>6</strong>: The key has expired for one to two days.</li>
+             * <li><strong>7</strong>: The key has expired for three to seven days.</li>
+             * <li><strong>8</strong>: The key has expired for more than seven days.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder level(Integer level) {
+                this.level = level;
+                return this;
+            }
+
+            /**
+             * <p>The number of bytes occupied by the keys that have expired.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8064</p>
+             */
+            public Builder totalBytes(Long totalBytes) {
+                this.totalBytes = totalBytes;
+                return this;
+            }
+
+            /**
+             * <p>The total number of the keys that have expired.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>62</p>
+             */
+            public Builder totalKeys(Long totalKeys) {
+                this.totalKeys = totalKeys;
+                return this;
+            }
+
+            public ExpiryLevel build() {
+                return new ExpiryLevel(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeCacheAnalysisJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCacheAnalysisJobResponseBody</p>
+     */
+    public static class ExpiryKeysLevelCount extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ExpiryLevel")
+        private java.util.List<ExpiryLevel> expiryLevel;
+
+        private ExpiryKeysLevelCount(Builder builder) {
+            this.expiryLevel = builder.expiryLevel;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExpiryKeysLevelCount create() {
+            return builder().build();
+        }
+
+        /**
+         * @return expiryLevel
+         */
+        public java.util.List<ExpiryLevel> getExpiryLevel() {
+            return this.expiryLevel;
+        }
+
+        public static final class Builder {
+            private java.util.List<ExpiryLevel> expiryLevel; 
+
+            /**
+             * ExpiryLevel.
+             */
+            public Builder expiryLevel(java.util.List<ExpiryLevel> expiryLevel) {
+                this.expiryLevel = expiryLevel;
+                return this;
+            }
+
+            public ExpiryKeysLevelCount build() {
+                return new ExpiryKeysLevelCount(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeCacheAnalysisJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCacheAnalysisJobResponseBody</p>
+     */
     public static class Prefix extends TeaModel {
-        @NameInMap("Bytes")
+        @com.aliyun.core.annotation.NameInMap("Bytes")
         private Long bytes;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("KeyNum")
+        @com.aliyun.core.annotation.NameInMap("KeyNum")
         private Long keyNum;
 
-        @NameInMap("Prefix")
+        @com.aliyun.core.annotation.NameInMap("Prefix")
         private String prefix;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Prefix(Builder builder) {
@@ -657,7 +929,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The number of bytes that are occupied by the key.
+             * <p>The number of bytes that are occupied by the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder bytes(Long bytes) {
                 this.bytes = bytes;
@@ -665,7 +940,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The number of elements in the key.
+             * <p>The number of elements in the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -673,7 +951,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The number of keys that contain the prefix.
+             * <p>The number of keys that contain the prefix.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder keyNum(Long keyNum) {
                 this.keyNum = keyNum;
@@ -681,7 +962,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The prefix of the key.
+             * <p>The prefix of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task_</p>
              */
             public Builder prefix(String prefix) {
                 this.prefix = prefix;
@@ -689,7 +973,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The data type of the instance.
+             * <p>The data type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hash</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -703,9 +990,15 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCacheAnalysisJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCacheAnalysisJobResponseBody</p>
+     */
     public static class KeyPrefixes extends TeaModel {
-        @NameInMap("Prefix")
-        private java.util.List < Prefix> prefix;
+        @com.aliyun.core.annotation.NameInMap("Prefix")
+        private java.util.List<Prefix> prefix;
 
         private KeyPrefixes(Builder builder) {
             this.prefix = builder.prefix;
@@ -722,17 +1015,20 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         /**
          * @return prefix
          */
-        public java.util.List < Prefix> getPrefix() {
+        public java.util.List<Prefix> getPrefix() {
             return this.prefix;
         }
 
         public static final class Builder {
-            private java.util.List < Prefix> prefix; 
+            private java.util.List<Prefix> prefix; 
 
             /**
-             * The prefix of the key.
+             * <p>The prefix of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task_</p>
              */
-            public Builder prefix(java.util.List < Prefix> prefix) {
+            public Builder prefix(java.util.List<Prefix> prefix) {
                 this.prefix = prefix;
                 return this;
             }
@@ -744,29 +1040,35 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCacheAnalysisJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCacheAnalysisJobResponseBody</p>
+     */
     public static class UnexBigKeysOfBytesKeyInfo extends TeaModel {
-        @NameInMap("Bytes")
+        @com.aliyun.core.annotation.NameInMap("Bytes")
         private Long bytes;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("Db")
+        @com.aliyun.core.annotation.NameInMap("Db")
         private Integer db;
 
-        @NameInMap("Encoding")
+        @com.aliyun.core.annotation.NameInMap("Encoding")
         private String encoding;
 
-        @NameInMap("ExpirationTimeMillis")
+        @com.aliyun.core.annotation.NameInMap("ExpirationTimeMillis")
         private Long expirationTimeMillis;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private UnexBigKeysOfBytesKeyInfo(Builder builder) {
@@ -855,7 +1157,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The number of bytes that are occupied by the key.
+             * <p>The number of bytes that are occupied by the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder bytes(Long bytes) {
                 this.bytes = bytes;
@@ -863,7 +1168,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The number of elements in the key.
+             * <p>The number of elements in the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -871,7 +1179,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder db(Integer db) {
                 this.db = db;
@@ -879,7 +1190,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The data type of the key.
+             * <p>The data type of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hashtable</p>
              */
             public Builder encoding(String encoding) {
                 this.encoding = encoding;
@@ -887,7 +1201,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration period of the key. Unit: milliseconds. A value of 0 indicates that the key does not expire.
+             * <p>The time when the key expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. A value of 0 indicates that the key never expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1596256542547</p>
              */
             public Builder expirationTimeMillis(Long expirationTimeMillis) {
                 this.expirationTimeMillis = expirationTimeMillis;
@@ -895,7 +1212,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the key.
+             * <p>The key name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task_x****</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -903,7 +1223,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data node on the instance.
+             * <p>The ID of the data node on the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-x****-db-0</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -911,7 +1234,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The data type of the instance.
+             * <p>The data type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hash</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -925,9 +1251,15 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCacheAnalysisJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCacheAnalysisJobResponseBody</p>
+     */
     public static class UnexBigKeysOfBytes extends TeaModel {
-        @NameInMap("KeyInfo")
-        private java.util.List < UnexBigKeysOfBytesKeyInfo> keyInfo;
+        @com.aliyun.core.annotation.NameInMap("KeyInfo")
+        private java.util.List<UnexBigKeysOfBytesKeyInfo> keyInfo;
 
         private UnexBigKeysOfBytes(Builder builder) {
             this.keyInfo = builder.keyInfo;
@@ -944,17 +1276,17 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         /**
          * @return keyInfo
          */
-        public java.util.List < UnexBigKeysOfBytesKeyInfo> getKeyInfo() {
+        public java.util.List<UnexBigKeysOfBytesKeyInfo> getKeyInfo() {
             return this.keyInfo;
         }
 
         public static final class Builder {
-            private java.util.List < UnexBigKeysOfBytesKeyInfo> keyInfo; 
+            private java.util.List<UnexBigKeysOfBytesKeyInfo> keyInfo; 
 
             /**
              * KeyInfo.
              */
-            public Builder keyInfo(java.util.List < UnexBigKeysOfBytesKeyInfo> keyInfo) {
+            public Builder keyInfo(java.util.List<UnexBigKeysOfBytesKeyInfo> keyInfo) {
                 this.keyInfo = keyInfo;
                 return this;
             }
@@ -966,29 +1298,35 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCacheAnalysisJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCacheAnalysisJobResponseBody</p>
+     */
     public static class UnexBigKeysOfNumKeyInfo extends TeaModel {
-        @NameInMap("Bytes")
+        @com.aliyun.core.annotation.NameInMap("Bytes")
         private Long bytes;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("Db")
+        @com.aliyun.core.annotation.NameInMap("Db")
         private Integer db;
 
-        @NameInMap("Encoding")
+        @com.aliyun.core.annotation.NameInMap("Encoding")
         private String encoding;
 
-        @NameInMap("ExpirationTimeMillis")
+        @com.aliyun.core.annotation.NameInMap("ExpirationTimeMillis")
         private Long expirationTimeMillis;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private UnexBigKeysOfNumKeyInfo(Builder builder) {
@@ -1077,7 +1415,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The number of bytes that are occupied by the key.
+             * <p>The number of bytes that are occupied by the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder bytes(Long bytes) {
                 this.bytes = bytes;
@@ -1085,7 +1426,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The number of elements in the key.
+             * <p>The number of elements in the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -1093,7 +1437,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder db(Integer db) {
                 this.db = db;
@@ -1101,7 +1448,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The data type of the key.
+             * <p>The data type of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hashtable</p>
              */
             public Builder encoding(String encoding) {
                 this.encoding = encoding;
@@ -1109,7 +1459,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration period of the key. Unit: milliseconds. A value of 0 indicates that the key does not expire.
+             * <p>The time when the key expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. A value of 0 indicates that the key never expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1596256542547</p>
              */
             public Builder expirationTimeMillis(Long expirationTimeMillis) {
                 this.expirationTimeMillis = expirationTimeMillis;
@@ -1117,7 +1470,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the key.
+             * <p>The key name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task_x****</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1125,7 +1481,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data node on the instance.
+             * <p>The ID of the data node on the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-x****-db-0</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -1133,7 +1492,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The data type of the instance.
+             * <p>The data type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hash</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1147,9 +1509,15 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCacheAnalysisJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCacheAnalysisJobResponseBody</p>
+     */
     public static class UnexBigKeysOfNum extends TeaModel {
-        @NameInMap("KeyInfo")
-        private java.util.List < UnexBigKeysOfNumKeyInfo> keyInfo;
+        @com.aliyun.core.annotation.NameInMap("KeyInfo")
+        private java.util.List<UnexBigKeysOfNumKeyInfo> keyInfo;
 
         private UnexBigKeysOfNum(Builder builder) {
             this.keyInfo = builder.keyInfo;
@@ -1166,17 +1534,17 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         /**
          * @return keyInfo
          */
-        public java.util.List < UnexBigKeysOfNumKeyInfo> getKeyInfo() {
+        public java.util.List<UnexBigKeysOfNumKeyInfo> getKeyInfo() {
             return this.keyInfo;
         }
 
         public static final class Builder {
-            private java.util.List < UnexBigKeysOfNumKeyInfo> keyInfo; 
+            private java.util.List<UnexBigKeysOfNumKeyInfo> keyInfo; 
 
             /**
              * KeyInfo.
              */
-            public Builder keyInfo(java.util.List < UnexBigKeysOfNumKeyInfo> keyInfo) {
+            public Builder keyInfo(java.util.List<UnexBigKeysOfNumKeyInfo> keyInfo) {
                 this.keyInfo = keyInfo;
                 return this;
             }
@@ -1188,40 +1556,50 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCacheAnalysisJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCacheAnalysisJobResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("BigKeys")
+        @com.aliyun.core.annotation.NameInMap("BigKeys")
         private BigKeys bigKeys;
 
-        @NameInMap("BigKeysOfNum")
+        @com.aliyun.core.annotation.NameInMap("BigKeysOfNum")
         private BigKeysOfNum bigKeysOfNum;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("ExpiryKeysLevelCount")
+        private ExpiryKeysLevelCount expiryKeysLevelCount;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("KeyPrefixes")
+        @com.aliyun.core.annotation.NameInMap("KeyPrefixes")
         private KeyPrefixes keyPrefixes;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("TaskState")
+        @com.aliyun.core.annotation.NameInMap("TaskState")
         private String taskState;
 
-        @NameInMap("UnexBigKeysOfBytes")
+        @com.aliyun.core.annotation.NameInMap("UnexBigKeysOfBytes")
         private UnexBigKeysOfBytes unexBigKeysOfBytes;
 
-        @NameInMap("UnexBigKeysOfNum")
+        @com.aliyun.core.annotation.NameInMap("UnexBigKeysOfNum")
         private UnexBigKeysOfNum unexBigKeysOfNum;
 
         private Data(Builder builder) {
             this.bigKeys = builder.bigKeys;
             this.bigKeysOfNum = builder.bigKeysOfNum;
+            this.expiryKeysLevelCount = builder.expiryKeysLevelCount;
             this.instanceId = builder.instanceId;
             this.jobId = builder.jobId;
             this.keyPrefixes = builder.keyPrefixes;
@@ -1252,6 +1630,13 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
          */
         public BigKeysOfNum getBigKeysOfNum() {
             return this.bigKeysOfNum;
+        }
+
+        /**
+         * @return expiryKeysLevelCount
+         */
+        public ExpiryKeysLevelCount getExpiryKeysLevelCount() {
+            return this.expiryKeysLevelCount;
         }
 
         /**
@@ -1313,6 +1698,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         public static final class Builder {
             private BigKeys bigKeys; 
             private BigKeysOfNum bigKeysOfNum; 
+            private ExpiryKeysLevelCount expiryKeysLevelCount; 
             private String instanceId; 
             private String jobId; 
             private KeyPrefixes keyPrefixes; 
@@ -1323,7 +1709,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             private UnexBigKeysOfNum unexBigKeysOfNum; 
 
             /**
-             * The details of the large keys. The returned large keys are sorted in descending order based on the number of bytes occupied by the keys.
+             * <p>The details of the large keys. The returned large keys are sorted in descending order based on the number of bytes occupied by the keys.</p>
              */
             public Builder bigKeys(BigKeys bigKeys) {
                 this.bigKeys = bigKeys;
@@ -1331,7 +1717,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the large keys. The returned large keys are sorted in descending order based on the number of keys.
+             * <p>The details of the large keys. The returned large keys are sorted in descending order based on the number of keys.</p>
              */
             public Builder bigKeysOfNum(BigKeysOfNum bigKeysOfNum) {
                 this.bigKeysOfNum = bigKeysOfNum;
@@ -1339,7 +1725,18 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The statistics of the keys that have expired.</p>
+             */
+            public Builder expiryKeysLevelCount(ExpiryKeysLevelCount expiryKeysLevelCount) {
+                this.expiryKeysLevelCount = expiryKeysLevelCount;
+                return this;
+            }
+
+            /**
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-bp18ff4a195d****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1347,7 +1744,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cache analysis task.
+             * <p>The ID of the cache analysis task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sf79-sd99-sa37-****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -1355,7 +1755,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The prefixes of the keys.
+             * <p>The prefixes of the keys.</p>
              */
             public Builder keyPrefixes(KeyPrefixes keyPrefixes) {
                 this.keyPrefixes = keyPrefixes;
@@ -1363,10 +1763,13 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The message that is returned for the request.
-             * <p>
+             * <p>The message that is returned for the request.</p>
+             * <blockquote>
+             * <p> If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message that contains information such as an error code is returned.</p>
+             * </blockquote>
              * 
-             * >  If the request is successful, **Successful** is returned. If the request fails, an error message that contains information such as an error code is returned.
+             * <strong>example:</strong>
+             * <p>Successful</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -1374,7 +1777,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data node on the instance.
+             * <p>The ID of the data node on the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-x****-db-0</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -1382,13 +1788,16 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the cache analysis task. Valid values:
-             * <p>
+             * <p>The state of the cache analysis task. Valid values:</p>
+             * <ul>
+             * <li><strong>BACKUP</strong>: The data is being backed up.</li>
+             * <li><strong>ANALYZING</strong>: The data is being analyzed.</li>
+             * <li><strong>FINISHED</strong>: The data is analyzed.</li>
+             * <li><strong>FAILED</strong>: An error occurred.</li>
+             * </ul>
              * 
-             * *   **BACKUP**: The data is being backed up.
-             * *   **ANALYZING**: The data is being analyzed.
-             * *   **FINISHED**: The data is analyzed.
-             * *   **FAILED**: An error occurred.
+             * <strong>example:</strong>
+             * <p>BACKUP</p>
              */
             public Builder taskState(String taskState) {
                 this.taskState = taskState;
@@ -1396,7 +1805,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The details of permanent keys. The returned keys are sorted in descending order based on the number of bytes occupied by the keys.
+             * <p>The details of permanent keys. The returned keys are sorted in descending order based on the number of bytes occupied by the keys.</p>
              */
             public Builder unexBigKeysOfBytes(UnexBigKeysOfBytes unexBigKeysOfBytes) {
                 this.unexBigKeysOfBytes = unexBigKeysOfBytes;
@@ -1404,7 +1813,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The details of permanent keys. The returned keys are sorted in descending order based on the number of keys.
+             * <p>The details of permanent keys. The returned keys are sorted in descending order based on the number of keys.</p>
              */
             public Builder unexBigKeysOfNum(UnexBigKeysOfNum unexBigKeysOfNum) {
                 this.unexBigKeysOfNum = unexBigKeysOfNum;

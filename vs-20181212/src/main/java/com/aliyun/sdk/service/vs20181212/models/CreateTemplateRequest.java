@@ -1,101 +1,106 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTemplateRequest} extends {@link RequestModel}
  *
  * <p>CreateTemplateRequest</p>
  */
 public class CreateTemplateRequest extends Request {
-    @Query
-    @NameInMap("Callback")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Callback")
     private String callback;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("FileFormat")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileFormat")
     private String fileFormat;
 
-    @Query
-    @NameInMap("Flv")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Flv")
     private String flv;
 
-    @Query
-    @NameInMap("HlsM3u8")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HlsM3u8")
     private String hlsM3u8;
 
-    @Query
-    @NameInMap("HlsTs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HlsTs")
     private String hlsTs;
 
-    @Query
-    @NameInMap("Interval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Interval")
     private Long interval;
 
-    @Query
-    @NameInMap("JpgOnDemand")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JpgOnDemand")
     private String jpgOnDemand;
 
-    @Query
-    @NameInMap("JpgOverwrite")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JpgOverwrite")
     private String jpgOverwrite;
 
-    @Query
-    @NameInMap("JpgSequence")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JpgSequence")
     private String jpgSequence;
 
-    @Query
-    @NameInMap("Mp4")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mp4")
     private String mp4;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("OssBucket")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssBucket")
     private String ossBucket;
 
-    @Query
-    @NameInMap("OssEndpoint")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssEndpoint")
     private String ossEndpoint;
 
-    @Query
-    @NameInMap("OssFilePrefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssFilePrefix")
     private String ossFilePrefix;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Region")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
-    @Query
-    @NameInMap("Retention")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Retention")
     private Long retention;
 
-    @Query
-    @NameInMap("TransConfigsJSON")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransConfigsJSON")
     private String transConfigsJSON;
 
-    @Query
-    @NameInMap("Trigger")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Trigger")
     private String trigger;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private CreateTemplateRequest(Builder builder) {
@@ -310,29 +315,29 @@ public class CreateTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(CreateTemplateRequest response) {
-            super(response);
-            this.callback = response.callback;
-            this.description = response.description;
-            this.fileFormat = response.fileFormat;
-            this.flv = response.flv;
-            this.hlsM3u8 = response.hlsM3u8;
-            this.hlsTs = response.hlsTs;
-            this.interval = response.interval;
-            this.jpgOnDemand = response.jpgOnDemand;
-            this.jpgOverwrite = response.jpgOverwrite;
-            this.jpgSequence = response.jpgSequence;
-            this.mp4 = response.mp4;
-            this.name = response.name;
-            this.ossBucket = response.ossBucket;
-            this.ossEndpoint = response.ossEndpoint;
-            this.ossFilePrefix = response.ossFilePrefix;
-            this.ownerId = response.ownerId;
-            this.region = response.region;
-            this.retention = response.retention;
-            this.transConfigsJSON = response.transConfigsJSON;
-            this.trigger = response.trigger;
-            this.type = response.type;
+        private Builder(CreateTemplateRequest request) {
+            super(request);
+            this.callback = request.callback;
+            this.description = request.description;
+            this.fileFormat = request.fileFormat;
+            this.flv = request.flv;
+            this.hlsM3u8 = request.hlsM3u8;
+            this.hlsTs = request.hlsTs;
+            this.interval = request.interval;
+            this.jpgOnDemand = request.jpgOnDemand;
+            this.jpgOverwrite = request.jpgOverwrite;
+            this.jpgSequence = request.jpgSequence;
+            this.mp4 = request.mp4;
+            this.name = request.name;
+            this.ossBucket = request.ossBucket;
+            this.ossEndpoint = request.ossEndpoint;
+            this.ossFilePrefix = request.ossFilePrefix;
+            this.ownerId = request.ownerId;
+            this.region = request.region;
+            this.retention = request.retention;
+            this.transConfigsJSON = request.transConfigsJSON;
+            this.trigger = request.trigger;
+            this.type = request.type;
         } 
 
         /**
@@ -435,7 +440,7 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -516,7 +521,10 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>record</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

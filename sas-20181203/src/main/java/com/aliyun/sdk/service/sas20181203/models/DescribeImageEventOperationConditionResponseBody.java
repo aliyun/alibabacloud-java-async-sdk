@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageEventOperationConditionResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImageEventOperationConditionResponseBody</p>
  */
 public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeImageEventOperationConditionResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,10 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ADE57832-9666-511C-9A80-B87DE2E8****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +132,14 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -135,15 +152,21 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImageEventOperationConditionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageEventOperationConditionResponseBody</p>
+     */
     public static class Conditions extends TeaModel {
-        @NameInMap("ConditionKey")
+        @com.aliyun.core.annotation.NameInMap("ConditionKey")
         private String conditionKey;
 
-        @NameInMap("ConditionName")
+        @com.aliyun.core.annotation.NameInMap("ConditionName")
         private String conditionName;
 
-        @NameInMap("SupportedMisType")
-        private java.util.List < String > supportedMisType;
+        @com.aliyun.core.annotation.NameInMap("SupportedMisType")
+        private java.util.List<String> supportedMisType;
 
         private Conditions(Builder builder) {
             this.conditionKey = builder.conditionKey;
@@ -176,21 +199,24 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
         /**
          * @return supportedMisType
          */
-        public java.util.List < String > getSupportedMisType() {
+        public java.util.List<String> getSupportedMisType() {
             return this.supportedMisType;
         }
 
         public static final class Builder {
             private String conditionKey; 
             private String conditionName; 
-            private java.util.List < String > supportedMisType; 
+            private java.util.List<String> supportedMisType; 
 
             /**
-             * The keyword of the condition. Valid values:
-             * <p>
+             * <p>The keyword of the condition. Valid values:</p>
+             * <ul>
+             * <li><strong>MD5</strong></li>
+             * <li><strong>PATH</strong></li>
+             * </ul>
              * 
-             * *   **MD5**
-             * *   **PATH**
+             * <strong>example:</strong>
+             * <p>MD5</p>
              */
             public Builder conditionKey(String conditionKey) {
                 this.conditionKey = conditionKey;
@@ -198,7 +224,10 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the condition.
+             * <p>The name of the condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MD5</p>
              */
             public Builder conditionName(String conditionName) {
                 this.conditionName = conditionName;
@@ -206,9 +235,9 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
             }
 
             /**
-             * The matching types.
+             * <p>The matching types.</p>
              */
-            public Builder supportedMisType(java.util.List < String > supportedMisType) {
+            public Builder supportedMisType(java.util.List<String> supportedMisType) {
                 this.supportedMisType = supportedMisType;
                 return this;
             }
@@ -220,14 +249,20 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImageEventOperationConditionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageEventOperationConditionResponseBody</p>
+     */
     public static class Operations extends TeaModel {
-        @NameInMap("Conditions")
-        private java.util.List < Conditions> conditions;
+        @com.aliyun.core.annotation.NameInMap("Conditions")
+        private java.util.List<Conditions> conditions;
 
-        @NameInMap("OperationCode")
+        @com.aliyun.core.annotation.NameInMap("OperationCode")
         private String operationCode;
 
-        @NameInMap("OperationName")
+        @com.aliyun.core.annotation.NameInMap("OperationName")
         private String operationName;
 
         private Operations(Builder builder) {
@@ -247,7 +282,7 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
         /**
          * @return conditions
          */
-        public java.util.List < Conditions> getConditions() {
+        public java.util.List<Conditions> getConditions() {
             return this.conditions;
         }
 
@@ -266,23 +301,26 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Conditions> conditions; 
+            private java.util.List<Conditions> conditions; 
             private String operationCode; 
             private String operationName; 
 
             /**
-             * The rule conditions.
+             * <p>The rule conditions.</p>
              */
-            public Builder conditions(java.util.List < Conditions> conditions) {
+            public Builder conditions(java.util.List<Conditions> conditions) {
                 this.conditions = conditions;
                 return this;
             }
 
             /**
-             * The operation code.
-             * <p>
+             * <p>The operation code.</p>
+             * <ul>
+             * <li>Only <strong>whitelist</strong> may be returned, which indicates that the alert event is added to the whitelist.</li>
+             * </ul>
              * 
-             * *   Only **whitelist** may be returned, which indicates that the alert event is added to the whitelist.
+             * <strong>example:</strong>
+             * <p>whitelist</p>
              */
             public Builder operationCode(String operationCode) {
                 this.operationCode = operationCode;
@@ -290,7 +328,10 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the operation.
+             * <p>The name of the operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>whitelist</p>
              */
             public Builder operationName(String operationName) {
                 this.operationName = operationName;
@@ -304,15 +345,21 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImageEventOperationConditionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageEventOperationConditionResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
 
-        @NameInMap("Operations")
-        private java.util.List < Operations> operations;
+        @com.aliyun.core.annotation.NameInMap("Operations")
+        private java.util.List<Operations> operations;
 
-        @NameInMap("Scenarios")
-        private java.util.List < String > scenarios;
+        @com.aliyun.core.annotation.NameInMap("Scenarios")
+        private java.util.List<String> scenarios;
 
         private Data(Builder builder) {
             this.eventType = builder.eventType;
@@ -338,27 +385,30 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
         /**
          * @return operations
          */
-        public java.util.List < Operations> getOperations() {
+        public java.util.List<Operations> getOperations() {
             return this.operations;
         }
 
         /**
          * @return scenarios
          */
-        public java.util.List < String > getScenarios() {
+        public java.util.List<String> getScenarios() {
             return this.scenarios;
         }
 
         public static final class Builder {
             private String eventType; 
-            private java.util.List < Operations> operations; 
-            private java.util.List < String > scenarios; 
+            private java.util.List<Operations> operations; 
+            private java.util.List<String> scenarios; 
 
             /**
-             * The alert type.
-             * <p>
+             * <p>The alert type.</p>
+             * <ul>
+             * <li>Only <strong>sensitiveFile</strong> may be returned.</li>
+             * </ul>
              * 
-             * *   Only **sensitiveFile** may be returned.
+             * <strong>example:</strong>
+             * <p>sensitiveFile</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -366,17 +416,17 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
             }
 
             /**
-             * The operations.
+             * <p>The operations.</p>
              */
-            public Builder operations(java.util.List < Operations> operations) {
+            public Builder operations(java.util.List<Operations> operations) {
                 this.operations = operations;
                 return this;
             }
 
             /**
-             * The application scopes of the rules.
+             * <p>The application scopes of the rules.</p>
              */
-            public Builder scenarios(java.util.List < String > scenarios) {
+            public Builder scenarios(java.util.List<String> scenarios) {
                 this.scenarios = scenarios;
                 return this;
             }

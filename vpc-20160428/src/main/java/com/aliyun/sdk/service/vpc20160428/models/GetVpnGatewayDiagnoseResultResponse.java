@@ -1,27 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetVpnGatewayDiagnoseResultResponse} extends {@link TeaModel}
  *
  * <p>GetVpnGatewayDiagnoseResultResponse</p>
  */
 public class GetVpnGatewayDiagnoseResultResponse extends Response {
-    @NameInMap("headers")
-    @Validation(required = true)
-    private java.util.Map < String, String > headers;
+    @com.aliyun.core.annotation.NameInMap("headers")
+    private java.util.Map<String, String> headers;
 
-    @NameInMap("statusCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    @NameInMap("body")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("body")
     private GetVpnGatewayDiagnoseResultResponseBody body;
 
     private GetVpnGatewayDiagnoseResultResponse(BuilderImpl builder) {
@@ -43,7 +45,7 @@ public class GetVpnGatewayDiagnoseResultResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -63,7 +65,7 @@ public class GetVpnGatewayDiagnoseResultResponse extends Response {
 
     public interface Builder extends Response.Builder<GetVpnGatewayDiagnoseResultResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
@@ -77,7 +79,7 @@ public class GetVpnGatewayDiagnoseResultResponse extends Response {
     private static final class BuilderImpl
             extends Response.BuilderImpl<GetVpnGatewayDiagnoseResultResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
         private GetVpnGatewayDiagnoseResultResponseBody body; 
 
@@ -96,7 +98,7 @@ public class GetVpnGatewayDiagnoseResultResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }

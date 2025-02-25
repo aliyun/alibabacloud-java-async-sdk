@@ -1,18 +1,18 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchStopCdnDomainResponseBody} extends {@link TeaModel}
  *
  * <p>BatchStopCdnDomainResponseBody</p>
  */
 public class BatchStopCdnDomainResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private BatchStopCdnDomainResponseBody(Builder builder) {
@@ -38,7 +38,10 @@ public class BatchStopCdnDomainResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>324AEFFF-308C-4DA7-8CD3-01B277B98F28</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

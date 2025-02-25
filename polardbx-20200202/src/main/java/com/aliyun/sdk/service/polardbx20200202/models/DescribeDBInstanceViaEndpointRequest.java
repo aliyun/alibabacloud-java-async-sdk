@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceViaEndpointRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBInstanceViaEndpointRequest</p>
  */
 public class DescribeDBInstanceViaEndpointRequest extends Request {
-    @Query
-    @NameInMap("Endpoint")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Endpoint")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endpoint;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private DescribeDBInstanceViaEndpointRequest(Builder builder) {
@@ -70,7 +75,10 @@ public class DescribeDBInstanceViaEndpointRequest extends Request {
         } 
 
         /**
-         * Endpoint.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-hz*******.polarx.rds.aliyuncs.com</p>
          */
         public Builder endpoint(String endpoint) {
             this.putQueryParameter("Endpoint", endpoint);
@@ -79,7 +87,7 @@ public class DescribeDBInstanceViaEndpointRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

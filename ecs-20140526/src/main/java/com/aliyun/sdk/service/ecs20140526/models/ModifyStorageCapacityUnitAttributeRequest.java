@@ -1,49 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyStorageCapacityUnitAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyStorageCapacityUnitAttributeRequest</p>
  */
 public class ModifyStorageCapacityUnitAttributeRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("StorageCapacityUnitId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageCapacityUnitId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String storageCapacityUnitId;
 
     private ModifyStorageCapacityUnitAttributeRequest(Builder builder) {
@@ -154,7 +159,10 @@ public class ModifyStorageCapacityUnitAttributeRequest extends Request {
         } 
 
         /**
-         * The new description of the SCU. The description must be 2 to 256 characters in length and cannot start with [http:// or https://.](http://https://。)
+         * <p>The new description of the SCU. The description must be 2 to 256 characters in length and cannot start with <a href="http://https://%E3%80%82">http:// or https://.</a></p>
+         * 
+         * <strong>example:</strong>
+         * <p>testNewScuDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -163,7 +171,10 @@ public class ModifyStorageCapacityUnitAttributeRequest extends Request {
         }
 
         /**
-         * The new name of the SCU. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with [http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).](http://https://。、（:）、（\_）（-）。)
+         * <p>The new name of the SCU. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <a href="http://https://%E3%80%82%E3%80%81%EF%BC%88:%EF%BC%89%E3%80%81%EF%BC%88_%EF%BC%89%EF%BC%88-%EF%BC%89%E3%80%82">http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</a></p>
+         * 
+         * <strong>example:</strong>
+         * <p>testNewScuName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -190,7 +201,11 @@ public class ModifyStorageCapacityUnitAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the SCU. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the SCU. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -217,7 +232,11 @@ public class ModifyStorageCapacityUnitAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the SCU.
+         * <p>The ID of the SCU.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scu-bp67acfmxazb4p****</p>
          */
         public Builder storageCapacityUnitId(String storageCapacityUnitId) {
             this.putQueryParameter("StorageCapacityUnitId", storageCapacityUnitId);

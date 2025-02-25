@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeFabricOrganizationsRequest</p>
  */
 public class DescribeFabricOrganizationsRequest extends Request {
-    @Body
-    @NameInMap("Location")
-    private String location;
-
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Location")
+    private String location;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
     private DescribeFabricOrganizationsRequest(Builder builder) {
         super(builder);
-        this.location = builder.location;
         this.regionId = builder.regionId;
+        this.location = builder.location;
         this.tag = builder.tag;
     }
 
@@ -45,17 +44,17 @@ public class DescribeFabricOrganizationsRequest extends Request {
     }
 
     /**
-     * @return location
-     */
-    public String getLocation() {
-        return this.location;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return location
+     */
+    public String getLocation() {
+        return this.location;
     }
 
     /**
@@ -66,29 +65,20 @@ public class DescribeFabricOrganizationsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeFabricOrganizationsRequest, Builder> {
-        private String location; 
         private String regionId; 
+        private String location; 
         private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeFabricOrganizationsRequest response) {
-            super(response);
-            this.location = response.location;
-            this.regionId = response.regionId;
-            this.tag = response.tag;
+        private Builder(DescribeFabricOrganizationsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.location = request.location;
+            this.tag = request.tag;
         } 
-
-        /**
-         * Location.
-         */
-        public Builder location(String location) {
-            this.putBodyParameter("Location", location);
-            this.location = location;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -96,6 +86,15 @@ public class DescribeFabricOrganizationsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Location.
+         */
+        public Builder location(String location) {
+            this.putBodyParameter("Location", location);
+            this.location = location;
             return this;
         }
 
@@ -116,11 +115,11 @@ public class DescribeFabricOrganizationsRequest extends Request {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Key")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

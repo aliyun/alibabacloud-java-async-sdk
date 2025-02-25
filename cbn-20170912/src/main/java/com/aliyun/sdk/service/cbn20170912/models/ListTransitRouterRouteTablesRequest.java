@@ -1,68 +1,73 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTransitRouterRouteTablesRequest} extends {@link RequestModel}
  *
  * <p>ListTransitRouterRouteTablesRequest</p>
  */
 public class ListTransitRouterRouteTablesRequest extends Request {
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RouteTableOptions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteTableOptions")
     private RouteTableOptions routeTableOptions;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Query
-    @NameInMap("TransitRouterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterId")
     private String transitRouterId;
 
-    @Query
-    @NameInMap("TransitRouterRouteTableIds")
-    private java.util.List < String > transitRouterRouteTableIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterRouteTableIds")
+    private java.util.List<String> transitRouterRouteTableIds;
 
-    @Query
-    @NameInMap("TransitRouterRouteTableNames")
-    private java.util.List < String > transitRouterRouteTableNames;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterRouteTableNames")
+    private java.util.List<String> transitRouterRouteTableNames;
 
-    @Query
-    @NameInMap("TransitRouterRouteTableStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterRouteTableStatus")
     private String transitRouterRouteTableStatus;
 
-    @Query
-    @NameInMap("TransitRouterRouteTableType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterRouteTableType")
     private String transitRouterRouteTableType;
 
     private ListTransitRouterRouteTablesRequest(Builder builder) {
@@ -147,7 +152,7 @@ public class ListTransitRouterRouteTablesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -161,14 +166,14 @@ public class ListTransitRouterRouteTablesRequest extends Request {
     /**
      * @return transitRouterRouteTableIds
      */
-    public java.util.List < String > getTransitRouterRouteTableIds() {
+    public java.util.List<String> getTransitRouterRouteTableIds() {
         return this.transitRouterRouteTableIds;
     }
 
     /**
      * @return transitRouterRouteTableNames
      */
-    public java.util.List < String > getTransitRouterRouteTableNames() {
+    public java.util.List<String> getTransitRouterRouteTableNames() {
         return this.transitRouterRouteTableNames;
     }
 
@@ -194,10 +199,10 @@ public class ListTransitRouterRouteTablesRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private RouteTableOptions routeTableOptions; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String transitRouterId; 
-        private java.util.List < String > transitRouterRouteTableIds; 
-        private java.util.List < String > transitRouterRouteTableNames; 
+        private java.util.List<String> transitRouterRouteTableIds; 
+        private java.util.List<String> transitRouterRouteTableNames; 
         private String transitRouterRouteTableStatus; 
         private String transitRouterRouteTableType; 
 
@@ -223,7 +228,10 @@ public class ListTransitRouterRouteTablesRequest extends Request {
         } 
 
         /**
-         * The number of entries per page. Valid values: **1** to **100**. Default value: **20**.
+         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -232,11 +240,14 @@ public class ListTransitRouterRouteTablesRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the query. Valid values:
-         * <p>
+         * <p>The token that determines the start point of the query. Valid values:</p>
+         * <ul>
+         * <li>If this is your first query or no subsequent query is to be sent, ignore this parameter.</li>
+         * <li>If a subsequent query is to be sent, set the value to the value of <strong>NextToken</strong> that is returned from the last call.</li>
+         * </ul>
          * 
-         * *   If this is your first query or no subsequent query is to be sent, ignore this parameter.
-         * *   If a subsequent query is to be sent, set the value to the value of **NextToken** that is returned from the last call.
+         * <strong>example:</strong>
+         * <p>dd20****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -281,7 +292,7 @@ public class ListTransitRouterRouteTablesRequest extends Request {
         }
 
         /**
-         * The features of the route table.
+         * <p>The features of the route table.</p>
          */
         public Builder routeTableOptions(RouteTableOptions routeTableOptions) {
             this.putQueryParameter("RouteTableOptions", routeTableOptions);
@@ -290,19 +301,20 @@ public class ListTransitRouterRouteTablesRequest extends Request {
         }
 
         /**
-         * The information about the tags.
-         * <p>
-         * 
-         * You can specify at most 20 tags in each call.
+         * <p>The information about the tags.</p>
+         * <p>You can specify at most 20 tags in each call.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The ID of the Enterprise Edition transit router.
+         * <p>The ID of the Enterprise Edition transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-uf654ttymmljlvh2x****</p>
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);
@@ -311,38 +323,44 @@ public class ListTransitRouterRouteTablesRequest extends Request {
         }
 
         /**
-         * The ID of the route table.
-         * <p>
+         * <p>The ID of the route table.</p>
+         * <p>You can query multiple route tables in each call. Maximum value of <strong>N</strong>: <strong>20</strong>.</p>
          * 
-         * You can query multiple route tables in each call. Maximum value of **N**: **20**.
+         * <strong>example:</strong>
+         * <p>vtb-bp1l8awdb4iuo9uwu****</p>
          */
-        public Builder transitRouterRouteTableIds(java.util.List < String > transitRouterRouteTableIds) {
+        public Builder transitRouterRouteTableIds(java.util.List<String> transitRouterRouteTableIds) {
             this.putQueryParameter("TransitRouterRouteTableIds", transitRouterRouteTableIds);
             this.transitRouterRouteTableIds = transitRouterRouteTableIds;
             return this;
         }
 
         /**
-         * The name of the route table.
-         * <p>
+         * <p>The name of the route table.</p>
+         * <p>You can query multiple route tables in each call. Maximum value of <strong>N</strong>: <strong>20</strong>.</p>
+         * <blockquote>
+         * <p>If you set both <strong>TransitRouterRouteTableNames.N</strong> and <strong>TransitRouterRouteTableIds.N</strong>, make sure that the specified name and ID belong to the same route table.</p>
+         * </blockquote>
          * 
-         * You can query multiple route tables in each call. Maximum value of **N**: **20**.
-         * 
-         * > If you set both **TransitRouterRouteTableNames.N** and **TransitRouterRouteTableIds.N**, make sure that the specified name and ID belong to the same route table.
+         * <strong>example:</strong>
+         * <p>testname</p>
          */
-        public Builder transitRouterRouteTableNames(java.util.List < String > transitRouterRouteTableNames) {
+        public Builder transitRouterRouteTableNames(java.util.List<String> transitRouterRouteTableNames) {
             this.putQueryParameter("TransitRouterRouteTableNames", transitRouterRouteTableNames);
             this.transitRouterRouteTableNames = transitRouterRouteTableNames;
             return this;
         }
 
         /**
-         * The status of the route table. Valid values:
-         * <p>
+         * <p>The status of the route table. Valid values:</p>
+         * <ul>
+         * <li><strong>Creating</strong>: The route table is being created.</li>
+         * <li><strong>Deleting</strong>: The route table is being deleted.</li>
+         * <li><strong>Active</strong>: The route table is available.</li>
+         * </ul>
          * 
-         * *   **Creating**: The route table is being created.
-         * *   **Deleting**: The route table is being deleted.
-         * *   **Active**: The route table is available.
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder transitRouterRouteTableStatus(String transitRouterRouteTableStatus) {
             this.putQueryParameter("TransitRouterRouteTableStatus", transitRouterRouteTableStatus);
@@ -351,11 +369,14 @@ public class ListTransitRouterRouteTablesRequest extends Request {
         }
 
         /**
-         * The type of the route table. Valid values:
-         * <p>
+         * <p>The type of the route table. Valid values:</p>
+         * <ul>
+         * <li><strong>Custom</strong>: a custom route table</li>
+         * <li><strong>System</strong>: the default route table</li>
+         * </ul>
          * 
-         * *   **Custom**: a custom route table
-         * *   **System**: the default route table
+         * <strong>example:</strong>
+         * <p>Custom</p>
          */
         public Builder transitRouterRouteTableType(String transitRouterRouteTableType) {
             this.putQueryParameter("TransitRouterRouteTableType", transitRouterRouteTableType);
@@ -370,8 +391,14 @@ public class ListTransitRouterRouteTablesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListTransitRouterRouteTablesRequest} extends {@link TeaModel}
+     *
+     * <p>ListTransitRouterRouteTablesRequest</p>
+     */
     public static class RouteTableOptions extends TeaModel {
-        @NameInMap("MultiRegionECMP")
+        @com.aliyun.core.annotation.NameInMap("MultiRegionECMP")
         private String multiRegionECMP;
 
         private RouteTableOptions(Builder builder) {
@@ -397,11 +424,14 @@ public class ListTransitRouterRouteTablesRequest extends Request {
             private String multiRegionECMP; 
 
             /**
-             * Specifies whether to enable equal-cost multi-path (ECMP) routing. Valid values:
-             * <p>
+             * <p>Specifies whether to enable equal-cost multi-path (ECMP) routing. Valid values:</p>
+             * <ul>
+             * <li><strong>disable</strong>: disables ECMP routing If you disable ECMP routing, routes that are learned from different regions but have the same prefix and attributes select the transit router with the smallest region ID as the next hop. Region IDs are sorted in alphabetic order. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.</li>
+             * <li><strong>enable</strong>: enables ECMP routing. If you enable ECMP routing, routes that are learned from different regions but have the same prefix and attributes form an ECMP route. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.</li>
+             * </ul>
              * 
-             * *   **disable**: disables ECMP routing If you disable ECMP routing, routes that are learned from different regions but have the same prefix and attributes select the transit router with the smallest region ID as the next hop. Region IDs are sorted in alphabetic order. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.
-             * *   **enable**: enables ECMP routing. If you enable ECMP routing, routes that are learned from different regions but have the same prefix and attributes form an ECMP route. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.
+             * <strong>example:</strong>
+             * <p>disable</p>
              */
             public Builder multiRegionECMP(String multiRegionECMP) {
                 this.multiRegionECMP = multiRegionECMP;
@@ -415,11 +445,17 @@ public class ListTransitRouterRouteTablesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTransitRouterRouteTablesRequest} extends {@link TeaModel}
+     *
+     * <p>ListTransitRouterRouteTablesRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -454,12 +490,12 @@ public class ListTransitRouterRouteTablesRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
-             * <p>
+             * <p>The tag key.</p>
+             * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>You can specify at most 20 tag keys.</p>
              * 
-             * The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
-             * 
-             * You can specify at most 20 tag keys.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -467,12 +503,12 @@ public class ListTransitRouterRouteTablesRequest extends Request {
             }
 
             /**
-             * The tag value.
-             * <p>
+             * <p>The tag value.</p>
+             * <p>The tag value can be 0 to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
              * 
-             * The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
-             * 
-             * Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

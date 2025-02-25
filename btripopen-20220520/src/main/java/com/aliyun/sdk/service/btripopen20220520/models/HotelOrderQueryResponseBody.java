@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelOrderQueryResponseBody} extends {@link TeaModel}
  *
  * <p>HotelOrderQueryResponseBody</p>
  */
 public class HotelOrderQueryResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private HotelOrderQueryResponseBody(Builder builder) {
@@ -114,7 +119,7 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         }
 
         /**
-         * module。
+         * <p>module。</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -122,7 +127,10 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5009956-1077-52FB-B520-EA8C7E91D722</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +146,10 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21041ce316577904808056433edbb2</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -151,45 +162,71 @@ public class HotelOrderQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link HotelOrderQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderQueryResponseBody</p>
+     */
     public static class HotelInfo extends TeaModel {
-        @NameInMap("check_in")
+        @com.aliyun.core.annotation.NameInMap("brand_code")
+        private String brandCode;
+
+        @com.aliyun.core.annotation.NameInMap("brand_group")
+        private String brandGroup;
+
+        @com.aliyun.core.annotation.NameInMap("brand_name")
+        private String brandName;
+
+        @com.aliyun.core.annotation.NameInMap("check_in")
         private Long checkIn;
 
-        @NameInMap("check_out")
+        @com.aliyun.core.annotation.NameInMap("check_out")
         private Long checkOut;
 
-        @NameInMap("city")
+        @com.aliyun.core.annotation.NameInMap("city")
         private String city;
 
-        @NameInMap("city_ad_code")
+        @com.aliyun.core.annotation.NameInMap("city_ad_code")
         private String cityAdCode;
 
-        @NameInMap("hotel_address")
+        @com.aliyun.core.annotation.NameInMap("country_code")
+        private String countryCode;
+
+        @com.aliyun.core.annotation.NameInMap("country_name")
+        private String countryName;
+
+        @com.aliyun.core.annotation.NameInMap("hotel_address")
         private String hotelAddress;
 
-        @NameInMap("hotel_name")
+        @com.aliyun.core.annotation.NameInMap("hotel_name")
         private String hotelName;
 
-        @NameInMap("hotel_phone")
+        @com.aliyun.core.annotation.NameInMap("hotel_phone")
         private String hotelPhone;
 
-        @NameInMap("hotel_support_vat_invoice_type")
+        @com.aliyun.core.annotation.NameInMap("hotel_support_vat_invoice_type")
         private Integer hotelSupportVatInvoiceType;
 
-        @NameInMap("night")
+        @com.aliyun.core.annotation.NameInMap("night")
         private Integer night;
 
-        @NameInMap("room_num")
+        @com.aliyun.core.annotation.NameInMap("room_num")
         private Integer roomNum;
 
-        @NameInMap("room_type")
+        @com.aliyun.core.annotation.NameInMap("room_type")
         private String roomType;
 
         private HotelInfo(Builder builder) {
+            this.brandCode = builder.brandCode;
+            this.brandGroup = builder.brandGroup;
+            this.brandName = builder.brandName;
             this.checkIn = builder.checkIn;
             this.checkOut = builder.checkOut;
             this.city = builder.city;
             this.cityAdCode = builder.cityAdCode;
+            this.countryCode = builder.countryCode;
+            this.countryName = builder.countryName;
             this.hotelAddress = builder.hotelAddress;
             this.hotelName = builder.hotelName;
             this.hotelPhone = builder.hotelPhone;
@@ -205,6 +242,27 @@ public class HotelOrderQueryResponseBody extends TeaModel {
 
         public static HotelInfo create() {
             return builder().build();
+        }
+
+        /**
+         * @return brandCode
+         */
+        public String getBrandCode() {
+            return this.brandCode;
+        }
+
+        /**
+         * @return brandGroup
+         */
+        public String getBrandGroup() {
+            return this.brandGroup;
+        }
+
+        /**
+         * @return brandName
+         */
+        public String getBrandName() {
+            return this.brandName;
         }
 
         /**
@@ -233,6 +291,20 @@ public class HotelOrderQueryResponseBody extends TeaModel {
          */
         public String getCityAdCode() {
             return this.cityAdCode;
+        }
+
+        /**
+         * @return countryCode
+         */
+        public String getCountryCode() {
+            return this.countryCode;
+        }
+
+        /**
+         * @return countryName
+         */
+        public String getCountryName() {
+            return this.countryName;
         }
 
         /**
@@ -285,10 +357,15 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String brandCode; 
+            private String brandGroup; 
+            private String brandName; 
             private Long checkIn; 
             private Long checkOut; 
             private String city; 
             private String cityAdCode; 
+            private String countryCode; 
+            private String countryName; 
             private String hotelAddress; 
             private String hotelName; 
             private String hotelPhone; 
@@ -296,6 +373,30 @@ public class HotelOrderQueryResponseBody extends TeaModel {
             private Integer night; 
             private Integer roomNum; 
             private String roomType; 
+
+            /**
+             * brand_code.
+             */
+            public Builder brandCode(String brandCode) {
+                this.brandCode = brandCode;
+                return this;
+            }
+
+            /**
+             * brand_group.
+             */
+            public Builder brandGroup(String brandGroup) {
+                this.brandGroup = brandGroup;
+                return this;
+            }
+
+            /**
+             * brand_name.
+             */
+            public Builder brandName(String brandName) {
+                this.brandName = brandName;
+                return this;
+            }
 
             /**
              * check_in.
@@ -326,6 +427,22 @@ public class HotelOrderQueryResponseBody extends TeaModel {
              */
             public Builder cityAdCode(String cityAdCode) {
                 this.cityAdCode = cityAdCode;
+                return this;
+            }
+
+            /**
+             * country_code.
+             */
+            public Builder countryCode(String countryCode) {
+                this.countryCode = countryCode;
+                return this;
+            }
+
+            /**
+             * country_name.
+             */
+            public Builder countryName(String countryName) {
+                this.countryName = countryName;
                 return this;
             }
 
@@ -392,11 +509,17 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderQueryResponseBody</p>
+     */
     public static class InvoiceInfo extends TeaModel {
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("title")
+        @com.aliyun.core.annotation.NameInMap("title")
         private String title;
 
         private InvoiceInfo(Builder builder) {
@@ -453,67 +576,83 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderQueryResponseBody</p>
+     */
     public static class OrderBaseInfo extends TeaModel {
-        @NameInMap("apply_id")
+        @com.aliyun.core.annotation.NameInMap("apply_id")
         private String applyId;
 
-        @NameInMap("btrip_title")
+        @com.aliyun.core.annotation.NameInMap("btrip_title")
         private String btripTitle;
 
-        @NameInMap("corp_id")
+        @com.aliyun.core.annotation.NameInMap("category")
+        private Integer category;
+
+        @com.aliyun.core.annotation.NameInMap("corp_id")
         private String corpId;
 
-        @NameInMap("corp_name")
+        @com.aliyun.core.annotation.NameInMap("corp_name")
         private String corpName;
 
-        @NameInMap("depart_id")
+        @com.aliyun.core.annotation.NameInMap("depart_id")
         private String departId;
 
-        @NameInMap("depart_name")
+        @com.aliyun.core.annotation.NameInMap("depart_name")
         private String departName;
 
-        @NameInMap("exceed_apply_nos")
-        private java.util.List < String > exceedApplyNos;
+        @com.aliyun.core.annotation.NameInMap("exceed_apply_nos")
+        private java.util.List<String> exceedApplyNos;
 
-        @NameInMap("extend_field")
+        @com.aliyun.core.annotation.NameInMap("extend_field")
         private String extendField;
 
-        @NameInMap("gmt_create")
+        @com.aliyun.core.annotation.NameInMap("gmt_create")
         private Long gmtCreate;
 
-        @NameInMap("gmt_modified")
+        @com.aliyun.core.annotation.NameInMap("gmt_modified")
         private Long gmtModified;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("itinerary_id")
+        @com.aliyun.core.annotation.NameInMap("itinerary_id")
         private String itineraryId;
 
-        @NameInMap("order_status")
+        @com.aliyun.core.annotation.NameInMap("order_status")
         private Integer orderStatus;
 
-        @NameInMap("order_type")
+        @com.aliyun.core.annotation.NameInMap("order_type")
         private Integer orderType;
 
-        @NameInMap("thirdpart_apply_id")
+        @com.aliyun.core.annotation.NameInMap("supplier")
+        private String supplier;
+
+        @com.aliyun.core.annotation.NameInMap("thirdpart_apply_id")
         private String thirdpartApplyId;
 
-        @NameInMap("thirdpart_depart_id")
+        @com.aliyun.core.annotation.NameInMap("thirdpart_business_id")
+        private String thirdpartBusinessId;
+
+        @com.aliyun.core.annotation.NameInMap("thirdpart_depart_id")
         private String thirdpartDepartId;
 
-        @NameInMap("thirdpart_itinerary_id")
+        @com.aliyun.core.annotation.NameInMap("thirdpart_itinerary_id")
         private String thirdpartItineraryId;
 
-        @NameInMap("user_id")
+        @com.aliyun.core.annotation.NameInMap("user_id")
         private String userId;
 
-        @NameInMap("user_name")
+        @com.aliyun.core.annotation.NameInMap("user_name")
         private String userName;
 
         private OrderBaseInfo(Builder builder) {
             this.applyId = builder.applyId;
             this.btripTitle = builder.btripTitle;
+            this.category = builder.category;
             this.corpId = builder.corpId;
             this.corpName = builder.corpName;
             this.departId = builder.departId;
@@ -526,7 +665,9 @@ public class HotelOrderQueryResponseBody extends TeaModel {
             this.itineraryId = builder.itineraryId;
             this.orderStatus = builder.orderStatus;
             this.orderType = builder.orderType;
+            this.supplier = builder.supplier;
             this.thirdpartApplyId = builder.thirdpartApplyId;
+            this.thirdpartBusinessId = builder.thirdpartBusinessId;
             this.thirdpartDepartId = builder.thirdpartDepartId;
             this.thirdpartItineraryId = builder.thirdpartItineraryId;
             this.userId = builder.userId;
@@ -553,6 +694,13 @@ public class HotelOrderQueryResponseBody extends TeaModel {
          */
         public String getBtripTitle() {
             return this.btripTitle;
+        }
+
+        /**
+         * @return category
+         */
+        public Integer getCategory() {
+            return this.category;
         }
 
         /**
@@ -586,7 +734,7 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         /**
          * @return exceedApplyNos
          */
-        public java.util.List < String > getExceedApplyNos() {
+        public java.util.List<String> getExceedApplyNos() {
             return this.exceedApplyNos;
         }
 
@@ -640,10 +788,24 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return supplier
+         */
+        public String getSupplier() {
+            return this.supplier;
+        }
+
+        /**
          * @return thirdpartApplyId
          */
         public String getThirdpartApplyId() {
             return this.thirdpartApplyId;
+        }
+
+        /**
+         * @return thirdpartBusinessId
+         */
+        public String getThirdpartBusinessId() {
+            return this.thirdpartBusinessId;
         }
 
         /**
@@ -677,11 +839,12 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         public static final class Builder {
             private String applyId; 
             private String btripTitle; 
+            private Integer category; 
             private String corpId; 
             private String corpName; 
             private String departId; 
             private String departName; 
-            private java.util.List < String > exceedApplyNos; 
+            private java.util.List<String> exceedApplyNos; 
             private String extendField; 
             private Long gmtCreate; 
             private Long gmtModified; 
@@ -689,7 +852,9 @@ public class HotelOrderQueryResponseBody extends TeaModel {
             private String itineraryId; 
             private Integer orderStatus; 
             private Integer orderType; 
+            private String supplier; 
             private String thirdpartApplyId; 
+            private String thirdpartBusinessId; 
             private String thirdpartDepartId; 
             private String thirdpartItineraryId; 
             private String userId; 
@@ -708,6 +873,14 @@ public class HotelOrderQueryResponseBody extends TeaModel {
              */
             public Builder btripTitle(String btripTitle) {
                 this.btripTitle = btripTitle;
+                return this;
+            }
+
+            /**
+             * category.
+             */
+            public Builder category(Integer category) {
+                this.category = category;
                 return this;
             }
 
@@ -746,7 +919,7 @@ public class HotelOrderQueryResponseBody extends TeaModel {
             /**
              * exceed_apply_nos.
              */
-            public Builder exceedApplyNos(java.util.List < String > exceedApplyNos) {
+            public Builder exceedApplyNos(java.util.List<String> exceedApplyNos) {
                 this.exceedApplyNos = exceedApplyNos;
                 return this;
             }
@@ -808,10 +981,26 @@ public class HotelOrderQueryResponseBody extends TeaModel {
             }
 
             /**
+             * supplier.
+             */
+            public Builder supplier(String supplier) {
+                this.supplier = supplier;
+                return this;
+            }
+
+            /**
              * thirdpart_apply_id.
              */
             public Builder thirdpartApplyId(String thirdpartApplyId) {
                 this.thirdpartApplyId = thirdpartApplyId;
+                return this;
+            }
+
+            /**
+             * thirdpart_business_id.
+             */
+            public Builder thirdpartBusinessId(String thirdpartBusinessId) {
+                this.thirdpartBusinessId = thirdpartBusinessId;
                 return this;
             }
 
@@ -854,47 +1043,69 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderQueryResponseBody</p>
+     */
     public static class PassengerList extends TeaModel {
-        @NameInMap("cost_center_id")
+        @com.aliyun.core.annotation.NameInMap("apply_id")
+        private String applyId;
+
+        @com.aliyun.core.annotation.NameInMap("cost_center_id")
         private Long costCenterId;
 
-        @NameInMap("cost_center_name")
+        @com.aliyun.core.annotation.NameInMap("cost_center_name")
         private String costCenterName;
 
-        @NameInMap("cost_center_number")
+        @com.aliyun.core.annotation.NameInMap("cost_center_number")
         private String costCenterNumber;
 
-        @NameInMap("project_code")
+        @com.aliyun.core.annotation.NameInMap("itinerary_id")
+        private String itineraryId;
+
+        @com.aliyun.core.annotation.NameInMap("occupant_type")
+        private Integer occupantType;
+
+        @com.aliyun.core.annotation.NameInMap("project_code")
         private String projectCode;
 
-        @NameInMap("project_id")
+        @com.aliyun.core.annotation.NameInMap("project_id")
         private Long projectId;
 
-        @NameInMap("project_title")
+        @com.aliyun.core.annotation.NameInMap("project_title")
         private String projectTitle;
 
-        @NameInMap("thirdpart_cost_center_id")
+        @com.aliyun.core.annotation.NameInMap("thirdpart_apply_id")
+        private String thirdpartApplyId;
+
+        @com.aliyun.core.annotation.NameInMap("thirdpart_cost_center_id")
         private String thirdpartCostCenterId;
 
-        @NameInMap("thirdpart_project_id")
+        @com.aliyun.core.annotation.NameInMap("thirdpart_project_id")
         private String thirdpartProjectId;
 
-        @NameInMap("user_id")
+        @com.aliyun.core.annotation.NameInMap("user_id")
         private String userId;
 
-        @NameInMap("user_name")
+        @com.aliyun.core.annotation.NameInMap("user_name")
         private String userName;
 
-        @NameInMap("user_type")
+        @com.aliyun.core.annotation.NameInMap("user_type")
         private Integer userType;
 
         private PassengerList(Builder builder) {
+            this.applyId = builder.applyId;
             this.costCenterId = builder.costCenterId;
             this.costCenterName = builder.costCenterName;
             this.costCenterNumber = builder.costCenterNumber;
+            this.itineraryId = builder.itineraryId;
+            this.occupantType = builder.occupantType;
             this.projectCode = builder.projectCode;
             this.projectId = builder.projectId;
             this.projectTitle = builder.projectTitle;
+            this.thirdpartApplyId = builder.thirdpartApplyId;
             this.thirdpartCostCenterId = builder.thirdpartCostCenterId;
             this.thirdpartProjectId = builder.thirdpartProjectId;
             this.userId = builder.userId;
@@ -908,6 +1119,13 @@ public class HotelOrderQueryResponseBody extends TeaModel {
 
         public static PassengerList create() {
             return builder().build();
+        }
+
+        /**
+         * @return applyId
+         */
+        public String getApplyId() {
+            return this.applyId;
         }
 
         /**
@@ -932,6 +1150,20 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return itineraryId
+         */
+        public String getItineraryId() {
+            return this.itineraryId;
+        }
+
+        /**
+         * @return occupantType
+         */
+        public Integer getOccupantType() {
+            return this.occupantType;
+        }
+
+        /**
          * @return projectCode
          */
         public String getProjectCode() {
@@ -950,6 +1182,13 @@ public class HotelOrderQueryResponseBody extends TeaModel {
          */
         public String getProjectTitle() {
             return this.projectTitle;
+        }
+
+        /**
+         * @return thirdpartApplyId
+         */
+        public String getThirdpartApplyId() {
+            return this.thirdpartApplyId;
         }
 
         /**
@@ -988,17 +1227,29 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String applyId; 
             private Long costCenterId; 
             private String costCenterName; 
             private String costCenterNumber; 
+            private String itineraryId; 
+            private Integer occupantType; 
             private String projectCode; 
             private Long projectId; 
             private String projectTitle; 
+            private String thirdpartApplyId; 
             private String thirdpartCostCenterId; 
             private String thirdpartProjectId; 
             private String userId; 
             private String userName; 
             private Integer userType; 
+
+            /**
+             * apply_id.
+             */
+            public Builder applyId(String applyId) {
+                this.applyId = applyId;
+                return this;
+            }
 
             /**
              * cost_center_id.
@@ -1025,6 +1276,22 @@ public class HotelOrderQueryResponseBody extends TeaModel {
             }
 
             /**
+             * itinerary_id.
+             */
+            public Builder itineraryId(String itineraryId) {
+                this.itineraryId = itineraryId;
+                return this;
+            }
+
+            /**
+             * occupant_type.
+             */
+            public Builder occupantType(Integer occupantType) {
+                this.occupantType = occupantType;
+                return this;
+            }
+
+            /**
              * project_code.
              */
             public Builder projectCode(String projectCode) {
@@ -1045,6 +1312,14 @@ public class HotelOrderQueryResponseBody extends TeaModel {
              */
             public Builder projectTitle(String projectTitle) {
                 this.projectTitle = projectTitle;
+                return this;
+            }
+
+            /**
+             * thirdpart_apply_id.
+             */
+            public Builder thirdpartApplyId(String thirdpartApplyId) {
+                this.thirdpartApplyId = thirdpartApplyId;
                 return this;
             }
 
@@ -1095,23 +1370,29 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderQueryResponseBody</p>
+     */
     public static class PriceInfoList extends TeaModel {
-        @NameInMap("category_code")
+        @com.aliyun.core.annotation.NameInMap("category_code")
         private Integer categoryCode;
 
-        @NameInMap("gmt_create")
+        @com.aliyun.core.annotation.NameInMap("gmt_create")
         private Long gmtCreate;
 
-        @NameInMap("pay_type")
+        @com.aliyun.core.annotation.NameInMap("pay_type")
         private Integer payType;
 
-        @NameInMap("price")
+        @com.aliyun.core.annotation.NameInMap("price")
         private Double price;
 
-        @NameInMap("trade_id")
+        @com.aliyun.core.annotation.NameInMap("trade_id")
         private String tradeId;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private Integer type;
 
         private PriceInfoList(Builder builder) {
@@ -1236,21 +1517,27 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
-        @NameInMap("hotel_info")
+        @com.aliyun.core.annotation.NameInMap("hotel_info")
         private HotelInfo hotelInfo;
 
-        @NameInMap("invoice_info")
+        @com.aliyun.core.annotation.NameInMap("invoice_info")
         private InvoiceInfo invoiceInfo;
 
-        @NameInMap("order_base_info")
+        @com.aliyun.core.annotation.NameInMap("order_base_info")
         private OrderBaseInfo orderBaseInfo;
 
-        @NameInMap("passenger_list")
-        private java.util.List < PassengerList> passengerList;
+        @com.aliyun.core.annotation.NameInMap("passenger_list")
+        private java.util.List<PassengerList> passengerList;
 
-        @NameInMap("price_info_list")
-        private java.util.List < PriceInfoList> priceInfoList;
+        @com.aliyun.core.annotation.NameInMap("price_info_list")
+        private java.util.List<PriceInfoList> priceInfoList;
 
         private Module(Builder builder) {
             this.hotelInfo = builder.hotelInfo;
@@ -1292,14 +1579,14 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         /**
          * @return passengerList
          */
-        public java.util.List < PassengerList> getPassengerList() {
+        public java.util.List<PassengerList> getPassengerList() {
             return this.passengerList;
         }
 
         /**
          * @return priceInfoList
          */
-        public java.util.List < PriceInfoList> getPriceInfoList() {
+        public java.util.List<PriceInfoList> getPriceInfoList() {
             return this.priceInfoList;
         }
 
@@ -1307,8 +1594,8 @@ public class HotelOrderQueryResponseBody extends TeaModel {
             private HotelInfo hotelInfo; 
             private InvoiceInfo invoiceInfo; 
             private OrderBaseInfo orderBaseInfo; 
-            private java.util.List < PassengerList> passengerList; 
-            private java.util.List < PriceInfoList> priceInfoList; 
+            private java.util.List<PassengerList> passengerList; 
+            private java.util.List<PriceInfoList> priceInfoList; 
 
             /**
              * hotel_info.
@@ -1337,7 +1624,7 @@ public class HotelOrderQueryResponseBody extends TeaModel {
             /**
              * passenger_list.
              */
-            public Builder passengerList(java.util.List < PassengerList> passengerList) {
+            public Builder passengerList(java.util.List<PassengerList> passengerList) {
                 this.passengerList = passengerList;
                 return this;
             }
@@ -1345,7 +1632,7 @@ public class HotelOrderQueryResponseBody extends TeaModel {
             /**
              * price_info_list.
              */
-            public Builder priceInfoList(java.util.List < PriceInfoList> priceInfoList) {
+            public Builder priceInfoList(java.util.List<PriceInfoList> priceInfoList) {
                 this.priceInfoList = priceInfoList;
                 return this;
             }

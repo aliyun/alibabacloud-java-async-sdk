@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePolicyResponseBody</p>
  */
 public class DescribePolicyResponseBody extends TeaModel {
-    @NameInMap("AccessControlRules")
+    @com.aliyun.core.annotation.NameInMap("AccessControlRules")
     private String accessControlRules;
 
-    @NameInMap("Arn")
+    @com.aliyun.core.annotation.NameInMap("Arn")
     private String arn;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("KmsInstance")
+    @com.aliyun.core.annotation.NameInMap("KmsInstance")
     private String kmsInstance;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("Permissions")
+    @com.aliyun.core.annotation.NameInMap("Permissions")
     private java.util.List < String > permissions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Resources")
+    @com.aliyun.core.annotation.NameInMap("Resources")
     private java.util.List < String > resources;
 
     private DescribePolicyResponseBody(Builder builder) {
@@ -122,7 +121,7 @@ public class DescribePolicyResponseBody extends TeaModel {
         private java.util.List < String > resources; 
 
         /**
-         * AccessControlRules.
+         * The network access rule that is associated with the permission policy.
          */
         public Builder accessControlRules(String accessControlRules) {
             this.accessControlRules = accessControlRules;
@@ -130,7 +129,7 @@ public class DescribePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Arn.
+         * The Alibaba Cloud Resource Name (ARN) of the permission policy.
          */
         public Builder arn(String arn) {
             this.arn = arn;
@@ -138,7 +137,7 @@ public class DescribePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -146,7 +145,7 @@ public class DescribePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * KmsInstance.
+         * The scope of the permission policy.
          */
         public Builder kmsInstance(String kmsInstance) {
             this.kmsInstance = kmsInstance;
@@ -154,7 +153,7 @@ public class DescribePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * The name of the permission policy.
          */
         public Builder name(String name) {
             this.name = name;
@@ -162,7 +161,7 @@ public class DescribePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Permissions.
+         * A list of operations that can be performed.
          */
         public Builder permissions(java.util.List < String > permissions) {
             this.permissions = permissions;
@@ -170,7 +169,7 @@ public class DescribePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +177,7 @@ public class DescribePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Resources.
+         * A list of keys and secrets that are allowed to access.
          */
         public Builder resources(java.util.List < String > resources) {
             this.resources = resources;

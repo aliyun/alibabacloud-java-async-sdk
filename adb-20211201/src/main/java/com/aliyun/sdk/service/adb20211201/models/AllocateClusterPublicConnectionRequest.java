@@ -1,30 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AllocateClusterPublicConnectionRequest} extends {@link RequestModel}
  *
  * <p>AllocateClusterPublicConnectionRequest</p>
  */
 public class AllocateClusterPublicConnectionRequest extends Request {
-    @Query
-    @NameInMap("ConnectionStringPrefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectionStringPrefix")
     private String connectionStringPrefix;
 
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
+    private String engine;
 
     private AllocateClusterPublicConnectionRequest(Builder builder) {
         super(builder);
         this.connectionStringPrefix = builder.connectionStringPrefix;
         this.DBClusterId = builder.DBClusterId;
+        this.engine = builder.engine;
     }
 
     public static Builder builder() {
@@ -54,9 +64,17 @@ public class AllocateClusterPublicConnectionRequest extends Request {
         return this.DBClusterId;
     }
 
+    /**
+     * @return engine
+     */
+    public String getEngine() {
+        return this.engine;
+    }
+
     public static final class Builder extends Request.Builder<AllocateClusterPublicConnectionRequest, Builder> {
         private String connectionStringPrefix; 
         private String DBClusterId; 
+        private String engine; 
 
         private Builder() {
             super();
@@ -66,14 +84,18 @@ public class AllocateClusterPublicConnectionRequest extends Request {
             super(request);
             this.connectionStringPrefix = request.connectionStringPrefix;
             this.DBClusterId = request.DBClusterId;
+            this.engine = request.engine;
         } 
 
         /**
-         * The prefix of the public endpoint.
-         * <p>
+         * <p>The prefix of the public endpoint.</p>
+         * <ul>
+         * <li>The prefix can contain lowercase letters, digits, and hyphens (-). It must start with a lowercase letter.</li>
+         * <li>The prefix can be up to 30 characters in length.</li>
+         * </ul>
          * 
-         * *   The prefix can contain lowercase letters, digits, and hyphens (-). It must start with a lowercase letter.
-         * *   The prefix can be up to 30 characters in length.
+         * <strong>example:</strong>
+         * <p>test12</p>
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -82,11 +104,31 @@ public class AllocateClusterPublicConnectionRequest extends Request {
         }
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-bp1z5d2q71is2****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * <p>The database engine of the cluster. Valid values:</p>
+         * <ul>
+         * <li><strong>AnalyticDB</strong> (default): the AnalyticDB for MySQL engine.</li>
+         * <li><strong>Clickhouse</strong>: the wide table engine.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Clickhouse</p>
+         */
+        public Builder engine(String engine) {
+            this.putQueryParameter("Engine", engine);
+            this.engine = engine;
             return this;
         }
 

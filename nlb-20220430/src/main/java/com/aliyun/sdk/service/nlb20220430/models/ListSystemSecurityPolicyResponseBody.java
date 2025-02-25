@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSystemSecurityPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>ListSystemSecurityPolicyResponseBody</p>
  */
 public class ListSystemSecurityPolicyResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecurityPolicies")
-    private java.util.List < SecurityPolicies> securityPolicies;
+    @com.aliyun.core.annotation.NameInMap("SecurityPolicies")
+    private java.util.List<SecurityPolicies> securityPolicies;
 
     private ListSystemSecurityPolicyResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class ListSystemSecurityPolicyResponseBody extends TeaModel {
     /**
      * @return securityPolicies
      */
-    public java.util.List < SecurityPolicies> getSecurityPolicies() {
+    public java.util.List<SecurityPolicies> getSecurityPolicies() {
         return this.securityPolicies;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SecurityPolicies> securityPolicies; 
+        private java.util.List<SecurityPolicies> securityPolicies; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5C057647-284B-5C67-A07E-4B8F3DABA9F9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class ListSystemSecurityPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * A list of TLS security policies.
+         * <p>A list of TLS security policies.</p>
          */
-        public Builder securityPolicies(java.util.List < SecurityPolicies> securityPolicies) {
+        public Builder securityPolicies(java.util.List<SecurityPolicies> securityPolicies) {
             this.securityPolicies = securityPolicies;
             return this;
         }
@@ -71,17 +79,23 @@ public class ListSystemSecurityPolicyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSystemSecurityPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSystemSecurityPolicyResponseBody</p>
+     */
     public static class SecurityPolicies extends TeaModel {
-        @NameInMap("Ciphers")
+        @com.aliyun.core.annotation.NameInMap("Ciphers")
         private String ciphers;
 
-        @NameInMap("SecurityPolicyId")
+        @com.aliyun.core.annotation.NameInMap("SecurityPolicyId")
         private String securityPolicyId;
 
-        @NameInMap("SecurityPolicyName")
+        @com.aliyun.core.annotation.NameInMap("SecurityPolicyName")
         private String securityPolicyName;
 
-        @NameInMap("TlsVersion")
+        @com.aliyun.core.annotation.NameInMap("TlsVersion")
         private String tlsVersion;
 
         private SecurityPolicies(Builder builder) {
@@ -134,7 +148,10 @@ public class ListSystemSecurityPolicyResponseBody extends TeaModel {
             private String tlsVersion; 
 
             /**
-             * The cipher suites.
+             * <p>The cipher suite.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECDHE-ECDSA-AES128-GCM-SHA256,ECDHE-ECDSA-AES256-GCM-SHA384,ECDHE-ECDSA-AES128-SHA256,ECDHE-ECDSA-AES256-SHA384,ECDHE-RSA-AES128-GCM-SHA256,ECDHE-RSA-AES256-GCM-SHA384,ECDHE-RSA-AES128-SHA256,ECDHE-RSA-AES256-SHA384,AES128-GCM-SHA256,AES256-GCM-SHA384,AES128-SHA256,AES256-SHA256,ECDHE-ECDSA-AES128-SHA,ECDHE-ECDSA-AES256-SHA,ECDHE-RSA-AES128-SHA,ECDHE-RSA-AES256-SHA,AES128-SHA,AES256-SHA,DES-CBC3-SHA</p>
              */
             public Builder ciphers(String ciphers) {
                 this.ciphers = ciphers;
@@ -142,7 +159,10 @@ public class ListSystemSecurityPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The TLS policy ID.
+             * <p>The ID of the TLS security policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sp-3fdab6dkkke10s****</p>
              */
             public Builder securityPolicyId(String securityPolicyId) {
                 this.securityPolicyId = securityPolicyId;
@@ -150,7 +170,10 @@ public class ListSystemSecurityPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The TLS policy name.
+             * <p>The name of the TLS security policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder securityPolicyName(String securityPolicyName) {
                 this.securityPolicyName = securityPolicyName;
@@ -158,7 +181,10 @@ public class ListSystemSecurityPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the TLS protocol.
+             * <p>The TLS version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TLSv1.0</p>
              */
             public Builder tlsVersion(String tlsVersion) {
                 this.tlsVersion = tlsVersion;

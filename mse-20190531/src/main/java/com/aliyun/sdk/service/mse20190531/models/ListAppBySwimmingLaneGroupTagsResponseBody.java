@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAppBySwimmingLaneGroupTagsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAppBySwimmingLaneGroupTagsResponseBody</p>
  */
 public class ListAppBySwimmingLaneGroupTagsResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.Map < String, java.util.List<DataValue>> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.Map<String, java.util.List<DataValue>> data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListAppBySwimmingLaneGroupTagsResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class ListAppBySwimmingLaneGroupTagsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.Map < String, java.util.List<DataValue>> getData() {
+    public java.util.Map<String, java.util.List<DataValue>> getData() {
         return this.data;
     }
 
@@ -79,22 +84,25 @@ public class ListAppBySwimmingLaneGroupTagsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map < String, java.util.List<DataValue>> data; 
+        private java.util.Map<String, java.util.List<DataValue>> data; 
         private String errorCode; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
-        public Builder data(java.util.Map < String, java.util.List<DataValue>> data) {
+        public Builder data(java.util.Map<String, java.util.List<DataValue>> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +110,10 @@ public class ListAppBySwimmingLaneGroupTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The additional request information.
+         * <p>The additional request information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class ListAppBySwimmingLaneGroupTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6832e76b-bb5f-4dea-<strong><strong>-</strong></strong>********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class ListAppBySwimmingLaneGroupTagsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

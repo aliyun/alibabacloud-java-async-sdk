@@ -1,53 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGlobalDistributeCacheRequest} extends {@link RequestModel}
  *
  * <p>CreateGlobalDistributeCacheRequest</p>
  */
 public class CreateGlobalDistributeCacheRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveTime")
+    private String effectiveTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("SeedSubInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SeedSubInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String seedSubInstanceId;
 
     private CreateGlobalDistributeCacheRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.effectiveTime = builder.effectiveTime;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceGroupId = builder.resourceGroupId;
@@ -75,6 +80,13 @@ public class CreateGlobalDistributeCacheRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return effectiveTime
+     */
+    public String getEffectiveTime() {
+        return this.effectiveTime;
     }
 
     /**
@@ -128,6 +140,7 @@ public class CreateGlobalDistributeCacheRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateGlobalDistributeCacheRequest, Builder> {
         private String regionId; 
+        private String effectiveTime; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceGroupId; 
@@ -143,6 +156,7 @@ public class CreateGlobalDistributeCacheRequest extends Request {
         private Builder(CreateGlobalDistributeCacheRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.effectiveTime = request.effectiveTime;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceGroupId = request.resourceGroupId;
@@ -158,6 +172,22 @@ public class CreateGlobalDistributeCacheRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The time when you want to restart the instance. Default value: Immediately. Valid values:</p>
+         * <ul>
+         * <li><strong>Immediately</strong>: immediately restarts the instance.</li>
+         * <li><strong>MaintainTime</strong>: restarts the instance during the maintenance window.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Immediately</p>
+         */
+        public Builder effectiveTime(String effectiveTime) {
+            this.putQueryParameter("EffectiveTime", effectiveTime);
+            this.effectiveTime = effectiveTime;
             return this;
         }
 
@@ -180,7 +210,13 @@ public class CreateGlobalDistributeCacheRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * <blockquote>
+         * <p> You do not need to specify system parameters.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyiu4ekp****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -216,7 +252,11 @@ public class CreateGlobalDistributeCacheRequest extends Request {
         }
 
         /**
-         * The ID of the existing instance.
+         * <p>The ID of the existing instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder seedSubInstanceId(String seedSubInstanceId) {
             this.putQueryParameter("SeedSubInstanceId", seedSubInstanceId);

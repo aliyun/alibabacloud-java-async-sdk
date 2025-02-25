@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSmartContractJobsResponseBody</p>
  */
 public class DescribeSmartContractJobsResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private Integer errorCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeSmartContractJobsResponseBody(Builder builder) {
@@ -112,28 +111,28 @@ public class DescribeSmartContractJobsResponseBody extends TeaModel {
     } 
 
     public static class Content extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("FinishedTime")
+        @com.aliyun.core.annotation.NameInMap("FinishedTime")
         private Long finishedTime;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("SourceType")
+        @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UserBid")
+        @com.aliyun.core.annotation.NameInMap("UserBid")
         private String userBid;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
 
         private Content(Builder builder) {
@@ -293,25 +292,25 @@ public class DescribeSmartContractJobsResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private java.util.List < Content> content;
 
-        @NameInMap("First")
+        @com.aliyun.core.annotation.NameInMap("First")
         private Boolean first;
 
-        @NameInMap("Last")
+        @com.aliyun.core.annotation.NameInMap("Last")
         private Boolean last;
 
-        @NameInMap("NumberOfElements")
+        @com.aliyun.core.annotation.NameInMap("NumberOfElements")
         private Integer numberOfElements;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
-        @NameInMap("TotalElements")
+        @com.aliyun.core.annotation.NameInMap("TotalElements")
         private Integer totalElements;
 
-        @NameInMap("TotalPages")
+        @com.aliyun.core.annotation.NameInMap("TotalPages")
         private Integer totalPages;
 
         private Result(Builder builder) {

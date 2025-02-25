@@ -278,30 +278,30 @@ public class CreateDrdsInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDrdsInstanceRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.duration = response.duration;
-            this.instanceSeries = response.instanceSeries;
-            this.isAutoRenew = response.isAutoRenew;
-            this.masterInstId = response.masterInstId;
-            this.mySQLVersion = response.mySQLVersion;
-            this.payType = response.payType;
-            this.pricingCycle = response.pricingCycle;
-            this.quantity = response.quantity;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.specification = response.specification;
-            this.type = response.type;
-            this.vpcId = response.vpcId;
-            this.vswitchId = response.vswitchId;
-            this.zoneId = response.zoneId;
-            this.isHa = response.isHa;
+        private Builder(CreateDrdsInstanceRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.duration = request.duration;
+            this.instanceSeries = request.instanceSeries;
+            this.isAutoRenew = request.isAutoRenew;
+            this.masterInstId = request.masterInstId;
+            this.mySQLVersion = request.mySQLVersion;
+            this.payType = request.payType;
+            this.pricingCycle = request.pricingCycle;
+            this.quantity = request.quantity;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.specification = request.specification;
+            this.type = request.type;
+            this.vpcId = request.vpcId;
+            this.vswitchId = request.vswitchId;
+            this.zoneId = request.zoneId;
+            this.isHa = request.isHa;
         } 
 
         /**
-         * ClientToken.
+         * Specifies the client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -310,7 +310,12 @@ public class CreateDrdsInstanceRequest extends Request {
         }
 
         /**
-         * Description.
+         * Specifies the description of the instance. The description must meet the following requirements:
+         * <p>
+         * 
+         * *   The description cannot contain the prefix http:// or https://.
+         * *   The description must start with a letter or a Chinese character, and can contain uppercase and lowercase letters, Chinese characters, digits, underscores (\_), and hyphens (-).
+         * *   The description must be 2 to 256 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -319,7 +324,13 @@ public class CreateDrdsInstanceRequest extends Request {
         }
 
         /**
-         * Duration.
+         * Specifies the purchase duration of the subscription instance.
+         * <p>
+         * 
+         * *   If the PricingCycle parameter is set to year, the value range of the Duration parameter is 1 to 3.
+         * *   If the PricingCycle parameter is set to month, the value range of the Duration parameter is 1 to 9.
+         * 
+         * >  This parameter only takes effect when the PayType parameter is set to drdsPre.
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -328,7 +339,12 @@ public class CreateDrdsInstanceRequest extends Request {
         }
 
         /**
-         * InstanceSeries.
+         * Specifies the instance type of the instance. Valid values:
+         * <p>
+         * 
+         * *   **drds.sn2.4c16g**: The instance is of the Starter Edition.
+         * *   **drds.sn2.8c32g**: The instance is of the Standard Edition
+         * *   **drds.sn2.16c64g**: The instance is of the Enterprise Edition.
          */
         public Builder instanceSeries(String instanceSeries) {
             this.putQueryParameter("InstanceSeries", instanceSeries);
@@ -337,7 +353,13 @@ public class CreateDrdsInstanceRequest extends Request {
         }
 
         /**
-         * IsAutoRenew.
+         * Specifies whether to enable automatic renewal. Valid values:
+         * <p>
+         * 
+         * *   **true**: If the PricingCycle parameter is set to month, the subscription is automatically renewed for one month. If the PricingCycle parameter is set to year, the subscription is automatically renewed for one year.
+         * *   **false**: The auto-renewal feature is disabled for the instance.
+         * 
+         * >  This parameter only takes effect when the PayType parameter is set to drdsPre.
          */
         public Builder isAutoRenew(Boolean isAutoRenew) {
             this.putQueryParameter("IsAutoRenew", isAutoRenew);
@@ -346,7 +368,7 @@ public class CreateDrdsInstanceRequest extends Request {
         }
 
         /**
-         * MasterInstId.
+         * Specifies the ID of the primary instance. This parameter is only required when you create a read-only instance.
          */
         public Builder masterInstId(String masterInstId) {
             this.putQueryParameter("MasterInstId", masterInstId);
@@ -355,7 +377,13 @@ public class CreateDrdsInstanceRequest extends Request {
         }
 
         /**
-         * MySQLVersion.
+         * Specifies the MySQL version that is supported by the instance. Valid values:
+         * <p>
+         * 
+         * *   **5**: The instance is fully compatible with MySQL 5.x. This value is the default value.
+         * *   **8**: The instance is fully compatible with MySQL 8.0.
+         * 
+         * >  This parameter only takes effect when you create a primary instance. By default, the MySQL version of the read-only instance is the same as that of the primary instance.
          */
         public Builder mySQLVersion(Integer mySQLVersion) {
             this.putQueryParameter("MySQLVersion", mySQLVersion);
@@ -364,7 +392,12 @@ public class CreateDrdsInstanceRequest extends Request {
         }
 
         /**
-         * PayType.
+         * Specifies the billing method of the instance. Valid values:
+         * <p>
+         * 
+         * *   **drdsPre**: The instance uses the subscription billing method.
+         * *   **drdsPost**: The instance uses the pay-as-you-go billing method.
+         * *   **drdsRo**: By default, the pay-as-you-go billing method is used when you create read-only instances.
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -373,7 +406,13 @@ public class CreateDrdsInstanceRequest extends Request {
         }
 
         /**
-         * PricingCycle.
+         * Specifies the unit of the subscription duration of the subscription instance. Valid values:
+         * <p>
+         * 
+         * *   **year**: The unit of the subscription duration is year.
+         * *   **month**: The unit of the subscription duration is month.
+         * 
+         * >  This parameter is required if you set the PayType parameter to drdsPre.
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
@@ -382,7 +421,7 @@ public class CreateDrdsInstanceRequest extends Request {
         }
 
         /**
-         * Quantity.
+         * Specifies the number of instances to be created. You can set the value only to 1. The value specifies that you can create one instance each time.
          */
         public Builder quantity(Integer quantity) {
             this.putQueryParameter("Quantity", quantity);
@@ -391,7 +430,7 @@ public class CreateDrdsInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * Specifies the region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -400,7 +439,7 @@ public class CreateDrdsInstanceRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * Specifies the ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -409,7 +448,7 @@ public class CreateDrdsInstanceRequest extends Request {
         }
 
         /**
-         * Specification.
+         * Specifies the specification code of the instance. The value consists of the instance type and the specified instance specification. For example, you can set the value to drds.sn2.4c16g.8c32g.
          */
         public Builder specification(String specification) {
             this.putQueryParameter("Specification", specification);
@@ -418,7 +457,10 @@ public class CreateDrdsInstanceRequest extends Request {
         }
 
         /**
-         * Type.
+         * Specifies the type of the instance. Set the value to PRIVATE. The value PRIVATE specifies that the instance is a dedicated instance.
+         * <p>
+         * 
+         * >  You can also set the value to 1 to specify that the instance is a dedicated instance.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -427,7 +469,7 @@ public class CreateDrdsInstanceRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * Specifies the ID of the VPC.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -436,7 +478,7 @@ public class CreateDrdsInstanceRequest extends Request {
         }
 
         /**
-         * VswitchId.
+         * Specifies the ID of the vSwitch.
          */
         public Builder vswitchId(String vswitchId) {
             this.putQueryParameter("VswitchId", vswitchId);
@@ -445,7 +487,7 @@ public class CreateDrdsInstanceRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * Specifies the zone ID of the instance.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -454,7 +496,7 @@ public class CreateDrdsInstanceRequest extends Request {
         }
 
         /**
-         * isHa.
+         * Specifies whether the instance is a high-availability instance.
          */
         public Builder isHa(Boolean isHa) {
             this.putQueryParameter("isHa", isHa);

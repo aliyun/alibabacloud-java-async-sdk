@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UploadRequest} extends {@link RequestModel}
  *
  * <p>UploadRequest</p>
  */
 public class UploadRequest extends Request {
-    @Query
-    @NameInMap("Edition")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Edition")
     private String edition;
 
-    @Body
-    @NameInMap("File")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("File")
     private String file;
 
-    @Query
-    @NameInMap("FileName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileName;
 
-    @Query
-    @NameInMap("Pid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Pid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pid;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Version")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Version")
     private String version;
 
     private UploadRequest(Builder builder) {
@@ -127,7 +132,10 @@ public class UploadRequest extends Request {
         } 
 
         /**
-         * The version of the SourceMap file.
+         * <p>The version of the SourceMap file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.0</p>
          */
         public Builder edition(String edition) {
             this.putQueryParameter("Edition", edition);
@@ -136,7 +144,10 @@ public class UploadRequest extends Request {
         }
 
         /**
-         * The content of the SourceMap file.
+         * <p>The string of the SourceMap file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test file content</p>
          */
         public Builder file(String file) {
             this.putBodyParameter("File", file);
@@ -145,7 +156,11 @@ public class UploadRequest extends Request {
         }
 
         /**
-         * The name of the SourceMap file.
+         * <p>The name of the SourceMap file.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.js.map</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -154,10 +169,12 @@ public class UploadRequest extends Request {
         }
 
         /**
-         * The application ID.
-         * <p>
+         * <p>The application ID.</p>
+         * <p>Log on to the <strong>ARMS console</strong>. In the left-side navigation pane, choose <strong>Browser Monitoring</strong> &gt; <strong>Browser Monitoring</strong>. On the Browser Monitoring page, click the name of an application. The URL in the address bar contains the process ID (PID) of the application. The PID is indicated in the pid=xxx format. The PID is usually percent encoded as xxx%40xxx. You must modify this value to remove the percent encoding. For example, if the PID in the URL is eb4zdose6v%409781be0f44d****, you must replace %40 with @ to obtain eb4zdose6v@9781be0f44d****.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Log on to the **ARMS console**. In the left-side navigation pane, choose **Browser Monitoring** > **Browser Monitoring**. On the Browser Monitoring page, click the name of an application. The URL in the address bar contains the process ID (PID) of the application. The PID is indicated in the pid=xxx format. The PID is usually percent encoded as xxx%40xxx. You must modify this value to remove the percent encoding. For example, if the PID in the URL is eb4zdose6v%409781be0f44d\*\*\*\*, you must replace %40 with @ to obtain eb4zdose6v@9781be0f44d\*\*\*\*.
+         * <strong>example:</strong>
+         * <p>b590lhguqs@8cc3f6354******</p>
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -166,7 +183,11 @@ public class UploadRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the SourceMap file is uploaded.
+         * <p>The ID of the region to which the SourceMap file is uploaded.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -175,7 +196,10 @@ public class UploadRequest extends Request {
         }
 
         /**
-         * We recommend that you do not specify this parameter.
+         * <p>We recommend that you do not specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder version(String version) {
             this.putQueryParameter("Version", version);

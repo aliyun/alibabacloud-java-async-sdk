@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitPreprocessJobsRequest} extends {@link RequestModel}
  *
  * <p>SubmitPreprocessJobsRequest</p>
  */
 public class SubmitPreprocessJobsRequest extends Request {
-    @Query
-    @NameInMap("PreprocessType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreprocessType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String preprocessType;
 
-    @Query
-    @NameInMap("VideoId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VideoId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String videoId;
 
     private SubmitPreprocessJobsRequest(Builder builder) {
@@ -70,7 +75,11 @@ public class SubmitPreprocessJobsRequest extends Request {
         } 
 
         /**
-         * The preprocessing type. Set the value to **LivePreprocess**, which indicates that the video is preprocessed in the production studio.
+         * <p>The preprocessing type. Set the value to <strong>LivePreprocess</strong>. LivePreprocess specifies that the video is preprocessed in the production studio.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LivePreprocess</p>
          */
         public Builder preprocessType(String preprocessType) {
             this.putQueryParameter("PreprocessType", preprocessType);
@@ -79,7 +88,16 @@ public class SubmitPreprocessJobsRequest extends Request {
         }
 
         /**
-         * The ID of the video.
+         * <p>The ID of the video. You can use one of the following methods to obtain the ID:</p>
+         * <ul>
+         * <li>After you upload a video in the ApsaraVideo VOD console, you can log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong> to view the ID of the video.</li>
+         * <li>Obtain the VideoId from the response to the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation that you call to upload videos.</li>
+         * <li>Obtain the VideoId from the response to the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation that you call to query videos.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d3e680e618708efbf2cae7cc9312****</p>
          */
         public Builder videoId(String videoId) {
             this.putQueryParameter("VideoId", videoId);

@@ -1,34 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateWorkspaceRequest} extends {@link RequestModel}
  *
  * <p>CreateWorkspaceRequest</p>
  */
 public class CreateWorkspaceRequest extends Request {
-    @Body
-    @NameInMap("Description")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String description;
 
-    @Body
-    @NameInMap("DisplayName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
     private String displayName;
 
-    @Body
-    @NameInMap("EnvTypes")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnvTypes")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > envTypes;
 
-    @Body
-    @NameInMap("WorkspaceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkspaceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceName;
 
     private CreateWorkspaceRequest(Builder builder) {
@@ -99,7 +99,10 @@ public class CreateWorkspaceRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -117,7 +120,7 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
-         * EnvTypes.
+         * <p>This parameter is required.</p>
          */
         public Builder envTypes(java.util.List < String > envTypes) {
             this.putBodyParameter("EnvTypes", envTypes);
@@ -126,7 +129,10 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
-         * WorkspaceName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace_example</p>
          */
         public Builder workspaceName(String workspaceName) {
             this.putBodyParameter("WorkspaceName", workspaceName);

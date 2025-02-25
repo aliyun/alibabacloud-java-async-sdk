@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.fnf20190315;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.fnf20190315.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -58,29 +59,35 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
       * ## [](#)Usage notes
-      * You can use this operation to call back the task step of `pattern: waitForCallback`, which indicates that the current task fails to be executed.
+      * In the old version of CloudFlow, the task step that ReportTaskFailed is used to call back `pattern: waitForCallback` indicates that the current task fails to be executed.
+      * In the new version of CloudFlow, the task step that ReportTaskFailed is used to call back `TaskMode: WaitForCustomCallback` indicates that the current task fails to be executed.
       *
      */
     CompletableFuture<ReportTaskFailedResponse> reportTaskFailed(ReportTaskFailedRequest request);
 
     /**
       * ## [](#)Usage notes
-      * You can use this operation to call back the task step of `pattern: waitForCallback`, which indicates that the current task is successfully executed.
+      * In the old version of CloudFlow, the task step that ReportTaskSucceeded is used to call back pattern: waitForCallback indicates that the current task is successfully executed.
+      * In the new version of CloudFlow, the task step that ReportTaskSucceeded is used to call back TaskMode: WaitForCustomCallback indicates that the current task is successfully executed.
       *
      */
     CompletableFuture<ReportTaskSucceededResponse> reportTaskSucceeded(ReportTaskSucceededRequest request);
 
     /**
       * ## [](#)Usage notes
-      * *   The flow is created.
+      * *   The flow is created. A flow only in standard mode is supported.
       * *   If you do not specify an execution, the system automatically generates an execution and starts the execution.
       * *   If an ongoing execution has the same name as that of the execution to be started, the system directly returns the ongoing execution.
-      * *   If the ongoing execution with the same name has ended (succeeded or failed), the `ExecutionAlreadyExists` error is returned.
+      * *   If the ongoing execution with the same name has ended (succeeded or failed), `ExecutionAlreadyExists` is returned.
       * *   If no execution with the same name exists, the system starts a new execution.
       *
      */
     CompletableFuture<StartExecutionResponse> startExecution(StartExecutionRequest request);
 
+    /**
+      * *   Only flows of the express execution mode are supported.
+      *
+     */
     CompletableFuture<StartSyncExecutionResponse> startSyncExecution(StartSyncExecutionRequest request);
 
     /**

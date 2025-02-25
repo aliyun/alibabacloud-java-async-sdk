@@ -28,12 +28,17 @@ public class QueryVoiceIntercomRequest extends Request {
     @NameInMap("ProductKey")
     private String productKey;
 
+    @Query
+    @NameInMap("Scheme")
+    private String scheme;
+
     private QueryVoiceIntercomRequest(Builder builder) {
         super(builder);
         this.deviceName = builder.deviceName;
         this.iotId = builder.iotId;
         this.iotInstanceId = builder.iotInstanceId;
         this.productKey = builder.productKey;
+        this.scheme = builder.scheme;
     }
 
     public static Builder builder() {
@@ -77,22 +82,31 @@ public class QueryVoiceIntercomRequest extends Request {
         return this.productKey;
     }
 
+    /**
+     * @return scheme
+     */
+    public String getScheme() {
+        return this.scheme;
+    }
+
     public static final class Builder extends Request.Builder<QueryVoiceIntercomRequest, Builder> {
         private String deviceName; 
         private String iotId; 
         private String iotInstanceId; 
         private String productKey; 
+        private String scheme; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(QueryVoiceIntercomRequest response) {
-            super(response);
-            this.deviceName = response.deviceName;
-            this.iotId = response.iotId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
+        private Builder(QueryVoiceIntercomRequest request) {
+            super(request);
+            this.deviceName = request.deviceName;
+            this.iotId = request.iotId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
+            this.scheme = request.scheme;
         } 
 
         /**
@@ -128,6 +142,15 @@ public class QueryVoiceIntercomRequest extends Request {
         public Builder productKey(String productKey) {
             this.putQueryParameter("ProductKey", productKey);
             this.productKey = productKey;
+            return this;
+        }
+
+        /**
+         * Scheme.
+         */
+        public Builder scheme(String scheme) {
+            this.putQueryParameter("Scheme", scheme);
+            this.scheme = scheme;
             return this;
         }
 

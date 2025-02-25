@@ -1,47 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateConsumerGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateConsumerGroupRequest</p>
  */
 public class CreateConsumerGroupRequest extends Request {
-    @Query
-    @NameInMap("AccountId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountId")
     private String accountId;
 
-    @Query
-    @NameInMap("ConsumerGroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConsumerGroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String consumerGroupName;
 
-    @Query
-    @NameInMap("ConsumerGroupPassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConsumerGroupPassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String consumerGroupPassword;
 
-    @Query
-    @NameInMap("ConsumerGroupUserName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConsumerGroupUserName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String consumerGroupUserName;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("SubscriptionInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscriptionInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subscriptionInstanceId;
 
     private CreateConsumerGroupRequest(Builder builder) {
@@ -52,6 +61,7 @@ public class CreateConsumerGroupRequest extends Request {
         this.consumerGroupUserName = builder.consumerGroupUserName;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.subscriptionInstanceId = builder.subscriptionInstanceId;
     }
 
@@ -111,6 +121,13 @@ public class CreateConsumerGroupRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return subscriptionInstanceId
      */
     public String getSubscriptionInstanceId() {
@@ -124,6 +141,7 @@ public class CreateConsumerGroupRequest extends Request {
         private String consumerGroupUserName; 
         private String ownerId; 
         private String regionId; 
+        private String resourceGroupId; 
         private String subscriptionInstanceId; 
 
         private Builder() {
@@ -138,11 +156,15 @@ public class CreateConsumerGroupRequest extends Request {
             this.consumerGroupUserName = request.consumerGroupUserName;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.subscriptionInstanceId = request.subscriptionInstanceId;
         } 
 
         /**
-         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
+         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12323344****</p>
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -151,7 +173,11 @@ public class CreateConsumerGroupRequest extends Request {
         }
 
         /**
-         * The name of the consumer group. The name cannot exceed 128 characters in length. We recommend that you use an informative name for easy identification.
+         * <p>The name of the consumer group. The name cannot exceed 128 characters in length. We recommend that you use an informative name for easy identification.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试订阅组</p>
          */
         public Builder consumerGroupName(String consumerGroupName) {
             this.putQueryParameter("ConsumerGroupName", consumerGroupName);
@@ -160,11 +186,15 @@ public class CreateConsumerGroupRequest extends Request {
         }
 
         /**
-         * The password that corresponds to the username of the consumer group.
-         * <p>
+         * <p>The password that corresponds to the username of the consumer group.</p>
+         * <ul>
+         * <li>A password must contain two or more of the following characters: uppercase letters, lowercase letters, digits, and special characters.</li>
+         * <li>A password must be 8 to 32 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   A password must contain two or more of the following characters: uppercase letters, lowercase letters, digits, and special characters.
-         * *   A password must be 8 to 32 characters in length.
+         * <strong>example:</strong>
+         * <p>Test123456</p>
          */
         public Builder consumerGroupPassword(String consumerGroupPassword) {
             this.putQueryParameter("ConsumerGroupPassword", consumerGroupPassword);
@@ -173,11 +203,15 @@ public class CreateConsumerGroupRequest extends Request {
         }
 
         /**
-         * The username of the consumer group.
-         * <p>
+         * <p>The username of the consumer group.</p>
+         * <ul>
+         * <li>A username must contain one or more of the following characters: uppercase letters, lowercase letters, digits, and underscores (_).</li>
+         * <li>A username cannot exceed 16 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   A username must contain one or more of the following characters: uppercase letters, lowercase letters, digits, and underscores (\_).
-         * *   A username cannot exceed 16 characters in length.
+         * <strong>example:</strong>
+         * <p>dtstest</p>
          */
         public Builder consumerGroupUserName(String consumerGroupUserName) {
             this.putQueryParameter("ConsumerGroupUserName", consumerGroupUserName);
@@ -195,7 +229,10 @@ public class CreateConsumerGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region where the change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -204,7 +241,23 @@ public class CreateConsumerGroupRequest extends Request {
         }
 
         /**
-         * The ID of the change tracking instance. You can call the DescribeSubscriptionInstances operation to query the instance ID.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the change tracking instance. You can call the DescribeSubscriptionInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsg2m10r1x15a****</p>
          */
         public Builder subscriptionInstanceId(String subscriptionInstanceId) {
             this.putQueryParameter("SubscriptionInstanceId", subscriptionInstanceId);

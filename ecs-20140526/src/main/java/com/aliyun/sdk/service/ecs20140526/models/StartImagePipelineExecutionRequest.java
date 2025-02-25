@@ -1,54 +1,64 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartImagePipelineExecutionRequest} extends {@link RequestModel}
  *
  * <p>StartImagePipelineExecutionRequest</p>
  */
 public class StartImagePipelineExecutionRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("ImagePipelineId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImagePipelineId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String imagePipelineId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TemplateTag")
-    private java.util.List < TemplateTag> templateTag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateTag")
+    @Deprecated
+    private java.util.List<TemplateTag> templateTag;
 
     private StartImagePipelineExecutionRequest(Builder builder) {
         super(builder);
@@ -60,6 +70,7 @@ public class StartImagePipelineExecutionRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.tag = builder.tag;
         this.templateTag = builder.templateTag;
     }
 
@@ -133,9 +144,16 @@ public class StartImagePipelineExecutionRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List<Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return templateTag
      */
-    public java.util.List < TemplateTag> getTemplateTag() {
+    public java.util.List<TemplateTag> getTemplateTag() {
         return this.templateTag;
     }
 
@@ -148,7 +166,8 @@ public class StartImagePipelineExecutionRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < TemplateTag> templateTag; 
+        private java.util.List<Tag> tag; 
+        private java.util.List<TemplateTag> templateTag; 
 
         private Builder() {
             super();
@@ -164,6 +183,7 @@ public class StartImagePipelineExecutionRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.tag = request.tag;
             this.templateTag = request.templateTag;
         } 
 
@@ -177,7 +197,10 @@ public class StartImagePipelineExecutionRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among requests. **The token can contain only ASCII characters and cannot exceed 64 characters in length.** For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among requests. <strong>The token can contain only ASCII characters and cannot exceed 64 characters in length.</strong> For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -186,7 +209,11 @@ public class StartImagePipelineExecutionRequest extends Request {
         }
 
         /**
-         * The ID of the image template.
+         * <p>The ID of the image template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip-2ze5tsl5bp6nf2b3****</p>
          */
         public Builder imagePipelineId(String imagePipelineId) {
             this.putQueryParameter("ImagePipelineId", imagePipelineId);
@@ -213,7 +240,11 @@ public class StartImagePipelineExecutionRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -240,9 +271,20 @@ public class StartImagePipelineExecutionRequest extends Request {
         }
 
         /**
-         * > This parameter is deprecated.
+         * <p>The tags.</p>
          */
-        public Builder templateTag(java.util.List < TemplateTag> templateTag) {
+        public Builder tag(java.util.List<Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * <blockquote>
+         * <p> This parameter is deprecated.</p>
+         * </blockquote>
+         */
+        public Builder templateTag(java.util.List<TemplateTag> templateTag) {
             this.putQueryParameter("TemplateTag", templateTag);
             this.templateTag = templateTag;
             return this;
@@ -255,11 +297,90 @@ public class StartImagePipelineExecutionRequest extends Request {
 
     } 
 
-    public static class TemplateTag extends TeaModel {
-        @NameInMap("Key")
+    /**
+     * 
+     * {@link StartImagePipelineExecutionRequest} extends {@link TeaModel}
+     *
+     * <p>StartImagePipelineExecutionRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * <p>The key of tag N. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The value of tag N. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length. The tag value cannot start with <code>acs:</code> or contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link StartImagePipelineExecutionRequest} extends {@link TeaModel}
+     *
+     * <p>StartImagePipelineExecutionRequest</p>
+     */
+    public static class TemplateTag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private TemplateTag(Builder builder) {
@@ -294,7 +415,12 @@ public class StartImagePipelineExecutionRequest extends Request {
             private String value; 
 
             /**
-             * > This parameter is deprecated.
+             * <blockquote>
+             * <p> This parameter is deprecated.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -302,7 +428,12 @@ public class StartImagePipelineExecutionRequest extends Request {
             }
 
             /**
-             * > This parameter is deprecated.
+             * <blockquote>
+             * <p> This parameter is deprecated.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder value(String value) {
                 this.value = value;

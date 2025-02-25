@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAgentlessRegionResponseBody} extends {@link TeaModel}
  *
  * <p>ListAgentlessRegionResponseBody</p>
  */
 public class ListAgentlessRegionResponseBody extends TeaModel {
-    @NameInMap("RegionList")
-    private java.util.List < String > regionList;
+    @com.aliyun.core.annotation.NameInMap("RegionList")
+    private java.util.List<String> regionList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListAgentlessRegionResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class ListAgentlessRegionResponseBody extends TeaModel {
     /**
      * @return regionList
      */
-    public java.util.List < String > getRegionList() {
+    public java.util.List<String> getRegionList() {
         return this.regionList;
     }
 
@@ -46,19 +51,22 @@ public class ListAgentlessRegionResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > regionList; 
+        private java.util.List<String> regionList; 
         private String requestId; 
 
         /**
-         * The information about the regions.
+         * <p>The information about the regions.</p>
          */
-        public Builder regionList(java.util.List < String > regionList) {
+        public Builder regionList(java.util.List<String> regionList) {
             this.regionList = regionList;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7E0618A9-D5EF-4220-9471-C42B5E92****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

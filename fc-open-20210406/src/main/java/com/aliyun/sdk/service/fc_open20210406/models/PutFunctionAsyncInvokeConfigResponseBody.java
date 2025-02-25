@@ -134,7 +134,7 @@ public class PutFunctionAsyncInvokeConfigResponseBody extends TeaModel {
         private Boolean statefulInvocation; 
 
         /**
-         * Sat, 14 Jul 2017 07:02:38 GMT
+         * The time when the alias was created.
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -142,7 +142,7 @@ public class PutFunctionAsyncInvokeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The trace ID of the invocation request of Function Compute.
+         * The configuration struct of the destination for asynchronous invocations.
          */
         public Builder destinationConfig(DestinationConfig destinationConfig) {
             this.destinationConfig = destinationConfig;
@@ -150,7 +150,7 @@ public class PutFunctionAsyncInvokeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the function.
+         * The function name.
          */
         public Builder function(String function) {
             this.function = function;
@@ -158,7 +158,7 @@ public class PutFunctionAsyncInvokeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The configuration structure of the destination for asynchronous invocation.
+         * The time when the configuration was last modified.
          */
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
@@ -166,11 +166,7 @@ public class PutFunctionAsyncInvokeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Specifies whether to enable the asynchronous task feature. 
-         * <p>
-         * 
-         * - **true**: enables the asynchronous task feature. 
-         * - **false**: does not enable the asynchronous task feature.
+         * The maximum validity period of a message.
          */
         public Builder maxAsyncEventAgeInSeconds(Long maxAsyncEventAgeInSeconds) {
             this.maxAsyncEventAgeInSeconds = maxAsyncEventAgeInSeconds;
@@ -178,7 +174,7 @@ public class PutFunctionAsyncInvokeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of your Alibaba Cloud account.
+         * The maximum number of retries allowed after an asynchronous invocation fails.
          */
         public Builder maxAsyncRetryAttempts(Long maxAsyncRetryAttempts) {
             this.maxAsyncRetryAttempts = maxAsyncRetryAttempts;
@@ -186,11 +182,7 @@ public class PutFunctionAsyncInvokeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Specifies whether to enable the asynchronous task feature. 
-         * <p>
-         * 
-         * - **true**: enables the asynchronous task feature. 
-         * - **false**: does not enable the asynchronous task feature.
+         * The version or alias of the service.
          */
         public Builder qualifier(String qualifier) {
             this.qualifier = qualifier;
@@ -198,7 +190,7 @@ public class PutFunctionAsyncInvokeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Creates or modifies an asynchronous invocation configuration for a function.
+         * The service name.
          */
         public Builder service(String service) {
             this.service = service;
@@ -206,7 +198,11 @@ public class PutFunctionAsyncInvokeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Jianyi
+         * Specifies whether to enable the asynchronous task feature.
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder statefulInvocation(Boolean statefulInvocation) {
             this.statefulInvocation = statefulInvocation;

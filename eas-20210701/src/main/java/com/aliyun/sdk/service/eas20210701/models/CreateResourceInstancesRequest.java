@@ -1,57 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateResourceInstancesRequest} extends {@link RequestModel}
  *
  * <p>CreateResourceInstancesRequest</p>
  */
 public class CreateResourceInstancesRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("ResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceId;
 
-    @Body
-    @NameInMap("AutoRenewal")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoRenewal")
     private Boolean autoRenewal;
 
-    @Body
-    @NameInMap("ChargeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String chargeType;
 
-    @Body
-    @NameInMap("EcsInstanceCount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EcsInstanceCount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer ecsInstanceCount;
 
-    @Body
-    @NameInMap("EcsInstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EcsInstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ecsInstanceType;
 
-    @Body
-    @NameInMap("SystemDiskSize")
-    @Validation(maximum = 2000, minimum = 200)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Labels")
+    private java.util.Map<String, String> labels;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
+    @com.aliyun.core.annotation.Validation(maximum = 2000, minimum = 200)
     private Integer systemDiskSize;
 
-    @Body
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
-    @Body
-    @NameInMap("Zone")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Zone")
     private String zone;
 
     private CreateResourceInstancesRequest(Builder builder) {
@@ -62,6 +71,7 @@ public class CreateResourceInstancesRequest extends Request {
         this.chargeType = builder.chargeType;
         this.ecsInstanceCount = builder.ecsInstanceCount;
         this.ecsInstanceType = builder.ecsInstanceType;
+        this.labels = builder.labels;
         this.systemDiskSize = builder.systemDiskSize;
         this.userData = builder.userData;
         this.zone = builder.zone;
@@ -123,6 +133,13 @@ public class CreateResourceInstancesRequest extends Request {
     }
 
     /**
+     * @return labels
+     */
+    public java.util.Map<String, String> getLabels() {
+        return this.labels;
+    }
+
+    /**
      * @return systemDiskSize
      */
     public Integer getSystemDiskSize() {
@@ -150,6 +167,7 @@ public class CreateResourceInstancesRequest extends Request {
         private String chargeType; 
         private Integer ecsInstanceCount; 
         private String ecsInstanceType; 
+        private java.util.Map<String, String> labels; 
         private Integer systemDiskSize; 
         private String userData; 
         private String zone; 
@@ -166,13 +184,18 @@ public class CreateResourceInstancesRequest extends Request {
             this.chargeType = request.chargeType;
             this.ecsInstanceCount = request.ecsInstanceCount;
             this.ecsInstanceType = request.ecsInstanceType;
+            this.labels = request.labels;
             this.systemDiskSize = request.systemDiskSize;
             this.userData = request.userData;
             this.zone = request.zone;
         } 
 
         /**
-         * ClusterId.
+         * <p>The ID of the region to which the resource group belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -181,7 +204,11 @@ public class CreateResourceInstancesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The ID of the resource group. For more information about how to query the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-r-asdasdasd</p>
          */
         public Builder resourceId(String resourceId) {
             this.putPathParameter("ResourceId", resourceId);
@@ -190,7 +217,14 @@ public class CreateResourceInstancesRequest extends Request {
         }
 
         /**
-         * AutoRenewal.
+         * <p>Specifies whether to enable auto-renewal. Valid values:</p>
+         * <ul>
+         * <li>false (default)</li>
+         * <li>true</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenewal(Boolean autoRenewal) {
             this.putBodyParameter("AutoRenewal", autoRenewal);
@@ -199,7 +233,15 @@ public class CreateResourceInstancesRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li>PrePaid: subscription.</li>
+         * <li>PostPaid: pay-as-you-go.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putBodyParameter("ChargeType", chargeType);
@@ -208,7 +250,11 @@ public class CreateResourceInstancesRequest extends Request {
         }
 
         /**
-         * EcsInstanceCount.
+         * <p>The number of instances that you want to create. Valid values: 1 to 100.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder ecsInstanceCount(Integer ecsInstanceCount) {
             this.putBodyParameter("EcsInstanceCount", ecsInstanceCount);
@@ -217,7 +263,11 @@ public class CreateResourceInstancesRequest extends Request {
         }
 
         /**
-         * EcsInstanceType.
+         * <p>The type of the Elastic Compute Service (ECS) instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.s6-c1m2.xlarge</p>
          */
         public Builder ecsInstanceType(String ecsInstanceType) {
             this.putBodyParameter("EcsInstanceType", ecsInstanceType);
@@ -226,7 +276,19 @@ public class CreateResourceInstancesRequest extends Request {
         }
 
         /**
-         * SystemDiskSize.
+         * Labels.
+         */
+        public Builder labels(java.util.Map<String, String> labels) {
+            this.putBodyParameter("Labels", labels);
+            this.labels = labels;
+            return this;
+        }
+
+        /**
+         * <p>The size of the system disk. Unit: GiB. Valid values: 200 to 2000. Default value: 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder systemDiskSize(Integer systemDiskSize) {
             this.putBodyParameter("SystemDiskSize", systemDiskSize);
@@ -235,7 +297,10 @@ public class CreateResourceInstancesRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The user-defined information. This parameter is not in use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>x112223333</p>
          */
         public Builder userData(String userData) {
             this.putBodyParameter("UserData", userData);
@@ -244,7 +309,10 @@ public class CreateResourceInstancesRequest extends Request {
         }
 
         /**
-         * Zone.
+         * <p>The zone to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai-f</p>
          */
         public Builder zone(String zone) {
             this.putBodyParameter("Zone", zone);

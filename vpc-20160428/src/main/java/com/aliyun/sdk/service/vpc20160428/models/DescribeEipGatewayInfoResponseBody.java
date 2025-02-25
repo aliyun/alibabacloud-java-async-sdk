@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEipGatewayInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEipGatewayInfoResponseBody</p>
  */
 public class DescribeEipGatewayInfoResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("EipInfos")
+    @com.aliyun.core.annotation.NameInMap("EipInfos")
     private EipInfos eipInfos;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeEipGatewayInfoResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class DescribeEipGatewayInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status code of the operation.
+         * <p>The status code of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +90,7 @@ public class DescribeEipGatewayInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The detailed information about the EIP.
+         * <p>The detailed information about the EIP.</p>
          */
         public Builder eipInfos(EipInfos eipInfos) {
             this.eipInfos = eipInfos;
@@ -90,7 +98,10 @@ public class DescribeEipGatewayInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the operation.
+         * <p>The result of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +109,10 @@ public class DescribeEipGatewayInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C0FD0EED-F90D-4479-803D-DD62335357E5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,14 +125,20 @@ public class DescribeEipGatewayInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEipGatewayInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEipGatewayInfoResponseBody</p>
+     */
     public static class EipInfo extends TeaModel {
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("IpGw")
+        @com.aliyun.core.annotation.NameInMap("IpGw")
         private String ipGw;
 
-        @NameInMap("IpMask")
+        @com.aliyun.core.annotation.NameInMap("IpMask")
         private String ipMask;
 
         private EipInfo(Builder builder) {
@@ -162,7 +182,10 @@ public class DescribeEipGatewayInfoResponseBody extends TeaModel {
             private String ipMask; 
 
             /**
-             * The IP address of the EIP.
+             * <p>The IP address of the EIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.XX.XX.236</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -170,7 +193,10 @@ public class DescribeEipGatewayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the gateway that is associated with the EIP.
+             * <p>The IP address of the gateway that is associated with the EIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.XX.XX.1</p>
              */
             public Builder ipGw(String ipGw) {
                 this.ipGw = ipGw;
@@ -178,7 +204,10 @@ public class DescribeEipGatewayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The subnet mask of the EIP.
+             * <p>The subnet mask of the EIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255.255.255.0</p>
              */
             public Builder ipMask(String ipMask) {
                 this.ipMask = ipMask;
@@ -192,9 +221,15 @@ public class DescribeEipGatewayInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEipGatewayInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEipGatewayInfoResponseBody</p>
+     */
     public static class EipInfos extends TeaModel {
-        @NameInMap("EipInfo")
-        private java.util.List < EipInfo> eipInfo;
+        @com.aliyun.core.annotation.NameInMap("EipInfo")
+        private java.util.List<EipInfo> eipInfo;
 
         private EipInfos(Builder builder) {
             this.eipInfo = builder.eipInfo;
@@ -211,17 +246,17 @@ public class DescribeEipGatewayInfoResponseBody extends TeaModel {
         /**
          * @return eipInfo
          */
-        public java.util.List < EipInfo> getEipInfo() {
+        public java.util.List<EipInfo> getEipInfo() {
             return this.eipInfo;
         }
 
         public static final class Builder {
-            private java.util.List < EipInfo> eipInfo; 
+            private java.util.List<EipInfo> eipInfo; 
 
             /**
              * EipInfo.
              */
-            public Builder eipInfo(java.util.List < EipInfo> eipInfo) {
+            public Builder eipInfo(java.util.List<EipInfo> eipInfo) {
                 this.eipInfo = eipInfo;
                 return this;
             }

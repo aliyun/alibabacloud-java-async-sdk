@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMigrationProcessResponseBody} extends {@link TeaModel}
  *
  * <p>GetMigrationProcessResponseBody</p>
  */
 public class GetMigrationProcessResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetMigrationProcessResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetMigrationProcessResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -90,7 +95,7 @@ public class GetMigrationProcessResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String errorCode; 
         private String errorMessage; 
         private Integer httpStatusCode; 
@@ -98,15 +103,18 @@ public class GetMigrationProcessResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The progress information of the migration task, including the names of all steps in and status of the migration task.
+         * <p>The progress information of the migration task, including the names of all steps in and status of the migration task.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The error code returned.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110001123456</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +122,10 @@ public class GetMigrationProcessResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test error msg</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +133,10 @@ public class GetMigrationProcessResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +144,10 @@ public class GetMigrationProcessResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SADFSDFSD-SDFSDF-XDXCVX-ESWW</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class GetMigrationProcessResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,11 +171,17 @@ public class GetMigrationProcessResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMigrationProcessResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMigrationProcessResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
-        @NameInMap("TaskStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private String taskStatus;
 
         private Data(Builder builder) {
@@ -190,7 +216,10 @@ public class GetMigrationProcessResponseBody extends TeaModel {
             private String taskStatus; 
 
             /**
-             * The name of the step in the migration task.
+             * <p>The name of the step in the migration task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IMPORE_PREPARE</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -198,13 +227,16 @@ public class GetMigrationProcessResponseBody extends TeaModel {
             }
 
             /**
-             * The running status of the step in the migration task. Valid values:
-             * <p>
+             * <p>The running status of the step in the migration task. Valid values:</p>
+             * <ul>
+             * <li>INIT</li>
+             * <li>RUNNING</li>
+             * <li>FAILURE</li>
+             * <li>SUCCESS</li>
+             * </ul>
              * 
-             * *   INT
-             * *   RUNNING
-             * *   FAILURE
-             * *   SUCCESS
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;

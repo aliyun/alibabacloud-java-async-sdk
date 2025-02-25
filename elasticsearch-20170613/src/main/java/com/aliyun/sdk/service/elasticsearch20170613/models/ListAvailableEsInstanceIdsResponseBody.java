@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAvailableEsInstanceIdsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAvailableEsInstanceIdsResponseBody</p>
  */
 public class ListAvailableEsInstanceIdsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private ListAvailableEsInstanceIdsResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class ListAvailableEsInstanceIdsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class ListAvailableEsInstanceIdsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result.
+         * <p>The returned result.</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -71,17 +74,23 @@ public class ListAvailableEsInstanceIdsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAvailableEsInstanceIdsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAvailableEsInstanceIdsResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("endpoint")
+        @com.aliyun.core.annotation.NameInMap("endpoint")
         private String endpoint;
 
-        @NameInMap("esInstanceId")
+        @com.aliyun.core.annotation.NameInMap("esInstanceId")
         private String esInstanceId;
 
-        @NameInMap("kibanaEndpoint")
+        @com.aliyun.core.annotation.NameInMap("kibanaEndpoint")
         private String kibanaEndpoint;
 
         private Result(Builder builder) {
@@ -134,7 +143,10 @@ public class ListAvailableEsInstanceIdsResponseBody extends TeaModel {
             private String kibanaEndpoint; 
 
             /**
-             * The name of the Elasticsearch cluster.
+             * <p>The name of the Elasticsearch cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instanceName</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -142,7 +154,10 @@ public class ListAvailableEsInstanceIdsResponseBody extends TeaModel {
             }
 
             /**
-             * The address that is used to access the Elasticsearch cluster over the Internet.
+             * <p>The address that is used to access the Elasticsearch cluster over the Internet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://es-cn-n6w1o1x0w001c****.elasticsearch.aliyuncs.com:9200">http://es-cn-n6w1o1x0w001c****.elasticsearch.aliyuncs.com:9200</a></p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -150,7 +165,10 @@ public class ListAvailableEsInstanceIdsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Elasticsearch cluster.
+             * <p>The ID of the Elasticsearch cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-n6w1o1x0w001c****</p>
              */
             public Builder esInstanceId(String esInstanceId) {
                 this.esInstanceId = esInstanceId;
@@ -158,7 +176,10 @@ public class ListAvailableEsInstanceIdsResponseBody extends TeaModel {
             }
 
             /**
-             * The address that is used to access the Kibana console of the Elasticsearch cluster over the Internet.
+             * <p>The address that is used to access the Kibana console of the Elasticsearch cluster over the Internet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://es-cn-n6w1o1x0w001c****.kibana.elasticsearch.aliyuncs.com:5601">https://es-cn-n6w1o1x0w001c****.kibana.elasticsearch.aliyuncs.com:5601</a></p>
              */
             public Builder kibanaEndpoint(String kibanaEndpoint) {
                 this.kibanaEndpoint = kibanaEndpoint;

@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryChatappPhoneNumbersRequest} extends {@link RequestModel}
  *
  * <p>QueryChatappPhoneNumbersRequest</p>
  */
 public class QueryChatappPhoneNumbersRequest extends Request {
-    @Query
-    @NameInMap("CustSpaceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustSpaceId")
     private String custSpaceId;
 
-    @Query
-    @NameInMap("IsvCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsvCode")
     private String isvCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private String status;
 
     private QueryChatappPhoneNumbersRequest(Builder builder) {
         super(builder);
         this.custSpaceId = builder.custSpaceId;
         this.isvCode = builder.isvCode;
+        this.status = builder.status;
     }
 
     public static Builder builder() {
@@ -53,9 +58,17 @@ public class QueryChatappPhoneNumbersRequest extends Request {
         return this.isvCode;
     }
 
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
     public static final class Builder extends Request.Builder<QueryChatappPhoneNumbersRequest, Builder> {
         private String custSpaceId; 
         private String isvCode; 
+        private String status; 
 
         private Builder() {
             super();
@@ -65,10 +78,14 @@ public class QueryChatappPhoneNumbersRequest extends Request {
             super(request);
             this.custSpaceId = request.custSpaceId;
             this.isvCode = request.isvCode;
+            this.status = request.status;
         } 
 
         /**
-         * The space ID of the user under the ISV account.
+         * <p>The space ID of the RAM user within the ISV account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>293483938849493</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -77,11 +94,26 @@ public class QueryChatappPhoneNumbersRequest extends Request {
         }
 
         /**
-         * The ISV verification code, which is used to verify whether the user is authorized by the ISV account.
+         * <p>The independent software vendor (ISV) verification code, which is used to verify whether the RAM user is authorized by the ISV account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aksik93kdkkxmwol93939</p>
          */
         public Builder isvCode(String isvCode) {
             this.putQueryParameter("IsvCode", isvCode);
             this.isvCode = isvCode;
+            return this;
+        }
+
+        /**
+         * <p>The state of the phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VERIFIED</p>
+         */
+        public Builder status(String status) {
+            this.putQueryParameter("Status", status);
+            this.status = status;
             return this;
         }
 

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartBack2BackCallResponseBody} extends {@link TeaModel}
  *
  * <p>StartBack2BackCallResponseBody</p>
  */
 public class StartBack2BackCallResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Params")
-    private java.util.List < String > params;
+    @com.aliyun.core.annotation.NameInMap("Params")
+    private java.util.List<String> params;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private StartBack2BackCallResponseBody(Builder builder) {
@@ -78,7 +83,7 @@ public class StartBack2BackCallResponseBody extends TeaModel {
     /**
      * @return params
      */
-    public java.util.List < String > getParams() {
+    public java.util.List<String> getParams() {
         return this.params;
     }
 
@@ -94,7 +99,7 @@ public class StartBack2BackCallResponseBody extends TeaModel {
         private Data data; 
         private Integer httpStatusCode; 
         private String message; 
-        private java.util.List < String > params; 
+        private java.util.List<String> params; 
         private String requestId; 
 
         /**
@@ -132,7 +137,7 @@ public class StartBack2BackCallResponseBody extends TeaModel {
         /**
          * Params.
          */
-        public Builder params(java.util.List < String > params) {
+        public Builder params(java.util.List<String> params) {
             this.params = params;
             return this;
         }
@@ -151,41 +156,47 @@ public class StartBack2BackCallResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link StartBack2BackCallResponseBody} extends {@link TeaModel}
+     *
+     * <p>StartBack2BackCallResponseBody</p>
+     */
     public static class ChannelContexts extends TeaModel {
-        @NameInMap("CallType")
+        @com.aliyun.core.annotation.NameInMap("CallType")
         private String callType;
 
-        @NameInMap("ChannelFlags")
+        @com.aliyun.core.annotation.NameInMap("ChannelFlags")
         private String channelFlags;
 
-        @NameInMap("ChannelId")
+        @com.aliyun.core.annotation.NameInMap("ChannelId")
         private String channelId;
 
-        @NameInMap("ChannelState")
+        @com.aliyun.core.annotation.NameInMap("ChannelState")
         private String channelState;
 
-        @NameInMap("Destination")
+        @com.aliyun.core.annotation.NameInMap("Destination")
         private String destination;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("Originator")
+        @com.aliyun.core.annotation.NameInMap("Originator")
         private String originator;
 
-        @NameInMap("ReleaseInitiator")
+        @com.aliyun.core.annotation.NameInMap("ReleaseInitiator")
         private String releaseInitiator;
 
-        @NameInMap("ReleaseReason")
+        @com.aliyun.core.annotation.NameInMap("ReleaseReason")
         private String releaseReason;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
-        @NameInMap("UserExtension")
+        @com.aliyun.core.annotation.NameInMap("UserExtension")
         private String userExtension;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private ChannelContexts(Builder builder) {
@@ -412,17 +423,23 @@ public class StartBack2BackCallResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link StartBack2BackCallResponseBody} extends {@link TeaModel}
+     *
+     * <p>StartBack2BackCallResponseBody</p>
+     */
     public static class CallContext extends TeaModel {
-        @NameInMap("CallType")
+        @com.aliyun.core.annotation.NameInMap("CallType")
         private String callType;
 
-        @NameInMap("ChannelContexts")
-        private java.util.List < ChannelContexts> channelContexts;
+        @com.aliyun.core.annotation.NameInMap("ChannelContexts")
+        private java.util.List<ChannelContexts> channelContexts;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
         private CallContext(Builder builder) {
@@ -450,7 +467,7 @@ public class StartBack2BackCallResponseBody extends TeaModel {
         /**
          * @return channelContexts
          */
-        public java.util.List < ChannelContexts> getChannelContexts() {
+        public java.util.List<ChannelContexts> getChannelContexts() {
             return this.channelContexts;
         }
 
@@ -470,7 +487,7 @@ public class StartBack2BackCallResponseBody extends TeaModel {
 
         public static final class Builder {
             private String callType; 
-            private java.util.List < ChannelContexts> channelContexts; 
+            private java.util.List<ChannelContexts> channelContexts; 
             private String instanceId; 
             private String jobId; 
 
@@ -485,7 +502,7 @@ public class StartBack2BackCallResponseBody extends TeaModel {
             /**
              * ChannelContexts.
              */
-            public Builder channelContexts(java.util.List < ChannelContexts> channelContexts) {
+            public Builder channelContexts(java.util.List<ChannelContexts> channelContexts) {
                 this.channelContexts = channelContexts;
                 return this;
             }
@@ -513,47 +530,53 @@ public class StartBack2BackCallResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link StartBack2BackCallResponseBody} extends {@link TeaModel}
+     *
+     * <p>StartBack2BackCallResponseBody</p>
+     */
     public static class UserContext extends TeaModel {
-        @NameInMap("BreakCode")
+        @com.aliyun.core.annotation.NameInMap("BreakCode")
         private String breakCode;
 
-        @NameInMap("DeviceId")
+        @com.aliyun.core.annotation.NameInMap("DeviceId")
         private String deviceId;
 
-        @NameInMap("DeviceState")
+        @com.aliyun.core.annotation.NameInMap("DeviceState")
         private String deviceState;
 
-        @NameInMap("Extension")
+        @com.aliyun.core.annotation.NameInMap("Extension")
         private String extension;
 
-        @NameInMap("Heartbeat")
+        @com.aliyun.core.annotation.NameInMap("Heartbeat")
         private Long heartbeat;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("Mobile")
+        @com.aliyun.core.annotation.NameInMap("Mobile")
         private String mobile;
 
-        @NameInMap("OutboundScenario")
+        @com.aliyun.core.annotation.NameInMap("OutboundScenario")
         private Boolean outboundScenario;
 
-        @NameInMap("Reserved")
+        @com.aliyun.core.annotation.NameInMap("Reserved")
         private Long reserved;
 
-        @NameInMap("SignedSkillGroupIdList")
-        private java.util.List < String > signedSkillGroupIdList;
+        @com.aliyun.core.annotation.NameInMap("SignedSkillGroupIdList")
+        private java.util.List<String> signedSkillGroupIdList;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserState")
+        @com.aliyun.core.annotation.NameInMap("UserState")
         private String userState;
 
-        @NameInMap("WorkMode")
+        @com.aliyun.core.annotation.NameInMap("WorkMode")
         private String workMode;
 
         private UserContext(Builder builder) {
@@ -654,7 +677,7 @@ public class StartBack2BackCallResponseBody extends TeaModel {
         /**
          * @return signedSkillGroupIdList
          */
-        public java.util.List < String > getSignedSkillGroupIdList() {
+        public java.util.List<String> getSignedSkillGroupIdList() {
             return this.signedSkillGroupIdList;
         }
 
@@ -690,7 +713,7 @@ public class StartBack2BackCallResponseBody extends TeaModel {
             private String mobile; 
             private Boolean outboundScenario; 
             private Long reserved; 
-            private java.util.List < String > signedSkillGroupIdList; 
+            private java.util.List<String> signedSkillGroupIdList; 
             private String userId; 
             private String userState; 
             private String workMode; 
@@ -778,7 +801,7 @@ public class StartBack2BackCallResponseBody extends TeaModel {
             /**
              * SignedSkillGroupIdList.
              */
-            public Builder signedSkillGroupIdList(java.util.List < String > signedSkillGroupIdList) {
+            public Builder signedSkillGroupIdList(java.util.List<String> signedSkillGroupIdList) {
                 this.signedSkillGroupIdList = signedSkillGroupIdList;
                 return this;
             }
@@ -814,11 +837,17 @@ public class StartBack2BackCallResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link StartBack2BackCallResponseBody} extends {@link TeaModel}
+     *
+     * <p>StartBack2BackCallResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CallContext")
+        @com.aliyun.core.annotation.NameInMap("CallContext")
         private CallContext callContext;
 
-        @NameInMap("UserContext")
+        @com.aliyun.core.annotation.NameInMap("UserContext")
         private UserContext userContext;
 
         private Data(Builder builder) {

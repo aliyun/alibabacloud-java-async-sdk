@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOrUpdateContactGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateOrUpdateContactGroupRequest</p>
  */
 public class CreateOrUpdateContactGroupRequest extends Request {
-    @Body
-    @NameInMap("ContactGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ContactGroupId")
     private Long contactGroupId;
 
-    @Body
-    @NameInMap("ContactGroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ContactGroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String contactGroupName;
 
-    @Body
-    @NameInMap("ContactIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ContactIds")
     private String contactIds;
 
     private CreateOrUpdateContactGroupRequest(Builder builder) {
@@ -83,11 +88,14 @@ public class CreateOrUpdateContactGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the alert contact group.
-         * <p>
+         * <p>The ID of the alert contact group.</p>
+         * <ul>
+         * <li>If you do not specify this parameter, an alert contact group is created.</li>
+         * <li>If you specify this parameter, the specified alert contact group is modified.</li>
+         * </ul>
          * 
-         * *   If you do not specify this parameter, an alert contact group is created.
-         * *   If you specify this parameter, the specified alert contact group is modified.
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder contactGroupId(Long contactGroupId) {
             this.putBodyParameter("ContactGroupId", contactGroupId);
@@ -96,7 +104,11 @@ public class CreateOrUpdateContactGroupRequest extends Request {
         }
 
         /**
-         * The name of the alert contact group.
+         * <p>The name of the alert contact group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestGroup</p>
          */
         public Builder contactGroupName(String contactGroupName) {
             this.putBodyParameter("ContactGroupName", contactGroupName);
@@ -105,7 +117,10 @@ public class CreateOrUpdateContactGroupRequest extends Request {
         }
 
         /**
-         * The ID of the contact that you want to add to the contact group. Separate multiple IDs with commas (,).
+         * <p>The ID of the contact that you want to add to the contact group. Separate multiple IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[1,2,3]</p>
          */
         public Builder contactIds(String contactIds) {
             this.putBodyParameter("ContactIds", contactIds);

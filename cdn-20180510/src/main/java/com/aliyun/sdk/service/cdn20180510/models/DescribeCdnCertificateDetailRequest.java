@@ -1,28 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnCertificateDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribeCdnCertificateDetailRequest</p>
  */
 public class DescribeCdnCertificateDetailRequest extends Request {
-    @Query
-    @NameInMap("CertName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String certName;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private DescribeCdnCertificateDetailRequest(Builder builder) {
@@ -83,7 +83,11 @@ public class DescribeCdnCertificateDetailRequest extends Request {
         } 
 
         /**
-         * The ID of the SSL certificate. You can query only one certificate at a time.
+         * <p>The ID of the SSL certificate. You can query only one certificate at a time.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cert-15480655xxxx</p>
          */
         public Builder certName(String certName) {
             this.putQueryParameter("CertName", certName);

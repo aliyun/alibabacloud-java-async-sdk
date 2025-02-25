@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnBgpBpsDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnBgpBpsDataResponseBody</p>
  */
 public class DescribeDcdnBgpBpsDataResponseBody extends TeaModel {
-    @NameInMap("BgpDataInterval")
+    @com.aliyun.core.annotation.NameInMap("BgpDataInterval")
     private java.util.List < BgpDataInterval> bgpDataInterval;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeDcdnBgpBpsDataResponseBody(Builder builder) {
@@ -74,7 +74,7 @@ public class DescribeDcdnBgpBpsDataResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * The BGP bandwidth data that is collected for each interval.
+         * <p>The BGP bandwidth data that is collected for each interval.</p>
          */
         public Builder bgpDataInterval(java.util.List < BgpDataInterval> bgpDataInterval) {
             this.bgpDataInterval = bgpDataInterval;
@@ -82,7 +82,10 @@ public class DescribeDcdnBgpBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The end of the time range during which data was queried.
+         * <p>The end of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-11-30T00:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -90,7 +93,10 @@ public class DescribeDcdnBgpBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E9D3257A-1B7C-414C-90C1-8D07AC47BCAC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +104,10 @@ public class DescribeDcdnBgpBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The start of the time range during which data was queried.
+         * <p>The start of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-11-29T00:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -111,14 +120,20 @@ public class DescribeDcdnBgpBpsDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnBgpBpsDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnBgpBpsDataResponseBody</p>
+     */
     public static class BgpDataInterval extends TeaModel {
-        @NameInMap("In")
+        @com.aliyun.core.annotation.NameInMap("In")
         private Float in;
 
-        @NameInMap("Out")
+        @com.aliyun.core.annotation.NameInMap("Out")
         private Float out;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private BgpDataInterval(Builder builder) {
@@ -162,7 +177,10 @@ public class DescribeDcdnBgpBpsDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * The inbound bandwidth. Unit: bit/s.
+             * <p>The inbound bandwidth. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>318</p>
              */
             public Builder in(Float in) {
                 this.in = in;
@@ -170,7 +188,10 @@ public class DescribeDcdnBgpBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The outbound bandwidth. Unit: bit/s.
+             * <p>The outbound bandwidth. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>183</p>
              */
             public Builder out(Float out) {
                 this.out = out;
@@ -178,7 +199,10 @@ public class DescribeDcdnBgpBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the returned data.
+             * <p>The timestamp of the returned data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-11-29T20:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

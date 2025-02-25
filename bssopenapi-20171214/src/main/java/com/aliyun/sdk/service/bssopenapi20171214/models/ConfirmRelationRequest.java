@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfirmRelationRequest} extends {@link RequestModel}
  *
  * <p>ConfirmRelationRequest</p>
  */
 public class ConfirmRelationRequest extends Request {
-    @Query
-    @NameInMap("ChildUserId")
-    @Validation()
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChildUserId")
+    @com.aliyun.core.annotation.Validation()
     private Long childUserId;
 
-    @Query
-    @NameInMap("ConfirmCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfirmCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String confirmCode;
 
-    @Query
-    @NameInMap("ParentUserId")
-    @Validation()
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentUserId")
+    @com.aliyun.core.annotation.Validation()
     private Long parentUserId;
 
-    @Query
-    @NameInMap("PermissionCodes")
-    @Validation(required = true)
-    private java.util.List < String > permissionCodes;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PermissionCodes")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> permissionCodes;
 
-    @Query
-    @NameInMap("RelationId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelationId")
     private Long relationId;
 
-    @Query
-    @NameInMap("RelationType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelationType")
     private String relationType;
 
-    @Query
-    @NameInMap("RequestId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String requestId;
 
     private ConfirmRelationRequest(Builder builder) {
@@ -93,7 +98,7 @@ public class ConfirmRelationRequest extends Request {
     /**
      * @return permissionCodes
      */
-    public java.util.List < String > getPermissionCodes() {
+    public java.util.List<String> getPermissionCodes() {
         return this.permissionCodes;
     }
 
@@ -122,7 +127,7 @@ public class ConfirmRelationRequest extends Request {
         private Long childUserId; 
         private String confirmCode; 
         private Long parentUserId; 
-        private java.util.List < String > permissionCodes; 
+        private java.util.List<String> permissionCodes; 
         private Long relationId; 
         private String relationType; 
         private String requestId; 
@@ -143,7 +148,10 @@ public class ConfirmRelationRequest extends Request {
         } 
 
         /**
-         * The ID of the Alibaba Cloud account that is used as the member.
+         * <p>The ID of the Alibaba Cloud account that is used as the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1512996702208737</p>
          */
         public Builder childUserId(Long childUserId) {
             this.putQueryParameter("ChildUserId", childUserId);
@@ -152,12 +160,16 @@ public class ConfirmRelationRequest extends Request {
         }
 
         /**
-         * The operation to be performed to confirm the invitation. Valid values:
-         * <p>
+         * <p>The operation to be performed to confirm the invitation. Valid values:</p>
+         * <ul>
+         * <li>child_agree: The member accepts the invitation.</li>
+         * <li>child_disagree: The member rejects the invitation.</li>
+         * <li>Canceled by the master account: The management account cancels the confirmation.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   child_agree: The member accepts the invitation.
-         * *   child_disagree: The member rejects the invitation.
-         * *   Canceled by the master account: The management account cancels the confirmation.
+         * <strong>example:</strong>
+         * <p>child_agree</p>
          */
         public Builder confirmCode(String confirmCode) {
             this.putQueryParameter("ConfirmCode", confirmCode);
@@ -166,7 +178,10 @@ public class ConfirmRelationRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account that is used as the management account.
+         * <p>The ID of the Alibaba Cloud account that is used as the management account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1738376485192612</p>
          */
         public Builder parentUserId(Long parentUserId) {
             this.putQueryParameter("ParentUserId", parentUserId);
@@ -175,25 +190,32 @@ public class ConfirmRelationRequest extends Request {
         }
 
         /**
-         * The permissions that can be granted to the member. Valid values:
-         * <p>
+         * <p>The permissions that can be granted to the member. Valid values:</p>
+         * <ul>
+         * <li>SYNCHRONIZE_FINANCE_IDENTITY: allows the credit control identity to be shared with the member.</li>
+         * <li>SYNCHRONIZE_FINANCE_DISCOUNT_POLICY_TO_TARGET: allows the discount policy to be shared with the member.</li>
+         * <li>FORBID_WITHDRAW_CASH: does not allow the member to withdraw the balance.</li>
+         * <li>FORBID_MANAGE_INVOICE: does not allow the member to manage invoices.</li>
+         * <li>CHECK_FINANCE_INFO: requests to view information about the financial relationship.</li>
+         * <li>MANAGE_TARGET_INVOICE: allows the member to manage invoices.</li>
+         * <li>CHECK_TARGET_CONSUMPTION: allows the member to view the bills.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   SYNCHRONIZE_FINANCE_IDENTITY: allows the credit control identity to be shared with the member.
-         * *   SYNCHRONIZE_FINANCE_DISCOUNT_POLICY_TO_TARGET: allows the discount policy to be shared with the member.
-         * *   FORBID_WITHDRAW_CASH: does not allow the member to withdraw the balance.
-         * *   FORBID_MANAGE_INVOICE: does not allow the member to manage invoices.
-         * *   CHECK_FINANCE_INFO: requests to view information about the financial relationship.
-         * *   MANAGE_TARGET_INVOICE: allows the member to manage invoices.
-         * *   CHECK_TARGET_CONSUMPTION: allows the member to view the bills.
+         * <strong>example:</strong>
+         * <p>SYNCHRONIZE_FINANCE_IDENTITY</p>
          */
-        public Builder permissionCodes(java.util.List < String > permissionCodes) {
+        public Builder permissionCodes(java.util.List<String> permissionCodes) {
             this.putQueryParameter("PermissionCodes", permissionCodes);
             this.permissionCodes = permissionCodes;
             return this;
         }
 
         /**
-         * The ID of the financial relationship. Set this parameter to the value of the RelationId response parameter returned by calling the QueryRelationList operation.
+         * <p>The ID of the financial relationship. Set this parameter to the value of the RelationId response parameter returned by calling the QueryRelationList operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51463</p>
          */
         public Builder relationId(Long relationId) {
             this.putQueryParameter("RelationId", relationId);
@@ -202,7 +224,10 @@ public class ConfirmRelationRequest extends Request {
         }
 
         /**
-         * The type of the financial relationship. Set the value to enterprise_group.
+         * <p>The type of the financial relationship. Set the value to enterprise_group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Type of the financial relationship</p>
          */
         public Builder relationType(String relationType) {
             this.putQueryParameter("RelationType", relationType);
@@ -211,7 +236,11 @@ public class ConfirmRelationRequest extends Request {
         }
 
         /**
-         * The unique ID of the request.
+         * <p>The unique ID of the request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request_id</p>
          */
         public Builder requestId(String requestId) {
             this.putQueryParameter("RequestId", requestId);

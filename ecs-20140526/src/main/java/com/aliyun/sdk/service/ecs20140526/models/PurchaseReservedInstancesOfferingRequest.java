@@ -1,98 +1,107 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PurchaseReservedInstancesOfferingRequest} extends {@link RequestModel}
  *
  * <p>PurchaseReservedInstancesOfferingRequest</p>
  */
 public class PurchaseReservedInstancesOfferingRequest extends Request {
-    @Query
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private Boolean autoRenew;
 
-    @Query
-    @NameInMap("AutoRenewPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenewPeriod")
     private Integer autoRenewPeriod;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("InstanceAmount")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceAmount")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer instanceAmount;
 
-    @Query
-    @NameInMap("InstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceType;
 
-    @Query
-    @NameInMap("OfferingType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OfferingType")
     private String offeringType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
-    @Query
-    @NameInMap("PeriodUnit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeriodUnit")
     private String periodUnit;
 
-    @Query
-    @NameInMap("Platform")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Platform")
     private String platform;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ReservedInstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReservedInstanceName")
     private String reservedInstanceName;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Scope")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scope")
     private String scope;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    private String startTime;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private PurchaseReservedInstancesOfferingRequest(Builder builder) {
@@ -115,6 +124,7 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.scope = builder.scope;
+        this.startTime = builder.startTime;
         this.tag = builder.tag;
         this.zoneId = builder.zoneId;
     }
@@ -259,9 +269,16 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
     }
 
     /**
+     * @return startTime
+     */
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -291,7 +308,8 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String scope; 
-        private java.util.List < Tag> tag; 
+        private String startTime; 
+        private java.util.List<Tag> tag; 
         private String zoneId; 
 
         private Builder() {
@@ -318,15 +336,20 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.scope = request.scope;
+            this.startTime = request.startTime;
             this.tag = request.tag;
             this.zoneId = request.zoneId;
         } 
 
         /**
-         * Specifies whether to enable auto-renewal for the reserved instance. Default value: false. Valid values:
-         * <p>
+         * <p>Specifies whether to enable auto-renewal for the reserved instance. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false (default)</li>
+         * </ul>
          * 
-         * true: enables auto-renewal for the reserved instance. false: does not enable auto-renewal for the reserved instance.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -335,14 +358,12 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * The auto-renewal duration of the reserved instance. Unit: months. This parameter takes effect only when AutoRenew is set to true.
-         * <p>
+         * <p>The auto-renewal term of the reserved instance. Unit: months. This parameter takes effect only when AutoRenew is set to true.</p>
+         * <p>Valid values: 12 and 36.</p>
+         * <p>Default value when PeriodUnit is set to Year: 12.</p>
          * 
-         * Valid values: 1, 12, 36, and 60.
-         * 
-         * Default value when PeriodUnit is set to Month: 1.
-         * 
-         * Default value when PeriodUnit is set to Year: 12.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder autoRenewPeriod(Integer autoRenewPeriod) {
             this.putQueryParameter("AutoRenewPeriod", autoRenewPeriod);
@@ -351,7 +372,10 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -360,10 +384,11 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * The description of the reserved instance. The description can be 2 to 256 characters in length and cannot start with [http:// or https://](http://https://。).
-         * <p>
+         * <p>The description of the reserved instance. The description can be 2 to 256 characters in length and cannot start with <a href="http://https://%E3%80%82">http:// or https://</a>.</p>
+         * <p>This parameter is left empty by default.</p>
          * 
-         * This parameter is left empty by default.
+         * <strong>example:</strong>
+         * <p>testDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -372,10 +397,11 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * The number of pay-as-you-go instances of the same instance type that the reserved instance can match at the same time. Valid values: 1 to 50.
-         * <p>
+         * <p>The number of pay-as-you-go instances of the same instance type that the reserved instance can match. Valid values: 1 to 50.</p>
+         * <p>Default value: 1.</p>
          * 
-         * For example, if you set the InstanceAmount parameter to 3 and the InstanceType parameter to ecs.g5.large, the reserved instance can be matched three ecs.g5.large pay-as-you-go instances at the same time.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder instanceAmount(Integer instanceAmount) {
             this.putQueryParameter("InstanceAmount", instanceAmount);
@@ -384,7 +410,14 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * The type of the reserved instance. For more information, see [Instance family](~~25378~~).
+         * <p>The instance type that the reserved instance can match.</p>
+         * <blockquote>
+         * <p> The instance types that support reserved instances are subject to updates. For more information, see <a href="~~100370#3c1b682051vt4~~">Reserved instance overview</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g5.large</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -393,14 +426,16 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * The payment option of the reserved instance. Valid values:
-         * <p>
+         * <p>The payment option of the reserved instance. Valid values:</p>
+         * <ul>
+         * <li>No Upfront</li>
+         * <li>Partial Upfront</li>
+         * <li>All Upfront</li>
+         * </ul>
+         * <p>Default value: All Upfront.</p>
          * 
-         * *   No Upfront
-         * *   Partial Upfront
-         * *   All Upfront
-         * 
-         * Default value: All Upfront.
+         * <strong>example:</strong>
+         * <p>All Upfront</p>
          */
         public Builder offeringType(String offeringType) {
             this.putQueryParameter("OfferingType", offeringType);
@@ -427,12 +462,12 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * The validity period of the reserved instance.
-         * <p>
+         * <p>The validity period of the reserved instance.</p>
+         * <p>Valid values: 1 and 3.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Valid values: 1 and 3.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -441,12 +476,12 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * The unit of the validity period of the reserved instance.
-         * <p>
+         * <p>The unit of the validity period of the reserved instance.</p>
+         * <p>Valid value: Year.</p>
+         * <p>Default value: Year.</p>
          * 
-         * Valid value: Year.
-         * 
-         * Default value: Year.
+         * <strong>example:</strong>
+         * <p>Year</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -455,13 +490,15 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * The operating system of the image used by the instance. Valid values:
-         * <p>
+         * <p>The operating system of the image used by the instance. Valid values:</p>
+         * <ul>
+         * <li>Windows: Windows Server operating system</li>
+         * <li>Linux: Linux and UNIX-like operating system</li>
+         * </ul>
+         * <p>Default value: Linux.</p>
          * 
-         * *   Windows: Windows Server operating system
-         * *   Linux: Linux and UNIX-like operating system
-         * 
-         * Default value: Linux.
+         * <strong>example:</strong>
+         * <p>Linux</p>
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -470,7 +507,11 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The ID of the region in which to purchase a reserved instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -479,7 +520,10 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * The name of the reserved instance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * <p>The name of the reserved instance. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testReservedInstanceName</p>
          */
         public Builder reservedInstanceName(String reservedInstanceName) {
             this.putQueryParameter("ReservedInstanceName", reservedInstanceName);
@@ -488,7 +532,10 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp199lyny9b3****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -515,13 +562,15 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * The scope of reserved instance N. Valid values:
-         * <p>
+         * <p>The scope of reserved instance N. Valid values:</p>
+         * <ul>
+         * <li>Region: regional</li>
+         * <li>Zone: zonal</li>
+         * </ul>
+         * <p>Default value: Region.</p>
          * 
-         * *   Region: regional
-         * *   Zone: zonal
-         * 
-         * Default value: Region.
+         * <strong>example:</strong>
+         * <p>Zone</p>
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);
@@ -530,16 +579,34 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * <p>The time when you want the reserved instance to take effect. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601 standard</a> in the <code>yyyy-MM-ddTHHZ</code> format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the reserved instance takes effect starting on the hour when the reserved instance is purchased. For example, if you purchase a reserved instance at 13:45:35 on November 1, 2024, the reserved instance takes effect starting 13:00:00 on November 1, 2024.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-07-04T15Z</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder startTime(String startTime) {
+            this.putQueryParameter("StartTime", startTime);
+            this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * <p>The tags to add to the reserved instance. You can add up to 20 tags.</p>
+         */
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The zone ID of the instance. This parameter is required when `Scope` is set to `Zone`. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
+         * <p>The ID of the zone in which to purchase the reserved instance. This parameter takes effect and is required only if you set <code>Scope</code> to <code>Zone</code>. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-g</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -554,11 +621,17 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link PurchaseReservedInstancesOfferingRequest} extends {@link TeaModel}
+     *
+     * <p>PurchaseReservedInstancesOfferingRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -593,7 +666,10 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the reserved instance. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `acs:` or `aliyun`.
+             * <p>The tag key to add to the reserved instance. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -601,7 +677,10 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
             }
 
             /**
-             * The value of tag N of the reserved instance. Valid values of N: 1 to 20. The tag value cannot be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `acs:` or `aliyun`.
+             * <p>The tag value to add to the reserved instance. The tag value cannot be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

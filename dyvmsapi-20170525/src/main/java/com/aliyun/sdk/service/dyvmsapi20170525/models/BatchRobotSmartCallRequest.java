@@ -1,75 +1,75 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchRobotSmartCallRequest} extends {@link RequestModel}
  *
  * <p>BatchRobotSmartCallRequest</p>
  */
 public class BatchRobotSmartCallRequest extends Request {
-    @Query
-    @NameInMap("CalledNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CalledNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String calledNumber;
 
-    @Query
-    @NameInMap("CalledShowNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CalledShowNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String calledShowNumber;
 
-    @Query
-    @NameInMap("CorpName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CorpName")
     private String corpName;
 
-    @Query
-    @NameInMap("DialogId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DialogId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dialogId;
 
-    @Query
-    @NameInMap("EarlyMediaAsr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EarlyMediaAsr")
     private Boolean earlyMediaAsr;
 
-    @Query
-    @NameInMap("IsSelfLine")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsSelfLine")
     private Boolean isSelfLine;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ScheduleCall")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScheduleCall")
     private Boolean scheduleCall;
 
-    @Query
-    @NameInMap("ScheduleTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScheduleTime")
     private Long scheduleTime;
 
-    @Query
-    @NameInMap("TaskName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskName;
 
-    @Query
-    @NameInMap("TtsParam")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TtsParam")
     private String ttsParam;
 
-    @Query
-    @NameInMap("TtsParamHead")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TtsParamHead")
     private String ttsParamHead;
 
     private BatchRobotSmartCallRequest(Builder builder) {
@@ -221,26 +221,31 @@ public class BatchRobotSmartCallRequest extends Request {
             super();
         } 
 
-        private Builder(BatchRobotSmartCallRequest response) {
-            super(response);
-            this.calledNumber = response.calledNumber;
-            this.calledShowNumber = response.calledShowNumber;
-            this.corpName = response.corpName;
-            this.dialogId = response.dialogId;
-            this.earlyMediaAsr = response.earlyMediaAsr;
-            this.isSelfLine = response.isSelfLine;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.scheduleCall = response.scheduleCall;
-            this.scheduleTime = response.scheduleTime;
-            this.taskName = response.taskName;
-            this.ttsParam = response.ttsParam;
-            this.ttsParamHead = response.ttsParamHead;
+        private Builder(BatchRobotSmartCallRequest request) {
+            super(request);
+            this.calledNumber = request.calledNumber;
+            this.calledShowNumber = request.calledShowNumber;
+            this.corpName = request.corpName;
+            this.dialogId = request.dialogId;
+            this.earlyMediaAsr = request.earlyMediaAsr;
+            this.isSelfLine = request.isSelfLine;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.scheduleCall = request.scheduleCall;
+            this.scheduleTime = request.scheduleTime;
+            this.taskName = request.taskName;
+            this.ttsParam = request.ttsParam;
+            this.ttsParamHead = request.ttsParamHead;
         } 
 
         /**
-         * CalledNumber.
+         * <p>The called number. Only mobile phone numbers in the Chinese mainland are supported.</p>
+         * <p>You can set up to 1,000 called numbers and separate the numbers with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1390000****</p>
          */
         public Builder calledNumber(String calledNumber) {
             this.putQueryParameter("CalledNumber", calledNumber);
@@ -249,7 +254,12 @@ public class BatchRobotSmartCallRequest extends Request {
         }
 
         /**
-         * CalledShowNumber.
+         * <p>The number displayed to called parties, which must be a number you purchased. You can view the numbers you purchased in the <a href="https://dyvms.console.aliyun.com/dyvms.htm#/number/normal">Voice Messaging Service console</a>.</p>
+         * <p>You can set up to 100 numbers and separate the numbers with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>222</p>
          */
         public Builder calledShowNumber(String calledShowNumber) {
             this.putQueryParameter("CalledShowNumber", calledShowNumber);
@@ -258,7 +268,13 @@ public class BatchRobotSmartCallRequest extends Request {
         }
 
         /**
-         * CorpName.
+         * <p>The company name, which must be the same as the <strong>company name</strong> specified on the <a href="https://dyvms.console.aliyun.com/dyvms.htm#/corp/normal">qualification management page</a>.</p>
+         * <blockquote>
+         * <p>This parameter is optional if <strong>isSelfLine</strong> is set to <strong>true</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Alibaba</p>
          */
         public Builder corpName(String corpName) {
             this.putQueryParameter("CorpName", corpName);
@@ -267,7 +283,12 @@ public class BatchRobotSmartCallRequest extends Request {
         }
 
         /**
-         * DialogId.
+         * <p>The ID of the robot or communication script that is used to initiate a call.</p>
+         * <p>You can obtain the <strong>communication script ID</strong> from the <a href="https://dyvms.console.aliyun.com/dyvms.htm#/smart-call/saas/robot/list">Communication script management</a> page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567</p>
          */
         public Builder dialogId(String dialogId) {
             this.putQueryParameter("DialogId", dialogId);
@@ -276,7 +297,11 @@ public class BatchRobotSmartCallRequest extends Request {
         }
 
         /**
-         * EarlyMediaAsr.
+         * <p>The speech recognition identifier of early media. The default value is <strong>false</strong>, which means that the speech recognition identifier of early media is not enabled.</p>
+         * <p>Set the parameter to <strong>true</strong> if you want to enable the speech recognition identifier of early media.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder earlyMediaAsr(Boolean earlyMediaAsr) {
             this.putQueryParameter("EarlyMediaAsr", earlyMediaAsr);
@@ -285,7 +310,10 @@ public class BatchRobotSmartCallRequest extends Request {
         }
 
         /**
-         * IsSelfLine.
+         * <p>Specifies whether to call the self-managed line. Default value: <strong>false</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSelfLine(Boolean isSelfLine) {
             this.putQueryParameter("IsSelfLine", isSelfLine);
@@ -321,7 +349,10 @@ public class BatchRobotSmartCallRequest extends Request {
         }
 
         /**
-         * ScheduleCall.
+         * <p>Specifies whether the call is scheduled. If you set this parameter to <strong>true</strong>, the <strong>ScheduleTime</strong> parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder scheduleCall(Boolean scheduleCall) {
             this.putQueryParameter("ScheduleCall", scheduleCall);
@@ -330,7 +361,13 @@ public class BatchRobotSmartCallRequest extends Request {
         }
 
         /**
-         * ScheduleTime.
+         * <p>The preset call time. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <blockquote>
+         * <p> This parameter is required only when <strong>ScheduleCall</strong> is set to <strong>true</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder scheduleTime(Long scheduleTime) {
             this.putQueryParameter("ScheduleTime", scheduleTime);
@@ -339,7 +376,11 @@ public class BatchRobotSmartCallRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * <p>The task name. The task name can be up to 30 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Batch Tasks</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -348,7 +389,11 @@ public class BatchRobotSmartCallRequest extends Request {
         }
 
         /**
-         * TtsParam.
+         * <p>The variable value of the TTS template, in the JSON format.</p>
+         * <p>The variable value must correspond to a number. The TtsParam parameter must be used together with the TtsParamHead parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;number&quot;:&quot;1390000****&quot;,&quot;params&quot;:[“Miss li”,&quot;miss wang&quot;,&quot;Mr.li&quot;]}]</p>
          */
         public Builder ttsParam(String ttsParam) {
             this.putQueryParameter("TtsParam", ttsParam);
@@ -357,7 +402,11 @@ public class BatchRobotSmartCallRequest extends Request {
         }
 
         /**
-         * TtsParamHead.
+         * <p>The call tasks with variables, in the JSON format.</p>
+         * <p>The parameter value is a list of variable names. The TtsParamHead parameter must be used together with the TtsParam parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;name1&quot;,&quot;name2&quot;,&quot;name3&quot;]</p>
          */
         public Builder ttsParamHead(String ttsParamHead) {
             this.putQueryParameter("TtsParamHead", ttsParamHead);

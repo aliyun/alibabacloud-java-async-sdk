@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ocr_api20210707.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RecognizeMixedInvoicesRequest} extends {@link RequestModel}
  *
  * <p>RecognizeMixedInvoicesRequest</p>
  */
 public class RecognizeMixedInvoicesRequest extends Request {
-    @Query
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MergePdfPages")
+    private Boolean mergePdfPages;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @Query
-    @NameInMap("Url")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Url")
     private String url;
 
-    @Body
-    @NameInMap("body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
     private java.io.InputStream body;
 
     private RecognizeMixedInvoicesRequest(Builder builder) {
         super(builder);
+        this.mergePdfPages = builder.mergePdfPages;
         this.pageNo = builder.pageNo;
         this.url = builder.url;
         this.body = builder.body;
@@ -42,6 +47,13 @@ public class RecognizeMixedInvoicesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return mergePdfPages
+     */
+    public Boolean getMergePdfPages() {
+        return this.mergePdfPages;
     }
 
     /**
@@ -66,6 +78,7 @@ public class RecognizeMixedInvoicesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RecognizeMixedInvoicesRequest, Builder> {
+        private Boolean mergePdfPages; 
         private Integer pageNo; 
         private String url; 
         private java.io.InputStream body; 
@@ -76,10 +89,20 @@ public class RecognizeMixedInvoicesRequest extends Request {
 
         private Builder(RecognizeMixedInvoicesRequest request) {
             super(request);
+            this.mergePdfPages = request.mergePdfPages;
             this.pageNo = request.pageNo;
             this.url = request.url;
             this.body = request.body;
         } 
+
+        /**
+         * MergePdfPages.
+         */
+        public Builder mergePdfPages(Boolean mergePdfPages) {
+            this.putQueryParameter("MergePdfPages", mergePdfPages);
+            this.mergePdfPages = mergePdfPages;
+            return this;
+        }
 
         /**
          * PageNo.

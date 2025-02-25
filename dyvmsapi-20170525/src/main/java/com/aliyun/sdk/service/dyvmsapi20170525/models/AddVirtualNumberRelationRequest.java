@@ -1,50 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddVirtualNumberRelationRequest} extends {@link RequestModel}
  *
  * <p>AddVirtualNumberRelationRequest</p>
  */
 public class AddVirtualNumberRelationRequest extends Request {
-    @Query
-    @NameInMap("CorpNameList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CorpNameList")
     private String corpNameList;
 
-    @Query
-    @NameInMap("NumberList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NumberList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String numberList;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PhoneNum")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNum")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNum;
 
-    @Query
-    @NameInMap("ProdCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProdCode")
     private String prodCode;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RouteType")
-    @Validation(required = true, maximum = 99999)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteType")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 99999)
     private Integer routeType;
 
     private AddVirtualNumberRelationRequest(Builder builder) {
@@ -142,20 +142,23 @@ public class AddVirtualNumberRelationRequest extends Request {
             super();
         } 
 
-        private Builder(AddVirtualNumberRelationRequest response) {
-            super(response);
-            this.corpNameList = response.corpNameList;
-            this.numberList = response.numberList;
-            this.ownerId = response.ownerId;
-            this.phoneNum = response.phoneNum;
-            this.prodCode = response.prodCode;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.routeType = response.routeType;
+        private Builder(AddVirtualNumberRelationRequest request) {
+            super(request);
+            this.corpNameList = request.corpNameList;
+            this.numberList = request.numberList;
+            this.ownerId = request.ownerId;
+            this.phoneNum = request.phoneNum;
+            this.prodCode = request.prodCode;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.routeType = request.routeType;
         } 
 
         /**
-         * CorpNameList.
+         * <p>The company names. Separate multiple company names with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Company 1</p>
          */
         public Builder corpNameList(String corpNameList) {
             this.putQueryParameter("CorpNameList", corpNameList);
@@ -164,7 +167,11 @@ public class AddVirtualNumberRelationRequest extends Request {
         }
 
         /**
-         * NumberList.
+         * <p>The real numbers. Separate multiple real numbers with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1321111****,1322222****</p>
          */
         public Builder numberList(String numberList) {
             this.putQueryParameter("NumberList", numberList);
@@ -182,7 +189,11 @@ public class AddVirtualNumberRelationRequest extends Request {
         }
 
         /**
-         * PhoneNum.
+         * <p>The virtual number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>05516214****</p>
          */
         public Builder phoneNum(String phoneNum) {
             this.putQueryParameter("PhoneNum", phoneNum);
@@ -191,7 +202,10 @@ public class AddVirtualNumberRelationRequest extends Request {
         }
 
         /**
-         * ProdCode.
+         * <p>The service name. Default value: <strong>dyvms</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dyvms</p>
          */
         public Builder prodCode(String prodCode) {
             this.putQueryParameter("ProdCode", prodCode);
@@ -218,7 +232,15 @@ public class AddVirtualNumberRelationRequest extends Request {
         }
 
         /**
-         * RouteType.
+         * <p>The route type. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: number location first.</li>
+         * <li><strong>1</strong>: random.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder routeType(Integer routeType) {
             this.putQueryParameter("RouteType", routeType);

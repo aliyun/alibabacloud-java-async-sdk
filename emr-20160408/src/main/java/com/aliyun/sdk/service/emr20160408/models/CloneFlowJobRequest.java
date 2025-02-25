@@ -90,12 +90,12 @@ public class CloneFlowJobRequest extends Request {
             super();
         } 
 
-        private Builder(CloneFlowJobRequest response) {
-            super(response);
-            this.id = response.id;
-            this.name = response.name;
-            this.projectId = response.projectId;
-            this.regionId = response.regionId;
+        private Builder(CloneFlowJobRequest request) {
+            super(request);
+            this.id = request.id;
+            this.name = request.name;
+            this.projectId = request.projectId;
+            this.regionId = request.regionId;
         } 
 
         /**

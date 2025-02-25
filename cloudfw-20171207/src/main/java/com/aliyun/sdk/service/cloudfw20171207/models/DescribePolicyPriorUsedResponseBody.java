@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePolicyPriorUsedResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePolicyPriorUsedResponseBody</p>
  */
 public class DescribePolicyPriorUsedResponseBody extends TeaModel {
-    @NameInMap("End")
+    @com.aliyun.core.annotation.NameInMap("End")
     private Integer end;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Start")
+    @com.aliyun.core.annotation.NameInMap("Start")
     private Integer start;
 
     private DescribePolicyPriorUsedResponseBody(Builder builder) {
@@ -62,10 +67,13 @@ public class DescribePolicyPriorUsedResponseBody extends TeaModel {
         private Integer start; 
 
         /**
-         * The lowest priority of existing access control policies.
-         * <p>
+         * <p>The lowest priority of existing access control policies.</p>
+         * <blockquote>
+         * <p> The value -1 indicates the lowest priority.</p>
+         * </blockquote>
          * 
-         * >  The value -1 indicates the lowest priority.
+         * <strong>example:</strong>
+         * <p>150</p>
          */
         public Builder end(Integer end) {
             this.end = end;
@@ -73,7 +81,10 @@ public class DescribePolicyPriorUsedResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,10 +92,13 @@ public class DescribePolicyPriorUsedResponseBody extends TeaModel {
         }
 
         /**
-         * The highest priority of existing access control policies.
-         * <p>
+         * <p>The highest priority of existing access control policies.</p>
+         * <blockquote>
+         * <p> The value 0 indicates the highest priority.</p>
+         * </blockquote>
          * 
-         * >  The value 0 indicates the highest priority.
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder start(Integer start) {
             this.start = start;

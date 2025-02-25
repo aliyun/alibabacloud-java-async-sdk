@@ -1,61 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeServiceLogRequest} extends {@link RequestModel}
  *
  * <p>DescribeServiceLogRequest</p>
  */
 public class DescribeServiceLogRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("ServiceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceName;
 
-    @Query
-    @NameInMap("ContainerName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerName")
     private String containerName;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @Query
-    @NameInMap("Ip")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ip")
     private String ip;
 
-    @Query
-    @NameInMap("Keyword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
-    @Query
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Long pageNum;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("Previous")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Previous")
     private Boolean previous;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeServiceLogRequest(Builder builder) {
@@ -196,7 +201,11 @@ public class DescribeServiceLogRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The ID of the region where the service is deployed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -205,7 +214,11 @@ public class DescribeServiceLogRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * <p>The service name. For more information about how to query the service name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>echo</p>
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
@@ -214,7 +227,10 @@ public class DescribeServiceLogRequest extends Request {
         }
 
         /**
-         * 服务实例的容器名称。
+         * <p>The name of the container that runs the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>worker0</p>
          */
         public Builder containerName(String containerName) {
             this.putQueryParameter("ContainerName", containerName);
@@ -223,7 +239,10 @@ public class DescribeServiceLogRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2006-01-02 15:04:05</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -232,7 +251,10 @@ public class DescribeServiceLogRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>The name of the instance that runs the service. For more information about how to query the instance name, see <a href="https://help.aliyun.com/document_detail/412108.html">ListServiceInstances</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>echo-da290ac8-7fckm</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -241,7 +263,10 @@ public class DescribeServiceLogRequest extends Request {
         }
 
         /**
-         * Ip.
+         * <p>The IP address of the instance whose logs you want to query. For more information about how to query the IP address of an instance, see <a href="https://help.aliyun.com/document_detail/412108.html">ListServiceInstances</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.1</p>
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -250,7 +275,10 @@ public class DescribeServiceLogRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The keyword that you use to query the logs of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -259,7 +287,10 @@ public class DescribeServiceLogRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Long pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -268,7 +299,10 @@ public class DescribeServiceLogRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -277,7 +311,26 @@ public class DescribeServiceLogRequest extends Request {
         }
 
         /**
-         * Previous.
+         * <p>Specifies whether to query the logs that are generated before the instance last restarts. This parameter is available only if the instance restarts.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>false</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder previous(Boolean previous) {
             this.putQueryParameter("Previous", previous);
@@ -286,7 +339,10 @@ public class DescribeServiceLogRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query. The time must be in Coordinated Universal Time (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2006-01-02 15:04:05</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

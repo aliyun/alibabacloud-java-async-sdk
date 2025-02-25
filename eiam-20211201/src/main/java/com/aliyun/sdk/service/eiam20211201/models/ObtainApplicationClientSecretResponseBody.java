@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ObtainApplicationClientSecretResponseBody} extends {@link TeaModel}
  *
  * <p>ObtainApplicationClientSecretResponseBody</p>
  */
 public class ObtainApplicationClientSecretResponseBody extends TeaModel {
-    @NameInMap("ApplicationClientSecret")
+    @com.aliyun.core.annotation.NameInMap("ApplicationClientSecret")
     private ApplicationClientSecret applicationClientSecret;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ObtainApplicationClientSecretResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class ObtainApplicationClientSecretResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the client key.
+         * <p>The information about the client key.</p>
          */
         public Builder applicationClientSecret(ApplicationClientSecret applicationClientSecret) {
             this.applicationClientSecret = applicationClientSecret;
@@ -58,7 +63,10 @@ public class ObtainApplicationClientSecretResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,26 +79,32 @@ public class ObtainApplicationClientSecretResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ObtainApplicationClientSecretResponseBody} extends {@link TeaModel}
+     *
+     * <p>ObtainApplicationClientSecretResponseBody</p>
+     */
     public static class ApplicationClientSecret extends TeaModel {
-        @NameInMap("ApplicationId")
+        @com.aliyun.core.annotation.NameInMap("ApplicationId")
         private String applicationId;
 
-        @NameInMap("ClientId")
+        @com.aliyun.core.annotation.NameInMap("ClientId")
         private String clientId;
 
-        @NameInMap("ClientSecret")
+        @com.aliyun.core.annotation.NameInMap("ClientSecret")
         private String clientSecret;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("LastUsedTime")
+        @com.aliyun.core.annotation.NameInMap("LastUsedTime")
         private Long lastUsedTime;
 
-        @NameInMap("SecretId")
+        @com.aliyun.core.annotation.NameInMap("SecretId")
         private String secretId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ApplicationClientSecret(Builder builder) {
@@ -170,7 +184,10 @@ public class ObtainApplicationClientSecretResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the application whose client key you want to query.
+             * <p>The ID of the application whose client key you want to query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -178,7 +195,10 @@ public class ObtainApplicationClientSecretResponseBody extends TeaModel {
             }
 
             /**
-             * The client ID of the application.
+             * <p>The client ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -186,7 +206,10 @@ public class ObtainApplicationClientSecretResponseBody extends TeaModel {
             }
 
             /**
-             * The client key secret of the application.
+             * <p>The client key secret of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CSEHDcHcrUKHw1CuxkJEHPveWRXBGqVqRsxxxx</p>
              */
             public Builder clientSecret(String clientSecret) {
                 this.clientSecret = clientSecret;
@@ -194,7 +217,10 @@ public class ObtainApplicationClientSecretResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -202,7 +228,10 @@ public class ObtainApplicationClientSecretResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the client key was last used. The value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The time when the client key was last used. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649830226000</p>
              */
             public Builder lastUsedTime(Long lastUsedTime) {
                 this.lastUsedTime = lastUsedTime;
@@ -210,7 +239,10 @@ public class ObtainApplicationClientSecretResponseBody extends TeaModel {
             }
 
             /**
-             * The client key ID of the application.
+             * <p>The client key ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sci_k52x2ru63rlkflina5utgkxxxx</p>
              */
             public Builder secretId(String secretId) {
                 this.secretId = secretId;
@@ -218,11 +250,14 @@ public class ObtainApplicationClientSecretResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the client key. Valid values:
-             * <p>
+             * <p>The status of the client key. Valid values:</p>
+             * <ul>
+             * <li>Enabled: The client key is enabled.</li>
+             * <li>Disabled: The client key is disabled.</li>
+             * </ul>
              * 
-             * *   Enabled: The client key is enabled.
-             * *   Disabled: The client key is disabled.
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;

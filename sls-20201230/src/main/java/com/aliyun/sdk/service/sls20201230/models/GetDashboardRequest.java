@@ -1,25 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link GetDashboardRequest} extends {@link RequestModel}
  *
  * <p>GetDashboardRequest</p>
  */
 public class GetDashboardRequest extends Request {
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("project")
     private String project;
 
-    @Path
-    @NameInMap("dashboardName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("dashboardName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dashboardName;
 
     private GetDashboardRequest(Builder builder) {
@@ -70,7 +74,11 @@ public class GetDashboardRequest extends Request {
         } 
 
         /**
-         * project.
+         * <p>The name of the project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ali-test-project</p>
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -79,7 +87,11 @@ public class GetDashboardRequest extends Request {
         }
 
         /**
-         * dashboardName.
+         * <p>The name of the dashboard.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dashboard-1609294922657-434834</p>
          */
         public Builder dashboardName(String dashboardName) {
             this.putPathParameter("dashboardName", dashboardName);

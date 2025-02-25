@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutLogMonitorResponseBody} extends {@link TeaModel}
  *
  * <p>PutLogMonitorResponseBody</p>
  */
 public class PutLogMonitorResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("LogId")
+    @com.aliyun.core.annotation.NameInMap("LogId")
     private String logId;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private PutLogMonitorResponseBody(Builder builder) {
@@ -86,10 +86,13 @@ public class PutLogMonitorResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the call is successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -97,7 +100,10 @@ public class PutLogMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the log monitoring metric.
+         * <p>The ID of the log monitoring metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16****</p>
          */
         public Builder logId(String logId) {
             this.logId = logId;
@@ -105,11 +111,14 @@ public class PutLogMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <ul>
+         * <li>If the request was successful, <code>successful</code> is returned.</li>
+         * <li>If the request failed, an error message is returned. Example: <code>alias of aggreate must be set value.</code></li>
+         * </ul>
          * 
-         * *   If the call is successful, the value `successful` is returned.
-         * *   If the call fails, an error message is returned. Example: `alias of aggreate must be set value.`
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +126,10 @@ public class PutLogMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91561287-0802-5F9C-9BDE-404C50D41B06</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -125,11 +137,14 @@ public class PutLogMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true: The call is successful.
-         * *   false: The call fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

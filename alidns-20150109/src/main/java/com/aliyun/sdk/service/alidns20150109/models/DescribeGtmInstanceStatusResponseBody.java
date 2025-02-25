@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGtmInstanceStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeGtmInstanceStatusResponseBody</p>
  */
 public class DescribeGtmInstanceStatusResponseBody extends TeaModel {
-    @NameInMap("AddrNotAvailableNum")
+    @com.aliyun.core.annotation.NameInMap("AddrNotAvailableNum")
     private Integer addrNotAvailableNum;
 
-    @NameInMap("AddrPoolNotAvailableNum")
+    @com.aliyun.core.annotation.NameInMap("AddrPoolNotAvailableNum")
     private Integer addrPoolNotAvailableNum;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("StatusReason")
+    @com.aliyun.core.annotation.NameInMap("StatusReason")
     private String statusReason;
 
-    @NameInMap("StrategyNotAvailableNum")
+    @com.aliyun.core.annotation.NameInMap("StrategyNotAvailableNum")
     private Integer strategyNotAvailableNum;
 
-    @NameInMap("SwitchToFailoverStrategyNum")
+    @com.aliyun.core.annotation.NameInMap("SwitchToFailoverStrategyNum")
     private Integer switchToFailoverStrategyNum;
 
     private DescribeGtmInstanceStatusResponseBody(Builder builder) {
@@ -110,7 +115,10 @@ public class DescribeGtmInstanceStatusResponseBody extends TeaModel {
         private Integer switchToFailoverStrategyNum; 
 
         /**
-         * The number of unavailable addresses.
+         * <p>The number of unavailable addresses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder addrNotAvailableNum(Integer addrNotAvailableNum) {
             this.addrNotAvailableNum = addrNotAvailableNum;
@@ -118,7 +126,10 @@ public class DescribeGtmInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of unavailable address pools.
+         * <p>The number of unavailable address pools.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder addrPoolNotAvailableNum(Integer addrPoolNotAvailableNum) {
             this.addrPoolNotAvailableNum = addrPoolNotAvailableNum;
@@ -126,7 +137,10 @@ public class DescribeGtmInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>389DFFA3-77A5-4A9E-BF3D-147C6F98A5BA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,11 +148,14 @@ public class DescribeGtmInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the instance. Valid values:
-         * <p>
+         * <p>The state of the instance. Valid values:</p>
+         * <ul>
+         * <li>ALLOW: The operation on the instance is allowed.</li>
+         * <li>DENY: The operation on the instance is not allowed.</li>
+         * </ul>
          * 
-         * *   ALLOW: Operations on the instance are allowed.
-         * *   DENY: Operations on the instance are not allowed.
+         * <strong>example:</strong>
+         * <p>ALLOW</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -146,11 +163,14 @@ public class DescribeGtmInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * List of reasons for an instance status. Valid values:
-         * <p>
+         * <p>The reasons why the instance is in the current state. Valid values:</p>
+         * <ul>
+         * <li>INSTANCE_OPERATE_BLACK_LIST: The operation on the instance is not allowed.</li>
+         * <li>BETA_INSTANCE: The instance is in public preview.</li>
+         * </ul>
          * 
-         * *   INSTANCE_OPERATE_BLACK_LIST: The instance is in the blacklist.
-         * *   BETA_INSTANCE: The instance is in public preview.
+         * <strong>example:</strong>
+         * <p>[&quot;BETA_INSTANCE&quot;]</p>
          */
         public Builder statusReason(String statusReason) {
             this.statusReason = statusReason;
@@ -158,7 +178,10 @@ public class DescribeGtmInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of access policies that are unavailable in the active address pool.
+         * <p>The number of unavailable access policies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder strategyNotAvailableNum(Integer strategyNotAvailableNum) {
             this.strategyNotAvailableNum = strategyNotAvailableNum;
@@ -166,7 +189,10 @@ public class DescribeGtmInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of access policies that fail over to the secondary address pool.
+         * <p>The number of access policies switched to the secondary address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder switchToFailoverStrategyNum(Integer switchToFailoverStrategyNum) {
             this.switchToFailoverStrategyNum = switchToFailoverStrategyNum;

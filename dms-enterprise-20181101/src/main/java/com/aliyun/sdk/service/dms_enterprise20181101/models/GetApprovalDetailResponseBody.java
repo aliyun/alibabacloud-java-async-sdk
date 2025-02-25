@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetApprovalDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetApprovalDetailResponseBody</p>
  */
 public class GetApprovalDetailResponseBody extends TeaModel {
-    @NameInMap("ApprovalDetail")
+    @com.aliyun.core.annotation.NameInMap("ApprovalDetail")
     private ApprovalDetail approvalDetail;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetApprovalDetailResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The approval details of the ticket.
+         * <p>The approval details of the ticket.</p>
          */
         public Builder approvalDetail(ApprovalDetail approvalDetail) {
             this.approvalDetail = approvalDetail;
@@ -94,7 +99,10 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MissingWorkflowInstanceId</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +110,10 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WorkflowInstanceId is mandatory for this action.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +121,10 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66DE630B-ECA1-52A3-9198-602066F9****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +132,14 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>false</strong>: The request fails.</li>
+         * </ul>
          * 
-         * *   **true**: The request is successful.
-         * *   **false**: The request fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -135,11 +152,17 @@ public class GetApprovalDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetApprovalDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApprovalDetailResponseBody</p>
+     */
     public static class CurrentHandler extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("NickName")
+        @com.aliyun.core.annotation.NameInMap("NickName")
         private String nickName;
 
         private CurrentHandler(Builder builder) {
@@ -174,7 +197,10 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             private String nickName; 
 
             /**
-             * The ID of the user.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -182,7 +208,10 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The nickname of the user.
+             * <p>The nickname of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nickName</p>
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -196,9 +225,15 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetApprovalDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApprovalDetailResponseBody</p>
+     */
     public static class CurrentHandlers extends TeaModel {
-        @NameInMap("CurrentHandler")
-        private java.util.List < CurrentHandler> currentHandler;
+        @com.aliyun.core.annotation.NameInMap("CurrentHandler")
+        private java.util.List<CurrentHandler> currentHandler;
 
         private CurrentHandlers(Builder builder) {
             this.currentHandler = builder.currentHandler;
@@ -215,17 +250,17 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         /**
          * @return currentHandler
          */
-        public java.util.List < CurrentHandler> getCurrentHandler() {
+        public java.util.List<CurrentHandler> getCurrentHandler() {
             return this.currentHandler;
         }
 
         public static final class Builder {
-            private java.util.List < CurrentHandler> currentHandler; 
+            private java.util.List<CurrentHandler> currentHandler; 
 
             /**
              * CurrentHandler.
              */
-            public Builder currentHandler(java.util.List < CurrentHandler> currentHandler) {
+            public Builder currentHandler(java.util.List<CurrentHandler> currentHandler) {
                 this.currentHandler = currentHandler;
                 return this;
             }
@@ -237,9 +272,15 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetApprovalDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApprovalDetailResponseBody</p>
+     */
     public static class ReasonList extends TeaModel {
-        @NameInMap("Reasons")
-        private java.util.List < String > reasons;
+        @com.aliyun.core.annotation.NameInMap("Reasons")
+        private java.util.List<String> reasons;
 
         private ReasonList(Builder builder) {
             this.reasons = builder.reasons;
@@ -256,17 +297,17 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         /**
          * @return reasons
          */
-        public java.util.List < String > getReasons() {
+        public java.util.List<String> getReasons() {
             return this.reasons;
         }
 
         public static final class Builder {
-            private java.util.List < String > reasons; 
+            private java.util.List<String> reasons; 
 
             /**
              * Reasons.
              */
-            public Builder reasons(java.util.List < String > reasons) {
+            public Builder reasons(java.util.List<String> reasons) {
                 this.reasons = reasons;
                 return this;
             }
@@ -278,9 +319,15 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetApprovalDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApprovalDetailResponseBody</p>
+     */
     public static class AuditUserIdList extends TeaModel {
-        @NameInMap("AuditUserIds")
-        private java.util.List < String > auditUserIds;
+        @com.aliyun.core.annotation.NameInMap("AuditUserIds")
+        private java.util.List<String> auditUserIds;
 
         private AuditUserIdList(Builder builder) {
             this.auditUserIds = builder.auditUserIds;
@@ -297,17 +344,17 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         /**
          * @return auditUserIds
          */
-        public java.util.List < String > getAuditUserIds() {
+        public java.util.List<String> getAuditUserIds() {
             return this.auditUserIds;
         }
 
         public static final class Builder {
-            private java.util.List < String > auditUserIds; 
+            private java.util.List<String> auditUserIds; 
 
             /**
              * AuditUserIds.
              */
-            public Builder auditUserIds(java.util.List < String > auditUserIds) {
+            public Builder auditUserIds(java.util.List<String> auditUserIds) {
                 this.auditUserIds = auditUserIds;
                 return this;
             }
@@ -319,23 +366,29 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetApprovalDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApprovalDetailResponseBody</p>
+     */
     public static class WorkflowNode extends TeaModel {
-        @NameInMap("AuditUserIdList")
+        @com.aliyun.core.annotation.NameInMap("AuditUserIdList")
         private AuditUserIdList auditUserIdList;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("OperateComment")
+        @com.aliyun.core.annotation.NameInMap("OperateComment")
         private String operateComment;
 
-        @NameInMap("OperateTime")
+        @com.aliyun.core.annotation.NameInMap("OperateTime")
         private String operateTime;
 
-        @NameInMap("OperatorId")
+        @com.aliyun.core.annotation.NameInMap("OperatorId")
         private Long operatorId;
 
-        @NameInMap("WorkflowInsCode")
+        @com.aliyun.core.annotation.NameInMap("WorkflowInsCode")
         private String workflowInsCode;
 
         private WorkflowNode(Builder builder) {
@@ -406,7 +459,7 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             private String workflowInsCode; 
 
             /**
-             * The IDs of the approvers.
+             * <p>The IDs of the approvers.</p>
              */
             public Builder auditUserIdList(AuditUserIdList auditUserIdList) {
                 this.auditUserIdList = auditUserIdList;
@@ -414,7 +467,10 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the approval node.
+             * <p>The name of the approval node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DBA</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -422,7 +478,10 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks of the approval.
+             * <p>The remarks of the approval.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Reason: Approved</p>
              */
             public Builder operateComment(String operateComment) {
                 this.operateComment = operateComment;
@@ -430,7 +489,10 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the ticket was submitted.
+             * <p>The time when the ticket was submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-10-15 13:47:54</p>
              */
             public Builder operateTime(String operateTime) {
                 this.operateTime = operateTime;
@@ -438,7 +500,10 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user who submitted the ticket.
+             * <p>The ID of the user who submitted the ticket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1****</p>
              */
             public Builder operatorId(Long operatorId) {
                 this.operatorId = operatorId;
@@ -446,15 +511,18 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The approval status of the ticket. Valid values:
-             * <p>
+             * <p>The approval status of the ticket. Valid values:</p>
+             * <ul>
+             * <li><strong>START</strong>: The ticket was submitted.</li>
+             * <li><strong>ERROR</strong>: An error occurred.</li>
+             * <li><strong>AUDITING</strong>: The ticket is being reviewed.</li>
+             * <li><strong>REJECT</strong>: The ticket was rejected.</li>
+             * <li><strong>CANCEL</strong>: The ticket was revoked.</li>
+             * <li><strong>APPROVED</strong>: The ticket was approved.</li>
+             * </ul>
              * 
-             * *   **START**: The ticket was submitted.
-             * *   **ERROR**: An error occurred.
-             * *   **AUDITING**: The ticket is being reviewed.
-             * *   **REJECT**: The ticket was rejected.
-             * *   **CANCEL**: The ticket was revoked.
-             * *   **APPROVED**: The ticket was approved.
+             * <strong>example:</strong>
+             * <p>APPROVED</p>
              */
             public Builder workflowInsCode(String workflowInsCode) {
                 this.workflowInsCode = workflowInsCode;
@@ -468,9 +536,15 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetApprovalDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApprovalDetailResponseBody</p>
+     */
     public static class WorkflowNodes extends TeaModel {
-        @NameInMap("WorkflowNode")
-        private java.util.List < WorkflowNode> workflowNode;
+        @com.aliyun.core.annotation.NameInMap("WorkflowNode")
+        private java.util.List<WorkflowNode> workflowNode;
 
         private WorkflowNodes(Builder builder) {
             this.workflowNode = builder.workflowNode;
@@ -487,17 +561,17 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         /**
          * @return workflowNode
          */
-        public java.util.List < WorkflowNode> getWorkflowNode() {
+        public java.util.List<WorkflowNode> getWorkflowNode() {
             return this.workflowNode;
         }
 
         public static final class Builder {
-            private java.util.List < WorkflowNode> workflowNode; 
+            private java.util.List<WorkflowNode> workflowNode; 
 
             /**
              * WorkflowNode.
              */
-            public Builder workflowNode(java.util.List < WorkflowNode> workflowNode) {
+            public Builder workflowNode(java.util.List<WorkflowNode> workflowNode) {
                 this.workflowNode = workflowNode;
                 return this;
             }
@@ -509,38 +583,50 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetApprovalDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApprovalDetailResponseBody</p>
+     */
     public static class ApprovalDetail extends TeaModel {
-        @NameInMap("AuditId")
+        @com.aliyun.core.annotation.NameInMap("AuditId")
         private Long auditId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CurrentHandlers")
+        @com.aliyun.core.annotation.NameInMap("CurrentHandlers")
         private CurrentHandlers currentHandlers;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("OrderId")
+        @com.aliyun.core.annotation.NameInMap("OrderId")
         private Long orderId;
 
-        @NameInMap("OrderType")
+        @com.aliyun.core.annotation.NameInMap("OrderType")
         private String orderType;
 
-        @NameInMap("ReasonList")
+        @com.aliyun.core.annotation.NameInMap("ReasonList")
         private ReasonList reasonList;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private Long templateId;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("ThirdpartyWorkflowComment")
+        private String thirdpartyWorkflowComment;
+
+        @com.aliyun.core.annotation.NameInMap("ThirdpartyWorkflowUrl")
+        private String thirdpartyWorkflowUrl;
+
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("WorkflowInsCode")
+        @com.aliyun.core.annotation.NameInMap("WorkflowInsCode")
         private String workflowInsCode;
 
-        @NameInMap("WorkflowNodes")
+        @com.aliyun.core.annotation.NameInMap("WorkflowNodes")
         private WorkflowNodes workflowNodes;
 
         private ApprovalDetail(Builder builder) {
@@ -552,6 +638,8 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             this.orderType = builder.orderType;
             this.reasonList = builder.reasonList;
             this.templateId = builder.templateId;
+            this.thirdpartyWorkflowComment = builder.thirdpartyWorkflowComment;
+            this.thirdpartyWorkflowUrl = builder.thirdpartyWorkflowUrl;
             this.title = builder.title;
             this.workflowInsCode = builder.workflowInsCode;
             this.workflowNodes = builder.workflowNodes;
@@ -622,6 +710,20 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return thirdpartyWorkflowComment
+         */
+        public String getThirdpartyWorkflowComment() {
+            return this.thirdpartyWorkflowComment;
+        }
+
+        /**
+         * @return thirdpartyWorkflowUrl
+         */
+        public String getThirdpartyWorkflowUrl() {
+            return this.thirdpartyWorkflowUrl;
+        }
+
+        /**
          * @return title
          */
         public String getTitle() {
@@ -651,12 +753,17 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             private String orderType; 
             private ReasonList reasonList; 
             private Long templateId; 
+            private String thirdpartyWorkflowComment; 
+            private String thirdpartyWorkflowUrl; 
             private String title; 
             private String workflowInsCode; 
             private WorkflowNodes workflowNodes; 
 
             /**
-             * The ID of the approval process.
+             * <p>The ID of the approval process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>184****</p>
              */
             public Builder auditId(Long auditId) {
                 this.auditId = auditId;
@@ -664,7 +771,10 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the approval process was created.
+             * <p>The time when the approval process was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-10-29 14:17:25</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -672,7 +782,7 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the approver.
+             * <p>The information about the approver.</p>
              */
             public Builder currentHandlers(CurrentHandlers currentHandlers) {
                 this.currentHandlers = currentHandlers;
@@ -680,7 +790,10 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the approval process.
+             * <p>The description of the approval process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[Instance permissions] Application&lt;br/&gt;Permission type: ⌈Logon⌋&lt;br/&gt;Application period: 30.0 days&lt;br/&gt;Background description: [Instance permissions] logon test&lt;br/&gt;&lt;br/&gt;[Application list]&lt;br/&gt;&lt;span style=&quot;color:red&quot;&gt;product&lt;/span&gt; rm-bp144d5ky4l4rli0417****.mysql.rds.aliyuncs.com:3306 - PRODUCT&lt;br/&gt;</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -688,7 +801,10 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ticket.
+             * <p>The ID of the ticket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>384****</p>
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;
@@ -696,17 +812,20 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the ticket. Valid values:
-             * <p>
+             * <p>The type of the ticket. Valid values:</p>
+             * <ul>
+             * <li><strong>NDDL</strong>: a schema design ticket</li>
+             * <li><strong>DATA_TRACK</strong>: a data tracking ticket</li>
+             * <li><strong>TABLE_SYNC</strong>: a table synchronization ticket</li>
+             * <li><strong>PERM_APPLY</strong>: a permission application ticket</li>
+             * <li><strong>DATA_EXPORT</strong>: a data export ticket</li>
+             * <li><strong>DATA_CORRECT</strong>: a data change ticket</li>
+             * <li><strong>OWNER_APPLY</strong>: an owner role application ticket</li>
+             * <li><strong>SENSITIVITY</strong>: a column sensitivity level change ticket</li>
+             * </ul>
              * 
-             * *   **NDDL**: a schema design ticket
-             * *   **DATA_TRACK**: a data tracking ticket
-             * *   **TABLE_SYNC**: a table synchronization ticket
-             * *   **PERM_APPLY**: a permission application ticket
-             * *   **DATA_EXPORT**: a data export ticket
-             * *   **DATA_CORRECT**: a data change ticket
-             * *   **OWNER_APPLY**: an owner role application ticket
-             * *   **SENSITIVITY**: a column sensitivity level change ticket
+             * <strong>example:</strong>
+             * <p>PERM_APPLY</p>
              */
             public Builder orderType(String orderType) {
                 this.orderType = orderType;
@@ -714,7 +833,7 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The reasons for the approval.
+             * <p>The reasons for the approval.</p>
              */
             public Builder reasonList(ReasonList reasonList) {
                 this.reasonList = reasonList;
@@ -722,7 +841,10 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workflow template.
+             * <p>The ID of the workflow template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;
@@ -730,7 +852,32 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The title of the approval process.
+             * <p>Third-party approval flow remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
+             */
+            public Builder thirdpartyWorkflowComment(String thirdpartyWorkflowComment) {
+                this.thirdpartyWorkflowComment = thirdpartyWorkflowComment;
+                return this;
+            }
+
+            /**
+             * <p>The third-party approval flow link.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://xxx">https://xxx</a></p>
+             */
+            public Builder thirdpartyWorkflowUrl(String thirdpartyWorkflowUrl) {
+                this.thirdpartyWorkflowUrl = thirdpartyWorkflowUrl;
+                return this;
+            }
+
+            /**
+             * <p>The title of the approval process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Permission application ticket - 384****</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -738,15 +885,19 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The approval status of the ticket. Valid values:
-             * <p>
+             * <p>The approval status of the ticket. Valid values:</p>
+             * <ul>
+             * <li><strong>AUDITING</strong>: The ticket is being reviewed.</li>
+             * <li><strong>REJECT</strong>: The ticket was rejected.</li>
+             * <li><strong>CANCEL</strong>: The ticket was revoked.</li>
+             * <li><strong>APPROVED</strong>: The ticket was approved.</li>
+             * </ul>
+             * <blockquote>
+             * <p>An approval process contains multiple approval nodes, and this parameter is returned for each approval node.</p>
+             * </blockquote>
              * 
-             * *   **AUDITING**: The ticket is being reviewed.
-             * *   **REJECT**: The ticket was rejected.
-             * *   **CANCEL**: The ticket was revoked.
-             * *   **APPROVED**: The ticket was approved.
-             * 
-             * > An approval process contains multiple approval nodes, and this parameter is returned for each approval node.
+             * <strong>example:</strong>
+             * <p>APPROVED</p>
              */
             public Builder workflowInsCode(String workflowInsCode) {
                 this.workflowInsCode = workflowInsCode;
@@ -754,7 +905,7 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The details of approval nodes.
+             * <p>The details of approval nodes.</p>
              */
             public Builder workflowNodes(WorkflowNodes workflowNodes) {
                 this.workflowNodes = workflowNodes;

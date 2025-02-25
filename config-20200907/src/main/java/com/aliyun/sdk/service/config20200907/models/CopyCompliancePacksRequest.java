@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CopyCompliancePacksRequest} extends {@link RequestModel}
  *
  * <p>CopyCompliancePacksRequest</p>
  */
 public class CopyCompliancePacksRequest extends Request {
-    @Query
-    @NameInMap("DesAggregatorIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesAggregatorIds")
     private String desAggregatorIds;
 
-    @Query
-    @NameInMap("SrcAggregatorId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcAggregatorId")
     private String srcAggregatorId;
 
-    @Query
-    @NameInMap("SrcCompliancePackIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcCompliancePackIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String srcCompliancePackIds;
 
     private CopyCompliancePacksRequest(Builder builder) {
@@ -83,10 +88,13 @@ public class CopyCompliancePacksRequest extends Request {
         } 
 
         /**
-         * The IDs of the destination account groups into which the compliance packages are replicated. Separate multiple account group IDs with commas (,).
-         * <p>
+         * <p>The IDs of the destination account groups into which the compliance packages are replicated. Separate multiple account group IDs with commas (,).</p>
+         * <blockquote>
+         * <p>If this parameter is left empty, the compliance packages are replicated to the current account group.</p>
+         * </blockquote>
          * 
-         * > If this parameter is left empty, the compliance packages are replicated to the current account group.
+         * <strong>example:</strong>
+         * <p>ca-c73c626622af00f8****</p>
          */
         public Builder desAggregatorIds(String desAggregatorIds) {
             this.putQueryParameter("DesAggregatorIds", desAggregatorIds);
@@ -95,10 +103,11 @@ public class CopyCompliancePacksRequest extends Request {
         }
 
         /**
-         * The ID of the account group to which the compliance packages belong.
-         * <p>
+         * <p>The ID of the account group to which the compliance packages belong.</p>
+         * <p>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
          * 
-         * For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).
+         * <strong>example:</strong>
+         * <p>ca-05e6626622af0050****</p>
          */
         public Builder srcAggregatorId(String srcAggregatorId) {
             this.putQueryParameter("SrcAggregatorId", srcAggregatorId);
@@ -107,10 +116,12 @@ public class CopyCompliancePacksRequest extends Request {
         }
 
         /**
-         * The IDs of the compliance packages. Separate multiple compliance package IDs with commas (,).
-         * <p>
+         * <p>The IDs of the compliance packages. Separate multiple compliance package IDs with commas (,).</p>
+         * <p>For more information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/263332.html">ListCompliancePacks</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of a compliance package, see [ListCompliancePacks](~~263332~~).
+         * <strong>example:</strong>
+         * <p>cp-4c02626622af0050****,cp-47c1626622af0050****</p>
          */
         public Builder srcCompliancePackIds(String srcCompliancePackIds) {
             this.putQueryParameter("SrcCompliancePackIds", srcCompliancePackIds);

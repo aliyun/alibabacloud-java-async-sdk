@@ -1,39 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainPathDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainPathDataResponseBody</p>
  */
 public class DescribeDomainPathDataResponseBody extends TeaModel {
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("PathDataPerInterval")
+    @com.aliyun.core.annotation.NameInMap("PathDataPerInterval")
     private PathDataPerInterval pathDataPerInterval;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDomainPathDataResponseBody(Builder builder) {
@@ -122,7 +122,10 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The time interval. Unit: seconds.
+         * <p>The time interval. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -130,7 +133,10 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
         }
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -138,7 +144,10 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
         }
 
         /**
-         * The end of the time range during which data was queried.
+         * <p>The end of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-09-30T17:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -146,7 +155,10 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page. Pages start from page **1**.
+         * <p>The page number of the returned page. Pages start from page <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -154,7 +166,10 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -162,7 +177,7 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
         }
 
         /**
-         * A list of bandwidth values collected at each time interval.
+         * <p>A list of bandwidth values collected at each time interval.</p>
          */
         public Builder pathDataPerInterval(PathDataPerInterval pathDataPerInterval) {
             this.pathDataPerInterval = pathDataPerInterval;
@@ -170,7 +185,10 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
         }
 
         /**
-         * The start of the time range during which data was queried.
+         * <p>The start of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-09-30T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -178,7 +196,10 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -191,17 +212,23 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainPathDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainPathDataResponseBody</p>
+     */
     public static class UsageData extends TeaModel {
-        @NameInMap("Acc")
+        @com.aliyun.core.annotation.NameInMap("Acc")
         private Integer acc;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
-        @NameInMap("Traffic")
+        @com.aliyun.core.annotation.NameInMap("Traffic")
         private Integer traffic;
 
         private UsageData(Builder builder) {
@@ -254,7 +281,10 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
             private Integer traffic; 
 
             /**
-             * The number of visits to the URL.
+             * <p>The number of visits to the URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder acc(Integer acc) {
                 this.acc = acc;
@@ -262,7 +292,10 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
             }
 
             /**
-             * The path.
+             * <p>The path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/path/</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -270,7 +303,10 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time.
+             * <p>The point in time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-09-30T16:00:00Z</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -278,7 +314,10 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of network traffic. Unit: bytes.
+             * <p>The amount of network traffic. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>346</p>
              */
             public Builder traffic(Integer traffic) {
                 this.traffic = traffic;
@@ -292,8 +331,14 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainPathDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainPathDataResponseBody</p>
+     */
     public static class PathDataPerInterval extends TeaModel {
-        @NameInMap("UsageData")
+        @com.aliyun.core.annotation.NameInMap("UsageData")
         private java.util.List < UsageData> usageData;
 
         private PathDataPerInterval(Builder builder) {

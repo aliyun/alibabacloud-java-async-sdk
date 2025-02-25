@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetGovernanceKubernetesClusterResponseBody} extends {@link TeaModel}
  *
  * <p>GetGovernanceKubernetesClusterResponseBody</p>
  */
 public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetGovernanceKubernetesClusterResponseBody(Builder builder) {
@@ -74,7 +79,7 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details of the data.
+         * <p>The details of the data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -82,7 +87,10 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +98,10 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5B170A0D-2C5D-4CF8-B808-03966B86****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,11 +109,14 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -115,11 +129,17 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetGovernanceKubernetesClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGovernanceKubernetesClusterResponseBody</p>
+     */
     public static class Namespaces extends TeaModel {
-        @NameInMap("MseNamespace")
+        @com.aliyun.core.annotation.NameInMap("MseNamespace")
         private String mseNamespace;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Namespaces(Builder builder) {
@@ -154,7 +174,10 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The name of the MSE namespace that you want to access.
+             * <p>The name of the MSE namespace that you want to access.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder mseNamespace(String mseNamespace) {
                 this.mseNamespace = mseNamespace;
@@ -162,7 +185,10 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the namespace in the ACK cluster.
+             * <p>The name of the namespace in the ACK cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -176,29 +202,35 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetGovernanceKubernetesClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGovernanceKubernetesClusterResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("K8sVersion")
+        @com.aliyun.core.annotation.NameInMap("K8sVersion")
         private String k8sVersion;
 
-        @NameInMap("NamespaceInfos")
+        @com.aliyun.core.annotation.NameInMap("NamespaceInfos")
         private String namespaceInfos;
 
-        @NameInMap("Namespaces")
-        private java.util.List < Namespaces> namespaces;
+        @com.aliyun.core.annotation.NameInMap("Namespaces")
+        private java.util.List<Namespaces> namespaces;
 
-        @NameInMap("PilotStartTime")
+        @com.aliyun.core.annotation.NameInMap("PilotStartTime")
         private String pilotStartTime;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private Data(Builder builder) {
@@ -251,7 +283,7 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
         /**
          * @return namespaces
          */
-        public java.util.List < Namespaces> getNamespaces() {
+        public java.util.List<Namespaces> getNamespaces() {
             return this.namespaces;
         }
 
@@ -281,13 +313,16 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
             private String clusterName; 
             private String k8sVersion; 
             private String namespaceInfos; 
-            private java.util.List < Namespaces> namespaces; 
+            private java.util.List<Namespaces> namespaces; 
             private String pilotStartTime; 
             private String region; 
             private String updateTime; 
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cd23228b3c80c4d4f9ad7af1d87cc30d5</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -295,7 +330,10 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myCluster</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -303,7 +341,10 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The version of Kubernetes.
+             * <p>The version of Kubernetes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.20.11-aliyun.1</p>
              */
             public Builder k8sVersion(String k8sVersion) {
                 this.k8sVersion = k8sVersion;
@@ -311,7 +352,10 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The information of the namespace.
+             * <p>The information of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;Name&quot;:&quot;ack-onepilot&quot;,&quot;Tags&quot;:null},{&quot;Name&quot;:&quot;default&quot;,&quot;Tags&quot;:{&quot;mse-enable&quot;:&quot;enabled&quot;}},{&quot;Name&quot;:&quot;kube-node-lease&quot;,&quot;Tags&quot;:null},{&quot;Name&quot;:&quot;kube-public&quot;,&quot;Tags&quot;:null},{&quot;Name&quot;:&quot;kube-system&quot;,&quot;Tags&quot;:null}]</p>
              */
             public Builder namespaceInfos(String namespaceInfos) {
                 this.namespaceInfos = namespaceInfos;
@@ -319,15 +363,18 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The queried namespaces.
+             * <p>The queried namespaces.</p>
              */
-            public Builder namespaces(java.util.List < Namespaces> namespaces) {
+            public Builder namespaces(java.util.List<Namespaces> namespaces) {
                 this.namespaces = namespaces;
                 return this;
             }
 
             /**
-             * The time when the pilot component was started.
+             * <p>The time when the pilot component was started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-11T11:50:38.000+0000</p>
              */
             public Builder pilotStartTime(String pilotStartTime) {
                 this.pilotStartTime = pilotStartTime;
@@ -335,7 +382,10 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the instance resides. The region is supported by MSE.
+             * <p>The ID of the region in which the instance resides. The region is supported by MSE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -343,7 +393,10 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The time of the last modification.
+             * <p>The time of the last modification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-12T05:24:31.000+0000</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

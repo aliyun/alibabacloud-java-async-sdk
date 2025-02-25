@@ -1,54 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRestoreJobRequest} extends {@link RequestModel}
  *
  * <p>CreateRestoreJobRequest</p>
  */
 public class CreateRestoreJobRequest extends Request {
-    @Query
-    @NameInMap("Includes")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Includes")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String includes;
 
-    @Query
-    @NameInMap("SnapshotHash")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotHash")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String snapshotHash;
 
-    @Query
-    @NameInMap("SnapshotId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String snapshotId;
 
-    @Query
-    @NameInMap("SnapshotVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String snapshotVersion;
 
-    @Query
-    @NameInMap("SourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceType")
     private String sourceType;
 
-    @Query
-    @NameInMap("Target")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Target")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String target;
 
-    @Query
-    @NameInMap("Uuid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String uuid;
 
-    @Query
-    @NameInMap("VaultId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vaultId;
 
     private CreateRestoreJobRequest(Builder builder) {
@@ -159,7 +164,11 @@ public class CreateRestoreJobRequest extends Request {
         } 
 
         /**
-         * The directory in which the files included in the restoration task are located. This parameter is specified when you create the anti-ransomware policy. The value is a directory that requires protection.
+         * <p>The directory in which the files included in the restoration task are located. This parameter is specified when you create the anti-ransomware policy. The value is a directory that requires protection.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;root&quot;]</p>
          */
         public Builder includes(String includes) {
             this.putQueryParameter("Includes", includes);
@@ -168,10 +177,14 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * The hash value of the snapshot.
-         * <p>
+         * <p>The hash value of the snapshot.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeSnapshots~~">DescribeSnapshots</a> operation to obtain the value of this parameter.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeSnapshots](~~DescribeSnapshots~~) operation to obtain the value of this parameter.
+         * <strong>example:</strong>
+         * <p>d4b399edaad94b038e8f91873f19e3eae010ca30798fc36db3a164dd343f****</p>
          */
         public Builder snapshotHash(String snapshotHash) {
             this.putQueryParameter("SnapshotHash", snapshotHash);
@@ -180,10 +193,14 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * The ID of the snapshot that you want to use for restoration.
-         * <p>
+         * <p>The ID of the snapshot that you want to use for restoration.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeSnapshots~~">DescribeSnapshots</a> operation to obtain the value of this parameter.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeSnapshots](~~DescribeSnapshots~~) operation to obtain the value of this parameter.
+         * <strong>example:</strong>
+         * <p>s-00023dhaatxp18mh****</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
@@ -192,10 +209,14 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * The version of the backup data.
-         * <p>
+         * <p>The version of the backup data.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeSnapshots~~">DescribeSnapshots</a> operation to obtain the value of this parameter.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeSnapshots](~~DescribeSnapshots~~) operation to obtain the value of this parameter.
+         * <strong>example:</strong>
+         * <p>165570544****</p>
          */
         public Builder snapshotVersion(String snapshotVersion) {
             this.putQueryParameter("SnapshotVersion", snapshotVersion);
@@ -204,11 +225,14 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * The type of the data source. Valid values:
-         * <p>
+         * <p>The type of the data source. Valid values:</p>
+         * <ul>
+         * <li><strong>ECS_FILE</strong>: backup snapshots for Elastic Compute Service (ECS) files</li>
+         * <li><strong>File</strong>: backup snapshots for on-premises servers</li>
+         * </ul>
          * 
-         * *   **ECS_FILE**: backup snapshots for Elastic Compute Service (ECS) files
-         * *   **File**: backup snapshots for on-premises servers
+         * <strong>example:</strong>
+         * <p>ECS_FILE</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -217,7 +241,11 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * The path to which you want to restore data.
+         * <p>The path to which you want to restore data.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/root/testfls</p>
          */
         public Builder target(String target) {
             this.putQueryParameter("Target", target);
@@ -226,7 +254,11 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * The UUID of the server whose data you want to restore.
+         * <p>The UUID of the server whose data you want to restore.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>inet-ecs-4e876cb0-09f7-43b8-82ef-4bc7a93769b5</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);
@@ -235,10 +267,14 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * The ID of the backup vault that is used in the restoration task.
-         * <p>
+         * <p>The ID of the backup vault that is used in the restoration task.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeSnapshots~~">DescribeSnapshots</a> operation to obtain the value of this parameter.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeSnapshots](~~DescribeSnapshots~~) operation to obtain the value of this parameter.
+         * <strong>example:</strong>
+         * <p>v-0002n12wokck2q0x****</p>
          */
         public Builder vaultId(String vaultId) {
             this.putQueryParameter("VaultId", vaultId);

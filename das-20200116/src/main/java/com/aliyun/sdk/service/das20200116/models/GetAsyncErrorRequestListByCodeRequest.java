@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAsyncErrorRequestListByCodeRequest} extends {@link RequestModel}
  *
  * <p>GetAsyncErrorRequestListByCodeRequest</p>
  */
 public class GetAsyncErrorRequestListByCodeRequest extends Request {
-    @Query
-    @NameInMap("End")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("End")
     private Long end;
 
-    @Query
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("NodeId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeId")
     private String nodeId;
 
-    @Query
-    @NameInMap("Start")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Start")
     private Long start;
 
     private GetAsyncErrorRequestListByCodeRequest(Builder builder) {
@@ -111,10 +116,13 @@ public class GetAsyncErrorRequestListByCodeRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
-         * <p>
+         * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <blockquote>
+         * <p> The end time must be later than the start time. The interval between the start time and the end time cannot exceed 24 hours.</p>
+         * </blockquote>
          * 
-         * >  The end time must be later than the start time. The interval between the start time and the end time cannot exceed 24 hours.
+         * <strong>example:</strong>
+         * <p>1642566830000</p>
          */
         public Builder end(Long end) {
             this.putQueryParameter("End", end);
@@ -123,7 +131,10 @@ public class GetAsyncErrorRequestListByCodeRequest extends Request {
         }
 
         /**
-         * The error code. You can call the [GetAsyncErrorRequestStatByCode](~~409804~~) operation to query the MySQL error codes that may be generated in the SQL Explorer results of an instance.
+         * <p>The error code. You can call the <a href="https://help.aliyun.com/document_detail/409804.html">GetAsyncErrorRequestStatByCode</a> operation to query the MySQL error codes that may be generated in the SQL Explorer results of an instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1064</p>
          */
         public Builder errorCode(String errorCode) {
             this.putQueryParameter("ErrorCode", errorCode);
@@ -132,7 +143,11 @@ public class GetAsyncErrorRequestListByCodeRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze8g2am97624****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -141,10 +156,13 @@ public class GetAsyncErrorRequestListByCodeRequest extends Request {
         }
 
         /**
-         * The node ID.
-         * <p>
+         * <p>The node ID.</p>
+         * <blockquote>
+         * <p> This parameter must be specified if the database instance is a PolarDB for MySQL cluster.</p>
+         * </blockquote>
          * 
-         * >  This parameter must be specified if the database instance is a PolarDB for MySQL cluster.
+         * <strong>example:</strong>
+         * <p>pi-wz9s658475e58****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -153,10 +171,13 @@ public class GetAsyncErrorRequestListByCodeRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
-         * <p>
+         * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <blockquote>
+         * <p> The start time must be within the storage duration of the SQL Explorer feature of the database instance, and can be up to 90 days earlier than the current time.</p>
+         * </blockquote>
          * 
-         * >  The start time must be within the storage duration of the SQL Explorer feature of the database instance, and can be up to 90 days earlier than the current time.
+         * <strong>example:</strong>
+         * <p>1642556990714</p>
          */
         public Builder start(Long start) {
             this.putQueryParameter("Start", start);

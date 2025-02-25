@@ -1,100 +1,126 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListJobsRequest} extends {@link RequestModel}
  *
  * <p>ListJobsRequest</p>
  */
 public class ListJobsRequest extends Request {
-    @Query
-    @NameInMap("BusinessUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Accessibility")
+    private String accessibility;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessUserId")
     private String businessUserId;
 
-    @Query
-    @NameInMap("Caller")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Caller")
     private String caller;
 
-    @Query
-    @NameInMap("DisplayName")
-    @Validation(maxLength = 1024)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
+    @com.aliyun.core.annotation.Validation(maxLength = 1024)
     private String displayName;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("FromAllWorkspaces")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FromAllWorkspaces")
     private Boolean fromAllWorkspaces;
 
-    @Query
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @Query
-    @NameInMap("JobType")
-    @Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobType")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private String jobType;
 
-    @Query
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(maximum = 1000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OversoldInfo")
+    private String oversoldInfo;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 1)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("PipelineId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PaymentType")
+    private String paymentType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PipelineId")
     private String pipelineId;
 
-    @Query
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
-    @Query
-    @NameInMap("ShowOwn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceQuotaName")
+    private String resourceQuotaName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShowOwn")
     private Boolean showOwn;
 
-    @Query
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @Query
-    @NameInMap("Status")
-    @Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private String status;
 
-    @Query
-    @NameInMap("Tags")
-    private java.util.Map < String, String > tags;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.Map<String, String> tags;
 
-    @Query
-    @NameInMap("UserIdForFilter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserIdForFilter")
     private String userIdForFilter;
 
-    @Query
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Username")
+    private String username;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
     private ListJobsRequest(Builder builder) {
         super(builder);
+        this.accessibility = builder.accessibility;
         this.businessUserId = builder.businessUserId;
         this.caller = builder.caller;
         this.displayName = builder.displayName;
@@ -103,16 +129,20 @@ public class ListJobsRequest extends Request {
         this.jobId = builder.jobId;
         this.jobType = builder.jobType;
         this.order = builder.order;
+        this.oversoldInfo = builder.oversoldInfo;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.paymentType = builder.paymentType;
         this.pipelineId = builder.pipelineId;
         this.resourceId = builder.resourceId;
+        this.resourceQuotaName = builder.resourceQuotaName;
         this.showOwn = builder.showOwn;
         this.sortBy = builder.sortBy;
         this.startTime = builder.startTime;
         this.status = builder.status;
         this.tags = builder.tags;
         this.userIdForFilter = builder.userIdForFilter;
+        this.username = builder.username;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -127,6 +157,13 @@ public class ListJobsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accessibility
+     */
+    public String getAccessibility() {
+        return this.accessibility;
     }
 
     /**
@@ -186,6 +223,13 @@ public class ListJobsRequest extends Request {
     }
 
     /**
+     * @return oversoldInfo
+     */
+    public String getOversoldInfo() {
+        return this.oversoldInfo;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -200,6 +244,13 @@ public class ListJobsRequest extends Request {
     }
 
     /**
+     * @return paymentType
+     */
+    public String getPaymentType() {
+        return this.paymentType;
+    }
+
+    /**
      * @return pipelineId
      */
     public String getPipelineId() {
@@ -211,6 +262,13 @@ public class ListJobsRequest extends Request {
      */
     public String getResourceId() {
         return this.resourceId;
+    }
+
+    /**
+     * @return resourceQuotaName
+     */
+    public String getResourceQuotaName() {
+        return this.resourceQuotaName;
     }
 
     /**
@@ -244,7 +302,7 @@ public class ListJobsRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.Map < String, String > getTags() {
+    public java.util.Map<String, String> getTags() {
         return this.tags;
     }
 
@@ -256,6 +314,13 @@ public class ListJobsRequest extends Request {
     }
 
     /**
+     * @return username
+     */
+    public String getUsername() {
+        return this.username;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -263,6 +328,7 @@ public class ListJobsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListJobsRequest, Builder> {
+        private String accessibility; 
         private String businessUserId; 
         private String caller; 
         private String displayName; 
@@ -271,16 +337,20 @@ public class ListJobsRequest extends Request {
         private String jobId; 
         private String jobType; 
         private String order; 
+        private String oversoldInfo; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String paymentType; 
         private String pipelineId; 
         private String resourceId; 
+        private String resourceQuotaName; 
         private Boolean showOwn; 
         private String sortBy; 
         private String startTime; 
         private String status; 
-        private java.util.Map < String, String > tags; 
+        private java.util.Map<String, String> tags; 
         private String userIdForFilter; 
+        private String username; 
         private String workspaceId; 
 
         private Builder() {
@@ -289,6 +359,7 @@ public class ListJobsRequest extends Request {
 
         private Builder(ListJobsRequest request) {
             super(request);
+            this.accessibility = request.accessibility;
             this.businessUserId = request.businessUserId;
             this.caller = request.caller;
             this.displayName = request.displayName;
@@ -297,18 +368,31 @@ public class ListJobsRequest extends Request {
             this.jobId = request.jobId;
             this.jobType = request.jobType;
             this.order = request.order;
+            this.oversoldInfo = request.oversoldInfo;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.paymentType = request.paymentType;
             this.pipelineId = request.pipelineId;
             this.resourceId = request.resourceId;
+            this.resourceQuotaName = request.resourceQuotaName;
             this.showOwn = request.showOwn;
             this.sortBy = request.sortBy;
             this.startTime = request.startTime;
             this.status = request.status;
             this.tags = request.tags;
             this.userIdForFilter = request.userIdForFilter;
+            this.username = request.username;
             this.workspaceId = request.workspaceId;
         } 
+
+        /**
+         * Accessibility.
+         */
+        public Builder accessibility(String accessibility) {
+            this.putQueryParameter("Accessibility", accessibility);
+            this.accessibility = accessibility;
+            return this;
+        }
 
         /**
          * BusinessUserId.
@@ -383,6 +467,15 @@ public class ListJobsRequest extends Request {
         }
 
         /**
+         * OversoldInfo.
+         */
+        public Builder oversoldInfo(String oversoldInfo) {
+            this.putQueryParameter("OversoldInfo", oversoldInfo);
+            this.oversoldInfo = oversoldInfo;
+            return this;
+        }
+
+        /**
          * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
@@ -401,6 +494,15 @@ public class ListJobsRequest extends Request {
         }
 
         /**
+         * PaymentType.
+         */
+        public Builder paymentType(String paymentType) {
+            this.putQueryParameter("PaymentType", paymentType);
+            this.paymentType = paymentType;
+            return this;
+        }
+
+        /**
          * PipelineId.
          */
         public Builder pipelineId(String pipelineId) {
@@ -415,6 +517,15 @@ public class ListJobsRequest extends Request {
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
             this.resourceId = resourceId;
+            return this;
+        }
+
+        /**
+         * ResourceQuotaName.
+         */
+        public Builder resourceQuotaName(String resourceQuotaName) {
+            this.putQueryParameter("ResourceQuotaName", resourceQuotaName);
+            this.resourceQuotaName = resourceQuotaName;
             return this;
         }
 
@@ -457,7 +568,7 @@ public class ListJobsRequest extends Request {
         /**
          * Tags.
          */
-        public Builder tags(java.util.Map < String, String > tags) {
+        public Builder tags(java.util.Map<String, String> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
@@ -470,6 +581,15 @@ public class ListJobsRequest extends Request {
         public Builder userIdForFilter(String userIdForFilter) {
             this.putQueryParameter("UserIdForFilter", userIdForFilter);
             this.userIdForFilter = userIdForFilter;
+            return this;
+        }
+
+        /**
+         * Username.
+         */
+        public Builder username(String username) {
+            this.putQueryParameter("Username", username);
+            this.username = username;
             return this;
         }
 

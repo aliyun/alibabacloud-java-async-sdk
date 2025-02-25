@@ -1,55 +1,60 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitSnapshotJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitSnapshotJobRequest</p>
  */
 public class SubmitSnapshotJobRequest extends Request {
-    @Query
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Long count;
 
-    @Query
-    @NameInMap("Height")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Height")
     private String height;
 
-    @Query
-    @NameInMap("Interval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Interval")
     private Long interval;
 
-    @Query
-    @NameInMap("SnapshotTemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotTemplateId")
     private String snapshotTemplateId;
 
-    @Query
-    @NameInMap("SpecifiedOffsetTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpecifiedOffsetTime")
     private Long specifiedOffsetTime;
 
-    @Query
-    @NameInMap("SpecifiedOffsetTimes")
-    private java.util.List < Long > specifiedOffsetTimes;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpecifiedOffsetTimes")
+    private java.util.List<Long> specifiedOffsetTimes;
 
-    @Query
-    @NameInMap("SpriteSnapshotConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpriteSnapshotConfig")
     private String spriteSnapshotConfig;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
-    @Query
-    @NameInMap("VideoId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VideoId")
     private String videoId;
 
-    @Query
-    @NameInMap("Width")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Width")
     private String width;
 
     private SubmitSnapshotJobRequest(Builder builder) {
@@ -117,7 +122,7 @@ public class SubmitSnapshotJobRequest extends Request {
     /**
      * @return specifiedOffsetTimes
      */
-    public java.util.List < Long > getSpecifiedOffsetTimes() {
+    public java.util.List<Long> getSpecifiedOffsetTimes() {
         return this.specifiedOffsetTimes;
     }
 
@@ -155,7 +160,7 @@ public class SubmitSnapshotJobRequest extends Request {
         private Long interval; 
         private String snapshotTemplateId; 
         private Long specifiedOffsetTime; 
-        private java.util.List < Long > specifiedOffsetTimes; 
+        private java.util.List<Long> specifiedOffsetTimes; 
         private String spriteSnapshotConfig; 
         private String userData; 
         private String videoId; 
@@ -180,7 +185,10 @@ public class SubmitSnapshotJobRequest extends Request {
         } 
 
         /**
-         * The maximum number of snapshots. Default value: **1**.
+         * <p>The maximum number of snapshots. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(Long count) {
             this.putQueryParameter("Count", count);
@@ -189,7 +197,10 @@ public class SubmitSnapshotJobRequest extends Request {
         }
 
         /**
-         * The height of each snapshot. Valid values: `[8,4096]`. By default, the height of the video mezzanine file is used. Unit: pixel.
+         * <p>The height of each snapshot. Valid values: <code>[8,4096]</code>. By default, the height of the video source is used. Unit: pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>720</p>
          */
         public Builder height(String height) {
             this.putQueryParameter("Height", height);
@@ -198,7 +209,15 @@ public class SubmitSnapshotJobRequest extends Request {
         }
 
         /**
-         * The snapshot interval. The value must be **greater than or equal to 0**. Unit: seconds. If you set this parameter to **0**, snapshots are taken at even intervals based on the video duration divided by the value of the Count parameter. Default value: **1**.
+         * <p>The snapshot interval. The value must be <strong>greater than or equal to 0</strong>.</p>
+         * <ul>
+         * <li>Unit: seconds.</li>
+         * <li>Default value: <strong>1</strong>.</li>
+         * <li>If you set this parameter to <strong>0</strong>, snapshots are captured at even intervals based on the video duration divided by the value of the Count parameter.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder interval(Long interval) {
             this.putQueryParameter("Interval", interval);
@@ -207,12 +226,14 @@ public class SubmitSnapshotJobRequest extends Request {
         }
 
         /**
-         * The ID of the snapshot template.
-         * <p>
+         * <p>The ID of the snapshot template.</p>
+         * <ul>
+         * <li>We recommend that you create a snapshot template before you specify the template ID. For more information about how to create a snapshot template, see <a href="https://help.aliyun.com/document_detail/99406.html">AddVodTemplate</a>.</li>
+         * <li>If you set the SnapshotTemplateId parameter, all the other request parameters except the Action and VideoId parameters are ignored.</li>
+         * </ul>
          * 
-         * *   We recommend that you create a snapshot template before you specify the ID of the snapshot template.
-         * *   If you set the SnapshotTemplateId parameter, all the other request parameters except the Action and VideoId parameters are ignored.
-         * *   For more information about how to create a snapshot template, see [AddVodTemplate](~~99406~~).
+         * <strong>example:</strong>
+         * <p>f5b228fe693bf55bd87b789****</p>
          */
         public Builder snapshotTemplateId(String snapshotTemplateId) {
             this.putQueryParameter("SnapshotTemplateId", snapshotTemplateId);
@@ -221,11 +242,14 @@ public class SubmitSnapshotJobRequest extends Request {
         }
 
         /**
-         * The start time of the specified snapshot time period.
-         * <p>
+         * <p>The point in time when the first snapshot is captured.</p>
+         * <ul>
+         * <li>Unit: milliseconds.</li>
+         * <li>Default value: <strong>0</strong>.</li>
+         * </ul>
          * 
-         * *   Unit: milliseconds.
-         * *   Default value: **0**.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder specifiedOffsetTime(Long specifiedOffsetTime) {
             this.putQueryParameter("SpecifiedOffsetTime", specifiedOffsetTime);
@@ -234,9 +258,9 @@ public class SubmitSnapshotJobRequest extends Request {
         }
 
         /**
-         * SpecifiedOffsetTimes.
+         * <p>The playback positions at which you want to capture snapshots. Unit: milliseconds. You can specify up to 30 playback positions in a request.</p>
          */
-        public Builder specifiedOffsetTimes(java.util.List < Long > specifiedOffsetTimes) {
+        public Builder specifiedOffsetTimes(java.util.List<Long> specifiedOffsetTimes) {
             String specifiedOffsetTimesShrink = shrink(specifiedOffsetTimes, "SpecifiedOffsetTimes", "json");
             this.putQueryParameter("SpecifiedOffsetTimes", specifiedOffsetTimesShrink);
             this.specifiedOffsetTimes = specifiedOffsetTimes;
@@ -244,7 +268,10 @@ public class SubmitSnapshotJobRequest extends Request {
         }
 
         /**
-         * The sprite snapshot configuration. If you set this parameter, sprite snapshots are generated. For more information, see [SpriteSnapshotConfig](~~86952~~).
+         * <p>The sprite snapshot configuration. If you set this parameter, sprite snapshots are generated. For more information, see <a href="https://help.aliyun.com/document_detail/86952.html">SpriteSnapshotConfig</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;CellWidth&quot;: 120, &quot;CellHeight&quot;: 68, &quot;Columns&quot;: 3,&quot;Lines&quot;: 10, &quot;Padding&quot;: 20, &quot;Margin&quot;: 50}</p>
          */
         public Builder spriteSnapshotConfig(String spriteSnapshotConfig) {
             this.putQueryParameter("SpriteSnapshotConfig", spriteSnapshotConfig);
@@ -253,12 +280,13 @@ public class SubmitSnapshotJobRequest extends Request {
         }
 
         /**
-         * The custom configurations, including the configuration of transparent data transmission and callback configurations. The value is a JSON-formatted string. For more information, see [UserData](~~86952~~).
-         * <p>
+         * <p>The custom configurations including the configuration of transparent data transmission and callback configurations. The value must be a JSON string. For more information, see <a href="https://help.aliyun.com/document_detail/86952.html">UserData</a>.</p>
+         * <blockquote>
+         * <p> To use the message callback feature, you must specify an HTTP callback URL and the callback events in the ApsaraVideo VOD console. Otherwise, the callback settings do not take effect.</p>
+         * </blockquote>
          * 
-         * **
-         * 
-         * **Note** The callback configurations take effect only when you specify the HTTP callback URL and select the specific callback events in the ApsaraVideo VOD console.
+         * <strong>example:</strong>
+         * <p>{&quot;MessageCallback&quot;:{&quot;CallbackURL&quot;:&quot;http://.example.aliyundoc.com&quot;},&quot;Extend&quot;:{&quot;localId&quot;:&quot;xxx&quot;,&quot;example&quot;:&quot;www&quot;}}</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -267,7 +295,15 @@ public class SubmitSnapshotJobRequest extends Request {
         }
 
         /**
-         * The ID of the video.
+         * <p>The ID of the video. You can use one of the following methods to obtain the ID:</p>
+         * <ul>
+         * <li>After you upload a video in the ApsaraVideo VOD console, you can log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong> to view the ID of the video.</li>
+         * <li>Obtain the video ID from the response to the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation that you called to obtain the upload URL and credential.</li>
+         * <li>Obtain the video ID from the response to the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation that you called to query media information after the audio or video file is uploaded.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>d3e680e618708efbf2cae7cc9312****</p>
          */
         public Builder videoId(String videoId) {
             this.putQueryParameter("VideoId", videoId);
@@ -276,7 +312,10 @@ public class SubmitSnapshotJobRequest extends Request {
         }
 
         /**
-         * The width of each snapshot. Valid values: `[8,4096]`. By default, the width of the video mezzanine file is used. Unit: pixel.
+         * <p>The width of each snapshot. Valid values: <code>[8,4096]</code>. By default, the width of the video source is used. Unit: pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1280</p>
          */
         public Builder width(String width) {
             this.putQueryParameter("Width", width);

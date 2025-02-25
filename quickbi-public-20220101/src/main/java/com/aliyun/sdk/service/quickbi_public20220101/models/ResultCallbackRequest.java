@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResultCallbackRequest} extends {@link RequestModel}
  *
  * <p>ResultCallbackRequest</p>
  */
 public class ResultCallbackRequest extends Request {
-    @Query
-    @NameInMap("ApplicationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String applicationId;
 
-    @Query
-    @NameInMap("HandleReason")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HandleReason")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String handleReason;
 
-    @Query
-    @NameInMap("Status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer status;
 
     private ResultCallbackRequest(Builder builder) {
@@ -85,7 +90,10 @@ public class ResultCallbackRequest extends Request {
         } 
 
         /**
-         * ApplicationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c5ea0db8-<strong><strong>-</strong></strong>-9081-04bc0df4c6a3</p>
          */
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
@@ -94,7 +102,7 @@ public class ResultCallbackRequest extends Request {
         }
 
         /**
-         * HandleReason.
+         * <p>This parameter is required.</p>
          */
         public Builder handleReason(String handleReason) {
             this.putQueryParameter("HandleReason", handleReason);
@@ -103,7 +111,10 @@ public class ResultCallbackRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

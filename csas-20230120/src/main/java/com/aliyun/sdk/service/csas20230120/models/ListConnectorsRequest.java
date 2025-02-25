@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListConnectorsRequest} extends {@link RequestModel}
  *
  * <p>ListConnectorsRequest</p>
  */
 public class ListConnectorsRequest extends Request {
-    @Query
-    @NameInMap("ConnectorIds")
-    private java.util.List < String > connectorIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectorIds")
+    private java.util.List<String> connectorIds;
 
-    @Query
-    @NameInMap("CurrentPage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer currentPage;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("SwitchStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SwitchStatus")
     private String switchStatus;
 
     private ListConnectorsRequest(Builder builder) {
@@ -64,7 +69,7 @@ public class ListConnectorsRequest extends Request {
     /**
      * @return connectorIds
      */
-    public java.util.List < String > getConnectorIds() {
+    public java.util.List<String> getConnectorIds() {
         return this.connectorIds;
     }
 
@@ -104,7 +109,7 @@ public class ListConnectorsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListConnectorsRequest, Builder> {
-        private java.util.List < String > connectorIds; 
+        private java.util.List<String> connectorIds; 
         private Integer currentPage; 
         private String name; 
         private Integer pageSize; 
@@ -128,14 +133,17 @@ public class ListConnectorsRequest extends Request {
         /**
          * ConnectorIds.
          */
-        public Builder connectorIds(java.util.List < String > connectorIds) {
+        public Builder connectorIds(java.util.List<String> connectorIds) {
             this.putQueryParameter("ConnectorIds", connectorIds);
             this.connectorIds = connectorIds;
             return this;
         }
 
         /**
-         * CurrentPage.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -153,7 +161,10 @@ public class ListConnectorsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

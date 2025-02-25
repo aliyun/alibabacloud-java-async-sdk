@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListExcessiveDeviceRegistrationApplicationsResponseBody} extends {@link TeaModel}
  *
  * <p>ListExcessiveDeviceRegistrationApplicationsResponseBody</p>
  */
 public class ListExcessiveDeviceRegistrationApplicationsResponseBody extends TeaModel {
-    @NameInMap("Applications")
-    private java.util.List < Applications> applications;
+    @com.aliyun.core.annotation.NameInMap("Applications")
+    private java.util.List<Applications> applications;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalNum")
+    @com.aliyun.core.annotation.NameInMap("TotalNum")
     private Long totalNum;
 
     private ListExcessiveDeviceRegistrationApplicationsResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ListExcessiveDeviceRegistrationApplicationsResponseBody extends Tea
     /**
      * @return applications
      */
-    public java.util.List < Applications> getApplications() {
+    public java.util.List<Applications> getApplications() {
         return this.applications;
     }
 
@@ -57,14 +62,14 @@ public class ListExcessiveDeviceRegistrationApplicationsResponseBody extends Tea
     }
 
     public static final class Builder {
-        private java.util.List < Applications> applications; 
+        private java.util.List<Applications> applications; 
         private String requestId; 
         private Long totalNum; 
 
         /**
          * Applications.
          */
-        public Builder applications(java.util.List < Applications> applications) {
+        public Builder applications(java.util.List<Applications> applications) {
             this.applications = applications;
             return this;
         }
@@ -91,41 +96,47 @@ public class ListExcessiveDeviceRegistrationApplicationsResponseBody extends Tea
 
     } 
 
+    /**
+     * 
+     * {@link ListExcessiveDeviceRegistrationApplicationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListExcessiveDeviceRegistrationApplicationsResponseBody</p>
+     */
     public static class Applications extends TeaModel {
-        @NameInMap("ApplicationId")
+        @com.aliyun.core.annotation.NameInMap("ApplicationId")
         private String applicationId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Department")
+        @com.aliyun.core.annotation.NameInMap("Department")
         private String department;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DeviceTag")
+        @com.aliyun.core.annotation.NameInMap("DeviceTag")
         private String deviceTag;
 
-        @NameInMap("DeviceType")
+        @com.aliyun.core.annotation.NameInMap("DeviceType")
         private String deviceType;
 
-        @NameInMap("Hostname")
+        @com.aliyun.core.annotation.NameInMap("Hostname")
         private String hostname;
 
-        @NameInMap("IsUsed")
+        @com.aliyun.core.annotation.NameInMap("IsUsed")
         private Boolean isUsed;
 
-        @NameInMap("Mac")
+        @com.aliyun.core.annotation.NameInMap("Mac")
         private String mac;
 
-        @NameInMap("SaseUserId")
+        @com.aliyun.core.annotation.NameInMap("SaseUserId")
         private String saseUserId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Username")
+        @com.aliyun.core.annotation.NameInMap("Username")
         private String username;
 
         private Applications(Builder builder) {

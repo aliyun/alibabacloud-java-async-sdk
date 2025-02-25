@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MakeDoubleCallRequest} extends {@link RequestModel}
  *
  * <p>MakeDoubleCallRequest</p>
  */
 public class MakeDoubleCallRequest extends Request {
-    @Query
-    @NameInMap("AccountName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountName;
 
-    @Query
-    @NameInMap("BizData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizData")
     private String bizData;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("MemberPhone")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MemberPhone")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String memberPhone;
 
-    @Query
-    @NameInMap("OutboundCallNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutboundCallNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String outboundCallNumber;
 
-    @Query
-    @NameInMap("ServicerPhone")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServicerPhone")
     private String servicerPhone;
 
     private MakeDoubleCallRequest(Builder builder) {
@@ -128,7 +133,10 @@ public class MakeDoubleCallRequest extends Request {
         } 
 
         /**
-         * 账号名称
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -137,7 +145,7 @@ public class MakeDoubleCallRequest extends Request {
         }
 
         /**
-         * 业务携带数据（JsonString）
+         * BizData.
          */
         public Builder bizData(String bizData) {
             this.putQueryParameter("BizData", bizData);
@@ -146,7 +154,10 @@ public class MakeDoubleCallRequest extends Request {
         }
 
         /**
-         * 实例ID
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent_***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -155,7 +166,10 @@ public class MakeDoubleCallRequest extends Request {
         }
 
         /**
-         * 用户手机号
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1502123****</p>
          */
         public Builder memberPhone(String memberPhone) {
             this.putQueryParameter("MemberPhone", memberPhone);
@@ -164,7 +178,10 @@ public class MakeDoubleCallRequest extends Request {
         }
 
         /**
-         * 外呼主叫号码
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0571000****</p>
          */
         public Builder outboundCallNumber(String outboundCallNumber) {
             this.putQueryParameter("OutboundCallNumber", outboundCallNumber);
@@ -173,7 +190,7 @@ public class MakeDoubleCallRequest extends Request {
         }
 
         /**
-         * 坐席手机号（需要通过坐席手机呼叫才需要填写）
+         * ServicerPhone.
          */
         public Builder servicerPhone(String servicerPhone) {
             this.putQueryParameter("ServicerPhone", servicerPhone);

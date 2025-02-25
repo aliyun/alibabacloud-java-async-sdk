@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AccessToken  AccessTokenRequest
+     * @return AccessTokenResponse
+     */
     @Override
     public CompletableFuture<AccessTokenResponse> accessToken(AccessTokenRequest request) {
         try {
@@ -53,6 +57,64 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddDepartment  AddDepartmentRequest
+     * @return AddDepartmentResponse
+     */
+    @Override
+    public CompletableFuture<AddDepartmentResponse> addDepartment(AddDepartmentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AddDepartment").setMethod(HttpMethod.POST).setPathRegex("/department/v2/add").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddDepartmentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AddDepartmentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of AddEmployee  AddEmployeeRequest
+     * @return AddEmployeeResponse
+     */
+    @Override
+    public CompletableFuture<AddEmployeeResponse> addEmployee(AddEmployeeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AddEmployee").setMethod(HttpMethod.POST).setPathRegex("/employee/v2/add").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddEmployeeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AddEmployeeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of AddEmployeesToCustomRole  AddEmployeesToCustomRoleRequest
+     * @return AddEmployeesToCustomRoleResponse
+     */
+    @Override
+    public CompletableFuture<AddEmployeesToCustomRoleResponse> addEmployeesToCustomRole(AddEmployeesToCustomRoleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AddEmployeesToCustomRole").setMethod(HttpMethod.POST).setPathRegex("/role/v1/customRoleEmployees/add").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddEmployeesToCustomRoleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AddEmployeesToCustomRoleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of AddInvoiceEntity  AddInvoiceEntityRequest
+     * @return AddInvoiceEntityResponse
+     */
     @Override
     public CompletableFuture<AddInvoiceEntityResponse> addInvoiceEntity(AddInvoiceEntityRequest request) {
         try {
@@ -67,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddressGet  AddressGetRequest
+     * @return AddressGetResponse
+     */
     @Override
     public CompletableFuture<AddressGetResponse> addressGet(AddressGetRequest request) {
         try {
@@ -81,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AirportSearch  AirportSearchRequest
+     * @return AirportSearchResponse
+     */
     @Override
     public CompletableFuture<AirportSearchResponse> airportSearch(AirportSearchRequest request) {
         try {
@@ -95,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AllBaseCityInfoQuery  AllBaseCityInfoQueryRequest
+     * @return AllBaseCityInfoQueryResponse
+     */
     @Override
     public CompletableFuture<AllBaseCityInfoQueryResponse> allBaseCityInfoQuery(AllBaseCityInfoQueryRequest request) {
         try {
@@ -109,6 +183,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ApplyAdd  ApplyAddRequest
+     * @return ApplyAddResponse
+     */
     @Override
     public CompletableFuture<ApplyAddResponse> applyAdd(ApplyAddRequest request) {
         try {
@@ -123,6 +201,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ApplyApprove  ApplyApproveRequest
+     * @return ApplyApproveResponse
+     */
     @Override
     public CompletableFuture<ApplyApproveResponse> applyApprove(ApplyApproveRequest request) {
         try {
@@ -137,6 +219,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ApplyExternalNodeStatusUpdate  ApplyExternalNodeStatusUpdateRequest
+     * @return ApplyExternalNodeStatusUpdateResponse
+     */
+    @Override
+    public CompletableFuture<ApplyExternalNodeStatusUpdateResponse> applyExternalNodeStatusUpdate(ApplyExternalNodeStatusUpdateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ApplyExternalNodeStatusUpdate").setMethod(HttpMethod.PUT).setPathRegex("/apply/v1/external-nodes/action/status-update").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ApplyExternalNodeStatusUpdateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ApplyExternalNodeStatusUpdateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ApplyInvoiceTask  ApplyInvoiceTaskRequest
+     * @return ApplyInvoiceTaskResponse
+     */
     @Override
     public CompletableFuture<ApplyInvoiceTaskResponse> applyInvoiceTask(ApplyInvoiceTaskRequest request) {
         try {
@@ -151,6 +255,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ApplyListQuery  ApplyListQueryRequest
+     * @return ApplyListQueryResponse
+     */
     @Override
     public CompletableFuture<ApplyListQueryResponse> applyListQuery(ApplyListQueryRequest request) {
         try {
@@ -165,6 +273,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ApplyModify  ApplyModifyRequest
+     * @return ApplyModifyResponse
+     */
     @Override
     public CompletableFuture<ApplyModifyResponse> applyModify(ApplyModifyRequest request) {
         try {
@@ -179,6 +291,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ApplyQuery  ApplyQueryRequest
+     * @return ApplyQueryResponse
+     */
     @Override
     public CompletableFuture<ApplyQueryResponse> applyQuery(ApplyQueryRequest request) {
         try {
@@ -193,6 +309,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ApplyTripTaskExecute  ApplyTripTaskExecuteRequest
+     * @return ApplyTripTaskExecuteResponse
+     */
+    @Override
+    public CompletableFuture<ApplyTripTaskExecuteResponse> applyTripTaskExecute(ApplyTripTaskExecuteRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ApplyTripTaskExecute").setMethod(HttpMethod.POST).setPathRegex("/apply/v1/trip-task/action/execute").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ApplyTripTaskExecuteResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ApplyTripTaskExecuteResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of BaseCityInfoSearch  BaseCityInfoSearchRequest
+     * @return BaseCityInfoSearchResponse
+     */
     @Override
     public CompletableFuture<BaseCityInfoSearchResponse> baseCityInfoSearch(BaseCityInfoSearchRequest request) {
         try {
@@ -207,6 +345,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BtripBillInfoAdjust  BtripBillInfoAdjustRequest
+     * @return BtripBillInfoAdjustResponse
+     */
     @Override
     public CompletableFuture<BtripBillInfoAdjustResponse> btripBillInfoAdjust(BtripBillInfoAdjustRequest request) {
         try {
@@ -221,6 +363,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CarApplyAdd  CarApplyAddRequest
+     * @return CarApplyAddResponse
+     */
     @Override
     public CompletableFuture<CarApplyAddResponse> carApplyAdd(CarApplyAddRequest request) {
         try {
@@ -235,6 +381,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CarApplyModify  CarApplyModifyRequest
+     * @return CarApplyModifyResponse
+     */
     @Override
     public CompletableFuture<CarApplyModifyResponse> carApplyModify(CarApplyModifyRequest request) {
         try {
@@ -249,6 +399,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CarApplyQuery  CarApplyQueryRequest
+     * @return CarApplyQueryResponse
+     */
     @Override
     public CompletableFuture<CarApplyQueryResponse> carApplyQuery(CarApplyQueryRequest request) {
         try {
@@ -263,6 +417,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CarBillSettlementQuery  CarBillSettlementQueryRequest
+     * @return CarBillSettlementQueryResponse
+     */
     @Override
     public CompletableFuture<CarBillSettlementQueryResponse> carBillSettlementQuery(CarBillSettlementQueryRequest request) {
         try {
@@ -277,6 +435,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CarOrderListQuery  CarOrderListQueryRequest
+     * @return CarOrderListQueryResponse
+     */
     @Override
     public CompletableFuture<CarOrderListQueryResponse> carOrderListQuery(CarOrderListQueryRequest request) {
         try {
@@ -291,6 +453,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CarOrderQuery  CarOrderQueryRequest
+     * @return CarOrderQueryResponse
+     */
     @Override
     public CompletableFuture<CarOrderQueryResponse> carOrderQuery(CarOrderQueryRequest request) {
         try {
@@ -305,6 +471,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CarSceneQuery  CarSceneQueryRequest
+     * @return CarSceneQueryResponse
+     */
     @Override
     public CompletableFuture<CarSceneQueryResponse> carSceneQuery(CarSceneQueryRequest request) {
         try {
@@ -319,6 +489,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ChannelCorpCreate  ChannelCorpCreateRequest
+     * @return ChannelCorpCreateResponse
+     */
+    @Override
+    public CompletableFuture<ChannelCorpCreateResponse> channelCorpCreate(ChannelCorpCreateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ChannelCorpCreate").setMethod(HttpMethod.POST).setPathRegex("/corp/v1/channelCorps").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ChannelCorpCreateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ChannelCorpCreateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CitySearch  CitySearchRequest
+     * @return CitySearchResponse
+     */
     @Override
     public CompletableFuture<CitySearchResponse> citySearch(CitySearchRequest request) {
         try {
@@ -333,6 +525,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CommonApplyQuery  CommonApplyQueryRequest
+     * @return CommonApplyQueryResponse
+     */
     @Override
     public CompletableFuture<CommonApplyQueryResponse> commonApplyQuery(CommonApplyQueryRequest request) {
         try {
@@ -347,6 +543,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CommonApplySync  CommonApplySyncRequest
+     * @return CommonApplySyncResponse
+     */
     @Override
     public CompletableFuture<CommonApplySyncResponse> commonApplySync(CommonApplySyncRequest request) {
         try {
@@ -361,6 +561,82 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CooperatorFlightBillSettlementQuery  CooperatorFlightBillSettlementQueryRequest
+     * @return CooperatorFlightBillSettlementQueryResponse
+     */
+    @Override
+    public CompletableFuture<CooperatorFlightBillSettlementQueryResponse> cooperatorFlightBillSettlementQuery(CooperatorFlightBillSettlementQueryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CooperatorFlightBillSettlementQuery").setMethod(HttpMethod.GET).setPathRegex("/cooperator-flight/v1/bill-settlement").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CooperatorFlightBillSettlementQueryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CooperatorFlightBillSettlementQueryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CooperatorHotelBillSettlementQuery  CooperatorHotelBillSettlementQueryRequest
+     * @return CooperatorHotelBillSettlementQueryResponse
+     */
+    @Override
+    public CompletableFuture<CooperatorHotelBillSettlementQueryResponse> cooperatorHotelBillSettlementQuery(CooperatorHotelBillSettlementQueryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CooperatorHotelBillSettlementQuery").setMethod(HttpMethod.GET).setPathRegex("/cooperator-hotel/v1/bill-settlement").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CooperatorHotelBillSettlementQueryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CooperatorHotelBillSettlementQueryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CooperatorHotelEventPush  CooperatorHotelEventPushRequest
+     * @return CooperatorHotelEventPushResponse
+     */
+    @Override
+    public CompletableFuture<CooperatorHotelEventPushResponse> cooperatorHotelEventPush(CooperatorHotelEventPushRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CooperatorHotelEventPush").setMethod(HttpMethod.POST).setPathRegex("/coop-hotel/v1/orders/events").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CooperatorHotelEventPushResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CooperatorHotelEventPushResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CooperatorSyncPayStatus  CooperatorSyncPayStatusRequest
+     * @return CooperatorSyncPayStatusResponse
+     */
+    @Override
+    public CompletableFuture<CooperatorSyncPayStatusResponse> cooperatorSyncPayStatus(CooperatorSyncPayStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CooperatorSyncPayStatus").setMethod(HttpMethod.POST).setPathRegex("/coop-pay/v1/cashiers/status").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CooperatorSyncPayStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CooperatorSyncPayStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CorpAuthLinkInfoQuery  CorpAuthLinkInfoQueryRequest
+     * @return CorpAuthLinkInfoQueryResponse
+     */
     @Override
     public CompletableFuture<CorpAuthLinkInfoQueryResponse> corpAuthLinkInfoQuery(CorpAuthLinkInfoQueryRequest request) {
         try {
@@ -375,6 +651,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CorpToken  CorpTokenRequest
+     * @return CorpTokenResponse
+     */
     @Override
     public CompletableFuture<CorpTokenResponse> corpToken(CorpTokenRequest request) {
         try {
@@ -389,6 +669,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CostCenterDelete  CostCenterDeleteRequest
+     * @return CostCenterDeleteResponse
+     */
     @Override
     public CompletableFuture<CostCenterDeleteResponse> costCenterDelete(CostCenterDeleteRequest request) {
         try {
@@ -403,6 +687,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CostCenterModify  CostCenterModifyRequest
+     * @return CostCenterModifyResponse
+     */
     @Override
     public CompletableFuture<CostCenterModifyResponse> costCenterModify(CostCenterModifyRequest request) {
         try {
@@ -417,6 +705,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CostCenterQuery  CostCenterQueryRequest
+     * @return CostCenterQueryResponse
+     */
     @Override
     public CompletableFuture<CostCenterQueryResponse> costCenterQuery(CostCenterQueryRequest request) {
         try {
@@ -431,6 +723,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CostCenterSave  CostCenterSaveRequest
+     * @return CostCenterSaveResponse
+     */
     @Override
     public CompletableFuture<CostCenterSaveResponse> costCenterSave(CostCenterSaveRequest request) {
         try {
@@ -445,6 +741,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateCustomRole  CreateCustomRoleRequest
+     * @return CreateCustomRoleResponse
+     */
+    @Override
+    public CompletableFuture<CreateCustomRoleResponse> createCustomRole(CreateCustomRoleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateCustomRole").setMethod(HttpMethod.POST).setPathRegex("/role/v1/customRoles/create").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateCustomRoleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateCustomRoleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateSubCorp  CreateSubCorpRequest
+     * @return CreateSubCorpResponse
+     */
     @Override
     public CompletableFuture<CreateSubCorpResponse> createSubCorp(CreateSubCorpRequest request) {
         try {
@@ -459,6 +777,64 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteCustomRole  DeleteCustomRoleRequest
+     * @return DeleteCustomRoleResponse
+     */
+    @Override
+    public CompletableFuture<DeleteCustomRoleResponse> deleteCustomRole(DeleteCustomRoleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteCustomRole").setMethod(HttpMethod.POST).setPathRegex("/role/v1/customRoles/delete").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteCustomRoleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteCustomRoleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteDepartment  DeleteDepartmentRequest
+     * @return DeleteDepartmentResponse
+     */
+    @Override
+    public CompletableFuture<DeleteDepartmentResponse> deleteDepartment(DeleteDepartmentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteDepartment").setMethod(HttpMethod.POST).setPathRegex("/department/v2/delete").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteDepartmentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteDepartmentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteEmployeesFromCustomRole  DeleteEmployeesFromCustomRoleRequest
+     * @return DeleteEmployeesFromCustomRoleResponse
+     */
+    @Override
+    public CompletableFuture<DeleteEmployeesFromCustomRoleResponse> deleteEmployeesFromCustomRole(DeleteEmployeesFromCustomRoleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteEmployeesFromCustomRole").setMethod(HttpMethod.POST).setPathRegex("/role/v1/customRoleEmployees/delete").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteEmployeesFromCustomRoleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteEmployeesFromCustomRoleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteInvoiceEntity  DeleteInvoiceEntityRequest
+     * @return DeleteInvoiceEntityResponse
+     */
     @Override
     public CompletableFuture<DeleteInvoiceEntityResponse> deleteInvoiceEntity(DeleteInvoiceEntityRequest request) {
         try {
@@ -473,6 +849,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DepartmentSave  DepartmentSaveRequest
+     * @return DepartmentSaveResponse
+     */
     @Override
     public CompletableFuture<DepartmentSaveResponse> departmentSave(DepartmentSaveRequest request) {
         try {
@@ -487,6 +867,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ElectronicItineraryBatchApply  ElectronicItineraryBatchApplyRequest
+     * @return ElectronicItineraryBatchApplyResponse
+     */
+    @Override
+    public CompletableFuture<ElectronicItineraryBatchApplyResponse> electronicItineraryBatchApply(ElectronicItineraryBatchApplyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ElectronicItineraryBatchApply").setMethod(HttpMethod.POST).setPathRegex("/invoice/v1/apply-itinerary-batch-task").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ElectronicItineraryBatchApplyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ElectronicItineraryBatchApplyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ElectronicItineraryGetApplyResult  ElectronicItineraryGetApplyResultRequest
+     * @return ElectronicItineraryGetApplyResultResponse
+     */
+    @Override
+    public CompletableFuture<ElectronicItineraryGetApplyResultResponse> electronicItineraryGetApplyResult(ElectronicItineraryGetApplyResultRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ElectronicItineraryGetApplyResult").setMethod(HttpMethod.GET).setPathRegex("/invoice/v1/get-itinerary-batch-task").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ElectronicItineraryGetApplyResultResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ElectronicItineraryGetApplyResultResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EntityAdd  EntityAddRequest
+     * @return EntityAddResponse
+     */
     @Override
     public CompletableFuture<EntityAddResponse> entityAdd(EntityAddRequest request) {
         try {
@@ -501,6 +921,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EntityDelete  EntityDeleteRequest
+     * @return EntityDeleteResponse
+     */
     @Override
     public CompletableFuture<EntityDeleteResponse> entityDelete(EntityDeleteRequest request) {
         try {
@@ -515,6 +939,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EntitySet  EntitySetRequest
+     * @return EntitySetResponse
+     */
     @Override
     public CompletableFuture<EntitySetResponse> entitySet(EntitySetRequest request) {
         try {
@@ -529,6 +957,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EstimatedPriceQuery  EstimatedPriceQueryRequest
+     * @return EstimatedPriceQueryResponse
+     */
     @Override
     public CompletableFuture<EstimatedPriceQueryResponse> estimatedPriceQuery(EstimatedPriceQueryRequest request) {
         try {
@@ -543,6 +975,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExceedApplySync  ExceedApplySyncRequest
+     * @return ExceedApplySyncResponse
+     */
     @Override
     public CompletableFuture<ExceedApplySyncResponse> exceedApplySync(ExceedApplySyncRequest request) {
         try {
@@ -557,6 +993,82 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExternalUserAdd  ExternalUserAddRequest
+     * @return ExternalUserAddResponse
+     */
+    @Override
+    public CompletableFuture<ExternalUserAddResponse> externalUserAdd(ExternalUserAddRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ExternalUserAdd").setMethod(HttpMethod.POST).setPathRegex("/user/v1/externalUsers").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ExternalUserAddResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ExternalUserAddResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ExternalUserDelete  ExternalUserDeleteRequest
+     * @return ExternalUserDeleteResponse
+     */
+    @Override
+    public CompletableFuture<ExternalUserDeleteResponse> externalUserDelete(ExternalUserDeleteRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ExternalUserDelete").setMethod(HttpMethod.DELETE).setPathRegex("/user/v1/externalUsers/{external_user_id}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ExternalUserDeleteResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ExternalUserDeleteResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ExternalUserQuery  ExternalUserQueryRequest
+     * @return ExternalUserQueryResponse
+     */
+    @Override
+    public CompletableFuture<ExternalUserQueryResponse> externalUserQuery(ExternalUserQueryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ExternalUserQuery").setMethod(HttpMethod.GET).setPathRegex("/user/v1/externalUsers/{external_user_id}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ExternalUserQueryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ExternalUserQueryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ExternalUserUpdate  ExternalUserUpdateRequest
+     * @return ExternalUserUpdateResponse
+     */
+    @Override
+    public CompletableFuture<ExternalUserUpdateResponse> externalUserUpdate(ExternalUserUpdateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ExternalUserUpdate").setMethod(HttpMethod.PUT).setPathRegex("/user/v1/externalUsers/{external_user_id}").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ExternalUserUpdateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ExternalUserUpdateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of FlightBillSettlementQuery  FlightBillSettlementQueryRequest
+     * @return FlightBillSettlementQueryResponse
+     */
     @Override
     public CompletableFuture<FlightBillSettlementQueryResponse> flightBillSettlementQuery(FlightBillSettlementQueryRequest request) {
         try {
@@ -571,6 +1083,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FlightCancelOrder  FlightCancelOrderRequest
+     * @return FlightCancelOrderResponse
+     */
     @Override
     public CompletableFuture<FlightCancelOrderResponse> flightCancelOrder(FlightCancelOrderRequest request) {
         try {
@@ -585,6 +1101,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FlightCancelOrderV2  FlightCancelOrderV2Request
+     * @return FlightCancelOrderV2Response
+     */
     @Override
     public CompletableFuture<FlightCancelOrderV2Response> flightCancelOrderV2(FlightCancelOrderV2Request request) {
         try {
@@ -599,6 +1119,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FlightCreateOrder  FlightCreateOrderRequest
+     * @return FlightCreateOrderResponse
+     */
     @Override
     public CompletableFuture<FlightCreateOrderResponse> flightCreateOrder(FlightCreateOrderRequest request) {
         try {
@@ -613,6 +1137,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FlightCreateOrderV2  FlightCreateOrderV2Request
+     * @return FlightCreateOrderV2Response
+     */
     @Override
     public CompletableFuture<FlightCreateOrderV2Response> flightCreateOrderV2(FlightCreateOrderV2Request request) {
         try {
@@ -627,6 +1155,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FlightExceedApplyQuery  FlightExceedApplyQueryRequest
+     * @return FlightExceedApplyQueryResponse
+     */
     @Override
     public CompletableFuture<FlightExceedApplyQueryResponse> flightExceedApplyQuery(FlightExceedApplyQueryRequest request) {
         try {
@@ -641,6 +1173,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FlightItineraryScanQuery  FlightItineraryScanQueryRequest
+     * @return FlightItineraryScanQueryResponse
+     */
     @Override
     public CompletableFuture<FlightItineraryScanQueryResponse> flightItineraryScanQuery(FlightItineraryScanQueryRequest request) {
         try {
@@ -655,6 +1191,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FlightListingSearch  FlightListingSearchRequest
+     * @return FlightListingSearchResponse
+     */
     @Override
     public CompletableFuture<FlightListingSearchResponse> flightListingSearch(FlightListingSearchRequest request) {
         try {
@@ -669,6 +1209,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FlightListingSearchV2  FlightListingSearchV2Request
+     * @return FlightListingSearchV2Response
+     */
     @Override
     public CompletableFuture<FlightListingSearchV2Response> flightListingSearchV2(FlightListingSearchV2Request request) {
         try {
@@ -683,6 +1227,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FlightModifyApplyV2  FlightModifyApplyV2Request
+     * @return FlightModifyApplyV2Response
+     */
     @Override
     public CompletableFuture<FlightModifyApplyV2Response> flightModifyApplyV2(FlightModifyApplyV2Request request) {
         try {
@@ -697,6 +1245,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FlightModifyCancelV2  FlightModifyCancelV2Request
+     * @return FlightModifyCancelV2Response
+     */
     @Override
     public CompletableFuture<FlightModifyCancelV2Response> flightModifyCancelV2(FlightModifyCancelV2Request request) {
         try {
@@ -711,6 +1263,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FlightModifyListingSearchV2  FlightModifyListingSearchV2Request
+     * @return FlightModifyListingSearchV2Response
+     */
     @Override
     public CompletableFuture<FlightModifyListingSearchV2Response> flightModifyListingSearchV2(FlightModifyListingSearchV2Request request) {
         try {
@@ -725,6 +1281,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FlightModifyOrderDetailV2  FlightModifyOrderDetailV2Request
+     * @return FlightModifyOrderDetailV2Response
+     */
     @Override
     public CompletableFuture<FlightModifyOrderDetailV2Response> flightModifyOrderDetailV2(FlightModifyOrderDetailV2Request request) {
         try {
@@ -739,6 +1299,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FlightModifyOtaSearchV2  FlightModifyOtaSearchV2Request
+     * @return FlightModifyOtaSearchV2Response
+     */
     @Override
     public CompletableFuture<FlightModifyOtaSearchV2Response> flightModifyOtaSearchV2(FlightModifyOtaSearchV2Request request) {
         try {
@@ -753,6 +1317,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FlightModifyPayV2  FlightModifyPayV2Request
+     * @return FlightModifyPayV2Response
+     */
     @Override
     public CompletableFuture<FlightModifyPayV2Response> flightModifyPayV2(FlightModifyPayV2Request request) {
         try {
@@ -767,6 +1335,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FlightOrderDetailInfo  FlightOrderDetailInfoRequest
+     * @return FlightOrderDetailInfoResponse
+     */
     @Override
     public CompletableFuture<FlightOrderDetailInfoResponse> flightOrderDetailInfo(FlightOrderDetailInfoRequest request) {
         try {
@@ -781,6 +1353,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FlightOrderDetailV2  FlightOrderDetailV2Request
+     * @return FlightOrderDetailV2Response
+     */
     @Override
     public CompletableFuture<FlightOrderDetailV2Response> flightOrderDetailV2(FlightOrderDetailV2Request request) {
         try {
@@ -795,6 +1371,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FlightOrderListQuery  FlightOrderListQueryRequest
+     * @return FlightOrderListQueryResponse
+     */
     @Override
     public CompletableFuture<FlightOrderListQueryResponse> flightOrderListQuery(FlightOrderListQueryRequest request) {
         try {
@@ -809,6 +1389,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FlightOrderListQueryV2  FlightOrderListQueryV2Request
+     * @return FlightOrderListQueryV2Response
+     */
+    @Override
+    public CompletableFuture<FlightOrderListQueryV2Response> flightOrderListQueryV2(FlightOrderListQueryV2Request request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("FlightOrderListQueryV2").setMethod(HttpMethod.GET).setPathRegex("/open/v2/Flight-order-list-query").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(FlightOrderListQueryV2Response.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<FlightOrderListQueryV2Response> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of FlightOrderQuery  FlightOrderQueryRequest
+     * @return FlightOrderQueryResponse
+     */
     @Override
     public CompletableFuture<FlightOrderQueryResponse> flightOrderQuery(FlightOrderQueryRequest request) {
         try {
@@ -823,6 +1425,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FlightOtaItemDetail  FlightOtaItemDetailRequest
+     * @return FlightOtaItemDetailResponse
+     */
     @Override
     public CompletableFuture<FlightOtaItemDetailResponse> flightOtaItemDetail(FlightOtaItemDetailRequest request) {
         try {
@@ -837,6 +1443,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FlightOtaSearch  FlightOtaSearchRequest
+     * @return FlightOtaSearchResponse
+     */
     @Override
     public CompletableFuture<FlightOtaSearchResponse> flightOtaSearch(FlightOtaSearchRequest request) {
         try {
@@ -851,6 +1461,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FlightOtaSearchV2  FlightOtaSearchV2Request
+     * @return FlightOtaSearchV2Response
+     */
     @Override
     public CompletableFuture<FlightOtaSearchV2Response> flightOtaSearchV2(FlightOtaSearchV2Request request) {
         try {
@@ -865,6 +1479,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FlightPayOrder  FlightPayOrderRequest
+     * @return FlightPayOrderResponse
+     */
     @Override
     public CompletableFuture<FlightPayOrderResponse> flightPayOrder(FlightPayOrderRequest request) {
         try {
@@ -879,6 +1497,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FlightPayOrderV2  FlightPayOrderV2Request
+     * @return FlightPayOrderV2Response
+     */
     @Override
     public CompletableFuture<FlightPayOrderV2Response> flightPayOrderV2(FlightPayOrderV2Request request) {
         try {
@@ -893,6 +1515,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FlightRefundApply  FlightRefundApplyRequest
+     * @return FlightRefundApplyResponse
+     */
     @Override
     public CompletableFuture<FlightRefundApplyResponse> flightRefundApply(FlightRefundApplyRequest request) {
         try {
@@ -907,6 +1533,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FlightRefundApplyV2  FlightRefundApplyV2Request
+     * @return FlightRefundApplyV2Response
+     */
     @Override
     public CompletableFuture<FlightRefundApplyV2Response> flightRefundApplyV2(FlightRefundApplyV2Request request) {
         try {
@@ -921,6 +1551,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FlightRefundDetail  FlightRefundDetailRequest
+     * @return FlightRefundDetailResponse
+     */
     @Override
     public CompletableFuture<FlightRefundDetailResponse> flightRefundDetail(FlightRefundDetailRequest request) {
         try {
@@ -935,6 +1569,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FlightRefundDetailV2  FlightRefundDetailV2Request
+     * @return FlightRefundDetailV2Response
+     */
     @Override
     public CompletableFuture<FlightRefundDetailV2Response> flightRefundDetailV2(FlightRefundDetailV2Request request) {
         try {
@@ -949,6 +1587,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FlightRefundPreCal  FlightRefundPreCalRequest
+     * @return FlightRefundPreCalResponse
+     */
     @Override
     public CompletableFuture<FlightRefundPreCalResponse> flightRefundPreCal(FlightRefundPreCalRequest request) {
         try {
@@ -963,6 +1605,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FlightRefundPreCalV2  FlightRefundPreCalV2Request
+     * @return FlightRefundPreCalV2Response
+     */
     @Override
     public CompletableFuture<FlightRefundPreCalV2Response> flightRefundPreCalV2(FlightRefundPreCalV2Request request) {
         try {
@@ -977,6 +1623,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FlightSearchList  FlightSearchListRequest
+     * @return FlightSearchListResponse
+     */
     @Override
     public CompletableFuture<FlightSearchListResponse> flightSearchList(FlightSearchListRequest request) {
         try {
@@ -991,6 +1641,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FuPointBillSettlementQuery  FuPointBillSettlementQueryRequest
+     * @return FuPointBillSettlementQueryResponse
+     */
+    @Override
+    public CompletableFuture<FuPointBillSettlementQueryResponse> fuPointBillSettlementQuery(FuPointBillSettlementQueryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("FuPointBillSettlementQuery").setMethod(HttpMethod.GET).setPathRegex("/fupoint/v1/bill-settlement").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(FuPointBillSettlementQueryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<FuPointBillSettlementQueryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GroupCorpToken  GroupCorpTokenRequest
+     * @return GroupCorpTokenResponse
+     */
     @Override
     public CompletableFuture<GroupCorpTokenResponse> groupCorpToken(GroupCorpTokenRequest request) {
         try {
@@ -1005,6 +1677,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GroupDepartSave  GroupDepartSaveRequest
+     * @return GroupDepartSaveResponse
+     */
     @Override
     public CompletableFuture<GroupDepartSaveResponse> groupDepartSave(GroupDepartSaveRequest request) {
         try {
@@ -1019,6 +1695,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GroupUserSave  GroupUserSaveRequest
+     * @return GroupUserSaveResponse
+     */
     @Override
     public CompletableFuture<GroupUserSaveResponse> groupUserSave(GroupUserSaveRequest request) {
         try {
@@ -1033,6 +1713,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of HotelAskingPrice  HotelAskingPriceRequest
+     * @return HotelAskingPriceResponse
+     */
     @Override
     public CompletableFuture<HotelAskingPriceResponse> hotelAskingPrice(HotelAskingPriceRequest request) {
         try {
@@ -1047,6 +1731,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of HotelBillSettlementQuery  HotelBillSettlementQueryRequest
+     * @return HotelBillSettlementQueryResponse
+     */
     @Override
     public CompletableFuture<HotelBillSettlementQueryResponse> hotelBillSettlementQuery(HotelBillSettlementQueryRequest request) {
         try {
@@ -1061,6 +1749,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of HotelCityCodeList  HotelCityCodeListRequest
+     * @return HotelCityCodeListResponse
+     */
     @Override
     public CompletableFuture<HotelCityCodeListResponse> hotelCityCodeList(HotelCityCodeListRequest request) {
         try {
@@ -1075,6 +1767,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of HotelExceedApplyQuery  HotelExceedApplyQueryRequest
+     * @return HotelExceedApplyQueryResponse
+     */
     @Override
     public CompletableFuture<HotelExceedApplyQueryResponse> hotelExceedApplyQuery(HotelExceedApplyQueryRequest request) {
         try {
@@ -1089,6 +1785,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of HotelGoodsQuery  HotelGoodsQueryRequest
+     * @return HotelGoodsQueryResponse
+     */
     @Override
     public CompletableFuture<HotelGoodsQueryResponse> hotelGoodsQuery(HotelGoodsQueryRequest request) {
         try {
@@ -1103,6 +1803,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of HotelIndexInfo  HotelIndexInfoRequest
+     * @return HotelIndexInfoResponse
+     */
     @Override
     public CompletableFuture<HotelIndexInfoResponse> hotelIndexInfo(HotelIndexInfoRequest request) {
         try {
@@ -1117,6 +1821,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of HotelOrderCancel  HotelOrderCancelRequest
+     * @return HotelOrderCancelResponse
+     */
     @Override
     public CompletableFuture<HotelOrderCancelResponse> hotelOrderCancel(HotelOrderCancelRequest request) {
         try {
@@ -1131,6 +1839,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of HotelOrderChangeApply  HotelOrderChangeApplyRequest
+     * @return HotelOrderChangeApplyResponse
+     */
+    @Override
+    public CompletableFuture<HotelOrderChangeApplyResponse> hotelOrderChangeApply(HotelOrderChangeApplyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("HotelOrderChangeApply").setMethod(HttpMethod.POST).setPathRegex("/dtb-hotel/v1/orders/action/change/apply").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(HotelOrderChangeApplyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<HotelOrderChangeApplyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of HotelOrderChangeDetail  HotelOrderChangeDetailRequest
+     * @return HotelOrderChangeDetailResponse
+     */
+    @Override
+    public CompletableFuture<HotelOrderChangeDetailResponse> hotelOrderChangeDetail(HotelOrderChangeDetailRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("HotelOrderChangeDetail").setMethod(HttpMethod.POST).setPathRegex("/dtb-hotel/v1/orders/action/change/detail").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(HotelOrderChangeDetailResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<HotelOrderChangeDetailResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of HotelOrderCreate  HotelOrderCreateRequest
+     * @return HotelOrderCreateResponse
+     */
     @Override
     public CompletableFuture<HotelOrderCreateResponse> hotelOrderCreate(HotelOrderCreateRequest request) {
         try {
@@ -1145,6 +1893,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of HotelOrderDetailInfo  HotelOrderDetailInfoRequest
+     * @return HotelOrderDetailInfoResponse
+     */
     @Override
     public CompletableFuture<HotelOrderDetailInfoResponse> hotelOrderDetailInfo(HotelOrderDetailInfoRequest request) {
         try {
@@ -1159,6 +1911,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of HotelOrderInfoQuery  HotelOrderInfoQueryRequest
+     * @return HotelOrderInfoQueryResponse
+     */
+    @Override
+    public CompletableFuture<HotelOrderInfoQueryResponse> hotelOrderInfoQuery(HotelOrderInfoQueryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("HotelOrderInfoQuery").setMethod(HttpMethod.GET).setPathRegex("/order/v1/hotelOrders/{order_id}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(HotelOrderInfoQueryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<HotelOrderInfoQueryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of HotelOrderListQuery  HotelOrderListQueryRequest
+     * @return HotelOrderListQueryResponse
+     */
     @Override
     public CompletableFuture<HotelOrderListQueryResponse> hotelOrderListQuery(HotelOrderListQueryRequest request) {
         try {
@@ -1173,6 +1947,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of HotelOrderPay  HotelOrderPayRequest
+     * @return HotelOrderPayResponse
+     */
     @Override
     public CompletableFuture<HotelOrderPayResponse> hotelOrderPay(HotelOrderPayRequest request) {
         try {
@@ -1187,6 +1965,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of HotelOrderPreValidate  HotelOrderPreValidateRequest
+     * @return HotelOrderPreValidateResponse
+     */
     @Override
     public CompletableFuture<HotelOrderPreValidateResponse> hotelOrderPreValidate(HotelOrderPreValidateRequest request) {
         try {
@@ -1201,6 +1983,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of HotelOrderQuery  HotelOrderQueryRequest
+     * @return HotelOrderQueryResponse
+     */
     @Override
     public CompletableFuture<HotelOrderQueryResponse> hotelOrderQuery(HotelOrderQueryRequest request) {
         try {
@@ -1215,6 +2001,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of HotelPricePull  HotelPricePullRequest
+     * @return HotelPricePullResponse
+     */
     @Override
     public CompletableFuture<HotelPricePullResponse> hotelPricePull(HotelPricePullRequest request) {
         try {
@@ -1229,6 +2019,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of HotelRoomInfo  HotelRoomInfoRequest
+     * @return HotelRoomInfoResponse
+     */
     @Override
     public CompletableFuture<HotelRoomInfoResponse> hotelRoomInfo(HotelRoomInfoRequest request) {
         try {
@@ -1243,6 +2037,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of HotelSearch  HotelSearchRequest
+     * @return HotelSearchResponse
+     */
     @Override
     public CompletableFuture<HotelSearchResponse> hotelSearch(HotelSearchRequest request) {
         try {
@@ -1257,6 +2055,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of HotelStaticInfo  HotelStaticInfoRequest
+     * @return HotelStaticInfoResponse
+     */
     @Override
     public CompletableFuture<HotelStaticInfoResponse> hotelStaticInfo(HotelStaticInfoRequest request) {
         try {
@@ -1271,6 +2073,64 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of HotelSuggestV2  HotelSuggestV2Request
+     * @return HotelSuggestV2Response
+     */
+    @Override
+    public CompletableFuture<HotelSuggestV2Response> hotelSuggestV2(HotelSuggestV2Request request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("HotelSuggestV2").setMethod(HttpMethod.GET).setPathRegex("/dtb-hotel/v2/suggest-infos").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(HotelSuggestV2Response.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<HotelSuggestV2Response> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of IFlightOrderDetailQuery  IFlightOrderDetailQueryRequest
+     * @return IFlightOrderDetailQueryResponse
+     */
+    @Override
+    public CompletableFuture<IFlightOrderDetailQueryResponse> iFlightOrderDetailQuery(IFlightOrderDetailQueryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("IFlightOrderDetailQuery").setMethod(HttpMethod.GET).setPathRegex("/open/v1/intlFlight-order-detail-query").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(IFlightOrderDetailQueryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<IFlightOrderDetailQueryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of IFlightOrderListQuery  IFlightOrderListQueryRequest
+     * @return IFlightOrderListQueryResponse
+     */
+    @Override
+    public CompletableFuture<IFlightOrderListQueryResponse> iFlightOrderListQuery(IFlightOrderListQueryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("IFlightOrderListQuery").setMethod(HttpMethod.GET).setPathRegex("/open/v1/intlFlight-order-list-query").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(IFlightOrderListQueryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<IFlightOrderListQueryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of IeFlightBillSettlementQuery  IeFlightBillSettlementQueryRequest
+     * @return IeFlightBillSettlementQueryResponse
+     */
     @Override
     public CompletableFuture<IeFlightBillSettlementQueryResponse> ieFlightBillSettlementQuery(IeFlightBillSettlementQueryRequest request) {
         try {
@@ -1285,6 +2145,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of IeHotelBillSettlementQuery  IeHotelBillSettlementQueryRequest
+     * @return IeHotelBillSettlementQueryResponse
+     */
     @Override
     public CompletableFuture<IeHotelBillSettlementQueryResponse> ieHotelBillSettlementQuery(IeHotelBillSettlementQueryRequest request) {
         try {
@@ -1299,6 +2163,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InsInvoiceScanQuery  InsInvoiceScanQueryRequest
+     * @return InsInvoiceScanQueryResponse
+     */
     @Override
     public CompletableFuture<InsInvoiceScanQueryResponse> insInvoiceScanQuery(InsInvoiceScanQueryRequest request) {
         try {
@@ -1313,6 +2181,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InsureOrderApply  InsureOrderApplyRequest
+     * @return InsureOrderApplyResponse
+     */
     @Override
     public CompletableFuture<InsureOrderApplyResponse> insureOrderApply(InsureOrderApplyRequest request) {
         try {
@@ -1327,6 +2199,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InsureOrderCancel  InsureOrderCancelRequest
+     * @return InsureOrderCancelResponse
+     */
     @Override
     public CompletableFuture<InsureOrderCancelResponse> insureOrderCancel(InsureOrderCancelRequest request) {
         try {
@@ -1341,6 +2217,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InsureOrderCreate  InsureOrderCreateRequest
+     * @return InsureOrderCreateResponse
+     */
     @Override
     public CompletableFuture<InsureOrderCreateResponse> insureOrderCreate(InsureOrderCreateRequest request) {
         try {
@@ -1355,6 +2235,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InsureOrderDetail  InsureOrderDetailRequest
+     * @return InsureOrderDetailResponse
+     */
     @Override
     public CompletableFuture<InsureOrderDetailResponse> insureOrderDetail(InsureOrderDetailRequest request) {
         try {
@@ -1369,6 +2253,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InsureOrderPay  InsureOrderPayRequest
+     * @return InsureOrderPayResponse
+     */
     @Override
     public CompletableFuture<InsureOrderPayResponse> insureOrderPay(InsureOrderPayRequest request) {
         try {
@@ -1383,6 +2271,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InsureOrderRefund  InsureOrderRefundRequest
+     * @return InsureOrderRefundResponse
+     */
     @Override
     public CompletableFuture<InsureOrderRefundResponse> insureOrderRefund(InsureOrderRefundRequest request) {
         try {
@@ -1397,6 +2289,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InsureOrderUrlDetail  InsureOrderUrlDetailRequest
+     * @return InsureOrderUrlDetailResponse
+     */
     @Override
     public CompletableFuture<InsureOrderUrlDetailResponse> insureOrderUrlDetail(InsureOrderUrlDetailRequest request) {
         try {
@@ -1411,6 +2307,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InsureRefundDetail  InsureRefundDetailRequest
+     * @return InsureRefundDetailResponse
+     */
     @Override
     public CompletableFuture<InsureRefundDetailResponse> insureRefundDetail(InsureRefundDetailRequest request) {
         try {
@@ -1425,6 +2325,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of IntlFlightCreateOrder  IntlFlightCreateOrderRequest
+     * @return IntlFlightCreateOrderResponse
+     */
+    @Override
+    public CompletableFuture<IntlFlightCreateOrderResponse> intlFlightCreateOrder(IntlFlightCreateOrderRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("IntlFlightCreateOrder").setMethod(HttpMethod.GET).setPathRegex("/intl-flight/v1/order/action/create").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(IntlFlightCreateOrderResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<IntlFlightCreateOrderResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of IntlFlightInventoryPriceCheck  IntlFlightInventoryPriceCheckRequest
+     * @return IntlFlightInventoryPriceCheckResponse
+     */
+    @Override
+    public CompletableFuture<IntlFlightInventoryPriceCheckResponse> intlFlightInventoryPriceCheck(IntlFlightInventoryPriceCheckRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("IntlFlightInventoryPriceCheck").setMethod(HttpMethod.GET).setPathRegex("/intl-flight/v1/flights/action/inventory-price-check").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(IntlFlightInventoryPriceCheckResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<IntlFlightInventoryPriceCheckResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of IntlFlightListingSearch  IntlFlightListingSearchRequest
+     * @return IntlFlightListingSearchResponse
+     */
     @Override
     public CompletableFuture<IntlFlightListingSearchResponse> intlFlightListingSearch(IntlFlightListingSearchRequest request) {
         try {
@@ -1439,6 +2379,82 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of IntlFlightOrderCancel  IntlFlightOrderCancelRequest
+     * @return IntlFlightOrderCancelResponse
+     */
+    @Override
+    public CompletableFuture<IntlFlightOrderCancelResponse> intlFlightOrderCancel(IntlFlightOrderCancelRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("IntlFlightOrderCancel").setMethod(HttpMethod.DELETE).setPathRegex("/intl-flight/v1/order/action/cancel").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(IntlFlightOrderCancelResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<IntlFlightOrderCancelResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of IntlFlightOrderDetail  IntlFlightOrderDetailRequest
+     * @return IntlFlightOrderDetailResponse
+     */
+    @Override
+    public CompletableFuture<IntlFlightOrderDetailResponse> intlFlightOrderDetail(IntlFlightOrderDetailRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("IntlFlightOrderDetail").setMethod(HttpMethod.GET).setPathRegex("/intl-flight/v1/order/action/detail").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(IntlFlightOrderDetailResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<IntlFlightOrderDetailResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of IntlFlightOrderPay  IntlFlightOrderPayRequest
+     * @return IntlFlightOrderPayResponse
+     */
+    @Override
+    public CompletableFuture<IntlFlightOrderPayResponse> intlFlightOrderPay(IntlFlightOrderPayRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("IntlFlightOrderPay").setMethod(HttpMethod.PUT).setPathRegex("/intl-flight/v1/order/action/pay").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(IntlFlightOrderPayResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<IntlFlightOrderPayResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of IntlFlightOrderPayCheck  IntlFlightOrderPayCheckRequest
+     * @return IntlFlightOrderPayCheckResponse
+     */
+    @Override
+    public CompletableFuture<IntlFlightOrderPayCheckResponse> intlFlightOrderPayCheck(IntlFlightOrderPayCheckRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("IntlFlightOrderPayCheck").setMethod(HttpMethod.GET).setPathRegex("/intl-flight/v1/order/action/pay-check").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(IntlFlightOrderPayCheckResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<IntlFlightOrderPayCheckResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of IntlFlightOtaItemDetail  IntlFlightOtaItemDetailRequest
+     * @return IntlFlightOtaItemDetailResponse
+     */
     @Override
     public CompletableFuture<IntlFlightOtaItemDetailResponse> intlFlightOtaItemDetail(IntlFlightOtaItemDetailRequest request) {
         try {
@@ -1453,6 +2469,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of IntlFlightOtaSearch  IntlFlightOtaSearchRequest
+     * @return IntlFlightOtaSearchResponse
+     */
     @Override
     public CompletableFuture<IntlFlightOtaSearchResponse> intlFlightOtaSearch(IntlFlightOtaSearchRequest request) {
         try {
@@ -1467,6 +2487,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of IntlFlightSegmentAvailableCert  IntlFlightSegmentAvailableCertRequest
+     * @return IntlFlightSegmentAvailableCertResponse
+     */
+    @Override
+    public CompletableFuture<IntlFlightSegmentAvailableCertResponse> intlFlightSegmentAvailableCert(IntlFlightSegmentAvailableCertRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("IntlFlightSegmentAvailableCert").setMethod(HttpMethod.GET).setPathRegex("/intl-flight/v1/items/{ota_item_id}/action/segment-available-cert").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(IntlFlightSegmentAvailableCertResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<IntlFlightSegmentAvailableCertResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of InvoiceAdd  InvoiceAddRequest
+     * @return InvoiceAddResponse
+     */
     @Override
     public CompletableFuture<InvoiceAddResponse> invoiceAdd(InvoiceAddRequest request) {
         try {
@@ -1481,6 +2523,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InvoiceDelete  InvoiceDeleteRequest
+     * @return InvoiceDeleteResponse
+     */
     @Override
     public CompletableFuture<InvoiceDeleteResponse> invoiceDelete(InvoiceDeleteRequest request) {
         try {
@@ -1495,6 +2541,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InvoiceModify  InvoiceModifyRequest
+     * @return InvoiceModifyResponse
+     */
     @Override
     public CompletableFuture<InvoiceModifyResponse> invoiceModify(InvoiceModifyRequest request) {
         try {
@@ -1509,6 +2559,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InvoiceRuleAdd  InvoiceRuleAddRequest
+     * @return InvoiceRuleAddResponse
+     */
     @Override
     public CompletableFuture<InvoiceRuleAddResponse> invoiceRuleAdd(InvoiceRuleAddRequest request) {
         try {
@@ -1523,6 +2577,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InvoiceRuleDelete  InvoiceRuleDeleteRequest
+     * @return InvoiceRuleDeleteResponse
+     */
     @Override
     public CompletableFuture<InvoiceRuleDeleteResponse> invoiceRuleDelete(InvoiceRuleDeleteRequest request) {
         try {
@@ -1537,6 +2595,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InvoiceRuleSave  InvoiceRuleSaveRequest
+     * @return InvoiceRuleSaveResponse
+     */
     @Override
     public CompletableFuture<InvoiceRuleSaveResponse> invoiceRuleSave(InvoiceRuleSaveRequest request) {
         try {
@@ -1551,6 +2613,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InvoiceSearch  InvoiceSearchRequest
+     * @return InvoiceSearchResponse
+     */
     @Override
     public CompletableFuture<InvoiceSearchResponse> invoiceSearch(InvoiceSearchRequest request) {
         try {
@@ -1565,6 +2631,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of IsvRuleSave  IsvRuleSaveRequest
+     * @return IsvRuleSaveResponse
+     */
     @Override
     public CompletableFuture<IsvRuleSaveResponse> isvRuleSave(IsvRuleSaveRequest request) {
         try {
@@ -1579,6 +2649,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of IsvUserSave  IsvUserSaveRequest
+     * @return IsvUserSaveResponse
+     */
     @Override
     public CompletableFuture<IsvUserSaveResponse> isvUserSave(IsvUserSaveRequest request) {
         try {
@@ -1593,6 +2667,64 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of MealBillSettlementQuery  MealBillSettlementQueryRequest
+     * @return MealBillSettlementQueryResponse
+     */
+    @Override
+    public CompletableFuture<MealBillSettlementQueryResponse> mealBillSettlementQuery(MealBillSettlementQueryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("MealBillSettlementQuery").setMethod(HttpMethod.GET).setPathRegex("/meal/v1/bill-settlement").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(MealBillSettlementQueryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<MealBillSettlementQueryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of MealOrderDetailQuery  MealOrderDetailQueryRequest
+     * @return MealOrderDetailQueryResponse
+     */
+    @Override
+    public CompletableFuture<MealOrderDetailQueryResponse> mealOrderDetailQuery(MealOrderDetailQueryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("MealOrderDetailQuery").setMethod(HttpMethod.GET).setPathRegex("/meal/v1/orders/{order_id}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(MealOrderDetailQueryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<MealOrderDetailQueryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of MealOrderListQuery  MealOrderListQueryRequest
+     * @return MealOrderListQueryResponse
+     */
+    @Override
+    public CompletableFuture<MealOrderListQueryResponse> mealOrderListQuery(MealOrderListQueryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("MealOrderListQuery").setMethod(HttpMethod.GET).setPathRegex("/meal/v1/orders").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(MealOrderListQueryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<MealOrderListQueryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of MonthBillConfirm  MonthBillConfirmRequest
+     * @return MonthBillConfirmResponse
+     */
     @Override
     public CompletableFuture<MonthBillConfirmResponse> monthBillConfirm(MonthBillConfirmRequest request) {
         try {
@@ -1607,6 +2739,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of MonthBillGet  MonthBillGetRequest
+     * @return MonthBillGetResponse
+     */
     @Override
     public CompletableFuture<MonthBillGetResponse> monthBillGet(MonthBillGetRequest request) {
         try {
@@ -1621,6 +2757,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OrderRefundDetailQuery  OrderRefundDetailQueryRequest
+     * @return OrderRefundDetailQueryResponse
+     */
+    @Override
+    public CompletableFuture<OrderRefundDetailQueryResponse> orderRefundDetailQuery(OrderRefundDetailQueryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("OrderRefundDetailQuery").setMethod(HttpMethod.POST).setPathRegex("/coop-hotel/v1/refund/action/detail").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(OrderRefundDetailQueryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<OrderRefundDetailQueryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ProjectAdd  ProjectAddRequest
+     * @return ProjectAddResponse
+     */
     @Override
     public CompletableFuture<ProjectAddResponse> projectAdd(ProjectAddRequest request) {
         try {
@@ -1635,6 +2793,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ProjectDelete  ProjectDeleteRequest
+     * @return ProjectDeleteResponse
+     */
     @Override
     public CompletableFuture<ProjectDeleteResponse> projectDelete(ProjectDeleteRequest request) {
         try {
@@ -1649,6 +2811,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ProjectModify  ProjectModifyRequest
+     * @return ProjectModifyResponse
+     */
     @Override
     public CompletableFuture<ProjectModifyResponse> projectModify(ProjectModifyRequest request) {
         try {
@@ -1663,6 +2829,64 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryCorpDetailInfo  QueryCorpDetailInfoRequest
+     * @return QueryCorpDetailInfoResponse
+     */
+    @Override
+    public CompletableFuture<QueryCorpDetailInfoResponse> queryCorpDetailInfo(QueryCorpDetailInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryCorpDetailInfo").setMethod(HttpMethod.GET).setPathRegex("/corps/v1/corps/detail").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryCorpDetailInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryCorpDetailInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryEmployeeDetail  QueryEmployeeDetailRequest
+     * @return QueryEmployeeDetailResponse
+     */
+    @Override
+    public CompletableFuture<QueryEmployeeDetailResponse> queryEmployeeDetail(QueryEmployeeDetailRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryEmployeeDetail").setMethod(HttpMethod.GET).setPathRegex("/user/v1/employeeDetail").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryEmployeeDetailResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryEmployeeDetailResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryGroupCorpList  QueryGroupCorpListRequest
+     * @return QueryGroupCorpListResponse
+     */
+    @Override
+    public CompletableFuture<QueryGroupCorpListResponse> queryGroupCorpList(QueryGroupCorpListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryGroupCorpList").setMethod(HttpMethod.POST).setPathRegex("/sub_corps/v1/corps/action/corpList").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryGroupCorpListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryGroupCorpListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryReimbursementOrder  QueryReimbursementOrderRequest
+     * @return QueryReimbursementOrderResponse
+     */
     @Override
     public CompletableFuture<QueryReimbursementOrderResponse> queryReimbursementOrder(QueryReimbursementOrderRequest request) {
         try {
@@ -1677,6 +2901,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SyncSingleUser  SyncSingleUserRequest
+     * @return SyncSingleUserResponse
+     */
     @Override
     public CompletableFuture<SyncSingleUserResponse> syncSingleUser(SyncSingleUserRequest request) {
         try {
@@ -1691,6 +2919,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SyncThirdUserMapping  SyncThirdUserMappingRequest
+     * @return SyncThirdUserMappingResponse
+     */
     @Override
     public CompletableFuture<SyncThirdUserMappingResponse> syncThirdUserMapping(SyncThirdUserMappingRequest request) {
         try {
@@ -1705,6 +2937,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TBAccountInfoQuery  TBAccountInfoQueryRequest
+     * @return TBAccountInfoQueryResponse
+     */
     @Override
     public CompletableFuture<TBAccountInfoQueryResponse> tBAccountInfoQuery(TBAccountInfoQueryRequest request) {
         try {
@@ -1719,6 +2955,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TBAccountUnbind  TBAccountUnbindRequest
+     * @return TBAccountUnbindResponse
+     */
     @Override
     public CompletableFuture<TBAccountUnbindResponse> tBAccountUnbind(TBAccountUnbindRequest request) {
         try {
@@ -1733,6 +2973,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TicketChangingApply  TicketChangingApplyRequest
+     * @return TicketChangingApplyResponse
+     */
     @Override
     public CompletableFuture<TicketChangingApplyResponse> ticketChangingApply(TicketChangingApplyRequest request) {
         try {
@@ -1747,6 +2991,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TicketChangingCancel  TicketChangingCancelRequest
+     * @return TicketChangingCancelResponse
+     */
     @Override
     public CompletableFuture<TicketChangingCancelResponse> ticketChangingCancel(TicketChangingCancelRequest request) {
         try {
@@ -1761,6 +3009,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TicketChangingDetail  TicketChangingDetailRequest
+     * @return TicketChangingDetailResponse
+     */
     @Override
     public CompletableFuture<TicketChangingDetailResponse> ticketChangingDetail(TicketChangingDetailRequest request) {
         try {
@@ -1775,6 +3027,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TicketChangingEnquiry  TicketChangingEnquiryRequest
+     * @return TicketChangingEnquiryResponse
+     */
     @Override
     public CompletableFuture<TicketChangingEnquiryResponse> ticketChangingEnquiry(TicketChangingEnquiryRequest request) {
         try {
@@ -1789,6 +3045,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TicketChangingFlightList  TicketChangingFlightListRequest
+     * @return TicketChangingFlightListResponse
+     */
     @Override
     public CompletableFuture<TicketChangingFlightListResponse> ticketChangingFlightList(TicketChangingFlightListRequest request) {
         try {
@@ -1803,6 +3063,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TicketChangingPay  TicketChangingPayRequest
+     * @return TicketChangingPayResponse
+     */
     @Override
     public CompletableFuture<TicketChangingPayResponse> ticketChangingPay(TicketChangingPayRequest request) {
         try {
@@ -1817,6 +3081,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TrainApplyChange  TrainApplyChangeRequest
+     * @return TrainApplyChangeResponse
+     */
+    @Override
+    public CompletableFuture<TrainApplyChangeResponse> trainApplyChange(TrainApplyChangeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TrainApplyChange").setMethod(HttpMethod.POST).setPathRegex("/train/v1/change/apply").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TrainApplyChangeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TrainApplyChangeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TrainApplyRefund  TrainApplyRefundRequest
+     * @return TrainApplyRefundResponse
+     */
+    @Override
+    public CompletableFuture<TrainApplyRefundResponse> trainApplyRefund(TrainApplyRefundRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TrainApplyRefund").setMethod(HttpMethod.POST).setPathRegex("/train/v1/refund/apply").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TrainApplyRefundResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TrainApplyRefundResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TrainBillSettlementQuery  TrainBillSettlementQueryRequest
+     * @return TrainBillSettlementQueryResponse
+     */
     @Override
     public CompletableFuture<TrainBillSettlementQueryResponse> trainBillSettlementQuery(TrainBillSettlementQueryRequest request) {
         try {
@@ -1831,6 +3135,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TrainExceedApplyQuery  TrainExceedApplyQueryRequest
+     * @return TrainExceedApplyQueryResponse
+     */
     @Override
     public CompletableFuture<TrainExceedApplyQueryResponse> trainExceedApplyQuery(TrainExceedApplyQueryRequest request) {
         try {
@@ -1845,6 +3153,154 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TrainFeeCalculateChange  TrainFeeCalculateChangeRequest
+     * @return TrainFeeCalculateChangeResponse
+     */
+    @Override
+    public CompletableFuture<TrainFeeCalculateChangeResponse> trainFeeCalculateChange(TrainFeeCalculateChangeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TrainFeeCalculateChange").setMethod(HttpMethod.POST).setPathRegex("/train/v1/change/fee").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TrainFeeCalculateChangeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TrainFeeCalculateChangeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TrainFeeCalculateRefund  TrainFeeCalculateRefundRequest
+     * @return TrainFeeCalculateRefundResponse
+     */
+    @Override
+    public CompletableFuture<TrainFeeCalculateRefundResponse> trainFeeCalculateRefund(TrainFeeCalculateRefundRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TrainFeeCalculateRefund").setMethod(HttpMethod.POST).setPathRegex("/train/v1/refund/fee").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TrainFeeCalculateRefundResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TrainFeeCalculateRefundResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TrainNoInfoSearch  TrainNoInfoSearchRequest
+     * @return TrainNoInfoSearchResponse
+     */
+    @Override
+    public CompletableFuture<TrainNoInfoSearchResponse> trainNoInfoSearch(TrainNoInfoSearchRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TrainNoInfoSearch").setMethod(HttpMethod.POST).setPathRegex("/train/v1/search/info").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TrainNoInfoSearchResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TrainNoInfoSearchResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TrainNoListSearch  TrainNoListSearchRequest
+     * @return TrainNoListSearchResponse
+     */
+    @Override
+    public CompletableFuture<TrainNoListSearchResponse> trainNoListSearch(TrainNoListSearchRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TrainNoListSearch").setMethod(HttpMethod.POST).setPathRegex("/train/v1/search/list").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TrainNoListSearchResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TrainNoListSearchResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TrainOrderCancel  TrainOrderCancelRequest
+     * @return TrainOrderCancelResponse
+     */
+    @Override
+    public CompletableFuture<TrainOrderCancelResponse> trainOrderCancel(TrainOrderCancelRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TrainOrderCancel").setMethod(HttpMethod.POST).setPathRegex("/train/v1/order/cancel").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TrainOrderCancelResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TrainOrderCancelResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TrainOrderChangeConfirm  TrainOrderChangeConfirmRequest
+     * @return TrainOrderChangeConfirmResponse
+     */
+    @Override
+    public CompletableFuture<TrainOrderChangeConfirmResponse> trainOrderChangeConfirm(TrainOrderChangeConfirmRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TrainOrderChangeConfirm").setMethod(HttpMethod.POST).setPathRegex("/train/v1/change/confirm").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TrainOrderChangeConfirmResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TrainOrderChangeConfirmResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TrainOrderCreate  TrainOrderCreateRequest
+     * @return TrainOrderCreateResponse
+     */
+    @Override
+    public CompletableFuture<TrainOrderCreateResponse> trainOrderCreate(TrainOrderCreateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TrainOrderCreate").setMethod(HttpMethod.POST).setPathRegex("/train/v1/order/create").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TrainOrderCreateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TrainOrderCreateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TrainOrderDetailQuery  TrainOrderDetailQueryRequest
+     * @return TrainOrderDetailQueryResponse
+     */
+    @Override
+    public CompletableFuture<TrainOrderDetailQueryResponse> trainOrderDetailQuery(TrainOrderDetailQueryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TrainOrderDetailQuery").setMethod(HttpMethod.POST).setPathRegex("/train/v1/order/query").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TrainOrderDetailQueryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TrainOrderDetailQueryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TrainOrderListQuery  TrainOrderListQueryRequest
+     * @return TrainOrderListQueryResponse
+     */
     @Override
     public CompletableFuture<TrainOrderListQueryResponse> trainOrderListQuery(TrainOrderListQueryRequest request) {
         try {
@@ -1859,6 +3315,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TrainOrderPay  TrainOrderPayRequest
+     * @return TrainOrderPayResponse
+     */
+    @Override
+    public CompletableFuture<TrainOrderPayResponse> trainOrderPay(TrainOrderPayRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TrainOrderPay").setMethod(HttpMethod.POST).setPathRegex("/train/v1/order/pay").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TrainOrderPayResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TrainOrderPayResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TrainOrderQuery  TrainOrderQueryRequest
+     * @return TrainOrderQueryResponse
+     */
     @Override
     public CompletableFuture<TrainOrderQueryResponse> trainOrderQuery(TrainOrderQueryRequest request) {
         try {
@@ -1873,6 +3351,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TrainOrderQueryV2  TrainOrderQueryV2Request
+     * @return TrainOrderQueryV2Response
+     */
     @Override
     public CompletableFuture<TrainOrderQueryV2Response> trainOrderQueryV2(TrainOrderQueryV2Request request) {
         try {
@@ -1887,6 +3369,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TrainStationSearch  TrainStationSearchRequest
+     * @return TrainStationSearchResponse
+     */
     @Override
     public CompletableFuture<TrainStationSearchResponse> trainStationSearch(TrainStationSearchRequest request) {
         try {
@@ -1901,6 +3387,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TrainStopoverSearch  TrainStopoverSearchRequest
+     * @return TrainStopoverSearchResponse
+     */
+    @Override
+    public CompletableFuture<TrainStopoverSearchResponse> trainStopoverSearch(TrainStopoverSearchRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TrainStopoverSearch").setMethod(HttpMethod.POST).setPathRegex("/train/v1/search/stopover").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TrainStopoverSearchResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TrainStopoverSearchResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TrainTicketScanQuery  TrainTicketScanQueryRequest
+     * @return TrainTicketScanQueryResponse
+     */
     @Override
     public CompletableFuture<TrainTicketScanQueryResponse> trainTicketScanQuery(TrainTicketScanQueryRequest request) {
         try {
@@ -1915,6 +3423,172 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TravelStandardListQuery  TravelStandardListQueryRequest
+     * @return TravelStandardListQueryResponse
+     */
+    @Override
+    public CompletableFuture<TravelStandardListQueryResponse> travelStandardListQuery(TravelStandardListQueryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TravelStandardListQuery").setMethod(HttpMethod.GET).setPathRegex("/travel-manage/v1/standards/list").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TravelStandardListQueryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TravelStandardListQueryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TravelStandardQuery  TravelStandardQueryRequest
+     * @return TravelStandardQueryResponse
+     */
+    @Override
+    public CompletableFuture<TravelStandardQueryResponse> travelStandardQuery(TravelStandardQueryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TravelStandardQuery").setMethod(HttpMethod.GET).setPathRegex("/travel-manage/v1/standards/detail").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TravelStandardQueryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TravelStandardQueryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TripBusinessInstanceQuery  TripBusinessInstanceQueryRequest
+     * @return TripBusinessInstanceQueryResponse
+     */
+    @Override
+    public CompletableFuture<TripBusinessInstanceQueryResponse> tripBusinessInstanceQuery(TripBusinessInstanceQueryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TripBusinessInstanceQuery").setMethod(HttpMethod.GET).setPathRegex("/apply/v1/business").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TripBusinessInstanceQueryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TripBusinessInstanceQueryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TripCCInfoQuery  TripCCInfoQueryRequest
+     * @return TripCCInfoQueryResponse
+     */
+    @Override
+    public CompletableFuture<TripCCInfoQueryResponse> tripCCInfoQuery(TripCCInfoQueryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TripCCInfoQuery").setMethod(HttpMethod.GET).setPathRegex("/apply/v1/cc").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TripCCInfoQueryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TripCCInfoQueryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TripTaskQuery  TripTaskQueryRequest
+     * @return TripTaskQueryResponse
+     */
+    @Override
+    public CompletableFuture<TripTaskQueryResponse> tripTaskQuery(TripTaskQueryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TripTaskQuery").setMethod(HttpMethod.GET).setPathRegex("/apply/v1/tasks").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TripTaskQueryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TripTaskQueryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateCustomRole  UpdateCustomRoleRequest
+     * @return UpdateCustomRoleResponse
+     */
+    @Override
+    public CompletableFuture<UpdateCustomRoleResponse> updateCustomRole(UpdateCustomRoleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateCustomRole").setMethod(HttpMethod.POST).setPathRegex("/role/v1/customRoles/update").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateCustomRoleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateCustomRoleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateDepartment  UpdateDepartmentRequest
+     * @return UpdateDepartmentResponse
+     */
+    @Override
+    public CompletableFuture<UpdateDepartmentResponse> updateDepartment(UpdateDepartmentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateDepartment").setMethod(HttpMethod.POST).setPathRegex("/department/v2/update").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateDepartmentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateDepartmentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateEmployee  UpdateEmployeeRequest
+     * @return UpdateEmployeeResponse
+     */
+    @Override
+    public CompletableFuture<UpdateEmployeeResponse> updateEmployee(UpdateEmployeeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateEmployee").setMethod(HttpMethod.POST).setPathRegex("/employee/v2/update").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateEmployeeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateEmployeeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateEmployeeLeaveStatus  UpdateEmployeeLeaveStatusRequest
+     * @return UpdateEmployeeLeaveStatusResponse
+     */
+    @Override
+    public CompletableFuture<UpdateEmployeeLeaveStatusResponse> updateEmployeeLeaveStatus(UpdateEmployeeLeaveStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateEmployeeLeaveStatus").setMethod(HttpMethod.POST).setPathRegex("/employee/v2/updateLeaveStatus").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateEmployeeLeaveStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateEmployeeLeaveStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UserQuery  UserQueryRequest
+     * @return UserQueryResponse
+     */
     @Override
     public CompletableFuture<UserQueryResponse> userQuery(UserQueryRequest request) {
         try {
@@ -1929,6 +3603,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of VatInvoiceScanQuery  VatInvoiceScanQueryRequest
+     * @return VatInvoiceScanQueryResponse
+     */
     @Override
     public CompletableFuture<VatInvoiceScanQueryResponse> vatInvoiceScanQuery(VatInvoiceScanQueryRequest request) {
         try {
@@ -1943,6 +3621,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of WaitApplyInvoiceTaskDetailQuery  WaitApplyInvoiceTaskDetailQueryRequest
+     * @return WaitApplyInvoiceTaskDetailQueryResponse
+     */
     @Override
     public CompletableFuture<WaitApplyInvoiceTaskDetailQueryResponse> waitApplyInvoiceTaskDetailQuery(WaitApplyInvoiceTaskDetailQueryRequest request) {
         try {

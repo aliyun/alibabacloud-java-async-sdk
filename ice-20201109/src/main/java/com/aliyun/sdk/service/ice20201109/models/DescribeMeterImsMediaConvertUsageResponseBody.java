@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMeterImsMediaConvertUsageResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMeterImsMediaConvertUsageResponseBody</p>
  */
 public class DescribeMeterImsMediaConvertUsageResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeMeterImsMediaConvertUsageResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeMeterImsMediaConvertUsageResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -46,19 +51,22 @@ public class DescribeMeterImsMediaConvertUsageResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
 
         /**
-         * Data.
+         * <p>The usage statistics of IMS on VOD transcoding.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FBBB5210-2B78-58FB-A6FE-9DD887BB2C61</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class DescribeMeterImsMediaConvertUsageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMeterImsMediaConvertUsageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMeterImsMediaConvertUsageResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
 
-        @NameInMap("Specification")
+        @com.aliyun.core.annotation.NameInMap("Specification")
         private String specification;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private Long time;
 
         private Data(Builder builder) {
@@ -122,7 +136,10 @@ public class DescribeMeterImsMediaConvertUsageResponseBody extends TeaModel {
             private Long time; 
 
             /**
-             * Duration.
+             * <p>The usage duration, in minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -130,7 +147,10 @@ public class DescribeMeterImsMediaConvertUsageResponseBody extends TeaModel {
             }
 
             /**
-             * Specification.
+             * <p>The transcoding specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>H264.HD</p>
              */
             public Builder specification(String specification) {
                 this.specification = specification;
@@ -138,7 +158,10 @@ public class DescribeMeterImsMediaConvertUsageResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The beginning time of usage. The value is a 10-digit timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1656950400</p>
              */
             public Builder time(Long time) {
                 this.time = time;

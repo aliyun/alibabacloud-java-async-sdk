@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateCredentialReportResponseBody} extends {@link TeaModel}
  *
  * <p>GenerateCredentialReportResponseBody</p>
  */
 public class GenerateCredentialReportResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("State")
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
     private GenerateCredentialReportResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class GenerateCredentialReportResponseBody extends TeaModel {
         private String state; 
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BBCCA90A-A1F0-4B16-B355-692247197805</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,12 +66,15 @@ public class GenerateCredentialReportResponseBody extends TeaModel {
         }
 
         /**
-         * The generation status of the user credential report. Valid values:
-         * <p>
+         * <p>The generation status of the user credential report. Valid values:</p>
+         * <ul>
+         * <li>STARTED: The system starts to generate the user credential report.</li>
+         * <li>INPROGRESS: The user credential report is being generated.</li>
+         * <li>COMPLETED: The user credential report is generated.</li>
+         * </ul>
          * 
-         * *   STARTED: The user credential report starts to generate.
-         * *   INPROGRESS: The user credential report is being generated.
-         * *   COMPLETED: The user credential report is generated.
+         * <strong>example:</strong>
+         * <p>STARTED</p>
          */
         public Builder state(String state) {
             this.state = state;

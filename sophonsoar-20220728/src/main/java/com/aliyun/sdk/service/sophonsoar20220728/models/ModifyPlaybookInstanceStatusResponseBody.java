@@ -1,18 +1,18 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPlaybookInstanceStatusResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyPlaybookInstanceStatusResponseBody</p>
  */
 public class ModifyPlaybookInstanceStatusResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyPlaybookInstanceStatusResponseBody(Builder builder) {
@@ -38,7 +38,10 @@ public class ModifyPlaybookInstanceStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C2A32830-2842-5F8F-B4ED-E4783E400BBE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

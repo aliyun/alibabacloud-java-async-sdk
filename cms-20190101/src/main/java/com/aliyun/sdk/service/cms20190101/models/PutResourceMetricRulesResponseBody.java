@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutResourceMetricRulesResponseBody} extends {@link TeaModel}
  *
  * <p>PutResourceMetricRulesResponseBody</p>
  */
 public class PutResourceMetricRulesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("FailedListResult")
+    @com.aliyun.core.annotation.NameInMap("FailedListResult")
     private FailedListResult failedListResult;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private PutResourceMetricRulesResponseBody(Builder builder) {
@@ -86,10 +86,13 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The response code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -97,7 +100,7 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The alert rules that failed to be created for the resource.
+         * <p>The alert rules that failed to be created for the resource.</p>
          */
         public Builder failedListResult(FailedListResult failedListResult) {
             this.failedListResult = failedListResult;
@@ -105,7 +108,10 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request processing has failed due to some unknown error.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +119,10 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15D1440E-BF24-5A41-93E4-36864635179E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,11 +130,14 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,14 +150,20 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PutResourceMetricRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>PutResourceMetricRulesResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private Result(Builder builder) {
@@ -189,7 +207,10 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * The HTTP status code.
+             * <p>The response code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>404</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -197,7 +218,10 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The error message.
+             * <p>The error message returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The request processing has failed due to some unknown error.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -205,11 +229,14 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the call was successful. Valid values:
-             * <p>
+             * <p>Indicates whether the request was successful. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true: The call was successful.
-             * *   false: The call failed.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -223,11 +250,17 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PutResourceMetricRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>PutResourceMetricRulesResponseBody</p>
+     */
     public static class Target extends TeaModel {
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private Result result;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
         private Target(Builder builder) {
@@ -262,7 +295,7 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
             private String ruleId; 
 
             /**
-             * The alert rule that failed to be created.
+             * <p>The alert rule that failed to be created.</p>
              */
             public Builder result(Result result) {
                 this.result = result;
@@ -270,7 +303,10 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the alert rule.
+             * <p>The ID of the alert rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a151cd6023eacee2f0978e03863cc1697c89508****</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -284,8 +320,14 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PutResourceMetricRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>PutResourceMetricRulesResponseBody</p>
+     */
     public static class FailedListResult extends TeaModel {
-        @NameInMap("Target")
+        @com.aliyun.core.annotation.NameInMap("Target")
         private java.util.List < Target> target;
 
         private FailedListResult(Builder builder) {

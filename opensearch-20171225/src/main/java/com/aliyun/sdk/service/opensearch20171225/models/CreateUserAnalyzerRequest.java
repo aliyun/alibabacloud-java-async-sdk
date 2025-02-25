@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateUserAnalyzerRequest</p>
  */
 public class CreateUserAnalyzerRequest extends Request {
-    @Body
-    @NameInMap("business")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("business")
     private String business;
 
-    @Body
-    @NameInMap("businessAppGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("businessAppGroupId")
     private String businessAppGroupId;
 
-    @Body
-    @NameInMap("businessType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("businessType")
     private String businessType;
 
-    @Body
-    @NameInMap("name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @Body
-    @NameInMap("type")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
-    @Query
-    @NameInMap("dryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dryRun")
     private Boolean dryRun;
 
     private CreateUserAnalyzerRequest(Builder builder) {
@@ -124,7 +123,7 @@ public class CreateUserAnalyzerRequest extends Request {
         } 
 
         /**
-         * business.
+         * The basic analyzer.
          */
         public Builder business(String business) {
             this.putBodyParameter("business", business);
@@ -133,7 +132,7 @@ public class CreateUserAnalyzerRequest extends Request {
         }
 
         /**
-         * businessAppGroupId.
+         * The application ID of the custom analyzer.
          */
         public Builder businessAppGroupId(String businessAppGroupId) {
             this.putBodyParameter("businessAppGroupId", businessAppGroupId);
@@ -142,7 +141,7 @@ public class CreateUserAnalyzerRequest extends Request {
         }
 
         /**
-         * businessType.
+         * The basic analyzer type. Valid values: AUTO, MODEL, SYSTEM, and USER.
          */
         public Builder businessType(String businessType) {
             this.putBodyParameter("businessType", businessType);
@@ -151,7 +150,7 @@ public class CreateUserAnalyzerRequest extends Request {
         }
 
         /**
-         * name.
+         * The analyzer name.
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -160,7 +159,7 @@ public class CreateUserAnalyzerRequest extends Request {
         }
 
         /**
-         * type.
+         * The engine type. Valid values: HA3 and ES.
          */
         public Builder type(String type) {
             this.putBodyParameter("type", type);
@@ -169,7 +168,13 @@ public class CreateUserAnalyzerRequest extends Request {
         }
 
         /**
-         * dryRun.
+         * Specifies whether to perform only a dry run, without performing the actual request. Default value: false.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.es_serverless20230627.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMonitorDataResponseBody</p>
  */
 public class GetMonitorDataResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < Result> result;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private GetMonitorDataResponseBody(Builder builder) {
@@ -132,22 +131,22 @@ public class GetMonitorDataResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("dps")
+        @com.aliyun.core.annotation.NameInMap("dps")
         private java.util.Map < String, ? > dps;
 
-        @NameInMap("integrity")
+        @com.aliyun.core.annotation.NameInMap("integrity")
         private Float integrity;
 
-        @NameInMap("messageWatermark")
+        @com.aliyun.core.annotation.NameInMap("messageWatermark")
         private Long messageWatermark;
 
-        @NameInMap("metric")
+        @com.aliyun.core.annotation.NameInMap("metric")
         private String metric;
 
-        @NameInMap("summary")
+        @com.aliyun.core.annotation.NameInMap("summary")
         private Float summary;
 
-        @NameInMap("tags")
+        @com.aliyun.core.annotation.NameInMap("tags")
         private java.util.Map < String, ? > tags;
 
         private Result(Builder builder) {

@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteIndexRequest} extends {@link RequestModel}
  *
  * <p>DeleteIndexRequest</p>
  */
 public class DeleteIndexRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("indexName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("indexName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String indexName;
 
-    @Query
-    @NameInMap("dataSource")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dataSource")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dataSource;
 
-    @Query
-    @NameInMap("deleteDataSource")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("deleteDataSource")
     private Boolean deleteDataSource;
 
     private DeleteIndexRequest(Builder builder) {
@@ -99,7 +104,11 @@ public class DeleteIndexRequest extends Request {
         } 
 
         /**
-         * WB01240825
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-2r42p5oi202</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -108,7 +117,11 @@ public class DeleteIndexRequest extends Request {
         }
 
         /**
-         * indexName.
+         * <p>The index name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>generation</p>
          */
         public Builder indexName(String indexName) {
             this.putPathParameter("indexName", indexName);
@@ -117,7 +130,11 @@ public class DeleteIndexRequest extends Request {
         }
 
         /**
-         * dataSource.
+         * <p>The data source.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-pl32rf0js04_test</p>
          */
         public Builder dataSource(String dataSource) {
             this.putQueryParameter("dataSource", dataSource);
@@ -126,7 +143,10 @@ public class DeleteIndexRequest extends Request {
         }
 
         /**
-         * deleteDataSource.
+         * <p>Specifies whether to delete the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deleteDataSource(Boolean deleteDataSource) {
             this.putQueryParameter("deleteDataSource", deleteDataSource);

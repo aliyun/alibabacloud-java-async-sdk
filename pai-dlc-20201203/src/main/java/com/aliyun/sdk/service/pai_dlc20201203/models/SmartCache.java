@@ -1,63 +1,68 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SmartCache} extends {@link TeaModel}
  *
  * <p>SmartCache</p>
  */
 public class SmartCache extends TeaModel {
-    @NameInMap("CacheWorkerNum")
+    @com.aliyun.core.annotation.NameInMap("CacheWorkerNum")
     private Long cacheWorkerNum;
 
-    @NameInMap("CacheWorkerSize")
+    @com.aliyun.core.annotation.NameInMap("CacheWorkerSize")
     private Long cacheWorkerSize;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("DisplayName")
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
     private String displayName;
 
-    @NameInMap("Duration")
+    @com.aliyun.core.annotation.NameInMap("Duration")
     private String duration;
 
-    @NameInMap("Endpoint")
+    @com.aliyun.core.annotation.NameInMap("Endpoint")
     private String endpoint;
 
-    @NameInMap("FileSystemId")
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
     private String fileSystemId;
 
-    @NameInMap("GmtCreateTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
-    @NameInMap("GmtModifyTime")
+    @com.aliyun.core.annotation.NameInMap("GmtModifyTime")
     private String gmtModifyTime;
 
-    @NameInMap("MountPath")
+    @com.aliyun.core.annotation.NameInMap("MountPath")
     private String mountPath;
 
-    @NameInMap("Options")
+    @com.aliyun.core.annotation.NameInMap("Options")
     private String options;
 
-    @NameInMap("Path")
+    @com.aliyun.core.annotation.NameInMap("Path")
     private String path;
 
-    @NameInMap("SmartCacheId")
+    @com.aliyun.core.annotation.NameInMap("SmartCacheId")
     private String smartCacheId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
     private SmartCache(Builder builder) {

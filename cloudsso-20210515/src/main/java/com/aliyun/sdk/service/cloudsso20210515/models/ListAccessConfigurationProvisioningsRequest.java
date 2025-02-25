@@ -1,43 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAccessConfigurationProvisioningsRequest} extends {@link RequestModel}
  *
  * <p>ListAccessConfigurationProvisioningsRequest</p>
  */
 public class ListAccessConfigurationProvisioningsRequest extends Request {
-    @Query
-    @NameInMap("AccessConfigurationId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessConfigurationId")
     private String accessConfigurationId;
 
-    @Query
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("ProvisioningStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProvisioningStatus")
     private String provisioningStatus;
 
-    @Query
-    @NameInMap("TargetId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetId")
     private String targetId;
 
-    @Query
-    @NameInMap("TargetType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetType")
     private String targetType;
 
     private ListAccessConfigurationProvisioningsRequest(Builder builder) {
@@ -138,7 +138,10 @@ public class ListAccessConfigurationProvisioningsRequest extends Request {
         } 
 
         /**
-         * The ID of the access configuration. The ID can be used to filter accounts.
+         * <p>The ID of the access configuration. The ID can be used to filter access permissions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac-00ccule7tadaijxc****</p>
          */
         public Builder accessConfigurationId(String accessConfigurationId) {
             this.putQueryParameter("AccessConfigurationId", accessConfigurationId);
@@ -147,7 +150,10 @@ public class ListAccessConfigurationProvisioningsRequest extends Request {
         }
 
         /**
-         * The ID of the directory.
+         * <p>The ID of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -156,12 +162,12 @@ public class ListAccessConfigurationProvisioningsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The maximum number of entries per page.</p>
+         * <p>Valid values: 1 to 20.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Valid values: 1 to 20.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -170,10 +176,11 @@ public class ListAccessConfigurationProvisioningsRequest extends Request {
         }
 
         /**
-         * The token to return for the next page. If this is your first time to call this operation, you do not need to specify `NextToken`.
-         * <p>
+         * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. If this is your first time to call this operation, you do not need to specify the <code>NextToken</code> parameter.</p>
+         * <p>When you call this operation for the first time, if the total number of entries to return exceeds the value of <code>MaxResults</code>, the entries are truncated. Only the entries that match the value of <code>MaxResults</code> are returned, and the excess entries are not returned. In this case, the value of the response parameter <code>IsTruncated</code> is <code>true</code>, and <code>NextToken</code> is returned. In the next call, you can use the value of <code>NextToken</code> and maintain the settings of the other request parameters to query the excess entries. You can repeat the call until the value of <code>IsTruncated</code> becomes <code>false</code>. This way, all entries are returned.</p>
          * 
-         * When you call this operation for the first time, if the total number of entries to return exceeds the value of `MaxResults`, the entries are truncated. Only the entries that match the value of `MaxResults` are returned, and the excess entries are not returned. In this case, the value of the response parameter `IsTruncated` is `true`, and `NextToken` is returned. In the next call, you can use the value of `NextToken` and maintain the settings of the other request parameters to query the excess entries. You can repeat the call until the value of `IsTruncated` becomes `false`. This way, all entries are returned.
+         * <strong>example:</strong>
+         * <p>K1c3o9K7pFxoTtxH1Nm7MMLb7zrDGvftYBQBPDVv7AD3a8yhRb3Mk8L9ivmN6bFSjfkZNTAg3h4****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -182,12 +189,15 @@ public class ListAccessConfigurationProvisioningsRequest extends Request {
         }
 
         /**
-         * The status of the access configuration. The value can be used to filter accounts. Valid values:
-         * <p>
+         * <p>The status of the access configuration. The value can be used to filter accounts. Valid values:</p>
+         * <ul>
+         * <li>Provisioned: The access configuration is provisioned.</li>
+         * <li>ReprovisionRequired: The access configuration needs to be re-provisioned.</li>
+         * <li>DeprovisionFailed: The access configuration failed to be provisioned.</li>
+         * </ul>
          * 
-         * *   Provisioned: The access configuration is provisioned.
-         * *   ReprovisionRequired: The access configuration needs to be re-provisioned.
-         * *   DeprovisionFailed: The access configuration failed to be provisioned.
+         * <strong>example:</strong>
+         * <p>Provisioned</p>
          */
         public Builder provisioningStatus(String provisioningStatus) {
             this.putQueryParameter("ProvisioningStatus", provisioningStatus);
@@ -196,10 +206,13 @@ public class ListAccessConfigurationProvisioningsRequest extends Request {
         }
 
         /**
-         * The ID of the task object. The ID can be used to filter accounts.
-         * <p>
+         * <p>The ID of the task object. The ID can be used to filter access permissions.</p>
+         * <blockquote>
+         * <p> You can use the type to filter access permissions only if you specify both <code>TargetId</code> and <code>TargetType</code>.</p>
+         * </blockquote>
          * 
-         * >  You can use the ID to filter accounts only if you specify both `TargetId` and `TargetType`.
+         * <strong>example:</strong>
+         * <p>114240524784****</p>
          */
         public Builder targetId(String targetId) {
             this.putQueryParameter("TargetId", targetId);
@@ -208,12 +221,14 @@ public class ListAccessConfigurationProvisioningsRequest extends Request {
         }
 
         /**
-         * The type of the task object. The type can be used to filter accounts.
-         * <p>
+         * <p>The type of the task object. The type can be used to filter access permissions.</p>
+         * <p>Set the value to RD-Account, which specifies the accounts in the resource directory.</p>
+         * <blockquote>
+         * <p> You can use the type to filter access permissions only if you specify both <code>TargetId</code> and <code>TargetType</code>.</p>
+         * </blockquote>
          * 
-         * Set the value to RD-Account, which indicates an account in your resource directory.
-         * 
-         * >  You can use the type to filter accounts only if you specify both `TargetId` and `TargetType`.
+         * <strong>example:</strong>
+         * <p>RD-Account</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);

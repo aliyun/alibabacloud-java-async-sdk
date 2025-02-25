@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.support_plan20210706.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEnterpriseDingtalkGroupCustomerMembersRequest} extends {@link RequestModel}
  *
  * <p>ListEnterpriseDingtalkGroupCustomerMembersRequest</p>
  */
 public class ListEnterpriseDingtalkGroupCustomerMembersRequest extends Request {
-    @Body
-    @NameInMap("OpenGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpenGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String openGroupId;
 
     private ListEnterpriseDingtalkGroupCustomerMembersRequest(Builder builder) {
@@ -49,16 +54,19 @@ public class ListEnterpriseDingtalkGroupCustomerMembersRequest extends Request {
             super();
         } 
 
-        private Builder(ListEnterpriseDingtalkGroupCustomerMembersRequest response) {
-            super(response);
-            this.openGroupId = response.openGroupId;
+        private Builder(ListEnterpriseDingtalkGroupCustomerMembersRequest request) {
+            super(request);
+            this.openGroupId = request.openGroupId;
         } 
 
         /**
-         * 企业服务群ID
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DAWNN14N</p>
          */
         public Builder openGroupId(String openGroupId) {
-            this.putBodyParameter("OpenGroupId", openGroupId);
+            this.putQueryParameter("OpenGroupId", openGroupId);
             this.openGroupId = openGroupId;
             return this;
         }

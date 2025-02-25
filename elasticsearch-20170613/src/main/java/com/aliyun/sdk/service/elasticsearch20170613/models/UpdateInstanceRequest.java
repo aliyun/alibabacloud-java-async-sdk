@@ -1,64 +1,64 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateInstanceRequest} extends {@link RequestModel}
  *
  * <p>UpdateInstanceRequest</p>
  */
 public class UpdateInstanceRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("clientNodeConfiguration")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("clientNodeConfiguration")
     private ClientNodeConfiguration clientNodeConfiguration;
 
-    @Body
-    @NameInMap("elasticDataNodeConfiguration")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("elasticDataNodeConfiguration")
     private ElasticDataNodeConfiguration elasticDataNodeConfiguration;
 
-    @Body
-    @NameInMap("instanceCategory")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("instanceCategory")
     private String instanceCategory;
 
-    @Body
-    @NameInMap("kibanaConfiguration")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("kibanaConfiguration")
     private KibanaNodeConfiguration kibanaConfiguration;
 
-    @Body
-    @NameInMap("masterConfiguration")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("masterConfiguration")
     private MasterNodeConfiguration masterConfiguration;
 
-    @Body
-    @NameInMap("nodeAmount")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("nodeAmount")
     private Integer nodeAmount;
 
-    @Body
-    @NameInMap("nodeSpec")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("nodeSpec")
     private NodeSpec nodeSpec;
 
-    @Body
-    @NameInMap("warmNodeConfiguration")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("warmNodeConfiguration")
     private WarmNodeConfiguration warmNodeConfiguration;
 
-    @Query
-    @NameInMap("clientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("force")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("force")
     private Boolean force;
 
-    @Query
-    @NameInMap("orderActionType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("orderActionType")
     private String orderActionType;
 
     private UpdateInstanceRequest(Builder builder) {
@@ -209,7 +209,11 @@ public class UpdateInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-n6w1ptcb30009****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -290,7 +294,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * The result of the request.
+         * <p>The result of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -308,7 +315,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * The number of data nodes.
+         * <p>The number of data nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>upgrade</p>
          */
         public Builder orderActionType(String orderActionType) {
             this.putQueryParameter("orderActionType", orderActionType);

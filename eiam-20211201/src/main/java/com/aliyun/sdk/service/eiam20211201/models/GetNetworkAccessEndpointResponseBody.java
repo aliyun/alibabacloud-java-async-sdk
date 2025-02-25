@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetNetworkAccessEndpointResponseBody} extends {@link TeaModel}
  *
  * <p>GetNetworkAccessEndpointResponseBody</p>
  */
 public class GetNetworkAccessEndpointResponseBody extends TeaModel {
-    @NameInMap("NetworkAccessEndpoint")
+    @com.aliyun.core.annotation.NameInMap("NetworkAccessEndpoint")
     private NetworkAccessEndpoint networkAccessEndpoint;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetNetworkAccessEndpointResponseBody(Builder builder) {
@@ -71,44 +76,50 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetNetworkAccessEndpointResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetNetworkAccessEndpointResponseBody</p>
+     */
     public static class NetworkAccessEndpoint extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("EgressPrivateIpAddresses")
-        private java.util.List < String > egressPrivateIpAddresses;
+        @com.aliyun.core.annotation.NameInMap("EgressPrivateIpAddresses")
+        private java.util.List<String> egressPrivateIpAddresses;
 
-        @NameInMap("EgressPublicIpAddresses")
-        private java.util.List < String > egressPublicIpAddresses;
+        @com.aliyun.core.annotation.NameInMap("EgressPublicIpAddresses")
+        private java.util.List<String> egressPublicIpAddresses;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("NetworkAccessEndpointId")
+        @com.aliyun.core.annotation.NameInMap("NetworkAccessEndpointId")
         private String networkAccessEndpointId;
 
-        @NameInMap("NetworkAccessEndpointName")
+        @com.aliyun.core.annotation.NameInMap("NetworkAccessEndpointName")
         private String networkAccessEndpointName;
 
-        @NameInMap("NetworkAccessEndpointType")
+        @com.aliyun.core.annotation.NameInMap("NetworkAccessEndpointType")
         private String networkAccessEndpointType;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
-        @NameInMap("VSwitchIds")
-        private java.util.List < String > vSwitchIds;
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+        private java.util.List<String> vSwitchIds;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcRegionId")
+        @com.aliyun.core.annotation.NameInMap("VpcRegionId")
         private String vpcRegionId;
 
         private NetworkAccessEndpoint(Builder builder) {
@@ -145,14 +156,14 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
         /**
          * @return egressPrivateIpAddresses
          */
-        public java.util.List < String > getEgressPrivateIpAddresses() {
+        public java.util.List<String> getEgressPrivateIpAddresses() {
             return this.egressPrivateIpAddresses;
         }
 
         /**
          * @return egressPublicIpAddresses
          */
-        public java.util.List < String > getEgressPublicIpAddresses() {
+        public java.util.List<String> getEgressPublicIpAddresses() {
             return this.egressPublicIpAddresses;
         }
 
@@ -208,7 +219,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
         /**
          * @return vSwitchIds
          */
-        public java.util.List < String > getVSwitchIds() {
+        public java.util.List<String> getVSwitchIds() {
             return this.vSwitchIds;
         }
 
@@ -228,8 +239,8 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long createTime; 
-            private java.util.List < String > egressPrivateIpAddresses; 
-            private java.util.List < String > egressPublicIpAddresses; 
+            private java.util.List<String> egressPrivateIpAddresses; 
+            private java.util.List<String> egressPublicIpAddresses; 
             private String instanceId; 
             private String networkAccessEndpointId; 
             private String networkAccessEndpointName; 
@@ -237,12 +248,15 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             private String securityGroupId; 
             private String status; 
             private Long updateTime; 
-            private java.util.List < String > vSwitchIds; 
+            private java.util.List<String> vSwitchIds; 
             private String vpcId; 
             private String vpcRegionId; 
 
             /**
-             * 专属网络端点创建时间，Unix时间戳格式，单位为毫秒。
+             * <p>专属网络端点创建时间，Unix时间戳格式，单位为毫秒。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649830226000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -250,23 +264,32 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * 网络访问端私网出口IP地址列表。
+             * <p>网络访问端私网出口IP地址列表。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.168.x.x</p>
              */
-            public Builder egressPrivateIpAddresses(java.util.List < String > egressPrivateIpAddresses) {
+            public Builder egressPrivateIpAddresses(java.util.List<String> egressPrivateIpAddresses) {
                 this.egressPrivateIpAddresses = egressPrivateIpAddresses;
                 return this;
             }
 
             /**
-             * 网络访问端点公网出口IP地址段
+             * <p>网络访问端点公网出口IP地址段</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.xx.xx.xxx/27</p>
              */
-            public Builder egressPublicIpAddresses(java.util.List < String > egressPublicIpAddresses) {
+            public Builder egressPublicIpAddresses(java.util.List<String> egressPublicIpAddresses) {
                 this.egressPublicIpAddresses = egressPublicIpAddresses;
                 return this;
             }
 
             /**
-             * 实例ID。
+             * <p>实例ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -274,7 +297,10 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * 专属网络端点ID。
+             * <p>专属网络端点ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nae_examplexxx</p>
              */
             public Builder networkAccessEndpointId(String networkAccessEndpointId) {
                 this.networkAccessEndpointId = networkAccessEndpointId;
@@ -282,7 +308,10 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * 专属网络端点名称。
+             * <p>专属网络端点名称。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx业务VPC访问端点</p>
              */
             public Builder networkAccessEndpointName(String networkAccessEndpointName) {
                 this.networkAccessEndpointName = networkAccessEndpointName;
@@ -290,7 +319,10 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * 专属网络端点连接的类型。
+             * <p>专属网络端点连接的类型。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>private</p>
              */
             public Builder networkAccessEndpointType(String networkAccessEndpointType) {
                 this.networkAccessEndpointType = networkAccessEndpointType;
@@ -298,7 +330,10 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * 专属网络端点使用的安全组ID。
+             * <p>专属网络端点使用的安全组ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-examplexxx</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -306,7 +341,10 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * 专属网络端点状态。
+             * <p>专属网络端点状态。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -314,7 +352,10 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * 专属网络端点最近更新时间，Unix时间戳格式，单位为毫秒。
+             * <p>专属网络端点最近更新时间，Unix时间戳格式，单位为毫秒。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649830226000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -322,15 +363,21 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * 专属网络端点连接的指定vSwitch列表。
+             * <p>专属网络端点连接的指定vSwitch列表。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-examplexxx</p>
              */
-            public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
+            public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
                 return this;
             }
 
             /**
-             * 专属网络端点连接的VpcID。
+             * <p>专属网络端点连接的VpcID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-examplexxx</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -338,7 +385,10 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * 专属网络端点连接的Vpc所属地域。
+             * <p>专属网络端点连接的Vpc所属地域。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder vpcRegionId(String vpcRegionId) {
                 this.vpcRegionId = vpcRegionId;

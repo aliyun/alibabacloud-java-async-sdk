@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAllSwimmingLaneResponseBody} extends {@link TeaModel}
  *
  * <p>QueryAllSwimmingLaneResponseBody</p>
  */
 public class QueryAllSwimmingLaneResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryAllSwimmingLaneResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -79,22 +84,28 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String errorCode; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * The details of the data.
+         * <p>The details of the data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{id:100,name:&quot;test&quot;}]</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +113,10 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request was successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +124,10 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC34E4A3-5F1C-4E40-86EA-02EDF967****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +135,14 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -135,35 +155,41 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryAllSwimmingLaneResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAllSwimmingLaneResponseBody</p>
+     */
     public static class RestItems extends TeaModel {
-        @NameInMap("cond")
+        @com.aliyun.core.annotation.NameInMap("cond")
         private String cond;
 
-        @NameInMap("datum")
+        @com.aliyun.core.annotation.NameInMap("datum")
         private String datum;
 
-        @NameInMap("divisor")
+        @com.aliyun.core.annotation.NameInMap("divisor")
         private Integer divisor;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("nameList")
-        private java.util.List < String > nameList;
+        @com.aliyun.core.annotation.NameInMap("nameList")
+        private java.util.List<String> nameList;
 
-        @NameInMap("operator")
+        @com.aliyun.core.annotation.NameInMap("operator")
         private String operator;
 
-        @NameInMap("rate")
+        @com.aliyun.core.annotation.NameInMap("rate")
         private Integer rate;
 
-        @NameInMap("remainder")
+        @com.aliyun.core.annotation.NameInMap("remainder")
         private Integer remainder;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private RestItems(Builder builder) {
@@ -218,7 +244,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         /**
          * @return nameList
          */
-        public java.util.List < String > getNameList() {
+        public java.util.List<String> getNameList() {
             return this.nameList;
         }
 
@@ -262,7 +288,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             private String datum; 
             private Integer divisor; 
             private String name; 
-            private java.util.List < String > nameList; 
+            private java.util.List<String> nameList; 
             private String operator; 
             private Integer rate; 
             private Integer remainder; 
@@ -304,7 +330,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             /**
              * nameList.
              */
-            public Builder nameList(java.util.List < String > nameList) {
+            public Builder nameList(java.util.List<String> nameList) {
                 this.nameList = nameList;
                 return this;
             }
@@ -356,18 +382,24 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryAllSwimmingLaneResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAllSwimmingLaneResponseBody</p>
+     */
     public static class EntryRules extends TeaModel {
-        @NameInMap("condition")
+        @com.aliyun.core.annotation.NameInMap("condition")
         private String condition;
 
-        @NameInMap("path")
+        @com.aliyun.core.annotation.NameInMap("path")
         private String path;
 
-        @NameInMap("paths")
-        private java.util.List < String > paths;
+        @com.aliyun.core.annotation.NameInMap("paths")
+        private java.util.List<String> paths;
 
-        @NameInMap("restItems")
-        private java.util.List < RestItems> restItems;
+        @com.aliyun.core.annotation.NameInMap("restItems")
+        private java.util.List<RestItems> restItems;
 
         private EntryRules(Builder builder) {
             this.condition = builder.condition;
@@ -401,22 +433,22 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         /**
          * @return paths
          */
-        public java.util.List < String > getPaths() {
+        public java.util.List<String> getPaths() {
             return this.paths;
         }
 
         /**
          * @return restItems
          */
-        public java.util.List < RestItems> getRestItems() {
+        public java.util.List<RestItems> getRestItems() {
             return this.restItems;
         }
 
         public static final class Builder {
             private String condition; 
             private String path; 
-            private java.util.List < String > paths; 
-            private java.util.List < RestItems> restItems; 
+            private java.util.List<String> paths; 
+            private java.util.List<RestItems> restItems; 
 
             /**
              * condition.
@@ -437,7 +469,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             /**
              * paths.
              */
-            public Builder paths(java.util.List < String > paths) {
+            public Builder paths(java.util.List<String> paths) {
                 this.paths = paths;
                 return this;
             }
@@ -445,7 +477,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             /**
              * restItems.
              */
-            public Builder restItems(java.util.List < RestItems> restItems) {
+            public Builder restItems(java.util.List<RestItems> restItems) {
                 this.restItems = restItems;
                 return this;
             }
@@ -457,57 +489,480 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         } 
 
     }
-    public static class Data extends TeaModel {
-        @NameInMap("EntryRules")
-        private java.util.List < EntryRules> entryRules;
+    /**
+     * 
+     * {@link QueryAllSwimmingLaneResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAllSwimmingLaneResponseBody</p>
+     */
+    public static class Conditions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Cond")
+        private String cond;
 
-        @NameInMap("GroupId")
-        private String groupId;
-
-        @NameInMap("Id")
-        private Long id;
-
-        @NameInMap("MessageQueueFilterSide")
-        private String messageQueueFilterSide;
-
-        @NameInMap("MessageQueueGrayEnable")
-        private Boolean messageQueueGrayEnable;
-
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("NameList")
+        private java.util.List<String> nameList;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Conditions(Builder builder) {
+            this.cond = builder.cond;
+            this.name = builder.name;
+            this.nameList = builder.nameList;
+            this.type = builder.type;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Conditions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cond
+         */
+        public String getCond() {
+            return this.cond;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return nameList
+         */
+        public java.util.List<String> getNameList() {
+            return this.nameList;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String cond; 
+            private String name; 
+            private java.util.List<String> nameList; 
+            private String type; 
+            private String value; 
+
+            /**
+             * Cond.
+             */
+            public Builder cond(String cond) {
+                this.cond = cond;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * NameList.
+             */
+            public Builder nameList(java.util.List<String> nameList) {
+                this.nameList = nameList;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Conditions build() {
+                return new Conditions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link QueryAllSwimmingLaneResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAllSwimmingLaneResponseBody</p>
+     */
+    public static class RouteIndependentPercentageList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Percentage")
+        private String percentage;
+
+        @com.aliyun.core.annotation.NameInMap("RouteId")
+        private String routeId;
+
+        private RouteIndependentPercentageList(Builder builder) {
+            this.percentage = builder.percentage;
+            this.routeId = builder.routeId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RouteIndependentPercentageList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return percentage
+         */
+        public String getPercentage() {
+            return this.percentage;
+        }
+
+        /**
+         * @return routeId
+         */
+        public String getRouteId() {
+            return this.routeId;
+        }
+
+        public static final class Builder {
+            private String percentage; 
+            private String routeId; 
+
+            /**
+             * Percentage.
+             */
+            public Builder percentage(String percentage) {
+                this.percentage = percentage;
+                return this;
+            }
+
+            /**
+             * RouteId.
+             */
+            public Builder routeId(String routeId) {
+                this.routeId = routeId;
+                return this;
+            }
+
+            public RouteIndependentPercentageList build() {
+                return new RouteIndependentPercentageList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link QueryAllSwimmingLaneResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAllSwimmingLaneResponseBody</p>
+     */
+    public static class GatewaySwimmingLaneRoute extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CanaryModel")
+        private Integer canaryModel;
+
+        @com.aliyun.core.annotation.NameInMap("Condition")
+        private String condition;
+
+        @com.aliyun.core.annotation.NameInMap("Conditions")
+        private java.util.List<Conditions> conditions;
+
+        @com.aliyun.core.annotation.NameInMap("GatewayId")
+        private Long gatewayId;
+
+        @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
+        private String gatewayUniqueId;
+
+        @com.aliyun.core.annotation.NameInMap("Percentage")
+        private Integer percentage;
+
+        @com.aliyun.core.annotation.NameInMap("RouteIdList")
+        private java.util.List<Long> routeIdList;
+
+        @com.aliyun.core.annotation.NameInMap("RouteIndependentPercentageEnable")
+        private String routeIndependentPercentageEnable;
+
+        @com.aliyun.core.annotation.NameInMap("RouteIndependentPercentageList")
+        private java.util.List<RouteIndependentPercentageList> routeIndependentPercentageList;
+
+        private GatewaySwimmingLaneRoute(Builder builder) {
+            this.canaryModel = builder.canaryModel;
+            this.condition = builder.condition;
+            this.conditions = builder.conditions;
+            this.gatewayId = builder.gatewayId;
+            this.gatewayUniqueId = builder.gatewayUniqueId;
+            this.percentage = builder.percentage;
+            this.routeIdList = builder.routeIdList;
+            this.routeIndependentPercentageEnable = builder.routeIndependentPercentageEnable;
+            this.routeIndependentPercentageList = builder.routeIndependentPercentageList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static GatewaySwimmingLaneRoute create() {
+            return builder().build();
+        }
+
+        /**
+         * @return canaryModel
+         */
+        public Integer getCanaryModel() {
+            return this.canaryModel;
+        }
+
+        /**
+         * @return condition
+         */
+        public String getCondition() {
+            return this.condition;
+        }
+
+        /**
+         * @return conditions
+         */
+        public java.util.List<Conditions> getConditions() {
+            return this.conditions;
+        }
+
+        /**
+         * @return gatewayId
+         */
+        public Long getGatewayId() {
+            return this.gatewayId;
+        }
+
+        /**
+         * @return gatewayUniqueId
+         */
+        public String getGatewayUniqueId() {
+            return this.gatewayUniqueId;
+        }
+
+        /**
+         * @return percentage
+         */
+        public Integer getPercentage() {
+            return this.percentage;
+        }
+
+        /**
+         * @return routeIdList
+         */
+        public java.util.List<Long> getRouteIdList() {
+            return this.routeIdList;
+        }
+
+        /**
+         * @return routeIndependentPercentageEnable
+         */
+        public String getRouteIndependentPercentageEnable() {
+            return this.routeIndependentPercentageEnable;
+        }
+
+        /**
+         * @return routeIndependentPercentageList
+         */
+        public java.util.List<RouteIndependentPercentageList> getRouteIndependentPercentageList() {
+            return this.routeIndependentPercentageList;
+        }
+
+        public static final class Builder {
+            private Integer canaryModel; 
+            private String condition; 
+            private java.util.List<Conditions> conditions; 
+            private Long gatewayId; 
+            private String gatewayUniqueId; 
+            private Integer percentage; 
+            private java.util.List<Long> routeIdList; 
+            private String routeIndependentPercentageEnable; 
+            private java.util.List<RouteIndependentPercentageList> routeIndependentPercentageList; 
+
+            /**
+             * CanaryModel.
+             */
+            public Builder canaryModel(Integer canaryModel) {
+                this.canaryModel = canaryModel;
+                return this;
+            }
+
+            /**
+             * Condition.
+             */
+            public Builder condition(String condition) {
+                this.condition = condition;
+                return this;
+            }
+
+            /**
+             * Conditions.
+             */
+            public Builder conditions(java.util.List<Conditions> conditions) {
+                this.conditions = conditions;
+                return this;
+            }
+
+            /**
+             * GatewayId.
+             */
+            public Builder gatewayId(Long gatewayId) {
+                this.gatewayId = gatewayId;
+                return this;
+            }
+
+            /**
+             * GatewayUniqueId.
+             */
+            public Builder gatewayUniqueId(String gatewayUniqueId) {
+                this.gatewayUniqueId = gatewayUniqueId;
+                return this;
+            }
+
+            /**
+             * Percentage.
+             */
+            public Builder percentage(Integer percentage) {
+                this.percentage = percentage;
+                return this;
+            }
+
+            /**
+             * RouteIdList.
+             */
+            public Builder routeIdList(java.util.List<Long> routeIdList) {
+                this.routeIdList = routeIdList;
+                return this;
+            }
+
+            /**
+             * RouteIndependentPercentageEnable.
+             */
+            public Builder routeIndependentPercentageEnable(String routeIndependentPercentageEnable) {
+                this.routeIndependentPercentageEnable = routeIndependentPercentageEnable;
+                return this;
+            }
+
+            /**
+             * RouteIndependentPercentageList.
+             */
+            public Builder routeIndependentPercentageList(java.util.List<RouteIndependentPercentageList> routeIndependentPercentageList) {
+                this.routeIndependentPercentageList = routeIndependentPercentageList;
+                return this;
+            }
+
+            public GatewaySwimmingLaneRoute build() {
+                return new GatewaySwimmingLaneRoute(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link QueryAllSwimmingLaneResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAllSwimmingLaneResponseBody</p>
+     */
+    public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Enable")
+        private String enable;
+
+        @com.aliyun.core.annotation.NameInMap("EntryRules")
+        private java.util.List<EntryRules> entryRules;
+
+        @com.aliyun.core.annotation.NameInMap("GatewaySwimmingLaneRoute")
+        private GatewaySwimmingLaneRoute gatewaySwimmingLaneRoute;
+
+        @com.aliyun.core.annotation.NameInMap("GatewaySwimmingLaneRouteJson")
+        private String gatewaySwimmingLaneRouteJson;
+
+        @com.aliyun.core.annotation.NameInMap("GroupId")
+        private String groupId;
+
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private Long id;
+
+        @com.aliyun.core.annotation.NameInMap("MessageQueueFilterSide")
+        private String messageQueueFilterSide;
+
+        @com.aliyun.core.annotation.NameInMap("MessageQueueGrayEnable")
+        private Boolean messageQueueGrayEnable;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("RecordCanaryDetail")
+        @com.aliyun.core.annotation.NameInMap("PathIndependentPercentageEnable")
+        private Boolean pathIndependentPercentageEnable;
+
+        @com.aliyun.core.annotation.NameInMap("RecordCanaryDetail")
         private Boolean recordCanaryDetail;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("enableRules")
+        @com.aliyun.core.annotation.NameInMap("enableRules")
         private Boolean enableRules;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private String gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private String gmtModified;
 
         private Data(Builder builder) {
+            this.enable = builder.enable;
             this.entryRules = builder.entryRules;
+            this.gatewaySwimmingLaneRoute = builder.gatewaySwimmingLaneRoute;
+            this.gatewaySwimmingLaneRouteJson = builder.gatewaySwimmingLaneRouteJson;
             this.groupId = builder.groupId;
             this.id = builder.id;
             this.messageQueueFilterSide = builder.messageQueueFilterSide;
             this.messageQueueGrayEnable = builder.messageQueueGrayEnable;
             this.name = builder.name;
             this.namespace = builder.namespace;
+            this.pathIndependentPercentageEnable = builder.pathIndependentPercentageEnable;
             this.recordCanaryDetail = builder.recordCanaryDetail;
             this.regionId = builder.regionId;
             this.tag = builder.tag;
@@ -526,10 +981,31 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
+         * @return enable
+         */
+        public String getEnable() {
+            return this.enable;
+        }
+
+        /**
          * @return entryRules
          */
-        public java.util.List < EntryRules> getEntryRules() {
+        public java.util.List<EntryRules> getEntryRules() {
             return this.entryRules;
+        }
+
+        /**
+         * @return gatewaySwimmingLaneRoute
+         */
+        public GatewaySwimmingLaneRoute getGatewaySwimmingLaneRoute() {
+            return this.gatewaySwimmingLaneRoute;
+        }
+
+        /**
+         * @return gatewaySwimmingLaneRouteJson
+         */
+        public String getGatewaySwimmingLaneRouteJson() {
+            return this.gatewaySwimmingLaneRouteJson;
         }
 
         /**
@@ -572,6 +1048,13 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
          */
         public String getNamespace() {
             return this.namespace;
+        }
+
+        /**
+         * @return pathIndependentPercentageEnable
+         */
+        public Boolean getPathIndependentPercentageEnable() {
+            return this.pathIndependentPercentageEnable;
         }
 
         /**
@@ -624,13 +1107,17 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < EntryRules> entryRules; 
+            private String enable; 
+            private java.util.List<EntryRules> entryRules; 
+            private GatewaySwimmingLaneRoute gatewaySwimmingLaneRoute; 
+            private String gatewaySwimmingLaneRouteJson; 
             private String groupId; 
             private Long id; 
             private String messageQueueFilterSide; 
             private Boolean messageQueueGrayEnable; 
             private String name; 
             private String namespace; 
+            private Boolean pathIndependentPercentageEnable; 
             private Boolean recordCanaryDetail; 
             private String regionId; 
             private String tag; 
@@ -640,10 +1127,34 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             private String gmtModified; 
 
             /**
+             * Enable.
+             */
+            public Builder enable(String enable) {
+                this.enable = enable;
+                return this;
+            }
+
+            /**
              * EntryRules.
              */
-            public Builder entryRules(java.util.List < EntryRules> entryRules) {
+            public Builder entryRules(java.util.List<EntryRules> entryRules) {
                 this.entryRules = entryRules;
+                return this;
+            }
+
+            /**
+             * GatewaySwimmingLaneRoute.
+             */
+            public Builder gatewaySwimmingLaneRoute(GatewaySwimmingLaneRoute gatewaySwimmingLaneRoute) {
+                this.gatewaySwimmingLaneRoute = gatewaySwimmingLaneRoute;
+                return this;
+            }
+
+            /**
+             * GatewaySwimmingLaneRouteJson.
+             */
+            public Builder gatewaySwimmingLaneRouteJson(String gatewaySwimmingLaneRouteJson) {
+                this.gatewaySwimmingLaneRouteJson = gatewaySwimmingLaneRouteJson;
                 return this;
             }
 
@@ -692,6 +1203,14 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
+                return this;
+            }
+
+            /**
+             * PathIndependentPercentageEnable.
+             */
+            public Builder pathIndependentPercentageEnable(Boolean pathIndependentPercentageEnable) {
+                this.pathIndependentPercentageEnable = pathIndependentPercentageEnable;
                 return this;
             }
 

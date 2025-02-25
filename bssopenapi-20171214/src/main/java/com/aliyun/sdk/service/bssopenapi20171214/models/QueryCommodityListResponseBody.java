@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryCommodityListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryCommodityListResponseBody</p>
  */
 public class QueryCommodityListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryCommodityListResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class QueryCommodityListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NotApplicable</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class QueryCommodityListResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,10 @@ public class QueryCommodityListResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class QueryCommodityListResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CC706AAC-75A6-55B5-9AB7-7D171C6C7655</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class QueryCommodityListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the information about the service was queried.
+         * <p>Indicates whether the information about the service was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,14 +148,20 @@ public class QueryCommodityListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryCommodityListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCommodityListResponseBody</p>
+     */
     public static class CommodityList extends TeaModel {
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("CommodityCode")
+        @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
 
-        @NameInMap("CommodityName")
+        @com.aliyun.core.annotation.NameInMap("CommodityName")
         private String commodityName;
 
         private CommodityList(Builder builder) {
@@ -182,7 +205,10 @@ public class QueryCommodityListResponseBody extends TeaModel {
             private String commodityName; 
 
             /**
-             * The payment type. Valid values: POSTPAY (pay-as-you-go) and PREPAY (subscription).
+             * <p>The payment type. Valid values: POSTPAY (pay-as-you-go) and PREPAY (subscription).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>POSTPAY</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -190,7 +216,10 @@ public class QueryCommodityListResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the service, which is the same as that on the Billing Management page.
+             * <p>The code of the service, which is the same as that on the Billing Management page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -198,7 +227,10 @@ public class QueryCommodityListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * <p>The name of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS (Pay-As-You-Go)</p>
              */
             public Builder commodityName(String commodityName) {
                 this.commodityName = commodityName;
@@ -212,9 +244,15 @@ public class QueryCommodityListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryCommodityListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCommodityListResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CommodityList")
-        private java.util.List < CommodityList> commodityList;
+        @com.aliyun.core.annotation.NameInMap("CommodityList")
+        private java.util.List<CommodityList> commodityList;
 
         private Data(Builder builder) {
             this.commodityList = builder.commodityList;
@@ -231,17 +269,17 @@ public class QueryCommodityListResponseBody extends TeaModel {
         /**
          * @return commodityList
          */
-        public java.util.List < CommodityList> getCommodityList() {
+        public java.util.List<CommodityList> getCommodityList() {
             return this.commodityList;
         }
 
         public static final class Builder {
-            private java.util.List < CommodityList> commodityList; 
+            private java.util.List<CommodityList> commodityList; 
 
             /**
-             * The information about the service.
+             * <p>The information about the service.</p>
              */
-            public Builder commodityList(java.util.List < CommodityList> commodityList) {
+            public Builder commodityList(java.util.List<CommodityList> commodityList) {
                 this.commodityList = commodityList;
                 return this;
             }

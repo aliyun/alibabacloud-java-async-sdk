@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLoadBalancersResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLoadBalancersResponseBody</p>
  */
 public class DescribeLoadBalancersResponseBody extends TeaModel {
-    @NameInMap("LoadBalancers")
+    @com.aliyun.core.annotation.NameInMap("LoadBalancers")
     private LoadBalancers loadBalancers;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeLoadBalancersResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * An array of CLB instances.
+         * <p>An array of CLB instances.</p>
          */
         public Builder loadBalancers(LoadBalancers loadBalancers) {
             this.loadBalancers = loadBalancers;
@@ -94,7 +99,10 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on the current page.
+         * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8B9DB03B-ED39-5DB8-9C9F-1ED5F548D61E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         }
 
         /**
-         * The number of instances returned.
+         * <p>The number of instances returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,11 +148,17 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLoadBalancersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLoadBalancersResponseBody</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -170,7 +193,10 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -178,7 +204,10 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -192,9 +221,15 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLoadBalancersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLoadBalancersResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -211,17 +246,17 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -233,83 +268,89 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLoadBalancersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLoadBalancersResponseBody</p>
+     */
     public static class LoadBalancer extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("AddressIPVersion")
+        @com.aliyun.core.annotation.NameInMap("AddressIPVersion")
         private String addressIPVersion;
 
-        @NameInMap("AddressType")
+        @com.aliyun.core.annotation.NameInMap("AddressType")
         private String addressType;
 
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Integer bandwidth;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateTimeStamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimeStamp")
         private Long createTimeStamp;
 
-        @NameInMap("DeleteProtection")
+        @com.aliyun.core.annotation.NameInMap("DeleteProtection")
         private String deleteProtection;
 
-        @NameInMap("InstanceChargeType")
+        @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
         private String instanceChargeType;
 
-        @NameInMap("InternetChargeType")
+        @com.aliyun.core.annotation.NameInMap("InternetChargeType")
         private String internetChargeType;
 
-        @NameInMap("InternetChargeTypeAlias")
+        @com.aliyun.core.annotation.NameInMap("InternetChargeTypeAlias")
         private String internetChargeTypeAlias;
 
-        @NameInMap("LoadBalancerId")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
         private String loadBalancerId;
 
-        @NameInMap("LoadBalancerName")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerName")
         private String loadBalancerName;
 
-        @NameInMap("LoadBalancerSpec")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerSpec")
         private String loadBalancerSpec;
 
-        @NameInMap("LoadBalancerStatus")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerStatus")
         private String loadBalancerStatus;
 
-        @NameInMap("MasterZoneId")
+        @com.aliyun.core.annotation.NameInMap("MasterZoneId")
         private String masterZoneId;
 
-        @NameInMap("ModificationProtectionReason")
+        @com.aliyun.core.annotation.NameInMap("ModificationProtectionReason")
         private String modificationProtectionReason;
 
-        @NameInMap("ModificationProtectionStatus")
+        @com.aliyun.core.annotation.NameInMap("ModificationProtectionStatus")
         private String modificationProtectionStatus;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RegionIdAlias")
+        @com.aliyun.core.annotation.NameInMap("RegionIdAlias")
         private String regionIdAlias;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SlaveZoneId")
+        @com.aliyun.core.annotation.NameInMap("SlaveZoneId")
         private String slaveZoneId;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private LoadBalancer(Builder builder) {
@@ -560,7 +601,10 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The endpoint of the CLB instance.
+             * <p>The endpoint of the CLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.XX.XX.28</p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -568,7 +612,10 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The IP version that is used by the CLB instance. Valid values: **ipv4** and **ipv6**.
+             * <p>The IP version that is used by the CLB instance. Valid values: <strong>ipv4</strong> and <strong>ipv6</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipv4</p>
              */
             public Builder addressIPVersion(String addressIPVersion) {
                 this.addressIPVersion = addressIPVersion;
@@ -576,11 +623,14 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The network type of the CLB instance. Valid values:
-             * <p>
+             * <p>The network type of the CLB instance. Valid values:</p>
+             * <ul>
+             * <li><strong>internet:</strong> After an Internet-facing CLB instance is created, the system assigns a public IP address to the CLB instance. Then, the CLB instance can forward requests over the Internet.</li>
+             * <li><strong>intranet:</strong> After an internal-facing CLB instance is created, the system assigns a private IP address to the CLB instance. Then, the CLB instance can forward requests only over internal networks.</li>
+             * </ul>
              * 
-             * *   **internet:** After an Internet-facing CLB instance is created, the system assigns a public IP address to the CLB instance. Then, the CLB instance can forward requests over the Internet.
-             * *   **intranet:** After an internal-facing CLB instance is created, the system assigns a private IP address to the CLB instance. Then, the CLB instance can forward requests only over internal networks.
+             * <strong>example:</strong>
+             * <p>intranet</p>
              */
             public Builder addressType(String addressType) {
                 this.addressType = addressType;
@@ -588,11 +638,10 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum bandwidth of the listener. Unit: Mbit/s. Valid values:
-             * <p>
+             * <p>The maximum bandwidth of the listener. Unit: Mbit/s.</p>
              * 
-             * *   **-1:** For a pay-by-data-transfer Internet-facing CLB instance, this value is set to -1. This indicates that the bandwidth is unlimited.
-             * *   **1 to 5120:** For a pay-by-bandwidth Internet-facing CLB instance, you can specify the maximum bandwidth for each listener. The sum of the maximum bandwidth of all listeners cannot exceed the maximum bandwidth of the CLB instance.
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -600,7 +649,10 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the CLB instance was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.
+             * <p>The time when the CLB instance was created. The time follows the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-02T02:49:05Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -608,7 +660,10 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the instance was created.
+             * <p>The timestamp when the instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1504147745000</p>
              */
             public Builder createTimeStamp(Long createTimeStamp) {
                 this.createTimeStamp = createTimeStamp;
@@ -616,11 +671,14 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether deletion protection is enabled for the CLB instance. Valid values:
-             * <p>
+             * <p>Indicates whether deletion protection is enabled for the CLB instance. Valid values:</p>
+             * <ul>
+             * <li><strong>on:</strong> Deletion protection is enabled.</li>
+             * <li><strong>off:</strong> Deletion protection is disabled.</li>
+             * </ul>
              * 
-             * *   **on:** Deletion protection is enabled.
-             * *   **off:** Deletion protection is disabled.
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder deleteProtection(String deleteProtection) {
                 this.deleteProtection = deleteProtection;
@@ -628,13 +686,17 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The metering method of the CLB instance. Valid values:
-             * <p>
+             * <p>The metering method of the CLB instance. Valid values:</p>
+             * <ul>
+             * <li><strong>PayBySpec:</strong> pay-by-specification.</li>
+             * <li><strong>PayByCLCU:</strong> pay-by-LCU.</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter takes effect only for accounts registered on the China site (aliyun.com) and when the <strong>PayType</strong> parameter is set to <strong>PayOnDemand</strong>.</p>
+             * </blockquote>
              * 
-             * *   **PayBySpec:** pay-by-specification.
-             * *   **PayByCLCU:** pay-by-LCU.
-             * 
-             * >  This parameter takes effect only for accounts registered on the China site (aliyun.com) and when the **PayType** parameter is set to **PayOnDemand**.
+             * <strong>example:</strong>
+             * <p>PayBySpec</p>
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -642,11 +704,14 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The metering method of the Internet-facing CLB instance. Valid values:
-             * <p>
+             * <p>The metering method of the Internet-facing CLB instance. Valid values:</p>
+             * <ul>
+             * <li><strong>3:</strong> pay-by-bandwidth (<strong>paybybandwidth</strong>).</li>
+             * <li><strong>4:</strong> pay-by-data-transfer (<strong>paybytraffic</strong>).</li>
+             * </ul>
              * 
-             * *   **3:** pay-by-bandwidth (**paybybandwidth**).
-             * *   **4:** pay-by-data-transfer (**paybytraffic**).
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -654,11 +719,14 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The metering method of Internet data transfer. Valid values:
-             * <p>
+             * <p>The metering method of Internet data transfer. Valid values:</p>
+             * <ul>
+             * <li><strong>paybybandwidth:</strong> pay-by-bandwidth.</li>
+             * <li><strong>paybytraffic:</strong> pay-by-data-transfer.</li>
+             * </ul>
              * 
-             * *   **paybybandwidth:** pay-by-bandwidth.
-             * *   **paybytraffic:** pay-by-data-transfer.
+             * <strong>example:</strong>
+             * <p>paybybandwidth</p>
              */
             public Builder internetChargeTypeAlias(String internetChargeTypeAlias) {
                 this.internetChargeTypeAlias = internetChargeTypeAlias;
@@ -666,7 +734,10 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the CLB instance.
+             * <p>The ID of the CLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-bp1b6c719dfa****</p>
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -674,7 +745,10 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the CLB instance.
+             * <p>The name of the CLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-bp1o94dp5i6ea****</p>
              */
             public Builder loadBalancerName(String loadBalancerName) {
                 this.loadBalancerName = loadBalancerName;
@@ -682,7 +756,13 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The specification of the CLB instance.
+             * <p>The specification of the CLB instance.</p>
+             * <blockquote>
+             * <p> Pay-as-you-go CLB instances are not subject to specifications. <strong>slb.lcu.elastic</strong> is returned by default.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>slb.s1.small</p>
              */
             public Builder loadBalancerSpec(String loadBalancerSpec) {
                 this.loadBalancerSpec = loadBalancerSpec;
@@ -690,12 +770,15 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the CLB instance. Valid values:
-             * <p>
+             * <p>The status of the CLB instance. Valid values:</p>
+             * <ul>
+             * <li><strong>inactive:</strong> The CLB instance is disabled. CLB instances in the inactive state do not forward traffic.</li>
+             * <li><strong>active:</strong> The CLB instance runs as expected. By default, newly created CLB instances are in the <strong>active</strong> state.</li>
+             * <li><strong>locked:</strong> The CLB instance is locked.</li>
+             * </ul>
              * 
-             * *   **inactive:** The CLB instance is disabled. CLB instances in the inactive state do not forward traffic.
-             * *   **active:** The CLB instance runs as expected. By default, newly created CLB instances are in the **active** state.
-             * *   **locked:** The CLB instance is locked.
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder loadBalancerStatus(String loadBalancerStatus) {
                 this.loadBalancerStatus = loadBalancerStatus;
@@ -703,7 +786,10 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the primary zone to which the CLB instance belongs.
+             * <p>The ID of the primary zone to which the CLB instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-b</p>
              */
             public Builder masterZoneId(String masterZoneId) {
                 this.masterZoneId = masterZoneId;
@@ -711,10 +797,13 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the configuration read-only mode was enabled. The reason must be 1 to 80 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The reason must start with a letter.
-             * <p>
+             * <p>The reason why the configuration read-only mode was enabled. The reason must be 1 to 80 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The reason must start with a letter.</p>
+             * <blockquote>
+             * <p>This parameter takes effect only when you set the <code>ModificationProtectionStatus</code> parameter to <strong>ConsoleProtection</strong>.</p>
+             * </blockquote>
              * 
-             * > This parameter takes effect only when you set the `ModificationProtectionStatus` parameter to **ConsoleProtection**.
+             * <strong>example:</strong>
+             * <p>ManagedInstance</p>
              */
             public Builder modificationProtectionReason(String modificationProtectionReason) {
                 this.modificationProtectionReason = modificationProtectionReason;
@@ -722,13 +811,17 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the configuration read-only mode is enabled for the CLB instance. Valid values:
-             * <p>
+             * <p>Indicates whether the configuration read-only mode is enabled for the CLB instance. Valid values:</p>
+             * <ul>
+             * <li><strong>NonProtection:</strong> The configuration read-only mode is disabled. In this case, you cannot specify the ModificationProtectionReason parameter. If you specify the <code>ModificationProtectionReason</code> parameter, the value is cleared.</li>
+             * <li><strong>ConsoleProtection:</strong> The configuration read-only mode is enabled.</li>
+             * </ul>
+             * <blockquote>
+             * <p> If you set this parameter to <strong>ConsoleProtection</strong>, you cannot modify the configurations of the CLB instance in the CLB console. However, you can call API operations to modify the configurations of the CLB instance.</p>
+             * </blockquote>
              * 
-             * *   **NonProtection:** The configuration read-only mode is disabled. In this case, you cannot specify the ModificationProtectionReason parameter. If you specify the `ModificationProtectionReason` parameter, the value is cleared.
-             * *   **ConsoleProtection:** The configuration read-only mode is enabled.
-             * 
-             * >  If you set this parameter to **ConsoleProtection**, you cannot modify the configurations of the CLB instance in the CLB console. However, you can call API operations to modify the configurations of the CLB instance.
+             * <strong>example:</strong>
+             * <p>ConsoleProtection</p>
              */
             public Builder modificationProtectionStatus(String modificationProtectionStatus) {
                 this.modificationProtectionStatus = modificationProtectionStatus;
@@ -736,11 +829,14 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The network type of the internal-facing CLB instance. Valid values:
-             * <p>
+             * <p>The network type of the internal-facing CLB instance. Valid values:</p>
+             * <ul>
+             * <li><strong>vpc:</strong> VPC.</li>
+             * <li><strong>classic:</strong> classic network.</li>
+             * </ul>
              * 
-             * *   **vpc:** VPC.
-             * *   **classic:** classic network.
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -748,10 +844,13 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the CLB instance.
-             * <p>
+             * <p>The billing method of the CLB instance.</p>
+             * <ul>
+             * <li><strong>PayOnDemand</strong> is returned, which indicates the pay-as-you-go billing method.</li>
+             * </ul>
              * 
-             * *   **PayOnDemand** is returned, which indicates the pay-as-you-go billing method.
+             * <strong>example:</strong>
+             * <p>PayOnDemand</p>
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -759,7 +858,10 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the CLB instance was deployed.
+             * <p>The ID of the region where the CLB instance was deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -767,7 +869,10 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The region where the CLB instance was deployed.
+             * <p>The region where the CLB instance was deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hangzhou</p>
              */
             public Builder regionIdAlias(String regionIdAlias) {
                 this.regionIdAlias = regionIdAlias;
@@ -775,7 +880,10 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-atstuj3r****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -783,7 +891,10 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the secondary zone to which the CLB instance belongs.
+             * <p>The ID of the secondary zone to which the CLB instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-d</p>
              */
             public Builder slaveZoneId(String slaveZoneId) {
                 this.slaveZoneId = slaveZoneId;
@@ -791,7 +902,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the CLB instance.
+             * <p>The tags of the CLB instance.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -799,7 +910,10 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch to which the internal-facing CLB instance belongs.
+             * <p>The ID of the vSwitch to which the internal-facing CLB instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-255ecr****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -807,7 +921,10 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC in which the internal-facing CLB instance was deployed.
+             * <p>The ID of the VPC in which the internal-facing CLB instance was deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-25dvzy9f8****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -821,9 +938,15 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLoadBalancersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLoadBalancersResponseBody</p>
+     */
     public static class LoadBalancers extends TeaModel {
-        @NameInMap("LoadBalancer")
-        private java.util.List < LoadBalancer> loadBalancer;
+        @com.aliyun.core.annotation.NameInMap("LoadBalancer")
+        private java.util.List<LoadBalancer> loadBalancer;
 
         private LoadBalancers(Builder builder) {
             this.loadBalancer = builder.loadBalancer;
@@ -840,17 +963,17 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         /**
          * @return loadBalancer
          */
-        public java.util.List < LoadBalancer> getLoadBalancer() {
+        public java.util.List<LoadBalancer> getLoadBalancer() {
             return this.loadBalancer;
         }
 
         public static final class Builder {
-            private java.util.List < LoadBalancer> loadBalancer; 
+            private java.util.List<LoadBalancer> loadBalancer; 
 
             /**
              * LoadBalancer.
              */
-            public Builder loadBalancer(java.util.List < LoadBalancer> loadBalancer) {
+            public Builder loadBalancer(java.util.List<LoadBalancer> loadBalancer) {
                 this.loadBalancer = loadBalancer;
                 return this;
             }

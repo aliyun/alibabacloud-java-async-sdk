@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PageImageRegistryResponseBody} extends {@link TeaModel}
  *
  * <p>PageImageRegistryResponseBody</p>
  */
 public class PageImageRegistryResponseBody extends TeaModel {
-    @NameInMap("List")
-    private java.util.List < List> list;
+    @com.aliyun.core.annotation.NameInMap("List")
+    private java.util.List<List> list;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private PageImageRegistryResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
     /**
      * @return list
      */
-    public java.util.List < List> getList() {
+    public java.util.List<List> getList() {
         return this.list;
     }
 
@@ -57,20 +62,20 @@ public class PageImageRegistryResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < List> list; 
+        private java.util.List<List> list; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
-         * An array that consists of image repositories.
+         * <p>An array that consists of image repositories.</p>
          */
-        public Builder list(java.util.List < List> list) {
+        public Builder list(java.util.List<List> list) {
             this.list = list;
             return this;
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +83,10 @@ public class PageImageRegistryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FDA9E37C-6114-5945-8FF1-E3D4D397****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,65 +99,71 @@ public class PageImageRegistryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PageImageRegistryResponseBody} extends {@link TeaModel}
+     *
+     * <p>PageImageRegistryResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("BlackList")
+        @com.aliyun.core.annotation.NameInMap("BlackList")
         private String blackList;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("ImageCount")
+        @com.aliyun.core.annotation.NameInMap("ImageCount")
         private Integer imageCount;
 
-        @NameInMap("JenkinsEnv")
+        @com.aliyun.core.annotation.NameInMap("JenkinsEnv")
         private String jenkinsEnv;
 
-        @NameInMap("NetType")
+        @com.aliyun.core.annotation.NameInMap("NetType")
         private Integer netType;
 
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
 
-        @NameInMap("PersistenceDay")
+        @com.aliyun.core.annotation.NameInMap("PersistenceDay")
         private Integer persistenceDay;
 
-        @NameInMap("ProtocolType")
+        @com.aliyun.core.annotation.NameInMap("ProtocolType")
         private Integer protocolType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RegistryHostIp")
+        @com.aliyun.core.annotation.NameInMap("RegistryHostIp")
         private String registryHostIp;
 
-        @NameInMap("RegistryName")
+        @com.aliyun.core.annotation.NameInMap("RegistryName")
         private String registryName;
 
-        @NameInMap("RegistryType")
+        @com.aliyun.core.annotation.NameInMap("RegistryType")
         private String registryType;
 
-        @NameInMap("Token")
+        @com.aliyun.core.annotation.NameInMap("Token")
         private String token;
 
-        @NameInMap("TransPerHour")
+        @com.aliyun.core.annotation.NameInMap("TransPerHour")
         private Integer transPerHour;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("WhiteList")
+        @com.aliyun.core.annotation.NameInMap("WhiteList")
         private String whiteList;
 
         private List(Builder builder) {
@@ -346,7 +360,10 @@ public class PageImageRegistryResponseBody extends TeaModel {
             private String whiteList; 
 
             /**
-             * The IP address blacklist.
+             * <p>The IP address blacklist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>129.211.XXX.XXX</p>
              */
             public Builder blackList(String blackList) {
                 this.blackList = blackList;
@@ -354,7 +371,10 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name of the image repository.
+             * <p>The domain name of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sinochem.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -362,7 +382,10 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the image repository was created. The time is in the yyyy-MM-dd HH:mm:ss format.
+             * <p>The time when the image repository was created. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-30 10:23:30</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -370,7 +393,10 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the image repository was updated. The time is in the yyyy-MM-dd HH:mm:ss format.
+             * <p>The time when the image repository was updated. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-30 10:23:30</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -378,7 +404,10 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image repository.
+             * <p>The ID of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1078312</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -386,7 +415,10 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of images that are stored in the image repository.
+             * <p>The number of images that are stored in the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder imageCount(Integer imageCount) {
                 this.imageCount = imageCount;
@@ -394,7 +426,10 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the Jenkins environment.
+             * <p>The information about the Jenkins environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>projectInfo</p>
              */
             public Builder jenkinsEnv(String jenkinsEnv) {
                 this.jenkinsEnv = jenkinsEnv;
@@ -402,11 +437,14 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The network type. Valid values:
-             * <p>
+             * <p>The network type. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Internet.</li>
+             * <li><strong>2</strong>: virtual private cloud (VPC).</li>
+             * </ul>
              * 
-             * *   **1**: Internet.
-             * *   **2**: virtual private cloud (VPC).
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder netType(Integer netType) {
                 this.netType = netType;
@@ -414,7 +452,10 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The password.
+             * <p>The password.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Harbor******</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -422,7 +463,10 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of days for which assets are retained.
+             * <p>The number of days for which assets are retained.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder persistenceDay(Integer persistenceDay) {
                 this.persistenceDay = persistenceDay;
@@ -430,11 +474,14 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the protocol. Valid values:
-             * <p>
+             * <p>The type of the protocol. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: HTTP.</li>
+             * <li><strong>2</strong>: HTTPS.</li>
+             * </ul>
              * 
-             * *   **1**: HTTP.
-             * *   **2**: HTTPS.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder protocolType(Integer protocolType) {
                 this.protocolType = protocolType;
@@ -442,7 +489,10 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the image repository.
+             * <p>The region ID of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -450,7 +500,10 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the image repository.
+             * <p>The IP address of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>39.104.XXX.XXX</p>
              */
             public Builder registryHostIp(String registryHostIp) {
                 this.registryHostIp = registryHostIp;
@@ -458,7 +511,10 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the image repository.
+             * <p>The alias of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1</p>
              */
             public Builder registryName(String registryName) {
                 this.registryName = registryName;
@@ -466,13 +522,16 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the image repository. Valid values:
-             * <p>
+             * <p>The type of the image repository. Valid values:</p>
+             * <ul>
+             * <li><strong>acr</strong>: Container Registry.</li>
+             * <li><strong>harbor</strong>: Harbor.</li>
+             * <li><strong>quay</strong>: Quay.</li>
+             * <li><strong>CI/CD</strong>: Jenkins.</li>
+             * </ul>
              * 
-             * *   **acr**: Container Registry.
-             * *   **harbor**: Harbor.
-             * *   **quay**: Quay.
-             * *   **CI/CD**: Jenkins.
+             * <strong>example:</strong>
+             * <p>harbor</p>
              */
             public Builder registryType(String registryType) {
                 this.registryType = registryType;
@@ -480,7 +539,10 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The authentication token of the user.
+             * <p>The authentication token of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c7b90d29-632f-4e58-88b8-00ad77f6****</p>
              */
             public Builder token(String token) {
                 this.token = token;
@@ -488,7 +550,10 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of scan tasks that are performed per hour.
+             * <p>The number of scan tasks that are performed per hour.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder transPerHour(Integer transPerHour) {
                 this.transPerHour = transPerHour;
@@ -496,7 +561,10 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The username.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RegistryUser</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -504,7 +572,10 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The VPC ID.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-5gu8iu68w9b472jbb****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -512,7 +583,10 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address whitelist.
+             * <p>The IP address whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XXX.XXX</p>
              */
             public Builder whiteList(String whiteList) {
                 this.whiteList = whiteList;
@@ -526,17 +600,23 @@ public class PageImageRegistryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PageImageRegistryResponseBody} extends {@link TeaModel}
+     *
+     * <p>PageImageRegistryResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -589,7 +669,10 @@ public class PageImageRegistryResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -597,7 +680,10 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -605,7 +691,10 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -613,7 +702,10 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>69</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

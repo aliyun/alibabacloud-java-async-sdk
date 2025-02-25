@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnUserSecDropResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnUserSecDropResponseBody</p>
  */
 public class DescribeDcdnUserSecDropResponseBody extends TeaModel {
-    @NameInMap("Drops")
+    @com.aliyun.core.annotation.NameInMap("Drops")
     private Integer drops;
 
-    @NameInMap("Msg")
+    @com.aliyun.core.annotation.NameInMap("Msg")
     private String msg;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UuidStr")
+    @com.aliyun.core.annotation.NameInMap("UuidStr")
     private String uuidStr;
 
     private DescribeDcdnUserSecDropResponseBody(Builder builder) {
@@ -74,7 +74,10 @@ public class DescribeDcdnUserSecDropResponseBody extends TeaModel {
         private String uuidStr; 
 
         /**
-         * The number of packets that are blocked.
+         * <p>The number of packets that are blocked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>233023208</p>
          */
         public Builder drops(Integer drops) {
             this.drops = drops;
@@ -82,11 +85,14 @@ public class DescribeDcdnUserSecDropResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the information is found.
-         * <p>
+         * <p>Indicates whether the information is found.</p>
+         * <ul>
+         * <li>Found</li>
+         * <li>Not Found</li>
+         * </ul>
          * 
-         * *   Found
-         * *   Not Found
+         * <strong>example:</strong>
+         * <p>Found</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -94,7 +100,10 @@ public class DescribeDcdnUserSecDropResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4A1295C0-7A5C-4F27-8D70-C3A648E7037F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -102,7 +111,10 @@ public class DescribeDcdnUserSecDropResponseBody extends TeaModel {
         }
 
         /**
-         * The character string that is concatenated based on the request parameters and is used to locate causes when data is not found.
+         * <p>The character string that is concatenated based on the request parameters and is used to locate causes when data is not found.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1day10811******6429wafDCDN</p>
          */
         public Builder uuidStr(String uuidStr) {
             this.uuidStr = uuidStr;

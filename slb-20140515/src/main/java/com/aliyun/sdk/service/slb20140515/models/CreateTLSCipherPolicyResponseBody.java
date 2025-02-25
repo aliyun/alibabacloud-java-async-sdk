@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTLSCipherPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>CreateTLSCipherPolicyResponseBody</p>
  */
 public class CreateTLSCipherPolicyResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TLSCipherPolicyId")
+    @com.aliyun.core.annotation.NameInMap("TLSCipherPolicyId")
     private String TLSCipherPolicyId;
 
     private CreateTLSCipherPolicyResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateTLSCipherPolicyResponseBody extends TeaModel {
         private String TLSCipherPolicyId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D7A8875F-373A-5F48-8484-25B07A61F2AF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,10 @@ public class CreateTLSCipherPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the policy.
+         * <p>The ID of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tls-bp14bb1e7dll4f****</p>
          */
         public Builder TLSCipherPolicyId(String TLSCipherPolicyId) {
             this.TLSCipherPolicyId = TLSCipherPolicyId;

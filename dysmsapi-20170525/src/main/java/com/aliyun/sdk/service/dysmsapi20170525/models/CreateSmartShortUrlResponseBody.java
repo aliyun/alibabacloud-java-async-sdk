@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSmartShortUrlResponseBody} extends {@link TeaModel}
  *
  * <p>CreateSmartShortUrlResponseBody</p>
  */
 public class CreateSmartShortUrlResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Model")
-    private java.util.List < Model> model;
+    @com.aliyun.core.annotation.NameInMap("Model")
+    private java.util.List<Model> model;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateSmartShortUrlResponseBody(Builder builder) {
@@ -56,7 +61,7 @@ public class CreateSmartShortUrlResponseBody extends TeaModel {
     /**
      * @return model
      */
-    public java.util.List < Model> getModel() {
+    public java.util.List<Model> getModel() {
         return this.model;
     }
 
@@ -70,7 +75,7 @@ public class CreateSmartShortUrlResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private String message; 
-        private java.util.List < Model> model; 
+        private java.util.List<Model> model; 
         private String requestId; 
 
         /**
@@ -92,7 +97,7 @@ public class CreateSmartShortUrlResponseBody extends TeaModel {
         /**
          * Model.
          */
-        public Builder model(java.util.List < Model> model) {
+        public Builder model(java.util.List<Model> model) {
             this.model = model;
             return this;
         }
@@ -111,20 +116,26 @@ public class CreateSmartShortUrlResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateSmartShortUrlResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateSmartShortUrlResponseBody</p>
+     */
     public static class Model extends TeaModel {
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Expiration")
+        @com.aliyun.core.annotation.NameInMap("Expiration")
         private Long expiration;
 
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
-        @NameInMap("ShortName")
+        @com.aliyun.core.annotation.NameInMap("ShortName")
         private String shortName;
 
-        @NameInMap("ShortUrl")
+        @com.aliyun.core.annotation.NameInMap("ShortUrl")
         private String shortUrl;
 
         private Model(Builder builder) {

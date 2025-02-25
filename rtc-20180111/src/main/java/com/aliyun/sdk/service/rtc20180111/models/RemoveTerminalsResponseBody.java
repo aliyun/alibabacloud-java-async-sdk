@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveTerminalsResponseBody} extends {@link TeaModel}
  *
  * <p>RemoveTerminalsResponseBody</p>
  */
 public class RemoveTerminalsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Terminals")
+    @com.aliyun.core.annotation.NameInMap("Terminals")
     private Terminals terminals;
 
     private RemoveTerminalsResponseBody(Builder builder) {
@@ -71,14 +76,20 @@ public class RemoveTerminalsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RemoveTerminalsResponseBody} extends {@link TeaModel}
+     *
+     * <p>RemoveTerminalsResponseBody</p>
+     */
     public static class Terminal extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private Integer code;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
         private Terminal(Builder builder) {
@@ -152,9 +163,15 @@ public class RemoveTerminalsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RemoveTerminalsResponseBody} extends {@link TeaModel}
+     *
+     * <p>RemoveTerminalsResponseBody</p>
+     */
     public static class Terminals extends TeaModel {
-        @NameInMap("Terminal")
-        private java.util.List < Terminal> terminal;
+        @com.aliyun.core.annotation.NameInMap("Terminal")
+        private java.util.List<Terminal> terminal;
 
         private Terminals(Builder builder) {
             this.terminal = builder.terminal;
@@ -171,17 +188,17 @@ public class RemoveTerminalsResponseBody extends TeaModel {
         /**
          * @return terminal
          */
-        public java.util.List < Terminal> getTerminal() {
+        public java.util.List<Terminal> getTerminal() {
             return this.terminal;
         }
 
         public static final class Builder {
-            private java.util.List < Terminal> terminal; 
+            private java.util.List<Terminal> terminal; 
 
             /**
              * Terminal.
              */
-            public Builder terminal(java.util.List < Terminal> terminal) {
+            public Builder terminal(java.util.List<Terminal> terminal) {
                 this.terminal = terminal;
                 return this;
             }

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCenAttachedChildInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCenAttachedChildInstancesResponseBody</p>
  */
 public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
-    @NameInMap("ChildInstances")
+    @com.aliyun.core.annotation.NameInMap("ChildInstances")
     private ChildInstances childInstances;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeCenAttachedChildInstancesResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * ChildInstances.
+         * <p>The information about the network instances.</p>
          */
         public Builder childInstances(ChildInstances childInstances) {
             this.childInstances = childInstances;
@@ -94,7 +99,10 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B2063B16-852B-5B66-B73D-4ED4D1A5E5C2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,26 +148,32 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCenAttachedChildInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenAttachedChildInstancesResponseBody</p>
+     */
     public static class ChildInstance extends TeaModel {
-        @NameInMap("CenId")
+        @com.aliyun.core.annotation.NameInMap("CenId")
         private String cenId;
 
-        @NameInMap("ChildInstanceAttachTime")
+        @com.aliyun.core.annotation.NameInMap("ChildInstanceAttachTime")
         private String childInstanceAttachTime;
 
-        @NameInMap("ChildInstanceId")
+        @com.aliyun.core.annotation.NameInMap("ChildInstanceId")
         private String childInstanceId;
 
-        @NameInMap("ChildInstanceOwnerId")
+        @com.aliyun.core.annotation.NameInMap("ChildInstanceOwnerId")
         private Long childInstanceOwnerId;
 
-        @NameInMap("ChildInstanceRegionId")
+        @com.aliyun.core.annotation.NameInMap("ChildInstanceRegionId")
         private String childInstanceRegionId;
 
-        @NameInMap("ChildInstanceType")
+        @com.aliyun.core.annotation.NameInMap("ChildInstanceType")
         private String childInstanceType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ChildInstance(Builder builder) {
@@ -230,7 +253,10 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * CenId.
+             * <p>The ID of the CEN instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cen-j3jzhw1zpau2km****</p>
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -238,7 +264,11 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ChildInstanceAttachTime.
+             * <p>The time when the network instance was attached to the CEN instance.</p>
+             * <p>The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-08-10T06:27Z</p>
              */
             public Builder childInstanceAttachTime(String childInstanceAttachTime) {
                 this.childInstanceAttachTime = childInstanceAttachTime;
@@ -246,7 +276,10 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ChildInstanceId.
+             * <p>The ID of the network instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-8vb1lu55yt9rlwgxl****</p>
              */
             public Builder childInstanceId(String childInstanceId) {
                 this.childInstanceId = childInstanceId;
@@ -254,7 +287,10 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ChildInstanceOwnerId.
+             * <p>The ID of the Alibaba Cloud account to which the network instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1688000000000000</p>
              */
             public Builder childInstanceOwnerId(Long childInstanceOwnerId) {
                 this.childInstanceOwnerId = childInstanceOwnerId;
@@ -262,7 +298,10 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ChildInstanceRegionId.
+             * <p>The ID of the region where the network instance is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-zhangjiakou</p>
              */
             public Builder childInstanceRegionId(String childInstanceRegionId) {
                 this.childInstanceRegionId = childInstanceRegionId;
@@ -270,7 +309,15 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ChildInstanceType.
+             * <p>The type of the network instance. Valid values:</p>
+             * <ul>
+             * <li><strong>VPC</strong>: VPC</li>
+             * <li><strong>VBR</strong>: VBR</li>
+             * <li><strong>CCN</strong>: CCN instance</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder childInstanceType(String childInstanceType) {
                 this.childInstanceType = childInstanceType;
@@ -278,7 +325,15 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the network instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Attaching</strong>: The network instance is being created on the transit router.</li>
+             * <li><strong>Attached</strong>: The network instance has been created on the transit router.</li>
+             * <li><strong>Detaching</strong>: The network instance is being deleted from the transit router.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Attached</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -292,9 +347,15 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCenAttachedChildInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenAttachedChildInstancesResponseBody</p>
+     */
     public static class ChildInstances extends TeaModel {
-        @NameInMap("ChildInstance")
-        private java.util.List < ChildInstance> childInstance;
+        @com.aliyun.core.annotation.NameInMap("ChildInstance")
+        private java.util.List<ChildInstance> childInstance;
 
         private ChildInstances(Builder builder) {
             this.childInstance = builder.childInstance;
@@ -311,17 +372,17 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
         /**
          * @return childInstance
          */
-        public java.util.List < ChildInstance> getChildInstance() {
+        public java.util.List<ChildInstance> getChildInstance() {
             return this.childInstance;
         }
 
         public static final class Builder {
-            private java.util.List < ChildInstance> childInstance; 
+            private java.util.List<ChildInstance> childInstance; 
 
             /**
              * ChildInstance.
              */
-            public Builder childInstance(java.util.List < ChildInstance> childInstance) {
+            public Builder childInstance(java.util.List<ChildInstance> childInstance) {
                 this.childInstance = childInstance;
                 return this;
             }

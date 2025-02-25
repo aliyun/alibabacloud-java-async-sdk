@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnWafFilterInfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnWafFilterInfoRequest</p>
  */
 public class DescribeDcdnWafFilterInfoRequest extends Request {
-    @Query
-    @NameInMap("DefenseScenes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefenseScenes")
     private String defenseScenes;
 
-    @Query
-    @NameInMap("Language")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Language")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String language;
 
     private DescribeDcdnWafFilterInfoRequest(Builder builder) {
@@ -69,16 +69,18 @@ public class DescribeDcdnWafFilterInfoRequest extends Request {
         } 
 
         /**
-         * The type of the protection policy. Separate multiple types with commas (,). Valid values:
-         * <p>
+         * <p>The type of the protection policy. Separate multiple types with commas (,). Valid values:</p>
+         * <ul>
+         * <li>waf_group: basic web protection</li>
+         * <li>custom_acl: custom protection</li>
+         * <li>whitelist: IP address whitelist</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you do not specify this parameter, all types are returned.</p>
+         * </blockquote>
          * 
-         * *   waf_group: basic web protection
-         * *   custom_acl: custom protection
-         * *   whitelist: IP address whitelist
-         * 
-         * **
-         * 
-         * **If you do not specify this parameter, all types are returned.
+         * <strong>example:</strong>
+         * <p>custom_acl</p>
          */
         public Builder defenseScenes(String defenseScenes) {
             this.putQueryParameter("DefenseScenes", defenseScenes);
@@ -87,11 +89,15 @@ public class DescribeDcdnWafFilterInfoRequest extends Request {
         }
 
         /**
-         * The language of the returned information. Valid values:
-         * <p>
+         * <p>The language of the returned information. Valid values:</p>
+         * <ul>
+         * <li>en: English</li>
+         * <li>cn: Simplified Chinese</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   en: English
-         * *   cn: Simplified Chinese
+         * <strong>example:</strong>
+         * <p>cn</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);

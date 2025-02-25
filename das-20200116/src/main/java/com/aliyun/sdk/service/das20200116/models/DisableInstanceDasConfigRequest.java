@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisableInstanceDasConfigRequest} extends {@link RequestModel}
  *
  * <p>DisableInstanceDasConfigRequest</p>
  */
 public class DisableInstanceDasConfigRequest extends Request {
-    @Query
-    @NameInMap("Engine")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String engine;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("ScaleType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScaleType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scaleType;
 
     private DisableInstanceDasConfigRequest(Builder builder) {
@@ -85,7 +90,11 @@ public class DisableInstanceDasConfigRequest extends Request {
         } 
 
         /**
-         * The database engine. Set the value to Redis.
+         * <p>The database engine. Set the value to Redis.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Redis</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -94,7 +103,11 @@ public class DisableInstanceDasConfigRequest extends Request {
         }
 
         /**
-         * The database instance ID.
+         * <p>The database instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1nti25tc7bq5****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -103,12 +116,16 @@ public class DisableInstanceDasConfigRequest extends Request {
         }
 
         /**
-         * The type of auto scaling. Valid values:
-         * <p>
+         * <p>The type of auto scaling. Valid values:</p>
+         * <ul>
+         * <li><strong>specScale</strong>: The specifications of a database instance are automatically scaled up or down.</li>
+         * <li><strong>shardScale</strong>: The number of shards for a database instance is automatically increased or decreased.</li>
+         * <li><strong>bandwidthScale</strong>: The bandwidth of a database instance is automatically increased or decreased.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **specScale**: The specifications of a database instance are automatically scaled up or down.
-         * *   **shardScale**: The number of shards for a database instance is automatically increased or decreased.
-         * *   **bandwidthScale**: The bandwidth of a database instance is automatically increased or decreased.
+         * <strong>example:</strong>
+         * <p>bandwidthScale</p>
          */
         public Builder scaleType(String scaleType) {
             this.putQueryParameter("ScaleType", scaleType);

@@ -1,29 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetInstanceModeOnDemandRequest} extends {@link RequestModel}
  *
  * <p>SetInstanceModeOnDemandRequest</p>
  */
 public class SetInstanceModeOnDemandRequest extends Request {
-    @Query
-    @NameInMap("InstanceIdList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIdList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > instanceIdList;
 
-    @Query
-    @NameInMap("Mode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mode;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private SetInstanceModeOnDemandRequest(Builder builder) {
@@ -84,10 +84,14 @@ public class SetInstanceModeOnDemandRequest extends Request {
         } 
 
         /**
-         * The IDs of on-demand instances.
-         * <p>
+         * <p>The IDs of on-demand instances.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/152120.html">DescribeOnDemandInstance</a> operation to query the IDs of all on-demand instances.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeOnDemandInstance](~~152120~~) operation to query the IDs of all on-demand instances.
+         * <strong>example:</strong>
+         * <p>ddosbgp-cn-z2q1qzxb****</p>
          */
         public Builder instanceIdList(java.util.List < String > instanceIdList) {
             this.putQueryParameter("InstanceIdList", instanceIdList);
@@ -96,11 +100,15 @@ public class SetInstanceModeOnDemandRequest extends Request {
         }
 
         /**
-         * The scheduling mode of the on-demand instance. Valid values:
-         * <p>
+         * <p>Specifies the scheduling mode for on-demand instances. Valid values:</p>
+         * <ul>
+         * <li><strong>manual</strong>: manual scheduling</li>
+         * <li><strong>netflow-auto</strong>: automatic scheduling</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **manual**: manual scheduling
-         * *   **netflow-auto**: automatic scheduling
+         * <strong>example:</strong>
+         * <p>netflow-auto</p>
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
@@ -109,10 +117,13 @@ public class SetInstanceModeOnDemandRequest extends Request {
         }
 
         /**
-         * The region ID of the on-demand instance.
-         * <p>
+         * <p>The region ID of the on-demand instance.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query all regions that are supported by Anti-DDoS Origin.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeRegions](~~118703~~) operation to query all regions supported by Anti-DDoS Origin.
+         * <strong>example:</strong>
+         * <p>cn-zhangjiakou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

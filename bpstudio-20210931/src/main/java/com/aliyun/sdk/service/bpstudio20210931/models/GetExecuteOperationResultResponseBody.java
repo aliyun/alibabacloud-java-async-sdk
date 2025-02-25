@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bpstudio20210931.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetExecuteOperationResultResponseBody} extends {@link TeaModel}
  *
  * <p>GetExecuteOperationResultResponseBody</p>
  */
 public class GetExecuteOperationResultResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetExecuteOperationResultResponseBody(Builder builder) {
@@ -74,7 +74,10 @@ public class GetExecuteOperationResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status code. A value of 200 indicates that the request is successful.
+         * <p>The HTTP status code. A value of 200 indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +85,7 @@ public class GetExecuteOperationResultResponseBody extends TeaModel {
         }
 
         /**
-         * The detailed result of the queried operation.
+         * <p>The detailed result of the queried operation.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +93,10 @@ public class GetExecuteOperationResultResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot; &quot;</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +104,10 @@ public class GetExecuteOperationResultResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,17 +120,23 @@ public class GetExecuteOperationResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetExecuteOperationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetExecuteOperationResultResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Arguments")
+        @com.aliyun.core.annotation.NameInMap("Arguments")
         private String arguments;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("OperationId")
+        @com.aliyun.core.annotation.NameInMap("OperationId")
         private String operationId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Data(Builder builder) {
@@ -174,7 +189,10 @@ public class GetExecuteOperationResultResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The output of the operation.
+             * <p>The output of the operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot; &quot;</p>
              */
             public Builder arguments(String arguments) {
                 this.arguments = arguments;
@@ -182,7 +200,10 @@ public class GetExecuteOperationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The returned message.
+             * <p>The returned message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“ ”</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -190,7 +211,10 @@ public class GetExecuteOperationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the operation.
+             * <p>The ID of the operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>op_xxxxxxxx</p>
              */
             public Builder operationId(String operationId) {
                 this.operationId = operationId;
@@ -198,7 +222,10 @@ public class GetExecuteOperationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the operation.
+             * <p>The status of the operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;

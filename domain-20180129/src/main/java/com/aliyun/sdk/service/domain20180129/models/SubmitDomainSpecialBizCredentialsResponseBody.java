@@ -1,51 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitDomainSpecialBizCredentialsResponseBody} extends {@link TeaModel}
  *
  * <p>SubmitDomainSpecialBizCredentialsResponseBody</p>
  */
 public class SubmitDomainSpecialBizCredentialsResponseBody extends TeaModel {
-    @NameInMap("AllowRetry")
+    @com.aliyun.core.annotation.NameInMap("AllowRetry")
     private Boolean allowRetry;
 
-    @NameInMap("AppName")
+    @com.aliyun.core.annotation.NameInMap("AppName")
     private String appName;
 
-    @NameInMap("DynamicCode")
+    @com.aliyun.core.annotation.NameInMap("DynamicCode")
     private String dynamicCode;
 
-    @NameInMap("DynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("DynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("ErrorArgs")
+    @com.aliyun.core.annotation.NameInMap("ErrorArgs")
     private java.util.List < ? > errorArgs;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMsg")
+    @com.aliyun.core.annotation.NameInMap("ErrorMsg")
     private String errorMsg;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Module")
+    @com.aliyun.core.annotation.NameInMap("Module")
     private Object module;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Synchro")
+    @com.aliyun.core.annotation.NameInMap("Synchro")
     private Boolean synchro;
 
     private SubmitDomainSpecialBizCredentialsResponseBody(Builder builder) {
@@ -170,7 +170,10 @@ public class SubmitDomainSpecialBizCredentialsResponseBody extends TeaModel {
         private Boolean synchro; 
 
         /**
-         * AllowRetry.
+         * <p>Indicates whether retries are allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -178,7 +181,10 @@ public class SubmitDomainSpecialBizCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>The name of the application for which the error code is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-com</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -186,7 +192,12 @@ public class SubmitDomainSpecialBizCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -194,7 +205,12 @@ public class SubmitDomainSpecialBizCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -202,7 +218,7 @@ public class SubmitDomainSpecialBizCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>The array of error parameters that are returned.</p>
          */
         public Builder errorArgs(java.util.List < ? > errorArgs) {
             this.errorArgs = errorArgs;
@@ -210,7 +226,7 @@ public class SubmitDomainSpecialBizCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -218,7 +234,10 @@ public class SubmitDomainSpecialBizCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMsg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110001</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -226,7 +245,10 @@ public class SubmitDomainSpecialBizCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code that is directly returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -234,7 +256,12 @@ public class SubmitDomainSpecialBizCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder module(Object module) {
             this.module = module;
@@ -242,7 +269,10 @@ public class SubmitDomainSpecialBizCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A83E1D74-E46B-505C-947A-8C6B7E41C011</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -250,7 +280,14 @@ public class SubmitDomainSpecialBizCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -258,7 +295,10 @@ public class SubmitDomainSpecialBizCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>Indicates whether to perform synchronous processing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;

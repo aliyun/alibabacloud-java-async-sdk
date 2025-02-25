@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAggregateConfigDeliveryChannelResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteAggregateConfigDeliveryChannelResponseBody</p>
  */
 public class DeleteAggregateConfigDeliveryChannelResponseBody extends TeaModel {
-    @NameInMap("DeliveryChannelId")
+    @com.aliyun.core.annotation.NameInMap("DeliveryChannelId")
     private String deliveryChannelId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteAggregateConfigDeliveryChannelResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DeleteAggregateConfigDeliveryChannelResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the delivery channel.
+         * <p>The ID of the delivery channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cdc-38c3013b46c9002c****</p>
          */
         public Builder deliveryChannelId(String deliveryChannelId) {
             this.deliveryChannelId = deliveryChannelId;
@@ -58,7 +66,10 @@ public class DeleteAggregateConfigDeliveryChannelResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FCC2F05C-F672-5665-8102-0020DF66B9B9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

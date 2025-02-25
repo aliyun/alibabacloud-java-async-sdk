@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
  *
  * <p>GetDoctorHiveTableResponseBody</p>
  */
 public class GetDoctorHiveTableResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetDoctorHiveTableResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The analysis results of the Hive table.
+         * <p>The analysis results of the Hive table.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,17 +79,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class Analysis extends TeaModel {
-        @NameInMap("HiveDistributionScore")
+        @com.aliyun.core.annotation.NameInMap("HiveDistributionScore")
         private Integer hiveDistributionScore;
 
-        @NameInMap("HiveFormatScore")
+        @com.aliyun.core.annotation.NameInMap("HiveFormatScore")
         private Integer hiveFormatScore;
 
-        @NameInMap("HiveFrequencyScore")
+        @com.aliyun.core.annotation.NameInMap("HiveFrequencyScore")
         private Integer hiveFrequencyScore;
 
-        @NameInMap("HiveScore")
+        @com.aliyun.core.annotation.NameInMap("HiveScore")
         private Integer hiveScore;
 
         private Analysis(Builder builder) {
@@ -134,7 +148,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Integer hiveScore; 
 
             /**
-             * The score for the distribution of files of different sizes stored in the Hive table.
+             * <p>The score for the distribution of files of different sizes stored in the Hive table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder hiveDistributionScore(Integer hiveDistributionScore) {
                 this.hiveDistributionScore = hiveDistributionScore;
@@ -142,7 +159,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The score for the distribution of files stored in different formats in the Hive table.
+             * <p>The score for the distribution of files stored in different formats in the Hive table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder hiveFormatScore(Integer hiveFormatScore) {
                 this.hiveFormatScore = hiveFormatScore;
@@ -150,7 +170,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The score for the access frequency of the Hive table.
+             * <p>The score for the access frequency of the Hive table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70</p>
              */
             public Builder hiveFrequencyScore(Integer hiveFrequencyScore) {
                 this.hiveFrequencyScore = hiveFrequencyScore;
@@ -158,7 +181,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The overall score of the Hive table.
+             * <p>The overall score of the Hive table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder hiveScore(Integer hiveScore) {
                 this.hiveScore = hiveScore;
@@ -172,23 +198,29 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class Formats extends TeaModel {
-        @NameInMap("FormatDayGrowthSize")
+        @com.aliyun.core.annotation.NameInMap("FormatDayGrowthSize")
         private Long formatDayGrowthSize;
 
-        @NameInMap("FormatName")
+        @com.aliyun.core.annotation.NameInMap("FormatName")
         private String formatName;
 
-        @NameInMap("FormatRatio")
+        @com.aliyun.core.annotation.NameInMap("FormatRatio")
         private Float formatRatio;
 
-        @NameInMap("FormatSize")
+        @com.aliyun.core.annotation.NameInMap("FormatSize")
         private Long formatSize;
 
-        @NameInMap("FormatSizeDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("FormatSizeDayGrowthRatio")
         private Float formatSizeDayGrowthRatio;
 
-        @NameInMap("FormatSizeUnit")
+        @com.aliyun.core.annotation.NameInMap("FormatSizeUnit")
         private String formatSizeUnit;
 
         private Formats(Builder builder) {
@@ -259,7 +291,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private String formatSizeUnit; 
 
             /**
-             * The daily amount increment of the data in a specific storage format.
+             * <p>The daily amount increment of the data in a specific storage format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1232124</p>
              */
             public Builder formatDayGrowthSize(Long formatDayGrowthSize) {
                 this.formatDayGrowthSize = formatDayGrowthSize;
@@ -267,7 +302,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the storage format.
+             * <p>The name of the storage format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TextInputFormat</p>
              */
             public Builder formatName(String formatName) {
                 this.formatName = formatName;
@@ -275,7 +313,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The ratio of the data in a specific storage format.
+             * <p>The ratio of the data in a specific storage format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.23</p>
              */
             public Builder formatRatio(Float formatRatio) {
                 this.formatRatio = formatRatio;
@@ -283,7 +324,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The size of storage format-specific data.
+             * <p>The size of storage format-specific data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>506930200</p>
              */
             public Builder formatSize(Long formatSize) {
                 this.formatSize = formatSize;
@@ -291,7 +335,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The day-to-day growth rate of the amount of the data in a specific storage format.
+             * <p>The day-to-day growth rate of the amount of the data in a specific storage format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.04</p>
              */
             public Builder formatSizeDayGrowthRatio(Float formatSizeDayGrowthRatio) {
                 this.formatSizeDayGrowthRatio = formatSizeDayGrowthRatio;
@@ -299,7 +346,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the data size.
+             * <p>The unit of the data size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MB</p>
              */
             public Builder formatSizeUnit(String formatSizeUnit) {
                 this.formatSizeUnit = formatSizeUnit;
@@ -313,17 +363,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class ColdDataDayGrowthSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private ColdDataDayGrowthSize(Builder builder) {
@@ -376,7 +432,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth size of cold data</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -384,7 +443,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>coldDataDayGrowthSize</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -392,7 +454,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MB</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -400,7 +465,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>217715</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -414,17 +482,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class ColdDataRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private ColdDataRatio(Builder builder) {
@@ -477,7 +551,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cold data ratio</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -485,7 +562,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>coldDataRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -493,7 +573,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -501,7 +584,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.01</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -515,17 +601,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class ColdDataSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private ColdDataSize(Builder builder) {
@@ -578,7 +670,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Size of the cold data size</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -586,7 +681,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>coldDataSize</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -594,7 +692,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MB</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -602,7 +703,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>217715</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -616,17 +720,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class ColdDataSizeDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private ColdDataSizeDayGrowthRatio(Builder builder) {
@@ -679,7 +789,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth ratio of cold data size</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -687,7 +800,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>coldDataSizeDayGrowthRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -695,7 +811,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -703,7 +822,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.01</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -717,17 +839,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class EmptyFileCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private EmptyFileCount(Builder builder) {
@@ -780,7 +908,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Number of empty files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -788,7 +919,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>emptyFileCount</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -796,7 +930,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -804,7 +941,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3123</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -818,17 +958,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class EmptyFileCountDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private EmptyFileCountDayGrowthRatio(Builder builder) {
@@ -881,7 +1027,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth ratio of empty files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -889,7 +1038,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>emptyFileCountDayGrowthRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -897,7 +1049,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -905,7 +1060,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.01</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -919,17 +1077,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class EmptyFileDayGrowthCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private EmptyFileDayGrowthCount(Builder builder) {
@@ -982,7 +1146,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth count of empty files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -990,7 +1157,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>emptyFileDayGrowthCount</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -998,7 +1168,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1006,7 +1179,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-20</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -1020,17 +1196,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class EmptyFileRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private EmptyFileRatio(Builder builder) {
@@ -1083,7 +1265,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ratio of empty files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1091,7 +1276,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>emptyFileRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1099,7 +1287,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1107,7 +1298,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.01</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -1121,17 +1315,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class FreezeDataDayGrowthSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private FreezeDataDayGrowthSize(Builder builder) {
@@ -1184,7 +1384,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth size of freeze data</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1192,7 +1395,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>freezeDataDayGrowthSize</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1200,7 +1406,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MB</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1208,7 +1417,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33229309</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -1222,17 +1434,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class FreezeDataRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private FreezeDataRatio(Builder builder) {
@@ -1285,7 +1503,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ratio of freeze data</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1293,7 +1514,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>freezeDataRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1301,7 +1525,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1309,7 +1536,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.98</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -1323,17 +1553,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class FreezeDataSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private FreezeDataSize(Builder builder) {
@@ -1386,7 +1622,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Size of the freeze data size</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1394,7 +1633,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>freezeDataSize</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1402,7 +1644,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MB</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1410,7 +1655,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33229309</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -1424,17 +1672,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class FreezeDataSizeDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private FreezeDataSizeDayGrowthRatio(Builder builder) {
@@ -1487,7 +1741,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth ratio of freeze data size</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1495,7 +1752,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>freezeDataSizeDayGrowthRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1503,7 +1763,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1511,7 +1774,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.01</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -1525,17 +1791,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class HotDataDayGrowthSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private HotDataDayGrowthSize(Builder builder) {
@@ -1588,7 +1860,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth size of hot data</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1596,7 +1871,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hotDataDayGrowthSize</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1604,7 +1882,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MB</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1612,7 +1893,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>203431</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -1626,17 +1910,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class HotDataRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private HotDataRatio(Builder builder) {
@@ -1689,7 +1979,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hot data ratio</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1697,7 +1990,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hotDataRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1705,7 +2001,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1713,7 +2012,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.01</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -1727,17 +2029,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class HotDataSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private HotDataSize(Builder builder) {
@@ -1790,7 +2098,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Size of the hot data size</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1798,7 +2109,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hotDataSize</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1806,7 +2120,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MB</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1814,7 +2131,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>203431</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -1828,17 +2148,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class HotDataSizeDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private HotDataSizeDayGrowthRatio(Builder builder) {
@@ -1891,7 +2217,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth ratio of hot data size</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1899,7 +2228,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hotDataSizeDayGrowthRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1907,7 +2239,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1915,7 +2250,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.01</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -1929,17 +2267,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class LargeFileCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private LargeFileCount(Builder builder) {
@@ -1992,7 +2336,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Number of large files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2000,7 +2347,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>largeFileCount</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2008,7 +2358,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“”</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2016,7 +2369,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -2030,17 +2386,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class LargeFileCountDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private LargeFileCountDayGrowthRatio(Builder builder) {
@@ -2093,7 +2455,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth ratio of large files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2101,7 +2466,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>largeFileCountDayGrowthRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2109,7 +2477,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2117,7 +2488,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.01</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -2131,17 +2505,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class LargeFileDayGrowthCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private LargeFileDayGrowthCount(Builder builder) {
@@ -2194,7 +2574,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth count of large files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2202,7 +2585,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>largeFileDayGrowthCount</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2210,7 +2596,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2218,7 +2607,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -2232,17 +2624,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class LargeFileRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private LargeFileRatio(Builder builder) {
@@ -2295,7 +2693,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ratio of large files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2303,7 +2704,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>largeFileRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2311,7 +2715,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2319,7 +2726,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.02</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -2333,17 +2743,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class MediumFileCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private MediumFileCount(Builder builder) {
@@ -2396,7 +2812,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Number of medium files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2404,7 +2823,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mediumFileCount</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2412,7 +2834,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“”</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2420,7 +2845,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -2434,17 +2862,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class MediumFileCountDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private MediumFileCountDayGrowthRatio(Builder builder) {
@@ -2497,7 +2931,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth ratio of medium files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2505,7 +2942,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mediumFileCountDayGrowthRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2513,7 +2953,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2521,7 +2964,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.01</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -2535,17 +2981,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class MediumFileDayGrowthCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private MediumFileDayGrowthCount(Builder builder) {
@@ -2598,7 +3050,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth count of medium files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2606,7 +3061,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mediumFileDayGrowthCount</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2614,7 +3072,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2622,7 +3083,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -2636,17 +3100,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class MediumFileRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private MediumFileRatio(Builder builder) {
@@ -2699,7 +3169,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ratio of medium files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2707,7 +3180,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mediumFileRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2715,7 +3191,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2723,7 +3202,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.80</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -2737,17 +3219,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class PartitionNum extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private PartitionNum(Builder builder) {
@@ -2800,7 +3288,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>number of partitions</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2808,7 +3299,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>partitionNum</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2816,7 +3310,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“”</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2824,7 +3321,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>441</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -2838,17 +3338,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class SmallFileCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private SmallFileCount(Builder builder) {
@@ -2901,7 +3407,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Number of small files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2909,7 +3418,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>smallFileCount</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2917,7 +3429,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2925,7 +3440,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -2939,17 +3457,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class SmallFileCountDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private SmallFileCountDayGrowthRatio(Builder builder) {
@@ -3002,7 +3526,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth ratio of small files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3010,7 +3537,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>smallFileCountDayGrowthRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3018,7 +3548,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3026,7 +3559,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.01</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -3040,17 +3576,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class SmallFileDayGrowthCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private SmallFileDayGrowthCount(Builder builder) {
@@ -3103,7 +3645,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth count of small files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3111,7 +3656,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>smallFileDayGrowthCount</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3119,7 +3667,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3127,7 +3678,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -3141,17 +3695,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class SmallFileRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private SmallFileRatio(Builder builder) {
@@ -3204,7 +3764,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ratio of small files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3212,7 +3775,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>smallFileRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3220,7 +3786,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3228,7 +3797,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.04</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -3242,17 +3814,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class TinyFileCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private TinyFileCount(Builder builder) {
@@ -3305,7 +3883,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Number of tiny files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3313,7 +3894,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tinyFileCount</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3321,7 +3905,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3329,7 +3916,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>451</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -3343,17 +3933,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class TinyFileCountDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private TinyFileCountDayGrowthRatio(Builder builder) {
@@ -3406,7 +4002,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth ratio of tiny files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3414,7 +4013,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tinyFileCountDayGrowthRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3422,7 +4024,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3430,7 +4035,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.04</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -3444,17 +4052,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class TinyFileDayGrowthCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private TinyFileDayGrowthCount(Builder builder) {
@@ -3507,7 +4121,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth count of tiny files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3515,7 +4132,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tinyFileDayGrowthCount</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3523,7 +4143,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3531,7 +4154,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>482</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -3545,17 +4171,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class TinyFileRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private TinyFileRatio(Builder builder) {
@@ -3608,7 +4240,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ratio of tiny files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3616,7 +4251,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tinyFileRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3624,7 +4262,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3632,7 +4273,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.96</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -3646,17 +4290,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class TotalDataDayGrowthSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private TotalDataDayGrowthSize(Builder builder) {
@@ -3709,7 +4359,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth size of total data</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3717,7 +4370,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>totalDataDayGrowthSize</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3725,7 +4381,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MB</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3733,7 +4392,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33800296</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -3747,17 +4409,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class TotalDataSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private TotalDataSize(Builder builder) {
@@ -3810,7 +4478,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Total data size in megabytes (MB)</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3818,7 +4489,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>totalDataSize</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3826,7 +4500,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MB</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3834,7 +4511,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33800296</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -3848,17 +4528,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class TotalDataSizeDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private TotalDataSizeDayGrowthRatio(Builder builder) {
@@ -3911,7 +4597,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth ratio of total data size</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3919,7 +4608,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>totalDataSizeDayGrowthRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3927,7 +4619,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3935,7 +4630,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.01</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -3949,17 +4647,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class TotalFileCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private TotalFileCount(Builder builder) {
@@ -4012,7 +4716,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Number of total files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -4020,7 +4727,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>totalFileCount</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -4028,7 +4738,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -4036,7 +4749,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -4050,17 +4766,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class TotalFileCountDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private TotalFileCountDayGrowthRatio(Builder builder) {
@@ -4113,7 +4835,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth ratio of total files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -4121,7 +4846,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>totalFileCountDayGrowthRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -4129,7 +4857,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -4137,7 +4868,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.01</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -4151,17 +4885,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class TotalFileDayGrowthCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private TotalFileDayGrowthCount(Builder builder) {
@@ -4214,7 +4954,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth count of total files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -4222,7 +4965,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>totalFileDayGrowthCount</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -4230,7 +4976,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -4238,7 +4987,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -4252,17 +5004,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class WarmDataDayGrowthSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private WarmDataDayGrowthSize(Builder builder) {
@@ -4315,7 +5073,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth size of warm data</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -4323,7 +5084,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>warmDataDayGrowthSize</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -4331,7 +5095,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MB</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -4339,7 +5106,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>149841</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -4353,17 +5123,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class WarmDataRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private WarmDataRatio(Builder builder) {
@@ -4416,7 +5192,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ratio of warm data</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -4424,7 +5203,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>warmDataRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -4432,7 +5214,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -4440,7 +5225,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -4454,17 +5242,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class WarmDataSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private WarmDataSize(Builder builder) {
@@ -4517,7 +5311,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Size of the warm data size</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -4525,7 +5322,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>warmDataSize</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -4533,7 +5333,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MB</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -4541,7 +5344,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14981</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -4555,17 +5361,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class WarmDataSizeDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private WarmDataSizeDayGrowthRatio(Builder builder) {
@@ -4618,7 +5430,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The description of the metric.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth ratio of warm data size</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -4626,7 +5441,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>warmDataSizeDayGrowthRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -4634,7 +5452,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the metric.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>”“</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -4642,7 +5463,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.01</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -4656,134 +5480,140 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class Metrics extends TeaModel {
-        @NameInMap("ColdDataDayGrowthSize")
+        @com.aliyun.core.annotation.NameInMap("ColdDataDayGrowthSize")
         private ColdDataDayGrowthSize coldDataDayGrowthSize;
 
-        @NameInMap("ColdDataRatio")
+        @com.aliyun.core.annotation.NameInMap("ColdDataRatio")
         private ColdDataRatio coldDataRatio;
 
-        @NameInMap("ColdDataSize")
+        @com.aliyun.core.annotation.NameInMap("ColdDataSize")
         private ColdDataSize coldDataSize;
 
-        @NameInMap("ColdDataSizeDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("ColdDataSizeDayGrowthRatio")
         private ColdDataSizeDayGrowthRatio coldDataSizeDayGrowthRatio;
 
-        @NameInMap("EmptyFileCount")
+        @com.aliyun.core.annotation.NameInMap("EmptyFileCount")
         private EmptyFileCount emptyFileCount;
 
-        @NameInMap("EmptyFileCountDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("EmptyFileCountDayGrowthRatio")
         private EmptyFileCountDayGrowthRatio emptyFileCountDayGrowthRatio;
 
-        @NameInMap("EmptyFileDayGrowthCount")
+        @com.aliyun.core.annotation.NameInMap("EmptyFileDayGrowthCount")
         private EmptyFileDayGrowthCount emptyFileDayGrowthCount;
 
-        @NameInMap("EmptyFileRatio")
+        @com.aliyun.core.annotation.NameInMap("EmptyFileRatio")
         private EmptyFileRatio emptyFileRatio;
 
-        @NameInMap("FreezeDataDayGrowthSize")
+        @com.aliyun.core.annotation.NameInMap("FreezeDataDayGrowthSize")
         private FreezeDataDayGrowthSize freezeDataDayGrowthSize;
 
-        @NameInMap("FreezeDataRatio")
+        @com.aliyun.core.annotation.NameInMap("FreezeDataRatio")
         private FreezeDataRatio freezeDataRatio;
 
-        @NameInMap("FreezeDataSize")
+        @com.aliyun.core.annotation.NameInMap("FreezeDataSize")
         private FreezeDataSize freezeDataSize;
 
-        @NameInMap("FreezeDataSizeDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("FreezeDataSizeDayGrowthRatio")
         private FreezeDataSizeDayGrowthRatio freezeDataSizeDayGrowthRatio;
 
-        @NameInMap("HotDataDayGrowthSize")
+        @com.aliyun.core.annotation.NameInMap("HotDataDayGrowthSize")
         private HotDataDayGrowthSize hotDataDayGrowthSize;
 
-        @NameInMap("HotDataRatio")
+        @com.aliyun.core.annotation.NameInMap("HotDataRatio")
         private HotDataRatio hotDataRatio;
 
-        @NameInMap("HotDataSize")
+        @com.aliyun.core.annotation.NameInMap("HotDataSize")
         private HotDataSize hotDataSize;
 
-        @NameInMap("HotDataSizeDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("HotDataSizeDayGrowthRatio")
         private HotDataSizeDayGrowthRatio hotDataSizeDayGrowthRatio;
 
-        @NameInMap("LargeFileCount")
+        @com.aliyun.core.annotation.NameInMap("LargeFileCount")
         private LargeFileCount largeFileCount;
 
-        @NameInMap("LargeFileCountDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("LargeFileCountDayGrowthRatio")
         private LargeFileCountDayGrowthRatio largeFileCountDayGrowthRatio;
 
-        @NameInMap("LargeFileDayGrowthCount")
+        @com.aliyun.core.annotation.NameInMap("LargeFileDayGrowthCount")
         private LargeFileDayGrowthCount largeFileDayGrowthCount;
 
-        @NameInMap("LargeFileRatio")
+        @com.aliyun.core.annotation.NameInMap("LargeFileRatio")
         private LargeFileRatio largeFileRatio;
 
-        @NameInMap("MediumFileCount")
+        @com.aliyun.core.annotation.NameInMap("MediumFileCount")
         private MediumFileCount mediumFileCount;
 
-        @NameInMap("MediumFileCountDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("MediumFileCountDayGrowthRatio")
         private MediumFileCountDayGrowthRatio mediumFileCountDayGrowthRatio;
 
-        @NameInMap("MediumFileDayGrowthCount")
+        @com.aliyun.core.annotation.NameInMap("MediumFileDayGrowthCount")
         private MediumFileDayGrowthCount mediumFileDayGrowthCount;
 
-        @NameInMap("MediumFileRatio")
+        @com.aliyun.core.annotation.NameInMap("MediumFileRatio")
         private MediumFileRatio mediumFileRatio;
 
-        @NameInMap("PartitionNum")
+        @com.aliyun.core.annotation.NameInMap("PartitionNum")
         private PartitionNum partitionNum;
 
-        @NameInMap("SmallFileCount")
+        @com.aliyun.core.annotation.NameInMap("SmallFileCount")
         private SmallFileCount smallFileCount;
 
-        @NameInMap("SmallFileCountDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("SmallFileCountDayGrowthRatio")
         private SmallFileCountDayGrowthRatio smallFileCountDayGrowthRatio;
 
-        @NameInMap("SmallFileDayGrowthCount")
+        @com.aliyun.core.annotation.NameInMap("SmallFileDayGrowthCount")
         private SmallFileDayGrowthCount smallFileDayGrowthCount;
 
-        @NameInMap("SmallFileRatio")
+        @com.aliyun.core.annotation.NameInMap("SmallFileRatio")
         private SmallFileRatio smallFileRatio;
 
-        @NameInMap("TinyFileCount")
+        @com.aliyun.core.annotation.NameInMap("TinyFileCount")
         private TinyFileCount tinyFileCount;
 
-        @NameInMap("TinyFileCountDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("TinyFileCountDayGrowthRatio")
         private TinyFileCountDayGrowthRatio tinyFileCountDayGrowthRatio;
 
-        @NameInMap("TinyFileDayGrowthCount")
+        @com.aliyun.core.annotation.NameInMap("TinyFileDayGrowthCount")
         private TinyFileDayGrowthCount tinyFileDayGrowthCount;
 
-        @NameInMap("TinyFileRatio")
+        @com.aliyun.core.annotation.NameInMap("TinyFileRatio")
         private TinyFileRatio tinyFileRatio;
 
-        @NameInMap("TotalDataDayGrowthSize")
+        @com.aliyun.core.annotation.NameInMap("TotalDataDayGrowthSize")
         private TotalDataDayGrowthSize totalDataDayGrowthSize;
 
-        @NameInMap("TotalDataSize")
+        @com.aliyun.core.annotation.NameInMap("TotalDataSize")
         private TotalDataSize totalDataSize;
 
-        @NameInMap("TotalDataSizeDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("TotalDataSizeDayGrowthRatio")
         private TotalDataSizeDayGrowthRatio totalDataSizeDayGrowthRatio;
 
-        @NameInMap("TotalFileCount")
+        @com.aliyun.core.annotation.NameInMap("TotalFileCount")
         private TotalFileCount totalFileCount;
 
-        @NameInMap("TotalFileCountDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("TotalFileCountDayGrowthRatio")
         private TotalFileCountDayGrowthRatio totalFileCountDayGrowthRatio;
 
-        @NameInMap("TotalFileDayGrowthCount")
+        @com.aliyun.core.annotation.NameInMap("TotalFileDayGrowthCount")
         private TotalFileDayGrowthCount totalFileDayGrowthCount;
 
-        @NameInMap("WarmDataDayGrowthSize")
+        @com.aliyun.core.annotation.NameInMap("WarmDataDayGrowthSize")
         private WarmDataDayGrowthSize warmDataDayGrowthSize;
 
-        @NameInMap("WarmDataRatio")
+        @com.aliyun.core.annotation.NameInMap("WarmDataRatio")
         private WarmDataRatio warmDataRatio;
 
-        @NameInMap("WarmDataSize")
+        @com.aliyun.core.annotation.NameInMap("WarmDataSize")
         private WarmDataSize warmDataSize;
 
-        @NameInMap("WarmDataSizeDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("WarmDataSizeDayGrowthRatio")
         private WarmDataSizeDayGrowthRatio warmDataSizeDayGrowthRatio;
 
         private Metrics(Builder builder) {
@@ -5187,7 +6017,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             private WarmDataSizeDayGrowthRatio warmDataSizeDayGrowthRatio; 
 
             /**
-             * The daily increment of the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.
+             * <p>The daily increment of the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.</p>
              */
             public Builder coldDataDayGrowthSize(ColdDataDayGrowthSize coldDataDayGrowthSize) {
                 this.coldDataDayGrowthSize = coldDataDayGrowthSize;
@@ -5195,7 +6025,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.
+             * <p>The proportion of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.</p>
              */
             public Builder coldDataRatio(ColdDataRatio coldDataRatio) {
                 this.coldDataRatio = coldDataRatio;
@@ -5203,7 +6033,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.
+             * <p>The amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.</p>
              */
             public Builder coldDataSize(ColdDataSize coldDataSize) {
                 this.coldDataSize = coldDataSize;
@@ -5211,7 +6041,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The day-to-day growth rate of the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.
+             * <p>The day-to-day growth rate of the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.</p>
              */
             public Builder coldDataSizeDayGrowthRatio(ColdDataSizeDayGrowthRatio coldDataSizeDayGrowthRatio) {
                 this.coldDataSizeDayGrowthRatio = coldDataSizeDayGrowthRatio;
@@ -5219,7 +6049,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The number of empty files. Empty files are those with a size of 0 MB.
+             * <p>The number of empty files. Empty files are those with a size of 0 MB.</p>
              */
             public Builder emptyFileCount(EmptyFileCount emptyFileCount) {
                 this.emptyFileCount = emptyFileCount;
@@ -5227,7 +6057,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The day-to-day growth rate of the number of empty files. Empty files are those with a size of 0 MB.
+             * <p>The day-to-day growth rate of the number of empty files. Empty files are those with a size of 0 MB.</p>
              */
             public Builder emptyFileCountDayGrowthRatio(EmptyFileCountDayGrowthRatio emptyFileCountDayGrowthRatio) {
                 this.emptyFileCountDayGrowthRatio = emptyFileCountDayGrowthRatio;
@@ -5235,7 +6065,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The daily increment of the number of empty files. Empty files are those with a size of 0 MB.
+             * <p>The daily increment of the number of empty files. Empty files are those with a size of 0 MB.</p>
              */
             public Builder emptyFileDayGrowthCount(EmptyFileDayGrowthCount emptyFileDayGrowthCount) {
                 this.emptyFileDayGrowthCount = emptyFileDayGrowthCount;
@@ -5243,7 +6073,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of empty files. Empty files are those with a size of 0 MB.
+             * <p>The proportion of empty files. Empty files are those with a size of 0 MB.</p>
              */
             public Builder emptyFileRatio(EmptyFileRatio emptyFileRatio) {
                 this.emptyFileRatio = emptyFileRatio;
@@ -5251,7 +6081,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The daily increment of the amount of very cold data. Very cold data refers to data that is not accessed for more than 90 days.
+             * <p>The daily increment of the amount of very cold data. Very cold data refers to data that is not accessed for more than 90 days.</p>
              */
             public Builder freezeDataDayGrowthSize(FreezeDataDayGrowthSize freezeDataDayGrowthSize) {
                 this.freezeDataDayGrowthSize = freezeDataDayGrowthSize;
@@ -5259,7 +6089,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of very cold data. Very cold data refers to data that is not accessed for more than 90 days.
+             * <p>The proportion of very cold data. Very cold data refers to data that is not accessed for more than 90 days.</p>
              */
             public Builder freezeDataRatio(FreezeDataRatio freezeDataRatio) {
                 this.freezeDataRatio = freezeDataRatio;
@@ -5267,7 +6097,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of very cold data. Very cold data refers to data that is not accessed for more than 90 days.
+             * <p>The amount of very cold data. Very cold data refers to data that is not accessed for more than 90 days.</p>
              */
             public Builder freezeDataSize(FreezeDataSize freezeDataSize) {
                 this.freezeDataSize = freezeDataSize;
@@ -5275,7 +6105,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The day-to-day growth rate of the amount of very cold data. Very cold data refers to data that is not accessed for more than 90 days.
+             * <p>The day-to-day growth rate of the amount of very cold data. Very cold data refers to data that is not accessed for more than 90 days.</p>
              */
             public Builder freezeDataSizeDayGrowthRatio(FreezeDataSizeDayGrowthRatio freezeDataSizeDayGrowthRatio) {
                 this.freezeDataSizeDayGrowthRatio = freezeDataSizeDayGrowthRatio;
@@ -5283,7 +6113,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The daily increment of the amount of hot data. Hot data refers to data that is accessed in recent seven days.
+             * <p>The daily increment of the amount of hot data. Hot data refers to data that is accessed in recent seven days.</p>
              */
             public Builder hotDataDayGrowthSize(HotDataDayGrowthSize hotDataDayGrowthSize) {
                 this.hotDataDayGrowthSize = hotDataDayGrowthSize;
@@ -5291,7 +6121,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of hot data. Hot data refers to data that is accessed in recent seven days.
+             * <p>The proportion of hot data. Hot data refers to data that is accessed in recent seven days.</p>
              */
             public Builder hotDataRatio(HotDataRatio hotDataRatio) {
                 this.hotDataRatio = hotDataRatio;
@@ -5299,7 +6129,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of hot data. Hot data refers to data that is accessed in recent seven days.
+             * <p>The amount of hot data. Hot data refers to data that is accessed in recent seven days.</p>
              */
             public Builder hotDataSize(HotDataSize hotDataSize) {
                 this.hotDataSize = hotDataSize;
@@ -5307,7 +6137,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The day-to-day growth rate of the amount of hot data. Hot data refers to data that is accessed in recent seven days.
+             * <p>The day-to-day growth rate of the amount of hot data. Hot data refers to data that is accessed in recent seven days.</p>
              */
             public Builder hotDataSizeDayGrowthRatio(HotDataSizeDayGrowthRatio hotDataSizeDayGrowthRatio) {
                 this.hotDataSizeDayGrowthRatio = hotDataSizeDayGrowthRatio;
@@ -5315,7 +6145,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The number of large files. Large files are those with a size greater than 1 GB.
+             * <p>The number of large files. Large files are those with a size greater than 1 GB.</p>
              */
             public Builder largeFileCount(LargeFileCount largeFileCount) {
                 this.largeFileCount = largeFileCount;
@@ -5323,7 +6153,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The day-to-day growth rate of the number of large files. Large files are those with a size greater than 1 GB.
+             * <p>The day-to-day growth rate of the number of large files. Large files are those with a size greater than 1 GB.</p>
              */
             public Builder largeFileCountDayGrowthRatio(LargeFileCountDayGrowthRatio largeFileCountDayGrowthRatio) {
                 this.largeFileCountDayGrowthRatio = largeFileCountDayGrowthRatio;
@@ -5331,7 +6161,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The daily increment of the number of large files. Large files are those with a size greater than 1 GB.
+             * <p>The daily increment of the number of large files. Large files are those with a size greater than 1 GB.</p>
              */
             public Builder largeFileDayGrowthCount(LargeFileDayGrowthCount largeFileDayGrowthCount) {
                 this.largeFileDayGrowthCount = largeFileDayGrowthCount;
@@ -5339,7 +6169,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of large files. Large files are those with a size greater than 1 GB.
+             * <p>The proportion of large files. Large files are those with a size greater than 1 GB.</p>
              */
             public Builder largeFileRatio(LargeFileRatio largeFileRatio) {
                 this.largeFileRatio = largeFileRatio;
@@ -5347,7 +6177,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The number of medium files. Medium files are those with a size greater than or equal to 128 MB and less than or equal to 1 GB.
+             * <p>The number of medium files. Medium files are those with a size greater than or equal to 128 MB and less than or equal to 1 GB.</p>
              */
             public Builder mediumFileCount(MediumFileCount mediumFileCount) {
                 this.mediumFileCount = mediumFileCount;
@@ -5355,7 +6185,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The day-to-day growth rate of the number of medium files. Medium files are those with a size greater than or equal to 128 MB and less than or equal to 1 GB.
+             * <p>The day-to-day growth rate of the number of medium files. Medium files are those with a size greater than or equal to 128 MB and less than or equal to 1 GB.</p>
              */
             public Builder mediumFileCountDayGrowthRatio(MediumFileCountDayGrowthRatio mediumFileCountDayGrowthRatio) {
                 this.mediumFileCountDayGrowthRatio = mediumFileCountDayGrowthRatio;
@@ -5363,7 +6193,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The daily increment of the number of medium files. Medium files are those with a size greater than or equal to 128 MB and less than or equal to 1 GB.
+             * <p>The daily increment of the number of medium files. Medium files are those with a size greater than or equal to 128 MB and less than or equal to 1 GB.</p>
              */
             public Builder mediumFileDayGrowthCount(MediumFileDayGrowthCount mediumFileDayGrowthCount) {
                 this.mediumFileDayGrowthCount = mediumFileDayGrowthCount;
@@ -5371,7 +6201,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of medium files. Medium files are those with a size greater than or equal to 128 MB and less than or equal to 1 GB.
+             * <p>The proportion of medium files. Medium files are those with a size greater than or equal to 128 MB and less than or equal to 1 GB.</p>
              */
             public Builder mediumFileRatio(MediumFileRatio mediumFileRatio) {
                 this.mediumFileRatio = mediumFileRatio;
@@ -5379,7 +6209,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The number of partitions.
+             * <p>The number of partitions.</p>
              */
             public Builder partitionNum(PartitionNum partitionNum) {
                 this.partitionNum = partitionNum;
@@ -5387,7 +6217,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The number of small files. Small files are those with a size greater than or equal to 10 MB and less than 128 MB.
+             * <p>The number of small files. Small files are those with a size greater than or equal to 10 MB and less than 128 MB.</p>
              */
             public Builder smallFileCount(SmallFileCount smallFileCount) {
                 this.smallFileCount = smallFileCount;
@@ -5395,7 +6225,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The day-to-day growth rate of the number of small files. Small files are those with a size greater than or equal to 10 MB and less than 128 MB.
+             * <p>The day-to-day growth rate of the number of small files. Small files are those with a size greater than or equal to 10 MB and less than 128 MB.</p>
              */
             public Builder smallFileCountDayGrowthRatio(SmallFileCountDayGrowthRatio smallFileCountDayGrowthRatio) {
                 this.smallFileCountDayGrowthRatio = smallFileCountDayGrowthRatio;
@@ -5403,7 +6233,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The daily increment of the number of small files. Small files are those with a size greater than or equal to 10 MB and less than 128 MB.
+             * <p>The daily increment of the number of small files. Small files are those with a size greater than or equal to 10 MB and less than 128 MB.</p>
              */
             public Builder smallFileDayGrowthCount(SmallFileDayGrowthCount smallFileDayGrowthCount) {
                 this.smallFileDayGrowthCount = smallFileDayGrowthCount;
@@ -5411,7 +6241,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of small files. Small files are those with a size greater than or equal to 10 MB and less than 128 MB.
+             * <p>The proportion of small files. Small files are those with a size greater than or equal to 10 MB and less than 128 MB.</p>
              */
             public Builder smallFileRatio(SmallFileRatio smallFileRatio) {
                 this.smallFileRatio = smallFileRatio;
@@ -5419,7 +6249,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The number of very small files. Very small files are those with a size greater than 0 MB and less than 10 MB.
+             * <p>The number of very small files. Very small files are those with a size greater than 0 MB and less than 10 MB.</p>
              */
             public Builder tinyFileCount(TinyFileCount tinyFileCount) {
                 this.tinyFileCount = tinyFileCount;
@@ -5427,7 +6257,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The day-to-day growth rate of the number of very small files. Very small files are those with a size greater than 0 MB and less than 10 MB.
+             * <p>The day-to-day growth rate of the number of very small files. Very small files are those with a size greater than 0 MB and less than 10 MB.</p>
              */
             public Builder tinyFileCountDayGrowthRatio(TinyFileCountDayGrowthRatio tinyFileCountDayGrowthRatio) {
                 this.tinyFileCountDayGrowthRatio = tinyFileCountDayGrowthRatio;
@@ -5435,7 +6265,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The daily increment of the number of very small files. Very small files are those with a size greater than 0 MB and less than 10 MB.
+             * <p>The daily increment of the number of very small files. Very small files are those with a size greater than 0 MB and less than 10 MB.</p>
              */
             public Builder tinyFileDayGrowthCount(TinyFileDayGrowthCount tinyFileDayGrowthCount) {
                 this.tinyFileDayGrowthCount = tinyFileDayGrowthCount;
@@ -5443,7 +6273,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of very small files. Very small files are those with a size greater than 0 MB and less than 10 MB.
+             * <p>The proportion of very small files. Very small files are those with a size greater than 0 MB and less than 10 MB.</p>
              */
             public Builder tinyFileRatio(TinyFileRatio tinyFileRatio) {
                 this.tinyFileRatio = tinyFileRatio;
@@ -5451,7 +6281,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The daily incremental of the total data volume.
+             * <p>The daily incremental of the total data volume.</p>
              */
             public Builder totalDataDayGrowthSize(TotalDataDayGrowthSize totalDataDayGrowthSize) {
                 this.totalDataDayGrowthSize = totalDataDayGrowthSize;
@@ -5459,7 +6289,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The total amount of data.
+             * <p>The total amount of data.</p>
              */
             public Builder totalDataSize(TotalDataSize totalDataSize) {
                 this.totalDataSize = totalDataSize;
@@ -5467,7 +6297,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The day-to-day growth rate of the total data volume.
+             * <p>The day-to-day growth rate of the total data volume.</p>
              */
             public Builder totalDataSizeDayGrowthRatio(TotalDataSizeDayGrowthRatio totalDataSizeDayGrowthRatio) {
                 this.totalDataSizeDayGrowthRatio = totalDataSizeDayGrowthRatio;
@@ -5475,7 +6305,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of files.
+             * <p>The total number of files.</p>
              */
             public Builder totalFileCount(TotalFileCount totalFileCount) {
                 this.totalFileCount = totalFileCount;
@@ -5483,7 +6313,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The day-to-day growth rate of the total number of files.
+             * <p>The day-to-day growth rate of the total number of files.</p>
              */
             public Builder totalFileCountDayGrowthRatio(TotalFileCountDayGrowthRatio totalFileCountDayGrowthRatio) {
                 this.totalFileCountDayGrowthRatio = totalFileCountDayGrowthRatio;
@@ -5491,7 +6321,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The daily increment of the total number of files.
+             * <p>The daily increment of the total number of files.</p>
              */
             public Builder totalFileDayGrowthCount(TotalFileDayGrowthCount totalFileDayGrowthCount) {
                 this.totalFileDayGrowthCount = totalFileDayGrowthCount;
@@ -5499,7 +6329,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The daily increment of the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.
+             * <p>The daily increment of the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.</p>
              */
             public Builder warmDataDayGrowthSize(WarmDataDayGrowthSize warmDataDayGrowthSize) {
                 this.warmDataDayGrowthSize = warmDataDayGrowthSize;
@@ -5507,7 +6337,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.
+             * <p>The proportion of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.</p>
              */
             public Builder warmDataRatio(WarmDataRatio warmDataRatio) {
                 this.warmDataRatio = warmDataRatio;
@@ -5515,7 +6345,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.
+             * <p>The amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.</p>
              */
             public Builder warmDataSize(WarmDataSize warmDataSize) {
                 this.warmDataSize = warmDataSize;
@@ -5523,7 +6353,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The day-to-day growth rate of the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.
+             * <p>The day-to-day growth rate of the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.</p>
              */
             public Builder warmDataSizeDayGrowthRatio(WarmDataSizeDayGrowthRatio warmDataSizeDayGrowthRatio) {
                 this.warmDataSizeDayGrowthRatio = warmDataSizeDayGrowthRatio;
@@ -5537,17 +6367,23 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDoctorHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDoctorHiveTableResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Analysis")
+        @com.aliyun.core.annotation.NameInMap("Analysis")
         private Analysis analysis;
 
-        @NameInMap("Formats")
-        private java.util.List < Formats> formats;
+        @com.aliyun.core.annotation.NameInMap("Formats")
+        private java.util.List<Formats> formats;
 
-        @NameInMap("Metrics")
+        @com.aliyun.core.annotation.NameInMap("Metrics")
         private Metrics metrics;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
         private Data(Builder builder) {
@@ -5575,7 +6411,7 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
         /**
          * @return formats
          */
-        public java.util.List < Formats> getFormats() {
+        public java.util.List<Formats> getFormats() {
             return this.formats;
         }
 
@@ -5595,12 +6431,12 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
 
         public static final class Builder {
             private Analysis analysis; 
-            private java.util.List < Formats> formats; 
+            private java.util.List<Formats> formats; 
             private Metrics metrics; 
             private String owner; 
 
             /**
-             * The analysis results.
+             * <p>The analysis results.</p>
              */
             public Builder analysis(Analysis analysis) {
                 this.analysis = analysis;
@@ -5608,15 +6444,15 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The information from the perspective of formats.
+             * <p>The information from the perspective of formats.</p>
              */
-            public Builder formats(java.util.List < Formats> formats) {
+            public Builder formats(java.util.List<Formats> formats) {
                 this.formats = formats;
                 return this;
             }
 
             /**
-             * The metric information.
+             * <p>The metric information.</p>
              */
             public Builder metrics(Metrics metrics) {
                 this.metrics = metrics;
@@ -5624,7 +6460,10 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
             }
 
             /**
-             * The owner.
+             * <p>The owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DW</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;

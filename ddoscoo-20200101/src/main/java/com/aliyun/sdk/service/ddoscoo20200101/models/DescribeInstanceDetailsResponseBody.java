@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceDetailsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceDetailsResponseBody</p>
  */
 public class DescribeInstanceDetailsResponseBody extends TeaModel {
-    @NameInMap("InstanceDetails")
-    private java.util.List < InstanceDetails> instanceDetails;
+    @com.aliyun.core.annotation.NameInMap("InstanceDetails")
+    private java.util.List<InstanceDetails> instanceDetails;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceDetailsResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
     /**
      * @return instanceDetails
      */
-    public java.util.List < InstanceDetails> getInstanceDetails() {
+    public java.util.List<InstanceDetails> getInstanceDetails() {
         return this.instanceDetails;
     }
 
@@ -46,19 +51,22 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstanceDetails> instanceDetails; 
+        private java.util.List<InstanceDetails> instanceDetails; 
         private String requestId; 
 
         /**
-         * The IP address and ISP line information about the instance.
+         * <p>The IP address and ISP line information about the Anti-DDoS Proxy instance.</p>
          */
-        public Builder instanceDetails(java.util.List < InstanceDetails> instanceDetails) {
+        public Builder instanceDetails(java.util.List<InstanceDetails> instanceDetails) {
             this.instanceDetails = instanceDetails;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3C814429-21A5-4673-827E-FDD19DC75681</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,24 +79,46 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceDetailsResponseBody</p>
+     */
     public static class EipInfos extends TeaModel {
-        @NameInMap("Eip")
+        @com.aliyun.core.annotation.NameInMap("CertConfigured")
+        private Boolean certConfigured;
+
+        @com.aliyun.core.annotation.NameInMap("Eip")
         private String eip;
 
-        @NameInMap("IpMode")
+        @com.aliyun.core.annotation.NameInMap("FunctionVersion")
+        private String functionVersion;
+
+        @com.aliyun.core.annotation.NameInMap("IpMode")
         private String ipMode;
 
-        @NameInMap("IpVersion")
+        @com.aliyun.core.annotation.NameInMap("IpVersion")
         private String ipVersion;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Ssl13Enabled")
+        private Boolean ssl13Enabled;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("TlsVersion")
+        private String tlsVersion;
+
         private EipInfos(Builder builder) {
+            this.certConfigured = builder.certConfigured;
             this.eip = builder.eip;
+            this.functionVersion = builder.functionVersion;
             this.ipMode = builder.ipMode;
             this.ipVersion = builder.ipVersion;
+            this.ssl13Enabled = builder.ssl13Enabled;
             this.status = builder.status;
+            this.tlsVersion = builder.tlsVersion;
         }
 
         public static Builder builder() {
@@ -100,10 +130,24 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
         }
 
         /**
+         * @return certConfigured
+         */
+        public Boolean getCertConfigured() {
+            return this.certConfigured;
+        }
+
+        /**
          * @return eip
          */
         public String getEip() {
             return this.eip;
+        }
+
+        /**
+         * @return functionVersion
+         */
+        public String getFunctionVersion() {
+            return this.functionVersion;
         }
 
         /**
@@ -121,20 +165,52 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
         }
 
         /**
+         * @return ssl13Enabled
+         */
+        public Boolean getSsl13Enabled() {
+            return this.ssl13Enabled;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
             return this.status;
         }
 
+        /**
+         * @return tlsVersion
+         */
+        public String getTlsVersion() {
+            return this.tlsVersion;
+        }
+
         public static final class Builder {
+            private Boolean certConfigured; 
             private String eip; 
+            private String functionVersion; 
             private String ipMode; 
             private String ipVersion; 
+            private Boolean ssl13Enabled; 
             private String status; 
+            private String tlsVersion; 
 
             /**
-             * The IP address of the instance.
+             * <p>Indicates whether a custom certificate is configured.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder certConfigured(Boolean certConfigured) {
+                this.certConfigured = certConfigured;
+                return this;
+            }
+
+            /**
+             * <p>The IP address of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>203.117.XX.XX</p>
              */
             public Builder eip(String eip) {
                 this.eip = eip;
@@ -142,11 +218,25 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address-based forwarding mode of the instance. Valid values:
-             * <p>
+             * <p>The type of the instance.</p>
              * 
-             * *   **fnat**: Requests from IPv4 addresses are forwarded to origin servers that use IPv4 addresses and requests from IPv6 addresses are forwarded to origin servers that use IPv6 addresses.
-             * *   **v6tov4**: All requests are forwarded to origin servers that use IPv4 addresses.
+             * <strong>example:</strong>
+             * <p>default</p>
+             */
+            public Builder functionVersion(String functionVersion) {
+                this.functionVersion = functionVersion;
+                return this;
+            }
+
+            /**
+             * <p>The IP address-based forwarding mode of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>fnat</strong>: Requests from IPv4 addresses are forwarded to origin servers that use IPv4 addresses and requests from IPv6 addresses are forwarded to origin servers that use IPv6 addresses.</li>
+             * <li><strong>v6tov4</strong>: All requests are forwarded to origin servers that use IPv4 addresses.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>fnat</p>
              */
             public Builder ipMode(String ipMode) {
                 this.ipMode = ipMode;
@@ -154,11 +244,14 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP version of the protocol. Valid values:
-             * <p>
+             * <p>The IP version of the protocol. Valid values:</p>
+             * <ul>
+             * <li><strong>Ipv4</strong>: IPv4</li>
+             * <li><strong>Ipv6</strong>: IPv6</li>
+             * </ul>
              * 
-             * *   **Ipv4**: IPv4
-             * *   **Ipv6**: IPv6
+             * <strong>example:</strong>
+             * <p>Ipv4</p>
              */
             public Builder ipVersion(String ipVersion) {
                 this.ipVersion = ipVersion;
@@ -166,17 +259,42 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the instance. Valid values:
-             * <p>
+             * <p>Indicates whether the TLS 1.3 version is supported.</p>
              * 
-             * *   **normal**: indicates that the instance is normal.
-             * *   **expired**: indicates that the instance expired.
-             * *   **defense**: indicates that traffic scrubbing is performed on the asset that is protected by the instance.
-             * *   **blackhole**: indicates that blackhole filtering is triggered for the asset that is protected by the instance.
-             * *   **punished**: indicates that the instance is in penalty.
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder ssl13Enabled(Boolean ssl13Enabled) {
+                this.ssl13Enabled = ssl13Enabled;
+                return this;
+            }
+
+            /**
+             * <p>The status of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>normal</strong>: indicates that the instance is normal.</li>
+             * <li><strong>expired</strong>: indicates that the instance expired.</li>
+             * <li><strong>defense</strong>: indicates that traffic scrubbing is performed on the asset that is protected by the instance.</li>
+             * <li><strong>blackhole</strong>: indicates that blackhole filtering is triggered for the asset that is protected by the instance.</li>
+             * <li><strong>punished</strong>: indicates that the instance is in penalty.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * <p>The Transport Layer Security (TLS) version that is configured.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tls1.2</p>
+             */
+            public Builder tlsVersion(String tlsVersion) {
+                this.tlsVersion = tlsVersion;
                 return this;
             }
 
@@ -187,14 +305,20 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceDetailsResponseBody</p>
+     */
     public static class InstanceDetails extends TeaModel {
-        @NameInMap("EipInfos")
-        private java.util.List < EipInfos> eipInfos;
+        @com.aliyun.core.annotation.NameInMap("EipInfos")
+        private java.util.List<EipInfos> eipInfos;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Line")
+        @com.aliyun.core.annotation.NameInMap("Line")
         private String line;
 
         private InstanceDetails(Builder builder) {
@@ -214,7 +338,7 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
         /**
          * @return eipInfos
          */
-        public java.util.List < EipInfos> getEipInfos() {
+        public java.util.List<EipInfos> getEipInfos() {
             return this.eipInfos;
         }
 
@@ -233,20 +357,23 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < EipInfos> eipInfos; 
+            private java.util.List<EipInfos> eipInfos; 
             private String instanceId; 
             private String line; 
 
             /**
-             * The information about the IP address of the instance.
+             * <p>The IP address information about the Anti-DDoS Proxy instance.</p>
              */
-            public Builder eipInfos(java.util.List < EipInfos> eipInfos) {
+            public Builder eipInfos(java.util.List<EipInfos> eipInfos) {
                 this.eipInfos = eipInfos;
                 return this;
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddoscoo-cn-zvp2eibz****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -254,7 +381,10 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The protection line of the instance.
+             * <p>The protection line of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>coop-line-001</p>
              */
             public Builder line(String line) {
                 this.line = line;

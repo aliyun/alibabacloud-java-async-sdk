@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTrFirewallsV2RouteListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTrFirewallsV2RouteListResponseBody</p>
  */
 public class DescribeTrFirewallsV2RouteListResponseBody extends TeaModel {
-    @NameInMap("FirewallRouteDetailList")
-    private java.util.List < FirewallRouteDetailList> firewallRouteDetailList;
+    @com.aliyun.core.annotation.NameInMap("FirewallRouteDetailList")
+    private java.util.List<FirewallRouteDetailList> firewallRouteDetailList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeTrFirewallsV2RouteListResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeTrFirewallsV2RouteListResponseBody extends TeaModel {
     /**
      * @return firewallRouteDetailList
      */
-    public java.util.List < FirewallRouteDetailList> getFirewallRouteDetailList() {
+    public java.util.List<FirewallRouteDetailList> getFirewallRouteDetailList() {
         return this.firewallRouteDetailList;
     }
 
@@ -46,19 +51,22 @@ public class DescribeTrFirewallsV2RouteListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < FirewallRouteDetailList> firewallRouteDetailList; 
+        private java.util.List<FirewallRouteDetailList> firewallRouteDetailList; 
         private String requestId; 
 
         /**
-         * FirewallRouteDetailList.
+         * <p>The route tables of Cloud Firewall.</p>
          */
-        public Builder firewallRouteDetailList(java.util.List < FirewallRouteDetailList> firewallRouteDetailList) {
+        public Builder firewallRouteDetailList(java.util.List<FirewallRouteDetailList> firewallRouteDetailList) {
             this.firewallRouteDetailList = firewallRouteDetailList;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABF190A2-B4D0-53F6-995A-5690A721F91C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,17 +79,23 @@ public class DescribeTrFirewallsV2RouteListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTrFirewallsV2RouteListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTrFirewallsV2RouteListResponseBody</p>
+     */
     public static class FirewallRouteDetailList extends TeaModel {
-        @NameInMap("TrFirewallRouteDestination")
+        @com.aliyun.core.annotation.NameInMap("TrFirewallRouteDestination")
         private String trFirewallRouteDestination;
 
-        @NameInMap("TrFirewallRouteNexthop")
+        @com.aliyun.core.annotation.NameInMap("TrFirewallRouteNexthop")
         private String trFirewallRouteNexthop;
 
-        @NameInMap("TrFirewallRoutePolicyId")
+        @com.aliyun.core.annotation.NameInMap("TrFirewallRoutePolicyId")
         private String trFirewallRoutePolicyId;
 
-        @NameInMap("TrFirewallRouteTableId")
+        @com.aliyun.core.annotation.NameInMap("TrFirewallRouteTableId")
         private String trFirewallRouteTableId;
 
         private FirewallRouteDetailList(Builder builder) {
@@ -134,7 +148,10 @@ public class DescribeTrFirewallsV2RouteListResponseBody extends TeaModel {
             private String trFirewallRouteTableId; 
 
             /**
-             * TrFirewallRouteDestination.
+             * <p>The destination address of the route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.10.0/25</p>
              */
             public Builder trFirewallRouteDestination(String trFirewallRouteDestination) {
                 this.trFirewallRouteDestination = trFirewallRouteDestination;
@@ -142,7 +159,10 @@ public class DescribeTrFirewallsV2RouteListResponseBody extends TeaModel {
             }
 
             /**
-             * TrFirewallRouteNexthop.
+             * <p>The ID of the next hop for the route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tr-attach-hnxab1y0pxn16p****</p>
              */
             public Builder trFirewallRouteNexthop(String trFirewallRouteNexthop) {
                 this.trFirewallRouteNexthop = trFirewallRouteNexthop;
@@ -150,7 +170,10 @@ public class DescribeTrFirewallsV2RouteListResponseBody extends TeaModel {
             }
 
             /**
-             * TrFirewallRoutePolicyId.
+             * <p>The ID of the routing policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>policy-04ecbbc6720d4f90****</p>
              */
             public Builder trFirewallRoutePolicyId(String trFirewallRoutePolicyId) {
                 this.trFirewallRoutePolicyId = trFirewallRoutePolicyId;
@@ -158,7 +181,10 @@ public class DescribeTrFirewallsV2RouteListResponseBody extends TeaModel {
             }
 
             /**
-             * TrFirewallRouteTableId.
+             * <p>The ID of the route table to which the route entry belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vtb-2zeockxxxorv0mnhz****</p>
              */
             public Builder trFirewallRouteTableId(String trFirewallRouteTableId) {
                 this.trFirewallRouteTableId = trFirewallRouteTableId;

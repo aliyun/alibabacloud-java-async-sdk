@@ -1,38 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.schedulerx220190430.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchEnableJobsRequest} extends {@link RequestModel}
  *
  * <p>BatchEnableJobsRequest</p>
  */
 public class BatchEnableJobsRequest extends Request {
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Body
-    @NameInMap("JobIdList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("JobIdList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Long > jobIdList;
 
-    @Query
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @Query
-    @NameInMap("NamespaceSource")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespaceSource")
     private String namespaceSource;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private BatchEnableJobsRequest(Builder builder) {
@@ -113,7 +113,10 @@ public class BatchEnableJobsRequest extends Request {
         } 
 
         /**
-         * The application ID. You can obtain the application ID on the **Application Management** page in the SchedulerX console.
+         * <p>The application ID. You can obtain the application ID on the <strong>Application Management</strong> page in the SchedulerX console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testSchedulerx.defaultGroup</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -122,7 +125,11 @@ public class BatchEnableJobsRequest extends Request {
         }
 
         /**
-         * The job IDs. Multiple job IDs are separated with commas (,).
+         * <p>The job IDs. Multiple job IDs are separated with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99341</p>
          */
         public Builder jobIdList(java.util.List < Long > jobIdList) {
             this.putBodyParameter("JobIdList", jobIdList);
@@ -131,7 +138,11 @@ public class BatchEnableJobsRequest extends Request {
         }
 
         /**
-         * The ID of the namespace to which the job belongs. You can obtain the namespace ID on the **Namespace** page in the SchedulerX console.
+         * <p>The ID of the namespace to which the job belongs. You can obtain the namespace ID on the <strong>Namespace</strong> page in the SchedulerX console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -140,7 +151,10 @@ public class BatchEnableJobsRequest extends Request {
         }
 
         /**
-         * The source of the namespace. This parameter is required only for a special third party.
+         * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>schedulerx</p>
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
@@ -149,7 +163,11 @@ public class BatchEnableJobsRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the job belongs.
+         * <p>The ID of the region to which the job belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

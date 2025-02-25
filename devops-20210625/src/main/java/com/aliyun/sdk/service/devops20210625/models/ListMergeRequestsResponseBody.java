@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMergeRequestsResponseBody} extends {@link TeaModel}
  *
  * <p>ListMergeRequestsResponseBody</p>
  */
 public class ListMergeRequestsResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
-    private java.util.List < Result> result;
+    @com.aliyun.core.annotation.NameInMap("result")
+    private java.util.List<Result> result;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("total")
+    @com.aliyun.core.annotation.NameInMap("total")
     private Long total;
 
     private ListMergeRequestsResponseBody(Builder builder) {
@@ -71,7 +76,7 @@ public class ListMergeRequestsResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -93,7 +98,7 @@ public class ListMergeRequestsResponseBody extends TeaModel {
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Boolean success; 
         private Long total; 
 
@@ -114,7 +119,10 @@ public class ListMergeRequestsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -124,7 +132,7 @@ public class ListMergeRequestsResponseBody extends TeaModel {
         /**
          * result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -151,23 +159,29 @@ public class ListMergeRequestsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListMergeRequestsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMergeRequestsResponseBody</p>
+     */
     public static class Author extends TeaModel {
-        @NameInMap("avatarUrl")
+        @com.aliyun.core.annotation.NameInMap("avatarUrl")
         private String avatarUrl;
 
-        @NameInMap("email")
+        @com.aliyun.core.annotation.NameInMap("email")
         private String email;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
-        @NameInMap("username")
+        @com.aliyun.core.annotation.NameInMap("username")
         private String username;
 
         private Author(Builder builder) {
@@ -292,33 +306,162 @@ public class ListMergeRequestsResponseBody extends TeaModel {
         } 
 
     }
-    public static class Reviewers extends TeaModel {
-        @NameInMap("avatarUrl")
-        private String avatarUrl;
+    /**
+     * 
+     * {@link ListMergeRequestsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMergeRequestsResponseBody</p>
+     */
+    public static class Labels extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("color")
+        private String color;
 
-        @NameInMap("email")
-        private String email;
+        @com.aliyun.core.annotation.NameInMap("description")
+        private String description;
 
-        @NameInMap("id")
-        private Long id;
+        @com.aliyun.core.annotation.NameInMap("id")
+        private String id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("state")
+        private Labels(Builder builder) {
+            this.color = builder.color;
+            this.description = builder.description;
+            this.id = builder.id;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Labels create() {
+            return builder().build();
+        }
+
+        /**
+         * @return color
+         */
+        public String getColor() {
+            return this.color;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String color; 
+            private String description; 
+            private String id; 
+            private String name; 
+
+            /**
+             * color.
+             */
+            public Builder color(String color) {
+                this.color = color;
+                return this;
+            }
+
+            /**
+             * description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * id.
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public Labels build() {
+                return new Labels(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListMergeRequestsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMergeRequestsResponseBody</p>
+     */
+    public static class Reviewers extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("avatarUrl")
+        private String avatarUrl;
+
+        @com.aliyun.core.annotation.NameInMap("email")
+        private String email;
+
+        @com.aliyun.core.annotation.NameInMap("hasCommented")
+        private Boolean hasCommented;
+
+        @com.aliyun.core.annotation.NameInMap("hasReviewed")
+        private Boolean hasReviewed;
+
+        @com.aliyun.core.annotation.NameInMap("id")
+        private Long id;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("reviewOpinionStatus")
+        private String reviewOpinionStatus;
+
+        @com.aliyun.core.annotation.NameInMap("reviewTime")
+        private String reviewTime;
+
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("username")
+        @com.aliyun.core.annotation.NameInMap("username")
         private String username;
 
         private Reviewers(Builder builder) {
             this.avatarUrl = builder.avatarUrl;
             this.email = builder.email;
+            this.hasCommented = builder.hasCommented;
+            this.hasReviewed = builder.hasReviewed;
             this.id = builder.id;
             this.name = builder.name;
+            this.reviewOpinionStatus = builder.reviewOpinionStatus;
+            this.reviewTime = builder.reviewTime;
             this.state = builder.state;
             this.status = builder.status;
             this.username = builder.username;
@@ -347,6 +490,20 @@ public class ListMergeRequestsResponseBody extends TeaModel {
         }
 
         /**
+         * @return hasCommented
+         */
+        public Boolean getHasCommented() {
+            return this.hasCommented;
+        }
+
+        /**
+         * @return hasReviewed
+         */
+        public Boolean getHasReviewed() {
+            return this.hasReviewed;
+        }
+
+        /**
          * @return id
          */
         public Long getId() {
@@ -358,6 +515,20 @@ public class ListMergeRequestsResponseBody extends TeaModel {
          */
         public String getName() {
             return this.name;
+        }
+
+        /**
+         * @return reviewOpinionStatus
+         */
+        public String getReviewOpinionStatus() {
+            return this.reviewOpinionStatus;
+        }
+
+        /**
+         * @return reviewTime
+         */
+        public String getReviewTime() {
+            return this.reviewTime;
         }
 
         /**
@@ -384,8 +555,12 @@ public class ListMergeRequestsResponseBody extends TeaModel {
         public static final class Builder {
             private String avatarUrl; 
             private String email; 
+            private Boolean hasCommented; 
+            private Boolean hasReviewed; 
             private Long id; 
             private String name; 
+            private String reviewOpinionStatus; 
+            private String reviewTime; 
             private String state; 
             private String status; 
             private String username; 
@@ -407,6 +582,22 @@ public class ListMergeRequestsResponseBody extends TeaModel {
             }
 
             /**
+             * hasCommented.
+             */
+            public Builder hasCommented(Boolean hasCommented) {
+                this.hasCommented = hasCommented;
+                return this;
+            }
+
+            /**
+             * hasReviewed.
+             */
+            public Builder hasReviewed(Boolean hasReviewed) {
+                this.hasReviewed = hasReviewed;
+                return this;
+            }
+
+            /**
              * id.
              */
             public Builder id(Long id) {
@@ -419,6 +610,22 @@ public class ListMergeRequestsResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * reviewOpinionStatus.
+             */
+            public Builder reviewOpinionStatus(String reviewOpinionStatus) {
+                this.reviewOpinionStatus = reviewOpinionStatus;
+                return this;
+            }
+
+            /**
+             * reviewTime.
+             */
+            public Builder reviewTime(String reviewTime) {
+                this.reviewTime = reviewTime;
                 return this;
             }
 
@@ -453,23 +660,29 @@ public class ListMergeRequestsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMergeRequestsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMergeRequestsResponseBody</p>
+     */
     public static class Subscribers extends TeaModel {
-        @NameInMap("avatarUrl")
+        @com.aliyun.core.annotation.NameInMap("avatarUrl")
         private String avatarUrl;
 
-        @NameInMap("email")
+        @com.aliyun.core.annotation.NameInMap("email")
         private String email;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
-        @NameInMap("username")
+        @com.aliyun.core.annotation.NameInMap("username")
         private String username;
 
         private Subscribers(Builder builder) {
@@ -594,89 +807,101 @@ public class ListMergeRequestsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMergeRequestsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMergeRequestsResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("author")
+        @com.aliyun.core.annotation.NameInMap("author")
         private Author author;
 
-        @NameInMap("createdAt")
+        @com.aliyun.core.annotation.NameInMap("createdAt")
         private String createdAt;
 
-        @NameInMap("creationMethod")
+        @com.aliyun.core.annotation.NameInMap("creationMethod")
         private String creationMethod;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("detailUrl")
+        @com.aliyun.core.annotation.NameInMap("detailUrl")
         private String detailUrl;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("iid")
+        @com.aliyun.core.annotation.NameInMap("iid")
         private Long iid;
 
-        @NameInMap("localId")
+        @com.aliyun.core.annotation.NameInMap("labels")
+        private java.util.List<Labels> labels;
+
+        @com.aliyun.core.annotation.NameInMap("localId")
         private Long localId;
 
-        @NameInMap("mrBizId")
+        @com.aliyun.core.annotation.NameInMap("mergedRevision")
+        private String mergedRevision;
+
+        @com.aliyun.core.annotation.NameInMap("mrBizId")
         private String mrBizId;
 
-        @NameInMap("nameWithNamespace")
+        @com.aliyun.core.annotation.NameInMap("nameWithNamespace")
         private String nameWithNamespace;
 
-        @NameInMap("newMergeRequestIdentifier")
+        @com.aliyun.core.annotation.NameInMap("newMergeRequestIdentifier")
         private Boolean newMergeRequestIdentifier;
 
-        @NameInMap("newVersionState")
+        @com.aliyun.core.annotation.NameInMap("newVersionState")
         private String newVersionState;
 
-        @NameInMap("projectId")
+        @com.aliyun.core.annotation.NameInMap("projectId")
         private Long projectId;
 
-        @NameInMap("reviewers")
-        private java.util.List < Reviewers> reviewers;
+        @com.aliyun.core.annotation.NameInMap("reviewers")
+        private java.util.List<Reviewers> reviewers;
 
-        @NameInMap("sourceBranch")
+        @com.aliyun.core.annotation.NameInMap("sourceBranch")
         private String sourceBranch;
 
-        @NameInMap("sourceProjectId")
+        @com.aliyun.core.annotation.NameInMap("sourceProjectId")
         private Long sourceProjectId;
 
-        @NameInMap("sourceType")
+        @com.aliyun.core.annotation.NameInMap("sourceType")
         private String sourceType;
 
-        @NameInMap("sshUrl")
+        @com.aliyun.core.annotation.NameInMap("sshUrl")
         private String sshUrl;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
-        @NameInMap("subscribers")
-        private java.util.List < Subscribers> subscribers;
+        @com.aliyun.core.annotation.NameInMap("subscribers")
+        private java.util.List<Subscribers> subscribers;
 
-        @NameInMap("supportMergeFFOnly")
+        @com.aliyun.core.annotation.NameInMap("supportMergeFFOnly")
         private Boolean supportMergeFFOnly;
 
-        @NameInMap("targetBranch")
+        @com.aliyun.core.annotation.NameInMap("targetBranch")
         private String targetBranch;
 
-        @NameInMap("targetProjectId")
+        @com.aliyun.core.annotation.NameInMap("targetProjectId")
         private Long targetProjectId;
 
-        @NameInMap("targetType")
+        @com.aliyun.core.annotation.NameInMap("targetType")
         private String targetType;
 
-        @NameInMap("title")
+        @com.aliyun.core.annotation.NameInMap("title")
         private String title;
 
-        @NameInMap("updatedAt")
+        @com.aliyun.core.annotation.NameInMap("updatedAt")
         private String updatedAt;
 
-        @NameInMap("webUrl")
+        @com.aliyun.core.annotation.NameInMap("webUrl")
         private String webUrl;
 
-        @NameInMap("workInProgress")
+        @com.aliyun.core.annotation.NameInMap("workInProgress")
         private Boolean workInProgress;
 
         private Result(Builder builder) {
@@ -687,7 +912,9 @@ public class ListMergeRequestsResponseBody extends TeaModel {
             this.detailUrl = builder.detailUrl;
             this.id = builder.id;
             this.iid = builder.iid;
+            this.labels = builder.labels;
             this.localId = builder.localId;
+            this.mergedRevision = builder.mergedRevision;
             this.mrBizId = builder.mrBizId;
             this.nameWithNamespace = builder.nameWithNamespace;
             this.newMergeRequestIdentifier = builder.newMergeRequestIdentifier;
@@ -768,10 +995,24 @@ public class ListMergeRequestsResponseBody extends TeaModel {
         }
 
         /**
+         * @return labels
+         */
+        public java.util.List<Labels> getLabels() {
+            return this.labels;
+        }
+
+        /**
          * @return localId
          */
         public Long getLocalId() {
             return this.localId;
+        }
+
+        /**
+         * @return mergedRevision
+         */
+        public String getMergedRevision() {
+            return this.mergedRevision;
         }
 
         /**
@@ -812,7 +1053,7 @@ public class ListMergeRequestsResponseBody extends TeaModel {
         /**
          * @return reviewers
          */
-        public java.util.List < Reviewers> getReviewers() {
+        public java.util.List<Reviewers> getReviewers() {
             return this.reviewers;
         }
 
@@ -854,7 +1095,7 @@ public class ListMergeRequestsResponseBody extends TeaModel {
         /**
          * @return subscribers
          */
-        public java.util.List < Subscribers> getSubscribers() {
+        public java.util.List<Subscribers> getSubscribers() {
             return this.subscribers;
         }
 
@@ -922,19 +1163,21 @@ public class ListMergeRequestsResponseBody extends TeaModel {
             private String detailUrl; 
             private Long id; 
             private Long iid; 
+            private java.util.List<Labels> labels; 
             private Long localId; 
+            private String mergedRevision; 
             private String mrBizId; 
             private String nameWithNamespace; 
             private Boolean newMergeRequestIdentifier; 
             private String newVersionState; 
             private Long projectId; 
-            private java.util.List < Reviewers> reviewers; 
+            private java.util.List<Reviewers> reviewers; 
             private String sourceBranch; 
             private Long sourceProjectId; 
             private String sourceType; 
             private String sshUrl; 
             private String state; 
-            private java.util.List < Subscribers> subscribers; 
+            private java.util.List<Subscribers> subscribers; 
             private Boolean supportMergeFFOnly; 
             private String targetBranch; 
             private Long targetProjectId; 
@@ -1001,10 +1244,26 @@ public class ListMergeRequestsResponseBody extends TeaModel {
             }
 
             /**
+             * labels.
+             */
+            public Builder labels(java.util.List<Labels> labels) {
+                this.labels = labels;
+                return this;
+            }
+
+            /**
              * localId.
              */
             public Builder localId(Long localId) {
                 this.localId = localId;
+                return this;
+            }
+
+            /**
+             * mergedRevision.
+             */
+            public Builder mergedRevision(String mergedRevision) {
+                this.mergedRevision = mergedRevision;
                 return this;
             }
 
@@ -1051,7 +1310,7 @@ public class ListMergeRequestsResponseBody extends TeaModel {
             /**
              * reviewers.
              */
-            public Builder reviewers(java.util.List < Reviewers> reviewers) {
+            public Builder reviewers(java.util.List<Reviewers> reviewers) {
                 this.reviewers = reviewers;
                 return this;
             }
@@ -1099,7 +1358,7 @@ public class ListMergeRequestsResponseBody extends TeaModel {
             /**
              * subscribers.
              */
-            public Builder subscribers(java.util.List < Subscribers> subscribers) {
+            public Builder subscribers(java.util.List<Subscribers> subscribers) {
                 this.subscribers = subscribers;
                 return this;
             }

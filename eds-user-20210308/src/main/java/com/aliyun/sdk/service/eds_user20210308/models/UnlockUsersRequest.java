@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnlockUsersRequest} extends {@link RequestModel}
  *
  * <p>UnlockUsersRequest</p>
  */
 public class UnlockUsersRequest extends Request {
-    @Query
-    @NameInMap("AutoLockTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoLockTime")
     private String autoLockTime;
 
-    @Body
-    @NameInMap("Users")
-    @Validation(required = true)
-    private java.util.List < String > users;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Users")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> users;
 
     private UnlockUsersRequest(Builder builder) {
         super(builder);
@@ -50,13 +55,13 @@ public class UnlockUsersRequest extends Request {
     /**
      * @return users
      */
-    public java.util.List < String > getUsers() {
+    public java.util.List<String> getUsers() {
         return this.users;
     }
 
     public static final class Builder extends Request.Builder<UnlockUsersRequest, Builder> {
         private String autoLockTime; 
-        private java.util.List < String > users; 
+        private java.util.List<String> users; 
 
         private Builder() {
             super();
@@ -69,7 +74,10 @@ public class UnlockUsersRequest extends Request {
         } 
 
         /**
-         * AutoLockTime.
+         * <p>The date on which the convenience users are automatically locked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-03</p>
          */
         public Builder autoLockTime(String autoLockTime) {
             this.putQueryParameter("AutoLockTime", autoLockTime);
@@ -78,9 +86,13 @@ public class UnlockUsersRequest extends Request {
         }
 
         /**
-         * Users.
+         * <p>The usernames of the convenience users that you want to unlock.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
-        public Builder users(java.util.List < String > users) {
+        public Builder users(java.util.List<String> users) {
             this.putBodyParameter("Users", users);
             this.users = users;
             return this;

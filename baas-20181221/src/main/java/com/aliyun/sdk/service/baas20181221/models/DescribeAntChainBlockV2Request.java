@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAntChainBlockV2Request</p>
  */
 public class DescribeAntChainBlockV2Request extends Request {
-    @Body
-    @NameInMap("AntChainId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AntChainId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String antChainId;
 
-    @Body
-    @NameInMap("ConsortiumId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConsortiumId")
     private String consortiumId;
 
-    @Body
-    @NameInMap("Height")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Height")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long height;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     private DescribeAntChainBlockV2Request(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.antChainId = builder.antChainId;
         this.consortiumId = builder.consortiumId;
         this.height = builder.height;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -49,6 +48,13 @@ public class DescribeAntChainBlockV2Request extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -72,30 +78,32 @@ public class DescribeAntChainBlockV2Request extends Request {
         return this.height;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeAntChainBlockV2Request, Builder> {
+        private String regionId; 
         private String antChainId; 
         private String consortiumId; 
         private Long height; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeAntChainBlockV2Request response) {
-            super(response);
-            this.antChainId = response.antChainId;
-            this.consortiumId = response.consortiumId;
-            this.height = response.height;
-            this.regionId = response.regionId;
+        private Builder(DescribeAntChainBlockV2Request request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.antChainId = request.antChainId;
+            this.consortiumId = request.consortiumId;
+            this.height = request.height;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AntChainId.
@@ -121,15 +129,6 @@ public class DescribeAntChainBlockV2Request extends Request {
         public Builder height(Long height) {
             this.putBodyParameter("Height", height);
             this.height = height;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

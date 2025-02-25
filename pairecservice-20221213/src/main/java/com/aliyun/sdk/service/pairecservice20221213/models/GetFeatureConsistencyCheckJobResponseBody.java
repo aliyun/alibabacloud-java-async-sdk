@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetFeatureConsistencyCheckJobResponseBody</p>
  */
 public class GetFeatureConsistencyCheckJobResponseBody extends TeaModel {
-    @NameInMap("Config")
+    @com.aliyun.core.annotation.NameInMap("Config")
     private String config;
 
-    @NameInMap("FeatureConsistencyCheckJobConfigId")
+    @com.aliyun.core.annotation.NameInMap("FeatureConsistencyCheckJobConfigId")
     private String featureConsistencyCheckJobConfigId;
 
-    @NameInMap("FeatureConsistencyCheckJobConfigName")
+    @com.aliyun.core.annotation.NameInMap("FeatureConsistencyCheckJobConfigName")
     private String featureConsistencyCheckJobConfigName;
 
-    @NameInMap("GmtEndTime")
+    @com.aliyun.core.annotation.NameInMap("GmtEndTime")
     private String gmtEndTime;
 
-    @NameInMap("GmtStartTime")
+    @com.aliyun.core.annotation.NameInMap("GmtStartTime")
     private String gmtStartTime;
 
-    @NameInMap("Logs")
+    @com.aliyun.core.annotation.NameInMap("Logs")
     private java.util.List < String > logs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private GetFeatureConsistencyCheckJobResponseBody(Builder builder) {

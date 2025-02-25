@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeParametersResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeParametersResponseBody</p>
  */
 public class DescribeParametersResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeParametersResponseBody(Builder builder) {
@@ -71,14 +76,20 @@ public class DescribeParametersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeParametersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeParametersResponseBody</p>
+     */
     public static class ConfigParameters extends TeaModel {
-        @NameInMap("ParameterDescription")
+        @com.aliyun.core.annotation.NameInMap("ParameterDescription")
         private String parameterDescription;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
-        @NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
         private String parameterValue;
 
         private ConfigParameters(Builder builder) {
@@ -152,14 +163,20 @@ public class DescribeParametersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeParametersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeParametersResponseBody</p>
+     */
     public static class RunningParameters extends TeaModel {
-        @NameInMap("ParameterDescription")
+        @com.aliyun.core.annotation.NameInMap("ParameterDescription")
         private String parameterDescription;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
-        @NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
         private String parameterValue;
 
         private RunningParameters(Builder builder) {
@@ -233,21 +250,31 @@ public class DescribeParametersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeParametersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeParametersResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ConfigParameters")
-        private java.util.List < ConfigParameters> configParameters;
+        @com.aliyun.core.annotation.NameInMap("ConfigParameters")
+        private java.util.List<ConfigParameters> configParameters;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+        private String DBInstanceId;
+
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("EngineVersion")
+        @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private String engineVersion;
 
-        @NameInMap("RunningParameters")
-        private java.util.List < RunningParameters> runningParameters;
+        @com.aliyun.core.annotation.NameInMap("RunningParameters")
+        private java.util.List<RunningParameters> runningParameters;
 
         private Data(Builder builder) {
             this.configParameters = builder.configParameters;
+            this.DBInstanceId = builder.DBInstanceId;
             this.engine = builder.engine;
             this.engineVersion = builder.engineVersion;
             this.runningParameters = builder.runningParameters;
@@ -264,8 +291,15 @@ public class DescribeParametersResponseBody extends TeaModel {
         /**
          * @return configParameters
          */
-        public java.util.List < ConfigParameters> getConfigParameters() {
+        public java.util.List<ConfigParameters> getConfigParameters() {
             return this.configParameters;
+        }
+
+        /**
+         * @return DBInstanceId
+         */
+        public String getDBInstanceId() {
+            return this.DBInstanceId;
         }
 
         /**
@@ -285,21 +319,30 @@ public class DescribeParametersResponseBody extends TeaModel {
         /**
          * @return runningParameters
          */
-        public java.util.List < RunningParameters> getRunningParameters() {
+        public java.util.List<RunningParameters> getRunningParameters() {
             return this.runningParameters;
         }
 
         public static final class Builder {
-            private java.util.List < ConfigParameters> configParameters; 
+            private java.util.List<ConfigParameters> configParameters; 
+            private String DBInstanceId; 
             private String engine; 
             private String engineVersion; 
-            private java.util.List < RunningParameters> runningParameters; 
+            private java.util.List<RunningParameters> runningParameters; 
 
             /**
              * ConfigParameters.
              */
-            public Builder configParameters(java.util.List < ConfigParameters> configParameters) {
+            public Builder configParameters(java.util.List<ConfigParameters> configParameters) {
                 this.configParameters = configParameters;
+                return this;
+            }
+
+            /**
+             * DBInstanceId.
+             */
+            public Builder DBInstanceId(String DBInstanceId) {
+                this.DBInstanceId = DBInstanceId;
                 return this;
             }
 
@@ -322,7 +365,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             /**
              * RunningParameters.
              */
-            public Builder runningParameters(java.util.List < RunningParameters> runningParameters) {
+            public Builder runningParameters(java.util.List<RunningParameters> runningParameters) {
                 this.runningParameters = runningParameters;
                 return this;
             }

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetABMetricGroupResponseBody</p>
  */
 public class GetABMetricGroupResponseBody extends TeaModel {
-    @NameInMap("ABMetricIds")
+    @com.aliyun.core.annotation.NameInMap("ABMetricIds")
     private String ABMetricIds;
 
-    @NameInMap("ABMetricNames")
+    @com.aliyun.core.annotation.NameInMap("ABMetricNames")
     private String ABMetricNames;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("Owner")
+    @com.aliyun.core.annotation.NameInMap("Owner")
     private String owner;
 
-    @NameInMap("Realtime")
+    @com.aliyun.core.annotation.NameInMap("Realtime")
     private Boolean realtime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SceneId")
+    @com.aliyun.core.annotation.NameInMap("SceneId")
     private String sceneId;
 
     private GetABMetricGroupResponseBody(Builder builder) {

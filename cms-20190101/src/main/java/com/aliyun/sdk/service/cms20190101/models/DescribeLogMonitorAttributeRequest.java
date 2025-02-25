@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLogMonitorAttributeRequest} extends {@link RequestModel}
  *
  * <p>DescribeLogMonitorAttributeRequest</p>
  */
 public class DescribeLogMonitorAttributeRequest extends Request {
-    @Query
-    @NameInMap("MetricName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String metricName;
 
     private DescribeLogMonitorAttributeRequest(Builder builder) {
@@ -55,10 +55,12 @@ public class DescribeLogMonitorAttributeRequest extends Request {
         } 
 
         /**
-         * The name of the log monitoring metric. Exact match is supported.
-         * <p>
+         * <p>The name of the log monitoring metric. Exact match is supported.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information, see [Appendix 1: Metrics](~~163515~~).
+         * <strong>example:</strong>
+         * <p>cpu_total</p>
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);

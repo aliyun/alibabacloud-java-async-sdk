@@ -1,29 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutProvisionConfigRequest} extends {@link RequestModel}
  *
  * <p>PutProvisionConfigRequest</p>
  */
 public class PutProvisionConfigRequest extends Request {
-    @Path
-    @NameInMap("functionName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("functionName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String functionName;
 
-    @Body
-    @NameInMap("body")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
+    @com.aliyun.core.annotation.Validation(required = true)
     private PutProvisionConfigInput body;
 
-    @Query
-    @NameInMap("qualifier")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("qualifier")
     private String qualifier;
 
     private PutProvisionConfigRequest(Builder builder) {
@@ -84,7 +84,11 @@ public class PutProvisionConfigRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * <p>The function name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-func</p>
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -93,7 +97,8 @@ public class PutProvisionConfigRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The provisioned instance configurations.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder body(PutProvisionConfigInput body) {
             this.putBodyParameter("body", body);
@@ -102,7 +107,10 @@ public class PutProvisionConfigRequest extends Request {
         }
 
         /**
-         * qualifier.
+         * <p>The function alias or LATEST.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LATEST</p>
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);

@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchCreateDcdnWafRulesResponseBody} extends {@link TeaModel}
  *
  * <p>BatchCreateDcdnWafRulesResponseBody</p>
  */
 public class BatchCreateDcdnWafRulesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RuleIds")
+    @com.aliyun.core.annotation.NameInMap("RuleIds")
     private RuleIds ruleIds;
 
     private BatchCreateDcdnWafRulesResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class BatchCreateDcdnWafRulesResponseBody extends TeaModel {
         private RuleIds ruleIds; 
 
         /**
-         * Creates Web Application Firewall (WAF) protection rules.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CB1A380B-09F0-41BB-280B-72F8FD6DA2FE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class BatchCreateDcdnWafRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RuleIds.
+         * <p>The IDs of created rules.</p>
          */
         public Builder ruleIds(RuleIds ruleIds) {
             this.ruleIds = ruleIds;
@@ -71,8 +74,14 @@ public class BatchCreateDcdnWafRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BatchCreateDcdnWafRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchCreateDcdnWafRulesResponseBody</p>
+     */
     public static class RuleIds extends TeaModel {
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private java.util.List < String > ruleId;
 
         private RuleIds(Builder builder) {

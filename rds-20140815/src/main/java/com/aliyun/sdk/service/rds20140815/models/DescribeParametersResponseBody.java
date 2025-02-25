@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeParametersResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeParametersResponseBody</p>
  */
 public class DescribeParametersResponseBody extends TeaModel {
-    @NameInMap("ConfigParameters")
+    @com.aliyun.core.annotation.NameInMap("ConfigParameters")
     private ConfigParameters configParameters;
 
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @NameInMap("EngineVersion")
+    @com.aliyun.core.annotation.NameInMap("EngineVersion")
     private String engineVersion;
 
-    @NameInMap("ParamGroupInfo")
+    @com.aliyun.core.annotation.NameInMap("ParamGroupInfo")
     private ParamGroupInfo paramGroupInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RunningParameters")
+    @com.aliyun.core.annotation.NameInMap("RunningParameters")
     private RunningParameters runningParameters;
 
     private DescribeParametersResponseBody(Builder builder) {
@@ -98,10 +103,10 @@ public class DescribeParametersResponseBody extends TeaModel {
         private RunningParameters runningParameters; 
 
         /**
-         * The list of parameters that are being synchronized.
-         * <p>
-         * 
-         * > After you modify and submit the parameters, you must wait for the parameters to be synchronized to the instance. After the synchronization, you can delete the parameters from the list.
+         * <p>The list of parameters that are being synchronized.</p>
+         * <blockquote>
+         * <p>After you modify and submit the parameters, you must wait for the parameters to be synchronized to the instance. After the synchronization, you can delete the parameters from the list.</p>
+         * </blockquote>
          */
         public Builder configParameters(ConfigParameters configParameters) {
             this.configParameters = configParameters;
@@ -109,7 +114,10 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the database engine.
+         * <p>The type of the database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -117,7 +125,10 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         /**
-         * The version of the database engine.
+         * <p>The version of the database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.5</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = engineVersion;
@@ -125,7 +136,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the parameter template.
+         * <p>The information about the parameter template.</p>
          */
         public Builder paramGroupInfo(ParamGroupInfo paramGroupInfo) {
             this.paramGroupInfo = paramGroupInfo;
@@ -133,7 +144,10 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +155,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         /**
-         * The list of parameters that are in use.
+         * <p>The parameters that are in use.</p>
          */
         public Builder runningParameters(RunningParameters runningParameters) {
             this.runningParameters = runningParameters;
@@ -154,14 +168,20 @@ public class DescribeParametersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeParametersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeParametersResponseBody</p>
+     */
     public static class DBInstanceParameter extends TeaModel {
-        @NameInMap("ParameterDescription")
+        @com.aliyun.core.annotation.NameInMap("ParameterDescription")
         private String parameterDescription;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
-        @NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
         private String parameterValue;
 
         private DBInstanceParameter(Builder builder) {
@@ -205,7 +225,10 @@ public class DescribeParametersResponseBody extends TeaModel {
             private String parameterValue; 
 
             /**
-             * The description of the parameter.
+             * <p>The description of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This parameter sets the default fill factor value at the server scope. A fill factor is provided to optimize index data storage and performance.</p>
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -213,7 +236,10 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fill factor</p>
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -221,7 +247,10 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the parameter.
+             * <p>The value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -235,9 +264,15 @@ public class DescribeParametersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeParametersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeParametersResponseBody</p>
+     */
     public static class ConfigParameters extends TeaModel {
-        @NameInMap("DBInstanceParameter")
-        private java.util.List < DBInstanceParameter> DBInstanceParameter;
+        @com.aliyun.core.annotation.NameInMap("DBInstanceParameter")
+        private java.util.List<DBInstanceParameter> DBInstanceParameter;
 
         private ConfigParameters(Builder builder) {
             this.DBInstanceParameter = builder.DBInstanceParameter;
@@ -254,17 +289,17 @@ public class DescribeParametersResponseBody extends TeaModel {
         /**
          * @return DBInstanceParameter
          */
-        public java.util.List < DBInstanceParameter> getDBInstanceParameter() {
+        public java.util.List<DBInstanceParameter> getDBInstanceParameter() {
             return this.DBInstanceParameter;
         }
 
         public static final class Builder {
-            private java.util.List < DBInstanceParameter> DBInstanceParameter; 
+            private java.util.List<DBInstanceParameter> DBInstanceParameter; 
 
             /**
              * DBInstanceParameter.
              */
-            public Builder DBInstanceParameter(java.util.List < DBInstanceParameter> DBInstanceParameter) {
+            public Builder DBInstanceParameter(java.util.List<DBInstanceParameter> DBInstanceParameter) {
                 this.DBInstanceParameter = DBInstanceParameter;
                 return this;
             }
@@ -276,17 +311,23 @@ public class DescribeParametersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeParametersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeParametersResponseBody</p>
+     */
     public static class ParamGroupInfo extends TeaModel {
-        @NameInMap("ParamGroupId")
+        @com.aliyun.core.annotation.NameInMap("ParamGroupId")
         private String paramGroupId;
 
-        @NameInMap("ParameterGroupDesc")
+        @com.aliyun.core.annotation.NameInMap("ParameterGroupDesc")
         private String parameterGroupDesc;
 
-        @NameInMap("ParameterGroupName")
+        @com.aliyun.core.annotation.NameInMap("ParameterGroupName")
         private String parameterGroupName;
 
-        @NameInMap("ParameterGroupType")
+        @com.aliyun.core.annotation.NameInMap("ParameterGroupType")
         private String parameterGroupType;
 
         private ParamGroupInfo(Builder builder) {
@@ -339,7 +380,10 @@ public class DescribeParametersResponseBody extends TeaModel {
             private String parameterGroupType; 
 
             /**
-             * The ID of the parameter template.
+             * <p>The ID of the parameter template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rpg-sys-01040401010200</p>
              */
             public Builder paramGroupId(String paramGroupId) {
                 this.paramGroupId = paramGroupId;
@@ -347,7 +391,10 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the parameter template.
+             * <p>The description of the parameter template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sync_binlog=1000, innodb_flush_log_at_trx_commit=2, async</p>
              */
             public Builder parameterGroupDesc(String parameterGroupDesc) {
                 this.parameterGroupDesc = parameterGroupDesc;
@@ -355,7 +402,10 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the parameter template.
+             * <p>The name of the parameter template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql_innodb_8.0_basic_normal_high</p>
              */
             public Builder parameterGroupName(String parameterGroupName) {
                 this.parameterGroupName = parameterGroupName;
@@ -363,7 +413,10 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the parameter template.
+             * <p>The type of the parameter template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder parameterGroupType(String parameterGroupType) {
                 this.parameterGroupType = parameterGroupType;
@@ -377,20 +430,34 @@ public class DescribeParametersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeParametersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeParametersResponseBody</p>
+     */
     public static class RunningParametersDBInstanceParameter extends TeaModel {
-        @NameInMap("ParameterDescription")
+        @com.aliyun.core.annotation.NameInMap("ParameterDefaultValue")
+        private String parameterDefaultValue;
+
+        @com.aliyun.core.annotation.NameInMap("ParameterDescription")
         private String parameterDescription;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
-        @NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
         private String parameterValue;
 
+        @com.aliyun.core.annotation.NameInMap("ParameterValueRange")
+        private String parameterValueRange;
+
         private RunningParametersDBInstanceParameter(Builder builder) {
+            this.parameterDefaultValue = builder.parameterDefaultValue;
             this.parameterDescription = builder.parameterDescription;
             this.parameterName = builder.parameterName;
             this.parameterValue = builder.parameterValue;
+            this.parameterValueRange = builder.parameterValueRange;
         }
 
         public static Builder builder() {
@@ -399,6 +466,13 @@ public class DescribeParametersResponseBody extends TeaModel {
 
         public static RunningParametersDBInstanceParameter create() {
             return builder().build();
+        }
+
+        /**
+         * @return parameterDefaultValue
+         */
+        public String getParameterDefaultValue() {
+            return this.parameterDefaultValue;
         }
 
         /**
@@ -422,13 +496,36 @@ public class DescribeParametersResponseBody extends TeaModel {
             return this.parameterValue;
         }
 
+        /**
+         * @return parameterValueRange
+         */
+        public String getParameterValueRange() {
+            return this.parameterValueRange;
+        }
+
         public static final class Builder {
+            private String parameterDefaultValue; 
             private String parameterDescription; 
             private String parameterName; 
             private String parameterValue; 
+            private String parameterValueRange; 
 
             /**
-             * The description of the parameter.
+             * <p>The default value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
+             */
+            public Builder parameterDefaultValue(String parameterDefaultValue) {
+                this.parameterDefaultValue = parameterDefaultValue;
+                return this;
+            }
+
+            /**
+             * <p>The description of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This parameter sets the default fill factor value at the server scope. A fill factor is provided to optimize index data storage and performance.</p>
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -436,7 +533,10 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fill factor</p>
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -444,10 +544,24 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the parameter.
+             * <p>The value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
+                return this;
+            }
+
+            /**
+             * <p>The valid values of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1~100</p>
+             */
+            public Builder parameterValueRange(String parameterValueRange) {
+                this.parameterValueRange = parameterValueRange;
                 return this;
             }
 
@@ -458,9 +572,15 @@ public class DescribeParametersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeParametersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeParametersResponseBody</p>
+     */
     public static class RunningParameters extends TeaModel {
-        @NameInMap("DBInstanceParameter")
-        private java.util.List < RunningParametersDBInstanceParameter> DBInstanceParameter;
+        @com.aliyun.core.annotation.NameInMap("DBInstanceParameter")
+        private java.util.List<RunningParametersDBInstanceParameter> DBInstanceParameter;
 
         private RunningParameters(Builder builder) {
             this.DBInstanceParameter = builder.DBInstanceParameter;
@@ -477,17 +597,17 @@ public class DescribeParametersResponseBody extends TeaModel {
         /**
          * @return DBInstanceParameter
          */
-        public java.util.List < RunningParametersDBInstanceParameter> getDBInstanceParameter() {
+        public java.util.List<RunningParametersDBInstanceParameter> getDBInstanceParameter() {
             return this.DBInstanceParameter;
         }
 
         public static final class Builder {
-            private java.util.List < RunningParametersDBInstanceParameter> DBInstanceParameter; 
+            private java.util.List<RunningParametersDBInstanceParameter> DBInstanceParameter; 
 
             /**
              * DBInstanceParameter.
              */
-            public Builder DBInstanceParameter(java.util.List < RunningParametersDBInstanceParameter> DBInstanceParameter) {
+            public Builder DBInstanceParameter(java.util.List<RunningParametersDBInstanceParameter> DBInstanceParameter) {
                 this.DBInstanceParameter = DBInstanceParameter;
                 return this;
             }

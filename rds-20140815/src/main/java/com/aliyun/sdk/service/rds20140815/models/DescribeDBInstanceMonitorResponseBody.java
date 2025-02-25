@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceMonitorResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstanceMonitorResponseBody</p>
  */
 public class DescribeDBInstanceMonitorResponseBody extends TeaModel {
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.NameInMap("Period")
     private String period;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBInstanceMonitorResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DescribeDBInstanceMonitorResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The monitoring frequency. Unit: seconds.
+         * <p>The monitoring frequency. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder period(String period) {
             this.period = period;
@@ -58,7 +66,10 @@ public class DescribeDBInstanceMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30829FD4-1A84-4C2A-A625-2EADECB95CA3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

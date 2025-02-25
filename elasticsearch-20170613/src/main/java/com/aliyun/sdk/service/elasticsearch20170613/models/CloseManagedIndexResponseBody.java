@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CloseManagedIndexResponseBody} extends {@link TeaModel}
  *
  * <p>CloseManagedIndexResponseBody</p>
  */
 public class CloseManagedIndexResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Boolean result;
 
     private CloseManagedIndexResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class CloseManagedIndexResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,16 @@ public class CloseManagedIndexResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Indicates whether the index&quot;s cloud management has been successfully closed:</p>
+         * <ul>
+         * <li><p>true: Success</p>
+         * </li>
+         * <li><p>false: Failure</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

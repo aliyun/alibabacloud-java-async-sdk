@@ -1,64 +1,64 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SwitchNetworkRequest} extends {@link RequestModel}
  *
  * <p>SwitchNetworkRequest</p>
  */
 public class SwitchNetworkRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ClassicExpiredDays")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClassicExpiredDays")
     private String classicExpiredDays;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RetainClassic")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RetainClassic")
     private String retainClassic;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("TargetNetworkType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetNetworkType")
     private String targetNetworkType;
 
-    @Query
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @Query
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     private SwitchNetworkRequest(Builder builder) {
@@ -218,7 +218,18 @@ public class SwitchNetworkRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **SwitchNetwork**.
+         * <p>The retention period of the classic network endpoint. Valid values: <strong>14</strong>, <strong>30</strong>, <strong>60</strong>, and <strong>120</strong>. Unit: days.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter is available and required only when the <strong>RetainClassic</strong> parameter is set to <strong>True</strong>.</p>
+         * </li>
+         * <li><p>After you complete the switchover operation, you can also call the <a href="https://help.aliyun.com/document_detail/61010.html">ModifyInstanceNetExpireTime</a> operation to modify the retention period of the classic network endpoint.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder classicExpiredDays(String classicExpiredDays) {
             this.putQueryParameter("ClassicExpiredDays", classicExpiredDays);
@@ -227,7 +238,11 @@ public class SwitchNetworkRequest extends Request {
         }
 
         /**
-         * The ID of the task.
+         * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query the ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -272,7 +287,17 @@ public class SwitchNetworkRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>Specifies whether to retain the original classic network endpoint after you switch the instance from classic network to VPC. Default value: False. Valid values:</p>
+         * <ul>
+         * <li><strong>True</strong>: retains the classic network endpoint.</li>
+         * <li><strong>False</strong>: does not retain the classic network endpoint.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is available only when the network type of the instance is classic network.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder retainClassic(String retainClassic) {
             this.putQueryParameter("RetainClassic", retainClassic);
@@ -290,13 +315,10 @@ public class SwitchNetworkRequest extends Request {
         }
 
         /**
-         * The network type to which you want to switch. Set the value to **VPC**.
-         * <p>
+         * <p>The network type to which you want to switch. If you want to switch to VPC network, Set the value to <strong>VPC</strong>.</p>
          * 
-         * Valid values:
-         * 
-         * *   CLASSIC
-         * *   VPC
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder targetNetworkType(String targetNetworkType) {
             this.putQueryParameter("TargetNetworkType", targetNetworkType);
@@ -305,7 +327,13 @@ public class SwitchNetworkRequest extends Request {
         }
 
         /**
-         * The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query instance IDs.
+         * <p>The ID of the vSwitch that belongs to the VPC to which you want to switch. You can call the <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a> operation to query the VPC ID.</p>
+         * <blockquote>
+         * <p>The vSwitch and the ApsaraDB for Redis instance must be deployed in the same zone.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1e7clcw529l773d****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -314,10 +342,18 @@ public class SwitchNetworkRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch that belongs to the VPC to which you want to switch. You can call the [DescribeVpcs](~~35739~~) operation to query vSwitch IDs.
-         * <p>
+         * <p>The ID of the VPC to which you want to switch. You can call the <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a> operation to query the VPC ID.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The VPC and the ApsaraDB for Redis instance must be deployed in the same region.</p>
+         * </li>
+         * <li><p>After you set this parameter, you must also set the <strong>VSwitchId</strong> parameter.</p>
+         * </li>
+         * </ul>
          * 
-         * >  The vSwitch and the ApsaraDB for Redis instance must belong to the same zone.
+         * <strong>example:</strong>
+         * <p>vpc-bp1nme44gek34slfc****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

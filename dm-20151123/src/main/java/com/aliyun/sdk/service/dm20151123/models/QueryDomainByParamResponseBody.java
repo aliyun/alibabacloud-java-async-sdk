@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20151123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDomainByParamResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDomainByParamResponseBody</p>
  */
 public class QueryDomainByParamResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
     private QueryDomainByParamResponseBody(Builder builder) {
@@ -131,38 +136,44 @@ public class QueryDomainByParamResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDomainByParamResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDomainByParamResponseBody</p>
+     */
     public static class Domain extends TeaModel {
-        @NameInMap("CnameAuthStatus")
+        @com.aliyun.core.annotation.NameInMap("CnameAuthStatus")
         private String cnameAuthStatus;
 
-        @NameInMap("ConfirmStatus")
+        @com.aliyun.core.annotation.NameInMap("ConfirmStatus")
         private String confirmStatus;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DomainId")
+        @com.aliyun.core.annotation.NameInMap("DomainId")
         private String domainId;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("DomainRecord")
+        @com.aliyun.core.annotation.NameInMap("DomainRecord")
         private String domainRecord;
 
-        @NameInMap("DomainStatus")
+        @com.aliyun.core.annotation.NameInMap("DomainStatus")
         private String domainStatus;
 
-        @NameInMap("IcpStatus")
+        @com.aliyun.core.annotation.NameInMap("IcpStatus")
         private String icpStatus;
 
-        @NameInMap("MxAuthStatus")
+        @com.aliyun.core.annotation.NameInMap("MxAuthStatus")
         private String mxAuthStatus;
 
-        @NameInMap("SpfAuthStatus")
+        @com.aliyun.core.annotation.NameInMap("SpfAuthStatus")
         private String spfAuthStatus;
 
-        @NameInMap("UtcCreateTime")
+        @com.aliyun.core.annotation.NameInMap("UtcCreateTime")
         private Long utcCreateTime;
 
         private Domain(Builder builder) {
@@ -372,9 +383,15 @@ public class QueryDomainByParamResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDomainByParamResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDomainByParamResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("domain")
-        private java.util.List < Domain> domain;
+        @com.aliyun.core.annotation.NameInMap("domain")
+        private java.util.List<Domain> domain;
 
         private Data(Builder builder) {
             this.domain = builder.domain;
@@ -391,17 +408,17 @@ public class QueryDomainByParamResponseBody extends TeaModel {
         /**
          * @return domain
          */
-        public java.util.List < Domain> getDomain() {
+        public java.util.List<Domain> getDomain() {
             return this.domain;
         }
 
         public static final class Builder {
-            private java.util.List < Domain> domain; 
+            private java.util.List<Domain> domain; 
 
             /**
              * domain.
              */
-            public Builder domain(java.util.List < Domain> domain) {
+            public Builder domain(java.util.List<Domain> domain) {
                 this.domain = domain;
                 return this;
             }

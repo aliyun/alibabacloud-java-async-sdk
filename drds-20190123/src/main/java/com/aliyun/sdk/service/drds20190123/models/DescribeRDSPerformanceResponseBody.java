@@ -62,7 +62,7 @@ public class DescribeRDSPerformanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The result set of the query.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class DescribeRDSPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeRDSPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,7 +130,7 @@ public class DescribeRDSPerformanceResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Date.
+             * The time point when the value of the monitoring metric was obtained. The value is in the UNIX timestamp format. The time is displayed in UTC. Unit: ms.
              */
             public Builder date(Long date) {
                 this.date = date;
@@ -138,7 +138,7 @@ public class DescribeRDSPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the monitoring metric.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -227,7 +227,7 @@ public class DescribeRDSPerformanceResponseBody extends TeaModel {
             private java.util.List < Values> values; 
 
             /**
-             * Key.
+             * The name of the monitoring metric.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -235,7 +235,10 @@ public class DescribeRDSPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * The name of the node.
+             * <p>
+             * 
+             * >  This parameter is returned only when the storage type of the database is PolarDB for MySQL. If the storage type of the database is ApsaraDB RDS for MySQL, this parameter is not returned.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -243,7 +246,7 @@ public class DescribeRDSPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * NodeNum.
+             * The number of nodes.
              */
             public Builder nodeNum(Integer nodeNum) {
                 this.nodeNum = nodeNum;
@@ -251,7 +254,7 @@ public class DescribeRDSPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the monitoring metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -259,7 +262,7 @@ public class DescribeRDSPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * Values.
+             * The details of the monitoring metric data.
              */
             public Builder values(java.util.List < Values> values) {
                 this.values = values;

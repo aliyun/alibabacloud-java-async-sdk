@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Member} extends {@link TeaModel}
  *
  * <p>Member</p>
  */
 public class Member extends TeaModel {
-    @NameInMap("member")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("member")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String member;
 
-    @NameInMap("role")
+    @com.aliyun.core.annotation.NameInMap("role")
     private String role;
 
     private Member(Builder builder) {
@@ -51,7 +56,10 @@ public class Member extends TeaModel {
         private String role; 
 
         /**
-         * member.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user: 181319557522****</p>
          */
         public Builder member(String member) {
             this.member = member;

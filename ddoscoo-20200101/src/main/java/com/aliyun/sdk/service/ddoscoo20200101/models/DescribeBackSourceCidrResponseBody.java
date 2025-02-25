@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackSourceCidrResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackSourceCidrResponseBody</p>
  */
 public class DescribeBackSourceCidrResponseBody extends TeaModel {
-    @NameInMap("Cidrs")
-    private java.util.List < String > cidrs;
+    @com.aliyun.core.annotation.NameInMap("Cidrs")
+    private java.util.List<String> cidrs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeBackSourceCidrResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeBackSourceCidrResponseBody extends TeaModel {
     /**
      * @return cidrs
      */
-    public java.util.List < String > getCidrs() {
+    public java.util.List<String> getCidrs() {
         return this.cidrs;
     }
 
@@ -46,19 +51,22 @@ public class DescribeBackSourceCidrResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > cidrs; 
+        private java.util.List<String> cidrs; 
         private String requestId; 
 
         /**
-         * An array that consists of the back-to-origin CIDR blocks of the instance.
+         * <p>An array that consists of the back-to-origin CIDR blocks of the instance.</p>
          */
-        public Builder cidrs(java.util.List < String > cidrs) {
+        public Builder cidrs(java.util.List<String> cidrs) {
             this.cidrs = cidrs;
             return this;
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bcf28g5-d57c-11e7-9bs0-d89d6717dxbc</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

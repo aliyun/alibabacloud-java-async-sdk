@@ -142,7 +142,7 @@ public class StartExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the flow.
+         * The name of the workflow.
          */
         public Builder flowName(String flowName) {
             this.flowName = flowName;
@@ -190,9 +190,10 @@ public class StartExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * The execution state. Valid values:
+         * The execution status. Valid values:
          * <p>
          * 
+         * *   **Starting**
          * *   **Running**
          * *   **Stopped**
          * *   **Succeeded**

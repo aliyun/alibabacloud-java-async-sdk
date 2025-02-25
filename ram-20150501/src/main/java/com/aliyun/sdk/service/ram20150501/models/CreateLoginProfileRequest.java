@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLoginProfileRequest} extends {@link RequestModel}
  *
  * <p>CreateLoginProfileRequest</p>
  */
 public class CreateLoginProfileRequest extends Request {
-    @Query
-    @NameInMap("MFABindRequired")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MFABindRequired")
     private Boolean MFABindRequired;
 
-    @Query
-    @NameInMap("Password")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Password")
     private String password;
 
-    @Query
-    @NameInMap("PasswordResetRequired")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordResetRequired")
     private Boolean passwordResetRequired;
 
-    @Query
-    @NameInMap("UserName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserName")
     private String userName;
 
     private CreateLoginProfileRequest(Builder builder) {
@@ -87,16 +92,19 @@ public class CreateLoginProfileRequest extends Request {
             super();
         } 
 
-        private Builder(CreateLoginProfileRequest response) {
-            super(response);
-            this.MFABindRequired = response.MFABindRequired;
-            this.password = response.password;
-            this.passwordResetRequired = response.passwordResetRequired;
-            this.userName = response.userName;
+        private Builder(CreateLoginProfileRequest request) {
+            super(request);
+            this.MFABindRequired = request.MFABindRequired;
+            this.password = request.password;
+            this.passwordResetRequired = request.passwordResetRequired;
+            this.userName = request.userName;
         } 
 
         /**
-         * MFABindRequired.
+         * <p>Specifies whether an MFA device must be attached to the RAM user upon logon. Default value: <code>false</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder MFABindRequired(Boolean MFABindRequired) {
             this.putQueryParameter("MFABindRequired", MFABindRequired);
@@ -105,7 +113,10 @@ public class CreateLoginProfileRequest extends Request {
         }
 
         /**
-         * Password.
+         * <p>The logon password of the RAM user. The password must meet the password strength requirements. For more information, see <a href="https://help.aliyun.com/document_detail/2337691.html">GetPasswordPolicy</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mypassword</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -114,7 +125,10 @@ public class CreateLoginProfileRequest extends Request {
         }
 
         /**
-         * PasswordResetRequired.
+         * <p>Specifies whether the RAM user must change the password upon logon. Default value: <code>false</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder passwordResetRequired(Boolean passwordResetRequired) {
             this.putQueryParameter("PasswordResetRequired", passwordResetRequired);
@@ -123,7 +137,10 @@ public class CreateLoginProfileRequest extends Request {
         }
 
         /**
-         * UserName.
+         * <p>The name of the RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhangq****</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

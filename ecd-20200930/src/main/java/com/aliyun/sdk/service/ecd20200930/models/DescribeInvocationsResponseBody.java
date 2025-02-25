@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInvocationsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInvocationsResponseBody</p>
  */
 public class DescribeInvocationsResponseBody extends TeaModel {
-    @NameInMap("Invocations")
-    private java.util.List < Invocations> invocations;
+    @com.aliyun.core.annotation.NameInMap("Invocations")
+    private java.util.List<Invocations> invocations;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInvocationsResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
     /**
      * @return invocations
      */
-    public java.util.List < Invocations> getInvocations() {
+    public java.util.List<Invocations> getInvocations() {
         return this.invocations;
     }
 
@@ -57,20 +62,23 @@ public class DescribeInvocationsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Invocations> invocations; 
+        private java.util.List<Invocations> invocations; 
         private String nextToken; 
         private String requestId; 
 
         /**
-         * Invocations.
+         * <p>Details about execution records of the command.</p>
          */
-        public Builder invocations(java.util.List < Invocations> invocations) {
+        public Builder invocations(java.util.List<Invocations> invocations) {
             this.invocations = invocations;
             return this;
         }
 
         /**
-         * NextToken.
+         * <p>The query token that is returned from this call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +86,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,47 +102,53 @@ public class DescribeInvocationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInvocationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInvocationsResponseBody</p>
+     */
     public static class InvokeDesktops extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DesktopId")
+        @com.aliyun.core.annotation.NameInMap("DesktopId")
         private String desktopId;
 
-        @NameInMap("DesktopName")
+        @com.aliyun.core.annotation.NameInMap("DesktopName")
         private String desktopName;
 
-        @NameInMap("Dropped")
+        @com.aliyun.core.annotation.NameInMap("Dropped")
         private Integer dropped;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorInfo")
+        @com.aliyun.core.annotation.NameInMap("ErrorInfo")
         private String errorInfo;
 
-        @NameInMap("ExitCode")
+        @com.aliyun.core.annotation.NameInMap("ExitCode")
         private Long exitCode;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("InvocationStatus")
+        @com.aliyun.core.annotation.NameInMap("InvocationStatus")
         private String invocationStatus;
 
-        @NameInMap("Output")
+        @com.aliyun.core.annotation.NameInMap("Output")
         private String output;
 
-        @NameInMap("Repeats")
+        @com.aliyun.core.annotation.NameInMap("Repeats")
         private Integer repeats;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("StopTime")
+        @com.aliyun.core.annotation.NameInMap("StopTime")
         private String stopTime;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private InvokeDesktops(Builder builder) {
@@ -274,7 +291,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * CreationTime.
+             * <p>The time when the command execution was performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-20T06:15:54Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -282,7 +302,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopId.
+             * <p>The ID of the cloud desktop.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-7w78ozhjcwa3u****</p>
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -290,7 +313,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopName.
+             * <p>The name of the cloud desktop.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo1234</p>
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -298,7 +324,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * Dropped.
+             * <p>The size of the text that is truncated and discarded when the Output value exceeds 24 KB in size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dropped(Integer dropped) {
                 this.dropped = dropped;
@@ -306,7 +335,26 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * <p>The code that indicates the reason why a command failed to be sent or executed. The valid values include:</p>
+             * <ul>
+             * <li>If this parameter is empty, the execution is normal.</li>
+             * <li>InstanceNotExists: The specified cloud desktop does not exist or is released.</li>
+             * <li>InstanceReleased: The cloud desktop is released during the execution.</li>
+             * <li>InstanceNotRunning: The cloud desktop is not running during the execution.</li>
+             * <li>CommandNotApplicable: The command cannot be used on the cloud desktop.</li>
+             * <li>ClientNotRunning: The Cloud Assistant client is not running.</li>
+             * <li>ClientNotResponse: The Cloud Assistant client does not respond.</li>
+             * <li>ClientIsUpgrading: The Cloud Assistant client is being upgraded.</li>
+             * <li>ClientNeedUpgrade: The Cloud Assistant client needs to be upgraded.</li>
+             * <li>DeliveryTimeout: The time to send the command in the request times out.</li>
+             * <li>ExecutionTimeout: The execution times out.</li>
+             * <li>ExecutionException: An exception occurs during the execution.</li>
+             * <li>ExecutionInterrupted: The execution is interrupted.</li>
+             * <li>ExitCodeNonzero: The execution finishes, but the exit code is not 0.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>InstanceNotExists</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -314,7 +362,26 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorInfo.
+             * <p>Details about the reason why the command failed to be sent or executed. The valid values include:</p>
+             * <ul>
+             * <li>If this parameter is empty, the execution is normal.</li>
+             * <li>the specified instance does not exists: The cloud desktop does not exist or is released.</li>
+             * <li>the instance has released when create task: The cloud desktop is released during execution.</li>
+             * <li>the instance is not running when create task: The cloud desktop is not running when the execution is being performed.</li>
+             * <li>the command is not applicable: The command cannot be used on the specified cloud desktop.</li>
+             * <li>the aliyun service is not running on the instance: The Cloud Assistance client is not running.</li>
+             * <li>the aliyun service in the instance does not response: The Cloud Assistant client is not responding.</li>
+             * <li>the aliyun service in the instance is upgrading now: The Cloud Assistant client is being upgraded.</li>
+             * <li>the aliyun service in the instance need upgrade: The Cloud Assistant client needs to be upgraded.</li>
+             * <li>the command delivery has been timeout: The command that is sent in the request times out.</li>
+             * <li>the command execution has been timeout: The execution times out.</li>
+             * <li>the command execution got an exception: An exception occurs when the command is running.</li>
+             * <li>the command execution has been interrupted: The execution is interrupted.</li>
+             * <li>the command execution exit code is not zero: The execution finishes, but the exit code is not 0.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>The specified instance does not exist.</p>
              */
             public Builder errorInfo(String errorInfo) {
                 this.errorInfo = errorInfo;
@@ -322,7 +389,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * ExitCode.
+             * <p>The exit code of the execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder exitCode(Long exitCode) {
                 this.exitCode = exitCode;
@@ -330,7 +400,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * <p>The time when the command execution ended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-20T06:15:56Z</p>
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -338,7 +411,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * InvocationStatus.
+             * <p>The execution status on the cloud desktop.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder invocationStatus(String invocationStatus) {
                 this.invocationStatus = invocationStatus;
@@ -346,7 +422,14 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * Output.
+             * <p>The command output.</p>
+             * <ul>
+             * <li>If the IncludeOutput parameter is set to false, Output is not returned.</li>
+             * <li>If the ContentEncoding parameter is set to Base64, the value of Output is the output information that is encoded in Base64.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OutPutTestmsg</p>
              */
             public Builder output(String output) {
                 this.output = output;
@@ -354,7 +437,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * Repeats.
+             * <p>The number of times that the command is executed on the cloud desktop.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder repeats(Integer repeats) {
                 this.repeats = repeats;
@@ -362,7 +448,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the execution on the cloud desktop.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-20T06:15:55Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -370,7 +459,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * StopTime.
+             * <p>The time when you called the <a href="~~196957#doc-api-ecd-StopInvocation~~" title="You can call this operation to stop a Cloud Assistant command that is running on one or cloud desktops.">StopInvocation</a> operation to manually stop the command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-25T09:15:47Z</p>
              */
             public Builder stopTime(String stopTime) {
                 this.stopTime = stopTime;
@@ -378,7 +470,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the execution status was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-25T06:15:56Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -392,26 +487,38 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInvocationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInvocationsResponseBody</p>
+     */
     public static class Invocations extends TeaModel {
-        @NameInMap("CommandContent")
+        @com.aliyun.core.annotation.NameInMap("CommandContent")
         private String commandContent;
 
-        @NameInMap("CommandType")
+        @com.aliyun.core.annotation.NameInMap("CommandType")
         private String commandType;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
-        @NameInMap("InvocationStatus")
+        @com.aliyun.core.annotation.NameInMap("InvocationStatus")
         private String invocationStatus;
 
-        @NameInMap("InvokeDesktops")
-        private java.util.List < InvokeDesktops> invokeDesktops;
+        @com.aliyun.core.annotation.NameInMap("InvokeDesktopCount")
+        private Integer invokeDesktopCount;
 
-        @NameInMap("InvokeId")
+        @com.aliyun.core.annotation.NameInMap("InvokeDesktopSucceedCount")
+        private Integer invokeDesktopSucceedCount;
+
+        @com.aliyun.core.annotation.NameInMap("InvokeDesktops")
+        private java.util.List<InvokeDesktops> invokeDesktops;
+
+        @com.aliyun.core.annotation.NameInMap("InvokeId")
         private String invokeId;
 
         private Invocations(Builder builder) {
@@ -420,6 +527,8 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             this.creationTime = builder.creationTime;
             this.endUserId = builder.endUserId;
             this.invocationStatus = builder.invocationStatus;
+            this.invokeDesktopCount = builder.invokeDesktopCount;
+            this.invokeDesktopSucceedCount = builder.invokeDesktopSucceedCount;
             this.invokeDesktops = builder.invokeDesktops;
             this.invokeId = builder.invokeId;
         }
@@ -468,9 +577,23 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return invokeDesktopCount
+         */
+        public Integer getInvokeDesktopCount() {
+            return this.invokeDesktopCount;
+        }
+
+        /**
+         * @return invokeDesktopSucceedCount
+         */
+        public Integer getInvokeDesktopSucceedCount() {
+            return this.invokeDesktopSucceedCount;
+        }
+
+        /**
          * @return invokeDesktops
          */
-        public java.util.List < InvokeDesktops> getInvokeDesktops() {
+        public java.util.List<InvokeDesktops> getInvokeDesktops() {
             return this.invokeDesktops;
         }
 
@@ -487,11 +610,16 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             private String creationTime; 
             private String endUserId; 
             private String invocationStatus; 
-            private java.util.List < InvokeDesktops> invokeDesktops; 
+            private Integer invokeDesktopCount; 
+            private Integer invokeDesktopSucceedCount; 
+            private java.util.List<InvokeDesktops> invokeDesktops; 
             private String invokeId; 
 
             /**
-             * CommandContent.
+             * <p>The Base64-encoded command content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cnBtIC1xYSB8IGdyZXAgdnNm****</p>
              */
             public Builder commandContent(String commandContent) {
                 this.commandContent = commandContent;
@@ -499,7 +627,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * CommandType.
+             * <p>The type of the command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RunPowerShellScript</p>
              */
             public Builder commandType(String commandType) {
                 this.commandType = commandType;
@@ -507,7 +638,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The time when the execution task is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-19T09:15:46Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -515,7 +649,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * EndUserId.
+             * <p>The ID of the end user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>User1</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -523,7 +660,37 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * InvocationStatus.
+             * <p>The overall execution status of the command. The overall execution status is determined by the execution status on all involved cloud desktops. The valid values include:</p>
+             * <ul>
+             * <li><p>Pending: The system is verifying or sending the command. If the execution status on at least one cloud desktop is Pending, the overall execution status is Pending.</p>
+             * </li>
+             * <li><p>Running: The execution is in progress on cloud desktops. If the execution status on at least one cloud desktop is Running, the overall execution status is Running.</p>
+             * </li>
+             * <li><p>Success: If the execution status on all cloud desktops is Success or Stopped, or the execution status on at least one cloud desktop is Success, the overall execution status is Success.</p>
+             * </li>
+             * <li><p>Failed: If the execution status on all cloud desktops is Stopped or Failed, the overall execution status is Failed. If one or more execution status of a cloud desktop is one of the following values, Failed is returned:</p>
+             * <ul>
+             * <li>Invalid: The command is invalid.</li>
+             * <li>Aborted: The command fails to be sent.</li>
+             * <li>Failed: The command is executed, but the exit code is not 0.</li>
+             * <li>Timeout: The command times out.</li>
+             * <li>Error: An error occurs in the command.</li>
+             * </ul>
+             * </li>
+             * <li><p>Stopping: The execution is being stopped. If the execution status on at least one cloud desktop is Stopping, the overall execution state is Stopping.</p>
+             * </li>
+             * <li><p>Stopped: The execution is stopped. If the execution status on all cloud desktops is Stopped, the overall execution state is Stopped. If the execution status on a cloud desktop is one of the following values, Stopped is returned:</p>
+             * <ul>
+             * <li>Cancelled: The execution is canceled.</li>
+             * <li>Terminated: The execution is terminated.</li>
+             * </ul>
+             * </li>
+             * <li><p>PartialFailed: The execution succeeded on some cloud desktops and failed on others. If the execution status on different cloud desktops is Success, Failed, or Stopped, the overall execution state is PartialFailed.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Pending</p>
              */
             public Builder invocationStatus(String invocationStatus) {
                 this.invocationStatus = invocationStatus;
@@ -531,15 +698,34 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * InvokeDesktops.
+             * InvokeDesktopCount.
              */
-            public Builder invokeDesktops(java.util.List < InvokeDesktops> invokeDesktops) {
+            public Builder invokeDesktopCount(Integer invokeDesktopCount) {
+                this.invokeDesktopCount = invokeDesktopCount;
+                return this;
+            }
+
+            /**
+             * InvokeDesktopSucceedCount.
+             */
+            public Builder invokeDesktopSucceedCount(Integer invokeDesktopSucceedCount) {
+                this.invokeDesktopSucceedCount = invokeDesktopSucceedCount;
+                return this;
+            }
+
+            /**
+             * <p>The cloud desktops on which the command is executed.</p>
+             */
+            public Builder invokeDesktops(java.util.List<InvokeDesktops> invokeDesktops) {
                 this.invokeDesktops = invokeDesktops;
                 return this;
             }
 
             /**
-             * InvokeId.
+             * <p>The ID of the execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-hz0jdfwd9f****</p>
              */
             public Builder invokeId(String invokeId) {
                 this.invokeId = invokeId;

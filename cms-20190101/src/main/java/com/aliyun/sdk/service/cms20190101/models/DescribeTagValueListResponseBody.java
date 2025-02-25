@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTagValueListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTagValueListResponseBody</p>
  */
 public class DescribeTagValueListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TagValues")
+    @com.aliyun.core.annotation.NameInMap("TagValues")
     private TagValues tagValues;
 
     private DescribeTagValueListResponseBody(Builder builder) {
@@ -86,10 +86,13 @@ public class DescribeTagValueListResponseBody extends TeaModel {
         private TagValues tagValues; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p> The value 200 indicates that the call was successful.</p>
+         * </blockquote>
          * 
-         * >  The value 200 indicates that the call was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -97,7 +100,10 @@ public class DescribeTagValueListResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified resource is not found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -105,7 +111,10 @@ public class DescribeTagValueListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B04B8CF3-4489-432D-83BA-6F128E4F2295</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -113,11 +122,14 @@ public class DescribeTagValueListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -125,7 +137,7 @@ public class DescribeTagValueListResponseBody extends TeaModel {
         }
 
         /**
-         * The tag values returned.
+         * <p>The tag values returned.</p>
          */
         public Builder tagValues(TagValues tagValues) {
             this.tagValues = tagValues;
@@ -138,8 +150,14 @@ public class DescribeTagValueListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTagValueListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTagValueListResponseBody</p>
+     */
     public static class TagValues extends TeaModel {
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private java.util.List < String > tagValue;
 
         private TagValues(Builder builder) {

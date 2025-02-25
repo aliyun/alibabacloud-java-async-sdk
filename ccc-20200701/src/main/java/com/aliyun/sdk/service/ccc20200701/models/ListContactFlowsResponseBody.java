@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListContactFlowsResponseBody} extends {@link TeaModel}
  *
  * <p>ListContactFlowsResponseBody</p>
  */
 public class ListContactFlowsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListContactFlowsResponseBody(Builder builder) {
@@ -131,41 +136,47 @@ public class ListContactFlowsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListContactFlowsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListContactFlowsResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("ContactFlowId")
+        @com.aliyun.core.annotation.NameInMap("ContactFlowId")
         private String contactFlowId;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("Definition")
+        @com.aliyun.core.annotation.NameInMap("Definition")
         private String definition;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DraftId")
+        @com.aliyun.core.annotation.NameInMap("DraftId")
         private String draftId;
 
-        @NameInMap("Editor")
+        @com.aliyun.core.annotation.NameInMap("Editor")
         private String editor;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NumberList")
-        private java.util.List < String > numberList;
+        @com.aliyun.core.annotation.NameInMap("NumberList")
+        private java.util.List<String> numberList;
 
-        @NameInMap("Published")
+        @com.aliyun.core.annotation.NameInMap("Published")
         private Boolean published;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UpdatedTime")
+        @com.aliyun.core.annotation.NameInMap("UpdatedTime")
         private String updatedTime;
 
         private List(Builder builder) {
@@ -250,7 +261,7 @@ public class ListContactFlowsResponseBody extends TeaModel {
         /**
          * @return numberList
          */
-        public java.util.List < String > getNumberList() {
+        public java.util.List<String> getNumberList() {
             return this.numberList;
         }
 
@@ -284,7 +295,7 @@ public class ListContactFlowsResponseBody extends TeaModel {
             private String editor; 
             private String instanceId; 
             private String name; 
-            private java.util.List < String > numberList; 
+            private java.util.List<String> numberList; 
             private Boolean published; 
             private String type; 
             private String updatedTime; 
@@ -356,7 +367,7 @@ public class ListContactFlowsResponseBody extends TeaModel {
             /**
              * NumberList.
              */
-            public Builder numberList(java.util.List < String > numberList) {
+            public Builder numberList(java.util.List<String> numberList) {
                 this.numberList = numberList;
                 return this;
             }
@@ -392,17 +403,23 @@ public class ListContactFlowsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListContactFlowsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListContactFlowsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("List")
-        private java.util.List < List> list;
+        @com.aliyun.core.annotation.NameInMap("List")
+        private java.util.List<List> list;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {
@@ -423,7 +440,7 @@ public class ListContactFlowsResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -449,7 +466,7 @@ public class ListContactFlowsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -457,7 +474,7 @@ public class ListContactFlowsResponseBody extends TeaModel {
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

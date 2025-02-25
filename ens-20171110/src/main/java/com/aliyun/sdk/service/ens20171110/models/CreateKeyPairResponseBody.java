@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateKeyPairResponseBody} extends {@link TeaModel}
  *
  * <p>CreateKeyPairResponseBody</p>
  */
 public class CreateKeyPairResponseBody extends TeaModel {
-    @NameInMap("KeyPairFingerPrint")
+    @com.aliyun.core.annotation.NameInMap("KeyPairFingerPrint")
     private String keyPairFingerPrint;
 
-    @NameInMap("KeyPairId")
+    @com.aliyun.core.annotation.NameInMap("KeyPairId")
     private String keyPairId;
 
-    @NameInMap("KeyPairName")
+    @com.aliyun.core.annotation.NameInMap("KeyPairName")
     private String keyPairName;
 
-    @NameInMap("PrivateKeyBody")
+    @com.aliyun.core.annotation.NameInMap("PrivateKeyBody")
     private String privateKeyBody;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateKeyPairResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class CreateKeyPairResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * KeyPairFingerPrint.
+         * <p>The fingerprint of the key pair. The message-digest algorithm 5 (MD5) is used based on the public key fingerprint format defined in RFC 4716. For more information, see <a href="https://tools.ietf.org/html/rfc4716">RFC 4716</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7880c1ad4687fdbf7a6da2131****</p>
          */
         public Builder keyPairFingerPrint(String keyPairFingerPrint) {
             this.keyPairFingerPrint = keyPairFingerPrint;
@@ -94,7 +102,10 @@ public class CreateKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * KeyPairId.
+         * <p>The ID of the SSH key pair.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ssh-5lywanlkih1zo9yl8eg****</p>
          */
         public Builder keyPairId(String keyPairId) {
             this.keyPairId = keyPairId;
@@ -102,7 +113,10 @@ public class CreateKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * KeyPairName.
+         * <p>The name of the key pair.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKeyPairName</p>
          */
         public Builder keyPairName(String keyPairName) {
             this.keyPairName = keyPairName;
@@ -110,7 +124,10 @@ public class CreateKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * PrivateKeyBody.
+         * <p>The private key of the key pair. The private key is encoded with PEM in the PKCS#8 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN RSA PRIVATE KEY-----\nMIIEogIBAAKCAQE****</p>
          */
         public Builder privateKeyBody(String privateKeyBody) {
             this.privateKeyBody = privateKeyBody;
@@ -118,7 +135,10 @@ public class CreateKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

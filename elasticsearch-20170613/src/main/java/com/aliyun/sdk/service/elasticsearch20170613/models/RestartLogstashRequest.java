@@ -1,49 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RestartLogstashRequest} extends {@link RequestModel}
  *
  * <p>RestartLogstashRequest</p>
  */
 public class RestartLogstashRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("batchCount")
-    @Validation(maximum = 100)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("batchCount")
+    @com.aliyun.core.annotation.Validation(maximum = 100)
     private Double batchCount;
 
-    @Body
-    @NameInMap("blueGreenDep")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("blueGreenDep")
     private Boolean blueGreenDep;
 
-    @Body
-    @NameInMap("nodeTypes")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("nodeTypes")
     private java.util.List < String > nodeTypes;
 
-    @Body
-    @NameInMap("nodes")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("nodes")
     private java.util.List < String > nodes;
 
-    @Body
-    @NameInMap("restartType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("restartType")
     private String restartType;
 
-    @Query
-    @NameInMap("clientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("force")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("force")
     private Boolean force;
 
     private RestartLogstashRequest(Builder builder) {
@@ -154,7 +154,10 @@ public class RestartLogstashRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ls-cn-v0h1kzca****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);

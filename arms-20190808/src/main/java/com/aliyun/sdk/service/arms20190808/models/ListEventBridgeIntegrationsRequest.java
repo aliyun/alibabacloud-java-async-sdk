@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEventBridgeIntegrationsRequest} extends {@link RequestModel}
  *
  * <p>ListEventBridgeIntegrationsRequest</p>
  */
 public class ListEventBridgeIntegrationsRequest extends Request {
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("Page")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Page")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long page;
 
-    @Query
-    @NameInMap("Size")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Size")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long size;
 
     private ListEventBridgeIntegrationsRequest(Builder builder) {
@@ -84,7 +89,10 @@ public class ListEventBridgeIntegrationsRequest extends Request {
         } 
 
         /**
-         * The name of the EventBridge integration.
+         * <p>The name of the EventBridge integration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EventBridge_Test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -93,7 +101,11 @@ public class ListEventBridgeIntegrationsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
@@ -102,7 +114,11 @@ public class ListEventBridgeIntegrationsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder size(Long size) {
             this.putQueryParameter("Size", size);

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateMetricDropRequest} extends {@link RequestModel}
  *
  * <p>UpdateMetricDropRequest</p>
  */
 public class UpdateMetricDropRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Query
-    @NameInMap("MetricDrop")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricDrop")
     private String metricDrop;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private UpdateMetricDropRequest(Builder builder) {
@@ -82,7 +87,10 @@ public class UpdateMetricDropRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The ID of the Prometheus instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c3ca36c8e2693403d85c0d9f8bb1d7b6c</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -91,7 +99,13 @@ public class UpdateMetricDropRequest extends Request {
         }
 
         /**
-         * MetricDrop.
+         * <p>The list of discarded metrics. Specify one metric name in each line.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apiserver_request_duration_seconds_bucket
+         * etcd_request_duration_seconds_bucket
+         * apiserver_request_total
+         * container_tasks_state</p>
          */
         public Builder metricDrop(String metricDrop) {
             this.putQueryParameter("MetricDrop", metricDrop);
@@ -100,7 +114,10 @@ public class UpdateMetricDropRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -1,18 +1,18 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateInstanceSettingsResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateInstanceSettingsResponseBody</p>
  */
 public class UpdateInstanceSettingsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateInstanceSettingsResponseBody(Builder builder) {
@@ -38,7 +38,10 @@ public class UpdateInstanceSettingsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BB1C321A-211C-4FD7-BD8B-7F2FABE2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

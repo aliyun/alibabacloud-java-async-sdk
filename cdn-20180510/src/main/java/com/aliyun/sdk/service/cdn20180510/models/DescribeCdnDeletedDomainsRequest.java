@@ -1,25 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnDeletedDomainsRequest} extends {@link RequestModel}
  *
  * <p>DescribeCdnDeletedDomainsRequest</p>
  */
 public class DescribeCdnDeletedDomainsRequest extends Request {
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(maximum = 100000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(maximum = 100000, minimum = 1)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 500, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 500, minimum = 1)
     private Integer pageSize;
 
     private DescribeCdnDeletedDomainsRequest(Builder builder) {
@@ -70,7 +70,10 @@ public class DescribeCdnDeletedDomainsRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Valid values: **1** to **100000**. Default value: **1**.
+         * <p>The number of the page to return. Valid values: <strong>1</strong> to <strong>100000</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -79,7 +82,10 @@ public class DescribeCdnDeletedDomainsRequest extends Request {
         }
 
         /**
-         * The number of domain names to return per page. Valid values: an integer between **1** and **500**. Default value: **20**.
+         * <p>The number of domain names to return per page. Valid values: an integer between <strong>1</strong> and <strong>500</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

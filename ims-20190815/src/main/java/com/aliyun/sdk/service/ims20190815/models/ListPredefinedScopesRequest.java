@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPredefinedScopesRequest} extends {@link RequestModel}
  *
  * <p>ListPredefinedScopesRequest</p>
  */
 public class ListPredefinedScopesRequest extends Request {
-    @Query
-    @NameInMap("AppType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppType")
     private String appType;
 
     private ListPredefinedScopesRequest(Builder builder) {
@@ -54,14 +59,16 @@ public class ListPredefinedScopesRequest extends Request {
         } 
 
         /**
-         * The type of the application. Valid values:
-         * <p>
+         * <p>The type of the application. Valid values:</p>
+         * <ul>
+         * <li>WebApp</li>
+         * <li>NativeApp</li>
+         * <li>ServerApp</li>
+         * </ul>
+         * <p>If this parameter is empty, the permissions on all types of applications are queried.</p>
          * 
-         * *   WebApp
-         * *   NativeApp
-         * *   ServerApp
-         * 
-         * If this parameter is empty, the permissions on all types of applications are queried.
+         * <strong>example:</strong>
+         * <p>WebApp</p>
          */
         public Builder appType(String appType) {
             this.putQueryParameter("AppType", appType);

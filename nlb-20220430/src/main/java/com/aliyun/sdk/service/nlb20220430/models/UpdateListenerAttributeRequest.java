@@ -1,89 +1,94 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateListenerAttributeRequest} extends {@link RequestModel}
  *
  * <p>UpdateListenerAttributeRequest</p>
  */
 public class UpdateListenerAttributeRequest extends Request {
-    @Body
-    @NameInMap("AlpnEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlpnEnabled")
     private Boolean alpnEnabled;
 
-    @Body
-    @NameInMap("AlpnPolicy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlpnPolicy")
     private String alpnPolicy;
 
-    @Body
-    @NameInMap("CaCertificateIds")
-    private java.util.List < String > caCertificateIds;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CaCertificateIds")
+    private java.util.List<String> caCertificateIds;
 
-    @Body
-    @NameInMap("CaEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CaEnabled")
     private Boolean caEnabled;
 
-    @Body
-    @NameInMap("CertificateIds")
-    private java.util.List < String > certificateIds;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CertificateIds")
+    private java.util.List<String> certificateIds;
 
-    @Body
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("Cps")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Cps")
     private Integer cps;
 
-    @Body
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Body
-    @NameInMap("IdleTimeout")
-    @Validation(maximum = 900, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IdleTimeout")
+    @com.aliyun.core.annotation.Validation(maximum = 3600, minimum = 10)
     private Integer idleTimeout;
 
-    @Body
-    @NameInMap("ListenerDescription")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ListenerDescription")
     private String listenerDescription;
 
-    @Body
-    @NameInMap("ListenerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ListenerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String listenerId;
 
-    @Body
-    @NameInMap("Mss")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Mss")
     private Integer mss;
 
-    @Body
-    @NameInMap("ProxyProtocolEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProxyProtocolEnabled")
     private Boolean proxyProtocolEnabled;
 
-    @Body
-    @NameInMap("ProxyProtocolV2Config")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProxyProtocolV2Config")
     private ProxyProtocolV2Config proxyProtocolV2Config;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("SecSensorEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SecSensorEnabled")
     private Boolean secSensorEnabled;
 
-    @Body
-    @NameInMap("SecurityPolicyId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SecurityPolicyId")
     private String securityPolicyId;
 
-    @Body
-    @NameInMap("ServerGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServerGroupId")
     private String serverGroupId;
 
     private UpdateListenerAttributeRequest(Builder builder) {
@@ -138,7 +143,7 @@ public class UpdateListenerAttributeRequest extends Request {
     /**
      * @return caCertificateIds
      */
-    public java.util.List < String > getCaCertificateIds() {
+    public java.util.List<String> getCaCertificateIds() {
         return this.caCertificateIds;
     }
 
@@ -152,7 +157,7 @@ public class UpdateListenerAttributeRequest extends Request {
     /**
      * @return certificateIds
      */
-    public java.util.List < String > getCertificateIds() {
+    public java.util.List<String> getCertificateIds() {
         return this.certificateIds;
     }
 
@@ -250,9 +255,9 @@ public class UpdateListenerAttributeRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateListenerAttributeRequest, Builder> {
         private Boolean alpnEnabled; 
         private String alpnPolicy; 
-        private java.util.List < String > caCertificateIds; 
+        private java.util.List<String> caCertificateIds; 
         private Boolean caEnabled; 
-        private java.util.List < String > certificateIds; 
+        private java.util.List<String> certificateIds; 
         private String clientToken; 
         private Integer cps; 
         private Boolean dryRun; 
@@ -294,11 +299,14 @@ public class UpdateListenerAttributeRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable Application-Layer Protocol Negotiation (ALPN). Valid values:
-         * <p>
+         * <p>Specifies whether to enable Application-Layer Protocol Negotiation (ALPN). Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder alpnEnabled(Boolean alpnEnabled) {
             this.putBodyParameter("AlpnEnabled", alpnEnabled);
@@ -307,15 +315,19 @@ public class UpdateListenerAttributeRequest extends Request {
         }
 
         /**
-         * The ALPN policy. Valid values:
-         * <p>
+         * <p>The ALPN policy. Valid values:</p>
+         * <ul>
+         * <li><strong>HTTP1Only</strong>: uses only HTTP 1.x. The priority of HTTP 1.1 is higher than the priority of HTTP 1.0.</li>
+         * <li><strong>HTTP2Only</strong>: uses only HTTP 2.0.</li>
+         * <li><strong>HTTP2Optional</strong>: preferentially uses HTTP 1.x over HTTP 2.0. The priority of HTTP 1.1 is higher than the priority of HTTP 1.0, and the priority of HTTP 1.0 is higher than the priority of HTTP 2.0.</li>
+         * <li><strong>HTTP2Preferred</strong>: preferentially uses HTTP 2.0 over HTTP 1.x. The priority of HTTP 2.0 is higher than the priority of HTTP 1.1, and the priority of HTTP 1.1 is higher than the priority of HTTP 1.0.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is required if AlpnEnabled is set to true.</p>
+         * </blockquote>
          * 
-         * *   **HTTP1Only**: uses only HTTP 1.x. The priority of HTTP 1.1 is higher than the priority of HTTP 1.0.
-         * *   **HTTP2Only**: uses only HTTP 2.0.
-         * *   **HTTP2Optional**: preferentially uses HTTP 1.x over HTTP 2.0. The priority of HTTP 1.1 is higher than the priority of HTTP 1.0, and the priority of HTTP 1.0 is higher than the priority of HTTP 2.0.
-         * *   **HTTP2Preferred**: preferentially uses HTTP 2.0 over HTTP 1.x. The priority of HTTP 2.0 is higher than the priority of HTTP 1.1, and the priority of HTTP 1.1 is higher than the priority of HTTP 1.0.
-         * 
-         * > This parameter is required if AlpnEnabled is set to true.
+         * <strong>example:</strong>
+         * <p>HTTP1Only</p>
          */
         public Builder alpnPolicy(String alpnPolicy) {
             this.putBodyParameter("AlpnPolicy", alpnPolicy);
@@ -324,23 +336,26 @@ public class UpdateListenerAttributeRequest extends Request {
         }
 
         /**
-         * The CA certificates. Only one CA certificate is supported.
-         * <p>
-         * 
-         * >  This parameter takes effect only for listeners that use SSL over TCP.
+         * <p>The CA certificates. Only one CA certificate is supported.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only for listeners that use SSL over TCP.</p>
+         * </blockquote>
          */
-        public Builder caCertificateIds(java.util.List < String > caCertificateIds) {
+        public Builder caCertificateIds(java.util.List<String> caCertificateIds) {
             this.putBodyParameter("CaCertificateIds", caCertificateIds);
             this.caCertificateIds = caCertificateIds;
             return this;
         }
 
         /**
-         * Specifies whether to enable mutual authentication. Valid values:
-         * <p>
+         * <p>Specifies whether to enable mutual authentication. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong> (default): no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false** (default): no
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder caEnabled(Boolean caEnabled) {
             this.putBodyParameter("CaEnabled", caEnabled);
@@ -349,21 +364,23 @@ public class UpdateListenerAttributeRequest extends Request {
         }
 
         /**
-         * The server certificates.
+         * <p>The server certificates.</p>
          */
-        public Builder certificateIds(java.util.List < String > certificateIds) {
+        public Builder certificateIds(java.util.List<String> certificateIds) {
             this.putBodyParameter("CertificateIds", certificateIds);
             this.certificateIds = certificateIds;
             return this;
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -372,7 +389,10 @@ public class UpdateListenerAttributeRequest extends Request {
         }
 
         /**
-         * The maximum number of connections that can be created per second on the NLB instance. Valid values: **0** to **1000000**. **0** specifies that the number of connections is unlimited.
+         * <p>The maximum number of new connections per second supported by the listener in each zone (virtual IP address). Valid values: <strong>0</strong> to <strong>1000000</strong>. <strong>0</strong> indicates that the number of connections is unlimited.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder cps(Integer cps) {
             this.putBodyParameter("Cps", cps);
@@ -381,11 +401,14 @@ public class UpdateListenerAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether only to precheck the request. Valid values:
-         * <p>
+         * <p>Specifies whether only to precheck the request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: prechecks the request but does not update the configurations of the listener. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: prechecks the request but does not update the configurations of the listener. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
-         * *   **false** (default): sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putBodyParameter("DryRun", dryRun);
@@ -394,7 +417,14 @@ public class UpdateListenerAttributeRequest extends Request {
         }
 
         /**
-         * The timeout period of an idle connection. Unit: seconds. Valid values: **1** to **900**.
+         * <p>The timeout period of idle connections. Unit: seconds</p>
+         * <ul>
+         * <li>If the listener uses <strong>TCP</strong> or <strong>TCPSSL</strong>, you can set the timeout period of idle connections to <strong>10</strong> to <strong>900</strong> seconds. Default value: <strong>900</strong>.</li>
+         * <li>If the listener uses <strong>UDP</strong>, you can set the timeout period of idle connections to <strong>10</strong> to <strong>20</strong> seconds. Default value: <strong>20</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>900</p>
          */
         public Builder idleTimeout(Integer idleTimeout) {
             this.putBodyParameter("IdleTimeout", idleTimeout);
@@ -403,10 +433,11 @@ public class UpdateListenerAttributeRequest extends Request {
         }
 
         /**
-         * Enter a name for the listener.
-         * <p>
+         * <p>Enter a name for the listener.</p>
+         * <p>The description must be 2 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (_), and hyphens (-).</p>
          * 
-         * The description must be 2 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (\_), and hyphens (-).
+         * <strong>example:</strong>
+         * <p>tcpssl_443</p>
          */
         public Builder listenerDescription(String listenerDescription) {
             this.putBodyParameter("ListenerDescription", listenerDescription);
@@ -415,7 +446,11 @@ public class UpdateListenerAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the listener.
+         * <p>The ID of the listener.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsn-bp1bpn0kn908w4nbw****@443</p>
          */
         public Builder listenerId(String listenerId) {
             this.putBodyParameter("ListenerId", listenerId);
@@ -424,7 +459,10 @@ public class UpdateListenerAttributeRequest extends Request {
         }
 
         /**
-         * The size of the largest TCP segment. Unit: bytes. Valid values: **0** to **1500**. **0** specifies that the maximum segment size remains unchanged. This parameter is supported only by listeners that use SSL over TCP.
+         * <p>The size of the largest TCP segment. Unit: bytes. Valid values: <strong>0</strong> to <strong>1500</strong>. <strong>0</strong> specifies that the maximum segment size remains unchanged. This parameter is supported only by listeners that use SSL over TCP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>344</p>
          */
         public Builder mss(Integer mss) {
             this.putBodyParameter("Mss", mss);
@@ -433,11 +471,14 @@ public class UpdateListenerAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to use the Proxy protocol to pass client IP addresses to backend servers. Valid values:
-         * <p>
+         * <p>Specifies whether to use the Proxy protocol to pass client IP addresses to backend servers. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder proxyProtocolEnabled(Boolean proxyProtocolEnabled) {
             this.putBodyParameter("ProxyProtocolEnabled", proxyProtocolEnabled);
@@ -446,7 +487,7 @@ public class UpdateListenerAttributeRequest extends Request {
         }
 
         /**
-         * ProxyProtocolV2Config.
+         * <p>Specifies that the Proxy protocol passes the VpcId, PrivateLinkEpId, and PrivateLinkEpsId parameters to backend servers.</p>
          */
         public Builder proxyProtocolV2Config(ProxyProtocolV2Config proxyProtocolV2Config) {
             String proxyProtocolV2ConfigShrink = shrink(proxyProtocolV2Config, "ProxyProtocolV2Config", "json");
@@ -456,10 +497,11 @@ public class UpdateListenerAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the region where the NLB instance is deployed.
-         * <p>
+         * <p>The ID of the region where the NLB instance is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeRegions](~~443657~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -468,11 +510,14 @@ public class UpdateListenerAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable fine-grained monitoring. Valid values:
-         * <p>
+         * <p>Specifies whether to enable fine-grained monitoring. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder secSensorEnabled(Boolean secSensorEnabled) {
             this.putBodyParameter("SecSensorEnabled", secSensorEnabled);
@@ -481,10 +526,13 @@ public class UpdateListenerAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the security policy.
-         * <p>
+         * <p>The ID of the security policy.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only for listeners that use SSL over TCP.</p>
+         * </blockquote>
          * 
-         * >  This parameter takes effect only for listeners that use SSL over TCP.
+         * <strong>example:</strong>
+         * <p>tls_cipher_policy_1_1</p>
          */
         public Builder securityPolicyId(String securityPolicyId) {
             this.putBodyParameter("SecurityPolicyId", securityPolicyId);
@@ -493,7 +541,17 @@ public class UpdateListenerAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the server group.
+         * <p>The ID of the server group.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If you set <strong>ListenerProtocol</strong> to <strong>TCP</strong>, you can associate the listener with server groups whose backend protocol is <strong>TCP</strong> or <strong>TCP_UDP</strong>. You cannot associate the listener with server groups whose backend protocol is <strong>UDP</strong>.</li>
+         * <li>If you set <strong>ListenerProtocol</strong> to <strong>UDP</strong>, you can associate the listener with server groups whose backend protocol is <strong>UDP</strong> or <strong>TCP_UDP</strong>. You cannot associate the listener with server groups whose backend protocol is <strong>TCP</strong>.</li>
+         * <li>If you set <strong>ListenerProtocol</strong> to <strong>TCPSSL</strong>, you can associate the listener with server groups whose backend protocol is <strong>TCP</strong> and have <strong>client IP preservation disabled</strong>. You cannot associate the listener with server groups whose backend protocol is <strong>TCP</strong> and have <strong>client IP preservation enabled</strong> or server groups whose backend protocol is <strong>UDP</strong> or <strong>TCP_UDP</strong>.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>sgp-ppdpc14gdm3x4o****</p>
          */
         public Builder serverGroupId(String serverGroupId) {
             this.putBodyParameter("ServerGroupId", serverGroupId);
@@ -508,14 +566,20 @@ public class UpdateListenerAttributeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateListenerAttributeRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateListenerAttributeRequest</p>
+     */
     public static class ProxyProtocolV2Config extends TeaModel {
-        @NameInMap("Ppv2PrivateLinkEpIdEnabled")
+        @com.aliyun.core.annotation.NameInMap("Ppv2PrivateLinkEpIdEnabled")
         private Boolean ppv2PrivateLinkEpIdEnabled;
 
-        @NameInMap("Ppv2PrivateLinkEpsIdEnabled")
+        @com.aliyun.core.annotation.NameInMap("Ppv2PrivateLinkEpsIdEnabled")
         private Boolean ppv2PrivateLinkEpsIdEnabled;
 
-        @NameInMap("Ppv2VpcIdEnabled")
+        @com.aliyun.core.annotation.NameInMap("Ppv2VpcIdEnabled")
         private Boolean ppv2VpcIdEnabled;
 
         private ProxyProtocolV2Config(Builder builder) {
@@ -559,7 +623,14 @@ public class UpdateListenerAttributeRequest extends Request {
             private Boolean ppv2VpcIdEnabled; 
 
             /**
-             * Ppv2PrivateLinkEpIdEnabled.
+             * <p>Specifies whether to use the Proxy protocol to pass the PrivateLinkEpId parameter to backend servers. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder ppv2PrivateLinkEpIdEnabled(Boolean ppv2PrivateLinkEpIdEnabled) {
                 this.ppv2PrivateLinkEpIdEnabled = ppv2PrivateLinkEpIdEnabled;
@@ -567,7 +638,14 @@ public class UpdateListenerAttributeRequest extends Request {
             }
 
             /**
-             * Ppv2PrivateLinkEpsIdEnabled.
+             * <p>Specifies whether to use the Proxy protocol to pass the PrivateLinkEpsId parameter to backend servers. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder ppv2PrivateLinkEpsIdEnabled(Boolean ppv2PrivateLinkEpsIdEnabled) {
                 this.ppv2PrivateLinkEpsIdEnabled = ppv2PrivateLinkEpsIdEnabled;
@@ -575,7 +653,14 @@ public class UpdateListenerAttributeRequest extends Request {
             }
 
             /**
-             * Ppv2VpcIdEnabled.
+             * <p>Specifies whether to use the Proxy protocol to pass the VpcId parameter to backend servers. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder ppv2VpcIdEnabled(Boolean ppv2VpcIdEnabled) {
                 this.ppv2VpcIdEnabled = ppv2VpcIdEnabled;

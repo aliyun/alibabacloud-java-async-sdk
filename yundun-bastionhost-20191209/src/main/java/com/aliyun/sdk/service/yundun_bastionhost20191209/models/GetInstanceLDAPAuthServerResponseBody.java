@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceLDAPAuthServerResponseBody} extends {@link TeaModel}
  *
  * <p>GetInstanceLDAPAuthServerResponseBody</p>
  */
 public class GetInstanceLDAPAuthServerResponseBody extends TeaModel {
-    @NameInMap("LDAP")
+    @com.aliyun.core.annotation.NameInMap("LDAP")
     private LDAP LDAP;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetInstanceLDAPAuthServerResponseBody(Builder builder) {
@@ -50,11 +50,7 @@ public class GetInstanceLDAPAuthServerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether SSL is supported. Valid values:
-         * <p>
-         * 
-         * *   **true**: supported
-         * *   **false**: not supported
+         * <p>The settings of LDAP authentication.</p>
          */
         public Builder LDAP(LDAP LDAP) {
             this.LDAP = LDAP;
@@ -62,7 +58,10 @@ public class GetInstanceLDAPAuthServerResponseBody extends TeaModel {
         }
 
         /**
-         * The settings of LDAP authentication.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1C60E741-102D-5E8F-9710-B06D3F0183FE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,41 +74,47 @@ public class GetInstanceLDAPAuthServerResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInstanceLDAPAuthServerResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceLDAPAuthServerResponseBody</p>
+     */
     public static class LDAP extends TeaModel {
-        @NameInMap("Account")
+        @com.aliyun.core.annotation.NameInMap("Account")
         private String account;
 
-        @NameInMap("BaseDN")
+        @com.aliyun.core.annotation.NameInMap("BaseDN")
         private String baseDN;
 
-        @NameInMap("EmailMapping")
+        @com.aliyun.core.annotation.NameInMap("EmailMapping")
         private String emailMapping;
 
-        @NameInMap("Filter")
+        @com.aliyun.core.annotation.NameInMap("Filter")
         private String filter;
 
-        @NameInMap("HasPassword")
+        @com.aliyun.core.annotation.NameInMap("HasPassword")
         private String hasPassword;
 
-        @NameInMap("IsSSL")
+        @com.aliyun.core.annotation.NameInMap("IsSSL")
         private Boolean isSSL;
 
-        @NameInMap("LoginNameMapping")
+        @com.aliyun.core.annotation.NameInMap("LoginNameMapping")
         private String loginNameMapping;
 
-        @NameInMap("MobileMapping")
+        @com.aliyun.core.annotation.NameInMap("MobileMapping")
         private String mobileMapping;
 
-        @NameInMap("NameMapping")
+        @com.aliyun.core.annotation.NameInMap("NameMapping")
         private String nameMapping;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Long port;
 
-        @NameInMap("Server")
+        @com.aliyun.core.annotation.NameInMap("Server")
         private String server;
 
-        @NameInMap("StandbyServer")
+        @com.aliyun.core.annotation.NameInMap("StandbyServer")
         private String standbyServer;
 
         private LDAP(Builder builder) {
@@ -234,10 +239,10 @@ public class GetInstanceLDAPAuthServerResponseBody extends TeaModel {
             private String standbyServer; 
 
             /**
-             * The ID of the bastion host.
-             * <p>
+             * <p>The account of the LDAP server.</p>
              * 
-             * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
+             * <strong>example:</strong>
+             * <p>cn=Manager,dc=test,dc=com</p>
              */
             public Builder account(String account) {
                 this.account = account;
@@ -245,7 +250,10 @@ public class GetInstanceLDAPAuthServerResponseBody extends TeaModel {
             }
 
             /**
-             * The field that is used to indicate the logon name of a user on the LDAP server.
+             * <p>The Base distinguished name (DN).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dc=test,dc=com</p>
              */
             public Builder baseDN(String baseDN) {
                 this.baseDN = baseDN;
@@ -253,7 +261,10 @@ public class GetInstanceLDAPAuthServerResponseBody extends TeaModel {
             }
 
             /**
-             * The address of the secondary LDAP server.
+             * <p>The field that is used to indicate the email address of a user on the LDAP server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>emailAttr</p>
              */
             public Builder emailMapping(String emailMapping) {
                 this.emailMapping = emailMapping;
@@ -261,7 +272,10 @@ public class GetInstanceLDAPAuthServerResponseBody extends TeaModel {
             }
 
             /**
-             * The Base distinguished name (DN).
+             * <p>The condition that is used to filter users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>(&amp;(objectClass=top))</p>
              */
             public Builder filter(String filter) {
                 this.filter = filter;
@@ -269,7 +283,14 @@ public class GetInstanceLDAPAuthServerResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request, which is used to locate and troubleshoot issues.
+             * <p>Indicates whether passwords are required. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: required</li>
+             * <li><strong>false</strong>: not required</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasPassword(String hasPassword) {
                 this.hasPassword = hasPassword;
@@ -277,7 +298,14 @@ public class GetInstanceLDAPAuthServerResponseBody extends TeaModel {
             }
 
             /**
-             * The condition that is used to filter users.
+             * <p>Indicates whether SSL is supported. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: supported</li>
+             * <li><strong>false</strong>: not supported</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isSSL(Boolean isSSL) {
                 this.isSSL = isSSL;
@@ -285,7 +313,10 @@ public class GetInstanceLDAPAuthServerResponseBody extends TeaModel {
             }
 
             /**
-             * The port that is used to access the LDAP server.
+             * <p>The field that is used to indicate the logon name of a user on the LDAP server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>userNameAttr</p>
              */
             public Builder loginNameMapping(String loginNameMapping) {
                 this.loginNameMapping = loginNameMapping;
@@ -293,7 +324,10 @@ public class GetInstanceLDAPAuthServerResponseBody extends TeaModel {
             }
 
             /**
-             * The field that is used to indicate the email address of a user on the LDAP server.
+             * <p>The field that is used to indicate the mobile phone number of a user on the LDAP server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mobileAttr</p>
              */
             public Builder mobileMapping(String mobileMapping) {
                 this.mobileMapping = mobileMapping;
@@ -301,7 +335,10 @@ public class GetInstanceLDAPAuthServerResponseBody extends TeaModel {
             }
 
             /**
-             * The field that is used to indicate the mobile phone number of a user on the LDAP server.
+             * <p>The field that is used to indicate the name of a user on the LDAP server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nameAttr</p>
              */
             public Builder nameMapping(String nameMapping) {
                 this.nameMapping = nameMapping;
@@ -309,7 +346,10 @@ public class GetInstanceLDAPAuthServerResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The port that is used to access the LDAP server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>389</p>
              */
             public Builder port(Long port) {
                 this.port = port;
@@ -317,7 +357,10 @@ public class GetInstanceLDAPAuthServerResponseBody extends TeaModel {
             }
 
             /**
-             * Server.
+             * <p>The address of the LDAP server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder server(String server) {
                 this.server = server;
@@ -325,7 +368,10 @@ public class GetInstanceLDAPAuthServerResponseBody extends TeaModel {
             }
 
             /**
-             * StandbyServer.
+             * <p>The address of the secondary LDAP server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder standbyServer(String standbyServer) {
                 this.standbyServer = standbyServer;

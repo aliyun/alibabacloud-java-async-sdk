@@ -117,14 +117,14 @@ public class RemoveScalingConfigItemV2Request extends Request {
             super();
         } 
 
-        private Builder(RemoveScalingConfigItemV2Request response) {
-            super(response);
-            this.configItemBizId = response.configItemBizId;
-            this.configItemType = response.configItemType;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.scalingGroupBizId = response.scalingGroupBizId;
+        private Builder(RemoveScalingConfigItemV2Request request) {
+            super(request);
+            this.configItemBizId = request.configItemBizId;
+            this.configItemType = request.configItemType;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.scalingGroupBizId = request.scalingGroupBizId;
         } 
 
         /**

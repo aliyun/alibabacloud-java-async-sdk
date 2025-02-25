@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyMaintenanceActionResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyMaintenanceActionResponseBody</p>
  */
 public class ModifyMaintenanceActionResponseBody extends TeaModel {
-    @NameInMap("Ids")
+    @com.aliyun.core.annotation.NameInMap("Ids")
     private String ids;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyMaintenanceActionResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class ModifyMaintenanceActionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The O\&M event ID.
+         * <p>The O&amp;M event ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11111</p>
          */
         public Builder ids(String ids) {
             this.ids = ids;
@@ -58,7 +61,10 @@ public class ModifyMaintenanceActionResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7856CBE7-5BD0-4EE1-AC62-749392******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

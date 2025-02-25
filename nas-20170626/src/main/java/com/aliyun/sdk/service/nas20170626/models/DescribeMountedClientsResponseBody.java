@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMountedClientsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMountedClientsResponseBody</p>
  */
 public class DescribeMountedClientsResponseBody extends TeaModel {
-    @NameInMap("Clients")
+    @com.aliyun.core.annotation.NameInMap("Clients")
     private Clients clients;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeMountedClientsResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeMountedClientsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Clients.
+         * <p>The queried clients.</p>
          */
         public Builder clients(Clients clients) {
             this.clients = clients;
@@ -94,7 +99,10 @@ public class DescribeMountedClientsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeMountedClientsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of IP addresses returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeMountedClientsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A70BEE5D-76D3-49FB-B58F-1F398211****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeMountedClientsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of IP addresses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,8 +148,14 @@ public class DescribeMountedClientsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMountedClientsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMountedClientsResponseBody</p>
+     */
     public static class Client extends TeaModel {
-        @NameInMap("ClientIP")
+        @com.aliyun.core.annotation.NameInMap("ClientIP")
         private String clientIP;
 
         private Client(Builder builder) {
@@ -158,7 +181,10 @@ public class DescribeMountedClientsResponseBody extends TeaModel {
             private String clientIP; 
 
             /**
-             * ClientIP.
+             * <p>The IP address of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.10.10.1</p>
              */
             public Builder clientIP(String clientIP) {
                 this.clientIP = clientIP;
@@ -172,9 +198,15 @@ public class DescribeMountedClientsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMountedClientsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMountedClientsResponseBody</p>
+     */
     public static class Clients extends TeaModel {
-        @NameInMap("Client")
-        private java.util.List < Client> client;
+        @com.aliyun.core.annotation.NameInMap("Client")
+        private java.util.List<Client> client;
 
         private Clients(Builder builder) {
             this.client = builder.client;
@@ -191,17 +223,17 @@ public class DescribeMountedClientsResponseBody extends TeaModel {
         /**
          * @return client
          */
-        public java.util.List < Client> getClient() {
+        public java.util.List<Client> getClient() {
             return this.client;
         }
 
         public static final class Builder {
-            private java.util.List < Client> client; 
+            private java.util.List<Client> client; 
 
             /**
              * Client.
              */
-            public Builder client(java.util.List < Client> client) {
+            public Builder client(java.util.List<Client> client) {
                 this.client = client;
                 return this;
             }

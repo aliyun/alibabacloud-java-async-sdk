@@ -84,7 +84,10 @@ public class CreateResourceGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * The display name of the resource group.
+         * <p>
+         * 
+         * The name must be 1 to 50 characters in length.
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -93,10 +96,10 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
-         * The display name of the resource group.
+         * The unique identifier of the resource group.
          * <p>
          * 
-         * The name must be 1 to 50 characters in length.
+         * The identifier must be 3 to 50 characters in length and can contain letters, digits, and hyphens (-). The identifier must start with a letter.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -105,7 +108,7 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -159,7 +162,10 @@ public class CreateResourceGroupRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag. 
+             * <p>
+             * 
+             * The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -167,7 +173,10 @@ public class CreateResourceGroupRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag. 
+             * <p>
+             * 
+             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
              */
             public Builder value(String value) {
                 this.value = value;

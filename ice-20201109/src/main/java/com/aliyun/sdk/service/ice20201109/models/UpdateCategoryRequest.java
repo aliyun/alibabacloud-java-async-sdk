@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateCategoryRequest} extends {@link RequestModel}
  *
  * <p>UpdateCategoryRequest</p>
  */
 public class UpdateCategoryRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("CateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long cateId;
 
-    @Query
-    @NameInMap("CateName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CateName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cateName;
 
     private UpdateCategoryRequest(Builder builder) {
@@ -93,7 +98,16 @@ public class UpdateCategoryRequest extends Request {
         }
 
         /**
-         * CateId.
+         * <p>The category ID. You can use one of the following methods to obtain the ID:</p>
+         * <ul>
+         * <li>Log on to the <a href="https://ims.console.aliyun.com">Intelligent Media Services (IMS) console</a> and choose <strong>Media Asset Management</strong> &gt; <strong>Category Management</strong> to view the category ID.</li>
+         * <li>View the value of CateId returned by the AddCategory operation that you called to create a category.</li>
+         * <li>View the value of CateId returned by the GetCategories operation that you called to query a category.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43</p>
          */
         public Builder cateId(Long cateId) {
             this.putQueryParameter("CateId", cateId);
@@ -102,7 +116,8 @@ public class UpdateCategoryRequest extends Request {
         }
 
         /**
-         * CateName.
+         * <p>The category name.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder cateName(String cateName) {
             this.putQueryParameter("CateName", cateName);

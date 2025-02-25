@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProxySQLExecAuditLogResponseBody} extends {@link TeaModel}
  *
  * <p>ListProxySQLExecAuditLogResponseBody</p>
  */
 public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("ProxySQLExecAuditLogList")
+    @com.aliyun.core.annotation.NameInMap("ProxySQLExecAuditLogList")
     private ProxySQLExecAuditLogList proxySQLExecAuditLogList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListProxySQLExecAuditLogResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidStartTime</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +114,10 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specified parameter StartTime is not valid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,7 +125,7 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * The audit information about the database instance that is provided by the secure access proxy feature.
+         * <p>The audit information about the database instance that is provided by the secure access proxy feature.</p>
          */
         public Builder proxySQLExecAuditLogList(ProxySQLExecAuditLogList proxySQLExecAuditLogList) {
             this.proxySQLExecAuditLogList = proxySQLExecAuditLogList;
@@ -122,7 +133,10 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50ECB006-2C35-5FCA-91B9-01987A0B****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,11 +144,14 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -142,7 +159,10 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned.
+         * <p>The number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -155,41 +175,47 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListProxySQLExecAuditLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProxySQLExecAuditLogResponseBody</p>
+     */
     public static class ProxySQLExecAuditLog extends TeaModel {
-        @NameInMap("AffectRows")
+        @com.aliyun.core.annotation.NameInMap("AffectRows")
         private Long affectRows;
 
-        @NameInMap("ElapsedTime")
+        @com.aliyun.core.annotation.NameInMap("ElapsedTime")
         private Long elapsedTime;
 
-        @NameInMap("ExecState")
+        @com.aliyun.core.annotation.NameInMap("ExecState")
         private String execState;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("OpTime")
+        @com.aliyun.core.annotation.NameInMap("OpTime")
         private String opTime;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("SQL")
+        @com.aliyun.core.annotation.NameInMap("SQL")
         private String SQL;
 
-        @NameInMap("SQLType")
+        @com.aliyun.core.annotation.NameInMap("SQLType")
         private String SQLType;
 
-        @NameInMap("SchemaName")
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
         private String schemaName;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private ProxySQLExecAuditLog(Builder builder) {
@@ -314,7 +340,10 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * Indicates the total number of rows returned after the SQL statement was executed. If an SELECT SQL statement is executed, the return value of this parameter indicates the total number of the queried data rows.
+             * <p>Indicates the total number of rows returned after the SQL statement was executed. If an SELECT SQL statement is executed, the return value of this parameter indicates the total number of the queried data rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder affectRows(Long affectRows) {
                 this.affectRows = affectRows;
@@ -322,7 +351,10 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of time that is consumed to execute the SQL statement. Unit: milliseconds.
+             * <p>The amount of time that is consumed to execute the SQL statement. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1324</p>
              */
             public Builder elapsedTime(Long elapsedTime) {
                 this.elapsedTime = elapsedTime;
@@ -330,12 +362,15 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The execution status of the SQL statement. Valid values:
-             * <p>
+             * <p>The execution status of the SQL statement. Valid values:</p>
+             * <ul>
+             * <li><strong>FAIL</strong>: The execution of the SQL statement fails.</li>
+             * <li><strong>CANCEL</strong>: The execution of the SQL statement is canceled.</li>
+             * <li><strong>SUCCESS</strong>: The SQL statement is executed.</li>
+             * </ul>
              * 
-             * *   **FAIL**: The execution of the SQL statement fails.
-             * *   **CANCEL**: The execution of the SQL statement is canceled.
-             * *   **SUCCESS**: The SQL statement is executed.
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder execState(String execState) {
                 this.execState = execState;
@@ -343,7 +378,10 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the database instance.
+             * <p>The ID of the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4***</p>
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -351,7 +389,10 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database instance.
+             * <p>The name of the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-uf662nrg017c6****.mysql.polardb.rds.aliyuncs.com:3306【test】</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -359,7 +400,10 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the user executes the SQL statement on the database instance. The value of this parameter must be a timestamp that follows the UNIX time format.
+             * <p>The time at which the user executes the SQL statement on the database instance. The value of this parameter must be a timestamp that follows the UNIX time format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1636876446000</p>
              */
             public Builder opTime(String opTime) {
                 this.opTime = opTime;
@@ -367,7 +411,10 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -375,7 +422,10 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement that was executed.
+             * <p>The SQL statement that was executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select 1;</p>
              */
             public Builder SQL(String SQL) {
                 this.SQL = SQL;
@@ -383,15 +433,19 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the SQL statement. Valid values:
-             * <p>
+             * <p>The type of the SQL statement. Valid values:</p>
+             * <ul>
+             * <li><strong>SELECT</strong></li>
+             * <li><strong>INSERT</strong></li>
+             * <li><strong>DELETE</strong></li>
+             * <li><strong>CREATE_TABLE</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p> You can choose Operation Audit &gt; Secure Access Proxy in the top navigation bar of the DMS console to view more types of SQL statements.</p>
+             * </blockquote>
              * 
-             * *   **SELECT**
-             * *   **INSERT**
-             * *   **DELETE**
-             * *   **CREATE_TABLE**
-             * 
-             * >  You can choose Operation Audit > Secure Access Proxy in the top navigation bar of the DMS console to view more types of SQL statements.
+             * <strong>example:</strong>
+             * <p>SELECT</p>
              */
             public Builder SQLType(String SQLType) {
                 this.SQLType = SQLType;
@@ -399,7 +453,10 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_db</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -407,7 +464,10 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4****</p>
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -415,7 +475,10 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The nickname of the user.
+             * <p>The nickname of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testNickName</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -429,9 +492,15 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProxySQLExecAuditLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProxySQLExecAuditLogResponseBody</p>
+     */
     public static class ProxySQLExecAuditLogList extends TeaModel {
-        @NameInMap("ProxySQLExecAuditLog")
-        private java.util.List < ProxySQLExecAuditLog> proxySQLExecAuditLog;
+        @com.aliyun.core.annotation.NameInMap("ProxySQLExecAuditLog")
+        private java.util.List<ProxySQLExecAuditLog> proxySQLExecAuditLog;
 
         private ProxySQLExecAuditLogList(Builder builder) {
             this.proxySQLExecAuditLog = builder.proxySQLExecAuditLog;
@@ -448,17 +517,17 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
         /**
          * @return proxySQLExecAuditLog
          */
-        public java.util.List < ProxySQLExecAuditLog> getProxySQLExecAuditLog() {
+        public java.util.List<ProxySQLExecAuditLog> getProxySQLExecAuditLog() {
             return this.proxySQLExecAuditLog;
         }
 
         public static final class Builder {
-            private java.util.List < ProxySQLExecAuditLog> proxySQLExecAuditLog; 
+            private java.util.List<ProxySQLExecAuditLog> proxySQLExecAuditLog; 
 
             /**
              * ProxySQLExecAuditLog.
              */
-            public Builder proxySQLExecAuditLog(java.util.List < ProxySQLExecAuditLog> proxySQLExecAuditLog) {
+            public Builder proxySQLExecAuditLog(java.util.List<ProxySQLExecAuditLog> proxySQLExecAuditLog) {
                 this.proxySQLExecAuditLog = proxySQLExecAuditLog;
                 return this;
             }

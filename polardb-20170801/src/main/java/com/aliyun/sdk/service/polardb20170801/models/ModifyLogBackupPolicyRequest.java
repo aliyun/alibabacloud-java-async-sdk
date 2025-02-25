@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyLogBackupPolicyRequest} extends {@link RequestModel}
  *
  * <p>ModifyLogBackupPolicyRequest</p>
  */
 public class ModifyLogBackupPolicyRequest extends Request {
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("LogBackupAnotherRegionRegion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogBackupAnotherRegionRegion")
     private String logBackupAnotherRegionRegion;
 
-    @Query
-    @NameInMap("LogBackupAnotherRegionRetentionPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogBackupAnotherRegionRetentionPeriod")
     private String logBackupAnotherRegionRetentionPeriod;
 
-    @Query
-    @NameInMap("LogBackupRetentionPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogBackupRetentionPeriod")
     private String logBackupRetentionPeriod;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyLogBackupPolicyRequest(Builder builder) {
@@ -153,10 +158,14 @@ public class ModifyLogBackupPolicyRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
-         * <p>
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the information of all clusters that are deployed in a specific region, such as the cluster IDs.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDBClusters](~~98094~~) operation to query the information of all clusters that are deployed in a specific region, such as the cluster IDs.
+         * <strong>example:</strong>
+         * <p>pc-****************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -165,7 +174,10 @@ public class ModifyLogBackupPolicyRequest extends Request {
         }
 
         /**
-         * The region in which you want to store cross-region log backups. For information about regions that support the cross-region backup feature, see [Overview](~~72672~~).
+         * <p>The region in which you want to store cross-region log backups. For information about regions that support the cross-region backup feature, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder logBackupAnotherRegionRegion(String logBackupAnotherRegionRegion) {
             this.putQueryParameter("LogBackupAnotherRegionRegion", logBackupAnotherRegionRegion);
@@ -174,14 +186,18 @@ public class ModifyLogBackupPolicyRequest extends Request {
         }
 
         /**
-         * The retention period of cross-region log backups. Valid values:
-         * <p>
+         * <p>The retention period of cross-region log backups. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: The cross-region backup feature is disabled.</li>
+         * <li><strong>30 to 7300</strong>: Cross-region log backups are retained for 30 to 7,300 days.</li>
+         * <li><strong>-1</strong>: The log backups are permanently retained.</li>
+         * </ul>
+         * <blockquote>
+         * <p> When you create a cluster, the default value of this parameter is <strong>0</strong>.</p>
+         * </blockquote>
          * 
-         * *   **0**: The cross-region backup feature is disabled.
-         * *   **30 to 7300**: Cross-region log backups are retained for 30 to 7,300 days.
-         * *   **-1**: The log backups are permanently retained.
-         * 
-         * >  When you create a cluster, the default value of this parameter is **0**.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder logBackupAnotherRegionRetentionPeriod(String logBackupAnotherRegionRetentionPeriod) {
             this.putQueryParameter("LogBackupAnotherRegionRetentionPeriod", logBackupAnotherRegionRetentionPeriod);
@@ -190,11 +206,14 @@ public class ModifyLogBackupPolicyRequest extends Request {
         }
 
         /**
-         * The retention period of the log backups. Valid values:
-         * <p>
+         * <p>The retention period of the log backups. Valid values:</p>
+         * <ul>
+         * <li>3 to 7300: The log backups are retained for 3 to 7,300 days.</li>
+         * <li>-1: The log backups are permanently retained.</li>
+         * </ul>
          * 
-         * *   3 to 7300: The log backups are retained for 3 to 7,300 days.
-         * *   \-1: The log backups are permanently retained.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder logBackupRetentionPeriod(String logBackupRetentionPeriod) {
             this.putQueryParameter("LogBackupRetentionPeriod", logBackupRetentionPeriod);

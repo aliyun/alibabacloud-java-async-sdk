@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryShortUrlResponseBody} extends {@link TeaModel}
  *
  * <p>QueryShortUrlResponseBody</p>
  */
 public class QueryShortUrlResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryShortUrlResponseBody(Builder builder) {
@@ -74,7 +79,14 @@ public class QueryShortUrlResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * <ul>
+         * <li>If OK is returned, the request is successful.</li>
+         * <li>Other values indicate that the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +94,7 @@ public class QueryShortUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The details of the short URL.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +102,10 @@ public class QueryShortUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +113,10 @@ public class QueryShortUrlResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>819BE656-D2E0-4858-8B21-B2E477085AAF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,29 +129,35 @@ public class QueryShortUrlResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryShortUrlResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryShortUrlResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("ExpireDate")
+        @com.aliyun.core.annotation.NameInMap("ExpireDate")
         private String expireDate;
 
-        @NameInMap("PageViewCount")
+        @com.aliyun.core.annotation.NameInMap("PageViewCount")
         private String pageViewCount;
 
-        @NameInMap("ShortUrl")
+        @com.aliyun.core.annotation.NameInMap("ShortUrl")
         private String shortUrl;
 
-        @NameInMap("ShortUrlName")
+        @com.aliyun.core.annotation.NameInMap("ShortUrlName")
         private String shortUrlName;
 
-        @NameInMap("ShortUrlStatus")
+        @com.aliyun.core.annotation.NameInMap("ShortUrlStatus")
         private String shortUrlStatus;
 
-        @NameInMap("SourceUrl")
+        @com.aliyun.core.annotation.NameInMap("SourceUrl")
         private String sourceUrl;
 
-        @NameInMap("UniqueVisitorCount")
+        @com.aliyun.core.annotation.NameInMap("UniqueVisitorCount")
         private String uniqueVisitorCount;
 
         private Data(Builder builder) {
@@ -222,7 +246,10 @@ public class QueryShortUrlResponseBody extends TeaModel {
             private String uniqueVisitorCount; 
 
             /**
-             * CreateDate.
+             * <p>The time when the short URL was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-01-08 16:44:13</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -230,7 +257,10 @@ public class QueryShortUrlResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireDate.
+             * <p>The time when the short URL expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-01-22 11:21:11</p>
              */
             public Builder expireDate(String expireDate) {
                 this.expireDate = expireDate;
@@ -238,7 +268,10 @@ public class QueryShortUrlResponseBody extends TeaModel {
             }
 
             /**
-             * PageViewCount.
+             * <p>The PV.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder pageViewCount(String pageViewCount) {
                 this.pageViewCount = pageViewCount;
@@ -246,7 +279,10 @@ public class QueryShortUrlResponseBody extends TeaModel {
             }
 
             /**
-             * ShortUrl.
+             * <p>The short URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http://****.cn/6y8uy7</p>
              */
             public Builder shortUrl(String shortUrl) {
                 this.shortUrl = shortUrl;
@@ -254,7 +290,10 @@ public class QueryShortUrlResponseBody extends TeaModel {
             }
 
             /**
-             * ShortUrlName.
+             * <p>The service name of the short URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The Alibaba Cloud Short Link service.</p>
              */
             public Builder shortUrlName(String shortUrlName) {
                 this.shortUrlName = shortUrlName;
@@ -262,7 +301,16 @@ public class QueryShortUrlResponseBody extends TeaModel {
             }
 
             /**
-             * ShortUrlStatus.
+             * <p>The status of the short URL. Valid values:</p>
+             * <ul>
+             * <li><strong>expired</strong></li>
+             * <li><strong>effective</strong></li>
+             * <li><strong>audit</strong></li>
+             * <li><strong>reject</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>expired</p>
              */
             public Builder shortUrlStatus(String shortUrlStatus) {
                 this.shortUrlStatus = shortUrlStatus;
@@ -270,7 +318,10 @@ public class QueryShortUrlResponseBody extends TeaModel {
             }
 
             /**
-             * SourceUrl.
+             * <p>The source address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.****.com/product/sms">https://www.****.com/product/sms</a></p>
              */
             public Builder sourceUrl(String sourceUrl) {
                 this.sourceUrl = sourceUrl;
@@ -278,7 +329,10 @@ public class QueryShortUrlResponseBody extends TeaModel {
             }
 
             /**
-             * UniqueVisitorCount.
+             * <p>The UV.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23</p>
              */
             public Builder uniqueVisitorCount(String uniqueVisitorCount) {
                 this.uniqueVisitorCount = uniqueVisitorCount;

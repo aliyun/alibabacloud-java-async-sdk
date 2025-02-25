@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPhoneEncryptionPublicKeyRequest} extends {@link RequestModel}
  *
  * <p>GetPhoneEncryptionPublicKeyRequest</p>
  */
 public class GetPhoneEncryptionPublicKeyRequest extends Request {
-    @Body
-    @NameInMap("CustSpaceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustSpaceId")
     private String custSpaceId;
 
-    @Body
-    @NameInMap("PhoneNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNumber;
 
     private GetPhoneEncryptionPublicKeyRequest(Builder builder) {
@@ -69,7 +69,10 @@ public class GetPhoneEncryptionPublicKeyRequest extends Request {
         } 
 
         /**
-         * CustSpaceId.
+         * <p>The space ID of the user under the independent software vendor (ISV) account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>393838848</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putBodyParameter("CustSpaceId", custSpaceId);
@@ -78,7 +81,11 @@ public class GetPhoneEncryptionPublicKeyRequest extends Request {
         }
 
         /**
-         * PhoneNumber.
+         * <p>The phone number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flow_001</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putBodyParameter("PhoneNumber", phoneNumber);

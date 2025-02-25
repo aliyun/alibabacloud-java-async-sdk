@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRecordLogsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRecordLogsResponseBody</p>
  */
 public class DescribeRecordLogsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RecordLogs")
+    @com.aliyun.core.annotation.NameInMap("RecordLogs")
     private RecordLogs recordLogs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeRecordLogsResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +102,10 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +113,7 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The list of the operation logs of the domain name.
+         * <p>The operation logs.</p>
          */
         public Builder recordLogs(RecordLogs recordLogs) {
             this.recordLogs = recordLogs;
@@ -110,7 +121,10 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of operation logs.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -131,20 +148,26 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRecordLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRecordLogsResponseBody</p>
+     */
     public static class RecordLog extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("ActionTime")
+        @com.aliyun.core.annotation.NameInMap("ActionTime")
         private String actionTime;
 
-        @NameInMap("ActionTimestamp")
+        @com.aliyun.core.annotation.NameInMap("ActionTimestamp")
         private Long actionTimestamp;
 
-        @NameInMap("ClientIp")
+        @com.aliyun.core.annotation.NameInMap("ClientIp")
         private String clientIp;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
         private RecordLog(Builder builder) {
@@ -206,7 +229,7 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * The operation that you performed.
+             * <p>The operation that you performed.</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -214,7 +237,10 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the operation was performed.
+             * <p>The time when you performed the operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-12-12T09:23Z</p>
              */
             public Builder actionTime(String actionTime) {
                 this.actionTime = actionTime;
@@ -222,7 +248,10 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The UNIX timestamp representing the time of the operation.
+             * <p>The time when you performed the operation. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>134514540000</p>
              */
             public Builder actionTimestamp(Long actionTimestamp) {
                 this.actionTimestamp = actionTimestamp;
@@ -230,7 +259,10 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the operator.
+             * <p>The IP address of the operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>182.92.253.XX</p>
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -238,7 +270,7 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The returned operation message.
+             * <p>The operation message.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -252,9 +284,15 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRecordLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRecordLogsResponseBody</p>
+     */
     public static class RecordLogs extends TeaModel {
-        @NameInMap("RecordLog")
-        private java.util.List < RecordLog> recordLog;
+        @com.aliyun.core.annotation.NameInMap("RecordLog")
+        private java.util.List<RecordLog> recordLog;
 
         private RecordLogs(Builder builder) {
             this.recordLog = builder.recordLog;
@@ -271,17 +309,17 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
         /**
          * @return recordLog
          */
-        public java.util.List < RecordLog> getRecordLog() {
+        public java.util.List<RecordLog> getRecordLog() {
             return this.recordLog;
         }
 
         public static final class Builder {
-            private java.util.List < RecordLog> recordLog; 
+            private java.util.List<RecordLog> recordLog; 
 
             /**
              * RecordLog.
              */
-            public Builder recordLog(java.util.List < RecordLog> recordLog) {
+            public Builder recordLog(java.util.List<RecordLog> recordLog) {
                 this.recordLog = recordLog;
                 return this;
             }

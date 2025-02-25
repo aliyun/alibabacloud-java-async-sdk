@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCostBudgetsSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCostBudgetsSummaryResponseBody</p>
  */
 public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeCostBudgetsSummaryResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The data that is returned.
+         * <p>The data that is returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,10 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3BFC23FE-A182-4D96-A1E4-7521B30B8E43</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,24 +148,30 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCostBudgetsSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCostBudgetsSummaryResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("Budget")
-        private java.util.Map < String, ? > budget;
+        @com.aliyun.core.annotation.NameInMap("Budget")
+        private java.util.Map<String, ?> budget;
 
-        @NameInMap("BudgetName")
+        @com.aliyun.core.annotation.NameInMap("BudgetName")
         private String budgetName;
 
-        @NameInMap("BudgetStatus")
+        @com.aliyun.core.annotation.NameInMap("BudgetStatus")
         private String budgetStatus;
 
-        @NameInMap("BudgetType")
+        @com.aliyun.core.annotation.NameInMap("BudgetType")
         private String budgetType;
 
-        @NameInMap("CalculatedValues")
-        private java.util.Map < String, ? > calculatedValues;
+        @com.aliyun.core.annotation.NameInMap("CalculatedValues")
+        private java.util.Map<String, ?> calculatedValues;
 
-        @NameInMap("ConsumePeriod")
-        private java.util.Map < String, ? > consumePeriod;
+        @com.aliyun.core.annotation.NameInMap("ConsumePeriod")
+        private java.util.Map<String, ?> consumePeriod;
 
         private Items(Builder builder) {
             this.budget = builder.budget;
@@ -170,7 +193,7 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
         /**
          * @return budget
          */
-        public java.util.Map < String, ? > getBudget() {
+        public java.util.Map<String, ?> getBudget() {
             return this.budget;
         }
 
@@ -198,35 +221,41 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
         /**
          * @return calculatedValues
          */
-        public java.util.Map < String, ? > getCalculatedValues() {
+        public java.util.Map<String, ?> getCalculatedValues() {
             return this.calculatedValues;
         }
 
         /**
          * @return consumePeriod
          */
-        public java.util.Map < String, ? > getConsumePeriod() {
+        public java.util.Map<String, ?> getConsumePeriod() {
             return this.consumePeriod;
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > budget; 
+            private java.util.Map<String, ?> budget; 
             private String budgetName; 
             private String budgetStatus; 
             private String budgetType; 
-            private java.util.Map < String, ? > calculatedValues; 
-            private java.util.Map < String, ? > consumePeriod; 
+            private java.util.Map<String, ?> calculatedValues; 
+            private java.util.Map<String, ?> consumePeriod; 
 
             /**
-             * The information about the budget. The BudgetCycleType parameter indicates the cycle of the budget. Valid values: daily, monthly, quarterly, and yearly. The TotalBudgetAmount parameter indicates the total budget. The BudgetMemo parameter indicates the remarks of the budget.
+             * <p>The information about the budget. The BudgetCycleType parameter indicates the cycle of the budget. Valid values: daily, monthly, quarterly, and yearly. The TotalBudgetAmount parameter indicates the total budget. The BudgetMemo parameter indicates the remarks of the budget.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{           &quot;budgetCycleType&quot;: &quot;monthly&quot;,           &quot;budgetMemo&quot;: &quot;&quot;,           &quot;totalBudgetAmount&quot;: 220         }</p>
              */
-            public Builder budget(java.util.Map < String, ? > budget) {
+            public Builder budget(java.util.Map<String, ?> budget) {
                 this.budget = budget;
                 return this;
             }
 
             /**
-             * The name of the budget.
+             * <p>The name of the budget.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Annual budget</p>
              */
             public Builder budgetName(String budgetName) {
                 this.budgetName = budgetName;
@@ -234,7 +263,10 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the budget.
+             * <p>The status of the budget.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>overdue</p>
              */
             public Builder budgetStatus(String budgetStatus) {
                 this.budgetStatus = budgetStatus;
@@ -242,7 +274,10 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the budget.
+             * <p>The type of the budget.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cost</p>
              */
             public Builder budgetType(String budgetType) {
                 this.budgetType = budgetType;
@@ -250,17 +285,23 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the estimate-to-actual analysis. The ActualConsumeSum parameter indicates the accumulated actual value. The ActualAddForecastedAmount parameter indicates the sum of accumulated actual value and predicted value. If the BudgetType parameter is set to cost, the sum of actual value and predicted value includes the actual cost incurred from the budget start date to the current date and the predicted cost from the current date to the budget end date. If the BudgetType parameter is set to asset, the sum of actual value and predicted value includes the actual usage or coverage from the budget start date to the budget end date. If the budget end date minus the current date is more than one year, the part that exceeds one year is not included. The ActualAndBudgetComparison parameter indicates the comparison between the actual value and the predicted value. The value of the ActualAndBudgetComparison parameter is calculated based on the following formula: Accumulated actual value/Total budget × 100%.
+             * <p>The information about the estimate-to-actual analysis. The ActualConsumeSum parameter indicates the accumulated actual value. The ActualAddForecastedAmount parameter indicates the sum of accumulated actual value and predicted value. If the BudgetType parameter is set to cost, the sum of actual value and predicted value includes the actual cost incurred from the budget start date to the current date and the predicted cost from the current date to the budget end date. If the BudgetType parameter is set to asset, the sum of actual value and predicted value includes the actual usage or coverage from the budget start date to the budget end date. If the budget end date minus the current date is more than one year, the part that exceeds one year is not included. The ActualAndBudgetComparison parameter indicates the comparison between the actual value and the predicted value. The value of the ActualAndBudgetComparison parameter is calculated based on the following formula: Accumulated actual value/Total budget × 100%.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{           &quot;actualConsumeSum&quot;: 88.6,           &quot;actualAddForecastedAmount&quot;: 89.6,           &quot;actualAndBudgetComparison&quot;: &quot;20.73%&quot;         }</p>
              */
-            public Builder calculatedValues(java.util.Map < String, ? > calculatedValues) {
+            public Builder calculatedValues(java.util.Map<String, ?> calculatedValues) {
                 this.calculatedValues = calculatedValues;
                 return this;
             }
 
             /**
-             * The information about the billing cycle. The ConsumePeriodBegin parameter indicates the start date of the budget. The ConsumePeriodEnd parameter indicates the end date of the budget.
+             * <p>The information about the billing cycle. The ConsumePeriodBegin parameter indicates the start date of the budget. The ConsumePeriodEnd parameter indicates the end date of the budget.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{           &quot;consumePeriodBegin&quot;: &quot;2022-10&quot;,           &quot;consumePeriodEnd&quot;: &quot;2022-11&quot;         }</p>
              */
-            public Builder consumePeriod(java.util.Map < String, ? > consumePeriod) {
+            public Builder consumePeriod(java.util.Map<String, ?> consumePeriod) {
                 this.consumePeriod = consumePeriod;
                 return this;
             }
@@ -272,20 +313,26 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCostBudgetsSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCostBudgetsSummaryResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("HostId")
+        @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;
 
-        @NameInMap("Items")
-        private java.util.List < Items> items;
+        @com.aliyun.core.annotation.NameInMap("Items")
+        private java.util.List<Items> items;
 
-        @NameInMap("MaxResults")
+        @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {
@@ -314,7 +361,7 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
@@ -341,13 +388,16 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
 
         public static final class Builder {
             private String hostId; 
-            private java.util.List < Items> items; 
+            private java.util.List<Items> items; 
             private Integer maxResults; 
             private String nextToken; 
             private Integer totalCount; 
 
             /**
-             * The site of the host.
+             * <p>The site of the host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn</p>
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -355,15 +405,18 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The data that is returned.
+             * <p>The data that is returned.</p>
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }
 
             /**
-             * The maximum number of entries that are returned.
+             * <p>The maximum number of entries that are returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -371,7 +424,10 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The token that is used to retrieve the next page
+             * <p>The token that is used to retrieve the next page</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eyJwYWdlTnVtIjoyLCJwYWdlU2l6ZSI6NH0=</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -379,7 +435,10 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries that are returned.
+             * <p>The total number of entries that are returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeConfigHistoryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeConfigHistoryResponseBody</p>
  */
 public class DescribeConfigHistoryResponseBody extends TeaModel {
-    @NameInMap("ConfigHistoryItems")
-    private java.util.List < ConfigHistoryItems> configHistoryItems;
+    @com.aliyun.core.annotation.NameInMap("ConfigHistoryItems")
+    private java.util.List<ConfigHistoryItems> configHistoryItems;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeConfigHistoryResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
     /**
      * @return configHistoryItems
      */
-    public java.util.List < ConfigHistoryItems> getConfigHistoryItems() {
+    public java.util.List<ConfigHistoryItems> getConfigHistoryItems() {
         return this.configHistoryItems;
     }
 
@@ -46,19 +51,22 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ConfigHistoryItems> configHistoryItems; 
+        private java.util.List<ConfigHistoryItems> configHistoryItems; 
         private String requestId; 
 
         /**
-         * ConfigHistoryItems.
+         * <p>The change records of the configuration parameters.</p>
          */
-        public Builder configHistoryItems(java.util.List < ConfigHistoryItems> configHistoryItems) {
+        public Builder configHistoryItems(java.util.List<ConfigHistoryItems> configHistoryItems) {
             this.configHistoryItems = configHistoryItems;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D0CEC6AC-7760-409A-A0D5-E6CD8660E9CC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +79,26 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeConfigHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeConfigHistoryResponseBody</p>
+     */
     public static class ConfigHistoryItems extends TeaModel {
-        @NameInMap("ChangeId")
+        @com.aliyun.core.annotation.NameInMap("ChangeId")
         private String changeId;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
         private ConfigHistoryItems(Builder builder) {
@@ -146,7 +160,10 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             private String time; 
 
             /**
-             * ChangeId.
+             * <p>The ID of the change record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder changeId(String changeId) {
                 this.changeId = changeId;
@@ -154,7 +171,10 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerId.
+             * <p>The user ID (UID) of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>253460731706911258</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -162,7 +182,10 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * <p>The reason for the setting modification of the configuration parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -170,7 +193,14 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Indicates whether the setting modification of the configuration parameters took effect. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -178,7 +208,10 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The time when the values of the configuration parameters were changed. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-22T10:00:00Z</p>
              */
             public Builder time(String time) {
                 this.time = time;

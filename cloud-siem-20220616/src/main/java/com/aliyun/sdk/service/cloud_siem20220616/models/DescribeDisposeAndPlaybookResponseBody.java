@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDisposeAndPlaybookResponseBody</p>
  */
 public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeDisposeAndPlaybookResponseBody(Builder builder) {
@@ -136,13 +135,13 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
     } 
 
     public static class PageInfo extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private PageInfo(Builder builder) {
@@ -217,25 +216,28 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
 
     }
     public static class PlaybookList extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OpCode")
+        @com.aliyun.core.annotation.NameInMap("OpCode")
         private String opCode;
 
-        @NameInMap("OpLevel")
+        @com.aliyun.core.annotation.NameInMap("OpLevel")
         private String opLevel;
 
-        @NameInMap("TaskConfig")
+        @com.aliyun.core.annotation.NameInMap("ParamConfig")
+        private java.util.List < ? > paramConfig;
+
+        @com.aliyun.core.annotation.NameInMap("TaskConfig")
         private String taskConfig;
 
-        @NameInMap("WafPlaybook")
+        @com.aliyun.core.annotation.NameInMap("WafPlaybook")
         private Boolean wafPlaybook;
 
         private PlaybookList(Builder builder) {
@@ -244,6 +246,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             this.name = builder.name;
             this.opCode = builder.opCode;
             this.opLevel = builder.opLevel;
+            this.paramConfig = builder.paramConfig;
             this.taskConfig = builder.taskConfig;
             this.wafPlaybook = builder.wafPlaybook;
         }
@@ -292,6 +295,13 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         }
 
         /**
+         * @return paramConfig
+         */
+        public java.util.List < ? > getParamConfig() {
+            return this.paramConfig;
+        }
+
+        /**
          * @return taskConfig
          */
         public String getTaskConfig() {
@@ -311,6 +321,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             private String name; 
             private String opCode; 
             private String opLevel; 
+            private java.util.List < ? > paramConfig; 
             private String taskConfig; 
             private Boolean wafPlaybook; 
 
@@ -359,6 +370,14 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             }
 
             /**
+             * The playbook parameters and the corresponding properties.
+             */
+            public Builder paramConfig(java.util.List < ? > paramConfig) {
+                this.paramConfig = paramConfig;
+                return this;
+            }
+
+            /**
              * The opcode configuration.
              */
             public Builder taskConfig(String taskConfig) {
@@ -386,28 +405,28 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
 
     }
     public static class ResponseData extends TeaModel {
-        @NameInMap("AlertNum")
+        @com.aliyun.core.annotation.NameInMap("AlertNum")
         private Integer alertNum;
 
-        @NameInMap("Dispose")
+        @com.aliyun.core.annotation.NameInMap("Dispose")
         private String dispose;
 
-        @NameInMap("EntityId")
+        @com.aliyun.core.annotation.NameInMap("EntityId")
         private Long entityId;
 
-        @NameInMap("EntityInfo")
+        @com.aliyun.core.annotation.NameInMap("EntityInfo")
         private java.util.Map < String, ? > entityInfo;
 
-        @NameInMap("OpcodeMap")
+        @com.aliyun.core.annotation.NameInMap("OpcodeMap")
         private java.util.Map < String, String > opcodeMap;
 
-        @NameInMap("OpcodeSet")
+        @com.aliyun.core.annotation.NameInMap("OpcodeSet")
         private java.util.List < String > opcodeSet;
 
-        @NameInMap("PlaybookList")
+        @com.aliyun.core.annotation.NameInMap("PlaybookList")
         private java.util.List < PlaybookList> playbookList;
 
-        @NameInMap("Scope")
+        @com.aliyun.core.annotation.NameInMap("Scope")
         private java.util.List < ? > scope;
 
         private ResponseData(Builder builder) {
@@ -536,7 +555,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * An array consisting of the codes of playbooks that are recommended for entity handling.
+             * The codes of the playbooks that are recommended for entity handling.
              */
             public Builder opcodeSet(java.util.List < String > opcodeSet) {
                 this.opcodeSet = opcodeSet;
@@ -552,7 +571,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * An array consisting of the IDs of the users who can handle objects.
+             * The IDs of the users who can handle objects.
              */
             public Builder scope(java.util.List < ? > scope) {
                 this.scope = scope;
@@ -567,10 +586,10 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("PageInfo")
+        @com.aliyun.core.annotation.NameInMap("PageInfo")
         private PageInfo pageInfo;
 
-        @NameInMap("ResponseData")
+        @com.aliyun.core.annotation.NameInMap("ResponseData")
         private java.util.List < ResponseData> responseData;
 
         private Data(Builder builder) {
@@ -613,7 +632,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * The detailed data
+             * The detailed data.
              */
             public Builder responseData(java.util.List < ResponseData> responseData) {
                 this.responseData = responseData;

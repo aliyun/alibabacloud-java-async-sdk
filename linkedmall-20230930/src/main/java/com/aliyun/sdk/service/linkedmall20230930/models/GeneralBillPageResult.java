@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GeneralBillPageResult} extends {@link TeaModel}
  *
  * <p>GeneralBillPageResult</p>
  */
 public class GeneralBillPageResult extends TeaModel {
-    @NameInMap("generalBills")
-    private java.util.List < GeneralBill > generalBills;
+    @com.aliyun.core.annotation.NameInMap("generalBills")
+    private java.util.List<GeneralBill> generalBills;
 
-    @NameInMap("pageNumber")
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Integer pageNumber;
 
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Integer pageSize;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("total")
+    @com.aliyun.core.annotation.NameInMap("total")
     private Integer total;
 
     private GeneralBillPageResult(Builder builder) {
@@ -46,7 +51,7 @@ public class GeneralBillPageResult extends TeaModel {
     /**
      * @return generalBills
      */
-    public java.util.List < GeneralBill > getGeneralBills() {
+    public java.util.List<GeneralBill> getGeneralBills() {
         return this.generalBills;
     }
 
@@ -79,7 +84,7 @@ public class GeneralBillPageResult extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < GeneralBill > generalBills; 
+        private java.util.List<GeneralBill> generalBills; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class GeneralBillPageResult extends TeaModel {
         /**
          * generalBills.
          */
-        public Builder generalBills(java.util.List < GeneralBill > generalBills) {
+        public Builder generalBills(java.util.List<GeneralBill> generalBills) {
             this.generalBills = generalBills;
             return this;
         }

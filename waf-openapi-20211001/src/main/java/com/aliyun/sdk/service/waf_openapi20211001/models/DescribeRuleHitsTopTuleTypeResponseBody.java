@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRuleHitsTopTuleTypeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRuleHitsTopTuleTypeResponseBody</p>
  */
 public class DescribeRuleHitsTopTuleTypeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RuleHitsTopTuleType")
-    private java.util.List < RuleHitsTopTuleType> ruleHitsTopTuleType;
+    @com.aliyun.core.annotation.NameInMap("RuleHitsTopTuleType")
+    private java.util.List<RuleHitsTopTuleType> ruleHitsTopTuleType;
 
     private DescribeRuleHitsTopTuleTypeResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class DescribeRuleHitsTopTuleTypeResponseBody extends TeaModel {
     /**
      * @return ruleHitsTopTuleType
      */
-    public java.util.List < RuleHitsTopTuleType> getRuleHitsTopTuleType() {
+    public java.util.List<RuleHitsTopTuleType> getRuleHitsTopTuleType() {
         return this.ruleHitsTopTuleType;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < RuleHitsTopTuleType> ruleHitsTopTuleType; 
+        private java.util.List<RuleHitsTopTuleType> ruleHitsTopTuleType; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45E377CE-0B04-578E-B653-EEA63CFE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class DescribeRuleHitsTopTuleTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The top 10 protection modules that are matched.
+         * <p>The top 10 protection modules that are matched.</p>
          */
-        public Builder ruleHitsTopTuleType(java.util.List < RuleHitsTopTuleType> ruleHitsTopTuleType) {
+        public Builder ruleHitsTopTuleType(java.util.List<RuleHitsTopTuleType> ruleHitsTopTuleType) {
             this.ruleHitsTopTuleType = ruleHitsTopTuleType;
             return this;
         }
@@ -71,11 +79,17 @@ public class DescribeRuleHitsTopTuleTypeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRuleHitsTopTuleTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRuleHitsTopTuleTypeResponseBody</p>
+     */
     public static class RuleHitsTopTuleType extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("RuleType")
+        @com.aliyun.core.annotation.NameInMap("RuleType")
         private String ruleType;
 
         private RuleHitsTopTuleType(Builder builder) {
@@ -110,7 +124,10 @@ public class DescribeRuleHitsTopTuleTypeResponseBody extends TeaModel {
             private String ruleType; 
 
             /**
-             * The number of requests that match protection rules.
+             * <p>The number of requests that match protection rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>698455</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -118,17 +135,20 @@ public class DescribeRuleHitsTopTuleTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The type of rule that is matched. By default, this parameter is not returned. This indicates that all types of rules that are matched are returned.
-             * <p>
+             * <p>The type of rule that is matched. By default, this parameter is not returned. This indicates that all types of rules that are matched are returned.</p>
+             * <ul>
+             * <li><strong>waf:</strong> basic protection rules.</li>
+             * <li><strong>blacklist:</strong> IP address blacklist rules.</li>
+             * <li><strong>custom:</strong> custom rules.</li>
+             * <li><strong>antiscan:</strong> scan protection rules.</li>
+             * <li><strong>cc_system:</strong> HTTP flood protection rules.</li>
+             * <li><strong>region_block:</strong> region blacklist rules.</li>
+             * <li><strong>scene:</strong> bot management rules.</li>
+             * <li><strong>dlp:</strong> data leakage prevention rules.</li>
+             * </ul>
              * 
-             * *   **waf:** basic protection rules.
-             * *   **blacklist:** IP address blacklist rules.
-             * *   **custom:** custom rules.
-             * *   **antiscan:** scan protection rules.
-             * *   **cc_system:** HTTP flood protection rules.
-             * *   **region_block:** region blacklist rules.
-             * *   **scene:** bot management rules.
-             * *   **dlp:** data leakage prevention rules.
+             * <strong>example:</strong>
+             * <p>cc_system</p>
              */
             public Builder ruleType(String ruleType) {
                 this.ruleType = ruleType;

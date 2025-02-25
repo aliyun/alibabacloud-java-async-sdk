@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMyBlockchainsResponseBody</p>
  */
 public class GetMyBlockchainsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private GetMyBlockchainsResponseBody(Builder builder) {
@@ -72,31 +71,31 @@ public class GetMyBlockchainsResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("Bizid")
+        @com.aliyun.core.annotation.NameInMap("Bizid")
         private String bizid;
 
-        @NameInMap("Createtime")
+        @com.aliyun.core.annotation.NameInMap("Createtime")
         private Long createtime;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
-        @NameInMap("RejectReason")
+        @com.aliyun.core.annotation.NameInMap("RejectReason")
         private String rejectReason;
 
-        @NameInMap("ReqAddr")
+        @com.aliyun.core.annotation.NameInMap("ReqAddr")
         private String reqAddr;
 
-        @NameInMap("SignedAddr")
+        @com.aliyun.core.annotation.NameInMap("SignedAddr")
         private String signedAddr;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Updatetime")
+        @com.aliyun.core.annotation.NameInMap("Updatetime")
         private Long updatetime;
 
-        @NameInMap("Username")
+        @com.aliyun.core.annotation.NameInMap("Username")
         private String username;
 
         private Result(Builder builder) {

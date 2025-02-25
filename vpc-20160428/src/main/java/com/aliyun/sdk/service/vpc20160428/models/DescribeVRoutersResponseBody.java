@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVRoutersResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVRoutersResponseBody</p>
  */
 public class DescribeVRoutersResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("VRouters")
+    @com.aliyun.core.annotation.NameInMap("VRouters")
     private VRouters vRouters;
 
     private DescribeVRoutersResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DescribeVRoutersResponseBody extends TeaModel {
         private VRouters vRouters; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +102,10 @@ public class DescribeVRoutersResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +113,10 @@ public class DescribeVRoutersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +124,10 @@ public class DescribeVRoutersResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned.
+         * <p>The number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +135,7 @@ public class DescribeVRoutersResponseBody extends TeaModel {
         }
 
         /**
-         * The details about the vRouters.
+         * <p>The details about the vRouters.</p>
          */
         public Builder vRouters(VRouters vRouters) {
             this.vRouters = vRouters;
@@ -131,9 +148,15 @@ public class DescribeVRoutersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVRoutersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVRoutersResponseBody</p>
+     */
     public static class RouteTableIds extends TeaModel {
-        @NameInMap("RouteTableId")
-        private java.util.List < String > routeTableId;
+        @com.aliyun.core.annotation.NameInMap("RouteTableId")
+        private java.util.List<String> routeTableId;
 
         private RouteTableIds(Builder builder) {
             this.routeTableId = builder.routeTableId;
@@ -150,17 +173,17 @@ public class DescribeVRoutersResponseBody extends TeaModel {
         /**
          * @return routeTableId
          */
-        public java.util.List < String > getRouteTableId() {
+        public java.util.List<String> getRouteTableId() {
             return this.routeTableId;
         }
 
         public static final class Builder {
-            private java.util.List < String > routeTableId; 
+            private java.util.List<String> routeTableId; 
 
             /**
              * RouteTableId.
              */
-            public Builder routeTableId(java.util.List < String > routeTableId) {
+            public Builder routeTableId(java.util.List<String> routeTableId) {
                 this.routeTableId = routeTableId;
                 return this;
             }
@@ -172,26 +195,32 @@ public class DescribeVRoutersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVRoutersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVRoutersResponseBody</p>
+     */
     public static class VRouter extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RouteTableIds")
+        @com.aliyun.core.annotation.NameInMap("RouteTableIds")
         private RouteTableIds routeTableIds;
 
-        @NameInMap("VRouterId")
+        @com.aliyun.core.annotation.NameInMap("VRouterId")
         private String vRouterId;
 
-        @NameInMap("VRouterName")
+        @com.aliyun.core.annotation.NameInMap("VRouterName")
         private String vRouterName;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private VRouter(Builder builder) {
@@ -271,7 +300,10 @@ public class DescribeVRoutersResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The time when the vRouter was created.
+             * <p>The time when the vRouter was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-03-22T07:46:20Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -279,7 +311,10 @@ public class DescribeVRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the vRouter.
+             * <p>The description of the vRouter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -287,7 +322,10 @@ public class DescribeVRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The region to which the vRouter belongs.
+             * <p>The region to which the vRouter belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -295,7 +333,7 @@ public class DescribeVRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the route table in the vRouter.
+             * <p>The ID of the route table in the vRouter.</p>
              */
             public Builder routeTableIds(RouteTableIds routeTableIds) {
                 this.routeTableIds = routeTableIds;
@@ -303,7 +341,10 @@ public class DescribeVRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vRouter.
+             * <p>The ID of the vRouter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vrt-rj98khsezfqpjrxmv****</p>
              */
             public Builder vRouterId(String vRouterId) {
                 this.vRouterId = vRouterId;
@@ -311,7 +352,10 @@ public class DescribeVRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the vRouter.
+             * <p>The name of the vRouter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>doctest</p>
              */
             public Builder vRouterName(String vRouterName) {
                 this.vRouterName = vRouterName;
@@ -319,7 +363,10 @@ public class DescribeVRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC) to which the vRouter belongs.
+             * <p>The ID of the virtual private cloud (VPC) to which the vRouter belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-rj905wotv6y030t1****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -333,9 +380,15 @@ public class DescribeVRoutersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVRoutersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVRoutersResponseBody</p>
+     */
     public static class VRouters extends TeaModel {
-        @NameInMap("VRouter")
-        private java.util.List < VRouter> vRouter;
+        @com.aliyun.core.annotation.NameInMap("VRouter")
+        private java.util.List<VRouter> vRouter;
 
         private VRouters(Builder builder) {
             this.vRouter = builder.vRouter;
@@ -352,17 +405,17 @@ public class DescribeVRoutersResponseBody extends TeaModel {
         /**
          * @return vRouter
          */
-        public java.util.List < VRouter> getVRouter() {
+        public java.util.List<VRouter> getVRouter() {
             return this.vRouter;
         }
 
         public static final class Builder {
-            private java.util.List < VRouter> vRouter; 
+            private java.util.List<VRouter> vRouter; 
 
             /**
              * VRouter.
              */
-            public Builder vRouter(java.util.List < VRouter> vRouter) {
+            public Builder vRouter(java.util.List<VRouter> vRouter) {
                 this.vRouter = vRouter;
                 return this;
             }

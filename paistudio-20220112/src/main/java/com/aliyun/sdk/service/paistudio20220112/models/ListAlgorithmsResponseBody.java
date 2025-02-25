@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAlgorithmsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAlgorithmsResponseBody</p>
  */
 public class ListAlgorithmsResponseBody extends TeaModel {
-    @NameInMap("Algorithms")
-    private java.util.List < Algorithms> algorithms;
+    @com.aliyun.core.annotation.NameInMap("Algorithms")
+    private java.util.List<Algorithms> algorithms;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListAlgorithmsResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ListAlgorithmsResponseBody extends TeaModel {
     /**
      * @return algorithms
      */
-    public java.util.List < Algorithms> getAlgorithms() {
+    public java.util.List<Algorithms> getAlgorithms() {
         return this.algorithms;
     }
 
@@ -57,14 +62,14 @@ public class ListAlgorithmsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Algorithms> algorithms; 
+        private java.util.List<Algorithms> algorithms; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * Algorithms.
          */
-        public Builder algorithms(java.util.List < Algorithms> algorithms) {
+        public Builder algorithms(java.util.List<Algorithms> algorithms) {
             this.algorithms = algorithms;
             return this;
         }
@@ -91,32 +96,38 @@ public class ListAlgorithmsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAlgorithmsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAlgorithmsResponseBody</p>
+     */
     public static class Algorithms extends TeaModel {
-        @NameInMap("AlgorithmDescription")
+        @com.aliyun.core.annotation.NameInMap("AlgorithmDescription")
         private String algorithmDescription;
 
-        @NameInMap("AlgorithmId")
+        @com.aliyun.core.annotation.NameInMap("AlgorithmId")
         private String algorithmId;
 
-        @NameInMap("AlgorithmName")
+        @com.aliyun.core.annotation.NameInMap("AlgorithmName")
         private String algorithmName;
 
-        @NameInMap("AlgorithmProvider")
+        @com.aliyun.core.annotation.NameInMap("AlgorithmProvider")
         private String algorithmProvider;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("GmtCreateTime")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
 
-        @NameInMap("GmtModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
         private String gmtModifiedTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("WorkspaceId")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceId")
         private String workspaceId;
 
         private Algorithms(Builder builder) {

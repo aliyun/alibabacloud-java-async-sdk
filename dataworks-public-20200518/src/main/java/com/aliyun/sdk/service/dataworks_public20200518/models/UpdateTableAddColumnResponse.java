@@ -1,28 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTableAddColumnResponse} extends {@link TeaModel}
  *
  * <p>UpdateTableAddColumnResponse</p>
  */
 public class UpdateTableAddColumnResponse extends Response {
-    @NameInMap("headers")
-    @Validation(required = true)
-    private java.util.Map < String, String > headers;
+    @com.aliyun.core.annotation.NameInMap("headers")
+    private java.util.Map<String, String> headers;
 
-    @NameInMap("body")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("statusCode")
+    private Integer statusCode;
+
+    @com.aliyun.core.annotation.NameInMap("body")
     private UpdateTableAddColumnResponseBody body;
 
     private UpdateTableAddColumnResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -38,8 +45,15 @@ public class UpdateTableAddColumnResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     /**
@@ -51,7 +65,9 @@ public class UpdateTableAddColumnResponse extends Response {
 
     public interface Builder extends Response.Builder<UpdateTableAddColumnResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(UpdateTableAddColumnResponseBody body);
 
@@ -63,7 +79,8 @@ public class UpdateTableAddColumnResponse extends Response {
     private static final class BuilderImpl
             extends Response.BuilderImpl<UpdateTableAddColumnResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
+        private Integer statusCode; 
         private UpdateTableAddColumnResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +90,7 @@ public class UpdateTableAddColumnResponse extends Response {
         private BuilderImpl(UpdateTableAddColumnResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -80,8 +98,17 @@ public class UpdateTableAddColumnResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

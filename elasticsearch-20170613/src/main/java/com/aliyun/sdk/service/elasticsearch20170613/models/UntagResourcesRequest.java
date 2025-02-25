@@ -1,35 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UntagResourcesRequest</p>
  */
 public class UntagResourcesRequest extends Request {
-    @Query
-    @NameInMap("All")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("All")
     private Boolean all;
 
-    @Query
-    @NameInMap("ResourceIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceIds")
     private String resourceIds;
 
-    @Query
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
-    @Query
-    @NameInMap("TagKeys")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagKeys")
     private String tagKeys;
 
-    @Body
-    @NameInMap("body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
     private String body;
 
     private UntagResourcesRequest(Builder builder) {
@@ -110,7 +110,10 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to delete all parts. Default value: **false** . This parameter is valid only when **TagKeys** is not specified.
+         * <p>Specifies whether to delete all parts. Default value: <strong>false</strong> . This parameter is valid only when <strong>TagKeys</strong> is not specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -119,7 +122,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The resource list that you want to delete.
+         * <p>The resource list that you want to delete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;es-cn-09k1rocex0006****&quot;,&quot;es-cn-oew1rgiev0009****&quot;]</p>
          */
         public Builder resourceIds(String resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -128,7 +134,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Fixed to **INSTANCE** .
+         * <p>The type of the resource. Fixed to <strong>INSTANCE</strong> .</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -137,7 +146,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The list of tags that you want to delete. The list can contain up to 20 subitems.
+         * <p>The list of tags that you want to delete. The list can contain up to 20 subitems.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;tagKey1&quot;,&quot;tagKey2&quot;]</p>
          */
         public Builder tagKeys(String tagKeys) {
             this.putQueryParameter("TagKeys", tagKeys);

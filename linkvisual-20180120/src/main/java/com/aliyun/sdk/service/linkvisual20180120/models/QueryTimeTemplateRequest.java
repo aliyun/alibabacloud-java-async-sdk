@@ -61,10 +61,10 @@ public class QueryTimeTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(QueryTimeTemplateRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.pageSize = response.pageSize;
+        private Builder(QueryTimeTemplateRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.pageSize = request.pageSize;
         } 
 
         /**

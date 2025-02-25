@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteShardingNodeResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteShardingNodeResponseBody</p>
  */
 public class DeleteShardingNodeResponseBody extends TeaModel {
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteShardingNodeResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class DeleteShardingNodeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the order. On the Orders page in the Billing Management console, you can obtain the details of the order based on the order ID.
+         * <p>The ID of the order. On the Orders page in the Billing Management console, you can obtain the details of the order based on the order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22179******0904</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -58,7 +61,10 @@ public class DeleteShardingNodeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5D622714-AEDD-4609-9167-F5DDD3D1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

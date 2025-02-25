@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNamespaceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateNamespaceResponseBody</p>
  */
 public class CreateNamespaceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TraceId")
+    @com.aliyun.core.annotation.NameInMap("TraceId")
     private String traceId;
 
     private CreateNamespaceResponseBody(Builder builder) {
@@ -110,7 +115,10 @@ public class CreateNamespaceResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * The ID of the trace. It can be used to query the details of a request.
+         * <p>bucketPath</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +126,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The region where the namespace resides.
+         * <p>The region where the namespace resides.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -126,7 +134,10 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p><a href="http://sae_pop_pre/#vpc">http://sae_pop_pre/#vpc</a></p>
+         * 
+         * <strong>example:</strong>
+         * <p>bucketName</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +145,10 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * name
+         * <p>The ID of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +156,10 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the namespace.
+         * <p>The description of the custom namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +167,10 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the namespace.
+         * <p>mountDir</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +178,10 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the trace. It can be used to query the details of a request.
+         * <p>The name of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a981dd515966966104121683d****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -171,23 +194,29 @@ public class CreateNamespaceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateNamespaceResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateNamespaceResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("EnableMicroRegistration")
+        @com.aliyun.core.annotation.NameInMap("EnableMicroRegistration")
         private Boolean enableMicroRegistration;
 
-        @NameInMap("NameSpaceShortId")
+        @com.aliyun.core.annotation.NameInMap("NameSpaceShortId")
         private String nameSpaceShortId;
 
-        @NameInMap("NamespaceDescription")
+        @com.aliyun.core.annotation.NameInMap("NamespaceDescription")
         private String namespaceDescription;
 
-        @NameInMap("NamespaceId")
+        @com.aliyun.core.annotation.NameInMap("NamespaceId")
         private String namespaceId;
 
-        @NameInMap("NamespaceName")
+        @com.aliyun.core.annotation.NameInMap("NamespaceName")
         private String namespaceName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private Data(Builder builder) {
@@ -266,7 +295,14 @@ public class CreateNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * desc
+             * <p>Indicates whether the namespace was created. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The instance was created.</li>
+             * <li><strong>false</strong>: The call failed to be created.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder nameSpaceShortId(String nameSpaceShortId) {
                 this.nameSpaceShortId = nameSpaceShortId;
@@ -274,7 +310,10 @@ public class CreateNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * The information of the namespace.
+             * <p>The short ID of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desc</p>
              */
             public Builder namespaceDescription(String namespaceDescription) {
                 this.namespaceDescription = namespaceDescription;
@@ -282,7 +321,14 @@ public class CreateNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * <p>The error code returned. Take note of the following rules:</p>
+             * <ul>
+             * <li>The <strong>ErrorCode</strong> parameter is not returned if the request succeeds.</li>
+             * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing:test</p>
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -290,7 +336,10 @@ public class CreateNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * cn-beijing:test
+             * <p>Null</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder namespaceName(String namespaceName) {
                 this.namespaceName = namespaceName;
@@ -298,7 +347,16 @@ public class CreateNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * name
+             * <p>The HTTP status code. Valid values:</p>
+             * <ul>
+             * <li><strong>2xx</strong>: The call was successful.</li>
+             * <li><strong>3xx</strong>: The call was redirected.</li>
+             * <li><strong>4xx</strong>: The call failed.</li>
+             * <li><strong>5xx</strong>: A server error occurred.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryReimbursementOrderRequest} extends {@link RequestModel}
  *
  * <p>QueryReimbursementOrderRequest</p>
  */
 public class QueryReimbursementOrderRequest extends Request {
-    @Query
-    @NameInMap("reimb_order_no")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("reimb_order_no")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String reimbOrderNo;
 
-    @Query
-    @NameInMap("sub_corp_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("sub_corp_id")
     private String subCorpId;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private QueryReimbursementOrderRequest(Builder builder) {
@@ -83,7 +88,10 @@ public class QueryReimbursementOrderRequest extends Request {
         } 
 
         /**
-         * reimb_order_no.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RT204396</p>
          */
         public Builder reimbOrderNo(String reimbOrderNo) {
             this.putQueryParameter("reimb_order_no", reimbOrderNo);

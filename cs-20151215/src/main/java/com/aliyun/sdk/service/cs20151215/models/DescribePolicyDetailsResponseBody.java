@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePolicyDetailsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePolicyDetailsResponseBody</p>
  */
 public class DescribePolicyDetailsResponseBody extends TeaModel {
-    @NameInMap("action")
+    @com.aliyun.core.annotation.NameInMap("action")
     private String action;
 
-    @NameInMap("category")
+    @com.aliyun.core.annotation.NameInMap("category")
     private String category;
 
-    @NameInMap("description")
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @NameInMap("is_deleted")
+    @com.aliyun.core.annotation.NameInMap("is_deleted")
     private Integer isDeleted;
 
-    @NameInMap("name")
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @NameInMap("no_config")
+    @com.aliyun.core.annotation.NameInMap("no_config")
     private Integer noConfig;
 
-    @NameInMap("severity")
+    @com.aliyun.core.annotation.NameInMap("severity")
     private String severity;
 
-    @NameInMap("template")
+    @com.aliyun.core.annotation.NameInMap("template")
     private String template;
 
     private DescribePolicyDetailsResponseBody(Builder builder) {
@@ -122,11 +127,14 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
         private String template; 
 
         /**
-         * The action of the policy. Valid values:
-         * <p>
+         * <p>The action of the policy. Valid values:</p>
+         * <ul>
+         * <li><code>enforce</code>: blocks deployments that match the policy.</li>
+         * <li><code>inform</code>: generates alerts for deployments that match the policy.</li>
+         * </ul>
          * 
-         * *   `enforce`: blocks deployments that match the policy.
-         * *   `inform`: generates alerts for deployments that match the policy.
+         * <strong>example:</strong>
+         * <p>enforce</p>
          */
         public Builder action(String action) {
             this.action = action;
@@ -134,7 +142,10 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the policy.
+         * <p>The type of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k8s-general</p>
          */
         public Builder category(String category) {
             this.category = category;
@@ -142,7 +153,10 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the policy.
+         * <p>The description of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Requires container images to begin with a repo string from a specified list</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -150,11 +164,14 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the policy is deleted. Valid values:
-         * <p>
+         * <p>Indicates whether the policy is deleted. Valid values:</p>
+         * <ul>
+         * <li>0: The policy is not deleted.</li>
+         * <li>1: The policy is deleted.</li>
+         * </ul>
          * 
-         * *   0: The policy is not deleted.
-         * *   1: The policy is deleted.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder isDeleted(Integer isDeleted) {
             this.isDeleted = isDeleted;
@@ -162,7 +179,10 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the policy.
+         * <p>The name of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACKAllowedRepos</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -170,11 +190,14 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether parameters are required. Valid values:
-         * <p>
+         * <p>Indicates whether parameters are required. Valid values:</p>
+         * <ul>
+         * <li>0: Parameters are required.</li>
+         * <li>1: Parameters are optional.</li>
+         * </ul>
          * 
-         * *   0: Parameters are required.
-         * *   1: Parameters are optional.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder noConfig(Integer noConfig) {
             this.noConfig = noConfig;
@@ -182,7 +205,15 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The severity level of the policy.
+         * <p>The severity level of the policy. Valid values:</p>
+         * <ul>
+         * <li><code>high</code></li>
+         * <li><code>medium</code></li>
+         * <li><code>low</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
          */
         public Builder severity(String severity) {
             this.severity = severity;
@@ -190,7 +221,10 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The content of the policy.
+         * <p>The content of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>For more information, see sample requests.</p>
          */
         public Builder template(String template) {
             this.template = template;

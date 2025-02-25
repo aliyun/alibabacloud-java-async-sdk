@@ -1,30 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eflo20220530.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateVpdResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateVpdResponseBody</p>
  */
 public class UpdateVpdResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private Content content;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateVpdResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.content = builder.content;
         this.message = builder.message;
@@ -37,6 +46,13 @@ public class UpdateVpdResponseBody extends TeaModel {
 
     public static UpdateVpdResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -68,13 +84,28 @@ public class UpdateVpdResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private Integer code; 
         private Content content; 
         private String message; 
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
+
+        /**
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +113,7 @@ public class UpdateVpdResponseBody extends TeaModel {
         }
 
         /**
-         * Content.
+         * <p>The response data.</p>
          */
         public Builder content(Content content) {
             this.content = content;
@@ -90,7 +121,10 @@ public class UpdateVpdResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The additional information that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +132,10 @@ public class UpdateVpdResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AC8C713A-A9F4-5984-A5E1-76496DF35153</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,8 +148,14 @@ public class UpdateVpdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateVpdResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateVpdResponseBody</p>
+     */
     public static class Content extends TeaModel {
-        @NameInMap("VpdId")
+        @com.aliyun.core.annotation.NameInMap("VpdId")
         private String vpdId;
 
         private Content(Builder builder) {
@@ -138,7 +181,10 @@ public class UpdateVpdResponseBody extends TeaModel {
             private String vpdId; 
 
             /**
-             * VpdId.
+             * <p>The ID of the VPD instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpd-lg4dppgi</p>
              */
             public Builder vpdId(String vpdId) {
                 this.vpdId = vpdId;

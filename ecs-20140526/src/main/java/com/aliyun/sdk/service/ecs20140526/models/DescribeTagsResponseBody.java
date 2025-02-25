@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTagsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTagsResponseBody</p>
  */
 public class DescribeTagsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private Tags tags;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeTagsResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DescribeTagsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +102,10 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +113,10 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B04B8CF3-4489-432D-83BA-6F128E4F2295</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +124,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The tags that match all filter conditions.
+         * <p>The tags that match all filter conditions.</p>
          */
         public Builder tags(Tags tags) {
             this.tags = tags;
@@ -118,7 +132,10 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of tags.
+         * <p>The total number of tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,41 +148,47 @@ public class DescribeTagsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTagsResponseBody</p>
+     */
     public static class ResourceTypeCount extends TeaModel {
-        @NameInMap("Ddh")
+        @com.aliyun.core.annotation.NameInMap("Ddh")
         private Integer ddh;
 
-        @NameInMap("Disk")
+        @com.aliyun.core.annotation.NameInMap("Disk")
         private Integer disk;
 
-        @NameInMap("Eni")
+        @com.aliyun.core.annotation.NameInMap("Eni")
         private Integer eni;
 
-        @NameInMap("Image")
+        @com.aliyun.core.annotation.NameInMap("Image")
         private Integer image;
 
-        @NameInMap("Instance")
+        @com.aliyun.core.annotation.NameInMap("Instance")
         private Integer instance;
 
-        @NameInMap("KeyPair")
+        @com.aliyun.core.annotation.NameInMap("KeyPair")
         private Integer keyPair;
 
-        @NameInMap("LaunchTemplate")
+        @com.aliyun.core.annotation.NameInMap("LaunchTemplate")
         private Integer launchTemplate;
 
-        @NameInMap("ReservedInstance")
+        @com.aliyun.core.annotation.NameInMap("ReservedInstance")
         private Integer reservedInstance;
 
-        @NameInMap("Securitygroup")
+        @com.aliyun.core.annotation.NameInMap("Securitygroup")
         private Integer securitygroup;
 
-        @NameInMap("Snapshot")
+        @com.aliyun.core.annotation.NameInMap("Snapshot")
         private Integer snapshot;
 
-        @NameInMap("SnapshotPolicy")
+        @com.aliyun.core.annotation.NameInMap("SnapshotPolicy")
         private Integer snapshotPolicy;
 
-        @NameInMap("Volume")
+        @com.aliyun.core.annotation.NameInMap("Volume")
         private Integer volume;
 
         private ResourceTypeCount(Builder builder) {
@@ -290,7 +313,10 @@ public class DescribeTagsResponseBody extends TeaModel {
             private Integer volume; 
 
             /**
-             * The number of dedicated hosts to which the tag is added.
+             * <p>The number of dedicated hosts to which the tag is added.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ddh(Integer ddh) {
                 this.ddh = ddh;
@@ -298,7 +324,10 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of disks to which the tag is added.
+             * <p>The number of disks to which the tag is added.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -306,7 +335,10 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of ENIs to which the tag is added.
+             * <p>The number of ENIs to which the tag is added.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder eni(Integer eni) {
                 this.eni = eni;
@@ -314,7 +346,10 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of images to which the tag is added.
+             * <p>The number of images to which the tag is added.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder image(Integer image) {
                 this.image = image;
@@ -322,7 +357,10 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances to which the tag is added.
+             * <p>The number of instances to which the tag is added.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>45</p>
              */
             public Builder instance(Integer instance) {
                 this.instance = instance;
@@ -330,7 +368,10 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of key pairs to which the tag is added.
+             * <p>The number of key pairs to which the tag is added.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17</p>
              */
             public Builder keyPair(Integer keyPair) {
                 this.keyPair = keyPair;
@@ -338,7 +379,10 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of launch templates to which the tag is added.
+             * <p>The number of launch templates to which the tag is added.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder launchTemplate(Integer launchTemplate) {
                 this.launchTemplate = launchTemplate;
@@ -346,7 +390,10 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of reserved instances to which the tag is added.
+             * <p>The number of reserved instances to which the tag is added.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder reservedInstance(Integer reservedInstance) {
                 this.reservedInstance = reservedInstance;
@@ -354,7 +401,10 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of security groups to which the tag is added.
+             * <p>The number of security groups to which the tag is added.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder securitygroup(Integer securitygroup) {
                 this.securitygroup = securitygroup;
@@ -362,7 +412,10 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of snapshots to which the tag is added.
+             * <p>The number of snapshots to which the tag is added.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder snapshot(Integer snapshot) {
                 this.snapshot = snapshot;
@@ -370,7 +423,10 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of automatic snapshot policies to which the tag is added.
+             * <p>The number of automatic snapshot policies to which the tag is added.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder snapshotPolicy(Integer snapshotPolicy) {
                 this.snapshotPolicy = snapshotPolicy;
@@ -378,7 +434,10 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of storage volumes to which the tag is added.
+             * <p>The number of storage volumes to which the tag is added.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder volume(Integer volume) {
                 this.volume = volume;
@@ -392,14 +451,20 @@ public class DescribeTagsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTagsResponseBody</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("ResourceTypeCount")
+        @com.aliyun.core.annotation.NameInMap("ResourceTypeCount")
         private ResourceTypeCount resourceTypeCount;
 
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -443,7 +508,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The number of resource types.
+             * <p>The number of resource types.</p>
              */
             public Builder resourceTypeCount(ResourceTypeCount resourceTypeCount) {
                 this.resourceTypeCount = resourceTypeCount;
@@ -451,7 +516,10 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -459,7 +527,10 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -473,9 +544,15 @@ public class DescribeTagsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTagsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -492,17 +569,17 @@ public class DescribeTagsResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }

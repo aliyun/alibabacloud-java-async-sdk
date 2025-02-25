@@ -1,72 +1,92 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20230522.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDBInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreateDBInstanceRequest</p>
  */
 public class CreateDBInstanceRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupSetId")
+    private String backupSetId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DBInstanceDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceDescription")
     private String DBInstanceDescription;
 
-    @Query
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeploySchema")
+    private String deploySchema;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @Query
-    @NameInMap("EngineVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineVersion")
     private String engineVersion;
 
-    @Query
-    @NameInMap("MultiZone")
-    private java.util.List < MultiZone> multiZone;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MultiZone")
+    private java.util.List<MultiZone> multiZone;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ScaleMax")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScaleMax")
     private String scaleMax;
 
-    @Query
-    @NameInMap("ScaleMin")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScaleMin")
     private String scaleMin;
 
-    @Query
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceDBInstanceId")
+    private String sourceDBInstanceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
-    @Query
-    @NameInMap("VswitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VswitchId")
     private String vswitchId;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private CreateDBInstanceRequest(Builder builder) {
         super(builder);
+        this.backupSetId = builder.backupSetId;
         this.clientToken = builder.clientToken;
         this.DBInstanceDescription = builder.DBInstanceDescription;
+        this.deploySchema = builder.deploySchema;
         this.engine = builder.engine;
         this.engineVersion = builder.engineVersion;
         this.multiZone = builder.multiZone;
         this.regionId = builder.regionId;
         this.scaleMax = builder.scaleMax;
         this.scaleMin = builder.scaleMin;
+        this.sourceDBInstanceId = builder.sourceDBInstanceId;
         this.vpcId = builder.vpcId;
         this.vswitchId = builder.vswitchId;
         this.zoneId = builder.zoneId;
@@ -86,6 +106,13 @@ public class CreateDBInstanceRequest extends Request {
     }
 
     /**
+     * @return backupSetId
+     */
+    public String getBackupSetId() {
+        return this.backupSetId;
+    }
+
+    /**
      * @return clientToken
      */
     public String getClientToken() {
@@ -97,6 +124,13 @@ public class CreateDBInstanceRequest extends Request {
      */
     public String getDBInstanceDescription() {
         return this.DBInstanceDescription;
+    }
+
+    /**
+     * @return deploySchema
+     */
+    public String getDeploySchema() {
+        return this.deploySchema;
     }
 
     /**
@@ -116,7 +150,7 @@ public class CreateDBInstanceRequest extends Request {
     /**
      * @return multiZone
      */
-    public java.util.List < MultiZone> getMultiZone() {
+    public java.util.List<MultiZone> getMultiZone() {
         return this.multiZone;
     }
 
@@ -142,6 +176,13 @@ public class CreateDBInstanceRequest extends Request {
     }
 
     /**
+     * @return sourceDBInstanceId
+     */
+    public String getSourceDBInstanceId() {
+        return this.sourceDBInstanceId;
+    }
+
+    /**
      * @return vpcId
      */
     public String getVpcId() {
@@ -163,14 +204,17 @@ public class CreateDBInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateDBInstanceRequest, Builder> {
+        private String backupSetId; 
         private String clientToken; 
         private String DBInstanceDescription; 
+        private String deploySchema; 
         private String engine; 
         private String engineVersion; 
-        private java.util.List < MultiZone> multiZone; 
+        private java.util.List<MultiZone> multiZone; 
         private String regionId; 
         private String scaleMax; 
         private String scaleMin; 
+        private String sourceDBInstanceId; 
         private String vpcId; 
         private String vswitchId; 
         private String zoneId; 
@@ -181,18 +225,30 @@ public class CreateDBInstanceRequest extends Request {
 
         private Builder(CreateDBInstanceRequest request) {
             super(request);
+            this.backupSetId = request.backupSetId;
             this.clientToken = request.clientToken;
             this.DBInstanceDescription = request.DBInstanceDescription;
+            this.deploySchema = request.deploySchema;
             this.engine = request.engine;
             this.engineVersion = request.engineVersion;
             this.multiZone = request.multiZone;
             this.regionId = request.regionId;
             this.scaleMax = request.scaleMax;
             this.scaleMin = request.scaleMin;
+            this.sourceDBInstanceId = request.sourceDBInstanceId;
             this.vpcId = request.vpcId;
             this.vswitchId = request.vswitchId;
             this.zoneId = request.zoneId;
         } 
+
+        /**
+         * BackupSetId.
+         */
+        public Builder backupSetId(String backupSetId) {
+            this.putQueryParameter("BackupSetId", backupSetId);
+            this.backupSetId = backupSetId;
+            return this;
+        }
 
         /**
          * ClientToken.
@@ -213,7 +269,19 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * Engine.
+         * DeploySchema.
+         */
+        public Builder deploySchema(String deploySchema) {
+            this.putQueryParameter("DeploySchema", deploySchema);
+            this.deploySchema = deploySchema;
+            return this;
+        }
+
+        /**
+         * <p>The engine type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>clickhouse</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -233,7 +301,7 @@ public class CreateDBInstanceRequest extends Request {
         /**
          * MultiZone.
          */
-        public Builder multiZone(java.util.List < MultiZone> multiZone) {
+        public Builder multiZone(java.util.List<MultiZone> multiZone) {
             String multiZoneShrink = shrink(multiZone, "MultiZone", "json");
             this.putQueryParameter("MultiZone", multiZoneShrink);
             this.multiZone = multiZone;
@@ -241,7 +309,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -268,7 +339,19 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * VPC ID。
+         * SourceDBInstanceId.
+         */
+        public Builder sourceDBInstanceId(String sourceDBInstanceId) {
+            this.putQueryParameter("SourceDBInstanceId", sourceDBInstanceId);
+            this.sourceDBInstanceId = sourceDBInstanceId;
+            return this;
+        }
+
+        /**
+         * <p>VPC ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-uf6xmupdn7v6ui9f****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -301,11 +384,17 @@ public class CreateDBInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDBInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDBInstanceRequest</p>
+     */
     public static class MultiZone extends TeaModel {
-        @NameInMap("VSwitchIds")
-        private java.util.List < String > vSwitchIds;
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+        private java.util.List<String> vSwitchIds;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private MultiZone(Builder builder) {
@@ -324,7 +413,7 @@ public class CreateDBInstanceRequest extends Request {
         /**
          * @return vSwitchIds
          */
-        public java.util.List < String > getVSwitchIds() {
+        public java.util.List<String> getVSwitchIds() {
             return this.vSwitchIds;
         }
 
@@ -336,13 +425,13 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > vSwitchIds; 
+            private java.util.List<String> vSwitchIds; 
             private String zoneId; 
 
             /**
              * VSwitchIds.
              */
-            public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
+            public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
                 return this;
             }

@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCustomDomainOutput} extends {@link TeaModel}
  *
  * <p>ListCustomDomainOutput</p>
  */
 public class ListCustomDomainOutput extends TeaModel {
-    @NameInMap("customDomains")
+    @com.aliyun.core.annotation.NameInMap("customDomains")
     private java.util.List < CustomDomain > customDomains;
 
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
     private ListCustomDomainOutput(Builder builder) {

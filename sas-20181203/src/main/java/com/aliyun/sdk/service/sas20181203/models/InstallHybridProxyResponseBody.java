@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstallHybridProxyResponseBody} extends {@link TeaModel}
  *
  * <p>InstallHybridProxyResponseBody</p>
  */
 public class InstallHybridProxyResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private InstallHybridProxyResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class InstallHybridProxyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E55BE5DB-E2DF-57EB-A0C5-7A85EEA67A4C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeIpSetRequest</p>
  */
 public class DescribeIpSetRequest extends Request {
-    @Query
-    @NameInMap("IpSetId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpSetId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ipSetId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private DescribeIpSetRequest(Builder builder) {
@@ -73,7 +72,7 @@ public class DescribeIpSetRequest extends Request {
          * The ID of the acceleration region.
          * <p>
          * 
-         * You can call the [ListIpSets](~~153247~~) operation to query IDs of acceleration regions of a specified GA instance.
+         * You can call the [ListIpSets](~~2253273~~) operation to query the IDs of acceleration regions of a specific GA instance.
          */
         public Builder ipSetId(String ipSetId) {
             this.putQueryParameter("IpSetId", ipSetId);

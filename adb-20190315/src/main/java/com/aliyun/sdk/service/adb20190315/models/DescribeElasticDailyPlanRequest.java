@@ -1,52 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeElasticDailyPlanRequest} extends {@link RequestModel}
  *
  * <p>DescribeElasticDailyPlanRequest</p>
  */
 public class DescribeElasticDailyPlanRequest extends Request {
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("ElasticDailyPlanDay")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ElasticDailyPlanDay")
     private String elasticDailyPlanDay;
 
-    @Query
-    @NameInMap("ElasticDailyPlanStatusList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ElasticDailyPlanStatusList")
     private String elasticDailyPlanStatusList;
 
-    @Query
-    @NameInMap("ElasticPlanName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ElasticPlanName")
     private String elasticPlanName;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ResourcePoolName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourcePoolName")
     private String resourcePoolName;
 
     private DescribeElasticDailyPlanRequest(Builder builder) {
@@ -167,10 +167,14 @@ public class DescribeElasticDailyPlanRequest extends Request {
         } 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
-         * <p>
+         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.
+         * <strong>example:</strong>
+         * <p>am-bp11q28kvl688****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -179,7 +183,10 @@ public class DescribeElasticDailyPlanRequest extends Request {
         }
 
         /**
-         * The start date of the current-day scaling plan. Specify the date in the yyyy-MM-dd format.
+         * <p>The start date of the current-day scaling plan. Specify the date in the yyyy-MM-dd format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-02</p>
          */
         public Builder elasticDailyPlanDay(String elasticDailyPlanDay) {
             this.putQueryParameter("ElasticDailyPlanDay", elasticDailyPlanDay);
@@ -188,13 +195,16 @@ public class DescribeElasticDailyPlanRequest extends Request {
         }
 
         /**
-         * The execution state of the current-day scaling plan. Separate multiple values with commas (,). Valid values:
-         * <p>
+         * <p>The execution state of the current-day scaling plan. Separate multiple values with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: The scaling plan is not executed.</li>
+         * <li><strong>2</strong>: The scaling plan is being executed.</li>
+         * <li><strong>3</strong>: The scaling plan is executed.</li>
+         * <li><strong>4</strong>: The scaling plan fails to be executed.</li>
+         * </ul>
          * 
-         * *   **1**: The scaling plan is not executed.
-         * *   **2**: The scaling plan is being executed.
-         * *   **3**: The scaling plan is executed.
-         * *   **4**: The scaling plan fails to be executed.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder elasticDailyPlanStatusList(String elasticDailyPlanStatusList) {
             this.putQueryParameter("ElasticDailyPlanStatusList", elasticDailyPlanStatusList);
@@ -203,11 +213,14 @@ public class DescribeElasticDailyPlanRequest extends Request {
         }
 
         /**
-         * The name of the scaling plan. Valid values:
-         * <p>
+         * <p>The name of the scaling plan. Valid values:</p>
+         * <ul>
+         * <li>The name must be 2 to 30 characters in length.</li>
+         * <li>The name can contain letters, digits, and underscores (_).</li>
+         * </ul>
          * 
-         * *   The name must be 2 to 30 characters in length.
-         * *   The name can contain letters, digits, and underscores (\_).
+         * <strong>example:</strong>
+         * <p>realtimeplan</p>
          */
         public Builder elasticPlanName(String elasticPlanName) {
             this.putQueryParameter("ElasticPlanName", elasticPlanName);
@@ -252,10 +265,13 @@ public class DescribeElasticDailyPlanRequest extends Request {
         }
 
         /**
-         * The name of the resource group.
-         * <p>
+         * <p>The name of the resource group.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/466685.html">DescribeDBResourceGroup</a> operation to query the resource group name.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeDBResourceGroup](~~466685~~) operation to query the resource group name.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder resourcePoolName(String resourcePoolName) {
             this.putQueryParameter("ResourcePoolName", resourcePoolName);

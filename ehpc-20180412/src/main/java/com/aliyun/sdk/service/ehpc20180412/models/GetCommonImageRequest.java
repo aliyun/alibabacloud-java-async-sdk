@@ -96,7 +96,7 @@ public class GetCommonImageRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster to which you want to store the image.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -105,7 +105,7 @@ public class GetCommonImageRequest extends Request {
         }
 
         /**
-         * ContainType.
+         * The image type.
          */
         public Builder containType(String containType) {
             this.putQueryParameter("ContainType", containType);
@@ -114,7 +114,7 @@ public class GetCommonImageRequest extends Request {
         }
 
         /**
-         * ImageName.
+         * The name of the image that you want to obtain.
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -123,7 +123,7 @@ public class GetCommonImageRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the cluster. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

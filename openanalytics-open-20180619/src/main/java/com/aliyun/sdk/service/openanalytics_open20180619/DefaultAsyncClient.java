@@ -94,6 +94,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of CancelSparkStatement  CancelSparkStatementRequest
+     * @return CancelSparkStatementResponse
+     */
     @Override
     public CompletableFuture<CancelSparkStatementResponse> cancelSparkStatement(CancelSparkStatementRequest request) {
         try {
@@ -108,6 +112,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateInstance  CreateInstanceRequest
+     * @return CreateInstanceResponse
+     */
     @Override
     public CompletableFuture<CreateInstanceResponse> createInstance(CreateInstanceRequest request) {
         try {
@@ -122,6 +130,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExecuteSparkStatement  ExecuteSparkStatementRequest
+     * @return ExecuteSparkStatementResponse
+     */
     @Override
     public CompletableFuture<ExecuteSparkStatementResponse> executeSparkStatement(ExecuteSparkStatementRequest request) {
         try {
@@ -136,6 +148,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetJobAttemptLog  GetJobAttemptLogRequest
+     * @return GetJobAttemptLogResponse
+     */
     @Override
     public CompletableFuture<GetJobAttemptLogResponse> getJobAttemptLog(GetJobAttemptLogRequest request) {
         try {
@@ -150,6 +166,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetJobDetail  GetJobDetailRequest
+     * @return GetJobDetailResponse
+     */
     @Override
     public CompletableFuture<GetJobDetailResponse> getJobDetail(GetJobDetailRequest request) {
         try {
@@ -164,6 +184,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetJobLog  GetJobLogRequest
+     * @return GetJobLogResponse
+     */
     @Override
     public CompletableFuture<GetJobLogResponse> getJobLog(GetJobLogRequest request) {
         try {
@@ -178,6 +202,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetJobStatus  GetJobStatusRequest
+     * @return GetJobStatusResponse
+     */
     @Override
     public CompletableFuture<GetJobStatusResponse> getJobStatus(GetJobStatusRequest request) {
         try {
@@ -192,6 +220,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSparkSessionState  GetSparkSessionStateRequest
+     * @return GetSparkSessionStateResponse
+     */
     @Override
     public CompletableFuture<GetSparkSessionStateResponse> getSparkSessionState(GetSparkSessionStateRequest request) {
         try {
@@ -206,6 +238,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSparkStatement  GetSparkStatementRequest
+     * @return GetSparkStatementResponse
+     */
     @Override
     public CompletableFuture<GetSparkStatementResponse> getSparkStatement(GetSparkStatementRequest request) {
         try {
@@ -220,6 +256,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of KillSparkJob  KillSparkJobRequest
+     * @return KillSparkJobResponse
+     */
     @Override
     public CompletableFuture<KillSparkJobResponse> killSparkJob(KillSparkJobRequest request) {
         try {
@@ -234,6 +274,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSparkJob  ListSparkJobRequest
+     * @return ListSparkJobResponse
+     */
     @Override
     public CompletableFuture<ListSparkJobResponse> listSparkJob(ListSparkJobRequest request) {
         try {
@@ -248,6 +292,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSparkJobAttempt  ListSparkJobAttemptRequest
+     * @return ListSparkJobAttemptResponse
+     */
     @Override
     public CompletableFuture<ListSparkJobAttemptResponse> listSparkJobAttempt(ListSparkJobAttemptRequest request) {
         try {
@@ -262,6 +310,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSparkStatements  ListSparkStatementsRequest
+     * @return ListSparkStatementsResponse
+     */
     @Override
     public CompletableFuture<ListSparkStatementsResponse> listSparkStatements(ListSparkStatementsRequest request) {
         try {
@@ -276,6 +328,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ReleaseInstance  ReleaseInstanceRequest
+     * @return ReleaseInstanceResponse
+     */
     @Override
     public CompletableFuture<ReleaseInstanceResponse> releaseInstance(ReleaseInstanceRequest request) {
         try {
@@ -290,6 +346,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitSparkJob  SubmitSparkJobRequest
+     * @return SubmitSparkJobResponse
+     */
     @Override
     public CompletableFuture<SubmitSparkJobResponse> submitSparkJob(SubmitSparkJobRequest request) {
         try {
@@ -304,6 +364,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitSparkSQL  SubmitSparkSQLRequest
+     * @return SubmitSparkSQLResponse
+     */
     @Override
     public CompletableFuture<SubmitSparkSQLResponse> submitSparkSQL(SubmitSparkSQLRequest request) {
         try {
@@ -318,6 +382,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ValidateVirtualClusterName  ValidateVirtualClusterNameRequest
+     * @return ValidateVirtualClusterNameResponse
+     */
     @Override
     public CompletableFuture<ValidateVirtualClusterNameResponse> validateVirtualClusterName(ValidateVirtualClusterNameRequest request) {
         try {

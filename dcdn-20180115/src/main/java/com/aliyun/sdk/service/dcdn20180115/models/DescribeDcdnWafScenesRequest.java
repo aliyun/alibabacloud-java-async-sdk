@@ -1,19 +1,19 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnWafScenesRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnWafScenesRequest</p>
  */
 public class DescribeDcdnWafScenesRequest extends Request {
-    @Query
-    @NameInMap("DefenseScenes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefenseScenes")
     private String defenseScenes;
 
     private DescribeDcdnWafScenesRequest(Builder builder) {
@@ -54,17 +54,21 @@ public class DescribeDcdnWafScenesRequest extends Request {
         } 
 
         /**
-         * The types of the protection policies that you want to query. Separate multiple types with commas (,). Valid values:
-         * <p>
+         * <p>The types of the protection policies that you want to query. Separate multiple types with commas (,). Valid values:</p>
+         * <ul>
+         * <li>waf_group: basic web protection</li>
+         * <li>custom_acl: custom protection</li>
+         * <li>whitelist: IP address whitelist</li>
+         * <li>ip_blacklist: IP address blacklist</li>
+         * <li>region_block: region blacklist</li>
+         * <li>bot: bot management</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you do not set this parameter, all types of protection policies are queried.</p>
+         * </blockquote>
          * 
-         * *   waf_group: basic web protection
-         * *   custom_acl: custom protection
-         * *   whitelist: IP address whitelist
-         * *   ip_blacklist: IP address blacklist
-         * *   region_block: region blacklist
-         * *   bot: bot management
-         * 
-         * > If you do not set this parameter, all types of protection policies are queried.
+         * <strong>example:</strong>
+         * <p>waf_group,custom_acl,whitelist</p>
          */
         public Builder defenseScenes(String defenseScenes) {
             this.putQueryParameter("DefenseScenes", defenseScenes);

@@ -1,66 +1,71 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTrFirewallsV2DetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTrFirewallsV2DetailResponseBody</p>
  */
 public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
-    @NameInMap("CenId")
+    @com.aliyun.core.annotation.NameInMap("CenId")
     private String cenId;
 
-    @NameInMap("FirewallDescription")
+    @com.aliyun.core.annotation.NameInMap("FirewallDescription")
     private String firewallDescription;
 
-    @NameInMap("FirewallEniId")
+    @com.aliyun.core.annotation.NameInMap("FirewallEniId")
     private String firewallEniId;
 
-    @NameInMap("FirewallEniVpcId")
+    @com.aliyun.core.annotation.NameInMap("FirewallEniVpcId")
     private String firewallEniVpcId;
 
-    @NameInMap("FirewallEniVswitchId")
+    @com.aliyun.core.annotation.NameInMap("FirewallEniVswitchId")
     private String firewallEniVswitchId;
 
-    @NameInMap("FirewallId")
+    @com.aliyun.core.annotation.NameInMap("FirewallId")
     private String firewallId;
 
-    @NameInMap("FirewallName")
+    @com.aliyun.core.annotation.NameInMap("FirewallName")
     private String firewallName;
 
-    @NameInMap("FirewallStatus")
+    @com.aliyun.core.annotation.NameInMap("FirewallStatus")
     private String firewallStatus;
 
-    @NameInMap("FirewallSubnetCidr")
+    @com.aliyun.core.annotation.NameInMap("FirewallSubnetCidr")
     private String firewallSubnetCidr;
 
-    @NameInMap("FirewallSwitchStatus")
+    @com.aliyun.core.annotation.NameInMap("FirewallSwitchStatus")
     private String firewallSwitchStatus;
 
-    @NameInMap("FirewallVpcCidr")
+    @com.aliyun.core.annotation.NameInMap("FirewallVpcCidr")
     private String firewallVpcCidr;
 
-    @NameInMap("RegionNo")
+    @com.aliyun.core.annotation.NameInMap("RegionNo")
     private String regionNo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RouteMode")
+    @com.aliyun.core.annotation.NameInMap("RouteMode")
     private String routeMode;
 
-    @NameInMap("TrAttachmentMasterCidr")
+    @com.aliyun.core.annotation.NameInMap("TrAttachmentMasterCidr")
     private String trAttachmentMasterCidr;
 
-    @NameInMap("TrAttachmentSlaveCidr")
+    @com.aliyun.core.annotation.NameInMap("TrAttachmentSlaveCidr")
     private String trAttachmentSlaveCidr;
 
-    @NameInMap("TransitRouterId")
+    @com.aliyun.core.annotation.NameInMap("TransitRouterId")
     private String transitRouterId;
 
     private DescribeTrFirewallsV2DetailResponseBody(Builder builder) {
@@ -230,7 +235,10 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         private String transitRouterId; 
 
         /**
-         * The ID of the Cloud Enterprise Network (CEN) instance.
+         * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-37nddhri7jf0d2****</p>
          */
         public Builder cenId(String cenId) {
             this.cenId = cenId;
@@ -238,7 +246,10 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the VPC firewall.
+         * <p>The description of the VPC firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC Firewall</p>
          */
         public Builder firewallDescription(String firewallDescription) {
             this.firewallDescription = firewallDescription;
@@ -246,7 +257,10 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the Elastic Network Interface (ENI) with which the VPC firewall is associated.
+         * <p>The ID of the Elastic Network Interface (ENI) with which the VPC firewall is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-uf621u00nafypeex****</p>
          */
         public Builder firewallEniId(String firewallEniId) {
             this.firewallEniId = firewallEniId;
@@ -254,7 +268,10 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the VPC to which the ENI is attached.
+         * <p>The ID of the VPC to which the ENI is attached.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2zeppcci782zeh2bk****</p>
          */
         public Builder firewallEniVpcId(String firewallEniVpcId) {
             this.firewallEniVpcId = firewallEniVpcId;
@@ -262,7 +279,10 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the vSwitch with which the ENI is associated.
+         * <p>The ID of the vSwitch with which the ENI is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-uf6ptq1kl1c1d9pw9****</p>
          */
         public Builder firewallEniVswitchId(String firewallEniVswitchId) {
             this.firewallEniVswitchId = firewallEniVswitchId;
@@ -270,7 +290,10 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         }
 
         /**
-         * The instance ID of the VPC firewall.
+         * <p>The instance ID of the VPC firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vfw-tr-9c7c711abdfa4d80****</p>
          */
         public Builder firewallId(String firewallId) {
             this.firewallId = firewallId;
@@ -278,7 +301,10 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the VPC firewall.
+         * <p>The name of the VPC firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloudfirewall-manual</p>
          */
         public Builder firewallName(String firewallName) {
             this.firewallName = firewallName;
@@ -286,12 +312,15 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the VPC firewall. Valid values:
-         * <p>
+         * <p>The status of the VPC firewall. Valid values:</p>
+         * <ul>
+         * <li>Creating</li>
+         * <li>Deleting</li>
+         * <li>Ready</li>
+         * </ul>
          * 
-         * *   Creating
-         * *   Deleting
-         * *   Ready
+         * <strong>example:</strong>
+         * <p>Ready</p>
          */
         public Builder firewallStatus(String firewallStatus) {
             this.firewallStatus = firewallStatus;
@@ -299,7 +328,10 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         }
 
         /**
-         * The subnet CIDR block of the VPC in which the ENI of the firewall is stored in automatic mode.
+         * <p>The subnet CIDR block of the VPC in which the ENI of the firewall is stored in automatic mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.1.0/24</p>
          */
         public Builder firewallSubnetCidr(String firewallSubnetCidr) {
             this.firewallSubnetCidr = firewallSubnetCidr;
@@ -307,18 +339,22 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the VPC firewall. Valid values:
-         * <p>
+         * <p>The status of the VPC firewall. Valid values:</p>
+         * <ul>
+         * <li><strong>opened</strong>: The VPC firewall is enabled.</li>
+         * <li><strong>closed</strong>: The VPC firewall is disabled.</li>
+         * <li><strong>notconfigured</strong>: The VPC firewall is not created.</li>
+         * <li><strong>configured</strong>: The VPC firewall is created but is not enabled.</li>
+         * <li><strong>creating</strong>: The VPC firewall is being created.</li>
+         * <li><strong>opening</strong>: The VPC firewall is being enabled.</li>
+         * <li><strong>deleting</strong>: The VPC firewall is being deleted.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you do not specify this parameter, VPC firewalls in all states are queried.</p>
+         * </blockquote>
          * 
-         * *   **opened**: The VPC firewall is enabled.
-         * *   **closed**: The VPC firewall is disabled.
-         * *   **notconfigured**: The VPC firewall is not created.
-         * *   **configured**: The VPC firewall is created but is not enabled.
-         * *   **creating**: The VPC firewall is being created.
-         * *   **opening**: The VPC firewall is being enabled.
-         * *   **deleting**: The VPC firewall is being deleted.
-         * 
-         * > If you do not specify this parameter, VPC firewalls in all states are queried.
+         * <strong>example:</strong>
+         * <p>opened</p>
          */
         public Builder firewallSwitchStatus(String firewallSwitchStatus) {
             this.firewallSwitchStatus = firewallSwitchStatus;
@@ -326,7 +362,10 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         }
 
         /**
-         * The CIDR block that is allocated to the VPC created for the VPC firewall in automatic mode.
+         * <p>The CIDR block that is allocated to the VPC created for the VPC firewall in automatic mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.0/16</p>
          */
         public Builder firewallVpcCidr(String firewallVpcCidr) {
             this.firewallVpcCidr = firewallVpcCidr;
@@ -334,7 +373,10 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the transit router.
+         * <p>The region ID of the transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionNo(String regionNo) {
             this.regionNo = regionNo;
@@ -342,7 +384,10 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7E53A7FB-3EB9-5E33-8E50-B8F417D1E02B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -350,11 +395,14 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         }
 
         /**
-         * The routing mode of the VPC firewall. Valid values:
-         * <p>
+         * <p>The routing mode of the VPC firewall. Valid values:</p>
+         * <ul>
+         * <li><strong>managed</strong>: automatic mode</li>
+         * <li><strong>manual</strong>: manual mode</li>
+         * </ul>
          * 
-         * *   **managed**: automatic mode
-         * *   **manual**: manual mode
+         * <strong>example:</strong>
+         * <p>managed</p>
          */
         public Builder routeMode(String routeMode) {
             this.routeMode = routeMode;
@@ -362,7 +410,10 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         }
 
         /**
-         * The primary subnet CIDR block that the VPC uses to connect to the transit router in automatic mode.
+         * <p>The primary subnet CIDR block that the VPC uses to connect to the transit router in automatic mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.2.0/24</p>
          */
         public Builder trAttachmentMasterCidr(String trAttachmentMasterCidr) {
             this.trAttachmentMasterCidr = trAttachmentMasterCidr;
@@ -370,7 +421,10 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         }
 
         /**
-         * The secondary subnet CIDR block that the VPC uses to connect to the transit router in automatic mode.
+         * <p>The secondary subnet CIDR block that the VPC uses to connect to the transit router in automatic mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.3.0/24</p>
          */
         public Builder trAttachmentSlaveCidr(String trAttachmentSlaveCidr) {
             this.trAttachmentSlaveCidr = trAttachmentSlaveCidr;
@@ -378,7 +432,10 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the transit router.
+         * <p>The ID of the transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-wz9y8sgug8b1xb416****</p>
          */
         public Builder transitRouterId(String transitRouterId) {
             this.transitRouterId = transitRouterId;

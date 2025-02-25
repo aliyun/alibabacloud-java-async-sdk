@@ -1,60 +1,60 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTairInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateTairInstanceResponseBody</p>
  */
 public class CreateTairInstanceResponseBody extends TeaModel {
-    @NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
     private Long bandwidth;
 
-    @NameInMap("ChargeType")
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
 
-    @NameInMap("Config")
+    @com.aliyun.core.annotation.NameInMap("Config")
     private String config;
 
-    @NameInMap("ConnectionDomain")
+    @com.aliyun.core.annotation.NameInMap("ConnectionDomain")
     private String connectionDomain;
 
-    @NameInMap("Connections")
+    @com.aliyun.core.annotation.NameInMap("Connections")
     private Long connections;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @NameInMap("InstanceStatus")
+    @com.aliyun.core.annotation.NameInMap("InstanceStatus")
     private String instanceStatus;
 
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private Long orderId;
 
-    @NameInMap("Port")
+    @com.aliyun.core.annotation.NameInMap("Port")
     private Integer port;
 
-    @NameInMap("QPS")
+    @com.aliyun.core.annotation.NameInMap("QPS")
     private Long QPS;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private CreateTairInstanceResponseBody(Builder builder) {
@@ -206,7 +206,10 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         private String zoneId; 
 
         /**
-         * The maximum bandwidth of the instance. Unit: MB/s.
+         * <p>The maximum bandwidth of the instance. Unit: MB/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>96</p>
          */
         public Builder bandwidth(Long bandwidth) {
             this.bandwidth = bandwidth;
@@ -214,11 +217,14 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The billing method of the instance. Valid values:
-         * <p>
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>PrePaid</strong>: subscription</li>
+         * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+         * </ul>
          * 
-         * *   **PrePaid**: subscription
-         * *   **PostPaid**: pay-as-you-go
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.chargeType = chargeType;
@@ -226,7 +232,10 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The detailed configurations of the instance. The value is a JSON string. For more information about the parameter description, see [Modify the parameters of an ApsaraDB for Redis instance](~~43885~~).
+         * <p>The detailed configurations of the instance. The value is a JSON string. For more information about the parameter description, see <a href="https://help.aliyun.com/document_detail/43885.html">Modify the parameters of an ApsaraDB for Redis instance</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;EvictionPolicy&quot;:&quot;volatile-lru&quot;,&quot;hash-max-ziplist-entries&quot;:512,&quot;zset-max-ziplist-entries&quot;:128,&quot;list-max-ziplist-entries&quot;:512,&quot;list-max-ziplist-value&quot;:64,&quot;zset-max-ziplist-value&quot;:64,&quot;set-max-intset-entries&quot;:512,&quot;hash-max-ziplist-value&quot;:64}</p>
          */
         public Builder config(String config) {
             this.config = config;
@@ -234,7 +243,10 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The internal endpoint of the instance.
+         * <p>The internal endpoint of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp13ac3d047b****.tairpena.rds.aliyuncs.com</p>
          */
         public Builder connectionDomain(String connectionDomain) {
             this.connectionDomain = connectionDomain;
@@ -242,7 +254,10 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of connections supported by the instance.
+         * <p>The maximum number of connections supported by the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder connections(Long connections) {
             this.connections = connections;
@@ -250,7 +265,10 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp13ac3d047b****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -258,12 +276,12 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the instance.
-         * <p>
+         * <p>The name of the instance.</p>
+         * <p>**</p>
+         * <p>This parameter is returned only if the <strong>InstanceName</strong> parameter is specified in the request.</p>
          * 
-         * **
-         * 
-         * This parameter is returned only if the **InstanceName** parameter is specified in the request.
+         * <strong>example:</strong>
+         * <p>redistest</p>
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -271,7 +289,10 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The state of the instance. The return value is **Creating**.
+         * <p>The state of the instance. The return value is <strong>Creating</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Creating</p>
          */
         public Builder instanceStatus(String instanceStatus) {
             this.instanceStatus = instanceStatus;
@@ -279,7 +300,10 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2084452111111</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -287,7 +311,10 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The port number that is used to connect to the instance.
+         * <p>The port number that is used to connect to the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6379</p>
          */
         public Builder port(Integer port) {
             this.port = port;
@@ -295,7 +322,10 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of read and write operations that can be processed by the instance per second. The value is a theoretical value.
+         * <p>The maximum number of read and write operations that can be processed by the instance per second. The value is a theoretical value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000</p>
          */
         public Builder QPS(Long QPS) {
             this.QPS = QPS;
@@ -303,7 +333,10 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -311,7 +344,10 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12123216-4B00-4378-BE4B-08005BFC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -319,7 +355,10 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task.
+         * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -327,7 +366,10 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The zone ID of the instance.
+         * <p>The zone ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;

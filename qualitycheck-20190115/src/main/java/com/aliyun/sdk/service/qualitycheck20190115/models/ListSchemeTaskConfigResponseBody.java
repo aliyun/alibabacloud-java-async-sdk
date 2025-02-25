@@ -1,54 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSchemeTaskConfigResponseBody} extends {@link TeaModel}
  *
  * <p>ListSchemeTaskConfigResponseBody</p>
  */
 public class ListSchemeTaskConfigResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("LastDataId")
+    @com.aliyun.core.annotation.NameInMap("LastDataId")
     private String lastDataId;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Messages")
+    @com.aliyun.core.annotation.NameInMap("Messages")
     private Messages messages;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultCountId")
+    @com.aliyun.core.annotation.NameInMap("ResultCountId")
     private String resultCountId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListSchemeTaskConfigResponseBody(Builder builder) {
@@ -291,9 +296,15 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSchemeTaskConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSchemeTaskConfigResponseBody</p>
+     */
     public static class ListObject extends TeaModel {
-        @NameInMap("ListObject")
-        private java.util.List < ? > listObject;
+        @com.aliyun.core.annotation.NameInMap("ListObject")
+        private java.util.List<?> listObject;
 
         private ListObject(Builder builder) {
             this.listObject = builder.listObject;
@@ -310,17 +321,17 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         /**
          * @return listObject
          */
-        public java.util.List < ? > getListObject() {
+        public java.util.List<?> getListObject() {
             return this.listObject;
         }
 
         public static final class Builder {
-            private java.util.List < ? > listObject; 
+            private java.util.List<?> listObject; 
 
             /**
              * ListObject.
              */
-            public Builder listObject(java.util.List < ? > listObject) {
+            public Builder listObject(java.util.List<?> listObject) {
                 this.listObject = listObject;
                 return this;
             }
@@ -332,20 +343,26 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSchemeTaskConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSchemeTaskConfigResponseBody</p>
+     */
     public static class AssignConfigContest extends TeaModel {
-        @NameInMap("DataType")
+        @com.aliyun.core.annotation.NameInMap("DataType")
         private Integer dataType;
 
-        @NameInMap("ListObject")
+        @com.aliyun.core.annotation.NameInMap("ListObject")
         private ListObject listObject;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Symbol")
+        @com.aliyun.core.annotation.NameInMap("Symbol")
         private Integer symbol;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private AssignConfigContest(Builder builder) {
@@ -453,9 +470,15 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSchemeTaskConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSchemeTaskConfigResponseBody</p>
+     */
     public static class AssignConfigContests extends TeaModel {
-        @NameInMap("AssignConfigContest")
-        private java.util.List < AssignConfigContest> assignConfigContest;
+        @com.aliyun.core.annotation.NameInMap("AssignConfigContest")
+        private java.util.List<AssignConfigContest> assignConfigContest;
 
         private AssignConfigContests(Builder builder) {
             this.assignConfigContest = builder.assignConfigContest;
@@ -472,17 +495,17 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         /**
          * @return assignConfigContest
          */
-        public java.util.List < AssignConfigContest> getAssignConfigContest() {
+        public java.util.List<AssignConfigContest> getAssignConfigContest() {
             return this.assignConfigContest;
         }
 
         public static final class Builder {
-            private java.util.List < AssignConfigContest> assignConfigContest; 
+            private java.util.List<AssignConfigContest> assignConfigContest; 
 
             /**
              * AssignConfigContest.
              */
-            public Builder assignConfigContest(java.util.List < AssignConfigContest> assignConfigContest) {
+            public Builder assignConfigContest(java.util.List<AssignConfigContest> assignConfigContest) {
                 this.assignConfigContest = assignConfigContest;
                 return this;
             }
@@ -494,8 +517,14 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSchemeTaskConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSchemeTaskConfigResponseBody</p>
+     */
     public static class AssignConfig extends TeaModel {
-        @NameInMap("AssignConfigContests")
+        @com.aliyun.core.annotation.NameInMap("AssignConfigContests")
         private AssignConfigContests assignConfigContests;
 
         private AssignConfig(Builder builder) {
@@ -535,9 +564,15 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSchemeTaskConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSchemeTaskConfigResponseBody</p>
+     */
     public static class AssignConfigs extends TeaModel {
-        @NameInMap("AssignConfig")
-        private java.util.List < AssignConfig> assignConfig;
+        @com.aliyun.core.annotation.NameInMap("AssignConfig")
+        private java.util.List<AssignConfig> assignConfig;
 
         private AssignConfigs(Builder builder) {
             this.assignConfig = builder.assignConfig;
@@ -554,17 +589,17 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         /**
          * @return assignConfig
          */
-        public java.util.List < AssignConfig> getAssignConfig() {
+        public java.util.List<AssignConfig> getAssignConfig() {
             return this.assignConfig;
         }
 
         public static final class Builder {
-            private java.util.List < AssignConfig> assignConfig; 
+            private java.util.List<AssignConfig> assignConfig; 
 
             /**
              * AssignConfig.
              */
-            public Builder assignConfig(java.util.List < AssignConfig> assignConfig) {
+            public Builder assignConfig(java.util.List<AssignConfig> assignConfig) {
                 this.assignConfig = assignConfig;
                 return this;
             }
@@ -576,17 +611,23 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSchemeTaskConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSchemeTaskConfigResponseBody</p>
+     */
     public static class DataConfig extends TeaModel {
-        @NameInMap("AssignConfigs")
+        @com.aliyun.core.annotation.NameInMap("AssignConfigs")
         private AssignConfigs assignConfigs;
 
-        @NameInMap("DataSets")
+        @com.aliyun.core.annotation.NameInMap("DataSets")
         private String dataSets;
 
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private Integer index;
 
-        @NameInMap("ResultParam")
+        @com.aliyun.core.annotation.NameInMap("ResultParam")
         private String resultParam;
 
         private DataConfig(Builder builder) {
@@ -677,9 +718,15 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSchemeTaskConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSchemeTaskConfigResponseBody</p>
+     */
     public static class SchemeIdList extends TeaModel {
-        @NameInMap("SchemeIdList")
-        private java.util.List < Long > schemeIdList;
+        @com.aliyun.core.annotation.NameInMap("SchemeIdList")
+        private java.util.List<Long> schemeIdList;
 
         private SchemeIdList(Builder builder) {
             this.schemeIdList = builder.schemeIdList;
@@ -696,17 +743,17 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         /**
          * @return schemeIdList
          */
-        public java.util.List < Long > getSchemeIdList() {
+        public java.util.List<Long> getSchemeIdList() {
             return this.schemeIdList;
         }
 
         public static final class Builder {
-            private java.util.List < Long > schemeIdList; 
+            private java.util.List<Long> schemeIdList; 
 
             /**
              * SchemeIdList.
              */
-            public Builder schemeIdList(java.util.List < Long > schemeIdList) {
+            public Builder schemeIdList(java.util.List<Long> schemeIdList) {
                 this.schemeIdList = schemeIdList;
                 return this;
             }
@@ -718,11 +765,17 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSchemeTaskConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSchemeTaskConfigResponseBody</p>
+     */
     public static class SchemeList extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("SchemeId")
+        @com.aliyun.core.annotation.NameInMap("SchemeId")
         private Long schemeId;
 
         private SchemeList(Builder builder) {
@@ -779,9 +832,15 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSchemeTaskConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSchemeTaskConfigResponseBody</p>
+     */
     public static class DataSchemeList extends TeaModel {
-        @NameInMap("SchemeList")
-        private java.util.List < SchemeList> schemeList;
+        @com.aliyun.core.annotation.NameInMap("SchemeList")
+        private java.util.List<SchemeList> schemeList;
 
         private DataSchemeList(Builder builder) {
             this.schemeList = builder.schemeList;
@@ -798,17 +857,17 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         /**
          * @return schemeList
          */
-        public java.util.List < SchemeList> getSchemeList() {
+        public java.util.List<SchemeList> getSchemeList() {
             return this.schemeList;
         }
 
         public static final class Builder {
-            private java.util.List < SchemeList> schemeList; 
+            private java.util.List<SchemeList> schemeList; 
 
             /**
              * SchemeList.
              */
-            public Builder schemeList(java.util.List < SchemeList> schemeList) {
+            public Builder schemeList(java.util.List<SchemeList> schemeList) {
                 this.schemeList = schemeList;
                 return this;
             }
@@ -820,87 +879,97 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSchemeTaskConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSchemeTaskConfigResponseBody</p>
+     */
     public static class DataData extends TeaModel {
-        @NameInMap("AsrTaskPriority")
+        @com.aliyun.core.annotation.NameInMap("AsrTaskPriority")
         private Integer asrTaskPriority;
 
-        @NameInMap("AssignType")
+        @com.aliyun.core.annotation.NameInMap("AsrVersion")
+        private Integer asrVersion;
+
+        @com.aliyun.core.annotation.NameInMap("AssignType")
         private Integer assignType;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateUser")
+        @com.aliyun.core.annotation.NameInMap("CreateUser")
         private Long createUser;
 
-        @NameInMap("DataConfig")
+        @com.aliyun.core.annotation.NameInMap("DataConfig")
         private DataConfig dataConfig;
 
-        @NameInMap("FinishRate")
+        @com.aliyun.core.annotation.NameInMap("FinishRate")
         private Double finishRate;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("ManualReview")
+        @com.aliyun.core.annotation.NameInMap("ManualReview")
         private Integer manualReview;
 
-        @NameInMap("ModeCustomizationId")
+        @com.aliyun.core.annotation.NameInMap("ModeCustomizationId")
         private String modeCustomizationId;
 
-        @NameInMap("ModelName")
+        @com.aliyun.core.annotation.NameInMap("ModelName")
         private String modelName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NumberExecuting")
+        @com.aliyun.core.annotation.NameInMap("NumberExecuting")
         private Integer numberExecuting;
 
-        @NameInMap("NumberFail")
+        @com.aliyun.core.annotation.NameInMap("NumberFail")
         private Integer numberFail;
 
-        @NameInMap("NumberSuccess")
+        @com.aliyun.core.annotation.NameInMap("NumberSuccess")
         private Integer numberSuccess;
 
-        @NameInMap("NumberSum")
+        @com.aliyun.core.annotation.NameInMap("NumberSum")
         private Integer numberSum;
 
-        @NameInMap("SchemeIdList")
+        @com.aliyun.core.annotation.NameInMap("SchemeIdList")
         private SchemeIdList schemeIdList;
 
-        @NameInMap("SchemeList")
+        @com.aliyun.core.annotation.NameInMap("SchemeList")
         private DataSchemeList schemeList;
 
-        @NameInMap("SchemeTaskConfigId")
+        @com.aliyun.core.annotation.NameInMap("SchemeTaskConfigId")
         private Long schemeTaskConfigId;
 
-        @NameInMap("SourceDataType")
+        @com.aliyun.core.annotation.NameInMap("SourceDataType")
         private Integer sourceDataType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("UpdateUser")
+        @com.aliyun.core.annotation.NameInMap("UpdateUser")
         private Long updateUser;
 
-        @NameInMap("UserGroup")
+        @com.aliyun.core.annotation.NameInMap("UserGroup")
         private String userGroup;
 
-        @NameInMap("VocabId")
+        @com.aliyun.core.annotation.NameInMap("VocabId")
         private String vocabId;
 
-        @NameInMap("VocabName")
+        @com.aliyun.core.annotation.NameInMap("VocabName")
         private String vocabName;
 
         private DataData(Builder builder) {
             this.asrTaskPriority = builder.asrTaskPriority;
+            this.asrVersion = builder.asrVersion;
             this.assignType = builder.assignType;
             this.createTime = builder.createTime;
             this.createUser = builder.createUser;
@@ -941,6 +1010,13 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
          */
         public Integer getAsrTaskPriority() {
             return this.asrTaskPriority;
+        }
+
+        /**
+         * @return asrVersion
+         */
+        public Integer getAsrVersion() {
+            return this.asrVersion;
         }
 
         /**
@@ -1120,6 +1196,7 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer asrTaskPriority; 
+            private Integer asrVersion; 
             private Integer assignType; 
             private String createTime; 
             private Long createUser; 
@@ -1151,6 +1228,14 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
              */
             public Builder asrTaskPriority(Integer asrTaskPriority) {
                 this.asrTaskPriority = asrTaskPriority;
+                return this;
+            }
+
+            /**
+             * AsrVersion.
+             */
+            public Builder asrVersion(Integer asrVersion) {
+                this.asrVersion = asrVersion;
                 return this;
             }
 
@@ -1361,9 +1446,15 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSchemeTaskConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSchemeTaskConfigResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Data")
-        private java.util.List < DataData> data;
+        @com.aliyun.core.annotation.NameInMap("Data")
+        private java.util.List<DataData> data;
 
         private Data(Builder builder) {
             this.data = builder.data;
@@ -1380,17 +1471,17 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < DataData> getData() {
+        public java.util.List<DataData> getData() {
             return this.data;
         }
 
         public static final class Builder {
-            private java.util.List < DataData> data; 
+            private java.util.List<DataData> data; 
 
             /**
              * Data.
              */
-            public Builder data(java.util.List < DataData> data) {
+            public Builder data(java.util.List<DataData> data) {
                 this.data = data;
                 return this;
             }
@@ -1402,9 +1493,15 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSchemeTaskConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSchemeTaskConfigResponseBody</p>
+     */
     public static class Messages extends TeaModel {
-        @NameInMap("Message")
-        private java.util.List < String > message;
+        @com.aliyun.core.annotation.NameInMap("Message")
+        private java.util.List<String> message;
 
         private Messages(Builder builder) {
             this.message = builder.message;
@@ -1421,17 +1518,17 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         /**
          * @return message
          */
-        public java.util.List < String > getMessage() {
+        public java.util.List<String> getMessage() {
             return this.message;
         }
 
         public static final class Builder {
-            private java.util.List < String > message; 
+            private java.util.List<String> message; 
 
             /**
              * Message.
              */
-            public Builder message(java.util.List < String > message) {
+            public Builder message(java.util.List<String> message) {
                 this.message = message;
                 return this;
             }

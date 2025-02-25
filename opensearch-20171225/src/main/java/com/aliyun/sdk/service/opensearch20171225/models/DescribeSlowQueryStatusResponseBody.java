@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSlowQueryStatusResponseBody</p>
  */
 public class DescribeSlowQueryStatusResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
     private DescribeSlowQueryStatusResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeSlowQueryStatusResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("appGroupId")
+        @com.aliyun.core.annotation.NameInMap("appGroupId")
         private String appGroupId;
 
-        @NameInMap("region")
+        @com.aliyun.core.annotation.NameInMap("region")
         private String region;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
         private Result(Builder builder) {

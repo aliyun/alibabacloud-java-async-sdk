@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateProtectedBranchesResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateProtectedBranchesResponseBody</p>
  */
 public class UpdateProtectedBranchesResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private UpdateProtectedBranchesResponseBody(Builder builder) {
@@ -131,32 +136,38 @@ public class UpdateProtectedBranchesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateProtectedBranchesResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateProtectedBranchesResponseBody</p>
+     */
     public static class MergeRequestSetting extends TeaModel {
-        @NameInMap("allowMergeRequestRoles")
-        private java.util.List < Integer > allowMergeRequestRoles;
+        @com.aliyun.core.annotation.NameInMap("allowMergeRequestRoles")
+        private java.util.List<Integer> allowMergeRequestRoles;
 
-        @NameInMap("defaultAssignees")
-        private java.util.List < String > defaultAssignees;
+        @com.aliyun.core.annotation.NameInMap("defaultAssignees")
+        private java.util.List<String> defaultAssignees;
 
-        @NameInMap("isAllowSelfApproval")
+        @com.aliyun.core.annotation.NameInMap("isAllowSelfApproval")
         private Boolean isAllowSelfApproval;
 
-        @NameInMap("isRequireDiscussionProcessed")
+        @com.aliyun.core.annotation.NameInMap("isRequireDiscussionProcessed")
         private Boolean isRequireDiscussionProcessed;
 
-        @NameInMap("isRequired")
+        @com.aliyun.core.annotation.NameInMap("isRequired")
         private Boolean isRequired;
 
-        @NameInMap("isResetApprovalWhenNewPush")
+        @com.aliyun.core.annotation.NameInMap("isResetApprovalWhenNewPush")
         private Boolean isResetApprovalWhenNewPush;
 
-        @NameInMap("minimumApproval")
+        @com.aliyun.core.annotation.NameInMap("minimumApproval")
         private Integer minimumApproval;
 
-        @NameInMap("mrMode")
+        @com.aliyun.core.annotation.NameInMap("mrMode")
         private String mrMode;
 
-        @NameInMap("whiteList")
+        @com.aliyun.core.annotation.NameInMap("whiteList")
         private String whiteList;
 
         private MergeRequestSetting(Builder builder) {
@@ -182,14 +193,14 @@ public class UpdateProtectedBranchesResponseBody extends TeaModel {
         /**
          * @return allowMergeRequestRoles
          */
-        public java.util.List < Integer > getAllowMergeRequestRoles() {
+        public java.util.List<Integer> getAllowMergeRequestRoles() {
             return this.allowMergeRequestRoles;
         }
 
         /**
          * @return defaultAssignees
          */
-        public java.util.List < String > getDefaultAssignees() {
+        public java.util.List<String> getDefaultAssignees() {
             return this.defaultAssignees;
         }
 
@@ -243,8 +254,8 @@ public class UpdateProtectedBranchesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Integer > allowMergeRequestRoles; 
-            private java.util.List < String > defaultAssignees; 
+            private java.util.List<Integer> allowMergeRequestRoles; 
+            private java.util.List<String> defaultAssignees; 
             private Boolean isAllowSelfApproval; 
             private Boolean isRequireDiscussionProcessed; 
             private Boolean isRequired; 
@@ -256,7 +267,7 @@ public class UpdateProtectedBranchesResponseBody extends TeaModel {
             /**
              * allowMergeRequestRoles.
              */
-            public Builder allowMergeRequestRoles(java.util.List < Integer > allowMergeRequestRoles) {
+            public Builder allowMergeRequestRoles(java.util.List<Integer> allowMergeRequestRoles) {
                 this.allowMergeRequestRoles = allowMergeRequestRoles;
                 return this;
             }
@@ -264,7 +275,7 @@ public class UpdateProtectedBranchesResponseBody extends TeaModel {
             /**
              * defaultAssignees.
              */
-            public Builder defaultAssignees(java.util.List < String > defaultAssignees) {
+            public Builder defaultAssignees(java.util.List<String> defaultAssignees) {
                 this.defaultAssignees = defaultAssignees;
                 return this;
             }
@@ -332,11 +343,17 @@ public class UpdateProtectedBranchesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateProtectedBranchesResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateProtectedBranchesResponseBody</p>
+     */
     public static class CheckItems extends TeaModel {
-        @NameInMap("isRequired")
+        @com.aliyun.core.annotation.NameInMap("isRequired")
         private Boolean isRequired;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private CheckItems(Builder builder) {
@@ -393,9 +410,15 @@ public class UpdateProtectedBranchesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateProtectedBranchesResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateProtectedBranchesResponseBody</p>
+     */
     public static class CheckConfig extends TeaModel {
-        @NameInMap("checkItems")
-        private java.util.List < CheckItems> checkItems;
+        @com.aliyun.core.annotation.NameInMap("checkItems")
+        private java.util.List<CheckItems> checkItems;
 
         private CheckConfig(Builder builder) {
             this.checkItems = builder.checkItems;
@@ -412,17 +435,17 @@ public class UpdateProtectedBranchesResponseBody extends TeaModel {
         /**
          * @return checkItems
          */
-        public java.util.List < CheckItems> getCheckItems() {
+        public java.util.List<CheckItems> getCheckItems() {
             return this.checkItems;
         }
 
         public static final class Builder {
-            private java.util.List < CheckItems> checkItems; 
+            private java.util.List<CheckItems> checkItems; 
 
             /**
              * checkItems.
              */
-            public Builder checkItems(java.util.List < CheckItems> checkItems) {
+            public Builder checkItems(java.util.List<CheckItems> checkItems) {
                 this.checkItems = checkItems;
                 return this;
             }
@@ -434,17 +457,23 @@ public class UpdateProtectedBranchesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateProtectedBranchesResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateProtectedBranchesResponseBody</p>
+     */
     public static class CheckTaskQualityConfig extends TeaModel {
-        @NameInMap("bizNo")
+        @com.aliyun.core.annotation.NameInMap("bizNo")
         private String bizNo;
 
-        @NameInMap("enabled")
+        @com.aliyun.core.annotation.NameInMap("enabled")
         private Boolean enabled;
 
-        @NameInMap("message")
+        @com.aliyun.core.annotation.NameInMap("message")
         private String message;
 
-        @NameInMap("taskName")
+        @com.aliyun.core.annotation.NameInMap("taskName")
         private String taskName;
 
         private CheckTaskQualityConfig(Builder builder) {
@@ -535,11 +564,17 @@ public class UpdateProtectedBranchesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateProtectedBranchesResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateProtectedBranchesResponseBody</p>
+     */
     public static class CodeGuidelinesDetection extends TeaModel {
-        @NameInMap("enabled")
+        @com.aliyun.core.annotation.NameInMap("enabled")
         private Boolean enabled;
 
-        @NameInMap("message")
+        @com.aliyun.core.annotation.NameInMap("message")
         private String message;
 
         private CodeGuidelinesDetection(Builder builder) {
@@ -596,11 +631,17 @@ public class UpdateProtectedBranchesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateProtectedBranchesResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateProtectedBranchesResponseBody</p>
+     */
     public static class SensitiveInfoDetection extends TeaModel {
-        @NameInMap("enabled")
+        @com.aliyun.core.annotation.NameInMap("enabled")
         private Boolean enabled;
 
-        @NameInMap("message")
+        @com.aliyun.core.annotation.NameInMap("message")
         private String message;
 
         private SensitiveInfoDetection(Builder builder) {
@@ -657,20 +698,26 @@ public class UpdateProtectedBranchesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateProtectedBranchesResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateProtectedBranchesResponseBody</p>
+     */
     public static class TestSettingDTO extends TeaModel {
-        @NameInMap("checkConfig")
+        @com.aliyun.core.annotation.NameInMap("checkConfig")
         private CheckConfig checkConfig;
 
-        @NameInMap("checkTaskQualityConfig")
+        @com.aliyun.core.annotation.NameInMap("checkTaskQualityConfig")
         private CheckTaskQualityConfig checkTaskQualityConfig;
 
-        @NameInMap("codeGuidelinesDetection")
+        @com.aliyun.core.annotation.NameInMap("codeGuidelinesDetection")
         private CodeGuidelinesDetection codeGuidelinesDetection;
 
-        @NameInMap("isRequired")
+        @com.aliyun.core.annotation.NameInMap("isRequired")
         private Boolean isRequired;
 
-        @NameInMap("sensitiveInfoDetection")
+        @com.aliyun.core.annotation.NameInMap("sensitiveInfoDetection")
         private SensitiveInfoDetection sensitiveInfoDetection;
 
         private TestSettingDTO(Builder builder) {
@@ -778,29 +825,35 @@ public class UpdateProtectedBranchesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateProtectedBranchesResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateProtectedBranchesResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("allowMergeRoles")
-        private java.util.List < Integer > allowMergeRoles;
+        @com.aliyun.core.annotation.NameInMap("allowMergeRoles")
+        private java.util.List<Integer> allowMergeRoles;
 
-        @NameInMap("allowMergeUserIds")
-        private java.util.List < Long > allowMergeUserIds;
+        @com.aliyun.core.annotation.NameInMap("allowMergeUserIds")
+        private java.util.List<Long> allowMergeUserIds;
 
-        @NameInMap("allowPushRoles")
-        private java.util.List < Integer > allowPushRoles;
+        @com.aliyun.core.annotation.NameInMap("allowPushRoles")
+        private java.util.List<Integer> allowPushRoles;
 
-        @NameInMap("allowPushUserIds")
-        private java.util.List < Long > allowPushUserIds;
+        @com.aliyun.core.annotation.NameInMap("allowPushUserIds")
+        private java.util.List<Long> allowPushUserIds;
 
-        @NameInMap("branch")
+        @com.aliyun.core.annotation.NameInMap("branch")
         private String branch;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("mergeRequestSetting")
+        @com.aliyun.core.annotation.NameInMap("mergeRequestSetting")
         private MergeRequestSetting mergeRequestSetting;
 
-        @NameInMap("testSettingDTO")
+        @com.aliyun.core.annotation.NameInMap("testSettingDTO")
         private TestSettingDTO testSettingDTO;
 
         private Result(Builder builder) {
@@ -825,28 +878,28 @@ public class UpdateProtectedBranchesResponseBody extends TeaModel {
         /**
          * @return allowMergeRoles
          */
-        public java.util.List < Integer > getAllowMergeRoles() {
+        public java.util.List<Integer> getAllowMergeRoles() {
             return this.allowMergeRoles;
         }
 
         /**
          * @return allowMergeUserIds
          */
-        public java.util.List < Long > getAllowMergeUserIds() {
+        public java.util.List<Long> getAllowMergeUserIds() {
             return this.allowMergeUserIds;
         }
 
         /**
          * @return allowPushRoles
          */
-        public java.util.List < Integer > getAllowPushRoles() {
+        public java.util.List<Integer> getAllowPushRoles() {
             return this.allowPushRoles;
         }
 
         /**
          * @return allowPushUserIds
          */
-        public java.util.List < Long > getAllowPushUserIds() {
+        public java.util.List<Long> getAllowPushUserIds() {
             return this.allowPushUserIds;
         }
 
@@ -879,10 +932,10 @@ public class UpdateProtectedBranchesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Integer > allowMergeRoles; 
-            private java.util.List < Long > allowMergeUserIds; 
-            private java.util.List < Integer > allowPushRoles; 
-            private java.util.List < Long > allowPushUserIds; 
+            private java.util.List<Integer> allowMergeRoles; 
+            private java.util.List<Long> allowMergeUserIds; 
+            private java.util.List<Integer> allowPushRoles; 
+            private java.util.List<Long> allowPushUserIds; 
             private String branch; 
             private Long id; 
             private MergeRequestSetting mergeRequestSetting; 
@@ -891,7 +944,7 @@ public class UpdateProtectedBranchesResponseBody extends TeaModel {
             /**
              * allowMergeRoles.
              */
-            public Builder allowMergeRoles(java.util.List < Integer > allowMergeRoles) {
+            public Builder allowMergeRoles(java.util.List<Integer> allowMergeRoles) {
                 this.allowMergeRoles = allowMergeRoles;
                 return this;
             }
@@ -899,7 +952,7 @@ public class UpdateProtectedBranchesResponseBody extends TeaModel {
             /**
              * allowMergeUserIds.
              */
-            public Builder allowMergeUserIds(java.util.List < Long > allowMergeUserIds) {
+            public Builder allowMergeUserIds(java.util.List<Long> allowMergeUserIds) {
                 this.allowMergeUserIds = allowMergeUserIds;
                 return this;
             }
@@ -907,7 +960,7 @@ public class UpdateProtectedBranchesResponseBody extends TeaModel {
             /**
              * allowPushRoles.
              */
-            public Builder allowPushRoles(java.util.List < Integer > allowPushRoles) {
+            public Builder allowPushRoles(java.util.List<Integer> allowPushRoles) {
                 this.allowPushRoles = allowPushRoles;
                 return this;
             }
@@ -915,7 +968,7 @@ public class UpdateProtectedBranchesResponseBody extends TeaModel {
             /**
              * allowPushUserIds.
              */
-            public Builder allowPushUserIds(java.util.List < Long > allowPushUserIds) {
+            public Builder allowPushUserIds(java.util.List<Long> allowPushUserIds) {
                 this.allowPushUserIds = allowPushUserIds;
                 return this;
             }

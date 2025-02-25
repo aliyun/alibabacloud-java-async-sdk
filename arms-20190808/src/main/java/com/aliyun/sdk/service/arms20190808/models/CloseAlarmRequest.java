@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CloseAlarmRequest} extends {@link RequestModel}
  *
  * <p>CloseAlarmRequest</p>
  */
 public class CloseAlarmRequest extends Request {
-    @Query
-    @NameInMap("AlarmId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlarmId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long alarmId;
 
-    @Query
-    @NameInMap("HandlerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HandlerId")
     private Long handlerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Solution")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Solution")
     private String solution;
 
     private CloseAlarmRequest(Builder builder) {
@@ -98,7 +103,12 @@ public class CloseAlarmRequest extends Request {
         } 
 
         /**
-         * AlarmId.
+         * <p>The ID of the alert.</p>
+         * <p>For more information about how to obtain the ID of an alert, see <a href="https://help.aliyun.com/document_detail/2612346.html">ListAlertEvents</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>163</p>
          */
         public Builder alarmId(Long alarmId) {
             this.putQueryParameter("AlarmId", alarmId);
@@ -107,7 +117,10 @@ public class CloseAlarmRequest extends Request {
         }
 
         /**
-         * HandlerId.
+         * <p>The ID of the alert handler.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048065</p>
          */
         public Builder handlerId(Long handlerId) {
             this.putQueryParameter("HandlerId", handlerId);
@@ -116,7 +129,11 @@ public class CloseAlarmRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -125,7 +142,10 @@ public class CloseAlarmRequest extends Request {
         }
 
         /**
-         * Solution.
+         * <p>The alert solution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Restart Repair</p>
          */
         public Builder solution(String solution) {
             this.putQueryParameter("Solution", solution);

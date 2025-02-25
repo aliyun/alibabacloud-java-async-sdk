@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryRIUtilizationDetailResponseBody} extends {@link TeaModel}
  *
  * <p>QueryRIUtilizationDetailResponseBody</p>
  */
 public class QueryRIUtilizationDetailResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryRIUtilizationDetailResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,10 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful！</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DF58589C-A06C-4224-8615-7797E6474FA3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,32 +148,38 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryRIUtilizationDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryRIUtilizationDetailResponseBody</p>
+     */
     public static class DetailList extends TeaModel {
-        @NameInMap("DeductDate")
+        @com.aliyun.core.annotation.NameInMap("DeductDate")
         private String deductDate;
 
-        @NameInMap("DeductFactorTotal")
+        @com.aliyun.core.annotation.NameInMap("DeductFactorTotal")
         private Float deductFactorTotal;
 
-        @NameInMap("DeductHours")
+        @com.aliyun.core.annotation.NameInMap("DeductHours")
         private String deductHours;
 
-        @NameInMap("DeductQuantity")
+        @com.aliyun.core.annotation.NameInMap("DeductQuantity")
         private Float deductQuantity;
 
-        @NameInMap("DeductedCommodityCode")
+        @com.aliyun.core.annotation.NameInMap("DeductedCommodityCode")
         private String deductedCommodityCode;
 
-        @NameInMap("DeductedInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DeductedInstanceId")
         private String deductedInstanceId;
 
-        @NameInMap("DeductedProductDetail")
+        @com.aliyun.core.annotation.NameInMap("DeductedProductDetail")
         private String deductedProductDetail;
 
-        @NameInMap("InstanceSpec")
+        @com.aliyun.core.annotation.NameInMap("InstanceSpec")
         private String instanceSpec;
 
-        @NameInMap("RIInstanceId")
+        @com.aliyun.core.annotation.NameInMap("RIInstanceId")
         private String RIInstanceId;
 
         private DetailList(Builder builder) {
@@ -254,7 +277,10 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             private String RIInstanceId; 
 
             /**
-             * The time when the fees are deducted by using the RI.
+             * <p>The time when the fees are deducted by using the RI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-05-23 12:00:00</p>
              */
             public Builder deductDate(String deductDate) {
                 this.deductDate = deductDate;
@@ -262,7 +288,10 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The total amount of computing power of the RI or capacity of SCU in the time period.
+             * <p>The total amount of computing power of the RI or capacity of SCU in the time period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder deductFactorTotal(Float deductFactorTotal) {
                 this.deductFactorTotal = deductFactorTotal;
@@ -270,7 +299,10 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The deduct factor. This parameter is returned only if the RICommodityCode parameter is set to ecsRi.
+             * <p>The deduct factor. This parameter is returned only if the RICommodityCode parameter is set to ecsRi.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24</p>
              */
             public Builder deductHours(String deductHours) {
                 this.deductHours = deductHours;
@@ -278,7 +310,10 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The computing power or capacity of the pay-as-you-go instance whose fees are deducted by using the RI.
+             * <p>The computing power or capacity of the pay-as-you-go instance whose fees are deducted by using the RI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder deductQuantity(Float deductQuantity) {
                 this.deductQuantity = deductQuantity;
@@ -286,7 +321,10 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the service whose fees are deducted by using the RI.
+             * <p>The code of the service whose fees are deducted by using the RI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder deductedCommodityCode(String deductedCommodityCode) {
                 this.deductedCommodityCode = deductedCommodityCode;
@@ -294,7 +332,10 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance whose fees are deducted by using the RI.
+             * <p>The ID of the instance whose fees are deducted by using the RI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>safdffghfgh</p>
              */
             public Builder deductedInstanceId(String deductedInstanceId) {
                 this.deductedInstanceId = deductedInstanceId;
@@ -302,7 +343,10 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service whose fees are deducted by using the RI.
+             * <p>The name of the service whose fees are deducted by using the RI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ApsaraDB RDS</p>
              */
             public Builder deductedProductDetail(String deductedProductDetail) {
                 this.deductedProductDetail = deductedProductDetail;
@@ -310,7 +354,10 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the instance whose fees are deducted by using the RI.
+             * <p>The instance type of the instance whose fees are deducted by using the RI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds.mysql.s3.large</p>
              */
             public Builder instanceSpec(String instanceSpec) {
                 this.instanceSpec = instanceSpec;
@@ -318,7 +365,10 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the RI.
+             * <p>The ID of the RI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>324253645</p>
              */
             public Builder RIInstanceId(String RIInstanceId) {
                 this.RIInstanceId = RIInstanceId;
@@ -332,9 +382,15 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryRIUtilizationDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryRIUtilizationDetailResponseBody</p>
+     */
     public static class DataDetailList extends TeaModel {
-        @NameInMap("DetailList")
-        private java.util.List < DetailList> detailList;
+        @com.aliyun.core.annotation.NameInMap("DetailList")
+        private java.util.List<DetailList> detailList;
 
         private DataDetailList(Builder builder) {
             this.detailList = builder.detailList;
@@ -351,17 +407,17 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
         /**
          * @return detailList
          */
-        public java.util.List < DetailList> getDetailList() {
+        public java.util.List<DetailList> getDetailList() {
             return this.detailList;
         }
 
         public static final class Builder {
-            private java.util.List < DetailList> detailList; 
+            private java.util.List<DetailList> detailList; 
 
             /**
              * DetailList.
              */
-            public Builder detailList(java.util.List < DetailList> detailList) {
+            public Builder detailList(java.util.List<DetailList> detailList) {
                 this.detailList = detailList;
                 return this;
             }
@@ -373,17 +429,23 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryRIUtilizationDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryRIUtilizationDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DetailList")
+        @com.aliyun.core.annotation.NameInMap("DetailList")
         private DataDetailList detailList;
 
-        @NameInMap("PageNum")
+        @com.aliyun.core.annotation.NameInMap("PageNum")
         private Long pageNum;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Long pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private Data(Builder builder) {
@@ -436,7 +498,7 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The usage details of the RI.
+             * <p>The usage details of the RI.</p>
              */
             public Builder detailList(DataDetailList detailList) {
                 this.detailList = detailList;
@@ -444,7 +506,10 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the returned page.
+             * <p>The number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Long pageNum) {
                 this.pageNum = pageNum;
@@ -452,7 +517,10 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -460,7 +528,10 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of returned entries.
+             * <p>The total number of returned entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

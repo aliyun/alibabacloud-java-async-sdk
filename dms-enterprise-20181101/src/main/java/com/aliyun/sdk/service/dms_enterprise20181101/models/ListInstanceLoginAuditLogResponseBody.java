@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceLoginAuditLogResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstanceLoginAuditLogResponseBody</p>
  */
 public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("InstanceLoginAuditLogList")
+    @com.aliyun.core.annotation.NameInMap("InstanceLoginAuditLogList")
     private InstanceLoginAuditLogList instanceLoginAuditLogList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListInstanceLoginAuditLogResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidPageSize</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +114,10 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specified parameter PageSize is not valid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,7 +125,7 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * The logon records of the instance.
+         * <p>The logon records of the instance.</p>
          */
         public Builder instanceLoginAuditLogList(InstanceLoginAuditLogList instanceLoginAuditLogList) {
             this.instanceLoginAuditLogList = instanceLoginAuditLogList;
@@ -122,7 +133,10 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>074CE7C9-4F9C-5B62-89BC-7B4914A3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,11 +144,14 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -142,7 +159,10 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned.
+         * <p>The number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -155,26 +175,32 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstanceLoginAuditLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceLoginAuditLogResponseBody</p>
+     */
     public static class InstanceLoginAuditLog extends TeaModel {
-        @NameInMap("DbUser")
+        @com.aliyun.core.annotation.NameInMap("DbUser")
         private String dbUser;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("OpTime")
+        @com.aliyun.core.annotation.NameInMap("OpTime")
         private String opTime;
 
-        @NameInMap("RequestIp")
+        @com.aliyun.core.annotation.NameInMap("RequestIp")
         private String requestIp;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private InstanceLoginAuditLog(Builder builder) {
@@ -254,7 +280,10 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The database account that is used to log on to the instance.
+             * <p>The database account that is used to log on to the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_User</p>
              */
             public Builder dbUser(String dbUser) {
                 this.dbUser = dbUser;
@@ -262,7 +291,10 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>177****</p>
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -270,7 +302,10 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp144d5ky4l4rli0417****.mysql.rds.aliyuncs.com:3306[rm-bp144d5ky4l4r****]</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -278,7 +313,10 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the user performed an operation on the instance.
+             * <p>The time when the user performed an operation on the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-18 11:13:26</p>
              */
             public Builder opTime(String opTime) {
                 this.opTime = opTime;
@@ -286,7 +324,10 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The source IP address of the request.
+             * <p>The source IP address of the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>117.36.XX.XX,100.104.XX.XX</p>
              */
             public Builder requestIp(String requestIp) {
                 this.requestIp = requestIp;
@@ -294,7 +335,10 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12****</p>
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -302,7 +346,10 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the user.
+             * <p>The alias of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_UserName</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -316,9 +363,15 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstanceLoginAuditLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceLoginAuditLogResponseBody</p>
+     */
     public static class InstanceLoginAuditLogList extends TeaModel {
-        @NameInMap("InstanceLoginAuditLog")
-        private java.util.List < InstanceLoginAuditLog> instanceLoginAuditLog;
+        @com.aliyun.core.annotation.NameInMap("InstanceLoginAuditLog")
+        private java.util.List<InstanceLoginAuditLog> instanceLoginAuditLog;
 
         private InstanceLoginAuditLogList(Builder builder) {
             this.instanceLoginAuditLog = builder.instanceLoginAuditLog;
@@ -335,17 +388,17 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
         /**
          * @return instanceLoginAuditLog
          */
-        public java.util.List < InstanceLoginAuditLog> getInstanceLoginAuditLog() {
+        public java.util.List<InstanceLoginAuditLog> getInstanceLoginAuditLog() {
             return this.instanceLoginAuditLog;
         }
 
         public static final class Builder {
-            private java.util.List < InstanceLoginAuditLog> instanceLoginAuditLog; 
+            private java.util.List<InstanceLoginAuditLog> instanceLoginAuditLog; 
 
             /**
              * InstanceLoginAuditLog.
              */
-            public Builder instanceLoginAuditLog(java.util.List < InstanceLoginAuditLog> instanceLoginAuditLog) {
+            public Builder instanceLoginAuditLog(java.util.List<InstanceLoginAuditLog> instanceLoginAuditLog) {
                 this.instanceLoginAuditLog = instanceLoginAuditLog;
                 return this;
             }

@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PublishRoutineCodeRevisionResponseBody} extends {@link TeaModel}
  *
  * <p>PublishRoutineCodeRevisionResponseBody</p>
  */
 public class PublishRoutineCodeRevisionResponseBody extends TeaModel {
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private java.util.Map < String, ? > content;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private PublishRoutineCodeRevisionResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class PublishRoutineCodeRevisionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The version of the routine code that is published to the specified environment.
+         * <p>The version of the routine code that is published to the specified environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;CodeRevision&quot;: &quot;1620876959997924701&quot;</p>
          */
         public Builder content(java.util.Map < String, ? > content) {
             this.content = content;
@@ -58,7 +61,10 @@ public class PublishRoutineCodeRevisionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A513734D-D17B-411E-864D-XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

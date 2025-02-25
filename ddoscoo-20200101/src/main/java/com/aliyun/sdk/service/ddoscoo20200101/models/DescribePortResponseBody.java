@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePortResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePortResponseBody</p>
  */
 public class DescribePortResponseBody extends TeaModel {
-    @NameInMap("NetworkRules")
-    private java.util.List < NetworkRules> networkRules;
+    @com.aliyun.core.annotation.NameInMap("NetworkRules")
+    private java.util.List<NetworkRules> networkRules;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribePortResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class DescribePortResponseBody extends TeaModel {
     /**
      * @return networkRules
      */
-    public java.util.List < NetworkRules> getNetworkRules() {
+    public java.util.List<NetworkRules> getNetworkRules() {
         return this.networkRules;
     }
 
@@ -57,20 +62,23 @@ public class DescribePortResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < NetworkRules> networkRules; 
+        private java.util.List<NetworkRules> networkRules; 
         private String requestId; 
         private Long totalCount; 
 
         /**
-         * An array that consists of port forwarding rules.
+         * <p>An array that consists of port forwarding rules.</p>
          */
-        public Builder networkRules(java.util.List < NetworkRules> networkRules) {
+        public Builder networkRules(java.util.List<NetworkRules> networkRules) {
             this.networkRules = networkRules;
             return this;
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39499F01-19D9-4EA4-A0E9-C6014BA5CDBE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class DescribePortResponseBody extends TeaModel {
         }
 
         /**
-         * The number of port forwarding rules returned.
+         * <p>The number of port forwarding rules returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -91,24 +102,30 @@ public class DescribePortResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePortResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePortResponseBody</p>
+     */
     public static class NetworkRules extends TeaModel {
-        @NameInMap("BackendPort")
+        @com.aliyun.core.annotation.NameInMap("BackendPort")
         private Integer backendPort;
 
-        @NameInMap("FrontendPort")
+        @com.aliyun.core.annotation.NameInMap("FrontendPort")
         private Integer frontendPort;
 
-        @NameInMap("FrontendProtocol")
+        @com.aliyun.core.annotation.NameInMap("FrontendProtocol")
         private String frontendProtocol;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("IsAutoCreate")
+        @com.aliyun.core.annotation.NameInMap("IsAutoCreate")
         private Boolean isAutoCreate;
 
-        @NameInMap("RealServers")
-        private java.util.List < String > realServers;
+        @com.aliyun.core.annotation.NameInMap("RealServers")
+        private java.util.List<String> realServers;
 
         private NetworkRules(Builder builder) {
             this.backendPort = builder.backendPort;
@@ -165,7 +182,7 @@ public class DescribePortResponseBody extends TeaModel {
         /**
          * @return realServers
          */
-        public java.util.List < String > getRealServers() {
+        public java.util.List<String> getRealServers() {
             return this.realServers;
         }
 
@@ -175,10 +192,13 @@ public class DescribePortResponseBody extends TeaModel {
             private String frontendProtocol; 
             private String instanceId; 
             private Boolean isAutoCreate; 
-            private java.util.List < String > realServers; 
+            private java.util.List<String> realServers; 
 
             /**
-             * The port of the origin server.
+             * <p>The port of the origin server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>55</p>
              */
             public Builder backendPort(Integer backendPort) {
                 this.backendPort = backendPort;
@@ -186,7 +206,10 @@ public class DescribePortResponseBody extends TeaModel {
             }
 
             /**
-             * The forwarding port.
+             * <p>The forwarding port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>55</p>
              */
             public Builder frontendPort(Integer frontendPort) {
                 this.frontendPort = frontendPort;
@@ -194,11 +217,14 @@ public class DescribePortResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the protocol. Valid values:
-             * <p>
+             * <p>The type of the protocol. Valid values:</p>
+             * <ul>
+             * <li><strong>tcp</strong></li>
+             * <li><strong>udp</strong></li>
+             * </ul>
              * 
-             * *   **tcp**
-             * *   **udp**
+             * <strong>example:</strong>
+             * <p>tcp</p>
              */
             public Builder frontendProtocol(String frontendProtocol) {
                 this.frontendProtocol = frontendProtocol;
@@ -206,7 +232,10 @@ public class DescribePortResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance to which the port forwarding rule is applied.
+             * <p>The ID of the instance to which the port forwarding rule is applied.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddoscoo-cn-7e225i41****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -214,11 +243,14 @@ public class DescribePortResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the port forwarding rule is automatically created by the instance. Valid values:
-             * <p>
+             * <p>Indicates whether the port forwarding rule is automatically created by the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isAutoCreate(Boolean isAutoCreate) {
                 this.isAutoCreate = isAutoCreate;
@@ -226,9 +258,9 @@ public class DescribePortResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of IP addresses of origin servers.
+             * <p>An array that consists of IP addresses of origin servers.</p>
              */
-            public Builder realServers(java.util.List < String > realServers) {
+            public Builder realServers(java.util.List<String> realServers) {
                 this.realServers = realServers;
                 return this;
             }

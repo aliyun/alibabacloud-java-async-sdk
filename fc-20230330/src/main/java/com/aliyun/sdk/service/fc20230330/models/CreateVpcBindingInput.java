@@ -1,19 +1,19 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVpcBindingInput} extends {@link TeaModel}
  *
  * <p>CreateVpcBindingInput</p>
  */
 public class CreateVpcBindingInput extends TeaModel {
-    @NameInMap("vpcId")
-    @Validation(required = true, minLength = 1)
+    @com.aliyun.core.annotation.NameInMap("vpcId")
+    @com.aliyun.core.annotation.Validation(required = true, minLength = 1)
     private String vpcId;
 
     private CreateVpcBindingInput(Builder builder) {
@@ -39,7 +39,10 @@ public class CreateVpcBindingInput extends TeaModel {
         private String vpcId; 
 
         /**
-         * vpcId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-8vb8x8dggvr0axxxxxxxx</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;

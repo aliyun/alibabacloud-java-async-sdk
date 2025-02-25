@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInstanceResponseBody</p>
  */
 public class GetInstanceResponseBody extends TeaModel {
-    @NameInMap("ChargeType")
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
 
-    @NameInMap("CommodityCode")
+    @com.aliyun.core.annotation.NameInMap("CommodityCode")
     private String commodityCode;
 
-    @NameInMap("Config")
+    @com.aliyun.core.annotation.NameInMap("Config")
     private Config config;
 
-    @NameInMap("ExpiredTime")
+    @com.aliyun.core.annotation.NameInMap("ExpiredTime")
     private String expiredTime;
 
-    @NameInMap("GmtCreateTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
-    @NameInMap("GmtModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
     private String gmtModifiedTime;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("OperatingTool")
+    private OperatingTool operatingTool;
+
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private GetInstanceResponseBody(Builder builder) {
@@ -53,6 +55,7 @@ public class GetInstanceResponseBody extends TeaModel {
         this.gmtCreateTime = builder.gmtCreateTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
         this.instanceId = builder.instanceId;
+        this.operatingTool = builder.operatingTool;
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
         this.status = builder.status;
@@ -117,6 +120,13 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return operatingTool
+     */
+    public OperatingTool getOperatingTool() {
+        return this.operatingTool;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -152,6 +162,7 @@ public class GetInstanceResponseBody extends TeaModel {
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
         private String instanceId; 
+        private OperatingTool operatingTool; 
         private String regionId; 
         private String requestId; 
         private String status; 
@@ -214,6 +225,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * OperatingTool.
+         */
+        public Builder operatingTool(OperatingTool operatingTool) {
+            this.operatingTool = operatingTool;
+            return this;
+        }
+
+        /**
          * RegionId.
          */
         public Builder regionId(String regionId) {
@@ -252,13 +271,13 @@ public class GetInstanceResponseBody extends TeaModel {
     } 
 
     public static class DataManagements extends TeaModel {
-        @NameInMap("ComponentCode")
+        @com.aliyun.core.annotation.NameInMap("ComponentCode")
         private String componentCode;
 
-        @NameInMap("Meta")
+        @com.aliyun.core.annotation.NameInMap("Meta")
         private java.util.Map < String, ? > meta;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private DataManagements(Builder builder) {
@@ -333,13 +352,13 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
     public static class Engines extends TeaModel {
-        @NameInMap("ComponentCode")
+        @com.aliyun.core.annotation.NameInMap("ComponentCode")
         private String componentCode;
 
-        @NameInMap("Meta")
+        @com.aliyun.core.annotation.NameInMap("Meta")
         private java.util.Map < String, ? > meta;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Engines(Builder builder) {
@@ -414,13 +433,13 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
     public static class Monitors extends TeaModel {
-        @NameInMap("ComponentCode")
+        @com.aliyun.core.annotation.NameInMap("ComponentCode")
         private String componentCode;
 
-        @NameInMap("Meta")
+        @com.aliyun.core.annotation.NameInMap("Meta")
         private java.util.Map < String, ? > meta;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Monitors(Builder builder) {
@@ -495,13 +514,13 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
     public static class Config extends TeaModel {
-        @NameInMap("DataManagements")
+        @com.aliyun.core.annotation.NameInMap("DataManagements")
         private java.util.List < DataManagements> dataManagements;
 
-        @NameInMap("Engines")
+        @com.aliyun.core.annotation.NameInMap("Engines")
         private java.util.List < Engines> engines;
 
-        @NameInMap("Monitors")
+        @com.aliyun.core.annotation.NameInMap("Monitors")
         private java.util.List < Monitors> monitors;
 
         private Config(Builder builder) {
@@ -570,6 +589,47 @@ public class GetInstanceResponseBody extends TeaModel {
 
             public Config build() {
                 return new Config(this);
+            } 
+
+        } 
+
+    }
+    public static class OperatingTool extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("IsEnable")
+        private Boolean isEnable;
+
+        private OperatingTool(Builder builder) {
+            this.isEnable = builder.isEnable;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OperatingTool create() {
+            return builder().build();
+        }
+
+        /**
+         * @return isEnable
+         */
+        public Boolean getIsEnable() {
+            return this.isEnable;
+        }
+
+        public static final class Builder {
+            private Boolean isEnable; 
+
+            /**
+             * IsEnable.
+             */
+            public Builder isEnable(Boolean isEnable) {
+                this.isEnable = isEnable;
+                return this;
+            }
+
+            public OperatingTool build() {
+                return new OperatingTool(this);
             } 
 
         } 

@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGroupRequest} extends {@link RequestModel}
  *
  * <p>UpdateGroupRequest</p>
  */
 public class UpdateGroupRequest extends Request {
-    @Query
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
-    @Query
-    @NameInMap("NewComments")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewComments")
     private String newComments;
 
-    @Query
-    @NameInMap("NewDisplayName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewDisplayName")
     private String newDisplayName;
 
-    @Query
-    @NameInMap("NewGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewGroupName")
     private String newGroupName;
 
     private UpdateGroupRequest(Builder builder) {
@@ -96,7 +101,10 @@ public class UpdateGroupRequest extends Request {
         } 
 
         /**
-         * The name of the RAM user group.
+         * <p>The name of the RAM user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dev-Team</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -105,10 +113,11 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * The new description.
-         * <p>
+         * <p>The new description.</p>
+         * <p>The description can be up to 128 characters in length.</p>
          * 
-         * The value can be up to 128 characters in length.
+         * <strong>example:</strong>
+         * <p>Test-Team</p>
          */
         public Builder newComments(String newComments) {
             this.putQueryParameter("NewComments", newComments);
@@ -117,10 +126,11 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * The new display name of the RAM user group.
-         * <p>
+         * <p>The new display name of the RAM user group.</p>
+         * <p>The name can be up to 24 characters in length.</p>
          * 
-         * The name can be up to 24 characters in length.
+         * <strong>example:</strong>
+         * <p>Test-Team</p>
          */
         public Builder newDisplayName(String newDisplayName) {
             this.putQueryParameter("NewDisplayName", newDisplayName);
@@ -129,10 +139,11 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * The new name of the RAM user group.
-         * <p>
+         * <p>The new name of the RAM user group.</p>
+         * <p>The name can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
          * 
-         * The name can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-).
+         * <strong>example:</strong>
+         * <p>Test-Team</p>
          */
         public Builder newGroupName(String newGroupName) {
             this.putQueryParameter("NewGroupName", newGroupName);

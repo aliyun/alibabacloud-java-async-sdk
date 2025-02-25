@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteRoutineCodeRevisionResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteRoutineCodeRevisionResponseBody</p>
  */
 public class DeleteRoutineCodeRevisionResponseBody extends TeaModel {
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private java.util.Map < String, ? > content;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteRoutineCodeRevisionResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class DeleteRoutineCodeRevisionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The message returned, such as ""Status": "OK"".
+         * <p>The message returned, such as &quot;&quot;Status&quot;: &quot;OK&quot;&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;Status&quot;: &quot;OK&quot;</p>
          */
         public Builder content(java.util.Map < String, ? > content) {
             this.content = content;
@@ -58,7 +61,10 @@ public class DeleteRoutineCodeRevisionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

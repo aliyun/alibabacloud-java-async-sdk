@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link JobSummary} extends {@link TeaModel}
  *
  * <p>JobSummary</p>
  */
 public class JobSummary extends TeaModel {
-    @NameInMap("cancelled")
+    @com.aliyun.core.annotation.NameInMap("cancelled")
     private Integer cancelled;
 
-    @NameInMap("cancelling")
+    @com.aliyun.core.annotation.NameInMap("cancelling")
     private Integer cancelling;
 
-    @NameInMap("failed")
+    @com.aliyun.core.annotation.NameInMap("failed")
     private Integer failed;
 
-    @NameInMap("finished")
+    @com.aliyun.core.annotation.NameInMap("finished")
     private Integer finished;
 
-    @NameInMap("running")
+    @com.aliyun.core.annotation.NameInMap("running")
     private Integer running;
 
-    @NameInMap("starting")
+    @com.aliyun.core.annotation.NameInMap("starting")
     private Integer starting;
 
     private JobSummary(Builder builder) {

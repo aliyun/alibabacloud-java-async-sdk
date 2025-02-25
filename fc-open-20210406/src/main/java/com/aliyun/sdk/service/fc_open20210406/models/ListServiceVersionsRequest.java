@@ -153,7 +153,7 @@ public class ListServiceVersionsRequest extends Request {
         } 
 
         /**
-         * The token used to obtain more results. If the number of resources exceeds the limit, the nextToken parameter is returned. You can include the parameter in subsequent calls to obtain more results. You do not need to provide this parameter in the first call.
+         * The name of the service.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -171,7 +171,7 @@ public class ListServiceVersionsRequest extends Request {
         }
 
         /**
-         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
+         * The time when the function is invoked. The value is in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -180,7 +180,7 @@ public class ListServiceVersionsRequest extends Request {
         }
 
         /**
-         * The maximum number of resources to return. Default value: 20. Maximum value: 100. The number of returned resources is less than or equal to the specified number.
+         * The trace ID of the request for Function Compute API.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -189,7 +189,11 @@ public class ListServiceVersionsRequest extends Request {
         }
 
         /**
-         * The name of the service.
+         * The order in which the returned versions are sorted. Valid values:
+         * <p>
+         * 
+         * *   **FORWARD**: The results are sorted in ascending order.
+         * *   **BACKWARD**: The results are sorted in descending order.
          */
         public Builder direction(String direction) {
             this.putQueryParameter("direction", direction);
@@ -198,7 +202,7 @@ public class ListServiceVersionsRequest extends Request {
         }
 
         /**
-         * The token used to obtain more results. If the number of resources exceeds the limit, the nextToken parameter is returned. You can include the parameter in subsequent calls to obtain more results. You do not need to provide this parameter in the first call.
+         * The maximum number of results to return. Default value: 20. Maximum value: 100. The number of returned configurations is less than or equal to the specified number.
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -207,7 +211,7 @@ public class ListServiceVersionsRequest extends Request {
         }
 
         /**
-         * The description of the service version.
+         * The token required to obtain more results. If the number of layers exceeds the limit, the nextToken parameter is returned. You can include the parameter in subsequent calls to obtain more results. You do not need to provide this parameter in the first call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -216,7 +220,7 @@ public class ListServiceVersionsRequest extends Request {
         }
 
         /**
-         * The time when the service version was created.
+         * The position from which the list begins. Results are sorted based on the version numbers.
          */
         public Builder startKey(String startKey) {
             this.putQueryParameter("startKey", startKey);

@@ -1,61 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSearchSourceCodeRequest} extends {@link RequestModel}
  *
  * <p>ListSearchSourceCodeRequest</p>
  */
 public class ListSearchSourceCodeRequest extends Request {
-    @Body
-    @NameInMap("filePath")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("filePath")
     private FilePath filePath;
 
-    @Body
-    @NameInMap("isCodeBlock")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("isCodeBlock")
     private Boolean isCodeBlock;
 
-    @Body
-    @NameInMap("keyword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("keyword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String keyword;
 
-    @Body
-    @NameInMap("language")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("language")
     private String language;
 
-    @Body
-    @NameInMap("order")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("order")
     private String order;
 
-    @Body
-    @NameInMap("page")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("page")
     private Integer page;
 
-    @Body
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Integer pageSize;
 
-    @Body
-    @NameInMap("repoPath")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("repoPath")
     private RepoPath repoPath;
 
-    @Body
-    @NameInMap("scope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("scope")
     private String scope;
 
-    @Body
-    @NameInMap("sort")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sort")
     private String sort;
 
-    @Query
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
     private ListSearchSourceCodeRequest(Builder builder) {
@@ -214,7 +219,10 @@ public class ListSearchSourceCodeRequest extends Request {
         }
 
         /**
-         * keyword.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyword(String keyword) {
             this.putBodyParameter("keyword", keyword);
@@ -286,7 +294,10 @@ public class ListSearchSourceCodeRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66c0c9fffeb86b450c199fcd</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);
@@ -301,14 +312,20 @@ public class ListSearchSourceCodeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListSearchSourceCodeRequest} extends {@link TeaModel}
+     *
+     * <p>ListSearchSourceCodeRequest</p>
+     */
     public static class FilePath extends TeaModel {
-        @NameInMap("matchType")
+        @com.aliyun.core.annotation.NameInMap("matchType")
         private String matchType;
 
-        @NameInMap("operatorType")
+        @com.aliyun.core.annotation.NameInMap("operatorType")
         private String operatorType;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private FilePath(Builder builder) {
@@ -382,14 +399,20 @@ public class ListSearchSourceCodeRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSearchSourceCodeRequest} extends {@link TeaModel}
+     *
+     * <p>ListSearchSourceCodeRequest</p>
+     */
     public static class RepoPath extends TeaModel {
-        @NameInMap("matchType")
+        @com.aliyun.core.annotation.NameInMap("matchType")
         private String matchType;
 
-        @NameInMap("operatorType")
+        @com.aliyun.core.annotation.NameInMap("operatorType")
         private String operatorType;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private RepoPath(Builder builder) {

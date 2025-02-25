@@ -1958,6 +1958,12 @@ public class DescribeClusterV2ResponseBody extends TeaModel {
         @NameInMap("CreateType")
         private String createType;
 
+        @NameInMap("DataDiskEncrypted")
+        private Boolean dataDiskEncrypted;
+
+        @NameInMap("DataDiskKMSKeyId")
+        private String dataDiskKMSKeyId;
+
         @NameInMap("DepositType")
         private String depositType;
 
@@ -2106,6 +2112,8 @@ public class DescribeClusterV2ResponseBody extends TeaModel {
             this.coreNodeTotal = builder.coreNodeTotal;
             this.createResource = builder.createResource;
             this.createType = builder.createType;
+            this.dataDiskEncrypted = builder.dataDiskEncrypted;
+            this.dataDiskKMSKeyId = builder.dataDiskKMSKeyId;
             this.depositType = builder.depositType;
             this.easEnable = builder.easEnable;
             this.expiredTime = builder.expiredTime;
@@ -2263,6 +2271,20 @@ public class DescribeClusterV2ResponseBody extends TeaModel {
          */
         public String getCreateType() {
             return this.createType;
+        }
+
+        /**
+         * @return dataDiskEncrypted
+         */
+        public Boolean getDataDiskEncrypted() {
+            return this.dataDiskEncrypted;
+        }
+
+        /**
+         * @return dataDiskKMSKeyId
+         */
+        public String getDataDiskKMSKeyId() {
+            return this.dataDiskKMSKeyId;
         }
 
         /**
@@ -2589,6 +2611,8 @@ public class DescribeClusterV2ResponseBody extends TeaModel {
             private Integer coreNodeTotal; 
             private String createResource; 
             private String createType; 
+            private Boolean dataDiskEncrypted; 
+            private String dataDiskKMSKeyId; 
             private String depositType; 
             private Boolean easEnable; 
             private Long expiredTime; 
@@ -2751,6 +2775,22 @@ public class DescribeClusterV2ResponseBody extends TeaModel {
              */
             public Builder createType(String createType) {
                 this.createType = createType;
+                return this;
+            }
+
+            /**
+             * DataDiskEncrypted.
+             */
+            public Builder dataDiskEncrypted(Boolean dataDiskEncrypted) {
+                this.dataDiskEncrypted = dataDiskEncrypted;
+                return this;
+            }
+
+            /**
+             * DataDiskKMSKeyId.
+             */
+            public Builder dataDiskKMSKeyId(String dataDiskKMSKeyId) {
+                this.dataDiskKMSKeyId = dataDiskKMSKeyId;
                 return this;
             }
 
@@ -3091,7 +3131,7 @@ public class DescribeClusterV2ResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * VPC ID。
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

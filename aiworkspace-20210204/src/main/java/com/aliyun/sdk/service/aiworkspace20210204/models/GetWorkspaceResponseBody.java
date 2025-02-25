@@ -1,57 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetWorkspaceResponseBody} extends {@link TeaModel}
  *
  * <p>GetWorkspaceResponseBody</p>
  */
 public class GetWorkspaceResponseBody extends TeaModel {
-    @NameInMap("AdminNames")
+    @com.aliyun.core.annotation.NameInMap("AdminNames")
     private java.util.List < String > adminNames;
 
-    @NameInMap("Creator")
+    @com.aliyun.core.annotation.NameInMap("Creator")
     private String creator;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("DisplayName")
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
     private String displayName;
 
-    @NameInMap("EnvTypes")
+    @com.aliyun.core.annotation.NameInMap("EnvTypes")
     private java.util.List < String > envTypes;
 
-    @NameInMap("ExtraInfos")
+    @com.aliyun.core.annotation.NameInMap("ExtraInfos")
     private java.util.Map < String, ? > extraInfos;
 
-    @NameInMap("GmtCreateTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
-    @NameInMap("GmtModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
     private String gmtModifiedTime;
 
-    @NameInMap("IsDefault")
+    @com.aliyun.core.annotation.NameInMap("IsDefault")
     private Boolean isDefault;
 
-    @NameInMap("Owner")
+    @com.aliyun.core.annotation.NameInMap("Owner")
     private Owner owner;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
-    @NameInMap("WorkspaceName")
+    @com.aliyun.core.annotation.NameInMap("WorkspaceName")
     private String workspaceName;
 
     private GetWorkspaceResponseBody(Builder builder) {
@@ -311,17 +311,23 @@ public class GetWorkspaceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetWorkspaceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWorkspaceResponseBody</p>
+     */
     public static class Owner extends TeaModel {
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserKp")
+        @com.aliyun.core.annotation.NameInMap("UserKp")
         private String userKp;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private Owner(Builder builder) {

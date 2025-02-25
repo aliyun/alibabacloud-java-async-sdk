@@ -1,49 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveSingleTaskForCreatingOrderRedeemRequest} extends {@link RequestModel}
  *
  * <p>SaveSingleTaskForCreatingOrderRedeemRequest</p>
  */
 public class SaveSingleTaskForCreatingOrderRedeemRequest extends Request {
-    @Query
-    @NameInMap("CouponNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CouponNo")
     private String couponNo;
 
-    @Query
-    @NameInMap("CurrentExpirationDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentExpirationDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long currentExpirationDate;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("PromotionNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionNo")
     private String promotionNo;
 
-    @Query
-    @NameInMap("UseCoupon")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseCoupon")
     private Boolean useCoupon;
 
-    @Query
-    @NameInMap("UsePromotion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UsePromotion")
     private Boolean usePromotion;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
     private SaveSingleTaskForCreatingOrderRedeemRequest(Builder builder) {
@@ -163,7 +163,10 @@ public class SaveSingleTaskForCreatingOrderRedeemRequest extends Request {
         }
 
         /**
-         * CurrentExpirationDate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000</p>
          */
         public Builder currentExpirationDate(Long currentExpirationDate) {
             this.putQueryParameter("CurrentExpirationDate", currentExpirationDate);
@@ -172,7 +175,10 @@ public class SaveSingleTaskForCreatingOrderRedeemRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

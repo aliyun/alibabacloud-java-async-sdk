@@ -1,52 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResizeMultiZoneClusterNodeCountRequest} extends {@link RequestModel}
  *
  * <p>ResizeMultiZoneClusterNodeCountRequest</p>
  */
 public class ResizeMultiZoneClusterNodeCountRequest extends Request {
-    @Query
-    @NameInMap("ArbiterVSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArbiterVSwitchId")
     private String arbiterVSwitchId;
 
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("CoreNodeCount")
-    @Validation(maximum = 1000, minimum = 2)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CoreNodeCount")
+    @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 2)
     private Integer coreNodeCount;
 
-    @Query
-    @NameInMap("LogNodeCount")
-    @Validation(maximum = 500, minimum = 4)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogNodeCount")
+    @com.aliyun.core.annotation.Validation(maximum = 500, minimum = 4)
     private Integer logNodeCount;
 
-    @Query
-    @NameInMap("PrimaryCoreNodeCount")
-    @Validation(maximum = 750, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrimaryCoreNodeCount")
+    @com.aliyun.core.annotation.Validation(maximum = 750, minimum = 1)
     private Integer primaryCoreNodeCount;
 
-    @Query
-    @NameInMap("PrimaryVSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrimaryVSwitchId")
     private String primaryVSwitchId;
 
-    @Query
-    @NameInMap("StandbyCoreNodeCount")
-    @Validation(maximum = 750, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StandbyCoreNodeCount")
+    @com.aliyun.core.annotation.Validation(maximum = 750, minimum = 1)
     private Integer standbyCoreNodeCount;
 
-    @Query
-    @NameInMap("StandbyVSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StandbyVSwitchId")
     private String standbyVSwitchId;
 
     private ResizeMultiZoneClusterNodeCountRequest(Builder builder) {
@@ -166,7 +171,10 @@ public class ResizeMultiZoneClusterNodeCountRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ld-f5d8d6s4s2a1****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetContainerDefenseRuleDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetContainerDefenseRuleDetailResponseBody</p>
  */
 public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetContainerDefenseRuleDetailResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +114,7 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the rule.
+         * <p>The details of the rule.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +122,10 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code. The status code 200 indicates that the request was successful.
+         * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +133,10 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +144,10 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>77546BF4-CCE8-5F8D-B42B-5FD3306B43B4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +155,14 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -155,15 +175,21 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetContainerDefenseRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetContainerDefenseRuleDetailResponseBody</p>
+     */
     public static class Scope extends TeaModel {
-        @NameInMap("AllNamespace")
+        @com.aliyun.core.annotation.NameInMap("AllNamespace")
         private Integer allNamespace;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("Namespaces")
-        private java.util.List < String > namespaces;
+        @com.aliyun.core.annotation.NameInMap("Namespaces")
+        private java.util.List<String> namespaces;
 
         private Scope(Builder builder) {
             this.allNamespace = builder.allNamespace;
@@ -196,21 +222,24 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
         /**
          * @return namespaces
          */
-        public java.util.List < String > getNamespaces() {
+        public java.util.List<String> getNamespaces() {
             return this.namespaces;
         }
 
         public static final class Builder {
             private Integer allNamespace; 
             private String clusterId; 
-            private java.util.List < String > namespaces; 
+            private java.util.List<String> namespaces; 
 
             /**
-             * Indicates whether all namespaces are included. Valid values:
-             * <p>
+             * <p>Indicates whether all namespaces are included. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: no</li>
+             * <li><strong>1</strong>: yes</li>
+             * </ul>
              * 
-             * *   **0**: no
-             * *   **1**: yes
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder allNamespace(Integer allNamespace) {
                 this.allNamespace = allNamespace;
@@ -218,7 +247,10 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the container cluster.
+             * <p>The ID of the container cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c9bea04<em>2b25</em>*</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -226,9 +258,9 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of queried namespaces.
+             * <p>An array that consists of queried namespaces.</p>
              */
-            public Builder namespaces(java.util.List < String > namespaces) {
+            public Builder namespaces(java.util.List<String> namespaces) {
                 this.namespaces = namespaces;
                 return this;
             }
@@ -240,15 +272,22 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetContainerDefenseRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetContainerDefenseRuleDetailResponseBody</p>
+     */
     public static class Whitelist extends TeaModel {
-        @NameInMap("Hash")
-        private java.util.List < String > hash;
+        @com.aliyun.core.annotation.NameInMap("Hash")
+        @Deprecated
+        private java.util.List<String> hash;
 
-        @NameInMap("Image")
-        private java.util.List < String > image;
+        @com.aliyun.core.annotation.NameInMap("Image")
+        private java.util.List<String> image;
 
-        @NameInMap("Path")
-        private java.util.List < String > path;
+        @com.aliyun.core.annotation.NameInMap("Path")
+        private java.util.List<String> path;
 
         private Whitelist(Builder builder) {
             this.hash = builder.hash;
@@ -267,52 +306,52 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
         /**
          * @return hash
          */
-        public java.util.List < String > getHash() {
+        public java.util.List<String> getHash() {
             return this.hash;
         }
 
         /**
          * @return image
          */
-        public java.util.List < String > getImage() {
+        public java.util.List<String> getImage() {
             return this.image;
         }
 
         /**
          * @return path
          */
-        public java.util.List < String > getPath() {
+        public java.util.List<String> getPath() {
             return this.path;
         }
 
         public static final class Builder {
-            private java.util.List < String > hash; 
-            private java.util.List < String > image; 
-            private java.util.List < String > path; 
+            private java.util.List<String> hash; 
+            private java.util.List<String> image; 
+            private java.util.List<String> path; 
 
             /**
-             * The hash values of the files that are added to the whitelist.
-             * <p>
-             * 
-             * >  This parameter is not supported.
+             * <p>The hash values of the files that are added to the whitelist.</p>
+             * <blockquote>
+             * <p> This parameter is not supported.</p>
+             * </blockquote>
              */
-            public Builder hash(java.util.List < String > hash) {
+            public Builder hash(java.util.List<String> hash) {
                 this.hash = hash;
                 return this;
             }
 
             /**
-             * An array consisting of images that are added to the whitelist.
+             * <p>An array consisting of images that are added to the whitelist.</p>
              */
-            public Builder image(java.util.List < String > image) {
+            public Builder image(java.util.List<String> image) {
                 this.image = image;
                 return this;
             }
 
             /**
-             * The paths to the files that are added to the whitelist.
+             * <p>The paths to the files that are added to the whitelist.</p>
              */
-            public Builder path(java.util.List < String > path) {
+            public Builder path(java.util.List<String> path) {
                 this.path = path;
                 return this;
             }
@@ -324,38 +363,44 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetContainerDefenseRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetContainerDefenseRuleDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AliUid")
+        @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EventName")
+        @com.aliyun.core.annotation.NameInMap("EventName")
         private String eventName;
 
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("RuleAction")
+        @com.aliyun.core.annotation.NameInMap("RuleAction")
         private Integer ruleAction;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("RuleSwitch")
+        @com.aliyun.core.annotation.NameInMap("RuleSwitch")
         private Integer ruleSwitch;
 
-        @NameInMap("RuleType")
+        @com.aliyun.core.annotation.NameInMap("RuleType")
         private String ruleType;
 
-        @NameInMap("Scope")
-        private java.util.List < Scope> scope;
+        @com.aliyun.core.annotation.NameInMap("Scope")
+        private java.util.List<Scope> scope;
 
-        @NameInMap("Whitelist")
+        @com.aliyun.core.annotation.NameInMap("Whitelist")
         private Whitelist whitelist;
 
         private Data(Builder builder) {
@@ -446,7 +491,7 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
         /**
          * @return scope
          */
-        public java.util.List < Scope> getScope() {
+        public java.util.List<Scope> getScope() {
             return this.scope;
         }
 
@@ -467,11 +512,14 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
             private String ruleName; 
             private Integer ruleSwitch; 
             private String ruleType; 
-            private java.util.List < Scope> scope; 
+            private java.util.List<Scope> scope; 
             private Whitelist whitelist; 
 
             /**
-             * The user ID.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1766185894104***</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -479,7 +527,10 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the rule.
+             * <p>The description of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Custom defense configuration</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -487,10 +538,13 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The alert name. Valid values:
-             * <p>
+             * <p>The alert name. Valid values:</p>
+             * <ul>
+             * <li><strong>Non-image Program Startup</strong></li>
+             * </ul>
              * 
-             * *   **Non-image Program Startup**
+             * <strong>example:</strong>
+             * <p>EventName</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -498,10 +552,13 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The alert type. Valid values:
-             * <p>
+             * <p>The alert type. Valid values:</p>
+             * <ul>
+             * <li><strong>Proactive Defense for Containers</strong></li>
+             * </ul>
              * 
-             * *   **Proactive Defense for Containers**
+             * <strong>example:</strong>
+             * <p>EventType</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -509,7 +566,10 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule.
+             * <p>The ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1948</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -517,11 +577,14 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The action specified in the rule. Valid values:
-             * <p>
+             * <p>The action specified in the rule. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: alert</li>
+             * <li><strong>2</strong>: block</li>
+             * </ul>
              * 
-             * *   **1**: alert
-             * *   **2**: block
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ruleAction(Integer ruleAction) {
                 this.ruleAction = ruleAction;
@@ -529,7 +592,10 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the rule.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-000</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -537,11 +603,14 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the rule. Valid values:
-             * <p>
+             * <p>The status of the rule. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: enabled</li>
+             * <li><strong>0</strong>: disabled</li>
+             * </ul>
              * 
-             * *   **1**: enabled
-             * *   **0**: disabled
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ruleSwitch(Integer ruleSwitch) {
                 this.ruleSwitch = ruleSwitch;
@@ -549,11 +618,14 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the rule. Valid values:
-             * <p>
+             * <p>The type of the rule. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: system rule</li>
+             * <li><strong>2</strong>: custom rule</li>
+             * </ul>
              * 
-             * *   **1**: system rule
-             * *   **2**: custom rule
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ruleType(String ruleType) {
                 this.ruleType = ruleType;
@@ -561,15 +633,15 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The effective scope of the rule.
+             * <p>The effective scope of the rule.</p>
              */
-            public Builder scope(java.util.List < Scope> scope) {
+            public Builder scope(java.util.List<Scope> scope) {
                 this.scope = scope;
                 return this;
             }
 
             /**
-             * The whitelist.
+             * <p>The whitelist.</p>
              */
             public Builder whitelist(Whitelist whitelist) {
                 this.whitelist = whitelist;

@@ -124,7 +124,7 @@ public class QueryCopyrightRequest extends Request {
         } 
 
         /**
-         * 创建时间截止
+         * CreateTimeEnd.
          */
         public Builder createTimeEnd(Long createTimeEnd) {
             this.putBodyParameter("CreateTimeEnd", createTimeEnd);
@@ -133,7 +133,7 @@ public class QueryCopyrightRequest extends Request {
         }
 
         /**
-         * 创建时间起始
+         * CreateTimeStart.
          */
         public Builder createTimeStart(Long createTimeStart) {
             this.putBodyParameter("CreateTimeStart", createTimeStart);
@@ -142,7 +142,7 @@ public class QueryCopyrightRequest extends Request {
         }
 
         /**
-         * 任务id
+         * JobId.
          */
         public Builder jobId(String jobId) {
             this.putBodyParameter("JobId", jobId);
@@ -151,7 +151,7 @@ public class QueryCopyrightRequest extends Request {
         }
 
         /**
-         * 水印强度
+         * Level.
          */
         public Builder level(Long level) {
             this.putBodyParameter("Level", level);
@@ -160,7 +160,7 @@ public class QueryCopyrightRequest extends Request {
         }
 
         /**
-         * 翻页下标
+         * PageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -169,7 +169,7 @@ public class QueryCopyrightRequest extends Request {
         }
 
         /**
-         * 每页数量
+         * PageSize.
          */
         public Builder pageSize(Long pageSize) {
             this.putBodyParameter("PageSize", pageSize);

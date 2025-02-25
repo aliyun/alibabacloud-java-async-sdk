@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20230522.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccountsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAccountsResponseBody</p>
  */
 public class DescribeAccountsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAccountsResponseBody(Builder builder) {
@@ -71,17 +76,23 @@ public class DescribeAccountsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccountsResponseBody</p>
+     */
     public static class Accounts extends TeaModel {
-        @NameInMap("Account")
+        @com.aliyun.core.annotation.NameInMap("Account")
         private String account;
 
-        @NameInMap("AccountType")
+        @com.aliyun.core.annotation.NameInMap("AccountType")
         private String accountType;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Accounts(Builder builder) {
@@ -172,17 +183,23 @@ public class DescribeAccountsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccountsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Accounts")
-        private java.util.List < Accounts> accounts;
+        @com.aliyun.core.annotation.NameInMap("Accounts")
+        private java.util.List<Accounts> accounts;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {
@@ -203,7 +220,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         /**
          * @return accounts
          */
-        public java.util.List < Accounts> getAccounts() {
+        public java.util.List<Accounts> getAccounts() {
             return this.accounts;
         }
 
@@ -229,7 +246,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Accounts> accounts; 
+            private java.util.List<Accounts> accounts; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -237,7 +254,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             /**
              * Accounts.
              */
-            public Builder accounts(java.util.List < Accounts> accounts) {
+            public Builder accounts(java.util.List<Accounts> accounts) {
                 this.accounts = accounts;
                 return this;
             }

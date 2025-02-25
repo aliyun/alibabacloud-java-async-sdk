@@ -1,53 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAvailableZonesRequest} extends {@link RequestModel}
  *
  * <p>DescribeAvailableZonesRequest</p>
  */
 public class DescribeAvailableZonesRequest extends Request {
-    @Query
-    @NameInMap("Category")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Category")
     private String category;
 
-    @Query
-    @NameInMap("CommodityCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommodityCode")
     private String commodityCode;
 
-    @Query
-    @NameInMap("DBInstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceName")
     private String DBInstanceName;
 
-    @Query
-    @NameInMap("DispenseMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DispenseMode")
     private String dispenseMode;
 
-    @Query
-    @NameInMap("Engine")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String engine;
 
-    @Query
-    @NameInMap("EngineVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineVersion")
     private String engineVersion;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private DescribeAvailableZonesRequest(Builder builder) {
@@ -168,22 +173,28 @@ public class DescribeAvailableZonesRequest extends Request {
         } 
 
         /**
-         * The RDS edition of the instance. Valid values:
-         * <p>
+         * <p>The RDS edition of the instance. Valid values:</p>
+         * <ul>
+         * <li><p>Regular instance</p>
+         * <ul>
+         * <li><strong>Basic</strong>: RDS Basic Edition.</li>
+         * <li><strong>HighAvailability</strong>: RDS High-availability Edition.</li>
+         * <li><strong>cluster</strong>: RDS Cluster Edition for ApsaraDB RDS for MySQL.</li>
+         * <li><strong>AlwaysOn</strong>: RDS Cluster Edition for ApsaraDB RDS for SQL Server.</li>
+         * <li><strong>Finance</strong>: RDS Enterprise Edition.</li>
+         * </ul>
+         * </li>
+         * <li><p>Serverless instance</p>
+         * <ul>
+         * <li><strong>serverless_basic</strong>: RDS Basic Edition. This edition is available only for instances that run MySQL and PostgreSQL.</li>
+         * <li><strong>serverless_standard</strong>: RDS High-availability Edition for ApsaraDB RDS for MySQL.</li>
+         * <li><strong>serverless_ha</strong>: RDS High-availability Edition for ApsaraDB RDS for SQL Server.</li>
+         * </ul>
+         * </li>
+         * </ul>
          * 
-         * *   Regular instance
-         * 
-         *     *   **Basic**: RDS Basic Edition.
-         *     *   **HighAvailability**: RDS High-availability Edition.
-         *     *   **cluster**: RDS Cluster Edition for ApsaraDB RDS for MySQL.
-         *     *   **AlwaysOn**: RDS Cluster Edition for ApsaraDB RDS for SQL Server.
-         *     *   **Finance**: RDS Enterprise Edition.
-         * 
-         * *   Serverless instance
-         * 
-         *     *   **serverless_basic**: RDS Basic Edition. This edition is available only for instances that run MySQL and PostgreSQL.
-         *     *   **serverless_standard**: RDS High-availability Edition for ApsaraDB RDS for MySQL.
-         *     *   **serverless_ha**: RDS High-availability Edition for ApsaraDB RDS for SQL Server.
+         * <strong>example:</strong>
+         * <p>HighAvailability</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -192,19 +203,22 @@ public class DescribeAvailableZonesRequest extends Request {
         }
 
         /**
-         * The commodity code of the instance. This operation can return the resources that you can purchase based on the specified commodity code. Valid values:
-         * <p>
+         * <p>The commodity code of the instance. This operation can return the resources that you can purchase based on the specified commodity code. Valid values:</p>
+         * <ul>
+         * <li><strong>bards</strong>: The instance is a pay-as-you-go primary instance. This value is available at the China site (aliyun.com).</li>
+         * <li><strong>rds</strong>: The instance is a subscription primary instance. This value is available at the China site (aliyun.com).</li>
+         * <li><strong>rords</strong>: The instance is a pay-as-you-go read-only instance. This value is available at the China site (aliyun.com).</li>
+         * <li><strong>rds_rordspre_public_cn</strong>: The instance is a subscription read-only instance. This value is available at the China site (aliyun.com).</li>
+         * <li><strong>bards_intl</strong>: The instance is a pay-as-you-go primary instance. This value is available at the International site (alibabacloud.com).</li>
+         * <li><strong>rds_intl</strong>: The instance is a subscription primary instance. This value is available at the International site (alibabacloud.com).</li>
+         * <li><strong>rords_intl</strong>: The instance is a pay-as-you-go read-only instance. This value is available at the International site (alibabacloud.com).</li>
+         * <li><strong>rds_rordspre_public_intl</strong>: The instance is a subscription read-only instance. This value is available at the International site (alibabacloud.com).</li>
+         * <li><strong>rds_serverless_public_cn</strong>: The instance is a serverless instance. This value is available at the China site (aliyun.com).</li>
+         * <li><strong>rds_serverless_public_intl</strong>: The instance is a serverless instance. This value is available at the International site (alibabacloud.com).</li>
+         * </ul>
          * 
-         * *   **bards**: The instance is a pay-as-you-go primary instance. This value is available at the China site (aliyun.com).
-         * *   **rds**: The instance is a subscription primary instance. This value is available at the China site (aliyun.com).
-         * *   **rords**: The instance is a pay-as-you-go read-only instance. This value is available at the China site (aliyun.com).
-         * *   **rds_rordspre_public_cn**: The instance is a subscription read-only instance. This value is available at the China site (aliyun.com).
-         * *   **bards_intl**: The instance is a pay-as-you-go primary instance. This value is available at the International site (alibabacloud.com).
-         * *   **rds_intl**: The instance is a subscription primary instance. This value is available at the International site (alibabacloud.com).
-         * *   **rords_intl**: The instance is a pay-as-you-go read-only instance. This value is available at the International site (alibabacloud.com).
-         * *   **rds_rordspre_public_intl**: The instance is a subscription read-only instance. This value is available at the International site (alibabacloud.com).
-         * *   **rds_serverless_public_cn**: The instance is a serverless instance. This value is available at the China site (aliyun.com).
-         * *   **rds_serverless_public_intl**: The instance is a serverless instance. This value is available at the International site (alibabacloud.com).
+         * <strong>example:</strong>
+         * <p>bards</p>
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);
@@ -213,15 +227,17 @@ public class DescribeAvailableZonesRequest extends Request {
         }
 
         /**
-         * The ID of the primary instance. If you want to query the read-only instances that you can purchase for a primary instance, you can specify this parameter.
-         * <p>
+         * <p>The ID of the primary instance. If you want to query the read-only instances that you can purchase for a primary instance, you can specify this parameter.</p>
+         * <p>If you set <strong>CommodityCode</strong> to one of the following values, you must specify this parameter:</p>
+         * <ul>
+         * <li><strong>rords_intl</strong></li>
+         * <li><strong>rds_rordspre_public_intl</strong></li>
+         * <li><strong>rords</strong></li>
+         * <li><strong>rds_rordspre_public_cn</strong></li>
+         * </ul>
          * 
-         * If you set **CommodityCode** to one of the following values, you must specify this parameter:
-         * 
-         * *   **rords_intl**
-         * *   **rds_rordspre_public_intl**
-         * *   **rords**
-         * *   **rds_rordspre_public_cn**
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -230,13 +246,17 @@ public class DescribeAvailableZonesRequest extends Request {
         }
 
         /**
-         * Specifies whether to return the zones in which the single-zone deployment method is supported. Valid values:
-         * <p>
+         * <p>Specifies whether to return the zones in which the single-zone deployment method is supported. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong> (default): returns the zones.</li>
+         * <li><strong>0</strong>: does not return the zones.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The single-zone deployment method allows you to deploy an instance that runs RDS Enterprise Edition in a single zone.</p>
+         * </blockquote>
          * 
-         * *   **1** (default): returns the zones.
-         * *   **0**: does not return the zones.
-         * 
-         * >  The single-zone deployment method allows you to deploy an instance that runs RDS Enterprise Edition in a single zone.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder dispenseMode(String dispenseMode) {
             this.putQueryParameter("DispenseMode", dispenseMode);
@@ -245,13 +265,17 @@ public class DescribeAvailableZonesRequest extends Request {
         }
 
         /**
-         * The database engine of the instance. Valid values:
-         * <p>
+         * <p>The database engine of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>MySQL</strong></li>
+         * <li><strong>SQLServer</strong></li>
+         * <li><strong>PostgreSQL</strong></li>
+         * <li><strong>MariaDB</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **MySQL**
-         * *   **SQLServer**
-         * *   **PostgreSQL**
-         * *   **MariaDB**
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -260,25 +284,29 @@ public class DescribeAvailableZonesRequest extends Request {
         }
 
         /**
-         * The database engine version. Valid values:
-         * <p>
+         * <p>The database engine version. Valid values:</p>
+         * <ul>
+         * <li><p>Regular instance</p>
+         * <ul>
+         * <li>Valid values if you set Engine to MySQL: <strong>5.5</strong>, <strong>5.6</strong>, <strong>5.7</strong>, and <strong>8.0</strong></li>
+         * <li>Valid values if you set Engine to SQLServer: <strong>2008r2</strong>, <strong>08r2_ent_ha</strong>, <strong>2012</strong>, <strong>2012_ent_ha</strong>, <strong>2012_std_ha</strong>, <strong>2012_web</strong>, <strong>2014_std_ha</strong>, <strong>2016_ent_ha</strong>, <strong>2016_std_ha</strong>, <strong>2016_web</strong>, <strong>2017_std_ha</strong>, <strong>2017_ent</strong>, <strong>2019_std_ha</strong>, and <strong>2019_ent</strong></li>
+         * <li>Valid values if you set Engine to PostgreSQL: <strong>10.0</strong>, <strong>11.0</strong>, <strong>12.0</strong>, <strong>13.0</strong>, <strong>14.0</strong>, and <strong>15.0</strong></li>
+         * <li>Valid value when you set Engine to MariaDB: <strong>10.3</strong></li>
+         * </ul>
+         * </li>
+         * <li><p>Serverless instance</p>
+         * <ul>
+         * <li>Valid values if you set Engine to MySQL: <strong>5.7</strong> and <strong>8.0</strong></li>
+         * <li>Valid values if you set Engine to SQLServer: <strong>2016_std_sl</strong>, <strong>2017_std_sl</strong>, and <strong>2019_std_sl</strong></li>
+         * <li>Valid value if you set Engine to PostgreSQL: <strong>14.0</strong></li>
+         * </ul>
+         * <p>**</p>
+         * <p><strong>Note</strong>ApsaraDB RDS for MariaDB does not support serverless instances.</p>
+         * </li>
+         * </ul>
          * 
-         * *   Regular instance
-         * 
-         *     *   Valid values if you set Engine to MySQL: **5.5**, **5.6**, **5.7**, and **8.0**
-         *     *   Valid values if you set Engine to SQLServer: **2008r2**, **08r2\_ent_ha**, **2012**, **2012\_ent_ha**, **2012\_std_ha**, **2012\_web**, **2014\_std_ha**, **2016\_ent_ha**, **2016\_std_ha**, **2016\_web**, **2017\_std_ha**, **2017\_ent**, **2019\_std_ha**, and **2019\_ent**
-         *     *   Valid values if you set Engine to PostgreSQL: **10.0**, **11.0**, **12.0**, **13.0**, **14.0**, and **15.0**
-         *     *   Valid value when you set Engine to MariaDB: **10.3**
-         * 
-         * *   Serverless instance
-         * 
-         *     *   Valid values if you set Engine to MySQL: **5.7** and **8.0**
-         *     *   Valid values if you set Engine to SQLServer: **2016\_std_sl**, **2017\_std_sl**, and **2019\_std_sl**
-         *     *   Valid value if you set Engine to PostgreSQL: **14.0**
-         * 
-         *     **
-         * 
-         *     **Note**ApsaraDB RDS for MariaDB does not support serverless instances.
+         * <strong>example:</strong>
+         * <p>8.0</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -287,7 +315,11 @@ public class DescribeAvailableZonesRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -305,7 +337,10 @@ public class DescribeAvailableZonesRequest extends Request {
         }
 
         /**
-         * The zone ID of the instance. If the instance spans more than one zone, the value of this parameter contains an `MAZ` part, such as `cn-hangzhou-MAZ6(b,f)` and `cn-hangzhou-MAZ5(b,e,f)`. You can call the [DescribeRegions](~~26243~~) operation to query the most recent zone list.
+         * <p>The zone ID. If the instance spans more than one zone, the value of this parameter contains an <code>MAZ</code> part, such as <code>cn-hangzhou-MAZ6(b,f)</code> and <code>cn-hangzhou-MAZ5(b,e,f)</code>. You can call the DescribeRegions operation to query the most recent zone list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-e</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

@@ -1,149 +1,154 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EvaluateMultiZoneResourceRequest} extends {@link RequestModel}
  *
  * <p>EvaluateMultiZoneResourceRequest</p>
  */
 public class EvaluateMultiZoneResourceRequest extends Request {
-    @Query
-    @NameInMap("ArbiterVSwitchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArbiterVSwitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String arbiterVSwitchId;
 
-    @Query
-    @NameInMap("ArbiterZoneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArbiterZoneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String arbiterZoneId;
 
-    @Query
-    @NameInMap("ArchVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArchVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String archVersion;
 
-    @Query
-    @NameInMap("AutoRenewPeriod")
-    @Validation(maximum = 60, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenewPeriod")
+    @com.aliyun.core.annotation.Validation(maximum = 60, minimum = 1)
     private Integer autoRenewPeriod;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("ClusterName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterName")
     private String clusterName;
 
-    @Query
-    @NameInMap("CoreDiskSize")
-    @Validation(required = true, maximum = 64000, minimum = 400)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CoreDiskSize")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 64000, minimum = 400)
     private Integer coreDiskSize;
 
-    @Query
-    @NameInMap("CoreDiskType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CoreDiskType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String coreDiskType;
 
-    @Query
-    @NameInMap("CoreInstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CoreInstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String coreInstanceType;
 
-    @Query
-    @NameInMap("CoreNodeCount")
-    @Validation(required = true, maximum = 2000, minimum = 4)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CoreNodeCount")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 2000, minimum = 4)
     private Integer coreNodeCount;
 
-    @Query
-    @NameInMap("Engine")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String engine;
 
-    @Query
-    @NameInMap("EngineVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String engineVersion;
 
-    @Query
-    @NameInMap("LogDiskSize")
-    @Validation(maximum = 64000, minimum = 400)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogDiskSize")
+    @com.aliyun.core.annotation.Validation(maximum = 64000, minimum = 400)
     private Integer logDiskSize;
 
-    @Query
-    @NameInMap("LogDiskType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogDiskType")
     private String logDiskType;
 
-    @Query
-    @NameInMap("LogInstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogInstanceType")
     private String logInstanceType;
 
-    @Query
-    @NameInMap("LogNodeCount")
-    @Validation(maximum = 200, minimum = 4)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogNodeCount")
+    @com.aliyun.core.annotation.Validation(maximum = 200, minimum = 4)
     private Integer logNodeCount;
 
-    @Query
-    @NameInMap("MasterInstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MasterInstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String masterInstanceType;
 
-    @Query
-    @NameInMap("MultiZoneCombination")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MultiZoneCombination")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String multiZoneCombination;
 
-    @Query
-    @NameInMap("PayType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PayType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String payType;
 
-    @Query
-    @NameInMap("Period")
-    @Validation(maximum = 60, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
+    @com.aliyun.core.annotation.Validation(maximum = 60, minimum = 1)
     private Integer period;
 
-    @Query
-    @NameInMap("PeriodUnit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeriodUnit")
     private String periodUnit;
 
-    @Query
-    @NameInMap("PrimaryVSwitchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrimaryVSwitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String primaryVSwitchId;
 
-    @Query
-    @NameInMap("PrimaryZoneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrimaryZoneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String primaryZoneId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("SecurityIPList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityIPList")
     private String securityIPList;
 
-    @Query
-    @NameInMap("StandbyVSwitchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StandbyVSwitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String standbyVSwitchId;
 
-    @Query
-    @NameInMap("StandbyZoneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StandbyZoneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String standbyZoneId;
 
-    @Query
-    @NameInMap("VpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
     private EvaluateMultiZoneResourceRequest(Builder builder) {
@@ -454,7 +459,10 @@ public class EvaluateMultiZoneResourceRequest extends Request {
         } 
 
         /**
-         * ArbiterVSwitchId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-hangxzhouxb****</p>
          */
         public Builder arbiterVSwitchId(String arbiterVSwitchId) {
             this.putQueryParameter("ArbiterVSwitchId", arbiterVSwitchId);
@@ -463,7 +471,10 @@ public class EvaluateMultiZoneResourceRequest extends Request {
         }
 
         /**
-         * ArbiterZoneId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         public Builder arbiterZoneId(String arbiterZoneId) {
             this.putQueryParameter("ArbiterZoneId", arbiterZoneId);
@@ -472,7 +483,10 @@ public class EvaluateMultiZoneResourceRequest extends Request {
         }
 
         /**
-         * ArchVersion.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
          */
         public Builder archVersion(String archVersion) {
             this.putQueryParameter("ArchVersion", archVersion);
@@ -508,7 +522,10 @@ public class EvaluateMultiZoneResourceRequest extends Request {
         }
 
         /**
-         * CoreDiskSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder coreDiskSize(Integer coreDiskSize) {
             this.putQueryParameter("CoreDiskSize", coreDiskSize);
@@ -517,7 +534,10 @@ public class EvaluateMultiZoneResourceRequest extends Request {
         }
 
         /**
-         * CoreDiskType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
          */
         public Builder coreDiskType(String coreDiskType) {
             this.putQueryParameter("CoreDiskType", coreDiskType);
@@ -526,7 +546,10 @@ public class EvaluateMultiZoneResourceRequest extends Request {
         }
 
         /**
-         * CoreInstanceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hbase.sn1.medium</p>
          */
         public Builder coreInstanceType(String coreInstanceType) {
             this.putQueryParameter("CoreInstanceType", coreInstanceType);
@@ -535,7 +558,10 @@ public class EvaluateMultiZoneResourceRequest extends Request {
         }
 
         /**
-         * CoreNodeCount.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder coreNodeCount(Integer coreNodeCount) {
             this.putQueryParameter("CoreNodeCount", coreNodeCount);
@@ -544,7 +570,10 @@ public class EvaluateMultiZoneResourceRequest extends Request {
         }
 
         /**
-         * Engine.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hbaseue</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -553,7 +582,10 @@ public class EvaluateMultiZoneResourceRequest extends Request {
         }
 
         /**
-         * EngineVersion.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -598,7 +630,10 @@ public class EvaluateMultiZoneResourceRequest extends Request {
         }
 
         /**
-         * MasterInstanceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hbase.sn1.medium</p>
          */
         public Builder masterInstanceType(String masterInstanceType) {
             this.putQueryParameter("MasterInstanceType", masterInstanceType);
@@ -607,7 +642,10 @@ public class EvaluateMultiZoneResourceRequest extends Request {
         }
 
         /**
-         * MultiZoneCombination.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-bef-aliyun-com</p>
          */
         public Builder multiZoneCombination(String multiZoneCombination) {
             this.putQueryParameter("MultiZoneCombination", multiZoneCombination);
@@ -616,7 +654,10 @@ public class EvaluateMultiZoneResourceRequest extends Request {
         }
 
         /**
-         * PayType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Postpaid</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -643,7 +684,10 @@ public class EvaluateMultiZoneResourceRequest extends Request {
         }
 
         /**
-         * PrimaryVSwitchId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-hangxzhouxe*****</p>
          */
         public Builder primaryVSwitchId(String primaryVSwitchId) {
             this.putQueryParameter("PrimaryVSwitchId", primaryVSwitchId);
@@ -652,7 +696,10 @@ public class EvaluateMultiZoneResourceRequest extends Request {
         }
 
         /**
-         * PrimaryZoneId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-e</p>
          */
         public Builder primaryZoneId(String primaryZoneId) {
             this.putQueryParameter("PrimaryZoneId", primaryZoneId);
@@ -661,7 +708,10 @@ public class EvaluateMultiZoneResourceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -679,7 +729,10 @@ public class EvaluateMultiZoneResourceRequest extends Request {
         }
 
         /**
-         * StandbyVSwitchId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-hangxzhouxf****</p>
          */
         public Builder standbyVSwitchId(String standbyVSwitchId) {
             this.putQueryParameter("StandbyVSwitchId", standbyVSwitchId);
@@ -688,7 +741,10 @@ public class EvaluateMultiZoneResourceRequest extends Request {
         }
 
         /**
-         * StandbyZoneId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-f</p>
          */
         public Builder standbyZoneId(String standbyZoneId) {
             this.putQueryParameter("StandbyZoneId", standbyZoneId);
@@ -697,7 +753,10 @@ public class EvaluateMultiZoneResourceRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp120k6ixs4eog*****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

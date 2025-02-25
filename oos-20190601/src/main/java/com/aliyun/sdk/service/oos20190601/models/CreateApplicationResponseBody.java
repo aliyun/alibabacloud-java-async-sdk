@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateApplicationResponseBody} extends {@link TeaModel}
  *
  * <p>CreateApplicationResponseBody</p>
  */
 public class CreateApplicationResponseBody extends TeaModel {
-    @NameInMap("Application")
+    @com.aliyun.core.annotation.NameInMap("Application")
     private Application application;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateApplicationResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the application.
+         * <p>The information about the application.</p>
          */
         public Builder application(Application application) {
             this.application = application;
@@ -58,7 +63,10 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>274917E8-8E74-5928-A82F-4940F52F7ACB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +79,26 @@ public class CreateApplicationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateApplicationResponseBody</p>
+     */
     public static class Application extends TeaModel {
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Tags")
-        private java.util.Map < String, String > tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.Map<String, String> tags;
 
-        @NameInMap("UpdateDate")
+        @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
 
         private Application(Builder builder) {
@@ -127,7 +141,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.Map < String, String > getTags() {
+        public java.util.Map<String, String> getTags() {
             return this.tags;
         }
 
@@ -142,11 +156,14 @@ public class CreateApplicationResponseBody extends TeaModel {
             private String createDate; 
             private String description; 
             private String name; 
-            private java.util.Map < String, String > tags; 
+            private java.util.Map<String, String> tags; 
             private String updateDate; 
 
             /**
-             * The time when the application was created.
+             * <p>The time when the application was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-07T09:17:46Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -154,7 +171,10 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the application.
+             * <p>The description of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>application</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -162,7 +182,10 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The application name.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Myapplication</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -170,15 +193,21 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>The tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;k1&quot;:&quot;v1&quot;,&quot;k2&quot;:&quot;v2&quot;}</p>
              */
-            public Builder tags(java.util.Map < String, String > tags) {
+            public Builder tags(java.util.Map<String, String> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * The time when the application was updated.
+             * <p>The time when the application was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-07T09:17:46Z</p>
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

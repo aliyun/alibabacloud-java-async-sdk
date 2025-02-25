@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>FetchFileRequest</p>
  */
 public class FetchFileRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -53,12 +57,9 @@ public class FetchFileRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private FetchFileRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.instanceId = builder.instanceId;
         this.ossBucket = builder.ossBucket;
         this.ossObject = builder.ossObject;
@@ -68,7 +69,6 @@ public class FetchFileRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -82,6 +82,13 @@ public class FetchFileRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -147,14 +154,8 @@ public class FetchFileRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<FetchFileRequest, Builder> {
+        private String sourceRegionId; 
         private String instanceId; 
         private String ossBucket; 
         private String ossObject; 
@@ -164,28 +165,36 @@ public class FetchFileRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(FetchFileRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.ossBucket = response.ossBucket;
-            this.ossObject = response.ossObject;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.path = response.path;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceRegionId = response.sourceRegionId;
+        private Builder(FetchFileRequest request) {
+            super(request);
+            this.sourceRegionId = request.sourceRegionId;
+            this.instanceId = request.instanceId;
+            this.ossBucket = request.ossBucket;
+            this.ossObject = request.ossObject;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.path = request.path;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * InstanceId.
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * The ID of the instance on which you want to run the command. Valid values of N: 1 to 10.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -194,7 +203,10 @@ public class FetchFileRequest extends Request {
         }
 
         /**
-         * OssBucket.
+         * The OSS bucket to which the file that you want to upload.
+         * <p>
+         * 
+         * >  Before you import an APK file to the OSS bucket for the first time, add a Resource Access Management (RAM) policy. Otherwise, NoSetRoletoECSServiceAcount appears.
          */
         public Builder ossBucket(String ossBucket) {
             this.putQueryParameter("OssBucket", ossBucket);
@@ -203,7 +215,7 @@ public class FetchFileRequest extends Request {
         }
 
         /**
-         * OssObject.
+         * The name that you want to save to OSS.
          */
         public Builder ossObject(String ossObject) {
             this.putQueryParameter("OssObject", ossObject);
@@ -230,7 +242,7 @@ public class FetchFileRequest extends Request {
         }
 
         /**
-         * Path.
+         * The path in which you want to store the file in the cloud phone.
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -239,7 +251,7 @@ public class FetchFileRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -262,15 +274,6 @@ public class FetchFileRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

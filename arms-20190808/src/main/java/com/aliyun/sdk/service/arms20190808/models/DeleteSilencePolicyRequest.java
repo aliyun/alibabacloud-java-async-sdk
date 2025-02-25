@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSilencePolicyRequest} extends {@link RequestModel}
  *
  * <p>DeleteSilencePolicyRequest</p>
  */
 public class DeleteSilencePolicyRequest extends Request {
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long id;
 
     private DeleteSilencePolicyRequest(Builder builder) {
@@ -55,7 +60,12 @@ public class DeleteSilencePolicyRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the silence policy.</p>
+         * <p>For more information about how to obtain the ID of a silence policy, see <a href="https://help.aliyun.com/document_detail/2612383.html">ListSilencePolicies</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

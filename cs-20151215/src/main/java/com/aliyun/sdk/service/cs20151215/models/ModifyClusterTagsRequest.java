@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyClusterTagsRequest} extends {@link RequestModel}
  *
  * <p>ModifyClusterTagsRequest</p>
  */
 public class ModifyClusterTagsRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Body
-    @NameInMap("body")
-    private java.util.List < Tag > body;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
+    private java.util.List<Tag> body;
 
     private ModifyClusterTagsRequest(Builder builder) {
         super(builder);
@@ -50,13 +55,13 @@ public class ModifyClusterTagsRequest extends Request {
     /**
      * @return body
      */
-    public java.util.List < Tag > getBody() {
+    public java.util.List<Tag> getBody() {
         return this.body;
     }
 
     public static final class Builder extends Request.Builder<ModifyClusterTagsRequest, Builder> {
         private String clusterId; 
-        private java.util.List < Tag > body; 
+        private java.util.List<Tag> body; 
 
         private Builder() {
             super();
@@ -69,7 +74,11 @@ public class ModifyClusterTagsRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c106f377e16f34eb1808d6b9362c9****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -78,9 +87,9 @@ public class ModifyClusterTagsRequest extends Request {
         }
 
         /**
-         * The data of the labels that you want to modify.
+         * <p>The data of the tags that you want to modify.</p>
          */
-        public Builder body(java.util.List < Tag > body) {
+        public Builder body(java.util.List<Tag> body) {
             this.putBodyParameter("body", body);
             this.body = body;
             return this;

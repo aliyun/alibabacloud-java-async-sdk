@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetVirusScanConfigResponseBody} extends {@link TeaModel}
  *
  * <p>GetVirusScanConfigResponseBody</p>
  */
 public class GetVirusScanConfigResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetVirusScanConfigResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetVirusScanConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned if the request was successful.
+         * <p>The data returned if the request was successful.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class GetVirusScanConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>028CF634-5268-5660-9575-48C9ED6BDEFC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,35 +79,41 @@ public class GetVirusScanConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetVirusScanConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetVirusScanConfigResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ConfigId")
+        @com.aliyun.core.annotation.NameInMap("ConfigId")
         private String configId;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Integer enable;
 
-        @NameInMap("IntervalPeriod")
+        @com.aliyun.core.annotation.NameInMap("IntervalPeriod")
         private Integer intervalPeriod;
 
-        @NameInMap("PeriodUnit")
+        @com.aliyun.core.annotation.NameInMap("PeriodUnit")
         private String periodUnit;
 
-        @NameInMap("ScanPath")
-        private java.util.List < String > scanPath;
+        @com.aliyun.core.annotation.NameInMap("ScanPath")
+        private java.util.List<String> scanPath;
 
-        @NameInMap("ScanType")
+        @com.aliyun.core.annotation.NameInMap("ScanType")
         private String scanType;
 
-        @NameInMap("SelectionKey")
+        @com.aliyun.core.annotation.NameInMap("SelectionKey")
         private String selectionKey;
 
-        @NameInMap("TargetEndTime")
+        @com.aliyun.core.annotation.NameInMap("TargetEndTime")
         private Integer targetEndTime;
 
-        @NameInMap("TargetStartTime")
+        @com.aliyun.core.annotation.NameInMap("TargetStartTime")
         private Integer targetStartTime;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
         private Data(Builder builder) {
@@ -154,7 +168,7 @@ public class GetVirusScanConfigResponseBody extends TeaModel {
         /**
          * @return scanPath
          */
-        public java.util.List < String > getScanPath() {
+        public java.util.List<String> getScanPath() {
             return this.scanPath;
         }
 
@@ -198,7 +212,7 @@ public class GetVirusScanConfigResponseBody extends TeaModel {
             private Integer enable; 
             private Integer intervalPeriod; 
             private String periodUnit; 
-            private java.util.List < String > scanPath; 
+            private java.util.List<String> scanPath; 
             private String scanType; 
             private String selectionKey; 
             private Integer targetEndTime; 
@@ -206,10 +220,13 @@ public class GetVirusScanConfigResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * The ID of the task configuration.
-             * <p>
+             * <p>The ID of the task configuration.</p>
+             * <blockquote>
+             * <p>You can call the <a href="~~DescribeCycleTaskList~~">DescribeCycleTaskList</a> operation to query the IDs of task configurations.</p>
+             * </blockquote>
              * 
-             * > You can call the [DescribeCycleTaskList](~~DescribeCycleTaskList~~) operation to query the IDs of task configurations.
+             * <strong>example:</strong>
+             * <p>97a1fed216908e417407344e1505xxxx</p>
              */
             public Builder configId(String configId) {
                 this.configId = configId;
@@ -217,11 +234,14 @@ public class GetVirusScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the periodic scan feature is enabled. Valid value:
-             * <p>
+             * <p>Indicates whether the periodic scan feature is enabled. Valid value:</p>
+             * <ul>
+             * <li><strong>1</strong>: The feature is enabled</li>
+             * <li><strong>0</strong>: The feature is disabled.</li>
+             * </ul>
              * 
-             * *   **1**: The feature is enabled
-             * *   **0**: The feature is disabled.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder enable(Integer enable) {
                 this.enable = enable;
@@ -229,7 +249,10 @@ public class GetVirusScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The interval at which virus scan tasks are run.
+             * <p>The interval at which virus scan tasks are run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder intervalPeriod(Integer intervalPeriod) {
                 this.intervalPeriod = intervalPeriod;
@@ -237,10 +260,13 @@ public class GetVirusScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the interval at which virus scan tasks are run.
-             * <p>
+             * <p>The unit of the interval at which virus scan tasks are run.</p>
+             * <ul>
+             * <li>The value is fixed as <strong>day</strong>.</li>
+             * </ul>
              * 
-             * *   The value is fixed as **day**.
+             * <strong>example:</strong>
+             * <p>day</p>
              */
             public Builder periodUnit(String periodUnit) {
                 this.periodUnit = periodUnit;
@@ -248,19 +274,22 @@ public class GetVirusScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The file paths.
+             * <p>The file paths.</p>
              */
-            public Builder scanPath(java.util.List < String > scanPath) {
+            public Builder scanPath(java.util.List<String> scanPath) {
                 this.scanPath = scanPath;
                 return this;
             }
 
             /**
-             * The type of the virus scan task. Valid values:
-             * <p>
+             * <p>The type of the virus scan task. Valid values:</p>
+             * <ul>
+             * <li><strong>system</strong>: automatic scan.</li>
+             * <li><strong>user</strong>: custom scan.</li>
+             * </ul>
              * 
-             * *   **system**: automatic scan.
-             * *   **user**: custom scan.
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder scanType(String scanType) {
                 this.scanType = scanType;
@@ -268,10 +297,13 @@ public class GetVirusScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The key that stores the asset information.
-             * <p>
+             * <p>The key that stores the asset information.</p>
+             * <blockquote>
+             * <p>You can call the <a href="~~GetAssetSelectionConfig~~">GetAssetSelectionConfig</a> operation to obtain the key value.</p>
+             * </blockquote>
              * 
-             * > You can call the [GetAssetSelectionConfig](~~GetAssetSelectionConfig~~) operation to obtain the key value.
+             * <strong>example:</strong>
+             * <p>345ddbea-a57f-437e-832f-fb7a1202xxxx</p>
              */
             public Builder selectionKey(String selectionKey) {
                 this.selectionKey = selectionKey;
@@ -279,7 +311,10 @@ public class GetVirusScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the virus scan task. The time is a time frame.
+             * <p>The end time of the virus scan task. The time is a time frame.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder targetEndTime(Integer targetEndTime) {
                 this.targetEndTime = targetEndTime;
@@ -287,7 +322,10 @@ public class GetVirusScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the virus scan task. The time is a time frame.
+             * <p>The start time of the virus scan task. The time is a time frame.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder targetStartTime(Integer targetStartTime) {
                 this.targetStartTime = targetStartTime;
@@ -295,10 +333,13 @@ public class GetVirusScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the task. Valid value:
-             * <p>
+             * <p>The type of the task. Valid value:</p>
+             * <ul>
+             * <li><strong>VIRUS_VUL_SCHEDULE_SCAN</strong>: a virus scan task.</li>
+             * </ul>
              * 
-             * *   **VIRUS_VUL_SCHEDULE_SCAN**: a virus scan task.
+             * <strong>example:</strong>
+             * <p>VIRUS_VUL_SCHEDULE_SCAN</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

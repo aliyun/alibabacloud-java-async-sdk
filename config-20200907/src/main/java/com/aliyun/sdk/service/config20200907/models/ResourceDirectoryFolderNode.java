@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResourceDirectoryFolderNode} extends {@link TeaModel}
  *
  * <p>ResourceDirectoryFolderNode</p>
  */
 public class ResourceDirectoryFolderNode extends TeaModel {
-    @NameInMap("AccountId")
+    @com.aliyun.core.annotation.NameInMap("AccountId")
     private String accountId;
 
-    @NameInMap("Children")
-    private java.util.List < ResourceDirectoryFolderNode > children;
+    @com.aliyun.core.annotation.NameInMap("Children")
+    private java.util.List<ResourceDirectoryFolderNode> children;
 
-    @NameInMap("DisplayName")
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
     private String displayName;
 
-    @NameInMap("FolderId")
+    @com.aliyun.core.annotation.NameInMap("FolderId")
     private String folderId;
 
-    @NameInMap("FolderName")
+    @com.aliyun.core.annotation.NameInMap("FolderName")
     private String folderName;
 
-    @NameInMap("ParentFolderId")
+    @com.aliyun.core.annotation.NameInMap("ParentFolderId")
     private String parentFolderId;
 
     private ResourceDirectoryFolderNode(Builder builder) {
@@ -57,7 +62,7 @@ public class ResourceDirectoryFolderNode extends TeaModel {
     /**
      * @return children
      */
-    public java.util.List < ResourceDirectoryFolderNode > getChildren() {
+    public java.util.List<ResourceDirectoryFolderNode> getChildren() {
         return this.children;
     }
 
@@ -91,7 +96,7 @@ public class ResourceDirectoryFolderNode extends TeaModel {
 
     public static final class Builder {
         private String accountId; 
-        private java.util.List < ResourceDirectoryFolderNode > children; 
+        private java.util.List<ResourceDirectoryFolderNode> children; 
         private String displayName; 
         private String folderId; 
         private String folderName; 
@@ -108,7 +113,7 @@ public class ResourceDirectoryFolderNode extends TeaModel {
         /**
          * Children.
          */
-        public Builder children(java.util.List < ResourceDirectoryFolderNode > children) {
+        public Builder children(java.util.List<ResourceDirectoryFolderNode> children) {
             this.children = children;
             return this;
         }

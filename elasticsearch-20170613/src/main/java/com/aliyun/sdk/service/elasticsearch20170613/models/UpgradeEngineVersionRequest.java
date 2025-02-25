@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeEngineVersionRequest} extends {@link RequestModel}
  *
  * <p>UpgradeEngineVersionRequest</p>
  */
 public class UpgradeEngineVersionRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("type")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("plugins")
+    private java.util.List < Plugins> plugins;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
-    @Body
-    @NameInMap("version")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("version")
     private String version;
 
-    @Query
-    @NameInMap("clientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("dryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dryRun")
     private Boolean dryRun;
 
     private UpgradeEngineVersionRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.plugins = builder.plugins;
         this.type = builder.type;
         this.version = builder.version;
         this.clientToken = builder.clientToken;
@@ -60,6 +65,13 @@ public class UpgradeEngineVersionRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return plugins
+     */
+    public java.util.List < Plugins> getPlugins() {
+        return this.plugins;
     }
 
     /**
@@ -92,6 +104,7 @@ public class UpgradeEngineVersionRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpgradeEngineVersionRequest, Builder> {
         private String instanceId; 
+        private java.util.List < Plugins> plugins; 
         private String type; 
         private String version; 
         private String clientToken; 
@@ -104,6 +117,7 @@ public class UpgradeEngineVersionRequest extends Request {
         private Builder(UpgradeEngineVersionRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.plugins = request.plugins;
             this.type = request.type;
             this.version = request.version;
             this.clientToken = request.clientToken;
@@ -111,11 +125,24 @@ public class UpgradeEngineVersionRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-n6w1o1x0w001c****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * plugins.
+         */
+        public Builder plugins(java.util.List < Plugins> plugins) {
+            this.putBodyParameter("plugins", plugins);
+            this.plugins = plugins;
             return this;
         }
 
@@ -138,7 +165,10 @@ public class UpgradeEngineVersionRequest extends Request {
         }
 
         /**
-         * The moderation results.
+         * <p>The moderation results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -147,13 +177,16 @@ public class UpgradeEngineVersionRequest extends Request {
         }
 
         /**
-         * The monitoring type. Valid values:
-         * <p>
+         * <p>The monitoring type. Valid values:</p>
+         * <ul>
+         * <li>checkClusterHealth: Cluster Health Status</li>
+         * <li>checkConfigCompatible: Configuration Compatibility Status</li>
+         * <li>checkClusterResource: resource space status</li>
+         * <li>checkClusterSnapshot: Whether a snapshot exists</li>
+         * </ul>
          * 
-         * *   checkClusterHealth: Cluster Health Status
-         * *   checkConfigCompatible: Configuration Compatibility Status
-         * *   checkClusterResource: resource space status
-         * *   checkClusterSnapshot: Whether a snapshot exists
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);
@@ -168,4 +201,111 @@ public class UpgradeEngineVersionRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpgradeEngineVersionRequest} extends {@link TeaModel}
+     *
+     * <p>UpgradeEngineVersionRequest</p>
+     */
+    public static class Plugins extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("enable")
+        private String enable;
+
+        @com.aliyun.core.annotation.NameInMap("fileVersion")
+        private String fileVersion;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("version")
+        private String version;
+
+        private Plugins(Builder builder) {
+            this.enable = builder.enable;
+            this.fileVersion = builder.fileVersion;
+            this.name = builder.name;
+            this.version = builder.version;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Plugins create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enable
+         */
+        public String getEnable() {
+            return this.enable;
+        }
+
+        /**
+         * @return fileVersion
+         */
+        public String getFileVersion() {
+            return this.fileVersion;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
+        public static final class Builder {
+            private String enable; 
+            private String fileVersion; 
+            private String name; 
+            private String version; 
+
+            /**
+             * enable.
+             */
+            public Builder enable(String enable) {
+                this.enable = enable;
+                return this;
+            }
+
+            /**
+             * fileVersion.
+             */
+            public Builder fileVersion(String fileVersion) {
+                this.fileVersion = fileVersion;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * version.
+             */
+            public Builder version(String version) {
+                this.version = version;
+                return this;
+            }
+
+            public Plugins build() {
+                return new Plugins(this);
+            } 
+
+        } 
+
+    }
 }

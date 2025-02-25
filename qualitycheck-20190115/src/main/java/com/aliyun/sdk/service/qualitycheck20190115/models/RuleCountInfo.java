@@ -1,156 +1,161 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RuleCountInfo} extends {@link TeaModel}
  *
  * <p>RuleCountInfo</p>
  */
 public class RuleCountInfo extends TeaModel {
-    @NameInMap("AutoReview")
+    @com.aliyun.core.annotation.NameInMap("AutoReview")
     private Integer autoReview;
 
-    @NameInMap("BusinessCategoryBasicInfoList")
-    private java.util.List < BusinessCategoryBasicInfo > businessCategoryBasicInfoList;
+    @com.aliyun.core.annotation.NameInMap("BusinessCategoryBasicInfoList")
+    private java.util.List<BusinessCategoryBasicInfo> businessCategoryBasicInfoList;
 
-    @NameInMap("BusinessCategoryNameList")
-    private java.util.List < String > businessCategoryNameList;
+    @com.aliyun.core.annotation.NameInMap("BusinessCategoryNameList")
+    private java.util.List<String> businessCategoryNameList;
 
-    @NameInMap("BusinessRange")
-    private java.util.List < Integer > businessRange;
+    @com.aliyun.core.annotation.NameInMap("BusinessRange")
+    private java.util.List<Integer> businessRange;
 
-    @NameInMap("CheckNumber")
+    @com.aliyun.core.annotation.NameInMap("CheckNumber")
     private Long checkNumber;
 
-    @NameInMap("Comments")
+    @com.aliyun.core.annotation.NameInMap("Comments")
     private String comments;
 
-    @NameInMap("CreateEmpName")
+    @com.aliyun.core.annotation.NameInMap("CreateEmpName")
     private String createEmpName;
 
-    @NameInMap("CreateEmpid")
+    @com.aliyun.core.annotation.NameInMap("CreateEmpid")
     private String createEmpid;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("Deny")
+    @com.aliyun.core.annotation.NameInMap("Deny")
     private Integer deny;
 
-    @NameInMap("Effective")
+    @com.aliyun.core.annotation.NameInMap("Effective")
     private Integer effective;
 
-    @NameInMap("EffectiveEndTime")
+    @com.aliyun.core.annotation.NameInMap("EffectiveEndTime")
     private String effectiveEndTime;
 
-    @NameInMap("EffectiveStartTime")
+    @com.aliyun.core.annotation.NameInMap("EffectiveStartTime")
     private String effectiveStartTime;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("FullCycle")
+    @com.aliyun.core.annotation.NameInMap("FullCycle")
     private Integer fullCycle;
 
-    @NameInMap("GraphFlow")
+    @com.aliyun.core.annotation.NameInMap("GraphFlow")
     private Object graphFlow;
 
-    @NameInMap("HitNumber")
+    @com.aliyun.core.annotation.NameInMap("HitNumber")
     private Long hitNumber;
 
-    @NameInMap("HitRate")
+    @com.aliyun.core.annotation.NameInMap("HitRate")
     private Float hitRate;
 
-    @NameInMap("HitRealViolationRate")
+    @com.aliyun.core.annotation.NameInMap("HitRealViolationRate")
     private Float hitRealViolationRate;
 
-    @NameInMap("IsDelete")
+    @com.aliyun.core.annotation.NameInMap("IsDelete")
     private Integer isDelete;
 
-    @NameInMap("IsSelect")
+    @com.aliyun.core.annotation.NameInMap("IsSelect")
     private Boolean isSelect;
 
-    @NameInMap("JobName")
+    @com.aliyun.core.annotation.NameInMap("JobName")
     private String jobName;
 
-    @NameInMap("LastUpdateEmpName")
+    @com.aliyun.core.annotation.NameInMap("LastUpdateEmpName")
     private String lastUpdateEmpName;
 
-    @NameInMap("LastUpdateEmpid")
+    @com.aliyun.core.annotation.NameInMap("LastUpdateEmpid")
     private String lastUpdateEmpid;
 
-    @NameInMap("LastUpdateTime")
+    @com.aliyun.core.annotation.NameInMap("LastUpdateTime")
     private String lastUpdateTime;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("OperationMode")
+    @com.aliyun.core.annotation.NameInMap("OperationMode")
     private Integer operationMode;
 
-    @NameInMap("PreReviewNumber")
+    @com.aliyun.core.annotation.NameInMap("PreReviewNumber")
     private Long preReviewNumber;
 
-    @NameInMap("ProblemNumber")
+    @com.aliyun.core.annotation.NameInMap("ProblemNumber")
     private Long problemNumber;
 
-    @NameInMap("QualityCheckType")
+    @com.aliyun.core.annotation.NameInMap("QualityCheckType")
     private Integer qualityCheckType;
 
-    @NameInMap("RealViolationNumber")
+    @com.aliyun.core.annotation.NameInMap("RealViolationNumber")
     private Integer realViolationNumber;
 
-    @NameInMap("ReviewAccuracyRate")
+    @com.aliyun.core.annotation.NameInMap("ReviewAccuracyRate")
     private Float reviewAccuracyRate;
 
-    @NameInMap("ReviewNumber")
+    @com.aliyun.core.annotation.NameInMap("ReviewNumber")
     private Long reviewNumber;
 
-    @NameInMap("ReviewRate")
+    @com.aliyun.core.annotation.NameInMap("ReviewRate")
     private Float reviewRate;
 
-    @NameInMap("ReviewStatusName")
+    @com.aliyun.core.annotation.NameInMap("ReviewStatusName")
     private String reviewStatusName;
 
-    @NameInMap("Rid")
+    @com.aliyun.core.annotation.NameInMap("Rid")
     private Long rid;
 
-    @NameInMap("RuleScoreSingleType")
+    @com.aliyun.core.annotation.NameInMap("RuleScoreSingleType")
     private Integer ruleScoreSingleType;
 
-    @NameInMap("RuleScoreType")
+    @com.aliyun.core.annotation.NameInMap("RuleScoreType")
     private Integer ruleScoreType;
 
-    @NameInMap("RuleType")
+    @com.aliyun.core.annotation.NameInMap("RuleType")
     private Integer ruleType;
 
-    @NameInMap("ScoreSubId")
+    @com.aliyun.core.annotation.NameInMap("ScoreSubId")
     private Long scoreSubId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
-    @NameInMap("TargetType")
+    @com.aliyun.core.annotation.NameInMap("TargetType")
     private Integer targetType;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private Integer type;
 
-    @NameInMap("TypeName")
+    @com.aliyun.core.annotation.NameInMap("TypeName")
     private String typeName;
 
-    @NameInMap("UnReviewNumber")
+    @com.aliyun.core.annotation.NameInMap("UnReviewNumber")
     private Long unReviewNumber;
 
-    @NameInMap("UserGroup")
+    @com.aliyun.core.annotation.NameInMap("UserGroup")
     private String userGroup;
 
     private RuleCountInfo(Builder builder) {
@@ -221,21 +226,21 @@ public class RuleCountInfo extends TeaModel {
     /**
      * @return businessCategoryBasicInfoList
      */
-    public java.util.List < BusinessCategoryBasicInfo > getBusinessCategoryBasicInfoList() {
+    public java.util.List<BusinessCategoryBasicInfo> getBusinessCategoryBasicInfoList() {
         return this.businessCategoryBasicInfoList;
     }
 
     /**
      * @return businessCategoryNameList
      */
-    public java.util.List < String > getBusinessCategoryNameList() {
+    public java.util.List<String> getBusinessCategoryNameList() {
         return this.businessCategoryNameList;
     }
 
     /**
      * @return businessRange
      */
-    public java.util.List < Integer > getBusinessRange() {
+    public java.util.List<Integer> getBusinessRange() {
         return this.businessRange;
     }
 
@@ -542,9 +547,9 @@ public class RuleCountInfo extends TeaModel {
 
     public static final class Builder {
         private Integer autoReview; 
-        private java.util.List < BusinessCategoryBasicInfo > businessCategoryBasicInfoList; 
-        private java.util.List < String > businessCategoryNameList; 
-        private java.util.List < Integer > businessRange; 
+        private java.util.List<BusinessCategoryBasicInfo> businessCategoryBasicInfoList; 
+        private java.util.List<String> businessCategoryNameList; 
+        private java.util.List<Integer> businessRange; 
         private Long checkNumber; 
         private String comments; 
         private String createEmpName; 
@@ -600,7 +605,7 @@ public class RuleCountInfo extends TeaModel {
         /**
          * BusinessCategoryBasicInfoList.
          */
-        public Builder businessCategoryBasicInfoList(java.util.List < BusinessCategoryBasicInfo > businessCategoryBasicInfoList) {
+        public Builder businessCategoryBasicInfoList(java.util.List<BusinessCategoryBasicInfo> businessCategoryBasicInfoList) {
             this.businessCategoryBasicInfoList = businessCategoryBasicInfoList;
             return this;
         }
@@ -608,7 +613,7 @@ public class RuleCountInfo extends TeaModel {
         /**
          * BusinessCategoryNameList.
          */
-        public Builder businessCategoryNameList(java.util.List < String > businessCategoryNameList) {
+        public Builder businessCategoryNameList(java.util.List<String> businessCategoryNameList) {
             this.businessCategoryNameList = businessCategoryNameList;
             return this;
         }
@@ -616,7 +621,7 @@ public class RuleCountInfo extends TeaModel {
         /**
          * BusinessRange.
          */
-        public Builder businessRange(java.util.List < Integer > businessRange) {
+        public Builder businessRange(java.util.List<Integer> businessRange) {
             this.businessRange = businessRange;
             return this;
         }

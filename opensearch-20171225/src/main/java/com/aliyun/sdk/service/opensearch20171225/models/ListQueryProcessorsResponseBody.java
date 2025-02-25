@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListQueryProcessorsResponseBody</p>
  */
 public class ListQueryProcessorsResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < Result> result;
 
     private ListQueryProcessorsResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class ListQueryProcessorsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +57,7 @@ public class ListQueryProcessorsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about each query analysis rule.
+         * The information about the query analysis rule.
          * <p>
          * 
          * For more information, see [QueryProcessor](~~170014~~).
@@ -75,25 +74,25 @@ public class ListQueryProcessorsResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("active")
+        @com.aliyun.core.annotation.NameInMap("active")
         private Boolean active;
 
-        @NameInMap("created")
+        @com.aliyun.core.annotation.NameInMap("created")
         private Integer created;
 
-        @NameInMap("domain")
+        @com.aliyun.core.annotation.NameInMap("domain")
         private String domain;
 
-        @NameInMap("indexes")
+        @com.aliyun.core.annotation.NameInMap("indexes")
         private java.util.List < String > indexes;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("processors")
+        @com.aliyun.core.annotation.NameInMap("processors")
         private java.util.List < java.util.Map<String, ?>> processors;
 
-        @NameInMap("updated")
+        @com.aliyun.core.annotation.NameInMap("updated")
         private Integer updated;
 
         private Result(Builder builder) {
@@ -173,7 +172,7 @@ public class ListQueryProcessorsResponseBody extends TeaModel {
             private Integer updated; 
 
             /**
-             * Indicates whether the query analysis rule is the default one.
+             * Indicates whether the query analysis rule is a default rule.
              */
             public Builder active(Boolean active) {
                 this.active = active;
@@ -189,7 +188,7 @@ public class ListQueryProcessorsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the industry. Valid values:
+             * The type of the industry to which the query analysis rule is applied. Valid values:
              * <p>
              * 
              * *   GENERAL
@@ -202,7 +201,7 @@ public class ListQueryProcessorsResponseBody extends TeaModel {
             }
 
             /**
-             * The indexes to which the query analysis rule applies.
+             * The indexes to which the query analysis rule is applied.
              */
             public Builder indexes(java.util.List < String > indexes) {
                 this.indexes = indexes;
@@ -219,9 +218,6 @@ public class ListQueryProcessorsResponseBody extends TeaModel {
 
             /**
              * The features that are used in the query analysis rule.
-             * <p>
-             * 
-             * For more information, see the ["Processor"](~~170014~~) section of the QueryProcessor topic.
              */
             public Builder processors(java.util.List < java.util.Map<String, ?>> processors) {
                 this.processors = processors;
@@ -229,7 +225,7 @@ public class ListQueryProcessorsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the query analysis rule was last updated.
+             * The time when the query analysis rule was last modified.
              */
             public Builder updated(Integer updated) {
                 this.updated = updated;

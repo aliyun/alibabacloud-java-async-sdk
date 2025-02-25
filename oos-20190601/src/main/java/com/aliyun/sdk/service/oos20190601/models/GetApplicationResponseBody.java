@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetApplicationResponseBody} extends {@link TeaModel}
  *
  * <p>GetApplicationResponseBody</p>
  */
 public class GetApplicationResponseBody extends TeaModel {
-    @NameInMap("Application")
+    @com.aliyun.core.annotation.NameInMap("Application")
     private Application application;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetApplicationResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetApplicationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the application.
+         * <p>The information about the application.</p>
          */
         public Builder application(Application application) {
             this.application = application;
@@ -58,7 +63,10 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51004B8A-6D9A-5ACB-9158-6C6794496AD0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,15 +79,21 @@ public class GetApplicationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationResponseBody</p>
+     */
     public static class AlarmConfig extends TeaModel {
-        @NameInMap("ContactGroups")
-        private java.util.List < String > contactGroups;
+        @com.aliyun.core.annotation.NameInMap("ContactGroups")
+        private java.util.List<String> contactGroups;
 
-        @NameInMap("HealthCheckUrl")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckUrl")
         private String healthCheckUrl;
 
-        @NameInMap("TemplateIds")
-        private java.util.List < String > templateIds;
+        @com.aliyun.core.annotation.NameInMap("TemplateIds")
+        private java.util.List<String> templateIds;
 
         private AlarmConfig(Builder builder) {
             this.contactGroups = builder.contactGroups;
@@ -98,7 +112,7 @@ public class GetApplicationResponseBody extends TeaModel {
         /**
          * @return contactGroups
          */
-        public java.util.List < String > getContactGroups() {
+        public java.util.List<String> getContactGroups() {
             return this.contactGroups;
         }
 
@@ -112,25 +126,28 @@ public class GetApplicationResponseBody extends TeaModel {
         /**
          * @return templateIds
          */
-        public java.util.List < String > getTemplateIds() {
+        public java.util.List<String> getTemplateIds() {
             return this.templateIds;
         }
 
         public static final class Builder {
-            private java.util.List < String > contactGroups; 
+            private java.util.List<String> contactGroups; 
             private String healthCheckUrl; 
-            private java.util.List < String > templateIds; 
+            private java.util.List<String> templateIds; 
 
             /**
-             * The alert contact list.
+             * <p>The alert contact list.</p>
              */
-            public Builder contactGroups(java.util.List < String > contactGroups) {
+            public Builder contactGroups(java.util.List<String> contactGroups) {
                 this.contactGroups = contactGroups;
                 return this;
             }
 
             /**
-             * The health check URL of the application.
+             * <p>The health check URL of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/api/health/</p>
              */
             public Builder healthCheckUrl(String healthCheckUrl) {
                 this.healthCheckUrl = healthCheckUrl;
@@ -138,9 +155,9 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the alert template.
+             * <p>The ID of the alert template.</p>
              */
-            public Builder templateIds(java.util.List < String > templateIds) {
+            public Builder templateIds(java.util.List<String> templateIds) {
                 this.templateIds = templateIds;
                 return this;
             }
@@ -152,36 +169,46 @@ public class GetApplicationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationResponseBody</p>
+     */
     public static class Application extends TeaModel {
-        @NameInMap("AlarmConfig")
+        @com.aliyun.core.annotation.NameInMap("AlarmConfig")
         private AlarmConfig alarmConfig;
 
-        @NameInMap("ApplicationType")
+        @com.aliyun.core.annotation.NameInMap("ApplicationSource")
+        private String applicationSource;
+
+        @com.aliyun.core.annotation.NameInMap("ApplicationType")
         private String applicationType;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ServiceId")
+        @com.aliyun.core.annotation.NameInMap("ServiceId")
         private String serviceId;
 
-        @NameInMap("Tags")
-        private java.util.Map < String, ? > tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.Map<String, ?> tags;
 
-        @NameInMap("UpdateDate")
+        @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
 
         private Application(Builder builder) {
             this.alarmConfig = builder.alarmConfig;
+            this.applicationSource = builder.applicationSource;
             this.applicationType = builder.applicationType;
             this.createDate = builder.createDate;
             this.description = builder.description;
@@ -205,6 +232,13 @@ public class GetApplicationResponseBody extends TeaModel {
          */
         public AlarmConfig getAlarmConfig() {
             return this.alarmConfig;
+        }
+
+        /**
+         * @return applicationSource
+         */
+        public String getApplicationSource() {
+            return this.applicationSource;
         }
 
         /**
@@ -252,7 +286,7 @@ public class GetApplicationResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.Map < String, ? > getTags() {
+        public java.util.Map<String, ?> getTags() {
             return this.tags;
         }
 
@@ -265,17 +299,18 @@ public class GetApplicationResponseBody extends TeaModel {
 
         public static final class Builder {
             private AlarmConfig alarmConfig; 
+            private String applicationSource; 
             private String applicationType; 
             private String createDate; 
             private String description; 
             private String name; 
             private String resourceGroupId; 
             private String serviceId; 
-            private java.util.Map < String, ? > tags; 
+            private java.util.Map<String, ?> tags; 
             private String updateDate; 
 
             /**
-             * The configurations of application alerts.
+             * <p>The configurations of application alerts.</p>
              */
             public Builder alarmConfig(AlarmConfig alarmConfig) {
                 this.alarmConfig = alarmConfig;
@@ -283,34 +318,44 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the application.
-             * <p>
+             * <p>The source of application.</p>
              * 
-             * Valid values:
+             * <strong>example:</strong>
+             * <p>{&quot;Platform&quot;:&quot;gitee&quot;,&quot;Owner&quot;:&quot;aliyun-computenest&quot;,&quot;RepoName&quot;:&quot;aliyun-computenest/java-springboot-demo&quot;,&quot;Name&quot;:&quot;java-springboot-demo&quot;}</p>
+             */
+            public Builder applicationSource(String applicationSource) {
+                this.applicationSource = applicationSource;
+                return this;
+            }
+
+            /**
+             * <p>The type of the application.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>ComputeNest</p>
+             * <!-- -->
              * 
-             * *   ComputeNest
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>Custom</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>DingTalk</p>
+             * <!-- -->
              * 
-             * *   Custom
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   DingTalk
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>DingTalk</p>
              */
             public Builder applicationType(String applicationType) {
                 this.applicationType = applicationType;
@@ -318,7 +363,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the application was created.
+             * <p>The time when the application was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-07T09:17:46Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -326,7 +374,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the application.
+             * <p>The description of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Application</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -334,7 +385,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The application name.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyApplication</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -342,7 +396,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmxsn4m******</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -350,7 +407,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the service.
+             * <p>The ID of the Compute Nest service that corresponds to the application template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service-79538e30e44541b699d8</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -358,15 +418,21 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>The tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;k1&quot;: &quot;v1&quot;, &quot;k2&quot;: &quot;v2&quot;}</p>
              */
-            public Builder tags(java.util.Map < String, ? > tags) {
+            public Builder tags(java.util.Map<String, ?> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * The time when the application was updated.
+             * <p>The time when the application was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-07T09:17:46Z</p>
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

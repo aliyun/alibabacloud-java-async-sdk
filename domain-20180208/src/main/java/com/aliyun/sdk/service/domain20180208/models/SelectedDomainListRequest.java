@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SelectedDomainListRequest} extends {@link RequestModel}
  *
  * <p>SelectedDomainListRequest</p>
  */
 public class SelectedDomainListRequest extends Request {
-    @Query
-    @NameInMap("ListDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String listDate;
 
     private SelectedDomainListRequest(Builder builder) {
@@ -55,7 +60,10 @@ public class SelectedDomainListRequest extends Request {
         } 
 
         /**
-         * ListDate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20231109</p>
          */
         public Builder listDate(String listDate) {
             this.putQueryParameter("ListDate", listDate);

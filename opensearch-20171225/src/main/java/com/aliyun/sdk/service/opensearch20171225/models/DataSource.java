@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DataSource</p>
  */
 public class DataSource extends TeaModel {
-    @NameInMap("fields")
+    @com.aliyun.core.annotation.NameInMap("fields")
     private java.util.List < java.util.Map<String, String>> fields;
 
-    @NameInMap("keyField")
+    @com.aliyun.core.annotation.NameInMap("keyField")
     private String keyField;
 
-    @NameInMap("parameters")
+    @com.aliyun.core.annotation.NameInMap("parameters")
     private java.util.Map < String, ? > parameters;
 
-    @NameInMap("plugins")
+    @com.aliyun.core.annotation.NameInMap("plugins")
     private java.util.Map < String, DataSourcePluginsValue > plugins;
 
-    @NameInMap("schemaName")
+    @com.aliyun.core.annotation.NameInMap("schemaName")
     private String schemaName;
 
-    @NameInMap("tableName")
+    @com.aliyun.core.annotation.NameInMap("tableName")
     private String tableName;
 
-    @NameInMap("type")
+    @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
     private DataSource(Builder builder) {

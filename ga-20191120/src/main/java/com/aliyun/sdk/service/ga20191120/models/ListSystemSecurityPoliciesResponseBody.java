@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSystemSecurityPoliciesResponseBody</p>
  */
 public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecurityPolicies")
+    @com.aliyun.core.annotation.NameInMap("SecurityPolicies")
     private java.util.List < SecurityPolicies> securityPolicies;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListSystemSecurityPoliciesResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
     } 
 
     public static class SecurityPolicies extends TeaModel {
-        @NameInMap("Ciphers")
+        @com.aliyun.core.annotation.NameInMap("Ciphers")
         private java.util.List < String > ciphers;
 
-        @NameInMap("SecurityPolicyId")
+        @com.aliyun.core.annotation.NameInMap("SecurityPolicyId")
         private String securityPolicyId;
 
-        @NameInMap("TlsVersions")
+        @com.aliyun.core.annotation.NameInMap("TlsVersions")
         private java.util.List < String > tlsVersions;
 
         private SecurityPolicies(Builder builder) {
@@ -199,11 +198,33 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
              * 
              * *   Valid values when TLSVersions is set to **TLSv1.2**:
              * 
-             * ECDHE-ECDSA-AES128-SHA ECDHE-ECDSA-AES256-SHA ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-SHA AES128-SHA AES256-SHA DES-CBC3-SHA ECDHE-ECDSA-AES128-GCM-SHA256 ECDHE-ECDSA-AES256-GCM-SHA384 ECDHE-ECDSA-AES128-SHA256 ECDHE-ECDSA-AES256-SHA384 ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-SHA256 ECDHE-RSA-AES256-SHA384 AES128-GCM-SHA256 AES256-GCM-SHA384 AES128-SHA256 AES256-SHA256
+             *     *   ECDHE-ECDSA-AES128-SHA
+             *     *   ECDHE-ECDSA-AES256-SHA
+             *     *   ECDHE-RSA-AES128-SHA
+             *     *   ECDHE-RSA-AES256-SHA
+             *     *   AES128-SHA
+             *     *   AES256-SHA
+             *     *   DES-CBC3-SHA
+             *     *   ECDHE-ECDSA-AES128-GCM-SHA256
+             *     *   ECDHE-ECDSA-AES256-GCM-SHA384
+             *     *   ECDHE-ECDSA-AES128-SHA256
+             *     *   ECDHE-ECDSA-AES256-SHA384
+             *     *   ECDHE-RSA-AES128-GCM-SHA256
+             *     *   ECDHE-RSA-AES256-GCM-SHA384
+             *     *   ECDHE-RSA-AES128-SHA256
+             *     *   ECDHE-RSA-AES256-SHA384
+             *     *   AES128-GCM-SHA256
+             *     *   AES256-GCM-SHA384
+             *     *   AES128-SHA256
+             *     *   AES256-SHA256
              * 
              * *   Valid values when TLSVersions is set to **TLSv1.3**:
              * 
-             * TLS_AES\_128\_GCM_SHA256 TLS_AES\_256\_GCM_SHA384 TLS_CHACHA20\_POLY1305\_SHA256 TLS_AES\_128\_CCM_SHA256 TLS_AES\_128\_CCM\_8\_SHA256
+             *     *   TLS_AES\_128\_GCM_SHA256
+             *     *   TLS_AES\_256\_GCM_SHA384
+             *     *   TLS_CHACHA20\_POLY1305\_SHA256
+             *     *   TLS_AES\_128\_CCM_SHA256
+             *     *   TLS_AES\_128\_CCM\_8\_SHA256
              */
             public Builder ciphers(java.util.List < String > ciphers) {
                 this.ciphers = ciphers;
@@ -211,7 +232,7 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The TLS security policy ID.
+             * The ID of the TLS security policy.
              */
             public Builder securityPolicyId(String securityPolicyId) {
                 this.securityPolicyId = securityPolicyId;
@@ -219,7 +240,7 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The supported TLS protocol versions. Valid values: **TLSv1.0**, **TLSv1.1**, **TLSv1.2**, and **TLSv1.3**.
+             * The supported TLS versions. Valid values: **TLSv1.0**, **TLSv1.1**, **TLSv1.2**, and **TLSv1.3**.
              */
             public Builder tlsVersions(java.util.List < String > tlsVersions) {
                 this.tlsVersions = tlsVersions;

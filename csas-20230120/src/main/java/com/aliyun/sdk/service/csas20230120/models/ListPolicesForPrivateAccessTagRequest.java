@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPolicesForPrivateAccessTagRequest} extends {@link RequestModel}
  *
  * <p>ListPolicesForPrivateAccessTagRequest</p>
  */
 public class ListPolicesForPrivateAccessTagRequest extends Request {
-    @Query
-    @NameInMap("TagIds")
-    @Validation(required = true)
-    private java.util.List < String > tagIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> tagIds;
 
     private ListPolicesForPrivateAccessTagRequest(Builder builder) {
         super(builder);
@@ -38,12 +43,12 @@ public class ListPolicesForPrivateAccessTagRequest extends Request {
     /**
      * @return tagIds
      */
-    public java.util.List < String > getTagIds() {
+    public java.util.List<String> getTagIds() {
         return this.tagIds;
     }
 
     public static final class Builder extends Request.Builder<ListPolicesForPrivateAccessTagRequest, Builder> {
-        private java.util.List < String > tagIds; 
+        private java.util.List<String> tagIds; 
 
         private Builder() {
             super();
@@ -55,9 +60,9 @@ public class ListPolicesForPrivateAccessTagRequest extends Request {
         } 
 
         /**
-         * TagIds.
+         * <p>This parameter is required.</p>
          */
-        public Builder tagIds(java.util.List < String > tagIds) {
+        public Builder tagIds(java.util.List<String> tagIds) {
             this.putQueryParameter("TagIds", tagIds);
             this.tagIds = tagIds;
             return this;

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageSupportInstanceTypesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImageSupportInstanceTypesResponseBody</p>
  */
 public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
-    @NameInMap("ImageId")
+    @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
-    @NameInMap("InstanceTypes")
+    @com.aliyun.core.annotation.NameInMap("InstanceTypes")
     private InstanceTypes instanceTypes;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeImageSupportInstanceTypesResponseBody(Builder builder) {
@@ -74,11 +79,14 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The key of filter N. Only the image ID can be used to filter instance types. Valid values:
-         * <p>
+         * <p>The key of filter N. Only the image ID can be used to filter instance types. Valid values:</p>
+         * <ul>
+         * <li>imagId: image ID</li>
+         * <li>filter: image ID</li>
+         * </ul>
          * 
-         * *   imagId: image ID
-         * *   filter: image ID
+         * <strong>example:</strong>
+         * <p>m-o6w3gy99qf89rkga****</p>
          */
         public Builder imageId(String imageId) {
             this.imageId = imageId;
@@ -86,26 +94,25 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * {
-         * <p>
-         *     "RequestId": "CF661E2D-4AFE-4BCD-959A-A65E14416B44",
-         *     "RegionId": "cn-hangzhou",
-         *     "ImageId": "ubuntu_16_0402_64_20G_alibase_20180409.vhd",
-         *     "InstanceTypes": {
-         *         "InstanceType": [{
-         *             "InstanceTypeId": "ecs.t1.xsmall",
-         *             "CpuCoreCount": 1,
-         *             "MemorySize": 0.5,
-         *             "InstanceTypeFamily": "ecs.t1"
+         * <p>{
+         *     &quot;RequestId&quot;: &quot;CF661E2D-4AFE-4BCD-959A-A65E14416B44&quot;,
+         *     &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,
+         *     &quot;ImageId&quot;: &quot;ubuntu_16_0402_64_20G_alibase_20180409.vhd&quot;,
+         *     &quot;InstanceTypes&quot;: {
+         *         &quot;InstanceType&quot;: [{
+         *             &quot;InstanceTypeId&quot;: &quot;ecs.t1.xsmall&quot;,
+         *             &quot;CpuCoreCount&quot;: 1,
+         *             &quot;MemorySize&quot;: 0.5,
+         *             &quot;InstanceTypeFamily&quot;: &quot;ecs.t1&quot;
          *         },
          *         {
-         *             "InstanceTypeId": "ecs.t1.small",
-         *             "CpuCoreCount": 1,
-         *             "MemorySize": 1,
-         *             "InstanceTypeFamily": "ecs.t1"
+         *             &quot;InstanceTypeId&quot;: &quot;ecs.t1.small&quot;,
+         *             &quot;CpuCoreCount&quot;: 1,
+         *             &quot;MemorySize&quot;: 1,
+         *             &quot;InstanceTypeFamily&quot;: &quot;ecs.t1&quot;
          *         }]
          *     }
-         * }
+         * }</p>
          */
         public Builder instanceTypes(InstanceTypes instanceTypes) {
             this.instanceTypes = instanceTypes;
@@ -113,26 +120,28 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * {
-         * <p>
-         *     "RequestId": "CF661E2D-4AFE-4BCD-959A-A65E14416B44",
-         *     "RegionId": "cn-hangzhou",
-         *     "ImageId": "ubuntu_16_0402_64_20G_alibase_20180409.vhd",
-         *     "InstanceTypes": {
-         *         "InstanceType": [{
-         *             "InstanceTypeId": "ecs.t1.xsmall",
-         *             "CpuCoreCount": 1,
-         *             "MemorySize": 0.5,
-         *             "InstanceTypeFamily": "ecs.t1"
+         * <p>{
+         *     &quot;RequestId&quot;: &quot;CF661E2D-4AFE-4BCD-959A-A65E14416B44&quot;,
+         *     &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,
+         *     &quot;ImageId&quot;: &quot;ubuntu_16_0402_64_20G_alibase_20180409.vhd&quot;,
+         *     &quot;InstanceTypes&quot;: {
+         *         &quot;InstanceType&quot;: [{
+         *             &quot;InstanceTypeId&quot;: &quot;ecs.t1.xsmall&quot;,
+         *             &quot;CpuCoreCount&quot;: 1,
+         *             &quot;MemorySize&quot;: 0.5,
+         *             &quot;InstanceTypeFamily&quot;: &quot;ecs.t1&quot;
          *         },
          *         {
-         *             "InstanceTypeId": "ecs.t1.small",
-         *             "CpuCoreCount": 1,
-         *             "MemorySize": 1,
-         *             "InstanceTypeFamily": "ecs.t1"
+         *             &quot;InstanceTypeId&quot;: &quot;ecs.t1.small&quot;,
+         *             &quot;CpuCoreCount&quot;: 1,
+         *             &quot;MemorySize&quot;: 1,
+         *             &quot;InstanceTypeFamily&quot;: &quot;ecs.t1&quot;
          *         }]
          *     }
-         * }
+         * }</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -140,7 +149,10 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -153,17 +165,23 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImageSupportInstanceTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageSupportInstanceTypesResponseBody</p>
+     */
     public static class InstanceType extends TeaModel {
-        @NameInMap("CpuCoreCount")
+        @com.aliyun.core.annotation.NameInMap("CpuCoreCount")
         private Integer cpuCoreCount;
 
-        @NameInMap("InstanceTypeFamily")
+        @com.aliyun.core.annotation.NameInMap("InstanceTypeFamily")
         private String instanceTypeFamily;
 
-        @NameInMap("InstanceTypeId")
+        @com.aliyun.core.annotation.NameInMap("InstanceTypeId")
         private String instanceTypeId;
 
-        @NameInMap("MemorySize")
+        @com.aliyun.core.annotation.NameInMap("MemorySize")
         private Float memorySize;
 
         private InstanceType(Builder builder) {
@@ -216,7 +234,10 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
             private Float memorySize; 
 
             /**
-             * The number of vCPUs of the instance type.
+             * <p>The number of vCPUs of the instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cpuCoreCount(Integer cpuCoreCount) {
                 this.cpuCoreCount = cpuCoreCount;
@@ -224,7 +245,10 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * DescribeImageSupportInstanceTypes
+             * <p>DescribeImageSupportInstanceTypes</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.t1</p>
              */
             public Builder instanceTypeFamily(String instanceTypeFamily) {
                 this.instanceTypeFamily = instanceTypeFamily;
@@ -232,7 +256,10 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * Queries the instance types supported by an image.
+             * <p>Queries the instance types supported by an image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.t1.xsmall</p>
              */
             public Builder instanceTypeId(String instanceTypeId) {
                 this.instanceTypeId = instanceTypeId;
@@ -240,7 +267,10 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size of the instance type. Unit: GiB.
+             * <p>The memory size of the instance type. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder memorySize(Float memorySize) {
                 this.memorySize = memorySize;
@@ -254,9 +284,15 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImageSupportInstanceTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageSupportInstanceTypesResponseBody</p>
+     */
     public static class InstanceTypes extends TeaModel {
-        @NameInMap("InstanceType")
-        private java.util.List < InstanceType> instanceType;
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
+        private java.util.List<InstanceType> instanceType;
 
         private InstanceTypes(Builder builder) {
             this.instanceType = builder.instanceType;
@@ -273,17 +309,17 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
         /**
          * @return instanceType
          */
-        public java.util.List < InstanceType> getInstanceType() {
+        public java.util.List<InstanceType> getInstanceType() {
             return this.instanceType;
         }
 
         public static final class Builder {
-            private java.util.List < InstanceType> instanceType; 
+            private java.util.List<InstanceType> instanceType; 
 
             /**
              * InstanceType.
              */
-            public Builder instanceType(java.util.List < InstanceType> instanceType) {
+            public Builder instanceType(java.util.List<InstanceType> instanceType) {
                 this.instanceType = instanceType;
                 return this;
             }

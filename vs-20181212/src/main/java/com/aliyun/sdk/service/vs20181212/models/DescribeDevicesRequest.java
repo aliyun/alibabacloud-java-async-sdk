@@ -1,83 +1,88 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDevicesRequest} extends {@link RequestModel}
  *
  * <p>DescribeDevicesRequest</p>
  */
 public class DescribeDevicesRequest extends Request {
-    @Query
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @Query
-    @NameInMap("Dsn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Dsn")
     private String dsn;
 
-    @Query
-    @NameInMap("GbId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GbId")
     private String gbId;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
 
-    @Query
-    @NameInMap("IncludeDirectory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeDirectory")
     private Boolean includeDirectory;
 
-    @Query
-    @NameInMap("IncludeStats")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeStats")
     private Boolean includeStats;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Long pageNum;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("ParentId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentId")
     private String parentId;
 
-    @Query
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
-    @Query
-    @NameInMap("SortDirection")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortDirection")
     private String sortDirection;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @Query
-    @NameInMap("Vendor")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Vendor")
     private String vendor;
 
     private DescribeDevicesRequest(Builder builder) {
@@ -256,25 +261,25 @@ public class DescribeDevicesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDevicesRequest response) {
-            super(response);
-            this.directoryId = response.directoryId;
-            this.dsn = response.dsn;
-            this.gbId = response.gbId;
-            this.groupId = response.groupId;
-            this.id = response.id;
-            this.includeDirectory = response.includeDirectory;
-            this.includeStats = response.includeStats;
-            this.name = response.name;
-            this.ownerId = response.ownerId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.parentId = response.parentId;
-            this.sortBy = response.sortBy;
-            this.sortDirection = response.sortDirection;
-            this.status = response.status;
-            this.type = response.type;
-            this.vendor = response.vendor;
+        private Builder(DescribeDevicesRequest request) {
+            super(request);
+            this.directoryId = request.directoryId;
+            this.dsn = request.dsn;
+            this.gbId = request.gbId;
+            this.groupId = request.groupId;
+            this.id = request.id;
+            this.includeDirectory = request.includeDirectory;
+            this.includeStats = request.includeStats;
+            this.name = request.name;
+            this.ownerId = request.ownerId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.parentId = request.parentId;
+            this.sortBy = request.sortBy;
+            this.sortDirection = request.sortDirection;
+            this.status = request.status;
+            this.type = request.type;
+            this.vendor = request.vendor;
         } 
 
         /**

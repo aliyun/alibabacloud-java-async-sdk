@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetProductQuotaDimensionResponseBody</p>
  */
 public class GetProductQuotaDimensionResponseBody extends TeaModel {
-    @NameInMap("QuotaDimension")
+    @com.aliyun.core.annotation.NameInMap("QuotaDimension")
     private QuotaDimension quotaDimension;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetProductQuotaDimensionResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class GetProductQuotaDimensionResponseBody extends TeaModel {
     } 
 
     public static class DimensionValueDetail extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private DimensionValueDetail(Builder builder) {
@@ -110,7 +109,7 @@ public class GetProductQuotaDimensionResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The name of the quota dimension value.
+             * The name of the quota dimension.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -118,7 +117,7 @@ public class GetProductQuotaDimensionResponseBody extends TeaModel {
             }
 
             /**
-             * The quota dimension value.
+             * The value of the quota dimension.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -133,19 +132,19 @@ public class GetProductQuotaDimensionResponseBody extends TeaModel {
 
     }
     public static class QuotaDimension extends TeaModel {
-        @NameInMap("DependentDimensions")
+        @com.aliyun.core.annotation.NameInMap("DependentDimensions")
         private java.util.List < String > dependentDimensions;
 
-        @NameInMap("DimensionKey")
+        @com.aliyun.core.annotation.NameInMap("DimensionKey")
         private String dimensionKey;
 
-        @NameInMap("DimensionValueDetail")
+        @com.aliyun.core.annotation.NameInMap("DimensionValueDetail")
         private java.util.List < DimensionValueDetail> dimensionValueDetail;
 
-        @NameInMap("DimensionValues")
+        @com.aliyun.core.annotation.NameInMap("DimensionValues")
         private java.util.List < String > dimensionValues;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private QuotaDimension(Builder builder) {

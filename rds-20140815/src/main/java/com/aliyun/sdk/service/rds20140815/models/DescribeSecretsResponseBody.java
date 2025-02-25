@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSecretsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSecretsResponseBody</p>
  */
 public class DescribeSecretsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Secrets")
-    private java.util.List < Secrets> secrets;
+    @com.aliyun.core.annotation.NameInMap("Secrets")
+    private java.util.List<Secrets> secrets;
 
     private DescribeSecretsResponseBody(Builder builder) {
         this.pageNumber = builder.pageNumber;
@@ -63,7 +68,7 @@ public class DescribeSecretsResponseBody extends TeaModel {
     /**
      * @return secrets
      */
-    public java.util.List < Secrets> getSecrets() {
+    public java.util.List<Secrets> getSecrets() {
         return this.secrets;
     }
 
@@ -71,10 +76,13 @@ public class DescribeSecretsResponseBody extends TeaModel {
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
-        private java.util.List < Secrets> secrets; 
+        private java.util.List<Secrets> secrets; 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -82,7 +90,10 @@ public class DescribeSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -90,7 +101,10 @@ public class DescribeSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DF4961DD-16F5-5B24-BD4C-0C7788F7ADAF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,9 +112,9 @@ public class DescribeSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the credential.
+         * <p>The details of the credential.</p>
          */
-        public Builder secrets(java.util.List < Secrets> secrets) {
+        public Builder secrets(java.util.List<Secrets> secrets) {
             this.secrets = secrets;
             return this;
         }
@@ -111,23 +125,29 @@ public class DescribeSecretsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSecretsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecretsResponseBody</p>
+     */
     public static class Secrets extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SecretArn")
+        @com.aliyun.core.annotation.NameInMap("SecretArn")
         private String secretArn;
 
-        @NameInMap("SecretName")
+        @com.aliyun.core.annotation.NameInMap("SecretName")
         private String secretName;
 
-        @NameInMap("Username")
+        @com.aliyun.core.annotation.NameInMap("Username")
         private String username;
 
         private Secrets(Builder builder) {
@@ -198,7 +218,10 @@ public class DescribeSecretsResponseBody extends TeaModel {
             private String username; 
 
             /**
-             * The ID of the Alibaba Cloud account.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1266348003******</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -206,7 +229,10 @@ public class DescribeSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the credential.
+             * <p>The description of the credential.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -214,7 +240,10 @@ public class DescribeSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -222,7 +251,10 @@ public class DescribeSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the credential for the created Data API account.
+             * <p>The Alibaba Cloud Resource Name (ARN) of the credential for the created Data API account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:rds:cn-hangzhou:1335786***:dbInstance/rm-bp1m7l3j63****</p>
              */
             public Builder secretArn(String secretArn) {
                 this.secretArn = secretArn;
@@ -230,7 +262,10 @@ public class DescribeSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the credential.
+             * <p>The name of the credential.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Foo</p>
              */
             public Builder secretName(String secretName) {
                 this.secretName = secretName;
@@ -238,7 +273,10 @@ public class DescribeSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The username that is used to access the database.
+             * <p>The username that is used to access the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_jack</p>
              */
             public Builder username(String username) {
                 this.username = username;

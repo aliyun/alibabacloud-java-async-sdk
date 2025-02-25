@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFeatureViewResponseBody} extends {@link TeaModel}
  *
  * <p>CreateFeatureViewResponseBody</p>
  */
 public class CreateFeatureViewResponseBody extends TeaModel {
-    @NameInMap("FeatureViewId")
+    @com.aliyun.core.annotation.NameInMap("FeatureViewId")
     private String featureViewId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateFeatureViewResponseBody(Builder builder) {

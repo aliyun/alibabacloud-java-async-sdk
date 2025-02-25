@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAllWhitelistTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAllWhitelistTemplateResponseBody</p>
  */
 public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeAllWhitelistTemplateResponseBody(Builder builder) {
@@ -98,14 +103,17 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code returned. Valid values:
-         * <p>
+         * <p>The response code returned. Valid values:</p>
+         * <ul>
+         * <li><strong>200</strong>: success</li>
+         * <li><strong>400</strong>: client error</li>
+         * <li><strong>401</strong>: identity authentication failed</li>
+         * <li><strong>404</strong>: request page not found</li>
+         * <li><strong>500</strong>: server error</li>
+         * </ul>
          * 
-         * *   **200**: success
-         * *   **400**: client error
-         * *   **401**: identity authentication failed
-         * *   **404**: request page not found
-         * *   **500**: server error
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -113,7 +121,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -121,12 +129,15 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned. Valid values:
-         * <p>
+         * <p>The HTTP status code returned. Valid values:</p>
+         * <ul>
+         * <li><strong>200</strong>: success</li>
+         * <li><strong>400</strong>: client error</li>
+         * <li><strong>500</strong>: server error</li>
+         * </ul>
          * 
-         * *   **200**: success
-         * *   **400**: client error
-         * *   **500**: server error
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -134,7 +145,10 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +156,10 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16C62438-491B-5C02-9B49-BA924A1372A2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,11 +167,14 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -167,20 +187,26 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAllWhitelistTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAllWhitelistTemplateResponseBody</p>
+     */
     public static class Templates extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
-        @NameInMap("Ips")
+        @com.aliyun.core.annotation.NameInMap("Ips")
         private String ips;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private Integer templateId;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private Integer userId;
 
         private Templates(Builder builder) {
@@ -242,7 +268,10 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             private Integer userId; 
 
             /**
-             * The primary key of the data table.
+             * <p>The primary key of the data table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -250,7 +279,10 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses.
+             * <p>The IP addresses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12.2.X.X,10.0.X.X</p>
              */
             public Builder ips(String ips) {
                 this.ips = ips;
@@ -258,7 +290,10 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the whitelist template.
+             * <p>The ID of the whitelist template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>412</p>
              */
             public Builder templateId(Integer templateId) {
                 this.templateId = templateId;
@@ -266,7 +301,10 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the whitelist template.
+             * <p>The name of the whitelist template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>template_123</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -274,7 +312,10 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>168****</p>
              */
             public Builder userId(Integer userId) {
                 this.userId = userId;
@@ -288,26 +329,32 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAllWhitelistTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAllWhitelistTemplateResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CurrPageNumbers")
+        @com.aliyun.core.annotation.NameInMap("CurrPageNumbers")
         private Integer currPageNumbers;
 
-        @NameInMap("HasNext")
+        @com.aliyun.core.annotation.NameInMap("HasNext")
         private Boolean hasNext;
 
-        @NameInMap("HasPrev")
+        @com.aliyun.core.annotation.NameInMap("HasPrev")
         private Boolean hasPrev;
 
-        @NameInMap("MaxRecordsPerPage")
+        @com.aliyun.core.annotation.NameInMap("MaxRecordsPerPage")
         private Integer maxRecordsPerPage;
 
-        @NameInMap("Templates")
-        private java.util.List < Templates> templates;
+        @com.aliyun.core.annotation.NameInMap("Templates")
+        private java.util.List<Templates> templates;
 
-        @NameInMap("TotalPageNumbers")
+        @com.aliyun.core.annotation.NameInMap("TotalPageNumbers")
         private Integer totalPageNumbers;
 
-        @NameInMap("TotalRecords")
+        @com.aliyun.core.annotation.NameInMap("TotalRecords")
         private Integer totalRecords;
 
         private Data(Builder builder) {
@@ -359,7 +406,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
         /**
          * @return templates
          */
-        public java.util.List < Templates> getTemplates() {
+        public java.util.List<Templates> getTemplates() {
             return this.templates;
         }
 
@@ -382,12 +429,15 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             private Boolean hasNext; 
             private Boolean hasPrev; 
             private Integer maxRecordsPerPage; 
-            private java.util.List < Templates> templates; 
+            private java.util.List<Templates> templates; 
             private Integer totalPageNumbers; 
             private Integer totalRecords; 
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currPageNumbers(Integer currPageNumbers) {
                 this.currPageNumbers = currPageNumbers;
@@ -395,11 +445,14 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the data that meets the conditions is displayed on the next page. Valid values:
-             * <p>
+             * <p>Indicates whether the data that meets the conditions is displayed on the next page. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasNext(Boolean hasNext) {
                 this.hasNext = hasNext;
@@ -407,11 +460,14 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the data that meets the conditions is displayed on the previous page. Valid values:
-             * <p>
+             * <p>Indicates whether the data that meets the conditions is displayed on the previous page. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hasPrev(Boolean hasPrev) {
                 this.hasPrev = hasPrev;
@@ -419,7 +475,10 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries to return on each page.
+             * <p>The number of entries to return on each page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxRecordsPerPage(Integer maxRecordsPerPage) {
                 this.maxRecordsPerPage = maxRecordsPerPage;
@@ -427,15 +486,18 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The information about whitelist templates that are returned by page.
+             * <p>The information about whitelist templates that are returned by page.</p>
              */
-            public Builder templates(java.util.List < Templates> templates) {
+            public Builder templates(java.util.List<Templates> templates) {
                 this.templates = templates;
                 return this;
             }
 
             /**
-             * The total number of pages returned.
+             * <p>The total number of pages returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder totalPageNumbers(Integer totalPageNumbers) {
                 this.totalPageNumbers = totalPageNumbers;
@@ -443,7 +505,10 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>402</p>
              */
             public Builder totalRecords(Integer totalRecords) {
                 this.totalRecords = totalRecords;

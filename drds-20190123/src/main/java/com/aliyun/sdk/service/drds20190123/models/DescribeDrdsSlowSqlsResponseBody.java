@@ -98,7 +98,7 @@ public class DescribeDrdsSlowSqlsResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * Items.
+         * Indicates the details of the slow SQL query.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -106,7 +106,7 @@ public class DescribeDrdsSlowSqlsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * Indicates the page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +114,7 @@ public class DescribeDrdsSlowSqlsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * Indicates the number of entries returned on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +122,7 @@ public class DescribeDrdsSlowSqlsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Indicates the ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeDrdsSlowSqlsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +138,7 @@ public class DescribeDrdsSlowSqlsResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * Indicates the total number of entries.
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -226,7 +226,7 @@ public class DescribeDrdsSlowSqlsResponseBody extends TeaModel {
             private String sql; 
 
             /**
-             * Host.
+             * Indicates the IP address of the execution machine.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -234,7 +234,7 @@ public class DescribeDrdsSlowSqlsResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseTime.
+             * Indicates the response time. Unit: ms.
              */
             public Builder responseTime(Long responseTime) {
                 this.responseTime = responseTime;
@@ -242,7 +242,7 @@ public class DescribeDrdsSlowSqlsResponseBody extends TeaModel {
             }
 
             /**
-             * Schema.
+             * Indicates the name of the database.
              */
             public Builder schema(String schema) {
                 this.schema = schema;
@@ -250,7 +250,7 @@ public class DescribeDrdsSlowSqlsResponseBody extends TeaModel {
             }
 
             /**
-             * SendTime.
+             * Indicates the time when the slow SQL query was sent. Unit: ms.
              */
             public Builder sendTime(Long sendTime) {
                 this.sendTime = sendTime;
@@ -258,7 +258,7 @@ public class DescribeDrdsSlowSqlsResponseBody extends TeaModel {
             }
 
             /**
-             * Sql.
+             * Indicates the content of the slow SQL query.
              */
             public Builder sql(String sql) {
                 this.sql = sql;

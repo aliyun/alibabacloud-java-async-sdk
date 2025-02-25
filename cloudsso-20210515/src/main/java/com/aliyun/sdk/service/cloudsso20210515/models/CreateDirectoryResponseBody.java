@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDirectoryResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDirectoryResponseBody</p>
  */
 public class CreateDirectoryResponseBody extends TeaModel {
-    @NameInMap("Directory")
+    @com.aliyun.core.annotation.NameInMap("Directory")
     private Directory directory;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateDirectoryResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class CreateDirectoryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the directory.
+         * <p>The information about the directory.</p>
          */
         public Builder directory(Directory directory) {
             this.directory = directory;
@@ -58,7 +58,10 @@ public class CreateDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ADADC31D-90EE-5459-99B0-D83DF07769A3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +74,26 @@ public class CreateDirectoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDirectoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateDirectoryResponseBody</p>
+     */
     public static class Directory extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DirectoryId")
+        @com.aliyun.core.annotation.NameInMap("DirectoryId")
         private String directoryId;
 
-        @NameInMap("DirectoryName")
+        @com.aliyun.core.annotation.NameInMap("DirectoryName")
         private String directoryName;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private Directory(Builder builder) {
@@ -146,7 +155,10 @@ public class CreateDirectoryResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The time when the directory was created. The time is displayed in UTC.
+             * <p>The time when the directory was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-10-10T04:04:04Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -154,7 +166,10 @@ public class CreateDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the directory.
+             * <p>The ID of the directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-00fc2p61****</p>
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -162,7 +177,10 @@ public class CreateDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the directory.
+             * <p>The name of the directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder directoryName(String directoryName) {
                 this.directoryName = directoryName;
@@ -170,7 +188,10 @@ public class CreateDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the directory.
+             * <p>The region ID of the directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -178,7 +199,10 @@ public class CreateDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the directory was modified. The time is displayed in UTC.
+             * <p>The time when the directory was modified. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-10-10T04:04:04Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

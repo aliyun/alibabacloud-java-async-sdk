@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePdnsAppKeyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePdnsAppKeyResponseBody</p>
  */
 public class DescribePdnsAppKeyResponseBody extends TeaModel {
-    @NameInMap("AppKey")
+    @com.aliyun.core.annotation.NameInMap("AppKey")
     private AppKey appKey;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePdnsAppKeyResponseBody(Builder builder) {
@@ -71,23 +76,37 @@ public class DescribePdnsAppKeyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePdnsAppKeyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePdnsAppKeyResponseBody</p>
+     */
     public static class AppKey extends TeaModel {
-        @NameInMap("AppKeyId")
+        @com.aliyun.core.annotation.NameInMap("AppKeyId")
         private String appKeyId;
 
-        @NameInMap("AppKeySecret")
+        @com.aliyun.core.annotation.NameInMap("AppKeySecret")
         private String appKeySecret;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
+        private Long createTimestamp;
+
+        @com.aliyun.core.annotation.NameInMap("Remark")
+        private String remark;
+
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private AppKey(Builder builder) {
             this.appKeyId = builder.appKeyId;
             this.appKeySecret = builder.appKeySecret;
             this.createDate = builder.createDate;
+            this.createTimestamp = builder.createTimestamp;
+            this.remark = builder.remark;
             this.state = builder.state;
         }
 
@@ -121,6 +140,20 @@ public class DescribePdnsAppKeyResponseBody extends TeaModel {
         }
 
         /**
+         * @return createTimestamp
+         */
+        public Long getCreateTimestamp() {
+            return this.createTimestamp;
+        }
+
+        /**
+         * @return remark
+         */
+        public String getRemark() {
+            return this.remark;
+        }
+
+        /**
          * @return state
          */
         public String getState() {
@@ -131,6 +164,8 @@ public class DescribePdnsAppKeyResponseBody extends TeaModel {
             private String appKeyId; 
             private String appKeySecret; 
             private String createDate; 
+            private Long createTimestamp; 
+            private String remark; 
             private String state; 
 
             /**
@@ -154,6 +189,22 @@ public class DescribePdnsAppKeyResponseBody extends TeaModel {
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
+                return this;
+            }
+
+            /**
+             * CreateTimestamp.
+             */
+            public Builder createTimestamp(Long createTimestamp) {
+                this.createTimestamp = createTimestamp;
+                return this;
+            }
+
+            /**
+             * Remark.
+             */
+            public Builder remark(String remark) {
+                this.remark = remark;
                 return this;
             }
 

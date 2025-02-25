@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeliveryInfo} extends {@link TeaModel}
  *
  * <p>DeliveryInfo</p>
  */
 public class DeliveryInfo extends TeaModel {
-    @NameInMap("displayName")
+    @com.aliyun.core.annotation.NameInMap("displayName")
     private String displayName;
 
-    @NameInMap("id")
+    @com.aliyun.core.annotation.NameInMap("id")
     private String id;
 
-    @NameInMap("postFee")
+    @com.aliyun.core.annotation.NameInMap("postFee")
     private Long postFee;
 
-    @NameInMap("serviceType")
+    @com.aliyun.core.annotation.NameInMap("serviceType")
     private Long serviceType;
 
     private DeliveryInfo(Builder builder) {

@@ -1,18 +1,18 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRealTimeLogDeliveryResponseBody} extends {@link TeaModel}
  *
  * <p>CreateRealTimeLogDeliveryResponseBody</p>
  */
 public class CreateRealTimeLogDeliveryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateRealTimeLogDeliveryResponseBody(Builder builder) {
@@ -38,7 +38,10 @@ public class CreateRealTimeLogDeliveryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F32C57AA-7BF8-49AE-A2CC-9F42390F5A19</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

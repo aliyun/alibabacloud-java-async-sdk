@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterOperateLogsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeClusterOperateLogsResponseBody</p>
  */
 public class DescribeClusterOperateLogsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("DataPoints")
-    private java.util.List < DataPoints> dataPoints;
+    @com.aliyun.core.annotation.NameInMap("DataPoints")
+    private java.util.List<DataPoints> dataPoints;
 
-    @NameInMap("DynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("DynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Long totalRecordCount;
 
     private DescribeClusterOperateLogsResponseBody(Builder builder) {
@@ -77,7 +82,7 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
     /**
      * @return dataPoints
      */
-    public java.util.List < DataPoints> getDataPoints() {
+    public java.util.List<DataPoints> getDataPoints() {
         return this.dataPoints;
     }
 
@@ -146,7 +151,7 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < DataPoints> dataPoints; 
+        private java.util.List<DataPoints> dataPoints; 
         private String dynamicMessage; 
         private String errCode; 
         private String errMessage; 
@@ -158,7 +163,10 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
         private Long totalRecordCount; 
 
         /**
-         * The error code returned by the backend service. The number is incremented.
+         * <p>The error code returned by the backend service. The number is incremented.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -166,15 +174,18 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the operation logs.
+         * <p>The information about the operation logs.</p>
          */
-        public Builder dataPoints(java.util.List < DataPoints> dataPoints) {
+        public Builder dataPoints(java.util.List<DataPoints> dataPoints) {
             this.dataPoints = dataPoints;
             return this;
         }
 
         /**
-         * The dynamic part in the error message. This parameter is used to replace %s in the ErrMessage parameter.
+         * <p>The dynamic part in the error message. This parameter is used to replace %s in the ErrMessage parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Type</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -182,7 +193,10 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -190,7 +204,10 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Value of Input Parameter %s is not valid.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -198,7 +215,10 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned for an exception.
+         * <p>The HTTP status code returned for an exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -206,7 +226,10 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -214,7 +237,10 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -222,7 +248,10 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>621BB4F8-3016-4FAA-8D5A-5D3163CC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,7 +259,10 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +270,10 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of records.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalRecordCount(Long totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -251,29 +286,35 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClusterOperateLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterOperateLogsResponseBody</p>
+     */
     public static class DataPoints extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("LogDatetime")
+        @com.aliyun.core.annotation.NameInMap("LogDatetime")
         private Long logDatetime;
 
-        @NameInMap("NewValue")
+        @com.aliyun.core.annotation.NameInMap("NewValue")
         private String newValue;
 
-        @NameInMap("OldValue")
+        @com.aliyun.core.annotation.NameInMap("OldValue")
         private String oldValue;
 
-        @NameInMap("OperationName")
+        @com.aliyun.core.annotation.NameInMap("OperationName")
         private String operationName;
 
-        @NameInMap("OperationUser")
+        @com.aliyun.core.annotation.NameInMap("OperationUser")
         private String operationUser;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Integer success;
 
         private DataPoints(Builder builder) {
@@ -362,7 +403,10 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
             private Integer success; 
 
             /**
-             * Other description of the operation.
+             * <p>Other description of the operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -370,7 +414,10 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The primary key of the log table.
+             * <p>The primary key of the log table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>237827</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -378,7 +425,10 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the operation is recorded. The value is in the UNIX timestamp format. Unit: milliseconds.
+             * <p>The time when the operation is recorded. The value is in the UNIX timestamp format. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1642077211574</p>
              */
             public Builder logDatetime(Long logDatetime) {
                 this.logDatetime = logDatetime;
@@ -386,7 +436,10 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the parameter after the operation if the operation is an UPDATE operation.
+             * <p>The value of the parameter after the operation if the operation is an UPDATE operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>105</p>
              */
             public Builder newValue(String newValue) {
                 this.newValue = newValue;
@@ -394,7 +447,10 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the parameter before the operation if the operation is an UPDATE operation.
+             * <p>The value of the parameter before the operation if the operation is an UPDATE operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder oldValue(String oldValue) {
                 this.oldValue = oldValue;
@@ -402,7 +458,10 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the operation.
+             * <p>The type of the operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>modify-oversold-ratio</p>
              */
             public Builder operationName(String operationName) {
                 this.operationName = operationName;
@@ -410,7 +469,10 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The user who performed the operation.
+             * <p>The user who performed the operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder operationUser(String operationUser) {
                 this.operationUser = operationUser;
@@ -418,7 +480,10 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the request was successful. A value of **1** indicates that the request was successful.
+             * <p>Indicates whether the request was successful. A value of <strong>1</strong> indicates that the request was successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder success(Integer success) {
                 this.success = success;

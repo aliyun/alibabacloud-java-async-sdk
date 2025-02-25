@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAdvanceConfigFileRequest} extends {@link RequestModel}
  *
  * <p>ModifyAdvanceConfigFileRequest</p>
  */
 public class ModifyAdvanceConfigFileRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("configName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("configName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String configName;
 
-    @Body
-    @NameInMap("content")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("content")
     private String content;
 
-    @Body
-    @NameInMap("variables")
-    private java.util.Map < String, VariablesValue > variables;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("variables")
+    private java.util.Map<String, VariablesValue> variables;
 
-    @Query
-    @NameInMap("fileName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("fileName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileName;
 
     private ModifyAdvanceConfigFileRequest(Builder builder) {
@@ -81,7 +86,7 @@ public class ModifyAdvanceConfigFileRequest extends Request {
     /**
      * @return variables
      */
-    public java.util.Map < String, VariablesValue > getVariables() {
+    public java.util.Map<String, VariablesValue> getVariables() {
         return this.variables;
     }
 
@@ -96,7 +101,7 @@ public class ModifyAdvanceConfigFileRequest extends Request {
         private String instanceId; 
         private String configName; 
         private String content; 
-        private java.util.Map < String, VariablesValue > variables; 
+        private java.util.Map<String, VariablesValue> variables; 
         private String fileName; 
 
         private Builder() {
@@ -113,7 +118,11 @@ public class ModifyAdvanceConfigFileRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-2r42ostoc01</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -122,7 +131,11 @@ public class ModifyAdvanceConfigFileRequest extends Request {
         }
 
         /**
-         * The name of the configuration.
+         * <p>The configuration name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-zvp2ou1h801_online_config_edit</p>
          */
         public Builder configName(String configName) {
             this.putPathParameter("configName", configName);
@@ -131,7 +144,10 @@ public class ModifyAdvanceConfigFileRequest extends Request {
         }
 
         /**
-         * The content of the file.
+         * <p>The file content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;ha3&quot;</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("content", content);
@@ -140,16 +156,20 @@ public class ModifyAdvanceConfigFileRequest extends Request {
         }
 
         /**
-         * The variable.
+         * <p>The variables.</p>
          */
-        public Builder variables(java.util.Map < String, VariablesValue > variables) {
+        public Builder variables(java.util.Map<String, VariablesValue> variables) {
             this.putBodyParameter("variables", variables);
             this.variables = variables;
             return this;
         }
 
         /**
-         * The name of the file.
+         * <p>The name of the file.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/qrs.json</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("fileName", fileName);

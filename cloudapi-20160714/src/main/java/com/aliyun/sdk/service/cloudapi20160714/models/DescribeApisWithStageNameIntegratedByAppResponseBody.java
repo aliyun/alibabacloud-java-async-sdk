@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApisWithStageNameIntegratedByAppResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeApisWithStageNameIntegratedByAppResponseBody</p>
  */
 public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaModel {
-    @NameInMap("AppApiRelationInfos")
+    @com.aliyun.core.annotation.NameInMap("AppApiRelationInfos")
     private AppApiRelationInfos appApiRelationInfos;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeApisWithStageNameIntegratedByAppResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
         private Integer totalCount; 
 
         /**
-         * The authorization information of the API.
+         * <p>The authorization information of the API.</p>
          */
         public Builder appApiRelationInfos(AppApiRelationInfos appApiRelationInfos) {
             this.appApiRelationInfos = appApiRelationInfos;
@@ -94,7 +99,10 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6C87A26A-6A18-4B8E-8099-705278381A2C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,42 +148,48 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
 
     } 
 
+    /**
+     * 
+     * {@link DescribeApisWithStageNameIntegratedByAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApisWithStageNameIntegratedByAppResponseBody</p>
+     */
     public static class AppApiRelationInfo extends TeaModel {
-        @NameInMap("ApiId")
+        @com.aliyun.core.annotation.NameInMap("ApiId")
         private String apiId;
 
-        @NameInMap("ApiName")
+        @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
 
-        @NameInMap("AuthorizationSource")
+        @com.aliyun.core.annotation.NameInMap("AuthorizationSource")
         private String authorizationSource;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("Method")
+        @com.aliyun.core.annotation.NameInMap("Method")
         private String method;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("StageNameAndAuth")
-        private java.util.Map < String, String > stageNameAndAuth;
+        @com.aliyun.core.annotation.NameInMap("StageNameAndAuth")
+        private java.util.Map<String, String> stageNameAndAuth;
 
         private AppApiRelationInfo(Builder builder) {
             this.apiId = builder.apiId;
@@ -271,7 +294,7 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
         /**
          * @return stageNameAndAuth
          */
-        public java.util.Map < String, String > getStageNameAndAuth() {
+        public java.util.Map<String, String> getStageNameAndAuth() {
             return this.stageNameAndAuth;
         }
 
@@ -287,10 +310,13 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
             private String operator; 
             private String path; 
             private String regionId; 
-            private java.util.Map < String, String > stageNameAndAuth; 
+            private java.util.Map<String, String> stageNameAndAuth; 
 
             /**
-             * The API ID.
+             * <p>The API ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c625795a1e664782a918eaa629e96ab5</p>
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -298,7 +324,10 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
             }
 
             /**
-             * The API name.
+             * <p>The API name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sd2_h5_player_history_competition</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -306,7 +335,10 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
             }
 
             /**
-             * The authorization source.
+             * <p>The authorization source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELF</p>
              */
             public Builder authorizationSource(String authorizationSource) {
                 this.authorizationSource = authorizationSource;
@@ -314,7 +346,10 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
             }
 
             /**
-             * The time when the authorization was created.
+             * <p>The time when the authorization was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sun, 02 Jan 2022 16:00:00 GMT</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -322,7 +357,10 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
             }
 
             /**
-             * The API description.
+             * <p>The API description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b1008kz</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -330,7 +368,10 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
             }
 
             /**
-             * The ID of the API group.
+             * <p>The ID of the API group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>38bed48d664149e4b9b5ea576319673f</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -338,7 +379,10 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
             }
 
             /**
-             * The name of the API group.
+             * <p>The name of the API group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>manager_vehicles</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -346,7 +390,10 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
             }
 
             /**
-             * The request HTTP method for the API.
+             * <p>The request HTTP method of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>POST</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -354,11 +401,14 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
             }
 
             /**
-             * The authorizer. Valid values:
-             * <p>
+             * <p>The authorizer. Valid values:</p>
+             * <ul>
+             * <li><strong>PROVIDER:</strong> the API owner</li>
+             * <li><strong>CONSUMER:</strong> the API caller</li>
+             * </ul>
              * 
-             * *   **PROVIDER:**: the API owner
-             * *   **CONSUMER:**: the API caller
+             * <strong>example:</strong>
+             * <p>PROVIDER</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -366,7 +416,10 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
             }
 
             /**
-             * The API request path.
+             * <p>The request path of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/api/offline/cacheData</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -374,7 +427,10 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -382,9 +438,9 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
             }
 
             /**
-             * The mapping information between environments and authorizations.
+             * <p>The mapping information between environments and authorizations.</p>
              */
-            public Builder stageNameAndAuth(java.util.Map < String, String > stageNameAndAuth) {
+            public Builder stageNameAndAuth(java.util.Map<String, String> stageNameAndAuth) {
                 this.stageNameAndAuth = stageNameAndAuth;
                 return this;
             }
@@ -396,9 +452,15 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeApisWithStageNameIntegratedByAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApisWithStageNameIntegratedByAppResponseBody</p>
+     */
     public static class AppApiRelationInfos extends TeaModel {
-        @NameInMap("AppApiRelationInfo")
-        private java.util.List < AppApiRelationInfo> appApiRelationInfo;
+        @com.aliyun.core.annotation.NameInMap("AppApiRelationInfo")
+        private java.util.List<AppApiRelationInfo> appApiRelationInfo;
 
         private AppApiRelationInfos(Builder builder) {
             this.appApiRelationInfo = builder.appApiRelationInfo;
@@ -415,17 +477,17 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
         /**
          * @return appApiRelationInfo
          */
-        public java.util.List < AppApiRelationInfo> getAppApiRelationInfo() {
+        public java.util.List<AppApiRelationInfo> getAppApiRelationInfo() {
             return this.appApiRelationInfo;
         }
 
         public static final class Builder {
-            private java.util.List < AppApiRelationInfo> appApiRelationInfo; 
+            private java.util.List<AppApiRelationInfo> appApiRelationInfo; 
 
             /**
              * AppApiRelationInfo.
              */
-            public Builder appApiRelationInfo(java.util.List < AppApiRelationInfo> appApiRelationInfo) {
+            public Builder appApiRelationInfo(java.util.List<AppApiRelationInfo> appApiRelationInfo) {
                 this.appApiRelationInfo = appApiRelationInfo;
                 return this;
             }

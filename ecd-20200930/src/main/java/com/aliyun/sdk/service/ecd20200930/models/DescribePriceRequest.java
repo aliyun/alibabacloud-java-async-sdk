@@ -1,173 +1,108 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePriceRequest} extends {@link RequestModel}
  *
  * <p>DescribePriceRequest</p>
  */
 public class DescribePriceRequest extends Request {
-    @Query
-    @NameInMap("Amount")
-    @Validation(maximum = 1000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Amount")
+    @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 1)
     private Integer amount;
 
-    @Query
-    @NameInMap("Bandwidth")
-    @Validation(maximum = 2048, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.Validation(maximum = 2048, minimum = 1)
     private Integer bandwidth;
 
-    @Query
-    @NameInMap("BundleModels")
-    private java.util.List < BundleModels> bundleModels;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Duration")
+    private Integer duration;
 
-    @Query
-    @NameInMap("EduCdsSize")
-    private Integer eduCdsSize;
-
-    @Query
-    @NameInMap("EduCommittedTime")
-    private Integer eduCommittedTime;
-
-    @Query
-    @NameInMap("EduDesktopBundleId")
-    private String eduDesktopBundleId;
-
-    @Query
-    @NameInMap("EduDesktopNum")
-    private Integer eduDesktopNum;
-
-    @Query
-    @NameInMap("EduRoomClassify")
-    private String eduRoomClassify;
-
-    @Query
-    @NameInMap("EduStudentBundleId")
-    private String eduStudentBundleId;
-
-    @Query
-    @NameInMap("EduStudentNum")
-    private Integer eduStudentNum;
-
-    @Query
-    @NameInMap("EduTeacherBundleId")
-    private String eduTeacherBundleId;
-
-    @Query
-    @NameInMap("EduTeacherNum")
-    private Integer eduTeacherNum;
-
-    @Query
-    @NameInMap("GroupDesktopCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupDesktopCount")
     private Integer groupDesktopCount;
 
-    @Query
-    @NameInMap("HardwareVersion")
-    private String hardwareVersion;
-
-    @Query
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
-    @Query
-    @NameInMap("InternetChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetChargeType")
     private String internetChargeType;
 
-    @Query
-    @NameInMap("OsType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OsType")
     private String osType;
 
-    @Query
-    @NameInMap("PackageSize")
-    private Integer packageSize;
-
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
-    @Query
-    @NameInMap("PeriodUnit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeriodUnit")
     private String periodUnit;
 
-    @Query
-    @NameInMap("PromotionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionId")
     private String promotionId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
-    @Query
-    @NameInMap("RootDiskPerformanceLevel")
-    private String rootDiskPerformanceLevel;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RootDiskCategory")
+    private String rootDiskCategory;
 
-    @Query
-    @NameInMap("RootDiskSizeGib")
-    @Validation(maximum = 32768)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RootDiskSizeGib")
+    @com.aliyun.core.annotation.Validation(maximum = 32768)
     private Integer rootDiskSizeGib;
 
-    @Query
-    @NameInMap("SpPeriodInfo")
-    private String spPeriodInfo;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserDiskCategory")
+    private String userDiskCategory;
 
-    @Query
-    @NameInMap("SpPrice")
-    private Boolean spPrice;
-
-    @Query
-    @NameInMap("SpType")
-    private String spType;
-
-    @Query
-    @NameInMap("UserDiskPerformanceLevel")
-    private String userDiskPerformanceLevel;
-
-    @Query
-    @NameInMap("UserDiskSizeGib")
-    @Validation(maximum = 32768)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserDiskSizeGib")
+    @com.aliyun.core.annotation.Validation(maximum = 65536)
     private Integer userDiskSizeGib;
 
     private DescribePriceRequest(Builder builder) {
         super(builder);
         this.amount = builder.amount;
         this.bandwidth = builder.bandwidth;
-        this.bundleModels = builder.bundleModels;
-        this.eduCdsSize = builder.eduCdsSize;
-        this.eduCommittedTime = builder.eduCommittedTime;
-        this.eduDesktopBundleId = builder.eduDesktopBundleId;
-        this.eduDesktopNum = builder.eduDesktopNum;
-        this.eduRoomClassify = builder.eduRoomClassify;
-        this.eduStudentBundleId = builder.eduStudentBundleId;
-        this.eduStudentNum = builder.eduStudentNum;
-        this.eduTeacherBundleId = builder.eduTeacherBundleId;
-        this.eduTeacherNum = builder.eduTeacherNum;
+        this.duration = builder.duration;
         this.groupDesktopCount = builder.groupDesktopCount;
-        this.hardwareVersion = builder.hardwareVersion;
         this.instanceType = builder.instanceType;
         this.internetChargeType = builder.internetChargeType;
         this.osType = builder.osType;
-        this.packageSize = builder.packageSize;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
         this.promotionId = builder.promotionId;
         this.regionId = builder.regionId;
         this.resourceType = builder.resourceType;
-        this.rootDiskPerformanceLevel = builder.rootDiskPerformanceLevel;
+        this.rootDiskCategory = builder.rootDiskCategory;
         this.rootDiskSizeGib = builder.rootDiskSizeGib;
-        this.spPeriodInfo = builder.spPeriodInfo;
-        this.spPrice = builder.spPrice;
-        this.spType = builder.spType;
-        this.userDiskPerformanceLevel = builder.userDiskPerformanceLevel;
+        this.userDiskCategory = builder.userDiskCategory;
         this.userDiskSizeGib = builder.userDiskSizeGib;
     }
 
@@ -199,73 +134,10 @@ public class DescribePriceRequest extends Request {
     }
 
     /**
-     * @return bundleModels
+     * @return duration
      */
-    public java.util.List < BundleModels> getBundleModels() {
-        return this.bundleModels;
-    }
-
-    /**
-     * @return eduCdsSize
-     */
-    public Integer getEduCdsSize() {
-        return this.eduCdsSize;
-    }
-
-    /**
-     * @return eduCommittedTime
-     */
-    public Integer getEduCommittedTime() {
-        return this.eduCommittedTime;
-    }
-
-    /**
-     * @return eduDesktopBundleId
-     */
-    public String getEduDesktopBundleId() {
-        return this.eduDesktopBundleId;
-    }
-
-    /**
-     * @return eduDesktopNum
-     */
-    public Integer getEduDesktopNum() {
-        return this.eduDesktopNum;
-    }
-
-    /**
-     * @return eduRoomClassify
-     */
-    public String getEduRoomClassify() {
-        return this.eduRoomClassify;
-    }
-
-    /**
-     * @return eduStudentBundleId
-     */
-    public String getEduStudentBundleId() {
-        return this.eduStudentBundleId;
-    }
-
-    /**
-     * @return eduStudentNum
-     */
-    public Integer getEduStudentNum() {
-        return this.eduStudentNum;
-    }
-
-    /**
-     * @return eduTeacherBundleId
-     */
-    public String getEduTeacherBundleId() {
-        return this.eduTeacherBundleId;
-    }
-
-    /**
-     * @return eduTeacherNum
-     */
-    public Integer getEduTeacherNum() {
-        return this.eduTeacherNum;
+    public Integer getDuration() {
+        return this.duration;
     }
 
     /**
@@ -273,13 +145,6 @@ public class DescribePriceRequest extends Request {
      */
     public Integer getGroupDesktopCount() {
         return this.groupDesktopCount;
-    }
-
-    /**
-     * @return hardwareVersion
-     */
-    public String getHardwareVersion() {
-        return this.hardwareVersion;
     }
 
     /**
@@ -301,13 +166,6 @@ public class DescribePriceRequest extends Request {
      */
     public String getOsType() {
         return this.osType;
-    }
-
-    /**
-     * @return packageSize
-     */
-    public Integer getPackageSize() {
-        return this.packageSize;
     }
 
     /**
@@ -346,10 +204,10 @@ public class DescribePriceRequest extends Request {
     }
 
     /**
-     * @return rootDiskPerformanceLevel
+     * @return rootDiskCategory
      */
-    public String getRootDiskPerformanceLevel() {
-        return this.rootDiskPerformanceLevel;
+    public String getRootDiskCategory() {
+        return this.rootDiskCategory;
     }
 
     /**
@@ -360,31 +218,10 @@ public class DescribePriceRequest extends Request {
     }
 
     /**
-     * @return spPeriodInfo
+     * @return userDiskCategory
      */
-    public String getSpPeriodInfo() {
-        return this.spPeriodInfo;
-    }
-
-    /**
-     * @return spPrice
-     */
-    public Boolean getSpPrice() {
-        return this.spPrice;
-    }
-
-    /**
-     * @return spType
-     */
-    public String getSpType() {
-        return this.spType;
-    }
-
-    /**
-     * @return userDiskPerformanceLevel
-     */
-    public String getUserDiskPerformanceLevel() {
-        return this.userDiskPerformanceLevel;
+    public String getUserDiskCategory() {
+        return this.userDiskCategory;
     }
 
     /**
@@ -397,33 +234,19 @@ public class DescribePriceRequest extends Request {
     public static final class Builder extends Request.Builder<DescribePriceRequest, Builder> {
         private Integer amount; 
         private Integer bandwidth; 
-        private java.util.List < BundleModels> bundleModels; 
-        private Integer eduCdsSize; 
-        private Integer eduCommittedTime; 
-        private String eduDesktopBundleId; 
-        private Integer eduDesktopNum; 
-        private String eduRoomClassify; 
-        private String eduStudentBundleId; 
-        private Integer eduStudentNum; 
-        private String eduTeacherBundleId; 
-        private Integer eduTeacherNum; 
+        private Integer duration; 
         private Integer groupDesktopCount; 
-        private String hardwareVersion; 
         private String instanceType; 
         private String internetChargeType; 
         private String osType; 
-        private Integer packageSize; 
         private Integer period; 
         private String periodUnit; 
         private String promotionId; 
         private String regionId; 
         private String resourceType; 
-        private String rootDiskPerformanceLevel; 
+        private String rootDiskCategory; 
         private Integer rootDiskSizeGib; 
-        private String spPeriodInfo; 
-        private Boolean spPrice; 
-        private String spType; 
-        private String userDiskPerformanceLevel; 
+        private String userDiskCategory; 
         private Integer userDiskSizeGib; 
 
         private Builder() {
@@ -434,38 +257,27 @@ public class DescribePriceRequest extends Request {
             super(request);
             this.amount = request.amount;
             this.bandwidth = request.bandwidth;
-            this.bundleModels = request.bundleModels;
-            this.eduCdsSize = request.eduCdsSize;
-            this.eduCommittedTime = request.eduCommittedTime;
-            this.eduDesktopBundleId = request.eduDesktopBundleId;
-            this.eduDesktopNum = request.eduDesktopNum;
-            this.eduRoomClassify = request.eduRoomClassify;
-            this.eduStudentBundleId = request.eduStudentBundleId;
-            this.eduStudentNum = request.eduStudentNum;
-            this.eduTeacherBundleId = request.eduTeacherBundleId;
-            this.eduTeacherNum = request.eduTeacherNum;
+            this.duration = request.duration;
             this.groupDesktopCount = request.groupDesktopCount;
-            this.hardwareVersion = request.hardwareVersion;
             this.instanceType = request.instanceType;
             this.internetChargeType = request.internetChargeType;
             this.osType = request.osType;
-            this.packageSize = request.packageSize;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
             this.promotionId = request.promotionId;
             this.regionId = request.regionId;
             this.resourceType = request.resourceType;
-            this.rootDiskPerformanceLevel = request.rootDiskPerformanceLevel;
+            this.rootDiskCategory = request.rootDiskCategory;
             this.rootDiskSizeGib = request.rootDiskSizeGib;
-            this.spPeriodInfo = request.spPeriodInfo;
-            this.spPrice = request.spPrice;
-            this.spType = request.spType;
-            this.userDiskPerformanceLevel = request.userDiskPerformanceLevel;
+            this.userDiskCategory = request.userDiskCategory;
             this.userDiskSizeGib = request.userDiskSizeGib;
         } 
 
         /**
-         * The number of the resources. Default value: 1.
+         * <p>The number of the resources. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder amount(Integer amount) {
             this.putQueryParameter("Amount", amount);
@@ -474,11 +286,14 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The maximum public bandwidth. Unit: Mbit/s.
-         * <p>
+         * <p>The maximum public bandwidth. Unit: Mbit/s.</p>
+         * <ul>
+         * <li>Valid values if the PayByTraffic parameter is set to PayByBandwidth: 10 to 1000</li>
+         * <li>Valid values if the PayByTraffic parameter is set to PayByTraffic: 10 to 200</li>
+         * </ul>
          * 
-         * *   Valid values if the PayByTraffic parameter is set to PayByBandwidth: 10 to 1000
-         * *   Valid values if the PayByTraffic parameter is set to PayByTraffic: 10 to 200
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -487,92 +302,11 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * BundleModels.
+         * Duration.
          */
-        public Builder bundleModels(java.util.List < BundleModels> bundleModels) {
-            this.putQueryParameter("BundleModels", bundleModels);
-            this.bundleModels = bundleModels;
-            return this;
-        }
-
-        /**
-         * EduCdsSize.
-         */
-        public Builder eduCdsSize(Integer eduCdsSize) {
-            this.putQueryParameter("EduCdsSize", eduCdsSize);
-            this.eduCdsSize = eduCdsSize;
-            return this;
-        }
-
-        /**
-         * EduCommittedTime.
-         */
-        public Builder eduCommittedTime(Integer eduCommittedTime) {
-            this.putQueryParameter("EduCommittedTime", eduCommittedTime);
-            this.eduCommittedTime = eduCommittedTime;
-            return this;
-        }
-
-        /**
-         * EduDesktopBundleId.
-         */
-        public Builder eduDesktopBundleId(String eduDesktopBundleId) {
-            this.putQueryParameter("EduDesktopBundleId", eduDesktopBundleId);
-            this.eduDesktopBundleId = eduDesktopBundleId;
-            return this;
-        }
-
-        /**
-         * EduDesktopNum.
-         */
-        public Builder eduDesktopNum(Integer eduDesktopNum) {
-            this.putQueryParameter("EduDesktopNum", eduDesktopNum);
-            this.eduDesktopNum = eduDesktopNum;
-            return this;
-        }
-
-        /**
-         * EduRoomClassify.
-         */
-        public Builder eduRoomClassify(String eduRoomClassify) {
-            this.putQueryParameter("EduRoomClassify", eduRoomClassify);
-            this.eduRoomClassify = eduRoomClassify;
-            return this;
-        }
-
-        /**
-         * EduStudentBundleId.
-         */
-        public Builder eduStudentBundleId(String eduStudentBundleId) {
-            this.putQueryParameter("EduStudentBundleId", eduStudentBundleId);
-            this.eduStudentBundleId = eduStudentBundleId;
-            return this;
-        }
-
-        /**
-         * EduStudentNum.
-         */
-        public Builder eduStudentNum(Integer eduStudentNum) {
-            this.putQueryParameter("EduStudentNum", eduStudentNum);
-            this.eduStudentNum = eduStudentNum;
-            return this;
-        }
-
-        /**
-         * EduTeacherBundleId.
-         */
-        public Builder eduTeacherBundleId(String eduTeacherBundleId) {
-            this.putQueryParameter("EduTeacherBundleId", eduTeacherBundleId);
-            this.eduTeacherBundleId = eduTeacherBundleId;
-            return this;
-        }
-
-        /**
-         * EduTeacherNum.
-         */
-        public Builder eduTeacherNum(Integer eduTeacherNum) {
-            this.putQueryParameter("EduTeacherNum", eduTeacherNum);
-            this.eduTeacherNum = eduTeacherNum;
+        public Builder duration(Integer duration) {
+            this.putQueryParameter("Duration", duration);
+            this.duration = duration;
             return this;
         }
 
@@ -586,42 +320,38 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The model of the WUYING hardware client.
-         */
-        public Builder hardwareVersion(String hardwareVersion) {
-            this.putQueryParameter("HardwareVersion", hardwareVersion);
-            this.hardwareVersion = hardwareVersion;
-            return this;
-        }
-
-        /**
-         * The resource specifications.
-         * <p>
+         * <p>The resource specifications.</p>
+         * <ul>
+         * <li><p>If you set ResourceType to Desktop, set this parameter to one of the following values:</p>
+         * <ul>
+         * <li>ecd.basic.small</li>
+         * <li>ecd.basic.large</li>
+         * <li>ecd.advanced.large</li>
+         * <li>ecd.advanced.xlarge</li>
+         * <li>ecd.performance.2xlarge</li>
+         * <li>ecd.graphics.xlarge</li>
+         * <li>ecd.graphics.2xlarge</li>
+         * <li>ecd.advanced.xlarge_s8d2</li>
+         * <li>ecd.advanced.xlarge_s8d7</li>
+         * <li>ecd.graphics.1g72c</li>
+         * <li>eds.general.2c2g</li>
+         * <li>eds.general.2c4g</li>
+         * <li>eds.general.2c8g</li>
+         * <li>eds.general.4c8g</li>
+         * <li>eds.general.4c16g</li>
+         * <li>eds.general.8c16g</li>
+         * <li>eds.general.8c32g</li>
+         * <li>eds.general.16c32g</li>
+         * </ul>
+         * </li>
+         * <li><p>If you set ResourceType to OfficeSite, set this parameter to large.</p>
+         * </li>
+         * <li><p>If you set ResourceType to Bandwidth, leave this parameter empty.</p>
+         * </li>
+         * </ul>
          * 
-         * *   If you set ResourceType to Desktop, set this parameter to one of the following values:
-         * 
-         *     *   ecd.basic.small
-         *     *   ecd.basic.large
-         *     *   ecd.advanced.large
-         *     *   ecd.advanced.xlarge
-         *     *   ecd.performance.2xlarge
-         *     *   ecd.graphics.xlarge
-         *     *   ecd.graphics.2xlarge
-         *     *   ecd.advanced.xlarge_s8d2
-         *     *   ecd.advanced.xlarge_s8d7
-         *     *   ecd.graphics.1g72c
-         *     *   eds.general.2c2g
-         *     *   eds.general.2c4g
-         *     *   eds.general.2c8g
-         *     *   eds.general.4c8g
-         *     *   eds.general.4c16g
-         *     *   eds.general.8c16g
-         *     *   eds.general.8c32g
-         *     *   eds.general.16c32g
-         * 
-         * *   If you set ResourceType to OfficeSite, set this parameter to large.
-         * 
-         * *   If you set ResourceType to Bandwidth, leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>eds.general.2c2g</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -630,11 +360,14 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The metering method of the Internet access package. Valid values:
-         * <p>
+         * <p>The metering method of the Internet access package. Valid values:</p>
+         * <ul>
+         * <li>PayByBandwidth: pay-by-bandwidth</li>
+         * <li>PayByTraffic: pay-by-data-transfer</li>
+         * </ul>
          * 
-         * *   PayByBandwidth: pay-by-bandwidth
-         * *   PayByTraffic: pay-by-data-transfer
+         * <strong>example:</strong>
+         * <p>PayByTraffic</p>
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -643,13 +376,15 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The OS. Valid values:
-         * <p>
+         * <p>The OS. Valid values:</p>
+         * <ul>
+         * <li>Windows</li>
+         * <li>Linux</li>
+         * </ul>
+         * <p>Default value: Windows.</p>
          * 
-         * *   Windows
-         * *   Linux
-         * 
-         * Default value: Windows.
+         * <strong>example:</strong>
+         * <p>Windows</p>
          */
         public Builder osType(String osType) {
             this.putQueryParameter("OsType", osType);
@@ -658,16 +393,10 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * PackageSize.
-         */
-        public Builder packageSize(Integer packageSize) {
-            this.putQueryParameter("PackageSize", packageSize);
-            this.packageSize = packageSize;
-            return this;
-        }
-
-        /**
-         * The subscription duration. Default value: 1.
+         * <p>The subscription duration. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -676,14 +405,16 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The unit of the billing cycle. Valid values:
-         * <p>
+         * <p>The unit of the billing cycle. Valid values:</p>
+         * <ul>
+         * <li>Hour</li>
+         * <li>Month</li>
+         * <li>Year</li>
+         * </ul>
+         * <p>Default value: Hour.</p>
          * 
-         * *   Hour
-         * *   Month
-         * *   Year
-         * 
-         * Default value: Hour.
+         * <strong>example:</strong>
+         * <p>Hour</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -692,7 +423,10 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The promotion ID.
+         * <p>The promotion ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -701,7 +435,11 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -710,14 +448,16 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The resource type. Valid values:
-         * <p>
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li>Desktop: cloud desktop</li>
+         * <li>OfficeSite: workspace</li>
+         * <li>Bandwidth: network bandwidth</li>
+         * </ul>
+         * <p>Default value: Desktop.</p>
          * 
-         * *   Desktop: cloud desktop
-         * *   OfficeSite: workspace
-         * *   Bandwidth: network bandwidth
-         * 
-         * Default value: Desktop.
+         * <strong>example:</strong>
+         * <p>Desktop</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -726,22 +466,19 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The performance level (PL) of the system disk. Valid values:
-         * <p>
-         * 
-         * *   PL0
-         * *   PL1
-         * *   PL2
-         * *   PL3
+         * RootDiskCategory.
          */
-        public Builder rootDiskPerformanceLevel(String rootDiskPerformanceLevel) {
-            this.putQueryParameter("RootDiskPerformanceLevel", rootDiskPerformanceLevel);
-            this.rootDiskPerformanceLevel = rootDiskPerformanceLevel;
+        public Builder rootDiskCategory(String rootDiskCategory) {
+            this.putQueryParameter("RootDiskCategory", rootDiskCategory);
+            this.rootDiskCategory = rootDiskCategory;
             return this;
         }
 
         /**
-         * The system disk size. Unit: GiB.
+         * <p>The system disk size. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder rootDiskSizeGib(Integer rootDiskSizeGib) {
             this.putQueryParameter("RootDiskSizeGib", rootDiskSizeGib);
@@ -750,49 +487,19 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * SpPeriodInfo.
+         * UserDiskCategory.
          */
-        public Builder spPeriodInfo(String spPeriodInfo) {
-            this.putQueryParameter("SpPeriodInfo", spPeriodInfo);
-            this.spPeriodInfo = spPeriodInfo;
+        public Builder userDiskCategory(String userDiskCategory) {
+            this.putQueryParameter("UserDiskCategory", userDiskCategory);
+            this.userDiskCategory = userDiskCategory;
             return this;
         }
 
         /**
-         * SpPrice.
-         */
-        public Builder spPrice(Boolean spPrice) {
-            this.putQueryParameter("SpPrice", spPrice);
-            this.spPrice = spPrice;
-            return this;
-        }
-
-        /**
-         * SpType.
-         */
-        public Builder spType(String spType) {
-            this.putQueryParameter("SpType", spType);
-            this.spType = spType;
-            return this;
-        }
-
-        /**
-         * The PL of the data disk. Valid values:
-         * <p>
+         * <p>The data disk size. Unit: GiB.</p>
          * 
-         * *   PL0
-         * *   PL1
-         * *   PL2
-         * *   PL3
-         */
-        public Builder userDiskPerformanceLevel(String userDiskPerformanceLevel) {
-            this.putQueryParameter("UserDiskPerformanceLevel", userDiskPerformanceLevel);
-            this.userDiskPerformanceLevel = userDiskPerformanceLevel;
-            return this;
-        }
-
-        /**
-         * The data disk size. Unit: GiB.
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder userDiskSizeGib(Integer userDiskSizeGib) {
             this.putQueryParameter("UserDiskSizeGib", userDiskSizeGib);
@@ -807,86 +514,4 @@ public class DescribePriceRequest extends Request {
 
     } 
 
-    public static class BundleModels extends TeaModel {
-        @NameInMap("Amount")
-        @Validation(maximum = 1000, minimum = 1)
-        private Integer amount;
-
-        @NameInMap("BundleId")
-        private String bundleId;
-
-        @NameInMap("Duration")
-        private Integer duration;
-
-        private BundleModels(Builder builder) {
-            this.amount = builder.amount;
-            this.bundleId = builder.bundleId;
-            this.duration = builder.duration;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static BundleModels create() {
-            return builder().build();
-        }
-
-        /**
-         * @return amount
-         */
-        public Integer getAmount() {
-            return this.amount;
-        }
-
-        /**
-         * @return bundleId
-         */
-        public String getBundleId() {
-            return this.bundleId;
-        }
-
-        /**
-         * @return duration
-         */
-        public Integer getDuration() {
-            return this.duration;
-        }
-
-        public static final class Builder {
-            private Integer amount; 
-            private String bundleId; 
-            private Integer duration; 
-
-            /**
-             * The number of the resources. Default value: 1.
-             */
-            public Builder amount(Integer amount) {
-                this.amount = amount;
-                return this;
-            }
-
-            /**
-             * BundleId.
-             */
-            public Builder bundleId(String bundleId) {
-                this.bundleId = bundleId;
-                return this;
-            }
-
-            /**
-             * Duration.
-             */
-            public Builder duration(Integer duration) {
-                this.duration = duration;
-                return this;
-            }
-
-            public BundleModels build() {
-                return new BundleModels(this);
-            } 
-
-        } 
-
-    }
 }

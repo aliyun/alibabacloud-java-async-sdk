@@ -1,44 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SwitchSynchronizationEndpointRequest} extends {@link RequestModel}
  *
  * <p>SwitchSynchronizationEndpointRequest</p>
  */
 public class SwitchSynchronizationEndpointRequest extends Request {
-    @Query
-    @NameInMap("Endpoint")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Endpoint")
     private Endpoint endpoint;
 
-    @Query
-    @NameInMap("SourceEndpoint")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpoint")
     private SourceEndpoint sourceEndpoint;
 
-    @Query
-    @NameInMap("AccountId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountId")
     private String accountId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("SynchronizationDirection")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SynchronizationDirection")
     private String synchronizationDirection;
 
-    @Query
-    @NameInMap("SynchronizationJobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SynchronizationJobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String synchronizationJobId;
 
     private SwitchSynchronizationEndpointRequest(Builder builder) {
@@ -48,6 +57,7 @@ public class SwitchSynchronizationEndpointRequest extends Request {
         this.accountId = builder.accountId;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.synchronizationDirection = builder.synchronizationDirection;
         this.synchronizationJobId = builder.synchronizationJobId;
     }
@@ -101,6 +111,13 @@ public class SwitchSynchronizationEndpointRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return synchronizationDirection
      */
     public String getSynchronizationDirection() {
@@ -120,6 +137,7 @@ public class SwitchSynchronizationEndpointRequest extends Request {
         private String accountId; 
         private String ownerId; 
         private String regionId; 
+        private String resourceGroupId; 
         private String synchronizationDirection; 
         private String synchronizationJobId; 
 
@@ -134,6 +152,7 @@ public class SwitchSynchronizationEndpointRequest extends Request {
             this.accountId = request.accountId;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.synchronizationDirection = request.synchronizationDirection;
             this.synchronizationJobId = request.synchronizationJobId;
         } 
@@ -157,7 +176,10 @@ public class SwitchSynchronizationEndpointRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
+         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12323344****</p>
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -184,15 +206,30 @@ public class SwitchSynchronizationEndpointRequest extends Request {
         }
 
         /**
-         * The synchronization direction. Valid values:
-         * <p>
+         * <p>Resource group ID.</p>
          * 
-         * *   **Forward**
-         * *   **Reverse**
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * <p>The synchronization direction. Valid values:</p>
+         * <ul>
+         * <li><strong>Forward</strong></li>
+         * <li><strong>Reverse</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> Default value: <strong>Forward</strong>.</p>
+         * </blockquote>
+         * <p>The value <strong>Reverse</strong> takes effect only if the topology of the data synchronization instance is two-way synchronization.</p>
          * 
-         * >  Default value: **Forward**.
-         * 
-         * The value **Reverse** takes effect only if the topology of the data synchronization instance is two-way synchronization.
+         * <strong>example:</strong>
+         * <p>Forward</p>
          */
         public Builder synchronizationDirection(String synchronizationDirection) {
             this.putQueryParameter("SynchronizationDirection", synchronizationDirection);
@@ -201,7 +238,11 @@ public class SwitchSynchronizationEndpointRequest extends Request {
         }
 
         /**
-         * The ID of the data synchronization instance. You can call the DescribeSynchronizationJobs operation to query the instance ID.
+         * <p>The ID of the data synchronization instance. You can call the DescribeSynchronizationJobs operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsexjk1alb116****</p>
          */
         public Builder synchronizationJobId(String synchronizationJobId) {
             this.putQueryParameter("SynchronizationJobId", synchronizationJobId);
@@ -216,24 +257,30 @@ public class SwitchSynchronizationEndpointRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SwitchSynchronizationEndpointRequest} extends {@link TeaModel}
+     *
+     * <p>SwitchSynchronizationEndpointRequest</p>
+     */
     public static class Endpoint extends TeaModel {
-        @NameInMap("IP")
+        @com.aliyun.core.annotation.NameInMap("IP")
         private String ip;
 
-        @NameInMap("InstanceId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String instanceId;
 
-        @NameInMap("InstanceType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String instanceType;
 
-        @NameInMap("Port")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Port")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String port;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private Endpoint(Builder builder) {
@@ -295,10 +342,13 @@ public class SwitchSynchronizationEndpointRequest extends Request {
             private String type; 
 
             /**
-             * The IP address of the database.
-             * <p>
+             * <p>The IP address of the database.</p>
+             * <blockquote>
+             * <p> You must specify the IP address only if the <strong>Endpoint.InstanceType</strong> parameter is set to <strong>Express</strong>.</p>
+             * </blockquote>
              * 
-             * >  You must specify the IP address only if the **Endpoint.InstanceType** parameter is set to **Express**.
+             * <strong>example:</strong>
+             * <p>172.15.185.***</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -306,12 +356,17 @@ public class SwitchSynchronizationEndpointRequest extends Request {
             }
 
             /**
-             * The ID of the ECS instance or the virtual private cloud (VPC).
-             * <p>
+             * <p>The ID of the ECS instance or the virtual private cloud (VPC).</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li>If the <strong>Endpoint.InstanceType</strong> parameter is set to <strong>ECS</strong>, you must specify the ID of the ECS instance.</li>
+             * <li>If the <strong>Endpoint.InstanceType</strong> parameter is set to <strong>Express</strong>, you must specify the ID of the VPC.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * > 
-             * *   If the **Endpoint.InstanceType** parameter is set to **ECS**, you must specify the ID of the ECS instance.
-             * *   If the **Endpoint.InstanceType** parameter is set to **Express**, you must specify the ID of the VPC.
+             * <strong>example:</strong>
+             * <p>i-bp11haem1kpkhoup****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -319,12 +374,16 @@ public class SwitchSynchronizationEndpointRequest extends Request {
             }
 
             /**
-             * The instance type of the database. Valid values:
-             * <p>
+             * <p>The instance type of the database. Valid values:</p>
+             * <ul>
+             * <li><strong>LocalInstance</strong>: self-managed database with a public IP address</li>
+             * <li><strong>ECS</strong>: self-managed database that is hosted on ECS</li>
+             * <li><strong>Express</strong>: self-managed database that is connected over Express Connect</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **LocalInstance**: self-managed database with a public IP address
-             * *   **ECS**: self-managed database that is hosted on ECS
-             * *   **Express**: self-managed database that is connected over Express Connect
+             * <strong>example:</strong>
+             * <p>ECS</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -332,7 +391,11 @@ public class SwitchSynchronizationEndpointRequest extends Request {
             }
 
             /**
-             * The service port number of the database.
+             * <p>The service port number of the database.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -340,11 +403,15 @@ public class SwitchSynchronizationEndpointRequest extends Request {
             }
 
             /**
-             * Specifies whether to update the connection settings of the source instance or the destination instance. Valid values:
-             * <p>
+             * <p>Specifies whether to update the connection settings of the source instance or the destination instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Source</strong></li>
+             * <li><strong>Destination</strong></li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **Source**
-             * *   **Destination**
+             * <strong>example:</strong>
+             * <p>Destination</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -358,11 +425,17 @@ public class SwitchSynchronizationEndpointRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SwitchSynchronizationEndpointRequest} extends {@link TeaModel}
+     *
+     * <p>SwitchSynchronizationEndpointRequest</p>
+     */
     public static class SourceEndpoint extends TeaModel {
-        @NameInMap("OwnerID")
+        @com.aliyun.core.annotation.NameInMap("OwnerID")
         private String ownerID;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
         private SourceEndpoint(Builder builder) {
@@ -397,7 +470,10 @@ public class SwitchSynchronizationEndpointRequest extends Request {
             private String role; 
 
             /**
-             * The ID of the Alibaba Cloud account to which the source instance belongs. You must specify this parameter only if the source instance and the destination instance belong to different Alibaba Cloud accounts.
+             * <p>The ID of the Alibaba Cloud account to which the source instance belongs. You must specify this parameter only if the source instance and the destination instance belong to different Alibaba Cloud accounts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14069264****</p>
              */
             public Builder ownerID(String ownerID) {
                 this.ownerID = ownerID;
@@ -405,10 +481,13 @@ public class SwitchSynchronizationEndpointRequest extends Request {
             }
 
             /**
-             * The authorized Resource Access Management (RAM) role of the source instance. You must specify the RAM role only if the source instance and the destination instance belong to different Alibaba Cloud accounts. You can use the RAM role to allow the Alibaba Cloud account that owns the destination instance to access the source instance.
-             * <p>
+             * <p>The authorized Resource Access Management (RAM) role of the source instance. You must specify the RAM role only if the source instance and the destination instance belong to different Alibaba Cloud accounts. You can use the RAM role to allow the Alibaba Cloud account that owns the destination instance to access the source instance.</p>
+             * <blockquote>
+             * <p> For information about the permissions and authorization methods of the RAM role, see <a href="https://help.aliyun.com/document_detail/48468.html">Configure RAM authorization for cross-account data migration and synchronization</a>.</p>
+             * </blockquote>
              * 
-             * >  For information about the permissions and authorization methods of the RAM role, see [Configure RAM authorization for cross-account data migration and synchronization](~~48468~~).
+             * <strong>example:</strong>
+             * <p>ram-for-dts</p>
              */
             public Builder role(String role) {
                 this.role = role;

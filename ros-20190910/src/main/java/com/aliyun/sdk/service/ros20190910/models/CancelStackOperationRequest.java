@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelStackOperationRequest} extends {@link RequestModel}
  *
  * <p>CancelStackOperationRequest</p>
  */
 public class CancelStackOperationRequest extends Request {
-    @Query
-    @NameInMap("AllowedStackOperations")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllowedStackOperations")
     private java.util.List < String > allowedStackOperations;
 
-    @Query
-    @NameInMap("CancelType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CancelType")
     private String cancelType;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("StackId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String stackId;
 
     private CancelStackOperationRequest(Builder builder) {
@@ -98,7 +98,7 @@ public class CancelStackOperationRequest extends Request {
         } 
 
         /**
-         * The operations that you want to cancel on the stack.
+         * <p>The operations that you want to cancel on the stack.</p>
          */
         public Builder allowedStackOperations(java.util.List < String > allowedStackOperations) {
             this.putQueryParameter("AllowedStackOperations", allowedStackOperations);
@@ -107,11 +107,14 @@ public class CancelStackOperationRequest extends Request {
         }
 
         /**
-         * The method that you want to use to cancel the operations. Valid values:
-         * <p>
+         * <p>The method that you want to use to cancel the operations. Valid values:</p>
+         * <ul>
+         * <li>Quick: cancels the operations on the stack at the earliest opportunity. In this case, Resource Orchestration Service (ROS) stops scheduling new resources and stops running resources at the earliest opportunity. If you use this method, the resource status may become invalid and subsequent stack operations may be affected.</li>
+         * <li>Safe (default): cancels the operations on the stack in a secure manner. In this case, ROS stops scheduling new resources and waits for running resources to be stopped.</li>
+         * </ul>
          * 
-         * *   Quick: cancels the operations on the stack at the earliest opportunity. In this case, Resource Orchestration Service (ROS) stops scheduling new resources and stops running resources at the earliest opportunity. If you use this method, the resource status may become invalid and subsequent stack operations may be affected.
-         * *   Safe (default): cancels the operations on the stack in a secure manner. In this case, ROS stops scheduling new resources and waits for running resources to be stopped.
+         * <strong>example:</strong>
+         * <p>Safe</p>
          */
         public Builder cancelType(String cancelType) {
             this.putQueryParameter("CancelType", cancelType);
@@ -120,7 +123,11 @@ public class CancelStackOperationRequest extends Request {
         }
 
         /**
-         * The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * <p>The region ID of the stack. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -129,7 +136,11 @@ public class CancelStackOperationRequest extends Request {
         }
 
         /**
-         * The stack ID.
+         * <p>The stack ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</p>
          */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);

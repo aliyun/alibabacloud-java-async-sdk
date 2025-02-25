@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetVodTemplateRequest} extends {@link RequestModel}
  *
  * <p>GetVodTemplateRequest</p>
  */
 public class GetVodTemplateRequest extends Request {
-    @Query
-    @NameInMap("VodTemplateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VodTemplateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vodTemplateId;
 
     private GetVodTemplateRequest(Builder builder) {
@@ -55,7 +60,11 @@ public class GetVodTemplateRequest extends Request {
         } 
 
         /**
-         * The ID of the snapshot template.
+         * <p>The ID of the snapshot template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7c49f2f4c0969*****fcd446690</p>
          */
         public Builder vodTemplateId(String vodTemplateId) {
             this.putQueryParameter("VodTemplateId", vodTemplateId);

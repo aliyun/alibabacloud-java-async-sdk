@@ -1,73 +1,78 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyImageAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyImageAttributeRequest</p>
  */
 public class ModifyImageAttributeRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("BootMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BootMode")
     private String bootMode;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Features")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Features")
     private Features features;
 
-    @Query
-    @NameInMap("ImageFamily")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageFamily")
     private String imageFamily;
 
-    @Query
-    @NameInMap("ImageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String imageId;
 
-    @Query
-    @NameInMap("ImageName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageName")
     private String imageName;
 
-    @Query
-    @NameInMap("LicenseType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LicenseType")
     private String licenseType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private ModifyImageAttributeRequest(Builder builder) {
@@ -247,7 +252,18 @@ public class ModifyImageAttributeRequest extends Request {
         }
 
         /**
-         * BootMode.
+         * <p>The new boot mode of the image. Valid values:</p>
+         * <ul>
+         * <li>BIOS: BIOS mode</li>
+         * <li>UEFI: Unified Extensible Firmware Interface (UEFI) mode</li>
+         * <li>UEFI-Preferred: BIOS mode and UEFI mode</li>
+         * </ul>
+         * <blockquote>
+         * <p> Before you change this parameter, make sure that you are familiar with the boot modes supported by the image. If you specify a boot mode that is not supported by the image, ECS instances created from the image cannot start as expected. For information about the boot modes of images, see the <a href="~~2244655#b9caa9b8bb1wf~~">Boot modes of custom images</a> section of the &quot;Best practices for ECS instance boot modes&quot; topic.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>BIOS</p>
          */
         public Builder bootMode(String bootMode) {
             this.putQueryParameter("BootMode", bootMode);
@@ -256,7 +272,11 @@ public class ModifyImageAttributeRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The new description of the custom image. The description must be 2 to 256 characters in length It cannot start with <a href="http://https://%E3%80%82">http:// or https://.</a></p>
+         * <p>This parameter is empty by default, which specifies that the original description is retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -265,7 +285,7 @@ public class ModifyImageAttributeRequest extends Request {
         }
 
         /**
-         * Features.
+         * <p>The attributes of the custom image.</p>
          */
         public Builder features(Features features) {
             this.putQueryParameter("Features", features);
@@ -274,7 +294,11 @@ public class ModifyImageAttributeRequest extends Request {
         }
 
         /**
-         * ImageFamily.
+         * <p>The name of the image family. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with acs: or aliyun. <a href="http://https://%E3%80%82%E3%80%81%EF%BC%88.%EF%BC%89%E3%80%81%EF%BC%88:%EF%BC%89%E3%80%81%EF%BC%88_%EF%BC%89%EF%BC%88-%EF%BC%89%E3%80%82">It cannot contain http:// or https://. It can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).</a></p>
+         * <p>By default, this parameter is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hangzhou-daily-update</p>
          */
         public Builder imageFamily(String imageFamily) {
             this.putQueryParameter("ImageFamily", imageFamily);
@@ -283,7 +307,11 @@ public class ModifyImageAttributeRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * <p>The ID of the custom image.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-bp18ygjuqnwhechc****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -292,7 +320,11 @@ public class ModifyImageAttributeRequest extends Request {
         }
 
         /**
-         * ImageName.
+         * <p>The name of the custom image. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with acs: or aliyun. <a href="http://https://%E3%80%82%E3%80%81%EF%BC%88.%EF%BC%89%E3%80%81%EF%BC%88:%EF%BC%89%E3%80%81%EF%BC%88_%EF%BC%89%EF%BC%88-%EF%BC%89%E3%80%82">It cannot contain http:// or https://. It can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).</a></p>
+         * <p>By default, this parameter is empty. In this case, the original name is retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testImageName</p>
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -301,7 +333,11 @@ public class ModifyImageAttributeRequest extends Request {
         }
 
         /**
-         * LicenseType.
+         * <p>The type of the license that is used to activate the operating system after the image is imported. Set the value to BYOL.</p>
+         * <p>BYOL: The license that comes with the source operating system is used. When you use the BYOL license, make sure that your license key is supported by Alibaba Cloud.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Auto</p>
          */
         public Builder licenseType(String licenseType) {
             this.putQueryParameter("LicenseType", licenseType);
@@ -328,7 +364,11 @@ public class ModifyImageAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the custom image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -355,7 +395,17 @@ public class ModifyImageAttributeRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The new state of the custom image. Valid values:</p>
+         * <ul>
+         * <li>Deprecated: puts the image into the Deprecated state. If the custom image is shared, you must unshare it before you can put it into the Deprecated state. Images in the Deprecated state cannot be shared or copied, but can be used to create instances or replace system disks.</li>
+         * <li>Available: puts the image into the Available state. You can restore an image from the Deprecated state to the Available state.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you want to roll back a custom image in the image family to a previous version, you can put the latest available custom image into the Deprecated state. If no custom images are in the Available state within the image family, an image family cannot be used to create instances. Proceed with caution if only a single custom image is in the Available state within the image family.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Deprecated</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -370,11 +420,21 @@ public class ModifyImageAttributeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyImageAttributeRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyImageAttributeRequest</p>
+     */
     public static class Features extends TeaModel {
-        @NameInMap("NvmeSupport")
+        @com.aliyun.core.annotation.NameInMap("ImdsSupport")
+        private String imdsSupport;
+
+        @com.aliyun.core.annotation.NameInMap("NvmeSupport")
         private String nvmeSupport;
 
         private Features(Builder builder) {
+            this.imdsSupport = builder.imdsSupport;
             this.nvmeSupport = builder.nvmeSupport;
         }
 
@@ -387,6 +447,13 @@ public class ModifyImageAttributeRequest extends Request {
         }
 
         /**
+         * @return imdsSupport
+         */
+        public String getImdsSupport() {
+            return this.imdsSupport;
+        }
+
+        /**
          * @return nvmeSupport
          */
         public String getNvmeSupport() {
@@ -394,10 +461,37 @@ public class ModifyImageAttributeRequest extends Request {
         }
 
         public static final class Builder {
+            private String imdsSupport; 
             private String nvmeSupport; 
 
             /**
-             * NvmeSupport.
+             * <p>The image metadata access mode. Valid values:</p>
+             * <ul>
+             * <li><p>v1: You cannot set the image metadata access mode to security hardening when you create instances from the image.</p>
+             * </li>
+             * <li><p>v2: You can set the image metadata access mode to security hardening when you create instances from the image.</p>
+             * <p>**</p>
+             * <p><strong>Note</strong> You cannot change the value of ImdsSupport from v2 to v1 for an image. To change the value of ImdsSupport from v2 to v1 for an image, use the snapshots associated with the image to create an image and set ImdsSupport to v1 for the new image.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>v2</p>
+             */
+            public Builder imdsSupport(String imdsSupport) {
+                this.imdsSupport = imdsSupport;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether the image supports the Non-Volatile Memory Express (NVMe) protocol. Valid values:</p>
+             * <ul>
+             * <li>supported: The image supports the NVMe protocol. Instances created from the image also support the NVMe protocol.</li>
+             * <li>unsupported: The image does not support the NVMe protocol. Instances created from the image do not support the NVMe protocol.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>supported</p>
              */
             public Builder nvmeSupport(String nvmeSupport) {
                 this.nvmeSupport = nvmeSupport;

@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteInstallCodeRequest} extends {@link RequestModel}
  *
  * <p>DeleteInstallCodeRequest</p>
  */
 public class DeleteInstallCodeRequest extends Request {
-    @Query
-    @NameInMap("CaptchaCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CaptchaCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String captchaCode;
 
     private DeleteInstallCodeRequest(Builder builder) {
@@ -55,10 +60,14 @@ public class DeleteInstallCodeRequest extends Request {
         } 
 
         /**
-         * The installation command.
-         * <p>
+         * <p>The installation command.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeInstallCodes~~">DescribeInstallCodes</a> operation to query installation commands.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeInstallCodes](~~DescribeInstallCodes~~) operation to query installation commands.
+         * <strong>example:</strong>
+         * <p>1q****</p>
          */
         public Builder captchaCode(String captchaCode) {
             this.putQueryParameter("CaptchaCode", captchaCode);

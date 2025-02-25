@@ -84,6 +84,9 @@ public class UpdateFunctionResponseBody extends TeaModel {
     @NameInMap("layers")
     private java.util.List < String > layers;
 
+    @NameInMap("layersArnV2")
+    private java.util.List < String > layersArnV2;
+
     @NameInMap("memorySize")
     private Integer memorySize;
 
@@ -118,6 +121,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         this.instanceType = builder.instanceType;
         this.lastModifiedTime = builder.lastModifiedTime;
         this.layers = builder.layers;
+        this.layersArnV2 = builder.layersArnV2;
         this.memorySize = builder.memorySize;
         this.runtime = builder.runtime;
         this.timeout = builder.timeout;
@@ -300,6 +304,13 @@ public class UpdateFunctionResponseBody extends TeaModel {
     }
 
     /**
+     * @return layersArnV2
+     */
+    public java.util.List < String > getLayersArnV2() {
+        return this.layersArnV2;
+    }
+
+    /**
      * @return memorySize
      */
     public Integer getMemorySize() {
@@ -345,12 +356,13 @@ public class UpdateFunctionResponseBody extends TeaModel {
         private String instanceType; 
         private String lastModifiedTime; 
         private java.util.List < String > layers; 
+        private java.util.List < String > layersArnV2; 
         private Integer memorySize; 
         private String runtime; 
         private Integer timeout; 
 
         /**
-         * 自定义、自定义容器运行时 HTTP Server 的监听端口
+         * caPort.
          */
         public Builder caPort(Integer caPort) {
             this.caPort = caPort;
@@ -358,7 +370,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * function code包的CRC64值
+         * codeChecksum.
          */
         public Builder codeChecksum(String codeChecksum) {
             this.codeChecksum = codeChecksum;
@@ -366,7 +378,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * 系统返回的function的code包大小，单位为byte Example : 1024
+         * codeSize.
          */
         public Builder codeSize(Long codeSize) {
             this.codeSize = codeSize;
@@ -374,7 +386,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * function的CPU规格，单位为vCPU，为0.05vCPU的倍数
+         * cpu.
          */
         public Builder cpu(Float cpu) {
             this.cpu = cpu;
@@ -382,7 +394,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * function创建时间
+         * createdTime.
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -398,7 +410,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * 函数自定义DNS配置
+         * customDNS.
          */
         public Builder customDNS(CustomDNS customDNS) {
             this.customDNS = customDNS;
@@ -406,7 +418,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * 函数自定义健康检查配置，仅适用于Custom runtime/container
+         * customHealthCheckConfig.
          */
         public Builder customHealthCheckConfig(CustomHealthCheckConfig customHealthCheckConfig) {
             this.customHealthCheckConfig = customHealthCheckConfig;
@@ -414,7 +426,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * Custom Runtime函数详细配置
+         * customRuntimeConfig.
          */
         public Builder customRuntimeConfig(CustomRuntimeConfig customRuntimeConfig) {
             this.customRuntimeConfig = customRuntimeConfig;
@@ -422,7 +434,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * 函数描述
+         * description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -430,7 +442,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * function的磁盘规格，单位为MB，可选值为512MB或10240MB
+         * diskSize.
          */
         public Builder diskSize(Integer diskSize) {
             this.diskSize = diskSize;
@@ -438,7 +450,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * 为函数设置的环境变量，可以在函数中获取环境变量的值
+         * environmentVariables.
          */
         public Builder environmentVariables(java.util.Map < String, String > environmentVariables) {
             this.environmentVariables = environmentVariables;
@@ -446,7 +458,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * 系统为每个function生成的唯一ID
+         * functionId.
          */
         public Builder functionId(String functionId) {
             this.functionId = functionId;
@@ -454,7 +466,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * 函数名称
+         * functionName.
          */
         public Builder functionName(String functionName) {
             this.functionName = functionName;
@@ -462,7 +474,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * function的GPU显存规格，单位为MB，为1024MB的倍数
+         * gpuMemorySize.
          */
         public Builder gpuMemorySize(Integer gpuMemorySize) {
             this.gpuMemorySize = gpuMemorySize;
@@ -470,7 +482,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * function的执行入口
+         * handler.
          */
         public Builder handler(String handler) {
             this.handler = handler;
@@ -478,7 +490,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * 初始化function运行的超时时间，单位为秒，最小1秒，默认3秒。初始化function超过这个时间后会被终止执行
+         * initializationTimeout.
          */
         public Builder initializationTimeout(Integer initializationTimeout) {
             this.initializationTimeout = initializationTimeout;
@@ -486,7 +498,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * 初始化 function 执行的入口，具体格式和语言相关
+         * initializer.
          */
         public Builder initializer(String initializer) {
             this.initializer = initializer;
@@ -494,7 +506,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * 单个实例的最大并发度
+         * instanceConcurrency.
          */
         public Builder instanceConcurrency(Integer instanceConcurrency) {
             this.instanceConcurrency = instanceConcurrency;
@@ -526,7 +538,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * function上次修改时间
+         * lastModifiedTime.
          */
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
@@ -534,7 +546,10 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * layers.
+         * The layers.
+         * <p>
+         * 
+         * >  Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file that has the same name of a layer with a larger subscript.
          */
         public Builder layers(java.util.List < String > layers) {
             this.layers = layers;
@@ -542,7 +557,15 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * function的内存规格，单位为MB，为64MB的倍数
+         * A list of layer ARNs.
+         */
+        public Builder layersArnV2(java.util.List < String > layersArnV2) {
+            this.layersArnV2 = layersArnV2;
+            return this;
+        }
+
+        /**
+         * memorySize.
          */
         public Builder memorySize(Integer memorySize) {
             this.memorySize = memorySize;
@@ -550,7 +573,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * function运行的语言环境，目前支持nodejs6, nodejs8, python2.7, python3, java8
+         * The runtime environment of the function. Valid values: **nodejs16**, **nodejs14**, **nodejs12**, **nodejs10**, **nodejs8**, **nodejs6**, **nodejs4.4**, **python3.10**, **python3.9**, **python3**, **python2.7**, **java11**, **java8**, **go1**, **php7.2**, **dotnetcore3.1**, **dotnetcore2.1**, **custom.debian10**, **custom**, and **custom-container**. For more information, see [Supported function runtime environments](~~73338~~).
          */
         public Builder runtime(String runtime) {
             this.runtime = runtime;
@@ -558,7 +581,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * 运行的超时时间，单位为秒
+         * timeout.
          */
         public Builder timeout(Integer timeout) {
             this.timeout = timeout;

@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchDeleteVsDomainConfigsRequest} extends {@link RequestModel}
  *
  * <p>BatchDeleteVsDomainConfigsRequest</p>
  */
 public class BatchDeleteVsDomainConfigsRequest extends Request {
-    @Query
-    @NameInMap("DomainNames")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainNames")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainNames;
 
-    @Query
-    @NameInMap("FunctionNames")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FunctionNames")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String functionNames;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
     private BatchDeleteVsDomainConfigsRequest(Builder builder) {
@@ -76,15 +81,18 @@ public class BatchDeleteVsDomainConfigsRequest extends Request {
             super();
         } 
 
-        private Builder(BatchDeleteVsDomainConfigsRequest response) {
-            super(response);
-            this.domainNames = response.domainNames;
-            this.functionNames = response.functionNames;
-            this.ownerId = response.ownerId;
+        private Builder(BatchDeleteVsDomainConfigsRequest request) {
+            super(request);
+            this.domainNames = request.domainNames;
+            this.functionNames = request.functionNames;
+            this.ownerId = request.ownerId;
         } 
 
         /**
-         * DomainNames.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
          */
         public Builder domainNames(String domainNames) {
             this.putQueryParameter("DomainNames", domainNames);
@@ -93,7 +101,10 @@ public class BatchDeleteVsDomainConfigsRequest extends Request {
         }
 
         /**
-         * FunctionNames.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>https_force</p>
          */
         public Builder functionNames(String functionNames) {
             this.putQueryParameter("FunctionNames", functionNames);

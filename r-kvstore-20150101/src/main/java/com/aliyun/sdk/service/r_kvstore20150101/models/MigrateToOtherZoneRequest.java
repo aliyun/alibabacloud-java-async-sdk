@@ -1,61 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MigrateToOtherZoneRequest} extends {@link RequestModel}
  *
  * <p>MigrateToOtherZoneRequest</p>
  */
 public class MigrateToOtherZoneRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("EffectiveTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveTime")
     private String effectiveTime;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecondaryZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecondaryZoneId")
     private String secondaryZoneId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @Query
-    @NameInMap("ZoneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String zoneId;
 
     private MigrateToOtherZoneRequest(Builder builder) {
@@ -205,7 +205,11 @@ public class MigrateToOtherZoneRequest extends Request {
         }
 
         /**
-         * The ID of the ApsaraDB for Redis instance.
+         * <p>The ID of the ApsaraDB for Redis instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -214,13 +218,19 @@ public class MigrateToOtherZoneRequest extends Request {
         }
 
         /**
-         * Specifies the time when the database is switched after data is migrated. Valid values:
-         * <p>
+         * <p>Specifies the time when the database is switched after data is migrated. Valid values:</p>
+         * <ul>
+         * <li><strong>Immediately</strong>: immediately switched after the data is migrated.</li>
+         * <li><strong>MaintainTime</strong>: switched within the maintenance window.</li>
+         * <li><strong>0</strong>: immediately switched after the data is migrated.</li>
+         * <li><strong>1</strong>: switched within the maintenance window.</li>
+         * </ul>
+         * <blockquote>
+         * <p> Default value: <strong>Immediately</strong>.</p>
+         * </blockquote>
          * 
-         * *   **Immediately**: immediately switched after the data is migrated.
-         * *   **MaintainTime**: switched within the maintenance window.
-         * 
-         * >  Default value: **Immediately**.
+         * <strong>example:</strong>
+         * <p>Immediately</p>
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
@@ -265,10 +275,13 @@ public class MigrateToOtherZoneRequest extends Request {
         }
 
         /**
-         * The ID of the destination secondary zone. You can call the [DescribeZones](~~DescribeZones~~) operation to query zone IDs.
-         * <p>
+         * <p>The ID of the destination secondary zone. You can call the <a href="~~DescribeZones~~">DescribeZones</a> operation to query zone IDs.</p>
+         * <blockquote>
+         * <p> You can specify this parameter to deploy the master node and replica node in different zones to implement zone-disaster recovery. This helps withstand data center-level breakdowns.</p>
+         * </blockquote>
          * 
-         * >  You can specify this parameter to deploy the master node and replica node in different zones to implement zone-disaster recovery. This helps withstand data center-level breakdowns.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         public Builder secondaryZoneId(String secondaryZoneId) {
             this.putQueryParameter("SecondaryZoneId", secondaryZoneId);
@@ -286,11 +299,16 @@ public class MigrateToOtherZoneRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch.
-         * <p>
+         * <p>The ID of the vSwitch.</p>
+         * <blockquote>
+         * <ul>
+         * <li>The vSwitch must be deployed in the zone that is specified by the ZoneId parameter.</li>
+         * <li>If the network type of the instance is VPC, this parameter is required.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > *   The vSwitch must be deployed in the zone that is specified by the ZoneId parameter.
-         * > *   If the network type of the instance is VPC, this parameter is required.
+         * <strong>example:</strong>
+         * <p>vsw-bp1e7clcw529l773d****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -299,7 +317,11 @@ public class MigrateToOtherZoneRequest extends Request {
         }
 
         /**
-         * The ID of the destination primary zone. You can call the [DescribeZones](~~94527~~) operation to query zone IDs.
+         * <p>The ID of the destination primary zone. You can call the <a href="https://help.aliyun.com/document_detail/94527.html">DescribeZones</a> operation to query zone IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-g</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

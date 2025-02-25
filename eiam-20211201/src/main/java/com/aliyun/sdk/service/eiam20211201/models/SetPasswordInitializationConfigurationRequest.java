@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetPasswordInitializationConfigurationRequest} extends {@link RequestModel}
  *
  * <p>SetPasswordInitializationConfigurationRequest</p>
  */
 public class SetPasswordInitializationConfigurationRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String instanceId;
 
-    @Query
-    @NameInMap("PasswordForcedUpdateStatus")
-    @Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordForcedUpdateStatus")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private String passwordForcedUpdateStatus;
 
-    @Query
-    @NameInMap("PasswordInitializationNotificationChannels")
-    @Validation(maxLength = 32)
-    private java.util.List < String > passwordInitializationNotificationChannels;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordInitializationNotificationChannels")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
+    private java.util.List<String> passwordInitializationNotificationChannels;
 
-    @Query
-    @NameInMap("PasswordInitializationStatus")
-    @Validation(required = true, maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordInitializationStatus")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 32)
     private String passwordInitializationStatus;
 
-    @Query
-    @NameInMap("PasswordInitializationType")
-    @Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordInitializationType")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private String passwordInitializationType;
 
     private SetPasswordInitializationConfigurationRequest(Builder builder) {
@@ -88,7 +93,7 @@ public class SetPasswordInitializationConfigurationRequest extends Request {
     /**
      * @return passwordInitializationNotificationChannels
      */
-    public java.util.List < String > getPasswordInitializationNotificationChannels() {
+    public java.util.List<String> getPasswordInitializationNotificationChannels() {
         return this.passwordInitializationNotificationChannels;
     }
 
@@ -110,7 +115,7 @@ public class SetPasswordInitializationConfigurationRequest extends Request {
         private String regionId; 
         private String instanceId; 
         private String passwordForcedUpdateStatus; 
-        private java.util.List < String > passwordInitializationNotificationChannels; 
+        private java.util.List<String> passwordInitializationNotificationChannels; 
         private String passwordInitializationStatus; 
         private String passwordInitializationType; 
 
@@ -138,7 +143,11 @@ public class SetPasswordInitializationConfigurationRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -147,11 +156,14 @@ public class SetPasswordInitializationConfigurationRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable forcible password change upon first logon. Valid values:
-         * <p>
+         * <p>Specifies whether to enable forcible password change upon first logon. Valid values:</p>
+         * <ul>
+         * <li>enabled</li>
+         * <li>disabled</li>
+         * </ul>
          * 
-         * *   enabled
-         * *   disabled
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder passwordForcedUpdateStatus(String passwordForcedUpdateStatus) {
             this.putQueryParameter("PasswordForcedUpdateStatus", passwordForcedUpdateStatus);
@@ -160,20 +172,27 @@ public class SetPasswordInitializationConfigurationRequest extends Request {
         }
 
         /**
-         * The methods for receiving password initialization notifications.
+         * <p>The methods for receiving password initialization notifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>email</p>
          */
-        public Builder passwordInitializationNotificationChannels(java.util.List < String > passwordInitializationNotificationChannels) {
+        public Builder passwordInitializationNotificationChannels(java.util.List<String> passwordInitializationNotificationChannels) {
             this.putQueryParameter("PasswordInitializationNotificationChannels", passwordInitializationNotificationChannels);
             this.passwordInitializationNotificationChannels = passwordInitializationNotificationChannels;
             return this;
         }
 
         /**
-         * Specifies whether to enable password initialization. Valid values:
-         * <p>
+         * <p>Specifies whether to enable password initialization. Valid values:</p>
+         * <ul>
+         * <li>enabled</li>
+         * <li>disabled</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   enabled
-         * *   disabled
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder passwordInitializationStatus(String passwordInitializationStatus) {
             this.putQueryParameter("PasswordInitializationStatus", passwordInitializationStatus);
@@ -182,10 +201,13 @@ public class SetPasswordInitializationConfigurationRequest extends Request {
         }
 
         /**
-         * The password initialization method. This parameter is required when PasswordInitializationStatus is set to enabled. Set the value to random.
-         * <p>
+         * <p>The password initialization method. This parameter is required when PasswordInitializationStatus is set to enabled. Set the value to random.</p>
+         * <ul>
+         * <li>random: A randomly generated password is used.</li>
+         * </ul>
          * 
-         * *   random: A randomly generated password is used.
+         * <strong>example:</strong>
+         * <p>random</p>
          */
         public Builder passwordInitializationType(String passwordInitializationType) {
             this.putQueryParameter("PasswordInitializationType", passwordInitializationType);

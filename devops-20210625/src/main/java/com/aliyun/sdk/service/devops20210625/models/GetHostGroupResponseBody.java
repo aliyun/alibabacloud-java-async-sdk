@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHostGroupResponseBody} extends {@link TeaModel}
  *
  * <p>GetHostGroupResponseBody</p>
  */
 public class GetHostGroupResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("hostGroup")
+    @com.aliyun.core.annotation.NameInMap("hostGroup")
     private HostGroup hostGroup;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private GetHostGroupResponseBody(Builder builder) {
@@ -131,32 +136,38 @@ public class GetHostGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetHostGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHostGroupResponseBody</p>
+     */
     public static class HostInfos extends TeaModel {
-        @NameInMap("aliyunRegionId")
+        @com.aliyun.core.annotation.NameInMap("aliyunRegionId")
         private String aliyunRegionId;
 
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private Long createTime;
 
-        @NameInMap("creatorAccountId")
+        @com.aliyun.core.annotation.NameInMap("creatorAccountId")
         private String creatorAccountId;
 
-        @NameInMap("instanceName")
+        @com.aliyun.core.annotation.NameInMap("instanceName")
         private String instanceName;
 
-        @NameInMap("ip")
+        @com.aliyun.core.annotation.NameInMap("ip")
         private String ip;
 
-        @NameInMap("machineSn")
+        @com.aliyun.core.annotation.NameInMap("machineSn")
         private String machineSn;
 
-        @NameInMap("modifierAccountId")
+        @com.aliyun.core.annotation.NameInMap("modifierAccountId")
         private String modifierAccountId;
 
-        @NameInMap("objectType")
+        @com.aliyun.core.annotation.NameInMap("objectType")
         private String objectType;
 
-        @NameInMap("updateTime")
+        @com.aliyun.core.annotation.NameInMap("updateTime")
         private Long updateTime;
 
         private HostInfos(Builder builder) {
@@ -332,50 +343,56 @@ public class GetHostGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetHostGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHostGroupResponseBody</p>
+     */
     public static class HostGroup extends TeaModel {
-        @NameInMap("aliyunRegion")
+        @com.aliyun.core.annotation.NameInMap("aliyunRegion")
         private String aliyunRegion;
 
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private Long createTime;
 
-        @NameInMap("creatorAccountId")
+        @com.aliyun.core.annotation.NameInMap("creatorAccountId")
         private String creatorAccountId;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("ecsLabelKey")
+        @com.aliyun.core.annotation.NameInMap("ecsLabelKey")
         private String ecsLabelKey;
 
-        @NameInMap("ecsLabelValue")
+        @com.aliyun.core.annotation.NameInMap("ecsLabelValue")
         private String ecsLabelValue;
 
-        @NameInMap("ecsType")
+        @com.aliyun.core.annotation.NameInMap("ecsType")
         private String ecsType;
 
-        @NameInMap("hostInfos")
-        private java.util.List < HostInfos> hostInfos;
+        @com.aliyun.core.annotation.NameInMap("hostInfos")
+        private java.util.List<HostInfos> hostInfos;
 
-        @NameInMap("hostNum")
+        @com.aliyun.core.annotation.NameInMap("hostNum")
         private Long hostNum;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("modifierAccountId")
+        @com.aliyun.core.annotation.NameInMap("modifierAccountId")
         private String modifierAccountId;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("serviceConnectionId")
+        @com.aliyun.core.annotation.NameInMap("serviceConnectionId")
         private Long serviceConnectionId;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("upateTIme")
+        @com.aliyun.core.annotation.NameInMap("upateTIme")
         private Long upateTIme;
 
         private HostGroup(Builder builder) {
@@ -456,7 +473,7 @@ public class GetHostGroupResponseBody extends TeaModel {
         /**
          * @return hostInfos
          */
-        public java.util.List < HostInfos> getHostInfos() {
+        public java.util.List<HostInfos> getHostInfos() {
             return this.hostInfos;
         }
 
@@ -517,7 +534,7 @@ public class GetHostGroupResponseBody extends TeaModel {
             private String ecsLabelKey; 
             private String ecsLabelValue; 
             private String ecsType; 
-            private java.util.List < HostInfos> hostInfos; 
+            private java.util.List<HostInfos> hostInfos; 
             private Long hostNum; 
             private Long id; 
             private String modifierAccountId; 
@@ -585,7 +602,7 @@ public class GetHostGroupResponseBody extends TeaModel {
             /**
              * hostInfos.
              */
-            public Builder hostInfos(java.util.List < HostInfos> hostInfos) {
+            public Builder hostInfos(java.util.List<HostInfos> hostInfos) {
                 this.hostInfos = hostInfos;
                 return this;
             }

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.market20151101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CrossAccountVerifyTokenResponseBody} extends {@link TeaModel}
  *
  * <p>CrossAccountVerifyTokenResponseBody</p>
  */
 public class CrossAccountVerifyTokenResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CrossAccountVerifyTokenResponseBody(Builder builder) {
@@ -102,7 +107,10 @@ public class CrossAccountVerifyTokenResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId
+         * <p>RequestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C19D103F-EA2D-50A5-8441-0267CE9FBA56</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -131,17 +139,23 @@ public class CrossAccountVerifyTokenResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CrossAccountVerifyTokenResponseBody} extends {@link TeaModel}
+     *
+     * <p>CrossAccountVerifyTokenResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("AuthRoles")
-        private java.util.List < String > authRoles;
+        @com.aliyun.core.annotation.NameInMap("AuthRoles")
+        private java.util.List<String> authRoles;
 
-        @NameInMap("AuthTime")
+        @com.aliyun.core.annotation.NameInMap("AuthTime")
         private Long authTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Uid")
+        @com.aliyun.core.annotation.NameInMap("Uid")
         private String uid;
 
         private Result(Builder builder) {
@@ -162,7 +176,7 @@ public class CrossAccountVerifyTokenResponseBody extends TeaModel {
         /**
          * @return authRoles
          */
-        public java.util.List < String > getAuthRoles() {
+        public java.util.List<String> getAuthRoles() {
             return this.authRoles;
         }
 
@@ -188,7 +202,7 @@ public class CrossAccountVerifyTokenResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > authRoles; 
+            private java.util.List<String> authRoles; 
             private Long authTime; 
             private String name; 
             private String uid; 
@@ -196,7 +210,7 @@ public class CrossAccountVerifyTokenResponseBody extends TeaModel {
             /**
              * AuthRoles.
              */
-            public Builder authRoles(java.util.List < String > authRoles) {
+            public Builder authRoles(java.util.List<String> authRoles) {
                 this.authRoles = authRoles;
                 return this;
             }

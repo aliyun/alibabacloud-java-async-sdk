@@ -1,46 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GrantOperatorPermissionRequest} extends {@link RequestModel}
  *
  * <p>GrantOperatorPermissionRequest</p>
  */
 public class GrantOperatorPermissionRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("ExpiredTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExpiredTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String expiredTime;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Privileges")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Privileges")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String privileges;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private GrantOperatorPermissionRequest(Builder builder) {
@@ -141,7 +146,11 @@ public class GrantOperatorPermissionRequest extends Request {
         } 
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -150,7 +159,11 @@ public class GrantOperatorPermissionRequest extends Request {
         }
 
         /**
-         * The expiration time of the permissions. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * <p>The expiration time of the permissions. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-03-27T16:00:00Z</p>
          */
         public Builder expiredTime(String expiredTime) {
             this.putQueryParameter("ExpiredTime", expiredTime);
@@ -177,11 +190,15 @@ public class GrantOperatorPermissionRequest extends Request {
         }
 
         /**
-         * The permissions that you want to grant to the service account. Valid values:
-         * <p>
+         * <p>The permissions that you want to grant to the service account. Valid values:</p>
+         * <ul>
+         * <li><strong>Control</strong>: the configuration permissions, which allow you to view and modify configurations of the instance.</li>
+         * <li><strong>Data</strong>: the data permissions, which allow you to view schemas, indexes, and SQL statements of the instance.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Control**: the configuration permissions, which allow you to view and modify configurations of the instance.
-         * *   **Data**: the data permissions, which allow you to view schemas, indexes, and SQL statements of the instance.
+         * <strong>example:</strong>
+         * <p>Control</p>
          */
         public Builder privileges(String privileges) {
             this.putQueryParameter("Privileges", privileges);

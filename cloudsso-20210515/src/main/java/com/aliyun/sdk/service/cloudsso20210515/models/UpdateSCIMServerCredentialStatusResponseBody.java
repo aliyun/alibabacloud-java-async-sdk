@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSCIMServerCredentialStatusResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateSCIMServerCredentialStatusResponseBody</p>
  */
 public class UpdateSCIMServerCredentialStatusResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SCIMServerCredential")
+    @com.aliyun.core.annotation.NameInMap("SCIMServerCredential")
     private SCIMServerCredential SCIMServerCredential;
 
     private UpdateSCIMServerCredentialStatusResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class UpdateSCIMServerCredentialStatusResponseBody extends TeaModel {
         private SCIMServerCredential SCIMServerCredential; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7C086C2F-1C66-57B3-B14E-2C1DA70727CD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class UpdateSCIMServerCredentialStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the SCIM credential.
+         * <p>The information about the SCIM credential.</p>
          */
         public Builder SCIMServerCredential(SCIMServerCredential SCIMServerCredential) {
             this.SCIMServerCredential = SCIMServerCredential;
@@ -71,23 +74,29 @@ public class UpdateSCIMServerCredentialStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateSCIMServerCredentialStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateSCIMServerCredentialStatusResponseBody</p>
+     */
     public static class SCIMServerCredential extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CredentialId")
+        @com.aliyun.core.annotation.NameInMap("CredentialId")
         private String credentialId;
 
-        @NameInMap("CredentialType")
+        @com.aliyun.core.annotation.NameInMap("CredentialType")
         private String credentialType;
 
-        @NameInMap("DirectoryId")
+        @com.aliyun.core.annotation.NameInMap("DirectoryId")
         private String directoryId;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private SCIMServerCredential(Builder builder) {
@@ -158,7 +167,10 @@ public class UpdateSCIMServerCredentialStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The time when the SCIM credential was created.
+             * <p>The time when the SCIM credential was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-09T08:12:52Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -166,7 +178,10 @@ public class UpdateSCIMServerCredentialStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the SCIM credential.
+             * <p>The ID of the SCIM credential.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>scimcred-004whl0kvfwcypbi****</p>
              */
             public Builder credentialId(String credentialId) {
                 this.credentialId = credentialId;
@@ -174,7 +189,10 @@ public class UpdateSCIMServerCredentialStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the SCIM credential.
+             * <p>The type of the SCIM credential.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BearerToken</p>
              */
             public Builder credentialType(String credentialType) {
                 this.credentialType = credentialType;
@@ -182,7 +200,10 @@ public class UpdateSCIMServerCredentialStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the directory.
+             * <p>The ID of the directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-00fc2p61****</p>
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -190,7 +211,10 @@ public class UpdateSCIMServerCredentialStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the SCIM credential expires.
+             * <p>The time when the SCIM credential expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-09T08:12:52Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -198,11 +222,14 @@ public class UpdateSCIMServerCredentialStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the SCIM credential. Valid values:
-             * <p>
+             * <p>The status of the SCIM credential. Valid values:</p>
+             * <ul>
+             * <li>Enabled: The SCIM credential is enabled.</li>
+             * <li>Disabled: The SCIM credential is disabled.</li>
+             * </ul>
              * 
-             * *   Enabled: The SCIM credential is enabled.
-             * *   Disabled: The SCIM credential is disabled.
+             * <strong>example:</strong>
+             * <p>Disabled</p>
              */
             public Builder status(String status) {
                 this.status = status;

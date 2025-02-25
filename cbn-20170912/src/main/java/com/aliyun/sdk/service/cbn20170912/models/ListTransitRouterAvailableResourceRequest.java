@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTransitRouterAvailableResourceRequest} extends {@link RequestModel}
  *
  * <p>ListTransitRouterAvailableResourceRequest</p>
  */
 public class ListTransitRouterAvailableResourceRequest extends Request {
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SupportMulticast")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SupportMulticast")
     private Boolean supportMulticast;
 
     private ListTransitRouterAvailableResourceRequest(Builder builder) {
@@ -143,10 +148,12 @@ public class ListTransitRouterAvailableResourceRequest extends Request {
         }
 
         /**
-         * The region ID of the Enterprise Edition transit router.
-         * <p>
+         * <p>The region ID of the Enterprise Edition transit router.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -173,14 +180,17 @@ public class ListTransitRouterAvailableResourceRequest extends Request {
         }
 
         /**
-         * Specifies whether to query only the zones in which the multicast feature is supported. Valid values:
-         * <p>
+         * <p>Specifies whether to query only the zones in which the multicast feature is supported. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong></p>
+         * <p>After you call <strong>ListTransitRouterAvailableResource</strong>, if no zone is returned, it indicates that the Enterprise Edition transit router does not support the multicast feature.</p>
+         * </li>
+         * <li><p><strong>false</strong> (default)</p>
+         * </li>
+         * </ul>
          * 
-         * *   **true**
-         * 
-         *     After you call **ListTransitRouterAvailableResource**, if no zone is returned, it indicates that the Enterprise Edition transit router does not support the multicast feature.
-         * 
-         * *   **false** (default)
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder supportMulticast(Boolean supportMulticast) {
             this.putQueryParameter("SupportMulticast", supportMulticast);

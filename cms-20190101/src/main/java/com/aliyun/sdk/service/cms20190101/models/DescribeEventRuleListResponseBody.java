@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEventRuleListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEventRuleListResponseBody</p>
  */
 public class DescribeEventRuleListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("EventRules")
+    @com.aliyun.core.annotation.NameInMap("EventRules")
     private EventRules eventRules;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private DescribeEventRuleListResponseBody(Builder builder) {
@@ -98,10 +98,13 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the request was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -109,7 +112,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The event-triggered alert rule.
+         * <p>The event-triggered alert rule.</p>
          */
         public Builder eventRules(EventRules eventRules) {
             this.eventRules = eventRules;
@@ -117,7 +120,10 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>User not authorized to operate on the specified resource.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -125,7 +131,10 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D0E6D82B-16B5-422A-8136-EE5BDC01E415</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -133,11 +142,14 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -145,7 +157,10 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -158,8 +173,14 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEventRuleListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventRuleListResponseBody</p>
+     */
     public static class EventTypeList extends TeaModel {
-        @NameInMap("EventTypeList")
+        @com.aliyun.core.annotation.NameInMap("EventTypeList")
         private java.util.List < String > eventTypeList;
 
         private EventTypeList(Builder builder) {
@@ -199,8 +220,14 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventRuleListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventRuleListResponseBody</p>
+     */
     public static class Keywords extends TeaModel {
-        @NameInMap("Keywords")
+        @com.aliyun.core.annotation.NameInMap("Keywords")
         private java.util.List < String > keywords;
 
         private Keywords(Builder builder) {
@@ -240,11 +267,17 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventRuleListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventRuleListResponseBody</p>
+     */
     public static class KeywordFilter extends TeaModel {
-        @NameInMap("Keywords")
+        @com.aliyun.core.annotation.NameInMap("Keywords")
         private Keywords keywords;
 
-        @NameInMap("Relation")
+        @com.aliyun.core.annotation.NameInMap("Relation")
         private String relation;
 
         private KeywordFilter(Builder builder) {
@@ -279,7 +312,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             private String relation; 
 
             /**
-             * The keywords that are used to match events.
+             * <p>The keywords that are used to match events.</p>
              */
             public Builder keywords(Keywords keywords) {
                 this.keywords = keywords;
@@ -287,11 +320,14 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The relationship between multiple keywords in a condition. Valid values:
-             * <p>
+             * <p>The relationship between multiple keywords in a condition. Valid values:</p>
+             * <ul>
+             * <li>OR: The relationship between keywords is OR.</li>
+             * <li>NOT: The keyword is excluded. The value NOT indicates that all events that do not contain the keywords are matched.</li>
+             * </ul>
              * 
-             * *   OR: The relationship between keywords is OR.
-             * *   NOT: The keyword is excluded. The value NOT indicates that all events that do not contain the keywords are matched.
+             * <strong>example:</strong>
+             * <p>OR</p>
              */
             public Builder relation(String relation) {
                 this.relation = relation;
@@ -305,8 +341,14 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventRuleListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventRuleListResponseBody</p>
+     */
     public static class LevelList extends TeaModel {
-        @NameInMap("LevelList")
+        @com.aliyun.core.annotation.NameInMap("LevelList")
         private java.util.List < String > levelList;
 
         private LevelList(Builder builder) {
@@ -346,8 +388,14 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventRuleListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventRuleListResponseBody</p>
+     */
     public static class NameList extends TeaModel {
-        @NameInMap("NameList")
+        @com.aliyun.core.annotation.NameInMap("NameList")
         private java.util.List < String > nameList;
 
         private NameList(Builder builder) {
@@ -387,26 +435,32 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventRuleListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventRuleListResponseBody</p>
+     */
     public static class EventPattern extends TeaModel {
-        @NameInMap("CustomFilters")
+        @com.aliyun.core.annotation.NameInMap("CustomFilters")
         private String customFilters;
 
-        @NameInMap("EventTypeList")
+        @com.aliyun.core.annotation.NameInMap("EventTypeList")
         private EventTypeList eventTypeList;
 
-        @NameInMap("KeywordFilter")
+        @com.aliyun.core.annotation.NameInMap("KeywordFilter")
         private KeywordFilter keywordFilter;
 
-        @NameInMap("LevelList")
+        @com.aliyun.core.annotation.NameInMap("LevelList")
         private LevelList levelList;
 
-        @NameInMap("NameList")
+        @com.aliyun.core.annotation.NameInMap("NameList")
         private NameList nameList;
 
-        @NameInMap("Product")
+        @com.aliyun.core.annotation.NameInMap("Product")
         private String product;
 
-        @NameInMap("SQLFilter")
+        @com.aliyun.core.annotation.NameInMap("SQLFilter")
         private String SQLFilter;
 
         private EventPattern(Builder builder) {
@@ -486,7 +540,10 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             private String SQLFilter; 
 
             /**
-             * The custom filter conditions.
+             * <p>The custom filter conditions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS123</p>
              */
             public Builder customFilters(String customFilters) {
                 this.customFilters = customFilters;
@@ -494,7 +551,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The types of the event-triggered alert rules.
+             * <p>The types of the event-triggered alert rules.</p>
              */
             public Builder eventTypeList(EventTypeList eventTypeList) {
                 this.eventTypeList = eventTypeList;
@@ -502,7 +559,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The keyword for filtering.
+             * <p>The keyword for filtering.</p>
              */
             public Builder keywordFilter(KeywordFilter keywordFilter) {
                 this.keywordFilter = keywordFilter;
@@ -510,7 +567,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The levels of the event-triggered alerts.
+             * <p>The levels of the event-triggered alerts.</p>
              */
             public Builder levelList(LevelList levelList) {
                 this.levelList = levelList;
@@ -518,7 +575,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The event names.
+             * <p>The event names.</p>
              */
             public Builder nameList(NameList nameList) {
                 this.nameList = nameList;
@@ -526,7 +583,10 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The abbreviation of the Alibaba Cloud service name.
+             * <p>The abbreviation of the Alibaba Cloud service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CloudMonitor</p>
              */
             public Builder product(String product) {
                 this.product = product;
@@ -534,7 +594,10 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates that logs are filtered based on the specified SQL statement. If the specified conditions are met, an alert is triggered.
+             * <p>Indicates that logs are filtered based on the specified SQL statement. If the specified conditions are met, an alert is triggered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ycccluster1 and (i-23ij0o82612 or Executed1) or Asimulated not 222</p>
              */
             public Builder SQLFilter(String SQLFilter) {
                 this.SQLFilter = SQLFilter;
@@ -548,8 +611,14 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventRuleListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventRuleListResponseBody</p>
+     */
     public static class EventRuleEventPattern extends TeaModel {
-        @NameInMap("EventPattern")
+        @com.aliyun.core.annotation.NameInMap("EventPattern")
         private java.util.List < EventPattern> eventPattern;
 
         private EventRuleEventPattern(Builder builder) {
@@ -589,26 +658,32 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventRuleListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventRuleListResponseBody</p>
+     */
     public static class EventRule extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EventPattern")
+        @com.aliyun.core.annotation.NameInMap("EventPattern")
         private EventRuleEventPattern eventPattern;
 
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("SilenceTime")
+        @com.aliyun.core.annotation.NameInMap("SilenceTime")
         private Long silenceTime;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private EventRule(Builder builder) {
@@ -688,7 +763,10 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * The description of the event-triggered alert rule.
+             * <p>The description of the event-triggered alert rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default group event rule.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -696,7 +774,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The mode of the event-triggered alert rule.
+             * <p>The mode of the event-triggered alert rule.</p>
              */
             public Builder eventPattern(EventRuleEventPattern eventPattern) {
                 this.eventPattern = eventPattern;
@@ -704,11 +782,14 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the event-triggered alert rule. Valid values:
-             * <p>
+             * <p>The type of the event-triggered alert rule. Valid values:</p>
+             * <ul>
+             * <li>SYSTEM: system event-triggered alert rule</li>
+             * <li>CUSTOM: custom event-triggered alert rule</li>
+             * </ul>
              * 
-             * *   SYSTEM: system event-triggered alert rule
-             * *   CUSTOM: custom event-triggered alert rule
+             * <strong>example:</strong>
+             * <p>SYSTEM</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -716,7 +797,10 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application group.
+             * <p>The ID of the application group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7378****</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -724,7 +808,10 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the event-triggered alert rule.
+             * <p>The name of the event-triggered alert rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_DefaultEventRule_7378****</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -732,7 +819,10 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The mute period during which new alert notifications are not sent even if the trigger conditions are met.
+             * <p>The mute period during which new alert notifications are not sent even if the trigger conditions are met.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86400</p>
              */
             public Builder silenceTime(Long silenceTime) {
                 this.silenceTime = silenceTime;
@@ -740,11 +830,14 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the event-triggered alert rule. Valid values:
-             * <p>
+             * <p>The status of the event-triggered alert rule. Valid values:</p>
+             * <ul>
+             * <li>ENABLED</li>
+             * <li>DISABLED</li>
+             * </ul>
              * 
-             * *   ENABLED
-             * *   DISABLED
+             * <strong>example:</strong>
+             * <p>ENABLED</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -758,8 +851,14 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventRuleListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventRuleListResponseBody</p>
+     */
     public static class EventRules extends TeaModel {
-        @NameInMap("EventRule")
+        @com.aliyun.core.annotation.NameInMap("EventRule")
         private java.util.List < EventRule> eventRule;
 
         private EventRules(Builder builder) {

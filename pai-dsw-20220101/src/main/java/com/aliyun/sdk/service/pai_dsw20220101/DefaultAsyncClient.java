@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of CreateIdleInstanceCuller  CreateIdleInstanceCullerRequest
+     * @return CreateIdleInstanceCullerResponse
+     */
     @Override
     public CompletableFuture<CreateIdleInstanceCullerResponse> createIdleInstanceCuller(CreateIdleInstanceCullerRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateInstance  CreateInstanceRequest
+     * @return CreateInstanceResponse
+     */
     @Override
     public CompletableFuture<CreateInstanceResponse> createInstance(CreateInstanceRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateInstanceShutdownTimer  CreateInstanceShutdownTimerRequest
+     * @return CreateInstanceShutdownTimerResponse
+     */
     @Override
     public CompletableFuture<CreateInstanceShutdownTimerResponse> createInstanceShutdownTimer(CreateInstanceShutdownTimerRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateInstanceSnapshot  CreateInstanceSnapshotRequest
+     * @return CreateInstanceSnapshotResponse
+     */
     @Override
     public CompletableFuture<CreateInstanceSnapshotResponse> createInstanceSnapshot(CreateInstanceSnapshotRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteIdleInstanceCuller  DeleteIdleInstanceCullerRequest
+     * @return DeleteIdleInstanceCullerResponse
+     */
     @Override
     public CompletableFuture<DeleteIdleInstanceCullerResponse> deleteIdleInstanceCuller(DeleteIdleInstanceCullerRequest request) {
         try {
@@ -109,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteInstance  DeleteInstanceRequest
+     * @return DeleteInstanceResponse
+     */
     @Override
     public CompletableFuture<DeleteInstanceResponse> deleteInstance(DeleteInstanceRequest request) {
         try {
@@ -123,6 +147,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteInstanceLabels  DeleteInstanceLabelsRequest
+     * @return DeleteInstanceLabelsResponse
+     */
+    @Override
+    public CompletableFuture<DeleteInstanceLabelsResponse> deleteInstanceLabels(DeleteInstanceLabelsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteInstanceLabels").setMethod(HttpMethod.DELETE).setPathRegex("/api/v2/instances/{InstanceId}/labels").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteInstanceLabelsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteInstanceLabelsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteInstanceShutdownTimer  DeleteInstanceShutdownTimerRequest
+     * @return DeleteInstanceShutdownTimerResponse
+     */
     @Override
     public CompletableFuture<DeleteInstanceShutdownTimerResponse> deleteInstanceShutdownTimer(DeleteInstanceShutdownTimerRequest request) {
         try {
@@ -137,6 +183,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteInstanceSnapshot  DeleteInstanceSnapshotRequest
+     * @return DeleteInstanceSnapshotResponse
+     */
     @Override
     public CompletableFuture<DeleteInstanceSnapshotResponse> deleteInstanceSnapshot(DeleteInstanceSnapshotRequest request) {
         try {
@@ -151,6 +201,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetIdleInstanceCuller  GetIdleInstanceCullerRequest
+     * @return GetIdleInstanceCullerResponse
+     */
     @Override
     public CompletableFuture<GetIdleInstanceCullerResponse> getIdleInstanceCuller(GetIdleInstanceCullerRequest request) {
         try {
@@ -165,6 +219,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetInstance  GetInstanceRequest
+     * @return GetInstanceResponse
+     */
     @Override
     public CompletableFuture<GetInstanceResponse> getInstance(GetInstanceRequest request) {
         try {
@@ -179,6 +237,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetInstanceEvents  GetInstanceEventsRequest
+     * @return GetInstanceEventsResponse
+     */
+    @Override
+    public CompletableFuture<GetInstanceEventsResponse> getInstanceEvents(GetInstanceEventsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetInstanceEvents").setMethod(HttpMethod.GET).setPathRegex("/api/v2/instances/{InstanceId}/events").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetInstanceEventsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetInstanceEventsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetInstanceMetrics  GetInstanceMetricsRequest
+     * @return GetInstanceMetricsResponse
+     */
     @Override
     public CompletableFuture<GetInstanceMetricsResponse> getInstanceMetrics(GetInstanceMetricsRequest request) {
         try {
@@ -193,6 +273,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetInstanceShutdownTimer  GetInstanceShutdownTimerRequest
+     * @return GetInstanceShutdownTimerResponse
+     */
     @Override
     public CompletableFuture<GetInstanceShutdownTimerResponse> getInstanceShutdownTimer(GetInstanceShutdownTimerRequest request) {
         try {
@@ -207,6 +291,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetInstanceSnapshot  GetInstanceSnapshotRequest
+     * @return GetInstanceSnapshotResponse
+     */
     @Override
     public CompletableFuture<GetInstanceSnapshotResponse> getInstanceSnapshot(GetInstanceSnapshotRequest request) {
         try {
@@ -221,6 +309,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetLifecycle  GetLifecycleRequest
+     * @return GetLifecycleResponse
+     */
     @Override
     public CompletableFuture<GetLifecycleResponse> getLifecycle(GetLifecycleRequest request) {
         try {
@@ -235,6 +327,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetMetrics  GetMetricsRequest
+     * @return GetMetricsResponse
+     */
+    @Override
+    public CompletableFuture<GetMetricsResponse> getMetrics(GetMetricsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetMetrics").setMethod(HttpMethod.GET).setPathRegex("/api/v2/instance/{InstanceId}/cms/metrics").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetMetricsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetMetricsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetResourceGroupStatistics  GetResourceGroupStatisticsRequest
+     * @return GetResourceGroupStatisticsResponse
+     */
     @Override
     public CompletableFuture<GetResourceGroupStatisticsResponse> getResourceGroupStatistics(GetResourceGroupStatisticsRequest request) {
         try {
@@ -249,6 +363,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetToken  GetTokenRequest
+     * @return GetTokenResponse
+     */
     @Override
     public CompletableFuture<GetTokenResponse> getToken(GetTokenRequest request) {
         try {
@@ -263,6 +381,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetUserConfig  GetUserConfigRequest
+     * @return GetUserConfigResponse
+     */
     @Override
     public CompletableFuture<GetUserConfigResponse> getUserConfig(GetUserConfigRequest request) {
         try {
@@ -277,6 +399,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListEcsSpecs  ListEcsSpecsRequest
+     * @return ListEcsSpecsResponse
+     */
     @Override
     public CompletableFuture<ListEcsSpecsResponse> listEcsSpecs(ListEcsSpecsRequest request) {
         try {
@@ -291,6 +417,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListInstanceSnapshot  ListInstanceSnapshotRequest
+     * @return ListInstanceSnapshotResponse
+     */
     @Override
     public CompletableFuture<ListInstanceSnapshotResponse> listInstanceSnapshot(ListInstanceSnapshotRequest request) {
         try {
@@ -305,6 +435,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListInstanceStatistics  ListInstanceStatisticsRequest
+     * @return ListInstanceStatisticsResponse
+     */
     @Override
     public CompletableFuture<ListInstanceStatisticsResponse> listInstanceStatistics(ListInstanceStatisticsRequest request) {
         try {
@@ -319,6 +453,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListInstances  ListInstancesRequest
+     * @return ListInstancesResponse
+     */
     @Override
     public CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request) {
         try {
@@ -333,6 +471,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartInstance  StartInstanceRequest
+     * @return StartInstanceResponse
+     */
     @Override
     public CompletableFuture<StartInstanceResponse> startInstance(StartInstanceRequest request) {
         try {
@@ -347,6 +489,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopInstance  StopInstanceRequest
+     * @return StopInstanceResponse
+     */
     @Override
     public CompletableFuture<StopInstanceResponse> stopInstance(StopInstanceRequest request) {
         try {
@@ -361,6 +507,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateInstance  UpdateInstanceRequest
+     * @return UpdateInstanceResponse
+     */
     @Override
     public CompletableFuture<UpdateInstanceResponse> updateInstance(UpdateInstanceRequest request) {
         try {
@@ -370,6 +520,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateInstanceLabels  UpdateInstanceLabelsRequest
+     * @return UpdateInstanceLabelsResponse
+     */
+    @Override
+    public CompletableFuture<UpdateInstanceLabelsResponse> updateInstanceLabels(UpdateInstanceLabelsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateInstanceLabels").setMethod(HttpMethod.PUT).setPathRegex("/api/v2/instances/{InstanceId}/labels").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateInstanceLabelsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateInstanceLabelsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

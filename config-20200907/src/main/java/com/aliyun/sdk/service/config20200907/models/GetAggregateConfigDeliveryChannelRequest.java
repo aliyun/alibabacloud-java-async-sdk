@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAggregateConfigDeliveryChannelRequest} extends {@link RequestModel}
  *
  * <p>GetAggregateConfigDeliveryChannelRequest</p>
  */
 public class GetAggregateConfigDeliveryChannelRequest extends Request {
-    @Query
-    @NameInMap("AggregatorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AggregatorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aggregatorId;
 
-    @Query
-    @NameInMap("DeliveryChannelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeliveryChannelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deliveryChannelId;
 
     private GetAggregateConfigDeliveryChannelRequest(Builder builder) {
@@ -70,10 +75,12 @@ public class GetAggregateConfigDeliveryChannelRequest extends Request {
         } 
 
         /**
-         * The ID of the account group.
-         * <p>
+         * <p>The ID of the account group.</p>
+         * <p>For more information about how to obtain the ID of the account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of the account group, see [ListAggregators](~~255797~~).
+         * <strong>example:</strong>
+         * <p>ca-a4e5626622af0079****</p>
          */
         public Builder aggregatorId(String aggregatorId) {
             this.putQueryParameter("AggregatorId", aggregatorId);
@@ -82,10 +89,12 @@ public class GetAggregateConfigDeliveryChannelRequest extends Request {
         }
 
         /**
-         * The ID of the delivery channel.
-         * <p>
+         * <p>The ID of the delivery channel.</p>
+         * <p>For more information about how to obtain the ID of a delivery channel, see <a href="https://help.aliyun.com/document_detail/429842.html">ListAggregateConfigDeliveryChannels</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of a delivery channel, see [ListAggregateConfigDeliveryChannels](~~429842~~).
+         * <strong>example:</strong>
+         * <p>cdc-d9106457e0d900b1****</p>
          */
         public Builder deliveryChannelId(String deliveryChannelId) {
             this.putQueryParameter("DeliveryChannelId", deliveryChannelId);

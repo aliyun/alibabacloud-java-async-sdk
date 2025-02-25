@@ -1,39 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutEventRuleTargetsResponseBody} extends {@link TeaModel}
  *
  * <p>PutEventRuleTargetsResponseBody</p>
  */
 public class PutEventRuleTargetsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("FailedContactParameters")
+    @com.aliyun.core.annotation.NameInMap("FailedContactParameters")
     private FailedContactParameters failedContactParameters;
 
-    @NameInMap("FailedFcParameters")
+    @com.aliyun.core.annotation.NameInMap("FailedFcParameters")
     private FailedFcParameters failedFcParameters;
 
-    @NameInMap("FailedMnsParameters")
+    @com.aliyun.core.annotation.NameInMap("FailedMnsParameters")
     private FailedMnsParameters failedMnsParameters;
 
-    @NameInMap("FailedParameterCount")
+    @com.aliyun.core.annotation.NameInMap("FailedParameterCount")
     private String failedParameterCount;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private PutEventRuleTargetsResponseBody(Builder builder) {
@@ -122,10 +122,13 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the request was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -133,7 +136,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * This parameter is returned if the specified alert contact groups in the request failed to be created or modified.
+         * <p>This parameter is returned if the specified alert contact groups in the request failed to be created or modified.</p>
          */
         public Builder failedContactParameters(FailedContactParameters failedContactParameters) {
             this.failedContactParameters = failedContactParameters;
@@ -141,7 +144,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * This parameter is returned if the specified functions in the request failed to be created or modified in Function Compute.
+         * <p>This parameter is returned if the specified functions in the request failed to be created or modified in Function Compute.</p>
          */
         public Builder failedFcParameters(FailedFcParameters failedFcParameters) {
             this.failedFcParameters = failedFcParameters;
@@ -149,7 +152,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * This parameter is returned if the specified queues in the request failed to be created or modified in MNS.
+         * <p>This parameter is returned if the specified queues in the request failed to be created or modified in SMQ.</p>
          */
         public Builder failedMnsParameters(FailedMnsParameters failedMnsParameters) {
             this.failedMnsParameters = failedMnsParameters;
@@ -157,7 +160,10 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of resources that failed to be created or modified.
+         * <p>The number of resources that failed to be created or modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder failedParameterCount(String failedParameterCount) {
             this.failedParameterCount = failedParameterCount;
@@ -165,7 +171,10 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Request is not authorization.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -173,7 +182,10 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>409C64DA-CF14-45DF-B463-471C790DD15A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -181,7 +193,10 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values: true and false.
+         * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -194,14 +209,20 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PutEventRuleTargetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>PutEventRuleTargetsResponseBody</p>
+     */
     public static class ContactParameter extends TeaModel {
-        @NameInMap("ContactGroupName")
+        @com.aliyun.core.annotation.NameInMap("ContactGroupName")
         private String contactGroupName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
         private ContactParameter(Builder builder) {
@@ -245,7 +266,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
             private String level; 
 
             /**
-             * The name of the alert contact group.
+             * <p>The name of the alert contact group.</p>
              */
             public Builder contactGroupName(String contactGroupName) {
                 this.contactGroupName = contactGroupName;
@@ -253,7 +274,10 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the recipient.
+             * <p>The ID of the recipient.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -261,10 +285,11 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The alert level and the corresponding notification methods. Valid values:
-             * <p>
+             * <p>The alert notification methods. Valid values:</p>
+             * <p>4: Alert notifications are sent by using DingTalk and emails.</p>
              * 
-             * 4: Alert notifications are sent by using DingTalk chatbots and emails.
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -278,8 +303,14 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PutEventRuleTargetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>PutEventRuleTargetsResponseBody</p>
+     */
     public static class FailedContactParameters extends TeaModel {
-        @NameInMap("ContactParameter")
+        @com.aliyun.core.annotation.NameInMap("ContactParameter")
         private java.util.List < ContactParameter> contactParameter;
 
         private FailedContactParameters(Builder builder) {
@@ -319,17 +350,23 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PutEventRuleTargetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>PutEventRuleTargetsResponseBody</p>
+     */
     public static class FcParameter extends TeaModel {
-        @NameInMap("FunctionName")
+        @com.aliyun.core.annotation.NameInMap("FunctionName")
         private String functionName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
         private FcParameter(Builder builder) {
@@ -382,7 +419,10 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
             private String serviceName; 
 
             /**
-             * The name of the function.
+             * <p>The name of the function.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>functionTest1</p>
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
@@ -390,7 +430,10 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the recipient.
+             * <p>The ID of the recipient.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -398,7 +441,10 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -406,7 +452,10 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Function Compute service.
+             * <p>The name of the Function Compute service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>serviceTest1</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -420,8 +469,14 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PutEventRuleTargetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>PutEventRuleTargetsResponseBody</p>
+     */
     public static class FailedFcParameters extends TeaModel {
-        @NameInMap("FcParameter")
+        @com.aliyun.core.annotation.NameInMap("FcParameter")
         private java.util.List < FcParameter> fcParameter;
 
         private FailedFcParameters(Builder builder) {
@@ -461,14 +516,20 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PutEventRuleTargetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>PutEventRuleTargetsResponseBody</p>
+     */
     public static class MnsParameter extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
-        @NameInMap("Queue")
+        @com.aliyun.core.annotation.NameInMap("Queue")
         private String queue;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
         private MnsParameter(Builder builder) {
@@ -512,7 +573,10 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
             private String region; 
 
             /**
-             * The ID of the recipient.
+             * <p>The ID of the recipient.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -520,7 +584,10 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the MNS queue.
+             * <p>The name of the MNS queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testQueue</p>
              */
             public Builder queue(String queue) {
                 this.queue = queue;
@@ -528,7 +595,10 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -542,8 +612,14 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PutEventRuleTargetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>PutEventRuleTargetsResponseBody</p>
+     */
     public static class FailedMnsParameters extends TeaModel {
-        @NameInMap("MnsParameter")
+        @com.aliyun.core.annotation.NameInMap("MnsParameter")
         private java.util.List < MnsParameter> mnsParameter;
 
         private FailedMnsParameters(Builder builder) {

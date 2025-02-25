@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceAutoUpgradeMinorVersionResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyDBInstanceAutoUpgradeMinorVersionResponseBody</p>
  */
 public class ModifyDBInstanceAutoUpgradeMinorVersionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyDBInstanceAutoUpgradeMinorVersionResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class ModifyDBInstanceAutoUpgradeMinorVersionResponseBody extends TeaMode
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A31818D5-0550-4A81-8D13-B45948D7193F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

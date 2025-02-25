@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAiOutboundTaskListResponseBody} extends {@link TeaModel}
  *
  * <p>GetAiOutboundTaskListResponseBody</p>
  */
 public class GetAiOutboundTaskListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetAiOutboundTaskListResponseBody(Builder builder) {
@@ -94,7 +99,7 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * 任务列表
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -110,7 +115,7 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -131,41 +136,47 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAiOutboundTaskListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAiOutboundTaskListResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("ConcurrentRate")
+        @com.aliyun.core.annotation.NameInMap("ConcurrentRate")
         private Integer concurrentRate;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("FinishCount")
+        @com.aliyun.core.annotation.NameInMap("FinishCount")
         private Integer finishCount;
 
-        @NameInMap("FinishRate")
+        @com.aliyun.core.annotation.NameInMap("FinishRate")
         private Float finishRate;
 
-        @NameInMap("HandlerId")
+        @com.aliyun.core.annotation.NameInMap("HandlerId")
         private Long handlerId;
 
-        @NameInMap("HandlerName")
+        @com.aliyun.core.annotation.NameInMap("HandlerName")
         private String handlerName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("StatusDesc")
+        @com.aliyun.core.annotation.NameInMap("StatusDesc")
         private String statusDesc;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private Long taskId;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private List(Builder builder) {
@@ -290,7 +301,7 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * 自动外呼的并发
+             * ConcurrentRate.
              */
             public Builder concurrentRate(Integer concurrentRate) {
                 this.concurrentRate = concurrentRate;
@@ -298,7 +309,7 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * 任务创建时间毫秒时间戳
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -306,7 +317,7 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * 任务描述
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -314,7 +325,7 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * 任务已完成量
+             * FinishCount.
              */
             public Builder finishCount(Integer finishCount) {
                 this.finishCount = finishCount;
@@ -322,7 +333,7 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * 任务完成率
+             * FinishRate.
              */
             public Builder finishRate(Float finishRate) {
                 this.finishRate = finishRate;
@@ -330,7 +341,7 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * 技能组id（预测式）或者ivr id（自动外呼）
+             * HandlerId.
              */
             public Builder handlerId(Long handlerId) {
                 this.handlerId = handlerId;
@@ -338,7 +349,7 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * 技能组名称或ivr名称
+             * HandlerName.
              */
             public Builder handlerName(String handlerName) {
                 this.handlerName = handlerName;
@@ -346,7 +357,7 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * 任务名称
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -354,7 +365,7 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * 任务状态（0:未开始,1:进行中,2:系统暂停,3:手动暂停,4:已完成,5:已终止）
+             * Status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -362,7 +373,7 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * 任务状态描述
+             * StatusDesc.
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;
@@ -370,7 +381,7 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * 任务id
+             * TaskId.
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
@@ -378,7 +389,7 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * 任务总量
+             * TotalCount.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -392,20 +403,26 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAiOutboundTaskListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAiOutboundTaskListResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("HasNextPage")
+        @com.aliyun.core.annotation.NameInMap("HasNextPage")
         private Boolean hasNextPage;
 
-        @NameInMap("List")
-        private java.util.List < List> list;
+        @com.aliyun.core.annotation.NameInMap("List")
+        private java.util.List<List> list;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalResults")
+        @com.aliyun.core.annotation.NameInMap("TotalResults")
         private Integer totalResults;
 
         private Data(Builder builder) {
@@ -441,7 +458,7 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -462,12 +479,12 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
         public static final class Builder {
             private Integer currentPage; 
             private Boolean hasNextPage; 
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer pageSize; 
             private Integer totalResults; 
 
             /**
-             * 当前页数
+             * CurrentPage.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -475,7 +492,7 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * 是否有下一页
+             * HasNextPage.
              */
             public Builder hasNextPage(Boolean hasNextPage) {
                 this.hasNextPage = hasNextPage;
@@ -483,15 +500,15 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * 任务信息
+             * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }
 
             /**
-             * 分页大小
+             * PageSize.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -499,7 +516,7 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * 数据总量
+             * TotalResults.
              */
             public Builder totalResults(Integer totalResults) {
                 this.totalResults = totalResults;

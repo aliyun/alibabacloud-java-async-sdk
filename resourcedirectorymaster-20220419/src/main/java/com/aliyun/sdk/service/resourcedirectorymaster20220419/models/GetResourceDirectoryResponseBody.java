@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResourceDirectoryResponseBody} extends {@link TeaModel}
  *
  * <p>GetResourceDirectoryResponseBody</p>
  */
 public class GetResourceDirectoryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceDirectory")
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectory")
     private ResourceDirectory resourceDirectory;
 
     private GetResourceDirectoryResponseBody(Builder builder) {
@@ -71,29 +76,38 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetResourceDirectoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourceDirectoryResponseBody</p>
+     */
     public static class ResourceDirectory extends TeaModel {
-        @NameInMap("ControlPolicyStatus")
+        @com.aliyun.core.annotation.NameInMap("ControlPolicyStatus")
         private String controlPolicyStatus;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("IdentityInformation")
+        @com.aliyun.core.annotation.NameInMap("IdentityInformation")
         private String identityInformation;
 
-        @NameInMap("MasterAccountId")
+        @com.aliyun.core.annotation.NameInMap("MasterAccountId")
         private String masterAccountId;
 
-        @NameInMap("MasterAccountName")
+        @com.aliyun.core.annotation.NameInMap("MasterAccountName")
         private String masterAccountName;
 
-        @NameInMap("MemberDeletionStatus")
+        @com.aliyun.core.annotation.NameInMap("MemberAccountDisplayNameSyncStatus")
+        private String memberAccountDisplayNameSyncStatus;
+
+        @com.aliyun.core.annotation.NameInMap("MemberDeletionStatus")
         private String memberDeletionStatus;
 
-        @NameInMap("ResourceDirectoryId")
+        @com.aliyun.core.annotation.NameInMap("ResourceDirectoryId")
         private String resourceDirectoryId;
 
-        @NameInMap("RootFolderId")
+        @com.aliyun.core.annotation.NameInMap("RootFolderId")
         private String rootFolderId;
 
         private ResourceDirectory(Builder builder) {
@@ -102,6 +116,7 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
             this.identityInformation = builder.identityInformation;
             this.masterAccountId = builder.masterAccountId;
             this.masterAccountName = builder.masterAccountName;
+            this.memberAccountDisplayNameSyncStatus = builder.memberAccountDisplayNameSyncStatus;
             this.memberDeletionStatus = builder.memberDeletionStatus;
             this.resourceDirectoryId = builder.resourceDirectoryId;
             this.rootFolderId = builder.rootFolderId;
@@ -151,6 +166,13 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
         }
 
         /**
+         * @return memberAccountDisplayNameSyncStatus
+         */
+        public String getMemberAccountDisplayNameSyncStatus() {
+            return this.memberAccountDisplayNameSyncStatus;
+        }
+
+        /**
          * @return memberDeletionStatus
          */
         public String getMemberDeletionStatus() {
@@ -177,6 +199,7 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
             private String identityInformation; 
             private String masterAccountId; 
             private String masterAccountName; 
+            private String memberAccountDisplayNameSyncStatus; 
             private String memberDeletionStatus; 
             private String resourceDirectoryId; 
             private String rootFolderId; 
@@ -218,6 +241,14 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
              */
             public Builder masterAccountName(String masterAccountName) {
                 this.masterAccountName = masterAccountName;
+                return this;
+            }
+
+            /**
+             * MemberAccountDisplayNameSyncStatus.
+             */
+            public Builder memberAccountDisplayNameSyncStatus(String memberAccountDisplayNameSyncStatus) {
+                this.memberAccountDisplayNameSyncStatus = memberAccountDisplayNameSyncStatus;
                 return this;
             }
 

@@ -99,8 +99,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 1\\. For more information about a financial relationship, see [Financial relationships](https://help.aliyun.com/document_detail/100376.html?spm=a2c4g.11186623.6.563.52a83908ypl4yE) or [Financial relationships](https://www.alibabacloud.com/help/en/doc-detail/116383.html). 2. If enterprise names used by the management account and a member for real-name verification are the same, you do not need to call an API operation for confirmation. Otherwise, you must call the ConfirmRelation operation for confirmation.
-      *
+     * <b>description</b> :
+     * <p>For more information about a financial relationship, see &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/doc-detail/116383.html">Usage notes on the trusteeship</a>. 
+     * If enterprise names used by the management account and a member for real-name verification are the same, you do not need to call an API operation for confirmation. Otherwise, you must call the ConfirmRelation operation for confirmation.</p>
+     * 
+     * @param request the request parameters of AddAccountRelation  AddAccountRelationRequest
+     * @return AddAccountRelationResponse
      */
     @Override
     public CompletableFuture<AddAccountRelationResponse> addAccountRelation(AddAccountRelationRequest request) {
@@ -116,6 +120,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AllocateCostUnitResource  AllocateCostUnitResourceRequest
+     * @return AllocateCostUnitResourceResponse
+     */
     @Override
     public CompletableFuture<AllocateCostUnitResourceResponse> allocateCostUnitResource(AllocateCostUnitResourceRequest request) {
         try {
@@ -130,6 +138,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ApplyInvoice  ApplyInvoiceRequest
+     * @return ApplyInvoiceResponse
+     */
     @Override
     public CompletableFuture<ApplyInvoiceResponse> applyInvoice(ApplyInvoiceRequest request) {
         try {
@@ -144,6 +156,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CancelOrder  CancelOrderRequest
+     * @return CancelOrderResponse
+     */
     @Override
     public CompletableFuture<CancelOrderResponse> cancelOrder(CancelOrderRequest request) {
         try {
@@ -158,6 +174,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ChangeResellerConsumeAmount  ChangeResellerConsumeAmountRequest
+     * @return ChangeResellerConsumeAmountResponse
+     */
     @Override
     public CompletableFuture<ChangeResellerConsumeAmountResponse> changeResellerConsumeAmount(ChangeResellerConsumeAmountRequest request) {
         try {
@@ -173,8 +193,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 1\\. A member needs to confirm an invitation only if a financial management relationship is established between the management account and the member and enterprise names used by the management account and the member for real-name verification are different. 2. The permissions to be confirmed must be the same as those granted to the member when the management account initiates the invitation.
-      *
+     * <b>description</b> :
+     * <p>1\. A member needs to confirm an invitation only if a financial management relationship is established between the management account and the member and enterprise names used by the management account and the member for real-name verification are different. 2. The permissions to be confirmed must be the same as those granted to the member when the management account initiates the invitation.</p>
+     * 
+     * @param request the request parameters of ConfirmRelation  ConfirmRelationRequest
+     * @return ConfirmRelationResponse
      */
     @Override
     public CompletableFuture<ConfirmRelationResponse> confirmRelation(ConfirmRelationRequest request) {
@@ -190,6 +213,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ConvertChargeType  ConvertChargeTypeRequest
+     * @return ConvertChargeTypeResponse
+     */
     @Override
     public CompletableFuture<ConvertChargeTypeResponse> convertChargeType(ConvertChargeTypeRequest request) {
         try {
@@ -205,8 +232,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to create an account so as to establish a master-member financial relationship.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to create an account so as to establish a master-member financial relationship.</p>
+     * 
+     * @param request the request parameters of CreateAgAccount  CreateAgAccountRequest
+     * @return CreateAgAccountResponse
      */
     @Override
     public CompletableFuture<CreateAgAccountResponse> createAgAccount(CreateAgAccountRequest request) {
@@ -222,6 +252,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateCostUnit  CreateCostUnitRequest
+     * @return CreateCostUnitResponse
+     */
     @Override
     public CompletableFuture<CreateCostUnitResponse> createCostUnit(CreateCostUnitRequest request) {
         try {
@@ -236,6 +270,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateInstance  CreateInstanceRequest
+     * @return CreateInstanceResponse
+     */
     @Override
     public CompletableFuture<CreateInstanceResponse> createInstance(CreateInstanceRequest request) {
         try {
@@ -250,6 +288,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateResellerUserQuota  CreateResellerUserQuotaRequest
+     * @return CreateResellerUserQuotaResponse
+     */
     @Override
     public CompletableFuture<CreateResellerUserQuotaResponse> createResellerUserQuota(CreateResellerUserQuotaRequest request) {
         try {
@@ -264,6 +306,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateResourcePackage  CreateResourcePackageRequest
+     * @return CreateResourcePackageResponse
+     */
     @Override
     public CompletableFuture<CreateResourcePackageResponse> createResourcePackage(CreateResourcePackageRequest request) {
         try {
@@ -278,6 +324,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateSavingsPlansInstance  CreateSavingsPlansInstanceRequest
+     * @return CreateSavingsPlansInstanceResponse
+     */
     @Override
     public CompletableFuture<CreateSavingsPlansInstanceResponse> createSavingsPlansInstance(CreateSavingsPlansInstanceRequest request) {
         try {
@@ -292,6 +342,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteCostUnit  DeleteCostUnitRequest
+     * @return DeleteCostUnitResponse
+     */
     @Override
     public CompletableFuture<DeleteCostUnitResponse> deleteCostUnit(DeleteCostUnitRequest request) {
         try {
@@ -307,8 +361,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This operation is in beta testing and is only available for specific users in the whitelist. Excessive calls may result in performance issues. For example, the response times out.
-      *
+     * <b>description</b> :
+     * <p>This operation is in beta testing and is only available for specific users in the whitelist. Excessive calls may result in performance issues. For example, the response times out.</p>
+     * 
+     * @param request the request parameters of DescribeCostBudgetsSummary  DescribeCostBudgetsSummaryRequest
+     * @return DescribeCostBudgetsSummaryResponse
      */
     @Override
     public CompletableFuture<DescribeCostBudgetsSummaryResponse> describeCostBudgetsSummary(DescribeCostBudgetsSummaryRequest request) {
@@ -325,8 +382,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can view and export the allocated costs of the current month after 10:00 on the fourth day of the next month. The allocated costs of a single allocation month may involve orders or bills in different billing cycles. If a historical allocated amount is incorrect, the historical allocated costs need to be adjusted. As a result, the allocated costs displayed for a single allocation month may be different at different time points.
-      *
+     * <b>description</b> :
+     * <p>You can view and export the allocated costs of the current month after 10:00 on the fourth day of the next month. The allocated costs of a single allocation month may involve orders or bills in different billing cycles. If a historical allocated amount is incorrect, the historical allocated costs need to be adjusted. As a result, the allocated costs displayed for a single allocation month may be different at different time points.</p>
+     * 
+     * @param request the request parameters of DescribeInstanceAmortizedCostByAmortizationPeriod  DescribeInstanceAmortizedCostByAmortizationPeriodRequest
+     * @return DescribeInstanceAmortizedCostByAmortizationPeriodResponse
      */
     @Override
     public CompletableFuture<DescribeInstanceAmortizedCostByAmortizationPeriodResponse> describeInstanceAmortizedCostByAmortizationPeriod(DescribeInstanceAmortizedCostByAmortizationPeriodRequest request) {
@@ -342,6 +402,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeInstanceAmortizedCostByAmortizationPeriodDate  DescribeInstanceAmortizedCostByAmortizationPeriodDateRequest
+     * @return DescribeInstanceAmortizedCostByAmortizationPeriodDateResponse
+     */
     @Override
     public CompletableFuture<DescribeInstanceAmortizedCostByAmortizationPeriodDateResponse> describeInstanceAmortizedCostByAmortizationPeriodDate(DescribeInstanceAmortizedCostByAmortizationPeriodDateRequest request) {
         try {
@@ -356,6 +420,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeInstanceAmortizedCostByConsumePeriod  DescribeInstanceAmortizedCostByConsumePeriodRequest
+     * @return DescribeInstanceAmortizedCostByConsumePeriodResponse
+     */
     @Override
     public CompletableFuture<DescribeInstanceAmortizedCostByConsumePeriodResponse> describeInstanceAmortizedCostByConsumePeriod(DescribeInstanceAmortizedCostByConsumePeriodRequest request) {
         try {
@@ -371,10 +439,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Instance bills are generated after the total bill is split. In most cases, the instance bills do not include data generated on the last day of the specified billing cycle.
-      * *   The instance information may change during the billing cycle. The instance configurations and types in monthly bills are subject to the point in time when you query bills. For more information, see the corresponding bill details.
-      * *   You can query data generated after June 2020 for Cloud Communications services. You can query data generated after November 2020 for Alibaba Cloud Domains.
-      *
+     * <b>description</b> :
+     * <p>  Instance bills are generated after the total bill is split. In most cases, the instance bills do not include data generated on the last day of the specified billing cycle.</p>
+     * <ul>
+     * <li>The instance information may change during the billing cycle. The instance configurations and types in monthly bills are subject to the point in time when you query bills. For more information, see the corresponding bill details.</li>
+     * <li>You can query data generated after June 2020 for Cloud Communications services. You can query data generated after November 2020 for Alibaba Cloud Domains.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeInstanceBill  DescribeInstanceBillRequest
+     * @return DescribeInstanceBillResponse
      */
     @Override
     public CompletableFuture<DescribeInstanceBillResponse> describeInstanceBill(DescribeInstanceBillRequest request) {
@@ -390,6 +463,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeInstanceDeductAmortizedCostByAmortizationPeriod  DescribeInstanceDeductAmortizedCostByAmortizationPeriodRequest
+     * @return DescribeInstanceDeductAmortizedCostByAmortizationPeriodResponse
+     */
     @Override
     public CompletableFuture<DescribeInstanceDeductAmortizedCostByAmortizationPeriodResponse> describeInstanceDeductAmortizedCostByAmortizationPeriod(DescribeInstanceDeductAmortizedCostByAmortizationPeriodRequest request) {
         try {
@@ -404,6 +481,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePricingModule  DescribePricingModuleRequest
+     * @return DescribePricingModuleResponse
+     */
     @Override
     public CompletableFuture<DescribePricingModuleResponse> describePricingModule(DescribePricingModuleRequest request) {
         try {
@@ -419,8 +500,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can view and export the allocated costs of the current month after 10:00 on the fourth day of the next month. The allocated costs of a single allocation month may involve orders or bills in different billing cycles. If a historical allocated amount is incorrect, the historical allocated costs need to be adjusted. As a result, the allocated costs displayed for a single allocation month may be different at different time points.
-      *
+     * <b>description</b> :
+     * <p>You can view and export the allocated costs of the current month after 10:00 on the fourth day of the next month. The allocated costs of a single allocation month may involve orders or bills in different billing cycles. If a historical allocated amount is incorrect, the historical allocated costs need to be adjusted. As a result, the allocated costs displayed for a single allocation month may be different at different time points.</p>
+     * 
+     * @param request the request parameters of DescribeProductAmortizedCostByAmortizationPeriod  DescribeProductAmortizedCostByAmortizationPeriodRequest
+     * @return DescribeProductAmortizedCostByAmortizationPeriodResponse
      */
     @Override
     public CompletableFuture<DescribeProductAmortizedCostByAmortizationPeriodResponse> describeProductAmortizedCostByAmortizationPeriod(DescribeProductAmortizedCostByAmortizationPeriodRequest request) {
@@ -436,6 +520,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeProductAmortizedCostByConsumePeriod  DescribeProductAmortizedCostByConsumePeriodRequest
+     * @return DescribeProductAmortizedCostByConsumePeriodResponse
+     */
     @Override
     public CompletableFuture<DescribeProductAmortizedCostByConsumePeriodResponse> describeProductAmortizedCostByConsumePeriod(DescribeProductAmortizedCostByConsumePeriodRequest request) {
         try {
@@ -451,10 +539,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 1\\. The queried coverage details are the same as those displayed in the table on the Coverage tab of the Manage Reserved Instances page in the Billing Management console.
-      * 2\\. You can call this operation to query the coverage details of RIs or SCUs.
-      * 3\\. You can call this operation to query coverage details at an hourly, daily, or monthly granularity.
-      *
+     * <b>description</b> :
+     * <p>1\. The queried coverage details are the same as those displayed in the table on the Coverage tab of the Manage Reserved Instances page in the Billing Management console.
+     * 2\. You can call this operation to query the coverage details of RIs or SCUs.
+     * 3\. You can call this operation to query coverage details at an hourly, daily, or monthly granularity.</p>
+     * 
+     * @param request the request parameters of DescribeResourceCoverageDetail  DescribeResourceCoverageDetailRequest
+     * @return DescribeResourceCoverageDetailResponse
      */
     @Override
     public CompletableFuture<DescribeResourceCoverageDetailResponse> describeResourceCoverageDetail(DescribeResourceCoverageDetailRequest request) {
@@ -471,9 +562,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The queried total coverage data is the same as the aggregated data displayed on the Coverage tab of the Manage Reserved Instances page in the Billing Management console.
-      * You can call this operation to query the total coverage data of RIs or SCUs.
-      *
+     * <b>description</b> :
+     * <p>The queried total coverage data is the same as the aggregated data displayed on the Coverage tab of the Manage Reserved Instances page in the Billing Management console.
+     * You can call this operation to query the total coverage data of RIs or SCUs.</p>
+     * 
+     * @param request the request parameters of DescribeResourceCoverageTotal  DescribeResourceCoverageTotalRequest
+     * @return DescribeResourceCoverageTotalResponse
      */
     @Override
     public CompletableFuture<DescribeResourceCoverageTotalResponse> describeResourceCoverageTotal(DescribeResourceCoverageTotalRequest request) {
@@ -489,6 +583,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeResourcePackageProduct  DescribeResourcePackageProductRequest
+     * @return DescribeResourcePackageProductResponse
+     */
     @Override
     public CompletableFuture<DescribeResourcePackageProductResponse> describeResourcePackageProduct(DescribeResourcePackageProductRequest request) {
         try {
@@ -503,6 +601,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeResourceUsageDetail  DescribeResourceUsageDetailRequest
+     * @return DescribeResourceUsageDetailResponse
+     */
     @Override
     public CompletableFuture<DescribeResourceUsageDetailResponse> describeResourceUsageDetail(DescribeResourceUsageDetailRequest request) {
         try {
@@ -517,6 +619,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeResourceUsageTotal  DescribeResourceUsageTotalRequest
+     * @return DescribeResourceUsageTotalResponse
+     */
     @Override
     public CompletableFuture<DescribeResourceUsageTotalResponse> describeResourceUsageTotal(DescribeResourceUsageTotalRequest request) {
         try {
@@ -531,6 +637,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSavingsPlansCoverageDetail  DescribeSavingsPlansCoverageDetailRequest
+     * @return DescribeSavingsPlansCoverageDetailResponse
+     */
     @Override
     public CompletableFuture<DescribeSavingsPlansCoverageDetailResponse> describeSavingsPlansCoverageDetail(DescribeSavingsPlansCoverageDetailRequest request) {
         try {
@@ -545,6 +655,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSavingsPlansCoverageTotal  DescribeSavingsPlansCoverageTotalRequest
+     * @return DescribeSavingsPlansCoverageTotalResponse
+     */
     @Override
     public CompletableFuture<DescribeSavingsPlansCoverageTotalResponse> describeSavingsPlansCoverageTotal(DescribeSavingsPlansCoverageTotalRequest request) {
         try {
@@ -559,6 +673,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSavingsPlansUsageDetail  DescribeSavingsPlansUsageDetailRequest
+     * @return DescribeSavingsPlansUsageDetailResponse
+     */
     @Override
     public CompletableFuture<DescribeSavingsPlansUsageDetailResponse> describeSavingsPlansUsageDetail(DescribeSavingsPlansUsageDetailRequest request) {
         try {
@@ -573,6 +691,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSavingsPlansUsageTotal  DescribeSavingsPlansUsageTotalRequest
+     * @return DescribeSavingsPlansUsageTotalResponse
+     */
     @Override
     public CompletableFuture<DescribeSavingsPlansUsageTotalResponse> describeSavingsPlansUsageTotal(DescribeSavingsPlansUsageTotalRequest request) {
         try {
@@ -588,10 +710,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   The data that you query by calling this operation is the same as the data that is queried by billing cycles in the Split Bill module of Cost Allocation.
-      * *   You can query split bills that were generated within the last 12 months by calling this operation.
-      * *   You can query split bills only after you enable the [Split Bill](https://usercenter2.aliyun.com/finance/split-bill) service in the User Center console.
-      *
+     * <b>description</b> :
+     * <p>  The data that you query by calling this operation is the same as the data that is queried by billing cycles in the Split Bill module of Cost Allocation.</p>
+     * <ul>
+     * <li>You can query split bills that were generated within the last 12 months by calling this operation.</li>
+     * <li>You can query split bills only after you enable the <a href="https://usercenter2-intl.aliyun.com/finance/split-bill">Split Bill</a> service in the User Center console.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeSplitItemBill  DescribeSplitItemBillRequest
+     * @return DescribeSplitItemBillResponse
      */
     @Override
     public CompletableFuture<DescribeSplitItemBillResponse> describeSplitItemBill(DescribeSplitItemBillRequest request) {
@@ -607,20 +734,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<EnableBillGenerationResponse> enableBillGeneration(EnableBillGenerationRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnableBillGeneration").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnableBillGenerationResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<EnableBillGenerationResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of GetAccountRelation  GetAccountRelationRequest
+     * @return GetAccountRelationResponse
+     */
     @Override
     public CompletableFuture<GetAccountRelationResponse> getAccountRelation(GetAccountRelationRequest request) {
         try {
@@ -635,6 +752,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCustomerAccountInfo  GetCustomerAccountInfoRequest
+     * @return GetCustomerAccountInfoResponse
+     */
     @Override
     public CompletableFuture<GetCustomerAccountInfoResponse> getCustomerAccountInfo(GetCustomerAccountInfoRequest request) {
         try {
@@ -650,8 +771,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The system queries the IDs of customers of a VNO based on the AccessKey pair used in the request.
-      *
+     * <b>description</b> :
+     * <p>The system queries the IDs of customers of a VNO based on the AccessKey pair used in the request.</p>
+     * 
+     * @param request the request parameters of GetCustomerList  GetCustomerListRequest
+     * @return GetCustomerListResponse
      */
     @Override
     public CompletableFuture<GetCustomerListResponse> getCustomerList(GetCustomerListRequest request) {
@@ -667,6 +791,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetOrderDetail  GetOrderDetailRequest
+     * @return GetOrderDetailResponse
+     */
     @Override
     public CompletableFuture<GetOrderDetailResponse> getOrderDetail(GetOrderDetailRequest request) {
         try {
@@ -682,11 +810,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Usage notes
-      * 1.  Call the QueryProductList operation to obtain the code of the service. For more information, see [QueryProductList](~~95984~~).
-      * 2.  Call the DescribePricingModule operation to obtain the configuration parameters of the service. For more information, see [DescribePricingModule](~~96469~~).
-      * 3.  Call the GetPayAsYouGoPrice operation to obtain the pay-as-you-go price of the service based on the returned configuration parameters.
-      *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <ol>
+     * <li>Call the QueryProductList operation to obtain the code of the service. For more information, see <a href="https://help.aliyun.com/document_detail/95984.html">QueryProductList</a>.</li>
+     * <li>Call the DescribePricingModule operation to obtain the configuration parameters of the service. For more information, see <a href="https://help.aliyun.com/document_detail/96469.html">DescribePricingModule</a>.</li>
+     * <li>Call the GetPayAsYouGoPrice operation to obtain the pay-as-you-go price of the service based on the returned configuration parameters.</li>
+     * </ol>
+     * 
+     * @param request the request parameters of GetPayAsYouGoPrice  GetPayAsYouGoPriceRequest
+     * @return GetPayAsYouGoPriceResponse
      */
     @Override
     public CompletableFuture<GetPayAsYouGoPriceResponse> getPayAsYouGoPrice(GetPayAsYouGoPriceRequest request) {
@@ -702,6 +835,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetResourcePackagePrice  GetResourcePackagePriceRequest
+     * @return GetResourcePackagePriceResponse
+     */
     @Override
     public CompletableFuture<GetResourcePackagePriceResponse> getResourcePackagePrice(GetResourcePackagePriceRequest request) {
         try {
@@ -717,10 +854,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 1.  Call the QueryProductList operation to obtain the code of the service. For more information, see [QueryProductList](~~95984~~).
-      * 2.  Call the DescribePricingModule operation to obtain the configuration parameters of the service. For more information, see [DescribePricingModule](~~96469~~).
-      * 3.  Call the GetSubscriptionPrice operation to obtain the pricing of the service based on the returned configuration parameters.
-      *
+     * <b>description</b> :
+     * <ol>
+     * <li>Call the QueryProductList operation to obtain the code of the service. For more information, see <a href="https://help.aliyun.com/document_detail/95984.html">QueryProductList</a>.</li>
+     * <li>Call the DescribePricingModule operation to obtain the configuration parameters of the service. For more information, see <a href="https://help.aliyun.com/document_detail/96469.html">DescribePricingModule</a>.</li>
+     * <li>Call the GetSubscriptionPrice operation to obtain the pricing of the service based on the returned configuration parameters.</li>
+     * </ol>
+     * 
+     * @param request the request parameters of GetSubscriptionPrice  GetSubscriptionPriceRequest
+     * @return GetSubscriptionPriceResponse
      */
     @Override
     public CompletableFuture<GetSubscriptionPriceResponse> getSubscriptionPrice(GetSubscriptionPriceRequest request) {
@@ -737,10 +879,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 1.  **Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.**
-      * 2.  Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.
-      * 3.  For more information, see [Rules for unsubscribing from resources](https://help.aliyun.com/knowledge_detail/116043.html?spm=a2c81.e1d666e.app.2.62ae11271Kd6iM).
-      *
+     * <b>description</b> :
+     * <ol>
+     * <li><strong>Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.</strong></li>
+     * <li>Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.</li>
+     * <li>For more information, see <a href="https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules">Rules for unsubscribing from resources</a>.</li>
+     * </ol>
+     * 
+     * @param request the request parameters of InquiryPriceRefundInstance  InquiryPriceRefundInstanceRequest
+     * @return InquiryPriceRefundInstanceResponse
      */
     @Override
     public CompletableFuture<InquiryPriceRefundInstanceResponse> inquiryPriceRefundInstance(InquiryPriceRefundInstanceRequest request) {
@@ -756,6 +903,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyAccountRelation  ModifyAccountRelationRequest
+     * @return ModifyAccountRelationResponse
+     */
     @Override
     public CompletableFuture<ModifyAccountRelationResponse> modifyAccountRelation(ModifyAccountRelationRequest request) {
         try {
@@ -770,6 +921,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyCostUnit  ModifyCostUnitRequest
+     * @return ModifyCostUnitResponse
+     */
     @Override
     public CompletableFuture<ModifyCostUnitResponse> modifyCostUnit(ModifyCostUnitRequest request) {
         try {
@@ -784,6 +939,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyInstance  ModifyInstanceRequest
+     * @return ModifyInstanceResponse
+     */
     @Override
     public CompletableFuture<ModifyInstanceResponse> modifyInstance(ModifyInstanceRequest request) {
         try {
@@ -798,6 +957,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryAccountBalance  QueryAccountBalanceRequest
+     * @return QueryAccountBalanceResponse
+     */
     @Override
     public CompletableFuture<QueryAccountBalanceResponse> queryAccountBalance(QueryAccountBalanceRequest request) {
         try {
@@ -813,11 +976,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ##
-      * Before you call this operation, take note of the following items:
-      * *   Account bills are summarized based on instance bills. In most cases, the account bills do not include the data generated on the last day of the specified period.
-      * *   You can query the data generated in June 2020 or later for Cloud Communications services. However, the query results do not include the data of Alibaba Cloud Domains.
-      *
+     * <b>description</b> :
+     * <p>Before you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>Account bills are summarized based on instance bills. In most cases, the account bills do not include the data generated on the last day of the specified period.</li>
+     * <li>You can query the data generated in June 2020 or later for Cloud Communications services. However, the query results do not include the data of Alibaba Cloud Domains.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of QueryAccountBill  QueryAccountBillRequest
+     * @return QueryAccountBillResponse
      */
     @Override
     public CompletableFuture<QueryAccountBillResponse> queryAccountBill(QueryAccountBillRequest request) {
@@ -833,6 +1000,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryAccountTransactionDetails  QueryAccountTransactionDetailsRequest
+     * @return QueryAccountTransactionDetailsResponse
+     */
     @Override
     public CompletableFuture<QueryAccountTransactionDetailsResponse> queryAccountTransactionDetails(QueryAccountTransactionDetailsRequest request) {
         try {
@@ -847,6 +1018,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryAccountTransactions  QueryAccountTransactionsRequest
+     * @return QueryAccountTransactionsResponse
+     */
     @Override
     public CompletableFuture<QueryAccountTransactionsResponse> queryAccountTransactions(QueryAccountTransactionsRequest request) {
         try {
@@ -861,6 +1036,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryAvailableInstances  QueryAvailableInstancesRequest
+     * @return QueryAvailableInstancesResponse
+     */
     @Override
     public CompletableFuture<QueryAvailableInstancesResponse> queryAvailableInstances(QueryAvailableInstancesRequest request) {
         try {
@@ -875,6 +1054,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryBill  QueryBillRequest
+     * @return QueryBillResponse
+     */
     @Override
     public CompletableFuture<QueryBillResponse> queryBill(QueryBillRequest request) {
         try {
@@ -889,6 +1072,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryBillOverview  QueryBillOverviewRequest
+     * @return QueryBillOverviewResponse
+     */
     @Override
     public CompletableFuture<QueryBillOverviewResponse> queryBillOverview(QueryBillOverviewRequest request) {
         try {
@@ -903,6 +1090,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryBillToOSSSubscription  QueryBillToOSSSubscriptionRequest
+     * @return QueryBillToOSSSubscriptionResponse
+     */
     @Override
     public CompletableFuture<QueryBillToOSSSubscriptionResponse> queryBillToOSSSubscription(QueryBillToOSSSubscriptionRequest request) {
         try {
@@ -917,6 +1108,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryCashCoupons  QueryCashCouponsRequest
+     * @return QueryCashCouponsResponse
+     */
     @Override
     public CompletableFuture<QueryCashCouponsResponse> queryCashCoupons(QueryCashCouponsRequest request) {
         try {
@@ -932,8 +1127,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to query the information about a service based on the service code.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to query the information about a service based on the service code.</p>
+     * 
+     * @param request the request parameters of QueryCommodityList  QueryCommodityListRequest
+     * @return QueryCommodityListResponse
      */
     @Override
     public CompletableFuture<QueryCommodityListResponse> queryCommodityList(QueryCommodityListRequest request) {
@@ -949,6 +1147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryCostUnit  QueryCostUnitRequest
+     * @return QueryCostUnitResponse
+     */
     @Override
     public CompletableFuture<QueryCostUnitResponse> queryCostUnit(QueryCostUnitRequest request) {
         try {
@@ -963,6 +1165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryCostUnitResource  QueryCostUnitResourceRequest
+     * @return QueryCostUnitResourceResponse
+     */
     @Override
     public CompletableFuture<QueryCostUnitResourceResponse> queryCostUnitResource(QueryCostUnitResourceRequest request) {
         try {
@@ -977,6 +1183,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryCustomerAddressList  QueryCustomerAddressListRequest
+     * @return QueryCustomerAddressListResponse
+     */
     @Override
     public CompletableFuture<QueryCustomerAddressListResponse> queryCustomerAddressList(QueryCustomerAddressListRequest request) {
         try {
@@ -992,9 +1202,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Limits:
-      * *   Only the usage records within the past year can be queried.
-      *
+     * <b>description</b> :
+     * <p>Limits:</p>
+     * <ul>
+     * <li>Only the usage records within the past year can be queried.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of QueryDPUtilizationDetail  QueryDPUtilizationDetailRequest
+     * @return QueryDPUtilizationDetailResponse
      */
     @Override
     public CompletableFuture<QueryDPUtilizationDetailResponse> queryDPUtilizationDetail(QueryDPUtilizationDetailRequest request) {
@@ -1010,6 +1225,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryEvaluateList  QueryEvaluateListRequest
+     * @return QueryEvaluateListResponse
+     */
     @Override
     public CompletableFuture<QueryEvaluateListResponse> queryEvaluateList(QueryEvaluateListRequest request) {
         try {
@@ -1024,6 +1243,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryFinancialAccountInfo  QueryFinancialAccountInfoRequest
+     * @return QueryFinancialAccountInfoResponse
+     */
     @Override
     public CompletableFuture<QueryFinancialAccountInfoResponse> queryFinancialAccountInfo(QueryFinancialAccountInfoRequest request) {
         try {
@@ -1039,12 +1262,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ##
-      * *   This API operation has been upgraded to DescribeInstanceBill. We recommend that you call the [DescribeInstanceBill](~~209402~~) operation to query the bills of instances or billable items in a billing cycle. You can call the QueryInstanceBill operation to query a maximum of 50,000 data rows in a bill.
-      * *   Instance bills are generated after bills are split. In most cases, the instance bills do not include data generated on the last day of the specified period.
-      * *   The instance information changes within a billing cycle. The instance configurations and specifications and the time when the instance was used in the billing cycle are all recorded. For more information, see the corresponding bill details.
-      * *   You can query the data generated in June 2020 or later for Cloud Communications services, and the data generated in November 2020 or later for Alibaba Cloud Domains.
-      *
+     * <b>description</b> :
+     * <h2></h2>
+     * <ul>
+     * <li>This API operation has been upgraded to DescribeInstanceBill. We recommend that you call the <a href="https://help.aliyun.com/document_detail/209402.html">DescribeInstanceBill</a> operation to query the bills of instances or billable items in a billing cycle. You can call the QueryInstanceBill operation to query a maximum of 50,000 data rows in a bill.</li>
+     * <li>Instance bills are generated after bills are split. In most cases, the instance bills do not include data generated on the last day of the specified period.</li>
+     * <li>The instance information changes within a billing cycle. The instance configurations and specifications and the time when the instance was used in the billing cycle are all recorded. For more information, see the corresponding bill details.</li>
+     * <li>You can query the data generated in June 2020 or later for Cloud Communications services, and the data generated in November 2020 or later for Alibaba Cloud Domains.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of QueryInstanceBill  QueryInstanceBillRequest
+     * @return QueryInstanceBillResponse
      */
     @Override
     public CompletableFuture<QueryInstanceBillResponse> queryInstanceBill(QueryInstanceBillRequest request) {
@@ -1060,6 +1288,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryInstanceByTag  QueryInstanceByTagRequest
+     * @return QueryInstanceByTagResponse
+     */
     @Override
     public CompletableFuture<QueryInstanceByTagResponse> queryInstanceByTag(QueryInstanceByTagRequest request) {
         try {
@@ -1074,6 +1306,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryInstanceGaapCost  QueryInstanceGaapCostRequest
+     * @return QueryInstanceGaapCostResponse
+     */
     @Override
     public CompletableFuture<QueryInstanceGaapCostResponse> queryInstanceGaapCost(QueryInstanceGaapCostRequest request) {
         try {
@@ -1088,6 +1324,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryInvoicingCustomerList  QueryInvoicingCustomerListRequest
+     * @return QueryInvoicingCustomerListResponse
+     */
     @Override
     public CompletableFuture<QueryInvoicingCustomerListResponse> queryInvoicingCustomerList(QueryInvoicingCustomerListRequest request) {
         try {
@@ -1102,6 +1342,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryOrders  QueryOrdersRequest
+     * @return QueryOrdersResponse
+     */
     @Override
     public CompletableFuture<QueryOrdersResponse> queryOrders(QueryOrdersRequest request) {
         try {
@@ -1116,6 +1360,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryPermissionList  QueryPermissionListRequest
+     * @return QueryPermissionListResponse
+     */
     @Override
     public CompletableFuture<QueryPermissionListResponse> queryPermissionList(QueryPermissionListRequest request) {
         try {
@@ -1130,6 +1378,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryPrepaidCards  QueryPrepaidCardsRequest
+     * @return QueryPrepaidCardsResponse
+     */
     @Override
     public CompletableFuture<QueryPrepaidCardsResponse> queryPrepaidCards(QueryPrepaidCardsRequest request) {
         try {
@@ -1145,8 +1397,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to query the billable items of a service. A billable item is the minimum unit used to calculate costs.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to query the billable items of a service. A billable item is the minimum unit used to calculate costs.</p>
+     * 
+     * @param request the request parameters of QueryPriceEntityList  QueryPriceEntityListRequest
+     * @return QueryPriceEntityListResponse
      */
     @Override
     public CompletableFuture<QueryPriceEntityListResponse> queryPriceEntityList(QueryPriceEntityListRequest request) {
@@ -1162,6 +1417,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryProductList  QueryProductListRequest
+     * @return QueryProductListResponse
+     */
     @Override
     public CompletableFuture<QueryProductListResponse> queryProductList(QueryProductListRequest request) {
         try {
@@ -1176,6 +1435,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryRIUtilizationDetail  QueryRIUtilizationDetailRequest
+     * @return QueryRIUtilizationDetailResponse
+     */
     @Override
     public CompletableFuture<QueryRIUtilizationDetailResponse> queryRIUtilizationDetail(QueryRIUtilizationDetailRequest request) {
         try {
@@ -1190,6 +1453,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryRedeem  QueryRedeemRequest
+     * @return QueryRedeemResponse
+     */
     @Override
     public CompletableFuture<QueryRedeemResponse> queryRedeem(QueryRedeemRequest request) {
         try {
@@ -1204,6 +1471,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryRelationList  QueryRelationListRequest
+     * @return QueryRelationListResponse
+     */
     @Override
     public CompletableFuture<QueryRelationListResponse> queryRelationList(QueryRelationListRequest request) {
         try {
@@ -1218,6 +1489,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryResellerAvailableQuota  QueryResellerAvailableQuotaRequest
+     * @return QueryResellerAvailableQuotaResponse
+     */
     @Override
     public CompletableFuture<QueryResellerAvailableQuotaResponse> queryResellerAvailableQuota(QueryResellerAvailableQuotaRequest request) {
         try {
@@ -1232,6 +1507,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryResellerUserAlarmThreshold  QueryResellerUserAlarmThresholdRequest
+     * @return QueryResellerUserAlarmThresholdResponse
+     */
     @Override
     public CompletableFuture<QueryResellerUserAlarmThresholdResponse> queryResellerUserAlarmThreshold(QueryResellerUserAlarmThresholdRequest request) {
         try {
@@ -1246,6 +1525,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryResourcePackageInstances  QueryResourcePackageInstancesRequest
+     * @return QueryResourcePackageInstancesResponse
+     */
     @Override
     public CompletableFuture<QueryResourcePackageInstancesResponse> queryResourcePackageInstances(QueryResourcePackageInstancesRequest request) {
         try {
@@ -1260,6 +1543,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QuerySavingsPlansDeductLog  QuerySavingsPlansDeductLogRequest
+     * @return QuerySavingsPlansDeductLogResponse
+     */
     @Override
     public CompletableFuture<QuerySavingsPlansDeductLogResponse> querySavingsPlansDeductLog(QuerySavingsPlansDeductLogRequest request) {
         try {
@@ -1274,6 +1561,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QuerySavingsPlansDiscount  QuerySavingsPlansDiscountRequest
+     * @return QuerySavingsPlansDiscountResponse
+     */
     @Override
     public CompletableFuture<QuerySavingsPlansDiscountResponse> querySavingsPlansDiscount(QuerySavingsPlansDiscountRequest request) {
         try {
@@ -1288,6 +1579,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QuerySavingsPlansInstance  QuerySavingsPlansInstanceRequest
+     * @return QuerySavingsPlansInstanceResponse
+     */
     @Override
     public CompletableFuture<QuerySavingsPlansInstanceResponse> querySavingsPlansInstance(QuerySavingsPlansInstanceRequest request) {
         try {
@@ -1302,6 +1597,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QuerySettleBill  QuerySettleBillRequest
+     * @return QuerySettleBillResponse
+     */
     @Override
     public CompletableFuture<QuerySettleBillResponse> querySettleBill(QuerySettleBillRequest request) {
         try {
@@ -1316,6 +1615,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QuerySkuPriceList  QuerySkuPriceListRequest
+     * @return QuerySkuPriceListResponse
+     */
     @Override
     public CompletableFuture<QuerySkuPriceListResponse> querySkuPriceList(QuerySkuPriceListRequest request) {
         try {
@@ -1331,11 +1634,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This API operation has been upgraded to DescribeSplitItemBill. We recommend that you call the [DescribeSplitItemBill](~~208169~~) operation to query split bills. You can call the QuerySplitItemBill operation to query a maximum of 50,000 data rows in a bill.
-      * *   The data queried by calling the QuerySplitItemBill operation is consistent with the data that is displayed for the specified billing cycle on the Split Bill page in User Center.
-      * *   You can call this operation to query split bills generated within the last 12 months.
-      * *   This operation returns split bills only after you activate the [Split Bill](https://usercenter2.aliyun.com/finance/split-bill) service in User Center.
-      *
+     * <b>description</b> :
+     * <p>  This API operation has been upgraded to DescribeSplitItemBill. We recommend that you call the <a href="https://help.aliyun.com/document_detail/208169.html">DescribeSplitItemBill</a> operation to query split bills. You can call the QuerySplitItemBill operation to query a maximum of 50,000 data rows in a bill.</p>
+     * <ul>
+     * <li>The data queried by calling the QuerySplitItemBill operation is consistent with the data that is displayed for the specified billing cycle on the Split Bill page in User Center.</li>
+     * <li>You can call this operation to query split bills generated within the last 12 months.</li>
+     * <li>This operation returns split bills only after you activate the <a href="https://usercenter2.aliyun.com/finance/split-bill">Split Bill</a> service in User Center.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of QuerySplitItemBill  QuerySplitItemBillRequest
+     * @return QuerySplitItemBillResponse
      */
     @Override
     public CompletableFuture<QuerySplitItemBillResponse> querySplitItemBill(QuerySplitItemBillRequest request) {
@@ -1352,12 +1660,19 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to query the usage data of an Alibaba Cloud service. Take note of the following items:
-      * *   The service code that you specify for querying the usage data of a specific Alibaba Cloud service must be valid. You can query the usage data by hour or by day.
-      * *   The time that you specify must follow the ISO8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.
-      *     *   Latency exists in data pushes. Therefore, if you set the DataType parameter to Hour, the integrity of usage data recorded in the last 24 hours can be ensured. If you set the DataType parameter to Day, the integrity of usage data recorded in the last two days can be ensured.
-      *     *   You can query the usage data that is recorded in the last quarter.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to query the usage data of an Alibaba Cloud service. Take note of the following items:</p>
+     * <ul>
+     * <li>The service code that you specify for querying the usage data of a specific Alibaba Cloud service must be valid. You can query the usage data by hour or by day.</li>
+     * <li>The time that you specify must follow the ISO8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.<ul>
+     * <li>Latency exists in data pushes. Therefore, if you set the DataType parameter to Hour, the integrity of usage data recorded in the last 24 hours can be ensured. If you set the DataType parameter to Day, the integrity of usage data recorded in the last two days can be ensured.</li>
+     * <li>You can query the usage data that is recorded in the last quarter.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of QueryUserOmsData  QueryUserOmsDataRequest
+     * @return QueryUserOmsDataResponse
      */
     @Override
     public CompletableFuture<QueryUserOmsDataResponse> queryUserOmsData(QueryUserOmsDataRequest request) {
@@ -1374,10 +1689,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 1.  Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.
-      * 2.  Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.
-      * 3.  For more information, see [Rules for unsubscribing from resources](https://help.aliyun.com/knowledge_detail/116043.html?spm=a2c81.e1d666e.app.2.62ae11271Kd6iM).
-      *
+     * <b>description</b> :
+     * <ol>
+     * <li>Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.</li>
+     * <li>Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.</li>
+     * <li>For more information, see <a href="https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules">Rules for unsubscribing from resources</a>.</li>
+     * </ol>
+     * 
+     * @param request the request parameters of RefundInstance  RefundInstanceRequest
+     * @return RefundInstanceResponse
      */
     @Override
     public CompletableFuture<RefundInstanceResponse> refundInstance(RefundInstanceRequest request) {
@@ -1394,9 +1714,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * A value of true indicates that the execution is complete.
-      * A value of false indicates that an error occurs during the execution.
-      *
+     * <b>description</b> :
+     * <p>This operation is provided for only VNOs to release instances. If a non-specific VNO calls this operation, the request is blocked.</p>
+     * 
+     * @param request the request parameters of ReleaseInstance  ReleaseInstanceRequest
+     * @return ReleaseInstanceResponse
      */
     @Override
     public CompletableFuture<ReleaseInstanceResponse> releaseInstance(ReleaseInstanceRequest request) {
@@ -1412,6 +1734,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RelieveAccountRelation  RelieveAccountRelationRequest
+     * @return RelieveAccountRelationResponse
+     */
     @Override
     public CompletableFuture<RelieveAccountRelationResponse> relieveAccountRelation(RelieveAccountRelationRequest request) {
         try {
@@ -1426,6 +1752,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RenewChangeInstance  RenewChangeInstanceRequest
+     * @return RenewChangeInstanceResponse
+     */
     @Override
     public CompletableFuture<RenewChangeInstanceResponse> renewChangeInstance(RenewChangeInstanceRequest request) {
         try {
@@ -1440,6 +1770,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RenewInstance  RenewInstanceRequest
+     * @return RenewInstanceResponse
+     */
     @Override
     public CompletableFuture<RenewInstanceResponse> renewInstance(RenewInstanceRequest request) {
         try {
@@ -1454,6 +1788,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RenewResourcePackage  RenewResourcePackageRequest
+     * @return RenewResourcePackageResponse
+     */
     @Override
     public CompletableFuture<RenewResourcePackageResponse> renewResourcePackage(RenewResourcePackageRequest request) {
         try {
@@ -1468,20 +1806,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<SaveUserCreditResponse> saveUserCredit(SaveUserCreditRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SaveUserCredit").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SaveUserCreditResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<SaveUserCreditResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of SetAllExpirationDay  SetAllExpirationDayRequest
+     * @return SetAllExpirationDayResponse
+     */
     @Override
     public CompletableFuture<SetAllExpirationDayResponse> setAllExpirationDay(SetAllExpirationDayRequest request) {
         try {
@@ -1496,20 +1824,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<SetCreditLabelActionResponse> setCreditLabelAction(SetCreditLabelActionRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SetCreditLabelAction").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetCreditLabelActionResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<SetCreditLabelActionResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of SetRenewal  SetRenewalRequest
+     * @return SetRenewalResponse
+     */
     @Override
     public CompletableFuture<SetRenewalResponse> setRenewal(SetRenewalRequest request) {
         try {
@@ -1524,6 +1842,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetResellerUserAlarmThreshold  SetResellerUserAlarmThresholdRequest
+     * @return SetResellerUserAlarmThresholdResponse
+     */
     @Override
     public CompletableFuture<SetResellerUserAlarmThresholdResponse> setResellerUserAlarmThreshold(SetResellerUserAlarmThresholdRequest request) {
         try {
@@ -1538,6 +1860,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetResellerUserQuota  SetResellerUserQuotaRequest
+     * @return SetResellerUserQuotaResponse
+     */
     @Override
     public CompletableFuture<SetResellerUserQuotaResponse> setResellerUserQuota(SetResellerUserQuotaRequest request) {
         try {
@@ -1552,6 +1878,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetResellerUserStatus  SetResellerUserStatusRequest
+     * @return SetResellerUserStatusResponse
+     */
     @Override
     public CompletableFuture<SetResellerUserStatusResponse> setResellerUserStatus(SetResellerUserStatusRequest request) {
         try {
@@ -1567,34 +1897,87 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, take note of the following items:
-      * *   You can subscribe to only one type of bill at a time.
-      * *   The bills generated on the previous day are pushed on a daily basis the next day after you subscribe to the bills. The full-data bills for the previous month are pushed on the fourth day of each month. The monthly bills in the PDF format for the previous month are pushed on the fourth day of each month.
-      * *   The daily bills may be delayed. The delayed bills are pushed the next day after they are generated. The delayed bills may include the bills that should have been pushed on the previous day. We recommend that you query the full-data bills for the previous month at the beginning of each month.
-      * *   The bill subscriber must have the [AliyunConsumeDump2OSSRole](https://ram.console.aliyun.com/#/role/authorize?request=%7B%22Requests%22:%20%7B%22request1%22:%20%7B%22RoleName%22:%20%22AliyunConsumeDump2OSSRole%22,%20%22TemplateId%22:%20%22Dump2OSSRole%22%7D%7D,%20%22ReturnUrl%22:%20%22https:%2F%2Fusercenter2.aliyun.com%22,%20%22Service%22:%20%22Consume%22%7D) permission.
-      * *   The SubscribeBillToOSS operation has the same functionality as the Save Expense Details to OSS Bucket feature in User Center.
-      * *   To subscribe to the bills stored in an OSS bucket, make sure that the directory name specified for the OSS bucket conforms to the following naming rules:
-      * 1.  1.  The directory name can contain only UTF-8 characters and cannot contain emoticons.
-      * 2.  2.  Forward slashes (/) are used to separate paths and can be used to create subdirectories with ease. The directory name cannot start with a forward slash (/), a backslash (\\\\), or consecutive forward slashes (/).
-      * 3.  3.  The name of a subdirectory cannot be set to two consecutive periods (..).
-      * 4.  4.  The directory name must be 1 to 254 characters in length.
-      * *   File names:
-      *     *   **BillingItemDetailForBillingPeriod** (Detailed bills of billable items)
-      *         *   File name format for a daily push: `UID_BillingItemDetail_YYYYMMDD`. Example: `169**_BillingItemDetail_20190310`.
-      *         *   File name format for a full-data push at the beginning of the next month: `UID_BillingItemDetail_YYYYMM`. Example: `169**_BillingItemDetail_201903`.
-      *     *   **InstanceDetailForBillingPeriod** (Detailed bills of instances)
-      *         *   File name format for a daily push: `UID_InstanceDetail_YYYYMMDD`. Example: `169**_InstanceDetail_20190310`.
-      *         *   File name format for a full-data push at the beginning of the next month: `UID_InstanceDetail_YYYYMM`. Example: `169**_InstanceDetail_201903`.
-      *     *   **InstanceDetailMonthly** (Instance-based bills summarized by billing cycle)
-      *         *   File name format for a daily push: `UID_InstanceDetailMonthly_YYYYMM`. Example: `169**_InstanceDetailMonthly_201903`. A bill of this type contains the full data generated from the beginning of the month to the current day, and is updated every day until the fourth day of the next month.
-      *     *   **BillingItemDetailMonthly** (Billable item-based bills summarized by billing cycle)
-      *         *   File name format for a daily push: `UID_BillingItemDetailMonthly_YYYYMM`. Example: `169**_BillingItemDetailMonthly_201903`. A bill of this type contains the full data generated from the beginning of the month to the current day, and is updated every day until the fourth day of the next month.
-      *     *   **SplitItemDetailDaily** (Split bills summarized by day)
-      *         *   File name format for a daily push: `UID_SplitItemDetailDaily_YYYYMM`. Example: `169**_SplitItemDetailDaily_201903`. A bill of this type contains the full data generated from the beginning of the month to the current day, and is updated every day until the fourth day of the next month.
-      *     *   **MonthBill** (Monthly bill in the PDF format)
-      *         *   File name format for a monthly push: `UID_MonthBill_YYYYMM`. Example: `169**_MonthBill_201903`. The bill for the previous month is pushed on the fourth day of each month.
-      * *   The bills of the MonthBill type are PDF files, whereas the bills of other types are CSV files. If the number of data rows in a bill exceeds a threshold, the bill is automatically split into multiple CSV files. Then, the multiple CSV files are automatically merged and compressed into a ZIP file that has the same name format as the original file.
-      *
+     * @param request the request parameters of SetSavingPlanUserDeductRule  SetSavingPlanUserDeductRuleRequest
+     * @return SetSavingPlanUserDeductRuleResponse
+     */
+    @Override
+    public CompletableFuture<SetSavingPlanUserDeductRuleResponse> setSavingPlanUserDeductRule(SetSavingPlanUserDeductRuleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SetSavingPlanUserDeductRule").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetSavingPlanUserDeductRuleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SetSavingPlanUserDeductRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>You can subscribe to only one type of bill at a time.</li>
+     * <li>The bills generated on the previous day are pushed on a daily basis the next day after you subscribe to the bills. The full-data bills for the previous month are pushed on the fourth day of each month. The monthly bills in the PDF format for the previous month are pushed on the fourth day of each month.</li>
+     * <li>The daily bills may be delayed. The delayed bills are pushed the next day after they are generated. The delayed bills may include the bills that should have been pushed on the previous day. We recommend that you query the full-data bills for the previous month at the beginning of each month.</li>
+     * <li>The bill subscriber must have the <a href="https://ram.console.aliyun.com/#/role/authorize?request=%7B%22Requests%22:%20%7B%22request1%22:%20%7B%22RoleName%22:%20%22AliyunConsumeDump2OSSRole%22,%20%22TemplateId%22:%20%22Dump2OSSRole%22%7D%7D,%20%22ReturnUrl%22:%20%22https:%2F%2Fusercenter2.aliyun.com%22,%20%22Service%22:%20%22Consume%22%7D">AliyunConsumeDump2OSSRole</a> permission.</li>
+     * <li>The SubscribeBillToOSS operation has the same functionality as the Save Expense Details to OSS Bucket feature in User Center.</li>
+     * <li>To subscribe to the bills stored in an OSS bucket, make sure that the directory name specified for the OSS bucket conforms to the following naming rules:</li>
+     * </ul>
+     * <ol>
+     * <li><ol>
+     * <li>The directory name can contain only UTF-8 characters and cannot contain emoticons.</li>
+     * </ol>
+     * </li>
+     * <li><ol start="2">
+     * <li>Forward slashes (/) are used to separate paths and can be used to create subdirectories with ease. The directory name cannot start with a forward slash (/), a backslash (\\), or consecutive forward slashes (/).</li>
+     * </ol>
+     * </li>
+     * <li><ol start="3">
+     * <li>The name of a subdirectory cannot be set to two consecutive periods (..).</li>
+     * </ol>
+     * </li>
+     * <li><ol start="4">
+     * <li>The directory name must be 1 to 254 characters in length.</li>
+     * </ol>
+     * </li>
+     * </ol>
+     * <ul>
+     * <li>File names:<ul>
+     * <li><strong>BillingItemDetailForBillingPeriod</strong> (Detailed bills of billable items)<ul>
+     * <li>File name format for a daily push: <code>UID_BillingItemDetail_YYYYMMDD</code>. Example: <code>169**_BillingItemDetail_20190310</code>.</li>
+     * <li>File name format for a full-data push at the beginning of the next month: <code>UID_BillingItemDetail_YYYYMM</code>. Example: <code>169**_BillingItemDetail_201903</code>.</li>
+     * </ul>
+     * </li>
+     * <li><strong>InstanceDetailForBillingPeriod</strong> (Detailed bills of instances)<ul>
+     * <li>File name format for a daily push: <code>UID_InstanceDetail_YYYYMMDD</code>. Example: <code>169**_InstanceDetail_20190310</code>.</li>
+     * <li>File name format for a full-data push at the beginning of the next month: <code>UID_InstanceDetail_YYYYMM</code>. Example: <code>169**_InstanceDetail_201903</code>.</li>
+     * </ul>
+     * </li>
+     * <li><strong>InstanceDetailMonthly</strong> (Instance-based bills summarized by billing cycle)<ul>
+     * <li>File name format for a daily push: <code>UID_InstanceDetailMonthly_YYYYMM</code>. Example: <code>169**_InstanceDetailMonthly_201903</code>. A bill of this type contains the full data generated from the beginning of the month to the current day, and is updated every day until the fourth day of the next month.</li>
+     * </ul>
+     * </li>
+     * <li><strong>BillingItemDetailMonthly</strong> (Billable item-based bills summarized by billing cycle)<ul>
+     * <li>File name format for a daily push: <code>UID_BillingItemDetailMonthly_YYYYMM</code>. Example: <code>169**_BillingItemDetailMonthly_201903</code>. A bill of this type contains the full data generated from the beginning of the month to the current day, and is updated every day until the fourth day of the next month.</li>
+     * </ul>
+     * </li>
+     * <li><strong>SplitItemDetailDaily</strong> (Split bills summarized by day)<ul>
+     * <li>File name format for a daily push: <code>UID_SplitItemDetailDaily_YYYYMM</code>. Example: <code>169**_SplitItemDetailDaily_201903</code>. A bill of this type contains the full data generated from the beginning of the month to the current day, and is updated every day until the fourth day of the next month.</li>
+     * </ul>
+     * </li>
+     * <li><strong>MonthBill</strong> (Monthly bill in the PDF format)<ul>
+     * <li>File name format for a monthly push: <code>UID_MonthBill_YYYYMM</code>. Example: <code>169**_MonthBill_201903</code>. The bill for the previous month is pushed on the fourth day of each month.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>The bills of the MonthBill type are PDF files, whereas the bills of other types are CSV files. If the number of data rows in a bill exceeds a threshold, the bill is automatically split into multiple CSV files. Then, the multiple CSV files are automatically merged and compressed into a ZIP file that has the same name format as the original file.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of SubscribeBillToOSS  SubscribeBillToOSSRequest
+     * @return SubscribeBillToOSSResponse
      */
     @Override
     public CompletableFuture<SubscribeBillToOSSResponse> subscribeBillToOSS(SubscribeBillToOSSRequest request) {
@@ -1610,6 +1993,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
     @Override
     public CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request) {
         try {
@@ -1624,6 +2011,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UnsubscribeBillToOSS  UnsubscribeBillToOSSRequest
+     * @return UnsubscribeBillToOSSResponse
+     */
     @Override
     public CompletableFuture<UnsubscribeBillToOSSResponse> unsubscribeBillToOSS(UnsubscribeBillToOSSRequest request) {
         try {
@@ -1638,6 +2029,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UntagResources  UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
     @Override
     public CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request) {
         try {
@@ -1652,6 +2047,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpgradeResourcePackage  UpgradeResourcePackageRequest
+     * @return UpgradeResourcePackageResponse
+     */
     @Override
     public CompletableFuture<UpgradeResourcePackageResponse> upgradeResourcePackage(UpgradeResourcePackageRequest request) {
         try {

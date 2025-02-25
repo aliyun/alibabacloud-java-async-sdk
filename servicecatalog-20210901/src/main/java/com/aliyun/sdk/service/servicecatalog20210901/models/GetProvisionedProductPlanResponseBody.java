@@ -285,7 +285,7 @@ public class GetProvisionedProductPlanResponseBody extends TeaModel {
              * *   Submit: submits the plan.
              * *   Cancel: cancels the plan.
              * *   Approve: approves the plan.
-             * *   reject: rejectes the plan.
+             * *   reject: rejects the plan.
              */
             public Builder approvalAction(String approvalAction) {
                 this.approvalAction = approvalAction;
@@ -1561,7 +1561,7 @@ public class GetProvisionedProductPlanResponseBody extends TeaModel {
              * Indicates whether the product version is visible to end users. Valid values:
              * <p>
              * 
-             * *   true (defaut)
+             * *   true (default)
              * *   false
              */
             public Builder active(Boolean active) {

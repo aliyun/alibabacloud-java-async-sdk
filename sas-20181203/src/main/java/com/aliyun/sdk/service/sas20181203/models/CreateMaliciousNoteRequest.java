@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMaliciousNoteRequest} extends {@link RequestModel}
  *
  * <p>CreateMaliciousNoteRequest</p>
  */
 public class CreateMaliciousNoteRequest extends Request {
-    @Query
-    @NameInMap("EventId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long eventId;
 
-    @Query
-    @NameInMap("Note")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Note")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String note;
 
     private CreateMaliciousNoteRequest(Builder builder) {
@@ -70,10 +75,14 @@ public class CreateMaliciousNoteRequest extends Request {
         } 
 
         /**
-         * The ID of the alert event to which you want to add remarks.
-         * <p>
+         * <p>The ID of the alert event to which you want to add remarks.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListAgentlessMaliciousFiles~~">ListAgentlessMaliciousFiles</a> operation to obtain the ID of the alert event from the NoteId parameter.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [ListAgentlessMaliciousFiles](~~ListAgentlessMaliciousFiles~~) operation to obtain the ID of the alert event from the NoteId parameter.
+         * <strong>example:</strong>
+         * <p>80****</p>
          */
         public Builder eventId(Long eventId) {
             this.putQueryParameter("EventId", eventId);
@@ -82,7 +91,11 @@ public class CreateMaliciousNoteRequest extends Request {
         }
 
         /**
-         * The remarks that you want to add.
+         * <p>The remarks that you want to add.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ignore</p>
          */
         public Builder note(String note) {
             this.putQueryParameter("Note", note);

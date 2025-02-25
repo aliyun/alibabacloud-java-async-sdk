@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ChainPurposeInfoAli</p>
  */
 public class ChainPurposeInfoAli extends TeaModel {
-    @NameInMap("ChainPurposeExtend")
+    @com.aliyun.core.annotation.NameInMap("ChainPurposeExtend")
     private String chainPurposeExtend;
 
-    @NameInMap("ChainPurposeItem")
+    @com.aliyun.core.annotation.NameInMap("ChainPurposeItem")
     private String chainPurposeItem;
 
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
 
-    @NameInMap("Key")
+    @com.aliyun.core.annotation.NameInMap("Key")
     private String key;
 
-    @NameInMap("Purpose")
+    @com.aliyun.core.annotation.NameInMap("Purpose")
     private String purpose;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("Time")
+    @com.aliyun.core.annotation.NameInMap("Time")
     private String time;
 
     private ChainPurposeInfoAli(Builder builder) {

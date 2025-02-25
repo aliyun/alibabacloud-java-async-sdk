@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEthereumNodeConfigurationResponseBody</p>
  */
 public class DescribeEthereumNodeConfigurationResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private Integer errorCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeEthereumNodeConfigurationResponseBody(Builder builder) {
@@ -112,40 +111,40 @@ public class DescribeEthereumNodeConfigurationResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("GenesisJson")
+        @com.aliyun.core.annotation.NameInMap("GenesisJson")
         private String genesisJson;
 
-        @NameInMap("IP")
+        @com.aliyun.core.annotation.NameInMap("IP")
         private String ip;
 
-        @NameInMap("NodePub")
+        @com.aliyun.core.annotation.NameInMap("NodePub")
         private String nodePub;
 
-        @NameInMap("P2pPort")
+        @com.aliyun.core.annotation.NameInMap("P2pPort")
         private Integer p2pPort;
 
-        @NameInMap("PermissionedNodesJson")
+        @com.aliyun.core.annotation.NameInMap("PermissionedNodesJson")
         private String permissionedNodesJson;
 
-        @NameInMap("RaftPort")
+        @com.aliyun.core.annotation.NameInMap("RaftPort")
         private Integer raftPort;
 
-        @NameInMap("RpcPort")
+        @com.aliyun.core.annotation.NameInMap("RpcPort")
         private Integer rpcPort;
 
-        @NameInMap("StaticNodesJson")
+        @com.aliyun.core.annotation.NameInMap("StaticNodesJson")
         private String staticNodesJson;
 
-        @NameInMap("TMJson")
+        @com.aliyun.core.annotation.NameInMap("TMJson")
         private String TMJson;
 
-        @NameInMap("TMPort")
+        @com.aliyun.core.annotation.NameInMap("TMPort")
         private Integer TMPort;
 
-        @NameInMap("TMPub")
+        @com.aliyun.core.annotation.NameInMap("TMPub")
         private String TMPub;
 
-        @NameInMap("WSPort")
+        @com.aliyun.core.annotation.NameInMap("WSPort")
         private Integer WSPort;
 
         private Result(Builder builder) {

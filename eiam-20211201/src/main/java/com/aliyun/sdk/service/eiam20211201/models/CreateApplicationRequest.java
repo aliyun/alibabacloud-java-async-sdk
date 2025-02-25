@@ -1,53 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateApplicationRequest} extends {@link RequestModel}
  *
  * <p>CreateApplicationRequest</p>
  */
 public class CreateApplicationRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ApplicationName")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String applicationName;
 
-    @Query
-    @NameInMap("ApplicationSourceType")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationSourceType")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String applicationSourceType;
 
-    @Query
-    @NameInMap("ApplicationTemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationTemplateId")
     private String applicationTemplateId;
 
-    @Query
-    @NameInMap("Description")
-    @Validation(maxLength = 128)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String description;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String instanceId;
 
-    @Query
-    @NameInMap("LogoUrl")
-    @Validation(maxLength = 128)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogoUrl")
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String logoUrl;
 
-    @Query
-    @NameInMap("SsoType")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SsoType")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String ssoType;
 
     private CreateApplicationRequest(Builder builder) {
@@ -167,7 +172,11 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ram Account SSO</p>
          */
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("ApplicationName", applicationName);
@@ -176,11 +185,15 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The type of the application source. Valid values:
-         * <p>
+         * <p>The type of the application source. Valid values:</p>
+         * <ul>
+         * <li>urn:alibaba:idaas:app:source:template: application template</li>
+         * <li>urn:alibaba:idaas:app:source:standard: standard protocol</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   urn:alibaba:idaas:app:source:template: application template
-         * *   urn:alibaba:idaas:app:source:standard: standard protocol
+         * <strong>example:</strong>
+         * <p>urn:alibaba:idaas:app:source:standard</p>
          */
         public Builder applicationSourceType(String applicationSourceType) {
             this.putQueryParameter("ApplicationSourceType", applicationSourceType);
@@ -189,7 +202,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The ID of the application template. This parameter is required if you set the ApplicationSourceType parameter to urn:alibaba:idaas:app:source:template.
+         * <p>The ID of the application template. This parameter is required if you set the ApplicationSourceType parameter to urn:alibaba:idaas:app:source:template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>template_cloud_ram</p>
          */
         public Builder applicationTemplateId(String applicationTemplateId) {
             this.putQueryParameter("ApplicationTemplateId", applicationTemplateId);
@@ -198,7 +214,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The description of the application.
+         * <p>The description of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RAM user SSO application</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -207,7 +226,11 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk2676xxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -216,7 +239,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The URL of the application logo.
+         * <p>The URL of the application logo.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oss.cn-hangzhou.aliyuncs.com/logo.png">https://oss.cn-hangzhou.aliyuncs.com/logo.png</a></p>
          */
         public Builder logoUrl(String logoUrl) {
             this.putQueryParameter("LogoUrl", logoUrl);
@@ -225,11 +251,15 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The SSO protocol. Valid values:
-         * <p>
+         * <p>The SSO protocol. Valid values:</p>
+         * <ul>
+         * <li>saml2: the SAML 2.0 protocol.</li>
+         * <li>oidc: the OpenID Connect protocol.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   saml2: the SAML 2.0 protocol.
-         * *   oidc: the OpenID Connect protocol.
+         * <strong>example:</strong>
+         * <p>saml2</p>
          */
         public Builder ssoType(String ssoType) {
             this.putQueryParameter("SsoType", ssoType);

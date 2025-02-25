@@ -1,46 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAccountPasswordRequest} extends {@link RequestModel}
  *
  * <p>ModifyAccountPasswordRequest</p>
  */
 public class ModifyAccountPasswordRequest extends Request {
-    @Query
-    @NameInMap("AccountName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountName;
 
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("NewAccountPassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewAccountPassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String newAccountPassword;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordType")
+    private String passwordType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyAccountPasswordRequest(Builder builder) {
@@ -50,6 +59,7 @@ public class ModifyAccountPasswordRequest extends Request {
         this.newAccountPassword = builder.newAccountPassword;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.passwordType = builder.passwordType;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -103,6 +113,13 @@ public class ModifyAccountPasswordRequest extends Request {
     }
 
     /**
+     * @return passwordType
+     */
+    public String getPasswordType() {
+        return this.passwordType;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -122,6 +139,7 @@ public class ModifyAccountPasswordRequest extends Request {
         private String newAccountPassword; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String passwordType; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -136,12 +154,17 @@ public class ModifyAccountPasswordRequest extends Request {
             this.newAccountPassword = request.newAccountPassword;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.passwordType = request.passwordType;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * The username of the account.
+         * <p>The username of the account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testacc</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -150,7 +173,11 @@ public class ModifyAccountPasswordRequest extends Request {
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -159,12 +186,16 @@ public class ModifyAccountPasswordRequest extends Request {
         }
 
         /**
-         * The new password of the account. The new password must meet the following requirements:
-         * <p>
+         * <p>The new password of the account. The new password must meet the following requirements:</p>
+         * <ul>
+         * <li>It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
+         * <li>It must be 8 to 32 characters in length.</li>
+         * <li>Special characters include <code>! @ # $ % ^ &amp; * ( ) _ + - =</code></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
-         * *   It must be 8 to 32 characters in length.
-         * *   Special characters include `! @ # $ % ^ & * ( ) _ + - =`
+         * <strong>example:</strong>
+         * <p>Pw123456</p>
          */
         public Builder newAccountPassword(String newAccountPassword) {
             this.putQueryParameter("NewAccountPassword", newAccountPassword);
@@ -187,6 +218,18 @@ public class ModifyAccountPasswordRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * <p>The password type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tair</p>
+         */
+        public Builder passwordType(String passwordType) {
+            this.putQueryParameter("PasswordType", passwordType);
+            this.passwordType = passwordType;
             return this;
         }
 

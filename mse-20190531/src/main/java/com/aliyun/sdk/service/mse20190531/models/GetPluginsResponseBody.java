@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPluginsResponseBody} extends {@link TeaModel}
  *
  * <p>GetPluginsResponseBody</p>
  */
 public class GetPluginsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("DynamicCode")
+    @com.aliyun.core.annotation.NameInMap("DynamicCode")
     private String dynamicCode;
 
-    @NameInMap("DynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("DynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetPluginsResponseBody(Builder builder) {
@@ -69,7 +74,7 @@ public class GetPluginsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -124,7 +129,7 @@ public class GetPluginsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String dynamicCode; 
         private String dynamicMessage; 
         private String errorCode; 
@@ -134,7 +139,10 @@ public class GetPluginsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned code.
+         * <p>The returned code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -142,15 +150,18 @@ public class GetPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * The data entries returned.
+         * <p>The data entries returned.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The dynamic part in the error message.
+         * <p>The dynamic part in the error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>code</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -158,7 +169,10 @@ public class GetPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic error message.
+         * <p>The dynamic error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>message</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -166,7 +180,10 @@ public class GetPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -174,7 +191,10 @@ public class GetPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -182,7 +202,10 @@ public class GetPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -190,7 +213,10 @@ public class GetPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>03A3E2F4-6804-5663-9D5D-2EC47A1*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -198,7 +224,10 @@ public class GetPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -211,53 +240,62 @@ public class GetPluginsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPluginsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPluginsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private Integer category;
 
-        @NameInMap("ConfigCheck")
+        @com.aliyun.core.annotation.NameInMap("ConfigCheck")
         private String configCheck;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("MaxVersion")
+        @com.aliyun.core.annotation.NameInMap("MaxVersion")
         private String maxVersion;
 
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private Integer mode;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NewVersionPublishingFlag")
+        @com.aliyun.core.annotation.NameInMap("NewVersionPublishingFlag")
         private Boolean newVersionPublishingFlag;
 
-        @NameInMap("Phase")
+        @com.aliyun.core.annotation.NameInMap("Phase")
         private Integer phase;
 
-        @NameInMap("PrimaryUser")
+        @com.aliyun.core.annotation.NameInMap("PrimaryUser")
         private String primaryUser;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("PublishState")
+        @com.aliyun.core.annotation.NameInMap("PublishState")
         private Integer publishState;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Summary")
+        @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("SummaryEn")
+        private String summaryEn;
+
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
-        @NameInMap("WasmFile")
+        @com.aliyun.core.annotation.NameInMap("WasmFile")
         private String wasmFile;
 
-        @NameInMap("WasmLang")
+        @com.aliyun.core.annotation.NameInMap("WasmLang")
         private Integer wasmLang;
 
         private Data(Builder builder) {
@@ -274,6 +312,7 @@ public class GetPluginsResponseBody extends TeaModel {
             this.publishState = builder.publishState;
             this.status = builder.status;
             this.summary = builder.summary;
+            this.summaryEn = builder.summaryEn;
             this.version = builder.version;
             this.wasmFile = builder.wasmFile;
             this.wasmLang = builder.wasmLang;
@@ -379,6 +418,13 @@ public class GetPluginsResponseBody extends TeaModel {
         }
 
         /**
+         * @return summaryEn
+         */
+        public String getSummaryEn() {
+            return this.summaryEn;
+        }
+
+        /**
          * @return version
          */
         public String getVersion() {
@@ -413,25 +459,22 @@ public class GetPluginsResponseBody extends TeaModel {
             private Integer publishState; 
             private String status; 
             private String summary; 
+            private String summaryEn; 
             private String version; 
             private String wasmFile; 
             private Integer wasmLang; 
 
             /**
-             * The type of the plug-in. Valid values:
-             * <p>
+             * <p>The type of the plug-in. Valid values:</p>
+             * <p>0: custom</p>
+             * <p>1: permission authorization</p>
+             * <p>2: security protection</p>
+             * <p>3: transmission protocol</p>
+             * <p>4: traffic control</p>
+             * <p>5: traffic observation</p>
              * 
-             * 0: custom
-             * 
-             * 1: permission authorization
-             * 
-             * 2: security protection
-             * 
-             * 3: transmission protocol
-             * 
-             * 4: traffic control
-             * 
-             * 5: traffic observation
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder category(Integer category) {
                 this.category = category;
@@ -439,7 +482,10 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the plug-in configuration used for checking.
+             * <p>The information about the plug-in configuration used for checking.</p>
+             * 
+             * <strong>example:</strong>
+             * <p># The configuration includes the fields required for checking, such as name, age, and friends. Sample configuration: name: John age: 18 friends: - David - Anne</p>
              */
             public Builder configCheck(String configCheck) {
                 this.configCheck = configCheck;
@@ -447,7 +493,10 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the plug-in.
+             * <p>The ID of the plug-in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -471,7 +520,10 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the plug-in.
+             * <p>The name of the plug-in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-auth</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -487,13 +539,16 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The execution stage of the plug-in.
-             * <p>
+             * <p>The execution stage of the plug-in.</p>
+             * <ul>
+             * <li>0: default stage</li>
+             * <li>1: authorization stage</li>
+             * <li>2: authentication stage</li>
+             * <li>3: statistics stage</li>
+             * </ul>
              * 
-             * *   0: default stage
-             * *   1: authorization stage
-             * *   2: authentication stage
-             * *   3: statistics stage
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder phase(Integer phase) {
                 this.phase = phase;
@@ -501,7 +556,10 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the creator.
+             * <p>The ID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder primaryUser(String primaryUser) {
                 this.primaryUser = primaryUser;
@@ -509,7 +567,10 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The execution priority of the plug-in. A larger value indicates a higher priority.
+             * <p>The execution priority of the plug-in. A larger value indicates a higher priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -517,7 +578,10 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The publish status.
+             * <p>The publish status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder publishState(Integer publishState) {
                 this.publishState = publishState;
@@ -525,11 +589,14 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the plug-in is enabled.
-             * <p>
+             * <p>Indicates whether the plug-in is enabled.</p>
+             * <ul>
+             * <li>0: disabled</li>
+             * <li>1: enabled</li>
+             * </ul>
              * 
-             * *   0: disabled
-             * *   1: enabled
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -537,7 +604,10 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The summary of the plug-in.
+             * <p>The summary of the plug-in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a plug-in.</p>
              */
             public Builder summary(String summary) {
                 this.summary = summary;
@@ -545,7 +615,18 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the plug-in.
+             * SummaryEn.
+             */
+            public Builder summaryEn(String summaryEn) {
+                this.summaryEn = summaryEn;
+                return this;
+            }
+
+            /**
+             * <p>The version of the plug-in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -553,7 +634,7 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the Object Storage Service (OSS) bucket that stores the WebAssembly plug-in.
+             * <p>The URL of the Object Storage Service (OSS) bucket that stores the WebAssembly plug-in.</p>
              */
             public Builder wasmFile(String wasmFile) {
                 this.wasmFile = wasmFile;
@@ -561,14 +642,17 @@ public class GetPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The WebAssembly language. Valid values:
-             * <p>
+             * <p>The WebAssembly language. Valid values:</p>
+             * <ul>
+             * <li>0: C++</li>
+             * <li>1: TinyGo</li>
+             * <li>2: Rust</li>
+             * <li>3: AssemblyScript</li>
+             * <li>4: Zig</li>
+             * </ul>
              * 
-             * *   0: C++
-             * *   1: TinyGo
-             * *   2: Rust
-             * *   3: AssemblyScript
-             * *   4: Zig
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder wasmLang(Integer wasmLang) {
                 this.wasmLang = wasmLang;

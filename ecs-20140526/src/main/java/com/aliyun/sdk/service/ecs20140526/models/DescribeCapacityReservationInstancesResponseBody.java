@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCapacityReservationInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCapacityReservationInstancesResponseBody</p>
  */
 public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
-    @NameInMap("CapacityReservationItem")
+    @com.aliyun.core.annotation.NameInMap("CapacityReservationItem")
     private CapacityReservationItem capacityReservationItem;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeCapacityReservationInstancesResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
          */
         public Builder capacityReservationItem(CapacityReservationItem capacityReservationItem) {
             this.capacityReservationItem = capacityReservationItem;
@@ -94,7 +99,10 @@ public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the instances that match the capacity reservation.
+         * <p>Details about the instances that match the capacity reservation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +110,10 @@ public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +121,10 @@ public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of entries returned per page.
+         * <p>The maximum number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,8 +148,14 @@ public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCapacityReservationInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCapacityReservationInstancesResponseBody</p>
+     */
     public static class InstanceIdSet extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
         private InstanceIdSet(Builder builder) {
@@ -172,9 +195,15 @@ public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCapacityReservationInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCapacityReservationInstancesResponseBody</p>
+     */
     public static class CapacityReservationItem extends TeaModel {
-        @NameInMap("InstanceIdSet")
-        private java.util.List < InstanceIdSet> instanceIdSet;
+        @com.aliyun.core.annotation.NameInMap("InstanceIdSet")
+        private java.util.List<InstanceIdSet> instanceIdSet;
 
         private CapacityReservationItem(Builder builder) {
             this.instanceIdSet = builder.instanceIdSet;
@@ -191,17 +220,17 @@ public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
         /**
          * @return instanceIdSet
          */
-        public java.util.List < InstanceIdSet> getInstanceIdSet() {
+        public java.util.List<InstanceIdSet> getInstanceIdSet() {
             return this.instanceIdSet;
         }
 
         public static final class Builder {
-            private java.util.List < InstanceIdSet> instanceIdSet; 
+            private java.util.List<InstanceIdSet> instanceIdSet; 
 
             /**
              * InstanceIdSet.
              */
-            public Builder instanceIdSet(java.util.List < InstanceIdSet> instanceIdSet) {
+            public Builder instanceIdSet(java.util.List<InstanceIdSet> instanceIdSet) {
                 this.instanceIdSet = instanceIdSet;
                 return this;
             }

@@ -1,31 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteVSwitchRequest} extends {@link RequestModel}
  *
  * <p>DeleteVSwitchRequest</p>
  */
 public class DeleteVSwitchRequest extends Request {
-    @Query
-    @NameInMap("VSwitchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
-
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
 
     private DeleteVSwitchRequest(Builder builder) {
         super(builder);
         this.vSwitchId = builder.vSwitchId;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -48,16 +47,8 @@ public class DeleteVSwitchRequest extends Request {
         return this.vSwitchId;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<DeleteVSwitchRequest, Builder> {
         private String vSwitchId; 
-        private String version; 
 
         private Builder() {
             super();
@@ -66,24 +57,18 @@ public class DeleteVSwitchRequest extends Request {
         private Builder(DeleteVSwitchRequest request) {
             super(request);
             this.vSwitchId = request.vSwitchId;
-            this.version = request.version;
         } 
 
         /**
-         * VSwitchId.
+         * <p>The ID of the vSwitch.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-5m9xhl****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
             this.vSwitchId = vSwitchId;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 

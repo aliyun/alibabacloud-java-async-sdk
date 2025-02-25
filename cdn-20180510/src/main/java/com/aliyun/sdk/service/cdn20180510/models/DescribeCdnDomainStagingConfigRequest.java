@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnDomainStagingConfigRequest} extends {@link RequestModel}
  *
  * <p>DescribeCdnDomainStagingConfigRequest</p>
  */
 public class DescribeCdnDomainStagingConfigRequest extends Request {
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("FunctionNames")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FunctionNames")
     private String functionNames;
 
     private DescribeCdnDomainStagingConfigRequest(Builder builder) {
@@ -69,7 +69,11 @@ public class DescribeCdnDomainStagingConfigRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name. You can specify only one domain name in each request.
+         * <p>The accelerated domain name. You can specify only one domain name in each request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -78,7 +82,10 @@ public class DescribeCdnDomainStagingConfigRequest extends Request {
         }
 
         /**
-         * The list of feature names. Separate multiple values with commas (,). For more information, see [A list of features](~~388460~~).
+         * <p>The list of feature names. Separate multiple values with commas (,). For more information, see <a href="https://help.aliyun.com/document_detail/388460.html">A list of features</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliauth</p>
          */
         public Builder functionNames(String functionNames) {
             this.putQueryParameter("FunctionNames", functionNames);

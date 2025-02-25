@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTemplateRequest} extends {@link RequestModel}
  *
  * <p>UpdateTemplateRequest</p>
  */
 public class UpdateTemplateRequest extends Request {
-    @Path
-    @NameInMap("TemplateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateId;
 
-    @Body
-    @NameInMap("description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @Body
-    @NameInMap("name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @Body
-    @NameInMap("tags")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("tags")
     private String tags;
 
-    @Body
-    @NameInMap("template")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("template")
     private String template;
 
-    @Body
-    @NameInMap("template_type")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("template_type")
     private String templateType;
 
     private UpdateTemplateRequest(Builder builder) {
@@ -125,7 +130,11 @@ public class UpdateTemplateRequest extends Request {
         } 
 
         /**
-         * The ID of the template.
+         * <p>The ID of the template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>72d20cf8-a533-4ea9-a10d-e7630d3d2708</p>
          */
         public Builder templateId(String templateId) {
             this.putPathParameter("TemplateId", templateId);
@@ -134,7 +143,10 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * The description of the template.
+         * <p>The description of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>web server cluster</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -143,7 +155,10 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * The name of the template.
+         * <p>The name of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>webserver01</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -152,7 +167,10 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * The label of the template.
+         * <p>The label of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>web</p>
          */
         public Builder tags(String tags) {
             this.putBodyParameter("tags", tags);
@@ -161,7 +179,10 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * The YAML content of the template.
+         * <p>The YAML content of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: nginx-deployment-basic\n  labels:\n    app: nginx\nspec:\n  replicas: 2\n  selector:\n    matchLabels:\n      app: nginx\n  template:\n    metadata:\n      labels:\n        app: nginx\n    spec:\n      containers:\n      - name: nginx\n        image: busybox:latest\n        ports:\n        - containerPort: 8080</p>
          */
         public Builder template(String template) {
             this.putBodyParameter("template", template);
@@ -170,11 +191,14 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * The type of template. This parameter can be set to a custom value.
-         * <p>
+         * <p>The type of template. This parameter can be set to a custom value.</p>
+         * <ul>
+         * <li>If the parameter is set to <code>kubernetes</code>, the template is displayed on the Templates page in the console.</li>
+         * <li>If the parameter is set to <code>compose</code>, the template is displayed on the Container Service - Swarm page in the console. Container Service for Swarm is deprecated.</li>
+         * </ul>
          * 
-         * *   If the parameter is set to `kubernetes`, the template is displayed on the Templates page in the console.
-         * *   If the parameter is set to `compose`, the template is displayed on the Container Service - Swarm page in the console. Container Service for Swarm is deprecated.
+         * <strong>example:</strong>
+         * <p>kubernetes</p>
          */
         public Builder templateType(String templateType) {
             this.putBodyParameter("template_type", templateType);

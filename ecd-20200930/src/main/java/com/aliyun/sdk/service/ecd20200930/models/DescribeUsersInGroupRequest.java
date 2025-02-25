@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUsersInGroupRequest} extends {@link RequestModel}
  *
  * <p>DescribeUsersInGroupRequest</p>
  */
 public class DescribeUsersInGroupRequest extends Request {
-    @Query
-    @NameInMap("ConnectState")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectState")
     private Integer connectState;
 
-    @Query
-    @NameInMap("DesktopGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String desktopGroupId;
 
-    @Query
-    @NameInMap("EndUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndUserId")
     private String endUserId;
 
-    @Query
-    @NameInMap("EndUserIds")
-    private java.util.List < String > endUserIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndUserIds")
+    private java.util.List<String> endUserIds;
 
-    @Query
-    @NameInMap("Filter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
     private String filter;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OrgId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrgId")
     private String orgId;
 
-    @Query
-    @NameInMap("QueryUserDetail")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryUserDetail")
     private Boolean queryUserDetail;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private DescribeUsersInGroupRequest(Builder builder) {
@@ -105,7 +110,7 @@ public class DescribeUsersInGroupRequest extends Request {
     /**
      * @return endUserIds
      */
-    public java.util.List < String > getEndUserIds() {
+    public java.util.List<String> getEndUserIds() {
         return this.endUserIds;
     }
 
@@ -155,7 +160,7 @@ public class DescribeUsersInGroupRequest extends Request {
         private Integer connectState; 
         private String desktopGroupId; 
         private String endUserId; 
-        private java.util.List < String > endUserIds; 
+        private java.util.List<String> endUserIds; 
         private String filter; 
         private Integer maxResults; 
         private String nextToken; 
@@ -182,7 +187,15 @@ public class DescribeUsersInGroupRequest extends Request {
         } 
 
         /**
-         * ConnectState.
+         * <p>The status of the desktop connection for the end user.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>0: Disconnected.</li>
+         * <li>1: Connected.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder connectState(Integer connectState) {
             this.putQueryParameter("ConnectState", connectState);
@@ -191,7 +204,11 @@ public class DescribeUsersInGroupRequest extends Request {
         }
 
         /**
-         * DesktopGroupId.
+         * <p>The ID of the cloud computer pool.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dg-8ttn55ujj8nj8****</p>
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -200,7 +217,10 @@ public class DescribeUsersInGroupRequest extends Request {
         }
 
         /**
-         * EndUserId.
+         * <p>The ID of the authorized user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -209,16 +229,19 @@ public class DescribeUsersInGroupRequest extends Request {
         }
 
         /**
-         * EndUserIds.
+         * <p>The IDs of the authorized users.</p>
          */
-        public Builder endUserIds(java.util.List < String > endUserIds) {
+        public Builder endUserIds(java.util.List<String> endUserIds) {
             this.putQueryParameter("EndUserIds", endUserIds);
             this.endUserIds = endUserIds;
             return this;
         }
 
         /**
-         * Filter.
+         * <p>The query string for fuzzy match. If you specify this parameter, the system returns all results that contain the string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -227,7 +250,14 @@ public class DescribeUsersInGroupRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries to return on each page.</p>
+         * <ul>
+         * <li>Maximum value: 100.</li>
+         * <li>Default value: 10.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -236,7 +266,10 @@ public class DescribeUsersInGroupRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token that determines the start point of the next query. If this parameter is left empty, all results are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -245,7 +278,10 @@ public class DescribeUsersInGroupRequest extends Request {
         }
 
         /**
-         * OrgId.
+         * <p>The ID of the organization to which the end user belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>org-d0fua2oyukw8j****</p>
          */
         public Builder orgId(String orgId) {
             this.putQueryParameter("OrgId", orgId);
@@ -254,7 +290,26 @@ public class DescribeUsersInGroupRequest extends Request {
         }
 
         /**
-         * QueryUserDetail.
+         * <p>Specifies whether to query user details.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true (default)</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>false</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder queryUserDetail(Boolean queryUserDetail) {
             this.putQueryParameter("QueryUserDetail", queryUserDetail);
@@ -263,7 +318,11 @@ public class DescribeUsersInGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

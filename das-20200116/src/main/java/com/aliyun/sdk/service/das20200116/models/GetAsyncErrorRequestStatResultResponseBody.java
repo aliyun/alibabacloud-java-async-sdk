@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAsyncErrorRequestStatResultResponseBody} extends {@link TeaModel}
  *
  * <p>GetAsyncErrorRequestStatResultResponseBody</p>
  */
 public class GetAsyncErrorRequestStatResultResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetAsyncErrorRequestStatResultResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class GetAsyncErrorRequestStatResultResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -94,7 +102,10 @@ public class GetAsyncErrorRequestStatResultResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{         &quot;fail&quot;: false,         &quot;data&quot;: {             &quot;ad78a4e7d3ce81590c9dc2d5f4bc****&quot;: {                 &quot;sqlId&quot;: &quot;ad78a4e7d3ce81590c9dc2d5f4bc****&quot;,                 &quot;instanceId&quot;: &quot;rm-2ze8g2am97624****&quot;,                 &quot;count&quot;: 1             },             &quot;0f92feacd92c048b06a16617a633****&quot;: {                 &quot;sqlId&quot;: &quot;0f92feacd92c048b06a16617a633****&quot;,                 &quot;instanceId&quot;: &quot;rm-2ze8g2am97624****&quot;,                 &quot;count&quot;: 2             }         },         &quot;resultId&quot;: &quot;async__61f45ee381b2fa4e8a6545e3bee9****&quot;,         &quot;isFinish&quot;: true,         &quot;state&quot;: &quot;SUCCESS&quot;,         &quot;complete&quot;: true,         &quot;timestamp&quot;: 1644558576717     }</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,10 +113,13 @@ public class GetAsyncErrorRequestStatResultResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +127,10 @@ public class GetAsyncErrorRequestStatResultResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3FC3F8EB-3564-5D1A-B187-3B03E5B0****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,11 +138,14 @@ public class GetAsyncErrorRequestStatResultResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,26 +158,32 @@ public class GetAsyncErrorRequestStatResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAsyncErrorRequestStatResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAsyncErrorRequestStatResultResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("complete")
+        @com.aliyun.core.annotation.NameInMap("complete")
         private Boolean complete;
 
-        @NameInMap("fail")
+        @com.aliyun.core.annotation.NameInMap("fail")
         private Boolean fail;
 
-        @NameInMap("isFinish")
+        @com.aliyun.core.annotation.NameInMap("isFinish")
         private Boolean isFinish;
 
-        @NameInMap("result")
-        private java.util.List < java.util.Map<String, DataResultValue>> result;
+        @com.aliyun.core.annotation.NameInMap("result")
+        private java.util.Map<String, DataResultValue> result;
 
-        @NameInMap("resultId")
+        @com.aliyun.core.annotation.NameInMap("resultId")
         private String resultId;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
-        @NameInMap("timestamp")
+        @com.aliyun.core.annotation.NameInMap("timestamp")
         private Long timestamp;
 
         private Data(Builder builder) {
@@ -202,7 +228,7 @@ public class GetAsyncErrorRequestStatResultResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.List < java.util.Map<String, DataResultValue>> getResult() {
+        public java.util.Map<String, DataResultValue> getResult() {
             return this.result;
         }
 
@@ -231,17 +257,20 @@ public class GetAsyncErrorRequestStatResultResponseBody extends TeaModel {
             private Boolean complete; 
             private Boolean fail; 
             private Boolean isFinish; 
-            private java.util.List < java.util.Map<String, DataResultValue>> result; 
+            private java.util.Map<String, DataResultValue> result; 
             private String resultId; 
             private String state; 
             private Long timestamp; 
 
             /**
-             * Indicates whether the asynchronous request was complete.
-             * <p>
+             * <p>Indicates whether the asynchronous request was complete.</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder complete(Boolean complete) {
                 this.complete = complete;
@@ -249,11 +278,14 @@ public class GetAsyncErrorRequestStatResultResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the request failed. Valid values:
-             * <p>
+             * <p>Indicates whether the request failed. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder fail(Boolean fail) {
                 this.fail = fail;
@@ -261,11 +293,14 @@ public class GetAsyncErrorRequestStatResultResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the asynchronous request was successful. Valid values:
-             * <p>
+             * <p>Indicates whether the asynchronous request was successful. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isFinish(Boolean isFinish) {
                 this.isFinish = isFinish;
@@ -273,15 +308,18 @@ public class GetAsyncErrorRequestStatResultResponseBody extends TeaModel {
             }
 
             /**
-             * The returned data of the asynchronous request.
+             * <p>The returned data of the asynchronous request.</p>
              */
-            public Builder result(java.util.List < java.util.Map<String, DataResultValue>> result) {
+            public Builder result(java.util.Map<String, DataResultValue> result) {
                 this.result = result;
                 return this;
             }
 
             /**
-             * The ID of the asynchronous request.
+             * <p>The ID of the asynchronous request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>async__61f45ee381b2fa4e8a6545e3bee9****</p>
              */
             public Builder resultId(String resultId) {
                 this.resultId = resultId;
@@ -289,12 +327,15 @@ public class GetAsyncErrorRequestStatResultResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the asynchronous request. Valid values:
-             * <p>
+             * <p>The state of the asynchronous request. Valid values:</p>
+             * <ul>
+             * <li><strong>RUNNING</strong>: The asynchronous request is running.</li>
+             * <li><strong>SUCCESS</strong>: The asynchronous request is successful.</li>
+             * <li><strong>FAIL</strong>: The asynchronous request fails.</li>
+             * </ul>
              * 
-             * *   **RUNNING**: The asynchronous request is running.
-             * *   **SUCCESS**: The asynchronous request is successful.
-             * *   **FAIL**: The asynchronous request fails.
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -302,7 +343,10 @@ public class GetAsyncErrorRequestStatResultResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the asynchronous request was made. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the asynchronous request was made. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1644558576717</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;

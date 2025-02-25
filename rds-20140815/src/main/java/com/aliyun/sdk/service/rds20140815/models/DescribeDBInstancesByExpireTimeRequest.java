@@ -1,65 +1,70 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstancesByExpireTimeRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBInstancesByExpireTimeRequest</p>
  */
 public class DescribeDBInstancesByExpireTimeRequest extends Request {
-    @Query
-    @NameInMap("ExpirePeriod")
-    @Validation(maximum = 180)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExpirePeriod")
+    @com.aliyun.core.annotation.Validation(maximum = 180)
     private Integer expirePeriod;
 
-    @Query
-    @NameInMap("Expired")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Expired")
     private Boolean expired;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private String tags;
 
-    @Query
-    @NameInMap("proxyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("proxyId")
     private String proxyId;
 
     private DescribeDBInstancesByExpireTimeRequest(Builder builder) {
@@ -210,7 +215,10 @@ public class DescribeDBInstancesByExpireTimeRequest extends Request {
         } 
 
         /**
-         * The number of remaining days for which the instances are available. Valid values: **0 to 180**.
+         * <p>The number of remaining days for which the instances are available. Valid values: <strong>0 to 180</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>180</p>
          */
         public Builder expirePeriod(Integer expirePeriod) {
             this.putQueryParameter("ExpirePeriod", expirePeriod);
@@ -219,11 +227,14 @@ public class DescribeDBInstancesByExpireTimeRequest extends Request {
         }
 
         /**
-         * Specifies whether to query instances that have expired. Valid values:
-         * <p>
+         * <p>Specifies whether to query instances that have expired. Valid values:</p>
+         * <ul>
+         * <li><strong>True</strong>: queries instances that have expired.</li>
+         * <li><strong>False</strong>: does not query instances that have expired.</li>
+         * </ul>
          * 
-         * *   **True**: queries instances that have expired.
-         * *   **False**: does not query instances that have expired.
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder expired(Boolean expired) {
             this.putQueryParameter("Expired", expired);
@@ -250,10 +261,11 @@ public class DescribeDBInstancesByExpireTimeRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Valid values: any **non-zero** positive integer.
-         * <p>
+         * <p>The number of the page to return. Valid values: any <strong>non-zero</strong> positive integer.</p>
+         * <p>Default value: <strong>1</strong>.</p>
          * 
-         * Default value: **1**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -262,10 +274,11 @@ public class DescribeDBInstancesByExpireTimeRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **1 to 100**.
-         * <p>
+         * <p>The number of entries to return on each page. Valid values: <strong>1 to 100</strong>.</p>
+         * <p>Default value: <strong>30</strong>.</p>
          * 
-         * Default value: **30**.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -274,7 +287,10 @@ public class DescribeDBInstancesByExpireTimeRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -283,7 +299,10 @@ public class DescribeDBInstancesByExpireTimeRequest extends Request {
         }
 
         /**
-         * The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain the resource group ID.
+         * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain the resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -310,7 +329,10 @@ public class DescribeDBInstancesByExpireTimeRequest extends Request {
         }
 
         /**
-         * The tag that is added to the instance. Each tag is a key-value pair that consists of two parts: TagKey and TagValue. You can specify a maximum of five tags in the following format for each request: `{"key1":"value1","key2":"value2"...}`.
+         * <p>The tag that is added to the instance. Each tag is a key-value pair that consists of two parts: TagKey and TagValue. You can specify a maximum of five tags in the following format for each request: <code>{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;...}</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key1&quot;:&quot;value1&quot;}</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -319,7 +341,10 @@ public class DescribeDBInstancesByExpireTimeRequest extends Request {
         }
 
         /**
-         * A deprecated parameter. You do not need to configure this parameter.
+         * <p>A deprecated parameter. You do not need to configure this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder proxyId(String proxyId) {
             this.putQueryParameter("proxyId", proxyId);

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRecordingResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRecordingResponseBody</p>
  */
 public class DescribeRecordingResponseBody extends TeaModel {
-    @NameInMap("FileName")
+    @com.aliyun.core.annotation.NameInMap("FileName")
     private String fileName;
 
-    @NameInMap("FilePath")
+    @com.aliyun.core.annotation.NameInMap("FilePath")
     private String filePath;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VoiceSliceRecordingListJson")
+    @com.aliyun.core.annotation.NameInMap("VoiceSliceRecordingListJson")
     private String voiceSliceRecordingListJson;
 
     private DescribeRecordingResponseBody(Builder builder) {

@@ -1,26 +1,31 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnassociateNetworkAclRequest} extends {@link RequestModel}
  *
  * <p>UnassociateNetworkAclRequest</p>
  */
 public class UnassociateNetworkAclRequest extends Request {
-    @Query
-    @NameInMap("NetworkAclId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkAclId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String networkAclId;
 
-    @Query
-    @NameInMap("Resource")
-    @Validation(required = true)
-    private java.util.List < Resource> resource;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Resource")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Resource> resource;
 
     private UnassociateNetworkAclRequest(Builder builder) {
         super(builder);
@@ -51,13 +56,13 @@ public class UnassociateNetworkAclRequest extends Request {
     /**
      * @return resource
      */
-    public java.util.List < Resource> getResource() {
+    public java.util.List<Resource> getResource() {
         return this.resource;
     }
 
     public static final class Builder extends Request.Builder<UnassociateNetworkAclRequest, Builder> {
         private String networkAclId; 
-        private java.util.List < Resource> resource; 
+        private java.util.List<Resource> resource; 
 
         private Builder() {
             super();
@@ -70,7 +75,11 @@ public class UnassociateNetworkAclRequest extends Request {
         } 
 
         /**
-         * NetworkAclId.
+         * <p>The ID of the network ACL that you want to disassociate from a resource.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nacl-a2do9e413e0sp****</p>
          */
         public Builder networkAclId(String networkAclId) {
             this.putQueryParameter("NetworkAclId", networkAclId);
@@ -79,9 +88,10 @@ public class UnassociateNetworkAclRequest extends Request {
         }
 
         /**
-         * Resource.
+         * <p>Resources that you want to disassociate. Valid values of <strong>N</strong>: 0 to 29. A maximum of 30 resources can be unbound.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder resource(java.util.List < Resource> resource) {
+        public Builder resource(java.util.List<Resource> resource) {
             this.putQueryParameter("Resource", resource);
             this.resource = resource;
             return this;
@@ -94,13 +104,19 @@ public class UnassociateNetworkAclRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UnassociateNetworkAclRequest} extends {@link TeaModel}
+     *
+     * <p>UnassociateNetworkAclRequest</p>
+     */
     public static class Resource extends TeaModel {
-        @NameInMap("ResourceId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String resourceId;
 
-        @NameInMap("ResourceType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String resourceType;
 
         private Resource(Builder builder) {
@@ -135,7 +151,11 @@ public class UnassociateNetworkAclRequest extends Request {
             private String resourceType; 
 
             /**
-             * ResourceId.
+             * <p>The ID of the resource that you want to disassociate.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n-5***</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -143,7 +163,14 @@ public class UnassociateNetworkAclRequest extends Request {
             }
 
             /**
-             * ResourceType.
+             * <p>The type of the resource that you want to disassociate. Valid values:</p>
+             * <ul>
+             * <li>Network</li>
+             * </ul>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Network</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

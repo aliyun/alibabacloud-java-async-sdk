@@ -1,66 +1,76 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeKeyPairsRequest} extends {@link RequestModel}
  *
  * <p>DescribeKeyPairsRequest</p>
  */
 public class DescribeKeyPairsRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("KeyPairFingerPrint")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludePublicKey")
+    private Boolean includePublicKey;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyPairFingerPrint")
     private String keyPairFingerPrint;
 
-    @Query
-    @NameInMap("KeyPairName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyPairName")
     private String keyPairName;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private DescribeKeyPairsRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
+        this.includePublicKey = builder.includePublicKey;
         this.keyPairFingerPrint = builder.keyPairFingerPrint;
         this.keyPairName = builder.keyPairName;
         this.ownerId = builder.ownerId;
@@ -91,6 +101,13 @@ public class DescribeKeyPairsRequest extends Request {
      */
     public String getSourceRegionId() {
         return this.sourceRegionId;
+    }
+
+    /**
+     * @return includePublicKey
+     */
+    public Boolean getIncludePublicKey() {
+        return this.includePublicKey;
     }
 
     /**
@@ -159,12 +176,13 @@ public class DescribeKeyPairsRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<DescribeKeyPairsRequest, Builder> {
         private String sourceRegionId; 
+        private Boolean includePublicKey; 
         private String keyPairFingerPrint; 
         private String keyPairName; 
         private Long ownerId; 
@@ -174,7 +192,7 @@ public class DescribeKeyPairsRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -183,6 +201,7 @@ public class DescribeKeyPairsRequest extends Request {
         private Builder(DescribeKeyPairsRequest request) {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
+            this.includePublicKey = request.includePublicKey;
             this.keyPairFingerPrint = request.keyPairFingerPrint;
             this.keyPairName = request.keyPairName;
             this.ownerId = request.ownerId;
@@ -205,7 +224,22 @@ public class DescribeKeyPairsRequest extends Request {
         }
 
         /**
-         * Details about the key pairs.
+         * <p>Specifies whether to include PublicKey in the response. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder includePublicKey(Boolean includePublicKey) {
+            this.putQueryParameter("IncludePublicKey", includePublicKey);
+            this.includePublicKey = includePublicKey;
+            return this;
+        }
+
+        /**
+         * <p>The fingerprint of the key pair. The message-digest algorithm 5 (MD5) is used based on the public key fingerprint format defined in RFC 4716. For more information, see <a href="https://tools.ietf.org/html/rfc4716">RFC 4716</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABC1234567</p>
          */
         public Builder keyPairFingerPrint(String keyPairFingerPrint) {
             this.putQueryParameter("KeyPairFingerPrint", keyPairFingerPrint);
@@ -214,7 +248,16 @@ public class DescribeKeyPairsRequest extends Request {
         }
 
         /**
-         * The value of tag N of the key pair. Valid values of N: 1 to 20.
+         * <p>The name of the key pair. You can use the asterisk (*) symbol as a wildcard in regular expressions to perform a fuzzy search for key pairs. Sample patterns:</p>
+         * <ul>
+         * <li><code>*SshKey</code>: queries key pairs whose names end with SshKey, including the key pair named SshKey.</li>
+         * <li><code>SshKey*</code>: queries key pairs whose names start with SshKey, including the key pair named SshKey.</li>
+         * <li><code>*SshKey*</code>: queries key pairs whose names include SshKey, including the key pair named SshKey.</li>
+         * <li><code>SshKey</code>: queries the key pair named SshKey.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p><em>SshKey</em></p>
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -232,7 +275,11 @@ public class DescribeKeyPairsRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **DescribeKeyPairs**.
+         * <p>The number of the page to return. Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -241,10 +288,11 @@ public class DescribeKeyPairsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 50.
-         * <p>
+         * <p>The number of entries to return on each page. Maximum value: 50.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -253,7 +301,11 @@ public class DescribeKeyPairsRequest extends Request {
         }
 
         /**
-         * The fingerprint of the key pair. The message-digest algorithm 5 (MD5) is used based on the public key fingerprint format defined in RFC 4716. For more information, see [RFC 4716](https://tools.ietf.org/html/rfc4716).
+         * <p>The region ID of the key pair. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -262,7 +314,13 @@ public class DescribeKeyPairsRequest extends Request {
         }
 
         /**
-         * The tag key of the key pair.
+         * <p>The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
+         * <blockquote>
+         * <p> Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-amnhr7u7c7hj****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -289,9 +347,9 @@ public class DescribeKeyPairsRequest extends Request {
         }
 
         /**
-         * The fingerprint of the key pair.
+         * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -304,11 +362,17 @@ public class DescribeKeyPairsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeKeyPairsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeKeyPairsRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -343,10 +407,11 @@ public class DescribeKeyPairsRequest extends Request {
             private String value; 
 
             /**
-             * The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
-             * <p>
+             * <p>The key of tag N of the key pair. Valid values of N: 1 to 20.</p>
+             * <p>If a single tag is specified to query resources, up to 1,000 resources that are bound with this tag can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that are bound with all these tags can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
              * 
-             * >  Resources in the default resource group are displayed in the response regardless of how this parameter is set.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -354,7 +419,10 @@ public class DescribeKeyPairsRequest extends Request {
             }
 
             /**
-             * The region ID of the key pair. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+             * <p>The value of tag N of the key pair. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

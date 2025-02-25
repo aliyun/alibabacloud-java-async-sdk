@@ -1,73 +1,76 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hitsdb20200615.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLindormInstanceListRequest} extends {@link RequestModel}
  *
  * <p>GetLindormInstanceListRequest</p>
  */
 public class GetLindormInstanceListRequest extends Request {
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
-    @Validation(minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("QueryStr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryStr")
     private String queryStr;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
-    @Validation(minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("ServiceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceType")
     private String serviceType;
 
-    @Query
-    @NameInMap("SupportEngine")
-    @Validation(maximum = 7)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SupportEngine")
+    @com.aliyun.core.annotation.Validation(maximum = 7)
     private Integer supportEngine;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private GetLindormInstanceListRequest(Builder builder) {
         super(builder);
@@ -186,7 +189,7 @@ public class GetLindormInstanceListRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -203,7 +206,7 @@ public class GetLindormInstanceListRequest extends Request {
         private String securityToken; 
         private String serviceType; 
         private Integer supportEngine; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -245,7 +248,10 @@ public class GetLindormInstanceListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of the pages to return,</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -254,7 +260,10 @@ public class GetLindormInstanceListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of instances to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -263,7 +272,10 @@ public class GetLindormInstanceListRequest extends Request {
         }
 
         /**
-         * QueryStr.
+         * <p>The keyword contained in the names of Lindorm instances you want to query. Fuzzy queries based on the keyword is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder queryStr(String queryStr) {
             this.putQueryParameter("QueryStr", queryStr);
@@ -272,7 +284,10 @@ public class GetLindormInstanceListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region in which the instances that you want to query is located. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -281,7 +296,10 @@ public class GetLindormInstanceListRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek3b63arvg27vi</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -317,7 +335,17 @@ public class GetLindormInstanceListRequest extends Request {
         }
 
         /**
-         * ServiceType.
+         * <p>The series of instances that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>lindorm</strong>: The instance is a single-zone Lindorm instance.</li>
+         * <li><strong>lindorm_multizone</strong>: The instance is a multi-zone Lindorm instance.</li>
+         * <li><strong>serverless_lindorm</strong>: The instance is a Lindorm Serverless instance.</li>
+         * <li><strong>lindorm_standalone</strong>: The instance is a single-node Lindorm instance.</li>
+         * <li><strong>lts</strong>: The instance is an LTS instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>lindorm</p>
          */
         public Builder serviceType(String serviceType) {
             this.putQueryParameter("ServiceType", serviceType);
@@ -326,7 +354,19 @@ public class GetLindormInstanceListRequest extends Request {
         }
 
         /**
-         * SupportEngine.
+         * <p>The engine supported by the instances that you want to query. The engines are indicated by different numbers:</p>
+         * <ul>
+         * <li><strong>1</strong>: LindormSearch.</li>
+         * <li><strong>2</strong>: LindormTSDB.</li>
+         * <li><strong>4</strong>: LindormTable.</li>
+         * <li><strong>8</strong>: LindormDFS.</li>
+         * </ul>
+         * <blockquote>
+         * <p>The value of this parameter is the sum of all numbers that indicate the engines supported by the instance. For example, if you set the value of this parameter to 15, which is the sum of 1, 2, 4, and 8, this operation queries instances that support all four engines. If you set the value of this parameter to 6, which is the sum of 2 and 4, this operation queries instances that support LindormTSDB and LindormTable.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder supportEngine(Integer supportEngine) {
             this.putQueryParameter("SupportEngine", supportEngine);
@@ -335,9 +375,9 @@ public class GetLindormInstanceListRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The list of tags associated with the specified instances.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -350,11 +390,17 @@ public class GetLindormInstanceListRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetLindormInstanceListRequest} extends {@link TeaModel}
+     *
+     * <p>GetLindormInstanceListRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -389,7 +435,13 @@ public class GetLindormInstanceListRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The key of tag N of the instances you want to query. You can specify 1 to 20 tag keys.</p>
+             * <blockquote>
+             * <p>You can specify the keys of multiple tags. For example, you can specify the key of the first tag in the first key-value pair contained in the value of this parameter and specify the key of the second tag in the second key-value pair.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -397,7 +449,13 @@ public class GetLindormInstanceListRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of tag N of the instances you want to query. You can specify 1 to 20 tag values.</p>
+             * <blockquote>
+             * <p>You can specify the values of multiple tags. For example, you can specify the value of the first tag in the first key-value pair contained in the value of this parameter and specify the value of the second tag in the second key-value pair.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2.2.18</p>
              */
             public Builder value(String value) {
                 this.value = value;

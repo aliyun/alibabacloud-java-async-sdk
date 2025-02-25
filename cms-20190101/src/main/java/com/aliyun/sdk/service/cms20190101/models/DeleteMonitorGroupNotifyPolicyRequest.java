@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMonitorGroupNotifyPolicyRequest} extends {@link RequestModel}
  *
  * <p>DeleteMonitorGroupNotifyPolicyRequest</p>
  */
 public class DeleteMonitorGroupNotifyPolicyRequest extends Request {
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("PolicyType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyType;
 
     private DeleteMonitorGroupNotifyPolicyRequest(Builder builder) {
@@ -69,7 +69,10 @@ public class DeleteMonitorGroupNotifyPolicyRequest extends Request {
         } 
 
         /**
-         * The ID of the application group.
+         * <p>The ID of the application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6780****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -78,10 +81,12 @@ public class DeleteMonitorGroupNotifyPolicyRequest extends Request {
         }
 
         /**
-         * The policy type.
-         * <p>
+         * <p>The policy type.</p>
+         * <p>Valid value: PauseNotify.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Valid value: PauseNotify.
+         * <strong>example:</strong>
+         * <p>PauseNotify</p>
          */
         public Builder policyType(String policyType) {
             this.putQueryParameter("PolicyType", policyType);

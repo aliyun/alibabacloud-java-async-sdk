@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySasContainerWebDefenseRuleRequest} extends {@link RequestModel}
  *
  * <p>ModifySasContainerWebDefenseRuleRequest</p>
  */
 public class ModifySasContainerWebDefenseRuleRequest extends Request {
-    @Query
-    @NameInMap("PathConfDTOList")
-    private java.util.List < PathConfDTOList> pathConfDTOList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PathConfDTOList")
+    private java.util.List<PathConfDTOList> pathConfDTOList;
 
-    @Query
-    @NameInMap("RuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long ruleId;
 
-    @Query
-    @NameInMap("RuleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleName")
     private String ruleName;
 
     private ModifySasContainerWebDefenseRuleRequest(Builder builder) {
@@ -48,7 +53,7 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
     /**
      * @return pathConfDTOList
      */
-    public java.util.List < PathConfDTOList> getPathConfDTOList() {
+    public java.util.List<PathConfDTOList> getPathConfDTOList() {
         return this.pathConfDTOList;
     }
 
@@ -67,7 +72,7 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifySasContainerWebDefenseRuleRequest, Builder> {
-        private java.util.List < PathConfDTOList> pathConfDTOList; 
+        private java.util.List<PathConfDTOList> pathConfDTOList; 
         private Long ruleId; 
         private String ruleName; 
 
@@ -83,16 +88,20 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
         } 
 
         /**
-         * The paths that are protected.
+         * <p>The paths that are protected.</p>
          */
-        public Builder pathConfDTOList(java.util.List < PathConfDTOList> pathConfDTOList) {
+        public Builder pathConfDTOList(java.util.List<PathConfDTOList> pathConfDTOList) {
             this.putQueryParameter("PathConfDTOList", pathConfDTOList);
             this.pathConfDTOList = pathConfDTOList;
             return this;
         }
 
         /**
-         * The ID of the rule.
+         * <p>The ID of the rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200634</p>
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -101,7 +110,10 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
         }
 
         /**
-         * The name of the rule.
+         * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wwwwwww</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -116,42 +128,48 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifySasContainerWebDefenseRuleRequest} extends {@link TeaModel}
+     *
+     * <p>ModifySasContainerWebDefenseRuleRequest</p>
+     */
     public static class PathConfDTOList extends TeaModel {
-        @NameInMap("BackupPath")
+        @com.aliyun.core.annotation.NameInMap("BackupPath")
         private String backupPath;
 
-        @NameInMap("DefenseMode")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DefenseMode")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String defenseMode;
 
-        @NameInMap("DefensePath")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DefensePath")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String defensePath;
 
-        @NameInMap("ExcludeFile")
+        @com.aliyun.core.annotation.NameInMap("ExcludeFile")
         private String excludeFile;
 
-        @NameInMap("ExcludeFilePath")
+        @com.aliyun.core.annotation.NameInMap("ExcludeFilePath")
         private String excludeFilePath;
 
-        @NameInMap("ExcludeFileType")
+        @com.aliyun.core.annotation.NameInMap("ExcludeFileType")
         private String excludeFileType;
 
-        @NameInMap("GuardType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("GuardType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer guardType;
 
-        @NameInMap("IncludeFile")
+        @com.aliyun.core.annotation.NameInMap("IncludeFile")
         private String includeFile;
 
-        @NameInMap("IncludeFileType")
+        @com.aliyun.core.annotation.NameInMap("IncludeFileType")
         private String includeFileType;
 
-        @NameInMap("PathConfId")
+        @com.aliyun.core.annotation.NameInMap("PathConfId")
         private Long pathConfId;
 
-        @NameInMap("ProcessPathList")
-        private java.util.List < String > processPathList;
+        @com.aliyun.core.annotation.NameInMap("ProcessPathList")
+        private java.util.List<String> processPathList;
 
         private PathConfDTOList(Builder builder) {
             this.backupPath = builder.backupPath;
@@ -248,7 +266,7 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
         /**
          * @return processPathList
          */
-        public java.util.List < String > getProcessPathList() {
+        public java.util.List<String> getProcessPathList() {
             return this.processPathList;
         }
 
@@ -263,10 +281,13 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
             private String includeFile; 
             private String includeFileType; 
             private Long pathConfId; 
-            private java.util.List < String > processPathList; 
+            private java.util.List<String> processPathList; 
 
             /**
-             * The backup paths.
+             * <p>The backup paths.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/tmp/test</p>
              */
             public Builder backupPath(String backupPath) {
                 this.backupPath = backupPath;
@@ -274,11 +295,15 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
             }
 
             /**
-             * The prevention mode. Valid values:
-             * <p>
+             * <p>The prevention mode. Valid values:</p>
+             * <ul>
+             * <li><strong>block</strong></li>
+             * <li><strong>audit</strong></li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **block**
-             * *   **audit**
+             * <strong>example:</strong>
+             * <p>audit</p>
              */
             public Builder defenseMode(String defenseMode) {
                 this.defenseMode = defenseMode;
@@ -286,7 +311,11 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
             }
 
             /**
-             * The path that is protected.
+             * <p>The path that is protected.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/test/home/</p>
              */
             public Builder defensePath(String defensePath) {
                 this.defensePath = defensePath;
@@ -294,7 +323,10 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
             }
 
             /**
-             * The files that are excluded.
+             * <p>The files that are excluded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/test</p>
              */
             public Builder excludeFile(String excludeFile) {
                 this.excludeFile = excludeFile;
@@ -302,7 +334,10 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
             }
 
             /**
-             * The paths to the files that are excluded.
+             * <p>The paths to the files that are excluded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/test/home/qq</p>
              */
             public Builder excludeFilePath(String excludeFilePath) {
                 this.excludeFilePath = excludeFilePath;
@@ -310,7 +345,10 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
             }
 
             /**
-             * The types of the files that are excluded.
+             * <p>The types of the files that are excluded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>php</p>
              */
             public Builder excludeFileType(String excludeFileType) {
                 this.excludeFileType = excludeFileType;
@@ -318,11 +356,15 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
             }
 
             /**
-             * The protection mode. Valid values:
-             * <p>
+             * <p>The protection mode. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: basic mode (whitelist)</li>
+             * <li><strong>1</strong>: complex mode (blacklist)</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **0**: basic mode (whitelist)
-             * *   **1**: complex mode (blacklist)
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder guardType(Integer guardType) {
                 this.guardType = guardType;
@@ -330,7 +372,10 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
             }
 
             /**
-             * The files that are included.
+             * <p>The files that are included.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/home/admin/test</p>
              */
             public Builder includeFile(String includeFile) {
                 this.includeFile = includeFile;
@@ -338,7 +383,10 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
             }
 
             /**
-             * The type of the files that are included.
+             * <p>The type of the files that are included.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jsp</p>
              */
             public Builder includeFileType(String includeFileType) {
                 this.includeFileType = includeFileType;
@@ -346,7 +394,10 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
             }
 
             /**
-             * The path ID.
+             * <p>The path ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345678</p>
              */
             public Builder pathConfId(Long pathConfId) {
                 this.pathConfId = pathConfId;
@@ -354,9 +405,9 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
             }
 
             /**
-             * The processes that are added to the whitelist.
+             * <p>The processes that are added to the whitelist.</p>
              */
-            public Builder processPathList(java.util.List < String > processPathList) {
+            public Builder processPathList(java.util.List<String> processPathList) {
                 this.processPathList = processPathList;
                 return this;
             }

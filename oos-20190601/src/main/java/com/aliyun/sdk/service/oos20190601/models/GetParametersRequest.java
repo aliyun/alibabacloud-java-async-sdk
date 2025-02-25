@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetParametersRequest} extends {@link RequestModel}
  *
  * <p>GetParametersRequest</p>
  */
 public class GetParametersRequest extends Request {
-    @Query
-    @NameInMap("Names")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Names")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String names;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private GetParametersRequest(Builder builder) {
@@ -69,7 +74,11 @@ public class GetParametersRequest extends Request {
         } 
 
         /**
-         * The names of the common parameters.
+         * <p>The names of the common parameters.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;parameter1&quot;,&quot;parameter2&quot;]</p>
          */
         public Builder names(String names) {
             this.putQueryParameter("Names", names);
@@ -78,7 +87,10 @@ public class GetParametersRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

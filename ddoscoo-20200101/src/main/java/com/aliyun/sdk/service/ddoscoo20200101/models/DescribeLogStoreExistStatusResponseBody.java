@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLogStoreExistStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLogStoreExistStatusResponseBody</p>
  */
 public class DescribeLogStoreExistStatusResponseBody extends TeaModel {
-    @NameInMap("ExistStatus")
+    @com.aliyun.core.annotation.NameInMap("ExistStatus")
     private Boolean existStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeLogStoreExistStatusResponseBody(Builder builder) {
@@ -50,11 +55,14 @@ public class DescribeLogStoreExistStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether a Logstore is created for Anti-DDoS Pro or Anti-DDoS Premium. Valid values:
-         * <p>
+         * <p>Indicates whether a Logstore is created for Anti-DDoS Pro or Anti-DDoS Premium. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder existStatus(Boolean existStatus) {
             this.existStatus = existStatus;
@@ -62,7 +70,10 @@ public class DescribeLogStoreExistStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

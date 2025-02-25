@@ -1,29 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openanalytics_open20180619.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExecuteSparkStatementRequest} extends {@link RequestModel}
  *
  * <p>ExecuteSparkStatementRequest</p>
  */
 public class ExecuteSparkStatementRequest extends Request {
-    @Body
-    @NameInMap("Code")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Code")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String code;
 
-    @Body
-    @NameInMap("JobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("JobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobId;
 
-    @Body
-    @NameInMap("Kind")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Kind")
     private String kind;
 
     private ExecuteSparkStatementRequest(Builder builder) {
@@ -76,15 +76,18 @@ public class ExecuteSparkStatementRequest extends Request {
             super();
         } 
 
-        private Builder(ExecuteSparkStatementRequest response) {
-            super(response);
-            this.code = response.code;
-            this.jobId = response.jobId;
-            this.kind = response.kind;
+        private Builder(ExecuteSparkStatementRequest request) {
+            super(request);
+            this.code = request.code;
+            this.jobId = request.jobId;
+            this.kind = request.kind;
         } 
 
         /**
-         * Code.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>print(2+2)\n</p>
          */
         public Builder code(String code) {
             this.putBodyParameter("Code", code);
@@ -93,7 +96,10 @@ public class ExecuteSparkStatementRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>j202106071620hangzhou****</p>
          */
         public Builder jobId(String jobId) {
             this.putBodyParameter("JobId", jobId);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,43 +11,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeOasSQLDetailsRequest</p>
  */
 public class DescribeOasSQLDetailsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("DbName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DbName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbName;
 
-    @Body
-    @NameInMap("DynamicSql")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DynamicSql")
     private Boolean dynamicSql;
 
-    @Body
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("SqlId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ParseTable")
+    private Boolean parseTable;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SqlId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sqlId;
 
-    @Body
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
-    @Body
-    @NameInMap("TenantId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tenantId;
 
     private DescribeOasSQLDetailsRequest(Builder builder) {
@@ -58,6 +60,7 @@ public class DescribeOasSQLDetailsRequest extends Request {
         this.dynamicSql = builder.dynamicSql;
         this.endTime = builder.endTime;
         this.instanceId = builder.instanceId;
+        this.parseTable = builder.parseTable;
         this.sqlId = builder.sqlId;
         this.startTime = builder.startTime;
         this.tenantId = builder.tenantId;
@@ -112,6 +115,13 @@ public class DescribeOasSQLDetailsRequest extends Request {
     }
 
     /**
+     * @return parseTable
+     */
+    public Boolean getParseTable() {
+        return this.parseTable;
+    }
+
+    /**
      * @return sqlId
      */
     public String getSqlId() {
@@ -138,6 +148,7 @@ public class DescribeOasSQLDetailsRequest extends Request {
         private Boolean dynamicSql; 
         private String endTime; 
         private String instanceId; 
+        private Boolean parseTable; 
         private String sqlId; 
         private String startTime; 
         private String tenantId; 
@@ -153,6 +164,7 @@ public class DescribeOasSQLDetailsRequest extends Request {
             this.dynamicSql = request.dynamicSql;
             this.endTime = request.endTime;
             this.instanceId = request.instanceId;
+            this.parseTable = request.parseTable;
             this.sqlId = request.sqlId;
             this.startTime = request.startTime;
             this.tenantId = request.tenantId;
@@ -202,6 +214,15 @@ public class DescribeOasSQLDetailsRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * ParseTable.
+         */
+        public Builder parseTable(Boolean parseTable) {
+            this.putBodyParameter("ParseTable", parseTable);
+            this.parseTable = parseTable;
             return this;
         }
 

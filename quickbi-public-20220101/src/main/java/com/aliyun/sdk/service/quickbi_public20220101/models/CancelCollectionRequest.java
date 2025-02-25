@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelCollectionRequest} extends {@link RequestModel}
  *
  * <p>CancelCollectionRequest</p>
  */
 public class CancelCollectionRequest extends Request {
-    @Query
-    @NameInMap("UserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
-    @Query
-    @NameInMap("WorksId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorksId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String worksId;
 
     private CancelCollectionRequest(Builder builder) {
@@ -70,7 +75,11 @@ public class CancelCollectionRequest extends Request {
         } 
 
         /**
-         * The ID of the favorite user. The user ID is the UserID of the Quick BI, not the UID of Alibaba Cloud.
+         * <p>The ID of the favorite user. The user ID is the UserID of the Quick BI, not the UID of Alibaba Cloud.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>121344444790****</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
@@ -79,7 +88,11 @@ public class CancelCollectionRequest extends Request {
         }
 
         /**
-         * The ID of the work to cancel the collection.
+         * <p>The ID of the work to cancel the collection.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5d6ae4e7-cede-43cd-b4d3-d2fd442a9202</p>
          */
         public Builder worksId(String worksId) {
             this.putQueryParameter("WorksId", worksId);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCalculationJobsResponseBody</p>
  */
 public class ListCalculationJobsResponseBody extends TeaModel {
-    @NameInMap("CalculationJobs")
+    @com.aliyun.core.annotation.NameInMap("CalculationJobs")
     private java.util.List < CalculationJobs> calculationJobs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListCalculationJobsResponseBody(Builder builder) {
@@ -92,28 +91,28 @@ public class ListCalculationJobsResponseBody extends TeaModel {
     } 
 
     public static class CalculationJobs extends TeaModel {
-        @NameInMap("ABMetricName")
+        @com.aliyun.core.annotation.NameInMap("ABMetricName")
         private String ABMetricName;
 
-        @NameInMap("BizDate")
+        @com.aliyun.core.annotation.NameInMap("BizDate")
         private String bizDate;
 
-        @NameInMap("CalculationJobId")
+        @com.aliyun.core.annotation.NameInMap("CalculationJobId")
         private String calculationJobId;
 
-        @NameInMap("Config")
+        @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
 
-        @NameInMap("GmtRanTime")
+        @com.aliyun.core.annotation.NameInMap("GmtRanTime")
         private String gmtRanTime;
 
-        @NameInMap("JobMessage")
+        @com.aliyun.core.annotation.NameInMap("JobMessage")
         private java.util.List < String > jobMessage;
 
-        @NameInMap("JobSource")
+        @com.aliyun.core.annotation.NameInMap("JobSource")
         private String jobSource;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private CalculationJobs(Builder builder) {

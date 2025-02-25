@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiagnosisDimensionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDiagnosisDimensionsResponseBody</p>
  */
 public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
-    @NameInMap("ClientIps")
+    @com.aliyun.core.annotation.NameInMap("ClientIps")
     private java.util.List < String > clientIps;
 
-    @NameInMap("Databases")
+    @com.aliyun.core.annotation.NameInMap("Databases")
     private java.util.List < String > databases;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroups")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroups")
     private java.util.List < String > resourceGroups;
 
-    @NameInMap("UserNames")
+    @com.aliyun.core.annotation.NameInMap("UserNames")
     private java.util.List < String > userNames;
 
     private DescribeDiagnosisDimensionsResponseBody(Builder builder) {
@@ -86,7 +86,7 @@ public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
         private java.util.List < String > userNames; 
 
         /**
-         * The source IP addresses.
+         * <p>The source IP addresses.</p>
          */
         public Builder clientIps(java.util.List < String > clientIps) {
             this.clientIps = clientIps;
@@ -94,7 +94,7 @@ public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
         }
 
         /**
-         * The databases.
+         * <p>The databases.</p>
          */
         public Builder databases(java.util.List < String > databases) {
             this.databases = databases;
@@ -102,7 +102,10 @@ public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E0B56BCD-1BED-30EC-8CAF-1D1E5F******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +113,7 @@ public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
         }
 
         /**
-         * The resource groups.
+         * <p>The resource groups.</p>
          */
         public Builder resourceGroups(java.util.List < String > resourceGroups) {
             this.resourceGroups = resourceGroups;
@@ -118,7 +121,7 @@ public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
         }
 
         /**
-         * The usernames.
+         * <p>The usernames.</p>
          */
         public Builder userNames(java.util.List < String > userNames) {
             this.userNames = userNames;

@@ -1,63 +1,68 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainRecordInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainRecordInfoResponseBody</p>
  */
 public class DescribeDomainRecordInfoResponseBody extends TeaModel {
-    @NameInMap("DomainId")
+    @com.aliyun.core.annotation.NameInMap("DomainId")
     private String domainId;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
-    @NameInMap("Line")
+    @com.aliyun.core.annotation.NameInMap("Line")
     private String line;
 
-    @NameInMap("Locked")
+    @com.aliyun.core.annotation.NameInMap("Locked")
     private Boolean locked;
 
-    @NameInMap("Priority")
+    @com.aliyun.core.annotation.NameInMap("Priority")
     private Long priority;
 
-    @NameInMap("PunyCode")
+    @com.aliyun.core.annotation.NameInMap("PunyCode")
     private String punyCode;
 
-    @NameInMap("RR")
+    @com.aliyun.core.annotation.NameInMap("RR")
     private String rr;
 
-    @NameInMap("RecordId")
+    @com.aliyun.core.annotation.NameInMap("RecordId")
     private String recordId;
 
-    @NameInMap("Remark")
+    @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("TTL")
+    @com.aliyun.core.annotation.NameInMap("TTL")
     private Long TTL;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @NameInMap("Value")
+    @com.aliyun.core.annotation.NameInMap("Value")
     private String value;
 
     private DescribeDomainRecordInfoResponseBody(Builder builder) {
@@ -218,7 +223,10 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         private String value; 
 
         /**
-         * The ID of the domain name.
+         * <p>The ID of the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00efd71a-770e-4255-b54e-6fe5659baffe</p>
          */
         public Builder domainId(String domainId) {
             this.domainId = domainId;
@@ -226,7 +234,10 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The domain name.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dns-example.top</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -234,7 +245,10 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the domain name group.
+         * <p>The ID of the domain name group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2223</p>
          */
         public Builder groupId(String groupId) {
             this.groupId = groupId;
@@ -242,7 +256,10 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the domain name group.
+         * <p>The name of the domain name group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyGroup</p>
          */
         public Builder groupName(String groupName) {
             this.groupName = groupName;
@@ -250,7 +267,10 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The resolution line.
+         * <p>The DNS resolution line.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder line(String line) {
             this.line = line;
@@ -258,7 +278,10 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The lock status of the DNS record. Valid values: true and false.
+         * <p>The lock state of the DNS record. Valid values: <strong>true and false</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder locked(Boolean locked) {
             this.locked = locked;
@@ -266,7 +289,10 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The priority of the MX-type DNS record.
+         * <p>The priority of the mail exchanger (MX) record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder priority(Long priority) {
             this.priority = priority;
@@ -274,7 +300,10 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The punycode is only returned for Chinese domain names.
+         * <p>The Punycode for the domain name. This parameter is returned only for Chinese domain names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xn--fsq270a.com</p>
          */
         public Builder punyCode(String punyCode) {
             this.punyCode = punyCode;
@@ -282,7 +311,10 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The host record.
+         * <p>The hostname.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>@</p>
          */
         public Builder rr(String rr) {
             this.rr = rr;
@@ -290,7 +322,10 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the DNS record.
+         * <p>The ID of the DNS record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9999985</p>
          */
         public Builder recordId(String recordId) {
             this.recordId = recordId;
@@ -298,7 +333,10 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Remark.
+         * <p>The description of your DNS record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder remark(String remark) {
             this.remark = remark;
@@ -306,7 +344,10 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -314,7 +355,10 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the DNS record. Valid values: Enable and Disable.
+         * <p>The state of the DNS records. Valid values: <strong>Enable and Disable</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -322,7 +366,10 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The TTL of the resolution.
+         * <p>The time-to-live (TTL) of the DNS record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
          */
         public Builder TTL(Long TTL) {
             this.TTL = TTL;
@@ -330,7 +377,10 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the DNS record.
+         * <p>The type of the DNS record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MX</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -338,7 +388,10 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The value of the DNS record.
+         * <p>The record value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.XX.XX</p>
          */
         public Builder value(String value) {
             this.value = value;

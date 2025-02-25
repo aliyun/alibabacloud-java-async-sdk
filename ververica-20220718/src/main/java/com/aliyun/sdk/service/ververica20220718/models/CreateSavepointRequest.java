@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSavepointRequest} extends {@link RequestModel}
  *
  * <p>CreateSavepointRequest</p>
  */
 public class CreateSavepointRequest extends Request {
-    @Path
-    @NameInMap("namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @Body
-    @NameInMap("deploymentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("deploymentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deploymentId;
 
-    @Body
-    @NameInMap("description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @Body
-    @NameInMap("nativeFormat")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("nativeFormat")
     private Boolean nativeFormat;
 
-    @Header
-    @NameInMap("workspace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("workspace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspace;
 
     private CreateSavepointRequest(Builder builder) {
@@ -113,7 +118,11 @@ public class CreateSavepointRequest extends Request {
         } 
 
         /**
-         * namespace.
+         * <p>The name of the namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-namespace</p>
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -122,7 +131,11 @@ public class CreateSavepointRequest extends Request {
         }
 
         /**
-         * deploymentId.
+         * <p>The deployment ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58718c99-3b29-4c5e-93bb-c9fc4ec6****</p>
          */
         public Builder deploymentId(String deploymentId) {
             this.putBodyParameter("deploymentId", deploymentId);
@@ -131,7 +144,7 @@ public class CreateSavepointRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The description of the savepoint.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -140,7 +153,14 @@ public class CreateSavepointRequest extends Request {
         }
 
         /**
-         * nativeFormat.
+         * <p>Specifies whether to use the native format mode. Valid values:</p>
+         * <ul>
+         * <li>true: The native format mode is used.</li>
+         * <li>false: The native format mode is not used.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder nativeFormat(Boolean nativeFormat) {
             this.putBodyParameter("nativeFormat", nativeFormat);
@@ -149,7 +169,11 @@ public class CreateSavepointRequest extends Request {
         }
 
         /**
-         * workspace.
+         * <p>The workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a14bd5d90a****</p>
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

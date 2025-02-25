@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAlertsWithEventResponseBody</p>
  */
 public class DescribeAlertsWithEventResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeAlertsWithEventResponseBody(Builder builder) {
@@ -136,13 +135,13 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
     } 
 
     public static class PageInfo extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private PageInfo(Builder builder) {
@@ -217,13 +216,13 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
 
     }
     public static class AlertInfoList extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("KeyName")
+        @com.aliyun.core.annotation.NameInMap("KeyName")
         private String keyName;
 
-        @NameInMap("Values")
+        @com.aliyun.core.annotation.NameInMap("Values")
         private String values;
 
         private AlertInfoList(Builder builder) {
@@ -298,100 +297,103 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
 
     }
     public static class ResponseData extends TeaModel {
-        @NameInMap("AlertDesc")
+        @com.aliyun.core.annotation.NameInMap("AlertDesc")
         private String alertDesc;
 
-        @NameInMap("AlertDescCode")
+        @com.aliyun.core.annotation.NameInMap("AlertDescCode")
         private String alertDescCode;
 
-        @NameInMap("AlertDescEn")
+        @com.aliyun.core.annotation.NameInMap("AlertDescEn")
         private String alertDescEn;
 
-        @NameInMap("AlertDetail")
+        @com.aliyun.core.annotation.NameInMap("AlertDetail")
         private String alertDetail;
 
-        @NameInMap("AlertInfoList")
+        @com.aliyun.core.annotation.NameInMap("AlertInfoList")
         private java.util.List < AlertInfoList> alertInfoList;
 
-        @NameInMap("AlertLevel")
+        @com.aliyun.core.annotation.NameInMap("AlertLevel")
         private String alertLevel;
 
-        @NameInMap("AlertName")
+        @com.aliyun.core.annotation.NameInMap("AlertName")
         private String alertName;
 
-        @NameInMap("AlertNameCode")
+        @com.aliyun.core.annotation.NameInMap("AlertNameCode")
         private String alertNameCode;
 
-        @NameInMap("AlertNameEn")
+        @com.aliyun.core.annotation.NameInMap("AlertNameEn")
         private String alertNameEn;
 
-        @NameInMap("AlertSrcProd")
+        @com.aliyun.core.annotation.NameInMap("AlertSrcProd")
         private String alertSrcProd;
 
-        @NameInMap("AlertSrcProdModule")
+        @com.aliyun.core.annotation.NameInMap("AlertSrcProdModule")
         private String alertSrcProdModule;
 
-        @NameInMap("AlertTitle")
+        @com.aliyun.core.annotation.NameInMap("AlertTitle")
         private String alertTitle;
 
-        @NameInMap("AlertTitleEn")
+        @com.aliyun.core.annotation.NameInMap("AlertTitleEn")
         private String alertTitleEn;
 
-        @NameInMap("AlertType")
+        @com.aliyun.core.annotation.NameInMap("AlertType")
         private String alertType;
 
-        @NameInMap("AlertTypeCode")
+        @com.aliyun.core.annotation.NameInMap("AlertTypeCode")
         private String alertTypeCode;
 
-        @NameInMap("AlertTypeEn")
+        @com.aliyun.core.annotation.NameInMap("AlertTypeEn")
         private String alertTypeEn;
 
-        @NameInMap("AlertUuid")
+        @com.aliyun.core.annotation.NameInMap("AlertUuid")
         private String alertUuid;
 
-        @NameInMap("AssetList")
+        @com.aliyun.core.annotation.NameInMap("AssetList")
         private String assetList;
 
-        @NameInMap("AttCk")
+        @com.aliyun.core.annotation.NameInMap("AttCk")
         private String attCk;
 
-        @NameInMap("CloudCode")
+        @com.aliyun.core.annotation.NameInMap("CloudCode")
         private String cloudCode;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("EntityList")
+        private String entityList;
+
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("IncidentUuid")
+        @com.aliyun.core.annotation.NameInMap("IncidentUuid")
         private String incidentUuid;
 
-        @NameInMap("IsDefend")
+        @com.aliyun.core.annotation.NameInMap("IsDefend")
         private String isDefend;
 
-        @NameInMap("LogTime")
+        @com.aliyun.core.annotation.NameInMap("LogTime")
         private String logTime;
 
-        @NameInMap("LogUuid")
+        @com.aliyun.core.annotation.NameInMap("LogUuid")
         private String logUuid;
 
-        @NameInMap("MainUserId")
+        @com.aliyun.core.annotation.NameInMap("MainUserId")
         private Long mainUserId;
 
-        @NameInMap("OccurTime")
+        @com.aliyun.core.annotation.NameInMap("OccurTime")
         private String occurTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("SubUserId")
+        @com.aliyun.core.annotation.NameInMap("SubUserId")
         private Long subUserId;
 
         private ResponseData(Builder builder) {
@@ -416,6 +418,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             this.attCk = builder.attCk;
             this.cloudCode = builder.cloudCode;
             this.endTime = builder.endTime;
+            this.entityList = builder.entityList;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
             this.id = builder.id;
@@ -585,6 +588,13 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
         }
 
         /**
+         * @return entityList
+         */
+        public String getEntityList() {
+            return this.entityList;
+        }
+
+        /**
          * @return gmtCreate
          */
         public String getGmtCreate() {
@@ -683,6 +693,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             private String attCk; 
             private String cloudCode; 
             private String endTime; 
+            private String entityList; 
             private String gmtCreate; 
             private String gmtModified; 
             private Long id; 
@@ -739,9 +750,9 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
              * The risk level. Valid values:
              * <p>
              * 
-             * *   serious: high
-             * *   suspicious: medium
-             * *   remind: low
+             * *   serious: high.
+             * *   suspicious: medium.
+             * *   remind: low.
              */
             public Builder alertLevel(String alertLevel) {
                 this.alertLevel = alertLevel;
@@ -845,7 +856,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the ATT\&CK attack.
+             * The tag of the ATT\&CK technique.
              */
             public Builder attCk(String attCk) {
                 this.attCk = attCk;
@@ -853,12 +864,12 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * The cloud code. Valid values:
+             * The code of the cloud service provider. Valid values:
              * <p>
              * 
-             * *   aliyun: Alibaba Cloud
-             * *   qcloud: Tencent Cloud
-             * *   hcloud: Huawei Cloud
+             * *   aliyun: Alibaba Cloud.
+             * *   qcloud: Tencent Cloud.
+             * *   hcloud: Huawei Cloud.
              */
             public Builder cloudCode(String cloudCode) {
                 this.cloudCode = cloudCode;
@@ -870,6 +881,14 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * The details of the entity.
+             */
+            public Builder entityList(String entityList) {
+                this.entityList = entityList;
                 return this;
             }
 
@@ -906,11 +925,11 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether an attack is defended. Valid values:
+             * Indicates whether an attack is defended against. Valid values:
              * <p>
              * 
-             * *   0: detected
-             * *   1: blocked
+             * *   0: detected.
+             * *   1: blocked.
              */
             public Builder isDefend(String isDefend) {
                 this.isDefend = isDefend;
@@ -973,10 +992,10 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("PageInfo")
+        @com.aliyun.core.annotation.NameInMap("PageInfo")
         private PageInfo pageInfo;
 
-        @NameInMap("ResponseData")
+        @com.aliyun.core.annotation.NameInMap("ResponseData")
         private java.util.List < ResponseData> responseData;
 
         private Data(Builder builder) {

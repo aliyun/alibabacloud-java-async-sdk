@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eflo_controller20221215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReimageNodesRequest} extends {@link RequestModel}
  *
  * <p>ReimageNodesRequest</p>
  */
 public class ReimageNodesRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Body
-    @NameInMap("IgnoreFailedNodeTasks")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IgnoreFailedNodeTasks")
     private Boolean ignoreFailedNodeTasks;
 
-    @Body
-    @NameInMap("Nodes")
-    private java.util.List < Nodes> nodes;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Nodes")
+    private java.util.List<Nodes> nodes;
 
-    @Body
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
     private ReimageNodesRequest(Builder builder) {
@@ -78,7 +83,7 @@ public class ReimageNodesRequest extends Request {
     /**
      * @return nodes
      */
-    public java.util.List < Nodes> getNodes() {
+    public java.util.List<Nodes> getNodes() {
         return this.nodes;
     }
 
@@ -93,7 +98,7 @@ public class ReimageNodesRequest extends Request {
         private String regionId; 
         private String clusterId; 
         private Boolean ignoreFailedNodeTasks; 
-        private java.util.List < Nodes> nodes; 
+        private java.util.List<Nodes> nodes; 
         private String userData; 
 
         private Builder() {
@@ -119,7 +124,10 @@ public class ReimageNodesRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * <p>Cluster ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i15dfa12e8f27c44f4a006c2c8bb</p>
          */
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("ClusterId", clusterId);
@@ -128,7 +136,10 @@ public class ReimageNodesRequest extends Request {
         }
 
         /**
-         * IgnoreFailedNodeTasks.
+         * <p>Whether to allow skipping failed node tasks, default value is False</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder ignoreFailedNodeTasks(Boolean ignoreFailedNodeTasks) {
             this.putBodyParameter("IgnoreFailedNodeTasks", ignoreFailedNodeTasks);
@@ -137,9 +148,9 @@ public class ReimageNodesRequest extends Request {
         }
 
         /**
-         * Nodes.
+         * <p>Node list</p>
          */
-        public Builder nodes(java.util.List < Nodes> nodes) {
+        public Builder nodes(java.util.List<Nodes> nodes) {
             String nodesShrink = shrink(nodes, "Nodes", "json");
             this.putBodyParameter("Nodes", nodesShrink);
             this.nodes = nodes;
@@ -147,7 +158,11 @@ public class ReimageNodesRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>Custom data</p>
+         * 
+         * <strong>example:</strong>
+         * <p>#!/bin/sh
+         * echo &quot;Hello World. The time is now $(date -R)!&quot; | tee /root/userdata_test.txt</p>
          */
         public Builder userData(String userData) {
             this.putBodyParameter("UserData", userData);
@@ -162,17 +177,23 @@ public class ReimageNodesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ReimageNodesRequest} extends {@link TeaModel}
+     *
+     * <p>ReimageNodesRequest</p>
+     */
     public static class Nodes extends TeaModel {
-        @NameInMap("Hostname")
+        @com.aliyun.core.annotation.NameInMap("Hostname")
         private String hostname;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("LoginPassword")
+        @com.aliyun.core.annotation.NameInMap("LoginPassword")
         private String loginPassword;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
         private Nodes(Builder builder) {
@@ -225,7 +246,10 @@ public class ReimageNodesRequest extends Request {
             private String nodeId; 
 
             /**
-             * Hostname.
+             * <p>Hostname</p>
+             * 
+             * <strong>example:</strong>
+             * <p>457db5ca-241d-11ed-9fd7-acde48001122</p>
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -233,7 +257,10 @@ public class ReimageNodesRequest extends Request {
             }
 
             /**
-             * ImageId.
+             * <p>System image ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-8vbf8rpv2nn14y7oybjy</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -241,7 +268,10 @@ public class ReimageNodesRequest extends Request {
             }
 
             /**
-             * LoginPassword.
+             * <p>Login password</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder loginPassword(String loginPassword) {
                 this.loginPassword = loginPassword;
@@ -249,7 +279,10 @@ public class ReimageNodesRequest extends Request {
             }
 
             /**
-             * NodeId.
+             * <p>Node ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e01-cn-zvp2tgykr0b</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUnassociatedCustomerResponseBody} extends {@link TeaModel}
  *
  * <p>GetUnassociatedCustomerResponseBody</p>
  */
 public class GetUnassociatedCustomerResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("InviteInfoList")
+    @com.aliyun.core.annotation.NameInMap("InviteInfoList")
     private InviteInfoList inviteInfoList;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetUnassociatedCustomerResponseBody(Builder builder) {
@@ -98,7 +103,14 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>Error Code, Candidate Value：</p>
+         * <ul>
+         * <li>200: OK</li>
+         * <li>1109: System error</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +118,7 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
         }
 
         /**
-         * InviteInfoList.
+         * <p>List of Invitation Information</p>
          */
         public Builder inviteInfoList(InviteInfoList inviteInfoList) {
             this.inviteInfoList = inviteInfoList;
@@ -114,7 +126,10 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Message information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +137,7 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * <p>Pagination Information</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -130,7 +145,10 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID, Alibaba Cloud will track errors with this.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23309219-4A34-589D-A3E0-9B2A3BFFD24F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +156,10 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Candidate Value: True/False, which indicates whether the current API call itself is successful. It does not guarantee the success of subsequent business operations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,20 +172,26 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetUnassociatedCustomerResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUnassociatedCustomerResponseBody</p>
+     */
     public static class InviteInfo extends TeaModel {
-        @NameInMap("AccountNickname")
+        @com.aliyun.core.annotation.NameInMap("AccountNickname")
         private String accountNickname;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("InviteId")
+        @com.aliyun.core.annotation.NameInMap("InviteId")
         private Long inviteId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private InviteInfo(Builder builder) {
@@ -226,7 +253,10 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * AccountNickname.
+             * <p>The name of Customer who are to be invited.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>My Client</p>
              */
             public Builder accountNickname(String accountNickname) {
                 this.accountNickname = accountNickname;
@@ -234,7 +264,10 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * <p>The Email of Customer who are to be invited.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:12345@qq.com">12345@qq.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -242,7 +275,10 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time of email been sent out.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-10</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -250,7 +286,10 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
             }
 
             /**
-             * InviteId.
+             * <p>Invitation ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>190</p>
              */
             public Builder inviteId(Long inviteId) {
                 this.inviteId = inviteId;
@@ -258,7 +297,16 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Invitation Status:</p>
+             * <ul>
+             * <li>0 No visit on registration URL</li>
+             * <li>1 Successful Registration</li>
+             * <li>2 Unsuccessful Registration</li>
+             * <li>3 Registration URL have been visited, but no submitted sheet/ticket.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -272,9 +320,15 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetUnassociatedCustomerResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUnassociatedCustomerResponseBody</p>
+     */
     public static class InviteInfoList extends TeaModel {
-        @NameInMap("InviteInfo")
-        private java.util.List < InviteInfo> inviteInfo;
+        @com.aliyun.core.annotation.NameInMap("InviteInfo")
+        private java.util.List<InviteInfo> inviteInfo;
 
         private InviteInfoList(Builder builder) {
             this.inviteInfo = builder.inviteInfo;
@@ -291,17 +345,17 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
         /**
          * @return inviteInfo
          */
-        public java.util.List < InviteInfo> getInviteInfo() {
+        public java.util.List<InviteInfo> getInviteInfo() {
             return this.inviteInfo;
         }
 
         public static final class Builder {
-            private java.util.List < InviteInfo> inviteInfo; 
+            private java.util.List<InviteInfo> inviteInfo; 
 
             /**
              * InviteInfo.
              */
-            public Builder inviteInfo(java.util.List < InviteInfo> inviteInfo) {
+            public Builder inviteInfo(java.util.List<InviteInfo> inviteInfo) {
                 this.inviteInfo = inviteInfo;
                 return this;
             }
@@ -313,14 +367,20 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetUnassociatedCustomerResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUnassociatedCustomerResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("Page")
+        @com.aliyun.core.annotation.NameInMap("Page")
         private Integer page;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private PageInfo(Builder builder) {
@@ -364,7 +424,10 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
             private Integer total; 
 
             /**
-             * Page.
+             * <p>Pagination, current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -372,7 +435,10 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Pagination, record number on each page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -380,7 +446,10 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>Pagination, page volume in total.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

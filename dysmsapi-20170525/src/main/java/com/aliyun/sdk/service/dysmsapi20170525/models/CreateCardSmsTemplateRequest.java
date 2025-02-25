@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCardSmsTemplateRequest} extends {@link RequestModel}
  *
  * <p>CreateCardSmsTemplateRequest</p>
  */
 public class CreateCardSmsTemplateRequest extends Request {
-    @Query
-    @NameInMap("Factorys")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Factorys")
     private String factorys;
 
-    @Query
-    @NameInMap("Memo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Memo")
     private String memo;
 
-    @Query
-    @NameInMap("Template")
-    @Validation(required = true)
-    private java.util.Map < String, ? > template;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Template")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.Map<String, ?> template;
 
-    @Query
-    @NameInMap("TemplateName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateName;
 
     private CreateCardSmsTemplateRequest(Builder builder) {
@@ -68,7 +73,7 @@ public class CreateCardSmsTemplateRequest extends Request {
     /**
      * @return template
      */
-    public java.util.Map < String, ? > getTemplate() {
+    public java.util.Map<String, ?> getTemplate() {
         return this.template;
     }
 
@@ -82,7 +87,7 @@ public class CreateCardSmsTemplateRequest extends Request {
     public static final class Builder extends Request.Builder<CreateCardSmsTemplateRequest, Builder> {
         private String factorys; 
         private String memo; 
-        private java.util.Map < String, ? > template; 
+        private java.util.Map<String, ?> template; 
         private String templateName; 
 
         private Builder() {
@@ -98,7 +103,20 @@ public class CreateCardSmsTemplateRequest extends Request {
         } 
 
         /**
-         * Factorys.
+         * <p>The mobile phone manufacturer. Valid values:</p>
+         * <ul>
+         * <li><strong>HuaWei</strong>: HUAWEI</li>
+         * <li><strong>XiaoMi</strong>: Xiaomi</li>
+         * <li><strong>OPPO</strong>: OPPO</li>
+         * <li><strong>VIVO</strong>: vivo</li>
+         * <li><strong>MEIZU</strong>: MEIZU</li>
+         * </ul>
+         * <blockquote>
+         * <p>If this parameter is not specified, the system automatically specifies a supported mobile phone manufacturer.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>XiaoMi</p>
          */
         public Builder factorys(String factorys) {
             this.putQueryParameter("Factorys", factorys);
@@ -107,7 +125,10 @@ public class CreateCardSmsTemplateRequest extends Request {
         }
 
         /**
-         * Memo.
+         * <p>The description of the message template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Image and Text Template</p>
          */
         public Builder memo(String memo) {
             this.putQueryParameter("Memo", memo);
@@ -116,9 +137,73 @@ public class CreateCardSmsTemplateRequest extends Request {
         }
 
         /**
-         * Template.
+         * <p>The content of the card message template.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>For information about fields such as Template, ExtendInfo, TemplateContent, TmpCard, and Action, see <a href="https://help.aliyun.com/document_detail/434929.html">Parameters of card message templates</a>.</p>
+         * </li>
+         * <li><p>Message template content varies based on the template type. For more information, see <a href="https://help.aliyun.com/document_detail/435361.html">Sample message templates</a>.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *        &quot;extendInfo&quot;:{
+         *               &quot;scene&quot;:&quot;HMOVM&quot;,
+         *               &quot;purpose&quot;:&quot;2&quot;,
+         *               &quot;userExt&quot;:{
+         *                      &quot;outId&quot;:&quot;1234554321&quot;
+         *               }
+         *        },
+         *        &quot;templateContent&quot;:{
+         *               &quot;pages&quot;:[
+         *                      {
+         * &quot;tmpCards&quot;:[
+         *                                    {
+         *                                           &quot;type&quot;:&quot;IMAGE&quot;,
+         *                                           &quot;srcType&quot;:1,
+         *                                           &quot;src&quot;:&quot;28755&quot;,
+         *                                           &quot;actionType&quot;:&quot;OPEN_APP&quot;,
+         *                                           &quot;action&quot;:{
+         *                                                  &quot;target&quot;:&quot;<a href="https://s.tb.cn/c.KxzZ">https://s.tb.cn/c.KxzZ</a>&quot;,
+         *                                                  &quot;merchantName&quot;:&quot;test-template&quot;,
+         *                                                  &quot;packageName&quot;:[
+         *                                                         &quot;com.taobao.taobao&quot;],
+         *                                                  &quot;floorUrl&quot;:&quot;<a href="https://s.tb.cn/c.KxzZ">https://s.tb.cn/c.KxzZ</a>&quot;
+         *                                           },
+         *                                           &quot;positionNumber&quot;:1
+         *                                    },
+         *                                    {
+         *                                           &quot;type&quot;:&quot;TEXT&quot;,
+         *                                           &quot;content&quot;:&quot;this is a test msg.&quot;,
+         *                                           &quot;isTextTitle&quot;:true,
+         *                                           &quot;positionNumber&quot;:2
+         *                                    },
+         *                                    {
+         *                                           &quot;type&quot;:&quot;TEXT&quot;,
+         *                                           &quot;content&quot;:&quot;Promotional information&quot;,
+         *                                           &quot;isTextTitle&quot;:false,
+         *                                           &quot;positionNumber&quot;:3
+         *                                    },
+         *                                    {
+         *                                           &quot;type&quot;:&quot;BUTTON&quot;,
+         *                                           &quot;content&quot;:&quot;Promotional information,&quot;,
+         *                                           &quot;actionType&quot;:&quot;OPEN_BROWSER&quot;,
+         *                                           &quot;action&quot;:{
+         *                                                  &quot;target&quot;:&quot;<a href="https://www.aliyun.com">https://www.aliyun.com</a>&quot;,
+         *                                                  &quot;merchantName&quot;:&quot;Currently on the Alibaba Cloud official website.&quot;
+         * },
+         *                                           &quot;positionNumber&quot;:4
+         *                                    }]
+         *                      }]
+         *        },
+         *        &quot;cardSignName&quot;:&quot;aliyun&quot;,
+         *        &quot;cardType&quot;:5
+         * }</p>
          */
-        public Builder template(java.util.Map < String, ? > template) {
+        public Builder template(java.util.Map<String, ?> template) {
             String templateShrink = shrink(template, "Template", "json");
             this.putQueryParameter("Template", templateShrink);
             this.template = template;
@@ -126,7 +211,11 @@ public class CreateCardSmsTemplateRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * <p>The name of the card message template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun Image and Text Template</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);

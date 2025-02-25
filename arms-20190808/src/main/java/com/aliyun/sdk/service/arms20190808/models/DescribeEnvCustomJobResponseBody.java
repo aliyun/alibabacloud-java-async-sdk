@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnvCustomJobResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEnvCustomJobResponseBody</p>
  */
 public class DescribeEnvCustomJobResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeEnvCustomJobResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class DescribeEnvCustomJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the request was successful.
+         * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +90,7 @@ public class DescribeEnvCustomJobResponseBody extends TeaModel {
         }
 
         /**
-         * The returned struct.
+         * <p>The returned struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +98,10 @@ public class DescribeEnvCustomJobResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +109,10 @@ public class DescribeEnvCustomJobResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6A9AEA84-7186-4D8D-B498-4585C6A2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,20 +125,26 @@ public class DescribeEnvCustomJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEnvCustomJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnvCustomJobResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ConfigYaml")
+        @com.aliyun.core.annotation.NameInMap("ConfigYaml")
         private String configYaml;
 
-        @NameInMap("CustomJobName")
+        @com.aliyun.core.annotation.NameInMap("CustomJobName")
         private String customJobName;
 
-        @NameInMap("EnvironmentId")
+        @com.aliyun.core.annotation.NameInMap("EnvironmentId")
         private String environmentId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Data(Builder builder) {
@@ -186,7 +206,10 @@ public class DescribeEnvCustomJobResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * If the request parameter EncryptYaml is set to true, a Base64-encoded YAML string is returned. Otherwise, a plaintext YAML string is returned.
+             * <p>If the <strong>encryptYaml</strong> parameter is set to <code>true</code>, a Base64-encoded YAML string is returned. Otherwise, a plaintext YAML string is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Refer to supplementary instructions.</p>
              */
             public Builder configYaml(String configYaml) {
                 this.configYaml = configYaml;
@@ -194,7 +217,10 @@ public class DescribeEnvCustomJobResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the custom job.
+             * <p>The name of the custom job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>customJob1</p>
              */
             public Builder customJobName(String customJobName) {
                 this.customJobName = customJobName;
@@ -202,7 +228,10 @@ public class DescribeEnvCustomJobResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the environment instance.
+             * <p>The ID of the environment instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env-xxxxx</p>
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -210,7 +239,10 @@ public class DescribeEnvCustomJobResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -218,7 +250,14 @@ public class DescribeEnvCustomJobResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the custom job. Valid values: run and stop.
+             * <p>The status. Valid values:</p>
+             * <ul>
+             * <li>run</li>
+             * <li>stop</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>run</p>
              */
             public Builder status(String status) {
                 this.status = status;

@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMonitorGroupDynamicRulesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMonitorGroupDynamicRulesResponseBody</p>
  */
 public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Resource")
+    @com.aliyun.core.annotation.NameInMap("Resource")
     private Resource resource;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeMonitorGroupDynamicRulesResponseBody(Builder builder) {
@@ -86,10 +86,13 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The responses code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * >  The value 200 indicates that the call was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -97,7 +100,10 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified resource is not found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -105,7 +111,10 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2170B94A-1576-4D65-900E-2093037CDAF3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -113,7 +122,7 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The resources that is associated with the application group.
+         * <p>The resources that are associated with the application group.</p>
          */
         public Builder resource(Resource resource) {
             this.resource = resource;
@@ -121,7 +130,14 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,14 +150,20 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMonitorGroupDynamicRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitorGroupDynamicRulesResponseBody</p>
+     */
     public static class Filter extends TeaModel {
-        @NameInMap("Function")
+        @com.aliyun.core.annotation.NameInMap("Function")
         private String function;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Filter(Builder builder) {
@@ -185,12 +207,15 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The method that is used to filter the instances. Valid values:
-             * <p>
+             * <p>The method that is used to filter the instances. Valid values:</p>
+             * <ul>
+             * <li>contains: contains</li>
+             * <li>startWith: starts with a prefix</li>
+             * <li>endWith: ends with a suffix</li>
+             * </ul>
              * 
-             * *   contains: includes a specified element
-             * *   startWith: specifies a prefix
-             * *   endWith: specifies a suffix
+             * <strong>example:</strong>
+             * <p>contains</p>
              */
             public Builder function(String function) {
                 this.function = function;
@@ -198,7 +223,10 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hostName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -206,7 +234,10 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the dynamic rule.
+             * <p>The value of the dynamic rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -220,8 +251,14 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMonitorGroupDynamicRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitorGroupDynamicRulesResponseBody</p>
+     */
     public static class Filters extends TeaModel {
-        @NameInMap("Filter")
+        @com.aliyun.core.annotation.NameInMap("Filter")
         private java.util.List < Filter> filter;
 
         private Filters(Builder builder) {
@@ -261,14 +298,20 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMonitorGroupDynamicRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitorGroupDynamicRulesResponseBody</p>
+     */
     public static class ResourceResource extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("FilterRelation")
+        @com.aliyun.core.annotation.NameInMap("FilterRelation")
         private String filterRelation;
 
-        @NameInMap("Filters")
+        @com.aliyun.core.annotation.NameInMap("Filters")
         private Filters filters;
 
         private ResourceResource(Builder builder) {
@@ -312,12 +355,15 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
             private Filters filters; 
 
             /**
-             * The type of the cloud service to which the dynamic rule belongs. Valid values:
-             * <p>
+             * <p>The type of the cloud service to which the dynamic rule belongs. Valid values:</p>
+             * <ul>
+             * <li>ecs: Elastic Compute Service (ECS)</li>
+             * <li>rds: ApsaraDB RDS</li>
+             * <li>slb: Server Load Balancer (SLB)</li>
+             * </ul>
              * 
-             * *   ecs: Elastic Compute Service (ECS)
-             * *   rds: ApsaraDB RDS
-             * *   slb: Server Load Balancer (SLB)
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -325,11 +371,14 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The filtering condition. Valid values:
-             * <p>
+             * <p>The filter condition. Valid values:</p>
+             * <ul>
+             * <li>and: queries the instances that meet all alert rules.</li>
+             * <li>or: queries the instances that meet any alert rule.</li>
+             * </ul>
              * 
-             * *   and: queries the instances that meet all alert rules
-             * *   or: queries the instances that meet any alert rule
+             * <strong>example:</strong>
+             * <p>and</p>
              */
             public Builder filterRelation(String filterRelation) {
                 this.filterRelation = filterRelation;
@@ -337,7 +386,7 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The dynamic rules of the application group.
+             * <p>The dynamic rules of the application group.</p>
              */
             public Builder filters(Filters filters) {
                 this.filters = filters;
@@ -351,8 +400,14 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMonitorGroupDynamicRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitorGroupDynamicRulesResponseBody</p>
+     */
     public static class Resource extends TeaModel {
-        @NameInMap("Resource")
+        @com.aliyun.core.annotation.NameInMap("Resource")
         private java.util.List < ResourceResource> resource;
 
         private Resource(Builder builder) {
@@ -378,7 +433,7 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
             private java.util.List < ResourceResource> resource; 
 
             /**
-             * The resources that is associated with the application group.
+             * <p>The resources that are associated with the application group.</p>
              */
             public Builder resource(java.util.List < ResourceResource> resource) {
                 this.resource = resource;

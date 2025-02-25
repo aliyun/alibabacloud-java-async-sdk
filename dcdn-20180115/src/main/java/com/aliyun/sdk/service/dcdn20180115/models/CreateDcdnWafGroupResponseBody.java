@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDcdnWafGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDcdnWafGroupResponseBody</p>
  */
 public class CreateDcdnWafGroupResponseBody extends TeaModel {
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateDcdnWafGroupResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class CreateDcdnWafGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Id.
+         * <p>The ID of the created WAF rule group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30000166</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -58,7 +61,10 @@ public class CreateDcdnWafGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>675F4820-400E-5929-8B03-2C031A5D5391</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

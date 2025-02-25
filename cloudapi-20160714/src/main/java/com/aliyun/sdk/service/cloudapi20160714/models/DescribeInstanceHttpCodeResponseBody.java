@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceHttpCodeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceHttpCodeResponseBody</p>
  */
 public class DescribeInstanceHttpCodeResponseBody extends TeaModel {
-    @NameInMap("InstanceHttpCode")
+    @com.aliyun.core.annotation.NameInMap("InstanceHttpCode")
     private InstanceHttpCode instanceHttpCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceHttpCodeResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeInstanceHttpCodeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status codes.
+         * <p>The HTTP status codes.</p>
          */
         public Builder instanceHttpCode(InstanceHttpCode instanceHttpCode) {
             this.instanceHttpCode = instanceHttpCode;
@@ -58,7 +63,10 @@ public class DescribeInstanceHttpCodeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AD00F8C0-311B-54A9-ADE2-2436771012DA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class DescribeInstanceHttpCodeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceHttpCodeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceHttpCodeResponseBody</p>
+     */
     public static class MonitorItem extends TeaModel {
-        @NameInMap("ItemTime")
+        @com.aliyun.core.annotation.NameInMap("ItemTime")
         private String itemTime;
 
-        @NameInMap("ItemValue")
+        @com.aliyun.core.annotation.NameInMap("ItemValue")
         private String itemValue;
 
         private MonitorItem(Builder builder) {
@@ -110,7 +124,10 @@ public class DescribeInstanceHttpCodeResponseBody extends TeaModel {
             private String itemValue; 
 
             /**
-             * The HTTP status code returned.
+             * <p>The HTTP status code returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>404</p>
              */
             public Builder itemTime(String itemTime) {
                 this.itemTime = itemTime;
@@ -118,7 +135,10 @@ public class DescribeInstanceHttpCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The corresponding value.
+             * <p>The corresponding value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder itemValue(String itemValue) {
                 this.itemValue = itemValue;
@@ -132,9 +152,15 @@ public class DescribeInstanceHttpCodeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceHttpCodeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceHttpCodeResponseBody</p>
+     */
     public static class InstanceHttpCode extends TeaModel {
-        @NameInMap("MonitorItem")
-        private java.util.List < MonitorItem> monitorItem;
+        @com.aliyun.core.annotation.NameInMap("MonitorItem")
+        private java.util.List<MonitorItem> monitorItem;
 
         private InstanceHttpCode(Builder builder) {
             this.monitorItem = builder.monitorItem;
@@ -151,17 +177,17 @@ public class DescribeInstanceHttpCodeResponseBody extends TeaModel {
         /**
          * @return monitorItem
          */
-        public java.util.List < MonitorItem> getMonitorItem() {
+        public java.util.List<MonitorItem> getMonitorItem() {
             return this.monitorItem;
         }
 
         public static final class Builder {
-            private java.util.List < MonitorItem> monitorItem; 
+            private java.util.List<MonitorItem> monitorItem; 
 
             /**
              * MonitorItem.
              */
-            public Builder monitorItem(java.util.List < MonitorItem> monitorItem) {
+            public Builder monitorItem(java.util.List<MonitorItem> monitorItem) {
                 this.monitorItem = monitorItem;
                 return this;
             }

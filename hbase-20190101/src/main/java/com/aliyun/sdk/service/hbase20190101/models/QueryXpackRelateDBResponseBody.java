@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryXpackRelateDBResponseBody} extends {@link TeaModel}
  *
  * <p>QueryXpackRelateDBResponseBody</p>
  */
 public class QueryXpackRelateDBResponseBody extends TeaModel {
-    @NameInMap("ClusterList")
+    @com.aliyun.core.annotation.NameInMap("ClusterList")
     private ClusterList clusterList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryXpackRelateDBResponseBody(Builder builder) {
@@ -71,26 +76,32 @@ public class QueryXpackRelateDBResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryXpackRelateDBResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryXpackRelateDBResponseBody</p>
+     */
     public static class Cluster extends TeaModel {
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("DBType")
+        @com.aliyun.core.annotation.NameInMap("DBType")
         private String DBType;
 
-        @NameInMap("DBVersion")
+        @com.aliyun.core.annotation.NameInMap("DBVersion")
         private String DBVersion;
 
-        @NameInMap("IsRelated")
+        @com.aliyun.core.annotation.NameInMap("IsRelated")
         private Boolean isRelated;
 
-        @NameInMap("LockMode")
+        @com.aliyun.core.annotation.NameInMap("LockMode")
         private String lockMode;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Cluster(Builder builder) {
@@ -232,9 +243,15 @@ public class QueryXpackRelateDBResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryXpackRelateDBResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryXpackRelateDBResponseBody</p>
+     */
     public static class ClusterList extends TeaModel {
-        @NameInMap("Cluster")
-        private java.util.List < Cluster> cluster;
+        @com.aliyun.core.annotation.NameInMap("Cluster")
+        private java.util.List<Cluster> cluster;
 
         private ClusterList(Builder builder) {
             this.cluster = builder.cluster;
@@ -251,17 +268,17 @@ public class QueryXpackRelateDBResponseBody extends TeaModel {
         /**
          * @return cluster
          */
-        public java.util.List < Cluster> getCluster() {
+        public java.util.List<Cluster> getCluster() {
             return this.cluster;
         }
 
         public static final class Builder {
-            private java.util.List < Cluster> cluster; 
+            private java.util.List<Cluster> cluster; 
 
             /**
              * Cluster.
              */
-            public Builder cluster(java.util.List < Cluster> cluster) {
+            public Builder cluster(java.util.List<Cluster> cluster) {
                 this.cluster = cluster;
                 return this;
             }

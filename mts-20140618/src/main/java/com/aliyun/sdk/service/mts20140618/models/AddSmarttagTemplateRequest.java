@@ -1,79 +1,87 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddSmarttagTemplateRequest} extends {@link RequestModel}
  *
  * <p>AddSmarttagTemplateRequest</p>
  */
 public class AddSmarttagTemplateRequest extends Request {
-    @Query
-    @NameInMap("AnalyseTypes")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AnalyseTypes")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String analyseTypes;
 
-    @Query
-    @NameInMap("FaceCategoryIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FaceCategoryIds")
     private String faceCategoryIds;
 
-    @Query
-    @NameInMap("FaceCustomParamsConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FaceCustomParamsConfig")
     private String faceCustomParamsConfig;
 
-    @Query
-    @NameInMap("Industry")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Industry")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String industry;
 
-    @Query
-    @NameInMap("IsDefault")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsDefault")
     private Boolean isDefault;
 
-    @Query
-    @NameInMap("KeywordConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeywordConfig")
     private String keywordConfig;
 
-    @Query
-    @NameInMap("KnowledgeConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KnowledgeConfig")
     private String knowledgeConfig;
 
-    @Query
-    @NameInMap("LabelType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LabelType")
     private String labelType;
 
-    @Query
-    @NameInMap("LabelVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LabelVersion")
     private String labelVersion;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LandmarkGroupIds")
+    private String landmarkGroupIds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ObjectGroupIds")
+    private String objectGroupIds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Scene")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scene")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scene;
 
-    @Query
-    @NameInMap("TemplateName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateName;
 
     private AddSmarttagTemplateRequest(Builder builder) {
@@ -87,6 +95,8 @@ public class AddSmarttagTemplateRequest extends Request {
         this.knowledgeConfig = builder.knowledgeConfig;
         this.labelType = builder.labelType;
         this.labelVersion = builder.labelVersion;
+        this.landmarkGroupIds = builder.landmarkGroupIds;
+        this.objectGroupIds = builder.objectGroupIds;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -172,6 +182,20 @@ public class AddSmarttagTemplateRequest extends Request {
     }
 
     /**
+     * @return landmarkGroupIds
+     */
+    public String getLandmarkGroupIds() {
+        return this.landmarkGroupIds;
+    }
+
+    /**
+     * @return objectGroupIds
+     */
+    public String getObjectGroupIds() {
+        return this.objectGroupIds;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -223,6 +247,8 @@ public class AddSmarttagTemplateRequest extends Request {
         private String knowledgeConfig; 
         private String labelType; 
         private String labelVersion; 
+        private String landmarkGroupIds; 
+        private String objectGroupIds; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
@@ -245,6 +271,8 @@ public class AddSmarttagTemplateRequest extends Request {
             this.knowledgeConfig = request.knowledgeConfig;
             this.labelType = request.labelType;
             this.labelVersion = request.labelVersion;
+            this.landmarkGroupIds = request.landmarkGroupIds;
+            this.objectGroupIds = request.objectGroupIds;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -254,7 +282,10 @@ public class AddSmarttagTemplateRequest extends Request {
         } 
 
         /**
-         * AnalyseTypes.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ocr</p>
          */
         public Builder analyseTypes(String analyseTypes) {
             this.putQueryParameter("AnalyseTypes", analyseTypes);
@@ -281,7 +312,10 @@ public class AddSmarttagTemplateRequest extends Request {
         }
 
         /**
-         * Industry.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>common</p>
          */
         public Builder industry(String industry) {
             this.putQueryParameter("Industry", industry);
@@ -335,6 +369,24 @@ public class AddSmarttagTemplateRequest extends Request {
         }
 
         /**
+         * LandmarkGroupIds.
+         */
+        public Builder landmarkGroupIds(String landmarkGroupIds) {
+            this.putQueryParameter("LandmarkGroupIds", landmarkGroupIds);
+            this.landmarkGroupIds = landmarkGroupIds;
+            return this;
+        }
+
+        /**
+         * ObjectGroupIds.
+         */
+        public Builder objectGroupIds(String objectGroupIds) {
+            this.putQueryParameter("ObjectGroupIds", objectGroupIds);
+            this.objectGroupIds = objectGroupIds;
+            return this;
+        }
+
+        /**
          * OwnerAccount.
          */
         public Builder ownerAccount(String ownerAccount) {
@@ -371,7 +423,10 @@ public class AddSmarttagTemplateRequest extends Request {
         }
 
         /**
-         * Scene.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>search</p>
          */
         public Builder scene(String scene) {
             this.putQueryParameter("Scene", scene);
@@ -380,7 +435,10 @@ public class AddSmarttagTemplateRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>template-example-****</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);

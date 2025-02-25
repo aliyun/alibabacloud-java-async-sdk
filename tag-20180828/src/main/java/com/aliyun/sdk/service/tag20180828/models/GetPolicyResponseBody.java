@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tag20180828.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>GetPolicyResponseBody</p>
  */
 public class GetPolicyResponseBody extends TeaModel {
-    @NameInMap("Policy")
+    @com.aliyun.core.annotation.NameInMap("Policy")
     private Policy policy;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetPolicyResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the tag policy.
+         * <p>The details of the tag policy.</p>
          */
         public Builder policy(Policy policy) {
             this.policy = policy;
@@ -58,7 +63,10 @@ public class GetPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1E7A4802-AB57-570A-9860-F15B60E1586B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,17 +79,23 @@ public class GetPolicyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPolicyResponseBody</p>
+     */
     public static class Policy extends TeaModel {
-        @NameInMap("PolicyContent")
+        @com.aliyun.core.annotation.NameInMap("PolicyContent")
         private String policyContent;
 
-        @NameInMap("PolicyDesc")
+        @com.aliyun.core.annotation.NameInMap("PolicyDesc")
         private String policyDesc;
 
-        @NameInMap("PolicyName")
+        @com.aliyun.core.annotation.NameInMap("PolicyName")
         private String policyName;
 
-        @NameInMap("UserType")
+        @com.aliyun.core.annotation.NameInMap("UserType")
         private String userType;
 
         private Policy(Builder builder) {
@@ -134,7 +148,10 @@ public class GetPolicyResponseBody extends TeaModel {
             private String userType; 
 
             /**
-             * The document of the tag policy.
+             * <p>The document of the tag policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;tags&quot;:{&quot;CostCenter&quot;:{&quot;tag_value&quot;:{&quot;@@assign&quot;:[&quot;Beijing&quot;,&quot;Shanghai&quot;]},&quot;tag_key&quot;:{&quot;@@assign&quot;:&quot;CostCenter&quot;}}}}</p>
              */
             public Builder policyContent(String policyContent) {
                 this.policyContent = policyContent;
@@ -142,7 +159,10 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the tag policy.
+             * <p>The description of the tag policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a tag policy example.</p>
              */
             public Builder policyDesc(String policyDesc) {
                 this.policyDesc = policyDesc;
@@ -150,7 +170,10 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the tag policy.
+             * <p>The name of the tag policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -158,13 +181,15 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The mode of the Tag Policy feature. Valid values:
-             * <p>
+             * <p>The mode of the Tag Policy feature. Valid values:</p>
+             * <ul>
+             * <li>USER: single-account mode</li>
+             * <li>RD: multi-account mode</li>
+             * </ul>
+             * <p>For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.</p>
              * 
-             * *   USER: single-account mode
-             * *   RD: multi-account mode
-             * 
-             * For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
+             * <strong>example:</strong>
+             * <p>USER</p>
              */
             public Builder userType(String userType) {
                 this.userType = userType;

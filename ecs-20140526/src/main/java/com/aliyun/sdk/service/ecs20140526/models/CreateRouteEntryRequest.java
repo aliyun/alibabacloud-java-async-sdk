@@ -1,61 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRouteEntryRequest} extends {@link RequestModel}
  *
  * <p>CreateRouteEntryRequest</p>
  */
 public class CreateRouteEntryRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DestinationCidrBlock")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String destinationCidrBlock;
 
-    @Query
-    @NameInMap("NextHopId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextHopId")
     private String nextHopId;
 
-    @Query
-    @NameInMap("NextHopList")
-    private java.util.List < NextHopList> nextHopList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextHopList")
+    private java.util.List<NextHopList> nextHopList;
 
-    @Query
-    @NameInMap("NextHopType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextHopType")
     private String nextHopType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RouteTableId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteTableId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String routeTableId;
 
     private CreateRouteEntryRequest(Builder builder) {
@@ -110,7 +115,7 @@ public class CreateRouteEntryRequest extends Request {
     /**
      * @return nextHopList
      */
-    public java.util.List < NextHopList> getNextHopList() {
+    public java.util.List<NextHopList> getNextHopList() {
         return this.nextHopList;
     }
 
@@ -167,7 +172,7 @@ public class CreateRouteEntryRequest extends Request {
         private String clientToken; 
         private String destinationCidrBlock; 
         private String nextHopId; 
-        private java.util.List < NextHopList> nextHopList; 
+        private java.util.List<NextHopList> nextHopList; 
         private String nextHopType; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -205,7 +210,7 @@ public class CreateRouteEntryRequest extends Request {
         }
 
         /**
-         * DestinationCidrBlock.
+         * <p>This parameter is required.</p>
          */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);
@@ -225,7 +230,7 @@ public class CreateRouteEntryRequest extends Request {
         /**
          * NextHopList.
          */
-        public Builder nextHopList(java.util.List < NextHopList> nextHopList) {
+        public Builder nextHopList(java.util.List<NextHopList> nextHopList) {
             this.putQueryParameter("NextHopList", nextHopList);
             this.nextHopList = nextHopList;
             return this;
@@ -286,7 +291,7 @@ public class CreateRouteEntryRequest extends Request {
         }
 
         /**
-         * RouteTableId.
+         * <p>This parameter is required.</p>
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);
@@ -301,11 +306,17 @@ public class CreateRouteEntryRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateRouteEntryRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRouteEntryRequest</p>
+     */
     public static class NextHopList extends TeaModel {
-        @NameInMap("NextHopId")
+        @com.aliyun.core.annotation.NameInMap("NextHopId")
         private String nextHopId;
 
-        @NameInMap("NextHopType")
+        @com.aliyun.core.annotation.NameInMap("NextHopType")
         private String nextHopType;
 
         private NextHopList(Builder builder) {

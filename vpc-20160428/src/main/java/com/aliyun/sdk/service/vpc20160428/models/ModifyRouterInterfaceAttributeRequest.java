@@ -1,81 +1,86 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyRouterInterfaceAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyRouterInterfaceAttributeRequest</p>
  */
 public class ModifyRouterInterfaceAttributeRequest extends Request {
-    @Query
-    @NameInMap("DeleteHealthCheckIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeleteHealthCheckIp")
     private Boolean deleteHealthCheckIp;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("HcRate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HcRate")
     private Integer hcRate;
 
-    @Query
-    @NameInMap("HcThreshold")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HcThreshold")
     private Integer hcThreshold;
 
-    @Query
-    @NameInMap("HealthCheckSourceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckSourceIp")
     private String healthCheckSourceIp;
 
-    @Query
-    @NameInMap("HealthCheckTargetIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckTargetIp")
     private String healthCheckTargetIp;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OppositeInterfaceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OppositeInterfaceId")
     private String oppositeInterfaceId;
 
-    @Query
-    @NameInMap("OppositeInterfaceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OppositeInterfaceOwnerId")
     private Long oppositeInterfaceOwnerId;
 
-    @Query
-    @NameInMap("OppositeRouterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OppositeRouterId")
     private String oppositeRouterId;
 
-    @Query
-    @NameInMap("OppositeRouterType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OppositeRouterType")
     private String oppositeRouterType;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RouterInterfaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouterInterfaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String routerInterfaceId;
 
     private ModifyRouterInterfaceAttributeRequest(Builder builder) {
@@ -266,11 +271,14 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
         } 
 
         /**
-         * Specifies whether to delete the health check IP addresses configured on the router interface. Valid values:
-         * <p>
+         * <p>Specifies whether to delete the health check IP addresses configured on the router interface. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false** (default)
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder deleteHealthCheckIp(Boolean deleteHealthCheckIp) {
             this.putQueryParameter("DeleteHealthCheckIp", deleteHealthCheckIp);
@@ -279,10 +287,11 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * The description of the router interface.
-         * <p>
+         * <p>The description of the router interface.</p>
+         * <p>The value must be 2 to 256 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The value must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>The description of the router interface.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -291,10 +300,11 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * The rate of health checks. Unit: milliseconds. The recommended value is **2000**. This value specifies the interval at which probe packets are sent during a health check.
-         * <p>
+         * <p>The rate of health checks. Unit: milliseconds. The recommended value is <strong>2000</strong>. This value specifies the interval at which probe packets are sent during a health check.</p>
+         * <p>In this example, <strong>HcThreshold</strong> is set to <strong>8</strong> and <strong>HcRate</strong> is set to <strong>2000</strong>. In this example, probe packets are sent from <strong>HealthCheckSourceIp</strong> (source address) to <strong>HealthCheckTargetIp</strong> (destination address) every 2,000 seconds. If no response is returned for eight consecutive times, the health check fails.</p>
          * 
-         * In this example, **HcThreshold** is set to **8** and **HcRate** is set to **2000**. In this example, probe packets are sent from **HealthCheckSourceIp** (source address) to **HealthCheckTargetIp** (destination address) every 2,000 seconds. If no response is returned for eight consecutive times, the health check fails.
+         * <strong>example:</strong>
+         * <p>2000</p>
          */
         public Builder hcRate(Integer hcRate) {
             this.putQueryParameter("HcRate", hcRate);
@@ -303,7 +313,10 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * The healthy threshold. Unit: packets. We recommend that you set the value to **8**. This value specifies the number of probe packets that are sent during a health check.
+         * <p>The healthy threshold. Unit: packets. We recommend that you set the value to <strong>8</strong>. This value specifies the number of probe packets that are sent during a health check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder hcThreshold(Integer hcThreshold) {
             this.putQueryParameter("HcThreshold", hcThreshold);
@@ -312,10 +325,13 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * The source IP address that is used to perform health checks. The source IP address must be an idle IP address of the local virtual private cloud (VPC).
-         * <p>
+         * <p>The source IP address that is used to perform health checks. The source IP address must be an idle IP address of the local virtual private cloud (VPC).</p>
+         * <blockquote>
+         * <p> You can set this parameter when an Express Connect circuit is used.</p>
+         * </blockquote>
          * 
-         * >  You can set this parameter when an Express Connect circuit is used.
+         * <strong>example:</strong>
+         * <p>116.62.XX.XX</p>
          */
         public Builder healthCheckSourceIp(String healthCheckSourceIp) {
             this.putQueryParameter("HealthCheckSourceIp", healthCheckSourceIp);
@@ -324,10 +340,13 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * The destination IP address that is used to perform health checks.
-         * <p>
+         * <p>The destination IP address that is used to perform health checks.</p>
+         * <blockquote>
+         * <p> This parameter is required when <strong>HealthCheckSourceIp</strong> is specified.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required when **HealthCheckSourceIp** is specified.
+         * <strong>example:</strong>
+         * <p>116.62.XX.XX</p>
          */
         public Builder healthCheckTargetIp(String healthCheckTargetIp) {
             this.putQueryParameter("HealthCheckTargetIp", healthCheckTargetIp);
@@ -336,10 +355,11 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * The name of the router interface.
-         * <p>
+         * <p>The name of the router interface.</p>
+         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+         * <strong>example:</strong>
+         * <p>TEST</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -348,7 +368,10 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the peer router interface.
+         * <p>The ID of the peer router interface.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ri-2zeo3xzyf38r4urz****</p>
          */
         public Builder oppositeInterfaceId(String oppositeInterfaceId) {
             this.putQueryParameter("OppositeInterfaceId", oppositeInterfaceId);
@@ -357,7 +380,10 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the peer router interface belongs.
+         * <p>The ID of the Alibaba Cloud account to which the peer router interface belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28768383240243****</p>
          */
         public Builder oppositeInterfaceOwnerId(Long oppositeInterfaceOwnerId) {
             this.putQueryParameter("OppositeInterfaceOwnerId", oppositeInterfaceOwnerId);
@@ -366,7 +392,10 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the peer router.
+         * <p>The ID of the peer router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vrt-bp1jcg5cmxjbl9xgc****</p>
          */
         public Builder oppositeRouterId(String oppositeRouterId) {
             this.putQueryParameter("OppositeRouterId", oppositeRouterId);
@@ -375,11 +404,14 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * The type of router to which the peer router interface belongs. Valid values:
-         * <p>
+         * <p>The type of router to which the peer router interface belongs. Valid values:</p>
+         * <ul>
+         * <li><strong>VRouter</strong></li>
+         * <li><strong>VBR</strong> (default)</li>
+         * </ul>
          * 
-         * *   **VRouter**
-         * *   **VBR** (default)
+         * <strong>example:</strong>
+         * <p>VBR</p>
          */
         public Builder oppositeRouterType(String oppositeRouterType) {
             this.putQueryParameter("OppositeRouterType", oppositeRouterType);
@@ -397,10 +429,12 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the router interface.
-         * <p>
+         * <p>The region ID of the router interface.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -427,7 +461,11 @@ public class ModifyRouterInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the router interface.
+         * <p>The ID of the router interface.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ri-2zeo3xzyf38r4urz****</p>
          */
         public Builder routerInterfaceId(String routerInterfaceId) {
             this.putQueryParameter("RouterInterfaceId", routerInterfaceId);

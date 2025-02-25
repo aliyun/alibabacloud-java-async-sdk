@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUniRecoverableListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUniRecoverableListResponseBody</p>
  */
 public class DescribeUniRecoverableListResponseBody extends TeaModel {
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("Database")
+    @com.aliyun.core.annotation.NameInMap("Database")
     private String database;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RecoverableInfoList")
-    private java.util.List < RecoverableInfoList> recoverableInfoList;
+    @com.aliyun.core.annotation.NameInMap("RecoverableInfoList")
+    private java.util.List<RecoverableInfoList> recoverableInfoList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeUniRecoverableListResponseBody(Builder builder) {
@@ -82,7 +87,7 @@ public class DescribeUniRecoverableListResponseBody extends TeaModel {
     /**
      * @return recoverableInfoList
      */
-    public java.util.List < RecoverableInfoList> getRecoverableInfoList() {
+    public java.util.List<RecoverableInfoList> getRecoverableInfoList() {
         return this.recoverableInfoList;
     }
 
@@ -105,12 +110,15 @@ public class DescribeUniRecoverableListResponseBody extends TeaModel {
         private Integer currentPage; 
         private String database; 
         private Integer pageSize; 
-        private java.util.List < RecoverableInfoList> recoverableInfoList; 
+        private java.util.List<RecoverableInfoList> recoverableInfoList; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * The number of entries returned on the current page.
+         * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -118,7 +126,10 @@ public class DescribeUniRecoverableListResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -126,7 +137,10 @@ public class DescribeUniRecoverableListResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>msdb</p>
          */
         public Builder database(String database) {
             this.database = database;
@@ -134,7 +148,10 @@ public class DescribeUniRecoverableListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -142,15 +159,18 @@ public class DescribeUniRecoverableListResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the backup snapshots.
+         * <p>An array that consists of the backup snapshots.</p>
          */
-        public Builder recoverableInfoList(java.util.List < RecoverableInfoList> recoverableInfoList) {
+        public Builder recoverableInfoList(java.util.List<RecoverableInfoList> recoverableInfoList) {
             this.recoverableInfoList = recoverableInfoList;
             return this;
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F35F45B0-5D6B-4238-BE02-A62D0760****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +178,10 @@ public class DescribeUniRecoverableListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -171,20 +194,26 @@ public class DescribeUniRecoverableListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUniRecoverableListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUniRecoverableListResponseBody</p>
+     */
     public static class RecoverableInfoList extends TeaModel {
-        @NameInMap("FirstTime")
+        @com.aliyun.core.annotation.NameInMap("FirstTime")
         private Long firstTime;
 
-        @NameInMap("LastTime")
+        @com.aliyun.core.annotation.NameInMap("LastTime")
         private Long lastTime;
 
-        @NameInMap("ResetScn")
+        @com.aliyun.core.annotation.NameInMap("ResetScn")
         private String resetScn;
 
-        @NameInMap("ResetTime")
+        @com.aliyun.core.annotation.NameInMap("ResetTime")
         private Long resetTime;
 
-        @NameInMap("RestoreInfo")
+        @com.aliyun.core.annotation.NameInMap("RestoreInfo")
         private String restoreInfo;
 
         private RecoverableInfoList(Builder builder) {
@@ -246,7 +275,10 @@ public class DescribeUniRecoverableListResponseBody extends TeaModel {
             private String restoreInfo; 
 
             /**
-             * The timestamp of the first backup. Unit: milliseconds.
+             * <p>The timestamp of the first backup. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1671468180000</p>
              */
             public Builder firstTime(Long firstTime) {
                 this.firstTime = firstTime;
@@ -254,7 +286,10 @@ public class DescribeUniRecoverableListResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the last backup. Unit: milliseconds.
+             * <p>The timestamp of the last backup. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1671468180000</p>
              */
             public Builder lastTime(Long lastTime) {
                 this.lastTime = lastTime;
@@ -262,7 +297,10 @@ public class DescribeUniRecoverableListResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the point in time for restoration in the backup version that is used. The database is an Oracle database.
+             * <p>The identifier of the point in time for restoration in the backup version that is used. The database is an Oracle database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4529940.0</p>
              */
             public Builder resetScn(String resetScn) {
                 this.resetScn = resetScn;
@@ -270,7 +308,10 @@ public class DescribeUniRecoverableListResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time for restoration in the backup version that is used. The database is an Oracle database.
+             * <p>The point in time for restoration in the backup version that is used. The database is an Oracle database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-30 08:04:36</p>
              */
             public Builder resetTime(Long resetTime) {
                 this.resetTime = resetTime;
@@ -278,11 +319,20 @@ public class DescribeUniRecoverableListResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the database. This parameter is available when the database is a Microsoft SQL Server (MSSQL) database. The value is a JSON string. Valid values:
-             * <p>
+             * <p>The information about the database. This parameter is available when the database is a Microsoft SQL Server (MSSQL) database. The value is a JSON string. Valid values:</p>
+             * <ul>
+             * <li><strong>name</strong>: the name of the database</li>
+             * <li><strong>files</strong>: the path to the database files</li>
+             * </ul>
              * 
-             * *   **name**: the name of the database
-             * *   **files**: the path to the database files
+             * <strong>example:</strong>
+             * <p>{
+             *       &quot;files&quot;: {
+             *             &quot;qtc&quot;: &quot;F:\database\qtc.mdf&quot;,
+             *             &quot;qtc_log&quot;: &quot;F:\database\qtc_0.ldf&quot;
+             *       },
+             *       &quot;name&quot;: &quot;qtc&quot;
+             * }</p>
              */
             public Builder restoreInfo(String restoreInfo) {
                 this.restoreInfo = restoreInfo;

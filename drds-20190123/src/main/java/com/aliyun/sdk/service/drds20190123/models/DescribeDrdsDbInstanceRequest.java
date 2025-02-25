@@ -77,15 +77,15 @@ public class DescribeDrdsDbInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDrdsDbInstanceRequest response) {
-            super(response);
-            this.dbInstanceId = response.dbInstanceId;
-            this.dbName = response.dbName;
-            this.drdsInstanceId = response.drdsInstanceId;
+        private Builder(DescribeDrdsDbInstanceRequest request) {
+            super(request);
+            this.dbInstanceId = request.dbInstanceId;
+            this.dbName = request.dbName;
+            this.drdsInstanceId = request.drdsInstanceId;
         } 
 
         /**
-         * DbInstanceId.
+         * The ID of the custom ApsaraDB RDS for MySQL instance that you want to query.
          */
         public Builder dbInstanceId(String dbInstanceId) {
             this.putQueryParameter("DbInstanceId", dbInstanceId);
@@ -94,7 +94,7 @@ public class DescribeDrdsDbInstanceRequest extends Request {
         }
 
         /**
-         * DbName.
+         * The name of the database.
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -103,7 +103,7 @@ public class DescribeDrdsDbInstanceRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The name of the PolarDB-X 1.0 instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);

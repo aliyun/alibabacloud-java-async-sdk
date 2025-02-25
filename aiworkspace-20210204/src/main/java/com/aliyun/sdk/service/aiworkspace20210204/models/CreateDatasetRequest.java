@@ -1,76 +1,112 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDatasetRequest} extends {@link RequestModel}
  *
  * <p>CreateDatasetRequest</p>
  */
 public class CreateDatasetRequest extends Request {
-    @Body
-    @NameInMap("Accessibility")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Accessibility")
     private String accessibility;
 
-    @Body
-    @NameInMap("DataSourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DataCount")
+    @com.aliyun.core.annotation.Validation(maximum = 999999999999D, minimum = 1)
+    private Long dataCount;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DataSize")
+    @com.aliyun.core.annotation.Validation(maximum = 999999999999D, minimum = 1)
+    private Long dataSize;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DataSourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dataSourceType;
 
-    @Body
-    @NameInMap("DataType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DataType")
     private String dataType;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("Labels")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Labels")
     private java.util.List < Label > labels;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("Options")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Options")
     private String options;
 
-    @Body
-    @NameInMap("Property")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Property")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String property;
 
-    @Body
-    @NameInMap("ProviderType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Provider")
+    private String provider;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProviderType")
     private String providerType;
 
-    @Body
-    @NameInMap("SourceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceDatasetId")
+    private String sourceDatasetId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceDatasetVersion")
+    private String sourceDatasetVersion;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceId")
     private String sourceId;
 
-    @Body
-    @NameInMap("SourceType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceType")
     private String sourceType;
 
-    @Body
-    @NameInMap("Uri")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Uri")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String uri;
 
-    @Body
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    private String userId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VersionDescription")
+    private String versionDescription;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VersionLabels")
+    private java.util.List < Label > versionLabels;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
     private CreateDatasetRequest(Builder builder) {
         super(builder);
         this.accessibility = builder.accessibility;
+        this.dataCount = builder.dataCount;
+        this.dataSize = builder.dataSize;
         this.dataSourceType = builder.dataSourceType;
         this.dataType = builder.dataType;
         this.description = builder.description;
@@ -78,10 +114,16 @@ public class CreateDatasetRequest extends Request {
         this.name = builder.name;
         this.options = builder.options;
         this.property = builder.property;
+        this.provider = builder.provider;
         this.providerType = builder.providerType;
+        this.sourceDatasetId = builder.sourceDatasetId;
+        this.sourceDatasetVersion = builder.sourceDatasetVersion;
         this.sourceId = builder.sourceId;
         this.sourceType = builder.sourceType;
         this.uri = builder.uri;
+        this.userId = builder.userId;
+        this.versionDescription = builder.versionDescription;
+        this.versionLabels = builder.versionLabels;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -103,6 +145,20 @@ public class CreateDatasetRequest extends Request {
      */
     public String getAccessibility() {
         return this.accessibility;
+    }
+
+    /**
+     * @return dataCount
+     */
+    public Long getDataCount() {
+        return this.dataCount;
+    }
+
+    /**
+     * @return dataSize
+     */
+    public Long getDataSize() {
+        return this.dataSize;
     }
 
     /**
@@ -155,10 +211,31 @@ public class CreateDatasetRequest extends Request {
     }
 
     /**
+     * @return provider
+     */
+    public String getProvider() {
+        return this.provider;
+    }
+
+    /**
      * @return providerType
      */
     public String getProviderType() {
         return this.providerType;
+    }
+
+    /**
+     * @return sourceDatasetId
+     */
+    public String getSourceDatasetId() {
+        return this.sourceDatasetId;
+    }
+
+    /**
+     * @return sourceDatasetVersion
+     */
+    public String getSourceDatasetVersion() {
+        return this.sourceDatasetVersion;
     }
 
     /**
@@ -183,6 +260,27 @@ public class CreateDatasetRequest extends Request {
     }
 
     /**
+     * @return userId
+     */
+    public String getUserId() {
+        return this.userId;
+    }
+
+    /**
+     * @return versionDescription
+     */
+    public String getVersionDescription() {
+        return this.versionDescription;
+    }
+
+    /**
+     * @return versionLabels
+     */
+    public java.util.List < Label > getVersionLabels() {
+        return this.versionLabels;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -191,6 +289,8 @@ public class CreateDatasetRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateDatasetRequest, Builder> {
         private String accessibility; 
+        private Long dataCount; 
+        private Long dataSize; 
         private String dataSourceType; 
         private String dataType; 
         private String description; 
@@ -198,10 +298,16 @@ public class CreateDatasetRequest extends Request {
         private String name; 
         private String options; 
         private String property; 
+        private String provider; 
         private String providerType; 
+        private String sourceDatasetId; 
+        private String sourceDatasetVersion; 
         private String sourceId; 
         private String sourceType; 
         private String uri; 
+        private String userId; 
+        private String versionDescription; 
+        private java.util.List < Label > versionLabels; 
         private String workspaceId; 
 
         private Builder() {
@@ -211,6 +317,8 @@ public class CreateDatasetRequest extends Request {
         private Builder(CreateDatasetRequest request) {
             super(request);
             this.accessibility = request.accessibility;
+            this.dataCount = request.dataCount;
+            this.dataSize = request.dataSize;
             this.dataSourceType = request.dataSourceType;
             this.dataType = request.dataType;
             this.description = request.description;
@@ -218,10 +326,16 @@ public class CreateDatasetRequest extends Request {
             this.name = request.name;
             this.options = request.options;
             this.property = request.property;
+            this.provider = request.provider;
             this.providerType = request.providerType;
+            this.sourceDatasetId = request.sourceDatasetId;
+            this.sourceDatasetVersion = request.sourceDatasetVersion;
             this.sourceId = request.sourceId;
             this.sourceType = request.sourceType;
             this.uri = request.uri;
+            this.userId = request.userId;
+            this.versionDescription = request.versionDescription;
+            this.versionLabels = request.versionLabels;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -235,7 +349,28 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * DataSourceType.
+         * DataCount.
+         */
+        public Builder dataCount(Long dataCount) {
+            this.putBodyParameter("DataCount", dataCount);
+            this.dataCount = dataCount;
+            return this;
+        }
+
+        /**
+         * DataSize.
+         */
+        public Builder dataSize(Long dataSize) {
+            this.putBodyParameter("DataSize", dataSize);
+            this.dataSize = dataSize;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NAS</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putBodyParameter("DataSourceType", dataSourceType);
@@ -271,7 +406,10 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myName</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -289,11 +427,23 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * Property.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DIRECTORY</p>
          */
         public Builder property(String property) {
             this.putBodyParameter("Property", property);
             this.property = property;
+            return this;
+        }
+
+        /**
+         * Provider.
+         */
+        public Builder provider(String provider) {
+            this.putBodyParameter("Provider", provider);
+            this.provider = provider;
             return this;
         }
 
@@ -303,6 +453,24 @@ public class CreateDatasetRequest extends Request {
         public Builder providerType(String providerType) {
             this.putBodyParameter("ProviderType", providerType);
             this.providerType = providerType;
+            return this;
+        }
+
+        /**
+         * SourceDatasetId.
+         */
+        public Builder sourceDatasetId(String sourceDatasetId) {
+            this.putBodyParameter("SourceDatasetId", sourceDatasetId);
+            this.sourceDatasetId = sourceDatasetId;
+            return this;
+        }
+
+        /**
+         * SourceDatasetVersion.
+         */
+        public Builder sourceDatasetVersion(String sourceDatasetVersion) {
+            this.putBodyParameter("SourceDatasetVersion", sourceDatasetVersion);
+            this.sourceDatasetVersion = sourceDatasetVersion;
             return this;
         }
 
@@ -325,11 +493,41 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * Uri.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nas://09f****f2.cn-hangzhou/</p>
          */
         public Builder uri(String uri) {
             this.putBodyParameter("Uri", uri);
             this.uri = uri;
+            return this;
+        }
+
+        /**
+         * UserId.
+         */
+        public Builder userId(String userId) {
+            this.putBodyParameter("UserId", userId);
+            this.userId = userId;
+            return this;
+        }
+
+        /**
+         * VersionDescription.
+         */
+        public Builder versionDescription(String versionDescription) {
+            this.putBodyParameter("VersionDescription", versionDescription);
+            this.versionDescription = versionDescription;
+            return this;
+        }
+
+        /**
+         * VersionLabels.
+         */
+        public Builder versionLabels(java.util.List < Label > versionLabels) {
+            this.putBodyParameter("VersionLabels", versionLabels);
+            this.versionLabels = versionLabels;
             return this;
         }
 

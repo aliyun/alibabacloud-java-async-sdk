@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDomainRemarkRequest} extends {@link RequestModel}
  *
  * <p>UpdateDomainRemarkRequest</p>
  */
 public class UpdateDomainRemarkRequest extends Request {
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Remark")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
     private UpdateDomainRemarkRequest(Builder builder) {
@@ -83,7 +88,11 @@ public class UpdateDomainRemarkRequest extends Request {
         } 
 
         /**
-         * The domain name in Alibaba Cloud DNS.
+         * <p>The domain name that already exists in Alibaba Cloud DNS.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mydomain.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -92,7 +101,15 @@ public class UpdateDomainRemarkRequest extends Request {
         }
 
         /**
-         * The language type.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: en</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -101,7 +118,8 @@ public class UpdateDomainRemarkRequest extends Request {
         }
 
         /**
-         * The description of your domain name.
+         * <p>The description of your domain name.</p>
+         * <p>It can be up to 50 characters in length and can contain digits, letters, and the following special characters: _ - , .</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

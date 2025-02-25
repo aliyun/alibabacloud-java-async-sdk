@@ -1,62 +1,71 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRealtimeAgentStatesRequest} extends {@link RequestModel}
  *
  * <p>ListRealtimeAgentStatesRequest</p>
  */
 public class ListRealtimeAgentStatesRequest extends Request {
-    @Body
-    @NameInMap("AgentIdList")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AgentIdList")
     private String agentIdList;
 
-    @Query
-    @NameInMap("AgentName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentName")
     private String agentName;
 
-    @Query
-    @NameInMap("CallTypeList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallTypeList")
     private String callTypeList;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("OutboundScenario")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaType")
+    private String mediaType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutboundScenario")
     private Boolean outboundScenario;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Query")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Query")
     private String query;
 
-    @Query
-    @NameInMap("SkillGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkillGroupId")
     private String skillGroupId;
 
-    @Body
-    @NameInMap("StateList")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StateList")
     private String stateList;
 
-    @Query
-    @NameInMap("WorkModeList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkModeList")
     private String workModeList;
 
     private ListRealtimeAgentStatesRequest(Builder builder) {
@@ -65,6 +74,7 @@ public class ListRealtimeAgentStatesRequest extends Request {
         this.agentName = builder.agentName;
         this.callTypeList = builder.callTypeList;
         this.instanceId = builder.instanceId;
+        this.mediaType = builder.mediaType;
         this.outboundScenario = builder.outboundScenario;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -113,6 +123,13 @@ public class ListRealtimeAgentStatesRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return mediaType
+     */
+    public String getMediaType() {
+        return this.mediaType;
     }
 
     /**
@@ -169,6 +186,7 @@ public class ListRealtimeAgentStatesRequest extends Request {
         private String agentName; 
         private String callTypeList; 
         private String instanceId; 
+        private String mediaType; 
         private Boolean outboundScenario; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -187,6 +205,7 @@ public class ListRealtimeAgentStatesRequest extends Request {
             this.agentName = request.agentName;
             this.callTypeList = request.callTypeList;
             this.instanceId = request.instanceId;
+            this.mediaType = request.mediaType;
             this.outboundScenario = request.outboundScenario;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -224,11 +243,23 @@ public class ListRealtimeAgentStatesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * MediaType.
+         */
+        public Builder mediaType(String mediaType) {
+            this.putQueryParameter("MediaType", mediaType);
+            this.mediaType = mediaType;
             return this;
         }
 
@@ -242,7 +273,10 @@ public class ListRealtimeAgentStatesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -251,7 +285,10 @@ public class ListRealtimeAgentStatesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

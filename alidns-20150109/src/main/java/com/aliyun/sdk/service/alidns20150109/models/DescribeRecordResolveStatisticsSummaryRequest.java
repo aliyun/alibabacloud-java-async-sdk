@@ -1,61 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRecordResolveStatisticsSummaryRequest} extends {@link RequestModel}
  *
  * <p>DescribeRecordResolveStatisticsSummaryRequest</p>
  */
 public class DescribeRecordResolveStatisticsSummaryRequest extends Request {
-    @Query
-    @NameInMap("Direction")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Direction")
     private String direction;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("DomainType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainType")
     private String domainType;
 
-    @Query
-    @NameInMap("EndDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndDate")
     private String endDate;
 
-    @Query
-    @NameInMap("Keyword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SearchMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchMode")
     private String searchMode;
 
-    @Query
-    @NameInMap("StartDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startDate;
 
-    @Query
-    @NameInMap("Threshold")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Threshold")
     private Long threshold;
 
     private DescribeRecordResolveStatisticsSummaryRequest(Builder builder) {
@@ -196,7 +201,14 @@ public class DescribeRecordResolveStatisticsSummaryRequest extends Request {
         } 
 
         /**
-         * The order in which you want to sort the query results. Valid values: DESC and ASC. DESC is the default value and indicates that the query results are sorted in descending order. ASC indicates that the query results are sorted in ascending order.
+         * <p>The order in which the returned entries are sorted. Valid values:</p>
+         * <ul>
+         * <li>DESC (default): descending order</li>
+         * <li>ASC: ascending order</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -205,7 +217,11 @@ public class DescribeRecordResolveStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The domain name.
+         * <p>The domain name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -214,10 +230,14 @@ public class DescribeRecordResolveStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The type of the domain name. The parameter value is not case-sensitive. Valid values:
-         * <p>
+         * <p>The type of the domain name. The parameter value is not case-sensitive. Valid values:</p>
+         * <ul>
+         * <li>PUBLIC (default): hosted public domain name</li>
+         * <li>CACHE: cache-accelerated domain name</li>
+         * </ul>
          * 
-         * PUBLIC and CACHE. PUBLIC is the default value and indicates an authoritative domain name. CACHE indicates a cache-accelerated domain name.
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
          */
         public Builder domainType(String domainType) {
             this.putQueryParameter("DomainType", domainType);
@@ -226,7 +246,10 @@ public class DescribeRecordResolveStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The end time in the yyyy-MM-dd format, for example, 2023-03-13.
+         * <p>The end date of the time range to be queried. Specify the time in the yyyy-MM-dd format, such as 2023-03-13.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-29</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -235,7 +258,10 @@ public class DescribeRecordResolveStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The keyword. The Keyword parameter is used together with the SearchMode parameter.
+         * <p>The keyword. Keyword is used together with SearchMode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -244,7 +270,10 @@ public class DescribeRecordResolveStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The language used. Valid values: zh, en, and ja.
+         * <p>The language. Valid values: zh, en, and ja.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -253,7 +282,10 @@ public class DescribeRecordResolveStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -262,7 +294,10 @@ public class DescribeRecordResolveStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 1 to 1000.
+         * <p>The number of entries to return on each page. Valid values: 1 to 1000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -271,10 +306,14 @@ public class DescribeRecordResolveStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The search mode of the keyword. Valid values:
-         * <p>
+         * <p>The search mode of the keyword. Valid values:</p>
+         * <ul>
+         * <li>LIKE (default): fuzzy search</li>
+         * <li>EXACT: exact search</li>
+         * </ul>
          * 
-         * LIKE (default): fuzzy search. EXACT: exact match.
+         * <strong>example:</strong>
+         * <p>LIKE</p>
          */
         public Builder searchMode(String searchMode) {
             this.putQueryParameter("SearchMode", searchMode);
@@ -283,7 +322,11 @@ public class DescribeRecordResolveStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The start time in the yyyy-MM-dd format, for example, 2023-03-01.
+         * <p>The start date of the time range to be queried. Specify the time in the yyyy-MM-dd format, such as 2023-03-01.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-29</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -292,16 +335,14 @@ public class DescribeRecordResolveStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The threshold for the number of resolution requests. You can query the subdomain names at the specified quantity level of resolution requests and query the number of resolution requests for each subdomain name. For example, if you set this parameter to 100, you can obtain data about the subdomain names with less than 100 resolution requests.
-         * <p>
+         * <p>The threshold for the number of Domain Name System (DNS) requests. You can query the subdomain names at the specified quantity level of DNS requests and query the number of DNS requests for each subdomain name.</p>
+         * <p>If you do not specify this parameter, the data about the subdomain names that have DNS requests is obtained.</p>
+         * <p>If you set this parameter to a value less than 0, the data about all subdomain names is obtained.</p>
+         * <p>If you set this parameter to 0, the data about the subdomain names that do not have DNS requests is obtained.</p>
+         * <p>If you set this parameter to a value greater than 0, the data about the subdomain names whose number of DNS requests is less than or equal to the value of this parameter is obtained.</p>
          * 
-         * If you do not specify this parameter, the data about the subdomain names that have resolution requests is obtained.
-         * 
-         * If you set this parameter to a value less than 0, the data about all subdomain names is obtained.
-         * 
-         * If you set this parameter to 0, the data about the subdomain names that do not have resolution requests is obtained.
-         * 
-         * If you set this parameter to a value greater than 0, the data about the subdomain names whose number of resolution requests is less than or equal to the value of this parameter is obtained.
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder threshold(Long threshold) {
             this.putQueryParameter("Threshold", threshold);

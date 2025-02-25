@@ -1,18 +1,18 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveUserFromGroupResponseBody} extends {@link TeaModel}
  *
  * <p>RemoveUserFromGroupResponseBody</p>
  */
 public class RemoveUserFromGroupResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private RemoveUserFromGroupResponseBody(Builder builder) {
@@ -38,7 +38,10 @@ public class RemoveUserFromGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F723DE01-6276-5DC4-9B1F-9CBE3E1748B2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -50,7 +50,10 @@ public class GetResourceTagsResponseBody extends TeaModel {
         private java.util.Map < String, String > tags; 
 
         /**
-         * 147258
+         * The Alibaba Cloud Resource Name (ARN) of the resource.
+         * <p>
+         * 
+         * >  You can use the value of this parameter to query information about the resource, such as the account, service, and region of the resource.
          */
         public Builder resourceArn(String resourceArn) {
             this.resourceArn = resourceArn;
@@ -58,7 +61,7 @@ public class GetResourceTagsResponseBody extends TeaModel {
         }
 
         /**
-         * Xiliu
+         * The tag dictionary.
          */
         public Builder tags(java.util.Map < String, String > tags) {
             this.tags = tags;

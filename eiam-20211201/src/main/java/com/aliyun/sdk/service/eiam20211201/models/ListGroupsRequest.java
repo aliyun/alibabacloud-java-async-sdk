@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGroupsRequest} extends {@link RequestModel}
  *
  * <p>ListGroupsRequest</p>
  */
 public class ListGroupsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("GroupExternalId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupExternalId")
     private String groupExternalId;
 
-    @Query
-    @NameInMap("GroupIds")
-    private java.util.List < String > groupIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupIds")
+    private java.util.List<String> groupIds;
 
-    @Query
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
-    @Query
-    @NameInMap("GroupNameStartsWith")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupNameStartsWith")
     private String groupNameStartsWith;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String instanceId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
     private ListGroupsRequest(Builder builder) {
@@ -87,7 +92,7 @@ public class ListGroupsRequest extends Request {
     /**
      * @return groupIds
      */
-    public java.util.List < String > getGroupIds() {
+    public java.util.List<String> getGroupIds() {
         return this.groupIds;
     }
 
@@ -129,7 +134,7 @@ public class ListGroupsRequest extends Request {
     public static final class Builder extends Request.Builder<ListGroupsRequest, Builder> {
         private String regionId; 
         private String groupExternalId; 
-        private java.util.List < String > groupIds; 
+        private java.util.List<String> groupIds; 
         private String groupName; 
         private String groupNameStartsWith; 
         private String instanceId; 
@@ -162,7 +167,10 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * The external ID of the group.
+         * <p>The external ID of the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group_external_id</p>
          */
         public Builder groupExternalId(String groupExternalId) {
             this.putQueryParameter("GroupExternalId", groupExternalId);
@@ -171,16 +179,19 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * The group IDs.
+         * <p>The group IDs.</p>
          */
-        public Builder groupIds(java.util.List < String > groupIds) {
+        public Builder groupIds(java.util.List<String> groupIds) {
             this.putQueryParameter("GroupIds", groupIds);
             this.groupIds = groupIds;
             return this;
         }
 
         /**
-         * The name of the group. If you specify this parameter, the query is based on an exact match.
+         * <p>The name of the group. If you specify this parameter, the query is based on an exact match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name_test</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -189,7 +200,10 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * The prefix of the group name. If you specify this parameter, the query follows the leftmost matching principle.
+         * <p>The prefix of the group name. If you specify this parameter, the query follows the leftmost matching principle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder groupNameStartsWith(String groupNameStartsWith) {
             this.putQueryParameter("GroupNameStartsWith", groupNameStartsWith);
@@ -198,7 +212,11 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -207,7 +225,10 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -216,7 +237,10 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

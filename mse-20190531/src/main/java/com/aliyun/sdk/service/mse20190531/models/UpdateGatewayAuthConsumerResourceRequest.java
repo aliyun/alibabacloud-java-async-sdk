@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGatewayAuthConsumerResourceRequest} extends {@link RequestModel}
  *
  * <p>UpdateGatewayAuthConsumerResourceRequest</p>
  */
 public class UpdateGatewayAuthConsumerResourceRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("ConsumerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConsumerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long consumerId;
 
-    @Query
-    @NameInMap("GatewayUniqueId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String gatewayUniqueId;
 
-    @Query
-    @NameInMap("ResourceList")
-    private java.util.List < ResourceList> resourceList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceList")
+    private java.util.List<ResourceList> resourceList;
 
     private UpdateGatewayAuthConsumerResourceRequest(Builder builder) {
         super(builder);
@@ -75,7 +80,7 @@ public class UpdateGatewayAuthConsumerResourceRequest extends Request {
     /**
      * @return resourceList
      */
-    public java.util.List < ResourceList> getResourceList() {
+    public java.util.List<ResourceList> getResourceList() {
         return this.resourceList;
     }
 
@@ -83,7 +88,7 @@ public class UpdateGatewayAuthConsumerResourceRequest extends Request {
         private String acceptLanguage; 
         private Long consumerId; 
         private String gatewayUniqueId; 
-        private java.util.List < ResourceList> resourceList; 
+        private java.util.List<ResourceList> resourceList; 
 
         private Builder() {
             super();
@@ -98,11 +103,14 @@ public class UpdateGatewayAuthConsumerResourceRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -111,7 +119,11 @@ public class UpdateGatewayAuthConsumerResourceRequest extends Request {
         }
 
         /**
-         * The gateway authentication consumer ID.
+         * <p>The gateway authentication consumer ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder consumerId(Long consumerId) {
             this.putQueryParameter("ConsumerId", consumerId);
@@ -120,7 +132,11 @@ public class UpdateGatewayAuthConsumerResourceRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-3f97e2989c344f35ab3fd62b19f1****</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -129,9 +145,9 @@ public class UpdateGatewayAuthConsumerResourceRequest extends Request {
         }
 
         /**
-         * The gateway authentication consumer ID.
+         * <p>The gateway authentication consumer ID.</p>
          */
-        public Builder resourceList(java.util.List < ResourceList> resourceList) {
+        public Builder resourceList(java.util.List<ResourceList> resourceList) {
             String resourceListShrink = shrink(resourceList, "ResourceList", "json");
             this.putQueryParameter("ResourceList", resourceListShrink);
             this.resourceList = resourceList;
@@ -145,11 +161,17 @@ public class UpdateGatewayAuthConsumerResourceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateGatewayAuthConsumerResourceRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateGatewayAuthConsumerResourceRequest</p>
+     */
     public static class ResourceList extends TeaModel {
-        @NameInMap("RouteId")
+        @com.aliyun.core.annotation.NameInMap("RouteId")
         private Long routeId;
 
-        @NameInMap("RouteName")
+        @com.aliyun.core.annotation.NameInMap("RouteName")
         private String routeName;
 
         private ResourceList(Builder builder) {
@@ -184,7 +206,10 @@ public class UpdateGatewayAuthConsumerResourceRequest extends Request {
             private String routeName; 
 
             /**
-             * The route ID.
+             * <p>The route ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7816</p>
              */
             public Builder routeId(Long routeId) {
                 this.routeId = routeId;
@@ -192,7 +217,10 @@ public class UpdateGatewayAuthConsumerResourceRequest extends Request {
             }
 
             /**
-             * The name of the route.
+             * <p>The name of the route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>helo</p>
              */
             public Builder routeName(String routeName) {
                 this.routeName = routeName;

@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAgentIndexRealTimeRequest} extends {@link RequestModel}
  *
  * <p>GetAgentIndexRealTimeRequest</p>
  */
 public class GetAgentIndexRealTimeRequest extends Request {
-    @Query
-    @NameInMap("CurrentPage")
-    @Validation(maximum = 1000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 1)
     private Integer currentPage;
 
-    @Query
-    @NameInMap("DepIds")
-    private java.util.List < Long > depIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DepIds")
+    private java.util.List<Long> depIds;
 
-    @Query
-    @NameInMap("GroupIds")
-    private java.util.List < Long > groupIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupIds")
+    private java.util.List<Long> groupIds;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 200, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 200, minimum = 1)
     private Integer pageSize;
 
     private GetAgentIndexRealTimeRequest(Builder builder) {
@@ -67,14 +72,14 @@ public class GetAgentIndexRealTimeRequest extends Request {
     /**
      * @return depIds
      */
-    public java.util.List < Long > getDepIds() {
+    public java.util.List<Long> getDepIds() {
         return this.depIds;
     }
 
     /**
      * @return groupIds
      */
-    public java.util.List < Long > getGroupIds() {
+    public java.util.List<Long> getGroupIds() {
         return this.groupIds;
     }
 
@@ -94,8 +99,8 @@ public class GetAgentIndexRealTimeRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetAgentIndexRealTimeRequest, Builder> {
         private Integer currentPage; 
-        private java.util.List < Long > depIds; 
-        private java.util.List < Long > groupIds; 
+        private java.util.List<Long> depIds; 
+        private java.util.List<Long> groupIds; 
         private String instanceId; 
         private Integer pageSize; 
 
@@ -124,7 +129,7 @@ public class GetAgentIndexRealTimeRequest extends Request {
         /**
          * DepIds.
          */
-        public Builder depIds(java.util.List < Long > depIds) {
+        public Builder depIds(java.util.List<Long> depIds) {
             this.putQueryParameter("DepIds", depIds);
             this.depIds = depIds;
             return this;
@@ -133,14 +138,17 @@ public class GetAgentIndexRealTimeRequest extends Request {
         /**
          * GroupIds.
          */
-        public Builder groupIds(java.util.List < Long > groupIds) {
+        public Builder groupIds(java.util.List<Long> groupIds) {
             this.putQueryParameter("GroupIds", groupIds);
             this.groupIds = groupIds;
             return this;
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre-cn-***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

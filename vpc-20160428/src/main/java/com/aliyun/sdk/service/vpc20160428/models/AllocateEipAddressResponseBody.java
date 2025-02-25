@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AllocateEipAddressResponseBody} extends {@link TeaModel}
  *
  * <p>AllocateEipAddressResponseBody</p>
  */
 public class AllocateEipAddressResponseBody extends TeaModel {
-    @NameInMap("AllocationId")
+    @com.aliyun.core.annotation.NameInMap("AllocationId")
     private String allocationId;
 
-    @NameInMap("EipAddress")
+    @com.aliyun.core.annotation.NameInMap("EipAddress")
     private String eipAddress;
 
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private Long orderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private AllocateEipAddressResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class AllocateEipAddressResponseBody extends TeaModel {
         private String resourceGroupId; 
 
         /**
-         * The EIP ID.
+         * <p>The EIP ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-25877c70gddh****</p>
          */
         public Builder allocationId(String allocationId) {
             this.allocationId = allocationId;
@@ -94,7 +102,10 @@ public class AllocateEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The EIP that is allocated. This parameter is returned only when **InstanceChargeType** is set to **PostPaid**.
+         * <p>The EIP that is allocated. This parameter is returned only when <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
          */
         public Builder eipAddress(String eipAddress) {
             this.eipAddress = eipAddress;
@@ -102,7 +113,10 @@ public class AllocateEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The order ID. This parameter is returned only when **InstanceChargeType** is set to **PrePaid**.
+         * <p>The order ID. This parameter is returned only when <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -110,7 +124,10 @@ public class AllocateEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4EC47282-1B74-4534-BD0E-403F3EE64CAF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +135,10 @@ public class AllocateEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group. This parameter is returned only when **InstanceChargeType** is set to **PostPaid**.
+         * <p>The ID of the resource group. This parameter is returned only when <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazfdgdg****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;

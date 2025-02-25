@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetWorkitemAttachmentCreatemetaResponseBody} extends {@link TeaModel}
  *
  * <p>GetWorkitemAttachmentCreatemetaResponseBody</p>
  */
 public class GetWorkitemAttachmentCreatemetaResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private String success;
 
-    @NameInMap("uploadInfo")
+    @com.aliyun.core.annotation.NameInMap("uploadInfo")
     private UploadInfo uploadInfo;
 
     private GetWorkitemAttachmentCreatemetaResponseBody(Builder builder) {
@@ -131,20 +136,26 @@ public class GetWorkitemAttachmentCreatemetaResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetWorkitemAttachmentCreatemetaResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWorkitemAttachmentCreatemetaResponseBody</p>
+     */
     public static class UploadInfo extends TeaModel {
-        @NameInMap("accessid")
+        @com.aliyun.core.annotation.NameInMap("accessid")
         private String accessid;
 
-        @NameInMap("dir")
+        @com.aliyun.core.annotation.NameInMap("dir")
         private String dir;
 
-        @NameInMap("host")
+        @com.aliyun.core.annotation.NameInMap("host")
         private String host;
 
-        @NameInMap("policy")
+        @com.aliyun.core.annotation.NameInMap("policy")
         private String policy;
 
-        @NameInMap("signature")
+        @com.aliyun.core.annotation.NameInMap("signature")
         private String signature;
 
         private UploadInfo(Builder builder) {

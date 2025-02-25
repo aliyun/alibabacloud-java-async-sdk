@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWarningStrategyConfigResponseBody} extends {@link TeaModel}
  *
  * <p>ListWarningStrategyConfigResponseBody</p>
  */
 public class ListWarningStrategyConfigResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListWarningStrategyConfigResponseBody(Builder builder) {
@@ -151,23 +156,29 @@ public class ListWarningStrategyConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListWarningStrategyConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWarningStrategyConfigResponseBody</p>
+     */
     public static class DataData extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("IntervalTime")
+        @com.aliyun.core.annotation.NameInMap("IntervalTime")
         private Long intervalTime;
 
-        @NameInMap("Lambda")
+        @com.aliyun.core.annotation.NameInMap("Lambda")
         private String lambda;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private Long level;
 
-        @NameInMap("MaxNumber")
+        @com.aliyun.core.annotation.NameInMap("MaxNumber")
         private Long maxNumber;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private DataData(Builder builder) {
@@ -292,9 +303,15 @@ public class ListWarningStrategyConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListWarningStrategyConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWarningStrategyConfigResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("data")
-        private java.util.List < DataData> data;
+        @com.aliyun.core.annotation.NameInMap("data")
+        private java.util.List<DataData> data;
 
         private Data(Builder builder) {
             this.data = builder.data;
@@ -311,17 +328,17 @@ public class ListWarningStrategyConfigResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < DataData> getData() {
+        public java.util.List<DataData> getData() {
             return this.data;
         }
 
         public static final class Builder {
-            private java.util.List < DataData> data; 
+            private java.util.List<DataData> data; 
 
             /**
              * data.
              */
-            public Builder data(java.util.List < DataData> data) {
+            public Builder data(java.util.List<DataData> data) {
                 this.data = data;
                 return this;
             }

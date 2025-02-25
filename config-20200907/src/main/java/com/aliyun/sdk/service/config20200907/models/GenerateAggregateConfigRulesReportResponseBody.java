@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateAggregateConfigRulesReportResponseBody} extends {@link TeaModel}
  *
  * <p>GenerateAggregateConfigRulesReportResponseBody</p>
  */
 public class GenerateAggregateConfigRulesReportResponseBody extends TeaModel {
-    @NameInMap("AggregatorId")
+    @com.aliyun.core.annotation.NameInMap("AggregatorId")
     private String aggregatorId;
 
-    @NameInMap("ReportId")
+    @com.aliyun.core.annotation.NameInMap("ReportId")
     private String reportId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GenerateAggregateConfigRulesReportResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class GenerateAggregateConfigRulesReportResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the account group.
+         * <p>The ID of the account group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ca-f632626622af0079****</p>
          */
         public Builder aggregatorId(String aggregatorId) {
             this.aggregatorId = aggregatorId;
@@ -70,7 +78,10 @@ public class GenerateAggregateConfigRulesReportResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the compliance evaluation report.
+         * <p>The ID of the compliance evaluation report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crp-88176457e0d900c9****</p>
          */
         public Builder reportId(String reportId) {
             this.reportId = reportId;
@@ -78,7 +89,10 @@ public class GenerateAggregateConfigRulesReportResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6EC7AED1-172F-42AE-9C12-295BC2ADB751</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

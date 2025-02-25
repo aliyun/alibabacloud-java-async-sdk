@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesRequest} extends {@link RequestModel}
  *
  * <p>ListTagResourcesRequest</p>
  */
 public class ListTagResourcesRequest extends Request {
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceIds")
-    private java.util.Map < String, ? > resourceIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceIds")
+    private java.util.Map<String, ?> resourceIds;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
-    @Query
-    @NameInMap("Tags")
-    private java.util.Map < String, ? > tags;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.Map<String, ?> tags;
 
     private ListTagResourcesRequest(Builder builder) {
         super(builder);
@@ -73,7 +78,7 @@ public class ListTagResourcesRequest extends Request {
     /**
      * @return resourceIds
      */
-    public java.util.Map < String, ? > getResourceIds() {
+    public java.util.Map<String, ?> getResourceIds() {
         return this.resourceIds;
     }
 
@@ -87,16 +92,16 @@ public class ListTagResourcesRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.Map < String, ? > getTags() {
+    public java.util.Map<String, ?> getTags() {
         return this.tags;
     }
 
     public static final class Builder extends Request.Builder<ListTagResourcesRequest, Builder> {
         private String nextToken; 
         private String regionId; 
-        private java.util.Map < String, ? > resourceIds; 
+        private java.util.Map<String, ?> resourceIds; 
         private String resourceType; 
-        private java.util.Map < String, ? > tags; 
+        private java.util.Map<String, ?> tags; 
 
         private Builder() {
             super();
@@ -112,7 +117,10 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctMTJDQzQ</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -121,7 +129,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -130,9 +142,12 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The IDs of resources. The number of resource IDs ranges from 1 to 50.
+         * <p>The IDs of resources. The number of resource IDs ranges from 1 to 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;templateNam1&quot;,&quot;templateName2&quot;]</p>
          */
-        public Builder resourceIds(java.util.Map < String, ? > resourceIds) {
+        public Builder resourceIds(java.util.Map<String, ?> resourceIds) {
             String resourceIdsShrink = shrink(resourceIds, "ResourceIds", "json");
             this.putQueryParameter("ResourceIds", resourceIdsShrink);
             this.resourceIds = resourceIds;
@@ -140,7 +155,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Valid values: template execution
+         * <p>The type of the resource. Valid values: template execution</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>template</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -149,9 +168,12 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The tag keys and values. The number of key-value pairs ranges from 1 to 20.
+         * <p>The tag keys and values. The number of key-value pairs ranges from 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;k1&quot;:&quot;v2&quot;,&quot;k2&quot;:&quot;v2&quot;}</p>
          */
-        public Builder tags(java.util.Map < String, ? > tags) {
+        public Builder tags(java.util.Map<String, ?> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;

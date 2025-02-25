@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCustomLogConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCustomLogConfigResponseBody</p>
  */
 public class DescribeCustomLogConfigResponseBody extends TeaModel {
-    @NameInMap("Remark")
+    @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Sample")
+    @com.aliyun.core.annotation.NameInMap("Sample")
     private String sample;
 
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private String tag;
 
     private DescribeCustomLogConfigResponseBody(Builder builder) {
@@ -74,7 +74,10 @@ public class DescribeCustomLogConfigResponseBody extends TeaModel {
         private String tag; 
 
         /**
-         * The format of the log configuration.
+         * <p>The format of the log configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>$time_iso8601_$request_method_$</p>
          */
         public Builder remark(String remark) {
             this.remark = remark;
@@ -82,7 +85,10 @@ public class DescribeCustomLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94E3559F-7B6A-4A5E-AFFD-44E2A208A249</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +96,10 @@ public class DescribeCustomLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The sample.
+         * <p>The sample.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;[9/Jun/2015:01:58:09 +0800] 188.165.15.75 - 1542 &quot;-&quot; &quot;GEThttp: //<a href="http://www.aliyun.com/index.html%5C">www.aliyun.com/index.html\</a>&quot; 200</p>
          */
         public Builder sample(String sample) {
             this.sample = sample;
@@ -98,7 +107,10 @@ public class DescribeCustomLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The tag information about the log configuration.
+         * <p>The tag information about the log configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>img1</p>
          */
         public Builder tag(String tag) {
             this.tag = tag;

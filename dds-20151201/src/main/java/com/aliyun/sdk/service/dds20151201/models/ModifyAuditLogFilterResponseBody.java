@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAuditLogFilterResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyAuditLogFilterResponseBody</p>
  */
 public class ModifyAuditLogFilterResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyAuditLogFilterResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class ModifyAuditLogFilterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E209BE2B-F264-4B9D-81F6-A5A5FB1FBF28</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

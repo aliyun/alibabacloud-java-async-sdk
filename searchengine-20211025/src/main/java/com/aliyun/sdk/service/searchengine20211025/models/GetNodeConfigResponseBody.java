@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetNodeConfigResponseBody} extends {@link TeaModel}
  *
  * <p>GetNodeConfigResponseBody</p>
  */
 public class GetNodeConfigResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
     private GetNodeConfigResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class GetNodeConfigResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2AE63638-5420-56DC-BF59-37D8174039A0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class GetNodeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * <p>The result set.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -71,26 +79,36 @@ public class GetNodeConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetNodeConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetNodeConfigResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("active")
+        @com.aliyun.core.annotation.NameInMap("active")
         private Boolean active;
 
-        @NameInMap("dataDuplicateNumber")
+        @com.aliyun.core.annotation.NameInMap("dataDuplicateNumber")
         private Integer dataDuplicateNumber;
 
-        @NameInMap("dataFragmentNumber")
+        @com.aliyun.core.annotation.NameInMap("dataFragmentNumber")
         private Integer dataFragmentNumber;
 
-        @NameInMap("minServicePercent")
+        @com.aliyun.core.annotation.NameInMap("flowRatio")
+        private Integer flowRatio;
+
+        @com.aliyun.core.annotation.NameInMap("minServicePercent")
         private Integer minServicePercent;
 
-        @NameInMap("published")
+        @com.aliyun.core.annotation.NameInMap("published")
         private Boolean published;
 
         private Result(Builder builder) {
             this.active = builder.active;
             this.dataDuplicateNumber = builder.dataDuplicateNumber;
             this.dataFragmentNumber = builder.dataFragmentNumber;
+            this.flowRatio = builder.flowRatio;
             this.minServicePercent = builder.minServicePercent;
             this.published = builder.published;
         }
@@ -125,6 +143,13 @@ public class GetNodeConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return flowRatio
+         */
+        public Integer getFlowRatio() {
+            return this.flowRatio;
+        }
+
+        /**
          * @return minServicePercent
          */
         public Integer getMinServicePercent() {
@@ -142,11 +167,15 @@ public class GetNodeConfigResponseBody extends TeaModel {
             private Boolean active; 
             private Integer dataDuplicateNumber; 
             private Integer dataFragmentNumber; 
+            private Integer flowRatio; 
             private Integer minServicePercent; 
             private Boolean published; 
 
             /**
-             * active.
+             * <p>Indicates whether the index is effective online.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder active(Boolean active) {
                 this.active = active;
@@ -154,7 +183,10 @@ public class GetNodeConfigResponseBody extends TeaModel {
             }
 
             /**
-             * dataDuplicateNumber.
+             * <p>The number of data replicas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder dataDuplicateNumber(Integer dataDuplicateNumber) {
                 this.dataDuplicateNumber = dataDuplicateNumber;
@@ -162,7 +194,10 @@ public class GetNodeConfigResponseBody extends TeaModel {
             }
 
             /**
-             * dataFragmentNumber.
+             * <p>The number of data shards.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder dataFragmentNumber(Integer dataFragmentNumber) {
                 this.dataFragmentNumber = dataFragmentNumber;
@@ -170,7 +205,21 @@ public class GetNodeConfigResponseBody extends TeaModel {
             }
 
             /**
-             * minServicePercent.
+             * <p>The traffic percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder flowRatio(Integer flowRatio) {
+                this.flowRatio = flowRatio;
+                return this;
+            }
+
+            /**
+             * <p>The minimum service ratio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder minServicePercent(Integer minServicePercent) {
                 this.minServicePercent = minServicePercent;
@@ -178,7 +227,10 @@ public class GetNodeConfigResponseBody extends TeaModel {
             }
 
             /**
-             * published.
+             * <p>Indicates whether the cluster is mounted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder published(Boolean published) {
                 this.published = published;

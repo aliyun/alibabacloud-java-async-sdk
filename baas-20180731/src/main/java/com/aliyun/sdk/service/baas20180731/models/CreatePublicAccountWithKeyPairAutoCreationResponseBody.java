@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreatePublicAccountWithKeyPairAutoCreationResponseBody</p>
  */
 public class CreatePublicAccountWithKeyPairAutoCreationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private CreatePublicAccountWithKeyPairAutoCreationResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class CreatePublicAccountWithKeyPairAutoCreationResponseBody extends TeaM
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("AccountPrivateKey")
+        @com.aliyun.core.annotation.NameInMap("AccountPrivateKey")
         private String accountPrivateKey;
 
-        @NameInMap("AccountPublicKey")
+        @com.aliyun.core.annotation.NameInMap("AccountPublicKey")
         private String accountPublicKey;
 
-        @NameInMap("AccountRecoverPrivateKey")
+        @com.aliyun.core.annotation.NameInMap("AccountRecoverPrivateKey")
         private String accountRecoverPrivateKey;
 
-        @NameInMap("AccountRecoverPublicKey")
+        @com.aliyun.core.annotation.NameInMap("AccountRecoverPublicKey")
         private String accountRecoverPublicKey;
 
         private Result(Builder builder) {

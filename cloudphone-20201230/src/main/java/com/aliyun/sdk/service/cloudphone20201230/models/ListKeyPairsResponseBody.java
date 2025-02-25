@@ -86,7 +86,7 @@ public class ListKeyPairsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * KeyPairs.
+         * The key pairs that are returned.
          */
         public Builder keyPairs(KeyPairs keyPairs) {
             this.keyPairs = keyPairs;
@@ -94,7 +94,7 @@ public class ListKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries per page. Valid values: 1 to 100.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +102,7 @@ public class ListKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +110,7 @@ public class ListKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of key pairs.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -182,7 +182,7 @@ public class ListKeyPairsResponseBody extends TeaModel {
             private String keyPairName; 
 
             /**
-             * CreationTime.
+             * The time when the key pair was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -190,7 +190,7 @@ public class ListKeyPairsResponseBody extends TeaModel {
             }
 
             /**
-             * KeyPairFingerPrint.
+             * The fingerprint of the key pair.
              */
             public Builder keyPairFingerPrint(String keyPairFingerPrint) {
                 this.keyPairFingerPrint = keyPairFingerPrint;
@@ -198,7 +198,7 @@ public class ListKeyPairsResponseBody extends TeaModel {
             }
 
             /**
-             * KeyPairName.
+             * The name of the SSH key pair.
              */
             public Builder keyPairName(String keyPairName) {
                 this.keyPairName = keyPairName;

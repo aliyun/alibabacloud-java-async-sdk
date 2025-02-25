@@ -1,74 +1,93 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageComponentsRequest} extends {@link RequestModel}
  *
  * <p>DescribeImageComponentsRequest</p>
  */
 public class DescribeImageComponentsRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("ImageComponentId")
-    private java.util.List < String > imageComponentId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComponentType")
+    private String componentType;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 500, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComponentVersion")
+    private String componentVersion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageComponentId")
+    private java.util.List<String> imageComponentId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 500, minimum = 1)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("Owner")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Owner")
     private String owner;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SystemType")
+    private String systemType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private DescribeImageComponentsRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
+        this.componentType = builder.componentType;
+        this.componentVersion = builder.componentVersion;
         this.imageComponentId = builder.imageComponentId;
         this.maxResults = builder.maxResults;
         this.name = builder.name;
@@ -80,6 +99,7 @@ public class DescribeImageComponentsRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.systemType = builder.systemType;
         this.tag = builder.tag;
     }
 
@@ -104,9 +124,23 @@ public class DescribeImageComponentsRequest extends Request {
     }
 
     /**
+     * @return componentType
+     */
+    public String getComponentType() {
+        return this.componentType;
+    }
+
+    /**
+     * @return componentVersion
+     */
+    public String getComponentVersion() {
+        return this.componentVersion;
+    }
+
+    /**
      * @return imageComponentId
      */
-    public java.util.List < String > getImageComponentId() {
+    public java.util.List<String> getImageComponentId() {
         return this.imageComponentId;
     }
 
@@ -181,15 +215,24 @@ public class DescribeImageComponentsRequest extends Request {
     }
 
     /**
+     * @return systemType
+     */
+    public String getSystemType() {
+        return this.systemType;
+    }
+
+    /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<DescribeImageComponentsRequest, Builder> {
         private String sourceRegionId; 
-        private java.util.List < String > imageComponentId; 
+        private String componentType; 
+        private String componentVersion; 
+        private java.util.List<String> imageComponentId; 
         private Integer maxResults; 
         private String name; 
         private String nextToken; 
@@ -200,7 +243,8 @@ public class DescribeImageComponentsRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tag> tag; 
+        private String systemType; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -209,6 +253,8 @@ public class DescribeImageComponentsRequest extends Request {
         private Builder(DescribeImageComponentsRequest request) {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
+            this.componentType = request.componentType;
+            this.componentVersion = request.componentVersion;
             this.imageComponentId = request.imageComponentId;
             this.maxResults = request.maxResults;
             this.name = request.name;
@@ -220,6 +266,7 @@ public class DescribeImageComponentsRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.systemType = request.systemType;
             this.tag = request.tag;
         } 
 
@@ -233,19 +280,55 @@ public class DescribeImageComponentsRequest extends Request {
         }
 
         /**
-         * The IDs of the image components. You can specify up to 20 image components.
+         * <p>The type of the image component.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Build</li>
+         * <li>Test</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
-        public Builder imageComponentId(java.util.List < String > imageComponentId) {
+        public Builder componentType(String componentType) {
+            this.putQueryParameter("ComponentType", componentType);
+            this.componentType = componentType;
+            return this;
+        }
+
+        /**
+         * <p>The version number of the image component in the &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt; format. You can set &lt;major&gt;, &lt;minor&gt;, and &lt;patch&gt; to non-negative integers, or set one of &lt;major&gt;, &lt;minor&gt;, and &lt;patch&gt; to the wildcard (*) and the other two to non-negative integers.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only if you specify Name.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
+        public Builder componentVersion(String componentVersion) {
+            this.putQueryParameter("ComponentVersion", componentVersion);
+            this.componentVersion = componentVersion;
+            return this;
+        }
+
+        /**
+         * <p>The IDs of image components. Valid values of N: 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ic-bp67acfmxazb4p****</p>
+         */
+        public Builder imageComponentId(java.util.List<String> imageComponentId) {
             this.putQueryParameter("ImageComponentId", imageComponentId);
             this.imageComponentId = imageComponentId;
             return this;
         }
 
         /**
-         * The maximum number of entries to return on each page. Valid values: 1 to 500.
-         * <p>
+         * <p>The maximum number of entries per page. Valid values: 1 to 500.</p>
+         * <p>Default value: 50.</p>
          * 
-         * Default value: 50.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -254,7 +337,10 @@ public class DescribeImageComponentsRequest extends Request {
         }
 
         /**
-         * The name of the image component. You must specify an exact name to search for the image component.
+         * <p>The name of the image component. You must specify an exact name to search for the image component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testComponent</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -263,7 +349,10 @@ public class DescribeImageComponentsRequest extends Request {
         }
 
         /**
-         * The query token. Set the value to the `NextToken` value returned in the last call to the DescribeImageComponents operation. Leave this parameter empty the first time you call this operation.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -272,11 +361,14 @@ public class DescribeImageComponentsRequest extends Request {
         }
 
         /**
-         * The type of the image component. Valid values:
-         * <p>
+         * <p>The type of the image component. Valid values:</p>
+         * <ul>
+         * <li>SELF: the custom component that you created.</li>
+         * <li>ALIYUN: the system component provided by Alibaba Cloud.</li>
+         * </ul>
          * 
-         * *   SELF: the custom component that you created.
-         * *   ALIYUN: the system component provided by Alibaba Cloud.
+         * <strong>example:</strong>
+         * <p>SELF</p>
          */
         public Builder owner(String owner) {
             this.putQueryParameter("Owner", owner);
@@ -303,7 +395,11 @@ public class DescribeImageComponentsRequest extends Request {
         }
 
         /**
-         * The region ID of the image component. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the image component. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -312,10 +408,13 @@ public class DescribeImageComponentsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
-         * <p>
+         * <p>The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
+         * <blockquote>
+         * <p> Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
+         * </blockquote>
          * 
-         * >  Resources in the default resource group are displayed in the response regardless of how this parameter is set.
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -342,9 +441,26 @@ public class DescribeImageComponentsRequest extends Request {
         }
 
         /**
-         * The tags
+         * <p>The type of the operating system supported by the image component.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Linux</li>
+         * <li>Windows</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder systemType(String systemType) {
+            this.putQueryParameter("SystemType", systemType);
+            this.systemType = systemType;
+            return this;
+        }
+
+        /**
+         * <p>The tags of the image component.</p>
+         */
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -357,11 +473,17 @@ public class DescribeImageComponentsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImageComponentsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeImageComponentsRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -396,7 +518,10 @@ public class DescribeImageComponentsRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the image component. Valid values of N: 1 to 20.
+             * <p>The key of tag N. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -404,7 +529,10 @@ public class DescribeImageComponentsRequest extends Request {
             }
 
             /**
-             * The value of tag N of the image component. Valid values of N: 1 to 20.
+             * <p>The value of tag N. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

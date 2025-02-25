@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bpstudio20210931.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExecuteOperationASyncResponseBody} extends {@link TeaModel}
  *
  * <p>ExecuteOperationASyncResponseBody</p>
  */
 public class ExecuteOperationASyncResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ExecuteOperationASyncResponseBody(Builder builder) {
@@ -74,7 +74,10 @@ public class ExecuteOperationASyncResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>Result code, 200 for success; Other representatives fail.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +85,10 @@ public class ExecuteOperationASyncResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the operation.
+         * <p>The ID of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>op_xxxxxxxxxxxxxxxxxx_ecs_modifyInstanceType_BYSOQGWUV6PME412_ERMEZLXNN3K9N3OL</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -90,7 +96,10 @@ public class ExecuteOperationASyncResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot; &quot;</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +107,10 @@ public class ExecuteOperationASyncResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SD-WEF-DSW-32ED-323DDSD-2332D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

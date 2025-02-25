@@ -77,15 +77,15 @@ public class ChangeAccountPasswordRequest extends Request {
             super();
         } 
 
-        private Builder(ChangeAccountPasswordRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.password = response.password;
+        private Builder(ChangeAccountPasswordRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.password = request.password;
         } 
 
         /**
-         * AccountName.
+         * The name of the member account.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -94,7 +94,7 @@ public class ChangeAccountPasswordRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the DRDS instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -103,7 +103,7 @@ public class ChangeAccountPasswordRequest extends Request {
         }
 
         /**
-         * Password.
+         * The new password.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);

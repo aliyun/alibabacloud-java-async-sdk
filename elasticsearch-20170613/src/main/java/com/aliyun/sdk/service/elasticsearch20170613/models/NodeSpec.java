@@ -1,32 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link NodeSpec} extends {@link TeaModel}
  *
  * <p>NodeSpec</p>
  */
 public class NodeSpec extends TeaModel {
-    @NameInMap("disk")
-    @Validation(maximum = 20480, minimum = 20)
+    @com.aliyun.core.annotation.NameInMap("disk")
+    @com.aliyun.core.annotation.Validation(maximum = 20480, minimum = 20)
     private Integer disk;
 
-    @NameInMap("diskEncryption")
+    @com.aliyun.core.annotation.NameInMap("diskEncryption")
     private Boolean diskEncryption;
 
-    @NameInMap("diskType")
+    @com.aliyun.core.annotation.NameInMap("diskType")
     private String diskType;
 
-    @NameInMap("performanceLevel")
+    @com.aliyun.core.annotation.NameInMap("performanceLevel")
     private String performanceLevel;
 
-    @NameInMap("spec")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("spec")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String spec;
 
     private NodeSpec(Builder builder) {
@@ -120,7 +120,7 @@ public class NodeSpec extends TeaModel {
         }
 
         /**
-         * spec.
+         * <p>This parameter is required.</p>
          */
         public Builder spec(String spec) {
             this.spec = spec;

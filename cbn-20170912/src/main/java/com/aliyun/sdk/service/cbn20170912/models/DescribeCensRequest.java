@@ -1,52 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCensRequest} extends {@link RequestModel}
  *
  * <p>DescribeCensRequest</p>
  */
 public class DescribeCensRequest extends Request {
-    @Query
-    @NameInMap("Filter")
-    private java.util.List < Filter> filter;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
+    private java.util.List<Filter> filter;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private DescribeCensRequest(Builder builder) {
         super(builder);
@@ -77,7 +82,7 @@ public class DescribeCensRequest extends Request {
     /**
      * @return filter
      */
-    public java.util.List < Filter> getFilter() {
+    public java.util.List<Filter> getFilter() {
         return this.filter;
     }
 
@@ -133,12 +138,12 @@ public class DescribeCensRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<DescribeCensRequest, Builder> {
-        private java.util.List < Filter> filter; 
+        private java.util.List<Filter> filter; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
@@ -146,7 +151,7 @@ public class DescribeCensRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -166,12 +171,10 @@ public class DescribeCensRequest extends Request {
         } 
 
         /**
-         * The filter conditions.
-         * <p>
-         * 
-         * You can specify at most five filter conditions in each call.
+         * <p>The filter conditions.</p>
+         * <p>You can specify at most five filter conditions in each call.</p>
          */
-        public Builder filter(java.util.List < Filter> filter) {
+        public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
             return this;
@@ -196,7 +199,10 @@ public class DescribeCensRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -205,7 +211,10 @@ public class DescribeCensRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.
+         * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -214,7 +223,10 @@ public class DescribeCensRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the CEN instance belongs.
+         * <p>The ID of the resource group to which the CEN instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm3unpnuw****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -241,12 +253,10 @@ public class DescribeCensRequest extends Request {
         }
 
         /**
-         * The tags.
-         * <p>
-         * 
-         * You can specify at most 20 tags in each call.
+         * <p>The tags.</p>
+         * <p>You can specify at most 20 tags in each call.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -259,12 +269,18 @@ public class DescribeCensRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCensRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeCensRequest</p>
+     */
     public static class Filter extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
-        private java.util.List < String > value;
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private java.util.List<String> value;
 
         private Filter(Builder builder) {
             this.key = builder.key;
@@ -289,24 +305,25 @@ public class DescribeCensRequest extends Request {
         /**
          * @return value
          */
-        public java.util.List < String > getValue() {
+        public java.util.List<String> getValue() {
             return this.value;
         }
 
         public static final class Builder {
             private String key; 
-            private java.util.List < String > value; 
+            private java.util.List<String> value; 
 
             /**
-             * The key of the filter. Valid values:
-             * <p>
+             * <p>The key of the filter. Valid values:</p>
+             * <ul>
+             * <li><strong>CenId</strong>: the ID of a CEN instance.</li>
+             * <li><strong>Name</strong>: the name of a CEN instance.</li>
+             * </ul>
+             * <p>By default, the logical operator among filter conditions is <strong>AND</strong>. Information about a CEN instance is returned only if the CEN instance matches all filter conditions.</p>
+             * <p>You can specify at most five filter conditions in each call.</p>
              * 
-             * *   **CenId**: the ID of a CEN instance.
-             * *   **Name**: the name of a CEN instance.
-             * 
-             * By default, the logical operator among filter conditions is **AND**. Information about a CEN instance is returned only if the CEN instance matches all filter conditions.
-             * 
-             * You can specify at most five filter conditions in each call.
+             * <strong>example:</strong>
+             * <p>CenId</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -314,14 +331,14 @@ public class DescribeCensRequest extends Request {
             }
 
             /**
-             * The value of the filter condition.
-             * <p>
+             * <p>The value of the filter condition.</p>
+             * <p>Specify a filter value based on the <strong>Key</strong> parameter. You can specify multiple values for a filter <strong>key</strong>. The logical operator among multiple filter values is <strong>OR</strong>. If a CEN instance matches one or more of the values that you specify, the CEN instance matches the filter condition.</p>
+             * <p>You can specify at most five values in each filter condition.</p>
              * 
-             * Specify a filter value based on the **Key** parameter. You can specify multiple values for a filter **key**. The logical operator among multiple filter values is **OR**. If a CEN instance matches one or more of the values that you specify, the CEN instance matches the filter condition.
-             * 
-             * You can specify at most five values in each filter condition.
+             * <strong>example:</strong>
+             * <p>cen-0xyeagctz5sfg9****</p>
              */
-            public Builder value(java.util.List < String > value) {
+            public Builder value(java.util.List<String> value) {
                 this.value = value;
                 return this;
             }
@@ -333,11 +350,17 @@ public class DescribeCensRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCensRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeCensRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -372,12 +395,12 @@ public class DescribeCensRequest extends Request {
             private String value; 
 
             /**
-             * The tag keys.
-             * <p>
+             * <p>The tag keys.</p>
+             * <p>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>You can specify at most 20 tag keys.</p>
              * 
-             * The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
-             * 
-             * You can specify at most 20 tag keys.
+             * <strong>example:</strong>
+             * <p>tagtest</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -385,12 +408,12 @@ public class DescribeCensRequest extends Request {
             }
 
             /**
-             * The tag values.
-             * <p>
+             * <p>The tag values.</p>
+             * <p>The tag values can be 0 to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
              * 
-             * The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
-             * 
-             * Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.
+             * <strong>example:</strong>
+             * <p>tagtest</p>
              */
             public Builder value(String value) {
                 this.value = value;

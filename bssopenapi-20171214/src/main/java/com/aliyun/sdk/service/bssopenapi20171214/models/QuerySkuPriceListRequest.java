@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySkuPriceListRequest} extends {@link RequestModel}
  *
  * <p>QuerySkuPriceListRequest</p>
  */
 public class QuerySkuPriceListRequest extends Request {
-    @Query
-    @NameInMap("CommodityCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommodityCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String commodityCode;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("NextPageToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextPageToken")
     private String nextPageToken;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("PriceEntityCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PriceEntityCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String priceEntityCode;
 
-    @Query
-    @NameInMap("PriceFactorConditionMap")
-    private java.util.Map < String, java.util.List<String>> priceFactorConditionMap;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PriceFactorConditionMap")
+    private java.util.Map<String, java.util.List<String>> priceFactorConditionMap;
 
     private QuerySkuPriceListRequest(Builder builder) {
         super(builder);
@@ -100,7 +105,7 @@ public class QuerySkuPriceListRequest extends Request {
     /**
      * @return priceFactorConditionMap
      */
-    public java.util.Map < String, java.util.List<String>> getPriceFactorConditionMap() {
+    public java.util.Map<String, java.util.List<String>> getPriceFactorConditionMap() {
         return this.priceFactorConditionMap;
     }
 
@@ -110,7 +115,7 @@ public class QuerySkuPriceListRequest extends Request {
         private String nextPageToken; 
         private Integer pageSize; 
         private String priceEntityCode; 
-        private java.util.Map < String, java.util.List<String>> priceFactorConditionMap; 
+        private java.util.Map<String, java.util.List<String>> priceFactorConditionMap; 
 
         private Builder() {
             super();
@@ -127,7 +132,11 @@ public class QuerySkuPriceListRequest extends Request {
         } 
 
         /**
-         * The code of the service.
+         * <p>The code of the service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);
@@ -145,7 +154,10 @@ public class QuerySkuPriceListRequest extends Request {
         }
 
         /**
-         * The token that is used to retrieve the next page. You do not need to set this parameter if you query coverage details for the first time. The response returns a token that you can use to query coverage details of the next page. If a null value is returned for the NextPageToken parameter, no more coverage details can be queried.
+         * <p>The token that is used to retrieve the next page. You do not need to set this parameter if you query coverage details for the first time. The response returns a token that you can use to query coverage details of the next page. If a null value is returned for the NextPageToken parameter, no more coverage details can be queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>080112060a0422020800180022490a470342000000315333303332363436363336333433393636333136333338333733373333333133373336363336323634363336363337333836333636333636313336363433363332</p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.putQueryParameter("NextPageToken", nextPageToken);
@@ -154,7 +166,11 @@ public class QuerySkuPriceListRequest extends Request {
         }
 
         /**
-         * The number of entries to be returned on each page. Maximum value: 50.
+         * <p>The number of entries to be returned on each page. Maximum value: 50.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -163,7 +179,11 @@ public class QuerySkuPriceListRequest extends Request {
         }
 
         /**
-         * The code of the pricing object.
+         * <p>The code of the pricing object.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance_type</p>
          */
         public Builder priceEntityCode(String priceEntityCode) {
             this.putQueryParameter("PriceEntityCode", priceEntityCode);
@@ -172,9 +192,9 @@ public class QuerySkuPriceListRequest extends Request {
         }
 
         /**
-         * The conditions of the pricing factors.
+         * <p>The conditions of the pricing factors.</p>
          */
-        public Builder priceFactorConditionMap(java.util.Map < String, java.util.List<String>> priceFactorConditionMap) {
+        public Builder priceFactorConditionMap(java.util.Map<String, java.util.List<String>> priceFactorConditionMap) {
             String priceFactorConditionMapShrink = shrink(priceFactorConditionMap, "PriceFactorConditionMap", "json");
             this.putQueryParameter("PriceFactorConditionMap", priceFactorConditionMapShrink);
             this.priceFactorConditionMap = priceFactorConditionMap;

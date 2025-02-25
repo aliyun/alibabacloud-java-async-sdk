@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIpControlsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeIpControlsResponseBody</p>
  */
 public class DescribeIpControlsResponseBody extends TeaModel {
-    @NameInMap("IpControlInfos")
+    @com.aliyun.core.annotation.NameInMap("IpControlInfos")
     private IpControlInfos ipControlInfos;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeIpControlsResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeIpControlsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The number of entries returned per page.
+         * <p>The information about the ACL. The information is an array that consists of IpControlInfo data. The information does not include specific policies.</p>
          */
         public Builder ipControlInfos(IpControlInfos ipControlInfos) {
             this.ipControlInfos = ipControlInfos;
@@ -94,7 +99,10 @@ public class DescribeIpControlsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeIpControlsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeIpControlsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100. Default value: 10.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ004</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeIpControlsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,26 +148,32 @@ public class DescribeIpControlsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeIpControlsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIpControlsResponseBody</p>
+     */
     public static class IpControlInfo extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("IpControlId")
+        @com.aliyun.core.annotation.NameInMap("IpControlId")
         private String ipControlId;
 
-        @NameInMap("IpControlName")
+        @com.aliyun.core.annotation.NameInMap("IpControlName")
         private String ipControlName;
 
-        @NameInMap("IpControlType")
+        @com.aliyun.core.annotation.NameInMap("IpControlType")
         private String ipControlType;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private IpControlInfo(Builder builder) {
@@ -230,7 +253,10 @@ public class DescribeIpControlsResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * The name of the ACL.
+             * <p>The time when the ACL was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-01-17T05:48:11Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -238,7 +264,10 @@ public class DescribeIpControlsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the ACL was modified. The time is displayed in UTC.
+             * <p>The description of the ACL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -246,7 +275,10 @@ public class DescribeIpControlsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of returned entries.
+             * <p>The ID of the ACL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7ea91319a34d48a09b5c9c871d9768b1</p>
              */
             public Builder ipControlId(String ipControlId) {
                 this.ipControlId = ipControlId;
@@ -254,7 +286,10 @@ public class DescribeIpControlsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the ACL.
+             * <p>The name of the ACL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testControl11</p>
              */
             public Builder ipControlName(String ipControlName) {
                 this.ipControlName = ipControlName;
@@ -262,7 +297,10 @@ public class DescribeIpControlsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the ACL. The information is an array of IpControlInfo data. The information does not include specific policies.
+             * <p>The type of the ACL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALLOW</p>
              */
             public Builder ipControlType(String ipControlType) {
                 this.ipControlType = ipControlType;
@@ -270,7 +308,10 @@ public class DescribeIpControlsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ACL.
+             * <p>The time when the ACL was modified. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-01-17T06:00:38Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -278,7 +319,10 @@ public class DescribeIpControlsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the ACL.
+             * <p>The ID of the region in which the ACL is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-qingdao</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -292,9 +336,15 @@ public class DescribeIpControlsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIpControlsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIpControlsResponseBody</p>
+     */
     public static class IpControlInfos extends TeaModel {
-        @NameInMap("IpControlInfo")
-        private java.util.List < IpControlInfo> ipControlInfo;
+        @com.aliyun.core.annotation.NameInMap("IpControlInfo")
+        private java.util.List<IpControlInfo> ipControlInfo;
 
         private IpControlInfos(Builder builder) {
             this.ipControlInfo = builder.ipControlInfo;
@@ -311,17 +361,17 @@ public class DescribeIpControlsResponseBody extends TeaModel {
         /**
          * @return ipControlInfo
          */
-        public java.util.List < IpControlInfo> getIpControlInfo() {
+        public java.util.List<IpControlInfo> getIpControlInfo() {
             return this.ipControlInfo;
         }
 
         public static final class Builder {
-            private java.util.List < IpControlInfo> ipControlInfo; 
+            private java.util.List<IpControlInfo> ipControlInfo; 
 
             /**
              * IpControlInfo.
              */
-            public Builder ipControlInfo(java.util.List < IpControlInfo> ipControlInfo) {
+            public Builder ipControlInfo(java.util.List<IpControlInfo> ipControlInfo) {
                 this.ipControlInfo = ipControlInfo;
                 return this;
             }

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHoneypotStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>GetHoneypotStatisticsResponseBody</p>
  */
 public class GetHoneypotStatisticsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetHoneypotStatisticsResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class GetHoneypotStatisticsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code that is returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * <p>The status code that is returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +114,7 @@ public class GetHoneypotStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The honeypot usage statistics.
+         * <p>The honeypot usage statistics.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +122,10 @@ public class GetHoneypotStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +133,10 @@ public class GetHoneypotStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +144,10 @@ public class GetHoneypotStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EB7181CB-32F3-5189-A935-4E24DD1A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +155,14 @@ public class GetHoneypotStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -155,26 +175,32 @@ public class GetHoneypotStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetHoneypotStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHoneypotStatisticsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("TotalHoneypotCount")
+        @com.aliyun.core.annotation.NameInMap("TotalHoneypotCount")
         private Integer totalHoneypotCount;
 
-        @NameInMap("TotalNodeStatus")
+        @com.aliyun.core.annotation.NameInMap("TotalNodeStatus")
         private Integer totalNodeStatus;
 
-        @NameInMap("TotalProbeCount")
+        @com.aliyun.core.annotation.NameInMap("TotalProbeCount")
         private Integer totalProbeCount;
 
-        @NameInMap("UsedHoneypotCount")
+        @com.aliyun.core.annotation.NameInMap("UsedHoneypotCount")
         private Integer usedHoneypotCount;
 
-        @NameInMap("UsedHostProbeCount")
+        @com.aliyun.core.annotation.NameInMap("UsedHostProbeCount")
         private Integer usedHostProbeCount;
 
-        @NameInMap("UsedProbeCount")
+        @com.aliyun.core.annotation.NameInMap("UsedProbeCount")
         private Integer usedProbeCount;
 
-        @NameInMap("UsedVpcProbeCount")
+        @com.aliyun.core.annotation.NameInMap("UsedVpcProbeCount")
         private Integer usedVpcProbeCount;
 
         private Data(Builder builder) {
@@ -254,7 +280,10 @@ public class GetHoneypotStatisticsResponseBody extends TeaModel {
             private Integer usedVpcProbeCount; 
 
             /**
-             * The total number of honeypots.
+             * <p>The total number of honeypots.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder totalHoneypotCount(Integer totalHoneypotCount) {
                 this.totalHoneypotCount = totalHoneypotCount;
@@ -262,11 +291,14 @@ public class GetHoneypotStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The health status of the management node. Valid values:
-             * <p>
+             * <p>The health status of the management node. Valid values:</p>
+             * <ul>
+             * <li>1: normal</li>
+             * <li>2: abnormal</li>
+             * </ul>
              * 
-             * *   1: normal
-             * *   2: abnormal
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalNodeStatus(Integer totalNodeStatus) {
                 this.totalNodeStatus = totalNodeStatus;
@@ -274,7 +306,10 @@ public class GetHoneypotStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of authorized probes.
+             * <p>The total number of authorized probes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder totalProbeCount(Integer totalProbeCount) {
                 this.totalProbeCount = totalProbeCount;
@@ -282,7 +317,10 @@ public class GetHoneypotStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of deployed honeypots.
+             * <p>The number of deployed honeypots.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder usedHoneypotCount(Integer usedHoneypotCount) {
                 this.usedHoneypotCount = usedHoneypotCount;
@@ -290,7 +328,10 @@ public class GetHoneypotStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of deployed host probes.
+             * <p>The number of deployed host probes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder usedHostProbeCount(Integer usedHostProbeCount) {
                 this.usedHostProbeCount = usedHostProbeCount;
@@ -298,7 +339,10 @@ public class GetHoneypotStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of deployed probes.
+             * <p>The number of deployed probes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder usedProbeCount(Integer usedProbeCount) {
                 this.usedProbeCount = usedProbeCount;
@@ -306,7 +350,10 @@ public class GetHoneypotStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of deployed VPC probes.
+             * <p>The number of deployed VPC probes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder usedVpcProbeCount(Integer usedVpcProbeCount) {
                 this.usedVpcProbeCount = usedVpcProbeCount;

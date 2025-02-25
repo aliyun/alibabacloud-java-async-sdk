@@ -1,68 +1,83 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Sku} extends {@link TeaModel}
  *
  * <p>Sku</p>
  */
 public class Sku extends TeaModel {
-    @NameInMap("barcode")
+    @com.aliyun.core.annotation.NameInMap("barcode")
     private String barcode;
 
-    @NameInMap("canSell")
+    @com.aliyun.core.annotation.NameInMap("canSell")
     private Boolean canSell;
 
-    @NameInMap("divisionCode")
+    @com.aliyun.core.annotation.NameInMap("discountRetailPrice")
+    private Long discountRetailPrice;
+
+    @com.aliyun.core.annotation.NameInMap("divisionCode")
     private String divisionCode;
 
-    @NameInMap("fuzzyQuantity")
+    @com.aliyun.core.annotation.NameInMap("fuzzyQuantity")
     private String fuzzyQuantity;
 
-    @NameInMap("markPrice")
+    @com.aliyun.core.annotation.NameInMap("markPrice")
     private Long markPrice;
 
-    @NameInMap("picUrl")
+    @com.aliyun.core.annotation.NameInMap("picUrl")
     private String picUrl;
 
-    @NameInMap("platformPrice")
+    @com.aliyun.core.annotation.NameInMap("platformPrice")
     private Long platformPrice;
 
-    @NameInMap("price")
+    @com.aliyun.core.annotation.NameInMap("price")
     private Long price;
 
-    @NameInMap("productId")
+    @com.aliyun.core.annotation.NameInMap("productId")
     private String productId;
 
-    @NameInMap("quantity")
+    @com.aliyun.core.annotation.NameInMap("quantity")
     private Long quantity;
 
-    @NameInMap("shopId")
+    @com.aliyun.core.annotation.NameInMap("rankValue")
+    private Long rankValue;
+
+    @com.aliyun.core.annotation.NameInMap("shopId")
     private String shopId;
 
-    @NameInMap("skuId")
+    @com.aliyun.core.annotation.NameInMap("skuId")
     private String skuId;
 
-    @NameInMap("skuSpecs")
-    private java.util.List < SkuSpec > skuSpecs;
+    @com.aliyun.core.annotation.NameInMap("skuSpecs")
+    private java.util.List<SkuSpec> skuSpecs;
 
-    @NameInMap("skuSpecsCode")
+    @com.aliyun.core.annotation.NameInMap("skuSpecsCode")
     private String skuSpecsCode;
 
-    @NameInMap("skuStatus")
+    @com.aliyun.core.annotation.NameInMap("skuStatus")
     private String skuStatus;
 
-    @NameInMap("title")
+    @com.aliyun.core.annotation.NameInMap("suggestedRetailPrice")
+    private Long suggestedRetailPrice;
+
+    @com.aliyun.core.annotation.NameInMap("title")
     private String title;
 
     private Sku(Builder builder) {
         this.barcode = builder.barcode;
         this.canSell = builder.canSell;
+        this.discountRetailPrice = builder.discountRetailPrice;
         this.divisionCode = builder.divisionCode;
         this.fuzzyQuantity = builder.fuzzyQuantity;
         this.markPrice = builder.markPrice;
@@ -71,11 +86,13 @@ public class Sku extends TeaModel {
         this.price = builder.price;
         this.productId = builder.productId;
         this.quantity = builder.quantity;
+        this.rankValue = builder.rankValue;
         this.shopId = builder.shopId;
         this.skuId = builder.skuId;
         this.skuSpecs = builder.skuSpecs;
         this.skuSpecsCode = builder.skuSpecsCode;
         this.skuStatus = builder.skuStatus;
+        this.suggestedRetailPrice = builder.suggestedRetailPrice;
         this.title = builder.title;
     }
 
@@ -99,6 +116,13 @@ public class Sku extends TeaModel {
      */
     public Boolean getCanSell() {
         return this.canSell;
+    }
+
+    /**
+     * @return discountRetailPrice
+     */
+    public Long getDiscountRetailPrice() {
+        return this.discountRetailPrice;
     }
 
     /**
@@ -158,6 +182,13 @@ public class Sku extends TeaModel {
     }
 
     /**
+     * @return rankValue
+     */
+    public Long getRankValue() {
+        return this.rankValue;
+    }
+
+    /**
      * @return shopId
      */
     public String getShopId() {
@@ -174,7 +205,7 @@ public class Sku extends TeaModel {
     /**
      * @return skuSpecs
      */
-    public java.util.List < SkuSpec > getSkuSpecs() {
+    public java.util.List<SkuSpec> getSkuSpecs() {
         return this.skuSpecs;
     }
 
@@ -193,6 +224,13 @@ public class Sku extends TeaModel {
     }
 
     /**
+     * @return suggestedRetailPrice
+     */
+    public Long getSuggestedRetailPrice() {
+        return this.suggestedRetailPrice;
+    }
+
+    /**
      * @return title
      */
     public String getTitle() {
@@ -202,6 +240,7 @@ public class Sku extends TeaModel {
     public static final class Builder {
         private String barcode; 
         private Boolean canSell; 
+        private Long discountRetailPrice; 
         private String divisionCode; 
         private String fuzzyQuantity; 
         private Long markPrice; 
@@ -210,11 +249,13 @@ public class Sku extends TeaModel {
         private Long price; 
         private String productId; 
         private Long quantity; 
+        private Long rankValue; 
         private String shopId; 
         private String skuId; 
-        private java.util.List < SkuSpec > skuSpecs; 
+        private java.util.List<SkuSpec> skuSpecs; 
         private String skuSpecsCode; 
         private String skuStatus; 
+        private Long suggestedRetailPrice; 
         private String title; 
 
         /**
@@ -230,6 +271,14 @@ public class Sku extends TeaModel {
          */
         public Builder canSell(Boolean canSell) {
             this.canSell = canSell;
+            return this;
+        }
+
+        /**
+         * discountRetailPrice.
+         */
+        public Builder discountRetailPrice(Long discountRetailPrice) {
+            this.discountRetailPrice = discountRetailPrice;
             return this;
         }
 
@@ -298,6 +347,14 @@ public class Sku extends TeaModel {
         }
 
         /**
+         * rankValue.
+         */
+        public Builder rankValue(Long rankValue) {
+            this.rankValue = rankValue;
+            return this;
+        }
+
+        /**
          * shopId.
          */
         public Builder shopId(String shopId) {
@@ -316,7 +373,7 @@ public class Sku extends TeaModel {
         /**
          * skuSpecs.
          */
-        public Builder skuSpecs(java.util.List < SkuSpec > skuSpecs) {
+        public Builder skuSpecs(java.util.List<SkuSpec> skuSpecs) {
             this.skuSpecs = skuSpecs;
             return this;
         }
@@ -334,6 +391,14 @@ public class Sku extends TeaModel {
          */
         public Builder skuStatus(String skuStatus) {
             this.skuStatus = skuStatus;
+            return this;
+        }
+
+        /**
+         * suggestedRetailPrice.
+         */
+        public Builder suggestedRetailPrice(Long suggestedRetailPrice) {
+            this.suggestedRetailPrice = suggestedRetailPrice;
             return this;
         }
 

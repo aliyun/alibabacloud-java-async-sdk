@@ -1,45 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDataServiceApiAuthorityRequest} extends {@link RequestModel}
  *
  * <p>CreateDataServiceApiAuthorityRequest</p>
  */
 public class CreateDataServiceApiAuthorityRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("ApiId")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApiId")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Long apiId;
 
-    @Body
-    @NameInMap("AuthorizedProjectId")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AuthorizedProjectId")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Long authorizedProjectId;
 
-    @Body
-    @NameInMap("EndTime")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Long endTime;
 
-    @Body
-    @NameInMap("ProjectId")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Long projectId;
 
-    @Body
-    @NameInMap("TenantId")
-    @Validation(minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
+    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long tenantId;
 
     private CreateDataServiceApiAuthorityRequest(Builder builder) {
@@ -130,7 +134,7 @@ public class CreateDataServiceApiAuthorityRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -139,7 +143,11 @@ public class CreateDataServiceApiAuthorityRequest extends Request {
         }
 
         /**
-         * The ID of the API.
+         * <p>The ID of the API.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
          */
         public Builder apiId(Long apiId) {
             this.putBodyParameter("ApiId", apiId);
@@ -148,7 +156,11 @@ public class CreateDataServiceApiAuthorityRequest extends Request {
         }
 
         /**
-         * The ID of the workspace to which the access permissions on the API are granted.
+         * <p>The ID of the workspace to which the access permissions on the API are granted.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10002</p>
          */
         public Builder authorizedProjectId(Long authorizedProjectId) {
             this.putBodyParameter("AuthorizedProjectId", authorizedProjectId);
@@ -157,7 +169,11 @@ public class CreateDataServiceApiAuthorityRequest extends Request {
         }
 
         /**
-         * The end time of the validity period of the access permissions. The time must be a UNIX timestamp. Unit: seconds. Example: 1600531564, which indicates 2020-09-20 00:06:04 (UTC+8).
+         * <p>The end time of the validity period of the access permissions. The time must be a UNIX timestamp. Unit: seconds. Example: 1600531564, which indicates 2020-09-20 00:06:04 (UTC+8).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1600531564</p>
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -166,7 +182,11 @@ public class CreateDataServiceApiAuthorityRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * <p>The ID of the workspace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10003</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -175,7 +195,10 @@ public class CreateDataServiceApiAuthorityRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1004</p>
          */
         public Builder tenantId(Long tenantId) {
             this.putBodyParameter("TenantId", tenantId);

@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRegionsRequest} extends {@link RequestModel}
  *
  * <p>DescribeRegionsRequest</p>
  */
 public class DescribeRegionsRequest extends Request {
-    @Query
-    @NameInMap("Language")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Language")
     private String language;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private DescribeRegionsRequest(Builder builder) {
@@ -68,12 +73,15 @@ public class DescribeRegionsRequest extends Request {
         } 
 
         /**
-         * The language in which you want to return the descriptions of the access control policies. Valid values:
-         * <p>
+         * <p>The language in which you want to return the descriptions of the access control policies. Valid values:</p>
+         * <ul>
+         * <li>zh-CN (default value): Chinese</li>
+         * <li>en: English</li>
+         * <li>ja: Japanese</li>
+         * </ul>
          * 
-         * *   zh-CN (default value): Chinese
-         * *   en: English
-         * *   ja: Japanese
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);

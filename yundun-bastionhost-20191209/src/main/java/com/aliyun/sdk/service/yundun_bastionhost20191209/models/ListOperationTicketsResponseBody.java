@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOperationTicketsResponseBody} extends {@link TeaModel}
  *
  * <p>ListOperationTicketsResponseBody</p>
  */
 public class ListOperationTicketsResponseBody extends TeaModel {
-    @NameInMap("OperationTickets")
+    @com.aliyun.core.annotation.NameInMap("OperationTickets")
     private java.util.List < OperationTickets> operationTickets;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListOperationTicketsResponseBody(Builder builder) {
@@ -62,7 +62,7 @@ public class ListOperationTicketsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * OperationTickets.
+         * <p>The O&amp;M applications to be reviewed.</p>
          */
         public Builder operationTickets(java.util.List < OperationTickets> operationTickets) {
             this.operationTickets = operationTickets;
@@ -70,7 +70,10 @@ public class ListOperationTicketsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,10 @@ public class ListOperationTicketsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of O&amp;M applications to be reviewed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -91,55 +97,74 @@ public class ListOperationTicketsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListOperationTicketsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOperationTicketsResponseBody</p>
+     */
     public static class OperationTickets extends TeaModel {
-        @NameInMap("ApplyUserId")
+        @com.aliyun.core.annotation.NameInMap("ApplyUserId")
         private String applyUserId;
 
-        @NameInMap("ApplyUsername")
+        @com.aliyun.core.annotation.NameInMap("ApplyUsername")
         private String applyUsername;
 
-        @NameInMap("AssetAccountId")
+        @com.aliyun.core.annotation.NameInMap("ApproveComment")
+        private String approveComment;
+
+        @com.aliyun.core.annotation.NameInMap("AssetAccountId")
         private String assetAccountId;
 
-        @NameInMap("AssetAccountName")
+        @com.aliyun.core.annotation.NameInMap("AssetAccountName")
         private String assetAccountName;
 
-        @NameInMap("AssetAddress")
+        @com.aliyun.core.annotation.NameInMap("AssetAddress")
         private String assetAddress;
 
-        @NameInMap("AssetId")
+        @com.aliyun.core.annotation.NameInMap("AssetId")
         private String assetId;
 
-        @NameInMap("AssetName")
+        @com.aliyun.core.annotation.NameInMap("AssetName")
         private String assetName;
 
-        @NameInMap("AssetNetworkDomainId")
+        @com.aliyun.core.annotation.NameInMap("AssetNetworkDomainId")
         private String assetNetworkDomainId;
 
-        @NameInMap("AssetOs")
+        @com.aliyun.core.annotation.NameInMap("AssetOs")
         private String assetOs;
 
-        @NameInMap("AssetSource")
+        @com.aliyun.core.annotation.NameInMap("AssetSource")
         private String assetSource;
 
-        @NameInMap("AssetSourceInstanceId")
+        @com.aliyun.core.annotation.NameInMap("AssetSourceInstanceId")
         private String assetSourceInstanceId;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private Long createdTime;
 
-        @NameInMap("OperationTicketId")
+        @com.aliyun.core.annotation.NameInMap("EffectCount")
+        private Integer effectCount;
+
+        @com.aliyun.core.annotation.NameInMap("EffectEndTime")
+        private Integer effectEndTime;
+
+        @com.aliyun.core.annotation.NameInMap("EffectStartTime")
+        private Integer effectStartTime;
+
+        @com.aliyun.core.annotation.NameInMap("OperationTicketId")
         private String operationTicketId;
 
-        @NameInMap("ProtocolName")
+        @com.aliyun.core.annotation.NameInMap("ProtocolName")
         private String protocolName;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private OperationTickets(Builder builder) {
             this.applyUserId = builder.applyUserId;
             this.applyUsername = builder.applyUsername;
+            this.approveComment = builder.approveComment;
             this.assetAccountId = builder.assetAccountId;
             this.assetAccountName = builder.assetAccountName;
             this.assetAddress = builder.assetAddress;
@@ -150,6 +175,9 @@ public class ListOperationTicketsResponseBody extends TeaModel {
             this.assetSource = builder.assetSource;
             this.assetSourceInstanceId = builder.assetSourceInstanceId;
             this.createdTime = builder.createdTime;
+            this.effectCount = builder.effectCount;
+            this.effectEndTime = builder.effectEndTime;
+            this.effectStartTime = builder.effectStartTime;
             this.operationTicketId = builder.operationTicketId;
             this.protocolName = builder.protocolName;
             this.state = builder.state;
@@ -175,6 +203,13 @@ public class ListOperationTicketsResponseBody extends TeaModel {
          */
         public String getApplyUsername() {
             return this.applyUsername;
+        }
+
+        /**
+         * @return approveComment
+         */
+        public String getApproveComment() {
+            return this.approveComment;
         }
 
         /**
@@ -248,6 +283,27 @@ public class ListOperationTicketsResponseBody extends TeaModel {
         }
 
         /**
+         * @return effectCount
+         */
+        public Integer getEffectCount() {
+            return this.effectCount;
+        }
+
+        /**
+         * @return effectEndTime
+         */
+        public Integer getEffectEndTime() {
+            return this.effectEndTime;
+        }
+
+        /**
+         * @return effectStartTime
+         */
+        public Integer getEffectStartTime() {
+            return this.effectStartTime;
+        }
+
+        /**
          * @return operationTicketId
          */
         public String getOperationTicketId() {
@@ -271,6 +327,7 @@ public class ListOperationTicketsResponseBody extends TeaModel {
         public static final class Builder {
             private String applyUserId; 
             private String applyUsername; 
+            private String approveComment; 
             private String assetAccountId; 
             private String assetAccountName; 
             private String assetAddress; 
@@ -281,12 +338,18 @@ public class ListOperationTicketsResponseBody extends TeaModel {
             private String assetSource; 
             private String assetSourceInstanceId; 
             private Long createdTime; 
+            private Integer effectCount; 
+            private Integer effectEndTime; 
+            private Integer effectStartTime; 
             private String operationTicketId; 
             private String protocolName; 
             private String state; 
 
             /**
-             * ApplyUserId.
+             * <p>The ID of the O&amp;M applicant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder applyUserId(String applyUserId) {
                 this.applyUserId = applyUserId;
@@ -294,7 +357,10 @@ public class ListOperationTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * ApplyUsername.
+             * <p>The username of the O&amp;M applicant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder applyUsername(String applyUsername) {
                 this.applyUsername = applyUsername;
@@ -302,7 +368,18 @@ public class ListOperationTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * AssetAccountId.
+             * ApproveComment.
+             */
+            public Builder approveComment(String approveComment) {
+                this.approveComment = approveComment;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the asset account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder assetAccountId(String assetAccountId) {
                 this.assetAccountId = assetAccountId;
@@ -310,7 +387,10 @@ public class ListOperationTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * AssetAccountName.
+             * <p>The username of the asset account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root</p>
              */
             public Builder assetAccountName(String assetAccountName) {
                 this.assetAccountName = assetAccountName;
@@ -318,7 +398,10 @@ public class ListOperationTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * AssetAddress.
+             * <p>The IP address of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.167.XX.XX</p>
              */
             public Builder assetAddress(String assetAddress) {
                 this.assetAddress = assetAddress;
@@ -326,7 +409,10 @@ public class ListOperationTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * AssetId.
+             * <p>The ID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder assetId(String assetId) {
                 this.assetId = assetId;
@@ -334,7 +420,10 @@ public class ListOperationTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * AssetName.
+             * <p>The name of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>poros-test</p>
              */
             public Builder assetName(String assetName) {
                 this.assetName = assetName;
@@ -342,7 +431,10 @@ public class ListOperationTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * AssetNetworkDomainId.
+             * <p>The network domain ID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder assetNetworkDomainId(String assetNetworkDomainId) {
                 this.assetNetworkDomainId = assetNetworkDomainId;
@@ -350,7 +442,10 @@ public class ListOperationTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * AssetOs.
+             * <p>The operating system of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Linux</p>
              */
             public Builder assetOs(String assetOs) {
                 this.assetOs = assetOs;
@@ -358,7 +453,16 @@ public class ListOperationTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * AssetSource.
+             * <p>The name of the asset source to which the asset belongs. Valid values:</p>
+             * <ul>
+             * <li><strong>Local</strong>: an on-premises host.</li>
+             * <li><strong>Ecs</strong>: an Elastic Compute Service (ECS) instance.</li>
+             * <li><strong>Rds</strong>: an ApsaraDB RDS instance.</li>
+             * <li>A third-party asset source.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Local</p>
              */
             public Builder assetSource(String assetSource) {
                 this.assetSource = assetSource;
@@ -366,7 +470,10 @@ public class ListOperationTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * AssetSourceInstanceId.
+             * <p>The ID of the asset source to which the asset belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder assetSourceInstanceId(String assetSourceInstanceId) {
                 this.assetSourceInstanceId = assetSourceInstanceId;
@@ -374,7 +481,10 @@ public class ListOperationTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * <p>The time when the O&amp;M application was submitted. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1669965908</p>
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -382,7 +492,34 @@ public class ListOperationTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * OperationTicketId.
+             * EffectCount.
+             */
+            public Builder effectCount(Integer effectCount) {
+                this.effectCount = effectCount;
+                return this;
+            }
+
+            /**
+             * EffectEndTime.
+             */
+            public Builder effectEndTime(Integer effectEndTime) {
+                this.effectEndTime = effectEndTime;
+                return this;
+            }
+
+            /**
+             * EffectStartTime.
+             */
+            public Builder effectStartTime(Integer effectStartTime) {
+                this.effectStartTime = effectStartTime;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the O&amp;M application to be reviewed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder operationTicketId(String operationTicketId) {
                 this.operationTicketId = operationTicketId;
@@ -390,7 +527,10 @@ public class ListOperationTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * ProtocolName.
+             * <p>The O&amp;M protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SSH</p>
              */
             public Builder protocolName(String protocolName) {
                 this.protocolName = protocolName;
@@ -398,7 +538,13 @@ public class ListOperationTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>The status of the review. Valid value:</p>
+             * <ul>
+             * <li>Normal: to be reviewed</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder state(String state) {
                 this.state = state;

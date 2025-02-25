@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateClientAlertModeRequest} extends {@link RequestModel}
  *
  * <p>UpdateClientAlertModeRequest</p>
  */
 public class UpdateClientAlertModeRequest extends Request {
-    @Query
-    @NameInMap("Mode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mode")
     private String mode;
 
-    @Query
-    @NameInMap("Uuids")
-    private java.util.List < String > uuids;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuids")
+    private java.util.List<String> uuids;
 
     private UpdateClientAlertModeRequest(Builder builder) {
         super(builder);
@@ -49,13 +54,13 @@ public class UpdateClientAlertModeRequest extends Request {
     /**
      * @return uuids
      */
-    public java.util.List < String > getUuids() {
+    public java.util.List<String> getUuids() {
         return this.uuids;
     }
 
     public static final class Builder extends Request.Builder<UpdateClientAlertModeRequest, Builder> {
         private String mode; 
-        private java.util.List < String > uuids; 
+        private java.util.List<String> uuids; 
 
         private Builder() {
             super();
@@ -68,11 +73,14 @@ public class UpdateClientAlertModeRequest extends Request {
         } 
 
         /**
-         * The protection mode. Valid values:
-         * <p>
+         * <p>The protection mode. Valid values:</p>
+         * <ul>
+         * <li><strong>strict</strong>: The strict mode. False positives may be generated. We recommend that you enable this mode during major events.</li>
+         * <li><strong>balance</strong>: The balanced mode. More risks can be detected with less false positives in this mode.</li>
+         * </ul>
          * 
-         * *   **strict**: The strict mode. False positives may be generated. We recommend that you enable this mode during major events.
-         * *   **balance**: The balanced mode. More risks can be detected with less false positives in this mode.
+         * <strong>example:</strong>
+         * <p>balance</p>
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
@@ -81,9 +89,9 @@ public class UpdateClientAlertModeRequest extends Request {
         }
 
         /**
-         * The UUIDs of servers.
+         * <p>The UUIDs of servers.</p>
          */
-        public Builder uuids(java.util.List < String > uuids) {
+        public Builder uuids(java.util.List<String> uuids) {
             this.putQueryParameter("Uuids", uuids);
             this.uuids = uuids;
             return this;

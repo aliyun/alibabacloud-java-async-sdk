@@ -1,31 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTxtRecordForVerifyResponseBody} extends {@link TeaModel}
  *
  * <p>GetTxtRecordForVerifyResponseBody</p>
  */
 public class GetTxtRecordForVerifyResponseBody extends TeaModel {
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("RR")
+    @com.aliyun.core.annotation.NameInMap("ParentDomainName")
+    private String parentDomainName;
+
+    @com.aliyun.core.annotation.NameInMap("RR")
     private String rr;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Value")
+    @com.aliyun.core.annotation.NameInMap("Value")
     private String value;
 
     private GetTxtRecordForVerifyResponseBody(Builder builder) {
         this.domainName = builder.domainName;
+        this.parentDomainName = builder.parentDomainName;
         this.rr = builder.rr;
         this.requestId = builder.requestId;
         this.value = builder.value;
@@ -44,6 +53,13 @@ public class GetTxtRecordForVerifyResponseBody extends TeaModel {
      */
     public String getDomainName() {
         return this.domainName;
+    }
+
+    /**
+     * @return parentDomainName
+     */
+    public String getParentDomainName() {
+        return this.parentDomainName;
     }
 
     /**
@@ -69,15 +85,19 @@ public class GetTxtRecordForVerifyResponseBody extends TeaModel {
 
     public static final class Builder {
         private String domainName; 
+        private String parentDomainName; 
         private String rr; 
         private String requestId; 
         private String value; 
 
         /**
-         * The domain name.
-         * <p>
+         * <p>The domain name.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, it is not returned.</p>
+         * </blockquote>
          * 
-         * >  If you do not specify this parameter, it is not returned.
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -85,7 +105,21 @@ public class GetTxtRecordForVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * The host record.
+         * <p>The top-level domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com</p>
+         */
+        public Builder parentDomainName(String parentDomainName) {
+            this.parentDomainName = parentDomainName;
+            return this;
+        }
+
+        /**
+         * <p>The hostname.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyunRetrieval</p>
          */
         public Builder rr(String rr) {
             this.rr = rr;
@@ -93,7 +127,10 @@ public class GetTxtRecordForVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9CC0D642-49D4-48DE-A1A5-9F218652E4A7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,10 +138,13 @@ public class GetTxtRecordForVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * The value of the DNS record.
-         * <p>
+         * <p>The record value.</p>
+         * <blockquote>
+         * <p> The validity period is three days.</p>
+         * </blockquote>
          * 
-         * >  The validity period is three days.
+         * <strong>example:</strong>
+         * <p>c99419e6997f41daaa3e*****</p>
          */
         public Builder value(String value) {
             this.value = value;

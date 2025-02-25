@@ -49,13 +49,13 @@ public class DescribeInstanceSwitchNetworkRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeInstanceSwitchNetworkRequest response) {
-            super(response);
-            this.drdsInstanceId = response.drdsInstanceId;
+        private Builder(DescribeInstanceSwitchNetworkRequest request) {
+            super(request);
+            this.drdsInstanceId = request.drdsInstanceId;
         } 
 
         /**
-         * DrdsInstanceId.
+         * The ID of the PolarDB-X 1.0 instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);

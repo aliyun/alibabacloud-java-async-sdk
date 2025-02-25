@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAutoSnapshotTasksRequest} extends {@link RequestModel}
  *
  * <p>DescribeAutoSnapshotTasksRequest</p>
  */
 public class DescribeAutoSnapshotTasksRequest extends Request {
-    @Query
-    @NameInMap("AutoSnapshotPolicyIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoSnapshotPolicyIds")
     private String autoSnapshotPolicyIds;
 
-    @Query
-    @NameInMap("FileSystemIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemIds")
     private String fileSystemIds;
 
-    @Query
-    @NameInMap("FileSystemType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileSystemType;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
     private DescribeAutoSnapshotTasksRequest(Builder builder) {
@@ -102,17 +107,21 @@ public class DescribeAutoSnapshotTasksRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAutoSnapshotTasksRequest response) {
-            super(response);
-            this.autoSnapshotPolicyIds = response.autoSnapshotPolicyIds;
-            this.fileSystemIds = response.fileSystemIds;
-            this.fileSystemType = response.fileSystemType;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(DescribeAutoSnapshotTasksRequest request) {
+            super(request);
+            this.autoSnapshotPolicyIds = request.autoSnapshotPolicyIds;
+            this.fileSystemIds = request.fileSystemIds;
+            this.fileSystemType = request.fileSystemType;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**
-         * AutoSnapshotPolicyIds.
+         * <p>The IDs of automatic snapshot policies.</p>
+         * <p>You can specify a maximum of 100 policy IDs. If you want to query the tasks of multiple automatic snapshot policies, you must separate the policy IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sp-extreme-233e6****,sp-extreme-233e6****, sp-extreme-233e6****</p>
          */
         public Builder autoSnapshotPolicyIds(String autoSnapshotPolicyIds) {
             this.putQueryParameter("AutoSnapshotPolicyIds", autoSnapshotPolicyIds);
@@ -121,7 +130,11 @@ public class DescribeAutoSnapshotTasksRequest extends Request {
         }
 
         /**
-         * FileSystemIds.
+         * <p>The ID of the file system.</p>
+         * <p>You can specify a maximum of 100 file system IDs. If you want to query the snapshots of multiple file systems, you must separate the file system IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>extreme-233e6****,extreme -23vbp****,extreme -23vas****</p>
          */
         public Builder fileSystemIds(String fileSystemIds) {
             this.putQueryParameter("FileSystemIds", fileSystemIds);
@@ -130,7 +143,12 @@ public class DescribeAutoSnapshotTasksRequest extends Request {
         }
 
         /**
-         * FileSystemType.
+         * <p>The type of the file system.</p>
+         * <p>Valid value: extreme, which indicates Extreme NAS file systems.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>extreme</p>
          */
         public Builder fileSystemType(String fileSystemType) {
             this.putQueryParameter("FileSystemType", fileSystemType);
@@ -139,7 +157,12 @@ public class DescribeAutoSnapshotTasksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -148,7 +171,11 @@ public class DescribeAutoSnapshotTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page number.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

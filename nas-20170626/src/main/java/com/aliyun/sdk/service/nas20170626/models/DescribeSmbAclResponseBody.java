@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSmbAclResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSmbAclResponseBody</p>
  */
 public class DescribeSmbAclResponseBody extends TeaModel {
-    @NameInMap("Acl")
+    @com.aliyun.core.annotation.NameInMap("Acl")
     private Acl acl;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeSmbAclResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeSmbAclResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Acl.
+         * <p>The information about the ACL feature.</p>
          */
         public Builder acl(Acl acl) {
             this.acl = acl;
@@ -58,7 +63,10 @@ public class DescribeSmbAclResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>98696EF0-1607-4E9D-B01D-F20930B6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,30 +79,32 @@ public class DescribeSmbAclResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSmbAclResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSmbAclResponseBody</p>
+     */
     public static class Acl extends TeaModel {
-        @NameInMap("AuthMethod")
-        private String authMethod;
-
-        @NameInMap("EnableAnonymousAccess")
+        @com.aliyun.core.annotation.NameInMap("EnableAnonymousAccess")
         private Boolean enableAnonymousAccess;
 
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("EncryptData")
+        @com.aliyun.core.annotation.NameInMap("EncryptData")
         private Boolean encryptData;
 
-        @NameInMap("HomeDirPath")
+        @com.aliyun.core.annotation.NameInMap("HomeDirPath")
         private String homeDirPath;
 
-        @NameInMap("RejectUnencryptedAccess")
+        @com.aliyun.core.annotation.NameInMap("RejectUnencryptedAccess")
         private Boolean rejectUnencryptedAccess;
 
-        @NameInMap("SuperAdminSid")
+        @com.aliyun.core.annotation.NameInMap("SuperAdminSid")
         private String superAdminSid;
 
         private Acl(Builder builder) {
-            this.authMethod = builder.authMethod;
             this.enableAnonymousAccess = builder.enableAnonymousAccess;
             this.enabled = builder.enabled;
             this.encryptData = builder.encryptData;
@@ -109,13 +119,6 @@ public class DescribeSmbAclResponseBody extends TeaModel {
 
         public static Acl create() {
             return builder().build();
-        }
-
-        /**
-         * @return authMethod
-         */
-        public String getAuthMethod() {
-            return this.authMethod;
         }
 
         /**
@@ -161,7 +164,6 @@ public class DescribeSmbAclResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String authMethod; 
             private Boolean enableAnonymousAccess; 
             private Boolean enabled; 
             private Boolean encryptData; 
@@ -170,15 +172,14 @@ public class DescribeSmbAclResponseBody extends TeaModel {
             private String superAdminSid; 
 
             /**
-             * AuthMethod.
-             */
-            public Builder authMethod(String authMethod) {
-                this.authMethod = authMethod;
-                return this;
-            }
-
-            /**
-             * EnableAnonymousAccess.
+             * <p>Indicates whether the file system allows anonymous access. Valid values:</p>
+             * <ul>
+             * <li>true: The file system allows anonymous access.</li>
+             * <li>false: The file system does not allow anonymous access.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableAnonymousAccess(Boolean enableAnonymousAccess) {
                 this.enableAnonymousAccess = enableAnonymousAccess;
@@ -186,7 +187,14 @@ public class DescribeSmbAclResponseBody extends TeaModel {
             }
 
             /**
-             * Enabled.
+             * <p>Indicates whether the ACL feature is enabled. Valid values:</p>
+             * <ul>
+             * <li>true: The ACL feature is enabled.</li>
+             * <li>false: The ACL feature is disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -194,7 +202,14 @@ public class DescribeSmbAclResponseBody extends TeaModel {
             }
 
             /**
-             * EncryptData.
+             * <p>Indicates whether encryption in transit is enabled. Valid values:</p>
+             * <ul>
+             * <li>true: Encryption in transit is enabled.</li>
+             * <li>false: Encryption in transit is disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder encryptData(Boolean encryptData) {
                 this.encryptData = encryptData;
@@ -202,7 +217,10 @@ public class DescribeSmbAclResponseBody extends TeaModel {
             }
 
             /**
-             * HomeDirPath.
+             * <p>The home directory of each user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/home</p>
              */
             public Builder homeDirPath(String homeDirPath) {
                 this.homeDirPath = homeDirPath;
@@ -210,7 +228,14 @@ public class DescribeSmbAclResponseBody extends TeaModel {
             }
 
             /**
-             * RejectUnencryptedAccess.
+             * <p>Indicates whether the file system denies access from non-encrypted clients. Valid values:</p>
+             * <ul>
+             * <li>true: The file system denies access from non-encrypted clients.</li>
+             * <li>false: The file system allows access from non-encrypted clients.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder rejectUnencryptedAccess(Boolean rejectUnencryptedAccess) {
                 this.rejectUnencryptedAccess = rejectUnencryptedAccess;
@@ -218,7 +243,10 @@ public class DescribeSmbAclResponseBody extends TeaModel {
             }
 
             /**
-             * SuperAdminSid.
+             * <p>The ID of a super admin.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S-1-0-0</p>
              */
             public Builder superAdminSid(String superAdminSid) {
                 this.superAdminSid = superAdminSid;

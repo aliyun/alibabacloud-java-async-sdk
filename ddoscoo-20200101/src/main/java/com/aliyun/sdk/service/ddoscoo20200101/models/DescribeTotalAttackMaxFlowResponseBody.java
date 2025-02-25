@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTotalAttackMaxFlowResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTotalAttackMaxFlowResponseBody</p>
  */
 public class DescribeTotalAttackMaxFlowResponseBody extends TeaModel {
-    @NameInMap("Bps")
+    @com.aliyun.core.annotation.NameInMap("Bps")
     private Long bps;
 
-    @NameInMap("Pps")
+    @com.aliyun.core.annotation.NameInMap("Pps")
     private Long pps;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeTotalAttackMaxFlowResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class DescribeTotalAttackMaxFlowResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The peak bandwidth of attack traffic. Unit: bit/s.
+         * <p>The peak bandwidth of attack traffic. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder bps(Long bps) {
             this.bps = bps;
@@ -70,7 +78,10 @@ public class DescribeTotalAttackMaxFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The peak packet rate of attack traffic . Unit: packets per second (pps).
+         * <p>The peak packet rate of attack traffic . Unit: packets per second (pps).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder pps(Long pps) {
             this.pps = pps;
@@ -78,7 +89,10 @@ public class DescribeTotalAttackMaxFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9173A3CB-C40B-559B-96B7-2373830BD06A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

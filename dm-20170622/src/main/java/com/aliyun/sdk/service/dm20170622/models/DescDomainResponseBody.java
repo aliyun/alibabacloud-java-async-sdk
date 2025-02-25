@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20170622.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,79 +11,91 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescDomainResponseBody</p>
  */
 public class DescDomainResponseBody extends TeaModel {
-    @NameInMap("CnameAuthStatus")
+    @com.aliyun.core.annotation.NameInMap("CnameAuthStatus")
     private String cnameAuthStatus;
 
-    @NameInMap("CnameConfirmStatus")
+    @com.aliyun.core.annotation.NameInMap("CnameConfirmStatus")
     private String cnameConfirmStatus;
 
-    @NameInMap("CnameRecord")
+    @com.aliyun.core.annotation.NameInMap("CnameRecord")
     private String cnameRecord;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("DefaultDomain")
+    @com.aliyun.core.annotation.NameInMap("DefaultDomain")
     private String defaultDomain;
 
-    @NameInMap("DkimAuthStatus")
+    @com.aliyun.core.annotation.NameInMap("DkimAuthStatus")
     private String dkimAuthStatus;
 
-    @NameInMap("DkimPublicKey")
+    @com.aliyun.core.annotation.NameInMap("DkimPublicKey")
     private String dkimPublicKey;
 
-    @NameInMap("DkimRR")
+    @com.aliyun.core.annotation.NameInMap("DkimRR")
     private String dkimRR;
 
-    @NameInMap("DnsMx")
+    @com.aliyun.core.annotation.NameInMap("DmarcAuthStatus")
+    private Integer dmarcAuthStatus;
+
+    @com.aliyun.core.annotation.NameInMap("DmarcHostRecord")
+    private String dmarcHostRecord;
+
+    @com.aliyun.core.annotation.NameInMap("DmarcRecord")
+    private String dmarcRecord;
+
+    @com.aliyun.core.annotation.NameInMap("DnsDmarc")
+    private String dnsDmarc;
+
+    @com.aliyun.core.annotation.NameInMap("DnsMx")
     private String dnsMx;
 
-    @NameInMap("DnsSpf")
+    @com.aliyun.core.annotation.NameInMap("DnsSpf")
     private String dnsSpf;
 
-    @NameInMap("DnsTxt")
+    @com.aliyun.core.annotation.NameInMap("DnsTxt")
     private String dnsTxt;
 
-    @NameInMap("DomainId")
+    @com.aliyun.core.annotation.NameInMap("DomainId")
     private String domainId;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("DomainStatus")
+    @com.aliyun.core.annotation.NameInMap("DomainStatus")
     private String domainStatus;
 
-    @NameInMap("DomainType")
+    @com.aliyun.core.annotation.NameInMap("DomainType")
     private String domainType;
 
-    @NameInMap("HostRecord")
+    @com.aliyun.core.annotation.NameInMap("HostRecord")
     private String hostRecord;
 
-    @NameInMap("IcpStatus")
+    @com.aliyun.core.annotation.NameInMap("IcpStatus")
     private String icpStatus;
 
-    @NameInMap("MxAuthStatus")
+    @com.aliyun.core.annotation.NameInMap("MxAuthStatus")
     private String mxAuthStatus;
 
-    @NameInMap("MxRecord")
+    @com.aliyun.core.annotation.NameInMap("MxRecord")
     private String mxRecord;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SpfAuthStatus")
+    @com.aliyun.core.annotation.NameInMap("SpfAuthStatus")
     private String spfAuthStatus;
 
-    @NameInMap("SpfRecord")
+    @com.aliyun.core.annotation.NameInMap("SpfRecord")
     private String spfRecord;
 
-    @NameInMap("SpfRecordV2")
+    @com.aliyun.core.annotation.NameInMap("SpfRecordV2")
     private String spfRecordV2;
 
-    @NameInMap("TlDomainName")
+    @com.aliyun.core.annotation.NameInMap("TlDomainName")
     private String tlDomainName;
 
-    @NameInMap("TracefRecord")
+    @com.aliyun.core.annotation.NameInMap("TracefRecord")
     private String tracefRecord;
 
     private DescDomainResponseBody(Builder builder) {
@@ -96,6 +107,10 @@ public class DescDomainResponseBody extends TeaModel {
         this.dkimAuthStatus = builder.dkimAuthStatus;
         this.dkimPublicKey = builder.dkimPublicKey;
         this.dkimRR = builder.dkimRR;
+        this.dmarcAuthStatus = builder.dmarcAuthStatus;
+        this.dmarcHostRecord = builder.dmarcHostRecord;
+        this.dmarcRecord = builder.dmarcRecord;
+        this.dnsDmarc = builder.dnsDmarc;
         this.dnsMx = builder.dnsMx;
         this.dnsSpf = builder.dnsSpf;
         this.dnsTxt = builder.dnsTxt;
@@ -177,6 +192,34 @@ public class DescDomainResponseBody extends TeaModel {
      */
     public String getDkimRR() {
         return this.dkimRR;
+    }
+
+    /**
+     * @return dmarcAuthStatus
+     */
+    public Integer getDmarcAuthStatus() {
+        return this.dmarcAuthStatus;
+    }
+
+    /**
+     * @return dmarcHostRecord
+     */
+    public String getDmarcHostRecord() {
+        return this.dmarcHostRecord;
+    }
+
+    /**
+     * @return dmarcRecord
+     */
+    public String getDmarcRecord() {
+        return this.dmarcRecord;
+    }
+
+    /**
+     * @return dnsDmarc
+     */
+    public String getDnsDmarc() {
+        return this.dnsDmarc;
     }
 
     /**
@@ -307,6 +350,10 @@ public class DescDomainResponseBody extends TeaModel {
         private String dkimAuthStatus; 
         private String dkimPublicKey; 
         private String dkimRR; 
+        private Integer dmarcAuthStatus; 
+        private String dmarcHostRecord; 
+        private String dmarcRecord; 
+        private String dnsDmarc; 
         private String dnsMx; 
         private String dnsSpf; 
         private String dnsTxt; 
@@ -386,6 +433,38 @@ public class DescDomainResponseBody extends TeaModel {
          */
         public Builder dkimRR(String dkimRR) {
             this.dkimRR = dkimRR;
+            return this;
+        }
+
+        /**
+         * DmarcAuthStatus.
+         */
+        public Builder dmarcAuthStatus(Integer dmarcAuthStatus) {
+            this.dmarcAuthStatus = dmarcAuthStatus;
+            return this;
+        }
+
+        /**
+         * DmarcHostRecord.
+         */
+        public Builder dmarcHostRecord(String dmarcHostRecord) {
+            this.dmarcHostRecord = dmarcHostRecord;
+            return this;
+        }
+
+        /**
+         * DmarcRecord.
+         */
+        public Builder dmarcRecord(String dmarcRecord) {
+            this.dmarcRecord = dmarcRecord;
+            return this;
+        }
+
+        /**
+         * DnsDmarc.
+         */
+        public Builder dnsDmarc(String dnsDmarc) {
+            this.dnsDmarc = dnsDmarc;
             return this;
         }
 

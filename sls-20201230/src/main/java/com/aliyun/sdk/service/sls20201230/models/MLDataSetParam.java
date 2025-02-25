@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link MLDataSetParam} extends {@link TeaModel}
  *
  * <p>MLDataSetParam</p>
  */
 public class MLDataSetParam extends TeaModel {
-    @NameInMap("createBy")
+    @com.aliyun.core.annotation.NameInMap("createBy")
     private String createBy;
 
-    @NameInMap("createTime")
+    @com.aliyun.core.annotation.NameInMap("createTime")
     private Long createTime;
 
-    @NameInMap("dataType")
+    @com.aliyun.core.annotation.NameInMap("dataType")
     private String dataType;
 
-    @NameInMap("datasetId")
+    @com.aliyun.core.annotation.NameInMap("datasetId")
     private String datasetId;
 
-    @NameInMap("description")
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @NameInMap("labelId")
+    @com.aliyun.core.annotation.NameInMap("labelId")
     private String labelId;
 
-    @NameInMap("lastModifyTime")
+    @com.aliyun.core.annotation.NameInMap("lastModifyTime")
     private Long lastModifyTime;
 
-    @NameInMap("name")
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @NameInMap("settingType")
+    @com.aliyun.core.annotation.NameInMap("settingType")
     private String settingType;
 
     private MLDataSetParam(Builder builder) {

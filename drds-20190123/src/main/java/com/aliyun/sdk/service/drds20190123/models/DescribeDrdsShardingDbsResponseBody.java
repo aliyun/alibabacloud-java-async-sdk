@@ -98,7 +98,7 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
         private String total; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -106,7 +106,7 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of database shards returned per page.
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -114,7 +114,7 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
         }
 
         /**
-         * ShardingDbs.
+         * The list of returned database shards.
          */
         public Builder shardingDbs(ShardingDbs shardingDbs) {
             this.shardingDbs = shardingDbs;
@@ -130,7 +130,7 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +138,7 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * The number of returned database shards.
          */
         public Builder total(String total) {
             this.total = total;
@@ -322,7 +322,7 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * BlockingTimeout.
+             * The timeout period for a transaction to wait for the release of the data lock.
              */
             public Builder blockingTimeout(Integer blockingTimeout) {
                 this.blockingTimeout = blockingTimeout;
@@ -330,7 +330,7 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectUrl.
+             * The URL that is used to access the Apsara RDS for MySQL instance.
              */
             public Builder connectUrl(String connectUrl) {
                 this.connectUrl = connectUrl;
@@ -338,7 +338,7 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectionProperties.
+             * The properties of the connection string.
              */
             public Builder connectionProperties(String connectionProperties) {
                 this.connectionProperties = connectionProperties;
@@ -346,7 +346,7 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
             }
 
             /**
-             * DbInstanceId.
+             * The ID of the Apsara RDS for MySQL instance that is used as the storage of the database shard.
              */
             public Builder dbInstanceId(String dbInstanceId) {
                 this.dbInstanceId = dbInstanceId;
@@ -354,7 +354,7 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
             }
 
             /**
-             * DbStatus.
+             * The status of the database.
              */
             public Builder dbStatus(String dbStatus) {
                 this.dbStatus = dbStatus;
@@ -362,7 +362,7 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
             }
 
             /**
-             * DbType.
+             * The engine of the database.
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -370,7 +370,7 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of group on which the database shard is stored.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -378,7 +378,7 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
             }
 
             /**
-             * IdleTimeOut.
+             * The timeout period of an idle connection.
              */
             public Builder idleTimeOut(Integer idleTimeOut) {
                 this.idleTimeOut = idleTimeOut;
@@ -386,7 +386,7 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxPoolSize.
+             * The maximum size of the connection pool.
              */
             public Builder maxPoolSize(Integer maxPoolSize) {
                 this.maxPoolSize = maxPoolSize;
@@ -394,7 +394,7 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
             }
 
             /**
-             * MinPoolSize.
+             * The minimum size of the connection pool.
              */
             public Builder minPoolSize(Integer minPoolSize) {
                 this.minPoolSize = minPoolSize;
@@ -402,7 +402,7 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
             }
 
             /**
-             * PreparedStatementCacheSize.
+             * The size of cache for the returned results.
              */
             public Builder preparedStatementCacheSize(Integer preparedStatementCacheSize) {
                 this.preparedStatementCacheSize = preparedStatementCacheSize;
@@ -410,7 +410,7 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
             }
 
             /**
-             * ShardingDbName.
+             * The name of the database shard.
              */
             public Builder shardingDbName(String shardingDbName) {
                 this.shardingDbName = shardingDbName;
@@ -418,7 +418,7 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The username that is used to connect to the ApsaraDB RDS for MySQL instance.
              */
             public Builder userName(String userName) {
                 this.userName = userName;

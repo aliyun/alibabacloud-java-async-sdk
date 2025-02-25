@@ -13,6 +13,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateStoreRequest extends Request {
     @Body
+    @NameInMap("AutoUnbindDays")
+    private Integer autoUnbindDays;
+
+    @Body
+    @NameInMap("AutoUnbindOfflineEsl")
+    private Boolean autoUnbindOfflineEsl;
+
+    @Body
+    @NameInMap("BarCodeEncode")
+    @Validation(maximum = 1)
+    private Integer barCodeEncode;
+
+    @Body
     @NameInMap("ClientToken")
     private String clientToken;
 
@@ -44,6 +57,9 @@ public class CreateStoreRequest extends Request {
 
     private CreateStoreRequest(Builder builder) {
         super(builder);
+        this.autoUnbindDays = builder.autoUnbindDays;
+        this.autoUnbindOfflineEsl = builder.autoUnbindOfflineEsl;
+        this.barCodeEncode = builder.barCodeEncode;
         this.clientToken = builder.clientToken;
         this.extraParams = builder.extraParams;
         this.parentId = builder.parentId;
@@ -64,6 +80,27 @@ public class CreateStoreRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return autoUnbindDays
+     */
+    public Integer getAutoUnbindDays() {
+        return this.autoUnbindDays;
+    }
+
+    /**
+     * @return autoUnbindOfflineEsl
+     */
+    public Boolean getAutoUnbindOfflineEsl() {
+        return this.autoUnbindOfflineEsl;
+    }
+
+    /**
+     * @return barCodeEncode
+     */
+    public Integer getBarCodeEncode() {
+        return this.barCodeEncode;
     }
 
     /**
@@ -116,6 +153,9 @@ public class CreateStoreRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateStoreRequest, Builder> {
+        private Integer autoUnbindDays; 
+        private Boolean autoUnbindOfflineEsl; 
+        private Integer barCodeEncode; 
         private String clientToken; 
         private String extraParams; 
         private String parentId; 
@@ -128,16 +168,46 @@ public class CreateStoreRequest extends Request {
             super();
         } 
 
-        private Builder(CreateStoreRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.extraParams = response.extraParams;
-            this.parentId = response.parentId;
-            this.phone = response.phone;
-            this.storeName = response.storeName;
-            this.timeZone = response.timeZone;
-            this.userStoreCode = response.userStoreCode;
+        private Builder(CreateStoreRequest request) {
+            super(request);
+            this.autoUnbindDays = request.autoUnbindDays;
+            this.autoUnbindOfflineEsl = request.autoUnbindOfflineEsl;
+            this.barCodeEncode = request.barCodeEncode;
+            this.clientToken = request.clientToken;
+            this.extraParams = request.extraParams;
+            this.parentId = request.parentId;
+            this.phone = request.phone;
+            this.storeName = request.storeName;
+            this.timeZone = request.timeZone;
+            this.userStoreCode = request.userStoreCode;
         } 
+
+        /**
+         * AutoUnbindDays.
+         */
+        public Builder autoUnbindDays(Integer autoUnbindDays) {
+            this.putBodyParameter("AutoUnbindDays", autoUnbindDays);
+            this.autoUnbindDays = autoUnbindDays;
+            return this;
+        }
+
+        /**
+         * AutoUnbindOfflineEsl.
+         */
+        public Builder autoUnbindOfflineEsl(Boolean autoUnbindOfflineEsl) {
+            this.putBodyParameter("AutoUnbindOfflineEsl", autoUnbindOfflineEsl);
+            this.autoUnbindOfflineEsl = autoUnbindOfflineEsl;
+            return this;
+        }
+
+        /**
+         * BarCodeEncode.
+         */
+        public Builder barCodeEncode(Integer barCodeEncode) {
+            this.putBodyParameter("BarCodeEncode", barCodeEncode);
+            this.barCodeEncode = barCodeEncode;
+            return this;
+        }
 
         /**
          * ClientToken.

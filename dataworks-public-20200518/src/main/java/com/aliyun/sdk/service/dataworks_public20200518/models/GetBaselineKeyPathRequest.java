@@ -1,35 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetBaselineKeyPathRequest} extends {@link RequestModel}
  *
  * <p>GetBaselineKeyPathRequest</p>
  */
 public class GetBaselineKeyPathRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("BaselineId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BaselineId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long baselineId;
 
-    @Body
-    @NameInMap("Bizdate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Bizdate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizdate;
 
-    @Body
-    @NameInMap("InGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer inGroupId;
 
     private GetBaselineKeyPathRequest(Builder builder) {
@@ -100,7 +104,7 @@ public class GetBaselineKeyPathRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -109,7 +113,11 @@ public class GetBaselineKeyPathRequest extends Request {
         }
 
         /**
-         * The name of the event.
+         * <p>The name of the event.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder baselineId(Long baselineId) {
             this.putBodyParameter("BaselineId", baselineId);
@@ -118,7 +126,11 @@ public class GetBaselineKeyPathRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-07-07T00:00:00+0800</p>
          */
         public Builder bizdate(String bizdate) {
             this.putBodyParameter("Bizdate", bizdate);
@@ -127,7 +139,11 @@ public class GetBaselineKeyPathRequest extends Request {
         }
 
         /**
-         * The ID of the event.
+         * <p>The ID of the event.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder inGroupId(Integer inGroupId) {
             this.putBodyParameter("InGroupId", inGroupId);

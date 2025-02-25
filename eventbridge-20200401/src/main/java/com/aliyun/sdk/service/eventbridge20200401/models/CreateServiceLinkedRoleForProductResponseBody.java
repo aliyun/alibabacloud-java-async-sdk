@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
@@ -12,20 +11,24 @@ import com.aliyun.sdk.gateway.eventbridge.models.*;
  * <p>CreateServiceLinkedRoleForProductResponseBody</p>
  */
 public class CreateServiceLinkedRoleForProductResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("HttpCode")
+    private Integer httpCode;
+
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateServiceLinkedRoleForProductResponseBody(Builder builder) {
         this.code = builder.code;
+        this.httpCode = builder.httpCode;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
@@ -44,6 +47,13 @@ public class CreateServiceLinkedRoleForProductResponseBody extends TeaModel {
      */
     public String getCode() {
         return this.code;
+    }
+
+    /**
+     * @return httpCode
+     */
+    public Integer getHttpCode() {
+        return this.httpCode;
     }
 
     /**
@@ -69,6 +79,7 @@ public class CreateServiceLinkedRoleForProductResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
+        private Integer httpCode; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -78,6 +89,14 @@ public class CreateServiceLinkedRoleForProductResponseBody extends TeaModel {
          */
         public Builder code(String code) {
             this.code = code;
+            return this;
+        }
+
+        /**
+         * HttpCode.
+         */
+        public Builder httpCode(Integer httpCode) {
+            this.httpCode = httpCode;
             return this;
         }
 

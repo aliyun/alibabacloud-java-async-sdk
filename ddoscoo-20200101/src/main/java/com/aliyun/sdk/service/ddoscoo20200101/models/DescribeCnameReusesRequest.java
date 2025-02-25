@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCnameReusesRequest} extends {@link RequestModel}
  *
  * <p>DescribeCnameReusesRequest</p>
  */
 public class DescribeCnameReusesRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Domains")
-    @Validation(required = true)
-    private java.util.List < String > domains;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Domains")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> domains;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private DescribeCnameReusesRequest(Builder builder) {
@@ -55,7 +60,7 @@ public class DescribeCnameReusesRequest extends Request {
     /**
      * @return domains
      */
-    public java.util.List < String > getDomains() {
+    public java.util.List<String> getDomains() {
         return this.domains;
     }
 
@@ -68,7 +73,7 @@ public class DescribeCnameReusesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeCnameReusesRequest, Builder> {
         private String regionId; 
-        private java.util.List < String > domains; 
+        private java.util.List<String> domains; 
         private String resourceGroupId; 
 
         private Builder() {
@@ -92,9 +97,12 @@ public class DescribeCnameReusesRequest extends Request {
         }
 
         /**
-         * Domains.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
          */
-        public Builder domains(java.util.List < String > domains) {
+        public Builder domains(java.util.List<String> domains) {
             this.putQueryParameter("Domains", domains);
             this.domains = domains;
             return this;

@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SkuSaleInfoListResult} extends {@link TeaModel}
  *
  * <p>SkuSaleInfoListResult</p>
  */
 public class SkuSaleInfoListResult extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("skuSaleInfos")
-    private java.util.List < SkuSaleInfo > skuSaleInfos;
+    @com.aliyun.core.annotation.NameInMap("skuSaleInfos")
+    private java.util.List<SkuSaleInfo> skuSaleInfos;
 
     private SkuSaleInfoListResult(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class SkuSaleInfoListResult extends TeaModel {
     /**
      * @return skuSaleInfos
      */
-    public java.util.List < SkuSaleInfo > getSkuSaleInfos() {
+    public java.util.List<SkuSaleInfo> getSkuSaleInfos() {
         return this.skuSaleInfos;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SkuSaleInfo > skuSaleInfos; 
+        private java.util.List<SkuSaleInfo> skuSaleInfos; 
 
         /**
          * requestId.
@@ -60,7 +65,7 @@ public class SkuSaleInfoListResult extends TeaModel {
         /**
          * skuSaleInfos.
          */
-        public Builder skuSaleInfos(java.util.List < SkuSaleInfo > skuSaleInfos) {
+        public Builder skuSaleInfos(java.util.List<SkuSaleInfo> skuSaleInfos) {
             this.skuSaleInfos = skuSaleInfos;
             return this;
         }

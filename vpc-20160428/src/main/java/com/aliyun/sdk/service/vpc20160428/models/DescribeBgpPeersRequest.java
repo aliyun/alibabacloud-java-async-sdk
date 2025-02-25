@@ -1,61 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBgpPeersRequest} extends {@link RequestModel}
  *
  * <p>DescribeBgpPeersRequest</p>
  */
 public class DescribeBgpPeersRequest extends Request {
-    @Query
-    @NameInMap("BgpGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BgpGroupId")
     private String bgpGroupId;
 
-    @Query
-    @NameInMap("BgpPeerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BgpPeerId")
     private String bgpPeerId;
 
-    @Query
-    @NameInMap("IsDefault")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsDefault")
     private Boolean isDefault;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RouterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouterId")
     private String routerId;
 
     private DescribeBgpPeersRequest(Builder builder) {
@@ -196,7 +201,10 @@ public class DescribeBgpPeersRequest extends Request {
         } 
 
         /**
-         * The ID of the BGP group to which the BGP peer that you want to query belongs.
+         * <p>The ID of the BGP group to which the BGP peer that you want to query belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bgpg-2zev8h2wo414sfh****</p>
          */
         public Builder bgpGroupId(String bgpGroupId) {
             this.putQueryParameter("BgpGroupId", bgpGroupId);
@@ -205,7 +213,10 @@ public class DescribeBgpPeersRequest extends Request {
         }
 
         /**
-         * The ID of the BGP peer that you want to query.
+         * <p>The ID of the BGP peer that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bgp-2ze3un0ft1jd1xd****</p>
          */
         public Builder bgpPeerId(String bgpPeerId) {
             this.putQueryParameter("BgpPeerId", bgpPeerId);
@@ -214,11 +225,14 @@ public class DescribeBgpPeersRequest extends Request {
         }
 
         /**
-         * Specifies whether the BGP group is the default group. Valid values:
-         * <p>
+         * <p>Specifies whether the BGP group is the default group. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isDefault(Boolean isDefault) {
             this.putQueryParameter("IsDefault", isDefault);
@@ -245,7 +259,10 @@ public class DescribeBgpPeersRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -254,7 +271,10 @@ public class DescribeBgpPeersRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: **1 to 50**. Default value: **10**.
+         * <p>The number of entries per page. Valid values: <strong>1 to 50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -263,10 +283,12 @@ public class DescribeBgpPeersRequest extends Request {
         }
 
         /**
-         * The region ID of the BGP group to which the BGP peer that you want to query belongs.
-         * <p>
+         * <p>The region ID of the BGP group to which the BGP peer that you want to query belongs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -293,7 +315,10 @@ public class DescribeBgpPeersRequest extends Request {
         }
 
         /**
-         * The ID of the virtual border router (VBR) that is associated with the BGP peer that you want to query.
+         * <p>The ID of the virtual border router (VBR) that is associated with the BGP peer that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vbr-2zecmmvg5gvu8i4te****</p>
          */
         public Builder routerId(String routerId) {
             this.putQueryParameter("RouterId", routerId);

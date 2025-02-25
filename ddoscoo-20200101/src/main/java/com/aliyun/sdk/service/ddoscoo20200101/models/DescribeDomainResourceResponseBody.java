@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainResourceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainResourceResponseBody</p>
  */
 public class DescribeDomainResourceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
-    @NameInMap("WebRules")
-    private java.util.List < WebRules> webRules;
+    @com.aliyun.core.annotation.NameInMap("WebRules")
+    private java.util.List<WebRules> webRules;
 
     private DescribeDomainResourceResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -52,17 +57,20 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
     /**
      * @return webRules
      */
-    public java.util.List < WebRules> getWebRules() {
+    public java.util.List<WebRules> getWebRules() {
         return this.webRules;
     }
 
     public static final class Builder {
         private String requestId; 
         private Long totalCount; 
-        private java.util.List < WebRules> webRules; 
+        private java.util.List<WebRules> webRules; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39499F01-19D9-4EA4-A0E9-C6014BA5CDBE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +78,10 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of forwarding rules.
+         * <p>The total number of forwarding rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -78,9 +89,9 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations of the forwarding rule.
+         * <p>The configurations of the forwarding rule.</p>
          */
-        public Builder webRules(java.util.List < WebRules> webRules) {
+        public Builder webRules(java.util.List<WebRules> webRules) {
             this.webRules = webRules;
             return this;
         }
@@ -91,11 +102,17 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainResourceResponseBody</p>
+     */
     public static class ProxyTypes extends TeaModel {
-        @NameInMap("ProxyPorts")
-        private java.util.List < String > proxyPorts;
+        @com.aliyun.core.annotation.NameInMap("ProxyPorts")
+        private java.util.List<String> proxyPorts;
 
-        @NameInMap("ProxyType")
+        @com.aliyun.core.annotation.NameInMap("ProxyType")
         private String proxyType;
 
         private ProxyTypes(Builder builder) {
@@ -114,7 +131,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         /**
          * @return proxyPorts
          */
-        public java.util.List < String > getProxyPorts() {
+        public java.util.List<String> getProxyPorts() {
             return this.proxyPorts;
         }
 
@@ -126,25 +143,28 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > proxyPorts; 
+            private java.util.List<String> proxyPorts; 
             private String proxyType; 
 
             /**
-             * The port numbers.
+             * <p>The port numbers.</p>
              */
-            public Builder proxyPorts(java.util.List < String > proxyPorts) {
+            public Builder proxyPorts(java.util.List<String> proxyPorts) {
                 this.proxyPorts = proxyPorts;
                 return this;
             }
 
             /**
-             * The type of the protocol. Valid values:
-             * <p>
+             * <p>The type of the protocol. Valid values:</p>
+             * <ul>
+             * <li><strong>http</strong></li>
+             * <li><strong>https</strong></li>
+             * <li><strong>websocket</strong></li>
+             * <li><strong>websockets</strong></li>
+             * </ul>
              * 
-             * *   **http**
-             * *   **https**
-             * *   **websocket**
-             * *   **websockets**
+             * <strong>example:</strong>
+             * <p>http</p>
              */
             public Builder proxyType(String proxyType) {
                 this.proxyType = proxyType;
@@ -158,81 +178,87 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainResourceResponseBody</p>
+     */
     public static class WebRules extends TeaModel {
-        @NameInMap("BlackList")
-        private java.util.List < String > blackList;
+        @com.aliyun.core.annotation.NameInMap("BlackList")
+        private java.util.List<String> blackList;
 
-        @NameInMap("CcEnabled")
+        @com.aliyun.core.annotation.NameInMap("CcEnabled")
         private Boolean ccEnabled;
 
-        @NameInMap("CcRuleEnabled")
+        @com.aliyun.core.annotation.NameInMap("CcRuleEnabled")
         private Boolean ccRuleEnabled;
 
-        @NameInMap("CcTemplate")
+        @com.aliyun.core.annotation.NameInMap("CcTemplate")
         private String ccTemplate;
 
-        @NameInMap("CertName")
+        @com.aliyun.core.annotation.NameInMap("CertName")
         private String certName;
 
-        @NameInMap("Cname")
+        @com.aliyun.core.annotation.NameInMap("Cname")
         private String cname;
 
-        @NameInMap("CustomCiphers")
-        private java.util.List < String > customCiphers;
+        @com.aliyun.core.annotation.NameInMap("CustomCiphers")
+        private java.util.List<String> customCiphers;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Http2Enable")
+        @com.aliyun.core.annotation.NameInMap("Http2Enable")
         private Boolean http2Enable;
 
-        @NameInMap("Http2HttpsEnable")
+        @com.aliyun.core.annotation.NameInMap("Http2HttpsEnable")
         private Boolean http2HttpsEnable;
 
-        @NameInMap("Https2HttpEnable")
+        @com.aliyun.core.annotation.NameInMap("Https2HttpEnable")
         private Boolean https2HttpEnable;
 
-        @NameInMap("HttpsExt")
+        @com.aliyun.core.annotation.NameInMap("HttpsExt")
         private String httpsExt;
 
-        @NameInMap("InstanceIds")
-        private java.util.List < String > instanceIds;
+        @com.aliyun.core.annotation.NameInMap("InstanceIds")
+        private java.util.List<String> instanceIds;
 
-        @NameInMap("OcspEnabled")
+        @com.aliyun.core.annotation.NameInMap("OcspEnabled")
         private Boolean ocspEnabled;
 
-        @NameInMap("PolicyMode")
+        @com.aliyun.core.annotation.NameInMap("PolicyMode")
         private String policyMode;
 
-        @NameInMap("ProxyEnabled")
+        @com.aliyun.core.annotation.NameInMap("ProxyEnabled")
         private Boolean proxyEnabled;
 
-        @NameInMap("ProxyTypes")
-        private java.util.List < ProxyTypes> proxyTypes;
+        @com.aliyun.core.annotation.NameInMap("ProxyTypes")
+        private java.util.List<ProxyTypes> proxyTypes;
 
-        @NameInMap("PunishReason")
+        @com.aliyun.core.annotation.NameInMap("PunishReason")
         private Integer punishReason;
 
-        @NameInMap("PunishStatus")
+        @com.aliyun.core.annotation.NameInMap("PunishStatus")
         private Boolean punishStatus;
 
-        @NameInMap("RealServers")
-        private java.util.List < String > realServers;
+        @com.aliyun.core.annotation.NameInMap("RealServers")
+        private java.util.List<String> realServers;
 
-        @NameInMap("RsType")
+        @com.aliyun.core.annotation.NameInMap("RsType")
         private Integer rsType;
 
-        @NameInMap("Ssl13Enabled")
+        @com.aliyun.core.annotation.NameInMap("Ssl13Enabled")
         private Boolean ssl13Enabled;
 
-        @NameInMap("SslCiphers")
+        @com.aliyun.core.annotation.NameInMap("SslCiphers")
         private String sslCiphers;
 
-        @NameInMap("SslProtocols")
+        @com.aliyun.core.annotation.NameInMap("SslProtocols")
         private String sslProtocols;
 
-        @NameInMap("WhiteList")
-        private java.util.List < String > whiteList;
+        @com.aliyun.core.annotation.NameInMap("WhiteList")
+        private java.util.List<String> whiteList;
 
         private WebRules(Builder builder) {
             this.blackList = builder.blackList;
@@ -273,7 +299,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         /**
          * @return blackList
          */
-        public java.util.List < String > getBlackList() {
+        public java.util.List<String> getBlackList() {
             return this.blackList;
         }
 
@@ -315,7 +341,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         /**
          * @return customCiphers
          */
-        public java.util.List < String > getCustomCiphers() {
+        public java.util.List<String> getCustomCiphers() {
             return this.customCiphers;
         }
 
@@ -357,7 +383,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         /**
          * @return instanceIds
          */
-        public java.util.List < String > getInstanceIds() {
+        public java.util.List<String> getInstanceIds() {
             return this.instanceIds;
         }
 
@@ -385,7 +411,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         /**
          * @return proxyTypes
          */
-        public java.util.List < ProxyTypes> getProxyTypes() {
+        public java.util.List<ProxyTypes> getProxyTypes() {
             return this.proxyTypes;
         }
 
@@ -406,7 +432,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         /**
          * @return realServers
          */
-        public java.util.List < String > getRealServers() {
+        public java.util.List<String> getRealServers() {
             return this.realServers;
         }
 
@@ -441,51 +467,54 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         /**
          * @return whiteList
          */
-        public java.util.List < String > getWhiteList() {
+        public java.util.List<String> getWhiteList() {
             return this.whiteList;
         }
 
         public static final class Builder {
-            private java.util.List < String > blackList; 
+            private java.util.List<String> blackList; 
             private Boolean ccEnabled; 
             private Boolean ccRuleEnabled; 
             private String ccTemplate; 
             private String certName; 
             private String cname; 
-            private java.util.List < String > customCiphers; 
+            private java.util.List<String> customCiphers; 
             private String domain; 
             private Boolean http2Enable; 
             private Boolean http2HttpsEnable; 
             private Boolean https2HttpEnable; 
             private String httpsExt; 
-            private java.util.List < String > instanceIds; 
+            private java.util.List<String> instanceIds; 
             private Boolean ocspEnabled; 
             private String policyMode; 
             private Boolean proxyEnabled; 
-            private java.util.List < ProxyTypes> proxyTypes; 
+            private java.util.List<ProxyTypes> proxyTypes; 
             private Integer punishReason; 
             private Boolean punishStatus; 
-            private java.util.List < String > realServers; 
+            private java.util.List<String> realServers; 
             private Integer rsType; 
             private Boolean ssl13Enabled; 
             private String sslCiphers; 
             private String sslProtocols; 
-            private java.util.List < String > whiteList; 
+            private java.util.List<String> whiteList; 
 
             /**
-             * The IP addresses that are included in the blacklist of the domain name.
+             * <p>The IP addresses that are included in the blacklist of the domain name.</p>
              */
-            public Builder blackList(java.util.List < String > blackList) {
+            public Builder blackList(java.util.List<String> blackList) {
                 this.blackList = blackList;
                 return this;
             }
 
             /**
-             * Indicates whether the Frequency Control policy is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether Frequency Control is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder ccEnabled(Boolean ccEnabled) {
                 this.ccEnabled = ccEnabled;
@@ -493,11 +522,14 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Custom Rule switch of the Frequency Control policy is turned on. Valid values:
-             * <p>
+             * <p>Indicates whether the Custom Rules switch of Frequency Control is turned on. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder ccRuleEnabled(Boolean ccRuleEnabled) {
                 this.ccRuleEnabled = ccRuleEnabled;
@@ -505,13 +537,16 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The mode of the Frequency Control policy. Valid values:
-             * <p>
+             * <p>The mode of Frequency Control. Valid values:</p>
+             * <ul>
+             * <li><strong>default</strong>: the Normal mode</li>
+             * <li><strong>gf_under_attack</strong>: the Emergency mode</li>
+             * <li><strong>gf_sos_verify</strong>: the Strict mode</li>
+             * <li><strong>gf_sos_verify</strong>: the Super Strict mode</li>
+             * </ul>
              * 
-             * *   **default**: the Normal mode
-             * *   **gf_under_attack**: the Emergency mode
-             * *   **gf_sos_verify**: the Strict mode
-             * *   **gf_sos_verify**: the Super Strict mode
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder ccTemplate(String ccTemplate) {
                 this.ccTemplate = ccTemplate;
@@ -519,7 +554,10 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the SSL certificate used by the domain name.
+             * <p>The name of the SSL certificate used by the domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>49944XX.pem</p>
              */
             public Builder certName(String certName) {
                 this.certName = certName;
@@ -527,7 +565,10 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The CNAME provided by the instance to which the domain name is added.
+             * <p>The CNAME provided by the instance to which the domain name is added.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0ekb69x3j9wvXXXX.aliyunddosXXXX.com</p>
              */
             public Builder cname(String cname) {
                 this.cname = cname;
@@ -535,15 +576,18 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The custom cipher suites.
+             * <p>The custom cipher suites.</p>
              */
-            public Builder customCiphers(java.util.List < String > customCiphers) {
+            public Builder customCiphers(java.util.List<String> customCiphers) {
                 this.customCiphers = customCiphers;
                 return this;
             }
 
             /**
-             * The domain name of the website.
+             * <p>The domain name of the website.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -551,11 +595,14 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Enable HTTP/2 is turned on. Valid values:
-             * <p>
+             * <p>Indicates whether Enable HTTP/2 is turned on. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder http2Enable(Boolean http2Enable) {
                 this.http2Enable = http2Enable;
@@ -563,11 +610,14 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Enforce HTTPS Routing is turned on. Valid values:
-             * <p>
+             * <p>Indicates whether Enable HTTPS Redirection is turned on. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder http2HttpsEnable(Boolean http2HttpsEnable) {
                 this.http2HttpsEnable = http2HttpsEnable;
@@ -575,11 +625,14 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Enable HTTP is turned on. Valid values:
-             * <p>
+             * <p>Indicates whether Enable HTTP Redirection of Back-to-origin Requests is turned on. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder https2HttpEnable(Boolean https2HttpEnable) {
                 this.https2HttpEnable = https2HttpEnable;
@@ -587,12 +640,15 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The advanced HTTPS settings. This parameter takes effect only when the value of the **ProxyType** parameter includes **https**. The value is a string that consists of a JSON struct. The JSON struct contains the following fields:
-             * <p>
+             * <p>The advanced HTTPS settings. This parameter takes effect only when the value of the <strong>ProxyType</strong> parameter includes <strong>https</strong>. The value is a string that consists of a JSON struct. The JSON struct contains the following fields:</p>
+             * <ul>
+             * <li><strong>Http2https</strong>: indicates whether Enable HTTPS Redirection is turned on. Data type: integer. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that Enable HTTPS Redirection is turned on. The value 1 indicates that Enable HTTPS Redirection is turned off.</li>
+             * <li><strong>Https2http</strong>: indicates whether Enable HTTP Redirection of Back-to-origin Requests is turned on. Data type: integer. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that the feature is turned on. The value 1 indicates that the feature is turned off.</li>
+             * <li><strong>Http2</strong>: indicates whether Enable HTTP/2 is turned on. Data type: integer. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that Enable HTTP/2 is turned off. The value 1 indicates that Enable HTTP/2 is turned on.</li>
+             * </ul>
              * 
-             * *   **Http2https**: indicates whether the feature of redirecting HTTP requests to HTTPS requests is enabled. Data type: integer. Valid values: **0** and **1**. The value 0 indicates that the feature is disabled. The value 1 indicates that the feature is enabled.
-             * *   **Https2http**: indicates whether the feature of redirecting HTTPS requests to HTTP requests is enabled. Data type: integer. Valid values: **0** and **1**. The value 0 indicates that the feature is disabled. The value 1 indicates that the feature is enabled.
-             * *   **Http2**: indicates whether HTTP/2 is supported. Data type: integer. Valid values: **0** and **1**. The value 0 indicates that HTTP/2 is not supported. The value 1 indicates that HTTP/2 is supported.
+             * <strong>example:</strong>
+             * <p>{&quot;Https2http&quot;:0,&quot;Http2&quot;:0,&quot;Http2https&quot;:0}</p>
              */
             public Builder httpsExt(String httpsExt) {
                 this.httpsExt = httpsExt;
@@ -600,18 +656,22 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the instances to which the domain name is added.
+             * <p>The IDs of the instances to which the domain name is added.</p>
              */
-            public Builder instanceIds(java.util.List < String > instanceIds) {
+            public Builder instanceIds(java.util.List<String> instanceIds) {
                 this.instanceIds = instanceIds;
                 return this;
             }
 
             /**
-             * Indicates whether the Online Certificate Status Protocol (OCSP) feature is enabled. Valid values:
-             * <p>
-             * - **true**: yes
-             * - **false**: no
+             * <p>Indicates whether the Online Certificate Status Protocol (OCSP) feature is turned on. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder ocspEnabled(Boolean ocspEnabled) {
                 this.ocspEnabled = ocspEnabled;
@@ -619,12 +679,15 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The load balancing algorithm for back-to-origin traffic. Valid values:
-             * <p>
+             * <p>The scheduling algorithm for back-to-origin traffic. Valid values:</p>
+             * <ul>
+             * <li><strong>ip_hash</strong>: the IP hash algorithm. This algorithm is used to redirect the requests from the same IP address to the same origin server.</li>
+             * <li><strong>rr</strong>: the round-robin algorithm. This algorithm is used to redirect requests to origin servers in turn.</li>
+             * <li><strong>least_time</strong>: the least response time algorithm. This algorithm is used to minimize the latency when requests are forwarded from the instance to origin servers based on the intelligent DNS resolution feature.</li>
+             * </ul>
              * 
-             * *   **ip_hash**: the IP hash algorithm. This algorithm is used to redirect the requests from the same IP address to the same origin server.
-             * *   **rr**: the round-robin algorithm. This algorithm is used to redirect requests to origin servers in turn.
-             * *   **least_time**: the least response time algorithm. This algorithm is used to minimize the latency when requests are forwarded from Anti-DDoS Pro or Anti-DDoS Premium instances to origin servers based on the intelligent DNS resolution feature.
+             * <strong>example:</strong>
+             * <p>ip_hash</p>
              */
             public Builder policyMode(String policyMode) {
                 this.policyMode = policyMode;
@@ -632,11 +695,14 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instance forwards the traffic that is destined for the website. Valid values:
-             * <p>
+             * <p>Indicates whether the instance forwards the traffic that is destined for the website. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**: Anti-DDoS Pro or Anti-DDoS Premium forwards the traffic that is destined for the website.
-             * *   **false**: no
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder proxyEnabled(Boolean proxyEnabled) {
                 this.proxyEnabled = proxyEnabled;
@@ -644,21 +710,23 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The details about the protocol type and port number.
+             * <p>The details about the protocol type and port number.</p>
              */
-            public Builder proxyTypes(java.util.List < ProxyTypes> proxyTypes) {
+            public Builder proxyTypes(java.util.List<ProxyTypes> proxyTypes) {
                 this.proxyTypes = proxyTypes;
                 return this;
             }
 
             /**
-             * The reason why the domain name is invalid. Valid values:
-             * <p>
+             * <p>The reason why the domain name is invalid. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: No Content Provider (ICP) filing is completed for the domain name.</li>
+             * <li><strong>2</strong>: The business for which you registered the domain name does not meet regulatory requirements.</li>
+             * </ul>
+             * <p>If the two reasons are both involved, the value <strong>2</strong> is returned.</p>
              * 
-             * *   **1**: No Content Provider (ICP) filing is completed for the domain name.
-             * *   **2**: The business for which you registered the domain name does not meet regulatory requirements.
-             * 
-             * If the two reasons are both involved, the value **2** is returned.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder punishReason(Integer punishReason) {
                 this.punishReason = punishReason;
@@ -666,11 +734,14 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the domain name is invalid. Valid values:
-             * <p>
+             * <p>Indicates whether the domain name is invalid. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The domain name is invalid. You can view the specific reasons from the <strong>PunishReason</strong> parameter.</li>
+             * <li><strong>false</strong>: The domain name is valid.</li>
+             * </ul>
              * 
-             * *   **true**: The domain name is invalid. You can view the specific reasons from the **PunishReason** parameter.
-             * *   **false**: The domain name is valid.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder punishStatus(Boolean punishStatus) {
                 this.punishStatus = punishStatus;
@@ -678,19 +749,22 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The addresses of origin servers.
+             * <p>The addresses of origin servers.</p>
              */
-            public Builder realServers(java.util.List < String > realServers) {
+            public Builder realServers(java.util.List<String> realServers) {
                 this.realServers = realServers;
                 return this;
             }
 
             /**
-             * The address type of the origin server. Valid values:
-             * <p>
+             * <p>The address type of the origin server. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: IP address</li>
+             * <li><strong>1</strong>: domain name</li>
+             * </ul>
              * 
-             * *   **0**: IP address
-             * *   **1**: domain name
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder rsType(Integer rsType) {
                 this.rsType = rsType;
@@ -698,11 +772,14 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether TLS 1.3 is supported. Valid values:
-             * <p>
+             * <p>Indicates whether TLS 1.3 is supported. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder ssl13Enabled(Boolean ssl13Enabled) {
                 this.ssl13Enabled = ssl13Enabled;
@@ -710,12 +787,15 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the cipher suite. Valid values:
-             * <p>
+             * <p>The type of the cipher suite. Valid values:</p>
+             * <ul>
+             * <li><strong>default</strong>: custom cipher suite</li>
+             * <li><strong>all</strong>: all cipher suites</li>
+             * <li><strong>strong</strong>: strong cipher suites</li>
+             * </ul>
              * 
-             * *   **default**: custom cipher suite
-             * *   **all**: all cipher suites
-             * *   **strong**: strong cipher suites
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder sslCiphers(String sslCiphers) {
                 this.sslCiphers = sslCiphers;
@@ -723,12 +803,15 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the TLS protocol. Valid values:
-             * <p>
+             * <p>The version of the TLS protocol. Valid values:</p>
+             * <ul>
+             * <li><strong>tls1.0</strong>: TLS 1.0 or later</li>
+             * <li><strong>tls1.1</strong>: TLS 1.1 or later</li>
+             * <li><strong>tls1.2</strong>: TLS 1.2 or later</li>
+             * </ul>
              * 
-             * *   **tls1.0**: TLS 1.0 or later
-             * *   **tls1.1**: TLS 1.1 or later
-             * *   **tls1.2**: TLS 1.2 or later
+             * <strong>example:</strong>
+             * <p>tls1.0</p>
              */
             public Builder sslProtocols(String sslProtocols) {
                 this.sslProtocols = sslProtocols;
@@ -736,9 +819,9 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses that are included in the whitelist of the domain name.
+             * <p>The IP addresses that are included in the whitelist of the domain name.</p>
              */
-            public Builder whiteList(java.util.List < String > whiteList) {
+            public Builder whiteList(java.util.List<String> whiteList) {
                 this.whiteList = whiteList;
                 return this;
             }

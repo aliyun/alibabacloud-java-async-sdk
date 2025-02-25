@@ -1,3 +1,18 @@
+2024-12-13 Version: 1.0.11
+- Generated java-async 2021-05-15 for cloudsso.
+
+2024-06-03 Version: 1.0.10
+- Generated java-async 2021-05-15 for cloudsso.
+
+2024-04-25 Version: 1.0.9
+- Generated java-async 2021-05-15 for cloudsso.
+
+2024-03-29 Version: 1.0.8
+- Generated java-async 2021-05-15 for cloudsso.
+
+2024-02-07 Version: 1.0.7
+- Generated java-async 2021-05-15 for cloudsso.
+
 2023-11-27 Version: 1.0.6
 - Generated java-async 2021-05-15 for cloudsso.
 

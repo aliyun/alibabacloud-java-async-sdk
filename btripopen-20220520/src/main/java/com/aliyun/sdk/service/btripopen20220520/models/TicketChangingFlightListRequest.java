@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TicketChangingFlightListRequest} extends {@link RequestModel}
  *
  * <p>TicketChangingFlightListRequest</p>
  */
 public class TicketChangingFlightListRequest extends Request {
-    @Query
-    @NameInMap("arr_city")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("arr_city")
     private String arrCity;
 
-    @Query
-    @NameInMap("dep_city")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dep_city")
     private String depCity;
 
-    @Query
-    @NameInMap("dep_date")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dep_date")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String depDate;
 
-    @Query
-    @NameInMap("dis_order_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dis_order_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String disOrderId;
 
-    @Query
-    @NameInMap("is_voluntary")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("is_voluntary")
     private Integer isVoluntary;
 
-    @Query
-    @NameInMap("traveler_info_list")
-    private java.util.List < TravelerInfoList> travelerInfoList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("traveler_info_list")
+    private java.util.List<TravelerInfoList> travelerInfoList;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private TicketChangingFlightListRequest(Builder builder) {
@@ -104,7 +109,7 @@ public class TicketChangingFlightListRequest extends Request {
     /**
      * @return travelerInfoList
      */
-    public java.util.List < TravelerInfoList> getTravelerInfoList() {
+    public java.util.List<TravelerInfoList> getTravelerInfoList() {
         return this.travelerInfoList;
     }
 
@@ -121,7 +126,7 @@ public class TicketChangingFlightListRequest extends Request {
         private String depDate; 
         private String disOrderId; 
         private Integer isVoluntary; 
-        private java.util.List < TravelerInfoList> travelerInfoList; 
+        private java.util.List<TravelerInfoList> travelerInfoList; 
         private String xAcsBtripCorpToken; 
 
         private Builder() {
@@ -158,7 +163,10 @@ public class TicketChangingFlightListRequest extends Request {
         }
 
         /**
-         * dep_date.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000-00-00 00:00:00</p>
          */
         public Builder depDate(String depDate) {
             this.putQueryParameter("dep_date", depDate);
@@ -167,7 +175,10 @@ public class TicketChangingFlightListRequest extends Request {
         }
 
         /**
-         * dis_order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dis123</p>
          */
         public Builder disOrderId(String disOrderId) {
             this.putQueryParameter("dis_order_id", disOrderId);
@@ -187,7 +198,7 @@ public class TicketChangingFlightListRequest extends Request {
         /**
          * traveler_info_list.
          */
-        public Builder travelerInfoList(java.util.List < TravelerInfoList> travelerInfoList) {
+        public Builder travelerInfoList(java.util.List<TravelerInfoList> travelerInfoList) {
             String travelerInfoListShrink = shrink(travelerInfoList, "traveler_info_list", "json");
             this.putQueryParameter("traveler_info_list", travelerInfoListShrink);
             this.travelerInfoList = travelerInfoList;
@@ -210,23 +221,29 @@ public class TicketChangingFlightListRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TicketChangingFlightListRequest} extends {@link TeaModel}
+     *
+     * <p>TicketChangingFlightListRequest</p>
+     */
     public static class TravelerInfoList extends TeaModel {
-        @NameInMap("arr_city")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("arr_city")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String arrCity;
 
-        @NameInMap("dep_city")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("dep_city")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String depCity;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("user_id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("user_id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String userId;
 
         private TravelerInfoList(Builder builder) {
@@ -288,7 +305,10 @@ public class TicketChangingFlightListRequest extends Request {
             private String userId; 
 
             /**
-             * arr_city.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BJS</p>
              */
             public Builder arrCity(String arrCity) {
                 this.arrCity = arrCity;
@@ -296,7 +316,10 @@ public class TicketChangingFlightListRequest extends Request {
             }
 
             /**
-             * dep_city.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HGH</p>
              */
             public Builder depCity(String depCity) {
                 this.depCity = depCity;
@@ -320,7 +343,10 @@ public class TicketChangingFlightListRequest extends Request {
             }
 
             /**
-             * user_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23231</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

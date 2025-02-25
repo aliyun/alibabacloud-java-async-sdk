@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateWhiteRuleListRequest</p>
  */
 public class UpdateWhiteRuleListRequest extends Request {
-    @Body
-    @NameInMap("Expression")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Expression")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String expression;
 
-    @Body
-    @NameInMap("IncidentUuid")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IncidentUuid")
     private String incidentUuid;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("WhiteRuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleFor")
+    private Long roleFor;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleType")
+    private Integer roleType;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WhiteRuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long whiteRuleId;
 
     private UpdateWhiteRuleListRequest(Builder builder) {
@@ -35,6 +42,8 @@ public class UpdateWhiteRuleListRequest extends Request {
         this.expression = builder.expression;
         this.incidentUuid = builder.incidentUuid;
         this.regionId = builder.regionId;
+        this.roleFor = builder.roleFor;
+        this.roleType = builder.roleType;
         this.whiteRuleId = builder.whiteRuleId;
     }
 
@@ -73,6 +82,20 @@ public class UpdateWhiteRuleListRequest extends Request {
     }
 
     /**
+     * @return roleFor
+     */
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    /**
+     * @return roleType
+     */
+    public Integer getRoleType() {
+        return this.roleType;
+    }
+
+    /**
      * @return whiteRuleId
      */
     public Long getWhiteRuleId() {
@@ -83,6 +106,8 @@ public class UpdateWhiteRuleListRequest extends Request {
         private String expression; 
         private String incidentUuid; 
         private String regionId; 
+        private Long roleFor; 
+        private Integer roleType; 
         private Long whiteRuleId; 
 
         private Builder() {
@@ -94,6 +119,8 @@ public class UpdateWhiteRuleListRequest extends Request {
             this.expression = request.expression;
             this.incidentUuid = request.incidentUuid;
             this.regionId = request.regionId;
+            this.roleFor = request.roleFor;
+            this.roleType = request.roleType;
             this.whiteRuleId = request.whiteRuleId;
         } 
 
@@ -125,6 +152,24 @@ public class UpdateWhiteRuleListRequest extends Request {
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * RoleFor.
+         */
+        public Builder roleFor(Long roleFor) {
+            this.putBodyParameter("RoleFor", roleFor);
+            this.roleFor = roleFor;
+            return this;
+        }
+
+        /**
+         * RoleType.
+         */
+        public Builder roleType(Integer roleType) {
+            this.putBodyParameter("RoleType", roleType);
+            this.roleType = roleType;
             return this;
         }
 

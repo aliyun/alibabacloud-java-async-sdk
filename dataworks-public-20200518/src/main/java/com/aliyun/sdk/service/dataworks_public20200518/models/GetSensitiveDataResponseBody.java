@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSensitiveDataResponseBody} extends {@link TeaModel}
  *
  * <p>GetSensitiveDataResponseBody</p>
  */
 public class GetSensitiveDataResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SensitiveData")
-    private java.util.Map < String, ? > sensitiveData;
+    @com.aliyun.core.annotation.NameInMap("SensitiveData")
+    private java.util.Map<String, ?> sensitiveData;
 
     private GetSensitiveDataResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class GetSensitiveDataResponseBody extends TeaModel {
     /**
      * @return sensitiveData
      */
-    public java.util.Map < String, ? > getSensitiveData() {
+    public java.util.Map<String, ?> getSensitiveData() {
         return this.sensitiveData;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.Map < String, ? > sensitiveData; 
+        private java.util.Map<String, ?> sensitiveData; 
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,16 +66,14 @@ public class GetSensitiveDataResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the sensitive data returned. The information includes totalCount and sensDatas.
-         * <p>
-         * 
-         * sensDatas includes the following parameters:
-         * 
-         * *   guid: the ID of the metadata of the tenant. For example, the ID of the metadata in the MaxCompute compute engine is in the Project name.Table name.Column name format.
-         * *   sensType: the type of the sensitive data.
-         * *   sensLevel: the sensitivity level of the sensitive data.
+         * <p>The information about the sensitive data returned. The information includes totalCount and sensDatas. sensDatas includes the following parameters:</p>
+         * <ul>
+         * <li>guid: the ID of the metadata of the tenant. For example, the ID of the metadata in the MaxCompute compute engine is in the Project name.Table name.Column name format.</li>
+         * <li>sensType: the type of the sensitive data.</li>
+         * <li>sensLevel: the sensitivity level of the sensitive data</li>
+         * </ul>
          */
-        public Builder sensitiveData(java.util.Map < String, ? > sensitiveData) {
+        public Builder sensitiveData(java.util.Map<String, ?> sensitiveData) {
             this.sensitiveData = sensitiveData;
             return this;
         }

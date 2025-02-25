@@ -1,31 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20230522.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceConnectionStringRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBInstanceConnectionStringRequest</p>
  */
 public class ModifyDBInstanceConnectionStringRequest extends Request {
-    @Query
-    @NameInMap("ConnectionString")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectionString")
     private String connectionString;
 
-    @Query
-    @NameInMap("ConnectionStringPrefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectionStringPrefix")
     private String connectionStringPrefix;
 
-    @Query
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisablePorts")
+    private String disablePorts;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private ModifyDBInstanceConnectionStringRequest(Builder builder) {
@@ -33,6 +43,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         this.connectionString = builder.connectionString;
         this.connectionStringPrefix = builder.connectionStringPrefix;
         this.DBInstanceId = builder.DBInstanceId;
+        this.disablePorts = builder.disablePorts;
         this.regionId = builder.regionId;
     }
 
@@ -71,6 +82,13 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
     }
 
     /**
+     * @return disablePorts
+     */
+    public String getDisablePorts() {
+        return this.disablePorts;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -81,6 +99,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         private String connectionString; 
         private String connectionStringPrefix; 
         private String DBInstanceId; 
+        private String disablePorts; 
         private String regionId; 
 
         private Builder() {
@@ -92,11 +111,15 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
             this.connectionString = request.connectionString;
             this.connectionStringPrefix = request.connectionStringPrefix;
             this.DBInstanceId = request.DBInstanceId;
+            this.disablePorts = request.disablePorts;
             this.regionId = request.regionId;
         } 
 
         /**
-         * ConnectionString.
+         * <p>The endpoint of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-2ze34****-clickhouse..clickhouseserver.pre.rds.aliyuncs.com</p>
          */
         public Builder connectionString(String connectionString) {
             this.putQueryParameter("ConnectionString", connectionString);
@@ -105,7 +128,10 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * ConnectionStringPrefix.
+         * <p>The prefix of the endpoint that is used to connect to the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-****-clickhouse</p>
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -114,7 +140,11 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-xxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -123,7 +153,19 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * DisablePorts.
+         */
+        public Builder disablePorts(String disablePorts) {
+            this.putQueryParameter("DisablePorts", disablePorts);
+            this.disablePorts = disablePorts;
+            return this;
+        }
+
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -1,63 +1,82 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetArtifactResponseBody} extends {@link TeaModel}
  *
  * <p>GetArtifactResponseBody</p>
  */
 public class GetArtifactResponseBody extends TeaModel {
-    @NameInMap("ArtifactId")
+    @com.aliyun.core.annotation.NameInMap("ArtifactBuildProperty")
+    private String artifactBuildProperty;
+
+    @com.aliyun.core.annotation.NameInMap("ArtifactBuildType")
+    private String artifactBuildType;
+
+    @com.aliyun.core.annotation.NameInMap("ArtifactId")
     private String artifactId;
 
-    @NameInMap("ArtifactProperty")
+    @com.aliyun.core.annotation.NameInMap("ArtifactProperty")
     private String artifactProperty;
 
-    @NameInMap("ArtifactType")
+    @com.aliyun.core.annotation.NameInMap("ArtifactType")
     private String artifactType;
 
-    @NameInMap("ArtifactVersion")
+    @com.aliyun.core.annotation.NameInMap("ArtifactVersion")
     private String artifactVersion;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("GmtModified")
+    @com.aliyun.core.annotation.NameInMap("GmtModified")
     private String gmtModified;
 
-    @NameInMap("MaxVersion")
+    @com.aliyun.core.annotation.NameInMap("MaxVersion")
     private Long maxVersion;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("Progress")
+    @com.aliyun.core.annotation.NameInMap("PermissionType")
+    private String permissionType;
+
+    @com.aliyun.core.annotation.NameInMap("Progress")
     private String progress;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("SupportRegionIds")
+    @com.aliyun.core.annotation.NameInMap("StatusDetail")
+    private String statusDetail;
+
+    @com.aliyun.core.annotation.NameInMap("SupportRegionIds")
     private String supportRegionIds;
 
-    @NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
 
-    @NameInMap("VersionName")
+    @com.aliyun.core.annotation.NameInMap("VersionName")
     private String versionName;
 
     private GetArtifactResponseBody(Builder builder) {
+        this.artifactBuildProperty = builder.artifactBuildProperty;
+        this.artifactBuildType = builder.artifactBuildType;
         this.artifactId = builder.artifactId;
         this.artifactProperty = builder.artifactProperty;
         this.artifactType = builder.artifactType;
@@ -66,10 +85,12 @@ public class GetArtifactResponseBody extends TeaModel {
         this.gmtModified = builder.gmtModified;
         this.maxVersion = builder.maxVersion;
         this.name = builder.name;
+        this.permissionType = builder.permissionType;
         this.progress = builder.progress;
         this.requestId = builder.requestId;
         this.resourceGroupId = builder.resourceGroupId;
         this.status = builder.status;
+        this.statusDetail = builder.statusDetail;
         this.supportRegionIds = builder.supportRegionIds;
         this.tags = builder.tags;
         this.versionName = builder.versionName;
@@ -81,6 +102,20 @@ public class GetArtifactResponseBody extends TeaModel {
 
     public static GetArtifactResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return artifactBuildProperty
+     */
+    public String getArtifactBuildProperty() {
+        return this.artifactBuildProperty;
+    }
+
+    /**
+     * @return artifactBuildType
+     */
+    public String getArtifactBuildType() {
+        return this.artifactBuildType;
     }
 
     /**
@@ -140,6 +175,13 @@ public class GetArtifactResponseBody extends TeaModel {
     }
 
     /**
+     * @return permissionType
+     */
+    public String getPermissionType() {
+        return this.permissionType;
+    }
+
+    /**
      * @return progress
      */
     public String getProgress() {
@@ -168,6 +210,13 @@ public class GetArtifactResponseBody extends TeaModel {
     }
 
     /**
+     * @return statusDetail
+     */
+    public String getStatusDetail() {
+        return this.statusDetail;
+    }
+
+    /**
      * @return supportRegionIds
      */
     public String getSupportRegionIds() {
@@ -177,7 +226,7 @@ public class GetArtifactResponseBody extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -189,6 +238,8 @@ public class GetArtifactResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String artifactBuildProperty; 
+        private String artifactBuildType; 
         private String artifactId; 
         private String artifactProperty; 
         private String artifactType; 
@@ -197,16 +248,43 @@ public class GetArtifactResponseBody extends TeaModel {
         private String gmtModified; 
         private Long maxVersion; 
         private String name; 
+        private String permissionType; 
         private String progress; 
         private String requestId; 
         private String resourceGroupId; 
         private String status; 
+        private String statusDetail; 
         private String supportRegionIds; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
         private String versionName; 
 
         /**
-         * ArtifactId.
+         * <p>The build properties of the artifact, utilized for hosting and building the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;{&quot;RegionId&quot;:&quot;xxx&quot;, &quot;SourceImageId&quot;:&quot;xxx&quot;, &quot;&quot;:&quot;xxx&quot;, &quot;CommandType&quot;:&quot;xxx&quot;, &quot;CommandContent&quot;:&quot;xxx&quot;}&quot;</p>
+         */
+        public Builder artifactBuildProperty(String artifactBuildProperty) {
+            this.artifactBuildProperty = artifactBuildProperty;
+            return this;
+        }
+
+        /**
+         * <p>The type of the deployment package to be built.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dockerfile</p>
+         */
+        public Builder artifactBuildType(String artifactBuildType) {
+            this.artifactBuildType = artifactBuildType;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>artifact-eea08d1e2d3a43aexxxx</p>
          */
         public Builder artifactId(String artifactId) {
             this.artifactId = artifactId;
@@ -214,7 +292,10 @@ public class GetArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * ArtifactProperty.
+         * <p>The properties of the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;CommodityCode&quot;:&quot;cmjj0005xxxx&quot;,&quot;CommodityVersion&quot;:&quot;V2022xxxx&quot;}</p>
          */
         public Builder artifactProperty(String artifactProperty) {
             this.artifactProperty = artifactProperty;
@@ -222,7 +303,10 @@ public class GetArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * ArtifactType.
+         * <p>The type of the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EcsImage</p>
          */
         public Builder artifactType(String artifactType) {
             this.artifactType = artifactType;
@@ -230,7 +314,10 @@ public class GetArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * ArtifactVersion.
+         * <p>The version of the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder artifactVersion(String artifactVersion) {
             this.artifactVersion = artifactVersion;
@@ -238,7 +325,10 @@ public class GetArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Description</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -246,7 +336,10 @@ public class GetArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModified.
+         * <p>The time when the deployment package was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-10-20T02:19:55Z</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -254,7 +347,10 @@ public class GetArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * MaxVersion.
+         * <p>The latest version of the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder maxVersion(Long maxVersion) {
             this.maxVersion = maxVersion;
@@ -262,7 +358,10 @@ public class GetArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Name</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -270,7 +369,25 @@ public class GetArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * Progress.
+         * <p>Permission fields are applicable to container image artifact and Helm Chart artifact They can only change from Automatic to Public. Options:</p>
+         * <ul>
+         * <li>Public</li>
+         * <li>Automatic</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Public</p>
+         */
+        public Builder permissionType(String permissionType) {
+            this.permissionType = permissionType;
+            return this;
+        }
+
+        /**
+         * <p>The distribution progress of the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder progress(String progress) {
             this.progress = progress;
@@ -278,7 +395,10 @@ public class GetArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B1A0198B-F316-1B72-B8DD-28B6F6D6XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -286,7 +406,10 @@ public class GetArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzkt5buxxxxxx</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -294,7 +417,10 @@ public class GetArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the deployment package. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -302,7 +428,21 @@ public class GetArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * SupportRegionIds.
+         * <p>The description of the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;/usr/local/share/aliyun-assist/work/script/t-hz04zm90y6og0sg.sh: line 1: pip: command not found&quot;</p>
+         */
+        public Builder statusDetail(String statusDetail) {
+            this.statusDetail = statusDetail;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the region that supports the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;cn-hangzhou&quot;,&quot;cn-beijing&quot;]</p>
          */
         public Builder supportRegionIds(String supportRegionIds) {
             this.supportRegionIds = supportRegionIds;
@@ -310,15 +450,18 @@ public class GetArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * Tags.
+         * <p>The tags of the deployment package.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }
 
         /**
-         * VersionName.
+         * <p>The version name of the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder versionName(String versionName) {
             this.versionName = versionName;
@@ -331,11 +474,17 @@ public class GetArtifactResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetArtifactResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetArtifactResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -370,7 +519,10 @@ public class GetArtifactResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key of the deployment package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -378,7 +530,10 @@ public class GetArtifactResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value of the deployment package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;

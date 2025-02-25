@@ -1,70 +1,82 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModelVersion} extends {@link TeaModel}
  *
  * <p>ModelVersion</p>
  */
 public class ModelVersion extends TeaModel {
-    @NameInMap("ApprovalStatus")
+    @com.aliyun.core.annotation.NameInMap("ApprovalStatus")
     private String approvalStatus;
 
-    @NameInMap("FormatType")
+    @com.aliyun.core.annotation.NameInMap("CompressionSpec")
+    private java.util.Map < String, ? > compressionSpec;
+
+    @com.aliyun.core.annotation.NameInMap("EvaluationSpec")
+    private java.util.Map < String, ? > evaluationSpec;
+
+    @com.aliyun.core.annotation.NameInMap("ExtraInfo")
+    private java.util.Map < String, ? > extraInfo;
+
+    @com.aliyun.core.annotation.NameInMap("FormatType")
     private String formatType;
 
-    @NameInMap("FrameworkType")
+    @com.aliyun.core.annotation.NameInMap("FrameworkType")
     private String frameworkType;
 
-    @NameInMap("GmtCreateTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
-    @NameInMap("GmtModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
     private String gmtModifiedTime;
 
-    @NameInMap("InferenceSpec")
+    @com.aliyun.core.annotation.NameInMap("InferenceSpec")
     private java.util.Map < String, ? > inferenceSpec;
 
-    @NameInMap("Labels")
+    @com.aliyun.core.annotation.NameInMap("Labels")
     private java.util.List < Label > labels;
 
-    @NameInMap("Metrics")
+    @com.aliyun.core.annotation.NameInMap("Metrics")
     private java.util.Map < String, ? > metrics;
 
-    @NameInMap("Options")
+    @com.aliyun.core.annotation.NameInMap("Options")
     private String options;
 
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
-    @NameInMap("SourceId")
+    @com.aliyun.core.annotation.NameInMap("SourceId")
     private String sourceId;
 
-    @NameInMap("SourceType")
+    @com.aliyun.core.annotation.NameInMap("SourceType")
     private String sourceType;
 
-    @NameInMap("TrainingSpec")
+    @com.aliyun.core.annotation.NameInMap("TrainingSpec")
     private java.util.Map < String, ? > trainingSpec;
 
-    @NameInMap("Uri")
+    @com.aliyun.core.annotation.NameInMap("Uri")
     private String uri;
 
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
-    @NameInMap("VersionDescription")
+    @com.aliyun.core.annotation.NameInMap("VersionDescription")
     private String versionDescription;
 
-    @NameInMap("VersionName")
+    @com.aliyun.core.annotation.NameInMap("VersionName")
     private String versionName;
 
     private ModelVersion(Builder builder) {
         this.approvalStatus = builder.approvalStatus;
+        this.compressionSpec = builder.compressionSpec;
+        this.evaluationSpec = builder.evaluationSpec;
+        this.extraInfo = builder.extraInfo;
         this.formatType = builder.formatType;
         this.frameworkType = builder.frameworkType;
         this.gmtCreateTime = builder.gmtCreateTime;
@@ -96,6 +108,27 @@ public class ModelVersion extends TeaModel {
      */
     public String getApprovalStatus() {
         return this.approvalStatus;
+    }
+
+    /**
+     * @return compressionSpec
+     */
+    public java.util.Map < String, ? > getCompressionSpec() {
+        return this.compressionSpec;
+    }
+
+    /**
+     * @return evaluationSpec
+     */
+    public java.util.Map < String, ? > getEvaluationSpec() {
+        return this.evaluationSpec;
+    }
+
+    /**
+     * @return extraInfo
+     */
+    public java.util.Map < String, ? > getExtraInfo() {
+        return this.extraInfo;
     }
 
     /**
@@ -212,6 +245,9 @@ public class ModelVersion extends TeaModel {
 
     public static final class Builder {
         private String approvalStatus; 
+        private java.util.Map < String, ? > compressionSpec; 
+        private java.util.Map < String, ? > evaluationSpec; 
+        private java.util.Map < String, ? > extraInfo; 
         private String formatType; 
         private String frameworkType; 
         private String gmtCreateTime; 
@@ -234,6 +270,30 @@ public class ModelVersion extends TeaModel {
          */
         public Builder approvalStatus(String approvalStatus) {
             this.approvalStatus = approvalStatus;
+            return this;
+        }
+
+        /**
+         * CompressionSpec.
+         */
+        public Builder compressionSpec(java.util.Map < String, ? > compressionSpec) {
+            this.compressionSpec = compressionSpec;
+            return this;
+        }
+
+        /**
+         * EvaluationSpec.
+         */
+        public Builder evaluationSpec(java.util.Map < String, ? > evaluationSpec) {
+            this.evaluationSpec = evaluationSpec;
+            return this;
+        }
+
+        /**
+         * ExtraInfo.
+         */
+        public Builder extraInfo(java.util.Map < String, ? > extraInfo) {
+            this.extraInfo = extraInfo;
             return this;
         }
 

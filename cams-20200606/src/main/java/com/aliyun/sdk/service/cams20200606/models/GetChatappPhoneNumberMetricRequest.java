@@ -1,41 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetChatappPhoneNumberMetricRequest} extends {@link RequestModel}
  *
  * <p>GetChatappPhoneNumberMetricRequest</p>
  */
 public class GetChatappPhoneNumberMetricRequest extends Request {
-    @Query
-    @NameInMap("CustSpaceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustSpaceId")
     private String custSpaceId;
 
-    @Query
-    @NameInMap("End")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("End")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long end;
 
-    @Query
-    @NameInMap("Granularity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Granularity")
     private String granularity;
 
-    @Query
-    @NameInMap("IsvCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsvCode")
     private String isvCode;
 
-    @Query
-    @NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
     private String phoneNumber;
 
-    @Query
-    @NameInMap("Start")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Start")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long start;
 
     private GetChatappPhoneNumberMetricRequest(Builder builder) {
@@ -126,7 +126,10 @@ public class GetChatappPhoneNumberMetricRequest extends Request {
         } 
 
         /**
-         * The space ID of the user under the ISV account.
+         * <p>The space ID of the RAM user within the ISV account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>293483938849493</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -135,10 +138,11 @@ public class GetChatappPhoneNumberMetricRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
-         * <p>
+         * <p>The end of the time range to query.</p>
+         * <p>This parameter is required.</p>
          * 
-         * >  The end time must be later than the start time. The interval between the start time and the end time cannot exceed 24 hours.
+         * <strong>example:</strong>
+         * <p>1693407714687</p>
          */
         public Builder end(Long end) {
             this.putQueryParameter("End", end);
@@ -147,11 +151,15 @@ public class GetChatappPhoneNumberMetricRequest extends Request {
         }
 
         /**
-         * Metric granularity. Valid values:
-         * <p>
+         * <p>The granularity of the metric.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>DAILY</li>
+         * <li>HALF_HOUR</li>
+         * </ul>
          * 
-         * - DAILY
-         * - HALF_HOUR
+         * <strong>example:</strong>
+         * <p>DAILY</p>
          */
         public Builder granularity(String granularity) {
             this.putQueryParameter("Granularity", granularity);
@@ -160,7 +168,10 @@ public class GetChatappPhoneNumberMetricRequest extends Request {
         }
 
         /**
-         * The ISV verification code, which is used to verify whether the user is authorized by the ISV account.
+         * <p>The independent software vendor (ISV) verification code, which is used to verify whether the RAM user is authorized by the ISV account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>skdi3kksloslikdkkdk</p>
          */
         public Builder isvCode(String isvCode) {
             this.putQueryParameter("IsvCode", isvCode);
@@ -169,7 +180,10 @@ public class GetChatappPhoneNumberMetricRequest extends Request {
         }
 
         /**
-         * The business phone number.
+         * <p>The business phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>861380000</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -178,7 +192,11 @@ public class GetChatappPhoneNumberMetricRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>The beginning of the time range to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1693107714687</p>
          */
         public Builder start(Long start) {
             this.putQueryParameter("Start", start);

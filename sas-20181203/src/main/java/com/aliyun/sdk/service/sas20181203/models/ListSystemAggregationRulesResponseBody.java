@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSystemAggregationRulesResponseBody} extends {@link TeaModel}
  *
  * <p>ListSystemAggregationRulesResponseBody</p>
  */
 public class ListSystemAggregationRulesResponseBody extends TeaModel {
-    @NameInMap("AggregationList")
-    private java.util.List < AggregationList> aggregationList;
+    @com.aliyun.core.annotation.NameInMap("AggregationList")
+    private java.util.List<AggregationList> aggregationList;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListSystemAggregationRulesResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ListSystemAggregationRulesResponseBody extends TeaModel {
     /**
      * @return aggregationList
      */
-    public java.util.List < AggregationList> getAggregationList() {
+    public java.util.List<AggregationList> getAggregationList() {
         return this.aggregationList;
     }
 
@@ -57,20 +62,20 @@ public class ListSystemAggregationRulesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AggregationList> aggregationList; 
+        private java.util.List<AggregationList> aggregationList; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
-         * An array that consists of the details about the aggregation types.
+         * <p>An array that consists of the details about the aggregation types.</p>
          */
-        public Builder aggregationList(java.util.List < AggregationList> aggregationList) {
+        public Builder aggregationList(java.util.List<AggregationList> aggregationList) {
             this.aggregationList = aggregationList;
             return this;
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +83,10 @@ public class ListSystemAggregationRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6800B790-B10A-5C2F-BEB3-F1D5CE61****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,14 +99,20 @@ public class ListSystemAggregationRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSystemAggregationRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSystemAggregationRulesResponseBody</p>
+     */
     public static class AggregationList extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RuleCount")
+        @com.aliyun.core.annotation.NameInMap("RuleCount")
         private Integer ruleCount;
 
         private AggregationList(Builder builder) {
@@ -142,7 +156,10 @@ public class ListSystemAggregationRulesResponseBody extends TeaModel {
             private Integer ruleCount; 
 
             /**
-             * The ID of the aggregation type.
+             * <p>The ID of the aggregation type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -150,7 +167,10 @@ public class ListSystemAggregationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the aggregation type.
+             * <p>The name of the aggregation type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Remote control****</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -158,7 +178,10 @@ public class ListSystemAggregationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rules that are of the aggregation type.
+             * <p>The number of rules that are of the aggregation type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ruleCount(Integer ruleCount) {
                 this.ruleCount = ruleCount;
@@ -172,14 +195,20 @@ public class ListSystemAggregationRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSystemAggregationRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSystemAggregationRulesResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -223,7 +252,10 @@ public class ListSystemAggregationRulesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -231,7 +263,10 @@ public class ListSystemAggregationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -239,7 +274,10 @@ public class ListSystemAggregationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

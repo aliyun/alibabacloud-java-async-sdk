@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AllocateIpv6InternetBandwidthResponseBody} extends {@link TeaModel}
  *
  * <p>AllocateIpv6InternetBandwidthResponseBody</p>
  */
 public class AllocateIpv6InternetBandwidthResponseBody extends TeaModel {
-    @NameInMap("InternetBandwidthId")
+    @com.aliyun.core.annotation.NameInMap("InternetBandwidthId")
     private String internetBandwidthId;
 
-    @NameInMap("Ipv6AddressId")
+    @com.aliyun.core.annotation.NameInMap("Ipv6AddressId")
     private String ipv6AddressId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AllocateIpv6InternetBandwidthResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class AllocateIpv6InternetBandwidthResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the Internet bandwidth that you purchased for the IPv6 gateway.
+         * <p>The ID of the Internet bandwidth that you purchased for the IPv6 gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6bw-uf6hcyzu65v98v3du****</p>
          */
         public Builder internetBandwidthId(String internetBandwidthId) {
             this.internetBandwidthId = internetBandwidthId;
@@ -70,7 +78,10 @@ public class AllocateIpv6InternetBandwidthResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the IPv6 address.
+         * <p>The ID of the IPv6 address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6-2zen5j4axcp5l5qyy****</p>
          */
         public Builder ipv6AddressId(String ipv6AddressId) {
             this.ipv6AddressId = ipv6AddressId;
@@ -78,7 +89,10 @@ public class AllocateIpv6InternetBandwidthResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6972A26E-99B1-4367-9890-FBDEBB0F5E7D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

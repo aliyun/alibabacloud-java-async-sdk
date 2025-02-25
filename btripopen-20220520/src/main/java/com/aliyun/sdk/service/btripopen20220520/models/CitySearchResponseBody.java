@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CitySearchResponseBody} extends {@link TeaModel}
  *
  * <p>CitySearchResponseBody</p>
  */
 public class CitySearchResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private CitySearchResponseBody(Builder builder) {
@@ -114,7 +119,7 @@ public class CitySearchResponseBody extends TeaModel {
         }
 
         /**
-         * module
+         * <p>module</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -151,14 +156,20 @@ public class CitySearchResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CitySearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>CitySearchResponseBody</p>
+     */
     public static class Cities extends TeaModel {
-        @NameInMap("code")
+        @com.aliyun.core.annotation.NameInMap("code")
         private String code;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("region")
+        @com.aliyun.core.annotation.NameInMap("region")
         private Integer region;
 
         private Cities(Builder builder) {
@@ -232,9 +243,15 @@ public class CitySearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CitySearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>CitySearchResponseBody</p>
+     */
     public static class Module extends TeaModel {
-        @NameInMap("cities")
-        private java.util.List < Cities> cities;
+        @com.aliyun.core.annotation.NameInMap("cities")
+        private java.util.List<Cities> cities;
 
         private Module(Builder builder) {
             this.cities = builder.cities;
@@ -251,17 +268,17 @@ public class CitySearchResponseBody extends TeaModel {
         /**
          * @return cities
          */
-        public java.util.List < Cities> getCities() {
+        public java.util.List<Cities> getCities() {
             return this.cities;
         }
 
         public static final class Builder {
-            private java.util.List < Cities> cities; 
+            private java.util.List<Cities> cities; 
 
             /**
              * cities.
              */
-            public Builder cities(java.util.List < Cities> cities) {
+            public Builder cities(java.util.List<Cities> cities) {
                 this.cities = cities;
                 return this;
             }

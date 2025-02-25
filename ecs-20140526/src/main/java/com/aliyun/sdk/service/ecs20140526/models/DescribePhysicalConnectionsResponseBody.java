@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePhysicalConnectionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePhysicalConnectionsResponseBody</p>
  */
 public class DescribePhysicalConnectionsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("PhysicalConnectionSet")
+    @com.aliyun.core.annotation.NameInMap("PhysicalConnectionSet")
     private PhysicalConnectionSet physicalConnectionSet;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribePhysicalConnectionsResponseBody(Builder builder) {
@@ -131,59 +136,65 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePhysicalConnectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePhysicalConnectionsResponseBody</p>
+     */
     public static class PhysicalConnectionType extends TeaModel {
-        @NameInMap("AccessPointId")
+        @com.aliyun.core.annotation.NameInMap("AccessPointId")
         private String accessPointId;
 
-        @NameInMap("AdLocation")
+        @com.aliyun.core.annotation.NameInMap("AdLocation")
         private String adLocation;
 
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Long bandwidth;
 
-        @NameInMap("BusinessStatus")
+        @com.aliyun.core.annotation.NameInMap("BusinessStatus")
         private String businessStatus;
 
-        @NameInMap("CircuitCode")
+        @com.aliyun.core.annotation.NameInMap("CircuitCode")
         private String circuitCode;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EnabledTime")
+        @com.aliyun.core.annotation.NameInMap("EnabledTime")
         private String enabledTime;
 
-        @NameInMap("LineOperator")
+        @com.aliyun.core.annotation.NameInMap("LineOperator")
         private String lineOperator;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PeerLocation")
+        @com.aliyun.core.annotation.NameInMap("PeerLocation")
         private String peerLocation;
 
-        @NameInMap("PhysicalConnectionId")
+        @com.aliyun.core.annotation.NameInMap("PhysicalConnectionId")
         private String physicalConnectionId;
 
-        @NameInMap("PortNumber")
+        @com.aliyun.core.annotation.NameInMap("PortNumber")
         private String portNumber;
 
-        @NameInMap("PortType")
+        @com.aliyun.core.annotation.NameInMap("PortType")
         private String portType;
 
-        @NameInMap("RedundantPhysicalConnectionId")
+        @com.aliyun.core.annotation.NameInMap("RedundantPhysicalConnectionId")
         private String redundantPhysicalConnectionId;
 
-        @NameInMap("Spec")
+        @com.aliyun.core.annotation.NameInMap("Spec")
         private String spec;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private PhysicalConnectionType(Builder builder) {
@@ -512,9 +523,15 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePhysicalConnectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePhysicalConnectionsResponseBody</p>
+     */
     public static class PhysicalConnectionSet extends TeaModel {
-        @NameInMap("PhysicalConnectionType")
-        private java.util.List < PhysicalConnectionType> physicalConnectionType;
+        @com.aliyun.core.annotation.NameInMap("PhysicalConnectionType")
+        private java.util.List<PhysicalConnectionType> physicalConnectionType;
 
         private PhysicalConnectionSet(Builder builder) {
             this.physicalConnectionType = builder.physicalConnectionType;
@@ -531,17 +548,17 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         /**
          * @return physicalConnectionType
          */
-        public java.util.List < PhysicalConnectionType> getPhysicalConnectionType() {
+        public java.util.List<PhysicalConnectionType> getPhysicalConnectionType() {
             return this.physicalConnectionType;
         }
 
         public static final class Builder {
-            private java.util.List < PhysicalConnectionType> physicalConnectionType; 
+            private java.util.List<PhysicalConnectionType> physicalConnectionType; 
 
             /**
              * PhysicalConnectionType.
              */
-            public Builder physicalConnectionType(java.util.List < PhysicalConnectionType> physicalConnectionType) {
+            public Builder physicalConnectionType(java.util.List<PhysicalConnectionType> physicalConnectionType) {
                 this.physicalConnectionType = physicalConnectionType;
                 return this;
             }

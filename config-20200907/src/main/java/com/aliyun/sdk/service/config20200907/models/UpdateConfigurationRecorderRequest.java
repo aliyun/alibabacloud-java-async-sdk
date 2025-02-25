@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateConfigurationRecorderRequest} extends {@link RequestModel}
  *
  * <p>UpdateConfigurationRecorderRequest</p>
  */
 public class UpdateConfigurationRecorderRequest extends Request {
-    @Body
-    @NameInMap("ResourceTypes")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceTypes")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceTypes;
 
     private UpdateConfigurationRecorderRequest(Builder builder) {
@@ -55,7 +60,11 @@ public class UpdateConfigurationRecorderRequest extends Request {
         } 
 
         /**
-         * The resource types. Separate multiple resource types with commas (,).
+         * <p>The resource types. Separate multiple resource types with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::ECS::Instance</p>
          */
         public Builder resourceTypes(String resourceTypes) {
             this.putBodyParameter("ResourceTypes", resourceTypes);

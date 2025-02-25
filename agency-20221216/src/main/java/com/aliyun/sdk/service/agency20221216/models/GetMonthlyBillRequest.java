@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMonthlyBillRequest} extends {@link RequestModel}
  *
  * <p>GetMonthlyBillRequest</p>
  */
 public class GetMonthlyBillRequest extends Request {
-    @Query
-    @NameInMap("BillOwner")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BillOwner")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String billOwner;
 
-    @Query
-    @NameInMap("BillType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BillType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String billType;
 
-    @Query
-    @NameInMap("Month")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Month")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String month;
 
     private GetMonthlyBillRequest(Builder builder) {
@@ -85,14 +90,13 @@ public class GetMonthlyBillRequest extends Request {
         } 
 
         /**
-         * Bill Owner type.
-         * <p>
+         * <p>Bill Owner type. Value Range:</br>
+         * 1: Master account</br>
+         * 2: Sub account</br></p>
+         * <p>This parameter is required.</p>
          * 
-         *  Value range:
-         * 
-         * 1: Master account 
-         * 
-         * 2: Sub account
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder billOwner(String billOwner) {
             this.putQueryParameter("BillOwner", billOwner);
@@ -101,26 +105,22 @@ public class GetMonthlyBillRequest extends Request {
         }
 
         /**
-         * Value Range:
-         * <p>
+         * <p>Value Range:</p>
+         * <ul>
+         * <li>MonthlyInvoice</li>
+         * <li>MonthRefundInvoice</li>
+         * <li>MonthlySummary (Deprecated)</li>
+         * <li>MonthlyInstanceAddAdjustBill </li>
+         * <li>MonthlyInstanceRefundBill</li>
+         * <li>MonthlyAddAdjustInvoce</li>
+         * <li>MonthlyRefundAdjustInvoce </li>
+         * <li>MonthlyInstanceConsumeV2 </li>
+         * <li>MarginReportV2</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * MonthlyInvoice
-         * 
-         * MonthRefundInvoice
-         * 
-         * MonthlySummary
-         * 
-         * MonthlyInstanceAddAdjustBill 
-         * 
-         * MonthlyInstanceRefundBill
-         * 
-         * MonthlyAddAdjustInvoce
-         * 
-         * MonthlyRefundAdjustInvoce 
-         * 
-         * MonthlyInstanceConsumeV2 
-         * 
-         * MarginReportV2
+         * <strong>example:</strong>
+         * <p>MonthlyInvoice</p>
          */
         public Builder billType(String billType) {
             this.putQueryParameter("BillType", billType);
@@ -129,7 +129,11 @@ public class GetMonthlyBillRequest extends Request {
         }
 
         /**
-         * Billing Month, Format is YYYY-MM
+         * <p>Billing Month, Format is YYYY-MM</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11</p>
          */
         public Builder month(String month) {
             this.putQueryParameter("Month", month);

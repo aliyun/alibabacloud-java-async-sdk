@@ -75,11 +75,11 @@ public class ListFlowClusterAllRequest extends Request {
             super();
         } 
 
-        private Builder(ListFlowClusterAllRequest response) {
-            super(response);
-            this.productType = response.productType;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
+        private Builder(ListFlowClusterAllRequest request) {
+            super(request);
+            this.productType = request.productType;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**

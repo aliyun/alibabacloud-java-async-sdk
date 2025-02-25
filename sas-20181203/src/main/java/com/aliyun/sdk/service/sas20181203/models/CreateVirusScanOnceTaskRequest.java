@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVirusScanOnceTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateVirusScanOnceTaskRequest</p>
  */
 public class CreateVirusScanOnceTaskRequest extends Request {
-    @Query
-    @NameInMap("ScanPath")
-    private java.util.List < String > scanPath;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScanPath")
+    private java.util.List<String> scanPath;
 
-    @Query
-    @NameInMap("ScanType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScanType")
     private String scanType;
 
-    @Query
-    @NameInMap("SelectionKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SelectionKey")
     private String selectionKey;
 
     private CreateVirusScanOnceTaskRequest(Builder builder) {
@@ -47,7 +52,7 @@ public class CreateVirusScanOnceTaskRequest extends Request {
     /**
      * @return scanPath
      */
-    public java.util.List < String > getScanPath() {
+    public java.util.List<String> getScanPath() {
         return this.scanPath;
     }
 
@@ -66,7 +71,7 @@ public class CreateVirusScanOnceTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateVirusScanOnceTaskRequest, Builder> {
-        private java.util.List < String > scanPath; 
+        private java.util.List<String> scanPath; 
         private String scanType; 
         private String selectionKey; 
 
@@ -82,20 +87,23 @@ public class CreateVirusScanOnceTaskRequest extends Request {
         } 
 
         /**
-         * The information about the scan path that is required for a custom scan.
+         * <p>The information about the scan path that is required for a custom scan.</p>
          */
-        public Builder scanPath(java.util.List < String > scanPath) {
+        public Builder scanPath(java.util.List<String> scanPath) {
             this.putQueryParameter("ScanPath", scanPath);
             this.scanPath = scanPath;
             return this;
         }
 
         /**
-         * The type of the virus scan. Valid values:
-         * <p>
+         * <p>The type of the virus scan. Valid values:</p>
+         * <ul>
+         * <li><strong>system</strong>: system scan.</li>
+         * <li><strong>user</strong>: custom scan.</li>
+         * </ul>
          * 
-         * *   **system**: system scan.
-         * *   **user**: custom scan.
+         * <strong>example:</strong>
+         * <p>system</p>
          */
         public Builder scanType(String scanType) {
             this.putQueryParameter("ScanType", scanType);
@@ -104,10 +112,13 @@ public class CreateVirusScanOnceTaskRequest extends Request {
         }
 
         /**
-         * The key that stores the asset information.
-         * <p>
+         * <p>The key that stores the asset information.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~GetAssetSelectionConfig~~">GetAssetSelectionConfig</a> operation to obtain the key value.</p>
+         * </blockquote>
          * 
-         * > You can call the [GetAssetSelectionConfig](~~GetAssetSelectionConfig~~) operation to obtain the key value.
+         * <strong>example:</strong>
+         * <p>845de1ec-4b08-42e1-b564-31321e48xxxx</p>
          */
         public Builder selectionKey(String selectionKey) {
             this.putQueryParameter("SelectionKey", selectionKey);

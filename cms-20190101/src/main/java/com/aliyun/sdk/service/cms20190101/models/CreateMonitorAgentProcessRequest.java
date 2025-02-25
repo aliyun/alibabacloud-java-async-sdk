@@ -1,29 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMonitorAgentProcessRequest} extends {@link RequestModel}
  *
  * <p>CreateMonitorAgentProcessRequest</p>
  */
 public class CreateMonitorAgentProcessRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("ProcessName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProcessName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String processName;
 
-    @Query
-    @NameInMap("ProcessUser")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProcessUser")
     private String processUser;
 
     private CreateMonitorAgentProcessRequest(Builder builder) {
@@ -84,7 +84,11 @@ public class CreateMonitorAgentProcessRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-2ze2d6j5uhg20x47****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -93,7 +97,11 @@ public class CreateMonitorAgentProcessRequest extends Request {
         }
 
         /**
-         * The name of the process.
+         * <p>The name of the process.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliYunDun</p>
          */
         public Builder processName(String processName) {
             this.putQueryParameter("ProcessName", processName);
@@ -102,7 +110,10 @@ public class CreateMonitorAgentProcessRequest extends Request {
         }
 
         /**
-         * The user who launches the process.
+         * <p>The user who launches the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         public Builder processUser(String processUser) {
             this.putQueryParameter("ProcessUser", processUser);

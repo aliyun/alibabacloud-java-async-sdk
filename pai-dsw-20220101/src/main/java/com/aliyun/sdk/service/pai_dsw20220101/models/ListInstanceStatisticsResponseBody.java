@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dsw20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstanceStatisticsResponseBody</p>
  */
 public class ListInstanceStatisticsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Statistics")
-    private java.util.Map < String, java.util.Map<String, ?>> statistics;
+    @com.aliyun.core.annotation.NameInMap("Statistics")
+    private java.util.Map<String, java.util.Map<String, ?>> statistics;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListInstanceStatisticsResponseBody(Builder builder) {
@@ -78,7 +83,7 @@ public class ListInstanceStatisticsResponseBody extends TeaModel {
     /**
      * @return statistics
      */
-    public java.util.Map < String, java.util.Map<String, ?>> getStatistics() {
+    public java.util.Map<String, java.util.Map<String, ?>> getStatistics() {
         return this.statistics;
     }
 
@@ -94,7 +99,7 @@ public class ListInstanceStatisticsResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
-        private java.util.Map < String, java.util.Map<String, ?>> statistics; 
+        private java.util.Map<String, java.util.Map<String, ?>> statistics; 
         private Boolean success; 
 
         /**
@@ -132,7 +137,7 @@ public class ListInstanceStatisticsResponseBody extends TeaModel {
         /**
          * Statistics.
          */
-        public Builder statistics(java.util.Map < String, java.util.Map<String, ?>> statistics) {
+        public Builder statistics(java.util.Map<String, java.util.Map<String, ?>> statistics) {
             this.statistics = statistics;
             return this;
         }

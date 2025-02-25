@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserEncryptionKeyListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUserEncryptionKeyListResponseBody</p>
  */
 public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
-    @NameInMap("KeyIds")
+    @com.aliyun.core.annotation.NameInMap("KeyIds")
     private KeyIds keyIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeUserEncryptionKeyListResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of custom keys.
+         * <p>The list of custom keys.</p>
          */
         public Builder keyIds(KeyIds keyIds) {
             this.keyIds = keyIds;
@@ -58,7 +63,10 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7CD51DA4-A499-43CE-B9B5-20CD4FDC648E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,9 +79,15 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUserEncryptionKeyListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUserEncryptionKeyListResponseBody</p>
+     */
     public static class KeyIds extends TeaModel {
-        @NameInMap("KeyId")
-        private java.util.List < String > keyId;
+        @com.aliyun.core.annotation.NameInMap("KeyId")
+        private java.util.List<String> keyId;
 
         private KeyIds(Builder builder) {
             this.keyId = builder.keyId;
@@ -90,17 +104,17 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
         /**
          * @return keyId
          */
-        public java.util.List < String > getKeyId() {
+        public java.util.List<String> getKeyId() {
             return this.keyId;
         }
 
         public static final class Builder {
-            private java.util.List < String > keyId; 
+            private java.util.List<String> keyId; 
 
             /**
              * KeyId.
              */
-            public Builder keyId(java.util.List < String > keyId) {
+            public Builder keyId(java.util.List<String> keyId) {
                 this.keyId = keyId;
                 return this;
             }

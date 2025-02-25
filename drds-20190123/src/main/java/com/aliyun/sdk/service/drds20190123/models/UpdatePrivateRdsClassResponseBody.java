@@ -62,7 +62,7 @@ public class UpdatePrivateRdsClassResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The ID of the order.
          */
         public Builder data(String data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class UpdatePrivateRdsClassResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class UpdatePrivateRdsClassResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

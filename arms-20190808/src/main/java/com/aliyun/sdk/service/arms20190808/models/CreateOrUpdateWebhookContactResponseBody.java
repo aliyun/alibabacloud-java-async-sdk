@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOrUpdateWebhookContactResponseBody} extends {@link TeaModel}
  *
  * <p>CreateOrUpdateWebhookContactResponseBody</p>
  */
 public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("WebhookContact")
+    @com.aliyun.core.annotation.NameInMap("WebhookContact")
     private WebhookContact webhookContact;
 
     private CreateOrUpdateWebhookContactResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
         private WebhookContact webhookContact; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16AF921B-8187-489F-9913-43C808B4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
         }
 
         /**
-         * The returned webhook alert contact.
+         * <p>The returned webhook alert contact.</p>
          */
         public Builder webhookContact(WebhookContact webhookContact) {
             this.webhookContact = webhookContact;
@@ -71,23 +79,29 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateOrUpdateWebhookContactResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateOrUpdateWebhookContactResponseBody</p>
+     */
     public static class Webhook extends TeaModel {
-        @NameInMap("BizHeaders")
+        @com.aliyun.core.annotation.NameInMap("BizHeaders")
         private String bizHeaders;
 
-        @NameInMap("BizParams")
+        @com.aliyun.core.annotation.NameInMap("BizParams")
         private String bizParams;
 
-        @NameInMap("Body")
+        @com.aliyun.core.annotation.NameInMap("Body")
         private String body;
 
-        @NameInMap("Method")
+        @com.aliyun.core.annotation.NameInMap("Method")
         private String method;
 
-        @NameInMap("RecoverBody")
+        @com.aliyun.core.annotation.NameInMap("RecoverBody")
         private String recoverBody;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private Webhook(Builder builder) {
@@ -158,7 +172,10 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * The HTTP request headers.
+             * <p>The HTTP request headers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;Content-Type&quot;:&quot;application/json;charset=utf-8&quot;}]</p>
              */
             public Builder bizHeaders(String bizHeaders) {
                 this.bizHeaders = bizHeaders;
@@ -166,7 +183,10 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters in the HTTP request.
+             * <p>The parameters in the HTTP request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;content&quot;:&quot;mike&quot;}]</p>
              */
             public Builder bizParams(String bizParams) {
                 this.bizParams = bizParams;
@@ -174,7 +194,10 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
             }
 
             /**
-             * The alert notification template.
+             * <p>The alert notification template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ &quot;Alert name&quot;:&quot;{{ .commonLabels.alertname }}{{if .commonLabels.clustername }}&quot;, &quot;Cluster name&quot;:&quot;{{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}&quot;, &quot;Application name&quot;:&quot;{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}&quot;, &quot;Notification policy&quot;:&quot;{{ .dispatchRuleName }}&quot;, &quot;Alert time&quot;:&quot;{{ .startTime }}&quot;, &quot;Alert content&quot;:&quot;{{ for .alerts }} {{ .annotations.message }} {{ end }}&quot; }</p>
              */
             public Builder body(String body) {
                 this.body = body;
@@ -182,11 +205,14 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP request method.
-             * <p>
+             * <p>The HTTP request method.</p>
+             * <ul>
+             * <li>Post</li>
+             * <li>Get</li>
+             * </ul>
              * 
-             * *   Post
-             * *   Get
+             * <strong>example:</strong>
+             * <p>Post</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -194,7 +220,10 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
             }
 
             /**
-             * The notification template for clearing alerts.
+             * <p>The notification template for clearing alerts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ &quot;Alert name&quot;:&quot;{{ .commonLabels.alertname }}{{if .commonLabels.clustername }}&quot;, &quot;Cluster name&quot;:&quot;{{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}&quot;, &quot;Application name&quot;:&quot;{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}&quot;, &quot;Notification policy&quot;:&quot;{{ .dispatchRuleName }}&quot;, &quot;Recovery time&quot;:&quot;{{ .endTime }}&quot;, &quot;Alert content&quot;:&quot;{{ for .alerts }} {{ .annotations.message }} {{ end }}&quot; }</p>
              */
             public Builder recoverBody(String recoverBody) {
                 this.recoverBody = recoverBody;
@@ -202,7 +231,10 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the request method.
+             * <p>The URL of the request method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=e1a049121">https://oapi.dingtalk.com/robot/send?access_token=e1a049121</a>******</p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -216,14 +248,20 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateOrUpdateWebhookContactResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateOrUpdateWebhookContactResponseBody</p>
+     */
     public static class WebhookContact extends TeaModel {
-        @NameInMap("Webhook")
+        @com.aliyun.core.annotation.NameInMap("Webhook")
         private Webhook webhook;
 
-        @NameInMap("WebhookId")
+        @com.aliyun.core.annotation.NameInMap("WebhookId")
         private Float webhookId;
 
-        @NameInMap("WebhookName")
+        @com.aliyun.core.annotation.NameInMap("WebhookName")
         private String webhookName;
 
         private WebhookContact(Builder builder) {
@@ -267,7 +305,7 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
             private String webhookName; 
 
             /**
-             * The information about the webhook alert contact.
+             * <p>The information about the webhook alert contact.</p>
              */
             public Builder webhook(Webhook webhook) {
                 this.webhook = webhook;
@@ -275,7 +313,10 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the webhook alert contact.
+             * <p>The ID of the webhook alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder webhookId(Float webhookId) {
                 this.webhookId = webhookId;
@@ -283,7 +324,10 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the webhook alert contact.
+             * <p>The name of the webhook alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Webhook alert</p>
              */
             public Builder webhookName(String webhookName) {
                 this.webhookName = webhookName;

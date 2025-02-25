@@ -1,43 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAssetGroupToInstanceRequest} extends {@link RequestModel}
  *
  * <p>DescribeAssetGroupToInstanceRequest</p>
  */
 public class DescribeAssetGroupToInstanceRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("MemberUid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MemberUid")
     private String memberUid;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("Region")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("SourceIp")
-    private String sourceIp;
-
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private DescribeAssetGroupToInstanceRequest(Builder builder) {
@@ -47,7 +43,6 @@ public class DescribeAssetGroupToInstanceRequest extends Request {
         this.name = builder.name;
         this.region = builder.region;
         this.regionId = builder.regionId;
-        this.sourceIp = builder.sourceIp;
         this.type = builder.type;
     }
 
@@ -100,13 +95,6 @@ public class DescribeAssetGroupToInstanceRequest extends Request {
     }
 
     /**
-     * @return sourceIp
-     */
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    /**
      * @return type
      */
     public String getType() {
@@ -119,7 +107,6 @@ public class DescribeAssetGroupToInstanceRequest extends Request {
         private String name; 
         private String region; 
         private String regionId; 
-        private String sourceIp; 
         private String type; 
 
         private Builder() {
@@ -133,12 +120,17 @@ public class DescribeAssetGroupToInstanceRequest extends Request {
             this.name = request.name;
             this.region = request.region;
             this.regionId = request.regionId;
-            this.sourceIp = request.sourceIp;
             this.type = request.type;
         } 
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance to query.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> operation to query the IDs of all Anti-DDoS Origin instances of paid editions.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ddosbgp-cn-7212zaa5v***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -147,7 +139,10 @@ public class DescribeAssetGroupToInstanceRequest extends Request {
         }
 
         /**
-         * MemberUid.
+         * <p>The UID of the member to which the asset belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>170858869679****</p>
          */
         public Builder memberUid(String memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -156,7 +151,10 @@ public class DescribeAssetGroupToInstanceRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The ID of the asset. If the asset is a Web Application Firewall (WAF) instance, specify the ID of the WAF instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf_v2_public_cn-lbj382l****</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -165,7 +163,10 @@ public class DescribeAssetGroupToInstanceRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>The region ID of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -174,7 +175,13 @@ public class DescribeAssetGroupToInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region in which the instance resides.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -183,16 +190,14 @@ public class DescribeAssetGroupToInstanceRequest extends Request {
         }
 
         /**
-         * SourceIp.
-         */
-        public Builder sourceIp(String sourceIp) {
-            this.putQueryParameter("SourceIp", sourceIp);
-            this.sourceIp = sourceIp;
-            return this;
-        }
-
-        /**
-         * Type.
+         * <p>The type of the asset. Valid values:</p>
+         * <ul>
+         * <li><strong>waf</strong>: WAF instance</li>
+         * <li><strong>ga</strong>: Global Accelerator (GA) instance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>waf</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

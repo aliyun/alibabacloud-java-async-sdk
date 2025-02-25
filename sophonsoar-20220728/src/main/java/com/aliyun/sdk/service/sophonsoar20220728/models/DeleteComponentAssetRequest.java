@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteComponentAssetRequest} extends {@link RequestModel}
  *
  * <p>DeleteComponentAssetRequest</p>
  */
 public class DeleteComponentAssetRequest extends Request {
-    @Query
-    @NameInMap("AssetId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssetId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long assetId;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
     private DeleteComponentAssetRequest(Builder builder) {
@@ -69,7 +69,14 @@ public class DeleteComponentAssetRequest extends Request {
         } 
 
         /**
-         * AssetId.
+         * <p>The ID of the asset.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeComponentAssets~~">DescribeComponentAssets</a> operation to query the ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12x</p>
          */
         public Builder assetId(Long assetId) {
             this.putQueryParameter("AssetId", assetId);
@@ -78,7 +85,14 @@ public class DeleteComponentAssetRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the content within the request and the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

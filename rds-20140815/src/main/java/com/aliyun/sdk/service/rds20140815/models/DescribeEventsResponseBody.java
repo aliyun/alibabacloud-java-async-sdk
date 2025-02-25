@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEventsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEventsResponseBody</p>
  */
 public class DescribeEventsResponseBody extends TeaModel {
-    @NameInMap("EventItems")
+    @com.aliyun.core.annotation.NameInMap("EventItems")
     private EventItems eventItems;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeEventsResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The events.
+         * <p>The events.</p>
          */
         public Builder eventItems(EventItems eventItems) {
             this.eventItems = eventItems;
@@ -94,7 +99,10 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A103039D-B1B2-4C57-B989-7D7C0DA95426</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -131,41 +148,47 @@ public class DescribeEventsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventsResponseBody</p>
+     */
     public static class EventItemsEventItems extends TeaModel {
-        @NameInMap("CallerUid")
+        @com.aliyun.core.annotation.NameInMap("CallerUid")
         private Long callerUid;
 
-        @NameInMap("EventId")
+        @com.aliyun.core.annotation.NameInMap("EventId")
         private Integer eventId;
 
-        @NameInMap("EventName")
+        @com.aliyun.core.annotation.NameInMap("EventName")
         private String eventName;
 
-        @NameInMap("EventPayload")
+        @com.aliyun.core.annotation.NameInMap("EventPayload")
         private String eventPayload;
 
-        @NameInMap("EventReason")
+        @com.aliyun.core.annotation.NameInMap("EventReason")
         private String eventReason;
 
-        @NameInMap("EventRecordTime")
+        @com.aliyun.core.annotation.NameInMap("EventRecordTime")
         private String eventRecordTime;
 
-        @NameInMap("EventTime")
+        @com.aliyun.core.annotation.NameInMap("EventTime")
         private String eventTime;
 
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
 
-        @NameInMap("EventUserType")
+        @com.aliyun.core.annotation.NameInMap("EventUserType")
         private String eventUserType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceName")
+        @com.aliyun.core.annotation.NameInMap("ResourceName")
         private String resourceName;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
         private EventItemsEventItems(Builder builder) {
@@ -290,7 +313,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * The ID of the user who executed the event.
+             * <p>The ID of the user who executed the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22973492**********</p>
              */
             public Builder callerUid(Long callerUid) {
                 this.callerUid = callerUid;
@@ -298,7 +324,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The event ID.
+             * <p>The event ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11000053</p>
              */
             public Builder eventId(Integer eventId) {
                 this.eventId = eventId;
@@ -306,7 +335,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The event name.
+             * <p>The event name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ModifySecurityIPList</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -314,7 +346,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The request or context parameters of the event.
+             * <p>The request or context parameters of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Domain&quot;: &quot;rds-inc-share.aliyuncs.com&quot;, &quot;Api&quot;: &quot;ReleaseInstancePublicConnection&quot;}</p>
              */
             public Builder eventPayload(String eventPayload) {
                 this.eventPayload = eventPayload;
@@ -322,7 +357,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the event.
+             * <p>The source of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FROM_USER</p>
              */
             public Builder eventReason(String eventReason) {
                 this.eventReason = eventReason;
@@ -330,7 +368,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the event was recorded. The time is slightly later than the time the event occurred.
+             * <p>The time when the event was recorded. The time is slightly later than the time the event occurred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-08-20T01:12:49Z</p>
              */
             public Builder eventRecordTime(String eventRecordTime) {
                 this.eventRecordTime = eventRecordTime;
@@ -338,7 +379,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the event occurred.
+             * <p>The time when the event occurred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-08-20T01:08:22Z</p>
              */
             public Builder eventTime(String eventTime) {
                 this.eventTime = eventTime;
@@ -346,7 +390,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The event type.
+             * <p>The event type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NetworkManagement</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -354,7 +401,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the user who executed the event.
+             * <p>The type of the user who executed the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEM</p>
              */
             public Builder eventUserType(String eventUserType) {
                 this.eventUserType = eventUserType;
@@ -362,7 +412,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -370,7 +423,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource associated with the event. Only instance IDs are supported for this parameter.
+             * <p>The name of the resource associated with the event. Only instance IDs are supported for this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp1z3065m9976ix8a</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -378,7 +434,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource associated with the event. Only instances are supported for this parameter.
+             * <p>The type of the resource associated with the event. Only instances are supported for this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -392,9 +451,15 @@ public class DescribeEventsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventsResponseBody</p>
+     */
     public static class EventItems extends TeaModel {
-        @NameInMap("EventItems")
-        private java.util.List < EventItemsEventItems> eventItems;
+        @com.aliyun.core.annotation.NameInMap("EventItems")
+        private java.util.List<EventItemsEventItems> eventItems;
 
         private EventItems(Builder builder) {
             this.eventItems = builder.eventItems;
@@ -411,17 +476,17 @@ public class DescribeEventsResponseBody extends TeaModel {
         /**
          * @return eventItems
          */
-        public java.util.List < EventItemsEventItems> getEventItems() {
+        public java.util.List<EventItemsEventItems> getEventItems() {
             return this.eventItems;
         }
 
         public static final class Builder {
-            private java.util.List < EventItemsEventItems> eventItems; 
+            private java.util.List<EventItemsEventItems> eventItems; 
 
             /**
-             * The events.
+             * <p>The events.</p>
              */
-            public Builder eventItems(java.util.List < EventItemsEventItems> eventItems) {
+            public Builder eventItems(java.util.List<EventItemsEventItems> eventItems) {
                 this.eventItems = eventItems;
                 return this;
             }

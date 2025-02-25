@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DesensitizeDataResponseBody} extends {@link TeaModel}
  *
  * <p>DesensitizeDataResponseBody</p>
  */
 public class DesensitizeDataResponseBody extends TeaModel {
-    @NameInMap("DesensitizeData")
+    @com.aliyun.core.annotation.NameInMap("DesensitizeData")
     private String desensitizeData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DesensitizeDataResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DesensitizeDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned after masking.
+         * <p>The data returned after masking.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{     &quot;desensData&quot;: &quot;<strong>198807120510</strong>&quot;   }</p>
          */
         public Builder desensitizeData(String desensitizeData) {
             this.desensitizeData = desensitizeData;
@@ -58,7 +66,10 @@ public class DesensitizeDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BCA321BA-46C5-40E9-8A08-6******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

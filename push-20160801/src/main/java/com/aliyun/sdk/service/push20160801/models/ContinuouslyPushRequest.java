@@ -1,35 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.push20160801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ContinuouslyPushRequest} extends {@link RequestModel}
  *
  * <p>ContinuouslyPushRequest</p>
  */
 public class ContinuouslyPushRequest extends Request {
-    @Query
-    @NameInMap("AppKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long appKey;
 
-    @Query
-    @NameInMap("MessageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MessageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String messageId;
 
-    @Query
-    @NameInMap("Target")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Target")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String target;
 
-    @Query
-    @NameInMap("TargetValue")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetValue")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetValue;
 
     private ContinuouslyPushRequest(Builder builder) {
@@ -100,7 +100,10 @@ public class ContinuouslyPushRequest extends Request {
         } 
 
         /**
-         * AppKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23267207</p>
          */
         public Builder appKey(Long appKey) {
             this.putQueryParameter("AppKey", appKey);
@@ -109,7 +112,10 @@ public class ContinuouslyPushRequest extends Request {
         }
 
         /**
-         * MessageId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500131</p>
          */
         public Builder messageId(String messageId) {
             this.putQueryParameter("MessageId", messageId);
@@ -118,7 +124,10 @@ public class ContinuouslyPushRequest extends Request {
         }
 
         /**
-         * Target.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEVICE</p>
          */
         public Builder target(String target) {
             this.putQueryParameter("Target", target);
@@ -127,7 +136,10 @@ public class ContinuouslyPushRequest extends Request {
         }
 
         /**
-         * TargetValue.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a692961a92534047ad3625****</p>
          */
         public Builder targetValue(String targetValue) {
             this.putQueryParameter("TargetValue", targetValue);

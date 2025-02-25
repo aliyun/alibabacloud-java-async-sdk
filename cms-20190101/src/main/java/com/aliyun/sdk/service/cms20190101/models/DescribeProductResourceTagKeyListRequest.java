@@ -1,19 +1,19 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeProductResourceTagKeyListRequest} extends {@link RequestModel}
  *
  * <p>DescribeProductResourceTagKeyListRequest</p>
  */
 public class DescribeProductResourceTagKeyListRequest extends Request {
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
     private DescribeProductResourceTagKeyListRequest(Builder builder) {
@@ -54,7 +54,10 @@ public class DescribeProductResourceTagKeyListRequest extends Request {
         } 
 
         /**
-         * The pagination cursor.
+         * <p>The pagination cursor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbc2826f237e****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

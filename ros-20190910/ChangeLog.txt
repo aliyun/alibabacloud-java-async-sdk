@@ -1,3 +1,60 @@
+2024-11-20 Version: 1.2.52
+- Generated java-async 2019-09-10 for ROS.
+
+2024-08-09 Version: 1.2.51
+- Generated java-async 2019-09-10 for ROS.
+
+2024-08-08 Version: 1.2.50
+- Generated java-async 2019-09-10 for ROS.
+
+2024-08-01 Version: 1.2.49
+- Generated java-async 2019-09-10 for ROS.
+
+2024-07-25 Version: 1.2.48
+- Generated java-async 2019-09-10 for ROS.
+
+2024-07-24 Version: 1.2.47
+- Generated java-async 2019-09-10 for ROS.
+
+2024-06-21 Version: 1.2.46
+- Generated java-async 2019-09-10 for ROS.
+
+2024-05-10 Version: 1.2.45
+- Generated java-async 2019-09-10 for ROS.
+
+2024-04-24 Version: 1.2.44
+- Generated java-async 2019-09-10 for ROS.
+
+2024-04-24 Version: 1.2.43
+- Generated java-async 2019-09-10 for ROS.
+
+2024-03-22 Version: 1.2.42
+- Generated java-async 2019-09-10 for ROS.
+
+2024-02-29 Version: 1.2.41
+- Generated java-async 2019-09-10 for ROS.
+
+2024-02-29 Version: 1.2.40
+- Generated java-async 2019-09-10 for ROS.
+
+2024-02-21 Version: 1.2.39
+- Generated java-async 2019-09-10 for ROS.
+
+2024-02-21 Version: 1.2.38
+- Generated java-async 2019-09-10 for ROS.
+
+2024-01-30 Version: 1.2.37
+- Generated java-async 2019-09-10 for ROS.
+
+2024-01-11 Version: 1.2.36
+- Generated java-async 2019-09-10 for ROS.
+
+2024-01-11 Version: 1.2.35
+- Adjust the parameter position of TemplateBody in CreateStack,UpdateStack,PreviewStack,CreateStackGroup,UpdateStackGroup,CreateChangeSet to adapt to large templates.
+
+2024-01-10 Version: 1.2.34
+- DeleteStackInstances supports specifying account ids in resource directory mode.
+
 2023-10-19 Version: 1.2.33
 - The input parameter SourceResources of CreateTemplateScratch has added RegionId, which only takes effect when TemplateScratchType is ArchitectureDetection.
 

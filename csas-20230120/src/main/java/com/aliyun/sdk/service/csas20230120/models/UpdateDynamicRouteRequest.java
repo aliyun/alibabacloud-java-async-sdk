@@ -1,65 +1,70 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDynamicRouteRequest} extends {@link RequestModel}
  *
  * <p>UpdateDynamicRouteRequest</p>
  */
 public class UpdateDynamicRouteRequest extends Request {
-    @Body
-    @NameInMap("ApplicationIds")
-    private java.util.List < String > applicationIds;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApplicationIds")
+    private java.util.List<String> applicationIds;
 
-    @Body
-    @NameInMap("ApplicationType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApplicationType")
     private String applicationType;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("DynamicRouteId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DynamicRouteId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dynamicRouteId;
 
-    @Body
-    @NameInMap("DynamicRouteType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DynamicRouteType")
     private String dynamicRouteType;
 
-    @Body
-    @NameInMap("ModifyType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ModifyType")
     private String modifyType;
 
-    @Body
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Body
-    @NameInMap("NextHop")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NextHop")
     private String nextHop;
 
-    @Body
-    @NameInMap("Priority")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Priority")
     private Integer priority;
 
-    @Body
-    @NameInMap("RegionIds")
-    private java.util.List < String > regionIds;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionIds")
+    private java.util.List<String> regionIds;
 
-    @Body
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Body
-    @NameInMap("TagIds")
-    private java.util.List < String > tagIds;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TagIds")
+    private java.util.List<String> tagIds;
 
     private UpdateDynamicRouteRequest(Builder builder) {
         super(builder);
@@ -93,7 +98,7 @@ public class UpdateDynamicRouteRequest extends Request {
     /**
      * @return applicationIds
      */
-    public java.util.List < String > getApplicationIds() {
+    public java.util.List<String> getApplicationIds() {
         return this.applicationIds;
     }
 
@@ -156,7 +161,7 @@ public class UpdateDynamicRouteRequest extends Request {
     /**
      * @return regionIds
      */
-    public java.util.List < String > getRegionIds() {
+    public java.util.List<String> getRegionIds() {
         return this.regionIds;
     }
 
@@ -170,12 +175,12 @@ public class UpdateDynamicRouteRequest extends Request {
     /**
      * @return tagIds
      */
-    public java.util.List < String > getTagIds() {
+    public java.util.List<String> getTagIds() {
         return this.tagIds;
     }
 
     public static final class Builder extends Request.Builder<UpdateDynamicRouteRequest, Builder> {
-        private java.util.List < String > applicationIds; 
+        private java.util.List<String> applicationIds; 
         private String applicationType; 
         private String description; 
         private String dynamicRouteId; 
@@ -184,9 +189,9 @@ public class UpdateDynamicRouteRequest extends Request {
         private String name; 
         private String nextHop; 
         private Integer priority; 
-        private java.util.List < String > regionIds; 
+        private java.util.List<String> regionIds; 
         private String status; 
-        private java.util.List < String > tagIds; 
+        private java.util.List<String> tagIds; 
 
         private Builder() {
             super();
@@ -211,7 +216,7 @@ public class UpdateDynamicRouteRequest extends Request {
         /**
          * ApplicationIds.
          */
-        public Builder applicationIds(java.util.List < String > applicationIds) {
+        public Builder applicationIds(java.util.List<String> applicationIds) {
             this.putBodyParameter("ApplicationIds", applicationIds);
             this.applicationIds = applicationIds;
             return this;
@@ -236,7 +241,10 @@ public class UpdateDynamicRouteRequest extends Request {
         }
 
         /**
-         * DynamicRouteId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dr-ca9fddfac7c6****</p>
          */
         public Builder dynamicRouteId(String dynamicRouteId) {
             this.putBodyParameter("DynamicRouteId", dynamicRouteId);
@@ -292,7 +300,7 @@ public class UpdateDynamicRouteRequest extends Request {
         /**
          * RegionIds.
          */
-        public Builder regionIds(java.util.List < String > regionIds) {
+        public Builder regionIds(java.util.List<String> regionIds) {
             this.putBodyParameter("RegionIds", regionIds);
             this.regionIds = regionIds;
             return this;
@@ -310,7 +318,7 @@ public class UpdateDynamicRouteRequest extends Request {
         /**
          * TagIds.
          */
-        public Builder tagIds(java.util.List < String > tagIds) {
+        public Builder tagIds(java.util.List<String> tagIds) {
             this.putBodyParameter("TagIds", tagIds);
             this.tagIds = tagIds;
             return this;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,26 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GenerateDataKeyRequest</p>
  */
 public class GenerateDataKeyRequest extends Request {
-    @Query
-    @NameInMap("EncryptionContext")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private String dryRun;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptionContext")
     private java.util.Map < String, ? > encryptionContext;
 
-    @Query
-    @NameInMap("KeyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String keyId;
 
-    @Query
-    @NameInMap("KeySpec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeySpec")
     private String keySpec;
 
-    @Query
-    @NameInMap("NumberOfBytes")
-    @Validation(maximum = 1024)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NumberOfBytes")
+    @com.aliyun.core.annotation.Validation(maximum = 1024)
     private Integer numberOfBytes;
 
     private GenerateDataKeyRequest(Builder builder) {
         super(builder);
+        this.dryRun = builder.dryRun;
         this.encryptionContext = builder.encryptionContext;
         this.keyId = builder.keyId;
         this.keySpec = builder.keySpec;
@@ -49,6 +53,13 @@ public class GenerateDataKeyRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return dryRun
+     */
+    public String getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -80,6 +91,7 @@ public class GenerateDataKeyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GenerateDataKeyRequest, Builder> {
+        private String dryRun; 
         private java.util.Map < String, ? > encryptionContext; 
         private String keyId; 
         private String keySpec; 
@@ -91,11 +103,21 @@ public class GenerateDataKeyRequest extends Request {
 
         private Builder(GenerateDataKeyRequest request) {
             super(request);
+            this.dryRun = request.dryRun;
             this.encryptionContext = request.encryptionContext;
             this.keyId = request.keyId;
             this.keySpec = request.keySpec;
             this.numberOfBytes = request.numberOfBytes;
         } 
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(String dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
 
         /**
          * The JSON string that consists of key-value pairs.

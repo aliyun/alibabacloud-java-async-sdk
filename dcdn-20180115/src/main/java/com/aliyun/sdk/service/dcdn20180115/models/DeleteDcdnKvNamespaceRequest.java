@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDcdnKvNamespaceRequest} extends {@link RequestModel}
  *
  * <p>DeleteDcdnKvNamespaceRequest</p>
  */
 public class DeleteDcdnKvNamespaceRequest extends Request {
-    @Query
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
     private DeleteDcdnKvNamespaceRequest(Builder builder) {
@@ -55,7 +55,11 @@ public class DeleteDcdnKvNamespaceRequest extends Request {
         } 
 
         /**
-         * The name of the namespace.
+         * <p>The name of the namespace. You can call the <a href="~~PutDcdnKvNamespace~~">PutDcdnKvNamespace</a> operation to query the name of a namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ns1</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);

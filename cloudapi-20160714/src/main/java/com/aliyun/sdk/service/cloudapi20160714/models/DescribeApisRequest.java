@@ -1,71 +1,76 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApisRequest} extends {@link RequestModel}
  *
  * <p>DescribeApisRequest</p>
  */
 public class DescribeApisRequest extends Request {
-    @Query
-    @NameInMap("ApiId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApiId")
     private String apiId;
 
-    @Query
-    @NameInMap("ApiMethod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApiMethod")
     private String apiMethod;
 
-    @Query
-    @NameInMap("ApiName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApiName")
     private String apiName;
 
-    @Query
-    @NameInMap("ApiPath")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApiPath")
     private String apiPath;
 
-    @Query
-    @NameInMap("CatalogId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CatalogId")
     private String catalogId;
 
-    @Query
-    @NameInMap("EnableTagAuth")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableTagAuth")
     private Boolean enableTagAuth;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("StageName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StageName")
     private String stageName;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Query
-    @NameInMap("UnDeployed")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UnDeployed")
     private Boolean unDeployed;
 
-    @Query
-    @NameInMap("Visibility")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Visibility")
     private String visibility;
 
     private DescribeApisRequest(Builder builder) {
@@ -179,7 +184,7 @@ public class DescribeApisRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -209,7 +214,7 @@ public class DescribeApisRequest extends Request {
         private Integer pageSize; 
         private String securityToken; 
         private String stageName; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private Boolean unDeployed; 
         private String visibility; 
 
@@ -236,7 +241,10 @@ public class DescribeApisRequest extends Request {
         } 
 
         /**
-         * The API ID.
+         * <p>The API ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f68c19ee3bd1478fb58aa05ce8ae9b5a</p>
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -245,7 +253,10 @@ public class DescribeApisRequest extends Request {
         }
 
         /**
-         * The HTTP method of the API request.
+         * <p>The HTTP method of the API request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GET</p>
          */
         public Builder apiMethod(String apiMethod) {
             this.putQueryParameter("ApiMethod", apiMethod);
@@ -254,7 +265,10 @@ public class DescribeApisRequest extends Request {
         }
 
         /**
-         * The API name. The name is used for fuzzy match.
+         * <p>The API name. The name is used for fuzzy match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>weather</p>
          */
         public Builder apiName(String apiName) {
             this.putQueryParameter("ApiName", apiName);
@@ -263,7 +277,10 @@ public class DescribeApisRequest extends Request {
         }
 
         /**
-         * The request path of the API.
+         * <p>The request path of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/illegal/query</p>
          */
         public Builder apiPath(String apiPath) {
             this.putQueryParameter("ApiPath", apiPath);
@@ -272,7 +289,10 @@ public class DescribeApisRequest extends Request {
         }
 
         /**
-         * The category ID.
+         * <p>The category ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1553414085247362</p>
          */
         public Builder catalogId(String catalogId) {
             this.putQueryParameter("CatalogId", catalogId);
@@ -281,7 +301,10 @@ public class DescribeApisRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable tag verification.
+         * <p>Specifies whether to enable tag verification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableTagAuth(Boolean enableTagAuth) {
             this.putQueryParameter("EnableTagAuth", enableTagAuth);
@@ -290,7 +313,10 @@ public class DescribeApisRequest extends Request {
         }
 
         /**
-         * The API group ID.
+         * <p>The API group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c4a4d2de657548a2bd485d5d4df42b4a</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -299,7 +325,10 @@ public class DescribeApisRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -308,7 +337,10 @@ public class DescribeApisRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10.
+         * <p>The number of entries to return on each page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -326,12 +358,15 @@ public class DescribeApisRequest extends Request {
         }
 
         /**
-         * The environment in which you want to perform this operation. Valid values:
-         * <p>
+         * <p>The environment in which you want to perform this operation. Valid values:</p>
+         * <ul>
+         * <li><strong>RELEASE</strong>: the production environment</li>
+         * <li><strong>PRE</strong>: the staging environment</li>
+         * <li><strong>TEST</strong>: the test environment</li>
+         * </ul>
          * 
-         * *   **RELEASE**: the production environment
-         * *   **PRE**: the staging environment
-         * *   **TEST**: the test environment
+         * <strong>example:</strong>
+         * <p>RELEASE</p>
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);
@@ -340,16 +375,22 @@ public class DescribeApisRequest extends Request {
         }
 
         /**
-         * The tags of objects that match the rule.
+         * <p>The tags of objects that match the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Key， Value</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * Specifies whether to filter unpublished APIs.
+         * <p>Specifies whether to filter unpublished APIs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder unDeployed(Boolean unDeployed) {
             this.putQueryParameter("UnDeployed", unDeployed);
@@ -358,11 +399,14 @@ public class DescribeApisRequest extends Request {
         }
 
         /**
-         * Specifies whether the API is public. Valid values:
-         * <p>
+         * <p>Specifies whether the API is public. Valid values:</p>
+         * <ul>
+         * <li><strong>PUBLIC</strong>: The API is public. If you publish the definition of a public API to the production environment, the definition is displayed on the APIs page for all users.</li>
+         * <li><strong>PRIVATE</strong>: The API is private. If you publish an API group that contains a private API in Alibaba Cloud Marketplace, the API is not displayed in Alibaba Cloud Marketplace.</li>
+         * </ul>
          * 
-         * *   **PUBLIC**: The API is public. If you publish the definition of a public API to the production environment, the definition is displayed on the APIs page for all users.
-         * *   **PRIVATE**: The API is private. If you publish an API group that contains a private API in Alibaba Cloud Marketplace, the API is not displayed in Alibaba Cloud Marketplace.
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
          */
         public Builder visibility(String visibility) {
             this.putQueryParameter("Visibility", visibility);
@@ -377,11 +421,17 @@ public class DescribeApisRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeApisRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeApisRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -416,7 +466,10 @@ public class DescribeApisRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -424,7 +477,10 @@ public class DescribeApisRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;

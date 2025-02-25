@@ -1,30 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImportDataSourcesRequest} extends {@link RequestModel}
  *
  * <p>ImportDataSourcesRequest</p>
  */
 public class ImportDataSourcesRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("DataSources")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataSources")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dataSources;
 
-    @Query
-    @NameInMap("ProjectId")
-    @Validation(required = true, maximum = 10000000000D, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 10000000000D, minimum = 1)
     private Long projectId;
 
     private ImportDataSourcesRequest(Builder builder) {
@@ -85,7 +89,7 @@ public class ImportDataSourcesRequest extends Request {
         } 
 
         /**
-         * The ID of the region in which the DataWorks workspace resides. For example, the ID of the China (Shanghai) region is cn-shanghai, and that of the China (Zhangjiakou) region is cn-zhangjiakou. The system automatically determines the value of this parameter based on the endpoint used to call the operation.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -94,7 +98,11 @@ public class ImportDataSourcesRequest extends Request {
         }
 
         /**
-         * The configurations of the data sources to be imported. The Name, DataSourceType, SubType, Description, Content, and EnvType fields are required. For more information about the fields, see [CreateDataSource](~~211429~~).
+         * <p>The configurations of the data sources that you want to import. The Name, DataSourceType, SubType, Description, Content, and EnvType parameters are required. For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/211429.html">CreateDataSource</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;SubType&quot;:&quot;&quot;,&quot;DataSourceType&quot;:&quot;mysql&quot;,&quot;EnvType&quot;:1,&quot;Name&quot;:&quot;mysql_dms2&quot;,&quot;Description&quot;:&quot;aaa&quot;,&quot;Content&quot;:&quot;{&quot;database&quot;:&quot;mysql_chengdu_old&quot;,&quot;password&quot;:&quot;<em><strong>&quot;,&quot;instanceName&quot;:&quot;rm-2vcrckb37163g7l3w&quot;,&quot;regionId&quot;:&quot;cn-chengdu&quot;,&quot;tag&quot;:&quot;rds&quot;,&quot;rdsOwnerId&quot;:&quot;333&quot;,&quot;username&quot;:&quot;mysql_chengdu2&quot;}&quot;},{&quot;SubType&quot;:&quot;&quot;,&quot;DataSourceType&quot;:&quot;mysql&quot;,&quot;EnvType&quot;:1,&quot;Name&quot;:&quot;mysql_dms2&quot;,&quot;Description&quot;:&quot;aaa&quot;,&quot;Content&quot;:&quot;{&quot;database&quot;:&quot;mysql_chengdu_old&quot;,&quot;password&quot;:&quot;</strong></em>&quot;,&quot;instanceName&quot;:&quot;rm-2vcrckb37163g7l3w&quot;,&quot;regionId&quot;:&quot;cn-chengdu&quot;,&quot;tag&quot;:&quot;rds&quot;,&quot;rdsOwnerId&quot;:&quot;143&quot;,&quot;username&quot;:&quot;mysql_chengdu2&quot;}&quot;}]</p>
          */
         public Builder dataSources(String dataSources) {
             this.putQueryParameter("DataSources", dataSources);
@@ -103,7 +111,11 @@ public class ImportDataSourcesRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.
+         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

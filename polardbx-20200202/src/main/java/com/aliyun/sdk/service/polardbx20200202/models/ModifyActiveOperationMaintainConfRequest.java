@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyActiveOperationMaintainConfRequest} extends {@link RequestModel}
  *
  * <p>ModifyActiveOperationMaintainConfRequest</p>
  */
 public class ModifyActiveOperationMaintainConfRequest extends Request {
-    @Query
-    @NameInMap("CycleTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CycleTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cycleTime;
 
-    @Query
-    @NameInMap("CycleType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CycleType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cycleType;
 
-    @Query
-    @NameInMap("MaintainEndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaintainEndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String maintainEndTime;
 
-    @Query
-    @NameInMap("MaintainStartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaintainStartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String maintainStartTime;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer status;
 
     private ModifyActiveOperationMaintainConfRequest(Builder builder) {
@@ -130,7 +135,10 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
         } 
 
         /**
-         * CycleTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2,3,4,5,6,7</p>
          */
         public Builder cycleTime(String cycleTime) {
             this.putQueryParameter("CycleTime", cycleTime);
@@ -139,7 +147,10 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
         }
 
         /**
-         * CycleType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Week</p>
          */
         public Builder cycleType(String cycleType) {
             this.putQueryParameter("CycleType", cycleType);
@@ -148,7 +159,10 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
         }
 
         /**
-         * MaintainEndTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02:00:00Z</p>
          */
         public Builder maintainEndTime(String maintainEndTime) {
             this.putQueryParameter("MaintainEndTime", maintainEndTime);
@@ -157,7 +171,10 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
         }
 
         /**
-         * MaintainStartTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02:00:00Z</p>
          */
         public Builder maintainStartTime(String maintainStartTime) {
             this.putQueryParameter("MaintainStartTime", maintainStartTime);
@@ -166,7 +183,10 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -175,7 +195,10 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CopyConfigRulesResponseBody} extends {@link TeaModel}
  *
  * <p>CopyConfigRulesResponseBody</p>
  */
 public class CopyConfigRulesResponseBody extends TeaModel {
-    @NameInMap("CopyRulesResult")
+    @com.aliyun.core.annotation.NameInMap("CopyRulesResult")
     private Boolean copyRulesResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CopyConfigRulesResponseBody(Builder builder) {
@@ -50,11 +55,14 @@ public class CopyConfigRulesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the rules are replicated. Valid values:
-         * <p>
+         * <p>Indicates whether the rules are replicated. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder copyRulesResult(Boolean copyRulesResult) {
             this.copyRulesResult = copyRulesResult;
@@ -62,7 +70,10 @@ public class CopyConfigRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7BD81ECF-3194-5A6B-8719-9FC283167AD4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

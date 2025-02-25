@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePlayUserAvgResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePlayUserAvgResponseBody</p>
  */
 public class DescribePlayUserAvgResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UserPlayStatisAvgs")
+    @com.aliyun.core.annotation.NameInMap("UserPlayStatisAvgs")
     private UserPlayStatisAvgs userPlayStatisAvgs;
 
     private DescribePlayUserAvgResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DescribePlayUserAvgResponseBody extends TeaModel {
         private UserPlayStatisAvgs userPlayStatisAvgs; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6C7F90B2-BDA4-4FAC-****-A38A121DFE19</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class DescribePlayUserAvgResponseBody extends TeaModel {
         }
 
         /**
-         * The statistics on average playback each day.
+         * <p>The statistics on average playback each day.</p>
          */
         public Builder userPlayStatisAvgs(UserPlayStatisAvgs userPlayStatisAvgs) {
             this.userPlayStatisAvgs = userPlayStatisAvgs;
@@ -71,14 +79,20 @@ public class DescribePlayUserAvgResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePlayUserAvgResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePlayUserAvgResponseBody</p>
+     */
     public static class UserPlayStatisAvg extends TeaModel {
-        @NameInMap("AvgPlayCount")
+        @com.aliyun.core.annotation.NameInMap("AvgPlayCount")
         private String avgPlayCount;
 
-        @NameInMap("AvgPlayDuration")
+        @com.aliyun.core.annotation.NameInMap("AvgPlayDuration")
         private String avgPlayDuration;
 
-        @NameInMap("Date")
+        @com.aliyun.core.annotation.NameInMap("Date")
         private String date;
 
         private UserPlayStatisAvg(Builder builder) {
@@ -122,7 +136,10 @@ public class DescribePlayUserAvgResponseBody extends TeaModel {
             private String date; 
 
             /**
-             * The average number of video views.
+             * <p>The average number of video views.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>170</p>
              */
             public Builder avgPlayCount(String avgPlayCount) {
                 this.avgPlayCount = avgPlayCount;
@@ -130,7 +147,10 @@ public class DescribePlayUserAvgResponseBody extends TeaModel {
             }
 
             /**
-             * The average playback duration. Unit: milliseconds.
+             * <p>The average playback duration. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1035902.8</p>
              */
             public Builder avgPlayDuration(String avgPlayDuration) {
                 this.avgPlayDuration = avgPlayDuration;
@@ -138,7 +158,10 @@ public class DescribePlayUserAvgResponseBody extends TeaModel {
             }
 
             /**
-             * The date when the statistics were generated. The date follows the *yyyy-MM-dd* format.
+             * <p>The date when the statistics were generated. The date follows the <em>yyyy-MM-dd</em> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20170120</p>
              */
             public Builder date(String date) {
                 this.date = date;
@@ -152,9 +175,15 @@ public class DescribePlayUserAvgResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePlayUserAvgResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePlayUserAvgResponseBody</p>
+     */
     public static class UserPlayStatisAvgs extends TeaModel {
-        @NameInMap("UserPlayStatisAvg")
-        private java.util.List < UserPlayStatisAvg> userPlayStatisAvg;
+        @com.aliyun.core.annotation.NameInMap("UserPlayStatisAvg")
+        private java.util.List<UserPlayStatisAvg> userPlayStatisAvg;
 
         private UserPlayStatisAvgs(Builder builder) {
             this.userPlayStatisAvg = builder.userPlayStatisAvg;
@@ -171,17 +200,17 @@ public class DescribePlayUserAvgResponseBody extends TeaModel {
         /**
          * @return userPlayStatisAvg
          */
-        public java.util.List < UserPlayStatisAvg> getUserPlayStatisAvg() {
+        public java.util.List<UserPlayStatisAvg> getUserPlayStatisAvg() {
             return this.userPlayStatisAvg;
         }
 
         public static final class Builder {
-            private java.util.List < UserPlayStatisAvg> userPlayStatisAvg; 
+            private java.util.List<UserPlayStatisAvg> userPlayStatisAvg; 
 
             /**
              * UserPlayStatisAvg.
              */
-            public Builder userPlayStatisAvg(java.util.List < UserPlayStatisAvg> userPlayStatisAvg) {
+            public Builder userPlayStatisAvg(java.util.List<UserPlayStatisAvg> userPlayStatisAvg) {
                 this.userPlayStatisAvg = userPlayStatisAvg;
                 return this;
             }

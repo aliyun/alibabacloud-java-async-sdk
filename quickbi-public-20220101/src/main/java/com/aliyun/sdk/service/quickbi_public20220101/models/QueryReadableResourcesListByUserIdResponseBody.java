@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryReadableResourcesListByUserIdResponseBody} extends {@link TeaModel}
  *
  * <p>QueryReadableResourcesListByUserIdResponseBody</p>
  */
 public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
-    private java.util.List < Result> result;
+    @com.aliyun.core.annotation.NameInMap("Result")
+    private java.util.List<Result> result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryReadableResourcesListByUserIdResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -58,11 +63,14 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Boolean success; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,19 +78,22 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
         }
 
         /**
-         * The list of works that the user has permission to view.
+         * <p>The list of works that the user has permission to view.</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -95,17 +106,23 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryReadableResourcesListByUserIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryReadableResourcesListByUserIdResponseBody</p>
+     */
     public static class Directory extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PathId")
+        @com.aliyun.core.annotation.NameInMap("PathId")
         private String pathId;
 
-        @NameInMap("PathName")
+        @com.aliyun.core.annotation.NameInMap("PathName")
         private String pathName;
 
         private Directory(Builder builder) {
@@ -196,50 +213,56 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryReadableResourcesListByUserIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryReadableResourcesListByUserIdResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Directory")
+        @com.aliyun.core.annotation.NameInMap("Directory")
         private Directory directory;
 
-        @NameInMap("ModifyName")
+        @com.aliyun.core.annotation.NameInMap("ModifyName")
         private String modifyName;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
-        @NameInMap("OwnerName")
+        @com.aliyun.core.annotation.NameInMap("OwnerName")
         private String ownerName;
 
-        @NameInMap("SecurityLevel")
+        @com.aliyun.core.annotation.NameInMap("SecurityLevel")
         private String securityLevel;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("ThirdPartAuthFlag")
+        @com.aliyun.core.annotation.NameInMap("ThirdPartAuthFlag")
         private Integer thirdPartAuthFlag;
 
-        @NameInMap("WorkName")
+        @com.aliyun.core.annotation.NameInMap("WorkName")
         private String workName;
 
-        @NameInMap("WorkType")
+        @com.aliyun.core.annotation.NameInMap("WorkType")
         private String workType;
 
-        @NameInMap("WorksId")
+        @com.aliyun.core.annotation.NameInMap("WorksId")
         private String worksId;
 
-        @NameInMap("WorkspaceId")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceId")
         private String workspaceId;
 
-        @NameInMap("WorkspaceName")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceName")
         private String workspaceName;
 
         private Result(Builder builder) {
@@ -391,7 +414,10 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
             private String workspaceName; 
 
             /**
-             * The timestamp of the creation time in milliseconds.
+             * <p>The timestamp of the creation time in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1611023338000</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -399,7 +425,10 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * Remarks on the work.
+             * <p>Remarks on the work.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -415,7 +444,10 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Alibaba Cloud account to which the modifier belongs.
+             * <p>The name of the Alibaba Cloud account to which the modifier belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Li Si</p>
              */
             public Builder modifyName(String modifyName) {
                 this.modifyName = modifyName;
@@ -431,7 +463,10 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * The Quick BI UserID of the work owner.
+             * <p>The Quick BI UserID of the work owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>46e5374665ba4b679ee22e2a2927****</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -439,7 +474,10 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud account name of the owner.
+             * <p>The Alibaba Cloud account name of the owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Tom</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -447,18 +485,23 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * Security policies for collaborative authorization of works. Valid values:
-             * <p>
+             * <p>Security policies for collaborative authorization of works. Valid values:</p>
+             * <ul>
+             * <li>0: private</li>
+             * <li>12: Authorize specified members</li>
+             * <li>1 or 11: Authorize all workspace members</li>
+             * </ul>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p>If you use legacy permissions, the return value is 1.</p>
+             * </li>
+             * <li><p>If you use the new permissions, the return value is 11.</p>
+             * </li>
+             * </ul>
              * 
-             * *   0: private
-             * *   12: Authorize specified members
-             * *   1 or 11: Authorize all workspace members
-             * 
-             * > 
-             * 
-             * *   If you use legacy permissions, the return value is 1.
-             * 
-             * *   If you use the new permissions, the return value is 11.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder securityLevel(String securityLevel) {
                 this.securityLevel = securityLevel;
@@ -466,13 +509,16 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the report. Valid values:
-             * <p>
+             * <p>The status of the report. Valid values:</p>
+             * <ul>
+             * <li>0: unpublished</li>
+             * <li>1: published</li>
+             * <li>2: modified but not published</li>
+             * <li>3: unpublished</li>
+             * </ul>
              * 
-             * *   0: unpublished
-             * *   1: published
-             * *   2: modified but not published
-             * *   3: unpublished
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -480,11 +526,14 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * Third-party embedding status. Valid values:
-             * <p>
+             * <p>Third-party embedding status. Valid values:</p>
+             * <ul>
+             * <li>0: The embed service is not enabled.</li>
+             * <li>1: Embed is enabled.</li>
+             * </ul>
              * 
-             * *   0: The embed service is not enabled.
-             * *   1: Embed is enabled.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder thirdPartAuthFlag(Integer thirdPartAuthFlag) {
                 this.thirdPartAuthFlag = thirdPartAuthFlag;
@@ -492,7 +541,7 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the work.
+             * <p>The name of the work.</p>
              */
             public Builder workName(String workName) {
                 this.workName = workName;
@@ -500,13 +549,16 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the work. Valid values:
-             * <p>
+             * <p>The type of the work. Valid values:</p>
+             * <ul>
+             * <li>DATAPRODUCT: BI portal</li>
+             * <li>PAGE: Dashboard</li>
+             * <li>FULLPAGE: full-screen dashboards</li>
+             * <li>REPORT: workbook</li>
+             * </ul>
              * 
-             * *   DATAPRODUCT: BI portal
-             * *   PAGE: Dashboard
-             * *   FULLPAGE: full-screen dashboards
-             * *   REPORT: workbook
+             * <strong>example:</strong>
+             * <p>PAGE</p>
              */
             public Builder workType(String workType) {
                 this.workType = workType;
@@ -514,7 +566,10 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the work.
+             * <p>The ID of the work.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>03366b16-69ce-43c8-b782-56c2f6ec****</p>
              */
             public Builder worksId(String worksId) {
                 this.worksId = worksId;
@@ -522,7 +577,10 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace to which the work belongs.
+             * <p>The ID of the workspace to which the work belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>89713491-cb4f-4579-b889-e82c35f1****</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -530,7 +588,10 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the workspace to which the work belongs.
+             * <p>The name of the workspace to which the work belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test Workspace</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;

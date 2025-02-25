@@ -1,76 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVaultRequest} extends {@link RequestModel}
  *
  * <p>CreateVaultRequest</p>
  */
 public class CreateVaultRequest extends Request {
-    @Query
-    @NameInMap("BucketName")
-    private String bucketName;
-
-    @Query
-    @NameInMap("CompressionAlgorithm")
-    private String compressionAlgorithm;
-
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Endpoint")
-    private String endpoint;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptType")
+    private String encryptType;
 
-    @Query
-    @NameInMap("RedundancyType")
-    private String redundancyType;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KmsKeyId")
+    private String kmsKeyId;
 
-    @Query
-    @NameInMap("VaultAccessKeyId")
-    private String vaultAccessKeyId;
-
-    @Query
-    @NameInMap("VaultAccessKeySecret")
-    private String vaultAccessKeySecret;
-
-    @Query
-    @NameInMap("VaultName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vaultName;
 
-    @Query
-    @NameInMap("VaultRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vaultRegionId;
 
-    @Query
-    @NameInMap("VaultStorageClass")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultStorageClass")
     private String vaultStorageClass;
 
-    @Query
-    @NameInMap("VaultType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultType")
     private String vaultType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WormEnabled")
+    private Boolean wormEnabled;
 
     private CreateVaultRequest(Builder builder) {
         super(builder);
-        this.bucketName = builder.bucketName;
-        this.compressionAlgorithm = builder.compressionAlgorithm;
         this.description = builder.description;
-        this.endpoint = builder.endpoint;
-        this.redundancyType = builder.redundancyType;
-        this.vaultAccessKeyId = builder.vaultAccessKeyId;
-        this.vaultAccessKeySecret = builder.vaultAccessKeySecret;
+        this.encryptType = builder.encryptType;
+        this.kmsKeyId = builder.kmsKeyId;
         this.vaultName = builder.vaultName;
         this.vaultRegionId = builder.vaultRegionId;
         this.vaultStorageClass = builder.vaultStorageClass;
         this.vaultType = builder.vaultType;
+        this.wormEnabled = builder.wormEnabled;
     }
 
     public static Builder builder() {
@@ -87,20 +77,6 @@ public class CreateVaultRequest extends Request {
     }
 
     /**
-     * @return bucketName
-     */
-    public String getBucketName() {
-        return this.bucketName;
-    }
-
-    /**
-     * @return compressionAlgorithm
-     */
-    public String getCompressionAlgorithm() {
-        return this.compressionAlgorithm;
-    }
-
-    /**
      * @return description
      */
     public String getDescription() {
@@ -108,31 +84,17 @@ public class CreateVaultRequest extends Request {
     }
 
     /**
-     * @return endpoint
+     * @return encryptType
      */
-    public String getEndpoint() {
-        return this.endpoint;
+    public String getEncryptType() {
+        return this.encryptType;
     }
 
     /**
-     * @return redundancyType
+     * @return kmsKeyId
      */
-    public String getRedundancyType() {
-        return this.redundancyType;
-    }
-
-    /**
-     * @return vaultAccessKeyId
-     */
-    public String getVaultAccessKeyId() {
-        return this.vaultAccessKeyId;
-    }
-
-    /**
-     * @return vaultAccessKeySecret
-     */
-    public String getVaultAccessKeySecret() {
-        return this.vaultAccessKeySecret;
+    public String getKmsKeyId() {
+        return this.kmsKeyId;
     }
 
     /**
@@ -163,58 +125,44 @@ public class CreateVaultRequest extends Request {
         return this.vaultType;
     }
 
+    /**
+     * @return wormEnabled
+     */
+    public Boolean getWormEnabled() {
+        return this.wormEnabled;
+    }
+
     public static final class Builder extends Request.Builder<CreateVaultRequest, Builder> {
-        private String bucketName; 
-        private String compressionAlgorithm; 
         private String description; 
-        private String endpoint; 
-        private String redundancyType; 
-        private String vaultAccessKeyId; 
-        private String vaultAccessKeySecret; 
+        private String encryptType; 
+        private String kmsKeyId; 
         private String vaultName; 
         private String vaultRegionId; 
         private String vaultStorageClass; 
         private String vaultType; 
+        private Boolean wormEnabled; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateVaultRequest response) {
-            super(response);
-            this.bucketName = response.bucketName;
-            this.compressionAlgorithm = response.compressionAlgorithm;
-            this.description = response.description;
-            this.endpoint = response.endpoint;
-            this.redundancyType = response.redundancyType;
-            this.vaultAccessKeyId = response.vaultAccessKeyId;
-            this.vaultAccessKeySecret = response.vaultAccessKeySecret;
-            this.vaultName = response.vaultName;
-            this.vaultRegionId = response.vaultRegionId;
-            this.vaultStorageClass = response.vaultStorageClass;
-            this.vaultType = response.vaultType;
+        private Builder(CreateVaultRequest request) {
+            super(request);
+            this.description = request.description;
+            this.encryptType = request.encryptType;
+            this.kmsKeyId = request.kmsKeyId;
+            this.vaultName = request.vaultName;
+            this.vaultRegionId = request.vaultRegionId;
+            this.vaultStorageClass = request.vaultStorageClass;
+            this.vaultType = request.vaultType;
+            this.wormEnabled = request.wormEnabled;
         } 
 
         /**
-         * BucketName.
-         */
-        public Builder bucketName(String bucketName) {
-            this.putQueryParameter("BucketName", bucketName);
-            this.bucketName = bucketName;
-            return this;
-        }
-
-        /**
-         * CompressionAlgorithm.
-         */
-        public Builder compressionAlgorithm(String compressionAlgorithm) {
-            this.putQueryParameter("CompressionAlgorithm", compressionAlgorithm);
-            this.compressionAlgorithm = compressionAlgorithm;
-            return this;
-        }
-
-        /**
-         * Description.
+         * <p>The description of the backup vault. The description must be 0 to 255 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -223,43 +171,39 @@ public class CreateVaultRequest extends Request {
         }
 
         /**
-         * Endpoint.
+         * <p>The method that is used to encrypt the source data. This parameter is valid only if you set the VaultType parameter to STANDARD or OTS_BACKUP. Valid values:</p>
+         * <ul>
+         * <li><strong>HBR_PRIVATE</strong>: The source data is encrypted by using the built-in encryption method of Hybrid Backup Recovery (HBR).</li>
+         * <li><strong>KMS</strong>: The source data is encrypted by using Key Management Service (KMS).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>KMS</p>
          */
-        public Builder endpoint(String endpoint) {
-            this.putQueryParameter("Endpoint", endpoint);
-            this.endpoint = endpoint;
+        public Builder encryptType(String encryptType) {
+            this.putQueryParameter("EncryptType", encryptType);
+            this.encryptType = encryptType;
             return this;
         }
 
         /**
-         * RedundancyType.
+         * <p>The customer master key (CMK) created in KMS or the alias of the key. This parameter is required only if you set the EncryptType parameter to KMS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alias/yzs-hhht</p>
          */
-        public Builder redundancyType(String redundancyType) {
-            this.putQueryParameter("RedundancyType", redundancyType);
-            this.redundancyType = redundancyType;
+        public Builder kmsKeyId(String kmsKeyId) {
+            this.putQueryParameter("KmsKeyId", kmsKeyId);
+            this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         /**
-         * VaultAccessKeyId.
-         */
-        public Builder vaultAccessKeyId(String vaultAccessKeyId) {
-            this.putQueryParameter("VaultAccessKeyId", vaultAccessKeyId);
-            this.vaultAccessKeyId = vaultAccessKeyId;
-            return this;
-        }
-
-        /**
-         * VaultAccessKeySecret.
-         */
-        public Builder vaultAccessKeySecret(String vaultAccessKeySecret) {
-            this.putQueryParameter("VaultAccessKeySecret", vaultAccessKeySecret);
-            this.vaultAccessKeySecret = vaultAccessKeySecret;
-            return this;
-        }
-
-        /**
-         * VaultName.
+         * <p>The name of the backup vault. The name must be 1 to 64 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>backupvaultname</p>
          */
         public Builder vaultName(String vaultName) {
             this.putQueryParameter("VaultName", vaultName);
@@ -268,7 +212,11 @@ public class CreateVaultRequest extends Request {
         }
 
         /**
-         * VaultRegionId.
+         * <p>The ID of the region where the backup vault resides.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder vaultRegionId(String vaultRegionId) {
             this.putQueryParameter("VaultRegionId", vaultRegionId);
@@ -277,7 +225,10 @@ public class CreateVaultRequest extends Request {
         }
 
         /**
-         * VaultStorageClass.
+         * <p>The storage class of the backup vault. Valid value: <strong>STANDARD</strong>, which indicates standard storage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STANDARD</p>
          */
         public Builder vaultStorageClass(String vaultStorageClass) {
             this.putQueryParameter("VaultStorageClass", vaultStorageClass);
@@ -286,11 +237,27 @@ public class CreateVaultRequest extends Request {
         }
 
         /**
-         * VaultType.
+         * <p>The type of the backup vault. Valid values:</p>
+         * <ul>
+         * <li><strong>STANDARD</strong>: standard backup vault</li>
+         * <li><strong>OTS_BACKUP</strong>: backup vault for Tablestore</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>STANDARD</p>
          */
         public Builder vaultType(String vaultType) {
             this.putQueryParameter("VaultType", vaultType);
             this.vaultType = vaultType;
+            return this;
+        }
+
+        /**
+         * WormEnabled.
+         */
+        public Builder wormEnabled(Boolean wormEnabled) {
+            this.putQueryParameter("WormEnabled", wormEnabled);
+            this.wormEnabled = wormEnabled;
             return this;
         }
 

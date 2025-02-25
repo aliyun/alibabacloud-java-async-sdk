@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListExtensionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListExtensionsResponseBody</p>
  */
 public class ListExtensionsResponseBody extends TeaModel {
-    @NameInMap("PagingInfo")
+    @com.aliyun.core.annotation.NameInMap("PagingInfo")
     private PagingInfo pagingInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListExtensionsResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class ListExtensionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The page number of the returned page.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -58,7 +63,10 @@ public class ListExtensionsResponseBody extends TeaModel {
         }
 
         /**
-         * The extensions returned on pages.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class ListExtensionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListExtensionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListExtensionsResponseBody</p>
+     */
     public static class BindEventList extends TeaModel {
-        @NameInMap("EventCode")
+        @com.aliyun.core.annotation.NameInMap("EventCode")
         private String eventCode;
 
-        @NameInMap("EventName")
+        @com.aliyun.core.annotation.NameInMap("EventName")
         private String eventName;
 
         private BindEventList(Builder builder) {
@@ -110,7 +124,10 @@ public class ListExtensionsResponseBody extends TeaModel {
             private String eventName; 
 
             /**
-             * EventCode.
+             * <p>The code of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>commit-file</p>
              */
             public Builder eventCode(String eventCode) {
                 this.eventCode = eventCode;
@@ -118,7 +135,10 @@ public class ListExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the event.
+             * <p>The name of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>File submission pre-event</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -132,23 +152,29 @@ public class ListExtensionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListExtensionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListExtensionsResponseBody</p>
+     */
     public static class Extensions extends TeaModel {
-        @NameInMap("BindEventList")
-        private java.util.List < BindEventList> bindEventList;
+        @com.aliyun.core.annotation.NameInMap("BindEventList")
+        private java.util.List<BindEventList> bindEventList;
 
-        @NameInMap("ExtensionCode")
+        @com.aliyun.core.annotation.NameInMap("ExtensionCode")
         private String extensionCode;
 
-        @NameInMap("ExtensionDesc")
+        @com.aliyun.core.annotation.NameInMap("ExtensionDesc")
         private String extensionDesc;
 
-        @NameInMap("ExtensionName")
+        @com.aliyun.core.annotation.NameInMap("ExtensionName")
         private String extensionName;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private Extensions(Builder builder) {
@@ -171,7 +197,7 @@ public class ListExtensionsResponseBody extends TeaModel {
         /**
          * @return bindEventList
          */
-        public java.util.List < BindEventList> getBindEventList() {
+        public java.util.List<BindEventList> getBindEventList() {
             return this.bindEventList;
         }
 
@@ -211,7 +237,7 @@ public class ListExtensionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < BindEventList> bindEventList; 
+            private java.util.List<BindEventList> bindEventList; 
             private String extensionCode; 
             private String extensionDesc; 
             private String extensionName; 
@@ -219,15 +245,18 @@ public class ListExtensionsResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * The name of the event.
+             * <p>The list of extension point events.</p>
              */
-            public Builder bindEventList(java.util.List < BindEventList> bindEventList) {
+            public Builder bindEventList(java.util.List<BindEventList> bindEventList) {
                 this.bindEventList = bindEventList;
                 return this;
             }
 
             /**
-             * The extension point events.
+             * <p>The unique code of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Extension Code</p>
              */
             public Builder extensionCode(String extensionCode) {
                 this.extensionCode = extensionCode;
@@ -235,7 +264,10 @@ public class ListExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the extension.
+             * <p>The description of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a description</p>
              */
             public Builder extensionDesc(String extensionDesc) {
                 this.extensionDesc = extensionDesc;
@@ -243,7 +275,10 @@ public class ListExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the RAM user.
+             * <p>The name of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Extension name</p>
              */
             public Builder extensionName(String extensionName) {
                 this.extensionName = extensionName;
@@ -251,7 +286,10 @@ public class ListExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * The unique code of the extension.
+             * <p>The ID of the RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2003****</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -259,7 +297,10 @@ public class ListExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the extension.
+             * <p>The state of the extension. Valid values: 0: Testing 1: Publishing 3: Disabled 4: Processing 5: Approved 6: Approve Failed</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -273,17 +314,23 @@ public class ListExtensionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListExtensionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListExtensionsResponseBody</p>
+     */
     public static class PagingInfo extends TeaModel {
-        @NameInMap("Extensions")
-        private java.util.List < Extensions> extensions;
+        @com.aliyun.core.annotation.NameInMap("Extensions")
+        private java.util.List<Extensions> extensions;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PagingInfo(Builder builder) {
@@ -304,7 +351,7 @@ public class ListExtensionsResponseBody extends TeaModel {
         /**
          * @return extensions
          */
-        public java.util.List < Extensions> getExtensions() {
+        public java.util.List<Extensions> getExtensions() {
             return this.extensions;
         }
 
@@ -330,34 +377,24 @@ public class ListExtensionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Extensions> extensions; 
+            private java.util.List<Extensions> extensions; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
 
             /**
-             * The state of the extension. Valid values:
-             * <p>
-             * 
-             * 0: Testing
-             * 
-             * 1: Publishing
-             * 
-             * 3: Disabled
-             * 
-             * 4: Processing
-             * 
-             * 5: Approved
-             * 
-             * 6: Approve Failed
+             * <p>The list of extensions.</p>
              */
-            public Builder extensions(java.util.List < Extensions> extensions) {
+            public Builder extensions(java.util.List<Extensions> extensions) {
                 this.extensions = extensions;
                 return this;
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -365,7 +402,10 @@ public class ListExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -373,7 +413,10 @@ public class ListExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * The extensions.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNetworkInterfacePermissionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeNetworkInterfacePermissionsResponseBody</p>
  */
 public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
-    @NameInMap("NetworkInterfacePermissions")
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfacePermissions")
     private NetworkInterfacePermissions networkInterfacePermissions;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeNetworkInterfacePermissionsResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the ENI permissions.
+         * <p>Details about the ENI permissions.</p>
          */
         public Builder networkInterfacePermissions(NetworkInterfacePermissions networkInterfacePermissions) {
             this.networkInterfacePermissions = networkInterfacePermissions;
@@ -94,7 +99,10 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FCD3DEF-63D3-4605-A818-805C8BD7DB87</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,23 +148,29 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNetworkInterfacePermissionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkInterfacePermissionsResponseBody</p>
+     */
     public static class NetworkInterfacePermission extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
 
-        @NameInMap("NetworkInterfaceId")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
         private String networkInterfaceId;
 
-        @NameInMap("NetworkInterfacePermissionId")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfacePermissionId")
         private String networkInterfacePermissionId;
 
-        @NameInMap("Permission")
+        @com.aliyun.core.annotation.NameInMap("Permission")
         private String permission;
 
-        @NameInMap("PermissionState")
+        @com.aliyun.core.annotation.NameInMap("PermissionState")
         private String permissionState;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
         private NetworkInterfacePermission(Builder builder) {
@@ -218,7 +241,10 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
             private String serviceName; 
 
             /**
-             * The ID of the Alibaba Cloud partner (a certified ISV) or individual user.
+             * <p>The ID of the Alibaba Cloud partner (a certified ISV) or individual user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567890</p>
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -226,7 +252,10 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of ENI N.
+             * <p>The ID of ENI N.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eni-bp14v2sdd3v8htln****</p>
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
@@ -234,7 +263,10 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ENI permission.
+             * <p>The ID of the ENI permission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eni-perm-bp1cs4lwn56lfb****</p>
              */
             public Builder networkInterfacePermissionId(String networkInterfacePermissionId) {
                 this.networkInterfacePermissionId = networkInterfacePermissionId;
@@ -242,7 +274,10 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ENI permission.
+             * <p>The ENI permission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InstanceAttach</p>
              */
             public Builder permission(String permission) {
                 this.permission = permission;
@@ -250,13 +285,16 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the ENI permission. Valid values:
-             * <p>
+             * <p>The status of the ENI permission. Valid values:</p>
+             * <ul>
+             * <li>Pending: The permission is being granted.</li>
+             * <li>Granted: The permission is granted.</li>
+             * <li>Revoking: The permission is being revoked.</li>
+             * <li>Revoked: The permission is revoked.</li>
+             * </ul>
              * 
-             * *   Pending: The permission is being granted.
-             * *   Granted: The permission is granted.
-             * *   Revoking: The permission is being revoked.
-             * *   Revoked: The permission is revoked.
+             * <strong>example:</strong>
+             * <p>Granted</p>
              */
             public Builder permissionState(String permissionState) {
                 this.permissionState = permissionState;
@@ -264,7 +302,10 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Alibaba Cloud service.
+             * <p>The name of the Alibaba Cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Elastic Compute Service</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -278,9 +319,15 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNetworkInterfacePermissionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkInterfacePermissionsResponseBody</p>
+     */
     public static class NetworkInterfacePermissions extends TeaModel {
-        @NameInMap("NetworkInterfacePermission")
-        private java.util.List < NetworkInterfacePermission> networkInterfacePermission;
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfacePermission")
+        private java.util.List<NetworkInterfacePermission> networkInterfacePermission;
 
         private NetworkInterfacePermissions(Builder builder) {
             this.networkInterfacePermission = builder.networkInterfacePermission;
@@ -297,17 +344,17 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
         /**
          * @return networkInterfacePermission
          */
-        public java.util.List < NetworkInterfacePermission> getNetworkInterfacePermission() {
+        public java.util.List<NetworkInterfacePermission> getNetworkInterfacePermission() {
             return this.networkInterfacePermission;
         }
 
         public static final class Builder {
-            private java.util.List < NetworkInterfacePermission> networkInterfacePermission; 
+            private java.util.List<NetworkInterfacePermission> networkInterfacePermission; 
 
             /**
              * NetworkInterfacePermission.
              */
-            public Builder networkInterfacePermission(java.util.List < NetworkInterfacePermission> networkInterfacePermission) {
+            public Builder networkInterfacePermission(java.util.List<NetworkInterfacePermission> networkInterfacePermission) {
                 this.networkInterfacePermission = networkInterfacePermission;
                 return this;
             }

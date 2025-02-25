@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetGtmAccessModeRequest} extends {@link RequestModel}
  *
  * <p>SetGtmAccessModeRequest</p>
  */
 public class SetGtmAccessModeRequest extends Request {
-    @Query
-    @NameInMap("AccessMode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accessMode;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("StrategyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String strategyId;
 
     private SetGtmAccessModeRequest(Builder builder) {
@@ -84,12 +89,16 @@ public class SetGtmAccessModeRequest extends Request {
         } 
 
         /**
-         * The target access policy of the GTM instance. Valid values:
-         * <p>
+         * <p>The desired access policy. Valid values:</p>
+         * <ul>
+         * <li><strong>AUTO: performs automatic switchover between the primary and secondary address pool sets upon failures.</strong></li>
+         * <li><strong>DEFAULT: specifies the primary address pool set.</strong></li>
+         * <li>**FAILOVER: specifies the secondary address pool set.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **AUTO**: Automatic switch
-         * *   **DEFAULT**: Default address pool
-         * *   **FAILOVER**: Failover address pool
+         * <strong>example:</strong>
+         * <p>AUTO</p>
          */
         public Builder accessMode(String accessMode) {
             this.putQueryParameter("AccessMode", accessMode);
@@ -98,7 +107,10 @@ public class SetGtmAccessModeRequest extends Request {
         }
 
         /**
-         * The language used by the user.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -107,7 +119,11 @@ public class SetGtmAccessModeRequest extends Request {
         }
 
         /**
-         * The ID of the access policy.
+         * <p>The ID of the access policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hra0hx</p>
          */
         public Builder strategyId(String strategyId) {
             this.putQueryParameter("StrategyId", strategyId);

@@ -49,9 +49,9 @@ public class QueryTimeTemplateDetailRequest extends Request {
             super();
         } 
 
-        private Builder(QueryTimeTemplateDetailRequest response) {
-            super(response);
-            this.templateId = response.templateId;
+        private Builder(QueryTimeTemplateDetailRequest request) {
+            super(request);
+            this.templateId = request.templateId;
         } 
 
         /**

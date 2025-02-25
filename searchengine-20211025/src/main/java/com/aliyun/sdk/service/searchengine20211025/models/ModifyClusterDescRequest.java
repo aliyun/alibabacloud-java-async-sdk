@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyClusterDescRequest} extends {@link RequestModel}
  *
  * <p>ModifyClusterDescRequest</p>
  */
 public class ModifyClusterDescRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("clusterName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("clusterName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterName;
 
-    @Body
-    @NameInMap("body")
-    private java.util.Map < String, ? > body;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
+    private java.util.Map<String, ?> body;
 
     private ModifyClusterDescRequest(Builder builder) {
         super(builder);
@@ -63,14 +68,14 @@ public class ModifyClusterDescRequest extends Request {
     /**
      * @return body
      */
-    public java.util.Map < String, ? > getBody() {
+    public java.util.Map<String, ?> getBody() {
         return this.body;
     }
 
     public static final class Builder extends Request.Builder<ModifyClusterDescRequest, Builder> {
         private String instanceId; 
         private String clusterName; 
-        private java.util.Map < String, ? > body; 
+        private java.util.Map<String, ?> body; 
 
         private Builder() {
             super();
@@ -84,7 +89,11 @@ public class ModifyClusterDescRequest extends Request {
         } 
 
         /**
-         * The ID of the instance
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-c4d2rq7nt04</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -93,7 +102,11 @@ public class ModifyClusterDescRequest extends Request {
         }
 
         /**
-         * The name of the cluster
+         * <p>The name of the cluster</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sz_vpc_domain_1</p>
          */
         public Builder clusterName(String clusterName) {
             this.putPathParameter("clusterName", clusterName);
@@ -102,9 +115,12 @@ public class ModifyClusterDescRequest extends Request {
         }
 
         /**
-         * The parameters in the request body
+         * <p>The request body.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
-        public Builder body(java.util.Map < String, ? > body) {
+        public Builder body(java.util.Map<String, ?> body) {
             this.putBodyParameter("body", body);
             this.body = body;
             return this;

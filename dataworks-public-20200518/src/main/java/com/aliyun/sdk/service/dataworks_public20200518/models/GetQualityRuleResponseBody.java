@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQualityRuleResponseBody} extends {@link TeaModel}
  *
  * <p>GetQualityRuleResponseBody</p>
  */
 public class GetQualityRuleResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetQualityRuleResponseBody(Builder builder) {
@@ -98,7 +103,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The information of the monitoring rule.
+         * <p>The information about the monitoring rule.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +111,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>401</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +122,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You have no permission.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +133,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +144,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>576b9457-2cf5-4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,77 +171,86 @@ public class GetQualityRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetQualityRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetQualityRuleResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("BlockType")
+        @com.aliyun.core.annotation.NameInMap("BlockType")
         private Integer blockType;
 
-        @NameInMap("Checker")
+        @com.aliyun.core.annotation.NameInMap("Checker")
         private Integer checker;
 
-        @NameInMap("CheckerName")
+        @com.aliyun.core.annotation.NameInMap("CheckerName")
         private String checkerName;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("CriticalThreshold")
+        @com.aliyun.core.annotation.NameInMap("CriticalThreshold")
         private String criticalThreshold;
 
-        @NameInMap("EntityId")
+        @com.aliyun.core.annotation.NameInMap("EntityId")
         private Long entityId;
 
-        @NameInMap("ExpectValue")
+        @com.aliyun.core.annotation.NameInMap("ExpectValue")
         private String expectValue;
 
-        @NameInMap("FixCheck")
+        @com.aliyun.core.annotation.NameInMap("FixCheck")
         private Boolean fixCheck;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("MethodId")
+        @com.aliyun.core.annotation.NameInMap("MethodId")
         private Integer methodId;
 
-        @NameInMap("MethodName")
+        @com.aliyun.core.annotation.NameInMap("MethodName")
         private String methodName;
 
-        @NameInMap("OnDuty")
+        @com.aliyun.core.annotation.NameInMap("OnDuty")
         private String onDuty;
 
-        @NameInMap("OnDutyAccountName")
+        @com.aliyun.core.annotation.NameInMap("OnDutyAccountName")
         private String onDutyAccountName;
 
-        @NameInMap("OpenSwitch")
+        @com.aliyun.core.annotation.NameInMap("OpenSwitch")
         private Boolean openSwitch;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("PredictType")
+        @com.aliyun.core.annotation.NameInMap("PredictType")
         private Integer predictType;
 
-        @NameInMap("Property")
+        @com.aliyun.core.annotation.NameInMap("Property")
         private String property;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("RuleType")
+        @com.aliyun.core.annotation.NameInMap("RuleType")
         private Integer ruleType;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TaskSetting")
+        private String taskSetting;
+
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private Integer templateId;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
-        @NameInMap("Trend")
+        @com.aliyun.core.annotation.NameInMap("Trend")
         private String trend;
 
-        @NameInMap("WarningThreshold")
+        @com.aliyun.core.annotation.NameInMap("WarningThreshold")
         private String warningThreshold;
 
-        @NameInMap("WhereCondition")
+        @com.aliyun.core.annotation.NameInMap("WhereCondition")
         private String whereCondition;
 
         private Data(Builder builder) {
@@ -244,6 +273,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
             this.property = builder.property;
             this.ruleName = builder.ruleName;
             this.ruleType = builder.ruleType;
+            this.taskSetting = builder.taskSetting;
             this.templateId = builder.templateId;
             this.templateName = builder.templateName;
             this.trend = builder.trend;
@@ -393,6 +423,13 @@ public class GetQualityRuleResponseBody extends TeaModel {
         }
 
         /**
+         * @return taskSetting
+         */
+        public String getTaskSetting() {
+            return this.taskSetting;
+        }
+
+        /**
          * @return templateId
          */
         public Integer getTemplateId() {
@@ -447,6 +484,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
             private String property; 
             private String ruleName; 
             private Integer ruleType; 
+            private String taskSetting; 
             private Integer templateId; 
             private String templateName; 
             private String trend; 
@@ -454,14 +492,14 @@ public class GetQualityRuleResponseBody extends TeaModel {
             private String whereCondition; 
 
             /**
-             * The strength of the monitoring rule. The strength of a monitoring rule indicates the importance of the rule. Valid values:
-             * <p>
+             * <p>The strength of the monitoring rule. The strength of a monitoring rule indicates the importance of the rule. Valid values:</p>
+             * <ul>
+             * <li>1: the monitoring rule is a strong rule.</li>
+             * <li>0: the monitoring rule is a weak rule. You can specify whether a monitoring rule is a strong rule based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.</li>
+             * </ul>
              * 
-             * *   1: indicates that the monitoring rule is a strong rule.
-             * 
-             * *   0: indicates that the monitoring rule is a weak rule.
-             * 
-             *     You can specify whether a monitoring rule is a strong rule based on your business requirements. If a strong rule is used and an error alert is triggered, nodes are blocked.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder blockType(Integer blockType) {
                 this.blockType = blockType;
@@ -469,7 +507,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the checker. The value of this parameter corresponds to the ID at the frontend and is converted from the ID of the primary key.
+             * <p>The checker ID. The value of this parameter corresponds to the ID at the frontend and is converted from the ID of the primary key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder checker(Integer checker) {
                 this.checker = checker;
@@ -477,7 +518,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the checker.
+             * <p>The name of the checker.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>compared with a fixed value</p>
              */
             public Builder checkerName(String checkerName) {
                 this.checkerName = checkerName;
@@ -485,7 +529,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the monitoring rule.
+             * <p>The description of the monitoring rule.</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -493,7 +537,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The threshold for an error alert. The threshold indicates the deviation of the monitoring result from the expected value. You can customize this threshold based on your business requirements. If a strong rule is used and an error alert is triggered, nodes are blocked.
+             * <p>The threshold for a critical alert. The threshold indicates the deviation of the check result from the expected value. You can specify a value for the threshold based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder criticalThreshold(String criticalThreshold) {
                 this.criticalThreshold = criticalThreshold;
@@ -501,7 +548,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the partition filter expression.
+             * <p>The ID of the partition filter expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>165523</p>
              */
             public Builder entityId(Long entityId) {
                 this.entityId = entityId;
@@ -509,7 +559,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The expected value.
+             * <p>The expected value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder expectValue(String expectValue) {
                 this.expectValue = expectValue;
@@ -517,7 +570,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the monitoring is performed based on a fixed value.
+             * <p>Indicates whether the monitoring is performed based on a fixed value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder fixCheck(Boolean fixCheck) {
                 this.fixCheck = fixCheck;
@@ -525,7 +581,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the monitoring rule.
+             * <p>The monitoring rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123232</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -533,7 +592,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the sampling method of the monitoring rule.
+             * <p>The ID of the task that is associated with the partition filter expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder methodId(Integer methodId) {
                 this.methodId = methodId;
@@ -541,7 +603,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the method that is used to collect sample data, such as avg, count, sum, min, max, count_distinct, user_defined, table_count, table_size, table_dt_load_count, table_dt_refuseload_count, null_value, null_value/table_count, (table_count-count_distinct)/table_count, or table_count-count_distinct.
+             * <p>The method that is used to collect sample data, such as avg, count, sum, min, max, count_distinct, user_defined, table_count, table_size, table_dt_load_count, table_dt_refuseload_count, null_value, null_value/table_count, (table_count-count_distinct)/table_count, or table_count-count_distinct.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table_count</p>
              */
             public Builder methodName(String methodName) {
                 this.methodName = methodName;
@@ -549,7 +614,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that is used to configure the monitoring rule.
+             * <p>The ID of the Alibaba Cloud account that is used to configure the monitoring rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1822931****</p>
              */
             public Builder onDuty(String onDuty) {
                 this.onDuty = onDuty;
@@ -557,7 +625,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Alibaba Cloud account that is used to configure the monitoring rule.
+             * <p>The name of the Alibaba Cloud account that is used to configure the monitoring rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder onDutyAccountName(String onDutyAccountName) {
                 this.onDutyAccountName = onDutyAccountName;
@@ -565,7 +636,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * OpenSwitch.
+             * <p>Indicates whether the monitoring rule is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder openSwitch(Boolean openSwitch) {
                 this.openSwitch = openSwitch;
@@ -573,7 +647,12 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The comparison operator of the monitoring rule.
+             * <p>The comparison operator of the monitoring rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <blockquote>
+             * <p>=</p>
+             * </blockquote>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -581,11 +660,14 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the threshold is a dynamic threshold. Valid values:
-             * <p>
+             * <p>Indicates whether the threshold is a dynamic threshold. Valid values:</p>
+             * <ul>
+             * <li>0: The threshold is not a dynamic threshold.</li>
+             * <li>1: The threshold is a dynamic threshold.</li>
+             * </ul>
              * 
-             * *   0: The threshold is not a dynamic threshold.
-             * *   1: The threshold is a dynamic threshold.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder predictType(Integer predictType) {
                 this.predictType = predictType;
@@ -593,7 +675,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The field that is monitored. This field is a column name in the data source table that is monitored.
+             * <p>The field whose data quality is checked based on the monitoring rule. This field is a column in the data source table that is monitored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>id</p>
              */
             public Builder property(String property) {
                 this.property = property;
@@ -601,7 +686,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the monitoring rule.
+             * <p>The name of the monitoring rule.</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -609,7 +694,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the monitoring rule.
+             * <p>The type of the monitoring rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ruleType(Integer ruleType) {
                 this.ruleType = ruleType;
@@ -617,7 +705,18 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the monitoring template.
+             * TaskSetting.
+             */
+            public Builder taskSetting(String taskSetting) {
+                this.taskSetting = taskSetting;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the monitoring template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder templateId(Integer templateId) {
                 this.templateId = templateId;
@@ -625,7 +724,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the monitoring template.
+             * <p>The name of the monitoring template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SQL task table rows, 1,7, 30 days fluctuation test</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -633,7 +735,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The trend of the monitoring result.
+             * <p>The trend of the check result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abs</p>
              */
             public Builder trend(String trend) {
                 this.trend = trend;
@@ -641,7 +746,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The threshold for a warning alert. The threshold indicates the deviation of the monitoring result from the expected value. You can customize this threshold based on your business requirements.
+             * <p>The threshold for a warning alert. The threshold indicates the deviation of the check result from the expected value. You can customize this threshold based on your business requirements.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder warningThreshold(String warningThreshold) {
                 this.warningThreshold = warningThreshold;
@@ -649,7 +757,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The filter condition or custom SQL statement that is used for monitoring.
+             * <p>The filter condition or custom SQL statement that is used for monitoring.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>id&gt;10</p>
              */
             public Builder whereCondition(String whereCondition) {
                 this.whereCondition = whereCondition;

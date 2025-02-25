@@ -194,7 +194,7 @@ public class ListFlowNodeInstanceContainerStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ApplicationId.
+             * Application ID。
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -202,7 +202,7 @@ public class ListFlowNodeInstanceContainerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerId.
+             * Container ID。
              */
             public Builder containerId(String containerId) {
                 this.containerId = containerId;

@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTransitRouterVpnAttachmentsResponseBody} extends {@link TeaModel}
  *
  * <p>ListTransitRouterVpnAttachmentsResponseBody</p>
  */
 public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("TransitRouterAttachments")
-    private java.util.List < TransitRouterAttachments> transitRouterAttachments;
+    @com.aliyun.core.annotation.NameInMap("TransitRouterAttachments")
+    private java.util.List<TransitRouterAttachments> transitRouterAttachments;
 
     private ListTransitRouterVpnAttachmentsResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
@@ -74,7 +79,7 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
     /**
      * @return transitRouterAttachments
      */
-    public java.util.List < TransitRouterAttachments> getTransitRouterAttachments() {
+    public java.util.List<TransitRouterAttachments> getTransitRouterAttachments() {
         return this.transitRouterAttachments;
     }
 
@@ -83,10 +88,13 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < TransitRouterAttachments> transitRouterAttachments; 
+        private java.util.List<TransitRouterAttachments> transitRouterAttachments; 
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,11 +102,14 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The token that determines the start point of the next query. Valid values:
-         * <p>
+         * <p>The token that determines the start point of the next query. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is not returned, it indicates that no additional results exist.</li>
+         * <li>If <strong>NextToken</strong> was returned in the previous query, specify the value to obtain the next set of results.</li>
+         * </ul>
          * 
-         * *   If **NextToken** is not returned, it indicates that no additional results exist.
-         * *   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -106,7 +117,10 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3D5530D2-3BBB-524E-8E98-59AB06A250E4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -114,7 +128,10 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -122,9 +139,9 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the VPN attachment.
+         * <p>The information about the VPN attachment.</p>
          */
-        public Builder transitRouterAttachments(java.util.List < TransitRouterAttachments> transitRouterAttachments) {
+        public Builder transitRouterAttachments(java.util.List<TransitRouterAttachments> transitRouterAttachments) {
             this.transitRouterAttachments = transitRouterAttachments;
             return this;
         }
@@ -135,11 +152,17 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTransitRouterVpnAttachmentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTransitRouterVpnAttachmentsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -174,7 +197,10 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -182,7 +208,10 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value_A1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -196,8 +225,14 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTransitRouterVpnAttachmentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTransitRouterVpnAttachmentsResponseBody</p>
+     */
     public static class Zones extends TeaModel {
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Zones(Builder builder) {
@@ -223,10 +258,11 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The ID of the zone.
-             * <p>
+             * <p>The zone ID.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query the most recent zone list.</p>
              * 
-             * You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -240,57 +276,67 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTransitRouterVpnAttachmentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTransitRouterVpnAttachmentsResponseBody</p>
+     */
     public static class TransitRouterAttachments extends TeaModel {
-        @NameInMap("AutoPublishRouteEnabled")
+        @com.aliyun.core.annotation.NameInMap("AutoPublishRouteEnabled")
         private Boolean autoPublishRouteEnabled;
 
-        @NameInMap("CenId")
+        @com.aliyun.core.annotation.NameInMap("CenId")
         private String cenId;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("OrderType")
+        private String orderType;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
-        @NameInMap("TransitRouterAttachmentDescription")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentDescription")
         private String transitRouterAttachmentDescription;
 
-        @NameInMap("TransitRouterAttachmentId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentId")
         private String transitRouterAttachmentId;
 
-        @NameInMap("TransitRouterAttachmentName")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentName")
         private String transitRouterAttachmentName;
 
-        @NameInMap("TransitRouterId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterId")
         private String transitRouterId;
 
-        @NameInMap("VpnId")
+        @com.aliyun.core.annotation.NameInMap("VpnId")
         private String vpnId;
 
-        @NameInMap("VpnOwnerId")
+        @com.aliyun.core.annotation.NameInMap("VpnOwnerId")
         private Long vpnOwnerId;
 
-        @NameInMap("VpnRegionId")
+        @com.aliyun.core.annotation.NameInMap("VpnRegionId")
         private String vpnRegionId;
 
-        @NameInMap("Zones")
-        private java.util.List < Zones> zones;
+        @com.aliyun.core.annotation.NameInMap("Zones")
+        private java.util.List<Zones> zones;
 
         private TransitRouterAttachments(Builder builder) {
             this.autoPublishRouteEnabled = builder.autoPublishRouteEnabled;
             this.cenId = builder.cenId;
             this.chargeType = builder.chargeType;
             this.creationTime = builder.creationTime;
+            this.orderType = builder.orderType;
             this.resourceType = builder.resourceType;
             this.status = builder.status;
             this.tags = builder.tags;
@@ -341,6 +387,13 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
         }
 
         /**
+         * @return orderType
+         */
+        public String getOrderType() {
+            return this.orderType;
+        }
+
+        /**
          * @return resourceType
          */
         public String getResourceType() {
@@ -357,7 +410,7 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -413,7 +466,7 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
         /**
          * @return zones
          */
-        public java.util.List < Zones> getZones() {
+        public java.util.List<Zones> getZones() {
             return this.zones;
         }
 
@@ -422,9 +475,10 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             private String cenId; 
             private String chargeType; 
             private String creationTime; 
+            private String orderType; 
             private String resourceType; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String transitRouterAttachmentDescription; 
             private String transitRouterAttachmentId; 
             private String transitRouterAttachmentName; 
@@ -432,14 +486,17 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             private String vpnId; 
             private Long vpnOwnerId; 
             private String vpnRegionId; 
-            private java.util.List < Zones> zones; 
+            private java.util.List<Zones> zones; 
 
             /**
-             * Specifies whether to allow the transit router to automatically advertise routes to the IPsec-VPN connection. Valid values:
-             * <p>
+             * <p>Indicates the transit router can automatically advertise routes to the IPsec connection. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoPublishRouteEnabled(Boolean autoPublishRouteEnabled) {
                 this.autoPublishRouteEnabled = autoPublishRouteEnabled;
@@ -447,7 +504,10 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the CEN instance.
+             * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cen-j3jzhw1zpau2km****</p>
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -455,10 +515,11 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the VPN attachment.
-             * <p>
+             * <p>The billing method of the VPN attachment.</p>
+             * <p>Only POSTPAY may be returned, which is the default pay-as-you-go billing method.</p>
              * 
-             * The value is POSTPAY, which is the default value and specifies the pay-as-you-go billing method.
+             * <strong>example:</strong>
+             * <p>POSTPAY</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -466,10 +527,11 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the VPN attachment was created.
-             * <p>
+             * <p>The time when the VPN connection was created.</p>
+             * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
              * 
-             * The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.
+             * <strong>example:</strong>
+             * <p>2022-07-08T08:45Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -477,10 +539,26 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of resource to which the transit router is connected.
-             * <p>
+             * <p>The entity that pays the fees of the network instance. Valid values:</p>
+             * <ul>
+             * <li><strong>PayByCenOwner</strong>: the Alibaba Cloud account that owns the CEN instance.</li>
+             * <li><strong>PayByResourceOwner</strong>: the Alibaba Cloud account that owns the network instance.</li>
+             * </ul>
              * 
-             * Valid value: **VPN**, which indicates that an IPsec-VPN connection is attached to the transit router.
+             * <strong>example:</strong>
+             * <p>PayByCenOwner</p>
+             */
+            public Builder orderType(String orderType) {
+                this.orderType = orderType;
+                return this;
+            }
+
+            /**
+             * <p>The type of resource attached to the transit router.</p>
+             * <p>Only <strong>VPN</strong> may be returned, which indicates that an IPsec-VPN connection is attached to the transit router.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPN</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -488,13 +566,15 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the VPN attachment. Valid values:
-             * <p>
+             * <p>The status of the VPN connection. Valid values:</p>
+             * <ul>
+             * <li><strong>Attached</strong></li>
+             * <li><strong>Attaching</strong></li>
+             * <li><strong>Detaching</strong></li>
+             * </ul>
              * 
-             * *   **Attached**: The VPC attachment has been created on the transit router.
-             * *   **Attaching**: The VPN attachment is being created on the transit router.
-             * *   **Detaching**: The VPN attachment is being deleted from the transit router.
-             * *   **Detached**: The VPN attachment is deleted from the transit router.
+             * <strong>example:</strong>
+             * <p>Attached</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -502,15 +582,18 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * A list of tags.
+             * <p>A list of tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * The description of the VPN attachment.
+             * <p>The description of the IPsec-VPN connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desctest</p>
              */
             public Builder transitRouterAttachmentDescription(String transitRouterAttachmentDescription) {
                 this.transitRouterAttachmentDescription = transitRouterAttachmentDescription;
@@ -518,7 +601,10 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPN attachment.
+             * <p>The ID of the VPN attachment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tr-attach-a6p8voaodog5c0****</p>
              */
             public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
                 this.transitRouterAttachmentId = transitRouterAttachmentId;
@@ -526,7 +612,10 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the VPN attachment.
+             * <p>The name of the VPN attachment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nametest</p>
              */
             public Builder transitRouterAttachmentName(String transitRouterAttachmentName) {
                 this.transitRouterAttachmentName = transitRouterAttachmentName;
@@ -534,7 +623,10 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the transit router.
+             * <p>The ID of the transit router.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tr-p0wm740vjnbaprv0m****</p>
              */
             public Builder transitRouterId(String transitRouterId) {
                 this.transitRouterId = transitRouterId;
@@ -542,7 +634,10 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the IPsec-VPN connection.
+             * <p>The ID of the IPsec-VPN connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vco-p0wtu1xgd0l7fjo7k****</p>
              */
             public Builder vpnId(String vpnId) {
                 this.vpnId = vpnId;
@@ -550,7 +645,10 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the IPsec-VPN connection belongs.
+             * <p>The ID of the Alibaba Cloud account to which the IPsec-VPN connection belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1210123456123456</p>
              */
             public Builder vpnOwnerId(Long vpnOwnerId) {
                 this.vpnOwnerId = vpnOwnerId;
@@ -558,10 +656,11 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region to which the IPsec-VPN connection belongs.
-             * <p>
+             * <p>The ID of the region to which the IPsec-VPN connection belongs.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
              * 
-             * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder vpnRegionId(String vpnRegionId) {
                 this.vpnRegionId = vpnRegionId;
@@ -569,9 +668,9 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The zones where the VPN attachment is deployed.
+             * <p>The zones in which the VPN attachment is deployed.</p>
              */
-            public Builder zones(java.util.List < Zones> zones) {
+            public Builder zones(java.util.List<Zones> zones) {
                 this.zones = zones;
                 return this;
             }

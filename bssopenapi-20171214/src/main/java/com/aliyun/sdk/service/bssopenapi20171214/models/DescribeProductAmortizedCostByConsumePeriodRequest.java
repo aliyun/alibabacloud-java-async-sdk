@@ -1,61 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeProductAmortizedCostByConsumePeriodRequest} extends {@link RequestModel}
  *
  * <p>DescribeProductAmortizedCostByConsumePeriodRequest</p>
  */
 public class DescribeProductAmortizedCostByConsumePeriodRequest extends Request {
-    @Body
-    @NameInMap("AmortizationPeriodFilter")
-    private java.util.List < String > amortizationPeriodFilter;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AmortizationPeriodFilter")
+    private java.util.List<String> amortizationPeriodFilter;
 
-    @Body
-    @NameInMap("BillOwnerIdList")
-    private java.util.List < String > billOwnerIdList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BillOwnerIdList")
+    private java.util.List<String> billOwnerIdList;
 
-    @Body
-    @NameInMap("BillUserIdList")
-    private java.util.List < String > billUserIdList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BillUserIdList")
+    private java.util.List<String> billUserIdList;
 
-    @Body
-    @NameInMap("BillingCycle")
-    @Validation(required = true, maxLength = 256)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BillingCycle")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 256)
     private String billingCycle;
 
-    @Body
-    @NameInMap("CostUnitCode")
-    @Validation(maxLength = 256)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CostUnitCode")
+    @com.aliyun.core.annotation.Validation(maxLength = 256)
     private String costUnitCode;
 
-    @Body
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Body
-    @NameInMap("NextToken")
-    @Validation(maxLength = 2560)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 2560)
     private String nextToken;
 
-    @Body
-    @NameInMap("ProductCode")
-    @Validation(maxLength = 256)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Validation(maxLength = 256)
     private String productCode;
 
-    @Body
-    @NameInMap("ProductDetail")
-    @Validation(maxLength = 256)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductDetail")
+    @com.aliyun.core.annotation.Validation(maxLength = 256)
     private String productDetail;
 
-    @Body
-    @NameInMap("SubscriptionType")
-    @Validation(maxLength = 256)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SubscriptionType")
+    @com.aliyun.core.annotation.Validation(maxLength = 256)
     private String subscriptionType;
 
     private DescribeProductAmortizedCostByConsumePeriodRequest(Builder builder) {
@@ -88,21 +93,21 @@ public class DescribeProductAmortizedCostByConsumePeriodRequest extends Request 
     /**
      * @return amortizationPeriodFilter
      */
-    public java.util.List < String > getAmortizationPeriodFilter() {
+    public java.util.List<String> getAmortizationPeriodFilter() {
         return this.amortizationPeriodFilter;
     }
 
     /**
      * @return billOwnerIdList
      */
-    public java.util.List < String > getBillOwnerIdList() {
+    public java.util.List<String> getBillOwnerIdList() {
         return this.billOwnerIdList;
     }
 
     /**
      * @return billUserIdList
      */
-    public java.util.List < String > getBillUserIdList() {
+    public java.util.List<String> getBillUserIdList() {
         return this.billUserIdList;
     }
 
@@ -156,9 +161,9 @@ public class DescribeProductAmortizedCostByConsumePeriodRequest extends Request 
     }
 
     public static final class Builder extends Request.Builder<DescribeProductAmortizedCostByConsumePeriodRequest, Builder> {
-        private java.util.List < String > amortizationPeriodFilter; 
-        private java.util.List < String > billOwnerIdList; 
-        private java.util.List < String > billUserIdList; 
+        private java.util.List<String> amortizationPeriodFilter; 
+        private java.util.List<String> billOwnerIdList; 
+        private java.util.List<String> billUserIdList; 
         private String billingCycle; 
         private String costUnitCode; 
         private Integer maxResults; 
@@ -188,7 +193,7 @@ public class DescribeProductAmortizedCostByConsumePeriodRequest extends Request 
         /**
          * AmortizationPeriodFilter.
          */
-        public Builder amortizationPeriodFilter(java.util.List < String > amortizationPeriodFilter) {
+        public Builder amortizationPeriodFilter(java.util.List<String> amortizationPeriodFilter) {
             this.putBodyParameter("AmortizationPeriodFilter", amortizationPeriodFilter);
             this.amortizationPeriodFilter = amortizationPeriodFilter;
             return this;
@@ -197,7 +202,7 @@ public class DescribeProductAmortizedCostByConsumePeriodRequest extends Request 
         /**
          * BillOwnerIdList.
          */
-        public Builder billOwnerIdList(java.util.List < String > billOwnerIdList) {
+        public Builder billOwnerIdList(java.util.List<String> billOwnerIdList) {
             this.putBodyParameter("BillOwnerIdList", billOwnerIdList);
             this.billOwnerIdList = billOwnerIdList;
             return this;
@@ -206,14 +211,17 @@ public class DescribeProductAmortizedCostByConsumePeriodRequest extends Request 
         /**
          * BillUserIdList.
          */
-        public Builder billUserIdList(java.util.List < String > billUserIdList) {
+        public Builder billUserIdList(java.util.List<String> billUserIdList) {
             this.putBodyParameter("BillUserIdList", billUserIdList);
             this.billUserIdList = billUserIdList;
             return this;
         }
 
         /**
-         * BillingCycle.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-10</p>
          */
         public Builder billingCycle(String billingCycle) {
             this.putBodyParameter("BillingCycle", billingCycle);

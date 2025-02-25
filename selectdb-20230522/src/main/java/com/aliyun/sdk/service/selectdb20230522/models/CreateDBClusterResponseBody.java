@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.selectdb20230522.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDBClusterResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDBClusterResponseBody</p>
  */
 public class CreateDBClusterResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateDBClusterResponseBody(Builder builder) {
@@ -71,14 +76,24 @@ public class CreateDBClusterResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDBClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateDBClusterResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
+        private String clusterId;
+
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("OrderId")
+        @com.aliyun.core.annotation.NameInMap("OrderId")
         private Long orderId;
 
         private Data(Builder builder) {
+            this.clusterId = builder.clusterId;
             this.DBInstanceId = builder.DBInstanceId;
             this.orderId = builder.orderId;
         }
@@ -89,6 +104,13 @@ public class CreateDBClusterResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return clusterId
+         */
+        public String getClusterId() {
+            return this.clusterId;
         }
 
         /**
@@ -106,8 +128,17 @@ public class CreateDBClusterResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String clusterId; 
             private String DBInstanceId; 
             private Long orderId; 
+
+            /**
+             * ClusterId.
+             */
+            public Builder clusterId(String clusterId) {
+                this.clusterId = clusterId;
+                return this;
+            }
 
             /**
              * DBInstanceId.

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchDataTrackResultResponseBody} extends {@link TeaModel}
  *
  * <p>SearchDataTrackResultResponseBody</p>
  */
 public class SearchDataTrackResultResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TrackResult")
+    @com.aliyun.core.annotation.NameInMap("TrackResult")
     private TrackResult trackResult;
 
     private SearchDataTrackResultResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
         private TrackResult trackResult; 
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +102,10 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +113,10 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,11 +124,14 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -122,7 +139,7 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
         }
 
         /**
-         * The parsing result of the data tracking task.
+         * <p>The parsing result of the data tracking task.</p>
          */
         public Builder trackResult(TrackResult trackResult) {
             this.trackResult = trackResult;
@@ -135,26 +152,32 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchDataTrackResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchDataTrackResultResponseBody</p>
+     */
     public static class EventList extends TeaModel {
-        @NameInMap("DataAfter")
-        private java.util.List < String > dataAfter;
+        @com.aliyun.core.annotation.NameInMap("DataAfter")
+        private java.util.List<String> dataAfter;
 
-        @NameInMap("DataBefore")
-        private java.util.List < String > dataBefore;
+        @com.aliyun.core.annotation.NameInMap("DataBefore")
+        private java.util.List<String> dataBefore;
 
-        @NameInMap("EventId")
+        @com.aliyun.core.annotation.NameInMap("EventId")
         private Long eventId;
 
-        @NameInMap("EventLength")
+        @com.aliyun.core.annotation.NameInMap("EventLength")
         private Long eventLength;
 
-        @NameInMap("EventTimestamp")
+        @com.aliyun.core.annotation.NameInMap("EventTimestamp")
         private String eventTimestamp;
 
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
 
-        @NameInMap("RollSQL")
+        @com.aliyun.core.annotation.NameInMap("RollSQL")
         private String rollSQL;
 
         private EventList(Builder builder) {
@@ -178,14 +201,14 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
         /**
          * @return dataAfter
          */
-        public java.util.List < String > getDataAfter() {
+        public java.util.List<String> getDataAfter() {
             return this.dataAfter;
         }
 
         /**
          * @return dataBefore
          */
-        public java.util.List < String > getDataBefore() {
+        public java.util.List<String> getDataBefore() {
             return this.dataBefore;
         }
 
@@ -225,8 +248,8 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > dataAfter; 
-            private java.util.List < String > dataBefore; 
+            private java.util.List<String> dataAfter; 
+            private java.util.List<String> dataBefore; 
             private Long eventId; 
             private Long eventLength; 
             private String eventTimestamp; 
@@ -234,23 +257,26 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
             private String rollSQL; 
 
             /**
-             * The data records after you perform data operations in the database.
+             * <p>The data records after you perform data operations in the database.</p>
              */
-            public Builder dataAfter(java.util.List < String > dataAfter) {
+            public Builder dataAfter(java.util.List<String> dataAfter) {
                 this.dataAfter = dataAfter;
                 return this;
             }
 
             /**
-             * The data records before you perform data operations in the database.
+             * <p>The data records before you perform data operations in the database.</p>
              */
-            public Builder dataBefore(java.util.List < String > dataBefore) {
+            public Builder dataBefore(java.util.List<String> dataBefore) {
                 this.dataBefore = dataBefore;
                 return this;
             }
 
             /**
-             * The ID of the event.
+             * <p>The ID of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder eventId(Long eventId) {
                 this.eventId = eventId;
@@ -258,7 +284,10 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
             }
 
             /**
-             * The length of the event content. Unit: bytes.
+             * <p>The length of the event content. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4324</p>
              */
             public Builder eventLength(Long eventLength) {
                 this.eventLength = eventLength;
@@ -266,7 +295,10 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
             }
 
             /**
-             * The event time.
+             * <p>The event time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-04-23 10:25:47</p>
              */
             public Builder eventTimestamp(String eventTimestamp) {
                 this.eventTimestamp = eventTimestamp;
@@ -274,15 +306,18 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the event. Valid values:
-             * <p>
+             * <p>The type of the event. Valid values:</p>
+             * <ul>
+             * <li><strong>WRITE_ROWS</strong>: indicates an INSERT operation.</li>
+             * <li><strong>UPDATE_ROWS</strong>: indicates an UPDATE operation.</li>
+             * <li><strong>DELETE_ROWS</strong>: indicates a DELETE operation.</li>
+             * <li><strong>EXT_WRITE_ROWS</strong>: indicates an INSERT operation, which is equivalent to WRITE_ROWS.</li>
+             * <li><strong>EXT_UPDATE_ROWS</strong>: indicates an UPDATE operation, which is equivalent to UPDATE_ROWS.</li>
+             * <li><strong>EXT_DELETE_ROWS</strong>: indicates a DELETE operation, which is equivalent to DELETE_ROWS.</li>
+             * </ul>
              * 
-             * *   **WRITE_ROWS**: indicates an INSERT operation.
-             * *   **UPDATE_ROWS**: indicates an UPDATE operation.
-             * *   **DELETE_ROWS**: indicates a DELETE operation.
-             * *   **EXT_WRITE_ROWS**: indicates an INSERT operation, which is equivalent to WRITE_ROWS.
-             * *   **EXT_UPDATE_ROWS**: indicates an UPDATE operation, which is equivalent to UPDATE_ROWS.
-             * *   **EXT_DELETE_ROWS**: indicates a DELETE operation, which is equivalent to DELETE_ROWS.
+             * <strong>example:</strong>
+             * <p>UPDATE_ROWS</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -290,7 +325,10 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statements used to roll back the data change.
+             * <p>The SQL statements used to roll back the data change.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-- Timestamp:2023-04-23 10:25:47 #1\r\nUPDATE <code>dc_test</code>.<code>tb_chunk_dml</code> SET <code>id</code>=1 , <code>gmt_create</code>=&quot;2021-09-30T00:00:00&quot; , <code>content</code>=&quot;2023-03-30 14:51:50&quot; , <code>c1</code>=&quot;2023-04-17 13:42:03&quot; , <code>c_id</code>=1 , <code>c13425</code>=&quot;b\&quot;&quot; , <code>c432532535</code>= null , <code>c1432</code>= null , <code>c143243253</code>= null , <code>c1432535</code>= null , <code>c43125325</code>= null , <code>c3425325</code>= null WHERE  (<code>id</code>=1)&quot;</p>
              */
             public Builder rollSQL(String rollSQL) {
                 this.rollSQL = rollSQL;
@@ -304,17 +342,23 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchDataTrackResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchDataTrackResultResponseBody</p>
+     */
     public static class Columns extends TeaModel {
-        @NameInMap("ColumnName")
+        @com.aliyun.core.annotation.NameInMap("ColumnName")
         private String columnName;
 
-        @NameInMap("ColumnPosition")
+        @com.aliyun.core.annotation.NameInMap("ColumnPosition")
         private Integer columnPosition;
 
-        @NameInMap("ColumnType")
+        @com.aliyun.core.annotation.NameInMap("ColumnType")
         private String columnType;
 
-        @NameInMap("Fictive")
+        @com.aliyun.core.annotation.NameInMap("Fictive")
         private Boolean fictive;
 
         private Columns(Builder builder) {
@@ -367,7 +411,10 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
             private Boolean fictive; 
 
             /**
-             * The name of the column.
+             * <p>The name of the column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>basic_platform</p>
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -375,7 +422,10 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
             }
 
             /**
-             * The position of the column.
+             * <p>The position of the column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder columnPosition(Integer columnPosition) {
                 this.columnPosition = columnPosition;
@@ -383,7 +433,10 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
             }
 
             /**
-             * The data type of the column. Examples: BIGINT, INT, and VARCHAR.
+             * <p>The data type of the column. Examples: BIGINT, INT, and VARCHAR.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BIGINT</p>
              */
             public Builder columnType(String columnType) {
                 this.columnType = columnType;
@@ -391,11 +444,14 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the column is a virtual column. Valid values:
-             * <p>
+             * <p>Indicates whether the column is a virtual column. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder fictive(Boolean fictive) {
                 this.fictive = fictive;
@@ -409,17 +465,23 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchDataTrackResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchDataTrackResultResponseBody</p>
+     */
     public static class TableInfoList extends TeaModel {
-        @NameInMap("Columns")
-        private java.util.List < Columns> columns;
+        @com.aliyun.core.annotation.NameInMap("Columns")
+        private java.util.List<Columns> columns;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("SchemaName")
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
         private String schemaName;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private TableInfoList(Builder builder) {
@@ -440,7 +502,7 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
         /**
          * @return columns
          */
-        public java.util.List < Columns> getColumns() {
+        public java.util.List<Columns> getColumns() {
             return this.columns;
         }
 
@@ -466,21 +528,24 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Columns> columns; 
+            private java.util.List<Columns> columns; 
             private String description; 
             private String schemaName; 
             private String tableName; 
 
             /**
-             * The information about columns.
+             * <p>The information about columns.</p>
              */
-            public Builder columns(java.util.List < Columns> columns) {
+            public Builder columns(java.util.List<Columns> columns) {
                 this.columns = columns;
                 return this;
             }
 
             /**
-             * The description of the column.
+             * <p>The description of the column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>auto-description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -488,7 +553,10 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod_eb_vas</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -496,7 +564,10 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>import_table_test1</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -510,14 +581,20 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchDataTrackResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchDataTrackResultResponseBody</p>
+     */
     public static class TrackResult extends TeaModel {
-        @NameInMap("EventList")
-        private java.util.List < EventList> eventList;
+        @com.aliyun.core.annotation.NameInMap("EventList")
+        private java.util.List<EventList> eventList;
 
-        @NameInMap("TableInfoList")
-        private java.util.List < TableInfoList> tableInfoList;
+        @com.aliyun.core.annotation.NameInMap("TableInfoList")
+        private java.util.List<TableInfoList> tableInfoList;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private TrackResult(Builder builder) {
@@ -537,14 +614,14 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
         /**
          * @return eventList
          */
-        public java.util.List < EventList> getEventList() {
+        public java.util.List<EventList> getEventList() {
             return this.eventList;
         }
 
         /**
          * @return tableInfoList
          */
-        public java.util.List < TableInfoList> getTableInfoList() {
+        public java.util.List<TableInfoList> getTableInfoList() {
             return this.tableInfoList;
         }
 
@@ -556,28 +633,31 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < EventList> eventList; 
-            private java.util.List < TableInfoList> tableInfoList; 
+            private java.util.List<EventList> eventList; 
+            private java.util.List<TableInfoList> tableInfoList; 
             private Long totalCount; 
 
             /**
-             * The details of the event logs.
+             * <p>The details of the event logs.</p>
              */
-            public Builder eventList(java.util.List < EventList> eventList) {
+            public Builder eventList(java.util.List<EventList> eventList) {
                 this.eventList = eventList;
                 return this;
             }
 
             /**
-             * The metadata of tables for which you track data operations.
+             * <p>The metadata of tables for which you track data operations.</p>
              */
-            public Builder tableInfoList(java.util.List < TableInfoList> tableInfoList) {
+            public Builder tableInfoList(java.util.List<TableInfoList> tableInfoList) {
                 this.tableInfoList = tableInfoList;
                 return this;
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>109</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CompletePhysicalConnectionLOAResponseBody} extends {@link TeaModel}
  *
  * <p>CompletePhysicalConnectionLOAResponseBody</p>
  */
 public class CompletePhysicalConnectionLOAResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CompletePhysicalConnectionLOAResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class CompletePhysicalConnectionLOAResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F8983C74-E068-4509-B442-89BD82C8F43B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

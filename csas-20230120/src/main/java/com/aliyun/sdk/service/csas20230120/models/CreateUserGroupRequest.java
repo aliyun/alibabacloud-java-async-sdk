@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUserGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateUserGroupRequest</p>
  */
 public class CreateUserGroupRequest extends Request {
-    @Body
-    @NameInMap("Attributes")
-    @Validation(required = true)
-    private java.util.List < Attributes> attributes;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Attributes")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Attributes> attributes;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
     private CreateUserGroupRequest(Builder builder) {
@@ -49,7 +54,7 @@ public class CreateUserGroupRequest extends Request {
     /**
      * @return attributes
      */
-    public java.util.List < Attributes> getAttributes() {
+    public java.util.List<Attributes> getAttributes() {
         return this.attributes;
     }
 
@@ -68,7 +73,7 @@ public class CreateUserGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateUserGroupRequest, Builder> {
-        private java.util.List < Attributes> attributes; 
+        private java.util.List<Attributes> attributes; 
         private String description; 
         private String name; 
 
@@ -84,9 +89,9 @@ public class CreateUserGroupRequest extends Request {
         } 
 
         /**
-         * Attributes.
+         * <p>This parameter is required.</p>
          */
-        public Builder attributes(java.util.List < Attributes> attributes) {
+        public Builder attributes(java.util.List<Attributes> attributes) {
             this.putBodyParameter("Attributes", attributes);
             this.attributes = attributes;
             return this;
@@ -102,7 +107,10 @@ public class CreateUserGroupRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_group_name</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -117,20 +125,26 @@ public class CreateUserGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateUserGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateUserGroupRequest</p>
+     */
     public static class Attributes extends TeaModel {
-        @NameInMap("IdpId")
+        @com.aliyun.core.annotation.NameInMap("IdpId")
         private Integer idpId;
 
-        @NameInMap("Relation")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Relation")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String relation;
 
-        @NameInMap("UserGroupType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("UserGroupType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String userGroupType;
 
-        @NameInMap("Value")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Value")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String value;
 
         private Attributes(Builder builder) {
@@ -191,7 +205,10 @@ public class CreateUserGroupRequest extends Request {
             }
 
             /**
-             * Relation.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Equal</p>
              */
             public Builder relation(String relation) {
                 this.relation = relation;
@@ -199,7 +216,10 @@ public class CreateUserGroupRequest extends Request {
             }
 
             /**
-             * UserGroupType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>department</p>
              */
             public Builder userGroupType(String userGroupType) {
                 this.userGroupType = userGroupType;
@@ -207,7 +227,7 @@ public class CreateUserGroupRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>This parameter is required.</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -1,47 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCompareDetailRequest} extends {@link RequestModel}
  *
  * <p>GetCompareDetailRequest</p>
  */
 public class GetCompareDetailRequest extends Request {
-    @Path
-    @NameInMap("repositoryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("repositoryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long repositoryId;
 
-    @Query
-    @NameInMap("from")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("from")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String from;
 
-    @Query
-    @NameInMap("maxDiffByte")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("maxDiffByte")
     private Integer maxDiffByte;
 
-    @Query
-    @NameInMap("maxDiffFile")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("maxDiffFile")
     private Integer maxDiffFile;
 
-    @Query
-    @NameInMap("mergeBase")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("mergeBase")
     private Boolean mergeBase;
 
-    @Query
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Query
-    @NameInMap("to")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("to")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String to;
 
     private GetCompareDetailRequest(Builder builder) {
@@ -142,7 +147,10 @@ public class GetCompareDetailRequest extends Request {
         } 
 
         /**
-         * repositoryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2369234</p>
          */
         public Builder repositoryId(Long repositoryId) {
             this.putPathParameter("repositoryId", repositoryId);
@@ -151,7 +159,10 @@ public class GetCompareDetailRequest extends Request {
         }
 
         /**
-         * from.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c9fb781f3d66ef6ee60bdd5c414f5106454b1426</p>
          */
         public Builder from(String from) {
             this.putQueryParameter("from", from);
@@ -187,7 +198,10 @@ public class GetCompareDetailRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);
@@ -196,7 +210,10 @@ public class GetCompareDetailRequest extends Request {
         }
 
         /**
-         * to.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b8f6f28520b1936aafe2e638373e19ccafa42b02</p>
          */
         public Builder to(String to) {
             this.putQueryParameter("to", to);

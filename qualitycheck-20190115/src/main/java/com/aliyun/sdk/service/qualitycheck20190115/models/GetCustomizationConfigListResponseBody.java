@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCustomizationConfigListResponseBody} extends {@link TeaModel}
  *
  * <p>GetCustomizationConfigListResponseBody</p>
  */
 public class GetCustomizationConfigListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetCustomizationConfigListResponseBody(Builder builder) {
@@ -131,26 +136,36 @@ public class GetCustomizationConfigListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCustomizationConfigListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCustomizationConfigListResponseBody</p>
+     */
     public static class ModelCustomizationDataSetPo extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("AsrVersion")
+        private Integer asrVersion;
+
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ModeCustomizationId")
+        @com.aliyun.core.annotation.NameInMap("ModeCustomizationId")
         private String modeCustomizationId;
 
-        @NameInMap("ModelId")
+        @com.aliyun.core.annotation.NameInMap("ModelId")
         private Long modelId;
 
-        @NameInMap("ModelName")
+        @com.aliyun.core.annotation.NameInMap("ModelName")
         private String modelName;
 
-        @NameInMap("ModelStatus")
+        @com.aliyun.core.annotation.NameInMap("ModelStatus")
         private Integer modelStatus;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private Integer taskType;
 
         private ModelCustomizationDataSetPo(Builder builder) {
+            this.asrVersion = builder.asrVersion;
             this.createTime = builder.createTime;
             this.modeCustomizationId = builder.modeCustomizationId;
             this.modelId = builder.modelId;
@@ -165,6 +180,13 @@ public class GetCustomizationConfigListResponseBody extends TeaModel {
 
         public static ModelCustomizationDataSetPo create() {
             return builder().build();
+        }
+
+        /**
+         * @return asrVersion
+         */
+        public Integer getAsrVersion() {
+            return this.asrVersion;
         }
 
         /**
@@ -210,12 +232,21 @@ public class GetCustomizationConfigListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer asrVersion; 
             private String createTime; 
             private String modeCustomizationId; 
             private Long modelId; 
             private String modelName; 
             private Integer modelStatus; 
             private Integer taskType; 
+
+            /**
+             * AsrVersion.
+             */
+            public Builder asrVersion(Integer asrVersion) {
+                this.asrVersion = asrVersion;
+                return this;
+            }
 
             /**
              * CreateTime.
@@ -272,9 +303,15 @@ public class GetCustomizationConfigListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCustomizationConfigListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCustomizationConfigListResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ModelCustomizationDataSetPo")
-        private java.util.List < ModelCustomizationDataSetPo> modelCustomizationDataSetPo;
+        @com.aliyun.core.annotation.NameInMap("ModelCustomizationDataSetPo")
+        private java.util.List<ModelCustomizationDataSetPo> modelCustomizationDataSetPo;
 
         private Data(Builder builder) {
             this.modelCustomizationDataSetPo = builder.modelCustomizationDataSetPo;
@@ -291,17 +328,17 @@ public class GetCustomizationConfigListResponseBody extends TeaModel {
         /**
          * @return modelCustomizationDataSetPo
          */
-        public java.util.List < ModelCustomizationDataSetPo> getModelCustomizationDataSetPo() {
+        public java.util.List<ModelCustomizationDataSetPo> getModelCustomizationDataSetPo() {
             return this.modelCustomizationDataSetPo;
         }
 
         public static final class Builder {
-            private java.util.List < ModelCustomizationDataSetPo> modelCustomizationDataSetPo; 
+            private java.util.List<ModelCustomizationDataSetPo> modelCustomizationDataSetPo; 
 
             /**
              * ModelCustomizationDataSetPo.
              */
-            public Builder modelCustomizationDataSetPo(java.util.List < ModelCustomizationDataSetPo> modelCustomizationDataSetPo) {
+            public Builder modelCustomizationDataSetPo(java.util.List<ModelCustomizationDataSetPo> modelCustomizationDataSetPo) {
                 this.modelCustomizationDataSetPo = modelCustomizationDataSetPo;
                 return this;
             }

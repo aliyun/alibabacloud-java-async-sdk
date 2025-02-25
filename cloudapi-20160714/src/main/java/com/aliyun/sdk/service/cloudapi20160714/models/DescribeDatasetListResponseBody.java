@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDatasetListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDatasetListResponseBody</p>
  */
 public class DescribeDatasetListResponseBody extends TeaModel {
-    @NameInMap("DatasetInfoList")
-    private java.util.List < DatasetInfoList> datasetInfoList;
+    @com.aliyun.core.annotation.NameInMap("DatasetInfoList")
+    private java.util.List<DatasetInfoList> datasetInfoList;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDatasetListResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class DescribeDatasetListResponseBody extends TeaModel {
     /**
      * @return datasetInfoList
      */
-    public java.util.List < DatasetInfoList> getDatasetInfoList() {
+    public java.util.List<DatasetInfoList> getDatasetInfoList() {
         return this.datasetInfoList;
     }
 
@@ -79,22 +84,25 @@ public class DescribeDatasetListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DatasetInfoList> datasetInfoList; 
+        private java.util.List<DatasetInfoList> datasetInfoList; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * DatasetInfoList.
+         * <p>The returned dataset information. It is an array consisting of datasetinfo.</p>
          */
-        public Builder datasetInfoList(java.util.List < DatasetInfoList> datasetInfoList) {
+        public Builder datasetInfoList(java.util.List<DatasetInfoList> datasetInfoList) {
             this.datasetInfoList = datasetInfoList;
             return this;
         }
 
         /**
-         * PageNumber.
+         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeDatasetListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeDatasetListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D403C6E6-21B3-5B78-82DA-E3B6********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeDatasetListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,11 +148,17 @@ public class DescribeDatasetListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDatasetListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDatasetListResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -170,7 +193,10 @@ public class DescribeDatasetListResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ENV</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -178,7 +204,10 @@ public class DescribeDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -192,24 +221,30 @@ public class DescribeDatasetListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDatasetListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDatasetListResponseBody</p>
+     */
     public static class DatasetInfoList extends TeaModel {
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("DatasetId")
+        @com.aliyun.core.annotation.NameInMap("DatasetId")
         private String datasetId;
 
-        @NameInMap("DatasetName")
+        @com.aliyun.core.annotation.NameInMap("DatasetName")
         private String datasetName;
 
-        @NameInMap("DatasetType")
+        @com.aliyun.core.annotation.NameInMap("DatasetType")
         private String datasetType;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
         private DatasetInfoList(Builder builder) {
             this.createdTime = builder.createdTime;
@@ -266,7 +301,7 @@ public class DescribeDatasetListResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -276,10 +311,13 @@ public class DescribeDatasetListResponseBody extends TeaModel {
             private String datasetName; 
             private String datasetType; 
             private String modifiedTime; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
 
             /**
-             * CreatedTime.
+             * <p>The time when the dataset was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-21T12:58:43Z</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -287,7 +325,10 @@ public class DescribeDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * DatasetId.
+             * <p>The dataset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6304ce6b4ae6453f********</p>
              */
             public Builder datasetId(String datasetId) {
                 this.datasetId = datasetId;
@@ -295,7 +336,10 @@ public class DescribeDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * DatasetName.
+             * <p>The dataset name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DatasetName</p>
              */
             public Builder datasetName(String datasetName) {
                 this.datasetName = datasetName;
@@ -303,7 +347,15 @@ public class DescribeDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * DatasetType.
+             * <p>The dataset type. Valid values:</p>
+             * <ul>
+             * <li>JWT_BLOCKING : a JSON Web Token (JWT) blacklist</li>
+             * <li>IP_WHITELIST_CIDR : an IP address whitelist</li>
+             * <li>PARAMETER_ACCESS: a list of parameters for parameter-based access control</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>IP_WHITELIST_CIDR</p>
              */
             public Builder datasetType(String datasetType) {
                 this.datasetType = datasetType;
@@ -311,7 +363,10 @@ public class DescribeDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The time when the dataset was last modified. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-21T12:58:43Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -319,9 +374,9 @@ public class DescribeDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

@@ -1,33 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateResourceLogRequest} extends {@link RequestModel}
  *
  * <p>CreateResourceLogRequest</p>
  */
 public class CreateResourceLogRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("ResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceId;
 
-    @Body
-    @NameInMap("LogStore")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LogStore")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String logStore;
 
-    @Body
-    @NameInMap("ProjectName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectName;
 
     private CreateResourceLogRequest(Builder builder) {
@@ -98,7 +105,11 @@ public class CreateResourceLogRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The ID of the region to which the resource group belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -107,7 +118,11 @@ public class CreateResourceLogRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The ID of the resource group. For more information about how to query the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-r-asdasdasd</p>
          */
         public Builder resourceId(String resourceId) {
             this.putPathParameter("ResourceId", resourceId);
@@ -116,7 +131,11 @@ public class CreateResourceLogRequest extends Request {
         }
 
         /**
-         * LogStore.
+         * <p>The Logstore of Log Service. For more information about how to query a Logstore, see <a href="https://help.aliyun.com/document_detail/426970.html">ListLogStores</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>access_log</p>
          */
         public Builder logStore(String logStore) {
             this.putBodyParameter("LogStore", logStore);
@@ -125,7 +144,11 @@ public class CreateResourceLogRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The Log Service project that is associated with the resource group. For more information about how to query the project, see <a href="https://help.aliyun.com/document_detail/74955.html">ListProject</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-r-asdasdasd-sls</p>
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);

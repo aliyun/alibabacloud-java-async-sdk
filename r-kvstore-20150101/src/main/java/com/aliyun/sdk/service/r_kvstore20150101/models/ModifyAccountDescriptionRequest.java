@@ -1,55 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAccountDescriptionRequest} extends {@link RequestModel}
  *
  * <p>ModifyAccountDescriptionRequest</p>
  */
 public class ModifyAccountDescriptionRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AccountDescription")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountDescription")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountDescription;
 
-    @Query
-    @NameInMap("AccountName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountName;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceBiz")
+    private String sourceBiz;
 
     private ModifyAccountDescriptionRequest(Builder builder) {
         super(builder);
@@ -62,6 +66,7 @@ public class ModifyAccountDescriptionRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
+        this.sourceBiz = builder.sourceBiz;
     }
 
     public static Builder builder() {
@@ -140,6 +145,13 @@ public class ModifyAccountDescriptionRequest extends Request {
         return this.securityToken;
     }
 
+    /**
+     * @return sourceBiz
+     */
+    public String getSourceBiz() {
+        return this.sourceBiz;
+    }
+
     public static final class Builder extends Request.Builder<ModifyAccountDescriptionRequest, Builder> {
         private String regionId; 
         private String accountDescription; 
@@ -150,6 +162,7 @@ public class ModifyAccountDescriptionRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
+        private String sourceBiz; 
 
         private Builder() {
             super();
@@ -166,6 +179,7 @@ public class ModifyAccountDescriptionRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityToken = request.securityToken;
+            this.sourceBiz = request.sourceBiz;
         } 
 
         /**
@@ -178,12 +192,16 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * The description of the account.
-         * <p>
+         * <p>The description of the account.</p>
+         * <ul>
+         * <li>The description must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>The description can contain letters, digits, underscores (_), and hyphens (-).</li>
+         * <li>The description must be 2 to 256 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The description must start with a letter and cannot start with `http://` or `https://`.
-         * *   The description can contain letters, digits, underscores (\_), and hyphens (-).
-         * *   The description must be 2 to 256 characters in length.
+         * <strong>example:</strong>
+         * <p>testescription</p>
          */
         public Builder accountDescription(String accountDescription) {
             this.putQueryParameter("AccountDescription", accountDescription);
@@ -192,7 +210,11 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * The username of the account. You can call the [DescribeAccounts](~~95802~~) operation to query the username of the account.
+         * <p>The username of the account. You can call the <a href="https://help.aliyun.com/document_detail/95802.html">DescribeAccounts</a> operation to query the username of the account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demoaccount</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -201,7 +223,11 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -251,6 +277,15 @@ public class ModifyAccountDescriptionRequest extends Request {
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);
             this.securityToken = securityToken;
+            return this;
+        }
+
+        /**
+         * SourceBiz.
+         */
+        public Builder sourceBiz(String sourceBiz) {
+            this.putQueryParameter("SourceBiz", sourceBiz);
+            this.sourceBiz = sourceBiz;
             return this;
         }
 

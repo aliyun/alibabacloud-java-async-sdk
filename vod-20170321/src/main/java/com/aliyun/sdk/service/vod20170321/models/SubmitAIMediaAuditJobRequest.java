@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitAIMediaAuditJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitAIMediaAuditJobRequest</p>
  */
 public class SubmitAIMediaAuditJobRequest extends Request {
-    @Query
-    @NameInMap("MediaAuditConfiguration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaAuditConfiguration")
     private String mediaAuditConfiguration;
 
-    @Query
-    @NameInMap("MediaId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mediaId;
 
-    @Query
-    @NameInMap("MediaType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaType")
     private String mediaType;
 
-    @Query
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
     private SubmitAIMediaAuditJobRequest(Builder builder) {
@@ -111,12 +116,15 @@ public class SubmitAIMediaAuditJobRequest extends Request {
         } 
 
         /**
-         * The configuration information about the review task.
-         * <p>
+         * <p>The configuration information about the review job.</p>
+         * <ul>
+         * <li>Other configuration items of the review job. Only the ResourceType field is supported. This field is used to specify the type of media files. You can adjust review standards and rules based on the type of media files.</li>
+         * <li>If you want to modify the review standard and rules based on ResourceType, submit a ticket. For more information, see <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>.</li>
+         * <li>The value of ResourceType can contain only letters, digits, and underscores (_).</li>
+         * </ul>
          * 
-         * *   Other configuration items of the review task. Only the ResourceType field is supported. This field is used to specify the type of media files. You can adjust review standards and rules based on the type of media files.
-         * *   If you want to adjust review standards and rules based on ResourceType, submit a ticket to request technical support.
-         * *   The value of ResourceType can contain only letters, digits, and underscores (\_).
+         * <strong>example:</strong>
+         * <p>{&quot;ResourceType&quot;:&quot;****_movie&quot;}</p>
          */
         public Builder mediaAuditConfiguration(String mediaAuditConfiguration) {
             this.putQueryParameter("MediaAuditConfiguration", mediaAuditConfiguration);
@@ -125,10 +133,11 @@ public class SubmitAIMediaAuditJobRequest extends Request {
         }
 
         /**
-         * The ID of the media file.
-         * <p>
+         * <p>The ID of the video file. To obtain the file ID, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Review Management</strong> &gt; <strong>Content Moderation</strong> in the left-side navigation pane.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can obtain the ID of the media file on the Content Moderation page in the ApsaraVideo VOD console.
+         * <strong>example:</strong>
+         * <p>fe028d09441afffb138cd7ee****</p>
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);
@@ -137,7 +146,10 @@ public class SubmitAIMediaAuditJobRequest extends Request {
         }
 
         /**
-         * The type of the media file. Only **video** is supported.
+         * <p>The type of the media file. Only <strong>video</strong> is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>video</p>
          */
         public Builder mediaType(String mediaType) {
             this.putQueryParameter("MediaType", mediaType);
@@ -146,7 +158,17 @@ public class SubmitAIMediaAuditJobRequest extends Request {
         }
 
         /**
-         * The ID of the AI template. If you do not specify this parameter, the ID of the default AI template for automated review is used.
+         * <p>The ID of the AI template. You can use one of the following methods to obtain the ID of the AI template:</p>
+         * <ul>
+         * <li>Obtain the value of TemplateId from the response to the <a href="https://help.aliyun.com/document_detail/102930.html">AddAITemplate</a> operation that you call to create an AI template.</li>
+         * <li>Obtain the value of TemplateId from the response to the <a href="https://help.aliyun.com/document_detail/102936.html">ListAITemplate</a> operation that you call to create an AI template.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you do not specify an ID, the ID of the default AI template is used.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>a07a7f7d7d10eb9fd999e56ecc****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -155,10 +177,13 @@ public class SubmitAIMediaAuditJobRequest extends Request {
         }
 
         /**
-         * The custom settings. The value is a JSON string. You can configure settings such as message callbacks. For more information, see [Request parameters](~~86952~~).
-         * <p>
+         * <p>The custom settings. The value must be a JSON string. You can configure settings such as message callbacks. For more information, see <a href="https://help.aliyun.com/document_detail/86952.html">UserData</a>.</p>
+         * <blockquote>
+         * <p> To use the callback configurations specified by this parameter, you must configure an HTTP callback URL and specify the types of the callback events in the ApsaraVideo VOD console. Otherwise, the callback configurations do not take effect. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see <a href="https://help.aliyun.com/document_detail/86071.html">Configure callback settings</a>.</p>
+         * </blockquote>
          * 
-         * >  The callback configurations take effect only if you specify the HTTP callback URL and select the specific callback events in the ApsaraVideo VOD console.
+         * <strong>example:</strong>
+         * <p>{&quot;MessageCallback&quot;:{&quot;CallbackURL&quot;:&quot;<a href="http://test.test.com%22%7D,%22Extend%22:%7B%22localId%22:%22xxx%22,%22test%22:%22www%22%7D%7D">http://test.test.com&quot;},&quot;Extend&quot;:{&quot;localId&quot;:&quot;xxx&quot;,&quot;test&quot;:&quot;www&quot;}}</a></p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

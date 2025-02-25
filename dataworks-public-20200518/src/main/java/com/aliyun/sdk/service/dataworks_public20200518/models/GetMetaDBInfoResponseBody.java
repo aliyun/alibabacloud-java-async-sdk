@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMetaDBInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetMetaDBInfoResponseBody</p>
  */
 public class GetMetaDBInfoResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetMetaDBInfoResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The time when the compute engine instance was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+         * <p>The basic metadata information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
         }
 
         /**
-         * test table
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1411515937****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,53 +79,59 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMetaDBInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMetaDBInfoResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AppGuid")
+        @com.aliyun.core.annotation.NameInMap("AppGuid")
         private String appGuid;
 
-        @NameInMap("ClusterBizId")
+        @com.aliyun.core.annotation.NameInMap("ClusterBizId")
         private String clusterBizId;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Endpoint")
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
 
-        @NameInMap("EnvType")
+        @com.aliyun.core.annotation.NameInMap("EnvType")
         private Integer envType;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private Long modifyTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
-        @NameInMap("OwnerName")
+        @com.aliyun.core.annotation.NameInMap("OwnerName")
         private String ownerName;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
-        @NameInMap("ProjectName")
+        @com.aliyun.core.annotation.NameInMap("ProjectName")
         private String projectName;
 
-        @NameInMap("ProjectNameCn")
+        @com.aliyun.core.annotation.NameInMap("ProjectNameCn")
         private String projectNameCn;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private Long tenantId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Data(Builder builder) {
@@ -278,7 +292,10 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The display name of the workspace.
+             * <p>The compute engine instance ID. Specify the ID in the <code>Engine type.Engine name</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps.engine_name</p>
              */
             public Builder appGuid(String appGuid) {
                 this.appGuid = appGuid;
@@ -286,7 +303,10 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the compute engine instance was modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * <p>The EMR cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder clusterBizId(String clusterBizId) {
                 this.clusterBizId = clusterBizId;
@@ -294,7 +314,10 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the workspace.
+             * <p>The comment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The ID of the compute engine instance. The ID is in the Engine type.Engine name format.</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -302,7 +325,10 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the workspace owner.
+             * <p>The time when the compute engine instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1541576644000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -310,7 +336,10 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tenant.
+             * <p>The endpoint of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://service.odpsstg.aliyun-inc.com/">http://service.odpsstg.aliyun-inc.com/</a></p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -318,7 +347,10 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the EMR cluster. This parameter is returned only for an EMR compute engine instance.
+             * <p>The type of the environment. Valid values: 0 and 1. The value 0 indicates the development environment. The value 1 indicates the production environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder envType(Integer envType) {
                 this.envType = envType;
@@ -326,7 +358,10 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * <p>The storage path of the metadatabase of the EMR cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hdfs://</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -334,7 +369,10 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The time when the compute engine instance was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1541576644000</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -342,7 +380,10 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -350,7 +391,10 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the service.
+             * <p>The ID of the Alibaba Cloud account used by the workspace owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -358,7 +402,10 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Test items
+             * <p>The name of the workspace owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>323</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -366,7 +413,10 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account used by the workspace owner.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -374,7 +424,10 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the environment. Valid values: 0 and 1. The value 0 indicates the development environment. The value 1 indicates the production environment.
+             * <p>The name of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -382,7 +435,10 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metadatabase.
+             * <p>The display name of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The storage path of the metadatabase of the EMR cluster.</p>
              */
             public Builder projectNameCn(String projectNameCn) {
                 this.projectNameCn = projectNameCn;
@@ -390,7 +446,10 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>233</p>
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -398,7 +457,10 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace.
+             * <p>The type of the metadatabase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hive</p>
              */
             public Builder type(String type) {
                 this.type = type;

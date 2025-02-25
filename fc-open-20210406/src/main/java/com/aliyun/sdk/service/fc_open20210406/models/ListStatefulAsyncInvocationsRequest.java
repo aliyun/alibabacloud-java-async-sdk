@@ -280,7 +280,7 @@ public class ListStatefulAsyncInvocationsRequest extends Request {
         } 
 
         /**
-         * The error message returned for the asynchronous task.
+         * The name of the service to which the asynchronous task belongs.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -289,7 +289,7 @@ public class ListStatefulAsyncInvocationsRequest extends Request {
         }
 
         /**
-         * The event triggered by the asynchronous task.
+         * The name of the function to which the asynchronous task belongs.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -298,7 +298,7 @@ public class ListStatefulAsyncInvocationsRequest extends Request {
         }
 
         /**
-         * It is a tool used to manage and configure Alibaba Cloud resources. After simple installation and configuration, you can use Alibaba Cloud CLI to manage multiple Alibaba Cloud services and migrate your data and business to the cloud with ease.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -307,7 +307,7 @@ public class ListStatefulAsyncInvocationsRequest extends Request {
         }
 
         /**
-         * Alibaba Cloud CLI
+         * The CRC-64 value of the function code package. This value is used to check data integrity. The value is automatically calculated by the tool.
          */
         public Builder xFcCodeChecksum(String xFcCodeChecksum) {
             this.putHeaderParameter("X-Fc-Code-Checksum", xFcCodeChecksum);
@@ -316,11 +316,7 @@ public class ListStatefulAsyncInvocationsRequest extends Request {
         }
 
         /**
-         * - **true**: returns the invocationPayload parameter in the response. 
-         * <p>
-         * - **false**: does not return the invocationPayload parameter in the response. 
-         * 
-         * > The `invocationPayload` parameter indicates the input parameters of an asynchronous task.
+         * The time when the function is invoked. The value is in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -329,7 +325,11 @@ public class ListStatefulAsyncInvocationsRequest extends Request {
         }
 
         /**
-         * The token used to obtain more results. If this parameter is left empty, all the results are returned.
+         * The method used to invoke the function.
+         * <p>
+         * 
+         * *   **Sync**: synchronous invocations
+         * *   **Async**: asynchronous invocations
          */
         public Builder xFcInvocationType(String xFcInvocationType) {
             this.putHeaderParameter("X-Fc-Invocation-Type", xFcInvocationType);
@@ -338,7 +338,11 @@ public class ListStatefulAsyncInvocationsRequest extends Request {
         }
 
         /**
-         * The time when Function Compute API is called.
+         * The method used to return logs.
+         * <p>
+         * 
+         * *   **Tail**: returns the last 4 KB of logs that are generated for the current request.
+         * *   **None**: does not return logs for the current request. Default value: None.
          */
         public Builder xFcLogType(String xFcLogType) {
             this.putHeaderParameter("X-Fc-Log-Type", xFcLogType);
@@ -347,7 +351,7 @@ public class ListStatefulAsyncInvocationsRequest extends Request {
         }
 
         /**
-         * The CRC-64 value of the function code package. This value is used to check data integrity. The value is automatically calculated by the tool.
+         * The trace ID of the request for Function Compute API.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -356,7 +360,11 @@ public class ListStatefulAsyncInvocationsRequest extends Request {
         }
 
         /**
-         * You can search for API operations, call and debug API operations online, and dynamically generate executable sample code for SDKs.
+         * *   Specifies whether to return the invocationPayload parameter in the response. **true**: returns the `invocationPayload` parameter in the response.``
+         * <p>
+         * *   **false**: does not return the `invocationPayload` parameter in the response.``
+         * 
+         * >  The `invocationPayload` parameter indicates the input parameters of an asynchronous task.
          */
         public Builder includePayload(Boolean includePayload) {
             this.putQueryParameter("includePayload", includePayload);
@@ -365,7 +373,7 @@ public class ListStatefulAsyncInvocationsRequest extends Request {
         }
 
         /**
-         * Alibaba Cloud provides SDKs for multiple programming languages to help you integrate Alibaba Cloud services by using APIs. We recommend that you use an SDK to call API operations. This frees you from manual signature verification.
+         * The name prefix of the asynchronous tasks. This parameter is used to limit the names of the returned asynchronous tasks. For example, if you set the `invocationidPrefix` parameter to `job`, the names of the returned invocations must start with `job`.
          */
         public Builder invocationIdPrefix(String invocationIdPrefix) {
             this.putQueryParameter("invocationIdPrefix", invocationIdPrefix);
@@ -374,7 +382,7 @@ public class ListStatefulAsyncInvocationsRequest extends Request {
         }
 
         /**
-         * The list of events that trigger the asynchronous task.
+         * The maximum number of asynchronous tasks to be returned. Valid values: \[1,100]. Default value: 50.
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -383,7 +391,7 @@ public class ListStatefulAsyncInvocationsRequest extends Request {
         }
 
         /**
-         * The ID of the instance that is used to run the asynchronous task.
+         * The token required to obtain more results. You do not need to specify this parameter in the first call. If a NextToken value is returned by a previous call, more results are available.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -392,7 +400,7 @@ public class ListStatefulAsyncInvocationsRequest extends Request {
         }
 
         /**
-         * The number of retries after the asynchronous task fails.
+         * The version or alias of the service to which the asynchronous task belongs.
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);
@@ -401,7 +409,11 @@ public class ListStatefulAsyncInvocationsRequest extends Request {
         }
 
         /**
-         * StatefulAsyncInvocation: asynchronous task. Asynchronous tasks allow you to manage the states on the basis of common asynchronous invocations, which is more suitable for task scenarios.
+         * The method that you want to use to sort the returned asynchronous tasks.
+         * <p>
+         * 
+         * *   **asc**: the ascending order
+         * *   **desc**: the descending order
          */
         public Builder sortOrderByTime(String sortOrderByTime) {
             this.putQueryParameter("sortOrderByTime", sortOrderByTime);
@@ -410,7 +422,7 @@ public class ListStatefulAsyncInvocationsRequest extends Request {
         }
 
         /**
-         * The structure of the asynchronous task.
+         * The start time of the asynchronous task.
          */
         public Builder startedTimeBegin(Long startedTimeBegin) {
             this.putQueryParameter("startedTimeBegin", startedTimeBegin);
@@ -419,7 +431,7 @@ public class ListStatefulAsyncInvocationsRequest extends Request {
         }
 
         /**
-         * The latest version of Function Compute API.
+         * The end time of the asynchronous task.
          */
         public Builder startedTimeEnd(Long startedTimeEnd) {
             this.putQueryParameter("startedTimeEnd", startedTimeEnd);
@@ -428,7 +440,18 @@ public class ListStatefulAsyncInvocationsRequest extends Request {
         }
 
         /**
-         * The request ID of the asynchronous task.
+         * The state of the asynchronous task.
+         * <p>
+         * 
+         * *   **Enqueued**: The asynchronous task is enqueued and is waiting to be executed.
+         * *   **Succeeded**: The invocation succeeded.
+         * *   **Failed**: The invocation failed.
+         * *   **Running**: The invocation is being executed.
+         * *   **Stopped**: The invocation was terminated.
+         * *   **Stopping**: The invocation is being terminated.
+         * *   **Invalid**: The invocation is invalid and not executed due to specific reasons. For example, the function is deleted.
+         * *   **Expired**: The maximum validity period of messages is specified for the asynchronous invocation. The invocation is discarded and not executed because the specified maximum validity period of messages elapsed.
+         * *   **Retrying**: The asynchronous task is being retried due to an execution error.
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);

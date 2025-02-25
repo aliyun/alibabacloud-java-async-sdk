@@ -1,23 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetMFAAuthenticationStatusRequest} extends {@link RequestModel}
  *
  * <p>SetMFAAuthenticationStatusRequest</p>
  */
 public class SetMFAAuthenticationStatusRequest extends Request {
-    @Query
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @Query
-    @NameInMap("MFAAuthenticationStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MFAAuthenticationStatus")
     private String MFAAuthenticationStatus;
 
     private SetMFAAuthenticationStatusRequest(Builder builder) {
@@ -68,7 +68,10 @@ public class SetMFAAuthenticationStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the directory.
+         * <p>The ID of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -77,11 +80,14 @@ public class SetMFAAuthenticationStatusRequest extends Request {
         }
 
         /**
-         * The status of MFA. Valid values:
-         * <p>
+         * <p>The status of MFA. Valid values:</p>
+         * <ul>
+         * <li>Enabled</li>
+         * <li>Disabled</li>
+         * </ul>
          * 
-         * *   Enabled
-         * *   Disabled
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder MFAAuthenticationStatus(String MFAAuthenticationStatus) {
             this.putQueryParameter("MFAAuthenticationStatus", MFAAuthenticationStatus);

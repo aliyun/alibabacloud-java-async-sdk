@@ -49,9 +49,9 @@ public class QueryDevicePictureLifeCycleRequest extends Request {
             super();
         } 
 
-        private Builder(QueryDevicePictureLifeCycleRequest response) {
-            super(response);
-            this.iotId = response.iotId;
+        private Builder(QueryDevicePictureLifeCycleRequest request) {
+            super(request);
+            this.iotId = request.iotId;
         } 
 
         /**

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSasContainerWebDefenseRuleApplicationResponseBody} extends {@link TeaModel}
  *
  * <p>GetSasContainerWebDefenseRuleApplicationResponseBody</p>
  */
 public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaModel {
-    @NameInMap("ContainerWebDefenseAppList")
-    private java.util.List < ContainerWebDefenseAppList> containerWebDefenseAppList;
+    @com.aliyun.core.annotation.NameInMap("ContainerWebDefenseAppList")
+    private java.util.List<ContainerWebDefenseAppList> containerWebDefenseAppList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetSasContainerWebDefenseRuleApplicationResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaMod
     /**
      * @return containerWebDefenseAppList
      */
-    public java.util.List < ContainerWebDefenseAppList> getContainerWebDefenseAppList() {
+    public java.util.List<ContainerWebDefenseAppList> getContainerWebDefenseAppList() {
         return this.containerWebDefenseAppList;
     }
 
@@ -46,19 +51,22 @@ public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaMod
     }
 
     public static final class Builder {
-        private java.util.List < ContainerWebDefenseAppList> containerWebDefenseAppList; 
+        private java.util.List<ContainerWebDefenseAppList> containerWebDefenseAppList; 
         private String requestId; 
 
         /**
-         * The applications.
+         * <p>The applications.</p>
          */
-        public Builder containerWebDefenseAppList(java.util.List < ContainerWebDefenseAppList> containerWebDefenseAppList) {
+        public Builder containerWebDefenseAppList(java.util.List<ContainerWebDefenseAppList> containerWebDefenseAppList) {
             this.containerWebDefenseAppList = containerWebDefenseAppList;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>09969D2C-4FAD-429E-BFBF-9A60DEF8****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,26 +79,32 @@ public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaMod
 
     } 
 
+    /**
+     * 
+     * {@link GetSasContainerWebDefenseRuleApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSasContainerWebDefenseRuleApplicationResponseBody</p>
+     */
     public static class ContainerWebDefenseAppList extends TeaModel {
-        @NameInMap("AliUid")
+        @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
         private ContainerWebDefenseAppList(Builder builder) {
@@ -170,7 +184,10 @@ public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaMod
             private String tag; 
 
             /**
-             * The user ID.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5944922169365****</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -178,10 +195,13 @@ public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaMod
             }
 
             /**
-             * The ID of the container cluster.
-             * <p>
+             * <p>The ID of the container cluster.</p>
+             * <blockquote>
+             * <p> The IDs of clusters can be obtained by using the <a href="https://help.aliyun.com/document_detail/182997.html">DescribeGroupedContainerInstances</a> operation.</p>
+             * </blockquote>
              * 
-             * >  The IDs of clusters can be obtained by using the [DescribeGroupedContainerInstances](~~182997~~) operation.
+             * <strong>example:</strong>
+             * <p>cfb41a869c71e4678a97021582dd8****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -189,7 +209,10 @@ public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaMod
             }
 
             /**
-             * The time when the application was created. Unit: milliseconds.
+             * <p>The time when the application was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1677839038000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -197,7 +220,10 @@ public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaMod
             }
 
             /**
-             * The last modification time. Unit: milliseconds.
+             * <p>The last modification time. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1667891185000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -205,7 +231,10 @@ public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaMod
             }
 
             /**
-             * The ID of the node.
+             * <p>The ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>143761</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -213,7 +242,10 @@ public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaMod
             }
 
             /**
-             * The ID of the rule.
+             * <p>The ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>403327</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -221,7 +253,10 @@ public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaMod
             }
 
             /**
-             * The value of the application label.
+             * <p>The value of the application label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app:test</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;

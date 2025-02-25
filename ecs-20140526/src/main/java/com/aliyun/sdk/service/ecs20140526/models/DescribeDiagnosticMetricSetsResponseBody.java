@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiagnosticMetricSetsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDiagnosticMetricSetsResponseBody</p>
  */
 public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
-    @NameInMap("MetricSets")
-    private java.util.List < MetricSets> metricSets;
+    @com.aliyun.core.annotation.NameInMap("MetricSets")
+    private java.util.List<MetricSets> metricSets;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDiagnosticMetricSetsResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
     /**
      * @return metricSets
      */
-    public java.util.List < MetricSets> getMetricSets() {
+    public java.util.List<MetricSets> getMetricSets() {
         return this.metricSets;
     }
 
@@ -57,20 +62,23 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < MetricSets> metricSets; 
+        private java.util.List<MetricSets> metricSets; 
         private String nextToken; 
         private String requestId; 
 
         /**
-         * A collection of diagnostic metrics.
+         * <p>The diagnostic metric sets.</p>
          */
-        public Builder metricSets(java.util.List < MetricSets> metricSets) {
+        public Builder metricSets(java.util.List<MetricSets> metricSets) {
             this.metricSets = metricSets;
             return this;
         }
 
         /**
-         * The query token returned in this call.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +86,10 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,23 +102,29 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDiagnosticMetricSetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDiagnosticMetricSetsResponseBody</p>
+     */
     public static class MetricSets extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("MetricIds")
-        private java.util.List < String > metricIds;
+        @com.aliyun.core.annotation.NameInMap("MetricIds")
+        private java.util.List<String> metricIds;
 
-        @NameInMap("MetricSetId")
+        @com.aliyun.core.annotation.NameInMap("MetricSetId")
         private String metricSetId;
 
-        @NameInMap("MetricSetName")
+        @com.aliyun.core.annotation.NameInMap("MetricSetName")
         private String metricSetName;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private MetricSets(Builder builder) {
@@ -137,7 +154,7 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
         /**
          * @return metricIds
          */
-        public java.util.List < String > getMetricIds() {
+        public java.util.List<String> getMetricIds() {
             return this.metricIds;
         }
 
@@ -171,14 +188,17 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String description; 
-            private java.util.List < String > metricIds; 
+            private java.util.List<String> metricIds; 
             private String metricSetId; 
             private String metricSetName; 
             private String resourceType; 
             private String type; 
 
             /**
-             * The description of the diagnostic metric set.
+             * <p>The description of the diagnostic metric set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>connection issue diagnostics</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -186,15 +206,18 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the diagnostic metrics.
+             * <p>The IDs of the diagnostic metrics.</p>
              */
-            public Builder metricIds(java.util.List < String > metricIds) {
+            public Builder metricIds(java.util.List<String> metricIds) {
                 this.metricIds = metricIds;
                 return this;
             }
 
             /**
-             * The ID of the diagnostic metric set.
+             * <p>The ID of the diagnostic metric set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dms-bp17p0qwtr72zmu*****</p>
              */
             public Builder metricSetId(String metricSetId) {
                 this.metricSetId = metricSetId;
@@ -202,7 +225,10 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the diagnostic metric set.
+             * <p>The name of the diagnostic metric set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>connection issue diagnostics</p>
              */
             public Builder metricSetName(String metricSetName) {
                 this.metricSetName = metricSetName;
@@ -210,7 +236,10 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type supported by the diagnostic metric set.
+             * <p>The resource type supported by the diagnostic metric set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -218,11 +247,14 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the diagnostic metric set. Valid values:
-             * <p>
+             * <p>The type of the diagnostic metric set. Valid values:</p>
+             * <ul>
+             * <li>User: user-defined diagnostic metric set</li>
+             * <li>Common: common diagnostic metric set</li>
+             * </ul>
              * 
-             * *   User: user-defined diagnostic metric set
-             * *   Common: common diagnostic metric set
+             * <strong>example:</strong>
+             * <p>User</p>
              */
             public Builder type(String type) {
                 this.type = type;

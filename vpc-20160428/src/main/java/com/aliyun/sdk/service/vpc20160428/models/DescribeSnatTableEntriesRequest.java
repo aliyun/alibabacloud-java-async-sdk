@@ -1,78 +1,88 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSnatTableEntriesRequest} extends {@link RequestModel}
  *
  * <p>DescribeSnatTableEntriesRequest</p>
  */
 public class DescribeSnatTableEntriesRequest extends Request {
-    @Query
-    @NameInMap("NatGatewayId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NatGatewayId")
     private String natGatewayId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfaceIds")
+    private java.util.List<String> networkInterfaceIds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SnatEntryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnatEntryId")
     private String snatEntryId;
 
-    @Query
-    @NameInMap("SnatEntryName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnatEntryName")
     private String snatEntryName;
 
-    @Query
-    @NameInMap("SnatIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnatIp")
     private String snatIp;
 
-    @Query
-    @NameInMap("SnatTableId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnatTableId")
     private String snatTableId;
 
-    @Query
-    @NameInMap("SourceCIDR")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceCIDR")
     private String sourceCIDR;
 
-    @Query
-    @NameInMap("SourceVSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceVSwitchId")
     private String sourceVSwitchId;
 
     private DescribeSnatTableEntriesRequest(Builder builder) {
         super(builder);
         this.natGatewayId = builder.natGatewayId;
+        this.networkInterfaceIds = builder.networkInterfaceIds;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
@@ -106,6 +116,13 @@ public class DescribeSnatTableEntriesRequest extends Request {
      */
     public String getNatGatewayId() {
         return this.natGatewayId;
+    }
+
+    /**
+     * @return networkInterfaceIds
+     */
+    public java.util.List<String> getNetworkInterfaceIds() {
+        return this.networkInterfaceIds;
     }
 
     /**
@@ -201,6 +218,7 @@ public class DescribeSnatTableEntriesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeSnatTableEntriesRequest, Builder> {
         private String natGatewayId; 
+        private java.util.List<String> networkInterfaceIds; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
@@ -222,6 +240,7 @@ public class DescribeSnatTableEntriesRequest extends Request {
         private Builder(DescribeSnatTableEntriesRequest request) {
             super(request);
             this.natGatewayId = request.natGatewayId;
+            this.networkInterfaceIds = request.networkInterfaceIds;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
@@ -238,14 +257,26 @@ public class DescribeSnatTableEntriesRequest extends Request {
         } 
 
         /**
-         * The ID of the NAT gateway.
-         * <p>
+         * <p>The ID of the NAT gateway.</p>
+         * <blockquote>
+         * <p> You must specify at least one of <strong>SnatTableId</strong> and <strong>NatGatewayId</strong>.</p>
+         * </blockquote>
          * 
-         * >  You must specify at least one of **SnatTableId** and **NatGatewayId**.
+         * <strong>example:</strong>
+         * <p>ngw-bp1uewa15k4iy5770****</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
             this.natGatewayId = natGatewayId;
+            return this;
+        }
+
+        /**
+         * NetworkInterfaceIds.
+         */
+        public Builder networkInterfaceIds(java.util.List<String> networkInterfaceIds) {
+            this.putQueryParameter("NetworkInterfaceIds", networkInterfaceIds);
+            this.networkInterfaceIds = networkInterfaceIds;
             return this;
         }
 
@@ -268,7 +299,10 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -277,7 +311,10 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: **50**. Default value: **10**.
+         * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -286,10 +323,12 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the region where you want to create the NAT gateway.
-         * <p>
+         * <p>The ID of the region where you want to create the NAT gateway.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -316,7 +355,10 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the SNAT entry.
+         * <p>The ID of the SNAT entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>snat-8vbae8uqh7rjpk7d2****</p>
          */
         public Builder snatEntryId(String snatEntryId) {
             this.putQueryParameter("SnatEntryId", snatEntryId);
@@ -325,10 +367,11 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * The name of the SNAT entry.
-         * <p>
+         * <p>The name of the SNAT entry.</p>
+         * <p>The name must be 2 to 128 characters in length, and can contain digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain digits, underscores (\_), and hyphens (-). The name must start with a letter.
+         * <strong>example:</strong>
+         * <p>SnatEntry-1</p>
          */
         public Builder snatEntryName(String snatEntryName) {
             this.putQueryParameter("SnatEntryName", snatEntryName);
@@ -337,9 +380,13 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * *   When you query SNAT entries of Internet NAT gateways, this parameter specifies the EIP in an SNAT entry.
-         * <p>
-         * *   When you query SNAT entries of VPC NAT gateways, this parameter specifies the NAT IP address in an SNAT entry.
+         * <ul>
+         * <li>When you query SNAT entries of Internet NAT gateways, this parameter specifies the EIP in an SNAT entry.</li>
+         * <li>When you query SNAT entries of VPC NAT gateways, this parameter specifies the NAT IP address in an SNAT entry.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>116.22.XX.XX</p>
          */
         public Builder snatIp(String snatIp) {
             this.putQueryParameter("SnatIp", snatIp);
@@ -348,10 +395,13 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the SNAT table.
-         * <p>
+         * <p>The ID of the SNAT table.</p>
+         * <blockquote>
+         * <p> You must specify at least one of <strong>SnatTableId</strong> and <strong>NatGatewayId</strong>.</p>
+         * </blockquote>
          * 
-         * >  You must specify at least one of **SnatTableId** and **NatGatewayId**.
+         * <strong>example:</strong>
+         * <p>stb-8vbczigrhop8x5u3t****</p>
          */
         public Builder snatTableId(String snatTableId) {
             this.putQueryParameter("SnatTableId", snatTableId);
@@ -360,7 +410,10 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * The source CIDR block specified in the SNAT entry.
+         * <p>The source CIDR block specified in the SNAT entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>116.22.XX.XX/24</p>
          */
         public Builder sourceCIDR(String sourceCIDR) {
             this.putQueryParameter("SourceCIDR", sourceCIDR);
@@ -369,11 +422,14 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch.
-         * <p>
+         * <p>The ID of the vSwitch.</p>
+         * <ul>
+         * <li>When you query SNAT entries of Internet NAT gateways, this parameter specifies that Elastic Compute Service (ECS) instances in the vSwitch can use SNAT entries to access the Internet.</li>
+         * <li>When you query SNAT entries of virtual private cloud (VPC) NAT gateways, this parameter specifies that ECS instances in the vSwitch can use SNAT entries to access external networks.</li>
+         * </ul>
          * 
-         * *   When you query SNAT entries of Internet NAT gateways, this parameter specifies that Elastic Compute Service (ECS) instances in the vSwitch can use SNAT entries to access the Internet.
-         * *   When you query SNAT entries of virtual private cloud (VPC) NAT gateways, this parameter specifies that ECS instances in the vSwitch can use SNAT entries to access external networks.
+         * <strong>example:</strong>
+         * <p>vsw-3xbjkhjshjdf****</p>
          */
         public Builder sourceVSwitchId(String sourceVSwitchId) {
             this.putQueryParameter("SourceVSwitchId", sourceVSwitchId);

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteTranscodeTemplateGroupResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteTranscodeTemplateGroupResponseBody</p>
  */
 public class DeleteTranscodeTemplateGroupResponseBody extends TeaModel {
-    @NameInMap("NonExistTranscodeTemplateIds")
-    private java.util.List < String > nonExistTranscodeTemplateIds;
+    @com.aliyun.core.annotation.NameInMap("NonExistTranscodeTemplateIds")
+    private java.util.List<String> nonExistTranscodeTemplateIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteTranscodeTemplateGroupResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DeleteTranscodeTemplateGroupResponseBody extends TeaModel {
     /**
      * @return nonExistTranscodeTemplateIds
      */
-    public java.util.List < String > getNonExistTranscodeTemplateIds() {
+    public java.util.List<String> getNonExistTranscodeTemplateIds() {
         return this.nonExistTranscodeTemplateIds;
     }
 
@@ -46,19 +51,22 @@ public class DeleteTranscodeTemplateGroupResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > nonExistTranscodeTemplateIds; 
+        private java.util.List<String> nonExistTranscodeTemplateIds; 
         private String requestId; 
 
         /**
-         * The IDs of transcoding templates that were not found.
+         * <p>The IDs of transcoding templates that were not found.</p>
          */
-        public Builder nonExistTranscodeTemplateIds(java.util.List < String > nonExistTranscodeTemplateIds) {
+        public Builder nonExistTranscodeTemplateIds(java.util.List<String> nonExistTranscodeTemplateIds) {
             this.nonExistTranscodeTemplateIds = nonExistTranscodeTemplateIds;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4A*****F6-D7393642CA58</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

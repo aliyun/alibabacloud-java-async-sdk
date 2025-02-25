@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitWorkflowJobResponseBody} extends {@link TeaModel}
  *
  * <p>SubmitWorkflowJobResponseBody</p>
  */
 public class SubmitWorkflowJobResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SubmitWorkflowJobResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class SubmitWorkflowJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A01C8FF4-C106-4431-418F973DADB7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

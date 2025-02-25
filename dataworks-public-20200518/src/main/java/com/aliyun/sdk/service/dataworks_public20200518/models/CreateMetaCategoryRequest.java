@@ -1,33 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMetaCategoryRequest} extends {@link RequestModel}
  *
  * <p>CreateMetaCategoryRequest</p>
  */
 public class CreateMetaCategoryRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("Comment")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Comment")
     private String comment;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("ParentId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ParentId")
     private Long parentId;
 
     private CreateMetaCategoryRequest(Builder builder) {
@@ -98,7 +102,7 @@ public class CreateMetaCategoryRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -107,7 +111,10 @@ public class CreateMetaCategoryRequest extends Request {
         }
 
         /**
-         * The remarks of the category.
+         * <p>The remarks of the category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>category 1</p>
          */
         public Builder comment(String comment) {
             this.putBodyParameter("Comment", comment);
@@ -116,7 +123,11 @@ public class CreateMetaCategoryRequest extends Request {
         }
 
         /**
-         * The name of the category.
+         * <p>The name of the category.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>category_name</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -125,7 +136,10 @@ public class CreateMetaCategoryRequest extends Request {
         }
 
         /**
-         * The ID of the parent category.
+         * <p>The ID of the parent category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder parentId(Long parentId) {
             this.putBodyParameter("ParentId", parentId);

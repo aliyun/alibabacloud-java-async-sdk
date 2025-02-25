@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEventsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEventsResponseBody</p>
  */
 public class DescribeEventsResponseBody extends TeaModel {
-    @NameInMap("EventItems")
-    private java.util.List < EventItems> eventItems;
+    @com.aliyun.core.annotation.NameInMap("EventItems")
+    private java.util.List<EventItems> eventItems;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Long totalRecordCount;
 
     private DescribeEventsResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class DescribeEventsResponseBody extends TeaModel {
     /**
      * @return eventItems
      */
-    public java.util.List < EventItems> getEventItems() {
+    public java.util.List<EventItems> getEventItems() {
         return this.eventItems;
     }
 
@@ -79,7 +84,7 @@ public class DescribeEventsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < EventItems> eventItems; 
+        private java.util.List<EventItems> eventItems; 
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         /**
          * EventItems.
          */
-        public Builder eventItems(java.util.List < EventItems> eventItems) {
+        public Builder eventItems(java.util.List<EventItems> eventItems) {
             this.eventItems = eventItems;
             return this;
         }
@@ -131,38 +136,44 @@ public class DescribeEventsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventsResponseBody</p>
+     */
     public static class EventItems extends TeaModel {
-        @NameInMap("EventId")
+        @com.aliyun.core.annotation.NameInMap("EventId")
         private Long eventId;
 
-        @NameInMap("EventName")
+        @com.aliyun.core.annotation.NameInMap("EventName")
         private String eventName;
 
-        @NameInMap("EventPayload")
+        @com.aliyun.core.annotation.NameInMap("EventPayload")
         private String eventPayload;
 
-        @NameInMap("EventReason")
+        @com.aliyun.core.annotation.NameInMap("EventReason")
         private String eventReason;
 
-        @NameInMap("EventRecordTime")
+        @com.aliyun.core.annotation.NameInMap("EventRecordTime")
         private String eventRecordTime;
 
-        @NameInMap("EventTime")
+        @com.aliyun.core.annotation.NameInMap("EventTime")
         private String eventTime;
 
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
 
-        @NameInMap("EventUserType")
+        @com.aliyun.core.annotation.NameInMap("EventUserType")
         private String eventUserType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceName")
+        @com.aliyun.core.annotation.NameInMap("ResourceName")
         private String resourceName;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
         private EventItems(Builder builder) {

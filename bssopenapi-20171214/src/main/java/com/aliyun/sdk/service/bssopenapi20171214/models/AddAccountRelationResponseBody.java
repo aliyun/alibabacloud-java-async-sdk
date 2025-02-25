@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddAccountRelationResponseBody} extends {@link TeaModel}
  *
  * <p>AddAccountRelationResponseBody</p>
  */
 public class AddAccountRelationResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private AddAccountRelationResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class AddAccountRelationResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class AddAccountRelationResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,10 @@ public class AddAccountRelationResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Message returned</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class AddAccountRelationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Request ID</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class AddAccountRelationResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,11 +148,17 @@ public class AddAccountRelationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AddAccountRelationResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddAccountRelationResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("HostId")
+        @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;
 
-        @NameInMap("RelationId")
+        @com.aliyun.core.annotation.NameInMap("RelationId")
         private Long relationId;
 
         private Data(Builder builder) {
@@ -170,7 +193,10 @@ public class AddAccountRelationResponseBody extends TeaModel {
             private Long relationId; 
 
             /**
-             * HostId
+             * <p>The IP address of the request</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HostId</p>
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -178,7 +204,10 @@ public class AddAccountRelationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the financial relationship.
+             * <p>The ID of the financial relationship.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RelationId</p>
              */
             public Builder relationId(Long relationId) {
                 this.relationId = relationId;

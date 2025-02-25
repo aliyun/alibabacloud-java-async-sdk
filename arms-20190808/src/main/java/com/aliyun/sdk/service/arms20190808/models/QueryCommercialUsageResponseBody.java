@@ -1,35 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryCommercialUsageResponseBody} extends {@link TeaModel}
  *
  * <p>QueryCommercialUsageResponseBody</p>
  */
 public class QueryCommercialUsageResponseBody extends TeaModel {
-    @NameInMap("Code")
-    private String code;
+    @com.aliyun.core.annotation.NameInMap("Code")
+    private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
+    private Integer httpStatusCode;
+
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryCommercialUsageResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
+        this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
@@ -46,7 +55,7 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
     /**
      * @return code
      */
-    public String getCode() {
+    public Integer getCode() {
         return this.code;
     }
 
@@ -55,6 +64,13 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
      */
     public Data getData() {
         return this.data;
+    }
+
+    /**
+     * @return httpStatusCode
+     */
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     /**
@@ -79,22 +95,26 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String code; 
+        private Integer code; 
         private Data data; 
+        private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>The response status. Valid values: 2XX: The request is successful. 3XX: A redirection message is returned. 4XX: The request is invalid. 5XX: A server error occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
-        public Builder code(String code) {
+        public Builder code(Integer code) {
             this.code = code;
             return this;
         }
 
         /**
-         * Data.
+         * <p>The returned struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +122,18 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * HttpStatusCode.
+         */
+        public Builder httpStatusCode(Integer httpStatusCode) {
+            this.httpStatusCode = httpStatusCode;
+            return this;
+        }
+
+        /**
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +141,10 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99A663CB-8D7B-4B0D-A006-03C8EE38E7BB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +152,14 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,12 +172,18 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryCommercialUsageResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCommercialUsageResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Complete")
+        @com.aliyun.core.annotation.NameInMap("Complete")
         private Boolean complete;
 
-        @NameInMap("Items")
-        private java.util.List < java.util.Map<String, ?>> items;
+        @com.aliyun.core.annotation.NameInMap("Items")
+        private java.util.List<java.util.Map<String, ?>> items;
 
         private Data(Builder builder) {
             this.complete = builder.complete;
@@ -161,16 +208,23 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < java.util.Map<String, ?>> getItems() {
+        public java.util.List<java.util.Map<String, ?>> getItems() {
             return this.items;
         }
 
         public static final class Builder {
             private Boolean complete; 
-            private java.util.List < java.util.Map<String, ?>> items; 
+            private java.util.List<java.util.Map<String, ?>> items; 
 
             /**
-             * Complete.
+             * <p>Indicates whether a multi-region query is complete. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder complete(Boolean complete) {
                 this.complete = complete;
@@ -178,9 +232,9 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
             }
 
             /**
-             * Items.
+             * <p>The returned struct.</p>
              */
-            public Builder items(java.util.List < java.util.Map<String, ?>> items) {
+            public Builder items(java.util.List<java.util.Map<String, ?>> items) {
                 this.items = items;
                 return this;
             }

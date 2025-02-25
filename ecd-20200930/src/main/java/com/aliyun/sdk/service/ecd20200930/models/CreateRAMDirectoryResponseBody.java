@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRAMDirectoryResponseBody} extends {@link TeaModel}
  *
  * <p>CreateRAMDirectoryResponseBody</p>
  */
 public class CreateRAMDirectoryResponseBody extends TeaModel {
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateRAMDirectoryResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateRAMDirectoryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DirectoryId.
+         * <p>The RAM directory ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dri-uf62w3qzt4aigvlcb****</p>
          */
         public Builder directoryId(String directoryId) {
             this.directoryId = directoryId;
@@ -58,7 +66,10 @@ public class CreateRAMDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

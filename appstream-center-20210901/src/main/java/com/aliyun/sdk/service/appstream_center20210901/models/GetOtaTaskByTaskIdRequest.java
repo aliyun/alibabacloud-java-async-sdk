@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOtaTaskByTaskIdRequest} extends {@link RequestModel}
  *
  * <p>GetOtaTaskByTaskIdRequest</p>
  */
 public class GetOtaTaskByTaskIdRequest extends Request {
-    @Body
-    @NameInMap("TaskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskId;
 
     private GetOtaTaskByTaskIdRequest(Builder builder) {
@@ -55,7 +60,11 @@ public class GetOtaTaskByTaskIdRequest extends Request {
         } 
 
         /**
-         * TaskId.
+         * <p>The ID of the OTA update task. You can call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> operation to obtain the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ota-be7jzm29wrrz5****</p>
          */
         public Builder taskId(String taskId) {
             this.putBodyParameter("TaskId", taskId);

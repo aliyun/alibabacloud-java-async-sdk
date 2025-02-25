@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetDeletionProtectionRequest</p>
  */
 public class SetDeletionProtectionRequest extends Request {
-    @Query
-    @NameInMap("DeletionProtectionDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeletionProtectionDescription")
     private String deletionProtectionDescription;
 
-    @Query
-    @NameInMap("EnableDeletionProtection")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableDeletionProtection")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean enableDeletionProtection;
 
-    @Query
-    @NameInMap("ProtectedResourceArn")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProtectedResourceArn")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String protectedResourceArn;
 
     private SetDeletionProtectionRequest(Builder builder) {

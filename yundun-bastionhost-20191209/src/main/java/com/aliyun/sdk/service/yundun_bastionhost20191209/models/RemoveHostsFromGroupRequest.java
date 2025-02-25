@@ -1,34 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveHostsFromGroupRequest} extends {@link RequestModel}
  *
  * <p>RemoveHostsFromGroupRequest</p>
  */
 public class RemoveHostsFromGroupRequest extends Request {
-    @Query
-    @NameInMap("HostGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hostGroupId;
 
-    @Query
-    @NameInMap("HostIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hostIds;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private RemoveHostsFromGroupRequest(Builder builder) {
@@ -99,14 +99,14 @@ public class RemoveHostsFromGroupRequest extends Request {
         } 
 
         /**
-         * The return code that indicates whether the call was successful. Valid values:
-         * <p>
+         * <p>The ID of the asset group from which you want to remove hosts.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/201307.html">ListHostGroups</a> operation to query the asset group ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **OK**: The call was successful.
-         * *   **UNEXPECTED**: An unknown error occurred.
-         * *   **INVALID_ARGUMENT**: A request parameter is invalid.
-         * *   **OBJECT_NOT_FOUND**: The specified object on which you want to perform the operation does not exist.
-         * *   **OBJECT_AlREADY_EXISTS**: The specified object on which you want to perform the operation already exists.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder hostGroupId(String hostGroupId) {
             this.putQueryParameter("HostGroupId", hostGroupId);
@@ -115,7 +115,14 @@ public class RemoveHostsFromGroupRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The IDs of the hosts that you want to remove from the host group. Specify a JSON string. You can specify up to 100 host IDs.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query the host IDs.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;]</p>
          */
         public Builder hostIds(String hostIds) {
             this.putQueryParameter("HostIds", hostIds);
@@ -124,10 +131,14 @@ public class RemoveHostsFromGroupRequest extends Request {
         }
 
         /**
-         * The ID of the host that you want to remove from the host group. The value is a JSON string. You can add up to 100 host IDs.
-         * <p>
+         * <p>The ID of the bastion host whose asset group you want to manage.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [ListHosts](~~200665~~) operation to query the IDs of hosts.
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-st220aw****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -136,7 +147,13 @@ public class RemoveHostsFromGroupRequest extends Request {
         }
 
         /**
-         * The ID of the host group.
+         * <p>The region ID of the bastion host whose asset group you want to manage.</p>
+         * <blockquote>
+         * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

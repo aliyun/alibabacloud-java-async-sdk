@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGtmRecoveryPlanRequest} extends {@link RequestModel}
  *
  * <p>UpdateGtmRecoveryPlanRequest</p>
  */
 public class UpdateGtmRecoveryPlanRequest extends Request {
-    @Query
-    @NameInMap("FaultAddrPool")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FaultAddrPool")
     private String faultAddrPool;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("RecoveryPlanId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecoveryPlanId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long recoveryPlanId;
 
-    @Query
-    @NameInMap("Remark")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
     private UpdateGtmRecoveryPlanRequest(Builder builder) {
@@ -111,7 +116,10 @@ public class UpdateGtmRecoveryPlanRequest extends Request {
         } 
 
         /**
-         * The list of faulty address pools.
+         * <p>The list of faulty address pools.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;hra0or&quot;]</p>
          */
         public Builder faultAddrPool(String faultAddrPool) {
             this.putQueryParameter("FaultAddrPool", faultAddrPool);
@@ -120,7 +128,10 @@ public class UpdateGtmRecoveryPlanRequest extends Request {
         }
 
         /**
-         * The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.
+         * <p>The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -129,7 +140,10 @@ public class UpdateGtmRecoveryPlanRequest extends Request {
         }
 
         /**
-         * The name of the disaster recovery plan.
+         * <p>The name of the disaster recovery plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -138,7 +152,11 @@ public class UpdateGtmRecoveryPlanRequest extends Request {
         }
 
         /**
-         * The ID of the disaster recovery plan.
+         * <p>The ID of the disaster recovery plan.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder recoveryPlanId(Long recoveryPlanId) {
             this.putQueryParameter("RecoveryPlanId", recoveryPlanId);
@@ -147,7 +165,10 @@ public class UpdateGtmRecoveryPlanRequest extends Request {
         }
 
         /**
-         * The remarks about the disaster recovery plan.
+         * <p>The remarks about the disaster recovery plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remark</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

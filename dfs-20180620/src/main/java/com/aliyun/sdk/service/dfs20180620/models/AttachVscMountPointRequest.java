@@ -32,7 +32,7 @@ public class AttachVscMountPointRequest extends Request {
 
     @Query
     @NameInMap("InstanceIds")
-    private java.util.Map < String, ? > instanceIds;
+    private java.util.List < String > instanceIds;
 
     @Query
     @NameInMap("MountPointId")
@@ -103,7 +103,7 @@ public class AttachVscMountPointRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.Map < String, ? > getInstanceIds() {
+    public java.util.List < String > getInstanceIds() {
         return this.instanceIds;
     }
 
@@ -133,7 +133,7 @@ public class AttachVscMountPointRequest extends Request {
         private String description; 
         private String fileSystemId; 
         private String inputRegionId; 
-        private java.util.Map < String, ? > instanceIds; 
+        private java.util.List < String > instanceIds; 
         private String mountPointId; 
         private java.util.List < String > vscIds; 
         private String vscType; 
@@ -193,7 +193,7 @@ public class AttachVscMountPointRequest extends Request {
         /**
          * InstanceIds.
          */
-        public Builder instanceIds(java.util.Map < String, ? > instanceIds) {
+        public Builder instanceIds(java.util.List < String > instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
             this.putQueryParameter("InstanceIds", instanceIdsShrink);
             this.instanceIds = instanceIds;

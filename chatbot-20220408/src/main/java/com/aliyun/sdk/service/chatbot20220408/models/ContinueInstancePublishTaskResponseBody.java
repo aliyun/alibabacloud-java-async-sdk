@@ -1,45 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ContinueInstancePublishTaskResponseBody} extends {@link TeaModel}
  *
  * <p>ContinueInstancePublishTaskResponseBody</p>
  */
 public class ContinueInstancePublishTaskResponseBody extends TeaModel {
-    @NameInMap("BizTypeList")
+    @com.aliyun.core.annotation.NameInMap("BizTypeList")
     private java.util.List < String > bizTypeList;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("Error")
+    @com.aliyun.core.annotation.NameInMap("Error")
     private String error;
 
-    @NameInMap("Errors")
+    @com.aliyun.core.annotation.NameInMap("Errors")
     private java.util.Map < String, ? > errors;
 
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @NameInMap("ModifyTime")
+    @com.aliyun.core.annotation.NameInMap("ModifyTime")
     private String modifyTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Response")
+    @com.aliyun.core.annotation.NameInMap("Response")
     private String response;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("Warnings")
+    @com.aliyun.core.annotation.NameInMap("Warnings")
     private java.util.Map < String, ? > warnings;
 
     private ContinueInstancePublishTaskResponseBody(Builder builder) {

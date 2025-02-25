@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateBundleResponseBody} extends {@link TeaModel}
  *
  * <p>CreateBundleResponseBody</p>
  */
 public class CreateBundleResponseBody extends TeaModel {
-    @NameInMap("BundleId")
+    @com.aliyun.core.annotation.NameInMap("BundleId")
     private String bundleId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateBundleResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateBundleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BundleId.
+         * <p>The ID of the cloud computer template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b-cezrnfgecbich****</p>
          */
         public Builder bundleId(String bundleId) {
             this.bundleId = bundleId;
@@ -58,7 +66,10 @@ public class CreateBundleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

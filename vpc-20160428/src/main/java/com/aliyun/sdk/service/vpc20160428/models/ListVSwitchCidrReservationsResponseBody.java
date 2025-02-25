@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListVSwitchCidrReservationsResponseBody} extends {@link TeaModel}
  *
  * <p>ListVSwitchCidrReservationsResponseBody</p>
  */
 public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Long maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
-    @NameInMap("VSwitchCidrReservations")
-    private java.util.List < VSwitchCidrReservations> vSwitchCidrReservations;
+    @com.aliyun.core.annotation.NameInMap("VSwitchCidrReservations")
+    private java.util.List<VSwitchCidrReservations> vSwitchCidrReservations;
 
     private ListVSwitchCidrReservationsResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
@@ -74,7 +79,7 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
     /**
      * @return vSwitchCidrReservations
      */
-    public java.util.List < VSwitchCidrReservations> getVSwitchCidrReservations() {
+    public java.util.List<VSwitchCidrReservations> getVSwitchCidrReservations() {
         return this.vSwitchCidrReservations;
     }
 
@@ -83,10 +88,13 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Long totalCount; 
-        private java.util.List < VSwitchCidrReservations> vSwitchCidrReservations; 
+        private java.util.List<VSwitchCidrReservations> vSwitchCidrReservations; 
 
         /**
-         * The number of entries to return per page.
+         * <p>The number of entries to return per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Long maxResults) {
             this.maxResults = maxResults;
@@ -94,11 +102,14 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value is returned for <strong>NextToken</strong>, the value is the token that determines the start point of the next query.</li>
+         * </ul>
          * 
-         * *   If **NextToken** is empty, no next page exists.
-         * *   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -106,7 +117,10 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54B48E3D-DF70-471B-AA93-08E683A1B45</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -114,7 +128,10 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -122,9 +139,9 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
         }
 
         /**
-         * A list of reserved CIDR blocks.
+         * <p>A list of reserved CIDR blocks.</p>
          */
-        public Builder vSwitchCidrReservations(java.util.List < VSwitchCidrReservations> vSwitchCidrReservations) {
+        public Builder vSwitchCidrReservations(java.util.List<VSwitchCidrReservations> vSwitchCidrReservations) {
             this.vSwitchCidrReservations = vSwitchCidrReservations;
             return this;
         }
@@ -135,11 +152,17 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListVSwitchCidrReservationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVSwitchCidrReservationsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -174,7 +197,10 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -182,7 +208,10 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -196,44 +225,50 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListVSwitchCidrReservationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVSwitchCidrReservationsResponseBody</p>
+     */
     public static class VSwitchCidrReservations extends TeaModel {
-        @NameInMap("AssignedCidrCount")
+        @com.aliyun.core.annotation.NameInMap("AssignedCidrCount")
         private Integer assignedCidrCount;
 
-        @NameInMap("AvailableCidrCount")
+        @com.aliyun.core.annotation.NameInMap("AvailableCidrCount")
         private Integer availableCidrCount;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("IpVersion")
+        @com.aliyun.core.annotation.NameInMap("IpVersion")
         private String ipVersion;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("VSwitchCidrReservationCidr")
+        @com.aliyun.core.annotation.NameInMap("VSwitchCidrReservationCidr")
         private String vSwitchCidrReservationCidr;
 
-        @NameInMap("VSwitchCidrReservationDescription")
+        @com.aliyun.core.annotation.NameInMap("VSwitchCidrReservationDescription")
         private String vSwitchCidrReservationDescription;
 
-        @NameInMap("VSwitchCidrReservationId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchCidrReservationId")
         private String vSwitchCidrReservationId;
 
-        @NameInMap("VSwitchCidrReservationName")
+        @com.aliyun.core.annotation.NameInMap("VSwitchCidrReservationName")
         private String vSwitchCidrReservationName;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private VSwitchCidrReservations(Builder builder) {
@@ -298,7 +333,7 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -357,7 +392,7 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
             private String creationTime; 
             private String ipVersion; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String type; 
             private String vSwitchCidrReservationCidr; 
             private String vSwitchCidrReservationDescription; 
@@ -367,7 +402,10 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The number of used prefixes in the reserved CIDR block.
+             * <p>The number of used prefixes in the reserved CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder assignedCidrCount(Integer assignedCidrCount) {
                 this.assignedCidrCount = assignedCidrCount;
@@ -375,7 +413,10 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of available prefixes in the reserved CIDR block.
+             * <p>The number of available prefixes in the reserved CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder availableCidrCount(Integer availableCidrCount) {
                 this.availableCidrCount = availableCidrCount;
@@ -383,7 +424,10 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the reserved CIDR block was created.
+             * <p>The time when the reserved CIDR block was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-14T10:02:37Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -391,11 +435,14 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP version of the reserved CIDR block. Valid values:
-             * <p>
+             * <p>The IP version of the reserved CIDR block. Valid values:</p>
+             * <ul>
+             * <li><strong>IPv4</strong> (default)</li>
+             * <li><strong>IPv6</strong></li>
+             * </ul>
              * 
-             * *   **IPv4** (default)
-             * *   **IPv6**
+             * <strong>example:</strong>
+             * <p>IPv4</p>
              */
             public Builder ipVersion(String ipVersion) {
                 this.ipVersion = ipVersion;
@@ -403,13 +450,16 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the reserved CIDR block. Valid values:
-             * <p>
+             * <p>The status of the reserved CIDR block. Valid values:</p>
+             * <ul>
+             * <li><strong>Assigning</strong></li>
+             * <li><strong>Assigned</strong></li>
+             * <li><strong>Releasing</strong></li>
+             * <li><strong>Released</strong></li>
+             * </ul>
              * 
-             * *   **Assigning**
-             * *   **Assigned**
-             * *   **Releasing**
-             * *   **Released**
+             * <strong>example:</strong>
+             * <p>Assigned</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -417,15 +467,18 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>The tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * The type of the reserved CIDR block. Valid value: **prefix**. CIDR blocks are allocated from the reserved CIDR block.
+             * <p>The type of the reserved CIDR block. Valid value: <strong>prefix</strong>. CIDR blocks are allocated from the reserved CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prefix</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -433,7 +486,10 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * The reserved CIDR block.
+             * <p>The reserved CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.64/28</p>
              */
             public Builder vSwitchCidrReservationCidr(String vSwitchCidrReservationCidr) {
                 this.vSwitchCidrReservationCidr = vSwitchCidrReservationCidr;
@@ -441,7 +497,10 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the reserved CIDR block.
+             * <p>The description of the reserved CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ReservationDescription</p>
              */
             public Builder vSwitchCidrReservationDescription(String vSwitchCidrReservationDescription) {
                 this.vSwitchCidrReservationDescription = vSwitchCidrReservationDescription;
@@ -449,7 +508,10 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the reserved CIDR block.
+             * <p>The ID of the reserved CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vcr-bp1m12saqteraw3rp****</p>
              */
             public Builder vSwitchCidrReservationId(String vSwitchCidrReservationId) {
                 this.vSwitchCidrReservationId = vSwitchCidrReservationId;
@@ -457,7 +519,10 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the reserved CIDR block.
+             * <p>The name of the reserved CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ReservationName</p>
              */
             public Builder vSwitchCidrReservationName(String vSwitchCidrReservationName) {
                 this.vSwitchCidrReservationName = vSwitchCidrReservationName;
@@ -465,7 +530,10 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch to which the reserved CIDR block belongs.
+             * <p>The ID of the vSwitch to which the reserved CIDR block belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-25navfgbue4g****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -473,7 +541,10 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * The virtual private cloud (VPC) to which the reserved CIDR block belongs.
+             * <p>The virtual private cloud (VPC) to which the reserved CIDR block belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1wdz2pdhgurz1od****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

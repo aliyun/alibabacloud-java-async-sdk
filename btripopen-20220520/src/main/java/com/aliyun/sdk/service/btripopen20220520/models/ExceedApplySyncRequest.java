@@ -1,46 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExceedApplySyncRequest} extends {@link RequestModel}
  *
  * <p>ExceedApplySyncRequest</p>
  */
 public class ExceedApplySyncRequest extends Request {
-    @Query
-    @NameInMap("apply_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("apply_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long applyId;
 
-    @Query
-    @NameInMap("biz_category")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("biz_category")
     private Integer bizCategory;
 
-    @Query
-    @NameInMap("remark")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("remark")
     private String remark;
 
-    @Query
-    @NameInMap("status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer status;
 
-    @Query
-    @NameInMap("thirdparty_flow_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("thirdparty_flow_id")
     private String thirdpartyFlowId;
 
-    @Query
-    @NameInMap("user_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("user_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
-    @Header
-    @NameInMap("x-acs-btrip-so-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-so-corp-token")
     private String xAcsBtripSoCorpToken;
 
     private ExceedApplySyncRequest(Builder builder) {
@@ -141,7 +146,10 @@ public class ExceedApplySyncRequest extends Request {
         } 
 
         /**
-         * apply_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>823744</p>
          */
         public Builder applyId(Long applyId) {
             this.putQueryParameter("apply_id", applyId);
@@ -168,7 +176,10 @@ public class ExceedApplySyncRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("status", status);
@@ -186,7 +197,10 @@ public class ExceedApplySyncRequest extends Request {
         }
 
         /**
-         * user_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>open5145141</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("user_id", userId);

@@ -1,47 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateApiStageVariableRequest} extends {@link RequestModel}
  *
  * <p>CreateApiStageVariableRequest</p>
  */
 public class CreateApiStageVariableRequest extends Request {
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("StageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String stageId;
 
-    @Query
-    @NameInMap("StageRouteModel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StageRouteModel")
     @Deprecated
     private String stageRouteModel;
 
-    @Query
-    @NameInMap("SupportRoute")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SupportRoute")
     private Boolean supportRoute;
 
-    @Query
-    @NameInMap("VariableName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VariableName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String variableName;
 
-    @Query
-    @NameInMap("VariableValue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VariableValue")
     private String variableValue;
 
     private CreateApiStageVariableRequest(Builder builder) {
@@ -142,7 +147,11 @@ public class CreateApiStageVariableRequest extends Request {
         } 
 
         /**
-         * The ID of the API group.
+         * <p>The ID of the API group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>523e8dc7bbe04613b5b1d726c2a7889d</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -160,7 +169,11 @@ public class CreateApiStageVariableRequest extends Request {
         }
 
         /**
-         * The ID of the runtime environment.
+         * <p>The ID of the runtime environment.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6EF60BEC-0242-43AF-BB20-270359FB54A7</p>
          */
         public Builder stageId(String stageId) {
             this.putQueryParameter("StageId", stageId);
@@ -169,7 +182,22 @@ public class CreateApiStageVariableRequest extends Request {
         }
 
         /**
-         * StageRouteModel.
+         * <p>The routing model of the environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;location&quot;: &quot;HEAD&quot;,
+         *     &quot;parameterCatalog&quot;: &quot;CUSTOM&quot;,
+         *     &quot;parameterType&quot;: &quot;String&quot;,
+         *     &quot;serviceParameterName&quot;: &quot;TestConstant&quot;,
+         *     &quot;routeMatchSymbol&quot;: &quot;IN&quot;,
+         *     &quot;routeRules&quot;: [
+         *         {
+         *             &quot;conditionValue&quot;: &quot;aaa,bbb&quot;,
+         *             &quot;resultValue&quot;: &quot;apigateway-test.com&quot;
+         *         }
+         *     ]
+         * }</p>
          */
         public Builder stageRouteModel(String stageRouteModel) {
             this.putQueryParameter("StageRouteModel", stageRouteModel);
@@ -178,7 +206,10 @@ public class CreateApiStageVariableRequest extends Request {
         }
 
         /**
-         * Specifies whether routing is supported.
+         * <p>Specifies whether routing is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder supportRoute(Boolean supportRoute) {
             this.putQueryParameter("SupportRoute", supportRoute);
@@ -187,7 +218,11 @@ public class CreateApiStageVariableRequest extends Request {
         }
 
         /**
-         * The name of the variable to be added. This parameter is case-sensitive.
+         * <p>The name of the variable to be added. This parameter is case-sensitive.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>serverName</p>
          */
         public Builder variableName(String variableName) {
             this.putQueryParameter("VariableName", variableName);
@@ -196,7 +231,10 @@ public class CreateApiStageVariableRequest extends Request {
         }
 
         /**
-         * The value of the variable.
+         * <p>The value of the variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api.domain.com</p>
          */
         public Builder variableValue(String variableValue) {
             this.putQueryParameter("VariableValue", variableValue);

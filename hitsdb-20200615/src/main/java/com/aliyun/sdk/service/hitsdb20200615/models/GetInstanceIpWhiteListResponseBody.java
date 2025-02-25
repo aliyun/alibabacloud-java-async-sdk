@@ -1,30 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hitsdb20200615.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceIpWhiteListResponseBody} extends {@link TeaModel}
  *
  * <p>GetInstanceIpWhiteListResponseBody</p>
  */
 public class GetInstanceIpWhiteListResponseBody extends TeaModel {
-    @NameInMap("GroupList")
-    private java.util.List < GroupList> groupList;
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("GroupList")
+    private java.util.List<GroupList> groupList;
+
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("IpList")
-    private java.util.List < String > ipList;
+    @com.aliyun.core.annotation.NameInMap("IpList")
+    private java.util.List<String> ipList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetInstanceIpWhiteListResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.groupList = builder.groupList;
         this.instanceId = builder.instanceId;
         this.ipList = builder.ipList;
@@ -40,9 +49,16 @@ public class GetInstanceIpWhiteListResponseBody extends TeaModel {
     }
 
     /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
+    }
+
+    /**
      * @return groupList
      */
-    public java.util.List < GroupList> getGroupList() {
+    public java.util.List<GroupList> getGroupList() {
         return this.groupList;
     }
 
@@ -56,7 +72,7 @@ public class GetInstanceIpWhiteListResponseBody extends TeaModel {
     /**
      * @return ipList
      */
-    public java.util.List < String > getIpList() {
+    public java.util.List<String> getIpList() {
         return this.ipList;
     }
 
@@ -68,21 +84,36 @@ public class GetInstanceIpWhiteListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < GroupList> groupList; 
+        private String accessDeniedDetail; 
+        private java.util.List<GroupList> groupList; 
         private String instanceId; 
-        private java.util.List < String > ipList; 
+        private java.util.List<String> ipList; 
         private String requestId; 
 
         /**
-         * GroupList.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;AuthAction&quot;:&quot;xxx&quot;,&quot;AuthPrincipalDisplayName&quot;:&quot;222&quot;,&quot;AuthPrincipalOwnerId&quot;:&quot;111&quot;,&quot;AuthPrincipalType&quot;:&quot;SubUser&quot;,,&quot;NoPermissionType&quot;:&quot;ImplicitDeny&quot;,&quot;PolicyType&quot;:&quot;AccountLevelIdentityBasedPolicy&quot;,&quot;EncodedDiagnosticMessage&quot;:&quot;xxxxxx&quot;}</p>
          */
-        public Builder groupList(java.util.List < GroupList> groupList) {
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
+
+        /**
+         * <p>The details about the IP address whitelists.</p>
+         */
+        public Builder groupList(java.util.List<GroupList> groupList) {
             this.groupList = groupList;
             return this;
         }
 
         /**
-         * The ID of the Lindorm instance.
+         * <p>The ID of the Lindorm instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ld-bp1z3506imz2f****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -90,15 +121,18 @@ public class GetInstanceIpWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * IpList.
+         * <p>The list of IP addresses in the whitelist of the instance.</p>
          */
-        public Builder ipList(java.util.List < String > ipList) {
+        public Builder ipList(java.util.List<String> ipList) {
             this.ipList = ipList;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1D1F6F4D-9203-53E7-84E9-5376B4657E63</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,11 +145,17 @@ public class GetInstanceIpWhiteListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInstanceIpWhiteListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceIpWhiteListResponseBody</p>
+     */
     public static class GroupList extends TeaModel {
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("SecurityIpList")
+        @com.aliyun.core.annotation.NameInMap("SecurityIpList")
         private String securityIpList;
 
         private GroupList(Builder builder) {
@@ -150,7 +190,10 @@ public class GetInstanceIpWhiteListResponseBody extends TeaModel {
             private String securityIpList; 
 
             /**
-             * GroupName.
+             * <p>The name of the IP address whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -158,7 +201,10 @@ public class GetInstanceIpWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIpList.
+             * <p>The IP addresses in the whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.0/24</p>
              */
             public Builder securityIpList(String securityIpList) {
                 this.securityIpList = securityIpList;

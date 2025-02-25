@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link MLDataParam} extends {@link TeaModel}
  *
  * <p>MLDataParam</p>
  */
 public class MLDataParam extends TeaModel {
-    @NameInMap("annotationdataId")
+    @com.aliyun.core.annotation.NameInMap("annotationdataId")
     private String annotationdataId;
 
-    @NameInMap("annotations")
-    private java.util.Map < String, MLDataParamAnnotationsValue > annotations;
+    @com.aliyun.core.annotation.NameInMap("annotations")
+    private java.util.Map<String, MLDataParamAnnotationsValue> annotations;
 
-    @NameInMap("config")
-    private java.util.Map < String, String > config;
+    @com.aliyun.core.annotation.NameInMap("config")
+    private java.util.Map<String, String> config;
 
-    @NameInMap("createTime")
+    @com.aliyun.core.annotation.NameInMap("createTime")
     private Long createTime;
 
-    @NameInMap("dataHash")
+    @com.aliyun.core.annotation.NameInMap("dataHash")
     private String dataHash;
 
-    @NameInMap("datasetId")
+    @com.aliyun.core.annotation.NameInMap("datasetId")
     private String datasetId;
 
-    @NameInMap("lastModifyTime")
+    @com.aliyun.core.annotation.NameInMap("lastModifyTime")
     private Long lastModifyTime;
 
-    @NameInMap("predictions")
-    private java.util.Map < String, MLDataParamPredictionsValue > predictions;
+    @com.aliyun.core.annotation.NameInMap("predictions")
+    private java.util.Map<String, MLDataParamPredictionsValue> predictions;
 
-    @NameInMap("value")
+    @com.aliyun.core.annotation.NameInMap("value")
     private String value;
 
-    @NameInMap("valueType")
+    @com.aliyun.core.annotation.NameInMap("valueType")
     private String valueType;
 
     private MLDataParam(Builder builder) {
@@ -73,14 +78,14 @@ public class MLDataParam extends TeaModel {
     /**
      * @return annotations
      */
-    public java.util.Map < String, MLDataParamAnnotationsValue > getAnnotations() {
+    public java.util.Map<String, MLDataParamAnnotationsValue> getAnnotations() {
         return this.annotations;
     }
 
     /**
      * @return config
      */
-    public java.util.Map < String, String > getConfig() {
+    public java.util.Map<String, String> getConfig() {
         return this.config;
     }
 
@@ -115,7 +120,7 @@ public class MLDataParam extends TeaModel {
     /**
      * @return predictions
      */
-    public java.util.Map < String, MLDataParamPredictionsValue > getPredictions() {
+    public java.util.Map<String, MLDataParamPredictionsValue> getPredictions() {
         return this.predictions;
     }
 
@@ -135,13 +140,13 @@ public class MLDataParam extends TeaModel {
 
     public static final class Builder {
         private String annotationdataId; 
-        private java.util.Map < String, MLDataParamAnnotationsValue > annotations; 
-        private java.util.Map < String, String > config; 
+        private java.util.Map<String, MLDataParamAnnotationsValue> annotations; 
+        private java.util.Map<String, String> config; 
         private Long createTime; 
         private String dataHash; 
         private String datasetId; 
         private Long lastModifyTime; 
-        private java.util.Map < String, MLDataParamPredictionsValue > predictions; 
+        private java.util.Map<String, MLDataParamPredictionsValue> predictions; 
         private String value; 
         private String valueType; 
 
@@ -156,7 +161,7 @@ public class MLDataParam extends TeaModel {
         /**
          * annotations.
          */
-        public Builder annotations(java.util.Map < String, MLDataParamAnnotationsValue > annotations) {
+        public Builder annotations(java.util.Map<String, MLDataParamAnnotationsValue> annotations) {
             this.annotations = annotations;
             return this;
         }
@@ -164,7 +169,7 @@ public class MLDataParam extends TeaModel {
         /**
          * config.
          */
-        public Builder config(java.util.Map < String, String > config) {
+        public Builder config(java.util.Map<String, String> config) {
             this.config = config;
             return this;
         }
@@ -204,7 +209,7 @@ public class MLDataParam extends TeaModel {
         /**
          * predictions.
          */
-        public Builder predictions(java.util.Map < String, MLDataParamPredictionsValue > predictions) {
+        public Builder predictions(java.util.Map<String, MLDataParamPredictionsValue> predictions) {
             this.predictions = predictions;
             return this;
         }

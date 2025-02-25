@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAssetGroupToInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAssetGroupToInstanceResponseBody</p>
  */
 public class DescribeAssetGroupToInstanceResponseBody extends TeaModel {
-    @NameInMap("DataList")
+    @com.aliyun.core.annotation.NameInMap("DataList")
     private java.util.List < DataList> dataList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
 
     private DescribeAssetGroupToInstanceResponseBody(Builder builder) {
@@ -62,7 +62,7 @@ public class DescribeAssetGroupToInstanceResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * DataList.
+         * <p>The response parameters.</p>
          */
         public Builder dataList(java.util.List < DataList> dataList) {
             this.dataList = dataList;
@@ -70,7 +70,10 @@ public class DescribeAssetGroupToInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C73C59B9-9F5C-57FF-A394-13EC8FC3B2FF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,10 @@ public class DescribeAssetGroupToInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -91,20 +97,26 @@ public class DescribeAssetGroupToInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAssetGroupToInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAssetGroupToInstanceResponseBody</p>
+     */
     public static class DataList extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("MemberUid")
+        @com.aliyun.core.annotation.NameInMap("MemberUid")
         private String memberUid;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private DataList(Builder builder) {
@@ -166,7 +178,10 @@ public class DescribeAssetGroupToInstanceResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * InstanceId.
+             * <p>The ID of the Anti-DDoS Origin instance of a paid edition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddosbgp-cn-7212zaa5v***</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -174,7 +189,10 @@ public class DescribeAssetGroupToInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * MemberUid.
+             * <p>The UID of the member to which the asset belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>170858869679****</p>
              */
             public Builder memberUid(String memberUid) {
                 this.memberUid = memberUid;
@@ -182,7 +200,10 @@ public class DescribeAssetGroupToInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The ID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>waf_v2_public_cn-lbj382l****</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -190,7 +211,10 @@ public class DescribeAssetGroupToInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region ID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -198,7 +222,10 @@ public class DescribeAssetGroupToInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>waf</p>
              */
             public Builder type(String type) {
                 this.type = type;

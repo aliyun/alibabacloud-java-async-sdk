@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateVideoInfosResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateVideoInfosResponseBody</p>
  */
 public class UpdateVideoInfosResponseBody extends TeaModel {
-    @NameInMap("ForbiddenVideoIds")
-    private java.util.List < String > forbiddenVideoIds;
+    @com.aliyun.core.annotation.NameInMap("ForbiddenVideoIds")
+    private java.util.List<String> forbiddenVideoIds;
 
-    @NameInMap("NonExistVideoIds")
-    private java.util.List < String > nonExistVideoIds;
+    @com.aliyun.core.annotation.NameInMap("NonExistVideoIds")
+    private java.util.List<String> nonExistVideoIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateVideoInfosResponseBody(Builder builder) {
@@ -38,14 +43,14 @@ public class UpdateVideoInfosResponseBody extends TeaModel {
     /**
      * @return forbiddenVideoIds
      */
-    public java.util.List < String > getForbiddenVideoIds() {
+    public java.util.List<String> getForbiddenVideoIds() {
         return this.forbiddenVideoIds;
     }
 
     /**
      * @return nonExistVideoIds
      */
-    public java.util.List < String > getNonExistVideoIds() {
+    public java.util.List<String> getNonExistVideoIds() {
         return this.nonExistVideoIds;
     }
 
@@ -57,28 +62,31 @@ public class UpdateVideoInfosResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > forbiddenVideoIds; 
-        private java.util.List < String > nonExistVideoIds; 
+        private java.util.List<String> forbiddenVideoIds; 
+        private java.util.List<String> nonExistVideoIds; 
         private String requestId; 
 
         /**
-         * The IDs of the videos that cannot be modified. Generally, videos cannot be modified if you do not have required [permissions](~~113600~~).
+         * <p>The IDs of the videos that cannot be modified. Generally, videos cannot be modified if you do not have required <a href="https://help.aliyun.com/document_detail/113600.html">permissions</a>.</p>
          */
-        public Builder forbiddenVideoIds(java.util.List < String > forbiddenVideoIds) {
+        public Builder forbiddenVideoIds(java.util.List<String> forbiddenVideoIds) {
             this.forbiddenVideoIds = forbiddenVideoIds;
             return this;
         }
 
         /**
-         * The IDs of the videos that do not exist.
+         * <p>The IDs of the videos that do not exist.</p>
          */
-        public Builder nonExistVideoIds(java.util.List < String > nonExistVideoIds) {
+        public Builder nonExistVideoIds(java.util.List<String> nonExistVideoIds) {
             this.nonExistVideoIds = nonExistVideoIds;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4AF6-D7393642CA58****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

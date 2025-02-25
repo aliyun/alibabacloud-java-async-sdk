@@ -1,87 +1,87 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dypnsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendSmsVerifyCodeRequest} extends {@link RequestModel}
  *
  * <p>SendSmsVerifyCodeRequest</p>
  */
 public class SendSmsVerifyCodeRequest extends Request {
-    @Query
-    @NameInMap("CodeLength")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CodeLength")
     private Long codeLength;
 
-    @Query
-    @NameInMap("CodeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CodeType")
     private Long codeType;
 
-    @Query
-    @NameInMap("CountryCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CountryCode")
     private String countryCode;
 
-    @Query
-    @NameInMap("DuplicatePolicy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DuplicatePolicy")
     private Long duplicatePolicy;
 
-    @Query
-    @NameInMap("Interval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Interval")
     private Long interval;
 
-    @Query
-    @NameInMap("OutId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutId")
     private String outId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PhoneNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNumber;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ReturnVerifyCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReturnVerifyCode")
     private Boolean returnVerifyCode;
 
-    @Query
-    @NameInMap("SchemeName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SchemeName")
     private String schemeName;
 
-    @Query
-    @NameInMap("SignName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SignName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String signName;
 
-    @Query
-    @NameInMap("SmsUpExtendCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SmsUpExtendCode")
     private String smsUpExtendCode;
 
-    @Query
-    @NameInMap("TemplateCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateCode;
 
-    @Query
-    @NameInMap("TemplateParam")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateParam")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateParam;
 
-    @Query
-    @NameInMap("ValidTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ValidTime")
     private Long validTime;
 
     private SendSmsVerifyCodeRequest(Builder builder) {
@@ -282,7 +282,10 @@ public class SendSmsVerifyCodeRequest extends Request {
         } 
 
         /**
-         * CodeLength.
+         * <p>The length of the verification code. Default value: 4. Valid values: 4 to 8.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder codeLength(Long codeLength) {
             this.putQueryParameter("CodeLength", codeLength);
@@ -291,7 +294,19 @@ public class SendSmsVerifyCodeRequest extends Request {
         }
 
         /**
-         * CodeType.
+         * <p>The type of the generated verification code. Default value: 1. Valid values:</p>
+         * <ul>
+         * <li>1: digits only</li>
+         * <li>2: uppercase letters only</li>
+         * <li>3: lowercase letters only</li>
+         * <li>4: uppercase and lowercase letters</li>
+         * <li>5: digits and uppercase letters</li>
+         * <li>6: digits and lowercase letters</li>
+         * <li>7: digits and uppercase and lowercase letters</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder codeType(Long codeType) {
             this.putQueryParameter("CodeType", codeType);
@@ -300,7 +315,10 @@ public class SendSmsVerifyCodeRequest extends Request {
         }
 
         /**
-         * CountryCode.
+         * <p>The country code of the phone number. SMS verification codes can be sent only by using phone numbers in the Chinese mainland. Default value: 86.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86</p>
          */
         public Builder countryCode(String countryCode) {
             this.putQueryParameter("CountryCode", countryCode);
@@ -309,7 +327,14 @@ public class SendSmsVerifyCodeRequest extends Request {
         }
 
         /**
-         * DuplicatePolicy.
+         * <p>Specifies how to handle the verification codes received earlier in a case where verification codes are sent to the same phone number for the same scenario within the validity period.</p>
+         * <ul>
+         * <li>1 (default): The latest verification code overwrites the verification codes received earlier. In this case, verification codes received earlier expire.</li>
+         * <li>2: Verification codes within their validity period are valid and can be used for verification.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder duplicatePolicy(Long duplicatePolicy) {
             this.putQueryParameter("DuplicatePolicy", duplicatePolicy);
@@ -318,7 +343,10 @@ public class SendSmsVerifyCodeRequest extends Request {
         }
 
         /**
-         * Interval.
+         * <p>The time interval. Unit: seconds. Default value: 60. This parameter specifies how often you can send a verification code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder interval(Long interval) {
             this.putQueryParameter("Interval", interval);
@@ -327,7 +355,10 @@ public class SendSmsVerifyCodeRequest extends Request {
         }
 
         /**
-         * OutId.
+         * <p>The external ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12358794Aqzaq</p>
          */
         public Builder outId(String outId) {
             this.putQueryParameter("OutId", outId);
@@ -345,7 +376,11 @@ public class SendSmsVerifyCodeRequest extends Request {
         }
 
         /**
-         * PhoneNumber.
+         * <p>The phone number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86130****0000</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -372,7 +407,14 @@ public class SendSmsVerifyCodeRequest extends Request {
         }
 
         /**
-         * ReturnVerifyCode.
+         * <p>Specifies whether to return a verification code.</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder returnVerifyCode(Boolean returnVerifyCode) {
             this.putQueryParameter("ReturnVerifyCode", returnVerifyCode);
@@ -381,7 +423,10 @@ public class SendSmsVerifyCodeRequest extends Request {
         }
 
         /**
-         * SchemeName.
+         * <p>The verification service name. If this parameter is not specified, the default service is used. The name can be up to 20 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun</p>
          */
         public Builder schemeName(String schemeName) {
             this.putQueryParameter("SchemeName", schemeName);
@@ -390,7 +435,11 @@ public class SendSmsVerifyCodeRequest extends Request {
         }
 
         /**
-         * SignName.
+         * <p>The signature.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun Test</p>
          */
         public Builder signName(String signName) {
             this.putQueryParameter("SignName", signName);
@@ -399,7 +448,13 @@ public class SendSmsVerifyCodeRequest extends Request {
         }
 
         /**
-         * SmsUpExtendCode.
+         * <p>The extension code of the upstream text message. Upstream text messages are text messages sent to the communication service provider. Upstream text messages are used to customize a service, complete an inquiry, or send a request. You are charged for sending upstream text messages based on the billing standards of the service provider.</p>
+         * <blockquote>
+         * <p> The extension code is automatically generated by the system when the signature is generated. You do not need to specify the extension code. You can skip this parameter based on your business requirements. If you want to use custom extension codes, contact your account manager.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1213123</p>
          */
         public Builder smsUpExtendCode(String smsUpExtendCode) {
             this.putQueryParameter("SmsUpExtendCode", smsUpExtendCode);
@@ -408,7 +463,15 @@ public class SendSmsVerifyCodeRequest extends Request {
         }
 
         /**
-         * TemplateCode.
+         * <p>The code of the text message template.</p>
+         * <p>Log on to the <a href="https://dysms.console.aliyun.com/dysms.htm?spm=5176.12818093.categories-n-products.ddysms.3b2816d0xml2NA#/overview">SMS console</a>. In the left-side navigation pane, click <strong>Go China</strong> or <strong>Go Globe</strong>. You can view the text message template code in the <strong>Template Code</strong> column on the <strong>Message Templates</strong> tab.</p>
+         * <blockquote>
+         * <p> The text message templates must be created on the Go Globe page and approved.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>azsq_*****</p>
          */
         public Builder templateCode(String templateCode) {
             this.putQueryParameter("TemplateCode", templateCode);
@@ -417,7 +480,21 @@ public class SendSmsVerifyCodeRequest extends Request {
         }
 
         /**
-         * TemplateParam.
+         * <p>The value of the variable in the text message template. The verification code is replaced with &quot;##code##&quot;.</p>
+         * <p>Example 1: For a system-defined template that contains variables, if the template content is &quot;Your verification code is ${code} and valid for 5 minutes. Do not disclose the verification code to others.&quot;, specify the value of this parameter as {&quot;code&quot;:&quot;##code##&quot;}</p>
+         * <p>Example 2: For a custom template, if the template content is ${content}, specify the value of this parameter as {&quot;content&quot;:&quot;Your verification code is ##code## and must be used within 5 minutes.&quot;}.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If line breaks are required in JSON-formatted data, they must meet the relevant requirements that are specified in the standard JSON protocol.</p>
+         * </li>
+         * <li><p>For more information about template variables, see <a href="https://help.aliyun.com/document_detail/108253.html">SMS template specifications</a>.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;code&quot;:&quot;##code##&quot;}</p>
          */
         public Builder templateParam(String templateParam) {
             this.putQueryParameter("TemplateParam", templateParam);
@@ -426,7 +503,10 @@ public class SendSmsVerifyCodeRequest extends Request {
         }
 
         /**
-         * ValidTime.
+         * <p>The validity period of the verification code. Unit: seconds. Default value: 300.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder validTime(Long validTime) {
             this.putQueryParameter("ValidTime", validTime);

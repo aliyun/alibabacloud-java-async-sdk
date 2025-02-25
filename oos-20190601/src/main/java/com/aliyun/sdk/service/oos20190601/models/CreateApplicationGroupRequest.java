@@ -1,54 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateApplicationGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateApplicationGroupRequest</p>
  */
 public class CreateApplicationGroupRequest extends Request {
-    @Query
-    @NameInMap("ApplicationName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String applicationName;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("CmsGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CmsGroupId")
     private String cmsGroupId;
 
-    @Query
-    @NameInMap("DeployRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeployRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deployRegionId;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("ImportTagKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImportTagKey")
     private String importTagKey;
 
-    @Query
-    @NameInMap("ImportTagValue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImportTagValue")
     private String importTagValue;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private CreateApplicationGroupRequest(Builder builder) {
@@ -169,7 +174,11 @@ public class CreateApplicationGroupRequest extends Request {
         } 
 
         /**
-         * The application name.
+         * <p>The application name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyApplication</p>
          */
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("ApplicationName", applicationName);
@@ -178,7 +187,12 @@ public class CreateApplicationGroupRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -187,7 +201,10 @@ public class CreateApplicationGroupRequest extends Request {
         }
 
         /**
-         * The ID of the application group in CloudMonitor.
+         * <p>The ID of the application group in CloudMonitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>218026174</p>
          */
         public Builder cmsGroupId(String cmsGroupId) {
             this.putQueryParameter("CmsGroupId", cmsGroupId);
@@ -196,7 +213,11 @@ public class CreateApplicationGroupRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the related sources reside.
+         * <p>The ID of the region in which the related sources reside.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder deployRegionId(String deployRegionId) {
             this.putQueryParameter("DeployRegionId", deployRegionId);
@@ -205,7 +226,10 @@ public class CreateApplicationGroupRequest extends Request {
         }
 
         /**
-         * The description of the application group.
+         * <p>The description of the application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ApplicationGroup</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -214,7 +238,10 @@ public class CreateApplicationGroupRequest extends Request {
         }
 
         /**
-         * The key of the tag. You must set both the ImportTagKey and the ImportTagValue parameters, or leave both of them empty. If you do not set the ImportTagKey and ImportTagValue parameters, the application name is used for this parameter by default.
+         * <p>The key of the tag. You must set both the ImportTagKey and the ImportTagValue parameters, or leave both of them empty. If you do not set the ImportTagKey and ImportTagValue parameters, the application name is used for this parameter by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k1</p>
          */
         public Builder importTagKey(String importTagKey) {
             this.putQueryParameter("ImportTagKey", importTagKey);
@@ -223,7 +250,10 @@ public class CreateApplicationGroupRequest extends Request {
         }
 
         /**
-         * The value of the tag. You must set both the ImportTagKey and the ImportTagValue parameters, or leave both of them empty. If you do not set the ImportTagKey and ImportTagValue parameters, the application group name is used for this parameter by default.
+         * <p>The value of the tag. You must set both the ImportTagKey and the ImportTagValue parameters, or leave both of them empty. If you do not set the ImportTagKey and ImportTagValue parameters, the application group name is used for this parameter by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder importTagValue(String importTagValue) {
             this.putQueryParameter("ImportTagValue", importTagValue);
@@ -232,7 +262,11 @@ public class CreateApplicationGroupRequest extends Request {
         }
 
         /**
-         * The name of the application group.
+         * <p>The name of the application group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyApplicationGroup</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -241,7 +275,10 @@ public class CreateApplicationGroupRequest extends Request {
         }
 
         /**
-         * The region ID. Set the value to cn-hangzhou.
+         * <p>The region ID. Set the value to cn-hangzhou.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

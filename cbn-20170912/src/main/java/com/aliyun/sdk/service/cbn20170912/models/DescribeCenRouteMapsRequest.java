@@ -1,60 +1,65 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCenRouteMapsRequest} extends {@link RequestModel}
  *
  * <p>DescribeCenRouteMapsRequest</p>
  */
 public class DescribeCenRouteMapsRequest extends Request {
-    @Query
-    @NameInMap("CenId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CenId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cenId;
 
-    @Query
-    @NameInMap("CenRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CenRegionId")
     private String cenRegionId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RouteMapId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteMapId")
     private String routeMapId;
 
-    @Query
-    @NameInMap("TransitRouterRouteTableId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterRouteTableId")
     private String transitRouterRouteTableId;
 
-    @Query
-    @NameInMap("TransmitDirection")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransmitDirection")
     private String transmitDirection;
 
     private DescribeCenRouteMapsRequest(Builder builder) {
@@ -195,7 +200,11 @@ public class DescribeCenRouteMapsRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-wx12mmlt17ld82****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -204,11 +213,11 @@ public class DescribeCenRouteMapsRequest extends Request {
         }
 
         /**
-         * The match method that is used to match routes based on the AS path.
-         * <p>
+         * <p>The region ID of the routing policy.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
          * 
-         * *   **Include**: fuzzy match. A route is a match if the AS path of the route overlaps with the AS path specified in the match condition.
-         * *   **Complete**: exact match. A route is a match only if the AS path of the route is the same as the AS path specified in the match condition.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder cenRegionId(String cenRegionId) {
             this.putQueryParameter("CenRegionId", cenRegionId);
@@ -235,7 +244,10 @@ public class DescribeCenRouteMapsRequest extends Request {
         }
 
         /**
-         * The route table ID of the transit router with which the routing policy is associated.
+         * <p>The page number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -244,10 +256,10 @@ public class DescribeCenRouteMapsRequest extends Request {
         }
 
         /**
-         * The IDs of the destination network instances to which the routes belong.
-         * <p>
+         * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
          * 
-         * >  The destination network instance IDs are valid only when the routing policy is applied to scenarios where routes are advertised from the gateway in the current region to network instances in the current region.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -274,11 +286,10 @@ public class DescribeCenRouteMapsRequest extends Request {
         }
 
         /**
-         * Indicates whether the destination network instance IDs are excluded.
-         * <p>
+         * <p>The routing policy ID.</p>
          * 
-         * *   **false** (default): A route is a match if its destination network instance ID is in the list specified by **DestinationInstanceIds.N**.
-         * *   **true**: A route is a match if its destination network instance ID is not in the list specified by **DestinationInstanceIds.N**.
+         * <strong>example:</strong>
+         * <p>cenrmap-y40mxdvf7joc12****</p>
          */
         public Builder routeMapId(String routeMapId) {
             this.putQueryParameter("RouteMapId", routeMapId);
@@ -287,7 +298,10 @@ public class DescribeCenRouteMapsRequest extends Request {
         }
 
         /**
-         * The priority of the routing policy that you want to associate with the current one.
+         * <p>The route table ID of the transit router with which the routing policy is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-gw8nx3515m1mbd1z1****</p>
          */
         public Builder transitRouterRouteTableId(String transitRouterRouteTableId) {
             this.putQueryParameter("TransitRouterRouteTableId", transitRouterRouteTableId);
@@ -296,11 +310,18 @@ public class DescribeCenRouteMapsRequest extends Request {
         }
 
         /**
-         * The match method that is used to match routes based on the community.
-         * <p>
+         * <p>The direction in which the routing policy is applied. Valid values:</p>
+         * <ul>
+         * <li><strong>RegionIn</strong>: Routes are advertised to the gateways in the regions that are connected by the CEN instance.</li>
+         * </ul>
+         * <p>For example, routes are advertised from network instances deployed in the current region or other regions to the gateway deployed in the current region.</p>
+         * <ul>
+         * <li><strong>RegionOut</strong>: Routes are advertised from the gateways in the regions that are connected by the CEN instance.</li>
+         * </ul>
+         * <p>For example, routes are advertised from the gateway deployed in the current region to network instances deployed in the current region, or to gateways deployed in other regions.</p>
          * 
-         * *   **Include**: fuzzy match. A route is a match if the community of the route overlaps with the community specified in the match condition.
-         * *   **Complete**: exact match. A route is a match only if the community of the route is the same as the community specified in the match condition.
+         * <strong>example:</strong>
+         * <p>RegionOut</p>
          */
         public Builder transmitDirection(String transmitDirection) {
             this.putQueryParameter("TransmitDirection", transmitDirection);

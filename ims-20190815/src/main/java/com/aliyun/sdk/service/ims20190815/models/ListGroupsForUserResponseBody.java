@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGroupsForUserResponseBody} extends {@link TeaModel}
  *
  * <p>ListGroupsForUserResponseBody</p>
  */
 public class ListGroupsForUserResponseBody extends TeaModel {
-    @NameInMap("Groups")
+    @com.aliyun.core.annotation.NameInMap("Groups")
     private Groups groups;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListGroupsForUserResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class ListGroupsForUserResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information of the RAM user groups.
+         * <p>The information of the RAM user groups.</p>
          */
         public Builder groups(Groups groups) {
             this.groups = groups;
@@ -58,7 +63,10 @@ public class ListGroupsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7158A935-FB5E-49A7-8E52-FDA5B2B67247</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +79,26 @@ public class ListGroupsForUserResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListGroupsForUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGroupsForUserResponseBody</p>
+     */
     public static class Group extends TeaModel {
-        @NameInMap("Comments")
+        @com.aliyun.core.annotation.NameInMap("Comments")
         private String comments;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("JoinDate")
+        @com.aliyun.core.annotation.NameInMap("JoinDate")
         private String joinDate;
 
         private Group(Builder builder) {
@@ -146,7 +160,10 @@ public class ListGroupsForUserResponseBody extends TeaModel {
             private String joinDate; 
 
             /**
-             * The description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test-Team</p>
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -154,7 +171,10 @@ public class ListGroupsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the RAM user group.
+             * <p>The display name of the RAM user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test-Team</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -162,7 +182,10 @@ public class ListGroupsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the RAM user group.
+             * <p>The ID of the RAM user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>740317625433843****</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -170,7 +193,10 @@ public class ListGroupsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the RAM user group.
+             * <p>The name of the RAM user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test-Team</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -178,7 +204,10 @@ public class ListGroupsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the RAM user was added.
+             * <p>The time when the RAM user was added.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-20T06:57:00Z</p>
              */
             public Builder joinDate(String joinDate) {
                 this.joinDate = joinDate;
@@ -192,9 +221,15 @@ public class ListGroupsForUserResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListGroupsForUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGroupsForUserResponseBody</p>
+     */
     public static class Groups extends TeaModel {
-        @NameInMap("Group")
-        private java.util.List < Group> group;
+        @com.aliyun.core.annotation.NameInMap("Group")
+        private java.util.List<Group> group;
 
         private Groups(Builder builder) {
             this.group = builder.group;
@@ -211,17 +246,17 @@ public class ListGroupsForUserResponseBody extends TeaModel {
         /**
          * @return group
          */
-        public java.util.List < Group> getGroup() {
+        public java.util.List<Group> getGroup() {
             return this.group;
         }
 
         public static final class Builder {
-            private java.util.List < Group> group; 
+            private java.util.List<Group> group; 
 
             /**
              * Group.
              */
-            public Builder group(java.util.List < Group> group) {
+            public Builder group(java.util.List<Group> group) {
                 this.group = group;
                 return this;
             }

@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGroupResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateGroupResponseBody</p>
  */
 public class UpdateGroupResponseBody extends TeaModel {
-    @NameInMap("Group")
+    @com.aliyun.core.annotation.NameInMap("Group")
     private Group group;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateGroupResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class UpdateGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the group.
+         * <p>The information about the group.</p>
          */
         public Builder group(Group group) {
             this.group = group;
@@ -58,7 +58,10 @@ public class UpdateGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F723DE01-6276-5DC4-9B1F-9CBE3E1748B2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,23 +74,29 @@ public class UpdateGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateGroupResponseBody</p>
+     */
     public static class Group extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("ProvisionType")
+        @com.aliyun.core.annotation.NameInMap("ProvisionType")
         private String provisionType;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private Group(Builder builder) {
@@ -158,7 +167,10 @@ public class UpdateGroupResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The time when the group was created.
+             * <p>The time when the group was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-01T02:38:27Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -166,7 +178,10 @@ public class UpdateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the group.
+             * <p>The description of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a group.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -174,7 +189,10 @@ public class UpdateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the group.
+             * <p>The ID of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g-00jqzghi2n3o5hkh****</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -182,7 +200,10 @@ public class UpdateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the group.
+             * <p>The name of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NewTestGroup</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -190,11 +211,14 @@ public class UpdateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the group. Valid values:
-             * <p>
+             * <p>The type of the group. Valid values:</p>
+             * <ul>
+             * <li>Manual: The group is manually created.</li>
+             * <li>Synchronized: The user is synchronized from an external identity provider (IdP).</li>
+             * </ul>
              * 
-             * *   Manual: The group is manually created.
-             * *   Synchronized: The user is synchronized from an external identity provider (IdP).
+             * <strong>example:</strong>
+             * <p>Manual</p>
              */
             public Builder provisionType(String provisionType) {
                 this.provisionType = provisionType;
@@ -202,7 +226,10 @@ public class UpdateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the information about the group was modified.
+             * <p>The time when the information about the group was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-01T06:06:11Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMetricRuleBlackListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMetricRuleBlackListResponseBody</p>
  */
 public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("DescribeMetricRuleBlackList")
+    @com.aliyun.core.annotation.NameInMap("DescribeMetricRuleBlackList")
     private java.util.List < DescribeMetricRuleBlackList> describeMetricRuleBlackList;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private DescribeMetricRuleBlackListResponseBody(Builder builder) {
@@ -98,7 +98,10 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * The categories of the Alibaba Cloud service. For example, ApsaraDB for Redis includes the following categories: ApsaraDB for Redis (standard architecture), ApsaraDB for Redis (cluster architecture), and ApsaraDB for Redis (read/write splitting architecture). In this case, the valid values of this parameter for ApsaraDB for Redis include `kvstore_standard`, `kvstore_sharding`, and `kvstore_splitrw`.
+         * <p>The categories of the Alibaba Cloud service. For example, ApsaraDB for Redis includes the following categories: ApsaraDB for Redis (standard architecture), ApsaraDB for Redis (cluster architecture), and ApsaraDB for Redis (read/write splitting architecture). In this case, the valid values of this parameter for ApsaraDB for Redis include <code>kvstore_standard</code>, <code>kvstore_sharding</code>, and <code>kvstore_splitrw</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,10 +109,7 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp when the blacklist policy started to take effect.
-         * <p>
-         * 
-         * Unit: milliseconds.
+         * <p>The queried blacklist policies.</p>
          */
         public Builder describeMetricRuleBlackList(java.util.List < DescribeMetricRuleBlackList> describeMetricRuleBlackList) {
             this.describeMetricRuleBlackList = describeMetricRuleBlackList;
@@ -117,7 +117,10 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Request is not authorization.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -125,7 +128,10 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
         }
 
         /**
-         * The namespace of the cloud service.
+         * <p>The namespace of the cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D63E76CB-29AA-5B9F-88CE-400A6F28D428</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -133,10 +139,11 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
         }
 
         /**
-         * The namespace of the cloud service.
-         * <p>
+         * <p>The namespace of the cloud service.</p>
+         * <p>For more information about the namespaces of different cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
          * 
-         * For more information about the namespaces of different cloud services, see [Appendix 1: Metrics](~~163515~~).
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -144,10 +151,11 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp when the blacklist policy was created.
-         * <p>
+         * <p>The timestamp when the blacklist policy was created.</p>
+         * <p>Unit: milliseconds.</p>
          * 
-         * Unit: milliseconds.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -160,11 +168,17 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMetricRuleBlackListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMetricRuleBlackListResponseBody</p>
+     */
     public static class Metrics extends TeaModel {
-        @NameInMap("MetricName")
+        @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
 
-        @NameInMap("Resource")
+        @com.aliyun.core.annotation.NameInMap("Resource")
         private String resource;
 
         private Metrics(Builder builder) {
@@ -199,7 +213,10 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
             private String resource; 
 
             /**
-             * For more information about common request parameters, see [Common parameters](~~199331~~).
+             * <p>The metric name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>disk_utilization</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -207,7 +224,10 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * <p>The extended dimension of the instance. For example, <code>{&quot;device&quot;:&quot;C:&quot;}</code> specifies that the blacklist policy is applied to all C disks of the specified Elastic Compute Service (ECS) instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;device&quot;:&quot;C:&quot;}]</p>
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -221,47 +241,53 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMetricRuleBlackListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMetricRuleBlackListResponseBody</p>
+     */
     public static class DescribeMetricRuleBlackList extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("EffectiveTime")
+        @com.aliyun.core.annotation.NameInMap("EffectiveTime")
         private String effectiveTime;
 
-        @NameInMap("EnableEndTime")
+        @com.aliyun.core.annotation.NameInMap("EnableEndTime")
         private Long enableEndTime;
 
-        @NameInMap("EnableStartTime")
+        @com.aliyun.core.annotation.NameInMap("EnableStartTime")
         private Long enableStartTime;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Instances")
+        @com.aliyun.core.annotation.NameInMap("Instances")
         private java.util.List < String > instances;
 
-        @NameInMap("IsEnable")
+        @com.aliyun.core.annotation.NameInMap("IsEnable")
         private Boolean isEnable;
 
-        @NameInMap("Metrics")
+        @com.aliyun.core.annotation.NameInMap("Metrics")
         private java.util.List < Metrics> metrics;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("ScopeType")
+        @com.aliyun.core.annotation.NameInMap("ScopeType")
         private String scopeType;
 
-        @NameInMap("ScopeValue")
+        @com.aliyun.core.annotation.NameInMap("ScopeValue")
         private java.util.List < String > scopeValue;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private DescribeMetricRuleBlackList(Builder builder) {
@@ -404,7 +430,10 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The name of the blacklist policy.
+             * <p>The category of the cloud service. For example, ApsaraDB for Redis includes the following categories: ApsaraDB for Redis (standard architecture), ApsaraDB for Redis (cluster architecture), and ApsaraDB for Redis (read/write splitting architecture). In this case, the valid values of this parameter for ApsaraDB for Redis include <code>kvstore_standard</code>, <code>kvstore_sharding</code>, and <code>kvstore_splitrw</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -412,7 +441,11 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
             }
 
             /**
-             * The metrics of the instance.
+             * <p>The timestamp when the blacklist policy was created.</p>
+             * <p>Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1665714561000</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -420,7 +453,10 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
             }
 
             /**
-             * The extended dimension of the instance. For example, `{"device":"C:"}` specifies that the blacklist policy is applied to all C disks of the specified Elastic Compute Service (ECS) instance.
+             * <p>The time range within which the blacklist policy is effective.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00-23:59</p>
              */
             public Builder effectiveTime(String effectiveTime) {
                 this.effectiveTime = effectiveTime;
@@ -428,10 +464,11 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries to return on each page.
-             * <p>
+             * <p>The timestamp when the blacklist policy started to take effect.</p>
+             * <p>Unit: milliseconds.</p>
              * 
-             * Default value: 10.
+             * <strong>example:</strong>
+             * <p>1640608200000</p>
              */
             public Builder enableEndTime(Long enableEndTime) {
                 this.enableEndTime = enableEndTime;
@@ -439,10 +476,11 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application group. The value of this parameter is a JSON array.
-             * <p>
+             * <p>The timestamp when the blacklist policy expired.</p>
+             * <p>Unit: milliseconds.</p>
              * 
-             * >  This parameter is returned only if the `ScopeType` parameter is set to `GROUP`.
+             * <strong>example:</strong>
+             * <p>1640237400000</p>
              */
             public Builder enableStartTime(Long enableStartTime) {
                 this.enableStartTime = enableStartTime;
@@ -450,10 +488,10 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the blacklist policy was modified.
-             * <p>
+             * <p>The ID of the blacklist policy.</p>
              * 
-             * Unit: milliseconds.
+             * <strong>example:</strong>
+             * <p>93514c96-ceb8-47d8-8ee3-93b6d98b****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -461,7 +499,7 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
             }
 
             /**
-             * Instances.
+             * <p>The IDs of the instances that belong to the specified cloud service.</p>
              */
             public Builder instances(java.util.List < String > instances) {
                 this.instances = instances;
@@ -469,7 +507,14 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of blacklist policies.
+             * <p>The status of the blacklist policy. Valid values:</p>
+             * <ul>
+             * <li>true: The blacklist policy is enabled.</li>
+             * <li>false: The blacklist policy is disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isEnable(Boolean isEnable) {
                 this.isEnable = isEnable;
@@ -477,11 +522,7 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
             }
 
             /**
-             * The method that is used to sort query results by time. Valid values:
-             * <p>
-             * 
-             * *   DESC (default): descending order
-             * *   ASC: ascending order
+             * <p>The metrics of the instance.</p>
              */
             public Builder metrics(java.util.List < Metrics> metrics) {
                 this.metrics = metrics;
@@ -489,11 +530,10 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the blacklist policy. Valid values:
-             * <p>
+             * <p>The name of the blacklist policy.</p>
              * 
-             * *   true: The blacklist policy is enabled.
-             * *   false: The blacklist policy is disabled.
+             * <strong>example:</strong>
+             * <p>Blacklist-01</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -501,10 +541,10 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the page to return.
-             * <p>
+             * <p>The namespace of the cloud service.</p>
              * 
-             * Default value: 1.
+             * <strong>example:</strong>
+             * <p>acs_ecs_dashboard</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -512,7 +552,14 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of instances that belong to the specified cloud service.
+             * <p>The effective scope of the blacklist policy. Valid values:</p>
+             * <ul>
+             * <li>USER: The blacklist policy takes effect only within the current Alibaba Cloud account.</li>
+             * <li>GROUP: The blacklist policy takes effect only within the specified application group.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>USER</p>
              */
             public Builder scopeType(String scopeType) {
                 this.scopeType = scopeType;
@@ -520,7 +567,7 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
             }
 
             /**
-             * ScopeValue.
+             * <p>The IDs of the application groups.</p>
              */
             public Builder scopeValue(java.util.List < String > scopeValue) {
                 this.scopeValue = scopeValue;
@@ -528,7 +575,11 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the blacklist policy.
+             * <p>The timestamp when the blacklist policy was modified.</p>
+             * <p>Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1665718373000</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

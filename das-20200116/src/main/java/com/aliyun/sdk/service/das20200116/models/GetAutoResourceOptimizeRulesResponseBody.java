@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAutoResourceOptimizeRulesResponseBody} extends {@link TeaModel}
  *
  * <p>GetAutoResourceOptimizeRulesResponseBody</p>
  */
 public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetAutoResourceOptimizeRulesResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,10 +110,13 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +124,10 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,11 +135,14 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,23 +155,29 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAutoResourceOptimizeRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAutoResourceOptimizeRulesResponseBody</p>
+     */
     public static class EnableAutoResourceOptimizeList extends TeaModel {
-        @NameInMap("AutoDefragment")
+        @com.aliyun.core.annotation.NameInMap("AutoDefragment")
         private Boolean autoDefragment;
 
-        @NameInMap("DasProOn")
+        @com.aliyun.core.annotation.NameInMap("DasProOn")
         private Boolean dasProOn;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("TableFragmentationRatio")
+        @com.aliyun.core.annotation.NameInMap("TableFragmentationRatio")
         private Double tableFragmentationRatio;
 
-        @NameInMap("TableSpaceSize")
+        @com.aliyun.core.annotation.NameInMap("TableSpaceSize")
         private Double tableSpaceSize;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private EnableAutoResourceOptimizeList(Builder builder) {
@@ -225,11 +248,14 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * Indicates whether the automatic fragment recycling feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the automatic fragment recycling feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * * **true**
-             * * **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoDefragment(Boolean autoDefragment) {
                 this.autoDefragment = autoDefragment;
@@ -237,11 +263,14 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether DAS Professional Edition is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether DAS Enterprise Edition is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * * **true**
-             * * **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dasProOn(Boolean dasProOn) {
                 this.dasProOn = dasProOn;
@@ -249,7 +278,10 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The database instance ID.
+             * <p>The database instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-2ze8g2am97624****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -257,7 +289,10 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The fragmentation rate of a single physical table for which the automatic fragment recycling feature is enabled.
+             * <p>The fragmentation rate of a single physical table for which the automatic fragment recycling feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2</p>
              */
             public Builder tableFragmentationRatio(Double tableFragmentationRatio) {
                 this.tableFragmentationRatio = tableFragmentationRatio;
@@ -265,7 +300,10 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum storage usage of a single physical table for which the automatic fragment recycling feature is enabled. Unit: GB.
+             * <p>The minimum storage usage of a single physical table for which the automatic fragment recycling feature is enabled. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder tableSpaceSize(Double tableSpaceSize) {
                 this.tableSpaceSize = tableSpaceSize;
@@ -273,7 +311,10 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that is used to create the database instance.
+             * <p>The ID of the Alibaba Cloud account that is used to create the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>140692647406****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -287,23 +328,29 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAutoResourceOptimizeRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAutoResourceOptimizeRulesResponseBody</p>
+     */
     public static class HasEnableRuleButNotDasProList extends TeaModel {
-        @NameInMap("AutoDefragment")
+        @com.aliyun.core.annotation.NameInMap("AutoDefragment")
         private Boolean autoDefragment;
 
-        @NameInMap("DasProOn")
+        @com.aliyun.core.annotation.NameInMap("DasProOn")
         private Boolean dasProOn;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("TableFragmentationRatio")
+        @com.aliyun.core.annotation.NameInMap("TableFragmentationRatio")
         private Double tableFragmentationRatio;
 
-        @NameInMap("TableSpaceSize")
+        @com.aliyun.core.annotation.NameInMap("TableSpaceSize")
         private Double tableSpaceSize;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private HasEnableRuleButNotDasProList(Builder builder) {
@@ -374,11 +421,14 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * Indicates whether the automatic fragment recycling feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the automatic fragment recycling feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * * **true**
-             * * **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoDefragment(Boolean autoDefragment) {
                 this.autoDefragment = autoDefragment;
@@ -386,11 +436,14 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether DAS Professional Edition is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether DAS Enterprise Edition is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * * **true**
-             * * **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder dasProOn(Boolean dasProOn) {
                 this.dasProOn = dasProOn;
@@ -398,7 +451,10 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The database instance ID.
+             * <p>The database instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-2ze9xrhze0709****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -406,7 +462,10 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The fragmentation rate of a single physical table for which the automatic fragment recycling feature is enabled.
+             * <p>The fragmentation rate of a single physical table for which the automatic fragment recycling feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2</p>
              */
             public Builder tableFragmentationRatio(Double tableFragmentationRatio) {
                 this.tableFragmentationRatio = tableFragmentationRatio;
@@ -414,7 +473,10 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum storage usage of a single physical table for which the automatic fragment recycling feature is enabled. Unit: GB.
+             * <p>The minimum storage usage of a single physical table for which the automatic fragment recycling feature is enabled. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder tableSpaceSize(Double tableSpaceSize) {
                 this.tableSpaceSize = tableSpaceSize;
@@ -422,7 +484,10 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that is used to create the database instance.
+             * <p>The ID of the Alibaba Cloud account that is used to create the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>140692647406****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -436,23 +501,29 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAutoResourceOptimizeRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAutoResourceOptimizeRulesResponseBody</p>
+     */
     public static class TurnOffAutoResourceOptimizeList extends TeaModel {
-        @NameInMap("AutoDefragment")
+        @com.aliyun.core.annotation.NameInMap("AutoDefragment")
         private Boolean autoDefragment;
 
-        @NameInMap("DasProOn")
+        @com.aliyun.core.annotation.NameInMap("DasProOn")
         private Boolean dasProOn;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("TableFragmentationRatio")
+        @com.aliyun.core.annotation.NameInMap("TableFragmentationRatio")
         private Double tableFragmentationRatio;
 
-        @NameInMap("TableSpaceSize")
+        @com.aliyun.core.annotation.NameInMap("TableSpaceSize")
         private Double tableSpaceSize;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private TurnOffAutoResourceOptimizeList(Builder builder) {
@@ -523,11 +594,14 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * Indicates whether the automatic fragment recycling feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the automatic fragment recycling feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>:</li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * * **true**
-             * * **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder autoDefragment(Boolean autoDefragment) {
                 this.autoDefragment = autoDefragment;
@@ -535,11 +609,14 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether DAS Professional Edition is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether DAS Enterprise Edition is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * * **true**
-             * * **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dasProOn(Boolean dasProOn) {
                 this.dasProOn = dasProOn;
@@ -547,7 +624,10 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The database instance ID.
+             * <p>The database instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-2vc54m2a6pd6p****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -555,7 +635,10 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The fragmentation rate of a single physical table for which the automatic fragment recycling feature is enabled.
+             * <p>The fragmentation rate of a single physical table for which the automatic fragment recycling feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2</p>
              */
             public Builder tableFragmentationRatio(Double tableFragmentationRatio) {
                 this.tableFragmentationRatio = tableFragmentationRatio;
@@ -563,11 +646,10 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the automatic fragment recycling feature is enabled. Valid values:
-             * <p>
+             * <p>The minimum storage usage of a single physical table for which the automatic fragment recycling feature is enabled. Unit: GB.</p>
              * 
-             * true
-             * false
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder tableSpaceSize(Double tableSpaceSize) {
                 this.tableSpaceSize = tableSpaceSize;
@@ -575,7 +657,10 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that is used to create the database instance.
+             * <p>The ID of the Alibaba Cloud account that is used to create the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>140692647406****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -589,33 +674,39 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAutoResourceOptimizeRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAutoResourceOptimizeRulesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("EnableAutoResourceOptimizeCount")
+        @com.aliyun.core.annotation.NameInMap("EnableAutoResourceOptimizeCount")
         private Long enableAutoResourceOptimizeCount;
 
-        @NameInMap("EnableAutoResourceOptimizeList")
-        private java.util.List < EnableAutoResourceOptimizeList> enableAutoResourceOptimizeList;
+        @com.aliyun.core.annotation.NameInMap("EnableAutoResourceOptimizeList")
+        private java.util.List<EnableAutoResourceOptimizeList> enableAutoResourceOptimizeList;
 
-        @NameInMap("HasEnableRuleButNotDasProCount")
+        @com.aliyun.core.annotation.NameInMap("HasEnableRuleButNotDasProCount")
         private Long hasEnableRuleButNotDasProCount;
 
-        @NameInMap("HasEnableRuleButNotDasProList")
-        private java.util.List < HasEnableRuleButNotDasProList> hasEnableRuleButNotDasProList;
+        @com.aliyun.core.annotation.NameInMap("HasEnableRuleButNotDasProList")
+        private java.util.List<HasEnableRuleButNotDasProList> hasEnableRuleButNotDasProList;
 
-        @NameInMap("NeverEnableAutoResourceOptimizeOrReleasedInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("NeverEnableAutoResourceOptimizeOrReleasedInstanceCount")
         private Long neverEnableAutoResourceOptimizeOrReleasedInstanceCount;
 
-        @NameInMap("NeverEnableAutoResourceOptimizeOrReleasedInstanceIdList")
-        private java.util.List < String > neverEnableAutoResourceOptimizeOrReleasedInstanceIdList;
+        @com.aliyun.core.annotation.NameInMap("NeverEnableAutoResourceOptimizeOrReleasedInstanceIdList")
+        private java.util.List<String> neverEnableAutoResourceOptimizeOrReleasedInstanceIdList;
 
-        @NameInMap("TotalAutoResourceOptimizeRulesCount")
+        @com.aliyun.core.annotation.NameInMap("TotalAutoResourceOptimizeRulesCount")
         private Long totalAutoResourceOptimizeRulesCount;
 
-        @NameInMap("TurnOffAutoResourceOptimizeCount")
+        @com.aliyun.core.annotation.NameInMap("TurnOffAutoResourceOptimizeCount")
         private Long turnOffAutoResourceOptimizeCount;
 
-        @NameInMap("TurnOffAutoResourceOptimizeList")
-        private java.util.List < TurnOffAutoResourceOptimizeList> turnOffAutoResourceOptimizeList;
+        @com.aliyun.core.annotation.NameInMap("TurnOffAutoResourceOptimizeList")
+        private java.util.List<TurnOffAutoResourceOptimizeList> turnOffAutoResourceOptimizeList;
 
         private Data(Builder builder) {
             this.enableAutoResourceOptimizeCount = builder.enableAutoResourceOptimizeCount;
@@ -647,7 +738,7 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
         /**
          * @return enableAutoResourceOptimizeList
          */
-        public java.util.List < EnableAutoResourceOptimizeList> getEnableAutoResourceOptimizeList() {
+        public java.util.List<EnableAutoResourceOptimizeList> getEnableAutoResourceOptimizeList() {
             return this.enableAutoResourceOptimizeList;
         }
 
@@ -661,7 +752,7 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
         /**
          * @return hasEnableRuleButNotDasProList
          */
-        public java.util.List < HasEnableRuleButNotDasProList> getHasEnableRuleButNotDasProList() {
+        public java.util.List<HasEnableRuleButNotDasProList> getHasEnableRuleButNotDasProList() {
             return this.hasEnableRuleButNotDasProList;
         }
 
@@ -675,7 +766,7 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
         /**
          * @return neverEnableAutoResourceOptimizeOrReleasedInstanceIdList
          */
-        public java.util.List < String > getNeverEnableAutoResourceOptimizeOrReleasedInstanceIdList() {
+        public java.util.List<String> getNeverEnableAutoResourceOptimizeOrReleasedInstanceIdList() {
             return this.neverEnableAutoResourceOptimizeOrReleasedInstanceIdList;
         }
 
@@ -696,23 +787,26 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
         /**
          * @return turnOffAutoResourceOptimizeList
          */
-        public java.util.List < TurnOffAutoResourceOptimizeList> getTurnOffAutoResourceOptimizeList() {
+        public java.util.List<TurnOffAutoResourceOptimizeList> getTurnOffAutoResourceOptimizeList() {
             return this.turnOffAutoResourceOptimizeList;
         }
 
         public static final class Builder {
             private Long enableAutoResourceOptimizeCount; 
-            private java.util.List < EnableAutoResourceOptimizeList> enableAutoResourceOptimizeList; 
+            private java.util.List<EnableAutoResourceOptimizeList> enableAutoResourceOptimizeList; 
             private Long hasEnableRuleButNotDasProCount; 
-            private java.util.List < HasEnableRuleButNotDasProList> hasEnableRuleButNotDasProList; 
+            private java.util.List<HasEnableRuleButNotDasProList> hasEnableRuleButNotDasProList; 
             private Long neverEnableAutoResourceOptimizeOrReleasedInstanceCount; 
-            private java.util.List < String > neverEnableAutoResourceOptimizeOrReleasedInstanceIdList; 
+            private java.util.List<String> neverEnableAutoResourceOptimizeOrReleasedInstanceIdList; 
             private Long totalAutoResourceOptimizeRulesCount; 
             private Long turnOffAutoResourceOptimizeCount; 
-            private java.util.List < TurnOffAutoResourceOptimizeList> turnOffAutoResourceOptimizeList; 
+            private java.util.List<TurnOffAutoResourceOptimizeList> turnOffAutoResourceOptimizeList; 
 
             /**
-             * The number of database instances for which the automatic fragment recycling feature is currently enabled.
+             * <p>The number of database instances for which the automatic fragment recycling feature is currently enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder enableAutoResourceOptimizeCount(Long enableAutoResourceOptimizeCount) {
                 this.enableAutoResourceOptimizeCount = enableAutoResourceOptimizeCount;
@@ -720,15 +814,18 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The database instances for which the automatic fragment recycling feature is currently enabled.
+             * <p>The database instances for which the automatic fragment recycling feature is currently enabled.</p>
              */
-            public Builder enableAutoResourceOptimizeList(java.util.List < EnableAutoResourceOptimizeList> enableAutoResourceOptimizeList) {
+            public Builder enableAutoResourceOptimizeList(java.util.List<EnableAutoResourceOptimizeList> enableAutoResourceOptimizeList) {
                 this.enableAutoResourceOptimizeList = enableAutoResourceOptimizeList;
                 return this;
             }
 
             /**
-             * The number of database instances for which the automatic fragment recycling feature is enabled and DAS Professional Edition is disabled.
+             * <p>The number of database instances for which the automatic fragment recycling feature is enabled and DAS Enterprise Edition is disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder hasEnableRuleButNotDasProCount(Long hasEnableRuleButNotDasProCount) {
                 this.hasEnableRuleButNotDasProCount = hasEnableRuleButNotDasProCount;
@@ -736,21 +833,24 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The database instances for which the automatic fragment recycling feature is enabled and DAS Professional Edition is disabled.
-             * <p>
-             * 
-             * > This type of database instance does not perform automatic fragment recycling tasks until DAS Professional Edition is enabled for the instances again.
+             * <p>The database instances for which the automatic fragment recycling feature is enabled and DAS Enterprise Edition is disabled.</p>
+             * <blockquote>
+             * <p> Automatic fragment recycling tasks are run on this type of database instances only if DAS Enterprise Edition is enabled for the database instances again.</p>
+             * </blockquote>
              */
-            public Builder hasEnableRuleButNotDasProList(java.util.List < HasEnableRuleButNotDasProList> hasEnableRuleButNotDasProList) {
+            public Builder hasEnableRuleButNotDasProList(java.util.List<HasEnableRuleButNotDasProList> hasEnableRuleButNotDasProList) {
                 this.hasEnableRuleButNotDasProList = hasEnableRuleButNotDasProList;
                 return this;
             }
 
             /**
-             * The number of database instances that do not exist or for which the automatic fragment recycling feature has never been enabled.
-             * <p>
+             * <p>The number of database instances that do not exist or for which the automatic fragment recycling feature has never been enabled.</p>
+             * <blockquote>
+             * <p> If a database instance does not exist, the instance has been released or the specified instance ID is invalid.</p>
+             * </blockquote>
              * 
-             * >  If a database instance does not exist, the instance has been released or the specified instance ID is invalid.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder neverEnableAutoResourceOptimizeOrReleasedInstanceCount(Long neverEnableAutoResourceOptimizeOrReleasedInstanceCount) {
                 this.neverEnableAutoResourceOptimizeOrReleasedInstanceCount = neverEnableAutoResourceOptimizeOrReleasedInstanceCount;
@@ -758,15 +858,18 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The database instances that do not exist or for which the automatic fragment recycling feature has never been enabled.
+             * <p>The database instances that do not exist or for which the automatic fragment recycling feature has never been enabled.</p>
              */
-            public Builder neverEnableAutoResourceOptimizeOrReleasedInstanceIdList(java.util.List < String > neverEnableAutoResourceOptimizeOrReleasedInstanceIdList) {
+            public Builder neverEnableAutoResourceOptimizeOrReleasedInstanceIdList(java.util.List<String> neverEnableAutoResourceOptimizeOrReleasedInstanceIdList) {
                 this.neverEnableAutoResourceOptimizeOrReleasedInstanceIdList = neverEnableAutoResourceOptimizeOrReleasedInstanceIdList;
                 return this;
             }
 
             /**
-             * The number of database instances for which the automatic fragment recycling feature has been enabled.
+             * <p>The number of database instances for which the automatic fragment recycling feature has been enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder totalAutoResourceOptimizeRulesCount(Long totalAutoResourceOptimizeRulesCount) {
                 this.totalAutoResourceOptimizeRulesCount = totalAutoResourceOptimizeRulesCount;
@@ -774,7 +877,10 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of database instances for which the automatic fragment recycling feature was once enabled but is currently disabled.
+             * <p>The number of database instances for which the automatic fragment recycling feature was once enabled but is currently disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder turnOffAutoResourceOptimizeCount(Long turnOffAutoResourceOptimizeCount) {
                 this.turnOffAutoResourceOptimizeCount = turnOffAutoResourceOptimizeCount;
@@ -782,9 +888,9 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The database instances for which the automatic fragment recycling feature was once enabled but is currently disabled.
+             * <p>The database instances for which the automatic fragment recycling feature was once enabled but is currently disabled.</p>
              */
-            public Builder turnOffAutoResourceOptimizeList(java.util.List < TurnOffAutoResourceOptimizeList> turnOffAutoResourceOptimizeList) {
+            public Builder turnOffAutoResourceOptimizeList(java.util.List<TurnOffAutoResourceOptimizeList> turnOffAutoResourceOptimizeList) {
                 this.turnOffAutoResourceOptimizeList = turnOffAutoResourceOptimizeList;
                 return this;
             }

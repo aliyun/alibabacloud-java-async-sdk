@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateInstanceRequest} extends {@link RequestModel}
  *
  * <p>UpdateInstanceRequest</p>
  */
 public class UpdateInstanceRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
     private String instanceId;
 
-    @Body
-    @NameInMap("components")
-    private java.util.List < Components> components;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("components")
+    private java.util.List<Components> components;
 
-    @Body
-    @NameInMap("description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @Body
-    @NameInMap("orderType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("orderType")
     private String orderType;
 
     private UpdateInstanceRequest(Builder builder) {
@@ -59,7 +64,7 @@ public class UpdateInstanceRequest extends Request {
     /**
      * @return components
      */
-    public java.util.List < Components> getComponents() {
+    public java.util.List<Components> getComponents() {
         return this.components;
     }
 
@@ -79,7 +84,7 @@ public class UpdateInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateInstanceRequest, Builder> {
         private String instanceId; 
-        private java.util.List < Components> components; 
+        private java.util.List<Components> components; 
         private String description; 
         private String orderType; 
 
@@ -96,7 +101,10 @@ public class UpdateInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-2r42mu9xi01</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -105,16 +113,19 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * The information about the instance type.
+         * <p>The information about the instance specification.</p>
          */
-        public Builder components(java.util.List < Components> components) {
+        public Builder components(java.util.List<Components> components) {
             this.putBodyParameter("components", components);
             this.components = components;
             return this;
         }
 
         /**
-         * The description of the instance.
+         * <p>The description of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -123,7 +134,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * The type of the order. Valid values: UPGRADE and DOWNGRADE. UPGRADE indicates the instance type is to be upgraded. DOWNGRADE indicates the instance type is to be downgraded.
+         * <p>The type of the order. Valid values: UPGRADE and DOWNGRADE. UPGRADE upgrades the instance specifications. DOWNGRADE: downgrades the instance specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder orderType(String orderType) {
             this.putBodyParameter("orderType", orderType);
@@ -138,11 +152,17 @@ public class UpdateInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateInstanceRequest</p>
+     */
     public static class Components extends TeaModel {
-        @NameInMap("code")
+        @com.aliyun.core.annotation.NameInMap("code")
         private String code;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private Components(Builder builder) {
@@ -177,7 +197,10 @@ public class UpdateInstanceRequest extends Request {
             private String value; 
 
             /**
-             * The name of the specification. The value must be the same as the name of a parameter on the buy page.
+             * <p>The code of the specification, which must be consistent with the value that you specify on the buy page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -185,7 +208,10 @@ public class UpdateInstanceRequest extends Request {
             }
 
             /**
-             * The value of the specification.
+             * <p>The value of the specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder value(String value) {
                 this.value = value;

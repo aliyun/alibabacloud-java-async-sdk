@@ -76,15 +76,15 @@ public class DescribeRecycleBinTablesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRecycleBinTablesRequest response) {
-            super(response);
-            this.dbName = response.dbName;
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.regionId = response.regionId;
+        private Builder(DescribeRecycleBinTablesRequest request) {
+            super(request);
+            this.dbName = request.dbName;
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * DbName.
+         * The name of the database.
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -93,7 +93,7 @@ public class DescribeRecycleBinTablesRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -102,7 +102,7 @@ public class DescribeRecycleBinTablesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

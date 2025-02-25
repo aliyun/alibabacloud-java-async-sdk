@@ -1,35 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLayersRequest} extends {@link RequestModel}
  *
  * <p>ListLayersRequest</p>
  */
 public class ListLayersRequest extends Request {
-    @Query
-    @NameInMap("limit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("limit")
     private Integer limit;
 
-    @Query
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("official")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("official")
     private String official;
 
-    @Query
-    @NameInMap("prefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("prefix")
     private String prefix;
 
-    @Query
-    @NameInMap("public")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("public")
     private String _public;
 
     private ListLayersRequest(Builder builder) {
@@ -110,7 +110,10 @@ public class ListLayersRequest extends Request {
         } 
 
         /**
-         * limit.
+         * <p>The number of layers that are returned</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -119,7 +122,10 @@ public class ListLayersRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTIzNCNhYmM=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -128,7 +134,10 @@ public class ListLayersRequest extends Request {
         }
 
         /**
-         * official.
+         * <p>Specifies whether the layer is official. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder official(String official) {
             this.putQueryParameter("official", official);
@@ -137,7 +146,10 @@ public class ListLayersRequest extends Request {
         }
 
         /**
-         * prefix.
+         * <p>The name prefix of the layer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-layer</p>
          */
         public Builder prefix(String prefix) {
             this.putQueryParameter("prefix", prefix);
@@ -146,7 +158,10 @@ public class ListLayersRequest extends Request {
         }
 
         /**
-         * public.
+         * <p>Specifies whether the layer is public. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder _public(String _public) {
             this.putQueryParameter("public", _public);

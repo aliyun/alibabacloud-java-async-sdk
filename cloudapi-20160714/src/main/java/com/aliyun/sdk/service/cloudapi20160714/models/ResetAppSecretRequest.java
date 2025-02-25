@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResetAppSecretRequest} extends {@link RequestModel}
  *
  * <p>ResetAppSecretRequest</p>
  */
 public class ResetAppSecretRequest extends Request {
-    @Query
-    @NameInMap("AppKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appKey;
 
-    @Query
-    @NameInMap("NewAppKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewAppKey")
     private String newAppKey;
 
-    @Query
-    @NameInMap("NewAppSecret")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewAppSecret")
     private String newAppSecret;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private ResetAppSecretRequest(Builder builder) {
@@ -97,7 +102,11 @@ public class ResetAppSecretRequest extends Request {
         } 
 
         /**
-         * The key of the application that is used to make an API call.
+         * <p>The key of the application that is used to make an API call.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60030986</p>
          */
         public Builder appKey(String appKey) {
             this.putQueryParameter("AppKey", appKey);
@@ -106,7 +115,10 @@ public class ResetAppSecretRequest extends Request {
         }
 
         /**
-         * The new AppKey that you set must be globally unique.
+         * <p>The new AppKey that you set must be globally unique.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testAppKey</p>
          */
         public Builder newAppKey(String newAppKey) {
             this.putQueryParameter("NewAppKey", newAppKey);
@@ -115,7 +127,10 @@ public class ResetAppSecretRequest extends Request {
         }
 
         /**
-         * The new key of the application. To improve compatibility, we recommend that you use other parameters.
+         * <p>The new key of the application. To improve compatibility, we recommend that you use other parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test***</p>
          */
         public Builder newAppSecret(String newAppSecret) {
             this.putQueryParameter("NewAppSecret", newAppSecret);

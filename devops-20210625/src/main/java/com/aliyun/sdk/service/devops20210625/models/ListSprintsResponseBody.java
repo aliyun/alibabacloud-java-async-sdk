@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSprintsResponseBody} extends {@link TeaModel}
  *
  * <p>ListSprintsResponseBody</p>
  */
 public class ListSprintsResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMsg")
+    @com.aliyun.core.annotation.NameInMap("errorMsg")
     private String errorMsg;
 
-    @NameInMap("maxResults")
+    @com.aliyun.core.annotation.NameInMap("maxResults")
     private Long maxResults;
 
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("sprints")
-    private java.util.List < Sprints> sprints;
+    @com.aliyun.core.annotation.NameInMap("sprints")
+    private java.util.List<Sprints> sprints;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("totalCount")
+    @com.aliyun.core.annotation.NameInMap("totalCount")
     private Long totalCount;
 
     private ListSprintsResponseBody(Builder builder) {
@@ -93,7 +98,7 @@ public class ListSprintsResponseBody extends TeaModel {
     /**
      * @return sprints
      */
-    public java.util.List < Sprints> getSprints() {
+    public java.util.List<Sprints> getSprints() {
         return this.sprints;
     }
 
@@ -117,7 +122,7 @@ public class ListSprintsResponseBody extends TeaModel {
         private Long maxResults; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < Sprints> sprints; 
+        private java.util.List<Sprints> sprints; 
         private Boolean success; 
         private Long totalCount; 
 
@@ -164,7 +169,7 @@ public class ListSprintsResponseBody extends TeaModel {
         /**
          * sprints.
          */
-        public Builder sprints(java.util.List < Sprints> sprints) {
+        public Builder sprints(java.util.List<Sprints> sprints) {
             this.sprints = sprints;
             return this;
         }
@@ -191,41 +196,47 @@ public class ListSprintsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSprintsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSprintsResponseBody</p>
+     */
     public static class Sprints extends TeaModel {
-        @NameInMap("creator")
+        @com.aliyun.core.annotation.NameInMap("creator")
         private String creator;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("endDate")
+        @com.aliyun.core.annotation.NameInMap("endDate")
         private Long endDate;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private Long gmtModified;
 
-        @NameInMap("identifier")
+        @com.aliyun.core.annotation.NameInMap("identifier")
         private String identifier;
 
-        @NameInMap("modifier")
+        @com.aliyun.core.annotation.NameInMap("modifier")
         private String modifier;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("scope")
+        @com.aliyun.core.annotation.NameInMap("scope")
         private String scope;
 
-        @NameInMap("spaceIdentifier")
+        @com.aliyun.core.annotation.NameInMap("spaceIdentifier")
         private String spaceIdentifier;
 
-        @NameInMap("startDate")
+        @com.aliyun.core.annotation.NameInMap("startDate")
         private Long startDate;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
         private Sprints(Builder builder) {

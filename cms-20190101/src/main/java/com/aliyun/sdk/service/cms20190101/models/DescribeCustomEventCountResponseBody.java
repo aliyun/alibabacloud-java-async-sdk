@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCustomEventCountResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCustomEventCountResponseBody</p>
  */
 public class DescribeCustomEventCountResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("CustomEventCounts")
+    @com.aliyun.core.annotation.NameInMap("CustomEventCounts")
     private CustomEventCounts customEventCounts;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeCustomEventCountResponseBody(Builder builder) {
@@ -86,10 +86,13 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the call was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -97,7 +100,7 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the custom event.
+         * <p>The details of the custom event.</p>
          */
         public Builder customEventCounts(CustomEventCounts customEventCounts) {
             this.customEventCounts = customEventCounts;
@@ -105,7 +108,10 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message. If the call was successful, the value success is returned. If the call failed, an error message is returned.
+         * <p>The returned message. If the call was successful, the value success is returned. If the call failed, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +119,10 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60912C8D-B340-4253-ADE7-61ACDFD25CFC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +130,10 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.
+         * <p>Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,14 +146,20 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCustomEventCountResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCustomEventCountResponseBody</p>
+     */
     public static class CustomEventCount extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Num")
+        @com.aliyun.core.annotation.NameInMap("Num")
         private Integer num;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private Long time;
 
         private CustomEventCount(Builder builder) {
@@ -185,7 +203,10 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
             private Long time; 
 
             /**
-             * The name of the custom event.
+             * <p>The name of the custom event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BABEL_BUY</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -193,7 +214,10 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that the custom event occurred in the specified time period.
+             * <p>The number of times that the custom event occurred in the specified time period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder num(Integer num) {
                 this.num = num;
@@ -201,10 +225,11 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the custom event occurred.
-             * <p>
+             * <p>The time when the custom event occurred.</p>
+             * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
              * 
-             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * <strong>example:</strong>
+             * <p>1552267615000</p>
              */
             public Builder time(Long time) {
                 this.time = time;
@@ -218,8 +243,14 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCustomEventCountResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCustomEventCountResponseBody</p>
+     */
     public static class CustomEventCounts extends TeaModel {
-        @NameInMap("CustomEventCount")
+        @com.aliyun.core.annotation.NameInMap("CustomEventCount")
         private java.util.List < CustomEventCount> customEventCount;
 
         private CustomEventCounts(Builder builder) {

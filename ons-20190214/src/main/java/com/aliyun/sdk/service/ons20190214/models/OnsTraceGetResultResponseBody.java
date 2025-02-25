@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OnsTraceGetResultResponseBody} extends {@link TeaModel}
  *
  * <p>OnsTraceGetResultResponseBody</p>
  */
 public class OnsTraceGetResultResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TraceData")
+    @com.aliyun.core.annotation.NameInMap("TraceData")
     private TraceData traceData;
 
     private OnsTraceGetResultResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
         private TraceData traceData; 
 
         /**
-         * The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.
+         * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>84EE24D2-851F-40D6-B99E-4D6AB909****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the message trace.
+         * <p>The details of the message trace.</p>
          */
         public Builder traceData(TraceData traceData) {
             this.traceData = traceData;
@@ -71,23 +74,29 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link OnsTraceGetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsTraceGetResultResponseBody</p>
+     */
     public static class SubClientInfoDo extends TeaModel {
-        @NameInMap("ClientHost")
+        @com.aliyun.core.annotation.NameInMap("ClientHost")
         private String clientHost;
 
-        @NameInMap("CostTime")
+        @com.aliyun.core.annotation.NameInMap("CostTime")
         private Integer costTime;
 
-        @NameInMap("ReconsumeTimes")
+        @com.aliyun.core.annotation.NameInMap("ReconsumeTimes")
         private Integer reconsumeTimes;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SubGroupName")
+        @com.aliyun.core.annotation.NameInMap("SubGroupName")
         private String subGroupName;
 
-        @NameInMap("SubTime")
+        @com.aliyun.core.annotation.NameInMap("SubTime")
         private Long subTime;
 
         private SubClientInfoDo(Builder builder) {
@@ -158,7 +167,10 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             private Long subTime; 
 
             /**
-             * The address of the consumer.
+             * <p>The address of the consumer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><code>30.5.**.**</code></p>
              */
             public Builder clientHost(String clientHost) {
                 this.clientHost = clientHost;
@@ -166,7 +178,10 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             }
 
             /**
-             * The period of time that the system took to consume the message. Unit: milliseconds.
+             * <p>The period of time that the system took to consume the message. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>43</p>
              */
             public Builder costTime(Integer costTime) {
                 this.costTime = costTime;
@@ -174,7 +189,10 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             }
 
             /**
-             * The number of attempts that the Message Queue for Apache RocketMQ broker tried to send the message to the consumer.
+             * <p>The number of attempts that the ApsaraMQ for RocketMQ broker tried to send the message to the consumer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder reconsumeTimes(Integer reconsumeTimes) {
                 this.reconsumeTimes = reconsumeTimes;
@@ -182,14 +200,17 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the message is consumed. Valid values:
-             * <p>
+             * <p>Indicates whether the message is consumed. Valid values:</p>
+             * <ul>
+             * <li><strong>CONSUME_FAILED</strong>: The message failed to be consumed.</li>
+             * <li><strong>CONSUME_SUCCESS</strong>: The message is consumed.</li>
+             * <li><strong>CONSUME_NOT_RETURN:</strong> No responses are returned.</li>
+             * <li><strong>SEND_UNKNOWN:</strong> The message is a transactional message and is not committed.</li>
+             * <li><strong>SEND_DELAY:</strong> The message is a scheduled or delayed message and is waiting to be consumed at the specified point in time.</li>
+             * </ul>
              * 
-             * *   **CONSUME_FAILED**: The message failed to be consumed.
-             * *   **CONSUME_SUCCESS**: The message is consumed.
-             * *   **CONSUME_NOT_RETURN:** No responses are returned.
-             * *   **SEND_UNKNOWN:** The message is a transactional message and is not committed.
-             * *   **SEND_DELAY:** The message is a scheduled or delayed message and is waiting to be consumed at the specified point in time.
+             * <strong>example:</strong>
+             * <p>CONSUME_SUCCESS</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -197,7 +218,10 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the group that contains the consumer.
+             * <p>The ID of the group that contains the consumer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GID_test</p>
              */
             public Builder subGroupName(String subGroupName) {
                 this.subGroupName = subGroupName;
@@ -205,7 +229,10 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             }
 
             /**
-             * The earliest point in time when the message was consumed.
+             * <p>The earliest point in time when the message was consumed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1570851590511</p>
              */
             public Builder subTime(Long subTime) {
                 this.subTime = subTime;
@@ -219,8 +246,14 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OnsTraceGetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsTraceGetResultResponseBody</p>
+     */
     public static class ClientList extends TeaModel {
-        @NameInMap("SubClientInfoDo")
+        @com.aliyun.core.annotation.NameInMap("SubClientInfoDo")
         private java.util.List < SubClientInfoDo> subClientInfoDo;
 
         private ClientList(Builder builder) {
@@ -260,17 +293,23 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OnsTraceGetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsTraceGetResultResponseBody</p>
+     */
     public static class SubMapDo extends TeaModel {
-        @NameInMap("ClientList")
+        @com.aliyun.core.annotation.NameInMap("ClientList")
         private ClientList clientList;
 
-        @NameInMap("FailCount")
+        @com.aliyun.core.annotation.NameInMap("FailCount")
         private Integer failCount;
 
-        @NameInMap("SubGroupName")
+        @com.aliyun.core.annotation.NameInMap("SubGroupName")
         private String subGroupName;
 
-        @NameInMap("SuccessCount")
+        @com.aliyun.core.annotation.NameInMap("SuccessCount")
         private Integer successCount;
 
         private SubMapDo(Builder builder) {
@@ -323,7 +362,7 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             private Integer successCount; 
 
             /**
-             * The information about message consumption by consumers in the group.
+             * <p>The information about message consumption by consumers in the group.</p>
              */
             public Builder clientList(ClientList clientList) {
                 this.clientList = clientList;
@@ -331,7 +370,10 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             }
 
             /**
-             * The number of consumption failures.
+             * <p>The number of consumption failures.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder failCount(Integer failCount) {
                 this.failCount = failCount;
@@ -339,7 +381,10 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the consumer group.
+             * <p>The ID of the consumer group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GID_test</p>
              */
             public Builder subGroupName(String subGroupName) {
                 this.subGroupName = subGroupName;
@@ -347,7 +392,10 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             }
 
             /**
-             * The number of successful consumptions.
+             * <p>The number of successful consumptions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder successCount(Integer successCount) {
                 this.successCount = successCount;
@@ -361,8 +409,14 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OnsTraceGetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsTraceGetResultResponseBody</p>
+     */
     public static class SubList extends TeaModel {
-        @NameInMap("SubMapDo")
+        @com.aliyun.core.annotation.NameInMap("SubMapDo")
         private java.util.List < SubMapDo> subMapDo;
 
         private SubList(Builder builder) {
@@ -402,35 +456,41 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OnsTraceGetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsTraceGetResultResponseBody</p>
+     */
     public static class TraceMapDo extends TeaModel {
-        @NameInMap("BornHost")
+        @com.aliyun.core.annotation.NameInMap("BornHost")
         private String bornHost;
 
-        @NameInMap("CostTime")
+        @com.aliyun.core.annotation.NameInMap("CostTime")
         private Integer costTime;
 
-        @NameInMap("MsgId")
+        @com.aliyun.core.annotation.NameInMap("MsgId")
         private String msgId;
 
-        @NameInMap("MsgKey")
+        @com.aliyun.core.annotation.NameInMap("MsgKey")
         private String msgKey;
 
-        @NameInMap("PubGroupName")
+        @com.aliyun.core.annotation.NameInMap("PubGroupName")
         private String pubGroupName;
 
-        @NameInMap("PubTime")
+        @com.aliyun.core.annotation.NameInMap("PubTime")
         private Long pubTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SubList")
+        @com.aliyun.core.annotation.NameInMap("SubList")
         private SubList subList;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
         private TraceMapDo(Builder builder) {
@@ -537,7 +597,10 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             private String topic; 
 
             /**
-             * The address of the producer that generated the message.
+             * <p>The address of the producer that generated the message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><code>30.5.**.**</code></p>
              */
             public Builder bornHost(String bornHost) {
                 this.bornHost = bornHost;
@@ -545,7 +608,10 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             }
 
             /**
-             * The period of time that the system took to send the message. Unit: milliseconds.
+             * <p>The period of time that the system took to send the message. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24</p>
              */
             public Builder costTime(Integer costTime) {
                 this.costTime = costTime;
@@ -553,7 +619,10 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the message.
+             * <p>The ID of the message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0BC1F01800002A9F000000531246****</p>
              */
             public Builder msgId(String msgId) {
                 this.msgId = msgId;
@@ -561,7 +630,10 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the message.
+             * <p>The key of the message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ORDERID_100</p>
              */
             public Builder msgKey(String msgKey) {
                 this.msgKey = msgKey;
@@ -569,7 +641,10 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the group that contains the producer.
+             * <p>The ID of the group that contains the producer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GID_test</p>
              */
             public Builder pubGroupName(String pubGroupName) {
                 this.pubGroupName = pubGroupName;
@@ -577,7 +652,10 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time when the message was sent.
+             * <p>The point in time when the message was sent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1570850870478</p>
              */
             public Builder pubTime(Long pubTime) {
                 this.pubTime = pubTime;
@@ -585,14 +663,17 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the message is sent. Valid values:
-             * <p>
+             * <p>Indicates whether the message is sent. Valid values:</p>
+             * <ul>
+             * <li><strong>SEND_SUCCESS</strong>: The message is sent.</li>
+             * <li><strong>SEND_FAILED</strong>: The message failed to be sent.</li>
+             * <li><strong>SEND_ROLLBACK:</strong> The message is a transactional message and is rolled back.</li>
+             * <li><strong>SEND_UNKNOWN:</strong> The message is a transactional message and is not committed.</li>
+             * <li><strong>SEND_DELAY:</strong> The message is a scheduled or delayed message and is waiting to be consumed at the specified point in time.</li>
+             * </ul>
              * 
-             * *   **SEND_SUCCESS**: The message is sent.
-             * *   **SEND_FAILED**: The message failed to be sent.
-             * *   **SEND_ROLLBACK:** The message is a transactional message and is rolled back.
-             * *   **SEND_UNKNOWN:** The message is a transactional message and is not committed.
-             * *   **SEND_DELAY:** The message is a scheduled or delayed message and is waiting to be sent at the specified point in time.
+             * <strong>example:</strong>
+             * <p>SEND_SUCCESS</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -600,7 +681,7 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             }
 
             /**
-             * The consumption traces of the message.
+             * <p>The consumption traces of the message.</p>
              */
             public Builder subList(SubList subList) {
                 this.subList = subList;
@@ -608,7 +689,10 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the message.
+             * <p>The tag of the message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TagA</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -616,7 +700,10 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             }
 
             /**
-             * The topic in which the message is stored.
+             * <p>The topic to which the message belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -630,8 +717,14 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OnsTraceGetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsTraceGetResultResponseBody</p>
+     */
     public static class TraceList extends TeaModel {
-        @NameInMap("TraceMapDo")
+        @com.aliyun.core.annotation.NameInMap("TraceMapDo")
         private java.util.List < TraceMapDo> traceMapDo;
 
         private TraceList(Builder builder) {
@@ -671,35 +764,41 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OnsTraceGetResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsTraceGetResultResponseBody</p>
+     */
     public static class TraceData extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("MsgId")
+        @com.aliyun.core.annotation.NameInMap("MsgId")
         private String msgId;
 
-        @NameInMap("MsgKey")
+        @com.aliyun.core.annotation.NameInMap("MsgKey")
         private String msgKey;
 
-        @NameInMap("QueryId")
+        @com.aliyun.core.annotation.NameInMap("QueryId")
         private String queryId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
-        @NameInMap("TraceList")
+        @com.aliyun.core.annotation.NameInMap("TraceList")
         private TraceList traceList;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private TraceData(Builder builder) {
@@ -806,7 +905,10 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * The point in time when the task was created.
+             * <p>The point in time when the task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1570966857000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -814,7 +916,10 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance that contains the message.
+             * <p>The ID of the instance</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MQ_INST_111111111111_DOxxxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -822,7 +927,10 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the message that is queried.
+             * <p>The ID of the message that is queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1E05791C117818B4AAC23B1BB0CE****</p>
              */
             public Builder msgId(String msgId) {
                 this.msgId = msgId;
@@ -830,7 +938,10 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the message that is queried.
+             * <p>The key of the message that is queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ORDERID_100</p>
              */
             public Builder msgKey(String msgKey) {
                 this.msgKey = msgKey;
@@ -838,7 +949,10 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * <p>The ID of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>272967562652883649157096685****</p>
              */
             public Builder queryId(String queryId) {
                 this.queryId = queryId;
@@ -846,12 +960,15 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task. Valid values:
-             * <p>
+             * <p>The status of the task. Valid values:</p>
+             * <ul>
+             * <li><strong>finish</strong>: The task is complete.</li>
+             * <li><strong>working</strong>: The task is in progress.</li>
+             * <li><strong>removed</strong>: The task is deleted.</li>
+             * </ul>
              * 
-             * *   **finish**: The task is complete.
-             * *   **working**: The task is in progress.
-             * *   **removed**: The task is deleted.
+             * <strong>example:</strong>
+             * <p>finish</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -859,7 +976,10 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             }
 
             /**
-             * The topic in which the message is stored.
+             * <p>The topic in which the message is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -867,7 +987,7 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the message trace.
+             * <p>The details of the message trace.</p>
              */
             public Builder traceList(TraceList traceList) {
                 this.traceList = traceList;
@@ -875,7 +995,10 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             }
 
             /**
-             * The most recent point in time when the task was updated.
+             * <p>The most recent point in time when the task was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1570966877000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -883,7 +1006,10 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user who created the task.
+             * <p>The ID of the user who created the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27296756265288****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

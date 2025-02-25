@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMediaResourceIdRequest} extends {@link RequestModel}
  *
  * <p>GetMediaResourceIdRequest</p>
  */
 public class GetMediaResourceIdRequest extends Request {
-    @Query
-    @NameInMap("ExtendInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtendInfo")
     private String extendInfo;
 
-    @Query
-    @NameInMap("FileSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long fileSize;
 
-    @Query
-    @NameInMap("Memo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Memo")
     private String memo;
 
-    @Query
-    @NameInMap("OssKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ossKey;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true, maximum = 10000)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 10000)
     private Integer resourceType;
 
     private GetMediaResourceIdRequest(Builder builder) {
@@ -113,7 +118,13 @@ public class GetMediaResourceIdRequest extends Request {
         } 
 
         /**
-         * ExtendInfo.
+         * <p>The extended fields.</p>
+         * <blockquote>
+         * <p>If you set the ResourceType parameter to <strong>2</strong>, this parameter is required.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;img_rate&quot;:&quot;oneToOne&quot;}</p>
          */
         public Builder extendInfo(String extendInfo) {
             this.putQueryParameter("ExtendInfo", extendInfo);
@@ -122,7 +133,11 @@ public class GetMediaResourceIdRequest extends Request {
         }
 
         /**
-         * FileSize.
+         * <p>The size of the resource. Unit: bytes.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder fileSize(Long fileSize) {
             this.putQueryParameter("FileSize", fileSize);
@@ -131,7 +146,10 @@ public class GetMediaResourceIdRequest extends Request {
         }
 
         /**
-         * Memo.
+         * <p>The description of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remark</p>
          */
         public Builder memo(String memo) {
             this.putQueryParameter("Memo", memo);
@@ -140,7 +158,11 @@ public class GetMediaResourceIdRequest extends Request {
         }
 
         /**
-         * OssKey.
+         * <p>The address of the resource.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://alicom-fc-media/1947741454322274/alicom-fc-media/pic/202205191526575398603697152.png</p>
          */
         public Builder ossKey(String ossKey) {
             this.putQueryParameter("OssKey", ossKey);
@@ -149,7 +171,31 @@ public class GetMediaResourceIdRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The type of the resource.</p>
+         * <ul>
+         * <li><strong>1</strong>: text.</li>
+         * <li><strong>2</strong>: image. A small image cannot exceed 100 KB in size, and a large image cannot exceed 2 MB in size. The image must be clear. Supported format: JPG, JPEG, and PNG.</li>
+         * <li><strong>3</strong>: audio.</li>
+         * <li><strong>4</strong>: video. Supported format: MP4.</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If you set the ResourceType parameter to 2, the <strong>img_rate</strong> required is required. Valid values:</p>
+         * </li>
+         * <li><p>1:1</p>
+         * </li>
+         * <li><p>16:9</p>
+         * </li>
+         * <li><p>3:1</p>
+         * </li>
+         * <li><p>48:65</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder resourceType(Integer resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

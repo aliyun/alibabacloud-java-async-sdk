@@ -1,19 +1,19 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnDeliverListRequest} extends {@link RequestModel}
  *
  * <p>DescribeCdnDeliverListRequest</p>
  */
 public class DescribeCdnDeliverListRequest extends Request {
-    @Query
-    @NameInMap("DeliverId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeliverId")
     private Long deliverId;
 
     private DescribeCdnDeliverListRequest(Builder builder) {
@@ -54,7 +54,10 @@ public class DescribeCdnDeliverListRequest extends Request {
         } 
 
         /**
-         * The ID of the tracking task that you want to query. If you do not specify an ID, all tracking tasks are queried.
+         * <p>The ID of the tracking task that you want to query. If you do not specify an ID, all tracking tasks are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder deliverId(Long deliverId) {
             this.putQueryParameter("DeliverId", deliverId);

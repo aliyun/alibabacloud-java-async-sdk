@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAScriptsRequest} extends {@link RequestModel}
  *
  * <p>DeleteAScriptsRequest</p>
  */
 public class DeleteAScriptsRequest extends Request {
-    @Query
-    @NameInMap("AScriptIds")
-    @Validation(required = true)
-    private java.util.List < String > aScriptIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AScriptIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> aScriptIds;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
     private DeleteAScriptsRequest(Builder builder) {
@@ -48,7 +53,7 @@ public class DeleteAScriptsRequest extends Request {
     /**
      * @return aScriptIds
      */
-    public java.util.List < String > getAScriptIds() {
+    public java.util.List<String> getAScriptIds() {
         return this.aScriptIds;
     }
 
@@ -67,7 +72,7 @@ public class DeleteAScriptsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteAScriptsRequest, Builder> {
-        private java.util.List < String > aScriptIds; 
+        private java.util.List<String> aScriptIds; 
         private String clientToken; 
         private Boolean dryRun; 
 
@@ -83,19 +88,21 @@ public class DeleteAScriptsRequest extends Request {
         } 
 
         /**
-         * The AScript rule IDs.
+         * <p>The AScript rule IDs.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder aScriptIds(java.util.List < String > aScriptIds) {
+        public Builder aScriptIds(java.util.List<String> aScriptIds) {
             this.putQueryParameter("AScriptIds", aScriptIds);
             this.aScriptIds = aScriptIds;
             return this;
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * <strong>example:</strong>
+         * <p>f516e84e-fc0c-4c2d-a461-6cd774a84dbd</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -104,11 +111,14 @@ public class DeleteAScriptsRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong>(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false**(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);

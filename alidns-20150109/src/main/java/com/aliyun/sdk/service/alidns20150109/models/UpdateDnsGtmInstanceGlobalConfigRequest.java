@@ -1,65 +1,70 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDnsGtmInstanceGlobalConfigRequest} extends {@link RequestModel}
  *
  * <p>UpdateDnsGtmInstanceGlobalConfigRequest</p>
  */
 public class UpdateDnsGtmInstanceGlobalConfigRequest extends Request {
-    @Query
-    @NameInMap("AlertConfig")
-    private java.util.List < AlertConfig> alertConfig;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlertConfig")
+    private java.util.List<AlertConfig> alertConfig;
 
-    @Query
-    @NameInMap("AlertGroup")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlertGroup")
     private String alertGroup;
 
-    @Query
-    @NameInMap("CnameType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CnameType")
     private String cnameType;
 
-    @Query
-    @NameInMap("ForceUpdate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForceUpdate")
     private Boolean forceUpdate;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("PublicCnameMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PublicCnameMode")
     private String publicCnameMode;
 
-    @Query
-    @NameInMap("PublicRr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PublicRr")
     private String publicRr;
 
-    @Query
-    @NameInMap("PublicUserDomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PublicUserDomainName")
     private String publicUserDomainName;
 
-    @Query
-    @NameInMap("PublicZoneName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PublicZoneName")
     private String publicZoneName;
 
-    @Query
-    @NameInMap("Ttl")
-    @Validation(maximum = 9999999, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ttl")
+    @com.aliyun.core.annotation.Validation(maximum = 9999999, minimum = 1)
     private Integer ttl;
 
     private UpdateDnsGtmInstanceGlobalConfigRequest(Builder builder) {
@@ -94,7 +99,7 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends Request {
     /**
      * @return alertConfig
      */
-    public java.util.List < AlertConfig> getAlertConfig() {
+    public java.util.List<AlertConfig> getAlertConfig() {
         return this.alertConfig;
     }
 
@@ -176,7 +181,7 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateDnsGtmInstanceGlobalConfigRequest, Builder> {
-        private java.util.List < AlertConfig> alertConfig; 
+        private java.util.List<AlertConfig> alertConfig; 
         private String alertGroup; 
         private String cnameType; 
         private Boolean forceUpdate; 
@@ -212,14 +217,17 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends Request {
         /**
          * AlertConfig.
          */
-        public Builder alertConfig(java.util.List < AlertConfig> alertConfig) {
+        public Builder alertConfig(java.util.List<AlertConfig> alertConfig) {
             this.putQueryParameter("AlertConfig", alertConfig);
             this.alertConfig = alertConfig;
             return this;
         }
 
         /**
-         * The name of the alert group in the JSON format.
+         * <p>The name of the alert group in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alertGroup1</p>
          */
         public Builder alertGroup(String alertGroup) {
             this.putQueryParameter("AlertGroup", alertGroup);
@@ -228,10 +236,13 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * The type of the CNAME domain name that is used to access the instance. Valid value:
-         * <p>
+         * <p>The type of the canonical name (CNAME).</p>
+         * <ul>
+         * <li>Set the value to PUBLIC.</li>
+         * </ul>
          * 
-         * *   PUBLIC: The CNAME domain name is used to access the instance over the Internet.
+         * <strong>example:</strong>
+         * <p>public</p>
          */
         public Builder cnameType(String cnameType) {
             this.putQueryParameter("CnameType", cnameType);
@@ -240,11 +251,14 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable force updates. Valid values:
-         * <p>
+         * <p>Specifies whether to enable force updates. Valid values:</p>
+         * <ul>
+         * <li>true: enables force update without a conflict alert.</li>
+         * <li>false: disables force update. If a conflict occurs, the system displays an alert. null: This valid value of ForceUpdate provides the same information as the false value.</li>
+         * </ul>
          * 
-         * *   true: enables force update without a conflict alert.
-         * *   false: disables force update. If a conflict occurs, the system displays an alert. null: This valid value of ForceUpdate provides the same information as the false value.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder forceUpdate(Boolean forceUpdate) {
             this.putQueryParameter("ForceUpdate", forceUpdate);
@@ -253,7 +267,11 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -262,7 +280,10 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * The name of the instance. This parameter is required only for the first update.
+         * <p>The name of the instance. This parameter is required only for the first update.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -271,7 +292,10 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.
+         * <p>The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -280,11 +304,14 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to use a custom CNAME domain name or a CNAME domain name assigned by the system to access the instance over the Internet. Valid values:
-         * <p>
+         * <p>Specifies whether to use a custom CNAME domain name or a CNAME domain name assigned by the system to access the instance over the Internet. Valid values:</p>
+         * <ul>
+         * <li>SYSTEM_ASSIGN: a CNAME domain name assigned by the system</li>
+         * <li>CUSTOM: a custom CNAME domain name</li>
+         * </ul>
          * 
-         * *   SYSTEM_ASSIGN: a CNAME domain name assigned by the system
-         * *   CUSTOM: a custom CNAME domain name
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         public Builder publicCnameMode(String publicCnameMode) {
             this.putQueryParameter("PublicCnameMode", publicCnameMode);
@@ -293,7 +320,10 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * The hostname corresponding to the CNAME domain name that is used to access the instance over the Internet.
+         * <p>The hostname corresponding to the CNAME domain name that is used to access the instance over the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.rr</p>
          */
         public Builder publicRr(String publicRr) {
             this.putQueryParameter("PublicRr", publicRr);
@@ -302,7 +332,10 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * The service domain name that is used over the Internet.
+         * <p>The service domain name that is used over the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder publicUserDomainName(String publicUserDomainName) {
             this.putQueryParameter("PublicUserDomainName", publicUserDomainName);
@@ -311,10 +344,13 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * The CNAME domain name that is used to access the instance over the Internet, which is the primary domain name. This parameter is required when the PublicCnameMode parameter is set to CUSTOM.
-         * <p>
+         * <p>The CNAME domain name that is used to access the instance over the Internet, which is the primary domain name. This parameter is required when the PublicCnameMode parameter is set to CUSTOM.</p>
+         * <blockquote>
+         * <p> You must use the primary domain name. Do not include the hostname specified by the PublicRr parameter.</p>
+         * </blockquote>
          * 
-         * >  You must use the primary domain name. Do not include the hostname specified by the PublicRr parameter.
+         * <strong>example:</strong>
+         * <p>gtm-003.com</p>
          */
         public Builder publicZoneName(String publicZoneName) {
             this.putQueryParameter("PublicZoneName", publicZoneName);
@@ -323,7 +359,10 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * The global time to live (TTL).
+         * <p>The global time to live (TTL).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ttl(Integer ttl) {
             this.putQueryParameter("Ttl", ttl);
@@ -338,17 +377,23 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateDnsGtmInstanceGlobalConfigRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateDnsGtmInstanceGlobalConfigRequest</p>
+     */
     public static class AlertConfig extends TeaModel {
-        @NameInMap("DingtalkNotice")
+        @com.aliyun.core.annotation.NameInMap("DingtalkNotice")
         private Boolean dingtalkNotice;
 
-        @NameInMap("EmailNotice")
+        @com.aliyun.core.annotation.NameInMap("EmailNotice")
         private Boolean emailNotice;
 
-        @NameInMap("NoticeType")
+        @com.aliyun.core.annotation.NameInMap("NoticeType")
         private String noticeType;
 
-        @NameInMap("SmsNotice")
+        @com.aliyun.core.annotation.NameInMap("SmsNotice")
         private Boolean smsNotice;
 
         private AlertConfig(Builder builder) {

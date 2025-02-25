@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableHostAvailabilityRequest} extends {@link RequestModel}
  *
  * <p>EnableHostAvailabilityRequest</p>
  */
 public class EnableHostAvailabilityRequest extends Request {
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Long > id;
 
     private EnableHostAvailabilityRequest(Builder builder) {
@@ -55,7 +55,10 @@ public class EnableHostAvailabilityRequest extends Request {
         } 
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder id(java.util.List < Long > id) {
             this.putQueryParameter("Id", id);

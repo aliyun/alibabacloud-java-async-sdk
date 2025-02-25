@@ -1,36 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RefreshVodObjectCachesRequest} extends {@link RequestModel}
  *
  * <p>RefreshVodObjectCachesRequest</p>
  */
 public class RefreshVodObjectCachesRequest extends Request {
-    @Query
-    @NameInMap("ObjectPath")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Force")
+    private Boolean force;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ObjectPath")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String objectPath;
 
-    @Query
-    @NameInMap("ObjectType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ObjectType")
     private String objectType;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private RefreshVodObjectCachesRequest(Builder builder) {
         super(builder);
+        this.force = builder.force;
         this.objectPath = builder.objectPath;
         this.objectType = builder.objectType;
         this.ownerId = builder.ownerId;
@@ -48,6 +58,13 @@ public class RefreshVodObjectCachesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return force
+     */
+    public Boolean getForce() {
+        return this.force;
     }
 
     /**
@@ -79,6 +96,7 @@ public class RefreshVodObjectCachesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RefreshVodObjectCachesRequest, Builder> {
+        private Boolean force; 
         private String objectPath; 
         private String objectType; 
         private Long ownerId; 
@@ -90,6 +108,7 @@ public class RefreshVodObjectCachesRequest extends Request {
 
         private Builder(RefreshVodObjectCachesRequest request) {
             super(request);
+            this.force = request.force;
             this.objectPath = request.objectPath;
             this.objectType = request.objectType;
             this.ownerId = request.ownerId;
@@ -97,7 +116,27 @@ public class RefreshVodObjectCachesRequest extends Request {
         } 
 
         /**
-         * The URL of the file to be prefetched. Separate multiple URLs with line breaks (\n or \r\n).
+         * <p>Specifies whether to purge resources in a directory if the resources requested are different from the resources on the origin server.</p>
+         * <ul>
+         * <li><strong>true</strong>: refreshes all resources in the directory. If you set this parameter to true, when the requested content matches the resource in the directory, the POP retrieves the resource from the origin server, returns the resource to the client, and caches the resource.</li>
+         * <li><strong>false</strong> (default): refreshes the changed resources in the directory. If you set this parameter to false, when the requested content matches the resource in the directory, the POP obtains the Last-Modified parameter of the resource from the origin server. If the value of the obtained Last-Modified parameter is the same as that of the cached resource, the cached resource is returned. Otherwise, the POP retrieves the resource from the origin server, returns the resource to the client, and caches the resource.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder force(Boolean force) {
+            this.putQueryParameter("Force", force);
+            this.force = force;
+            return this;
+        }
+
+        /**
+         * <p>The URL of the file to be prefetched. Separate multiple URLs with line breaks (\n or \r\n).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc.com/image/1.png</p>
          */
         public Builder objectPath(String objectPath) {
             this.putQueryParameter("ObjectPath", objectPath);
@@ -106,11 +145,16 @@ public class RefreshVodObjectCachesRequest extends Request {
         }
 
         /**
-         * The type of the object that you want to refresh. Valid values:
-         * <p>
+         * <p>The type of the object that you want to refresh. Valid values:</p>
+         * <ul>
+         * <li><strong>File</strong> (default): refreshes one or more files.</li>
+         * <li><strong>Directory</strong>: refreshes the files in specified directories.</li>
+         * <li><strong>Regex</strong>: refreshes content based on regular expressions.</li>
+         * <li><strong>IgnoreParams</strong>: removes the question mark (?) and parameters after the question mark (?) in a request URL and refreshes content. After you call this operation with the request URL submitted, the system compares the submitted URL with the URL of the cached resource without specific parameters. If the URLs match, the POPs refresh the cached resource.</li>
+         * </ul>
          * 
-         * *   **File** (default): refreshes files.
-         * *   **Directory**: refreshes the files in specified directories.
+         * <strong>example:</strong>
+         * <p>File</p>
          */
         public Builder objectType(String objectType) {
             this.putQueryParameter("ObjectType", objectType);

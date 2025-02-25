@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of DescribeAdvices  DescribeAdvicesRequest
+     * @return DescribeAdvicesResponse
+     */
     @Override
     public CompletableFuture<DescribeAdvicesResponse> describeAdvices(DescribeAdvicesRequest request) {
         try {
@@ -53,6 +57,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAdvicesFlatPage  DescribeAdvicesFlatPageRequest
+     * @return DescribeAdvicesFlatPageResponse
+     */
+    @Override
+    public CompletableFuture<DescribeAdvicesFlatPageResponse> describeAdvicesFlatPage(DescribeAdvicesFlatPageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeAdvicesFlatPage").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeAdvicesFlatPageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeAdvicesFlatPageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeAdvicesPage  DescribeAdvicesPageRequest
+     * @return DescribeAdvicesPageResponse
+     */
     @Override
     public CompletableFuture<DescribeAdvicesPageResponse> describeAdvicesPage(DescribeAdvicesPageRequest request) {
         try {
@@ -67,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAdvisorChecks  DescribeAdvisorChecksRequest
+     * @return DescribeAdvisorChecksResponse
+     */
     @Override
     public CompletableFuture<DescribeAdvisorChecksResponse> describeAdvisorChecks(DescribeAdvisorChecksRequest request) {
         try {
@@ -81,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAdvisorResources  DescribeAdvisorResourcesRequest
+     * @return DescribeAdvisorResourcesResponse
+     */
     @Override
     public CompletableFuture<DescribeAdvisorResourcesResponse> describeAdvisorResources(DescribeAdvisorResourcesRequest request) {
         try {
@@ -95,6 +129,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCostCheckAdvices  DescribeCostCheckAdvicesRequest
+     * @return DescribeCostCheckAdvicesResponse
+     */
+    @Override
+    public CompletableFuture<DescribeCostCheckAdvicesResponse> describeCostCheckAdvices(DescribeCostCheckAdvicesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeCostCheckAdvices").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeCostCheckAdvicesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeCostCheckAdvicesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeCostCheckResults  DescribeCostCheckResultsRequest
+     * @return DescribeCostCheckResultsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeCostCheckResultsResponse> describeCostCheckResults(DescribeCostCheckResultsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeCostCheckResults").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeCostCheckResultsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeCostCheckResultsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetHistoryAdvices  GetHistoryAdvicesRequest
+     * @return GetHistoryAdvicesResponse
+     */
     @Override
     public CompletableFuture<GetHistoryAdvicesResponse> getHistoryAdvices(GetHistoryAdvicesRequest request) {
         try {
@@ -109,6 +183,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTaskStatusById  GetTaskStatusByIdRequest
+     * @return GetTaskStatusByIdResponse
+     */
     @Override
     public CompletableFuture<GetTaskStatusByIdResponse> getTaskStatusById(GetTaskStatusByIdRequest request) {
         try {
@@ -123,11 +201,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RefreshAdvisorCheck  RefreshAdvisorCheckRequest
+     * @return RefreshAdvisorCheckResponse
+     */
     @Override
     public CompletableFuture<RefreshAdvisorCheckResponse> refreshAdvisorCheck(RefreshAdvisorCheckRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RefreshAdvisorCheck").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RefreshAdvisorCheck").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RefreshAdvisorCheckResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -137,6 +219,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RefreshAdvisorCostCheck  RefreshAdvisorCostCheckRequest
+     * @return RefreshAdvisorCostCheckResponse
+     */
+    @Override
+    public CompletableFuture<RefreshAdvisorCostCheckResponse> refreshAdvisorCostCheck(RefreshAdvisorCostCheckRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RefreshAdvisorCostCheck").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RefreshAdvisorCostCheckResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RefreshAdvisorCostCheckResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RefreshAdvisorResource  RefreshAdvisorResourceRequest
+     * @return RefreshAdvisorResourceResponse
+     */
     @Override
     public CompletableFuture<RefreshAdvisorResourceResponse> refreshAdvisorResource(RefreshAdvisorResourceRequest request) {
         try {
@@ -146,6 +250,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<RefreshAdvisorResourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ReportBizAlertInfo  ReportBizAlertInfoRequest
+     * @return ReportBizAlertInfoResponse
+     */
+    @Override
+    public CompletableFuture<ReportBizAlertInfoResponse> reportBizAlertInfo(ReportBizAlertInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ReportBizAlertInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ReportBizAlertInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ReportBizAlertInfoResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

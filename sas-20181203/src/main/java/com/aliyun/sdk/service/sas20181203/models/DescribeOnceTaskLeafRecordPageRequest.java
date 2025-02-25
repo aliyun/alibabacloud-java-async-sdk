@@ -1,55 +1,60 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOnceTaskLeafRecordPageRequest} extends {@link RequestModel}
  *
  * <p>DescribeOnceTaskLeafRecordPageRequest</p>
  */
 public class DescribeOnceTaskLeafRecordPageRequest extends Request {
-    @Query
-    @NameInMap("CurrentPage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer currentPage;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RelateInfo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelateInfo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean relateInfo;
 
-    @Query
-    @NameInMap("Source")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
-    @Query
-    @NameInMap("StatusList")
-    private java.util.List < String > statusList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StatusList")
+    private java.util.List<String> statusList;
 
-    @Query
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
-    @Query
-    @NameInMap("TaskType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskType;
 
     private DescribeOnceTaskLeafRecordPageRequest(Builder builder) {
@@ -123,7 +128,7 @@ public class DescribeOnceTaskLeafRecordPageRequest extends Request {
     /**
      * @return statusList
      */
-    public java.util.List < String > getStatusList() {
+    public java.util.List<String> getStatusList() {
         return this.statusList;
     }
 
@@ -148,7 +153,7 @@ public class DescribeOnceTaskLeafRecordPageRequest extends Request {
         private Boolean relateInfo; 
         private String source; 
         private Long startTime; 
-        private java.util.List < String > statusList; 
+        private java.util.List<String> statusList; 
         private String taskId; 
         private String taskType; 
 
@@ -170,7 +175,11 @@ public class DescribeOnceTaskLeafRecordPageRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -179,7 +188,10 @@ public class DescribeOnceTaskLeafRecordPageRequest extends Request {
         }
 
         /**
-         * The end timestamp of the sub-task.
+         * <p>The end timestamp of the sub-task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1668064495000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -188,7 +200,11 @@ public class DescribeOnceTaskLeafRecordPageRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 20
+         * <p>The number of entries to return on each page. Default value: 20</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -197,7 +213,11 @@ public class DescribeOnceTaskLeafRecordPageRequest extends Request {
         }
 
         /**
-         * Specifies whether extension information is associated.
+         * <p>Specifies whether extension information is associated.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder relateInfo(Boolean relateInfo) {
             this.putQueryParameter("RelateInfo", relateInfo);
@@ -206,7 +226,10 @@ public class DescribeOnceTaskLeafRecordPageRequest extends Request {
         }
 
         /**
-         * The source of the request.
+         * <p>The source of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>console_batch</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -215,7 +238,10 @@ public class DescribeOnceTaskLeafRecordPageRequest extends Request {
         }
 
         /**
-         * The start timestamp of the sub-task.
+         * <p>The start timestamp of the sub-task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1648438617000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -224,16 +250,19 @@ public class DescribeOnceTaskLeafRecordPageRequest extends Request {
         }
 
         /**
-         * The status information.
+         * <p>The status information.</p>
          */
-        public Builder statusList(java.util.List < String > statusList) {
+        public Builder statusList(java.util.List<String> statusList) {
             this.putQueryParameter("StatusList", statusList);
             this.statusList = statusList;
             return this;
         }
 
         /**
-         * The ID of the sub-task.
+         * <p>The ID of the sub-task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1471d8ebb96795b41ede090b9758****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -242,11 +271,15 @@ public class DescribeOnceTaskLeafRecordPageRequest extends Request {
         }
 
         /**
-         * The type of the sub-task. Valid values:
-         * <p>
+         * <p>The type of the sub-task. Valid values:</p>
+         * <ul>
+         * <li><strong>IMAGE_SCAN</strong>: image scan task</li>
+         * <li><strong>IMAGE_REGISTRY_PULL</strong>: image asset synchronization task</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **IMAGE_SCAN**: image scan task
-         * *   **IMAGE_REGISTRY_PULL**: image asset synchronization task
+         * <strong>example:</strong>
+         * <p>CLIENT_PROBLEM_CHECK</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

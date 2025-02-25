@@ -56,6 +56,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of CheckInstanceWebTerminal  CheckInstanceWebTerminalRequest
+     * @return CheckInstanceWebTerminalResponse
+     */
+    @Override
+    public CompletableFuture<CheckInstanceWebTerminalResponse> checkInstanceWebTerminal(CheckInstanceWebTerminalRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CheckInstanceWebTerminal").setMethod(HttpMethod.POST).setPathRegex("/api/v1/trainingjobs/{TrainingJobId}/instances/{InstanceId}/webterminals/action/check").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CheckInstanceWebTerminalResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CheckInstanceWebTerminalResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateAlgorithm  CreateAlgorithmRequest
+     * @return CreateAlgorithmResponse
+     */
     @Override
     public CompletableFuture<CreateAlgorithmResponse> createAlgorithm(CreateAlgorithmRequest request) {
         try {
@@ -70,6 +92,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateAlgorithmVersion  CreateAlgorithmVersionRequest
+     * @return CreateAlgorithmVersionResponse
+     */
     @Override
     public CompletableFuture<CreateAlgorithmVersionResponse> createAlgorithmVersion(CreateAlgorithmVersionRequest request) {
         try {
@@ -84,6 +110,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateInstanceWebTerminal  CreateInstanceWebTerminalRequest
+     * @return CreateInstanceWebTerminalResponse
+     */
+    @Override
+    public CompletableFuture<CreateInstanceWebTerminalResponse> createInstanceWebTerminal(CreateInstanceWebTerminalRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateInstanceWebTerminal").setMethod(HttpMethod.POST).setPathRegex("/api/v1/trainingjobs/{TrainingJobId}/instances/{InstanceId}/webterminals").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateInstanceWebTerminalResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateInstanceWebTerminalResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateQuota  CreateQuotaRequest
+     * @return CreateQuotaResponse
+     */
     @Override
     public CompletableFuture<CreateQuotaResponse> createQuota(CreateQuotaRequest request) {
         try {
@@ -98,6 +146,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateResourceGroup  CreateResourceGroupRequest
+     * @return CreateResourceGroupResponse
+     */
     @Override
     public CompletableFuture<CreateResourceGroupResponse> createResourceGroup(CreateResourceGroupRequest request) {
         try {
@@ -112,6 +164,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateTrainingJob  CreateTrainingJobRequest
+     * @return CreateTrainingJobResponse
+     */
     @Override
     public CompletableFuture<CreateTrainingJobResponse> createTrainingJob(CreateTrainingJobRequest request) {
         try {
@@ -126,6 +182,47 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteAlgorithm  DeleteAlgorithmRequest
+     * @return DeleteAlgorithmResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAlgorithmResponse> deleteAlgorithm(DeleteAlgorithmRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteAlgorithm").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/algorithms/{AlgorithmId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAlgorithmResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAlgorithmResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteAlgorithmVersion  DeleteAlgorithmVersionRequest
+     * @return DeleteAlgorithmVersionResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAlgorithmVersionResponse> deleteAlgorithmVersion(DeleteAlgorithmVersionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteAlgorithmVersion").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/algorithms/{AlgorithmId}/versions/{AlgorithmVersion}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAlgorithmVersionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAlgorithmVersionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @deprecated OpenAPI DeleteMachineGroup is deprecated, please use PaiStudio::2022-01-12::DeleteMachineGroup instead.  * @param request  the request parameters of DeleteMachineGroup  DeleteMachineGroupRequest
+     * @return DeleteMachineGroupResponse
+     */
+    @Deprecated
     @Override
     public CompletableFuture<DeleteMachineGroupResponse> deleteMachineGroup(DeleteMachineGroupRequest request) {
         try {
@@ -140,6 +237,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteQuota  DeleteQuotaRequest
+     * @return DeleteQuotaResponse
+     */
     @Override
     public CompletableFuture<DeleteQuotaResponse> deleteQuota(DeleteQuotaRequest request) {
         try {
@@ -154,6 +255,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteResourceGroup  DeleteResourceGroupRequest
+     * @return DeleteResourceGroupResponse
+     */
     @Override
     public CompletableFuture<DeleteResourceGroupResponse> deleteResourceGroup(DeleteResourceGroupRequest request) {
         try {
@@ -168,6 +273,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @deprecated OpenAPI DeleteResourceGroupMachineGroup is deprecated, please use PaiStudio::2022-01-12::DeleteResourceGroupMachineGroup instead.  * @param request  the request parameters of DeleteResourceGroupMachineGroup  DeleteResourceGroupMachineGroupRequest
+     * @return DeleteResourceGroupMachineGroupResponse
+     */
+    @Deprecated
     @Override
     public CompletableFuture<DeleteResourceGroupMachineGroupResponse> deleteResourceGroupMachineGroup(DeleteResourceGroupMachineGroupRequest request) {
         try {
@@ -182,6 +292,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteTrainingJob  DeleteTrainingJobRequest
+     * @return DeleteTrainingJobResponse
+     */
+    @Override
+    public CompletableFuture<DeleteTrainingJobResponse> deleteTrainingJob(DeleteTrainingJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteTrainingJob").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/trainingjobs/{TrainingJobId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteTrainingJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteTrainingJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteTrainingJobLabels  DeleteTrainingJobLabelsRequest
+     * @return DeleteTrainingJobLabelsResponse
+     */
+    @Override
+    public CompletableFuture<DeleteTrainingJobLabelsResponse> deleteTrainingJobLabels(DeleteTrainingJobLabelsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteTrainingJobLabels").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/trainingjobs/{TrainingJobId}/labels").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteTrainingJobLabelsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteTrainingJobLabelsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetAlgorithm  GetAlgorithmRequest
+     * @return GetAlgorithmResponse
+     */
     @Override
     public CompletableFuture<GetAlgorithmResponse> getAlgorithm(GetAlgorithmRequest request) {
         try {
@@ -196,6 +346,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAlgorithmVersion  GetAlgorithmVersionRequest
+     * @return GetAlgorithmVersionResponse
+     */
     @Override
     public CompletableFuture<GetAlgorithmVersionResponse> getAlgorithmVersion(GetAlgorithmVersionRequest request) {
         try {
@@ -210,6 +364,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @deprecated OpenAPI GetMachineGroup is deprecated, please use PaiStudio::2022-01-12::GetMachineGroup instead.  * @param request  the request parameters of GetMachineGroup  GetMachineGroupRequest
+     * @return GetMachineGroupResponse
+     */
+    @Deprecated
     @Override
     public CompletableFuture<GetMachineGroupResponse> getMachineGroup(GetMachineGroupRequest request) {
         try {
@@ -224,6 +383,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @deprecated OpenAPI GetNodeMetrics is deprecated, please use Cms::2019-01-01::DescribeMetricList instead.  * @param request  the request parameters of GetNodeMetrics  GetNodeMetricsRequest
+     * @return GetNodeMetricsResponse
+     */
+    @Deprecated
     @Override
     public CompletableFuture<GetNodeMetricsResponse> getNodeMetrics(GetNodeMetricsRequest request) {
         try {
@@ -238,6 +402,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetQuota  GetQuotaRequest
+     * @return GetQuotaResponse
+     */
     @Override
     public CompletableFuture<GetQuotaResponse> getQuota(GetQuotaRequest request) {
         try {
@@ -252,6 +420,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetResourceGroup  GetResourceGroupRequest
+     * @return GetResourceGroupResponse
+     */
     @Override
     public CompletableFuture<GetResourceGroupResponse> getResourceGroup(GetResourceGroupRequest request) {
         try {
@@ -266,6 +438,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetResourceGroupMachineGroup  GetResourceGroupMachineGroupRequest
+     * @return GetResourceGroupMachineGroupResponse
+     */
     @Override
     public CompletableFuture<GetResourceGroupMachineGroupResponse> getResourceGroupMachineGroup(GetResourceGroupMachineGroupRequest request) {
         try {
@@ -280,6 +456,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @deprecated OpenAPI GetResourceGroupRequest is deprecated  * @param request  the request parameters of GetResourceGroupRequest  GetResourceGroupRequestRequest
+     * @return GetResourceGroupRequestResponse
+     */
+    @Deprecated
     @Override
     public CompletableFuture<GetResourceGroupRequestResponse> getResourceGroupRequest(GetResourceGroupRequestRequest request) {
         try {
@@ -294,6 +475,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetResourceGroupTotal  GetResourceGroupTotalRequest
+     * @return GetResourceGroupTotalResponse
+     */
     @Override
     public CompletableFuture<GetResourceGroupTotalResponse> getResourceGroupTotal(GetResourceGroupTotalRequest request) {
         try {
@@ -308,6 +493,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSpotPriceHistory  GetSpotPriceHistoryRequest
+     * @return GetSpotPriceHistoryResponse
+     */
+    @Override
+    public CompletableFuture<GetSpotPriceHistoryResponse> getSpotPriceHistory(GetSpotPriceHistoryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetSpotPriceHistory").setMethod(HttpMethod.GET).setPathRegex("/api/v1/spots/{InstanceType}/pricehistory").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetSpotPriceHistoryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetSpotPriceHistoryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetToken  GetTokenRequest
+     * @return GetTokenResponse
+     */
+    @Override
+    public CompletableFuture<GetTokenResponse> getToken(GetTokenRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetToken").setMethod(HttpMethod.GET).setPathRegex("/api/v1/tokens").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetTokenResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetTokenResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetTrainingJob  GetTrainingJobRequest
+     * @return GetTrainingJobResponse
+     */
     @Override
     public CompletableFuture<GetTrainingJobResponse> getTrainingJob(GetTrainingJobRequest request) {
         try {
@@ -322,6 +547,47 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTrainingJobErrorInfo  GetTrainingJobErrorInfoRequest
+     * @return GetTrainingJobErrorInfoResponse
+     */
+    @Override
+    public CompletableFuture<GetTrainingJobErrorInfoResponse> getTrainingJobErrorInfo(GetTrainingJobErrorInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetTrainingJobErrorInfo").setMethod(HttpMethod.GET).setPathRegex("/api/v1/trainingjobs/{TrainingJobId}/errorinfo").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetTrainingJobErrorInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetTrainingJobErrorInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetTrainingJobLatestMetrics  GetTrainingJobLatestMetricsRequest
+     * @return GetTrainingJobLatestMetricsResponse
+     */
+    @Override
+    public CompletableFuture<GetTrainingJobLatestMetricsResponse> getTrainingJobLatestMetrics(GetTrainingJobLatestMetricsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetTrainingJobLatestMetrics").setMethod(HttpMethod.GET).setPathRegex("/api/v1/trainingjobs/{TrainingJobId}/latestmetrics").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetTrainingJobLatestMetricsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetTrainingJobLatestMetricsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @deprecated OpenAPI GetUserViewMetrics is deprecated, please use PaiStudio::2022-01-12::GetQuotaUserViewMetrics instead.  * @param request  the request parameters of GetUserViewMetrics  GetUserViewMetricsRequest
+     * @return GetUserViewMetricsResponse
+     */
+    @Deprecated
     @Override
     public CompletableFuture<GetUserViewMetricsResponse> getUserViewMetrics(GetUserViewMetricsRequest request) {
         try {
@@ -336,6 +602,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAlgorithmVersions  ListAlgorithmVersionsRequest
+     * @return ListAlgorithmVersionsResponse
+     */
     @Override
     public CompletableFuture<ListAlgorithmVersionsResponse> listAlgorithmVersions(ListAlgorithmVersionsRequest request) {
         try {
@@ -350,6 +620,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAlgorithms  ListAlgorithmsRequest
+     * @return ListAlgorithmsResponse
+     */
     @Override
     public CompletableFuture<ListAlgorithmsResponse> listAlgorithms(ListAlgorithmsRequest request) {
         try {
@@ -364,6 +638,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListNodes  ListNodesRequest
+     * @return ListNodesResponse
+     */
+    @Override
+    public CompletableFuture<ListNodesResponse> listNodes(ListNodesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListNodes").setMethod(HttpMethod.GET).setPathRegex("/api/v1/nodes").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListNodesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListNodesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListQuotaWorkloads  ListQuotaWorkloadsRequest
+     * @return ListQuotaWorkloadsResponse
+     */
+    @Override
+    public CompletableFuture<ListQuotaWorkloadsResponse> listQuotaWorkloads(ListQuotaWorkloadsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListQuotaWorkloads").setMethod(HttpMethod.GET).setPathRegex("/api/v1/quotas/{QuotaId}/workloads").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListQuotaWorkloadsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListQuotaWorkloadsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListQuotas  ListQuotasRequest
+     * @return ListQuotasResponse
+     */
     @Override
     public CompletableFuture<ListQuotasResponse> listQuotas(ListQuotasRequest request) {
         try {
@@ -378,6 +692,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListResourceGroupMachineGroups  ListResourceGroupMachineGroupsRequest
+     * @return ListResourceGroupMachineGroupsResponse
+     */
     @Override
     public CompletableFuture<ListResourceGroupMachineGroupsResponse> listResourceGroupMachineGroups(ListResourceGroupMachineGroupsRequest request) {
         try {
@@ -392,6 +710,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListResourceGroups  ListResourceGroupsRequest
+     * @return ListResourceGroupsResponse
+     */
     @Override
     public CompletableFuture<ListResourceGroupsResponse> listResourceGroups(ListResourceGroupsRequest request) {
         try {
@@ -406,6 +728,64 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTrainingJobEvents  ListTrainingJobEventsRequest
+     * @return ListTrainingJobEventsResponse
+     */
+    @Override
+    public CompletableFuture<ListTrainingJobEventsResponse> listTrainingJobEvents(ListTrainingJobEventsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListTrainingJobEvents").setMethod(HttpMethod.GET).setPathRegex("/api/v1/trainingjobs/{TrainingJobId}/events").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListTrainingJobEventsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListTrainingJobEventsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListTrainingJobInstanceEvents  ListTrainingJobInstanceEventsRequest
+     * @return ListTrainingJobInstanceEventsResponse
+     */
+    @Override
+    public CompletableFuture<ListTrainingJobInstanceEventsResponse> listTrainingJobInstanceEvents(ListTrainingJobInstanceEventsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListTrainingJobInstanceEvents").setMethod(HttpMethod.GET).setPathRegex("/api/v1/trainingjobs/{TrainingJobId}/instances/{InstanceId}/events").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListTrainingJobInstanceEventsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListTrainingJobInstanceEventsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListTrainingJobInstanceMetrics  ListTrainingJobInstanceMetricsRequest
+     * @return ListTrainingJobInstanceMetricsResponse
+     */
+    @Override
+    public CompletableFuture<ListTrainingJobInstanceMetricsResponse> listTrainingJobInstanceMetrics(ListTrainingJobInstanceMetricsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListTrainingJobInstanceMetrics").setMethod(HttpMethod.GET).setPathRegex("/api/v1/trainingjobs/{TrainingJobId}/instancemetrics").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListTrainingJobInstanceMetricsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListTrainingJobInstanceMetricsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListTrainingJobLogs  ListTrainingJobLogsRequest
+     * @return ListTrainingJobLogsResponse
+     */
     @Override
     public CompletableFuture<ListTrainingJobLogsResponse> listTrainingJobLogs(ListTrainingJobLogsRequest request) {
         try {
@@ -420,6 +800,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTrainingJobMetrics  ListTrainingJobMetricsRequest
+     * @return ListTrainingJobMetricsResponse
+     */
     @Override
     public CompletableFuture<ListTrainingJobMetricsResponse> listTrainingJobMetrics(ListTrainingJobMetricsRequest request) {
         try {
@@ -434,6 +818,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTrainingJobOutputModels  ListTrainingJobOutputModelsRequest
+     * @return ListTrainingJobOutputModelsResponse
+     */
+    @Override
+    public CompletableFuture<ListTrainingJobOutputModelsResponse> listTrainingJobOutputModels(ListTrainingJobOutputModelsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListTrainingJobOutputModels").setMethod(HttpMethod.GET).setPathRegex("/api/v1/trainingjobs/{TrainingJobId}/outputmodels").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListTrainingJobOutputModelsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListTrainingJobOutputModelsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListTrainingJobs  ListTrainingJobsRequest
+     * @return ListTrainingJobsResponse
+     */
     @Override
     public CompletableFuture<ListTrainingJobsResponse> listTrainingJobs(ListTrainingJobsRequest request) {
         try {
@@ -448,6 +854,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ScaleQuota  ScaleQuotaRequest
+     * @return ScaleQuotaResponse
+     */
     @Override
     public CompletableFuture<ScaleQuotaResponse> scaleQuota(ScaleQuotaRequest request) {
         try {
@@ -462,6 +872,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopTrainingJob  StopTrainingJobRequest
+     * @return StopTrainingJobResponse
+     */
     @Override
     public CompletableFuture<StopTrainingJobResponse> stopTrainingJob(StopTrainingJobRequest request) {
         try {
@@ -476,6 +890,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateAlgorithm  UpdateAlgorithmRequest
+     * @return UpdateAlgorithmResponse
+     */
     @Override
     public CompletableFuture<UpdateAlgorithmResponse> updateAlgorithm(UpdateAlgorithmRequest request) {
         try {
@@ -490,6 +908,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateAlgorithmVersion  UpdateAlgorithmVersionRequest
+     * @return UpdateAlgorithmVersionResponse
+     */
     @Override
     public CompletableFuture<UpdateAlgorithmVersionResponse> updateAlgorithmVersion(UpdateAlgorithmVersionRequest request) {
         try {
@@ -504,6 +926,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateQuota  UpdateQuotaRequest
+     * @return UpdateQuotaResponse
+     */
     @Override
     public CompletableFuture<UpdateQuotaResponse> updateQuota(UpdateQuotaRequest request) {
         try {
@@ -518,6 +944,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateResourceGroup  UpdateResourceGroupRequest
+     * @return UpdateResourceGroupResponse
+     */
     @Override
     public CompletableFuture<UpdateResourceGroupResponse> updateResourceGroup(UpdateResourceGroupRequest request) {
         try {
@@ -532,6 +962,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateTrainingJobLabels  UpdateTrainingJobLabelsRequest
+     * @return UpdateTrainingJobLabelsResponse
+     */
     @Override
     public CompletableFuture<UpdateTrainingJobLabelsResponse> updateTrainingJobLabels(UpdateTrainingJobLabelsRequest request) {
         try {

@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eflo_controller20221215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFreeNodesRequest} extends {@link RequestModel}
  *
  * <p>ListFreeNodesRequest</p>
  */
 public class ListFreeNodesRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("HpnZone")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HpnZone")
     private String hpnZone;
 
-    @Body
-    @NameInMap("MachineType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MachineType")
     private String machineType;
 
-    @Body
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Long maxResults;
 
-    @Body
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Body
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private ListFreeNodesRequest(Builder builder) {
@@ -133,7 +138,10 @@ public class ListFreeNodesRequest extends Request {
         }
 
         /**
-         * HpnZone.
+         * <p>Cluster number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1</p>
          */
         public Builder hpnZone(String hpnZone) {
             this.putBodyParameter("HpnZone", hpnZone);
@@ -142,7 +150,10 @@ public class ListFreeNodesRequest extends Request {
         }
 
         /**
-         * MachineType.
+         * <p>Machine type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mock-machine-type2</p>
          */
         public Builder machineType(String machineType) {
             this.putBodyParameter("MachineType", machineType);
@@ -151,7 +162,10 @@ public class ListFreeNodesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>Number of items per page for paginated queries, default is 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -160,7 +174,10 @@ public class ListFreeNodesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>Query token (Token), the value should be the NextToken parameter value returned from the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a3f2224a5ec7224116c4f5246120abe4</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -169,7 +186,10 @@ public class ListFreeNodesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource group ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxno4vh5muoq</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);

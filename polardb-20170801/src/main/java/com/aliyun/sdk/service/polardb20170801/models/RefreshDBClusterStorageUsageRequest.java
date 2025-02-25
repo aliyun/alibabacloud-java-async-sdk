@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RefreshDBClusterStorageUsageRequest} extends {@link RequestModel}
  *
  * <p>RefreshDBClusterStorageUsageRequest</p>
  */
 public class RefreshDBClusterStorageUsageRequest extends Request {
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SyncRealTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SyncRealTime")
     private Boolean syncRealTime;
 
     private RefreshDBClusterStorageUsageRequest(Builder builder) {
@@ -146,11 +151,14 @@ public class RefreshDBClusterStorageUsageRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable real-time synchronization. Valid values:
-         * <p>
+         * <p>Specifies whether to enable real-time synchronization. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong>: T + 1</li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**: T + 1
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder syncRealTime(Boolean syncRealTime) {
             this.putQueryParameter("SyncRealTime", syncRealTime);

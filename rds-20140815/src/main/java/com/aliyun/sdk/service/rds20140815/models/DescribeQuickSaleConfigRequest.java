@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeQuickSaleConfigRequest} extends {@link RequestModel}
  *
  * <p>DescribeQuickSaleConfigRequest</p>
  */
 public class DescribeQuickSaleConfigRequest extends Request {
-    @Query
-    @NameInMap("Commodity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Commodity")
     private String commodity;
 
-    @Query
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private DescribeQuickSaleConfigRequest(Builder builder) {
@@ -82,11 +87,14 @@ public class DescribeQuickSaleConfigRequest extends Request {
         } 
 
         /**
-         * The product code. Valid values:
-         * <p>
+         * <p>The product code. Valid values:</p>
+         * <ul>
+         * <li>rds: The instance is a subscription instance.</li>
+         * <li>bards: The instance is a pay-as-you-go instance.</li>
+         * </ul>
          * 
-         * *   rds: The instance is a subscription instance.
-         * *   bards: The instance is a pay-as-you-go instance.
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder commodity(String commodity) {
             this.putQueryParameter("Commodity", commodity);
@@ -95,13 +103,16 @@ public class DescribeQuickSaleConfigRequest extends Request {
         }
 
         /**
-         * The database engine of the instance. Valid values:
-         * <p>
+         * <p>The database engine of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>MySQL</strong></li>
+         * <li><strong>SQLServer</strong></li>
+         * <li><strong>PostgreSQL</strong></li>
+         * <li><strong>MariaDB</strong></li>
+         * </ul>
          * 
-         * *   **MySQL**
-         * *   **SQLServer**
-         * *   **PostgreSQL**
-         * *   **MariaDB**
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -110,7 +121,10 @@ public class DescribeQuickSaleConfigRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePipelineResponseBody} extends {@link TeaModel}
  *
  * <p>CreatePipelineResponseBody</p>
  */
 public class CreatePipelineResponseBody extends TeaModel {
-    @NameInMap("Pipeline")
+    @com.aliyun.core.annotation.NameInMap("Pipeline")
     private Pipeline pipeline;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreatePipelineResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class CreatePipelineResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Pipeline.
+         * <p>The information about the MPS queue.</p>
          */
         public Builder pipeline(Pipeline pipeline) {
             this.pipeline = pipeline;
@@ -58,7 +63,10 @@ public class CreatePipelineResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,26 +79,32 @@ public class CreatePipelineResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreatePipelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreatePipelineResponseBody</p>
+     */
     public static class Pipeline extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PipelineId")
+        @com.aliyun.core.annotation.NameInMap("PipelineId")
         private String pipelineId;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("Speed")
+        @com.aliyun.core.annotation.NameInMap("Speed")
         private String speed;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Pipeline(Builder builder) {
@@ -170,7 +184,10 @@ public class CreatePipelineResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * CreateTime.
+             * <p>The time when the template was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-12T16:17:54Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -178,7 +195,10 @@ public class CreatePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The time when the template was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-12T16:17:54Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -186,7 +206,10 @@ public class CreatePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the MPS queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-pipeline</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -194,7 +217,10 @@ public class CreatePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * PipelineId.
+             * <p>The ID of the MPS queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;
@@ -202,7 +228,10 @@ public class CreatePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the MPS queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -210,7 +239,16 @@ public class CreatePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * Speed.
+             * <p>The type of the MPS queue.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Boost: MPS queue with transcoding speed boosted.</li>
+             * <li>Standard: standard MPS queue.</li>
+             * <li>NarrowBandHDV2: MPS queue that supports Narrowband HD 2.0.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder speed(String speed) {
                 this.speed = speed;
@@ -218,7 +256,15 @@ public class CreatePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The state of the MPS queue.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Active</li>
+             * <li>Paused</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;

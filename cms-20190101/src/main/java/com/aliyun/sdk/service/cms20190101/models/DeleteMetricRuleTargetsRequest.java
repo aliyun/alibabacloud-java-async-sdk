@@ -1,25 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMetricRuleTargetsRequest} extends {@link RequestModel}
  *
  * <p>DeleteMetricRuleTargetsRequest</p>
  */
 public class DeleteMetricRuleTargetsRequest extends Request {
-    @Query
-    @NameInMap("RuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleId;
 
-    @Query
-    @NameInMap("TargetIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > targetIds;
 
     private DeleteMetricRuleTargetsRequest(Builder builder) {
@@ -70,7 +70,11 @@ public class DeleteMetricRuleTargetsRequest extends Request {
         } 
 
         /**
-         * The ID of the alert rule.
+         * <p>The ID of the alert rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ruleId-xxxxxx</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -79,7 +83,11 @@ public class DeleteMetricRuleTargetsRequest extends Request {
         }
 
         /**
-         * The resource IDs.
+         * <p>The resource IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder targetIds(java.util.List < String > targetIds) {
             this.putQueryParameter("TargetIds", targetIds);

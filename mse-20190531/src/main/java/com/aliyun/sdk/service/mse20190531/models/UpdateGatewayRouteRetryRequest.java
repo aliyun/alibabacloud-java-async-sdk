@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGatewayRouteRetryRequest} extends {@link RequestModel}
  *
  * <p>UpdateGatewayRouteRetryRequest</p>
  */
 public class UpdateGatewayRouteRetryRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("GatewayId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayId")
     private Long gatewayId;
 
-    @Query
-    @NameInMap("GatewayUniqueId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
-    @Query
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @Query
-    @NameInMap("RetryJSON")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RetryJSON")
     private RetryJSON retryJSON;
 
     private UpdateGatewayRouteRetryRequest(Builder builder) {
@@ -110,11 +115,14 @@ public class UpdateGatewayRouteRetryRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -123,7 +131,10 @@ public class UpdateGatewayRouteRetryRequest extends Request {
         }
 
         /**
-         * The ID of the gateway.
+         * <p>The ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>501</p>
          */
         public Builder gatewayId(Long gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);
@@ -132,7 +143,10 @@ public class UpdateGatewayRouteRetryRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-3f97e2989c344f35ab3fd62b19f1d10a</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -141,7 +155,10 @@ public class UpdateGatewayRouteRetryRequest extends Request {
         }
 
         /**
-         * The ID of the associated record.
+         * <p>The ID of the associated record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>508</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -150,7 +167,7 @@ public class UpdateGatewayRouteRetryRequest extends Request {
         }
 
         /**
-         * The information about the retry policy.
+         * <p>The information about the retry policy.</p>
          */
         public Builder retryJSON(RetryJSON retryJSON) {
             String retryJSONShrink = shrink(retryJSON, "RetryJSON", "json");
@@ -166,17 +183,23 @@ public class UpdateGatewayRouteRetryRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateGatewayRouteRetryRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateGatewayRouteRetryRequest</p>
+     */
     public static class RetryJSON extends TeaModel {
-        @NameInMap("Attempts")
+        @com.aliyun.core.annotation.NameInMap("Attempts")
         private Integer attempts;
 
-        @NameInMap("HttpCodes")
-        private java.util.List < String > httpCodes;
+        @com.aliyun.core.annotation.NameInMap("HttpCodes")
+        private java.util.List<String> httpCodes;
 
-        @NameInMap("RetryOn")
-        private java.util.List < String > retryOn;
+        @com.aliyun.core.annotation.NameInMap("RetryOn")
+        private java.util.List<String> retryOn;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private RetryJSON(Builder builder) {
@@ -204,14 +227,14 @@ public class UpdateGatewayRouteRetryRequest extends Request {
         /**
          * @return httpCodes
          */
-        public java.util.List < String > getHttpCodes() {
+        public java.util.List<String> getHttpCodes() {
             return this.httpCodes;
         }
 
         /**
          * @return retryOn
          */
-        public java.util.List < String > getRetryOn() {
+        public java.util.List<String> getRetryOn() {
             return this.retryOn;
         }
 
@@ -224,12 +247,15 @@ public class UpdateGatewayRouteRetryRequest extends Request {
 
         public static final class Builder {
             private Integer attempts; 
-            private java.util.List < String > httpCodes; 
-            private java.util.List < String > retryOn; 
+            private java.util.List<String> httpCodes; 
+            private java.util.List<String> retryOn; 
             private String status; 
 
             /**
-             * The number of retries.
+             * <p>The number of retries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder attempts(Integer attempts) {
                 this.attempts = attempts;
@@ -237,23 +263,26 @@ public class UpdateGatewayRouteRetryRequest extends Request {
             }
 
             /**
-             * The HTTP status codes.
+             * <p>The HTTP status codes.</p>
              */
-            public Builder httpCodes(java.util.List < String > httpCodes) {
+            public Builder httpCodes(java.util.List<String> httpCodes) {
                 this.httpCodes = httpCodes;
                 return this;
             }
 
             /**
-             * The retry conditions.
+             * <p>The retry conditions.</p>
              */
-            public Builder retryOn(java.util.List < String > retryOn) {
+            public Builder retryOn(java.util.List<String> retryOn) {
                 this.retryOn = retryOn;
                 return this;
             }
 
             /**
-             * The status of the policy.
+             * <p>The status of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder status(String status) {
                 this.status = status;

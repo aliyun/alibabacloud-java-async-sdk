@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSubscriptionsRequest</p>
  */
 public class ListSubscriptionsRequest extends Request {
-    @Body
-    @NameInMap("clientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("notFilterScopeObjectDeleted")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("notFilterScopeObjectDeleted")
     private Boolean notFilterScopeObjectDeleted;
 
-    @Body
-    @NameInMap("notifyObject")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("notifyObject")
     private String notifyObject;
 
-    @Body
-    @NameInMap("notifyObjectType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("notifyObjectType")
     private String notifyObjectType;
 
-    @Body
-    @NameInMap("pageNumber")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Integer pageNumber;
 
-    @Body
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Integer pageSize;
 
-    @Body
-    @NameInMap("scope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("scope")
     private String scope;
 
-    @Body
-    @NameInMap("scopeObject")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("scopeObject")
     private String scopeObject;
 
-    @Body
-    @NameInMap("subscriptionTitle")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("subscriptionTitle")
     private String subscriptionTitle;
 
     private ListSubscriptionsRequest(Builder builder) {

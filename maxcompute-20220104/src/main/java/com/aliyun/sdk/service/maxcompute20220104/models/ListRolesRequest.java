@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRolesRequest} extends {@link RequestModel}
  *
  * <p>ListRolesRequest</p>
  */
 public class ListRolesRequest extends Request {
-    @Path
-    @NameInMap("projectName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("projectName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectName;
 
     private ListRolesRequest(Builder builder) {
@@ -55,7 +60,11 @@ public class ListRolesRequest extends Request {
         } 
 
         /**
-         * The name of the MaxCompute project.
+         * <p>The name of the MaxCompute project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>projectA</p>
          */
         public Builder projectName(String projectName) {
             this.putPathParameter("projectName", projectName);

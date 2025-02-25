@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePrePaidInstanceStockResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePrePaidInstanceStockResponseBody</p>
  */
 public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
-    @NameInMap("AvaliableCount")
+    @com.aliyun.core.annotation.NameInMap("AvaliableCount")
     private Integer avaliableCount;
 
-    @NameInMap("Cores")
+    @com.aliyun.core.annotation.NameInMap("Cores")
     private Integer cores;
 
-    @NameInMap("DataDiskSize")
+    @com.aliyun.core.annotation.NameInMap("DataDiskSize")
     private Integer dataDiskSize;
 
-    @NameInMap("EnsRegionId")
+    @com.aliyun.core.annotation.NameInMap("EnsRegionId")
     private String ensRegionId;
 
-    @NameInMap("InstanceSpec")
+    @com.aliyun.core.annotation.NameInMap("InstanceSpec")
     private String instanceSpec;
 
-    @NameInMap("Memory")
+    @com.aliyun.core.annotation.NameInMap("Memory")
     private Integer memory;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGap")
+    @com.aliyun.core.annotation.NameInMap("ResourceGap")
     private String resourceGap;
 
-    @NameInMap("SystemDiskSize")
+    @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
     private Integer systemDiskSize;
 
     private DescribePrePaidInstanceStockResponseBody(Builder builder) {
@@ -134,7 +139,10 @@ public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
         private Integer systemDiskSize; 
 
         /**
-         * AvaliableCount.
+         * <p>The number of resources that you can purchase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>84</p>
          */
         public Builder avaliableCount(Integer avaliableCount) {
             this.avaliableCount = avaliableCount;
@@ -142,7 +150,10 @@ public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
         }
 
         /**
-         * Cores.
+         * <p>The number of CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder cores(Integer cores) {
             this.cores = cores;
@@ -150,7 +161,10 @@ public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
         }
 
         /**
-         * DataDiskSize.
+         * <p>The size of the data disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder dataDiskSize(Integer dataDiskSize) {
             this.dataDiskSize = dataDiskSize;
@@ -158,7 +172,10 @@ public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
         }
 
         /**
-         * EnsRegionId.
+         * <p>The ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-suzhou-telecom</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.ensRegionId = ensRegionId;
@@ -166,7 +183,10 @@ public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceSpec.
+         * <p>The specification of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ens.sn1.stiny</p>
          */
         public Builder instanceSpec(String instanceSpec) {
             this.instanceSpec = instanceSpec;
@@ -174,7 +194,10 @@ public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
         }
 
         /**
-         * Memory.
+         * <p>The memory size. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
          */
         public Builder memory(Integer memory) {
             this.memory = memory;
@@ -182,7 +205,10 @@ public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>007833C8-E819-4122-B636-0D48D7BF6DFB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +216,10 @@ public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGap.
+         * <p>The reason why resources are insufficient.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>StockNotEnough</p>
          */
         public Builder resourceGap(String resourceGap) {
             this.resourceGap = resourceGap;
@@ -198,7 +227,10 @@ public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
         }
 
         /**
-         * SystemDiskSize.
+         * <p>The size of the system disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder systemDiskSize(Integer systemDiskSize) {
             this.systemDiskSize = systemDiskSize;

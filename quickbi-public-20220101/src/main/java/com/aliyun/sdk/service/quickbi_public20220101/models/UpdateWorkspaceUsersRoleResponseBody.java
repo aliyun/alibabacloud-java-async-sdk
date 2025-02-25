@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateWorkspaceUsersRoleResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateWorkspaceUsersRoleResponseBody</p>
  */
 public class UpdateWorkspaceUsersRoleResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private UpdateWorkspaceUsersRoleResponseBody(Builder builder) {
@@ -91,17 +96,23 @@ public class UpdateWorkspaceUsersRoleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateWorkspaceUsersRoleResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateWorkspaceUsersRoleResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("Failure")
+        @com.aliyun.core.annotation.NameInMap("Failure")
         private Integer failure;
 
-        @NameInMap("FailureDetail")
-        private java.util.Map < String, ? > failureDetail;
+        @com.aliyun.core.annotation.NameInMap("FailureDetail")
+        private java.util.Map<String, ?> failureDetail;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Integer success;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Result(Builder builder) {
@@ -129,7 +140,7 @@ public class UpdateWorkspaceUsersRoleResponseBody extends TeaModel {
         /**
          * @return failureDetail
          */
-        public java.util.Map < String, ? > getFailureDetail() {
+        public java.util.Map<String, ?> getFailureDetail() {
             return this.failureDetail;
         }
 
@@ -149,7 +160,7 @@ public class UpdateWorkspaceUsersRoleResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer failure; 
-            private java.util.Map < String, ? > failureDetail; 
+            private java.util.Map<String, ?> failureDetail; 
             private Integer success; 
             private Integer total; 
 
@@ -164,7 +175,7 @@ public class UpdateWorkspaceUsersRoleResponseBody extends TeaModel {
             /**
              * FailureDetail.
              */
-            public Builder failureDetail(java.util.Map < String, ? > failureDetail) {
+            public Builder failureDetail(java.util.Map<String, ?> failureDetail) {
                 this.failureDetail = failureDetail;
                 return this;
             }

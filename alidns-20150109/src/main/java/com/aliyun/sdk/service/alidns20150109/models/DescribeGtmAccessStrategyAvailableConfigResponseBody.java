@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGtmAccessStrategyAvailableConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeGtmAccessStrategyAvailableConfigResponseBody</p>
  */
 public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaModel {
-    @NameInMap("AddrPools")
+    @com.aliyun.core.annotation.NameInMap("AddrPools")
     private AddrPools addrPools;
 
-    @NameInMap("Lines")
+    @com.aliyun.core.annotation.NameInMap("Lines")
     private Lines lines;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SuggestSetDefaultLine")
+    @com.aliyun.core.annotation.NameInMap("SuggestSetDefaultLine")
     private Boolean suggestSetDefaultLine;
 
     private DescribeGtmAccessStrategyAvailableConfigResponseBody(Builder builder) {
@@ -74,7 +79,7 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
         private Boolean suggestSetDefaultLine; 
 
         /**
-         * The returned list of address pools.
+         * <p>The address pools.</p>
          */
         public Builder addrPools(AddrPools addrPools) {
             this.addrPools = addrPools;
@@ -82,7 +87,7 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
         }
 
         /**
-         * The returned lines of access regions.
+         * <p>The Domain Name System (DNS) request sources.</p>
          */
         public Builder lines(Lines lines) {
             this.lines = lines;
@@ -90,7 +95,10 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C2851BA9-CE56-49AF-8D12-4FC6A49EE688</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +106,10 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
         }
 
         /**
-         * SuggestSetDefaultLine.
+         * <p>Indicates whether the global line is recommended.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder suggestSetDefaultLine(Boolean suggestSetDefaultLine) {
             this.suggestSetDefaultLine = suggestSetDefaultLine;
@@ -111,11 +122,17 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
 
     } 
 
+    /**
+     * 
+     * {@link DescribeGtmAccessStrategyAvailableConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGtmAccessStrategyAvailableConfigResponseBody</p>
+     */
     public static class AddrPool extends TeaModel {
-        @NameInMap("AddrPoolId")
+        @com.aliyun.core.annotation.NameInMap("AddrPoolId")
         private String addrPoolId;
 
-        @NameInMap("AddrPoolName")
+        @com.aliyun.core.annotation.NameInMap("AddrPoolName")
         private String addrPoolName;
 
         private AddrPool(Builder builder) {
@@ -150,7 +167,10 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
             private String addrPoolName; 
 
             /**
-             * The ID of the address pool.
+             * <p>The ID of the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hra0ix</p>
              */
             public Builder addrPoolId(String addrPoolId) {
                 this.addrPoolId = addrPoolId;
@@ -158,7 +178,10 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
             }
 
             /**
-             * The name of the address pool.
+             * <p>The name of the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder addrPoolName(String addrPoolName) {
                 this.addrPoolName = addrPoolName;
@@ -172,9 +195,15 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGtmAccessStrategyAvailableConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGtmAccessStrategyAvailableConfigResponseBody</p>
+     */
     public static class AddrPools extends TeaModel {
-        @NameInMap("AddrPool")
-        private java.util.List < AddrPool> addrPool;
+        @com.aliyun.core.annotation.NameInMap("AddrPool")
+        private java.util.List<AddrPool> addrPool;
 
         private AddrPools(Builder builder) {
             this.addrPool = builder.addrPool;
@@ -191,17 +220,17 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
         /**
          * @return addrPool
          */
-        public java.util.List < AddrPool> getAddrPool() {
+        public java.util.List<AddrPool> getAddrPool() {
             return this.addrPool;
         }
 
         public static final class Builder {
-            private java.util.List < AddrPool> addrPool; 
+            private java.util.List<AddrPool> addrPool; 
 
             /**
              * AddrPool.
              */
-            public Builder addrPool(java.util.List < AddrPool> addrPool) {
+            public Builder addrPool(java.util.List<AddrPool> addrPool) {
                 this.addrPool = addrPool;
                 return this;
             }
@@ -213,23 +242,29 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGtmAccessStrategyAvailableConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGtmAccessStrategyAvailableConfigResponseBody</p>
+     */
     public static class Line extends TeaModel {
-        @NameInMap("FatherCode")
+        @com.aliyun.core.annotation.NameInMap("FatherCode")
         private String fatherCode;
 
-        @NameInMap("GroupCode")
+        @com.aliyun.core.annotation.NameInMap("GroupCode")
         private String groupCode;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("LineCode")
+        @com.aliyun.core.annotation.NameInMap("LineCode")
         private String lineCode;
 
-        @NameInMap("LineName")
+        @com.aliyun.core.annotation.NameInMap("LineName")
         private String lineName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Line(Builder builder) {
@@ -300,7 +335,10 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
             private String status; 
 
             /**
-             * The code of the parent line for the access region. If no parent line exists, leave this parameter blank.
+             * <p>The code of the parent line. No value is returned if no parent line exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>telecom</p>
              */
             public Builder fatherCode(String fatherCode) {
                 this.fatherCode = fatherCode;
@@ -308,7 +346,10 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
             }
 
             /**
-             * The code of the access region group.
+             * <p>The group number of the DNS request source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ISP</p>
              */
             public Builder groupCode(String groupCode) {
                 this.groupCode = groupCode;
@@ -316,7 +357,10 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
             }
 
             /**
-             * The name of the access region group.
+             * <p>The group name of the DNS request source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mainland China</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -324,7 +368,10 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
             }
 
             /**
-             * The code for the line of the access region.
+             * <p>The code of the DNS request source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn_telecom_hubei</p>
              */
             public Builder lineCode(String lineCode) {
                 this.lineCode = lineCode;
@@ -332,7 +379,10 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
             }
 
             /**
-             * The name for the line of the access region.
+             * <p>The name of the DNS request source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>South China</p>
              */
             public Builder lineName(String lineName) {
                 this.lineName = lineName;
@@ -340,11 +390,14 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
             }
 
             /**
-             * The current status of the line. Valid values:
-             * <p>
+             * <p>The state of the line. Valid values:</p>
+             * <ul>
+             * <li><strong>FORBIDDEN</strong>: The line is unavailable.</li>
+             * <li><strong>OPTIONAL</strong>: The line is available.</li>
+             * </ul>
              * 
-             * - **FORBIDDEN**: Unavailable
-             * - **OPTIONAL**: Availabe
+             * <strong>example:</strong>
+             * <p>FORBIDDEN</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -358,9 +411,15 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGtmAccessStrategyAvailableConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGtmAccessStrategyAvailableConfigResponseBody</p>
+     */
     public static class Lines extends TeaModel {
-        @NameInMap("Line")
-        private java.util.List < Line> line;
+        @com.aliyun.core.annotation.NameInMap("Line")
+        private java.util.List<Line> line;
 
         private Lines(Builder builder) {
             this.line = builder.line;
@@ -377,17 +436,17 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
         /**
          * @return line
          */
-        public java.util.List < Line> getLine() {
+        public java.util.List<Line> getLine() {
             return this.line;
         }
 
         public static final class Builder {
-            private java.util.List < Line> line; 
+            private java.util.List<Line> line; 
 
             /**
              * Line.
              */
-            public Builder line(java.util.List < Line> line) {
+            public Builder line(java.util.List<Line> line) {
                 this.line = line;
                 return this;
             }

@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDataTasksResponseBody} extends {@link TeaModel}
  *
  * <p>ListDataTasksResponseBody</p>
  */
 public class ListDataTasksResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private ListDataTasksResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class ListDataTasksResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class ListDataTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The return results.
+         * <p>The return results.</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -71,26 +74,32 @@ public class ListDataTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDataTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataTasksResponseBody</p>
+     */
     public static class SinkCluster extends TeaModel {
-        @NameInMap("dataSourceType")
+        @com.aliyun.core.annotation.NameInMap("dataSourceType")
         private String dataSourceType;
 
-        @NameInMap("endpoint")
+        @com.aliyun.core.annotation.NameInMap("endpoint")
         private String endpoint;
 
-        @NameInMap("index")
+        @com.aliyun.core.annotation.NameInMap("index")
         private String index;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("vpcId")
+        @com.aliyun.core.annotation.NameInMap("vpcId")
         private String vpcId;
 
-        @NameInMap("vpcInstanceId")
+        @com.aliyun.core.annotation.NameInMap("vpcInstanceId")
         private String vpcInstanceId;
 
-        @NameInMap("vpcInstancePort")
+        @com.aliyun.core.annotation.NameInMap("vpcInstancePort")
         private String vpcInstancePort;
 
         private SinkCluster(Builder builder) {
@@ -170,7 +179,10 @@ public class ListDataTasksResponseBody extends TeaModel {
             private String vpcInstancePort; 
 
             /**
-             * The type of the target cluster. Default value: elasticsearch.
+             * <p>The type of the target cluster. Default value: elasticsearch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder dataSourceType(String dataSourceType) {
                 this.dataSourceType = dataSourceType;
@@ -178,7 +190,10 @@ public class ListDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The public network access address of the target cluster.
+             * <p>The public network access address of the target cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://192.168.xx.xx:4101">http://192.168.xx.xx:4101</a></p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -186,7 +201,10 @@ public class ListDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The target index.
+             * <p>The target index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>product_info</p>
              */
             public Builder index(String index) {
                 this.index = index;
@@ -194,7 +212,10 @@ public class ListDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the destination index.
+             * <p>The type of the destination index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>_doc</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -202,7 +223,10 @@ public class ListDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC to which the cluster belongs.
+             * <p>The ID of the VPC to which the cluster belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2ze55voww95g82gak****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -210,7 +234,10 @@ public class ListDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID or Server Load Balancer (SLB) ID of the current cluster.
+             * <p>The instance ID or Server Load Balancer (SLB) ID of the current cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-09k1rnu3g0002****-worker</p>
              */
             public Builder vpcInstanceId(String vpcInstanceId) {
                 this.vpcInstanceId = vpcInstanceId;
@@ -218,7 +245,10 @@ public class ListDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The access port number of the cluster.
+             * <p>The access port number of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9200</p>
              */
             public Builder vpcInstancePort(String vpcInstancePort) {
                 this.vpcInstancePort = vpcInstancePort;
@@ -232,23 +262,29 @@ public class ListDataTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDataTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataTasksResponseBody</p>
+     */
     public static class SourceCluster extends TeaModel {
-        @NameInMap("dataSourceType")
+        @com.aliyun.core.annotation.NameInMap("dataSourceType")
         private String dataSourceType;
 
-        @NameInMap("index")
+        @com.aliyun.core.annotation.NameInMap("index")
         private String index;
 
-        @NameInMap("mapping")
+        @com.aliyun.core.annotation.NameInMap("mapping")
         private String mapping;
 
-        @NameInMap("routing")
+        @com.aliyun.core.annotation.NameInMap("routing")
         private String routing;
 
-        @NameInMap("settings")
+        @com.aliyun.core.annotation.NameInMap("settings")
         private String settings;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private SourceCluster(Builder builder) {
@@ -319,7 +355,10 @@ public class ListDataTasksResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The type of the source cluster. Default value: elasticsearch.
+             * <p>The type of the source cluster. Default value: elasticsearch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder dataSourceType(String dataSourceType) {
                 this.dataSourceType = dataSourceType;
@@ -327,7 +366,10 @@ public class ListDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The index whose data you want to migrate.
+             * <p>The index whose data you want to migrate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>product_info</p>
              */
             public Builder index(String index) {
                 this.index = index;
@@ -335,7 +377,10 @@ public class ListDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The Mapping configuration of the cluster.
+             * <p>The Mapping configuration of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;_doc&quot;:{&quot;properties&quot;:{&quot;user&quot;:{&quot;properties&quot;:{&quot;last&quot;:{&quot;type&quot;:&quot;text&quot;,...}}}}}}</p>
              */
             public Builder mapping(String mapping) {
                 this.mapping = mapping;
@@ -343,7 +388,10 @@ public class ListDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The routing field to index the table. It is set to the primary key by default.
+             * <p>The routing field to index the table. It is set to the primary key by default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>_id</p>
              */
             public Builder routing(String routing) {
                 this.routing = routing;
@@ -351,7 +399,10 @@ public class ListDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The Settings of the cluster.
+             * <p>The Settings of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\n  &quot;index&quot;: {\n    &quot;replication&quot;: {\n}.....}}</p>
              */
             public Builder settings(String settings) {
                 this.settings = settings;
@@ -359,7 +410,10 @@ public class ListDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the destination index.
+             * <p>The type of the destination index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>_doc</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -373,20 +427,26 @@ public class ListDataTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDataTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataTasksResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
 
-        @NameInMap("sinkCluster")
+        @com.aliyun.core.annotation.NameInMap("sinkCluster")
         private SinkCluster sinkCluster;
 
-        @NameInMap("sourceCluster")
+        @com.aliyun.core.annotation.NameInMap("sourceCluster")
         private SourceCluster sourceCluster;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("taskId")
+        @com.aliyun.core.annotation.NameInMap("taskId")
         private String taskId;
 
         private Result(Builder builder) {
@@ -448,7 +508,10 @@ public class ListDataTasksResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * The time when the site monitoring task was created.
+             * <p>The time when the site monitoring task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-07-30 06:32:18</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -456,7 +519,7 @@ public class ListDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The information of the target cluster.
+             * <p>The information of the target cluster.</p>
              */
             public Builder sinkCluster(SinkCluster sinkCluster) {
                 this.sinkCluster = sinkCluster;
@@ -464,7 +527,7 @@ public class ListDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the source cluster.
+             * <p>The information about the source cluster.</p>
              */
             public Builder sourceCluster(SourceCluster sourceCluster) {
                 this.sourceCluster = sourceCluster;
@@ -472,7 +535,10 @@ public class ListDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task.
+             * <p>The status of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -480,7 +546,10 @@ public class ListDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * <p>The ID of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>et_cn_mfv1233r47272****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

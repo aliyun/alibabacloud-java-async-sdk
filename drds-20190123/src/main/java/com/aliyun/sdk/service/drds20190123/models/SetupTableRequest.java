@@ -104,17 +104,17 @@ public class SetupTableRequest extends Request {
             super();
         } 
 
-        private Builder(SetupTableRequest response) {
-            super(response);
-            this.allowFullTableScan = response.allowFullTableScan;
-            this.dbName = response.dbName;
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.regionId = response.regionId;
-            this.tableName = response.tableName;
+        private Builder(SetupTableRequest request) {
+            super(request);
+            this.allowFullTableScan = request.allowFullTableScan;
+            this.dbName = request.dbName;
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.regionId = request.regionId;
+            this.tableName = request.tableName;
         } 
 
         /**
-         * AllowFullTableScan.
+         * Specifies whether to enable full table scan.
          */
         public Builder allowFullTableScan(Boolean allowFullTableScan) {
             this.putQueryParameter("AllowFullTableScan", allowFullTableScan);
@@ -123,7 +123,7 @@ public class SetupTableRequest extends Request {
         }
 
         /**
-         * DbName.
+         * The name of the database in which the table resides.
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -132,7 +132,7 @@ public class SetupTableRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the DRDS instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -141,7 +141,7 @@ public class SetupTableRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the streaming domain resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

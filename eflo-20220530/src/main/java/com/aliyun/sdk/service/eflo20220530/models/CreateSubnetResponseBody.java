@@ -1,30 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eflo20220530.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSubnetResponseBody} extends {@link TeaModel}
  *
  * <p>CreateSubnetResponseBody</p>
  */
 public class CreateSubnetResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private Content content;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateSubnetResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.content = builder.content;
         this.message = builder.message;
@@ -37,6 +46,13 @@ public class CreateSubnetResponseBody extends TeaModel {
 
     public static CreateSubnetResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -68,13 +84,28 @@ public class CreateSubnetResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private Integer code; 
         private Content content; 
         private String message; 
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The detailed information about the failed permission verification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
+
+        /**
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +113,7 @@ public class CreateSubnetResponseBody extends TeaModel {
         }
 
         /**
-         * Content.
+         * <p>The response parameters.</p>
          */
         public Builder content(Content content) {
             this.content = content;
@@ -90,7 +121,10 @@ public class CreateSubnetResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message. (If the instance is in the Exception state, the exception cause is prompted.)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +132,10 @@ public class CreateSubnetResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A88DFED5-24B7-5A3E-87DE-380BF06F3C90</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,8 +148,14 @@ public class CreateSubnetResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateSubnetResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateSubnetResponseBody</p>
+     */
     public static class Content extends TeaModel {
-        @NameInMap("SubnetId")
+        @com.aliyun.core.annotation.NameInMap("SubnetId")
         private String subnetId;
 
         private Content(Builder builder) {
@@ -138,7 +181,10 @@ public class CreateSubnetResponseBody extends TeaModel {
             private String subnetId; 
 
             /**
-             * SubnetId.
+             * <p>Lingjun subnet instance ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>subnet-yuvn29bn</p>
              */
             public Builder subnetId(String subnetId) {
                 this.subnetId = subnetId;

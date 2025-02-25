@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OpenSensitiveFileScanRequest} extends {@link RequestModel}
  *
  * <p>OpenSensitiveFileScanRequest</p>
  */
 public class OpenSensitiveFileScanRequest extends Request {
-    @Query
-    @NameInMap("SwitchOn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SwitchOn")
     private String switchOn;
 
     private OpenSensitiveFileScanRequest(Builder builder) {
@@ -54,11 +59,14 @@ public class OpenSensitiveFileScanRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable or disable sensitive file scan. Valid values:
-         * <p>
+         * <p>Specifies whether to enable or disable sensitive file scan. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong>: enables sensitive file scan</li>
+         * <li><strong>off</strong>: disables sensitive file scan</li>
+         * </ul>
          * 
-         * *   **on**: enables sensitive file scan
-         * *   **off**: disables sensitive file scan
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder switchOn(String switchOn) {
             this.putQueryParameter("SwitchOn", switchOn);

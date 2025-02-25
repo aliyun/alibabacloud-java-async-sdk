@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RefundRenderCmd} extends {@link TeaModel}
  *
  * <p>RefundRenderCmd</p>
  */
 public class RefundRenderCmd extends TeaModel {
-    @NameInMap("bizClaimType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("bizClaimType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer bizClaimType;
 
-    @NameInMap("goodsStatus")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("goodsStatus")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer goodsStatus;
 
-    @NameInMap("orderLineId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("orderLineId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String orderLineId;
 
     private RefundRenderCmd(Builder builder) {
@@ -65,7 +70,10 @@ public class RefundRenderCmd extends TeaModel {
         private String orderLineId; 
 
         /**
-         * bizClaimType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder bizClaimType(Integer bizClaimType) {
             this.bizClaimType = bizClaimType;
@@ -73,7 +81,10 @@ public class RefundRenderCmd extends TeaModel {
         }
 
         /**
-         * goodsStatus.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder goodsStatus(Integer goodsStatus) {
             this.goodsStatus = goodsStatus;
@@ -81,7 +92,10 @@ public class RefundRenderCmd extends TeaModel {
         }
 
         /**
-         * orderLineId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6692****5458</p>
          */
         public Builder orderLineId(String orderLineId) {
             this.orderLineId = orderLineId;

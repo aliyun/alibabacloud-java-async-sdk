@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAuthPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>ListAuthPolicyResponseBody</p>
  */
 public class ListAuthPolicyResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListAuthPolicyResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +114,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data.
+         * <p>The details of the data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +122,10 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +133,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +141,10 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>05A5A150-4A5F-5A8C-97D6-710776CC8408</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +152,14 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -155,23 +172,29 @@ public class ListAuthPolicyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAuthPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAuthPolicyResponseBody</p>
+     */
     public static class Method extends TeaModel {
-        @NameInMap("Group")
+        @com.aliyun.core.annotation.NameInMap("Group")
         private String group;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ParameterTypes")
-        private java.util.List < String > parameterTypes;
+        @com.aliyun.core.annotation.NameInMap("ParameterTypes")
+        private java.util.List<String> parameterTypes;
 
-        @NameInMap("ReturnType")
+        @com.aliyun.core.annotation.NameInMap("ReturnType")
         private String returnType;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private Method(Builder builder) {
@@ -208,7 +231,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         /**
          * @return parameterTypes
          */
-        public java.util.List < String > getParameterTypes() {
+        public java.util.List<String> getParameterTypes() {
             return this.parameterTypes;
         }
 
@@ -236,13 +259,16 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         public static final class Builder {
             private String group; 
             private String name; 
-            private java.util.List < String > parameterTypes; 
+            private java.util.List<String> parameterTypes; 
             private String returnType; 
             private String serviceName; 
             private String version; 
 
             /**
-             * The group.
+             * <p>The group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder group(String group) {
                 this.group = group;
@@ -250,7 +276,10 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The method name.
+             * <p>The method name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hello</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -258,15 +287,18 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The types of request parameters.
+             * <p>The types of request parameters.</p>
              */
-            public Builder parameterTypes(java.util.List < String > parameterTypes) {
+            public Builder parameterTypes(java.util.List<String> parameterTypes) {
                 this.parameterTypes = parameterTypes;
                 return this;
             }
 
             /**
-             * The type of the return value.
+             * <p>The type of the return value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Boolean</p>
              */
             public Builder returnType(String returnType) {
                 this.returnType = returnType;
@@ -274,7 +306,10 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The service name.
+             * <p>The service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spring-cloud-a</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -282,7 +317,10 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The method version.
+             * <p>The method version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.1</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -296,23 +334,29 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAuthPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAuthPolicyResponseBody</p>
+     */
     public static class AuthRule extends TeaModel {
-        @NameInMap("AppIds")
-        private java.util.List < String > appIds;
+        @com.aliyun.core.annotation.NameInMap("AppIds")
+        private java.util.List<String> appIds;
 
-        @NameInMap("AuthType")
+        @com.aliyun.core.annotation.NameInMap("AuthType")
         private Integer authType;
 
-        @NameInMap("Black")
+        @com.aliyun.core.annotation.NameInMap("Black")
         private Boolean black;
 
-        @NameInMap("K8sNamespaces")
-        private java.util.List < String > k8sNamespaces;
+        @com.aliyun.core.annotation.NameInMap("K8sNamespaces")
+        private java.util.List<String> k8sNamespaces;
 
-        @NameInMap("Method")
+        @com.aliyun.core.annotation.NameInMap("Method")
         private Method method;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
         private AuthRule(Builder builder) {
@@ -335,7 +379,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         /**
          * @return appIds
          */
-        public java.util.List < String > getAppIds() {
+        public java.util.List<String> getAppIds() {
             return this.appIds;
         }
 
@@ -356,7 +400,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         /**
          * @return k8sNamespaces
          */
-        public java.util.List < String > getK8sNamespaces() {
+        public java.util.List<String> getK8sNamespaces() {
             return this.k8sNamespaces;
         }
 
@@ -375,27 +419,30 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > appIds; 
+            private java.util.List<String> appIds; 
             private Integer authType; 
             private Boolean black; 
-            private java.util.List < String > k8sNamespaces; 
+            private java.util.List<String> k8sNamespaces; 
             private Method method; 
             private String path; 
 
             /**
-             * The IDs of applications.
+             * <p>The IDs of applications.</p>
              */
-            public Builder appIds(java.util.List < String > appIds) {
+            public Builder appIds(java.util.List<String> appIds) {
                 this.appIds = appIds;
                 return this;
             }
 
             /**
-             * The rule type. Valid values:
-             * <p>
+             * <p>The rule type. Valid values:</p>
+             * <ul>
+             * <li>0: by application</li>
+             * <li>1: by namespace</li>
+             * </ul>
              * 
-             * *   0: by application
-             * *   1: by namespace
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder authType(Integer authType) {
                 this.authType = authType;
@@ -403,7 +450,10 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the rule is a blacklist rule.
+             * <p>Indicates whether the rule is a blacklist rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder black(Boolean black) {
                 this.black = black;
@@ -411,15 +461,15 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The queried namespaces.
+             * <p>The queried namespaces.</p>
              */
-            public Builder k8sNamespaces(java.util.List < String > k8sNamespaces) {
+            public Builder k8sNamespaces(java.util.List<String> k8sNamespaces) {
                 this.k8sNamespaces = k8sNamespaces;
                 return this;
             }
 
             /**
-             * The request method.
+             * <p>The request method.</p>
              */
             public Builder method(Method method) {
                 this.method = method;
@@ -427,7 +477,10 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The service path.
+             * <p>The service path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/a</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -441,47 +494,53 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAuthPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAuthPolicyResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("AuthRule")
-        private java.util.List < AuthRule> authRule;
+        @com.aliyun.core.annotation.NameInMap("AuthRule")
+        private java.util.List<AuthRule> authRule;
 
-        @NameInMap("AuthType")
+        @com.aliyun.core.annotation.NameInMap("AuthType")
         private Integer authType;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
-        @NameInMap("K8sNamespace")
+        @com.aliyun.core.annotation.NameInMap("K8sNamespace")
         private String k8sNamespace;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NamespaceId")
+        @com.aliyun.core.annotation.NameInMap("NamespaceId")
         private String namespaceId;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private Result(Builder builder) {
@@ -533,7 +592,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         /**
          * @return authRule
          */
-        public java.util.List < AuthRule> getAuthRule() {
+        public java.util.List<AuthRule> getAuthRule() {
             return this.authRule;
         }
 
@@ -611,7 +670,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             private String accountId; 
             private String appId; 
             private String appName; 
-            private java.util.List < AuthRule> authRule; 
+            private java.util.List<AuthRule> authRule; 
             private Integer authType; 
             private Boolean enable; 
             private Integer id; 
@@ -624,7 +683,10 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * The ID of the Alibaba Cloud account to which the resource belongs.
+             * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>19039813784***</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -632,7 +694,10 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The application ID.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hkhon1po62@5f1b08becb*****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -640,7 +705,10 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The application name.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spring-cloud-a</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -648,19 +716,22 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the service authentication rule.
+             * <p>The content of the service authentication rule.</p>
              */
-            public Builder authRule(java.util.List < AuthRule> authRule) {
+            public Builder authRule(java.util.List<AuthRule> authRule) {
                 this.authRule = authRule;
                 return this;
             }
 
             /**
-             * The rule type. Valid values:
-             * <p>
+             * <p>The rule type. Valid values:</p>
+             * <ul>
+             * <li>0: by application</li>
+             * <li>1: by namespace</li>
+             * </ul>
              * 
-             * *   0: by application
-             * *   1: by namespace
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder authType(Integer authType) {
                 this.authType = authType;
@@ -668,11 +739,14 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the rule was enabled or disabled. Valid values:
-             * <p>
+             * <p>Indicates whether the rule was enabled or disabled. Valid values:</p>
+             * <ul>
+             * <li><code>true</code>: enabled</li>
+             * <li><code>false</code>: disabled</li>
+             * </ul>
              * 
-             * *   `true`: enabled
-             * *   `false`: disabled
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -680,7 +754,10 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The rule ID.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>204</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -688,7 +765,10 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c19c6c500e1ff4d7abc7bed9b8236***</p>
              */
             public Builder k8sNamespace(String k8sNamespace) {
                 this.k8sNamespace = k8sNamespace;
@@ -696,7 +776,10 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the authentication rule.
+             * <p>The name of the authentication rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -704,7 +787,10 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace ID.
+             * <p>The namespace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ced54a95-4e33-4bda-be7e-37e95868***</p>
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -712,12 +798,15 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol type. Valid values:
-             * <p>
+             * <p>The protocol type. Valid values:</p>
+             * <ul>
+             * <li><strong>SPRING_CLOUD</strong></li>
+             * <li><strong>DUBBO</strong></li>
+             * <li><strong>istio</strong></li>
+             * </ul>
              * 
-             * *   **SPRING_CLOUD**
-             * *   **DUBBO**
-             * *   **istio**
+             * <strong>example:</strong>
+             * <p>SPRING_CLOUD</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -725,7 +814,10 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -733,7 +825,10 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the application.
+             * <p>The source of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edasmsc</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -741,7 +836,10 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -755,17 +853,23 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAuthPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAuthPolicyResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Result")
-        private java.util.List < Result> result;
+        @com.aliyun.core.annotation.NameInMap("Result")
+        private java.util.List<Result> result;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Integer totalSize;
 
         private Data(Builder builder) {
@@ -800,7 +904,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.List < Result> getResult() {
+        public java.util.List<Result> getResult() {
             return this.result;
         }
 
@@ -814,11 +918,14 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageNumber; 
             private Integer pageSize; 
-            private java.util.List < Result> result; 
+            private java.util.List<Result> result; 
             private Integer totalSize; 
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -826,7 +933,10 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -834,15 +944,18 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The data returned.
+             * <p>The data returned.</p>
              */
-            public Builder result(java.util.List < Result> result) {
+            public Builder result(java.util.List<Result> result) {
                 this.result = result;
                 return this;
             }
 
             /**
-             * The total number of entries.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

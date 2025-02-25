@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,76 +11,76 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TableProfile</p>
  */
 public class TableProfile extends TeaModel {
-    @NameInMap("AccessNum")
+    @com.aliyun.core.annotation.NameInMap("AccessNum")
     private Long accessNum;
 
-    @NameInMap("AccessNumMonthly")
+    @com.aliyun.core.annotation.NameInMap("AccessNumMonthly")
     private Long accessNumMonthly;
 
-    @NameInMap("AccessNumWeekly")
+    @com.aliyun.core.annotation.NameInMap("AccessNumWeekly")
     private Long accessNumWeekly;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("DataSourceType")
+    @com.aliyun.core.annotation.NameInMap("DataSourceType")
     private String dataSourceType;
 
-    @NameInMap("DatabaseName")
+    @com.aliyun.core.annotation.NameInMap("DatabaseName")
     private String databaseName;
 
-    @NameInMap("FileCnt")
+    @com.aliyun.core.annotation.NameInMap("FileCnt")
     private Long fileCnt;
 
-    @NameInMap("FileSize")
+    @com.aliyun.core.annotation.NameInMap("FileSize")
     private Long fileSize;
 
-    @NameInMap("IsPartitioned")
+    @com.aliyun.core.annotation.NameInMap("IsPartitioned")
     private Boolean isPartitioned;
 
-    @NameInMap("LastAccessNumTime")
+    @com.aliyun.core.annotation.NameInMap("LastAccessNumTime")
     private String lastAccessNumTime;
 
-    @NameInMap("LastAccessTime")
+    @com.aliyun.core.annotation.NameInMap("LastAccessTime")
     private String lastAccessTime;
 
-    @NameInMap("LastDdlTime")
+    @com.aliyun.core.annotation.NameInMap("LastDdlTime")
     private String lastDdlTime;
 
-    @NameInMap("LastModifyTime")
+    @com.aliyun.core.annotation.NameInMap("LastModifyTime")
     private String lastModifyTime;
 
-    @NameInMap("LatestAccessNumDate")
+    @com.aliyun.core.annotation.NameInMap("LatestAccessNumDate")
     private String latestAccessNumDate;
 
-    @NameInMap("LatestDate")
+    @com.aliyun.core.annotation.NameInMap("LatestDate")
     private String latestDate;
 
-    @NameInMap("Location")
+    @com.aliyun.core.annotation.NameInMap("Location")
     private String location;
 
-    @NameInMap("ObjectAccessNum")
+    @com.aliyun.core.annotation.NameInMap("ObjectAccessNum")
     private Long objectAccessNum;
 
-    @NameInMap("ObjectAccessNumMonthly")
+    @com.aliyun.core.annotation.NameInMap("ObjectAccessNumMonthly")
     private Long objectAccessNumMonthly;
 
-    @NameInMap("ObjectAccessNumWeekly")
+    @com.aliyun.core.annotation.NameInMap("ObjectAccessNumWeekly")
     private Long objectAccessNumWeekly;
 
-    @NameInMap("ObjectCnt")
+    @com.aliyun.core.annotation.NameInMap("ObjectCnt")
     private Long objectCnt;
 
-    @NameInMap("ObjectSize")
+    @com.aliyun.core.annotation.NameInMap("ObjectSize")
     private Long objectSize;
 
-    @NameInMap("PartitionCnt")
+    @com.aliyun.core.annotation.NameInMap("PartitionCnt")
     private Long partitionCnt;
 
-    @NameInMap("RecordCnt")
+    @com.aliyun.core.annotation.NameInMap("RecordCnt")
     private Long recordCnt;
 
-    @NameInMap("TableName")
+    @com.aliyun.core.annotation.NameInMap("TableName")
     private String tableName;
 
     private TableProfile(Builder builder) {

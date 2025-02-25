@@ -1,40 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateCdnDeliverTaskRequest} extends {@link RequestModel}
  *
  * <p>UpdateCdnDeliverTaskRequest</p>
  */
 public class UpdateCdnDeliverTaskRequest extends Request {
-    @Body
-    @NameInMap("Deliver")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Deliver")
     private String deliver;
 
-    @Body
-    @NameInMap("DeliverId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeliverId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long deliverId;
 
-    @Body
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @Body
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Body
-    @NameInMap("Reports")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Reports")
     private String reports;
 
-    @Body
-    @NameInMap("Schedule")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Schedule")
     private String schedule;
 
     private UpdateCdnDeliverTaskRequest(Builder builder) {
@@ -125,7 +125,10 @@ public class UpdateCdnDeliverTaskRequest extends Request {
         } 
 
         /**
-         * The method that is used to send operations reports. Operations reports are sent to you only by email. The settings must be escaped in JSON.
+         * <p>The method that is used to send operations reports. Operations reports are sent to you only by email. The settings must be escaped in JSON.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;email\&quot;:{\&quot;subject\&quot;:\&quot;The email subject\&quot;,\&quot;to\&quot;:[\&quot;<a href="mailto:songmingyuan@alibaba-inc.com">songmingyuan@alibaba-inc.com</a>\&quot;,\&quot;<a href="mailto:songmingyuan@alibaba-inc.com">songmingyuan@alibaba-inc.com</a>\&quot;]}}&quot;</p>
          */
         public Builder deliver(String deliver) {
             this.putBodyParameter("Deliver", deliver);
@@ -134,7 +137,11 @@ public class UpdateCdnDeliverTaskRequest extends Request {
         }
 
         /**
-         * The ID of the tracking task that you want to update.
+         * <p>The ID of the tracking task that you want to update.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder deliverId(Long deliverId) {
             this.putBodyParameter("DeliverId", deliverId);
@@ -143,7 +150,10 @@ public class UpdateCdnDeliverTaskRequest extends Request {
         }
 
         /**
-         * The domain name that you want to track. You can specify up to 500 domain names in each request. Separate multiple domain names with commas (,). If you do not specify a domain name, the task collects data from all domain names that belong to your Alibaba Cloud account.
+         * <p>The domain name that you want to track. You can specify up to 500 domain names in each request. Separate multiple domain names with commas (,). If you do not specify a domain name, the task collects data from all domain names that belong to your Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder domainName(String domainName) {
             this.putBodyParameter("DomainName", domainName);
@@ -152,7 +162,10 @@ public class UpdateCdnDeliverTaskRequest extends Request {
         }
 
         /**
-         * The name of the tracking task.
+         * <p>The name of the tracking task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Domain name report</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -161,7 +174,10 @@ public class UpdateCdnDeliverTaskRequest extends Request {
         }
 
         /**
-         * The operations reports that are tracked by the task. The data must be escaped in JSON.
+         * <p>The operations reports that are tracked by the task. The data must be escaped in JSON.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;reportId\&quot;:1,\&quot;conditions\&quot;:[{\&quot;field\&quot;:\&quot;prov\&quot;,\&quot;op\&quot;:\&quot;in\&quot;,\&quot;value\&quot;:[\&quot;Heilongjiang\&quot;,\&quot;Beijing\&quot;]}]}]</p>
          */
         public Builder reports(String reports) {
             this.putBodyParameter("Reports", reports);
@@ -170,7 +186,10 @@ public class UpdateCdnDeliverTaskRequest extends Request {
         }
 
         /**
-         * The parameters that specify the time interval at which the tracking task sends operations reports. The settings must be escaped in JSON.
+         * <p>The parameters that specify the time interval at which the tracking task sends operations reports. The settings must be escaped in JSON.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;{\&quot;schedName\&quot;:\&quot;The name of the tracking task\&quot;,\&quot;description\&quot;:\&quot;The description\&quot;,\&quot;crontab\&quot;:\&quot;000**?\&quot;,\&quot;frequency\&quot;:\&quot;d\&quot;,\&quot;status\&quot;:\&quot;enable\&quot;,\&quot;effectiveFrom\&quot;:\&quot;2020-09-17T00:00:00Z\&quot;,\&quot;effectiveEnd\&quot;:\&quot;2020-11-17T00:00:00Z\&quot;}&quot;</p>
          */
         public Builder schedule(String schedule) {
             this.putBodyParameter("Schedule", schedule);

@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeContainerLogResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeContainerLogResponseBody</p>
  */
 public class DescribeContainerLogResponseBody extends TeaModel {
-    @NameInMap("ContainerName")
+    @com.aliyun.core.annotation.NameInMap("ContainerName")
     private String containerName;
 
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private String content;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeContainerLogResponseBody(Builder builder) {
@@ -62,7 +62,10 @@ public class DescribeContainerLogResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The container name.
+         * <p>The container name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nginx</p>
          */
         public Builder containerName(String containerName) {
             this.containerName = containerName;
@@ -70,7 +73,10 @@ public class DescribeContainerLogResponseBody extends TeaModel {
         }
 
         /**
-         * The content of the log.
+         * <p>The content of the log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -78,7 +84,10 @@ public class DescribeContainerLogResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CA850ADA-<strong><strong>-4AC8-</strong></strong>-5B5990EAB7D0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

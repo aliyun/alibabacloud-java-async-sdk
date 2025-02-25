@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResendEmailVerificationResponseBody} extends {@link TeaModel}
  *
  * <p>ResendEmailVerificationResponseBody</p>
  */
 public class ResendEmailVerificationResponseBody extends TeaModel {
-    @NameInMap("FailList")
+    @com.aliyun.core.annotation.NameInMap("FailList")
     private java.util.List < FailList> failList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SuccessList")
+    @com.aliyun.core.annotation.NameInMap("SuccessList")
     private java.util.List < SuccessList> successList;
 
     private ResendEmailVerificationResponseBody(Builder builder) {
@@ -91,14 +91,20 @@ public class ResendEmailVerificationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ResendEmailVerificationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ResendEmailVerificationResponseBody</p>
+     */
     public static class FailList extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
         private FailList(Builder builder) {
@@ -172,14 +178,20 @@ public class ResendEmailVerificationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ResendEmailVerificationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ResendEmailVerificationResponseBody</p>
+     */
     public static class SuccessList extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
         private SuccessList(Builder builder) {

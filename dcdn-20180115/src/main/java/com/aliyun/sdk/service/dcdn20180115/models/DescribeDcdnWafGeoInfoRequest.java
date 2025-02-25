@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnWafGeoInfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnWafGeoInfoRequest</p>
  */
 public class DescribeDcdnWafGeoInfoRequest extends Request {
-    @Query
-    @NameInMap("Language")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Language")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String language;
 
     private DescribeDcdnWafGeoInfoRequest(Builder builder) {
@@ -55,11 +55,15 @@ public class DescribeDcdnWafGeoInfoRequest extends Request {
         } 
 
         /**
-         * The language of the information to return. Valid values:
-         * <p>
+         * <p>The language of the information to return. Valid values:</p>
+         * <ul>
+         * <li>cn: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   cn: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>cn</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);

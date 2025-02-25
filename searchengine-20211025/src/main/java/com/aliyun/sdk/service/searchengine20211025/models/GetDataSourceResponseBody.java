@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataSourceResponseBody} extends {@link TeaModel}
  *
  * <p>GetDataSourceResponseBody</p>
  */
 public class GetDataSourceResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
     private GetDataSourceResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class GetDataSourceResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE03180A-0E29-5474-8A86-33F0683294A4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class GetDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the data source.
+         * <p>The information about the data source.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -71,23 +79,29 @@ public class GetDataSourceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDataSourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataSourceResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("domain")
+        @com.aliyun.core.annotation.NameInMap("domain")
         private String domain;
 
-        @NameInMap("indexes")
-        private java.util.List < String > indexes;
+        @com.aliyun.core.annotation.NameInMap("indexes")
+        private java.util.List<String> indexes;
 
-        @NameInMap("lastFulTime")
+        @com.aliyun.core.annotation.NameInMap("lastFulTime")
         private Long lastFulTime;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Result(Builder builder) {
@@ -117,7 +131,7 @@ public class GetDataSourceResponseBody extends TeaModel {
         /**
          * @return indexes
          */
-        public java.util.List < String > getIndexes() {
+        public java.util.List<String> getIndexes() {
             return this.indexes;
         }
 
@@ -151,14 +165,17 @@ public class GetDataSourceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String domain; 
-            private java.util.List < String > indexes; 
+            private java.util.List<String> indexes; 
             private Long lastFulTime; 
             private String name; 
             private String status; 
             private String type; 
 
             /**
-             * domain.
+             * <p>The data center where the data source is deployed in offline mode</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc_hz_domain_1</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -166,15 +183,18 @@ public class GetDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * indexes.
+             * <p>The list of index information</p>
              */
-            public Builder indexes(java.util.List < String > indexes) {
+            public Builder indexes(java.util.List<String> indexes) {
                 this.indexes = indexes;
                 return this;
             }
 
             /**
-             * lastFulTime.
+             * <p>The time when the full data of the data source was last queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1718787219</p>
              */
             public Builder lastFulTime(Long lastFulTime) {
                 this.lastFulTime = lastFulTime;
@@ -182,7 +202,10 @@ public class GetDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my_index</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -190,7 +213,10 @@ public class GetDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The status of the data source. Valid values: new: The data source is being created. publish: The data source is in the normal state. trash: The data source is being deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NEW</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -198,7 +224,10 @@ public class GetDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the data source.
+             * <p>The type of the data source</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps</p>
              */
             public Builder type(String type) {
                 this.type = type;

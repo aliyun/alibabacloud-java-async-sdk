@@ -1,94 +1,108 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackupPolicyResponseBody</p>
  */
 public class DescribeBackupPolicyResponseBody extends TeaModel {
-    @NameInMap("ArchiveBackupKeepCount")
+    @com.aliyun.core.annotation.NameInMap("ArchiveBackupKeepCount")
     private String archiveBackupKeepCount;
 
-    @NameInMap("ArchiveBackupKeepPolicy")
+    @com.aliyun.core.annotation.NameInMap("ArchiveBackupKeepPolicy")
     private String archiveBackupKeepPolicy;
 
-    @NameInMap("ArchiveBackupRetentionPeriod")
+    @com.aliyun.core.annotation.NameInMap("ArchiveBackupRetentionPeriod")
     private String archiveBackupRetentionPeriod;
 
-    @NameInMap("BackupInterval")
+    @com.aliyun.core.annotation.NameInMap("BackupInterval")
     private String backupInterval;
 
-    @NameInMap("BackupLog")
+    @com.aliyun.core.annotation.NameInMap("BackupLog")
     private String backupLog;
 
-    @NameInMap("BackupMethod")
+    @com.aliyun.core.annotation.NameInMap("BackupMethod")
     private String backupMethod;
 
-    @NameInMap("BackupPriority")
+    @com.aliyun.core.annotation.NameInMap("BackupPriority")
     private Integer backupPriority;
 
-    @NameInMap("BackupRetentionPeriod")
+    @com.aliyun.core.annotation.NameInMap("BackupRetentionPeriod")
     private Integer backupRetentionPeriod;
 
-    @NameInMap("Category")
+    @com.aliyun.core.annotation.NameInMap("Category")
     private String category;
 
-    @NameInMap("CompressType")
+    @com.aliyun.core.annotation.NameInMap("CompressType")
     private String compressType;
 
-    @NameInMap("EnableBackupLog")
+    @com.aliyun.core.annotation.NameInMap("EnableBackupLog")
     private String enableBackupLog;
 
-    @NameInMap("EnableIncrementDataBackup")
+    @com.aliyun.core.annotation.NameInMap("EnableIncrementDataBackup")
     private Boolean enableIncrementDataBackup;
 
-    @NameInMap("HighSpaceUsageProtection")
+    @com.aliyun.core.annotation.NameInMap("EnablePitrProtection")
+    private Boolean enablePitrProtection;
+
+    @com.aliyun.core.annotation.NameInMap("HighSpaceUsageProtection")
     private String highSpaceUsageProtection;
 
-    @NameInMap("LocalLogRetentionHours")
+    @com.aliyun.core.annotation.NameInMap("LocalLogRetentionHours")
     private Integer localLogRetentionHours;
 
-    @NameInMap("LocalLogRetentionSpace")
+    @com.aliyun.core.annotation.NameInMap("LocalLogRetentionSpace")
     private String localLogRetentionSpace;
 
-    @NameInMap("LogBackupFrequency")
+    @com.aliyun.core.annotation.NameInMap("LogBackupFrequency")
     private String logBackupFrequency;
 
-    @NameInMap("LogBackupLocalRetentionNumber")
+    @com.aliyun.core.annotation.NameInMap("LogBackupLocalRetentionNumber")
     private Integer logBackupLocalRetentionNumber;
 
-    @NameInMap("LogBackupRetentionPeriod")
+    @com.aliyun.core.annotation.NameInMap("LogBackupRetentionPeriod")
     private Integer logBackupRetentionPeriod;
 
-    @NameInMap("PreferredBackupPeriod")
+    @com.aliyun.core.annotation.NameInMap("PitrRetentionPeriod")
+    private Integer pitrRetentionPeriod;
+
+    @com.aliyun.core.annotation.NameInMap("PreferredBackupPeriod")
     private String preferredBackupPeriod;
 
-    @NameInMap("PreferredBackupTime")
+    @com.aliyun.core.annotation.NameInMap("PreferredBackupTime")
     private String preferredBackupTime;
 
-    @NameInMap("PreferredNextBackupTime")
+    @com.aliyun.core.annotation.NameInMap("PreferredNextBackupTime")
     private String preferredNextBackupTime;
 
-    @NameInMap("ReleasedKeepPolicy")
+    @com.aliyun.core.annotation.NameInMap("ReleasedKeepPolicy")
     private String releasedKeepPolicy;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SupportModifyBackupPriority")
+    @com.aliyun.core.annotation.NameInMap("SupportModifyBackupPriority")
     private Boolean supportModifyBackupPriority;
 
-    @NameInMap("SupportReleasedKeep")
+    @com.aliyun.core.annotation.NameInMap("SupportReleasedKeep")
     private Integer supportReleasedKeep;
 
-    @NameInMap("SupportVolumeShadowCopy")
+    @com.aliyun.core.annotation.NameInMap("SupportVolumeShadowCopy")
     private Integer supportVolumeShadowCopy;
+
+    @com.aliyun.core.annotation.NameInMap("SupportsHighFrequencyBackup")
+    private Long supportsHighFrequencyBackup;
 
     private DescribeBackupPolicyResponseBody(Builder builder) {
         this.archiveBackupKeepCount = builder.archiveBackupKeepCount;
@@ -103,12 +117,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         this.compressType = builder.compressType;
         this.enableBackupLog = builder.enableBackupLog;
         this.enableIncrementDataBackup = builder.enableIncrementDataBackup;
+        this.enablePitrProtection = builder.enablePitrProtection;
         this.highSpaceUsageProtection = builder.highSpaceUsageProtection;
         this.localLogRetentionHours = builder.localLogRetentionHours;
         this.localLogRetentionSpace = builder.localLogRetentionSpace;
         this.logBackupFrequency = builder.logBackupFrequency;
         this.logBackupLocalRetentionNumber = builder.logBackupLocalRetentionNumber;
         this.logBackupRetentionPeriod = builder.logBackupRetentionPeriod;
+        this.pitrRetentionPeriod = builder.pitrRetentionPeriod;
         this.preferredBackupPeriod = builder.preferredBackupPeriod;
         this.preferredBackupTime = builder.preferredBackupTime;
         this.preferredNextBackupTime = builder.preferredNextBackupTime;
@@ -117,6 +133,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         this.supportModifyBackupPriority = builder.supportModifyBackupPriority;
         this.supportReleasedKeep = builder.supportReleasedKeep;
         this.supportVolumeShadowCopy = builder.supportVolumeShadowCopy;
+        this.supportsHighFrequencyBackup = builder.supportsHighFrequencyBackup;
     }
 
     public static Builder builder() {
@@ -212,6 +229,13 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     }
 
     /**
+     * @return enablePitrProtection
+     */
+    public Boolean getEnablePitrProtection() {
+        return this.enablePitrProtection;
+    }
+
+    /**
      * @return highSpaceUsageProtection
      */
     public String getHighSpaceUsageProtection() {
@@ -251,6 +275,13 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
      */
     public Integer getLogBackupRetentionPeriod() {
         return this.logBackupRetentionPeriod;
+    }
+
+    /**
+     * @return pitrRetentionPeriod
+     */
+    public Integer getPitrRetentionPeriod() {
+        return this.pitrRetentionPeriod;
     }
 
     /**
@@ -309,6 +340,13 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         return this.supportVolumeShadowCopy;
     }
 
+    /**
+     * @return supportsHighFrequencyBackup
+     */
+    public Long getSupportsHighFrequencyBackup() {
+        return this.supportsHighFrequencyBackup;
+    }
+
     public static final class Builder {
         private String archiveBackupKeepCount; 
         private String archiveBackupKeepPolicy; 
@@ -322,12 +360,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         private String compressType; 
         private String enableBackupLog; 
         private Boolean enableIncrementDataBackup; 
+        private Boolean enablePitrProtection; 
         private String highSpaceUsageProtection; 
         private Integer localLogRetentionHours; 
         private String localLogRetentionSpace; 
         private String logBackupFrequency; 
         private Integer logBackupLocalRetentionNumber; 
         private Integer logBackupRetentionPeriod; 
+        private Integer pitrRetentionPeriod; 
         private String preferredBackupPeriod; 
         private String preferredBackupTime; 
         private String preferredNextBackupTime; 
@@ -336,9 +376,13 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         private Boolean supportModifyBackupPriority; 
         private Integer supportReleasedKeep; 
         private Integer supportVolumeShadowCopy; 
+        private Long supportsHighFrequencyBackup; 
 
         /**
-         * The number of archived backup files that are retained.
+         * <p>The number of archived backup files that are retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder archiveBackupKeepCount(String archiveBackupKeepCount) {
             this.archiveBackupKeepCount = archiveBackupKeepCount;
@@ -346,7 +390,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The cycle based on which archived backup files are retained.
+         * <p>The cycle based on which archived backup files are retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ByMonth</p>
          */
         public Builder archiveBackupKeepPolicy(String archiveBackupKeepPolicy) {
             this.archiveBackupKeepPolicy = archiveBackupKeepPolicy;
@@ -354,7 +401,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The number of days for which archived backup files are retained.
+         * <p>The number of days for which archived backup files are retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>365</p>
          */
         public Builder archiveBackupRetentionPeriod(String archiveBackupRetentionPeriod) {
             this.archiveBackupRetentionPeriod = archiveBackupRetentionPeriod;
@@ -362,11 +412,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The backup interval. Unit: minutes.
-         * <p>
+         * <p>The backup interval. Unit: minutes.</p>
+         * <ul>
+         * <li>If the instance runs MySQL, the interval is the same as the value of the Snapshot Backup Start Time parameter rather than the Snapshot Backup Period parameter in the ApsaraDB RDS console. For more information, see <a href="https://help.aliyun.com/document_detail/98818.html">Back up an ApsaraDB RDS for MySQL instance</a>.</li>
+         * <li>If the instance runs SQL Server, the interval is the same as the log backup frequency.</li>
+         * </ul>
          * 
-         * *   If the instance runs MySQL, the interval is the same as the value of the Snapshot Backup Start Time parameter rather than the Snapshot Backup Period parameter in the ApsaraDB RDS console. For more information, see [Back up an ApsaraDB RDS for MySQL instance](~~98818~~).
-         * *   If the instance runs SQL Server, the interval is the same as the log backup frequency.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder backupInterval(String backupInterval) {
             this.backupInterval = backupInterval;
@@ -374,11 +427,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the log backup feature is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether the log backup feature is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>Enable</strong></li>
+         * <li><strong>Disabled</strong></li>
+         * </ul>
          * 
-         * *   **Enable**
-         * *   **Disabled**
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         public Builder backupLog(String backupLog) {
             this.backupLog = backupLog;
@@ -386,13 +442,17 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The backup method of the instance. Valid values:
-         * <p>
+         * <p>The backup method of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Physical</strong>: physical backup</li>
+         * <li><strong>Snapshot</strong>: snapshot backup</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is returned only when the instance runs SQL Server and uses cloud disks.</p>
+         * </blockquote>
          * 
-         * *   **Physical**: physical backup
-         * *   **Snapshot**: snapshot backup
-         * 
-         * > This parameter is returned only when the instance runs SQL Server and uses cloud disks.
+         * <strong>example:</strong>
+         * <p>Physical</p>
          */
         public Builder backupMethod(String backupMethod) {
             this.backupMethod = backupMethod;
@@ -400,13 +460,17 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The backup settings of the secondary instance. Valid values:
-         * <p>
+         * <p>The backup settings of the secondary instance. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Secondary instance preferred</li>
+         * <li><strong>2</strong>: Primary instance preferred</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is available only for instances that run SQL Server on RDS Cluster Edition. This parameter is returned only when SupportModifyBackupPriority is set to True.</p>
+         * </blockquote>
          * 
-         * *   **1**: Secondary instance preferred
-         * *   **2**: Primary instance preferred
-         * 
-         * >  This parameter is available only for instances that run SQL Server on RDS Cluster Edition. This parameter is returned only when SupportModifyBackupPriority is set to True.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder backupPriority(Integer backupPriority) {
             this.backupPriority = backupPriority;
@@ -414,7 +478,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The number of days for which data backup files are retained.
+         * <p>The number of days for which data backup files are retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder backupRetentionPeriod(Integer backupRetentionPeriod) {
             this.backupRetentionPeriod = backupRetentionPeriod;
@@ -422,13 +489,17 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether to enable the single-digit second backup feature. This feature allows ApsaraDB RDS to complete a backup within single-digit seconds. Valid values:
-         * <p>
+         * <p>Indicates whether to enable the single-digit second backup feature. This feature allows ApsaraDB RDS to complete a backup within single-digit seconds. Valid values:</p>
+         * <ul>
+         * <li><strong>Flash</strong>: The single-digit second backup feature is enabled.</li>
+         * <li><strong>Standard</strong>: The single-digit second backup feature is disabled.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter takes effect only when you set the <strong>BackupPolicyMode</strong> parameter to <strong>DataBackupPolicy</strong>.</p>
+         * </blockquote>
          * 
-         * *   **Flash**: The single-digit second backup feature is enabled.
-         * *   **Standard**: The single-digit second backup feature is disabled.
-         * 
-         * > This parameter takes effect only when you set the **BackupPolicyMode** parameter to **DataBackupPolicy**.
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         public Builder category(String category) {
             this.category = category;
@@ -436,14 +507,17 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The method that is used to compress backup data. Valid values:
-         * <p>
+         * <p>The method that is used to compress backup data. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Backup data is not compressed.</li>
+         * <li><strong>1</strong>: Backup data is compressed by using zlib.</li>
+         * <li><strong>2</strong>: Backup data is compressed by using zlib that invokes more than one thread in parallel for each backup.</li>
+         * <li><strong>4</strong>: Backup data is compressed by using QuickLZ and can be used to restore individual databases or tables.</li>
+         * <li><strong>8</strong>: Backup data is compressed by using QuickLZ but cannot be used to restore individual databases or tables.</li>
+         * </ul>
          * 
-         * *   **0**: Backup data is not compressed.
-         * *   **1**: Backup data is compressed by using zlib.
-         * *   **2**: Backup data is compressed by using zlib that invokes more than one thread in parallel for each backup.
-         * *   **4**: Backup data is compressed by using QuickLZ and can be used to restore individual databases and tables.
-         * *   **8**: Backup data is compressed by using QuickLZ but cannot be used to restore individual databases or tables. This value is available only when the instance runs MySQL 8.0.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder compressType(String compressType) {
             this.compressType = compressType;
@@ -451,11 +525,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the log backup feature is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether the log backup feature is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: enabled</li>
+         * <li><strong>0</strong>: disabled</li>
+         * </ul>
          * 
-         * *   **1**: The log backup feature is enabled.
-         * *   **0**: The log backup feature is disabled.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder enableBackupLog(String enableBackupLog) {
             this.enableBackupLog = enableBackupLog;
@@ -463,11 +540,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether incremental backup is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether incremental backup is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>True</strong>: Incremental backup is enabled.</li>
+         * <li><strong>False</strong>: Incremental backup is disabled.</li>
+         * </ul>
          * 
-         * *   **True**: Incremental backup is enabled.
-         * *   **False**: Incremental backup is disabled.
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder enableIncrementDataBackup(Boolean enableIncrementDataBackup) {
             this.enableIncrementDataBackup = enableIncrementDataBackup;
@@ -475,11 +555,32 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the log backup deletion feature is enabled. If the disk usage exceeds 80% or the remaining disk space is less than 5 GB on the instance, this feature deletes binary log files. Valid values:
-         * <p>
+         * <p>Indicates whether the point-in-time restoration (PITR) feature is enabled. The PITR feature is an enhancement of the log backup feature. Valid values:</p>
+         * <ul>
+         * <li><strong>True</strong></li>
+         * <li><strong>False</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is returned only when the instance runs MySQL. For more information, see <a href="https://help.aliyun.com/document_detail/2666046.html">Configure the PITR feature</a>.</p>
+         * </blockquote>
          * 
-         * *   **Disable**
-         * *   **Enable**
+         * <strong>example:</strong>
+         * <p>True</p>
+         */
+        public Builder enablePitrProtection(Boolean enablePitrProtection) {
+            this.enablePitrProtection = enablePitrProtection;
+            return this;
+        }
+
+        /**
+         * <p>Indicates whether the log backup deletion feature is enabled. If the disk usage exceeds 80% or the remaining disk space is less than 5 GB on the instance, this feature deletes binary log files. Valid values:</p>
+         * <ul>
+         * <li><strong>Disable</strong></li>
+         * <li><strong>Enable</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         public Builder highSpaceUsageProtection(String highSpaceUsageProtection) {
             this.highSpaceUsageProtection = highSpaceUsageProtection;
@@ -487,7 +588,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The number of hours for which log backup files are retained on the instance.
+         * <p>The number of hours for which log backup files are retained on the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder localLogRetentionHours(Integer localLogRetentionHours) {
             this.localLogRetentionHours = localLogRetentionHours;
@@ -495,7 +599,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum storage usage that is allowed for log files on the instance.
+         * <p>The maximum storage usage that is allowed for log files on the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder localLogRetentionSpace(String localLogRetentionSpace) {
             this.localLogRetentionSpace = localLogRetentionSpace;
@@ -503,13 +610,17 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The backup frequency of logs. Valid values:
-         * <p>
+         * <p>The backup frequency of logs. Valid values:</p>
+         * <ul>
+         * <li><strong>LogInterval</strong>: Log backups are performed every 30 minutes.</li>
+         * <li>Default value: same as the value of the <strong>PreferredBackupPeriod</strong> parameter.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is returned only when the instance runs SQL Server.</p>
+         * </blockquote>
          * 
-         * *   **LogInterval**: Log backups are performed every 30 minutes.
-         * *   Default value: same as the value of the **PreferredBackupPeriod** parameter.
-         * 
-         * > The **LogBackupFrequency** parameter is supported only when the instance runs **SQL Server**.
+         * <strong>example:</strong>
+         * <p>LogInterval</p>
          */
         public Builder logBackupFrequency(String logBackupFrequency) {
             this.logBackupFrequency = logBackupFrequency;
@@ -517,7 +628,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The number of binary log files that you want to retain on the instance.
+         * <p>The number of binary log files that you want to retain on the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder logBackupLocalRetentionNumber(Integer logBackupLocalRetentionNumber) {
             this.logBackupLocalRetentionNumber = logBackupLocalRetentionNumber;
@@ -525,7 +639,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The number of days for which log backup files are retained.
+         * <p>The number of days for which log backup files are retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder logBackupRetentionPeriod(Integer logBackupRetentionPeriod) {
             this.logBackupRetentionPeriod = logBackupRetentionPeriod;
@@ -533,16 +650,30 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The cycle based on which you want to perform a backup. Separate multiple values with commas (,). Valid values:
-         * <p>
+         * <p>The number of days during which you can restore data of the instance to any point in time.</p>
          * 
-         * *   **Monday**
-         * *   **Tuesday**
-         * *   **Wednesday**
-         * *   **Thursday**
-         * *   **Friday**
-         * *   **Saturday**
-         * *   **Sunday**
+         * <strong>example:</strong>
+         * <p>7</p>
+         */
+        public Builder pitrRetentionPeriod(Integer pitrRetentionPeriod) {
+            this.pitrRetentionPeriod = pitrRetentionPeriod;
+            return this;
+        }
+
+        /**
+         * <p>The cycle based on which you want to perform a backup. Separate multiple values with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>Monday</strong></li>
+         * <li><strong>Tuesday</strong></li>
+         * <li><strong>Wednesday</strong></li>
+         * <li><strong>Thursday</strong></li>
+         * <li><strong>Friday</strong></li>
+         * <li><strong>Saturday</strong></li>
+         * <li><strong>Sunday</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Monday,Wednesday,Friday,Sunday</p>
          */
         public Builder preferredBackupPeriod(String preferredBackupPeriod) {
             this.preferredBackupPeriod = preferredBackupPeriod;
@@ -550,7 +681,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The time when a data backup is performed. The time follows the ISO 8601 standard in the *HH:mm*Z-*HH:mm*Z format. The time is displayed in UTC.
+         * <p>The time when a data backup is performed. The time follows the ISO 8601 standard in the <em>HH:mm</em>Z-<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15:00Z-16:00Z</p>
          */
         public Builder preferredBackupTime(String preferredBackupTime) {
             this.preferredBackupTime = preferredBackupTime;
@@ -558,7 +692,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the next backup is performed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
+         * <p>The time when the next backup is performed. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-01-19T15:15Z</p>
          */
         public Builder preferredNextBackupTime(String preferredNextBackupTime) {
             this.preferredNextBackupTime = preferredNextBackupTime;
@@ -566,12 +703,15 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The policy that is used to retain archived backup files if the instance is released. Valid values:
-         * <p>
+         * <p>The policy that is used to retain archived backup files if the instance is released. Valid values:</p>
+         * <ul>
+         * <li><strong>None</strong>: No archived backup files are retained.</li>
+         * <li><strong>Lastest</strong>: Only the last archived backup file is retained.</li>
+         * <li><strong>All</strong>: All archived backup files are retained.</li>
+         * </ul>
          * 
-         * *   **None**: No archived backup files are retained.
-         * *   **Lastest**: Only the last archived backup file is retained.
-         * *   **All**: All archived backup files are retained.
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder releasedKeepPolicy(String releasedKeepPolicy) {
             this.releasedKeepPolicy = releasedKeepPolicy;
@@ -579,7 +719,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B87E2AB3-B7C9-4394-9160-7F639F732031</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -587,11 +730,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the backup settings of a secondary instance can be modified. Valid values:
-         * <p>
+         * <p>Indicates whether the backup settings of a secondary instance can be modified. Valid values:</p>
+         * <ul>
+         * <li><strong>True</strong></li>
+         * <li><strong>False</strong></li>
+         * </ul>
          * 
-         * *   **True**
-         * *   **False**
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder supportModifyBackupPriority(Boolean supportModifyBackupPriority) {
             this.supportModifyBackupPriority = supportModifyBackupPriority;
@@ -599,7 +745,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * A reserved parameter.
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder supportReleasedKeep(Integer supportReleasedKeep) {
             this.supportReleasedKeep = supportReleasedKeep;
@@ -607,16 +756,35 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the instance supports snapshot backups. Valid values:
-         * <p>
+         * <p>Indicates whether the instance supports snapshot backups. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: The instance supports snapshot backups.</li>
+         * <li><strong>0</strong>: The instance does not support snapshot backups.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is returned only when the instance runs SQL Server.</p>
+         * </blockquote>
          * 
-         * *   **1**: The instance supports snapshot backups.
-         * *   **0**: The instance does not support snapshot backups.
-         * 
-         * > This parameter is returned only when the instance runs SQL Server.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder supportVolumeShadowCopy(Integer supportVolumeShadowCopy) {
             this.supportVolumeShadowCopy = supportVolumeShadowCopy;
+            return this;
+        }
+
+        /**
+         * <p>Indicates whether log backups for SQL Server are performed verery five minutes.</p>
+         * <ul>
+         * <li>0: No</li>
+         * <li>1: Yes</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        public Builder supportsHighFrequencyBackup(Long supportsHighFrequencyBackup) {
+            this.supportsHighFrequencyBackup = supportsHighFrequencyBackup;
             return this;
         }
 

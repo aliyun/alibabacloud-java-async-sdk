@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeResubmitConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeResubmitConfigResponseBody</p>
  */
 public class DescribeResubmitConfigResponseBody extends TeaModel {
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Rules")
+    @com.aliyun.core.annotation.NameInMap("Rules")
     private java.util.List < Rules> rules;
 
     private DescribeResubmitConfigResponseBody(Builder builder) {
@@ -62,7 +62,13 @@ public class DescribeResubmitConfigResponseBody extends TeaModel {
         private java.util.List < Rules> rules; 
 
         /**
-         * DBClusterId.
+         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition clusters within a region.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>am-8vbyw9awuj141haf9</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -70,7 +76,10 @@ public class DescribeResubmitConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8D217417-BBA7-566C-9B9D-FFCBC86112B0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +87,7 @@ public class DescribeResubmitConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Rules.
+         * <p>The job resubmission rules.</p>
          */
         public Builder rules(java.util.List < Rules> rules) {
             this.rules = rules;
@@ -91,20 +100,26 @@ public class DescribeResubmitConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeResubmitConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResubmitConfigResponseBody</p>
+     */
     public static class Rules extends TeaModel {
-        @NameInMap("ExceedMemoryException")
+        @com.aliyun.core.annotation.NameInMap("ExceedMemoryException")
         private Boolean exceedMemoryException;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("PeakMemory")
+        @com.aliyun.core.annotation.NameInMap("PeakMemory")
         private String peakMemory;
 
-        @NameInMap("QueryTime")
+        @com.aliyun.core.annotation.NameInMap("QueryTime")
         private String queryTime;
 
-        @NameInMap("TargetGroupName")
+        @com.aliyun.core.annotation.NameInMap("TargetGroupName")
         private String targetGroupName;
 
         private Rules(Builder builder) {
@@ -166,7 +181,10 @@ public class DescribeResubmitConfigResponseBody extends TeaModel {
             private String targetGroupName; 
 
             /**
-             * ExceedMemoryException.
+             * <p>Indicates whether out-of-memory (OOM) check is configured.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder exceedMemoryException(Boolean exceedMemoryException) {
                 this.exceedMemoryException = exceedMemoryException;
@@ -174,7 +192,10 @@ public class DescribeResubmitConfigResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>The name of the source resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_group</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -182,7 +203,10 @@ public class DescribeResubmitConfigResponseBody extends TeaModel {
             }
 
             /**
-             * PeakMemory.
+             * <p>The peak memory usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder peakMemory(String peakMemory) {
                 this.peakMemory = peakMemory;
@@ -190,7 +214,10 @@ public class DescribeResubmitConfigResponseBody extends TeaModel {
             }
 
             /**
-             * QueryTime.
+             * <p>The duration of the SQL statement. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder queryTime(String queryTime) {
                 this.queryTime = queryTime;
@@ -198,7 +225,10 @@ public class DescribeResubmitConfigResponseBody extends TeaModel {
             }
 
             /**
-             * TargetGroupName.
+             * <p>The name of the destination resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_target_group</p>
              */
             public Builder targetGroupName(String targetGroupName) {
                 this.targetGroupName = targetGroupName;

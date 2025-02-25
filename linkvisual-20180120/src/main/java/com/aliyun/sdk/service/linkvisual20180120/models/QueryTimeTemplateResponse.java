@@ -13,16 +13,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class QueryTimeTemplateResponse extends Response {
     @NameInMap("headers")
-    @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    private Integer statusCode;
+
     @NameInMap("body")
-    @Validation(required = true)
     private QueryTimeTemplateResponseBody body;
 
     private QueryTimeTemplateResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +45,13 @@ public class QueryTimeTemplateResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public QueryTimeTemplateResponseBody getBody() {
@@ -52,6 +61,8 @@ public class QueryTimeTemplateResponse extends Response {
     public interface Builder extends Response.Builder<QueryTimeTemplateResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(QueryTimeTemplateResponseBody body);
 
@@ -64,6 +75,7 @@ public class QueryTimeTemplateResponse extends Response {
             extends Response.BuilderImpl<QueryTimeTemplateResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private QueryTimeTemplateResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +85,7 @@ public class QueryTimeTemplateResponse extends Response {
         private BuilderImpl(QueryTimeTemplateResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +95,15 @@ public class QueryTimeTemplateResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

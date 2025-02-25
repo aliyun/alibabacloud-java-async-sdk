@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateProcCorrectOrderResponseBody} extends {@link TeaModel}
  *
  * <p>CreateProcCorrectOrderResponseBody</p>
  */
 public class CreateProcCorrectOrderResponseBody extends TeaModel {
-    @NameInMap("CreateOrderResult")
-    private java.util.List < Long > createOrderResult;
+    @com.aliyun.core.annotation.NameInMap("CreateOrderResult")
+    private java.util.List<Long> createOrderResult;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateProcCorrectOrderResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class CreateProcCorrectOrderResponseBody extends TeaModel {
     /**
      * @return createOrderResult
      */
-    public java.util.List < Long > getCreateOrderResult() {
+    public java.util.List<Long> getCreateOrderResult() {
         return this.createOrderResult;
     }
 
@@ -79,7 +84,7 @@ public class CreateProcCorrectOrderResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Long > createOrderResult; 
+        private java.util.List<Long> createOrderResult; 
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class CreateProcCorrectOrderResponseBody extends TeaModel {
         /**
          * CreateOrderResult.
          */
-        public Builder createOrderResult(java.util.List < Long > createOrderResult) {
+        public Builder createOrderResult(java.util.List<Long> createOrderResult) {
             this.createOrderResult = createOrderResult;
             return this;
         }

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryPromInstallStatusResponseBody} extends {@link TeaModel}
  *
  * <p>QueryPromInstallStatusResponseBody</p>
  */
 public class QueryPromInstallStatusResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryPromInstallStatusResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class QueryPromInstallStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned struct.
+         * <p>The returned struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class QueryPromInstallStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27E653FA-5958-45BE-8AA9-14D884DC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,8 +79,14 @@ public class QueryPromInstallStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryPromInstallStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryPromInstallStatusResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("isControllerInstalled")
+        @com.aliyun.core.annotation.NameInMap("isControllerInstalled")
         private Boolean isControllerInstalled;
 
         private Data(Builder builder) {
@@ -98,10 +112,11 @@ public class QueryPromInstallStatusResponseBody extends TeaModel {
             private Boolean isControllerInstalled; 
 
             /**
-             * Indicates whether the call was successful. Valid values:
-             * <p>
+             * <p>Indicates whether the call was successful. Valid values:</p>
+             * <p>true: The call was successful. false: The call fails.</p>
              * 
-             * true: The call was successful. false: The call fails.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isControllerInstalled(Boolean isControllerInstalled) {
                 this.isControllerInstalled = isControllerInstalled;

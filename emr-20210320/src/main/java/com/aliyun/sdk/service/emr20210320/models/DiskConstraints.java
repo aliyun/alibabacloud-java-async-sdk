@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DiskConstraints} extends {@link TeaModel}
  *
  * <p>DiskConstraints</p>
  */
 public class DiskConstraints extends TeaModel {
-    @NameInMap("Categories")
-    private java.util.List < String > categories;
+    @com.aliyun.core.annotation.NameInMap("Categories")
+    private java.util.List<String> categories;
 
-    @NameInMap("CountConstraint")
+    @com.aliyun.core.annotation.NameInMap("CountConstraint")
     private ValueConstraints countConstraint;
 
-    @NameInMap("SizeConstraint")
+    @com.aliyun.core.annotation.NameInMap("SizeConstraint")
     private ValueConstraints sizeConstraint;
 
     private DiskConstraints(Builder builder) {
@@ -38,7 +43,7 @@ public class DiskConstraints extends TeaModel {
     /**
      * @return categories
      */
-    public java.util.List < String > getCategories() {
+    public java.util.List<String> getCategories() {
         return this.categories;
     }
 
@@ -57,20 +62,23 @@ public class DiskConstraints extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > categories; 
+        private java.util.List<String> categories; 
         private ValueConstraints countConstraint; 
         private ValueConstraints sizeConstraint; 
 
         /**
-         * 支持的磁盘类型。
+         * <p>支持的磁盘类型。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;cloud_efficiency&quot;,&quot;cloud_ssd&quot;,&quot;cloud_essd&quot;,&quot;local_disk&quot;]</p>
          */
-        public Builder categories(java.util.List < String > categories) {
+        public Builder categories(java.util.List<String> categories) {
             this.categories = categories;
             return this;
         }
 
         /**
-         * 磁盘数量最小值。
+         * <p>磁盘数量最小值。</p>
          */
         public Builder countConstraint(ValueConstraints countConstraint) {
             this.countConstraint = countConstraint;
@@ -78,7 +86,7 @@ public class DiskConstraints extends TeaModel {
         }
 
         /**
-         * 磁盘容量限制。
+         * <p>磁盘容量限制。</p>
          */
         public Builder sizeConstraint(ValueConstraints sizeConstraint) {
             this.sizeConstraint = sizeConstraint;

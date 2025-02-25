@@ -103,13 +103,13 @@ public class CreateEventRecordPlanRequest extends Request {
             super();
         } 
 
-        private Builder(CreateEventRecordPlanRequest response) {
-            super(response);
-            this.eventTypes = response.eventTypes;
-            this.name = response.name;
-            this.preRecordDuration = response.preRecordDuration;
-            this.recordDuration = response.recordDuration;
-            this.templateId = response.templateId;
+        private Builder(CreateEventRecordPlanRequest request) {
+            super(request);
+            this.eventTypes = request.eventTypes;
+            this.name = request.name;
+            this.preRecordDuration = request.preRecordDuration;
+            this.recordDuration = request.recordDuration;
+            this.templateId = request.templateId;
         } 
 
         /**

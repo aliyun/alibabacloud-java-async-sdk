@@ -1,40 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CompleteCdsFileRequest} extends {@link RequestModel}
  *
  * <p>CompleteCdsFileRequest</p>
  */
 public class CompleteCdsFileRequest extends Request {
-    @Query
-    @NameInMap("CdsId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CdsId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cdsId;
 
-    @Query
-    @NameInMap("EndUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndUserId")
     private String endUserId;
 
-    @Query
-    @NameInMap("FileId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    private String groupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("UploadId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UploadId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String uploadId;
 
     private CompleteCdsFileRequest(Builder builder) {
@@ -42,6 +50,7 @@ public class CompleteCdsFileRequest extends Request {
         this.cdsId = builder.cdsId;
         this.endUserId = builder.endUserId;
         this.fileId = builder.fileId;
+        this.groupId = builder.groupId;
         this.regionId = builder.regionId;
         this.uploadId = builder.uploadId;
     }
@@ -81,6 +90,13 @@ public class CompleteCdsFileRequest extends Request {
     }
 
     /**
+     * @return groupId
+     */
+    public String getGroupId() {
+        return this.groupId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -98,6 +114,7 @@ public class CompleteCdsFileRequest extends Request {
         private String cdsId; 
         private String endUserId; 
         private String fileId; 
+        private String groupId; 
         private String regionId; 
         private String uploadId; 
 
@@ -110,12 +127,17 @@ public class CompleteCdsFileRequest extends Request {
             this.cdsId = request.cdsId;
             this.endUserId = request.endUserId;
             this.fileId = request.fileId;
+            this.groupId = request.groupId;
             this.regionId = request.regionId;
             this.uploadId = request.uploadId;
         } 
 
         /**
-         * The ID of the cloud disk.
+         * <p>The ID of the cloud disk.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai+cds-465878****</p>
          */
         public Builder cdsId(String cdsId) {
             this.putQueryParameter("CdsId", cdsId);
@@ -124,7 +146,10 @@ public class CompleteCdsFileRequest extends Request {
         }
 
         /**
-         * The name of the end user.
+         * <p>The name of the end user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test0</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -133,7 +158,11 @@ public class CompleteCdsFileRequest extends Request {
         }
 
         /**
-         * The file ID. An ID is the unique identifier of a file.
+         * <p>The file ID. An ID is the unique identifier of a file.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>635a316c94f40f35f5354da29b2aee88c9d1****</p>
          */
         public Builder fileId(String fileId) {
             this.putQueryParameter("FileId", fileId);
@@ -142,7 +171,20 @@ public class CompleteCdsFileRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * GroupId.
+         */
+        public Builder groupId(String groupId) {
+            this.putQueryParameter("GroupId", groupId);
+            this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -151,7 +193,11 @@ public class CompleteCdsFileRequest extends Request {
         }
 
         /**
-         * The ID of the file uploading task.
+         * <p>The ID of the file uploading task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6C48B55A1FAC4E1A9E0579059514****</p>
          */
         public Builder uploadId(String uploadId) {
             this.putQueryParameter("UploadId", uploadId);

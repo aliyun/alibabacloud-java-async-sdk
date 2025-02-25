@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PodItem} extends {@link TeaModel}
  *
  * <p>PodItem</p>
  */
 public class PodItem extends TeaModel {
-    @NameInMap("GmtCreateTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
-    @NameInMap("GmtFinishTime")
+    @com.aliyun.core.annotation.NameInMap("GmtFinishTime")
     private String gmtFinishTime;
 
-    @NameInMap("GmtStartTime")
+    @com.aliyun.core.annotation.NameInMap("GmtStartTime")
     private String gmtStartTime;
 
-    @NameInMap("HistoryPods")
-    private java.util.List < PodItem > historyPods;
+    @com.aliyun.core.annotation.NameInMap("HistoryPods")
+    private java.util.List<PodItem> historyPods;
 
-    @NameInMap("Ip")
+    @com.aliyun.core.annotation.NameInMap("Ip")
     private String ip;
 
-    @NameInMap("PodId")
+    @com.aliyun.core.annotation.NameInMap("PodId")
     private String podId;
 
-    @NameInMap("PodUid")
+    @com.aliyun.core.annotation.NameInMap("PodUid")
     private String podUid;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private PodItem(Builder builder) {
@@ -83,7 +88,7 @@ public class PodItem extends TeaModel {
     /**
      * @return historyPods
      */
-    public java.util.List < PodItem > getHistoryPods() {
+    public java.util.List<PodItem> getHistoryPods() {
         return this.historyPods;
     }
 
@@ -126,7 +131,7 @@ public class PodItem extends TeaModel {
         private String gmtCreateTime; 
         private String gmtFinishTime; 
         private String gmtStartTime; 
-        private java.util.List < PodItem > historyPods; 
+        private java.util.List<PodItem> historyPods; 
         private String ip; 
         private String podId; 
         private String podUid; 
@@ -160,7 +165,7 @@ public class PodItem extends TeaModel {
         /**
          * HistoryPods.
          */
-        public Builder historyPods(java.util.List < PodItem > historyPods) {
+        public Builder historyPods(java.util.List<PodItem> historyPods) {
             this.historyPods = historyPods;
             return this;
         }

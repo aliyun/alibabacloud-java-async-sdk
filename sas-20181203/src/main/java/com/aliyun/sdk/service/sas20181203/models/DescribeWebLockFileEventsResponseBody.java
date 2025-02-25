@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWebLockFileEventsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWebLockFileEventsResponseBody</p>
  */
 public class DescribeWebLockFileEventsResponseBody extends TeaModel {
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("List")
-    private java.util.List < List> list;
+    @com.aliyun.core.annotation.NameInMap("List")
+    private java.util.List<List> list;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeWebLockFileEventsResponseBody(Builder builder) {
@@ -53,7 +58,7 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
     /**
      * @return list
      */
-    public java.util.List < List> getList() {
+    public java.util.List<List> getList() {
         return this.list;
     }
 
@@ -80,13 +85,16 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer currentPage; 
-        private java.util.List < List> list; 
+        private java.util.List<List> list; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -94,15 +102,18 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of events on web tamper proofing returned.
+         * <p>An array that consists of events on web tamper proofing returned.</p>
          */
-        public Builder list(java.util.List < List> list) {
+        public Builder list(java.util.List<List> list) {
             this.list = list;
             return this;
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79CFF74D-E967-5407-8A78-EE03B925FDAA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of events on web tamper proofing returned.
+         * <p>The total number of events on web tamper proofing returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,56 +148,62 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeWebLockFileEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWebLockFileEventsResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("Ds")
+        @com.aliyun.core.annotation.NameInMap("Ds")
         private Long ds;
 
-        @NameInMap("EventName")
+        @com.aliyun.core.annotation.NameInMap("EventName")
         private String eventName;
 
-        @NameInMap("EventStatus")
+        @com.aliyun.core.annotation.NameInMap("EventStatus")
         private String eventStatus;
 
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
 
-        @NameInMap("GmtEvent")
+        @com.aliyun.core.annotation.NameInMap("GmtEvent")
         private Long gmtEvent;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IntranetIp")
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("ProcessName")
+        @com.aliyun.core.annotation.NameInMap("ProcessName")
         private String processName;
 
-        @NameInMap("ProcessPath")
+        @com.aliyun.core.annotation.NameInMap("ProcessPath")
         private String processPath;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private List(Builder builder) {
@@ -350,7 +373,10 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The number of attempts.
+             * <p>The number of attempts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -358,7 +384,10 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp at which the event on web tamper proofing was first detected.
+             * <p>The timestamp at which the event on web tamper proofing was first detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1657178400000</p>
              */
             public Builder ds(Long ds) {
                 this.ds = ds;
@@ -366,7 +395,10 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the event on web tamper proofing.
+             * <p>The name of the event on web tamper proofing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>modify</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -374,19 +406,22 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the event on web tamper proofing. Valid values:
-             * <p>
+             * <p>The status of the event on web tamper proofing. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: unhandled</li>
+             * <li><strong>2</strong>: ignored</li>
+             * <li><strong>4</strong>: deprecated</li>
+             * <li><strong>8</strong>: marked as false positive</li>
+             * <li><strong>10</strong>: added to the whitelist</li>
+             * <li><strong>16</strong>: handling</li>
+             * <li><strong>32</strong>: defended</li>
+             * <li><strong>64</strong>: invalid</li>
+             * <li><strong>128</strong>: deleted</li>
+             * <li><strong>512</strong>: automatically handled</li>
+             * </ul>
              * 
-             * *   **1**: unhandled
-             * *   **2**: ignored
-             * *   **4**: deprecated
-             * *   **8**: marked as false positive
-             * *   **10**: added to the whitelist
-             * *   **16**: handling
-             * *   **32**: defended
-             * *   **64**: invalid
-             * *   **128**: deleted
-             * *   **512**: automatically handled
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder eventStatus(String eventStatus) {
                 this.eventStatus = eventStatus;
@@ -394,11 +429,14 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The prevention mode. Valid values:
-             * <p>
+             * <p>The prevention mode. Valid values:</p>
+             * <ul>
+             * <li><strong>audit</strong>: Interception Mode</li>
+             * <li><strong>web_lock</strong>: Alert Mode</li>
+             * </ul>
              * 
-             * *   **audit**: Interception Mode
-             * *   **web_lock**: Alert Mode
+             * <strong>example:</strong>
+             * <p>audit</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -406,7 +444,10 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp at which the event on web tamper proofing was last detected.
+             * <p>The timestamp at which the event on web tamper proofing was last detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1657178400000</p>
              */
             public Builder gmtEvent(Long gmtEvent) {
                 this.gmtEvent = gmtEvent;
@@ -414,7 +455,10 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the event on web tamper proofing.
+             * <p>The ID of the event on web tamper proofing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3555953980</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -422,7 +466,10 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the asset.
+             * <p>The name of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sql-test-001</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -430,7 +477,10 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the affected asset.
+             * <p>The public IP address of the affected asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.210.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -438,7 +488,10 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the asset.
+             * <p>The private IP address of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.25.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -446,7 +499,10 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the asset.
+             * <p>The IP address of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.210.XX.XX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -454,7 +510,10 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The severity of the event on web tamper proofing. Valid values: **medium**
+             * <p>The severity of the event on web tamper proofing. Valid values: <strong>medium</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>medium</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -462,7 +521,10 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The file path.
+             * <p>The file path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>D:\test-tamper-proofing\123.html</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -470,7 +532,10 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the process.
+             * <p>The name of the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>python3.7</p>
              */
             public Builder processName(String processName) {
                 this.processName = processName;
@@ -478,7 +543,10 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The path to the process.
+             * <p>The path to the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>C:\Windows\explorer.exe</p>
              */
             public Builder processPath(String processPath) {
                 this.processPath = processPath;
@@ -486,19 +554,22 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the event on web tamper proofing. Valid values:
-             * <p>
+             * <p>The status of the event on web tamper proofing. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: unhandled</li>
+             * <li><strong>2</strong>: ignored</li>
+             * <li><strong>4</strong>: deprecated</li>
+             * <li><strong>8</strong>: marked as false positive</li>
+             * <li><strong>10</strong>: added to the whitelist</li>
+             * <li><strong>16</strong>: handling</li>
+             * <li><strong>32</strong>: defended</li>
+             * <li><strong>64</strong>: invalid</li>
+             * <li><strong>128</strong>: deleted</li>
+             * <li><strong>512</strong>: automatically handled</li>
+             * </ul>
              * 
-             * *   **1**: unhandled
-             * *   **2**: ignored
-             * *   **4**: deprecated
-             * *   **8**: marked as false positive
-             * *   **10**: added to the whitelist
-             * *   **16**: handling
-             * *   **32**: defended
-             * *   **64**: invalid
-             * *   **128**: deleted
-             * *   **512**: automatically handled
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -506,7 +577,10 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the asset.
+             * <p>The UUID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>49e25e0f-bb51-4a5a-a1b3-13a4ddaa****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,39 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeWhiteRuleListRequest</p>
  */
 public class DescribeWhiteRuleListRequest extends Request {
-    @Body
-    @NameInMap("AlertName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertName")
     private String alertName;
 
-    @Body
-    @NameInMap("AlertType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertType")
     private String alertType;
 
-    @Body
-    @NameInMap("CurrentPage")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Integer currentPage;
 
-    @Body
-    @NameInMap("IncidentUuid")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IncidentUuid")
     private String incidentUuid;
 
-    @Body
-    @NameInMap("PageSize")
-    @Validation(required = true, maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleFor")
+    private Long roleFor;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleType")
+    private Integer roleType;
 
     private DescribeWhiteRuleListRequest(Builder builder) {
         super(builder);
@@ -46,6 +53,8 @@ public class DescribeWhiteRuleListRequest extends Request {
         this.incidentUuid = builder.incidentUuid;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.roleFor = builder.roleFor;
+        this.roleType = builder.roleType;
     }
 
     public static Builder builder() {
@@ -103,6 +112,20 @@ public class DescribeWhiteRuleListRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return roleFor
+     */
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    /**
+     * @return roleType
+     */
+    public Integer getRoleType() {
+        return this.roleType;
+    }
+
     public static final class Builder extends Request.Builder<DescribeWhiteRuleListRequest, Builder> {
         private String alertName; 
         private String alertType; 
@@ -110,6 +133,8 @@ public class DescribeWhiteRuleListRequest extends Request {
         private String incidentUuid; 
         private Integer pageSize; 
         private String regionId; 
+        private Long roleFor; 
+        private Integer roleType; 
 
         private Builder() {
             super();
@@ -123,10 +148,12 @@ public class DescribeWhiteRuleListRequest extends Request {
             this.incidentUuid = request.incidentUuid;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.roleFor = request.roleFor;
+            this.roleType = request.roleType;
         } 
 
         /**
-         * AlertName.
+         * The name of the alert.
          */
         public Builder alertName(String alertName) {
             this.putBodyParameter("AlertName", alertName);
@@ -135,7 +162,7 @@ public class DescribeWhiteRuleListRequest extends Request {
         }
 
         /**
-         * AlertType.
+         * The type of the alert.
          */
         public Builder alertType(String alertType) {
             this.putBodyParameter("AlertType", alertType);
@@ -144,7 +171,7 @@ public class DescribeWhiteRuleListRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The page number. Pages start from page 1.
          */
         public Builder currentPage(Integer currentPage) {
             this.putBodyParameter("CurrentPage", currentPage);
@@ -153,7 +180,7 @@ public class DescribeWhiteRuleListRequest extends Request {
         }
 
         /**
-         * IncidentUuid.
+         * The UUID of the event.
          */
         public Builder incidentUuid(String incidentUuid) {
             this.putBodyParameter("IncidentUuid", incidentUuid);
@@ -162,7 +189,7 @@ public class DescribeWhiteRuleListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values: 1 to 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -171,11 +198,36 @@ public class DescribeWhiteRuleListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions in China.
+         * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the account that you switch from the management account.
+         */
+        public Builder roleFor(Long roleFor) {
+            this.putBodyParameter("RoleFor", roleFor);
+            this.roleFor = roleFor;
+            return this;
+        }
+
+        /**
+         * The type of the view. Valid values:
+         * <p>
+         * - 0: the current Alibaba Cloud account
+         * - 1: the global account
+         */
+        public Builder roleType(Integer roleType) {
+            this.putBodyParameter("RoleType", roleType);
+            this.roleType = roleType;
             return this;
         }
 

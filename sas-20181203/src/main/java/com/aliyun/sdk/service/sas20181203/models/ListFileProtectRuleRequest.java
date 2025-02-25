@@ -1,36 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFileProtectRuleRequest} extends {@link RequestModel}
  *
  * <p>ListFileProtectRuleRequest</p>
  */
 public class ListFileProtectRuleRequest extends Request {
-    @Query
-    @NameInMap("AlertLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlertLevel")
     private Integer alertLevel;
 
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RuleAction")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Platform")
+    private String platform;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleAction")
     private String ruleAction;
 
-    @Query
-    @NameInMap("RuleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleName")
     private String ruleName;
 
     private ListFileProtectRuleRequest(Builder builder) {
@@ -38,6 +47,7 @@ public class ListFileProtectRuleRequest extends Request {
         this.alertLevel = builder.alertLevel;
         this.currentPage = builder.currentPage;
         this.pageSize = builder.pageSize;
+        this.platform = builder.platform;
         this.ruleAction = builder.ruleAction;
         this.ruleName = builder.ruleName;
     }
@@ -77,6 +87,13 @@ public class ListFileProtectRuleRequest extends Request {
     }
 
     /**
+     * @return platform
+     */
+    public String getPlatform() {
+        return this.platform;
+    }
+
+    /**
      * @return ruleAction
      */
     public String getRuleAction() {
@@ -94,6 +111,7 @@ public class ListFileProtectRuleRequest extends Request {
         private Integer alertLevel; 
         private Integer currentPage; 
         private Integer pageSize; 
+        private String platform; 
         private String ruleAction; 
         private String ruleName; 
 
@@ -106,18 +124,22 @@ public class ListFileProtectRuleRequest extends Request {
             this.alertLevel = request.alertLevel;
             this.currentPage = request.currentPage;
             this.pageSize = request.pageSize;
+            this.platform = request.platform;
             this.ruleAction = request.ruleAction;
             this.ruleName = request.ruleName;
         } 
 
         /**
-         * The severity of alerts. Valid values:
-         * <p>
+         * <p>The severity of alerts. Valid values:</p>
+         * <ul>
+         * <li>0: does not generate alerts</li>
+         * <li>1: sends notifications</li>
+         * <li>2: suspicious</li>
+         * <li>3: high-risk</li>
+         * </ul>
          * 
-         * *   0: does not generate alerts
-         * *   1: sends notifications
-         * *   2: suspicious
-         * *   3: high-risk
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder alertLevel(Integer alertLevel) {
             this.putQueryParameter("AlertLevel", alertLevel);
@@ -126,7 +148,10 @@ public class ListFileProtectRuleRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -135,7 +160,10 @@ public class ListFileProtectRuleRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -144,11 +172,30 @@ public class ListFileProtectRuleRequest extends Request {
         }
 
         /**
-         * The handling method of the rule. Valid values:
-         * <p>
+         * <p>The type of the operating system. Valid values:</p>
+         * <ul>
+         * <li><strong>windows</strong>: Windows</li>
+         * <li><strong>linux</strong>: Linux</li>
+         * </ul>
          * 
-         * *   pass: allow
-         * *   alert
+         * <strong>example:</strong>
+         * <p>linux</p>
+         */
+        public Builder platform(String platform) {
+            this.putQueryParameter("Platform", platform);
+            this.platform = platform;
+            return this;
+        }
+
+        /**
+         * <p>The handling method of the rule. Valid values:</p>
+         * <ul>
+         * <li>pass: allow</li>
+         * <li>alert</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>pass</p>
          */
         public Builder ruleAction(String ruleAction) {
             this.putQueryParameter("RuleAction", ruleAction);
@@ -157,7 +204,10 @@ public class ListFileProtectRuleRequest extends Request {
         }
 
         /**
-         * The name of the rule.
+         * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-rule-1</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);

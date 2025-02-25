@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResetVpcFirewallRuleHitCountRequest} extends {@link RequestModel}
  *
  * <p>ResetVpcFirewallRuleHitCountRequest</p>
  */
 public class ResetVpcFirewallRuleHitCountRequest extends Request {
-    @Query
-    @NameInMap("AclUuid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclUuid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aclUuid;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
     private ResetVpcFirewallRuleHitCountRequest(Builder builder) {
@@ -69,7 +74,11 @@ public class ResetVpcFirewallRuleHitCountRequest extends Request {
         } 
 
         /**
-         * The ID of the access control policy.
+         * <p>The ID of the access control policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00281255-d220-4db1-8f4f-c4df221a****</p>
          */
         public Builder aclUuid(String aclUuid) {
             this.putQueryParameter("AclUuid", aclUuid);
@@ -78,13 +87,15 @@ public class ResetVpcFirewallRuleHitCountRequest extends Request {
         }
 
         /**
-         * The natural language of the request and response. 
-         * <p>
+         * <p>The natural language of the request and response. </p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * - **zh**: Chinese (default)
-         * - **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

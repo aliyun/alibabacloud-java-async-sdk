@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAuditPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAuditPolicyResponseBody</p>
  */
 public class DescribeAuditPolicyResponseBody extends TeaModel {
-    @NameInMap("LogAuditStatus")
+    @com.aliyun.core.annotation.NameInMap("LogAuditStatus")
     private String logAuditStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAuditPolicyResponseBody(Builder builder) {
@@ -50,13 +55,15 @@ public class DescribeAuditPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the log audit feature is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether the log audit feature is enabled. Valid values:</p>
+         * <ul>
+         * <li>Enable</li>
+         * <li>Disabled</li>
+         * </ul>
+         * <p>Default value: Disabled.</p>
          * 
-         * *   Enable
-         * *   Disabled
-         * 
-         * Default value: Disabled.
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         public Builder logAuditStatus(String logAuditStatus) {
             this.logAuditStatus = logAuditStatus;
@@ -64,7 +71,10 @@ public class DescribeAuditPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111E7B16-0A87-4CBA-B271-F34AD61E099F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

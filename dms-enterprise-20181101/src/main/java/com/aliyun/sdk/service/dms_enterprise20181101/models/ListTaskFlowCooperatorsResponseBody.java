@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTaskFlowCooperatorsResponseBody} extends {@link TeaModel}
  *
  * <p>ListTaskFlowCooperatorsResponseBody</p>
  */
 public class ListTaskFlowCooperatorsResponseBody extends TeaModel {
-    @NameInMap("CooperatorList")
+    @com.aliyun.core.annotation.NameInMap("CooperatorList")
     private CooperatorList cooperatorList;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListTaskFlowCooperatorsResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class ListTaskFlowCooperatorsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The users that are involved in the task flow.
+         * <p>The users that are involved in the task flow.</p>
          */
         public Builder cooperatorList(CooperatorList cooperatorList) {
             this.cooperatorList = cooperatorList;
@@ -94,7 +99,10 @@ public class ListTaskFlowCooperatorsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +110,10 @@ public class ListTaskFlowCooperatorsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +121,10 @@ public class ListTaskFlowCooperatorsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to locate logs and troubleshoot issues.
+         * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54C99C70-2DFF-5A8C-A252-EBAA1EB668EC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +132,14 @@ public class ListTaskFlowCooperatorsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -135,17 +152,23 @@ public class ListTaskFlowCooperatorsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTaskFlowCooperatorsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskFlowCooperatorsResponseBody</p>
+     */
     public static class Cooperator extends TeaModel {
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("LoginName")
+        @com.aliyun.core.annotation.NameInMap("LoginName")
         private String loginName;
 
-        @NameInMap("NickName")
+        @com.aliyun.core.annotation.NameInMap("NickName")
         private String nickName;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private Cooperator(Builder builder) {
@@ -198,7 +221,10 @@ public class ListTaskFlowCooperatorsResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * The email address of the user.
+             * <p>The email address of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@XX.com">test@XX.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -206,7 +232,10 @@ public class ListTaskFlowCooperatorsResponseBody extends TeaModel {
             }
 
             /**
-             * The username.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder loginName(String loginName) {
                 this.loginName = loginName;
@@ -214,7 +243,10 @@ public class ListTaskFlowCooperatorsResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the user.
+             * <p>The alias of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -222,7 +254,10 @@ public class ListTaskFlowCooperatorsResponseBody extends TeaModel {
             }
 
             /**
-             * userId.
+             * <p>userId.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -236,9 +271,15 @@ public class ListTaskFlowCooperatorsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTaskFlowCooperatorsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskFlowCooperatorsResponseBody</p>
+     */
     public static class CooperatorList extends TeaModel {
-        @NameInMap("Cooperator")
-        private java.util.List < Cooperator> cooperator;
+        @com.aliyun.core.annotation.NameInMap("Cooperator")
+        private java.util.List<Cooperator> cooperator;
 
         private CooperatorList(Builder builder) {
             this.cooperator = builder.cooperator;
@@ -255,17 +296,17 @@ public class ListTaskFlowCooperatorsResponseBody extends TeaModel {
         /**
          * @return cooperator
          */
-        public java.util.List < Cooperator> getCooperator() {
+        public java.util.List<Cooperator> getCooperator() {
             return this.cooperator;
         }
 
         public static final class Builder {
-            private java.util.List < Cooperator> cooperator; 
+            private java.util.List<Cooperator> cooperator; 
 
             /**
              * Cooperator.
              */
-            public Builder cooperator(java.util.List < Cooperator> cooperator) {
+            public Builder cooperator(java.util.List<Cooperator> cooperator) {
                 this.cooperator = cooperator;
                 return this;
             }

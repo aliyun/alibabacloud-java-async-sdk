@@ -1,53 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySecurityIpsRequest} extends {@link RequestModel}
  *
  * <p>ModifySecurityIpsRequest</p>
  */
 public class ModifySecurityIpsRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceIPArrayAttribute")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceIPArrayAttribute")
     private String DBInstanceIPArrayAttribute;
 
-    @Query
-    @NameInMap("DBInstanceIPArrayName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceIPArrayName")
     private String DBInstanceIPArrayName;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("FreshWhiteListReadins")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FreshWhiteListReadins")
     private String freshWhiteListReadins;
 
-    @Query
-    @NameInMap("ModifyMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModifyMode")
     private String modifyMode;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityIPType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityIPType")
     private String securityIPType;
 
-    @Query
-    @NameInMap("SecurityIps")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityIps")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String securityIps;
 
-    @Query
-    @NameInMap("WhitelistNetworkType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WhitelistNetworkType")
     private String whitelistNetworkType;
 
     private ModifySecurityIpsRequest(Builder builder) {
@@ -168,10 +173,13 @@ public class ModifySecurityIpsRequest extends Request {
         } 
 
         /**
-         * The attribute of the IP address whitelist. By default, this parameter is empty.
-         * <p>
+         * <p>The attribute of the IP address whitelist. By default, this parameter is empty.</p>
+         * <blockquote>
+         * <p>The IP address whitelists that have the hidden attribute are not displayed in the ApsaraDB RDS console. These IP address whitelists are used to access Alibaba Cloud services, such as Data Transmission Service (DTS).</p>
+         * </blockquote>
          * 
-         * > The IP address whitelists that have the hidden attribute are not displayed in the ApsaraDB RDS console. These IP address whitelists are used to access Alibaba Cloud services, such as Data Transmission Service (DTS).
+         * <strong>example:</strong>
+         * <p>hidden</p>
          */
         public Builder DBInstanceIPArrayAttribute(String DBInstanceIPArrayAttribute) {
             this.putQueryParameter("DBInstanceIPArrayAttribute", DBInstanceIPArrayAttribute);
@@ -180,10 +188,13 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * The name of the IP address whitelist that you want to modify. Default value: **Default**.
-         * <p>
+         * <p>The name of the IP address whitelist that you want to modify. Default value: <strong>Default</strong>.</p>
+         * <blockquote>
+         * <p>A maximum of 200 IP address whitelists can be configured for each instance.</p>
+         * </blockquote>
          * 
-         * > A maximum of 200 IP address whitelists can be configured for each instance.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder DBInstanceIPArrayName(String DBInstanceIPArrayName) {
             this.putQueryParameter("DBInstanceIPArrayName", DBInstanceIPArrayName);
@@ -192,7 +203,11 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pgm-bp18n0c8zt45****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -201,12 +216,15 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * The read-only instances to which you want to synchronize the IP address whitelist.
-         * <p>
+         * <p>The read-only instances to which you want to synchronize the IP address whitelist.</p>
+         * <ul>
+         * <li>This parameter applies only to ApsaraDB RDS for PostgreSQL instances.</li>
+         * <li>If the instance is attached with a read-only instance, you can use this parameter to synchronize the IP address whitelist to the read-only instance. If the instance is attached with multiple read-only instances, separate the read-only instances with commas (,).</li>
+         * <li>If the instance is not attached with a read-only instance, leave this parameter empty.</li>
+         * </ul>
          * 
-         * *   This parameter applies only to ApsaraDB RDS for PostgreSQL instances.
-         * *   If the instance is attached with a read-only instance, you can use this parameter to synchronize the IP address whitelist to the read-only instance. If the instance is attached with multiple read-only instances, separate the read-only instances with commas (,).
-         * *   If the instance is not attached with a read-only instance, leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>pgr-bp17yuz4dn3d****,pgr-bp1vn2ph54u1****</p>
          */
         public Builder freshWhiteListReadins(String freshWhiteListReadins) {
             this.putQueryParameter("FreshWhiteListReadins", freshWhiteListReadins);
@@ -215,14 +233,16 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * The method that is used to modify the whitelist. Valid values:
-         * <p>
+         * <p>The method that is used to modify the whitelist. Valid values:</p>
+         * <ul>
+         * <li><strong>Cover</strong>: Use the IP addresses and CIDR blocks that are specified in the <strong>SecurityIps</strong> parameter to overwrite the existing IP addresses and CIDR blocks in the IP address whitelist.</li>
+         * <li><strong>Append</strong>: Add the IP addresses and CIDR blocks that are specified in the <strong>SecurityIps</strong> parameter to the IP address whitelist.</li>
+         * <li><strong>Delete</strong>: Delete the IP addresses and CIDR blocks that are specified in the <strong>SecurityIps</strong> parameter from the IP address whitelist. You must retain at least one IP address or CIDR block.</li>
+         * </ul>
+         * <p>Default value: <strong>Cover</strong>.</p>
          * 
-         * *   **Cover**: Use the IP addresses and CIDR blocks that are specified in the **SecurityIps** parameter to overwrite the existing IP addresses and CIDR blocks in the IP address whitelist.
-         * *   **Append**: Add the IP addresses and CIDR blocks that are specified in the **SecurityIps** parameter to the IP address whitelist.
-         * *   **Delete**: Delete the IP addresses and CIDR blocks that are specified in the **SecurityIps** parameter from the IP address whitelist. You must retain at least one IP address or CIDR block.
-         * 
-         * Default value: **Cover**.
+         * <strong>example:</strong>
+         * <p>Cover</p>
          */
         public Builder modifyMode(String modifyMode) {
             this.putQueryParameter("ModifyMode", modifyMode);
@@ -240,7 +260,10 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * The type of the IP addresses in the IP address whitelist. Set the value to IPv4. IPv6 is not supported.
+         * <p>The IP address type. The value is fixed as IPv4.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv4</p>
          */
         public Builder securityIPType(String securityIPType) {
             this.putQueryParameter("SecurityIPType", securityIPType);
@@ -249,13 +272,18 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * The IP addresses in an IP address whitelist. Separate multiple IP addresses with commas (,). Each IP address in the IP address whitelist must be unique. The entries in the IP address whitelist must be in one of the following formats:
-         * <p>
+         * <p>The IP addresses in an IP address whitelist. Separate multiple IP addresses with commas (,). Each IP address in the IP address whitelist must be unique. The entries in the IP address whitelist must be in one of the following formats:</p>
+         * <ul>
+         * <li>IP addresses, such as 10.23.XX.XX.</li>
+         * <li>CIDR blocks, such as 10.23.XX.XX/24. In this example, 24 indicates that the prefix of each IP address in the IP address whitelist is 24 bits in length. You can replace 24 with a value within the range of 1 to 32.</li>
+         * </ul>
+         * <blockquote>
+         * <p>A maximum of 1,000 IP addresses or CIDR blocks can be added for each instance. If you want to add a large number of IP addresses, we recommend that you merge them into CIDR blocks, such as 10.23.XX.XX/24.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   IP addresses, such as 10.23.XX.XX.
-         * *   CIDR blocks, such as 10.23.XX.XX/24. In this example, 24 indicates that the prefix of each IP address in the IP address whitelist is 24 bits in length. You can replace 24 with a value within the range of 1 to 32.
-         * 
-         * > A maximum of 1,000 IP addresses or CIDR blocks can be added for each instance. If you want to add a large number of IP addresses, we recommend that you merge them into CIDR blocks, such as 10.23.XX.XX/24.
+         * <strong>example:</strong>
+         * <p>10.23.XX.XX</p>
          */
         public Builder securityIps(String securityIps) {
             this.putQueryParameter("SecurityIps", securityIps);
@@ -264,16 +292,24 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * The network type of the IP address whitelist. Valid values:
-         * <p>
+         * <p>The network type of the IP address whitelist. Valid values:</p>
+         * <ul>
+         * <li><strong>Classic</strong>: classic network in enhanced whitelist mode</li>
+         * <li><strong>VPC</strong>: virtual private cloud (VPC) network type in enhanced whitelist mode.</li>
+         * <li><strong>MIX</strong>: standard whitelist mode</li>
+         * </ul>
+         * <p>Default value: <strong>MIX</strong>.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>In standard whitelist mode, IP addresses and CIDR blocks are added only to the default IP address whitelist. In enhanced whitelist mode, IP addresses and CIDR blocks are added to the IP address whitelists of the classic network type and the VPC network type.</p>
+         * </li>
+         * <li><p>If your RDS instance runs PostgreSQL and uses cloud disks, set this parameter to MIX. If you set it to another value, the system automatically changes the value to MIX.</p>
+         * </li>
+         * </ul>
          * 
-         * *   **Classic**: classic network in enhanced whitelist mode
-         * *   **VPC**: virtual private cloud (VPC) in enhanced whitelist mode
-         * *   **MIX**: standard whitelist mode
-         * 
-         * Default value: **MIX**.
-         * 
-         * > In standard whitelist mode, IP addresses and CIDR blocks are added only to the default IP address whitelist. In enhanced whitelist mode, IP addresses and CIDR blocks are added to the IP address whitelists of the classic network type and the VPC network type.
+         * <strong>example:</strong>
+         * <p>Classic</p>
          */
         public Builder whitelistNetworkType(String whitelistNetworkType) {
             this.putQueryParameter("WhitelistNetworkType", whitelistNetworkType);

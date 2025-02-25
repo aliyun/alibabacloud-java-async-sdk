@@ -1,72 +1,77 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddGtmAddressPoolRequest} extends {@link RequestModel}
  *
  * <p>AddGtmAddressPoolRequest</p>
  */
 public class AddGtmAddressPoolRequest extends Request {
-    @Query
-    @NameInMap("Addr")
-    @Validation(required = true)
-    private java.util.List < Addr> addr;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Addr")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Addr> addr;
 
-    @Query
-    @NameInMap("EvaluationCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EvaluationCount")
     private Integer evaluationCount;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Interval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Interval")
     private Integer interval;
 
-    @Query
-    @NameInMap("IspCityNode")
-    private java.util.List < IspCityNode> ispCityNode;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IspCityNode")
+    private java.util.List<IspCityNode> ispCityNode;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("MinAvailableAddrNum")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinAvailableAddrNum")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer minAvailableAddrNum;
 
-    @Query
-    @NameInMap("MonitorExtendInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MonitorExtendInfo")
     private String monitorExtendInfo;
 
-    @Query
-    @NameInMap("MonitorStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MonitorStatus")
     private String monitorStatus;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("ProtocolType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProtocolType")
     private String protocolType;
 
-    @Query
-    @NameInMap("Timeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Timeout")
     private Integer timeout;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private AddGtmAddressPoolRequest(Builder builder) {
@@ -102,7 +107,7 @@ public class AddGtmAddressPoolRequest extends Request {
     /**
      * @return addr
      */
-    public java.util.List < Addr> getAddr() {
+    public java.util.List<Addr> getAddr() {
         return this.addr;
     }
 
@@ -130,7 +135,7 @@ public class AddGtmAddressPoolRequest extends Request {
     /**
      * @return ispCityNode
      */
-    public java.util.List < IspCityNode> getIspCityNode() {
+    public java.util.List<IspCityNode> getIspCityNode() {
         return this.ispCityNode;
     }
 
@@ -191,11 +196,11 @@ public class AddGtmAddressPoolRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddGtmAddressPoolRequest, Builder> {
-        private java.util.List < Addr> addr; 
+        private java.util.List<Addr> addr; 
         private Integer evaluationCount; 
         private String instanceId; 
         private Integer interval; 
-        private java.util.List < IspCityNode> ispCityNode; 
+        private java.util.List<IspCityNode> ispCityNode; 
         private String lang; 
         private Integer minAvailableAddrNum; 
         private String monitorExtendInfo; 
@@ -227,16 +232,20 @@ public class AddGtmAddressPoolRequest extends Request {
         } 
 
         /**
-         * The addresses in the address pool.
+         * <p>The address pools.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder addr(java.util.List < Addr> addr) {
+        public Builder addr(java.util.List<Addr> addr) {
             this.putQueryParameter("Addr", addr);
             this.addr = addr;
             return this;
         }
 
         /**
-         * The maximum number of consecutive exceptions detected. If the number of consecutive exceptions detected reaches the maximum number, the application service is deemed abnormal.
+         * <p>The number of consecutive failures.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder evaluationCount(Integer evaluationCount) {
             this.putQueryParameter("EvaluationCount", evaluationCount);
@@ -245,7 +254,11 @@ public class AddGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The ID of the GTM instance for which you want to create an address pool.
+         * <p>The ID of the GTM instance for which you want to create an address pool.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gtm-cn-xxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -254,7 +267,10 @@ public class AddGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The health check interval. Unit: seconds. Set the value to 60.
+         * <p>The health check interval. Unit: seconds. Set the value to 60.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder interval(Integer interval) {
             this.putQueryParameter("Interval", interval);
@@ -263,16 +279,19 @@ public class AddGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The monitored nodes.
+         * <p>The monitored nodes.</p>
          */
-        public Builder ispCityNode(java.util.List < IspCityNode> ispCityNode) {
+        public Builder ispCityNode(java.util.List<IspCityNode> ispCityNode) {
             this.putQueryParameter("IspCityNode", ispCityNode);
             this.ispCityNode = ispCityNode;
             return this;
         }
 
         /**
-         * The language of the values of specific response parameters.
+         * <p>The language of the values of specific response parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -281,7 +300,11 @@ public class AddGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The minimum number of available addresses in the address pool.
+         * <p>The minimum number of available addresses in the address pool.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder minAvailableAddrNum(Integer minAvailableAddrNum) {
             this.putQueryParameter("MinAvailableAddrNum", minAvailableAddrNum);
@@ -290,27 +313,29 @@ public class AddGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The extended information, that is, the parameters required for the protocol. Different protocols require different parameters:
-         * <p>
+         * <p>The extended information. The required parameters vary based on the value of ProtocolType.</p>
+         * <p>When ProtocolType is set to HTTP or HTTPS:</p>
+         * <ul>
+         * <li>port: the port that you want to check</li>
+         * <li>failureRate: the failure rate</li>
+         * <li>code: the return code. The health check result is deemed abnormal if the returned value is greater than the specified value. Valid values: 400 and 500.</li>
+         * <li>host: the host settings</li>
+         * <li>path: the URL path</li>
+         * </ul>
+         * <p>When ProtocolType is set to PING:</p>
+         * <ul>
+         * <li>packetNum: the number of ping packets</li>
+         * <li>packetLossRate: the packet loss rate</li>
+         * <li>failureRate: the failure rate</li>
+         * </ul>
+         * <p>When ProtocolType is set to TCP:</p>
+         * <ul>
+         * <li>port: the port that you want to check</li>
+         * <li>failureRate: the failure rate</li>
+         * </ul>
          * 
-         * HTTP or HTTPS:
-         * 
-         * *   port: the port to check.
-         * *   failureRate: the failure rate.
-         * *   code: the status code threshold. If the returned status code is greater than the specified threshold, the application service is deemed abnormal. Valid values: 400 and 500.
-         * *   host: the host configuration.
-         * *   path: the health check URL.
-         * 
-         * PING:
-         * 
-         * *   packetNum: the number of ping packets.
-         * *   packetLossRate: the loss rate of ping packets.
-         * *   failureRate: the failure rate.
-         * 
-         * TCP:
-         * 
-         * *   port: the port to check.
-         * *   failureRate: the failure rate.
+         * <strong>example:</strong>
+         * <p>{&quot;host&quot;:&quot;aliyun.com&quot;,&quot;port&quot;:80}</p>
          */
         public Builder monitorExtendInfo(String monitorExtendInfo) {
             this.putQueryParameter("MonitorExtendInfo", monitorExtendInfo);
@@ -319,11 +344,14 @@ public class AddGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the health check. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the health check. Valid values:</p>
+         * <ul>
+         * <li><strong>OPEN</strong>: enables the health check.</li>
+         * <li><strong>CLOSE</strong>: disables the health check. This is the default value.</li>
+         * </ul>
          * 
-         * *   **OPEN**: enables the health check.
-         * *   **CLOSE**: disables the health check. This is the default value.
+         * <strong>example:</strong>
+         * <p>OPEN</p>
          */
         public Builder monitorStatus(String monitorStatus) {
             this.putQueryParameter("MonitorStatus", monitorStatus);
@@ -332,7 +360,11 @@ public class AddGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The name of the address pool that you want to create.
+         * <p>The name of the address pool.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alibaba Cloud cluster</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -341,13 +373,16 @@ public class AddGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The protocol used for the health check. Valid values:
-         * <p>
+         * <p>The health check protocol. Valid values:</p>
+         * <ul>
+         * <li>HTTP</li>
+         * <li>HTTPS</li>
+         * <li>Ping</li>
+         * <li>TCP</li>
+         * </ul>
          * 
-         * *   HTTP
-         * *   HTTPS
-         * *   PING
-         * *   TCP
+         * <strong>example:</strong>
+         * <p>HTTPS</p>
          */
         public Builder protocolType(String protocolType) {
             this.putQueryParameter("ProtocolType", protocolType);
@@ -356,7 +391,10 @@ public class AddGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The health check timeout period. Unit: milliseconds. Valid values: 2000, 3000, 5000, and 10000.
+         * <p>The timeout period. Unit: milliseconds. Valid values: 2000, 3000, 5000, and 10000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder timeout(Integer timeout) {
             this.putQueryParameter("Timeout", timeout);
@@ -365,11 +403,15 @@ public class AddGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The type of the address pool. Valid values:
-         * <p>
+         * <p>The type of the address pool. Valid values:</p>
+         * <ul>
+         * <li><strong>IP</strong>: IPv4 address</li>
+         * <li><strong>DOMAIN</strong>: domain name</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **IP**: IPv4 address
-         * *   **DOMAIN**: domain name
+         * <strong>example:</strong>
+         * <p>IP</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -384,14 +426,20 @@ public class AddGtmAddressPoolRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddGtmAddressPoolRequest} extends {@link TeaModel}
+     *
+     * <p>AddGtmAddressPoolRequest</p>
+     */
     public static class Addr extends TeaModel {
-        @NameInMap("LbaWeight")
+        @com.aliyun.core.annotation.NameInMap("LbaWeight")
         private Integer lbaWeight;
 
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Addr(Builder builder) {
@@ -435,7 +483,10 @@ public class AddGtmAddressPoolRequest extends Request {
             private String value; 
 
             /**
-             * The weight of the address.
+             * <p>The weight of the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder lbaWeight(Integer lbaWeight) {
                 this.lbaWeight = lbaWeight;
@@ -443,12 +494,15 @@ public class AddGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * The mode of the address. Valid values:
-             * <p>
+             * <p>The mode of the address pool. Valid values:</p>
+             * <ul>
+             * <li><strong>SMART</strong>: smart return</li>
+             * <li><strong>ONLINE</strong>: always online</li>
+             * <li><strong>OFFLINE</strong>: always offline</li>
+             * </ul>
              * 
-             * *   **SMART**: smart return
-             * *   **ONLINE**: always online
-             * *   **OFFLINE**: always offline
+             * <strong>example:</strong>
+             * <p>SMART</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -456,7 +510,10 @@ public class AddGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * The address.
+             * <p>The address in the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.1.1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -470,11 +527,17 @@ public class AddGtmAddressPoolRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AddGtmAddressPoolRequest} extends {@link TeaModel}
+     *
+     * <p>AddGtmAddressPoolRequest</p>
+     */
     public static class IspCityNode extends TeaModel {
-        @NameInMap("CityCode")
+        @com.aliyun.core.annotation.NameInMap("CityCode")
         private String cityCode;
 
-        @NameInMap("IspCode")
+        @com.aliyun.core.annotation.NameInMap("IspCode")
         private String ispCode;
 
         private IspCityNode(Builder builder) {
@@ -509,7 +572,10 @@ public class AddGtmAddressPoolRequest extends Request {
             private String ispCode; 
 
             /**
-             * The code of the city where the monitored node is deployed. For more information about specific values, see the response parameters of DescribeGtmMonitorAvailableConfig.
+             * <p>The code of the city where the monitored node is deployed. For more information about specific values, see the response parameters of DescribeGtmMonitorAvailableConfig.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>546</p>
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -517,10 +583,14 @@ public class AddGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * *   The code of the Internet service provider (ISP) to which the monitored node belongs. For more information about specific values, see the response parameters of DescribeGtmMonitorAvailableConfig.
-             * <p>
-             * *   If the value of the GroupType parameter is BGP or OVERSEAS, IspCode is optional. The default value is 465.
-             * *   If the value of the GroupType parameter is not BGP or OVERSEAS, IspCode is required and is used together with CityCode.
+             * <ul>
+             * <li>The code of the Internet service provider (ISP) to which the monitored node belongs. For more information about specific values, see the response parameters of DescribeGtmMonitorAvailableConfig.</li>
+             * <li>If the value of the GroupType parameter is BGP or OVERSEAS, IspCode is optional. The default value is 465.</li>
+             * <li>If the value of the GroupType parameter is not BGP or OVERSEAS, IspCode is required and is used together with CityCode.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>465</p>
              */
             public Builder ispCode(String ispCode) {
                 this.ispCode = ispCode;

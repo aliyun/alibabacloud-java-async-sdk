@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UploadResponseBody} extends {@link TeaModel}
  *
  * <p>UploadResponseBody</p>
  */
 public class UploadResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UploadResult")
+    @com.aliyun.core.annotation.NameInMap("UploadResult")
     private UploadResult uploadResult;
 
     private UploadResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class UploadResponseBody extends TeaModel {
         private UploadResult uploadResult; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5EC8221-08F2-4C95-9AF1-49FD998C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class UploadResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder uploadResult(UploadResult uploadResult) {
             this.uploadResult = uploadResult;
@@ -71,14 +79,20 @@ public class UploadResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UploadResponseBody} extends {@link TeaModel}
+     *
+     * <p>UploadResponseBody</p>
+     */
     public static class UploadResult extends TeaModel {
-        @NameInMap("Fid")
+        @com.aliyun.core.annotation.NameInMap("Fid")
         private String fid;
 
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("UploadTime")
+        @com.aliyun.core.annotation.NameInMap("UploadTime")
         private String uploadTime;
 
         private UploadResult(Builder builder) {
@@ -122,7 +136,10 @@ public class UploadResponseBody extends TeaModel {
             private String uploadTime; 
 
             /**
-             * The ID of the SourceMap file.
+             * <p>The ID of the SourceMap file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder fid(String fid) {
                 this.fid = fid;
@@ -130,7 +147,10 @@ public class UploadResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the SourceMap file.
+             * <p>The name of the SourceMap file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.js.map</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -138,7 +158,10 @@ public class UploadResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the file was uploaded.
+             * <p>The time when the file was uploaded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1650272251</p>
              */
             public Builder uploadTime(String uploadTime) {
                 this.uploadTime = uploadTime;

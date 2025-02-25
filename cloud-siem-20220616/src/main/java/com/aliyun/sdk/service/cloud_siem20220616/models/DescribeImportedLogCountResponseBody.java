@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImportedLogCountResponseBody</p>
  */
 public class DescribeImportedLogCountResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeImportedLogCountResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class DescribeImportedLogCountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +57,7 @@ public class DescribeImportedLogCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,13 +71,13 @@ public class DescribeImportedLogCountResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("ImportedLogCount")
+        @com.aliyun.core.annotation.NameInMap("ImportedLogCount")
         private Integer importedLogCount;
 
-        @NameInMap("TotalLogCount")
+        @com.aliyun.core.annotation.NameInMap("TotalLogCount")
         private Integer totalLogCount;
 
-        @NameInMap("UnImportedLogCount")
+        @com.aliyun.core.annotation.NameInMap("UnImportedLogCount")
         private Integer unImportedLogCount;
 
         private Data(Builder builder) {
@@ -122,7 +121,7 @@ public class DescribeImportedLogCountResponseBody extends TeaModel {
             private Integer unImportedLogCount; 
 
             /**
-             * ImportedLogCount.
+             * The number of logs that are added.
              */
             public Builder importedLogCount(Integer importedLogCount) {
                 this.importedLogCount = importedLogCount;
@@ -130,7 +129,7 @@ public class DescribeImportedLogCountResponseBody extends TeaModel {
             }
 
             /**
-             * TotalLogCount.
+             * The total number of logs.
              */
             public Builder totalLogCount(Integer totalLogCount) {
                 this.totalLogCount = totalLogCount;
@@ -138,7 +137,7 @@ public class DescribeImportedLogCountResponseBody extends TeaModel {
             }
 
             /**
-             * UnImportedLogCount.
+             * The number of logs that are not added.
              */
             public Builder unImportedLogCount(Integer unImportedLogCount) {
                 this.unImportedLogCount = unImportedLogCount;

@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescriberPython3ScriptLogsRequest} extends {@link RequestModel}
  *
  * <p>DescriberPython3ScriptLogsRequest</p>
  */
 public class DescriberPython3ScriptLogsRequest extends Request {
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("RequestUuid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestUuid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String requestUuid;
 
     private DescriberPython3ScriptLogsRequest(Builder builder) {
@@ -69,7 +69,14 @@ public class DescriberPython3ScriptLogsRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -78,7 +85,14 @@ public class DescriberPython3ScriptLogsRequest extends Request {
         }
 
         /**
-         * RequestUuid.
+         * <p>The UUID that is returned when the Python3 script is run.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~RunPython3Script~~">RunPython3Script</a> operation to query the UUID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69edc2b4-c95c-424f-9114-xxxxxxx</p>
          */
         public Builder requestUuid(String requestUuid) {
             this.putQueryParameter("RequestUuid", requestUuid);

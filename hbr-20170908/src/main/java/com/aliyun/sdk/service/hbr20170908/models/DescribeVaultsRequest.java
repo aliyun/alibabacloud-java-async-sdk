@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVaultsRequest} extends {@link RequestModel}
  *
  * <p>DescribeVaultsRequest</p>
  */
 public class DescribeVaultsRequest extends Request {
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Body
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Query
-    @NameInMap("VaultId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultId")
     private String vaultId;
 
-    @Query
-    @NameInMap("VaultRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultRegionId")
     private String vaultRegionId;
 
-    @Query
-    @NameInMap("VaultType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultType")
     private String vaultType;
 
     private DescribeVaultsRequest(Builder builder) {
@@ -101,7 +106,7 @@ public class DescribeVaultsRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -131,7 +136,7 @@ public class DescribeVaultsRequest extends Request {
         private Integer pageSize; 
         private String resourceGroupId; 
         private String status; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String vaultId; 
         private String vaultRegionId; 
         private String vaultType; 
@@ -140,20 +145,23 @@ public class DescribeVaultsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVaultsRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceGroupId = response.resourceGroupId;
-            this.status = response.status;
-            this.tag = response.tag;
-            this.vaultId = response.vaultId;
-            this.vaultRegionId = response.vaultRegionId;
-            this.vaultType = response.vaultType;
+        private Builder(DescribeVaultsRequest request) {
+            super(request);
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceGroupId = request.resourceGroupId;
+            this.status = request.status;
+            this.tag = request.tag;
+            this.vaultId = request.vaultId;
+            this.vaultRegionId = request.vaultRegionId;
+            this.vaultType = request.vaultType;
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -162,7 +170,10 @@ public class DescribeVaultsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: 1 to 99. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -171,7 +182,10 @@ public class DescribeVaultsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-*********************</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -180,7 +194,16 @@ public class DescribeVaultsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the backup vault. Valid values:</p>
+         * <ul>
+         * <li><strong>UNKNOWN</strong>: The backup vault is in an unknown state.</li>
+         * <li><strong>INITIALIZING</strong>: The backup vault is being initialized.</li>
+         * <li><strong>CREATED</strong>: The backup vault is created.</li>
+         * <li><strong>ERROR</strong>: An error occurs on the backup vault.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATED</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -189,16 +212,22 @@ public class DescribeVaultsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>Tag information. Supports up to 20 tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6a745bceffb042959b3b5206d6f12ad1</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putBodyParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * VaultId.
+         * <p>Backup vault ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v-*********************</p>
          */
         public Builder vaultId(String vaultId) {
             this.putQueryParameter("VaultId", vaultId);
@@ -207,7 +236,10 @@ public class DescribeVaultsRequest extends Request {
         }
 
         /**
-         * VaultRegionId.
+         * <p>The region ID to which the backup vault belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder vaultRegionId(String vaultRegionId) {
             this.putQueryParameter("VaultRegionId", vaultRegionId);
@@ -216,7 +248,14 @@ public class DescribeVaultsRequest extends Request {
         }
 
         /**
-         * VaultType.
+         * <p>Backup repository type. The values are as follows: </p>
+         * <ul>
+         * <li><strong>STANDARD</strong>: Represents a standard repository, which can be used for ECS file backups, OSS backups, NAS backups, etc. </li>
+         * <li><strong>OTS_BACKUP</strong>: Represents a TableStore repository, which is only used for TableStore backups, and TableStore must use this type of repository.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>STANDARD</p>
          */
         public Builder vaultType(String vaultType) {
             this.putQueryParameter("VaultType", vaultType);
@@ -231,11 +270,17 @@ public class DescribeVaultsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVaultsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeVaultsRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -270,7 +315,10 @@ public class DescribeVaultsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -278,7 +326,10 @@ public class DescribeVaultsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The Value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;

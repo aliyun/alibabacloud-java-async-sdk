@@ -169,7 +169,7 @@ public class GetJMeterLogsRequest extends Request {
         } 
 
         /**
-         * 第几台引擎，起始为0
+         * AgentIndex.
          */
         public Builder agentIndex(Integer agentIndex) {
             this.putQueryParameter("AgentIndex", agentIndex);
@@ -178,7 +178,7 @@ public class GetJMeterLogsRequest extends Request {
         }
 
         /**
-         * 开始时间
+         * BeginTime.
          */
         public Builder beginTime(Long beginTime) {
             this.putQueryParameter("BeginTime", beginTime);
@@ -187,7 +187,7 @@ public class GetJMeterLogsRequest extends Request {
         }
 
         /**
-         * 结束时间
+         * EndTime.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -196,7 +196,7 @@ public class GetJMeterLogsRequest extends Request {
         }
 
         /**
-         * 关键字
+         * Keyword.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -205,7 +205,7 @@ public class GetJMeterLogsRequest extends Request {
         }
 
         /**
-         * 日志等级
+         * Level.
          */
         public Builder level(String level) {
             this.putQueryParameter("Level", level);
@@ -232,7 +232,7 @@ public class GetJMeterLogsRequest extends Request {
         }
 
         /**
-         * 报告ID
+         * ReportId.
          */
         public Builder reportId(String reportId) {
             this.putQueryParameter("ReportId", reportId);
@@ -241,7 +241,7 @@ public class GetJMeterLogsRequest extends Request {
         }
 
         /**
-         * 线程名
+         * Thread.
          */
         public Builder thread(String thread) {
             this.putQueryParameter("Thread", thread);

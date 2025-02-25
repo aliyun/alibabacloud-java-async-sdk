@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGtmAddressPoolRequest} extends {@link RequestModel}
  *
  * <p>UpdateGtmAddressPoolRequest</p>
  */
 public class UpdateGtmAddressPoolRequest extends Request {
-    @Query
-    @NameInMap("Addr")
-    @Validation(required = true)
-    private java.util.List < Addr> addr;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Addr")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Addr> addr;
 
-    @Query
-    @NameInMap("AddrPoolId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddrPoolId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String addrPoolId;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("MinAvailableAddrNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinAvailableAddrNum")
     private Integer minAvailableAddrNum;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private UpdateGtmAddressPoolRequest(Builder builder) {
@@ -65,7 +70,7 @@ public class UpdateGtmAddressPoolRequest extends Request {
     /**
      * @return addr
      */
-    public java.util.List < Addr> getAddr() {
+    public java.util.List<Addr> getAddr() {
         return this.addr;
     }
 
@@ -105,7 +110,7 @@ public class UpdateGtmAddressPoolRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateGtmAddressPoolRequest, Builder> {
-        private java.util.List < Addr> addr; 
+        private java.util.List<Addr> addr; 
         private String addrPoolId; 
         private String lang; 
         private Integer minAvailableAddrNum; 
@@ -127,16 +132,20 @@ public class UpdateGtmAddressPoolRequest extends Request {
         } 
 
         /**
-         * Addr.
+         * <p>This parameter is required.</p>
          */
-        public Builder addr(java.util.List < Addr> addr) {
+        public Builder addr(java.util.List<Addr> addr) {
             this.putQueryParameter("Addr", addr);
             this.addr = addr;
             return this;
         }
 
         /**
-         * The ID of the address pool that you want to modify.
+         * <p>The ID of the address pool that you want to modify.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234abc</p>
          */
         public Builder addrPoolId(String addrPoolId) {
             this.putQueryParameter("AddrPoolId", addrPoolId);
@@ -145,7 +154,10 @@ public class UpdateGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The language used by the user.
+         * <p>The language used by the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -154,7 +166,10 @@ public class UpdateGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The minimum number of available addresses in the address pool.
+         * <p>The minimum number of available addresses in the address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder minAvailableAddrNum(Integer minAvailableAddrNum) {
             this.putQueryParameter("MinAvailableAddrNum", minAvailableAddrNum);
@@ -163,7 +178,7 @@ public class UpdateGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The name of the address pool that you want to modify.
+         * <p>The name of the address pool that you want to modify.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -172,7 +187,11 @@ public class UpdateGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The type of the address pool that you want to modify.
+         * <p>The type of the address pool that you want to modify.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IP</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -187,14 +206,20 @@ public class UpdateGtmAddressPoolRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateGtmAddressPoolRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateGtmAddressPoolRequest</p>
+     */
     public static class Addr extends TeaModel {
-        @NameInMap("LbaWeight")
+        @com.aliyun.core.annotation.NameInMap("LbaWeight")
         private Integer lbaWeight;
 
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Addr(Builder builder) {
@@ -238,7 +263,10 @@ public class UpdateGtmAddressPoolRequest extends Request {
             private String value; 
 
             /**
-             * The weight of the address pool that you want to modify.
+             * <p>The weight of the address pool that you want to modify.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder lbaWeight(Integer lbaWeight) {
                 this.lbaWeight = lbaWeight;
@@ -246,12 +274,15 @@ public class UpdateGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * The mode of the address pool that you want to modify.
-             * <p>
+             * <p>The mode of the address pool that you want to modify.</p>
+             * <ul>
+             * <li><strong>SMART</strong>: Intelligent return</li>
+             * <li><strong>ONLINE</strong>: Always online</li>
+             * <li><strong>OFFLINE</strong>: Always offline</li>
+             * </ul>
              * 
-             * *   **SMART**: Intelligent return
-             * *   **ONLINE**: Always online
-             * *   **OFFLINE**: Always offline
+             * <strong>example:</strong>
+             * <p>SMART</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -259,7 +290,10 @@ public class UpdateGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * The addresses in the address pool.
+             * <p>The addresses in the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.1.1</p>
              */
             public Builder value(String value) {
                 this.value = value;

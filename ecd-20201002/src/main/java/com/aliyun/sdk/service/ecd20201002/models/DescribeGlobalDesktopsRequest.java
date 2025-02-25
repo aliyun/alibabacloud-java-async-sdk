@@ -1,93 +1,102 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20201002.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGlobalDesktopsRequest} extends {@link RequestModel}
  *
  * <p>DescribeGlobalDesktopsRequest</p>
  */
 public class DescribeGlobalDesktopsRequest extends Request {
-    @Query
-    @NameInMap("ClientId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientId;
 
-    @Query
-    @NameInMap("DesktopAccessType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopAccessType")
     private String desktopAccessType;
 
-    @Query
-    @NameInMap("DesktopId")
-    private java.util.List < String > desktopId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopId")
+    private java.util.List<String> desktopId;
 
-    @Query
-    @NameInMap("DesktopName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopName")
     private String desktopName;
 
-    @Query
-    @NameInMap("DesktopStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopStatus")
     private String desktopStatus;
 
-    @Query
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @Query
-    @NameInMap("Keyword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
-    @Query
-    @NameInMap("LoginRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Language")
+    private String language;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoginRegionId")
     private String loginRegionId;
 
-    @Query
-    @NameInMap("LoginToken")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoginToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loginToken;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OfficeSiteId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
     private String officeSiteId;
 
-    @Query
-    @NameInMap("OrderBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderBy")
     private String orderBy;
 
-    @Query
-    @NameInMap("QueryFotaUpdate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryFotaUpdate")
     private Boolean queryFotaUpdate;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("SearchRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchRegionId")
     private String searchRegionId;
 
-    @Query
-    @NameInMap("SessionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SessionId")
     private String sessionId;
 
-    @Query
-    @NameInMap("SortType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortType")
     private String sortType;
 
-    @Query
-    @NameInMap("WithoutLatency")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WithoutLatency")
     private Boolean withoutLatency;
 
     private DescribeGlobalDesktopsRequest(Builder builder) {
@@ -99,6 +108,7 @@ public class DescribeGlobalDesktopsRequest extends Request {
         this.desktopStatus = builder.desktopStatus;
         this.directoryId = builder.directoryId;
         this.keyword = builder.keyword;
+        this.language = builder.language;
         this.loginRegionId = builder.loginRegionId;
         this.loginToken = builder.loginToken;
         this.maxResults = builder.maxResults;
@@ -143,7 +153,7 @@ public class DescribeGlobalDesktopsRequest extends Request {
     /**
      * @return desktopId
      */
-    public java.util.List < String > getDesktopId() {
+    public java.util.List<String> getDesktopId() {
         return this.desktopId;
     }
 
@@ -173,6 +183,13 @@ public class DescribeGlobalDesktopsRequest extends Request {
      */
     public String getKeyword() {
         return this.keyword;
+    }
+
+    /**
+     * @return language
+     */
+    public String getLanguage() {
+        return this.language;
     }
 
     /**
@@ -262,11 +279,12 @@ public class DescribeGlobalDesktopsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeGlobalDesktopsRequest, Builder> {
         private String clientId; 
         private String desktopAccessType; 
-        private java.util.List < String > desktopId; 
+        private java.util.List<String> desktopId; 
         private String desktopName; 
         private String desktopStatus; 
         private String directoryId; 
         private String keyword; 
+        private String language; 
         private String loginRegionId; 
         private String loginToken; 
         private Integer maxResults; 
@@ -293,6 +311,7 @@ public class DescribeGlobalDesktopsRequest extends Request {
             this.desktopStatus = request.desktopStatus;
             this.directoryId = request.directoryId;
             this.keyword = request.keyword;
+            this.language = request.language;
             this.loginRegionId = request.loginRegionId;
             this.loginToken = request.loginToken;
             this.maxResults = request.maxResults;
@@ -308,7 +327,10 @@ public class DescribeGlobalDesktopsRequest extends Request {
         } 
 
         /**
-         * ClientId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c213150d-7ac3-432c-b749-6e1e090b****</p>
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);
@@ -328,7 +350,7 @@ public class DescribeGlobalDesktopsRequest extends Request {
         /**
          * DesktopId.
          */
-        public Builder desktopId(java.util.List < String > desktopId) {
+        public Builder desktopId(java.util.List<String> desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
             this.desktopId = desktopId;
             return this;
@@ -362,11 +384,23 @@ public class DescribeGlobalDesktopsRequest extends Request {
         }
 
         /**
-         * 关键字。支持模糊搜索桌面ID、云桌面名称和终端用户自定义的桌面名称。
+         * <p>关键字。支持模糊搜索桌面ID、云桌面名称和终端用户自定义的桌面名称。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
             this.keyword = keyword;
+            return this;
+        }
+
+        /**
+         * Language.
+         */
+        public Builder language(String language) {
+            this.putQueryParameter("Language", language);
+            this.language = language;
             return this;
         }
 
@@ -380,7 +414,10 @@ public class DescribeGlobalDesktopsRequest extends Request {
         }
 
         /**
-         * LoginToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v147c9114a180489f89691663893169****</p>
          */
         public Builder loginToken(String loginToken) {
             this.putQueryParameter("LoginToken", loginToken);

@@ -1,31 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveEntityTagsRequest} extends {@link RequestModel}
  *
  * <p>RemoveEntityTagsRequest</p>
  */
 public class RemoveEntityTagsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("QualifiedName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QualifiedName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String qualifiedName;
 
-    @Body
-    @NameInMap("TagKeys")
-    @Validation(required = true)
-    private java.util.List < String > tagKeys;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TagKeys")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> tagKeys;
 
     private RemoveEntityTagsRequest(Builder builder) {
         super(builder);
@@ -64,14 +68,14 @@ public class RemoveEntityTagsRequest extends Request {
     /**
      * @return tagKeys
      */
-    public java.util.List < String > getTagKeys() {
+    public java.util.List<String> getTagKeys() {
         return this.tagKeys;
     }
 
     public static final class Builder extends Request.Builder<RemoveEntityTagsRequest, Builder> {
         private String regionId; 
         private String qualifiedName; 
-        private java.util.List < String > tagKeys; 
+        private java.util.List<String> tagKeys; 
 
         private Builder() {
             super();
@@ -85,7 +89,7 @@ public class RemoveEntityTagsRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -94,7 +98,11 @@ public class RemoveEntityTagsRequest extends Request {
         }
 
         /**
-         * QualifiedName.
+         * <p>The unique identifier of the entity. Example: maxcompute-table.projectA.tableA.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>maxcompute-table.projectA.tableA</p>
          */
         public Builder qualifiedName(String qualifiedName) {
             this.putQueryParameter("QualifiedName", qualifiedName);
@@ -103,9 +111,10 @@ public class RemoveEntityTagsRequest extends Request {
         }
 
         /**
-         * TagKeys.
+         * <p>The tag keys.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder tagKeys(java.util.List < String > tagKeys) {
+        public Builder tagKeys(java.util.List<String> tagKeys) {
             String tagKeysShrink = shrink(tagKeys, "TagKeys", "json");
             this.putBodyParameter("TagKeys", tagKeysShrink);
             this.tagKeys = tagKeys;

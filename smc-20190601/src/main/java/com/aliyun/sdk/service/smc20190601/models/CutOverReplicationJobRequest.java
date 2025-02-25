@@ -1,32 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.smc20190601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CutOverReplicationJobRequest} extends {@link RequestModel}
  *
  * <p>CutOverReplicationJobRequest</p>
  */
 public class CutOverReplicationJobRequest extends Request {
-    @Query
-    @NameInMap("JobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("SyncData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SyncData")
     private Boolean syncData;
 
     private CutOverReplicationJobRequest(Builder builder) {
@@ -88,16 +88,20 @@ public class CutOverReplicationJobRequest extends Request {
             super();
         } 
 
-        private Builder(CutOverReplicationJobRequest response) {
-            super(response);
-            this.jobId = response.jobId;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.syncData = response.syncData;
+        private Builder(CutOverReplicationJobRequest request) {
+            super(request);
+            this.jobId = request.jobId;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.syncData = request.syncData;
         } 
 
         /**
-         * JobId.
+         * <p>The ID of the incremental migration job.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>j-bp1fnx5y3djc4cop****</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -124,7 +128,15 @@ public class CutOverReplicationJobRequest extends Request {
         }
 
         /**
-         * SyncData.
+         * <p>Specifies whether to migrate full data for the last time. Valid Values:</p>
+         * <ul>
+         * <li>true: migrates full data for the last time.</li>
+         * <li>false: does not migrate full data for the last time.</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder syncData(Boolean syncData) {
             this.putQueryParameter("SyncData", syncData);

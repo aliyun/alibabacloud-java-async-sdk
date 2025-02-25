@@ -1,32 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.schedulerx220190430.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGroupsRequest} extends {@link RequestModel}
  *
  * <p>ListGroupsRequest</p>
  */
 public class ListGroupsRequest extends Request {
-    @Query
-    @NameInMap("AppGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppGroupName")
     private String appGroupName;
 
-    @Query
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @Query
-    @NameInMap("NamespaceSource")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespaceSource")
     private String namespaceSource;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private ListGroupsRequest(Builder builder) {
@@ -97,7 +97,10 @@ public class ListGroupsRequest extends Request {
         } 
 
         /**
-         * 应用分组名称。
+         * <p>The name of the application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k8s-test</p>
          */
         public Builder appGroupName(String appGroupName) {
             this.putQueryParameter("AppGroupName", appGroupName);
@@ -106,7 +109,11 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * The namespace ID. You can obtain the namespace ID on the **Namespace** page in the SchedulerX console.
+         * <p>The namespace ID. You can obtain the namespace ID on the <strong>Namespace</strong> page in the SchedulerX console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1a72ecb1-b4cc-400a-a71b-20cdec9b****</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -115,7 +122,10 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * The source of the namespace. This parameter is required only for a special third party.
+         * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>schedulerx</p>
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
@@ -124,7 +134,10 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

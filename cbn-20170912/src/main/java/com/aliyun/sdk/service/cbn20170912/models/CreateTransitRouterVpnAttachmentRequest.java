@@ -1,86 +1,90 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTransitRouterVpnAttachmentRequest} extends {@link RequestModel}
  *
  * <p>CreateTransitRouterVpnAttachmentRequest</p>
  */
 public class CreateTransitRouterVpnAttachmentRequest extends Request {
-    @Query
-    @NameInMap("AutoPublishRouteEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPublishRouteEnabled")
     private Boolean autoPublishRouteEnabled;
 
-    @Query
-    @NameInMap("CenId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CenId")
     private String cenId;
 
-    @Query
-    @NameInMap("ChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Query
-    @NameInMap("TransitRouterAttachmentDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentDescription")
     private String transitRouterAttachmentDescription;
 
-    @Query
-    @NameInMap("TransitRouterAttachmentName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentName")
     private String transitRouterAttachmentName;
 
-    @Query
-    @NameInMap("TransitRouterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterId")
     private String transitRouterId;
 
-    @Query
-    @NameInMap("VpnId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpnId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpnId;
 
-    @Query
-    @NameInMap("VpnOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpnOwnerId")
     private Long vpnOwnerId;
 
-    @Query
-    @NameInMap("Zone")
-    @Validation(required = true)
-    private java.util.List < Zone> zone;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Zone")
+    private java.util.List<Zone> zone;
 
     private CreateTransitRouterVpnAttachmentRequest(Builder builder) {
         super(builder);
@@ -189,7 +193,7 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -231,7 +235,7 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
     /**
      * @return zone
      */
-    public java.util.List < Zone> getZone() {
+    public java.util.List<Zone> getZone() {
         return this.zone;
     }
 
@@ -246,13 +250,13 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String transitRouterAttachmentDescription; 
         private String transitRouterAttachmentName; 
         private String transitRouterId; 
         private String vpnId; 
         private Long vpnOwnerId; 
-        private java.util.List < Zone> zone; 
+        private java.util.List<Zone> zone; 
 
         private Builder() {
             super();
@@ -280,11 +284,14 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
         } 
 
         /**
-         * Specifies whether to allow the transit router to automatically advertise routes to the IPsec-VPN attachment. Valid values:
-         * <p>
+         * <p>Specifies whether to allow the transit router to automatically advertise routes to the IPsec-VPN attachment. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong> (default): yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true** (default): yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPublishRouteEnabled(Boolean autoPublishRouteEnabled) {
             this.putQueryParameter("AutoPublishRouteEnabled", autoPublishRouteEnabled);
@@ -293,7 +300,10 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
         }
 
         /**
-         * The ID of the Cloud Enterprise Network (CEN) instance.
+         * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-rsgxs8ng2awen2****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -302,10 +312,11 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
         }
 
         /**
-         * The billing method.
-         * <p>
+         * <p>The billing method.</p>
+         * <p>Set the value to <strong>POSTPAY</strong>, which is the default value and specifies the pay-as-you-go billing method.</p>
          * 
-         * Set the value to **POSTPAY**, which is the default value and specifies the pay-as-you-go billing method.
+         * <strong>example:</strong>
+         * <p>POSTPAY</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -314,12 +325,14 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -328,11 +341,14 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. Valid values:
-         * <p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
+         * </ul>
          * 
-         * *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false** (default): performs a dry run and sends the request.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -359,10 +375,11 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
         }
 
         /**
-         * The ID of the region where the transit router is deployed.
-         * <p>
+         * <p>The ID of the region where the transit router is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -389,22 +406,21 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
         }
 
         /**
-         * The tags.
-         * <p>
-         * 
-         * You can specify at most 20 tags in each call.
+         * <p>The tags.</p>
+         * <p>You can specify at most 20 tags in each call.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The description of the VPN attachment.
-         * <p>
+         * <p>The description of the VPN attachment.</p>
+         * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>desctest</p>
          */
         public Builder transitRouterAttachmentDescription(String transitRouterAttachmentDescription) {
             this.putQueryParameter("TransitRouterAttachmentDescription", transitRouterAttachmentDescription);
@@ -413,10 +429,11 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
         }
 
         /**
-         * The name of the VPN attachment.
-         * <p>
+         * <p>The name of the VPN attachment.</p>
+         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter.</p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
+         * <strong>example:</strong>
+         * <p>nametest</p>
          */
         public Builder transitRouterAttachmentName(String transitRouterAttachmentName) {
             this.putQueryParameter("TransitRouterAttachmentName", transitRouterAttachmentName);
@@ -425,7 +442,10 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
         }
 
         /**
-         * The ID of the transit router.
+         * <p>The ID of the transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-p0wm740vjnbaprv0m****</p>
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);
@@ -434,7 +454,11 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
         }
 
         /**
-         * The ID of the IPsec-VPN attachment.
+         * <p>The ID of the IPsec-VPN attachment.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vco-p0w042cqwvlhl4zyw****</p>
          */
         public Builder vpnId(String vpnId) {
             this.putQueryParameter("VpnId", vpnId);
@@ -443,11 +467,14 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the IPsec-VPN connection belongs.
-         * <p>
+         * <p>The ID of the Alibaba Cloud account to which the IPsec-VPN connection belongs.</p>
+         * <ul>
+         * <li>If you do not set this parameter, the ID of the current Alibaba Cloud account is used.</li>
+         * <li>You must set VpnOwnerId if you want to connect the transit router to an IPsec-VPN connection that belongs to another Alibaba Cloud account.</li>
+         * </ul>
          * 
-         * *   If you do not set this parameter, the ID of the current Alibaba Cloud account is used.
-         * *   You must set VpnOwnerId if you want to connect the transit router to an IPsec-VPN connection that belongs to another Alibaba Cloud account.
+         * <strong>example:</strong>
+         * <p>1210123456123456</p>
          */
         public Builder vpnOwnerId(Long vpnOwnerId) {
             this.putQueryParameter("VpnOwnerId", vpnOwnerId);
@@ -456,12 +483,10 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
         }
 
         /**
-         * The ID of the zone in the current region.
-         * <p>
-         * 
-         * Resources are deployed in the specified zone.
+         * <p>The ID of the zone in the current region.</p>
+         * <p>Resources are deployed in the specified zone.</p>
          */
-        public Builder zone(java.util.List < Zone> zone) {
+        public Builder zone(java.util.List<Zone> zone) {
             this.putQueryParameter("Zone", zone);
             this.zone = zone;
             return this;
@@ -474,11 +499,17 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateTransitRouterVpnAttachmentRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTransitRouterVpnAttachmentRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -513,12 +544,12 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
-             * <p>
+             * <p>The tag key.</p>
+             * <p>The tag keys cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>You can specify at most 20 tag keys.</p>
              * 
-             * The tag keys cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
-             * 
-             * You can specify at most 20 tag keys.
+             * <strong>example:</strong>
+             * <p>TagKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -526,12 +557,12 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
             }
 
             /**
-             * The tag value.
-             * <p>
+             * <p>The tag value.</p>
+             * <p>The tag value can be 0 to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
              * 
-             * The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
-             * 
-             * Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.
+             * <strong>example:</strong>
+             * <p>TagValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -545,9 +576,14 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTransitRouterVpnAttachmentRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTransitRouterVpnAttachmentRequest</p>
+     */
     public static class Zone extends TeaModel {
-        @NameInMap("ZoneId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Zone(Builder builder) {
@@ -573,10 +609,11 @@ public class CreateTransitRouterVpnAttachmentRequest extends Request {
             private String zoneId; 
 
             /**
-             * The zone ID of the read-only instance.
-             * <p>
+             * <p>The zone ID of the read-only instance.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/261356.html">ListTransitRouterAvailableResource</a> operation to query the most recent zone list.</p>
              * 
-             * You can call the [ListTransitRouterAvailableResource](~~261356~~) operation to query the most recent zone list.
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

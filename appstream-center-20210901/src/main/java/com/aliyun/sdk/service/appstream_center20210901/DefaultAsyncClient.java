@@ -39,6 +39,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AccessPageSetAcl  AccessPageSetAclRequest
+     * @return AccessPageSetAclResponse
+     */
+    @Override
+    public CompletableFuture<AccessPageSetAclResponse> accessPageSetAcl(AccessPageSetAclRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AccessPageSetAcl").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AccessPageSetAclResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AccessPageSetAclResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ApproveOtaTask  ApproveOtaTaskRequest
+     * @return ApproveOtaTaskResponse
+     */
     @Override
     public CompletableFuture<ApproveOtaTaskResponse> approveOtaTask(ApproveOtaTaskRequest request) {
         try {
@@ -53,6 +75,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AskSessionPackagePrice  AskSessionPackagePriceRequest
+     * @return AskSessionPackagePriceResponse
+     */
+    @Override
+    public CompletableFuture<AskSessionPackagePriceResponse> askSessionPackagePrice(AskSessionPackagePriceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AskSessionPackagePrice").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AskSessionPackagePriceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AskSessionPackagePriceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of AuthorizeInstanceGroup  AuthorizeInstanceGroupRequest
+     * @return AuthorizeInstanceGroupResponse
+     */
     @Override
     public CompletableFuture<AuthorizeInstanceGroupResponse> authorizeInstanceGroup(AuthorizeInstanceGroupRequest request) {
         try {
@@ -67,20 +111,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BuySessionPackage  BuySessionPackageRequest
+     * @return BuySessionPackageResponse
+     */
     @Override
-    public CompletableFuture<CancelOtaTaskResponse> cancelOtaTask(CancelOtaTaskRequest request) {
+    public CompletableFuture<BuySessionPackageResponse> buySessionPackage(BuySessionPackageRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CancelOtaTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CancelOtaTaskResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("BuySessionPackage").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BuySessionPackageResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<CancelOtaTaskResponse> future = new CompletableFuture<>();
+            CompletableFuture<BuySessionPackageResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
+    /**
+     * @param request the request parameters of CreateAccessPage  CreateAccessPageRequest
+     * @return CreateAccessPageResponse
+     */
+    @Override
+    public CompletableFuture<CreateAccessPageResponse> createAccessPage(CreateAccessPageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateAccessPage").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAccessPageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateAccessPageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateAppInstanceGroup  CreateAppInstanceGroupRequest
+     * @return CreateAppInstanceGroupResponse
+     */
     @Override
     public CompletableFuture<CreateAppInstanceGroupResponse> createAppInstanceGroup(CreateAppInstanceGroupRequest request) {
         try {
@@ -95,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateImageFromAppInstanceGroup  CreateImageFromAppInstanceGroupRequest
+     * @return CreateImageFromAppInstanceGroupResponse
+     */
     @Override
     public CompletableFuture<CreateImageFromAppInstanceGroupResponse> createImageFromAppInstanceGroup(CreateImageFromAppInstanceGroupRequest request) {
         try {
@@ -109,6 +183,33 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteAccessPage  DeleteAccessPageRequest
+     * @return DeleteAccessPageResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAccessPageResponse> deleteAccessPage(DeleteAccessPageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteAccessPage").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAccessPageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAccessPageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You cannot call this operation to delete a subscription delivery group.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DeleteAppInstanceGroup  DeleteAppInstanceGroupRequest
+     * @return DeleteAppInstanceGroupResponse
+     */
     @Override
     public CompletableFuture<DeleteAppInstanceGroupResponse> deleteAppInstanceGroup(DeleteAppInstanceGroupRequest request) {
         try {
@@ -123,6 +224,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>Only application instances that are in the Initializing or Idle state can be deleted. The operation can be called only by specific customers.</p>
+     * 
+     * @param request the request parameters of DeleteAppInstances  DeleteAppInstancesRequest
+     * @return DeleteAppInstancesResponse
+     */
     @Override
     public CompletableFuture<DeleteAppInstancesResponse> deleteAppInstances(DeleteAppInstancesRequest request) {
         try {
@@ -137,6 +245,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAccessPageSession  GetAccessPageSessionRequest
+     * @return GetAccessPageSessionResponse
+     */
+    @Override
+    public CompletableFuture<GetAccessPageSessionResponse> getAccessPageSession(GetAccessPageSessionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetAccessPageSession").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAccessPageSessionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAccessPageSessionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetAppInstanceGroup  GetAppInstanceGroupRequest
+     * @return GetAppInstanceGroupResponse
+     */
     @Override
     public CompletableFuture<GetAppInstanceGroupResponse> getAppInstanceGroup(GetAppInstanceGroupRequest request) {
         try {
@@ -151,6 +281,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>You must call this operation at least twice to obtain a connection credential.
+     * The first time you call this operation, the system assigns an application instance to the specified convenience account and then starts the application. In this case, the ID of the started task, which is indicated by <code>TaskID</code>, is returned.
+     * In subsequent calls, you must configure <code>TaskID</code> to query whether the task is completed. If the value of <code>TaskStatus</code> in the response is <code>Finished</code>, the connection credential, which is indicated by <code>Ticket</code>, is returned.</p>
+     * 
+     * @param request the request parameters of GetConnectionTicket  GetConnectionTicketRequest
+     * @return GetConnectionTicketResponse
+     */
     @Override
     public CompletableFuture<GetConnectionTicketResponse> getConnectionTicket(GetConnectionTicketRequest request) {
         try {
@@ -165,6 +304,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDebugAppInstance  GetDebugAppInstanceRequest
+     * @return GetDebugAppInstanceResponse
+     */
     @Override
     public CompletableFuture<GetDebugAppInstanceResponse> getDebugAppInstance(GetDebugAppInstanceRequest request) {
         try {
@@ -179,6 +322,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetOtaTaskByTaskId  GetOtaTaskByTaskIdRequest
+     * @return GetOtaTaskByTaskIdResponse
+     */
     @Override
     public CompletableFuture<GetOtaTaskByTaskIdResponse> getOtaTaskByTaskId(GetOtaTaskByTaskIdRequest request) {
         try {
@@ -193,6 +340,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetResourcePrice  GetResourcePriceRequest
+     * @return GetResourcePriceResponse
+     */
     @Override
     public CompletableFuture<GetResourcePriceResponse> getResourcePrice(GetResourcePriceRequest request) {
         try {
@@ -207,6 +358,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetResourceRenewPrice  GetResourceRenewPriceRequest
+     * @return GetResourceRenewPriceResponse
+     */
     @Override
     public CompletableFuture<GetResourceRenewPriceResponse> getResourceRenewPrice(GetResourceRenewPriceRequest request) {
         try {
@@ -221,6 +376,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAccessPages  ListAccessPagesRequest
+     * @return ListAccessPagesResponse
+     */
+    @Override
+    public CompletableFuture<ListAccessPagesResponse> listAccessPages(ListAccessPagesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListAccessPages").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAccessPagesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAccessPagesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListAppInstanceGroup  ListAppInstanceGroupRequest
+     * @return ListAppInstanceGroupResponse
+     */
     @Override
     public CompletableFuture<ListAppInstanceGroupResponse> listAppInstanceGroup(ListAppInstanceGroupRequest request) {
         try {
@@ -235,6 +412,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAppInstances  ListAppInstancesRequest
+     * @return ListAppInstancesResponse
+     */
     @Override
     public CompletableFuture<ListAppInstancesResponse> listAppInstances(ListAppInstancesRequest request) {
         try {
@@ -249,6 +430,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListBindInfo  ListBindInfoRequest
+     * @return ListBindInfoResponse
+     */
+    @Override
+    public CompletableFuture<ListBindInfoResponse> listBindInfo(ListBindInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListBindInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListBindInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListBindInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListNodeInstanceType  ListNodeInstanceTypeRequest
+     * @return ListNodeInstanceTypeResponse
+     */
     @Override
     public CompletableFuture<ListNodeInstanceTypeResponse> listNodeInstanceType(ListNodeInstanceTypeRequest request) {
         try {
@@ -263,6 +466,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListOtaTask  ListOtaTaskRequest
+     * @return ListOtaTaskResponse
+     */
     @Override
     public CompletableFuture<ListOtaTaskResponse> listOtaTask(ListOtaTaskRequest request) {
         try {
@@ -277,6 +484,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> All supported regions instead of available regions are returned by this operation. For more information, see <a href="https://help.aliyun.com/document_detail/426036.html">Supported regions</a>.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of ListRegions  ListRegionsRequest
+     * @return ListRegionsResponse
+     */
     @Override
     public CompletableFuture<ListRegionsResponse> listRegions(ListRegionsRequest request) {
         try {
@@ -291,6 +507,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSessionPackages  ListSessionPackagesRequest
+     * @return ListSessionPackagesResponse
+     */
+    @Override
+    public CompletableFuture<ListSessionPackagesResponse> listSessionPackages(ListSessionPackagesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListSessionPackages").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListSessionPackagesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListSessionPackagesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListTenantConfig  ListTenantConfigRequest
+     * @return ListTenantConfigResponse
+     */
     @Override
     public CompletableFuture<ListTenantConfigResponse> listTenantConfig(ListTenantConfigRequest request) {
         try {
@@ -305,6 +543,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> This operation can be called only if you use a pay-as-you-go delivery group for which a scheduled scaling policy is used and if you call the operation at a time other than the scheduled time.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of LogOffAllSessionsInAppInstanceGroup  LogOffAllSessionsInAppInstanceGroupRequest
+     * @return LogOffAllSessionsInAppInstanceGroupResponse
+     */
     @Override
     public CompletableFuture<LogOffAllSessionsInAppInstanceGroupResponse> logOffAllSessionsInAppInstanceGroup(LogOffAllSessionsInAppInstanceGroupRequest request) {
         try {
@@ -319,6 +566,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyAppInstanceGroupAttribute  ModifyAppInstanceGroupAttributeRequest
+     * @return ModifyAppInstanceGroupAttributeResponse
+     */
     @Override
     public CompletableFuture<ModifyAppInstanceGroupAttributeResponse> modifyAppInstanceGroupAttribute(ModifyAppInstanceGroupAttributeRequest request) {
         try {
@@ -333,6 +584,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyAppPolicy  ModifyAppPolicyRequest
+     * @return ModifyAppPolicyResponse
+     */
+    @Override
+    public CompletableFuture<ModifyAppPolicyResponse> modifyAppPolicy(ModifyAppPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyAppPolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyAppPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyAppPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyNodePoolAttribute  ModifyNodePoolAttributeRequest
+     * @return ModifyNodePoolAttributeResponse
+     */
     @Override
     public CompletableFuture<ModifyNodePoolAttributeResponse> modifyNodePoolAttribute(ModifyNodePoolAttributeRequest request) {
         try {
@@ -347,6 +620,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyTenantConfig  ModifyTenantConfigRequest
+     * @return ModifyTenantConfigResponse
+     */
     @Override
     public CompletableFuture<ModifyTenantConfigResponse> modifyTenantConfig(ModifyTenantConfigRequest request) {
         try {
@@ -361,6 +638,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PageListAppInstanceGroupUser  PageListAppInstanceGroupUserRequest
+     * @return PageListAppInstanceGroupUserResponse
+     */
     @Override
     public CompletableFuture<PageListAppInstanceGroupUserResponse> pageListAppInstanceGroupUser(PageListAppInstanceGroupUserRequest request) {
         try {
@@ -375,6 +656,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing methods and prices</a> of App Streaming.</p>
+     * 
+     * @param request the request parameters of RenewAppInstanceGroup  RenewAppInstanceGroupRequest
+     * @return RenewAppInstanceGroupResponse
+     */
     @Override
     public CompletableFuture<RenewAppInstanceGroupResponse> renewAppInstanceGroup(RenewAppInstanceGroupRequest request) {
         try {
@@ -389,6 +677,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of Unbind  UnbindRequest
+     * @return UnbindResponse
+     */
     @Override
     public CompletableFuture<UnbindResponse> unbind(UnbindRequest request) {
         try {
@@ -403,6 +695,18 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><strong>Warning</strong> After the image is updated, the end user session accessing the cloud application will be disconnected. Exercise caution to avoid end user data loss.<blockquote>
+     * <p> After the image of the delivery group is updated, the change takes effect on the terminal in approximately 2 minutes.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of UpdateAppInstanceGroupImage  UpdateAppInstanceGroupImageRequest
+     * @return UpdateAppInstanceGroupImageResponse
+     */
     @Override
     public CompletableFuture<UpdateAppInstanceGroupImageResponse> updateAppInstanceGroupImage(UpdateAppInstanceGroupImageRequest request) {
         try {

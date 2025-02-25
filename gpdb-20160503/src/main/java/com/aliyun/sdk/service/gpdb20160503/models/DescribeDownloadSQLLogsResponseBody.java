@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDownloadSQLLogsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDownloadSQLLogsResponseBody</p>
  */
 public class DescribeDownloadSQLLogsResponseBody extends TeaModel {
-    @NameInMap("Records")
-    private java.util.List < Records> records;
+    @com.aliyun.core.annotation.NameInMap("Records")
+    private java.util.List<Records> records;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDownloadSQLLogsResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeDownloadSQLLogsResponseBody extends TeaModel {
     /**
      * @return records
      */
-    public java.util.List < Records> getRecords() {
+    public java.util.List<Records> getRecords() {
         return this.records;
     }
 
@@ -46,19 +51,22 @@ public class DescribeDownloadSQLLogsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Records> records; 
+        private java.util.List<Records> records; 
         private String requestId; 
 
         /**
-         * The URL that is used to download the file.
+         * <p>List of download records.</p>
          */
-        public Builder records(java.util.List < Records> records) {
+        public Builder records(java.util.List<Records> records) {
             this.records = records;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FDE9942A-D919-527B-B559-5D0F6F20CCEC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +79,26 @@ public class DescribeDownloadSQLLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDownloadSQLLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDownloadSQLLogsResponseBody</p>
+     */
     public static class Records extends TeaModel {
-        @NameInMap("DownloadId")
+        @com.aliyun.core.annotation.NameInMap("DownloadId")
         private Long downloadId;
 
-        @NameInMap("DownloadUrl")
+        @com.aliyun.core.annotation.NameInMap("DownloadUrl")
         private String downloadUrl;
 
-        @NameInMap("ExceptionMsg")
+        @com.aliyun.core.annotation.NameInMap("ExceptionMsg")
         private String exceptionMsg;
 
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Records(Builder builder) {
@@ -146,7 +160,10 @@ public class DescribeDownloadSQLLogsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * DownloadId.
+             * <p>Download record ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1150</p>
              */
             public Builder downloadId(Long downloadId) {
                 this.downloadId = downloadId;
@@ -154,7 +171,10 @@ public class DescribeDownloadSQLLogsResponseBody extends TeaModel {
             }
 
             /**
-             * DownloadUrl.
+             * <p>Download link.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://perth-download-task.oss-cn-beijing.aliyuncs.com/">https://perth-download-task.oss-cn-beijing.aliyuncs.com/</a>*****</p>
              */
             public Builder downloadUrl(String downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -162,7 +182,10 @@ public class DescribeDownloadSQLLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ExceptionMsg.
+             * <p>Error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Error message</p>
              */
             public Builder exceptionMsg(String exceptionMsg) {
                 this.exceptionMsg = exceptionMsg;
@@ -170,7 +193,10 @@ public class DescribeDownloadSQLLogsResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>File name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20220509113448-20220509173448.csv</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -178,7 +204,15 @@ public class DescribeDownloadSQLLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Task status, with possible values being:</p>
+             * <ul>
+             * <li><strong>running</strong>: Downloading.</li>
+             * <li><strong>finished</strong>: Completed.</li>
+             * <li><strong>failed</strong>: Download failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>finished</p>
              */
             public Builder status(String status) {
                 this.status = status;

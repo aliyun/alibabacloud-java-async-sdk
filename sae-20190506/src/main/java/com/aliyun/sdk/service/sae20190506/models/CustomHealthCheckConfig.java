@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CustomHealthCheckConfig} extends {@link TeaModel}
  *
  * <p>CustomHealthCheckConfig</p>
  */
 public class CustomHealthCheckConfig extends TeaModel {
-    @NameInMap("failureThreshold")
+    @com.aliyun.core.annotation.NameInMap("failureThreshold")
     private Integer failureThreshold;
 
-    @NameInMap("httpGetUrl")
+    @com.aliyun.core.annotation.NameInMap("httpGetUrl")
     private String httpGetUrl;
 
-    @NameInMap("initialDelaySeconds")
+    @com.aliyun.core.annotation.NameInMap("initialDelaySeconds")
     private Integer initialDelaySeconds;
 
-    @NameInMap("periodSeconds")
+    @com.aliyun.core.annotation.NameInMap("periodSeconds")
     private Integer periodSeconds;
 
-    @NameInMap("successThreshold")
+    @com.aliyun.core.annotation.NameInMap("successThreshold")
     private Integer successThreshold;
 
-    @NameInMap("timeoutSeconds")
+    @com.aliyun.core.annotation.NameInMap("timeoutSeconds")
     private Integer timeoutSeconds;
 
     private CustomHealthCheckConfig(Builder builder) {

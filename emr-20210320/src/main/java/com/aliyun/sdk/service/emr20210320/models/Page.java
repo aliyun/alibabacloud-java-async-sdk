@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Page} extends {@link TeaModel}
  *
  * <p>Page</p>
  */
 public class Page extends TeaModel {
-    @NameInMap("Items")
-    private java.util.List < String > items;
+    @com.aliyun.core.annotation.NameInMap("Items")
+    private java.util.List<String> items;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Long maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private Page(Builder builder) {
@@ -42,7 +47,7 @@ public class Page extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < String > getItems() {
+    public java.util.List<String> getItems() {
         return this.items;
     }
 
@@ -68,7 +73,7 @@ public class Page extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > items; 
+        private java.util.List<String> items; 
         private Long maxResults; 
         private String nextToken; 
         private Long totalCount; 
@@ -76,7 +81,7 @@ public class Page extends TeaModel {
         /**
          * Items.
          */
-        public Builder items(java.util.List < String > items) {
+        public Builder items(java.util.List<String> items) {
             this.items = items;
             return this;
         }

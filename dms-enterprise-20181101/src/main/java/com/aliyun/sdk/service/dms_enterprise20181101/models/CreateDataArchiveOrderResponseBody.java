@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDataArchiveOrderResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDataArchiveOrderResponseBody</p>
  */
 public class CreateDataArchiveOrderResponseBody extends TeaModel {
-    @NameInMap("CreateOrderResult")
-    private java.util.List < Long > createOrderResult;
+    @com.aliyun.core.annotation.NameInMap("CreateOrderResult")
+    private java.util.List<Long> createOrderResult;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateDataArchiveOrderResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class CreateDataArchiveOrderResponseBody extends TeaModel {
     /**
      * @return createOrderResult
      */
-    public java.util.List < Long > getCreateOrderResult() {
+    public java.util.List<Long> getCreateOrderResult() {
         return this.createOrderResult;
     }
 
@@ -79,22 +84,25 @@ public class CreateDataArchiveOrderResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Long > createOrderResult; 
+        private java.util.List<Long> createOrderResult; 
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * The data archiving ticket IDs.
+         * <p>The ID of the data archiving ticket.</p>
          */
-        public Builder createOrderResult(java.util.List < Long > createOrderResult) {
+        public Builder createOrderResult(java.util.List<Long> createOrderResult) {
             this.createOrderResult = createOrderResult;
             return this;
         }
 
         /**
-         * Error code
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +110,10 @@ public class CreateDataArchiveOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +121,10 @@ public class CreateDataArchiveOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to query logs and troubleshoot issues.
+         * <p>The ID of the request, which is used to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>283C461F-11D8-48AA-B695-DF092DA32AF3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +132,14 @@ public class CreateDataArchiveOrderResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

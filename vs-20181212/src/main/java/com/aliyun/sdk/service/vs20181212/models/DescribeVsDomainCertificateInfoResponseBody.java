@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVsDomainCertificateInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVsDomainCertificateInfoResponseBody</p>
  */
 public class DescribeVsDomainCertificateInfoResponseBody extends TeaModel {
-    @NameInMap("CertInfos")
+    @com.aliyun.core.annotation.NameInMap("CertInfos")
     private CertInfos certInfos;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeVsDomainCertificateInfoResponseBody(Builder builder) {
@@ -71,35 +76,41 @@ public class DescribeVsDomainCertificateInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVsDomainCertificateInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVsDomainCertificateInfoResponseBody</p>
+     */
     public static class CertInfo extends TeaModel {
-        @NameInMap("CertDomainName")
+        @com.aliyun.core.annotation.NameInMap("CertDomainName")
         private String certDomainName;
 
-        @NameInMap("CertExpireTime")
+        @com.aliyun.core.annotation.NameInMap("CertExpireTime")
         private String certExpireTime;
 
-        @NameInMap("CertLife")
+        @com.aliyun.core.annotation.NameInMap("CertLife")
         private String certLife;
 
-        @NameInMap("CertName")
+        @com.aliyun.core.annotation.NameInMap("CertName")
         private String certName;
 
-        @NameInMap("CertOrg")
+        @com.aliyun.core.annotation.NameInMap("CertOrg")
         private String certOrg;
 
-        @NameInMap("CertType")
+        @com.aliyun.core.annotation.NameInMap("CertType")
         private String certType;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("SSLPub")
+        @com.aliyun.core.annotation.NameInMap("SSLPub")
         private String SSLPub;
 
-        @NameInMap("ServerCertificateStatus")
+        @com.aliyun.core.annotation.NameInMap("ServerCertificateStatus")
         private String serverCertificateStatus;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private CertInfo(Builder builder) {
@@ -292,9 +303,15 @@ public class DescribeVsDomainCertificateInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVsDomainCertificateInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVsDomainCertificateInfoResponseBody</p>
+     */
     public static class CertInfos extends TeaModel {
-        @NameInMap("CertInfo")
-        private java.util.List < CertInfo> certInfo;
+        @com.aliyun.core.annotation.NameInMap("CertInfo")
+        private java.util.List<CertInfo> certInfo;
 
         private CertInfos(Builder builder) {
             this.certInfo = builder.certInfo;
@@ -311,17 +328,17 @@ public class DescribeVsDomainCertificateInfoResponseBody extends TeaModel {
         /**
          * @return certInfo
          */
-        public java.util.List < CertInfo> getCertInfo() {
+        public java.util.List<CertInfo> getCertInfo() {
             return this.certInfo;
         }
 
         public static final class Builder {
-            private java.util.List < CertInfo> certInfo; 
+            private java.util.List<CertInfo> certInfo; 
 
             /**
              * CertInfo.
              */
-            public Builder certInfo(java.util.List < CertInfo> certInfo) {
+            public Builder certInfo(java.util.List<CertInfo> certInfo) {
                 this.certInfo = certInfo;
                 return this;
             }

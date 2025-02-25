@@ -77,11 +77,11 @@ public class StartFlowRequest extends Request {
             super();
         } 
 
-        private Builder(StartFlowRequest response) {
-            super(response);
-            this.flowInstanceId = response.flowInstanceId;
-            this.projectId = response.projectId;
-            this.regionId = response.regionId;
+        private Builder(StartFlowRequest request) {
+            super(request);
+            this.flowInstanceId = request.flowInstanceId;
+            this.projectId = request.projectId;
+            this.regionId = request.regionId;
         } 
 
         /**

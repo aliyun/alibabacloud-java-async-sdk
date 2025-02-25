@@ -1,18 +1,18 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DettachAssetGroupToInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>DettachAssetGroupToInstanceResponseBody</p>
  */
 public class DettachAssetGroupToInstanceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DettachAssetGroupToInstanceResponseBody(Builder builder) {
@@ -38,7 +38,10 @@ public class DettachAssetGroupToInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E54BA258-9DE8-59BE-B7A8-DAD28E6E8DAF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

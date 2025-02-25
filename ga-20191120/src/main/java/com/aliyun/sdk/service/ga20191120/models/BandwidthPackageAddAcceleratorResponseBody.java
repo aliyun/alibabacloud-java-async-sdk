@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BandwidthPackageAddAcceleratorResponseBody</p>
  */
 public class BandwidthPackageAddAcceleratorResponseBody extends TeaModel {
-    @NameInMap("Accelerators")
+    @com.aliyun.core.annotation.NameInMap("Accelerators")
     private java.util.List < String > accelerators;
 
-    @NameInMap("BandwidthPackageId")
+    @com.aliyun.core.annotation.NameInMap("BandwidthPackageId")
     private String bandwidthPackageId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private BandwidthPackageAddAcceleratorResponseBody(Builder builder) {

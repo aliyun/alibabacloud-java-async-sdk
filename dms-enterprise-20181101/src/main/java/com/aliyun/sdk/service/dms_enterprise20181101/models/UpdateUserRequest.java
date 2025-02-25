@@ -1,48 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateUserRequest} extends {@link RequestModel}
  *
  * <p>UpdateUserRequest</p>
  */
 public class UpdateUserRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("MaxExecuteCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxExecuteCount")
     private Long maxExecuteCount;
 
-    @Query
-    @NameInMap("MaxResultCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResultCount")
     private Long maxResultCount;
 
-    @Query
-    @NameInMap("Mobile")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mobile")
     private String mobile;
 
-    @Query
-    @NameInMap("RoleNames")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleNames")
     private String roleNames;
 
-    @Query
-    @NameInMap("Tid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tid")
     private Long tid;
 
-    @Query
-    @NameInMap("Uid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long uid;
 
-    @Query
-    @NameInMap("UserNick")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UidString")
+    private String uidString;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserNick")
     private String userNick;
 
     private UpdateUserRequest(Builder builder) {
@@ -54,6 +63,7 @@ public class UpdateUserRequest extends Request {
         this.roleNames = builder.roleNames;
         this.tid = builder.tid;
         this.uid = builder.uid;
+        this.uidString = builder.uidString;
         this.userNick = builder.userNick;
     }
 
@@ -120,6 +130,13 @@ public class UpdateUserRequest extends Request {
     }
 
     /**
+     * @return uidString
+     */
+    public String getUidString() {
+        return this.uidString;
+    }
+
+    /**
      * @return userNick
      */
     public String getUserNick() {
@@ -134,6 +151,7 @@ public class UpdateUserRequest extends Request {
         private String roleNames; 
         private Long tid; 
         private Long uid; 
+        private String uidString; 
         private String userNick; 
 
         private Builder() {
@@ -149,6 +167,7 @@ public class UpdateUserRequest extends Request {
             this.roleNames = request.roleNames;
             this.tid = request.tid;
             this.uid = request.uid;
+            this.uidString = request.uidString;
             this.userNick = request.userNick;
         } 
 
@@ -162,7 +181,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The maximum number of queries that can be performed each day.
+         * <p>The maximum number of queries that can be performed each day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxExecuteCount(Long maxExecuteCount) {
             this.putQueryParameter("MaxExecuteCount", maxExecuteCount);
@@ -171,7 +193,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The maximum number of rows that can be queried each day.
+         * <p>The maximum number of rows that can be queried each day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxResultCount(Long maxResultCount) {
             this.putQueryParameter("MaxResultCount", maxResultCount);
@@ -180,7 +205,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The DingTalk ID or mobile number of the user.
+         * <p>The DingTalk ID or mobile number of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>188xxxxxxxx</p>
          */
         public Builder mobile(String mobile) {
             this.putQueryParameter("Mobile", mobile);
@@ -189,7 +217,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The roles that the user assumes. For more information about the valid values, see the Request parameters section in the [UpdateUser](~~465812~~) topic.
+         * <p>The roles that the user assumes. For more information about the valid values, see the Request parameters section in the <a href="https://help.aliyun.com/document_detail/465812.html">UpdateUser</a> topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ADMIN,DBA</p>
          */
         public Builder roleNames(String roleNames) {
             this.putQueryParameter("RoleNames", roleNames);
@@ -198,10 +229,13 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p>: To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a>.</p>
+         * </blockquote>
          * 
-         * > : To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [Manage DMS tenants](~~181330~~).
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -210,7 +244,11 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud unique ID (UID) of the user to update.
+         * <p>The Alibaba Cloud unique ID (UID) of the user to update.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
          */
         public Builder uid(Long uid) {
             this.putQueryParameter("Uid", uid);
@@ -219,7 +257,19 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The nickname of the user.
+         * UidString.
+         */
+        public Builder uidString(String uidString) {
+            this.putQueryParameter("UidString", uidString);
+            this.uidString = uidString;
+            return this;
+        }
+
+        /**
+         * <p>The nickname of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder userNick(String userNick) {
             this.putQueryParameter("UserNick", userNick);

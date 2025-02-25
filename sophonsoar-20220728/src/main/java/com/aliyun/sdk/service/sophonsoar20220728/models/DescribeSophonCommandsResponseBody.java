@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSophonCommandsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSophonCommandsResponseBody</p>
  */
 public class DescribeSophonCommandsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeSophonCommandsResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>The commands.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -58,7 +58,10 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1E1EC464-3BD7-518F-9937-BCC12E6855FE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,17 +74,23 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSophonCommandsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSophonCommandsResponseBody</p>
+     */
     public static class ParamConfig extends TeaModel {
-        @NameInMap("CheckField")
+        @com.aliyun.core.annotation.NameInMap("CheckField")
         private String checkField;
 
-        @NameInMap("Field")
+        @com.aliyun.core.annotation.NameInMap("Field")
         private String field;
 
-        @NameInMap("Necessary")
+        @com.aliyun.core.annotation.NameInMap("Necessary")
         private Boolean necessary;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private ParamConfig(Builder builder) {
@@ -134,7 +143,10 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * CheckField.
+             * <p>The regular expression that is used to check the format of the parameter value. If the parameter is left empty, the check is not performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[0-9]{4}.[0-9]{4}.[0-9]{4}.[0-9]{4}</p>
              */
             public Builder checkField(String checkField) {
                 this.checkField = checkField;
@@ -142,7 +154,10 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * Field.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ip</p>
              */
             public Builder field(String field) {
                 this.field = field;
@@ -150,7 +165,14 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * Necessary.
+             * <p>Indicates whether the parameter is required. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong> (default)</li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder necessary(Boolean necessary) {
                 this.necessary = necessary;
@@ -158,7 +180,10 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12.xx.xx.xx</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -172,17 +197,23 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSophonCommandsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSophonCommandsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ParamConfig")
+        @com.aliyun.core.annotation.NameInMap("ParamConfig")
         private java.util.List < ParamConfig> paramConfig;
 
         private Data(Builder builder) {
@@ -235,7 +266,10 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
             private java.util.List < ParamConfig> paramConfig; 
 
             /**
-             * Description.
+             * <p>The description of the command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a action of processing for WAF</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -243,7 +277,10 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name of the command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WAF Process IP</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -251,7 +288,10 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>waf_process_ip_v2</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -259,7 +299,7 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * ParamConfig.
+             * <p>The parameter configurations.</p>
              */
             public Builder paramConfig(java.util.List < ParamConfig> paramConfig) {
                 this.paramConfig = paramConfig;

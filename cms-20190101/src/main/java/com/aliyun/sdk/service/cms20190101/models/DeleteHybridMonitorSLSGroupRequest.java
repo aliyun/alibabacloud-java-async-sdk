@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteHybridMonitorSLSGroupRequest} extends {@link RequestModel}
  *
  * <p>DeleteHybridMonitorSLSGroupRequest</p>
  */
 public class DeleteHybridMonitorSLSGroupRequest extends Request {
-    @Query
-    @NameInMap("SLSGroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SLSGroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String SLSGroupName;
 
     private DeleteHybridMonitorSLSGroupRequest(Builder builder) {
@@ -55,10 +55,12 @@ public class DeleteHybridMonitorSLSGroupRequest extends Request {
         } 
 
         /**
-         * The name of the Logstore group.
-         * <p>
+         * <p>The name of the Logstore group.</p>
+         * <p>For information about how to obtain the name of a Logstore group, see <a href="https://help.aliyun.com/document_detail/429526.html">DescribeHybridMonitorSLSGroup</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For information about how to obtain the name of a Logstore group, see [DescribeHybridMonitorSLSGroup](~~429526~~).
+         * <strong>example:</strong>
+         * <p>Logstore_test</p>
          */
         public Builder SLSGroupName(String SLSGroupName) {
             this.putQueryParameter("SLSGroupName", SLSGroupName);

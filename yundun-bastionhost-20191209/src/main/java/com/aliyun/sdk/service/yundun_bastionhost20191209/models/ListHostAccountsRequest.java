@@ -1,45 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHostAccountsRequest} extends {@link RequestModel}
  *
  * <p>ListHostAccountsRequest</p>
  */
 public class ListHostAccountsRequest extends Request {
-    @Query
-    @NameInMap("HostAccountName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostAccountName")
     private String hostAccountName;
 
-    @Query
-    @NameInMap("HostId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hostId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @Query
-    @NameInMap("ProtocolName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProtocolName")
     private String protocolName;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private ListHostAccountsRequest(Builder builder) {
@@ -140,13 +140,10 @@ public class ListHostAccountsRequest extends Request {
         } 
 
         /**
-         * Indicates whether a password is configured for the host account.
-         * <p>
+         * <p>The name of the host account that you want to query. The name can be up to 128 characters in length. Only exact match is supported.</p>
          * 
-         * Valid values:
-         * 
-         * *   true: A password is configured for the host account.
-         * *   false: No passwords are configured for the host account.
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder hostAccountName(String hostAccountName) {
             this.putQueryParameter("HostAccountName", hostAccountName);
@@ -155,13 +152,14 @@ public class ListHostAccountsRequest extends Request {
         }
 
         /**
-         * The protocol used by the host whose accounts you want to query.
-         * <p>
+         * <p>The ID of the specified host whose accounts you want to query.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query the ID of the host.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   SSH
-         * *   RDP
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder hostId(String hostId) {
             this.putQueryParameter("HostId", hostId);
@@ -170,7 +168,14 @@ public class ListHostAccountsRequest extends Request {
         }
 
         /**
-         * The ID of the shared key.
+         * <p>The ID of the bastion host in which you want to query accounts of the specified host.</p>
+         * <blockquote>
+         * <p> You can call the DescribeInstances operation to query the ID of the bastion host.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-st220aw****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -179,10 +184,10 @@ public class ListHostAccountsRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform.
-         * <p>
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
          * 
-         * Set the value to **ListHostAccounts**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -191,12 +196,14 @@ public class ListHostAccountsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <blockquote>
+         * <p> We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
          * 
-         * Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
-         * 
-         * >  We recommend that you do not leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -205,7 +212,15 @@ public class ListHostAccountsRequest extends Request {
         }
 
         /**
-         * The name of the host account that you want to query. The name can be up to 128 characters in length. Only exact match is supported.
+         * <p>The protocol used by the host whose accounts you want to query.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>SSH</li>
+         * <li>RDP</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SSH</p>
          */
         public Builder protocolName(String protocolName) {
             this.putQueryParameter("ProtocolName", protocolName);
@@ -214,10 +229,13 @@ public class ListHostAccountsRequest extends Request {
         }
 
         /**
-         * The ID of the specified host whose accounts you want to query.
-         * <p>
+         * <p>The region ID of the bastion host in which you want to query accounts of the specified host.</p>
+         * <blockquote>
+         * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
          * 
-         * >  You can call the [ListHosts](~~200665~~) operation to query the ID of the host.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

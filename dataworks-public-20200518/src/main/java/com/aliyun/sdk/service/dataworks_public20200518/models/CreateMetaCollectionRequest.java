@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMetaCollectionRequest} extends {@link RequestModel}
  *
  * <p>CreateMetaCollectionRequest</p>
  */
 public class CreateMetaCollectionRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("CollectionType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CollectionType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String collectionType;
 
-    @Query
-    @NameInMap("Comment")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comment")
     private String comment;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("ParentQualifiedName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentQualifiedName")
     private String parentQualifiedName;
 
     private CreateMetaCollectionRequest(Builder builder) {
@@ -121,7 +126,11 @@ public class CreateMetaCollectionRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The type of the collection.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALBUM</p>
          */
         public Builder collectionType(String collectionType) {
             this.putQueryParameter("CollectionType", collectionType);
@@ -130,7 +139,10 @@ public class CreateMetaCollectionRequest extends Request {
         }
 
         /**
-         * The unique identifier of the parent collection.
+         * <p>The comment of the collection. The comment must be 1 to 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a comment</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -139,10 +151,11 @@ public class CreateMetaCollectionRequest extends Request {
         }
 
         /**
-         * The comment of the collection.
-         * <p>
+         * <p>The name of the collection. The name must be 1 to 32 characters in length.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The comment must be 1 to 64 characters in length.
+         * <strong>example:</strong>
+         * <p>collection_name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -151,7 +164,10 @@ public class CreateMetaCollectionRequest extends Request {
         }
 
         /**
-         * The type of the collection.
+         * <p>The unique identifier of the parent collection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>album.333508</p>
          */
         public Builder parentQualifiedName(String parentQualifiedName) {
             this.putQueryParameter("ParentQualifiedName", parentQualifiedName);

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RegisterMediaResponseBody} extends {@link TeaModel}
  *
  * <p>RegisterMediaResponseBody</p>
  */
 public class RegisterMediaResponseBody extends TeaModel {
-    @NameInMap("FailedFileURLs")
-    private java.util.List < String > failedFileURLs;
+    @com.aliyun.core.annotation.NameInMap("FailedFileURLs")
+    private java.util.List<String> failedFileURLs;
 
-    @NameInMap("RegisteredMediaList")
-    private java.util.List < RegisteredMediaList> registeredMediaList;
+    @com.aliyun.core.annotation.NameInMap("RegisteredMediaList")
+    private java.util.List<RegisteredMediaList> registeredMediaList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private RegisterMediaResponseBody(Builder builder) {
@@ -38,14 +43,14 @@ public class RegisterMediaResponseBody extends TeaModel {
     /**
      * @return failedFileURLs
      */
-    public java.util.List < String > getFailedFileURLs() {
+    public java.util.List<String> getFailedFileURLs() {
         return this.failedFileURLs;
     }
 
     /**
      * @return registeredMediaList
      */
-    public java.util.List < RegisteredMediaList> getRegisteredMediaList() {
+    public java.util.List<RegisteredMediaList> getRegisteredMediaList() {
         return this.registeredMediaList;
     }
 
@@ -57,28 +62,31 @@ public class RegisterMediaResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > failedFileURLs; 
-        private java.util.List < RegisteredMediaList> registeredMediaList; 
+        private java.util.List<String> failedFileURLs; 
+        private java.util.List<RegisteredMediaList> registeredMediaList; 
         private String requestId; 
 
         /**
-         * The URLs of the media files that failed to be registered.
+         * <p>The URLs of the media files that failed to be registered.</p>
          */
-        public Builder failedFileURLs(java.util.List < String > failedFileURLs) {
+        public Builder failedFileURLs(java.util.List<String> failedFileURLs) {
             this.failedFileURLs = failedFileURLs;
             return this;
         }
 
         /**
-         * The media files that are registered, including newly registered and repeatedly registered media files.
+         * <p>The media files that are registered, including newly registered and repeatedly registered media files.</p>
          */
-        public Builder registeredMediaList(java.util.List < RegisteredMediaList> registeredMediaList) {
+        public Builder registeredMediaList(java.util.List<RegisteredMediaList> registeredMediaList) {
             this.registeredMediaList = registeredMediaList;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14F43C5C-8033-448B-AD04F64E5098****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,14 +99,20 @@ public class RegisterMediaResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RegisterMediaResponseBody} extends {@link TeaModel}
+     *
+     * <p>RegisterMediaResponseBody</p>
+     */
     public static class RegisteredMediaList extends TeaModel {
-        @NameInMap("FileURL")
+        @com.aliyun.core.annotation.NameInMap("FileURL")
         private String fileURL;
 
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
-        @NameInMap("NewRegister")
+        @com.aliyun.core.annotation.NameInMap("NewRegister")
         private Boolean newRegister;
 
         private RegisteredMediaList(Builder builder) {
@@ -142,7 +156,10 @@ public class RegisterMediaResponseBody extends TeaModel {
             private Boolean newRegister; 
 
             /**
-             * The OSS URL of the media file.
+             * <p>The URL of the media file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http://****.oss-cn-shanghai.aliyuncs.com/vod_sample_01.mp4</p>
              */
             public Builder fileURL(String fileURL) {
                 this.fileURL = fileURL;
@@ -150,7 +167,10 @@ public class RegisterMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the media file that is registered with ApsaraVideo VOD. If the registered media file is an audio or video file, the value of the VideoId parameter returned by ApsaraVideo VOD takes effect.
+             * <p>The ID of the media file that is registered with ApsaraVideo VOD. If the registered media file is an audio or video file, the value of this parameter is the same as that of the VideoId parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d97af32828084d1896683b1aa38****</p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -158,10 +178,14 @@ public class RegisterMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the media file is newly registered or repeatedly registered. Valid values:  
-             * <p>
-             * - **true**: The media file is newly registered.
-             * - **false**: The media file is repeatedly registered.
+             * <p>Indicates whether the media file is newly registered or repeatedly registered. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The media file is newly registered.</li>
+             * <li><strong>false</strong>: The media file is repeatedly registered.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder newRegister(Boolean newRegister) {
                 this.newRegister = newRegister;

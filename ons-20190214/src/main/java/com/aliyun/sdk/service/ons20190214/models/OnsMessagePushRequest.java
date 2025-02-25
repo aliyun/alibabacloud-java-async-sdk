@@ -1,39 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OnsMessagePushRequest} extends {@link RequestModel}
  *
  * <p>OnsMessagePushRequest</p>
  */
 public class OnsMessagePushRequest extends Request {
-    @Query
-    @NameInMap("ClientId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientId;
 
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("MsgId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MsgId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String msgId;
 
-    @Query
-    @NameInMap("Topic")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Topic")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String topic;
 
     private OnsMessagePushRequest(Builder builder) {
@@ -114,7 +114,11 @@ public class OnsMessagePushRequest extends Request {
         } 
 
         /**
-         * The ID of the consumer. You can call the [OnsConsumerGetConnection](~~29598~~) operation to query the ID of each consumer in a consumer group.
+         * <p>The ID of the consumer client. You can call the <a href="https://help.aliyun.com/document_detail/29598.html">OnsConsumerGetConnection</a> operation to query client IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30.5.121.**@24813#-1999745829#-1737591554#453111174894656</p>
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);
@@ -123,7 +127,11 @@ public class OnsMessagePushRequest extends Request {
         }
 
         /**
-         * The ID of the consumer group. For information about what a consumer group is, see [Terms](~~29533~~).
+         * <p>The ID of the consumer group. For information about what a consumer group is, see <a href="https://help.aliyun.com/document_detail/29533.html">Terms</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID_test_group_id</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -132,7 +140,10 @@ public class OnsMessagePushRequest extends Request {
         }
 
         /**
-         * The ID of the Message Queue for Apache RocketMQ instance to which the specified consumer group belongs.
+         * <p>The ID of the ApsaraMQ for RocketMQ instance to which the specified consumer group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MQ_INST_111111111111_DOxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -141,7 +152,11 @@ public class OnsMessagePushRequest extends Request {
         }
 
         /**
-         * The ID of the message.
+         * <p>The ID of the message.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0BC1669963053CF68F733BB70396****</p>
          */
         public Builder msgId(String msgId) {
             this.putQueryParameter("MsgId", msgId);
@@ -150,7 +165,11 @@ public class OnsMessagePushRequest extends Request {
         }
 
         /**
-         * The topic to which the message is pushed.
+         * <p>The topic to which the message is pushed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-mq_topic</p>
          */
         public Builder topic(String topic) {
             this.putQueryParameter("Topic", topic);

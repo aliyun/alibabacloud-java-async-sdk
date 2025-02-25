@@ -1,36 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIntranetAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeIntranetAttributeResponseBody</p>
  */
 public class DescribeIntranetAttributeResponseBody extends TeaModel {
-    @NameInMap("AutoRenewal")
+    @com.aliyun.core.annotation.NameInMap("AutoRenewal")
     private Boolean autoRenewal;
 
-    @NameInMap("BandwidthExpireTime")
+    @com.aliyun.core.annotation.NameInMap("BandwidthExpireTime")
     private String bandwidthExpireTime;
 
-    @NameInMap("BandwidthPrePaid")
+    @com.aliyun.core.annotation.NameInMap("BandwidthPrePaid")
     private String bandwidthPrePaid;
 
-    @NameInMap("ExpireTime")
+    @com.aliyun.core.annotation.NameInMap("ExpireTime")
     private String expireTime;
 
-    @NameInMap("HasPrePaidBandWidthOrderRunning")
+    @com.aliyun.core.annotation.NameInMap("HasPrePaidBandWidthOrderRunning")
     private Boolean hasPrePaidBandWidthOrderRunning;
 
-    @NameInMap("IntranetBandwidth")
+    @com.aliyun.core.annotation.NameInMap("IntranetBandwidth")
     private Integer intranetBandwidth;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeIntranetAttributeResponseBody(Builder builder) {
@@ -110,13 +110,17 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether auto-renewal is enabled for the extra internal bandwidth that you purchased. Valid values:
-         * <p>
+         * <p>Indicates whether auto-renewal is enabled for the extra internal bandwidth that you purchased. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Auto-renewal is enabled.</li>
+         * <li><strong>false</strong>: Auto-renewal is disabled.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If no extra internal bandwidth is purchased, this parameter is not returned.</p>
+         * </blockquote>
          * 
-         * *   **true**: Auto-renewal is enabled.
-         * *   **false**: Auto-renewal is disabled.
-         * 
-         * > If no extra internal bandwidth is purchased, this parameter is not returned.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenewal(Boolean autoRenewal) {
             this.autoRenewal = autoRenewal;
@@ -124,10 +128,13 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The expiration time of the purchased bandwidth. The time follows the ISO 8601 standard in the *yyyy-MM-dd* T *HH:mm:ss* Z format.
-         * <p>
+         * <p>The expiration time of the purchased bandwidth. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em> T <em>HH:mm:ss</em> Z format.</p>
+         * <blockquote>
+         * <p>If no extra internal bandwidth is purchased, this parameter is not returned.</p>
+         * </blockquote>
          * 
-         * > If no extra internal bandwidth is purchased, this parameter is not returned.
+         * <strong>example:</strong>
+         * <p>2021-03-06T16:00:00Z</p>
          */
         public Builder bandwidthExpireTime(String bandwidthExpireTime) {
             this.bandwidthExpireTime = bandwidthExpireTime;
@@ -135,7 +142,14 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * BandwidthPrePaid.
+         * <p>The billing methods of unexpired bandwith plans. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Pay-as-you-go</li>
+         * <li><strong>1</strong>: Subscription</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder bandwidthPrePaid(String bandwidthPrePaid) {
             this.bandwidthPrePaid = bandwidthPrePaid;
@@ -143,10 +157,13 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the extra internal bandwidth that you purchased for temporary use expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
-         * <p>
+         * <p>The time when the extra internal bandwidth that you purchased for temporary use expires. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <blockquote>
+         * <p>If no extra internal bandwidth for temporary use is purchased or the extra internal bandwidth that you purchased for temporary use has expired, <strong>0</strong> is returned for this parameter.</p>
+         * </blockquote>
          * 
-         * > If no extra internal bandwidth for temporary use is purchased or the extra internal bandwidth that you purchased for temporary use has expired, **0** is returned for this parameter.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
@@ -154,13 +171,17 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Specifies whether the instance has unexpired bandwidth plans. Valid values:
-         * <p>
+         * <p>Specifies whether the instance has unexpired bandwidth plans. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The instance has unexpired bandwidth plans.</li>
+         * <li><strong>false</strong>: The instance does not have unexpired bandwidth plans.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If no extra internal bandwidth is purchased, this parameter is not returned.</p>
+         * </blockquote>
          * 
-         * *   **true**: The instance has unexpired bandwidth plans.
-         * *   **false**: The instance does not have unexpired bandwidth plans.
-         * 
-         * > If no extra internal bandwidth is purchased, this parameter is not returned.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder hasPrePaidBandWidthOrderRunning(Boolean hasPrePaidBandWidthOrderRunning) {
             this.hasPrePaidBandWidthOrderRunning = hasPrePaidBandWidthOrderRunning;
@@ -168,7 +189,10 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The current internal bandwidth of the instance. Unit: Mbit/s.
+         * <p>The current internal bandwidth of the instance. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>102</p>
          */
         public Builder intranetBandwidth(Integer intranetBandwidth) {
             this.intranetBandwidth = intranetBandwidth;
@@ -176,7 +200,10 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25D42CC3-FBA1-4AEC-BCE2-B8DD3137****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

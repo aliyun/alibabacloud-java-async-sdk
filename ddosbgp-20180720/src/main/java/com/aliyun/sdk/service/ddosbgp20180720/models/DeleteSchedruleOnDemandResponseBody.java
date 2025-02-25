@@ -1,18 +1,18 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSchedruleOnDemandResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteSchedruleOnDemandResponseBody</p>
  */
 public class DeleteSchedruleOnDemandResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteSchedruleOnDemandResponseBody(Builder builder) {
@@ -38,7 +38,10 @@ public class DeleteSchedruleOnDemandResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BD06F539-2FBE-450D-9391-7EFF787128F5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

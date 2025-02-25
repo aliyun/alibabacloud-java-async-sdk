@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateProductOrdersResponseBody} extends {@link TeaModel}
  *
  * <p>CreateProductOrdersResponseBody</p>
  */
 public class CreateProductOrdersResponseBody extends TeaModel {
-    @NameInMap("BuyProductRequestId")
+    @com.aliyun.core.annotation.NameInMap("BuyProductRequestId")
     private String buyProductRequestId;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateProductOrdersResponseBody(Builder builder) {

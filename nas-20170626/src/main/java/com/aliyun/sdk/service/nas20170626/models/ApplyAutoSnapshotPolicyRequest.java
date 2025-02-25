@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyAutoSnapshotPolicyRequest} extends {@link RequestModel}
  *
  * <p>ApplyAutoSnapshotPolicyRequest</p>
  */
 public class ApplyAutoSnapshotPolicyRequest extends Request {
-    @Query
-    @NameInMap("AutoSnapshotPolicyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoSnapshotPolicyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String autoSnapshotPolicyId;
 
-    @Query
-    @NameInMap("FileSystemIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileSystemIds;
 
     private ApplyAutoSnapshotPolicyRequest(Builder builder) {
@@ -63,14 +68,18 @@ public class ApplyAutoSnapshotPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(ApplyAutoSnapshotPolicyRequest response) {
-            super(response);
-            this.autoSnapshotPolicyId = response.autoSnapshotPolicyId;
-            this.fileSystemIds = response.fileSystemIds;
+        private Builder(ApplyAutoSnapshotPolicyRequest request) {
+            super(request);
+            this.autoSnapshotPolicyId = request.autoSnapshotPolicyId;
+            this.fileSystemIds = request.fileSystemIds;
         } 
 
         /**
-         * AutoSnapshotPolicyId.
+         * <p>The ID of the automatic snapshot policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sp-extreme-233e6****</p>
          */
         public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
             this.putQueryParameter("AutoSnapshotPolicyId", autoSnapshotPolicyId);
@@ -79,7 +88,12 @@ public class ApplyAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * FileSystemIds.
+         * <p>The IDs of advanced Extreme NAS file systems.</p>
+         * <p>You can specify a maximum of 100 file system IDs at a time. If you want to apply an automatic snapshot policy to multiple file systems, separate the file system IDs with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>extreme-233e6****,extreme -23vbp****,extreme -23vas****</p>
          */
         public Builder fileSystemIds(String fileSystemIds) {
             this.putQueryParameter("FileSystemIds", fileSystemIds);

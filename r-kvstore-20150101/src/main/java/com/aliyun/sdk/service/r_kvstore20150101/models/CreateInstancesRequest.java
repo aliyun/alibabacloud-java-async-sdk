@@ -1,76 +1,76 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstancesRequest} extends {@link RequestModel}
  *
  * <p>CreateInstancesRequest</p>
  */
 public class CreateInstancesRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AutoPay")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
     private Boolean autoPay;
 
-    @Query
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private String autoRenew;
 
-    @Query
-    @NameInMap("BusinessInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessInfo")
     private String businessInfo;
 
-    @Query
-    @NameInMap("CouponNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CouponNo")
     private String couponNo;
 
-    @Query
-    @NameInMap("EngineVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineVersion")
     private String engineVersion;
 
-    @Query
-    @NameInMap("Instances")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Instances")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instances;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RebuildInstance")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RebuildInstance")
     private Boolean rebuildInstance;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("Token")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Token")
     private String token;
 
     private CreateInstancesRequest(Builder builder) {
@@ -260,13 +260,17 @@ public class CreateInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable automatic payment. Valid values:
-         * <p>
+         * <p>Specifies whether to enable automatic payment. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong> (default).</li>
+         * <li><strong>false</strong>. If automatic payment is disabled, you must perform the following steps to complete the payment in the ApsaraDB for Redis console: In the top navigation bar, choose <strong>Expenses</strong> &gt; <strong>Renewal Management</strong>. In the left-side navigation pane, click <strong>Orders</strong>. On the <strong>Orders</strong> page, find the order and complete the payment.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is valid only if the value of the <strong>ChargeType</strong> field in the <strong>Instances</strong> parameter is set to <strong>PrePaid</strong>.</p>
+         * </blockquote>
          * 
-         * *   **true** (default).
-         * *   **false**. If automatic payment is disabled, you must perform the following steps to complete the payment in the ApsaraDB for Redis console: In the top navigation bar, choose **Expenses** > **Renewal Management**. In the left-side navigation pane, click **Orders**. On the **Orders** page, find the order and complete the payment.
-         * 
-         * >  This parameter is valid only if the value of the **ChargeType** field in the **Instances** parameter is set to **PrePaid**.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -275,13 +279,17 @@ public class CreateInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal for the instance. Default value: false. Valid values:
-         * <p>
+         * <p>Specifies whether to enable auto-renewal for the instance. Default value: false. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is available only if <strong>ChargeType</strong> in the <strong>Instances</strong> parameter is set to <strong>PrePaid</strong>.</p>
+         * </blockquote>
          * 
-         * *   **true**: yes
-         * *   **false**: no
-         * 
-         * >  This parameter is available only if **ChargeType** in the **Instances** parameter is set to **PrePaid**.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenew(String autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -290,7 +298,10 @@ public class CreateInstancesRequest extends Request {
         }
 
         /**
-         * The additional business information about the instance.
+         * <p>The additional business information about the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>000000000</p>
          */
         public Builder businessInfo(String businessInfo) {
             this.putQueryParameter("BusinessInfo", businessInfo);
@@ -299,7 +310,10 @@ public class CreateInstancesRequest extends Request {
         }
 
         /**
-         * The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.
+         * <p>The coupon code. Default value: <code>youhuiquan_promotion_option_id_for_blank</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>youhuiquan_promotion_option_id_for_blank</p>
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
@@ -308,16 +322,19 @@ public class CreateInstancesRequest extends Request {
         }
 
         /**
-         * The database engine version of the instance. Valid values: **4.0** and **5.0**.
-         * <p>
+         * <p>The database engine version of the instance. Valid values: <strong>4.0</strong> and <strong>5.0</strong>.</p>
+         * <blockquote>
+         * <p> The default value is <strong>5.0</strong>.</p>
+         * </blockquote>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>2.8</li>
+         * <li>4.0</li>
+         * <li>5.0</li>
+         * </ul>
          * 
-         * >  The default value is **5.0**.
-         * 
-         * Valid values:
-         * 
-         * *   2.8
-         * *   4.0
-         * *   5.0
+         * <strong>example:</strong>
+         * <p>5.0</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -326,7 +343,11 @@ public class CreateInstancesRequest extends Request {
         }
 
         /**
-         * The JSON-formatted configurations of the instance. For more information, see the "Description of the Instances parameter" section of this topic.
+         * <p>The JSON-formatted configurations of the instance. For more information, see the &quot;Description of the Instances parameter&quot; section of this topic.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{	&quot;RegionId&quot;: &quot;cn-hangzhou&quot;,	&quot;izNo&quot;: &quot;cn-hangzhou-b&quot;,	&quot;quantity&quot;: 2,	&quot;instanceType&quot;: &quot;Redis&quot;,	&quot;instanceClass&quot;: &quot;redis.master.small.default&quot;,	&quot;EngineVersion&quot;: &quot;5.0&quot;,	&quot;ChargeType&quot;: &quot;PostPaid&quot;}]</p>
          */
         public Builder instances(String instances) {
             this.putQueryParameter("Instances", instances);
@@ -353,13 +374,17 @@ public class CreateInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to restore the source instance from the recycle bin. Valid values:
-         * <p>
+         * <p>Specifies whether to restore the source instance from the recycle bin. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is valid only if the <strong>SrcDBInstanceId</strong> field in the <strong>Instances</strong> parameter is specified.</p>
+         * </blockquote>
          * 
-         * *   **true**
-         * *   **false** (default)
-         * 
-         * >  This parameter is valid only if the **SrcDBInstanceId** field in the **Instances** parameter is specified.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder rebuildInstance(Boolean rebuildInstance) {
             this.putQueryParameter("RebuildInstance", rebuildInstance);
@@ -368,7 +393,10 @@ public class CreateInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which to assign the instance.
+         * <p>The ID of the resource group to which to assign the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-resourcegroupid1</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -404,7 +432,10 @@ public class CreateInstancesRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token is case-sensitive. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token is case-sensitive. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);

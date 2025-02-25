@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateCollectorResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateCollectorResponseBody</p>
  */
 public class UpdateCollectorResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private UpdateCollectorResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class UpdateCollectorResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class UpdateCollectorResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result.
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -71,11 +74,17 @@ public class UpdateCollectorResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateCollectorResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateCollectorResponseBody</p>
+     */
     public static class Configs extends TeaModel {
-        @NameInMap("content")
+        @com.aliyun.core.annotation.NameInMap("content")
         private String content;
 
-        @NameInMap("fileName")
+        @com.aliyun.core.annotation.NameInMap("fileName")
         private String fileName;
 
         private Configs(Builder builder) {
@@ -110,7 +119,10 @@ public class UpdateCollectorResponseBody extends TeaModel {
             private String fileName; 
 
             /**
-             * The content of the configuration file.
+             * <p>The content of the configuration file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>filebeat.inputs:xxx</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -118,7 +130,10 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the configuration file.
+             * <p>The name of the configuration file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>filebeat.yml</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -132,11 +147,17 @@ public class UpdateCollectorResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateCollectorResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateCollectorResponseBody</p>
+     */
     public static class Machines extends TeaModel {
-        @NameInMap("agentStatus")
+        @com.aliyun.core.annotation.NameInMap("agentStatus")
         private String agentStatus;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
         private Machines(Builder builder) {
@@ -171,13 +192,16 @@ public class UpdateCollectorResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * The installation status of the shipper on an ECS instance. Valid values:
-             * <p>
+             * <p>The installation status of the shipper on an ECS instance. Valid values:</p>
+             * <ul>
+             * <li>heartOk</li>
+             * <li>heartLost</li>
+             * <li>uninstalled</li>
+             * <li>failed</li>
+             * </ul>
              * 
-             * *   heartOk
-             * *   heartLost
-             * *   uninstalled
-             * *   failed
+             * <strong>example:</strong>
+             * <p>heartOk</p>
              */
             public Builder agentStatus(String agentStatus) {
                 this.agentStatus = agentStatus;
@@ -185,7 +209,10 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECS instance on which the shipper is installed.
+             * <p>The ID of the ECS instance on which the shipper is installed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp13y63575oypr9d****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -199,47 +226,53 @@ public class UpdateCollectorResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateCollectorResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateCollectorResponseBody</p>
+     */
     public static class ExtendConfigs extends TeaModel {
-        @NameInMap("configType")
+        @com.aliyun.core.annotation.NameInMap("configType")
         private String configType;
 
-        @NameInMap("enableMonitoring")
+        @com.aliyun.core.annotation.NameInMap("enableMonitoring")
         private Boolean enableMonitoring;
 
-        @NameInMap("groupId")
+        @com.aliyun.core.annotation.NameInMap("groupId")
         private String groupId;
 
-        @NameInMap("host")
+        @com.aliyun.core.annotation.NameInMap("host")
         private String host;
 
-        @NameInMap("hosts")
+        @com.aliyun.core.annotation.NameInMap("hosts")
         private java.util.List < String > hosts;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
-        @NameInMap("instanceType")
+        @com.aliyun.core.annotation.NameInMap("instanceType")
         private String instanceType;
 
-        @NameInMap("kibanaHost")
+        @com.aliyun.core.annotation.NameInMap("kibanaHost")
         private String kibanaHost;
 
-        @NameInMap("machines")
+        @com.aliyun.core.annotation.NameInMap("machines")
         private java.util.List < Machines> machines;
 
-        @NameInMap("protocol")
+        @com.aliyun.core.annotation.NameInMap("protocol")
         private String protocol;
 
-        @NameInMap("successPodsCount")
+        @com.aliyun.core.annotation.NameInMap("successPodsCount")
         private String successPodsCount;
 
-        @NameInMap("totalPodsCount")
+        @com.aliyun.core.annotation.NameInMap("totalPodsCount")
         private String totalPodsCount;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("userName")
+        @com.aliyun.core.annotation.NameInMap("userName")
         private String userName;
 
         private ExtendConfigs(Builder builder) {
@@ -382,12 +415,15 @@ public class UpdateCollectorResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The type of the configuration items. Valid values:
-             * <p>
+             * <p>The type of the configuration items. Valid values:</p>
+             * <ul>
+             * <li>collectorTargetInstance: indicates the information about the output of the shipper.</li>
+             * <li>collectorDeployMachine: indicates the information about the machine on which the shipper is installed.</li>
+             * <li>collectorElasticsearchForKibana: indicates the information about the Elasticsearch cluster for which Kibana Dashboard is enabled.</li>
+             * </ul>
              * 
-             * *   collectorTargetInstance: indicates the information about the output of the shipper.
-             * *   collectorDeployMachine: indicates the information about the machine on which the shipper is installed.
-             * *   collectorElasticsearchForKibana: indicates the information about the Elasticsearch cluster for which Kibana Dashboard is enabled.
+             * <strong>example:</strong>
+             * <p>collectorDeployMachine</p>
              */
             public Builder configType(String configType) {
                 this.configType = configType;
@@ -395,7 +431,10 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Kibana Monitoring is enabled. This parameter is returned only when **configType** is set to **collectorTargetInstance** and **instanceType** is set to **elasticsearch**. Valid values: true and false.
+             * <p>Indicates whether Kibana Monitoring is enabled. This parameter is returned only when <strong>configType</strong> is set to <strong>collectorTargetInstance</strong> and <strong>instanceType</strong> is set to <strong>elasticsearch</strong>. Valid values: true and false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableMonitoring(Boolean enableMonitoring) {
                 this.enableMonitoring = enableMonitoring;
@@ -403,7 +442,10 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * The machine group ID. This parameter is returned only when **configType** is set to **collectorDeployMachine**.
+             * <p>The machine group ID. This parameter is returned only when <strong>configType</strong> is set to <strong>collectorDeployMachine</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default_ct-cn-5i2l75bz4776****</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -411,7 +453,10 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * The address that is used to access Kibana over an internal network after you enable Kibana Dashboard. This parameter is returned only when **configType** is set to **collectorElasticsearchForKibana**.
+             * <p>The address that is used to access Kibana over an internal network after you enable Kibana Dashboard. This parameter is returned only when <strong>configType</strong> is set to <strong>collectorElasticsearchForKibana</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-n6w1o1x0w001c****-kibana.internal.elasticsearch.aliyuncs.com:5601</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -427,7 +472,10 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the object that is associated with the shipper. If **configType** is set to **collectorTargetInstance**, the value of this parameter is the ID of the output of the shipper. If **configType** is set to **collectorDeployMachines** and **type** is set to **ACKCluster**, the value of this parameter is the ID of an ACK cluster.
+             * <p>The ID of the object that is associated with the shipper. If <strong>configType</strong> is set to <strong>collectorTargetInstance</strong>, the value of this parameter is the ID of the output of the shipper. If <strong>configType</strong> is set to <strong>collectorDeployMachines</strong> and <strong>type</strong> is set to <strong>ACKCluster</strong>, the value of this parameter is the ID of an ACK cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-nif1z89fz003i****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -435,7 +483,10 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the output of the shipper. Valid values: elasticsearch and logstash. This parameter is returned only when **configType** is set to **collectorTargetInstance**.
+             * <p>The type of the output of the shipper. Valid values: elasticsearch and logstash. This parameter is returned only when <strong>configType</strong> is set to <strong>collectorTargetInstance</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>elasticsearch</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -443,7 +494,10 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * The address that is used to access Kibana over the Internet after you enable Kibana Dashboard. This parameter is returned only when **configType** is set to **collectorElasticsearchForKibana**.
+             * <p>The address that is used to access Kibana over the Internet after you enable Kibana Dashboard. This parameter is returned only when <strong>configType</strong> is set to <strong>collectorElasticsearchForKibana</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://es-cn-nif1z89fz003i****.kibana.elasticsearch.aliyuncs.com:5601">https://es-cn-nif1z89fz003i****.kibana.elasticsearch.aliyuncs.com:5601</a></p>
              */
             public Builder kibanaHost(String kibanaHost) {
                 this.kibanaHost = kibanaHost;
@@ -451,10 +505,8 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is returned only when configType is set to collectorDeployMachine.
-             * <p>
-             * 
-             * This parameter indicates the information about the ECS instances or ACK clusters on which the shipper is installed.
+             * <p>This parameter is returned only when configType is set to collectorDeployMachine.</p>
+             * <p>This parameter indicates the information about the ECS instances or ACK clusters on which the shipper is installed.</p>
              */
             public Builder machines(java.util.List < Machines> machines) {
                 this.machines = machines;
@@ -462,7 +514,10 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * The transfer protocol that is used. It is the same as the protocol over which you can access the output of the shipper. Valid values: HTTP and HTTPS. This parameter is returned only when **configType** is set to **collectorTargetInstance**.
+             * <p>The transfer protocol that is used. It is the same as the protocol over which you can access the output of the shipper. Valid values: HTTP and HTTPS. This parameter is returned only when <strong>configType</strong> is set to <strong>collectorTargetInstance</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -470,7 +525,10 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * The number of pods from which logs are successfully collected in the ACK cluster. This parameter is returned only when **configType** is set to **collectorDeployMachines** and **type** is set to **ACKCluster**.
+             * <p>The number of pods from which logs are successfully collected in the ACK cluster. This parameter is returned only when <strong>configType</strong> is set to <strong>collectorDeployMachines</strong> and <strong>type</strong> is set to <strong>ACKCluster</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder successPodsCount(String successPodsCount) {
                 this.successPodsCount = successPodsCount;
@@ -478,7 +536,10 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * The number of pods from which logs needed to be collected in the ACK cluster. This parameter is returned only when **configType** is set to **collectorDeployMachines** and **type** is set to **ACKCluster**.
+             * <p>The number of pods from which logs needed to be collected in the ACK cluster. This parameter is returned only when <strong>configType</strong> is set to <strong>collectorDeployMachines</strong> and <strong>type</strong> is set to <strong>ACKCluster</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalPodsCount(String totalPodsCount) {
                 this.totalPodsCount = totalPodsCount;
@@ -486,11 +547,14 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the machine on which the shipper is installed. This parameter is returned only when **configType** is set to **collectorDeployMachine**. Valid values:
-             * <p>
+             * <p>The type of the machine on which the shipper is installed. This parameter is returned only when <strong>configType</strong> is set to <strong>collectorDeployMachine</strong>. Valid values:</p>
+             * <ul>
+             * <li>ECSInstanceId</li>
+             * <li>ACKCluster</li>
+             * </ul>
              * 
-             * *   ECSInstanceId
-             * *   ACKCluster
+             * <strong>example:</strong>
+             * <p>ECSInstanceId</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -498,7 +562,10 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * The username that is used to access the output of the shipper. Default value: elastic. This parameter is returned only when **configType** is set to **collectorTargetInstance** or **collectorElasticsearchForKibana**.
+             * <p>The username that is used to access the output of the shipper. Default value: elastic. This parameter is returned only when <strong>configType</strong> is set to <strong>collectorTargetInstance</strong> or <strong>collectorElasticsearchForKibana</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>elastic</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -512,44 +579,50 @@ public class UpdateCollectorResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateCollectorResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateCollectorResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("collectorPaths")
+        @com.aliyun.core.annotation.NameInMap("collectorPaths")
         private java.util.List < String > collectorPaths;
 
-        @NameInMap("configs")
+        @com.aliyun.core.annotation.NameInMap("configs")
         private java.util.List < Configs> configs;
 
-        @NameInMap("dryRun")
+        @com.aliyun.core.annotation.NameInMap("dryRun")
         private Boolean dryRun;
 
-        @NameInMap("extendConfigs")
+        @com.aliyun.core.annotation.NameInMap("extendConfigs")
         private java.util.List < ExtendConfigs> extendConfigs;
 
-        @NameInMap("gmtCreatedTime")
+        @com.aliyun.core.annotation.NameInMap("gmtCreatedTime")
         private String gmtCreatedTime;
 
-        @NameInMap("gmtUpdateTime")
+        @com.aliyun.core.annotation.NameInMap("gmtUpdateTime")
         private String gmtUpdateTime;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("ownerId")
+        @com.aliyun.core.annotation.NameInMap("ownerId")
         private String ownerId;
 
-        @NameInMap("resId")
+        @com.aliyun.core.annotation.NameInMap("resId")
         private String resId;
 
-        @NameInMap("resType")
+        @com.aliyun.core.annotation.NameInMap("resType")
         private String resType;
 
-        @NameInMap("resVersion")
+        @com.aliyun.core.annotation.NameInMap("resVersion")
         private String resVersion;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("vpcId")
+        @com.aliyun.core.annotation.NameInMap("vpcId")
         private String vpcId;
 
         private Result(Builder builder) {
@@ -691,7 +764,7 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the configuration file for the shipper.
+             * <p>The information about the configuration file for the shipper.</p>
              */
             public Builder configs(java.util.List < Configs> configs) {
                 this.configs = configs;
@@ -699,11 +772,14 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the shipper is checked and updated. Valid values:
-             * <p>
+             * <p>Indicates whether the shipper is checked and updated. Valid values:</p>
+             * <ul>
+             * <li>true: The shipper is only checked.</li>
+             * <li>false: The shipper is checked and updated.</li>
+             * </ul>
              * 
-             * *   true: The shipper is only checked.
-             * *   false: The shipper is checked and updated.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder dryRun(Boolean dryRun) {
                 this.dryRun = dryRun;
@@ -711,7 +787,7 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * The extended parameters that are configured for the shipper.
+             * <p>The extended parameters that are configured for the shipper.</p>
              */
             public Builder extendConfigs(java.util.List < ExtendConfigs> extendConfigs) {
                 this.extendConfigs = extendConfigs;
@@ -719,7 +795,10 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the shipper was created.
+             * <p>The time when the shipper was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-20T07:26:47.000+0000</p>
              */
             public Builder gmtCreatedTime(String gmtCreatedTime) {
                 this.gmtCreatedTime = gmtCreatedTime;
@@ -727,7 +806,10 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the shipper was updated.
+             * <p>The time when the shipper was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-20T07:26:47.000+0000</p>
              */
             public Builder gmtUpdateTime(String gmtUpdateTime) {
                 this.gmtUpdateTime = gmtUpdateTime;
@@ -735,7 +817,10 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the shipper.
+             * <p>The name of the shipper.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ct-test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -743,7 +828,10 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * The account ID.
+             * <p>The account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16852099488*****</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -751,7 +839,10 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * The shipper ID.
+             * <p>The shipper ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ct-cn-0v3xj86085dvq****</p>
              */
             public Builder resId(String resId) {
                 this.resId = resId;
@@ -759,7 +850,10 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the shipper. Valid values: fileBeat, metricBeat, heartBeat, and auditBeat.
+             * <p>The type of the shipper. Valid values: fileBeat, metricBeat, heartBeat, and auditBeat.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fileBeat</p>
              */
             public Builder resType(String resType) {
                 this.resType = resType;
@@ -767,7 +861,10 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the shipper.
+             * <p>The version of the shipper.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6.8.5_with_community</p>
              */
             public Builder resVersion(String resVersion) {
                 this.resVersion = resVersion;
@@ -775,11 +872,14 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the shipper. Valid values:
-             * <p>
+             * <p>The status of the shipper. Valid values:</p>
+             * <ul>
+             * <li>activing: The shipper is being initialized.</li>
+             * <li>active: The shipper is in effect.</li>
+             * </ul>
              * 
-             * *   activing: The shipper is being initialized.
-             * *   active: The shipper is in effect.
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -787,7 +887,10 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC in which the shipper resides.
+             * <p>The ID of the VPC in which the shipper resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp16k1dvzxtma*****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

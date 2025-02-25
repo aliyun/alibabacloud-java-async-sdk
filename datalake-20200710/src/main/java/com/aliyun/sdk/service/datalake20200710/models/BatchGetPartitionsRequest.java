@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BatchGetPartitionsRequest</p>
  */
 public class BatchGetPartitionsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("CatalogId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CatalogId")
     private String catalogId;
 
-    @Body
-    @NameInMap("DatabaseName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DatabaseName")
     private String databaseName;
 
-    @Body
-    @NameInMap("IsShareSd")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IsShareSd")
     private Boolean isShareSd;
 
-    @Body
-    @NameInMap("PartitionValueList")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PartitionValueList")
     private java.util.List < PartitionValueList> partitionValueList;
 
-    @Body
-    @NameInMap("TableName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TableName")
     private String tableName;
 
     private BatchGetPartitionsRequest(Builder builder) {
@@ -185,7 +184,7 @@ public class BatchGetPartitionsRequest extends Request {
     } 
 
     public static class PartitionValueList extends TeaModel {
-        @NameInMap("Values")
+        @com.aliyun.core.annotation.NameInMap("Values")
         private java.util.List < String > values;
 
         private PartitionValueList(Builder builder) {

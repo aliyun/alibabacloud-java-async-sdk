@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEmgUserAgreementResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEmgUserAgreementResponseBody</p>
  */
 public class DescribeEmgUserAgreementResponseBody extends TeaModel {
-    @NameInMap("Auth")
+    @com.aliyun.core.annotation.NameInMap("Auth")
     private Boolean auth;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeEmgUserAgreementResponseBody(Builder builder) {
@@ -50,11 +55,14 @@ public class DescribeEmgUserAgreementResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether Security Center is authorized to scan for urgent vulnerabilities. Valid values:
-         * <p>
+         * <p>Indicates whether Security Center is authorized to scan for urgent vulnerabilities. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder auth(Boolean auth) {
             this.auth = auth;
@@ -62,7 +70,10 @@ public class DescribeEmgUserAgreementResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>768BB9F5-8AF3-557F-A489-9BDD64CB3E4C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

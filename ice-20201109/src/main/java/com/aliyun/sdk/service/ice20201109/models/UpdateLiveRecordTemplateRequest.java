@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateLiveRecordTemplateRequest} extends {@link RequestModel}
  *
  * <p>UpdateLiveRecordTemplateRequest</p>
  */
 public class UpdateLiveRecordTemplateRequest extends Request {
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("RecordFormat")
-    @Validation(required = true)
-    private java.util.List < RecordFormat> recordFormat;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RecordFormat")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<RecordFormat> recordFormat;
 
-    @Body
-    @NameInMap("TemplateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateId;
 
     private UpdateLiveRecordTemplateRequest(Builder builder) {
@@ -57,7 +62,7 @@ public class UpdateLiveRecordTemplateRequest extends Request {
     /**
      * @return recordFormat
      */
-    public java.util.List < RecordFormat> getRecordFormat() {
+    public java.util.List<RecordFormat> getRecordFormat() {
         return this.recordFormat;
     }
 
@@ -70,7 +75,7 @@ public class UpdateLiveRecordTemplateRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateLiveRecordTemplateRequest, Builder> {
         private String name; 
-        private java.util.List < RecordFormat> recordFormat; 
+        private java.util.List<RecordFormat> recordFormat; 
         private String templateId; 
 
         private Builder() {
@@ -85,7 +90,11 @@ public class UpdateLiveRecordTemplateRequest extends Request {
         } 
 
         /**
-         * 代表资源名称的资源属性字段
+         * <p>The template name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test template</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -94,9 +103,10 @@ public class UpdateLiveRecordTemplateRequest extends Request {
         }
 
         /**
-         * 录制格式
+         * <p>The list of recording formats.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder recordFormat(java.util.List < RecordFormat> recordFormat) {
+        public Builder recordFormat(java.util.List<RecordFormat> recordFormat) {
             String recordFormatShrink = shrink(recordFormat, "RecordFormat", "json");
             this.putBodyParameter("RecordFormat", recordFormatShrink);
             this.recordFormat = recordFormat;
@@ -104,7 +114,11 @@ public class UpdateLiveRecordTemplateRequest extends Request {
         }
 
         /**
-         * 代表资源一级ID的资源属性字段
+         * <p>The template ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69e1f9fe-1e97-11ed-ba64-0c42a1b73d66</p>
          */
         public Builder templateId(String templateId) {
             this.putBodyParameter("TemplateId", templateId);
@@ -119,21 +133,27 @@ public class UpdateLiveRecordTemplateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateLiveRecordTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateLiveRecordTemplateRequest</p>
+     */
     public static class RecordFormat extends TeaModel {
-        @NameInMap("CycleDuration")
+        @com.aliyun.core.annotation.NameInMap("CycleDuration")
         private Integer cycleDuration;
 
-        @NameInMap("Format")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Format")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String format;
 
-        @NameInMap("OssObjectPrefix")
+        @com.aliyun.core.annotation.NameInMap("OssObjectPrefix")
         private String ossObjectPrefix;
 
-        @NameInMap("SliceDuration")
+        @com.aliyun.core.annotation.NameInMap("SliceDuration")
         private Integer sliceDuration;
 
-        @NameInMap("SliceOssObjectPrefix")
+        @com.aliyun.core.annotation.NameInMap("SliceOssObjectPrefix")
         private String sliceOssObjectPrefix;
 
         private RecordFormat(Builder builder) {
@@ -195,7 +215,18 @@ public class UpdateLiveRecordTemplateRequest extends Request {
             private String sliceOssObjectPrefix; 
 
             /**
-             * CycleDuration.
+             * <p>The duration of the recording cycle. Unit: seconds If you do not specify this parameter, the default value 6 hours is used.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p>If a live stream is interrupted during a recording cycle but is resumed within 3 minutes, the stream is recorded in the same recording before and after the interruption.</p>
+             * </li>
+             * <li><p>If a live stream is interrupted for more than 3 minutes, a new recording is generated. To change the default stream interruption time, submit a ticket.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder cycleDuration(Integer cycleDuration) {
                 this.cycleDuration = cycleDuration;
@@ -203,7 +234,14 @@ public class UpdateLiveRecordTemplateRequest extends Request {
             }
 
             /**
-             * 格式
+             * <p>The format of recording files.</p>
+             * <blockquote>
+             * <p> If you set this parameter to m3u8, you must also specify the SliceOssObjectPrefix and SliceDuration parameters.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m3u8</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -211,7 +249,14 @@ public class UpdateLiveRecordTemplateRequest extends Request {
             }
 
             /**
-             * Oss对象名，不包含后缀
+             * <p>The name of the recording that is stored in Object Storage Service (OSS).</p>
+             * <ul>
+             * <li>The name must be less than 256 bytes in length and can contain the {JobId}, {Sequence}, {StartTime}, {EndTime}, {EscapedStartTime}, and {EscapedEndTime} variables.</li>
+             * <li>The name must contain the {StartTime} and {EndTime} variables or the {EscapedStartTime} and {EscapedEndTime} variables.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>record/{JobId}/{Sequence}<em>{EscapedStartTime}</em>{EscapedEndTime}</p>
              */
             public Builder ossObjectPrefix(String ossObjectPrefix) {
                 this.ossObjectPrefix = ossObjectPrefix;
@@ -219,7 +264,14 @@ public class UpdateLiveRecordTemplateRequest extends Request {
             }
 
             /**
-             * 切片时长
+             * <p>The duration of a single segment. Unit: seconds</p>
+             * <blockquote>
+             * <p> This parameter takes effect only if you set Format to m3u8.</p>
+             * </blockquote>
+             * <p>If you do not specify this parameter, the default value 30 seconds is used. Valid values: 5 to 30.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder sliceDuration(Integer sliceDuration) {
                 this.sliceDuration = sliceDuration;
@@ -227,7 +279,14 @@ public class UpdateLiveRecordTemplateRequest extends Request {
             }
 
             /**
-             * 切片Oss对象名，不包含后缀
+             * <p>The name of the TS segment.</p>
+             * <blockquote>
+             * <p> This parameter is required only if you set Format to m3u8. By default, the duration of a segment is 30 seconds. The segment name must be less than 256 bytes in length and can contain the {JobId}, {UnixTimestamp}, and {Sequence} variables.</p>
+             * </blockquote>
+             * <p>The segment name must contain the {UnixTimestamp} and {Sequence} variables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>record/{JobId}/{UnixTimestamp}_{Sequence}</p>
              */
             public Builder sliceOssObjectPrefix(String sliceOssObjectPrefix) {
                 this.sliceOssObjectPrefix = sliceOssObjectPrefix;

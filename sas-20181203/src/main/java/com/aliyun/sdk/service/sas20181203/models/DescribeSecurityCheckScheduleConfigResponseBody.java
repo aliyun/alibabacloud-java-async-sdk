@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSecurityCheckScheduleConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSecurityCheckScheduleConfigResponseBody</p>
  */
 public class DescribeSecurityCheckScheduleConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RiskCheckJobConfig")
+    @com.aliyun.core.annotation.NameInMap("RiskCheckJobConfig")
     private RiskCheckJobConfig riskCheckJobConfig;
 
     private DescribeSecurityCheckScheduleConfigResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DescribeSecurityCheckScheduleConfigResponseBody extends TeaModel {
         private RiskCheckJobConfig riskCheckJobConfig; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48D2E9A9-A1B0-4295-B727-0995757C47E9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class DescribeSecurityCheckScheduleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations of custom check tasks.
+         * <p>The configurations of custom check tasks.</p>
          */
         public Builder riskCheckJobConfig(RiskCheckJobConfig riskCheckJobConfig) {
             this.riskCheckJobConfig = riskCheckJobConfig;
@@ -71,14 +79,20 @@ public class DescribeSecurityCheckScheduleConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSecurityCheckScheduleConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityCheckScheduleConfigResponseBody</p>
+     */
     public static class RiskCheckJobConfig extends TeaModel {
-        @NameInMap("DaysOfWeek")
+        @com.aliyun.core.annotation.NameInMap("DaysOfWeek")
         private String daysOfWeek;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Integer endTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Integer startTime;
 
         private RiskCheckJobConfig(Builder builder) {
@@ -122,16 +136,19 @@ public class DescribeSecurityCheckScheduleConfigResponseBody extends TeaModel {
             private Integer startTime; 
 
             /**
-             * The day of the week when the check tasks are performed. Multiple days can be specified. Multiple days are separated by commas (,).
-             * <p>
+             * <p>The day of the week when the check tasks are performed. Multiple days can be specified. Multiple days are separated by commas (,).</p>
+             * <ul>
+             * <li><strong>1</strong>: Monday</li>
+             * <li><strong>2</strong>: Tuesday</li>
+             * <li><strong>3</strong>: Wednesday</li>
+             * <li><strong>4</strong>: Thursday</li>
+             * <li><strong>5</strong>: Friday</li>
+             * <li><strong>6</strong>: Saturday</li>
+             * <li><strong>7</strong>: Sunday</li>
+             * </ul>
              * 
-             * *   **1**: Monday
-             * *   **2**: Tuesday
-             * *   **3**: Wednesday
-             * *   **4**: Thursday
-             * *   **5**: Friday
-             * *   **6**: Saturday
-             * *   **7**: Sunday
+             * <strong>example:</strong>
+             * <p>1,2,3</p>
              */
             public Builder daysOfWeek(String daysOfWeek) {
                 this.daysOfWeek = daysOfWeek;
@@ -139,13 +156,16 @@ public class DescribeSecurityCheckScheduleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The time range during which check tasks end. Valid values:
-             * <p>
+             * <p>The time range during which check tasks end. Valid values:</p>
+             * <ul>
+             * <li><strong>6</strong>: 00:00 to 06:00</li>
+             * <li><strong>12</strong>: 06:00 to 12:00</li>
+             * <li><strong>18</strong>: 12:00 to 18:00</li>
+             * <li><strong>24</strong>: 18:00 to 24:00</li>
+             * </ul>
              * 
-             * *   **6**: 00:00 to 06:00
-             * *   **12**: 06:00 to 12:00
-             * *   **18**: 12:00 to 18:00
-             * *   **24**: 18:00 to 24:00
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder endTime(Integer endTime) {
                 this.endTime = endTime;
@@ -153,13 +173,16 @@ public class DescribeSecurityCheckScheduleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The time range during which check tasks start. Valid values:
-             * <p>
+             * <p>The time range during which check tasks start. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: 00:00 to 06:00</li>
+             * <li><strong>6</strong>: 06:00 to 12:00</li>
+             * <li><strong>12</strong>: 12:00 to 18:00</li>
+             * <li><strong>18</strong>: 18:00 to 24:00</li>
+             * </ul>
              * 
-             * *   **0**: 00:00 to 06:00
-             * *   **6**: 06:00 to 12:00
-             * *   **12**: 12:00 to 18:00
-             * *   **18**: 18:00 to 24:00
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder startTime(Integer startTime) {
                 this.startTime = startTime;

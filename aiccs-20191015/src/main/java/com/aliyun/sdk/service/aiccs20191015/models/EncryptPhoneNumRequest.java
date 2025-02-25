@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EncryptPhoneNumRequest} extends {@link RequestModel}
  *
  * <p>EncryptPhoneNumRequest</p>
  */
 public class EncryptPhoneNumRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PhoneNum")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNum")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNum;
 
     private EncryptPhoneNumRequest(Builder builder) {
@@ -70,7 +75,10 @@ public class EncryptPhoneNumRequest extends Request {
         } 
 
         /**
-         * 实例Id
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -79,7 +87,10 @@ public class EncryptPhoneNumRequest extends Request {
         }
 
         /**
-         * 号码明文
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>130****0000</p>
          */
         public Builder phoneNum(String phoneNum) {
             this.putQueryParameter("PhoneNum", phoneNum);

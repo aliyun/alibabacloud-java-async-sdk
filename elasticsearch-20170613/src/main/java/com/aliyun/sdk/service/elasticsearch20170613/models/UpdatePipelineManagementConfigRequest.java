@@ -1,50 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePipelineManagementConfigRequest} extends {@link RequestModel}
  *
  * <p>UpdatePipelineManagementConfigRequest</p>
  */
 public class UpdatePipelineManagementConfigRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("endpoints")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("endpoints")
     private java.util.List < String > endpoints;
 
-    @Body
-    @NameInMap("password")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("esInstanceId")
+    private String esInstanceId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("password")
     private String password;
 
-    @Body
-    @NameInMap("pipelineIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("pipelineIds")
     private java.util.List < String > pipelineIds;
 
-    @Body
-    @NameInMap("pipelineManagementType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("pipelineManagementType")
     private String pipelineManagementType;
 
-    @Body
-    @NameInMap("userName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("userName")
     private String userName;
 
-    @Query
-    @NameInMap("clientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
     private UpdatePipelineManagementConfigRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.endpoints = builder.endpoints;
+        this.esInstanceId = builder.esInstanceId;
         this.password = builder.password;
         this.pipelineIds = builder.pipelineIds;
         this.pipelineManagementType = builder.pipelineManagementType;
@@ -77,6 +82,13 @@ public class UpdatePipelineManagementConfigRequest extends Request {
      */
     public java.util.List < String > getEndpoints() {
         return this.endpoints;
+    }
+
+    /**
+     * @return esInstanceId
+     */
+    public String getEsInstanceId() {
+        return this.esInstanceId;
     }
 
     /**
@@ -117,6 +129,7 @@ public class UpdatePipelineManagementConfigRequest extends Request {
     public static final class Builder extends Request.Builder<UpdatePipelineManagementConfigRequest, Builder> {
         private String instanceId; 
         private java.util.List < String > endpoints; 
+        private String esInstanceId; 
         private String password; 
         private java.util.List < String > pipelineIds; 
         private String pipelineManagementType; 
@@ -131,6 +144,7 @@ public class UpdatePipelineManagementConfigRequest extends Request {
             super(request);
             this.instanceId = request.instanceId;
             this.endpoints = request.endpoints;
+            this.esInstanceId = request.esInstanceId;
             this.password = request.password;
             this.pipelineIds = request.pipelineIds;
             this.pipelineManagementType = request.pipelineManagementType;
@@ -139,7 +153,10 @@ public class UpdatePipelineManagementConfigRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ls-cn-oew1qbgl****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -153,6 +170,15 @@ public class UpdatePipelineManagementConfigRequest extends Request {
         public Builder endpoints(java.util.List < String > endpoints) {
             this.putBodyParameter("endpoints", endpoints);
             this.endpoints = endpoints;
+            return this;
+        }
+
+        /**
+         * esInstanceId.
+         */
+        public Builder esInstanceId(String esInstanceId) {
+            this.putBodyParameter("esInstanceId", esInstanceId);
+            this.esInstanceId = esInstanceId;
             return this;
         }
 

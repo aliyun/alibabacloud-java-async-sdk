@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQueryOptimizeSolutionRequest} extends {@link RequestModel}
  *
  * <p>GetQueryOptimizeSolutionRequest</p>
  */
 public class GetQueryOptimizeSolutionRequest extends Request {
-    @Query
-    @NameInMap("Engine")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String engine;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("RuleIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleIds;
 
-    @Query
-    @NameInMap("SqlId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SqlId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sqlId;
 
     private GetQueryOptimizeSolutionRequest(Builder builder) {
@@ -99,12 +104,16 @@ public class GetQueryOptimizeSolutionRequest extends Request {
         } 
 
         /**
-         * The database engine. Valid values:
-         * <p>
+         * <p>The database engine. Valid values:</p>
+         * <ul>
+         * <li><strong>MySQL</strong></li>
+         * <li><strong>PolarDBMySQL</strong></li>
+         * <li><strong>PostgreSQL</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **MySQL**
-         * *   **PolarDBMySQL**
-         * *   **PostgreSQL**
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -113,7 +122,10 @@ public class GetQueryOptimizeSolutionRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the [GetQueryOptimizeDataStats](~~405261~~) operation to query the instance ID.
+         * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/405261.html">GetQueryOptimizeDataStats</a> operation to query the instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1o3z6beqpej****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -122,7 +134,11 @@ public class GetQueryOptimizeSolutionRequest extends Request {
         }
 
         /**
-         * The tag ID. For more information, see [Query governance](~~290038~~).
+         * <p>The tag ID. For more information, see <a href="https://help.aliyun.com/document_detail/290038.html">Query governance</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LARGE_ROWS_EXAMINED</p>
          */
         public Builder ruleIds(String ruleIds) {
             this.putQueryParameter("RuleIds", ruleIds);
@@ -131,7 +147,11 @@ public class GetQueryOptimizeSolutionRequest extends Request {
         }
 
         /**
-         * The SQL template ID. You can call the [GetQueryOptimizeDataStats](~~405261~~) operation to query the SQL template ID.
+         * <p>The SQL template ID. You can call the <a href="https://help.aliyun.com/document_detail/405261.html">GetQueryOptimizeDataStats</a> operation to query the SQL template ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>05fecf7e7b3efd123c4d5197035f****</p>
          */
         public Builder sqlId(String sqlId) {
             this.putQueryParameter("SqlId", sqlId);

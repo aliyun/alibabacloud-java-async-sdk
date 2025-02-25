@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,26 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetLayerResponseBody</p>
  */
 public class GetLayerResponseBody extends TeaModel {
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("LaboratoryId")
+    @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
+    private String gmtCreateTime;
+
+    @com.aliyun.core.annotation.NameInMap("LaboratoryId")
     private String laboratoryId;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SceneId")
+    @com.aliyun.core.annotation.NameInMap("ResidualFlow")
+    private Long residualFlow;
+
+    @com.aliyun.core.annotation.NameInMap("SceneId")
     private String sceneId;
 
     private GetLayerResponseBody(Builder builder) {
         this.description = builder.description;
+        this.gmtCreateTime = builder.gmtCreateTime;
         this.laboratoryId = builder.laboratoryId;
         this.name = builder.name;
         this.requestId = builder.requestId;
+        this.residualFlow = builder.residualFlow;
         this.sceneId = builder.sceneId;
     }
 
@@ -48,6 +55,13 @@ public class GetLayerResponseBody extends TeaModel {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return gmtCreateTime
+     */
+    public String getGmtCreateTime() {
+        return this.gmtCreateTime;
     }
 
     /**
@@ -72,6 +86,13 @@ public class GetLayerResponseBody extends TeaModel {
     }
 
     /**
+     * @return residualFlow
+     */
+    public Long getResidualFlow() {
+        return this.residualFlow;
+    }
+
+    /**
      * @return sceneId
      */
     public String getSceneId() {
@@ -80,9 +101,11 @@ public class GetLayerResponseBody extends TeaModel {
 
     public static final class Builder {
         private String description; 
+        private String gmtCreateTime; 
         private String laboratoryId; 
         private String name; 
         private String requestId; 
+        private Long residualFlow; 
         private String sceneId; 
 
         /**
@@ -90,6 +113,14 @@ public class GetLayerResponseBody extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * GmtCreateTime.
+         */
+        public Builder gmtCreateTime(String gmtCreateTime) {
+            this.gmtCreateTime = gmtCreateTime;
             return this;
         }
 
@@ -114,6 +145,14 @@ public class GetLayerResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ResidualFlow.
+         */
+        public Builder residualFlow(Long residualFlow) {
+            this.residualFlow = residualFlow;
             return this;
         }
 

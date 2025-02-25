@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AddAutoCcBlacklist  AddAutoCcBlacklistRequest
+     * @return AddAutoCcBlacklistResponse
+     */
     @Override
     public CompletableFuture<AddAutoCcBlacklistResponse> addAutoCcBlacklist(AddAutoCcBlacklistRequest request) {
         try {
@@ -54,11 +58,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the AddAutoCcWhitelist operation to add IP addresses to the whitelist of an Anti-DDoS Pro or Anti-DDoS Premium instance. This way, the Anti-DDoS Pro or Anti-DDoS Premium instance allows traffic from the IP addresses.
-      * By default, the traffic from the IP addresses that you add to the whitelist is always allowed. If you no longer use the whitelist, you can call the [EmptyAutoCcWhitelist](~~157505~~) operation to remove the IP addresses from the whitelist.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call the AddAutoCcWhitelist operation to add IP addresses to the whitelist of an Anti-DDoS Pro or Anti-DDoS Premium instance. This way, the Anti-DDoS Pro or Anti-DDoS Premium instance allows traffic from the IP addresses.
+     * By default, the traffic from the IP addresses that you add to the whitelist is always allowed. If you no longer use the whitelist, you can call the <a href="https://help.aliyun.com/document_detail/157505.html">EmptyAutoCcWhitelist</a> operation to remove the IP addresses from the whitelist.</p>
+     * <h3>Limits</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of AddAutoCcWhitelist  AddAutoCcWhitelistRequest
+     * @return AddAutoCcWhitelistResponse
      */
     @Override
     public CompletableFuture<AddAutoCcWhitelistResponse> addAutoCcWhitelist(AddAutoCcWhitelistRequest request) {
@@ -74,11 +81,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AssociateWebCert  AssociateWebCertRequest
+     * @return AssociateWebCertResponse
+     */
     @Override
     public CompletableFuture<AssociateWebCertResponse> associateWebCert(AssociateWebCertRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AssociateWebCert").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AssociateWebCert").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AssociateWebCertResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -88,6 +99,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AttachSceneDefenseObject  AttachSceneDefenseObjectRequest
+     * @return AttachSceneDefenseObjectResponse
+     */
     @Override
     public CompletableFuture<AttachSceneDefenseObjectResponse> attachSceneDefenseObject(AttachSceneDefenseObjectRequest request) {
         try {
@@ -103,8 +118,29 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If multiple origin servers are configured for a website that is added to Anti-DDoS Pro or Anti-DDoS Premium, you can modify the load balancing algorithms for back-to-origin traffic based on back-to-origin policies. The IP hash algorithm is used by default. You can change the algorithm to the round-robin or least response time algorithm. For more information, see the description of the **Policy** parameter in the "Request parameters" section of this topic.
-      *
+     * @param request the request parameters of ConfigDomainSecurityProfile  ConfigDomainSecurityProfileRequest
+     * @return ConfigDomainSecurityProfileResponse
+     */
+    @Override
+    public CompletableFuture<ConfigDomainSecurityProfileResponse> configDomainSecurityProfile(ConfigDomainSecurityProfileRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ConfigDomainSecurityProfile").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ConfigDomainSecurityProfileResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ConfigDomainSecurityProfileResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>If multiple origin servers are configured for a website that is added to Anti-DDoS Pro or Anti-DDoS Premium, you can modify the load balancing algorithms for back-to-origin traffic based on back-to-origin policies. The IP hash algorithm is used by default. You can change the algorithm to the round-robin or least response time algorithm. For more information, see the description of the <strong>Policy</strong> parameter in the &quot;Request parameters&quot; section of this topic.</p>
+     * 
+     * @param request the request parameters of ConfigL7RsPolicy  ConfigL7RsPolicyRequest
+     * @return ConfigL7RsPolicyResponse
      */
     @Override
     public CompletableFuture<ConfigL7RsPolicyResponse> configL7RsPolicy(ConfigL7RsPolicyRequest request) {
@@ -120,6 +156,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ConfigL7UsKeepalive  ConfigL7UsKeepaliveRequest
+     * @return ConfigL7UsKeepaliveResponse
+     */
+    @Override
+    public CompletableFuture<ConfigL7UsKeepaliveResponse> configL7UsKeepalive(ConfigL7UsKeepaliveRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ConfigL7UsKeepalive").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ConfigL7UsKeepaliveResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ConfigL7UsKeepaliveResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ConfigLayer4RealLimit  ConfigLayer4RealLimitRequest
+     * @return ConfigLayer4RealLimitResponse
+     */
     @Override
     public CompletableFuture<ConfigLayer4RealLimitResponse> configLayer4RealLimit(ConfigLayer4RealLimitRequest request) {
         try {
@@ -134,6 +192,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ConfigLayer4Remark  ConfigLayer4RemarkRequest
+     * @return ConfigLayer4RemarkResponse
+     */
     @Override
     public CompletableFuture<ConfigLayer4RemarkResponse> configLayer4Remark(ConfigLayer4RemarkRequest request) {
         try {
@@ -148,6 +210,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ConfigLayer4RuleBakMode  ConfigLayer4RuleBakModeRequest
+     * @return ConfigLayer4RuleBakModeResponse
+     */
     @Override
     public CompletableFuture<ConfigLayer4RuleBakModeResponse> configLayer4RuleBakMode(ConfigLayer4RuleBakModeRequest request) {
         try {
@@ -162,6 +228,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ConfigLayer4RulePolicy  ConfigLayer4RulePolicyRequest
+     * @return ConfigLayer4RulePolicyResponse
+     */
     @Override
     public CompletableFuture<ConfigLayer4RulePolicyResponse> configLayer4RulePolicy(ConfigLayer4RulePolicyRequest request) {
         try {
@@ -176,6 +246,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ConfigNetworkRegionBlock  ConfigNetworkRegionBlockRequest
+     * @return ConfigNetworkRegionBlockResponse
+     */
     @Override
     public CompletableFuture<ConfigNetworkRegionBlockResponse> configNetworkRegionBlock(ConfigNetworkRegionBlockRequest request) {
         try {
@@ -190,6 +264,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ConfigNetworkRules  ConfigNetworkRulesRequest
+     * @return ConfigNetworkRulesResponse
+     */
     @Override
     public CompletableFuture<ConfigNetworkRulesResponse> configNetworkRules(ConfigNetworkRulesRequest request) {
         try {
@@ -205,10 +283,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to configure filtering policies to filter out UDP traffic from specific ports. This helps defend against UDP reflection attacks.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to configure filtering policies to filter out UDP traffic from specific ports. This helps defend against UDP reflection attacks.</p>
+     * <h3>Limits</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of ConfigUdpReflect  ConfigUdpReflectRequest
+     * @return ConfigUdpReflectResponse
      */
     @Override
     public CompletableFuture<ConfigUdpReflectResponse> configUdpReflect(ConfigUdpReflectRequest request) {
@@ -224,6 +305,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ConfigWebCCRuleV2  ConfigWebCCRuleV2Request
+     * @return ConfigWebCCRuleV2Response
+     */
+    @Override
+    public CompletableFuture<ConfigWebCCRuleV2Response> configWebCCRuleV2(ConfigWebCCRuleV2Request request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ConfigWebCCRuleV2").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ConfigWebCCRuleV2Response.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ConfigWebCCRuleV2Response> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ConfigWebCCTemplate  ConfigWebCCTemplateRequest
+     * @return ConfigWebCCTemplateResponse
+     */
     @Override
     public CompletableFuture<ConfigWebCCTemplateResponse> configWebCCTemplate(ConfigWebCCTemplateRequest request) {
         try {
@@ -238,6 +341,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ConfigWebIpSet  ConfigWebIpSetRequest
+     * @return ConfigWebIpSetResponse
+     */
     @Override
     public CompletableFuture<ConfigWebIpSetResponse> configWebIpSet(ConfigWebIpSetRequest request) {
         try {
@@ -252,6 +359,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateAsyncTask  CreateAsyncTaskRequest
+     * @return CreateAsyncTaskResponse
+     */
     @Override
     public CompletableFuture<CreateAsyncTaskResponse> createAsyncTask(CreateAsyncTaskRequest request) {
         try {
@@ -266,6 +377,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateDomainResource  CreateDomainResourceRequest
+     * @return CreateDomainResourceResponse
+     */
     @Override
     public CompletableFuture<CreateDomainResourceResponse> createDomainResource(CreateDomainResourceRequest request) {
         try {
@@ -280,6 +395,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateNetworkRules  CreateNetworkRulesRequest
+     * @return CreateNetworkRulesResponse
+     */
     @Override
     public CompletableFuture<CreateNetworkRulesResponse> createNetworkRules(CreateNetworkRulesRequest request) {
         try {
@@ -295,8 +414,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](~~95820~~).
-      *
+     * <b>description</b> :
+     * <p>You can call this operation by using Terraform. For more information about Terraform, see <a href="https://help.aliyun.com/document_detail/95820.html">What is Terraform?</a>.</p>
+     * 
+     * @param request the request parameters of CreatePort  CreatePortRequest
+     * @return CreatePortResponse
      */
     @Override
     public CompletableFuture<CreatePortResponse> createPort(CreatePortRequest request) {
@@ -312,6 +434,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateSceneDefensePolicy  CreateSceneDefensePolicyRequest
+     * @return CreateSceneDefensePolicyResponse
+     */
     @Override
     public CompletableFuture<CreateSceneDefensePolicyResponse> createSceneDefensePolicy(CreateSceneDefensePolicyRequest request) {
         try {
@@ -326,6 +452,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateSchedulerRule  CreateSchedulerRuleRequest
+     * @return CreateSchedulerRuleResponse
+     */
     @Override
     public CompletableFuture<CreateSchedulerRuleResponse> createSchedulerRule(CreateSchedulerRuleRequest request) {
         try {
@@ -341,11 +471,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the CreateTagResources operation to add a tag to multiple Anti-DDoS Pro instances at a time.
-      * > Anti-DDoS Premium does not support the tag feature.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call the CreateTagResources operation to add tags to multiple Anti-DDoS Proxy instances at a time.</p>
+     * <h3><a href="#qps-"></a>Limits</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of CreateTagResources  CreateTagResourcesRequest
+     * @return CreateTagResourcesResponse
      */
     @Override
     public CompletableFuture<CreateTagResourcesResponse> createTagResources(CreateTagResourcesRequest request) {
@@ -361,6 +493,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @deprecated OpenAPI CreateWebCCRule is deprecated, please use ddoscoo::2020-01-01::ConfigWebCCRuleV2 instead.  * @param request  the request parameters of CreateWebCCRule  CreateWebCCRuleRequest
+     * @return CreateWebCCRuleResponse
+     */
+    @Deprecated
     @Override
     public CompletableFuture<CreateWebCCRuleResponse> createWebCCRule(CreateWebCCRuleRequest request) {
         try {
@@ -375,6 +512,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateWebRule  CreateWebRuleRequest
+     * @return CreateWebRuleResponse
+     */
     @Override
     public CompletableFuture<CreateWebRuleResponse> createWebRule(CreateWebRuleRequest request) {
         try {
@@ -389,6 +530,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteAsyncTask  DeleteAsyncTaskRequest
+     * @return DeleteAsyncTaskResponse
+     */
     @Override
     public CompletableFuture<DeleteAsyncTaskResponse> deleteAsyncTask(DeleteAsyncTaskRequest request) {
         try {
@@ -403,6 +548,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteAutoCcBlacklist  DeleteAutoCcBlacklistRequest
+     * @return DeleteAutoCcBlacklistResponse
+     */
     @Override
     public CompletableFuture<DeleteAutoCcBlacklistResponse> deleteAutoCcBlacklist(DeleteAutoCcBlacklistRequest request) {
         try {
@@ -417,6 +566,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteAutoCcWhitelist  DeleteAutoCcWhitelistRequest
+     * @return DeleteAutoCcWhitelistResponse
+     */
     @Override
     public CompletableFuture<DeleteAutoCcWhitelistResponse> deleteAutoCcWhitelist(DeleteAutoCcWhitelistRequest request) {
         try {
@@ -431,6 +584,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteDomainResource  DeleteDomainResourceRequest
+     * @return DeleteDomainResourceResponse
+     */
     @Override
     public CompletableFuture<DeleteDomainResourceResponse> deleteDomainResource(DeleteDomainResourceRequest request) {
         try {
@@ -445,6 +602,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteNetworkRule  DeleteNetworkRuleRequest
+     * @return DeleteNetworkRuleResponse
+     */
     @Override
     public CompletableFuture<DeleteNetworkRuleResponse> deleteNetworkRule(DeleteNetworkRuleRequest request) {
         try {
@@ -460,9 +621,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * After you delete a port forwarding rule, the Anti-DDoS Pro or Anti-DDoS Premium instance no longer forwards service traffic on the Layer 4 port. Before you delete a specific port forwarding rule, make sure that the service traffic destined for the Layer 4 port is redirected to the origin server. This can prevent negative impacts on your services.
-      * > You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](~~95820~~).
-      *
+     * <b>description</b> :
+     * <p>After you delete a port forwarding rule, the Anti-DDoS Pro or Anti-DDoS Premium instance no longer forwards service traffic on the Layer 4 port. Before you delete a specific port forwarding rule, make sure that the service traffic destined for the Layer 4 port is redirected to the origin server. This can prevent negative impacts on your services.</p>
+     * <blockquote>
+     * <p>You can call this operation by using Terraform. For more information about Terraform, see <a href="https://help.aliyun.com/document_detail/95820.html">What is Terraform?</a>.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DeletePort  DeletePortRequest
+     * @return DeletePortResponse
      */
     @Override
     public CompletableFuture<DeletePortResponse> deletePort(DeletePortRequest request) {
@@ -478,6 +644,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteSceneDefensePolicy  DeleteSceneDefensePolicyRequest
+     * @return DeleteSceneDefensePolicyResponse
+     */
     @Override
     public CompletableFuture<DeleteSceneDefensePolicyResponse> deleteSceneDefensePolicy(DeleteSceneDefensePolicyRequest request) {
         try {
@@ -492,6 +662,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteSchedulerRule  DeleteSchedulerRuleRequest
+     * @return DeleteSchedulerRuleResponse
+     */
     @Override
     public CompletableFuture<DeleteSchedulerRuleResponse> deleteSchedulerRule(DeleteSchedulerRuleRequest request) {
         try {
@@ -507,11 +681,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the DeleteTagResources operation to remove tags from Anti-DDoS Pro instances.
-      * > Only Anti-DDoS Pro supports tags.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call the DeleteTagResources operation to remove tags from Anti-DDoS Proxy (Chinese Mainland) instances.</p>
+     * <blockquote>
+     * <p> Only Anti-DDoS Proxy (Chinese Mainland) supports tags.</p>
+     * </blockquote>
+     * <h3><a href="#qps-"></a>QPS limits</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of DeleteTagResources  DeleteTagResourcesRequest
+     * @return DeleteTagResourcesResponse
      */
     @Override
     public CompletableFuture<DeleteTagResourcesResponse> deleteTagResources(DeleteTagResourcesRequest request) {
@@ -527,6 +706,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @deprecated OpenAPI DeleteWebCCRule is deprecated, please use ddoscoo::2020-01-01::DeleteWebCCRuleV2 instead.  * @param request  the request parameters of DeleteWebCCRule  DeleteWebCCRuleRequest
+     * @return DeleteWebCCRuleResponse
+     */
+    @Deprecated
     @Override
     public CompletableFuture<DeleteWebCCRuleResponse> deleteWebCCRule(DeleteWebCCRuleRequest request) {
         try {
@@ -542,10 +726,31 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the DeleteWebCacheCustomRule operation to delete the custom rules of the Static Page Caching policy for a website.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * @param request the request parameters of DeleteWebCCRuleV2  DeleteWebCCRuleV2Request
+     * @return DeleteWebCCRuleV2Response
+     */
+    @Override
+    public CompletableFuture<DeleteWebCCRuleV2Response> deleteWebCCRuleV2(DeleteWebCCRuleV2Request request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteWebCCRuleV2").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteWebCCRuleV2Response.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteWebCCRuleV2Response> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You can call the DeleteWebCacheCustomRule operation to delete the custom rules of the Static Page Caching policy for a website.</p>
+     * <h3>Limits</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of DeleteWebCacheCustomRule  DeleteWebCacheCustomRuleRequest
+     * @return DeleteWebCacheCustomRuleResponse
      */
     @Override
     public CompletableFuture<DeleteWebCacheCustomRuleResponse> deleteWebCacheCustomRule(DeleteWebCacheCustomRuleRequest request) {
@@ -561,6 +766,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteWebPreciseAccessRule  DeleteWebPreciseAccessRuleRequest
+     * @return DeleteWebPreciseAccessRuleResponse
+     */
     @Override
     public CompletableFuture<DeleteWebPreciseAccessRuleResponse> deleteWebPreciseAccessRule(DeleteWebPreciseAccessRuleRequest request) {
         try {
@@ -575,6 +784,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteWebRule  DeleteWebRuleRequest
+     * @return DeleteWebRuleResponse
+     */
     @Override
     public CompletableFuture<DeleteWebRuleResponse> deleteWebRule(DeleteWebRuleRequest request) {
         try {
@@ -590,10 +803,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the DescribeAsyncTasks operation to query the details of asynchronous export tasks, such as the IDs, start time, end time, status, parameters, and results.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call the DescribeAsyncTasks operation to query the details of asynchronous export tasks, such as the IDs, start time, end time, status, parameters, and results.</p>
+     * <h3>Limits</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of DescribeAsyncTasks  DescribeAsyncTasksRequest
+     * @return DescribeAsyncTasksResponse
      */
     @Override
     public CompletableFuture<DescribeAsyncTasksResponse> describeAsyncTasks(DescribeAsyncTasksRequest request) {
@@ -609,6 +825,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAttackAnalysisMaxQps  DescribeAttackAnalysisMaxQpsRequest
+     * @return DescribeAttackAnalysisMaxQpsResponse
+     */
     @Override
     public CompletableFuture<DescribeAttackAnalysisMaxQpsResponse> describeAttackAnalysisMaxQps(DescribeAttackAnalysisMaxQpsRequest request) {
         try {
@@ -623,6 +843,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAutoCcBlacklist  DescribeAutoCcBlacklistRequest
+     * @return DescribeAutoCcBlacklistResponse
+     */
     @Override
     public CompletableFuture<DescribeAutoCcBlacklistResponse> describeAutoCcBlacklist(DescribeAutoCcBlacklistRequest request) {
         try {
@@ -637,6 +861,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAutoCcListCount  DescribeAutoCcListCountRequest
+     * @return DescribeAutoCcListCountResponse
+     */
     @Override
     public CompletableFuture<DescribeAutoCcListCountResponse> describeAutoCcListCount(DescribeAutoCcListCountRequest request) {
         try {
@@ -651,6 +879,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAutoCcWhitelist  DescribeAutoCcWhitelistRequest
+     * @return DescribeAutoCcWhitelistResponse
+     */
     @Override
     public CompletableFuture<DescribeAutoCcWhitelistResponse> describeAutoCcWhitelist(DescribeAutoCcWhitelistRequest request) {
         try {
@@ -665,6 +897,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeBackSourceCidr  DescribeBackSourceCidrRequest
+     * @return DescribeBackSourceCidrResponse
+     */
     @Override
     public CompletableFuture<DescribeBackSourceCidrResponse> describeBackSourceCidr(DescribeBackSourceCidrRequest request) {
         try {
@@ -679,6 +915,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeBlackholeStatus  DescribeBlackholeStatusRequest
+     * @return DescribeBlackholeStatusResponse
+     */
     @Override
     public CompletableFuture<DescribeBlackholeStatusResponse> describeBlackholeStatus(DescribeBlackholeStatusRequest request) {
         try {
@@ -694,11 +934,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This operation is used to query the Diversion from Origin Server configurations of one or more Anti-DDoS Pro instances.
-      * > This operation is suitable only for Anti-DDoS Pro.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to query the Diversion from Origin Server configurations of one or more Anti-DDoS Proxy (Chinese Mainland) instances.</p>
+     * <blockquote>
+     * <p> This operation is suitable only for Anti-DDoS Proxy (Chinese Mainland).</p>
+     * </blockquote>
+     * <h3><a href="#qps-"></a>QPS limits</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of DescribeBlockStatus  DescribeBlockStatusRequest
+     * @return DescribeBlockStatusResponse
      */
     @Override
     public CompletableFuture<DescribeBlockStatusResponse> describeBlockStatus(DescribeBlockStatusRequest request) {
@@ -714,6 +959,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCerts  DescribeCertsRequest
+     * @return DescribeCertsResponse
+     */
     @Override
     public CompletableFuture<DescribeCertsResponse> describeCerts(DescribeCertsRequest request) {
         try {
@@ -728,6 +977,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCnameReuses  DescribeCnameReusesRequest
+     * @return DescribeCnameReusesResponse
+     */
     @Override
     public CompletableFuture<DescribeCnameReusesResponse> describeCnameReuses(DescribeCnameReusesRequest request) {
         try {
@@ -742,6 +995,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDDoSEvents  DescribeDDoSEventsRequest
+     * @return DescribeDDoSEventsResponse
+     */
     @Override
     public CompletableFuture<DescribeDDoSEventsResponse> describeDDoSEvents(DescribeDDoSEventsRequest request) {
         try {
@@ -757,10 +1014,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the DescribeDDosAllEventList operation to query DDoS attack events within a specific time range by page. The information about a DDoS attack event includes the start time and end time of the attack, attack event type, attacked object, peak bandwidth of attack traffic, and peak packet forwarding rate.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call the DescribeDDosAllEventList operation to query DDoS attack events within a specific time range by page. The information about a DDoS attack event includes the start time and end time of the attack, attack event type, attacked object, peak bandwidth of attack traffic, and peak packet forwarding rate.</p>
+     * <h3>Limits</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of DescribeDDosAllEventList  DescribeDDosAllEventListRequest
+     * @return DescribeDDosAllEventListResponse
      */
     @Override
     public CompletableFuture<DescribeDDosAllEventListResponse> describeDDosAllEventList(DescribeDDosAllEventListRequest request) {
@@ -777,8 +1037,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > This operation is suitable only for volumetric attacks.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This operation is suitable only for volumetric attacks.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DescribeDDosEventArea  DescribeDDosEventAreaRequest
+     * @return DescribeDDosEventAreaResponse
      */
     @Override
     public CompletableFuture<DescribeDDosEventAreaResponse> describeDDosEventArea(DescribeDDosEventAreaRequest request) {
@@ -795,8 +1060,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > This operation is suitable only for volumetric attacks.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This operation is suitable only for volumetric attacks.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DescribeDDosEventAttackType  DescribeDDosEventAttackTypeRequest
+     * @return DescribeDDosEventAttackTypeResponse
      */
     @Override
     public CompletableFuture<DescribeDDosEventAttackTypeResponse> describeDDosEventAttackType(DescribeDDosEventAttackTypeRequest request) {
@@ -813,8 +1083,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > This operation is suitable only for volumetric attacks.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This operation is suitable only for volumetric attacks.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DescribeDDosEventIsp  DescribeDDosEventIspRequest
+     * @return DescribeDDosEventIspResponse
      */
     @Override
     public CompletableFuture<DescribeDDosEventIspResponse> describeDDosEventIsp(DescribeDDosEventIspRequest request) {
@@ -830,6 +1105,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDDosEventMax  DescribeDDosEventMaxRequest
+     * @return DescribeDDosEventMaxResponse
+     */
     @Override
     public CompletableFuture<DescribeDDosEventMaxResponse> describeDDosEventMax(DescribeDDosEventMaxRequest request) {
         try {
@@ -845,8 +1124,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > This operation is suitable only for volumetric attacks.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This operation is suitable only for volumetric attacks.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DescribeDDosEventSrcIp  DescribeDDosEventSrcIpRequest
+     * @return DescribeDDosEventSrcIpResponse
      */
     @Override
     public CompletableFuture<DescribeDDosEventSrcIpResponse> describeDDosEventSrcIp(DescribeDDosEventSrcIpRequest request) {
@@ -863,11 +1147,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the DescribeDefenseCountStatistics operation to query the information about advanced mitigation sessions of an Anti-DDoS Premium instance. For example, you can query the number of advanced mitigation sessions that are used within the current calendar month and the number of available global advanced mitigation sessions.
-      * > This operation is suitable only for Anti-DDoS Premium.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call the DescribeDefenseCountStatistics operation to query the information about advanced mitigation sessions of an Anti-DDoS Proxy (Outside Chinese Mainland) instance. For example, you can query the number of advanced mitigation sessions that are used within the current calendar month and the number of remaining advanced mitigation sessions.</p>
+     * <blockquote>
+     * <p> This operation is suitable only for Anti-DDoS Proxy (Outside Chinese Mainland).</p>
+     * </blockquote>
+     * <h3><a href="#qps-"></a>QPS limits</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of DescribeDefenseCountStatistics  DescribeDefenseCountStatisticsRequest
+     * @return DescribeDefenseCountStatisticsResponse
      */
     @Override
     public CompletableFuture<DescribeDefenseCountStatisticsResponse> describeDefenseCountStatistics(DescribeDefenseCountStatisticsRequest request) {
@@ -884,8 +1173,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > This operation is suitable only for Anti-DDoS Premium.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This operation is suitable only for Anti-DDoS Premium.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DescribeDefenseRecords  DescribeDefenseRecordsRequest
+     * @return DescribeDefenseRecordsResponse
      */
     @Override
     public CompletableFuture<DescribeDefenseRecordsResponse> describeDefenseRecords(DescribeDefenseRecordsRequest request) {
@@ -901,6 +1195,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDestinationPortEvent  DescribeDestinationPortEventRequest
+     * @return DescribeDestinationPortEventResponse
+     */
+    @Override
+    public CompletableFuture<DescribeDestinationPortEventResponse> describeDestinationPortEvent(DescribeDestinationPortEventRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDestinationPortEvent").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDestinationPortEventResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDestinationPortEventResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeDomainAttackEvents  DescribeDomainAttackEventsRequest
+     * @return DescribeDomainAttackEventsResponse
+     */
     @Override
     public CompletableFuture<DescribeDomainAttackEventsResponse> describeDomainAttackEvents(DescribeDomainAttackEventsRequest request) {
         try {
@@ -915,6 +1231,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDomainBps  DescribeDomainBpsRequest
+     * @return DescribeDomainBpsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeDomainBpsResponse> describeDomainBps(DescribeDomainBpsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDomainBps").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDomainBpsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDomainBpsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeDomainH2Fingerprint  DescribeDomainH2FingerprintRequest
+     * @return DescribeDomainH2FingerprintResponse
+     */
+    @Override
+    public CompletableFuture<DescribeDomainH2FingerprintResponse> describeDomainH2Fingerprint(DescribeDomainH2FingerprintRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDomainH2Fingerprint").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDomainH2FingerprintResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDomainH2FingerprintResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeDomainOverview  DescribeDomainOverviewRequest
+     * @return DescribeDomainOverviewResponse
+     */
     @Override
     public CompletableFuture<DescribeDomainOverviewResponse> describeDomainOverview(DescribeDomainOverviewRequest request) {
         try {
@@ -929,6 +1285,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDomainQPSList  DescribeDomainQPSListRequest
+     * @return DescribeDomainQPSListResponse
+     */
     @Override
     public CompletableFuture<DescribeDomainQPSListResponse> describeDomainQPSList(DescribeDomainQPSListRequest request) {
         try {
@@ -943,26 +1303,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<DescribeDomainQpsWithCacheResponse> describeDomainQpsWithCache(DescribeDomainQpsWithCacheRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDomainQpsWithCache").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDomainQpsWithCacheResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeDomainQpsWithCacheResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
     /**
-      * You can call the DescribeDomainResource operation to query the configurations of the forwarding rules that you create for a website by page. The configurations include the domain name-related configurations, protocol-related configurations, HTTPS-related configurations, and configurations that are used to mitigate HTTP flood attacks.
-      * You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](~~95820~~).
-      * ### Limits
-      * You can call this operation up to 50 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call the DescribeDomainResource operation to query the configurations of the forwarding rules that you create for a website by page. The configurations include the domain name-related configurations, protocol-related configurations, HTTPS-related configurations, and configurations that are used to mitigate HTTP flood attacks.
+     * You can call this operation by using Terraform. For more information about Terraform, see <a href="https://help.aliyun.com/document_detail/95820.html">What is Terraform?</a>.</p>
+     * <h3>Limits</h3>
+     * <p>You can call this operation up to 50 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of DescribeDomainResource  DescribeDomainResourceRequest
+     * @return DescribeDomainResourceResponse
      */
     @Override
     public CompletableFuture<DescribeDomainResourceResponse> describeDomainResource(DescribeDomainResourceRequest request) {
@@ -978,6 +1327,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDomainSecurityProfile  DescribeDomainSecurityProfileRequest
+     * @return DescribeDomainSecurityProfileResponse
+     */
     @Override
     public CompletableFuture<DescribeDomainSecurityProfileResponse> describeDomainSecurityProfile(DescribeDomainSecurityProfileRequest request) {
         try {
@@ -992,6 +1345,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDomainStatusCodeCount  DescribeDomainStatusCodeCountRequest
+     * @return DescribeDomainStatusCodeCountResponse
+     */
     @Override
     public CompletableFuture<DescribeDomainStatusCodeCountResponse> describeDomainStatusCodeCount(DescribeDomainStatusCodeCountRequest request) {
         try {
@@ -1006,6 +1363,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDomainStatusCodeList  DescribeDomainStatusCodeListRequest
+     * @return DescribeDomainStatusCodeListResponse
+     */
     @Override
     public CompletableFuture<DescribeDomainStatusCodeListResponse> describeDomainStatusCodeList(DescribeDomainStatusCodeListRequest request) {
         try {
@@ -1020,6 +1381,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDomainTopAttackList  DescribeDomainTopAttackListRequest
+     * @return DescribeDomainTopAttackListResponse
+     */
     @Override
     public CompletableFuture<DescribeDomainTopAttackListResponse> describeDomainTopAttackList(DescribeDomainTopAttackListRequest request) {
         try {
@@ -1034,6 +1399,82 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDomainTopFingerprint  DescribeDomainTopFingerprintRequest
+     * @return DescribeDomainTopFingerprintResponse
+     */
+    @Override
+    public CompletableFuture<DescribeDomainTopFingerprintResponse> describeDomainTopFingerprint(DescribeDomainTopFingerprintRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDomainTopFingerprint").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDomainTopFingerprintResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDomainTopFingerprintResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeDomainTopHttpMethod  DescribeDomainTopHttpMethodRequest
+     * @return DescribeDomainTopHttpMethodResponse
+     */
+    @Override
+    public CompletableFuture<DescribeDomainTopHttpMethodResponse> describeDomainTopHttpMethod(DescribeDomainTopHttpMethodRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDomainTopHttpMethod").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDomainTopHttpMethodResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDomainTopHttpMethodResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeDomainTopReferer  DescribeDomainTopRefererRequest
+     * @return DescribeDomainTopRefererResponse
+     */
+    @Override
+    public CompletableFuture<DescribeDomainTopRefererResponse> describeDomainTopReferer(DescribeDomainTopRefererRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDomainTopReferer").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDomainTopRefererResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDomainTopRefererResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeDomainTopUserAgent  DescribeDomainTopUserAgentRequest
+     * @return DescribeDomainTopUserAgentResponse
+     */
+    @Override
+    public CompletableFuture<DescribeDomainTopUserAgentResponse> describeDomainTopUserAgent(DescribeDomainTopUserAgentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDomainTopUserAgent").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDomainTopUserAgentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDomainTopUserAgentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeDomainViewSourceCountries  DescribeDomainViewSourceCountriesRequest
+     * @return DescribeDomainViewSourceCountriesResponse
+     */
     @Override
     public CompletableFuture<DescribeDomainViewSourceCountriesResponse> describeDomainViewSourceCountries(DescribeDomainViewSourceCountriesRequest request) {
         try {
@@ -1048,6 +1489,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDomainViewSourceProvinces  DescribeDomainViewSourceProvincesRequest
+     * @return DescribeDomainViewSourceProvincesResponse
+     */
     @Override
     public CompletableFuture<DescribeDomainViewSourceProvincesResponse> describeDomainViewSourceProvinces(DescribeDomainViewSourceProvincesRequest request) {
         try {
@@ -1062,6 +1507,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDomainViewTopCostTime  DescribeDomainViewTopCostTimeRequest
+     * @return DescribeDomainViewTopCostTimeResponse
+     */
     @Override
     public CompletableFuture<DescribeDomainViewTopCostTimeResponse> describeDomainViewTopCostTime(DescribeDomainViewTopCostTimeRequest request) {
         try {
@@ -1076,6 +1525,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDomainViewTopUrl  DescribeDomainViewTopUrlRequest
+     * @return DescribeDomainViewTopUrlResponse
+     */
     @Override
     public CompletableFuture<DescribeDomainViewTopUrlResponse> describeDomainViewTopUrl(DescribeDomainViewTopUrlRequest request) {
         try {
@@ -1090,6 +1543,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDomains  DescribeDomainsRequest
+     * @return DescribeDomainsResponse
+     */
     @Override
     public CompletableFuture<DescribeDomainsResponse> describeDomains(DescribeDomainsRequest request) {
         try {
@@ -1105,8 +1562,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > This operation is suitable only for Anti-DDoS Pro.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> This operation is suitable only for Anti-DDoS Proxy (Chinese Mainland).</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DescribeElasticBandwidthSpec  DescribeElasticBandwidthSpecRequest
+     * @return DescribeElasticBandwidthSpecResponse
      */
     @Override
     public CompletableFuture<DescribeElasticBandwidthSpecResponse> describeElasticBandwidthSpec(DescribeElasticBandwidthSpecRequest request) {
@@ -1122,6 +1584,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeElasticQps  DescribeElasticQpsRequest
+     * @return DescribeElasticQpsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeElasticQpsResponse> describeElasticQps(DescribeElasticQpsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeElasticQps").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeElasticQpsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeElasticQpsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeElasticQpsRecord  DescribeElasticQpsRecordRequest
+     * @return DescribeElasticQpsRecordResponse
+     */
+    @Override
+    public CompletableFuture<DescribeElasticQpsRecordResponse> describeElasticQpsRecord(DescribeElasticQpsRecordRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeElasticQpsRecord").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeElasticQpsRecordResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeElasticQpsRecordResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeHeaders  DescribeHeadersRequest
+     * @return DescribeHeadersResponse
+     */
     @Override
     public CompletableFuture<DescribeHeadersResponse> describeHeaders(DescribeHeadersRequest request) {
         try {
@@ -1136,6 +1638,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeHealthCheckList  DescribeHealthCheckListRequest
+     * @return DescribeHealthCheckListResponse
+     */
     @Override
     public CompletableFuture<DescribeHealthCheckListResponse> describeHealthCheckList(DescribeHealthCheckListRequest request) {
         try {
@@ -1150,6 +1656,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeHealthCheckStatus  DescribeHealthCheckStatusRequest
+     * @return DescribeHealthCheckStatusResponse
+     */
     @Override
     public CompletableFuture<DescribeHealthCheckStatusResponse> describeHealthCheckStatus(DescribeHealthCheckStatusRequest request) {
         try {
@@ -1165,10 +1675,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the DescribeInstanceDetails operation to query the information about the IP addresses and ISP lines of the instances. The information includes the IP address, status, and protection line.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call the DescribeInstanceDetails operation to query the information about the IP addresses and ISP lines of the instances. The information includes the IP address, status, and protection line.</p>
+     * <h3>Limits</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of DescribeInstanceDetails  DescribeInstanceDetailsRequest
+     * @return DescribeInstanceDetailsResponse
      */
     @Override
     public CompletableFuture<DescribeInstanceDetailsResponse> describeInstanceDetails(DescribeInstanceDetailsRequest request) {
@@ -1184,6 +1697,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeInstanceExt  DescribeInstanceExtRequest
+     * @return DescribeInstanceExtResponse
+     */
     @Override
     public CompletableFuture<DescribeInstanceExtResponse> describeInstanceExt(DescribeInstanceExtRequest request) {
         try {
@@ -1198,6 +1715,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeInstanceIds  DescribeInstanceIdsRequest
+     * @return DescribeInstanceIdsResponse
+     */
     @Override
     public CompletableFuture<DescribeInstanceIdsResponse> describeInstanceIds(DescribeInstanceIdsRequest request) {
         try {
@@ -1213,10 +1734,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the DescribeInstanceSpecs operation to query the specifications of multiple Anti-DDoS Pro or Anti-DDoS Premium instances at a time. The specifications include the clean bandwidth, protection bandwidth, function plan, and the numbers of domain names and ports that can be protected.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call the DescribeInstanceSpecs operation to query the specifications of multiple Anti-DDoS Pro or Anti-DDoS Premium instances at a time. The specifications include the clean bandwidth, protection bandwidth, function plan, and the numbers of domain names and ports that can be protected.</p>
+     * <h3>Limits</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of DescribeInstanceSpecs  DescribeInstanceSpecsRequest
+     * @return DescribeInstanceSpecsResponse
      */
     @Override
     public CompletableFuture<DescribeInstanceSpecsResponse> describeInstanceSpecs(DescribeInstanceSpecsRequest request) {
@@ -1232,6 +1756,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeInstanceStatistics  DescribeInstanceStatisticsRequest
+     * @return DescribeInstanceStatisticsResponse
+     */
     @Override
     public CompletableFuture<DescribeInstanceStatisticsResponse> describeInstanceStatistics(DescribeInstanceStatisticsRequest request) {
         try {
@@ -1246,6 +1774,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeInstanceStatus  DescribeInstanceStatusRequest
+     * @return DescribeInstanceStatusResponse
+     */
     @Override
     public CompletableFuture<DescribeInstanceStatusResponse> describeInstanceStatus(DescribeInstanceStatusRequest request) {
         try {
@@ -1261,8 +1793,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the DescribeInstances operation to query the details of Anti-DDoS Pro or Anti-DDoS Premium instances within the Alibaba Cloud account by page. The details include the ID, mitigation plan, expiration time, and forwarding status.
-      *
+     * <b>description</b> :
+     * <p>You can call the DescribeInstances operation to query the details of Anti-DDoS Pro or Anti-DDoS Premium instances within the Alibaba Cloud account by page. The details include the ID, mitigation plan, expiration time, and forwarding status.</p>
+     * 
+     * @param request the request parameters of DescribeInstances  DescribeInstancesRequest
+     * @return DescribeInstancesResponse
      */
     @Override
     public CompletableFuture<DescribeInstancesResponse> describeInstances(DescribeInstancesRequest request) {
@@ -1278,6 +1813,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeL7RsPolicy  DescribeL7RsPolicyRequest
+     * @return DescribeL7RsPolicyResponse
+     */
     @Override
     public CompletableFuture<DescribeL7RsPolicyResponse> describeL7RsPolicy(DescribeL7RsPolicyRequest request) {
         try {
@@ -1292,6 +1831,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeL7UsKeepalive  DescribeL7UsKeepaliveRequest
+     * @return DescribeL7UsKeepaliveResponse
+     */
+    @Override
+    public CompletableFuture<DescribeL7UsKeepaliveResponse> describeL7UsKeepalive(DescribeL7UsKeepaliveRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeL7UsKeepalive").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeL7UsKeepaliveResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeL7UsKeepaliveResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeLayer4RulePolicy  DescribeLayer4RulePolicyRequest
+     * @return DescribeLayer4RulePolicyResponse
+     */
     @Override
     public CompletableFuture<DescribeLayer4RulePolicyResponse> describeLayer4RulePolicy(DescribeLayer4RulePolicyRequest request) {
         try {
@@ -1306,6 +1867,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeLogStoreExistStatus  DescribeLogStoreExistStatusRequest
+     * @return DescribeLogStoreExistStatusResponse
+     */
     @Override
     public CompletableFuture<DescribeLogStoreExistStatusResponse> describeLogStoreExistStatus(DescribeLogStoreExistStatusRequest request) {
         try {
@@ -1320,6 +1885,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeNetworkRegionBlock  DescribeNetworkRegionBlockRequest
+     * @return DescribeNetworkRegionBlockResponse
+     */
     @Override
     public CompletableFuture<DescribeNetworkRegionBlockResponse> describeNetworkRegionBlock(DescribeNetworkRegionBlockRequest request) {
         try {
@@ -1334,6 +1903,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeNetworkRuleAttributes  DescribeNetworkRuleAttributesRequest
+     * @return DescribeNetworkRuleAttributesResponse
+     */
     @Override
     public CompletableFuture<DescribeNetworkRuleAttributesResponse> describeNetworkRuleAttributes(DescribeNetworkRuleAttributesRequest request) {
         try {
@@ -1348,6 +1921,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeNetworkRules  DescribeNetworkRulesRequest
+     * @return DescribeNetworkRulesResponse
+     */
     @Override
     public CompletableFuture<DescribeNetworkRulesResponse> describeNetworkRules(DescribeNetworkRulesRequest request) {
         try {
@@ -1363,9 +1940,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > This operation is suitable only for Anti-DDoS Pro.
-      * You can query operations performed on Anti-DDoS Pro, such as configuring burstable protection bandwidth, deactivating blackhole filtering, configuring the Diversion from Origin Server policy, using Anti-DDoS plans, changing the IP addresses of Elastic Compute Service (ECS) instances, and clearing all logs.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> This operation is suitable only for Anti-DDoS Proxy (Chinese Mainland).
+     * You can query operations performed on Anti-DDoS Proxy (Chinese Mainland), such as configuring the burstable protection bandwidth, deactivating blackhole filtering, configuring the near-origin traffic diversion feature, using Anti-DDoS plans, changing the IP addresses of Elastic Compute Service (ECS) instances, and clearing all logs.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DescribeOpEntities  DescribeOpEntitiesRequest
+     * @return DescribeOpEntitiesResponse
      */
     @Override
     public CompletableFuture<DescribeOpEntitiesResponse> describeOpEntities(DescribeOpEntitiesRequest request) {
@@ -1382,8 +1964,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](~~95820~~).
-      *
+     * <b>description</b> :
+     * <p>You can call this operation by using Terraform. For more information about Terraform, see <a href="https://help.aliyun.com/document_detail/95820.html">What is Terraform?</a>.</p>
+     * 
+     * @param request the request parameters of DescribePort  DescribePortRequest
+     * @return DescribePortResponse
      */
     @Override
     public CompletableFuture<DescribePortResponse> describePort(DescribePortRequest request) {
@@ -1400,10 +1985,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to query the peak bandwidth and peak packet rate of attack traffic on one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specific period of time.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to query the peak bandwidth and peak packet rate of attack traffic on one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specific period of time.</p>
+     * <h3>Limits</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of DescribePortAttackMaxFlow  DescribePortAttackMaxFlowRequest
+     * @return DescribePortAttackMaxFlowResponse
      */
     @Override
     public CompletableFuture<DescribePortAttackMaxFlowResponse> describePortAttackMaxFlow(DescribePortAttackMaxFlowRequest request) {
@@ -1419,6 +2007,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePortAutoCcStatus  DescribePortAutoCcStatusRequest
+     * @return DescribePortAutoCcStatusResponse
+     */
     @Override
     public CompletableFuture<DescribePortAutoCcStatusResponse> describePortAutoCcStatus(DescribePortAutoCcStatusRequest request) {
         try {
@@ -1433,6 +2025,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePortCcAttackTopIP  DescribePortCcAttackTopIPRequest
+     * @return DescribePortCcAttackTopIPResponse
+     */
+    @Override
+    public CompletableFuture<DescribePortCcAttackTopIPResponse> describePortCcAttackTopIP(DescribePortCcAttackTopIPRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribePortCcAttackTopIP").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribePortCcAttackTopIPResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribePortCcAttackTopIPResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribePortConnsCount  DescribePortConnsCountRequest
+     * @return DescribePortConnsCountResponse
+     */
     @Override
     public CompletableFuture<DescribePortConnsCountResponse> describePortConnsCount(DescribePortConnsCountRequest request) {
         try {
@@ -1447,6 +2061,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePortConnsList  DescribePortConnsListRequest
+     * @return DescribePortConnsListResponse
+     */
     @Override
     public CompletableFuture<DescribePortConnsListResponse> describePortConnsList(DescribePortConnsListRequest request) {
         try {
@@ -1461,6 +2079,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePortFlowList  DescribePortFlowListRequest
+     * @return DescribePortFlowListResponse
+     */
     @Override
     public CompletableFuture<DescribePortFlowListResponse> describePortFlowList(DescribePortFlowListRequest request) {
         try {
@@ -1475,6 +2097,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePortMaxConns  DescribePortMaxConnsRequest
+     * @return DescribePortMaxConnsResponse
+     */
     @Override
     public CompletableFuture<DescribePortMaxConnsResponse> describePortMaxConns(DescribePortMaxConnsRequest request) {
         try {
@@ -1489,6 +2115,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePortViewSourceCountries  DescribePortViewSourceCountriesRequest
+     * @return DescribePortViewSourceCountriesResponse
+     */
     @Override
     public CompletableFuture<DescribePortViewSourceCountriesResponse> describePortViewSourceCountries(DescribePortViewSourceCountriesRequest request) {
         try {
@@ -1504,11 +2134,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the DescribePortViewSourceIsps operation to query the ISPs from which requests are sent to one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specific period of time.
-      * > The data returned for this operation cannot reflect the actual traffic volume because Layer 4 identity authentication algorithms are updated for Anti-DDoS Pro and Anti-DDoS Premium. You can call this operation to calculate only the proportion of requests sent from different ISPs. If you want to query the request traffic volume, we recommend that you call the [DescribePortFlowList](~~157460~~) operation.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call the DescribePortViewSourceIsps operation to query the ISPs from which requests are sent to one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specific period of time.</p>
+     * <blockquote>
+     * <p>The data returned for this operation cannot reflect the actual traffic volume because Layer 4 identity authentication algorithms are updated for Anti-DDoS Pro and Anti-DDoS Premium. You can call this operation to calculate only the proportion of requests sent from different ISPs. If you want to query the request traffic volume, we recommend that you call the <a href="https://help.aliyun.com/document_detail/157460.html">DescribePortFlowList</a> operation.</p>
+     * </blockquote>
+     * <h3>Limits</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of DescribePortViewSourceIsps  DescribePortViewSourceIspsRequest
+     * @return DescribePortViewSourceIspsResponse
      */
     @Override
     public CompletableFuture<DescribePortViewSourceIspsResponse> describePortViewSourceIsps(DescribePortViewSourceIspsRequest request) {
@@ -1524,6 +2159,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePortViewSourceProvinces  DescribePortViewSourceProvincesRequest
+     * @return DescribePortViewSourceProvincesResponse
+     */
     @Override
     public CompletableFuture<DescribePortViewSourceProvincesResponse> describePortViewSourceProvinces(DescribePortViewSourceProvincesRequest request) {
         try {
@@ -1539,11 +2178,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the DescribeSceneDefenseObjects operation to query the protected objects of a scenario-specific custom policy.
-      * Before you call this operation, make sure that you have created a scenario-specific custom policy by calling the [CreateSceneDefensePolicy](~~159779~~) operation.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call the DescribeSceneDefenseObjects operation to query the protected objects of a scenario-specific custom policy.
+     * Before you call this operation, make sure that you have created a scenario-specific custom policy by calling the <a href="https://help.aliyun.com/document_detail/159779.html">CreateSceneDefensePolicy</a> operation.</p>
+     * <h3>Limits</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of DescribeSceneDefenseObjects  DescribeSceneDefenseObjectsRequest
+     * @return DescribeSceneDefenseObjectsResponse
      */
     @Override
     public CompletableFuture<DescribeSceneDefenseObjectsResponse> describeSceneDefenseObjects(DescribeSceneDefenseObjectsRequest request) {
@@ -1560,10 +2202,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the DescribeSceneDefensePolicies operation to query the configurations of a scenario-specific custom policy that is created. For example, you can query the status, protected objects, and protection rules of the policy.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call the DescribeSceneDefensePolicies operation to query the configurations of a scenario-specific custom policy that is created. For example, you can query the status, protected objects, and protection rules of the policy.</p>
+     * <h3>Limits</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of DescribeSceneDefensePolicies  DescribeSceneDefensePoliciesRequest
+     * @return DescribeSceneDefensePoliciesResponse
      */
     @Override
     public CompletableFuture<DescribeSceneDefensePoliciesResponse> describeSceneDefensePolicies(DescribeSceneDefensePoliciesRequest request) {
@@ -1579,6 +2224,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSchedulerRules  DescribeSchedulerRulesRequest
+     * @return DescribeSchedulerRulesResponse
+     */
     @Override
     public CompletableFuture<DescribeSchedulerRulesResponse> describeSchedulerRules(DescribeSchedulerRulesRequest request) {
         try {
@@ -1593,6 +2242,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSlaEventList  DescribeSlaEventListRequest
+     * @return DescribeSlaEventListResponse
+     */
     @Override
     public CompletableFuture<DescribeSlaEventListResponse> describeSlaEventList(DescribeSlaEventListRequest request) {
         try {
@@ -1607,6 +2260,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSlsAuthStatus  DescribeSlsAuthStatusRequest
+     * @return DescribeSlsAuthStatusResponse
+     */
     @Override
     public CompletableFuture<DescribeSlsAuthStatusResponse> describeSlsAuthStatus(DescribeSlsAuthStatusRequest request) {
         try {
@@ -1621,6 +2278,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSlsLogstoreInfo  DescribeSlsLogstoreInfoRequest
+     * @return DescribeSlsLogstoreInfoResponse
+     */
     @Override
     public CompletableFuture<DescribeSlsLogstoreInfoResponse> describeSlsLogstoreInfo(DescribeSlsLogstoreInfoRequest request) {
         try {
@@ -1635,6 +2296,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSlsOpenStatus  DescribeSlsOpenStatusRequest
+     * @return DescribeSlsOpenStatusResponse
+     */
     @Override
     public CompletableFuture<DescribeSlsOpenStatusResponse> describeSlsOpenStatus(DescribeSlsOpenStatusRequest request) {
         try {
@@ -1650,10 +2315,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the DescribeStsGrantStatus operation to query whether Anti-DDoS Pro or Anti-DDoS Premium of the current Alibaba Cloud account is authorized to access other cloud services.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call the DescribeStsGrantStatus operation to query whether Anti-DDoS Pro or Anti-DDoS Premium of the current Alibaba Cloud account is authorized to access other cloud services.</p>
+     * <h3>Limits</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of DescribeStsGrantStatus  DescribeStsGrantStatusRequest
+     * @return DescribeStsGrantStatusResponse
      */
     @Override
     public CompletableFuture<DescribeStsGrantStatusResponse> describeStsGrantStatus(DescribeStsGrantStatusRequest request) {
@@ -1670,11 +2338,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the DescribeSystemLog operation to query the system logs of Anti-DDoS Pro or Anti-DDoS Premium. The system logs contain only billing logs for the burstable clean bandwidth.
-      * If you have enabled the burstable clean bandwidth feature, you can call this operation to query the details of the bills of the burstable clean bandwidth.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call the DescribeSystemLog operation to query the system logs of Anti-DDoS Pro or Anti-DDoS Premium. The system logs contain only billing logs for the burstable clean bandwidth.
+     * If you have enabled the burstable clean bandwidth feature, you can call this operation to query the details of the bills of the burstable clean bandwidth.</p>
+     * <h3>Limits</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of DescribeSystemLog  DescribeSystemLogRequest
+     * @return DescribeSystemLogResponse
      */
     @Override
     public CompletableFuture<DescribeSystemLogResponse> describeSystemLog(DescribeSystemLogRequest request) {
@@ -1691,11 +2362,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to query all tag keys and the Anti-DDoS Pro instances to which the tag keys are added by page.
-      * > The tag feature is suitable only for Anti-DDoS Pro.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to query all tag keys and the number of Anti-DDoS Proxy (Chinese Mainland) instances to which each tag key is added by page.</p>
+     * <blockquote>
+     * <p> Only Anti-DDoS Proxy (Chinese Mainland) supports tags.</p>
+     * </blockquote>
+     * <h3><a href="#qps-"></a>QPS limits</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of DescribeTagKeys  DescribeTagKeysRequest
+     * @return DescribeTagKeysResponse
      */
     @Override
     public CompletableFuture<DescribeTagKeysResponse> describeTagKeys(DescribeTagKeysRequest request) {
@@ -1712,11 +2388,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the DescribeTagResources operation to query the information about the tags that are added to an Anti-DDoS Pro instance.
-      * > Only Anti-DDoS Pro supports tags.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call the DescribeTagResources operation to query the information about the tags that are added to an Anti-DDoS Proxy (Chinese Mainland) instance.</p>
+     * <blockquote>
+     * <p> Only Anti-DDoS Proxy (Chinese Mainland) supports tags.</p>
+     * </blockquote>
+     * <h3><a href="#qps-"></a>QPS limits</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of DescribeTagResources  DescribeTagResourcesRequest
+     * @return DescribeTagResourcesResponse
      */
     @Override
     public CompletableFuture<DescribeTagResourcesResponse> describeTagResources(DescribeTagResourcesRequest request) {
@@ -1732,6 +2413,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeTotalAttackMaxFlow  DescribeTotalAttackMaxFlowRequest
+     * @return DescribeTotalAttackMaxFlowResponse
+     */
     @Override
     public CompletableFuture<DescribeTotalAttackMaxFlowResponse> describeTotalAttackMaxFlow(DescribeTotalAttackMaxFlowRequest request) {
         try {
@@ -1746,6 +2431,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeUdpReflect  DescribeUdpReflectRequest
+     * @return DescribeUdpReflectResponse
+     */
     @Override
     public CompletableFuture<DescribeUdpReflectResponse> describeUdpReflect(DescribeUdpReflectRequest request) {
         try {
@@ -1760,6 +2449,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeUnBlackholeCount  DescribeUnBlackholeCountRequest
+     * @return DescribeUnBlackholeCountResponse
+     */
     @Override
     public CompletableFuture<DescribeUnBlackholeCountResponse> describeUnBlackholeCount(DescribeUnBlackholeCountRequest request) {
         try {
@@ -1775,8 +2468,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > This operation is suitable only for Anti-DDoS Pro.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> This operation is suitable only for Anti-DDoS Proxy (Chinese Mainland).</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DescribeUnBlockCount  DescribeUnBlockCountRequest
+     * @return DescribeUnBlockCountResponse
      */
     @Override
     public CompletableFuture<DescribeUnBlockCountResponse> describeUnBlockCount(DescribeUnBlockCountRequest request) {
@@ -1793,10 +2491,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the DescribeWebAccessLogDispatchStatus operation to check whether the log analysis feature is enabled for all domain names that are added to your Anti-DDoS Pro or Anti-DDoS Premium instance.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call the DescribeWebAccessLogDispatchStatus operation to check whether the log analysis feature is enabled for all domain names that are added to your Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+     * <h3>Limits</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of DescribeWebAccessLogDispatchStatus  DescribeWebAccessLogDispatchStatusRequest
+     * @return DescribeWebAccessLogDispatchStatusResponse
      */
     @Override
     public CompletableFuture<DescribeWebAccessLogDispatchStatusResponse> describeWebAccessLogDispatchStatus(DescribeWebAccessLogDispatchStatusRequest request) {
@@ -1812,6 +2513,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeWebAccessLogEmptyCount  DescribeWebAccessLogEmptyCountRequest
+     * @return DescribeWebAccessLogEmptyCountResponse
+     */
     @Override
     public CompletableFuture<DescribeWebAccessLogEmptyCountResponse> describeWebAccessLogEmptyCount(DescribeWebAccessLogEmptyCountRequest request) {
         try {
@@ -1826,6 +2531,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeWebAccessLogStatus  DescribeWebAccessLogStatusRequest
+     * @return DescribeWebAccessLogStatusResponse
+     */
     @Override
     public CompletableFuture<DescribeWebAccessLogStatusResponse> describeWebAccessLogStatus(DescribeWebAccessLogStatusRequest request) {
         try {
@@ -1840,6 +2549,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeWebAccessMode  DescribeWebAccessModeRequest
+     * @return DescribeWebAccessModeResponse
+     */
     @Override
     public CompletableFuture<DescribeWebAccessModeResponse> describeWebAccessMode(DescribeWebAccessModeRequest request) {
         try {
@@ -1854,6 +2567,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeWebAreaBlockConfigs  DescribeWebAreaBlockConfigsRequest
+     * @return DescribeWebAreaBlockConfigsResponse
+     */
     @Override
     public CompletableFuture<DescribeWebAreaBlockConfigsResponse> describeWebAreaBlockConfigs(DescribeWebAreaBlockConfigsRequest request) {
         try {
@@ -1868,6 +2585,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @deprecated OpenAPI DescribeWebCCRules is deprecated, please use ddoscoo::2020-01-01::ConfigWebCCRuleV2 instead.  * @param request  the request parameters of DescribeWebCCRules  DescribeWebCCRulesRequest
+     * @return DescribeWebCCRulesResponse
+     */
+    @Deprecated
     @Override
     public CompletableFuture<DescribeWebCCRulesResponse> describeWebCCRules(DescribeWebCCRulesRequest request) {
         try {
@@ -1883,10 +2605,31 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the DescribeWebCacheConfigs operation to query the Static Page Caching configurations of websites. The configurations include cache modes and custom caching rules.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * @param request the request parameters of DescribeWebCCRulesV2  DescribeWebCCRulesV2Request
+     * @return DescribeWebCCRulesV2Response
+     */
+    @Override
+    public CompletableFuture<DescribeWebCCRulesV2Response> describeWebCCRulesV2(DescribeWebCCRulesV2Request request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeWebCCRulesV2").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeWebCCRulesV2Response.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeWebCCRulesV2Response> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You can call the DescribeWebCacheConfigs operation to query the Static Page Caching configurations of websites. The configurations include cache modes and custom caching rules.</p>
+     * <h3>Limits</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of DescribeWebCacheConfigs  DescribeWebCacheConfigsRequest
+     * @return DescribeWebCacheConfigsResponse
      */
     @Override
     public CompletableFuture<DescribeWebCacheConfigsResponse> describeWebCacheConfigs(DescribeWebCacheConfigsRequest request) {
@@ -1902,6 +2645,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeWebCcProtectSwitch  DescribeWebCcProtectSwitchRequest
+     * @return DescribeWebCcProtectSwitchResponse
+     */
     @Override
     public CompletableFuture<DescribeWebCcProtectSwitchResponse> describeWebCcProtectSwitch(DescribeWebCcProtectSwitchRequest request) {
         try {
@@ -1916,6 +2663,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeWebCustomPorts  DescribeWebCustomPortsRequest
+     * @return DescribeWebCustomPortsResponse
+     */
     @Override
     public CompletableFuture<DescribeWebCustomPortsResponse> describeWebCustomPorts(DescribeWebCustomPortsRequest request) {
         try {
@@ -1930,6 +2681,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeWebInstanceRelations  DescribeWebInstanceRelationsRequest
+     * @return DescribeWebInstanceRelationsResponse
+     */
     @Override
     public CompletableFuture<DescribeWebInstanceRelationsResponse> describeWebInstanceRelations(DescribeWebInstanceRelationsRequest request) {
         try {
@@ -1944,6 +2699,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeWebPreciseAccessRule  DescribeWebPreciseAccessRuleRequest
+     * @return DescribeWebPreciseAccessRuleResponse
+     */
     @Override
     public CompletableFuture<DescribeWebPreciseAccessRuleResponse> describeWebPreciseAccessRule(DescribeWebPreciseAccessRuleRequest request) {
         try {
@@ -1958,6 +2717,34 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeWebReportTopIp  DescribeWebReportTopIpRequest
+     * @return DescribeWebReportTopIpResponse
+     */
+    @Override
+    public CompletableFuture<DescribeWebReportTopIpResponse> describeWebReportTopIp(DescribeWebReportTopIpRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeWebReportTopIp").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeWebReportTopIpResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeWebReportTopIpResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This interface is used for paginated querying of the configurations of website business forwarding rules you have created, such as forwarding protocol types, source server addresses, HTTPS configurations, IP blacklist configurations, and more.
+     * Before calling this interface, you must have already called <a href="~~CreateWebRule~~">CreateWebRule</a> to create website business forwarding rules.</p>
+     * <h3>QPS Limit</h3>
+     * <p>The per-user QPS limit for this interface is 50 times/second. Exceeding this limit will result in API calls being throttled, which may impact your business; please use it reasonably.</p>
+     * 
+     * @param request the request parameters of DescribeWebRules  DescribeWebRulesRequest
+     * @return DescribeWebRulesResponse
+     */
     @Override
     public CompletableFuture<DescribeWebRulesResponse> describeWebRules(DescribeWebRulesRequest request) {
         try {
@@ -1972,6 +2759,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DetachSceneDefenseObject  DetachSceneDefenseObjectRequest
+     * @return DetachSceneDefenseObjectResponse
+     */
     @Override
     public CompletableFuture<DetachSceneDefenseObjectResponse> detachSceneDefenseObject(DetachSceneDefenseObjectRequest request) {
         try {
@@ -1986,6 +2777,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DisableSceneDefensePolicy  DisableSceneDefensePolicyRequest
+     * @return DisableSceneDefensePolicyResponse
+     */
     @Override
     public CompletableFuture<DisableSceneDefensePolicyResponse> disableSceneDefensePolicy(DisableSceneDefensePolicyRequest request) {
         try {
@@ -2000,6 +2795,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DisableWebAccessLogConfig  DisableWebAccessLogConfigRequest
+     * @return DisableWebAccessLogConfigResponse
+     */
     @Override
     public CompletableFuture<DisableWebAccessLogConfigResponse> disableWebAccessLogConfig(DisableWebAccessLogConfigRequest request) {
         try {
@@ -2014,6 +2813,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DisableWebCC  DisableWebCCRequest
+     * @return DisableWebCCResponse
+     */
     @Override
     public CompletableFuture<DisableWebCCResponse> disableWebCC(DisableWebCCRequest request) {
         try {
@@ -2028,6 +2831,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DisableWebCCRule  DisableWebCCRuleRequest
+     * @return DisableWebCCRuleResponse
+     */
     @Override
     public CompletableFuture<DisableWebCCRuleResponse> disableWebCCRule(DisableWebCCRuleRequest request) {
         try {
@@ -2042,6 +2849,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EmptyAutoCcBlacklist  EmptyAutoCcBlacklistRequest
+     * @return EmptyAutoCcBlacklistResponse
+     */
     @Override
     public CompletableFuture<EmptyAutoCcBlacklistResponse> emptyAutoCcBlacklist(EmptyAutoCcBlacklistRequest request) {
         try {
@@ -2056,6 +2867,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EmptyAutoCcWhitelist  EmptyAutoCcWhitelistRequest
+     * @return EmptyAutoCcWhitelistResponse
+     */
     @Override
     public CompletableFuture<EmptyAutoCcWhitelistResponse> emptyAutoCcWhitelist(EmptyAutoCcWhitelistRequest request) {
         try {
@@ -2070,6 +2885,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EmptySlsLogstore  EmptySlsLogstoreRequest
+     * @return EmptySlsLogstoreResponse
+     */
     @Override
     public CompletableFuture<EmptySlsLogstoreResponse> emptySlsLogstore(EmptySlsLogstoreRequest request) {
         try {
@@ -2084,6 +2903,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EnableSceneDefensePolicy  EnableSceneDefensePolicyRequest
+     * @return EnableSceneDefensePolicyResponse
+     */
     @Override
     public CompletableFuture<EnableSceneDefensePolicyResponse> enableSceneDefensePolicy(EnableSceneDefensePolicyRequest request) {
         try {
@@ -2098,6 +2921,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EnableWebAccessLogConfig  EnableWebAccessLogConfigRequest
+     * @return EnableWebAccessLogConfigResponse
+     */
     @Override
     public CompletableFuture<EnableWebAccessLogConfigResponse> enableWebAccessLogConfig(EnableWebAccessLogConfigRequest request) {
         try {
@@ -2112,6 +2939,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EnableWebCC  EnableWebCCRequest
+     * @return EnableWebCCResponse
+     */
     @Override
     public CompletableFuture<EnableWebCCResponse> enableWebCC(EnableWebCCRequest request) {
         try {
@@ -2126,6 +2957,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EnableWebCCRule  EnableWebCCRuleRequest
+     * @return EnableWebCCRuleResponse
+     */
     @Override
     public CompletableFuture<EnableWebCCRuleResponse> enableWebCCRule(EnableWebCCRuleRequest request) {
         try {
@@ -2141,8 +2976,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can switch between the metering methods of the burstable clean bandwidth feature. The new metering method takes effect from 00:00 on the first day of the next month. You can change the metering method up to three times each calendar month. The most recent metering method that you select takes effect in the next month. You cannot change the metering method on the last day of each calendar month.
-      *
+     * <b>description</b> :
+     * <p>You can switch between the metering methods of the burstable clean bandwidth feature. The new metering method takes effect from 00:00 on the first day of the next month. You can change the metering method up to three times each calendar month. The most recent metering method that you select takes effect in the next month. You cannot change the metering method on the last day of each calendar month.</p>
+     * 
+     * @param request the request parameters of ModifyBizBandWidthMode  ModifyBizBandWidthModeRequest
+     * @return ModifyBizBandWidthModeResponse
      */
     @Override
     public CompletableFuture<ModifyBizBandWidthModeResponse> modifyBizBandWidthMode(ModifyBizBandWidthModeRequest request) {
@@ -2158,6 +2996,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyBlackholeStatus  ModifyBlackholeStatusRequest
+     * @return ModifyBlackholeStatusResponse
+     */
     @Override
     public CompletableFuture<ModifyBlackholeStatusResponse> modifyBlackholeStatus(ModifyBlackholeStatusRequest request) {
         try {
@@ -2173,8 +3015,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > This operation is suitable only for Anti-DDoS Pro.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> This operation is suitable only for Anti-DDoS Proxy (Chinese Mainland).</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of ModifyBlockStatus  ModifyBlockStatusRequest
+     * @return ModifyBlockStatusResponse
      */
     @Override
     public CompletableFuture<ModifyBlockStatusResponse> modifyBlockStatus(ModifyBlockStatusRequest request) {
@@ -2191,8 +3038,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > This operation is suitable only for Anti-DDoS Premium.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This operation is suitable only for Anti-DDoS Premium.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of ModifyCnameReuse  ModifyCnameReuseRequest
+     * @return ModifyCnameReuseResponse
      */
     @Override
     public CompletableFuture<ModifyCnameReuseResponse> modifyCnameReuse(ModifyCnameReuseRequest request) {
@@ -2208,6 +3060,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDomainResource  ModifyDomainResourceRequest
+     * @return ModifyDomainResourceResponse
+     */
     @Override
     public CompletableFuture<ModifyDomainResourceResponse> modifyDomainResource(ModifyDomainResourceRequest request) {
         try {
@@ -2223,8 +3079,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > This operation is suitable only for Anti-DDoS Pro.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> This operation is suitable only for Anti-DDoS Proxy (Chinese Mainland).</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of ModifyElasticBandWidth  ModifyElasticBandWidthRequest
+     * @return ModifyElasticBandWidthResponse
      */
     @Override
     public CompletableFuture<ModifyElasticBandWidthResponse> modifyElasticBandWidth(ModifyElasticBandWidthRequest request) {
@@ -2241,8 +3102,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, make sure that you have fully understood the billing method and [pricing](https://help.aliyun.com/document_detail/283754.html) of the burstable clean bandwidth feature. After you call this operation for the first time, the modification immediately takes effect.
-      *
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you have fully understood the billing method and <a href="https://help.aliyun.com/document_detail/283754.html">pricing</a> of the burstable clean bandwidth feature. After you call this operation for the first time, the modification immediately takes effect.</p>
+     * 
+     * @param request the request parameters of ModifyElasticBizBandWidth  ModifyElasticBizBandWidthRequest
+     * @return ModifyElasticBizBandWidthResponse
      */
     @Override
     public CompletableFuture<ModifyElasticBizBandWidthResponse> modifyElasticBizBandWidth(ModifyElasticBizBandWidthRequest request) {
@@ -2258,6 +3122,31 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>You can enable burstable QPS only for IPv4 instances.</p>
+     * 
+     * @param request the request parameters of ModifyElasticBizQps  ModifyElasticBizQpsRequest
+     * @return ModifyElasticBizQpsResponse
+     */
+    @Override
+    public CompletableFuture<ModifyElasticBizQpsResponse> modifyElasticBizQps(ModifyElasticBizQpsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyElasticBizQps").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyElasticBizQpsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyElasticBizQpsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyFullLogTtl  ModifyFullLogTtlRequest
+     * @return ModifyFullLogTtlResponse
+     */
     @Override
     public CompletableFuture<ModifyFullLogTtlResponse> modifyFullLogTtl(ModifyFullLogTtlRequest request) {
         try {
@@ -2272,6 +3161,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyHeaders  ModifyHeadersRequest
+     * @return ModifyHeadersResponse
+     */
     @Override
     public CompletableFuture<ModifyHeadersResponse> modifyHeaders(ModifyHeadersRequest request) {
         try {
@@ -2286,6 +3179,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyHealthCheckConfig  ModifyHealthCheckConfigRequest
+     * @return ModifyHealthCheckConfigResponse
+     */
     @Override
     public CompletableFuture<ModifyHealthCheckConfigResponse> modifyHealthCheckConfig(ModifyHealthCheckConfigRequest request) {
         try {
@@ -2301,8 +3198,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > This operation is suitable only for Anti-DDoS Pro.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> This operation is suitable only for Anti-DDoS Proxy (Chinese Mainland).</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of ModifyHttp2Enable  ModifyHttp2EnableRequest
+     * @return ModifyHttp2EnableResponse
      */
     @Override
     public CompletableFuture<ModifyHttp2EnableResponse> modifyHttp2Enable(ModifyHttp2EnableRequest request) {
@@ -2318,6 +3220,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyInstance  ModifyInstanceRequest
+     * @return ModifyInstanceResponse
+     */
+    @Override
+    public CompletableFuture<ModifyInstanceResponse> modifyInstance(ModifyInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyInstanceRemark  ModifyInstanceRemarkRequest
+     * @return ModifyInstanceRemarkResponse
+     */
     @Override
     public CompletableFuture<ModifyInstanceRemarkResponse> modifyInstanceRemark(ModifyInstanceRemarkRequest request) {
         try {
@@ -2332,6 +3256,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyNetworkRuleAttribute  ModifyNetworkRuleAttributeRequest
+     * @return ModifyNetworkRuleAttributeResponse
+     */
     @Override
     public CompletableFuture<ModifyNetworkRuleAttributeResponse> modifyNetworkRuleAttribute(ModifyNetworkRuleAttributeRequest request) {
         try {
@@ -2347,8 +3275,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This feature is available only for a website that supports HTTPS. If HTTPS is selected for Protocol, we recommend that you enable this feature.
-      *
+     * <b>description</b> :
+     * <p>This feature is available only for a website that supports HTTPS. If HTTPS is selected for Protocol, we recommend that you enable this feature.</p>
+     * 
+     * @param request the request parameters of ModifyOcspStatus  ModifyOcspStatusRequest
+     * @return ModifyOcspStatusResponse
      */
     @Override
     public CompletableFuture<ModifyOcspStatusResponse> modifyOcspStatus(ModifyOcspStatusRequest request) {
@@ -2365,8 +3296,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the ModifyPort operation by using Terraform. For more information about Terraform, see [What is Terraform?](~~95820~~).
-      *
+     * <b>description</b> :
+     * <p>You can call the ModifyPort operation by using Terraform. For more information about Terraform, see <a href="https://help.aliyun.com/document_detail/95820.html">What is Terraform?</a>.</p>
+     * 
+     * @param request the request parameters of ModifyPort  ModifyPortRequest
+     * @return ModifyPortResponse
      */
     @Override
     public CompletableFuture<ModifyPortResponse> modifyPort(ModifyPortRequest request) {
@@ -2382,6 +3316,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyPortAutoCcStatus  ModifyPortAutoCcStatusRequest
+     * @return ModifyPortAutoCcStatusResponse
+     */
     @Override
     public CompletableFuture<ModifyPortAutoCcStatusResponse> modifyPortAutoCcStatus(ModifyPortAutoCcStatusRequest request) {
         try {
@@ -2396,6 +3334,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyQpsMode  ModifyQpsModeRequest
+     * @return ModifyQpsModeResponse
+     */
+    @Override
+    public CompletableFuture<ModifyQpsModeResponse> modifyQpsMode(ModifyQpsModeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyQpsMode").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyQpsModeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyQpsModeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifySceneDefensePolicy  ModifySceneDefensePolicyRequest
+     * @return ModifySceneDefensePolicyResponse
+     */
     @Override
     public CompletableFuture<ModifySceneDefensePolicyResponse> modifySceneDefensePolicy(ModifySceneDefensePolicyRequest request) {
         try {
@@ -2410,6 +3370,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifySchedulerRule  ModifySchedulerRuleRequest
+     * @return ModifySchedulerRuleResponse
+     */
     @Override
     public CompletableFuture<ModifySchedulerRuleResponse> modifySchedulerRule(ModifySchedulerRuleRequest request) {
         try {
@@ -2424,6 +3388,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyTlsConfig  ModifyTlsConfigRequest
+     * @return ModifyTlsConfigResponse
+     */
     @Override
     public CompletableFuture<ModifyTlsConfigResponse> modifyTlsConfig(ModifyTlsConfigRequest request) {
         try {
@@ -2438,6 +3406,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyWebAIProtectMode  ModifyWebAIProtectModeRequest
+     * @return ModifyWebAIProtectModeResponse
+     */
     @Override
     public CompletableFuture<ModifyWebAIProtectModeResponse> modifyWebAIProtectMode(ModifyWebAIProtectModeRequest request) {
         try {
@@ -2452,6 +3424,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyWebAIProtectSwitch  ModifyWebAIProtectSwitchRequest
+     * @return ModifyWebAIProtectSwitchResponse
+     */
     @Override
     public CompletableFuture<ModifyWebAIProtectSwitchResponse> modifyWebAIProtectSwitch(ModifyWebAIProtectSwitchRequest request) {
         try {
@@ -2466,6 +3442,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyWebAccessMode  ModifyWebAccessModeRequest
+     * @return ModifyWebAccessModeResponse
+     */
     @Override
     public CompletableFuture<ModifyWebAccessModeResponse> modifyWebAccessMode(ModifyWebAccessModeRequest request) {
         try {
@@ -2480,6 +3460,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyWebAreaBlock  ModifyWebAreaBlockRequest
+     * @return ModifyWebAreaBlockResponse
+     */
     @Override
     public CompletableFuture<ModifyWebAreaBlockResponse> modifyWebAreaBlock(ModifyWebAreaBlockRequest request) {
         try {
@@ -2495,10 +3479,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the ModifyWebAreaBlockSwitch operation to enable or disable the Location Blacklist (Domain Names) policy for a domain name.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call the ModifyWebAreaBlockSwitch operation to enable or disable the Location Blacklist (Domain Names) policy for a domain name.</p>
+     * <h3>Limits</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of ModifyWebAreaBlockSwitch  ModifyWebAreaBlockSwitchRequest
+     * @return ModifyWebAreaBlockSwitchResponse
      */
     @Override
     public CompletableFuture<ModifyWebAreaBlockSwitchResponse> modifyWebAreaBlockSwitch(ModifyWebAreaBlockSwitchRequest request) {
@@ -2514,6 +3501,29 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyWebCCGlobalSwitch  ModifyWebCCGlobalSwitchRequest
+     * @return ModifyWebCCGlobalSwitchResponse
+     */
+    @Override
+    public CompletableFuture<ModifyWebCCGlobalSwitchResponse> modifyWebCCGlobalSwitch(ModifyWebCCGlobalSwitchRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyWebCCGlobalSwitch").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyWebCCGlobalSwitchResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyWebCCGlobalSwitchResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @deprecated OpenAPI ModifyWebCCRule is deprecated, please use ddoscoo::2020-01-01::ConfigWebCCRuleV2 instead.  * @param request  the request parameters of ModifyWebCCRule  ModifyWebCCRuleRequest
+     * @return ModifyWebCCRuleResponse
+     */
+    @Deprecated
     @Override
     public CompletableFuture<ModifyWebCCRuleResponse> modifyWebCCRule(ModifyWebCCRuleRequest request) {
         try {
@@ -2528,6 +3538,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyWebCacheCustomRule  ModifyWebCacheCustomRuleRequest
+     * @return ModifyWebCacheCustomRuleResponse
+     */
     @Override
     public CompletableFuture<ModifyWebCacheCustomRuleResponse> modifyWebCacheCustomRule(ModifyWebCacheCustomRuleRequest request) {
         try {
@@ -2542,6 +3556,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyWebCacheMode  ModifyWebCacheModeRequest
+     * @return ModifyWebCacheModeResponse
+     */
     @Override
     public CompletableFuture<ModifyWebCacheModeResponse> modifyWebCacheMode(ModifyWebCacheModeRequest request) {
         try {
@@ -2557,10 +3575,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the ModifyWebCacheSwitch operation to enable or disable the Static Page Caching policy for a website.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call the ModifyWebCacheSwitch operation to enable or disable the Static Page Caching policy for a website.</p>
+     * <h3>Limits</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of ModifyWebCacheSwitch  ModifyWebCacheSwitchRequest
+     * @return ModifyWebCacheSwitchResponse
      */
     @Override
     public CompletableFuture<ModifyWebCacheSwitchResponse> modifyWebCacheSwitch(ModifyWebCacheSwitchRequest request) {
@@ -2576,6 +3597,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyWebIpSetSwitch  ModifyWebIpSetSwitchRequest
+     * @return ModifyWebIpSetSwitchResponse
+     */
     @Override
     public CompletableFuture<ModifyWebIpSetSwitchResponse> modifyWebIpSetSwitch(ModifyWebIpSetSwitchRequest request) {
         try {
@@ -2590,6 +3615,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyWebPreciseAccessRule  ModifyWebPreciseAccessRuleRequest
+     * @return ModifyWebPreciseAccessRuleResponse
+     */
     @Override
     public CompletableFuture<ModifyWebPreciseAccessRuleResponse> modifyWebPreciseAccessRule(ModifyWebPreciseAccessRuleRequest request) {
         try {
@@ -2604,6 +3633,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyWebPreciseAccessSwitch  ModifyWebPreciseAccessSwitchRequest
+     * @return ModifyWebPreciseAccessSwitchResponse
+     */
     @Override
     public CompletableFuture<ModifyWebPreciseAccessSwitchResponse> modifyWebPreciseAccessSwitch(ModifyWebPreciseAccessSwitchRequest request) {
         try {
@@ -2618,6 +3651,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyWebRule  ModifyWebRuleRequest
+     * @return ModifyWebRuleResponse
+     */
     @Override
     public CompletableFuture<ModifyWebRuleResponse> modifyWebRule(ModifyWebRuleRequest request) {
         try {
@@ -2633,8 +3670,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The ID of the request, which is used to locate and troubleshoot issues.
-      *
+     * <b>description</b> :
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * @param request the request parameters of ReleaseInstance  ReleaseInstanceRequest
+     * @return ReleaseInstanceResponse
      */
     @Override
     public CompletableFuture<ReleaseInstanceResponse> releaseInstance(ReleaseInstanceRequest request) {
@@ -2651,11 +3691,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the SwitchSchedulerRule operation to modify the resources to which service traffic is switched for a scheduling rule. For example, you can switch service traffic to an Anti-DDoS Pro or Anti-DDoS Premium instance for scrubbing or switch the service traffic back to the associated cloud resources.
-      * Before you call this operation, you must have created a scheduling rule by calling the [CreateSchedulerRule](~~157479~~) operation.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call the SwitchSchedulerRule operation to modify the resources to which service traffic is switched for a scheduling rule. For example, you can switch service traffic to an Anti-DDoS Pro or Anti-DDoS Premium instance for scrubbing or switch the service traffic back to the associated cloud resources.
+     * Before you call this operation, you must have created a scheduling rule by calling the <a href="https://help.aliyun.com/document_detail/157479.html">CreateSchedulerRule</a> operation.</p>
+     * <h3>Limits</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of SwitchSchedulerRule  SwitchSchedulerRuleRequest
+     * @return SwitchSchedulerRuleResponse
      */
     @Override
     public CompletableFuture<SwitchSchedulerRuleResponse> switchSchedulerRule(SwitchSchedulerRuleRequest request) {

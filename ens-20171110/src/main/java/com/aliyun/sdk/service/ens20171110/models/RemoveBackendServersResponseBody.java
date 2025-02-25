@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveBackendServersResponseBody} extends {@link TeaModel}
  *
  * <p>RemoveBackendServersResponseBody</p>
  */
 public class RemoveBackendServersResponseBody extends TeaModel {
-    @NameInMap("BackendServers")
+    @com.aliyun.core.annotation.NameInMap("BackendServers")
     private BackendServers backendServers;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private RemoveBackendServersResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class RemoveBackendServersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BackendServers.
+         * <p>The list of backend servers that you want to add to the SLB instance.</p>
          */
         public Builder backendServers(BackendServers backendServers) {
             this.backendServers = backendServers;
@@ -58,7 +63,10 @@ public class RemoveBackendServersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +79,26 @@ public class RemoveBackendServersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RemoveBackendServersResponseBody} extends {@link TeaModel}
+     *
+     * <p>RemoveBackendServersResponseBody</p>
+     */
     public static class BackendServer extends TeaModel {
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("ServerId")
+        @com.aliyun.core.annotation.NameInMap("ServerId")
         private String serverId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private BackendServer(Builder builder) {
@@ -146,7 +160,10 @@ public class RemoveBackendServersResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * Ip.
+             * <p>The IP address of the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.1XX.X.X</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -154,7 +171,10 @@ public class RemoveBackendServersResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The backend port that is used by the ELB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -162,7 +182,10 @@ public class RemoveBackendServersResponseBody extends TeaModel {
             }
 
             /**
-             * ServerId.
+             * <p>The instance ID of the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-5vb5h5njxiuhn48a****</p>
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -170,7 +193,14 @@ public class RemoveBackendServersResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the backend server. Valid values:</p>
+             * <ul>
+             * <li><strong>ens</strong>: an ENS instance.</li>
+             * <li><strong>eni</strong>: an ENI.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ens</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -178,7 +208,13 @@ public class RemoveBackendServersResponseBody extends TeaModel {
             }
 
             /**
-             * Weight.
+             * <p>The weight of the backend server.</p>
+             * <blockquote>
+             * <p> The value 0 indicates that requests are not forwarded to the backend server.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -192,9 +228,15 @@ public class RemoveBackendServersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RemoveBackendServersResponseBody} extends {@link TeaModel}
+     *
+     * <p>RemoveBackendServersResponseBody</p>
+     */
     public static class BackendServers extends TeaModel {
-        @NameInMap("BackendServer")
-        private java.util.List < BackendServer> backendServer;
+        @com.aliyun.core.annotation.NameInMap("BackendServer")
+        private java.util.List<BackendServer> backendServer;
 
         private BackendServers(Builder builder) {
             this.backendServer = builder.backendServer;
@@ -211,17 +253,17 @@ public class RemoveBackendServersResponseBody extends TeaModel {
         /**
          * @return backendServer
          */
-        public java.util.List < BackendServer> getBackendServer() {
+        public java.util.List<BackendServer> getBackendServer() {
             return this.backendServer;
         }
 
         public static final class Builder {
-            private java.util.List < BackendServer> backendServer; 
+            private java.util.List<BackendServer> backendServer; 
 
             /**
              * BackendServer.
              */
-            public Builder backendServer(java.util.List < BackendServer> backendServer) {
+            public Builder backendServer(java.util.List<BackendServer> backendServer) {
                 this.backendServer = backendServer;
                 return this;
             }

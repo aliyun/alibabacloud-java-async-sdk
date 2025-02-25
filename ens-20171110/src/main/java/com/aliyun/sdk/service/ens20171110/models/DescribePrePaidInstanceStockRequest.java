@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePrePaidInstanceStockRequest} extends {@link RequestModel}
  *
  * <p>DescribePrePaidInstanceStockRequest</p>
  */
 public class DescribePrePaidInstanceStockRequest extends Request {
-    @Query
-    @NameInMap("DataDiskSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataDiskSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer dataDiskSize;
 
-    @Query
-    @NameInMap("EnsRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnsRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ensRegionId;
 
-    @Query
-    @NameInMap("InstanceSpec")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceSpec")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceSpec;
 
-    @Query
-    @NameInMap("SystemDiskSize")
-    @Validation(required = true, minimum = 20)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 20)
     private Integer systemDiskSize;
 
     private DescribePrePaidInstanceStockRequest(Builder builder) {
@@ -100,7 +105,11 @@ public class DescribePrePaidInstanceStockRequest extends Request {
         } 
 
         /**
-         * DataDiskSize.
+         * <p>The size of the data disk. Unit: GB.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder dataDiskSize(Integer dataDiskSize) {
             this.putQueryParameter("DataDiskSize", dataDiskSize);
@@ -109,7 +118,11 @@ public class DescribePrePaidInstanceStockRequest extends Request {
         }
 
         /**
-         * EnsRegionId.
+         * <p>The ID of the edge node.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-suzhou-telecom</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -118,7 +131,11 @@ public class DescribePrePaidInstanceStockRequest extends Request {
         }
 
         /**
-         * InstanceSpec.
+         * <p>The specification of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ens.sn1.stiny</p>
          */
         public Builder instanceSpec(String instanceSpec) {
             this.putQueryParameter("InstanceSpec", instanceSpec);
@@ -127,7 +144,11 @@ public class DescribePrePaidInstanceStockRequest extends Request {
         }
 
         /**
-         * SystemDiskSize.
+         * <p>The size of the system disk. Unit: GB.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder systemDiskSize(Integer systemDiskSize) {
             this.putQueryParameter("SystemDiskSize", systemDiskSize);

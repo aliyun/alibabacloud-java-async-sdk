@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCenGeographicSpansResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCenGeographicSpansResponseBody</p>
  */
 public class DescribeCenGeographicSpansResponseBody extends TeaModel {
-    @NameInMap("GeographicSpanModels")
+    @com.aliyun.core.annotation.NameInMap("GeographicSpanModels")
     private GeographicSpanModels geographicSpanModels;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeCenGeographicSpansResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * A list of areas.
+         * <p>A list of areas.</p>
          */
         public Builder geographicSpanModels(GeographicSpanModels geographicSpanModels) {
             this.geographicSpanModels = geographicSpanModels;
@@ -94,7 +99,10 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>09780287-BC24-4164-8334-773432E32696</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,14 +148,20 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCenGeographicSpansResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenGeographicSpansResponseBody</p>
+     */
     public static class GeographicSpanModel extends TeaModel {
-        @NameInMap("GeographicSpanId")
+        @com.aliyun.core.annotation.NameInMap("GeographicSpanId")
         private String geographicSpanId;
 
-        @NameInMap("LocalGeoRegionId")
+        @com.aliyun.core.annotation.NameInMap("LocalGeoRegionId")
         private String localGeoRegionId;
 
-        @NameInMap("OppositeGeoRegionId")
+        @com.aliyun.core.annotation.NameInMap("OppositeGeoRegionId")
         private String oppositeGeoRegionId;
 
         private GeographicSpanModel(Builder builder) {
@@ -182,7 +205,10 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
             private String oppositeGeoRegionId; 
 
             /**
-             * The ID of the pair of connected areas.
+             * <p>The ID of the pair of connected areas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>china_asia-pacific</p>
              */
             public Builder geographicSpanId(String geographicSpanId) {
                 this.geographicSpanId = geographicSpanId;
@@ -190,7 +216,10 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the local area.
+             * <p>The ID of the local area.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asia-pacific</p>
              */
             public Builder localGeoRegionId(String localGeoRegionId) {
                 this.localGeoRegionId = localGeoRegionId;
@@ -198,7 +227,10 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the peer area.
+             * <p>The ID of the peer area.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>china</p>
              */
             public Builder oppositeGeoRegionId(String oppositeGeoRegionId) {
                 this.oppositeGeoRegionId = oppositeGeoRegionId;
@@ -212,9 +244,15 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCenGeographicSpansResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenGeographicSpansResponseBody</p>
+     */
     public static class GeographicSpanModels extends TeaModel {
-        @NameInMap("GeographicSpanModel")
-        private java.util.List < GeographicSpanModel> geographicSpanModel;
+        @com.aliyun.core.annotation.NameInMap("GeographicSpanModel")
+        private java.util.List<GeographicSpanModel> geographicSpanModel;
 
         private GeographicSpanModels(Builder builder) {
             this.geographicSpanModel = builder.geographicSpanModel;
@@ -231,17 +269,17 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
         /**
          * @return geographicSpanModel
          */
-        public java.util.List < GeographicSpanModel> getGeographicSpanModel() {
+        public java.util.List<GeographicSpanModel> getGeographicSpanModel() {
             return this.geographicSpanModel;
         }
 
         public static final class Builder {
-            private java.util.List < GeographicSpanModel> geographicSpanModel; 
+            private java.util.List<GeographicSpanModel> geographicSpanModel; 
 
             /**
              * GeographicSpanModel.
              */
-            public Builder geographicSpanModel(java.util.List < GeographicSpanModel> geographicSpanModel) {
+            public Builder geographicSpanModel(java.util.List<GeographicSpanModel> geographicSpanModel) {
                 this.geographicSpanModel = geographicSpanModel;
                 return this;
             }

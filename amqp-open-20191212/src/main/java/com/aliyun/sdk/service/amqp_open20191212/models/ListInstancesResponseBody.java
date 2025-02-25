@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.amqp_open20191212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstancesResponseBody</p>
  */
 public class ListInstancesResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListInstancesResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class ListInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CCBB1225-C392-480E-8C7F-D09AB2CD2***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class ListInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -110,7 +124,10 @@ public class ListInstancesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * <p>标签键。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>region</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -118,7 +135,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>标签值。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hangzhou</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -132,68 +152,85 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class Instances extends TeaModel {
-        @NameInMap("AutoRenewInstance")
+        @com.aliyun.core.annotation.NameInMap("AutoRenewInstance")
         private Boolean autoRenewInstance;
 
-        @NameInMap("ClassicEndpoint")
+        @com.aliyun.core.annotation.NameInMap("ClassicEndpoint")
         private String classicEndpoint;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("EncryptedInstance")
+        private Boolean encryptedInstance;
+
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private Long expireTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("MaxEipTps")
+        @com.aliyun.core.annotation.NameInMap("KmsKeyId")
+        private String kmsKeyId;
+
+        @com.aliyun.core.annotation.NameInMap("MaxEipTps")
         private Integer maxEipTps;
 
-        @NameInMap("MaxQueue")
+        @com.aliyun.core.annotation.NameInMap("MaxQueue")
         private Integer maxQueue;
 
-        @NameInMap("MaxTps")
+        @com.aliyun.core.annotation.NameInMap("MaxTps")
         private Integer maxTps;
 
-        @NameInMap("MaxVhost")
+        @com.aliyun.core.annotation.NameInMap("MaxVhost")
         private Integer maxVhost;
 
-        @NameInMap("OrderCreateTime")
+        @com.aliyun.core.annotation.NameInMap("OrderCreateTime")
         private Long orderCreateTime;
 
-        @NameInMap("OrderType")
+        @com.aliyun.core.annotation.NameInMap("OrderType")
         private String orderType;
 
-        @NameInMap("PrivateEndpoint")
+        @com.aliyun.core.annotation.NameInMap("PrivateEndpoint")
         private String privateEndpoint;
 
-        @NameInMap("PublicEndpoint")
+        @com.aliyun.core.annotation.NameInMap("PublicEndpoint")
         private String publicEndpoint;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StorageSize")
+        @com.aliyun.core.annotation.NameInMap("StorageSize")
         private Integer storageSize;
 
-        @NameInMap("SupportEIP")
+        @com.aliyun.core.annotation.NameInMap("SupportEIP")
         private Boolean supportEIP;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
         private Instances(Builder builder) {
             this.autoRenewInstance = builder.autoRenewInstance;
             this.classicEndpoint = builder.classicEndpoint;
+            this.encryptedInstance = builder.encryptedInstance;
             this.expireTime = builder.expireTime;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
             this.instanceType = builder.instanceType;
+            this.kmsKeyId = builder.kmsKeyId;
             this.maxEipTps = builder.maxEipTps;
             this.maxQueue = builder.maxQueue;
             this.maxTps = builder.maxTps;
@@ -202,6 +239,7 @@ public class ListInstancesResponseBody extends TeaModel {
             this.orderType = builder.orderType;
             this.privateEndpoint = builder.privateEndpoint;
             this.publicEndpoint = builder.publicEndpoint;
+            this.resourceGroupId = builder.resourceGroupId;
             this.status = builder.status;
             this.storageSize = builder.storageSize;
             this.supportEIP = builder.supportEIP;
@@ -231,6 +269,13 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return encryptedInstance
+         */
+        public Boolean getEncryptedInstance() {
+            return this.encryptedInstance;
+        }
+
+        /**
          * @return expireTime
          */
         public Long getExpireTime() {
@@ -256,6 +301,13 @@ public class ListInstancesResponseBody extends TeaModel {
          */
         public String getInstanceType() {
             return this.instanceType;
+        }
+
+        /**
+         * @return kmsKeyId
+         */
+        public String getKmsKeyId() {
+            return this.kmsKeyId;
         }
 
         /**
@@ -315,6 +367,13 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -338,17 +397,19 @@ public class ListInstancesResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
         public static final class Builder {
             private Boolean autoRenewInstance; 
             private String classicEndpoint; 
+            private Boolean encryptedInstance; 
             private Long expireTime; 
             private String instanceId; 
             private String instanceName; 
             private String instanceType; 
+            private String kmsKeyId; 
             private Integer maxEipTps; 
             private Integer maxQueue; 
             private Integer maxTps; 
@@ -357,13 +418,17 @@ public class ListInstancesResponseBody extends TeaModel {
             private String orderType; 
             private String privateEndpoint; 
             private String publicEndpoint; 
+            private String resourceGroupId; 
             private String status; 
             private Integer storageSize; 
             private Boolean supportEIP; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
 
             /**
-             * AutoRenewInstance.
+             * <p>Indicates whether the instance is automatically renewed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder autoRenewInstance(Boolean autoRenewInstance) {
                 this.autoRenewInstance = autoRenewInstance;
@@ -371,7 +436,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ClassicEndpoint.
+             * <p>The endpoint that is used to access the instance over the classic network. This parameter is no longer available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>amqp-cn-st21x7kv****.not-support</p>
              */
             public Builder classicEndpoint(String classicEndpoint) {
                 this.classicEndpoint = classicEndpoint;
@@ -379,7 +447,18 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * EncryptedInstance.
+             */
+            public Builder encryptedInstance(Boolean encryptedInstance) {
+                this.encryptedInstance = encryptedInstance;
+                return this;
+            }
+
+            /**
+             * <p>The timestamp that indicates when the instance expires. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1651507200000</p>
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -387,7 +466,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>amqp-cn-st21x7kv****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -395,7 +477,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>amqp-cn-st21x7kv****</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -403,7 +488,15 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * <p>The instance type.</p>
+             * <ul>
+             * <li>PROFESSIONAL: Professional Edition</li>
+             * <li>ENTERPRISE: Enterprise Edition</li>
+             * <li>VIP: Enterprise Platinum Edition</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>professional</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -411,7 +504,18 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MaxEipTps.
+             * KmsKeyId.
+             */
+            public Builder kmsKeyId(String kmsKeyId) {
+                this.kmsKeyId = kmsKeyId;
+                return this;
+            }
+
+            /**
+             * <p>The maximum number of Internet-based transactions per second (TPS) for the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24832</p>
              */
             public Builder maxEipTps(Integer maxEipTps) {
                 this.maxEipTps = maxEipTps;
@@ -419,7 +523,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MaxQueue.
+             * <p>The maximum number of queues on the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder maxQueue(Integer maxQueue) {
                 this.maxQueue = maxQueue;
@@ -427,7 +534,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MaxTps.
+             * <p>The maximum number of VPC-based TPS for the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder maxTps(Integer maxTps) {
                 this.maxTps = maxTps;
@@ -435,7 +545,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MaxVhost.
+             * <p>The maximum number of vhosts on the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder maxVhost(Integer maxVhost) {
                 this.maxVhost = maxVhost;
@@ -443,7 +556,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * OrderCreateTime.
+             * <p>The timestamp that indicates when the order was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1572441939000</p>
              */
             public Builder orderCreateTime(Long orderCreateTime) {
                 this.orderCreateTime = orderCreateTime;
@@ -451,7 +567,14 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * OrderType.
+             * <p>The billing method. Valid values:</p>
+             * <ul>
+             * <li>PrePaid: the subscription billing method.</li>
+             * <li>POST_PAID: the pay-as-you-go billing method.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PRE_PAID</p>
              */
             public Builder orderType(String orderType) {
                 this.orderType = orderType;
@@ -459,7 +582,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateEndpoint.
+             * <p>The virtual private cloud (VPC) endpoint of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>amqp-cn-st21x7kv****.mq-amqp.cn-hangzhou-a.aliyuncs.com</p>
              */
             public Builder privateEndpoint(String privateEndpoint) {
                 this.privateEndpoint = privateEndpoint;
@@ -467,7 +593,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PublicEndpoint.
+             * <p>The public endpoint of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>amqp-cn-st21x7kv****.mq-amqp.cn-hangzhou-a.aliyuncs.com</p>
              */
             public Builder publicEndpoint(String publicEndpoint) {
                 this.publicEndpoint = publicEndpoint;
@@ -475,7 +604,24 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * <p>The instance status. Valid values:</p>
+             * <ul>
+             * <li>DEPLOYING: The instance is being deployed.</li>
+             * <li>EXPIRED: The instance is expired.</li>
+             * <li>SERVING: The instance is running.</li>
+             * <li>RELEASED: The instance is released.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SERVING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -483,7 +629,13 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * StorageSize.
+             * <p>The disk size. Unit: GB.</p>
+             * <blockquote>
+             * <p> For Professional Edition instances and Enterprise Edition instances, this parameter is unavailable and **-1** is returned.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder storageSize(Integer storageSize) {
                 this.storageSize = storageSize;
@@ -491,7 +643,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SupportEIP.
+             * <p>Indicates whether the instance supports elastic IP addresses (EIPs).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportEIP(Boolean supportEIP) {
                 this.supportEIP = supportEIP;
@@ -499,9 +654,9 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>标签列表。</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -513,14 +668,20 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Instances")
-        private java.util.List < Instances> instances;
+        @com.aliyun.core.annotation.NameInMap("Instances")
+        private java.util.List<Instances> instances;
 
-        @NameInMap("MaxResults")
+        @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
         private Data(Builder builder) {
@@ -540,7 +701,7 @@ public class ListInstancesResponseBody extends TeaModel {
         /**
          * @return instances
          */
-        public java.util.List < Instances> getInstances() {
+        public java.util.List<Instances> getInstances() {
             return this.instances;
         }
 
@@ -559,20 +720,23 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Instances> instances; 
+            private java.util.List<Instances> instances; 
             private Integer maxResults; 
             private String nextToken; 
 
             /**
-             * Instances.
+             * <p>The instances.</p>
              */
-            public Builder instances(java.util.List < Instances> instances) {
+            public Builder instances(java.util.List<Instances> instances) {
                 this.instances = instances;
                 return this;
             }
 
             /**
-             * MaxResults.
+             * <p>The maximum number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -580,7 +744,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * <p>The token that marks the end of the current returned page. If this parameter is empty, all data is retrieved.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>caebacccb2be03f84eb48b699f0a****</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;

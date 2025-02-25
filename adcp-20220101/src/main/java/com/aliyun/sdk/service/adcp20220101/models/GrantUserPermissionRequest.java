@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adcp20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GrantUserPermissionRequest</p>
  */
 public class GrantUserPermissionRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("IsRamRole")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsRamRole")
     private Boolean isRamRole;
 
-    @Query
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Query
-    @NameInMap("RoleName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String roleName;
 
-    @Query
-    @NameInMap("RoleType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String roleType;
 
-    @Query
-    @NameInMap("UserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
     private GrantUserPermissionRequest(Builder builder) {
@@ -128,7 +127,7 @@ public class GrantUserPermissionRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -146,7 +145,12 @@ public class GrantUserPermissionRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The name of the namespace.
+         * <p>
+         * 
+         * *   If **RoleType** is set to **cluster**, you do not need to specify this parameter.
+         * *   This parameter is required if **RoleType** is set to **namespace**.
+         * *   If **RoleType** is set to **namespace** and **RoleName** is set to **gitops-dev**, this parameter is required and must be set to **argocd**.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -155,37 +159,17 @@ public class GrantUserPermissionRequest extends Request {
         }
 
         /**
-         * The predefined role that you want to assign. Valid values:
+         * The predefined role. Valid values:
          * <p>
          * 
-         * *   admin: the administrator role.
-         * *   dev: the developer role.
+         * *   admin: administrator
+         * *   dev: developer
+         * *   gitops-dev: GitOps developer. The parameter is available only for Fleet instances.
          * 
-         * Enumerated values:
+         * The value of RoleName and that of RoleType must meet the following requirements:
          * 
-         * *   arms-admin
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   dev
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   admin
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * *   If **RoleType** is set to **cluster**, this parameter must be set to **admin**.
+         * *   If **RoleType** is set to **namespace**, this parameter must be set to **dev** or **gitops-dev**.
          */
         public Builder roleName(String roleName) {
             this.putQueryParameter("RoleName", roleName);
@@ -194,7 +178,11 @@ public class GrantUserPermissionRequest extends Request {
         }
 
         /**
-         * RoleType.
+         * The authorization type. Valid values:
+         * <p>
+         * 
+         * *   cluster: The permissions are granted to a cluster.
+         * *   namespace: The permissions are granted to a namespace of a cluster.
          */
         public Builder roleType(String roleType) {
             this.putQueryParameter("RoleType", roleType);

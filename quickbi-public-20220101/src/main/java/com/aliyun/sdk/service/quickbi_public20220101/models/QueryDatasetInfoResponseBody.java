@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDatasetInfoResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDatasetInfoResponseBody</p>
  */
 public class QueryDatasetInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryDatasetInfoResponseBody(Builder builder) {
@@ -62,11 +67,14 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Whether the operation is successfully returned. Valid values:
-         * <p>
+         * <p>Whether the operation is successfully returned. Valid values:</p>
+         * <ul>
+         * <li>true: The call is successful.</li>
+         * <li>false: The call fails.</li>
+         * </ul>
          * 
-         * *   true: The call is successful.
-         * *   false: The call fails.
+         * <strong>example:</strong>
+         * <p>a4d1a221d-41za1-****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -74,7 +82,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -82,7 +90,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The unique ID of the dataset.
+         * <p>The unique ID of the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -95,29 +106,35 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDatasetInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDatasetInfoResponseBody</p>
+     */
     public static class CubeTableList extends TeaModel {
-        @NameInMap("Caption")
+        @com.aliyun.core.annotation.NameInMap("Caption")
         private String caption;
 
-        @NameInMap("Customsql")
+        @com.aliyun.core.annotation.NameInMap("Customsql")
         private Boolean customsql;
 
-        @NameInMap("DatasourceId")
+        @com.aliyun.core.annotation.NameInMap("DatasourceId")
         private String datasourceId;
 
-        @NameInMap("DsType")
+        @com.aliyun.core.annotation.NameInMap("DsType")
         private String dsType;
 
-        @NameInMap("FactTable")
+        @com.aliyun.core.annotation.NameInMap("FactTable")
         private Boolean factTable;
 
-        @NameInMap("Sql")
+        @com.aliyun.core.annotation.NameInMap("Sql")
         private String sql;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
-        @NameInMap("UniqueId")
+        @com.aliyun.core.annotation.NameInMap("UniqueId")
         private String uniqueId;
 
         private CubeTableList(Builder builder) {
@@ -206,11 +223,14 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             private String uniqueId; 
 
             /**
-             * Indicates whether the data source table is valid. Valid values:
-             * <p>
+             * <p>Indicates whether the data source table is valid. Valid values:</p>
+             * <ul>
+             * <li>true: data source table</li>
+             * <li>false: custom table</li>
+             * </ul>
              * 
-             * *   true: data source table
-             * *   false: custom table
+             * <strong>example:</strong>
+             * <p>odps_40</p>
              */
             public Builder caption(String caption) {
                 this.caption = caption;
@@ -218,7 +238,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the table.
+             * <p>The display name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder customsql(Boolean customsql) {
                 this.customsql = customsql;
@@ -226,7 +249,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dfefd7f4-fc6e-42c9-b4******</p>
              */
             public Builder datasourceId(String datasourceId) {
                 this.datasourceId = datasourceId;
@@ -234,7 +260,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data source.
+             * <p>The ID of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>maxcompute</p>
              */
             public Builder dsType(String dsType) {
                 this.dsType = dsType;
@@ -242,7 +271,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the table.
+             * <p>The unique ID of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder factTable(Boolean factTable) {
                 this.factTable = factTable;
@@ -250,11 +282,14 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the table is a custom SQL table. Valid values:
-             * <p>
+             * <p>Indicates whether the table is a custom SQL table. Valid values:</p>
+             * <ul>
+             * <li>true: custom SQL table</li>
+             * <li>false: non-custom SQL table</li>
+             * </ul>
              * 
-             * *   true: custom SQL table
-             * *   false: non-custom SQL table
+             * <strong>example:</strong>
+             * <p>select * from ****</p>
              */
             public Builder sql(String sql) {
                 this.sql = sql;
@@ -262,7 +297,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The list of tables used by the dataset.
+             * <p>The list of tables used by the dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>viewdasb8494aab2612473cb74992159fe****</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -270,13 +308,16 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the data source. Valid values:
-             * <p>
+             * <p>The type of the data source. Valid values:</p>
+             * <ul>
+             * <li>mysql</li>
+             * <li>odps</li>
+             * <li>oracle</li>
+             * <li>... and other data source types supported by Quick BI</li>
+             * </ul>
              * 
-             * *   mysql
-             * *   odps
-             * *   oracle
-             * *   ... and other data source types supported by Quick BI
+             * <strong>example:</strong>
+             * <p>7a62530b36</p>
              */
             public Builder uniqueId(String uniqueId) {
                 this.uniqueId = uniqueId;
@@ -290,32 +331,41 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDatasetInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDatasetInfoResponseBody</p>
+     */
     public static class DimensionList extends TeaModel {
-        @NameInMap("Caption")
+        @com.aliyun.core.annotation.NameInMap("Caption")
         private String caption;
 
-        @NameInMap("DataType")
+        @com.aliyun.core.annotation.NameInMap("DataType")
         private String dataType;
 
-        @NameInMap("DimensionType")
+        @com.aliyun.core.annotation.NameInMap("DimensionType")
         private String dimensionType;
 
-        @NameInMap("Expression")
+        @com.aliyun.core.annotation.NameInMap("Expression")
         private String expression;
 
-        @NameInMap("FactColumn")
+        @com.aliyun.core.annotation.NameInMap("FactColumn")
         private String factColumn;
 
-        @NameInMap("Granularity")
+        @com.aliyun.core.annotation.NameInMap("FieldDescription")
+        private String fieldDescription;
+
+        @com.aliyun.core.annotation.NameInMap("Granularity")
         private String granularity;
 
-        @NameInMap("RefUid")
+        @com.aliyun.core.annotation.NameInMap("RefUid")
         private String refUid;
 
-        @NameInMap("TableUniqueId")
+        @com.aliyun.core.annotation.NameInMap("TableUniqueId")
         private String tableUniqueId;
 
-        @NameInMap("Uid")
+        @com.aliyun.core.annotation.NameInMap("Uid")
         private String uid;
 
         private DimensionList(Builder builder) {
@@ -324,6 +374,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             this.dimensionType = builder.dimensionType;
             this.expression = builder.expression;
             this.factColumn = builder.factColumn;
+            this.fieldDescription = builder.fieldDescription;
             this.granularity = builder.granularity;
             this.refUid = builder.refUid;
             this.tableUniqueId = builder.tableUniqueId;
@@ -374,6 +425,13 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return fieldDescription
+         */
+        public String getFieldDescription() {
+            return this.fieldDescription;
+        }
+
+        /**
          * @return granularity
          */
         public String getGranularity() {
@@ -407,13 +465,17 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             private String dimensionType; 
             private String expression; 
             private String factColumn; 
+            private String fieldDescription; 
             private String granularity; 
             private String refUid; 
             private String tableUniqueId; 
             private String uid; 
 
             /**
-             * The unique ID of the field that is referenced by the group measure. Non-NULL if and only if the metric is a grouping metric.
+             * <p>The unique ID of the field that is referenced by the group measure. Non-NULL if and only if the metric is a grouping metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>city</p>
              */
             public Builder caption(String caption) {
                 this.caption = caption;
@@ -421,7 +483,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * A list of all dimensions in the dataset.
+             * <p>A list of all dimensions in the dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>string</p>
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -429,7 +494,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The actual physical field.
+             * <p>The actual physical field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>group_dimension</p>
              */
             public Builder dimensionType(String dimensionType) {
                 this.dimensionType = dimensionType;
@@ -437,12 +505,15 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Data type; value:
-             * <p>
+             * <p>Data type; value:</p>
+             * <ul>
+             * <li>string: character</li>
+             * <li>number: a number</li>
+             * <li>datetime: time</li>
+             * </ul>
              * 
-             * *   string: character
-             * *   number: a number
-             * *   datetime: time
+             * <strong>example:</strong>
+             * <p>example_expression</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -450,7 +521,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Expression for a calculated dimension; valid only for calculated dimensions.
+             * <p>Expression for a calculated dimension; valid only for calculated dimensions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>city</p>
              */
             public Builder factColumn(String factColumn) {
                 this.factColumn = factColumn;
@@ -458,12 +532,23 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the dimension. Valid values:
-             * <p>
+             * FieldDescription.
+             */
+            public Builder fieldDescription(String fieldDescription) {
+                this.fieldDescription = fieldDescription;
+                return this;
+            }
+
+            /**
+             * <p>The type of the dimension. Valid values:</p>
+             * <ul>
+             * <li>standard_dimension: General Dimension</li>
+             * <li>calculate_dimension: calculating dimensions</li>
+             * <li>group_dimension: grouping dimensions</li>
+             * </ul>
              * 
-             * *   standard_dimension: General Dimension
-             * *   calculate_dimension: calculating dimensions
-             * *   group_dimension: grouping dimensions
+             * <strong>example:</strong>
+             * <p>example_granularity</p>
              */
             public Builder granularity(String granularity) {
                 this.granularity = granularity;
@@ -471,7 +556,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The granularity.
+             * <p>The granularity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>308f7****</p>
              */
             public Builder refUid(String refUid) {
                 this.refUid = refUid;
@@ -479,7 +567,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ARN.
+             * <p>The ARN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7a62530***</p>
              */
             public Builder tableUniqueId(String tableUniqueId) {
                 this.tableUniqueId = tableUniqueId;
@@ -487,7 +578,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the dimension.
+             * <p>The display name of the dimension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a69774***</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -501,17 +595,23 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDatasetInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDatasetInfoResponseBody</p>
+     */
     public static class Directory extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PathId")
+        @com.aliyun.core.annotation.NameInMap("PathId")
         private String pathId;
 
-        @NameInMap("PathName")
+        @com.aliyun.core.annotation.NameInMap("PathName")
         private String pathName;
 
         private Directory(Builder builder) {
@@ -564,7 +664,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             private String pathName; 
 
             /**
-             * Test directory
+             * <p>Test directory</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a3eecab7-618d-4f9f-*****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -572,7 +675,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Test directory
+             * <p>Test directory</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The name of the directory.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -580,7 +686,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the directory to which the dataset belongs.
+             * <p>The information about the directory to which the dataset belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>88b680****</p>
              */
             public Builder pathId(String pathId) {
                 this.pathId = pathId;
@@ -588,7 +697,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the directory ID, for example, aa/bb/cc/dd.
+             * <p>The path of the directory ID, for example, aa/bb/cc/dd.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The path name of the directory ID, for example, one-level directory /two-level directory.</p>
              */
             public Builder pathName(String pathName) {
                 this.pathName = pathName;
@@ -602,26 +714,35 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDatasetInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDatasetInfoResponseBody</p>
+     */
     public static class MeasureList extends TeaModel {
-        @NameInMap("Caption")
+        @com.aliyun.core.annotation.NameInMap("Caption")
         private String caption;
 
-        @NameInMap("DataType")
+        @com.aliyun.core.annotation.NameInMap("DataType")
         private String dataType;
 
-        @NameInMap("Expression")
+        @com.aliyun.core.annotation.NameInMap("Expression")
         private String expression;
 
-        @NameInMap("FactColumn")
+        @com.aliyun.core.annotation.NameInMap("FactColumn")
         private String factColumn;
 
-        @NameInMap("MeasureType")
+        @com.aliyun.core.annotation.NameInMap("FieldDescription")
+        private String fieldDescription;
+
+        @com.aliyun.core.annotation.NameInMap("MeasureType")
         private String measureType;
 
-        @NameInMap("TableUniqueId")
+        @com.aliyun.core.annotation.NameInMap("TableUniqueId")
         private String tableUniqueId;
 
-        @NameInMap("Uid")
+        @com.aliyun.core.annotation.NameInMap("Uid")
         private String uid;
 
         private MeasureList(Builder builder) {
@@ -629,6 +750,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             this.dataType = builder.dataType;
             this.expression = builder.expression;
             this.factColumn = builder.factColumn;
+            this.fieldDescription = builder.fieldDescription;
             this.measureType = builder.measureType;
             this.tableUniqueId = builder.tableUniqueId;
             this.uid = builder.uid;
@@ -671,6 +793,13 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return fieldDescription
+         */
+        public String getFieldDescription() {
+            return this.fieldDescription;
+        }
+
+        /**
          * @return measureType
          */
         public String getMeasureType() {
@@ -696,12 +825,16 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             private String dataType; 
             private String expression; 
             private String factColumn; 
+            private String fieldDescription; 
             private String measureType; 
             private String tableUniqueId; 
             private String uid; 
 
             /**
-             * The actual physical field.
+             * <p>The actual physical field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>profit_amt</p>
              */
             public Builder caption(String caption) {
                 this.caption = caption;
@@ -709,7 +842,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * A list of all measures for the dataset.
+             * <p>A list of all measures for the dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>string</p>
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -717,12 +853,15 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Data type; value:
-             * <p>
+             * <p>Data type; value:</p>
+             * <ul>
+             * <li>string: character</li>
+             * <li>number: a number</li>
+             * <li>datetime: time</li>
+             * </ul>
              * 
-             * *   string: character
-             * *   number: a number
-             * *   datetime: time
+             * <strong>example:</strong>
+             * <p>example_expression</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -730,11 +869,14 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the measure. Valid values:
-             * <p>
+             * <p>The type of the measure. Valid values:</p>
+             * <ul>
+             * <li>standard_measure: General Metrics</li>
+             * <li>calculate_measure: Calculating Measures</li>
+             * </ul>
              * 
-             * *   standard_measure: General Metrics
-             * *   calculate_measure: Calculating Measures
+             * <strong>example:</strong>
+             * <p>profit_amt</p>
              */
             public Builder factColumn(String factColumn) {
                 this.factColumn = factColumn;
@@ -742,7 +884,18 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * An expression that calculates a measure; valid only for calculated measures.
+             * FieldDescription.
+             */
+            public Builder fieldDescription(String fieldDescription) {
+                this.fieldDescription = fieldDescription;
+                return this;
+            }
+
+            /**
+             * <p>An expression that calculates a measure; valid only for calculated measures.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>calculate_measure</p>
              */
             public Builder measureType(String measureType) {
                 this.measureType = measureType;
@@ -750,7 +903,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the metric.
+             * <p>The display name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7a62530b36</p>
              */
             public Builder tableUniqueId(String tableUniqueId) {
                 this.tableUniqueId = tableUniqueId;
@@ -758,7 +914,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the table to which the table belongs, which corresponds to the UniqueId of the CubeTypeList.
+             * <p>The unique ID of the table to which the table belongs, which corresponds to the UniqueId of the CubeTypeList.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>88b680****</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -772,56 +931,65 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDatasetInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDatasetInfoResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("CubeTableList")
-        private java.util.List < CubeTableList> cubeTableList;
+        @com.aliyun.core.annotation.NameInMap("CubeTableList")
+        private java.util.List<CubeTableList> cubeTableList;
 
-        @NameInMap("CustimzeSql")
+        @com.aliyun.core.annotation.NameInMap("CustimzeSql")
         private Boolean custimzeSql;
 
-        @NameInMap("DatasetId")
+        @com.aliyun.core.annotation.NameInMap("DatasetId")
         private String datasetId;
 
-        @NameInMap("DatasetName")
+        @com.aliyun.core.annotation.NameInMap("DatasetName")
         private String datasetName;
 
-        @NameInMap("DimensionList")
-        private java.util.List < DimensionList> dimensionList;
+        @com.aliyun.core.annotation.NameInMap("DimensionList")
+        private java.util.List<DimensionList> dimensionList;
 
-        @NameInMap("Directory")
+        @com.aliyun.core.annotation.NameInMap("Directory")
         private Directory directory;
 
-        @NameInMap("DsId")
+        @com.aliyun.core.annotation.NameInMap("DsId")
         private String dsId;
 
-        @NameInMap("DsName")
+        @com.aliyun.core.annotation.NameInMap("DsName")
         private String dsName;
 
-        @NameInMap("DsType")
+        @com.aliyun.core.annotation.NameInMap("DsType")
         private String dsType;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModify")
+        @com.aliyun.core.annotation.NameInMap("GmtModify")
         private String gmtModify;
 
-        @NameInMap("MeasureList")
-        private java.util.List < MeasureList> measureList;
+        @com.aliyun.core.annotation.NameInMap("MeasureList")
+        private java.util.List<MeasureList> measureList;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OpenOfflineAcceleration")
+        private Boolean openOfflineAcceleration;
+
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
-        @NameInMap("OwnerName")
+        @com.aliyun.core.annotation.NameInMap("OwnerName")
         private String ownerName;
 
-        @NameInMap("RowLevel")
+        @com.aliyun.core.annotation.NameInMap("RowLevel")
         private Boolean rowLevel;
 
-        @NameInMap("WorkspaceId")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceId")
         private String workspaceId;
 
-        @NameInMap("WorkspaceName")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceName")
         private String workspaceName;
 
         private Result(Builder builder) {
@@ -837,6 +1005,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             this.gmtCreate = builder.gmtCreate;
             this.gmtModify = builder.gmtModify;
             this.measureList = builder.measureList;
+            this.openOfflineAcceleration = builder.openOfflineAcceleration;
             this.ownerId = builder.ownerId;
             this.ownerName = builder.ownerName;
             this.rowLevel = builder.rowLevel;
@@ -855,7 +1024,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         /**
          * @return cubeTableList
          */
-        public java.util.List < CubeTableList> getCubeTableList() {
+        public java.util.List<CubeTableList> getCubeTableList() {
             return this.cubeTableList;
         }
 
@@ -883,7 +1052,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         /**
          * @return dimensionList
          */
-        public java.util.List < DimensionList> getDimensionList() {
+        public java.util.List<DimensionList> getDimensionList() {
             return this.dimensionList;
         }
 
@@ -932,8 +1101,15 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         /**
          * @return measureList
          */
-        public java.util.List < MeasureList> getMeasureList() {
+        public java.util.List<MeasureList> getMeasureList() {
             return this.measureList;
+        }
+
+        /**
+         * @return openOfflineAcceleration
+         */
+        public Boolean getOpenOfflineAcceleration() {
+            return this.openOfflineAcceleration;
         }
 
         /**
@@ -972,18 +1148,19 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < CubeTableList> cubeTableList; 
+            private java.util.List<CubeTableList> cubeTableList; 
             private Boolean custimzeSql; 
             private String datasetId; 
             private String datasetName; 
-            private java.util.List < DimensionList> dimensionList; 
+            private java.util.List<DimensionList> dimensionList; 
             private Directory directory; 
             private String dsId; 
             private String dsName; 
             private String dsType; 
             private String gmtCreate; 
             private String gmtModify; 
-            private java.util.List < MeasureList> measureList; 
+            private java.util.List<MeasureList> measureList; 
+            private Boolean openOfflineAcceleration; 
             private String ownerId; 
             private String ownerName; 
             private Boolean rowLevel; 
@@ -991,15 +1168,18 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             private String workspaceName; 
 
             /**
-             * The unique ID of the dataset.
+             * <p>The unique ID of the dataset.</p>
              */
-            public Builder cubeTableList(java.util.List < CubeTableList> cubeTableList) {
+            public Builder cubeTableList(java.util.List<CubeTableList> cubeTableList) {
                 this.cubeTableList = cubeTableList;
                 return this;
             }
 
             /**
-             * The unique ID of the workspace to which the dataset belongs.
+             * <p>The unique ID of the workspace to which the dataset belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder custimzeSql(Boolean custimzeSql) {
                 this.custimzeSql = custimzeSql;
@@ -1007,13 +1187,16 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the data source. Valid values:
-             * <p>
+             * <p>The type of the data source. Valid values:</p>
+             * <ul>
+             * <li>mysql</li>
+             * <li>odps</li>
+             * <li>oracle</li>
+             * <li>... Data source types supported by Quick BI such as</li>
+             * </ul>
              * 
-             * *   mysql
-             * *   odps
-             * *   oracle
-             * *   ... Data source types supported by Quick BI such as
+             * <strong>example:</strong>
+             * <p>a201c85c-******</p>
              */
             public Builder datasetId(String datasetId) {
                 this.datasetId = datasetId;
@@ -1021,7 +1204,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID of the dataset owner in the Quick BI.
+             * <p>The user ID of the dataset owner in the Quick BI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>opds_40</p>
              */
             public Builder datasetName(String datasetName) {
                 this.datasetName = datasetName;
@@ -1029,15 +1215,15 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * If it is a custom SQL table, this is the specific SQL.
+             * <p>If it is a custom SQL table, this is the specific SQL.</p>
              */
-            public Builder dimensionList(java.util.List < DimensionList> dimensionList) {
+            public Builder dimensionList(java.util.List<DimensionList> dimensionList) {
                 this.dimensionList = dimensionList;
                 return this;
             }
 
             /**
-             * The unique ID of the metric.
+             * <p>The unique ID of the metric.</p>
              */
             public Builder directory(Directory directory) {
                 this.directory = directory;
@@ -1045,7 +1231,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the data source.
+             * <p>The name of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a201c85c-******</p>
              */
             public Builder dsId(String dsId) {
                 this.dsId = dsId;
@@ -1053,7 +1242,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the dataset was last modified.
+             * <p>The time when the dataset was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps</p>
              */
             public Builder dsName(String dsName) {
                 this.dsName = dsName;
@@ -1061,7 +1253,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time when the training dataset was created.
+             * <p>The point in time when the training dataset was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps</p>
              */
             public Builder dsType(String dsType) {
                 this.dsType = dsType;
@@ -1069,11 +1264,14 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether to customize SQL statements. Valid values:
-             * <p>
+             * <p>Indicates whether to customize SQL statements. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>1629450382000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -1081,7 +1279,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the dataset.
+             * <p>The information about the dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1629450382000</p>
              */
             public Builder gmtModify(String gmtModify) {
                 this.gmtModify = gmtModify;
@@ -1089,15 +1290,26 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the table to which the table belongs, which corresponds to the UniqueId of the CubeTypeList.
+             * <p>The unique ID of the table to which the table belongs, which corresponds to the UniqueId of the CubeTypeList.</p>
              */
-            public Builder measureList(java.util.List < MeasureList> measureList) {
+            public Builder measureList(java.util.List<MeasureList> measureList) {
                 this.measureList = measureList;
                 return this;
             }
 
             /**
-             * Test Space
+             * OpenOfflineAcceleration.
+             */
+            public Builder openOfflineAcceleration(Boolean openOfflineAcceleration) {
+                this.openOfflineAcceleration = openOfflineAcceleration;
+                return this;
+            }
+
+            /**
+             * <p>Test Space</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b8494aab26124*****</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -1105,7 +1317,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the data source.
+             * <p>The unique ID of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The name of the dataset owner.</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -1113,7 +1328,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the training dataset.
+             * <p>The name of the training dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder rowLevel(Boolean rowLevel) {
                 this.rowLevel = rowLevel;
@@ -1121,11 +1339,14 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Whether row-level permissions are enabled. Valid values:
-             * <p>
+             * <p>Whether row-level permissions are enabled. Valid values:</p>
+             * <ul>
+             * <li>true: The VIP Netty channel is enabled.</li>
+             * <li>false: The VIP Netty channel is disabled.</li>
+             * </ul>
              * 
-             * *   true: The VIP Netty channel is enabled.
-             * *   false: The VIP Netty channel is disabled.
+             * <strong>example:</strong>
+             * <p>420abef4-a79b-4289-b12****</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -1133,7 +1354,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Big Baby
+             * <p>Big Baby</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The name of the workspace in which the dataset resides.</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;

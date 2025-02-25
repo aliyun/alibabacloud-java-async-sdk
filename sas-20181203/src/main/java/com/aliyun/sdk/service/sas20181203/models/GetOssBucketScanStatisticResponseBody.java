@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOssBucketScanStatisticResponseBody} extends {@link TeaModel}
  *
  * <p>GetOssBucketScanStatisticResponseBody</p>
  */
 public class GetOssBucketScanStatisticResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetOssBucketScanStatisticResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FAC50208-E56B-5CC8-8738-2B219D1A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,35 +79,41 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetOssBucketScanStatisticResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOssBucketScanStatisticResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private Long expireTime;
 
-        @NameInMap("HighRisk")
+        @com.aliyun.core.annotation.NameInMap("HighRisk")
         private Long highRisk;
 
-        @NameInMap("LowRisk")
+        @com.aliyun.core.annotation.NameInMap("LowRisk")
         private Long lowRisk;
 
-        @NameInMap("MediumRisk")
+        @com.aliyun.core.annotation.NameInMap("MediumRisk")
         private Long mediumRisk;
 
-        @NameInMap("NoScanBucket")
+        @com.aliyun.core.annotation.NameInMap("NoScanBucket")
         private Integer noScanBucket;
 
-        @NameInMap("RemainAuth")
+        @com.aliyun.core.annotation.NameInMap("RemainAuth")
         private Integer remainAuth;
 
-        @NameInMap("RiskBucket")
+        @com.aliyun.core.annotation.NameInMap("RiskBucket")
         private Integer riskBucket;
 
-        @NameInMap("ScanObject")
+        @com.aliyun.core.annotation.NameInMap("ScanObject")
         private Long scanObject;
 
-        @NameInMap("TotalBucket")
+        @com.aliyun.core.annotation.NameInMap("TotalBucket")
         private Integer totalBucket;
 
-        @NameInMap("TotalObject")
+        @com.aliyun.core.annotation.NameInMap("TotalObject")
         private Long totalObject;
 
         private Data(Builder builder) {
@@ -206,7 +220,10 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
             private Long totalObject; 
 
             /**
-             * The expiration time of the purchased quota.
+             * <p>The expiration time of the purchased quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1714442403000</p>
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -214,7 +231,10 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The number of high-risk objects.
+             * <p>The number of high-risk objects.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder highRisk(Long highRisk) {
                 this.highRisk = highRisk;
@@ -222,7 +242,10 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The number of low-risk objects.
+             * <p>The number of low-risk objects.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder lowRisk(Long lowRisk) {
                 this.lowRisk = lowRisk;
@@ -230,7 +253,10 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The number of medium-risk objects.
+             * <p>The number of medium-risk objects.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder mediumRisk(Long mediumRisk) {
                 this.mediumRisk = mediumRisk;
@@ -238,7 +264,10 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The number of buckets that are not checked.
+             * <p>The number of buckets that are not checked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder noScanBucket(Integer noScanBucket) {
                 this.noScanBucket = noScanBucket;
@@ -246,7 +275,10 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The remaining quota.
+             * <p>The remaining quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder remainAuth(Integer remainAuth) {
                 this.remainAuth = remainAuth;
@@ -254,7 +286,10 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The number of buckets in which at-risk objects exist.
+             * <p>The number of buckets in which at-risk objects exist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder riskBucket(Integer riskBucket) {
                 this.riskBucket = riskBucket;
@@ -262,7 +297,10 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The number of objects that are checked.
+             * <p>The number of objects that are checked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder scanObject(Long scanObject) {
                 this.scanObject = scanObject;
@@ -270,7 +308,10 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of buckets.
+             * <p>The total number of buckets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalBucket(Integer totalBucket) {
                 this.totalBucket = totalBucket;
@@ -278,7 +319,10 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of objects in the bucket.
+             * <p>The total number of objects in the bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalObject(Long totalObject) {
                 this.totalObject = totalObject;

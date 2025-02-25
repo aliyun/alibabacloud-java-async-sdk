@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,44 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateFunctionInstanceRequest</p>
  */
 public class CreateFunctionInstanceRequest extends Request {
-    @Path
-    @NameInMap("appGroupIdentity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("appGroupIdentity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appGroupIdentity;
 
-    @Path
-    @NameInMap("functionName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("functionName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String functionName;
 
-    @Body
-    @NameInMap("createParameters")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("createParameters")
     private java.util.List < CreateParameters> createParameters;
 
-    @Body
-    @NameInMap("cron")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("cron")
     private String cron;
 
-    @Body
-    @NameInMap("description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @Body
-    @NameInMap("functionType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("functionType")
     private String functionType;
 
-    @Body
-    @NameInMap("instanceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("instanceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceName;
 
-    @Body
-    @NameInMap("modelType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("modelType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String modelType;
 
-    @Body
-    @NameInMap("usageParameters")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("usageParameters")
     private java.util.List < UsageParameters> usageParameters;
 
     private CreateFunctionInstanceRequest(Builder builder) {
@@ -179,17 +178,18 @@ public class CreateFunctionInstanceRequest extends Request {
         }
 
         /**
-         * The name of the feature. Valid values:
+         * The feature name. Valid values:
          * <p>
          * 
-         * *   ctr: CTR model
-         * *   pop: popularity model
-         * *   category: category model
-         * *   hot: hotword model
-         * *   hint: shading model
-         * *   suggest: drop-down suggestion model
-         * *   analyzer: word segmentation model
-         * *   termweight: term weight model
+         * *   ctr: CTR model.
+         * *   pop: popularity model.
+         * *   category: category model.
+         * *   hot: hotword model.
+         * *   hint: hint model.
+         * *   suggest: drop-down suggestion model.
+         * *   analyzer: tokenization model.
+         * *   termweight: term weight model.
+         * *   synonym: synonym model.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -198,7 +198,7 @@ public class CreateFunctionInstanceRequest extends Request {
         }
 
         /**
-         * The parameters that are used to create the instance.
+         * The parameters used to create the instance.
          */
         public Builder createParameters(java.util.List < CreateParameters> createParameters) {
             this.putBodyParameter("createParameters", createParameters);
@@ -207,7 +207,7 @@ public class CreateFunctionInstanceRequest extends Request {
         }
 
         /**
-         * The cron expression used to schedule periodic training, in the format of (Minutes Hours DayofMonth Month DayofWeek). The default value is empty, which indicates that no periodic training is performed. DayofWeek 0 indicates Sunday.
+         * The CRON expression used to schedule periodic training, in the format of Minutes Hours DayofMonth Month DayofWeek. The default value is empty, which specifies that no periodic training is performed. A value of 0 for DayofWeek specifies Sunday.
          */
         public Builder cron(String cron) {
             this.putBodyParameter("cron", cron);
@@ -225,10 +225,10 @@ public class CreateFunctionInstanceRequest extends Request {
         }
 
         /**
-         * The type of the feature. Valid values:
+         * The feature type.
          * <p>
          * 
-         * *   PAAS: This is the default value. Training is required before you can use the feature.
+         * *   Default value: PAAS. Training is required before you can use the feature.
          */
         public Builder functionType(String functionType) {
             this.putBodyParameter("functionType", functionType);
@@ -237,7 +237,7 @@ public class CreateFunctionInstanceRequest extends Request {
         }
 
         /**
-         * The name of the instance. The name must be 1 to 30 characters in length and can contain letters, digits, and underscores (\_). The name is case-sensitive and must start with a letter.
+         * The instance name. The name must be 1 to 30 characters in length and can contain letters, digits, and underscores (\_). The name is case-sensitive and must start with a letter.
          */
         public Builder instanceName(String instanceName) {
             this.putBodyParameter("instanceName", instanceName);
@@ -246,17 +246,20 @@ public class CreateFunctionInstanceRequest extends Request {
         }
 
         /**
-         * The type of the model. The following features correspond to different model types:
+         * The model type. The value varies based on the model.
          * <p>
          * 
-         * *   click-through rate (CTR) model: tf_checkpoint
+         * *   Click-through rate (CTR) model: tf_checkpoint
          * *   Popularity model: pop
          * *   Category model: offline_inference
          * *   Hotword model: offline_inference
-         * *   Shading model: offline_inference
+         * *   Hint model: offline_inference
+         * *   Hotword model for real-time top searches: near_realtime
+         * *   Personalized hint model: near_realtime
          * *   Drop-down suggestion model: offline_inference
-         * *   Word segmentation model: text
+         * *   Tokenization model: text
          * *   Term weight model: tf_checkpoint
+         * *   Synonym model: offline_inference
          */
         public Builder modelType(String modelType) {
             this.putBodyParameter("modelType", modelType);
@@ -265,7 +268,7 @@ public class CreateFunctionInstanceRequest extends Request {
         }
 
         /**
-         * The parameters that are used to use the instance.
+         * The parameters used to use the instance.
          */
         public Builder usageParameters(java.util.List < UsageParameters> usageParameters) {
             this.putBodyParameter("usageParameters", usageParameters);
@@ -281,10 +284,10 @@ public class CreateFunctionInstanceRequest extends Request {
     } 
 
     public static class CreateParameters extends TeaModel {
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private CreateParameters(Builder builder) {
@@ -319,7 +322,7 @@ public class CreateFunctionInstanceRequest extends Request {
             private String value; 
 
             /**
-             * The name of the parameter.
+             * The parameter name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -327,7 +330,7 @@ public class CreateFunctionInstanceRequest extends Request {
             }
 
             /**
-             * The value of the parameter.
+             * The parameter value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -342,10 +345,10 @@ public class CreateFunctionInstanceRequest extends Request {
 
     }
     public static class UsageParameters extends TeaModel {
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private UsageParameters(Builder builder) {
@@ -380,7 +383,7 @@ public class CreateFunctionInstanceRequest extends Request {
             private String value; 
 
             /**
-             * The name of the parameter.
+             * The parameter name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -388,7 +391,7 @@ public class CreateFunctionInstanceRequest extends Request {
             }
 
             /**
-             * The value of the parameter.
+             * The parameter value.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -1,103 +1,112 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateRecordTemplateRequest} extends {@link RequestModel}
  *
  * <p>UpdateRecordTemplateRequest</p>
  */
 public class UpdateRecordTemplateRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("BackgroundColor")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackgroundColor")
     private Integer backgroundColor;
 
-    @Query
-    @NameInMap("Backgrounds")
-    private java.util.List < Backgrounds> backgrounds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Backgrounds")
+    private java.util.List<Backgrounds> backgrounds;
 
-    @Query
-    @NameInMap("ClockWidgets")
-    private java.util.List < ClockWidgets> clockWidgets;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClockWidgets")
+    private java.util.List<ClockWidgets> clockWidgets;
 
-    @Query
-    @NameInMap("DelayStopTime")
-    @Validation(maximum = 86400, minimum = 5)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DelayStopTime")
+    @com.aliyun.core.annotation.Validation(maximum = 86400, minimum = 5)
     private Integer delayStopTime;
 
-    @Query
-    @NameInMap("EnableM3u8DateTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableM3u8DateTime")
     private Boolean enableM3u8DateTime;
 
-    @Query
-    @NameInMap("FileSplitInterval")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSplitInterval")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer fileSplitInterval;
 
-    @Query
-    @NameInMap("Formats")
-    @Validation(required = true)
-    private java.util.List < String > formats;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Formats")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> formats;
 
-    @Query
-    @NameInMap("HttpCallbackUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpCallbackUrl")
     private String httpCallbackUrl;
 
-    @Query
-    @NameInMap("LayoutIds")
-    @Validation(required = true)
-    private java.util.List < Long > layoutIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LayoutIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Long> layoutIds;
 
-    @Query
-    @NameInMap("MediaEncode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaEncode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer mediaEncode;
 
-    @Query
-    @NameInMap("MnsQueue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MnsQueue")
     private String mnsQueue;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("OssBucket")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssBucket")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ossBucket;
 
-    @Query
-    @NameInMap("OssFilePrefix")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssEndpoint")
+    private String ossEndpoint;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssFilePrefix")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ossFilePrefix;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("TaskProfile")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskProfile")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskProfile;
 
-    @Query
-    @NameInMap("TemplateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateId;
 
-    @Query
-    @NameInMap("Watermarks")
-    private java.util.List < Watermarks> watermarks;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Watermarks")
+    private java.util.List<Watermarks> watermarks;
 
     private UpdateRecordTemplateRequest(Builder builder) {
         super(builder);
@@ -115,6 +124,7 @@ public class UpdateRecordTemplateRequest extends Request {
         this.mnsQueue = builder.mnsQueue;
         this.name = builder.name;
         this.ossBucket = builder.ossBucket;
+        this.ossEndpoint = builder.ossEndpoint;
         this.ossFilePrefix = builder.ossFilePrefix;
         this.ownerId = builder.ownerId;
         this.taskProfile = builder.taskProfile;
@@ -152,14 +162,14 @@ public class UpdateRecordTemplateRequest extends Request {
     /**
      * @return backgrounds
      */
-    public java.util.List < Backgrounds> getBackgrounds() {
+    public java.util.List<Backgrounds> getBackgrounds() {
         return this.backgrounds;
     }
 
     /**
      * @return clockWidgets
      */
-    public java.util.List < ClockWidgets> getClockWidgets() {
+    public java.util.List<ClockWidgets> getClockWidgets() {
         return this.clockWidgets;
     }
 
@@ -187,7 +197,7 @@ public class UpdateRecordTemplateRequest extends Request {
     /**
      * @return formats
      */
-    public java.util.List < String > getFormats() {
+    public java.util.List<String> getFormats() {
         return this.formats;
     }
 
@@ -201,7 +211,7 @@ public class UpdateRecordTemplateRequest extends Request {
     /**
      * @return layoutIds
      */
-    public java.util.List < Long > getLayoutIds() {
+    public java.util.List<Long> getLayoutIds() {
         return this.layoutIds;
     }
 
@@ -231,6 +241,13 @@ public class UpdateRecordTemplateRequest extends Request {
      */
     public String getOssBucket() {
         return this.ossBucket;
+    }
+
+    /**
+     * @return ossEndpoint
+     */
+    public String getOssEndpoint() {
+        return this.ossEndpoint;
     }
 
     /**
@@ -264,60 +281,65 @@ public class UpdateRecordTemplateRequest extends Request {
     /**
      * @return watermarks
      */
-    public java.util.List < Watermarks> getWatermarks() {
+    public java.util.List<Watermarks> getWatermarks() {
         return this.watermarks;
     }
 
     public static final class Builder extends Request.Builder<UpdateRecordTemplateRequest, Builder> {
         private String appId; 
         private Integer backgroundColor; 
-        private java.util.List < Backgrounds> backgrounds; 
-        private java.util.List < ClockWidgets> clockWidgets; 
+        private java.util.List<Backgrounds> backgrounds; 
+        private java.util.List<ClockWidgets> clockWidgets; 
         private Integer delayStopTime; 
         private Boolean enableM3u8DateTime; 
         private Integer fileSplitInterval; 
-        private java.util.List < String > formats; 
+        private java.util.List<String> formats; 
         private String httpCallbackUrl; 
-        private java.util.List < Long > layoutIds; 
+        private java.util.List<Long> layoutIds; 
         private Integer mediaEncode; 
         private String mnsQueue; 
         private String name; 
         private String ossBucket; 
+        private String ossEndpoint; 
         private String ossFilePrefix; 
         private Long ownerId; 
         private String taskProfile; 
         private String templateId; 
-        private java.util.List < Watermarks> watermarks; 
+        private java.util.List<Watermarks> watermarks; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateRecordTemplateRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.backgroundColor = response.backgroundColor;
-            this.backgrounds = response.backgrounds;
-            this.clockWidgets = response.clockWidgets;
-            this.delayStopTime = response.delayStopTime;
-            this.enableM3u8DateTime = response.enableM3u8DateTime;
-            this.fileSplitInterval = response.fileSplitInterval;
-            this.formats = response.formats;
-            this.httpCallbackUrl = response.httpCallbackUrl;
-            this.layoutIds = response.layoutIds;
-            this.mediaEncode = response.mediaEncode;
-            this.mnsQueue = response.mnsQueue;
-            this.name = response.name;
-            this.ossBucket = response.ossBucket;
-            this.ossFilePrefix = response.ossFilePrefix;
-            this.ownerId = response.ownerId;
-            this.taskProfile = response.taskProfile;
-            this.templateId = response.templateId;
-            this.watermarks = response.watermarks;
+        private Builder(UpdateRecordTemplateRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.backgroundColor = request.backgroundColor;
+            this.backgrounds = request.backgrounds;
+            this.clockWidgets = request.clockWidgets;
+            this.delayStopTime = request.delayStopTime;
+            this.enableM3u8DateTime = request.enableM3u8DateTime;
+            this.fileSplitInterval = request.fileSplitInterval;
+            this.formats = request.formats;
+            this.httpCallbackUrl = request.httpCallbackUrl;
+            this.layoutIds = request.layoutIds;
+            this.mediaEncode = request.mediaEncode;
+            this.mnsQueue = request.mnsQueue;
+            this.name = request.name;
+            this.ossBucket = request.ossBucket;
+            this.ossEndpoint = request.ossEndpoint;
+            this.ossFilePrefix = request.ossFilePrefix;
+            this.ownerId = request.ownerId;
+            this.taskProfile = request.taskProfile;
+            this.templateId = request.templateId;
+            this.watermarks = request.watermarks;
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourAppId</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -337,7 +359,7 @@ public class UpdateRecordTemplateRequest extends Request {
         /**
          * Backgrounds.
          */
-        public Builder backgrounds(java.util.List < Backgrounds> backgrounds) {
+        public Builder backgrounds(java.util.List<Backgrounds> backgrounds) {
             this.putQueryParameter("Backgrounds", backgrounds);
             this.backgrounds = backgrounds;
             return this;
@@ -346,7 +368,7 @@ public class UpdateRecordTemplateRequest extends Request {
         /**
          * ClockWidgets.
          */
-        public Builder clockWidgets(java.util.List < ClockWidgets> clockWidgets) {
+        public Builder clockWidgets(java.util.List<ClockWidgets> clockWidgets) {
             this.putQueryParameter("ClockWidgets", clockWidgets);
             this.clockWidgets = clockWidgets;
             return this;
@@ -371,7 +393,10 @@ public class UpdateRecordTemplateRequest extends Request {
         }
 
         /**
-         * FileSplitInterval.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1800</p>
          */
         public Builder fileSplitInterval(Integer fileSplitInterval) {
             this.putQueryParameter("FileSplitInterval", fileSplitInterval);
@@ -380,9 +405,12 @@ public class UpdateRecordTemplateRequest extends Request {
         }
 
         /**
-         * Formats.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mp4</p>
          */
-        public Builder formats(java.util.List < String > formats) {
+        public Builder formats(java.util.List<String> formats) {
             this.putQueryParameter("Formats", formats);
             this.formats = formats;
             return this;
@@ -398,16 +426,22 @@ public class UpdateRecordTemplateRequest extends Request {
         }
 
         /**
-         * LayoutIds.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1111</p>
          */
-        public Builder layoutIds(java.util.List < Long > layoutIds) {
+        public Builder layoutIds(java.util.List<Long> layoutIds) {
             this.putQueryParameter("LayoutIds", layoutIds);
             this.layoutIds = layoutIds;
             return this;
         }
 
         /**
-         * MediaEncode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder mediaEncode(Integer mediaEncode) {
             this.putQueryParameter("MediaEncode", mediaEncode);
@@ -425,7 +459,7 @@ public class UpdateRecordTemplateRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -434,7 +468,10 @@ public class UpdateRecordTemplateRequest extends Request {
         }
 
         /**
-         * OssBucket.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtc-record-pre</p>
          */
         public Builder ossBucket(String ossBucket) {
             this.putQueryParameter("OssBucket", ossBucket);
@@ -443,7 +480,19 @@ public class UpdateRecordTemplateRequest extends Request {
         }
 
         /**
-         * OssFilePrefix.
+         * OssEndpoint.
+         */
+        public Builder ossEndpoint(String ossEndpoint) {
+            this.putQueryParameter("OssEndpoint", ossEndpoint);
+            this.ossEndpoint = ossEndpoint;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>record/{AppId}/{ChannelId_TaskId}/{EscapedStartTime}_{EscapedEndTime}</p>
          */
         public Builder ossFilePrefix(String ossFilePrefix) {
             this.putQueryParameter("OssFilePrefix", ossFilePrefix);
@@ -461,7 +510,10 @@ public class UpdateRecordTemplateRequest extends Request {
         }
 
         /**
-         * TaskProfile.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4IN_1080P</p>
          */
         public Builder taskProfile(String taskProfile) {
             this.putQueryParameter("TaskProfile", taskProfile);
@@ -470,7 +522,10 @@ public class UpdateRecordTemplateRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>76dasgb****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -481,7 +536,7 @@ public class UpdateRecordTemplateRequest extends Request {
         /**
          * Watermarks.
          */
-        public Builder watermarks(java.util.List < Watermarks> watermarks) {
+        public Builder watermarks(java.util.List<Watermarks> watermarks) {
             this.putQueryParameter("Watermarks", watermarks);
             this.watermarks = watermarks;
             return this;
@@ -494,27 +549,33 @@ public class UpdateRecordTemplateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateRecordTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateRecordTemplateRequest</p>
+     */
     public static class Backgrounds extends TeaModel {
-        @NameInMap("Display")
+        @com.aliyun.core.annotation.NameInMap("Display")
         private Integer display;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Float height;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private Float width;
 
-        @NameInMap("X")
+        @com.aliyun.core.annotation.NameInMap("X")
         private Float x;
 
-        @NameInMap("Y")
+        @com.aliyun.core.annotation.NameInMap("Y")
         private Float y;
 
-        @NameInMap("ZOrder")
-        private Integer ZOrder;
+        @com.aliyun.core.annotation.NameInMap("ZOrder")
+        private Integer zOrder;
 
         private Backgrounds(Builder builder) {
             this.display = builder.display;
@@ -523,7 +584,7 @@ public class UpdateRecordTemplateRequest extends Request {
             this.width = builder.width;
             this.x = builder.x;
             this.y = builder.y;
-            this.ZOrder = builder.ZOrder;
+            this.zOrder = builder.zOrder;
         }
 
         public static Builder builder() {
@@ -577,10 +638,10 @@ public class UpdateRecordTemplateRequest extends Request {
         }
 
         /**
-         * @return ZOrder
+         * @return zOrder
          */
         public Integer getZOrder() {
-            return this.ZOrder;
+            return this.zOrder;
         }
 
         public static final class Builder {
@@ -590,7 +651,7 @@ public class UpdateRecordTemplateRequest extends Request {
             private Float width; 
             private Float x; 
             private Float y; 
-            private Integer ZOrder; 
+            private Integer zOrder; 
 
             /**
              * Display.
@@ -643,8 +704,8 @@ public class UpdateRecordTemplateRequest extends Request {
             /**
              * ZOrder.
              */
-            public Builder ZOrder(Integer ZOrder) {
-                this.ZOrder = ZOrder;
+            public Builder zOrder(Integer zOrder) {
+                this.zOrder = zOrder;
                 return this;
             }
 
@@ -655,24 +716,30 @@ public class UpdateRecordTemplateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateRecordTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateRecordTemplateRequest</p>
+     */
     public static class ClockWidgets extends TeaModel {
-        @NameInMap("FontColor")
+        @com.aliyun.core.annotation.NameInMap("FontColor")
         private Integer fontColor;
 
-        @NameInMap("FontSize")
+        @com.aliyun.core.annotation.NameInMap("FontSize")
         private Integer fontSize;
 
-        @NameInMap("FontType")
+        @com.aliyun.core.annotation.NameInMap("FontType")
         private Integer fontType;
 
-        @NameInMap("X")
+        @com.aliyun.core.annotation.NameInMap("X")
         private Float x;
 
-        @NameInMap("Y")
+        @com.aliyun.core.annotation.NameInMap("Y")
         private Float y;
 
-        @NameInMap("ZOrder")
-        private Integer ZOrder;
+        @com.aliyun.core.annotation.NameInMap("ZOrder")
+        private Integer zOrder;
 
         private ClockWidgets(Builder builder) {
             this.fontColor = builder.fontColor;
@@ -680,7 +747,7 @@ public class UpdateRecordTemplateRequest extends Request {
             this.fontType = builder.fontType;
             this.x = builder.x;
             this.y = builder.y;
-            this.ZOrder = builder.ZOrder;
+            this.zOrder = builder.zOrder;
         }
 
         public static Builder builder() {
@@ -727,10 +794,10 @@ public class UpdateRecordTemplateRequest extends Request {
         }
 
         /**
-         * @return ZOrder
+         * @return zOrder
          */
         public Integer getZOrder() {
-            return this.ZOrder;
+            return this.zOrder;
         }
 
         public static final class Builder {
@@ -739,7 +806,7 @@ public class UpdateRecordTemplateRequest extends Request {
             private Integer fontType; 
             private Float x; 
             private Float y; 
-            private Integer ZOrder; 
+            private Integer zOrder; 
 
             /**
              * FontColor.
@@ -784,8 +851,8 @@ public class UpdateRecordTemplateRequest extends Request {
             /**
              * ZOrder.
              */
-            public Builder ZOrder(Integer ZOrder) {
-                this.ZOrder = ZOrder;
+            public Builder zOrder(Integer zOrder) {
+                this.zOrder = zOrder;
                 return this;
             }
 
@@ -796,30 +863,36 @@ public class UpdateRecordTemplateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateRecordTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateRecordTemplateRequest</p>
+     */
     public static class Watermarks extends TeaModel {
-        @NameInMap("Alpha")
+        @com.aliyun.core.annotation.NameInMap("Alpha")
         private Float alpha;
 
-        @NameInMap("Display")
+        @com.aliyun.core.annotation.NameInMap("Display")
         private Integer display;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Float height;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private Float width;
 
-        @NameInMap("X")
+        @com.aliyun.core.annotation.NameInMap("X")
         private Float x;
 
-        @NameInMap("Y")
+        @com.aliyun.core.annotation.NameInMap("Y")
         private Float y;
 
-        @NameInMap("ZOrder")
-        private Integer ZOrder;
+        @com.aliyun.core.annotation.NameInMap("ZOrder")
+        private Integer zOrder;
 
         private Watermarks(Builder builder) {
             this.alpha = builder.alpha;
@@ -829,7 +902,7 @@ public class UpdateRecordTemplateRequest extends Request {
             this.width = builder.width;
             this.x = builder.x;
             this.y = builder.y;
-            this.ZOrder = builder.ZOrder;
+            this.zOrder = builder.zOrder;
         }
 
         public static Builder builder() {
@@ -890,10 +963,10 @@ public class UpdateRecordTemplateRequest extends Request {
         }
 
         /**
-         * @return ZOrder
+         * @return zOrder
          */
         public Integer getZOrder() {
-            return this.ZOrder;
+            return this.zOrder;
         }
 
         public static final class Builder {
@@ -904,7 +977,7 @@ public class UpdateRecordTemplateRequest extends Request {
             private Float width; 
             private Float x; 
             private Float y; 
-            private Integer ZOrder; 
+            private Integer zOrder; 
 
             /**
              * Alpha.
@@ -965,8 +1038,8 @@ public class UpdateRecordTemplateRequest extends Request {
             /**
              * ZOrder.
              */
-            public Builder ZOrder(Integer ZOrder) {
-                this.ZOrder = ZOrder;
+            public Builder zOrder(Integer zOrder) {
+                this.zOrder = zOrder;
                 return this;
             }
 

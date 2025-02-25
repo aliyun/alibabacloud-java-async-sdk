@@ -1,28 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePdnsAppKeyRequest} extends {@link RequestModel}
  *
  * <p>DescribePdnsAppKeyRequest</p>
  */
 public class DescribePdnsAppKeyRequest extends Request {
-    @Query
-    @NameInMap("AppKeyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppKeyId")
     private String appKeyId;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthCode")
+    private String authCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
     private DescribePdnsAppKeyRequest(Builder builder) {
         super(builder);
         this.appKeyId = builder.appKeyId;
+        this.authCode = builder.authCode;
         this.lang = builder.lang;
     }
 
@@ -47,6 +57,13 @@ public class DescribePdnsAppKeyRequest extends Request {
     }
 
     /**
+     * @return authCode
+     */
+    public String getAuthCode() {
+        return this.authCode;
+    }
+
+    /**
      * @return lang
      */
     public String getLang() {
@@ -55,6 +72,7 @@ public class DescribePdnsAppKeyRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribePdnsAppKeyRequest, Builder> {
         private String appKeyId; 
+        private String authCode; 
         private String lang; 
 
         private Builder() {
@@ -64,6 +82,7 @@ public class DescribePdnsAppKeyRequest extends Request {
         private Builder(DescribePdnsAppKeyRequest request) {
             super(request);
             this.appKeyId = request.appKeyId;
+            this.authCode = request.authCode;
             this.lang = request.lang;
         } 
 
@@ -73,6 +92,15 @@ public class DescribePdnsAppKeyRequest extends Request {
         public Builder appKeyId(String appKeyId) {
             this.putQueryParameter("AppKeyId", appKeyId);
             this.appKeyId = appKeyId;
+            return this;
+        }
+
+        /**
+         * AuthCode.
+         */
+        public Builder authCode(String authCode) {
+            this.putQueryParameter("AuthCode", authCode);
+            this.authCode = authCode;
             return this;
         }
 

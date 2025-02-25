@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHoneypotAlarmEventsRequest} extends {@link RequestModel}
  *
  * <p>ListHoneypotAlarmEventsRequest</p>
  */
 public class ListHoneypotAlarmEventsRequest extends Request {
-    @Body
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Body
-    @NameInMap("Dealed")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Dealed")
     private String dealed;
 
-    @Body
-    @NameInMap("DstIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DstIp")
     private String dstIp;
 
-    @Body
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Body
-    @NameInMap("RiskLevelList")
-    private java.util.List < String > riskLevelList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RiskLevelList")
+    private java.util.List<String> riskLevelList;
 
-    @Body
-    @NameInMap("SrcIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcIp")
     private String srcIp;
 
     private ListHoneypotAlarmEventsRequest(Builder builder) {
@@ -90,7 +95,7 @@ public class ListHoneypotAlarmEventsRequest extends Request {
     /**
      * @return riskLevelList
      */
-    public java.util.List < String > getRiskLevelList() {
+    public java.util.List<String> getRiskLevelList() {
         return this.riskLevelList;
     }
 
@@ -106,7 +111,7 @@ public class ListHoneypotAlarmEventsRequest extends Request {
         private String dealed; 
         private String dstIp; 
         private Integer pageSize; 
-        private java.util.List < String > riskLevelList; 
+        private java.util.List<String> riskLevelList; 
         private String srcIp; 
 
         private Builder() {
@@ -124,60 +129,55 @@ public class ListHoneypotAlarmEventsRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * CurrentPage.
          */
         public Builder currentPage(Integer currentPage) {
-            this.putBodyParameter("CurrentPage", currentPage);
+            this.putQueryParameter("CurrentPage", currentPage);
             this.currentPage = currentPage;
             return this;
         }
 
         /**
-         * The status of the alert events. Valid values:
-         * <p>
-         * 
-         * *   **y**: handled
-         * *   **n**: unhandled
-         * *   **a**: all states
+         * Dealed.
          */
         public Builder dealed(String dealed) {
-            this.putBodyParameter("Dealed", dealed);
+            this.putQueryParameter("Dealed", dealed);
             this.dealed = dealed;
             return this;
         }
 
         /**
-         * The destination IP address.
+         * DstIp.
          */
         public Builder dstIp(String dstIp) {
-            this.putBodyParameter("DstIp", dstIp);
+            this.putQueryParameter("DstIp", dstIp);
             this.dstIp = dstIp;
             return this;
         }
 
         /**
-         * The number of entries to return on each page. Default value: **100**
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
-            this.putBodyParameter("PageSize", pageSize);
+            this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * The risk levels of the alert events.
+         * RiskLevelList.
          */
-        public Builder riskLevelList(java.util.List < String > riskLevelList) {
-            this.putBodyParameter("RiskLevelList", riskLevelList);
+        public Builder riskLevelList(java.util.List<String> riskLevelList) {
+            this.putQueryParameter("RiskLevelList", riskLevelList);
             this.riskLevelList = riskLevelList;
             return this;
         }
 
         /**
-         * The source IP address.
+         * SrcIp.
          */
         public Builder srcIp(String srcIp) {
-            this.putBodyParameter("SrcIp", srcIp);
+            this.putQueryParameter("SrcIp", srcIp);
             this.srcIp = srcIp;
             return this;
         }

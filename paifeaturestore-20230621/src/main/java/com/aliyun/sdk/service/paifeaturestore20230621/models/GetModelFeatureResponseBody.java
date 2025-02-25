@@ -1,60 +1,73 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetModelFeatureResponseBody} extends {@link TeaModel}
  *
  * <p>GetModelFeatureResponseBody</p>
  */
 public class GetModelFeatureResponseBody extends TeaModel {
-    @NameInMap("Features")
-    private java.util.List < Features> features;
+    @com.aliyun.core.annotation.NameInMap("ExportTrainingSetTableScript")
+    private String exportTrainingSetTableScript;
 
-    @NameInMap("GmtCreateTime")
+    @com.aliyun.core.annotation.NameInMap("Features")
+    private java.util.List<Features> features;
+
+    @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
-    @NameInMap("GmtModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
     private String gmtModifiedTime;
 
-    @NameInMap("LabelTableId")
+    @com.aliyun.core.annotation.NameInMap("LabelPriorityLevel")
+    private Long labelPriorityLevel;
+
+    @com.aliyun.core.annotation.NameInMap("LabelTableId")
     private String labelTableId;
 
-    @NameInMap("LabelTableName")
+    @com.aliyun.core.annotation.NameInMap("LabelTableName")
     private String labelTableName;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("Owner")
+    @com.aliyun.core.annotation.NameInMap("Owner")
     private String owner;
 
-    @NameInMap("ProjectId")
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
     private String projectId;
 
-    @NameInMap("ProjectName")
+    @com.aliyun.core.annotation.NameInMap("ProjectName")
     private String projectName;
 
-    @NameInMap("Relations")
+    @com.aliyun.core.annotation.NameInMap("Relations")
     private Relations relations;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TrainingSetFGTable")
+    @com.aliyun.core.annotation.NameInMap("TrainingSetFGTable")
     private String trainingSetFGTable;
 
-    @NameInMap("TrainingSetTable")
+    @com.aliyun.core.annotation.NameInMap("TrainingSetTable")
     private String trainingSetTable;
 
     private GetModelFeatureResponseBody(Builder builder) {
+        this.exportTrainingSetTableScript = builder.exportTrainingSetTableScript;
         this.features = builder.features;
         this.gmtCreateTime = builder.gmtCreateTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
+        this.labelPriorityLevel = builder.labelPriorityLevel;
         this.labelTableId = builder.labelTableId;
         this.labelTableName = builder.labelTableName;
         this.name = builder.name;
@@ -76,9 +89,16 @@ public class GetModelFeatureResponseBody extends TeaModel {
     }
 
     /**
+     * @return exportTrainingSetTableScript
+     */
+    public String getExportTrainingSetTableScript() {
+        return this.exportTrainingSetTableScript;
+    }
+
+    /**
      * @return features
      */
-    public java.util.List < Features> getFeatures() {
+    public java.util.List<Features> getFeatures() {
         return this.features;
     }
 
@@ -94,6 +114,13 @@ public class GetModelFeatureResponseBody extends TeaModel {
      */
     public String getGmtModifiedTime() {
         return this.gmtModifiedTime;
+    }
+
+    /**
+     * @return labelPriorityLevel
+     */
+    public Long getLabelPriorityLevel() {
+        return this.labelPriorityLevel;
     }
 
     /**
@@ -167,9 +194,11 @@ public class GetModelFeatureResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Features> features; 
+        private String exportTrainingSetTableScript; 
+        private java.util.List<Features> features; 
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
+        private Long labelPriorityLevel; 
         private String labelTableId; 
         private String labelTableName; 
         private String name; 
@@ -182,9 +211,17 @@ public class GetModelFeatureResponseBody extends TeaModel {
         private String trainingSetTable; 
 
         /**
+         * ExportTrainingSetTableScript.
+         */
+        public Builder exportTrainingSetTableScript(String exportTrainingSetTableScript) {
+            this.exportTrainingSetTableScript = exportTrainingSetTableScript;
+            return this;
+        }
+
+        /**
          * Features.
          */
-        public Builder features(java.util.List < Features> features) {
+        public Builder features(java.util.List<Features> features) {
             this.features = features;
             return this;
         }
@@ -202,6 +239,14 @@ public class GetModelFeatureResponseBody extends TeaModel {
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
+            return this;
+        }
+
+        /**
+         * LabelPriorityLevel.
+         */
+        public Builder labelPriorityLevel(Long labelPriorityLevel) {
+            this.labelPriorityLevel = labelPriorityLevel;
             return this;
         }
 
@@ -291,20 +336,26 @@ public class GetModelFeatureResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetModelFeatureResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetModelFeatureResponseBody</p>
+     */
     public static class Features extends TeaModel {
-        @NameInMap("AliasName")
+        @com.aliyun.core.annotation.NameInMap("AliasName")
         private String aliasName;
 
-        @NameInMap("FeatureViewId")
+        @com.aliyun.core.annotation.NameInMap("FeatureViewId")
         private String featureViewId;
 
-        @NameInMap("FeatureViewName")
+        @com.aliyun.core.annotation.NameInMap("FeatureViewName")
         private String featureViewName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Features(Builder builder) {
@@ -412,14 +463,20 @@ public class GetModelFeatureResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetModelFeatureResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetModelFeatureResponseBody</p>
+     */
     public static class Domains extends TeaModel {
-        @NameInMap("DomainType")
+        @com.aliyun.core.annotation.NameInMap("DomainType")
         private String domainType;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Domains(Builder builder) {
@@ -471,7 +528,10 @@ public class GetModelFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * Domain ID。
+             * <p>Domain ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -493,14 +553,20 @@ public class GetModelFeatureResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetModelFeatureResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetModelFeatureResponseBody</p>
+     */
     public static class Links extends TeaModel {
-        @NameInMap("From")
+        @com.aliyun.core.annotation.NameInMap("From")
         private String from;
 
-        @NameInMap("Link")
+        @com.aliyun.core.annotation.NameInMap("Link")
         private String link;
 
-        @NameInMap("To")
+        @com.aliyun.core.annotation.NameInMap("To")
         private String to;
 
         private Links(Builder builder) {
@@ -574,12 +640,18 @@ public class GetModelFeatureResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetModelFeatureResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetModelFeatureResponseBody</p>
+     */
     public static class Relations extends TeaModel {
-        @NameInMap("Domains")
-        private java.util.List < Domains> domains;
+        @com.aliyun.core.annotation.NameInMap("Domains")
+        private java.util.List<Domains> domains;
 
-        @NameInMap("Links")
-        private java.util.List < Links> links;
+        @com.aliyun.core.annotation.NameInMap("Links")
+        private java.util.List<Links> links;
 
         private Relations(Builder builder) {
             this.domains = builder.domains;
@@ -597,25 +669,25 @@ public class GetModelFeatureResponseBody extends TeaModel {
         /**
          * @return domains
          */
-        public java.util.List < Domains> getDomains() {
+        public java.util.List<Domains> getDomains() {
             return this.domains;
         }
 
         /**
          * @return links
          */
-        public java.util.List < Links> getLinks() {
+        public java.util.List<Links> getLinks() {
             return this.links;
         }
 
         public static final class Builder {
-            private java.util.List < Domains> domains; 
-            private java.util.List < Links> links; 
+            private java.util.List<Domains> domains; 
+            private java.util.List<Links> links; 
 
             /**
              * Domains.
              */
-            public Builder domains(java.util.List < Domains> domains) {
+            public Builder domains(java.util.List<Domains> domains) {
                 this.domains = domains;
                 return this;
             }
@@ -623,7 +695,7 @@ public class GetModelFeatureResponseBody extends TeaModel {
             /**
              * Links.
              */
-            public Builder links(java.util.List < Links> links) {
+            public Builder links(java.util.List<Links> links) {
                 this.links = links;
                 return this;
             }

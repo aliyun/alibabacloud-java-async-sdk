@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OperateBucketScanTaskRequest} extends {@link RequestModel}
  *
  * <p>OperateBucketScanTaskRequest</p>
  */
 public class OperateBucketScanTaskRequest extends Request {
-    @Query
-    @NameInMap("BucketName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BucketName")
     private String bucketName;
 
-    @Query
-    @NameInMap("OperateCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperateCode")
     private Integer operateCode;
 
     private OperateBucketScanTaskRequest(Builder builder) {
@@ -68,7 +73,10 @@ public class OperateBucketScanTaskRequest extends Request {
         } 
 
         /**
-         * The name of the bucket.
+         * <p>The name of the bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iboxpublic****</p>
          */
         public Builder bucketName(String bucketName) {
             this.putQueryParameter("BucketName", bucketName);
@@ -77,10 +85,13 @@ public class OperateBucketScanTaskRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform on the bucket. Valid value:
-         * <p>
+         * <p>The operation that you want to perform on the bucket. Valid value:</p>
+         * <ul>
+         * <li><strong>1</strong>: cancels the bucket check.</li>
+         * </ul>
          * 
-         * *   **1**: cancels the bucket check.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder operateCode(Integer operateCode) {
             this.putQueryParameter("OperateCode", operateCode);

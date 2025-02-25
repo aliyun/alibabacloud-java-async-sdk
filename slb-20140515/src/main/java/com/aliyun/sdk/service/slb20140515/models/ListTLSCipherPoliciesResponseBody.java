@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTLSCipherPoliciesResponseBody} extends {@link TeaModel}
  *
  * <p>ListTLSCipherPoliciesResponseBody</p>
  */
 public class ListTLSCipherPoliciesResponseBody extends TeaModel {
-    @NameInMap("IsTruncated")
+    @com.aliyun.core.annotation.NameInMap("IsTruncated")
     private Boolean isTruncated;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TLSCipherPolicies")
-    private java.util.List < TLSCipherPolicies> TLSCipherPolicies;
+    @com.aliyun.core.annotation.NameInMap("TLSCipherPolicies")
+    private java.util.List<TLSCipherPolicies> TLSCipherPolicies;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListTLSCipherPoliciesResponseBody(Builder builder) {
@@ -67,7 +72,7 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
     /**
      * @return TLSCipherPolicies
      */
-    public java.util.List < TLSCipherPolicies> getTLSCipherPolicies() {
+    public java.util.List<TLSCipherPolicies> getTLSCipherPolicies() {
         return this.TLSCipherPolicies;
     }
 
@@ -82,15 +87,18 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
         private Boolean isTruncated; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < TLSCipherPolicies> TLSCipherPolicies; 
+        private java.util.List<TLSCipherPolicies> TLSCipherPolicies; 
         private Integer totalCount; 
 
         /**
-         * Indicates whether the current page is the last page. Valid values:
-         * <p>
+         * <p>Indicates whether the current page is the last page. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The current page is the last page.</li>
+         * <li><strong>false</strong>: The current page is not the last page.</li>
+         * </ul>
          * 
-         * *   **true**: The current page is the last page.
-         * *   **false**: The current page is not the last page.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -98,11 +106,14 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is used for the next query. Valid values:
-         * <p>
+         * <p>The token that is used for the next query. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, it indicates that no next query is to be sent.</li>
+         * <li>If <strong>NextToken</strong> is not empty, the value indicates the token that is used for the next query.</li>
+         * </ul>
          * 
-         * *   If **NextToken** is empty, it indicates that no next query is to be sent.
-         * *   If **NextToken** is not empty, the value indicates the token that is used for the next query.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +121,10 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,15 +132,18 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The list of TLS policies.
+         * <p>The list of TLS policies.</p>
          */
-        public Builder TLSCipherPolicies(java.util.List < TLSCipherPolicies> TLSCipherPolicies) {
+        public Builder TLSCipherPolicies(java.util.List<TLSCipherPolicies> TLSCipherPolicies) {
             this.TLSCipherPolicies = TLSCipherPolicies;
             return this;
         }
 
         /**
-         * The total number of TLS policies returned.
+         * <p>The total number of TLS policies returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -139,14 +156,20 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTLSCipherPoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTLSCipherPoliciesResponseBody</p>
+     */
     public static class RelateListeners extends TeaModel {
-        @NameInMap("LoadBalancerId")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
         private String loadBalancerId;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
         private RelateListeners(Builder builder) {
@@ -190,7 +213,10 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
             private String protocol; 
 
             /**
-             * The ID of the CLB instance.
+             * <p>The ID of the CLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-bp1b6c719dfa08ex****</p>
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -198,7 +224,10 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The listening port. Valid values: **1** to **65535**.
+             * <p>The listening port. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -206,13 +235,16 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The listening protocol. Valid values:
-             * <p>
+             * <p>The listening protocol. Valid values:</p>
+             * <ul>
+             * <li><strong>TCP</strong></li>
+             * <li><strong>UDP</strong></li>
+             * <li><strong>HTTP</strong></li>
+             * <li><strong>HTTPS</strong></li>
+             * </ul>
              * 
-             * *   **TCP**
-             * *   **UDP**
-             * *   **HTTP**
-             * *   **HTTPS**
+             * <strong>example:</strong>
+             * <p>HTTPS</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -226,27 +258,33 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTLSCipherPoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTLSCipherPoliciesResponseBody</p>
+     */
     public static class TLSCipherPolicies extends TeaModel {
-        @NameInMap("Ciphers")
-        private java.util.List < String > ciphers;
+        @com.aliyun.core.annotation.NameInMap("Ciphers")
+        private java.util.List<String> ciphers;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RelateListeners")
-        private java.util.List < RelateListeners> relateListeners;
+        @com.aliyun.core.annotation.NameInMap("RelateListeners")
+        private java.util.List<RelateListeners> relateListeners;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TLSVersions")
-        private java.util.List < String > TLSVersions;
+        @com.aliyun.core.annotation.NameInMap("TLSVersions")
+        private java.util.List<String> TLSVersions;
 
         private TLSCipherPolicies(Builder builder) {
             this.ciphers = builder.ciphers;
@@ -269,7 +307,7 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
         /**
          * @return ciphers
          */
-        public java.util.List < String > getCiphers() {
+        public java.util.List<String> getCiphers() {
             return this.ciphers;
         }
 
@@ -297,7 +335,7 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
         /**
          * @return relateListeners
          */
-        public java.util.List < RelateListeners> getRelateListeners() {
+        public java.util.List<RelateListeners> getRelateListeners() {
             return this.relateListeners;
         }
 
@@ -311,67 +349,69 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
         /**
          * @return TLSVersions
          */
-        public java.util.List < String > getTLSVersions() {
+        public java.util.List<String> getTLSVersions() {
             return this.TLSVersions;
         }
 
         public static final class Builder {
-            private java.util.List < String > ciphers; 
+            private java.util.List<String> ciphers; 
             private Long createTime; 
             private String instanceId; 
             private String name; 
-            private java.util.List < RelateListeners> relateListeners; 
+            private java.util.List<RelateListeners> relateListeners; 
             private String status; 
-            private java.util.List < String > TLSVersions; 
+            private java.util.List<String> TLSVersions; 
 
             /**
-             * The cipher suites supported by the TLS version.
-             * <p>
-             * 
-             * TLS 1.0 and TLS 1.1 support the following cipher suites:
-             * 
-             * *   ECDHE-ECDSA-AES128-SHA
-             * *   ECDHE-ECDSA-AES256-SHA
-             * *   ECDHE-RSA-AES128-SHA
-             * *   ECDHE-RSA-AES256-SHA
-             * *   AES128-SHA AES256-SHA
-             * *   DES-CBC3-SHA
-             * 
-             * TLS 1.2 supports the following cipher suites:
-             * 
-             * *   ECDHE-ECDSA-AES128-SHA
-             * *   ECDHE-ECDSA-AES256-SHA
-             * *   ECDHE-RSA-AES128-SHA
-             * *   ECDHE-RSA-AES256-SHA
-             * *   AES128-SHA AES256-SHA
-             * *   DES-CBC3-SHA
-             * *   ECDHE-ECDSA-AES128-GCM-SHA256
-             * *   ECDHE-ECDSA-AES256-GCM-SHA384
-             * *   ECDHE-ECDSA-AES128-SHA256
-             * *   ECDHE-ECDSA-AES256-SHA384
-             * *   ECDHE-RSA-AES128-GCM-SHA256
-             * *   ECDHE-RSA-AES256-GCM-SHA384
-             * *   ECDHE-RSA-AES128-SHA256
-             * *   ECDHE-RSA-AES256-SHA384
-             * *   AES128-GCM-SHA256
-             * *   AES256-GCM-SHA384
-             * *   AES128-SHA256 AES256-SHA256
-             * 
-             * TLS 1.3 supports the following cipher suites:
-             * 
-             * *   TLS_AES\_128\_GCM_SHA256
-             * *   TLS_AES\_256\_GCM_SHA384
-             * *   TLS_CHACHA20\_POLY1305\_SHA256
-             * *   TLS_AES\_128\_CCM_SHA256
-             * *   TLS_AES\_128\_CCM\_8\_SHA256
+             * <p>The cipher suites supported by the TLS version.</p>
+             * <p>TLS 1.0 and TLS 1.1 support the following cipher suites:</p>
+             * <ul>
+             * <li>ECDHE-ECDSA-AES128-SHA</li>
+             * <li>ECDHE-ECDSA-AES256-SHA</li>
+             * <li>ECDHE-RSA-AES128-SHA</li>
+             * <li>ECDHE-RSA-AES256-SHA</li>
+             * <li>AES128-SHA AES256-SHA</li>
+             * <li>DES-CBC3-SHA</li>
+             * </ul>
+             * <p>TLS 1.2 supports the following cipher suites:</p>
+             * <ul>
+             * <li>ECDHE-ECDSA-AES128-SHA</li>
+             * <li>ECDHE-ECDSA-AES256-SHA</li>
+             * <li>ECDHE-RSA-AES128-SHA</li>
+             * <li>ECDHE-RSA-AES256-SHA</li>
+             * <li>AES128-SHA AES256-SHA</li>
+             * <li>DES-CBC3-SHA</li>
+             * <li>ECDHE-ECDSA-AES128-GCM-SHA256</li>
+             * <li>ECDHE-ECDSA-AES256-GCM-SHA384</li>
+             * <li>ECDHE-ECDSA-AES128-SHA256</li>
+             * <li>ECDHE-ECDSA-AES256-SHA384</li>
+             * <li>ECDHE-RSA-AES128-GCM-SHA256</li>
+             * <li>ECDHE-RSA-AES256-GCM-SHA384</li>
+             * <li>ECDHE-RSA-AES128-SHA256</li>
+             * <li>ECDHE-RSA-AES256-SHA384</li>
+             * <li>AES128-GCM-SHA256</li>
+             * <li>AES256-GCM-SHA384</li>
+             * <li>AES128-SHA256 AES256-SHA256</li>
+             * </ul>
+             * <p>TLS 1.3 supports the following cipher suites:</p>
+             * <ul>
+             * <li>TLS_AES_128_GCM_SHA256</li>
+             * <li>TLS_AES_256_GCM_SHA384</li>
+             * <li>TLS_CHACHA20_POLY1305_SHA256</li>
+             * <li>TLS_AES_128_CCM_SHA256</li>
+             * <li>TLS_AES_128_CCM_8_SHA256</li>
+             * </ul>
              */
-            public Builder ciphers(java.util.List < String > ciphers) {
+            public Builder ciphers(java.util.List<String> ciphers) {
                 this.ciphers = ciphers;
                 return this;
             }
 
             /**
-             * The timestamp generated when the TLS policy is created.
+             * <p>The timestamp generated when the TLS policy is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1608273800000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -379,7 +419,10 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the TLS policy.
+             * <p>The ID of the TLS policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tls-bp17elso1h323r****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -387,7 +430,10 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the TLS policy.
+             * <p>The name of the TLS policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TLSPolicy-test****</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -395,19 +441,22 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The list of associated listeners.
+             * <p>The list of associated listeners.</p>
              */
-            public Builder relateListeners(java.util.List < RelateListeners> relateListeners) {
+            public Builder relateListeners(java.util.List<RelateListeners> relateListeners) {
                 this.relateListeners = relateListeners;
                 return this;
             }
 
             /**
-             * The status of the TLS policy. Valid values:
-             * <p>
+             * <p>The status of the TLS policy. Valid values:</p>
+             * <ul>
+             * <li><strong>configuring</strong>: The TLS policy is being configured.</li>
+             * <li><strong>normal</strong>: The TLS policy works as expected.</li>
+             * </ul>
              * 
-             * *   **configuring**: The TLS policy is being configured.
-             * *   **normal**: The TLS policy works as expected.
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -415,9 +464,9 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the TLS protocol.
+             * <p>The version of the TLS protocol.</p>
              */
-            public Builder TLSVersions(java.util.List < String > TLSVersions) {
+            public Builder TLSVersions(java.util.List<String> TLSVersions) {
                 this.TLSVersions = TLSVersions;
                 return this;
             }

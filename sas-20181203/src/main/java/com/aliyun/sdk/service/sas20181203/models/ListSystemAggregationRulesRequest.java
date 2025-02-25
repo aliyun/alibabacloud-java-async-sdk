@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSystemAggregationRulesRequest} extends {@link RequestModel}
  *
  * <p>ListSystemAggregationRulesRequest</p>
  */
 public class ListSystemAggregationRulesRequest extends Request {
-    @Query
-    @NameInMap("AggregationIds")
-    private java.util.List < Integer > aggregationIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AggregationIds")
+    private java.util.List<Integer> aggregationIds;
 
-    @Query
-    @NameInMap("CurrentPage")
-    @Validation(required = true, maximum = 1000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 1000, minimum = 1)
     private Integer currentPage;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true, maximum = 1000, minimum = 10)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 1000, minimum = 10)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RuleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleName")
     private String ruleName;
 
-    @Query
-    @NameInMap("RuleTypes")
-    private java.util.List < Integer > ruleTypes;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleTypes")
+    private java.util.List<Integer> ruleTypes;
 
-    @Query
-    @NameInMap("SystemType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SystemType")
     private Integer systemType;
 
     private ListSystemAggregationRulesRequest(Builder builder) {
@@ -69,7 +74,7 @@ public class ListSystemAggregationRulesRequest extends Request {
     /**
      * @return aggregationIds
      */
-    public java.util.List < Integer > getAggregationIds() {
+    public java.util.List<Integer> getAggregationIds() {
         return this.aggregationIds;
     }
 
@@ -104,7 +109,7 @@ public class ListSystemAggregationRulesRequest extends Request {
     /**
      * @return ruleTypes
      */
-    public java.util.List < Integer > getRuleTypes() {
+    public java.util.List<Integer> getRuleTypes() {
         return this.ruleTypes;
     }
 
@@ -116,12 +121,12 @@ public class ListSystemAggregationRulesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListSystemAggregationRulesRequest, Builder> {
-        private java.util.List < Integer > aggregationIds; 
+        private java.util.List<Integer> aggregationIds; 
         private Integer currentPage; 
         private String lang; 
         private Integer pageSize; 
         private String ruleName; 
-        private java.util.List < Integer > ruleTypes; 
+        private java.util.List<Integer> ruleTypes; 
         private Integer systemType; 
 
         private Builder() {
@@ -140,16 +145,20 @@ public class ListSystemAggregationRulesRequest extends Request {
         } 
 
         /**
-         * The IDs of the aggregation types.
+         * <p>The IDs of the aggregation types.</p>
          */
-        public Builder aggregationIds(java.util.List < Integer > aggregationIds) {
+        public Builder aggregationIds(java.util.List<Integer> aggregationIds) {
             this.putQueryParameter("AggregationIds", aggregationIds);
             this.aggregationIds = aggregationIds;
             return this;
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -158,11 +167,14 @@ public class ListSystemAggregationRulesRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -171,7 +183,11 @@ public class ListSystemAggregationRulesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -180,7 +196,10 @@ public class ListSystemAggregationRulesRequest extends Request {
         }
 
         /**
-         * The name of the rule.
+         * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Rule****</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -189,21 +208,24 @@ public class ListSystemAggregationRulesRequest extends Request {
         }
 
         /**
-         * The types of the rules.
+         * <p>The types of the rules.</p>
          */
-        public Builder ruleTypes(java.util.List < Integer > ruleTypes) {
+        public Builder ruleTypes(java.util.List<Integer> ruleTypes) {
             this.putQueryParameter("RuleTypes", ruleTypes);
             this.ruleTypes = ruleTypes;
             return this;
         }
 
         /**
-         * The type of the operating system. Valid values:
-         * <p>
+         * <p>The type of the operating system. Valid values:</p>
+         * <ul>
+         * <li><strong>2</strong>: Windows</li>
+         * <li><strong>1</strong>: Linux</li>
+         * <li><strong>0</strong>: all</li>
+         * </ul>
          * 
-         * *   **2**: Windows
-         * *   **1**: Linux
-         * *   **0**: all
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder systemType(Integer systemType) {
             this.putQueryParameter("SystemType", systemType);

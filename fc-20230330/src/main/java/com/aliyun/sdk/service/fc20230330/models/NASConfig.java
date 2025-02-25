@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link NASConfig} extends {@link TeaModel}
  *
  * <p>NASConfig</p>
  */
 public class NASConfig extends TeaModel {
-    @NameInMap("groupId")
+    @com.aliyun.core.annotation.NameInMap("groupId")
     private Integer groupId;
 
-    @NameInMap("mountPoints")
+    @com.aliyun.core.annotation.NameInMap("mountPoints")
     private java.util.List < NASMountConfig > mountPoints;
 
-    @NameInMap("userId")
+    @com.aliyun.core.annotation.NameInMap("userId")
     private Integer userId;
 
     private NASConfig(Builder builder) {

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryBrokerDemandResponseBody} extends {@link TeaModel}
  *
  * <p>QueryBrokerDemandResponseBody</p>
  */
 public class QueryBrokerDemandResponseBody extends TeaModel {
-    @NameInMap("CurrentPageNum")
+    @com.aliyun.core.annotation.NameInMap("CurrentPageNum")
     private Integer currentPageNum;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalItemNum")
+    @com.aliyun.core.annotation.NameInMap("TotalItemNum")
     private Integer totalItemNum;
 
-    @NameInMap("TotalPageNum")
+    @com.aliyun.core.annotation.NameInMap("TotalPageNum")
     private Integer totalPageNum;
 
     private QueryBrokerDemandResponseBody(Builder builder) {
@@ -57,7 +62,7 @@ public class QueryBrokerDemandResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -91,7 +96,7 @@ public class QueryBrokerDemandResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer currentPageNum; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalItemNum; 
@@ -108,7 +113,7 @@ public class QueryBrokerDemandResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -151,59 +156,71 @@ public class QueryBrokerDemandResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryBrokerDemandResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryBrokerDemandResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AuditStatus")
+        @com.aliyun.core.annotation.NameInMap("AuditStatus")
         private Integer auditStatus;
 
-        @NameInMap("BargainSellerMobile")
+        @com.aliyun.core.annotation.NameInMap("BargainSellerMobile")
         private String bargainSellerMobile;
 
-        @NameInMap("BargainSellerPrice")
+        @com.aliyun.core.annotation.NameInMap("BargainSellerPrice")
         private Float bargainSellerPrice;
 
-        @NameInMap("BizId")
+        @com.aliyun.core.annotation.NameInMap("BizId")
         private String bizId;
 
-        @NameInMap("DemandDomain")
+        @com.aliyun.core.annotation.NameInMap("DemandDomain")
         private String demandDomain;
 
-        @NameInMap("DemandPrice")
+        @com.aliyun.core.annotation.NameInMap("DemandPrice")
         private Float demandPrice;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Mobile")
+        @com.aliyun.core.annotation.NameInMap("Email")
+        private String email;
+
+        @com.aliyun.core.annotation.NameInMap("Mobile")
         private String mobile;
 
-        @NameInMap("OrderType")
+        @com.aliyun.core.annotation.NameInMap("OrderType")
         private Integer orderType;
 
-        @NameInMap("PartnerDomain")
+        @com.aliyun.core.annotation.NameInMap("PartnerDomain")
         private String partnerDomain;
 
-        @NameInMap("PayDomain")
+        @com.aliyun.core.annotation.NameInMap("PayDomain")
         private String payDomain;
 
-        @NameInMap("PayPrice")
+        @com.aliyun.core.annotation.NameInMap("PayPrice")
         private Float payPrice;
 
-        @NameInMap("PayTime")
+        @com.aliyun.core.annotation.NameInMap("PayTime")
         private Long payTime;
 
-        @NameInMap("ProduceType")
+        @com.aliyun.core.annotation.NameInMap("ProduceType")
         private Integer produceType;
 
-        @NameInMap("PublishTime")
+        @com.aliyun.core.annotation.NameInMap("PublishTime")
         private Long publishTime;
 
-        @NameInMap("PurchaseStatus")
+        @com.aliyun.core.annotation.NameInMap("PurchaseStatus")
         private Integer purchaseStatus;
 
-        @NameInMap("ServicePayPrice")
+        @com.aliyun.core.annotation.NameInMap("ServicePayPrice")
         private Float servicePayPrice;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("SettleBasePrice")
+        private Float settleBasePrice;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Data(Builder builder) {
@@ -214,6 +231,7 @@ public class QueryBrokerDemandResponseBody extends TeaModel {
             this.demandDomain = builder.demandDomain;
             this.demandPrice = builder.demandPrice;
             this.description = builder.description;
+            this.email = builder.email;
             this.mobile = builder.mobile;
             this.orderType = builder.orderType;
             this.partnerDomain = builder.partnerDomain;
@@ -224,6 +242,7 @@ public class QueryBrokerDemandResponseBody extends TeaModel {
             this.publishTime = builder.publishTime;
             this.purchaseStatus = builder.purchaseStatus;
             this.servicePayPrice = builder.servicePayPrice;
+            this.settleBasePrice = builder.settleBasePrice;
             this.status = builder.status;
         }
 
@@ -282,6 +301,13 @@ public class QueryBrokerDemandResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return email
+         */
+        public String getEmail() {
+            return this.email;
         }
 
         /**
@@ -355,6 +381,13 @@ public class QueryBrokerDemandResponseBody extends TeaModel {
         }
 
         /**
+         * @return settleBasePrice
+         */
+        public Float getSettleBasePrice() {
+            return this.settleBasePrice;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -369,6 +402,7 @@ public class QueryBrokerDemandResponseBody extends TeaModel {
             private String demandDomain; 
             private Float demandPrice; 
             private String description; 
+            private String email; 
             private String mobile; 
             private Integer orderType; 
             private String partnerDomain; 
@@ -379,6 +413,7 @@ public class QueryBrokerDemandResponseBody extends TeaModel {
             private Long publishTime; 
             private Integer purchaseStatus; 
             private Float servicePayPrice; 
+            private Float settleBasePrice; 
             private String status; 
 
             /**
@@ -434,6 +469,14 @@ public class QueryBrokerDemandResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * Email.
+             */
+            public Builder email(String email) {
+                this.email = email;
                 return this;
             }
 
@@ -514,6 +557,14 @@ public class QueryBrokerDemandResponseBody extends TeaModel {
              */
             public Builder servicePayPrice(Float servicePayPrice) {
                 this.servicePayPrice = servicePayPrice;
+                return this;
+            }
+
+            /**
+             * SettleBasePrice.
+             */
+            public Builder settleBasePrice(Float settleBasePrice) {
+                this.settleBasePrice = settleBasePrice;
                 return this;
             }
 

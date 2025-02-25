@@ -1,50 +1,99 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackupPolicyResponseBody</p>
  */
 public class DescribeBackupPolicyResponseBody extends TeaModel {
-    @NameInMap("BackupInterval")
+    @com.aliyun.core.annotation.NameInMap("BackupInterval")
     private Integer backupInterval;
 
-    @NameInMap("BackupRetentionPeriod")
+    @com.aliyun.core.annotation.NameInMap("BackupRetentionPeriod")
     private String backupRetentionPeriod;
 
-    @NameInMap("EnableBackupLog")
+    @com.aliyun.core.annotation.NameInMap("BackupRetentionPolicyOnClusterDeletion")
+    private Integer backupRetentionPolicyOnClusterDeletion;
+
+    @com.aliyun.core.annotation.NameInMap("CrossBackupPeriod")
+    private String crossBackupPeriod;
+
+    @com.aliyun.core.annotation.NameInMap("CrossLogRetentionType")
+    private String crossLogRetentionType;
+
+    @com.aliyun.core.annotation.NameInMap("CrossLogRetentionValue")
+    private Integer crossLogRetentionValue;
+
+    @com.aliyun.core.annotation.NameInMap("CrossRetentionType")
+    private String crossRetentionType;
+
+    @com.aliyun.core.annotation.NameInMap("CrossRetentionValue")
+    private Integer crossRetentionValue;
+
+    @com.aliyun.core.annotation.NameInMap("DestRegion")
+    private String destRegion;
+
+    @com.aliyun.core.annotation.NameInMap("EnableBackupLog")
     private Integer enableBackupLog;
 
-    @NameInMap("LogBackupRetentionPeriod")
+    @com.aliyun.core.annotation.NameInMap("EnableCrossLogBackup")
+    private Integer enableCrossLogBackup;
+
+    @com.aliyun.core.annotation.NameInMap("HighFrequencyBackupRetention")
+    private String highFrequencyBackupRetention;
+
+    @com.aliyun.core.annotation.NameInMap("LogBackupRetentionPeriod")
     private Integer logBackupRetentionPeriod;
 
-    @NameInMap("PreferredBackupPeriod")
+    @com.aliyun.core.annotation.NameInMap("PreferredBackupPeriod")
     private String preferredBackupPeriod;
 
-    @NameInMap("PreferredBackupTime")
+    @com.aliyun.core.annotation.NameInMap("PreferredBackupTime")
     private String preferredBackupTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("PreferredNextBackupTime")
+    private String preferredNextBackupTime;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SnapshotBackupType")
+    @com.aliyun.core.annotation.NameInMap("SnapshotBackupType")
     private String snapshotBackupType;
+
+    @com.aliyun.core.annotation.NameInMap("SrcRegion")
+    private String srcRegion;
 
     private DescribeBackupPolicyResponseBody(Builder builder) {
         this.backupInterval = builder.backupInterval;
         this.backupRetentionPeriod = builder.backupRetentionPeriod;
+        this.backupRetentionPolicyOnClusterDeletion = builder.backupRetentionPolicyOnClusterDeletion;
+        this.crossBackupPeriod = builder.crossBackupPeriod;
+        this.crossLogRetentionType = builder.crossLogRetentionType;
+        this.crossLogRetentionValue = builder.crossLogRetentionValue;
+        this.crossRetentionType = builder.crossRetentionType;
+        this.crossRetentionValue = builder.crossRetentionValue;
+        this.destRegion = builder.destRegion;
         this.enableBackupLog = builder.enableBackupLog;
+        this.enableCrossLogBackup = builder.enableCrossLogBackup;
+        this.highFrequencyBackupRetention = builder.highFrequencyBackupRetention;
         this.logBackupRetentionPeriod = builder.logBackupRetentionPeriod;
         this.preferredBackupPeriod = builder.preferredBackupPeriod;
         this.preferredBackupTime = builder.preferredBackupTime;
+        this.preferredNextBackupTime = builder.preferredNextBackupTime;
         this.requestId = builder.requestId;
         this.snapshotBackupType = builder.snapshotBackupType;
+        this.srcRegion = builder.srcRegion;
     }
 
     public static Builder builder() {
@@ -70,10 +119,73 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     }
 
     /**
+     * @return backupRetentionPolicyOnClusterDeletion
+     */
+    public Integer getBackupRetentionPolicyOnClusterDeletion() {
+        return this.backupRetentionPolicyOnClusterDeletion;
+    }
+
+    /**
+     * @return crossBackupPeriod
+     */
+    public String getCrossBackupPeriod() {
+        return this.crossBackupPeriod;
+    }
+
+    /**
+     * @return crossLogRetentionType
+     */
+    public String getCrossLogRetentionType() {
+        return this.crossLogRetentionType;
+    }
+
+    /**
+     * @return crossLogRetentionValue
+     */
+    public Integer getCrossLogRetentionValue() {
+        return this.crossLogRetentionValue;
+    }
+
+    /**
+     * @return crossRetentionType
+     */
+    public String getCrossRetentionType() {
+        return this.crossRetentionType;
+    }
+
+    /**
+     * @return crossRetentionValue
+     */
+    public Integer getCrossRetentionValue() {
+        return this.crossRetentionValue;
+    }
+
+    /**
+     * @return destRegion
+     */
+    public String getDestRegion() {
+        return this.destRegion;
+    }
+
+    /**
      * @return enableBackupLog
      */
     public Integer getEnableBackupLog() {
         return this.enableBackupLog;
+    }
+
+    /**
+     * @return enableCrossLogBackup
+     */
+    public Integer getEnableCrossLogBackup() {
+        return this.enableCrossLogBackup;
+    }
+
+    /**
+     * @return highFrequencyBackupRetention
+     */
+    public String getHighFrequencyBackupRetention() {
+        return this.highFrequencyBackupRetention;
     }
 
     /**
@@ -98,6 +210,13 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     }
 
     /**
+     * @return preferredNextBackupTime
+     */
+    public String getPreferredNextBackupTime() {
+        return this.preferredNextBackupTime;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -111,30 +230,51 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         return this.snapshotBackupType;
     }
 
+    /**
+     * @return srcRegion
+     */
+    public String getSrcRegion() {
+        return this.srcRegion;
+    }
+
     public static final class Builder {
         private Integer backupInterval; 
         private String backupRetentionPeriod; 
+        private Integer backupRetentionPolicyOnClusterDeletion; 
+        private String crossBackupPeriod; 
+        private String crossLogRetentionType; 
+        private Integer crossLogRetentionValue; 
+        private String crossRetentionType; 
+        private Integer crossRetentionValue; 
+        private String destRegion; 
         private Integer enableBackupLog; 
+        private Integer enableCrossLogBackup; 
+        private String highFrequencyBackupRetention; 
         private Integer logBackupRetentionPeriod; 
         private String preferredBackupPeriod; 
         private String preferredBackupTime; 
+        private String preferredNextBackupTime; 
         private String requestId; 
         private String snapshotBackupType; 
+        private String srcRegion; 
 
         /**
-         * The frequency at which high-frequency backups are created. Valid values:
-         * <p>
+         * <p>The frequency at which high-frequency backup is created. Valid values:</p>
+         * <ul>
+         * <li><strong>-1</strong>: High-frequency backup is disabled.</li>
+         * <li><strong>15</strong>: every 15 minutes.</li>
+         * <li><strong>30</strong>: every 30 minutes.</li>
+         * <li><strong>60</strong>: every hour.</li>
+         * <li><strong>120</strong>: every 2 hours.</li>
+         * <li><strong>180</strong>: every 3 hours.</li>
+         * <li><strong>240</strong>: every 4 hours.</li>
+         * <li><strong>360</strong>: every 6 hours.</li>
+         * <li><strong>480</strong>: every 8 hours.</li>
+         * <li><strong>720</strong>: every 12 hours.</li>
+         * </ul>
          * 
-         * *   **-1**: disables high-frequency backup.
-         * *   **15**: every 15 minutes.
-         * *   **30**: every 30 minutes.
-         * *   **60**: every hour.
-         * *   **120**: every 2 hours.
-         * *   **180**: every 3 hours.
-         * *   **240**: every 4 hours.
-         * *   **360**: every 6 hours.
-         * *   **480**: every 8 hours.
-         * *   **720**: every 12 hours.
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder backupInterval(Integer backupInterval) {
             this.backupInterval = backupInterval;
@@ -142,7 +282,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The retention period of backups. Unit: days.
+         * <p>The retention period of the backup data. Unit: day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder backupRetentionPeriod(String backupRetentionPeriod) {
             this.backupRetentionPeriod = backupRetentionPeriod;
@@ -150,11 +293,115 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether log backup is enabled. Default value: 0. Valid values:
-         * <p>
+         * <p>The backup retention policy configured for the instance. Valid values:</p>
+         * <ol>
+         * <li>0: All backup sets are immediately deleted when the instance is released.</li>
+         * <li>1: Automatic backup is performed and the backup set is retained for a long period of time when the instance is released.</li>
+         * <li>2: Automatic backup is performed and all backup sets are retained for a long period of time when the instance is released.</li>
+         * </ol>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/2779111.html">Retain the backup files of an ApsaraDB for MongoDB instance for a long period of time</a>.</p>
          * 
-         * *   **0**: disables log backup.
-         * *   **1**: enables log backup.
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        public Builder backupRetentionPolicyOnClusterDeletion(Integer backupRetentionPolicyOnClusterDeletion) {
+            this.backupRetentionPolicyOnClusterDeletion = backupRetentionPolicyOnClusterDeletion;
+            return this;
+        }
+
+        /**
+         * <p>The retention period of Cross-regional backup.
+         * Valid values:</p>
+         * <ul>
+         * <li><strong>Monday</strong></li>
+         * <li><strong>Tuesday</strong></li>
+         * <li><strong>Wednesday</strong></li>
+         * <li><strong>Thursday</strong></li>
+         * <li><strong>Friday</strong></li>
+         * <li><strong>Saturday</strong></li>
+         * <li><strong>Sunday</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Monday</p>
+         */
+        public Builder crossBackupPeriod(String crossBackupPeriod) {
+            this.crossBackupPeriod = crossBackupPeriod;
+            return this;
+        }
+
+        /**
+         * <p>The retention type of Cross-regional  log backup.</p>
+         * <ul>
+         * <li>delay : retain the backup for a period of time.</li>
+         * <li>never : retain the backup permanently.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>delay</p>
+         */
+        public Builder crossLogRetentionType(String crossLogRetentionType) {
+            this.crossLogRetentionType = crossLogRetentionType;
+            return this;
+        }
+
+        /**
+         * <p>The retention time of Cross-regional log backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
+         */
+        public Builder crossLogRetentionValue(Integer crossLogRetentionValue) {
+            this.crossLogRetentionValue = crossLogRetentionValue;
+            return this;
+        }
+
+        /**
+         * <p>The retention type of Cross-regional backup.</p>
+         * <ul>
+         * <li>delay : retain the backup for a period of time.</li>
+         * <li>never : retain the backup permanently.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>delay</p>
+         */
+        public Builder crossRetentionType(String crossRetentionType) {
+            this.crossRetentionType = crossRetentionType;
+            return this;
+        }
+
+        /**
+         * <p>The retention time of Cross-regional backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
+         */
+        public Builder crossRetentionValue(Integer crossRetentionValue) {
+            this.crossRetentionValue = crossRetentionValue;
+            return this;
+        }
+
+        /**
+         * <p>The region ID of the cross-regional backup..</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
+         */
+        public Builder destRegion(String destRegion) {
+            this.destRegion = destRegion;
+            return this;
+        }
+
+        /**
+         * <p>Indicates whether the log backup feature is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong> (default): The log backup feature is disabled.</li>
+         * <li><strong>1</strong>: The log backup feature is enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder enableBackupLog(Integer enableBackupLog) {
             this.enableBackupLog = enableBackupLog;
@@ -162,7 +409,36 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The number of days for which to retain log backups. Valid values: 7 to 730.
+         * <p>Whether to turn on cross-regional log backup.</p>
+         * <ul>
+         * <li>1: turn on . Used for sharded cluster.</li>
+         * <li>0: turn off. Used for replicate set.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder enableCrossLogBackup(Integer enableCrossLogBackup) {
+            this.enableCrossLogBackup = enableCrossLogBackup;
+            return this;
+        }
+
+        /**
+         * <p>The retention period of high-frequency backups. Unit: day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder highFrequencyBackupRetention(String highFrequencyBackupRetention) {
+            this.highFrequencyBackupRetention = highFrequencyBackupRetention;
+            return this;
+        }
+
+        /**
+         * <p>The number of days for which log backups are retained. Valid values: 7 to 730.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder logBackupRetentionPeriod(Integer logBackupRetentionPeriod) {
             this.logBackupRetentionPeriod = logBackupRetentionPeriod;
@@ -170,16 +446,19 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The day of a week on which to back up data. Valid values:
-         * <p>
+         * <p>The day of a week on which to back up data. Valid values:</p>
+         * <ul>
+         * <li><strong>Monday</strong></li>
+         * <li><strong>Tuesday</strong></li>
+         * <li><strong>Wednesday</strong></li>
+         * <li><strong>Thursday</strong></li>
+         * <li><strong>Friday</strong></li>
+         * <li><strong>Saturday</strong></li>
+         * <li><strong>Sunday</strong></li>
+         * </ul>
          * 
-         * *   **Monday**
-         * *   **Tuesday**
-         * *   **Wednesday**
-         * *   **Thursday**
-         * *   **Friday**
-         * *   **Saturday**
-         * *   **Sunday**
+         * <strong>example:</strong>
+         * <p>Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday</p>
          */
         public Builder preferredBackupPeriod(String preferredBackupPeriod) {
             this.preferredBackupPeriod = preferredBackupPeriod;
@@ -187,7 +466,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The time range to back up data. The time is in the *HH:mm*Z-*HH:mm*Z format. The time is displayed in UTC.
+         * <p>The time range during which the backup was created. The time follows the ISO 8601 standard in the <em>HH:mm</em>Z-<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>09:00Z-10:00Z</p>
          */
         public Builder preferredBackupTime(String preferredBackupTime) {
             this.preferredBackupTime = preferredBackupTime;
@@ -195,7 +477,21 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The time of next standard backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-06-19T19:11Z</p>
+         */
+        public Builder preferredNextBackupTime(String preferredNextBackupTime) {
+            this.preferredNextBackupTime = preferredNextBackupTime;
+            return this;
+        }
+
+        /**
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A9464CA-F7DC-5434-90B1-DF7F197C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -203,14 +499,28 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The snapshot backup type. Default value: Standard. Valid values:
-         * <p>
+         * <p>The snapshot backup type. Valid values:</p>
+         * <ul>
+         * <li><strong>Flash</strong>: single-digit second backup</li>
+         * <li><strong>Standard</strong> (default): standard backup</li>
+         * </ul>
          * 
-         * *   **Flash**: single-digit second backup
-         * *   **Standard**: standard backup
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         public Builder snapshotBackupType(String snapshotBackupType) {
             this.snapshotBackupType = snapshotBackupType;
+            return this;
+        }
+
+        /**
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
+        public Builder srcRegion(String srcRegion) {
+            this.srcRegion = srcRegion;
             return this;
         }
 

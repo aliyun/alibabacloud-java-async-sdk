@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMarketingActivityResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMarketingActivityResponseBody</p>
  */
 public class DescribeMarketingActivityResponseBody extends TeaModel {
-    @NameInMap("AliUid")
+    @com.aliyun.core.annotation.NameInMap("AliUid")
     private Long aliUid;
 
-    @NameInMap("Bid")
+    @com.aliyun.core.annotation.NameInMap("Bid")
     private String bid;
 
-    @NameInMap("Items")
-    private java.util.List < Items> items;
+    @com.aliyun.core.annotation.NameInMap("Items")
+    private java.util.List<Items> items;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String requestId;
 
     private DescribeMarketingActivityResponseBody(Builder builder) {
@@ -61,7 +66,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -82,12 +87,15 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
     public static final class Builder {
         private Long aliUid; 
         private String bid; 
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private String regionId; 
         private String requestId; 
 
         /**
-         * The ID of the Alibaba Cloud account.
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1979008652307170</p>
          */
         public Builder aliUid(Long aliUid) {
             this.aliUid = aliUid;
@@ -95,9 +103,13 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
         }
 
         /**
-         * *   China site: 26842
-         * <p>
-         * *   International site: 26888
+         * <ul>
+         * <li>China site: 26842</li>
+         * <li>International site: 26888</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>26842</p>
          */
         public Builder bid(String bid) {
             this.bid = bid;
@@ -105,15 +117,18 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
         }
 
         /**
-         * The activity parameters
+         * <p>The activity parameters</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -121,7 +136,11 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7D8F09DB-1124-5D78-A520-FF88FAF4351B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,86 +153,92 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMarketingActivityResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMarketingActivityResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("ClassCode")
+        @com.aliyun.core.annotation.NameInMap("ClassCode")
         private String classCode;
 
-        @NameInMap("ClassGroup")
+        @com.aliyun.core.annotation.NameInMap("ClassGroup")
         private String classGroup;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private String cpu;
 
-        @NameInMap("DiskSize")
+        @com.aliyun.core.annotation.NameInMap("DiskSize")
         private Integer diskSize;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("EngineVersion")
+        @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private String engineVersion;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("MaxConnections")
+        @com.aliyun.core.annotation.NameInMap("MaxConnections")
         private Integer maxConnections;
 
-        @NameInMap("MaxIombps")
+        @com.aliyun.core.annotation.NameInMap("MaxIombps")
         private Integer maxIombps;
 
-        @NameInMap("MaxIops")
+        @com.aliyun.core.annotation.NameInMap("MaxIops")
         private Integer maxIops;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Long memory;
 
-        @NameInMap("StorageType")
+        @com.aliyun.core.annotation.NameInMap("StorageType")
         private String storageType;
 
-        @NameInMap("UpgradeCategory")
+        @com.aliyun.core.annotation.NameInMap("UpgradeCategory")
         private String upgradeCategory;
 
-        @NameInMap("UpgradeClassCode")
+        @com.aliyun.core.annotation.NameInMap("UpgradeClassCode")
         private String upgradeClassCode;
 
-        @NameInMap("UpgradeClassGroup")
+        @com.aliyun.core.annotation.NameInMap("UpgradeClassGroup")
         private String upgradeClassGroup;
 
-        @NameInMap("UpgradeCpu")
+        @com.aliyun.core.annotation.NameInMap("UpgradeCpu")
         private String upgradeCpu;
 
-        @NameInMap("UpgradeDescContent")
+        @com.aliyun.core.annotation.NameInMap("UpgradeDescContent")
         private String upgradeDescContent;
 
-        @NameInMap("UpgradeDiskSize")
+        @com.aliyun.core.annotation.NameInMap("UpgradeDiskSize")
         private Integer upgradeDiskSize;
 
-        @NameInMap("UpgradeMaxConnections")
+        @com.aliyun.core.annotation.NameInMap("UpgradeMaxConnections")
         private Integer upgradeMaxConnections;
 
-        @NameInMap("UpgradeMaxIombps")
+        @com.aliyun.core.annotation.NameInMap("UpgradeMaxIombps")
         private Integer upgradeMaxIombps;
 
-        @NameInMap("UpgradeMaxIops")
+        @com.aliyun.core.annotation.NameInMap("UpgradeMaxIops")
         private Integer upgradeMaxIops;
 
-        @NameInMap("UpgradeMemory")
+        @com.aliyun.core.annotation.NameInMap("UpgradeMemory")
         private Long upgradeMemory;
 
-        @NameInMap("UpgradeReferencePrice")
+        @com.aliyun.core.annotation.NameInMap("UpgradeReferencePrice")
         private String upgradeReferencePrice;
 
-        @NameInMap("UpgradeStorageType")
+        @com.aliyun.core.annotation.NameInMap("UpgradeStorageType")
         private String upgradeStorageType;
 
         private Items(Builder builder) {
@@ -473,13 +498,16 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             private String upgradeStorageType; 
 
             /**
-             * The RDS edition of the instance. Valid values:
-             * <p>
+             * <p>The RDS edition of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Basic</strong>: RDS Basic Edition</li>
+             * <li><strong>HighAvailability</strong>: RDS High-availability Edition</li>
+             * <li><strong>AlwaysOn</strong>: RDS Cluster Edition</li>
+             * <li><strong>Finance</strong>: RDS Enterprise Edition</li>
+             * </ul>
              * 
-             * *   **Basic**: RDS Basic Edition
-             * *   **HighAvailability**: RDS High-availability Edition
-             * *   **AlwaysOn**: RDS Cluster Edition
-             * *   **Finance**: RDS Enterprise Edition
+             * <strong>example:</strong>
+             * <p>Basic</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -487,11 +515,14 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The payment type. Valid values:
-             * <p>
+             * <p>The payment type. Valid values:</p>
+             * <ul>
+             * <li>POSTPAY: pay-as-you-go</li>
+             * <li>PREPAY: subscription</li>
+             * </ul>
              * 
-             * *   POSTPAY: pay-as-you-go
-             * *   PREPAY: subscription
+             * <strong>example:</strong>
+             * <p>POSTPAY</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -499,7 +530,10 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~) and [Read-only ApsaraDB RDS instance types](~~145759~~).
+             * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a> and <a href="https://help.aliyun.com/document_detail/145759.html">Read-only ApsaraDB RDS instance types</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds.mysql.s3.large</p>
              */
             public Builder classCode(String classCode) {
                 this.classCode = classCode;
@@ -507,7 +541,10 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The instance family. For more information, see [Overview of instance families](~~57184~~).
+             * <p>The instance family. For more information, see <a href="https://help.aliyun.com/document_detail/57184.html">Overview of instance families</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>x</p>
              */
             public Builder classGroup(String classGroup) {
                 this.classGroup = classGroup;
@@ -515,7 +552,10 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The number of CPU cores that are supported by the instance type. Unit: cores.
+             * <p>The number of CPU cores that are supported by the instance type. Unit: cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
@@ -523,7 +563,10 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The disk capacity per node. Unit: GB.
+             * <p>The disk capacity per node. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>900</p>
              */
             public Builder diskSize(Integer diskSize) {
                 this.diskSize = diskSize;
@@ -531,14 +574,17 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine of the instance. Valid values:
-             * <p>
+             * <p>The database engine of the instance. Valid values:</p>
+             * <ul>
+             * <li>MySQL</li>
+             * <li>SQLServer</li>
+             * <li>PostgreSQL</li>
+             * <li>PPAS</li>
+             * <li>MariaDB</li>
+             * </ul>
              * 
-             * *   MySQL
-             * *   SQLServer
-             * *   PostgreSQL
-             * *   PPAS
-             * *   MariaDB
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -546,7 +592,10 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the database engine.
+             * <p>The version of the database engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.0</p>
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -554,7 +603,10 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-uf62br2491p5l****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -562,7 +614,10 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The instance name.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-uf62br2491p5l****</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -570,7 +625,10 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of concurrent connections.
+             * <p>The maximum number of concurrent connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder maxConnections(Integer maxConnections) {
                 this.maxConnections = maxConnections;
@@ -578,7 +636,10 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum I/O throughput. Unit: Mbit/s.
+             * <p>The maximum I/O throughput. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxIombps(Integer maxIombps) {
                 this.maxIombps = maxIombps;
@@ -586,7 +647,10 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum IOPS.
+             * <p>The maximum IOPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder maxIops(Integer maxIops) {
                 this.maxIops = maxIops;
@@ -594,7 +658,10 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size.
+             * <p>The memory size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder memory(Long memory) {
                 this.memory = memory;
@@ -602,14 +669,17 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The storage type of the instance. Valid values:
-             * <p>
+             * <p>The storage type of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>local_ssd</strong>: local SSD</li>
+             * <li><strong>cloud_ssd</strong>: standard SSD</li>
+             * <li><strong>cloud_essd</strong>: performance level 1 (PL1) enhanced SSD (ESSD)</li>
+             * <li><strong>cloud_essd2</strong>: PL2 ESSD</li>
+             * <li><strong>cloud_essd3</strong>: PL3 ESSD</li>
+             * </ul>
              * 
-             * *   **local_ssd**: local SSD
-             * *   **cloud_ssd**: standard SSD
-             * *   **cloud_essd**: performance level 1 (PL1) enhanced SSD (ESSD)
-             * *   **cloud_essd2**: PL2 ESSD
-             * *   **cloud_essd3**: PL3 ESSD
+             * <strong>example:</strong>
+             * <p>cloud_essd</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -617,7 +687,10 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The RDS edition after the upgrade.
+             * <p>The RDS edition after the upgrade.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HighAvailability</p>
              */
             public Builder upgradeCategory(String upgradeCategory) {
                 this.upgradeCategory = upgradeCategory;
@@ -625,7 +698,10 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type after the upgrade.
+             * <p>The instance type after the upgrade.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds.mysql.s3.large</p>
              */
             public Builder upgradeClassCode(String upgradeClassCode) {
                 this.upgradeClassCode = upgradeClassCode;
@@ -633,7 +709,10 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The instance family after the upgrade.
+             * <p>The instance family after the upgrade.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d</p>
              */
             public Builder upgradeClassGroup(String upgradeClassGroup) {
                 this.upgradeClassGroup = upgradeClassGroup;
@@ -641,7 +720,10 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The number of CPU cores after the upgrade.
+             * <p>The number of CPU cores after the upgrade.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder upgradeCpu(String upgradeCpu) {
                 this.upgradeCpu = upgradeCpu;
@@ -649,7 +731,10 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the upgrade.
+             * <p>The description of the upgrade.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder upgradeDescContent(String upgradeDescContent) {
                 this.upgradeDescContent = upgradeDescContent;
@@ -657,7 +742,10 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The disk capacity after the upgrade.
+             * <p>The disk capacity after the upgrade.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder upgradeDiskSize(Integer upgradeDiskSize) {
                 this.upgradeDiskSize = upgradeDiskSize;
@@ -665,7 +753,10 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of concurrent connections after the upgrade.
+             * <p>The maximum number of concurrent connections after the upgrade.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70</p>
              */
             public Builder upgradeMaxConnections(Integer upgradeMaxConnections) {
                 this.upgradeMaxConnections = upgradeMaxConnections;
@@ -673,7 +764,10 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum I/O throughput after the upgrade. Unit: Mbit/s.
+             * <p>The maximum I/O throughput after the upgrade. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder upgradeMaxIombps(Integer upgradeMaxIombps) {
                 this.upgradeMaxIombps = upgradeMaxIombps;
@@ -681,7 +775,10 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum IOPS after the upgrade.
+             * <p>The maximum IOPS after the upgrade.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70</p>
              */
             public Builder upgradeMaxIops(Integer upgradeMaxIops) {
                 this.upgradeMaxIops = upgradeMaxIops;
@@ -689,7 +786,10 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size after the upgrade.
+             * <p>The memory size after the upgrade.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder upgradeMemory(Long upgradeMemory) {
                 this.upgradeMemory = upgradeMemory;
@@ -697,7 +797,10 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The reference price of the upgrade.
+             * <p>The reference price of the upgrade.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23333.1</p>
              */
             public Builder upgradeReferencePrice(String upgradeReferencePrice) {
                 this.upgradeReferencePrice = upgradeReferencePrice;
@@ -705,7 +808,10 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The storage type after the upgrade.
+             * <p>The storage type after the upgrade.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_essd</p>
              */
             public Builder upgradeStorageType(String upgradeStorageType) {
                 this.upgradeStorageType = upgradeStorageType;

@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterRecoverTimeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeClusterRecoverTimeResponseBody</p>
  */
 public class DescribeClusterRecoverTimeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RestoreRanges")
-    private java.util.List < RestoreRanges> restoreRanges;
+    @com.aliyun.core.annotation.NameInMap("RestoreRanges")
+    private java.util.List<RestoreRanges> restoreRanges;
 
     private DescribeClusterRecoverTimeResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class DescribeClusterRecoverTimeResponseBody extends TeaModel {
     /**
      * @return restoreRanges
      */
-    public java.util.List < RestoreRanges> getRestoreRanges() {
+    public java.util.List<RestoreRanges> getRestoreRanges() {
         return this.restoreRanges;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < RestoreRanges> restoreRanges; 
+        private java.util.List<RestoreRanges> restoreRanges; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60EEBD77-227C-5B39-86EA-D89163C5****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class DescribeClusterRecoverTimeResponseBody extends TeaModel {
         }
 
         /**
-         * The cluster backup sets of the instance. A cluster backup file contains the backup sets of each node.
+         * <p>The cluster backup sets of the instance. A cluster backup file contains the backup sets of each node.</p>
          */
-        public Builder restoreRanges(java.util.List < RestoreRanges> restoreRanges) {
+        public Builder restoreRanges(java.util.List<RestoreRanges> restoreRanges) {
             this.restoreRanges = restoreRanges;
             return this;
         }
@@ -71,14 +79,20 @@ public class DescribeClusterRecoverTimeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClusterRecoverTimeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterRecoverTimeResponseBody</p>
+     */
     public static class RestoreRanges extends TeaModel {
-        @NameInMap("RestoreBeginTime")
+        @com.aliyun.core.annotation.NameInMap("RestoreBeginTime")
         private String restoreBeginTime;
 
-        @NameInMap("RestoreEndTime")
+        @com.aliyun.core.annotation.NameInMap("RestoreEndTime")
         private String restoreEndTime;
 
-        @NameInMap("RestoreType")
+        @com.aliyun.core.annotation.NameInMap("RestoreType")
         private String restoreType;
 
         private RestoreRanges(Builder builder) {
@@ -122,7 +136,10 @@ public class DescribeClusterRecoverTimeResponseBody extends TeaModel {
             private String restoreType; 
 
             /**
-             * The beginning of the time range to which data can be restored.
+             * <p>The beginning of the time range to which data can be restored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-10-16T19:33:20Z</p>
              */
             public Builder restoreBeginTime(String restoreBeginTime) {
                 this.restoreBeginTime = restoreBeginTime;
@@ -130,7 +147,10 @@ public class DescribeClusterRecoverTimeResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the time range to which data can be restored.
+             * <p>The end of the time range to which data can be restored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-10-16T19:43:20Z</p>
              */
             public Builder restoreEndTime(String restoreEndTime) {
                 this.restoreEndTime = restoreEndTime;
@@ -138,10 +158,13 @@ public class DescribeClusterRecoverTimeResponseBody extends TeaModel {
             }
 
             /**
-             * The method used to restore data. Valid values:
-             * <p>
+             * <p>The method used to restore data. Valid values:</p>
+             * <ul>
+             * <li><strong>PointInTime</strong> (default): Data is restored based on point in time</li>
+             * </ul>
              * 
-             * *   \*\* PointInTime\*\* (default): Data is restored based on point in time
+             * <strong>example:</strong>
+             * <p>PointInTime</p>
              */
             public Builder restoreType(String restoreType) {
                 this.restoreType = restoreType;

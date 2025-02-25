@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetEmonMonitorDataResponseBody} extends {@link TeaModel}
  *
  * <p>GetEmonMonitorDataResponseBody</p>
  */
 public class GetEmonMonitorDataResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetEmonMonitorDataResponseBody(Builder builder) {
@@ -131,23 +131,29 @@ public class GetEmonMonitorDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetEmonMonitorDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEmonMonitorDataResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("dps")
+        @com.aliyun.core.annotation.NameInMap("dps")
         private java.util.Map < String, ? > dps;
 
-        @NameInMap("integrity")
+        @com.aliyun.core.annotation.NameInMap("integrity")
         private Float integrity;
 
-        @NameInMap("messageWatermark")
+        @com.aliyun.core.annotation.NameInMap("messageWatermark")
         private Long messageWatermark;
 
-        @NameInMap("metric")
+        @com.aliyun.core.annotation.NameInMap("metric")
         private String metric;
 
-        @NameInMap("summary")
+        @com.aliyun.core.annotation.NameInMap("summary")
         private Float summary;
 
-        @NameInMap("tags")
+        @com.aliyun.core.annotation.NameInMap("tags")
         private java.util.Map < String, ? > tags;
 
         private Result(Builder builder) {

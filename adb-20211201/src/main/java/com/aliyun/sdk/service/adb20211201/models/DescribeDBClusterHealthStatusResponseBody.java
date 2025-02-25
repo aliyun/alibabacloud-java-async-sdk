@@ -1,33 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBClusterHealthStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBClusterHealthStatusResponseBody</p>
  */
 public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
-    @NameInMap("CS")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
+    @com.aliyun.core.annotation.NameInMap("CS")
     private Cs cs;
 
-    @NameInMap("Executor")
+    @com.aliyun.core.annotation.NameInMap("Executor")
     private Executor executor;
 
-    @NameInMap("InstanceStatus")
+    @com.aliyun.core.annotation.NameInMap("InstanceStatus")
     private String instanceStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Worker")
+    @com.aliyun.core.annotation.NameInMap("Worker")
     private Worker worker;
 
     private DescribeDBClusterHealthStatusResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.cs = builder.cs;
         this.executor = builder.executor;
         this.instanceStatus = builder.instanceStatus;
@@ -41,6 +50,13 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
 
     public static DescribeDBClusterHealthStatusResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -79,6 +95,7 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private Cs cs; 
         private Executor executor; 
         private String instanceStatus; 
@@ -86,7 +103,15 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
         private Worker worker; 
 
         /**
-         * CS.
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
+
+        /**
+         * <p>The access nodes of the queried cluster.</p>
          */
         public Builder cs(Cs cs) {
             this.cs = cs;
@@ -94,7 +119,7 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Executor.
+         * <p>The compute node groups of the queried cluster.</p>
          */
         public Builder executor(Executor executor) {
             this.executor = executor;
@@ -102,7 +127,18 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceStatus.
+         * <p>The health state of the cluster. Valid values:</p>
+         * <ul>
+         * <li><strong>RISK</strong></li>
+         * <li><strong>NORMAL</strong></li>
+         * <li><strong>UNAVAILABLE</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> When the states of the access nodes, compute node groups, and storage node groups of a cluster are all <strong>NORMAL</strong> and a connection to the cluster is established, the state of the cluster is <strong>NORMAL</strong>. When the state of the access nodes, compute node groups, or storage node groups of the cluster is <strong>RISK</strong>, the state of the cluster is <strong>RISK</strong>. When the state of the access nodes, compute node groups, or storage node groups of the cluster is <strong>UNAVAILABLE</strong>, the state of the cluster is <strong>UNAVAILABLE</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder instanceStatus(String instanceStatus) {
             this.instanceStatus = instanceStatus;
@@ -110,7 +146,10 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +157,7 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Worker.
+         * <p>The storage node groups of the queried cluster.</p>
          */
         public Builder worker(Worker worker) {
             this.worker = worker;
@@ -131,20 +170,26 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBClusterHealthStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterHealthStatusResponseBody</p>
+     */
     public static class Cs extends TeaModel {
-        @NameInMap("ActiveCount")
+        @com.aliyun.core.annotation.NameInMap("ActiveCount")
         private Long activeCount;
 
-        @NameInMap("ExpectedCount")
+        @com.aliyun.core.annotation.NameInMap("ExpectedCount")
         private Long expectedCount;
 
-        @NameInMap("RiskCount")
+        @com.aliyun.core.annotation.NameInMap("RiskCount")
         private Long riskCount;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UnavailableCount")
+        @com.aliyun.core.annotation.NameInMap("UnavailableCount")
         private Long unavailableCount;
 
         private Cs(Builder builder) {
@@ -206,7 +251,10 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
             private Long unavailableCount; 
 
             /**
-             * ActiveCount.
+             * <p>The number of healthy access nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder activeCount(Long activeCount) {
                 this.activeCount = activeCount;
@@ -214,7 +262,10 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ExpectedCount.
+             * <p>The total number of access nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder expectedCount(Long expectedCount) {
                 this.expectedCount = expectedCount;
@@ -222,7 +273,10 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * RiskCount.
+             * <p>The number of risky nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder riskCount(Long riskCount) {
                 this.riskCount = riskCount;
@@ -230,7 +284,15 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The health state of access nodes. Valid values:</p>
+             * <ul>
+             * <li><strong>RISK</strong></li>
+             * <li><strong>NORMAL</strong></li>
+             * <li><strong>UNAVAILABLE</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -238,7 +300,10 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * UnavailableCount.
+             * <p>The number of unavailable access nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder unavailableCount(Long unavailableCount) {
                 this.unavailableCount = unavailableCount;
@@ -252,20 +317,26 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBClusterHealthStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterHealthStatusResponseBody</p>
+     */
     public static class Executor extends TeaModel {
-        @NameInMap("ActiveCount")
+        @com.aliyun.core.annotation.NameInMap("ActiveCount")
         private Long activeCount;
 
-        @NameInMap("ExpectedCount")
+        @com.aliyun.core.annotation.NameInMap("ExpectedCount")
         private Long expectedCount;
 
-        @NameInMap("RiskCount")
+        @com.aliyun.core.annotation.NameInMap("RiskCount")
         private Long riskCount;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UnavailableCount")
+        @com.aliyun.core.annotation.NameInMap("UnavailableCount")
         private Long unavailableCount;
 
         private Executor(Builder builder) {
@@ -327,7 +398,10 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
             private Long unavailableCount; 
 
             /**
-             * ActiveCount.
+             * <p>The number of healthy access nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder activeCount(Long activeCount) {
                 this.activeCount = activeCount;
@@ -335,7 +409,10 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ExpectedCount.
+             * <p>The total number of compute nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder expectedCount(Long expectedCount) {
                 this.expectedCount = expectedCount;
@@ -343,7 +420,10 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * RiskCount.
+             * <p>The number of risky nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder riskCount(Long riskCount) {
                 this.riskCount = riskCount;
@@ -351,7 +431,15 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The health state of compute node groups. Valid values:</p>
+             * <ul>
+             * <li><strong>RISK</strong></li>
+             * <li><strong>NORMAL</strong></li>
+             * <li><strong>UNAVAILABLE</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -359,7 +447,10 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * UnavailableCount.
+             * <p>The number of unavailable access nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder unavailableCount(Long unavailableCount) {
                 this.unavailableCount = unavailableCount;
@@ -373,20 +464,26 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBClusterHealthStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterHealthStatusResponseBody</p>
+     */
     public static class Worker extends TeaModel {
-        @NameInMap("ActiveCount")
+        @com.aliyun.core.annotation.NameInMap("ActiveCount")
         private Long activeCount;
 
-        @NameInMap("ExpectedCount")
+        @com.aliyun.core.annotation.NameInMap("ExpectedCount")
         private Long expectedCount;
 
-        @NameInMap("RiskCount")
+        @com.aliyun.core.annotation.NameInMap("RiskCount")
         private Long riskCount;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UnavailableCount")
+        @com.aliyun.core.annotation.NameInMap("UnavailableCount")
         private Long unavailableCount;
 
         private Worker(Builder builder) {
@@ -448,7 +545,10 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
             private Long unavailableCount; 
 
             /**
-             * ActiveCount.
+             * <p>The number of healthy storage node groups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder activeCount(Long activeCount) {
                 this.activeCount = activeCount;
@@ -456,7 +556,10 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ExpectedCount.
+             * <p>The total number of storage node groups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder expectedCount(Long expectedCount) {
                 this.expectedCount = expectedCount;
@@ -464,7 +567,10 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * RiskCount.
+             * <p>The number of risky storage node groups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder riskCount(Long riskCount) {
                 this.riskCount = riskCount;
@@ -472,7 +578,15 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The health state of storage node groups. Valid values:</p>
+             * <ul>
+             * <li><strong>RISK</strong></li>
+             * <li><strong>NORMAL</strong></li>
+             * <li><strong>UNAVAILABLE</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -480,7 +594,10 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * UnavailableCount.
+             * <p>The number of unavailable storage node groups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder unavailableCount(Long unavailableCount) {
                 this.unavailableCount = unavailableCount;

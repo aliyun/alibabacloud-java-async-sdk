@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UploadImageResponseBody} extends {@link TeaModel}
  *
  * <p>UploadImageResponseBody</p>
  */
 public class UploadImageResponseBody extends TeaModel {
-    @NameInMap("ImageId")
+    @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UploadImageResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class UploadImageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ImageId.
+         * <p>The ID of the custom image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-d4dwr5tgrgvd****</p>
          */
         public Builder imageId(String imageId) {
             this.imageId = imageId;
@@ -58,7 +66,10 @@ public class UploadImageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2CC66B0A-BA3B-5D87-BFBE-11AAAD7A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

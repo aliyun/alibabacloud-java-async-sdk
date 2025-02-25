@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDomainDnsChallengeResponseBody} extends {@link TeaModel}
  *
  * <p>GetDomainDnsChallengeResponseBody</p>
  */
 public class GetDomainDnsChallengeResponseBody extends TeaModel {
-    @NameInMap("DomainDnsChallenge")
+    @com.aliyun.core.annotation.NameInMap("DomainDnsChallenge")
     private DomainDnsChallenge domainDnsChallenge;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetDomainDnsChallengeResponseBody(Builder builder) {
@@ -71,14 +76,20 @@ public class GetDomainDnsChallengeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDomainDnsChallengeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDomainDnsChallengeResponseBody</p>
+     */
     public static class DomainDnsChallenge extends TeaModel {
-        @NameInMap("DnsChallengeName")
+        @com.aliyun.core.annotation.NameInMap("DnsChallengeName")
         private String dnsChallengeName;
 
-        @NameInMap("DnsChallengeValue")
+        @com.aliyun.core.annotation.NameInMap("DnsChallengeValue")
         private String dnsChallengeValue;
 
-        @NameInMap("DnsType")
+        @com.aliyun.core.annotation.NameInMap("DnsType")
         private String dnsType;
 
         private DomainDnsChallenge(Builder builder) {
@@ -122,7 +133,10 @@ public class GetDomainDnsChallengeResponseBody extends TeaModel {
             private String dnsType; 
 
             /**
-             * DNS challenge名称。
+             * <p>DNS challenge名称。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>_idaas-challenge.${domain}</p>
              */
             public Builder dnsChallengeName(String dnsChallengeName) {
                 this.dnsChallengeName = dnsChallengeName;
@@ -130,7 +144,10 @@ public class GetDomainDnsChallengeResponseBody extends TeaModel {
             }
 
             /**
-             * DNS challenge值。
+             * <p>DNS challenge值。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exmple123xxx</p>
              */
             public Builder dnsChallengeValue(String dnsChallengeValue) {
                 this.dnsChallengeValue = dnsChallengeValue;
@@ -138,7 +155,10 @@ public class GetDomainDnsChallengeResponseBody extends TeaModel {
             }
 
             /**
-             * DNS记录类型。
+             * <p>DNS记录类型。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>枚举，目前只支持TXT类型</p>
              */
             public Builder dnsType(String dnsType) {
                 this.dnsType = dnsType;

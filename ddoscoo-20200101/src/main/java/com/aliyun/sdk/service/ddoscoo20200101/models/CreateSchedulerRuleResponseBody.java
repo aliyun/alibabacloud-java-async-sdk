@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSchedulerRuleResponseBody} extends {@link TeaModel}
  *
  * <p>CreateSchedulerRuleResponseBody</p>
  */
 public class CreateSchedulerRuleResponseBody extends TeaModel {
-    @NameInMap("Cname")
+    @com.aliyun.core.annotation.NameInMap("Cname")
     private String cname;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RuleName")
+    @com.aliyun.core.annotation.NameInMap("RuleName")
     private String ruleName;
 
     private CreateSchedulerRuleResponseBody(Builder builder) {
@@ -62,10 +67,13 @@ public class CreateSchedulerRuleResponseBody extends TeaModel {
         private String ruleName; 
 
         /**
-         * The CNAME that is assigned by Sec-Traffic Manager for the scheduling rule.
-         * <p>
+         * <p>The CNAME that is assigned by Sec-Traffic Manager for the scheduling rule.</p>
+         * <blockquote>
+         * <p>To enable the scheduling rule, you must map the domain name of the service to the CNAME.</p>
+         * </blockquote>
          * 
-         * > To enable the scheduling rule, you must map the domain name of the service to the CNAME.
+         * <strong>example:</strong>
+         * <p>48k7b372gpl4****.aliyunddos0001.com</p>
          */
         public Builder cname(String cname) {
             this.cname = cname;
@@ -73,7 +81,10 @@ public class CreateSchedulerRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8DFB602D-1AAC-46C4-90F2-C84086E7A6E4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,7 +92,10 @@ public class CreateSchedulerRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the rule.
+         * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testrule</p>
          */
         public Builder ruleName(String ruleName) {
             this.ruleName = ruleName;

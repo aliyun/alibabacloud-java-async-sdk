@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResourceComplianceGroupByRegionResponseBody} extends {@link TeaModel}
  *
  * <p>GetResourceComplianceGroupByRegionResponseBody</p>
  */
 public class GetResourceComplianceGroupByRegionResponseBody extends TeaModel {
-    @NameInMap("ComplianceResult")
+    @com.aliyun.core.annotation.NameInMap("ComplianceResult")
     private ComplianceResult complianceResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetResourceComplianceGroupByRegionResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetResourceComplianceGroupByRegionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The queried evaluation results.
+         * <p>The queried evaluation results.</p>
          */
         public Builder complianceResult(ComplianceResult complianceResult) {
             this.complianceResult = complianceResult;
@@ -58,7 +63,10 @@ public class GetResourceComplianceGroupByRegionResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FDF8006-34A0-5334-8C79-48F64EAB34F1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class GetResourceComplianceGroupByRegionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetResourceComplianceGroupByRegionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourceComplianceGroupByRegionResponseBody</p>
+     */
     public static class Compliances extends TeaModel {
-        @NameInMap("ComplianceType")
+        @com.aliyun.core.annotation.NameInMap("ComplianceType")
         private String complianceType;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
         private Compliances(Builder builder) {
@@ -110,13 +124,16 @@ public class GetResourceComplianceGroupByRegionResponseBody extends TeaModel {
             private Long count; 
 
             /**
-             * The evaluation result. Valid values:
-             * <p>
+             * <p>The evaluation result. Valid values:</p>
+             * <ul>
+             * <li>COMPLIANT: The resources are evaluated as compliant.</li>
+             * <li>NON_COMPLIANT: The resources are evaluated as non-compliant.</li>
+             * <li>NOT_APPLICABLE: The rule does not apply to the resources.</li>
+             * <li>INSUFFICIENT_DATA: No resource data is available.</li>
+             * </ul>
              * 
-             * *   COMPLIANT: The resource is evaluated as compliant.
-             * *   NON_COMPLIANT: The resource is evaluated as non-compliant.
-             * *   NOT_APPLICABLE: The rule does not apply to the resource.
-             * *   INSUFFICIENT_DATA: No data is available.
+             * <strong>example:</strong>
+             * <p>COMPLIANT</p>
              */
             public Builder complianceType(String complianceType) {
                 this.complianceType = complianceType;
@@ -124,7 +141,10 @@ public class GetResourceComplianceGroupByRegionResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of evaluation results.
+             * <p>The total number of evaluation results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -138,11 +158,17 @@ public class GetResourceComplianceGroupByRegionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResourceComplianceGroupByRegionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourceComplianceGroupByRegionResponseBody</p>
+     */
     public static class ComplianceResultList extends TeaModel {
-        @NameInMap("Compliances")
-        private java.util.List < Compliances> compliances;
+        @com.aliyun.core.annotation.NameInMap("Compliances")
+        private java.util.List<Compliances> compliances;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private ComplianceResultList(Builder builder) {
@@ -161,7 +187,7 @@ public class GetResourceComplianceGroupByRegionResponseBody extends TeaModel {
         /**
          * @return compliances
          */
-        public java.util.List < Compliances> getCompliances() {
+        public java.util.List<Compliances> getCompliances() {
             return this.compliances;
         }
 
@@ -173,19 +199,22 @@ public class GetResourceComplianceGroupByRegionResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Compliances> compliances; 
+            private java.util.List<Compliances> compliances; 
             private String regionId; 
 
             /**
-             * The queried evaluation results.
+             * <p>The queried evaluation results.</p>
              */
-            public Builder compliances(java.util.List < Compliances> compliances) {
+            public Builder compliances(java.util.List<Compliances> compliances) {
                 this.compliances = compliances;
                 return this;
             }
 
             /**
-             * The region ID of the evaluated resource.
+             * <p>The region ID of the evaluated resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -199,9 +228,15 @@ public class GetResourceComplianceGroupByRegionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResourceComplianceGroupByRegionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourceComplianceGroupByRegionResponseBody</p>
+     */
     public static class ComplianceResult extends TeaModel {
-        @NameInMap("ComplianceResultList")
-        private java.util.List < ComplianceResultList> complianceResultList;
+        @com.aliyun.core.annotation.NameInMap("ComplianceResultList")
+        private java.util.List<ComplianceResultList> complianceResultList;
 
         private ComplianceResult(Builder builder) {
             this.complianceResultList = builder.complianceResultList;
@@ -218,17 +253,17 @@ public class GetResourceComplianceGroupByRegionResponseBody extends TeaModel {
         /**
          * @return complianceResultList
          */
-        public java.util.List < ComplianceResultList> getComplianceResultList() {
+        public java.util.List<ComplianceResultList> getComplianceResultList() {
             return this.complianceResultList;
         }
 
         public static final class Builder {
-            private java.util.List < ComplianceResultList> complianceResultList; 
+            private java.util.List<ComplianceResultList> complianceResultList; 
 
             /**
-             * The evaluation results grouped by region.
+             * <p>The evaluation results grouped by region.</p>
              */
-            public Builder complianceResultList(java.util.List < ComplianceResultList> complianceResultList) {
+            public Builder complianceResultList(java.util.List<ComplianceResultList> complianceResultList) {
                 this.complianceResultList = complianceResultList;
                 return this;
             }

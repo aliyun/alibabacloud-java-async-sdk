@@ -1,52 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceNetInfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBInstanceNetInfoRequest</p>
  */
 public class DescribeDBInstanceNetInfoRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("DBInstanceNetRWSplitType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceNetRWSplitType")
     private String DBInstanceNetRWSplitType;
 
-    @Query
-    @NameInMap("Flag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Flag")
     private Integer flag;
 
-    @Query
-    @NameInMap("GeneralGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GeneralGroupName")
     private String generalGroupName;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private DescribeDBInstanceNetInfoRequest(Builder builder) {
@@ -167,7 +172,10 @@ public class DescribeDBInstanceNetInfoRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOC*****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -176,7 +184,11 @@ public class DescribeDBInstanceNetInfoRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5*****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -185,13 +197,17 @@ public class DescribeDBInstanceNetInfoRequest extends Request {
         }
 
         /**
-         * The type of the endpoint. Valid values:
-         * <p>
+         * <p>The type of the endpoint. Valid values:</p>
+         * <ul>
+         * <li><strong>Normal</strong>: regular endpoint</li>
+         * <li><strong>ReadWriteSplitting</strong>: read/write splitting endpoint</li>
+         * </ul>
+         * <blockquote>
+         * <p>By default, the system returns both types of endpoints.</p>
+         * </blockquote>
          * 
-         * *   **Normal**: regular endpoint
-         * *   **ReadWriteSplitting**: read/write splitting endpoint
-         * 
-         * > By default, the system returns both types of endpoints.
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder DBInstanceNetRWSplitType(String DBInstanceNetRWSplitType) {
             this.putQueryParameter("DBInstanceNetRWSplitType", DBInstanceNetRWSplitType);
@@ -200,7 +216,10 @@ public class DescribeDBInstanceNetInfoRequest extends Request {
         }
 
         /**
-         * A reserved parameter. You do not need to specify this parameter.
+         * <p>A reserved parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder flag(Integer flag) {
             this.putQueryParameter("Flag", flag);
@@ -209,7 +228,10 @@ public class DescribeDBInstanceNetInfoRequest extends Request {
         }
 
         /**
-         * The name of the dedicated cluster to which the instance belongs. This parameter takes effect only when the instance runs MySQL on RDS Standard Edition and is created in a dedicated cluster.
+         * <p>The name of the dedicated cluster to which the instance belongs. This parameter takes effect only when the instance runs MySQL on RDS Standard Edition and is created in a dedicated cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rgc-2ze*****</p>
          */
         public Builder generalGroupName(String generalGroupName) {
             this.putQueryParameter("GeneralGroupName", generalGroupName);

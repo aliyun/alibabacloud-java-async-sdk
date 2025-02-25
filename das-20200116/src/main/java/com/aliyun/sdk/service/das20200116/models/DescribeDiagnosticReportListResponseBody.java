@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiagnosticReportListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDiagnosticReportListResponseBody</p>
  */
 public class DescribeDiagnosticReportListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
-    @NameInMap("Synchro")
+    @com.aliyun.core.annotation.NameInMap("Synchro")
     private String synchro;
 
     private DescribeDiagnosticReportListResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
         private String synchro; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,14 +114,17 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the diagnostics reports. Valid values:
-         * <p>
+         * <p>The information of the diagnostics reports. Valid values:</p>
+         * <ul>
+         * <li><strong>total</strong>: the number of diagnostics reports.</li>
+         * <li><strong>score</strong>: the health score.</li>
+         * <li><strong>diagnosticTime</strong>: the time when the diagnostics report was generated. The time is displayed in UTC.</li>
+         * <li><strong>startTime</strong>: the start time of the query. The time is displayed in UTC.</li>
+         * <li><strong>endTime</strong>: the end time of the query. The time is displayed in UTC.</li>
+         * </ul>
          * 
-         * *   **total**: the number of diagnostics reports.
-         * *   **score**: the health score.
-         * *   **diagnosticTime**: the time when the diagnostics report was generated. The time is displayed in UTC.
-         * *   **startTime**: the start time of the query. The time is displayed in UTC.
-         * *   **endTime**: the end time of the query. The time is displayed in UTC.
+         * <strong>example:</strong>
+         * <p>{     &quot;total&quot;: 1,     &quot;list&quot;: [       {         &quot;score&quot;: 100,         &quot;diagnosticTime&quot;: &quot;2022-11-14T08:17:00Z&quot;,         &quot;startTime&quot;: &quot;2022-11-14T07:16:59Z&quot;,         &quot;endTime&quot;: &quot;2022-11-14T08:16:59Z&quot;       }     ]   }</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -121,10 +132,13 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -132,7 +146,10 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D00DB161-FEF6-5428-B37A-8D29A4C2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -140,11 +157,14 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -152,7 +172,10 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
         }
 
         /**
-         * The reserved parameter.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder synchro(String synchro) {
             this.synchro = synchro;

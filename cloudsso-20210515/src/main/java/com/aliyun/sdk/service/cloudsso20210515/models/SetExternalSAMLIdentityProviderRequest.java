@@ -1,47 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetExternalSAMLIdentityProviderRequest} extends {@link RequestModel}
  *
  * <p>SetExternalSAMLIdentityProviderRequest</p>
  */
 public class SetExternalSAMLIdentityProviderRequest extends Request {
-    @Query
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BindingType")
+    private String bindingType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @Query
-    @NameInMap("EncodedMetadataDocument")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncodedMetadataDocument")
     private String encodedMetadataDocument;
 
-    @Query
-    @NameInMap("EntityId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EntityId")
     private String entityId;
 
-    @Query
-    @NameInMap("LoginUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoginUrl")
     private String loginUrl;
 
-    @Query
-    @NameInMap("SSOStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SSOStatus")
     private String SSOStatus;
 
-    @Query
-    @NameInMap("WantRequestSigned")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WantRequestSigned")
     private Boolean wantRequestSigned;
 
-    @Query
-    @NameInMap("X509Certificate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("X509Certificate")
     private String x509Certificate;
 
     private SetExternalSAMLIdentityProviderRequest(Builder builder) {
         super(builder);
+        this.bindingType = builder.bindingType;
         this.directoryId = builder.directoryId;
         this.encodedMetadataDocument = builder.encodedMetadataDocument;
         this.entityId = builder.entityId;
@@ -62,6 +67,13 @@ public class SetExternalSAMLIdentityProviderRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return bindingType
+     */
+    public String getBindingType() {
+        return this.bindingType;
     }
 
     /**
@@ -114,6 +126,7 @@ public class SetExternalSAMLIdentityProviderRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SetExternalSAMLIdentityProviderRequest, Builder> {
+        private String bindingType; 
         private String directoryId; 
         private String encodedMetadataDocument; 
         private String entityId; 
@@ -128,6 +141,7 @@ public class SetExternalSAMLIdentityProviderRequest extends Request {
 
         private Builder(SetExternalSAMLIdentityProviderRequest request) {
             super(request);
+            this.bindingType = request.bindingType;
             this.directoryId = request.directoryId;
             this.encodedMetadataDocument = request.encodedMetadataDocument;
             this.entityId = request.entityId;
@@ -138,7 +152,26 @@ public class SetExternalSAMLIdentityProviderRequest extends Request {
         } 
 
         /**
-         * The ID of the directory.
+         * <p>The Binding method for initiating a SAML request. Values:</p>
+         * <ul>
+         * <li>Post: Initiate the SAML request using the Post method. </li>
+         * <li>Redirect: Initiate the SAML request using the Redirect method.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Redirect</p>
+         */
+        public Builder bindingType(String bindingType) {
+            this.putQueryParameter("BindingType", bindingType);
+            this.bindingType = bindingType;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -147,10 +180,11 @@ public class SetExternalSAMLIdentityProviderRequest extends Request {
         }
 
         /**
-         * The metadata file of the IdP. The value of this parameter is Base64-encoded.
-         * <p>
+         * <p>The metadata file of the IdP. The value of this parameter is Base64-encoded.</p>
+         * <p>The file is provided by the IdP that supports SAML 2.0.</p>
          * 
-         * The file is provided by the IdP that supports SAML 2.0.
+         * <strong>example:</strong>
+         * <p>PD94bWwgdmVyc2lvbj0iMS4****</p>
          */
         public Builder encodedMetadataDocument(String encodedMetadataDocument) {
             this.putQueryParameter("EncodedMetadataDocument", encodedMetadataDocument);
@@ -159,7 +193,10 @@ public class SetExternalSAMLIdentityProviderRequest extends Request {
         }
 
         /**
-         * The entity ID of the IdP.
+         * <p>The entity ID of the IdP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.okta.com/exk3qwgtjhetR2Od">http://www.okta.com/exk3qwgtjhetR2Od</a>****</p>
          */
         public Builder entityId(String entityId) {
             this.putQueryParameter("EntityId", entityId);
@@ -168,7 +205,7 @@ public class SetExternalSAMLIdentityProviderRequest extends Request {
         }
 
         /**
-         * The logon URL of the IdP.
+         * <p>The logon URL of the IdP.</p>
          */
         public Builder loginUrl(String loginUrl) {
             this.putQueryParameter("LoginUrl", loginUrl);
@@ -177,11 +214,14 @@ public class SetExternalSAMLIdentityProviderRequest extends Request {
         }
 
         /**
-         * The status of SSO logon. Valid values:
-         * <p>
+         * <p>The status of SSO logon. Valid values:</p>
+         * <ul>
+         * <li>Enabled</li>
+         * <li>Disabled (default)</li>
+         * </ul>
          * 
-         * *   Enabled
-         * *   Disabled (default)
+         * <strong>example:</strong>
+         * <p>Disabled</p>
          */
         public Builder SSOStatus(String SSOStatus) {
             this.putQueryParameter("SSOStatus", SSOStatus);
@@ -190,11 +230,14 @@ public class SetExternalSAMLIdentityProviderRequest extends Request {
         }
 
         /**
-         * Specifies whether CloudSSO needs to sign SAML requests. The requests are sent when users log on to the CloudSSO user portal to initiate SAML-based SSO. Valid values:
-         * <p>
+         * <p>Specifies whether CloudSSO needs to sign SAML requests. The requests are sent when users log on to the CloudSSO user portal to initiate SAML-based SSO. Valid values:</p>
+         * <ul>
+         * <li>true: yes</li>
+         * <li>false: no (default)</li>
+         * </ul>
          * 
-         * *   true: yes
-         * *   false: no (default)
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder wantRequestSigned(Boolean wantRequestSigned) {
             this.putQueryParameter("WantRequestSigned", wantRequestSigned);
@@ -203,7 +246,10 @@ public class SetExternalSAMLIdentityProviderRequest extends Request {
         }
 
         /**
-         * The X.509 certificate in the PEM format. If you specify this parameter, all existing certificates are replaced.
+         * <p>The X.509 certificate in the PEM format. If you specify this parameter, all existing certificates are replaced.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MIIC8DCCAdigAwIBAgIQP9eomUYGeoND****</p>
          */
         public Builder x509Certificate(String x509Certificate) {
             this.putQueryParameter("X509Certificate", x509Certificate);

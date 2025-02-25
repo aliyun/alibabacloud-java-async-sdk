@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMediaProducingJobResponseBody} extends {@link TeaModel}
  *
  * <p>GetMediaProducingJobResponseBody</p>
  */
 public class GetMediaProducingJobResponseBody extends TeaModel {
-    @NameInMap("MediaProducingJob")
+    @com.aliyun.core.annotation.NameInMap("MediaProducingJob")
     private MediaProducingJob mediaProducingJob;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetMediaProducingJobResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MediaProducingJob.
+         * <p>The information about the online editing project.</p>
          */
         public Builder mediaProducingJob(MediaProducingJob mediaProducingJob) {
             this.mediaProducingJob = mediaProducingJob;
@@ -58,7 +63,10 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>83B7-7F87-4792-BFE9-63CD2137</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,50 +79,65 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMediaProducingJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaProducingJobResponseBody</p>
+     */
     public static class MediaProducingJob extends TeaModel {
-        @NameInMap("ClipsParam")
+        @com.aliyun.core.annotation.NameInMap("ClipsParam")
         private String clipsParam;
 
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("CompleteTime")
+        @com.aliyun.core.annotation.NameInMap("CompleteTime")
         private String completeTime;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Float duration;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
-        @NameInMap("MediaURL")
+        @com.aliyun.core.annotation.NameInMap("MediaURL")
         private String mediaURL;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("Progress")
+        private Integer progress;
+
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private String projectId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("SubJobMaterials")
+        private String subJobMaterials;
+
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("Timeline")
+        @com.aliyun.core.annotation.NameInMap("Timeline")
         private String timeline;
 
-        @NameInMap("VodMediaId")
+        @com.aliyun.core.annotation.NameInMap("UserData")
+        private String userData;
+
+        @com.aliyun.core.annotation.NameInMap("VodMediaId")
         private String vodMediaId;
 
         private MediaProducingJob(Builder builder) {
@@ -128,10 +151,13 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
             this.mediaURL = builder.mediaURL;
             this.message = builder.message;
             this.modifiedTime = builder.modifiedTime;
+            this.progress = builder.progress;
             this.projectId = builder.projectId;
             this.status = builder.status;
+            this.subJobMaterials = builder.subJobMaterials;
             this.templateId = builder.templateId;
             this.timeline = builder.timeline;
+            this.userData = builder.userData;
             this.vodMediaId = builder.vodMediaId;
         }
 
@@ -214,6 +240,13 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return progress
+         */
+        public Integer getProgress() {
+            return this.progress;
+        }
+
+        /**
          * @return projectId
          */
         public String getProjectId() {
@@ -228,6 +261,13 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return subJobMaterials
+         */
+        public String getSubJobMaterials() {
+            return this.subJobMaterials;
+        }
+
+        /**
          * @return templateId
          */
         public String getTemplateId() {
@@ -239,6 +279,13 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
          */
         public String getTimeline() {
             return this.timeline;
+        }
+
+        /**
+         * @return userData
+         */
+        public String getUserData() {
+            return this.userData;
         }
 
         /**
@@ -259,14 +306,20 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
             private String mediaURL; 
             private String message; 
             private String modifiedTime; 
+            private Integer progress; 
             private String projectId; 
             private String status; 
+            private String subJobMaterials; 
             private String templateId; 
             private String timeline; 
+            private String userData; 
             private String vodMediaId; 
 
             /**
-             * ClipsParam.
+             * <p>The template parameters of the media editing and production job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;VideoArray&quot;:[&quot;<strong><strong>05512043f49f697f7425</strong></strong>&quot;,&quot;<strong><strong>05512043f49f697f7425</strong></strong>&quot;,&quot;<strong><strong>05512043f49f697f7425</strong></strong>&quot;]}</p>
              */
             public Builder clipsParam(String clipsParam) {
                 this.clipsParam = clipsParam;
@@ -274,7 +327,11 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
             }
 
             /**
-             * Code.
+             * <p>The response code</p>
+             * <p>Note: Pay attention to this parameter if the job failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ExceededMaximumValue</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -282,7 +339,11 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
             }
 
             /**
-             * CompleteTime.
+             * <p>The time when the media editing and production job was complete.</p>
+             * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-23T13:33:52Z</p>
              */
             public Builder completeTime(String completeTime) {
                 this.completeTime = completeTime;
@@ -290,7 +351,11 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the media editing and production job was created.</p>
+             * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-23T13:33:40Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -298,7 +363,11 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The duration of the output file.</p>
+             * <p>Note: This parameter has a value if the job is successful and the output file is an audio or video file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30.500000</p>
              */
             public Builder duration(Float duration) {
                 this.duration = duration;
@@ -306,7 +375,10 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The ID of the media editing and production job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>cdb3e74639973036bc84</strong></strong></p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -314,7 +386,10 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
             }
 
             /**
-             * MediaId.
+             * <p>The media asset ID of the output file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>0cc6ba49eab379332c5b</strong></strong></p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -322,7 +397,10 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
             }
 
             /**
-             * MediaURL.
+             * <p>The URL of the output file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example2.mp4">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example2.mp4</a></p>
              */
             public Builder mediaURL(String mediaURL) {
                 this.mediaURL = mediaURL;
@@ -330,7 +408,11 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The returned message.</p>
+             * <p>Note: Pay attention to this parameter if the job failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The specified &quot;Width_Height&quot; has exceeded maximum value.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -338,7 +420,11 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The time when the media editing and production job was last modified.</p>
+             * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-23T13:33:49Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -346,7 +432,18 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * Progress.
+             */
+            public Builder progress(Integer progress) {
+                this.progress = progress;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the online editing project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>fddd7748b58bf1d47e95</strong></strong></p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -354,7 +451,15 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The state of the media editing and production job. Valid values:</p>
+             * <p>Init</p>
+             * <p>Queuing</p>
+             * <p>Processing</p>
+             * <p>Success</p>
+             * <p>Failed</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Failed</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -362,7 +467,21 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The materials of the media editing and production job if the job is a subjob of a quick video production job, including the broadcast text and title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Title&quot;: &quot;Title&quot;, &quot;SpeechText&quot;: &quot;Broadcast text of a quick video production job&quot;}</p>
+             */
+            public Builder subJobMaterials(String subJobMaterials) {
+                this.subJobMaterials = subJobMaterials;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the template used by the media editing and production job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>6e76134d739cc3e85d3e</strong></strong></p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -370,7 +489,10 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
             }
 
             /**
-             * Timeline.
+             * <p>The timeline of the media editing and production job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;VideoTracks&quot;:[{&quot;VideoTrackClips&quot;:[{&quot;MediaId&quot;:&quot;<strong><strong>4d7cf14dc7b83b0e801c</strong></strong>&quot;},{&quot;MediaId&quot;:&quot;<strong><strong>4d7cf14dc7b83b0e801c</strong></strong>&quot;}]}]}</p>
              */
             public Builder timeline(String timeline) {
                 this.timeline = timeline;
@@ -378,7 +500,21 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
             }
 
             /**
-             * VodMediaId.
+             * <p>The user-defined data in the JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22,%22Key%22:%22Valuexxx%22%7D">http://xx.xx.xxx&quot;,&quot;Key&quot;:&quot;Valuexxx&quot;}</a></p>
+             */
+            public Builder userData(String userData) {
+                this.userData = userData;
+                return this;
+            }
+
+            /**
+             * <p>The media asset ID of the output file in ApsaraVideo VOD if the output file is stored in ApsaraVideo VOD.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>332c5b0cc6ba49eab379</strong></strong></p>
              */
             public Builder vodMediaId(String vodMediaId) {
                 this.vodMediaId = vodMediaId;

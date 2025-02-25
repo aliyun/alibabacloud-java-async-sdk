@@ -1,41 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExecuteCallTaskRequest} extends {@link RequestModel}
  *
  * <p>ExecuteCallTaskRequest</p>
  */
 public class ExecuteCallTaskRequest extends Request {
-    @Query
-    @NameInMap("FireTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FireTime")
     private String fireTime;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String status;
 
-    @Query
-    @NameInMap("TaskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long taskId;
 
     private ExecuteCallTaskRequest(Builder builder) {
@@ -115,18 +115,24 @@ public class ExecuteCallTaskRequest extends Request {
             super();
         } 
 
-        private Builder(ExecuteCallTaskRequest response) {
-            super(response);
-            this.fireTime = response.fireTime;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.status = response.status;
-            this.taskId = response.taskId;
+        private Builder(ExecuteCallTaskRequest request) {
+            super(request);
+            this.fireTime = request.fireTime;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.status = request.status;
+            this.taskId = request.taskId;
         } 
 
         /**
-         * FireTime.
+         * <p>The time when the call task is executed, in the yyyy-MM-dd HH:mm:ss format.</p>
+         * <blockquote>
+         * <p>You can leave this parameter empty.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-09 00:00:00</p>
          */
         public Builder fireTime(String fireTime) {
             this.putQueryParameter("FireTime", fireTime);
@@ -162,7 +168,16 @@ public class ExecuteCallTaskRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The task state. Valid values:</p>
+         * <ul>
+         * <li><strong>RUNNING</strong></li>
+         * <li><strong>STOP</strong></li>
+         * <li><strong>CANCEL</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -171,7 +186,11 @@ public class ExecuteCallTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID. You can call the <a href="~~CreateCallTask~~">CreateCallTask</a> operation to obtain the task ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2256****</p>
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);

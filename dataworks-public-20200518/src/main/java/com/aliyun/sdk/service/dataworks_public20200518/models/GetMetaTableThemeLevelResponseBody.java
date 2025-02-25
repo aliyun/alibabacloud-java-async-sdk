@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMetaTableThemeLevelResponseBody} extends {@link TeaModel}
  *
  * <p>GetMetaTableThemeLevelResponseBody</p>
  */
 public class GetMetaTableThemeLevelResponseBody extends TeaModel {
-    @NameInMap("Entity")
+    @com.aliyun.core.annotation.NameInMap("Entity")
     private Entity entity;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetMetaTableThemeLevelResponseBody(Builder builder) {
@@ -98,7 +103,7 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder entity(Entity entity) {
             this.entity = entity;
@@ -106,7 +111,10 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +122,10 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +133,10 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +144,10 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can troubleshoot errors based on the ID.
+         * <p>The request ID. You can troubleshoot issues based on the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1324afdsfde</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,17 +171,23 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMetaTableThemeLevelResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMetaTableThemeLevelResponseBody</p>
+     */
     public static class Level extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("LevelId")
+        @com.aliyun.core.annotation.NameInMap("LevelId")
         private Long levelId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
         private Level(Builder builder) {
@@ -214,7 +240,10 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
             private Integer type; 
 
             /**
-             * The description of the table level.
+             * <p>The description of the level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -222,7 +251,10 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the table level.
+             * <p>The ID of the level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder levelId(Long levelId) {
                 this.levelId = levelId;
@@ -230,7 +262,10 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table level.
+             * <p>The name of the level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>level1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -238,11 +273,14 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the table level. Valid values:
-             * <p>
+             * <p>The type of the level. Valid values:</p>
+             * <ul>
+             * <li>1: indicates the logical level.</li>
+             * <li>2: indicates the physical level.</li>
+             * </ul>
              * 
-             * *   1: indicates the logical level.
-             * *   2: indicates the physical level.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -256,17 +294,23 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMetaTableThemeLevelResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMetaTableThemeLevelResponseBody</p>
+     */
     public static class Theme extends TeaModel {
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private Integer level;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ParentId")
+        @com.aliyun.core.annotation.NameInMap("ParentId")
         private Long parentId;
 
-        @NameInMap("ThemeId")
+        @com.aliyun.core.annotation.NameInMap("ThemeId")
         private Long themeId;
 
         private Theme(Builder builder) {
@@ -319,11 +363,14 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
             private Long themeId; 
 
             /**
-             * The level of the table folder. Valid values:
-             * <p>
+             * <p>The level of the theme. Valid values:</p>
+             * <ul>
+             * <li>1</li>
+             * <li>2</li>
+             * </ul>
              * 
-             * *   1: indicates a table folder of level 1.
-             * *   2: indicates a table folder of level 2.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder level(Integer level) {
                 this.level = level;
@@ -331,7 +378,10 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table folder.
+             * <p>The name of the theme.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>theme1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -339,7 +389,10 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the parent table folder.
+             * <p>The ID of the parent theme.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder parentId(Long parentId) {
                 this.parentId = parentId;
@@ -347,7 +400,10 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the table folder.
+             * <p>The ID of the theme.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder themeId(Long themeId) {
                 this.themeId = themeId;
@@ -361,12 +417,18 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMetaTableThemeLevelResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMetaTableThemeLevelResponseBody</p>
+     */
     public static class Entity extends TeaModel {
-        @NameInMap("Level")
-        private java.util.List < Level> level;
+        @com.aliyun.core.annotation.NameInMap("Level")
+        private java.util.List<Level> level;
 
-        @NameInMap("Theme")
-        private java.util.List < Theme> theme;
+        @com.aliyun.core.annotation.NameInMap("Theme")
+        private java.util.List<Theme> theme;
 
         private Entity(Builder builder) {
             this.level = builder.level;
@@ -384,33 +446,33 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
         /**
          * @return level
          */
-        public java.util.List < Level> getLevel() {
+        public java.util.List<Level> getLevel() {
             return this.level;
         }
 
         /**
          * @return theme
          */
-        public java.util.List < Theme> getTheme() {
+        public java.util.List<Theme> getTheme() {
             return this.theme;
         }
 
         public static final class Builder {
-            private java.util.List < Level> level; 
-            private java.util.List < Theme> theme; 
+            private java.util.List<Level> level; 
+            private java.util.List<Theme> theme; 
 
             /**
-             * The information about the table level.
+             * <p>The information about the levels of the metatable.</p>
              */
-            public Builder level(java.util.List < Level> level) {
+            public Builder level(java.util.List<Level> level) {
                 this.level = level;
                 return this;
             }
 
             /**
-             * The information about the table folder.
+             * <p>The information about the themes of the metatable.</p>
              */
-            public Builder theme(java.util.List < Theme> theme) {
+            public Builder theme(java.util.List<Theme> theme) {
                 this.theme = theme;
                 return this;
             }

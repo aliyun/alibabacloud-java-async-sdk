@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateApplicationScalingRuleResponseBody} extends {@link TeaModel}
  *
  * <p>CreateApplicationScalingRuleResponseBody</p>
  */
 public class CreateApplicationScalingRuleResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TraceId")
+    @com.aliyun.core.annotation.NameInMap("TraceId")
     private String traceId;
 
     private CreateApplicationScalingRuleResponseBody(Builder builder) {
@@ -171,23 +176,29 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateApplicationScalingRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateApplicationScalingRuleResponseBody</p>
+     */
     public static class Metrics extends TeaModel {
-        @NameInMap("MetricTargetAverageUtilization")
+        @com.aliyun.core.annotation.NameInMap("MetricTargetAverageUtilization")
         private Integer metricTargetAverageUtilization;
 
-        @NameInMap("MetricType")
+        @com.aliyun.core.annotation.NameInMap("MetricType")
         private String metricType;
 
-        @NameInMap("SlbId")
+        @com.aliyun.core.annotation.NameInMap("SlbId")
         private String slbId;
 
-        @NameInMap("SlbLogstore")
+        @com.aliyun.core.annotation.NameInMap("SlbLogstore")
         private String slbLogstore;
 
-        @NameInMap("SlbProject")
+        @com.aliyun.core.annotation.NameInMap("SlbProject")
         private String slbProject;
 
-        @NameInMap("Vport")
+        @com.aliyun.core.annotation.NameInMap("Vport")
         private String vport;
 
         private Metrics(Builder builder) {
@@ -312,14 +323,20 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateApplicationScalingRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateApplicationScalingRuleResponseBody</p>
+     */
     public static class Metric extends TeaModel {
-        @NameInMap("MaxReplicas")
+        @com.aliyun.core.annotation.NameInMap("MaxReplicas")
         private Integer maxReplicas;
 
-        @NameInMap("Metrics")
-        private java.util.List < Metrics> metrics;
+        @com.aliyun.core.annotation.NameInMap("Metrics")
+        private java.util.List<Metrics> metrics;
 
-        @NameInMap("MinReplicas")
+        @com.aliyun.core.annotation.NameInMap("MinReplicas")
         private Integer minReplicas;
 
         private Metric(Builder builder) {
@@ -346,7 +363,7 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         /**
          * @return metrics
          */
-        public java.util.List < Metrics> getMetrics() {
+        public java.util.List<Metrics> getMetrics() {
             return this.metrics;
         }
 
@@ -359,7 +376,7 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer maxReplicas; 
-            private java.util.List < Metrics> metrics; 
+            private java.util.List<Metrics> metrics; 
             private Integer minReplicas; 
 
             /**
@@ -373,7 +390,7 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
             /**
              * Metrics.
              */
-            public Builder metrics(java.util.List < Metrics> metrics) {
+            public Builder metrics(java.util.List<Metrics> metrics) {
                 this.metrics = metrics;
                 return this;
             }
@@ -393,17 +410,23 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateApplicationScalingRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateApplicationScalingRuleResponseBody</p>
+     */
     public static class Schedules extends TeaModel {
-        @NameInMap("AtTime")
+        @com.aliyun.core.annotation.NameInMap("AtTime")
         private String atTime;
 
-        @NameInMap("MaxReplicas")
+        @com.aliyun.core.annotation.NameInMap("MaxReplicas")
         private Integer maxReplicas;
 
-        @NameInMap("MinReplicas")
+        @com.aliyun.core.annotation.NameInMap("MinReplicas")
         private Integer minReplicas;
 
-        @NameInMap("TargetReplicas")
+        @com.aliyun.core.annotation.NameInMap("TargetReplicas")
         private Integer targetReplicas;
 
         private Schedules(Builder builder) {
@@ -494,18 +517,24 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateApplicationScalingRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateApplicationScalingRuleResponseBody</p>
+     */
     public static class Timer extends TeaModel {
-        @NameInMap("BeginDate")
+        @com.aliyun.core.annotation.NameInMap("BeginDate")
         private String beginDate;
 
-        @NameInMap("EndDate")
+        @com.aliyun.core.annotation.NameInMap("EndDate")
         private String endDate;
 
-        @NameInMap("Period")
+        @com.aliyun.core.annotation.NameInMap("Period")
         private String period;
 
-        @NameInMap("Schedules")
-        private java.util.List < Schedules> schedules;
+        @com.aliyun.core.annotation.NameInMap("Schedules")
+        private java.util.List<Schedules> schedules;
 
         private Timer(Builder builder) {
             this.beginDate = builder.beginDate;
@@ -546,7 +575,7 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         /**
          * @return schedules
          */
-        public java.util.List < Schedules> getSchedules() {
+        public java.util.List<Schedules> getSchedules() {
             return this.schedules;
         }
 
@@ -554,7 +583,7 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
             private String beginDate; 
             private String endDate; 
             private String period; 
-            private java.util.List < Schedules> schedules; 
+            private java.util.List<Schedules> schedules; 
 
             /**
              * BeginDate.
@@ -583,7 +612,7 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
             /**
              * Schedules.
              */
-            public Builder schedules(java.util.List < Schedules> schedules) {
+            public Builder schedules(java.util.List<Schedules> schedules) {
                 this.schedules = schedules;
                 return this;
             }
@@ -595,37 +624,47 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateApplicationScalingRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateApplicationScalingRuleResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("LastDisableTime")
+        @com.aliyun.core.annotation.NameInMap("EnableIdle")
+        private Boolean enableIdle;
+
+        @com.aliyun.core.annotation.NameInMap("LastDisableTime")
         private Long lastDisableTime;
 
-        @NameInMap("Metric")
+        @com.aliyun.core.annotation.NameInMap("Metric")
         private Metric metric;
 
-        @NameInMap("ScaleRuleEnabled")
+        @com.aliyun.core.annotation.NameInMap("ScaleRuleEnabled")
         private Boolean scaleRuleEnabled;
 
-        @NameInMap("ScaleRuleName")
+        @com.aliyun.core.annotation.NameInMap("ScaleRuleName")
         private String scaleRuleName;
 
-        @NameInMap("ScaleRuleType")
+        @com.aliyun.core.annotation.NameInMap("ScaleRuleType")
         private String scaleRuleType;
 
-        @NameInMap("Timer")
+        @com.aliyun.core.annotation.NameInMap("Timer")
         private Timer timer;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private Data(Builder builder) {
             this.appId = builder.appId;
             this.createTime = builder.createTime;
+            this.enableIdle = builder.enableIdle;
             this.lastDisableTime = builder.lastDisableTime;
             this.metric = builder.metric;
             this.scaleRuleEnabled = builder.scaleRuleEnabled;
@@ -655,6 +694,13 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
          */
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return enableIdle
+         */
+        public Boolean getEnableIdle() {
+            return this.enableIdle;
         }
 
         /**
@@ -709,6 +755,7 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         public static final class Builder {
             private String appId; 
             private Long createTime; 
+            private Boolean enableIdle; 
             private Long lastDisableTime; 
             private Metric metric; 
             private Boolean scaleRuleEnabled; 
@@ -730,6 +777,14 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * EnableIdle.
+             */
+            public Builder enableIdle(Boolean enableIdle) {
+                this.enableIdle = enableIdle;
                 return this;
             }
 

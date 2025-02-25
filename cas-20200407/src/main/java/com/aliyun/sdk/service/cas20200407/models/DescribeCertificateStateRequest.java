@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200407.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCertificateStateRequest} extends {@link RequestModel}
  *
  * <p>DescribeCertificateStateRequest</p>
  */
 public class DescribeCertificateStateRequest extends Request {
-    @Query
-    @NameInMap("OrderId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long orderId;
 
     private DescribeCertificateStateRequest(Builder builder) {
@@ -49,13 +54,20 @@ public class DescribeCertificateStateRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCertificateStateRequest response) {
-            super(response);
-            this.orderId = response.orderId;
+        private Builder(DescribeCertificateStateRequest request) {
+            super(request);
+            this.orderId = request.orderId;
         } 
 
         /**
-         * OrderId.
+         * <p>The ID of the certificate application order that you want to query.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a> operation to obtain the ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123451222</p>
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApisByAppResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeApisByAppResponseBody</p>
  */
 public class DescribeApisByAppResponseBody extends TeaModel {
-    @NameInMap("AppApiRelationInfos")
+    @com.aliyun.core.annotation.NameInMap("AppApiRelationInfos")
     private AppApiRelationInfos appApiRelationInfos;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeApisByAppResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * AppApiRelationInfos.
+         * <p>The API authorizations.</p>
          */
         public Builder appApiRelationInfos(AppApiRelationInfos appApiRelationInfos) {
             this.appApiRelationInfos = appApiRelationInfos;
@@ -94,7 +99,10 @@ public class DescribeApisByAppResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of pages to return the results on.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeApisByAppResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeApisByAppResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ015</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeApisByAppResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,44 +148,53 @@ public class DescribeApisByAppResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeApisByAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApisByAppResponseBody</p>
+     */
     public static class AppApiRelationInfo extends TeaModel {
-        @NameInMap("ApiId")
+        @com.aliyun.core.annotation.NameInMap("ApiId")
         private String apiId;
 
-        @NameInMap("ApiName")
+        @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
 
-        @NameInMap("AuthVaildTime")
+        @com.aliyun.core.annotation.NameInMap("AuthVaildTime")
         private String authVaildTime;
 
-        @NameInMap("AuthorizationSource")
+        @com.aliyun.core.annotation.NameInMap("AuthorizationSource")
         private String authorizationSource;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("Method")
+        @com.aliyun.core.annotation.NameInMap("Method")
         private String method;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("StageName")
+        @com.aliyun.core.annotation.NameInMap("StageAlias")
+        private String stageAlias;
+
+        @com.aliyun.core.annotation.NameInMap("StageName")
         private String stageName;
 
         private AppApiRelationInfo(Builder builder) {
@@ -184,6 +210,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             this.operator = builder.operator;
             this.path = builder.path;
             this.regionId = builder.regionId;
+            this.stageAlias = builder.stageAlias;
             this.stageName = builder.stageName;
         }
 
@@ -280,6 +307,13 @@ public class DescribeApisByAppResponseBody extends TeaModel {
         }
 
         /**
+         * @return stageAlias
+         */
+        public String getStageAlias() {
+            return this.stageAlias;
+        }
+
+        /**
          * @return stageName
          */
         public String getStageName() {
@@ -299,10 +333,14 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             private String operator; 
             private String path; 
             private String regionId; 
+            private String stageAlias; 
             private String stageName; 
 
             /**
-             * ApiId.
+             * <p>The API ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c625795a1e664782a918eaa629e96ab5</p>
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -310,7 +348,10 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             }
 
             /**
-             * ApiName.
+             * <p>The API name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sd2_h5_player_history_competition</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -318,7 +359,10 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             }
 
             /**
-             * AuthVaildTime.
+             * <p>The validity period of the authorization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sun, 02 Jan 2022 16:00:00 GMT</p>
              */
             public Builder authVaildTime(String authVaildTime) {
                 this.authVaildTime = authVaildTime;
@@ -326,7 +370,10 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             }
 
             /**
-             * AuthorizationSource.
+             * <p>The authorization source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELF</p>
              */
             public Builder authorizationSource(String authorizationSource) {
                 this.authorizationSource = authorizationSource;
@@ -334,7 +381,10 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * <p>The time when the authorization was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sun, 02 Jan 2022 16:00:00 GMT</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -342,7 +392,10 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The authorization description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b1008kz</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -350,7 +403,10 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * <p>The ID of the API group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>38bed48d664149e4b9b5ea576319673f</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -358,7 +414,10 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>The name of the API group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wb2022012101605749</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -366,7 +425,10 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Method.
+             * <p>The HTTP method of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GET</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -374,7 +436,14 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * <p>The authorizer. Valid values:</p>
+             * <ul>
+             * <li><strong>PROVIDER</strong>: API owner</li>
+             * <li><strong>CONSUMER</strong>: API caller</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PROVIDER</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -382,7 +451,10 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * <p>The request path of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/api/offline/cacheData</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -390,7 +462,10 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -398,7 +473,21 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             }
 
             /**
-             * StageName.
+             * <p>The environment alias.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Online</p>
+             */
+            public Builder stageAlias(String stageAlias) {
+                this.stageAlias = stageAlias;
+                return this;
+            }
+
+            /**
+             * <p>The environment name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RELEASE</p>
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
@@ -412,9 +501,15 @@ public class DescribeApisByAppResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeApisByAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApisByAppResponseBody</p>
+     */
     public static class AppApiRelationInfos extends TeaModel {
-        @NameInMap("AppApiRelationInfo")
-        private java.util.List < AppApiRelationInfo> appApiRelationInfo;
+        @com.aliyun.core.annotation.NameInMap("AppApiRelationInfo")
+        private java.util.List<AppApiRelationInfo> appApiRelationInfo;
 
         private AppApiRelationInfos(Builder builder) {
             this.appApiRelationInfo = builder.appApiRelationInfo;
@@ -431,17 +526,17 @@ public class DescribeApisByAppResponseBody extends TeaModel {
         /**
          * @return appApiRelationInfo
          */
-        public java.util.List < AppApiRelationInfo> getAppApiRelationInfo() {
+        public java.util.List<AppApiRelationInfo> getAppApiRelationInfo() {
             return this.appApiRelationInfo;
         }
 
         public static final class Builder {
-            private java.util.List < AppApiRelationInfo> appApiRelationInfo; 
+            private java.util.List<AppApiRelationInfo> appApiRelationInfo; 
 
             /**
              * AppApiRelationInfo.
              */
-            public Builder appApiRelationInfo(java.util.List < AppApiRelationInfo> appApiRelationInfo) {
+            public Builder appApiRelationInfo(java.util.List<AppApiRelationInfo> appApiRelationInfo) {
                 this.appApiRelationInfo = appApiRelationInfo;
                 return this;
             }

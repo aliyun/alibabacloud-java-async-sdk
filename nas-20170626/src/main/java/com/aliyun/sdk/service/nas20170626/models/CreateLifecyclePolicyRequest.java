@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLifecyclePolicyRequest} extends {@link RequestModel}
  *
  * <p>CreateLifecyclePolicyRequest</p>
  */
 public class CreateLifecyclePolicyRequest extends Request {
-    @Query
-    @NameInMap("FileSystemId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileSystemId;
 
-    @Query
-    @NameInMap("LifecyclePolicyName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LifecyclePolicyName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String lifecyclePolicyName;
 
-    @Query
-    @NameInMap("LifecycleRuleName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LifecycleRuleName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String lifecycleRuleName;
 
-    @Query
-    @NameInMap("Path")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Path")
     private String path;
 
-    @Query
-    @NameInMap("Paths")
-    private java.util.List < String > paths;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Paths")
+    private java.util.List<String> paths;
 
-    @Query
-    @NameInMap("StorageType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String storageType;
 
     private CreateLifecyclePolicyRequest(Builder builder) {
@@ -94,7 +99,7 @@ public class CreateLifecyclePolicyRequest extends Request {
     /**
      * @return paths
      */
-    public java.util.List < String > getPaths() {
+    public java.util.List<String> getPaths() {
         return this.paths;
     }
 
@@ -110,25 +115,29 @@ public class CreateLifecyclePolicyRequest extends Request {
         private String lifecyclePolicyName; 
         private String lifecycleRuleName; 
         private String path; 
-        private java.util.List < String > paths; 
+        private java.util.List<String> paths; 
         private String storageType; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateLifecyclePolicyRequest response) {
-            super(response);
-            this.fileSystemId = response.fileSystemId;
-            this.lifecyclePolicyName = response.lifecyclePolicyName;
-            this.lifecycleRuleName = response.lifecycleRuleName;
-            this.path = response.path;
-            this.paths = response.paths;
-            this.storageType = response.storageType;
+        private Builder(CreateLifecyclePolicyRequest request) {
+            super(request);
+            this.fileSystemId = request.fileSystemId;
+            this.lifecyclePolicyName = request.lifecyclePolicyName;
+            this.lifecycleRuleName = request.lifecycleRuleName;
+            this.path = request.path;
+            this.paths = request.paths;
+            this.storageType = request.storageType;
         } 
 
         /**
-         * FileSystemId.
+         * <p>The ID of the file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31a8e4****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -137,7 +146,11 @@ public class CreateLifecyclePolicyRequest extends Request {
         }
 
         /**
-         * LifecyclePolicyName.
+         * <p>The name of the lifecycle policy. The name must be 3 to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lifecyclepolicy_01</p>
          */
         public Builder lifecyclePolicyName(String lifecyclePolicyName) {
             this.putQueryParameter("LifecyclePolicyName", lifecyclePolicyName);
@@ -146,7 +159,18 @@ public class CreateLifecyclePolicyRequest extends Request {
         }
 
         /**
-         * LifecycleRuleName.
+         * <p>The management rule that is associated with the lifecycle policy.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>DEFAULT_ATIME_14: Files that are not accessed in the last 14 days are dumped to the IA storage medium.</li>
+         * <li>DEFAULT_ATIME_30: Files that are not accessed in the last 30 days are dumped to the IA storage medium.</li>
+         * <li>DEFAULT_ATIME_60: Files that are not accessed in the last 60 days are dumped to the IA storage medium.</li>
+         * <li>DEFAULT_ATIME_90: Files that are not accessed in the last 90 days are dumped to the IA storage medium.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT_ATIME_14</p>
          */
         public Builder lifecycleRuleName(String lifecycleRuleName) {
             this.putQueryParameter("LifecycleRuleName", lifecycleRuleName);
@@ -155,7 +179,14 @@ public class CreateLifecyclePolicyRequest extends Request {
         }
 
         /**
-         * Path.
+         * <p>The absolute path of the directory that is associated with the lifecycle policy.</p>
+         * <p>If you specify this parameter, you can associate the lifecycle policy with only one directory. The path must start with a forward slash (/) and must be a path that exists in the mount target.</p>
+         * <blockquote>
+         * <p>We recommend that you specify the Paths.N parameter so that you can associate the lifecycle policy with multiple directories.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>/pathway/to/folder</p>
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -164,16 +195,25 @@ public class CreateLifecyclePolicyRequest extends Request {
         }
 
         /**
-         * Paths.
+         * <p>The absolute paths of the directories that are associated with the lifecycle policy.</p>
+         * <p>If you specify this parameter, you can associate the lifecycle policy with multiple directories. Each path must start with a forward slash (/) and must be a path that exists in the mount target. Valid values of N: 1 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;/path1&quot;, &quot;/path2&quot;</p>
          */
-        public Builder paths(java.util.List < String > paths) {
+        public Builder paths(java.util.List<String> paths) {
             this.putQueryParameter("Paths", paths);
             this.paths = paths;
             return this;
         }
 
         /**
-         * StorageType.
+         * <p>The storage type of the data that is dumped to the IA storage medium.</p>
+         * <p>Default value: InfrequentAccess (IA).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InfrequentAccess</p>
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);

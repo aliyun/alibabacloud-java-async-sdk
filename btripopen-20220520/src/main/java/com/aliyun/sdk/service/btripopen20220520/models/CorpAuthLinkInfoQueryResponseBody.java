@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CorpAuthLinkInfoQueryResponseBody} extends {@link TeaModel}
  *
  * <p>CorpAuthLinkInfoQueryResponseBody</p>
  */
 public class CorpAuthLinkInfoQueryResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private CorpAuthLinkInfoQueryResponseBody(Builder builder) {
@@ -131,14 +136,20 @@ public class CorpAuthLinkInfoQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CorpAuthLinkInfoQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CorpAuthLinkInfoQueryResponseBody</p>
+     */
     public static class LinkCorps extends TeaModel {
-        @NameInMap("corp_name")
+        @com.aliyun.core.annotation.NameInMap("corp_name")
         private String corpName;
 
-        @NameInMap("open_corp_id")
+        @com.aliyun.core.annotation.NameInMap("open_corp_id")
         private String openCorpId;
 
-        @NameInMap("true_corp_id")
+        @com.aliyun.core.annotation.NameInMap("true_corp_id")
         private String trueCorpId;
 
         private LinkCorps(Builder builder) {
@@ -212,14 +223,20 @@ public class CorpAuthLinkInfoQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CorpAuthLinkInfoQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CorpAuthLinkInfoQueryResponseBody</p>
+     */
     public static class OrgCorp extends TeaModel {
-        @NameInMap("corp_name")
+        @com.aliyun.core.annotation.NameInMap("corp_name")
         private String corpName;
 
-        @NameInMap("open_corp_id")
+        @com.aliyun.core.annotation.NameInMap("open_corp_id")
         private String openCorpId;
 
-        @NameInMap("true_corp_id")
+        @com.aliyun.core.annotation.NameInMap("true_corp_id")
         private String trueCorpId;
 
         private OrgCorp(Builder builder) {
@@ -293,11 +310,17 @@ public class CorpAuthLinkInfoQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CorpAuthLinkInfoQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CorpAuthLinkInfoQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
-        @NameInMap("link_corps")
-        private java.util.List < LinkCorps> linkCorps;
+        @com.aliyun.core.annotation.NameInMap("link_corps")
+        private java.util.List<LinkCorps> linkCorps;
 
-        @NameInMap("org_corp")
+        @com.aliyun.core.annotation.NameInMap("org_corp")
         private OrgCorp orgCorp;
 
         private Module(Builder builder) {
@@ -316,7 +339,7 @@ public class CorpAuthLinkInfoQueryResponseBody extends TeaModel {
         /**
          * @return linkCorps
          */
-        public java.util.List < LinkCorps> getLinkCorps() {
+        public java.util.List<LinkCorps> getLinkCorps() {
             return this.linkCorps;
         }
 
@@ -328,13 +351,13 @@ public class CorpAuthLinkInfoQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < LinkCorps> linkCorps; 
+            private java.util.List<LinkCorps> linkCorps; 
             private OrgCorp orgCorp; 
 
             /**
              * link_corps.
              */
-            public Builder linkCorps(java.util.List < LinkCorps> linkCorps) {
+            public Builder linkCorps(java.util.List<LinkCorps> linkCorps) {
                 this.linkCorps = linkCorps;
                 return this;
             }

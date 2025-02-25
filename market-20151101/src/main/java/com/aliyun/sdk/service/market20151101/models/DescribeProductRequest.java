@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.market20151101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeProductRequest} extends {@link RequestModel}
  *
  * <p>DescribeProductRequest</p>
  */
 public class DescribeProductRequest extends Request {
-    @Query
-    @NameInMap("AliUid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AliUid")
     private String aliUid;
 
-    @Query
-    @NameInMap("Code")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Code")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String code;
 
-    @Query
-    @NameInMap("QueryDraft")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryDraft")
     private Boolean queryDraft;
 
     private DescribeProductRequest(Builder builder) {
@@ -83,7 +88,10 @@ public class DescribeProductRequest extends Request {
         } 
 
         /**
-         * AliUid
+         * <p>AliUid</p>
+         * 
+         * <strong>example:</strong>
+         * <p>190********569</p>
          */
         public Builder aliUid(String aliUid) {
             this.putQueryParameter("AliUid", aliUid);
@@ -92,7 +100,10 @@ public class DescribeProductRequest extends Request {
         }
 
         /**
-         * Code.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cmjj01**45</p>
          */
         public Builder code(String code) {
             this.putQueryParameter("Code", code);

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListChatbotInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>ListChatbotInstancesResponseBody</p>
  */
 public class ListChatbotInstancesResponseBody extends TeaModel {
-    @NameInMap("Bots")
-    private java.util.List < Bots> bots;
+    @com.aliyun.core.annotation.NameInMap("Bots")
+    private java.util.List<Bots> bots;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListChatbotInstancesResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
     /**
      * @return bots
      */
-    public java.util.List < Bots> getBots() {
+    public java.util.List<Bots> getBots() {
         return this.bots;
     }
 
@@ -79,7 +84,7 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Bots> bots; 
+        private java.util.List<Bots> bots; 
         private Integer pageNumber; 
         private Long pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
         /**
          * Bots.
          */
-        public Builder bots(java.util.List < Bots> bots) {
+        public Builder bots(java.util.List<Bots> bots) {
             this.bots = bots;
             return this;
         }
@@ -131,26 +136,32 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListChatbotInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListChatbotInstancesResponseBody</p>
+     */
     public static class Bots extends TeaModel {
-        @NameInMap("Avatar")
+        @com.aliyun.core.annotation.NameInMap("Avatar")
         private String avatar;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Introduction")
+        @com.aliyun.core.annotation.NameInMap("Introduction")
         private String introduction;
 
-        @NameInMap("LanguageCode")
+        @com.aliyun.core.annotation.NameInMap("LanguageCode")
         private String languageCode;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("TimeZone")
+        @com.aliyun.core.annotation.NameInMap("TimeZone")
         private String timeZone;
 
         private Bots(Builder builder) {

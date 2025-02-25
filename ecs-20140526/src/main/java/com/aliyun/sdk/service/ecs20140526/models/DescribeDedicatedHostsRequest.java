@@ -1,89 +1,103 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDedicatedHostsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDedicatedHostsRequest</p>
  */
 public class DescribeDedicatedHostsRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("DedicatedHostClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DedicatedHostClusterId")
     private String dedicatedHostClusterId;
 
-    @Query
-    @NameInMap("DedicatedHostIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DedicatedHostIds")
     private String dedicatedHostIds;
 
-    @Query
-    @NameInMap("DedicatedHostName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DedicatedHostName")
     private String dedicatedHostName;
 
-    @Query
-    @NameInMap("DedicatedHostType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DedicatedHostType")
     private String dedicatedHostType;
 
-    @Query
-    @NameInMap("LockReason")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LockReason")
     private String lockReason;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SocketDetails")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SocketDetails")
     private String socketDetails;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private DescribeDedicatedHostsRequest(Builder builder) {
@@ -94,6 +108,8 @@ public class DescribeDedicatedHostsRequest extends Request {
         this.dedicatedHostName = builder.dedicatedHostName;
         this.dedicatedHostType = builder.dedicatedHostType;
         this.lockReason = builder.lockReason;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
@@ -161,6 +177,20 @@ public class DescribeDedicatedHostsRequest extends Request {
      */
     public String getLockReason() {
         return this.lockReason;
+    }
+
+    /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -236,7 +266,7 @@ public class DescribeDedicatedHostsRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -254,6 +284,8 @@ public class DescribeDedicatedHostsRequest extends Request {
         private String dedicatedHostName; 
         private String dedicatedHostType; 
         private String lockReason; 
+        private Integer maxResults; 
+        private String nextToken; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
@@ -264,7 +296,7 @@ public class DescribeDedicatedHostsRequest extends Request {
         private Long resourceOwnerId; 
         private String socketDetails; 
         private String status; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String zoneId; 
 
         private Builder() {
@@ -279,6 +311,8 @@ public class DescribeDedicatedHostsRequest extends Request {
             this.dedicatedHostName = request.dedicatedHostName;
             this.dedicatedHostType = request.dedicatedHostType;
             this.lockReason = request.lockReason;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
@@ -303,7 +337,10 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * The ID of the dedicated host cluster to which the dedicated host belongs.
+         * <p>The ID of the dedicated host cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc-bp12wlf6am0vz9v2****</p>
          */
         public Builder dedicatedHostClusterId(String dedicatedHostClusterId) {
             this.putQueryParameter("DedicatedHostClusterId", dedicatedHostClusterId);
@@ -312,7 +349,10 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * The IDs of dedicated hosts. You can specify up to 100 dedicated host IDs in a single request. Separate the IDs with commas (,).
+         * <p>The IDs of dedicated hosts. You can specify up to 100 dedicated host IDs in a single request. Separate the IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;dh-bp165p6xk2tlw61e****&quot;, &quot;dh-bp1f9vxmno7emy96****&quot;]</p>
          */
         public Builder dedicatedHostIds(String dedicatedHostIds) {
             this.putQueryParameter("DedicatedHostIds", dedicatedHostIds);
@@ -321,7 +361,10 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * The name of the dedicated host.
+         * <p>The name of the dedicated host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyDDHTestName</p>
          */
         public Builder dedicatedHostName(String dedicatedHostName) {
             this.putQueryParameter("DedicatedHostName", dedicatedHostName);
@@ -330,7 +373,10 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * The dedicated host type. You can call the [DescribeDedicatedHostTypes](~~134240~~) operation to obtain the most recent list of dedicated host types.
+         * <p>The dedicated host type. You can call the <a href="https://help.aliyun.com/document_detail/134240.html">DescribeDedicatedHostTypes</a> operation to query the most recent list of dedicated host types.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddh.g5</p>
          */
         public Builder dedicatedHostType(String dedicatedHostType) {
             this.putQueryParameter("DedicatedHostType", dedicatedHostType);
@@ -339,15 +385,44 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * The reason why the dedicated host is locked. Valid values:
-         * <p>
+         * <p>The reason why the dedicated host is locked. Valid values:</p>
+         * <ul>
+         * <li>financial: The dedicated host is locked due to overdue payments.</li>
+         * <li>security: The dedicated host is locked due to security reasons.</li>
+         * </ul>
          * 
-         * *   financial
-         * *   security
+         * <strong>example:</strong>
+         * <p>financial</p>
          */
         public Builder lockReason(String lockReason) {
             this.putQueryParameter("LockReason", lockReason);
             this.lockReason = lockReason;
+            return this;
+        }
+
+        /**
+         * <p>The maximum number of entries per page. If you specify this parameter, both MaxResults and NextToken are used for a paged query.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e71d8a535bd9cc11</p>
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 
@@ -370,10 +445,11 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -382,12 +458,12 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Valid values: 1 to 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -396,7 +472,11 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * The region ID of the dedicated host. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the dedicated host. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -405,10 +485,13 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the dedicated host belongs. When this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
-         * <p>
+         * <p>The ID of the resource group to which the dedicated host belongs. When this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
+         * <blockquote>
+         * <p>Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
+         * </blockquote>
          * 
-         * >  Resources in the default resource group are displayed in the response regardless of how this parameter is set.
+         * <strong>example:</strong>
+         * <p>rg-aek3b6jzp66****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -435,11 +518,14 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * Specifies whether to display socket information. Valid values:
-         * <p>
+         * <p>Specifies whether to display socket information. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder socketDetails(String socketDetails) {
             this.putQueryParameter("SocketDetails", socketDetails);
@@ -448,16 +534,18 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * The service state of the dedicated host. Valid values:
-         * <p>
+         * <p>The service state of the dedicated host. Valid values:</p>
+         * <ul>
+         * <li>Available: The dedicated host is running normally.</li>
+         * <li>UnderAssessment: The dedicated host is available but has potential risks that may cause the ECS instances on the dedicated host to fail.</li>
+         * <li>PermanentFailure: The dedicated host encounters permanent failures and is unavailable.</li>
+         * <li>TempUnavailable: The dedicated host is temporarily unavailable.</li>
+         * <li>Redeploying: The dedicated host is being restored.</li>
+         * </ul>
+         * <p>Default value: Available.</p>
          * 
-         * *   Available: The dedicated host is running normally.
-         * *   UnderAssessment: The dedicated host is available but has potential risks that may cause the ECS instances on the dedicated host to fail.
-         * *   PermanentFailure: The dedicated host encounters permanent failures and is unavailable.
-         * *   TempUnavailable: The dedicated host is temporarily unavailable.
-         * *   Redeploying: The dedicated host is being restored.
-         * 
-         * Default value: Available.
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -466,16 +554,19 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * The key of tag N of the dedicated host. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+         * <p>The tags of the dedicated host.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The zone ID of the dedicated host. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
+         * <p>The zone ID of the dedicated host. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-g</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -490,11 +581,17 @@ public class DescribeDedicatedHostsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDedicatedHostsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedHostsRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -529,7 +626,10 @@ public class DescribeDedicatedHostsRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the dedicated host. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * <p>The key of tag N of the dedicated host. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -537,7 +637,10 @@ public class DescribeDedicatedHostsRequest extends Request {
             }
 
             /**
-             * The value of tag N of the dedicated host. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * <p>The value of tag N of the dedicated host. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

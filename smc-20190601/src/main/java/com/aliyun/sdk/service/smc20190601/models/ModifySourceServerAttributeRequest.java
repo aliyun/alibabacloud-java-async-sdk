@@ -1,36 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.smc20190601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySourceServerAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifySourceServerAttributeRequest</p>
  */
 public class ModifySourceServerAttributeRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("SourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceId;
 
     private ModifySourceServerAttributeRequest(Builder builder) {
@@ -101,17 +101,20 @@ public class ModifySourceServerAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifySourceServerAttributeRequest response) {
-            super(response);
-            this.description = response.description;
-            this.name = response.name;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.sourceId = response.sourceId;
+        private Builder(ModifySourceServerAttributeRequest request) {
+            super(request);
+            this.description = request.description;
+            this.name = request.name;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.sourceId = request.sourceId;
         } 
 
         /**
-         * Description.
+         * <p>The description of the migration source. The description can be up to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a source server.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -120,7 +123,10 @@ public class ModifySourceServerAttributeRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the migration source. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testSourceServerName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -147,7 +153,11 @@ public class ModifySourceServerAttributeRequest extends Request {
         }
 
         /**
-         * SourceId.
+         * <p>The migration source ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bp17m1vi6x20c6g6****</p>
          */
         public Builder sourceId(String sourceId) {
             this.putQueryParameter("SourceId", sourceId);

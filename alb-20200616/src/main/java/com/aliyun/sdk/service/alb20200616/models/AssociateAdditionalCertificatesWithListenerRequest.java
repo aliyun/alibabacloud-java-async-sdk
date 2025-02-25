@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AssociateAdditionalCertificatesWithListenerRequest} extends {@link RequestModel}
  *
  * <p>AssociateAdditionalCertificatesWithListenerRequest</p>
  */
 public class AssociateAdditionalCertificatesWithListenerRequest extends Request {
-    @Query
-    @NameInMap("Certificates")
-    @Validation(required = true)
-    private java.util.List < Certificates> certificates;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Certificates")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Certificates> certificates;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("ListenerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String listenerId;
 
     private AssociateAdditionalCertificatesWithListenerRequest(Builder builder) {
@@ -54,7 +59,7 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends Request 
     /**
      * @return certificates
      */
-    public java.util.List < Certificates> getCertificates() {
+    public java.util.List<Certificates> getCertificates() {
         return this.certificates;
     }
 
@@ -80,7 +85,7 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends Request 
     }
 
     public static final class Builder extends Request.Builder<AssociateAdditionalCertificatesWithListenerRequest, Builder> {
-        private java.util.List < Certificates> certificates; 
+        private java.util.List<Certificates> certificates; 
         private String clientToken; 
         private Boolean dryRun; 
         private String listenerId; 
@@ -98,21 +103,24 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends Request 
         } 
 
         /**
-         * The additional certificates.
+         * <p>The extended validation certificates that you want to add to the listener.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder certificates(java.util.List < Certificates> certificates) {
+        public Builder certificates(java.util.List<Certificates> certificates) {
             this.putQueryParameter("Certificates", certificates);
             this.certificates = certificates;
             return this;
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -121,11 +129,14 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends Request 
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a <code>2xx HTTP</code> status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a `2xx HTTP` status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -134,7 +145,11 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends Request 
         }
 
         /**
-         * The listener ID. You must specify the ID of an HTTPS listener or a QUIC listener.
+         * <p>The listener ID. This parameter is supported only by HTTPS and QUIC listeners.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsr-bp1bpn0kn908w4nbw****</p>
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -149,9 +164,15 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends Request 
 
     } 
 
+    /**
+     * 
+     * {@link AssociateAdditionalCertificatesWithListenerRequest} extends {@link TeaModel}
+     *
+     * <p>AssociateAdditionalCertificatesWithListenerRequest</p>
+     */
     public static class Certificates extends TeaModel {
-        @NameInMap("CertificateId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("CertificateId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String certificateId;
 
         private Certificates(Builder builder) {
@@ -177,7 +198,11 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends Request 
             private String certificateId; 
 
             /**
-             * The certificate ID. Only server certificates are supported.
+             * <p>The ID of the certificate. Only server certificates are supported.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cert-123</p>
              */
             public Builder certificateId(String certificateId) {
                 this.certificateId = certificateId;

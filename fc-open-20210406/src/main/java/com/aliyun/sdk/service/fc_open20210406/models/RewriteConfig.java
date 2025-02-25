@@ -62,7 +62,7 @@ public class RewriteConfig extends TeaModel {
         private java.util.List < WildcardRules> wildcardRules; 
 
         /**
-         * 完全匹配规则
+         * equalRules.
          */
         public Builder equalRules(java.util.List < EqualRules> equalRules) {
             this.equalRules = equalRules;
@@ -70,7 +70,7 @@ public class RewriteConfig extends TeaModel {
         }
 
         /**
-         * 正则匹配规则
+         * regexRules.
          */
         public Builder regexRules(java.util.List < RegexRules> regexRules) {
             this.regexRules = regexRules;
@@ -78,7 +78,7 @@ public class RewriteConfig extends TeaModel {
         }
 
         /**
-         * 通配符匹配规则
+         * wildcardRules.
          */
         public Builder wildcardRules(java.util.List < WildcardRules> wildcardRules) {
             this.wildcardRules = wildcardRules;
@@ -130,7 +130,7 @@ public class RewriteConfig extends TeaModel {
             private String replacement; 
 
             /**
-             * 匹配规则
+             * match.
              */
             public Builder match(String match) {
                 this.match = match;
@@ -138,7 +138,7 @@ public class RewriteConfig extends TeaModel {
             }
 
             /**
-             * 替换规则
+             * replacement.
              */
             public Builder replacement(String replacement) {
                 this.replacement = replacement;
@@ -191,7 +191,7 @@ public class RewriteConfig extends TeaModel {
             private String replacement; 
 
             /**
-             * 匹配规则
+             * match.
              */
             public Builder match(String match) {
                 this.match = match;
@@ -199,7 +199,7 @@ public class RewriteConfig extends TeaModel {
             }
 
             /**
-             * 替换规则
+             * replacement.
              */
             public Builder replacement(String replacement) {
                 this.replacement = replacement;
@@ -252,7 +252,7 @@ public class RewriteConfig extends TeaModel {
             private String replacement; 
 
             /**
-             * 匹配规则
+             * match.
              */
             public Builder match(String match) {
                 this.match = match;
@@ -260,7 +260,7 @@ public class RewriteConfig extends TeaModel {
             }
 
             /**
-             * 替换规则
+             * replacement.
              */
             public Builder replacement(String replacement) {
                 this.replacement = replacement;

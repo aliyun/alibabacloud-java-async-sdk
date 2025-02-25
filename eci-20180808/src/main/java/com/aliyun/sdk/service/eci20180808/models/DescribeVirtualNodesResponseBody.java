@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVirtualNodesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVirtualNodesResponseBody</p>
  */
 public class DescribeVirtualNodesResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("VirtualNodes")
+    @com.aliyun.core.annotation.NameInMap("VirtualNodes")
     private java.util.List < VirtualNodes> virtualNodes;
 
     private DescribeVirtualNodesResponseBody(Builder builder) {
@@ -74,7 +74,10 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
         private java.util.List < VirtualNodes> virtualNodes; 
 
         /**
-         * The token that determines the start point of the next query.
+         * <p>The token that determines the start point of the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d78f2dd8-5979-42fe-****-b16db43be5bc</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -82,7 +85,10 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9C9B9917-ED22-50D5-ADE6-9FA9D58AD05F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +96,10 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of virtual nodes that were queried.
+         * <p>The number of virtual nodes that were queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -98,7 +107,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The virtual nodes that were queried.
+         * <p>The virtual nodes that were queried.</p>
          */
         public Builder virtualNodes(java.util.List < VirtualNodes> virtualNodes) {
             this.virtualNodes = virtualNodes;
@@ -111,26 +120,32 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVirtualNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVirtualNodesResponseBody</p>
+     */
     public static class Events extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("FirstTimestamp")
+        @com.aliyun.core.annotation.NameInMap("FirstTimestamp")
         private String firstTimestamp;
 
-        @NameInMap("LastTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LastTimestamp")
         private String lastTimestamp;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Events(Builder builder) {
@@ -210,7 +225,10 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The number of events.
+             * <p>The number of events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -218,7 +236,10 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the event started.
+             * <p>The time when the event started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-08T02:24:48Z</p>
              */
             public Builder firstTimestamp(String firstTimestamp) {
                 this.firstTimestamp = firstTimestamp;
@@ -226,7 +247,10 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the event ended.
+             * <p>The time when the event ended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-08T02:24:52Z</p>
              */
             public Builder lastTimestamp(String lastTimestamp) {
                 this.lastTimestamp = lastTimestamp;
@@ -234,7 +258,10 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The message of the event.
+             * <p>The message of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Successfully</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -242,7 +269,10 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the object to which the event belongs.
+             * <p>The name of the object to which the event belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -250,7 +280,10 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the event.
+             * <p>The name of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Created</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -258,11 +291,14 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the event. Valid values:
-             * <p>
+             * <p>The type of the event. Valid values:</p>
+             * <ul>
+             * <li>Normal</li>
+             * <li>Warning</li>
+             * </ul>
              * 
-             * *   Normal
-             * *   Warning
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -276,11 +312,17 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVirtualNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVirtualNodesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -315,7 +357,10 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -323,7 +368,10 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -337,44 +385,50 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVirtualNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVirtualNodesResponseBody</p>
+     */
     public static class VirtualNodes extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Events")
+        @com.aliyun.core.annotation.NameInMap("Events")
         private java.util.List < Events> events;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IntranetIp")
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("VirtualNodeId")
+        @com.aliyun.core.annotation.NameInMap("VirtualNodeId")
         private String virtualNodeId;
 
-        @NameInMap("VirtualNodeName")
+        @com.aliyun.core.annotation.NameInMap("VirtualNodeName")
         private String virtualNodeName;
 
-        @NameInMap("VirtualNodeSecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("VirtualNodeSecurityGroupId")
         private String virtualNodeSecurityGroupId;
 
-        @NameInMap("VirtualNodeVSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VirtualNodeVSwitchId")
         private String virtualNodeVSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private VirtualNodes(Builder builder) {
@@ -508,7 +562,10 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The time when the virtual node was created. The time follows the RFC 3339 standard and is displayed in UTC.
+             * <p>The time when the virtual node was created. The time follows the RFC 3339 standard and is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-08T15:00:00Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -516,7 +573,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The events about the virtual node.
+             * <p>The events about the virtual node.</p>
              */
             public Builder events(java.util.List < Events> events) {
                 this.events = events;
@@ -524,7 +581,10 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the virtual node.
+             * <p>The public IP address of the virtual node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.0.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -532,7 +592,10 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the virtual node.
+             * <p>The private IP address of the virtual node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.19.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -540,7 +603,10 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the virtual node resides.
+             * <p>The ID of the region in which the virtual node resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -548,7 +614,10 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the virtual node belongs.
+             * <p>The ID of the resource group to which the virtual node belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-uf66jeqopgqa9hdn****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -556,12 +625,15 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the virtual node. Valid values:
-             * <p>
+             * <p>The status of the virtual node. Valid values:</p>
+             * <ul>
+             * <li>Pending</li>
+             * <li>Ready</li>
+             * <li>Failed</li>
+             * </ul>
              * 
-             * *   Pending
-             * *   Ready
-             * *   Failed
+             * <strong>example:</strong>
+             * <p>Ready</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -569,7 +641,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The tags that are bound to the virtual node.
+             * <p>The tags that are bound to the virtual node.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -577,7 +649,10 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual node.
+             * <p>The ID of the virtual node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vnd-2ze960zkdqrldeaw****</p>
              */
             public Builder virtualNodeId(String virtualNodeId) {
                 this.virtualNodeId = virtualNodeId;
@@ -585,7 +660,10 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the virtual node.
+             * <p>The name of the virtual node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testNode</p>
              */
             public Builder virtualNodeName(String virtualNodeName) {
                 this.virtualNodeName = virtualNodeName;
@@ -593,7 +671,10 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security group to which the virtual node belongs.
+             * <p>The ID of the security group to which the virtual node belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-2zeeyaaxlkq9sppl****</p>
              */
             public Builder virtualNodeSecurityGroupId(String virtualNodeSecurityGroupId) {
                 this.virtualNodeSecurityGroupId = virtualNodeSecurityGroupId;
@@ -601,7 +682,10 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch with which the virtual node is associated.
+             * <p>The ID of the vSwitch with which the virtual node is associated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-2ze23nqzig8inprou****</p>
              */
             public Builder virtualNodeVSwitchId(String virtualNodeVSwitchId) {
                 this.virtualNodeVSwitchId = virtualNodeVSwitchId;
@@ -609,7 +693,10 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC to which the virtual node belongs.
+             * <p>The ID of the VPC to which the virtual node belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-1vzjjflab6wvjox****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

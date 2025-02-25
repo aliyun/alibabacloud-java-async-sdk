@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEtlJobLogsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEtlJobLogsResponseBody</p>
  */
 public class DescribeEtlJobLogsResponseBody extends TeaModel {
-    @NameInMap("DynamicCode")
+    @com.aliyun.core.annotation.NameInMap("DynamicCode")
     private String dynamicCode;
 
-    @NameInMap("DynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("DynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("EtlRunningLogs")
-    private java.util.List < EtlRunningLogs> etlRunningLogs;
+    @com.aliyun.core.annotation.NameInMap("EtlRunningLogs")
+    private java.util.List<EtlRunningLogs> etlRunningLogs;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeEtlJobLogsResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
     /**
      * @return etlRunningLogs
      */
-    public java.util.List < EtlRunningLogs> getEtlRunningLogs() {
+    public java.util.List<EtlRunningLogs> getEtlRunningLogs() {
         return this.etlRunningLogs;
     }
 
@@ -116,13 +121,16 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
         private String dynamicMessage; 
         private String errCode; 
         private String errMessage; 
-        private java.util.List < EtlRunningLogs> etlRunningLogs; 
+        private java.util.List<EtlRunningLogs> etlRunningLogs; 
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * The dynamic error code.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>403</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -130,7 +138,10 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message.
+         * <p>The dynamic part in the error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>present environment is not support,so skip.</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -138,7 +149,10 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code. This example indicates that the specified ETL task ID is invalid.
+         * <p>The error code. This example indicates that the specified ETL task ID is invalid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidJobId</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -146,7 +160,10 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message. This example indicates that the specified ETL task ID does not exist. In this case, the ETL task may be deleted.
+         * <p>The error message. This example indicates that the specified ETL task ID does not exist. In this case, the ETL task may be deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified dts job id %s is not exists.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -154,15 +171,18 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The logs of ETL tasks.
+         * <p>The logs of ETL tasks.</p>
          */
-        public Builder etlRunningLogs(java.util.List < EtlRunningLogs> etlRunningLogs) {
+        public Builder etlRunningLogs(java.util.List<EtlRunningLogs> etlRunningLogs) {
             this.etlRunningLogs = etlRunningLogs;
             return this;
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -170,7 +190,10 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>224DB9F7-3100-4899-AB9C-C938BCCB43E7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +201,10 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. If the call failed, false is returned.
+         * <p>Indicates whether the call was successful. If the call failed, false is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -191,23 +217,29 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEtlJobLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEtlJobLogsResponseBody</p>
+     */
     public static class EtlRunningLogs extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("ContentKey")
+        @com.aliyun.core.annotation.NameInMap("ContentKey")
         private String contentKey;
 
-        @NameInMap("EtlId")
+        @com.aliyun.core.annotation.NameInMap("EtlId")
         private String etlId;
 
-        @NameInMap("LogDatetime")
+        @com.aliyun.core.annotation.NameInMap("LogDatetime")
         private String logDatetime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private EtlRunningLogs(Builder builder) {
@@ -278,7 +310,10 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * The state of the ETL task.
+             * <p>The state of the ETL task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Starting DTS-ETL...</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -286,7 +321,10 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The module for which the logs are generated, such as the conversion module of ETL tasks.
+             * <p>The module for which the logs are generated, such as the conversion module of ETL tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DTS-ETL</p>
              */
             public Builder contentKey(String contentKey) {
                 this.contentKey = contentKey;
@@ -294,7 +332,10 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ETL task.
+             * <p>The ID of the ETL task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>u**********5</p>
              */
             public Builder etlId(String etlId) {
                 this.etlId = etlId;
@@ -302,7 +343,10 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the log was generated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the log was generated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1637306503000</p>
              */
             public Builder logDatetime(String logDatetime) {
                 this.logDatetime = logDatetime;
@@ -310,7 +354,10 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The log level. Valid values: ERROR, WARN, INFO, and DEBUG.
+             * <p>The log level. Valid values: ERROR, WARN, INFO, and DEBUG.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INFO</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -318,7 +365,10 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>121323*******454512</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

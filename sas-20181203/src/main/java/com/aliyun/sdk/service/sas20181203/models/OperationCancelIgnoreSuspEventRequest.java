@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OperationCancelIgnoreSuspEventRequest} extends {@link RequestModel}
  *
  * <p>OperationCancelIgnoreSuspEventRequest</p>
  */
 public class OperationCancelIgnoreSuspEventRequest extends Request {
-    @Query
-    @NameInMap("Remark")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
-    @Query
-    @NameInMap("SecurityEventIds")
-    @Validation(required = true)
-    private java.util.List < Long > securityEventIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityEventIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Long> securityEventIds;
 
     private OperationCancelIgnoreSuspEventRequest(Builder builder) {
         super(builder);
@@ -50,13 +55,13 @@ public class OperationCancelIgnoreSuspEventRequest extends Request {
     /**
      * @return securityEventIds
      */
-    public java.util.List < Long > getSecurityEventIds() {
+    public java.util.List<Long> getSecurityEventIds() {
         return this.securityEventIds;
     }
 
     public static final class Builder extends Request.Builder<OperationCancelIgnoreSuspEventRequest, Builder> {
         private String remark; 
-        private java.util.List < Long > securityEventIds; 
+        private java.util.List<Long> securityEventIds; 
 
         private Builder() {
             super();
@@ -69,7 +74,10 @@ public class OperationCancelIgnoreSuspEventRequest extends Request {
         } 
 
         /**
-         * The remarks.
+         * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remark text</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -78,9 +86,10 @@ public class OperationCancelIgnoreSuspEventRequest extends Request {
         }
 
         /**
-         * The IDs of alert events.
+         * <p>The IDs of alert events.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder securityEventIds(java.util.List < Long > securityEventIds) {
+        public Builder securityEventIds(java.util.List<Long> securityEventIds) {
             this.putQueryParameter("SecurityEventIds", securityEventIds);
             this.securityEventIds = securityEventIds;
             return this;

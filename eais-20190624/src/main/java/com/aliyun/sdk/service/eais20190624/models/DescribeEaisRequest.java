@@ -1,56 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eais20190624.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEaisRequest} extends {@link RequestModel}
  *
  * <p>DescribeEaisRequest</p>
  */
 public class DescribeEaisRequest extends Request {
-    @Query
-    @NameInMap("ElasticAcceleratedInstanceIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientInstanceId")
+    private String clientInstanceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ElasticAcceleratedInstanceIds")
     private String elasticAcceleratedInstanceIds;
 
-    @Query
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @Query
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private DescribeEaisRequest(Builder builder) {
         super(builder);
+        this.clientInstanceId = builder.clientInstanceId;
         this.elasticAcceleratedInstanceIds = builder.elasticAcceleratedInstanceIds;
         this.instanceName = builder.instanceName;
         this.instanceType = builder.instanceType;
@@ -73,6 +83,13 @@ public class DescribeEaisRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientInstanceId
+     */
+    public String getClientInstanceId() {
+        return this.clientInstanceId;
     }
 
     /**
@@ -134,11 +151,12 @@ public class DescribeEaisRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<DescribeEaisRequest, Builder> {
+        private String clientInstanceId; 
         private String elasticAcceleratedInstanceIds; 
         private String instanceName; 
         private String instanceType; 
@@ -147,7 +165,7 @@ public class DescribeEaisRequest extends Request {
         private String regionId; 
         private String resourceGroupId; 
         private String status; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -155,6 +173,7 @@ public class DescribeEaisRequest extends Request {
 
         private Builder(DescribeEaisRequest request) {
             super(request);
+            this.clientInstanceId = request.clientInstanceId;
             this.elasticAcceleratedInstanceIds = request.elasticAcceleratedInstanceIds;
             this.instanceName = request.instanceName;
             this.instanceType = request.instanceType;
@@ -165,6 +184,15 @@ public class DescribeEaisRequest extends Request {
             this.status = request.status;
             this.tag = request.tag;
         } 
+
+        /**
+         * ClientInstanceId.
+         */
+        public Builder clientInstanceId(String clientInstanceId) {
+            this.putQueryParameter("ClientInstanceId", clientInstanceId);
+            this.clientInstanceId = clientInstanceId;
+            return this;
+        }
 
         /**
          * ElasticAcceleratedInstanceIds.
@@ -212,7 +240,10 @@ public class DescribeEaisRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -241,7 +272,7 @@ public class DescribeEaisRequest extends Request {
         /**
          * Tag.
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -254,11 +285,17 @@ public class DescribeEaisRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEaisRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeEaisRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

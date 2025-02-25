@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eais20190624.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachEaiResponseBody} extends {@link TeaModel}
  *
  * <p>AttachEaiResponseBody</p>
  */
 public class AttachEaiResponseBody extends TeaModel {
-    @NameInMap("ClientInstanceId")
+    @com.aliyun.core.annotation.NameInMap("ClientInstanceId")
     private String clientInstanceId;
 
-    @NameInMap("ElasticAcceleratedInstanceId")
+    @com.aliyun.core.annotation.NameInMap("ElasticAcceleratedInstanceId")
     private String elasticAcceleratedInstanceId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AttachEaiResponseBody(Builder builder) {

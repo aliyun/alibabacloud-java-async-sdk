@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyVpcAccessAndUpdateApisResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyVpcAccessAndUpdateApisResponseBody</p>
  */
 public class ModifyVpcAccessAndUpdateApisResponseBody extends TeaModel {
-    @NameInMap("OperationId")
+    @com.aliyun.core.annotation.NameInMap("OperationId")
     private String operationId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyVpcAccessAndUpdateApisResponseBody(Builder builder) {
@@ -50,12 +55,15 @@ public class ModifyVpcAccessAndUpdateApisResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the asynchronous task.
-         * <p>
+         * <p>The ID of the asynchronous task.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>If the associated API is updated, you can use the task ID in the <strong>DescribeUpdateVpcInfoTask</strong> operation to query the update result.</li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   If the associated API is updated, you can use the task ID in the **DescribeUpdateVpcInfoTask** operation to query the update result.
+         * <strong>example:</strong>
+         * <p>7b6d0cb72b2e4215b0129f675c889746</p>
          */
         public Builder operationId(String operationId) {
             this.operationId = operationId;
@@ -63,7 +71,10 @@ public class ModifyVpcAccessAndUpdateApisResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C2CEC6EA-EEBA-5FD6-8BD9-2CF01980FE39</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

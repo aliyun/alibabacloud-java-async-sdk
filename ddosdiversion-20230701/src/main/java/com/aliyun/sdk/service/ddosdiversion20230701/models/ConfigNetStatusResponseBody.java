@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosdiversion20230701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ConfigNetStatusResponseBody</p>
  */
 public class ConfigNetStatusResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ConfigNetStatusResponseBody(Builder builder) {
@@ -62,7 +61,11 @@ public class ConfigNetStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The status code.
+         * <p>
+         * 
+         * *   **200**: The request was successful.
+         * *   Other codes: The request failed.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -70,7 +73,7 @@ public class ConfigNetStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The response parameters.
          */
         public Builder message(String message) {
             this.message = message;
@@ -78,7 +81,7 @@ public class ConfigNetStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

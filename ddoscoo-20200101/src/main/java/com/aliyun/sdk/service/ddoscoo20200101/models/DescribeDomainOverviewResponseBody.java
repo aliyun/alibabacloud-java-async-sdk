@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainOverviewResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainOverviewResponseBody</p>
  */
 public class DescribeDomainOverviewResponseBody extends TeaModel {
-    @NameInMap("MaxHttp")
+    @com.aliyun.core.annotation.NameInMap("MaxHttp")
     private Long maxHttp;
 
-    @NameInMap("MaxHttps")
+    @com.aliyun.core.annotation.NameInMap("MaxHttps")
     private Long maxHttps;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDomainOverviewResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class DescribeDomainOverviewResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The peak queries per second (QPS) during HTTP traffic scrubbing. Unit: QPS.
+         * <p>The peak queries per second (QPS) during HTTP traffic scrubbing. Unit: QPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>41652</p>
          */
         public Builder maxHttp(Long maxHttp) {
             this.maxHttp = maxHttp;
@@ -70,7 +78,10 @@ public class DescribeDomainOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * The peak QPS during HTTPS traffic scrubbing. Unit: QPS.
+         * <p>The peak QPS during HTTPS traffic scrubbing. Unit: QPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder maxHttps(Long maxHttps) {
             this.maxHttps = maxHttps;
@@ -78,7 +89,10 @@ public class DescribeDomainOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

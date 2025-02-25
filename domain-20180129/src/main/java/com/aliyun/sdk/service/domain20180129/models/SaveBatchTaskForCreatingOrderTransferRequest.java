@@ -1,44 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveBatchTaskForCreatingOrderTransferRequest} extends {@link RequestModel}
  *
  * <p>SaveBatchTaskForCreatingOrderTransferRequest</p>
  */
 public class SaveBatchTaskForCreatingOrderTransferRequest extends Request {
-    @Query
-    @NameInMap("CouponNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CouponNo")
     private String couponNo;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("OrderTransferParam")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderTransferParam")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < OrderTransferParam> orderTransferParam;
 
-    @Query
-    @NameInMap("PromotionNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionNo")
     private String promotionNo;
 
-    @Query
-    @NameInMap("UseCoupon")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseCoupon")
     private Boolean useCoupon;
 
-    @Query
-    @NameInMap("UsePromotion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UsePromotion")
     private Boolean usePromotion;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
     private SaveBatchTaskForCreatingOrderTransferRequest(Builder builder) {
@@ -157,7 +157,7 @@ public class SaveBatchTaskForCreatingOrderTransferRequest extends Request {
         }
 
         /**
-         * OrderTransferParam.
+         * <p>This parameter is required.</p>
          */
         public Builder orderTransferParam(java.util.List < OrderTransferParam> orderTransferParam) {
             this.putQueryParameter("OrderTransferParam", orderTransferParam);
@@ -208,17 +208,23 @@ public class SaveBatchTaskForCreatingOrderTransferRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SaveBatchTaskForCreatingOrderTransferRequest} extends {@link TeaModel}
+     *
+     * <p>SaveBatchTaskForCreatingOrderTransferRequest</p>
+     */
     public static class OrderTransferParam extends TeaModel {
-        @NameInMap("AuthorizationCode")
+        @com.aliyun.core.annotation.NameInMap("AuthorizationCode")
         private String authorizationCode;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("PermitPremiumTransfer")
+        @com.aliyun.core.annotation.NameInMap("PermitPremiumTransfer")
         private Boolean permitPremiumTransfer;
 
-        @NameInMap("RegistrantProfileId")
+        @com.aliyun.core.annotation.NameInMap("RegistrantProfileId")
         private Long registrantProfileId;
 
         private OrderTransferParam(Builder builder) {

@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConversionDataIntlRequest} extends {@link RequestModel}
  *
  * <p>ConversionDataIntlRequest</p>
  */
 public class ConversionDataIntlRequest extends Request {
-    @Query
-    @NameInMap("ConversionRate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConversionRate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String conversionRate;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ReportTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReportTime")
     private Long reportTime;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ConversionDataIntlRequest(Builder builder) {
@@ -111,7 +116,14 @@ public class ConversionDataIntlRequest extends Request {
         } 
 
         /**
-         * ConversionRate.
+         * <p>The conversion rate.</p>
+         * <blockquote>
+         * <p>The value of this parameter is a double, and ranges from 0 to 1.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.53</p>
          */
         public Builder conversionRate(String conversionRate) {
             this.putQueryParameter("ConversionRate", conversionRate);
@@ -129,7 +141,13 @@ public class ConversionDataIntlRequest extends Request {
         }
 
         /**
-         * ReportTime.
+         * <p>The time point at which the conversion rate is monitored. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the current timestamp is used by default.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1349055900000</p>
          */
         public Builder reportTime(Long reportTime) {
             this.putQueryParameter("ReportTime", reportTime);

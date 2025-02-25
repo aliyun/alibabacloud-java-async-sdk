@@ -1,45 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetectStackResourceDriftResponseBody} extends {@link TeaModel}
  *
  * <p>DetectStackResourceDriftResponseBody</p>
  */
 public class DetectStackResourceDriftResponseBody extends TeaModel {
-    @NameInMap("ActualProperties")
+    @com.aliyun.core.annotation.NameInMap("ActualProperties")
     private String actualProperties;
 
-    @NameInMap("DriftDetectionTime")
+    @com.aliyun.core.annotation.NameInMap("DriftDetectionTime")
     private String driftDetectionTime;
 
-    @NameInMap("ExpectedProperties")
+    @com.aliyun.core.annotation.NameInMap("ExpectedProperties")
     private String expectedProperties;
 
-    @NameInMap("LogicalResourceId")
+    @com.aliyun.core.annotation.NameInMap("LogicalResourceId")
     private String logicalResourceId;
 
-    @NameInMap("PhysicalResourceId")
+    @com.aliyun.core.annotation.NameInMap("PhysicalResourceId")
     private String physicalResourceId;
 
-    @NameInMap("PropertyDifferences")
+    @com.aliyun.core.annotation.NameInMap("PropertyDifferences")
     private java.util.List < PropertyDifferences> propertyDifferences;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceDriftStatus")
+    @com.aliyun.core.annotation.NameInMap("ResourceDriftStatus")
     private String resourceDriftStatus;
 
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
-    @NameInMap("StackId")
+    @com.aliyun.core.annotation.NameInMap("StackId")
     private String stackId;
 
     private DetectStackResourceDriftResponseBody(Builder builder) {
@@ -146,7 +146,10 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
         private String stackId; 
 
         /**
-         * The actual JSON-formatted resource properties.
+         * <p>The actual JSON-formatted resource properties.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ScalingRuleName&quot;: &quot;test1&quot;}</p>
          */
         public Builder actualProperties(String actualProperties) {
             this.actualProperties = actualProperties;
@@ -154,7 +157,10 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the resource drift detection was initiated.
+         * <p>The time when the resource drift detection was initiated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-02-27T07:47:47</p>
          */
         public Builder driftDetectionTime(String driftDetectionTime) {
             this.driftDetectionTime = driftDetectionTime;
@@ -162,7 +168,10 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
         }
 
         /**
-         * The JSON-formatted resource properties that are defined in the template.
+         * <p>The JSON-formatted resource properties that are defined in the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ScalingRuleName&quot;: &quot;test2&quot;}</p>
          */
         public Builder expectedProperties(String expectedProperties) {
             this.expectedProperties = expectedProperties;
@@ -170,7 +179,10 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
         }
 
         /**
-         * The logical ID of the resource that is defined in the template.
+         * <p>The logical ID of the resource that is defined in the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ScalingRule</p>
          */
         public Builder logicalResourceId(String logicalResourceId) {
             this.logicalResourceId = logicalResourceId;
@@ -178,7 +190,10 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
         }
 
         /**
-         * The physical ID of the resource.
+         * <p>The physical ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asr-2ze4zzc3kf9yz1kd****</p>
          */
         public Builder physicalResourceId(String physicalResourceId) {
             this.physicalResourceId = physicalResourceId;
@@ -186,7 +201,7 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
         }
 
         /**
-         * The property drifts of the resource.
+         * <p>The property drifts of the resource.</p>
          */
         public Builder propertyDifferences(java.util.List < PropertyDifferences> propertyDifferences) {
             this.propertyDifferences = propertyDifferences;
@@ -194,7 +209,10 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B288A0BE-D927-4888-B0F7-B35EF84B6E6F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -202,13 +220,16 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
         }
 
         /**
-         * The drift status of the resource. Valid values:
-         * <p>
+         * <p>The drift status of the resource. Valid values:</p>
+         * <ul>
+         * <li>DELETED: The actual configuration of the resource differs from its expected template configuration because the resource is deleted.</li>
+         * <li>MODIFIED: The actual configuration of the resource differs from its expected template configuration.</li>
+         * <li>NOT_CHECKED: Resource Orchestration Service (ROS) has not checked whether the actual configuration of the resource differs from its expected template configuration.</li>
+         * <li>IN_SYNC: The actual configuration of the resource matches its expected template configuration.</li>
+         * </ul>
          * 
-         * *   DELETED: The actual configuration of the resource differs from its expected template configuration because the resource is deleted.
-         * *   MODIFIED: The actual configuration of the resource differs from its expected template configuration.
-         * *   NOT_CHECKED: Resource Orchestration Service (ROS) has not checked whether the actual configuration of the resource differs from its expected template configuration.
-         * *   IN_SYNC: The actual configuration of the resource matches its expected template configuration.
+         * <strong>example:</strong>
+         * <p>MODIFIED</p>
          */
         public Builder resourceDriftStatus(String resourceDriftStatus) {
             this.resourceDriftStatus = resourceDriftStatus;
@@ -216,7 +237,10 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the resource.
+         * <p>The type of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::ESS::ScalingRule</p>
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -224,7 +248,10 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the stack.
+         * <p>The ID of the stack.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</p>
          */
         public Builder stackId(String stackId) {
             this.stackId = stackId;
@@ -237,17 +264,23 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DetectStackResourceDriftResponseBody} extends {@link TeaModel}
+     *
+     * <p>DetectStackResourceDriftResponseBody</p>
+     */
     public static class PropertyDifferences extends TeaModel {
-        @NameInMap("ActualValue")
+        @com.aliyun.core.annotation.NameInMap("ActualValue")
         private String actualValue;
 
-        @NameInMap("DifferenceType")
+        @com.aliyun.core.annotation.NameInMap("DifferenceType")
         private String differenceType;
 
-        @NameInMap("ExpectedValue")
+        @com.aliyun.core.annotation.NameInMap("ExpectedValue")
         private String expectedValue;
 
-        @NameInMap("PropertyPath")
+        @com.aliyun.core.annotation.NameInMap("PropertyPath")
         private String propertyPath;
 
         private PropertyDifferences(Builder builder) {
@@ -300,7 +333,10 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
             private String propertyPath; 
 
             /**
-             * The actual value of the resource property.
+             * <p>The actual value of the resource property.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1</p>
              */
             public Builder actualValue(String actualValue) {
                 this.actualValue = actualValue;
@@ -308,12 +344,15 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
             }
 
             /**
-             * The drift type of the resource property. Valid values:
-             * <p>
+             * <p>The drift type of the resource property. Valid values:</p>
+             * <ul>
+             * <li>ADD: The property value has been added to a resource property whose data type was Array or List.</li>
+             * <li>REMOVE: The property has been deleted from the current resource configuration.</li>
+             * <li>NOT_EQUAL: The current property value differs from the expected value defined in the stack template.</li>
+             * </ul>
              * 
-             * *   ADD: The property value has been added to a resource property whose data type was Array or List.
-             * *   REMOVE: The property has been deleted from the current resource configuration.
-             * *   NOT_EQUAL: The current property value differs from the expected value defined in the stack template.
+             * <strong>example:</strong>
+             * <p>NOT_EQUAL</p>
              */
             public Builder differenceType(String differenceType) {
                 this.differenceType = differenceType;
@@ -321,7 +360,10 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
             }
 
             /**
-             * The expected value of the resource property that is defined in the template.
+             * <p>The expected value of the resource property that is defined in the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test2</p>
              */
             public Builder expectedValue(String expectedValue) {
                 this.expectedValue = expectedValue;
@@ -329,7 +371,10 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the resource property.
+             * <p>The path of the resource property.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/ScalingRuleName</p>
              */
             public Builder propertyPath(String propertyPath) {
                 this.propertyPath = propertyPath;

@@ -1,91 +1,91 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreateInstanceRequest</p>
  */
 public class CreateInstanceRequest extends Request {
-    @Body
-    @NameInMap("clientNodeConfiguration")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("clientNodeConfiguration")
     private ClientNodeConfiguration clientNodeConfiguration;
 
-    @Body
-    @NameInMap("description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @Body
-    @NameInMap("elasticDataNodeConfiguration")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("elasticDataNodeConfiguration")
     private ElasticDataNodeConfiguration elasticDataNodeConfiguration;
 
-    @Body
-    @NameInMap("esAdminPassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("esAdminPassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String esAdminPassword;
 
-    @Body
-    @NameInMap("esVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("esVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String esVersion;
 
-    @Body
-    @NameInMap("instanceCategory")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("instanceCategory")
     private String instanceCategory;
 
-    @Body
-    @NameInMap("kibanaConfiguration")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("kibanaConfiguration")
     private KibanaNodeConfiguration kibanaConfiguration;
 
-    @Body
-    @NameInMap("masterConfiguration")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("masterConfiguration")
     private MasterNodeConfiguration masterConfiguration;
 
-    @Body
-    @NameInMap("networkConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("networkConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private NetworkConfig networkConfig;
 
-    @Body
-    @NameInMap("nodeAmount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("nodeAmount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer nodeAmount;
 
-    @Body
-    @NameInMap("nodeSpec")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("nodeSpec")
     private NodeSpec nodeSpec;
 
-    @Body
-    @NameInMap("paymentInfo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("paymentInfo")
     private PaymentInfo paymentInfo;
 
-    @Body
-    @NameInMap("paymentType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("paymentType")
     private String paymentType;
 
-    @Body
-    @NameInMap("resourceGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
     private String resourceGroupId;
 
-    @Body
-    @NameInMap("tags")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("tags")
     private java.util.List < Tags> tags;
 
-    @Body
-    @NameInMap("warmNodeConfiguration")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("warmNodeConfiguration")
     private WarmNodeConfiguration warmNodeConfiguration;
 
-    @Body
-    @NameInMap("zoneCount")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("zoneCount")
     private Integer zoneCount;
 
-    @Query
-    @NameInMap("clientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
     private CreateInstanceRequest(Builder builder) {
@@ -323,7 +323,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * esAdminPassword.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es_password</p>
          */
         public Builder esAdminPassword(String esAdminPassword) {
             this.putBodyParameter("esAdminPassword", esAdminPassword);
@@ -332,7 +335,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * esVersion.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.5.3_with_X-Pack</p>
          */
         public Builder esVersion(String esVersion) {
             this.putBodyParameter("esVersion", esVersion);
@@ -368,7 +374,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * networkConfig.
+         * <p>This parameter is required.</p>
          */
         public Builder networkConfig(NetworkConfig networkConfig) {
             this.putBodyParameter("networkConfig", networkConfig);
@@ -377,7 +383,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * nodeAmount.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder nodeAmount(Integer nodeAmount) {
             this.putBodyParameter("nodeAmount", nodeAmount);
@@ -464,11 +473,17 @@ public class CreateInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("tagKey")
+        @com.aliyun.core.annotation.NameInMap("tagKey")
         private String tagKey;
 
-        @NameInMap("tagValue")
+        @com.aliyun.core.annotation.NameInMap("tagValue")
         private String tagValue;
 
         private Tags(Builder builder) {

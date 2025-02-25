@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyBundleRequest} extends {@link RequestModel}
  *
  * <p>ModifyBundleRequest</p>
  */
 public class ModifyBundleRequest extends Request {
-    @Query
-    @NameInMap("BundleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BundleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bundleId;
 
-    @Query
-    @NameInMap("BundleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BundleName")
     private String bundleName;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("ImageId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
-    @Query
-    @NameInMap("Language")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Language")
     private String language;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private ModifyBundleRequest(Builder builder) {
@@ -126,7 +131,11 @@ public class ModifyBundleRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the cloud computer template that you want to modify.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b-2g65ljy4291vl****</p>
          */
         public Builder bundleId(String bundleId) {
             this.putQueryParameter("BundleId", bundleId);
@@ -135,7 +144,10 @@ public class ModifyBundleRequest extends Request {
         }
 
         /**
-         * The description of the new desktop template.
+         * <p>The name of the new cloud computer template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>newName</p>
          */
         public Builder bundleName(String bundleName) {
             this.putQueryParameter("BundleName", bundleName);
@@ -144,7 +156,10 @@ public class ModifyBundleRequest extends Request {
         }
 
         /**
-         * ModifyBundle
+         * <p>The description of the new cloud computer template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>newDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -153,7 +168,16 @@ public class ModifyBundleRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to ModifyBundle.
+         * <p>The new image ID. The new image must meet the following conditions:</p>
+         * <ul>
+         * <li>The new image must be in the Available state.</li>
+         * <li>The operating system of the new image must be the same as that of the original image.</li>
+         * <li>The required disk size for the new image cannot be greater than that for the original image.</li>
+         * <li>The GPU type of the new image must be the same as that of the original image.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>m-aea3oaww001np****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -162,7 +186,21 @@ public class ModifyBundleRequest extends Request {
         }
 
         /**
-         * Language.
+         * <p>The OS language. This parameter is available only for system images.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>en-US: American English</p>
+         * </li>
+         * <li><p>zh-HK: Traditional Chinese (Hong Kong)</p>
+         * </li>
+         * <li><p>zh-CN: Simplified Chinese.</p>
+         * </li>
+         * <li><p>ja-JP: Japanese</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -171,7 +209,11 @@ public class ModifyBundleRequest extends Request {
         }
 
         /**
-         * The name of the new desktop template.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

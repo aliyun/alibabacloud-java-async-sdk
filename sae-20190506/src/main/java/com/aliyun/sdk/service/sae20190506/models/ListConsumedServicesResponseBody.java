@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListConsumedServicesResponseBody} extends {@link TeaModel}
  *
  * <p>ListConsumedServicesResponseBody</p>
  */
 public class ListConsumedServicesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TraceId")
+    @com.aliyun.core.annotation.NameInMap("TraceId")
     private String traceId;
 
     private ListConsumedServicesResponseBody(Builder builder) {
@@ -61,7 +66,7 @@ public class ListConsumedServicesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -102,7 +107,7 @@ public class ListConsumedServicesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String errorCode; 
         private String message; 
         private String requestId; 
@@ -110,11 +115,14 @@ public class ListConsumedServicesResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Indicates whether the microservice list was obtained. Valid values:
-         * <p>
+         * <p>Indicates whether the microservice list was obtained. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The list was obtained.</li>
+         * <li><strong>false</strong>: The list failed to be obtained.</li>
+         * </ul>
          * 
-         * *   **true**: The list was obtained.
-         * *   **false**: The list failed to be obtained.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -122,21 +130,21 @@ public class ListConsumedServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the published service.
+         * <p>The type of the published service.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The HTTP status code. Valid values:
-         * <p>
-         * 
-         * *   **2xx**: indicates that the call was successful.
-         * *   **3xx**: indicates that the call was redirected.
-         * *   **4xx**: indicates that the call failed.
-         * *   **5xx**: indicates that a server error occurred.
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: indicates that the call was successful.</li>
+         * <li><strong>3xx</strong>: indicates that the call was redirected.</li>
+         * <li><strong>4xx</strong>: indicates that the call failed.</li>
+         * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+         * </ul>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -144,7 +152,10 @@ public class ListConsumedServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the trace. The ID is used to query the details of a request.
+         * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -152,11 +163,14 @@ public class ListConsumedServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned information. Valid values:
-         * <p>
+         * <p>The returned information. Valid values:</p>
+         * <ul>
+         * <li>If the call is successful, <strong>success</strong> is returned.</li>
+         * <li>If the call fails, an error code is returned.</li>
+         * </ul>
          * 
-         * *   If the call is successful, **success** is returned.
-         * *   If the call fails, an error code is returned.
+         * <strong>example:</strong>
+         * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +186,10 @@ public class ListConsumedServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the microservices.
+         * <p>The details of the microservices.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a98a02315955564772843261e****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -185,26 +202,32 @@ public class ListConsumedServicesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListConsumedServicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListConsumedServicesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("Group2Ip")
+        @com.aliyun.core.annotation.NameInMap("Group2Ip")
         private String group2Ip;
 
-        @NameInMap("Groups")
-        private java.util.List < String > groups;
+        @com.aliyun.core.annotation.NameInMap("Groups")
+        private java.util.List<String> groups;
 
-        @NameInMap("Ips")
-        private java.util.List < String > ips;
+        @com.aliyun.core.annotation.NameInMap("Ips")
+        private java.util.List<String> ips;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private Data(Builder builder) {
@@ -242,14 +265,14 @@ public class ListConsumedServicesResponseBody extends TeaModel {
         /**
          * @return groups
          */
-        public java.util.List < String > getGroups() {
+        public java.util.List<String> getGroups() {
             return this.groups;
         }
 
         /**
          * @return ips
          */
-        public java.util.List < String > getIps() {
+        public java.util.List<String> getIps() {
             return this.ips;
         }
 
@@ -277,14 +300,17 @@ public class ListConsumedServicesResponseBody extends TeaModel {
         public static final class Builder {
             private String appId; 
             private String group2Ip; 
-            private java.util.List < String > groups; 
-            private java.util.List < String > ips; 
+            private java.util.List<String> groups; 
+            private java.util.List<String> ips; 
             private String name; 
             private String type; 
             private String version; 
 
             /**
-             * A reserved parameter.
+             * <p>A reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b2a8a925-477a-4ed7-b825-d5e22500****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -292,7 +318,10 @@ public class ListConsumedServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The subscription address of the service.
+             * <p>The subscription address of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder group2Ip(String group2Ip) {
                 this.group2Ip = group2Ip;
@@ -300,27 +329,30 @@ public class ListConsumedServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the published service
+             * <p>The version of the published service</p>
              */
-            public Builder groups(java.util.List < String > groups) {
+            public Builder groups(java.util.List<String> groups) {
                 this.groups = groups;
                 return this;
             }
 
             /**
-             * The name of the published service.
+             * <p>The name of the published service.</p>
              */
-            public Builder ips(java.util.List < String > ips) {
+            public Builder ips(java.util.List<String> ips) {
                 this.ips = ips;
                 return this;
             }
 
             /**
-             * The returned error code. Valid values:
-             * <p>
+             * <p>The returned error code. Valid values:</p>
+             * <ul>
+             * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+             * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+             * </ul>
              * 
-             * *   If the call is successful, the **ErrorCode** parameter is not returned.
-             * *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.
+             * <strong>example:</strong>
+             * <p>com.alibaba.nodejs.ItemService</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -328,7 +360,10 @@ public class ListConsumedServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The service group that corresponds to the published service.
+             * <p>The service group that corresponds to the published service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RPC</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -336,7 +371,10 @@ public class ListConsumedServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder version(String version) {
                 this.version = version;

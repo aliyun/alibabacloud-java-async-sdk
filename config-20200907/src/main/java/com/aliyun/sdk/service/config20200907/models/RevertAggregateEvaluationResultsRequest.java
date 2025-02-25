@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RevertAggregateEvaluationResultsRequest} extends {@link RequestModel}
  *
  * <p>RevertAggregateEvaluationResultsRequest</p>
  */
 public class RevertAggregateEvaluationResultsRequest extends Request {
-    @Body
-    @NameInMap("AggregatorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AggregatorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aggregatorId;
 
-    @Body
-    @NameInMap("ConfigRuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConfigRuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String configRuleId;
 
-    @Body
-    @NameInMap("Resources")
-    @Validation(required = true)
-    private java.util.List < Resources> resources;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Resources")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Resources> resources;
 
     private RevertAggregateEvaluationResultsRequest(Builder builder) {
         super(builder);
@@ -64,14 +69,14 @@ public class RevertAggregateEvaluationResultsRequest extends Request {
     /**
      * @return resources
      */
-    public java.util.List < Resources> getResources() {
+    public java.util.List<Resources> getResources() {
         return this.resources;
     }
 
     public static final class Builder extends Request.Builder<RevertAggregateEvaluationResultsRequest, Builder> {
         private String aggregatorId; 
         private String configRuleId; 
-        private java.util.List < Resources> resources; 
+        private java.util.List<Resources> resources; 
 
         private Builder() {
             super();
@@ -85,10 +90,12 @@ public class RevertAggregateEvaluationResultsRequest extends Request {
         } 
 
         /**
-         * The ID of the account group.
-         * <p>
+         * <p>The ID of the account group.</p>
+         * <p>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).
+         * <strong>example:</strong>
+         * <p>ca-5b6c626622af008f****</p>
          */
         public Builder aggregatorId(String aggregatorId) {
             this.putBodyParameter("AggregatorId", aggregatorId);
@@ -97,7 +104,11 @@ public class RevertAggregateEvaluationResultsRequest extends Request {
         }
 
         /**
-         * The ID of the rule in the account group.
+         * <p>The ID of the rule in the account group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cr-7e72626622af0051****</p>
          */
         public Builder configRuleId(String configRuleId) {
             this.putBodyParameter("ConfigRuleId", configRuleId);
@@ -106,9 +117,10 @@ public class RevertAggregateEvaluationResultsRequest extends Request {
         }
 
         /**
-         * The resources that you want to re-evaluate.
+         * <p>The resources that you want to re-evaluate.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder resources(java.util.List < Resources> resources) {
+        public Builder resources(java.util.List<Resources> resources) {
             String resourcesShrink = shrink(resources, "Resources", "json");
             this.putBodyParameter("Resources", resourcesShrink);
             this.resources = resources;
@@ -122,21 +134,27 @@ public class RevertAggregateEvaluationResultsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RevertAggregateEvaluationResultsRequest} extends {@link TeaModel}
+     *
+     * <p>RevertAggregateEvaluationResultsRequest</p>
+     */
     public static class Resources extends TeaModel {
-        @NameInMap("Region")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Region")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String region;
 
-        @NameInMap("ResourceAccountId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ResourceAccountId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long resourceAccountId;
 
-        @NameInMap("ResourceId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String resourceId;
 
-        @NameInMap("ResourceType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String resourceType;
 
         private Resources(Builder builder) {
@@ -189,10 +207,12 @@ public class RevertAggregateEvaluationResultsRequest extends Request {
             private String resourceType; 
 
             /**
-             * The ID of the region where the resource resides.
-             * <p>
+             * <p>The ID of the region in which your resources reside.</p>
+             * <p>For more information about how to obtain the ID of the region in which your resources reside, see <a href="https://help.aliyun.com/document_detail/265983.html">ListAggregateDiscoveredResources</a>.</p>
+             * <p>This parameter is required.</p>
              * 
-             * For more information about how to obtain the ID of a region, see [ListAggregateDiscoveredResources](~~265983~~).
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -200,10 +220,14 @@ public class RevertAggregateEvaluationResultsRequest extends Request {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the resource belongs.
-             * <p>
+             * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+             * <blockquote>
+             * <p> You must specify the ID of the current management account or a member in the account group of the management account.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * > You must specify the ID of the current management account or a member account in the account group of the management account.
+             * <strong>example:</strong>
+             * <p>120886317861****</p>
              */
             public Builder resourceAccountId(Long resourceAccountId) {
                 this.resourceAccountId = resourceAccountId;
@@ -211,10 +235,12 @@ public class RevertAggregateEvaluationResultsRequest extends Request {
             }
 
             /**
-             * The resource ID.
-             * <p>
+             * <p>The resource ID.</p>
+             * <p>For more information about how to obtain the ID of a resource, see <a href="https://help.aliyun.com/document_detail/265983.html">ListAggregateDiscoveredResources</a>.</p>
+             * <p>This parameter is required.</p>
              * 
-             * For more information about how to query the ID of a resource, see [ListAggregateDiscoveredResources](~~265983~~).
+             * <strong>example:</strong>
+             * <p>lb-hp3a3b4ztyfm2plgm****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -222,10 +248,12 @@ public class RevertAggregateEvaluationResultsRequest extends Request {
             }
 
             /**
-             * The type of resource.
-             * <p>
+             * <p>The type of the resource.</p>
+             * <p>For more information about how to obtain the type of a resource, see <a href="https://help.aliyun.com/document_detail/265983.html">ListAggregateDiscoveredResources</a>.</p>
+             * <p>This parameter is required.</p>
              * 
-             * For more information about how to obtain the type of a resource, see [ListAggregateDiscoveredResources](~~265983~~).
+             * <strong>example:</strong>
+             * <p>ACS::SLB::LoadBalancer</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

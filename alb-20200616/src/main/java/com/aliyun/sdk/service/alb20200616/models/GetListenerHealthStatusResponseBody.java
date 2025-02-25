@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetListenerHealthStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetListenerHealthStatusResponseBody</p>
  */
 public class GetListenerHealthStatusResponseBody extends TeaModel {
-    @NameInMap("ListenerHealthStatus")
-    private java.util.List < ListenerHealthStatus> listenerHealthStatus;
+    @com.aliyun.core.annotation.NameInMap("ListenerHealthStatus")
+    private java.util.List<ListenerHealthStatus> listenerHealthStatus;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RuleHealthStatus")
-    private java.util.List < RuleHealthStatus> ruleHealthStatus;
+    @com.aliyun.core.annotation.NameInMap("RuleHealthStatus")
+    private java.util.List<RuleHealthStatus> ruleHealthStatus;
 
     private GetListenerHealthStatusResponseBody(Builder builder) {
         this.listenerHealthStatus = builder.listenerHealthStatus;
@@ -42,7 +47,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
     /**
      * @return listenerHealthStatus
      */
-    public java.util.List < ListenerHealthStatus> getListenerHealthStatus() {
+    public java.util.List<ListenerHealthStatus> getListenerHealthStatus() {
         return this.listenerHealthStatus;
     }
 
@@ -63,30 +68,33 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
     /**
      * @return ruleHealthStatus
      */
-    public java.util.List < RuleHealthStatus> getRuleHealthStatus() {
+    public java.util.List<RuleHealthStatus> getRuleHealthStatus() {
         return this.ruleHealthStatus;
     }
 
     public static final class Builder {
-        private java.util.List < ListenerHealthStatus> listenerHealthStatus; 
+        private java.util.List<ListenerHealthStatus> listenerHealthStatus; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < RuleHealthStatus> ruleHealthStatus; 
+        private java.util.List<RuleHealthStatus> ruleHealthStatus; 
 
         /**
-         * The health check status of the server groups that are associated with the listener.
+         * <p>The health check status of the server groups that are associated with the listener.</p>
          */
-        public Builder listenerHealthStatus(java.util.List < ListenerHealthStatus> listenerHealthStatus) {
+        public Builder listenerHealthStatus(java.util.List<ListenerHealthStatus> listenerHealthStatus) {
             this.listenerHealthStatus = listenerHealthStatus;
             return this;
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If <strong>NextToken</strong> was returned in the previous query, specify the value to obtain the next set of results.</li>
+         * </ul>
          * 
-         * *   If **NextToken** is empty, no next page exists.
-         * *   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -94,7 +102,10 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -102,9 +113,9 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The health check status of the forwarding rules.
+         * <p>The health check status of the forwarding rules.</p>
          */
-        public Builder ruleHealthStatus(java.util.List < RuleHealthStatus> ruleHealthStatus) {
+        public Builder ruleHealthStatus(java.util.List<RuleHealthStatus> ruleHealthStatus) {
             this.ruleHealthStatus = ruleHealthStatus;
             return this;
         }
@@ -115,14 +126,20 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetListenerHealthStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetListenerHealthStatusResponseBody</p>
+     */
     public static class Reason extends TeaModel {
-        @NameInMap("ActualResponse")
+        @com.aliyun.core.annotation.NameInMap("ActualResponse")
         private String actualResponse;
 
-        @NameInMap("ExpectedResponse")
+        @com.aliyun.core.annotation.NameInMap("ExpectedResponse")
         private String expectedResponse;
 
-        @NameInMap("ReasonCode")
+        @com.aliyun.core.annotation.NameInMap("ReasonCode")
         private String reasonCode;
 
         private Reason(Builder builder) {
@@ -166,10 +183,13 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             private String reasonCode; 
 
             /**
-             * The HTTP status code returned from the server, for example, **302**.
-             * <p>
+             * <p>The HTTP status code returned from the server, for example, <strong>302</strong>.</p>
+             * <blockquote>
+             * <p>A value is returned only if <code>ReasonCode</code> is set to <strong>RESPONSE_MISMATCH</strong>.</p>
+             * </blockquote>
              * 
-             * > A value is returned only if `ReasonCode` is set to **RESPONSE_MISMATCH**.
+             * <strong>example:</strong>
+             * <p>302</p>
              */
             public Builder actualResponse(String actualResponse) {
                 this.actualResponse = actualResponse;
@@ -177,12 +197,14 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP status code returned after backend servers pass health checks.
-             * <p>
+             * <p>The HTTP status code returned after backend servers pass health checks.</p>
+             * <p>Valid values: <strong>HTTP_2xx</strong>, <strong>HTTP_3xx</strong>, <strong>HTTP_4xx</strong>, and <strong>HTTP_5xx</strong>. Multiple status codes are separated by commas (,).</p>
+             * <blockquote>
+             * <p>This value is returned only if <strong>ReasonCode</strong> is set to <strong>RESPONSE_MISMATCH</strong>.</p>
+             * </blockquote>
              * 
-             * Valid values: **HTTP\_2xx**, **HTTP\_3xx**, **HTTP\_4xx**, and **HTTP\_5xx**. Multiple status codes are separated by commas (,).
-             * 
-             * > This value is returned only if **ReasonCode** is set to **RESPONSE_MISMATCH**.
+             * <strong>example:</strong>
+             * <p>HTTP_2xx</p>
              */
             public Builder expectedResponse(String expectedResponse) {
                 this.expectedResponse = expectedResponse;
@@ -190,17 +212,20 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the value of **Status** is Unhealthy. Only HTTP and HTTPS listeners support this parameter.
-             * <p>
+             * <p>The reason why the value of <strong>Status</strong> is Unhealthy. Only HTTP and HTTPS listeners support this parameter.</p>
+             * <ul>
+             * <li><strong>CONNECT_TIMEOUT</strong>: ALB failed to connect to the backend server within the specified period of time.</li>
+             * <li><strong>CONNECT_FAILED</strong>: ALB failed to connect to the backend server.</li>
+             * <li><strong>RECV_RESPONSE_FAILED</strong>: ALB failed to receive a response from the backend server.</li>
+             * <li><strong>RECV_RESPONSE_TIMEOUT</strong>: ALB failed to receive a response from the backend server within the specified period of time.</li>
+             * <li><strong>SEND_REQUEST_FAILED</strong>: ALB failed to send a request to the backend server.</li>
+             * <li><strong>SEND_REQUEST_TIMEOUT</strong>: ALB failed to send a request to the backend server within the specified period of time.</li>
+             * <li><strong>RESPONSE_FORMAT_ERROR</strong>: The format of the response from the backend server is invalid.</li>
+             * <li><strong>RESPONSE_FORMAT_ERROR</strong>: The HTTP status code returned from the backend server is not the expected one.</li>
+             * </ul>
              * 
-             * *   **CONNECT_TIMEOUT**: ALB failed to connect to the backend server within the specified period of time.
-             * *   **CONNECT_FAILED**: ALB failed to connect to the backend server.
-             * *   **RECV_RESPONSE_FAILED**: ALB failed to receive a response from the backend server.
-             * *   **RECV_RESPONSE_TIMEOUT**: ALB failed to receive a response from the backend server within the specified period of time.
-             * *   **SEND_REQUEST_FAILED**: ALB failed to send a request to the backend server.
-             * *   **SEND_REQUEST_TIMEOUT**: ALB failed to send a request to the backend server within the specified period of time.
-             * *   **RESPONSE_FORMAT_ERROR**: The format of the response from the backend server is invalid.
-             * *   **RESPONSE_FORMAT_ERROR**: The HTTP status code returned from the backend server is not the expected one.
+             * <strong>example:</strong>
+             * <p>RESPONSE_MISMATCH</p>
              */
             public Builder reasonCode(String reasonCode) {
                 this.reasonCode = reasonCode;
@@ -214,20 +239,26 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetListenerHealthStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetListenerHealthStatusResponseBody</p>
+     */
     public static class NonNormalServers extends TeaModel {
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private Reason reason;
 
-        @NameInMap("ServerId")
+        @com.aliyun.core.annotation.NameInMap("ServerId")
         private String serverId;
 
-        @NameInMap("ServerIp")
+        @com.aliyun.core.annotation.NameInMap("ServerIp")
         private String serverIp;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private NonNormalServers(Builder builder) {
@@ -289,7 +320,10 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The backend port.
+             * <p>The backend port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -297,7 +331,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The cause of the abnormal state.
+             * <p>The cause of the abnormal state.</p>
              */
             public Builder reason(Reason reason) {
                 this.reason = reason;
@@ -305,7 +339,10 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the backend server.
+             * <p>The ID of the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-bp1bfa08ex*****</p>
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -313,7 +350,10 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the backend server.
+             * <p>The IP address of the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.8.10</p>
              */
             public Builder serverIp(String serverIp) {
                 this.serverIp = serverIp;
@@ -321,13 +361,16 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the health check. Valid values: Valid values:
-             * <p>
+             * <p>The status of the health check. Valid values: Valid values:</p>
+             * <ul>
+             * <li><strong>Initial</strong>: indicates that health checks are configured for the NLB instance, but no data was found.</li>
+             * <li><strong>Unhealthy</strong>: indicates that the backend server consecutively fails health checks.</li>
+             * <li><strong>Unused</strong>: indicates that the weight of the backend server is 0.</li>
+             * <li><strong>Unavailable</strong>: indicates that health checks are disabled.</li>
+             * </ul>
              * 
-             * *   **Initial**: indicates that health checks are configured for the NLB instance, but no data was found.
-             * *   **Unhealthy**: indicates that the backend server consecutively fails health checks.
-             * *   **Unused**: indicates that the weight of the backend server is 0.
-             * *   **Unavailable**: indicates that health checks are disabled.
+             * <strong>example:</strong>
+             * <p>Initial</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -341,17 +384,23 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetListenerHealthStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetListenerHealthStatusResponseBody</p>
+     */
     public static class ServerGroupInfos extends TeaModel {
-        @NameInMap("ActionType")
+        @com.aliyun.core.annotation.NameInMap("ActionType")
         private String actionType;
 
-        @NameInMap("HealthCheckEnabled")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckEnabled")
         private String healthCheckEnabled;
 
-        @NameInMap("NonNormalServers")
-        private java.util.List < NonNormalServers> nonNormalServers;
+        @com.aliyun.core.annotation.NameInMap("NonNormalServers")
+        private java.util.List<NonNormalServers> nonNormalServers;
 
-        @NameInMap("ServerGroupId")
+        @com.aliyun.core.annotation.NameInMap("ServerGroupId")
         private String serverGroupId;
 
         private ServerGroupInfos(Builder builder) {
@@ -386,7 +435,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         /**
          * @return nonNormalServers
          */
-        public java.util.List < NonNormalServers> getNonNormalServers() {
+        public java.util.List<NonNormalServers> getNonNormalServers() {
             return this.nonNormalServers;
         }
 
@@ -400,11 +449,18 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String actionType; 
             private String healthCheckEnabled; 
-            private java.util.List < NonNormalServers> nonNormalServers; 
+            private java.util.List<NonNormalServers> nonNormalServers; 
             private String serverGroupId; 
 
             /**
-             * The action specified for the server group.
+             * <p>The action specified for the server group. Valid values:</p>
+             * <ul>
+             * <li><strong>ForwardGroup</strong>: distributes requests to server groups.</li>
+             * <li><strong>TrafficMirror</strong>: mirrors requests to server groups.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TrafficMirror</p>
              */
             public Builder actionType(String actionType) {
                 this.actionType = actionType;
@@ -412,7 +468,10 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether health checks are enabled. If **on** is returned, it indicates that health checks are enabled.
+             * <p>Indicates whether health checks are enabled. If <strong>on</strong> is returned, it indicates that health checks are enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder healthCheckEnabled(String healthCheckEnabled) {
                 this.healthCheckEnabled = healthCheckEnabled;
@@ -420,15 +479,18 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * A list of unhealthy backend servers.
+             * <p>A list of unhealthy backend servers.</p>
              */
-            public Builder nonNormalServers(java.util.List < NonNormalServers> nonNormalServers) {
+            public Builder nonNormalServers(java.util.List<NonNormalServers> nonNormalServers) {
                 this.nonNormalServers = nonNormalServers;
                 return this;
             }
 
             /**
-             * The ID of the server group that is associated with the listener.
+             * <p>The ID of the server group that is associated with the listener.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsp-bp1qjwo61pqz3ahltv****</p>
              */
             public Builder serverGroupId(String serverGroupId) {
                 this.serverGroupId = serverGroupId;
@@ -442,18 +504,24 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetListenerHealthStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetListenerHealthStatusResponseBody</p>
+     */
     public static class ListenerHealthStatus extends TeaModel {
-        @NameInMap("ListenerId")
+        @com.aliyun.core.annotation.NameInMap("ListenerId")
         private String listenerId;
 
-        @NameInMap("ListenerPort")
+        @com.aliyun.core.annotation.NameInMap("ListenerPort")
         private Integer listenerPort;
 
-        @NameInMap("ListenerProtocol")
+        @com.aliyun.core.annotation.NameInMap("ListenerProtocol")
         private String listenerProtocol;
 
-        @NameInMap("ServerGroupInfos")
-        private java.util.List < ServerGroupInfos> serverGroupInfos;
+        @com.aliyun.core.annotation.NameInMap("ServerGroupInfos")
+        private java.util.List<ServerGroupInfos> serverGroupInfos;
 
         private ListenerHealthStatus(Builder builder) {
             this.listenerId = builder.listenerId;
@@ -494,7 +562,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         /**
          * @return serverGroupInfos
          */
-        public java.util.List < ServerGroupInfos> getServerGroupInfos() {
+        public java.util.List<ServerGroupInfos> getServerGroupInfos() {
             return this.serverGroupInfos;
         }
 
@@ -502,10 +570,13 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             private String listenerId; 
             private Integer listenerPort; 
             private String listenerProtocol; 
-            private java.util.List < ServerGroupInfos> serverGroupInfos; 
+            private java.util.List<ServerGroupInfos> serverGroupInfos; 
 
             /**
-             * The listener ID.
+             * <p>The listener ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lsr-bp1bpn0kn908w4nbw****</p>
              */
             public Builder listenerId(String listenerId) {
                 this.listenerId = listenerId;
@@ -513,7 +584,10 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The listener port.
+             * <p>The listener port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder listenerPort(Integer listenerPort) {
                 this.listenerPort = listenerPort;
@@ -521,7 +595,10 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The listener protocol.
+             * <p>The listener protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http</p>
              */
             public Builder listenerProtocol(String listenerProtocol) {
                 this.listenerProtocol = listenerProtocol;
@@ -529,9 +606,9 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the server groups.
+             * <p>The information about the server group.</p>
              */
-            public Builder serverGroupInfos(java.util.List < ServerGroupInfos> serverGroupInfos) {
+            public Builder serverGroupInfos(java.util.List<ServerGroupInfos> serverGroupInfos) {
                 this.serverGroupInfos = serverGroupInfos;
                 return this;
             }
@@ -543,14 +620,20 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetListenerHealthStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetListenerHealthStatusResponseBody</p>
+     */
     public static class NonNormalServersReason extends TeaModel {
-        @NameInMap("ActualResponse")
+        @com.aliyun.core.annotation.NameInMap("ActualResponse")
         private String actualResponse;
 
-        @NameInMap("ExpectedResponse")
+        @com.aliyun.core.annotation.NameInMap("ExpectedResponse")
         private String expectedResponse;
 
-        @NameInMap("ReasonCode")
+        @com.aliyun.core.annotation.NameInMap("ReasonCode")
         private String reasonCode;
 
         private NonNormalServersReason(Builder builder) {
@@ -594,10 +677,13 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             private String reasonCode; 
 
             /**
-             * The HTTP status code returned from the server, for example, **302**.
-             * <p>
+             * <p>The HTTP status code returned from the server, for example, <strong>302</strong>.</p>
+             * <blockquote>
+             * <p>A value is returned only if <strong>ReasonCode</strong> is set to <strong>RESPONSE_MISMATCH</strong>.</p>
+             * </blockquote>
              * 
-             * > A value is returned only if **ReasonCode** is set to **RESPONSE_MISMATCH**.
+             * <strong>example:</strong>
+             * <p>302</p>
              */
             public Builder actualResponse(String actualResponse) {
                 this.actualResponse = actualResponse;
@@ -605,12 +691,14 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP status code returned after backend servers pass health checks.
-             * <p>
+             * <p>The HTTP status code returned after backend servers pass health checks.</p>
+             * <p>Valid values: <strong>HTTP_2xx</strong>, <strong>HTTP_3xx</strong>, <strong>HTTP_4xx</strong>, and <strong>HTTP_5xx</strong>. Multiple status codes are separated by commas (,).</p>
+             * <blockquote>
+             * <p>A value is returned only if <strong>ReasonCode</strong> is set to <strong>RESPONSE_MISMATCH</strong>.</p>
+             * </blockquote>
              * 
-             * Valid values: **HTTP\_2xx**, **HTTP\_3xx**, **HTTP\_4xx**, and **HTTP\_5xx**. Multiple status codes are separated by commas (,).
-             * 
-             * > A value is returned only if **ReasonCode** is set to **RESPONSE_MISMATCH**.
+             * <strong>example:</strong>
+             * <p>HTTP_2xx</p>
              */
             public Builder expectedResponse(String expectedResponse) {
                 this.expectedResponse = expectedResponse;
@@ -618,17 +706,20 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the value of **Status** is Unhealthy. Only HTTP and HTTPS listeners support this parameter.
-             * <p>
+             * <p>The reason why the value of <strong>Status</strong> is Unhealthy. Only HTTP and HTTPS listeners support this parameter.</p>
+             * <ul>
+             * <li><strong>CONNECT_TIMEOUT</strong>: ALB failed to connect to the backend server within the specified period of time.</li>
+             * <li><strong>CONNECT_FAILED</strong>: ALB failed to connect to the backend server.</li>
+             * <li><strong>RECV_RESPONSE_FAILED</strong>: ALB failed to receive a response from the backend server.</li>
+             * <li><strong>RECV_RESPONSE_TIMEOUT</strong>: ALB failed to receive a response from the backend server within the specified period of time.</li>
+             * <li><strong>SEND_REQUEST_FAILED</strong>: ALB failed to send a request to the backend server.</li>
+             * <li><strong>SEND_REQUEST_TIMEOUT</strong>: ALB failed to send a request to the backend server within the specified period of time.</li>
+             * <li><strong>RESPONSE_FORMAT_ERROR</strong>: The format of the response from the backend server is invalid.</li>
+             * <li><strong>RESPONSE_FORMAT_ERROR</strong>: The HTTP status code returned from the backend server is not the expected one.</li>
+             * </ul>
              * 
-             * *   **CONNECT_TIMEOUT**: ALB failed to connect to the backend server within the specified period of time.
-             * *   **CONNECT_FAILED**: ALB failed to connect to the backend server.
-             * *   **RECV_RESPONSE_FAILED**: ALB failed to receive a response from the backend server.
-             * *   **RECV_RESPONSE_TIMEOUT**: ALB failed to receive a response from the backend server within the specified period of time.
-             * *   **SEND_REQUEST_FAILED**: ALB failed to send a request to the backend server.
-             * *   **SEND_REQUEST_TIMEOUT**: ALB failed to send a request to the backend server within the specified period of time.
-             * *   **RESPONSE_FORMAT_ERROR**: The format of the response from the backend server is invalid.
-             * *   **RESPONSE_FORMAT_ERROR**: The HTTP status code returned from the backend server is not the expected one.
+             * <strong>example:</strong>
+             * <p>RESPONSE_MISMATCH</p>
              */
             public Builder reasonCode(String reasonCode) {
                 this.reasonCode = reasonCode;
@@ -642,20 +733,26 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetListenerHealthStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetListenerHealthStatusResponseBody</p>
+     */
     public static class ServerGroupInfosNonNormalServers extends TeaModel {
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private NonNormalServersReason reason;
 
-        @NameInMap("ServerId")
+        @com.aliyun.core.annotation.NameInMap("ServerId")
         private String serverId;
 
-        @NameInMap("ServerIp")
+        @com.aliyun.core.annotation.NameInMap("ServerIp")
         private String serverIp;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ServerGroupInfosNonNormalServers(Builder builder) {
@@ -717,7 +814,10 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The backend port.
+             * <p>The backend port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -725,7 +825,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The cause of the abnormal state.
+             * <p>The cause of the abnormal state.</p>
              */
             public Builder reason(NonNormalServersReason reason) {
                 this.reason = reason;
@@ -733,7 +833,10 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the backend server.
+             * <p>The ID of the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-bp1bfa08ex****</p>
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -741,7 +844,10 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the server group.
+             * <p>The IP address of the server group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.2.11</p>
              */
             public Builder serverIp(String serverIp) {
                 this.serverIp = serverIp;
@@ -749,13 +855,16 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the health check. Valid values: Valid values:
-             * <p>
+             * <p>The status of the health check. Valid values: Valid values:</p>
+             * <ul>
+             * <li><strong>Initial</strong>: indicates that health checks are configured for the NLB instance, but no data was found.</li>
+             * <li><strong>Unhealthy</strong>: indicates that the backend server consecutively fails health checks.</li>
+             * <li><strong>Unused</strong>: indicates that the weight of the backend server is 0.</li>
+             * <li><strong>Unavailable</strong>: indicates that health checks are disabled.</li>
+             * </ul>
              * 
-             * *   **Initial**: indicates that health checks are configured for the NLB instance, but no data was found.
-             * *   **Unhealthy**: indicates that the backend server consecutively fails health checks.
-             * *   **Unused**: indicates that the weight of the backend server is 0.
-             * *   **Unavailable**: indicates that health checks are disabled.
+             * <strong>example:</strong>
+             * <p>Initial</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -769,17 +878,23 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetListenerHealthStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetListenerHealthStatusResponseBody</p>
+     */
     public static class RuleHealthStatusServerGroupInfos extends TeaModel {
-        @NameInMap("ActionType")
+        @com.aliyun.core.annotation.NameInMap("ActionType")
         private String actionType;
 
-        @NameInMap("HealthCheckEnabled")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckEnabled")
         private String healthCheckEnabled;
 
-        @NameInMap("NonNormalServers")
-        private java.util.List < ServerGroupInfosNonNormalServers> nonNormalServers;
+        @com.aliyun.core.annotation.NameInMap("NonNormalServers")
+        private java.util.List<ServerGroupInfosNonNormalServers> nonNormalServers;
 
-        @NameInMap("ServerGroupId")
+        @com.aliyun.core.annotation.NameInMap("ServerGroupId")
         private String serverGroupId;
 
         private RuleHealthStatusServerGroupInfos(Builder builder) {
@@ -814,7 +929,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         /**
          * @return nonNormalServers
          */
-        public java.util.List < ServerGroupInfosNonNormalServers> getNonNormalServers() {
+        public java.util.List<ServerGroupInfosNonNormalServers> getNonNormalServers() {
             return this.nonNormalServers;
         }
 
@@ -828,11 +943,14 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String actionType; 
             private String healthCheckEnabled; 
-            private java.util.List < ServerGroupInfosNonNormalServers> nonNormalServers; 
+            private java.util.List<ServerGroupInfosNonNormalServers> nonNormalServers; 
             private String serverGroupId; 
 
             /**
-             * The action specified for the server group.
+             * <p>The action specified for the server group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TrafficMirror</p>
              */
             public Builder actionType(String actionType) {
                 this.actionType = actionType;
@@ -840,7 +958,10 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether health checks are enabled. If **on** is returned, it indicates that health checks are enabled.
+             * <p>Indicates whether health checks are enabled. If <strong>on</strong> is returned, it indicates that health checks are enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder healthCheckEnabled(String healthCheckEnabled) {
                 this.healthCheckEnabled = healthCheckEnabled;
@@ -848,15 +969,18 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * A list of unhealthy backend servers.
+             * <p>A list of unhealthy backend servers.</p>
              */
-            public Builder nonNormalServers(java.util.List < ServerGroupInfosNonNormalServers> nonNormalServers) {
+            public Builder nonNormalServers(java.util.List<ServerGroupInfosNonNormalServers> nonNormalServers) {
                 this.nonNormalServers = nonNormalServers;
                 return this;
             }
 
             /**
-             * The ID of the server group that is associated with the listener.
+             * <p>The ID of the server group that is associated with the listener.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsp-bp1qjwo61pqz3ahlt****</p>
              */
             public Builder serverGroupId(String serverGroupId) {
                 this.serverGroupId = serverGroupId;
@@ -870,12 +994,18 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetListenerHealthStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetListenerHealthStatusResponseBody</p>
+     */
     public static class RuleHealthStatus extends TeaModel {
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("ServerGroupInfos")
-        private java.util.List < RuleHealthStatusServerGroupInfos> serverGroupInfos;
+        @com.aliyun.core.annotation.NameInMap("ServerGroupInfos")
+        private java.util.List<RuleHealthStatusServerGroupInfos> serverGroupInfos;
 
         private RuleHealthStatus(Builder builder) {
             this.ruleId = builder.ruleId;
@@ -900,16 +1030,19 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         /**
          * @return serverGroupInfos
          */
-        public java.util.List < RuleHealthStatusServerGroupInfos> getServerGroupInfos() {
+        public java.util.List<RuleHealthStatusServerGroupInfos> getServerGroupInfos() {
             return this.serverGroupInfos;
         }
 
         public static final class Builder {
             private String ruleId; 
-            private java.util.List < RuleHealthStatusServerGroupInfos> serverGroupInfos; 
+            private java.util.List<RuleHealthStatusServerGroupInfos> serverGroupInfos; 
 
             /**
-             * The ID of the forwarding rule.
+             * <p>The ID of the forwarding rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule-hp34s2h0xx1ht4nwo****</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -917,9 +1050,9 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The server groups.
+             * <p>The server groups.</p>
              */
-            public Builder serverGroupInfos(java.util.List < RuleHealthStatusServerGroupInfos> serverGroupInfos) {
+            public Builder serverGroupInfos(java.util.List<RuleHealthStatusServerGroupInfos> serverGroupInfos) {
                 this.serverGroupInfos = serverGroupInfos;
                 return this;
             }

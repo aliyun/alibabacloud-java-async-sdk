@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTagKeysResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTagKeysResponseBody</p>
  */
 public class DescribeTagKeysResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TagKeys")
+    @com.aliyun.core.annotation.NameInMap("TagKeys")
     private TagKeys tagKeys;
 
     private DescribeTagKeysResponseBody(Builder builder) {
@@ -62,11 +67,14 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         private TagKeys tagKeys; 
 
         /**
-         * The token that is used for the next query. Valid values:
-         * <p>
+         * <p>The token that is used for the next query. Valid values:</p>
+         * <ul>
+         * <li>If the value of <strong>NextToken</strong> is not returned, it indicates that no next query is to be sent.</li>
+         * <li>If a value of <strong>NextToken</strong> is returned, the value is the token that is used for the subsequent query.</li>
+         * </ul>
          * 
-         * *   If the value of **NextToken** is not returned, it indicates that no next query is to be sent.
-         * *   If a value of **NextToken** is returned, the value is the token that is used for the subsequent query.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -74,7 +82,10 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DE65F6B7-7566-4802-9007-96F2494AC512</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,7 +93,7 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The list of tag keys.
+         * <p>The list of tag keys.</p>
          */
         public Builder tagKeys(TagKeys tagKeys) {
             this.tagKeys = tagKeys;
@@ -95,11 +106,17 @@ public class DescribeTagKeysResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTagKeysResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTagKeysResponseBody</p>
+     */
     public static class TagKey extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private TagKey(Builder builder) {
@@ -134,7 +151,10 @@ public class DescribeTagKeysResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -142,11 +162,14 @@ public class DescribeTagKeysResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the tag key. Valid values:
-             * <p>
+             * <p>The type of the tag key. Valid values:</p>
+             * <ul>
+             * <li><strong>Custom</strong>: custom</li>
+             * <li><strong>System</strong>: system</li>
+             * </ul>
              * 
-             * *   **Custom**: custom
-             * *   **System**: system
+             * <strong>example:</strong>
+             * <p>Custom</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -160,9 +183,15 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTagKeysResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTagKeysResponseBody</p>
+     */
     public static class TagKeys extends TeaModel {
-        @NameInMap("TagKey")
-        private java.util.List < TagKey> tagKey;
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private java.util.List<TagKey> tagKey;
 
         private TagKeys(Builder builder) {
             this.tagKey = builder.tagKey;
@@ -179,17 +208,20 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         /**
          * @return tagKey
          */
-        public java.util.List < TagKey> getTagKey() {
+        public java.util.List<TagKey> getTagKey() {
             return this.tagKey;
         }
 
         public static final class Builder {
-            private java.util.List < TagKey> tagKey; 
+            private java.util.List<TagKey> tagKey; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
-            public Builder tagKey(java.util.List < TagKey> tagKey) {
+            public Builder tagKey(java.util.List<TagKey> tagKey) {
                 this.tagKey = tagKey;
                 return this;
             }

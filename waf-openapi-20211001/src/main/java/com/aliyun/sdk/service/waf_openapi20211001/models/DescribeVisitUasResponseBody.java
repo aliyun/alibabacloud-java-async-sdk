@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVisitUasResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVisitUasResponseBody</p>
  */
 public class DescribeVisitUasResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Uas")
-    private java.util.List < Uas> uas;
+    @com.aliyun.core.annotation.NameInMap("Uas")
+    private java.util.List<Uas> uas;
 
     private DescribeVisitUasResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class DescribeVisitUasResponseBody extends TeaModel {
     /**
      * @return uas
      */
-    public java.util.List < Uas> getUas() {
+    public java.util.List<Uas> getUas() {
         return this.uas;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Uas> uas; 
+        private java.util.List<Uas> uas; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2847CE98-AFAE-5A64-B80E-60461717F9DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class DescribeVisitUasResponseBody extends TeaModel {
         }
 
         /**
-         * The array of the top 10 user agents that are used to initiate requests.
+         * <p>The array of the top 10 user agents that are used to initiate requests.</p>
          */
-        public Builder uas(java.util.List < Uas> uas) {
+        public Builder uas(java.util.List<Uas> uas) {
             this.uas = uas;
             return this;
         }
@@ -71,11 +79,17 @@ public class DescribeVisitUasResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVisitUasResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVisitUasResponseBody</p>
+     */
     public static class Uas extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("Ua")
+        @com.aliyun.core.annotation.NameInMap("Ua")
         private String ua;
 
         private Uas(Builder builder) {
@@ -110,7 +124,10 @@ public class DescribeVisitUasResponseBody extends TeaModel {
             private String ua; 
 
             /**
-             * The number of requests that use the user agent.
+             * <p>The number of requests that use the user agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>698455</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -118,7 +135,10 @@ public class DescribeVisitUasResponseBody extends TeaModel {
             }
 
             /**
-             * The user agent.
+             * <p>The user agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>chrome</p>
              */
             public Builder ua(String ua) {
                 this.ua = ua;

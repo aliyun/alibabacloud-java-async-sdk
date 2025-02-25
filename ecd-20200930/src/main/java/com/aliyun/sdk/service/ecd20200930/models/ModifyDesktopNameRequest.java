@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDesktopNameRequest} extends {@link RequestModel}
  *
  * <p>ModifyDesktopNameRequest</p>
  */
 public class ModifyDesktopNameRequest extends Request {
-    @Query
-    @NameInMap("DesktopId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String desktopId;
 
-    @Query
-    @NameInMap("NewDesktopName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewDesktopName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String newDesktopName;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private ModifyDesktopNameRequest(Builder builder) {
@@ -85,7 +90,11 @@ public class ModifyDesktopNameRequest extends Request {
         } 
 
         /**
-         * DesktopId.
+         * <p>The ID of the cloud computer.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-gx2x1dhsmucyy****</p>
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -94,12 +103,16 @@ public class ModifyDesktopNameRequest extends Request {
         }
 
         /**
-         * The new name of the cloud desktop. The name of the cloud desktop must meet the following requirements:
-         * <p>
+         * <p>The new name of the cloud computer. The name of the cloud computer must meet the following requirements:</p>
+         * <ul>
+         * <li>The name must be 1 to 64 characters in length.</li>
+         * <li>The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>The name can only contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name must be 1 to 64 characters in length.
-         * *   The name must start with a letter and cannot start with `http://` or `https://`.
-         * *   The name can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder newDesktopName(String newDesktopName) {
             this.putQueryParameter("NewDesktopName", newDesktopName);
@@ -108,7 +121,11 @@ public class ModifyDesktopNameRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **ModifyDesktopName**.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

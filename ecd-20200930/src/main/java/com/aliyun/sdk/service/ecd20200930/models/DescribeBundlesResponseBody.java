@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBundlesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBundlesResponseBody</p>
  */
 public class DescribeBundlesResponseBody extends TeaModel {
-    @NameInMap("Bundles")
-    private java.util.List < Bundles> bundles;
+    @com.aliyun.core.annotation.NameInMap("Bundles")
+    private java.util.List<Bundles> bundles;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeBundlesResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
     /**
      * @return bundles
      */
-    public java.util.List < Bundles> getBundles() {
+    public java.util.List<Bundles> getBundles() {
         return this.bundles;
     }
 
@@ -57,20 +62,23 @@ public class DescribeBundlesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Bundles> bundles; 
+        private java.util.List<Bundles> bundles; 
         private String nextToken; 
         private String requestId; 
 
         /**
-         * Bundles.
+         * <p>The details of the queried cloud computer templates.</p>
          */
-        public Builder bundles(java.util.List < Bundles> bundles) {
+        public Builder bundles(java.util.List<Bundles> bundles) {
             this.bundles = bundles;
             return this;
         }
 
         /**
-         * NextToken.
+         * <p>The token that is used for the next query. If this parameter is empty, all results have been returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6lu3PTF6h3zE8egwlYuv8M8</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +86,10 @@ public class DescribeBundlesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BCC854D8-5D1E-46D3-96EF-797A5DD36789</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,17 +102,23 @@ public class DescribeBundlesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBundlesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBundlesResponseBody</p>
+     */
     public static class DesktopTypeAttribute extends TeaModel {
-        @NameInMap("CpuCount")
+        @com.aliyun.core.annotation.NameInMap("CpuCount")
         private Integer cpuCount;
 
-        @NameInMap("GpuCount")
+        @com.aliyun.core.annotation.NameInMap("GpuCount")
         private Float gpuCount;
 
-        @NameInMap("GpuSpec")
+        @com.aliyun.core.annotation.NameInMap("GpuSpec")
         private String gpuSpec;
 
-        @NameInMap("MemorySize")
+        @com.aliyun.core.annotation.NameInMap("MemorySize")
         private Integer memorySize;
 
         private DesktopTypeAttribute(Builder builder) {
@@ -154,7 +171,10 @@ public class DescribeBundlesResponseBody extends TeaModel {
             private Integer memorySize; 
 
             /**
-             * CpuCount.
+             * <p>The number of vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder cpuCount(Integer cpuCount) {
                 this.cpuCount = cpuCount;
@@ -162,7 +182,10 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * GpuCount.
+             * <p>The number of GPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder gpuCount(Float gpuCount) {
                 this.gpuCount = gpuCount;
@@ -170,7 +193,10 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * GpuSpec.
+             * <p>The GPU type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NVIDIA T4</p>
              */
             public Builder gpuSpec(String gpuSpec) {
                 this.gpuSpec = gpuSpec;
@@ -178,7 +204,10 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * MemorySize.
+             * <p>The memory size. Unit: MiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47104</p>
              */
             public Builder memorySize(Integer memorySize) {
                 this.memorySize = memorySize;
@@ -192,14 +221,20 @@ public class DescribeBundlesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBundlesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBundlesResponseBody</p>
+     */
     public static class Disks extends TeaModel {
-        @NameInMap("DiskPerformanceLevel")
+        @com.aliyun.core.annotation.NameInMap("DiskPerformanceLevel")
         private String diskPerformanceLevel;
 
-        @NameInMap("DiskSize")
+        @com.aliyun.core.annotation.NameInMap("DiskSize")
         private Integer diskSize;
 
-        @NameInMap("DiskType")
+        @com.aliyun.core.annotation.NameInMap("DiskType")
         private String diskType;
 
         private Disks(Builder builder) {
@@ -243,7 +278,40 @@ public class DescribeBundlesResponseBody extends TeaModel {
             private String diskType; 
 
             /**
-             * DiskPerformanceLevel.
+             * <p>The PL of the disk.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>PL1</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>PL0</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>PL3</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>PL2</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- --></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PL0</p>
              */
             public Builder diskPerformanceLevel(String diskPerformanceLevel) {
                 this.diskPerformanceLevel = diskPerformanceLevel;
@@ -251,7 +319,10 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * DiskSize.
+             * <p>The size of the disk. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>150</p>
              */
             public Builder diskSize(Integer diskSize) {
                 this.diskSize = diskSize;
@@ -259,7 +330,26 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * DiskType.
+             * <p>The type of the disk.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>SYSTEM: system disk</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>DATA: data disk</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- --></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEM</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -273,65 +363,77 @@ public class DescribeBundlesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBundlesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBundlesResponseBody</p>
+     */
     public static class Bundles extends TeaModel {
-        @NameInMap("BundleId")
+        @com.aliyun.core.annotation.NameInMap("BundleId")
         private String bundleId;
 
-        @NameInMap("BundleName")
+        @com.aliyun.core.annotation.NameInMap("BundleName")
         private String bundleName;
 
-        @NameInMap("BundleType")
+        @com.aliyun.core.annotation.NameInMap("BundleType")
         private String bundleType;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("DataDiskCategory")
+        private String dataDiskCategory;
+
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DesktopType")
+        @com.aliyun.core.annotation.NameInMap("DesktopType")
         private String desktopType;
 
-        @NameInMap("DesktopTypeAttribute")
+        @com.aliyun.core.annotation.NameInMap("DesktopTypeAttribute")
         private DesktopTypeAttribute desktopTypeAttribute;
 
-        @NameInMap("DesktopTypeFamily")
+        @com.aliyun.core.annotation.NameInMap("DesktopTypeFamily")
         private String desktopTypeFamily;
 
-        @NameInMap("Disks")
-        private java.util.List < Disks> disks;
+        @com.aliyun.core.annotation.NameInMap("Disks")
+        private java.util.List<Disks> disks;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("ImageName")
+        @com.aliyun.core.annotation.NameInMap("ImageName")
         private String imageName;
 
-        @NameInMap("ImageStatus")
+        @com.aliyun.core.annotation.NameInMap("ImageStatus")
         private String imageStatus;
 
-        @NameInMap("Language")
+        @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
 
-        @NameInMap("OsType")
+        @com.aliyun.core.annotation.NameInMap("OsType")
         private String osType;
 
-        @NameInMap("Platform")
+        @com.aliyun.core.annotation.NameInMap("Platform")
         private String platform;
 
-        @NameInMap("ProtocolType")
+        @com.aliyun.core.annotation.NameInMap("ProtocolType")
         private String protocolType;
 
-        @NameInMap("SessionType")
+        @com.aliyun.core.annotation.NameInMap("SessionType")
         private String sessionType;
 
-        @NameInMap("StockState")
+        @com.aliyun.core.annotation.NameInMap("StockState")
         private String stockState;
 
-        @NameInMap("VolumeEncryptionEnabled")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskCategory")
+        private String systemDiskCategory;
+
+        @com.aliyun.core.annotation.NameInMap("VolumeEncryptionEnabled")
         private Boolean volumeEncryptionEnabled;
 
-        @NameInMap("VolumeEncryptionKey")
+        @com.aliyun.core.annotation.NameInMap("VolumeEncryptionKey")
         private String volumeEncryptionKey;
 
         private Bundles(Builder builder) {
@@ -339,6 +441,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             this.bundleName = builder.bundleName;
             this.bundleType = builder.bundleType;
             this.creationTime = builder.creationTime;
+            this.dataDiskCategory = builder.dataDiskCategory;
             this.description = builder.description;
             this.desktopType = builder.desktopType;
             this.desktopTypeAttribute = builder.desktopTypeAttribute;
@@ -353,6 +456,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             this.protocolType = builder.protocolType;
             this.sessionType = builder.sessionType;
             this.stockState = builder.stockState;
+            this.systemDiskCategory = builder.systemDiskCategory;
             this.volumeEncryptionEnabled = builder.volumeEncryptionEnabled;
             this.volumeEncryptionKey = builder.volumeEncryptionKey;
         }
@@ -394,6 +498,13 @@ public class DescribeBundlesResponseBody extends TeaModel {
         }
 
         /**
+         * @return dataDiskCategory
+         */
+        public String getDataDiskCategory() {
+            return this.dataDiskCategory;
+        }
+
+        /**
          * @return description
          */
         public String getDescription() {
@@ -424,7 +535,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
         /**
          * @return disks
          */
-        public java.util.List < Disks> getDisks() {
+        public java.util.List<Disks> getDisks() {
             return this.disks;
         }
 
@@ -492,6 +603,13 @@ public class DescribeBundlesResponseBody extends TeaModel {
         }
 
         /**
+         * @return systemDiskCategory
+         */
+        public String getSystemDiskCategory() {
+            return this.systemDiskCategory;
+        }
+
+        /**
          * @return volumeEncryptionEnabled
          */
         public Boolean getVolumeEncryptionEnabled() {
@@ -510,11 +628,12 @@ public class DescribeBundlesResponseBody extends TeaModel {
             private String bundleName; 
             private String bundleType; 
             private String creationTime; 
+            private String dataDiskCategory; 
             private String description; 
             private String desktopType; 
             private DesktopTypeAttribute desktopTypeAttribute; 
             private String desktopTypeFamily; 
-            private java.util.List < Disks> disks; 
+            private java.util.List<Disks> disks; 
             private String imageId; 
             private String imageName; 
             private String imageStatus; 
@@ -524,11 +643,15 @@ public class DescribeBundlesResponseBody extends TeaModel {
             private String protocolType; 
             private String sessionType; 
             private String stockState; 
+            private String systemDiskCategory; 
             private Boolean volumeEncryptionEnabled; 
             private String volumeEncryptionKey; 
 
             /**
-             * BundleId.
+             * <p>The ID of the cloud computer template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bundle_ecd_graphics.2xlarge_s15d15_win2019</p>
              */
             public Builder bundleId(String bundleId) {
                 this.bundleId = bundleId;
@@ -536,7 +659,10 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * BundleName.
+             * <p>The name of the cloud computer template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Advanced graphics with Windows 2019</p>
              */
             public Builder bundleName(String bundleName) {
                 this.bundleName = bundleName;
@@ -544,7 +670,26 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * BundleType.
+             * <p>The type of the cloud computer template.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>SYSTEM: system template</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>CUSTOM: custom template</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- --></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEM</p>
              */
             public Builder bundleType(String bundleType) {
                 this.bundleType = bundleType;
@@ -552,7 +697,10 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The time when the cloud computer template was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-30T06:09Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -560,7 +708,18 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * DataDiskCategory.
+             */
+            public Builder dataDiskCategory(String dataDiskCategory) {
+                this.dataDiskCategory = dataDiskCategory;
+                return this;
+            }
+
+            /**
+             * <p>The description of the cloud computer template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -568,7 +727,10 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopType.
+             * <p>The instance type of the cloud computer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd.graphics.2xlarge</p>
              */
             public Builder desktopType(String desktopType) {
                 this.desktopType = desktopType;
@@ -576,7 +738,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopTypeAttribute.
+             * <p>The details of the cloud computer instance type.</p>
              */
             public Builder desktopTypeAttribute(DesktopTypeAttribute desktopTypeAttribute) {
                 this.desktopTypeAttribute = desktopTypeAttribute;
@@ -584,7 +746,16 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopTypeFamily.
+             * <p>The instance family of the cloud computer.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>eds.graphics: graphical instance family</li>
+             * <li>eds.hf: instance family with a high clock speed</li>
+             * <li>eds.general: general-purpose instance family</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>eds.general</p>
              */
             public Builder desktopTypeFamily(String desktopTypeFamily) {
                 this.desktopTypeFamily = desktopTypeFamily;
@@ -592,15 +763,18 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * Disks.
+             * <p>Details of the disks.</p>
              */
-            public Builder disks(java.util.List < Disks> disks) {
+            public Builder disks(java.util.List<Disks> disks) {
                 this.disks = disks;
                 return this;
             }
 
             /**
-             * ImageId.
+             * <p>The image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desktopimage-windows-server-2019-64-ch-vgpu</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -608,7 +782,10 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageName.
+             * <p>The image name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Windows server 2019 Chinese</p>
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -616,7 +793,10 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageStatus.
+             * <p>The status of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder imageStatus(String imageStatus) {
                 this.imageStatus = imageStatus;
@@ -624,7 +804,10 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * Language.
+             * <p>The OS language of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>en-US</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -632,7 +815,26 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * OsType.
+             * <p>The type of the OS.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>Linux</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>Windows</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- --></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Windows</p>
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -640,7 +842,54 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * Platform.
+             * <p>The OS.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>Ubuntu</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>Windows Server 2022</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>UOS</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>CentOS</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>Windows Server 2019</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>Windows Server 2016</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- --></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Windows Server 2019</p>
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -648,7 +897,15 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * ProtocolType.
+             * <p>The protocol type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>HDX: HDX protocol</li>
+             * <li>ASP: in-house ASP</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ASP</p>
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -656,7 +913,15 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * SessionType.
+             * <p>The session type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>0: single-session</li>
+             * <li>1: multi-session</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder sessionType(String sessionType) {
                 this.sessionType = sessionType;
@@ -664,7 +929,10 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * StockState.
+             * <p>The inventory status of the cloud computer instance type. This parameter is returned only if you set the <code>CheckStock</code> parameter to <code>true</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sufficient</p>
              */
             public Builder stockState(String stockState) {
                 this.stockState = stockState;
@@ -672,7 +940,18 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * VolumeEncryptionEnabled.
+             * SystemDiskCategory.
+             */
+            public Builder systemDiskCategory(String systemDiskCategory) {
+                this.systemDiskCategory = systemDiskCategory;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether disk encryption is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder volumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
                 this.volumeEncryptionEnabled = volumeEncryptionEnabled;
@@ -680,7 +959,10 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * VolumeEncryptionKey.
+             * <p>The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d4****</p>
              */
             public Builder volumeEncryptionKey(String volumeEncryptionKey) {
                 this.volumeEncryptionKey = volumeEncryptionKey;

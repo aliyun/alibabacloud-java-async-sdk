@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListManagedRulesResponseBody} extends {@link TeaModel}
  *
  * <p>ListManagedRulesResponseBody</p>
  */
 public class ListManagedRulesResponseBody extends TeaModel {
-    @NameInMap("ManagedRules")
+    @com.aliyun.core.annotation.NameInMap("ManagedRules")
     private ManagedRules managedRules;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListManagedRulesResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class ListManagedRulesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The managed rules.
+         * <p>The managed rules.</p>
          */
         public Builder managedRules(ManagedRules managedRules) {
             this.managedRules = managedRules;
@@ -58,7 +63,10 @@ public class ListManagedRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B3E605AB-63D5-1EE0-BFA6-0BAC247B0461</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,9 +79,15 @@ public class ListManagedRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListManagedRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListManagedRulesResponseBody</p>
+     */
     public static class Scope extends TeaModel {
-        @NameInMap("ComplianceResourceTypes")
-        private java.util.List < String > complianceResourceTypes;
+        @com.aliyun.core.annotation.NameInMap("ComplianceResourceTypes")
+        private java.util.List<String> complianceResourceTypes;
 
         private Scope(Builder builder) {
             this.complianceResourceTypes = builder.complianceResourceTypes;
@@ -90,17 +104,17 @@ public class ListManagedRulesResponseBody extends TeaModel {
         /**
          * @return complianceResourceTypes
          */
-        public java.util.List < String > getComplianceResourceTypes() {
+        public java.util.List<String> getComplianceResourceTypes() {
             return this.complianceResourceTypes;
         }
 
         public static final class Builder {
-            private java.util.List < String > complianceResourceTypes; 
+            private java.util.List<String> complianceResourceTypes; 
 
             /**
-             * The type of resource to which the managed rule applies.
+             * <p>The types of resources to which the managed rule applies.</p>
              */
-            public Builder complianceResourceTypes(java.util.List < String > complianceResourceTypes) {
+            public Builder complianceResourceTypes(java.util.List<String> complianceResourceTypes) {
                 this.complianceResourceTypes = complianceResourceTypes;
                 return this;
             }
@@ -112,35 +126,41 @@ public class ListManagedRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListManagedRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListManagedRulesResponseBody</p>
+     */
     public static class ManagedRuleList extends TeaModel {
-        @NameInMap("ConfigRuleName")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleName")
         private String configRuleName;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("HelpUrls")
+        @com.aliyun.core.annotation.NameInMap("HelpUrls")
         private String helpUrls;
 
-        @NameInMap("Identifier")
+        @com.aliyun.core.annotation.NameInMap("Identifier")
         private String identifier;
 
-        @NameInMap("Labels")
-        private java.util.List < String > labels;
+        @com.aliyun.core.annotation.NameInMap("Labels")
+        private java.util.List<String> labels;
 
-        @NameInMap("RemediationTemplateIdentifier")
+        @com.aliyun.core.annotation.NameInMap("RemediationTemplateIdentifier")
         private String remediationTemplateIdentifier;
 
-        @NameInMap("RemediationTemplateName")
+        @com.aliyun.core.annotation.NameInMap("RemediationTemplateName")
         private String remediationTemplateName;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private Integer riskLevel;
 
-        @NameInMap("Scope")
+        @com.aliyun.core.annotation.NameInMap("Scope")
         private Scope scope;
 
-        @NameInMap("SupportPreviewManagedRule")
+        @com.aliyun.core.annotation.NameInMap("SupportPreviewManagedRule")
         private Boolean supportPreviewManagedRule;
 
         private ManagedRuleList(Builder builder) {
@@ -195,7 +215,7 @@ public class ListManagedRulesResponseBody extends TeaModel {
         /**
          * @return labels
          */
-        public java.util.List < String > getLabels() {
+        public java.util.List<String> getLabels() {
             return this.labels;
         }
 
@@ -239,7 +259,7 @@ public class ListManagedRulesResponseBody extends TeaModel {
             private String description; 
             private String helpUrls; 
             private String identifier; 
-            private java.util.List < String > labels; 
+            private java.util.List<String> labels; 
             private String remediationTemplateIdentifier; 
             private String remediationTemplateName; 
             private Integer riskLevel; 
@@ -247,7 +267,10 @@ public class ListManagedRulesResponseBody extends TeaModel {
             private Boolean supportPreviewManagedRule; 
 
             /**
-             * The name of the managed rule.
+             * <p>The name of the managed rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-rule-name</p>
              */
             public Builder configRuleName(String configRuleName) {
                 this.configRuleName = configRuleName;
@@ -255,7 +278,10 @@ public class ListManagedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the managed rule.
+             * <p>The description of the managed rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The description of the test rule.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -263,7 +289,10 @@ public class ListManagedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the topic that describes how the managed rule remediates the incompliant configurations.
+             * <p>The URL of the topic that describes how the managed rule remediates the incompliant configurations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.aliyundoc.com">https://example.aliyundoc.com</a></p>
              */
             public Builder helpUrls(String helpUrls) {
                 this.helpUrls = helpUrls;
@@ -271,7 +300,10 @@ public class ListManagedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The unique identifier of the managed rule.
+             * <p>The unique identifier of the managed rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cdn-domain-https-enabled</p>
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -279,15 +311,18 @@ public class ListManagedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Classification description of the managed rule.
+             * <p>The classification description of the managed rule.</p>
              */
-            public Builder labels(java.util.List < String > labels) {
+            public Builder labels(java.util.List<String> labels) {
                 this.labels = labels;
                 return this;
             }
 
             /**
-             * Supported remediation template id.
+             * <p>The ID of the remediation template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS-CDN-SetDomainServerCertificate</p>
              */
             public Builder remediationTemplateIdentifier(String remediationTemplateIdentifier) {
                 this.remediationTemplateIdentifier = remediationTemplateIdentifier;
@@ -295,7 +330,10 @@ public class ListManagedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Supported remediation template name.
+             * <p>The name of the remediation template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Configure encryption rules for OSS buckets</p>
              */
             public Builder remediationTemplateName(String remediationTemplateName) {
                 this.remediationTemplateName = remediationTemplateName;
@@ -303,12 +341,15 @@ public class ListManagedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level of the resources that do not comply with the managed rule. Valid values:
-             * <p>
+             * <p>The risk level of the resources that do not comply with the rule. Valid values:</p>
+             * <ul>
+             * <li>1: high</li>
+             * <li>2: medium</li>
+             * <li>3: low</li>
+             * </ul>
              * 
-             * *   1: high risk level
-             * *   2: medium risk level
-             * *   3: low risk level
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;
@@ -316,7 +357,7 @@ public class ListManagedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The effective scope of the managed rule.
+             * <p>The effective scope of the managed rule.</p>
              */
             public Builder scope(Scope scope) {
                 this.scope = scope;
@@ -324,12 +365,14 @@ public class ListManagedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Whether pre-check is supported. Value:
-             * <p>
+             * <p>Indicates whether precheck is supported. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * - true: Supported
-             * 
-             * - false: not supported
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportPreviewManagedRule(Boolean supportPreviewManagedRule) {
                 this.supportPreviewManagedRule = supportPreviewManagedRule;
@@ -343,17 +386,23 @@ public class ListManagedRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListManagedRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListManagedRulesResponseBody</p>
+     */
     public static class ManagedRules extends TeaModel {
-        @NameInMap("ManagedRuleList")
-        private java.util.List < ManagedRuleList> managedRuleList;
+        @com.aliyun.core.annotation.NameInMap("ManagedRuleList")
+        private java.util.List<ManagedRuleList> managedRuleList;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private ManagedRules(Builder builder) {
@@ -374,7 +423,7 @@ public class ListManagedRulesResponseBody extends TeaModel {
         /**
          * @return managedRuleList
          */
-        public java.util.List < ManagedRuleList> getManagedRuleList() {
+        public java.util.List<ManagedRuleList> getManagedRuleList() {
             return this.managedRuleList;
         }
 
@@ -400,21 +449,25 @@ public class ListManagedRulesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ManagedRuleList> managedRuleList; 
+            private java.util.List<ManagedRuleList> managedRuleList; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Long totalCount; 
 
             /**
-             * The name of the remediation template.
+             * <p>The details of the managed rule.</p>
              */
-            public Builder managedRuleList(java.util.List < ManagedRuleList> managedRuleList) {
+            public Builder managedRuleList(java.util.List<ManagedRuleList> managedRuleList) {
                 this.managedRuleList = managedRuleList;
                 return this;
             }
 
             /**
-             * The page number of the returned page. Minimum value: 1.
+             * <p>The page number.</p>
+             * <p>Page start from page 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -422,7 +475,10 @@ public class ListManagedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Valid values: 1 to 500.
+             * <p>The number of entries returned per page. Valid values: 1 to 500.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -430,7 +486,10 @@ public class ListManagedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of managed rules returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,48 +11,48 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListIncidentsRequest</p>
  */
 public class ListIncidentsRequest extends Request {
-    @Body
-    @NameInMap("clientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("createEndTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("createEndTime")
     private String createEndTime;
 
-    @Body
-    @NameInMap("createStartTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("createStartTime")
     private String createStartTime;
 
-    @Body
-    @NameInMap("effect")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("effect")
     private String effect;
 
-    @Body
-    @NameInMap("incidentLevel")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("incidentLevel")
     private String incidentLevel;
 
-    @Body
-    @NameInMap("incidentStatus")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("incidentStatus")
     private String incidentStatus;
 
-    @Body
-    @NameInMap("me")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("me")
     private Integer me;
 
-    @Body
-    @NameInMap("pageNumber")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Integer pageNumber;
 
-    @Body
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Integer pageSize;
 
-    @Body
-    @NameInMap("relationServiceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("relationServiceId")
     private Long relationServiceId;
 
-    @Body
-    @NameInMap("ruleName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ruleName")
     private String ruleName;
 
     private ListIncidentsRequest(Builder builder) {

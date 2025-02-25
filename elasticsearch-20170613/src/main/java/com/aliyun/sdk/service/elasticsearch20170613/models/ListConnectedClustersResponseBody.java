@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListConnectedClustersResponseBody} extends {@link TeaModel}
  *
  * <p>ListConnectedClustersResponseBody</p>
  */
 public class ListConnectedClustersResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private ListConnectedClustersResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class ListConnectedClustersResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class ListConnectedClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The return results.
+         * <p>The return results.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -71,11 +74,17 @@ public class ListConnectedClustersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListConnectedClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListConnectedClustersResponseBody</p>
+     */
     public static class ResultResult extends TeaModel {
-        @NameInMap("instances")
+        @com.aliyun.core.annotation.NameInMap("instances")
         private String instances;
 
-        @NameInMap("networkType")
+        @com.aliyun.core.annotation.NameInMap("networkType")
         private String networkType;
 
         private ResultResult(Builder builder) {
@@ -110,7 +119,10 @@ public class ListConnectedClustersResponseBody extends TeaModel {
             private String networkType; 
 
             /**
-             * The ID of the remote instance that is connected to the network of the current instance.
+             * <p>The ID of the remote instance that is connected to the network of the current instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-09k1rocex0006****</p>
              */
             public Builder instances(String instances) {
                 this.instances = instances;
@@ -118,7 +130,10 @@ public class ListConnectedClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The network type of the instance.
+             * <p>The network type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -132,8 +147,14 @@ public class ListConnectedClustersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListConnectedClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListConnectedClustersResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private java.util.List < ResultResult> result;
 
         private Result(Builder builder) {
@@ -159,7 +180,7 @@ public class ListConnectedClustersResponseBody extends TeaModel {
             private java.util.List < ResultResult> result; 
 
             /**
-             * The return results.
+             * <p>The return results.</p>
              */
             public Builder result(java.util.List < ResultResult> result) {
                 this.result = result;

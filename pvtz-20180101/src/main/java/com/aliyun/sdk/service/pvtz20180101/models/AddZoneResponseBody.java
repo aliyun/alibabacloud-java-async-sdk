@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddZoneResponseBody} extends {@link TeaModel}
  *
  * <p>AddZoneResponseBody</p>
  */
 public class AddZoneResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
-    @NameInMap("ZoneName")
+    @com.aliyun.core.annotation.NameInMap("ZoneName")
     private String zoneName;
 
     private AddZoneResponseBody(Builder builder) {
@@ -74,7 +74,10 @@ public class AddZoneResponseBody extends TeaModel {
         private String zoneName; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46973D4C-E3E4-4ABA-9190-9A9DE406C7E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,7 +85,10 @@ public class AddZoneResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -90,7 +96,10 @@ public class AddZoneResponseBody extends TeaModel {
         }
 
         /**
-         * zone ID。
+         * <p>The zone ID. This ID uniquely identifies the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6fc186295683a131f63bb8b0cddc****</p>
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;
@@ -98,7 +107,10 @@ public class AddZoneResponseBody extends TeaModel {
         }
 
         /**
-         * ZoneName.
+         * <p>The name of the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder zoneName(String zoneName) {
             this.zoneName = zoneName;

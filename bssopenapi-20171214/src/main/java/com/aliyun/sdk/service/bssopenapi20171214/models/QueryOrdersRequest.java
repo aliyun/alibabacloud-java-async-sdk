@@ -1,55 +1,60 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryOrdersRequest} extends {@link RequestModel}
  *
  * <p>QueryOrdersRequest</p>
  */
 public class QueryOrdersRequest extends Request {
-    @Query
-    @NameInMap("CreateTimeEnd")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateTimeEnd")
     private String createTimeEnd;
 
-    @Query
-    @NameInMap("CreateTimeStart")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateTimeStart")
     private String createTimeStart;
 
-    @Query
-    @NameInMap("OrderType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderType")
     private String orderType;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("PaymentStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PaymentStatus")
     private String paymentStatus;
 
-    @Query
-    @NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
 
-    @Query
-    @NameInMap("ProductType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductType")
     private String productType;
 
-    @Query
-    @NameInMap("SubscriptionType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscriptionType")
     private String subscriptionType;
 
     private QueryOrdersRequest(Builder builder) {
@@ -180,7 +185,10 @@ public class QueryOrdersRequest extends Request {
         } 
 
         /**
-         * The end time of the period during which the orders were created. By default, orders within the last hour are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>The end time of the period during which the orders were created. By default, orders within the last hour are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-05-23T12:00:00Z</p>
          */
         public Builder createTimeEnd(String createTimeEnd) {
             this.putQueryParameter("CreateTimeEnd", createTimeEnd);
@@ -189,7 +197,10 @@ public class QueryOrdersRequest extends Request {
         }
 
         /**
-         * The start time of the period during which the orders were created. By default, orders within the last hour are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>The start time of the period during which the orders were created. By default, orders within the last hour are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-05-23T13:00:00Z</p>
          */
         public Builder createTimeStart(String createTimeStart) {
             this.putQueryParameter("CreateTimeStart", createTimeStart);
@@ -198,13 +209,16 @@ public class QueryOrdersRequest extends Request {
         }
 
         /**
-         * The type of the order. Valid values:
-         * <p>
+         * <p>The type of the order. Valid values:</p>
+         * <ul>
+         * <li>New: purchases an instance.</li>
+         * <li>Renew: renews an instance.</li>
+         * <li>Upgrade: upgrades the configurations of an instance.</li>
+         * <li>Refund: applies for a refund.</li>
+         * </ul>
          * 
-         * *   New: purchases an instance.
-         * *   Renew: renews an instance.
-         * *   Upgrade: upgrades the configurations of an instance.
-         * *   Refund: applies for a refund.
+         * <strong>example:</strong>
+         * <p>New</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -222,7 +236,10 @@ public class QueryOrdersRequest extends Request {
         }
 
         /**
-         * The page number of the page to return.
+         * <p>The page number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -231,7 +248,10 @@ public class QueryOrdersRequest extends Request {
         }
 
         /**
-         * The number of entries to return per page.
+         * <p>The number of entries to return per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -240,14 +260,18 @@ public class QueryOrdersRequest extends Request {
         }
 
         /**
-         * The status of payment. Valid values for a non-refund order:
-         * <p>
+         * <p>The status of payment. Valid values for a non-refund order:</p>
+         * <ul>
+         * <li>Unpaid: The order is not paid.</li>
+         * <li>Paid: The order is paid.</li>
+         * <li>Cancelled: The order is canceled.</li>
+         * </ul>
+         * <blockquote>
+         * <p>: You can set this parameter to NULL for a refund order.</p>
+         * </blockquote>
          * 
-         * *   Unpaid: The order is not paid.
-         * *   Paid: The order is paid.
-         * *   Cancelled: The order is canceled.
-         * 
-         * > : You can set this parameter to NULL for a refund order.
+         * <strong>example:</strong>
+         * <p>Paid</p>
          */
         public Builder paymentStatus(String paymentStatus) {
             this.putQueryParameter("PaymentStatus", paymentStatus);
@@ -256,7 +280,10 @@ public class QueryOrdersRequest extends Request {
         }
 
         /**
-         * The code of the service.
+         * <p>The code of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -265,7 +292,10 @@ public class QueryOrdersRequest extends Request {
         }
 
         /**
-         * The type of the service.
+         * <p>The type of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -274,11 +304,14 @@ public class QueryOrdersRequest extends Request {
         }
 
         /**
-         * The billing method. Valid values:
-         * <p>
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>Subscription: subscription</li>
+         * <li>PayAsYouGo: pay-as-you-go</li>
+         * </ul>
          * 
-         * *   Subscription: subscription
-         * *   PayAsYouGo: pay-as-you-go
+         * <strong>example:</strong>
+         * <p>Subscription</p>
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putQueryParameter("SubscriptionType", subscriptionType);

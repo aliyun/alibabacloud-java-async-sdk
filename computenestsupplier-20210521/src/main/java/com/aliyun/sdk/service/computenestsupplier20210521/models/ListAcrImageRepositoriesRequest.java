@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAcrImageRepositoriesRequest} extends {@link RequestModel}
  *
  * <p>ListAcrImageRepositoriesRequest</p>
  */
 public class ListAcrImageRepositoriesRequest extends Request {
-    @Query
-    @NameInMap("ArtifactType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArtifactType")
     private String artifactType;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("RepoName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepoName")
     private String repoName;
 
     private ListAcrImageRepositoriesRequest(Builder builder) {
@@ -96,7 +101,14 @@ public class ListAcrImageRepositoriesRequest extends Request {
         } 
 
         /**
-         * ArtifactType.
+         * <p>The type of the artifact. Default value: AcrImage. Valid values:</p>
+         * <ul>
+         * <li>HelmChart: Helm chart image.</li>
+         * <li>AcrImage: container image.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AcrImage</p>
          */
         public Builder artifactType(String artifactType) {
             this.putQueryParameter("ArtifactType", artifactType);
@@ -105,7 +117,10 @@ public class ListAcrImageRepositoriesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -114,7 +129,10 @@ public class ListAcrImageRepositoriesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAWns8w4MmhzeptXVRG0PUEU=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -123,7 +141,10 @@ public class ListAcrImageRepositoriesRequest extends Request {
         }
 
         /**
-         * RepoName.
+         * <p>The name of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wordpress</p>
          */
         public Builder repoName(String repoName) {
             this.putQueryParameter("RepoName", repoName);

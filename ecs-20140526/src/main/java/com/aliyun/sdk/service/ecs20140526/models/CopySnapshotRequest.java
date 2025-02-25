@@ -1,85 +1,96 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CopySnapshotRequest} extends {@link RequestModel}
  *
  * <p>CopySnapshotRequest</p>
  */
 public class CopySnapshotRequest extends Request {
-    @Query
-    @NameInMap("Arn")
-    private java.util.List < Arn> arn;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Arn")
+    private java.util.List<Arn> arn;
 
-    @Query
-    @NameInMap("DestinationRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String destinationRegionId;
 
-    @Query
-    @NameInMap("DestinationSnapshotDescription")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationSnapshotDescription")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String destinationSnapshotDescription;
 
-    @Query
-    @NameInMap("DestinationSnapshotName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationSnapshotName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String destinationSnapshotName;
 
-    @Query
-    @NameInMap("DestinationStorageLocationArn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationStorageLocationArn")
     private String destinationStorageLocationArn;
 
-    @Query
-    @NameInMap("Encrypted")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Encrypted")
     private Boolean encrypted;
 
-    @Query
-    @NameInMap("KMSKeyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KMSKeyId")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String KMSKeyId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RetentionDays")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RetentionDays")
     private Integer retentionDays;
 
-    @Query
-    @NameInMap("SnapshotId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String snapshotId;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private CopySnapshotRequest(Builder builder) {
         super(builder);
         this.arn = builder.arn;
+        this.clientToken = builder.clientToken;
         this.destinationRegionId = builder.destinationRegionId;
         this.destinationSnapshotDescription = builder.destinationSnapshotDescription;
         this.destinationSnapshotName = builder.destinationSnapshotName;
@@ -112,8 +123,15 @@ public class CopySnapshotRequest extends Request {
     /**
      * @return arn
      */
-    public java.util.List < Arn> getArn() {
+    public java.util.List<Arn> getArn() {
         return this.arn;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -210,12 +228,13 @@ public class CopySnapshotRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<CopySnapshotRequest, Builder> {
-        private java.util.List < Arn> arn; 
+        private java.util.List<Arn> arn; 
+        private String clientToken; 
         private String destinationRegionId; 
         private String destinationSnapshotDescription; 
         private String destinationSnapshotName; 
@@ -229,7 +248,7 @@ public class CopySnapshotRequest extends Request {
         private Long resourceOwnerId; 
         private Integer retentionDays; 
         private String snapshotId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -238,6 +257,7 @@ public class CopySnapshotRequest extends Request {
         private Builder(CopySnapshotRequest request) {
             super(request);
             this.arn = request.arn;
+            this.clientToken = request.clientToken;
             this.destinationRegionId = request.destinationRegionId;
             this.destinationSnapshotDescription = request.destinationSnapshotDescription;
             this.destinationSnapshotName = request.destinationSnapshotName;
@@ -255,16 +275,34 @@ public class CopySnapshotRequest extends Request {
         } 
 
         /**
-         * >This parameter is currently in invitational preview and unavailable for public use.
+         * <blockquote>
+         * <p>This parameter is currently in invitational preview and unavailable for public use.</p>
+         * </blockquote>
          */
-        public Builder arn(java.util.List < Arn> arn) {
+        public Builder arn(java.util.List<Arn> arn) {
             this.putQueryParameter("Arn", arn);
             this.arn = arn;
             return this;
         }
 
         /**
-         * The ID of the destination region to which to copy the source snapshot.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the destination region to which to copy the source snapshot.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>us-east-1</p>
          */
         public Builder destinationRegionId(String destinationRegionId) {
             this.putQueryParameter("DestinationRegionId", destinationRegionId);
@@ -273,10 +311,12 @@ public class CopySnapshotRequest extends Request {
         }
 
         /**
-         * The description of the new snapshot. The description must be 2 to 256 characters in length and cannot start with http:// or https://.
-         * <p>
+         * <p>The description of the new snapshot. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
+         * <p>This parameter is empty by default.</p>
+         * <p>This parameter is required.</p>
          * 
-         * This parameter is empty by default.
+         * <strong>example:</strong>
+         * <p>CopySnapshotDemo</p>
          */
         public Builder destinationSnapshotDescription(String destinationSnapshotDescription) {
             this.putQueryParameter("DestinationSnapshotDescription", destinationSnapshotDescription);
@@ -285,10 +325,12 @@ public class CopySnapshotRequest extends Request {
         }
 
         /**
-         * The name of the new snapshot. The name must be 2 to 128 characters in length. It must start with a letter and cannot start http:// or https://. The name can contain digits, letters, colons (:), underscores (\_), and hyphens (-).
-         * <p>
+         * <p>The name of the new snapshot. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * <p>This parameter is left empty by default.</p>
+         * <p>This parameter is required.</p>
          * 
-         * This parameter is empty by default.
+         * <strong>example:</strong>
+         * <p>CopySnapshotDemo</p>
          */
         public Builder destinationSnapshotName(String destinationSnapshotName) {
             this.putQueryParameter("DestinationSnapshotName", destinationSnapshotName);
@@ -297,7 +339,12 @@ public class CopySnapshotRequest extends Request {
         }
 
         /**
-         * > This parameter is not publicly available.
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder destinationStorageLocationArn(String destinationStorageLocationArn) {
             this.putQueryParameter("DestinationStorageLocationArn", destinationStorageLocationArn);
@@ -306,13 +353,15 @@ public class CopySnapshotRequest extends Request {
         }
 
         /**
-         * Specifies whether to encrypt the new snapshot. Valid values:
-         * <p>
+         * <p>Specifies whether to encrypt the new snapshot. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder encrypted(Boolean encrypted) {
             this.putQueryParameter("Encrypted", encrypted);
@@ -321,7 +370,10 @@ public class CopySnapshotRequest extends Request {
         }
 
         /**
-         * The ID of the customer master key (CMK) in Key Management Service (KMS) in the destination region.
+         * <p>The ID of the customer master key (CMK) in Key Management Service (KMS) in the destination region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
          */
         public Builder KMSKeyId(String KMSKeyId) {
             this.putQueryParameter("KMSKeyId", KMSKeyId);
@@ -339,7 +391,11 @@ public class CopySnapshotRequest extends Request {
         }
 
         /**
-         * The region ID of the source snapshot. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the source snapshot. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chengdu</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -348,7 +404,10 @@ public class CopySnapshotRequest extends Request {
         }
 
         /**
-         * This parameter is not publicly available.
+         * <p>This parameter is not publicly available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -375,10 +434,11 @@ public class CopySnapshotRequest extends Request {
         }
 
         /**
-         * The retention period of the new snapshot. Unit: days. The new snapshot is automatically released when its retention period ends. Valid values: 1 to 65536.
-         * <p>
+         * <p>The retention period of the new snapshot. Unit: days. The new snapshot is automatically released when its retention period ends. Valid values: 1 to 65536.</p>
+         * <p>This parameter is empty by default, which indicates that the snapshot is not automatically released.</p>
          * 
-         * This parameter is empty by default, which indicates that the snapshot is not automatically released.
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder retentionDays(Integer retentionDays) {
             this.putQueryParameter("RetentionDays", retentionDays);
@@ -387,7 +447,11 @@ public class CopySnapshotRequest extends Request {
         }
 
         /**
-         * The ID of the source snapshot.
+         * <p>The ID of the source snapshot.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bp67acfmxazb4p****</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
@@ -396,9 +460,9 @@ public class CopySnapshotRequest extends Request {
         }
 
         /**
-         * The tag key and value of the new snapshot.
+         * <p>The tag key and value of the new snapshot.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -411,14 +475,20 @@ public class CopySnapshotRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CopySnapshotRequest} extends {@link TeaModel}
+     *
+     * <p>CopySnapshotRequest</p>
+     */
     public static class Arn extends TeaModel {
-        @NameInMap("AssumeRoleFor")
+        @com.aliyun.core.annotation.NameInMap("AssumeRoleFor")
         private Long assumeRoleFor;
 
-        @NameInMap("RoleType")
+        @com.aliyun.core.annotation.NameInMap("RoleType")
         private String roleType;
 
-        @NameInMap("Rolearn")
+        @com.aliyun.core.annotation.NameInMap("Rolearn")
         private String rolearn;
 
         private Arn(Builder builder) {
@@ -462,7 +532,12 @@ public class CopySnapshotRequest extends Request {
             private String rolearn; 
 
             /**
-             * > This parameter is not publicly available.
+             * <blockquote>
+             * <p>This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder assumeRoleFor(Long assumeRoleFor) {
                 this.assumeRoleFor = assumeRoleFor;
@@ -470,7 +545,12 @@ public class CopySnapshotRequest extends Request {
             }
 
             /**
-             * > This parameter is not publicly available.
+             * <blockquote>
+             * <p>This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder roleType(String roleType) {
                 this.roleType = roleType;
@@ -478,7 +558,12 @@ public class CopySnapshotRequest extends Request {
             }
 
             /**
-             * > This parameter is not publicly available.
+             * <blockquote>
+             * <p>This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder rolearn(String rolearn) {
                 this.rolearn = rolearn;
@@ -492,11 +577,17 @@ public class CopySnapshotRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CopySnapshotRequest} extends {@link TeaModel}
+     *
+     * <p>CopySnapshotRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -531,7 +622,10 @@ public class CopySnapshotRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the new snapshot. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.
+             * <p>The key of tag N to add to the new snapshot. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -539,7 +633,10 @@ public class CopySnapshotRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the new snapshot. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.
+             * <p>The value of tag N to add to the new snapshot. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

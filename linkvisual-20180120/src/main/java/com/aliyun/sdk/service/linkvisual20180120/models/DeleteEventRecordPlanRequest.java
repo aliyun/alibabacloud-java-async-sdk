@@ -49,9 +49,9 @@ public class DeleteEventRecordPlanRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteEventRecordPlanRequest response) {
-            super(response);
-            this.planId = response.planId;
+        private Builder(DeleteEventRecordPlanRequest request) {
+            super(request);
+            this.planId = request.planId;
         } 
 
         /**

@@ -1,130 +1,135 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDasSQLLogHotDataRequest} extends {@link RequestModel}
  *
  * <p>GetDasSQLLogHotDataRequest</p>
  */
 public class GetDasSQLLogHotDataRequest extends Request {
-    @Body
-    @NameInMap("AccountName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccountName")
     private String accountName;
 
-    @Body
-    @NameInMap("ChildDBInstanceIDs")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChildDBInstanceIDs")
     private String childDBInstanceIDs;
 
-    @Body
-    @NameInMap("DBName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DBName")
     private String DBName;
 
-    @Body
-    @NameInMap("End")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("End")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long end;
 
-    @Body
-    @NameInMap("Fail")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Fail")
     private String fail;
 
-    @Body
-    @NameInMap("HostAddress")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HostAddress")
     private String hostAddress;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("LogicalOperator")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LogicalOperator")
     private String logicalOperator;
 
-    @Body
-    @NameInMap("MaxLatancy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxLatancy")
     private Long maxLatancy;
 
-    @Body
-    @NameInMap("MaxRecordsPerPage")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxRecordsPerPage")
     private Long maxRecordsPerPage;
 
-    @Body
-    @NameInMap("MaxRows")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxRows")
     private Long maxRows;
 
-    @Body
-    @NameInMap("MaxScanRows")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxScanRows")
     private Long maxScanRows;
 
-    @Body
-    @NameInMap("MaxSpillCnt")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxSpillCnt")
     private Long maxSpillCnt;
 
-    @Body
-    @NameInMap("MinLatancy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MinLatancy")
     private Long minLatancy;
 
-    @Body
-    @NameInMap("MinRows")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MinRows")
     private Long minRows;
 
-    @Body
-    @NameInMap("MinScanRows")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MinScanRows")
     private Long minScanRows;
 
-    @Body
-    @NameInMap("MinSpillCnt")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MinSpillCnt")
     private Long minSpillCnt;
 
-    @Body
-    @NameInMap("PageNumbers")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageNumbers")
     private Long pageNumbers;
 
-    @Body
-    @NameInMap("QueryKeyword")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QueryKeyword")
     private String queryKeyword;
 
-    @Body
-    @NameInMap("Role")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Role")
     private String role;
 
-    @Body
-    @NameInMap("SortKey")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SortKey")
     private String sortKey;
 
-    @Body
-    @NameInMap("SortMethod")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SortMethod")
     private String sortMethod;
 
-    @Body
-    @NameInMap("SqlType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SqlType")
     private String sqlType;
 
-    @Body
-    @NameInMap("Start")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Start")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long start;
 
-    @Body
-    @NameInMap("State")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
-    @Body
-    @NameInMap("ThreadID")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ThreadID")
     private String threadID;
 
-    @Body
-    @NameInMap("TraceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TraceId")
     private String traceId;
 
-    @Body
-    @NameInMap("TransactionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TransactionId")
     private String transactionId;
 
     private GetDasSQLLogHotDataRequest(Builder builder) {
@@ -435,10 +440,13 @@ public class GetDasSQLLogHotDataRequest extends Request {
         } 
 
         /**
-         * The account of the database.
-         * <p>
+         * <p>The account of the database.</p>
+         * <blockquote>
+         * <p> You can specify multiple database accounts that are separated by spaces. Example: <code>user1 user2 user3</code>.</p>
+         * </blockquote>
          * 
-         * >  You can specify multiple database accounts that are separated by spaces. Example: `user1 user2 user3`.
+         * <strong>example:</strong>
+         * <p>testuser</p>
          */
         public Builder accountName(String accountName) {
             this.putBodyParameter("AccountName", accountName);
@@ -447,10 +455,13 @@ public class GetDasSQLLogHotDataRequest extends Request {
         }
 
         /**
-         * The node ID.
-         * <p>
+         * <p>The node ID.</p>
+         * <blockquote>
+         * <p> This parameter must be specified if the database instance is a PolarDB for MySQL cluster.</p>
+         * </blockquote>
          * 
-         * >  This parameter must be specified if the database instance is a PolarDB for MySQL cluster.
+         * <strong>example:</strong>
+         * <p>pi-bp179lg03445l****</p>
          */
         public Builder childDBInstanceIDs(String childDBInstanceIDs) {
             this.putBodyParameter("ChildDBInstanceIDs", childDBInstanceIDs);
@@ -459,10 +470,13 @@ public class GetDasSQLLogHotDataRequest extends Request {
         }
 
         /**
-         * The name of the database.
-         * <p>
+         * <p>The name of the database.</p>
+         * <blockquote>
+         * <p> You can specify multiple database names that are separated by spaces. Example: <code>DB1 DB2 DB3</code>.</p>
+         * </blockquote>
          * 
-         * >  You can specify multiple database names that are separated by spaces. Example: `DB1 DB2 DB3`.
+         * <strong>example:</strong>
+         * <p>testDB</p>
          */
         public Builder DBName(String DBName) {
             this.putBodyParameter("DBName", DBName);
@@ -471,10 +485,14 @@ public class GetDasSQLLogHotDataRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
-         * <p>
+         * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <blockquote>
+         * <p> The end time must be later than the start time. The interval between the start time and the end time cannot exceed 24 hours.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The end time must be later than the start time. The interval between the start time and the end time cannot exceed 24 hours.
+         * <strong>example:</strong>
+         * <p>1684820697000</p>
          */
         public Builder end(Long end) {
             this.putBodyParameter("End", end);
@@ -483,7 +501,10 @@ public class GetDasSQLLogHotDataRequest extends Request {
         }
 
         /**
-         * The error code of SQL execution. You can call the [GetAsyncErrorRequestStatByCode](~~409804~~) operation to query MySQL error codes in SQL Explorer data.
+         * <p>The error code of SQL execution. You can call the <a href="https://help.aliyun.com/document_detail/409804.html">GetAsyncErrorRequestStatByCode</a> operation to query MySQL error codes in SQL Explorer data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1064</p>
          */
         public Builder fail(String fail) {
             this.putBodyParameter("Fail", fail);
@@ -492,10 +513,13 @@ public class GetDasSQLLogHotDataRequest extends Request {
         }
 
         /**
-         * The IP address of the client.
-         * <p>
+         * <p>The IP address of the client.</p>
+         * <blockquote>
+         * <p> You can specify multiple IP addresses that are separated by spaces. Example: <code>IP1 IP2 IP3</code>.</p>
+         * </blockquote>
          * 
-         * >  You can specify multiple IP addresses that are separated by spaces. Example: `IP1 IP2 IP3`.
+         * <strong>example:</strong>
+         * <p>47.100.XX.XX</p>
          */
         public Builder hostAddress(String hostAddress) {
             this.putBodyParameter("HostAddress", hostAddress);
@@ -504,7 +528,11 @@ public class GetDasSQLLogHotDataRequest extends Request {
         }
 
         /**
-         * The ID of the database instance.
+         * <p>The ID of the database instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze1jdv45i7l6****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -513,11 +541,14 @@ public class GetDasSQLLogHotDataRequest extends Request {
         }
 
         /**
-         * The logical relationship among multiple keywords.
-         * <p>
+         * <p>The logical relationship among multiple keywords.</p>
+         * <ul>
+         * <li><strong>or</strong></li>
+         * <li><strong>and</strong></li>
+         * </ul>
          * 
-         * *   **or**
-         * *   **and**
+         * <strong>example:</strong>
+         * <p>or</p>
          */
         public Builder logicalOperator(String logicalOperator) {
             this.putBodyParameter("LogicalOperator", logicalOperator);
@@ -526,7 +557,10 @@ public class GetDasSQLLogHotDataRequest extends Request {
         }
 
         /**
-         * The maximum execution duration. Unit: microseconds. You can specify this parameter to query the SQL statements whose execution duration is smaller than the value of this parameter.
+         * <p>The maximum execution duration. Unit: microseconds. You can specify this parameter to query the SQL statements whose execution duration is smaller than the value of this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxLatancy(Long maxLatancy) {
             this.putBodyParameter("MaxLatancy", maxLatancy);
@@ -535,7 +569,10 @@ public class GetDasSQLLogHotDataRequest extends Request {
         }
 
         /**
-         * The maximum number of entries per page.
+         * <p>The maximum number of entries per page. Valid values: 5 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxRecordsPerPage(Long maxRecordsPerPage) {
             this.putBodyParameter("MaxRecordsPerPage", maxRecordsPerPage);
@@ -544,7 +581,10 @@ public class GetDasSQLLogHotDataRequest extends Request {
         }
 
         /**
-         * The reserved parameter. This parameter is not supported.
+         * <p>The reserved parameter. This parameter is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder maxRows(Long maxRows) {
             this.putBodyParameter("MaxRows", maxRows);
@@ -553,7 +593,10 @@ public class GetDasSQLLogHotDataRequest extends Request {
         }
 
         /**
-         * The maximum number of scanned rows. You can specify this parameter to query the SQL statements that scan a smaller number of rows than the value of this parameter.
+         * <p>The maximum number of scanned rows. You can specify this parameter to query the SQL statements that scan a smaller number of rows than the value of this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder maxScanRows(Long maxScanRows) {
             this.putBodyParameter("MaxScanRows", maxScanRows);
@@ -562,7 +605,10 @@ public class GetDasSQLLogHotDataRequest extends Request {
         }
 
         /**
-         * The reserved parameter. This parameter is not supported.
+         * <p>The reserved parameter. This parameter is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder maxSpillCnt(Long maxSpillCnt) {
             this.putBodyParameter("MaxSpillCnt", maxSpillCnt);
@@ -571,7 +617,10 @@ public class GetDasSQLLogHotDataRequest extends Request {
         }
 
         /**
-         * The minimum execution duration. Unit: microseconds. You can specify this parameter to query the SQL statements whose execution duration is greater than or equal to the value of this parameter.
+         * <p>The minimum execution duration. Unit: microseconds. You can specify this parameter to query the SQL statements whose execution duration is greater than or equal to the value of this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder minLatancy(Long minLatancy) {
             this.putBodyParameter("MinLatancy", minLatancy);
@@ -580,7 +629,10 @@ public class GetDasSQLLogHotDataRequest extends Request {
         }
 
         /**
-         * The reserved parameter. This parameter is not supported.
+         * <p>The reserved parameter. This parameter is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder minRows(Long minRows) {
             this.putBodyParameter("MinRows", minRows);
@@ -589,7 +641,10 @@ public class GetDasSQLLogHotDataRequest extends Request {
         }
 
         /**
-         * The minimum number of scanned rows. You can specify this parameter to query the SQL statements that scan a larger or an equal number of rows than the value of this parameter.
+         * <p>The minimum number of scanned rows. You can specify this parameter to query the SQL statements that scan a larger or an equal number of rows than the value of this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder minScanRows(Long minScanRows) {
             this.putBodyParameter("MinScanRows", minScanRows);
@@ -598,7 +653,10 @@ public class GetDasSQLLogHotDataRequest extends Request {
         }
 
         /**
-         * The reserved parameter. This parameter is not supported.
+         * <p>The reserved parameter. This parameter is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder minSpillCnt(Long minSpillCnt) {
             this.putBodyParameter("MinSpillCnt", minSpillCnt);
@@ -607,7 +665,10 @@ public class GetDasSQLLogHotDataRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageNumbers(Long pageNumbers) {
             this.putBodyParameter("PageNumbers", pageNumbers);
@@ -616,10 +677,13 @@ public class GetDasSQLLogHotDataRequest extends Request {
         }
 
         /**
-         * The keyword that is used for the query.
-         * <p>
+         * <p>The keyword that is used for the query.</p>
+         * <blockquote>
+         * <p> Fuzzy search is not supported. You can query data by using multiple keywords. Separate keywords with spaces.</p>
+         * </blockquote>
          * 
-         * >  The keyword must be at least four characters in length. You can specify multiple keywords that are separated by spaces. Fuzzy queries are not supported.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder queryKeyword(String queryKeyword) {
             this.putBodyParameter("QueryKeyword", queryKeyword);
@@ -628,7 +692,10 @@ public class GetDasSQLLogHotDataRequest extends Request {
         }
 
         /**
-         * The reserved parameter. This parameter is not supported.
+         * <p>The reserved parameter. This parameter is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder role(String role) {
             this.putBodyParameter("Role", role);
@@ -637,13 +704,16 @@ public class GetDasSQLLogHotDataRequest extends Request {
         }
 
         /**
-         * The basis on which you want to sort the query results.
-         * <p>
+         * <p>The basis on which you want to sort the query results.</p>
+         * <ul>
+         * <li><strong>SCAN_ROWS</strong>: the number of scanned rows.</li>
+         * <li><strong>UPDATE_ROWS</strong>: the number of updated rows.</li>
+         * <li><strong>CONSUME</strong>: the time consumed.</li>
+         * <li><strong>ORIGIN_TIME</strong>: the execution duration.</li>
+         * </ul>
          * 
-         * *   **SCAN_ROWS**: the number of scanned rows.
-         * *   **UPDATE_ROWS**: the number of updated rows.
-         * *   **CONSUME**: the time consumed.
-         * *   **ORIGIN_TIME**: the execution duration.
+         * <strong>example:</strong>
+         * <p>SCAN_ROWS</p>
          */
         public Builder sortKey(String sortKey) {
             this.putBodyParameter("SortKey", sortKey);
@@ -652,11 +722,14 @@ public class GetDasSQLLogHotDataRequest extends Request {
         }
 
         /**
-         * The order in which you want to sort the query results.
-         * <p>
+         * <p>The order in which you want to sort the query results.</p>
+         * <ul>
+         * <li><strong>ase</strong>: ascending order.</li>
+         * <li><strong>desc</strong>: descending order.</li>
+         * </ul>
          * 
-         * *   **ase**: ascending order.
-         * *   **desc**: descending order.
+         * <strong>example:</strong>
+         * <p>ase</p>
          */
         public Builder sortMethod(String sortMethod) {
             this.putBodyParameter("SortMethod", sortMethod);
@@ -665,12 +738,15 @@ public class GetDasSQLLogHotDataRequest extends Request {
         }
 
         /**
-         * The type of the SQL statement. Valid values:
-         * <p>
+         * <p>The type of the SQL statement. Valid values:</p>
+         * <ul>
+         * <li><strong>SELECT</strong></li>
+         * <li><strong>UPDATE</strong></li>
+         * <li><strong>DELETE</strong></li>
+         * </ul>
          * 
-         * *   **SELECT**
-         * *   **UPDATE**
-         * *   **DELETE**
+         * <strong>example:</strong>
+         * <p>SELECT</p>
          */
         public Builder sqlType(String sqlType) {
             this.putBodyParameter("SqlType", sqlType);
@@ -679,10 +755,14 @@ public class GetDasSQLLogHotDataRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
-         * <p>
+         * <p>The beginning of the time range to query. Specify a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <blockquote>
+         * <p> The beginning of the time range to query must be later than the time when DAS Enterprise Edition is enabled, and can be up to seven days earlier than the current time.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can query only the data that is generated after the new SQL Explorer and Audit feature is enabled. The start time can be up to seven days earlier than the current time.
+         * <strong>example:</strong>
+         * <p>1684734297000</p>
          */
         public Builder start(Long start) {
             this.putBodyParameter("Start", start);
@@ -691,7 +771,10 @@ public class GetDasSQLLogHotDataRequest extends Request {
         }
 
         /**
-         * The execution results. You can specify **0** to query the SQL statements that are successfully executed. You can also specify an error code to query the corresponding SQL statements that fail to be executed.
+         * <p>The execution results. You can specify <strong>0</strong> to query the SQL statements that are successfully executed. You can also specify an error code to query the corresponding SQL statements that fail to be executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder state(String state) {
             this.putBodyParameter("State", state);
@@ -700,10 +783,13 @@ public class GetDasSQLLogHotDataRequest extends Request {
         }
 
         /**
-         * The thread ID.
-         * <p>
+         * <p>The thread ID.</p>
+         * <blockquote>
+         * <p> You can specify multiple thread IDs that are separated by spaces. Example: <code>Thread ID1 Thread ID2 Thread ID3</code>.</p>
+         * </blockquote>
          * 
-         * >  You can specify multiple thread IDs that are separated by spaces. Example: `Thread ID1 Thread ID2 Thread ID3`.
+         * <strong>example:</strong>
+         * <p>657</p>
          */
         public Builder threadID(String threadID) {
             this.putBodyParameter("ThreadID", threadID);
@@ -712,7 +798,10 @@ public class GetDasSQLLogHotDataRequest extends Request {
         }
 
         /**
-         * The reserved parameter. This parameter is not supported.
+         * <p>The reserved parameter. This parameter is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder traceId(String traceId) {
             this.putBodyParameter("TraceId", traceId);
@@ -721,7 +810,10 @@ public class GetDasSQLLogHotDataRequest extends Request {
         }
 
         /**
-         * The transaction ID.
+         * <p>The transaction ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder transactionId(String transactionId) {
             this.putBodyParameter("TransactionId", transactionId);

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiskMonitorDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDiskMonitorDataResponseBody</p>
  */
 public class DescribeDiskMonitorDataResponseBody extends TeaModel {
-    @NameInMap("MonitorData")
+    @com.aliyun.core.annotation.NameInMap("MonitorData")
     private MonitorData monitorData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDiskMonitorDataResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The details about the monitoring data of the disk.
+         * <p>The monitoring data of the disk.</p>
          */
         public Builder monitorData(MonitorData monitorData) {
             this.monitorData = monitorData;
@@ -70,7 +75,10 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned monitoring data entries.
+         * <p>The total number of returned monitoring data entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -91,35 +102,41 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDiskMonitorDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDiskMonitorDataResponseBody</p>
+     */
     public static class DiskMonitorData extends TeaModel {
-        @NameInMap("BPSRead")
+        @com.aliyun.core.annotation.NameInMap("BPSRead")
         private Integer BPSRead;
 
-        @NameInMap("BPSTotal")
+        @com.aliyun.core.annotation.NameInMap("BPSTotal")
         private Integer BPSTotal;
 
-        @NameInMap("BPSWrite")
+        @com.aliyun.core.annotation.NameInMap("BPSWrite")
         private Integer BPSWrite;
 
-        @NameInMap("DiskId")
+        @com.aliyun.core.annotation.NameInMap("DiskId")
         private String diskId;
 
-        @NameInMap("IOPSRead")
+        @com.aliyun.core.annotation.NameInMap("IOPSRead")
         private Integer IOPSRead;
 
-        @NameInMap("IOPSTotal")
+        @com.aliyun.core.annotation.NameInMap("IOPSTotal")
         private Integer IOPSTotal;
 
-        @NameInMap("IOPSWrite")
+        @com.aliyun.core.annotation.NameInMap("IOPSWrite")
         private Integer IOPSWrite;
 
-        @NameInMap("LatencyRead")
+        @com.aliyun.core.annotation.NameInMap("LatencyRead")
         private Integer latencyRead;
 
-        @NameInMap("LatencyWrite")
+        @com.aliyun.core.annotation.NameInMap("LatencyWrite")
         private Integer latencyWrite;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private DiskMonitorData(Builder builder) {
@@ -226,7 +243,10 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * The read bandwidth of the system disk. Unit: byte/s.
+             * <p>The read bandwidth of the disk. Unit: byte/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder BPSRead(Integer BPSRead) {
                 this.BPSRead = BPSRead;
@@ -234,7 +254,10 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The total read and write bandwidth of the system disk. Unit: byte/s.
+             * <p>The total read and write bandwidth of the disk. Unit: byte/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>204</p>
              */
             public Builder BPSTotal(Integer BPSTotal) {
                 this.BPSTotal = BPSTotal;
@@ -242,7 +265,10 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The write bandwidth of the system disk. Unit: byte/s.
+             * <p>The write bandwidth of the disk. Unit: byte/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>204</p>
              */
             public Builder BPSWrite(Integer BPSWrite) {
                 this.BPSWrite = BPSWrite;
@@ -250,7 +276,10 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The disk ID.
+             * <p>The ID of the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-bp1bq5g3dxxo1x4o****</p>
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -258,7 +287,10 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The number of read I/O operations per second on the system disk.
+             * <p>The number of read I/O operations per second on the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder IOPSRead(Integer IOPSRead) {
                 this.IOPSRead = IOPSRead;
@@ -266,7 +298,10 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of read and write I/O operations per second on the system disk.
+             * <p>The total number of read and write I/O operations per second on the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder IOPSTotal(Integer IOPSTotal) {
                 this.IOPSTotal = IOPSTotal;
@@ -274,7 +309,10 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The number of write I/O operations per second on the system disk.
+             * <p>The number of write I/O operations per second on the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder IOPSWrite(Integer IOPSWrite) {
                 this.IOPSWrite = IOPSWrite;
@@ -282,7 +320,10 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The read latency of the disk. Unit: microseconds.
+             * <p>The read latency of the disk. Unit: microseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder latencyRead(Integer latencyRead) {
                 this.latencyRead = latencyRead;
@@ -290,7 +331,10 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The write latency of the disk. Unit: microseconds.
+             * <p>The write latency of the disk. Unit: microseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder latencyWrite(Integer latencyWrite) {
                 this.latencyWrite = latencyWrite;
@@ -298,7 +342,10 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp to query the monitoring data. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The timestamp of the monitoring data. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2014-07-23T12:07:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -312,9 +359,15 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDiskMonitorDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDiskMonitorDataResponseBody</p>
+     */
     public static class MonitorData extends TeaModel {
-        @NameInMap("DiskMonitorData")
-        private java.util.List < DiskMonitorData> diskMonitorData;
+        @com.aliyun.core.annotation.NameInMap("DiskMonitorData")
+        private java.util.List<DiskMonitorData> diskMonitorData;
 
         private MonitorData(Builder builder) {
             this.diskMonitorData = builder.diskMonitorData;
@@ -331,17 +384,17 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
         /**
          * @return diskMonitorData
          */
-        public java.util.List < DiskMonitorData> getDiskMonitorData() {
+        public java.util.List<DiskMonitorData> getDiskMonitorData() {
             return this.diskMonitorData;
         }
 
         public static final class Builder {
-            private java.util.List < DiskMonitorData> diskMonitorData; 
+            private java.util.List<DiskMonitorData> diskMonitorData; 
 
             /**
              * DiskMonitorData.
              */
-            public Builder diskMonitorData(java.util.List < DiskMonitorData> diskMonitorData) {
+            public Builder diskMonitorData(java.util.List<DiskMonitorData> diskMonitorData) {
                 this.diskMonitorData = diskMonitorData;
                 return this;
             }

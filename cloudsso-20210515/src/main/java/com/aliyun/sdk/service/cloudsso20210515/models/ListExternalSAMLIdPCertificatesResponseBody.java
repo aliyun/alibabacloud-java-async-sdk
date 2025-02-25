@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListExternalSAMLIdPCertificatesResponseBody} extends {@link TeaModel}
  *
  * <p>ListExternalSAMLIdPCertificatesResponseBody</p>
  */
 public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SAMLIdPCertificates")
+    @com.aliyun.core.annotation.NameInMap("SAMLIdPCertificates")
     private java.util.List < SAMLIdPCertificates> SAMLIdPCertificates;
 
-    @NameInMap("TotalCounts")
+    @com.aliyun.core.annotation.NameInMap("TotalCounts")
     private Integer totalCounts;
 
     private ListExternalSAMLIdPCertificatesResponseBody(Builder builder) {
@@ -62,7 +62,10 @@ public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
         private Integer totalCounts; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400979BC-92EC-58B9-B47C-6913BD56A6FD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +73,7 @@ public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * The SAML signing certificates.
+         * <p>The SAML signing certificates.</p>
          */
         public Builder SAMLIdPCertificates(java.util.List < SAMLIdPCertificates> SAMLIdPCertificates) {
             this.SAMLIdPCertificates = SAMLIdPCertificates;
@@ -78,7 +81,10 @@ public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCounts(Integer totalCounts) {
             this.totalCounts = totalCounts;
@@ -91,35 +97,41 @@ public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListExternalSAMLIdPCertificatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListExternalSAMLIdPCertificatesResponseBody</p>
+     */
     public static class SAMLIdPCertificates extends TeaModel {
-        @NameInMap("CertificateId")
+        @com.aliyun.core.annotation.NameInMap("CertificateId")
         private String certificateId;
 
-        @NameInMap("Issuer")
+        @com.aliyun.core.annotation.NameInMap("Issuer")
         private String issuer;
 
-        @NameInMap("NotAfter")
+        @com.aliyun.core.annotation.NameInMap("NotAfter")
         private String notAfter;
 
-        @NameInMap("NotBefore")
+        @com.aliyun.core.annotation.NameInMap("NotBefore")
         private String notBefore;
 
-        @NameInMap("PublicKey")
+        @com.aliyun.core.annotation.NameInMap("PublicKey")
         private String publicKey;
 
-        @NameInMap("SerialNumber")
+        @com.aliyun.core.annotation.NameInMap("SerialNumber")
         private String serialNumber;
 
-        @NameInMap("SignatureAlgorithm")
+        @com.aliyun.core.annotation.NameInMap("SignatureAlgorithm")
         private String signatureAlgorithm;
 
-        @NameInMap("Subject")
+        @com.aliyun.core.annotation.NameInMap("Subject")
         private String subject;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private Integer version;
 
-        @NameInMap("X509Certificate")
+        @com.aliyun.core.annotation.NameInMap("X509Certificate")
         private String x509Certificate;
 
         private SAMLIdPCertificates(Builder builder) {
@@ -226,7 +238,10 @@ public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
             private String x509Certificate; 
 
             /**
-             * The ID of the certificate.
+             * <p>The ID of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idp-c-00dt9gnl7fmjaw9c****</p>
              */
             public Builder certificateId(String certificateId) {
                 this.certificateId = certificateId;
@@ -234,7 +249,10 @@ public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * The issuer of the certificate.
+             * <p>The issuer of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2.840.113549.1.9.1=#160d696e666f406f6b74612e63****,CN=dev-xxxxxx,OU=SSOProvider,O=Okta,L=San Francisco,ST=California,C=US</p>
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
@@ -242,7 +260,10 @@ public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the certificate expires.
+             * <p>The time when the certificate expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2030-06-23T07:04:37Z</p>
              */
             public Builder notAfter(String notAfter) {
                 this.notAfter = notAfter;
@@ -250,7 +271,10 @@ public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the certificate was created.
+             * <p>The time when the certificate was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-23T07:03:37Z</p>
              */
             public Builder notBefore(String notBefore) {
                 this.notBefore = notBefore;
@@ -258,7 +282,10 @@ public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * The public key of the certificate. The value of this parameter is in the PEM format and is Base64-encoded.
+             * <p>The public key of the certificate. The value of this parameter is in the PEM format and is Base64-encoded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MIIBIjANBgkqhkiG****</p>
              */
             public Builder publicKey(String publicKey) {
                 this.publicKey = publicKey;
@@ -266,7 +293,10 @@ public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * The serial number of the certificate.
+             * <p>The serial number of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>159289587****</p>
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;
@@ -274,7 +304,10 @@ public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * The signature algorithm of the certificate.
+             * <p>The signature algorithm of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SHA256withRSA</p>
              */
             public Builder signatureAlgorithm(String signatureAlgorithm) {
                 this.signatureAlgorithm = signatureAlgorithm;
@@ -282,7 +315,10 @@ public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * The subject of the certificate.
+             * <p>The subject of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2.840.113549.1.9.1=#160d696e666f406f6b74612e63****,CN=dev-xxxxxx,OU=SSOProvider,O=Okta,L=San Francisco,ST=California,C=US</p>
              */
             public Builder subject(String subject) {
                 this.subject = subject;
@@ -290,7 +326,10 @@ public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the certificate.
+             * <p>The version of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder version(Integer version) {
                 this.version = version;
@@ -298,7 +337,10 @@ public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * The X.509 certificate in the PEM format.
+             * <p>The X.509 certificate in the PEM format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MIIDpDCCAoygAwIBAgIG****</p>
              */
             public Builder x509Certificate(String x509Certificate) {
                 this.x509Certificate = x509Certificate;

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MergeMergeRequestResponseBody} extends {@link TeaModel}
  *
  * <p>MergeMergeRequestResponseBody</p>
  */
 public class MergeMergeRequestResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private MergeMergeRequestResponseBody(Builder builder) {
@@ -131,11 +136,33 @@ public class MergeMergeRequestResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link MergeMergeRequestResponseBody} extends {@link TeaModel}
+     *
+     * <p>MergeMergeRequestResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("result")
+        @com.aliyun.core.annotation.NameInMap("bizId")
+        private String bizId;
+
+        @com.aliyun.core.annotation.NameInMap("localId")
+        private Long localId;
+
+        @com.aliyun.core.annotation.NameInMap("mergedRevision")
+        private String mergedRevision;
+
+        @com.aliyun.core.annotation.NameInMap("projectId")
+        private Long projectId;
+
+        @com.aliyun.core.annotation.NameInMap("result")
         private Boolean result;
 
         private Result(Builder builder) {
+            this.bizId = builder.bizId;
+            this.localId = builder.localId;
+            this.mergedRevision = builder.mergedRevision;
+            this.projectId = builder.projectId;
             this.result = builder.result;
         }
 
@@ -148,6 +175,34 @@ public class MergeMergeRequestResponseBody extends TeaModel {
         }
 
         /**
+         * @return bizId
+         */
+        public String getBizId() {
+            return this.bizId;
+        }
+
+        /**
+         * @return localId
+         */
+        public Long getLocalId() {
+            return this.localId;
+        }
+
+        /**
+         * @return mergedRevision
+         */
+        public String getMergedRevision() {
+            return this.mergedRevision;
+        }
+
+        /**
+         * @return projectId
+         */
+        public Long getProjectId() {
+            return this.projectId;
+        }
+
+        /**
          * @return result
          */
         public Boolean getResult() {
@@ -155,7 +210,43 @@ public class MergeMergeRequestResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String bizId; 
+            private Long localId; 
+            private String mergedRevision; 
+            private Long projectId; 
             private Boolean result; 
+
+            /**
+             * bizId.
+             */
+            public Builder bizId(String bizId) {
+                this.bizId = bizId;
+                return this;
+            }
+
+            /**
+             * localId.
+             */
+            public Builder localId(Long localId) {
+                this.localId = localId;
+                return this;
+            }
+
+            /**
+             * mergedRevision.
+             */
+            public Builder mergedRevision(String mergedRevision) {
+                this.mergedRevision = mergedRevision;
+                return this;
+            }
+
+            /**
+             * projectId.
+             */
+            public Builder projectId(Long projectId) {
+                this.projectId = projectId;
+                return this;
+            }
 
             /**
              * result.

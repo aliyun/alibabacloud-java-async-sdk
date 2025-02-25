@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUserGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateUserGroupRequest</p>
  */
 public class CreateUserGroupRequest extends Request {
-    @Query
-    @NameInMap("ParentUserGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentUserGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String parentUserGroupId;
 
-    @Query
-    @NameInMap("UserGroupDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserGroupDescription")
     private String userGroupDescription;
 
-    @Query
-    @NameInMap("UserGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserGroupId")
     private String userGroupId;
 
-    @Query
-    @NameInMap("UserGroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserGroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userGroupName;
 
     private CreateUserGroupRequest(Builder builder) {
@@ -98,11 +103,15 @@ public class CreateUserGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the parent user group. You can add new user groups to this group:
-         * <p>
+         * <p>The ID of the parent user group. You can add new user groups to this group:</p>
+         * <ul>
+         * <li>If you enter the ID of a parent user group, the new user group is added to the user group with the ID.</li>
+         * <li>If you enter -1, the new user group is added to the root directory.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   If you enter the ID of a parent user group, the new user group is added to the user group with the ID.
-         * *   If you enter -1, the new user group is added to the root directory.
+         * <strong>example:</strong>
+         * <p>3d2c23d4-2b41-4af8-a1f5-f6390f32****</p>
          */
         public Builder parentUserGroupId(String parentUserGroupId) {
             this.putQueryParameter("ParentUserGroupId", parentUserGroupId);
@@ -111,11 +120,14 @@ public class CreateUserGroupRequest extends Request {
         }
 
         /**
-         * The description of the user group.
-         * <p>
+         * <p>The description of the user group.</p>
+         * <ul>
+         * <li>Format verification: Maximum length 255</li>
+         * <li>Special format verification: Chinese and English digits_ \ / | () ] [</li>
+         * </ul>
          * 
-         * *   Format verification: Maximum length 255
-         * *   Special format verification: Chinese and English digits\_ \ / | () ] \[
+         * <strong>example:</strong>
+         * <p>User group description</p>
          */
         public Builder userGroupDescription(String userGroupDescription) {
             this.putQueryParameter("UserGroupDescription", userGroupDescription);
@@ -124,11 +136,14 @@ public class CreateUserGroupRequest extends Request {
         }
 
         /**
-         * The unique ID of the user group.
-         * <p>
+         * <p>The unique ID of the user group.</p>
+         * <ul>
+         * <li>If you specify the UserGroupId parameter, the system automatically generates the UserGroupId parameter. If you specify the UserGroupId parameter, the user ID is used as the user group ID. You must ensure that the user ID is unique within the organization.</li>
+         * <li>Format verification: Maximum length 64, cannot be -1,</li>
+         * </ul>
          * 
-         * *   If you specify the UserGroupId parameter, the system automatically generates the UserGroupId parameter. If you specify the UserGroupId parameter, the user ID is used as the user group ID. You must ensure that the user ID is unique within the organization.
-         * *   Format verification: Maximum length 64, cannot be -1,
+         * <strong>example:</strong>
+         * <p>pop0001</p>
          */
         public Builder userGroupId(String userGroupId) {
             this.putQueryParameter("UserGroupId", userGroupId);
@@ -137,11 +152,15 @@ public class CreateUserGroupRequest extends Request {
         }
 
         /**
-         * The name of the RAM user group.
-         * <p>
+         * <p>The name of the RAM user group.</p>
+         * <ul>
+         * <li>Format verification: Maximum length 255</li>
+         * <li>Special format verification: Chinese and English digits_ \ / | () ] [</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Format verification: Maximum length 255
-         * *   Special format verification: Chinese and English digits\_ \ / | () ] \[
+         * <strong>example:</strong>
+         * <p>Hangzhou Financial Report</p>
          */
         public Builder userGroupName(String userGroupName) {
             this.putQueryParameter("UserGroupName", userGroupName);

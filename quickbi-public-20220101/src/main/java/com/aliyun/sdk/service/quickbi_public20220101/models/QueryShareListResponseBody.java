@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryShareListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryShareListResponseBody</p>
  */
 public class QueryShareListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
-    private java.util.List < Result> result;
+    @com.aliyun.core.annotation.NameInMap("Result")
+    private java.util.List<Result> result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryShareListResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class QueryShareListResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -58,7 +63,7 @@ public class QueryShareListResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Boolean success; 
 
         /**
@@ -72,7 +77,7 @@ public class QueryShareListResponseBody extends TeaModel {
         /**
          * Result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -91,29 +96,35 @@ public class QueryShareListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryShareListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryShareListResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("AuthPoint")
+        @com.aliyun.core.annotation.NameInMap("AuthPoint")
         private Integer authPoint;
 
-        @NameInMap("ExpireDate")
+        @com.aliyun.core.annotation.NameInMap("ExpireDate")
         private Long expireDate;
 
-        @NameInMap("ReportId")
+        @com.aliyun.core.annotation.NameInMap("ReportId")
         private String reportId;
 
-        @NameInMap("ShareId")
+        @com.aliyun.core.annotation.NameInMap("ShareId")
         private String shareId;
 
-        @NameInMap("ShareToId")
+        @com.aliyun.core.annotation.NameInMap("ShareToId")
         private String shareToId;
 
-        @NameInMap("ShareToName")
+        @com.aliyun.core.annotation.NameInMap("ShareToName")
         private String shareToName;
 
-        @NameInMap("ShareToType")
+        @com.aliyun.core.annotation.NameInMap("ShareToType")
         private Integer shareToType;
 
-        @NameInMap("ShareType")
+        @com.aliyun.core.annotation.NameInMap("ShareType")
         private String shareType;
 
         private Result(Builder builder) {

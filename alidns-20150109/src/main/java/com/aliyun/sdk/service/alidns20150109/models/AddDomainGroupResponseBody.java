@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddDomainGroupResponseBody} extends {@link TeaModel}
  *
  * <p>AddDomainGroupResponseBody</p>
  */
 public class AddDomainGroupResponseBody extends TeaModel {
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AddDomainGroupResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class AddDomainGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The name of the domain name group.
+         * <p>The ID of the domain name group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2223</p>
          */
         public Builder groupId(String groupId) {
             this.groupId = groupId;
@@ -70,7 +78,10 @@ public class AddDomainGroupResponseBody extends TeaModel {
         }
 
         /**
-         * GroupName.
+         * <p>The name of the domain name group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NewName</p>
          */
         public Builder groupName(String groupName) {
             this.groupName = groupName;
@@ -78,7 +89,10 @@ public class AddDomainGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the domain name group.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

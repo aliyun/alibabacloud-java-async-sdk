@@ -1,70 +1,75 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSQLLogCountRequest} extends {@link RequestModel}
  *
  * <p>DescribeSQLLogCountRequest</p>
  */
 public class DescribeSQLLogCountRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("Database")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Database")
     private String database;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("ExecuteCost")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExecuteCost")
     private String executeCost;
 
-    @Query
-    @NameInMap("ExecuteState")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExecuteState")
     private String executeState;
 
-    @Query
-    @NameInMap("MaxExecuteCost")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxExecuteCost")
     private String maxExecuteCost;
 
-    @Query
-    @NameInMap("MinExecuteCost")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinExecuteCost")
     private String minExecuteCost;
 
-    @Query
-    @NameInMap("OperationClass")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationClass")
     private String operationClass;
 
-    @Query
-    @NameInMap("OperationType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationType")
     private String operationType;
 
-    @Query
-    @NameInMap("QueryKeywords")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryKeywords")
     private String queryKeywords;
 
-    @Query
-    @NameInMap("SourceIP")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceIP")
     private String sourceIP;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
-    @Query
-    @NameInMap("User")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("User")
     private String user;
 
     private DescribeSQLLogCountRequest(Builder builder) {
@@ -225,10 +230,14 @@ public class DescribeSQLLogCountRequest extends Request {
         } 
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -237,7 +246,10 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb</p>
          */
         public Builder database(String database) {
             this.putQueryParameter("Database", database);
@@ -246,10 +258,14 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
-         * <p>
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p>The end time must be later than the start time. The maximum time range that can be specified is seven days.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > The end time must be later than the start time. The maximum time range that can be specified is seven days.
+         * <strong>example:</strong>
+         * <p>2020-12-14T11:22Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -258,7 +274,10 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * The execution duration of the SQL statement. Unit: seconds.
+         * <p>The execution duration of the SQL statement. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder executeCost(String executeCost) {
             this.putQueryParameter("ExecuteCost", executeCost);
@@ -267,11 +286,15 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * The execution state of the SQL statement. Valid values:
-         * <p>
+         * <p>The execution status of the query. Valid values:</p>
+         * <ul>
+         * <li>1: successful.</li>
+         * <li>0: failed.</li>
+         * <li>0,1 or 1,0: all.</li>
+         * </ul>
          * 
-         * *   **success**
-         * *   **fail**
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder executeState(String executeState) {
             this.putQueryParameter("ExecuteState", executeState);
@@ -280,7 +303,10 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * The maximum amount of time consumed by a slow query. Unit: seconds. Minimum value: 0.
+         * <p>The maximum amount of time consumed by a slow query. Unit: seconds. Minimum value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxExecuteCost(String maxExecuteCost) {
             this.putQueryParameter("MaxExecuteCost", maxExecuteCost);
@@ -289,7 +315,10 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * The minimum amount of time consumed by a slow query. Unit: seconds. Minimum value: 0.
+         * <p>The minimum amount of time consumed by a slow query. Unit: seconds. Minimum value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder minExecuteCost(String minExecuteCost) {
             this.putQueryParameter("MinExecuteCost", minExecuteCost);
@@ -298,14 +327,17 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * The type of the query language. Valid values:
-         * <p>
+         * <p>The type of the query language. Valid values:</p>
+         * <ul>
+         * <li><strong>DQL</strong></li>
+         * <li><strong>DML</strong></li>
+         * <li><strong>DDL</strong></li>
+         * <li><strong>DCL</strong></li>
+         * <li><strong>TCL</strong></li>
+         * </ul>
          * 
-         * *   **DQL**
-         * *   **DML**
-         * *   **DDL**
-         * *   **DCL**
-         * *   **TCL**
+         * <strong>example:</strong>
+         * <p>DQL</p>
          */
         public Builder operationClass(String operationClass) {
             this.putQueryParameter("OperationClass", operationClass);
@@ -314,15 +346,20 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * The type of the SQL statement.
-         * <p>
+         * <p>The type of the SQL statement.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If you specify <strong>OperationClass</strong>, the value of <strong>OperationType</strong> must be of the corresponding query language. For example, if you set <strong>OperationClass</strong> to <strong>DQL</strong>, the value of <strong>OperationType</strong> must be a <strong>DQL</strong> statement such as <strong>SELECT</strong>.</p>
+         * </li>
+         * <li><p>If you leave <strong>OperationClass</strong> empty, the value of <strong>OperationType</strong> can be an SQL statement of any query language.</p>
+         * </li>
+         * <li><p>If you leave <strong>OperationClass</strong> and <strong>OperationType</strong> empty, all types of SQL statements are returned.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   If **OperationClass** is specified, the value of **OperationType** must belong to the corresponding query language. For example, if **OperationClass** is set to **DQL**, the value of **OperationType** must be a **DQL** statement such as **SELECT**.
-         * 
-         * *   If **OperationClass** is not specified, the value of **OperationType** can be an SQL statement of any query language.
-         * *   If **OperationClass** and **OperationType** are not specified, all types of SQL statements are returned.
+         * <strong>example:</strong>
+         * <p>SELECT</p>
          */
         public Builder operationType(String operationType) {
             this.putQueryParameter("OperationType", operationType);
@@ -331,7 +368,10 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * The keywords that are used to query audit logs.
+         * <p>The keywords that are used to query audit logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder queryKeywords(String queryKeywords) {
             this.putQueryParameter("QueryKeywords", queryKeywords);
@@ -340,7 +380,10 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * The source IP address.
+         * <p>The source IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.<strong>.</strong>.13</p>
          */
         public Builder sourceIP(String sourceIP) {
             this.putQueryParameter("SourceIP", sourceIP);
@@ -349,7 +392,11 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-12-12T11:22Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -358,7 +405,10 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * The name of the database account that is used to connect to the database.
+         * <p>The name of the database account that is used to connect to the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adbpgadmin</p>
          */
         public Builder user(String user) {
             this.putQueryParameter("User", user);

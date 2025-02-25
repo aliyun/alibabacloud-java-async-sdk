@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHcExportInfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeHcExportInfoRequest</p>
  */
 public class DescribeHcExportInfoRequest extends Request {
-    @Query
-    @NameInMap("ExportId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExportId")
     private Long exportId;
 
     private DescribeHcExportInfoRequest(Builder builder) {
@@ -54,10 +59,13 @@ public class DescribeHcExportInfoRequest extends Request {
         } 
 
         /**
-         * The ID of the export task.
-         * <p>
+         * <p>The ID of the export task.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ExportWarning~~">ExportWarning</a> operation to query the IDs of export tasks.</p>
+         * </blockquote>
          * 
-         * >  You can call the [ExportWarning](~~ExportWarning~~) operation to query the IDs of export tasks.
+         * <strong>example:</strong>
+         * <p>443285</p>
          */
         public Builder exportId(Long exportId) {
             this.putQueryParameter("ExportId", exportId);

@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteFileProtectRuleRequest} extends {@link RequestModel}
  *
  * <p>DeleteFileProtectRuleRequest</p>
  */
 public class DeleteFileProtectRuleRequest extends Request {
-    @Query
-    @NameInMap("Id")
-    private java.util.List < Long > id;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    private java.util.List<Long> id;
 
     private DeleteFileProtectRuleRequest(Builder builder) {
         super(builder);
@@ -37,12 +42,12 @@ public class DeleteFileProtectRuleRequest extends Request {
     /**
      * @return id
      */
-    public java.util.List < Long > getId() {
+    public java.util.List<Long> getId() {
         return this.id;
     }
 
     public static final class Builder extends Request.Builder<DeleteFileProtectRuleRequest, Builder> {
-        private java.util.List < Long > id; 
+        private java.util.List<Long> id; 
 
         private Builder() {
             super();
@@ -54,9 +59,9 @@ public class DeleteFileProtectRuleRequest extends Request {
         } 
 
         /**
-         * The IDs of the core file monitoring rules that you want to delete.
+         * <p>The IDs of the core file monitoring rules that you want to delete.</p>
          */
-        public Builder id(java.util.List < Long > id) {
+        public Builder id(java.util.List<Long> id) {
             this.putQueryParameter("Id", id);
             this.id = id;
             return this;

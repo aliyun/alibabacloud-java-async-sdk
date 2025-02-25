@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVsCertificateDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribeVsCertificateDetailRequest</p>
  */
 public class DescribeVsCertificateDetailRequest extends Request {
-    @Query
-    @NameInMap("CertName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String certName;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
     private DescribeVsCertificateDetailRequest(Builder builder) {
@@ -62,14 +67,17 @@ public class DescribeVsCertificateDetailRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVsCertificateDetailRequest response) {
-            super(response);
-            this.certName = response.certName;
-            this.ownerId = response.ownerId;
+        private Builder(DescribeVsCertificateDetailRequest request) {
+            super(request);
+            this.certName = request.certName;
+            this.ownerId = request.ownerId;
         } 
 
         /**
-         * CertName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cert-539xxxx</p>
          */
         public Builder certName(String certName) {
             this.putQueryParameter("CertName", certName);

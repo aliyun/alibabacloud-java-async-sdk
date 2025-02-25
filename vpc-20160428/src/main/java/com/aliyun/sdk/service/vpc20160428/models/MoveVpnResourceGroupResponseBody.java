@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MoveVpnResourceGroupResponseBody} extends {@link TeaModel}
  *
  * <p>MoveVpnResourceGroupResponseBody</p>
  */
 public class MoveVpnResourceGroupResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private MoveVpnResourceGroupResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class MoveVpnResourceGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89ED47AF-3319-566E-A5F5-94E3F47F54A8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

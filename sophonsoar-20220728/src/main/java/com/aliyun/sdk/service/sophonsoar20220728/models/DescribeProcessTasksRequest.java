@@ -1,87 +1,91 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeProcessTasksRequest} extends {@link RequestModel}
  *
  * <p>DescribeProcessTasksRequest</p>
  */
 public class DescribeProcessTasksRequest extends Request {
-    @Query
-    @NameInMap("Direction")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Direction")
     private String direction;
 
-    @Query
-    @NameInMap("EntityName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EntityName")
     private String entityName;
 
-    @Query
-    @NameInMap("EntityType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EntityType")
     private String entityType;
 
-    @Query
-    @NameInMap("OrderField")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EntityUuid")
+    private String entityUuid;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderField")
     private String orderField;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ParamContent")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParamContent")
     private String paramContent;
 
-    @Query
-    @NameInMap("ProcessActionEnd")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProcessActionEnd")
     private Long processActionEnd;
 
-    @Query
-    @NameInMap("ProcessActionStart")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProcessActionStart")
     private Long processActionStart;
 
-    @Query
-    @NameInMap("ProcessRemoveEnd")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProcessRemoveEnd")
     private Long processRemoveEnd;
 
-    @Query
-    @NameInMap("ProcessRemoveStart")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProcessRemoveStart")
     private Long processRemoveStart;
 
-    @Query
-    @NameInMap("ProcessStrategyUuid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProcessStrategyUuid")
     private String processStrategyUuid;
 
-    @Query
-    @NameInMap("SceneCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SceneCode")
     private String sceneCode;
 
-    @Query
-    @NameInMap("Scope")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scope")
     private String scope;
 
-    @Query
-    @NameInMap("Source")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
 
-    @Query
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
-    @Query
-    @NameInMap("TaskStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskStatus")
     private String taskStatus;
 
-    @Query
-    @NameInMap("YunCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("YunCode")
     private String yunCode;
 
     private DescribeProcessTasksRequest(Builder builder) {
@@ -89,6 +93,7 @@ public class DescribeProcessTasksRequest extends Request {
         this.direction = builder.direction;
         this.entityName = builder.entityName;
         this.entityType = builder.entityType;
+        this.entityUuid = builder.entityUuid;
         this.orderField = builder.orderField;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -138,6 +143,13 @@ public class DescribeProcessTasksRequest extends Request {
      */
     public String getEntityType() {
         return this.entityType;
+    }
+
+    /**
+     * @return entityUuid
+     */
+    public String getEntityUuid() {
+        return this.entityUuid;
     }
 
     /**
@@ -249,6 +261,7 @@ public class DescribeProcessTasksRequest extends Request {
         private String direction; 
         private String entityName; 
         private String entityType; 
+        private String entityUuid; 
         private String orderField; 
         private String pageNumber; 
         private Integer pageSize; 
@@ -274,6 +287,7 @@ public class DescribeProcessTasksRequest extends Request {
             this.direction = request.direction;
             this.entityName = request.entityName;
             this.entityType = request.entityType;
+            this.entityUuid = request.entityUuid;
             this.orderField = request.orderField;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -292,7 +306,14 @@ public class DescribeProcessTasksRequest extends Request {
         } 
 
         /**
-         * Direction.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li><strong>desc</strong> (default)</li>
+         * <li><strong>asc</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -301,7 +322,10 @@ public class DescribeProcessTasksRequest extends Request {
         }
 
         /**
-         * EntityName.
+         * <p>The name of the handling entity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder entityName(String entityName) {
             this.putQueryParameter("EntityName", entityName);
@@ -310,7 +334,15 @@ public class DescribeProcessTasksRequest extends Request {
         }
 
         /**
-         * EntityType.
+         * <p>The type of the handling entity. Valid values:</p>
+         * <ul>
+         * <li><strong>ip</strong></li>
+         * <li><strong>file</strong></li>
+         * <li><strong>process</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ip</p>
          */
         public Builder entityType(String entityType) {
             this.putQueryParameter("EntityType", entityType);
@@ -319,7 +351,22 @@ public class DescribeProcessTasksRequest extends Request {
         }
 
         /**
-         * OrderField.
+         * EntityUuid.
+         */
+        public Builder entityUuid(String entityUuid) {
+            this.putQueryParameter("EntityUuid", entityUuid);
+            this.entityUuid = entityUuid;
+            return this;
+        }
+
+        /**
+         * <p>The field that you use to sort the result.</p>
+         * <blockquote>
+         * <p> You can obtain the field from the response result.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>gmtCreate</p>
          */
         public Builder orderField(String orderField) {
             this.putQueryParameter("OrderField", orderField);
@@ -328,7 +375,10 @@ public class DescribeProcessTasksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1. Pages start from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -337,7 +387,13 @@ public class DescribeProcessTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. If you do not specify the PageSize parameter, 10 entries are returned by default.</p>
+         * <blockquote>
+         * <p> We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -346,7 +402,10 @@ public class DescribeProcessTasksRequest extends Request {
         }
 
         /**
-         * ParamContent.
+         * <p>The handling entity, handling scenario, or handling parameter that is used for fuzzy match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12.x.x.x</p>
          */
         public Builder paramContent(String paramContent) {
             this.putQueryParameter("ParamContent", paramContent);
@@ -355,7 +414,10 @@ public class DescribeProcessTasksRequest extends Request {
         }
 
         /**
-         * ProcessActionEnd.
+         * <p>The end of the time range for a handling task. The value is a 13-digit timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700031183572</p>
          */
         public Builder processActionEnd(Long processActionEnd) {
             this.putQueryParameter("ProcessActionEnd", processActionEnd);
@@ -364,7 +426,10 @@ public class DescribeProcessTasksRequest extends Request {
         }
 
         /**
-         * ProcessActionStart.
+         * <p>The beginning of the time range for a handling task. The value is a 13-digit timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700031183572</p>
          */
         public Builder processActionStart(Long processActionStart) {
             this.putQueryParameter("ProcessActionStart", processActionStart);
@@ -373,7 +438,10 @@ public class DescribeProcessTasksRequest extends Request {
         }
 
         /**
-         * ProcessRemoveEnd.
+         * <p>The end of the time range for an unblocking task. The value is a 13-digit timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700031183572</p>
          */
         public Builder processRemoveEnd(Long processRemoveEnd) {
             this.putQueryParameter("ProcessRemoveEnd", processRemoveEnd);
@@ -382,7 +450,10 @@ public class DescribeProcessTasksRequest extends Request {
         }
 
         /**
-         * ProcessRemoveStart.
+         * <p>The beginning of the time range for an unblocking task. The value is a 13-digit timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700031183572</p>
          */
         public Builder processRemoveStart(Long processRemoveStart) {
             this.putQueryParameter("ProcessRemoveStart", processRemoveStart);
@@ -391,7 +462,13 @@ public class DescribeProcessTasksRequest extends Request {
         }
 
         /**
-         * ProcessStrategyUuid.
+         * <p>The UUID of the handling policy.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2584440.html">ListDisposeStrategy</a> operation to query the UUID of the handling policy.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>92af3c79-1754-4646-9366-9ddbd1e45536_xxxx</p>
          */
         public Builder processStrategyUuid(String processStrategyUuid) {
             this.putQueryParameter("ProcessStrategyUuid", processStrategyUuid);
@@ -400,7 +477,13 @@ public class DescribeProcessTasksRequest extends Request {
         }
 
         /**
-         * SceneCode.
+         * <p>The scenario code of the handling task.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeEnumItems~~">DescribeEnumItems</a> operation to query the scenario code of the handling task. This parameter is available when you set <strong>EnumType</strong> to <strong>process</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>event_xxx_whole_process</p>
          */
         public Builder sceneCode(String sceneCode) {
             this.putQueryParameter("SceneCode", sceneCode);
@@ -409,7 +492,10 @@ public class DescribeProcessTasksRequest extends Request {
         }
 
         /**
-         * Scope.
+         * <p>The ID of the Alibaba Cloud account that is specified in the handling task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>125xxxxx9870</p>
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);
@@ -418,7 +504,17 @@ public class DescribeProcessTasksRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>The triggering source of the handling task. The value is a string array. Valid values:</p>
+         * <ul>
+         * <li><strong>system</strong>: triggered when you manually handle an event</li>
+         * <li><strong>custom</strong>: triggered by an event based on an automatic response rule</li>
+         * <li><strong>custom_alert</strong>: triggered by an alert based on an automatic response rule</li>
+         * <li><strong>soar-manual</strong>: triggered when you use SOAR to manually run a playbook</li>
+         * <li><strong>soar-mdr</strong>: triggered by Managed Security Service</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;system&quot;]</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -427,7 +523,13 @@ public class DescribeProcessTasksRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The unique identifier of the handling task.</p>
+         * <blockquote>
+         * <p> This parameter is used to query a specific task. You can obtain the value from the response result.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>150xxxxxxxxx95066</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -436,7 +538,21 @@ public class DescribeProcessTasksRequest extends Request {
         }
 
         /**
-         * TaskStatus.
+         * <p>The status of the handling task. The value is a string. Valid values:</p>
+         * <ul>
+         * <li><strong>11</strong>: being handled</li>
+         * <li><strong>21</strong>: being blocked</li>
+         * <li><strong>22</strong>: being quarantined</li>
+         * <li><strong>23</strong>: completed</li>
+         * <li><strong>24</strong>: added to the whitelist</li>
+         * <li><strong>20</strong>: successful</li>
+         * <li><strong>90</strong>: failed</li>
+         * <li><strong>91</strong>: unblocking failed</li>
+         * <li><strong>92</strong>: restoring quarantined files failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;11&quot;,&quot;21&quot;]</p>
          */
         public Builder taskStatus(String taskStatus) {
             this.putQueryParameter("TaskStatus", taskStatus);
@@ -445,7 +561,15 @@ public class DescribeProcessTasksRequest extends Request {
         }
 
         /**
-         * YunCode.
+         * <p>The cloud service that is associated with the handling task. The value is a string. Valid values:</p>
+         * <ul>
+         * <li><strong>WAF</strong>: Web Application Firewall (WAF)</li>
+         * <li><strong>CFW</strong>: Cloud Firewall</li>
+         * <li><strong>Aegis</strong>: Security Center</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;WAF&quot;]</p>
          */
         public Builder yunCode(String yunCode) {
             this.putQueryParameter("YunCode", yunCode);

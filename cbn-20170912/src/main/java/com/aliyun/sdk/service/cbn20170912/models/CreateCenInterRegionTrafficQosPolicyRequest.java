@@ -1,65 +1,75 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCenInterRegionTrafficQosPolicyRequest} extends {@link RequestModel}
  *
  * <p>CreateCenInterRegionTrafficQosPolicyRequest</p>
  */
 public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BandwidthGuaranteeMode")
+    private String bandwidthGuaranteeMode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TrafficQosPolicyDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficQosPolicyDescription")
     private String trafficQosPolicyDescription;
 
-    @Query
-    @NameInMap("TrafficQosPolicyName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficQosPolicyName")
     private String trafficQosPolicyName;
 
-    @Query
-    @NameInMap("TrafficQosQueues")
-    private java.util.List < TrafficQosQueues> trafficQosQueues;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficQosQueues")
+    private java.util.List<TrafficQosQueues> trafficQosQueues;
 
-    @Query
-    @NameInMap("TransitRouterAttachmentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String transitRouterAttachmentId;
 
-    @Query
-    @NameInMap("TransitRouterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String transitRouterId;
 
     private CreateCenInterRegionTrafficQosPolicyRequest(Builder builder) {
         super(builder);
+        this.bandwidthGuaranteeMode = builder.bandwidthGuaranteeMode;
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
         this.ownerAccount = builder.ownerAccount;
@@ -84,6 +94,13 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return bandwidthGuaranteeMode
+     */
+    public String getBandwidthGuaranteeMode() {
+        return this.bandwidthGuaranteeMode;
     }
 
     /**
@@ -145,7 +162,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
     /**
      * @return trafficQosQueues
      */
-    public java.util.List < TrafficQosQueues> getTrafficQosQueues() {
+    public java.util.List<TrafficQosQueues> getTrafficQosQueues() {
         return this.trafficQosQueues;
     }
 
@@ -164,6 +181,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateCenInterRegionTrafficQosPolicyRequest, Builder> {
+        private String bandwidthGuaranteeMode; 
         private String clientToken; 
         private Boolean dryRun; 
         private String ownerAccount; 
@@ -172,7 +190,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         private Long resourceOwnerId; 
         private String trafficQosPolicyDescription; 
         private String trafficQosPolicyName; 
-        private java.util.List < TrafficQosQueues> trafficQosQueues; 
+        private java.util.List<TrafficQosQueues> trafficQosQueues; 
         private String transitRouterAttachmentId; 
         private String transitRouterId; 
 
@@ -182,6 +200,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
 
         private Builder(CreateCenInterRegionTrafficQosPolicyRequest request) {
             super(request);
+            this.bandwidthGuaranteeMode = request.bandwidthGuaranteeMode;
             this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
             this.ownerAccount = request.ownerAccount;
@@ -196,10 +215,27 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The allocation mode of the guaranteed bandwidth. You can specify an absolute bandwidth value or a bandwidth percentage. Valid values:</p>
+         * <ul>
+         * <li><strong>byBandwidth</strong>: allocates an absolute bandwidth value for the QoS queue.</li>
+         * <li><strong>byBandwidthPercent</strong> (default): allocates a bandwidth percentage for the OoS queue.</li>
+         * </ul>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <strong>example:</strong>
+         * <p>byBandwidthPercent</p>
+         */
+        public Builder bandwidthGuaranteeMode(String bandwidthGuaranteeMode) {
+            this.putQueryParameter("BandwidthGuaranteeMode", bandwidthGuaranteeMode);
+            this.bandwidthGuaranteeMode = bandwidthGuaranteeMode;
+            return this;
+        }
+
+        /**
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -208,11 +244,14 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether only to precheck the API request. Valid values:
-         * <p>
+         * <p>Specifies whether only to precheck the API request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: prechecks the request but does not create the QoS policy. The system checks the required parameters, the request format, and the service limits. If the request fails the check, an error message is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong>: sends the API request. If the request passes the precheck, the QoS policy is created. This is the default value.</li>
+         * </ul>
          * 
-         * *   **true**: prechecks the request but does not create the QoS policy. The system checks the required parameters, the request format, and the service limits. If the request fails the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
-         * *   **false**: sends the API request. If the request passes the precheck, the QoS policy is created. This is the default value.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -257,10 +296,11 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         }
 
         /**
-         * The description of the QoS policy.
-         * <p>
+         * <p>The description of the QoS policy.</p>
+         * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http:// or https://.</p>
          * 
-         * The description must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The description must start with a letter.
+         * <strong>example:</strong>
+         * <p>desctest</p>
          */
         public Builder trafficQosPolicyDescription(String trafficQosPolicyDescription) {
             this.putQueryParameter("TrafficQosPolicyDescription", trafficQosPolicyDescription);
@@ -269,10 +309,11 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         }
 
         /**
-         * The name of the QoS policy.
-         * <p>
+         * <p>The name of the QoS policy.</p>
+         * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
+         * <strong>example:</strong>
+         * <p>nametest</p>
          */
         public Builder trafficQosPolicyName(String trafficQosPolicyName) {
             this.putQueryParameter("TrafficQosPolicyName", trafficQosPolicyName);
@@ -281,19 +322,21 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         }
 
         /**
-         * The information about the QoS queue.
-         * <p>
-         * 
-         * You can call this operation to create at most three QoS queues. To create more queues, you must call the CreateCenInterRegionTrafficQosQueue operation.
+         * <p>The information about the QoS queue.</p>
+         * <p>You can add at most three QoS queues in a QoS policy by calling this operation. To add more QoS queues, call the CreateCenInterRegionTrafficQosQueue operation.</p>
          */
-        public Builder trafficQosQueues(java.util.List < TrafficQosQueues> trafficQosQueues) {
+        public Builder trafficQosQueues(java.util.List<TrafficQosQueues> trafficQosQueues) {
             this.putQueryParameter("TrafficQosQueues", trafficQosQueues);
             this.trafficQosQueues = trafficQosQueues;
             return this;
         }
 
         /**
-         * The ID of the inter-region connection.
+         * <p>The ID of the inter-region connection.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-attach-r6g0m3epjehw57****</p>
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
@@ -302,7 +345,11 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the transit router.
+         * <p>The ID of the transit router.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-8vbuqeo5h5pu3m01d****</p>
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);
@@ -317,20 +364,30 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateCenInterRegionTrafficQosPolicyRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCenInterRegionTrafficQosPolicyRequest</p>
+     */
     public static class TrafficQosQueues extends TeaModel {
-        @NameInMap("Dscps")
-        private java.util.List < Integer > dscps;
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
+        private String bandwidth;
 
-        @NameInMap("QosQueueDescription")
+        @com.aliyun.core.annotation.NameInMap("Dscps")
+        private java.util.List<Integer> dscps;
+
+        @com.aliyun.core.annotation.NameInMap("QosQueueDescription")
         private String qosQueueDescription;
 
-        @NameInMap("QosQueueName")
+        @com.aliyun.core.annotation.NameInMap("QosQueueName")
         private String qosQueueName;
 
-        @NameInMap("RemainBandwidthPercent")
+        @com.aliyun.core.annotation.NameInMap("RemainBandwidthPercent")
         private String remainBandwidthPercent;
 
         private TrafficQosQueues(Builder builder) {
+            this.bandwidth = builder.bandwidth;
             this.dscps = builder.dscps;
             this.qosQueueDescription = builder.qosQueueDescription;
             this.qosQueueName = builder.qosQueueName;
@@ -346,9 +403,16 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         }
 
         /**
+         * @return bandwidth
+         */
+        public String getBandwidth() {
+            return this.bandwidth;
+        }
+
+        /**
          * @return dscps
          */
-        public java.util.List < Integer > getDscps() {
+        public java.util.List<Integer> getDscps() {
             return this.dscps;
         }
 
@@ -374,29 +438,44 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < Integer > dscps; 
+            private String bandwidth; 
+            private java.util.List<Integer> dscps; 
             private String qosQueueDescription; 
             private String qosQueueName; 
             private String remainBandwidthPercent; 
 
             /**
-             * The DSCP value that matches the current queue.
-             * <p>
+             * <p>The absolute bandwidth that can be consumed by the QoS queue. Unit: Mbit/s.</p>
+             * <p>Each QoS policy supports at most 10 queues. You can specify a valid bandwidth value for each queue.</p>
+             * <p>For example, a value of 1 specifies that the queue can consume 1 Mbit/s of the inter-region bandwidth.</p>
+             * <blockquote>
+             * <p> The sum of the absolute bandwidth values of all the queues in a QoS policy cannot exceed the total bandwidth of the inter-region connection.</p>
+             * </blockquote>
              * 
-             * Each QoS policy supports up to three queues. You can specify at most 60 DSCP values for each queue. Separate DSCP values with commas (,).
+             * <strong>example:</strong>
+             * <p>1</p>
              */
-            public Builder dscps(java.util.List < Integer > dscps) {
+            public Builder bandwidth(String bandwidth) {
+                this.bandwidth = bandwidth;
+                return this;
+            }
+
+            /**
+             * <p>The Differentiated Services Code Point (DSCP) value that matches the current queue.</p>
+             * <p>Each QoS policy supports at most three queues. You can specify at most 60 DSCP values for each queue. Separate multiple DCSP values with commas (,).</p>
+             */
+            public Builder dscps(java.util.List<Integer> dscps) {
                 this.dscps = dscps;
                 return this;
             }
 
             /**
-             * The description of the current queue.
-             * <p>
+             * <p>The description of the current queue.</p>
+             * <p>Each QoS policy supports at most 10 queues. You can specify a description for each queue.</p>
+             * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
              * 
-             * Each QoS policy supports up to three queues. You can add a description to each queue.
-             * 
-             * The description must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The description must start with a letter.
+             * <strong>example:</strong>
+             * <p>desctest</p>
              */
             public Builder qosQueueDescription(String qosQueueDescription) {
                 this.qosQueueDescription = qosQueueDescription;
@@ -404,12 +483,12 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
             }
 
             /**
-             * The name of the current queue.
-             * <p>
+             * <p>The name of the current queue.</p>
+             * <p>Each QoS policy supports at most three queues. You can specify a name for each queue.</p>
+             * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
              * 
-             * Each QoS policy supports up to three queues. You can specify a name for each queue.
-             * 
-             * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
+             * <strong>example:</strong>
+             * <p>nametest</p>
              */
             public Builder qosQueueName(String qosQueueName) {
                 this.qosQueueName = qosQueueName;
@@ -417,14 +496,15 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
             }
 
             /**
-             * The percentage of bandwidth resources that can be allocated to the current queue.
-             * <p>
+             * <p>The percentage of the inter-region bandwidth that can be used by the queue.</p>
+             * <p>Each QoS policy supports at most 10 queues. You can specify a valid percentage for each queue.</p>
+             * <p>For example, a value of <strong>1</strong> specifies that the queue can consume 1% of the inter-region bandwidth.</p>
+             * <blockquote>
+             * <p> The sum of the percentage values of all the queues in a QoS policy cannot exceed 100%.</p>
+             * </blockquote>
              * 
-             * Each QoS policy supports up to three queues. You can specify a percentage of bandwidth resources for each queue.
-             * 
-             * If you enter **1**, it indicates that the current queue can consume at most \*\*1%\*\* of the bandwidth resources.
-             * 
-             * >  The sum of the percentage values of all the queues in a QoS policy cannot exceed 100%.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder remainBandwidthPercent(String remainBandwidthPercent) {
                 this.remainBandwidthPercent = remainBandwidthPercent;

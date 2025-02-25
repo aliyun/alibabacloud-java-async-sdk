@@ -1,67 +1,67 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServerLockRequest} extends {@link RequestModel}
  *
  * <p>ListServerLockRequest</p>
  */
 public class ListServerLockRequest extends Request {
-    @Query
-    @NameInMap("BeginStartDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BeginStartDate")
     private Long beginStartDate;
 
-    @Query
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @Query
-    @NameInMap("EndExpireDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndExpireDate")
     private Long endExpireDate;
 
-    @Query
-    @NameInMap("EndStartDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndStartDate")
     private Long endStartDate;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("LockProductId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LockProductId")
     private String lockProductId;
 
-    @Query
-    @NameInMap("OrderBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderBy")
     private String orderBy;
 
-    @Query
-    @NameInMap("OrderByType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderByType")
     private String orderByType;
 
-    @Query
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ServerLockStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerLockStatus")
     private Integer serverLockStatus;
 
-    @Query
-    @NameInMap("StartExpireDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartExpireDate")
     private Long startExpireDate;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
     private ListServerLockRequest(Builder builder) {
@@ -222,7 +222,10 @@ public class ListServerLockRequest extends Request {
         } 
 
         /**
-         * BeginStartDate.
+         * <p>The start of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-07-10 17:37:36</p>
          */
         public Builder beginStartDate(Long beginStartDate) {
             this.putQueryParameter("BeginStartDate", beginStartDate);
@@ -231,7 +234,10 @@ public class ListServerLockRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>The domain name for which you want to query the enabled registry lock.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -240,7 +246,10 @@ public class ListServerLockRequest extends Request {
         }
 
         /**
-         * EndExpireDate.
+         * <p>The end of the expiration time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-07-10 17:37:36</p>
          */
         public Builder endExpireDate(Long endExpireDate) {
             this.putQueryParameter("EndExpireDate", endExpireDate);
@@ -249,7 +258,10 @@ public class ListServerLockRequest extends Request {
         }
 
         /**
-         * EndStartDate.
+         * <p>The end of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-07-10 17:37:36</p>
          */
         public Builder endStartDate(Long endStartDate) {
             this.putQueryParameter("EndStartDate", endStartDate);
@@ -258,7 +270,15 @@ public class ListServerLockRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the error message to return if the request fails. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -267,7 +287,10 @@ public class ListServerLockRequest extends Request {
         }
 
         /**
-         * LockProductId.
+         * <p>The ID of the product to which the domain name with the registry lock enabled belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1807**</p>
          */
         public Builder lockProductId(String lockProductId) {
             this.putQueryParameter("LockProductId", lockProductId);
@@ -276,7 +299,14 @@ public class ListServerLockRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * <p>The field that you use to sort the query results.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>EXPIRE_DATE</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>EXPIRE_DATE</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -285,7 +315,10 @@ public class ListServerLockRequest extends Request {
         }
 
         /**
-         * OrderByType.
+         * <p>The order of the information based on which you want to sort the domain names, such as the registration date and expiration date. Valid values: ASC and DESC. The value ASC specifies the ascending order. The value DESC specifies the descending order. If this parameter is not configured, the default value DESC is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder orderByType(String orderByType) {
             this.putQueryParameter("OrderByType", orderByType);
@@ -294,7 +327,10 @@ public class ListServerLockRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -303,7 +339,10 @@ public class ListServerLockRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -312,7 +351,15 @@ public class ListServerLockRequest extends Request {
         }
 
         /**
-         * ServerLockStatus.
+         * <p>The status of the registry lock. Valid values:</p>
+         * <ul>
+         * <li>1: The registry lock is not enabled.</li>
+         * <li>2: The registry lock is enabled.</li>
+         * <li>3: The registry lock is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder serverLockStatus(Integer serverLockStatus) {
             this.putQueryParameter("ServerLockStatus", serverLockStatus);
@@ -321,7 +368,10 @@ public class ListServerLockRequest extends Request {
         }
 
         /**
-         * StartExpireDate.
+         * <p>The start of the expiration time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-07-10 17:37:36</p>
          */
         public Builder startExpireDate(Long startExpireDate) {
             this.putQueryParameter("StartExpireDate", startExpireDate);
@@ -330,7 +380,10 @@ public class ListServerLockRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>The IP address of the client. For example, you can set the value to <strong>127.0.0.1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

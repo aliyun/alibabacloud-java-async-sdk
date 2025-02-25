@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPortAutoCcStatusRequest} extends {@link RequestModel}
  *
  * <p>ModifyPortAutoCcStatusRequest</p>
  */
 public class ModifyPortAutoCcStatusRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Mode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mode;
 
-    @Query
-    @NameInMap("Switch")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Switch")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String _switch;
 
     private ModifyPortAutoCcStatusRequest(Builder builder) {
@@ -108,10 +113,14 @@ public class ModifyPortAutoCcStatusRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The ID of the instance.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-mp91j1ao****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -120,12 +129,16 @@ public class ModifyPortAutoCcStatusRequest extends Request {
         }
 
         /**
-         * The mode of the Intelligent Protection policy. Valid values:
-         * <p>
+         * <p>The mode of the Intelligent Protection policy. Valid values:</p>
+         * <ul>
+         * <li><strong>normal</strong></li>
+         * <li><strong>loose</strong></li>
+         * <li><strong>strict</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **normal**
-         * *   **loose**
-         * *   **strict**
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
@@ -134,11 +147,15 @@ public class ModifyPortAutoCcStatusRequest extends Request {
         }
 
         /**
-         * Specifies the status of the Intelligent Protection policy. Valid values:
-         * <p>
+         * <p>Specifies the status of the Intelligent Protection policy. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong>: enables the policy.</li>
+         * <li><strong>off</strong>: disables the policy.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **on**: enables the policy.
-         * *   **off**: disables the policy.
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder _switch(String _switch) {
             this.putQueryParameter("Switch", _switch);

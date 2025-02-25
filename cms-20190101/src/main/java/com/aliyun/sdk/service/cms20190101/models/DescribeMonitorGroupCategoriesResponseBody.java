@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMonitorGroupCategoriesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMonitorGroupCategoriesResponseBody</p>
  */
 public class DescribeMonitorGroupCategoriesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("MonitorGroupCategories")
+    @com.aliyun.core.annotation.NameInMap("MonitorGroupCategories")
     private MonitorGroupCategories monitorGroupCategories;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeMonitorGroupCategoriesResponseBody(Builder builder) {
@@ -86,10 +86,13 @@ public class DescribeMonitorGroupCategoriesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the request was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -97,7 +100,10 @@ public class DescribeMonitorGroupCategoriesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified resource is not found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -105,7 +111,7 @@ public class DescribeMonitorGroupCategoriesResponseBody extends TeaModel {
         }
 
         /**
-         * The cloud services to which the resources in the application group belong and the number of resources that belong to the cloud service.
+         * <p>The cloud services to which the resources in the application group belong and the number of resources that belong to the cloud service.</p>
          */
         public Builder monitorGroupCategories(MonitorGroupCategories monitorGroupCategories) {
             this.monitorGroupCategories = monitorGroupCategories;
@@ -113,7 +119,10 @@ public class DescribeMonitorGroupCategoriesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9E0347B0-EBC3-4769-A78D-D96F21C6BB52</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,11 +130,14 @@ public class DescribeMonitorGroupCategoriesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,11 +150,17 @@ public class DescribeMonitorGroupCategoriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMonitorGroupCategoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitorGroupCategoriesResponseBody</p>
+     */
     public static class CategoryItem extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
         private CategoryItem(Builder builder) {
@@ -177,10 +195,13 @@ public class DescribeMonitorGroupCategoriesResponseBody extends TeaModel {
             private Integer count; 
 
             /**
-             * The abbreviation of the Alibaba Cloud service name.
-             * <p>
+             * <p>The abbreviation of the cloud service name.</p>
+             * <blockquote>
+             * <p> For more information about how to obtain the abbreviation of a cloud service name, see <code>metricCategory</code> in the response parameter <code>Labels</code> of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</p>
+             * </blockquote>
              * 
-             * To obtain the abbreviation of an Alibaba Cloud service name, call the [DescribeProjectMeta](~~114916~~) operation. The `metricCategory` tag in the `Labels` response parameter indicates the abbreviation of the Alibaba Cloud service name.
+             * <strong>example:</strong>
+             * <p>ECS</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -188,7 +209,10 @@ public class DescribeMonitorGroupCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of resources that belong to the cloud service.
+             * <p>The number of resources that belong to the cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -202,8 +226,14 @@ public class DescribeMonitorGroupCategoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMonitorGroupCategoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitorGroupCategoriesResponseBody</p>
+     */
     public static class MonitorGroupCategory extends TeaModel {
-        @NameInMap("CategoryItem")
+        @com.aliyun.core.annotation.NameInMap("CategoryItem")
         private java.util.List < CategoryItem> categoryItem;
 
         private MonitorGroupCategory(Builder builder) {
@@ -243,11 +273,17 @@ public class DescribeMonitorGroupCategoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMonitorGroupCategoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitorGroupCategoriesResponseBody</p>
+     */
     public static class MonitorGroupCategories extends TeaModel {
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private Long groupId;
 
-        @NameInMap("MonitorGroupCategory")
+        @com.aliyun.core.annotation.NameInMap("MonitorGroupCategory")
         private MonitorGroupCategory monitorGroupCategory;
 
         private MonitorGroupCategories(Builder builder) {
@@ -282,7 +318,10 @@ public class DescribeMonitorGroupCategoriesResponseBody extends TeaModel {
             private MonitorGroupCategory monitorGroupCategory; 
 
             /**
-             * The ID of the application group.
+             * <p>The ID of the application group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -290,7 +329,7 @@ public class DescribeMonitorGroupCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The cloud services to which the resources in the application group belong and the number of resources that belong to the cloud service.
+             * <p>The cloud services to which the resources in the application group belong and the number of resources that belong to the cloud service.</p>
              */
             public Builder monitorGroupCategory(MonitorGroupCategory monitorGroupCategory) {
                 this.monitorGroupCategory = monitorGroupCategory;

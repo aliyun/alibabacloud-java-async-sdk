@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVsTopDomainsByFlowResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVsTopDomainsByFlowResponseBody</p>
  */
 public class DescribeVsTopDomainsByFlowResponseBody extends TeaModel {
-    @NameInMap("DomainCount")
+    @com.aliyun.core.annotation.NameInMap("DomainCount")
     private Long domainCount;
 
-    @NameInMap("DomainOnlineCount")
+    @com.aliyun.core.annotation.NameInMap("DomainOnlineCount")
     private Long domainOnlineCount;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("TopDomains")
+    @com.aliyun.core.annotation.NameInMap("TopDomains")
     private TopDomains topDomains;
 
     private DescribeVsTopDomainsByFlowResponseBody(Builder builder) {
@@ -151,26 +156,32 @@ public class DescribeVsTopDomainsByFlowResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVsTopDomainsByFlowResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVsTopDomainsByFlowResponseBody</p>
+     */
     public static class TopDomain extends TeaModel {
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("MaxBps")
+        @com.aliyun.core.annotation.NameInMap("MaxBps")
         private Long maxBps;
 
-        @NameInMap("MaxBpsTime")
+        @com.aliyun.core.annotation.NameInMap("MaxBpsTime")
         private String maxBpsTime;
 
-        @NameInMap("Rank")
+        @com.aliyun.core.annotation.NameInMap("Rank")
         private Long rank;
 
-        @NameInMap("TotalAccess")
+        @com.aliyun.core.annotation.NameInMap("TotalAccess")
         private Long totalAccess;
 
-        @NameInMap("TotalTraffic")
+        @com.aliyun.core.annotation.NameInMap("TotalTraffic")
         private String totalTraffic;
 
-        @NameInMap("TrafficPercent")
+        @com.aliyun.core.annotation.NameInMap("TrafficPercent")
         private String trafficPercent;
 
         private TopDomain(Builder builder) {
@@ -312,9 +323,15 @@ public class DescribeVsTopDomainsByFlowResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVsTopDomainsByFlowResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVsTopDomainsByFlowResponseBody</p>
+     */
     public static class TopDomains extends TeaModel {
-        @NameInMap("TopDomain")
-        private java.util.List < TopDomain> topDomain;
+        @com.aliyun.core.annotation.NameInMap("TopDomain")
+        private java.util.List<TopDomain> topDomain;
 
         private TopDomains(Builder builder) {
             this.topDomain = builder.topDomain;
@@ -331,17 +348,17 @@ public class DescribeVsTopDomainsByFlowResponseBody extends TeaModel {
         /**
          * @return topDomain
          */
-        public java.util.List < TopDomain> getTopDomain() {
+        public java.util.List<TopDomain> getTopDomain() {
             return this.topDomain;
         }
 
         public static final class Builder {
-            private java.util.List < TopDomain> topDomain; 
+            private java.util.List<TopDomain> topDomain; 
 
             /**
              * TopDomain.
              */
-            public Builder topDomain(java.util.List < TopDomain> topDomain) {
+            public Builder topDomain(java.util.List<TopDomain> topDomain) {
                 this.topDomain = topDomain;
                 return this;
             }

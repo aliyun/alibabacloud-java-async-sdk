@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDnsGtmMonitorConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDnsGtmMonitorConfigResponseBody</p>
  */
 public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("CreateTimestamp")
+    @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
     private Long createTimestamp;
 
-    @NameInMap("EvaluationCount")
+    @com.aliyun.core.annotation.NameInMap("EvaluationCount")
     private Integer evaluationCount;
 
-    @NameInMap("Interval")
+    @com.aliyun.core.annotation.NameInMap("Interval")
     private Integer interval;
 
-    @NameInMap("IspCityNodes")
+    @com.aliyun.core.annotation.NameInMap("IspCityNodes")
     private IspCityNodes ispCityNodes;
 
-    @NameInMap("MonitorConfigId")
+    @com.aliyun.core.annotation.NameInMap("MonitorConfigId")
     private String monitorConfigId;
 
-    @NameInMap("MonitorExtendInfo")
+    @com.aliyun.core.annotation.NameInMap("MonitorExtendInfo")
     private String monitorExtendInfo;
 
-    @NameInMap("ProtocolType")
+    @com.aliyun.core.annotation.NameInMap("ProtocolType")
     private String protocolType;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Timeout")
+    @com.aliyun.core.annotation.NameInMap("Timeout")
     private Integer timeout;
 
-    @NameInMap("UpdateTime")
+    @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
-    @NameInMap("UpdateTimestamp")
+    @com.aliyun.core.annotation.NameInMap("UpdateTimestamp")
     private Long updateTimestamp;
 
     private DescribeDnsGtmMonitorConfigResponseBody(Builder builder) {
@@ -170,7 +175,10 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
         private Long updateTimestamp; 
 
         /**
-         * The time when the health check task was created.
+         * <p>The time when the health check configuration was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-28T13:08Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -178,7 +186,10 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp that indicates when the health check task was created.
+         * <p>The time when the health check configuration was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1527690629357</p>
          */
         public Builder createTimestamp(Long createTimestamp) {
             this.createTimestamp = createTimestamp;
@@ -186,7 +197,10 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The number of consecutive times of failed health check attempts.
+         * <p>The number of consecutive failures.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder evaluationCount(Integer evaluationCount) {
             this.evaluationCount = evaluationCount;
@@ -194,7 +208,10 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The interval at which the health check task is executed. Unit: seconds.
+         * <p>The health check interval. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder interval(Integer interval) {
             this.interval = interval;
@@ -202,7 +219,7 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The monitored node.
+         * <p>The health check nodes.</p>
          */
         public Builder ispCityNodes(IspCityNodes ispCityNodes) {
             this.ispCityNodes = ispCityNodes;
@@ -210,7 +227,10 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the health check task.
+         * <p>The ID of the health check configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MonitorConfigId1</p>
          */
         public Builder monitorConfigId(String monitorConfigId) {
             this.monitorConfigId = monitorConfigId;
@@ -218,54 +238,68 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The extended information. The following parameters are required for different health check protocols:
-         * <p>
+         * <p>The extended information. The required parameters vary based on the value of ProtocolType.</p>
+         * <ul>
+         * <li><p>HTTP or HTTPS</p>
+         * <ul>
+         * <li><p>port: the port that you want to check</p>
+         * </li>
+         * <li><p>host: the host settings</p>
+         * </li>
+         * <li><p>path: the URL path</p>
+         * </li>
+         * <li><p>code: the response code. The health check result is deemed abnormal if the returned value is greater than the specified value.</p>
+         * </li>
+         * <li><p>failureRate: the failure rate</p>
+         * </li>
+         * <li><p>sni: specifies whether to enable server name indication (SNI). This parameter is available only when ProtocolType is set to HTTPS. Valid values:</p>
+         * <ul>
+         * <li>true: enables SNI.</li>
+         * <li>false: disables SNI.</li>
+         * </ul>
+         * </li>
+         * <li><p>nodeType: the type of the node for monitoring when the address pool type is domain name. Valid values:</p>
+         * <ul>
+         * <li>IPV4</li>
+         * <li>IPV6</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * </li>
+         * <li><p>PING:</p>
+         * <ul>
+         * <li><p>failureRate: the failure rate</p>
+         * </li>
+         * <li><p>packetNum: the number of ping packets</p>
+         * </li>
+         * <li><p>packetLossRate: the loss rate of ping packets</p>
+         * </li>
+         * <li><p>nodeType: the type of the node for monitoring when the address pool type is domain name. Valid values:</p>
+         * <ul>
+         * <li>IPV4</li>
+         * <li>IPV6</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * </li>
+         * <li><p>TCP</p>
+         * <ul>
+         * <li><p>port: the port that you want to check</p>
+         * </li>
+         * <li><p>failureRate: the failure rate</p>
+         * </li>
+         * <li><p>nodeType: the type of the node for monitoring when the address pool type is domain name. Valid values:</p>
+         * <ul>
+         * <li>IPV4</li>
+         * <li>IPV6</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * </li>
+         * </ul>
          * 
-         * *   HTTP or HTTPS:
-         * 
-         *     *   port: the check port.
-         * 
-         *     *   host: the host settings.
-         * 
-         *     *   path: the URL path.
-         * 
-         *     *   code: the return code greater than the specified value.
-         * 
-         *     *   failureRate: the failure rate.
-         * 
-         *     *   sni: specifies whether to enable server name indication (SNI). This parameter is used only for the HTTPS protocol. Valid values:
-         * 
-         *         *   true: enable SNI.
-         *         *   false: disable SNI.
-         * 
-         *     *   nodeType: the type of the node to monitor when the address pool type is DOMAIN. Valid values:
-         * 
-         *         *   IPV4
-         *         *   IPV6
-         * 
-         * *   PING:
-         * 
-         *     *   failureRate: the failure rate.
-         * 
-         *     *   packetNum: the number of ping packets.
-         * 
-         *     *   packetLossRate: the loss rate of ping packets.
-         * 
-         *     *   nodeType: the type of the node to monitor when the address pool type is DOMAIN. Valid values:
-         * 
-         *         *   IPV4
-         *         *   IPV6
-         * 
-         * *   TCP:
-         * 
-         *     *   port: the check port.
-         * 
-         *     *   failureRate: the failure rate.
-         * 
-         *     *   nodeType: the type of the node to monitor when the address pool type is DOMAIN. Valid values:
-         * 
-         *         *   IPV4
-         *         *   IPV6
+         * <strong>example:</strong>
+         * <p>{&quot;code&quot;:200,&quot;path&quot;:&quot;\index.htm&quot;,&quot;host&quot;:&quot;aliyun.com&quot;}</p>
          */
         public Builder monitorExtendInfo(String monitorExtendInfo) {
             this.monitorExtendInfo = monitorExtendInfo;
@@ -273,13 +307,16 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The health check protocol. Valid values:
-         * <p>
+         * <p>The health check protocol. Valid values:</p>
+         * <ul>
+         * <li>HTTP</li>
+         * <li>HTTPS</li>
+         * <li>PING</li>
+         * <li>TCP</li>
+         * </ul>
          * 
-         * *   HTTP
-         * *   HTTPS
-         * *   PING
-         * *   TCP
+         * <strong>example:</strong>
+         * <p>http</p>
          */
         public Builder protocolType(String protocolType) {
             this.protocolType = protocolType;
@@ -287,7 +324,10 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -295,7 +335,10 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The timeout period. Unit: milliseconds.
+         * <p>The timeout period. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3000</p>
          */
         public Builder timeout(Integer timeout) {
             this.timeout = timeout;
@@ -303,7 +346,10 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the information about the health check task was updated.
+         * <p>The time when the health check configuration was updated. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-01-03T08:57Z</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -311,7 +357,10 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp that indicates when the information about the health check task was updated.
+         * <p>The time when the health check configuration was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1527690629357</p>
          */
         public Builder updateTimestamp(Long updateTimestamp) {
             this.updateTimestamp = updateTimestamp;
@@ -324,23 +373,29 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDnsGtmMonitorConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmMonitorConfigResponseBody</p>
+     */
     public static class IspCityNode extends TeaModel {
-        @NameInMap("CityCode")
+        @com.aliyun.core.annotation.NameInMap("CityCode")
         private String cityCode;
 
-        @NameInMap("CityName")
+        @com.aliyun.core.annotation.NameInMap("CityName")
         private String cityName;
 
-        @NameInMap("CountryCode")
+        @com.aliyun.core.annotation.NameInMap("CountryCode")
         private String countryCode;
 
-        @NameInMap("CountryName")
+        @com.aliyun.core.annotation.NameInMap("CountryName")
         private String countryName;
 
-        @NameInMap("IspCode")
+        @com.aliyun.core.annotation.NameInMap("IspCode")
         private String ispCode;
 
-        @NameInMap("IspName")
+        @com.aliyun.core.annotation.NameInMap("IspName")
         private String ispName;
 
         private IspCityNode(Builder builder) {
@@ -411,7 +466,10 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
             private String ispName; 
 
             /**
-             * The code of the monitored city node.
+             * <p>The city code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>572</p>
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -419,7 +477,10 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the monitored city node.
+             * <p>The display name of the city.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Qingdao</p>
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -427,7 +488,10 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the country or region.
+             * <p>The code of the country or region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>001</p>
              */
             public Builder countryCode(String countryCode) {
                 this.countryCode = countryCode;
@@ -435,7 +499,10 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the country or region.
+             * <p>The display name of the country or region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China</p>
              */
             public Builder countryName(String countryName) {
                 this.countryName = countryName;
@@ -443,7 +510,10 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the monitored Internet service provider (ISP) node.
+             * <p>The Internet service provider (ISP) code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder ispCode(String ispCode) {
                 this.ispCode = ispCode;
@@ -451,7 +521,10 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the ISP.
+             * <p>The display name of the ISP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba</p>
              */
             public Builder ispName(String ispName) {
                 this.ispName = ispName;
@@ -465,9 +538,15 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmMonitorConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmMonitorConfigResponseBody</p>
+     */
     public static class IspCityNodes extends TeaModel {
-        @NameInMap("IspCityNode")
-        private java.util.List < IspCityNode> ispCityNode;
+        @com.aliyun.core.annotation.NameInMap("IspCityNode")
+        private java.util.List<IspCityNode> ispCityNode;
 
         private IspCityNodes(Builder builder) {
             this.ispCityNode = builder.ispCityNode;
@@ -484,17 +563,17 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
         /**
          * @return ispCityNode
          */
-        public java.util.List < IspCityNode> getIspCityNode() {
+        public java.util.List<IspCityNode> getIspCityNode() {
             return this.ispCityNode;
         }
 
         public static final class Builder {
-            private java.util.List < IspCityNode> ispCityNode; 
+            private java.util.List<IspCityNode> ispCityNode; 
 
             /**
              * IspCityNode.
              */
-            public Builder ispCityNode(java.util.List < IspCityNode> ispCityNode) {
+            public Builder ispCityNode(java.util.List<IspCityNode> ispCityNode) {
                 this.ispCityNode = ispCityNode;
                 return this;
             }

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodRefreshTasksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVodRefreshTasksResponseBody</p>
  */
 public class DescribeVodRefreshTasksResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Tasks")
+    @com.aliyun.core.annotation.NameInMap("Tasks")
     private Tasks tasks;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeVodRefreshTasksResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +102,10 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +113,10 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>174F6032-AA26-470D-****-36F0EB205BEE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +124,7 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the returned tasks.
+         * <p>The information about the returned tasks.</p>
          */
         public Builder tasks(Tasks tasks) {
             this.tasks = tasks;
@@ -118,7 +132,10 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -131,26 +148,32 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVodRefreshTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodRefreshTasksResponseBody</p>
+     */
     public static class Task extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ObjectPath")
+        @com.aliyun.core.annotation.NameInMap("ObjectPath")
         private String objectPath;
 
-        @NameInMap("ObjectType")
+        @com.aliyun.core.annotation.NameInMap("ObjectType")
         private String objectType;
 
-        @NameInMap("Process")
+        @com.aliyun.core.annotation.NameInMap("Process")
         private String process;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
         private Task(Builder builder) {
@@ -230,7 +253,10 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * The time when the task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the task was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2014-11-27T08:23:22Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -238,12 +264,15 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The type of error returned when the refresh or prefetch task failed. Valid values: Valid values:
-             * <p>
+             * <p>The type of error returned when the refresh or prefetch task failed. Valid values: Valid values:</p>
+             * <ul>
+             * <li><strong>Internal Error</strong>: An internal error occurred.</li>
+             * <li><strong>Origin Timeout</strong>: The response from the origin server timed out.</li>
+             * <li><strong>Origin Return StatusCode 5XX</strong>: The origin server returned an HTTP status code 5xx.</li>
+             * </ul>
              * 
-             * *   **Internal Error**: An internal error occurred.
-             * *   **Origin Timeout**: The response from the origin server timed out.
-             * *   **Origin Return StatusCode 5XX**: The origin server returned an HTTP status code 5xx.
+             * <strong>example:</strong>
+             * <p>Internal Error</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -251,7 +280,10 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the object refreshed.
+             * <p>The URL of the object refreshed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example.com/****.txt">http://example.com/****.txt</a></p>
              */
             public Builder objectPath(String objectPath) {
                 this.objectPath = objectPath;
@@ -259,12 +291,15 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the task. Default value: file. Valid values:
-             * <p>
+             * <p>The type of the task. Default value: file. Valid values:</p>
+             * <ul>
+             * <li><strong>file</strong>: refreshes one or more files.</li>
+             * <li><strong>directory</strong>: refreshes files in the specified directory.</li>
+             * <li><strong>preload</strong>: prefetches one or more files.</li>
+             * </ul>
              * 
-             * *   **file**: refreshes one or more files.
-             * *   **directory**: refreshes files in the specified directory.
-             * *   **preload**: prefetches one or more files.
+             * <strong>example:</strong>
+             * <p>file</p>
              */
             public Builder objectType(String objectType) {
                 this.objectType = objectType;
@@ -272,7 +307,10 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the task in percentage.
+             * <p>The progress of the task in percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100%</p>
              */
             public Builder process(String process) {
                 this.process = process;
@@ -280,13 +318,16 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task. Valid values:
-             * <p>
+             * <p>The status of the task. Valid values:</p>
+             * <ul>
+             * <li><strong>Complete</strong>: The task is complete.</li>
+             * <li><strong>Refreshing</strong>: The task is in progress.</li>
+             * <li><strong>Failed</strong>: The task failed.</li>
+             * <li><strong>Pending</strong>: The task is pending.</li>
+             * </ul>
              * 
-             * *   **Complete**: The task is complete.
-             * *   **Refreshing**: The task is in progress.
-             * *   **Failed**: The task failed.
-             * *   **Pending**: The task is pending.
+             * <strong>example:</strong>
+             * <p>Complete</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -294,7 +335,10 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * <p>The ID of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>704225667</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -308,9 +352,15 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVodRefreshTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodRefreshTasksResponseBody</p>
+     */
     public static class Tasks extends TeaModel {
-        @NameInMap("Task")
-        private java.util.List < Task> task;
+        @com.aliyun.core.annotation.NameInMap("Task")
+        private java.util.List<Task> task;
 
         private Tasks(Builder builder) {
             this.task = builder.task;
@@ -327,17 +377,17 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
         /**
          * @return task
          */
-        public java.util.List < Task> getTask() {
+        public java.util.List<Task> getTask() {
             return this.task;
         }
 
         public static final class Builder {
-            private java.util.List < Task> task; 
+            private java.util.List<Task> task; 
 
             /**
              * Task.
              */
-            public Builder task(java.util.List < Task> task) {
+            public Builder task(java.util.List<Task> task) {
                 this.task = task;
                 return this;
             }

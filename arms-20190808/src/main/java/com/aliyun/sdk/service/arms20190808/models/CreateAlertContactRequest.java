@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAlertContactRequest} extends {@link RequestModel}
  *
  * <p>CreateAlertContactRequest</p>
  */
 public class CreateAlertContactRequest extends Request {
-    @Query
-    @NameInMap("ContactName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactName")
     private String contactName;
 
-    @Query
-    @NameInMap("DingRobotWebhookUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DingRobotWebhookUrl")
     private String dingRobotWebhookUrl;
 
-    @Query
-    @NameInMap("Email")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Email")
     private String email;
 
-    @Query
-    @NameInMap("PhoneNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNum")
     private String phoneNum;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("SystemNoc")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SystemNoc")
     private Boolean systemNoc;
 
     private CreateAlertContactRequest(Builder builder) {
@@ -139,7 +144,10 @@ public class CreateAlertContactRequest extends Request {
         } 
 
         /**
-         * The name of the alert contact.
+         * <p>The name of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JohnDoe</p>
          */
         public Builder contactName(String contactName) {
             this.putQueryParameter("ContactName", contactName);
@@ -148,10 +156,13 @@ public class CreateAlertContactRequest extends Request {
         }
 
         /**
-         * The webhook URL of the DingTalk chatbot. For more information about how to obtain the URL, see [Configure a DingTalk chatbot to send alert notifications](https://www.alibabacloud.com/help/zh/doc-detail/106247.htm). You must specify at least one of the following parameters: PhoneNum, Email, and DingRobotWebhookUrl.
-         * <p>
+         * <p>The webhook URL of the DingTalk chatbot. For more information about how to obtain the URL, see <a href="https://www.alibabacloud.com/help/zh/doc-detail/106247.htm">Configure a DingTalk chatbot to send alert notifications</a>. You must specify at least one of the following parameters: PhoneNum, Email, and DingRobotWebhookUrl.</p>
+         * <blockquote>
+         * <p> Enter <code>alert</code> in the custom keyword field of DingTalk chatbot security settings.</p>
+         * </blockquote>
          * 
-         * >  Enter `alert` in the custom keyword field of DingTalk chatbot security settings.
+         * <strong>example:</strong>
+         * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=91f2f6">https://oapi.dingtalk.com/robot/send?access_token=91f2f6</a>****</p>
          */
         public Builder dingRobotWebhookUrl(String dingRobotWebhookUrl) {
             this.putQueryParameter("DingRobotWebhookUrl", dingRobotWebhookUrl);
@@ -160,7 +171,10 @@ public class CreateAlertContactRequest extends Request {
         }
 
         /**
-         * The email address of the alert contact. You must specify at least one of the following parameters: PhoneNum, Email, and DingRobotWebhookUrl.
+         * <p>The email address of the alert contact. You must specify at least one of the following parameters: PhoneNum, Email, and DingRobotWebhookUrl.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:someone@example.com">someone@example.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -169,7 +183,10 @@ public class CreateAlertContactRequest extends Request {
         }
 
         /**
-         * The mobile number of the alert contact. You must specify at least one of the following parameters: PhoneNum, Email, and DingRobotWebhookUrl.
+         * <p>The mobile number of the alert contact. You must specify at least one of the following parameters: PhoneNum, Email, and DingRobotWebhookUrl.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1381111****</p>
          */
         public Builder phoneNum(String phoneNum) {
             this.putQueryParameter("PhoneNum", phoneNum);
@@ -178,7 +195,11 @@ public class CreateAlertContactRequest extends Request {
         }
 
         /**
-         * The ID of the region. Set the value to `cn-hangzhou`.
+         * <p>The ID of the region. Set the value to <code>cn-hangzhou</code>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -187,7 +208,10 @@ public class CreateAlertContactRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. You can obtain the resource group ID in the **Resource Management** console.
+         * <p>The ID of the resource group. You can obtain the resource group ID in the <strong>Resource Management</strong> console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2eq4peca****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -196,11 +220,14 @@ public class CreateAlertContactRequest extends Request {
         }
 
         /**
-         * Specifies whether the alert contact receives system notifications. Valid values:
-         * <p>
+         * <p>Specifies whether the alert contact receives system notifications. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The alert contact receives system notifications.</li>
+         * <li><code>false</code>: The alert contact does not receive system notifications.</li>
+         * </ul>
          * 
-         * *   `true`: The alert contact receives system notifications.
-         * *   `false`: The alert contact does not receive system notifications.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder systemNoc(Boolean systemNoc) {
             this.putQueryParameter("SystemNoc", systemNoc);

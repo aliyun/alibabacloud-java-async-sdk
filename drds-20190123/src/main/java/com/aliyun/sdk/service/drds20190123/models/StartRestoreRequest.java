@@ -114,18 +114,21 @@ public class StartRestoreRequest extends Request {
             super();
         } 
 
-        private Builder(StartRestoreRequest response) {
-            super(response);
-            this.backupDbNames = response.backupDbNames;
-            this.backupId = response.backupId;
-            this.backupLevel = response.backupLevel;
-            this.backupMode = response.backupMode;
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.preferredBackupTime = response.preferredBackupTime;
+        private Builder(StartRestoreRequest request) {
+            super(request);
+            this.backupDbNames = request.backupDbNames;
+            this.backupId = request.backupId;
+            this.backupLevel = request.backupLevel;
+            this.backupMode = request.backupMode;
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.preferredBackupTime = request.preferredBackupTime;
         } 
 
         /**
-         * BackupDbNames.
+         * The name of the database to be restored. Separate multiple databases with commas (,).
+         * <p>
+         * 
+         * >  If you do not specify any database name, all databases in the instance are restored by default.
          */
         public Builder backupDbNames(String backupDbNames) {
             this.putQueryParameter("BackupDbNames", backupDbNames);
@@ -134,7 +137,10 @@ public class StartRestoreRequest extends Request {
         }
 
         /**
-         * BackupId.
+         * The ID of the DRDS backup set.
+         * <p>
+         * 
+         * >  If you do not specify this parameter, the system restores data by time (PreferredBackupTime).
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -143,7 +149,11 @@ public class StartRestoreRequest extends Request {
         }
 
         /**
-         * BackupLevel.
+         * The level of the backup. Valid values:
+         * <p>
+         * 
+         * *   db: The database level.
+         * *   instance: the instance level.
          */
         public Builder backupLevel(String backupLevel) {
             this.putQueryParameter("BackupLevel", backupLevel);
@@ -152,7 +162,11 @@ public class StartRestoreRequest extends Request {
         }
 
         /**
-         * BackupMode.
+         * The backup method. Valid values:
+         * <p>
+         * 
+         * *   logic: the logical backup.
+         * *   phy: fast backup
          */
         public Builder backupMode(String backupMode) {
             this.putQueryParameter("BackupMode", backupMode);
@@ -161,7 +175,7 @@ public class StartRestoreRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the DRDS instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -170,7 +184,7 @@ public class StartRestoreRequest extends Request {
         }
 
         /**
-         * PreferredBackupTime.
+         * The restoration time of the instance, in the format of`  yyyy-MM-dd HH:mm:ss `.
          */
         public Builder preferredBackupTime(String preferredBackupTime) {
             this.putQueryParameter("PreferredBackupTime", preferredBackupTime);

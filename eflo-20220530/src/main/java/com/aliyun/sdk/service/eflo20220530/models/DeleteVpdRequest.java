@@ -1,23 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eflo20220530.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteVpdRequest} extends {@link RequestModel}
  *
  * <p>DeleteVpdRequest</p>
  */
 public class DeleteVpdRequest extends Request {
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Body
-    @NameInMap("VpdId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VpdId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpdId;
 
     private DeleteVpdRequest(Builder builder) {
@@ -68,7 +75,11 @@ public class DeleteVpdRequest extends Request {
         } 
 
         /**
-         * 地域
+         * <p>The ID of the region in which the instance resides.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -77,7 +88,11 @@ public class DeleteVpdRequest extends Request {
         }
 
         /**
-         * VPD
+         * <p>The ID of the Lingjun CIDR block.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpd-zr0farea</p>
          */
         public Builder vpdId(String vpdId) {
             this.putBodyParameter("VpdId", vpdId);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,39 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateInstanceResourceRequest</p>
  */
 public class CreateInstanceResourceRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("Category")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Category")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String category;
 
-    @Body
-    @NameInMap("Group")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Group")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String group;
 
-    @Body
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
-    @Body
-    @NameInMap("Uri")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Uri")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String uri;
 
     private CreateInstanceResourceRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.regionId = builder.regionId;
         this.category = builder.category;
         this.group = builder.group;
         this.type = builder.type;
@@ -59,6 +68,13 @@ public class CreateInstanceResourceRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -91,6 +107,7 @@ public class CreateInstanceResourceRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateInstanceResourceRequest, Builder> {
         private String instanceId; 
+        private String regionId; 
         private String category; 
         private String group; 
         private String type; 
@@ -103,6 +120,7 @@ public class CreateInstanceResourceRequest extends Request {
         private Builder(CreateInstanceResourceRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
             this.category = request.category;
             this.group = request.group;
             this.type = request.type;
@@ -115,6 +133,15 @@ public class CreateInstanceResourceRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

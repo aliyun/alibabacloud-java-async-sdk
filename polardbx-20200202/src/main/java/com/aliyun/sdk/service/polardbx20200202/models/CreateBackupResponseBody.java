@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateBackupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateBackupResponseBody</p>
  */
 public class CreateBackupResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateBackupResponseBody(Builder builder) {
@@ -42,7 +47,7 @@ public class CreateBackupResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public Data getData() {
         return this.data;
     }
 
@@ -68,7 +73,7 @@ public class CreateBackupResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private Data data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -76,7 +81,7 @@ public class CreateBackupResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(Data data) {
             this.data = data;
             return this;
         }
@@ -111,9 +116,15 @@ public class CreateBackupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateBackupResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateBackupResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("BackupSetId")
-        private Long backupSetId;
+        @com.aliyun.core.annotation.NameInMap("BackupSetId")
+        private String backupSetId;
 
         private Data(Builder builder) {
             this.backupSetId = builder.backupSetId;
@@ -130,17 +141,17 @@ public class CreateBackupResponseBody extends TeaModel {
         /**
          * @return backupSetId
          */
-        public Long getBackupSetId() {
+        public String getBackupSetId() {
             return this.backupSetId;
         }
 
         public static final class Builder {
-            private Long backupSetId; 
+            private String backupSetId; 
 
             /**
              * BackupSetId.
              */
-            public Builder backupSetId(Long backupSetId) {
+            public Builder backupSetId(String backupSetId) {
                 this.backupSetId = backupSetId;
                 return this;
             }

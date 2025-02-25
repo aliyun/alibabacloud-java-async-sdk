@@ -1,52 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InsureOrderRefundRequest} extends {@link RequestModel}
  *
  * <p>InsureOrderRefundRequest</p>
  */
 public class InsureOrderRefundRequest extends Request {
-    @Path
-    @NameInMap("ins_order_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ins_order_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String insOrderId;
 
-    @Body
-    @NameInMap("btrip_user_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("btrip_user_id")
     private String btripUserId;
 
-    @Body
-    @NameInMap("buyer_name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("buyer_name")
     private String buyerName;
 
-    @Body
-    @NameInMap("isv_name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("isv_name")
     private String isvName;
 
-    @Body
-    @NameInMap("out_apply_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("out_apply_id")
     private String outApplyId;
 
-    @Body
-    @NameInMap("policy_no_list")
-    private java.util.List < String > policyNoList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("policy_no_list")
+    private java.util.List<String> policyNoList;
 
-    @Body
-    @NameInMap("sub_ins_order_ids")
-    private java.util.List < String > subInsOrderIds;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sub_ins_order_ids")
+    private java.util.List<String> subInsOrderIds;
 
-    @Body
-    @NameInMap("supplier_code")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("supplier_code")
     private String supplierCode;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private InsureOrderRefundRequest(Builder builder) {
@@ -113,14 +118,14 @@ public class InsureOrderRefundRequest extends Request {
     /**
      * @return policyNoList
      */
-    public java.util.List < String > getPolicyNoList() {
+    public java.util.List<String> getPolicyNoList() {
         return this.policyNoList;
     }
 
     /**
      * @return subInsOrderIds
      */
-    public java.util.List < String > getSubInsOrderIds() {
+    public java.util.List<String> getSubInsOrderIds() {
         return this.subInsOrderIds;
     }
 
@@ -144,8 +149,8 @@ public class InsureOrderRefundRequest extends Request {
         private String buyerName; 
         private String isvName; 
         private String outApplyId; 
-        private java.util.List < String > policyNoList; 
-        private java.util.List < String > subInsOrderIds; 
+        private java.util.List<String> policyNoList; 
+        private java.util.List<String> subInsOrderIds; 
         private String supplierCode; 
         private String xAcsBtripCorpToken; 
 
@@ -167,7 +172,10 @@ public class InsureOrderRefundRequest extends Request {
         } 
 
         /**
-         * ins_order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000001</p>
          */
         public Builder insOrderId(String insOrderId) {
             this.putPathParameter("ins_order_id", insOrderId);
@@ -214,7 +222,7 @@ public class InsureOrderRefundRequest extends Request {
         /**
          * policy_no_list.
          */
-        public Builder policyNoList(java.util.List < String > policyNoList) {
+        public Builder policyNoList(java.util.List<String> policyNoList) {
             String policyNoListShrink = shrink(policyNoList, "policy_no_list", "json");
             this.putBodyParameter("policy_no_list", policyNoListShrink);
             this.policyNoList = policyNoList;
@@ -224,7 +232,7 @@ public class InsureOrderRefundRequest extends Request {
         /**
          * sub_ins_order_ids.
          */
-        public Builder subInsOrderIds(java.util.List < String > subInsOrderIds) {
+        public Builder subInsOrderIds(java.util.List<String> subInsOrderIds) {
             String subInsOrderIdsShrink = shrink(subInsOrderIds, "sub_ins_order_ids", "json");
             this.putBodyParameter("sub_ins_order_ids", subInsOrderIdsShrink);
             this.subInsOrderIds = subInsOrderIds;

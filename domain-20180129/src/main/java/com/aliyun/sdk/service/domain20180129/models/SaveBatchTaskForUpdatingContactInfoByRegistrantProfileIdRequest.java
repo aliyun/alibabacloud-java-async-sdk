@@ -1,42 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveBatchTaskForUpdatingContactInfoByRegistrantProfileIdRequest} extends {@link RequestModel}
  *
  * <p>SaveBatchTaskForUpdatingContactInfoByRegistrantProfileIdRequest</p>
  */
 public class SaveBatchTaskForUpdatingContactInfoByRegistrantProfileIdRequest extends Request {
-    @Query
-    @NameInMap("ContactType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String contactType;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > domainName;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("RegistrantProfileId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegistrantProfileId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long registrantProfileId;
 
-    @Query
-    @NameInMap("TransferOutProhibited")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransferOutProhibited")
     private Boolean transferOutProhibited;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
     private SaveBatchTaskForUpdatingContactInfoByRegistrantProfileIdRequest(Builder builder) {
@@ -127,7 +127,10 @@ public class SaveBatchTaskForUpdatingContactInfoByRegistrantProfileIdRequest ext
         } 
 
         /**
-         * ContactType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registrant</p>
          */
         public Builder contactType(String contactType) {
             this.putQueryParameter("ContactType", contactType);
@@ -136,7 +139,10 @@ public class SaveBatchTaskForUpdatingContactInfoByRegistrantProfileIdRequest ext
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(java.util.List < String > domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -154,7 +160,10 @@ public class SaveBatchTaskForUpdatingContactInfoByRegistrantProfileIdRequest ext
         }
 
         /**
-         * RegistrantProfileId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder registrantProfileId(Long registrantProfileId) {
             this.putQueryParameter("RegistrantProfileId", registrantProfileId);

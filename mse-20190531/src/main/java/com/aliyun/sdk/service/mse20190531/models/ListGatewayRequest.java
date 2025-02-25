@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGatewayRequest} extends {@link RequestModel}
  *
  * <p>ListGatewayRequest</p>
  */
 public class ListGatewayRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("DescSort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DescSort")
     private Boolean descSort;
 
-    @Query
-    @NameInMap("FilterParams")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FilterParams")
     private FilterParams filterParams;
 
-    @Query
-    @NameInMap("OrderItem")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderItem")
     private String orderItem;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
     private ListGatewayRequest(Builder builder) {
@@ -124,11 +129,14 @@ public class ListGatewayRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -137,7 +145,10 @@ public class ListGatewayRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the sorting feature. This feature is not available.
+         * <p>Specifies whether to enable the sorting feature. This feature is not available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder descSort(Boolean descSort) {
             this.putQueryParameter("DescSort", descSort);
@@ -146,7 +157,7 @@ public class ListGatewayRequest extends Request {
         }
 
         /**
-         * The details of parameters.
+         * <p>The details of parameters.</p>
          */
         public Builder filterParams(FilterParams filterParams) {
             String filterParamsShrink = shrink(filterParams, "FilterParams", "json");
@@ -156,7 +167,10 @@ public class ListGatewayRequest extends Request {
         }
 
         /**
-         * The order information.
+         * <p>The order information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder orderItem(String orderItem) {
             this.putQueryParameter("OrderItem", orderItem);
@@ -165,7 +179,10 @@ public class ListGatewayRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -174,7 +191,10 @@ public class ListGatewayRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -189,26 +209,32 @@ public class ListGatewayRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListGatewayRequest} extends {@link TeaModel}
+     *
+     * <p>ListGatewayRequest</p>
+     */
     public static class FilterParams extends TeaModel {
-        @NameInMap("GatewayType")
+        @com.aliyun.core.annotation.NameInMap("GatewayType")
         private String gatewayType;
 
-        @NameInMap("GatewayUniqueId")
+        @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
         private String gatewayUniqueId;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("MseTag")
+        @com.aliyun.core.annotation.NameInMap("MseTag")
         private String mseTag;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Vpc")
+        @com.aliyun.core.annotation.NameInMap("Vpc")
         private String vpc;
 
         private FilterParams(Builder builder) {
@@ -288,7 +314,10 @@ public class ListGatewayRequest extends Request {
             private String vpc; 
 
             /**
-             * The type of the gateway.
+             * <p>The type of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ingress</p>
              */
             public Builder gatewayType(String gatewayType) {
                 this.gatewayType = gatewayType;
@@ -296,7 +325,10 @@ public class ListGatewayRequest extends Request {
             }
 
             /**
-             * The unique ID of the gateway.
+             * <p>The unique ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-5017305290e14centbrveca****</p>
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -304,7 +336,10 @@ public class ListGatewayRequest extends Request {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mse_ingresspre-cn-****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -312,7 +347,10 @@ public class ListGatewayRequest extends Request {
             }
 
             /**
-             * The tag of the instance.
+             * <p>The tag of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;key&quot;:&quot;tagkey&quot;,&quot;value&quot;:&quot;tagvalue&quot;}]</p>
              */
             public Builder mseTag(String mseTag) {
                 this.mseTag = mseTag;
@@ -320,7 +358,10 @@ public class ListGatewayRequest extends Request {
             }
 
             /**
-             * The name of the gateway.
+             * <p>The name of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rutain-test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -328,7 +369,10 @@ public class ListGatewayRequest extends Request {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-7y2uye*****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -336,7 +380,10 @@ public class ListGatewayRequest extends Request {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC).
+             * <p>The ID of the virtual private cloud (VPC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp13hhyjntbab7w****</p>
              */
             public Builder vpc(String vpc) {
                 this.vpc = vpc;

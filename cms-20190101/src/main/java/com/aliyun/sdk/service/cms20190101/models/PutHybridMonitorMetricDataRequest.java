@@ -1,25 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutHybridMonitorMetricDataRequest} extends {@link RequestModel}
  *
  * <p>PutHybridMonitorMetricDataRequest</p>
  */
 public class PutHybridMonitorMetricDataRequest extends Request {
-    @Query
-    @NameInMap("MetricList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < MetricList> metricList;
 
-    @Query
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
     private PutHybridMonitorMetricDataRequest(Builder builder) {
@@ -70,10 +70,9 @@ public class PutHybridMonitorMetricDataRequest extends Request {
         } 
 
         /**
-         * The monitoring data.
-         * <p>
-         * 
-         * Valid values of N: 1 to 100.
+         * <p>The monitoring data.</p>
+         * <p>Valid values of N: 1 to 100.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder metricList(java.util.List < MetricList> metricList) {
             this.putQueryParameter("MetricList", metricList);
@@ -82,10 +81,12 @@ public class PutHybridMonitorMetricDataRequest extends Request {
         }
 
         /**
-         * The name of the namespace.
-         * <p>
+         * <p>The name of the namespace.</p>
+         * <p>For information about how to obtain the name of a namespace, see <a href="https://help.aliyun.com/document_detail/428880.html">DescribeHybridMonitorNamespaceList</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](~~428880~~).
+         * <strong>example:</strong>
+         * <p>default-aliyun</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -100,11 +101,17 @@ public class PutHybridMonitorMetricDataRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link PutHybridMonitorMetricDataRequest} extends {@link TeaModel}
+     *
+     * <p>PutHybridMonitorMetricDataRequest</p>
+     */
     public static class Labels extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Labels(Builder builder) {
@@ -139,14 +146,15 @@ public class PutHybridMonitorMetricDataRequest extends Request {
             private String value; 
 
             /**
-             * The tag key of the metric.
-             * <p>
+             * <p>The tag key of the metric.</p>
+             * <p>Valid values of N: 1 to 100.</p>
+             * <p>The key can contain letters, digits, and underscores (<em>). The key must start with a letter or an underscore (</em>).</p>
+             * <blockquote>
+             * <p> You must specify both the Key and Value parameters.</p>
+             * </blockquote>
              * 
-             * Valid values of N: 1 to 100.
-             * 
-             * The key can contain letters, digits, and underscores (*). The key must start with a letter or an underscore (*).
-             * 
-             * >  You must specify both the Key and Value parameters.
+             * <strong>example:</strong>
+             * <p>IP</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -154,12 +162,14 @@ public class PutHybridMonitorMetricDataRequest extends Request {
             }
 
             /**
-             * The tag value of the metric.
-             * <p>
+             * <p>The tag value of the metric.</p>
+             * <p>Valid values of N: 1 to 100.</p>
+             * <blockquote>
+             * <p> You must specify both the Key and Value parameters.</p>
+             * </blockquote>
              * 
-             * Valid values of N: 1 to 100.
-             * 
-             * >  You must specify both the Key and Value parameters.
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -173,19 +183,25 @@ public class PutHybridMonitorMetricDataRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link PutHybridMonitorMetricDataRequest} extends {@link TeaModel}
+     *
+     * <p>PutHybridMonitorMetricDataRequest</p>
+     */
     public static class MetricList extends TeaModel {
-        @NameInMap("Labels")
+        @com.aliyun.core.annotation.NameInMap("Labels")
         private java.util.List < Labels> labels;
 
-        @NameInMap("Name")
-        @Validation(required = true, maxLength = 128, minLength = 1)
+        @com.aliyun.core.annotation.NameInMap("Name")
+        @com.aliyun.core.annotation.Validation(required = true, maxLength = 128, minLength = 1)
         private String name;
 
-        @NameInMap("TS")
+        @com.aliyun.core.annotation.NameInMap("TS")
         private Long ts;
 
-        @NameInMap("Value")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Value")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String value;
 
         private MetricList(Builder builder) {
@@ -238,10 +254,11 @@ public class PutHybridMonitorMetricDataRequest extends Request {
             private String value; 
 
             /**
-             * The tags of the metric.
-             * <p>
+             * <p>The tags of the metric.</p>
+             * <p>Valid values of N: 1 to 100.</p>
              * 
-             * Valid values of N: 1 to 100.
+             * <strong>example:</strong>
+             * <p>app、ip、hostName等标识信息</p>
              */
             public Builder labels(java.util.List < Labels> labels) {
                 this.labels = labels;
@@ -249,12 +266,13 @@ public class PutHybridMonitorMetricDataRequest extends Request {
             }
 
             /**
-             * The metric name.
-             * <p>
+             * <p>The metric name.</p>
+             * <p>Valid values of N: 1 to 100.</p>
+             * <p>The name can contain letters, digits, and underscores (_). The name must start with a letter.</p>
+             * <p>This parameter is required.</p>
              * 
-             * Valid values of N: 1 to 100.
-             * 
-             * The name can contain letters, digits, and underscores (\_). The name must start with a letter.
+             * <strong>example:</strong>
+             * <p>CPU_Usage</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -262,12 +280,12 @@ public class PutHybridMonitorMetricDataRequest extends Request {
             }
 
             /**
-             * The timestamp when the monitoring data is imported.
-             * <p>
+             * <p>The time when the monitoring data is imported. The value is a timestamp.</p>
+             * <p>Valid values of N: 1 to 100.</p>
+             * <p>Unit: milliseconds. By default, the current time is used.</p>
              * 
-             * Valid values of N: 1 to 100.
-             * 
-             * Unit: milliseconds. By default, the current timestamp is used.
+             * <strong>example:</strong>
+             * <p>1640776119473</p>
              */
             public Builder ts(Long ts) {
                 this.ts = ts;
@@ -275,12 +293,13 @@ public class PutHybridMonitorMetricDataRequest extends Request {
             }
 
             /**
-             * The value of the metric.
-             * <p>
+             * <p>The value of the metric.</p>
+             * <p>Valid values of N: 1 to 100.</p>
+             * <p>The value must be an integer or a floating-point number.</p>
+             * <p>This parameter is required.</p>
              * 
-             * Valid values of N: 1 to 100.
-             * 
-             * The value must be an integer or a floating-point number.
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSuspEventNoteRequest} extends {@link RequestModel}
  *
  * <p>CreateSuspEventNoteRequest</p>
  */
 public class CreateSuspEventNoteRequest extends Request {
-    @Query
-    @NameInMap("EventId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long eventId;
 
-    @Query
-    @NameInMap("Note")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Note")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String note;
 
     private CreateSuspEventNoteRequest(Builder builder) {
@@ -70,7 +75,11 @@ public class CreateSuspEventNoteRequest extends Request {
         } 
 
         /**
-         * The ID of the alert event to which you want to add remarks. You can call the [DescribeSuspEvents](~~251497~~) operation to query the IDs of alert events.
+         * <p>The ID of the alert event to which you want to add remarks. You can call the <a href="https://help.aliyun.com/document_detail/251497.html">DescribeSuspEvents</a> operation to query the IDs of alert events.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>668931</p>
          */
         public Builder eventId(Long eventId) {
             this.putQueryParameter("EventId", eventId);
@@ -79,7 +88,11 @@ public class CreateSuspEventNoteRequest extends Request {
         }
 
         /**
-         * The remarks that you want to add.
+         * <p>The remarks that you want to add.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ignore</p>
          */
         public Builder note(String note) {
             this.putQueryParameter("Note", note);

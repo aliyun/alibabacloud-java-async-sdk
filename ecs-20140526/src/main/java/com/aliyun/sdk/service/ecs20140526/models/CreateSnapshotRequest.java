@@ -1,81 +1,86 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSnapshotRequest} extends {@link RequestModel}
  *
  * <p>CreateSnapshotRequest</p>
  */
 public class CreateSnapshotRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("Category")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Category")
     private String category;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DiskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String diskId;
 
-    @Query
-    @NameInMap("InstantAccess")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstantAccess")
     private Boolean instantAccess;
 
-    @Query
-    @NameInMap("InstantAccessRetentionDays")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstantAccessRetentionDays")
     private Integer instantAccessRetentionDays;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RetentionDays")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RetentionDays")
     private Integer retentionDays;
 
-    @Query
-    @NameInMap("SnapshotName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotName")
     private String snapshotName;
 
-    @Query
-    @NameInMap("StorageLocationArn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageLocationArn")
     private String storageLocationArn;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private CreateSnapshotRequest(Builder builder) {
         super(builder);
@@ -218,7 +223,7 @@ public class CreateSnapshotRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -238,7 +243,7 @@ public class CreateSnapshotRequest extends Request {
         private Integer retentionDays; 
         private String snapshotName; 
         private String storageLocationArn; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -274,10 +279,17 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * The description of the snapshot. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
-         * <p>
+         * <p>The category of the snapshot. Valid values:</p>
+         * <ul>
+         * <li>Standard: standard snapshot</li>
+         * <li>Flash: local snapshot</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is no longer used. By default, new standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
+         * </blockquote>
          * 
-         * By default, this parameter is left empty.
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -286,10 +298,11 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * The retention period of the snapshot. Valid values: 1 to 65536. Unit: days. The snapshot is automatically released when its retention period expires.
-         * <p>
+         * <p>The retention period of the snapshot. Valid values: 1 to 65536. Unit: days. The snapshot is automatically released when its retention period expires.</p>
+         * <p>This parameter is empty by default, which indicates that the snapshot is not automatically released.</p>
          * 
-         * This parameter is empty by default, which indicates that the snapshot is not automatically released.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -298,7 +311,10 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * The cloud disk ID.
+         * <p>The cloud disk ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -307,7 +323,11 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * Creates a snapshot for a disk.
+         * <p>Creates a snapshot for a disk.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-bp1s5fnvk4gn2tws0****</p>
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -316,7 +336,18 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique across requests. **The token can contain only ASCII characters and cannot exceed 64 characters in length.** For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>Specifies whether to enable the instant access feature. Valid values:</p>
+         * <ul>
+         * <li>true: enables the instant access feature. This feature can be enabled only for ESSDs.</li>
+         * <li>false: does not enable the instant access feature. If InstantAccess is set to false, a standard snapshot is created.</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * <blockquote>
+         * <p> This parameter is no longer used. By default, new standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder instantAccess(Boolean instantAccess) {
             this.putQueryParameter("InstantAccess", instantAccess);
@@ -325,7 +356,14 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which to assign the snapshot.
+         * <p>The validity period of the instant access feature. When the validity period ends, the feature is disabled and the instant access snapshot is automatically released. This parameter takes effect only when <code>InstantAccess</code> is set to true. Unit: days. Valid values: 1 to 65535.</p>
+         * <p>By default, the value of this parameter is the same as that of <code>RetentionDays</code>.</p>
+         * <blockquote>
+         * <p> This parameter is no longer used. By default, new standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder instantAccessRetentionDays(Integer instantAccessRetentionDays) {
             this.putQueryParameter("InstantAccessRetentionDays", instantAccessRetentionDays);
@@ -352,13 +390,17 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * The snapshot type. Valid values:
-         * <p>
+         * <p>The snapshot type. Valid values:</p>
+         * <ul>
+         * <li>Standard: standard snapshot</li>
+         * <li>Flash: local snapshot</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter will be removed in the future. We recommend that you use the <code>InstantAccess</code> parameter to ensure future compatibility. This parameter and the <code>InstantAccess</code> parameter cannot be specified at the same time. For more information, see the &quot;Description&quot; section of this topic.</p>
+         * </blockquote>
          * 
-         * *   Standard: normal snapshot
-         * *   Flash: local snapshot
-         * 
-         * > This parameter will be removed in the future. We recommend that you use the `InstantAccess` parameter to ensure future compatibility. This parameter and the `InstantAccess` parameter cannot be specified at the same time. For more information, see the "Description" section of this topic.
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -385,10 +427,11 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * The snapshot name. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
-         * <p>
+         * <p>The retention period of the snapshot. Unit: days. Valid values: 1 to 65536. After the retention period ends, the snapshot is automatically released.</p>
+         * <p>This parameter is left empty by default, which indicates that the snapshot is not automatically released.</p>
          * 
-         * The name cannot start with `auto` because snapshots whose names start with auto are recognized as automatic snapshots.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder retentionDays(Integer retentionDays) {
             this.putQueryParameter("RetentionDays", retentionDays);
@@ -397,29 +440,13 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * The local snapshot feature is replaced by the instant access feature. Parameter description:
-         * <p>
+         * <p>The name of the snapshot. The name must be 2 to 128 characters in length and start with a letter. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * <blockquote>
+         * <p> The name cannot start with http:// or https://. The name cannot start with <code>auto</code> because the names of automatic snapshots start with auto.</p>
+         * </blockquote>
          * 
-         * *   If you used the local snapshot feature before December 14, 2020, you can use the `Category` or `InstantAccess` parameter as expected and must take note of the following items:
-         * 
-         *     *   The `Category` and `InstantAccess` parameters cannot be specified at the same time.
-         *     *   If neither the `Category` nor `InstantAccess` parameters is specified, normal snapshots are created.
-         * 
-         * *   If you did not use the local snapshot feature before December 14, 2020, you can use the `InstantAccess` parameter but cannot use the `Category` parameter.
-         * 
-         * You cannot create snapshots for a disk in the following scenarios:
-         * 
-         * *   The number of manual snapshots of the disk has reached 256.
-         * *   A snapshot is being created for the disk.
-         * *   The instance to which the disk is attached has never been started.
-         * *   The ECS instance to which the disk is attached is not in the **Stopped** or **Running** state.````
-         * *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}`, the instance is locked for security reasons. No operations are allowed on the instance.
-         * 
-         * When you create a snapshot, take note of the following items:
-         * 
-         * *   If a snapshot is being created, you cannot use this snapshot to create a custom image by calling the [CreateImage](~~25535~~) operation.
-         * *   When a snapshot is being created for a disk that is attached to an instance, do not change the instance state.
-         * *   You can create snapshots for a disk that is in the **Expired** state.`` If the release time scheduled for a disk arrives while a snapshot is being created for the disk, the snapshot is in the **Creating** state and is deleted when the disk is released.``
+         * <strong>example:</strong>
+         * <p>testSnapshotName</p>
          */
         public Builder snapshotName(String snapshotName) {
             this.putQueryParameter("SnapshotName", snapshotName);
@@ -428,7 +455,10 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * The value of tag N that you want to add to the snapshot. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or contain [http:// or https://.](http://https://。)
+         * <p>The value of tag N that you want to add to the snapshot. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or contain <a href="http://https://%E3%80%82">http:// or https://.</a></p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder storageLocationArn(String storageLocationArn) {
             this.putQueryParameter("StorageLocationArn", storageLocationArn);
@@ -437,22 +467,9 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the instant access feature. Valid values:
-         * <p>
-         * 
-         * *   true: enables the instant access feature. This feature can be enabled only for enhanced SSDs (ESSDs).
-         * 
-         *     **
-         * 
-         *     **Note**After the instant access feature is enabled, an instant access (IA) snapshot is created and can be used to roll back disks or create disks across zones even when the snapshot is being created. This feature ensures that a new ESSD snapshot is available for use as soon as possible regardless of its size.
-         * 
-         * *   false: does not enable the instant access feature. If InstantAccess is set to false, a normal snapshot is created.
-         * 
-         * Default value: false.
-         * 
-         * > This parameter and the `Category` parameter cannot be specified at the same time. For more information, see the "Description" section of this topic.
+         * <p>The tags to add to the snapshot.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -465,11 +482,17 @@ public class CreateSnapshotRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateSnapshotRequest} extends {@link TeaModel}
+     *
+     * <p>CreateSnapshotRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -504,7 +527,10 @@ public class CreateSnapshotRequest extends Request {
             private String value; 
 
             /**
-             * The tags to add to the snapshot.
+             * <p>The key of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -512,10 +538,10 @@ public class CreateSnapshotRequest extends Request {
             }
 
             /**
-             * The tag key to add to the snapshot.
-             * <p>
+             * <p>The value of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</p>
              * 
-             * > This parameter will be deprecated in the future. We recommend that you use the Tag.N.key parameter to ensure future compatibility.
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

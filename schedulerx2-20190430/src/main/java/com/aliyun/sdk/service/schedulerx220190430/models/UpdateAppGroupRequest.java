@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.schedulerx220190430.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAppGroupRequest} extends {@link RequestModel}
  *
  * <p>UpdateAppGroupRequest</p>
  */
 public class UpdateAppGroupRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppVersion")
+    private Integer appVersion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("MaxConcurrency")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxConcurrency")
     private Integer maxConcurrency;
 
-    @Query
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private UpdateAppGroupRequest(Builder builder) {
         super(builder);
+        this.appVersion = builder.appVersion;
         this.description = builder.description;
         this.groupId = builder.groupId;
         this.maxConcurrency = builder.maxConcurrency;
@@ -55,6 +60,13 @@ public class UpdateAppGroupRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appVersion
+     */
+    public Integer getAppVersion() {
+        return this.appVersion;
     }
 
     /**
@@ -93,6 +105,7 @@ public class UpdateAppGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateAppGroupRequest, Builder> {
+        private Integer appVersion; 
         private String description; 
         private String groupId; 
         private Integer maxConcurrency; 
@@ -105,6 +118,7 @@ public class UpdateAppGroupRequest extends Request {
 
         private Builder(UpdateAppGroupRequest request) {
             super(request);
+            this.appVersion = request.appVersion;
             this.description = request.description;
             this.groupId = request.groupId;
             this.maxConcurrency = request.maxConcurrency;
@@ -113,7 +127,22 @@ public class UpdateAppGroupRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The application version. 1: Basic version, 2: Professional version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        public Builder appVersion(Integer appVersion) {
+            this.putQueryParameter("AppVersion", appVersion);
+            this.appVersion = appVersion;
+            return this;
+        }
+
+        /**
+         * <p>The description of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -122,7 +151,11 @@ public class UpdateAppGroupRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * <p>The ID of the application. You can obtain the application ID on the <strong>Application Management</strong> page in the SchedulerX console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testSchedulerx.defaultGroup</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -131,7 +164,10 @@ public class UpdateAppGroupRequest extends Request {
         }
 
         /**
-         * MaxConcurrency.
+         * <p>The maximum number of concurrent instances. Default value: 1. A value of 1 specifies that if the last triggered instance is running, the next instance is not triggered even if the scheduled point in time for running the next instance is reached.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder maxConcurrency(Integer maxConcurrency) {
             this.putQueryParameter("MaxConcurrency", maxConcurrency);
@@ -140,7 +176,11 @@ public class UpdateAppGroupRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>The ID of the namespace. You can obtain the ID of the namespace on the Namespace page in the SchedulerX console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -149,7 +189,11 @@ public class UpdateAppGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

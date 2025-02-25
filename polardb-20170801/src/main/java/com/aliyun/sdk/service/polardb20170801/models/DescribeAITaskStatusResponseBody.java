@@ -1,30 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAITaskStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAITaskStatusResponseBody</p>
  */
 public class DescribeAITaskStatusResponseBody extends TeaModel {
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("AccountName")
+    private String accountName;
+
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("StatusName")
+    @com.aliyun.core.annotation.NameInMap("StatusName")
     private String statusName;
 
     private DescribeAITaskStatusResponseBody(Builder builder) {
+        this.accountName = builder.accountName;
         this.DBClusterId = builder.DBClusterId;
         this.requestId = builder.requestId;
         this.status = builder.status;
@@ -37,6 +46,13 @@ public class DescribeAITaskStatusResponseBody extends TeaModel {
 
     public static DescribeAITaskStatusResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accountName
+     */
+    public String getAccountName() {
+        return this.accountName;
     }
 
     /**
@@ -68,13 +84,28 @@ public class DescribeAITaskStatusResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accountName; 
         private String DBClusterId; 
         private String requestId; 
         private String status; 
         private String statusName; 
 
         /**
-         * The cluster ID.
+         * <p>The name of the database account that is used to connect to the AI nodes in the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testacc</p>
+         */
+        public Builder accountName(String accountName) {
+            this.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-xxxxxxxxxx</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -82,7 +113,10 @@ public class DescribeAITaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9B7BFB11-C077-4FE3-B051-F69CEB******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,11 +124,14 @@ public class DescribeAITaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The state of the PolarDB for AI feature. Valid values:
-         * <p>
+         * <p>The status of the PolarDB for AI feature. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: enabled.</li>
+         * <li><strong>2</strong>: disabled.</li>
+         * </ul>
          * 
-         * *   **1**: The feature is enabled.
-         * *   **2**: The feature is disabled.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -102,7 +139,10 @@ public class DescribeAITaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The state description of the PolarDB for AI feature.
+         * <p>The description of the status of the PolarDB for AI feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Closed State</p>
          */
         public Builder statusName(String statusName) {
             this.statusName = statusName;

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RefreshUploadVideoResponseBody} extends {@link TeaModel}
  *
  * <p>RefreshUploadVideoResponseBody</p>
  */
 public class RefreshUploadVideoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UploadAddress")
+    @com.aliyun.core.annotation.NameInMap("UploadAddress")
     private String uploadAddress;
 
-    @NameInMap("UploadAuth")
+    @com.aliyun.core.annotation.NameInMap("UploadAuth")
     private String uploadAuth;
 
-    @NameInMap("VideoId")
+    @com.aliyun.core.annotation.NameInMap("VideoId")
     private String videoId;
 
     private RefreshUploadVideoResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class RefreshUploadVideoResponseBody extends TeaModel {
         private String videoId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4A43-7DF6-D7393642****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,10 +90,13 @@ public class RefreshUploadVideoResponseBody extends TeaModel {
         }
 
         /**
-         * The upload URL.
-         * <p>
+         * <p>The upload URL.</p>
+         * <blockquote>
+         * <p> The returned upload URL is a Base64-encoded URL. You must decode the Base64-encoded upload URL before you use an SDK or call an API operation to upload media files. You need to parse UploadAddress only if you use the OSS SDK or call an OSS API operation to upload media files.</p>
+         * </blockquote>
          * 
-         * > The upload URL returned by this operation is Base64-encoded. Before you can use an SDK or an API operation to upload a media asset based on the upload URL, you must decode the upload URL by using the Base64 algorithm. You must parse the upload URL only if you use native Object Storage Service (OSS) SDKs or OSS API for uploads.
+         * <strong>example:</strong>
+         * <p>eyJTZWN1cml0eVRiQ0FJU3p3TjFxNkZ0NUIyeW****</p>
          */
         public Builder uploadAddress(String uploadAddress) {
             this.uploadAddress = uploadAddress;
@@ -93,10 +104,13 @@ public class RefreshUploadVideoResponseBody extends TeaModel {
         }
 
         /**
-         * The upload credential.
-         * <p>
+         * <p>The upload credential.</p>
+         * <blockquote>
+         * <p> The returned upload credential is a Base64-encoded value. You must decode the Base64-encoded upload URL before you use an SDK or call an API operation to upload media files. You need to parse UploadAuth only if you use the OSS SDK or call an OSS API operation to upload media files.</p>
+         * </blockquote>
          * 
-         * > The upload credential returned by this operation is Base64-encoded. Before you can use an SDK or an API operation to upload a media asset based on the upload credential, you must decode the upload credential by using the Base64 algorithm. You must parse the upload credential only if you use native OSS SDKs or OSS API for uploads.
+         * <strong>example:</strong>
+         * <p>FJU3p3TZ0NUIyeW****</p>
          */
         public Builder uploadAuth(String uploadAuth) {
             this.uploadAuth = uploadAuth;
@@ -104,7 +118,10 @@ public class RefreshUploadVideoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the audio or video file.
+         * <p>The ID of the audio or video file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c6a23a870c8c4ffcd40cbd381333****</p>
          */
         public Builder videoId(String videoId) {
             this.videoId = videoId;

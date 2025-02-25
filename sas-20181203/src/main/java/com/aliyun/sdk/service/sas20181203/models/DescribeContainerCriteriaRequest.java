@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeContainerCriteriaRequest} extends {@link RequestModel}
  *
  * <p>DescribeContainerCriteriaRequest</p>
  */
 public class DescribeContainerCriteriaRequest extends Request {
-    @Query
-    @NameInMap("GroupField")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupField")
     private String groupField;
 
-    @Query
-    @NameInMap("Value")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Value")
     private String value;
 
     private DescribeContainerCriteriaRequest(Builder builder) {
@@ -68,15 +73,18 @@ public class DescribeContainerCriteriaRequest extends Request {
         } 
 
         /**
-         * The filter condition. Valid values:
-         * <p>
+         * <p>The filter condition. Valid values:</p>
+         * <ul>
+         * <li><strong>pod</strong>: pod</li>
+         * <li><strong>appName</strong>: application name</li>
+         * <li><strong>clusterId</strong>: cluster ID</li>
+         * <li><strong>namespace</strong>: namespace</li>
+         * <li><strong>image</strong>: image</li>
+         * <li><strong>containerScan</strong>: container scan</li>
+         * </ul>
          * 
-         * *   **pod**: pod
-         * *   **appName**: application name
-         * *   **clusterId**: cluster ID
-         * *   **namespace**: namespace
-         * *   **image**: image
-         * *   **containerScan**: container scan
+         * <strong>example:</strong>
+         * <p>clusterId</p>
          */
         public Builder groupField(String groupField) {
             this.putQueryParameter("GroupField", groupField);
@@ -85,7 +93,10 @@ public class DescribeContainerCriteriaRequest extends Request {
         }
 
         /**
-         * The value of the filter condition. The value can be an application name, node name, namespace, cluster name, public IP address, pod address, region, pod, instance ID, cluster ID, or container ID. Fuzzy match is supported.
+         * <p>The value of the filter condition. The value can be an application name, node name, namespace, cluster name, public IP address, pod address, region, pod, instance ID, cluster ID, or container ID. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cfb41a869c71e4678a97021582dd8a****</p>
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

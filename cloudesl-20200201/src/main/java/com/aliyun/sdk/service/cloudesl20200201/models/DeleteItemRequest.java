@@ -76,11 +76,11 @@ public class DeleteItemRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteItemRequest response) {
-            super(response);
-            this.itemBarCode = response.itemBarCode;
-            this.storeId = response.storeId;
-            this.unbindEslDevice = response.unbindEslDevice;
+        private Builder(DeleteItemRequest request) {
+            super(request);
+            this.itemBarCode = request.itemBarCode;
+            this.storeId = request.storeId;
+            this.unbindEslDevice = request.unbindEslDevice;
         } 
 
         /**

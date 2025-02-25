@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AppendInstancesToPrometheusGlobalViewResponseBody} extends {@link TeaModel}
  *
  * <p>AppendInstancesToPrometheusGlobalViewResponseBody</p>
  */
 public class AppendInstancesToPrometheusGlobalViewResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AppendInstancesToPrometheusGlobalViewResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class AppendInstancesToPrometheusGlobalViewResponseBody extends TeaModel 
         private String requestId; 
 
         /**
-         * Code.
+         * <p>Status code. 200 means success, other status codes are exceptions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +90,7 @@ public class AppendInstancesToPrometheusGlobalViewResponseBody extends TeaModel 
         }
 
         /**
-         * The information about the array object.
+         * <p>The information about the array object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +98,10 @@ public class AppendInstancesToPrometheusGlobalViewResponseBody extends TeaModel 
         }
 
         /**
-         * Message.
+         * <p>Additional message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +109,10 @@ public class AppendInstancesToPrometheusGlobalViewResponseBody extends TeaModel 
         }
 
         /**
-         * The request ID. You can use the ID to query logs and troubleshoot issues.
+         * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27E653FA-5958-45BE-8AA9-14D884DC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,14 +125,20 @@ public class AppendInstancesToPrometheusGlobalViewResponseBody extends TeaModel 
 
     } 
 
+    /**
+     * 
+     * {@link AppendInstancesToPrometheusGlobalViewResponseBody} extends {@link TeaModel}
+     *
+     * <p>AppendInstancesToPrometheusGlobalViewResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Info")
+        @com.aliyun.core.annotation.NameInMap("Info")
         private String info;
 
-        @NameInMap("Msg")
+        @com.aliyun.core.annotation.NameInMap("Msg")
         private String msg;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private Data(Builder builder) {
@@ -162,7 +182,10 @@ public class AppendInstancesToPrometheusGlobalViewResponseBody extends TeaModel 
             private Boolean success; 
 
             /**
-             * The Info-level information.
+             * <p>The Info-level information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{regionId: the region where the aggregation instance resides. globalViewClusterId: the ID of the aggregation instance. failedInstances: the ID of the object that failed to be added.}</p>
              */
             public Builder info(String info) {
                 this.info = info;
@@ -170,7 +193,10 @@ public class AppendInstancesToPrometheusGlobalViewResponseBody extends TeaModel 
             }
 
             /**
-             * The additional information.
+             * <p>The additional information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -178,11 +204,14 @@ public class AppendInstancesToPrometheusGlobalViewResponseBody extends TeaModel 
             }
 
             /**
-             * Indicates whether the call was successful. Valid values:
-             * <p>
+             * <p>Indicates whether the call was successful. Valid values:</p>
+             * <ul>
+             * <li><code>true</code>: The call was successful.</li>
+             * <li><code>false</code>: The call failed.</li>
+             * </ul>
              * 
-             * *   `true`: The call was successful.
-             * *   `false`: The call failed.
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

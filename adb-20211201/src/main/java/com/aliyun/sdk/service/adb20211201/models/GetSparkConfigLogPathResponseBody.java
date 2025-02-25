@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSparkConfigLogPathResponseBody} extends {@link TeaModel}
  *
  * <p>GetSparkConfigLogPathResponseBody</p>
  */
 public class GetSparkConfigLogPathResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetSparkConfigLogPathResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetSparkConfigLogPathResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The queried Spark log configuration.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class GetSparkConfigLogPathResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1919-xxx-ssdfsdff</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +79,26 @@ public class GetSparkConfigLogPathResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSparkConfigLogPathResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSparkConfigLogPathResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DefaultLogPath")
+        @com.aliyun.core.annotation.NameInMap("DefaultLogPath")
         private String defaultLogPath;
 
-        @NameInMap("IsLogPathExists")
+        @com.aliyun.core.annotation.NameInMap("IsLogPathExists")
         private Boolean isLogPathExists;
 
-        @NameInMap("ModifiedTimestamp")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTimestamp")
         private String modifiedTimestamp;
 
-        @NameInMap("ModifiedUid")
+        @com.aliyun.core.annotation.NameInMap("ModifiedUid")
         private String modifiedUid;
 
-        @NameInMap("RecordedLogPath")
+        @com.aliyun.core.annotation.NameInMap("RecordedLogPath")
         private String recordedLogPath;
 
         private Data(Builder builder) {
@@ -146,7 +160,10 @@ public class GetSparkConfigLogPathResponseBody extends TeaModel {
             private String recordedLogPath; 
 
             /**
-             * The recommended default log path.
+             * <p>The default log path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://aliyun-oa-adb-spark-1111-oss-cn-hanghzou/spark-logs</p>
              */
             public Builder defaultLogPath(String defaultLogPath) {
                 this.defaultLogPath = defaultLogPath;
@@ -154,7 +171,10 @@ public class GetSparkConfigLogPathResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a log path exists.
+             * <p>Indicates whether a log path exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isLogPathExists(Boolean isLogPathExists) {
                 this.isLogPathExists = isLogPathExists;
@@ -162,7 +182,10 @@ public class GetSparkConfigLogPathResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the configuration was last modified.
+             * <p>The last modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1675654361000</p>
              */
             public Builder modifiedTimestamp(String modifiedTimestamp) {
                 this.modifiedTimestamp = modifiedTimestamp;
@@ -170,7 +193,10 @@ public class GetSparkConfigLogPathResponseBody extends TeaModel {
             }
 
             /**
-             * The modifier ID.
+             * <p>The account ID of the modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10130223128xxx</p>
              */
             public Builder modifiedUid(String modifiedUid) {
                 this.modifiedUid = modifiedUid;
@@ -178,7 +204,10 @@ public class GetSparkConfigLogPathResponseBody extends TeaModel {
             }
 
             /**
-             * The log path.
+             * <p>The recorded log path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://test/spark-logs/</p>
              */
             public Builder recordedLogPath(String recordedLogPath) {
                 this.recordedLogPath = recordedLogPath;

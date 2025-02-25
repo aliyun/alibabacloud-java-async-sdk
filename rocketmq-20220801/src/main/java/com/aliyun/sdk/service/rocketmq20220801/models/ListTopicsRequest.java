@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTopicsRequest} extends {@link RequestModel}
  *
  * <p>ListTopicsRequest</p>
  */
 public class ListTopicsRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("filter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("filter")
     private String filter;
 
-    @Query
-    @NameInMap("messageTypes")
-    private java.util.List < String > messageTypes;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("messageTypes")
+    private java.util.List<String> messageTypes;
 
-    @Query
-    @NameInMap("pageNumber")
-    @Validation(required = true, maximum = 100000000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
+    @com.aliyun.core.annotation.Validation(maximum = 100000000, minimum = 1)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("pageSize")
-    @Validation(required = true, maximum = 10000, minimum = 10)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 10000, minimum = 10)
     private Integer pageSize;
 
     private ListTopicsRequest(Builder builder) {
@@ -74,7 +79,7 @@ public class ListTopicsRequest extends Request {
     /**
      * @return messageTypes
      */
-    public java.util.List < String > getMessageTypes() {
+    public java.util.List<String> getMessageTypes() {
         return this.messageTypes;
     }
 
@@ -95,7 +100,7 @@ public class ListTopicsRequest extends Request {
     public static final class Builder extends Request.Builder<ListTopicsRequest, Builder> {
         private String instanceId; 
         private String filter; 
-        private java.util.List < String > messageTypes; 
+        private java.util.List<String> messageTypes; 
         private Integer pageNumber; 
         private Integer pageSize; 
 
@@ -113,7 +118,11 @@ public class ListTopicsRequest extends Request {
         } 
 
         /**
-         * The ID of the instance that contains the topics.
+         * <p>The ID of the instance that contains the topics.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq-cn-7e22ody****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -122,7 +131,10 @@ public class ListTopicsRequest extends Request {
         }
 
         /**
-         * The condition that you want to use to filter topics in the instance. If you leave this parameter empty, all topics in the instance are queried.
+         * <p>The condition that you want to use to filter topics in the instance. If you leave this parameter empty, all topics in the instance are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>topic_test</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("filter", filter);
@@ -131,9 +143,9 @@ public class ListTopicsRequest extends Request {
         }
 
         /**
-         * The message types of the topics.
+         * <p>The message types of the topics.</p>
          */
-        public Builder messageTypes(java.util.List < String > messageTypes) {
+        public Builder messageTypes(java.util.List<String> messageTypes) {
             String messageTypesShrink = shrink(messageTypes, "messageTypes", "simple");
             this.putQueryParameter("messageTypes", messageTypesShrink);
             this.messageTypes = messageTypes;
@@ -141,7 +153,10 @@ public class ListTopicsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -150,7 +165,10 @@ public class ListTopicsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);

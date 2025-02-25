@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateResourceInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>CreateResourceInstancesResponseBody</p>
  */
 public class CreateResourceInstancesResponseBody extends TeaModel {
-    @NameInMap("InstanceIds")
-    private java.util.List < String > instanceIds;
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    private java.util.List<String> instanceIds;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateResourceInstancesResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class CreateResourceInstancesResponseBody extends TeaModel {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
@@ -57,20 +62,23 @@ public class CreateResourceInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > instanceIds; 
+        private java.util.List<String> instanceIds; 
         private String message; 
         private String requestId; 
 
         /**
-         * InstanceIds.
+         * <p>The instance IDs.</p>
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             this.instanceIds = instanceIds;
             return this;
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Create 5 new ecs instance(s) in resource [eas-r-asdasdasd] successfully</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -78,7 +86,10 @@ public class CreateResourceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

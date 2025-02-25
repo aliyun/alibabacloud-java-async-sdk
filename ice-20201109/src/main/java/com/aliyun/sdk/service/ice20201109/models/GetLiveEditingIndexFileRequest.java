@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLiveEditingIndexFileRequest} extends {@link RequestModel}
  *
  * <p>GetLiveEditingIndexFileRequest</p>
  */
 public class GetLiveEditingIndexFileRequest extends Request {
-    @Query
-    @NameInMap("AppName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
     private String appName;
 
-    @Query
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @Query
-    @NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
     private String projectId;
 
-    @Query
-    @NameInMap("StreamName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StreamName")
     private String streamName;
 
     private GetLiveEditingIndexFileRequest(Builder builder) {
@@ -96,7 +101,10 @@ public class GetLiveEditingIndexFileRequest extends Request {
         } 
 
         /**
-         * AppName.
+         * <p>The application name of the live stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testrecord</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -105,7 +113,10 @@ public class GetLiveEditingIndexFileRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>The domain name of the live stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.alivecdn.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -114,7 +125,10 @@ public class GetLiveEditingIndexFileRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The ID of the live stream editing project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><em><strong><strong>cb6307a4edea614d8b3f3c</strong></strong></em></p>
          */
         public Builder projectId(String projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -123,7 +137,10 @@ public class GetLiveEditingIndexFileRequest extends Request {
         }
 
         /**
-         * StreamName.
+         * <p>The name of the live stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>teststream</p>
          */
         public Builder streamName(String streamName) {
             this.putQueryParameter("StreamName", streamName);

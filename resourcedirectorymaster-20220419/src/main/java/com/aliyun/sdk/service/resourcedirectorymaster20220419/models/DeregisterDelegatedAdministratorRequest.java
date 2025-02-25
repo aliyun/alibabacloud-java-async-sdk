@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeregisterDelegatedAdministratorRequest} extends {@link RequestModel}
  *
  * <p>DeregisterDelegatedAdministratorRequest</p>
  */
 public class DeregisterDelegatedAdministratorRequest extends Request {
-    @Query
-    @NameInMap("AccountId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountId;
 
-    @Query
-    @NameInMap("ServicePrincipal")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServicePrincipal")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String servicePrincipal;
 
     private DeregisterDelegatedAdministratorRequest(Builder builder) {
@@ -70,7 +75,11 @@ public class DeregisterDelegatedAdministratorRequest extends Request {
         } 
 
         /**
-         * The Alibaba Cloud account ID of the member in the resource directory.
+         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>181761095690****</p>
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -79,7 +88,11 @@ public class DeregisterDelegatedAdministratorRequest extends Request {
         }
 
         /**
-         * The identifier of the trusted service.
+         * <p>The identifier of the trusted service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloudfw.aliyuncs.com</p>
          */
         public Builder servicePrincipal(String servicePrincipal) {
             this.putQueryParameter("ServicePrincipal", servicePrincipal);

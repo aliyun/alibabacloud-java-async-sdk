@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryUserRoleInfoInWorkspaceResponseBody} extends {@link TeaModel}
  *
  * <p>QueryUserRoleInfoInWorkspaceResponseBody</p>
  */
 public class QueryUserRoleInfoInWorkspaceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryUserRoleInfoInWorkspaceResponseBody(Builder builder) {
@@ -91,14 +96,20 @@ public class QueryUserRoleInfoInWorkspaceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryUserRoleInfoInWorkspaceResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryUserRoleInfoInWorkspaceResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("RoleCode")
+        @com.aliyun.core.annotation.NameInMap("RoleCode")
         private String roleCode;
 
-        @NameInMap("RoleId")
+        @com.aliyun.core.annotation.NameInMap("RoleId")
         private Long roleId;
 
-        @NameInMap("RoleName")
+        @com.aliyun.core.annotation.NameInMap("RoleName")
         private String roleName;
 
         private Result(Builder builder) {

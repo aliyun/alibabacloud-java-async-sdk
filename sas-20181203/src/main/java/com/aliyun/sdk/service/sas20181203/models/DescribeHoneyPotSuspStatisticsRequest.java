@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHoneyPotSuspStatisticsRequest} extends {@link RequestModel}
  *
  * <p>DescribeHoneyPotSuspStatisticsRequest</p>
  */
 public class DescribeHoneyPotSuspStatisticsRequest extends Request {
-    @Query
-    @NameInMap("From")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("From")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String from;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("StatisticsDays")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StatisticsDays")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer statisticsDays;
 
-    @Query
-    @NameInMap("StatisticsKeyType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StatisticsKeyType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String statisticsKeyType;
 
     private DescribeHoneyPotSuspStatisticsRequest(Builder builder) {
@@ -99,7 +104,11 @@ public class DescribeHoneyPotSuspStatisticsRequest extends Request {
         } 
 
         /**
-         * The source of the request. Set the value to **honeypot**.
+         * <p>The source of the request. Set the value to <strong>honeypot</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>honeypot</p>
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -108,11 +117,14 @@ public class DescribeHoneyPotSuspStatisticsRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese.
-         * *   **en**: English.
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -121,7 +133,11 @@ public class DescribeHoneyPotSuspStatisticsRequest extends Request {
         }
 
         /**
-         * The time range of the data to query. Unit: days.
+         * <p>The time range of the data to query. Unit: days.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder statisticsDays(Integer statisticsDays) {
             this.putQueryParameter("StatisticsDays", statisticsDays);
@@ -130,11 +146,15 @@ public class DescribeHoneyPotSuspStatisticsRequest extends Request {
         }
 
         /**
-         * The type of the asset to query. Valid values:
-         * <p>
+         * <p>The type of the asset to query. Valid values:</p>
+         * <ul>
+         * <li><strong>vpcInstanceId</strong>: VPC</li>
+         * <li><strong>uuid</strong>: server</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **vpcInstanceId**: VPC
-         * *   **uuid**: server
+         * <strong>example:</strong>
+         * <p>vpcInstanceId</p>
          */
         public Builder statisticsKeyType(String statisticsKeyType) {
             this.putQueryParameter("StatisticsKeyType", statisticsKeyType);

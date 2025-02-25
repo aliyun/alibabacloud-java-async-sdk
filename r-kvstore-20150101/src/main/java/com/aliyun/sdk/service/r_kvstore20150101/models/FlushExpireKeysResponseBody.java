@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlushExpireKeysResponseBody} extends {@link TeaModel}
  *
  * <p>FlushExpireKeysResponseBody</p>
  */
 public class FlushExpireKeysResponseBody extends TeaModel {
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
     private FlushExpireKeysResponseBody(Builder builder) {
@@ -62,7 +62,10 @@ public class FlushExpireKeysResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -70,7 +73,10 @@ public class FlushExpireKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **FlushExpireKeys**.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>82E30AB7-E3A4-46AC-88A0-3E4DCDC5****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +84,10 @@ public class FlushExpireKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task.
+         * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21986****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

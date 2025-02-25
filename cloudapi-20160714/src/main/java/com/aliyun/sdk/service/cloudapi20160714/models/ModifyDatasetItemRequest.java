@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDatasetItemRequest} extends {@link RequestModel}
  *
  * <p>ModifyDatasetItemRequest</p>
  */
 public class ModifyDatasetItemRequest extends Request {
-    @Query
-    @NameInMap("DatasetId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatasetId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String datasetId;
 
-    @Query
-    @NameInMap("DatasetItemId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatasetItemId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String datasetItemId;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("ExpiredTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExpiredTime")
     private String expiredTime;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private ModifyDatasetItemRequest(Builder builder) {
@@ -112,7 +117,11 @@ public class ModifyDatasetItemRequest extends Request {
         } 
 
         /**
-         * The ID of the dataset.
+         * <p>The ID of the dataset.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a25a6589b2584ff490e891cc********</p>
          */
         public Builder datasetId(String datasetId) {
             this.putQueryParameter("DatasetId", datasetId);
@@ -121,7 +130,11 @@ public class ModifyDatasetItemRequest extends Request {
         }
 
         /**
-         * The ID of the data entry.
+         * <p>The ID of the data entry.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5045****</p>
          */
         public Builder datasetItemId(String datasetItemId) {
             this.putQueryParameter("DatasetItemId", datasetItemId);
@@ -130,7 +143,10 @@ public class ModifyDatasetItemRequest extends Request {
         }
 
         /**
-         * The description of the data entry. The description cannot exceed 180 characters in length.
+         * <p>The description of the data entry. The description cannot exceed 180 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -139,7 +155,10 @@ public class ModifyDatasetItemRequest extends Request {
         }
 
         /**
-         * The time in UTC when the data entry expires. The time is in the **yyyy-MM-ddTHH:mm:ssZ** format.
+         * <p>The time in UTC when the data entry expires. The time is in the <strong>yyyy-MM-ddTHH:mm:ssZ</strong> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-09-22T12:00:00Z</p>
          */
         public Builder expiredTime(String expiredTime) {
             this.putQueryParameter("ExpiredTime", expiredTime);

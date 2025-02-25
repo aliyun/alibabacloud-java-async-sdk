@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TestDataServiceApiResponseBody} extends {@link TeaModel}
  *
  * <p>TestDataServiceApiResponseBody</p>
  */
 public class TestDataServiceApiResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private TestDataServiceApiResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class TestDataServiceApiResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the test.
+         * <p>The information about the test.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class TestDataServiceApiResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abdsfewe</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,8 +79,14 @@ public class TestDataServiceApiResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TestDataServiceApiResponseBody} extends {@link TeaModel}
+     *
+     * <p>TestDataServiceApiResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("TestId")
+        @com.aliyun.core.annotation.NameInMap("TestId")
         private String testId;
 
         private Data(Builder builder) {
@@ -98,7 +112,10 @@ public class TestDataServiceApiResponseBody extends TeaModel {
             private String testId; 
 
             /**
-             * The ID of the test.
+             * <p>The ID of the test.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>232432</p>
              */
             public Builder testId(String testId) {
                 this.testId = testId;

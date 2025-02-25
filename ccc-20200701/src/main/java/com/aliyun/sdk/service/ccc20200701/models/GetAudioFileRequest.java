@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAudioFileRequest} extends {@link RequestModel}
  *
  * <p>GetAudioFileRequest</p>
  */
 public class GetAudioFileRequest extends Request {
-    @Query
-    @NameInMap("AudioResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AudioResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String audioResourceId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private GetAudioFileRequest(Builder builder) {
@@ -70,7 +75,10 @@ public class GetAudioFileRequest extends Request {
         } 
 
         /**
-         * AudioResourceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c1a06b46-302a-4c6e-928b-a43c0df485cf</p>
          */
         public Builder audioResourceId(String audioResourceId) {
             this.putQueryParameter("AudioResourceId", audioResourceId);
@@ -79,7 +87,10 @@ public class GetAudioFileRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

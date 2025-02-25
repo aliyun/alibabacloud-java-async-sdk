@@ -1,87 +1,87 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateFunctionInput} extends {@link TeaModel}
  *
  * <p>UpdateFunctionInput</p>
  */
 public class UpdateFunctionInput extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private InputCodeLocation code;
 
-    @NameInMap("cpu")
+    @com.aliyun.core.annotation.NameInMap("cpu")
     private Float cpu;
 
-    @NameInMap("customContainerConfig")
+    @com.aliyun.core.annotation.NameInMap("customContainerConfig")
     private CustomContainerConfig customContainerConfig;
 
-    @NameInMap("customDNS")
+    @com.aliyun.core.annotation.NameInMap("customDNS")
     private CustomDNS customDNS;
 
-    @NameInMap("customRuntimeConfig")
+    @com.aliyun.core.annotation.NameInMap("customRuntimeConfig")
     private CustomRuntimeConfig customRuntimeConfig;
 
-    @NameInMap("description")
-    @Validation(maxLength = 256)
+    @com.aliyun.core.annotation.NameInMap("description")
+    @com.aliyun.core.annotation.Validation(maxLength = 256)
     private String description;
 
-    @NameInMap("diskSize")
+    @com.aliyun.core.annotation.NameInMap("diskSize")
     private Integer diskSize;
 
-    @NameInMap("environmentVariables")
+    @com.aliyun.core.annotation.NameInMap("environmentVariables")
     private java.util.Map < String, String > environmentVariables;
 
-    @NameInMap("gpuConfig")
+    @com.aliyun.core.annotation.NameInMap("gpuConfig")
     private GPUConfig gpuConfig;
 
-    @NameInMap("handler")
-    @Validation(maxLength = 128, minLength = 1)
+    @com.aliyun.core.annotation.NameInMap("handler")
+    @com.aliyun.core.annotation.Validation(maxLength = 128, minLength = 1)
     private String handler;
 
-    @NameInMap("instanceConcurrency")
+    @com.aliyun.core.annotation.NameInMap("instanceConcurrency")
     private Integer instanceConcurrency;
 
-    @NameInMap("instanceLifecycleConfig")
+    @com.aliyun.core.annotation.NameInMap("instanceLifecycleConfig")
     private InstanceLifecycleConfig instanceLifecycleConfig;
 
-    @NameInMap("internetAccess")
+    @com.aliyun.core.annotation.NameInMap("internetAccess")
     private Boolean internetAccess;
 
-    @NameInMap("layers")
+    @com.aliyun.core.annotation.NameInMap("layers")
     private java.util.List < String > layers;
 
-    @NameInMap("logConfig")
+    @com.aliyun.core.annotation.NameInMap("logConfig")
     private LogConfig logConfig;
 
-    @NameInMap("memorySize")
+    @com.aliyun.core.annotation.NameInMap("memorySize")
     private Integer memorySize;
 
-    @NameInMap("nasConfig")
+    @com.aliyun.core.annotation.NameInMap("nasConfig")
     private NASConfig nasConfig;
 
-    @NameInMap("ossMountConfig")
+    @com.aliyun.core.annotation.NameInMap("ossMountConfig")
     private OSSMountConfig ossMountConfig;
 
-    @NameInMap("role")
-    @Validation(maxLength = 300)
+    @com.aliyun.core.annotation.NameInMap("role")
+    @com.aliyun.core.annotation.Validation(maxLength = 300)
     private String role;
 
-    @NameInMap("runtime")
+    @com.aliyun.core.annotation.NameInMap("runtime")
     private String runtime;
 
-    @NameInMap("timeout")
+    @com.aliyun.core.annotation.NameInMap("timeout")
     private Integer timeout;
 
-    @NameInMap("tracingConfig")
+    @com.aliyun.core.annotation.NameInMap("tracingConfig")
     private TracingConfig tracingConfig;
 
-    @NameInMap("vpcConfig")
+    @com.aliyun.core.annotation.NameInMap("vpcConfig")
     private VPCConfig vpcConfig;
 
     private UpdateFunctionInput(Builder builder) {

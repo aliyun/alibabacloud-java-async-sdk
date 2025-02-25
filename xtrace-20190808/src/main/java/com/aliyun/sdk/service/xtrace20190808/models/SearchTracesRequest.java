@@ -1,67 +1,76 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtrace20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchTracesRequest} extends {@link RequestModel}
  *
  * <p>SearchTracesRequest</p>
  */
 public class SearchTracesRequest extends Request {
-    @Query
-    @NameInMap("AppType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppType")
     private String appType;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @Query
-    @NameInMap("MinDuration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinDuration")
     private Long minDuration;
 
-    @Query
-    @NameInMap("OperationName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationName")
     private String operationName;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Reverse")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Reverse")
     private Boolean reverse;
 
-    @Query
-    @NameInMap("ServiceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceIp")
     private String serviceIp;
 
-    @Query
-    @NameInMap("ServiceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StatusCode")
+    private String statusCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private SearchTracesRequest(Builder builder) {
         super(builder);
@@ -76,6 +85,7 @@ public class SearchTracesRequest extends Request {
         this.serviceIp = builder.serviceIp;
         this.serviceName = builder.serviceName;
         this.startTime = builder.startTime;
+        this.statusCode = builder.statusCode;
         this.tag = builder.tag;
     }
 
@@ -170,9 +180,16 @@ public class SearchTracesRequest extends Request {
     }
 
     /**
+     * @return statusCode
+     */
+    public String getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -188,7 +205,8 @@ public class SearchTracesRequest extends Request {
         private String serviceIp; 
         private String serviceName; 
         private Long startTime; 
-        private java.util.List < Tag> tag; 
+        private String statusCode; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -207,11 +225,15 @@ public class SearchTracesRequest extends Request {
             this.serviceIp = request.serviceIp;
             this.serviceName = request.serviceName;
             this.startTime = request.startTime;
+            this.statusCode = request.statusCode;
             this.tag = request.tag;
         } 
 
         /**
-         * The type of the application. You can set the value to **XTRACE** or leave this parameter unspecified.
+         * <p>The type of the application. You can set the value to <strong>XTRACE</strong> or leave this parameter unspecified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XTRACE</p>
          */
         public Builder appType(String appType) {
             this.putQueryParameter("AppType", appType);
@@ -220,7 +242,11 @@ public class SearchTracesRequest extends Request {
         }
 
         /**
-         * The timestamp of the end time of the time range to query. The timestamp is accurate to milliseconds.
+         * <p>The end of the time range to query. The value is a timestamp that is accurate to milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1575622455686</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -229,7 +255,10 @@ public class SearchTracesRequest extends Request {
         }
 
         /**
-         * The time more than which is used to call the trace. Unit: milliseconds. For example, a value of 100 specifies to return the traces that more than 100 milliseconds are used to call.
+         * <p>The minimum value of an execution duration. Unit: seconds. For example, a value of 2 indicates that the traces whose execution duration is more than 2 seconds are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder minDuration(Long minDuration) {
             this.putQueryParameter("MinDuration", minDuration);
@@ -238,7 +267,10 @@ public class SearchTracesRequest extends Request {
         }
 
         /**
-         * The name of the span.
+         * <p>The name of the span.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/api</p>
          */
         public Builder operationName(String operationName) {
             this.putQueryParameter("OperationName", operationName);
@@ -247,7 +279,10 @@ public class SearchTracesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. For example, a value of 5 indicates page 5.
+         * <p>The number of the page to return. For example, a value of 5 indicates page 5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -256,7 +291,10 @@ public class SearchTracesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -265,7 +303,11 @@ public class SearchTracesRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -274,11 +316,14 @@ public class SearchTracesRequest extends Request {
         }
 
         /**
-         * Specifies whether to sort the query results in chronological order or reverse chronological order. Default value: false. Valid values:
-         * <p>
+         * <p>Specifies whether to sort the query results in chronological order or reverse chronological order. Default value: false. Valid values:</p>
+         * <ul>
+         * <li>true: reverse chronological order </li>
+         * <li>false: chronological order</li>
+         * </ul>
          * 
-         * - true: reverse chronological order 
-         * - false: chronological order
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder reverse(Boolean reverse) {
             this.putQueryParameter("Reverse", reverse);
@@ -287,7 +332,10 @@ public class SearchTracesRequest extends Request {
         }
 
         /**
-         * The IP address that corresponds to the span.
+         * <p>The IP address of the server on which the span is running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.0</p>
          */
         public Builder serviceIp(String serviceIp) {
             this.putQueryParameter("ServiceIp", serviceIp);
@@ -296,7 +344,10 @@ public class SearchTracesRequest extends Request {
         }
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service 1</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -305,7 +356,11 @@ public class SearchTracesRequest extends Request {
         }
 
         /**
-         * The timestamp of the start time of the time range to query. The timestamp is accurate to milliseconds.
+         * <p>The beginning of the time range to query. The value is a timestamp that is accurate to milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1575561600000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -314,9 +369,18 @@ public class SearchTracesRequest extends Request {
         }
 
         /**
-         * The list of the tags.
+         * StatusCode.
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder statusCode(String statusCode) {
+            this.putQueryParameter("StatusCode", statusCode);
+            this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
+         * <p>The list of the tags.</p>
+         */
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -329,11 +393,17 @@ public class SearchTracesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SearchTracesRequest} extends {@link TeaModel}
+     *
+     * <p>SearchTracesRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -368,7 +438,10 @@ public class SearchTracesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http.status_cod</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -376,7 +449,10 @@ public class SearchTracesRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder value(String value) {
                 this.value = value;

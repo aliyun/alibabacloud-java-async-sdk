@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetIndexVersionResponseBody} extends {@link TeaModel}
  *
  * <p>GetIndexVersionResponseBody</p>
  */
 public class GetIndexVersionResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
     private GetIndexVersionResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class GetIndexVersionResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * id of request
+         * <p>id of request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E7B7D598-B080-5C8E-AA35-D43EC0D5F886</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class GetIndexVersionResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * <p>The clusters.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -71,18 +79,24 @@ public class GetIndexVersionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetIndexVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetIndexVersionResponseBody</p>
+     */
     public static class IndexVersions extends TeaModel {
-        @NameInMap("buildDeployId")
+        @com.aliyun.core.annotation.NameInMap("buildDeployId")
         private String buildDeployId;
 
-        @NameInMap("currentVersion")
+        @com.aliyun.core.annotation.NameInMap("currentVersion")
         private Long currentVersion;
 
-        @NameInMap("indexName")
+        @com.aliyun.core.annotation.NameInMap("indexName")
         private String indexName;
 
-        @NameInMap("versions")
-        private java.util.List < Long > versions;
+        @com.aliyun.core.annotation.NameInMap("versions")
+        private java.util.List<Long> versions;
 
         private IndexVersions(Builder builder) {
             this.buildDeployId = builder.buildDeployId;
@@ -123,7 +137,7 @@ public class GetIndexVersionResponseBody extends TeaModel {
         /**
          * @return versions
          */
-        public java.util.List < Long > getVersions() {
+        public java.util.List<Long> getVersions() {
             return this.versions;
         }
 
@@ -131,10 +145,13 @@ public class GetIndexVersionResponseBody extends TeaModel {
             private String buildDeployId; 
             private Long currentVersion; 
             private String indexName; 
-            private java.util.List < Long > versions; 
+            private java.util.List<Long> versions; 
 
             /**
-             * buildDeployId.
+             * <p>The ID of the offline deployment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot; &quot;</p>
              */
             public Builder buildDeployId(String buildDeployId) {
                 this.buildDeployId = buildDeployId;
@@ -142,7 +159,10 @@ public class GetIndexVersionResponseBody extends TeaModel {
             }
 
             /**
-             * currentVersion.
+             * <p>The current online version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentVersion(Long currentVersion) {
                 this.currentVersion = currentVersion;
@@ -150,7 +170,10 @@ public class GetIndexVersionResponseBody extends TeaModel {
             }
 
             /**
-             * indexName.
+             * <p>The name of the index table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table4</p>
              */
             public Builder indexName(String indexName) {
                 this.indexName = indexName;
@@ -158,9 +181,9 @@ public class GetIndexVersionResponseBody extends TeaModel {
             }
 
             /**
-             * versions.
+             * <p>The index versions.</p>
              */
-            public Builder versions(java.util.List < Long > versions) {
+            public Builder versions(java.util.List<Long> versions) {
                 this.versions = versions;
                 return this;
             }
@@ -172,12 +195,18 @@ public class GetIndexVersionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetIndexVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetIndexVersionResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("cluster")
+        @com.aliyun.core.annotation.NameInMap("cluster")
         private String cluster;
 
-        @NameInMap("indexVersions")
-        private java.util.List < IndexVersions> indexVersions;
+        @com.aliyun.core.annotation.NameInMap("indexVersions")
+        private java.util.List<IndexVersions> indexVersions;
 
         private Result(Builder builder) {
             this.cluster = builder.cluster;
@@ -202,16 +231,19 @@ public class GetIndexVersionResponseBody extends TeaModel {
         /**
          * @return indexVersions
          */
-        public java.util.List < IndexVersions> getIndexVersions() {
+        public java.util.List<IndexVersions> getIndexVersions() {
             return this.indexVersions;
         }
 
         public static final class Builder {
             private String cluster; 
-            private java.util.List < IndexVersions> indexVersions; 
+            private java.util.List<IndexVersions> indexVersions; 
 
             /**
-             * cluster.
+             * <p>The cluster name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ayoss-cn-zhangjiakou-b</p>
              */
             public Builder cluster(String cluster) {
                 this.cluster = cluster;
@@ -219,9 +251,9 @@ public class GetIndexVersionResponseBody extends TeaModel {
             }
 
             /**
-             * indexVersions.
+             * <p>The index versions.</p>
              */
-            public Builder indexVersions(java.util.List < IndexVersions> indexVersions) {
+            public Builder indexVersions(java.util.List<IndexVersions> indexVersions) {
                 this.indexVersions = indexVersions;
                 return this;
             }

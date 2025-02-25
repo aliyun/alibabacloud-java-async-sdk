@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link MachineGroup} extends {@link TeaModel}
  *
  * <p>MachineGroup</p>
  */
 public class MachineGroup extends TeaModel {
-    @NameInMap("groupAttribute")
+    @com.aliyun.core.annotation.NameInMap("groupAttribute")
     private GroupAttribute groupAttribute;
 
-    @NameInMap("groupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("groupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupName;
 
-    @NameInMap("groupType")
+    @com.aliyun.core.annotation.NameInMap("groupType")
     private String groupType;
 
-    @NameInMap("machineIdentifyType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("machineIdentifyType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String machineIdentifyType;
 
-    @NameInMap("machineList")
-    @Validation(required = true)
-    private java.util.List < String > machineList;
+    @com.aliyun.core.annotation.NameInMap("machineList")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> machineList;
 
     private MachineGroup(Builder builder) {
         this.groupAttribute = builder.groupAttribute;
@@ -77,7 +82,7 @@ public class MachineGroup extends TeaModel {
     /**
      * @return machineList
      */
-    public java.util.List < String > getMachineList() {
+    public java.util.List<String> getMachineList() {
         return this.machineList;
     }
 
@@ -86,7 +91,7 @@ public class MachineGroup extends TeaModel {
         private String groupName; 
         private String groupType; 
         private String machineIdentifyType; 
-        private java.util.List < String > machineList; 
+        private java.util.List<String> machineList; 
 
         /**
          * groupAttribute.
@@ -97,7 +102,10 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * groupName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-group</p>
          */
         public Builder groupName(String groupName) {
             this.groupName = groupName;
@@ -113,7 +121,10 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * machineIdentifyType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip</p>
          */
         public Builder machineIdentifyType(String machineIdentifyType) {
             this.machineIdentifyType = machineIdentifyType;
@@ -121,9 +132,9 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * machineList.
+         * <p>This parameter is required.</p>
          */
-        public Builder machineList(java.util.List < String > machineList) {
+        public Builder machineList(java.util.List<String> machineList) {
             this.machineList = machineList;
             return this;
         }
@@ -134,11 +145,17 @@ public class MachineGroup extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link MachineGroup} extends {@link TeaModel}
+     *
+     * <p>MachineGroup</p>
+     */
     public static class GroupAttribute extends TeaModel {
-        @NameInMap("externalName")
+        @com.aliyun.core.annotation.NameInMap("externalName")
         private String externalName;
 
-        @NameInMap("groupTopic")
+        @com.aliyun.core.annotation.NameInMap("groupTopic")
         private String groupTopic;
 
         private GroupAttribute(Builder builder) {

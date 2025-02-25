@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudcontrol20220830.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListProductsResponseBody</p>
  */
 public class ListProductsResponseBody extends TeaModel {
-    @NameInMap("maxResults")
+    @com.aliyun.core.annotation.NameInMap("maxResults")
     private Integer maxResults;
 
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @NameInMap("products")
+    @com.aliyun.core.annotation.NameInMap("products")
     private java.util.List < Products> products;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("totalCount")
+    @com.aliyun.core.annotation.NameInMap("totalCount")
     private Integer totalCount;
 
     private ListProductsResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class ListProductsResponseBody extends TeaModel {
     } 
 
     public static class Products extends TeaModel {
-        @NameInMap("productCode")
+        @com.aliyun.core.annotation.NameInMap("productCode")
         private String productCode;
 
-        @NameInMap("productName")
+        @com.aliyun.core.annotation.NameInMap("productName")
         private String productName;
 
         private Products(Builder builder) {

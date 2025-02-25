@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDataLimitResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDataLimitResponseBody</p>
  */
 public class CreateDataLimitResponseBody extends TeaModel {
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Integer id;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateDataLimitResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateDataLimitResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Id.
+         * <p>The ID of the data asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Integer id) {
             this.id = id;
@@ -58,7 +66,10 @@ public class CreateDataLimitResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7C3AC882-E5A8-4855-BE77-B6837B695EF1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

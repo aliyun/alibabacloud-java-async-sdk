@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PartitionSpec</p>
  */
 public class PartitionSpec extends TeaModel {
-    @NameInMap("SharedSDPartitions")
+    @com.aliyun.core.annotation.NameInMap("SharedSDPartitions")
     private java.util.List < Partition > sharedSDPartitions;
 
-    @NameInMap("SharedStorageDescriptor")
+    @com.aliyun.core.annotation.NameInMap("SharedStorageDescriptor")
     private SharedStorageDescriptor sharedStorageDescriptor;
 
     private PartitionSpec(Builder builder) {
@@ -72,10 +71,10 @@ public class PartitionSpec extends TeaModel {
     } 
 
     public static class SharedStorageDescriptor extends TeaModel {
-        @NameInMap("Cols")
+        @com.aliyun.core.annotation.NameInMap("Cols")
         private java.util.List < FieldSchema > cols;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
         private SharedStorageDescriptor(Builder builder) {

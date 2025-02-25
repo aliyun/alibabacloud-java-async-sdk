@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OnsConsumerStatusResponseBody} extends {@link TeaModel}
  *
  * <p>OnsConsumerStatusResponseBody</p>
  */
 public class OnsConsumerStatusResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private OnsConsumerStatusResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The query results.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,10 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.
+         * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10EDC518-10E7-4B34-92FB-171235FA****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +74,26 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link OnsConsumerStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsConsumerStatusResponseBody</p>
+     */
     public static class ConnectionDo extends TeaModel {
-        @NameInMap("ClientAddr")
+        @com.aliyun.core.annotation.NameInMap("ClientAddr")
         private String clientAddr;
 
-        @NameInMap("ClientId")
+        @com.aliyun.core.annotation.NameInMap("ClientId")
         private String clientId;
 
-        @NameInMap("Language")
+        @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
 
-        @NameInMap("RemoteIP")
+        @com.aliyun.core.annotation.NameInMap("RemoteIP")
         private String remoteIP;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private ConnectionDo(Builder builder) {
@@ -146,7 +155,10 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The IP address and port number of the consumer instance.
+             * <p>The IP address and port number of the consumer instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30.5.121.**</p>
              */
             public Builder clientAddr(String clientAddr) {
                 this.clientAddr = clientAddr;
@@ -154,7 +166,10 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the consumer instance.
+             * <p>The ID of the consumer instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30.5.121.**@25560#-1999745829#-1737591554#458773089270275</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -162,7 +177,10 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The programming language that the consumer client supports.
+             * <p>The programming language in which the consumer is developed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JAVA</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -170,7 +188,10 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The private or public IP address of the host.
+             * <p>The private or public IP address of the host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>42.120.74.**</p>
              */
             public Builder remoteIP(String remoteIP) {
                 this.remoteIP = remoteIP;
@@ -178,7 +199,10 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the consumer client.
+             * <p>The version of the consumer client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>V4_3_6_SNAPSHOT</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -192,8 +216,14 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OnsConsumerStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsConsumerStatusResponseBody</p>
+     */
     public static class ConnectionSet extends TeaModel {
-        @NameInMap("ConnectionDo")
+        @com.aliyun.core.annotation.NameInMap("ConnectionDo")
         private java.util.List < ConnectionDo> connectionDo;
 
         private ConnectionSet(Builder builder) {
@@ -233,8 +263,14 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OnsConsumerStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsConsumerStatusResponseBody</p>
+     */
     public static class TrackList extends TeaModel {
-        @NameInMap("Track")
+        @com.aliyun.core.annotation.NameInMap("Track")
         private java.util.List < String > track;
 
         private TrackList(Builder builder) {
@@ -274,11 +310,17 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OnsConsumerStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsConsumerStatusResponseBody</p>
+     */
     public static class ThreadTrackDo extends TeaModel {
-        @NameInMap("Thread")
+        @com.aliyun.core.annotation.NameInMap("Thread")
         private String thread;
 
-        @NameInMap("TrackList")
+        @com.aliyun.core.annotation.NameInMap("TrackList")
         private TrackList trackList;
 
         private ThreadTrackDo(Builder builder) {
@@ -313,7 +355,10 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             private TrackList trackList; 
 
             /**
-             * The name of the thread.
+             * <p>The name of the thread.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ConsumeMessageThread_0</p>
              */
             public Builder thread(String thread) {
                 this.thread = thread;
@@ -321,7 +366,7 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The details of thread stack traces.
+             * <p>The details of thread stack traces.</p>
              */
             public Builder trackList(TrackList trackList) {
                 this.trackList = trackList;
@@ -335,8 +380,14 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OnsConsumerStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsConsumerStatusResponseBody</p>
+     */
     public static class Jstack extends TeaModel {
-        @NameInMap("ThreadTrackDo")
+        @com.aliyun.core.annotation.NameInMap("ThreadTrackDo")
         private java.util.List < ThreadTrackDo> threadTrackDo;
 
         private Jstack(Builder builder) {
@@ -376,29 +427,31 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OnsConsumerStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsConsumerStatusResponseBody</p>
+     */
     public static class ConsumerRunningDataDo extends TeaModel {
-        @NameInMap("FailedCountPerHour")
+        @com.aliyun.core.annotation.NameInMap("FailedCountPerHour")
         private Long failedCountPerHour;
 
-        @NameInMap("FailedTps")
+        @com.aliyun.core.annotation.NameInMap("FailedTps")
         private Float failedTps;
 
-        @NameInMap("GroupId")
-        private String groupId;
-
-        @NameInMap("OkTps")
+        @com.aliyun.core.annotation.NameInMap("OkTps")
         private Float okTps;
 
-        @NameInMap("Rt")
+        @com.aliyun.core.annotation.NameInMap("Rt")
         private Float rt;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
         private ConsumerRunningDataDo(Builder builder) {
             this.failedCountPerHour = builder.failedCountPerHour;
             this.failedTps = builder.failedTps;
-            this.groupId = builder.groupId;
             this.okTps = builder.okTps;
             this.rt = builder.rt;
             this.topic = builder.topic;
@@ -427,13 +480,6 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
         }
 
         /**
-         * @return groupId
-         */
-        public String getGroupId() {
-            return this.groupId;
-        }
-
-        /**
          * @return okTps
          */
         public Float getOkTps() {
@@ -457,13 +503,15 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
         public static final class Builder {
             private Long failedCountPerHour; 
             private Float failedTps; 
-            private String groupId; 
             private Float okTps; 
             private Float rt; 
             private String topic; 
 
             /**
-             * The number of messages that failed to be consumed each hour.
+             * <p>The number of messages that failed to be consumed each hour.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder failedCountPerHour(Long failedCountPerHour) {
                 this.failedCountPerHour = failedCountPerHour;
@@ -471,7 +519,10 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The TPS for failed message consumption.
+             * <p>The TPS for failed message consumption.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder failedTps(Float failedTps) {
                 this.failedTps = failedTps;
@@ -479,15 +530,10 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the consumer group.
-             */
-            public Builder groupId(String groupId) {
-                this.groupId = groupId;
-                return this;
-            }
-
-            /**
-             * The TPS for successful message consumption.
+             * <p>The TPS for successful message consumption.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder okTps(Float okTps) {
                 this.okTps = okTps;
@@ -495,7 +541,10 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The consumption RT. Unit: milliseconds.
+             * <p>The consumption RT. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder rt(Float rt) {
                 this.rt = rt;
@@ -503,7 +552,10 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the topic to which the consumer subscribes.
+             * <p>The name of the topic to which the consumer subscribes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-mq_topic</p>
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -517,8 +569,14 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OnsConsumerStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsConsumerStatusResponseBody</p>
+     */
     public static class RunningDataList extends TeaModel {
-        @NameInMap("ConsumerRunningDataDo")
+        @com.aliyun.core.annotation.NameInMap("ConsumerRunningDataDo")
         private java.util.List < ConsumerRunningDataDo> consumerRunningDataDo;
 
         private RunningDataList(Builder builder) {
@@ -558,8 +616,14 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OnsConsumerStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsConsumerStatusResponseBody</p>
+     */
     public static class TagsSet extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < String > tag;
 
         private TagsSet(Builder builder) {
@@ -599,17 +663,23 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OnsConsumerStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsConsumerStatusResponseBody</p>
+     */
     public static class SubscriptionData extends TeaModel {
-        @NameInMap("SubString")
+        @com.aliyun.core.annotation.NameInMap("SubString")
         private String subString;
 
-        @NameInMap("SubVersion")
+        @com.aliyun.core.annotation.NameInMap("SubVersion")
         private Long subVersion;
 
-        @NameInMap("TagsSet")
+        @com.aliyun.core.annotation.NameInMap("TagsSet")
         private TagsSet tagsSet;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
         private SubscriptionData(Builder builder) {
@@ -662,7 +732,12 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             private String topic; 
 
             /**
-             * The expression that is used to specify the tags of messages in the subscribed topic.
+             * <p>The expression that is used to specify the tags of messages in the subscribed topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder subString(String subString) {
                 this.subString = subString;
@@ -670,7 +745,10 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The subscription version. The value is of the LONG type and is automatically incremented.
+             * <p>The subscription version. The value is of the LONG type and is automatically incremented.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1570701364301</p>
              */
             public Builder subVersion(Long subVersion) {
                 this.subVersion = subVersion;
@@ -678,7 +756,7 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the tags of the topic to which the consumer subscribes.
+             * <p>The information about the tags of the topic to which the consumer subscribes.</p>
              */
             public Builder tagsSet(TagsSet tagsSet) {
                 this.tagsSet = tagsSet;
@@ -686,7 +764,10 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the topic to which the consumer subscribes.
+             * <p>The name of the topic to which the consumer subscribes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-mq_topic</p>
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -700,8 +781,14 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OnsConsumerStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsConsumerStatusResponseBody</p>
+     */
     public static class SubscriptionSet extends TeaModel {
-        @NameInMap("SubscriptionData")
+        @com.aliyun.core.annotation.NameInMap("SubscriptionData")
         private java.util.List < SubscriptionData> subscriptionData;
 
         private SubscriptionSet(Builder builder) {
@@ -741,41 +828,47 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OnsConsumerStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsConsumerStatusResponseBody</p>
+     */
     public static class ConsumerConnectionInfoDo extends TeaModel {
-        @NameInMap("ClientId")
+        @com.aliyun.core.annotation.NameInMap("ClientId")
         private String clientId;
 
-        @NameInMap("Connection")
+        @com.aliyun.core.annotation.NameInMap("Connection")
         private String connection;
 
-        @NameInMap("ConsumeModel")
+        @com.aliyun.core.annotation.NameInMap("ConsumeModel")
         private String consumeModel;
 
-        @NameInMap("ConsumeType")
+        @com.aliyun.core.annotation.NameInMap("ConsumeType")
         private String consumeType;
 
-        @NameInMap("Jstack")
+        @com.aliyun.core.annotation.NameInMap("Jstack")
         private Jstack jstack;
 
-        @NameInMap("Language")
+        @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
 
-        @NameInMap("LastTimeStamp")
+        @com.aliyun.core.annotation.NameInMap("LastTimeStamp")
         private Long lastTimeStamp;
 
-        @NameInMap("RunningDataList")
+        @com.aliyun.core.annotation.NameInMap("RunningDataList")
         private RunningDataList runningDataList;
 
-        @NameInMap("StartTimeStamp")
+        @com.aliyun.core.annotation.NameInMap("StartTimeStamp")
         private Long startTimeStamp;
 
-        @NameInMap("SubscriptionSet")
+        @com.aliyun.core.annotation.NameInMap("SubscriptionSet")
         private SubscriptionSet subscriptionSet;
 
-        @NameInMap("ThreadCount")
+        @com.aliyun.core.annotation.NameInMap("ThreadCount")
         private Integer threadCount;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private ConsumerConnectionInfoDo(Builder builder) {
@@ -900,7 +993,10 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The ID of the consumer instance.
+             * <p>The ID of the consumer instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><code>30.5.**.**</code>@25560#-1999745829#-1737591554#458773089270275</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -908,7 +1004,10 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The connection information.
+             * <p>The connection information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>**</p>
              */
             public Builder connection(String connection) {
                 this.connection = connection;
@@ -916,13 +1015,15 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The consumption mode. Valid values:
-             * <p>
+             * <p>The consumption mode. Valid values:</p>
+             * <ul>
+             * <li><strong>CLUSTERING</strong>: the clustering consumption mode</li>
+             * <li><strong>BROADCASTING</strong>: the broadcasting consumption mode</li>
+             * </ul>
+             * <p>For more information about consumption modes, see <a href="https://help.aliyun.com/document_detail/43163.html">Clustering consumption and broadcasting consumption</a>.</p>
              * 
-             * *   **CLUSTERING:** the clustering consumption mode
-             * *   **BROADCASTING:** the broadcasting consumption mode
-             * 
-             * For more information about consumption modes, see [Clustering consumption and broadcasting consumption](~~43163~~).
+             * <strong>example:</strong>
+             * <p>CLUSTERING</p>
              */
             public Builder consumeModel(String consumeModel) {
                 this.consumeModel = consumeModel;
@@ -930,11 +1031,14 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The mode in which the consumer consumes messages. Valid values:
-             * <p>
+             * <p>The mode in which the consumer consumes messages. Valid values:</p>
+             * <ul>
+             * <li><strong>PUSH</strong>: The ApsaraMQ for RocketMQ broker pushes messages to the consumer.</li>
+             * <li><strong>PULL</strong>: The consumer pulls messages from the ApsaraMQ for RocketMQ broker.</li>
+             * </ul>
              * 
-             * *   **PUSH:** The Message Queue for Apache RocketMQ broker pushes messages to the consumer.
-             * *   **PULL:** The consumer pulls messages from the Message Queue for Apache RocketMQ broker.
+             * <strong>example:</strong>
+             * <p>PUSH</p>
              */
             public Builder consumeType(String consumeType) {
                 this.consumeType = consumeType;
@@ -942,7 +1046,7 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information about thread stack traces. If you want to obtain the information about thread stack traces, make sure that the **NeedJstack** parameter in the request is set to **true**. If the NeedJstack parameter is not set to true, the value of this parameter is empty.
+             * <p>The information about thread stack traces. If you want to obtain the information about thread stack traces, make sure that the <strong>NeedJstack</strong> parameter in the request is set to <strong>true</strong>. If the NeedJstack parameter is not set to true, the value of this parameter is empty.</p>
              */
             public Builder jstack(Jstack jstack) {
                 this.jstack = jstack;
@@ -950,7 +1054,10 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The programming language that the consumer supports.
+             * <p>The programming language that the consumer supports.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JAVA</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -958,10 +1065,11 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The most recent point in time when a message was consumed.
-             * <p>
+             * <p>The most recent point in time when a message was consumed.</p>
+             * <p>The value of this parameter is a UNIX timestamp in milliseconds.</p>
              * 
-             * The value of this parameter is a UNIX timestamp in milliseconds.
+             * <strong>example:</strong>
+             * <p>1570701368114</p>
              */
             public Builder lastTimeStamp(Long lastTimeStamp) {
                 this.lastTimeStamp = lastTimeStamp;
@@ -969,7 +1077,7 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The real-time statistics.
+             * <p>The real-time statistics.</p>
              */
             public Builder runningDataList(RunningDataList runningDataList) {
                 this.runningDataList = runningDataList;
@@ -977,10 +1085,11 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The earliest point in time when a message was consumed.
-             * <p>
+             * <p>The earliest point in time when a message was consumed.</p>
+             * <p>The value of this parameter is a UNIX timestamp in milliseconds.</p>
              * 
-             * The value of this parameter is a UNIX timestamp in milliseconds.
+             * <strong>example:</strong>
+             * <p>1570701361528</p>
              */
             public Builder startTimeStamp(Long startTimeStamp) {
                 this.startTimeStamp = startTimeStamp;
@@ -988,7 +1097,7 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information about subscriptions.
+             * <p>The information about subscriptions.</p>
              */
             public Builder subscriptionSet(SubscriptionSet subscriptionSet) {
                 this.subscriptionSet = subscriptionSet;
@@ -996,7 +1105,10 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The number of consumer threads.
+             * <p>The number of consumer threads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder threadCount(Integer threadCount) {
                 this.threadCount = threadCount;
@@ -1004,7 +1116,10 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the consumer client.
+             * <p>The version of the consumer client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>V4_3_6</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -1018,8 +1133,14 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OnsConsumerStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsConsumerStatusResponseBody</p>
+     */
     public static class ConsumerConnectionInfoList extends TeaModel {
-        @NameInMap("ConsumerConnectionInfoDo")
+        @com.aliyun.core.annotation.NameInMap("ConsumerConnectionInfoDo")
         private java.util.List < ConsumerConnectionInfoDo> consumerConnectionInfoDo;
 
         private ConsumerConnectionInfoList(Builder builder) {
@@ -1059,17 +1180,23 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OnsConsumerStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsConsumerStatusResponseBody</p>
+     */
     public static class DetailInTopicDo extends TeaModel {
-        @NameInMap("DelayTime")
+        @com.aliyun.core.annotation.NameInMap("DelayTime")
         private Long delayTime;
 
-        @NameInMap("LastTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LastTimestamp")
         private Long lastTimestamp;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
-        @NameInMap("TotalDiff")
+        @com.aliyun.core.annotation.NameInMap("TotalDiff")
         private Long totalDiff;
 
         private DetailInTopicDo(Builder builder) {
@@ -1122,7 +1249,10 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             private Long totalDiff; 
 
             /**
-             * The latency of message consumption in the topic. Unit: milliseconds.
+             * <p>The latency of message consumption in the topic. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder delayTime(Long delayTime) {
                 this.delayTime = delayTime;
@@ -1130,10 +1260,11 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The most recent point in time when a message was consumed.
-             * <p>
+             * <p>The most recent point in time when a message was consumed.</p>
+             * <p>The value of this parameter is a UNIX timestamp in milliseconds.</p>
              * 
-             * The value of this parameter is a UNIX timestamp in milliseconds.
+             * <strong>example:</strong>
+             * <p>1570701259403</p>
              */
             public Builder lastTimestamp(Long lastTimestamp) {
                 this.lastTimestamp = lastTimestamp;
@@ -1141,7 +1272,10 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the topic.
+             * <p>The topic name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-mq_topic</p>
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -1149,7 +1283,10 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The number of accumulated messages in the topic.
+             * <p>The number of accumulated messages in the topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalDiff(Long totalDiff) {
                 this.totalDiff = totalDiff;
@@ -1163,8 +1300,14 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OnsConsumerStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsConsumerStatusResponseBody</p>
+     */
     public static class DetailInTopicList extends TeaModel {
-        @NameInMap("DetailInTopicDo")
+        @com.aliyun.core.annotation.NameInMap("DetailInTopicDo")
         private java.util.List < DetailInTopicDo> detailInTopicDo;
 
         private DetailInTopicList(Builder builder) {
@@ -1204,41 +1347,47 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OnsConsumerStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsConsumerStatusResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ConnectionSet")
+        @com.aliyun.core.annotation.NameInMap("ConnectionSet")
         private ConnectionSet connectionSet;
 
-        @NameInMap("ConsumeModel")
+        @com.aliyun.core.annotation.NameInMap("ConsumeModel")
         private String consumeModel;
 
-        @NameInMap("ConsumeTps")
+        @com.aliyun.core.annotation.NameInMap("ConsumeTps")
         private Float consumeTps;
 
-        @NameInMap("ConsumerConnectionInfoList")
+        @com.aliyun.core.annotation.NameInMap("ConsumerConnectionInfoList")
         private ConsumerConnectionInfoList consumerConnectionInfoList;
 
-        @NameInMap("DelayTime")
+        @com.aliyun.core.annotation.NameInMap("DelayTime")
         private Long delayTime;
 
-        @NameInMap("DetailInTopicList")
+        @com.aliyun.core.annotation.NameInMap("DetailInTopicList")
         private DetailInTopicList detailInTopicList;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("LastTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LastTimestamp")
         private Long lastTimestamp;
 
-        @NameInMap("Online")
+        @com.aliyun.core.annotation.NameInMap("Online")
         private Boolean online;
 
-        @NameInMap("RebalanceOK")
+        @com.aliyun.core.annotation.NameInMap("RebalanceOK")
         private Boolean rebalanceOK;
 
-        @NameInMap("SubscriptionSame")
+        @com.aliyun.core.annotation.NameInMap("SubscriptionSame")
         private Boolean subscriptionSame;
 
-        @NameInMap("TotalDiff")
+        @com.aliyun.core.annotation.NameInMap("TotalDiff")
         private Long totalDiff;
 
         private Data(Builder builder) {
@@ -1363,7 +1512,7 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             private Long totalDiff; 
 
             /**
-             * The information about online consumers in the consumer group.
+             * <p>The information about online consumers in the consumer group.</p>
              */
             public Builder connectionSet(ConnectionSet connectionSet) {
                 this.connectionSet = connectionSet;
@@ -1371,13 +1520,15 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The consumption mode. Valid values:
-             * <p>
+             * <p>The consumption mode. Valid values:</p>
+             * <ul>
+             * <li><strong>CLUSTERING</strong>: the clustering consumption mode</li>
+             * <li><strong>BROADCASTING</strong>: the broadcasting consumption mode</li>
+             * </ul>
+             * <p>For more information about consumption modes, see <a href="https://help.aliyun.com/document_detail/43163.html">Clustering consumption and broadcasting consumption</a>.</p>
              * 
-             * *   **CLUSTERING:** the clustering consumption mode
-             * *   **BROADCASTING:** the broadcasting consumption mode
-             * 
-             * For more information about consumption modes, see [Clustering consumption and broadcasting consumption](~~43163~~).
+             * <strong>example:</strong>
+             * <p>CLUSTERING</p>
              */
             public Builder consumeModel(String consumeModel) {
                 this.consumeModel = consumeModel;
@@ -1385,7 +1536,10 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The TPS for message consumption.
+             * <p>The TPS for message consumption.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder consumeTps(Float consumeTps) {
                 this.consumeTps = consumeTps;
@@ -1393,7 +1547,7 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The details of online consumers in the consumer group, including the information about the thread stack traces and the consumption response time (RT). If you want to obtain the details of online consumers in the consumer group, make sure that the **Detail** parameter in the request is set to **true**. If the Detail parameter is not set to true, the value of this parameter is empty.
+             * <p>The details of online consumers in the consumer group, including the information about the thread stack traces and the consumption response time (RT). If you want to obtain the details of online consumers in the consumer group, make sure that the <strong>Detail</strong> parameter in the request is set to <strong>true</strong>. If the Detail parameter is not set to true, the value of this parameter is empty.</p>
              */
             public Builder consumerConnectionInfoList(ConsumerConnectionInfoList consumerConnectionInfoList) {
                 this.consumerConnectionInfoList = consumerConnectionInfoList;
@@ -1401,7 +1555,10 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum latency of message consumption in all topics to which the consumer group subscribe. Unit: milliseconds.
+             * <p>The maximum latency of message consumption in all topics to which the consumer group subscribes. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100857</p>
              */
             public Builder delayTime(Long delayTime) {
                 this.delayTime = delayTime;
@@ -1409,7 +1566,7 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information about message consumption by topic. If you want to obtain the information about the consumption status of each topic, make sure that the **Detail** parameter in the request is set to **true**. If the Detail parameter is not set to true, the value of this parameter is empty.
+             * <p>The information about message consumption by topic. If you want to obtain the information about the consumption status of each topic, make sure that the <strong>Detail</strong> parameter in the request is set to <strong>true</strong>. If the Detail parameter is not set to true, the value of this parameter is empty.</p>
              */
             public Builder detailInTopicList(DetailInTopicList detailInTopicList) {
                 this.detailInTopicList = detailInTopicList;
@@ -1417,7 +1574,10 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MQ_INST_111111111111_DOxxxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1425,10 +1585,11 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The most recent point in time when a message was consumed.
-             * <p>
+             * <p>The most recent point in time when a message was consumed.</p>
+             * <p>The value of this parameter is a UNIX timestamp in milliseconds.</p>
              * 
-             * The value of this parameter is a UNIX timestamp in milliseconds.
+             * <strong>example:</strong>
+             * <p>1566883844954</p>
              */
             public Builder lastTimestamp(Long lastTimestamp) {
                 this.lastTimestamp = lastTimestamp;
@@ -1436,7 +1597,10 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the consumer group is online.
+             * <p>Indicates whether the consumer group is online.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder online(Boolean online) {
                 this.online = online;
@@ -1444,11 +1608,14 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether load balancing is performed as expected. Valid values:
-             * <p>
+             * <p>Indicates whether load balancing is performed as expected. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Load balancing is performed as expected.</li>
+             * <li><strong>false</strong>: Load balancing is not performed as expected.</li>
+             * </ul>
              * 
-             * *   **true:** Load balancing is performed as expected.
-             * *   **false:** Load balancing is not performed as expected.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder rebalanceOK(Boolean rebalanceOK) {
                 this.rebalanceOK = rebalanceOK;
@@ -1456,7 +1623,10 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether all consumers in the consumer group subscribe to the same topics and tags.
+             * <p>Indicates whether all consumers in the consumer group subscribe to the same topics and tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder subscriptionSame(Boolean subscriptionSame) {
                 this.subscriptionSame = subscriptionSame;
@@ -1464,7 +1634,10 @@ public class OnsConsumerStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of accumulated messages.
+             * <p>The total number of accumulated messages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>197</p>
              */
             public Builder totalDiff(Long totalDiff) {
                 this.totalDiff = totalDiff;

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVirtualMFADeviceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateVirtualMFADeviceResponseBody</p>
  */
 public class CreateVirtualMFADeviceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VirtualMFADevice")
+    @com.aliyun.core.annotation.NameInMap("VirtualMFADevice")
     private VirtualMFADevice virtualMFADevice;
 
     private CreateVirtualMFADeviceResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateVirtualMFADeviceResponseBody extends TeaModel {
         private VirtualMFADevice virtualMFADevice; 
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C609CC97-10FE-43EB-BE32-BDC219D8F1E4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class CreateVirtualMFADeviceResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the MFA device.
+         * <p>The information about the MFA device.</p>
          */
         public Builder virtualMFADevice(VirtualMFADevice virtualMFADevice) {
             this.virtualMFADevice = virtualMFADevice;
@@ -71,14 +79,20 @@ public class CreateVirtualMFADeviceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateVirtualMFADeviceResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateVirtualMFADeviceResponseBody</p>
+     */
     public static class VirtualMFADevice extends TeaModel {
-        @NameInMap("Base32StringSeed")
+        @com.aliyun.core.annotation.NameInMap("Base32StringSeed")
         private String base32StringSeed;
 
-        @NameInMap("QRCodePNG")
+        @com.aliyun.core.annotation.NameInMap("QRCodePNG")
         private String QRCodePNG;
 
-        @NameInMap("SerialNumber")
+        @com.aliyun.core.annotation.NameInMap("SerialNumber")
         private String serialNumber;
 
         private VirtualMFADevice(Builder builder) {
@@ -122,7 +136,10 @@ public class CreateVirtualMFADeviceResponseBody extends TeaModel {
             private String serialNumber; 
 
             /**
-             * The key of the MFA device.
+             * <p>The key of the MFA device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LD3CJ23Z2VGEX6R7ZTQCOA4XL2KODS5PKH7442NLKYX2PVHSHYB7UT3TS5HA****</p>
              */
             public Builder base32StringSeed(String base32StringSeed) {
                 this.base32StringSeed = base32StringSeed;
@@ -130,7 +147,10 @@ public class CreateVirtualMFADeviceResponseBody extends TeaModel {
             }
 
             /**
-             * The Base64-encoded QR code of the key.
+             * <p>The Base64-encoded QR code of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>YXNkZmFzZDlmeW5hc2Q5OGZoODd4bXJmcThhaGU5aSBmYXNkZiBzYWRmIGFGIDRxd2VjIGEgdHEz****</p>
              */
             public Builder QRCodePNG(String QRCodePNG) {
                 this.QRCodePNG = QRCodePNG;
@@ -138,7 +158,10 @@ public class CreateVirtualMFADeviceResponseBody extends TeaModel {
             }
 
             /**
-             * The serial number of the MFA device.
+             * <p>The serial number of the MFA device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::177242285274****:mfa/device001</p>
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;

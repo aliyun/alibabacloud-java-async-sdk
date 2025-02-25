@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateControlPlaneLogRequest} extends {@link RequestModel}
  *
  * <p>UpdateControlPlaneLogRequest</p>
  */
 public class UpdateControlPlaneLogRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Body
-    @NameInMap("aliuid")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("aliuid")
     private String aliuid;
 
-    @Body
-    @NameInMap("components")
-    private java.util.List < String > components;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("components")
+    private java.util.List<String> components;
 
-    @Body
-    @NameInMap("log_project")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("log_project")
     private String logProject;
 
-    @Body
-    @NameInMap("log_ttl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("log_ttl")
     private String logTtl;
 
     private UpdateControlPlaneLogRequest(Builder builder) {
@@ -72,7 +77,7 @@ public class UpdateControlPlaneLogRequest extends Request {
     /**
      * @return components
      */
-    public java.util.List < String > getComponents() {
+    public java.util.List<String> getComponents() {
         return this.components;
     }
 
@@ -93,7 +98,7 @@ public class UpdateControlPlaneLogRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateControlPlaneLogRequest, Builder> {
         private String clusterId; 
         private String aliuid; 
-        private java.util.List < String > components; 
+        private java.util.List<String> components; 
         private String logProject; 
         private String logTtl; 
 
@@ -111,7 +116,11 @@ public class UpdateControlPlaneLogRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c5b5e80b0b64a4bf6939d2d8fbbc5****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -120,7 +129,10 @@ public class UpdateControlPlaneLogRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account.
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>162981*****</p>
          */
         public Builder aliuid(String aliuid) {
             this.putBodyParameter("aliuid", aliuid);
@@ -129,19 +141,20 @@ public class UpdateControlPlaneLogRequest extends Request {
         }
 
         /**
-         * The control plane components for which you want to enable log collection.
+         * <p>The control plane components for which you want to enable log collection.</p>
          */
-        public Builder components(java.util.List < String > components) {
+        public Builder components(java.util.List<String> components) {
             this.putBodyParameter("components", components);
             this.components = components;
             return this;
         }
 
         /**
-         * The name of the Simple Log Service project that you want to use to store the logs of control plane components.
-         * <p>
+         * <p>The name of the Simple Log Service Project that you want to use to store the logs of control plane components.</p>
+         * <p>Default value: k8s-log-$Cluster ID.</p>
          * 
-         * Default value: k8s-log-$Cluster ID.
+         * <strong>example:</strong>
+         * <p>k8s-log-c5b5e80b0b64a4bf6939d2d8fbbc5****</p>
          */
         public Builder logProject(String logProject) {
             this.putBodyParameter("log_project", logProject);
@@ -150,10 +163,11 @@ public class UpdateControlPlaneLogRequest extends Request {
         }
 
         /**
-         * The retention period of the log data stored in the Logstore. Valid values: 1 to 3000. Unit: days.
-         * <p>
+         * <p>The retention period of the log data stored in the Logstore. Valid values: 1 to 3000. Unit: days.</p>
+         * <p>Default value: 30.</p>
          * 
-         * Default value: 30.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder logTtl(String logTtl) {
             this.putBodyParameter("log_ttl", logTtl);

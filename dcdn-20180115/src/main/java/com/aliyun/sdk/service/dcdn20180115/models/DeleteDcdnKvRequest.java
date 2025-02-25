@@ -1,25 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDcdnKvRequest} extends {@link RequestModel}
  *
  * <p>DeleteDcdnKvRequest</p>
  */
 public class DeleteDcdnKvRequest extends Request {
-    @Query
-    @NameInMap("Key")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Key")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String key;
 
-    @Query
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
     private DeleteDcdnKvRequest(Builder builder) {
@@ -70,7 +70,11 @@ public class DeleteDcdnKvRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * <p>The name of the key that you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_key_1</p>
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -79,7 +83,11 @@ public class DeleteDcdnKvRequest extends Request {
         }
 
         /**
-         * The namespace that you specify when you call the PutDcdnKvNamespace operation.
+         * <p>The namespace that you specify when you call the PutDcdnKvNamespace operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ns1</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);

@@ -1,42 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTriggerInput} extends {@link TeaModel}
  *
  * <p>CreateTriggerInput</p>
  */
 public class CreateTriggerInput extends TeaModel {
-    @NameInMap("description")
-    @Validation(maxLength = 256)
+    @com.aliyun.core.annotation.NameInMap("description")
+    @com.aliyun.core.annotation.Validation(maxLength = 256)
     private String description;
 
-    @NameInMap("invocationRole")
-    @Validation(maxLength = 300)
+    @com.aliyun.core.annotation.NameInMap("invocationRole")
+    @com.aliyun.core.annotation.Validation(maxLength = 300)
     private String invocationRole;
 
-    @NameInMap("qualifier")
+    @com.aliyun.core.annotation.NameInMap("qualifier")
     private String qualifier;
 
-    @NameInMap("sourceArn")
-    @Validation(maxLength = 300, minLength = 1)
+    @com.aliyun.core.annotation.NameInMap("sourceArn")
+    @com.aliyun.core.annotation.Validation(maxLength = 300, minLength = 1)
     private String sourceArn;
 
-    @NameInMap("triggerConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("triggerConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String triggerConfig;
 
-    @NameInMap("triggerName")
-    @Validation(required = true, maxLength = 128, minLength = 1)
+    @com.aliyun.core.annotation.NameInMap("triggerName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128, minLength = 1)
     private String triggerName;
 
-    @NameInMap("triggerType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("triggerType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String triggerType;
 
     private CreateTriggerInput(Builder builder) {
@@ -148,7 +148,10 @@ public class CreateTriggerInput extends TeaModel {
         }
 
         /**
-         * triggerConfig.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;events&quot;:[&quot;oss:ObjectCreated:*&quot;],&quot;filter&quot;:{&quot;key&quot;:{&quot;prefix&quot;:&quot;/prefix&quot;,&quot;suffix&quot;:&quot;.zip&quot;}}}</p>
          */
         public Builder triggerConfig(String triggerConfig) {
             this.triggerConfig = triggerConfig;
@@ -156,7 +159,10 @@ public class CreateTriggerInput extends TeaModel {
         }
 
         /**
-         * triggerName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss_create_object_demo</p>
          */
         public Builder triggerName(String triggerName) {
             this.triggerName = triggerName;
@@ -164,7 +170,10 @@ public class CreateTriggerInput extends TeaModel {
         }
 
         /**
-         * triggerType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss</p>
          */
         public Builder triggerType(String triggerType) {
             this.triggerType = triggerType;

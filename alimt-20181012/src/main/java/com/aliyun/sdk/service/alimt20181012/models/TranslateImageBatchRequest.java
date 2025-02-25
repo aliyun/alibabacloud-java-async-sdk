@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alimt20181012.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TranslateImageBatchRequest</p>
  */
 public class TranslateImageBatchRequest extends Request {
-    @Body
-    @NameInMap("CustomTaskId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustomTaskId")
     private String customTaskId;
 
-    @Body
-    @NameInMap("Ext")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Ext")
     private String ext;
 
-    @Body
-    @NameInMap("Field")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Field")
     private String field;
 
-    @Body
-    @NameInMap("ImageUrls")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ImageUrls")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String imageUrls;
 
-    @Body
-    @NameInMap("SourceLanguage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceLanguage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceLanguage;
 
-    @Body
-    @NameInMap("TargetLanguage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TargetLanguage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetLanguage;
 
     private TranslateImageBatchRequest(Builder builder) {

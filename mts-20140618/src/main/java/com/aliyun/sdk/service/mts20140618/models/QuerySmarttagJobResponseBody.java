@@ -1,31 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySmarttagJobResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySmarttagJobResponseBody</p>
  */
 public class QuerySmarttagJobResponseBody extends TeaModel {
-    @NameInMap("JobStatus")
+    @com.aliyun.core.annotation.NameInMap("JobStatus")
     private String jobStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("Message")
+    private String message;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Results")
+    @com.aliyun.core.annotation.NameInMap("Results")
     private Results results;
 
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
     private QuerySmarttagJobResponseBody(Builder builder) {
         this.jobStatus = builder.jobStatus;
+        this.message = builder.message;
         this.requestId = builder.requestId;
         this.results = builder.results;
         this.userData = builder.userData;
@@ -44,6 +48,13 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
      */
     public String getJobStatus() {
         return this.jobStatus;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
     }
 
     /**
@@ -69,6 +80,7 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
 
     public static final class Builder {
         private String jobStatus; 
+        private String message; 
         private String requestId; 
         private Results results; 
         private String userData; 
@@ -78,6 +90,14 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
          */
         public Builder jobStatus(String jobStatus) {
             this.jobStatus = jobStatus;
+            return this;
+        }
+
+        /**
+         * Message.
+         */
+        public Builder message(String message) {
+            this.message = message;
             return this;
         }
 
@@ -111,11 +131,17 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuerySmarttagJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySmarttagJobResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private String data;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Result(Builder builder) {
@@ -172,8 +198,14 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySmarttagJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySmarttagJobResponseBody</p>
+     */
     public static class Results extends TeaModel {
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private java.util.List < Result> result;
 
         private Results(Builder builder) {

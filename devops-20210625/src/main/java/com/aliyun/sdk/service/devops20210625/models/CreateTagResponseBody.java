@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTagResponseBody} extends {@link TeaModel}
  *
  * <p>CreateTagResponseBody</p>
  */
 public class CreateTagResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private CreateTagResponseBody(Builder builder) {
@@ -131,41 +136,47 @@ public class CreateTagResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateTagResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateTagResponseBody</p>
+     */
     public static class Commit extends TeaModel {
-        @NameInMap("authorEmail")
+        @com.aliyun.core.annotation.NameInMap("authorEmail")
         private String authorEmail;
 
-        @NameInMap("authorName")
+        @com.aliyun.core.annotation.NameInMap("authorName")
         private String authorName;
 
-        @NameInMap("authoredDate")
+        @com.aliyun.core.annotation.NameInMap("authoredDate")
         private String authoredDate;
 
-        @NameInMap("committedDate")
+        @com.aliyun.core.annotation.NameInMap("committedDate")
         private String committedDate;
 
-        @NameInMap("committerEmail")
+        @com.aliyun.core.annotation.NameInMap("committerEmail")
         private String committerEmail;
 
-        @NameInMap("committerName")
+        @com.aliyun.core.annotation.NameInMap("committerName")
         private String committerName;
 
-        @NameInMap("createdAt")
+        @com.aliyun.core.annotation.NameInMap("createdAt")
         private String createdAt;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("message")
+        @com.aliyun.core.annotation.NameInMap("message")
         private String message;
 
-        @NameInMap("parentIds")
-        private java.util.List < String > parentIds;
+        @com.aliyun.core.annotation.NameInMap("parentIds")
+        private java.util.List<String> parentIds;
 
-        @NameInMap("shortId")
+        @com.aliyun.core.annotation.NameInMap("shortId")
         private String shortId;
 
-        @NameInMap("title")
+        @com.aliyun.core.annotation.NameInMap("title")
         private String title;
 
         private Commit(Builder builder) {
@@ -257,7 +268,7 @@ public class CreateTagResponseBody extends TeaModel {
         /**
          * @return parentIds
          */
-        public java.util.List < String > getParentIds() {
+        public java.util.List<String> getParentIds() {
             return this.parentIds;
         }
 
@@ -285,7 +296,7 @@ public class CreateTagResponseBody extends TeaModel {
             private String createdAt; 
             private String id; 
             private String message; 
-            private java.util.List < String > parentIds; 
+            private java.util.List<String> parentIds; 
             private String shortId; 
             private String title; 
 
@@ -364,7 +375,7 @@ public class CreateTagResponseBody extends TeaModel {
             /**
              * parentIds.
              */
-            public Builder parentIds(java.util.List < String > parentIds) {
+            public Builder parentIds(java.util.List<String> parentIds) {
                 this.parentIds = parentIds;
                 return this;
             }
@@ -392,17 +403,23 @@ public class CreateTagResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTagResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateTagResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("commit")
+        @com.aliyun.core.annotation.NameInMap("commit")
         private Commit commit;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("message")
+        @com.aliyun.core.annotation.NameInMap("message")
         private String message;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private Result(Builder builder) {

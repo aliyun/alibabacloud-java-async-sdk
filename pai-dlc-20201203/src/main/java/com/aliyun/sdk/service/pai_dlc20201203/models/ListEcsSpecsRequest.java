@@ -1,43 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEcsSpecsRequest} extends {@link RequestModel}
  *
  * <p>ListEcsSpecsRequest</p>
  */
 public class ListEcsSpecsRequest extends Request {
-    @Query
-    @NameInMap("AcceleratorType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceleratorType")
     private String acceleratorType;
 
-    @Query
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceTypes")
+    private String instanceTypes;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    private String resourceType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
     private ListEcsSpecsRequest(Builder builder) {
         super(builder);
         this.acceleratorType = builder.acceleratorType;
+        this.instanceTypes = builder.instanceTypes;
         this.order = builder.order;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.resourceType = builder.resourceType;
         this.sortBy = builder.sortBy;
     }
 
@@ -62,6 +77,13 @@ public class ListEcsSpecsRequest extends Request {
     }
 
     /**
+     * @return instanceTypes
+     */
+    public String getInstanceTypes() {
+        return this.instanceTypes;
+    }
+
+    /**
      * @return order
      */
     public String getOrder() {
@@ -83,6 +105,13 @@ public class ListEcsSpecsRequest extends Request {
     }
 
     /**
+     * @return resourceType
+     */
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    /**
      * @return sortBy
      */
     public String getSortBy() {
@@ -91,9 +120,11 @@ public class ListEcsSpecsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListEcsSpecsRequest, Builder> {
         private String acceleratorType; 
+        private String instanceTypes; 
         private String order; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String resourceType; 
         private String sortBy; 
 
         private Builder() {
@@ -103,9 +134,11 @@ public class ListEcsSpecsRequest extends Request {
         private Builder(ListEcsSpecsRequest request) {
             super(request);
             this.acceleratorType = request.acceleratorType;
+            this.instanceTypes = request.instanceTypes;
             this.order = request.order;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.resourceType = request.resourceType;
             this.sortBy = request.sortBy;
         } 
 
@@ -115,6 +148,15 @@ public class ListEcsSpecsRequest extends Request {
         public Builder acceleratorType(String acceleratorType) {
             this.putQueryParameter("AcceleratorType", acceleratorType);
             this.acceleratorType = acceleratorType;
+            return this;
+        }
+
+        /**
+         * InstanceTypes.
+         */
+        public Builder instanceTypes(String instanceTypes) {
+            this.putQueryParameter("InstanceTypes", instanceTypes);
+            this.instanceTypes = instanceTypes;
             return this;
         }
 
@@ -142,6 +184,15 @@ public class ListEcsSpecsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ResourceType.
+         */
+        public Builder resourceType(String resourceType) {
+            this.putQueryParameter("ResourceType", resourceType);
+            this.resourceType = resourceType;
             return this;
         }
 

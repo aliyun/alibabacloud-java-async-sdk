@@ -1,23 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckCommercialStatusRequest} extends {@link RequestModel}
  *
  * <p>CheckCommercialStatusRequest</p>
  */
 public class CheckCommercialStatusRequest extends Request {
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Service")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Service")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String service;
 
     private CheckCommercialStatusRequest(Builder builder) {
@@ -68,7 +74,10 @@ public class CheckCommercialStatusRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>The region ID. Default value: cn-hangzhou.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -77,7 +86,17 @@ public class CheckCommercialStatusRequest extends Request {
         }
 
         /**
-         * Service.
+         * <p>The ARMS sub-service. Valid values:</p>
+         * <ul>
+         * <li>apm: Application Monitoring</li>
+         * <li>rum: RUM</li>
+         * <li>prometheus: Managed Service for Prometheus</li>
+         * <li>xtrace: Managed Service for OpenTelemetry</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apm</p>
          */
         public Builder service(String service) {
             this.putQueryParameter("Service", service);

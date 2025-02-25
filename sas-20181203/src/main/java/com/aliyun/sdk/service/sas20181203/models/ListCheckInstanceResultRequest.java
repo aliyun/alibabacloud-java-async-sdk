@@ -1,57 +1,63 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCheckInstanceResultRequest} extends {@link RequestModel}
  *
  * <p>ListCheckInstanceResultRequest</p>
  */
 public class ListCheckInstanceResultRequest extends Request {
-    @Query
-    @NameInMap("CheckId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long checkId;
 
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("InstanceIdKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIdKey")
     private String instanceIdKey;
 
-    @Query
-    @NameInMap("InstanceIds")
-    private java.util.List < String > instanceIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    private java.util.List<String> instanceIds;
 
-    @Query
-    @NameInMap("InstanceNameKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceNameKey")
     private String instanceNameKey;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionIdKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionIdKey")
     private String regionIdKey;
 
-    @Query
-    @NameInMap("SortTypes")
-    private java.util.List < String > sortTypes;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortTypes")
+    private java.util.List<String> sortTypes;
 
-    @Query
-    @NameInMap("Statuses")
-    private java.util.List < String > statuses;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Statuses")
+    private java.util.List<String> statuses;
 
     private ListCheckInstanceResultRequest(Builder builder) {
         super(builder);
@@ -104,7 +110,7 @@ public class ListCheckInstanceResultRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
@@ -139,14 +145,14 @@ public class ListCheckInstanceResultRequest extends Request {
     /**
      * @return sortTypes
      */
-    public java.util.List < String > getSortTypes() {
+    public java.util.List<String> getSortTypes() {
         return this.sortTypes;
     }
 
     /**
      * @return statuses
      */
-    public java.util.List < String > getStatuses() {
+    public java.util.List<String> getStatuses() {
         return this.statuses;
     }
 
@@ -154,13 +160,13 @@ public class ListCheckInstanceResultRequest extends Request {
         private Long checkId; 
         private Integer currentPage; 
         private String instanceIdKey; 
-        private java.util.List < String > instanceIds; 
+        private java.util.List<String> instanceIds; 
         private String instanceNameKey; 
         private String lang; 
         private Integer pageSize; 
         private String regionIdKey; 
-        private java.util.List < String > sortTypes; 
-        private java.util.List < String > statuses; 
+        private java.util.List<String> sortTypes; 
+        private java.util.List<String> statuses; 
 
         private Builder() {
             super();
@@ -181,7 +187,11 @@ public class ListCheckInstanceResultRequest extends Request {
         } 
 
         /**
-         * The ID of the check item.
+         * <p>The ID of the check item.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23</p>
          */
         public Builder checkId(Long checkId) {
             this.putQueryParameter("CheckId", checkId);
@@ -190,7 +200,10 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -199,7 +212,10 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-uf64w4q6p9jti5gl****</p>
          */
         public Builder instanceIdKey(String instanceIdKey) {
             this.putQueryParameter("InstanceIdKey", instanceIdKey);
@@ -208,16 +224,19 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * The instance IDs of cloud services.
+         * <p>The instance IDs of cloud services.</p>
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
             this.instanceIds = instanceIds;
             return this;
         }
 
         /**
-         * The name of the instance.
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-uf64w4q6p9jti5gl****</p>
          */
         public Builder instanceNameKey(String instanceNameKey) {
             this.putQueryParameter("InstanceNameKey", instanceNameKey);
@@ -226,11 +245,14 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -239,7 +261,10 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries per page. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -248,7 +273,10 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder regionIdKey(String regionIdKey) {
             this.putQueryParameter("RegionIdKey", regionIdKey);
@@ -257,18 +285,18 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * The types of the conditions based on which the check items are sorted.
+         * <p>The types of the conditions based on which the check items are sorted.</p>
          */
-        public Builder sortTypes(java.util.List < String > sortTypes) {
+        public Builder sortTypes(java.util.List<String> sortTypes) {
             this.putQueryParameter("SortTypes", sortTypes);
             this.sortTypes = sortTypes;
             return this;
         }
 
         /**
-         * The statuses of check items.
+         * <p>The statuses of check items.</p>
          */
-        public Builder statuses(java.util.List < String > statuses) {
+        public Builder statuses(java.util.List<String> statuses) {
             this.putQueryParameter("Statuses", statuses);
             this.statuses = statuses;
             return this;

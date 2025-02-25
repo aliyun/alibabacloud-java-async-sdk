@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFileProtectDashboardResponseBody} extends {@link TeaModel}
  *
  * <p>GetFileProtectDashboardResponseBody</p>
  */
 public class GetFileProtectDashboardResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetFileProtectDashboardResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetFileProtectDashboardResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class GetFileProtectDashboardResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6673D49C-A9AB-40DD-B4A2-B92306701AE7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,17 +79,23 @@ public class GetFileProtectDashboardResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetFileProtectDashboardResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFileProtectDashboardResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("EnableRuleCount")
+        @com.aliyun.core.annotation.NameInMap("EnableRuleCount")
         private Integer enableRuleCount;
 
-        @NameInMap("PluginCount")
+        @com.aliyun.core.annotation.NameInMap("PluginCount")
         private Integer pluginCount;
 
-        @NameInMap("PluginOfflineCount")
+        @com.aliyun.core.annotation.NameInMap("PluginOfflineCount")
         private Integer pluginOfflineCount;
 
-        @NameInMap("PluginOnlineCount")
+        @com.aliyun.core.annotation.NameInMap("PluginOnlineCount")
         private Integer pluginOnlineCount;
 
         private Data(Builder builder) {
@@ -134,7 +148,10 @@ public class GetFileProtectDashboardResponseBody extends TeaModel {
             private Integer pluginOnlineCount; 
 
             /**
-             * The total number of enabled rules.
+             * <p>The total number of enabled rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder enableRuleCount(Integer enableRuleCount) {
                 this.enableRuleCount = enableRuleCount;
@@ -142,7 +159,10 @@ public class GetFileProtectDashboardResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of servers on which the Security Center agent is installed.
+             * <p>The total number of servers on which the Security Center agent is installed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder pluginCount(Integer pluginCount) {
                 this.pluginCount = pluginCount;
@@ -150,7 +170,10 @@ public class GetFileProtectDashboardResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of servers on which the Security Center agent is offline.
+             * <p>The total number of servers on which the Security Center agent is offline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pluginOfflineCount(Integer pluginOfflineCount) {
                 this.pluginOfflineCount = pluginOfflineCount;
@@ -158,7 +181,10 @@ public class GetFileProtectDashboardResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of servers on which the Security Center agent is online.
+             * <p>The total number of servers on which the Security Center agent is online.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder pluginOnlineCount(Integer pluginOnlineCount) {
                 this.pluginOnlineCount = pluginOnlineCount;

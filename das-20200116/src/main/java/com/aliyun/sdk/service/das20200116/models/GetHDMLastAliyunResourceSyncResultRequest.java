@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHDMLastAliyunResourceSyncResultRequest} extends {@link RequestModel}
  *
  * <p>GetHDMLastAliyunResourceSyncResultRequest</p>
  */
 public class GetHDMLastAliyunResourceSyncResultRequest extends Request {
-    @Query
-    @NameInMap("Uid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uid")
     private String uid;
 
-    @Query
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
-    @Query
-    @NameInMap("__context")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("__context")
     private String context;
 
-    @Query
-    @NameInMap("accessKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("accessKey")
     private String accessKey;
 
-    @Query
-    @NameInMap("signature")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("signature")
     private String signature;
 
-    @Query
-    @NameInMap("skipAuth")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("skipAuth")
     private String skipAuth;
 
-    @Query
-    @NameInMap("timestamp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("timestamp")
     private String timestamp;
 
     private GetHDMLastAliyunResourceSyncResultRequest(Builder builder) {

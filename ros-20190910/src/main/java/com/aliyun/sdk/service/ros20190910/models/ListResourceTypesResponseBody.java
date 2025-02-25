@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourceTypesResponseBody} extends {@link TeaModel}
  *
  * <p>ListResourceTypesResponseBody</p>
  */
 public class ListResourceTypesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceTypeSummaries")
+    @com.aliyun.core.annotation.NameInMap("ResourceTypeSummaries")
     private java.util.List < ResourceTypeSummaries> resourceTypeSummaries;
 
-    @NameInMap("ResourceTypes")
+    @com.aliyun.core.annotation.NameInMap("ResourceTypes")
     private java.util.List < String > resourceTypes;
 
     private ListResourceTypesResponseBody(Builder builder) {
@@ -62,7 +62,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
         private java.util.List < String > resourceTypes; 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EA00860C-ECAF-5253-A1F9-8198695A7157</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +73,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The resource type summaries.
+         * <p>The resource type summaries.</p>
          */
         public Builder resourceTypeSummaries(java.util.List < ResourceTypeSummaries> resourceTypeSummaries) {
             this.resourceTypeSummaries = resourceTypeSummaries;
@@ -78,7 +81,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The array of resource types.
+         * <p>The array of resource types.</p>
          */
         public Builder resourceTypes(java.util.List < String > resourceTypes) {
             this.resourceTypes = resourceTypes;
@@ -91,32 +94,38 @@ public class ListResourceTypesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListResourceTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourceTypesResponseBody</p>
+     */
     public static class ResourceTypeSummaries extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DefaultVersionId")
+        @com.aliyun.core.annotation.NameInMap("DefaultVersionId")
         private String defaultVersionId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EntityType")
+        @com.aliyun.core.annotation.NameInMap("EntityType")
         private String entityType;
 
-        @NameInMap("LatestVersionId")
+        @com.aliyun.core.annotation.NameInMap("LatestVersionId")
         private String latestVersionId;
 
-        @NameInMap("Provider")
+        @com.aliyun.core.annotation.NameInMap("Provider")
         private String provider;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("TotalVersionCount")
+        @com.aliyun.core.annotation.NameInMap("TotalVersionCount")
         private Integer totalVersionCount;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private ResourceTypeSummaries(Builder builder) {
@@ -214,7 +223,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The creation time. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.
+             * <p>The creation time. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-02-24T08:25:21</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -222,7 +234,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the default version.
+             * <p>The ID of the default version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder defaultVersionId(String defaultVersionId) {
                 this.defaultVersionId = defaultVersionId;
@@ -230,7 +245,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the resource type.
+             * <p>The description of the resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>It is a demo.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -238,12 +256,15 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The entity type. Valid values:
-             * <p>
+             * <p>The entity type. Valid values:</p>
+             * <ul>
+             * <li>Resource: regular resources.</li>
+             * <li>DataSource: DataSource resources.</li>
+             * <li>Module: modules.</li>
+             * </ul>
              * 
-             * *   Resource: regular resources.
-             * *   DataSource: DataSource resources.
-             * *   Module: modules.
+             * <strong>example:</strong>
+             * <p>Module</p>
              */
             public Builder entityType(String entityType) {
                 this.entityType = entityType;
@@ -251,7 +272,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the latest version.
+             * <p>The ID of the latest version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v10</p>
              */
             public Builder latestVersionId(String latestVersionId) {
                 this.latestVersionId = latestVersionId;
@@ -259,11 +283,14 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The provider of the resource type. Valid values:
-             * <p>
+             * <p>The provider of the resource type. Valid values:</p>
+             * <ul>
+             * <li>ROS: The resource type is provided by ROS.</li>
+             * <li>Self: The resource type is provided by you.</li>
+             * </ul>
              * 
-             * *   ROS: The resource type is provided by ROS.
-             * *   Self: The resource type is provided by you.
+             * <strong>example:</strong>
+             * <p>ROS</p>
              */
             public Builder provider(String provider) {
                 this.provider = provider;
@@ -271,7 +298,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MODULE::MyOrganization::MyService::MyUsecase</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -279,7 +309,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of versions.
+             * <p>The number of versions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalVersionCount(Integer totalVersionCount) {
                 this.totalVersionCount = totalVersionCount;
@@ -287,7 +320,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The update time. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.
+             * <p>The update time. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-02-24T08:25:21</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

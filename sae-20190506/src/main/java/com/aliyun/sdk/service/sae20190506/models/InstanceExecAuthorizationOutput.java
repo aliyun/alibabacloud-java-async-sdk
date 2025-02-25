@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstanceExecAuthorizationOutput} extends {@link TeaModel}
  *
  * <p>InstanceExecAuthorizationOutput</p>
  */
 public class InstanceExecAuthorizationOutput extends TeaModel {
-    @NameInMap("accessKeyId")
+    @com.aliyun.core.annotation.NameInMap("accessKeyId")
     private String accessKeyId;
 
-    @NameInMap("accountId")
+    @com.aliyun.core.annotation.NameInMap("accountId")
     private String accountId;
 
-    @NameInMap("authorization")
+    @com.aliyun.core.annotation.NameInMap("authorization")
     private String authorization;
 
-    @NameInMap("date")
+    @com.aliyun.core.annotation.NameInMap("date")
     private String date;
 
-    @NameInMap("endpoint")
+    @com.aliyun.core.annotation.NameInMap("endpoint")
     private String endpoint;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private InstanceExecAuthorizationOutput(Builder builder) {

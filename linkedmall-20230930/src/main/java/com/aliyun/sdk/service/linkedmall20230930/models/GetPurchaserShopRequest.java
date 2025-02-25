@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPurchaserShopRequest} extends {@link RequestModel}
  *
  * <p>GetPurchaserShopRequest</p>
  */
 public class GetPurchaserShopRequest extends Request {
-    @Path
-    @NameInMap("purchaserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("purchaserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String purchaserId;
 
     private GetPurchaserShopRequest(Builder builder) {
@@ -55,7 +60,10 @@ public class GetPurchaserShopRequest extends Request {
         } 
 
         /**
-         * purchaserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>56****2304</p>
          */
         public Builder purchaserId(String purchaserId) {
             this.putPathParameter("purchaserId", purchaserId);

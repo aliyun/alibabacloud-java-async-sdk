@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTaskAssignRulesResponseBody} extends {@link TeaModel}
  *
  * <p>ListTaskAssignRulesResponseBody</p>
  */
 public class ListTaskAssignRulesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListTaskAssignRulesResponseBody(Builder builder) {
@@ -191,11 +196,17 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTaskAssignRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskAssignRulesResponseBody</p>
+     */
     public static class Agent extends TeaModel {
-        @NameInMap("AgentId")
+        @com.aliyun.core.annotation.NameInMap("AgentId")
         private String agentId;
 
-        @NameInMap("AgentName")
+        @com.aliyun.core.annotation.NameInMap("AgentName")
         private String agentName;
 
         private Agent(Builder builder) {
@@ -252,9 +263,15 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTaskAssignRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskAssignRulesResponseBody</p>
+     */
     public static class Agents extends TeaModel {
-        @NameInMap("Agent")
-        private java.util.List < Agent> agent;
+        @com.aliyun.core.annotation.NameInMap("Agent")
+        private java.util.List<Agent> agent;
 
         private Agents(Builder builder) {
             this.agent = builder.agent;
@@ -271,17 +288,17 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         /**
          * @return agent
          */
-        public java.util.List < Agent> getAgent() {
+        public java.util.List<Agent> getAgent() {
             return this.agent;
         }
 
         public static final class Builder {
-            private java.util.List < Agent> agent; 
+            private java.util.List<Agent> agent; 
 
             /**
              * Agent.
              */
-            public Builder agent(java.util.List < Agent> agent) {
+            public Builder agent(java.util.List<Agent> agent) {
                 this.agent = agent;
                 return this;
             }
@@ -293,11 +310,17 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTaskAssignRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskAssignRulesResponseBody</p>
+     */
     public static class Reviewer extends TeaModel {
-        @NameInMap("ReviewerId")
+        @com.aliyun.core.annotation.NameInMap("ReviewerId")
         private String reviewerId;
 
-        @NameInMap("ReviewerName")
+        @com.aliyun.core.annotation.NameInMap("ReviewerName")
         private String reviewerName;
 
         private Reviewer(Builder builder) {
@@ -354,9 +377,15 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTaskAssignRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskAssignRulesResponseBody</p>
+     */
     public static class Reviewers extends TeaModel {
-        @NameInMap("Reviewer")
-        private java.util.List < Reviewer> reviewer;
+        @com.aliyun.core.annotation.NameInMap("Reviewer")
+        private java.util.List<Reviewer> reviewer;
 
         private Reviewers(Builder builder) {
             this.reviewer = builder.reviewer;
@@ -373,17 +402,17 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         /**
          * @return reviewer
          */
-        public java.util.List < Reviewer> getReviewer() {
+        public java.util.List<Reviewer> getReviewer() {
             return this.reviewer;
         }
 
         public static final class Builder {
-            private java.util.List < Reviewer> reviewer; 
+            private java.util.List<Reviewer> reviewer; 
 
             /**
              * Reviewer.
              */
-            public Builder reviewer(java.util.List < Reviewer> reviewer) {
+            public Builder reviewer(java.util.List<Reviewer> reviewer) {
                 this.reviewer = reviewer;
                 return this;
             }
@@ -395,11 +424,17 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTaskAssignRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskAssignRulesResponseBody</p>
+     */
     public static class RuleBasicInfo extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Rid")
+        @com.aliyun.core.annotation.NameInMap("Rid")
         private String rid;
 
         private RuleBasicInfo(Builder builder) {
@@ -456,9 +491,15 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTaskAssignRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskAssignRulesResponseBody</p>
+     */
     public static class Rules extends TeaModel {
-        @NameInMap("RuleBasicInfo")
-        private java.util.List < RuleBasicInfo> ruleBasicInfo;
+        @com.aliyun.core.annotation.NameInMap("RuleBasicInfo")
+        private java.util.List<RuleBasicInfo> ruleBasicInfo;
 
         private Rules(Builder builder) {
             this.ruleBasicInfo = builder.ruleBasicInfo;
@@ -475,17 +516,17 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         /**
          * @return ruleBasicInfo
          */
-        public java.util.List < RuleBasicInfo> getRuleBasicInfo() {
+        public java.util.List<RuleBasicInfo> getRuleBasicInfo() {
             return this.ruleBasicInfo;
         }
 
         public static final class Builder {
-            private java.util.List < RuleBasicInfo> ruleBasicInfo; 
+            private java.util.List<RuleBasicInfo> ruleBasicInfo; 
 
             /**
              * RuleBasicInfo.
              */
-            public Builder ruleBasicInfo(java.util.List < RuleBasicInfo> ruleBasicInfo) {
+            public Builder ruleBasicInfo(java.util.List<RuleBasicInfo> ruleBasicInfo) {
                 this.ruleBasicInfo = ruleBasicInfo;
                 return this;
             }
@@ -497,11 +538,17 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTaskAssignRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskAssignRulesResponseBody</p>
+     */
     public static class SamplingModeAgent extends TeaModel {
-        @NameInMap("AgentId")
+        @com.aliyun.core.annotation.NameInMap("AgentId")
         private String agentId;
 
-        @NameInMap("AgentName")
+        @com.aliyun.core.annotation.NameInMap("AgentName")
         private String agentName;
 
         private SamplingModeAgent(Builder builder) {
@@ -558,9 +605,15 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTaskAssignRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskAssignRulesResponseBody</p>
+     */
     public static class SamplingModeAgents extends TeaModel {
-        @NameInMap("SamplingModeAgent")
-        private java.util.List < SamplingModeAgent> samplingModeAgent;
+        @com.aliyun.core.annotation.NameInMap("SamplingModeAgent")
+        private java.util.List<SamplingModeAgent> samplingModeAgent;
 
         private SamplingModeAgents(Builder builder) {
             this.samplingModeAgent = builder.samplingModeAgent;
@@ -577,17 +630,17 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         /**
          * @return samplingModeAgent
          */
-        public java.util.List < SamplingModeAgent> getSamplingModeAgent() {
+        public java.util.List<SamplingModeAgent> getSamplingModeAgent() {
             return this.samplingModeAgent;
         }
 
         public static final class Builder {
-            private java.util.List < SamplingModeAgent> samplingModeAgent; 
+            private java.util.List<SamplingModeAgent> samplingModeAgent; 
 
             /**
              * SamplingModeAgent.
              */
-            public Builder samplingModeAgent(java.util.List < SamplingModeAgent> samplingModeAgent) {
+            public Builder samplingModeAgent(java.util.List<SamplingModeAgent> samplingModeAgent) {
                 this.samplingModeAgent = samplingModeAgent;
                 return this;
             }
@@ -599,29 +652,35 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTaskAssignRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskAssignRulesResponseBody</p>
+     */
     public static class SamplingMode extends TeaModel {
-        @NameInMap("AnyNumberOfDraws")
+        @com.aliyun.core.annotation.NameInMap("AnyNumberOfDraws")
         private Integer anyNumberOfDraws;
 
-        @NameInMap("Designated")
+        @com.aliyun.core.annotation.NameInMap("Designated")
         private Boolean designated;
 
-        @NameInMap("Dimension")
+        @com.aliyun.core.annotation.NameInMap("Dimension")
         private Integer dimension;
 
-        @NameInMap("Limit")
+        @com.aliyun.core.annotation.NameInMap("Limit")
         private Integer limit;
 
-        @NameInMap("NumberOfDraws")
+        @com.aliyun.core.annotation.NameInMap("NumberOfDraws")
         private Integer numberOfDraws;
 
-        @NameInMap("Proportion")
+        @com.aliyun.core.annotation.NameInMap("Proportion")
         private Float proportion;
 
-        @NameInMap("RandomInspectionNumber")
+        @com.aliyun.core.annotation.NameInMap("RandomInspectionNumber")
         private Integer randomInspectionNumber;
 
-        @NameInMap("SamplingModeAgents")
+        @com.aliyun.core.annotation.NameInMap("SamplingModeAgents")
         private SamplingModeAgents samplingModeAgents;
 
         private SamplingMode(Builder builder) {
@@ -780,11 +839,17 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTaskAssignRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskAssignRulesResponseBody</p>
+     */
     public static class SkillGroup extends TeaModel {
-        @NameInMap("SkillId")
+        @com.aliyun.core.annotation.NameInMap("SkillId")
         private String skillId;
 
-        @NameInMap("SkillName")
+        @com.aliyun.core.annotation.NameInMap("SkillName")
         private String skillName;
 
         private SkillGroup(Builder builder) {
@@ -841,9 +906,15 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTaskAssignRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskAssignRulesResponseBody</p>
+     */
     public static class SkillGroups extends TeaModel {
-        @NameInMap("SkillGroup")
-        private java.util.List < SkillGroup> skillGroup;
+        @com.aliyun.core.annotation.NameInMap("SkillGroup")
+        private java.util.List<SkillGroup> skillGroup;
 
         private SkillGroups(Builder builder) {
             this.skillGroup = builder.skillGroup;
@@ -860,17 +931,17 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         /**
          * @return skillGroup
          */
-        public java.util.List < SkillGroup> getSkillGroup() {
+        public java.util.List<SkillGroup> getSkillGroup() {
             return this.skillGroup;
         }
 
         public static final class Builder {
-            private java.util.List < SkillGroup> skillGroup; 
+            private java.util.List<SkillGroup> skillGroup; 
 
             /**
              * SkillGroup.
              */
-            public Builder skillGroup(java.util.List < SkillGroup> skillGroup) {
+            public Builder skillGroup(java.util.List<SkillGroup> skillGroup) {
                 this.skillGroup = skillGroup;
                 return this;
             }
@@ -882,62 +953,68 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTaskAssignRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskAssignRulesResponseBody</p>
+     */
     public static class TaskAssignRuleInfo extends TeaModel {
-        @NameInMap("Agents")
+        @com.aliyun.core.annotation.NameInMap("Agents")
         private Agents agents;
 
-        @NameInMap("AgentsStr")
+        @com.aliyun.core.annotation.NameInMap("AgentsStr")
         private String agentsStr;
 
-        @NameInMap("AssignmentType")
+        @com.aliyun.core.annotation.NameInMap("AssignmentType")
         private Integer assignmentType;
 
-        @NameInMap("CallTimeEnd")
+        @com.aliyun.core.annotation.NameInMap("CallTimeEnd")
         private Long callTimeEnd;
 
-        @NameInMap("CallTimeStart")
+        @com.aliyun.core.annotation.NameInMap("CallTimeStart")
         private Long callTimeStart;
 
-        @NameInMap("CallType")
+        @com.aliyun.core.annotation.NameInMap("CallType")
         private Integer callType;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DurationMax")
+        @com.aliyun.core.annotation.NameInMap("DurationMax")
         private Integer durationMax;
 
-        @NameInMap("DurationMin")
+        @com.aliyun.core.annotation.NameInMap("DurationMin")
         private Integer durationMin;
 
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Integer enabled;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("Reviewers")
+        @com.aliyun.core.annotation.NameInMap("Reviewers")
         private Reviewers reviewers;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("Rules")
+        @com.aliyun.core.annotation.NameInMap("Rules")
         private Rules rules;
 
-        @NameInMap("SamplingMode")
+        @com.aliyun.core.annotation.NameInMap("SamplingMode")
         private SamplingMode samplingMode;
 
-        @NameInMap("SkillGroups")
+        @com.aliyun.core.annotation.NameInMap("SkillGroups")
         private SkillGroups skillGroups;
 
-        @NameInMap("SkillGroupsStr")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupsStr")
         private String skillGroupsStr;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private TaskAssignRuleInfo(Builder builder) {
@@ -1283,9 +1360,15 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTaskAssignRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskAssignRulesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("TaskAssignRuleInfo")
-        private java.util.List < TaskAssignRuleInfo> taskAssignRuleInfo;
+        @com.aliyun.core.annotation.NameInMap("TaskAssignRuleInfo")
+        private java.util.List<TaskAssignRuleInfo> taskAssignRuleInfo;
 
         private Data(Builder builder) {
             this.taskAssignRuleInfo = builder.taskAssignRuleInfo;
@@ -1302,17 +1385,17 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         /**
          * @return taskAssignRuleInfo
          */
-        public java.util.List < TaskAssignRuleInfo> getTaskAssignRuleInfo() {
+        public java.util.List<TaskAssignRuleInfo> getTaskAssignRuleInfo() {
             return this.taskAssignRuleInfo;
         }
 
         public static final class Builder {
-            private java.util.List < TaskAssignRuleInfo> taskAssignRuleInfo; 
+            private java.util.List<TaskAssignRuleInfo> taskAssignRuleInfo; 
 
             /**
              * TaskAssignRuleInfo.
              */
-            public Builder taskAssignRuleInfo(java.util.List < TaskAssignRuleInfo> taskAssignRuleInfo) {
+            public Builder taskAssignRuleInfo(java.util.List<TaskAssignRuleInfo> taskAssignRuleInfo) {
                 this.taskAssignRuleInfo = taskAssignRuleInfo;
                 return this;
             }

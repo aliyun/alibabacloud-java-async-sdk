@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateTemplateByScratchRequest} extends {@link RequestModel}
  *
  * <p>GenerateTemplateByScratchRequest</p>
  */
 public class GenerateTemplateByScratchRequest extends Request {
-    @Query
-    @NameInMap("ProvisionRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProvisionRegionId")
     private String provisionRegionId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("TemplateScratchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateScratchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateScratchId;
 
-    @Query
-    @NameInMap("TemplateType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateType")
     private String templateType;
 
     private GenerateTemplateByScratchRequest(Builder builder) {
@@ -98,7 +98,10 @@ public class GenerateTemplateByScratchRequest extends Request {
         } 
 
         /**
-         * The region ID of the new node.
+         * <p>The region ID of the new node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder provisionRegionId(String provisionRegionId) {
             this.putQueryParameter("ProvisionRegionId", provisionRegionId);
@@ -107,10 +110,12 @@ public class GenerateTemplateByScratchRequest extends Request {
         }
 
         /**
-         * The region ID of the scenario.
-         * <p>
+         * <p>The region ID of the resource scenario.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -119,10 +124,12 @@ public class GenerateTemplateByScratchRequest extends Request {
         }
 
         /**
-         * The ID of the scenario.
-         * <p>
+         * <p>The ID of the resource scenario.</p>
+         * <p>For more information about how to query the IDs of resource scenarios, see <a href="https://help.aliyun.com/document_detail/363050.html">ListTemplateScratches</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to query the IDs of scenarios, see [ListTemplateScratches](~~363050~~).
+         * <strong>example:</strong>
+         * <p>ts-aa9c62feab844a6b****</p>
          */
         public Builder templateScratchId(String templateScratchId) {
             this.putQueryParameter("TemplateScratchId", templateScratchId);
@@ -131,7 +138,10 @@ public class GenerateTemplateByScratchRequest extends Request {
         }
 
         /**
-         * The type of the template that Resource Orchestration Service (ROS) generates. ROS can generate templates of the ROS and Terraform types. Default value: ROS.
+         * <p>The type of the template that Resource Orchestration Service (ROS) generates. ROS can generate templates of the ROS and Terraform types. Default value: ROS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ROS</p>
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);

@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetAuditSecurityIpRequest} extends {@link RequestModel}
  *
  * <p>SetAuditSecurityIpRequest</p>
  */
 public class SetAuditSecurityIpRequest extends Request {
-    @Query
-    @NameInMap("Ips")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ips")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ips;
 
-    @Query
-    @NameInMap("OperateMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperateMode")
     private String operateMode;
 
-    @Query
-    @NameInMap("SecurityGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupName")
     private String securityGroupName;
 
     private SetAuditSecurityIpRequest(Builder builder) {
@@ -83,11 +88,15 @@ public class SetAuditSecurityIpRequest extends Request {
         } 
 
         /**
-         * The IP addresses to be added to a review security group. You can add a maximum of 100 IP addresses to each review security group. Separate multiple IP addresses with commas (,). You can enter individual IP addresses or a CIDR block.
-         * <p>
+         * <p>The IP addresses that you want to add to the review security group. You can add a maximum of 100 IP addresses to a review security group. Separate multiple IP addresses with commas (,). You can add IP addresses in the following formats to review security groups:</p>
+         * <ul>
+         * <li>IP address: 192.168.0.1</li>
+         * <li>CIDR block: 192.168.0.1/24. /24 indicates that the prefix of the CIDR block is 24 bits in length. You can replace 24 with a value that ranges <code>from 1 to 32</code>.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Individual IP address: for example, 10.23.12.24
-         * *   CIDR block: for example, 10.23.12.24/24, where /24 indicates that the prefix of the CIDR block is 24 bits in length. You can replace 24 with a value that ranges from `1 to 32`.
+         * <strong>example:</strong>
+         * <p>192.168.0.1</p>
          */
         public Builder ips(String ips) {
             this.putQueryParameter("Ips", ips);
@@ -96,12 +105,18 @@ public class SetAuditSecurityIpRequest extends Request {
         }
 
         /**
-         * The operation type. Valid values:
-         * <p>
+         * <p>The operation type. Valid values:</p>
+         * <ul>
+         * <li><strong>Append</strong> (default): adds the IP addresses to the original whitelist.</li>
+         * <li><strong>Cover</strong>: overwrites the original whitelist.</li>
+         * <li><strong>Delete</strong>: removes the IP addresses from the original whitelist.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If the value that you specify is invalid, the default value is used.</p>
+         * </blockquote>
          * 
-         * *   **Append**: adds the IP addresses to the original whitelist. This is the default value.
-         * *   **Cover**: overwrites the original whitelist.
-         * *   **Delete**: removes the IP addresses from the original whitelist.
+         * <strong>example:</strong>
+         * <p>Cover</p>
          */
         public Builder operateMode(String operateMode) {
             this.putQueryParameter("OperateMode", operateMode);
@@ -110,7 +125,10 @@ public class SetAuditSecurityIpRequest extends Request {
         }
 
         /**
-         * The name of the review security group. Default value: **Default**. You can specify a maximum of 10 review security groups.
+         * <p>The name of the review security group. Default value: <strong>Default</strong>. You can specify a maximum of 10 review security groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default</p>
          */
         public Builder securityGroupName(String securityGroupName) {
             this.putQueryParameter("SecurityGroupName", securityGroupName);

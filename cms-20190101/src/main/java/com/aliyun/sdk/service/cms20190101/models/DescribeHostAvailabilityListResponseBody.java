@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHostAvailabilityListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHostAvailabilityListResponseBody</p>
  */
 public class DescribeHostAvailabilityListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TaskList")
+    @com.aliyun.core.annotation.NameInMap("TaskList")
     private TaskList taskList;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private DescribeHostAvailabilityListResponseBody(Builder builder) {
@@ -98,10 +98,13 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * >  The value 200 indicates that the call was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -109,7 +112,10 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified resource is not found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,10 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4A288E86-45C3-4858-9DB0-6D85B10BD92A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -125,11 +134,14 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -137,7 +149,7 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the availability monitoring tasks.
+         * <p>The details of the availability monitoring tasks.</p>
          */
         public Builder taskList(TaskList taskList) {
             this.taskList = taskList;
@@ -145,7 +157,10 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -158,20 +173,26 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHostAvailabilityListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHostAvailabilityListResponseBody</p>
+     */
     public static class EscalationList extends TeaModel {
-        @NameInMap("Aggregate")
+        @com.aliyun.core.annotation.NameInMap("Aggregate")
         private String aggregate;
 
-        @NameInMap("MetricName")
+        @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("Times")
+        @com.aliyun.core.annotation.NameInMap("Times")
         private String times;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private EscalationList(Builder builder) {
@@ -233,14 +254,17 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The method used to calculate metric values that trigger alerts. Valid values:
-             * <p>
+             * <p>The method used to calculate metric values that trigger alerts. Valid values:</p>
+             * <ul>
+             * <li>Value: the value of the HTTP status code</li>
+             * <li>Average: the average HTTP response time</li>
+             * <li>Value: the value of the Telnet status code</li>
+             * <li>TelnetLatency: the average Telnet response time</li>
+             * <li>Average: the average Ping packet loss rate</li>
+             * </ul>
              * 
-             * *   Value: the value of the HTTP status code
-             * *   Average: the average HTTP response time
-             * *   Value: the value of the Telnet status code
-             * *   TelnetLatency: the average Telnet response time
-             * *   Average: the average Ping packet loss rate
+             * <strong>example:</strong>
+             * <p>Value</p>
              */
             public Builder aggregate(String aggregate) {
                 this.aggregate = aggregate;
@@ -248,14 +272,17 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric. Valid values:
-             * <p>
+             * <p>The name of the metric. Valid values:</p>
+             * <ul>
+             * <li>HttpStatus</li>
+             * <li>HttpLatency</li>
+             * <li>TelnetStatus</li>
+             * <li>TelnetLatency</li>
+             * <li>PingLostRate</li>
+             * </ul>
              * 
-             * *   HttpStatus: HTTP status code
-             * *   HttpLatency: HTTP response time
-             * *   TelnetStatus: Telnet status code
-             * *   TelnetLatency: Telnet response time
-             * *   PingLostRate: Ping packet loss rate
+             * <strong>example:</strong>
+             * <p>HttpStatus</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -263,14 +290,17 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * The comparison operator that is used in the alert rule. Valid values:
-             * <p>
+             * <p>The comparison operator that is used in the alert rule. Valid values:</p>
+             * <ul>
+             * <li><code>&gt;</code></li>
+             * <li><code>&gt;=</code></li>
+             * <li><code>&lt;</code></li>
+             * <li><code>&lt;=</code></li>
+             * <li><code>=</code></li>
+             * </ul>
              * 
-             * *   `>`
-             * *   `>=`
-             * *   `<`
-             * *   `<=`
-             * *   `=`
+             * <strong>example:</strong>
+             * <p>=</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -278,7 +308,10 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * The consecutive number of times for which the metric value is measured before an alert is triggered.
+             * <p>The consecutive number of times for which the metric value is measured before an alert is triggered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder times(String times) {
                 this.times = times;
@@ -286,7 +319,10 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * The alert threshold.
+             * <p>The alert threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>400</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -300,8 +336,14 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHostAvailabilityListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHostAvailabilityListResponseBody</p>
+     */
     public static class AlertConfigEscalationList extends TeaModel {
-        @NameInMap("escalationList")
+        @com.aliyun.core.annotation.NameInMap("escalationList")
         private java.util.List < EscalationList> escalationList;
 
         private AlertConfigEscalationList(Builder builder) {
@@ -341,17 +383,23 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHostAvailabilityListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHostAvailabilityListResponseBody</p>
+     */
     public static class Target extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("JsonParams")
+        @com.aliyun.core.annotation.NameInMap("JsonParams")
         private String jsonParams;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
         private Target(Builder builder) {
@@ -404,7 +452,18 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             private String level; 
 
             /**
-             * Arn.
+             * <p>The Alibaba Cloud Resource Name (ARN) of the function.</p>
+             * <p>Format: <code>arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}</code>. Fields:</p>
+             * <ul>
+             * <li>Service: the service code</li>
+             * <li>Region: the region ID</li>
+             * <li>Account: the ID of the Alibaba Cloud account</li>
+             * <li>ResourceType: the resource type</li>
+             * <li>ResourceId: the resource ID.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:mns:cn-hangzhou:17754132319*****:/queues/test/messages</p>
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -412,7 +471,10 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the resource that triggers the alert.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -420,7 +482,10 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * JsonParams.
+             * <p>The JSON-formatted parameters of the alert callback.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;key1&quot;:&quot;value1&quot;}</p>
              */
             public Builder jsonParams(String jsonParams) {
                 this.jsonParams = jsonParams;
@@ -428,7 +493,15 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>The alert level. Valid values:</p>
+             * <ul>
+             * <li>INFO</li>
+             * <li>WARN</li>
+             * <li>CRITICAL</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>INFO</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -442,8 +515,14 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHostAvailabilityListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHostAvailabilityListResponseBody</p>
+     */
     public static class TargetList extends TeaModel {
-        @NameInMap("Target")
+        @com.aliyun.core.annotation.NameInMap("Target")
         private java.util.List < Target> target;
 
         private TargetList(Builder builder) {
@@ -483,26 +562,32 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHostAvailabilityListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHostAvailabilityListResponseBody</p>
+     */
     public static class AlertConfig extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Integer endTime;
 
-        @NameInMap("EscalationList")
+        @com.aliyun.core.annotation.NameInMap("EscalationList")
         private AlertConfigEscalationList escalationList;
 
-        @NameInMap("NotifyType")
+        @com.aliyun.core.annotation.NameInMap("NotifyType")
         private Integer notifyType;
 
-        @NameInMap("SilenceTime")
+        @com.aliyun.core.annotation.NameInMap("SilenceTime")
         private Integer silenceTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Integer startTime;
 
-        @NameInMap("TargetList")
+        @com.aliyun.core.annotation.NameInMap("TargetList")
         private TargetList targetList;
 
-        @NameInMap("WebHook")
+        @com.aliyun.core.annotation.NameInMap("WebHook")
         private String webHook;
 
         private AlertConfig(Builder builder) {
@@ -582,12 +667,14 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             private String webHook; 
 
             /**
-             * The end of the time period during which the alert rule is effective. Valid values: 0 to 23.
-             * <p>
+             * <p>The end of the time period during which the alert rule is effective. Valid values: 0 to 23.</p>
+             * <p>For example, if the <code>AlertConfig.StartTime</code> parameter is set to 0 and the <code>AlertConfig.EndTime</code> parameter is set to 22, the alert rule is effective from 00:00:00 to 22:00:00.</p>
+             * <blockquote>
+             * <p> Alert notifications are sent based on the specified threshold only if the alert rule is effective.</p>
+             * </blockquote>
              * 
-             * For example, if the `AlertConfig.StartTime` parameter is set to 0 and the `AlertConfig.EndTime` parameter is set to 22, the alert rule is effective from 00:00:00 to 22:00:00.
-             * 
-             * >  Alert notifications are sent based on the specified threshold only if the alert rule is effective.
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder endTime(Integer endTime) {
                 this.endTime = endTime;
@@ -595,7 +682,7 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * The trigger conditions of the alert rule.
+             * <p>The trigger conditions of the alert rule.</p>
              */
             public Builder escalationList(AlertConfigEscalationList escalationList) {
                 this.escalationList = escalationList;
@@ -603,10 +690,15 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * The alert notification methods. Valid values:
-             * <p>
+             * <p>The alert notification methods. Valid values:</p>
+             * <ul>
+             * <li>2: Alert notifications are sent by using emails and DingTalk chatbots.</li>
+             * <li>1: Alert notifications are sent by using emails and DingTalk chatbots.</li>
+             * <li>0: Alert notifications are sent by using emails and DingTalk chatbots.</li>
+             * </ul>
              * 
-             * 0: Alert notifications are sent by using emails and DingTalk chatbots.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder notifyType(Integer notifyType) {
                 this.notifyType = notifyType;
@@ -614,7 +706,10 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * The mute period during which new alerts are not sent even if the trigger conditions are met. Unit: seconds. Default value: 86400.
+             * <p>The mute period during which new alerts are not sent even if the trigger conditions are met. Unit: seconds. Default value: 86400.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86400</p>
              */
             public Builder silenceTime(Integer silenceTime) {
                 this.silenceTime = silenceTime;
@@ -622,12 +717,14 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the time period during which the alert rule is effective. Valid values: 0 to 23.
-             * <p>
+             * <p>The beginning of the time period during which the alert rule is effective. Valid values: 0 to 23.</p>
+             * <p>For example, if the <code>AlertConfig.StartTime</code> parameter is set to 0 and the <code>AlertConfig.EndTime</code> parameter is set to 22, the alert rule is effective from 00:00:00 to 22:00:00.</p>
+             * <blockquote>
+             * <p> Alert notifications are sent based on the specified threshold only if the alert rule is effective.</p>
+             * </blockquote>
              * 
-             * For example, if the `AlertConfig.StartTime` parameter is set to 0 and the `AlertConfig.EndTime` parameter is set to 22, the alert rule is effective from 00:00:00 to 22:00:00.
-             * 
-             * >  Alert notifications are sent based on the specified threshold only if the alert rule is effective.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder startTime(Integer startTime) {
                 this.startTime = startTime;
@@ -635,7 +732,7 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * TargetList.
+             * <p>The monitored resources.</p>
              */
             public Builder targetList(TargetList targetList) {
                 this.targetList = targetList;
@@ -643,10 +740,11 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * The callback URL.
-             * <p>
+             * <p>The callback URL.</p>
+             * <p>CloudMonitor pushes an alert notification to the specified callback URL by sending an HTTP POST request. Only the HTTP protocol is supported.</p>
              * 
-             * CloudMonitor pushes an alert notification to the specified callback URL by sending an HTTP POST request. Only the HTTP protocol is supported.
+             * <strong>example:</strong>
+             * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>
              */
             public Builder webHook(String webHook) {
                 this.webHook = webHook;
@@ -660,8 +758,14 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHostAvailabilityListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHostAvailabilityListResponseBody</p>
+     */
     public static class Instances extends TeaModel {
-        @NameInMap("Instance")
+        @com.aliyun.core.annotation.NameInMap("Instance")
         private java.util.List < String > instance;
 
         private Instances(Builder builder) {
@@ -701,29 +805,35 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHostAvailabilityListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHostAvailabilityListResponseBody</p>
+     */
     public static class TaskOption extends TeaModel {
-        @NameInMap("HttpKeyword")
+        @com.aliyun.core.annotation.NameInMap("HttpKeyword")
         private String httpKeyword;
 
-        @NameInMap("HttpMethod")
+        @com.aliyun.core.annotation.NameInMap("HttpMethod")
         private String httpMethod;
 
-        @NameInMap("HttpNegative")
+        @com.aliyun.core.annotation.NameInMap("HttpNegative")
         private Boolean httpNegative;
 
-        @NameInMap("HttpPostContent")
+        @com.aliyun.core.annotation.NameInMap("HttpPostContent")
         private String httpPostContent;
 
-        @NameInMap("HttpResponseCharset")
+        @com.aliyun.core.annotation.NameInMap("HttpResponseCharset")
         private String httpResponseCharset;
 
-        @NameInMap("HttpURI")
+        @com.aliyun.core.annotation.NameInMap("HttpURI")
         private String httpURI;
 
-        @NameInMap("Interval")
+        @com.aliyun.core.annotation.NameInMap("Interval")
         private Integer interval;
 
-        @NameInMap("TelnetOrPingHost")
+        @com.aliyun.core.annotation.NameInMap("TelnetOrPingHost")
         private String telnetOrPingHost;
 
         private TaskOption(Builder builder) {
@@ -812,7 +922,10 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             private String telnetOrPingHost; 
 
             /**
-             * The response to the HTTP request.
+             * <p>The response to the HTTP request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder httpKeyword(String httpKeyword) {
                 this.httpKeyword = httpKeyword;
@@ -820,12 +933,15 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP request method. Valid values:
-             * <p>
+             * <p>The HTTP request method. Valid values:</p>
+             * <ul>
+             * <li>GET</li>
+             * <li>POST</li>
+             * <li>HEAD</li>
+             * </ul>
              * 
-             * *   GET
-             * *   POST
-             * *   HEAD
+             * <strong>example:</strong>
+             * <p>GET</p>
              */
             public Builder httpMethod(String httpMethod) {
                 this.httpMethod = httpMethod;
@@ -833,11 +949,14 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * The method to trigger an alert. The alert can be triggered based on whether the specified alert rule is included in the response body. Valid values:
-             * <p>
+             * <p>The method to trigger an alert. The alert can be triggered based on whether the specified alert rule is included in the response body. Valid values:</p>
+             * <ul>
+             * <li>true: If the HTTP response body includes the alert rule, an alert is triggered.</li>
+             * <li>false: If the HTTP response does not include the alert rule, an alert is triggered.</li>
+             * </ul>
              * 
-             * *   true: If the HTTP response body includes the alert rule, an alert is triggered.
-             * *   false: If the HTTP response does not include the alert rule, an alert is triggered.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder httpNegative(Boolean httpNegative) {
                 this.httpNegative = httpNegative;
@@ -845,7 +964,10 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the HTTP POST request.
+             * <p>The content of the HTTP POST request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>params1=paramsValue1</p>
              */
             public Builder httpPostContent(String httpPostContent) {
                 this.httpPostContent = httpPostContent;
@@ -853,7 +975,10 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * The character set that is used in the HTTP response.
+             * <p>The character set that is used in the HTTP response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UTF-8</p>
              */
             public Builder httpResponseCharset(String httpResponseCharset) {
                 this.httpResponseCharset = httpResponseCharset;
@@ -861,7 +986,10 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * The URI that you want to monitor. If the TaskType parameter is set to HTTP, this parameter is required.
+             * <p>The URI that you want to monitor. If the TaskType parameter is set to HTTP, this parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>
              */
             public Builder httpURI(String httpURI) {
                 this.httpURI = httpURI;
@@ -869,7 +997,10 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * The interval at which detection requests are sent. Unit: seconds.
+             * <p>The interval at which detection requests are sent. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -877,7 +1008,10 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name or IP address that you want to monitor.
+             * <p>The domain name or IP address that you want to monitor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ssh.aliyun.com</p>
              */
             public Builder telnetOrPingHost(String telnetOrPingHost) {
                 this.telnetOrPingHost = telnetOrPingHost;
@@ -891,35 +1025,41 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHostAvailabilityListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHostAvailabilityListResponseBody</p>
+     */
     public static class NodeTaskConfig extends TeaModel {
-        @NameInMap("AlertConfig")
+        @com.aliyun.core.annotation.NameInMap("AlertConfig")
         private AlertConfig alertConfig;
 
-        @NameInMap("Disabled")
+        @com.aliyun.core.annotation.NameInMap("Disabled")
         private Boolean disabled;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private Long groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Instances")
+        @com.aliyun.core.annotation.NameInMap("Instances")
         private Instances instances;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
-        @NameInMap("TaskOption")
+        @com.aliyun.core.annotation.NameInMap("TaskOption")
         private TaskOption taskOption;
 
-        @NameInMap("TaskScope")
+        @com.aliyun.core.annotation.NameInMap("TaskScope")
         private String taskScope;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
         private NodeTaskConfig(Builder builder) {
@@ -1026,7 +1166,7 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * The configurations of the alert rule.
+             * <p>The configurations of the alert rule.</p>
              */
             public Builder alertConfig(AlertConfig alertConfig) {
                 this.alertConfig = alertConfig;
@@ -1034,11 +1174,14 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the availability monitoring task is disabled. Valid values:
-             * <p>
+             * <p>Indicates whether the availability monitoring task is disabled. Valid values:</p>
+             * <ul>
+             * <li>true: The availability monitoring task is disabled.</li>
+             * <li>false: The availability monitoring task is enabled.</li>
+             * </ul>
              * 
-             * *   true: The availability monitoring task is disabled.
-             * *   false: The availability monitoring task is enabled.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder disabled(Boolean disabled) {
                 this.disabled = disabled;
@@ -1046,7 +1189,10 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application group.
+             * <p>The ID of the application group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -1054,7 +1200,10 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application group.
+             * <p>The name of the application group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Group_ECS</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -1062,7 +1211,10 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the availability monitoring task.
+             * <p>The ID of the availability monitoring task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1070,7 +1222,7 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * The ECS instances that are monitored.
+             * <p>The ECS instances that are monitored.</p>
              */
             public Builder instances(Instances instances) {
                 this.instances = instances;
@@ -1078,7 +1230,10 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the availability monitoring task.
+             * <p>The name of the availability monitoring task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs_instance</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -1086,7 +1241,7 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * The optional parameters of the availability monitoring task.
+             * <p>The optional parameters of the availability monitoring task.</p>
              */
             public Builder taskOption(TaskOption taskOption) {
                 this.taskOption = taskOption;
@@ -1094,11 +1249,14 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * The range of instances that are monitored by the availability monitoring task. Valid values:
-             * <p>
+             * <p>The range of instances that are monitored by the availability monitoring task. Valid values:</p>
+             * <ul>
+             * <li>GROUP: All ECS instances in the application group are monitored.</li>
+             * <li>GROUP_SPEC_INSTANCE: Specified ECS instances in the application group are monitored.</li>
+             * </ul>
              * 
-             * *   GROUP: All ECS instances in the application group are monitored.
-             * *   GROUP_SPEC_INSTANCE: Specified ECS instances in the application group are monitored.
+             * <strong>example:</strong>
+             * <p>GROUP</p>
              */
             public Builder taskScope(String taskScope) {
                 this.taskScope = taskScope;
@@ -1106,12 +1264,15 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the availability monitoring task. Valid values:
-             * <p>
+             * <p>The task type. Valid values:</p>
+             * <ul>
+             * <li>PING</li>
+             * <li>TELNET</li>
+             * <li>HTTP</li>
+             * </ul>
              * 
-             * *   PING
-             * *   TELNET
-             * *   HTTP
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -1125,8 +1286,14 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHostAvailabilityListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHostAvailabilityListResponseBody</p>
+     */
     public static class TaskList extends TeaModel {
-        @NameInMap("NodeTaskConfig")
+        @com.aliyun.core.annotation.NameInMap("NodeTaskConfig")
         private java.util.List < NodeTaskConfig> nodeTaskConfig;
 
         private TaskList(Builder builder) {

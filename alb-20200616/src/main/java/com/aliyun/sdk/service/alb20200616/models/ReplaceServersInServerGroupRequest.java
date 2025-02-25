@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReplaceServersInServerGroupRequest} extends {@link RequestModel}
  *
  * <p>ReplaceServersInServerGroupRequest</p>
  */
 public class ReplaceServersInServerGroupRequest extends Request {
-    @Query
-    @NameInMap("AddedServers")
-    @Validation(required = true)
-    private java.util.List < AddedServers> addedServers;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddedServers")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<AddedServers> addedServers;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("RemovedServers")
-    @Validation(required = true)
-    private java.util.List < RemovedServers> removedServers;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RemovedServers")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<RemovedServers> removedServers;
 
-    @Query
-    @NameInMap("ServerGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serverGroupId;
 
     private ReplaceServersInServerGroupRequest(Builder builder) {
@@ -60,7 +65,7 @@ public class ReplaceServersInServerGroupRequest extends Request {
     /**
      * @return addedServers
      */
-    public java.util.List < AddedServers> getAddedServers() {
+    public java.util.List<AddedServers> getAddedServers() {
         return this.addedServers;
     }
 
@@ -81,7 +86,7 @@ public class ReplaceServersInServerGroupRequest extends Request {
     /**
      * @return removedServers
      */
-    public java.util.List < RemovedServers> getRemovedServers() {
+    public java.util.List<RemovedServers> getRemovedServers() {
         return this.removedServers;
     }
 
@@ -93,10 +98,10 @@ public class ReplaceServersInServerGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ReplaceServersInServerGroupRequest, Builder> {
-        private java.util.List < AddedServers> addedServers; 
+        private java.util.List<AddedServers> addedServers; 
         private String clientToken; 
         private Boolean dryRun; 
-        private java.util.List < RemovedServers> removedServers; 
+        private java.util.List<RemovedServers> removedServers; 
         private String serverGroupId; 
 
         private Builder() {
@@ -113,21 +118,24 @@ public class ReplaceServersInServerGroupRequest extends Request {
         } 
 
         /**
-         * The backend servers that you want to add to the server group. You can specify up to 40 backend servers in each call.
+         * <p>The backend servers. You can specify at most 200 servers in each call.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder addedServers(java.util.List < AddedServers> addedServers) {
+        public Builder addedServers(java.util.List<AddedServers> addedServers) {
             this.putQueryParameter("AddedServers", addedServers);
             this.addedServers = addedServers;
             return this;
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>593B0448-D13E-4C56-AC0D-FDF0FDE0E9A3</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -136,11 +144,14 @@ public class ReplaceServersInServerGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a <code>2xx</code> HTTP status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: performs a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a `2xx` HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -149,19 +160,24 @@ public class ReplaceServersInServerGroupRequest extends Request {
         }
 
         /**
-         * The backend servers that you want to remove.
+         * <p>The backend servers that you want to remove.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder removedServers(java.util.List < RemovedServers> removedServers) {
+        public Builder removedServers(java.util.List<RemovedServers> removedServers) {
             this.putQueryParameter("RemovedServers", removedServers);
             this.removedServers = removedServers;
             return this;
         }
 
         /**
-         * The ID of the server group.
-         * <p>
+         * <p>The ID of the server group.</p>
+         * <blockquote>
+         * <p>You cannot perform this operation on a server group of the Function type.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You cannot perform this operation on a server group of the Function type.
+         * <strong>example:</strong>
+         * <p>sgp-5114d593o96qxy****</p>
          */
         public Builder serverGroupId(String serverGroupId) {
             this.putQueryParameter("ServerGroupId", serverGroupId);
@@ -176,24 +192,30 @@ public class ReplaceServersInServerGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ReplaceServersInServerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>ReplaceServersInServerGroupRequest</p>
+     */
     public static class AddedServers extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("ServerId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ServerId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String serverId;
 
-        @NameInMap("ServerIp")
+        @com.aliyun.core.annotation.NameInMap("ServerIp")
         private String serverIp;
 
-        @NameInMap("ServerType")
+        @com.aliyun.core.annotation.NameInMap("ServerType")
         private String serverType;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private AddedServers(Builder builder) {
@@ -264,7 +286,10 @@ public class ReplaceServersInServerGroupRequest extends Request {
             private Integer weight; 
 
             /**
-             * The description of the backend server. The description must be 2 to 256 characters in length, and can contain letters, digits, periods (.), underscores (\_), hyphens (-), commas (,), semicolons (;), forward slashes (/), and at signs (@). You can specify at most 40 servers in each call.
+             * <p>The description of the backend server. The description must be 2 to 256 characters in length, and cannot start with http:// or https://.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -272,7 +297,10 @@ public class ReplaceServersInServerGroupRequest extends Request {
             }
 
             /**
-             * The port used by the server group. Valid values: **1** to **65535**. You can specify at most 40 servers in each call.
+             * <p>The port used by the backend server in the server group. Valid values: <strong>1</strong> to <strong>65535</strong>. You can specify at most 200 servers in each call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -280,13 +308,18 @@ public class ReplaceServersInServerGroupRequest extends Request {
             }
 
             /**
-             * The ID of the backend server. You can specify up to 40 server IDs in each call.
-             * <p>
+             * <p>The ID of the backend server. You can specify at most 200 servers in each call.</p>
+             * <ul>
+             * <li>If the server group is of the <strong>Instance</strong> type, set ServerId to the ID of a resource of the <strong>Ecs</strong>, <strong>Eni</strong>, or <strong>Eci</strong> type.</li>
+             * <li>If the server group is of the <strong>Ip</strong> type, set ServerId to IP addresses.</li>
+             * </ul>
+             * <blockquote>
+             * <p> You cannot perform this operation on a server group of the Function Compute type. You can call the <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> operation to query the type of server groups.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * *   If the server group type is **Instance**, set the ServerId parameter to the ID of an ECS instance, an ENI, or an elastic container instance. These backend servers are specified by **Ecs**, **Eni**, or **Eci**.
-             * *   If the server group type is **Ip**, set the ServerId parameter to an IP address specified in the server group.
-             * 
-             * > You cannot perform this operation on a server group of the Function type. You can call the [ListServerGroups](~~213627~~) operation to query information about the server group type so that you can set ServerId to a proper value.
+             * <strong>example:</strong>
+             * <p>i-bp1f9kdprbgy9uiu****</p>
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -294,7 +327,10 @@ public class ReplaceServersInServerGroupRequest extends Request {
             }
 
             /**
-             * The IP address in inclusive ENI mode. You can specify at most 40 servers in each call.
+             * <p>The IP address of the elastic network interface (ENI) in exclusive mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.1</p>
              */
             public Builder serverIp(String serverIp) {
                 this.serverIp = serverIp;
@@ -302,12 +338,15 @@ public class ReplaceServersInServerGroupRequest extends Request {
             }
 
             /**
-             * The type of the backend server that you want to remove from the server group. You can specify up to 40 backend servers in each call. Valid values:
-             * <p>
+             * <p>The type of backend server. You can specify at most 200 servers in each call. Valid values:</p>
+             * <ul>
+             * <li><strong>Ecs</strong>: Elastic Compute Service (ECS) instance</li>
+             * <li><strong>Eni</strong>: ENI</li>
+             * <li><strong>Eci</strong>: elastic container instance</li>
+             * </ul>
              * 
-             * *   **Ecs**
-             * *   **Eni**
-             * *   **Eci**
+             * <strong>example:</strong>
+             * <p>Ecs</p>
              */
             public Builder serverType(String serverType) {
                 this.serverType = serverType;
@@ -315,10 +354,11 @@ public class ReplaceServersInServerGroupRequest extends Request {
             }
 
             /**
-             * The weight of the backend server that you want to add to the server group. You can specify up to 40 backend servers in each call.
-             * <p>
+             * <p>The weight of the backend server. You can specify at most 200 servers in each call.</p>
+             * <p>Valid values: <strong>0</strong> to <strong>100</strong>. Default value: <strong>100</strong>. If the value is set to <strong>0</strong>, no requests are forwarded to the server.</p>
              * 
-             * Valid values: **0** to **100**. Default value: **100**. If the weight of a backend server is set to **0**, no requests are forwarded to the backend server.
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -332,18 +372,24 @@ public class ReplaceServersInServerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ReplaceServersInServerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>ReplaceServersInServerGroupRequest</p>
+     */
     public static class RemovedServers extends TeaModel {
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("ServerId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ServerId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String serverId;
 
-        @NameInMap("ServerIp")
+        @com.aliyun.core.annotation.NameInMap("ServerIp")
         private String serverIp;
 
-        @NameInMap("ServerType")
+        @com.aliyun.core.annotation.NameInMap("ServerType")
         private String serverType;
 
         private RemovedServers(Builder builder) {
@@ -396,7 +442,10 @@ public class ReplaceServersInServerGroupRequest extends Request {
             private String serverType; 
 
             /**
-             * The port that is used by the backend server. Valid values: **1** to **65535**. You can specify at most 40 servers in each call.
+             * <p>The port that is used by the backend server. Valid values: <strong>1</strong> to <strong>65535</strong>. You can specify at most 200 servers in each call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>81</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -404,13 +453,18 @@ public class ReplaceServersInServerGroupRequest extends Request {
             }
 
             /**
-             * The ID of the backend server. You can specify up to 40 server IDs in each call.
-             * <p>
+             * <p>The ID of the backend server. You can specify at most 200 servers in each call.</p>
+             * <ul>
+             * <li>If the server group is of the <strong>Instance</strong> type, set ServerId to the ID of a resource of the <strong>Ecs</strong>, <strong>Eni</strong>, or <strong>Eci</strong> type.</li>
+             * <li>If the server group is of the <strong>Ip</strong> type, set ServerId to IP addresses.</li>
+             * </ul>
+             * <blockquote>
+             * <p> You cannot perform this operation on a server group of the Function Compute type. You can call the <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> operation to query the type of server groups.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * *   If the server group type is **Instance**, set the ServerId parameter to the ID of an ECS instance, an ENI, or an elastic container instance. These backend servers are specified by **Ecs**, **Eni**, or **Eci**.
-             * *   If the server group type is **Ip**, set the ServerId parameter to an IP address specified in the server group.
-             * 
-             * > You cannot perform this operation on a server group of the Function type. You can call the [ListServerGroups](~~213627~~) operation to query information about the server group type so that you can set ServerId to a proper value.
+             * <strong>example:</strong>
+             * <p>ecs-bp1ac9uozods2uc****</p>
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -418,7 +472,10 @@ public class ReplaceServersInServerGroupRequest extends Request {
             }
 
             /**
-             * The IP address in inclusive ENI mode. You can specify at most 40 servers in each call.
+             * <p>The IP address of the ENI in exclusive mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.12</p>
              */
             public Builder serverIp(String serverIp) {
                 this.serverIp = serverIp;
@@ -426,12 +483,15 @@ public class ReplaceServersInServerGroupRequest extends Request {
             }
 
             /**
-             * The type of the backend server that you want to remove from the server group. You can specify up to 40 backend servers in each call. Valid values:
-             * <p>
+             * <p>The type of backend server. You can specify at most 200 servers in each call. Valid values:</p>
+             * <ul>
+             * <li><strong>Ecs</strong>: ECS instance</li>
+             * <li><strong>Eni</strong>: ENI</li>
+             * <li><strong>Eci</strong>: elastic container instance</li>
+             * </ul>
              * 
-             * *   **Ecs**
-             * *   **Eni**
-             * *   **Eci**
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder serverType(String serverType) {
                 this.serverType = serverType;

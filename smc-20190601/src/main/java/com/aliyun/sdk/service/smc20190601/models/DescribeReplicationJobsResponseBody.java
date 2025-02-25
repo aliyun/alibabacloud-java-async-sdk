@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.smc20190601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeReplicationJobsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeReplicationJobsResponseBody</p>
  */
 public class DescribeReplicationJobsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("ReplicationJobs")
+    @com.aliyun.core.annotation.NameInMap("ReplicationJobs")
     private ReplicationJobs replicationJobs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeReplicationJobsResponseBody(Builder builder) {
@@ -86,7 +86,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +97,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +108,7 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         }
 
         /**
-         * ReplicationJobs.
+         * <p>The details of migration jobs.</p>
          */
         public Builder replicationJobs(ReplicationJobs replicationJobs) {
             this.replicationJobs = replicationJobs;
@@ -110,7 +116,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6E1187E8-843A-4850-B97E-2F17F00D48F7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +127,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of migration jobs returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,14 +143,20 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeReplicationJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeReplicationJobsResponseBody</p>
+     */
     public static class Part extends TeaModel {
-        @NameInMap("Block")
+        @com.aliyun.core.annotation.NameInMap("Block")
         private Boolean block;
 
-        @NameInMap("Device")
+        @com.aliyun.core.annotation.NameInMap("Device")
         private String device;
 
-        @NameInMap("SizeBytes")
+        @com.aliyun.core.annotation.NameInMap("SizeBytes")
         private Long sizeBytes;
 
         private Part(Builder builder) {
@@ -182,7 +200,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             private Long sizeBytes; 
 
             /**
-             * Block.
+             * <p>Indicates whether block replication is enabled for the data disk partition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder block(Boolean block) {
                 this.block = block;
@@ -190,7 +211,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Device.
+             * <p>The device ID of the data disk partition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0_1</p>
              */
             public Builder device(String device) {
                 this.device = device;
@@ -198,7 +222,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SizeBytes.
+             * <p>The size of the data disk partition. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21474836480</p>
              */
             public Builder sizeBytes(Long sizeBytes) {
                 this.sizeBytes = sizeBytes;
@@ -212,8 +239,14 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeReplicationJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeReplicationJobsResponseBody</p>
+     */
     public static class Parts extends TeaModel {
-        @NameInMap("Part")
+        @com.aliyun.core.annotation.NameInMap("Part")
         private java.util.List < Part> part;
 
         private Parts(Builder builder) {
@@ -253,14 +286,20 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeReplicationJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeReplicationJobsResponseBody</p>
+     */
     public static class DataDisk extends TeaModel {
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private Integer index;
 
-        @NameInMap("Parts")
+        @com.aliyun.core.annotation.NameInMap("Parts")
         private Parts parts;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
         private DataDisk(Builder builder) {
@@ -304,7 +343,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             private Integer size; 
 
             /**
-             * Index.
+             * <p>The index number of the data disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -312,7 +354,7 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Parts.
+             * <p>The data disk partitions.</p>
              */
             public Builder parts(Parts parts) {
                 this.parts = parts;
@@ -320,7 +362,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The size of the data disk. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -334,8 +379,14 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeReplicationJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeReplicationJobsResponseBody</p>
+     */
     public static class DataDisks extends TeaModel {
-        @NameInMap("DataDisk")
+        @com.aliyun.core.annotation.NameInMap("DataDisk")
         private java.util.List < DataDisk> dataDisk;
 
         private DataDisks(Builder builder) {
@@ -375,17 +426,637 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeReplicationJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeReplicationJobsResponseBody</p>
+     */
+    public static class PartsPart extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Block")
+        private Boolean block;
+
+        @com.aliyun.core.annotation.NameInMap("Path")
+        private String path;
+
+        @com.aliyun.core.annotation.NameInMap("SizeBytes")
+        private Long sizeBytes;
+
+        private PartsPart(Builder builder) {
+            this.block = builder.block;
+            this.path = builder.path;
+            this.sizeBytes = builder.sizeBytes;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PartsPart create() {
+            return builder().build();
+        }
+
+        /**
+         * @return block
+         */
+        public Boolean getBlock() {
+            return this.block;
+        }
+
+        /**
+         * @return path
+         */
+        public String getPath() {
+            return this.path;
+        }
+
+        /**
+         * @return sizeBytes
+         */
+        public Long getSizeBytes() {
+            return this.sizeBytes;
+        }
+
+        public static final class Builder {
+            private Boolean block; 
+            private String path; 
+            private Long sizeBytes; 
+
+            /**
+             * <p>Indicates whether block replication is enabled for the data disk partition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder block(Boolean block) {
+                this.block = block;
+                return this;
+            }
+
+            /**
+             * Path.
+             */
+            public Builder path(String path) {
+                this.path = path;
+                return this;
+            }
+
+            /**
+             * <p>The size of the data disk partition. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21474836480</p>
+             */
+            public Builder sizeBytes(Long sizeBytes) {
+                this.sizeBytes = sizeBytes;
+                return this;
+            }
+
+            public PartsPart build() {
+                return new PartsPart(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeReplicationJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeReplicationJobsResponseBody</p>
+     */
+    public static class DataParts extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Part")
+        private java.util.List < PartsPart> part;
+
+        private DataParts(Builder builder) {
+            this.part = builder.part;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DataParts create() {
+            return builder().build();
+        }
+
+        /**
+         * @return part
+         */
+        public java.util.List < PartsPart> getPart() {
+            return this.part;
+        }
+
+        public static final class Builder {
+            private java.util.List < PartsPart> part; 
+
+            /**
+             * Part.
+             */
+            public Builder part(java.util.List < PartsPart> part) {
+                this.part = part;
+                return this;
+            }
+
+            public DataParts build() {
+                return new DataParts(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeReplicationJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeReplicationJobsResponseBody</p>
+     */
+    public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DiskId")
+        private String diskId;
+
+        @com.aliyun.core.annotation.NameInMap("LVM")
+        private Boolean LVM;
+
+        @com.aliyun.core.annotation.NameInMap("Parts")
+        private DataParts parts;
+
+        @com.aliyun.core.annotation.NameInMap("Size")
+        private Integer size;
+
+        private Data(Builder builder) {
+            this.diskId = builder.diskId;
+            this.LVM = builder.LVM;
+            this.parts = builder.parts;
+            this.size = builder.size;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return diskId
+         */
+        public String getDiskId() {
+            return this.diskId;
+        }
+
+        /**
+         * @return LVM
+         */
+        public Boolean getLVM() {
+            return this.LVM;
+        }
+
+        /**
+         * @return parts
+         */
+        public DataParts getParts() {
+            return this.parts;
+        }
+
+        /**
+         * @return size
+         */
+        public Integer getSize() {
+            return this.size;
+        }
+
+        public static final class Builder {
+            private String diskId; 
+            private Boolean LVM; 
+            private DataParts parts; 
+            private Integer size; 
+
+            /**
+             * DiskId.
+             */
+            public Builder diskId(String diskId) {
+                this.diskId = diskId;
+                return this;
+            }
+
+            /**
+             * LVM.
+             */
+            public Builder LVM(Boolean LVM) {
+                this.LVM = LVM;
+                return this;
+            }
+
+            /**
+             * <p>The data disk partitions.</p>
+             */
+            public Builder parts(DataParts parts) {
+                this.parts = parts;
+                return this;
+            }
+
+            /**
+             * <p>The size of the data disk. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
+             */
+            public Builder size(Integer size) {
+                this.size = size;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeReplicationJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeReplicationJobsResponseBody</p>
+     */
+    public static class DisksData extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Data")
+        private java.util.List < Data> data;
+
+        private DisksData(Builder builder) {
+            this.data = builder.data;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DisksData create() {
+            return builder().build();
+        }
+
+        /**
+         * @return data
+         */
+        public java.util.List < Data> getData() {
+            return this.data;
+        }
+
+        public static final class Builder {
+            private java.util.List < Data> data; 
+
+            /**
+             * Data.
+             */
+            public Builder data(java.util.List < Data> data) {
+                this.data = data;
+                return this;
+            }
+
+            public DisksData build() {
+                return new DisksData(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeReplicationJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeReplicationJobsResponseBody</p>
+     */
+    public static class SystemPartsPart extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Block")
+        private Boolean block;
+
+        @com.aliyun.core.annotation.NameInMap("Path")
+        private String path;
+
+        @com.aliyun.core.annotation.NameInMap("SizeBytes")
+        private Long sizeBytes;
+
+        private SystemPartsPart(Builder builder) {
+            this.block = builder.block;
+            this.path = builder.path;
+            this.sizeBytes = builder.sizeBytes;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SystemPartsPart create() {
+            return builder().build();
+        }
+
+        /**
+         * @return block
+         */
+        public Boolean getBlock() {
+            return this.block;
+        }
+
+        /**
+         * @return path
+         */
+        public String getPath() {
+            return this.path;
+        }
+
+        /**
+         * @return sizeBytes
+         */
+        public Long getSizeBytes() {
+            return this.sizeBytes;
+        }
+
+        public static final class Builder {
+            private Boolean block; 
+            private String path; 
+            private Long sizeBytes; 
+
+            /**
+             * <p>Indicates whether block replication is enabled for the data disk partition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder block(Boolean block) {
+                this.block = block;
+                return this;
+            }
+
+            /**
+             * Path.
+             */
+            public Builder path(String path) {
+                this.path = path;
+                return this;
+            }
+
+            /**
+             * <p>The size of the data disk partition. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21474836480</p>
+             */
+            public Builder sizeBytes(Long sizeBytes) {
+                this.sizeBytes = sizeBytes;
+                return this;
+            }
+
+            public SystemPartsPart build() {
+                return new SystemPartsPart(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeReplicationJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeReplicationJobsResponseBody</p>
+     */
+    public static class SystemParts extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Part")
+        private java.util.List < SystemPartsPart> part;
+
+        private SystemParts(Builder builder) {
+            this.part = builder.part;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SystemParts create() {
+            return builder().build();
+        }
+
+        /**
+         * @return part
+         */
+        public java.util.List < SystemPartsPart> getPart() {
+            return this.part;
+        }
+
+        public static final class Builder {
+            private java.util.List < SystemPartsPart> part; 
+
+            /**
+             * Part.
+             */
+            public Builder part(java.util.List < SystemPartsPart> part) {
+                this.part = part;
+                return this;
+            }
+
+            public SystemParts build() {
+                return new SystemParts(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeReplicationJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeReplicationJobsResponseBody</p>
+     */
+    public static class System extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DiskId")
+        private String diskId;
+
+        @com.aliyun.core.annotation.NameInMap("LVM")
+        private Boolean LVM;
+
+        @com.aliyun.core.annotation.NameInMap("Parts")
+        private SystemParts parts;
+
+        @com.aliyun.core.annotation.NameInMap("Size")
+        private Integer size;
+
+        private System(Builder builder) {
+            this.diskId = builder.diskId;
+            this.LVM = builder.LVM;
+            this.parts = builder.parts;
+            this.size = builder.size;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static System create() {
+            return builder().build();
+        }
+
+        /**
+         * @return diskId
+         */
+        public String getDiskId() {
+            return this.diskId;
+        }
+
+        /**
+         * @return LVM
+         */
+        public Boolean getLVM() {
+            return this.LVM;
+        }
+
+        /**
+         * @return parts
+         */
+        public SystemParts getParts() {
+            return this.parts;
+        }
+
+        /**
+         * @return size
+         */
+        public Integer getSize() {
+            return this.size;
+        }
+
+        public static final class Builder {
+            private String diskId; 
+            private Boolean LVM; 
+            private SystemParts parts; 
+            private Integer size; 
+
+            /**
+             * DiskId.
+             */
+            public Builder diskId(String diskId) {
+                this.diskId = diskId;
+                return this;
+            }
+
+            /**
+             * LVM.
+             */
+            public Builder LVM(Boolean LVM) {
+                this.LVM = LVM;
+                return this;
+            }
+
+            /**
+             * <p>The data disk partitions.</p>
+             */
+            public Builder parts(SystemParts parts) {
+                this.parts = parts;
+                return this;
+            }
+
+            /**
+             * <p>The size of the data disk. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
+             */
+            public Builder size(Integer size) {
+                this.size = size;
+                return this;
+            }
+
+            public System build() {
+                return new System(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeReplicationJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeReplicationJobsResponseBody</p>
+     */
+    public static class Disks extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Data")
+        private DisksData data;
+
+        @com.aliyun.core.annotation.NameInMap("System")
+        private System system;
+
+        private Disks(Builder builder) {
+            this.data = builder.data;
+            this.system = builder.system;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Disks create() {
+            return builder().build();
+        }
+
+        /**
+         * @return data
+         */
+        public DisksData getData() {
+            return this.data;
+        }
+
+        /**
+         * @return system
+         */
+        public System getSystem() {
+            return this.system;
+        }
+
+        public static final class Builder {
+            private DisksData data; 
+            private System system; 
+
+            /**
+             * Data.
+             */
+            public Builder data(DisksData data) {
+                this.data = data;
+                return this;
+            }
+
+            /**
+             * System.
+             */
+            public Builder system(System system) {
+                this.system = system;
+                return this;
+            }
+
+            public Disks build() {
+                return new Disks(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeReplicationJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeReplicationJobsResponseBody</p>
+     */
     public static class ReplicationJobRun extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private ReplicationJobRun(Builder builder) {
@@ -438,7 +1109,13 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * EndTime.
+             * <p>The time when the migration job ended. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <blockquote>
+             * <p> The time displayed in the SMC console is in the format of UTC+8.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-10-04T13:35:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -446,7 +1123,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * <p>The ID of the destination image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-o6w3gy99qf89rkga****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -454,7 +1134,13 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The time when the migration job was started. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <blockquote>
+             * <p> The time displayed in the SMC console is in the format of UTC+8.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-10-01T13:35:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -462,7 +1148,14 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The method used to run the migration job. Valid values:</p>
+             * <ul>
+             * <li>Manual: The migration job was manually started.</li>
+             * <li>Schedule: The migration job was started at a scheduled time or at a specific interval.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Schedule</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -476,8 +1169,14 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeReplicationJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeReplicationJobsResponseBody</p>
+     */
     public static class ReplicationJobRuns extends TeaModel {
-        @NameInMap("ReplicationJobRun")
+        @com.aliyun.core.annotation.NameInMap("ReplicationJobRun")
         private java.util.List < ReplicationJobRun> replicationJobRun;
 
         private ReplicationJobRuns(Builder builder) {
@@ -517,14 +1216,20 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeReplicationJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeReplicationJobsResponseBody</p>
+     */
     public static class SystemDiskPart extends TeaModel {
-        @NameInMap("Block")
+        @com.aliyun.core.annotation.NameInMap("Block")
         private Boolean block;
 
-        @NameInMap("Device")
+        @com.aliyun.core.annotation.NameInMap("Device")
         private String device;
 
-        @NameInMap("SizeBytes")
+        @com.aliyun.core.annotation.NameInMap("SizeBytes")
         private Long sizeBytes;
 
         private SystemDiskPart(Builder builder) {
@@ -568,7 +1273,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             private Long sizeBytes; 
 
             /**
-             * Block.
+             * <p>Indicates whether block replication is enabled for the system disk partition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder block(Boolean block) {
                 this.block = block;
@@ -576,7 +1284,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Device.
+             * <p>The device ID of the system disk partition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0_1</p>
              */
             public Builder device(String device) {
                 this.device = device;
@@ -584,7 +1295,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SizeBytes.
+             * <p>The size of the system disk partition. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>254803968</p>
              */
             public Builder sizeBytes(Long sizeBytes) {
                 this.sizeBytes = sizeBytes;
@@ -598,8 +1312,14 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeReplicationJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeReplicationJobsResponseBody</p>
+     */
     public static class SystemDiskParts extends TeaModel {
-        @NameInMap("SystemDiskPart")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskPart")
         private java.util.List < SystemDiskPart> systemDiskPart;
 
         private SystemDiskParts(Builder builder) {
@@ -639,122 +1359,262 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeReplicationJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeReplicationJobsResponseBody</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * <p>The key of the tag N that is added to the SMC resource. Valid values of N: 1 to 20.</p>
+             * <p>The tag key can be an empty string. It can be up to 64 characters in length and cannot contain http:// or https://.<a href="http://https://%E3%80%82"></a></p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The value of tag N that is added to the SMC resource. Valid values of N: 1 to 20.</p>
+             * <p>The tag value can be an empty string. It can be up to 64 characters in length and cannot contain http:// or https://.<a href="http://https://%E3%80%82"></a></p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeReplicationJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeReplicationJobsResponseBody</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List < Tag> tag;
+
+        private Tags(Builder builder) {
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List < Tag> getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private java.util.List < Tag> tag; 
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List < Tag> tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeReplicationJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeReplicationJobsResponseBody</p>
+     */
     public static class ReplicationJob extends TeaModel {
-        @NameInMap("BusinessStatus")
+        @com.aliyun.core.annotation.NameInMap("BusinessStatus")
         private String businessStatus;
 
-        @NameInMap("ContainerNamespace")
+        @com.aliyun.core.annotation.NameInMap("ContainerNamespace")
         private String containerNamespace;
 
-        @NameInMap("ContainerRepository")
+        @com.aliyun.core.annotation.NameInMap("ContainerRepository")
         private String containerRepository;
 
-        @NameInMap("ContainerTag")
+        @com.aliyun.core.annotation.NameInMap("ContainerTag")
         private String containerTag;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DataDisks")
+        @com.aliyun.core.annotation.NameInMap("DataDisks")
         private DataDisks dataDisks;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("Disks")
+        private Disks disks;
+
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("Frequency")
+        @com.aliyun.core.annotation.NameInMap("Frequency")
         private Integer frequency;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("ImageName")
+        @com.aliyun.core.annotation.NameInMap("ImageName")
         private String imageName;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceRamRole")
+        @com.aliyun.core.annotation.NameInMap("InstanceRamRole")
         private String instanceRamRole;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("LaunchTemplateId")
+        @com.aliyun.core.annotation.NameInMap("JobType")
+        private Integer jobType;
+
+        @com.aliyun.core.annotation.NameInMap("LaunchTemplateId")
         private String launchTemplateId;
 
-        @NameInMap("LaunchTemplateVersion")
+        @com.aliyun.core.annotation.NameInMap("LaunchTemplateVersion")
         private String launchTemplateVersion;
 
-        @NameInMap("LicenseType")
+        @com.aliyun.core.annotation.NameInMap("LicenseType")
         private String licenseType;
 
-        @NameInMap("MaxNumberOfImageToKeep")
+        @com.aliyun.core.annotation.NameInMap("MaxNumberOfImageToKeep")
         private Integer maxNumberOfImageToKeep;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NetMode")
+        @com.aliyun.core.annotation.NameInMap("NetMode")
         private Integer netMode;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private Float progress;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ReplicationJobRuns")
+        @com.aliyun.core.annotation.NameInMap("ReplicationJobRuns")
         private ReplicationJobRuns replicationJobRuns;
 
-        @NameInMap("ReplicationParameters")
+        @com.aliyun.core.annotation.NameInMap("ReplicationParameters")
         private String replicationParameters;
 
-        @NameInMap("RunOnce")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("RunOnce")
         private Boolean runOnce;
 
-        @NameInMap("ScheduledStartTime")
+        @com.aliyun.core.annotation.NameInMap("ScheduledStartTime")
         private String scheduledStartTime;
 
-        @NameInMap("SourceId")
+        @com.aliyun.core.annotation.NameInMap("SourceId")
         private String sourceId;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusInfo")
+        @com.aliyun.core.annotation.NameInMap("StatusInfo")
         private String statusInfo;
 
-        @NameInMap("SystemDiskParts")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskParts")
         private SystemDiskParts systemDiskParts;
 
-        @NameInMap("SystemDiskSize")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
         private Integer systemDiskSize;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private Tags tags;
+
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
-        @NameInMap("TransitionInstanceId")
+        @com.aliyun.core.annotation.NameInMap("TransitionInstanceId")
         private String transitionInstanceId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("ValidTime")
+        @com.aliyun.core.annotation.NameInMap("ValidTime")
         private String validTime;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private ReplicationJob(Builder builder) {
@@ -765,6 +1625,7 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             this.creationTime = builder.creationTime;
             this.dataDisks = builder.dataDisks;
             this.description = builder.description;
+            this.disks = builder.disks;
             this.endTime = builder.endTime;
             this.errorCode = builder.errorCode;
             this.frequency = builder.frequency;
@@ -774,6 +1635,7 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             this.instanceRamRole = builder.instanceRamRole;
             this.instanceType = builder.instanceType;
             this.jobId = builder.jobId;
+            this.jobType = builder.jobType;
             this.launchTemplateId = builder.launchTemplateId;
             this.launchTemplateVersion = builder.launchTemplateVersion;
             this.licenseType = builder.licenseType;
@@ -784,6 +1646,7 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             this.regionId = builder.regionId;
             this.replicationJobRuns = builder.replicationJobRuns;
             this.replicationParameters = builder.replicationParameters;
+            this.resourceGroupId = builder.resourceGroupId;
             this.runOnce = builder.runOnce;
             this.scheduledStartTime = builder.scheduledStartTime;
             this.sourceId = builder.sourceId;
@@ -792,6 +1655,7 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             this.statusInfo = builder.statusInfo;
             this.systemDiskParts = builder.systemDiskParts;
             this.systemDiskSize = builder.systemDiskSize;
+            this.tags = builder.tags;
             this.targetType = builder.targetType;
             this.transitionInstanceId = builder.transitionInstanceId;
             this.vSwitchId = builder.vSwitchId;
@@ -857,6 +1721,13 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         }
 
         /**
+         * @return disks
+         */
+        public Disks getDisks() {
+            return this.disks;
+        }
+
+        /**
          * @return endTime
          */
         public String getEndTime() {
@@ -917,6 +1788,13 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
          */
         public String getJobId() {
             return this.jobId;
+        }
+
+        /**
+         * @return jobType
+         */
+        public Integer getJobType() {
+            return this.jobType;
         }
 
         /**
@@ -990,6 +1868,13 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return runOnce
          */
         public Boolean getRunOnce() {
@@ -1046,6 +1931,13 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public Tags getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return targetType
          */
         public String getTargetType() {
@@ -1088,6 +1980,7 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             private String creationTime; 
             private DataDisks dataDisks; 
             private String description; 
+            private Disks disks; 
             private String endTime; 
             private String errorCode; 
             private Integer frequency; 
@@ -1097,6 +1990,7 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             private String instanceRamRole; 
             private String instanceType; 
             private String jobId; 
+            private Integer jobType; 
             private String launchTemplateId; 
             private String launchTemplateVersion; 
             private String licenseType; 
@@ -1107,6 +2001,7 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             private String regionId; 
             private ReplicationJobRuns replicationJobRuns; 
             private String replicationParameters; 
+            private String resourceGroupId; 
             private Boolean runOnce; 
             private String scheduledStartTime; 
             private String sourceId; 
@@ -1115,6 +2010,7 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             private String statusInfo; 
             private SystemDiskParts systemDiskParts; 
             private Integer systemDiskSize; 
+            private Tags tags; 
             private String targetType; 
             private String transitionInstanceId; 
             private String vSwitchId; 
@@ -1122,7 +2018,16 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * BusinessStatus.
+             * <p>The business status of the migration job. Valid values:</p>
+             * <ul>
+             * <li>Preparing: The migration is being prepared.</li>
+             * <li>Syncing: Data is being synchronized.</li>
+             * <li>Processing: The migration is in progress.</li>
+             * <li>Cleaning: Intermediate resources are being released.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Preparing</p>
              */
             public Builder businessStatus(String businessStatus) {
                 this.businessStatus = businessStatus;
@@ -1130,7 +2035,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerNamespace.
+             * <p>The namespace of the destination Docker container image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testNamespace</p>
              */
             public Builder containerNamespace(String containerNamespace) {
                 this.containerNamespace = containerNamespace;
@@ -1138,7 +2046,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerRepository.
+             * <p>The repository that stores the destination Docker container image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testRepository</p>
              */
             public Builder containerRepository(String containerRepository) {
                 this.containerRepository = containerRepository;
@@ -1146,7 +2057,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerTag.
+             * <p>The tag of the destination Docker container image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CentOS:v1</p>
              */
             public Builder containerTag(String containerTag) {
                 this.containerTag = containerTag;
@@ -1154,7 +2068,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The time when the migration job was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2014-07-24T13:00:52Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -1162,7 +2079,7 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * DataDisks.
+             * <p>The data disks on the destination ECS instance.</p>
              */
             public Builder dataDisks(DataDisks dataDisks) {
                 this.dataDisks = dataDisks;
@@ -1170,7 +2087,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the migration job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is my migration task.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1178,7 +2098,21 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * Disks.
+             */
+            public Builder disks(Disks disks) {
+                this.disks = disks;
+                return this;
+            }
+
+            /**
+             * <p>The time when the migration job was complete. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <blockquote>
+             * <p> The time displayed in the SMC console is in the format of UTC+8.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-06-04T16:00:52Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -1186,7 +2120,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * <p>The error code returned if an error occurred in the migration job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InternalError</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -1194,7 +2131,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Frequency.
+             * <p>The interval at which the incremental migration job runs. Unit: hour. Valid values: 1 to 168.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder frequency(Integer frequency) {
                 this.frequency = frequency;
@@ -1202,7 +2142,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * <p>The ID of the destination image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-o6w3gy99qf89rkga****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -1210,7 +2153,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ImageName.
+             * <p>The name of the destination image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testAliCloudImageName</p>
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -1218,7 +2164,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the destination ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1ff25rzvnul6kr****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1226,7 +2175,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceRamRole.
+             * <p>The name of the Resource Access Management (RAM) role that is assigned to the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SMCAdmin</p>
              */
             public Builder instanceRamRole(String instanceRamRole) {
                 this.instanceRamRole = instanceRamRole;
@@ -1234,7 +2186,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * <p>The instance type of the intermediate instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.sn1ne.large</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -1242,7 +2197,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The ID of the migration job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>j-bp19vlwm0tyigbmj****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -1250,7 +2208,27 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * LaunchTemplateId.
+             * <p>The type of the migration job. Valid values:</p>
+             * <ul>
+             * <li>0: server migration.</li>
+             * <li>1: operating system migration.</li>
+             * <li>2: cross-zone migration.</li>
+             * <li>3: agentless migration for a VMware VM.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder jobType(Integer jobType) {
+                this.jobType = jobType;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the launch template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lt-launchtemplateid</p>
              */
             public Builder launchTemplateId(String launchTemplateId) {
                 this.launchTemplateId = launchTemplateId;
@@ -1258,7 +2236,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * LaunchTemplateVersion.
+             * <p>The versions of the launch template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder launchTemplateVersion(String launchTemplateVersion) {
                 this.launchTemplateVersion = launchTemplateVersion;
@@ -1266,7 +2247,14 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * LicenseType.
+             * <p>The type of license for the migration job. Valid values:</p>
+             * <ul>
+             * <li>An empty value indicates no license.</li>
+             * <li>A value of BYOL indicates Bring Your Own License (BYOL).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>BYOL</p>
              */
             public Builder licenseType(String licenseType) {
                 this.licenseType = licenseType;
@@ -1274,7 +2262,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxNumberOfImageToKeep.
+             * <p>The maximum number of images retained for the incremental migration job. Valid values: 1 to 10.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder maxNumberOfImageToKeep(Integer maxNumberOfImageToKeep) {
                 this.maxNumberOfImageToKeep = maxNumberOfImageToKeep;
@@ -1282,7 +2273,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the migration job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testMigrationTaskName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1290,7 +2284,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * NetMode.
+             * <p>The type of network used for the migration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder netMode(Integer netMode) {
                 this.netMode = netMode;
@@ -1298,7 +2295,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * <p>The progress of the migration job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder progress(Float progress) {
                 this.progress = progress;
@@ -1306,7 +2306,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The ID of the Alibaba Cloud region to which the source server is migrated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1314,7 +2317,7 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicationJobRuns.
+             * <p>The execution records of the migration job.</p>
              */
             public Builder replicationJobRuns(ReplicationJobRuns replicationJobRuns) {
                 this.replicationJobRuns = replicationJobRuns;
@@ -1322,7 +2325,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicationParameters.
+             * <p>The string of key-value pairs configured for the replication driver.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BandWidthLimit:0</p>
              */
             public Builder replicationParameters(String replicationParameters) {
                 this.replicationParameters = replicationParameters;
@@ -1330,7 +2336,25 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * RunOnce.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmw3ty5y7****</p>
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether incremental migration is disabled for the source server. Valid values:</p>
+             * <ul>
+             * <li>true: Incremental migration is disabled. A migration job runs only once after the job is created.</li>
+             * <li>false: Incremental migration is enabled. For an incremental migration job, SMC synchronizes incremental data to Alibaba Cloud at the interval specified by the <code>Frequency</code> parameter.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder runOnce(Boolean runOnce) {
                 this.runOnce = runOnce;
@@ -1338,7 +2362,14 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduledStartTime.
+             * <p>The time when the migration job is scheduled to run. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. The time must meet the following requirements:</p>
+             * <ul>
+             * <li>The value must be within 30 days after the current time.</li>
+             * <li>If you do not specify this parameter, you must manually start the migration job after the migration job is created. You can call the <a href="https://help.aliyun.com/document_detail/121823.html">StartReplicationJob</a> operation to start the migration job.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-06-04T13:35:00Z</p>
              */
             public Builder scheduledStartTime(String scheduledStartTime) {
                 this.scheduledStartTime = scheduledStartTime;
@@ -1346,7 +2377,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceId.
+             * <p>The ID of the source server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s-bp1e2fsl57knvuug****</p>
              */
             public Builder sourceId(String sourceId) {
                 this.sourceId = sourceId;
@@ -1354,7 +2388,13 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The time when the migration job was started. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <blockquote>
+             * <p> The time displayed in the SMC console is in the format of UTC+8.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-06-04T14:40:52Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1362,7 +2402,20 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the migration job. Valid values:</p>
+             * <ul>
+             * <li>Ready: The migration job is not started.</li>
+             * <li>Running: The migration job is running.</li>
+             * <li>Stopped: The migration job is paused.</li>
+             * <li>InError: An error occurs in the migration job.</li>
+             * <li>Finished: The migration job is complete.</li>
+             * <li>Waiting: The migration job is waiting to run.</li>
+             * <li>Expired: The migration job has expired.</li>
+             * <li>Deleting: The migration job is being deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1370,7 +2423,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * StatusInfo.
+             * <p>The status information about the migration job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>statusinfo</p>
              */
             public Builder statusInfo(String statusInfo) {
                 this.statusInfo = statusInfo;
@@ -1378,7 +2434,7 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SystemDiskParts.
+             * <p>The system disk partitions.</p>
              */
             public Builder systemDiskParts(SystemDiskParts systemDiskParts) {
                 this.systemDiskParts = systemDiskParts;
@@ -1386,7 +2442,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SystemDiskSize.
+             * <p>The size of the system disk of the destination ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder systemDiskSize(Integer systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;
@@ -1394,7 +2453,23 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * <p>The information about tags that are attached to the SMC resource.</p>
+             */
+            public Builder tags(Tags tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
+             * <p>The type of destination to which the source server is migrated. Valid values:</p>
+             * <ul>
+             * <li>Image: After the migration job is complete, SMC generates an ECS image for the source server.</li>
+             * <li>ContainerImage: After the migration job is complete, SMC generates a Docker container image for the source server.</li>
+             * <li>TargetInstance: After the migration job is complete, SMC migrates the source server to the destination instance. If you set this parameter to TargetInstance, you must set the InstanceId parameter.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Image</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -1402,7 +2477,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TransitionInstanceId.
+             * <p>The ID of the intermediate instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1ff25rzvnul6kr****</p>
              */
             public Builder transitionInstanceId(String transitionInstanceId) {
                 this.transitionInstanceId = transitionInstanceId;
@@ -1410,7 +2488,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The ID of the vSwitch in the specified VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1ddbrxdlrcbim46****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -1418,7 +2499,13 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ValidTime.
+             * <p>The time when the migration job expired. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <blockquote>
+             * <p> The time displayed in the SMC console is in the format of UTC+8.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-06-08T14:40:52Z</p>
              */
             public Builder validTime(String validTime) {
                 this.validTime = validTime;
@@ -1426,7 +2513,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The ID of a virtual private cloud (VPC) for which you have configured an Express Connect circuit or a VPN gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1vwnn14rqpyiczj****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -1440,8 +2530,14 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeReplicationJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeReplicationJobsResponseBody</p>
+     */
     public static class ReplicationJobs extends TeaModel {
-        @NameInMap("ReplicationJob")
+        @com.aliyun.core.annotation.NameInMap("ReplicationJob")
         private java.util.List < ReplicationJob> replicationJob;
 
         private ReplicationJobs(Builder builder) {

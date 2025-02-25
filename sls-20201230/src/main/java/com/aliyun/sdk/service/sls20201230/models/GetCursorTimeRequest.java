@@ -1,35 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link GetCursorTimeRequest} extends {@link RequestModel}
  *
  * <p>GetCursorTimeRequest</p>
  */
 public class GetCursorTimeRequest extends Request {
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("project")
     private String project;
 
-    @Path
-    @NameInMap("logstore")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("logstore")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String logstore;
 
-    @Path
-    @NameInMap("shardId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("shardId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer shardId;
 
-    @Query
-    @NameInMap("cursor")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("cursor")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cursor;
 
     private GetCursorTimeRequest(Builder builder) {
@@ -100,7 +104,11 @@ public class GetCursorTimeRequest extends Request {
         } 
 
         /**
-         * The name of the project.
+         * <p>The name of the project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ali-test-project</p>
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -109,7 +117,11 @@ public class GetCursorTimeRequest extends Request {
         }
 
         /**
-         * The name of the Logstore.
+         * <p>The name of the Logstore.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-logstore</p>
          */
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);
@@ -118,7 +130,11 @@ public class GetCursorTimeRequest extends Request {
         }
 
         /**
-         * The shard ID.
+         * <p>The shard ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder shardId(Integer shardId) {
             this.putPathParameter("shardId", shardId);
@@ -127,7 +143,11 @@ public class GetCursorTimeRequest extends Request {
         }
 
         /**
-         * The cursor.
+         * <p>The cursor.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTU0NzQ3MDY4MjM3NjUxMzQ0Ng==</p>
          */
         public Builder cursor(String cursor) {
             this.putQueryParameter("cursor", cursor);

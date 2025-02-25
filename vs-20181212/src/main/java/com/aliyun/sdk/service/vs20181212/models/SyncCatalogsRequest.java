@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SyncCatalogsRequest} extends {@link RequestModel}
  *
  * <p>SyncCatalogsRequest</p>
  */
 public class SyncCatalogsRequest extends Request {
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String id;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
     private SyncCatalogsRequest(Builder builder) {
@@ -62,14 +67,17 @@ public class SyncCatalogsRequest extends Request {
             super();
         } 
 
-        private Builder(SyncCatalogsRequest response) {
-            super(response);
-            this.id = response.id;
-            this.ownerId = response.ownerId;
+        private Builder(SyncCatalogsRequest request) {
+            super(request);
+            this.id = request.id;
+            this.ownerId = request.ownerId;
         } 
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3238****739092996</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

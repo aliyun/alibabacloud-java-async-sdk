@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddResolverRuleResponseBody} extends {@link TeaModel}
  *
  * <p>AddResolverRuleResponseBody</p>
  */
 public class AddResolverRuleResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RuleId")
+    @com.aliyun.core.annotation.NameInMap("RuleId")
     private String ruleId;
 
     private AddResolverRuleResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class AddResolverRuleResponseBody extends TeaModel {
         private String ruleId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>725B8BED-901F-480C-BBAC-FA59A18580C1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,10 @@ public class AddResolverRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RuleId.
+         * <p>The ID of the forwarding rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hr****</p>
          */
         public Builder ruleId(String ruleId) {
             this.ruleId = ruleId;

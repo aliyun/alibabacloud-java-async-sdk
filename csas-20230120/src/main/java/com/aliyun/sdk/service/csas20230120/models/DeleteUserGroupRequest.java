@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteUserGroupRequest} extends {@link RequestModel}
  *
  * <p>DeleteUserGroupRequest</p>
  */
 public class DeleteUserGroupRequest extends Request {
-    @Body
-    @NameInMap("UserGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userGroupId;
 
     private DeleteUserGroupRequest(Builder builder) {
@@ -55,7 +60,10 @@ public class DeleteUserGroupRequest extends Request {
         } 
 
         /**
-         * UserGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>usergroup-6f1ef2fc56b6****</p>
          */
         public Builder userGroupId(String userGroupId) {
             this.putBodyParameter("UserGroupId", userGroupId);

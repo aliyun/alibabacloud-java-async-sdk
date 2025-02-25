@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,57 +11,58 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ApplyAntChainCertificateWithKeyAutoCreationRequest</p>
  */
 public class ApplyAntChainCertificateWithKeyAutoCreationRequest extends Request {
-    @Body
-    @NameInMap("AntChainId")
-    @Validation(required = true)
-    private String antChainId;
-
-    @Body
-    @NameInMap("CommonName")
-    @Validation(required = true)
-    private String commonName;
-
-    @Body
-    @NameInMap("ConsortiumId")
-    @Validation(required = true)
-    private String consortiumId;
-
-    @Body
-    @NameInMap("CountryName")
-    @Validation(required = true)
-    private String countryName;
-
-    @Body
-    @NameInMap("LocalityName")
-    @Validation(required = true)
-    private String localityName;
-
-    @Body
-    @NameInMap("OrganizationName")
-    @Validation(required = true)
-    private String organizationName;
-
-    @Body
-    @NameInMap("OrganizationUnitName")
-    @Validation(required = true)
-    private String organizationUnitName;
-
-    @Body
-    @NameInMap("Password")
-    @Validation(required = true)
-    private String password;
-
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("StateOrProvinceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AntChainId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String antChainId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CommonName")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String commonName;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConsortiumId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String consortiumId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CountryName")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String countryName;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LocalityName")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String localityName;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OrganizationName")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String organizationName;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OrganizationUnitName")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String organizationUnitName;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Password")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String password;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StateOrProvinceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String stateOrProvinceName;
 
     private ApplyAntChainCertificateWithKeyAutoCreationRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.antChainId = builder.antChainId;
         this.commonName = builder.commonName;
         this.consortiumId = builder.consortiumId;
@@ -71,7 +71,6 @@ public class ApplyAntChainCertificateWithKeyAutoCreationRequest extends Request 
         this.organizationName = builder.organizationName;
         this.organizationUnitName = builder.organizationUnitName;
         this.password = builder.password;
-        this.regionId = builder.regionId;
         this.stateOrProvinceName = builder.stateOrProvinceName;
     }
 
@@ -86,6 +85,13 @@ public class ApplyAntChainCertificateWithKeyAutoCreationRequest extends Request 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -145,13 +151,6 @@ public class ApplyAntChainCertificateWithKeyAutoCreationRequest extends Request 
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return stateOrProvinceName
      */
     public String getStateOrProvinceName() {
@@ -159,6 +158,7 @@ public class ApplyAntChainCertificateWithKeyAutoCreationRequest extends Request 
     }
 
     public static final class Builder extends Request.Builder<ApplyAntChainCertificateWithKeyAutoCreationRequest, Builder> {
+        private String regionId; 
         private String antChainId; 
         private String commonName; 
         private String consortiumId; 
@@ -167,26 +167,34 @@ public class ApplyAntChainCertificateWithKeyAutoCreationRequest extends Request 
         private String organizationName; 
         private String organizationUnitName; 
         private String password; 
-        private String regionId; 
         private String stateOrProvinceName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ApplyAntChainCertificateWithKeyAutoCreationRequest response) {
-            super(response);
-            this.antChainId = response.antChainId;
-            this.commonName = response.commonName;
-            this.consortiumId = response.consortiumId;
-            this.countryName = response.countryName;
-            this.localityName = response.localityName;
-            this.organizationName = response.organizationName;
-            this.organizationUnitName = response.organizationUnitName;
-            this.password = response.password;
-            this.regionId = response.regionId;
-            this.stateOrProvinceName = response.stateOrProvinceName;
+        private Builder(ApplyAntChainCertificateWithKeyAutoCreationRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.antChainId = request.antChainId;
+            this.commonName = request.commonName;
+            this.consortiumId = request.consortiumId;
+            this.countryName = request.countryName;
+            this.localityName = request.localityName;
+            this.organizationName = request.organizationName;
+            this.organizationUnitName = request.organizationUnitName;
+            this.password = request.password;
+            this.stateOrProvinceName = request.stateOrProvinceName;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AntChainId.
@@ -257,15 +265,6 @@ public class ApplyAntChainCertificateWithKeyAutoCreationRequest extends Request 
         public Builder password(String password) {
             this.putBodyParameter("Password", password);
             this.password = password;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

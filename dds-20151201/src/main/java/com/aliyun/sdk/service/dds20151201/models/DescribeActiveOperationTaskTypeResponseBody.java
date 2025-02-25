@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeActiveOperationTaskTypeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeActiveOperationTaskTypeResponseBody</p>
  */
 public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TypeList")
-    private java.util.List < TypeList> typeList;
+    @com.aliyun.core.annotation.NameInMap("TypeList")
+    private java.util.List<TypeList> typeList;
 
     private DescribeActiveOperationTaskTypeResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
     /**
      * @return typeList
      */
-    public java.util.List < TypeList> getTypeList() {
+    public java.util.List<TypeList> getTypeList() {
         return this.typeList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < TypeList> typeList; 
+        private java.util.List<TypeList> typeList; 
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C7EE83BF-7BA8-5087-BAC9-ED85ED54****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The list of tasks.
+         * <p>The O&amp;M tasks.</p>
          */
-        public Builder typeList(java.util.List < TypeList> typeList) {
+        public Builder typeList(java.util.List<TypeList> typeList) {
             this.typeList = typeList;
             return this;
         }
@@ -71,17 +79,23 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeActiveOperationTaskTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeActiveOperationTaskTypeResponseBody</p>
+     */
     public static class TypeList extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
-        @NameInMap("TaskTypeInfoEn")
+        @com.aliyun.core.annotation.NameInMap("TaskTypeInfoEn")
         private String taskTypeInfoEn;
 
-        @NameInMap("TaskTypeInfoZh")
+        @com.aliyun.core.annotation.NameInMap("TaskTypeInfoZh")
         private String taskTypeInfoZh;
 
         private TypeList(Builder builder) {
@@ -134,7 +148,10 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
             private String taskTypeInfoZh; 
 
             /**
-             * The number of pending tasks.
+             * <p>The number of pending tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -142,11 +159,14 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the task. Valid values:
-             * <p>
+             * <p>The type of the task. Valid values:</p>
+             * <ul>
+             * <li><strong>rds_apsaradb_transfer</strong>: data migration</li>
+             * <li><strong>rds_apsaradb_upgrade</strong>: minor version update</li>
+             * </ul>
              * 
-             * *   **rds\_apsaradb\_transfer**: instance migration
-             * *   **rds\_apsaradb\_upgrade**: minor version update
+             * <strong>example:</strong>
+             * <p>rds_apsaradb_upgrade</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -154,7 +174,10 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The task type (English).
+             * <p>The task type in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds_apsaradb_upgrade</p>
              */
             public Builder taskTypeInfoEn(String taskTypeInfoEn) {
                 this.taskTypeInfoEn = taskTypeInfoEn;
@@ -162,7 +185,10 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The task type (Chinese).
+             * <p>The task type in Chinese.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds_apsaradb_upgrade</p>
              */
             public Builder taskTypeInfoZh(String taskTypeInfoZh) {
                 this.taskTypeInfoZh = taskTypeInfoZh;

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRtcTokenResponseBody} extends {@link TeaModel}
  *
  * <p>GetRtcTokenResponseBody</p>
  */
 public class GetRtcTokenResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetRtcTokenResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class GetRtcTokenResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 错误码
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +99,7 @@ public class GetRtcTokenResponseBody extends TeaModel {
         }
 
         /**
-         * data
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +107,7 @@ public class GetRtcTokenResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +115,7 @@ public class GetRtcTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +123,7 @@ public class GetRtcTokenResponseBody extends TeaModel {
         }
 
         /**
-         * 是否成功
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,14 +136,20 @@ public class GetRtcTokenResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRtcTokenResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRtcTokenResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("RtcId")
+        @com.aliyun.core.annotation.NameInMap("RtcId")
         private String rtcId;
 
-        @NameInMap("Token")
+        @com.aliyun.core.annotation.NameInMap("Token")
         private String token;
 
         private Data(Builder builder) {
@@ -182,7 +193,7 @@ public class GetRtcTokenResponseBody extends TeaModel {
             private String token; 
 
             /**
-             * 账号名
+             * AccountName.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -190,7 +201,7 @@ public class GetRtcTokenResponseBody extends TeaModel {
             }
 
             /**
-             * rtcId
+             * RtcId.
              */
             public Builder rtcId(String rtcId) {
                 this.rtcId = rtcId;
@@ -198,7 +209,7 @@ public class GetRtcTokenResponseBody extends TeaModel {
             }
 
             /**
-             * token信息
+             * Token.
              */
             public Builder token(String token) {
                 this.token = token;

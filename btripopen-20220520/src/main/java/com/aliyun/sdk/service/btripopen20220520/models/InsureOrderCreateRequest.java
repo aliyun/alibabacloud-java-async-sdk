@@ -1,59 +1,64 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InsureOrderCreateRequest} extends {@link RequestModel}
  *
  * <p>InsureOrderCreateRequest</p>
  */
 public class InsureOrderCreateRequest extends Request {
-    @Body
-    @NameInMap("applicant")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("applicant")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Applicant applicant;
 
-    @Body
-    @NameInMap("btrip_user_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("btrip_user_id")
     private String btripUserId;
 
-    @Body
-    @NameInMap("buyer_name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("buyer_name")
     private String buyerName;
 
-    @Body
-    @NameInMap("ins_person_and_segment_list")
-    @Validation(required = true)
-    private java.util.List < InsPersonAndSegmentList> insPersonAndSegmentList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ins_person_and_segment_list")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<InsPersonAndSegmentList> insPersonAndSegmentList;
 
-    @Body
-    @NameInMap("isv_name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("isv_name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String isvName;
 
-    @Body
-    @NameInMap("out_ins_order_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("out_ins_order_id")
     private String outInsOrderId;
 
-    @Body
-    @NameInMap("out_order_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("out_order_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String outOrderId;
 
-    @Body
-    @NameInMap("out_sub_order_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("out_sub_order_id")
     private String outSubOrderId;
 
-    @Body
-    @NameInMap("supplier_code")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("supplier_code")
     private String supplierCode;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private InsureOrderCreateRequest(Builder builder) {
@@ -107,7 +112,7 @@ public class InsureOrderCreateRequest extends Request {
     /**
      * @return insPersonAndSegmentList
      */
-    public java.util.List < InsPersonAndSegmentList> getInsPersonAndSegmentList() {
+    public java.util.List<InsPersonAndSegmentList> getInsPersonAndSegmentList() {
         return this.insPersonAndSegmentList;
     }
 
@@ -157,7 +162,7 @@ public class InsureOrderCreateRequest extends Request {
         private Applicant applicant; 
         private String btripUserId; 
         private String buyerName; 
-        private java.util.List < InsPersonAndSegmentList> insPersonAndSegmentList; 
+        private java.util.List<InsPersonAndSegmentList> insPersonAndSegmentList; 
         private String isvName; 
         private String outInsOrderId; 
         private String outOrderId; 
@@ -184,7 +189,7 @@ public class InsureOrderCreateRequest extends Request {
         } 
 
         /**
-         * applicant.
+         * <p>This parameter is required.</p>
          */
         public Builder applicant(Applicant applicant) {
             String applicantShrink = shrink(applicant, "applicant", "json");
@@ -212,9 +217,9 @@ public class InsureOrderCreateRequest extends Request {
         }
 
         /**
-         * ins_person_and_segment_list.
+         * <p>This parameter is required.</p>
          */
-        public Builder insPersonAndSegmentList(java.util.List < InsPersonAndSegmentList> insPersonAndSegmentList) {
+        public Builder insPersonAndSegmentList(java.util.List<InsPersonAndSegmentList> insPersonAndSegmentList) {
             String insPersonAndSegmentListShrink = shrink(insPersonAndSegmentList, "ins_person_and_segment_list", "json");
             this.putBodyParameter("ins_person_and_segment_list", insPersonAndSegmentListShrink);
             this.insPersonAndSegmentList = insPersonAndSegmentList;
@@ -222,7 +227,10 @@ public class InsureOrderCreateRequest extends Request {
         }
 
         /**
-         * isv_name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PostalSavingsBank</p>
          */
         public Builder isvName(String isvName) {
             this.putBodyParameter("isv_name", isvName);
@@ -240,7 +248,10 @@ public class InsureOrderCreateRequest extends Request {
         }
 
         /**
-         * out_order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202310101026030</p>
          */
         public Builder outOrderId(String outOrderId) {
             this.putBodyParameter("out_order_id", outOrderId);
@@ -282,26 +293,32 @@ public class InsureOrderCreateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link InsureOrderCreateRequest} extends {@link TeaModel}
+     *
+     * <p>InsureOrderCreateRequest</p>
+     */
     public static class Applicant extends TeaModel {
-        @NameInMap("birthday")
+        @com.aliyun.core.annotation.NameInMap("birthday")
         private String birthday;
 
-        @NameInMap("btrip_user_id")
+        @com.aliyun.core.annotation.NameInMap("btrip_user_id")
         private String btripUserId;
 
-        @NameInMap("cert_name")
+        @com.aliyun.core.annotation.NameInMap("cert_name")
         private String certName;
 
-        @NameInMap("cert_no")
+        @com.aliyun.core.annotation.NameInMap("cert_no")
         private String certNo;
 
-        @NameInMap("cert_type")
+        @com.aliyun.core.annotation.NameInMap("cert_type")
         private String certType;
 
-        @NameInMap("gender")
+        @com.aliyun.core.annotation.NameInMap("gender")
         private String gender;
 
-        @NameInMap("phone")
+        @com.aliyun.core.annotation.NameInMap("phone")
         private String phone;
 
         private Applicant(Builder builder) {
@@ -443,32 +460,38 @@ public class InsureOrderCreateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link InsureOrderCreateRequest} extends {@link TeaModel}
+     *
+     * <p>InsureOrderCreateRequest</p>
+     */
     public static class InsureSegment extends TeaModel {
-        @NameInMap("arr_airport_code")
+        @com.aliyun.core.annotation.NameInMap("arr_airport_code")
         private String arrAirportCode;
 
-        @NameInMap("arr_city")
+        @com.aliyun.core.annotation.NameInMap("arr_city")
         private String arrCity;
 
-        @NameInMap("arr_city_code")
+        @com.aliyun.core.annotation.NameInMap("arr_city_code")
         private String arrCityCode;
 
-        @NameInMap("arr_time")
+        @com.aliyun.core.annotation.NameInMap("arr_time")
         private String arrTime;
 
-        @NameInMap("dep_airport_code")
+        @com.aliyun.core.annotation.NameInMap("dep_airport_code")
         private String depAirportCode;
 
-        @NameInMap("dep_city")
+        @com.aliyun.core.annotation.NameInMap("dep_city")
         private String depCity;
 
-        @NameInMap("dep_city_code")
+        @com.aliyun.core.annotation.NameInMap("dep_city_code")
         private String depCityCode;
 
-        @NameInMap("dep_time")
+        @com.aliyun.core.annotation.NameInMap("dep_time")
         private String depTime;
 
-        @NameInMap("flight_no")
+        @com.aliyun.core.annotation.NameInMap("flight_no")
         private String flightNo;
 
         private InsureSegment(Builder builder) {
@@ -644,26 +667,32 @@ public class InsureOrderCreateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link InsureOrderCreateRequest} extends {@link TeaModel}
+     *
+     * <p>InsureOrderCreateRequest</p>
+     */
     public static class Insured extends TeaModel {
-        @NameInMap("birthday")
+        @com.aliyun.core.annotation.NameInMap("birthday")
         private String birthday;
 
-        @NameInMap("btrip_user_id")
+        @com.aliyun.core.annotation.NameInMap("btrip_user_id")
         private String btripUserId;
 
-        @NameInMap("cert_name")
+        @com.aliyun.core.annotation.NameInMap("cert_name")
         private String certName;
 
-        @NameInMap("cert_no")
+        @com.aliyun.core.annotation.NameInMap("cert_no")
         private String certNo;
 
-        @NameInMap("cert_type")
+        @com.aliyun.core.annotation.NameInMap("cert_type")
         private String certType;
 
-        @NameInMap("gender")
+        @com.aliyun.core.annotation.NameInMap("gender")
         private String gender;
 
-        @NameInMap("phone")
+        @com.aliyun.core.annotation.NameInMap("phone")
         private String phone;
 
         private Insured(Builder builder) {
@@ -805,14 +834,20 @@ public class InsureOrderCreateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link InsureOrderCreateRequest} extends {@link TeaModel}
+     *
+     * <p>InsureOrderCreateRequest</p>
+     */
     public static class InsPersonAndSegmentList extends TeaModel {
-        @NameInMap("insure_segment")
+        @com.aliyun.core.annotation.NameInMap("insure_segment")
         private InsureSegment insureSegment;
 
-        @NameInMap("insured")
+        @com.aliyun.core.annotation.NameInMap("insured")
         private Insured insured;
 
-        @NameInMap("out_sub_ins_order_id")
+        @com.aliyun.core.annotation.NameInMap("out_sub_ins_order_id")
         private String outSubInsOrderId;
 
         private InsPersonAndSegmentList(Builder builder) {

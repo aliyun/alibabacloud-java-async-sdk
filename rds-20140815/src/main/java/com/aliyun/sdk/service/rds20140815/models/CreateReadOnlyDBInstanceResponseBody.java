@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateReadOnlyDBInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateReadOnlyDBInstanceResponseBody</p>
  */
 public class CreateReadOnlyDBInstanceResponseBody extends TeaModel {
-    @NameInMap("ConnectionString")
+    @com.aliyun.core.annotation.NameInMap("ConnectionString")
     private String connectionString;
 
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
-    @NameInMap("Port")
+    @com.aliyun.core.annotation.NameInMap("Port")
     private String port;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateReadOnlyDBInstanceResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class CreateReadOnlyDBInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The internal endpoint that is used to connect to the read-only instance.
+         * <p>The internal endpoint that is used to connect to the read-only instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rr-****.mysql.rds.aliyuncs.com</p>
          */
         public Builder connectionString(String connectionString) {
             this.connectionString = connectionString;
@@ -94,7 +102,10 @@ public class CreateReadOnlyDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the read-only instance.
+         * <p>The ID of the read-only instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rr-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -102,7 +113,10 @@ public class CreateReadOnlyDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order.
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10078937****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -110,7 +124,10 @@ public class CreateReadOnlyDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The internal port number that is used to connect to the read-only instance.
+         * <p>The internal port number that is used to connect to the read-only instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         public Builder port(String port) {
             this.port = port;
@@ -118,7 +135,10 @@ public class CreateReadOnlyDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

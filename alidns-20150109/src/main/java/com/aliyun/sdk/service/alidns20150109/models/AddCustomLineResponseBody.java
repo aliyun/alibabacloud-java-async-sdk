@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddCustomLineResponseBody} extends {@link TeaModel}
  *
  * <p>AddCustomLineResponseBody</p>
  */
 public class AddCustomLineResponseBody extends TeaModel {
-    @NameInMap("LineCode")
+    @com.aliyun.core.annotation.NameInMap("LineCode")
     private String lineCode;
 
-    @NameInMap("LineId")
+    @com.aliyun.core.annotation.NameInMap("LineId")
     private Long lineId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AddCustomLineResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class AddCustomLineResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * LineCode.
+         * <p>The code of the custom line.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hra0yc-597</p>
          */
         public Builder lineCode(String lineCode) {
             this.lineCode = lineCode;
@@ -70,7 +78,10 @@ public class AddCustomLineResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The unique ID of the custom line.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>597</p>
          */
         public Builder lineId(Long lineId) {
             this.lineId = lineId;
@@ -78,7 +89,10 @@ public class AddCustomLineResponseBody extends TeaModel {
         }
 
         /**
-         * The code of the custom line.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B57C121B-A45F-44D8-A9B2-13E5A5044195</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

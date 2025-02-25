@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPrometheusGlobalViewResponseBody} extends {@link TeaModel}
  *
  * <p>ListPrometheusGlobalViewResponseBody</p>
  */
 public class ListPrometheusGlobalViewResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListPrometheusGlobalViewResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class ListPrometheusGlobalViewResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>Status code. Description 200 means success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +90,10 @@ public class ListPrometheusGlobalViewResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The list of global aggregation instances. The value of this parameter is a string in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[ {groupName: &quot;the name of the global aggregation instance&quot;, clusterId: &quot;global-v2-clusterid&quot;, endpoint: &quot;cn-hangzhou&quot;}, // ..... more items ]</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -90,7 +101,10 @@ public class ListPrometheusGlobalViewResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>More information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +112,10 @@ public class ListPrometheusGlobalViewResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DBDCE95A-A0DD-5FC5-97CC-EEFC3D814385</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

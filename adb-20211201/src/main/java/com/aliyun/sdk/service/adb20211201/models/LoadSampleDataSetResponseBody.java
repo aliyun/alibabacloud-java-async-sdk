@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link LoadSampleDataSetResponseBody} extends {@link TeaModel}
  *
  * <p>LoadSampleDataSetResponseBody</p>
  */
 public class LoadSampleDataSetResponseBody extends TeaModel {
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private LoadSampleDataSetResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class LoadSampleDataSetResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DBClusterId.
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-2ze0z517o1mgp66a</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -58,7 +66,10 @@ public class LoadSampleDataSetResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FA31BE84-ABE8-554A-A769-5F860C34EE10</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

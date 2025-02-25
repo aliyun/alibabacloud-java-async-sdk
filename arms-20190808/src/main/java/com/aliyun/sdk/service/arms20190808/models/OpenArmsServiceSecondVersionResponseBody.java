@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OpenArmsServiceSecondVersionResponseBody} extends {@link TeaModel}
  *
  * <p>OpenArmsServiceSecondVersionResponseBody</p>
  */
 public class OpenArmsServiceSecondVersionResponseBody extends TeaModel {
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private OpenArmsServiceSecondVersionResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class OpenArmsServiceSecondVersionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The service ID that is returned if the service is activated.
+         * <p>The service ID returned if the service is activated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20896874992****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -58,7 +66,10 @@ public class OpenArmsServiceSecondVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9ED50893-F3C4-42DF-ABB2-C200BE******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

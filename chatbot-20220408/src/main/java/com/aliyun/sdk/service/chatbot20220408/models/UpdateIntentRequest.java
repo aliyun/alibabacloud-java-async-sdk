@@ -1,37 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateIntentRequest} extends {@link RequestModel}
  *
  * <p>UpdateIntentRequest</p>
  */
 public class UpdateIntentRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AgentKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentKey")
     private String agentKey;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("IntentDefinition")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntentDefinition")
     private IntentDefinition intentDefinition;
 
-    @Query
-    @NameInMap("IntentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long intentId;
 
     private UpdateIntentRequest(Builder builder) {
@@ -130,7 +130,10 @@ public class UpdateIntentRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chatbot-cn-yjzbyrEvqd</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -149,7 +152,10 @@ public class UpdateIntentRequest extends Request {
         }
 
         /**
-         * IntentId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>234234234534</p>
          */
         public Builder intentId(Long intentId) {
             this.putQueryParameter("IntentId", intentId);
@@ -164,26 +170,32 @@ public class UpdateIntentRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateIntentRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateIntentRequest</p>
+     */
     public static class SlotInfos extends TeaModel {
-        @NameInMap("Array")
+        @com.aliyun.core.annotation.NameInMap("Array")
         private Boolean array;
 
-        @NameInMap("Encrypt")
+        @com.aliyun.core.annotation.NameInMap("Encrypt")
         private Boolean encrypt;
 
-        @NameInMap("Interactive")
+        @com.aliyun.core.annotation.NameInMap("Interactive")
         private Boolean interactive;
 
-        @NameInMap("Name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
-        @NameInMap("SlotId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("SlotId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String slotId;
 
-        @NameInMap("Value")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Value")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String value;
 
         private SlotInfos(Builder builder) {
@@ -278,7 +290,7 @@ public class UpdateIntentRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>This parameter is required.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -286,7 +298,10 @@ public class UpdateIntentRequest extends Request {
             }
 
             /**
-             * SlotId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dgadf23dfg2f</p>
              */
             public Builder slotId(String slotId) {
                 this.slotId = slotId;
@@ -294,7 +309,7 @@ public class UpdateIntentRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>This parameter is required.</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -308,15 +323,21 @@ public class UpdateIntentRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateIntentRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateIntentRequest</p>
+     */
     public static class IntentDefinition extends TeaModel {
-        @NameInMap("AliasName")
+        @com.aliyun.core.annotation.NameInMap("AliasName")
         private String aliasName;
 
-        @NameInMap("IntentName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("IntentName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String intentName;
 
-        @NameInMap("SlotInfos")
+        @com.aliyun.core.annotation.NameInMap("SlotInfos")
         private java.util.List < SlotInfos> slotInfos;
 
         private IntentDefinition(Builder builder) {
@@ -368,7 +389,7 @@ public class UpdateIntentRequest extends Request {
             }
 
             /**
-             * IntentName.
+             * <p>This parameter is required.</p>
              */
             public Builder intentName(String intentName) {
                 this.intentName = intentName;

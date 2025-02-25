@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSasContainerWebDefenseRuleCriteriaResponseBody} extends {@link TeaModel}
  *
  * <p>GetSasContainerWebDefenseRuleCriteriaResponseBody</p>
  */
 public class GetSasContainerWebDefenseRuleCriteriaResponseBody extends TeaModel {
-    @NameInMap("CriteriaList")
-    private java.util.List < CriteriaList> criteriaList;
+    @com.aliyun.core.annotation.NameInMap("CriteriaList")
+    private java.util.List<CriteriaList> criteriaList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetSasContainerWebDefenseRuleCriteriaResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class GetSasContainerWebDefenseRuleCriteriaResponseBody extends TeaModel 
     /**
      * @return criteriaList
      */
-    public java.util.List < CriteriaList> getCriteriaList() {
+    public java.util.List<CriteriaList> getCriteriaList() {
         return this.criteriaList;
     }
 
@@ -46,19 +51,22 @@ public class GetSasContainerWebDefenseRuleCriteriaResponseBody extends TeaModel 
     }
 
     public static final class Builder {
-        private java.util.List < CriteriaList> criteriaList; 
+        private java.util.List<CriteriaList> criteriaList; 
         private String requestId; 
 
         /**
-         * The search conditions.
+         * <p>The search conditions.</p>
          */
-        public Builder criteriaList(java.util.List < CriteriaList> criteriaList) {
+        public Builder criteriaList(java.util.List<CriteriaList> criteriaList) {
             this.criteriaList = criteriaList;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F8B6F758-BCD4-597A-8A2C-DA5A552C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class GetSasContainerWebDefenseRuleCriteriaResponseBody extends TeaModel 
 
     } 
 
+    /**
+     * 
+     * {@link GetSasContainerWebDefenseRuleCriteriaResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSasContainerWebDefenseRuleCriteriaResponseBody</p>
+     */
     public static class CriteriaList extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Values")
+        @com.aliyun.core.annotation.NameInMap("Values")
         private String values;
 
         private CriteriaList(Builder builder) {
@@ -122,7 +136,10 @@ public class GetSasContainerWebDefenseRuleCriteriaResponseBody extends TeaModel 
             private String values; 
 
             /**
-             * The name of the search condition.
+             * <p>The name of the search condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -130,11 +147,14 @@ public class GetSasContainerWebDefenseRuleCriteriaResponseBody extends TeaModel 
             }
 
             /**
-             * The type of the search condition. Valid values:
-             * <p>
+             * <p>The type of the search condition. Valid values:</p>
+             * <ul>
+             * <li><strong>input</strong>: You must manually enter the search condition.</li>
+             * <li><strong>select</strong>: You must select a search condition from the <strong>Values</strong> drop-down list.</li>
+             * </ul>
              * 
-             * *   **input**: You must manually enter the search condition.
-             * *   **select**: You must select a search condition from the **Values** drop-down list.
+             * <strong>example:</strong>
+             * <p>select</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -142,10 +162,13 @@ public class GetSasContainerWebDefenseRuleCriteriaResponseBody extends TeaModel 
             }
 
             /**
-             * The values of the search condition. This parameter is returned only if the value of **Type** is **select**.
-             * <p>
+             * <p>The values of the search condition. This parameter is returned only if the value of <strong>Type</strong> is <strong>select</strong>.</p>
+             * <blockquote>
+             * <p> If the value of <strong>Type</strong> is <strong>input</strong>, the value of this parameter is empty.</p>
+             * </blockquote>
              * 
-             * >  If the value of **Type** is **input**, the value of this parameter is empty.
+             * <strong>example:</strong>
+             * <p>athor_bid</p>
              */
             public Builder values(String values) {
                 this.values = values;

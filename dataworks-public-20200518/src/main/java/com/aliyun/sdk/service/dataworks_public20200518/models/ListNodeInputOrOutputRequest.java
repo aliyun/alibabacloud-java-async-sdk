@@ -1,35 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNodeInputOrOutputRequest} extends {@link RequestModel}
  *
  * <p>ListNodeInputOrOutputRequest</p>
  */
 public class ListNodeInputOrOutputRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("IoType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IoType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ioType;
 
-    @Body
-    @NameInMap("NodeId")
-    @Validation(required = true, minimum = 2)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeId")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 2)
     private Long nodeId;
 
-    @Body
-    @NameInMap("ProjectEnv")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectEnv")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectEnv;
 
     private ListNodeInputOrOutputRequest(Builder builder) {
@@ -100,7 +104,7 @@ public class ListNodeInputOrOutputRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -109,11 +113,15 @@ public class ListNodeInputOrOutputRequest extends Request {
         }
 
         /**
-         * The type of node that you want to query. Valid values:
-         * <p>
+         * <p>The type of node that you want to query. Valid values:</p>
+         * <ul>
+         * <li>input: ancestor node</li>
+         * <li>output: descendant node</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   input: ancestor nodes
-         * *   output: descendant nodes
+         * <strong>example:</strong>
+         * <p>output</p>
          */
         public Builder ioType(String ioType) {
             this.putBodyParameter("IoType", ioType);
@@ -122,7 +130,11 @@ public class ListNodeInputOrOutputRequest extends Request {
         }
 
         /**
-         * The ID of the node. You can call the [ListNodes](~~173979~~) operation to query the node ID.
+         * <p>The node ID. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12314567</p>
          */
         public Builder nodeId(Long nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -131,7 +143,11 @@ public class ListNodeInputOrOutputRequest extends Request {
         }
 
         /**
-         * The environment of the workspace. Valid values: DEV and PROD. A value of DEV indicates the development environment. A value of PROD indicates the production environment.
+         * <p>The environment of the workspace. Valid values: DEV and PROD.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);

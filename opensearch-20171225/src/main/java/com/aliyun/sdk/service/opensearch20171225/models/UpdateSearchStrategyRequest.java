@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateSearchStrategyRequest</p>
  */
 public class UpdateSearchStrategyRequest extends Request {
-    @Path
-    @NameInMap("appGroupIdentity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("appGroupIdentity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appGroupIdentity;
 
-    @Path
-    @NameInMap("appId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("appId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Path
-    @NameInMap("strategyName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("strategyName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String strategyName;
 
-    @Body
-    @NameInMap("body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
     private SearchStrategy body;
 
     private UpdateSearchStrategyRequest(Builder builder) {
@@ -99,7 +98,7 @@ public class UpdateSearchStrategyRequest extends Request {
         } 
 
         /**
-         * appGroupIdentity.
+         * The name of the application.
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -108,7 +107,7 @@ public class UpdateSearchStrategyRequest extends Request {
         }
 
         /**
-         * appId.
+         * The version number.
          */
         public Builder appId(String appId) {
             this.putPathParameter("appId", appId);
@@ -117,7 +116,7 @@ public class UpdateSearchStrategyRequest extends Request {
         }
 
         /**
-         * strategyName.
+         * The name of the policy.
          */
         public Builder strategyName(String strategyName) {
             this.putPathParameter("strategyName", strategyName);
@@ -126,7 +125,7 @@ public class UpdateSearchStrategyRequest extends Request {
         }
 
         /**
-         * body.
+         * The request body.
          */
         public Builder body(SearchStrategy body) {
             this.putBodyParameter("body", body);

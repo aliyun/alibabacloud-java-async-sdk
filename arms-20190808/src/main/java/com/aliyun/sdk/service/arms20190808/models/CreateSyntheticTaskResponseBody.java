@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSyntheticTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateSyntheticTaskResponseBody</p>
  */
 public class CreateSyntheticTaskResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Msg")
+    @com.aliyun.core.annotation.NameInMap("Msg")
     private String msg;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateSyntheticTaskResponseBody(Builder builder) {
@@ -74,7 +79,18 @@ public class CreateSyntheticTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The status code returned.</p>
+         * <ul>
+         * <li>1001: The request was successful.</li>
+         * <li>1002: The request failed.</li>
+         * <li>1003: Parameter errors occurred.</li>
+         * <li>1004: Authentication failed.</li>
+         * <li>1006: The task does not exist.</li>
+         * <li>1099: Internal errors occurred.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1001</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +98,7 @@ public class CreateSyntheticTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The information about the synthetic monitoring task.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +106,10 @@ public class CreateSyntheticTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * <p>The message that is returned when the task failed to be created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -98,7 +117,10 @@ public class CreateSyntheticTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5EC8221-08F2-4C95-9AF1-49FD998C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,8 +133,14 @@ public class CreateSyntheticTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateSyntheticTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateSyntheticTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private Long taskId;
 
         private Data(Builder builder) {
@@ -138,7 +166,10 @@ public class CreateSyntheticTaskResponseBody extends TeaModel {
             private Long taskId; 
 
             /**
-             * TaskId.
+             * <p>The ID of the synthetic monitoring task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;

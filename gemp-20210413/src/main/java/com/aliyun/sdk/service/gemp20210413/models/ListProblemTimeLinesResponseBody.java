@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListProblemTimeLinesResponseBody</p>
  */
 public class ListProblemTimeLinesResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private java.util.List < Data> data;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private ListProblemTimeLinesResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class ListProblemTimeLinesResponseBody extends TeaModel {
     } 
 
     public static class UsersInContent extends TeaModel {
-        @NameInMap("isValid")
+        @com.aliyun.core.annotation.NameInMap("isValid")
         private Long isValid;
 
-        @NameInMap("userId")
+        @com.aliyun.core.annotation.NameInMap("userId")
         private Long userId;
 
-        @NameInMap("username")
+        @com.aliyun.core.annotation.NameInMap("username")
         private String username;
 
         private UsersInContent(Builder builder) {
@@ -153,28 +152,28 @@ public class ListProblemTimeLinesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("content")
+        @com.aliyun.core.annotation.NameInMap("content")
         private String content;
 
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
 
-        @NameInMap("isKey")
+        @com.aliyun.core.annotation.NameInMap("isKey")
         private Boolean isKey;
 
-        @NameInMap("keyNode")
+        @com.aliyun.core.annotation.NameInMap("keyNode")
         private String keyNode;
 
-        @NameInMap("problemTimelineId")
+        @com.aliyun.core.annotation.NameInMap("problemTimelineId")
         private Long problemTimelineId;
 
-        @NameInMap("time")
+        @com.aliyun.core.annotation.NameInMap("time")
         private String time;
 
-        @NameInMap("updateTime")
+        @com.aliyun.core.annotation.NameInMap("updateTime")
         private String updateTime;
 
-        @NameInMap("usersInContent")
+        @com.aliyun.core.annotation.NameInMap("usersInContent")
         private java.util.List < UsersInContent> usersInContent;
 
         private Data(Builder builder) {

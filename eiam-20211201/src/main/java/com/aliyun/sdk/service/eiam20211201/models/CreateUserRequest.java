@@ -1,91 +1,96 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUserRequest} extends {@link RequestModel}
  *
  * <p>CreateUserRequest</p>
  */
 public class CreateUserRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("CustomFields")
-    private java.util.List < CustomFields> customFields;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomFields")
+    private java.util.List<CustomFields> customFields;
 
-    @Query
-    @NameInMap("Description")
-    @Validation(maxLength = 256)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(maxLength = 256)
     private String description;
 
-    @Query
-    @NameInMap("DisplayName")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String displayName;
 
-    @Query
-    @NameInMap("Email")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Email")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String email;
 
-    @Query
-    @NameInMap("EmailVerified")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EmailVerified")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private Boolean emailVerified;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String instanceId;
 
-    @Query
-    @NameInMap("OrganizationalUnitIds")
-    private java.util.List < String > organizationalUnitIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrganizationalUnitIds")
+    private java.util.List<String> organizationalUnitIds;
 
-    @Query
-    @NameInMap("Password")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Password")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String password;
 
-    @Query
-    @NameInMap("PasswordInitializationConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordInitializationConfig")
     private PasswordInitializationConfig passwordInitializationConfig;
 
-    @Query
-    @NameInMap("PhoneNumber")
-    @Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private String phoneNumber;
 
-    @Query
-    @NameInMap("PhoneNumberVerified")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumberVerified")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private Boolean phoneNumberVerified;
 
-    @Query
-    @NameInMap("PhoneRegion")
-    @Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneRegion")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private String phoneRegion;
 
-    @Query
-    @NameInMap("PrimaryOrganizationalUnitId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrimaryOrganizationalUnitId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String primaryOrganizationalUnitId;
 
-    @Query
-    @NameInMap("UserExternalId")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserExternalId")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String userExternalId;
 
-    @Query
-    @NameInMap("Username")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Username")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String username;
 
     private CreateUserRequest(Builder builder) {
@@ -131,7 +136,7 @@ public class CreateUserRequest extends Request {
     /**
      * @return customFields
      */
-    public java.util.List < CustomFields> getCustomFields() {
+    public java.util.List<CustomFields> getCustomFields() {
         return this.customFields;
     }
 
@@ -173,7 +178,7 @@ public class CreateUserRequest extends Request {
     /**
      * @return organizationalUnitIds
      */
-    public java.util.List < String > getOrganizationalUnitIds() {
+    public java.util.List<String> getOrganizationalUnitIds() {
         return this.organizationalUnitIds;
     }
 
@@ -235,13 +240,13 @@ public class CreateUserRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateUserRequest, Builder> {
         private String regionId; 
-        private java.util.List < CustomFields> customFields; 
+        private java.util.List<CustomFields> customFields; 
         private String description; 
         private String displayName; 
         private String email; 
         private Boolean emailVerified; 
         private String instanceId; 
-        private java.util.List < String > organizationalUnitIds; 
+        private java.util.List<String> organizationalUnitIds; 
         private String password; 
         private PasswordInitializationConfig passwordInitializationConfig; 
         private String phoneNumber; 
@@ -285,16 +290,22 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * The extended fields.
+         * <p>The extended fields.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
          */
-        public Builder customFields(java.util.List < CustomFields> customFields) {
+        public Builder customFields(java.util.List<CustomFields> customFields) {
             this.putQueryParameter("CustomFields", customFields);
             this.customFields = customFields;
             return this;
         }
 
         /**
-         * The description of the organizational unit. The description can be up to 256 characters in length.
+         * <p>The description of the organizational unit. The description can be up to 256 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description text</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -303,7 +314,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * The display name of the account. The display name can be up to 64 characters in length.
+         * <p>The display name of the account. The display name can be up to 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name_001</p>
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -312,7 +326,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * The email address of the user who owns the account. The email address prefix can contain letters, digits, underscores (\_), periods (.), and hyphens (-).
+         * <p>The email address of the user who owns the account. The email address prefix can contain letters, digits, underscores (_), periods (.), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:example@example.com">example@example.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -321,7 +338,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * Specifies whether the email address is a trusted email address. This parameter is required if the Email parameter is specified. If you have no special business requirements, set this parameter to true.
+         * <p>Specifies whether the email address is a trusted email address. This parameter is required if the Email parameter is specified. If you have no special business requirements, set this parameter to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder emailVerified(Boolean emailVerified) {
             this.putQueryParameter("EmailVerified", emailVerified);
@@ -330,7 +350,11 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -339,16 +363,19 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * The IDs of organizational units to which the account belongs. An account can belong to multiple organizational units.
+         * <p>The IDs of organizational units to which the account belongs. An account can belong to multiple organizational units.</p>
          */
-        public Builder organizationalUnitIds(java.util.List < String > organizationalUnitIds) {
+        public Builder organizationalUnitIds(java.util.List<String> organizationalUnitIds) {
             this.putQueryParameter("OrganizationalUnitIds", organizationalUnitIds);
             this.organizationalUnitIds = organizationalUnitIds;
             return this;
         }
 
         /**
-         * The password of the account. For more information, view the password policy of the instance in the IDaaS console.
+         * <p>The password of the account. For more information, view the password policy of the instance in the IDaaS console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -357,7 +384,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * The configurations for password initialization.
+         * <p>The configurations for password initialization.</p>
          */
         public Builder passwordInitializationConfig(PasswordInitializationConfig passwordInitializationConfig) {
             this.putQueryParameter("PasswordInitializationConfig", passwordInitializationConfig);
@@ -366,7 +393,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * The mobile phone number, which contains 6 to 15 digits.
+         * <p>The mobile phone number, which contains 6 to 15 digits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678901</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -375,7 +405,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * Specifies whether the mobile phone number is a trusted mobile phone number. This parameter is required if the PhoneNumber parameter is specified. If you have no special business requirements, set this parameter to true.
+         * <p>Specifies whether the mobile phone number is a trusted mobile phone number. This parameter is required if the PhoneNumber parameter is specified. If you have no special business requirements, set this parameter to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder phoneNumberVerified(Boolean phoneNumberVerified) {
             this.putQueryParameter("PhoneNumberVerified", phoneNumberVerified);
@@ -384,7 +417,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * The country code of the mobile phone number. The country code contains only digits and does not contain a plus sign (+).
+         * <p>The country code of the mobile phone number. The country code contains only digits and does not contain a plus sign (+).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86</p>
          */
         public Builder phoneRegion(String phoneRegion) {
             this.putQueryParameter("PhoneRegion", phoneRegion);
@@ -393,7 +429,11 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * The ID of the primary organizational unit to which the account belongs.
+         * <p>The ID of the primary organizational unit to which the account belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
          */
         public Builder primaryOrganizationalUnitId(String primaryOrganizationalUnitId) {
             this.putQueryParameter("PrimaryOrganizationalUnitId", primaryOrganizationalUnitId);
@@ -402,7 +442,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * The external ID of the account. The external ID can be used to associate the account with an external system. The external ID can be up to 64 characters in length. If you do not specify an external ID for the account, the ID of the account is used as the external ID by default.
+         * <p>The external ID of the account. The external ID can be used to associate the account with an external system. The external ID can be up to 64 characters in length. If you do not specify an external ID for the account, the ID of the account is used as the external ID by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
          */
         public Builder userExternalId(String userExternalId) {
             this.putQueryParameter("UserExternalId", userExternalId);
@@ -411,7 +454,11 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * The name of the account. The name can be up to 64 characters in length and can contain letters, digits, underscores (\_), periods (.), at signs (@), and hyphens (-).
+         * <p>The name of the account. The name can be up to 64 characters in length and can contain letters, digits, underscores (_), periods (.), at signs (@), and hyphens (-).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_001</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);
@@ -426,13 +473,19 @@ public class CreateUserRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateUserRequest} extends {@link TeaModel}
+     *
+     * <p>CreateUserRequest</p>
+     */
     public static class CustomFields extends TeaModel {
-        @NameInMap("FieldName")
-        @Validation(maxLength = 64)
+        @com.aliyun.core.annotation.NameInMap("FieldName")
+        @com.aliyun.core.annotation.Validation(maxLength = 64)
         private String fieldName;
 
-        @NameInMap("FieldValue")
-        @Validation(maxLength = 64)
+        @com.aliyun.core.annotation.NameInMap("FieldValue")
+        @com.aliyun.core.annotation.Validation(maxLength = 64)
         private String fieldValue;
 
         private CustomFields(Builder builder) {
@@ -467,7 +520,10 @@ public class CreateUserRequest extends Request {
             private String fieldValue; 
 
             /**
-             * The name of the extended field. You must create the extended field in advance. To create an extended field, log on to the IDaaS console. In the left-side navigation pane, choose Accounts > Extended Fields, and then click Create Field on the Extended Fields page.
+             * <p>The name of the extended field. You must create the extended field in advance. To create an extended field, log on to the IDaaS console. In the left-side navigation pane, choose Accounts &gt; Extended Fields, and then click Create Field on the Extended Fields page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>age</p>
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
@@ -475,7 +531,10 @@ public class CreateUserRequest extends Request {
             }
 
             /**
-             * The value of the extended field. The value follows the limits on the properties of the extended field.
+             * <p>The value of the extended field. The value follows the limits on the properties of the extended field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;
@@ -489,22 +548,28 @@ public class CreateUserRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateUserRequest} extends {@link TeaModel}
+     *
+     * <p>CreateUserRequest</p>
+     */
     public static class PasswordInitializationConfig extends TeaModel {
-        @NameInMap("PasswordForcedUpdateStatus")
-        @Validation(maxLength = 64)
+        @com.aliyun.core.annotation.NameInMap("PasswordForcedUpdateStatus")
+        @com.aliyun.core.annotation.Validation(maxLength = 64)
         private String passwordForcedUpdateStatus;
 
-        @NameInMap("PasswordInitializationPolicyPriority")
-        @Validation(maxLength = 64)
+        @com.aliyun.core.annotation.NameInMap("PasswordInitializationPolicyPriority")
+        @com.aliyun.core.annotation.Validation(maxLength = 64)
         private String passwordInitializationPolicyPriority;
 
-        @NameInMap("PasswordInitializationType")
-        @Validation(maxLength = 64)
+        @com.aliyun.core.annotation.NameInMap("PasswordInitializationType")
+        @com.aliyun.core.annotation.Validation(maxLength = 64)
         private String passwordInitializationType;
 
-        @NameInMap("UserNotificationChannels")
-        @Validation(maxLength = 64)
-        private java.util.List < String > userNotificationChannels;
+        @com.aliyun.core.annotation.NameInMap("UserNotificationChannels")
+        @com.aliyun.core.annotation.Validation(maxLength = 64)
+        private java.util.List<String> userNotificationChannels;
 
         private PasswordInitializationConfig(Builder builder) {
             this.passwordForcedUpdateStatus = builder.passwordForcedUpdateStatus;
@@ -545,7 +610,7 @@ public class CreateUserRequest extends Request {
         /**
          * @return userNotificationChannels
          */
-        public java.util.List < String > getUserNotificationChannels() {
+        public java.util.List<String> getUserNotificationChannels() {
             return this.userNotificationChannels;
         }
 
@@ -553,14 +618,17 @@ public class CreateUserRequest extends Request {
             private String passwordForcedUpdateStatus; 
             private String passwordInitializationPolicyPriority; 
             private String passwordInitializationType; 
-            private java.util.List < String > userNotificationChannels; 
+            private java.util.List<String> userNotificationChannels; 
 
             /**
-             * Specifies whether to forcibly change the password status. Default value: disabled. Valid values:
-             * <p>
+             * <p>Specifies whether to forcibly change the password status. Default value: disabled. Valid values:</p>
+             * <ul>
+             * <li>enabled: forcibly changes the password status.</li>
+             * <li>disabled: does not forcibly change the password status.</li>
+             * </ul>
              * 
-             * *   enabled: forcibly changes the password status.
-             * *   disabled: does not forcibly change the password status.
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder passwordForcedUpdateStatus(String passwordForcedUpdateStatus) {
                 this.passwordForcedUpdateStatus = passwordForcedUpdateStatus;
@@ -568,11 +636,14 @@ public class CreateUserRequest extends Request {
             }
 
             /**
-             * The priority of the password initialization policy. By default, this parameter does not take effect. Valid values:
-             * <p>
+             * <p>The priority of the password initialization policy. By default, this parameter does not take effect. Valid values:</p>
+             * <ul>
+             * <li>global: The password initialization policy globally takes effect.</li>
+             * <li>custom: The password initialization policy takes effect based on custom settings.</li>
+             * </ul>
              * 
-             * *   global: The password initialization policy globally takes effect.
-             * *   custom: The password initialization policy takes effect based on custom settings.
+             * <strong>example:</strong>
+             * <p>global</p>
              */
             public Builder passwordInitializationPolicyPriority(String passwordInitializationPolicyPriority) {
                 this.passwordInitializationPolicyPriority = passwordInitializationPolicyPriority;
@@ -580,10 +651,13 @@ public class CreateUserRequest extends Request {
             }
 
             /**
-             * The password initialization method. Set the value to random,
-             * <p>
+             * <p>The password initialization method. Set the value to random,</p>
+             * <ul>
+             * <li>which indicates that the password is randomly generated.</li>
+             * </ul>
              * 
-             * *   which indicates that the password is randomly generated.
+             * <strong>example:</strong>
+             * <p>random</p>
              */
             public Builder passwordInitializationType(String passwordInitializationType) {
                 this.passwordInitializationType = passwordInitializationType;
@@ -591,9 +665,12 @@ public class CreateUserRequest extends Request {
             }
 
             /**
-             * The password notification methods.
+             * <p>The password notification methods.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sms</p>
              */
-            public Builder userNotificationChannels(java.util.List < String > userNotificationChannels) {
+            public Builder userNotificationChannels(java.util.List<String> userNotificationChannels) {
                 this.userNotificationChannels = userNotificationChannels;
                 return this;
             }

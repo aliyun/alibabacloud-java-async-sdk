@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAudioFileResponseBody} extends {@link TeaModel}
  *
  * <p>GetAudioFileResponseBody</p>
  */
 public class GetAudioFileResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetAudioFileResponseBody(Builder builder) {
@@ -131,26 +136,32 @@ public class GetAudioFileResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAudioFileResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAudioFileResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AudioFileName")
+        @com.aliyun.core.annotation.NameInMap("AudioFileName")
         private String audioFileName;
 
-        @NameInMap("AudioResourceId")
+        @com.aliyun.core.annotation.NameInMap("AudioResourceId")
         private String audioResourceId;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OssFileKey")
+        @com.aliyun.core.annotation.NameInMap("OssFileKey")
         private String ossFileKey;
 
-        @NameInMap("UpdatedTime")
+        @com.aliyun.core.annotation.NameInMap("UpdatedTime")
         private String updatedTime;
 
         private Data(Builder builder) {

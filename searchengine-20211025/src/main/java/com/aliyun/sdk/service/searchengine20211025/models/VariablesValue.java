@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VariablesValue} extends {@link TeaModel}
  *
  * <p>VariablesValue</p>
  */
 public class VariablesValue extends TeaModel {
-    @NameInMap("disableModify")
+    @com.aliyun.core.annotation.NameInMap("disableModify")
     private Boolean disableModify;
 
-    @NameInMap("isModify")
+    @com.aliyun.core.annotation.NameInMap("isModify")
     private Boolean isModify;
 
-    @NameInMap("value")
+    @com.aliyun.core.annotation.NameInMap("value")
     private String value;
 
-    @NameInMap("description")
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @NameInMap("templateValue")
+    @com.aliyun.core.annotation.NameInMap("templateValue")
     private String templateValue;
 
-    @NameInMap("type")
+    @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
-    @NameInMap("funcValue")
+    @com.aliyun.core.annotation.NameInMap("funcValue")
     private FuncValue funcValue;
 
     private VariablesValue(Builder builder) {
@@ -110,7 +115,10 @@ public class VariablesValue extends TeaModel {
         private FuncValue funcValue; 
 
         /**
-         * Specifies whether the variable cannot be modified.
+         * <p>Specifies whether the variable is not allowed to be modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disableModify(Boolean disableModify) {
             this.disableModify = disableModify;
@@ -118,7 +126,10 @@ public class VariablesValue extends TeaModel {
         }
 
         /**
-         * Specifies whether the variable is modified.
+         * <p>Specifies whether the variable is modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isModify(Boolean isModify) {
             this.isModify = isModify;
@@ -126,7 +137,10 @@ public class VariablesValue extends TeaModel {
         }
 
         /**
-         * The value of the variable.
+         * <p>The variable value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder value(String value) {
             this.value = value;
@@ -134,7 +148,10 @@ public class VariablesValue extends TeaModel {
         }
 
         /**
-         * The description about the variable.
+         * <p>The description of the variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -142,7 +159,10 @@ public class VariablesValue extends TeaModel {
         }
 
         /**
-         * The value of the template.
+         * <p>The template value of the variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder templateValue(String templateValue) {
             this.templateValue = templateValue;
@@ -150,11 +170,14 @@ public class VariablesValue extends TeaModel {
         }
 
         /**
-         * The type of the variable. Valid values:
-         * <p>
+         * <p>The variable type. Valid values:</p>
+         * <ul>
+         * <li>NORMAL: common variable</li>
+         * <li>FUNCTION: function variable</li>
+         * </ul>
          * 
-         * *   NORMAL: a normal variable
-         * *   FUNCTION: a function variable
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -162,7 +185,7 @@ public class VariablesValue extends TeaModel {
         }
 
         /**
-         * The function variable.
+         * <p>The function variables.</p>
          */
         public Builder funcValue(FuncValue funcValue) {
             this.funcValue = funcValue;
@@ -175,11 +198,17 @@ public class VariablesValue extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link VariablesValue} extends {@link TeaModel}
+     *
+     * <p>VariablesValue</p>
+     */
     public static class FuncValue extends TeaModel {
-        @NameInMap("funcClassName")
+        @com.aliyun.core.annotation.NameInMap("funcClassName")
         private String funcClassName;
 
-        @NameInMap("template")
+        @com.aliyun.core.annotation.NameInMap("template")
         private String template;
 
         private FuncValue(Builder builder) {
@@ -214,7 +243,10 @@ public class VariablesValue extends TeaModel {
             private String template; 
 
             /**
-             * The class name.
+             * <p>The class name of the function variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder funcClassName(String funcClassName) {
                 this.funcClassName = funcClassName;
@@ -222,7 +254,10 @@ public class VariablesValue extends TeaModel {
             }
 
             /**
-             * The template of the variable.
+             * <p>The template of the function variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder template(String template) {
                 this.template = template;

@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetIntegratedServiceStatusRequest} extends {@link RequestModel}
  *
  * <p>GetIntegratedServiceStatusRequest</p>
  */
 public class GetIntegratedServiceStatusRequest extends Request {
-    @Body
-    @NameInMap("ServiceCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceCode;
 
     private GetIntegratedServiceStatusRequest(Builder builder) {
@@ -55,10 +60,16 @@ public class GetIntegratedServiceStatusRequest extends Request {
         } 
 
         /**
-         * The product code of the cloud product. Valid values:
-         * <p>
+         * <p>The identity of the cloud service that is integrated with Cloud Config. Valid values:</p>
+         * <ul>
+         * <li>eventbridge: EventBridge</li>
+         * <li>cms: CloudMonitor</li>
+         * <li>bpstudio: Cloud Architect Design Tools (CADT)</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * cadt: Cloud Architecture Design Tool
+         * <strong>example:</strong>
+         * <p>cadt</p>
          */
         public Builder serviceCode(String serviceCode) {
             this.putBodyParameter("ServiceCode", serviceCode);

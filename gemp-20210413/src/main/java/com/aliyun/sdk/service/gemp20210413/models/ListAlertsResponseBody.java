@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAlertsResponseBody</p>
  */
 public class ListAlertsResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private java.util.List < Data> data;
 
-    @NameInMap("pageNumber")
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Integer pageNumber;
 
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Integer pageSize;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("totalCount")
+    @com.aliyun.core.annotation.NameInMap("totalCount")
     private Long totalCount;
 
     private ListAlertsResponseBody(Builder builder) {
@@ -132,46 +131,46 @@ public class ListAlertsResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("alertId")
+        @com.aliyun.core.annotation.NameInMap("alertId")
         private Long alertId;
 
-        @NameInMap("alertLevel")
+        @com.aliyun.core.annotation.NameInMap("alertLevel")
         private String alertLevel;
 
-        @NameInMap("alertNumber")
+        @com.aliyun.core.annotation.NameInMap("alertNumber")
         private String alertNumber;
 
-        @NameInMap("alertSourceName")
+        @com.aliyun.core.annotation.NameInMap("alertSourceName")
         private String alertSourceName;
 
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
 
-        @NameInMap("firstEventTime")
+        @com.aliyun.core.annotation.NameInMap("firstEventTime")
         private String firstEventTime;
 
-        @NameInMap("monitorSourceName")
+        @com.aliyun.core.annotation.NameInMap("monitorSourceName")
         private String monitorSourceName;
 
-        @NameInMap("relServiceDeleteType")
+        @com.aliyun.core.annotation.NameInMap("relServiceDeleteType")
         private Integer relServiceDeleteType;
 
-        @NameInMap("relatedServiceName")
+        @com.aliyun.core.annotation.NameInMap("relatedServiceName")
         private String relatedServiceName;
 
-        @NameInMap("routeRuleDeleteType")
+        @com.aliyun.core.annotation.NameInMap("routeRuleDeleteType")
         private Integer routeRuleDeleteType;
 
-        @NameInMap("routeRuleId")
+        @com.aliyun.core.annotation.NameInMap("routeRuleId")
         private Long routeRuleId;
 
-        @NameInMap("routeRuleName")
+        @com.aliyun.core.annotation.NameInMap("routeRuleName")
         private String routeRuleName;
 
-        @NameInMap("sourceEventCount")
+        @com.aliyun.core.annotation.NameInMap("sourceEventCount")
         private Long sourceEventCount;
 
-        @NameInMap("title")
+        @com.aliyun.core.annotation.NameInMap("title")
         private String title;
 
         private Data(Builder builder) {

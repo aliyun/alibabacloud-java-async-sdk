@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListKeysResponseBody</p>
  */
 public class ListKeysResponseBody extends TeaModel {
-    @NameInMap("Keys")
+    @com.aliyun.core.annotation.NameInMap("Keys")
     private Keys keys;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListKeysResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class ListKeysResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Keys.
+         * An array that consists of the CMKs of the current Alibaba Cloud account in the current region.
          */
         public Builder keys(Keys keys) {
             this.keys = keys;
@@ -94,7 +93,7 @@ public class ListKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of CMKs.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +101,7 @@ public class ListKeysResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the CMKs of the current Alibaba Cloud account in the current region.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +109,7 @@ public class ListKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the CMK. The ID must be globally unique.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +117,7 @@ public class ListKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The Alibaba Cloud Resource Name (ARN) of the CMK.
+         * The total number of CMKs.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -132,10 +131,10 @@ public class ListKeysResponseBody extends TeaModel {
     } 
 
     public static class Key extends TeaModel {
-        @NameInMap("KeyArn")
+        @com.aliyun.core.annotation.NameInMap("KeyArn")
         private String keyArn;
 
-        @NameInMap("KeyId")
+        @com.aliyun.core.annotation.NameInMap("KeyId")
         private String keyId;
 
         private Key(Builder builder) {
@@ -170,7 +169,7 @@ public class ListKeysResponseBody extends TeaModel {
             private String keyId; 
 
             /**
-             * KeyArn.
+             * The Alibaba Cloud Resource Name (ARN) of the CMK.
              */
             public Builder keyArn(String keyArn) {
                 this.keyArn = keyArn;
@@ -178,7 +177,7 @@ public class ListKeysResponseBody extends TeaModel {
             }
 
             /**
-             * KeyId.
+             * The ID of the CMK. The ID must be globally unique.
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;
@@ -193,7 +192,7 @@ public class ListKeysResponseBody extends TeaModel {
 
     }
     public static class Keys extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private java.util.List < Key> key;
 
         private Keys(Builder builder) {

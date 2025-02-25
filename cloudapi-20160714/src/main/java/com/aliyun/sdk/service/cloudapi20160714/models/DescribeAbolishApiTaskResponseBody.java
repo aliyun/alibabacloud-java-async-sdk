@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAbolishApiTaskResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAbolishApiTaskResponseBody</p>
  */
 public class DescribeAbolishApiTaskResponseBody extends TeaModel {
-    @NameInMap("ApiAbolishResults")
+    @com.aliyun.core.annotation.NameInMap("ApiAbolishResults")
     private ApiAbolishResults apiAbolishResults;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAbolishApiTaskResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeAbolishApiTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The result returned.
+         * <p>The result returned.</p>
          */
         public Builder apiAbolishResults(ApiAbolishResults apiAbolishResults) {
             this.apiAbolishResults = apiAbolishResults;
@@ -58,7 +63,10 @@ public class DescribeAbolishApiTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E8515BA6-81CD-4191-A7CF-C4FCDD3C0D99</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,29 +79,35 @@ public class DescribeAbolishApiTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAbolishApiTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAbolishApiTaskResponseBody</p>
+     */
     public static class ApiAbolishResult extends TeaModel {
-        @NameInMap("AbolishStatus")
+        @com.aliyun.core.annotation.NameInMap("AbolishStatus")
         private String abolishStatus;
 
-        @NameInMap("ApiName")
+        @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
 
-        @NameInMap("ApiUid")
+        @com.aliyun.core.annotation.NameInMap("ApiUid")
         private String apiUid;
 
-        @NameInMap("ErrorMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("StageId")
+        @com.aliyun.core.annotation.NameInMap("StageId")
         private String stageId;
 
-        @NameInMap("StageName")
+        @com.aliyun.core.annotation.NameInMap("StageName")
         private String stageName;
 
         private ApiAbolishResult(Builder builder) {
@@ -182,7 +196,10 @@ public class DescribeAbolishApiTaskResponseBody extends TeaModel {
             private String stageName; 
 
             /**
-             * The unpublishing status.
+             * <p>The unpublishing status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OVER</p>
              */
             public Builder abolishStatus(String abolishStatus) {
                 this.abolishStatus = abolishStatus;
@@ -190,7 +207,10 @@ public class DescribeAbolishApiTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the API.
+             * <p>The name of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v2_page_consent</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -198,7 +218,10 @@ public class DescribeAbolishApiTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the API.
+             * <p>The ID of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4e26cdbbb113416dba1f0285bed29979</p>
              */
             public Builder apiUid(String apiUid) {
                 this.apiUid = apiUid;
@@ -206,7 +229,10 @@ public class DescribeAbolishApiTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The error message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success. Request Success.</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -214,7 +240,10 @@ public class DescribeAbolishApiTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the API group.
+             * <p>The ID of the API group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>160cb6505e1c43a6b84346856d74eb47</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -222,7 +251,10 @@ public class DescribeAbolishApiTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the API group.
+             * <p>The name of the API group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wb2022021401619286</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -230,7 +262,10 @@ public class DescribeAbolishApiTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the runtime environment.
+             * <p>The ID of the runtime environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0919f2854a88484c91dc9253347c78f9</p>
              */
             public Builder stageId(String stageId) {
                 this.stageId = stageId;
@@ -238,11 +273,14 @@ public class DescribeAbolishApiTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the runtime environment. Valid values:
-             * <p>
+             * <p>The name of the runtime environment. Valid values:</p>
+             * <ul>
+             * <li><strong>RELEASE</strong></li>
+             * <li><strong>TEST</strong></li>
+             * </ul>
              * 
-             * *   **RELEASE**
-             * *   **TEST**
+             * <strong>example:</strong>
+             * <p>RELEASE</p>
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
@@ -256,9 +294,15 @@ public class DescribeAbolishApiTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAbolishApiTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAbolishApiTaskResponseBody</p>
+     */
     public static class ApiAbolishResults extends TeaModel {
-        @NameInMap("ApiAbolishResult")
-        private java.util.List < ApiAbolishResult> apiAbolishResult;
+        @com.aliyun.core.annotation.NameInMap("ApiAbolishResult")
+        private java.util.List<ApiAbolishResult> apiAbolishResult;
 
         private ApiAbolishResults(Builder builder) {
             this.apiAbolishResult = builder.apiAbolishResult;
@@ -275,17 +319,17 @@ public class DescribeAbolishApiTaskResponseBody extends TeaModel {
         /**
          * @return apiAbolishResult
          */
-        public java.util.List < ApiAbolishResult> getApiAbolishResult() {
+        public java.util.List<ApiAbolishResult> getApiAbolishResult() {
             return this.apiAbolishResult;
         }
 
         public static final class Builder {
-            private java.util.List < ApiAbolishResult> apiAbolishResult; 
+            private java.util.List<ApiAbolishResult> apiAbolishResult; 
 
             /**
              * ApiAbolishResult.
              */
-            public Builder apiAbolishResult(java.util.List < ApiAbolishResult> apiAbolishResult) {
+            public Builder apiAbolishResult(java.util.List<ApiAbolishResult> apiAbolishResult) {
                 this.apiAbolishResult = apiAbolishResult;
                 return this;
             }

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SaveSortScriptFileRequest</p>
  */
 public class SaveSortScriptFileRequest extends Request {
-    @Path
-    @NameInMap("appGroupIdentity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("appGroupIdentity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appGroupIdentity;
 
-    @Path
-    @NameInMap("scriptName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("scriptName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scriptName;
 
-    @Path
-    @NameInMap("appVersionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("appVersionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appVersionId;
 
-    @Path
-    @NameInMap("fileName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("fileName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileName;
 
-    @Body
-    @NameInMap("content")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("content")
     private String content;
 
-    @Body
-    @NameInMap("version")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("version")
     private Integer version;
 
     private SaveSortScriptFileRequest(Builder builder) {
@@ -128,7 +127,7 @@ public class SaveSortScriptFileRequest extends Request {
         } 
 
         /**
-         * \"\"1111\"\"
+         * The name or ID of the application.
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -137,7 +136,7 @@ public class SaveSortScriptFileRequest extends Request {
         }
 
         /**
-         * \"\"11111\"\"
+         * The name of the script whose content you want to update.
          */
         public Builder scriptName(String scriptName) {
             this.putPathParameter("scriptName", scriptName);
@@ -146,7 +145,7 @@ public class SaveSortScriptFileRequest extends Request {
         }
 
         /**
-         * \"\"111111\"\"
+         * The version number of the application.
          */
         public Builder appVersionId(String appVersionId) {
             this.putPathParameter("appVersionId", appVersionId);
@@ -155,7 +154,7 @@ public class SaveSortScriptFileRequest extends Request {
         }
 
         /**
-         * fileName.
+         * The file name.
          */
         public Builder fileName(String fileName) {
             this.putPathParameter("fileName", fileName);
@@ -164,7 +163,7 @@ public class SaveSortScriptFileRequest extends Request {
         }
 
         /**
-         * content.
+         * The script content that is encoded in the Base64 format.
          */
         public Builder content(String content) {
             this.putBodyParameter("content", content);
@@ -173,7 +172,7 @@ public class SaveSortScriptFileRequest extends Request {
         }
 
         /**
-         * version.
+         * The version number of the script content.
          */
         public Builder version(Integer version) {
             this.putBodyParameter("version", version);

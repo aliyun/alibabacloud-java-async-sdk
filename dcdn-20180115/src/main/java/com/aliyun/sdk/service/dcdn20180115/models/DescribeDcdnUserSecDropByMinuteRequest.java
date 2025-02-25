@@ -1,54 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnUserSecDropByMinuteRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnUserSecDropByMinuteRequest</p>
  */
 public class DescribeDcdnUserSecDropByMinuteRequest extends Request {
-    @Query
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("Lang")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String lang;
 
-    @Query
-    @NameInMap("Object")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Object")
     private String object;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100)
     private Long pageSize;
 
-    @Query
-    @NameInMap("RuleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleName")
     private String ruleName;
 
-    @Query
-    @NameInMap("SecFunc")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecFunc")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String secFunc;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeDcdnUserSecDropByMinuteRequest(Builder builder) {
@@ -169,7 +169,10 @@ public class DescribeDcdnUserSecDropByMinuteRequest extends Request {
         } 
 
         /**
-         * The domain name.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -178,10 +181,13 @@ public class DescribeDcdnUserSecDropByMinuteRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2006-01-02T15:05:04Z.
-         * <p>
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2006-01-02T15:05:04Z.</p>
+         * <blockquote>
+         * <p>The end time must be later than the start time.</p>
+         * </blockquote>
          * 
-         * > The end time must be later than the start time.
+         * <strong>example:</strong>
+         * <p>2006-01-02T15:05:04Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -190,7 +196,11 @@ public class DescribeDcdnUserSecDropByMinuteRequest extends Request {
         }
 
         /**
-         * The language. Valid values: en and zh. Default value: en
+         * <p>The language. Valid values: en and zh. Default value: en</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -199,7 +209,10 @@ public class DescribeDcdnUserSecDropByMinuteRequest extends Request {
         }
 
         /**
-         * The object that triggered rate limiting.
+         * <p>The object that triggered rate limiting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>robot_fingerprint_ai</p>
          */
         public Builder object(String object) {
             this.putQueryParameter("Object", object);
@@ -208,7 +221,10 @@ public class DescribeDcdnUserSecDropByMinuteRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1.
+         * <p>The number of the page to return. Pages start from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -217,7 +233,10 @@ public class DescribeDcdnUserSecDropByMinuteRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100.
+         * <p>The number of entries to return on each page. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -226,7 +245,10 @@ public class DescribeDcdnUserSecDropByMinuteRequest extends Request {
         }
 
         /**
-         * The rule that was triggered.
+         * <p>The rule that was triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>robot_ai</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -235,7 +257,11 @@ public class DescribeDcdnUserSecDropByMinuteRequest extends Request {
         }
 
         /**
-         * The name of the security feature.
+         * <p>The name of the security feature.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>robot</p>
          */
         public Builder secFunc(String secFunc) {
             this.putQueryParameter("SecFunc", secFunc);
@@ -244,7 +270,10 @@ public class DescribeDcdnUserSecDropByMinuteRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2006-01-02T15:04:04Z.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2006-01-02T15:04:04Z.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2006-01-02T15:04:04Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

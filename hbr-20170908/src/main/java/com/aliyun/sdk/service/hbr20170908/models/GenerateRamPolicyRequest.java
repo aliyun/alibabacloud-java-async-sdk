@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateRamPolicyRequest} extends {@link RequestModel}
  *
  * <p>GenerateRamPolicyRequest</p>
  */
 public class GenerateRamPolicyRequest extends Request {
-    @Query
-    @NameInMap("ActionType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ActionType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String actionType;
 
-    @Query
-    @NameInMap("RequireBasePolicy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequireBasePolicy")
     private Boolean requireBasePolicy;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("VaultId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vaultId;
 
     private GenerateRamPolicyRequest(Builder builder) {
@@ -89,16 +94,24 @@ public class GenerateRamPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(GenerateRamPolicyRequest response) {
-            super(response);
-            this.actionType = response.actionType;
-            this.requireBasePolicy = response.requireBasePolicy;
-            this.resourceGroupId = response.resourceGroupId;
-            this.vaultId = response.vaultId;
+        private Builder(GenerateRamPolicyRequest request) {
+            super(request);
+            this.actionType = request.actionType;
+            this.requireBasePolicy = request.requireBasePolicy;
+            this.resourceGroupId = request.resourceGroupId;
+            this.vaultId = request.vaultId;
         } 
 
         /**
-         * ActionType.
+         * <p>The type of policy that you want to generate. Valid values:</p>
+         * <ul>
+         * <li>BACKUP: the permission to back up data to a backup vault</li>
+         * <li>RESTORE: the permission to restore data from a backup vault</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system</p>
          */
         public Builder actionType(String actionType) {
             this.putQueryParameter("ActionType", actionType);
@@ -107,7 +120,14 @@ public class GenerateRamPolicyRequest extends Request {
         }
 
         /**
-         * RequireBasePolicy.
+         * <p>Specifies whether to generate the policy based on an existing instance-specific rule. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder requireBasePolicy(Boolean requireBasePolicy) {
             this.putQueryParameter("RequireBasePolicy", requireBasePolicy);
@@ -116,7 +136,10 @@ public class GenerateRamPolicyRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-*********************</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -125,7 +148,11 @@ public class GenerateRamPolicyRequest extends Request {
         }
 
         /**
-         * VaultId.
+         * <p>The ID of the backup vault.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v-0007al3m******7ao</p>
          */
         public Builder vaultId(String vaultId) {
             this.putQueryParameter("VaultId", vaultId);

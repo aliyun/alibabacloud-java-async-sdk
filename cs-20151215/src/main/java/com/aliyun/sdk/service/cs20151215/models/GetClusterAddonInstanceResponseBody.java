@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetClusterAddonInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>GetClusterAddonInstanceResponseBody</p>
  */
 public class GetClusterAddonInstanceResponseBody extends TeaModel {
-    @NameInMap("config")
+    @com.aliyun.core.annotation.NameInMap("config")
     private String config;
 
-    @NameInMap("logging")
+    @com.aliyun.core.annotation.NameInMap("logging")
     private Logging logging;
 
-    @NameInMap("name")
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @NameInMap("state")
+    @com.aliyun.core.annotation.NameInMap("state")
     private String state;
 
-    @NameInMap("version")
+    @com.aliyun.core.annotation.NameInMap("version")
     private String version;
 
     private GetClusterAddonInstanceResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
         private String version; 
 
         /**
-         * config.
+         * <p>The custom configurations of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;sls_project_name&quot;:&quot;&quot;}</p>
          */
         public Builder config(String config) {
             this.config = config;
@@ -94,7 +102,7 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * logging.
+         * <p>The status of Simple Log Service.</p>
          */
         public Builder logging(Logging logging) {
             this.logging = logging;
@@ -102,7 +110,10 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The name of the component instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ack-node-problem-detector</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -110,7 +121,16 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * state.
+         * <p>The status of the component. Valid values:</p>
+         * <ul>
+         * <li>active: The component is installed.</li>
+         * <li>updating: The component is being modified.</li>
+         * <li>upgrading: The component is being updated.</li>
+         * <li>deleting: The component is being uninstalled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder state(String state) {
             this.state = state;
@@ -118,7 +138,10 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * version.
+         * <p>The version of the component instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.16</p>
          */
         public Builder version(String version) {
             this.version = version;
@@ -131,17 +154,23 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetClusterAddonInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterAddonInstanceResponseBody</p>
+     */
     public static class Logging extends TeaModel {
-        @NameInMap("capable")
+        @com.aliyun.core.annotation.NameInMap("capable")
         private Boolean capable;
 
-        @NameInMap("enabled")
+        @com.aliyun.core.annotation.NameInMap("enabled")
         private Boolean enabled;
 
-        @NameInMap("log_project")
+        @com.aliyun.core.annotation.NameInMap("log_project")
         private String logProject;
 
-        @NameInMap("logstore")
+        @com.aliyun.core.annotation.NameInMap("logstore")
         private String logstore;
 
         private Logging(Builder builder) {
@@ -194,7 +223,10 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
             private String logstore; 
 
             /**
-             * capable.
+             * <p>Indicates whether Simple Log Service is supported by the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder capable(Boolean capable) {
                 this.capable = capable;
@@ -202,7 +234,10 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * enabled.
+             * <p>Indicates whether Simple Log Service is enabled for the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -210,7 +245,10 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * log_project.
+             * <p>The Simple Log Service project that is used to collect logs for the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-log-project</p>
              */
             public Builder logProject(String logProject) {
                 this.logProject = logProject;
@@ -218,7 +256,10 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * logstore.
+             * <p>The Simple Log Service Logstore that is used to collect logs for the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-logstore</p>
              */
             public Builder logstore(String logstore) {
                 this.logstore = logstore;

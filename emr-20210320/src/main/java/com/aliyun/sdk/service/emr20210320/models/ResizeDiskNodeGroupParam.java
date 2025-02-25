@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResizeDiskNodeGroupParam} extends {@link TeaModel}
  *
  * <p>ResizeDiskNodeGroupParam</p>
  */
 public class ResizeDiskNodeGroupParam extends TeaModel {
-    @NameInMap("DataDiskCapacity")
+    @com.aliyun.core.annotation.NameInMap("DataDiskCapacity")
     private Long dataDiskCapacity;
 
-    @NameInMap("NodeGroupId")
+    @com.aliyun.core.annotation.NameInMap("NodeGroupId")
     private String nodeGroupId;
 
-    @NameInMap("RollingRestart")
+    @com.aliyun.core.annotation.NameInMap("RollingRestart")
     private Boolean rollingRestart;
 
     private ResizeDiskNodeGroupParam(Builder builder) {

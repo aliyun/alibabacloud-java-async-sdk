@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeVisibilityModelRequest} extends {@link RequestModel}
  *
  * <p>ChangeVisibilityModelRequest</p>
  */
 public class ChangeVisibilityModelRequest extends Request {
-    @Query
-    @NameInMap("DataPortalId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataPortalId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dataPortalId;
 
-    @Query
-    @NameInMap("MenuIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MenuIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String menuIds;
 
-    @Query
-    @NameInMap("ShowOnlyWithAccess")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShowOnlyWithAccess")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean showOnlyWithAccess;
 
     private ChangeVisibilityModelRequest(Builder builder) {
@@ -85,7 +90,11 @@ public class ChangeVisibilityModelRequest extends Request {
         } 
 
         /**
-         * The number of menus that are successfully modified.
+         * <p>The number of menus that are successfully modified.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0d173abb53e84c8ca7495429163b****</p>
          */
         public Builder dataPortalId(String dataPortalId) {
             this.putQueryParameter("DataPortalId", dataPortalId);
@@ -94,11 +103,15 @@ public class ChangeVisibilityModelRequest extends Request {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * <strong>example:</strong>
+         * <p>54kqgoa****,pg1n135****</p>
          */
         public Builder menuIds(String menuIds) {
             this.putQueryParameter("MenuIds", menuIds);
@@ -107,7 +120,10 @@ public class ChangeVisibilityModelRequest extends Request {
         }
 
         /**
-         * ShowOnlyWithAccess.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder showOnlyWithAccess(Boolean showOnlyWithAccess) {
             this.putQueryParameter("ShowOnlyWithAccess", showOnlyWithAccess);

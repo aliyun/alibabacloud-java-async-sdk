@@ -1,60 +1,70 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchMediaByAILabelRequest} extends {@link RequestModel}
  *
  * <p>SearchMediaByAILabelRequest</p>
  */
 public class SearchMediaByAILabelRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("MediaId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MatchingMode")
+    private String matchingMode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaId")
     private String mediaId;
 
-    @Query
-    @NameInMap("MediaType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaType")
     private String mediaType;
 
-    @Query
-    @NameInMap("MultimodalSearchType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MultimodalSearchType")
     private String multimodalSearchType;
 
-    @Query
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SearchLibName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchLibName")
     private String searchLibName;
 
-    @Query
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
-    @Query
-    @NameInMap("SpecificSearch")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpecificSearch")
     private Boolean specificSearch;
 
-    @Query
-    @NameInMap("Text")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Text")
     private String text;
 
     private SearchMediaByAILabelRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.matchingMode = builder.matchingMode;
         this.mediaId = builder.mediaId;
         this.mediaType = builder.mediaType;
         this.multimodalSearchType = builder.multimodalSearchType;
@@ -84,6 +94,13 @@ public class SearchMediaByAILabelRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return matchingMode
+     */
+    public String getMatchingMode() {
+        return this.matchingMode;
     }
 
     /**
@@ -151,6 +168,7 @@ public class SearchMediaByAILabelRequest extends Request {
 
     public static final class Builder extends Request.Builder<SearchMediaByAILabelRequest, Builder> {
         private String regionId; 
+        private String matchingMode; 
         private String mediaId; 
         private String mediaType; 
         private String multimodalSearchType; 
@@ -168,6 +186,7 @@ public class SearchMediaByAILabelRequest extends Request {
         private Builder(SearchMediaByAILabelRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.matchingMode = request.matchingMode;
             this.mediaId = request.mediaId;
             this.mediaType = request.mediaType;
             this.multimodalSearchType = request.multimodalSearchType;
@@ -189,7 +208,19 @@ public class SearchMediaByAILabelRequest extends Request {
         }
 
         /**
-         * MediaId.
+         * MatchingMode.
+         */
+        public Builder matchingMode(String matchingMode) {
+            this.putQueryParameter("MatchingMode", matchingMode);
+            this.matchingMode = matchingMode;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the media asset. This parameter is required if you want to query media asset clips.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>c469e944b5a856828dc2</strong></strong></p>
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);
@@ -198,7 +229,15 @@ public class SearchMediaByAILabelRequest extends Request {
         }
 
         /**
-         * MediaType.
+         * <p>The type of the media assets. Valid values:</p>
+         * <ul>
+         * <li>image</li>
+         * <li>video</li>
+         * <li>audio</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>video</p>
          */
         public Builder mediaType(String mediaType) {
             this.putQueryParameter("MediaType", mediaType);
@@ -207,7 +246,16 @@ public class SearchMediaByAILabelRequest extends Request {
         }
 
         /**
-         * MultimodalSearchType.
+         * <p>The type of query. Valid values:</p>
+         * <ul>
+         * <li>PersonName: queries media assets based on character names.</li>
+         * <li>Ocr: queries media assets based on subtitles.</li>
+         * <li>AiCategory: queries media assets based on AI categories.</li>
+         * <li>FullSearch (default): queries all media assets.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Ocr</p>
          */
         public Builder multimodalSearchType(String multimodalSearchType) {
             this.putQueryParameter("MultimodalSearchType", multimodalSearchType);
@@ -216,7 +264,10 @@ public class SearchMediaByAILabelRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -225,7 +276,10 @@ public class SearchMediaByAILabelRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -234,7 +288,10 @@ public class SearchMediaByAILabelRequest extends Request {
         }
 
         /**
-         * SearchLibName.
+         * <p>The name of the search library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-1</p>
          */
         public Builder searchLibName(String searchLibName) {
             this.putQueryParameter("SearchLibName", searchLibName);
@@ -243,7 +300,14 @@ public class SearchMediaByAILabelRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sorting method of the results. Valid values:</p>
+         * <ul>
+         * <li>CreationTime:Desc (default): sorts results in reverse chronological order.</li>
+         * <li>CreationTime:Asc: sorts results in chronological order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CreationTime:Desc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -252,7 +316,14 @@ public class SearchMediaByAILabelRequest extends Request {
         }
 
         /**
-         * SpecificSearch.
+         * <p>Specifies whether to query media asset clips. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder specificSearch(Boolean specificSearch) {
             this.putQueryParameter("SpecificSearch", specificSearch);
@@ -261,7 +332,7 @@ public class SearchMediaByAILabelRequest extends Request {
         }
 
         /**
-         * Text.
+         * <p>The content that you want to query.</p>
          */
         public Builder text(String text) {
             this.putQueryParameter("Text", text);

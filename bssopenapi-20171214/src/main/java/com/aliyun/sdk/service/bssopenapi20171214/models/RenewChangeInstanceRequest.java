@@ -1,46 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenewChangeInstanceRequest} extends {@link RequestModel}
  *
  * <p>RenewChangeInstanceRequest</p>
  */
 public class RenewChangeInstanceRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Parameter")
-    private java.util.List < Parameter> parameter;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Parameter")
+    private java.util.List<Parameter> parameter;
 
-    @Query
-    @NameInMap("ProductCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productCode;
 
-    @Query
-    @NameInMap("ProductType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductType")
     private String productType;
 
-    @Query
-    @NameInMap("RenewPeriod")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RenewPeriod")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long renewPeriod;
 
     private RenewChangeInstanceRequest(Builder builder) {
@@ -91,7 +96,7 @@ public class RenewChangeInstanceRequest extends Request {
     /**
      * @return parameter
      */
-    public java.util.List < Parameter> getParameter() {
+    public java.util.List<Parameter> getParameter() {
         return this.parameter;
     }
 
@@ -120,7 +125,7 @@ public class RenewChangeInstanceRequest extends Request {
         private String clientToken; 
         private String instanceId; 
         private Long ownerId; 
-        private java.util.List < Parameter> parameter; 
+        private java.util.List<Parameter> parameter; 
         private String productCode; 
         private String productType; 
         private Long renewPeriod; 
@@ -150,7 +155,10 @@ public class RenewChangeInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-skjdhaskjdh</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -170,14 +178,17 @@ public class RenewChangeInstanceRequest extends Request {
         /**
          * Parameter.
          */
-        public Builder parameter(java.util.List < Parameter> parameter) {
+        public Builder parameter(java.util.List<Parameter> parameter) {
             this.putQueryParameter("Parameter", parameter);
             this.parameter = parameter;
             return this;
         }
 
         /**
-         * ProductCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -195,7 +206,10 @@ public class RenewChangeInstanceRequest extends Request {
         }
 
         /**
-         * RenewPeriod.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder renewPeriod(Long renewPeriod) {
             this.putQueryParameter("RenewPeriod", renewPeriod);
@@ -210,13 +224,19 @@ public class RenewChangeInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RenewChangeInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>RenewChangeInstanceRequest</p>
+     */
     public static class Parameter extends TeaModel {
-        @NameInMap("Code")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Code")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String code;
 
-        @NameInMap("Value")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Value")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String value;
 
         private Parameter(Builder builder) {
@@ -251,7 +271,10 @@ public class RenewChangeInstanceRequest extends Request {
             private String value; 
 
             /**
-             * Code.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Bandwidth</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -259,7 +282,10 @@ public class RenewChangeInstanceRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>disk</p>
              */
             public Builder value(String value) {
                 this.value = value;

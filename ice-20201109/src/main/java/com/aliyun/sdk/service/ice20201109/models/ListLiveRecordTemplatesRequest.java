@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLiveRecordTemplatesRequest} extends {@link RequestModel}
  *
  * <p>ListLiveRecordTemplatesRequest</p>
  */
 public class ListLiveRecordTemplatesRequest extends Request {
-    @Query
-    @NameInMap("Keyword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
-    @Query
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Long pageNo;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
-    @Query
-    @NameInMap("TemplateIds")
-    private java.util.List < String > templateIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateIds")
+    private java.util.List<String> templateIds;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private ListLiveRecordTemplatesRequest(Builder builder) {
@@ -90,7 +95,7 @@ public class ListLiveRecordTemplatesRequest extends Request {
     /**
      * @return templateIds
      */
-    public java.util.List < String > getTemplateIds() {
+    public java.util.List<String> getTemplateIds() {
         return this.templateIds;
     }
 
@@ -106,7 +111,7 @@ public class ListLiveRecordTemplatesRequest extends Request {
         private Long pageNo; 
         private Long pageSize; 
         private String sortBy; 
-        private java.util.List < String > templateIds; 
+        private java.util.List<String> templateIds; 
         private String type; 
 
         private Builder() {
@@ -124,7 +129,10 @@ public class ListLiveRecordTemplatesRequest extends Request {
         } 
 
         /**
-         * Keyword.
+         * <p>The search keyword. You can use the template ID or name as the keyword to search for templates. If you search for templates by name, fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test template</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -133,7 +141,10 @@ public class ListLiveRecordTemplatesRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Minimum value: 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Long pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -142,7 +153,10 @@ public class ListLiveRecordTemplatesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -151,7 +165,15 @@ public class ListLiveRecordTemplatesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sorting order. By default, the query results are sorted by creation time in descending order.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>asc: sorts the query results in ascending order.</li>
+         * <li>desc: sorts the query results in descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -162,14 +184,22 @@ public class ListLiveRecordTemplatesRequest extends Request {
         /**
          * TemplateIds.
          */
-        public Builder templateIds(java.util.List < String > templateIds) {
+        public Builder templateIds(java.util.List<String> templateIds) {
             this.putQueryParameter("TemplateIds", templateIds);
             this.templateIds = templateIds;
             return this;
         }
 
         /**
-         * Type.
+         * <p>The type of the template.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>system</li>
+         * <li>custom</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

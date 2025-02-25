@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSnapshotPackageResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSnapshotPackageResponseBody</p>
  */
 public class DescribeSnapshotPackageResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SnapshotPackages")
+    @com.aliyun.core.annotation.NameInMap("SnapshotPackages")
     private SnapshotPackages snapshotPackages;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeSnapshotPackageResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the OSS storage plans.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +102,10 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +113,10 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned OSS storage plans.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +124,7 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the OSS storage plan expires. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+         * <p>Details about the OSS storage plans.</p>
          */
         public Builder snapshotPackages(SnapshotPackages snapshotPackages) {
             this.snapshotPackages = snapshotPackages;
@@ -118,7 +132,10 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the OSS storage plan.
+         * <p>The total number of OSS storage plans.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,17 +148,23 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSnapshotPackageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSnapshotPackageResponseBody</p>
+     */
     public static class SnapshotPackage extends TeaModel {
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("InitCapacity")
+        @com.aliyun.core.annotation.NameInMap("InitCapacity")
         private Long initCapacity;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private SnapshotPackage(Builder builder) {
@@ -194,7 +217,10 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * The time when the OSS storage plan was purchased. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The name of the OSS storage plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testDisplayName</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -202,7 +228,10 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum storage capacity offered by the OSS storage plan.
+             * <p>The time when the OSS storage plan expires. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-11-30T06:32:31Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -210,7 +239,10 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
             }
 
             /**
-             * InitCapacity.
+             * <p>The maximum storage capacity offered by the OSS storage plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder initCapacity(Long initCapacity) {
                 this.initCapacity = initCapacity;
@@ -218,7 +250,10 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
             }
 
             /**
-             * DescribeSnapshotPackage
+             * <p>The time when the OSS storage plan was purchased. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-11-30T06:32:31Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -232,9 +267,15 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSnapshotPackageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSnapshotPackageResponseBody</p>
+     */
     public static class SnapshotPackages extends TeaModel {
-        @NameInMap("SnapshotPackage")
-        private java.util.List < SnapshotPackage> snapshotPackage;
+        @com.aliyun.core.annotation.NameInMap("SnapshotPackage")
+        private java.util.List<SnapshotPackage> snapshotPackage;
 
         private SnapshotPackages(Builder builder) {
             this.snapshotPackage = builder.snapshotPackage;
@@ -251,17 +292,17 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
         /**
          * @return snapshotPackage
          */
-        public java.util.List < SnapshotPackage> getSnapshotPackage() {
+        public java.util.List<SnapshotPackage> getSnapshotPackage() {
             return this.snapshotPackage;
         }
 
         public static final class Builder {
-            private java.util.List < SnapshotPackage> snapshotPackage; 
+            private java.util.List<SnapshotPackage> snapshotPackage; 
 
             /**
              * SnapshotPackage.
              */
-            public Builder snapshotPackage(java.util.List < SnapshotPackage> snapshotPackage) {
+            public Builder snapshotPackage(java.util.List<SnapshotPackage> snapshotPackage) {
                 this.snapshotPackage = snapshotPackage;
                 return this;
             }

@@ -1,35 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReverseTwoWayDirectionRequest} extends {@link RequestModel}
  *
  * <p>ReverseTwoWayDirectionRequest</p>
  */
 public class ReverseTwoWayDirectionRequest extends Request {
-    @Query
-    @NameInMap("DtsInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DtsInstanceId")
     private String dtsInstanceId;
 
-    @Query
-    @NameInMap("IgnoreErrorSubJob")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IgnoreErrorSubJob")
     private Boolean ignoreErrorSubJob;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
 
     private ReverseTwoWayDirectionRequest(Builder builder) {
         super(builder);
         this.dtsInstanceId = builder.dtsInstanceId;
         this.ignoreErrorSubJob = builder.ignoreErrorSubJob;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -66,10 +76,18 @@ public class ReverseTwoWayDirectionRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder extends Request.Builder<ReverseTwoWayDirectionRequest, Builder> {
         private String dtsInstanceId; 
         private Boolean ignoreErrorSubJob; 
         private String regionId; 
+        private String resourceGroupId; 
 
         private Builder() {
             super();
@@ -80,6 +98,7 @@ public class ReverseTwoWayDirectionRequest extends Request {
             this.dtsInstanceId = request.dtsInstanceId;
             this.ignoreErrorSubJob = request.ignoreErrorSubJob;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
@@ -101,11 +120,23 @@ public class ReverseTwoWayDirectionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryCostUnitResourceRequest} extends {@link RequestModel}
  *
  * <p>QueryCostUnitResourceRequest</p>
  */
 public class QueryCostUnitResourceRequest extends Request {
-    @Query
-    @NameInMap("OwnerUid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerUid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long ownerUid;
 
-    @Query
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("UnitId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UnitId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long unitId;
 
     private QueryCostUnitResourceRequest(Builder builder) {
@@ -98,7 +103,11 @@ public class QueryCostUnitResourceRequest extends Request {
         } 
 
         /**
-         * The user ID of the cost center owner.
+         * <p>The user ID of the cost center owner.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23453245</p>
          */
         public Builder ownerUid(Long ownerUid) {
             this.putQueryParameter("OwnerUid", ownerUid);
@@ -107,7 +116,10 @@ public class QueryCostUnitResourceRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -116,7 +128,10 @@ public class QueryCostUnitResourceRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -125,7 +140,11 @@ public class QueryCostUnitResourceRequest extends Request {
         }
 
         /**
-         * The ID of the cost center.
+         * <p>The ID of the cost center.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>235325</p>
          */
         public Builder unitId(Long unitId) {
             this.putQueryParameter("UnitId", unitId);

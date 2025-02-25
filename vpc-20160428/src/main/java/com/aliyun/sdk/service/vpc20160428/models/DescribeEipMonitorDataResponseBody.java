@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEipMonitorDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEipMonitorDataResponseBody</p>
  */
 public class DescribeEipMonitorDataResponseBody extends TeaModel {
-    @NameInMap("EipMonitorDatas")
+    @com.aliyun.core.annotation.NameInMap("EipMonitorDatas")
     private EipMonitorDatas eipMonitorDatas;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeEipMonitorDataResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The detailed information about the monitoring data of the EIP.
+         * <p>The detailed information about the monitoring data of the EIP.</p>
          */
         public Builder eipMonitorDatas(EipMonitorDatas eipMonitorDatas) {
             this.eipMonitorDatas = eipMonitorDatas;
@@ -58,7 +63,10 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C8B26B44-0189-443E-9816-D951F59623A9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,23 +79,29 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEipMonitorDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEipMonitorDataResponseBody</p>
+     */
     public static class EipMonitorData extends TeaModel {
-        @NameInMap("EipBandwidth")
+        @com.aliyun.core.annotation.NameInMap("EipBandwidth")
         private Integer eipBandwidth;
 
-        @NameInMap("EipFlow")
+        @com.aliyun.core.annotation.NameInMap("EipFlow")
         private Long eipFlow;
 
-        @NameInMap("EipPackets")
+        @com.aliyun.core.annotation.NameInMap("EipPackets")
         private Integer eipPackets;
 
-        @NameInMap("EipRX")
+        @com.aliyun.core.annotation.NameInMap("EipRX")
         private Long eipRX;
 
-        @NameInMap("EipTX")
+        @com.aliyun.core.annotation.NameInMap("EipTX")
         private Long eipTX;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private EipMonitorData(Builder builder) {
@@ -166,7 +180,10 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The sum of inbound and outbound traffic.
+             * <p>The sum of inbound and outbound traffic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>465</p>
              */
             public Builder eipFlow(Long eipFlow) {
                 this.eipFlow = eipFlow;
@@ -174,7 +191,10 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The number of packets.
+             * <p>The number of packets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3434</p>
              */
             public Builder eipPackets(Integer eipPackets) {
                 this.eipPackets = eipPackets;
@@ -182,7 +202,10 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The inbound traffic. Unit: bytes.
+             * <p>The inbound traffic. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>122</p>
              */
             public Builder eipRX(Long eipRX) {
                 this.eipRX = eipRX;
@@ -190,7 +213,10 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The outbound traffic. Unit: bytes.
+             * <p>The outbound traffic. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>343</p>
              */
             public Builder eipTX(Long eipTX) {
                 this.eipTX = eipTX;
@@ -198,7 +224,10 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the monitoring data. Specify the time in the ISO8601 standard. Example: `2020-01-21T09:50:23Z`.
+             * <p>The timestamp of the monitoring data. Specify the time in the ISO8601 standard. Example: <code>2020-01-21T09:50:23Z</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-01-21T09:50:23Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -212,9 +241,15 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEipMonitorDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEipMonitorDataResponseBody</p>
+     */
     public static class EipMonitorDatas extends TeaModel {
-        @NameInMap("EipMonitorData")
-        private java.util.List < EipMonitorData> eipMonitorData;
+        @com.aliyun.core.annotation.NameInMap("EipMonitorData")
+        private java.util.List<EipMonitorData> eipMonitorData;
 
         private EipMonitorDatas(Builder builder) {
             this.eipMonitorData = builder.eipMonitorData;
@@ -231,17 +266,17 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
         /**
          * @return eipMonitorData
          */
-        public java.util.List < EipMonitorData> getEipMonitorData() {
+        public java.util.List<EipMonitorData> getEipMonitorData() {
             return this.eipMonitorData;
         }
 
         public static final class Builder {
-            private java.util.List < EipMonitorData> eipMonitorData; 
+            private java.util.List<EipMonitorData> eipMonitorData; 
 
             /**
              * EipMonitorData.
              */
-            public Builder eipMonitorData(java.util.List < EipMonitorData> eipMonitorData) {
+            public Builder eipMonitorData(java.util.List<EipMonitorData> eipMonitorData) {
                 this.eipMonitorData = eipMonitorData;
                 return this;
             }

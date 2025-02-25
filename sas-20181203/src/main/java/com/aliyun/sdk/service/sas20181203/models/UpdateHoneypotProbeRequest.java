@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateHoneypotProbeRequest} extends {@link RequestModel}
  *
  * <p>UpdateHoneypotProbeRequest</p>
  */
 public class UpdateHoneypotProbeRequest extends Request {
-    @Query
-    @NameInMap("Arp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Arp")
     private Boolean arp;
 
-    @Query
-    @NameInMap("DisplayName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
     private String displayName;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Ping")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ping")
     private Boolean ping;
 
-    @Query
-    @NameInMap("ProbeId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProbeId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String probeId;
 
-    @Query
-    @NameInMap("ServiceIpList")
-    private java.util.List < String > serviceIpList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceIpList")
+    private java.util.List<String> serviceIpList;
 
     private UpdateHoneypotProbeRequest(Builder builder) {
         super(builder);
@@ -98,7 +103,7 @@ public class UpdateHoneypotProbeRequest extends Request {
     /**
      * @return serviceIpList
      */
-    public java.util.List < String > getServiceIpList() {
+    public java.util.List<String> getServiceIpList() {
         return this.serviceIpList;
     }
 
@@ -108,7 +113,7 @@ public class UpdateHoneypotProbeRequest extends Request {
         private String lang; 
         private Boolean ping; 
         private String probeId; 
-        private java.util.List < String > serviceIpList; 
+        private java.util.List<String> serviceIpList; 
 
         private Builder() {
             super();
@@ -125,7 +130,10 @@ public class UpdateHoneypotProbeRequest extends Request {
         } 
 
         /**
-         * Specifies whether address resolution protocol (ARP) is enabled for the check type.
+         * <p>Specifies whether address resolution protocol (ARP) is enabled for the check type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder arp(Boolean arp) {
             this.putQueryParameter("Arp", arp);
@@ -134,7 +142,10 @@ public class UpdateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * The name of the probe.
+         * <p>The name of the probe.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>svwsx-vpc-4430</p>
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -143,11 +154,14 @@ public class UpdateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese.
-         * *   **en**: English.
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -156,7 +170,10 @@ public class UpdateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * Specifies whether ping is enabled for the check type.
+         * <p>Specifies whether ping is enabled for the check type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ping(Boolean ping) {
             this.putQueryParameter("Ping", ping);
@@ -165,10 +182,14 @@ public class UpdateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * The ID of the probe.
-         * <p>
+         * <p>The ID of the probe.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~ListHoneypotProbe~~">ListHoneypotProbe</a> operation to query the IDs of probes.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [ListHoneypotProbe](~~ListHoneypotProbe~~) operation to query the IDs of probes.
+         * <strong>example:</strong>
+         * <p>bbe7e382-956f-473e-beed-bc73a258****</p>
          */
         public Builder probeId(String probeId) {
             this.putQueryParameter("ProbeId", probeId);
@@ -177,9 +198,9 @@ public class UpdateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * The IP addresses that are monitored.
+         * <p>The IP addresses that are monitored.</p>
          */
-        public Builder serviceIpList(java.util.List < String > serviceIpList) {
+        public Builder serviceIpList(java.util.List<String> serviceIpList) {
             this.putQueryParameter("ServiceIpList", serviceIpList);
             this.serviceIpList = serviceIpList;
             return this;

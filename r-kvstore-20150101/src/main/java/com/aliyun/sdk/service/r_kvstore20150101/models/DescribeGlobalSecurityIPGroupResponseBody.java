@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGlobalSecurityIPGroupResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeGlobalSecurityIPGroupResponseBody</p>
  */
 public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
-    @NameInMap("GlobalSecurityIPGroup")
+    @com.aliyun.core.annotation.NameInMap("GlobalSecurityIPGroup")
     private java.util.List < GlobalSecurityIPGroup> globalSecurityIPGroup;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeGlobalSecurityIPGroupResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 1
+         * <p>The information about the IP whitelist template.</p>
          */
         public Builder globalSecurityIPGroup(java.util.List < GlobalSecurityIPGroup> globalSecurityIPGroup) {
             this.globalSecurityIPGroup = globalSecurityIPGroup;
@@ -58,7 +58,10 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2FF6158E-3394-4A90-B634-79C49184****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +74,26 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeGlobalSecurityIPGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGlobalSecurityIPGroupResponseBody</p>
+     */
     public static class GlobalSecurityIPGroup extends TeaModel {
-        @NameInMap("DBInstances")
+        @com.aliyun.core.annotation.NameInMap("DBInstances")
         private java.util.List < String > DBInstances;
 
-        @NameInMap("GIpList")
+        @com.aliyun.core.annotation.NameInMap("GIpList")
         private String gIpList;
 
-        @NameInMap("GlobalIgName")
+        @com.aliyun.core.annotation.NameInMap("GlobalIgName")
         private String globalIgName;
 
-        @NameInMap("GlobalSecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("GlobalSecurityGroupId")
         private String globalSecurityGroupId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private GlobalSecurityIPGroup(Builder builder) {
@@ -146,7 +155,7 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * The instance IDs.
+             * <p>The IDs of the instances that are associated with the IP whitelist template.</p>
              */
             public Builder DBInstances(java.util.List < String > DBInstances) {
                 this.DBInstances = DBInstances;
@@ -154,10 +163,13 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address in the whitelist template.
-             * <p>
+             * <p>The IP address in the IP whitelist template.</p>
+             * <blockquote>
+             * <p> Multiple IP addresses are separated by commas (,).</p>
+             * </blockquote>
              * 
-             * >  Multiple IP addresses are separated by commas (,). You can create up to 1,000 IP addresses or CIDR blocks for all IP whitelists.
+             * <strong>example:</strong>
+             * <p>125.38.177.62,221.197.232.185</p>
              */
             public Builder gIpList(String gIpList) {
                 this.gIpList = gIpList;
@@ -165,12 +177,10 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the IP whitelist template. The name must meet the following requirements:
-             * <p>
+             * <p>The name of the IP whitelist template.</p>
              * 
-             * *   The name can contain lowercase letters, digits, and underscores (\_).
-             * *   The name must start with a letter and end with a letter or digit.
-             * *   The name must be 2 to 120 characters in length.
+             * <strong>example:</strong>
+             * <p>test_123</p>
              */
             public Builder globalIgName(String globalIgName) {
                 this.globalIgName = globalIgName;
@@ -178,7 +188,10 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the IP whitelist template.
+             * <p>The ID of the IP whitelist template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g-zsldxfiwjmti0kcm****</p>
              */
             public Builder globalSecurityGroupId(String globalSecurityGroupId) {
                 this.globalSecurityGroupId = globalSecurityGroupId;
@@ -186,7 +199,10 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

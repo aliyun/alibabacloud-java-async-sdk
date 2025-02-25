@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateScalingConfigurationResponseBody} extends {@link TeaModel}
  *
  * <p>CreateScalingConfigurationResponseBody</p>
  */
 public class CreateScalingConfigurationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ScalingConfigurationId")
+    @com.aliyun.core.annotation.NameInMap("ScalingConfigurationId")
     private String scalingConfigurationId;
 
     private CreateScalingConfigurationResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateScalingConfigurationResponseBody extends TeaModel {
         private String scalingConfigurationId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,10 @@ public class CreateScalingConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the scaling configuration.
+         * <p>The ID of the scaling configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asc-bp1ffogfdauy0nu5****</p>
          */
         public Builder scalingConfigurationId(String scalingConfigurationId) {
             this.scalingConfigurationId = scalingConfigurationId;

@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePrometheusMonitoringRequest} extends {@link RequestModel}
  *
  * <p>CreatePrometheusMonitoringRequest</p>
  */
 public class CreatePrometheusMonitoringRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Body
-    @NameInMap("ConfigYaml")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConfigYaml")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String configYaml;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private CreatePrometheusMonitoringRequest(Builder builder) {
@@ -114,7 +119,11 @@ public class CreatePrometheusMonitoringRequest extends Request {
         } 
 
         /**
-         * The ID of the Prometheus instance.
+         * <p>The ID of the Prometheus instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc7a37ee31aea4ed1a059eff8034b****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -123,7 +132,11 @@ public class CreatePrometheusMonitoringRequest extends Request {
         }
 
         /**
-         * The monitoring configuration. Specify a YAML string.
+         * <p>The monitoring configuration. Specify a YAML string.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Please refer to the supplementary explanation of the request parameters.</p>
          */
         public Builder configYaml(String configYaml) {
             this.putBodyParameter("ConfigYaml", configYaml);
@@ -132,7 +145,11 @@ public class CreatePrometheusMonitoringRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -141,7 +158,10 @@ public class CreatePrometheusMonitoringRequest extends Request {
         }
 
         /**
-         * The status of the monitoring configuration. Valid values: run and stop. Default value: run. This parameter is not available if the Type parameter is set to Probe.
+         * <p>The status of the monitoring configuration. Valid values: run and stop. Default value: run. This parameter is not available if the Type parameter is set to Probe.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>run</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -150,10 +170,13 @@ public class CreatePrometheusMonitoringRequest extends Request {
         }
 
         /**
-         * The type of the monitoring configuration. 
-         * <p>
+         * <p>The type of the monitoring configuration. 
          * Valid values for a Prometheus instance for Container Service: serviceMonitor, podMonitor, customJob, and probe. 
-         * Valid values for a Prometheus instance for ECS: customJob and probe.
+         * Valid values for a Prometheus instance for ECS: customJob and probe.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>serviceMonitor</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

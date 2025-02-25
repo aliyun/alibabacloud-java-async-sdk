@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddAutoCcBlacklistRequest} extends {@link RequestModel}
  *
  * <p>AddAutoCcBlacklistRequest</p>
  */
 public class AddAutoCcBlacklistRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Blacklist")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Blacklist")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String blacklist;
 
-    @Query
-    @NameInMap("ExpireTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExpireTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer expireTime;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private AddAutoCcBlacklistRequest(Builder builder) {
@@ -108,7 +113,10 @@ public class AddAutoCcBlacklistRequest extends Request {
         }
 
         /**
-         * Blacklist.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;src&quot;:&quot;198.51.XX.XX&quot;},{&quot;src&quot;:&quot;198.52.XX.XX&quot;}]</p>
          */
         public Builder blacklist(String blacklist) {
             this.putQueryParameter("Blacklist", blacklist);
@@ -117,7 +125,10 @@ public class AddAutoCcBlacklistRequest extends Request {
         }
 
         /**
-         * ExpireTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder expireTime(Integer expireTime) {
             this.putQueryParameter("ExpireTime", expireTime);
@@ -126,7 +137,10 @@ public class AddAutoCcBlacklistRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-mp91j1ao****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

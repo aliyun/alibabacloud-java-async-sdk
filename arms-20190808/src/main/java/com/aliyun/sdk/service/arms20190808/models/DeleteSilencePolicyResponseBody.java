@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSilencePolicyResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteSilencePolicyResponseBody</p>
  */
 public class DeleteSilencePolicyResponseBody extends TeaModel {
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteSilencePolicyResponseBody(Builder builder) {
@@ -50,11 +55,14 @@ public class DeleteSilencePolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the silence policy was deleted successfully. Valid values:
-         * <p>
+         * <p>Indicates whether the silence policy was deleted successfully. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The silence policy was deleted successfully.</li>
+         * <li><code>false</code>: The silence policy failed to be deleted.</li>
+         * </ul>
          * 
-         * *   `true`: The silence policy was deleted successfully.
-         * *   `false`: The silence policy failed to be deleted.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -62,7 +70,10 @@ public class DeleteSilencePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **DeleteSilencePolicy**.
+         * <p>The operation that you want to perform. Set the value to <strong>DeleteSilencePolicy</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5EC8221-08F2-4C95-9AF1-49FD998C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

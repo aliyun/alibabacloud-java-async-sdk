@@ -1,58 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeContainerGroupEventsRequest} extends {@link RequestModel}
  *
  * <p>DescribeContainerGroupEventsRequest</p>
  */
 public class DescribeContainerGroupEventsRequest extends Request {
-    @Query
-    @NameInMap("ContainerGroupIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerGroupIds")
     private String containerGroupIds;
 
-    @Query
-    @NameInMap("EventSource")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventSource")
     private String eventSource;
 
-    @Query
-    @NameInMap("Limit")
-    @Validation(maximum = 200, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Limit")
+    @com.aliyun.core.annotation.Validation(maximum = 200, minimum = 1)
     private Integer limit;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("SinceSecond")
-    @Validation(maximum = 3600, minimum = 60)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SinceSecond")
+    @com.aliyun.core.annotation.Validation(maximum = 3600, minimum = 60)
     private Integer sinceSecond;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private DescribeContainerGroupEventsRequest(Builder builder) {
@@ -183,7 +183,10 @@ public class DescribeContainerGroupEventsRequest extends Request {
         } 
 
         /**
-         * The IDs of the elastic container instances. You can specify up to 20 IDs. Each ID must be a JSON string.
+         * <p>The IDs of the elastic container instances. You can specify up to 20 IDs. Each ID must be a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;eci-bp17gw49eu09yiwm****&quot;, &quot;eci-bp19aq49du01abcm****&quot;, &quot;eci-2zegym1qhbmdfr1s****&quot;]</p>
          */
         public Builder containerGroupIds(String containerGroupIds) {
             this.putQueryParameter("ContainerGroupIds", containerGroupIds);
@@ -192,13 +195,15 @@ public class DescribeContainerGroupEventsRequest extends Request {
         }
 
         /**
-         * The event source. Valid values:
-         * <p>
+         * <p>The event source. Valid values:</p>
+         * <ul>
+         * <li>EciService</li>
+         * <li>K8sAgent</li>
+         * </ul>
+         * <p>This parameter is empty by default. This indicates that all events are queried.</p>
          * 
-         * *   EciService
-         * *   K8sAgent
-         * 
-         * This parameter is empty by default. This indicates that all events are queried.
+         * <strong>example:</strong>
+         * <p>K8sAgent</p>
          */
         public Builder eventSource(String eventSource) {
             this.putQueryParameter("EventSource", eventSource);
@@ -207,10 +212,13 @@ public class DescribeContainerGroupEventsRequest extends Request {
         }
 
         /**
-         * The maximum number of elastic container instances to be returned for this request. Default value: 200.
-         * <p>
+         * <p>The maximum number of elastic container instances to be returned for this request. Default value: 200.</p>
+         * <blockquote>
+         * <p> The number of elastic container instances to be returned is no greater than this parameter value.</p>
+         * </blockquote>
          * 
-         * >  The number of elastic container instances to be returned is no greater than this parameter value.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);
@@ -219,10 +227,11 @@ public class DescribeContainerGroupEventsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * <p>You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
          * 
-         * You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <strong>example:</strong>
+         * <p>d78f2dd8-5979-42fe-xaee-b16db43be5bc</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -231,7 +240,11 @@ public class DescribeContainerGroupEventsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -240,7 +253,10 @@ public class DescribeContainerGroupEventsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-uf66jeqopgqa9hdn****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -249,7 +265,10 @@ public class DescribeContainerGroupEventsRequest extends Request {
         }
 
         /**
-         * A relative time in seconds before the current time from which to show event information. This parameter is used to poll incremental events.
+         * <p>A relative time in seconds before the current time from which to show event information. This parameter is used to poll incremental events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder sinceSecond(Integer sinceSecond) {
             this.putQueryParameter("SinceSecond", sinceSecond);
@@ -258,7 +277,7 @@ public class DescribeContainerGroupEventsRequest extends Request {
         }
 
         /**
-         * The tag that is added to the elastic container instances.
+         * <p>The tag that is added to the elastic container instances.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -267,7 +286,10 @@ public class DescribeContainerGroupEventsRequest extends Request {
         }
 
         /**
-         * The vSwitch ID.
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-uf6h3rbwbm90urjwa****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -276,7 +298,10 @@ public class DescribeContainerGroupEventsRequest extends Request {
         }
 
         /**
-         * The zone ID.
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-k</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -291,11 +316,17 @@ public class DescribeContainerGroupEventsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeContainerGroupEventsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerGroupEventsRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -330,7 +361,10 @@ public class DescribeContainerGroupEventsRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -338,7 +372,10 @@ public class DescribeContainerGroupEventsRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder value(String value) {
                 this.value = value;

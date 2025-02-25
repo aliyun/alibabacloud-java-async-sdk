@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,50 +11,66 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCloudSiemCustomizeRulesRequest</p>
  */
 public class ListCloudSiemCustomizeRulesRequest extends Request {
-    @Body
-    @NameInMap("AlertType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertType")
     private String alertType;
 
-    @Body
-    @NameInMap("CurrentPage")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Integer currentPage;
 
-    @Body
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @Body
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
 
-    @Body
-    @NameInMap("PageSize")
-    @Validation(required = true, maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Order")
+    private String order;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OrderField")
+    private String orderField;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("RuleName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleFor")
+    private Long roleFor;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleType")
+    private Integer roleType;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RuleName")
     private String ruleName;
 
-    @Body
-    @NameInMap("RuleType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RuleType")
     private String ruleType;
 
-    @Body
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
-    @Body
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
-    @Body
-    @NameInMap("ThreatLevel")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ThreatLevel")
     private java.util.List < String > threatLevel;
 
     private ListCloudSiemCustomizeRulesRequest(Builder builder) {
@@ -64,8 +79,12 @@ public class ListCloudSiemCustomizeRulesRequest extends Request {
         this.currentPage = builder.currentPage;
         this.endTime = builder.endTime;
         this.id = builder.id;
+        this.order = builder.order;
+        this.orderField = builder.orderField;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.roleFor = builder.roleFor;
+        this.roleType = builder.roleType;
         this.ruleName = builder.ruleName;
         this.ruleType = builder.ruleType;
         this.startTime = builder.startTime;
@@ -115,6 +134,20 @@ public class ListCloudSiemCustomizeRulesRequest extends Request {
     }
 
     /**
+     * @return order
+     */
+    public String getOrder() {
+        return this.order;
+    }
+
+    /**
+     * @return orderField
+     */
+    public String getOrderField() {
+        return this.orderField;
+    }
+
+    /**
      * @return pageSize
      */
     public Integer getPageSize() {
@@ -126,6 +159,20 @@ public class ListCloudSiemCustomizeRulesRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return roleFor
+     */
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    /**
+     * @return roleType
+     */
+    public Integer getRoleType() {
+        return this.roleType;
     }
 
     /**
@@ -168,8 +215,12 @@ public class ListCloudSiemCustomizeRulesRequest extends Request {
         private Integer currentPage; 
         private Long endTime; 
         private String id; 
+        private String order; 
+        private String orderField; 
         private Integer pageSize; 
         private String regionId; 
+        private Long roleFor; 
+        private Integer roleType; 
         private String ruleName; 
         private String ruleType; 
         private Long startTime; 
@@ -186,8 +237,12 @@ public class ListCloudSiemCustomizeRulesRequest extends Request {
             this.currentPage = request.currentPage;
             this.endTime = request.endTime;
             this.id = request.id;
+            this.order = request.order;
+            this.orderField = request.orderField;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.roleFor = request.roleFor;
+            this.roleType = request.roleType;
             this.ruleName = request.ruleName;
             this.ruleType = request.ruleType;
             this.startTime = request.startTime;
@@ -232,6 +287,32 @@ public class ListCloudSiemCustomizeRulesRequest extends Request {
         }
 
         /**
+         * The sort method. Valid values:
+         * <p>
+         * 
+         * *   desc: descending order.
+         * *   asc: ascending order.
+         */
+        public Builder order(String order) {
+            this.putBodyParameter("Order", order);
+            this.order = order;
+            return this;
+        }
+
+        /**
+         * The field that is used to sort the rules. Valid values:
+         * <p>
+         * 
+         * *   GmtModified: The rules are sorted based on the modification time.
+         * *   Id (default): The rules are sorted based on the rule ID.
+         */
+        public Builder orderField(String orderField) {
+            this.putBodyParameter("OrderField", orderField);
+            this.orderField = orderField;
+            return this;
+        }
+
+        /**
          * The number of entries per page. The value can be up to 100.
          */
         public Builder pageSize(Integer pageSize) {
@@ -241,15 +322,37 @@ public class ListCloudSiemCustomizeRulesRequest extends Request {
         }
 
         /**
-         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
+         * The data management center of the threat analysis feature. Specify this parameter based on the regions in which your assets reside. Valid values:
          * <p>
          * 
-         * *   cn-hangzhou: Your assets reside in regions in China.
-         * *   ap-southeast-1: Your assets reside in regions outside China.
+         * *   **cn-hangzhou**: Your assets reside in regions in China.
+         * *   **ap-southeast-1**: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the destination account to which you switch the view from the management account.
+         */
+        public Builder roleFor(Long roleFor) {
+            this.putBodyParameter("RoleFor", roleFor);
+            this.roleFor = roleFor;
+            return this;
+        }
+
+        /**
+         * The type of the view. Valid values:
+         * <p>
+         * 
+         * *   0: view of the current Alibaba Cloud account.
+         * *   1: view of all accounts for the enterprise.
+         */
+        public Builder roleType(Integer roleType) {
+            this.putBodyParameter("RoleType", roleType);
+            this.roleType = roleType;
             return this;
         }
 
@@ -266,8 +369,8 @@ public class ListCloudSiemCustomizeRulesRequest extends Request {
          * The type of the rule. Valid values:
          * <p>
          * 
-         * *   predefine
-         * *   customize
+         * *   **predefine**
+         * *   **customize**
          */
         public Builder ruleType(String ruleType) {
             this.putBodyParameter("RuleType", ruleType);
@@ -288,11 +391,11 @@ public class ListCloudSiemCustomizeRulesRequest extends Request {
          * The status of the rule. Valid values:
          * <p>
          * 
-         * *   0: The rule is in the initial state.
-         * *   10: The simulation data is tested.
-         * *   15: The business data is being tested.
-         * *   20: The business data test ends.
-         * *   100: The rule takes effect.
+         * *   **0**: The rule is in the initial state.
+         * *   **10**: The simulation data is tested.
+         * *   **15**: The business data is being tested.
+         * *   **20**: The business data test is complete.
+         * *   **100**: The rule is in effect.
          */
         public Builder status(Integer status) {
             this.putBodyParameter("Status", status);
@@ -301,12 +404,12 @@ public class ListCloudSiemCustomizeRulesRequest extends Request {
         }
 
         /**
-         * The risk level. The value is a JSON array. Valid values:
+         * The threat level. The value must be a JSON array. Valid values:
          * <p>
          * 
-         * *   serious: high
-         * *   suspicious: medium
-         * *   remind: low
+         * *   **serious**: high-risk.
+         * *   **suspicious**: medium-risk.
+         * *   **remind**: low-risk.
          */
         public Builder threatLevel(java.util.List < String > threatLevel) {
             this.putBodyParameter("ThreatLevel", threatLevel);

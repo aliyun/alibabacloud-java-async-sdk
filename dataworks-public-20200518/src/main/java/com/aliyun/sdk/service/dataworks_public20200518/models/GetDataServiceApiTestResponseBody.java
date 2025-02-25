@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataServiceApiTestResponseBody} extends {@link TeaModel}
  *
  * <p>GetDataServiceApiTestResponseBody</p>
  */
 public class GetDataServiceApiTestResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetDataServiceApiTestResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>Return object</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adssdsewe</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,29 +79,35 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDataServiceApiTestResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataServiceApiTestResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ApiId")
+        @com.aliyun.core.annotation.NameInMap("ApiId")
         private Long apiId;
 
-        @NameInMap("CostTime")
+        @com.aliyun.core.annotation.NameInMap("CostTime")
         private String costTime;
 
-        @NameInMap("DebugInfo")
+        @com.aliyun.core.annotation.NameInMap("DebugInfo")
         private String debugInfo;
 
-        @NameInMap("NodesDebugInfo")
+        @com.aliyun.core.annotation.NameInMap("NodesDebugInfo")
         private String nodesDebugInfo;
 
-        @NameInMap("ParamMap")
+        @com.aliyun.core.annotation.NameInMap("ParamMap")
         private String paramMap;
 
-        @NameInMap("RetCode")
+        @com.aliyun.core.annotation.NameInMap("RetCode")
         private Long retCode;
 
-        @NameInMap("RetResult")
+        @com.aliyun.core.annotation.NameInMap("RetResult")
         private String retResult;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Data(Builder builder) {
@@ -182,7 +196,10 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ApiId.
+             * <p>Test API Id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12343</p>
              */
             public Builder apiId(Long apiId) {
                 this.apiId = apiId;
@@ -190,7 +207,10 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * CostTime.
+             * <p>Time consuming</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder costTime(String costTime) {
                 this.costTime = costTime;
@@ -198,7 +218,10 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * DebugInfo.
+             * <p>Debug information</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&lt;span style=&quot;color: #92D581;&quot;&gt;INFO</span>] [16:15:13.240] resource group is 498774069027041[&lt;span style=&quot;color: #92D581;&quot;&gt;INFO</span>]</p>
              */
             public Builder debugInfo(String debugInfo) {
                 this.debugInfo = debugInfo;
@@ -206,7 +229,10 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * NodesDebugInfo.
+             * <p>Node Debug information</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&lt;span style=&quot;color: #92D581;&quot;&gt;INFO</span>] [16:15:13.240] resource group is 498774069027041[&lt;span style=&quot;color: #92D581;&quot;&gt;INFO</span>]</p>
              */
             public Builder nodesDebugInfo(String nodesDebugInfo) {
                 this.nodesDebugInfo = nodesDebugInfo;
@@ -214,7 +240,10 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * ParamMap.
+             * <p>Test API request parameters</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;name&quot;:&quot;test&quot;}</p>
              */
             public Builder paramMap(String paramMap) {
                 this.paramMap = paramMap;
@@ -222,7 +251,10 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * RetCode.
+             * <p>The test API returns the code. If it is not completed, the data is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder retCode(Long retCode) {
                 this.retCode = retCode;
@@ -230,7 +262,10 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * RetResult.
+             * <p>Return data</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;id&quot;:2}</p>
              */
             public Builder retResult(String retResult) {
                 this.retResult = retResult;
@@ -238,7 +273,10 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Whether the task has been completed, including: RUNNING,FINISHED</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FINISHED</p>
              */
             public Builder status(String status) {
                 this.status = status;

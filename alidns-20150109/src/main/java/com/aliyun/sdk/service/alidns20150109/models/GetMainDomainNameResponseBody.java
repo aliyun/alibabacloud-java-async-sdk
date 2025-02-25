@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMainDomainNameResponseBody} extends {@link TeaModel}
  *
  * <p>GetMainDomainNameResponseBody</p>
  */
 public class GetMainDomainNameResponseBody extends TeaModel {
-    @NameInMap("DomainLevel")
+    @com.aliyun.core.annotation.NameInMap("DomainLevel")
     private Long domainLevel;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("RR")
+    @com.aliyun.core.annotation.NameInMap("RR")
     private String rr;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetMainDomainNameResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class GetMainDomainNameResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The level of the entered domain name.
+         * <p>The level of the entered domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder domainLevel(Long domainLevel) {
             this.domainLevel = domainLevel;
@@ -82,7 +90,10 @@ public class GetMainDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * The domain name.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -90,7 +101,10 @@ public class GetMainDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * The host record.
+         * <p>The hostname.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>www</p>
          */
         public Builder rr(String rr) {
             this.rr = rr;
@@ -98,7 +112,10 @@ public class GetMainDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

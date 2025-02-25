@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDTCSecurityIpHostsForSQLServerResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDTCSecurityIpHostsForSQLServerResponseBody</p>
  */
 public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("IpHostPairNum")
+    @com.aliyun.core.annotation.NameInMap("IpHostPairNum")
     private String ipHostPairNum;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDTCSecurityIpHostsForSQLServerResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel
         private String requestId; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -82,7 +90,10 @@ public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel
         }
 
         /**
-         * The number of distributed transaction whitelists.
+         * <p>The number of distributed transaction whitelists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ipHostPairNum(String ipHostPairNum) {
             this.ipHostPairNum = ipHostPairNum;
@@ -90,7 +101,7 @@ public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel
         }
 
         /**
-         * Details of distributed transaction whitelists.
+         * <p>Details of distributed transaction whitelists.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -98,7 +109,10 @@ public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2CA62A70-2203-45C6-8E90-8971D5ACC0C2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,11 +125,17 @@ public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDTCSecurityIpHostsForSQLServerResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDTCSecurityIpHostsForSQLServerResponseBody</p>
+     */
     public static class WhiteListGroups extends TeaModel {
-        @NameInMap("SecurityIpHosts")
+        @com.aliyun.core.annotation.NameInMap("SecurityIpHosts")
         private String securityIpHosts;
 
-        @NameInMap("WhitelistGroupName")
+        @com.aliyun.core.annotation.NameInMap("WhitelistGroupName")
         private String whitelistGroupName;
 
         private WhiteListGroups(Builder builder) {
@@ -150,7 +170,10 @@ public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel
             private String whitelistGroupName; 
 
             /**
-             * The IP address of the ECS instance and the hostname of the Windows computer. Format: `IP address,Hostname`. Multiple values are separated with semicolons (;).
+             * <p>The IP address of the ECS instance and the hostname of the Windows computer. Format: <code>IP address,Hostname</code>. Multiple values are separated with semicolons (;).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.100,k3ecstest</p>
              */
             public Builder securityIpHosts(String securityIpHosts) {
                 this.securityIpHosts = securityIpHosts;
@@ -158,7 +181,10 @@ public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel
             }
 
             /**
-             * The name of the distributed transaction whitelist.
+             * <p>The name of the distributed transaction whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1</p>
              */
             public Builder whitelistGroupName(String whitelistGroupName) {
                 this.whitelistGroupName = whitelistGroupName;
@@ -172,9 +198,15 @@ public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDTCSecurityIpHostsForSQLServerResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDTCSecurityIpHostsForSQLServerResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("WhiteListGroups")
-        private java.util.List < WhiteListGroups> whiteListGroups;
+        @com.aliyun.core.annotation.NameInMap("WhiteListGroups")
+        private java.util.List<WhiteListGroups> whiteListGroups;
 
         private Items(Builder builder) {
             this.whiteListGroups = builder.whiteListGroups;
@@ -191,17 +223,17 @@ public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel
         /**
          * @return whiteListGroups
          */
-        public java.util.List < WhiteListGroups> getWhiteListGroups() {
+        public java.util.List<WhiteListGroups> getWhiteListGroups() {
             return this.whiteListGroups;
         }
 
         public static final class Builder {
-            private java.util.List < WhiteListGroups> whiteListGroups; 
+            private java.util.List<WhiteListGroups> whiteListGroups; 
 
             /**
              * WhiteListGroups.
              */
-            public Builder whiteListGroups(java.util.List < WhiteListGroups> whiteListGroups) {
+            public Builder whiteListGroups(java.util.List<WhiteListGroups> whiteListGroups) {
                 this.whiteListGroups = whiteListGroups;
                 return this;
             }

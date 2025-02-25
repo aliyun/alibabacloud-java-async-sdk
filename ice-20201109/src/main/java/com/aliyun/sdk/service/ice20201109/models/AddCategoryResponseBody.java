@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddCategoryResponseBody} extends {@link TeaModel}
  *
  * <p>AddCategoryResponseBody</p>
  */
 public class AddCategoryResponseBody extends TeaModel {
-    @NameInMap("Category")
+    @com.aliyun.core.annotation.NameInMap("Category")
     private Category category;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AddCategoryResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class AddCategoryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Category.
+         * <p>The information about the category.</p>
          */
         public Builder category(Category category) {
             this.category = category;
@@ -58,7 +63,10 @@ public class AddCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +79,26 @@ public class AddCategoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AddCategoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddCategoryResponseBody</p>
+     */
     public static class Category extends TeaModel {
-        @NameInMap("CateId")
+        @com.aliyun.core.annotation.NameInMap("CateId")
         private Long cateId;
 
-        @NameInMap("CateName")
+        @com.aliyun.core.annotation.NameInMap("CateName")
         private String cateName;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private Long level;
 
-        @NameInMap("ParentId")
+        @com.aliyun.core.annotation.NameInMap("ParentId")
         private Long parentId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Category(Builder builder) {
@@ -146,7 +160,10 @@ public class AddCategoryResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * CateId.
+             * <p>The ID of the created category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>45</p>
              */
             public Builder cateId(Long cateId) {
                 this.cateId = cateId;
@@ -154,7 +171,7 @@ public class AddCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * CateName.
+             * <p>The category name.</p>
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -162,7 +179,10 @@ public class AddCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>The level of the category. A value of <strong>0</strong> indicates a level-1 category, a value of <strong>1</strong> indicates a level-2 category, and a value of <strong>2</strong> indicates a level-3 category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder level(Long level) {
                 this.level = level;
@@ -170,7 +190,10 @@ public class AddCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * ParentId.
+             * <p>The ID of the parent category. By default, if ParentId is left empty or less than 1, -1 is returned, which indicates that the created category is the root directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder parentId(Long parentId) {
                 this.parentId = parentId;
@@ -178,7 +201,14 @@ public class AddCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the category. Valid values:</p>
+             * <ul>
+             * <li><strong>default</strong>: audio, video, and image files. This is the default value.</li>
+             * <li><strong>material</strong>: short video materials.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder type(String type) {
                 this.type = type;

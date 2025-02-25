@@ -1,53 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableRightsSeparationRequest} extends {@link RequestModel}
  *
  * <p>EnableRightsSeparationRequest</p>
  */
 public class EnableRightsSeparationRequest extends Request {
-    @Query
-    @NameInMap("AuditAccountDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuditAccountDescription")
     private String auditAccountDescription;
 
-    @Query
-    @NameInMap("AuditAccountName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuditAccountName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String auditAccountName;
 
-    @Query
-    @NameInMap("AuditAccountPassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuditAccountPassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String auditAccountPassword;
 
-    @Query
-    @NameInMap("DBInstanceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceName;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("SecurityAccountDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityAccountDescription")
     private String securityAccountDescription;
 
-    @Query
-    @NameInMap("SecurityAccountName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityAccountName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String securityAccountName;
 
-    @Query
-    @NameInMap("SecurityAccountPassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityAccountPassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String securityAccountPassword;
 
     private EnableRightsSeparationRequest(Builder builder) {
@@ -167,7 +172,10 @@ public class EnableRightsSeparationRequest extends Request {
         }
 
         /**
-         * AuditAccountName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>account_audit</p>
          */
         public Builder auditAccountName(String auditAccountName) {
             this.putQueryParameter("AuditAccountName", auditAccountName);
@@ -176,7 +184,10 @@ public class EnableRightsSeparationRequest extends Request {
         }
 
         /**
-         * AuditAccountPassword.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder auditAccountPassword(String auditAccountPassword) {
             this.putQueryParameter("AuditAccountPassword", auditAccountPassword);
@@ -185,7 +196,10 @@ public class EnableRightsSeparationRequest extends Request {
         }
 
         /**
-         * DBInstanceName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-htri0ori2r4k9p</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -194,7 +208,10 @@ public class EnableRightsSeparationRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -212,7 +229,10 @@ public class EnableRightsSeparationRequest extends Request {
         }
 
         /**
-         * SecurityAccountName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>account_sec</p>
          */
         public Builder securityAccountName(String securityAccountName) {
             this.putQueryParameter("SecurityAccountName", securityAccountName);
@@ -221,7 +241,10 @@ public class EnableRightsSeparationRequest extends Request {
         }
 
         /**
-         * SecurityAccountPassword.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder securityAccountPassword(String securityAccountPassword) {
             this.putQueryParameter("SecurityAccountPassword", securityAccountPassword);

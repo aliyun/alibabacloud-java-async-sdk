@@ -1,54 +1,63 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateFlowRuleRequest} extends {@link RequestModel}
  *
  * <p>UpdateFlowRuleRequest</p>
  */
 public class UpdateFlowRuleRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
-    @Query
-    @NameInMap("AppName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
-    @Query
-    @NameInMap("ControlBehavior")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ControlBehavior")
     private Integer controlBehavior;
 
-    @Query
-    @NameInMap("Enable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Enable")
     private Boolean enable;
 
-    @Query
-    @NameInMap("MaxQueueingTimeMs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LimitApp")
+    private String limitApp;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxQueueingTimeMs")
     private Integer maxQueueingTimeMs;
 
-    @Query
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @Query
-    @NameInMap("RuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long ruleId;
 
-    @Query
-    @NameInMap("Threshold")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Threshold")
     private Integer threshold;
 
     private UpdateFlowRuleRequest(Builder builder) {
@@ -58,6 +67,7 @@ public class UpdateFlowRuleRequest extends Request {
         this.appName = builder.appName;
         this.controlBehavior = builder.controlBehavior;
         this.enable = builder.enable;
+        this.limitApp = builder.limitApp;
         this.maxQueueingTimeMs = builder.maxQueueingTimeMs;
         this.namespace = builder.namespace;
         this.ruleId = builder.ruleId;
@@ -113,6 +123,13 @@ public class UpdateFlowRuleRequest extends Request {
     }
 
     /**
+     * @return limitApp
+     */
+    public String getLimitApp() {
+        return this.limitApp;
+    }
+
+    /**
      * @return maxQueueingTimeMs
      */
     public Integer getMaxQueueingTimeMs() {
@@ -146,6 +163,7 @@ public class UpdateFlowRuleRequest extends Request {
         private String appName; 
         private Integer controlBehavior; 
         private Boolean enable; 
+        private String limitApp; 
         private Integer maxQueueingTimeMs; 
         private String namespace; 
         private Long ruleId; 
@@ -162,6 +180,7 @@ public class UpdateFlowRuleRequest extends Request {
             this.appName = request.appName;
             this.controlBehavior = request.controlBehavior;
             this.enable = request.enable;
+            this.limitApp = request.limitApp;
             this.maxQueueingTimeMs = request.maxQueueingTimeMs;
             this.namespace = request.namespace;
             this.ruleId = request.ruleId;
@@ -169,11 +188,14 @@ public class UpdateFlowRuleRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -182,7 +204,10 @@ public class UpdateFlowRuleRequest extends Request {
         }
 
         /**
-         * The application ID.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hkhon1po62@c3df23522******</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -191,7 +216,11 @@ public class UpdateFlowRuleRequest extends Request {
         }
 
         /**
-         * The application name.
+         * <p>The application name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-a</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -200,34 +229,30 @@ public class UpdateFlowRuleRequest extends Request {
         }
 
         /**
-         * The throttling effect.
-         * <p>
+         * <p>The throttling effect.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>0</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <p>:</p>
+         * <!-- -->
          * 
-         * *   0
+         * <p>fast failure</p>
+         * <!-- -->
+         * </li>
+         * <li><p>2</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>:</p>
+         * <!-- -->
          * 
-         *     :
+         * <p>in queue</p>
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         *     fast failure
-         * 
-         *     <!-- -->
-         * 
-         * *   2
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     in queue
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder controlBehavior(Integer controlBehavior) {
             this.putQueryParameter("ControlBehavior", controlBehavior);
@@ -236,26 +261,26 @@ public class UpdateFlowRuleRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the rule.
-         * <p>
+         * <p>Specifies whether to enable the rule.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   true
+         * <!-- -->
+         * </li>
+         * <li><p>false</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   false
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -264,7 +289,19 @@ public class UpdateFlowRuleRequest extends Request {
         }
 
         /**
-         * The timeout period. Unit: milliseconds. This parameter is required when the value of ControlBehavior is set to 2.
+         * LimitApp.
+         */
+        public Builder limitApp(String limitApp) {
+            this.putQueryParameter("LimitApp", limitApp);
+            this.limitApp = limitApp;
+            return this;
+        }
+
+        /**
+         * <p>The timeout period. Unit: milliseconds. This parameter is required when the value of ControlBehavior is set to 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder maxQueueingTimeMs(Integer maxQueueingTimeMs) {
             this.putQueryParameter("MaxQueueingTimeMs", maxQueueingTimeMs);
@@ -273,7 +310,11 @@ public class UpdateFlowRuleRequest extends Request {
         }
 
         /**
-         * The namespace.
+         * <p>The namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -282,7 +323,11 @@ public class UpdateFlowRuleRequest extends Request {
         }
 
         /**
-         * The rule ID.
+         * <p>The rule ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13</p>
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -291,7 +336,10 @@ public class UpdateFlowRuleRequest extends Request {
         }
 
         /**
-         * The throttling threshold.
+         * <p>The throttling threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder threshold(Integer threshold) {
             this.putQueryParameter("Threshold", threshold);

@@ -1,38 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest} extends {@link RequestModel}
  *
  * <p>SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest</p>
  */
 public class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest extends Request {
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > domainName;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("RegistrantProfileId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegistrantProfileId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long registrantProfileId;
 
-    @Query
-    @NameInMap("TransferOutProhibited")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransferOutProhibited")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean transferOutProhibited;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
     private SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest(Builder builder) {
@@ -113,7 +113,10 @@ public class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest exten
         } 
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(java.util.List < String > domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -131,7 +134,10 @@ public class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest exten
         }
 
         /**
-         * RegistrantProfileId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder registrantProfileId(Long registrantProfileId) {
             this.putQueryParameter("RegistrantProfileId", registrantProfileId);
@@ -140,7 +146,10 @@ public class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest exten
         }
 
         /**
-         * TransferOutProhibited.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder transferOutProhibited(Boolean transferOutProhibited) {
             this.putQueryParameter("TransferOutProhibited", transferOutProhibited);

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnlockUsersResponseBody} extends {@link TeaModel}
  *
  * <p>UnlockUsersResponseBody</p>
  */
 public class UnlockUsersResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UnlockUsersResult")
+    @com.aliyun.core.annotation.NameInMap("UnlockUsersResult")
     private UnlockUsersResult unlockUsersResult;
 
     private UnlockUsersResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class UnlockUsersResponseBody extends TeaModel {
         private UnlockUsersResult unlockUsersResult; 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>023F4EC4-3602-4A3E-A514-4970847D59DB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class UnlockUsersResponseBody extends TeaModel {
         }
 
         /**
-         * UnlockUsersResult.
+         * <p>The result of unlocking the convenience user.</p>
          */
         public Builder unlockUsersResult(UnlockUsersResult unlockUsersResult) {
             this.unlockUsersResult = unlockUsersResult;
@@ -71,14 +79,20 @@ public class UnlockUsersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UnlockUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>UnlockUsersResponseBody</p>
+     */
     public static class FailedUsers extends TeaModel {
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
         private FailedUsers(Builder builder) {
@@ -122,7 +136,10 @@ public class UnlockUsersResponseBody extends TeaModel {
             private String errorMessage; 
 
             /**
-             * EndUserId.
+             * <p>The ID of the convenience user that failed to be unlocked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test123</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -130,7 +147,10 @@ public class UnlockUsersResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InvalidUsername</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -138,7 +158,10 @@ public class UnlockUsersResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test123 is an invalid username.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -152,12 +175,18 @@ public class UnlockUsersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UnlockUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>UnlockUsersResponseBody</p>
+     */
     public static class UnlockUsersResult extends TeaModel {
-        @NameInMap("FailedUsers")
-        private java.util.List < FailedUsers> failedUsers;
+        @com.aliyun.core.annotation.NameInMap("FailedUsers")
+        private java.util.List<FailedUsers> failedUsers;
 
-        @NameInMap("UnlockedUsers")
-        private java.util.List < String > unlockedUsers;
+        @com.aliyun.core.annotation.NameInMap("UnlockedUsers")
+        private java.util.List<String> unlockedUsers;
 
         private UnlockUsersResult(Builder builder) {
             this.failedUsers = builder.failedUsers;
@@ -175,33 +204,33 @@ public class UnlockUsersResponseBody extends TeaModel {
         /**
          * @return failedUsers
          */
-        public java.util.List < FailedUsers> getFailedUsers() {
+        public java.util.List<FailedUsers> getFailedUsers() {
             return this.failedUsers;
         }
 
         /**
          * @return unlockedUsers
          */
-        public java.util.List < String > getUnlockedUsers() {
+        public java.util.List<String> getUnlockedUsers() {
             return this.unlockedUsers;
         }
 
         public static final class Builder {
-            private java.util.List < FailedUsers> failedUsers; 
-            private java.util.List < String > unlockedUsers; 
+            private java.util.List<FailedUsers> failedUsers; 
+            private java.util.List<String> unlockedUsers; 
 
             /**
-             * FailedUsers.
+             * <p>The convenience users that failed to be unlocked.</p>
              */
-            public Builder failedUsers(java.util.List < FailedUsers> failedUsers) {
+            public Builder failedUsers(java.util.List<FailedUsers> failedUsers) {
                 this.failedUsers = failedUsers;
                 return this;
             }
 
             /**
-             * UnlockedUsers.
+             * <p>The convenience users that were unlocked.</p>
              */
-            public Builder unlockedUsers(java.util.List < String > unlockedUsers) {
+            public Builder unlockedUsers(java.util.List<String> unlockedUsers) {
                 this.unlockedUsers = unlockedUsers;
                 return this;
             }

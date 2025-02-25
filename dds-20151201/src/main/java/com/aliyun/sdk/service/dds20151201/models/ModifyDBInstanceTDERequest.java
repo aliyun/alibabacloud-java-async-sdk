@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceTDERequest} extends {@link RequestModel}
  *
  * <p>ModifyDBInstanceTDERequest</p>
  */
 public class ModifyDBInstanceTDERequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("EncryptionKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptionKey")
     private String encryptionKey;
 
-    @Query
-    @NameInMap("EncryptorName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptorName")
     private String encryptorName;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RoleARN")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleARN")
     private String roleARN;
 
-    @Query
-    @NameInMap("TDEStatus")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TDEStatus")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String TDEStatus;
 
     private ModifyDBInstanceTDERequest(Builder builder) {
@@ -191,7 +196,11 @@ public class ModifyDBInstanceTDERequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bpxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -200,7 +209,10 @@ public class ModifyDBInstanceTDERequest extends Request {
         }
 
         /**
-         * The ID of the custom key.
+         * <p>The ID of the custom key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>749c1df7-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
          */
         public Builder encryptionKey(String encryptionKey) {
             this.putQueryParameter("EncryptionKey", encryptionKey);
@@ -209,10 +221,13 @@ public class ModifyDBInstanceTDERequest extends Request {
         }
 
         /**
-         * The encryption method. Set the value to **aes-256-cbc**.
-         * <p>
+         * <p>The encryption method. Set the value to <strong>aes-256-cbc</strong>.</p>
+         * <blockquote>
+         * <p>This parameter is valid only when the <strong>TEDStatus</strong> parameter is set to <strong>enabled</strong>.</p>
+         * </blockquote>
          * 
-         * > This parameter is valid only when the **TEDStatus** parameter is set to **enabled**.
+         * <strong>example:</strong>
+         * <p>aes-256-cbc</p>
          */
         public Builder encryptorName(String encryptorName) {
             this.putQueryParameter("EncryptorName", encryptorName);
@@ -257,14 +272,20 @@ public class ModifyDBInstanceTDERequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud Resource Name (ARN) of the specified Resource Access Management (RAM) role. The ARN is displayed in the `acs:ram::$accountID:role/$roleName` format.
-         * <p>
+         * <p>The Alibaba Cloud Resource Name (ARN) of the specified Resource Access Management (RAM) role. The ARN is displayed in the <code>acs:ram::$accountID:role/$roleName</code> format.</p>
+         * <blockquote>
+         * <ul>
+         * <li><code>$accountID</code>: specifies the ID of the Alibaba Cloud account. To view the account ID, log on to the Alibaba Cloud Management Console, move your pointer over your profile picture in the upper-right corner, and then click Security Settings.</li>
+         * </ul>
+         * </blockquote>
+         * <blockquote>
+         * <ul>
+         * <li><code>$roleName</code>: specifies the name of the RAM role. To view the RAM role name, log on to the RAM console. In the left-side navigation pane, choose Identities &gt; Roles. On the Roles page, view the name of the RAM role.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > 
-         * 
-         * *   `$accountID`: specifies the ID of the Alibaba Cloud account. To view the account ID, log on to the Alibaba Cloud Management Console, move your pointer over your profile picture in the upper-right corner, and then click Security Settings.
-         * 
-         * *   `$roleName`: specifies the name of the RAM role. To view the RAM role name, log on to the RAM console. In the left-side navigation pane, choose Identities > Roles. On the Roles page, view the name of the RAM role.
+         * <strong>example:</strong>
+         * <p>acs:ram::123456789012****:role/adminrole</p>
          */
         public Builder roleARN(String roleARN) {
             this.putQueryParameter("RoleARN", roleARN);
@@ -273,10 +294,14 @@ public class ModifyDBInstanceTDERequest extends Request {
         }
 
         /**
-         * The TDE status. When the value of this parameter is set to **Enabled**, TDE is enabled.
-         * <p>
+         * <p>The TDE status. When the value of this parameter is set to <strong>Enabled</strong>, TDE is enabled.</p>
+         * <blockquote>
+         * <p>You cannot disable TDE after it is enabled. Proceed with caution.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You cannot disable TDE after it is enabled. Proceed with caution.
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder TDEStatus(String TDEStatus) {
             this.putQueryParameter("TDEStatus", TDEStatus);

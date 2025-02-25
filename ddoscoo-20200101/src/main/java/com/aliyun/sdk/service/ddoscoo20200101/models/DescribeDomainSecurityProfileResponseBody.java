@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainSecurityProfileResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainSecurityProfileResponseBody</p>
  */
 public class DescribeDomainSecurityProfileResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
-    private java.util.List < Result> result;
+    @com.aliyun.core.annotation.NameInMap("Result")
+    private java.util.List<Result> result;
 
     private DescribeDomainSecurityProfileResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,16 @@ public class DescribeDomainSecurityProfileResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +63,9 @@ public class DescribeDomainSecurityProfileResponseBody extends TeaModel {
         }
 
         /**
-         * The returned results.
+         * <p>The returned results.</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -71,11 +76,17 @@ public class DescribeDomainSecurityProfileResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainSecurityProfileResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainSecurityProfileResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("GlobalEnable")
+        @com.aliyun.core.annotation.NameInMap("GlobalEnable")
         private Boolean globalEnable;
 
-        @NameInMap("GlobalMode")
+        @com.aliyun.core.annotation.NameInMap("GlobalMode")
         private String globalMode;
 
         private Result(Builder builder) {
@@ -110,11 +121,14 @@ public class DescribeDomainSecurityProfileResponseBody extends TeaModel {
             private String globalMode; 
 
             /**
-             * Indicates whether the global mitigation policy is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the global mitigation policy is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder globalEnable(Boolean globalEnable) {
                 this.globalEnable = globalEnable;
@@ -122,12 +136,15 @@ public class DescribeDomainSecurityProfileResponseBody extends TeaModel {
             }
 
             /**
-             * The mode of the global mitigation policy. Valid values:
-             * <p>
+             * <p>The mode of the global mitigation policy. Valid values:</p>
+             * <ul>
+             * <li><strong>weak</strong>: the Low mode</li>
+             * <li><strong>default</strong>: the Normal mode</li>
+             * <li><strong>hard</strong>: the Strict mode</li>
+             * </ul>
              * 
-             * *   **weak**: the Low mode
-             * *   **default**: the Normal mode
-             * *   **hard**: the Strict mode
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder globalMode(String globalMode) {
                 this.globalMode = globalMode;

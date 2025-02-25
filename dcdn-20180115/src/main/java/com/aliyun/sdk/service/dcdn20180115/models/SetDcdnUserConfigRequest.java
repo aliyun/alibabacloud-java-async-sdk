@@ -1,37 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDcdnUserConfigRequest} extends {@link RequestModel}
  *
  * <p>SetDcdnUserConfigRequest</p>
  */
 public class SetDcdnUserConfigRequest extends Request {
-    @Query
-    @NameInMap("Configs")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Configs")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String configs;
 
-    @Query
-    @NameInMap("FunctionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FunctionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer functionId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private SetDcdnUserConfigRequest(Builder builder) {
@@ -112,7 +112,11 @@ public class SetDcdnUserConfigRequest extends Request {
         } 
 
         /**
-         * The configuration parameters of the feature.
+         * <p>The configuration parameters of the feature.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;argId&quot;:12,&quot;argValue&quot;:&quot;on&quot;</p>
          */
         public Builder configs(String configs) {
             this.putQueryParameter("Configs", configs);
@@ -121,7 +125,11 @@ public class SetDcdnUserConfigRequest extends Request {
         }
 
         /**
-         * The ID of the feature.
+         * <p>The ID of the feature.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder functionId(Integer functionId) {
             this.putQueryParameter("FunctionId", functionId);

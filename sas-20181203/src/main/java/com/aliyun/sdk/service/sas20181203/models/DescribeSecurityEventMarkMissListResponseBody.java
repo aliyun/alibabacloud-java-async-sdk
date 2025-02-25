@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSecurityEventMarkMissListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSecurityEventMarkMissListResponseBody</p>
  */
 public class DescribeSecurityEventMarkMissListResponseBody extends TeaModel {
-    @NameInMap("List")
-    private java.util.List < List> list;
+    @com.aliyun.core.annotation.NameInMap("List")
+    private java.util.List<List> list;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeSecurityEventMarkMissListResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class DescribeSecurityEventMarkMissListResponseBody extends TeaModel {
     /**
      * @return list
      */
-    public java.util.List < List> getList() {
+    public java.util.List<List> getList() {
         return this.list;
     }
 
@@ -57,20 +62,20 @@ public class DescribeSecurityEventMarkMissListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < List> list; 
+        private java.util.List<List> list; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
-         * The ID of the rule.
+         * <p>The ID of the rule.</p>
          */
-        public Builder list(java.util.List < List> list) {
+        public Builder list(java.util.List<List> list) {
             this.list = list;
             return this;
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +83,10 @@ public class DescribeSecurityEventMarkMissListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24A20733-10A0-4AF6-BE6B-E3322413BB68</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,50 +99,56 @@ public class DescribeSecurityEventMarkMissListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSecurityEventMarkMissListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityEventMarkMissListResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("AliUid")
+        @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
 
-        @NameInMap("EventName")
+        @com.aliyun.core.annotation.NameInMap("EventName")
         private String eventName;
 
-        @NameInMap("EventNameOriginal")
+        @com.aliyun.core.annotation.NameInMap("EventNameOriginal")
         private String eventNameOriginal;
 
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
 
-        @NameInMap("EventTypeOriginal")
+        @com.aliyun.core.annotation.NameInMap("EventTypeOriginal")
         private String eventTypeOriginal;
 
-        @NameInMap("Field")
+        @com.aliyun.core.annotation.NameInMap("Field")
         private String field;
 
-        @NameInMap("FieldValue")
+        @com.aliyun.core.annotation.NameInMap("FieldValue")
         private String fieldValue;
 
-        @NameInMap("FiledAliasName")
+        @com.aliyun.core.annotation.NameInMap("FiledAliasName")
         private String filedAliasName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IntranetIp")
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("Operate")
+        @com.aliyun.core.annotation.NameInMap("Operate")
         private String operate;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private List(Builder builder) {
@@ -286,7 +300,10 @@ public class DescribeSecurityEventMarkMissListResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The user ID.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>176618589410****</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -294,7 +311,10 @@ public class DescribeSecurityEventMarkMissListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert event. The value indicates a subtype.
+             * <p>The name of the alert event. The value indicates a subtype.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Login with unusual location</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -302,7 +322,10 @@ public class DescribeSecurityEventMarkMissListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert event. The value indicates a type.
+             * <p>The name of the alert event. The value indicates a type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>login_common_location</p>
              */
             public Builder eventNameOriginal(String eventNameOriginal) {
                 this.eventNameOriginal = eventNameOriginal;
@@ -310,7 +333,10 @@ public class DescribeSecurityEventMarkMissListResponseBody extends TeaModel {
             }
 
             /**
-             * The subtype of the alert event.
+             * <p>The subtype of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Unusual Logon</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -318,7 +344,10 @@ public class DescribeSecurityEventMarkMissListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the alert event.
+             * <p>The type of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>login_common_location</p>
              */
             public Builder eventTypeOriginal(String eventTypeOriginal) {
                 this.eventTypeOriginal = eventTypeOriginal;
@@ -326,7 +355,10 @@ public class DescribeSecurityEventMarkMissListResponseBody extends TeaModel {
             }
 
             /**
-             * The field that is used in the whitelist rule.
+             * <p>The field that is used in the whitelist rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>type</p>
              */
             public Builder field(String field) {
                 this.field = field;
@@ -334,7 +366,10 @@ public class DescribeSecurityEventMarkMissListResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the field.
+             * <p>The value of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root</p>
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;
@@ -342,7 +377,10 @@ public class DescribeSecurityEventMarkMissListResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the field.
+             * <p>The alias of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Logon Time</p>
              */
             public Builder filedAliasName(String filedAliasName) {
                 this.filedAliasName = filedAliasName;
@@ -350,7 +388,10 @@ public class DescribeSecurityEventMarkMissListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule.
+             * <p>The ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>104037</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -358,7 +399,10 @@ public class DescribeSecurityEventMarkMissListResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the server.
+             * <p>The instance ID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp1e8t4q15sr3****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -366,7 +410,10 @@ public class DescribeSecurityEventMarkMissListResponseBody extends TeaModel {
             }
 
             /**
-             * The instance name of the asset.
+             * <p>The instance name of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sql-test-001</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -374,7 +421,10 @@ public class DescribeSecurityEventMarkMissListResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the server.
+             * <p>The public IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.210.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -382,7 +432,10 @@ public class DescribeSecurityEventMarkMissListResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the server.
+             * <p>The private IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.25.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -390,14 +443,17 @@ public class DescribeSecurityEventMarkMissListResponseBody extends TeaModel {
             }
 
             /**
-             * The operator. Valid values:
-             * <p>
+             * <p>The operator. Valid values:</p>
+             * <ul>
+             * <li><strong>contains</strong>: contains</li>
+             * <li><strong>notContains</strong>: does not contain</li>
+             * <li><strong>strEqual</strong>: equals</li>
+             * <li><strong>strNotEqual</strong>: does not equal</li>
+             * <li><strong>regex</strong>: regular expression</li>
+             * </ul>
              * 
-             * - **contains**: contains
-             * - **notContains**: does not contain
-             * - **strEqual**: equals
-             * - **strNotEqual**: does not equal
-             * - **regex**: regular expression
+             * <strong>example:</strong>
+             * <p>contains</p>
              */
             public Builder operate(String operate) {
                 this.operate = operate;
@@ -405,7 +461,10 @@ public class DescribeSecurityEventMarkMissListResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the asset.
+             * <p>The UUID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>49e25e0f-bb51-4a5a-a1b3-13a4ddaa****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -419,17 +478,23 @@ public class DescribeSecurityEventMarkMissListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSecurityEventMarkMissListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityEventMarkMissListResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -482,7 +547,10 @@ public class DescribeSecurityEventMarkMissListResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -490,7 +558,10 @@ public class DescribeSecurityEventMarkMissListResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -498,7 +569,10 @@ public class DescribeSecurityEventMarkMissListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page. Default value: **20**.
+             * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -506,7 +580,10 @@ public class DescribeSecurityEventMarkMissListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

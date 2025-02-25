@@ -1,35 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSiteMonitorISPCityListRequest} extends {@link RequestModel}
  *
  * <p>DescribeSiteMonitorISPCityListRequest</p>
  */
 public class DescribeSiteMonitorISPCityListRequest extends Request {
-    @Query
-    @NameInMap("City")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("City")
     private String city;
 
-    @Query
-    @NameInMap("IPV4")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IPV4")
     private Boolean IPV4;
 
-    @Query
-    @NameInMap("IPV6")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IPV6")
     private Boolean IPV6;
 
-    @Query
-    @NameInMap("Isp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Isp")
     private String isp;
 
-    @Query
-    @NameInMap("ViewAll")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ViewAll")
     private Boolean viewAll;
 
     private DescribeSiteMonitorISPCityListRequest(Builder builder) {
@@ -110,10 +110,10 @@ public class DescribeSiteMonitorISPCityListRequest extends Request {
         } 
 
         /**
-         * The name or ID of the city.
-         * <p>
-         * 
-         * > City names support fuzzy match.
+         * <p>The name or ID of the city.</p>
+         * <blockquote>
+         * <p>City names support fuzzy match.</p>
+         * </blockquote>
          */
         public Builder city(String city) {
             this.putQueryParameter("City", city);
@@ -122,11 +122,14 @@ public class DescribeSiteMonitorISPCityListRequest extends Request {
         }
 
         /**
-         * Specifies whether to query IPv4 probes. Valid values:
-         * <p>
+         * <p>Specifies whether to query IPv4 probes. Valid values:</p>
+         * <ul>
+         * <li>true (default): IPv4 probes are queried.</li>
+         * <li>false: IPv4 probes are not queried.</li>
+         * </ul>
          * 
-         * *   true (default): IPv4 probes are queried.
-         * *   false: IPv4 probes are not queried.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder IPV4(Boolean IPV4) {
             this.putQueryParameter("IPV4", IPV4);
@@ -135,11 +138,14 @@ public class DescribeSiteMonitorISPCityListRequest extends Request {
         }
 
         /**
-         * Specifies whether to query IPv6 probes. Valid values:
-         * <p>
+         * <p>Specifies whether to query IPv6 probes. Valid values:</p>
+         * <ul>
+         * <li>true (default): IPv6 probes are queried.</li>
+         * <li>false: IPv6 probes are not queried.</li>
+         * </ul>
          * 
-         * *   true (default): IPv6 probes are queried.
-         * *   false: IPv6 probes are not queried.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder IPV6(Boolean IPV6) {
             this.putQueryParameter("IPV6", IPV6);
@@ -148,10 +154,10 @@ public class DescribeSiteMonitorISPCityListRequest extends Request {
         }
 
         /**
-         * The name or ID of the carrier.
-         * <p>
-         * 
-         * > Carrier names support fuzzy match.
+         * <p>The name or ID of the carrier.</p>
+         * <blockquote>
+         * <p>Carrier names support fuzzy match.</p>
+         * </blockquote>
          */
         public Builder isp(String isp) {
             this.putQueryParameter("Isp", isp);
@@ -160,11 +166,14 @@ public class DescribeSiteMonitorISPCityListRequest extends Request {
         }
 
         /**
-         * Specifies whether to return all detection points. Valid values:
-         * <p>
+         * <p>Specifies whether to return all detection points. Valid values:</p>
+         * <ul>
+         * <li>true (default): returns all detection points.</li>
+         * <li>false: returns only available detection points.</li>
+         * </ul>
          * 
-         * *   true (default): returns all detection points.
-         * *   false: returns only available detection points.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder viewAll(Boolean viewAll) {
             this.putQueryParameter("ViewAll", viewAll);

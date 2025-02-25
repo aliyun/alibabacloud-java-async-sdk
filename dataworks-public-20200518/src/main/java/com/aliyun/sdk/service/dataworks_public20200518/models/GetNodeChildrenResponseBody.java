@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetNodeChildrenResponseBody} extends {@link TeaModel}
  *
  * <p>GetNodeChildrenResponseBody</p>
  */
 public class GetNodeChildrenResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetNodeChildrenResponseBody(Builder builder) {
@@ -98,7 +103,7 @@ public class GetNodeChildrenResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The information of the descendant nodes.
+         * <p>The information about the descendant nodes.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +111,10 @@ public class GetNodeChildrenResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1060010000000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +122,10 @@ public class GetNodeChildrenResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>err</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +133,10 @@ public class GetNodeChildrenResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +144,10 @@ public class GetNodeChildrenResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to troubleshoot issues.
+         * <p>The request ID. You can use the ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adsfasdf-adf-asdf-asdf-asdfadfasdd</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class GetNodeChildrenResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,36 +171,45 @@ public class GetNodeChildrenResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetNodeChildrenResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetNodeChildrenResponseBody</p>
+     */
     public static class Nodes extends TeaModel {
-        @NameInMap("BaselineId")
+        @com.aliyun.core.annotation.NameInMap("BaselineId")
         private Long baselineId;
 
-        @NameInMap("CronExpress")
+        @com.aliyun.core.annotation.NameInMap("CronExpress")
         private String cronExpress;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("ProgramType")
+        @com.aliyun.core.annotation.NameInMap("ProgramType")
         private String programType;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
-        @NameInMap("Repeatability")
+        @com.aliyun.core.annotation.NameInMap("Repeatability")
         private Boolean repeatability;
 
-        @NameInMap("SchedulerType")
+        @com.aliyun.core.annotation.NameInMap("SchedulerType")
         private String schedulerType;
+
+        @com.aliyun.core.annotation.NameInMap("StepType")
+        private String stepType;
 
         private Nodes(Builder builder) {
             this.baselineId = builder.baselineId;
@@ -193,6 +222,7 @@ public class GetNodeChildrenResponseBody extends TeaModel {
             this.projectId = builder.projectId;
             this.repeatability = builder.repeatability;
             this.schedulerType = builder.schedulerType;
+            this.stepType = builder.stepType;
         }
 
         public static Builder builder() {
@@ -273,6 +303,13 @@ public class GetNodeChildrenResponseBody extends TeaModel {
             return this.schedulerType;
         }
 
+        /**
+         * @return stepType
+         */
+        public String getStepType() {
+            return this.stepType;
+        }
+
         public static final class Builder {
             private Long baselineId; 
             private String cronExpress; 
@@ -284,9 +321,13 @@ public class GetNodeChildrenResponseBody extends TeaModel {
             private Long projectId; 
             private Boolean repeatability; 
             private String schedulerType; 
+            private String stepType; 
 
             /**
-             * The ID of the baseline.
+             * <p>The baseline ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345656</p>
              */
             public Builder baselineId(Long baselineId) {
                 this.baselineId = baselineId;
@@ -294,7 +335,10 @@ public class GetNodeChildrenResponseBody extends TeaModel {
             }
 
             /**
-             * The cron expression. Cron expressions are used to run auto triggered nodes.
+             * <p>The CRON expression. CRON expressions are used to run auto triggered nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00 00 * * * *</p>
              */
             public Builder cronExpress(String cronExpress) {
                 this.cronExpress = cronExpress;
@@ -302,7 +346,10 @@ public class GetNodeChildrenResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1244564565</p>
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -310,7 +357,10 @@ public class GetNodeChildrenResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_Node</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -318,7 +368,10 @@ public class GetNodeChildrenResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account used by the node owner.
+             * <p>The ID of the Alibaba Cloud account used by the node owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123124561341251321</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -326,7 +379,10 @@ public class GetNodeChildrenResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the node. Valid values: 1 to 8. A large value indicates a high priority.
+             * <p>The priority. Valid values: 1 to 8. A large value indicates a high priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -334,7 +390,10 @@ public class GetNodeChildrenResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the node.
+             * <p>The type of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ODPS_SQL</p>
              */
             public Builder programType(String programType) {
                 this.programType = programType;
@@ -342,7 +401,10 @@ public class GetNodeChildrenResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace to which the node belongs.
+             * <p>The ID of the workspace to which the node belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12315412412</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -350,11 +412,14 @@ public class GetNodeChildrenResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the node can be rerun if the node fails to run. Valid values:
-             * <p>
+             * <p>Indicates whether the node can be rerun if the node fails to run. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true: indicates that the node can be rerun.
-             * *   false: indicates that the node cannot be rerun.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder repeatability(Boolean repeatability) {
                 this.repeatability = repeatability;
@@ -362,16 +427,34 @@ public class GetNodeChildrenResponseBody extends TeaModel {
             }
 
             /**
-             * The scheduling type of the node. Valid values:
-             * <p>
+             * <p>The scheduling type of the node. Valid values:</p>
+             * <ul>
+             * <li>NORMAL: The node is an auto triggered node.</li>
+             * <li>MANUAL: The node is a manually triggered node. Manually triggered nodes cannot be automatically triggered.</li>
+             * <li>PAUSE: The node is a paused node. Paused nodes are started as scheduled but the system sets the status of the nodes to failed when it starts to run them.</li>
+             * <li>SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.</li>
+             * </ul>
              * 
-             * *   NORMAL: indicates that the node is an auto triggered node.
-             * *   MANUAL: indicates that node is a manually triggered node.
-             * *   PAUSE: indicates that the node is a paused node. Paused nodes are started as scheduled but the system sets the status of the nodes to failed when it starts to run them.
-             * *   SKIP: indicates that the node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder schedulerType(String schedulerType) {
                 this.schedulerType = schedulerType;
+                return this;
+            }
+
+            /**
+             * <p>The scheduling dependency type. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: same-cycle scheduling dependency</li>
+             * <li><strong>3</strong>: cross-cycle scheduling dependency</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder stepType(String stepType) {
+                this.stepType = stepType;
                 return this;
             }
 
@@ -382,9 +465,15 @@ public class GetNodeChildrenResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetNodeChildrenResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetNodeChildrenResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Nodes")
-        private java.util.List < Nodes> nodes;
+        @com.aliyun.core.annotation.NameInMap("Nodes")
+        private java.util.List<Nodes> nodes;
 
         private Data(Builder builder) {
             this.nodes = builder.nodes;
@@ -401,17 +490,17 @@ public class GetNodeChildrenResponseBody extends TeaModel {
         /**
          * @return nodes
          */
-        public java.util.List < Nodes> getNodes() {
+        public java.util.List<Nodes> getNodes() {
             return this.nodes;
         }
 
         public static final class Builder {
-            private java.util.List < Nodes> nodes; 
+            private java.util.List<Nodes> nodes; 
 
             /**
-             * The descendant nodes returned.
+             * <p>The descendant nodes.</p>
              */
-            public Builder nodes(java.util.List < Nodes> nodes) {
+            public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
                 return this;
             }

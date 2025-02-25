@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeResourceDetailsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeResourceDetailsResponseBody</p>
  */
 public class DescribeResourceDetailsResponseBody extends TeaModel {
-    @NameInMap("BackupDataSize")
+    @com.aliyun.core.annotation.NameInMap("BackupDataSize")
     private Long backupDataSize;
 
-    @NameInMap("BackupLogSize")
+    @com.aliyun.core.annotation.NameInMap("BackupLogSize")
     private Long backupLogSize;
 
-    @NameInMap("BackupSize")
+    @com.aliyun.core.annotation.NameInMap("BackupSize")
     private Long backupSize;
 
-    @NameInMap("DbInstanceStorage")
+    @com.aliyun.core.annotation.NameInMap("DbInstanceStorage")
     private Long dbInstanceStorage;
 
-    @NameInMap("DbProxyInstanceName")
+    @com.aliyun.core.annotation.NameInMap("DbProxyInstanceName")
     private String dbProxyInstanceName;
 
-    @NameInMap("DiskUsed")
+    @com.aliyun.core.annotation.NameInMap("DiskUsed")
     private Long diskUsed;
 
-    @NameInMap("InstanceStorageType")
+    @com.aliyun.core.annotation.NameInMap("InstanceStorageType")
     private String instanceStorageType;
 
-    @NameInMap("RdsEcsSecurityGroupRel")
-    private java.util.List < RdsEcsSecurityGroupRel> rdsEcsSecurityGroupRel;
+    @com.aliyun.core.annotation.NameInMap("RdsEcsSecurityGroupRel")
+    private java.util.List<RdsEcsSecurityGroupRel> rdsEcsSecurityGroupRel;
 
-    @NameInMap("Region")
+    @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("SecurityIPList")
+    @com.aliyun.core.annotation.NameInMap("SecurityIPList")
     private String securityIPList;
 
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     private DescribeResourceDetailsResponseBody(Builder builder) {
@@ -131,7 +136,7 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
     /**
      * @return rdsEcsSecurityGroupRel
      */
-    public java.util.List < RdsEcsSecurityGroupRel> getRdsEcsSecurityGroupRel() {
+    public java.util.List<RdsEcsSecurityGroupRel> getRdsEcsSecurityGroupRel() {
         return this.rdsEcsSecurityGroupRel;
     }
 
@@ -185,7 +190,7 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         private String dbProxyInstanceName; 
         private Long diskUsed; 
         private String instanceStorageType; 
-        private java.util.List < RdsEcsSecurityGroupRel> rdsEcsSecurityGroupRel; 
+        private java.util.List<RdsEcsSecurityGroupRel> rdsEcsSecurityGroupRel; 
         private String region; 
         private String requestId; 
         private String resourceGroupId; 
@@ -194,7 +199,10 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         private String vpcId; 
 
         /**
-         * The storage that is occupied by data backup files, excluding archived backup files, on the instance. Unit: bytes.
+         * <p>The storage that is occupied by data backup files, excluding archived backup files, on the instance. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8139046912</p>
          */
         public Builder backupDataSize(Long backupDataSize) {
             this.backupDataSize = backupDataSize;
@@ -202,7 +210,10 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The size of the backup log. Unit: bytes.
+         * <p>The size of the backup log. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21183797</p>
          */
         public Builder backupLogSize(Long backupLogSize) {
             this.backupLogSize = backupLogSize;
@@ -210,7 +221,10 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The size of the backup data. Unit: MB.
+         * <p>The size of the backup data. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>53002759</p>
          */
         public Builder backupSize(Long backupSize) {
             this.backupSize = backupSize;
@@ -218,7 +232,10 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The disk capacity of the instance.
+         * <p>The disk capacity of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder dbInstanceStorage(Long dbInstanceStorage) {
             this.dbInstanceStorage = dbInstanceStorage;
@@ -226,7 +243,10 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the proxy instance.
+         * <p>The name of the proxy instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mr-n1m1wjrylfolvrt67s</p>
          */
         public Builder dbProxyInstanceName(String dbProxyInstanceName) {
             this.dbProxyInstanceName = dbProxyInstanceName;
@@ -234,7 +254,10 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The total storage used. The value is the sum of the DataSize and LogSize values. Unit: bytes. The value -1 indicates that no data files or log files are stored.
+         * <p>The total storage used. The value is the sum of the DataSize and LogSize values. Unit: bytes. The value -1 indicates that no data files or log files are stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4871684096</p>
          */
         public Builder diskUsed(Long diskUsed) {
             this.diskUsed = diskUsed;
@@ -242,7 +265,10 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The storage type of the instance.
+         * <p>The storage type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
          */
         public Builder instanceStorageType(String instanceStorageType) {
             this.instanceStorageType = instanceStorageType;
@@ -250,15 +276,18 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The rule for the IP address whitelist of the instance.
+         * <p>The rule for the IP address whitelist of the instance.</p>
          */
-        public Builder rdsEcsSecurityGroupRel(java.util.List < RdsEcsSecurityGroupRel> rdsEcsSecurityGroupRel) {
+        public Builder rdsEcsSecurityGroupRel(java.util.List<RdsEcsSecurityGroupRel> rdsEcsSecurityGroupRel) {
             this.rdsEcsSecurityGroupRel = rdsEcsSecurityGroupRel;
             return this;
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder region(String region) {
             this.region = region;
@@ -266,7 +295,10 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EA815761-F7AC-5CFE-A1AC-709D6A00B58A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -274,7 +306,10 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmv3h25bj7yhq</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -282,13 +317,15 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The IP address whitelist of the instance. For more information, see [Configure IP address whitelists](~~43185~~). If the returned IP address whitelist contains more than one entry, these entries are separated with commas (,). Each entry is unique and up to 1,000 entries are returned. The entries in the IP address whitelist must be in one of the following formats:
-         * <p>
+         * <p>The IP address whitelist of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/43185.html">Configure IP address whitelists</a>. If the returned IP address whitelist contains more than one entry, these entries are separated with commas (,). Each entry is unique and up to 1,000 entries are returned. The entries in the IP address whitelist must be in one of the following formats:</p>
+         * <ul>
+         * <li>IP addresses, such as 10.10.XX.XX.</li>
+         * <li>CIDR blocks, such as 10.10.XX.XX/24. In this example, 24 indicates that the prefix of each IP address in the IP address whitelist is 24 bits in length. You can replace 24 with a value within the range of 1 to 32.</li>
+         * </ul>
+         * <p>If this parameter is not specified, the default IP address whitelist is used.</p>
          * 
-         * *   IP addresses, such as 10.10.XX.XX.
-         * *   CIDR blocks, such as 10.10.XX.XX/24. In this example, 24 indicates that the prefix of each IP address in the IP address whitelist is 24 bits in length. You can replace 24 with a value within the range of 1 to 32.
-         * 
-         * If this parameter is not specified, the default IP address whitelist is used.
+         * <strong>example:</strong>
+         * <p>172.16.1.14,172.16.1.13,172.16.1.44,172.16.1.43,172.16.1.74,172.16.1.73</p>
          */
         public Builder securityIPList(String securityIPList) {
             this.securityIPList = securityIPList;
@@ -296,10 +333,13 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The vSwitch ID.
-         * <p>
+         * <p>The vSwitch ID.</p>
+         * <blockquote>
+         * <p> The vSwitch must belong to the same zone as the instance.</p>
+         * </blockquote>
          * 
-         * >  The vSwitch must belong to the same zone as the instance.
+         * <strong>example:</strong>
+         * <p>vsw-2zelwi1jd271p670lzl8h</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
@@ -307,7 +347,10 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC).
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-wz9rbibex7v0lxbeyo6at</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;
@@ -320,8 +363,14 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeResourceDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourceDetailsResponseBody</p>
+     */
     public static class RdsEcsSecurityGroupRel extends TeaModel {
-        @NameInMap("SecurityGroupName")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupName")
         private String securityGroupName;
 
         private RdsEcsSecurityGroupRel(Builder builder) {
@@ -347,7 +396,10 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
             private String securityGroupName; 
 
             /**
-             * The name of the security group.
+             * <p>The name of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_switch</p>
              */
             public Builder securityGroupName(String securityGroupName) {
                 this.securityGroupName = securityGroupName;

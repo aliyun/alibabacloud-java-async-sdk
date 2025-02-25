@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PauseInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>PauseInstanceResponseBody</p>
  */
 public class PauseInstanceResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Boolean status;
 
     private PauseInstanceResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class PauseInstanceResponseBody extends TeaModel {
         private Boolean status; 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -82,10 +90,11 @@ public class PauseInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
-         * <p>
+         * <p>The error message returned.</p>
+         * <p>This parameter is returned only if <strong>false</strong> is returned for the <strong>Status</strong> parameter.</p>
          * 
-         * This parameter is returned only if **false** is returned for the **Status** parameter.
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -93,7 +102,10 @@ public class PauseInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34b32a0a-08ef-4a87-b6be-cdd9********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,11 +113,14 @@ public class PauseInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong>: The request failed.</li>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * </ul>
          * 
-         * *   **false**: The request failed.
-         * *   **true**: The request was successful.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder status(Boolean status) {
             this.status = status;

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryPurchasedDomainsResponseBody} extends {@link TeaModel}
  *
  * <p>QueryPurchasedDomainsResponseBody</p>
  */
 public class QueryPurchasedDomainsResponseBody extends TeaModel {
-    @NameInMap("CurrentPageNum")
+    @com.aliyun.core.annotation.NameInMap("CurrentPageNum")
     private Integer currentPageNum;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalItemNum")
+    @com.aliyun.core.annotation.NameInMap("TotalItemNum")
     private Integer totalItemNum;
 
-    @NameInMap("TotalPageNum")
+    @com.aliyun.core.annotation.NameInMap("TotalPageNum")
     private Integer totalPageNum;
 
     private QueryPurchasedDomainsResponseBody(Builder builder) {
@@ -57,7 +62,7 @@ public class QueryPurchasedDomainsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -91,7 +96,7 @@ public class QueryPurchasedDomainsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer currentPageNum; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalItemNum; 
@@ -108,7 +113,7 @@ public class QueryPurchasedDomainsResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -151,23 +156,29 @@ public class QueryPurchasedDomainsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryPurchasedDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryPurchasedDomainsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DeliveryTime")
+        @com.aliyun.core.annotation.NameInMap("DeliveryTime")
         private String deliveryTime;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("OperationStatus")
+        @com.aliyun.core.annotation.NameInMap("OperationStatus")
         private String operationStatus;
 
-        @NameInMap("OperationTime")
+        @com.aliyun.core.annotation.NameInMap("OperationTime")
         private String operationTime;
 
-        @NameInMap("ProductType")
+        @com.aliyun.core.annotation.NameInMap("ProductType")
         private String productType;
 
-        @NameInMap("TradeMoney")
+        @com.aliyun.core.annotation.NameInMap("TradeMoney")
         private Double tradeMoney;
 
         private Data(Builder builder) {

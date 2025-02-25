@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateUserProvisioningConfigurationRequest} extends {@link RequestModel}
  *
  * <p>UpdateUserProvisioningConfigurationRequest</p>
  */
 public class UpdateUserProvisioningConfigurationRequest extends Request {
-    @Query
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @Query
-    @NameInMap("NewDefaultLandingPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewDefaultLandingPage")
     private String newDefaultLandingPage;
 
-    @Query
-    @NameInMap("NewSessionDuration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewSessionDuration")
     private Integer newSessionDuration;
 
     private UpdateUserProvisioningConfigurationRequest(Builder builder) {
@@ -82,7 +82,10 @@ public class UpdateUserProvisioningConfigurationRequest extends Request {
         } 
 
         /**
-         * DirectoryId.
+         * <p>The ID of the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-003qew84****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -91,7 +94,11 @@ public class UpdateUserProvisioningConfigurationRequest extends Request {
         }
 
         /**
-         * NewDefaultLandingPage.
+         * <p>The new default URL for a CloudSSO user who logs on to the Alibaba Cloud Management Console.</p>
+         * <p>Default value: <a href="https://homenew.console.aliyun.com">https://homenew.console.aliyun.com</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://home.console.aliyun.com/home/dashboard/ProductAndService">https://home.console.aliyun.com/home/dashboard/ProductAndService</a></p>
          */
         public Builder newDefaultLandingPage(String newDefaultLandingPage) {
             this.putQueryParameter("NewDefaultLandingPage", newDefaultLandingPage);
@@ -100,7 +107,13 @@ public class UpdateUserProvisioningConfigurationRequest extends Request {
         }
 
         /**
-         * NewSessionDuration.
+         * <p>The new duration of the logon session.</p>
+         * <p>Unit: hours.</p>
+         * <p>Valid values: 1 to 24.</p>
+         * <p>Default value: 6.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder newSessionDuration(Integer newSessionDuration) {
             this.putQueryParameter("NewSessionDuration", newSessionDuration);

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLhSpaceByNameResponseBody} extends {@link TeaModel}
  *
  * <p>GetLhSpaceByNameResponseBody</p>
  */
 public class GetLhSpaceByNameResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("LakehouseSpace")
+    @com.aliyun.core.annotation.NameInMap("LakehouseSpace")
     private LakehouseSpace lakehouseSpace;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetLhSpaceByNameResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the request fails.
+         * <p>The error code returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +102,10 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request fails.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +113,7 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
         }
 
         /**
-         * The workspace for data warehouse development.
+         * <p>The workspace for data warehouse development.</p>
          */
         public Builder lakehouseSpace(LakehouseSpace lakehouseSpace) {
             this.lakehouseSpace = lakehouseSpace;
@@ -110,7 +121,10 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE8CA4A8-AB2D-55B7-BD30-01A4609F40D8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +132,14 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>false</strong>: The request fails.</li>
+         * </ul>
          * 
-         * *   **true**: The request is successful.
-         * *   **false**: The request fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -135,38 +152,44 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetLhSpaceByNameResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLhSpaceByNameResponseBody</p>
+     */
     public static class LakehouseSpace extends TeaModel {
-        @NameInMap("CreatorId")
+        @com.aliyun.core.annotation.NameInMap("CreatorId")
         private String creatorId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DevDbId")
+        @com.aliyun.core.annotation.NameInMap("DevDbId")
         private Integer devDbId;
 
-        @NameInMap("DwDbType")
+        @com.aliyun.core.annotation.NameInMap("DwDbType")
         private String dwDbType;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("IsDeleted")
+        @com.aliyun.core.annotation.NameInMap("IsDeleted")
         private Boolean isDeleted;
 
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private Integer mode;
 
-        @NameInMap("ProdDbId")
+        @com.aliyun.core.annotation.NameInMap("ProdDbId")
         private Integer prodDbId;
 
-        @NameInMap("SpaceConfig")
+        @com.aliyun.core.annotation.NameInMap("SpaceConfig")
         private String spaceConfig;
 
-        @NameInMap("SpaceName")
+        @com.aliyun.core.annotation.NameInMap("SpaceName")
         private String spaceName;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
         private LakehouseSpace(Builder builder) {
@@ -282,7 +305,10 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
             private String tenantId; 
 
             /**
-             * The ID of the user who creates the workspace.
+             * <p>The ID of the user who creates the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51***</p>
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -290,7 +316,10 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the workspace.
+             * <p>The description of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -298,7 +327,10 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the development database.
+             * <p>The ID of the development database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2435****</p>
              */
             public Builder devDbId(Integer devDbId) {
                 this.devDbId = devDbId;
@@ -306,11 +338,14 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the database. Valid values:
-             * <p>
+             * <p>The type of the database. Valid values:</p>
+             * <ul>
+             * <li><strong>14</strong>: AnalyticDB for MySQL</li>
+             * <li><strong>18</strong>: AnalyticDB for PostgreSQL</li>
+             * </ul>
              * 
-             * *   **14**: AnalyticDB for MySQL
-             * *   **18**: AnalyticDB for PostgreSQL
+             * <strong>example:</strong>
+             * <p>14</p>
              */
             public Builder dwDbType(String dwDbType) {
                 this.dwDbType = dwDbType;
@@ -318,7 +353,10 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace.
+             * <p>The ID of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -326,11 +364,14 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the workspace is deleted. Valid values:
-             * <p>
+             * <p>Indicates whether the workspace is deleted. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The workspace is deleted.</li>
+             * <li><strong>false</strong>: The workspace is not deleted.</li>
+             * </ul>
              * 
-             * *   **true**: The workspace is deleted.
-             * *   **false**: The workspace is not deleted.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDeleted(Boolean isDeleted) {
                 this.isDeleted = isDeleted;
@@ -338,11 +379,14 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
             }
 
             /**
-             * The mode in which the workspace runs. Valid values:
-             * <p>
+             * <p>The mode in which the workspace runs. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: basic mode</li>
+             * <li><strong>1</strong>: standard mode</li>
+             * </ul>
              * 
-             * *   **0**: basic mode
-             * *   **1**: standard mode
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder mode(Integer mode) {
                 this.mode = mode;
@@ -350,7 +394,10 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the production database.
+             * <p>The ID of the production database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2442****</p>
              */
             public Builder prodDbId(Integer prodDbId) {
                 this.prodDbId = prodDbId;
@@ -358,11 +405,14 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of the workspace. Valid values:
-             * <p>
+             * <p>The configuration of the workspace. Valid values:</p>
+             * <ul>
+             * <li><strong>skipManualRunCheck</strong>: No security rule check is required in the trial run phase.</li>
+             * <li><strong>skipPublishApprove</strong>: No approval is required for publishing and O&amp;M.</li>
+             * </ul>
              * 
-             * *   **skipManualRunCheck**: No security rule check is required in the trial run phase.
-             * *   **skipPublishApprove**: No approval is required for publishing and O\&M.
+             * <strong>example:</strong>
+             * <p>{&quot;skipManualRunCheck&quot;:true,&quot;skipPublishApprove&quot;:true}</p>
              */
             public Builder spaceConfig(String spaceConfig) {
                 this.spaceConfig = spaceConfig;
@@ -370,7 +420,10 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the workspace.
+             * <p>The name of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_space</p>
              */
             public Builder spaceName(String spaceName) {
                 this.spaceName = spaceName;
@@ -378,7 +431,10 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tenant to which the workspace belongs.
+             * <p>The ID of the tenant to which the workspace belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3***</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;

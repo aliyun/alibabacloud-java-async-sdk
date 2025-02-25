@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAllProdsResponseBody</p>
  */
 public class ListAllProdsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListAllProdsResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class ListAllProdsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +57,7 @@ public class ListAllProdsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,19 +71,19 @@ public class ListAllProdsResponseBody extends TeaModel {
     } 
 
     public static class ProdList extends TeaModel {
-        @NameInMap("CloudCode")
+        @com.aliyun.core.annotation.NameInMap("CloudCode")
         private String cloudCode;
 
-        @NameInMap("ImportedLogCount")
+        @com.aliyun.core.annotation.NameInMap("ImportedLogCount")
         private Integer importedLogCount;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("ProdCode")
+        @com.aliyun.core.annotation.NameInMap("ProdCode")
         private String prodCode;
 
-        @NameInMap("TotalLogCount")
+        @com.aliyun.core.annotation.NameInMap("TotalLogCount")
         private Integer totalLogCount;
 
         private ProdList(Builder builder) {
@@ -146,7 +145,12 @@ public class ListAllProdsResponseBody extends TeaModel {
             private Integer totalLogCount; 
 
             /**
-             * CloudCode.
+             * The code of the cloud service provider. Valid values:
+             * <p>
+             * 
+             * *   qcloud: Tencent Cloud.
+             * *   aliyun: Alibaba Cloud.
+             * *   hcloud: Huawei Cloud.
              */
             public Builder cloudCode(String cloudCode) {
                 this.cloudCode = cloudCode;
@@ -154,7 +158,7 @@ public class ListAllProdsResponseBody extends TeaModel {
             }
 
             /**
-             * ImportedLogCount.
+             * The number of logs within the cloud service that are added to the threat analysis feature.
              */
             public Builder importedLogCount(Integer importedLogCount) {
                 this.importedLogCount = importedLogCount;
@@ -162,7 +166,7 @@ public class ListAllProdsResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * The time when the logs within the cloud service were last added to the threat analysis feature.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -170,7 +174,7 @@ public class ListAllProdsResponseBody extends TeaModel {
             }
 
             /**
-             * ProdCode.
+             * The code of the cloud service.
              */
             public Builder prodCode(String prodCode) {
                 this.prodCode = prodCode;
@@ -178,7 +182,7 @@ public class ListAllProdsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalLogCount.
+             * The total number of logs within the cloud service.
              */
             public Builder totalLogCount(Integer totalLogCount) {
                 this.totalLogCount = totalLogCount;
@@ -193,16 +197,16 @@ public class ListAllProdsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("ProdList")
+        @com.aliyun.core.annotation.NameInMap("ProdList")
         private java.util.List < ProdList> prodList;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {
@@ -255,7 +259,7 @@ public class ListAllProdsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * CurrentPage.
+             * The page number.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -263,7 +267,7 @@ public class ListAllProdsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -271,7 +275,7 @@ public class ListAllProdsResponseBody extends TeaModel {
             }
 
             /**
-             * ProdList.
+             * The cloud services.
              */
             public Builder prodList(java.util.List < ProdList> prodList) {
                 this.prodList = prodList;
@@ -279,7 +283,7 @@ public class ListAllProdsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of logs.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

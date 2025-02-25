@@ -1,50 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDBResourcePoolRequest} extends {@link RequestModel}
  *
  * <p>CreateDBResourcePoolRequest</p>
  */
 public class CreateDBResourcePoolRequest extends Request {
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("NodeNum")
-    @Validation(maximum = 4294967296D)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeNum")
+    @com.aliyun.core.annotation.Validation(maximum = 4294967296D)
     private Integer nodeNum;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PoolName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PoolName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String poolName;
 
-    @Query
-    @NameInMap("QueryType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryType")
     private String queryType;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private CreateDBResourcePoolRequest(Builder builder) {
@@ -155,10 +155,14 @@ public class CreateDBResourcePoolRequest extends Request {
         } 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
-         * <p>
+         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.
+         * <strong>example:</strong>
+         * <p>am-bp11q28kvl688****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -167,11 +171,14 @@ public class CreateDBResourcePoolRequest extends Request {
         }
 
         /**
-         * The number of nodes. Default value: 0.
-         * <p>
+         * <p>The number of nodes. Default value: 0.</p>
+         * <ul>
+         * <li>Each node provides 16 cores and 64 GB memory.</li>
+         * <li>The total amount of resources provided by the nodes (number of nodes × 16 cores, number of nodes × 64 GB memory) cannot exceed the total amount of resources in the cluster. Set this parameter to a proper value.</li>
+         * </ul>
          * 
-         * *   Each node provides 16 cores and 64 GB memory.
-         * *   The total amount of resources provided by the nodes (number of nodes × 16 cores, number of nodes × 64 GB memory) cannot exceed the total amount of resources in the cluster. Set this parameter to a proper value.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder nodeNum(Integer nodeNum) {
             this.putQueryParameter("NodeNum", nodeNum);
@@ -198,12 +205,16 @@ public class CreateDBResourcePoolRequest extends Request {
         }
 
         /**
-         * The name of the resource group.
-         * <p>
+         * <p>The name of the resource group.</p>
+         * <ul>
+         * <li>The name can be up to 255 characters in length.</li>
+         * <li>The name must start with a letter or a digit.</li>
+         * <li>The name can contain letters, digits, hyphens (<em>), and underscores (</em>).</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name can be up to 255 characters in length.
-         * *   The name must start with a letter or a digit.
-         * *   The name can contain letters, digits, hyphens (\_), and underscores (\_).
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder poolName(String poolName) {
             this.putQueryParameter("PoolName", poolName);
@@ -212,14 +223,19 @@ public class CreateDBResourcePoolRequest extends Request {
         }
 
         /**
-         * The mode in which to execute SQL statements.
-         * <p>
+         * <p>The mode in which to execute SQL statements.</p>
+         * <ul>
+         * <li><p><strong>batch</strong></p>
+         * </li>
+         * <li><p><strong>interactive</strong></p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/189502.html">Query execution modes</a>.</p>
+         * </blockquote>
          * 
-         * *   **batch**
-         * 
-         * *   **interactive**
-         * 
-         * > For more information, see [Query execution modes](~~189502~~).
+         * <strong>example:</strong>
+         * <p>interactive</p>
          */
         public Builder queryType(String queryType) {
             this.putQueryParameter("QueryType", queryType);

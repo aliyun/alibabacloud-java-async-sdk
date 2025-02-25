@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMongoDBLogConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMongoDBLogConfigResponseBody</p>
  */
 public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
-    @NameInMap("EnableAudit")
+    @com.aliyun.core.annotation.NameInMap("EnableAudit")
     private Boolean enableAudit;
 
-    @NameInMap("IsEtlMetaExist")
+    @com.aliyun.core.annotation.NameInMap("IsEtlMetaExist")
     private Integer isEtlMetaExist;
 
-    @NameInMap("IsUserProjectLogstoreExist")
+    @com.aliyun.core.annotation.NameInMap("IsUserProjectLogstoreExist")
     private Integer isUserProjectLogstoreExist;
 
-    @NameInMap("PreserveStorageForStandard")
+    @com.aliyun.core.annotation.NameInMap("PreserveStorageForStandard")
     private Long preserveStorageForStandard;
 
-    @NameInMap("PreserveStorageForTrail")
+    @com.aliyun.core.annotation.NameInMap("PreserveStorageForTrail")
     private Long preserveStorageForTrail;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServiceType")
+    @com.aliyun.core.annotation.NameInMap("ServiceType")
     private String serviceType;
 
-    @NameInMap("TtlForStandard")
+    @com.aliyun.core.annotation.NameInMap("TtlForStandard")
     private Long ttlForStandard;
 
-    @NameInMap("TtlForTrail")
+    @com.aliyun.core.annotation.NameInMap("TtlForTrail")
     private Long ttlForTrail;
 
-    @NameInMap("UsedStorageForStandard")
+    @com.aliyun.core.annotation.NameInMap("UsedStorageForStandard")
     private Long usedStorageForStandard;
 
-    @NameInMap("UsedStorageForTrail")
+    @com.aliyun.core.annotation.NameInMap("UsedStorageForTrail")
     private Long usedStorageForTrail;
 
-    @NameInMap("UserProjectName")
+    @com.aliyun.core.annotation.NameInMap("UserProjectName")
     private String userProjectName;
 
     private DescribeMongoDBLogConfigResponseBody(Builder builder) {
@@ -170,11 +175,14 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
         private String userProjectName; 
 
         /**
-         * Indicates whether to enable the audit log feature is enabled.
-         * <p>
+         * <p>Indicates whether to enable the audit log feature.</p>
+         * <ul>
+         * <li><strong>true</strong>: The audit log feature is enabled.</li>
+         * <li><strong>false</strong>: The audit log feature is disabled.</li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAudit(Boolean enableAudit) {
             this.enableAudit = enableAudit;
@@ -182,11 +190,14 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether a rule to distribute logs to Logtail is created. For more information, see [Logtail overview](~~28979~~). Valid values:
-         * <p>
+         * <p>Indicates whether a rule to distribute logs to Logtail is created. For more information, see <a href="https://help.aliyun.com/document_detail/28979.html">Logtail overview</a>. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: A rule to distribute logs to Logtail is created.</li>
+         * <li><strong>0</strong> or <strong>null</strong>: A rule to distribute logs to Logtail is not created.</li>
+         * </ul>
          * 
-         * *   **1**: A rule to distribute logs to Logtail is created.
-         * *   **0** or **null**: A rule to distribute logs to Logtail is not created.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder isEtlMetaExist(Integer isEtlMetaExist) {
             this.isEtlMetaExist = isEtlMetaExist;
@@ -194,11 +205,14 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether a Log Service project exists in the current region. Valid values:
-         * <p>
+         * <p>Indicates whether a project exists in the current region. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: A logging project exists in the current region.</li>
+         * <li><strong>0</strong> or <strong>null</strong>: A logging project does not exist in the current region.</li>
+         * </ul>
          * 
-         * *   **1**: A Log Service project exists in the current region.
-         * *   **0** or **null**: A Log Service project does not exist in the current region.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder isUserProjectLogstoreExist(Integer isUserProjectLogstoreExist) {
             this.isUserProjectLogstoreExist = isUserProjectLogstoreExist;
@@ -206,7 +220,10 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum storage space for the formal edition of the audit log feature. If the value is **-1**, no maximum is set.
+         * <p>The maximum storage capacity for the formal edition of the audit log feature. If the value is -1, no maximum storage capacity is set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder preserveStorageForStandard(Long preserveStorageForStandard) {
             this.preserveStorageForStandard = preserveStorageForStandard;
@@ -214,7 +231,10 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum storage space for the free trial edition of the audit log feature. Unit: bytes. You can set the maximum up to 107,374,182,400 bytes.
+         * <p>The maximum storage capacity for the free trial edition of the audit log feature. Unit: bytes. You can set the maximum storage capacity to 107,374,182,400 bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>107374182400</p>
          */
         public Builder preserveStorageForTrail(Long preserveStorageForTrail) {
             this.preserveStorageForTrail = preserveStorageForTrail;
@@ -222,7 +242,10 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>664ECE26-658A-47C5-88F6-870B0132E8D2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,11 +253,14 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the audit log feature. Valid values:
-         * <p>
+         * <p>The type of the audit log feature. Valid values:</p>
+         * <ul>
+         * <li><strong>Trail</strong>: the free trial edition</li>
+         * <li><strong>Standard</strong>: the official edition</li>
+         * </ul>
          * 
-         * *   **Trail**: the free trial edition
-         * *   **Standard**: the official edition
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         public Builder serviceType(String serviceType) {
             this.serviceType = serviceType;
@@ -242,7 +268,10 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The retention period for the official edition of the audit log feature. Valid values: 1 to 365 days.
+         * <p>The retention period for the official edition of the audit log feature. Valid values: 1 to 365. Unit: day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder ttlForStandard(Long ttlForStandard) {
             this.ttlForStandard = ttlForStandard;
@@ -250,7 +279,10 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The retention period for the free trial edition of the audit log feature.
+         * <p>The retention period for the free trial edition of the audit log feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ttlForTrail(Long ttlForTrail) {
             this.ttlForTrail = ttlForTrail;
@@ -258,7 +290,10 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The used storage space for the formal edition of the audit log feature. Unit: bytes.
+         * <p>The used storage capacity for the formal edition of the audit log feature. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20163</p>
          */
         public Builder usedStorageForStandard(Long usedStorageForStandard) {
             this.usedStorageForStandard = usedStorageForStandard;
@@ -266,7 +301,10 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The used storage space for the free trial edition of the audit log feature. Unit: bytes.
+         * <p>The used storage capacity for the free trial edition of the audit log feature. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12548178759</p>
          */
         public Builder usedStorageForTrail(Long usedStorageForTrail) {
             this.usedStorageForTrail = usedStorageForTrail;
@@ -274,7 +312,10 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the Log Service project.
+         * <p>The name of the project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nosql-176498472570****-cn-hangzhou</p>
          */
         public Builder userProjectName(String userProjectName) {
             this.userProjectName = userProjectName;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.acm20200206.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeConfigurationResponseBody</p>
  */
 public class DescribeConfigurationResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Configuration")
+    @com.aliyun.core.annotation.NameInMap("Configuration")
     private Configuration configuration;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeConfigurationResponseBody(Builder builder) {
@@ -112,28 +111,34 @@ public class DescribeConfigurationResponseBody extends TeaModel {
     } 
 
     public static class Configuration extends TeaModel {
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("DataId")
+        @com.aliyun.core.annotation.NameInMap("DataId")
         private String dataId;
 
-        @NameInMap("Desc")
+        @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
 
-        @NameInMap("Group")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
+        private String gmtCreate;
+
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
+        private String gmtModified;
+
+        @com.aliyun.core.annotation.NameInMap("Group")
         private String group;
 
-        @NameInMap("Md5")
+        @com.aliyun.core.annotation.NameInMap("Md5")
         private String md5;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private String tags;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Configuration(Builder builder) {
@@ -141,6 +146,8 @@ public class DescribeConfigurationResponseBody extends TeaModel {
             this.content = builder.content;
             this.dataId = builder.dataId;
             this.desc = builder.desc;
+            this.gmtCreate = builder.gmtCreate;
+            this.gmtModified = builder.gmtModified;
             this.group = builder.group;
             this.md5 = builder.md5;
             this.tags = builder.tags;
@@ -184,6 +191,20 @@ public class DescribeConfigurationResponseBody extends TeaModel {
         }
 
         /**
+         * @return gmtCreate
+         */
+        public String getGmtCreate() {
+            return this.gmtCreate;
+        }
+
+        /**
+         * @return gmtModified
+         */
+        public String getGmtModified() {
+            return this.gmtModified;
+        }
+
+        /**
          * @return group
          */
         public String getGroup() {
@@ -216,6 +237,8 @@ public class DescribeConfigurationResponseBody extends TeaModel {
             private String content; 
             private String dataId; 
             private String desc; 
+            private String gmtCreate; 
+            private String gmtModified; 
             private String group; 
             private String md5; 
             private String tags; 
@@ -250,6 +273,22 @@ public class DescribeConfigurationResponseBody extends TeaModel {
              */
             public Builder desc(String desc) {
                 this.desc = desc;
+                return this;
+            }
+
+            /**
+             * GmtCreate.
+             */
+            public Builder gmtCreate(String gmtCreate) {
+                this.gmtCreate = gmtCreate;
+                return this;
+            }
+
+            /**
+             * GmtModified.
+             */
+            public Builder gmtModified(String gmtModified) {
+                this.gmtModified = gmtModified;
                 return this;
             }
 

@@ -1,64 +1,69 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightCreateOrderV2Request} extends {@link RequestModel}
  *
  * <p>FlightCreateOrderV2Request</p>
  */
 public class FlightCreateOrderV2Request extends Request {
-    @Body
-    @NameInMap("async_create_order_key")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("async_create_order_key")
     private String asyncCreateOrderKey;
 
-    @Body
-    @NameInMap("async_create_order_mode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("async_create_order_mode")
     private Boolean asyncCreateOrderMode;
 
-    @Body
-    @NameInMap("btrip_user_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("btrip_user_id")
     private String btripUserId;
 
-    @Body
-    @NameInMap("buyer_name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("buyer_name")
     private String buyerName;
 
-    @Body
-    @NameInMap("contact_info")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("contact_info")
+    @com.aliyun.core.annotation.Validation(required = true)
     private ContactInfo contactInfo;
 
-    @Body
-    @NameInMap("isv_name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("isv_name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String isvName;
 
-    @Body
-    @NameInMap("ota_item_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ota_item_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String otaItemId;
 
-    @Body
-    @NameInMap("out_order_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("out_order_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String outOrderId;
 
-    @Body
-    @NameInMap("total_price_cent")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("total_price_cent")
     private Long totalPriceCent;
 
-    @Body
-    @NameInMap("travelers")
-    @Validation(required = true)
-    private java.util.List < Travelers> travelers;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("travelers")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Travelers> travelers;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private FlightCreateOrderV2Request(Builder builder) {
@@ -155,7 +160,7 @@ public class FlightCreateOrderV2Request extends Request {
     /**
      * @return travelers
      */
-    public java.util.List < Travelers> getTravelers() {
+    public java.util.List<Travelers> getTravelers() {
         return this.travelers;
     }
 
@@ -176,7 +181,7 @@ public class FlightCreateOrderV2Request extends Request {
         private String otaItemId; 
         private String outOrderId; 
         private Long totalPriceCent; 
-        private java.util.List < Travelers> travelers; 
+        private java.util.List<Travelers> travelers; 
         private String xAcsBtripCorpToken; 
 
         private Builder() {
@@ -235,7 +240,7 @@ public class FlightCreateOrderV2Request extends Request {
         }
 
         /**
-         * contact_info.
+         * <p>This parameter is required.</p>
          */
         public Builder contactInfo(ContactInfo contactInfo) {
             String contactInfoShrink = shrink(contactInfo, "contact_info", "json");
@@ -245,7 +250,10 @@ public class FlightCreateOrderV2Request extends Request {
         }
 
         /**
-         * isv_name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cheshiapi</p>
          */
         public Builder isvName(String isvName) {
             this.putBodyParameter("isv_name", isvName);
@@ -254,7 +262,10 @@ public class FlightCreateOrderV2Request extends Request {
         }
 
         /**
-         * ota_item_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7fb731deeb4510b86c17e8c8c25740_11</p>
          */
         public Builder otaItemId(String otaItemId) {
             this.putBodyParameter("ota_item_id", otaItemId);
@@ -263,7 +274,7 @@ public class FlightCreateOrderV2Request extends Request {
         }
 
         /**
-         * out_order_id.
+         * <p>This parameter is required.</p>
          */
         public Builder outOrderId(String outOrderId) {
             this.putBodyParameter("out_order_id", outOrderId);
@@ -281,9 +292,9 @@ public class FlightCreateOrderV2Request extends Request {
         }
 
         /**
-         * travelers.
+         * <p>This parameter is required.</p>
          */
-        public Builder travelers(java.util.List < Travelers> travelers) {
+        public Builder travelers(java.util.List<Travelers> travelers) {
             String travelersShrink = shrink(travelers, "travelers", "json");
             this.putBodyParameter("travelers", travelersShrink);
             this.travelers = travelers;
@@ -306,17 +317,23 @@ public class FlightCreateOrderV2Request extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link FlightCreateOrderV2Request} extends {@link TeaModel}
+     *
+     * <p>FlightCreateOrderV2Request</p>
+     */
     public static class ContactInfo extends TeaModel {
-        @NameInMap("contact_email")
+        @com.aliyun.core.annotation.NameInMap("contact_email")
         private String contactEmail;
 
-        @NameInMap("contact_name")
+        @com.aliyun.core.annotation.NameInMap("contact_name")
         private String contactName;
 
-        @NameInMap("contact_phone")
+        @com.aliyun.core.annotation.NameInMap("contact_phone")
         private String contactPhone;
 
-        @NameInMap("send_msg_to_passenger")
+        @com.aliyun.core.annotation.NameInMap("send_msg_to_passenger")
         private Boolean sendMsgToPassenger;
 
         private ContactInfo(Builder builder) {
@@ -407,73 +424,79 @@ public class FlightCreateOrderV2Request extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightCreateOrderV2Request} extends {@link TeaModel}
+     *
+     * <p>FlightCreateOrderV2Request</p>
+     */
     public static class Travelers extends TeaModel {
-        @NameInMap("birthday")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("birthday")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String birthday;
 
-        @NameInMap("cert_nation")
+        @com.aliyun.core.annotation.NameInMap("cert_nation")
         private String certNation;
 
-        @NameInMap("cert_no")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("cert_no")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String certNo;
 
-        @NameInMap("cert_type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("cert_type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer certType;
 
-        @NameInMap("cert_valid_date")
+        @com.aliyun.core.annotation.NameInMap("cert_valid_date")
         private String certValidDate;
 
-        @NameInMap("cost_center_name")
+        @com.aliyun.core.annotation.NameInMap("cost_center_name")
         private String costCenterName;
 
-        @NameInMap("cost_center_number")
+        @com.aliyun.core.annotation.NameInMap("cost_center_number")
         private String costCenterNumber;
 
-        @NameInMap("dept_id")
+        @com.aliyun.core.annotation.NameInMap("dept_id")
         private String deptId;
 
-        @NameInMap("dept_name")
+        @com.aliyun.core.annotation.NameInMap("dept_name")
         private String deptName;
 
-        @NameInMap("gender")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("gender")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer gender;
 
-        @NameInMap("invoice_title")
+        @com.aliyun.core.annotation.NameInMap("invoice_title")
         private String invoiceTitle;
 
-        @NameInMap("nationality")
+        @com.aliyun.core.annotation.NameInMap("nationality")
         private String nationality;
 
-        @NameInMap("nationality_code")
+        @com.aliyun.core.annotation.NameInMap("nationality_code")
         private String nationalityCode;
 
-        @NameInMap("passenger_name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("passenger_name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String passengerName;
 
-        @NameInMap("passenger_type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("passenger_type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer passengerType;
 
-        @NameInMap("phone")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("phone")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String phone;
 
-        @NameInMap("project_code")
+        @com.aliyun.core.annotation.NameInMap("project_code")
         private String projectCode;
 
-        @NameInMap("project_title")
+        @com.aliyun.core.annotation.NameInMap("project_title")
         private String projectTitle;
 
-        @NameInMap("user_id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("user_id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String userId;
 
-        @NameInMap("user_type")
+        @com.aliyun.core.annotation.NameInMap("user_type")
         private Integer userType;
 
         private Travelers(Builder builder) {
@@ -670,7 +693,10 @@ public class FlightCreateOrderV2Request extends Request {
             private Integer userType; 
 
             /**
-             * birthday.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1991-01-22</p>
              */
             public Builder birthday(String birthday) {
                 this.birthday = birthday;
@@ -686,7 +712,7 @@ public class FlightCreateOrderV2Request extends Request {
             }
 
             /**
-             * cert_no.
+             * <p>This parameter is required.</p>
              */
             public Builder certNo(String certNo) {
                 this.certNo = certNo;
@@ -694,7 +720,10 @@ public class FlightCreateOrderV2Request extends Request {
             }
 
             /**
-             * cert_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder certType(Integer certType) {
                 this.certType = certType;
@@ -742,7 +771,7 @@ public class FlightCreateOrderV2Request extends Request {
             }
 
             /**
-             * gender.
+             * <p>This parameter is required.</p>
              */
             public Builder gender(Integer gender) {
                 this.gender = gender;
@@ -774,7 +803,7 @@ public class FlightCreateOrderV2Request extends Request {
             }
 
             /**
-             * passenger_name.
+             * <p>This parameter is required.</p>
              */
             public Builder passengerName(String passengerName) {
                 this.passengerName = passengerName;
@@ -782,7 +811,10 @@ public class FlightCreateOrderV2Request extends Request {
             }
 
             /**
-             * passenger_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder passengerType(Integer passengerType) {
                 this.passengerType = passengerType;
@@ -790,7 +822,7 @@ public class FlightCreateOrderV2Request extends Request {
             }
 
             /**
-             * phone.
+             * <p>This parameter is required.</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -814,7 +846,10 @@ public class FlightCreateOrderV2Request extends Request {
             }
 
             /**
-             * user_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18155711459129970552412</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

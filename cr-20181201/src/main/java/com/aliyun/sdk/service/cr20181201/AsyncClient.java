@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.cr20181201;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.cr20181201.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -30,6 +31,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<CreateArtifactBuildRuleResponse> createArtifactBuildRule(CreateArtifactBuildRuleRequest request);
+
+    CompletableFuture<CreateArtifactLifecycleRuleResponse> createArtifactLifecycleRule(CreateArtifactLifecycleRuleRequest request);
 
     CompletableFuture<CreateBuildRecordByRecordResponse> createBuildRecordByRecord(CreateBuildRecordByRecordRequest request);
 
@@ -68,6 +71,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateRepoTriggerResponse> createRepoTrigger(CreateRepoTriggerRequest request);
 
     CompletableFuture<CreateRepositoryResponse> createRepository(CreateRepositoryRequest request);
+
+    CompletableFuture<DeleteArtifactLifecycleRuleResponse> deleteArtifactLifecycleRule(DeleteArtifactLifecycleRuleRequest request);
 
     CompletableFuture<DeleteChainResponse> deleteChain(DeleteChainRequest request);
 
@@ -110,6 +115,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetArtifactBuildRuleResponse> getArtifactBuildRule(GetArtifactBuildRuleRequest request);
 
     CompletableFuture<GetArtifactBuildTaskResponse> getArtifactBuildTask(GetArtifactBuildTaskRequest request);
+
+    CompletableFuture<GetArtifactLifecycleRuleResponse> getArtifactLifecycleRule(GetArtifactLifecycleRuleRequest request);
 
     /**
       * The ID of the Container Registry instance.
@@ -161,6 +168,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListArtifactBuildTaskLogResponse> listArtifactBuildTaskLog(ListArtifactBuildTaskLogRequest request);
 
+    CompletableFuture<ListArtifactLifecycleRuleResponse> listArtifactLifecycleRule(ListArtifactLifecycleRuleRequest request);
+
     CompletableFuture<ListChainResponse> listChain(ListChainRequest request);
 
     CompletableFuture<ListChainInstanceResponse> listChainInstance(ListChainInstanceRequest request);
@@ -201,6 +210,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListRepositoryResponse> listRepository(ListRepositoryRequest request);
 
+    CompletableFuture<ListScanBaselineByTaskResponse> listScanBaselineByTask(ListScanBaselineByTaskRequest request);
+
+    CompletableFuture<ListScanMaliciousFileByTaskResponse> listScanMaliciousFileByTask(ListScanMaliciousFileByTaskRequest request);
+
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
     CompletableFuture<ResetLoginPasswordResponse> resetLoginPassword(ResetLoginPasswordRequest request);
@@ -208,6 +221,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
 
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
+
+    CompletableFuture<UpdateArtifactLifecycleRuleResponse> updateArtifactLifecycleRule(UpdateArtifactLifecycleRuleRequest request);
 
     CompletableFuture<UpdateChainResponse> updateChain(UpdateChainRequest request);
 

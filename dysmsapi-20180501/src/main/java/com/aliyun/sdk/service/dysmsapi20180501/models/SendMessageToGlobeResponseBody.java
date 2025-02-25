@@ -1,39 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20180501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendMessageToGlobeResponseBody} extends {@link TeaModel}
  *
  * <p>SendMessageToGlobeResponseBody</p>
  */
 public class SendMessageToGlobeResponseBody extends TeaModel {
-    @NameInMap("From")
+    @com.aliyun.core.annotation.NameInMap("From")
     private String from;
 
-    @NameInMap("MessageId")
+    @com.aliyun.core.annotation.NameInMap("MessageId")
     private String messageId;
 
-    @NameInMap("NumberDetail")
+    @com.aliyun.core.annotation.NameInMap("NumberDetail")
     private NumberDetail numberDetail;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResponseCode")
+    @com.aliyun.core.annotation.NameInMap("ResponseCode")
     private String responseCode;
 
-    @NameInMap("ResponseDescription")
+    @com.aliyun.core.annotation.NameInMap("ResponseDescription")
     private String responseDescription;
 
-    @NameInMap("Segments")
+    @com.aliyun.core.annotation.NameInMap("Segments")
     private String segments;
 
-    @NameInMap("To")
+    @com.aliyun.core.annotation.NameInMap("To")
     private String to;
 
     private SendMessageToGlobeResponseBody(Builder builder) {
@@ -122,7 +122,10 @@ public class SendMessageToGlobeResponseBody extends TeaModel {
         private String to; 
 
         /**
-         * The sender ID returned.
+         * <p>The sender ID returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alicloud321</p>
          */
         public Builder from(String from) {
             this.from = from;
@@ -130,7 +133,10 @@ public class SendMessageToGlobeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the message.
+         * <p>The ID of the message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1008030300****</p>
          */
         public Builder messageId(String messageId) {
             this.messageId = messageId;
@@ -138,7 +144,7 @@ public class SendMessageToGlobeResponseBody extends TeaModel {
         }
 
         /**
-         * The details about the mobile phone number of the recipient.
+         * <p>The details about the mobile phone number of the recipient.</p>
          */
         public Builder numberDetail(NumberDetail numberDetail) {
             this.numberDetail = numberDetail;
@@ -146,7 +152,10 @@ public class SendMessageToGlobeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F655A8D5-B967-440B-8683-DAD6FF8DE990</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +163,10 @@ public class SendMessageToGlobeResponseBody extends TeaModel {
         }
 
         /**
-         * The status code of the delivery request.
+         * <p>The status code of the delivery request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder responseCode(String responseCode) {
             this.responseCode = responseCode;
@@ -162,7 +174,10 @@ public class SendMessageToGlobeResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the delivery request status.
+         * <p>The description of the delivery request status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The SMS Send Request was accepted</p>
          */
         public Builder responseDescription(String responseDescription) {
             this.responseDescription = responseDescription;
@@ -170,7 +185,10 @@ public class SendMessageToGlobeResponseBody extends TeaModel {
         }
 
         /**
-         * The number of messages that incurred fees.
+         * <p>The number of messages that incurred fees.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder segments(String segments) {
             this.segments = segments;
@@ -178,7 +196,10 @@ public class SendMessageToGlobeResponseBody extends TeaModel {
         }
 
         /**
-         * The mobile phone number to which the message was sent.
+         * <p>The mobile phone number to which the message was sent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1380000****</p>
          */
         public Builder to(String to) {
             this.to = to;
@@ -191,14 +212,20 @@ public class SendMessageToGlobeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SendMessageToGlobeResponseBody} extends {@link TeaModel}
+     *
+     * <p>SendMessageToGlobeResponseBody</p>
+     */
     public static class NumberDetail extends TeaModel {
-        @NameInMap("Carrier")
+        @com.aliyun.core.annotation.NameInMap("Carrier")
         private String carrier;
 
-        @NameInMap("Country")
+        @com.aliyun.core.annotation.NameInMap("Country")
         private String country;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
         private NumberDetail(Builder builder) {
@@ -242,7 +269,10 @@ public class SendMessageToGlobeResponseBody extends TeaModel {
             private String region; 
 
             /**
-             * The carrier that owns the mobile phone number.
+             * <p>The carrier that owns the mobile phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CMI</p>
              */
             public Builder carrier(String carrier) {
                 this.carrier = carrier;
@@ -250,7 +280,10 @@ public class SendMessageToGlobeResponseBody extends TeaModel {
             }
 
             /**
-             * The country to which the mobile phone number belongs.
+             * <p>The country to which the mobile phone number belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China</p>
              */
             public Builder country(String country) {
                 this.country = country;
@@ -258,7 +291,10 @@ public class SendMessageToGlobeResponseBody extends TeaModel {
             }
 
             /**
-             * The region to which the mobile phone number belongs.
+             * <p>The region to which the mobile phone number belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HongKong</p>
              */
             public Builder region(String region) {
                 this.region = region;

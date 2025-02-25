@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteGroupMemberRequest} extends {@link RequestModel}
  *
  * <p>DeleteGroupMemberRequest</p>
  */
 public class DeleteGroupMemberRequest extends Request {
-    @Path
-    @NameInMap("groupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("groupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long groupId;
 
-    @Query
-    @NameInMap("accessToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("accessToken")
     private String accessToken;
 
-    @Query
-    @NameInMap("aliyunPk")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("aliyunPk")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aliyunPk;
 
-    @Body
-    @NameInMap("memberType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("memberType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String memberType;
 
-    @Query
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
     private DeleteGroupMemberRequest(Builder builder) {
@@ -114,7 +119,10 @@ public class DeleteGroupMemberRequest extends Request {
         } 
 
         /**
-         * groupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34410</p>
          */
         public Builder groupId(Long groupId) {
             this.putPathParameter("groupId", groupId);
@@ -132,7 +140,10 @@ public class DeleteGroupMemberRequest extends Request {
         }
 
         /**
-         * aliyunPk.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1789095186553536</p>
          */
         public Builder aliyunPk(String aliyunPk) {
             this.putQueryParameter("aliyunPk", aliyunPk);
@@ -141,7 +152,10 @@ public class DeleteGroupMemberRequest extends Request {
         }
 
         /**
-         * memberType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>USERS</p>
          */
         public Builder memberType(String memberType) {
             this.putBodyParameter("memberType", memberType);
@@ -150,7 +164,10 @@ public class DeleteGroupMemberRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6082a9b0c7972588ac363793</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);

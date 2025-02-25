@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSnapshotJobsResponseBody} extends {@link TeaModel}
  *
  * <p>ListSnapshotJobsResponseBody</p>
  */
 public class ListSnapshotJobsResponseBody extends TeaModel {
-    @NameInMap("Jobs")
-    private java.util.List < Jobs> jobs;
+    @com.aliyun.core.annotation.NameInMap("Jobs")
+    private java.util.List<Jobs> jobs;
 
-    @NameInMap("NextPageToken")
+    @com.aliyun.core.annotation.NameInMap("NextPageToken")
     private String nextPageToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListSnapshotJobsResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
     /**
      * @return jobs
      */
-    public java.util.List < Jobs> getJobs() {
+    public java.util.List<Jobs> getJobs() {
         return this.jobs;
     }
 
@@ -57,20 +62,23 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Jobs> jobs; 
+        private java.util.List<Jobs> jobs; 
         private String nextPageToken; 
         private String requestId; 
 
         /**
-         * Jobs.
+         * <p>The list of jobs.</p>
          */
-        public Builder jobs(java.util.List < Jobs> jobs) {
+        public Builder jobs(java.util.List<Jobs> jobs) {
             this.jobs = jobs;
             return this;
         }
 
         /**
-         * NextPageToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.nextPageToken = nextPageToken;
@@ -78,7 +86,10 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,11 +102,17 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSnapshotJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSnapshotJobsResponseBody</p>
+     */
     public static class Input extends TeaModel {
-        @NameInMap("Media")
+        @com.aliyun.core.annotation.NameInMap("Media")
         private String media;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Input(Builder builder) {
@@ -130,7 +147,10 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Media.
+             * <p>The input file. If Type is set to OSS, the URL of an OSS object is returned. If Type is set to Media, the ID of a media asset is returned. The URL of an OSS object can be in one of the following formats: 1. OSS://bucket/object 2. http(s)://bucket.oss-[RegionId].aliyuncs.com/object In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket/object.mp4</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -138,7 +158,14 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the input file. Valid values:</p>
+             * <ol>
+             * <li>OSS: an Object Storage Service (OSS) object.</li>
+             * <li>Media: a media asset.</li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -152,11 +179,17 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSnapshotJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSnapshotJobsResponseBody</p>
+     */
     public static class Output extends TeaModel {
-        @NameInMap("Media")
+        @com.aliyun.core.annotation.NameInMap("Media")
         private String media;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Output(Builder builder) {
@@ -191,7 +224,15 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Media.
+             * <p>The output file. If Type is set to OSS, the URL of an OSS object is returned. If Type is set to Media, the ID of a media asset is returned. The URL of an OSS object can be in one of the following formats:</p>
+             * <ol>
+             * <li>OSS://bucket/object</li>
+             * <li>http(s)://bucket.oss-[RegionId].aliyuncs.com/object</li>
+             * </ol>
+             * <p>In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS. If multiple static snapshots were captured, the object must contain the &quot;{Count}&quot; placeholder. In the case of a sprite, the object must contain the &quot;{TileCount}&quot; placeholder. The suffix of the WebVTT snapshot objects must be &quot;.vtt&quot;.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://test-bucket.oss-cn-shanghai.aliyuncs.com/output-%7BCount%7D.jpg">http://test-bucket.oss-cn-shanghai.aliyuncs.com/output-{Count}.jpg</a></p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -199,7 +240,14 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the output file. Valid values:</p>
+             * <ol>
+             * <li>OSS: an OSS object.</li>
+             * <li>Media: a media asset.</li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -213,50 +261,56 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSnapshotJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSnapshotJobsResponseBody</p>
+     */
     public static class Jobs extends TeaModel {
-        @NameInMap("Async")
+        @com.aliyun.core.annotation.NameInMap("Async")
         private Boolean async;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("Input")
+        @com.aliyun.core.annotation.NameInMap("Input")
         private Input input;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Output")
+        @com.aliyun.core.annotation.NameInMap("Output")
         private Output output;
 
-        @NameInMap("PipelineId")
+        @com.aliyun.core.annotation.NameInMap("PipelineId")
         private String pipelineId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SubmitTime")
+        @com.aliyun.core.annotation.NameInMap("SubmitTime")
         private String submitTime;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("TriggerSource")
+        @com.aliyun.core.annotation.NameInMap("TriggerSource")
         private String triggerSource;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Jobs(Builder builder) {
@@ -408,7 +462,10 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Async.
+             * <p>Indicates whether the snapshots were captured in asynchronous mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder async(Boolean async) {
                 this.async = async;
@@ -416,7 +473,10 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * <p>The number of snapshots.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -424,7 +484,10 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the job was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-12T16:17:54Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -432,7 +495,10 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * <p>The time when the job was complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-12T16:30:54Z</p>
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -440,7 +506,7 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Input.
+             * <p>The input of the job.</p>
              */
             public Builder input(Input input) {
                 this.input = input;
@@ -448,7 +514,10 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -456,7 +525,10 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The time when the job was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-12T16:30:54Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -464,7 +536,10 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SampleJob</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -472,7 +547,7 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Output.
+             * <p>The output of the job.</p>
              */
             public Builder output(Output output) {
                 this.output = output;
@@ -480,7 +555,10 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * PipelineId.
+             * <p>The ID of the MPS queue to which the job was submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;
@@ -488,7 +566,15 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The state of the job.</p>
+             * <ul>
+             * <li><strong>Success</strong>: The job is successful.</li>
+             * <li><strong>Fail</strong>: The job failed.</li>
+             * <li><strong>Init</strong>: The job is submitted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -496,7 +582,10 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SubmitTime.
+             * <p>The time when the job was submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-12T16:17:54Z</p>
              */
             public Builder submitTime(String submitTime) {
                 this.submitTime = submitTime;
@@ -504,7 +593,10 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -512,7 +604,16 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerSource.
+             * <p>The request trigger source.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Console</li>
+             * <li>Workflow</li>
+             * <li>API</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>API</p>
              */
             public Builder triggerSource(String triggerSource) {
                 this.triggerSource = triggerSource;
@@ -520,7 +621,16 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the job.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>WebVtt</li>
+             * <li>Sprite</li>
+             * <li>Normal</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Sprite</p>
              */
             public Builder type(String type) {
                 this.type = type;

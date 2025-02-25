@@ -1,101 +1,114 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceHistoryEventsRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceHistoryEventsRequest</p>
  */
 public class DescribeInstanceHistoryEventsRequest extends Request {
-    @Query
-    @NameInMap("EventPublishTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventPublishTime")
     private EventPublishTime eventPublishTime;
 
-    @Query
-    @NameInMap("NotBefore")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NotBefore")
     private NotBefore notBefore;
 
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("EventCycleStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventCycleStatus")
     private String eventCycleStatus;
 
-    @Query
-    @NameInMap("EventId")
-    private java.util.List < String > eventId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventId")
+    private java.util.List<String> eventId;
 
-    @Query
-    @NameInMap("EventType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventType")
     private String eventType;
 
-    @Query
-    @NameInMap("ImpactLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImpactLevel")
     private String impactLevel;
 
-    @Query
-    @NameInMap("InstanceEventCycleStatus")
-    private java.util.List < String > instanceEventCycleStatus;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceEventCycleStatus")
+    private java.util.List<String> instanceEventCycleStatus;
 
-    @Query
-    @NameInMap("InstanceEventType")
-    private java.util.List < String > instanceEventType;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceEventType")
+    private java.util.List<String> instanceEventType;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    private Long maxResults;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceId")
-    private java.util.List < String > resourceId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    private java.util.List<String> resourceId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private DescribeInstanceHistoryEventsRequest(Builder builder) {
         super(builder);
@@ -109,6 +122,8 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         this.instanceEventCycleStatus = builder.instanceEventCycleStatus;
         this.instanceEventType = builder.instanceEventType;
         this.instanceId = builder.instanceId;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
@@ -166,7 +181,7 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
     /**
      * @return eventId
      */
-    public java.util.List < String > getEventId() {
+    public java.util.List<String> getEventId() {
         return this.eventId;
     }
 
@@ -187,14 +202,14 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
     /**
      * @return instanceEventCycleStatus
      */
-    public java.util.List < String > getInstanceEventCycleStatus() {
+    public java.util.List<String> getInstanceEventCycleStatus() {
         return this.instanceEventCycleStatus;
     }
 
     /**
      * @return instanceEventType
      */
-    public java.util.List < String > getInstanceEventType() {
+    public java.util.List<String> getInstanceEventType() {
         return this.instanceEventType;
     }
 
@@ -203,6 +218,20 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return maxResults
+     */
+    public Long getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -250,7 +279,7 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
     /**
      * @return resourceId
      */
-    public java.util.List < String > getResourceId() {
+    public java.util.List<String> getResourceId() {
         return this.resourceId;
     }
 
@@ -278,7 +307,7 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -287,23 +316,25 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         private NotBefore notBefore; 
         private String sourceRegionId; 
         private String eventCycleStatus; 
-        private java.util.List < String > eventId; 
+        private java.util.List<String> eventId; 
         private String eventType; 
         private String impactLevel; 
-        private java.util.List < String > instanceEventCycleStatus; 
-        private java.util.List < String > instanceEventType; 
+        private java.util.List<String> instanceEventCycleStatus; 
+        private java.util.List<String> instanceEventType; 
         private String instanceId; 
+        private Long maxResults; 
+        private String nextToken; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
         private String resourceGroupId; 
-        private java.util.List < String > resourceId; 
+        private java.util.List<String> resourceId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String resourceType; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -321,6 +352,8 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
             this.instanceEventCycleStatus = request.instanceEventCycleStatus;
             this.instanceEventType = request.instanceEventType;
             this.instanceId = request.instanceId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
@@ -362,16 +395,19 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * The lifecycle state of the system event. This parameter takes effect only when InstanceEventCycleStatus.N is not specified. Valid values:
-         * <p>
+         * <p>The lifecycle state of the system event. This parameter takes effect only when InstanceEventCycleStatus.N is not specified. Valid values:</p>
+         * <ul>
+         * <li>Scheduled</li>
+         * <li>Avoided</li>
+         * <li>Executing</li>
+         * <li>Executed</li>
+         * <li>Canceled</li>
+         * <li>Failed</li>
+         * <li>Inquiring</li>
+         * </ul>
          * 
-         * *   Scheduled
-         * *   Avoided
-         * *   Executing
-         * *   Executed
-         * *   Canceled
-         * *   Failed
-         * *   Inquiring
+         * <strong>example:</strong>
+         * <p>Executed</p>
          */
         public Builder eventCycleStatus(String eventCycleStatus) {
             this.putQueryParameter("EventCycleStatus", eventCycleStatus);
@@ -380,30 +416,37 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * The ID of system event N. Valid values of N: 1 to 100. You can repeat this parameter to pass multiple values.
+         * <p>The ID of system event N. Valid values of N: 1 to 100. You can repeat this parameter to pass multiple values.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e-uf64yvznlao4jl2c****</p>
          */
-        public Builder eventId(java.util.List < String > eventId) {
+        public Builder eventId(java.util.List<String> eventId) {
             this.putQueryParameter("EventId", eventId);
             this.eventId = eventId;
             return this;
         }
 
         /**
-         * The type of the system event. This parameter takes effect only when InstanceEventType.N is not specified. Valid values:
-         * <p>
+         * <p>The type of the system event. This parameter takes effect only when InstanceEventType.N is not specified. Valid values:</p>
+         * <ul>
+         * <li>SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</li>
+         * <li>SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.</li>
+         * <li>SystemFailure.Reboot: The instance is restarted due to a system error.</li>
+         * <li>SystemFailure.Redeploy: The instance is redeployed due to a system error.</li>
+         * <li>SystemFailure.Delete: The instance is released due to an instance creation failure.</li>
+         * <li>InstanceFailure.Reboot: The instance is restarted due to an instance error.</li>
+         * <li>InstanceExpiration.Stop: The subscription instance is stopped due to expiration.</li>
+         * <li>InstanceExpiration.Delete: The subscription instance is released due to expiration.</li>
+         * <li>AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.</li>
+         * <li>AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.</li>
+         * </ul>
+         * <blockquote>
+         * <p> For more information, see <a href="https://help.aliyun.com/document_detail/66574.html">Overview</a>. The values of this parameter are applicable only to instance system events, but not to disk system events.</p>
+         * </blockquote>
          * 
-         * *   SystemMaintenance.Reboot: The instance is restarted due to system maintenance.
-         * *   SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.
-         * *   SystemFailure.Reboot: The instance is restarted due to a system error.
-         * *   SystemFailure.Redeploy: The instance is redeployed due to a system error.
-         * *   SystemFailure.Delete: The instance is released due to an instance creation failure.
-         * *   InstanceFailure.Reboot: The instance is restarted due to an instance error.
-         * *   InstanceExpiration.Stop: The subscription instance is stopped due to expiration.
-         * *   InstanceExpiration.Delete: The subscription instance is released due to expiration.
-         * *   AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.
-         * *   AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.
-         * 
-         * >  For more information, see [Overview](~~66574~~). The values of this parameter are applicable only to instance system events, but not to disk system events.
+         * <strong>example:</strong>
+         * <p>SystemMaintenance.Reboot</p>
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -412,7 +455,12 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * >  This parameter is not publicly available.
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder impactLevel(String impactLevel) {
             this.putQueryParameter("ImpactLevel", impactLevel);
@@ -421,52 +469,80 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * The lifecycle state of system event N. Valid values of N: 1 to 7. You can repeat this parameter to pass multiple values. Valid values:
-         * <p>
+         * <p>The lifecycle state of system event N. Valid values of N: 1 to 7. You can repeat this parameter to pass multiple values. Valid values:</p>
+         * <ul>
+         * <li>Scheduled</li>
+         * <li>Avoided</li>
+         * <li>Executing</li>
+         * <li>Executed</li>
+         * <li>Canceled</li>
+         * <li>Failed</li>
+         * <li>Inquiring</li>
+         * </ul>
          * 
-         * *   Scheduled
-         * *   Avoided
-         * *   Executing
-         * *   Executed
-         * *   Canceled
-         * *   Failed
-         * *   Inquiring
+         * <strong>example:</strong>
+         * <p>Executed</p>
          */
-        public Builder instanceEventCycleStatus(java.util.List < String > instanceEventCycleStatus) {
+        public Builder instanceEventCycleStatus(java.util.List<String> instanceEventCycleStatus) {
             this.putQueryParameter("InstanceEventCycleStatus", instanceEventCycleStatus);
             this.instanceEventCycleStatus = instanceEventCycleStatus;
             return this;
         }
 
         /**
-         * The type of system event N. Valid values of N: 1 to 30. You can repeat this parameter to pass multiple values. Valid values:
-         * <p>
+         * <p>The type of system event N. Valid values of N: 1 to 30. You can repeat this parameter to pass multiple values. Valid values:</p>
+         * <ul>
+         * <li>SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</li>
+         * <li>SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.</li>
+         * <li>SystemFailure.Reboot: The instance is restarted due to a system error.</li>
+         * <li>SystemFailure.Redeploy: The instance is redeployed due to a system error.</li>
+         * <li>SystemFailure.Delete: The instance is released due to an instance creation failure.</li>
+         * <li>InstanceFailure.Reboot: The instance is restarted due to an instance error.</li>
+         * <li>InstanceExpiration.Stop: The subscription instance is stopped due to expiration.</li>
+         * <li>InstanceExpiration.Delete: The subscription instance is released due to expiration.</li>
+         * <li>AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.</li>
+         * <li>AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.</li>
+         * </ul>
+         * <blockquote>
+         * <p> For more information, see <a href="https://help.aliyun.com/document_detail/66574.html">Overview</a>. The values of this parameter are applicable only to instance system events, but not to disk system events.</p>
+         * </blockquote>
          * 
-         * *   SystemMaintenance.Reboot: The instance is restarted due to system maintenance.
-         * *   SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.
-         * *   SystemFailure.Reboot: The instance is restarted due to a system error.
-         * *   SystemFailure.Redeploy: The instance is redeployed due to a system error.
-         * *   SystemFailure.Delete: The instance is released due to an instance creation failure.
-         * *   InstanceFailure.Reboot: The instance is restarted due to an instance error.
-         * *   InstanceExpiration.Stop: The subscription instance is stopped due to expiration.
-         * *   InstanceExpiration.Delete: The subscription instance is released due to expiration.
-         * *   AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.
-         * *   AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.
-         * 
-         * >  For more information, see [Overview](~~66574~~). The values of this parameter are applicable only to instance system events, but not to disk system events.
+         * <strong>example:</strong>
+         * <p>SystemMaintenance.Reboot</p>
          */
-        public Builder instanceEventType(java.util.List < String > instanceEventType) {
+        public Builder instanceEventType(java.util.List<String> instanceEventType) {
             this.putQueryParameter("InstanceEventType", instanceEventType);
             this.instanceEventType = instanceEventType;
             return this;
         }
 
         /**
-         * The ID of the instance. If this parameter is not specified, the system events of all instances in the specified region are queried.
+         * <p>The ID of the instance. If this parameter is not specified, the system events of all instances in the specified region are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-uf678mass4zvr9n1****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * MaxResults.
+         */
+        public Builder maxResults(Long maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 
@@ -489,10 +565,11 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1.
-         * <p>
+         * <p>The page number. Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -501,10 +578,11 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 100.
-         * <p>
+         * <p>The number of entries per page. Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -513,7 +591,11 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * The region ID of the resource. You can call [DescribeRegions](~~25609~~) to query the most recent region list.
+         * <p>The region ID of the resource. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -522,7 +604,10 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the resource belongs.
+         * <p>The ID of the resource group to which the resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -531,18 +616,21 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * The ID of resource N. Valid values of N: 1 to 100. You can repeat this parameter to pass multiple values. Valid values:
-         * <p>
+         * <p>The ID of resource N. Valid values of N: 1 to 100. You can repeat this parameter to pass multiple values. Valid values:</p>
+         * <ul>
+         * <li>When <code>ResourceType</code> is set to instance, ResourceId.N specifies the ID of instance N.</li>
+         * <li>When <code>ResourceType</code> is set to ddh, ResourceId.N specifies the ID of dedicated host N.</li>
+         * <li>When <code>ResourceType</code> is set to managedhost, ResourceId.N specifies the ID of physical machine N from a smart hosting pool.</li>
+         * </ul>
+         * <p>If this parameter is not specified, the system events of all resources of the type specified by <code>ResourceType</code> in the region specified by <code>RegionId</code> are queried.</p>
+         * <blockquote>
+         * <p> We recommend that you use <code>ResourceId.N</code> to specify one or more resource IDs. If you specify both <code>ResourceId.N</code> and <code>InstanceId</code>, <code>ResourceId.N</code> takes precedence by default.</p>
+         * </blockquote>
          * 
-         * *   When `ResourceType` is set to instance, ResourceId.N specifies the ID of instance N.
-         * *   When `ResourceType` is set to ddh, ResourceId.N specifies the ID of dedicated host N.
-         * *   When `ResourceType` is set to managedhost, ResourceId.N specifies the ID of physical machine N from a smart hosting pool.
-         * 
-         * If this parameter is not specified, the system events of all resources of the type specified by `ResourceType` in the region specified by `RegionId` are queried.
-         * 
-         * >  We recommend that you use `ResourceId.N` to specify one or more resource IDs. If you specify both `ResourceId.N` and `InstanceId`, `ResourceId.N` takes precedence by default.
+         * <strong>example:</strong>
+         * <p>i-uf678mass4zvr9n1****</p>
          */
-        public Builder resourceId(java.util.List < String > resourceId) {
+        public Builder resourceId(java.util.List<String> resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
             this.resourceId = resourceId;
             return this;
@@ -567,14 +655,16 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * The type of the resource. Valid values:
-         * <p>
+         * <p>The type of the resource. Valid values:</p>
+         * <ul>
+         * <li>instance: ECS instance</li>
+         * <li>ddh: dedicated host</li>
+         * <li>managehost: physical machine in a smart hosting pool</li>
+         * </ul>
+         * <p>Default value: instance.</p>
          * 
-         * *   instance: ECS instance
-         * *   ddh: dedicated host
-         * *   managehost: physical machine in a smart hosting pool
-         * 
-         * Default value: instance.
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -583,9 +673,9 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * <p>The list of tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -598,11 +688,17 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceHistoryEventsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceHistoryEventsRequest</p>
+     */
     public static class EventPublishTime extends TeaModel {
-        @NameInMap("End")
+        @com.aliyun.core.annotation.NameInMap("End")
         private String end;
 
-        @NameInMap("Start")
+        @com.aliyun.core.annotation.NameInMap("Start")
         private String start;
 
         private EventPublishTime(Builder builder) {
@@ -637,7 +733,10 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
             private String start; 
 
             /**
-             * The end of the time range in which to query published system events. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+             * <p>The end of the time range in which to query published system events. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-01T06:32:31Z</p>
              */
             public Builder end(String end) {
                 this.end = end;
@@ -645,7 +744,10 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
             }
 
             /**
-             * The beginning of the time range in which to query published system events. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+             * <p>The beginning of the time range in which to query published system events. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-11-30T06:32:31Z</p>
              */
             public Builder start(String start) {
                 this.start = start;
@@ -659,11 +761,17 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceHistoryEventsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceHistoryEventsRequest</p>
+     */
     public static class NotBefore extends TeaModel {
-        @NameInMap("End")
+        @com.aliyun.core.annotation.NameInMap("End")
         private String end;
 
-        @NameInMap("Start")
+        @com.aliyun.core.annotation.NameInMap("Start")
         private String start;
 
         private NotBefore(Builder builder) {
@@ -698,7 +806,10 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
             private String start; 
 
             /**
-             * The latest scheduled end time for the system event. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+             * <p>The latest scheduled end time for the system event. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-01T06:32:31Z</p>
              */
             public Builder end(String end) {
                 this.end = end;
@@ -706,7 +817,10 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
             }
 
             /**
-             * The earliest scheduled start time for the system event. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+             * <p>The earliest scheduled start time for the system event. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-11-30T06:32:31Z</p>
              */
             public Builder start(String start) {
                 this.start = start;
@@ -720,11 +834,17 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceHistoryEventsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceHistoryEventsRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -759,7 +879,10 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the resource.
+             * <p>The key of tag N of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -767,7 +890,10 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
             }
 
             /**
-             * The value of tag N of the resource.
+             * <p>The value of tag N of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

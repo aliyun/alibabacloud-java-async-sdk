@@ -1,78 +1,90 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.market20151101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceResponseBody</p>
  */
 public class DescribeInstanceResponseBody extends TeaModel {
-    @NameInMap("AppJson")
+    @com.aliyun.core.annotation.NameInMap("ActiveAddress")
+    private String activeAddress;
+
+    @com.aliyun.core.annotation.NameInMap("AppJson")
     private String appJson;
 
-    @NameInMap("AutoRenewal")
+    @com.aliyun.core.annotation.NameInMap("AutoRenewal")
     private String autoRenewal;
 
-    @NameInMap("BeganOn")
+    @com.aliyun.core.annotation.NameInMap("BeganOn")
     private Long beganOn;
 
-    @NameInMap("ComponentJson")
+    @com.aliyun.core.annotation.NameInMap("ComponentJson")
     private String componentJson;
 
-    @NameInMap("Constraints")
+    @com.aliyun.core.annotation.NameInMap("Constraints")
     private String constraints;
 
-    @NameInMap("CreatedOn")
+    @com.aliyun.core.annotation.NameInMap("CreatedOn")
     private Long createdOn;
 
-    @NameInMap("EndOn")
+    @com.aliyun.core.annotation.NameInMap("EndOn")
     private Long endOn;
 
-    @NameInMap("ExtendJson")
+    @com.aliyun.core.annotation.NameInMap("ExtendJson")
     private String extendJson;
 
-    @NameInMap("HostJson")
+    @com.aliyun.core.annotation.NameInMap("HostJson")
     private String hostJson;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private Long instanceId;
 
-    @NameInMap("IsTrial")
+    @com.aliyun.core.annotation.NameInMap("IsTrial")
     private Boolean isTrial;
 
-    @NameInMap("Modules")
+    @com.aliyun.core.annotation.NameInMap("LicenseCode")
+    private String licenseCode;
+
+    @com.aliyun.core.annotation.NameInMap("Modules")
     private Modules modules;
 
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private Long orderId;
 
-    @NameInMap("ProductCode")
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
 
-    @NameInMap("ProductName")
+    @com.aliyun.core.annotation.NameInMap("ProductName")
     private String productName;
 
-    @NameInMap("ProductSkuCode")
+    @com.aliyun.core.annotation.NameInMap("ProductSkuCode")
     private String productSkuCode;
 
-    @NameInMap("ProductType")
+    @com.aliyun.core.annotation.NameInMap("ProductType")
     private String productType;
 
-    @NameInMap("RelationalData")
+    @com.aliyun.core.annotation.NameInMap("RelationalData")
     private RelationalData relationalData;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("SupplierName")
+    @com.aliyun.core.annotation.NameInMap("SupplierName")
     private String supplierName;
 
     private DescribeInstanceResponseBody(Builder builder) {
+        this.activeAddress = builder.activeAddress;
         this.appJson = builder.appJson;
         this.autoRenewal = builder.autoRenewal;
         this.beganOn = builder.beganOn;
@@ -84,6 +96,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         this.hostJson = builder.hostJson;
         this.instanceId = builder.instanceId;
         this.isTrial = builder.isTrial;
+        this.licenseCode = builder.licenseCode;
         this.modules = builder.modules;
         this.orderId = builder.orderId;
         this.productCode = builder.productCode;
@@ -101,6 +114,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     public static DescribeInstanceResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return activeAddress
+     */
+    public String getActiveAddress() {
+        return this.activeAddress;
     }
 
     /**
@@ -181,6 +201,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return licenseCode
+     */
+    public String getLicenseCode() {
+        return this.licenseCode;
+    }
+
+    /**
      * @return modules
      */
     public Modules getModules() {
@@ -244,6 +271,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String activeAddress; 
         private String appJson; 
         private String autoRenewal; 
         private Long beganOn; 
@@ -255,6 +283,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private String hostJson; 
         private Long instanceId; 
         private Boolean isTrial; 
+        private String licenseCode; 
         private Modules modules; 
         private Long orderId; 
         private String productCode; 
@@ -264,6 +293,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private RelationalData relationalData; 
         private String status; 
         private String supplierName; 
+
+        /**
+         * ActiveAddress.
+         */
+        public Builder activeAddress(String activeAddress) {
+            this.activeAddress = activeAddress;
+            return this;
+        }
 
         /**
          * AppJson.
@@ -354,6 +391,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * LicenseCode.
+         */
+        public Builder licenseCode(String licenseCode) {
+            this.licenseCode = licenseCode;
+            return this;
+        }
+
+        /**
          * Modules.
          */
         public Builder modules(Modules modules) {
@@ -431,26 +476,32 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class PropertyValue extends TeaModel {
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("Max")
+        @com.aliyun.core.annotation.NameInMap("Max")
         private String max;
 
-        @NameInMap("Min")
+        @com.aliyun.core.annotation.NameInMap("Min")
         private String min;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("Step")
+        @com.aliyun.core.annotation.NameInMap("Step")
         private String step;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private PropertyValue(Builder builder) {
@@ -592,9 +643,15 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class PropertyValues extends TeaModel {
-        @NameInMap("PropertyValue")
-        private java.util.List < PropertyValue> propertyValue;
+        @com.aliyun.core.annotation.NameInMap("PropertyValue")
+        private java.util.List<PropertyValue> propertyValue;
 
         private PropertyValues(Builder builder) {
             this.propertyValue = builder.propertyValue;
@@ -611,17 +668,17 @@ public class DescribeInstanceResponseBody extends TeaModel {
         /**
          * @return propertyValue
          */
-        public java.util.List < PropertyValue> getPropertyValue() {
+        public java.util.List<PropertyValue> getPropertyValue() {
             return this.propertyValue;
         }
 
         public static final class Builder {
-            private java.util.List < PropertyValue> propertyValue; 
+            private java.util.List<PropertyValue> propertyValue; 
 
             /**
              * PropertyValue.
              */
-            public Builder propertyValue(java.util.List < PropertyValue> propertyValue) {
+            public Builder propertyValue(java.util.List<PropertyValue> propertyValue) {
                 this.propertyValue = propertyValue;
                 return this;
             }
@@ -633,20 +690,26 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class Property extends TeaModel {
-        @NameInMap("DisplayUnit")
+        @com.aliyun.core.annotation.NameInMap("DisplayUnit")
         private String displayUnit;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PropertyValues")
+        @com.aliyun.core.annotation.NameInMap("PropertyValues")
         private PropertyValues propertyValues;
 
-        @NameInMap("ShowType")
+        @com.aliyun.core.annotation.NameInMap("ShowType")
         private String showType;
 
         private Property(Builder builder) {
@@ -754,9 +817,15 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class Properties extends TeaModel {
-        @NameInMap("Property")
-        private java.util.List < Property> property;
+        @com.aliyun.core.annotation.NameInMap("Property")
+        private java.util.List<Property> property;
 
         private Properties(Builder builder) {
             this.property = builder.property;
@@ -773,17 +842,17 @@ public class DescribeInstanceResponseBody extends TeaModel {
         /**
          * @return property
          */
-        public java.util.List < Property> getProperty() {
+        public java.util.List<Property> getProperty() {
             return this.property;
         }
 
         public static final class Builder {
-            private java.util.List < Property> property; 
+            private java.util.List<Property> property; 
 
             /**
              * Property.
              */
-            public Builder property(java.util.List < Property> property) {
+            public Builder property(java.util.List<Property> property) {
                 this.property = property;
                 return this;
             }
@@ -795,17 +864,23 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class Module extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Properties")
+        @com.aliyun.core.annotation.NameInMap("Properties")
         private Properties properties;
 
         private Module(Builder builder) {
@@ -896,9 +971,15 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class Modules extends TeaModel {
-        @NameInMap("Module")
-        private java.util.List < Module> module;
+        @com.aliyun.core.annotation.NameInMap("Module")
+        private java.util.List<Module> module;
 
         private Modules(Builder builder) {
             this.module = builder.module;
@@ -915,17 +996,17 @@ public class DescribeInstanceResponseBody extends TeaModel {
         /**
          * @return module
          */
-        public java.util.List < Module> getModule() {
+        public java.util.List<Module> getModule() {
             return this.module;
         }
 
         public static final class Builder {
-            private java.util.List < Module> module; 
+            private java.util.List<Module> module; 
 
             /**
              * Module.
              */
-            public Builder module(java.util.List < Module> module) {
+            public Builder module(java.util.List<Module> module) {
                 this.module = module;
                 return this;
             }
@@ -937,8 +1018,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class RelationalData extends TeaModel {
-        @NameInMap("ServiceStatus")
+        @com.aliyun.core.annotation.NameInMap("ServiceStatus")
         private String serviceStatus;
 
         private RelationalData(Builder builder) {

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListApplicationsForOrganizationalUnitResponseBody} extends {@link TeaModel}
  *
  * <p>ListApplicationsForOrganizationalUnitResponseBody</p>
  */
 public class ListApplicationsForOrganizationalUnitResponseBody extends TeaModel {
-    @NameInMap("Applications")
-    private java.util.List < Applications> applications;
+    @com.aliyun.core.annotation.NameInMap("Applications")
+    private java.util.List<Applications> applications;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListApplicationsForOrganizationalUnitResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ListApplicationsForOrganizationalUnitResponseBody extends TeaModel 
     /**
      * @return applications
      */
-    public java.util.List < Applications> getApplications() {
+    public java.util.List<Applications> getApplications() {
         return this.applications;
     }
 
@@ -57,20 +62,23 @@ public class ListApplicationsForOrganizationalUnitResponseBody extends TeaModel 
     }
 
     public static final class Builder {
-        private java.util.List < Applications> applications; 
+        private java.util.List<Applications> applications; 
         private String requestId; 
         private Long totalCount; 
 
         /**
-         * The applications that the EIAM organization can access.
+         * <p>The applications that the EIAM organization can access.</p>
          */
-        public Builder applications(java.util.List < Applications> applications) {
+        public Builder applications(java.util.List<Applications> applications) {
             this.applications = applications;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class ListApplicationsForOrganizationalUnitResponseBody extends TeaModel 
         }
 
         /**
-         * The total number of the returned entries.
+         * <p>The total number of the returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -91,8 +102,14 @@ public class ListApplicationsForOrganizationalUnitResponseBody extends TeaModel 
 
     } 
 
+    /**
+     * 
+     * {@link ListApplicationsForOrganizationalUnitResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationsForOrganizationalUnitResponseBody</p>
+     */
     public static class Applications extends TeaModel {
-        @NameInMap("ApplicationId")
+        @com.aliyun.core.annotation.NameInMap("ApplicationId")
         private String applicationId;
 
         private Applications(Builder builder) {
@@ -118,7 +135,10 @@ public class ListApplicationsForOrganizationalUnitResponseBody extends TeaModel 
             private String applicationId; 
 
             /**
-             * The ID of the application that the EIAM organization can access.
+             * <p>The ID of the application that the EIAM organization can access.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;

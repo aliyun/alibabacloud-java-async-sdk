@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMemberResponseBody} extends {@link TeaModel}
  *
  * <p>CreateMemberResponseBody</p>
  */
 public class CreateMemberResponseBody extends TeaModel {
-    @NameInMap("Members")
+    @com.aliyun.core.annotation.NameInMap("Members")
     private java.util.List < Members> members;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateMemberResponseBody(Builder builder) {
@@ -71,17 +71,23 @@ public class CreateMemberResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateMemberResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateMemberResponseBody</p>
+     */
     public static class Members extends TeaModel {
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("MemberId")
+        @com.aliyun.core.annotation.NameInMap("MemberId")
         private String memberId;
 
-        @NameInMap("Roles")
+        @com.aliyun.core.annotation.NameInMap("Roles")
         private java.util.List < String > roles;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private Members(Builder builder) {

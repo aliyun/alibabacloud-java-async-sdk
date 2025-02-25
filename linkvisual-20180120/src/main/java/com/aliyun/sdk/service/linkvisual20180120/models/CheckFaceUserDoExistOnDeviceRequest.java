@@ -104,13 +104,13 @@ public class CheckFaceUserDoExistOnDeviceRequest extends Request {
             super();
         } 
 
-        private Builder(CheckFaceUserDoExistOnDeviceRequest response) {
-            super(response);
-            this.deviceName = response.deviceName;
-            this.iotInstanceId = response.iotInstanceId;
-            this.isolationId = response.isolationId;
-            this.productKey = response.productKey;
-            this.userId = response.userId;
+        private Builder(CheckFaceUserDoExistOnDeviceRequest request) {
+            super(request);
+            this.deviceName = request.deviceName;
+            this.iotInstanceId = request.iotInstanceId;
+            this.isolationId = request.isolationId;
+            this.productKey = request.productKey;
+            this.userId = request.userId;
         } 
 
         /**

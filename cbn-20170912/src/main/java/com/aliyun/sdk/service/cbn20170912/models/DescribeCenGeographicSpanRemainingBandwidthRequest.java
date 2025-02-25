@@ -1,54 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCenGeographicSpanRemainingBandwidthRequest} extends {@link RequestModel}
  *
  * <p>DescribeCenGeographicSpanRemainingBandwidthRequest</p>
  */
 public class DescribeCenGeographicSpanRemainingBandwidthRequest extends Request {
-    @Query
-    @NameInMap("CenId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CenId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cenId;
 
-    @Query
-    @NameInMap("GeographicRegionAId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GeographicRegionAId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String geographicRegionAId;
 
-    @Query
-    @NameInMap("GeographicRegionBId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GeographicRegionBId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String geographicRegionBId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private DescribeCenGeographicSpanRemainingBandwidthRequest(Builder builder) {
@@ -169,7 +174,11 @@ public class DescribeCenGeographicSpanRemainingBandwidthRequest extends Request 
         } 
 
         /**
-         * The ID of the Cloud Enterprise Network (CEN) instance to which the bandwidth plan is associated.
+         * <p>The ID of the Cloud Enterprise Network (CEN) instance to which the bandwidth plan is associated.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-nh98vzx8gfhlwn****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -178,14 +187,17 @@ public class DescribeCenGeographicSpanRemainingBandwidthRequest extends Request 
         }
 
         /**
-         * The ID of one of the connected areas of the bandwidth plan. Valid values:
-         * <p>
+         * <p>The ID of one of the connected areas of the bandwidth plan. Valid values:</p>
+         * <ul>
+         * <li><strong>China</strong>: Chinese mainland</li>
+         * <li><strong>North-America</strong>: North America</li>
+         * <li><strong>Asia-Pacific</strong>: Asia Pacific</li>
+         * <li><strong>Europe</strong>: Europe</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **China**: Chinese mainland
-         * *   **North-America**: North America
-         * *   **Asia-Pacific**: Asia Pacific
-         * *   **Europe**: Europe
-         * *   **Australia**: Australia
+         * <strong>example:</strong>
+         * <p>China</p>
          */
         public Builder geographicRegionAId(String geographicRegionAId) {
             this.putQueryParameter("GeographicRegionAId", geographicRegionAId);
@@ -194,14 +206,17 @@ public class DescribeCenGeographicSpanRemainingBandwidthRequest extends Request 
         }
 
         /**
-         * The ID of the other area connected by the bandwidth plan. Valid values:
-         * <p>
+         * <p>The ID of the other area connected by the bandwidth plan. Valid values:</p>
+         * <ul>
+         * <li><strong>China</strong>: Chinese mainland</li>
+         * <li><strong>North-America</strong>: North America</li>
+         * <li><strong>Asia-Pacific</strong>: Asia Pacific</li>
+         * <li><strong>Europe</strong>: Europe</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **China**: Chinese mainland
-         * *   **North-America**: North America
-         * *   **Asia-Pacific**: Asia Pacific
-         * *   **Europe**: Europe
-         * *   **Australia**: Australia
+         * <strong>example:</strong>
+         * <p>North-America</p>
          */
         public Builder geographicRegionBId(String geographicRegionBId) {
             this.putQueryParameter("GeographicRegionBId", geographicRegionBId);
@@ -228,7 +243,10 @@ public class DescribeCenGeographicSpanRemainingBandwidthRequest extends Request 
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -237,7 +255,10 @@ public class DescribeCenGeographicSpanRemainingBandwidthRequest extends Request 
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.
+         * <p>The number of entries to return on each page. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataServiceApplicationResponseBody} extends {@link TeaModel}
  *
  * <p>GetDataServiceApplicationResponseBody</p>
  */
 public class GetDataServiceApplicationResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetDataServiceApplicationResponseBody(Builder builder) {
@@ -98,7 +103,7 @@ public class GetDataServiceApplicationResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details of the application.
+         * <p>The details of the application.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +111,10 @@ public class GetDataServiceApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +122,10 @@ public class GetDataServiceApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +133,10 @@ public class GetDataServiceApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +144,10 @@ public class GetDataServiceApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class GetDataServiceApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,23 +171,29 @@ public class GetDataServiceApplicationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDataServiceApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataServiceApplicationResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ApplicationCode")
+        @com.aliyun.core.annotation.NameInMap("ApplicationCode")
         private String applicationCode;
 
-        @NameInMap("ApplicationId")
+        @com.aliyun.core.annotation.NameInMap("ApplicationId")
         private Long applicationId;
 
-        @NameInMap("ApplicationKey")
+        @com.aliyun.core.annotation.NameInMap("ApplicationKey")
         private String applicationKey;
 
-        @NameInMap("ApplicationName")
+        @com.aliyun.core.annotation.NameInMap("ApplicationName")
         private String applicationName;
 
-        @NameInMap("ApplicationSecret")
+        @com.aliyun.core.annotation.NameInMap("ApplicationSecret")
         private String applicationSecret;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
         private Data(Builder builder) {
@@ -238,7 +264,10 @@ public class GetDataServiceApplicationResponseBody extends TeaModel {
             private Long projectId; 
 
             /**
-             * The AppCode for simple authentication. You can select simple authentication or signature authentication when you call an API operation.
+             * <p>The AppCode for simple authentication. You can select simple authentication or signature authentication when you call an API operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CODE123</p>
              */
             public Builder applicationCode(String applicationCode) {
                 this.applicationCode = applicationCode;
@@ -246,7 +275,10 @@ public class GetDataServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder applicationId(Long applicationId) {
                 this.applicationId = applicationId;
@@ -254,7 +286,10 @@ public class GetDataServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The AppKey for signature authentication. You can select simple authentication or signature authentication when you call an API operation.
+             * <p>The AppKey for signature authentication. You can select simple authentication or signature authentication when you call an API operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KEY123</p>
              */
             public Builder applicationKey(String applicationKey) {
                 this.applicationKey = applicationKey;
@@ -262,7 +297,10 @@ public class GetDataServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test application</p>
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
@@ -270,7 +308,10 @@ public class GetDataServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The AppSecret for signature authentication. You can select simple authentication or signature authentication when you call an API operation.
+             * <p>The AppSecret for signature authentication. You can select simple authentication or signature authentication when you call an API operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SECRET123</p>
              */
             public Builder applicationSecret(String applicationSecret) {
                 this.applicationSecret = applicationSecret;
@@ -278,7 +319,10 @@ public class GetDataServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10001</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;

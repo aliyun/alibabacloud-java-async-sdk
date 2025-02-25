@@ -1,52 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.push20160801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PushNoticeToiOSRequest} extends {@link RequestModel}
  *
  * <p>PushNoticeToiOSRequest</p>
  */
 public class PushNoticeToiOSRequest extends Request {
-    @Query
-    @NameInMap("ApnsEnv")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApnsEnv")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String apnsEnv;
 
-    @Query
-    @NameInMap("AppKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long appKey;
 
-    @Query
-    @NameInMap("Body")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Body")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String body;
 
-    @Query
-    @NameInMap("ExtParameters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtParameters")
     private String extParameters;
 
-    @Query
-    @NameInMap("JobKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobKey")
     private String jobKey;
 
-    @Query
-    @NameInMap("Target")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Target")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String target;
 
-    @Query
-    @NameInMap("TargetValue")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetValue")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetValue;
 
-    @Query
-    @NameInMap("Title")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Title")
     private String title;
 
     private PushNoticeToiOSRequest(Builder builder) {
@@ -157,7 +157,10 @@ public class PushNoticeToiOSRequest extends Request {
         } 
 
         /**
-         * ApnsEnv.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEV</p>
          */
         public Builder apnsEnv(String apnsEnv) {
             this.putQueryParameter("ApnsEnv", apnsEnv);
@@ -166,7 +169,10 @@ public class PushNoticeToiOSRequest extends Request {
         }
 
         /**
-         * AppKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24780725</p>
          */
         public Builder appKey(Long appKey) {
             this.putQueryParameter("AppKey", appKey);
@@ -175,7 +181,10 @@ public class PushNoticeToiOSRequest extends Request {
         }
 
         /**
-         * Body.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hello World</p>
          */
         public Builder body(String body) {
             this.putQueryParameter("Body", body);
@@ -202,7 +211,10 @@ public class PushNoticeToiOSRequest extends Request {
         }
 
         /**
-         * Target.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder target(String target) {
             this.putQueryParameter("Target", target);
@@ -211,7 +223,10 @@ public class PushNoticeToiOSRequest extends Request {
         }
 
         /**
-         * TargetValue.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder targetValue(String targetValue) {
             this.putQueryParameter("TargetValue", targetValue);

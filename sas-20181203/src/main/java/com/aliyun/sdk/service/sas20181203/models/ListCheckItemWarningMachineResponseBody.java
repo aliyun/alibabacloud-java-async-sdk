@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCheckItemWarningMachineResponseBody} extends {@link TeaModel}
  *
  * <p>ListCheckItemWarningMachineResponseBody</p>
  */
 public class ListCheckItemWarningMachineResponseBody extends TeaModel {
-    @NameInMap("List")
-    private java.util.List < List> list;
+    @com.aliyun.core.annotation.NameInMap("List")
+    private java.util.List<List> list;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListCheckItemWarningMachineResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
     /**
      * @return list
      */
-    public java.util.List < List> getList() {
+    public java.util.List<List> getList() {
         return this.list;
     }
 
@@ -57,20 +62,20 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < List> list; 
+        private java.util.List<List> list; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
-         * The servers on which the alerts are generated.
+         * <p>The servers on which the alerts are generated.</p>
          */
-        public Builder list(java.util.List < List> list) {
+        public Builder list(java.util.List<List> list) {
             this.list = list;
             return this;
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +83,10 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22B5615F-700E-575A-A6D5-DC8D7741****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,11 +99,17 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCheckItemWarningMachineResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCheckItemWarningMachineResponseBody</p>
+     */
     public static class FixList extends TeaModel {
-        @NameInMap("RiskId")
+        @com.aliyun.core.annotation.NameInMap("RiskId")
         private Long riskId;
 
-        @NameInMap("RiskName")
+        @com.aliyun.core.annotation.NameInMap("RiskName")
         private String riskName;
 
         private FixList(Builder builder) {
@@ -130,7 +144,10 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             private String riskName; 
 
             /**
-             * The baseline ID.
+             * <p>The ID of the baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>72</p>
              */
             public Builder riskId(Long riskId) {
                 this.riskId = riskId;
@@ -138,7 +155,10 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the baseline.
+             * <p>The name of the baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba Cloud Linux/Aliyun Linux 2 Baseline for China classified protection of cybersecurity-Level II</p>
              */
             public Builder riskName(String riskName) {
                 this.riskName = riskName;
@@ -152,11 +172,17 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCheckItemWarningMachineResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCheckItemWarningMachineResponseBody</p>
+     */
     public static class WarningRiskList extends TeaModel {
-        @NameInMap("RiskId")
+        @com.aliyun.core.annotation.NameInMap("RiskId")
         private Long riskId;
 
-        @NameInMap("RiskName")
+        @com.aliyun.core.annotation.NameInMap("RiskName")
         private String riskName;
 
         private WarningRiskList(Builder builder) {
@@ -191,7 +217,10 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             private String riskName; 
 
             /**
-             * The baseline ID.
+             * <p>The ID of the baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>72</p>
              */
             public Builder riskId(Long riskId) {
                 this.riskId = riskId;
@@ -199,7 +228,10 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the baseline.
+             * <p>The name of the baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba Cloud Linux/Aliyun Linux 2 Baseline for China classified protection of cybersecurity-Level II</p>
              */
             public Builder riskName(String riskName) {
                 this.riskName = riskName;
@@ -213,69 +245,75 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCheckItemWarningMachineResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCheckItemWarningMachineResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("AuthVersion")
+        @com.aliyun.core.annotation.NameInMap("AuthVersion")
         private Integer authVersion;
 
-        @NameInMap("Bind")
+        @com.aliyun.core.annotation.NameInMap("Bind")
         private Boolean bind;
 
-        @NameInMap("ContainerId")
+        @com.aliyun.core.annotation.NameInMap("ContainerId")
         private String containerId;
 
-        @NameInMap("ContainerName")
+        @com.aliyun.core.annotation.NameInMap("ContainerName")
         private String containerName;
 
-        @NameInMap("FixList")
-        private java.util.List < FixList> fixList;
+        @com.aliyun.core.annotation.NameInMap("FixList")
+        private java.util.List<FixList> fixList;
 
-        @NameInMap("FixStatus")
+        @com.aliyun.core.annotation.NameInMap("FixStatus")
         private Integer fixStatus;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IntranetIp")
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("LastHandleTime")
+        @com.aliyun.core.annotation.NameInMap("LastHandleTime")
         private Long lastHandleTime;
 
-        @NameInMap("LastScanTime")
+        @com.aliyun.core.annotation.NameInMap("LastScanTime")
         private Long lastScanTime;
 
-        @NameInMap("PortOpen")
+        @com.aliyun.core.annotation.NameInMap("PortOpen")
         private Boolean portOpen;
 
-        @NameInMap("Prompt")
+        @com.aliyun.core.annotation.NameInMap("Prompt")
         private String prompt;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("TargetId")
+        @com.aliyun.core.annotation.NameInMap("TargetId")
         private String targetId;
 
-        @NameInMap("TargetName")
+        @com.aliyun.core.annotation.NameInMap("TargetName")
         private String targetName;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
-        @NameInMap("WarningRiskList")
-        private java.util.List < WarningRiskList> warningRiskList;
+        @com.aliyun.core.annotation.NameInMap("WarningRiskList")
+        private java.util.List<WarningRiskList> warningRiskList;
 
         private List(Builder builder) {
             this.authVersion = builder.authVersion;
@@ -340,7 +378,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         /**
          * @return fixList
          */
-        public java.util.List < FixList> getFixList() {
+        public java.util.List<FixList> getFixList() {
             return this.fixList;
         }
 
@@ -452,7 +490,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         /**
          * @return warningRiskList
          */
-        public java.util.List < WarningRiskList> getWarningRiskList() {
+        public java.util.List<WarningRiskList> getWarningRiskList() {
             return this.warningRiskList;
         }
 
@@ -461,7 +499,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             private Boolean bind; 
             private String containerId; 
             private String containerName; 
-            private java.util.List < FixList> fixList; 
+            private java.util.List<FixList> fixList; 
             private Integer fixStatus; 
             private String instanceId; 
             private String instanceName; 
@@ -477,18 +515,21 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             private String targetName; 
             private String targetType; 
             private String uuid; 
-            private java.util.List < WarningRiskList> warningRiskList; 
+            private java.util.List<WarningRiskList> warningRiskList; 
 
             /**
-             * The edition of Security Center that is authorized to protect the asset. Valid values:
-             * <p>
+             * <p>The edition of Security Center that is authorized to protect the asset. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Basic edition</li>
+             * <li><strong>6</strong>: Anti-virus edition</li>
+             * <li><strong>5</strong>: Advanced edition</li>
+             * <li><strong>3</strong>: Enterprise edition</li>
+             * <li><strong>7</strong>: Ultimate edition</li>
+             * <li><strong>10</strong>: Value-added Plan edition</li>
+             * </ul>
              * 
-             * *   **1**: Basic edition
-             * *   **6**: Anti-virus edition
-             * *   **5**: Advanced edition
-             * *   **3**: Enterprise edition
-             * *   **7**: Ultimate edition
-             * *   **10**: Value-added Plan edition
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder authVersion(Integer authVersion) {
                 this.authVersion = authVersion;
@@ -496,11 +537,14 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Security Center is authorized to protect the asset. Valid values:
-             * <p>
+             * <p>Indicates whether Security Center is authorized to protect the asset. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder bind(Boolean bind) {
                 this.bind = bind;
@@ -508,7 +552,10 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * The container ID.
+             * <p>The ID of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>48a6d9a92435a13ad573372c3f3c63b7e04d106458141df9f9215570********</p>
              */
             public Builder containerId(String containerId) {
                 this.containerId = containerId;
@@ -516,7 +563,10 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the container.
+             * <p>The name of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>step-build-ui-build</p>
              */
             public Builder containerName(String containerName) {
                 this.containerName = containerName;
@@ -524,15 +574,22 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the baselines for which the risk item can be fixed.
+             * <p>The details of the baselines for which the risk item can be fixed.</p>
              */
-            public Builder fixList(java.util.List < FixList> fixList) {
+            public Builder fixList(java.util.List<FixList> fixList) {
                 this.fixList = fixList;
                 return this;
             }
 
             /**
-             * FixStatus.
+             * <p>Whether the repair is supported. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Supported</li>
+             * <li><strong>1</strong>: Not Supported</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder fixStatus(Integer fixStatus) {
                 this.fixStatus = fixStatus;
@@ -540,7 +597,10 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the server.
+             * <p>The instance ID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1a69mvjujbakxu****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -548,7 +608,10 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
+             * <p>The name of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sql-test-0****</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -556,7 +619,10 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the affected asset.
+             * <p>The public IP address of the affected asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.210.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -564,7 +630,10 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the affected asset.
+             * <p>The private IP address of the affected asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.25.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -572,7 +641,10 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * LastHandleTime.
+             * <p>The timestamp of the latest processing of the check item risk of the machine. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1694692471000</p>
              */
             public Builder lastHandleTime(Long lastHandleTime) {
                 this.lastHandleTime = lastHandleTime;
@@ -580,7 +652,10 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the last scan was performed. Unit: milliseconds.
+             * <p>The timestamp generated when the last scan was performed. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1694692471000</p>
              */
             public Builder lastScanTime(Long lastScanTime) {
                 this.lastScanTime = lastScanTime;
@@ -588,11 +663,14 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a port on the server is accessible over the Internet. Valid values:
-             * <p>
+             * <p>Indicates whether a port on the server is accessible over the Internet. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder portOpen(Boolean portOpen) {
                 this.portOpen = portOpen;
@@ -600,7 +678,10 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * The prompt for the risk item.
+             * <p>The prompt for the risk item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>There is a weak password (username/password): root/he*****34</p>
              */
             public Builder prompt(String prompt) {
                 this.prompt = prompt;
@@ -608,7 +689,10 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the asset.
+             * <p>The region ID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -616,14 +700,17 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the check item. Valid values:
-             * <p>
+             * <p>The status of the check item. Valid values:</p>
+             * <ul>
+             * <li>1: failed</li>
+             * <li>2: verifying</li>
+             * <li>3: passed</li>
+             * <li>6: ignored</li>
+             * <li>7: fixing</li>
+             * </ul>
              * 
-             * *   1: failed
-             * *   2: verifying
-             * *   3: passed
-             * *   6: ignored
-             * *   7: fixing
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -631,7 +718,10 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the asset that is scanned.
+             * <p>The ID of the asset that is scanned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30****</p>
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -639,7 +729,10 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the asset that is scanned.
+             * <p>The name of the asset on which the malicious image sample is detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jenkins****</p>
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -647,11 +740,14 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the asset. Valid values:
-             * <p>
+             * <p>The type of the asset. Valid values:</p>
+             * <ul>
+             * <li><strong>ECS_SNAPSHOT</strong></li>
+             * <li><strong>ECS_IMAGE</strong></li>
+             * </ul>
              * 
-             * *   **ECS_SNAPSHOT**
-             * *   **ECS_IMAGE**
+             * <strong>example:</strong>
+             * <p>ECS_IMAGE</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -659,7 +755,10 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * <p>The UUID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>49e25e0f-bb51-4a5a-a1b3-13a4ddaa****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -667,9 +766,9 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the baselines on which the risk item is detected.
+             * <p>The information about the baselines on which the risk item is detected.</p>
              */
-            public Builder warningRiskList(java.util.List < WarningRiskList> warningRiskList) {
+            public Builder warningRiskList(java.util.List<WarningRiskList> warningRiskList) {
                 this.warningRiskList = warningRiskList;
                 return this;
             }
@@ -681,17 +780,23 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCheckItemWarningMachineResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCheckItemWarningMachineResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -744,7 +849,10 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of affected assets returned on the current page.
+             * <p>The number of affected assets returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -752,7 +860,10 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -760,7 +871,10 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -768,7 +882,10 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of affected assets.
+             * <p>The total number of affected assets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>107</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

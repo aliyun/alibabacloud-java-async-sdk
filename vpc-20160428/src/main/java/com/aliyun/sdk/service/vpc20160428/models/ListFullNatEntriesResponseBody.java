@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFullNatEntriesResponseBody} extends {@link TeaModel}
  *
  * <p>ListFullNatEntriesResponseBody</p>
  */
 public class ListFullNatEntriesResponseBody extends TeaModel {
-    @NameInMap("FullNatEntries")
-    private java.util.List < FullNatEntries> fullNatEntries;
+    @com.aliyun.core.annotation.NameInMap("FullNatEntries")
+    private java.util.List<FullNatEntries> fullNatEntries;
 
-    @NameInMap("FullNatTableId")
+    @com.aliyun.core.annotation.NameInMap("FullNatTableId")
     private String fullNatTableId;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Long maxResults;
 
-    @NameInMap("NatGatewayId")
+    @com.aliyun.core.annotation.NameInMap("NatGatewayId")
     private String natGatewayId;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListFullNatEntriesResponseBody(Builder builder) {
@@ -54,7 +59,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
     /**
      * @return fullNatEntries
      */
-    public java.util.List < FullNatEntries> getFullNatEntries() {
+    public java.util.List<FullNatEntries> getFullNatEntries() {
         return this.fullNatEntries;
     }
 
@@ -101,7 +106,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < FullNatEntries> fullNatEntries; 
+        private java.util.List<FullNatEntries> fullNatEntries; 
         private String fullNatTableId; 
         private Long maxResults; 
         private String natGatewayId; 
@@ -110,15 +115,18 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The information about the FULLNAT entries that are queried.
+         * <p>The information about the FULLNAT entries that are queried.</p>
          */
-        public Builder fullNatEntries(java.util.List < FullNatEntries> fullNatEntries) {
+        public Builder fullNatEntries(java.util.List<FullNatEntries> fullNatEntries) {
             this.fullNatEntries = fullNatEntries;
             return this;
         }
 
         /**
-         * The ID of the FULLNAT table to which the queried FULLNAT entries belong.
+         * <p>The ID of the FULLNAT table to which the queried FULLNAT entries belong.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fullnat-gw8fz23jezpbblf1j****</p>
          */
         public Builder fullNatTableId(String fullNatTableId) {
             this.fullNatTableId = fullNatTableId;
@@ -126,7 +134,10 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of entries returned.
+         * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder maxResults(Long maxResults) {
             this.maxResults = maxResults;
@@ -134,7 +145,10 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the VPC NAT gateway.
+         * <p>The ID of the VPC NAT gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-gw8054kn57y3hq3bv****</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.natGatewayId = natGatewayId;
@@ -142,11 +156,14 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the token for the next query exists. Valid values:
-         * <p>
+         * <p>Indicates whether the token for the next query exists. Valid values:</p>
+         * <ul>
+         * <li>If the value of <strong>NextToken</strong> is empty, no next queries are sent.</li>
+         * <li>If the value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+         * </ul>
          * 
-         * *   If the value of **NextToken** is empty, no next queries are sent.
-         * *   If the value of **NextToken** is returned, the value indicates the token that is used for the next query.
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -154,7 +171,10 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F03E41F6-1A74-311F-8D98-124EEE9F37B8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +182,10 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of FULLNAT entries returned.
+         * <p>The number of FULLNAT entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -175,44 +198,50 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListFullNatEntriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFullNatEntriesResponseBody</p>
+     */
     public static class FullNatEntries extends TeaModel {
-        @NameInMap("AccessIp")
+        @com.aliyun.core.annotation.NameInMap("AccessIp")
         private String accessIp;
 
-        @NameInMap("AccessPort")
+        @com.aliyun.core.annotation.NameInMap("AccessPort")
         private String accessPort;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("FullNatEntryDescription")
+        @com.aliyun.core.annotation.NameInMap("FullNatEntryDescription")
         private String fullNatEntryDescription;
 
-        @NameInMap("FullNatEntryId")
+        @com.aliyun.core.annotation.NameInMap("FullNatEntryId")
         private String fullNatEntryId;
 
-        @NameInMap("FullNatEntryName")
+        @com.aliyun.core.annotation.NameInMap("FullNatEntryName")
         private String fullNatEntryName;
 
-        @NameInMap("FullNatEntryStatus")
+        @com.aliyun.core.annotation.NameInMap("FullNatEntryStatus")
         private String fullNatEntryStatus;
 
-        @NameInMap("FullNatTableId")
+        @com.aliyun.core.annotation.NameInMap("FullNatTableId")
         private String fullNatTableId;
 
-        @NameInMap("IpProtocol")
+        @com.aliyun.core.annotation.NameInMap("IpProtocol")
         private String ipProtocol;
 
-        @NameInMap("NatIp")
+        @com.aliyun.core.annotation.NameInMap("NatIp")
         private String natIp;
 
-        @NameInMap("NatIpPort")
+        @com.aliyun.core.annotation.NameInMap("NatIpPort")
         private String natIpPort;
 
-        @NameInMap("NetworkInterfaceId")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
         private String networkInterfaceId;
 
-        @NameInMap("NetworkInterfaceType")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceType")
         private String networkInterfaceType;
 
         private FullNatEntries(Builder builder) {
@@ -346,7 +375,10 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             private String networkInterfaceType; 
 
             /**
-             * The backend IP address that is used for FULLNAT address translation in FULLNAT entries.
+             * <p>The backend IP address that is used for FULLNAT address translation in FULLNAT entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder accessIp(String accessIp) {
                 this.accessIp = accessIp;
@@ -354,7 +386,10 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The backend port that is used for port mapping in FULLNAT entries. Valid values: **1** to **65535**.
+             * <p>The backend port that is used for port mapping in FULLNAT entries. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder accessPort(String accessPort) {
                 this.accessPort = accessPort;
@@ -362,7 +397,10 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the FULLNAT entry was created.
+             * <p>The time when the FULLNAT entry was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-10-27T02:44:40Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -370,10 +408,11 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the FULLNAT entry.
-             * <p>
+             * <p>The description of the FULLNAT entry.</p>
+             * <p>The name must be 2 to 128 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder fullNatEntryDescription(String fullNatEntryDescription) {
                 this.fullNatEntryDescription = fullNatEntryDescription;
@@ -381,7 +420,10 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the FULLNAT entry.
+             * <p>The ID of the FULLNAT entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fullnat-gw8fz23jezpbblf1j****</p>
              */
             public Builder fullNatEntryId(String fullNatEntryId) {
                 this.fullNatEntryId = fullNatEntryId;
@@ -389,10 +431,11 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the FULLNAT entry.
-             * <p>
+             * <p>The name of the FULLNAT entry.</p>
+             * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
              * 
-             * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder fullNatEntryName(String fullNatEntryName) {
                 this.fullNatEntryName = fullNatEntryName;
@@ -400,13 +443,16 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the FULLNAT entry. Valid values:
-             * <p>
+             * <p>The status of the FULLNAT entry. Valid values:</p>
+             * <ul>
+             * <li><strong>Pending</strong></li>
+             * <li><strong>Available</strong></li>
+             * <li><strong>Deleting</strong></li>
+             * <li><strong>Deleted</strong></li>
+             * </ul>
              * 
-             * *   **Pending**
-             * *   **Available**
-             * *   **Deleting**
-             * *   **Deleted**
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder fullNatEntryStatus(String fullNatEntryStatus) {
                 this.fullNatEntryStatus = fullNatEntryStatus;
@@ -414,7 +460,10 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the FULLNAT table to which the FULLNAT entry belongs.
+             * <p>The ID of the FULLNAT table to which the FULLNAT entry belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fulltb-gw88z7hhlv43rmb26****</p>
              */
             public Builder fullNatTableId(String fullNatTableId) {
                 this.fullNatTableId = fullNatTableId;
@@ -422,11 +471,14 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol of the packets that are forwarded. Valid values:
-             * <p>
+             * <p>The protocol of the packets that are forwarded. Valid values:</p>
+             * <ul>
+             * <li><strong>TCP</strong></li>
+             * <li><strong>UDP</strong></li>
+             * </ul>
              * 
-             * *   **TCP**
-             * *   **UDP**
+             * <strong>example:</strong>
+             * <p>TCP</p>
              */
             public Builder ipProtocol(String ipProtocol) {
                 this.ipProtocol = ipProtocol;
@@ -434,7 +486,10 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The NAT IP address that is used for address translation in FULLNAT entries.
+             * <p>The NAT IP address that is used for address translation in FULLNAT entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder natIp(String natIp) {
                 this.natIp = natIp;
@@ -442,7 +497,10 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The frontend port that is used for port mapping in FULLNAT entries. Valid values: **1** to **65535**.
+             * <p>The frontend port that is used for port mapping in FULLNAT entries. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder natIpPort(String natIpPort) {
                 this.natIpPort = natIpPort;
@@ -450,7 +508,10 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the elastic network interface (ENI).
+             * <p>The ID of the elastic network interface (ENI).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eni-gw80wedm8pq0tpr2****</p>
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
@@ -458,7 +519,10 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the ENI. The value is set to **Endpoint**, which indicates a reverse endpoint.
+             * <p>The type of the ENI. The value is set to <strong>Endpoint</strong>, which indicates a reverse endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Endpoint</p>
              */
             public Builder networkInterfaceType(String networkInterfaceType) {
                 this.networkInterfaceType = networkInterfaceType;

@@ -127,7 +127,7 @@ public class GetTriggerRequest extends Request {
         } 
 
         /**
-         * The name of the function.
+         * The name of the service.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -136,7 +136,7 @@ public class GetTriggerRequest extends Request {
         }
 
         /**
-         * The name of the trigger.
+         * The name of the function.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -145,7 +145,7 @@ public class GetTriggerRequest extends Request {
         }
 
         /**
-         * The ID of your Alibaba Cloud account.
+         * The name of the trigger.
          */
         public Builder triggerName(String triggerName) {
             this.putPathParameter("triggerName", triggerName);
@@ -154,7 +154,7 @@ public class GetTriggerRequest extends Request {
         }
 
         /**
-         * The time when the request is initiated on the client. The format of the value is: **EEE,d MMM yyyy HH:mm:ss GMT**.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -163,7 +163,7 @@ public class GetTriggerRequest extends Request {
         }
 
         /**
-         * The custom request ID.
+         * The time when the request is initiated on the client. The format of the value is: **EEE,d MMM yyyy HH:mm:ss GMT**.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -172,7 +172,7 @@ public class GetTriggerRequest extends Request {
         }
 
         /**
-         * The ETag that is used to modify the trigger. This parameter is used to ensure that the modified trigger is consistent with the trigger to be modified.
+         * The custom request ID.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);

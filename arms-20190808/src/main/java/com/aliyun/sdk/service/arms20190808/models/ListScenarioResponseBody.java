@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListScenarioResponseBody} extends {@link TeaModel}
  *
  * <p>ListScenarioResponseBody</p>
  */
 public class ListScenarioResponseBody extends TeaModel {
-    @NameInMap("ArmsScenarios")
-    private java.util.List < ArmsScenarios> armsScenarios;
+    @com.aliyun.core.annotation.NameInMap("ArmsScenarios")
+    private java.util.List<ArmsScenarios> armsScenarios;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListScenarioResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class ListScenarioResponseBody extends TeaModel {
     /**
      * @return armsScenarios
      */
-    public java.util.List < ArmsScenarios> getArmsScenarios() {
+    public java.util.List<ArmsScenarios> getArmsScenarios() {
         return this.armsScenarios;
     }
 
@@ -46,19 +51,22 @@ public class ListScenarioResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ArmsScenarios> armsScenarios; 
+        private java.util.List<ArmsScenarios> armsScenarios; 
         private String requestId; 
 
         /**
-         * The detailed information of the business monitoring job.
+         * <p>The detailed information of the business monitoring job.</p>
          */
-        public Builder armsScenarios(java.util.List < ArmsScenarios> armsScenarios) {
+        public Builder armsScenarios(java.util.List<ArmsScenarios> armsScenarios) {
             this.armsScenarios = armsScenarios;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>98027D1F-3AEB-492C-A4AA-E9217992****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,32 +79,38 @@ public class ListScenarioResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListScenarioResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListScenarioResponseBody</p>
+     */
     public static class ArmsScenarios extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Extensions")
+        @com.aliyun.core.annotation.NameInMap("Extensions")
         private String extensions;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Sign")
+        @com.aliyun.core.annotation.NameInMap("Sign")
         private String sign;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private ArmsScenarios(Builder builder) {
@@ -194,7 +208,10 @@ public class ListScenarioResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b590lhguqs@28f515462******</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -202,7 +219,10 @@ public class ListScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the business monitoring job was created.
+             * <p>The time when the business monitoring job was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1585214916000</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -210,7 +230,10 @@ public class ListScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The extended information. The value is a JSON string.
+             * <p>The extended information. The value is a JSON string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;_MODE&quot;: &quot;CUSTOM-TRANSACTION&quot;,&quot;_SCENARIO&quot;: &quot;USER-DEFINED&quot;}</p>
              */
             public Builder extensions(String extensions) {
                 this.extensions = extensions;
@@ -218,7 +241,10 @@ public class ListScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the business monitoring job.
+             * <p>The ID of the business monitoring job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>132</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -226,7 +252,10 @@ public class ListScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the business monitoring job.
+             * <p>The name of the business monitoring job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k8s_deployment_css-guns-vip-main-prod_silence</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -234,7 +263,10 @@ public class ListScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-zhangjiakou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -242,7 +274,10 @@ public class ListScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the business monitoring job.
+             * <p>The code of the business monitoring job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a9f8****</p>
              */
             public Builder sign(String sign) {
                 this.sign = sign;
@@ -250,7 +285,10 @@ public class ListScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the business monitoring job was updated.
+             * <p>The time when the business monitoring job was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1585214916000</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -258,7 +296,10 @@ public class ListScenarioResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>113197164949****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

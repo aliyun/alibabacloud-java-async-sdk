@@ -55,7 +55,7 @@ public class SaveEnvRequest extends Request {
         } 
 
         /**
-         * 环境
+         * Env.
          */
         public Builder env(Env env) {
             String envShrink = shrink(env, "Env", "json");
@@ -112,7 +112,7 @@ public class SaveEnvRequest extends Request {
             private String fileOssAddress; 
 
             /**
-             * 文件名
+             * FileName.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -120,7 +120,7 @@ public class SaveEnvRequest extends Request {
             }
 
             /**
-             * 文件oss地址，目前只支持上海region的oss地址
+             * FileOssAddress.
              */
             public Builder fileOssAddress(String fileOssAddress) {
                 this.fileOssAddress = fileOssAddress;
@@ -188,7 +188,7 @@ public class SaveEnvRequest extends Request {
             private String value; 
 
             /**
-             * 描述
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -196,7 +196,7 @@ public class SaveEnvRequest extends Request {
             }
 
             /**
-             * 属性名
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -204,7 +204,7 @@ public class SaveEnvRequest extends Request {
             }
 
             /**
-             * 属性值
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -297,7 +297,7 @@ public class SaveEnvRequest extends Request {
             private java.util.List < Properties> properties; 
 
             /**
-             * 环境id，不填表示新建环境，填了表示修改该环境
+             * EnvId.
              */
             public Builder envId(String envId) {
                 this.envId = envId;
@@ -305,7 +305,7 @@ public class SaveEnvRequest extends Request {
             }
 
             /**
-             * 环境名称
+             * EnvName.
              */
             public Builder envName(String envName) {
                 this.envName = envName;
@@ -313,7 +313,7 @@ public class SaveEnvRequest extends Request {
             }
 
             /**
-             * 环境依赖的文件
+             * Files.
              */
             public Builder files(java.util.List < Files> files) {
                 this.files = files;
@@ -321,7 +321,7 @@ public class SaveEnvRequest extends Request {
             }
 
             /**
-             * jmeter插件的环境标签
+             * JmeterPluginLabel.
              */
             public Builder jmeterPluginLabel(String jmeterPluginLabel) {
                 this.jmeterPluginLabel = jmeterPluginLabel;
@@ -329,7 +329,7 @@ public class SaveEnvRequest extends Request {
             }
 
             /**
-             * jmeter属性
+             * Properties.
              */
             public Builder properties(java.util.List < Properties> properties) {
                 this.properties = properties;

@@ -1,82 +1,87 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightRefundApplyRequest} extends {@link RequestModel}
  *
  * <p>FlightRefundApplyRequest</p>
  */
 public class FlightRefundApplyRequest extends Request {
-    @Body
-    @NameInMap("corp_refund_price")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("corp_refund_price")
     private Long corpRefundPrice;
 
-    @Body
-    @NameInMap("dis_order_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dis_order_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String disOrderId;
 
-    @Body
-    @NameInMap("dis_sub_order_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dis_sub_order_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String disSubOrderId;
 
-    @Body
-    @NameInMap("display_refund_money")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("display_refund_money")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String displayRefundMoney;
 
-    @Body
-    @NameInMap("extra")
-    private java.util.Map < String, String > extra;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("extra")
+    private java.util.Map<String, String> extra;
 
-    @Body
-    @NameInMap("is_voluntary")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("is_voluntary")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer isVoluntary;
 
-    @Body
-    @NameInMap("item_unit_ids")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("item_unit_ids")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String itemUnitIds;
 
-    @Body
-    @NameInMap("passenger_segment_info_list")
-    private java.util.List < PassengerSegmentInfoList> passengerSegmentInfoList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("passenger_segment_info_list")
+    private java.util.List<PassengerSegmentInfoList> passengerSegmentInfoList;
 
-    @Body
-    @NameInMap("personal_refund_price")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("personal_refund_price")
     private Long personalRefundPrice;
 
-    @Body
-    @NameInMap("reason_detail")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("reason_detail")
     private String reasonDetail;
 
-    @Body
-    @NameInMap("reason_type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("reason_type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer reasonType;
 
-    @Body
-    @NameInMap("refund_voucher_info")
-    private java.util.List < String > refundVoucherInfo;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("refund_voucher_info")
+    private java.util.List<String> refundVoucherInfo;
 
-    @Body
-    @NameInMap("session_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("session_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sessionId;
 
-    @Body
-    @NameInMap("total_refund_price")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("total_refund_price")
     private Long totalRefundPrice;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private FlightRefundApplyRequest(Builder builder) {
@@ -142,7 +147,7 @@ public class FlightRefundApplyRequest extends Request {
     /**
      * @return extra
      */
-    public java.util.Map < String, String > getExtra() {
+    public java.util.Map<String, String> getExtra() {
         return this.extra;
     }
 
@@ -163,7 +168,7 @@ public class FlightRefundApplyRequest extends Request {
     /**
      * @return passengerSegmentInfoList
      */
-    public java.util.List < PassengerSegmentInfoList> getPassengerSegmentInfoList() {
+    public java.util.List<PassengerSegmentInfoList> getPassengerSegmentInfoList() {
         return this.passengerSegmentInfoList;
     }
 
@@ -191,7 +196,7 @@ public class FlightRefundApplyRequest extends Request {
     /**
      * @return refundVoucherInfo
      */
-    public java.util.List < String > getRefundVoucherInfo() {
+    public java.util.List<String> getRefundVoucherInfo() {
         return this.refundVoucherInfo;
     }
 
@@ -221,14 +226,14 @@ public class FlightRefundApplyRequest extends Request {
         private String disOrderId; 
         private String disSubOrderId; 
         private String displayRefundMoney; 
-        private java.util.Map < String, String > extra; 
+        private java.util.Map<String, String> extra; 
         private Integer isVoluntary; 
         private String itemUnitIds; 
-        private java.util.List < PassengerSegmentInfoList> passengerSegmentInfoList; 
+        private java.util.List<PassengerSegmentInfoList> passengerSegmentInfoList; 
         private Long personalRefundPrice; 
         private String reasonDetail; 
         private Integer reasonType; 
-        private java.util.List < String > refundVoucherInfo; 
+        private java.util.List<String> refundVoucherInfo; 
         private String sessionId; 
         private Long totalRefundPrice; 
         private String xAcsBtripCorpToken; 
@@ -266,7 +271,10 @@ public class FlightRefundApplyRequest extends Request {
         }
 
         /**
-         * dis_order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dis123</p>
          */
         public Builder disOrderId(String disOrderId) {
             this.putBodyParameter("dis_order_id", disOrderId);
@@ -275,7 +283,10 @@ public class FlightRefundApplyRequest extends Request {
         }
 
         /**
-         * dis_sub_order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>refu123</p>
          */
         public Builder disSubOrderId(String disSubOrderId) {
             this.putBodyParameter("dis_sub_order_id", disSubOrderId);
@@ -284,7 +295,10 @@ public class FlightRefundApplyRequest extends Request {
         }
 
         /**
-         * display_refund_money.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder displayRefundMoney(String displayRefundMoney) {
             this.putBodyParameter("display_refund_money", displayRefundMoney);
@@ -295,7 +309,7 @@ public class FlightRefundApplyRequest extends Request {
         /**
          * extra.
          */
-        public Builder extra(java.util.Map < String, String > extra) {
+        public Builder extra(java.util.Map<String, String> extra) {
             String extraShrink = shrink(extra, "extra", "json");
             this.putBodyParameter("extra", extraShrink);
             this.extra = extra;
@@ -303,7 +317,10 @@ public class FlightRefundApplyRequest extends Request {
         }
 
         /**
-         * is_voluntary.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder isVoluntary(Integer isVoluntary) {
             this.putBodyParameter("is_voluntary", isVoluntary);
@@ -312,7 +329,10 @@ public class FlightRefundApplyRequest extends Request {
         }
 
         /**
-         * item_unit_ids.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FlightItem_9966772382</p>
          */
         public Builder itemUnitIds(String itemUnitIds) {
             this.putBodyParameter("item_unit_ids", itemUnitIds);
@@ -323,7 +343,7 @@ public class FlightRefundApplyRequest extends Request {
         /**
          * passenger_segment_info_list.
          */
-        public Builder passengerSegmentInfoList(java.util.List < PassengerSegmentInfoList> passengerSegmentInfoList) {
+        public Builder passengerSegmentInfoList(java.util.List<PassengerSegmentInfoList> passengerSegmentInfoList) {
             String passengerSegmentInfoListShrink = shrink(passengerSegmentInfoList, "passenger_segment_info_list", "json");
             this.putBodyParameter("passenger_segment_info_list", passengerSegmentInfoListShrink);
             this.passengerSegmentInfoList = passengerSegmentInfoList;
@@ -349,7 +369,10 @@ public class FlightRefundApplyRequest extends Request {
         }
 
         /**
-         * reason_type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder reasonType(Integer reasonType) {
             this.putBodyParameter("reason_type", reasonType);
@@ -360,7 +383,7 @@ public class FlightRefundApplyRequest extends Request {
         /**
          * refund_voucher_info.
          */
-        public Builder refundVoucherInfo(java.util.List < String > refundVoucherInfo) {
+        public Builder refundVoucherInfo(java.util.List<String> refundVoucherInfo) {
             String refundVoucherInfoShrink = shrink(refundVoucherInfo, "refund_voucher_info", "json");
             this.putBodyParameter("refund_voucher_info", refundVoucherInfoShrink);
             this.refundVoucherInfo = refundVoucherInfo;
@@ -368,7 +391,10 @@ public class FlightRefundApplyRequest extends Request {
         }
 
         /**
-         * session_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0f9418cd2ce34af49ab0de16fea166d1</p>
          */
         public Builder sessionId(String sessionId) {
             this.putBodyParameter("session_id", sessionId);
@@ -401,14 +427,20 @@ public class FlightRefundApplyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link FlightRefundApplyRequest} extends {@link TeaModel}
+     *
+     * <p>FlightRefundApplyRequest</p>
+     */
     public static class PassengerSegmentInfoList extends TeaModel {
-        @NameInMap("flight_no")
+        @com.aliyun.core.annotation.NameInMap("flight_no")
         private String flightNo;
 
-        @NameInMap("passenger_name")
+        @com.aliyun.core.annotation.NameInMap("passenger_name")
         private String passengerName;
 
-        @NameInMap("user_id")
+        @com.aliyun.core.annotation.NameInMap("user_id")
         private String userId;
 
         private PassengerSegmentInfoList(Builder builder) {

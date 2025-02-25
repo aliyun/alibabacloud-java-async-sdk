@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteTableLevelResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteTableLevelResponseBody</p>
  */
 public class DeleteTableLevelResponseBody extends TeaModel {
-    @NameInMap("DeleteResult")
+    @com.aliyun.core.annotation.NameInMap("DeleteResult")
     private Boolean deleteResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteTableLevelResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DeleteTableLevelResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the table level is deleted.
+         * <p>Indicates whether the table level was deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deleteResult(Boolean deleteResult) {
             this.deleteResult = deleteResult;
@@ -58,7 +66,10 @@ public class DeleteTableLevelResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcde</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

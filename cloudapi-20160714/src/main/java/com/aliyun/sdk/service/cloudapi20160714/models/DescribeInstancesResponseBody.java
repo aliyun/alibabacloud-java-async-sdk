@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstancesResponseBody</p>
  */
 public class DescribeInstancesResponseBody extends TeaModel {
-    @NameInMap("Instances")
+    @com.aliyun.core.annotation.NameInMap("Instances")
     private Instances instances;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeInstancesResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Instances.
+         * <p>The information about the instances.</p>
          */
         public Builder instances(Instances instances) {
             this.instances = instances;
@@ -94,7 +99,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEB6EC62-B6C7-5082-A45A-45A204724AC2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,11 +148,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class SpecAttribute extends TeaModel {
-        @NameInMap("LocalName")
+        @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SpecAttribute(Builder builder) {
@@ -170,7 +193,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * LocalName.
+             * <p>The variable name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SLA</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -178,7 +204,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The variable value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99.95%</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -192,9 +221,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class InstanceSpecAttributes extends TeaModel {
-        @NameInMap("SpecAttribute")
-        private java.util.List < SpecAttribute> specAttribute;
+        @com.aliyun.core.annotation.NameInMap("SpecAttribute")
+        private java.util.List<SpecAttribute> specAttribute;
 
         private InstanceSpecAttributes(Builder builder) {
             this.specAttribute = builder.specAttribute;
@@ -211,17 +246,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return specAttribute
          */
-        public java.util.List < SpecAttribute> getSpecAttribute() {
+        public java.util.List<SpecAttribute> getSpecAttribute() {
             return this.specAttribute;
         }
 
         public static final class Builder {
-            private java.util.List < SpecAttribute> specAttribute; 
+            private java.util.List<SpecAttribute> specAttribute; 
 
             /**
              * SpecAttribute.
              */
-            public Builder specAttribute(java.util.List < SpecAttribute> specAttribute) {
+            public Builder specAttribute(java.util.List<SpecAttribute> specAttribute) {
                 this.specAttribute = specAttribute;
                 return this;
             }
@@ -233,17 +268,23 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class NetworkInterfaceAttribute extends TeaModel {
-        @NameInMap("CidrBlock")
+        @com.aliyun.core.annotation.NameInMap("CidrBlock")
         private String cidrBlock;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("VswitchId")
+        @com.aliyun.core.annotation.NameInMap("VswitchId")
         private String vswitchId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private NetworkInterfaceAttribute(Builder builder) {
@@ -296,7 +337,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * vSwitch的网段。
+             * <p>The CIDR block of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.17.0/24</p>
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -304,7 +348,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 安全组的ID，同一个安全组内的服务可以互相访问。
+             * <p>The security group ID. Services in the same security group can access each other.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-2zeehz13zcyj1kfk3o85</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -312,7 +359,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 虚拟交换机ID
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-2zeqals6rbj51bhjn8b89</p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -320,7 +370,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 可用区ID
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shenzhen-d</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -334,9 +387,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class NetworkInterfaceAttributes extends TeaModel {
-        @NameInMap("NetworkInterfaceAttribute")
-        private java.util.List < NetworkInterfaceAttribute> networkInterfaceAttribute;
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceAttribute")
+        private java.util.List<NetworkInterfaceAttribute> networkInterfaceAttribute;
 
         private NetworkInterfaceAttributes(Builder builder) {
             this.networkInterfaceAttribute = builder.networkInterfaceAttribute;
@@ -353,17 +412,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return networkInterfaceAttribute
          */
-        public java.util.List < NetworkInterfaceAttribute> getNetworkInterfaceAttribute() {
+        public java.util.List<NetworkInterfaceAttribute> getNetworkInterfaceAttribute() {
             return this.networkInterfaceAttribute;
         }
 
         public static final class Builder {
-            private java.util.List < NetworkInterfaceAttribute> networkInterfaceAttribute; 
+            private java.util.List<NetworkInterfaceAttribute> networkInterfaceAttribute; 
 
             /**
              * NetworkInterfaceAttribute.
              */
-            public Builder networkInterfaceAttribute(java.util.List < NetworkInterfaceAttribute> networkInterfaceAttribute) {
+            public Builder networkInterfaceAttribute(java.util.List<NetworkInterfaceAttribute> networkInterfaceAttribute) {
                 this.networkInterfaceAttribute = networkInterfaceAttribute;
                 return this;
             }
@@ -375,128 +434,310 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
+    public static class PrivateDnsList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("PrivateDns")
+        private java.util.List<String> privateDns;
+
+        private PrivateDnsList(Builder builder) {
+            this.privateDns = builder.privateDns;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PrivateDnsList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return privateDns
+         */
+        public java.util.List<String> getPrivateDns() {
+            return this.privateDns;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> privateDns; 
+
+            /**
+             * PrivateDns.
+             */
+            public Builder privateDns(java.util.List<String> privateDns) {
+                this.privateDns = privateDns;
+                return this;
+            }
+
+            public PrivateDnsList build() {
+                return new PrivateDnsList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
+    public static class TagInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private TagInfo(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TagInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * <p>The tag key of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cookie</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The tag value of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>240</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public TagInfo build() {
+                return new TagInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagInfo")
+        private java.util.List<TagInfo> tagInfo;
+
+        private Tags(Builder builder) {
+            this.tagInfo = builder.tagInfo;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagInfo
+         */
+        public java.util.List<TagInfo> getTagInfo() {
+            return this.tagInfo;
+        }
+
+        public static final class Builder {
+            private java.util.List<TagInfo> tagInfo; 
+
+            /**
+             * TagInfo.
+             */
+            public Builder tagInfo(java.util.List<TagInfo> tagInfo) {
+                this.tagInfo = tagInfo;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class InstanceAttribute extends TeaModel {
-        @NameInMap("AclId")
+        @com.aliyun.core.annotation.NameInMap("AclId")
         private String aclId;
 
-        @NameInMap("AclName")
+        @com.aliyun.core.annotation.NameInMap("AclName")
         private String aclName;
 
-        @NameInMap("AclStatus")
+        @com.aliyun.core.annotation.NameInMap("AclStatus")
         private String aclStatus;
 
-        @NameInMap("AclType")
+        @com.aliyun.core.annotation.NameInMap("AclType")
         private String aclType;
 
-        @NameInMap("ClassicEgressAddress")
+        @com.aliyun.core.annotation.NameInMap("ClassicEgressAddress")
         private String classicEgressAddress;
 
-        @NameInMap("ConnectCidrBlocks")
+        @com.aliyun.core.annotation.NameInMap("ConnectCidrBlocks")
         private String connectCidrBlocks;
 
-        @NameInMap("ConnectVpcId")
+        @com.aliyun.core.annotation.NameInMap("ConnectVpcId")
         private String connectVpcId;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("DedicatedInstanceType")
+        @com.aliyun.core.annotation.NameInMap("DedicatedInstanceType")
         private String dedicatedInstanceType;
 
-        @NameInMap("EgressIpv6Enable")
+        @com.aliyun.core.annotation.NameInMap("EgressIpv6Enable")
         private Boolean egressIpv6Enable;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("HttpsPolicies")
+        @com.aliyun.core.annotation.NameInMap("HttpsPolicies")
         private String httpsPolicies;
 
-        @NameInMap("IPV6AclId")
+        @com.aliyun.core.annotation.NameInMap("IPV6AclId")
         private String IPV6AclId;
 
-        @NameInMap("IPV6AclName")
+        @com.aliyun.core.annotation.NameInMap("IPV6AclName")
         private String IPV6AclName;
 
-        @NameInMap("IPV6AclStatus")
+        @com.aliyun.core.annotation.NameInMap("IPV6AclStatus")
         private String IPV6AclStatus;
 
-        @NameInMap("IPV6AclType")
+        @com.aliyun.core.annotation.NameInMap("IPV6AclType")
         private String IPV6AclType;
 
-        @NameInMap("InstanceChargeType")
+        @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
         private String instanceChargeType;
 
-        @NameInMap("InstanceCidrBlock")
+        @com.aliyun.core.annotation.NameInMap("InstanceCidrBlock")
         private String instanceCidrBlock;
 
-        @NameInMap("InstanceClusterId")
+        @com.aliyun.core.annotation.NameInMap("InstanceClusterId")
         private String instanceClusterId;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InstanceRpsLimit")
+        @com.aliyun.core.annotation.NameInMap("InstanceRpsLimit")
         private Integer instanceRpsLimit;
 
-        @NameInMap("InstanceSpec")
+        @com.aliyun.core.annotation.NameInMap("InstanceSpec")
         private String instanceSpec;
 
-        @NameInMap("InstanceSpecAttributes")
+        @com.aliyun.core.annotation.NameInMap("InstanceSpecAttributes")
         private InstanceSpecAttributes instanceSpecAttributes;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("InternetEgressAddress")
+        @com.aliyun.core.annotation.NameInMap("InternetEgressAddress")
         private String internetEgressAddress;
 
-        @NameInMap("IntranetSegments")
+        @com.aliyun.core.annotation.NameInMap("IntranetSegments")
         private String intranetSegments;
 
-        @NameInMap("MaintainEndTime")
+        @com.aliyun.core.annotation.NameInMap("MaintainEndTime")
         private String maintainEndTime;
 
-        @NameInMap("MaintainStartTime")
+        @com.aliyun.core.annotation.NameInMap("MaintainStartTime")
         private String maintainStartTime;
 
-        @NameInMap("NetworkInterfaceAttributes")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceAttributes")
         private NetworkInterfaceAttributes networkInterfaceAttributes;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("NewVpcEgressAddress")
+        private String newVpcEgressAddress;
+
+        @com.aliyun.core.annotation.NameInMap("PrivateDnsList")
+        private PrivateDnsList privateDnsList;
+
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SupportIpv6")
+        @com.aliyun.core.annotation.NameInMap("SupportIpv6")
         private Boolean supportIpv6;
 
-        @NameInMap("UserVpcId")
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private Tags tags;
+
+        @com.aliyun.core.annotation.NameInMap("UserVpcId")
         private String userVpcId;
 
-        @NameInMap("UserVswitchId")
+        @com.aliyun.core.annotation.NameInMap("UserVswitchId")
         private String userVswitchId;
 
-        @NameInMap("VpcEgressAddress")
+        @com.aliyun.core.annotation.NameInMap("VpcEgressAddress")
         private String vpcEgressAddress;
 
-        @NameInMap("VpcIntranetEnable")
+        @com.aliyun.core.annotation.NameInMap("VpcIntranetEnable")
         private Boolean vpcIntranetEnable;
 
-        @NameInMap("VpcOwnerId")
+        @com.aliyun.core.annotation.NameInMap("VpcOwnerId")
         private Long vpcOwnerId;
 
-        @NameInMap("VpcSlbIntranetEnable")
+        @com.aliyun.core.annotation.NameInMap("VpcSlbIntranetEnable")
         private Boolean vpcSlbIntranetEnable;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
-        @NameInMap("ZoneLocalName")
+        @com.aliyun.core.annotation.NameInMap("ZoneLocalName")
         private String zoneLocalName;
 
         private InstanceAttribute(Builder builder) {
@@ -530,9 +771,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.maintainEndTime = builder.maintainEndTime;
             this.maintainStartTime = builder.maintainStartTime;
             this.networkInterfaceAttributes = builder.networkInterfaceAttributes;
+            this.newVpcEgressAddress = builder.newVpcEgressAddress;
+            this.privateDnsList = builder.privateDnsList;
             this.regionId = builder.regionId;
             this.status = builder.status;
             this.supportIpv6 = builder.supportIpv6;
+            this.tags = builder.tags;
             this.userVpcId = builder.userVpcId;
             this.userVswitchId = builder.userVswitchId;
             this.vpcEgressAddress = builder.vpcEgressAddress;
@@ -762,6 +1006,20 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return newVpcEgressAddress
+         */
+        public String getNewVpcEgressAddress() {
+            return this.newVpcEgressAddress;
+        }
+
+        /**
+         * @return privateDnsList
+         */
+        public PrivateDnsList getPrivateDnsList() {
+            return this.privateDnsList;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -780,6 +1038,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         public Boolean getSupportIpv6() {
             return this.supportIpv6;
+        }
+
+        /**
+         * @return tags
+         */
+        public Tags getTags() {
+            return this.tags;
         }
 
         /**
@@ -869,9 +1134,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String maintainEndTime; 
             private String maintainStartTime; 
             private NetworkInterfaceAttributes networkInterfaceAttributes; 
+            private String newVpcEgressAddress; 
+            private PrivateDnsList privateDnsList; 
             private String regionId; 
             private String status; 
             private Boolean supportIpv6; 
+            private Tags tags; 
             private String userVpcId; 
             private String userVswitchId; 
             private String vpcEgressAddress; 
@@ -882,7 +1150,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String zoneLocalName; 
 
             /**
-             * AclId.
+             * <p>The ACL ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acl-uf6f9zfxfxtp5j9ng3yv4</p>
              */
             public Builder aclId(String aclId) {
                 this.aclId = aclId;
@@ -890,7 +1161,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AclName.
+             * <p>The name of the access control list (ACL).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder aclName(String aclName) {
                 this.aclName = aclName;
@@ -898,7 +1172,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AclStatus.
+             * <p>Indicates whether the ACL is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder aclStatus(String aclStatus) {
                 this.aclStatus = aclStatus;
@@ -906,7 +1187,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AclType.
+             * <p>The ACL type. Valid values:</p>
+             * <ul>
+             * <li>black: blacklist</li>
+             * <li>white: whitelist</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>white</p>
              */
             public Builder aclType(String aclType) {
                 this.aclType = aclType;
@@ -914,7 +1202,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ClassicEgressAddress.
+             * <p>The egress IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.0.1</p>
              */
             public Builder classicEgressAddress(String classicEgressAddress) {
                 this.classicEgressAddress = classicEgressAddress;
@@ -922,7 +1213,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectCidrBlocks.
+             * <p>The internal CIDR block of the user&quot;s VPC that can be accessed if the instance is a VPC integration instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;172.16.0.0/24&quot;,&quot;172.16.1.0/24&quot;]</p>
              */
             public Builder connectCidrBlocks(String connectCidrBlocks) {
                 this.connectCidrBlocks = connectCidrBlocks;
@@ -930,7 +1224,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VPC融合类型专享实例联通的用户VPC ID
+             * <p>The ID of the user&quot;s VPC if the instance is a VPC integration instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-m5eo7khlb4h4f8y9egsdg</p>
              */
             public Builder connectVpcId(String connectVpcId) {
                 this.connectVpcId = connectVpcId;
@@ -938,7 +1235,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * <p>The time when the instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-10-22 15:36:53.0</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -946,10 +1246,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 专享实例类型
-             * <p>
-             * - vpc_connect：VPC融合类型专享实例
-             * - normal：传统类型专享实例
+             * <p>The type of the dedicated instance. Valid values:</p>
+             * <ul>
+             * <li>vpc_connect: VPC integration instance</li>
+             * <li>normal: conventional dedicated instance</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc_connect</p>
              */
             public Builder dedicatedInstanceType(String dedicatedInstanceType) {
                 this.dedicatedInstanceType = dedicatedInstanceType;
@@ -957,7 +1261,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EgressIpv6Enable.
+             * <p>Indicates whether outbound IPv6 traffic is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder egressIpv6Enable(Boolean egressIpv6Enable) {
                 this.egressIpv6Enable = egressIpv6Enable;
@@ -965,7 +1272,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredTime.
+             * <p>The time when the instance expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1659801600000</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -973,7 +1283,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsPolicies.
+             * <p>The HTTPS security policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTPS2_TLS1_2</p>
              */
             public Builder httpsPolicies(String httpsPolicies) {
                 this.httpsPolicies = httpsPolicies;
@@ -981,7 +1294,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * IPV6AclId.
+             * <p>The ID of the IPv6 ACL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acl-124resFfs235</p>
              */
             public Builder IPV6AclId(String IPV6AclId) {
                 this.IPV6AclId = IPV6AclId;
@@ -989,7 +1305,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * IPV6AclName.
+             * <p>The name of the IPv6 ACL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testIPV6</p>
              */
             public Builder IPV6AclName(String IPV6AclName) {
                 this.IPV6AclName = IPV6AclName;
@@ -997,7 +1316,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * IPV6AclStatus.
+             * <p>Indicates whether the IPv6 ACL is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder IPV6AclStatus(String IPV6AclStatus) {
                 this.IPV6AclStatus = IPV6AclStatus;
@@ -1005,7 +1331,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * IPV6AclType.
+             * <p>The type of the IPv6 ACL. Valid values:</p>
+             * <ul>
+             * <li>black: blacklist</li>
+             * <li>white: whitelist</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>black</p>
              */
             public Builder IPV6AclType(String IPV6AclType) {
                 this.IPV6AclType = IPV6AclType;
@@ -1013,7 +1346,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceChargeType.
+             * <p>The billing method of the instance. Valid values:</p>
+             * <ul>
+             * <li>PrePaid: subscription</li>
+             * <li>PayAsYouGo: pay-as-you-go</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PrePaid</p>
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -1021,10 +1361,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 专享实例所在网段
-             * <p>
-             * - 172.16.0.0/12
-             * - 192.168.0.0/16
+             * <p>The CIDR block of the dedicated instance.</p>
+             * <ul>
+             * <li>172.16.0.0/12</li>
+             * <li>192.168.0.0/16</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.0/16</p>
              */
             public Builder instanceCidrBlock(String instanceCidrBlock) {
                 this.instanceCidrBlock = instanceCidrBlock;
@@ -1032,7 +1376,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceClusterId.
+             * <p>The ID of the cluster to which the dedicated instance cluster belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>apigateway-cluster-sh-1523cafbgffd</p>
              */
             public Builder instanceClusterId(String instanceClusterId) {
                 this.instanceClusterId = instanceClusterId;
@@ -1040,7 +1387,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api-shared-vpc-020</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1048,7 +1398,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -1056,7 +1409,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceRpsLimit.
+             * <p>The requests per second (RPS) limit on the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder instanceRpsLimit(Integer instanceRpsLimit) {
                 this.instanceRpsLimit = instanceRpsLimit;
@@ -1064,7 +1420,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceSpec.
+             * <p>The instance specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api.s1.small</p>
              */
             public Builder instanceSpec(String instanceSpec) {
                 this.instanceSpec = instanceSpec;
@@ -1072,7 +1431,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceSpecAttributes.
+             * <p>The instance specification details.</p>
              */
             public Builder instanceSpecAttributes(InstanceSpecAttributes instanceSpecAttributes) {
                 this.instanceSpecAttributes = instanceSpecAttributes;
@@ -1080,7 +1439,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * <p>The instance type. Valid values:</p>
+             * <ul>
+             * <li>VPC_SHARED: shared instance (VPC)</li>
+             * <li>VPC_DEDICATED: dedicated instance (VPC)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC_SHARED</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -1088,7 +1454,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InternetEgressAddress.
+             * <p>The outbound public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.241.89.244</p>
              */
             public Builder internetEgressAddress(String internetEgressAddress) {
                 this.internetEgressAddress = internetEgressAddress;
@@ -1096,7 +1465,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetSegments.
+             * <p>The internal CIDR block that is allowed to access the API Gateway instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;172.36.0.0/16&quot;,&quot;172.31.16.0/20&quot;]</p>
              */
             public Builder intranetSegments(String intranetSegments) {
                 this.intranetSegments = intranetSegments;
@@ -1104,7 +1476,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MaintainEndTime.
+             * <p>The end time of the maintenance window. The time is in the <em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>01:00Z</p>
              */
             public Builder maintainEndTime(String maintainEndTime) {
                 this.maintainEndTime = maintainEndTime;
@@ -1112,7 +1487,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MaintainStartTime.
+             * <p>The start time of the maintenance window. The time is in the <em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22:00Z</p>
              */
             public Builder maintainStartTime(String maintainStartTime) {
                 this.maintainStartTime = maintainStartTime;
@@ -1120,7 +1498,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VPC融合类型专享实例连通的用户VPC内的网络信息
+             * <p>The network information of the user&quot;s VPC if the instance is a VPC integration instance.</p>
              */
             public Builder networkInterfaceAttributes(NetworkInterfaceAttributes networkInterfaceAttributes) {
                 this.networkInterfaceAttributes = networkInterfaceAttributes;
@@ -1128,7 +1506,29 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The new VPC egress CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.104.253.0/26</p>
+             */
+            public Builder newVpcEgressAddress(String newVpcEgressAddress) {
+                this.newVpcEgressAddress = newVpcEgressAddress;
+                return this;
+            }
+
+            /**
+             * <p>The private DNS list.</p>
+             */
+            public Builder privateDnsList(PrivateDnsList privateDnsList) {
+                this.privateDnsList = privateDnsList;
+                return this;
+            }
+
+            /**
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1136,7 +1536,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The instance status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1144,7 +1547,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SupportIpv6.
+             * <p>Indicates whether IPv6 traffic is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportIpv6(Boolean supportIpv6) {
                 this.supportIpv6 = supportIpv6;
@@ -1152,7 +1558,18 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * UserVpcId.
+             * <p>The tags of the instance.</p>
+             */
+            public Builder tags(Tags tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
+             * <p>The user VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-t<em><strong>hx</strong></em><em>yu9</em>***t0g4</p>
              */
             public Builder userVpcId(String userVpcId) {
                 this.userVpcId = userVpcId;
@@ -1160,7 +1577,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * UserVswitchId.
+             * <p>The user vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-t4<em><strong>eh</strong></em><em>d7q</em>***i2f</p>
              */
             public Builder userVswitchId(String userVswitchId) {
                 this.userVswitchId = userVswitchId;
@@ -1168,7 +1588,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcEgressAddress.
+             * <p>The VPC egress CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.104.254.0/26</p>
              */
             public Builder vpcEgressAddress(String vpcEgressAddress) {
                 this.vpcEgressAddress = vpcEgressAddress;
@@ -1176,7 +1599,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcIntranetEnable.
+             * <p>Indicates whether VPC access is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder vpcIntranetEnable(Boolean vpcIntranetEnable) {
                 this.vpcIntranetEnable = vpcIntranetEnable;
@@ -1184,7 +1610,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcOwnerId.
+             * <p>The ID of the account to which the VPC-based instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1408453217640291****</p>
              */
             public Builder vpcOwnerId(Long vpcOwnerId) {
                 this.vpcOwnerId = vpcOwnerId;
@@ -1192,7 +1621,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcSlbIntranetEnable.
+             * <p>Indicates whether virtual private cloud (VPC) Server Load Balancer (SLB) is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder vpcSlbIntranetEnable(Boolean vpcSlbIntranetEnable) {
                 this.vpcSlbIntranetEnable = vpcSlbIntranetEnable;
@@ -1200,7 +1632,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 可用区ID
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-MAZ5(g,h)</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -1208,7 +1643,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneLocalName.
+             * <p>The zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Multi-Availability Zone 3(b,c,a)</p>
              */
             public Builder zoneLocalName(String zoneLocalName) {
                 this.zoneLocalName = zoneLocalName;
@@ -1222,9 +1660,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class Instances extends TeaModel {
-        @NameInMap("InstanceAttribute")
-        private java.util.List < InstanceAttribute> instanceAttribute;
+        @com.aliyun.core.annotation.NameInMap("InstanceAttribute")
+        private java.util.List<InstanceAttribute> instanceAttribute;
 
         private Instances(Builder builder) {
             this.instanceAttribute = builder.instanceAttribute;
@@ -1241,17 +1685,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return instanceAttribute
          */
-        public java.util.List < InstanceAttribute> getInstanceAttribute() {
+        public java.util.List<InstanceAttribute> getInstanceAttribute() {
             return this.instanceAttribute;
         }
 
         public static final class Builder {
-            private java.util.List < InstanceAttribute> instanceAttribute; 
+            private java.util.List<InstanceAttribute> instanceAttribute; 
 
             /**
              * InstanceAttribute.
              */
-            public Builder instanceAttribute(java.util.List < InstanceAttribute> instanceAttribute) {
+            public Builder instanceAttribute(java.util.List<InstanceAttribute> instanceAttribute) {
                 this.instanceAttribute = instanceAttribute;
                 return this;
             }

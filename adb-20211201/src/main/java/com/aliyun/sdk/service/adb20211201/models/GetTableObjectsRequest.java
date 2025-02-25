@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTableObjectsRequest} extends {@link RequestModel}
  *
  * <p>GetTableObjectsRequest</p>
  */
 public class GetTableObjectsRequest extends Request {
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("FilterDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FilterDescription")
     private String filterDescription;
 
-    @Query
-    @NameInMap("FilterOwner")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FilterOwner")
     private String filterOwner;
 
-    @Query
-    @NameInMap("FilterTblName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FilterTblName")
     private String filterTblName;
 
-    @Query
-    @NameInMap("FilterTblType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FilterTblType")
     private String filterTblType;
 
-    @Query
-    @NameInMap("OrderBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderBy")
     private String orderBy;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("SchemaName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SchemaName")
     private String schemaName;
 
     private GetTableObjectsRequest(Builder builder) {
@@ -182,7 +187,11 @@ public class GetTableObjectsRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-bp1565u55p32****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -191,7 +200,10 @@ public class GetTableObjectsRequest extends Request {
         }
 
         /**
-         * The description of the table.
+         * <p>The description of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
          */
         public Builder filterDescription(String filterDescription) {
             this.putQueryParameter("FilterDescription", filterDescription);
@@ -200,7 +212,10 @@ public class GetTableObjectsRequest extends Request {
         }
 
         /**
-         * The owner of the table.
+         * <p>The owner of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         public Builder filterOwner(String filterOwner) {
             this.putQueryParameter("FilterOwner", filterOwner);
@@ -209,7 +224,10 @@ public class GetTableObjectsRequest extends Request {
         }
 
         /**
-         * The name of the table.
+         * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_tbl</p>
          */
         public Builder filterTblName(String filterTblName) {
             this.putQueryParameter("FilterTblName", filterTblName);
@@ -218,18 +236,15 @@ public class GetTableObjectsRequest extends Request {
         }
 
         /**
-         * The type of the table.
-         * <p>
+         * <p>The type of the table.</p>
+         * <p>Valid values:</p>
+         * <p>DIMENSION_TABLE</p>
+         * <p>FACT_TABLE</p>
+         * <p>EXTERNAL_TABLE</p>
+         * <p>Default value: null.</p>
          * 
-         * Valid values:
-         * 
-         * DIMENSION_TABLE
-         * 
-         * FACT_TABLE
-         * 
-         * EXTERNAL_TABLE
-         * 
-         * Default value: null.
+         * <strong>example:</strong>
+         * <p>FACT_TABLE</p>
          */
         public Builder filterTblType(String filterTblType) {
             this.putQueryParameter("FilterTblType", filterTblType);
@@ -238,25 +253,21 @@ public class GetTableObjectsRequest extends Request {
         }
 
         /**
-         * The order in which the fields to be returned are sorted.
-         * <p>
+         * <p>The order in which the fields to be returned are sorted.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Asc</li>
+         * <li>Desc</li>
+         * </ul>
+         * <p>Values for fields:</p>
+         * <p>TableName</p>
+         * <p>TableSize</p>
+         * <p>CreateTime</p>
+         * <p>UpdateTime</p>
+         * <p>Default value: {&quot;Type&quot;: &quot;Desc&quot;,&quot;Field&quot;: &quot;TableName&quot;};</p>
          * 
-         * Valid values:
-         * 
-         * *   Asc
-         * *   Desc
-         * 
-         * Values for fields:
-         * 
-         * TableName
-         * 
-         * TableSize
-         * 
-         * CreateTime
-         * 
-         * UpdateTime
-         * 
-         * Default value: {"Type": "Desc","Field": "TableName"};
+         * <strong>example:</strong>
+         * <p>{&quot;Type&quot;: &quot;Desc&quot;,&quot;Field&quot;: &quot;TableName&quot;}</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -265,7 +276,10 @@ public class GetTableObjectsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value is an integer that is greater than 0. Default value: **1**.
+         * <p>The number of the page to return. The value is an integer that is greater than 0. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -274,14 +288,16 @@ public class GetTableObjectsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values:
-         * <p>
+         * <p>The number of entries to return on each page. Valid values:</p>
+         * <ul>
+         * <li>30</li>
+         * <li>50</li>
+         * <li>100</li>
+         * </ul>
+         * <p>Default value: 30.</p>
          * 
-         * *   30
-         * *   50
-         * *   100
-         * 
-         * Default value: 30.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -290,7 +306,11 @@ public class GetTableObjectsRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the cluster resides.
+         * <p>The ID of the region in which the cluster resides.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -299,7 +319,10 @@ public class GetTableObjectsRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adb_demo</p>
          */
         public Builder schemaName(String schemaName) {
             this.putQueryParameter("SchemaName", schemaName);

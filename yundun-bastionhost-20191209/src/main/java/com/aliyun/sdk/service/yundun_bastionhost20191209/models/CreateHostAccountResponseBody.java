@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateHostAccountResponseBody} extends {@link TeaModel}
  *
  * <p>CreateHostAccountResponseBody</p>
  */
 public class CreateHostAccountResponseBody extends TeaModel {
-    @NameInMap("HostAccountId")
+    @com.aliyun.core.annotation.NameInMap("HostAccountId")
     private String hostAccountId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateHostAccountResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class CreateHostAccountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The operation that you want to perform. Set the value to <strong>CreateHostAccount</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder hostAccountId(String hostAccountId) {
             this.hostAccountId = hostAccountId;
@@ -58,7 +61,10 @@ public class CreateHostAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **CreateHostAccount**.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

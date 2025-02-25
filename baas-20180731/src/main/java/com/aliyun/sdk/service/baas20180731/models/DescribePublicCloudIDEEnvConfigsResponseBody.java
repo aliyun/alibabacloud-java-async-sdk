@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePublicCloudIDEEnvConfigsResponseBody</p>
  */
 public class DescribePublicCloudIDEEnvConfigsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private DescribePublicCloudIDEEnvConfigsResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribePublicCloudIDEEnvConfigsResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("Bizid")
+        @com.aliyun.core.annotation.NameInMap("Bizid")
         private String bizid;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("TrialAccount")
+        @com.aliyun.core.annotation.NameInMap("TrialAccount")
         private String trialAccount;
 
-        @NameInMap("TrialAccountPrivateKey")
+        @com.aliyun.core.annotation.NameInMap("TrialAccountPrivateKey")
         private String trialAccountPrivateKey;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private Result(Builder builder) {

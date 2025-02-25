@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDatasetItemListRequest} extends {@link RequestModel}
  *
  * <p>DescribeDatasetItemListRequest</p>
  */
 public class DescribeDatasetItemListRequest extends Request {
-    @Query
-    @NameInMap("DatasetId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatasetId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String datasetId;
 
-    @Query
-    @NameInMap("DatasetItemIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatasetItemIds")
     private String datasetItemIds;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private DescribeDatasetItemListRequest(Builder builder) {
@@ -111,7 +116,11 @@ public class DescribeDatasetItemListRequest extends Request {
         } 
 
         /**
-         * The ID of the dataset.
+         * <p>The ID of the dataset.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>602e1f6b3543200eaab0a89e********</p>
          */
         public Builder datasetId(String datasetId) {
             this.putQueryParameter("DatasetId", datasetId);
@@ -120,7 +129,10 @@ public class DescribeDatasetItemListRequest extends Request {
         }
 
         /**
-         * The ID of the data entry. You can enter multiple IDs. Separate them with commas (,).
+         * <p>The ID of the data entry. You can enter multiple IDs. Separate them with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5045****</p>
          */
         public Builder datasetItemIds(String datasetItemIds) {
             this.putQueryParameter("DatasetItemIds", datasetItemIds);
@@ -129,7 +141,10 @@ public class DescribeDatasetItemListRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -138,7 +153,10 @@ public class DescribeDatasetItemListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10.
+         * <p>The number of entries to return on each page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

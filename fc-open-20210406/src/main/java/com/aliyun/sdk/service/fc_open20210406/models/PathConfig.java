@@ -98,7 +98,7 @@ public class PathConfig extends TeaModel {
         private String serviceName; 
 
         /**
-         * 该路径/方法对应的函数名称
+         * functionName.
          */
         public Builder functionName(String functionName) {
             this.functionName = functionName;
@@ -106,7 +106,7 @@ public class PathConfig extends TeaModel {
         }
 
         /**
-         * 请求方法，不填表示当前路径的所有方法匹配同一函数
+         * methods.
          */
         public Builder methods(java.util.List < String > methods) {
             this.methods = methods;
@@ -114,7 +114,7 @@ public class PathConfig extends TeaModel {
         }
 
         /**
-         * 请求路径
+         * path.
          */
         public Builder path(String path) {
             this.path = path;
@@ -122,7 +122,7 @@ public class PathConfig extends TeaModel {
         }
 
         /**
-         * 该路径/方法对应服务的版本/别名
+         * qualifier.
          */
         public Builder qualifier(String qualifier) {
             this.qualifier = qualifier;
@@ -130,7 +130,7 @@ public class PathConfig extends TeaModel {
         }
 
         /**
-         * URI重写配置
+         * rewriteConfig.
          */
         public Builder rewriteConfig(RewriteConfig rewriteConfig) {
             this.rewriteConfig = rewriteConfig;
@@ -138,7 +138,7 @@ public class PathConfig extends TeaModel {
         }
 
         /**
-         * 该路径/方法对应的服务名称
+         * serviceName.
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;

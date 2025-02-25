@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyTenantUserStatusResponseBody</p>
  */
 public class ModifyTenantUserStatusResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TenantUser")
+    @com.aliyun.core.annotation.NameInMap("TenantUser")
     private java.util.List < TenantUser> tenantUser;
 
     private ModifyTenantUserStatusResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class ModifyTenantUserStatusResponseBody extends TeaModel {
     } 
 
     public static class TenantUser extends TeaModel {
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
-        @NameInMap("UserStatus")
+        @com.aliyun.core.annotation.NameInMap("UserStatus")
         private String userStatus;
 
         private TenantUser(Builder builder) {

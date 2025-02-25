@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHistoricalCallerReportRequest} extends {@link RequestModel}
  *
  * <p>GetHistoricalCallerReportRequest</p>
  */
 public class GetHistoricalCallerReportRequest extends Request {
-    @Query
-    @NameInMap("CallingNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallingNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String callingNumber;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true, maximum = 4102416000000D)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 4102416000000D)
     private Long startTime;
 
-    @Query
-    @NameInMap("StopTime")
-    @Validation(required = true, maximum = 4102416000000D)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StopTime")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 4102416000000D)
     private Long stopTime;
 
     private GetHistoricalCallerReportRequest(Builder builder) {
@@ -100,7 +105,10 @@ public class GetHistoricalCallerReportRequest extends Request {
         } 
 
         /**
-         * CallingNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1900000****</p>
          */
         public Builder callingNumber(String callingNumber) {
             this.putQueryParameter("CallingNumber", callingNumber);
@@ -109,7 +117,10 @@ public class GetHistoricalCallerReportRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -118,7 +129,10 @@ public class GetHistoricalCallerReportRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1646841600000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -127,7 +141,10 @@ public class GetHistoricalCallerReportRequest extends Request {
         }
 
         /**
-         * StopTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1646928000000</p>
          */
         public Builder stopTime(Long stopTime) {
             this.putQueryParameter("StopTime", stopTime);

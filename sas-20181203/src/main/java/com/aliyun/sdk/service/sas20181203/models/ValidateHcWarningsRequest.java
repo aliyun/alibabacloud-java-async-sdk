@@ -1,34 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ValidateHcWarningsRequest} extends {@link RequestModel}
  *
  * <p>ValidateHcWarningsRequest</p>
  */
 public class ValidateHcWarningsRequest extends Request {
-    @Query
-    @NameInMap("CheckIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckIds")
     private String checkIds;
 
-    @Query
-    @NameInMap("RiskIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RiskIds")
     private String riskIds;
 
-    @Query
-    @NameInMap("Uuids")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private Integer status;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuids")
     private String uuids;
 
     private ValidateHcWarningsRequest(Builder builder) {
         super(builder);
         this.checkIds = builder.checkIds;
         this.riskIds = builder.riskIds;
+        this.status = builder.status;
         this.uuids = builder.uuids;
     }
 
@@ -60,6 +69,13 @@ public class ValidateHcWarningsRequest extends Request {
     }
 
     /**
+     * @return status
+     */
+    public Integer getStatus() {
+        return this.status;
+    }
+
+    /**
      * @return uuids
      */
     public String getUuids() {
@@ -69,6 +85,7 @@ public class ValidateHcWarningsRequest extends Request {
     public static final class Builder extends Request.Builder<ValidateHcWarningsRequest, Builder> {
         private String checkIds; 
         private String riskIds; 
+        private Integer status; 
         private String uuids; 
 
         private Builder() {
@@ -79,14 +96,18 @@ public class ValidateHcWarningsRequest extends Request {
             super(request);
             this.checkIds = request.checkIds;
             this.riskIds = request.riskIds;
+            this.status = request.status;
             this.uuids = request.uuids;
         } 
 
         /**
-         * The IDs of the check items. Separate multiple IDs with commas (,).
-         * <p>
+         * <p>The IDs of check items that you want to verify. Separate multiple IDs with commas (,).</p>
+         * <blockquote>
+         * <p>You can use <a href="https://help.aliyun.com/document_detail/116179.html">DescribeCheckWarningSummary</a> to get IDs of check items.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeCheckWarningSummary](~~116179~~) operation to query the IDs of check items.
+         * <strong>example:</strong>
+         * <p>695,234</p>
          */
         public Builder checkIds(String checkIds) {
             this.putQueryParameter("CheckIds", checkIds);
@@ -95,10 +116,10 @@ public class ValidateHcWarningsRequest extends Request {
         }
 
         /**
-         * The list of IDs of the risk items that you want to verify. Separate multiple IDs with commas (,).
-         * <p>
+         * <p>The IDs of risk items that you want to verify. Separate multiple IDs with commas (,).</p>
          * 
-         * > You can call the [DescribeCheckWarnings](~~DescribeCheckWarnings~~) operation to query the IDs of risk items.
+         * <strong>example:</strong>
+         * <p>43</p>
          */
         public Builder riskIds(String riskIds) {
             this.putQueryParameter("RiskIds", riskIds);
@@ -107,10 +128,30 @@ public class ValidateHcWarningsRequest extends Request {
         }
 
         /**
-         * The UUIDs of the servers on which you want to verify the risk items. Separate multiple UUIDs with commas (,).
-         * <p>
+         * <p>The status of the check item that you want to verify.</p>
+         * <ul>
+         * <li>1: failed</li>
+         * <li>3: passed</li>
+         * <li>5: expired</li>
+         * </ul>
          * 
-         * > You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder status(Integer status) {
+            this.putQueryParameter("Status", status);
+            this.status = status;
+            return this;
+        }
+
+        /**
+         * <p>The UUIDs of the servers on which you want to verify the risk items. Separate multiple UUIDs with commas (,).</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>78645c8e-2e89-441b-8eb,a9622a6b-adb5-4dd3-929e,0136460a-1cb5-44e8-****</p>
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

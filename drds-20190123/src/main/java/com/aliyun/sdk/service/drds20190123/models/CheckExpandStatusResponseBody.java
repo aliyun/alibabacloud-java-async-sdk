@@ -62,7 +62,7 @@ public class CheckExpandStatusResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The result of the verification.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class CheckExpandStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class CheckExpandStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * The result of the request.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,7 +130,7 @@ public class CheckExpandStatusResponseBody extends TeaModel {
             private String msg; 
 
             /**
-             * IsActive.
+             * Indicates whether scale-out operations can be performed on the database.
              */
             public Builder isActive(Boolean isActive) {
                 this.isActive = isActive;
@@ -138,7 +138,7 @@ public class CheckExpandStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Msg.
+             * The additional information.
              */
             public Builder msg(String msg) {
                 this.msg = msg;

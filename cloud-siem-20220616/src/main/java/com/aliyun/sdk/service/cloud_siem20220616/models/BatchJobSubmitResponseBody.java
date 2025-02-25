@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BatchJobSubmitResponseBody</p>
  */
 public class BatchJobSubmitResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private BatchJobSubmitResponseBody(Builder builder) {
@@ -98,7 +97,7 @@ public class BatchJobSubmitResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +105,7 @@ public class BatchJobSubmitResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +113,7 @@ public class BatchJobSubmitResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * The error code.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -122,7 +121,7 @@ public class BatchJobSubmitResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +129,7 @@ public class BatchJobSubmitResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +137,11 @@ public class BatchJobSubmitResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -152,22 +155,22 @@ public class BatchJobSubmitResponseBody extends TeaModel {
     } 
 
     public static class LogList extends TeaModel {
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("LogCode")
+        @com.aliyun.core.annotation.NameInMap("LogCode")
         private String logCode;
 
-        @NameInMap("LogStoreNamePattern")
+        @com.aliyun.core.annotation.NameInMap("LogStoreNamePattern")
         private String logStoreNamePattern;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("ProjectNamePattern")
+        @com.aliyun.core.annotation.NameInMap("ProjectNamePattern")
         private String projectNamePattern;
 
-        @NameInMap("RegionCode")
+        @com.aliyun.core.annotation.NameInMap("RegionCode")
         private String regionCode;
 
         private LogList(Builder builder) {
@@ -238,7 +241,7 @@ public class BatchJobSubmitResponseBody extends TeaModel {
             private String regionCode; 
 
             /**
-             * ErrorCode.
+             * The error code returned.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -246,7 +249,7 @@ public class BatchJobSubmitResponseBody extends TeaModel {
             }
 
             /**
-             * LogCode.
+             * The log code.
              */
             public Builder logCode(String logCode) {
                 this.logCode = logCode;
@@ -254,7 +257,7 @@ public class BatchJobSubmitResponseBody extends TeaModel {
             }
 
             /**
-             * LogStoreNamePattern.
+             * The pattern of SLS log store name.
              */
             public Builder logStoreNamePattern(String logStoreNamePattern) {
                 this.logStoreNamePattern = logStoreNamePattern;
@@ -262,7 +265,7 @@ public class BatchJobSubmitResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * The code of product.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -270,7 +273,7 @@ public class BatchJobSubmitResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectNamePattern.
+             * The pattern of SLS project name.
              */
             public Builder projectNamePattern(String projectNamePattern) {
                 this.projectNamePattern = projectNamePattern;
@@ -278,7 +281,7 @@ public class BatchJobSubmitResponseBody extends TeaModel {
             }
 
             /**
-             * RegionCode.
+             * The ID of the region in which the instance resides.
              */
             public Builder regionCode(String regionCode) {
                 this.regionCode = regionCode;
@@ -293,10 +296,10 @@ public class BatchJobSubmitResponseBody extends TeaModel {
 
     }
     public static class ProductList extends TeaModel {
-        @NameInMap("LogList")
+        @com.aliyun.core.annotation.NameInMap("LogList")
         private java.util.List < LogList> logList;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
         private ProductList(Builder builder) {
@@ -331,7 +334,7 @@ public class BatchJobSubmitResponseBody extends TeaModel {
             private String productCode; 
 
             /**
-             * LogList.
+             * The list of log.
              */
             public Builder logList(java.util.List < LogList> logList) {
                 this.logList = logList;
@@ -339,7 +342,7 @@ public class BatchJobSubmitResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * The code of the product.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -354,10 +357,10 @@ public class BatchJobSubmitResponseBody extends TeaModel {
 
     }
     public static class ConfigList extends TeaModel {
-        @NameInMap("ProductList")
+        @com.aliyun.core.annotation.NameInMap("ProductList")
         private java.util.List < ProductList> productList;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
 
         private ConfigList(Builder builder) {
@@ -392,7 +395,7 @@ public class BatchJobSubmitResponseBody extends TeaModel {
             private Long userId; 
 
             /**
-             * ProductList.
+             * The list of product.
              */
             public Builder productList(java.util.List < ProductList> productList) {
                 this.productList = productList;
@@ -400,7 +403,7 @@ public class BatchJobSubmitResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The account id of aliyun.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -415,16 +418,16 @@ public class BatchJobSubmitResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("ConfigId")
+        @com.aliyun.core.annotation.NameInMap("ConfigId")
         private String configId;
 
-        @NameInMap("ConfigList")
+        @com.aliyun.core.annotation.NameInMap("ConfigList")
         private java.util.List < ConfigList> configList;
 
-        @NameInMap("SubmitId")
+        @com.aliyun.core.annotation.NameInMap("SubmitId")
         private String submitId;
 
-        @NameInMap("TaskCount")
+        @com.aliyun.core.annotation.NameInMap("TaskCount")
         private Integer taskCount;
 
         private Data(Builder builder) {
@@ -477,7 +480,7 @@ public class BatchJobSubmitResponseBody extends TeaModel {
             private Integer taskCount; 
 
             /**
-             * ConfigId.
+             * The ID of the task configuration.
              */
             public Builder configId(String configId) {
                 this.configId = configId;
@@ -485,7 +488,7 @@ public class BatchJobSubmitResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigList.
+             * The list of task configure.
              */
             public Builder configList(java.util.List < ConfigList> configList) {
                 this.configList = configList;
@@ -493,7 +496,7 @@ public class BatchJobSubmitResponseBody extends TeaModel {
             }
 
             /**
-             * SubmitId.
+             * The id of task.
              */
             public Builder submitId(String submitId) {
                 this.submitId = submitId;
@@ -501,7 +504,7 @@ public class BatchJobSubmitResponseBody extends TeaModel {
             }
 
             /**
-             * TaskCount.
+             * The number of existing tasks that are created to add logs within the data source.
              */
             public Builder taskCount(Integer taskCount) {
                 this.taskCount = taskCount;

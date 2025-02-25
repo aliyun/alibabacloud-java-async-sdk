@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMonitoringAgentStatusesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMonitoringAgentStatusesResponseBody</p>
  */
 public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("NodeStatusList")
+    @com.aliyun.core.annotation.NameInMap("NodeStatusList")
     private NodeStatusList nodeStatusList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeMonitoringAgentStatusesResponseBody(Builder builder) {
@@ -86,10 +86,13 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p>The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * > The status code 200 indicates that the request was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -97,7 +100,10 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified resource is not found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -105,7 +111,7 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
         }
 
         /**
-         * The status information.
+         * <p>The host status information.</p>
          */
         public Builder nodeStatusList(NodeStatusList nodeStatusList) {
             this.nodeStatusList = nodeStatusList;
@@ -113,7 +119,10 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6F8371DF-AB81-41B8-9E1B-5493B3FF0E4F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,11 +130,14 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,32 +150,38 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMonitoringAgentStatusesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitoringAgentStatusesResponseBody</p>
+     */
     public static class NodeStatus extends TeaModel {
-        @NameInMap("AgentInstallErrorCode")
+        @com.aliyun.core.annotation.NameInMap("AgentInstallErrorCode")
         private String agentInstallErrorCode;
 
-        @NameInMap("AutoInstall")
+        @com.aliyun.core.annotation.NameInMap("AutoInstall")
         private Boolean autoInstall;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("OsMonitorConfig")
+        @com.aliyun.core.annotation.NameInMap("OsMonitorConfig")
         private String osMonitorConfig;
 
-        @NameInMap("OsMonitorErrorCode")
+        @com.aliyun.core.annotation.NameInMap("OsMonitorErrorCode")
         private String osMonitorErrorCode;
 
-        @NameInMap("OsMonitorErrorDetail")
+        @com.aliyun.core.annotation.NameInMap("OsMonitorErrorDetail")
         private String osMonitorErrorDetail;
 
-        @NameInMap("OsMonitorStatus")
+        @com.aliyun.core.annotation.NameInMap("OsMonitorStatus")
         private String osMonitorStatus;
 
-        @NameInMap("OsMonitorVersion")
+        @com.aliyun.core.annotation.NameInMap("OsMonitorVersion")
         private String osMonitorVersion;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private NodeStatus(Builder builder) {
@@ -261,7 +279,15 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * AgentInstallErrorCode.
+             * <p>The error code returned when the CloudMonitor agent is installed. Valid values:</p>
+             * <ul>
+             * <li>Common.Timeout: The installation timed out.</li>
+             * <li>Common.SLR: The service-linked role for CloudMonitor is unauthorized.</li>
+             * <li>Common.OS: The operating system is not supported.</li>
+             * <li>Assist.Invalid: Cloud Assistant is not running.</li>
+             * <li>Assist.Invoke: An error occurred when the installation program is started.</li>
+             * <li>Assist.Execute: An error occurred when the installation program is running.</li>
+             * </ul>
              */
             public Builder agentInstallErrorCode(String agentInstallErrorCode) {
                 this.agentInstallErrorCode = agentInstallErrorCode;
@@ -269,11 +295,14 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the CloudMonitor agent is automatically installed. Valid values:
-             * <p>
+             * <p>Indicates whether the CloudMonitor agent is automatically installed. Valid values:</p>
+             * <ul>
+             * <li>true: The CloudMonitor agent is automatically installed.</li>
+             * <li>false: The CloudMonitor agent is not automatically installed.</li>
+             * </ul>
              * 
-             * *   true: The CloudMonitor agent is automatically installed.
-             * *   false: The CloudMonitor agent is not automatically installed.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoInstall(Boolean autoInstall) {
                 this.autoInstall = autoInstall;
@@ -281,7 +310,10 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-hp3dunahluwajv6f****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -289,12 +321,14 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * SysOM插件的配置信息`sysak`是否开启监控。取值：
-             * <p>
+             * <p>Indicates whether the SysAK monitoring feature is enabled.`` Valid values:</p>
+             * <ul>
+             * <li><code>true</code>: The SysAK monitoring feature is enabled.</li>
+             * <li><code>false</code>: the SysAK monitoring feature is disabled.</li>
+             * </ul>
              * 
-             * - true：`sysak`开启监控。
-             * 
-             * - false：`sysak`未开启监控。
+             * <strong>example:</strong>
+             * <p>{&quot;sysak&quot;:true}</p>
              */
             public Builder osMonitorConfig(String osMonitorConfig) {
                 this.osMonitorConfig = osMonitorConfig;
@@ -302,15 +336,18 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * The error status of SysOM. Valid values:
-             * <p>
+             * <p>The error status of SysOM. Valid values:</p>
+             * <ul>
+             * <li><code>install_fail</code>: SysOM fails to be installed or an unknown error occurs.</li>
+             * <li><code>install_assist_invalid</code>: SysOM fails to be installed because the status of Cloud Assistant is invalid.</li>
+             * <li><code>install_assist_command_fail</code>: SysOM fails to be installed because the installation command fails to run.</li>
+             * <li><code>uninstall_fail</code>: SysOM fails to be uninstalled or an unknown error occurs.</li>
+             * <li><code>uninstall_assist_invalid</code>: SysOM fails to be uninstalled because the status of Cloud Assistant is invalid.</li>
+             * <li><code>uninstall_assist_command_fail</code>: SysOM fails to be uninstalled because the uninstallation command fails to run.</li>
+             * </ul>
              * 
-             * *   `install_fail`: SysOM fails to be installed or an unknown error occurs.
-             * *   `install_assist_invalid`: SysOM fails to be installed because the status of Cloud Assistant is invalid.
-             * *   `install_assist_command_fail`: SysOM fails to be installed because the installation command fails to run.
-             * *   `uninstall_fail`: SysOM fails to be uninstalled or an unknown error occurs.
-             * *   `uninstall_assist_invalid`: SysOM fails to be uninstalled because the status of Cloud Assistant is invalid.
-             * *   `uninstall_assist_command_fail`: SysOM fails to be uninstalled because the uninstallation command fails to run.
+             * <strong>example:</strong>
+             * <p>install_fail</p>
              */
             public Builder osMonitorErrorCode(String osMonitorErrorCode) {
                 this.osMonitorErrorCode = osMonitorErrorCode;
@@ -318,14 +355,17 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the execution error. Valid values:
-             * <p>
+             * <p>The details of the execution error. Valid values:</p>
+             * <ul>
+             * <li><code>Command.ErrorCode.Fail.Downlaod.REGIN_ID</code>: Failed to obtain the region ID.</li>
+             * <li><code>Command.ErrorCode.Fail.Downlaod.SYSAK</code>: Failed to download the .rpm package of System Analyse Kit (SysAK).</li>
+             * <li><code>Command.ErrorCode.Fail.Downlaod.CMON_FILE</code>: Failed to download the CMON file.</li>
+             * <li><code>Command.ErrorCode.Fail.Downlaod.BTF</code>: Failed to start SysAK because the BTF file is not found.</li>
+             * <li><code>Command.ErrorCode.Fail.Start.SYSAK</code>: Failed to start SysAK due to an unknown error.</li>
+             * </ul>
              * 
-             * *   `Command.ErrorCode.Fail.Downlaod.REGIN_ID`: Failed to obtain the region ID.
-             * *   `Command.ErrorCode.Fail.Downlaod.SYSAK`: Failed to download the .rpm package of System Analyse Kit (SysAK).
-             * *   `Command.ErrorCode.Fail.Downlaod.CMON_FILE`: Failed to download the CMON file.
-             * *   `Command.ErrorCode.Fail.Downlaod.BTF`: Failed to start SysAK because the BTF file is not found.
-             * *   `Command.ErrorCode.Fail.Start.SYSAK`: Failed to start SysAK due to an unknown error.
+             * <strong>example:</strong>
+             * <p>Command.ErrorCode.Fail.Downlaod.REGIN_ID</p>
              */
             public Builder osMonitorErrorDetail(String osMonitorErrorDetail) {
                 this.osMonitorErrorDetail = osMonitorErrorDetail;
@@ -333,13 +373,16 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of SysOM. Valid values:
-             * <p>
+             * <p>The status of SysOM. Valid values:</p>
+             * <ul>
+             * <li>installing: SysOM is being installed.</li>
+             * <li>running: SysOM is running.</li>
+             * <li>stopped: SysOM is stopped.</li>
+             * <li>uninstalling: SysOM is being uninstalled.</li>
+             * </ul>
              * 
-             * *   installing: SysOM is being installed.
-             * *   running: SysOM is running.
-             * *   stopped: SysOM is stopped.
-             * *   uninstalling: SysOM is being uninstalled.
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder osMonitorStatus(String osMonitorStatus) {
                 this.osMonitorStatus = osMonitorStatus;
@@ -347,7 +390,10 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * SysOM监控的插件版本。
+             * <p>The SysOM version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.3.0-12</p>
              */
             public Builder osMonitorVersion(String osMonitorVersion) {
                 this.osMonitorVersion = osMonitorVersion;
@@ -355,15 +401,18 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the CloudMonitor agent. Valid values:
-             * <p>
+             * <p>The status of the CloudMonitor agent. Valid values:</p>
+             * <ul>
+             * <li>running: The CloudMonitor agent is running.</li>
+             * <li>stopped: The CloudMonitor agent is stopped.</li>
+             * <li>installing: The CloudMonitor agent is being installed.</li>
+             * <li>install_faild: The CloudMonitor agent fails to be installed.</li>
+             * <li>abnormal: The CloudMonitor agent is not properly installed.</li>
+             * <li>not_installed: The CloudMonitor agent is not installed.</li>
+             * </ul>
              * 
-             * *   running: The CloudMonitor agent is running.
-             * *   stopped: The CloudMonitor agent is stopped.
-             * *   installing: The CloudMonitor agent is being installed.
-             * *   install_faild: The CloudMonitor agent fails to be installed.
-             * *   abnormal: The CloudMonitor agent is not properly installed.
-             * *   not_installed: The CloudMonitor agent is not installed.
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -377,8 +426,14 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMonitoringAgentStatusesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitoringAgentStatusesResponseBody</p>
+     */
     public static class NodeStatusList extends TeaModel {
-        @NameInMap("NodeStatus")
+        @com.aliyun.core.annotation.NameInMap("NodeStatus")
         private java.util.List < NodeStatus> nodeStatus;
 
         private NodeStatusList(Builder builder) {

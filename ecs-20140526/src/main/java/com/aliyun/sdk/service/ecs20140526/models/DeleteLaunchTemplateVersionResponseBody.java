@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLaunchTemplateVersionResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteLaunchTemplateVersionResponseBody</p>
  */
 public class DeleteLaunchTemplateVersionResponseBody extends TeaModel {
-    @NameInMap("LaunchTemplateVersions")
+    @com.aliyun.core.annotation.NameInMap("LaunchTemplateVersions")
     private LaunchTemplateVersions launchTemplateVersions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteLaunchTemplateVersionResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DeleteLaunchTemplateVersionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 实例启动模板版本。
+         * <p>The deleted launch template versions.</p>
          */
         public Builder launchTemplateVersions(LaunchTemplateVersions launchTemplateVersions) {
             this.launchTemplateVersions = launchTemplateVersions;
@@ -58,7 +63,10 @@ public class DeleteLaunchTemplateVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class DeleteLaunchTemplateVersionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteLaunchTemplateVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteLaunchTemplateVersionResponseBody</p>
+     */
     public static class LaunchTemplateVersion extends TeaModel {
-        @NameInMap("LaunchTemplateId")
+        @com.aliyun.core.annotation.NameInMap("LaunchTemplateId")
         private String launchTemplateId;
 
-        @NameInMap("LaunchTemplateVersionNumber")
+        @com.aliyun.core.annotation.NameInMap("LaunchTemplateVersionNumber")
         private Long launchTemplateVersionNumber;
 
         private LaunchTemplateVersion(Builder builder) {
@@ -110,7 +124,10 @@ public class DeleteLaunchTemplateVersionResponseBody extends TeaModel {
             private Long launchTemplateVersionNumber; 
 
             /**
-             * 实例启动模板ID。
+             * <p>The ID of the launch template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lt-m5eiaupmvm2op9d****</p>
              */
             public Builder launchTemplateId(String launchTemplateId) {
                 this.launchTemplateId = launchTemplateId;
@@ -118,7 +135,10 @@ public class DeleteLaunchTemplateVersionResponseBody extends TeaModel {
             }
 
             /**
-             * 实例启动模板版本号。
+             * <p>The version number of the launch template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder launchTemplateVersionNumber(Long launchTemplateVersionNumber) {
                 this.launchTemplateVersionNumber = launchTemplateVersionNumber;
@@ -132,9 +152,15 @@ public class DeleteLaunchTemplateVersionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DeleteLaunchTemplateVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteLaunchTemplateVersionResponseBody</p>
+     */
     public static class LaunchTemplateVersions extends TeaModel {
-        @NameInMap("LaunchTemplateVersion")
-        private java.util.List < LaunchTemplateVersion> launchTemplateVersion;
+        @com.aliyun.core.annotation.NameInMap("LaunchTemplateVersion")
+        private java.util.List<LaunchTemplateVersion> launchTemplateVersion;
 
         private LaunchTemplateVersions(Builder builder) {
             this.launchTemplateVersion = builder.launchTemplateVersion;
@@ -151,17 +177,17 @@ public class DeleteLaunchTemplateVersionResponseBody extends TeaModel {
         /**
          * @return launchTemplateVersion
          */
-        public java.util.List < LaunchTemplateVersion> getLaunchTemplateVersion() {
+        public java.util.List<LaunchTemplateVersion> getLaunchTemplateVersion() {
             return this.launchTemplateVersion;
         }
 
         public static final class Builder {
-            private java.util.List < LaunchTemplateVersion> launchTemplateVersion; 
+            private java.util.List<LaunchTemplateVersion> launchTemplateVersion; 
 
             /**
              * LaunchTemplateVersion.
              */
-            public Builder launchTemplateVersion(java.util.List < LaunchTemplateVersion> launchTemplateVersion) {
+            public Builder launchTemplateVersion(java.util.List<LaunchTemplateVersion> launchTemplateVersion) {
                 this.launchTemplateVersion = launchTemplateVersion;
                 return this;
             }

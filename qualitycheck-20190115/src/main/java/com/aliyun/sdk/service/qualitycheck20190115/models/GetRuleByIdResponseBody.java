@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRuleByIdResponseBody} extends {@link TeaModel}
  *
  * <p>GetRuleByIdResponseBody</p>
  */
 public class GetRuleByIdResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private RulesInfo data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Messages")
-    private java.util.List < String > messages;
+    @com.aliyun.core.annotation.NameInMap("Messages")
+    private java.util.List<String> messages;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetRuleByIdResponseBody(Builder builder) {
@@ -82,7 +87,7 @@ public class GetRuleByIdResponseBody extends TeaModel {
     /**
      * @return messages
      */
-    public java.util.List < String > getMessages() {
+    public java.util.List<String> getMessages() {
         return this.messages;
     }
 
@@ -105,7 +110,7 @@ public class GetRuleByIdResponseBody extends TeaModel {
         private RulesInfo data; 
         private Integer httpStatusCode; 
         private String message; 
-        private java.util.List < String > messages; 
+        private java.util.List<String> messages; 
         private String requestId; 
         private Boolean success; 
 
@@ -144,7 +149,7 @@ public class GetRuleByIdResponseBody extends TeaModel {
         /**
          * Messages.
          */
-        public Builder messages(java.util.List < String > messages) {
+        public Builder messages(java.util.List<String> messages) {
             this.messages = messages;
             return this;
         }

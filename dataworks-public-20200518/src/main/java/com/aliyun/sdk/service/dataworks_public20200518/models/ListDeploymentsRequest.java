@@ -1,65 +1,69 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDeploymentsRequest} extends {@link RequestModel}
  *
  * <p>ListDeploymentsRequest</p>
  */
 public class ListDeploymentsRequest extends Request {
-    @Host
-    @NameInMap("Region")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("Creator")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Creator")
     private String creator;
 
-    @Body
-    @NameInMap("EndCreateTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndCreateTime")
     private Long endCreateTime;
 
-    @Body
-    @NameInMap("EndExecuteTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndExecuteTime")
     private Long endExecuteTime;
 
-    @Body
-    @NameInMap("Executor")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Executor")
     private String executor;
 
-    @Body
-    @NameInMap("Keyword")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
-    @Body
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Body
-    @NameInMap("PageSize")
-    @Validation(maximum = 100)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100)
     private Integer pageSize;
 
-    @Body
-    @NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
     private Long projectId;
 
-    @Body
-    @NameInMap("ProjectIdentifier")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectIdentifier")
     private String projectIdentifier;
 
-    @Body
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
     private ListDeploymentsRequest(Builder builder) {
@@ -219,7 +223,7 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -228,7 +232,10 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account used by the user who created the deployment tasks.
+         * <p>The ID of the Alibaba Cloud account used by the user who creates the deployment packages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20030****</p>
          */
         public Builder creator(String creator) {
             this.putBodyParameter("Creator", creator);
@@ -237,7 +244,10 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * The time when the deployment tasks to be queried were created. This value must be a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>The time when the deployment packages to be queried are created. This value must be a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1593877765000</p>
          */
         public Builder endCreateTime(Long endCreateTime) {
             this.putBodyParameter("EndCreateTime", endCreateTime);
@@ -246,7 +256,10 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * The time when the deployment tasks were run. This value must be a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>The time when the deployment packages are run. This value must be a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1593877765000</p>
          */
         public Builder endExecuteTime(Long endExecuteTime) {
             this.putBodyParameter("EndExecuteTime", endExecuteTime);
@@ -255,7 +268,10 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account used by the user who runs the deployment tasks.
+         * <p>The ID of the Alibaba Cloud account used by the user who runs the deployment packages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2003****</p>
          */
         public Builder executor(String executor) {
             this.putBodyParameter("Executor", executor);
@@ -264,7 +280,10 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * The keyword that is contained in the names of the deployment tasks. The keyword is used to search for deployment tasks in fuzzy mode.
+         * <p>The keyword that is contained in the names of the deployment packages. A fuzzy search is supported. After you enter a keyword, all deployment packages whose names contain the keyword are displayed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hello</p>
          */
         public Builder keyword(String keyword) {
             this.putBodyParameter("Keyword", keyword);
@@ -273,7 +292,10 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -282,7 +304,10 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * The number of entries returned per page. Default value: 10. Maximum value: 100.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -291,10 +316,11 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.
-         * <p>
+         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the workspace ID.</p>
+         * <p>You must configure either this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.</p>
          * 
-         * You must configure this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -303,10 +329,11 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * The name of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace name.
-         * <p>
+         * <p>The name of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the workspace name.</p>
+         * <p>You must configure either this parameter or the ProjectId parameter to determine the DataWorks workspace to which the operation is applied.</p>
          * 
-         * You must configure this parameter or the ProjectId parameter to determine the DataWorks workspace to which the operation is applied.
+         * <strong>example:</strong>
+         * <p>dw_project</p>
          */
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);
@@ -315,13 +342,16 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * The status of the deployment tasks. Valid values:
-         * <p>
+         * <p>The status of the deployment packages. Valid values:</p>
+         * <ul>
+         * <li>0: The deployment packages are ready.</li>
+         * <li>1: The deployment packages are deployed.</li>
+         * <li>2: The deployment packages fail to be deployed.</li>
+         * <li>6: The deployment packages are rejected.</li>
+         * </ul>
          * 
-         * *   0: The deployment tasks are ready.
-         * *   1: The deployment tasks are successful.
-         * *   2: The deployment tasks fail.
-         * *   6: The deployment tasks are rejected.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putBodyParameter("Status", status);

@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDefaultPolicyVersionRequest} extends {@link RequestModel}
  *
  * <p>SetDefaultPolicyVersionRequest</p>
  */
 public class SetDefaultPolicyVersionRequest extends Request {
-    @Query
-    @NameInMap("PolicyName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyName")
     private String policyName;
 
-    @Query
-    @NameInMap("VersionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VersionId")
     private String versionId;
 
     private SetDefaultPolicyVersionRequest(Builder builder) {
@@ -61,14 +66,17 @@ public class SetDefaultPolicyVersionRequest extends Request {
             super();
         } 
 
-        private Builder(SetDefaultPolicyVersionRequest response) {
-            super(response);
-            this.policyName = response.policyName;
-            this.versionId = response.versionId;
+        private Builder(SetDefaultPolicyVersionRequest request) {
+            super(request);
+            this.policyName = request.policyName;
+            this.versionId = request.versionId;
         } 
 
         /**
-         * PolicyName.
+         * <p>The name of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS-Administrator</p>
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);
@@ -77,7 +85,10 @@ public class SetDefaultPolicyVersionRequest extends Request {
         }
 
         /**
-         * VersionId.
+         * <p>The ID of the policy version that you want to set as the default version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v2</p>
          */
         public Builder versionId(String versionId) {
             this.putQueryParameter("VersionId", versionId);

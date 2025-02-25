@@ -1,69 +1,74 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eflo_controller20221215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNodeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeNodeResponseBody</p>
  */
 public class DescribeNodeResponseBody extends TeaModel {
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @NameInMap("ClusterName")
+    @com.aliyun.core.annotation.NameInMap("ClusterName")
     private String clusterName;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("ExpiredTime")
+    @com.aliyun.core.annotation.NameInMap("ExpiredTime")
     private String expiredTime;
 
-    @NameInMap("Hostname")
+    @com.aliyun.core.annotation.NameInMap("Hostname")
     private String hostname;
 
-    @NameInMap("HpnZone")
+    @com.aliyun.core.annotation.NameInMap("HpnZone")
     private String hpnZone;
 
-    @NameInMap("ImageId")
+    @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
-    @NameInMap("ImageName")
+    @com.aliyun.core.annotation.NameInMap("ImageName")
     private String imageName;
 
-    @NameInMap("MachineType")
+    @com.aliyun.core.annotation.NameInMap("MachineType")
     private String machineType;
 
-    @NameInMap("Networks")
-    private java.util.List < Networks> networks;
+    @com.aliyun.core.annotation.NameInMap("Networks")
+    private java.util.List<Networks> networks;
 
-    @NameInMap("NodeGroupId")
+    @com.aliyun.core.annotation.NameInMap("NodeGroupId")
     private String nodeGroupId;
 
-    @NameInMap("NodeGroupName")
+    @com.aliyun.core.annotation.NameInMap("NodeGroupName")
     private String nodeGroupName;
 
-    @NameInMap("NodeId")
+    @com.aliyun.core.annotation.NameInMap("NodeId")
     private String nodeId;
 
-    @NameInMap("OperatingState")
+    @com.aliyun.core.annotation.NameInMap("OperatingState")
     private String operatingState;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("Sn")
+    @com.aliyun.core.annotation.NameInMap("Sn")
     private String sn;
 
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private DescribeNodeResponseBody(Builder builder) {
@@ -161,7 +166,7 @@ public class DescribeNodeResponseBody extends TeaModel {
     /**
      * @return networks
      */
-    public java.util.List < Networks> getNetworks() {
+    public java.util.List<Networks> getNetworks() {
         return this.networks;
     }
 
@@ -231,7 +236,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         private String imageId; 
         private String imageName; 
         private String machineType; 
-        private java.util.List < Networks> networks; 
+        private java.util.List<Networks> networks; 
         private String nodeGroupId; 
         private String nodeGroupName; 
         private String nodeId; 
@@ -242,7 +247,10 @@ public class DescribeNodeResponseBody extends TeaModel {
         private String zoneId; 
 
         /**
-         * ClusterId.
+         * <p>Cluster ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i116913051662373010974</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -250,7 +258,10 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * ClusterName.
+         * <p>Cluster name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard_Cluster</p>
          */
         public Builder clusterName(String clusterName) {
             this.clusterName = clusterName;
@@ -258,7 +269,10 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>Creation time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-09-30T03:35:53Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -266,7 +280,10 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * ExpiredTime.
+         * <p>Expiration time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-06-23T16:00:00Z</p>
          */
         public Builder expiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
@@ -274,7 +291,10 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * Hostname.
+         * <p>Hostname</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31d38530-241e-11ed-bc63-acde48001122</p>
          */
         public Builder hostname(String hostname) {
             this.hostname = hostname;
@@ -282,7 +302,10 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * HpnZone.
+         * <p>Cluster number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1</p>
          */
         public Builder hpnZone(String hpnZone) {
             this.hpnZone = hpnZone;
@@ -290,7 +313,10 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * ImageId.
+         * <p>Image ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i190297201634099844192</p>
          */
         public Builder imageId(String imageId) {
             this.imageId = imageId;
@@ -298,7 +324,10 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * 镜像名称
+         * <p>Image name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Centos7.9_all_0811</p>
          */
         public Builder imageName(String imageName) {
             this.imageName = imageName;
@@ -306,7 +335,10 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * MachineType.
+         * <p>Machine type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>efg1.nvga1</p>
          */
         public Builder machineType(String machineType) {
             this.machineType = machineType;
@@ -314,15 +346,18 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * Networks.
+         * <p>Network information</p>
          */
-        public Builder networks(java.util.List < Networks> networks) {
+        public Builder networks(java.util.List<Networks> networks) {
             this.networks = networks;
             return this;
         }
 
         /**
-         * NodeGroupId.
+         * <p>Node group ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ng-ec3c96ff0aa4c60d</p>
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.nodeGroupId = nodeGroupId;
@@ -330,7 +365,10 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * NodeGroupName.
+         * <p>Node group name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>emr-default</p>
          */
         public Builder nodeGroupName(String nodeGroupName) {
             this.nodeGroupName = nodeGroupName;
@@ -338,7 +376,10 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * NodeId.
+         * <p>Node ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e01-cn-zvp2tgykr08</p>
          */
         public Builder nodeId(String nodeId) {
             this.nodeId = nodeId;
@@ -346,7 +387,10 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * OperatingState.
+         * <p>Node status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Using</p>
          */
         public Builder operatingState(String operatingState) {
             this.operatingState = operatingState;
@@ -354,7 +398,10 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AC4F0004-7BCE-52E0-891B-CAC7D64E3368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -362,7 +409,10 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>资源组ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmywpvugkh7kq</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -370,7 +420,10 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * Sn.
+         * <p>Unique machine identifier</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sag42ckf4jx</p>
          */
         public Builder sn(String sn) {
             this.sn = sn;
@@ -378,7 +431,10 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * ZoneId.
+         * <p>Zone ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;
@@ -391,17 +447,23 @@ public class DescribeNodeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNodeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNodeResponseBody</p>
+     */
     public static class Networks extends TeaModel {
-        @NameInMap("BondName")
+        @com.aliyun.core.annotation.NameInMap("BondName")
         private String bondName;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("SubnetId")
+        @com.aliyun.core.annotation.NameInMap("SubnetId")
         private String subnetId;
 
-        @NameInMap("VpdId")
+        @com.aliyun.core.annotation.NameInMap("VpdId")
         private String vpdId;
 
         private Networks(Builder builder) {
@@ -454,7 +516,10 @@ public class DescribeNodeResponseBody extends TeaModel {
             private String vpdId; 
 
             /**
-             * BondName.
+             * <p>Network interface port information</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Bond0</p>
              */
             public Builder bondName(String bondName) {
                 this.bondName = bondName;
@@ -462,7 +527,10 @@ public class DescribeNodeResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * <p>Machine IP</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.254.235.44</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -470,7 +538,10 @@ public class DescribeNodeResponseBody extends TeaModel {
             }
 
             /**
-             * SubnetId.
+             * <p>Cluster subnet ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-uf68v51fldm5egmui5a6k</p>
              */
             public Builder subnetId(String subnetId) {
                 this.subnetId = subnetId;
@@ -478,7 +549,10 @@ public class DescribeNodeResponseBody extends TeaModel {
             }
 
             /**
-             * VpdId.
+             * <p>Cluster network ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpd-xcuhjyrj</p>
              */
             public Builder vpdId(String vpdId) {
                 this.vpdId = vpdId;

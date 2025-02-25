@@ -1,69 +1,74 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTransitRouterRequest} extends {@link RequestModel}
  *
  * <p>CreateTransitRouterRequest</p>
  */
 public class CreateTransitRouterRequest extends Request {
-    @Query
-    @NameInMap("CenId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CenId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cenId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SupportMulticast")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SupportMulticast")
     private Boolean supportMulticast;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Query
-    @NameInMap("TransitRouterCidrList")
-    private java.util.List < TransitRouterCidrList> transitRouterCidrList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterCidrList")
+    private java.util.List<TransitRouterCidrList> transitRouterCidrList;
 
-    @Query
-    @NameInMap("TransitRouterDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterDescription")
     private String transitRouterDescription;
 
-    @Query
-    @NameInMap("TransitRouterName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterName")
     private String transitRouterName;
 
     private CreateTransitRouterRequest(Builder builder) {
@@ -162,14 +167,14 @@ public class CreateTransitRouterRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     /**
      * @return transitRouterCidrList
      */
-    public java.util.List < TransitRouterCidrList> getTransitRouterCidrList() {
+    public java.util.List<TransitRouterCidrList> getTransitRouterCidrList() {
         return this.transitRouterCidrList;
     }
 
@@ -197,8 +202,8 @@ public class CreateTransitRouterRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private Boolean supportMulticast; 
-        private java.util.List < Tag> tag; 
-        private java.util.List < TransitRouterCidrList> transitRouterCidrList; 
+        private java.util.List<Tag> tag; 
+        private java.util.List<TransitRouterCidrList> transitRouterCidrList; 
         private String transitRouterDescription; 
         private String transitRouterName; 
 
@@ -224,7 +229,11 @@ public class CreateTransitRouterRequest extends Request {
         } 
 
         /**
-         * CenId.
+         * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-j3jzhw1zpau2km****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -233,7 +242,14 @@ public class CreateTransitRouterRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not set this parameter, the system automatically uses <strong>RequestId</strong> as <strong>ClientToken</strong>. The value of <strong>RequestId</strong> of each API request is different.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-001****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -242,7 +258,14 @@ public class CreateTransitRouterRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether to check the request without performing the operation. Check items include permissions and the status of the specified cloud resources. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong> (default): sends the request. If the request passes the check, an Enterprise Edition transit router is created.</li>
+         * <li><strong>true</strong>: checks the request but does not create the Enterprise Edition transit router. If you use this value, the system checks whether the required parameters are set, and whether the request syntax is valid. If the request fails the check, an error message is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -269,7 +292,12 @@ public class CreateTransitRouterRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region where the Enterprise Edition transit router is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-zhangjiakou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -296,7 +324,15 @@ public class CreateTransitRouterRequest extends Request {
         }
 
         /**
-         * SupportMulticast.
+         * <p>Specifies whether to enable the multicast feature for the Enterprise Edition transit router. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong> (default): no</li>
+         * <li><strong>true</strong>: yes</li>
+         * </ul>
+         * <p>The multicast feature is supported only in specific regions. You can call <a href="https://help.aliyun.com/document_detail/261356.html">ListTransitRouterAvailableResource</a> to query the regions that support multicast.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder supportMulticast(Boolean supportMulticast) {
             this.putQueryParameter("SupportMulticast", supportMulticast);
@@ -305,18 +341,18 @@ public class CreateTransitRouterRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * TransitRouterCidrList.
+         * <p>The CIDR blocks to be added to the transit router.</p>
          */
-        public Builder transitRouterCidrList(java.util.List < TransitRouterCidrList> transitRouterCidrList) {
+        public Builder transitRouterCidrList(java.util.List<TransitRouterCidrList> transitRouterCidrList) {
             String transitRouterCidrListShrink = shrink(transitRouterCidrList, "TransitRouterCidrList", "json");
             this.putQueryParameter("TransitRouterCidrList", transitRouterCidrListShrink);
             this.transitRouterCidrList = transitRouterCidrList;
@@ -324,7 +360,11 @@ public class CreateTransitRouterRequest extends Request {
         }
 
         /**
-         * TransitRouterDescription.
+         * <p>The description of the Enterprise Edition transit router instance.</p>
+         * <p>The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdesc</p>
          */
         public Builder transitRouterDescription(String transitRouterDescription) {
             this.putQueryParameter("TransitRouterDescription", transitRouterDescription);
@@ -333,7 +373,11 @@ public class CreateTransitRouterRequest extends Request {
         }
 
         /**
-         * TransitRouterName.
+         * <p>The name of the Enterprise Edition transit router.</p>
+         * <p>The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testname</p>
          */
         public Builder transitRouterName(String transitRouterName) {
             this.putQueryParameter("TransitRouterName", transitRouterName);
@@ -348,11 +392,17 @@ public class CreateTransitRouterRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateTransitRouterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTransitRouterRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -387,7 +437,12 @@ public class CreateTransitRouterRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * <p>The tag keys cannot be an empty string. The tag key can be up to 64 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>You can specify at most 20 tag keys in each call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tagtest</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -395,7 +450,12 @@ public class CreateTransitRouterRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * <p>The tag value can be an empty string or up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>Each key-value must be unique. You can specify at most 20 tag values in each call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TagValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -409,17 +469,23 @@ public class CreateTransitRouterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTransitRouterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTransitRouterRequest</p>
+     */
     public static class TransitRouterCidrList extends TeaModel {
-        @NameInMap("Cidr")
+        @com.aliyun.core.annotation.NameInMap("Cidr")
         private String cidr;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PublishCidrRoute")
+        @com.aliyun.core.annotation.NameInMap("PublishCidrRoute")
         private Boolean publishCidrRoute;
 
         private TransitRouterCidrList(Builder builder) {
@@ -472,7 +538,10 @@ public class CreateTransitRouterRequest extends Request {
             private Boolean publishCidrRoute; 
 
             /**
-             * Cidr.
+             * <p>The CIDR block of the transit router.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.10.0/24</p>
              */
             public Builder cidr(String cidr) {
                 this.cidr = cidr;
@@ -480,7 +549,11 @@ public class CreateTransitRouterRequest extends Request {
             }
 
             /**
-             * Description.
+             * <p>The description of the transit router CIDR block.</p>
+             * <p>The description must be 1 to 256 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desctest</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -488,7 +561,11 @@ public class CreateTransitRouterRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The name of the transit router CIDR block.</p>
+             * <p>The name must be 1 to 128 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nametest</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -496,7 +573,19 @@ public class CreateTransitRouterRequest extends Request {
             }
 
             /**
-             * PublishCidrRoute.
+             * <p>Specifies whether to allow the system to automatically add a route that points to the CIDR block to the route table of the transit router.</p>
+             * <ul>
+             * <li><p><strong>true</strong> (default)</p>
+             * <p>If you set the value to true, after you create a VPN attachment on a private VPN gateway and enable route learning for the VPN attachment, the system automatically adds the following route to the route table of the transit router that is in route learning relationship with the VPN attachment:</p>
+             * <p>A blackhole route whose destination CIDR block is the transit router CIDR block, which refers to the CIDR block from which gateway IP addresses are allocated to the IPsec-VPN connection.</p>
+             * <p>The blackhole route is advertised only to the route tables of virtual border routers (VBRs) connected to the transit router.</p>
+             * </li>
+             * <li><p><strong>false</strong></p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder publishCidrRoute(Boolean publishCidrRoute) {
                 this.publishCidrRoute = publishCidrRoute;

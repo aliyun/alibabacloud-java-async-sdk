@@ -1,45 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMigrationJobsRequest} extends {@link RequestModel}
  *
  * <p>DescribeMigrationJobsRequest</p>
  */
 public class DescribeMigrationJobsRequest extends Request {
-    @Query
-    @NameInMap("AccountId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountId")
     private String accountId;
 
-    @Query
-    @NameInMap("MigrationJobName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MigrationJobName")
     private String migrationJobName;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
-    @Query
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private DescribeMigrationJobsRequest(Builder builder) {
         super(builder);
@@ -49,6 +58,7 @@ public class DescribeMigrationJobsRequest extends Request {
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.tag = builder.tag;
     }
 
@@ -108,9 +118,16 @@ public class DescribeMigrationJobsRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -121,7 +138,8 @@ public class DescribeMigrationJobsRequest extends Request {
         private Integer pageNum; 
         private Integer pageSize; 
         private String regionId; 
-        private java.util.List < Tag> tag; 
+        private String resourceGroupId; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -135,11 +153,15 @@ public class DescribeMigrationJobsRequest extends Request {
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.tag = request.tag;
         } 
 
         /**
-         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
+         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12323344****</p>
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -148,10 +170,13 @@ public class DescribeMigrationJobsRequest extends Request {
         }
 
         /**
-         * The name of the data migration task.
-         * <p>
+         * <p>The name of the data migration task.</p>
+         * <blockquote>
+         * <p> Fuzzy match is supported.</p>
+         * </blockquote>
          * 
-         * >  Fuzzy match is supported.
+         * <strong>example:</strong>
+         * <p>MySQL迁移</p>
          */
         public Builder migrationJobName(String migrationJobName) {
             this.putQueryParameter("MigrationJobName", migrationJobName);
@@ -169,7 +194,10 @@ public class DescribeMigrationJobsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be an integer that is greater than **0** and does not exceed the maximum value of the Integer data type. Default value: **1**.
+         * <p>The number of the page to return. The value must be an integer that is greater than <strong>0</strong> and does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -178,7 +206,10 @@ public class DescribeMigrationJobsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: **30**.
+         * <p>The number of entries to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>. Default value: <strong>30</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -187,7 +218,10 @@ public class DescribeMigrationJobsRequest extends Request {
         }
 
         /**
-         * The ID of the region where the data migration instances reside. For more information, see [List of supported regions](~~141033~~).
+         * <p>The ID of the region where the data migration instances reside. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -196,9 +230,21 @@ public class DescribeMigrationJobsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * <p>The tag of the data migration instance, used as a filter. When this is not empty, only the instance tasks with this tag will be returned.</p>
+         */
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -211,12 +257,18 @@ public class DescribeMigrationJobsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMigrationJobsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeMigrationJobsRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Key")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -251,12 +303,17 @@ public class DescribeMigrationJobsRequest extends Request {
             private String value; 
 
             /**
-             * The tag key. You can call the [ListTagResources](~~191187~~) operation to query the tag key.
-             * <p>
+             * <p>The tag key. You can call the <a href="https://help.aliyun.com/document_detail/191187.html">ListTagResources</a> operation to query the tag key.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li>N specifies the serial number of the tag. For example, Tag.1.Key specifies the key of the first tag and Tag.2.Key specifies the key of the second tag. You can specify 1 to 20 tag keys at a time.</li>
+             * <li>This parameter cannot be an empty string.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * > 
-             * *   N specifies the serial number of the tag. For example, Tag.1.Key specifies the key of the first tag and Tag.2.Key specifies the key of the second tag. You can specify 1 to 20 tag keys at a time.
-             * *   This parameter cannot be an empty string.
+             * <strong>example:</strong>
+             * <p>testkey1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -264,12 +321,16 @@ public class DescribeMigrationJobsRequest extends Request {
             }
 
             /**
-             * The tag value. You can call the [ListTagResources](~~191187~~) operation to query the tag value.
-             * <p>
+             * <p>The tag value. You can call the <a href="https://help.aliyun.com/document_detail/191187.html">ListTagResources</a> operation to query the tag value.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li>N specifies the serial number of the tag. For example, Tag.1.Value specifies the value of the first tag and Tag.2.Value specifies the value of the second tag. You can specify 1 to 20 tag values at a time.</li>
+             * <li>This parameter can be an empty string.</li>
+             * </ul>
              * 
-             * > 
-             * *   N specifies the serial number of the tag. For example, Tag.1.Value specifies the value of the first tag and Tag.2.Value specifies the value of the second tag. You can specify 1 to 20 tag values at a time.
-             * *   This parameter can be an empty string.
+             * <strong>example:</strong>
+             * <p>testvalue1</p>
              */
             public Builder value(String value) {
                 this.value = value;

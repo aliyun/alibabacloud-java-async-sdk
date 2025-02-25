@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.acm20200206;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.acm20200206.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 

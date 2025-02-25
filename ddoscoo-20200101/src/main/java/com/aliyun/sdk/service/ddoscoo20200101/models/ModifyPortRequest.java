@@ -1,45 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPortRequest} extends {@link RequestModel}
  *
  * <p>ModifyPortRequest</p>
  */
 public class ModifyPortRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("BackendPort")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackendPort")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String backendPort;
 
-    @Query
-    @NameInMap("FrontendPort")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FrontendPort")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String frontendPort;
 
-    @Query
-    @NameInMap("FrontendProtocol")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FrontendProtocol")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String frontendProtocol;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RealServers")
-    @Validation(required = true)
-    private java.util.List < String > realServers;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProxyEnable")
+    private Long proxyEnable;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RealServers")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> realServers;
 
     private ModifyPortRequest(Builder builder) {
         super(builder);
@@ -48,6 +57,7 @@ public class ModifyPortRequest extends Request {
         this.frontendPort = builder.frontendPort;
         this.frontendProtocol = builder.frontendProtocol;
         this.instanceId = builder.instanceId;
+        this.proxyEnable = builder.proxyEnable;
         this.realServers = builder.realServers;
     }
 
@@ -100,9 +110,16 @@ public class ModifyPortRequest extends Request {
     }
 
     /**
+     * @return proxyEnable
+     */
+    public Long getProxyEnable() {
+        return this.proxyEnable;
+    }
+
+    /**
      * @return realServers
      */
-    public java.util.List < String > getRealServers() {
+    public java.util.List<String> getRealServers() {
         return this.realServers;
     }
 
@@ -112,7 +129,8 @@ public class ModifyPortRequest extends Request {
         private String frontendPort; 
         private String frontendProtocol; 
         private String instanceId; 
-        private java.util.List < String > realServers; 
+        private Long proxyEnable; 
+        private java.util.List<String> realServers; 
 
         private Builder() {
             super();
@@ -125,6 +143,7 @@ public class ModifyPortRequest extends Request {
             this.frontendPort = request.frontendPort;
             this.frontendProtocol = request.frontendProtocol;
             this.instanceId = request.instanceId;
+            this.proxyEnable = request.proxyEnable;
             this.realServers = request.realServers;
         } 
 
@@ -138,7 +157,11 @@ public class ModifyPortRequest extends Request {
         }
 
         /**
-         * The port of the origin server. Valid values: **0** to **65535**.
+         * <p>The port of the origin server. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55</p>
          */
         public Builder backendPort(String backendPort) {
             this.putQueryParameter("BackendPort", backendPort);
@@ -147,7 +170,11 @@ public class ModifyPortRequest extends Request {
         }
 
         /**
-         * The forwarding port. Valid values: **0** to **65535**.
+         * <p>The forwarding port. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55</p>
          */
         public Builder frontendPort(String frontendPort) {
             this.putQueryParameter("FrontendPort", frontendPort);
@@ -156,11 +183,15 @@ public class ModifyPortRequest extends Request {
         }
 
         /**
-         * The type of the protocol. Valid values:
-         * <p>
+         * <p>The type of the forwarding protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>tcp</strong></li>
+         * <li><strong>udp</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **tcp**
-         * *   **udp**
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         public Builder frontendProtocol(String frontendProtocol) {
             this.putQueryParameter("FrontendProtocol", frontendProtocol);
@@ -169,10 +200,14 @@ public class ModifyPortRequest extends Request {
         }
 
         /**
-         * The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance to which the port forwarding rule belongs.
-         * <p>
+         * <p>The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance to which the port forwarding rule belongs.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-st21zbyq****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -181,9 +216,19 @@ public class ModifyPortRequest extends Request {
         }
 
         /**
-         * An array that consists of the IP addresses of origin servers.
+         * ProxyEnable.
          */
-        public Builder realServers(java.util.List < String > realServers) {
+        public Builder proxyEnable(Long proxyEnable) {
+            this.putQueryParameter("ProxyEnable", proxyEnable);
+            this.proxyEnable = proxyEnable;
+            return this;
+        }
+
+        /**
+         * <p>An array that consists of the IP addresses of origin servers.</p>
+         * <p>This parameter is required.</p>
+         */
+        public Builder realServers(java.util.List<String> realServers) {
             this.putQueryParameter("RealServers", realServers);
             this.realServers = realServers;
             return this;

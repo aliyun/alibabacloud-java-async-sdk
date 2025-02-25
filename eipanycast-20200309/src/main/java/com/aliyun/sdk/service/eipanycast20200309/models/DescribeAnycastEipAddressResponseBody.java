@@ -238,7 +238,7 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the cloud resource with which the Anycast EIP is associated.
+         * The information about the endpoint with which the Anycast EIP is associated.
          */
         public Builder anycastEipBindInfoList(java.util.List < AnycastEipBindInfoList> anycastEipBindInfoList) {
             this.anycastEipBindInfoList = anycastEipBindInfoList;
@@ -282,7 +282,7 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the Anycast EIP was created.
+         * The point in time at which the Anycast EIP was created.
          * <p>
          * 
          * The time follows the ISO8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
@@ -347,7 +347,7 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the instance belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -355,7 +355,7 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The area from which you can use the Anycast EIP to access the backend server over the Internet.
+         * The access area of the Anycast EIP.
          * <p>
          * 
          * Only **international** may be returned, which indicates the areas outside the Chinese mainland.
@@ -366,7 +366,7 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the Anycast EIP. Valid values:
+         * The status of the Anycast EIP.
          * <p>
          * 
          * *   **Associating**
@@ -383,7 +383,7 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The tag information.
+         * The information about the tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.tags = tags;
@@ -426,7 +426,7 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
              * The information about the access points in associated access areas when you associate an Anycast EIP with a cloud resource.
              * <p>
              * 
-             * If this is your first time associating an Anycast EIP with a cloud resource, the system returns information about access points in all access areas.
+             * If this is your first time associating an Anycast EIP with an endpoint, the system returns information about access points in all access areas.
              */
             public Builder popLocation(String popLocation) {
                 this.popLocation = popLocation;
@@ -554,8 +554,8 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
              * The association mode. Valid values:
              * <p>
              * 
-             * *   **Default**: the default mode. In this mode, associated cloud resources are set as default origin servers.
-             * *   **Normal**: the standard mode. In this mode, associated cloud resources are set as standard origin servers.
+             * *   **Default**: the default mode. In this mode, the associated endpoint serves as the default origin server.
+             * *   **Normal**: the standard mode. In this mode, the associated endpoint serves as a standard origin server.
              */
             public Builder associationMode(String associationMode) {
                 this.associationMode = associationMode;
@@ -563,7 +563,7 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cloud resource with which the Anycast EIP is associated.
+             * The ID of the endpoint with which the Anycast EIP is associated.
              */
             public Builder bindInstanceId(String bindInstanceId) {
                 this.bindInstanceId = bindInstanceId;
@@ -571,7 +571,7 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the cloud resource is deployed.
+             * The ID of the region in which the endpoint is deployed.
              */
             public Builder bindInstanceRegionId(String bindInstanceRegionId) {
                 this.bindInstanceRegionId = bindInstanceRegionId;
@@ -579,11 +579,11 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The type of cloud resource with which the Anycast EIP is associated. Valid values:
+             * The type of endpoint with which the Anycast EIP is associated. Valid values:
              * <p>
              * 
-             * *   **SlbInstance**: an internal-facing Server Load Balancer (SLB) instance that is deployed in a virtual private cloud (VPC)
-             * *   **NetworkInterface**: an elastic network interface (ENI)
+             * *   **SlbInstance**: a CLB instance in a VPC.
+             * *   **NetworkInterface**: an elastic network interface (ENI).
              */
             public Builder bindInstanceType(String bindInstanceType) {
                 this.bindInstanceType = bindInstanceType;
@@ -594,7 +594,7 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
              * The time when the Anycast EIP was associated.
              * <p>
              * 
-             * The time follows the ISO8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
+             * The time follows the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time is displayed in UTC.
              */
             public Builder bindTime(String bindTime) {
                 this.bindTime = bindTime;
@@ -605,7 +605,7 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
              * The information about the access points in associated access areas when you associate an Anycast EIP with a cloud resource.
              * <p>
              * 
-             * If this is your first time associating an Anycast EIP with a cloud resource, the system returns information about access points in all access areas.
+             * If this is your first time associating an Anycast EIP with an endpoint, the system returns information about access points in all access areas.
              */
             public Builder popLocations(java.util.List < PopLocations> popLocations) {
                 this.popLocations = popLocations;
@@ -624,7 +624,7 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the cloud resource. Valid values:
+             * The status of the endpoint. Valid values:
              * <p>
              * 
              * *   **BINDING**

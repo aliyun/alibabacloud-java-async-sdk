@@ -1,49 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceAttachmentAttributesRequest} extends {@link RequestModel}
  *
  * <p>ModifyInstanceAttachmentAttributesRequest</p>
  */
 public class ModifyInstanceAttachmentAttributesRequest extends Request {
-    @Query
-    @NameInMap("PrivatePoolOptions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivatePoolOptions")
     private PrivatePoolOptions privatePoolOptions;
 
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyInstanceAttachmentAttributesRequest(Builder builder) {
@@ -172,7 +177,11 @@ public class ModifyInstanceAttachmentAttributesRequest extends Request {
         }
 
         /**
-         * The ID of the instance for which you want to modify the attributes of the private pool.
+         * <p>The ID of the instance for which you want to modify the attributes of the private pool.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -199,7 +208,11 @@ public class ModifyInstanceAttachmentAttributesRequest extends Request {
         }
 
         /**
-         * The region ID of the private pool. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the private pool. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -232,12 +245,18 @@ public class ModifyInstanceAttachmentAttributesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyInstanceAttachmentAttributesRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyInstanceAttachmentAttributesRequest</p>
+     */
     public static class PrivatePoolOptions extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("MatchCriteria")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("MatchCriteria")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String matchCriteria;
 
         private PrivatePoolOptions(Builder builder) {
@@ -272,11 +291,14 @@ public class ModifyInstanceAttachmentAttributesRequest extends Request {
             private String matchCriteria; 
 
             /**
-             * The ID of the private pool. Set the value to the ID of the elasticity assurance or capacity reservation that generates the private pool.
-             * <p>
+             * <p>The ID of the private pool. Set the value to the ID of the elasticity assurance or capacity reservation that generates the private pool.</p>
+             * <ul>
+             * <li>This parameter is required when <code>PrivatePoolOptions.MatchCriteria</code> is set to <code>Target</code>.</li>
+             * <li>This parameter must be empty when <code>PrivatePoolOptions.MatchCriteria</code> is set to <code>Open</code> or <code>None</code>.</li>
+             * </ul>
              * 
-             * *   This parameter is required when `PrivatePoolOptions.MatchCriteria` is set to `Target`.
-             * *   This parameter must be empty when `PrivatePoolOptions.MatchCriteria` is set to `Open` or `None`.
+             * <strong>example:</strong>
+             * <p>eap-bp67acfmxazb4****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -284,12 +306,16 @@ public class ModifyInstanceAttachmentAttributesRequest extends Request {
             }
 
             /**
-             * The match mode of the private pool. Valid values:
-             * <p>
+             * <p>The new type of private pool. Valid values:</p>
+             * <ul>
+             * <li>Open: open private pool. The system matches the instance with an open private pool. If no matching open private pools exist, the system uses resources in the public pool to start the instance.</li>
+             * <li>Target: specified private pool. The system uses the capacity in a specified private pool to start the instance. If the specified private pool is unavailable, the instance cannot be started. You must use <code>PrivatePoolOptions.Id</code> to specify the ID of a private pool.</li>
+             * <li>None: no private pool. The capacity in private pools is not used to start the instance.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   Open: open private pool. The system matches the instance with open private pools.
-             * *   Target: specified private pool. You must set the `PrivatePoolOptions.Id` parameter to specify the ID of a private pool.
-             * *   None: no private pool. The instance starts normally without using private pools.
+             * <strong>example:</strong>
+             * <p>Open</p>
              */
             public Builder matchCriteria(String matchCriteria) {
                 this.matchCriteria = matchCriteria;

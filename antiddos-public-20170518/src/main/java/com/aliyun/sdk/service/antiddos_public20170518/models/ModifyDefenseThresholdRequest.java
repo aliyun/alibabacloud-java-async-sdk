@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.antiddos_public20170518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,35 +11,35 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDefenseThresholdRequest</p>
  */
 public class ModifyDefenseThresholdRequest extends Request {
-    @Query
-    @NameInMap("Bps")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bps")
     private Integer bps;
 
-    @Query
-    @NameInMap("DdosRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DdosRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ddosRegionId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("InstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceType;
 
-    @Query
-    @NameInMap("InternetIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetIp")
     private String internetIp;
 
-    @Query
-    @NameInMap("IsAuto")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsAuto")
     private Boolean isAuto;
 
-    @Query
-    @NameInMap("Pps")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Pps")
     private Integer pps;
 
     private ModifyDefenseThresholdRequest(Builder builder) {
@@ -141,7 +140,13 @@ public class ModifyDefenseThresholdRequest extends Request {
         } 
 
         /**
-         * Bps.
+         * Specifies the traffic scrubbing threshold. Unit: Mbit/s. The traffic scrubbing threshold cannot exceed the peak inbound or outbound Internet traffic, whichever is larger, of the asset.
+         * <p>
+         * 
+         * You can use the monitoring tool that is provided by the asset to query the Internet traffic of the asset:
+         * 
+         * *   For more information about how to query the Internet traffic of an ECS instance, see [Query monitoring information of an instance](~~25482~~).
+         * *   For more information about how to query the number of packets of an SLB instance, see [View monitoring data in the console](~~85982~~).
          */
         public Builder bps(Integer bps) {
             this.putQueryParameter("Bps", bps);
@@ -150,7 +155,10 @@ public class ModifyDefenseThresholdRequest extends Request {
         }
 
         /**
-         * DdosRegionId.
+         * The region ID of the asset for which you want to change the scrubbing thresholds.
+         * <p>
+         * 
+         * > You can call the [DescribeRegions](~~353250~~) operation to query the most recent region list.
          */
         public Builder ddosRegionId(String ddosRegionId) {
             this.putQueryParameter("DdosRegionId", ddosRegionId);
@@ -159,7 +167,10 @@ public class ModifyDefenseThresholdRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the asset.
+         * <p>
+         * 
+         * > You can call the [DescribeInstance](~~354191~~) operation to query the IDs of ECS instances, SLB instances, and EIPs within the current Alibaba Cloud account.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -168,7 +179,12 @@ public class ModifyDefenseThresholdRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The type of the asset. Valid values:
+         * <p>
+         * 
+         * *   **ecs**: ECS instance
+         * *   **slb**: SLB instance
+         * *   **eip**: EIP
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -177,7 +193,7 @@ public class ModifyDefenseThresholdRequest extends Request {
         }
 
         /**
-         * InternetIp.
+         * The IP address of the asset.
          */
         public Builder internetIp(String internetIp) {
             this.putQueryParameter("InternetIp", internetIp);
@@ -186,7 +202,13 @@ public class ModifyDefenseThresholdRequest extends Request {
         }
 
         /**
-         * IsAuto.
+         * Specifies whether to automatically adjust the scrubbing threshold based on the traffic load on the asset. Valid values:
+         * <p>
+         * 
+         * *   **true**: automatically adjusts the scrubbing thresholds. You do not need to configure the **Bps** and **Pps** parameters.
+         * *   **false**: The scrubbing threshold is not automatically adjusted. You must configure the **Bps** and **Pps** parameters.
+         * 
+         * Default value: false.
          */
         public Builder isAuto(Boolean isAuto) {
             this.putQueryParameter("IsAuto", isAuto);
@@ -195,7 +217,13 @@ public class ModifyDefenseThresholdRequest extends Request {
         }
 
         /**
-         * Pps.
+         * Specifies the packet scrubbing threshold. Unit: packets per second (pps).
+         * <p>
+         * 
+         * The packet scrubbing threshold cannot exceed the peak number of inbound or outbound packets, whichever is larger, of the asset. You can use the monitoring tool that is provided by the asset to query the number of packets of the asset:
+         * 
+         * *   For more information about how to query the number of packets of an ECS instance, see [Query monitoring information of an instance](~~25482~~).
+         * *   For more information about how to query the number of packets of an SLB instance, see [View monitoring data in the console](~~85982~~).
          */
         public Builder pps(Integer pps) {
             this.putQueryParameter("Pps", pps);

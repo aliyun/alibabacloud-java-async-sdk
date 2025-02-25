@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEventLevelCountResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEventLevelCountResponseBody</p>
  */
 public class DescribeEventLevelCountResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("EventLevels")
+    @com.aliyun.core.annotation.NameInMap("EventLevels")
     private EventLevels eventLevels;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeEventLevelCountResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DescribeEventLevelCountResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class DescribeEventLevelCountResponseBody extends TeaModel {
         }
 
         /**
-         * The statistics of alerts by risk level.
+         * <p>The statistics of alerts by risk level.</p>
          */
         public Builder eventLevels(EventLevels eventLevels) {
             this.eventLevels = eventLevels;
@@ -102,7 +110,10 @@ public class DescribeEventLevelCountResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class DescribeEventLevelCountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CE8CA5EA-24EF-5D41-B735-53ACE7XXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +132,14 @@ public class DescribeEventLevelCountResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -135,14 +152,20 @@ public class DescribeEventLevelCountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEventLevelCountResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventLevelCountResponseBody</p>
+     */
     public static class EventLevels extends TeaModel {
-        @NameInMap("Remind")
+        @com.aliyun.core.annotation.NameInMap("Remind")
         private Integer remind;
 
-        @NameInMap("Serious")
+        @com.aliyun.core.annotation.NameInMap("Serious")
         private Integer serious;
 
-        @NameInMap("Suspicious")
+        @com.aliyun.core.annotation.NameInMap("Suspicious")
         private Integer suspicious;
 
         private EventLevels(Builder builder) {
@@ -186,7 +209,10 @@ public class DescribeEventLevelCountResponseBody extends TeaModel {
             private Integer suspicious; 
 
             /**
-             * The number of alerts whose Emergency level is Reminder.
+             * <p>The number of alerts whose Emergency level is Reminder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder remind(Integer remind) {
                 this.remind = remind;
@@ -194,7 +220,10 @@ public class DescribeEventLevelCountResponseBody extends TeaModel {
             }
 
             /**
-             * The number of alerts whose Emergency level is Urgent.
+             * <p>The number of alerts whose Emergency level is Urgent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder serious(Integer serious) {
                 this.serious = serious;
@@ -202,7 +231,10 @@ public class DescribeEventLevelCountResponseBody extends TeaModel {
             }
 
             /**
-             * The number of alerts whose Emergency level is Suspicious.
+             * <p>The number of alerts whose Emergency level is Suspicious.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder suspicious(Integer suspicious) {
                 this.suspicious = suspicious;

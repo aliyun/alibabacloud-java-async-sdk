@@ -1,53 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesRequest} extends {@link RequestModel}
  *
  * <p>ListTagResourcesRequest</p>
  */
 public class ListTagResourcesRequest extends Request {
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
     private java.util.List < String > resourceId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
     private ListTagResourcesRequest(Builder builder) {
@@ -168,10 +168,13 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * The token used to start the next query to retrieve more results.
-         * <p>
+         * <p>The token used to start the next query to retrieve more results.</p>
+         * <blockquote>
+         * <p>This parameter is not required in the first query. If not all results are returned in one query, you can specify the <strong>NextToken</strong> value returned for the query to perform the next query.</p>
+         * </blockquote>
          * 
-         * > This parameter is not required in the first query. If not all results are returned in one query, you can specify the **NextToken** value returned for the query to perform the next query.
+         * <strong>example:</strong>
+         * <p>212db86sca4384811e0b5e8707ec2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -198,7 +201,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -207,10 +214,15 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The IDs of the instances.
-         * <p>
+         * <p>The IDs of the instances.</p>
+         * <blockquote>
+         * <ul>
+         * <li>You must specify this parameter or the <strong>Tag</strong> parameter.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > *   You must specify this parameter or the **Tag** parameter.
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -237,7 +249,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The resource type. Set the value to **INSTANCE**.
+         * <p>The resource type. Set the value to <strong>INSTANCE</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -246,7 +262,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The tags of the instance. You must specify this parameter or the **ResourceId** parameter.
+         * <p>The tags of the instance. You must specify this parameter or the <strong>ResourceId</strong> parameter.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -261,11 +277,17 @@ public class ListTagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -300,7 +322,10 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The keys of the tags associated with the instances you want to query.
+             * <p>The keys of the tags associated with the instances you want to query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demokey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -308,7 +333,10 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * The values of the tags associated with the instances you want to query.
+             * <p>The values of the tags associated with the instances you want to query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demovalue</p>
              */
             public Builder value(String value) {
                 this.value = value;

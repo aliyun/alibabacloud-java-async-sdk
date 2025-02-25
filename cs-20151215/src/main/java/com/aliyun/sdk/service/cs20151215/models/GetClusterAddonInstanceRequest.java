@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetClusterAddonInstanceRequest} extends {@link RequestModel}
  *
  * <p>GetClusterAddonInstanceRequest</p>
  */
 public class GetClusterAddonInstanceRequest extends Request {
-    @Path
-    @NameInMap("cluster_id")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("cluster_id")
     private String clusterId;
 
-    @Path
-    @NameInMap("instance_name")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instance_name")
     private String instanceName;
 
     private GetClusterAddonInstanceRequest(Builder builder) {
@@ -68,7 +73,10 @@ public class GetClusterAddonInstanceRequest extends Request {
         } 
 
         /**
-         * cluster_id.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c02b3e03be10643e8a644a843ffcb****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -77,7 +85,10 @@ public class GetClusterAddonInstanceRequest extends Request {
         }
 
         /**
-         * instance_name.
+         * <p>The name of the component instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ack-node-problem-detector</p>
          */
         public Builder instanceName(String instanceName) {
             this.putPathParameter("instance_name", instanceName);

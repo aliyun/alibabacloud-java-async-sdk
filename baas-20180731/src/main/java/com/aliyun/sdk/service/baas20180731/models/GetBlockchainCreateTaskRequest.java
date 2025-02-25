@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetBlockchainCreateTaskRequest</p>
  */
 public class GetBlockchainCreateTaskRequest extends Request {
-    @Body
-    @NameInMap("Current")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Current")
     private Integer current;
 
-    @Body
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
     private GetBlockchainCreateTaskRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.current = builder.current;
         this.pageSize = builder.pageSize;
     }
@@ -40,6 +44,13 @@ public class GetBlockchainCreateTaskRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return current
      */
     public Integer getCurrent() {
@@ -54,6 +65,7 @@ public class GetBlockchainCreateTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetBlockchainCreateTaskRequest, Builder> {
+        private String regionId; 
         private Integer current; 
         private Integer pageSize; 
 
@@ -63,9 +75,19 @@ public class GetBlockchainCreateTaskRequest extends Request {
 
         private Builder(GetBlockchainCreateTaskRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.current = request.current;
             this.pageSize = request.pageSize;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Current.

@@ -1,90 +1,95 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CdsFileShareLinkModel} extends {@link TeaModel}
  *
  * <p>CdsFileShareLinkModel</p>
  */
 public class CdsFileShareLinkModel extends TeaModel {
-    @NameInMap("AccessCount")
+    @com.aliyun.core.annotation.NameInMap("AccessCount")
     private Long accessCount;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("Creator")
+    @com.aliyun.core.annotation.NameInMap("Creator")
     private String creator;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("DisableDownload")
+    @com.aliyun.core.annotation.NameInMap("DisableDownload")
     private Boolean disableDownload;
 
-    @NameInMap("DisablePreview")
+    @com.aliyun.core.annotation.NameInMap("DisablePreview")
     private Boolean disablePreview;
 
-    @NameInMap("DisableSave")
+    @com.aliyun.core.annotation.NameInMap("DisableSave")
     private Boolean disableSave;
 
-    @NameInMap("DownloadCount")
+    @com.aliyun.core.annotation.NameInMap("DownloadCount")
     private Long downloadCount;
 
-    @NameInMap("DownloadLimit")
+    @com.aliyun.core.annotation.NameInMap("DownloadLimit")
     private Long downloadLimit;
 
-    @NameInMap("DriveId")
+    @com.aliyun.core.annotation.NameInMap("DriveId")
     private String driveId;
 
-    @NameInMap("Expiration")
+    @com.aliyun.core.annotation.NameInMap("Expiration")
     private String expiration;
 
-    @NameInMap("Expired")
+    @com.aliyun.core.annotation.NameInMap("Expired")
     private Boolean expired;
 
-    @NameInMap("FileIds")
+    @com.aliyun.core.annotation.NameInMap("FileIds")
     private String fileIds;
 
-    @NameInMap("ModifiyTime")
+    @com.aliyun.core.annotation.NameInMap("ModifiyTime")
     private String modifiyTime;
 
-    @NameInMap("PreviewCount")
+    @com.aliyun.core.annotation.NameInMap("PreviewCount")
     private Long previewCount;
 
-    @NameInMap("PreviewLimit")
+    @com.aliyun.core.annotation.NameInMap("PreviewLimit")
     private Long previewLimit;
 
-    @NameInMap("ReportCount")
+    @com.aliyun.core.annotation.NameInMap("ReportCount")
     private Long reportCount;
 
-    @NameInMap("SaveCount")
+    @com.aliyun.core.annotation.NameInMap("SaveCount")
     private Long saveCount;
 
-    @NameInMap("SaveLimit")
+    @com.aliyun.core.annotation.NameInMap("SaveLimit")
     private Long saveLimit;
 
-    @NameInMap("ShareId")
+    @com.aliyun.core.annotation.NameInMap("ShareId")
     private String shareId;
 
-    @NameInMap("ShareLink")
+    @com.aliyun.core.annotation.NameInMap("ShareLink")
     private String shareLink;
 
-    @NameInMap("ShareName")
+    @com.aliyun.core.annotation.NameInMap("ShareName")
     private String shareName;
 
-    @NameInMap("SharePwd")
+    @com.aliyun.core.annotation.NameInMap("SharePwd")
     private String sharePwd;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("VideoPreviewCount")
+    @com.aliyun.core.annotation.NameInMap("VideoPreviewCount")
     private Long videoPreviewCount;
 
     private CdsFileShareLinkModel(Builder builder) {

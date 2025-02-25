@@ -1,61 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceAutoRenewAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyInstanceAutoRenewAttributeRequest</p>
  */
 public class ModifyInstanceAutoRenewAttributeRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private Boolean autoRenew;
 
-    @Query
-    @NameInMap("Duration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Duration")
     private Integer duration;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PeriodUnit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeriodUnit")
     private String periodUnit;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("RenewalStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RenewalStatus")
     private String renewalStatus;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyInstanceAutoRenewAttributeRequest(Builder builder) {
@@ -205,10 +210,11 @@ public class ModifyInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal for the instance.
-         * <p>
+         * <p>Specifies whether to enable auto-renewal.</p>
+         * <p>Default value: false.</p>
          * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -217,11 +223,14 @@ public class ModifyInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The auto-renewal period of the instance.
-         * <p>
+         * <p>The auto-renewal period of the instance.</p>
+         * <ul>
+         * <li>Valid values of <code>Duration</code> when <code>PeriodUnit</code> is set to <code>Year</code>: 1, 2, 3, 4, and 5.</li>
+         * <li>Valid values of <code>Duration</code> when <code>PeriodUnit</code> is set to <code>Month</code>: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</li>
+         * </ul>
          * 
-         * *   Valid values of `Duration` when `PeriodUnit` is set to `Year`: 1, 2, 3, 4, and 5.
-         * *   Valid values of `Duration` when `PeriodUnit` is set to `Month`: 1, 2, 3, 6, 12, 24, 36, 48, and 60.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -230,7 +239,11 @@ public class ModifyInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the instance. You can specify up to 100 subscription instance IDs. Separate the instance IDs with commas (,).
+         * <p>The ID of the instance. You can specify up to 100 subscription instance IDs. Separate the instance IDs with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4ph****,i-bp67acfmxazb4pi****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -257,11 +270,14 @@ public class ModifyInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The unit of the renewal period (`Duration`). Valid values:
-         * <p>
+         * <p>The unit of the renewal period (<code>Duration</code>). Valid values:</p>
+         * <ul>
+         * <li>Month (default)</li>
+         * <li>Year</li>
+         * </ul>
          * 
-         * *   Month (default)
-         * *   Year
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -270,7 +286,11 @@ public class ModifyInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -279,14 +299,18 @@ public class ModifyInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The auto-renewal status of the instance. Valid values:
-         * <p>
+         * <p>The auto-renewal status of the instance. Valid values:</p>
+         * <ul>
+         * <li>AutoRenewal: Auto-renewal is enabled for the instance.</li>
+         * <li>Normal: Auto-renewal is disabled for the instance.</li>
+         * <li>NotRenewal: The instance is not renewed. The system no longer sends an expiration notification but sends only a renewal notification three days before the instance expires. You can change the value of this parameter from NotRenewal to <code>Normal</code> for an instance, and then manually renew the instance. Alternatively, you can set the RenewalStatus parameter to AutoRenewal.</li>
+         * </ul>
+         * <blockquote>
+         * <p><code>RenewalStatus</code> takes precedence over <code>AutoRenew</code>. If you do not specify <code>RenewalStatus</code>, <code>AutoRenew</code> is used by default.</p>
+         * </blockquote>
          * 
-         * *   AutoRenewal: Auto-renewal is enabled for the instance.
-         * *   Normal: Auto-renewal is disabled for the instance.
-         * *   NotRenewal: The instance is not renewed. The system no longer sends an expiration notification but sends only a renewal notification three days before the instance expires. You can change the value of this parameter from NotRenewal to `Normal` for an instance, and then manually renew the instance. Alternatively, you can set the RenewalStatus parameter to AutoRenewal.
-         * 
-         * > `RenewalStatus` takes precedence over `AutoRenew`. If you do not specify `RenewalStatus`, `AutoRenew` is used by default.
+         * <strong>example:</strong>
+         * <p>AutoRenewal</p>
          */
         public Builder renewalStatus(String renewalStatus) {
             this.putQueryParameter("RenewalStatus", renewalStatus);

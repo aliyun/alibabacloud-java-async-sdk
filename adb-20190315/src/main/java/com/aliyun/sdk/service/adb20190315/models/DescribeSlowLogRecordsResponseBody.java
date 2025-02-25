@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSlowLogRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSlowLogRecordsResponseBody</p>
  */
 public class DescribeSlowLogRecordsResponseBody extends TeaModel {
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private DescribeSlowLogRecordsResponseBody(Builder builder) {
@@ -98,7 +98,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-bp1rqvm70uh2****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -106,7 +109,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the slow query logs.
+         * <p>Details of the slow query logs.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -114,7 +117,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +128,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on the current page.
+         * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +139,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D7559209-7EC3-41E1-8F78-156990******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -151,59 +166,65 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSlowLogRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSlowLogRecordsResponseBody</p>
+     */
     public static class SlowLogRecord extends TeaModel {
-        @NameInMap("DBName")
+        @com.aliyun.core.annotation.NameInMap("DBName")
         private String DBName;
 
-        @NameInMap("ExecutionStartTime")
+        @com.aliyun.core.annotation.NameInMap("ExecutionStartTime")
         private String executionStartTime;
 
-        @NameInMap("HostAddress")
+        @com.aliyun.core.annotation.NameInMap("HostAddress")
         private String hostAddress;
 
-        @NameInMap("OutputSize")
+        @com.aliyun.core.annotation.NameInMap("OutputSize")
         private String outputSize;
 
-        @NameInMap("ParseRowCounts")
+        @com.aliyun.core.annotation.NameInMap("ParseRowCounts")
         private Long parseRowCounts;
 
-        @NameInMap("PeakMemoryUsage")
+        @com.aliyun.core.annotation.NameInMap("PeakMemoryUsage")
         private String peakMemoryUsage;
 
-        @NameInMap("PlanningTime")
+        @com.aliyun.core.annotation.NameInMap("PlanningTime")
         private Long planningTime;
 
-        @NameInMap("ProcessID")
+        @com.aliyun.core.annotation.NameInMap("ProcessID")
         private String processID;
 
-        @NameInMap("QueryTime")
+        @com.aliyun.core.annotation.NameInMap("QueryTime")
         private Long queryTime;
 
-        @NameInMap("QueueTime")
+        @com.aliyun.core.annotation.NameInMap("QueueTime")
         private Long queueTime;
 
-        @NameInMap("ReturnRowCounts")
+        @com.aliyun.core.annotation.NameInMap("ReturnRowCounts")
         private Long returnRowCounts;
 
-        @NameInMap("SQLText")
+        @com.aliyun.core.annotation.NameInMap("SQLText")
         private String SQLText;
 
-        @NameInMap("ScanRows")
+        @com.aliyun.core.annotation.NameInMap("ScanRows")
         private Long scanRows;
 
-        @NameInMap("ScanSize")
+        @com.aliyun.core.annotation.NameInMap("ScanSize")
         private String scanSize;
 
-        @NameInMap("ScanTime")
+        @com.aliyun.core.annotation.NameInMap("ScanTime")
         private Long scanTime;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
-        @NameInMap("WallTime")
+        @com.aliyun.core.annotation.NameInMap("WallTime")
         private Long wallTime;
 
         private SlowLogRecord(Builder builder) {
@@ -382,7 +403,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             private Long wallTime; 
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adb_demo</p>
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -390,7 +414,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the execution started. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time is displayed in UTC.
+             * <p>The time when the execution started. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-05-27T08:04:43Z</p>
              */
             public Builder executionStartTime(String executionStartTime) {
                 this.executionStartTime = executionStartTime;
@@ -398,7 +425,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the client that is used to connect to the database.
+             * <p>The IP address of the client that is used to connect to the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><code>172.16.**.**</code></p>
              */
             public Builder hostAddress(String hostAddress) {
                 this.hostAddress = hostAddress;
@@ -406,7 +436,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of output data in the task. Unit: bytes.
+             * <p>The amount of output data in the task. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.009</p>
              */
             public Builder outputSize(String outputSize) {
                 this.outputSize = outputSize;
@@ -414,7 +447,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows parsed by the SQL statement.
+             * <p>The number of rows parsed by the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder parseRowCounts(Long parseRowCounts) {
                 this.parseRowCounts = parseRowCounts;
@@ -422,7 +458,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum memory usage when the SQL statement is executed. Unit: KB.
+             * <p>The maximum memory usage when the SQL statement is executed. Unit: KB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>431.447</p>
              */
             public Builder peakMemoryUsage(String peakMemoryUsage) {
                 this.peakMemoryUsage = peakMemoryUsage;
@@ -430,7 +469,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of time consumed to generate execution plans. Unit: milliseconds.
+             * <p>The amount of time consumed to generate execution plans. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder planningTime(Long planningTime) {
                 this.planningTime = planningTime;
@@ -438,7 +480,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the process.
+             * <p>The ID of the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021052716044317201616624903453******</p>
              */
             public Builder processID(String processID) {
                 this.processID = processID;
@@ -446,7 +491,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The time consumed to execute the SQL statement. Unit: milliseconds.
+             * <p>The time consumed to execute the SQL statement. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2344</p>
              */
             public Builder queryTime(Long queryTime) {
                 this.queryTime = queryTime;
@@ -454,7 +502,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The queuing duration before the query is executed. Unit: milliseconds.
+             * <p>The queuing duration before the query is executed. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder queueTime(Long queueTime) {
                 this.queueTime = queueTime;
@@ -462,7 +513,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows returned by the SQL statement.
+             * <p>The number of rows returned by the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder returnRowCounts(Long returnRowCounts) {
                 this.returnRowCounts = returnRowCounts;
@@ -470,7 +524,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the SQL statement.
+             * <p>Details of the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INSERT OVERWRITE INTO hdfs_import_external\nSELECT *\nFROM adb_hdfs_import_source</p>
              */
             public Builder SQLText(String SQLText) {
                 this.SQLText = SQLText;
@@ -478,7 +535,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows scanned from a data source in the task.
+             * <p>The number of rows scanned from a data source in the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder scanRows(Long scanRows) {
                 this.scanRows = scanRows;
@@ -486,7 +546,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of scanned data. Unit: KB.
+             * <p>The amount of scanned data. Unit: KB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.035</p>
              */
             public Builder scanSize(String scanSize) {
                 this.scanSize = scanSize;
@@ -494,7 +557,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The total amount of time consumed to scan data. It is an accumulated value collected from multiple TableScanNode nodes. Unit: milliseconds.
+             * <p>The total amount of time consumed to scan data. It is an accumulated value collected from multiple TableScanNode nodes. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder scanTime(Long scanTime) {
                 this.scanTime = scanTime;
@@ -502,7 +568,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The execution state of the SQL statement.
+             * <p>The execution state of the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESSED</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -510,7 +579,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The username.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -518,7 +590,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The accumulated CPU Time value of all operators collected from all nodes. Unit: milliseconds.
+             * <p>The accumulated CPU Time value of all operators collected from all nodes. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6100</p>
              */
             public Builder wallTime(Long wallTime) {
                 this.wallTime = wallTime;
@@ -532,8 +607,14 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSlowLogRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSlowLogRecordsResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("SlowLogRecord")
+        @com.aliyun.core.annotation.NameInMap("SlowLogRecord")
         private java.util.List < SlowLogRecord> slowLogRecord;
 
         private Items(Builder builder) {

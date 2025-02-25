@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExcludeSystemPathResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeExcludeSystemPathResponseBody</p>
  */
 public class DescribeExcludeSystemPathResponseBody extends TeaModel {
-    @NameInMap("ExcludePaths")
-    private java.util.List < ExcludePaths> excludePaths;
+    @com.aliyun.core.annotation.NameInMap("ExcludePaths")
+    private java.util.List<ExcludePaths> excludePaths;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeExcludeSystemPathResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class DescribeExcludeSystemPathResponseBody extends TeaModel {
     /**
      * @return excludePaths
      */
-    public java.util.List < ExcludePaths> getExcludePaths() {
+    public java.util.List<ExcludePaths> getExcludePaths() {
         return this.excludePaths;
     }
 
@@ -57,20 +62,20 @@ public class DescribeExcludeSystemPathResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ExcludePaths> excludePaths; 
+        private java.util.List<ExcludePaths> excludePaths; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
-         * An array consisting of the directories that are excluded.
+         * <p>An array consisting of the directories that are excluded.</p>
          */
-        public Builder excludePaths(java.util.List < ExcludePaths> excludePaths) {
+        public Builder excludePaths(java.util.List<ExcludePaths> excludePaths) {
             this.excludePaths = excludePaths;
             return this;
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +83,10 @@ public class DescribeExcludeSystemPathResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FBBEB173-1F43-505F-A876-C03ECDF6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,11 +99,17 @@ public class DescribeExcludeSystemPathResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeExcludeSystemPathResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeExcludeSystemPathResponseBody</p>
+     */
     public static class ExcludePaths extends TeaModel {
-        @NameInMap("Os")
+        @com.aliyun.core.annotation.NameInMap("Os")
         private String os;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
         private ExcludePaths(Builder builder) {
@@ -130,11 +144,14 @@ public class DescribeExcludeSystemPathResponseBody extends TeaModel {
             private String path; 
 
             /**
-             * The operating system of the server. Valid values:
-             * <p>
+             * <p>The operating system of the server. Valid values:</p>
+             * <ul>
+             * <li><strong>linux</strong>: Linux</li>
+             * <li><strong>windows</strong>: Windows</li>
+             * </ul>
              * 
-             * *   **linux**: Linux
-             * *   **windows**: Windows
+             * <strong>example:</strong>
+             * <p>linux</p>
              */
             public Builder os(String os) {
                 this.os = os;
@@ -142,7 +159,10 @@ public class DescribeExcludeSystemPathResponseBody extends TeaModel {
             }
 
             /**
-             * The absolute path to the directory.
+             * <p>The absolute path to the directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/bin/</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -156,17 +176,23 @@ public class DescribeExcludeSystemPathResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeExcludeSystemPathResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeExcludeSystemPathResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -219,7 +245,10 @@ public class DescribeExcludeSystemPathResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -227,7 +256,10 @@ public class DescribeExcludeSystemPathResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -235,7 +267,10 @@ public class DescribeExcludeSystemPathResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -243,7 +278,10 @@ public class DescribeExcludeSystemPathResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>55</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

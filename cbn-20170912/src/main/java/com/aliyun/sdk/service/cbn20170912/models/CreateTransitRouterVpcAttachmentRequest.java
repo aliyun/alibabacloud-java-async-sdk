@@ -1,86 +1,95 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTransitRouterVpcAttachmentRequest} extends {@link RequestModel}
  *
  * <p>CreateTransitRouterVpcAttachmentRequest</p>
  */
 public class CreateTransitRouterVpcAttachmentRequest extends Request {
-    @Query
-    @NameInMap("AutoPublishRouteEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPublishRouteEnabled")
     private Boolean autoPublishRouteEnabled;
 
-    @Query
-    @NameInMap("CenId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CenId")
     private String cenId;
 
-    @Query
-    @NameInMap("ChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Query
-    @NameInMap("TransitRouterAttachmentDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentDescription")
     private String transitRouterAttachmentDescription;
 
-    @Query
-    @NameInMap("TransitRouterAttachmentName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentName")
     private String transitRouterAttachmentName;
 
-    @Query
-    @NameInMap("TransitRouterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterId")
     private String transitRouterId;
 
-    @Query
-    @NameInMap("VpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterVPCAttachmentOptions")
+    private java.util.Map<String, String> transitRouterVPCAttachmentOptions;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
-    @Query
-    @NameInMap("VpcOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcOwnerId")
     private Long vpcOwnerId;
 
-    @Query
-    @NameInMap("ZoneMappings")
-    @Validation(required = true)
-    private java.util.List < ZoneMappings> zoneMappings;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneMappings")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<ZoneMappings> zoneMappings;
 
     private CreateTransitRouterVpcAttachmentRequest(Builder builder) {
         super(builder);
@@ -98,6 +107,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         this.transitRouterAttachmentDescription = builder.transitRouterAttachmentDescription;
         this.transitRouterAttachmentName = builder.transitRouterAttachmentName;
         this.transitRouterId = builder.transitRouterId;
+        this.transitRouterVPCAttachmentOptions = builder.transitRouterVPCAttachmentOptions;
         this.vpcId = builder.vpcId;
         this.vpcOwnerId = builder.vpcOwnerId;
         this.zoneMappings = builder.zoneMappings;
@@ -189,7 +199,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -215,6 +225,13 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
     }
 
     /**
+     * @return transitRouterVPCAttachmentOptions
+     */
+    public java.util.Map<String, String> getTransitRouterVPCAttachmentOptions() {
+        return this.transitRouterVPCAttachmentOptions;
+    }
+
+    /**
      * @return vpcId
      */
     public String getVpcId() {
@@ -231,7 +248,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
     /**
      * @return zoneMappings
      */
-    public java.util.List < ZoneMappings> getZoneMappings() {
+    public java.util.List<ZoneMappings> getZoneMappings() {
         return this.zoneMappings;
     }
 
@@ -246,13 +263,14 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String transitRouterAttachmentDescription; 
         private String transitRouterAttachmentName; 
         private String transitRouterId; 
+        private java.util.Map<String, String> transitRouterVPCAttachmentOptions; 
         private String vpcId; 
         private Long vpcOwnerId; 
-        private java.util.List < ZoneMappings> zoneMappings; 
+        private java.util.List<ZoneMappings> zoneMappings; 
 
         private Builder() {
             super();
@@ -274,17 +292,21 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
             this.transitRouterAttachmentDescription = request.transitRouterAttachmentDescription;
             this.transitRouterAttachmentName = request.transitRouterAttachmentName;
             this.transitRouterId = request.transitRouterId;
+            this.transitRouterVPCAttachmentOptions = request.transitRouterVPCAttachmentOptions;
             this.vpcId = request.vpcId;
             this.vpcOwnerId = request.vpcOwnerId;
             this.zoneMappings = request.zoneMappings;
         } 
 
         /**
-         * Specifies whether to enable the Enterprise Edition transit router to automatically advertise routes to VPCs. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the Enterprise Edition transit router to automatically advertise routes to VPCs. Valid values:</p>
+         * <ul>
+         * <li><strong>false:</strong> (default)</li>
+         * <li><strong>true</strong></li>
+         * </ul>
          * 
-         * *   **false:** (default)
-         * *   **true**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPublishRouteEnabled(Boolean autoPublishRouteEnabled) {
             this.putQueryParameter("AutoPublishRouteEnabled", autoPublishRouteEnabled);
@@ -293,7 +315,10 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         }
 
         /**
-         * The ID of the Cloud Enterprise Network (CEN) instance.
+         * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-j3jzhw1zpau2km****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -302,7 +327,10 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         }
 
         /**
-         * The billing method. The default value is **POSTPAY**, which specifies the pay-as-you-go billing method.
+         * <p>The billing method. The default value is <strong>POSTPAY</strong>, which specifies the pay-as-you-go billing method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>POSTPAY</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -311,12 +339,14 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-001****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -325,11 +355,14 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. Valid values:
-         * <p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
+         * <li><strong>true</strong>: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * </ul>
          * 
-         * *   **false** (default): performs a dry run and sends the request.
-         * *   **true**: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -356,10 +389,11 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         }
 
         /**
-         * The ID of the region where the VPC is deployed.
-         * <p>
+         * <p>The ID of the region where the VPC is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -386,22 +420,21 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         }
 
         /**
-         * The information about the tags.
-         * <p>
-         * 
-         * You can specify at most 20 tags in each call.
+         * <p>The information about the tags.</p>
+         * <p>You can specify at most 20 tags in each call.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The description of the VPC connection.
-         * <p>
+         * <p>The description of the VPC connection.</p>
+         * <p>The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
          * 
-         * The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>testname</p>
          */
         public Builder transitRouterAttachmentDescription(String transitRouterAttachmentDescription) {
             this.putQueryParameter("TransitRouterAttachmentDescription", transitRouterAttachmentDescription);
@@ -410,10 +443,11 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         }
 
         /**
-         * The name of the VPC connection.
-         * <p>
+         * <p>The name of the VPC connection.</p>
+         * <p>The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
+         * <strong>example:</strong>
+         * <p>testname</p>
          */
         public Builder transitRouterAttachmentName(String transitRouterAttachmentName) {
             this.putQueryParameter("TransitRouterAttachmentName", transitRouterAttachmentName);
@@ -422,7 +456,10 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         }
 
         /**
-         * The ID of the Enterprise Edition transit router.
+         * <p>The ID of the Enterprise Edition transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-bp1su1ytdxtataupl****</p>
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);
@@ -431,7 +468,21 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         }
 
         /**
-         * The VPC ID.
+         * <p>Feature configurations of the VPC connection.</p>
+         */
+        public Builder transitRouterVPCAttachmentOptions(java.util.Map<String, String> transitRouterVPCAttachmentOptions) {
+            String transitRouterVPCAttachmentOptionsShrink = shrink(transitRouterVPCAttachmentOptions, "TransitRouterVPCAttachmentOptions", "json");
+            this.putQueryParameter("TransitRouterVPCAttachmentOptions", transitRouterVPCAttachmentOptionsShrink);
+            this.transitRouterVPCAttachmentOptions = transitRouterVPCAttachmentOptions;
+            return this;
+        }
+
+        /**
+         * <p>The VPC ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1kbjcre9vtsebo1****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -440,10 +491,13 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the VPC belongs. The default value is the ID of the current Alibaba Cloud account.
-         * <p>
+         * <p>The ID of the Alibaba Cloud account to which the VPC belongs. The default value is the ID of the current Alibaba Cloud account.</p>
+         * <blockquote>
+         * <p>If the network instance and CEN instance belong to different Alibaba Cloud accounts, this parameter is required.</p>
+         * </blockquote>
          * 
-         * > If the network instance and CEN instance belong to different Alibaba Cloud accounts, this parameter is required.
+         * <strong>example:</strong>
+         * <p>1250123456123456</p>
          */
         public Builder vpcOwnerId(Long vpcOwnerId) {
             this.putQueryParameter("VpcOwnerId", vpcOwnerId);
@@ -452,12 +506,11 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         }
 
         /**
-         * A zone that supports Enterprise Edition transit routers.
-         * <p>
-         * 
-         * You can specify at most 10 zones.
+         * <p>A zone that supports Enterprise Edition transit routers.</p>
+         * <p>You can specify at most 10 zones.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder zoneMappings(java.util.List < ZoneMappings> zoneMappings) {
+        public Builder zoneMappings(java.util.List<ZoneMappings> zoneMappings) {
             this.putQueryParameter("ZoneMappings", zoneMappings);
             this.zoneMappings = zoneMappings;
             return this;
@@ -470,11 +523,17 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateTransitRouterVpcAttachmentRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTransitRouterVpcAttachmentRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -509,12 +568,12 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
-             * <p>
+             * <p>The tag key.</p>
+             * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>You can specify at most 20 tag keys.</p>
              * 
-             * The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
-             * 
-             * You can specify at most 20 tag keys.
+             * <strong>example:</strong>
+             * <p>tagtest</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -522,12 +581,12 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
             }
 
             /**
-             * The tag value.
-             * <p>
+             * <p>The tag value.</p>
+             * <p>The tag value can be 0 to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
              * 
-             * The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
-             * 
-             * Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.
+             * <strong>example:</strong>
+             * <p>tagtest</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -541,13 +600,19 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTransitRouterVpcAttachmentRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTransitRouterVpcAttachmentRequest</p>
+     */
     public static class ZoneMappings extends TeaModel {
-        @NameInMap("VSwitchId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String vSwitchId;
 
-        @NameInMap("ZoneId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String zoneId;
 
         private ZoneMappings(Builder builder) {
@@ -582,10 +647,12 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
             private String zoneId; 
 
             /**
-             * A vSwitch that is deployed in the zone that supports Enterprise Edition transit routers.
-             * <p>
+             * <p>A vSwitch that is deployed in the zone that supports Enterprise Edition transit routers.</p>
+             * <p>You can specify vSwitches for at most 10 zones in each call.</p>
+             * <p>This parameter is required.</p>
              * 
-             * You can specify vSwitches for at most 10 zones in each call.
+             * <strong>example:</strong>
+             * <p>vsw-bp1a214sbus8z3b54****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -593,12 +660,13 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
             }
 
             /**
-             * The ID of the zone that supports Enterprise Edition transit routers.
-             * <p>
+             * <p>The ID of the zone that supports Enterprise Edition transit routers.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query the most recent zone list.</p>
+             * <p>You can specify at most 10 zones in each call.</p>
+             * <p>This parameter is required.</p>
              * 
-             * You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.
-             * 
-             * You can specify at most 10 zones in each call.
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

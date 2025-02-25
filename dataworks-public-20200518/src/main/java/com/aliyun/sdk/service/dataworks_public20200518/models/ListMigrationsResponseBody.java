@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMigrationsResponseBody} extends {@link TeaModel}
  *
  * <p>ListMigrationsResponseBody</p>
  */
 public class ListMigrationsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListMigrationsResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class ListMigrationsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The list of migration tasks.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,11 +75,10 @@ public class ListMigrationsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>The request ID.</p>
          * 
-         * *   true: The request is successful.
-         * *   false: The request fails.
+         * <strong>example:</strong>
+         * <p>F9198AA3-9010-53D5-9714-DC4461427D3E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,7 +86,14 @@ public class ListMigrationsResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -95,53 +106,59 @@ public class ListMigrationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListMigrationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMigrationsResponseBody</p>
+     */
     public static class Migrations extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("CreateUser")
+        @com.aliyun.core.annotation.NameInMap("CreateUser")
         private String createUser;
 
-        @NameInMap("CreateUserName")
+        @com.aliyun.core.annotation.NameInMap("CreateUserName")
         private String createUserName;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DownloadUrl")
+        @com.aliyun.core.annotation.NameInMap("DownloadUrl")
         private String downloadUrl;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("MigrationType")
+        @com.aliyun.core.annotation.NameInMap("MigrationType")
         private String migrationType;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PackageType")
+        @com.aliyun.core.annotation.NameInMap("PackageType")
         private String packageType;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private Long tenantId;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
-        @NameInMap("UpdateUser")
+        @com.aliyun.core.annotation.NameInMap("UpdateUser")
         private String updateUser;
 
-        @NameInMap("UpdateUserName")
+        @com.aliyun.core.annotation.NameInMap("UpdateUserName")
         private String updateUserName;
 
         private Migrations(Builder builder) {
@@ -302,7 +319,10 @@ public class ListMigrationsResponseBody extends TeaModel {
             private String updateUserName; 
 
             /**
-             * The time when the migration task was last updated.
+             * <p>The time when the migration task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123124123123123</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -310,7 +330,10 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the user who created the migration task.
+             * <p>The ID of the user who created the migration task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123123****</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -318,7 +341,10 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user who last updated the migration task.
+             * <p>The name of the user who created the migration task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3h1_test</p>
              */
             public Builder createUserName(String createUserName) {
                 this.createUserName = createUserName;
@@ -326,7 +352,10 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The description of the export task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Automated Test creation</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -334,7 +363,10 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the export task.
+             * <p>The URL that is used to download the package of the export task. You can use the URL to download the package of the export task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://geoip-sdk-user.oss-cn-zhangjiakou.aliyuncs.com/product/v1/ipv4/trace/v1.20220424123842.dex?Expires=1650780849&OSSAccessKeyId=XXXXXXeF4Lv5j&Signature=qxxxxx">http://geoip-sdk-user.oss-cn-zhangjiakou.aliyuncs.com/product/v1/ipv4/trace/v1.20220424123842.dex?Expires=1650780849&amp;OSSAccessKeyId=XXXXXXeF4Lv5j&amp;Signature=qxxxxx</a></p>
              */
             public Builder downloadUrl(String downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -342,7 +374,10 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the migration task.
+             * <p>The primary key ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>436064</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -350,7 +385,10 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * The URL that is used to download the package of the export task. You can use the URL to download the package of the export task.
+             * <p>The error message returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>An internal system error occurred. datasource kafka region is not cn-chengdu, can&quot;t open network for it</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -358,7 +396,14 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the migration task was created.
+             * <p>The type of the migration task. Valid values:</p>
+             * <ul>
+             * <li>IMPORT</li>
+             * <li>EXPORT</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>EXPORT</p>
              */
             public Builder migrationType(String migrationType) {
                 this.migrationType = migrationType;
@@ -366,15 +411,10 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the import or export package. Valid values:
-             * <p>
+             * <p>The name of the migration task.</p>
              * 
-             * *   DWMA (standard format)
-             * *   DATAWORKS_MODEL (standard format)
-             * *   DATAWORKS_V2 (Apsara Stack DataWorks V3.6.1 to V3.11)
-             * *   DATAWORKS_V3 (Apsara Stack DataWorks V3.12 and later)
-             * 
-             * The DWMA and DATAWORKS_MODEL types are interchangeable.
+             * <strong>example:</strong>
+             * <p>test_task_1638498642279</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -382,11 +422,17 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the migration task.
-             * <p>
+             * <p>The type of the import or export package. Valid values:</p>
+             * <ul>
+             * <li>DWMA (standard format)</li>
+             * <li>DATAWORKS_MODEL (standard format)</li>
+             * <li>DATAWORKS_V2 (Apsara Stack DataWorks V3.6.1 to V3.11)</li>
+             * <li>DATAWORKS_V3 (Apsara Stack DataWorks V3.12 and later)</li>
+             * </ul>
+             * <p>The DWMA and DATAWORKS_MODEL types are interchangeable.</p>
              * 
-             * *   IMPORT
-             * *   EXPORT
+             * <strong>example:</strong>
+             * <p>DATAWORKS_MODEL</p>
              */
             public Builder packageType(String packageType) {
                 this.packageType = packageType;
@@ -394,7 +440,10 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tenant.
+             * <p>The ID of the DataWorks workspace to which the task belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>72132</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -402,7 +451,17 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned.
+             * <p>The status of the migration task. Valid values:</p>
+             * <ul>
+             * <li>INIT: The migration task is in the initial state.</li>
+             * <li>EDITING: The migration task is being edited.</li>
+             * <li>RUNNING: The migration task is running.</li>
+             * <li>FAILURE: The migration task fails to run.</li>
+             * <li>SUCCESS: The migration task is successfully run.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -410,14 +469,10 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the migration task. Valid values:
-             * <p>
+             * <p>The tenant ID.</p>
              * 
-             * *   INIT: The migration task is in the initial state.
-             * *   EDITING: The migration task is being edited.
-             * *   RUNNING: The migration task is running.
-             * *   FAILURE: The migration task fails to run.
-             * *   SUCCESS: The migration task is successfully run.
+             * <strong>example:</strong>
+             * <p>16307</p>
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -425,7 +480,10 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user who created the migration task.
+             * <p>The time when the migration task was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123123123123123</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -433,7 +491,10 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the user who last updated the migration task.
+             * <p>The ID of the user who last updated the migration task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1231****</p>
              */
             public Builder updateUser(String updateUser) {
                 this.updateUser = updateUser;
@@ -441,7 +502,10 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the DataWorks workspace to which the task belongs.
+             * <p>The name of the user who last updated the migration task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3h1_test</p>
              */
             public Builder updateUserName(String updateUserName) {
                 this.updateUserName = updateUserName;
@@ -455,17 +519,23 @@ public class ListMigrationsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMigrationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMigrationsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Migrations")
-        private java.util.List < Migrations> migrations;
+        @com.aliyun.core.annotation.NameInMap("Migrations")
+        private java.util.List<Migrations> migrations;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {
@@ -486,7 +556,7 @@ public class ListMigrationsResponseBody extends TeaModel {
         /**
          * @return migrations
          */
-        public java.util.List < Migrations> getMigrations() {
+        public java.util.List<Migrations> getMigrations() {
             return this.migrations;
         }
 
@@ -512,21 +582,24 @@ public class ListMigrationsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Migrations> migrations; 
+            private java.util.List<Migrations> migrations; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
 
             /**
-             * The ID of the primary key.
+             * <p>The list of migration tasks.</p>
              */
-            public Builder migrations(java.util.List < Migrations> migrations) {
+            public Builder migrations(java.util.List<Migrations> migrations) {
                 this.migrations = migrations;
                 return this;
             }
 
             /**
-             * The number of entries returned per page. Default value: 10. Maximum value: 50.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -534,7 +607,10 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The number of entries per page. Default value: 10. Maximum value: 50.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -542,7 +618,10 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

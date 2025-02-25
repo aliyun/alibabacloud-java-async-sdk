@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetPasswordPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>SetPasswordPolicyResponseBody</p>
  */
 public class SetPasswordPolicyResponseBody extends TeaModel {
-    @NameInMap("PasswordPolicy")
+    @com.aliyun.core.annotation.NameInMap("PasswordPolicy")
     private PasswordPolicy passwordPolicy;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SetPasswordPolicyResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PasswordPolicy.
+         * <p>The password policy.</p>
          */
         public Builder passwordPolicy(PasswordPolicy passwordPolicy) {
             this.passwordPolicy = passwordPolicy;
@@ -58,7 +63,10 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,32 +79,38 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SetPasswordPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>SetPasswordPolicyResponseBody</p>
+     */
     public static class PasswordPolicy extends TeaModel {
-        @NameInMap("HardExpiry")
+        @com.aliyun.core.annotation.NameInMap("HardExpiry")
         private Boolean hardExpiry;
 
-        @NameInMap("MaxLoginAttemps")
+        @com.aliyun.core.annotation.NameInMap("MaxLoginAttemps")
         private Integer maxLoginAttemps;
 
-        @NameInMap("MaxPasswordAge")
+        @com.aliyun.core.annotation.NameInMap("MaxPasswordAge")
         private Integer maxPasswordAge;
 
-        @NameInMap("MinimumPasswordLength")
+        @com.aliyun.core.annotation.NameInMap("MinimumPasswordLength")
         private Integer minimumPasswordLength;
 
-        @NameInMap("PasswordReusePrevention")
+        @com.aliyun.core.annotation.NameInMap("PasswordReusePrevention")
         private Integer passwordReusePrevention;
 
-        @NameInMap("RequireLowercaseCharacters")
+        @com.aliyun.core.annotation.NameInMap("RequireLowercaseCharacters")
         private Boolean requireLowercaseCharacters;
 
-        @NameInMap("RequireNumbers")
+        @com.aliyun.core.annotation.NameInMap("RequireNumbers")
         private Boolean requireNumbers;
 
-        @NameInMap("RequireSymbols")
+        @com.aliyun.core.annotation.NameInMap("RequireSymbols")
         private Boolean requireSymbols;
 
-        @NameInMap("RequireUppercaseCharacters")
+        @com.aliyun.core.annotation.NameInMap("RequireUppercaseCharacters")
         private Boolean requireUppercaseCharacters;
 
         private PasswordPolicy(Builder builder) {
@@ -194,7 +208,15 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
             private Boolean requireUppercaseCharacters; 
 
             /**
-             * HardExpiry.
+             * <p>Indicates whether a password expires.</p>
+             * <p>Valid values: <code>true</code> and <code>false</code>. Default value: <code>false</code>. If the parameter is unspecified, the default value false is returned.</p>
+             * <ul>
+             * <li>If this parameter is set to <code>true</code>, the Alibaba Cloud account to which the RAM users belong must reset the password before the RAM users can log on to the Alibaba Cloud Management Console.</li>
+             * <li>If this parameter is set to <code>false</code>, the RAM users can change the passwords after the passwords expire and then log on to the Alibaba Cloud Management Console.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hardExpiry(Boolean hardExpiry) {
                 this.hardExpiry = hardExpiry;
@@ -202,7 +224,10 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * MaxLoginAttemps.
+             * <p>The maximum number of permitted logon attempts within one hour. The number of logon attempts is reset to zero if a RAM user changes the password.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder maxLoginAttemps(Integer maxLoginAttemps) {
                 this.maxLoginAttemps = maxLoginAttemps;
@@ -210,7 +235,10 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * MaxPasswordAge.
+             * <p>The number of days for which a password is valid. Default value: 0. The default value indicates that the password never expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxPasswordAge(Integer maxPasswordAge) {
                 this.maxPasswordAge = maxPasswordAge;
@@ -218,7 +246,10 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * MinimumPasswordLength.
+             * <p>The minimum required number of characters in a password.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder minimumPasswordLength(Integer minimumPasswordLength) {
                 this.minimumPasswordLength = minimumPasswordLength;
@@ -226,7 +257,10 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PasswordReusePrevention.
+             * <p>The number of previous passwords that a RAM user is prevented from reusing. Default value: 0. The default value indicates that the RAM user can reuse previous passwords.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder passwordReusePrevention(Integer passwordReusePrevention) {
                 this.passwordReusePrevention = passwordReusePrevention;
@@ -234,7 +268,10 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * RequireLowercaseCharacters.
+             * <p>Indicates whether a password must contain one or more lowercase letters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder requireLowercaseCharacters(Boolean requireLowercaseCharacters) {
                 this.requireLowercaseCharacters = requireLowercaseCharacters;
@@ -242,7 +279,10 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * RequireNumbers.
+             * <p>Indicates whether a password must contain one or more digits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder requireNumbers(Boolean requireNumbers) {
                 this.requireNumbers = requireNumbers;
@@ -250,7 +290,10 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * RequireSymbols.
+             * <p>Indicates whether a password must contain one or more special characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder requireSymbols(Boolean requireSymbols) {
                 this.requireSymbols = requireSymbols;
@@ -258,7 +301,10 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * RequireUppercaseCharacters.
+             * <p>Indicates whether a password must contain one or more uppercase letters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder requireUppercaseCharacters(Boolean requireUppercaseCharacters) {
                 this.requireUppercaseCharacters = requireUppercaseCharacters;

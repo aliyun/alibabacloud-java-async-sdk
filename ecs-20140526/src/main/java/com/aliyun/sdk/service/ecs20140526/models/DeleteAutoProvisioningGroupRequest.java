@@ -1,46 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAutoProvisioningGroupRequest} extends {@link RequestModel}
  *
  * <p>DeleteAutoProvisioningGroupRequest</p>
  */
 public class DeleteAutoProvisioningGroupRequest extends Request {
-    @Query
-    @NameInMap("AutoProvisioningGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoProvisioningGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String autoProvisioningGroupId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TerminateInstances")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TerminateInstances")
     private Boolean terminateInstances;
 
     private DeleteAutoProvisioningGroupRequest(Builder builder) {
@@ -141,7 +145,11 @@ public class DeleteAutoProvisioningGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the auto provisioning group to be deleted.
+         * <p>The ID of the auto provisioning group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apg-bpuf6jel2bbl62wh13****</p>
          */
         public Builder autoProvisioningGroupId(String autoProvisioningGroupId) {
             this.putQueryParameter("AutoProvisioningGroupId", autoProvisioningGroupId);
@@ -168,7 +176,11 @@ public class DeleteAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the auto provisioning group.
+         * <p>The region ID of the auto provisioning group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -195,11 +207,17 @@ public class DeleteAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to release instances in the auto provisioning group. Valid values:
-         * <p>
+         * <p>Specifies whether to release instances in the auto provisioning group. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <blockquote>
+         * <p> By default, this parameter inherits the value of <code>TerminateInstances</code> that you specified when you call the <code>CreateAutoProvisioningGroup</code> operation to create an auto provisioning group. You can also change the value of <code>TerminateInstances</code> when you call the DeleteAutoProvisioningGroup operation to delete the auto provisioning group.</p>
+         * </blockquote>
          * 
-         * *   true: releases instances in the auto provisioning group.
-         * *   false: retains instances in the auto provisioning group.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder terminateInstances(Boolean terminateInstances) {
             this.putQueryParameter("TerminateInstances", terminateInstances);

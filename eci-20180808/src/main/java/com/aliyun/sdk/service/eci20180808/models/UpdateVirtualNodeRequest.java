@@ -1,65 +1,65 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateVirtualNodeRequest} extends {@link RequestModel}
  *
  * <p>UpdateVirtualNodeRequest</p>
  */
 public class UpdateVirtualNodeRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("ClusterDNS")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterDNS")
     private String clusterDNS;
 
-    @Query
-    @NameInMap("ClusterDomain")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterDomain")
     private String clusterDomain;
 
-    @Query
-    @NameInMap("CustomResources")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomResources")
     private String customResources;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("VirtualNodeId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VirtualNodeId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String virtualNodeId;
 
-    @Query
-    @NameInMap("VirtualNodeName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VirtualNodeName")
     private String virtualNodeName;
 
     private UpdateVirtualNodeRequest(Builder builder) {
@@ -210,7 +210,10 @@ public class UpdateVirtualNodeRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotency of requests?](~~25693~~)
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotency of requests?</a></p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -219,7 +222,10 @@ public class UpdateVirtualNodeRequest extends Request {
         }
 
         /**
-         * The IP address of the DNS server. If `dnsPolicy=ClusterFirst` is configured for the Elastic Container Instance pod, Elastic Container Instance uses the configuration to provide DNS services to containers. You can configure multiple IP addresses. Separate multiple IP addresses with commas (,).
+         * <p>The IP address of the DNS server. If <code>dnsPolicy=ClusterFirst</code> is configured for the Elastic Container Instance pod, Elastic Container Instance uses the configuration to provide DNS services to containers. You can configure multiple IP addresses. Separate multiple IP addresses with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.1.XX.XX</p>
          */
         public Builder clusterDNS(String clusterDNS) {
             this.putQueryParameter("ClusterDNS", clusterDNS);
@@ -228,7 +234,10 @@ public class UpdateVirtualNodeRequest extends Request {
         }
 
         /**
-         * The domain name of the cluster. If this parameter is specified, in addition to the search domain of the host, Kubelet configures all containers to search for the specified domain name.
+         * <p>The domain name of the cluster. If this parameter is specified, in addition to the search domain of the host, Kubelet configures all containers to search for the specified domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder clusterDomain(String clusterDomain) {
             this.putQueryParameter("ClusterDomain", clusterDomain);
@@ -237,7 +246,10 @@ public class UpdateVirtualNodeRequest extends Request {
         }
 
         /**
-         * The custom resources that are supported by the virtual node. If a custom resource is specified in the request of an Elastic Container Instance pod, the pod is scheduled to run on the virtual node that supports the custom resource. You can use the `Resource name = Number of resources` format to specify custom resources. Separate multiple resources with commas (,).
+         * <p>The custom resources that are supported by the virtual node. If a custom resource is specified in the request of an Elastic Container Instance pod, the pod is scheduled to run on the virtual node that supports the custom resource. You can use the <code>Resource name = Number of resources</code> format to specify custom resources. Separate multiple resources with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example1.com=100,example2.com=200</p>
          */
         public Builder customResources(String customResources) {
             this.putQueryParameter("CustomResources", customResources);
@@ -264,7 +276,11 @@ public class UpdateVirtualNodeRequest extends Request {
         }
 
         /**
-         * The region ID of the virtual node.
+         * <p>The region ID of the virtual node.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -291,7 +307,7 @@ public class UpdateVirtualNodeRequest extends Request {
         }
 
         /**
-         * The tags to add to the virtual node.
+         * <p>The tags to add to the virtual node.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -300,7 +316,11 @@ public class UpdateVirtualNodeRequest extends Request {
         }
 
         /**
-         * The ID of the virtual node.
+         * <p>The ID of the virtual node.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vnd-2ze960zkdqrldeaw****</p>
          */
         public Builder virtualNodeId(String virtualNodeId) {
             this.putQueryParameter("VirtualNodeId", virtualNodeId);
@@ -309,7 +329,10 @@ public class UpdateVirtualNodeRequest extends Request {
         }
 
         /**
-         * The name of the virtual node.
+         * <p>The name of the virtual node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testNode</p>
          */
         public Builder virtualNodeName(String virtualNodeName) {
             this.putQueryParameter("VirtualNodeName", virtualNodeName);
@@ -324,11 +347,17 @@ public class UpdateVirtualNodeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateVirtualNodeRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateVirtualNodeRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -363,7 +392,10 @@ public class UpdateVirtualNodeRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the virtual node.
+             * <p>The key of tag N to add to the virtual node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -371,7 +403,10 @@ public class UpdateVirtualNodeRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the virtual node.
+             * <p>The value of tag N to add to the virtual node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

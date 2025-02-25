@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitLiveEditingJobResponseBody} extends {@link TeaModel}
  *
  * <p>SubmitLiveEditingJobResponseBody</p>
  */
 public class SubmitLiveEditingJobResponseBody extends TeaModel {
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @NameInMap("MediaId")
+    @com.aliyun.core.annotation.NameInMap("MediaId")
     private String mediaId;
 
-    @NameInMap("MediaURL")
+    @com.aliyun.core.annotation.NameInMap("MediaURL")
     private String mediaURL;
 
-    @NameInMap("ProjectId")
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
     private String projectId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VodMediaId")
+    @com.aliyun.core.annotation.NameInMap("VodMediaId")
     private String vodMediaId;
 
     private SubmitLiveEditingJobResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class SubmitLiveEditingJobResponseBody extends TeaModel {
         private String vodMediaId; 
 
         /**
-         * JobId.
+         * <p>The ID of the live editing job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -106,7 +114,10 @@ public class SubmitLiveEditingJobResponseBody extends TeaModel {
         }
 
         /**
-         * MediaId.
+         * <p>The media asset ID of the output file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>c469e944b5a856828dc2</strong></strong></p>
          */
         public Builder mediaId(String mediaId) {
             this.mediaId = mediaId;
@@ -114,7 +125,10 @@ public class SubmitLiveEditingJobResponseBody extends TeaModel {
         }
 
         /**
-         * MediaURL.
+         * <p>The URL of the output file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://test-bucket.cn-shanghai.aliyuncs.com/test.mp4">http://test-bucket.cn-shanghai.aliyuncs.com/test.mp4</a></p>
          */
         public Builder mediaURL(String mediaURL) {
             this.mediaURL = mediaURL;
@@ -122,7 +136,10 @@ public class SubmitLiveEditingJobResponseBody extends TeaModel {
         }
 
         /**
-         * ProjectId.
+         * <p>The ID of the live editing project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>fddd7748b58bf1d47e95</strong></strong></p>
          */
         public Builder projectId(String projectId) {
             this.projectId = projectId;
@@ -130,7 +147,10 @@ public class SubmitLiveEditingJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>36-3C1E-4417-BDB2-1E034F</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +158,10 @@ public class SubmitLiveEditingJobResponseBody extends TeaModel {
         }
 
         /**
-         * VodMediaId.
+         * <p>The media asset ID of the output file in ApsaraVideo VOD if the output file is stored in ApsaraVideo VOD.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>d7578s4h75ci945c14b</strong></strong></p>
          */
         public Builder vodMediaId(String vodMediaId) {
             this.vodMediaId = vodMediaId;

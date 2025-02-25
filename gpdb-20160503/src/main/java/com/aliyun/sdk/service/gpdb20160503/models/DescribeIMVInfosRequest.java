@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIMVInfosRequest} extends {@link RequestModel}
  *
  * <p>DescribeIMVInfosRequest</p>
  */
 public class DescribeIMVInfosRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("Database")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Database")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String database;
 
-    @Query
-    @NameInMap("MVName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MVName")
     private String MVName;
 
     private DescribeIMVInfosRequest(Builder builder) {
@@ -84,7 +89,11 @@ public class DescribeIMVInfosRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -93,7 +102,11 @@ public class DescribeIMVInfosRequest extends Request {
         }
 
         /**
-         * Database.
+         * <p>The name of the database.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb</p>
          */
         public Builder database(String database) {
             this.putQueryParameter("Database", database);
@@ -102,7 +115,10 @@ public class DescribeIMVInfosRequest extends Request {
         }
 
         /**
-         * MVName.
+         * <p>The name of MV</p>
+         * 
+         * <strong>example:</strong>
+         * <p>public.&quot;mv1&quot;</p>
          */
         public Builder MVName(String MVName) {
             this.putQueryParameter("MVName", MVName);

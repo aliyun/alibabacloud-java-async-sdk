@@ -1,36 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateWhiteIpsRequest} extends {@link RequestModel}
  *
  * <p>UpdateWhiteIpsRequest</p>
  */
 public class UpdateWhiteIpsRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("esIPWhitelist")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("esIPWhitelist")
     private java.util.List < String > esIPWhitelist;
 
-    @Body
-    @NameInMap("whiteIpGroup")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("whiteIpGroup")
     private WhiteIpGroup whiteIpGroup;
 
-    @Query
-    @NameInMap("clientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("modifyMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("modifyMode")
     private String modifyMode;
 
     private UpdateWhiteIpsRequest(Builder builder) {
@@ -111,7 +111,11 @@ public class UpdateWhiteIpsRequest extends Request {
         } 
 
         /**
-         * The request body.
+         * <p>The request body.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-npk2154oi000b****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -120,7 +124,7 @@ public class UpdateWhiteIpsRequest extends Request {
         }
 
         /**
-         * The name of the whitelist. This parameter is required if you configure the whiteIpGroup parameter.
+         * <p>The name of the whitelist. This parameter is required if you configure the whiteIpGroup parameter.</p>
          */
         public Builder esIPWhitelist(java.util.List < String > esIPWhitelist) {
             this.putBodyParameter("esIPWhitelist", esIPWhitelist);
@@ -129,7 +133,7 @@ public class UpdateWhiteIpsRequest extends Request {
         }
 
         /**
-         * The IP addresses in the whitelist. This parameter is required if you configure the whiteIpGroup parameter.
+         * <p>The IP addresses in the whitelist. This parameter is required if you configure the whiteIpGroup parameter.</p>
          */
         public Builder whiteIpGroup(WhiteIpGroup whiteIpGroup) {
             this.putBodyParameter("whiteIpGroup", whiteIpGroup);
@@ -138,7 +142,10 @@ public class UpdateWhiteIpsRequest extends Request {
         }
 
         /**
-         * The IP addresses in the whitelist.
+         * <p>The IP addresses in the whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -147,10 +154,13 @@ public class UpdateWhiteIpsRequest extends Request {
         }
 
         /**
-         * The IP addresses in the whitelist. This parameter is available if the whiteIpGroup parameter is left empty. The default IP address whitelist is updated based on the value of this parameter.
-         * <p>
+         * <p>The IP addresses in the whitelist. This parameter is available if the whiteIpGroup parameter is left empty. The default IP address whitelist is updated based on the value of this parameter.</p>
+         * <blockquote>
+         * <p> You cannot configure both the esIPWhitelist and whiteIpGroup parameters.</p>
+         * </blockquote>
          * 
-         * >  You cannot configure both the esIPWhitelist and whiteIpGroup parameters.
+         * <strong>example:</strong>
+         * <p>Cover</p>
          */
         public Builder modifyMode(String modifyMode) {
             this.putQueryParameter("modifyMode", modifyMode);
@@ -165,14 +175,20 @@ public class UpdateWhiteIpsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateWhiteIpsRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateWhiteIpsRequest</p>
+     */
     public static class WhiteIpGroup extends TeaModel {
-        @NameInMap("groupName")
+        @com.aliyun.core.annotation.NameInMap("groupName")
         private String groupName;
 
-        @NameInMap("ips")
+        @com.aliyun.core.annotation.NameInMap("ips")
         private java.util.List < String > ips;
 
-        @NameInMap("whiteIpType")
+        @com.aliyun.core.annotation.NameInMap("whiteIpType")
         private String whiteIpType;
 
         private WhiteIpGroup(Builder builder) {
@@ -216,7 +232,10 @@ public class UpdateWhiteIpsRequest extends Request {
             private String whiteIpType; 
 
             /**
-             * The type of the whitelist. Set the value to **PRIVATE_ES**. This value indicates a private IP address whitelist.
+             * <p>The type of the whitelist. Set the value to <strong>PRIVATE_ES</strong>. This value indicates a private IP address whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_group</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -224,7 +243,7 @@ public class UpdateWhiteIpsRequest extends Request {
             }
 
             /**
-             * The returned result.
+             * <p>The returned result.</p>
              */
             public Builder ips(java.util.List < String > ips) {
                 this.ips = ips;
@@ -232,7 +251,10 @@ public class UpdateWhiteIpsRequest extends Request {
             }
 
             /**
-             * The returned result.
+             * <p>The returned result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIVATE_ES</p>
              */
             public Builder whiteIpType(String whiteIpType) {
                 this.whiteIpType = whiteIpType;

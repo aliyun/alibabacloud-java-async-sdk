@@ -1,61 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyImageSharePermissionRequest} extends {@link RequestModel}
  *
  * <p>ModifyImageSharePermissionRequest</p>
  */
 public class ModifyImageSharePermissionRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("AddAccount")
-    private java.util.List < String > addAccount;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddAccount")
+    private java.util.List<String> addAccount;
 
-    @Query
-    @NameInMap("ImageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String imageId;
 
-    @Query
-    @NameInMap("IsPublic")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsPublic")
     private Boolean isPublic;
 
-    @Query
-    @NameInMap("LaunchPermission")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LaunchPermission")
     private String launchPermission;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("RemoveAccount")
-    private java.util.List < String > removeAccount;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RemoveAccount")
+    private java.util.List<String> removeAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyImageSharePermissionRequest(Builder builder) {
@@ -96,7 +101,7 @@ public class ModifyImageSharePermissionRequest extends Request {
     /**
      * @return addAccount
      */
-    public java.util.List < String > getAddAccount() {
+    public java.util.List<String> getAddAccount() {
         return this.addAccount;
     }
 
@@ -145,7 +150,7 @@ public class ModifyImageSharePermissionRequest extends Request {
     /**
      * @return removeAccount
      */
-    public java.util.List < String > getRemoveAccount() {
+    public java.util.List<String> getRemoveAccount() {
         return this.removeAccount;
     }
 
@@ -165,14 +170,14 @@ public class ModifyImageSharePermissionRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyImageSharePermissionRequest, Builder> {
         private String sourceRegionId; 
-        private java.util.List < String > addAccount; 
+        private java.util.List<String> addAccount; 
         private String imageId; 
         private Boolean isPublic; 
         private String launchPermission; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
-        private java.util.List < String > removeAccount; 
+        private java.util.List<String> removeAccount; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -205,16 +210,23 @@ public class ModifyImageSharePermissionRequest extends Request {
         }
 
         /**
-         * The ID of Alibaba Cloud account N with which you want to share the custom image. Valid values of N: 1 to 10. If the value of N is greater than 10, this parameter is ignored.
+         * <p>The ID of Alibaba Cloud account N to which you want to share the custom image. Valid values of N: 1 to 10. If you specify more than 10 Alibaba Cloud account IDs, the system processes only the first 10 account IDs. The excess account IDs are ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
          */
-        public Builder addAccount(java.util.List < String > addAccount) {
+        public Builder addAccount(java.util.List<String> addAccount) {
             this.putQueryParameter("AddAccount", addAccount);
             this.addAccount = addAccount;
             return this;
         }
 
         /**
-         * The ID of the custom image.
+         * <p>The ID of the custom image.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-bp18ygjuqnwhechc****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -223,13 +235,15 @@ public class ModifyImageSharePermissionRequest extends Request {
         }
 
         /**
-         * Specifies whether to publish or unpublish a community image. Valid values:
-         * <p>
+         * <p>Specifies whether to publish or unpublish a community image. Valid values:</p>
+         * <ul>
+         * <li>true: publishes the custom image as a community image.</li>
+         * <li>false: unpublishes a community image. The unpublish operation takes effect only on community images.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true: publishes the custom image as a community image.
-         * *   false: unpublishes a community image. The unpublish operation takes effect only on community images.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isPublic(Boolean isPublic) {
             this.putQueryParameter("IsPublic", isPublic);
@@ -238,7 +252,12 @@ public class ModifyImageSharePermissionRequest extends Request {
         }
 
         /**
-         * > This parameter is in invitational preview and is not publicly available.
+         * <blockquote>
+         * <p>This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>hide</p>
          */
         public Builder launchPermission(String launchPermission) {
             this.putQueryParameter("LaunchPermission", launchPermission);
@@ -265,7 +284,11 @@ public class ModifyImageSharePermissionRequest extends Request {
         }
 
         /**
-         * The region ID of the custom image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the custom image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -274,9 +297,12 @@ public class ModifyImageSharePermissionRequest extends Request {
         }
 
         /**
-         * The ID of Alibaba Cloud account N from which you want to unshare the custom image. Valid values of N: 1 to 10. If the value of N is greater than 10, this parameter is ignored.
+         * <p>The ID of Alibaba Cloud account N from which you want to unshare the custom image. Valid values of N: 1 to 10. If you specify more than 10 Alibaba Cloud account IDs, the system processes only the first 10 account IDs. The excess account IDs are ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
          */
-        public Builder removeAccount(java.util.List < String > removeAccount) {
+        public Builder removeAccount(java.util.List<String> removeAccount) {
             this.putQueryParameter("RemoveAccount", removeAccount);
             this.removeAccount = removeAccount;
             return this;
